@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4e19f582-ef8f-40f7-8ad1-4f08591cdd1a
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 4a6684022b1231c1de2ee4ff21f933dacb63ecee
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f1ca6ee9fd45ee4e600dea5614c9421307a80477
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67930186"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748774"
 ---
 # <a name="static-aggregate-geometry-methods"></a>靜態彙總幾何方法
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援下列彙總方法當做開放式地理空間協會 (Open Geospatial Consortium，OGC) 之靜態幾何方法的擴充。  
   

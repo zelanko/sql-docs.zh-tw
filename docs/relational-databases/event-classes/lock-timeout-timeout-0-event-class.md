@@ -12,15 +12,15 @@ ms.assetid: d755833a-d7eb-4973-9352-67a2fba2442a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92550c1282689e2d6091a5af2b588a3c36b9b2d2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 19dd9d5c8f4a5c9c4d37a6f7ce54f061d8bc0e47
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68118273"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737182"
 ---
 # <a name="locktimeout-timeout-gt-0-event-class"></a>Lock:Timeout (timeout &gt; 0) 事件類別
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **Lock:Timeout (逾時 > 0)** 事件類別表示資源 (例如分頁) 上的鎖定要求已逾時，原因是其他交易在所需資源上已有封鎖的鎖定。 此事件類別與 **Lock:Timeout** 事件類別的操作方式相同，差別在於不包括逾時值為 0 的事件。  
   
  如果追蹤使用鎖定探查或逾時值為 0 的其他處理序，請在追蹤中包含 **Lock:Timeout (逾時 > 0)** 事件類別。 這可讓您查看實際逾時發生的地方，但不查看 0 的逾時值。  

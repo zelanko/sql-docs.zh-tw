@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3641401fbb2314bf4712cc524777a490ced01541
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 8d98470daf000115061fde1d5b8a276f1bd76a4f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000155"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85743934"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>避免與 FILESTREAM 應用程式中的資料庫作業相衝突
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用 SqlOpenFilestream() 來開啟 Win32 檔案控制代碼以便讀取或寫入 FILESTREAM BLOB 資料的應用程式可能會與在一般交易中管理的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式發生衝突錯誤。 這包括需要很長時間才能執行完成的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或 MARS 查詢。 若要有效避免這些衝突類型，您必須仔細地設計應用程式。  
   
  當 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或應用程式嘗試開啟 FILESTREAM BLOB 時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會檢查相關聯的交易內容。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會根據開啟作業是使用 DDL 陳述式、DML 陳述式、擷取資料或管理交易，允許或拒絕此要求。 下表將顯示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 根據交易所開啟的檔案類型來判斷允許或拒絕 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  

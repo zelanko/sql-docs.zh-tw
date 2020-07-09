@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 55f468ba-146c-4ab3-95cd-d35d051afd12
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f6410575af0d05b8d407ba9f52cc116fbe2ac733
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a10948a63d119ec86c156b79d925f1b905b152f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165470"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737084"
 ---
 # <a name="view-the-sql-server-error-log-in-sql-server-management-studio-ssms"></a>在 SQL Server Management Studio (SSMS) 中檢視 SQL Server 錯誤記錄檔
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔包含使用者定義事件和特定系統事件，以用於進行疑難排解。 
 
 ## <a name="view-the-logs"></a>檢視記錄檔

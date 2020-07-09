@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 0622619d-27c5-4ff0-83e5-cde31648c27a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 40ee955b5f8cc683d2ec4f875c688f5575a0a44a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d3804de9de13720d5d7813d54bf5f8962b5e2992
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179223"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748420"
 ---
 # <a name="create-credential---authenticate-to-azure-storage"></a>建立認證 - 向 Azure 儲存體驗證
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用 [備份至 URL - 建立認證]  對話方塊建立新的 SQL 認證。  
   
  使用此對話方塊建立認證時，您必須提供新增至本機憑證存放區的 Azure 管理憑證或下載到電腦上的發行設定檔，以驗證訂用帳戶和儲存體帳戶資訊。  

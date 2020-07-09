@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 02a90a155bcfcc2ad2294fb03c4e8b832701e36c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e7ccef337d7b693561ec2d328fcc3a2f8afae72c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632398"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748920"
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 DBCC OPENTRAN 有助於識別可能阻礙記錄截斷的使用中交易。 DBCC OPENTRAN 顯示在指定之資料庫的交易記錄內，最舊的使用中交易以及最舊的分散式和非分散式複寫交易 (如果有的話) 的相關資訊。 只有在記錄內有使用中的交易或資料庫包含複寫資訊時，才會顯示結果。 如果記錄內沒有使用中的交易，就會顯示參考用訊息。
   

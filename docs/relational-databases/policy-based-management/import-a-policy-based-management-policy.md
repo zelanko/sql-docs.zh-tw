@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 850b7ef9-d2b7-4754-bf04-7cb419ffb776
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ae1a68e63bd9d83cd80ec04b8ad2801b9f238a7b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6a534ca6028b7e5f6eade08e5503e9ea83b98179
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908652"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749366"
 ---
 # <a name="import-a-policy-based-management-policy"></a>匯入原則式管理原則
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中匯入原則式管理原則執行個體。  
   
  **本主題內容**  

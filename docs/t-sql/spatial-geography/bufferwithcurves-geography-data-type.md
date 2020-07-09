@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 6f0e5927216d6bc0ff1acbb2146d7f23c31012ba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 079b3ba5345dc5bf31a336b473f24e546873f417
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68066556"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736216"
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves (geography 資料類型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   傳回 **geography** 執行個體，表示與呼叫 **geography** 執行個體相距的距離小於或等於 *distance* 參數的所有點的集合。  
   

@@ -12,15 +12,15 @@ ms.topic: conceptual
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c3bc0a8e805b8a416cba9e7bf7786cfc9840e046
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 1e49a379ed12123c684497d84804c9ebd1ebf9ae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220471"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748473"
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>設定 Microsoft Azure 的 SQL Server 受控備份進階選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   下列教學課程說明如何設定 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]的進階選項。 這些程序只有在您需要它們所提供的功能時才有必要。 否則，您可以啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 並依據預設行為。  
   
  每個案例中都是使用 `database_name` 參數指定備份。 當 `database_name` 是 NULL 或 * 時，這些變更就會影響執行個體層級的預設設定。 執行個體層級設定也會影響在變更之後所建立的新資料庫。  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 90acdb21-e826-4d81-afe8-45a71f33282a
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a001a70db2b7154a6c753ae1e26209bcd868b03d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 918445176065566676268978280929dc5bba3456
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68107828"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748667"
 ---
 # <a name="stdisjoint-geometry-data-type"></a>STDisjoint (geometry 資料類型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   如果 **geometry** 執行個體在空間上與另一個 **geometry** 執行個體不相鄰，便傳回 1。 如果不是則傳回 0。  
   

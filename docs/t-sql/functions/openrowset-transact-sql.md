@@ -25,16 +25,16 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3c6943d24ec3c1803490cea29c1a415dbb5d3bdc
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 28519681f18d13fb11a93df9ffd852243c503a0b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151198"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738083"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 包含所有從 OLE DB 資料來源存取遠端資料所需的連接資訊。 這個方法是存取連結伺服器資料表的另一個方法，而且是使用 OLE DB 來連接和存取遠端資料的單次特定方法。 對於更常用到的 OLE DB 資料來源參考，請改用連結的伺服器。 如需詳細資訊，請參閱 [連結的伺服器 &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)。 您可以依照參考資料表名稱的相同方式，在查詢的 FROM 子句中參考 `OPENROWSET` 函數。 根據 OLE DB 提供者的能力而定，`OPENROWSET` 函數也可以被當做 `INSERT`、`UPDATE` 或 `DELETE` 陳述式的目標資料表加以參考。 雖然查詢可能傳回多個結果集，但是 `OPENROWSET` 只能傳回第一個。
 
@@ -46,9 +46,9 @@ ms.locfileid: "83151198"
 
 ```syntaxsql
 OPENROWSET
-( { 'provider_name' , { 'datasource' ; 'user_id' ; 'password'
-   | 'provider_string' }
-   , {   <table_or_view> | 'query' }
+( { 'provider_name' 
+    , { 'datasource' ; 'user_id' ; 'password' | 'provider_string' }
+    , {   <table_or_view> | 'query' }
    | BULK 'data_file' ,
        { FORMATFILE = 'format_file_path' [ <bulk_options> ]
        | SINGLE_BLOB | SINGLE_CLOB | SINGLE_NCLOB }

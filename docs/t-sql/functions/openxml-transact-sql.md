@@ -17,17 +17,17 @@ helpviewer_keywords:
 - rowsets [SQL Server], XML documents
 - XML [SQL Server], rowset views
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d9dacd09604661f9880533fcdcafd2fb7ab9ab12
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: c9f0034e6f3fb620bd55410d345c1c2291db280f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67914588"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738064"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   OPENXML 提供 XML 文件上的資料列集檢視。 因為 OPENXML 是資料列集提供者，所以 OPENXML 可以用在像是資料表、檢視或 OPENROWSET 函數等資料列集提供者能出現的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中。  
   
@@ -68,7 +68,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  這是資料列集中資料行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。 如果資料行類型與屬性的基礎 **xml** 資料類型不同，則會發生強制型轉。  
   
  *ColPattern*  
- 這是描述 XML 節點應該如何對應到資料行的選擇性、一般 XPath 模式。 若未指定 *ColPattern*，則會發生預設對應 (*flags* 指定的**屬性中心**或**項目中心**對應)。  
+ 這是描述 XML 節點應該如何對應到資料行的選擇性、一般 XPath 模式。 若未指定 *ColPattern*，則會發生預設對應 (**flags** 指定的**屬性中心**或*項目中心*對應)。  
   
  作為指定為 *ColPattern* 之 XPath 模式會用於指定對應的特殊性質 (針對**屬性中心**和**項目中心**對應)，覆寫或增強 *flags* 指出的預設對應。  
   
@@ -102,7 +102,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 ### <a name="a-using-a-simple-select-statement-with-openxml"></a>A. 以 OPENXML 使用簡單的 SELECT 陳述式  
  下列範例會使用 `sp_xml_preparedocument` 來建立 XML 影像的內部表示法。 然後對 XML 文件的內部表示法執行使用 `SELECT` 資料列集提供者的 `OPENXML` 陳述式。  
   
- *flag* 值是設為 `1`。 此值指出**屬性中心**對應。 因此 XML 屬性是對應到資料列集中的資料行。 指定為 `/ROOT/Customer` 的 *rowpattern* 會識別要處理的 `<Customers>` 節點。  
+ *flag* 值是設為 `1`。 此值指出**屬性中心**對應。 因此 XML 屬性是對應到資料列集中的資料行。 指定為 *的*rowpattern`/ROOT/Customer` 會識別要處理的 `<Customers>` 節點。  
   
  此處並未指定選擇性的 *ColPattern* (資料行模式) 參數，因為資料行名稱與 XML 屬性名稱相符。  
   
@@ -161,7 +161,7 @@ NULL       NULL
   
 -   資料列集中的 `OrderID`、`CustomerID` 和 `OrderDate` 會對應到由 XML 文件中 *rowpattern* 所識別節點之父系的屬性。  
   
--   資料列集中的 `ProdID` 資料行會對應到 `ProductID` 屬性，而資料列集中的 `Qty` 資料行則會對應到 *rowpattern* 中所識別之節點的 `Quantity` 屬性。  
+-   資料列集中的 `ProdID` 資料行會對應到 `ProductID` 屬性，而資料列集中的 `Qty` 資料行則會對應到 `Quantity`rowpattern*中所識別之節點的* 屬性。  
   
  雖然**以元素為主**的對應是由 *flags* 參數所指定，但是在 *ColPattern* 中指定的對應會覆寫這個對應。  
   
@@ -190,11 +190,11 @@ EXEC sp_xml_preparedocument @idoc OUTPUT, @doc;
 -- SELECT stmt using OPENXML rowset provider  
 SELECT *  
 FROM   OPENXML (@idoc, '/ROOT/Customer/Order/OrderDetail',2)   
-         WITH (OrderID       int         '../@OrderID',   
-               CustomerID  varchar(10) '../@CustomerID',   
-               OrderDate   datetime    '../@OrderDate',   
-               ProdID      int         '@ProductID',   
-               Qty         int         '@Quantity');  
+         WITH (OrderID       int         '../@OrderID',
+               CustomerID  varchar(10) '../@CustomerID',
+               OrderDate   datetime    '../@OrderDate',
+               ProdID      int         '@ProductID',
+               Qty         int         '@Quantity');
   
 ```  
   

@@ -19,17 +19,17 @@ helpviewer_keywords:
 - sessions [SQL Server], application locks
 - testing application locks
 ms.assetid: 4ea33d04-f8e9-46ff-ae61-985bd3eaca2c
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: ce9afdf15868e5ce9837d9d23b14eaf8c6fadee6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0bed1615cf691129ebec40c763d18d98d8276aff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832216"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736524"
 ---
 # <a name="applock_test-transact-sql"></a>APPLOCK_TEST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 此函數所傳回的資訊，乃是關於在未取得鎖定的情況下，針對指定的鎖定擁有者，是否可以將鎖定授與特定應用程式資源。 APPLOCK_TEST 是應用程式鎖定函數，會在目前的資料庫上運作。 資料庫是應用程式鎖定的範圍。
   

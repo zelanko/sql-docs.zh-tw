@@ -12,15 +12,15 @@ ms.assetid: 2535b856-97e8-4fb2-8ba0-5d5446355fa6
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f559d5e46f06e8bdf33687713ce2dc0c5c49cb78
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 258b2de1778476482a2939f8ef7f4e4f464b923d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68089343"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737373"
 ---
 # <a name="ftcrawl-started-event-class"></a>FT:Crawl Started 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **FT:Crawl Started** 事件類別指出全文檢索搜耙 (母體擴展) 已啟動。 使用此事件類別來檢查是否真由工作者工作來挑選搜耙要求。  
   
 ## <a name="ft-crawl-started-event-class-data-columns"></a>FT: Crawl Started 事件類別資料行  

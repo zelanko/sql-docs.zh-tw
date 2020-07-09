@@ -29,15 +29,15 @@ helpviewer_keywords:
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: ac274000ffdb1bcd29ebad2a2e0d0395b8daba0c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a9498c5d2705abece345533573a768e71e0b7030
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67930321"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748900"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 壓縮目前資料庫的指定資料或記錄檔大小。 您可以使用它將資料從某個檔案移至同一檔案群組中的其他檔案，其可清空檔案並允許移除其資料庫。 您可以將檔案壓縮成小於其在建立時的大小，將檔案大小下限重設為新值。
   
@@ -45,7 +45,7 @@ ms.locfileid: "67930321"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
   
 DBCC SHRINKFILE   
 (  
@@ -161,7 +161,7 @@ transaction with timestamp 15 and other snapshot transactions linked to
 timestamp 15 or with timestamps older than 109 to finish.  
 ```  
   
-此訊息表示時間戳記在 109 (壓縮作業所完成的最後一項交易) 之前的快照集交易將封鎖壓縮作業。 這也表示 [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 動態管理檢視中的 **transaction_sequence_num** 或 **first_snapshot_sequence_num** 資料行包含值 15。 如果 **transaction_sequence_num** 或 **first_snapshot_sequence_num** 檢視資料行所包含數字小於壓縮作業最後完成的交易 (109)，壓縮作業將會等到這些交易完成。
+此訊息表示時間戳記在 109 (壓縮作業所完成的最後一項交易) 之前的快照集交易將封鎖壓縮作業。 這也表示 **sys.dm_tran_active_snapshot_database_transactions** 動態管理檢視中的 **transaction_sequence_num** 或 [first_snapshot_sequence_num](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 資料行包含值 15。 如果 **transaction_sequence_num** 或 **first_snapshot_sequence_num** 檢視資料行所包含數字小於壓縮作業最後完成的交易 (109)，壓縮作業將會等到這些交易完成。
   
 若要解決這個問題，可以執行下列其中一項工作：
 -   結束正在封鎖壓縮作業的交易。
@@ -174,7 +174,7 @@ timestamp 15 or with timestamps older than 109 to finish.
 ## <a name="examples"></a>範例  
   
 ### <a name="shrinking-a-data-file-to-a-specified-target-size"></a>將資料檔案壓縮為指定的目標大小  
-下列範例會將 `UserDB` 使用者資料庫中名為 `DataFile1` 之資料檔案大小壓縮成 7 MB。
+下列範例會將 `DataFile1` 使用者資料庫中名為 `UserDB` 之資料檔案大小壓縮成 7 MB。
   
 ```sql  
 USE UserDB;  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 17107549-5073-4fa2-8ee7-5ed33b38821e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 4abca73a7d1ac259034987a494f5d7395b507a3a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a308c4d7236c7822398cd9c8bf9aee94e0ffc61e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68113160"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737132"
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>使用查詢存放區的工作負載調整資料庫
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的[查詢存放區](../../relational-databases/performance/how-query-store-collects-data.md)功能可自動擷取查詢、計劃和執行階段統計資料的歷程記錄，並將這項資訊保存在資料庫中。 [Database Engine Tuning Advisor (DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md) 支援新選項，可使用查詢存放區自動選取適當的工作負載以進行調整。 對於許多使用者而言，這可消除明確收集工作負載進行調整的需要。 只有已開啟「查詢存放區」功能的資料庫才能使用這項功能。 

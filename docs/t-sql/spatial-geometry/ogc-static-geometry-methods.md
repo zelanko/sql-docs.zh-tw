@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 74960d25-83c2-4ad6-9318-098c348ea977
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 48f8b8a53f22c4f4e102606ca4e5133b95536be2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 094d695aa1bb8f035b08f4c45f411b95d5fc4a2d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68101073"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748858"
 ---
 # <a name="ogc-static-geometry-methods"></a>OGC 靜態幾何方法
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援開放式地理空間協會 (Open Geospatial Consortium，OGC) 的靜態幾何方法。  
   

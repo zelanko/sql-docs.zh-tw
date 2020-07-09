@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 78ab5f6e-2f13-4788-937e-8892ef4e2345
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 807eec350627d64a642abc1043977d67069cc0d4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b7c5e5667222a7d7591c61670f2058276035c299
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68087228"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749354"
 ---
 # <a name="import-policies-dialog-box"></a>匯出原則對話方塊
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用此對話方塊，可將儲存為 XML 檔案的一個或多個原則 (和其參考條件) 匯入到目前的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體中。  
   
 ## <a name="options"></a>選項。  

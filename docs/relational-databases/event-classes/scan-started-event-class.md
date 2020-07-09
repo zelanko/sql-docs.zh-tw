@@ -12,15 +12,15 @@ ms.assetid: 9a0cc475-e6ee-430c-975c-73716d81d563
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 123c377ba95ec985f2f934c072c873151715f891
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 93dd4a65fdea78623a69ecd9dc12f49d59e42c0e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67911277"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737156"
 ---
 # <a name="scanstarted-event-class"></a>Scan:Started 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   啟動資料表或索引掃描時，會發生 Scan:Started 事件類別。  
   
 ## <a name="scanstarted-event-class-data-columns"></a>Scan:Started 事件類別資料行  

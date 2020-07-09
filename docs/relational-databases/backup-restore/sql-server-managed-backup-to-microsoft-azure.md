@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0f256060c923198e2ecb1d3741ebd7276d98b923
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 1501b60e9c858bac62b48dfa7b3875d0d93d5115
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922267"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737677"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>SQL Server managed backup 至 Microsoft Azure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 會管理 SQL Server 備份，並自動備份到 Windows Azure Blob 儲存體。 您可以選擇讓 SQL Server 根據資料庫的交易工作負載來決定備份排程。 或者，您可以使用進階選項來定義排程。 保留設定可決定在 Azure Blob 儲存體中儲存備份的時間長度。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 支援指定保留時間週期的時間點還原。  
   

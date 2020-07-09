@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 122630048b7e4ff9cef34c49bfde68177020630f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dbbc15d64e2bc6ae3ad20689303e42712ffa17fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68077899"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738221"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>hierarchyid 資料類型方法參考
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **hierarchyid** 資料類型是可變長度的系統資料類型。 您可以使用 **hierarchyid** 來代表階層中的位置。 **hierarchyid** 類型的資料行不會自動代表樹狀目錄。 應用程式負責決定是否要產生並指派 **hierarchyid** 值，以便讓資料列之間所需的關聯性反映在值中。
   

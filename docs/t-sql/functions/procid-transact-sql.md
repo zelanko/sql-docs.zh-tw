@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 0d4882c7-edb8-49b1-a470-2c7497b8998f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2e9f862ab78cbfd9db885ca2f0c7c9c0f483920d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 092b4dee65e98678e97fa7eb3501793d8e466ac6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67914316"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737928"
 ---
 # <a name="x40x40procid-transact-sql"></a>&#x40;&#x40;PROCID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   傳回目前 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模組的物件識別碼。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模組可能是預存程序、使用者自訂函數或觸發程序。 您不能在 CLR 模組或進行中的資料存取提供者中指定 @@PROCID。  
   

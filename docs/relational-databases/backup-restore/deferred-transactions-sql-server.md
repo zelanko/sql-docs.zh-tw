@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 90dc61256f973ce8a16d50b547c0fca41b242465
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 86f7046fed39d95748c1f0ba7a7bbf5eb045cc5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179252"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748413"
 ---
 # <a name="deferred-transactions-sql-server"></a>延遲交易 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 中，如果在資料庫啟動期間，回復 (復原) 所需的資料已離線，就會延期損毀的交易。 「延遲交易」  是在向前復原階段完成時尚未認可，而發生無法回復之錯誤的交易。 因為交易無法回復，所以會延期。  
   
 > [!NOTE]  

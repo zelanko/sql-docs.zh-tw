@@ -28,16 +28,16 @@ helpviewer_keywords:
 ms.assetid: c97fbb20-3d12-4d0b-9b52-62a229bc83c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 54e1dcd9735610f7cc8f109f00aa56fa7728ce04
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 01221e7bf5ff8b6bc0b8bb1a32f2aca66e8c6ed8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68495436"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706137"
 ---
 # <a name="backslash-line-continuation-transact-sql"></a>反斜線 (行接續符號) (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 `\` 會將長的字串常數、字元或二進位分成兩行或多行，以提高可讀性。  
   
@@ -51,10 +51,10 @@ ms.locfileid: "68495436"
 ```  
   
 ## <a name="arguments"></a>引數  
- \<字串的第一個區段>  
+ \<first section of string>  
  這是字串的開頭。  
   
- \<字串的接續區段>  
+ \<continued section of string>  
  這是字串的接續。  
   
 ## <a name="remarks"></a>備註  

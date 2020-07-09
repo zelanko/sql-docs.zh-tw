@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c6a9f1d7c4397a93b6df3b235f715627e7be320e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4e3aa38d92dbd829ff4259ac384475781534b4a3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179640"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85747600"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>檢視或變更資料庫的復原模式 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]檢視或變更資料庫。 
   

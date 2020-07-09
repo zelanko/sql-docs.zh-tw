@@ -14,15 +14,15 @@ ms.assetid: 0de7744d-9b73-463f-ae80-e31a020004b5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b028b6ab4da678444427682a635f679acce576ab
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5e5cbfd29ea270dec6e2c1ff13b2e3cdbcc15a19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68123578"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736661"
 ---
 # <a name="execute-user-defined-functions"></a>執行使用者定義函數
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   使用 Transact-SQL 執行使用者定義函數。
   
 

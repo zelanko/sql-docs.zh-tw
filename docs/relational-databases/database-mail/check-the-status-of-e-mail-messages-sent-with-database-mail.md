@@ -15,15 +15,15 @@ ms.assetid: eb290f24-b52f-46bc-84eb-595afee6a5f3
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4d3fc240c155632a764025dbd8519385a9d4c6c2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 72111583066aa73d94ccf70905f26cc35a359344
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095721"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737643"
 ---
 # <a name="check-the-status-of-e-mail-messages-sent-with-database-mail"></a>檢查使用 Database Mail 傳送之電子郵件訊息的狀態
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   本主題描述如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]來檢查透過 Database Mail 傳送之電子郵件訊息的狀態。  
   
 -   **開始之前：**  

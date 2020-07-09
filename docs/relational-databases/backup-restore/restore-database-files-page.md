@@ -14,15 +14,15 @@ f1_keywords:
 ms.assetid: 714c36ea-a9f9-43a4-99f9-a6f73d1baf8e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 56ce641b774dabf5e35b5804eba150342fae9034
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ab1cedc6960052ec8a9007b72d9062b8fc818ab7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180760"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737730"
 ---
 # <a name="restore-database-files-page"></a>還原資料庫 (檔案頁面)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用 **[還原資料庫]** 對話方塊的 **[檔案]** 頁面，管理資料庫中已選擇要還原的特定檔案。  
   
 ## <a name="options"></a>選項。  

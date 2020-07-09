@@ -15,15 +15,15 @@ ms.assetid: 22713555-c496-4ce1-8ec7-4ae75cfadca8
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0c0ad89bed910450618c043e7ab5dd2d96fff342
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 930c77bd4897c9a7f0b1118ac1014fe6f85d97f3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288298"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85740090"
 ---
 # <a name="agent-profiles-single-agent"></a>代理程式設定檔 (單一代理程式)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   使用 **[代理程式設定檔]** 對話方塊，即可管理代理程式的設定檔。 代理程式設定檔提供便於管理每一個代理程式執行階段參數的方式。 每一個代理程式都有預設的設定檔，有些代理程式還有其他預先定義的設定檔。 例如，合併代理程式有專為低頻寬連接設計的「慢速連結」設定檔。 預先定義的設定檔對大部份應用程式而言已經足夠，但您也可以建立使用者自訂設定檔，來自訂代理程式的行為。  
   
 ## <a name="options"></a>選項。  

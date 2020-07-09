@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 240b70f1-eeda-44ab-b4bb-9e4af80fa7c0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 58f5389953c2257c7478ad54665cfdeeb0a805c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fbc5bd95c10c89da4fb6fc6cbd1400f2e310927b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68077936"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738195"
 ---
 # <a name="getroot-database-engine"></a>GetRoot (Database Engine)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 傳回階層樹狀結構的根部。 GetRoot() 是一種靜態方法。
   

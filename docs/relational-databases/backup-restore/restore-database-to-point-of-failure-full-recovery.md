@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 04106e18-bbf7-4a5e-a2e1-3d65319814d5
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1980c9911e9b8af8fc305c712be479af15926201
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e63d8c84b455fbcf991485486bb7bb197032827a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180708"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737704"
 ---
 # <a name="restore-database-to-point-of-failure---full-recovery"></a>將資料庫還原到失敗點 - 完整復原
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   此主題說明如何還原到失敗點。 此主題只與使用完整或大量記錄復原模式的資料庫有關。  
   

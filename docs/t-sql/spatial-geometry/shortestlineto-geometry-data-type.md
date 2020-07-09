@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 39a2d0e4-4f93-4e94-a27e-6ad9537cfe74
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 4bb425d07d566f4bb06d18a8f74f493a649fa8b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bd65f185f2fac61c85eb6b21ab22c3d1d9abf622
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68101017"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748818"
 ---
 # <a name="shortestlineto-geometry-data-type"></a>ShortestLineTo (geometry 資料類型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 傳回具有兩點的 **LineString** 執行個體，代表兩個 **geometry** 執行個體之間的最短距離。 所傳回 **LineString** 執行個體的長度是兩個 **geometry** 執行個體之間的距離。
   

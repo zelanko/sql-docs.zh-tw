@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 865ceca1-9200-45ed-a7d8-e286e2679fdc
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1a8d85b5823d692343acbc73ffc10e0cb08bc9f9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 608b4f6238ab53d97a80f79c4586c36d79f4086f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67930150"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748734"
 ---
 # <a name="stcontains-geometry-data-type"></a>STContains (geometry 資料類型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 如果 **geometry** 執行個體完整包含另一個 **geometry** 執行個體，則會傳回 1。 如果不是則傳回 0。
   

@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: ddfb0991-cde3-4b97-a5b7-ee450133f160
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ff9f53c6dd3e0029f2627545c7654ded3219abbe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c0e5ce89f8d87a3cfea230c5254214de7f20fcc9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67914537"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738039"
 ---
 # <a name="original_login-transact-sql"></a>ORIGINAL_LOGIN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   傳回連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的登入名稱。 您可以利用這個函數來傳回有許多明確或隱含內容切換的工作階段中原始登入的識別。  
   

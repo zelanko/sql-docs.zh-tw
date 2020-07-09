@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 764c2db99c78cb776ed500ff1b3b04170516efe2
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 41cf0607ae8d308d4d1f243e8b987ca6c9d541fd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632598"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737958"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   傳回包含點陣圖的值，表示目前使用者的陳述式、物件或資料行權限。  
   

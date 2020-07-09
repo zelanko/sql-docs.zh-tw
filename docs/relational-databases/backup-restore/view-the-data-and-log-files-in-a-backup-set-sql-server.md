@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: abb6420c-f809-426e-aeb4-d0a74989cf39
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 349e594b35891cda097690891a46cb7a651868d7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9ef29203af39a465f18f1eecfc62515818959d5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179518"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85746610"
 ---
 # <a name="view-the-data-and-log-files-in-a-backup-set-sql-server"></a>檢視備份組中的資料和記錄檔 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中檢視備份組中的資料和記錄檔。  
   

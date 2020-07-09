@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 232ecd6278070d928db7485e93e8498adfc70a9b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a3bc9ad12e37cf5b208a98a1f9a09396d37d5cb8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76941133"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748552"
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>將記錄傳送升級至 SQL Server 2016 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄傳送設定升級至新的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本、新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 累積更新時，以適當順序升級您的記錄傳送伺服器將會保留記錄傳送災害復原解決方案。  
   
 > [!NOTE]  

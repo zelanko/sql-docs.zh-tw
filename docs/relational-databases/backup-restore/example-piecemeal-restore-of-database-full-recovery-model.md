@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0a84892d-2f7a-4e77-b2d0-d68b95595210
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a84e0a0d50de36d5aa9e98a36f3ff250d77aedfe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f680bae8939aa6c4f6648c6076616564cd7d195c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179029"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737772"
 ---
 # <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>範例：分次還原資料庫 (完整復原模式)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   分次還原順序會在檔案群組層級，分階段地還原與復原資料庫，從主要檔案群組開始，然後才是所有可讀寫的次要檔案群組。  
   

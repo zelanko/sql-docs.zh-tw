@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 0f691b3d-a8fd-4459-ad21-2cfc8574a8c0
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f9f7f51b2d0ede3bb49bb152ab08cbb2a7eb2732
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bb3c619edfc1fae76e8b497c46a882fbfc42ffd2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68114025"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85743166"
 ---
 # <a name="sql-server-xtp-phantom-processor"></a>SQL Server XTP 虛設項目處理器
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   SQL Server XTP 虛設項目處理器效能物件包含與記憶體內部 OLTP 引擎的虛設項目處理子系統相關的計數器。 此元件負責偵測在 SERIALIZABLE 隔離等級執行之交易中的虛設項目列，以及並行案例中的條件約束驗證。  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 49828927-1727-4d1d-9ef5-3de43f68c026
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 1b95797a5725a620d545b51ac2afb5b55464cbb9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e2ad92efd8a02f783885a72299bae6bfd77b44bf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829773"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748492"
 ---
 # <a name="complete-database-restores-simple-recovery-model"></a>完整資料庫還原 (簡單復原模式)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   在完整資料庫還原中，目標是還原整個資料庫。 在還原期間，整個資料庫為離線狀態。 在讓資料庫的任何部分上線之前，所有的資料都必須復原到一致的位置；此時資料庫的所有部分都會回到相同的時間點，而且沒有未認可的交易存在。  
   
@@ -46,11 +46,11 @@ ms.locfileid: "82829773"
 ##  <a name="overview-of-database-restore-under-the-simple-recovery-model"></a><a name="Overview"></a> 簡單復原模式下的資料庫備份概觀  
  在簡單復原模式下進行完整資料庫還原只需要一個或兩個 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 陳述式，視是否想要還原差異資料庫備份而定。 如果您只使用完整資料庫備份，則只需要還原最近的備份，如下圖所示。  
   
- ![只還原完整資料庫備份](../../relational-databases/backup-restore/media/bnrr-rmsimple1-fulldbbu.gif "只還原完整資料庫備份")  
+ ![只還原完整資料庫備份](../../relational-databases/backup-restore/media/bnrr-rmsimple1-fulldbbu.png "只還原完整資料庫備份")  
   
  如果也要使用差異資料庫備份，請還原最近一次完整資料庫備份，但不要復原資料庫，然後才還原最近一次差異資料庫備份，並復原資料庫。 下圖顯示這項程序。  
   
- ![還原完整和差異資料庫備份](../../relational-databases/backup-restore/media/bnrr-rmsimple2-diffdbbu.gif "還原完整和差異資料庫備份")  
+ ![還原完整和差異資料庫備份](../../relational-databases/backup-restore/media/bnrr-rmsimple2-diffdbbu.png "還原完整和差異資料庫備份")  
   
 > [!NOTE]  
 >  若您想將資料庫備份還原至不同的伺服器執行個體，請參閱 [使用備份與還原複製資料庫](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)。  

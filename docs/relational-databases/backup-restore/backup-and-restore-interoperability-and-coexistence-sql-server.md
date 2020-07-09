@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8ae58f796b86beb346e810faf4549d11afd36d21
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 3dcf1473fc92ba69d68f9aae9d871540e2604b52
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220540"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737833"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>備份與還原：互通性與共存性 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   本主題描述 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中數個功能的備份和還原考量。 這些功能包括：檔案還原和資料庫啟動、線上還原和停用的索引、資料庫鏡像，以及分次還原和全文檢索索引。  
   

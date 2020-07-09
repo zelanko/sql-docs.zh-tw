@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 345d8ed4-177e-4ec3-bab3-25d30000e323
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e8d2c9a265e89ad6c09d89da2e813f9fffbd3379
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5480f60c6bb47f5e2c0a03236da30a7dada30209
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68001857"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723734"
 ---
 # <a name="mssqlserver_3156"></a>MSSQLSERVER_3156
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細資料  
   
-|||  
-|-|-|  
+| 屬性 | 值 |  
+| :-------- | :---- |  
 |產品名稱|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |事件識別碼|3156|  
 |事件來源|MSSQLSERVER|  

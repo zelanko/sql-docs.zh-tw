@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ac8532f2cc5d8e2f50c0408ce983a61626748fb1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9e5a0920c0e56685885345d730f481bb7eba1ee8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68066544"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736202"
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (geography 資料類型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 傳回 geometric 物件，此物件表示與 **geography** 執行個體之間的距離小於或等於指定值 (允許有指定的容錯) 之所有點值的聯集。  
   

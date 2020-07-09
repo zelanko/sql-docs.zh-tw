@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 86331d43-c738-4523-ae3d-7d6700348ed1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 198ba38cf63b5fc6a92750050cd6680fd9d3bfb9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4f2e54b5d8873e34eaff65fd6f9ec6a86feb32c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179240"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748251"
 ---
 # <a name="define-a-logical-backup-device-for-a-disk-file-sql-server"></a>定義磁碟檔案的邏輯備份裝置 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中定義磁碟檔案的邏輯備份裝置。 邏輯裝置是使用者定義名稱，指向特定的實體備份裝置 (磁碟檔案或磁帶機)。  當備份寫入備份裝置後，才會進行實體裝置的初始化。  
   
  **本主題內容**  

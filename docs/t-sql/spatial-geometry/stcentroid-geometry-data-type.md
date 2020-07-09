@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4dc5a004-7a53-4cce-81dd-9f5e1dd0db78
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5663bc7a7236a49b6b97c41ed5c96e53f337c186
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f842ad81c61b521c5e98348062fb546212c21dc3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67930176"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748753"
 ---
 # <a name="stcentroid-geometry-data-type"></a>STCentroid (geometry 資料類型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 傳回由一個或多個多邊形組成之 **geometry** 執行個體的幾何中心點。
   

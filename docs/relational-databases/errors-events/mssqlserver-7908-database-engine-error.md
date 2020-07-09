@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 470045b0-ebe9-44a7-b456-480e7a516a2c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 72cab4cc129690b5e544a979f0b18892454dfcef
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 556105822ae0109ea5b05cd83c07834814c95e8f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951429"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637140"
 ---
 # <a name="mssqlserver_7908"></a>MSSQLSERVER_7908
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細資料  
   
-|||  
-|-|-|  
+| 屬性 | 值 |  
+| :-------- | :---- |  
 |產品名稱|SQL Server|  
 |事件識別碼|7908|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC2_FS_INVALID_COLUMN_LEVEL_FILE|  
-|訊息文字|資料表錯誤: 在分割區識別碼 PN_ID 中的檔案 'FILE' 不是有效的 Filestream 檔案。|  
+|訊息文字|資料表錯誤：在分割區識別碼 PN_ID 中的檔案 'FILE' 不是有效 Filestream 檔案。|  
   
 ## <a name="explanation"></a>說明  
 資料行目錄中 FILESTREAM 檔案的名稱是 ROWGUID。 如果無法將資料行目錄中的檔案名稱轉換成 ROWGUID，則表示該檔案不是有效的檔案。  

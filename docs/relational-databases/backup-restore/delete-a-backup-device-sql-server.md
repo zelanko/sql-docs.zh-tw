@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7be62480-ed6a-4262-a071-1feba73b1c02
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8e76faf07201a74e8183b46a9b298627de705b94
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 50f92b7fcc6e15e8866ba50ad3ecc85ec617826d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179231"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748115"
 ---
 # <a name="delete-a-backup-device-sql-server"></a>刪除備份裝置 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來刪除 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的備份裝置。  
   
  **本主題內容**  

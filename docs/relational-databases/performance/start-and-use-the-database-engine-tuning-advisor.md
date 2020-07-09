@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 898c59cab6038b7025066906ea74ffd5b9222815
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 00441600bb5d2059686f6fe2bc388146e880d4ad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73983273"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737149"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>啟動及使用 Database Engine Tuning Advisor
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   此主題描述如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中啟動及使用 Database Engine Tuning Advisor。 如需如何在微調資料庫後檢視及處理結果的資訊，請參閱 [檢視及處理 Database Engine Tuning Advisor 的輸出](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)。  
   
 ##  <a name="initialize-the-database-engine-tuning-advisor"></a><a name="Initialize"></a> 初始化 Database Engine Tuning Advisor  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ac815bc7-5342-4cc4-af40-c80a1c4c8b68
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 2b159a11227792ddf445088162a832b0d897deec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2a93c1063ceb29ef4c67a568b6630e9e44f9f5f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68107806"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748648"
 ---
 # <a name="stdistance-geometry-data-type"></a>STDistance (geometry 資料類型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   傳回 **geometry** 執行個體中的點與另一個 **geometry** 執行個體中的點之間的最短距離。  
   

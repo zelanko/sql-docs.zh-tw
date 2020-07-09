@@ -13,15 +13,15 @@ ms.assetid: d253b44c-7600-4afa-a3a7-03cc937c6a4b
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: faad3614a308efc8dfa8994b176cec148520522a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ec405817bc9ce89dd150adfcc2887ba2c703d556
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68118277"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737208"
 ---
 # <a name="lockescalation-event-class"></a>Lock:Escalation 事件類別
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **Lock:Escalation** 事件類別指出細粒鎖定已經轉換成粗粒鎖定；例如，轉換成物件鎖定的資料列鎖定。 擴大事件類別是事件識別碼 60。  
   
 ## <a name="lockescalation-event-class-data-columns"></a>Lock:Escalation 事件類別資料行  

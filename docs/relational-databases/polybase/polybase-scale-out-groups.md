@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 65e9ae2e44816ca761594acd3e2e907d7bd938a3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7ea789049116c79e3242a5d1fed1f1fb8f020d1f
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80217088"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84818224"
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase 向外延展群組
 
@@ -58,10 +58,6 @@ PolyBase Engine 是 PolyBase 查詢背後的重要元件。 它會剖析外部�
   
 PolyBase Data Movement Service 會接收來自 PolyBase Engine 的指示，並在 HDFS 與 SQL Server 之間傳輸資料，以及在前端和計算節點上的 SQL Server 執行個體之間傳輸資料。
   
-## <a name="editions-availability"></a>版本可用性  
-
-安裝 SQL Server 之後，可以指定執行個體做為前端節點或計算節點。 這個選擇取決於 PolyBase 執行所在的是哪一個 SQL Server 版本。 在 Enterprise Edition 安裝中，可以指定執行個體做為前端節點或計算節點。 在 Standard Edition 中，只能將執行個體指定為計算節點。
-
 ## <a name="next-steps"></a>後續步驟
 
 若要設定 PolyBase 向外延展群組，請參閱下列指南：

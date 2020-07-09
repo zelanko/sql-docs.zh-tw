@@ -13,15 +13,15 @@ ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db274ccde27abf92617e0eadf95b1971e740705a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e8962776175617293c1acdc979852232dbca95c5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72251291"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737116"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>使用含有記憶體內部 OLTP 的查詢存放區
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢存放區可讓您針對執行記憶體內部 OLTP 的工作負載，監視原生編譯程式碼的效能。  
 編譯和執行階段統計資料是使用與以磁碟為基礎的工作負載相同的方式來收集與公開。   

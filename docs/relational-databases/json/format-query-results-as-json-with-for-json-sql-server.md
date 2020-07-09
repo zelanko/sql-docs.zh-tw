@@ -1,8 +1,7 @@
 ---
 title: 使用 FOR JSON 將查詢結果格式化為 JSON
-ms.date: 06/06/2019
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,18 +11,19 @@ helpviewer_keywords:
 ms.assetid: 15b56365-58c2-496c-9d4b-aa2600eab09a
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 43e9b416885a5cbd1239b0694ffc3613b7509186
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4e9aee7c2c8de20c50c101e3573e4d3d9259b661
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095817"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722268"
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>使用 FOR JSON 將查詢結果格式化為 JSON (SQL Server)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 將 **FOR JSON** 子句新增至 **SELECT** 陳述式，以將查詢結果格式化為 JSON，或將 SQL Server 中的資料匯出為 JSON。 使用 **FOR JSON** 子句，將來自應用程式的 JSON 輸出格式設定委派給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，以簡化用戶端應用程式。
   
@@ -180,7 +180,7 @@ JSON_F52E2B61-18A1-11d1-B105-00805F49916B
 1.  結果集包含單一資料行。
     -   小型結果集會包含單一資料列。
     -   大型結果集跨多個資料列分割太長的 JSON 字串。
-        -   根據預設，SQL Server Management Studio (SSMS) 會在輸出設定為 [以方格顯示結果]  時，將結果串連成單一資料列。 SSMS 的狀態列會顯示實際資料列計數。
+        -   根據預設，SQL Server Management Studio (SSMS) 會在輸出設定為 [以方格顯示結果] 時，將結果串連成單一資料列。 SSMS 的狀態列會顯示實際資料列計數。
         -   其他用戶端應用程式可能需要程式碼，藉由串連多個資料列的內容，來將較長的結果重新合併成有效的單一 JSON 字串。 如需這個程式碼在 C# 應用程式中的範例，請參閱[在 C# 用戶端應用程式中使用 FOR JSON 輸出](../../relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server.md#use-for-json-output-in-a-c-client-app)。
   
      ![FOR JSON 輸出的範例](../../relational-databases/json/media/forjson-example2.png)  
@@ -199,15 +199,14 @@ JSON_F52E2B61-18A1-11d1-B105-00805F49916B
 以下是示範 **FOR JSON** 子句如何格式化 JSON 輸出的範例。  
   
 **查詢結果**  
-  
-|||||  
-|-|-|-|-|  
-|**A**|**B**|**C**|**D**|  
+
+|A|B|C|D|
+|-|-|-|-|
 |10|11|12|X|  
 |20|21|22|Y|  
 |30|31|32|Z|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-  
+
  **JSON 輸出**  
   
 ```json  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4cbc66e3-9035-4ecf-8f5a-6301f168c26c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5cd0e37ddf47e80ff524d02688d5764d93717a67
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3c4ae2f630813a97184c70eae9ddd73537f0dd1c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68042073"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736105"
 ---
 # <a name="stisempty-geography-data-type"></a>STIsEmpty (geography 資料類型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   如果 **geography** 執行個體是空的，則傳回 1。 如果 **geography** 執行個體不是空的，則傳回 0。  
   

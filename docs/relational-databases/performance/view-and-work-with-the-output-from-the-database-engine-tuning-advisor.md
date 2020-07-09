@@ -26,16 +26,16 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 26ed3efa0738579d9abfde909f161105d95f91a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 75a8ee28972b2b80fc1244a80b35b7c9d5d6daee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165478"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737091"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>檢視及處理 Database Engine Tuning Advisor (DTA) 的輸出
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Database Engine Tuning Advisor 微調資料庫時，會建立摘要、建議、報表和微調記錄。 您可以使用微調記錄輸出針對 Database Engine Tuning Advisor 的微調工作階段進行疑難排解。 您可以使用摘要、建議和報表來判定是要實作微調建議或繼續微調，直到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝的查詢效能改進達到所需的程度為止。 如需有關如何使用 Database Engine Tuning Advisor 來建立工作負載及微調資料庫的詳細資訊，請參閱＜ [啟動及使用 Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)＞。  
   

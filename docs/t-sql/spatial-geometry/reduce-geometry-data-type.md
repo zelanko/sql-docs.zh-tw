@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 132184bf-c4d2-4a27-900d-8373445dce2a
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5725b95df233f46e9e003f6c2af155ae943ba2b1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 56f2efd4fe6b84cb7758c0da723d9c11c51afc21
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68101046"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748831"
 ---
 # <a name="reduce-geometry-data-type"></a>Reduce (geometry 資料類型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 傳回指定 **geometry** 執行個體的近似值。 在執行個體上以所指定容錯執行 Douglas-Peucker 演算法的延伸模組，即可產生該近似值。
   

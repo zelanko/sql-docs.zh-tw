@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 60a520a6-1a7c-486b-8d91-34401edf6233
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: d9244a2833a75925fab1f00d6ce20915f5ceaafb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ba1d23e85d18215092768e41f7962516b3ff036a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67930330"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748719"
 ---
 # <a name="stconvexhull-geometry-data-type"></a>STConvexHull (geometry 資料類型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 傳回代表 **geometry** 執行個體凸殼的物件。
   

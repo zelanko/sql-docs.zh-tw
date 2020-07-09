@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0dbeda81-1464-44ba-9011-914900096368
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bdc416bef5fe1273c29bb52c8526661c3af4d8a9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 75c16bab2ed7f8f46ee05af3dedf533530f07f08
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179115"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737793"
 ---
 # <a name="example-online-restore-of-a-read-write-file-full-recovery-model"></a>範例：線上還原讀取/寫入檔案 (完整復原模式)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   本主題是關於在完整復原模式下，包含多個檔案或檔案群組的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  
   

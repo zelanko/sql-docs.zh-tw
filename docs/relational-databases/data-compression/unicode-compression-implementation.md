@@ -14,15 +14,15 @@ ms.assetid: 44e69e60-9b35-43fe-b9c7-8cf34eaea62a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 71f1d8a1c25f099338bbdfcc483ab2e8e8061bc9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ab0732ae3773a7fefb86461272ff036fdb41d7a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68030467"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737650"
 ---
 # <a name="unicode-compression-implementation"></a>Unicode 壓縮實作
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 Standard Compression Scheme for Unicode (SCSU) 演算法的實作來壓縮儲存在資料列或頁面壓縮物件中的 Unicode 值。 對於這些壓縮的物件而言，系統會自動針對 **nchar(n)** 和 **nvarchar(n)** 資料行進行 Unicode 壓縮。 不論地區設定為何， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 都會將 Unicode 資料儲存成 2 位元組。 這稱為 UCS-2 編碼。 對於某些地區設定而言，SQL Server 中的 SCSU 壓縮實作最多可以節省 50% 的儲存空間。  
   

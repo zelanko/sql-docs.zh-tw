@@ -12,15 +12,15 @@ ms.assetid: 4bf82a13-9985-4f20-9ef8-0083f104d124
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0a65f8ab02309f11438dcbe5af0984ac930a060b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: af32d9a61ef21e6bc09e114c4b8d55e56b7f0d2d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68118145"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737189"
 ---
 # <a name="log-file-auto-shrink-event-class"></a>Log File Auto Shrink 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Log File Auto Shrink** 事件類別指出記錄檔會自動壓縮。 如果記錄檔是因為明確的 ALTER DATABASE 陳述式而壓縮，則不會觸發這個事件。  
   
  可將 **Log File Auto Shrink** 事件類別包含在會監視記錄檔壓縮的追蹤中。 當此事件類別包含在追蹤中，除非經常壓縮檔案，否則所造成的額外負荷擔不多。  

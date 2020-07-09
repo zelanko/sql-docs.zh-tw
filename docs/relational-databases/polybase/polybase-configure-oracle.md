@@ -10,16 +10,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 57ac5173fe17c3703a1fe9ee59c455bc25fe8131
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 322c858a9b20548662136e395c0db1c76171f5fd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153133"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85740951"
 ---
 # <a name="configure-polybase-to-access-external-data-in-oracled"></a>設定 PolyBase 存取 Oracle 中的外部資料
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本文說明如何在 SQL Server 執行個體上使用 PolyBase 查詢位於 Oracle 中的外部資料。
 

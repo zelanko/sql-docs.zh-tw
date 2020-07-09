@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 5f84ff9e-c1ec-46aa-8501-50f854ebcc3a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4d0feb6b3254ddff640a41de8e0b833739225761
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 613eb5742f295b1169befca8ba988ed8282076e1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73168774"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737915"
 ---
 # <a name="pwdcompare-transact-sql"></a>PWDCOMPARE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   雜湊密碼並將該雜湊與現有密碼的雜湊相比較。 PWDCOMPARE 可用於搜尋空白的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入密碼或一般弱式密碼。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "73168774"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 PWDCOMPARE ( 'clear_text_password'  
    , password_hash   
@@ -50,7 +50,7 @@ PWDCOMPARE ( 'clear_text_password'
  這是密碼的加密雜湊。 *password_hash* 為 **varbinary(128)** 。  
   
  *version*  
- 如果 *password_hash* 代表的登入值早於已經移轉到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更新版本，但從未轉換為 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 系統的 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]，則是可以設定為 1 的已淘汰參數。 *version* 為 **int**。  
+ 如果 *password_hash* 代表的登入值早於已經移轉到 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 或更新版本，但從未轉換為 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 系統的 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]，則是可以設定為 1 的已淘汰參數。 *version* 為 **int**。  
   
 > [!CAUTION]  
 >  提供這個參數是為了回溯相容性，因為密碼雜湊 BLOB 現在包含自己的版本說明，所以會忽略它。 [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]  

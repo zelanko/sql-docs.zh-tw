@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3fefdf7b-f931-404c-821c-82c0375eaf51
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a2b65decea6d737801ef1b0b37e44b0c8ae028af
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f5a594bc69dc90931161218c3fbe938121fb4c9e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68101009"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748811"
 ---
 # <a name="spatial-types---geometry-transact-sql"></a>空間類型 - geometry (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   平面空間資料類型 **geometry** 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中是實作為通用語言執行平台 (CLR) 資料類型。 此類型代表以 Euclidean (平面) 座標系統表示的資料。  
   

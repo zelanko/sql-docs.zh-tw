@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: c07abbc6-fc6a-470b-8fa3-532f2e06b16a
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 640a24917c1bcb8b7b707308693f658de8dd33e6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6a35d325e976d0fc7ec75f348efb53c39b7bc51c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70211366"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737621"
 ---
 # <a name="create-a-database-mail-account"></a>建立 Database Mail 帳戶
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   您可以使用 **「Database Mail 組態精靈」** 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，建立 Database Mail 帳戶。  
   
 -   **開始之前：** [必要條件](#Prerequisites)  

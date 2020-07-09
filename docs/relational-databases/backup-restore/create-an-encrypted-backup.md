@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a3a7d08c93b42b8b8cd236dae775b28cc5040751
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a235ae2c396334d7dbd7c27efb582bf8c1890219
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179243"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748434"
 ---
 # <a name="create-an-encrypted-backup"></a>建立加密的備份
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主題說明使用 Transact-SQL 建立加密備份所需的步驟。  如需使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的範例，請參閱 [建立完整資料庫備份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)。 
   
 ## <a name="backup-to-disk-with-encryption"></a>使用加密備份到磁碟  

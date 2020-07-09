@@ -39,15 +39,15 @@ f1_keywords:
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fb7ea877ba1a3beaabb6cbab8854b4f37a5f6558
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3c52311482f8ad7107e384e3ed8e20100c094243
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095707"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737625"
 ---
 # <a name="configure-database-mail"></a>設定 Database Mail
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主題說明如何使用 Database Mail 組態精靈來啟用及設定 Database Mail，並使用範本建立 Database Mail 組態指令碼。  
   
 -   **開始之前：** [限制事項](#Restrictions)、[安全性](#Security)  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4fbd27dd-317b-4916-a8ae-4df1b8a6f27c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1feffb9116294c6dc77af5bae2552362fd8e532b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b0a53e3eca76e5798b891943aff775844618dbf8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68107843"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748677"
 ---
 # <a name="stdimension-geometry-data-type"></a>STDimension (geometry 資料類型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 傳回 **geometry** 執行個體的最大維度。
   

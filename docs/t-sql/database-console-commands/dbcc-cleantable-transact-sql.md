@@ -26,21 +26,21 @@ helpviewer_keywords:
 ms.assetid: 0dbbc956-15b1-427b-812c-618a044d07fa
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 8cb3c1c0eba5c39083b6a6b39b4040639909808c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 706025b8be4a8b48f022a752ac60686e51cc7692
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68101969"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738181"
 ---
 # <a name="dbcc-cleantable-transact-sql"></a>DBCC CLEANTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 從資料表或索引檢視中卸除的可變長度資料行回收空間。
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
   
 DBCC CLEANTABLE  
 (  
@@ -86,7 +86,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 ## <a name="examples"></a>範例  
 ### <a name="a-using-dbcc-cleantable-to-reclaim-space"></a>A. 使用 DBCC CLEANTABLE 來回收空間  
-下列範例會針對 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫中的 `Production.Document` 資料表執行 DBCC CLEANTABLE。
+下列範例會針對 `Production.Document` 範例資料庫中的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表執行 DBCC CLEANTABLE。
   
 ```sql  
 DBCC CLEANTABLE (AdventureWorks2012,'Production.Document', 0)  

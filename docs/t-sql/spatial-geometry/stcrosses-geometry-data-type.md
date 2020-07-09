@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3e3fc065-555a-4bee-8b71-e92f3dc62a4f
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 0320cbd20242f19bab7c7990f4bad13458e403e4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b78da062fb43d04afb53b8e4743ad222d873fe32
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67930141"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748711"
 ---
 # <a name="stcrosses-geometry-data-type"></a>STCrosses (geometry 資料類型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 如果 **geometry** 執行個體跨越另一個 **geometry** 執行個體，則會傳回 1。 如果不是則傳回 0。
   

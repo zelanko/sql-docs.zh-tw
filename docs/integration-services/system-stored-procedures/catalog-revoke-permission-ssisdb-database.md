@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0dedb0034099dcb803bb6354a0806b613108da8d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 760f7165f24b97f3a6a988a6072bc7f6d67c54e4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296800"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737854"
 ---
 # <a name="catalogrevoke_permission-ssisdb-database"></a>catalog.revoke_permission (SSISDB 資料庫)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   撤銷 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的安全性實體物件權限。  
   

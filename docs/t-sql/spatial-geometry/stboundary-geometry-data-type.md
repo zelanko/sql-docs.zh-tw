@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f0551674-e6e8-4926-9038-df03f2c807d7
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1a15d3bdc505c4406c1c5d09dbc9d6f007c34fe0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 94862dc99312cb495aa8f9dceba4959c8f4fa706
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67930389"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748758"
 ---
 # <a name="stboundary-geometry-data-type"></a>STBoundary (geometry 資料類型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   傳回 **geometry** 執行個體的界限。  
   

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: f2e9b997-f400-4963-b225-59d46c6b93e8
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e723e3f50db5090279ec6531906018471076af7f
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.openlocfilehash: 592aa9b31ce957500210a9a4d3caa7f780bf588d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81388630"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738429"
 ---
 # <a name="invalid-characters-and-escape-rules"></a>無效的字元和逸出規則
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   此主題描述 FOR XML 子句如何處理無效的 XML 字元，並列出 XML 名稱中無效字元的逸出規則。  
   
 ## <a name="for-xml-and-invalid-characters"></a>XML 和無效的字元  
