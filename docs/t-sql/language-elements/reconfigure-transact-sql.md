@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6ee52f585af8930afcba301a5aba12df4eb47173
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 240bc2359a3c0c66fc6f95c2392ae78740865a1d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68072384"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880415"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   更新 **sp_configure** 系統預存程序所變更之設定選項目前所設定的值 (**sp_configure** 結果集中的 **config_value** 資料行)。 由於部分設定選項需要停止再重新啟動伺服器，才能更新目前正在執行的值，因此，RECONFIGURE 不一定會針對變更的設定值來更新目前正在執行的值 (**sp_configure** 結果集中的 **run_value** 資料行)。    
     

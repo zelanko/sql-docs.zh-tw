@@ -17,17 +17,16 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: briancarrig
 ms.author: brcarrig
-manager: amitban
-ms.openlocfilehash: df8bb9e603d5455a2e42393df4c40956000cb037
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0c71bda5a459c7993de824cdb6665978ba57166f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76831589"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892461"
 ---
 # <a name="in-memory-database-systems-and-technologies"></a>記憶體內部資料庫系統與技術
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
 此頁面目的是作為 SQL Server 內記憶體內部功能與技術的參考頁面。 記憶體內部資料庫系統概念是指設計來利用現代化資料庫系統上所提供較大型記憶體容量的資料庫系統。 記憶體內部資料庫在本質上可能是關聯式或非關聯式。
 
@@ -37,25 +36,25 @@ ms.locfileid: "76831589"
 
 ## <a name="hybrid-buffer-pool"></a>混合式緩衝集區
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
 [混合式緩衝集區](../database-engine/configure-windows/hybrid-buffer-pool.md)可針對具有 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的 Windows 和 Linux 平台來擴充位於位元組可定址持續性記憶體儲存裝置上資料庫檔案緩衝集區。
 
 ## <a name="memory-optimized-tempdb-metadata"></a>經記憶體最佳化的 `tempdb` 中繼資料
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引進[記憶體最佳化 tempdb 中繼資料](./databases/tempdb-database.md#memory-optimized-tempdb-metadata)新功能，可有效的移除某些競爭瓶頸，並解除鎖定大量 tempdb 工作負載的新層級延展性。
 
 ## <a name="in-memory-oltp"></a>記憶體內部 OLTP
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
 [記憶體內部 OLTP](./in-memory-oltp/in-memory-oltp-in-memory-optimization.md) 是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../includes/sssds-md.md)] 中提供的資料庫技術，可用來最佳化交易處理、資料擷取、資料載入及暫時性資料案例的效能。
 
 ## <a name="configuring-persistent-memory-support-for-linux"></a>設定 Linux 的持續性記憶體支援
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] 描述如何使用 `ndctl` 公用程式[持續性記憶體](../linux/sql-server-linux-configure-pmem.md)來設定持續性記憶體 (PMEM)。
 

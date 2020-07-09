@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 2e234e0057db852b6b741a0103412bbacd108287
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d15d295b36ae14e81a3e39272e1c3af71cb51d2d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558387"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892313"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>設定 SQL Server Always On 可用性群組以確保 Linux 上的高可用性
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 本文描述如何建立 SQL Server Always On 可用性群組 (AG) 以確保 Linux 上的高可用性。 AG 有兩種設定類型。 「高可用性」  設定會使用叢集管理員來確保商務持續性。 此設定也可以包含讀取級別複本。 本文件說明如何建立 AG 以確保高可用性。
 

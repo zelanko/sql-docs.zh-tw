@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 4a8bf90f-a083-4c53-84f0-d23c711c8081
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 112ba12a568190967a31789ca6cd69d2056d9e8c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 60736413f572f997bdad1e10eb1fdf79b612aa48
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67896755"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893067"
 ---
 # <a name="mssqlserver_2020"></a>MSSQLSERVER_2020
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細資料  
   
-|||  
-|-|-|  
+| 屬性 | 值 |  
+| :-------- | :---- |  
 |產品名稱|SQL Server|  
 |事件識別碼|2020|  
 |事件來源|MSSQLSERVER|  
@@ -38,7 +38,8 @@ ms.locfileid: "67896755"
 ## <a name="user-action"></a>使用者動作  
 更正發生錯誤 2020 之前，在訊息中識別的任何錯誤。 例如，在下列程式碼範例中，`Production.ApprovedDocuments` 檢視表定義於 `Title` 資料表中的 `ChangeNumber`、`Status` 和 `Production.Document` 資料行上。 系統會針對 `ApprovedDocuments` 檢視表所相依的物件和資料行查詢 **sys.dm_sql_referenced_entities** 系統函數。 因為此檢視表並非使用 WITH SCHEMA_BINDING 子句建立，所以檢視表中參考的資料行可能會在參考的資料表中修改。 此範例會將 `ChangeNumber` 資料表中的 `Production.Document` 資料行重新命名為 `TrackingNumber`，藉以更改此資料行。 系統會再次針對 `ApprovedDocuments` 檢視表查詢目錄檢視。不過，它無法繫結至檢視表中定義的所有資料行。 然後，系統會傳回識別此問題的錯誤 207 和 2020。 若要解決此問題，您必須更改檢視表，以便反映資料行的新名稱。  
   
-<pre>USE AdventureWorks2012;  
+```sql
+USE AdventureWorks2012;  
 GO  
 CREATE VIEW Production.ApprovedDocuments  
 AS  
@@ -57,11 +58,13 @@ SELECT referenced_schema_name AS schema_name
 ,referenced_entity_name AS table_name  
 ,referenced_minor_name AS referenced_column  
 FROM sys.dm_sql_referenced_entities ('Production.ApprovedDocuments', 'OBJECT');  
-GO</pre>  
+GO
+```
   
 此查詢會傳回下列錯誤訊息。  
   
-<pre>Msg 207, Level 16, State 1, Procedure ApprovedDocuments, Line 3  
+```
+Msg 207, Level 16, State 1, Procedure ApprovedDocuments, Line 3  
 Invalid column name 'ChangeNumber'.  
 Msg 2020, Level 16, State 1, Line 1  
 The dependencies reported for entity  
@@ -70,18 +73,21 @@ columns. This is either because the entity references an
 object that does not exist or because of an error in one or  
 more statements in the entity. Before rerunning the query,  
 ensure that there are no errors in the entity and that all  
-objects referenced by the entity exist.</pre>  
+objects referenced by the entity exist.
+```
   
 下列範例會更正檢視表中的資料行名稱。  
   
-<pre>USE AdventureWorks2012;  
+```sql
+USE AdventureWorks2012;  
 GO  
 ALTER VIEW Production.ApprovedDocuments  
 AS  
 SELECT Title,TrackingNumber, Status  
 FROM Production.Document  
 WHERE Status = 2;  
-GO</pre>  
+GO
+```
   
 ## <a name="see-also"></a>另請參閱  
 [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)  

@@ -2,7 +2,7 @@
 title: 尋找具有異動複寫的錯誤
 description: 描述如何找出並識別異動複寫的錯誤，以及解決複寫問題的疑難排解方法。
 ms.custom: seo-lt-2019
-ms.date: 04/27/2018
+ms.date: 07/01/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -12,15 +12,15 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9a079838d343ba8de93e270d01d704eb32219ee9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d7c818e48c916a8ad3da7dfda7eaad6230c16ebd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286982"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882281"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>疑難排解員：尋找 SQL Server 異動複寫的錯誤 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 若對異動複寫的運作方式沒有基本的了解，針對複寫錯誤進行疑難排解可能會令人感到沮喪。 建立發行集的第一個步驟是讓快照集代理程式建立快照集，並將它儲存到快照集資料夾。 接下來，散發代理程式會將快照集套用到訂閱者。 
 
@@ -77,8 +77,10 @@ ms.locfileid: "76286982"
 
     ![存取遭拒的快照集代理程式錯誤](media/troubleshooting-tran-repl-errors/snapshot-access-denied.png)
 
-        The replication agent had encountered an exception.
-        Exception Message: Access to path '\\node1\repldata.....' is denied.
+    ```console
+    The replication agent had encountered an exception.
+    Exception Message: Access to path '\\node1\repldata.....' is denied.
+    ```
 
 如果您未正確設定快照集資料夾的 Windows 權限，您會看到快照集代理程式發生「拒絕存取」錯誤。 您必須驗證快照集儲存所在之資料夾的權限，並確定用來執行快照集代理程式的帳戶具有存取該共用的權限。  
 
@@ -108,10 +110,12 @@ ms.locfileid: "76286982"
     
     ![記錄讀取器代理程式的錯誤詳細資料](media/troubleshooting-tran-repl-errors/log-reader-error.png)
 
-       Status: 0, code: 20011, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.
-       The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.
-       Status: 0, code: 15517, text: 'Cannot execute as the database principal because the principal "dbo" does not exist, this type of principal cannot be impersonated, or you do not have permission.'.
-       Status: 0, code: 22037, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.        
+    ```console
+    Status: 0, code: 20011, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.
+    The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.
+    Status: 0, code: 15517, text: 'Cannot execute as the database principal because the principal "dbo" does not exist, this type of principal cannot be impersonated, or you do not have permission.'.
+    Status: 0, code: 22037, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.        
+    ```
 
 6. 若未正確設定發行者資料庫的擁有者，通常會發生這個錯誤。 還原資料庫時也可能會發生此錯誤。 若要驗證這一點，請：
 
@@ -127,7 +131,7 @@ ms.locfileid: "76286982"
 
     ```sql
     -- set the owner of the database to 'sa' or a specific user account, without the brackets. 
-    EXEC sp_changedbowner '<useraccount>'
+    EXECUTE sp_changedbowner '<useraccount>'
     -- example for sa: exec sp_changedbowner 'sa'
     -- example for user account: exec sp_changedbowner 'sqlrepro\administrator' 
     ```
@@ -158,9 +162,11 @@ ms.locfileid: "76286982"
 2. [散發者到訂閱者記錄]  對話方塊隨即開啟，並會釐清代理程式發生哪個錯誤： 
 
      ![散發代理程式的錯誤詳細資料](media/troubleshooting-tran-repl-errors/dist-history-error.png)
-    
-        Error messages:
-        Agent 'NODE1\SQL2016-AdventureWorks2012-AdvWorksProductTrans-NODE2\SQL2016-7' is retrying after an error. 89 retries attempted. See agent job history in the Jobs folder for more details.
+
+    ```console
+    Error messages:
+    Agent 'NODE1\SQL2016-AdventureWorks2012-AdvWorksProductTrans-NODE2\SQL2016-7' is retrying after an error. 89 retries attempted. See agent job history in the Jobs folder for more details.
+    ```
 
 3. 此錯誤指出散發代理程式正在重試。 若要尋找更多詳細資訊，請檢查散發代理程式作業記錄： 
 
@@ -175,9 +181,11 @@ ms.locfileid: "76286982"
 5. 選取其中一個錯誤項目，檢視視窗底部的錯誤文字：  
 
     ![指出散發代理程式密碼錯誤的錯誤文字](media/troubleshooting-tran-repl-errors/dist-pw-wrong.png)
-    
-        Message:
-        Unable to start execution of step 2 (reason: Error authenticating proxy NODE1\repl_distribution, system error: The user name or password is incorrect.)
+
+    ```console
+    Message:
+    Unable to start execution of step 2 (reason: Error authenticating proxy NODE1\repl_distribution, system error: The user name or password is incorrect.)
+    ```
 
 6. 這個錯誤指出散發代理程式所使用的密碼不正確。 若要解決此問題，請：
 
@@ -194,11 +202,13 @@ ms.locfileid: "76286982"
     以滑鼠右鍵按一下 [複寫監視器]   > [檢視詳細資料]  中的訂閱，開啟 [發佈到訂閱者]  記錄。 現在錯誤變得不一樣了： 
 
     ![指出散發代理程式無法連線的錯誤](media/troubleshooting-tran-repl-errors/dist-agent-cant-connect.png)
-           
-        Connecting to Subscriber 'NODE2\SQL2016'        
-        Agent message code 20084. The process could not connect to Subscriber 'NODE2\SQL2016'.
-        Number:  18456
-        Message: Login failed for user 'NODE2\repl_distribution'.
+
+    ```console
+    Connecting to Subscriber 'NODE2\SQL2016'        
+    Agent message code 20084. The process could not connect to Subscriber 'NODE2\SQL2016'.
+    Number:  18456
+    Message: Login failed for user 'NODE2\repl_distribution'.
+    ```
 
 8. 此錯誤指出散發代理程式無法連線至訂閱者，因為使用者 **NODE2\repl_distribution** 登入失敗。 若要進一步調查，請連線至訂閱者並開啟 [物件總管] 中 [管理]  節點下「目前的」  SQL Server 錯誤記錄： 
 
@@ -234,8 +244,10 @@ ms.locfileid: "76286982"
 
 1. 在 [命令]  方塊中，開始新的一行，輸入下列文字，然後選取 [確定]  ： 
 
-       -Output C:\Temp\OUTPUTFILE.txt -Outputverboselevel 3
-    
+    ```console
+    -Output C:\Temp\OUTPUTFILE.txt -Outputverboselevel 3
+    ```
+
     您可以根據自己的喜好修改位置和詳細資訊層級。
 
     ![作業步驟之屬性中的詳細資訊輸出](media/troubleshooting-tran-repl-errors/verbose.png)

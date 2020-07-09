@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: 88ef620a24bc2ce623ea6fb072871dadeffbcf6d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f90d612eb9064025db8b9ac942dd7f664cedb67e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68823109"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882330"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>在 Linux 上備份與還原 SQL Server 資料庫
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 您可以使用許多不同的選項，從 Linux 上的 SQL Server 2017 備份資料庫。 在 Linux 伺服器上，您可以使用 **sqlcmd** 來連線至 SQL Server 並進行備份。 在 Windows 中，您可以連線至 Linux 上的 SQL Server，並藉由使用者介面來進行備份。 備份功能在不同平台上都相同。 例如，您可以在本機將資料庫備份至遠端磁碟機或 [Microsoft Azure Blob 儲存體服務。](../relational-databases/backup-restore/sql-server-backup-to-url.md)
 

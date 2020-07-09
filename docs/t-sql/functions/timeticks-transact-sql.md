@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 9d036633-837f-4309-9c45-3d9600258018
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 54c0511faba6648f45ad1614c17e5d262f38d8a4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bdd3770bb282184193f8bb2cfb64e01f4abbcda5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832845"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85858498"
 ---
 # <a name="x40x40timeticks-transact-sql"></a>&#x40;&#x40;TIMETICKS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   傳回每個刻度的百萬分之一秒數。  
   

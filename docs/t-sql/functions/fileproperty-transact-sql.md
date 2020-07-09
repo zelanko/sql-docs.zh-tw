@@ -20,17 +20,17 @@ helpviewer_keywords:
 - FILEPROPERTY function
 - file names [SQL Server], FILEPROPERTY
 ms.assetid: b82244ed-d623-431f-aa06-8017349d847f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 79be8af32c13b9e910b94b40bd3c1bf9b2c0e2c5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 518751aa443d2a2a93843fb79c5bcfdd2196db08
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68071402"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882645"
 ---
 # <a name="fileproperty-transact-sql"></a>FILEPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定了目前資料庫中的檔案名稱和屬性名稱時，傳回指定的檔案名稱屬性值。 針對不在目前資料庫中的檔案，傳回 NULL。  
   
@@ -64,7 +64,7 @@ FILEPROPERTY ( file_name , property )
  *file_name* 對應於 **sys.master_files** 或 **sys.database_files** 目錄檢視中的 **name** 資料行。  
   
 ## <a name="examples"></a>範例  
- 下列範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `IsPrimaryFile` 檔案名稱的 `AdventureWorks_Data` 屬性設定。  
+ 下列範例會傳回 `IsPrimaryFile` 資料庫中 `AdventureWorks_Data` 檔案名稱的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 屬性設定。  
   
 ```  
   

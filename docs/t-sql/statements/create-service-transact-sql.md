@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 761a04baca38ee1301c8f51d8b69564f409fac1e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ade19ba855f4a11bcc354959865f9bc33416240e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70745393"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881941"
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   建立新的服務。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服務是一項特定工作或一組工作的名稱。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會利用服務的名稱路由傳送訊息，將訊息傳遞至資料庫內的正確佇列，以及強制使用合約進行交談。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "70745393"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 CREATE SERVICE service_name  
    [ AUTHORIZATION owner_name ]  
    ON QUEUE [ schema_name. ]queue_name  
@@ -50,7 +50,7 @@ CREATE SERVICE service_name
  這是要建立的服務名稱。 新服務會建立在目前資料庫中，擁有者是 AUTHORIZATION 子句所指定的主體。 您不可指定伺服器、資料庫和結構描述名稱。 *service_name* 必須是有效的 **sysname**。  
   
 > [!NOTE]  
-> 請勿建立針對 *service_name* 使用關鍵字 ANY 的服務。 當您在 `CREATE BROKER PRIORITY` 中針對服務名稱指定 `ANY` 時，就會考慮所有服務的優先權。 這並不限於名稱為 ANY 的服務。  
+> 請勿建立針對 *service_name* 使用關鍵字 ANY 的服務。 當您在 `ANY` 中針對服務名稱指定 `CREATE BROKER PRIORITY` 時，就會考慮所有服務的優先權。 這並不限於名稱為 ANY 的服務。  
   
  AUTHORIZATION *owner_name*  
  將服務的擁有者設為指定的資料庫使用者或角色。 當目前的使用者是 **dbo** 或 **sa** 時，*owner_name* 可以是任何有效使用者或角色的名稱。 否則，*owner_name* 必須是目前使用者的名稱、目前使用者有其 IMPERSONATE 權限的使用者名稱，或目前使用者所屬的角色名稱。  

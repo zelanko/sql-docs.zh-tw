@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: 31904a43dba642c73620a66bcf4abaa066b5ef82
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 38cdca8bea1c524ac4b8c964871ac04d5b221506
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73531276"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887858"
 ---
 # <a name="sql-server-on-linux"></a>Linux 上的 SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 ::: moniker range="= sql-server-2017 || = sqlallproducts-allversions"
 從 SQL Server 2017 開始，SQL Server 可以在 Linux 上執行。 這是相同的 SQL Server 資料庫引擎，無論您的作業系統為何，都提供許多類似的功能和服務。

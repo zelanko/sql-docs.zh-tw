@@ -10,16 +10,16 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 2fea849a46dea302dccba3ae8648db3654c35798
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 28a9541c1369202b8bd322cc23201e8d531f913e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558471"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892248"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性群組設定的高可用性和資料保護
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 本文提供 Linux 伺服器上 SQL Server Always On 可用性群組的支援部署設定。 可用性群組支援高可用性和資料保護。 容錯移轉後的自動失敗偵測、自動容錯移轉和透明重新連線提供高可用性。 同步處理的複本則提供資料保護。 
 

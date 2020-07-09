@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b57d3443ab83ead35d92615ad6c718cde6977097
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b50f2cda111a38ffd6ba67dbbf0fb9fc74192168
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000229"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894496"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>建立網域獨立的可用性群組
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 AlwaysOn 可用性群組 (AG) 需要基礎 Windows Server 容錯移轉叢集 (WSFC)。 透過 Windows Server 2012 R2 部署 WSFC 時，一律需要參與 WSFC 的伺服器 (也稱為節點) 加入相同的網域。 如需 Active Directory 網域服務 (AD DS) 的詳細資訊，請參閱[這裡](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx)。
 

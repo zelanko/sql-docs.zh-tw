@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: b7dec3fa-d9d9-409d-b946-f9b9a3202829
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3b93c9b438a22cba125bb7487b393371b4ffd8c1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 297580770800c7cd251d604e67884a2b069f52f8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68033446"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896303"
 ---
 # <a name="advanced-merge-replication-conflict---choose-a-resolver"></a>進階合併式複寫衝突 - 選擇解析程式
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   選擇解決器時，請考慮應用程式中衝突解決的重要性，並考慮是否可使用預設的優先權式衝突解決器還是需要使用發行項解決器。  
   
  如果您的資料分割 (Partition) 方式不會讓多位使用者寫入同一資料分割區，而且您的複寫拓撲相對上比較簡單 (一個「發行者」以及少數幾個「訂閱者」)，那麼衝突發生的機會微乎其微。 在這些環境中，您可能不需要複雜的衝突解決策略。 建議您使用衝突解決方案的預設設定，即利用客訂閱以及先變更者為贏的策略。 如果拓撲較為複雜 (例如使用重新發行「訂閱者」)，則具有特定優先權的主訂閱可能更合適。  

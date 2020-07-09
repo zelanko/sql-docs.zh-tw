@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 57801bcc-4d51-4ffc-8454-b9cb6eddbfe0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 73f7781503aa82b8b0692191a69dac5c2890f8d8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5a8407d450b653c8476b152904c586996f53d55a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75244734"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882351"
 ---
 # <a name="useful-tools-for-troubleshooting"></a>對進行疑難排解有助益的工具
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
  本文針對 Always On 可用性群組的疑難排解和效能調整，列出實用工具的連結。  
   

@@ -9,16 +9,16 @@ ms.date: 05/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: high-availability
-ms.openlocfilehash: e026fd9dd9bd0aa9cf78f5cf6d15303b0063ade5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ba7827a637c1317500894fcfda85cd1d5122cce7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750805"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888108"
 ---
 # <a name="configure-read-scale-for-an-always-on-availability-group"></a>設定 Always On 可用性群組的讀取級別
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 您可以設定 SQL Server AlwaysOn 可用性群組，供 Windows 上的讀取縮放工作負載使用。 可用性群組有兩種類型的架構：
 * 高可用性結構，其使用叢集管理員來提供改善的商務持續性，並能夠包含可讀取的次要複本。 若要建立此高可用性結構，請參閱[在 Windows 上建立和設定可用性群組](creation-and-configuration-of-availability-groups-sql-server.md)。 

@@ -20,18 +20,18 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: 5510b846-9cde-4687-8798-be9a273aad31
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8aa3f690b79167df6de5b27f6dd78276c61e0b26
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a7b4aa391f3b8f8822b65142417031ad21af9669
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71342064"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882462"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   提供特定連接資訊做為四部分物件名稱，而不使用連結伺服器名稱。  
 
@@ -80,7 +80,7 @@ OPENDATASOURCE ( 'provider_name', 'init_string' )
   
 每一個提供者的連接需求都類似於建立連結伺服器時的參數需求。 許多常見提供者的詳細資料列於 [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 文章中。  
   
-對 `FROM` 子句中 `OPENDATASOURCE`、`OPENQUERY` 或 `OPENROWSET` 的任何呼叫都會與當做更新目標使用之這些函數的任何呼叫進行個別且獨立的評估，即使完全相同的引數套用至這兩種呼叫也一樣。 尤其，針對其中一個呼叫結果所套用的篩選或聯結條件對於另一個呼叫的結果沒有作用。  
+對 `OPENDATASOURCE` 子句中 `OPENQUERY`、`OPENROWSET` 或 `FROM` 的任何呼叫都會與當做更新目標使用之這些函數的任何呼叫進行個別且獨立的評估，即使完全相同的引數套用至這兩種呼叫也一樣。 尤其，針對其中一個呼叫結果所套用的篩選或聯結條件對於另一個呼叫的結果沒有作用。  
   
 ## <a name="permissions"></a>權限  
  任何使用者都可以執行 OPENDATASOURCE。 您可以從連接字串判斷用來連接到遠端伺服器的權限。  
@@ -88,7 +88,7 @@ OPENDATASOURCE ( 'provider_name', 'init_string' )
 ## <a name="examples"></a>範例  
 
 ### <a name="a-using-opendatasource-with-select-and-the-sql-server-ole-db-driver"></a>A. 搭配 SELECT 和 SQL Server OLE DB Driver 使用 OPENDATASOURCE  
- 下列範例會使用 [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) 來存取遠端伺服器 `Seattle1` 上 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中的 `HumanResources.Department` 資料表。 `SELECT` 陳述式是用來定義傳回的資料列集。 提供者字串包含 `Server` 和 `Trusted_Connection` 關鍵字。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB Driver 會辨識這些關鍵字。  
+ 下列範例會使用 [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) 來存取遠端伺服器 `HumanResources.Department` 上 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中的 `Seattle1` 資料表。 `SELECT` 陳述式是用來定義傳回的資料列集。 提供者字串包含 `Server` 和 `Trusted_Connection` 關鍵字。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB Driver 會辨識這些關鍵字。  
   
 ```sql  
 SELECT GroupName, Name, DepartmentID  

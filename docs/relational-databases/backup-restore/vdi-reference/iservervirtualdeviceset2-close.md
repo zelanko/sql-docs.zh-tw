@@ -9,16 +9,16 @@ ms.technology: backup-restore
 ms.topic: reference
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 2847ef10bd52d69375fa4f13f1d003eb4159961f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d2b0a5d12f256236a0d79c372c44e9b7d0cd2fb3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70847469"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892028"
 ---
 # <a name="iservervirtualdeviceset2close-vdi"></a>IServerVirtualDeviceSet2::Close (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 **Close** 函式會關閉 IServerVirtualDeviceSet2::Open 所開啟的虛擬裝置集。 這會導致釋放所有與虛擬裝置建立關聯的資源。 在此函式傳回之後，IServerVirtualDeviceSet2 控制代碼沒什麼用處，應該將其傳回到 COM。
 

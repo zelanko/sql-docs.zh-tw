@@ -9,16 +9,16 @@ ms.date: 01/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 1ce63521989edfccc1fc9fc085b0a9c476cde2ee
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 332160202b3972339c2d9c668f31e373443d5217
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558392"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892296"
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>設定 SQL Server 可用性群組供 Linux 上的讀取級別使用
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 您可以設定 SQL Server Always On 可用性群組 (AG)，供 Linux 上的讀取級別工作負載使用。 AG 有兩種結構類型。 高可用性結構會使用叢集管理員來確保改善的商務持續性。 此結構亦可包含讀取級別複本。 若要建立高可用性結構，請參閱[設定 SQL Server Always On 可用性群組以確保 Linux 上的高可用性](sql-server-linux-availability-group-configure-ha.md)。 其他結構僅支援讀取級別工作負載。 本文說明如何建立不使用叢集管理員的 AG，供讀取級別工作負載之用。 此結構只會提供讀取級別。 它不會提供高可用性。
 

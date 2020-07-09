@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2decc7e78b599ebcd0c16e3373a0b62401d09428
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 28d9540c331ac5a250acc24abbd173f7ddf87e5f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75720822"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882571"
 ---
 # <a name="use-read-scale-with-always-on-availability-groups"></a>在 Always On 可用性群組使用讀取級別
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 可用性群組是全面的解決方案，可將高可用性功能整合到 SQL Server，同時也可提供整合式調整解決方案。 在常見的資料庫應用程式中，多個用戶端會執行各種工作負載。 有時可能會因資源限制而產生瓶頸。 
 

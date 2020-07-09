@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4505fed51589e2666dd2aa28e8ee42c4aac27f94
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: c60b0dbb40c41a7d41971bffc0f44b89ad77eaaa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528492"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882732"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>連線到 Always On 可用性群組接聽程式 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   
 在[設定可用性群組接聽程式](create-or-configure-an-availability-group-listener-sql-server.md)之後，您必須更新連接字串，以連線到 Always On 可用性群組接聽程式。 這會將來自應用程式的流量自動路由至預定複本，而不需要在每次容錯移轉之後手動更新連接字串。 
   

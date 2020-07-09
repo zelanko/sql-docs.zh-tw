@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7dadc40a-1287-4f31-8487-434ee477144d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: dba855440971ba74ce15fb108e1ac88ebeb1cd24
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 889cdb18a323e64cf1b94bcde57eaf77c37e89d4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67914569"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892553"
 ---
 # <a name="original_db_name-transact-sql"></a>ORIGINAL_DB_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   傳回使用者在資料庫連接字串中指定的資料庫名稱。 此資料庫會使用 **sqlcmd-d** 選項 (使用 *database*) 來指定。 它也可以使用開放式資料庫連接 (ODBC) 資料來源運算式 (initial catalog =*databasename*) 來指定。  
   

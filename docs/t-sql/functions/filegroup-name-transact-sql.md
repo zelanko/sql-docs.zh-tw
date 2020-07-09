@@ -22,17 +22,17 @@ helpviewer_keywords:
 - names [SQL Server], filegroups
 - viewing filegroup names
 ms.assetid: 26add1c0-56e5-47a8-b489-ae56784a7ee9
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: fb566c311d57f9ba04f79798f0d4f50e910456bd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 329b354b5b5e3fe66637962d2808742083c4cfac
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68071453"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895748"
 ---
 # <a name="filegroup_name-transact-sql"></a>FILEGROUP_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 此函數會傳回指定檔案群組識別碼的檔案群組名稱。  
   
@@ -56,7 +56,7 @@ FILEGROUP_NAME ( filegroup_id )
 *filegroup_id* 對應到 **sys.filegroups** 目錄檢視的 **data_space_id** 資料行。  
   
 ## <a name="examples"></a>範例  
-此範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中檔案群組識別碼 `1` 的檔案群組名稱。  
+此範例會傳回 `1` 資料庫中檔案群組識別碼 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 的檔案群組名稱。  
   
 ```  
 SELECT FILEGROUP_NAME(1) AS [Filegroup Name];  

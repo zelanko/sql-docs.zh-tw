@@ -29,15 +29,15 @@ helpviewer_keywords:
 ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6bdac95bb120fc56366eb6cfd5ed80f4c60b04e2
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a862161b34edb675fc38086d75713d35840c39c8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632576"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892506"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   建立一個稱為規則的物件。 當繫結到資料行或別名資料型別時，規則會指定能夠插入這個資料行的可接受的值。  
   

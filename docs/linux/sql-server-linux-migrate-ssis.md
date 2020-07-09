@@ -8,16 +8,16 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e6230ee4efebc4b1af873a61e9f2ebfc191df171
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 72ad1ca9c97834ad38b579b904f29db71cf0686d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67943812"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882725"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>使用 SSIS 在 Linux 上擷取、轉換和載入資料
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 本文說明如何在 Linux 上執行 SQL Server Integration Services (SSIS) 套件。 SSIS 可擷取來自多個來源和格式的資料、轉換和清理資料，然後將資料載入多個目的地，藉此解決複雜的資料整合問題。 
 

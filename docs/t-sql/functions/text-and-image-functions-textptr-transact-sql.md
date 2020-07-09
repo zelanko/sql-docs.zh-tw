@@ -18,17 +18,17 @@ helpviewer_keywords:
 - text-pointer values
 - displaying text pointer values
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d0e511e34b782c444bcdf6c778bb89dfebd4fab4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 521c012ec8e05cf288aab78021b83c45c2d7bd62
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099028"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895725"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Text 和 Image 函式 - TEXTPTR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   以 **varbinary** 格式傳回對應至 **text**、**ntext** 或 **image** 資料行的文字指標值。 擷取的文字指標值可用在 READTEXT、WRITETEXT 和 UPDATETEXT 陳述式中。  
   
@@ -65,7 +65,7 @@ TEXTPTR ( column )
 |PATINDEX<b>('</b> _%pattern%_ **' ,** _expression_ **)**|傳回指定字元字串在 **text** 或 **ntext** 資料行中的字元位置。|  
 |DATALENGTH<b>(</b>_expression_ **)**|傳回 **text**、**ntext** 和 **image** 資料行中資料的長度。|  
 |SET TEXTSIZE|傳回 SELECT 陳述式所要傳回的 **text**、**ntext** 或 **image** 資料的限制 (以位元組為單位)。|  
-|SUBSTRING<b>(</b>_text_column_, _start_, _length_ **)**|傳回指定的 *start* 位移和 *length* 所指定的 **varchar** 字串。 長度應該小於 8 KB。|  
+|SUBSTRING<b>(</b>_text_column_, _start_, _length_ **)**|傳回指定的 **start** 位移和 *length* 所指定的 *varchar* 字串。 長度應該小於 8 KB。|  
   
 ## <a name="examples"></a>範例  
   
@@ -73,7 +73,7 @@ TEXTPTR ( column )
 >  若要執行下列範例，您必須安裝 **pubs** 資料庫。  
   
 ### <a name="a-using-textptr"></a>A. 使用 TEXTPTR  
- 下列範例會使用 `TEXTPTR` 函式來尋找 `pubs` 資料庫的 `pub_info` 資料表中與 `New Moon Books` 建立關聯的 **image** 資料行 `logo`。 這個文字指標放在本機變數 `@ptrval.` 中。  
+ 下列範例會使用 `TEXTPTR` 函式來尋找 **資料庫的** 資料表中與 `logo` 建立關聯的 `New Moon Books`image`pub_info` 資料行 `pubs`。 這個文字指標放在本機變數 `@ptrval.` 中。  
   
 ```  
 USE pubs;  
@@ -163,7 +163,7 @@ This is sample text data for Lucerne Publishing, publisher 9999 in the pubs data
 ```  
   
 ### <a name="d-returning-specific-text-data"></a>D. 傳回特定文字資料  
- 下列範例會尋找 `pubs` 資料庫 `pub_info` 資料表中與 `pub_id``0736` 建立關聯的 `text` 資料行 (`pr_info`)。 它先宣告本機變數 `@val`。 之後，將文字指標 (大型二進位字串) 放在 `@val` 中，將它當作一個參數來提供給 `READTEXT` 陳述式。 這會傳回從第 5 位元組 (位移 4) 開始的 10 個位元組。  
+ 下列範例會尋找 `text` 資料庫 `pr_info` 資料表中與 `pub_id``0736` 建立關聯的 `pub_info` 資料行 (`pubs`)。 它先宣告本機變數 `@val`。 之後，將文字指標 (大型二進位字串) 放在 `@val` 中，將它當作一個參數來提供給 `READTEXT` 陳述式。 這會傳回從第 5 位元組 (位移 4) 開始的 10 個位元組。  
   
 ```  
 USE pubs;  

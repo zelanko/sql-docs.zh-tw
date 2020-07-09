@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6182b480c83b8e6b2d0f0a50217823fd14f30c30
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 285b005393c29a81b90a749a89ebf83af8e9c271
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68033350"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882540"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>以時間為基礎之資料列篩選的最佳做法
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   應用程式使用者通常需要來自資料表中以時間為基礎的資料子集。 例如，業務員可能需要上週的訂單資料，或事件計劃者可能需要未來一週的事件資料。 許多狀況下，應用程式會使用包含 **GETDATE()** 函數的查詢來達成這個目的。 請考量下列資料列篩選陳述式：  
   
 ```  

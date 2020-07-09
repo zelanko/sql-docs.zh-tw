@@ -20,34 +20,36 @@ helpviewer_keywords:
 ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b365aac0e21261edb3620e1cd58a656747b274a1
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 291c076d78b227487c6c4267343de5cffc7a3d63
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636075"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813886"
 ---
 # <a name="alter-application-role-transact-sql"></a>ALTER APPLICATION ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   變更應用程式角色的名稱、密碼或預設結構描述。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>語法
   
 ```syntaxsql
   
-ALTER APPLICATION ROLE application_role_name   
+ALTER APPLICATION ROLE application_role_name
     WITH <set_item> [ ,...n ]  
   
-<set_item> ::=   
-    NAME = new_application_role_name   
+<set_item> ::=
+    NAME = new_application_role_name
     | PASSWORD = 'password'  
     | DEFAULT_SCHEMA = schema_name  
 ```  
   
-## <a name="arguments"></a>引數  
+## <a name="arguments"></a>引數
+
  *application_role_name*  
  這是要修改的應用程式角色名稱。  
   
@@ -60,8 +62,9 @@ ALTER APPLICATION ROLE application_role_name
  DEFAULT_SCHEMA =*schema_name*  
  指定當伺服器解析物件名稱時，將搜尋的第一個結構描述。 *schema_name* 可以是資料庫中不存在的結構描述。  
   
-## <a name="remarks"></a>備註  
- 如果資料庫中已存在新的應用程式角色名稱，則這個陳述式會失敗。 變更應用程式角色的名稱、密碼或預設結構描述時，與角色相關聯的識別碼不變。  
+## <a name="remarks"></a>備註
+
+如果資料庫中已存在新的應用程式角色名稱，則這個陳述式會失敗。 變更應用程式角色的名稱、密碼或預設結構描述時，與角色相關聯的識別碼不變。  
   
 > [!IMPORTANT]  
 >  密碼到期原則不適用於應用程式角色密碼。 因此，在選取增強式密碼時請特別小心。 叫用應用程式角色的應用程式必須儲存其密碼。  

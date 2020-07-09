@@ -11,16 +11,16 @@ ms.prod: sql
 ms.technology: linux
 titleSuffix: SQL Server on Linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 00ae6ecf66bd52d5415c630dd2b66a1a9ecaebd6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fcabf34eae115f7fed2b74989e0e76c11562c7ad
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75952505"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882664"
 ---
 # <a name="configure-replication-with-t-sql"></a>搭配 T-SQL 設定複寫
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)] 
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)] 
 
 在本教學課程中，於 Linux 上使用 Transact-SQL 搭配兩個 SQL Server 執行個體來設定 SQL Server 快照式複寫。 發行者和散發者將會是相同的執行個體，且訂閱者將會位於個別的執行個體上。
 

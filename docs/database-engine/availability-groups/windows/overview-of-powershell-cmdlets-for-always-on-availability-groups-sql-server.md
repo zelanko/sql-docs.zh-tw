@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8aac669c8e7b2f43666a43c26a8040c3658c560c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 135dfc2463b853c182275246b82b9f24c46ba88c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75236090"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894047"
 ---
 # <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups"></a>AlwaysOn 可用性群組的 PowerShell Cmdlet 概觀
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] PowerShell 是以工作為基礎的命令列介面和指令碼語言，專為系統管理所設計。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 會在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中提供一組 PowerShell 指令程式，可讓您部署、管理和監視可用性群組、可用性複本以及可用性資料庫。  
   

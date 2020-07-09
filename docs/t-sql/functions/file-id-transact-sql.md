@@ -20,17 +20,17 @@ helpviewer_keywords:
 - identification numbers [SQL Server], files
 - file names [SQL Server], FILE_ID
 ms.assetid: 6a7382cf-a360-4d62-b9d2-5d747f56f076
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 63744a6731e7c57a21a821ce7ab65cb49e095e67
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f88f19d26ab7653f3d677862fce8de23e05e9c5b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68071536"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85858414"
 ---
 # <a name="file_id-transact-sql"></a>FILE_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 對於目前資料庫元件檔案的給定邏輯名稱，此函式會傳回檔案識別碼 (ID)。  
   
@@ -55,7 +55,7 @@ FILE_ID ( file_name )
 ## <a name="remarks"></a>備註  
 *file_name* 對應於 sys.master_files 或 sys.database_files 目錄檢視 name 資料行中所顯示的邏輯檔案名稱。  
 
-如果 *file_name* 未對應於目前資料庫元件檔案的邏輯名稱，`FILE_ID` 會傳回 `NULL`。
+如果 `FILE_ID`file_name`NULL` 未對應於目前資料庫元件檔案的邏輯名稱，*會傳回*。
   
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，指派給全文檢索目錄的識別碼超過 32767。 由於 `FILE_ID` 函數的傳回類型是 **smallint**，所以`FILE_ID` 不支援全文檢索檔案。 請改用 [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md)。  
   

@@ -2,7 +2,7 @@
 title: 變更可用性群組的複本容錯移轉模式
 description: 描述如何使用 Transact-SQL (T-SQL)、PowerShell 或 SQL Server Management Studio，變更 Always On 可用性群組內複本的容錯移轉模式。
 ms.custom: seo-lt-2019
-ms.date: 05/17/2016
+ms.date: 06/30/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 619a826f-8e65-48eb-8c34-39497d238279
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4dd7de6af88d6fe5955c03f611a593869e19cfc0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8a56789831d79d33d071eb493c76af8ffbd58ad3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75241816"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896180"
 ---
 # <a name="change-the-failover-mode-for-a-replica-within-an-always-on-availability-group"></a>變更 Always On 可用性群組內複本的容錯移轉模式
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 PowerShell，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中變更 AlwaysOn 可用性群組內可用性複本的容錯移轉模式。 容錯移轉模式是複本屬性，用於判斷以同步認可可用性模式下執行之複本的容錯移轉模式。 如需詳細資訊，請參閱 [容錯移轉及容錯移轉模式 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) 和 [可用性模式 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)。  
   
 ## <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a> 必要條件和限制  
@@ -56,28 +56,28 @@ ms.locfileid: "75241816"
   
 2.  使用 [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) 陳述式，如下所示：
 
-   ```Transact-SQL
-   ALTER AVAILABILITY GROUP *group_name* MODIFY REPLICA ON '*server_name*'  
-      WITH ( {  
-           AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }
-              | FAILOVER_MODE = { AUTOMATIC | MANUAL }
-            }  )
-   ```
+    ```syntaxsql
+    ALTER AVAILABILITY GROUP *group_name* MODIFY REPLICA ON '*server_name*'  
+       WITH ( {  
+             AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }
+                | FAILOVER_MODE = { AUTOMATIC | MANUAL }
+             }  )
+    ```
+    
+    在前一段指令碼中：
 
-   在前一段指令碼中：
-
-      - *group_name* 是可用性群組的名稱。  
+    - *group_name* 是可用性群組的名稱。  
   
-      - <伺服器名稱>  是電腦名稱或容錯移轉叢集網路名稱。 具名執行個體請新增 `\instance_name'。 使用裝載想要修改複本的名稱。
+    - <伺服器名稱>  是電腦名稱或容錯移轉叢集網路名稱。 具名執行個體請新增 `\instance_name'。 使用裝載想要修改複本的名稱。
   
-   如需這些參數的詳細資訊，請參閱 [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)。  
+如需這些參數的詳細資訊，請參閱 [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)。  
   
-   下列範例 (在 *MyAG* 可用性群組的主要複本上輸入) 會針對位於 *COMPUTER01*電腦的預設伺服器執行個體上的可用性複本，將容錯移轉模式變更為自動容錯移轉。  
+下列範例 (在 *MyAG* 可用性群組的主要複本上輸入) 會針對位於 *COMPUTER01*電腦的預設伺服器執行個體上的可用性複本，將容錯移轉模式變更為自動容錯移轉。  
   
-    ```  
-    ALTER AVAILABILITY GROUP MyAG MODIFY REPLICA ON 'COMPUTER01' WITH  
-       (FAILOVER_MODE = AUTOMATIC);  
-    ```  
+```sql
+ALTER AVAILABILITY GROUP MyAG MODIFY REPLICA ON 'COMPUTER01' WITH  
+    (FAILOVER_MODE = AUTOMATIC);  
+```  
   
 ##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
  **若要變更可用性複本的容錯移轉模式**  
@@ -86,9 +86,9 @@ ms.locfileid: "75241816"
   
 2.  使用 **Set-SqlAvailabilityReplica** Cmdlet 搭配 **FailoverMode** 參數。 將複本設定為自動容錯移轉時，您可能需要使用 **AvailabilityMode** 參數將複本變更成同步認可的可用性模式。  
   
-     例如，下列命令會將可用性群組 `MyReplica` 中的複本 `MyAg` 修改成使用同步認可的可用性模式並且支援自動容錯移轉。  
+    例如，下列命令會將可用性群組 `MyReplica` 中的複本 `MyAg` 修改成使用同步認可的可用性模式並且支援自動容錯移轉。  
   
-    ```  
+    ```powershell
     Set-SqlAvailabilityReplica -AvailabilityMode "SynchronousCommit" -FailoverMode "Automatic" `   
     -Path SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\Replicas\MyReplica  
     ```  

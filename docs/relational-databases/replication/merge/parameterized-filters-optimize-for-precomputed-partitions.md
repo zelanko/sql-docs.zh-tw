@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0ab9ed7c6c404f9e8f57dd658f20e9e5b8f0d34f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 132e991a0418155ed6d0d1db2eca2945dab3e307
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321455"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882286"
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>參數化篩選 - 針對預先計算的資料分割最佳化
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   預先計算的資料分割是可用於篩選合併式發行集的效能最佳化。 預先計算的資料分割也是在篩選發行集上使用邏輯記錄的需求。 如需邏輯記錄的詳細資訊，請參閱[使用邏輯記錄分組相關資料列的變更](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)。  
   
  當「訂閱者」與「發行者」同步時，「發行者」必須評估「訂閱者」的篩選以決定哪些資料列屬於該「訂閱者」的資料分割或資料集。 在發行者端針對每一個接收到已篩選資料集來判斷變更的資料分割成員資格之處理，稱為 *資料分割評估*。 若沒有預先計算的資料分割，則自從上次為特定的「訂閱者」執行「合併代理程式」之後，必須對「發行者」端的篩選資料行所作之變更執行資料分割評估，而且每個與「發行者」同步的「訂閱者」都必須重複這個過程。  

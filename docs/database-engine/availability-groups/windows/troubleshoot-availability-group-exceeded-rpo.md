@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 92c78d36559a8cb08a7f3368012a94ce3048c93c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d8ae9d5fee06ae9db1415b53c41a1d1d23633824
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822187"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882363"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>疑難排解：可用性群組已超過 RPO
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   在可用性群組上強制手動容錯移轉至非同步認可次要複本之後，您可能會發現資料遺失比您的復原點目標 (RPO) 還多。 或者，當您使用[監視 Always On 可用性群組的效能](monitor-performance-for-always-on-availability-groups.md)中的方法計算非同步認可次要複本的潛在資料遺失時，會發現它超過您的 RPO。  
   
  同步認可次要複本可確保資料零遺失，但是非同步認可次要複本的潛在資料遺失則取決於記錄檔在次要複本上仍在等候進行強化的程度。  

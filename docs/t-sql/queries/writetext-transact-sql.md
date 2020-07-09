@@ -23,26 +23,26 @@ helpviewer_keywords:
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c10e7259062316454e4e0ecf430f6fdb87c53caf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2646b37d4f8dfd344df916f3f47540890c41dc12
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67948109"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892106"
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   允許以記錄最少資訊的互動方式，更新現有的 **text**、**ntext** 或 **image** 資料行。 WRITETEXT 會覆寫它所影響之資料行中的任何現有資料。 WRITETEXT 不能用在檢視表中的 **text**、**ntext** 及 **image** 資料行上。  
   
 > [!IMPORTANT]
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用大數值資料類型和 [UPDATE](../../t-sql/queries/update-transact-sql.md) 陳述式的 **.** WRITE 子句。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用大數值資料類型和 **UPDATE** 陳述式的 [.](../../t-sql/queries/update-transact-sql.md)WRITE 子句。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 WRITETEXT [BULK]  
   { table.column text_ptr }  
@@ -60,7 +60,7 @@ WRITETEXT [BULK]
  這是要更新之資料表及 **text**、**ntext** 或 **image** 資料行的名稱。 資料表和資料行名稱必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。 資料庫名稱和擁有者名稱的指定是選擇性的。  
   
  *text_ptr*  
- 這是儲存 **text**、**ntext** 或 **image** 資料之指標的值。 *text_ptr* 必須是 **binary(16)** 。若要建立文字指標，請搭配 **text**、**ntext** 或 **image** 資料行並非 Null 的資料來執行 [INSERT](../../t-sql/statements/insert-transact-sql.md) 或 [UPDATE](../../t-sql/queries/update-transact-sql.md) 陳述式。  
+ 這是儲存 **text**、**ntext** 或 **image** 資料之指標的值。 *text_ptr* 必須是 **binary(16)** 。若要建立文字指標，請搭配 [text](../../t-sql/statements/insert-transact-sql.md)、[ntext](../../t-sql/queries/update-transact-sql.md) 或 **image** 資料行並非 Null 的資料來執行 **INSERT** 或 **UPDATE** 陳述式。  
   
  WITH LOG  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會忽略這個項目。 記錄取決於資料庫的實際復原模式。  
@@ -80,7 +80,7 @@ WRITETEXT [BULK]
   
  若要使 WRITETEXT 正確運作，資料行必須已包含有效的文字指標。  
   
- 如果資料表沒有同資料列文字，當使用 INSERT 在 **text** 資料行中新增明確或隱含的 Null 值，而無法取得這些 Null 的文字指標時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會藉由不將 **text** 資料行初始化來節省空間。 若要將 **text** 資料行初始化成 NULL，請使用 UPDATE 陳述式。 如果資料表有資料列文字，您就不需要初始化 Null 的文字資料行，一律能夠取得文字指標。  
+ 如果資料表沒有同資料列文字，當使用 INSERT 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]text **資料行中新增明確或隱含的 Null 值，而無法取得這些 Null 的文字指標時，** 會藉由不將 **text** 資料行初始化來節省空間。 若要將 **text** 資料行初始化成 NULL，請使用 UPDATE 陳述式。 如果資料表有資料列文字，您就不需要初始化 Null 的文字資料行，一律能夠取得文字指標。  
   
  與 WRITETEXT 相比，ODBC SQLPutData 函數的處理速度較快，且使用的動態記憶體較少。 此函數最多可插入 2 GB 的 **text**、**ntext** 或 **image** 資料。  
   

@@ -8,16 +8,16 @@ ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: ac7648287b4e4b609f4dd4f25b1b07a512065364
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c0526dea857f7ed3cb354e74bf3580d4e6a06669
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68065166"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882633"
 ---
 # <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>使用 cron 排程 Linux 上的 SQL Server Integration Services 套件執行
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 當您在 Windows 上執行 SQL Server Integration Services (SSIS) 和 SQL Server 時，可以使用 SQL Server Agent 自動執行 SSIS 套件。 不過，當您在 Linux 上執行 SQL Server 和 SSIS 時，SQL Server Agent 公用程式無法在 Linux 上排程作業。 因此，您可以改用在 Linux 平台上廣泛使用的 cron 服務來自動執行套件。
 

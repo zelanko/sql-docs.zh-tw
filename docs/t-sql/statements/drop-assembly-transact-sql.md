@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 452d181a-a8e6-44a3-975d-29966d01b18d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7c9766ee7bf37a1f342a94e10437806e3d4bd9a5
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: aaf3f25807f1e7148e8f4229542a0ecacdd0bf95
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635796"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893378"
 ---
 # <a name="drop-assembly-transact-sql"></a>DROP ASSEMBLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   從目前資料庫移除組件及其所有相關聯的檔案。 組件是使用 [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) 來建立，並且使用 [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md) 來修改。  
   

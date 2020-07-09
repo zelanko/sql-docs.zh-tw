@@ -24,16 +24,16 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
-ms.openlocfilehash: b1ebc05fcae4bbf6065b0821101618b7eb64f541
-ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
+ms.openlocfilehash: d84f7a508d9ae6d46ba529d8139ecc8c0deaf3e8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81002777"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894028"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Linux 上 SQL Server 2019 的版本及支援功能
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 本文提供 Linux 上各種 SQL Server 2019 版本支援的功能詳細資料。 如需 Windows 上 SQL Server 的版本和支援功能，請參閱 [SQL Server 2019 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)。  
   

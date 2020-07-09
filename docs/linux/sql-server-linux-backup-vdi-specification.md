@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: c2dafa8f1c0811771cbbc684b24d2c92e989dff5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0ee533d9a0c3dace8f7fe8ec8e0c615b444ea91d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68810975"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892282"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Linux 上的 SQL Server VDI 用戶端 SDK 規格
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 本文件涵蓋 Linux 上 SQL Server 虛擬裝置介面 (VDI) 用戶端 SDK 所提供的介面。 獨立軟體廠商 (ISV) 可以使用虛擬備份裝置應用程式開發介面 (API)，將 SQL Server 整合到產品中。 一般而言，Linux 上的 VDI 運作方式類似 Windows 上的 VDI，但有下列變更：
 

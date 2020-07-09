@@ -8,16 +8,16 @@ ms.date: 09/14/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 548ab73e97b9bccb6a64a95b7294d3d5ca63493d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4c3b0715547e8658f83d544578e91b554854a5ad
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286842"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887834"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Linux 上 SQL Server 的效能最佳作法和設定方針
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 此文章提供最佳作法和建議，以最大化連線至 Linux 上的 SQL Server 之資料庫應用程式的效能。 這些建議僅適用於在 Linux 平台上執行。 所有一般 SQL Server 建議 (例如索引設計) 仍然適用。
 
@@ -31,7 +31,7 @@ ms.locfileid: "79286842"
 
 - **針對節點和/或 CPU 使用處理程序親和性**
 
-   建議使用 `ALTER SERVER CONFIGURATION` 為 Linux 作業系統上用於 SQL Server (通常用於所有 NODE 和 CPU) 的所有 **NUMANODE** 和/或CPU 設定 `PROCESS AFFINITY`。 處理程序親和性有助於維護有效率的 Linux 和 SQL 排程行為。 使用 **NUMANODE** 選項是最簡單的方法。 請注意，即使您的電腦上只有一個 NUMA 節點，您還是應該使用**處理程序親和性**。  如需如何設定**處理程序親和性**的詳細資訊，請參閱 [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md)。
+   建議使用 `ALTER SERVER CONFIGURATION` 為 Linux 作業系統上用於 SQL Server (通常用於所有 NODE 和 CPU) 的所有 `PROCESS AFFINITY`NUMANODE**和/或CPU 設定**。 處理程序親和性有助於維護有效率的 Linux 和 SQL 排程行為。 使用 **NUMANODE** 選項是最簡單的方法。 請注意，即使您的電腦上只有一個 NUMA 節點，您還是應該使用**處理程序親和性**。  如需如何設定[處理程序親和性](../t-sql/statements/alter-server-configuration-transact-sql.md)的詳細資訊，請參閱 **ALTER SERVER CONFIGURATION**。
 
 - **設定多個 tempdb 資料檔案**
 
@@ -162,7 +162,7 @@ vm.transparent_hugepages=madvice
 接著，讓 MSSQL 設定檔在修改之後生效
 ```bash
 tuned-adm off
-tuned-amd profile mssql
+tuned-adm profile mssql
 ```
 
 ### <a name="swapfile"></a>交換檔
