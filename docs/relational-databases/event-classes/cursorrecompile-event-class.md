@@ -12,15 +12,15 @@ ms.assetid: ab351c50-eed4-493a-87ed-89ec10933477
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb9f3a891fa81345d7ae9d167419a02356a035af
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 39da2d65e56199a78204bb5ab1cc95e07c4a7014
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68093685"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719862"
 ---
 # <a name="cursorrecompile-event-class"></a>CursorRecompile 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **CursorRecompile** 事件類別描述在應用程式開發介面 (API) 資料指標中發生的資料指標重新編譯事件。 當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 因為結構描述已變更而需重新編譯 Transact-SQL 資料指標時，就會發生資料指標重新編譯事件。  
   
  可將 **CursorRecompile** 事件類別包含在記錄資料指標效能的追蹤當中， 當追蹤包含 **CursorRecompile** 事件類別時，所造成的負擔量，是依追蹤期間針對資料庫使用資料指標的頻率而定。 如果大量使用資料指標，追蹤可能會明顯地妨礙效能。  

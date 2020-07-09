@@ -12,15 +12,15 @@ ms.assetid: 990e50fb-b3ee-4366-8613-2c40d4a456f7
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 19a307d6701a49f8041e07d21884215dc2b827d8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f4ee0bf31c737a1910f0606e54a6d0d42440fd99
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68093707"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719886"
 ---
 # <a name="cursorprepare-event-class"></a>CursorPrepare 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **CursorPrepare** 事件類別描述在應用程式開發介面 (API) 資料指標中發生的資料指標準備事件。 當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 將與資料指標建立關聯的 SELECT 陳述式編譯到執行計畫中，但並未建立資料指標時，就會發生資料指標準備事件。  
   
  請將 **CursorPrepare** 事件類別納入正在記錄資料指標效能的追蹤內。 **CursorPrepare** 事件類別納入追蹤後，產生的負擔將取決於追蹤期間針對資料庫使用資料指標的頻率。 如果大量使用資料指標，追蹤可能會明顯地妨礙效能。  

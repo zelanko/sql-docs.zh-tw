@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0707cfc193d4d3e1e11ecb724d2012aee2d315c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7677421f25f2dcc04a80d7e39182936e40136420
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321955"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722036"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Microsoft 複寫衝突檢視器 (合併式複寫)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   複寫衝突檢視器可以讓您檢視在複寫同步處理過程中發生的任何衝突。 如果在兩個不同的伺服器端 (例如，在發行者端和訂閱者端，或在兩個不同的訂閱者端) 修改相同的資料，就會發生衝突。 複寫會使用建立發行項時選取的 Conflict Resolver 以自動解決衝突。 不過，複寫衝突檢視器可讓您在必要時選擇衝突的不同解決方案。 會發生下列衝突：  
   
 -   更新衝突。 更新衝突發生於相同的資料在兩個位置同時更改時。 一個變更成功，而另一個變更失敗。 您可以選擇保存現有的資料 (成功的資料)、以衝突的資料覆寫現有的資料 (失敗的資料)，或者合併成功與失敗的資料並更新現有的資料。  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2374100459ea4e6ee05a8bba8e77919ec9185898
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: cfcb0ba165b7657a640bb509dc71dfaa441fd015
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529111"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720544"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>合併式複寫的 Web 同步處理
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   合併式複寫的 Web 同步處理可讓您利用 HTTPS 通訊協定來複寫資料，而且對下列案例很有用：  
   
 -   透過網際網路同步處理來自行動使用者的資料。  

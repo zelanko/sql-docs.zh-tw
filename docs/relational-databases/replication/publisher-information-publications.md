@@ -13,15 +13,15 @@ ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5c7af0d388deef7b0f8249de759b688c4f49124d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f5d897beb238b53e632044aee838f5ee6295ef48
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287490"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719533"
 ---
 # <a name="publisher-information-publications"></a>發行者資訊，發行集
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   **[發行集]** 索引標籤可以提供在左窗格中所選取發行者之所有發行集的摘要資訊。  
   
 ## <a name="options"></a>選項。  

@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 73ff590a-20da-4f10-b592-c60b7226d22b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ba0a80db010c3f0b575cbfbf4cead6d5bc4a7943
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2aa581588367a96036c62704c47f6ac6924fef5c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68100020"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720999"
 ---
 # <a name="publication-information-agents-merge-publication"></a>發行集資訊，代理程式 (合併式發行集)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **[代理程式]** 索引標籤會顯示選取之發行集的快照集代理程式的摘要資訊。  
   
 ## <a name="options"></a>選項。  

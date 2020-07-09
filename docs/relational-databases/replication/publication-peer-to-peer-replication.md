@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 92794414-6e54-437a-88b6-3bf02d3802f6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d7097c59f77b95a561420183e2e899c0672dc5e7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c7643560c893824247271f1eb56f2def90754c83
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67908127"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720897"
 ---
 # <a name="publication-peer-to-peer-replication"></a>發行集 (點對點複寫)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **[發行集]** 頁面會顯示已啟用點對點複寫的交易式發行集。 發行集可以在 **[發行集屬性]** 對話方塊的 **[訂閱選項]** 頁面上啟用。  
   
 ## <a name="options"></a>選項。  

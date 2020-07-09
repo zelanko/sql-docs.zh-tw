@@ -12,15 +12,15 @@ ms.assetid: 34055a2f-7d0f-4e13-a62e-7ee5b6c23b86
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 174cd2a4bc07d5de1cd664f715b9442846073502
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4748a1232f22f41f3ed079d90c980d7476f595e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68092941"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719849"
 ---
 # <a name="cursorunprepare-event-class"></a>CursorUnprepare 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **CursorUnprepare** 事件類別提供應用程式開發介面 (API) 資料指標中所發生之資料指標取消準備 (Cursor Unprepare) 事件的相關資訊。 當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 捨棄執行計畫時，便會發生資料指標取消準備事件。  
   
  可將 **CursorUnprepare** 事件類別包含在記錄資料指標效能的追蹤當中， 當追蹤包含 **CursorUnprepare** 事件類別時，所造成的負擔量是依追蹤期間針對資料庫使用資料指標的頻率而定。 如果大量使用資料指標，追蹤可能會明顯地降低效能。  

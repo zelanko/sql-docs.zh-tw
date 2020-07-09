@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 0c5b51b48379d9e421523f1c5f0e5e8c2dd9cbce
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4d0af1b6f32ddc31cef057b2eb13a123dd13e348
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834523"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718081"
 ---
 # <a name="file-restores-full-recovery-model"></a>檔案還原 (完整復原模式)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   這個主題僅與在完整或大量載入復原模式下，包含多個檔案或檔案群組的資料庫有關。  
   

@@ -1,7 +1,6 @@
 ---
 title: 離線還原：主要和 1 個檔案群組
 description: 此範例會針對使用完整復原模式搭配多個檔案群組其資料庫來顯示主要和另一個檔案群組在 SQL Server 中的離線還原。
-ms.description: Full recovery model
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7d6c50eb-dc84-4d66-855a-0b5f1bd89737
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cecd3a4bdf237b8ba0c1794489ccb624d3641fbb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c708d0f8743b993e8df58d9eff607e615ee7b7fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179136"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718100"
 ---
 # <a name="example-offline-restore-of-primary-and-1-other-filegroup-full-recovery-model"></a>範例：離線還原主要檔案群組與 1 個其他檔案群組 (完整復原模式)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   本主題僅與在完整復原模式下，包含多個檔案群組的資料庫有關。  
   

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 641bd224-fcde-4ad4-9518-369cbeb398e4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ca0a64c6e7c9859ccb3f6d8697fb123134c3f31f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1cdacdc6209af2f1763f27bfc28419279e1d5a58
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321965"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722030"
 ---
 # <a name="microsoft-replication-conflict-viewer-and-interactive-resolver"></a>Microsoft 複寫衝突檢視器和互動解析程式
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   此章節包含合併式複寫和異動複寫之複寫衝突檢視器的相關資訊，以及合併式複寫之互動解析程式的相關資訊：  
   
 -   [Microsoft 複寫衝突檢視器 &#40;合併式複寫&#41;](../../relational-databases/replication/microsoft-replication-conflict-viewer-merge-replication.md)  

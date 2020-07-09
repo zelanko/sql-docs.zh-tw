@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3495b06e0f5c502fc40c1cf4fade996fa8e05c71
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 500abb4eca30e502d7a32e23e3b14300258453b7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179076"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718035"
 ---
 # <a name="full-file-backups-sql-server"></a>完整檔案備份 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主題僅與包含多個檔案或檔案群組的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫有關。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的檔案可個別進行備份和還原。 而且，您可以指定整個檔案群組，而不是個別指定每個構成的檔案。 請注意，如果檔案群組的任何檔案離線 (例如因為檔案正在還原中)，整個檔案群組就會離線，並且無法進行備份。  

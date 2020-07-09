@@ -40,15 +40,15 @@ helpviewer_keywords:
 ms.assetid: 57d65d16-90d1-4b4c-b68e-6418a7064e76
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bba300b88a8028bee1793247a80d93fd4c6fe691
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b4585af3758327ea21834918a89142d8101b8745
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68020120"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85721230"
 ---
 # <a name="new-publication-wizard"></a>新增發行集精靈
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   此章節提供有關新增發行集精靈之下列頁面的資訊。  
   
 -   [Oracle 發行者](../../relational-databases/replication/oracle-publisher.md)  
