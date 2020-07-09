@@ -16,15 +16,15 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 6674f818d9983de56b4b015cb446b2c8f2931b84
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a056f29bfba78c7ea64a0c1e4c99612aae3ebcff
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79434155"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899896"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>設定 Always On 可用性群組的接聽程式
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中的 PowerShell，建立或設定 AlwaysOn 可用性群組的單一「可用性群組接聽程式」  (Availability Group Listener)。  
   
 > [!IMPORTANT]  
@@ -279,6 +279,7 @@ Get-ClusterResource yourListenerName | Set-ClusterParameter RegisterAllProviders
 Get-ClusterResource yourListenerName | Set-ClusterParameter HostRecordTTL 300  
 Stop-ClusterResource yourListenerName  
 Start-ClusterResource yourListenerName  
+Start-Clustergroup yourListenerGroupName
 ```  
   
  如需容錯移轉期間復原次數的詳細資訊，請參閱 [Client Recovery Latency During Failover](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md#DNS)。  

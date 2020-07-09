@@ -20,12 +20,12 @@ ms.assetid: 363c84d6-b9fa-49ba-9a75-e44f27535ff6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c6df52fdaa5108c6cab057573f34d0f545f94c4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 61303b7bffb07b2a42628af54d054250308723f2
+ms.sourcegitcommit: 2e6c4104dca8680064eb64a7a79a3e15e1b4365f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823756"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85942917"
 ---
 # <a name="rand-transact-sql"></a>RAND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -61,7 +61,7 @@ SELECT RAND(100), RAND(), RAND()
  在下列範例中，RAND 函數會產生四個不同的隨機號碼。  
   
 ```sql  
-DECLARE @counter smallint;  
+DECLARE @counter SMALLINT;  
 SET @counter = 1;  
 WHILE @counter < 5  
    BEGIN  

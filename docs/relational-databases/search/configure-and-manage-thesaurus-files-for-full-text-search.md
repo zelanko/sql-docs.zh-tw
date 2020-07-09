@@ -1,6 +1,6 @@
 ---
 title: 設定及管理全文檢索搜尋的同義字檔案
-ms.date: 12/04/2017
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: search, sql-database
 ms.technology: search
@@ -14,15 +14,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c54c1774622416adb213b31852941c934be7af24
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8d97b66622254ad911cb7bf557c1a7368b4f3d40
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056206"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897997"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>設定及管理全文檢索搜尋的同義字檔案
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的全文檢索查詢可以透過使用「同義字」  ，搜尋使用者指定之詞彙的同義字。 每個同義字會針對特定語言定義一組同義字。 透過開發符合全文檢索資料的同義字，您可以有效地擴大針對該資料進行全文檢索查詢的範圍。
 
 系統會針對所有 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 和 [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 查詢以及指定 `FORMSOF THESAURUS` 子句的任何 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 查詢進行同義字比對。
@@ -52,30 +52,30 @@ ms.locfileid: "74056206"
 ##  <a name="location-of-thesaurus-files"></a><a name="location"></a> 同義字檔案的位置  
  同義字檔案的預設位置為：  
   
-     <SQL_Server_data_files_path>\MSSQL13.MSSQLSERVER\MSSQL\FTDATA\  
+`<SQL_Server_data_files_path>\MSSQL13.MSSQLSERVER\MSSQL\FTDATA\`
   
- 這個預設位置包含下列檔案：  
+這個預設位置包含下列檔案：  
   
 -   **特定語言**同義字檔案  
 
     安裝程式會在上述位置安裝空的同義字檔案。 系統會針對每個支援的語言提供一個個別的檔案。 系統管理員可以自訂這些檔案。  
   
-     同義字檔案的預設檔案名稱會使用下列格式：  
+    同義字檔案的預設檔案名稱會使用下列格式：  
   
-         'ts' + <three-letter language-abbreviation> + '.xml'  
+    `'ts' + <three-letter language-abbreviation> + '.xml'`
   
-     特定語言的同義字檔案名稱會指定在下列登錄值中：
+    特定語言的同義字檔案名稱會指定在下列登錄值中：
      
-        HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<instance-name>\MSSearch\<language-abbrev>  
+    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<instance-name>\MSSearch\<language-abbrev>`
   
 -   **通用**同義字檔案  
   
-     空的通用同義字檔案：tsGlobal.xml。  
+    空的通用同義字檔案：tsGlobal.xml。  
 
 ### <a name="change-the-location-of-a-thesaurus-file"></a>變更同義字檔案的位置 
 您可以變更同義字檔案的登錄機碼，藉以變更其位置和名稱。 針對每個語言，同義字檔案的位置會指定在下列登錄值中：  
   
-    HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\<instance name>\MSSearch\Language\<language-abbreviation>\TsaurusFile  
+`HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\<instance name>\MSSearch\Language\<language-abbreviation>\TsaurusFile`
   
  通用同義字檔案會對應至 LCID 0 的中性語言。 只有管理員能夠變更這個值。  
 

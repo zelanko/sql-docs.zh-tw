@@ -11,16 +11,16 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 32ff23fe1ea7f0a892a19cc6be0eef8439ee907f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 27a215b868101b17b7db6ec3f25dfc5456777ab1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75831820"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900134"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>適用於 Linux 上 SQL Server 的 Active Directory 驗證
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 本文提供適用於 Linux 上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 Active Directory (AD) 驗證概觀。 AD 驗證在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 又稱為整合式驗證。
 

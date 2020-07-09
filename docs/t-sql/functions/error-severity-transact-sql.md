@@ -19,18 +19,18 @@ helpviewer_keywords:
 - CATCH block
 - ERROR_SEVERITY function
 ms.assetid: 50228f2f-6949-4d2e-8e43-fad11bf973ab
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a5df90640dc9ebdd2d59593c4b2a82a0f7daa00
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1f3f6988a766966b35fc247e9fc17a2b9f8c558d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68094647"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999052"
 ---
 # <a name="error_severity-transact-sql"></a>ERROR_SEVERITY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 此函式會在發生錯誤且該錯誤造成執行 TRY...CATCH 建構的 CATCH 區塊時，傳回錯誤的嚴重性值。  
 
@@ -53,7 +53,7 @@ ERROR_SEVERITY ( )
 ## <a name="remarks"></a>備註  
 `ERROR_SEVERITY` 支援在 CATCH 區塊範圍內的任何位置呼叫。  
   
-不論執行多少次，或在 `CATCH` 區塊範圍內的哪個位置執行，`ERROR_SEVERITY` 都會傳回錯誤的錯誤嚴重性值。 這有別於 @@ERROR 之類的函式，它們只會在緊接於發生錯誤的陳述式之後的陳述式中，傳回錯誤號碼。  
+不論執行多少次，或在 `ERROR_SEVERITY` 區塊範圍內的哪個位置執行，`CATCH` 都會傳回錯誤的錯誤嚴重性值。 這有別於 @@ERROR 之類的函式，它們只會在緊接於發生錯誤的陳述式之後的陳述式中，傳回錯誤號碼。  
   
 `ERROR_SEVERITY` 通常會在巢狀 `CATCH` 區塊中作業。 `ERROR_SEVERITY` 會傳回參考該 `CATCH` 區塊之 `CATCH` 區塊範圍特定的錯誤嚴重性值。 例如，外部 TRY...CATCH 建構的 `CATCH` 區塊可能會有內部 `TRY...CATCH` 建構。 在該內部 `CATCH` 區塊內，`ERROR_SEVERITY` 會傳回叫用內部 `CATCH` 區塊之錯誤的嚴重性值。 如果 `ERROR_SEVERITY` 是在外部 `CATCH` 區塊中執行，它會傳回叫用該外部 `CATCH` 區塊之錯誤的錯誤嚴重性值。  
   

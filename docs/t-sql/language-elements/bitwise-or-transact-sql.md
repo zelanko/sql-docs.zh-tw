@@ -23,15 +23,15 @@ ms.assetid: 86a3b87f-9688-4eaf-a552-29f1b01d880a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4410c086ed5fdca8fa4812a96c13bac6f692c8ae
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: abbe3458915e61de820c50d47ac8892223f98f58
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67942959"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85990875"
 ---
 # <a name="-bitwise-or-transact-sql"></a>| (位元 OR) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   當在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式內轉換成二進位運算式時，執行兩個指定整數值之間的位元邏輯 OR 運算。  
   
@@ -62,11 +62,9 @@ expression | expression
  下列範例會建立一個含 **int** 資料類型的資料表來顯示原始值，並將資料表放入單一資料列中。  
   
 ```sql  
-CREATE TABLE bitwise  
-(   
- a_int_value int NOT NULL,  
-b_int_value int NOT NULL  
-);  
+CREATE TABLE bitwise (  
+  a_int_value INT NOT NULL,  
+  b_int_value INT NOT NULL);  
 GO  
 INSERT bitwise VALUES (170, 75);  
 GO  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6fa77fa3ac4733d9672b5bc72523d72abe640fc8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 287e6cd2fd4f1004aaa79a69ec7388eb3b695a68
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251258"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898061"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>可用性群組資料庫層級健全狀況偵測容錯移轉選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 從 SQL Server 2016 開始，設定 AlwaysOn 可用性群組時，可以使用資料庫層級健全狀況偵測 (DB_FAILOVER) 選項。 資料庫層級健全狀況偵測注意到資料庫不再處於線上狀態、發生錯誤，以及觸發可用性群組的自動容錯移轉。
 
 整體啟用可用性群組的資料庫層級健全狀況偵測，因此資料庫層級健全狀況偵測會監視可用性群組中的每個資料庫。 無法針對可用性群組中的特定資料庫選擇性地予以啟用。

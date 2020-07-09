@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ff31579a425f9e86fed11811c9d0a42c3113ee15
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 662fcb31c7a633be5186f93943af318316e7ff8d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288132"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900959"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>第 1 課：使用 SSIS 來建立專案和基本套件
 
@@ -50,7 +50,8 @@ ms.locfileid: "79288132"
   
 以下是 SampleCurrencyData.txt 檔案中的來源資料範例：  
   
-<pre>1.00070049USD9/3/05 0:001.001201442  
+```
+1.00070049USD9/3/05 0:001.001201442  
 1.00020004USD9/4/05 0:001  
 1.00020004USD9/5/05 0:001.001201442  
 1.00020004USD9/6/05 0:001  
@@ -59,7 +60,8 @@ ms.locfileid: "79288132"
 1.00070049USD9/9/05 0:001.001502253  
 1.00070049USD9/10/05 0:000.99990001  
 1.00020004USD9/11/05 0:001.001101211  
-1.00020004USD9/12/05 0:000.99970009</pre>  
+1.00020004USD9/12/05 0:000.99970009
+```
   
 使用一般檔案來源資料時，請務必了解「一般檔案」連線管理員如何解譯一般檔案資料。 如果一般檔案來源是 Unicode，一般檔案連接管理員會將所有資料行定義為 [DT_WSTR]，預設資料行寬度為 50。 如果一般檔案來源是以 ANSI 編碼，資料行就會定義為 [DT_STR]，且預設資料行寬度為 50。 您可能必須變更這些預設值，以便讓字串資料行類型更適用於您的資料。 您必須查看目的地的資料類型，然後在「一般檔案」連線管理員內選擇該類型。  
   

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dcff763612b51918eb13336379c01f1c1ac9e108
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bb97e94e55f270331ff99909b5ec7dca6f8683e3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822087"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901034"
 ---
 # <a name="driver-and-client-connectivity-support-for-availability-groups"></a>可用性群組的驅動程式和用戶端連線支援
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   本主題描述 Always On 可用性群組的用戶端連線考量，包括用戶端設定和設定的必要條件、限制和建議。  
   

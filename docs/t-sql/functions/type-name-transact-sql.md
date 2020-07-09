@@ -19,18 +19,18 @@ helpviewer_keywords:
 - data types [SQL Server], names
 - TYPE_NAME function
 ms.assetid: e4075a2e-5f70-440f-986b-9ec8434e07c1
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 33f282c79c15a8b9548d799ef86e026fd7357d00
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a63503c34b4796866e72a4baa1774722c399cd05
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68098697"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85992245"
 ---
 # <a name="type_name-transact-sql"></a>TYPE_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   傳回指定類型識別碼的非限定類型名稱。  
   
@@ -62,7 +62,7 @@ TYPE_NAME ( type_id )
  系統函數可以用於選取清單、WHERE 子句以及任何可以使用運算式的位置。 如需詳細資訊，請參閱[運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md) 及 [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)。  
   
 ## <a name="examples"></a>範例  
- 下列範例會針對 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫之 `Vendor` 資料表中的每個資料行，傳回物件名稱、資料行名稱和類型名稱。  
+ 下列範例會針對 `Vendor` 資料庫之 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表中的每個資料行，傳回物件名稱、資料行名稱和類型名稱。  
   
 ```  
 SELECT o.name AS obj_name, c.name AS col_name,  
@@ -92,7 +92,7 @@ Vendor          PurchasingWebServiceURL  nvarchar
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下列範例會使用識別碼 `1` 來傳回資料類型的 `TYPE ID`。  
+ 下列範例會使用識別碼 `TYPE ID` 來傳回資料類型的 `1`。  
   
 ```  
 SELECT TYPE_NAME(36) AS Type36, TYPE_NAME(239) AS Type239;  

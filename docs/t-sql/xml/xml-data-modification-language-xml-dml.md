@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 20ce50d2-c07b-4e41-93a7-1380d2cd49cb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 28de1be430d02a9288b0a1fe27567965fb0a32e4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 68a0f5f6a52baff0a4baaaad2741bf9ad9a6288e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68140894"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901606"
 ---
 # <a name="xml-data-modification-language-xml-dml"></a>XML 資料修改語言 (XML DML)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   XML 資料修改語言 (XML DML) 是 XQuery 語言的延伸。 如 W3C 所定義的，XQuery 語言缺少「資料操作」(DML) 的部份。 本主題中所介紹的 XML DML (同時也是 XQuery 語言)，可提供功能完整的查詢及資料修改語言，讓您可以針對 **xml** 資料類型來使用。  
   

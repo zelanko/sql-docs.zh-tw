@@ -23,15 +23,15 @@ ms.assetid: e9300827-e793-4eb6-9042-ffa0204aeb50
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab31445852c347a631ed4b9b035193530dd8fa91
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a817d079c926db5d130c950e4a7d1a706a77b26d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832046"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85991494"
 ---
 # <a name="xact_state-transact-sql"></a>XACT_STATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   這是報告目前正在執行之要求的使用者交易狀態的純量函數。 XACT_STATE 指出要求是否具有使用中的使用者交易，以及是否可以認可該交易。  
   

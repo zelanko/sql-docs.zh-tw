@@ -8,16 +8,16 @@ ms.date: 12/11/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: ee3b4aac2e1bcdcc37de17a569f080d3b9bc87cc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da852f20d9109c5c4e2988cbdfc3915fe226718f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68077467"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896520"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>為 Linux 上的 SQL Server 部署 Pacemaker 叢集
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 本教學課程記載為 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Always On 可用性群組 (AG) 或容錯移轉叢集執行個體 (FCI) 部署 Linux Pacemaker 叢集所需的工作。 與緊密結合的 Windows Server/ [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 堆疊不同，Linux 上的 Pacemaker 叢集建立以及可用性群組 (AG) 設定可以在安裝 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 之前或之後完成。 在設定叢集之後，將完成 AG 或 FCI 部署的 Pacemaker 部分的資源整合和設定。
 > [!IMPORTANT]

@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 21b25edb34d89cb9ef3629955dd06a357a8607a2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5d5fd2e96e9d0695f098eab02fb3d4ab86e5d256
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79198266"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902327"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>在 Linux Docker 容器中還原 SQL Server 資料庫
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -402,7 +402,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    ```PowerShell
    cd ~
    docker cp sql1:/var/opt/mssql/backup/wwi_2.bak wwi_2.bak
-   ls -l wwi*
+   ls wwi*
    ```
 
 ## <a name="use-the-persisted-data"></a>使用保存的資料

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cd783ac6f5f6d8c7a9e561614dbe2c06053f758a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fc9f2cf4409edb882b6f74516f604a0f6c3eeead
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050676"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899916"
 ---
 # <a name="grant-system-object-permissions-transact-sql"></a>GRANT 系統物件權限 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   授與系統物件 (如系統預存程序、擴充預存程序、函數及檢視) 的權限。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "68050676"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 GRANT { SELECT | EXECUTE } ON [ sys.]system_object TO principal   
 ```  
@@ -76,7 +76,7 @@ GO
 ## <a name="examples"></a>範例  
   
 ### <a name="a-granting-select-permission-on-a-view"></a>A. 授與檢視的 SELECT 權限  
- 下列範例授與選取檢視 (這份檢視會列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入) 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入 `Sylvester1` 權限。 接著，這個範例再授與其他權限，它是檢視非使用者擁有之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入上的中繼資料時所需的權限。  
+ 下列範例授與選取檢視 (這份檢視會列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入) 的 `Sylvester1` 登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 權限。 接著，這個範例再授與其他權限，它是檢視非使用者擁有之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入上的中繼資料時所需的權限。  
   
 ```  
 USE AdventureWorks2012;  

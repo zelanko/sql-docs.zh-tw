@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 498eb3fb-6a43-434d-ad95-68a754232c45
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 639322e277bddc8a7d71c994600c32cfbcd78449
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f641836a7e465f4276f0970ee15a1bea4ee45283
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251238"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898055"
 ---
 # <a name="start-data-movement-on-an-always-on-secondary-database-sql-server"></a>於 AlwaysOn 次要資料庫啟動資料移動 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   本主題描述在將資料庫加入 AlwaysOn 可用性群組之後如何啟動資料同步處理。 對於每個新的主要複本，必須在裝載次要複本的伺服器執行個體上準備次要資料庫。 然後每個次要資料庫必須手動聯結至可用性群組。  
   

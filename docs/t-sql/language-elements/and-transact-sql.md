@@ -22,15 +22,15 @@ ms.assetid: b61d7f8d-5a51-49b7-91dd-f6190a5a0fb9
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb5211a2d45ef1a5495d1df57143190f1d5f6419
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4acc2dfb88767dd246dc8e8c5af413235a8bb803
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67927375"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85991208"
 ---
 # <a name="and-transact-sql"></a>AND (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   結合兩個布林運算式，並在這兩個運算式都是 **TRUE** 時，傳回 **TRUE**。 在陳述式中使用一個以上的邏輯運算子時，會先評估 **AND** 運算子。 您可以使用括號來變更驗算的順序。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "67927375"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 boolean_expression AND boolean_expression  
 ```  
   
@@ -83,7 +83,7 @@ IF 1 = 1 AND 2 = 2
 BEGIN  
    PRINT 'First Example is TRUE'  
 END  
-ELSE PRINT 'First Example is FALSE';  
+ELSE PRINT 'First Example is FALSE' ;  
 GO  
   
 IF 1 = 1 AND 2 = 17  

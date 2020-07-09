@@ -22,15 +22,15 @@ ms.assetid: 52dd29ab-25d7-4fd3-a960-ac55c30c9ea9
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3ee098b61c233bb3012ab1505553873c30edd5d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 500b2bddd1cb583672583e238668c5c5d0d773b5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095872"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998569"
 ---
 # <a name="while-transact-sql"></a>WHILE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 
   設定重複執行 SQL 陳述式或陳述式區塊的條件。 只要符合指定的條件，就會重複執行這些陳述式。 您可以在迴圈內，利用 BREAK 和 CONTINUE 關鍵字來控制 WHILE 迴圈陳述式的執行情況。  
@@ -39,7 +39,7 @@ ms.locfileid: "74095872"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 WHILE Boolean_expression   
@@ -47,7 +47,7 @@ WHILE Boolean_expression
   
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 WHILE Boolean_expression   
@@ -57,7 +57,7 @@ WHILE Boolean_expression
   
 ## <a name="arguments"></a>引數  
  *Boolean_expression*  
- 這是傳回 **TRUE** 或 **FALSE** 的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 如果布林運算式包含 SELECT 陳述式，則這個 SELECT 陳述式必須括在括號中。  
+ 這是傳回 [TRUE](../../t-sql/language-elements/expressions-transact-sql.md) 或 **FALSE** 的**運算式**。 如果布林運算式包含 SELECT 陳述式，則這個 SELECT 陳述式必須括在括號中。  
   
  {*sql_statement* | *statement_block*}  
  這是利用陳述式區塊來定義的任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或陳述式分組。 若要定義陳述式區塊，請使用流程控制關鍵字 BEGIN 和 END。  

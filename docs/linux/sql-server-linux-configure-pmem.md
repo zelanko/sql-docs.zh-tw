@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5d98b728a1966861532a30a4b5dd92824d25f1d5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d0222b763ea7898a18443175a88012b5fb5aed42
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76831965"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901514"
 ---
 # <a name="configure-persistent-memory-pmem-for-sql-server-on-linux"></a>設定 Linux 上的 SQL Server 持續性記憶體 (PMEM)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 本文描述如何為 Linux 上的 [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] 設定持續性記憶體 (PMEM)。
 

@@ -9,16 +9,16 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c787409d4e8772d89fc748d39c605506f5dcb520
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff058b2e326399fa6d04503d984d540fba8efc1b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216187"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896974"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>將 Linux 主機上的 SQL Server 加入 Active Directory 網域
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 本文提供如何將 SQL Server Linux 主機電腦加入 Active Directory (AD) 網域的一般指引。 您可使用下列兩種方法：使用內建的 SSSD 套件，或使用協力廠商 Active Directory 提供者。 協力廠商網域加入產品的範例包括 [PowerBroker Identity Services (PBIS)](https://www.beyondtrust.com/)、[One Identity](https://www.oneidentity.com/products/authentication-services/) 和 [Centrify](https://www.centrify.com/)。 本指南包含檢查 Active Directory 設定的步驟。 不過，它並未提供在使用協力廠商公用程式時如何將電腦加入網域的指示。
 

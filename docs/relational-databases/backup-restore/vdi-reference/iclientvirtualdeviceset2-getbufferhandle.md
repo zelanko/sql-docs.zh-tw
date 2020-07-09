@@ -9,16 +9,16 @@ ms.technology: backup-restore
 ms.topic: reference
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 844ddad21eaf3fb579d6a0981f2a042238e92372
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cf187379aaa664e536710859e08bf084b14657d1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70847329"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896902"
 ---
 # <a name="iclientvirtualdeviceset2getbufferhandle-vdi"></a>IClientVirtualDeviceSet2::GetBufferHandle (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 某些應用程式可能需要多個處理序，才能在 **IClientVirtualDevice2::GetCommand** 所傳回的緩衝區上運作。 在此情況下，接收命令之處理序可以使用 **GetBufferHandle** 取得處理序的獨立控制代碼來識別緩衝區。 接著可以將此控制代碼傳達給也會開啟相同虛擬裝置集的其他處理序。 該處理序接著會使用 IClientVirtualDeviceSet2::MapBufferHandle，取得緩衝區的位址。 此位址可能是與其夥伴不同的位址，因為每個程序可能會對應到不同位址的緩衝區。
 

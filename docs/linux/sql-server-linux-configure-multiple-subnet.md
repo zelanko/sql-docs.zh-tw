@@ -9,16 +9,16 @@ ms.date: 12/01/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: af017cf5d36075fdba6de31aa841e980cc20e175
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d6cd6b4cdd25c6da0a7d034e2f980ad583a6561b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76911010"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901549"
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>設定多個子網路 Always On 可用性群組和容錯移轉叢集執行個體
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 當 Always On 可用性群組 (AG) 或容錯移轉叢集執行個體 (FCI) 跨越一個以上的網站時，每個網站通常會有自己的網路。 這通常表示每個網站都有自己的 IP 位址。 例如，網站 A 的位址開頭為 192.168.1.*x*，網站 B 的位址開頭為 192.168.2.*x*，其中 *x* 是伺服器唯一的 IP 位址部分。 如果網路層沒有適當的路由，這些伺服器將無法互相通訊。 有兩種方式可以處理這種情況：設定網路來橋接兩個不同的子網路 (稱為 VLAN)，或設定子網路之間的路由。
 

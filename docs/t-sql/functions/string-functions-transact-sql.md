@@ -18,15 +18,15 @@ ms.assetid: 6940a83d-5374-4af3-bb27-5d89c8af83ac
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6d9407f6e98c4f47ad2db8e02b96f24b2107e5a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 55db5a8dd46a0bd90193b39207eff47ad1b2b2c1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824183"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85995078"
 ---
 # <a name="string-functions-transact-sql"></a>字串函數 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 下列純量函數會執行一項作業來處理字串輸入值，並傳回字串或數值：  
   

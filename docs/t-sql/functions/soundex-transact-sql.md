@@ -22,15 +22,15 @@ ms.assetid: 8f1ed34e-8467-4512-a211-e0f43dee6584
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db101aad22430dac56e352f606522c0d8f3e0fd3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 55486ff2c68d47248f7980bbe5269cf665638221
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82803704"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000473"
 ---
 # <a name="soundex-transact-sql"></a>SOUNDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   傳回四個字元的 (SOUNDEX) 代碼來評估兩個字串的相似度。  
   
@@ -70,7 +70,7 @@ SOUNDEX ( character_expression )
 ## <a name="examples"></a>範例  
  下列範例會顯示 SOUNDEX 函數和相關的 DIFFERENCE 函數。 在第一個範例中，傳回所有子音的標準 `SOUNDEX` 值。 傳回 `SOUNDEX` 和 `Smith` 的 `Smythe`，會傳回相同的 SOUNDEX 結果，因為所有母音、`y` 字母、雙重字母和 `h` 字母都不包括在內。  
   
-```  
+```sql
 -- Using SOUNDEX  
 SELECT SOUNDEX ('Smith'), SOUNDEX ('Smythe');  
 ```  
@@ -78,16 +78,12 @@ SELECT SOUNDEX ('Smith'), SOUNDEX ('Smythe');
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)] 針對 Latin1_General 定序有效。  
   
 ```  
-  
------ -----   
 S530  S530    
-  
-(1 row(s) affected)  
 ```  
   
  `DIFFERENCE` 函數會比較 `SOUNDEX` 模式結果的差異。 下列範例會顯示母音不同的兩個字串。 傳回的差異是 `4`，這是最低的可能差異。  
   
-```  
+```sql
 -- Using DIFFERENCE  
 SELECT DIFFERENCE('Smithers', 'Smythers');  
 GO  
@@ -96,15 +92,12 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)] 針對 Latin1_General 定序有效。  
   
 ```  
------------   
 4             
-  
-(1 row(s) affected)  
 ```  
   
  在下列範例中，字串的子音不同；因此，傳回的差異是 `2`，差異比較大。  
   
-```  
+```sql
 SELECT DIFFERENCE('Anothers', 'Brothers');  
 GO  
 ```  
@@ -112,10 +105,7 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)] 針對 Latin1_General 定序有效。  
   
 ```  
------------   
 2             
-  
-(1 row(s) affected)  
 ```  
   
 ## <a name="see-also"></a>另請參閱  

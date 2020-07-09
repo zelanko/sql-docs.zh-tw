@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 1da4d2c9-e767-434e-b49b-615711a7f626
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2e4deadd4f48457557019ac02337133466b3df33
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 19acce9df264a4a0571be796548f4c1ae2ae0339
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70211343"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897105"
 ---
 # <a name="move-conversation-transact-sql"></a>MOVE CONVERSATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   將交談移到不同的交談群組。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "70211343"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 MOVE CONVERSATION conversation_handle  
    TO conversation_group_id  
@@ -57,7 +57,7 @@ MOVE CONVERSATION conversation_handle
  MOVE CONVERSATION 陳述式會將 *conversation_handle* 指定的交談移到 *conversation_group_id* 識別的交談群組。 對話只能在與同一佇列相關聯的交談群組之間重新導向。  
   
 > [!IMPORTANT]  
->  如果 MOVE CONVERSATION 陳述式不是批次或預存程序中的第一個陳述式，就必須利用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式結束字元 (也就是分號 **;** ) 來結束前一個陳述式。  
+>  如果 MOVE CONVERSATION 陳述式不是批次或預存程序中的第一個陳述式，就必須利用 **陳述式結束字元 (也就是分號**;[!INCLUDE[tsql](../../includes/tsql-md.md)]) 來結束前一個陳述式。  
   
  MOVE CONVERSATION 陳述式會鎖定與 *conversation_handle* 相關聯的交談群組，以及 *conversation_group_id* 所指定的交談群組，直到包含該陳述式的交易認可或回復為止。  
   

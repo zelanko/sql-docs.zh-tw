@@ -8,16 +8,16 @@ ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 427aff5fe9911fde59f3f37077fc9c2306d2bd42
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e9921f6b2639d533674a487de26c1d26aa365a0f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79487596"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900163"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>範例：於 Ubuntu 自動安裝 SQL Server 指令碼
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 此範例 Bash 指令碼會在 Ubuntu 16.04 上安裝 SQL Server 2017，不需要經過互動式輸入。 其中提供安裝資料庫引擎、SQL Server 命令列工具、SQL Server Agent，以及執行後續安裝步驟的範例。 您可以選擇性地安裝全文檢索搜尋，並建立系統管理使用者。
 

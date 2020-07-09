@@ -25,15 +25,15 @@ ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7241492aecd13113bf60ce2dad155bf8f1450d8b
-ms.sourcegitcommit: e880fffc6f827eda0543ca42ee8f81df734c672d
+ms.openlocfilehash: b6d76789908699653981077214f4df5e85bdc648
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82125837"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998898"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 從計畫快取移除所有元素；指定計畫控制代碼或 SQL 控制代碼，從計畫快取移除特定的計畫；或是移除與指定的資源集區相關聯的所有快取項目。
 

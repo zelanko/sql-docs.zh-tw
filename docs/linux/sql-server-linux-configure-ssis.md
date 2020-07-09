@@ -8,16 +8,16 @@ ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 51dc2ba27e346dea75f1bd347491d4932695fd43
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0266318c73c9bb912da4251f2988f00e1c588a62
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68077527"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898046"
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>使用 ssis-conf 設定 Linux 上的 SQL Server Integration Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 當您安裝適用於 Red Hat Enterprise Linux 和 Ubuntu 的 SQL Server Integration Services (SSIS) 時，您將執行 `ssis-conf` 設定指令碼。 如需安裝 SSIS 的詳細資訊，請參閱[在 Linux上安裝 SQL Server Integration Services (SSIS)](sql-server-linux-setup-ssis.md)。
 

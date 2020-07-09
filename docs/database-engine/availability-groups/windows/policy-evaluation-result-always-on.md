@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ff428ab60ad51cfdf2cd19454c34e90644f30b5d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 333ff3e79bc92d82a224caf8af24fb9dc76a6082
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75235443"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897017"
 ---
 # <a name="policy-evaluation-result-page-always-on-dashboard"></a>原則評估結果頁面 (Always On 儀表板)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   使用 AlwaysOn 儀表板的 [原則評估結果]  頁面檢視任何目前的原則問題。  
     

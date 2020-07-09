@@ -18,16 +18,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: aeac57c5ae6facfeb092592c2f3dca851bb9b87b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 92416e1dc528880767ccebd1873707e0a1259a31
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80217092"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901264"
 ---
 # <a name="polybase-query-scenarios"></a>PolyBase 查詢情節
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 下文提供使用 SQL Server (從 2016 版開始) [PolyBase](../../relational-databases/polybase/polybase-guide.md) 功能的查詢範例。 使用這些範例之前，您必須先安裝和設定 PolyBase。 如需詳細資訊，請參閱 [PolyBase 概觀](polybase-guide.md)。
   

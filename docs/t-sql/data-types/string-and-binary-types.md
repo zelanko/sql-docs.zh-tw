@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fe8ee5b6-7392-4aae-a551-973bae02de8d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0d781b9f733a38b65f26d8995c0859879a9ba730
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ce8cc33718724e45f4005c9beb896d6ae518b60d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000523"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901139"
 ---
 # <a name="string-and-binary-types"></a>字串與二進位類型
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援下列字串與二進位類型。
   

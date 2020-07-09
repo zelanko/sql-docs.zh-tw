@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 8370b730-7fd5-43fe-a7f6-8300b3caa16d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 27d5bca6d40833e3daf63d921df8b47ef04b551e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 9c11552b27e8709c28f3dc4fdf4cb3f45fc68cb2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635227"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899931"
 ---
 # <a name="drop-rule-transact-sql"></a>DROP RULE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   從目前資料庫移除一或多個使用者自訂的規則。  
   

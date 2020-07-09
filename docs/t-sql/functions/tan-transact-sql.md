@@ -16,18 +16,18 @@ helpviewer_keywords:
 - TAN function
 - tangent
 ms.assetid: f679fa6a-5739-484b-9450-fb3400d4f30c
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c451192a96dc2fdf4e8e5e619237527139b4f2f6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 68508c7edcd3268f880b5b1c2885dc67f93b3d9e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68117445"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85993395"
 ---
 # <a name="tan-transact-sql"></a>TAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   傳回輸入運算式的正切函數 (Tangent)。  
   
@@ -41,7 +41,7 @@ TAN ( float_expression )
   
 ## <a name="arguments"></a>引數  
  *float_expression*  
- 為 **float** 類型或能夠隱含轉換成 **float** 之類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，會解譯為弧度的數目。  
+ 為 [float](../../t-sql/language-elements/expressions-transact-sql.md) 類型或能夠隱含轉換成 **float** 之類型的**運算式**，會解譯為弧度的數目。  
   
 ## <a name="return-types"></a>傳回型別  
  **float**  

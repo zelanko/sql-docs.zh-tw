@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 19718f762a7352865c5b9741ee42ec8cfe965eb8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bd425438dc4a06faea489ac9cba4b607492fcde8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79434521"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900404"
 ---
 # <a name="what-is-an-availability-group-listener"></a>什麼是可用性群組接聽程式？  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 可用性群組接聽程式是用戶端可連線的虛擬網路名稱 (VNN)，以存取 Always On 可用性群組的主要或次要複本中資料庫。 接聽程式可讓用戶端連線到複本，卻不需要知道 SQL Server 的實體執行個體名稱。 因為接聽程式會路由流量，所以在容錯移轉之後，不需要修改用戶端連接字串。 
 

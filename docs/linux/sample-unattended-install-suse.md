@@ -8,16 +8,16 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 392d8d477a2e136d54e6f0f06608eb0ebeda12a5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9944a6065d89a49e5bf1a0ccec2d4d681fbae748
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73593511"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900158"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>範例：SUSE Linux Enterprise Server 的 SQL Server 自動安裝指令碼
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 此範例 Bash 指令碼會在 SUSE Linux Enterprise Server (SLES) v12 SP2 上安裝 SQL Server 2017，不需要互動式輸入。 其中提供安裝資料庫引擎、SQL Server 命令列工具、SQL Server Agent，以及執行後續安裝步驟的範例。 您可以選擇性地安裝全文檢索搜尋，並建立系統管理使用者。
 

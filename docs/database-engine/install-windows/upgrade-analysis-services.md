@@ -21,16 +21,16 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: dbf87499f1bc5c23ae272daa393ef981a97e66d5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 72cba47c520749a2e78ae529d941b12ddcccf105
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68892560"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900262"
 ---
 # <a name="upgrade-analysis-services"></a>升級 Analysis Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
   Analysis Services 執行個體可以升級至相同伺服器模式的 SQL Server 版本，以利用目前版本中所採用的功能，如 [Analysis Services 的新功能](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)中所述。  
   

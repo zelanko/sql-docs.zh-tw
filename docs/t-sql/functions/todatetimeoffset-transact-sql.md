@@ -21,18 +21,18 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - time [SQL Server], functions
 ms.assetid: b5fafc08-efd4-4a3b-a0b3-068981a0a685
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f6978a8344b7a1c9100a701d582193295f34c12
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: df790c42b67e0542f57c43650bb40e76c584086e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68098967"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85993041"
 ---
 # <a name="todatetimeoffset-transact-sql"></a>TODATETIMEOFFSET (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   傳回從 **datetime2** 運算式翻譯的 **datetimeoffset** 值。  
   
@@ -46,7 +46,7 @@ TODATETIMEOFFSET ( expression , time_zone )
   
 ## <a name="arguments"></a>引數  
  *expression*  
- 為解析為 [datetime2](../../t-sql/data-types/datetime2-transact-sql.md) 值的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 為解析為 [datetime2](../../t-sql/language-elements/expressions-transact-sql.md) 值的[運算式](../../t-sql/data-types/datetime2-transact-sql.md)。  
   
 > [!NOTE]  
 >  運算式的類型不可為 **text**、**ntext** 或 **image**，因為這些類型不可隱含轉換成 **varchar** 或 **nvarchar**。  

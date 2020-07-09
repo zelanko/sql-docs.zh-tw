@@ -11,16 +11,16 @@ ms.assetid: 691d4f80-6754-43f5-8b43-d4facf08f6fc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 12516c649614bd0d6e3a1e5fa79e3be73f606223
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7b1c406f4b1806b3ac9bdbcddd31c7d40ce5762e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68017640"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000203"
 ---
 # <a name="working-with-memory-optimized-system-versioned-temporal-tables"></a>使用記憶體最佳化的系統版本設定時態表
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 本主題討論記憶體最佳化之系統版本設定時態表和以磁碟基礎之系統版本設定時態表的使用方式差異。
 

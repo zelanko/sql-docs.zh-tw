@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
-ms.openlocfilehash: 70701d5c0103da089444177db1143066d0c862cd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4d2032c14f435b48fa181f2fcab388d417ebea7d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68032229"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897245"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>設定 SQL Server 的 SLES 共用磁碟叢集
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 本指南提供在 SUSE Linux Enterprise Server (SLES) 上，為 SQL Server 建立兩個節點共用磁碟叢集的指示。 叢集層會以建置於 [Pacemaker](https://clusterlabs.org/) \(英文\) 之上的 SUSE [高可用性擴充功能 (HAE)](https://www.suse.com/products/highavailability) \(英文\) 為基礎。 
 

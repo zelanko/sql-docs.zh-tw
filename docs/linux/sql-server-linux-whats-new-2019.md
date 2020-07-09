@@ -7,16 +7,16 @@ ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 48ca6446044860380a4456e49d75811805e3a889
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6c2280bacb7947b202d9291637ef294ba391e947
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79198287"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897195"
 ---
 # <a name="whats-new-for-sql-server-2019-on-linux"></a>Linux 上的 SQL Server 2019 新功能
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 本文描述適用於 Linux 上所執行 SQL Server 2019 的主要功能和服務。 如需套件下載和已知問題，請參閱[版本資訊](sql-server-linux-release-notes-2019.md?view=sql-server-linux-ver15)。
 

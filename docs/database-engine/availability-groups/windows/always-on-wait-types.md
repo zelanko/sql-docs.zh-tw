@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: afa8caff-f325-48d9-a8ef-a30beab60389
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a62145645a965d46c8da076eca14cd8a3dd85857
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f16a93231cf8b3bc6f3ad224703e3902ff3cb9b7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67934962"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900919"
 ---
 # <a name="identify-waits-associated-with-availability-groups"></a>識別與可用性群組相關的等候
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   當您在針對 Always On 可用性群組延遲進行疑難排解時，可以使用動態管理檢視 (DMV) [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) 中的可用性群組特定等候類型，來監視等候的統計資料的累積。  
   
  如需使用等候統計資料的一般資訊，請參閱 [SQL Server 2005 等候和佇列](https://technet.microsoft.com/library/cc966413.aspx) \(英文\)。 該文件是針對 SQL Server 2005 撰寫，但其資訊可以套用到更新的 SQL Server 版本。  

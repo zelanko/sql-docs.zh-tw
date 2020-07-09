@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 7372051d8dfb23430f834ca159125822c6892956
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d1894e33de743e8e4b7f4053b7b77746cca3e124
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68116525"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901664"
 ---
 # <a name="dbcc-indexdefrag-transact-sql"></a>DBCC INDEXDEFRAG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 重組指定資料表或檢視的索引。
   
@@ -44,7 +44,7 @@ ms.locfileid: "68116525"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 DBCC INDEXDEFRAG  
 (  
     { database_name | database_id | 0 }   
@@ -113,7 +113,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 ## <a name="examples"></a>範例  
 ### <a name="a-using-dbcc-indexdefrag-to-defragment-an-index"></a>A. 使用 DBCC INDEXDEFRAG 重組索引  
-下列範例會重組 `AdventureWorks` 資料庫之 `Production.Product`資料表中 `PK_Product_ProductID` 索引的所有分割區。
+下列範例會重組 `PK_Product_ProductID` 資料庫之 `Production.Product`資料表中 `AdventureWorks` 索引的所有分割區。
   
 ```sql  
 DBCC INDEXDEFRAG (AdventureWorks2012, 'Production.Product', PK_Product_ProductID);  

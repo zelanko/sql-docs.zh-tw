@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: 76c59c6c7b821bfcc9eb76ca3a694a1c69095ce1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 94ac1e7dbd6632d2346df2d7d1837b8ee66859c7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558523"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897258"
 ---
 # <a name="operate-rhel-failover-cluster-instance-fci-for-sql-server"></a>操作 SQL Server 的 RHEL 容錯移轉叢集執行個體 (FCI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 此文件說明如何使用 Red Hat Enterprise Linux，針對共用磁碟容錯移轉叢集上的 SQL Server 執行下列工作。
 

@@ -3,20 +3,20 @@ title: 設定 Linux 上的 SQL Server 記錄傳送
 description: 本教學課程的基本範例說明如何使用記錄傳送，將 Linux 上的 SQL Server 執行個體複寫到次要執行個體。
 author: VanMSFT
 ms.author: vanto
-ms.date: 04/19/2017
+ms.date: 07/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 8bc7fa51eeb5d02400b15556a3bec06ce721c1de
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7d32d85ef52ac5e6dc687ed32e7283540240ce2b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73240705"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897198"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>開始使用 Linux 上的記錄傳送
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 SQL Server 記錄傳送是一種 HA 設定，其中主伺服器的資料庫會複寫到一或多部次要伺服器上。 簡而言之，來源資料庫的備份會還原到次要伺服器上。 接著，主要伺服器會定期建立交易記錄備份，而次要伺服器會將它們還原，同時更新資料庫的次要複本。 
 
@@ -85,11 +85,13 @@ SQL Server 記錄傳送是一種 HA 設定，其中主伺服器的資料庫會�
 
 -   建立檔案以儲存您的認證。 使用您最近針對 mssql Samba 帳戶所設定的密碼 
 
+    ```console
         vim /var/opt/mssql/.tlogcreds
         #Paste the following in .tlogcreds
         username=mssql
         domain=<domain>
         password=<password>
+    ```
 
 -   執行下列命令以建立用於掛接的空目錄，並正確設定權限和所有權
     ```bash   
@@ -102,8 +104,10 @@ SQL Server 記錄傳送是一種 HA 設定，其中主伺服器的資料庫會�
 
 -   將此行新增至 etc/fstab 以保存共用 
 
+    ```console
         //<ip_address_of_primary_server>/tlogs /var/opt/mssql/tlogs cifs credentials=/var/opt/mssql/.tlogcreds,ro,uid=mssql,gid=mssql 0 0
-        
+    ```
+
 -   掛接共用
     ```bash   
     sudo mount -a
@@ -118,11 +122,12 @@ SQL Server 記錄傳送是一種 HA 設定，其中主伺服器的資料庫會�
     TO DISK = '/var/opt/mssql/tlogs/SampleDB.bak'
     GO
     ```
+
     ```sql
     DECLARE @LS_BackupJobId AS uniqueidentifier 
     DECLARE @LS_PrimaryId   AS uniqueidentifier 
     DECLARE @SP_Add_RetCode As int 
-    EXEC @SP_Add_RetCode = master.dbo.sp_add_log_shipping_primary_database 
+    EXECUTE @SP_Add_RetCode = master.dbo.sp_add_log_shipping_primary_database 
              @database = N'SampleDB' 
             ,@backup_directory = N'/var/opt/mssql/tlogs' 
             ,@backup_share = N'/var/opt/mssql/tlogs' 
@@ -142,7 +147,7 @@ SQL Server 記錄傳送是一種 HA 設定，其中主伺服器的資料庫會�
     DECLARE @LS_BackUpScheduleUID   As uniqueidentifier 
     DECLARE @LS_BackUpScheduleID    AS int 
 
-    EXEC msdb.dbo.sp_add_schedule 
+    EXECUTE msdb.dbo.sp_add_schedule 
             @schedule_name =N'LSBackupSchedule' 
             ,@enabled = 1 
             ,@freq_type = 4 
@@ -157,19 +162,19 @@ SQL Server 記錄傳送是一種 HA 設定，其中主伺服器的資料庫會�
             ,@schedule_uid = @LS_BackUpScheduleUID OUTPUT 
             ,@schedule_id = @LS_BackUpScheduleID OUTPUT 
 
-    EXEC msdb.dbo.sp_attach_schedule 
+    EXECUTE msdb.dbo.sp_attach_schedule 
             @job_id = @LS_BackupJobId 
             ,@schedule_id = @LS_BackUpScheduleID  
 
-    EXEC msdb.dbo.sp_update_job 
+    EXECUTE msdb.dbo.sp_update_job 
             @job_id = @LS_BackupJobId 
             ,@enabled = 1 
             
     END 
 
-    EXEC master.dbo.sp_add_log_shipping_alert_job 
+    EXECUTE master.dbo.sp_add_log_shipping_alert_job 
 
-    EXEC master.dbo.sp_add_log_shipping_primary_secondary 
+    EXECUTE master.dbo.sp_add_log_shipping_primary_secondary 
             @primary_database = N'SampleDB' 
             ,@secondary_server = N'<ip_address_of_secondary_server>' 
             ,@secondary_database = N'SampleDB' 
@@ -190,7 +195,7 @@ SQL Server 記錄傳送是一種 HA 設定，其中主伺服器的資料庫會�
     DECLARE @LS_Secondary__SecondaryId  AS uniqueidentifier 
     DECLARE @LS_Add_RetCode As int 
 
-    EXEC @LS_Add_RetCode = master.dbo.sp_add_log_shipping_secondary_primary 
+    EXECUTE @LS_Add_RetCode = master.dbo.sp_add_log_shipping_secondary_primary 
             @primary_server = N'<ip_address_of_primary_server>' 
             ,@primary_database = N'SampleDB' 
             ,@backup_source_directory = N'/var/opt/mssql/tlogs/' 
@@ -209,7 +214,7 @@ SQL Server 記錄傳送是一種 HA 設定，其中主伺服器的資料庫會�
     DECLARE @LS_SecondaryCopyJobScheduleUID As uniqueidentifier 
     DECLARE @LS_SecondaryCopyJobScheduleID  AS int 
 
-    EXEC msdb.dbo.sp_add_schedule 
+    EXECUTE msdb.dbo.sp_add_schedule 
             @schedule_name =N'DefaultCopyJobSchedule' 
             ,@enabled = 1 
             ,@freq_type = 4 
@@ -224,14 +229,14 @@ SQL Server 記錄傳送是一種 HA 設定，其中主伺服器的資料庫會�
             ,@schedule_uid = @LS_SecondaryCopyJobScheduleUID OUTPUT 
             ,@schedule_id = @LS_SecondaryCopyJobScheduleID OUTPUT 
 
-    EXEC msdb.dbo.sp_attach_schedule 
+    EXECUTE msdb.dbo.sp_attach_schedule 
             @job_id = @LS_Secondary__CopyJobId 
             ,@schedule_id = @LS_SecondaryCopyJobScheduleID  
 
     DECLARE @LS_SecondaryRestoreJobScheduleUID  As uniqueidentifier 
     DECLARE @LS_SecondaryRestoreJobScheduleID   AS int 
 
-    EXEC msdb.dbo.sp_add_schedule 
+    EXECUTE msdb.dbo.sp_add_schedule 
             @schedule_name =N'DefaultRestoreJobSchedule' 
             ,@enabled = 1 
             ,@freq_type = 4 
@@ -246,7 +251,7 @@ SQL Server 記錄傳送是一種 HA 設定，其中主伺服器的資料庫會�
             ,@schedule_uid = @LS_SecondaryRestoreJobScheduleUID OUTPUT 
             ,@schedule_id = @LS_SecondaryRestoreJobScheduleID OUTPUT 
 
-    EXEC msdb.dbo.sp_attach_schedule 
+    EXECUTE msdb.dbo.sp_attach_schedule 
             @job_id = @LS_Secondary__RestoreJobId 
             ,@schedule_id = @LS_SecondaryRestoreJobScheduleID  
             
@@ -255,7 +260,7 @@ SQL Server 記錄傳送是一種 HA 設定，其中主伺服器的資料庫會�
     IF (@@ERROR = 0 AND @LS_Add_RetCode = 0) 
     BEGIN 
 
-    EXEC @LS_Add_RetCode2 = master.dbo.sp_add_log_shipping_secondary_database 
+    EXECUTE @LS_Add_RetCode2 = master.dbo.sp_add_log_shipping_secondary_database 
             @secondary_database = N'SampleDB' 
             ,@primary_server = N'<ip_address_of_primary_server>' 
             ,@primary_database = N'SampleDB' 
@@ -272,11 +277,11 @@ SQL Server 記錄傳送是一種 HA 設定，其中主伺服器的資料庫會�
     IF (@@error = 0 AND @LS_Add_RetCode = 0) 
     BEGIN 
 
-    EXEC msdb.dbo.sp_update_job 
+    EXECUTE msdb.dbo.sp_update_job 
             @job_id = @LS_Secondary__CopyJobId 
             ,@enabled = 1 
 
-    EXEC msdb.dbo.sp_update_job 
+    EXECUTE msdb.dbo.sp_update_job 
             @job_id = @LS_Secondary__RestoreJobId 
             ,@enabled = 1 
 
@@ -291,7 +296,7 @@ SQL Server 記錄傳送是一種 HA 設定，其中主伺服器的資料庫會�
     USE msdb ;  
     GO  
 
-    EXEC dbo.sp_start_job N'LSBackup_SampleDB' ;  
+    EXECUTE dbo.sp_start_job N'LSBackup_SampleDB' ;  
     GO  
     ```
 
@@ -301,9 +306,9 @@ SQL Server 記錄傳送是一種 HA 設定，其中主伺服器的資料庫會�
     USE msdb ;  
     GO  
 
-    EXEC dbo.sp_start_job N'LSCopy_SampleDB' ;  
+    EXECUTE dbo.sp_start_job N'LSCopy_SampleDB' ;  
     GO  
-    EXEC dbo.sp_start_job N'LSRestore_SampleDB' ;  
+    EXECUTE dbo.sp_start_job N'LSRestore_SampleDB' ;  
     GO  
     ```
  - 執行下列命令，以驗證「記錄傳送」容錯移轉是否正常運作

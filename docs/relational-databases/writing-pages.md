@@ -13,15 +13,15 @@ ms.assetid: 409c8753-03c4-436d-839c-6a5879971551
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9eea6c5cbc995cd73a9f799124772d2be396a9f8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c5ffdb81cd5c1242a6a97dcb978683488c5a755b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68095479"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998305"
 ---
 # <a name="writing-pages"></a>寫入分頁
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體中的 I/O 包括邏輯和實體寫入。 修改緩衝快取內分頁中的資料時，即會發生邏輯寫入。 將分頁從 [緩衝快取](../relational-databases/memory-management-architecture-guide.md) 寫入磁碟時，即會發生實體寫入。
 

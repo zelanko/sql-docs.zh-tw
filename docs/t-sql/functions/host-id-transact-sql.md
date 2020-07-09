@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 36ba56d4-20d7-4cd1-aa2a-e40a6c0a4e39
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cce09ec0e34aec88755eaeac0449bd5f75138d6f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ee10024b38af62d88c2c3ca0776d84ba5cfc0280
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73843725"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898972"
 ---
 # <a name="host_id-transact-sql"></a>HOST_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   傳回工作站識別碼。 工作站識別碼是用戶端電腦上，連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之應用程式的處理序識別碼 (PID)。  
   
