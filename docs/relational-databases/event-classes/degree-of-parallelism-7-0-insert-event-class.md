@@ -12,15 +12,15 @@ ms.assetid: 6753ef30-890f-47a3-b0b6-8abb184e1d83
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d81c5865b062e0817c41cef504994f1d6a5c437c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 58d6b43d2ffc2ea3c41ebe9a17b5cb9dc5d01471
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68009525"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765247"
 ---
 # <a name="degree-of-parallelism-70-insert-event-class"></a>Degree of Parallelism (7.0 Insert) 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   每當 **執行 SELECT、INSERT、UPDATE 或 DELETE 陳述式時，即會發生** Degree of Parallelism (7.0 Insert) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件類別。  
   
  當追蹤包含這個事件類別時，如果這些事件經常發生，產生的負擔可能會大幅降低效能。 為了將產生的負擔降至最低，請將這個事件類別限制使用於短暫監視特定問題的追蹤。  

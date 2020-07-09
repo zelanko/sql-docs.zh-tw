@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8bc10867-66d6-4f57-ac32-a6c29f3327cd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fefdced57d611d241dbb96b71a0b220139683243
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d82126c304a40cfba88201f71b8073a815a169cc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68083836"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764954"
 ---
 # <a name="get-information-about-event-notifications"></a>取得事件通知詳細資訊
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   下列目錄檢視可用以查詢事件通知的中繼資料。  
   
  **若要取得非伺服器層級的事件通知資訊**  

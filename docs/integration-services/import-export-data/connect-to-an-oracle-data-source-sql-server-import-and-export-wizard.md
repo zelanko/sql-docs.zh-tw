@@ -1,7 +1,7 @@
 ---
 title: 連線至 Oracle 資料來源 (SQL Server 匯入和匯出精靈) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: integration-services
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: faa8517c24a3db78ee7e7b53ff0151be93a87ba2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c114a5e17c95d21d999819e73dcfd53f84179802
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71285439"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773550"
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>連線至 Oracle 資料來源 (SQL Server 匯入和匯出精靈)
 
@@ -36,6 +36,7 @@ ms.locfileid: "71285439"
 |---|---|
 |伺服器名稱|**資料來源**|
 |驗證 (登入) 資訊|[使用者識別碼]  和 [密碼]  ；或 [整合式安全性] |
+|||
 
 您不需要在清單的 [ConnectionString]  欄位中輸入連接字串。 當您為 Oracle 伺服器名稱 ([資料來源]  ) 輸入個別的值和登入資訊之後，精靈即會從個別的屬性和屬性值來組合連接字串。 
 
@@ -70,9 +71,9 @@ Oracle 伺服器的名稱。
 ### <a name="connection-string-format"></a>連接字串格式
 以下是一般連接字串的格式。
 
-    ```
-    Driver={Microsoft ODBC for Oracle};Server=myServerAddress;Uid=myUsername;Pwd=myPassword;
-    ```
+```console
+Driver={Microsoft ODBC for Oracle};Server=myServerAddress;Uid=myUsername;Pwd=myPassword;
+```
 
 ### <a name="enter-the-connection-string"></a>輸入連接字串
 在 [選擇資料來源] 或 [選擇目的地] 頁面上，於 [ConnectionString] 欄位中輸入連接字串，或在 [Dsn] 欄位中輸入 DSN 名稱。 輸入連接字串之後，精靈會剖析字串，並在清單中顯示個別屬性和屬性值。

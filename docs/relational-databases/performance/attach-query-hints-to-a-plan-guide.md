@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 2131f796-6359-4f9e-9047-da0b3d4dedaf
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 3b9dd6793cc8b1c8dc43b72369c0c370ace36248
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1430e98ea0ec30c179b77a630c82a1a379620fab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67985022"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773126"
 ---
 # <a name="attach-query-hints-to-a-plan-guide"></a>將查詢提示附加至計畫指南
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   在計畫指南中所使用的有效查詢提示組合。 當計畫指南能配合查詢時，系統會先將計畫指南之提示子句中指定的 OPTION 子句加入查詢中，然後再編譯和最佳化查詢。 如果配合計畫指南的查詢已經有 OPTION 子句，在計畫指南中所指定的查詢提示將會取代查詢中的提示。 不過，若要讓計畫指南配合已經有 OPTION 子句的查詢，您必須在指定查詢文字以符合 sp_create_plan_guide 陳述式時，包含查詢的 OPTION 子句。 如果您要將計畫指南中所指定的提示加入查詢中已存在的提示，您不應該取代它們，而是必須在計畫指南的 OPTION 子句中同時指定原始提示和其他提示。  
   
 > [!CAUTION]  

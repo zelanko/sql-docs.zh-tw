@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 7dcc61a3-975d-4662-8a4e-c153e26b36c6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f7716083ff9c7963a913bc407dffc3938ef27bb1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d6525c6c1cbcd6071eeb99e899b15bda107f4868
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68007093"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767898"
 ---
 # <a name="mssqlserver_7937"></a>MSSQLSERVER_7937
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細資料  
   
-|||  
-|-|-|  
+| 屬性 | 值 |  
+| :-------- | :---- |  
 |產品名稱|SQL Server|  
 |事件識別碼|7937|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC2_FS_MISSING_COLUMN_DIRECTORY|  
-|訊息文字|資料表錯誤: 找不到物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID 中資料行識別碼 C_ID 的 FileStream 目錄。|  
+|訊息文字|資料表錯誤：找不到物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID 中資料行識別碼 C_ID 的 Filestream 目錄。|  
   
 ## <a name="explanation"></a>說明  
 指定的資料行存在於分割區中；不過，在 FILESTREAM 資料空間中找不到其對應的 FILESTREAM 目錄。  

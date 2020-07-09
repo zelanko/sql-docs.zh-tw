@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: dd7d8cd5-536b-460c-ab5b-cb4752bbdfaa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 641e3ec1d012a96de167d740b92bcbe554d2e4b3
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1a55cedb9ebae8f16fc7ba35cfb6e72013ab3ff9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634509"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766812"
 ---
 # <a name="deny-asymmetric-key-permissions-transact-sql"></a>DENY 非對稱金鑰權限 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   拒絕非對稱金鑰的權限。  
    

@@ -12,15 +12,15 @@ ms.assetid: 5c9bd070-4e4c-4281-b896-1e61a4bd403e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 419a967edbfc6b184facb3ef3dae833ef1eb8196
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c3e260feb3554feab5811647367ebb6aa9374192
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67999537"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762975"
 ---
 # <a name="cursorclose-event-class"></a>CursorClose 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   當 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 關閉並取消配置資料指標時，就會發生資料指標關閉事件。 **CursorClose** 事件類別會描述應用程式開發介面 (API) 資料指標中所發生的資料指標關閉事件。 當 ODBC、OLE DB 或 DB-Library 開啟的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料指標陳述式關閉時，就會發生這個事件類別。  
   
  將 **CursorClose** 事件類別併入記錄資料指標效能的追蹤中。 所導致過度耗用的數量，取決於追蹤期間，對資料庫使用資料指標的頻率。 如果大量使用資料指標，追蹤可能會明顯地降低效能。  

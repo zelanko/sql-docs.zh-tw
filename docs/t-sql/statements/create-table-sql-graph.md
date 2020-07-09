@@ -32,15 +32,15 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 053e3f5b7d800a2113165de6bb873a19ecd63906
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 3941db45a3c667ac2b273323096b6e14bdc0e93f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632898"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766932"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE (SQL Graph)
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
 
 將新的 SQL 圖形資料表建立為 `NODE` 或 `EDGE` 資料表。 
   

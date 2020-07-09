@@ -2,7 +2,7 @@
 title: 連線至 ODBC 資料來源 (SQL Server 匯入和匯出精靈) | Microsoft Docs
 description: 如何設定 ODBC DSN，或建立要與 SQL Server 匯入和匯出精靈搭配使用的 ODBC 連接字串
 ms.custom: ''
-ms.date: 12/31/2019
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: integration-services
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2b9979f7d82ef153ed3c447b5d47bf7424ca9443
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 73259121c31fcfc74352bf47938fcf28b294b894
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75608027"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773578"
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>連線至 ODBC 資料來源 (SQL Server 匯入和匯出精靈)
 
@@ -93,9 +93,9 @@ ms.locfileid: "75608027"
 
 此範例將使用下列連接字串，以連線至 Microsoft SQL Server。 使用的資料庫範例是 **WideWorldImporters**，而且我們會連接到本機電腦上的 SQL Server。
 
-    ```
-    Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
-    ```
+```console
+Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
+```
 
 在 [選擇資料來源]  或 [選擇目的地]  頁面上的 [ConnectionString]  欄位中輸入連接字串。 輸入連接字串之後，精靈會剖析字串，並在清單中顯示個別屬性和屬性值。
 
@@ -140,7 +140,7 @@ ms.locfileid: "75608027"
 
 10. 使用 [記事本] 或其他文字編輯器開啟已儲存的檔案。 以下是我們的 SQL Server 範例的內容。
 
-    ```   
+    ```console
     [ODBC]  
     DRIVER=ODBC Driver 13 for SQL Server  
     TrustServerCertificate=No  
@@ -155,9 +155,9 @@ ms.locfileid: "75608027"
 
     從範例檔案 DSN 中組合必要值之後，就會有下列連接字串。
     
-        ```
-        DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
-        ```
+    ```console
+    DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
+    ```
 
     建立有效的連接字串時，通常不需要 [ODBC 資料來源管理員] 所建立之 DSN 的所有設定。  
     -   您一定要指定 ODBC 驅動程式。

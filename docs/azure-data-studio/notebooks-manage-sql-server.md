@@ -6,20 +6,20 @@ ms.author: maghan
 ms.reviewer: achatter, alayu, mikeray
 ms.metadata: seo-lt-2019
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.custom: ''
 ms.date: 04/27/2020
-ms.openlocfilehash: 435290bd45e79c835ba134bb732f1672dc31c2cf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 326e0b0afc4809d13cf2fdfdbd76f53dafe1cbb9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82178695"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774587"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>如何管理 Azure Data Studio 中的筆記本
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 本文說明如何在 Azure Data Studio 中開啟和儲存筆記本檔案。 同時也示範如何變更 SQL Server 連線或 Python 核心。
 

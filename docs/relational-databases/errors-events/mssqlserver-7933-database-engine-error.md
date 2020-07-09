@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 722bd2c6-0fb9-4838-954a-439744c6ac4b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b7cc3e42abfdb31da50b7db329f9c61c2a195111
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 17bd7cfa51701de32398345cb6221b0ad21da0eb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68087604"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773565"
 ---
 # <a name="mssqlserver_7933"></a>MSSQLSERVER_7933
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細資料  
   
-|||  
-|-|-|  
+| 屬性 | 值 |  
+| :-------- | :---- |  
 |產品名稱|SQL Server|  
 |事件識別碼|7933|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC2_FS_ORPHANED_ROWSET_DIRECTORY|  
-|訊息文字|資料表錯誤: 分割區已經有 Filestream 目錄識別碼 F_ID，但是對應的分割區不存在資料庫中。|  
+|訊息文字|資料表錯誤：分割區已經有 Filestream 目錄識別碼 F_ID，但對應的分割區不存在資料庫中。|  
   
 ## <a name="explanation"></a>說明  
 執行 DBCC CHECKDB 期間，於 FILESTREAM 資料空間中發現資料列集目錄，但是對應的分割區卻不在資料庫中。  

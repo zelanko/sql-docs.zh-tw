@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 2b6d4c5a-a7f5-4dd1-b10a-7632265b1af7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 015ba90a6f2cad79483e52d5caa23ad06784c055
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cd616d55c63cb2e1a4ce78fa587b3dc79d315ff1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68004724"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765658"
 ---
 # <a name="set-statistics-xml-transact-sql"></a>SET STATISTICS XML (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   使 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，且會以妥善定義的 XML 文件格式來產生陳述式執行狀況的詳細資料。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68004724"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 SET STATISTICS XML { ON | OFF }  
 ```  
@@ -60,7 +60,7 @@ SET STATISTICS XML { ON | OFF }
  SET STATISTICS PROFILE 和 SET STATISTICS XML 彼此是對應的項目。 前者會產生文字輸出；後者會產生 XML 輸出。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未來的版本中，只會透過 SET STATISTICS XML 陳述式來顯示新的查詢執行計畫資訊，不會使用 SET STATISTICS PROFILE 陳述式。  
   
 > [!NOTE]  
->  如果已在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中選取了 [包括實際執行計畫]，這個 SET 選項將不會產生 XML 執行程序表輸出。 在使用這個 SET 選項之前，請清除 [包括實際執行計畫]  按鈕。  
+>  如果已在  **中選取了 [包括實際執行計畫]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，這個 SET 選項將不會產生 XML 執行程序表輸出。 在使用這個 SET 選項之前，請清除 [包括實際執行計畫]  按鈕。  
   
 ## <a name="permissions"></a>權限  
  若要使用 SET STATISTICS XML 和檢視輸出，使用者必須有下列權限：  
@@ -74,7 +74,7 @@ SET STATISTICS XML { ON | OFF }
 ## <a name="examples"></a>範例  
  隨後的兩個陳述式使用 SET STATISTICS XML 設定來顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分析及最佳化查詢中使用索引的方法。 第一個查詢在索引資料行的 WHERE 子句中，使用等於 (=) 比較運算子。 第二個查詢在 WHERE 子句中使用 LIKE 運算子。 這會強制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用叢集索引掃描來尋找符合 WHERE 子句條件的資料。 第一個索引查詢的 **EstimateRows** 和 **EstimatedTotalSubtreeCost** 屬性中的值比較小，這表示它的處理速度比較快，使用的資源比非索引查詢少。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET STATISTICS XML ON;  

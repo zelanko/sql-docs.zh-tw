@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: c7bcc697-0930-4630-acae-d8ccbfa4414c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d96f0ecf3f847e0beb8ae893bceffdd0fde5c6d2
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 908f4b2ecf6a75e54ccb2752d1d4864192124503
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633006"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765748"
 ---
 # <a name="set-offsets-transact-sql"></a>SET OFFSETS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中之指定關鍵字的位移 (相對於陳述式起點的位置) 傳回 DB-Library 應用程式。  
   

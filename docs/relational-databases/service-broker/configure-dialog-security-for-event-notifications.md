@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 488b1efd533f038914f2d0186e29e28622531f02
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 98df2bd789a9f5ca4c81aa83b152c4170546594b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68048900"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773864"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>設定事件通知的對話安全性
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssSB](../../includes/sssb-md.md)] 對話安全性。 對話方塊安全性必須根據 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 對話方塊完整安全性模型來手動設定。 完整安全性模型使傳送到遠端伺服器和自遠端伺服器傳送的訊息得以加密和解密。 雖然事件通知是以單一方向傳送，但也會以相反方向傳回其他訊息 (例如錯誤)。  
   
 ## <a name="configuring-dialog-security-for-event-notifications"></a>設定事件通知的對話方塊安全性  

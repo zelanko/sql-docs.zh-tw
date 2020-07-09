@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: b6c0b08f-2060-4696-9e12-50cb7e674321
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: af335cdb4342572184a7a6ced846d1792be39d5b
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 02ed9e434ad527fa9e9c6c6ec34b464a522be7ce
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634376"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765806"
 ---
 # <a name="set-forceplan-transact-sql"></a>SET FORCEPLAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   當 FORCEPLAN 設定為 ON 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢最佳化工具會依照查詢之 FORM 子句中的資料表順序來處理聯結。 此外，除非需要其他類型的聯結來建構查詢計畫，或者聯結提示或查詢提示要求這些聯結類型，否則將 FORCEPLAN 設定為 ON 便可強制使用巢狀迴圈聯結。  
   

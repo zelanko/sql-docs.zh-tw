@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: e2ad218a-3249-4f18-8b32-09f0030765a5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c5da5b977426cd1d953f4aad53dd0bfc22f6aeb3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d3fcad0f5317d59f6b63c1dcbcabc0c238c0d5f7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68087567"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767919"
 ---
 # <a name="mssqlserver_7932"></a>MSSQLSERVER_7932
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細資料  
   
-|||  
-|-|-|  
+| 屬性 | 值 |  
+| :-------- | :---- |  
 |產品名稱|SQL Server|  
 |事件識別碼|7932|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC2_FS_ROWSET_IN_WRONG_FILEGROUP|  
-|訊息文字|資料表錯誤: 物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID 的 FileStream 目錄識別碼 F_ID 在檔案群組 FG_ID1 中，但應該是在檔案群組 FG_ID2 中。|  
+|訊息文字|資料表錯誤：物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID 的 FileStream 目錄識別碼 F_ID 在檔案群組 FG_ID1 中，但應該要在檔案群組 FG_ID2 中。|  
   
 ## <a name="explanation"></a>說明  
 在 DBCC CHECKDB 執行期間，在錯誤的檔案群組中偵測到指定之物件的 FILESTREAM 儲存體。 這可能是資料庫的中繼資料毀損。  

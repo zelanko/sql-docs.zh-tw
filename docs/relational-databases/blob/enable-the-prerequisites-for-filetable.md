@@ -12,15 +12,15 @@ ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 960020f14560a68dd9cf4fdaac9c75037592165d
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: fc5ba7ab181e07552f9865eff482d67e292c0249
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999903"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767997"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>啟用 FileTable 的必要條件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   描述如何啟用建立和使用 FileTable 的必要元件。  
   
 ##  <a name="enabling-the-prerequisites-for-filetable"></a><a name="EnablePrereq"></a> 啟用 FileTable 的必要條件  

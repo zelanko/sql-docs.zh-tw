@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: a4bb055a-a538-4db9-a6fb-550d1eabfa18
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 10cc3cacdf62dd4c8f02b0bd4715f5d0b2fae6b7
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 94e4bf75384f880fb42172462f9505d5ab9ab238
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635319"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766282"
 ---
 # <a name="drop-partition-function-transact-sql"></a>DROP PARTITION FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   從目前資料庫移除資料分割函數。 資料分割函數是以 CREATE PARTITION FUNCTION 建立，並且以 ALTER PARTITION FUNCTION 修改。  
   

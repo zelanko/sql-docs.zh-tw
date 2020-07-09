@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 3424bb44-6915-462d-a8d7-fe834af81387
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 02bfcaecc3038da1404287d7b016dfbc779a1fcf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 56a071487c2cd3f6a6116c3d90d1572a450aa73d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68008906"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765761"
 ---
 # <a name="set-query_governor_cost_limit-transact-sql"></a>SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   覆寫目前針對目前連接所設定的**查詢管理員成本限制值**。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68008906"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 SET QUERY_GOVERNOR_COST_LIMIT value  
 ```  
@@ -50,7 +50,7 @@ SET QUERY_GOVERNOR_COST_LIMIT value
  「查詢成本」代表在特定的硬體組態上，預估完成查詢所需的時間 (以秒為單位)。  
   
 ## <a name="remarks"></a>備註  
- 使用 SET QUERY_GOVERNOR_COST_LIMIT 只適用於目前的連接，在目前連接的期間會持續有效。 請利用 **sp_configure** 的[設定查詢管理員成本限制伺服器組態選項](../../database-engine/configure-windows/configure-the-query-governor-cost-limit-server-configuration-option.md)選項來變更伺服器範圍的查詢管理員成本限制值。 如需有關設定這個選項的詳細資訊，請參閱 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 和[伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
+ 使用 SET QUERY_GOVERNOR_COST_LIMIT 只適用於目前的連接，在目前連接的期間會持續有效。 請利用 [sp_configure](../../database-engine/configure-windows/configure-the-query-governor-cost-limit-server-configuration-option.md) 的**設定查詢管理員成本限制伺服器組態選項**選項來變更伺服器範圍的查詢管理員成本限制值。 如需有關設定這個選項的詳細資訊，請參閱 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 和[伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
   
  SET QUERY_GOVERNOR_COST_LIMIT 的設定是在執行階段進行設定，而不是在剖析階段進行設定。  
   

@@ -10,16 +10,16 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 651467463e0563c9da00e23115ffb7bc4f151d23
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2eec1f7f24f8465fb5d2bd4406de4c11aef8a518
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77479686"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773590"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>設定 Windows 和 Linux 上的 SQL Server Always On 可用性群組 (跨平台)
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/applies-to-version/sqlserver2017.md)]
 
 本文說明使用 Windows 伺服器上某個複本和 Linux 伺服器上另一個複本建立 Always On 可用性群組 (AG) 的步驟。 由於複本位於不同的作業系統上，因此這是一種跨平台設定。 您可將此設定用於從某個平台移轉至其他平台或災害復原 (DR)。 此設定不支援高可用性，因為沒有可管理跨平台設定的叢集解決方案。 
 

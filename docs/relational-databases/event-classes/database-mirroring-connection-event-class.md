@@ -10,15 +10,15 @@ ms.assetid: b59dccc9-f40d-4c82-aa35-ac40acea86ff
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b10bdc5786d87dedb2d4247dbffc6f7f9eda43fa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 37f1658a49fa5bc6577e4b7668dc62914aab3aa7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68009558"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765289"
 ---
 # <a name="database-mirroring-connection-event-class"></a>資料庫鏡像連接事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會產生 **資料庫鏡像連接** 事件，以報告資料庫鏡像所管理的傳輸連線狀態。  
   
 ## <a name="database-mirroringconnection-event-class-data-columns"></a>資料庫鏡像：連接事件類別資料行  

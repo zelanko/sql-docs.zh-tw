@@ -1,7 +1,7 @@
 ---
 title: 連線至 MySQL 資料來源 (SQL Server 匯入和匯出精靈) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/20/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: integration-services
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9fc1128ff50a6b5f6fbb459dca23f518cbcd4f26
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fdec318d9fdc895470c7dde94e254c2cc164f079
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71285687"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768084"
 ---
 # <a name="connect-to-a-mysql-data-source-sql-server-import-and-export-wizard"></a>連線至 MySQL 資料來源 (SQL Server 匯入和匯出精靈)
 
@@ -40,6 +40,7 @@ ms.locfileid: "71285687"
 |伺服器名稱|**Server**|
 |資料庫名稱|**Database**|
 |驗證 (登入) 資訊|[使用者識別碼]  和 [密碼] |
+|||
 
 您不需要在清單的 [ConnectionString]  欄位中輸入連接字串。 當您為 MySQL 伺服器名稱 ([伺服器]  ) 和登入資訊輸入個別的值之後，精靈即會從個別的屬性和屬性值來組合連接字串。 
 
@@ -79,18 +80,18 @@ MySQL 伺服器的名稱。
 ### <a name="connection-string-format"></a>連接字串格式
 以下是一般連接字串的格式。
 
-    ```
-    Driver={MySQL ODBC 5.3 Unicode Driver};Server=<server>;Database=<database>;UID=<user id>;PWD=<password>
-    ```
+```console
+Driver={MySQL ODBC 5.3 Unicode Driver};Server=<server>;Database=<database>;UID=<user id>;PWD=<password>
+```
 
 ### <a name="enter-the-connection-string"></a>輸入連接字串
 在 [選擇資料來源] 或 [選擇目的地] 頁面上，於 [ConnectionString] 欄位中輸入連接字串，或在 [Dsn] 欄位中輸入 DSN 名稱。 輸入連接字串之後，精靈會剖析字串，並在清單中顯示個別屬性和屬性值。
 
 下列範例使用此連接字串。
 
-    ```
-    Driver={MySQL ODBC 5.3 Unicode Driver};Server=127.0.0.1;Database=world;UID=root;PWD=********
-    ```
+```console
+Driver={MySQL ODBC 5.3 Unicode Driver};Server=127.0.0.1;Database=world;UID=root;PWD=********
+```
 
 以下是您在輸入連接字串之後看到的畫面。
 

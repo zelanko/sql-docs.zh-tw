@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 06b9b092-fceb-4be5-b712-5aff89b5ba92
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6c63b9efc61e18c5b5bc52dcdcbd93af0d9fbbfa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 93106e092c6f0b78f54a24af97ce5b0aa4101880
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68009376"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774093"
 ---
 # <a name="view-policies-dialog-box"></a>檢視原則對話方塊
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用此對話方塊可檢視對這個目標有效的原則。 此對話方塊會顯示相關的原則、其原則類別目錄以及有關原則的資訊。  
   
 ## <a name="options"></a>選項。  

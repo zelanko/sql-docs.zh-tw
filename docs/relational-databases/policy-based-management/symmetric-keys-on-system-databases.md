@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 28e25ae3-d3dc-45ec-b316-f219512a1a47
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7c04aaae1d9feccb8c032921535ebe9d5fc61305
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 890612fdf4502de67283e7b2bb55e75b372d5388
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68021539"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774126"
 ---
 # <a name="symmetric-keys-on-system-databases"></a>系統資料庫上的對稱金鑰
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   此規則會檢查 master、msdb、model 和 tempdb 資料庫中是否有使用者建立的對稱金鑰。  
   
 ## <a name="best-practices-recommendations"></a>最佳做法建議  

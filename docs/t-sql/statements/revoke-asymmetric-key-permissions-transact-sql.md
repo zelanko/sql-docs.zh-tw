@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1a1063e8-ffc7-4775-a40d-e155740ad7b2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ec86eb20ba4a7261bd27015711ceda08b826a1c4
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 15bfb61f8da371daeedfdb877ba45ee3669a20cf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634729"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765973"
 ---
 # <a name="revoke-asymmetric-key-permissions-transact-sql"></a>REVOKE 非對稱金鑰權限 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   撤銷非對稱金鑰的權限。  
   

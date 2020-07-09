@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: f656bf46-e5be-4c7b-9ea4-0f2eee7441fe
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c3adcba99280331fd604cf71544d85a87f996109
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6dcca3cbe67a6cdfba4ffd24418fb5ac0fe23cab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68087539"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767902"
 ---
 # <a name="mssqlserver_7934"></a>MSSQLSERVER_7934
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細資料  
   
-|||  
-|-|-|  
+| 屬性 | 值 |  
+| :-------- | :---- |  
 |產品名稱|SQL Server|  
 |事件識別碼|7934|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC2_FS_MISSING_ROWSET_DIRECTORY|  
-|訊息文字|資料表錯誤: 找不到物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID 的 Filestream 目錄識別碼 F_ID。|  
+|訊息文字|資料表錯誤：找不到物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID 的 Filestream 目錄識別碼 F_ID。|  
   
 ## <a name="explanation"></a>說明  
 在 DBCC CHECKDB 執行期間，系統找到分割區，但是在 FILESTREAM 資料空間中找不到對應的 FILESTREAM 資料列集目錄。  

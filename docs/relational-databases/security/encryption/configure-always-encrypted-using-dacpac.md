@@ -12,15 +12,15 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df18a2ca6f79982db41b5188283bf1721b518e31
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fc10c556999d843456728289acb72bddb3b0784e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595743"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765136"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-a-dac-package"></a>使用 Always Encrypted 與 DAC 套件設定資料行加密 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 [資料層應用程式 (DAC) 套件](../../data-tier-applications/data-tier-applications.md) (也稱為 DACPAC) 是 SQL Server 資料庫部署的可移植單位，其定義所有 SQL Server 物件，包括資料表及資料表內的資料行。 當您將 DACPAC 發佈至資料庫時 (當您使用 DACPAC 升級資料庫時)，目標資料庫的結構描述會更新以符合 DACPAC 中結構描述。 您可以使用 SQL Server Management Studio 中的 [[升級資料層應用程式精靈]](../../data-tier-applications/upgrade-a-data-tier-application.md#UsingDACUpgradeWizard)、[PowerShell](../../data-tier-applications/upgrade-a-data-tier-application.md#UpgradeDACPowerShell) 或 [sqlpackage](../../../tools/sqlpackage.md#publish-parameters-properties-and-sqlcmd-variables) 來發佈 DACPAC。
 

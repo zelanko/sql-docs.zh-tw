@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: bf49db09-8b3a-4901-82de-9224a276c55d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b60809c6e6f5484c2c59acb9a06a880e218c7338
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: af9562d8e59d3690dd8a0d949945cdfec524d29f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115647"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776136"
 ---
 # <a name="maintenance-plans-node-object-explorer"></a>維護計畫節點 (物件總管)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   此章節包含 **中 [物件總管] 之** [維護計畫] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]節點的 F1 說明。  
   
 ## <a name="see-also"></a>另請參閱  

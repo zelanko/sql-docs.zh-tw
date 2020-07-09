@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bce7416918ec17d0fbea13a1df01f8dec2cb9729
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 4ab8501b5b0753143ce5bfe2b289211729c35821
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999462"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765466"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>使用 FileTables 中的目錄與路徑
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   描述在 FileTable 中儲存檔案的目錄結構。  
   
 ##  <a name="how-to-work-with-directories-and-paths-in-filetables"></a><a name="HowToDirectories"></a> 如何：使用 FileTables 中的目錄與路徑  
@@ -97,9 +97,9 @@ GO
 |-|-|-|  
 |*is_directory* **value**|*file_stream* **value**|**行為**|  
 |FALSE|NULL|此為無效的組合，將由系統定義的條件約束所攔截。|  
-|FALSE|\<值>|該項目代表檔案。|  
+|FALSE|\<value>|該項目代表檔案。|  
 |TRUE|NULL|該項目代表目錄。|  
-|TRUE|\<值>|此為無效的組合，將由系統定義的條件約束所攔截。|  
+|TRUE|\<value>|此為無效的組合，將由系統定義的條件約束所攔截。|  
   
 ##  <a name="using-virtual-network-names-vnns-with-alwayson-availability-groups"></a><a name="alwayson"></a> 使用虛擬網路名稱 (VNN) 搭配 AlwaysOn 可用性群組  
  當包含 FILESTREAM 或 FileTable 資料的資料庫屬於 AlwaysOn 可用性群組時：  

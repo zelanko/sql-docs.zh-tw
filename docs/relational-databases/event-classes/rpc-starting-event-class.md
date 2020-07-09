@@ -12,15 +12,15 @@ ms.assetid: 1d5c3e53-0104-41f7-ab8b-732462d859f8
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7ba4edba0c8f6d47204bb61e2c6aeed98d0f9c3a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b9443bec67004b6c0bd6bf5bfe961852d8ae8fc6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67911288"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767799"
 ---
 # <a name="rpcstarting-event-class"></a>RPC:Starting 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   RPC:Starting 事件類別表示已經啟動遠端程序呼叫。  
   
 ## <a name="rpcstarting-event-class-data-columns"></a>RPC:Starting 事件類別資料行  

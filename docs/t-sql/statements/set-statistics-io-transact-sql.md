@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d9bfc21987ff4a556796ce53ef8ae0c6f3733d53
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 84d113230152bdade11192db086f44911028a474
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634708"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765691"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 顯示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式所產生之磁碟活動量的相關資訊。  
   

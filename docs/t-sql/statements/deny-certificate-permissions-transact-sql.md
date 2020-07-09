@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5971ff9e-d6a4-414b-ae1f-819bc2e348f5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 55bf71327ce90b8c702901b9616c02e70d998e8d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7b06bf59120229a9661c7503ee556e899c3fd480
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635975"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766734"
 ---
 # <a name="deny-certificate-permissions-transact-sql"></a>DENY 憑證權限 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   拒絕憑證的權限。  
 

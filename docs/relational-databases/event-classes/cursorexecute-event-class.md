@@ -12,15 +12,15 @@ ms.assetid: 83399fd8-cc25-4d3c-8985-7a824ef08e08
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cfcbafc4e178d01dd35ddeebfcc83ffab4cf1edf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: db1b52180a644c4350b66833f559845ab0f9c181
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68001821"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762951"
 ---
 # <a name="cursorexecute-event-class"></a>CursorExecute 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **CursorExecute** 事件類別描述出現在應用程式開發介面 (API) 資料指標中的資料指標執行事件。 在資料指標準備事件所建立的執行計畫中，當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 建立及擴展資料指標時，就會發生資料指標執行事件。  
   
  可將 **CursorExecute** 事件類別併入用來記錄資料指標效能的追蹤中。 當 **CursorExecute** 事件類別併入追蹤時，所造成的負擔量是依追蹤期間針對資料庫使用資料指標的頻率而定。 如果大量使用資料指標，追蹤可能會明顯地妨礙效能。  

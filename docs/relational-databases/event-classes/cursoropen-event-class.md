@@ -12,15 +12,15 @@ ms.assetid: d39262c0-0035-42fc-b989-7a16ae0c7345
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 45c72a45776abb6a6f3215560d2b1aafd974d720
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e7851febee7a47c57a5e376cfe5b92ed2999927
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68093698"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773531"
 ---
 # <a name="cursoropen-event-class"></a>CursorOpen 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **CursorOpen** 事件類別描述應用程式開發介面 (API) 資料指標中發生的資料指標開啟事件。 當 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 定義要與資料指標建立關聯的 SQL 陳述式、定義資料指標選項，並擴展資料指標時，就會發生資料指標開啟事件。  
   
  可將 **CursorOpen** 事件類別包含在記錄資料指標效能的追蹤內。 當追蹤包含 **CursorOpen** 事件類別時，所造成的負擔量，是依追蹤期間針對資料庫使用資料指標的頻率而定。 如果大量使用資料指標，追蹤可能會明顯地妨礙效能。  

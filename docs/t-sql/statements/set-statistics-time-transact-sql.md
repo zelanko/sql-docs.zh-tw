@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: eec2e1cd-a29d-4cf3-a271-be9d61506f15
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 90eb59652bf64e6e3be4edaa3cce2f0bf3c02df7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 12e5acfd9436a4295ded63e7db8572dd27ce6e39
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67897993"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765677"
 ---
 # <a name="set-statistics-time-transact-sql"></a>SET STATISTICS TIME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   顯示剖析、編譯和執行每個陳述式所需要的毫秒數。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "67897993"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 SET STATISTICS TIME { ON | OFF }  
 ```  
@@ -50,7 +50,7 @@ SET STATISTICS TIME { ON | OFF }
   
  SET STATISTICS TIME 的設定是在執行階段進行設定，而不是在剖析階段進行設定。  
   
- 當您啟用 [輕量型共用] 設定選項時，會啟用 Fiber 模式，但在 Fiber 模式下，Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法提供準確的統計資料。  
+ 當您啟用 [輕量型共用][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**設定選項時，會啟用 Fiber 模式，但在 Fiber 模式下，Microsoft** 無法提供準確的統計資料。  
   
  只有在使用 SET STATISTICS TIME ON 來執行查詢時，才會更新 **sysprocesses** 資料表的 **cpu** 資料行。 當 SET STATISTICS TIME 是 OFF 時，會傳回 **0**。  
   
@@ -62,7 +62,7 @@ SET STATISTICS TIME { ON | OFF }
 ## <a name="examples"></a>範例  
  這個範例會顯示伺服器的執行、剖析和編譯階段。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO         
 SET STATISTICS TIME ON;  

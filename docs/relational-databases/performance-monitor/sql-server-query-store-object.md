@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: b4a04acd-0b66-44a5-b72d-1a45b49e13e6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 620e79cd69c11c6f5de32d3ef0ae97af489f9398
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: e9d94bb7b7002b1e83a6e5dbc5566f77a4093274
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81304819"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775773"
 ---
 # <a name="sql-server-query-store-object"></a>SQL Server, 查詢存放區物件
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 查詢存放區物件所提供的計數器，可監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何使用資源來儲存查詢文字、執行計劃和物件的執行階段統計資料，例如預存程序、特定與備妥 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，以及觸發程序。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "81304819"
 |查詢存放區執行個體|描述|  
 |--------------------------|-----------------|  
 |**_Total**|此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的查詢存放區資訊。|  
-|\<資料庫名稱>|此資料庫的查詢存放區資訊。|  
+|\<database name>|此資料庫的查詢存放區資訊。|  
   
 ## <a name="see-also"></a>另請參閱  
 
