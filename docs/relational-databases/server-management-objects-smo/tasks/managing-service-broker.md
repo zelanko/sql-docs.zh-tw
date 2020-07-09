@@ -13,18 +13,18 @@ ms.assetid: b29d7432-d1e5-4bb6-b544-57b3a9430f95
 author: markingmyname
 ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e3fe187412a70956d1f4496b6c042e39edafd18c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2cb32127843920cc76c5dc4899a542c1519d90fa
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74094404"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86158886"
 ---
 # <a name="managing-service-broker"></a>管理 Service Broker
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
 
-  在 SMO 中， [!INCLUDE[ssSB](../../../includes/sssb-md.md)]您可以在**microsoft. sqlserver** .. d a d namespace 命名空間中找到物件，而這需要參考 microsoft. sqlserver .dll。 支援類別資訊也需要參考 Microsoft.SqlServer.ServiceBrokerEnum.dll。  
+  在 SMO 中， [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 會在需要參考 Microsoft.SqlServer.Smo.dll 的情況下，在您的**SqlServer**命名空間中找到物件。 支援類別資訊也需要參考 Microsoft.SqlServer.ServiceBrokerEnum.dll。  
   
  SMO 會提供一組 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 物件，允許 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 的程式設計管理 (DDL) 實作。 這包括定義訊息類型、合約、佇列與服務。 SMO 是一個其用途並不在於資料操作的管理工具，因此，SMO 不支援傳送和接收 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 訊息。  
   

@@ -27,15 +27,15 @@ ms.assetid: da217878-7ec4-477e-aa13-604073c948f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ba990b7438201d459be8052bd119f5689b9af88
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: fbaa56a5e2c40523e925fa46a4e92e4fde283461
+ms.sourcegitcommit: e6c260a139326f5a400a57ece812d39ef8b820bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634358"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86032506"
 ---
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   設定月份、日期與年份日期部分的順序，以解譯日期字元字串。 這些字串的類型為 **date**、**smalldatetime**、**datetime**、**datetime2** 或 **datetimeoffset**。  
   
@@ -74,13 +74,13 @@ SET DATEFORMAT { format | @format_var }
 -- Set date format to day/month/year.  
 SET DATEFORMAT dmy;  
 GO  
-DECLARE @datevar datetime2 = '31/12/2008 09:01:01.1234567';  
+DECLARE @datevar DATETIME2 = '31/12/2008 09:01:01.1234567';  
 SELECT @datevar;  
 GO  
 -- Result: 2008-12-31 09:01:01.123  
 SET DATEFORMAT dmy;  
 GO  
-DECLARE @datevar datetime2 = '12/31/2008 09:01:01.1234567';  
+DECLARE @datevar DATETIME2 = '12/31/2008 09:01:01.1234567';  
 SELECT @datevar;  
 GO  
 -- Result: Msg 241: Conversion failed when converting date and/or time -- from character string.  

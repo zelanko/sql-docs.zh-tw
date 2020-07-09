@@ -18,17 +18,17 @@ helpviewer_keywords:
 - number of characters
 ms.assetid: fa20fee4-884d-4301-891a-c03e901345ae
 author: pmasl
-ms.author: mikeray
+ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b6f470a08c3605f9ea5afa5fff1f7b6cbd17f1b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c505d2a72e9ccd0432f685307e97b16e625e859b
+ms.sourcegitcommit: e6c260a139326f5a400a57ece812d39ef8b820bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72798421"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86032456"
 ---
 # <a name="len-transact-sql"></a>LEN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 傳回指定字串運算式的字元數，但尾端空格不算。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "72798421"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 LEN ( string_expression )  
 ```  
   
@@ -48,7 +48,7 @@ LEN ( string_expression )
  這是要評估的字串[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *string_expression* 可以是字元或二進位資料的常數、變數或資料行。  
   
 ## <a name="return-types"></a>傳回型別  
- 若 *expression* 的資料類型為 **varchar(max)** 、**nvarchar(max)** 或 **varbinary(max)** ，則為 **bigint**，否則為 **int**。  
+ 若 **expression** 的資料類型為 *varchar(max)* 、**nvarchar(max)** 或 **varbinary(max)** ，則為 **bigint**，否則為 **int**。  
   
  如果您使用 SC 定序，傳回的整數值也將 UTF-16 Surrogate 字組視為單一字元。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
@@ -56,13 +56,13 @@ LEN ( string_expression )
 LEN 會排除尾端空格。 如果這是個問題，請考慮使用不修剪字串的 [DATALENGTH &#40;Transact-SQL&#41; ](../../t-sql/functions/datalength-transact-sql.md) 函數。 如果處理的是 Unicode 字串，DATALENGTH 會傳回可能不等於字元數目的數字。 下列範例會示範有尾端空白的 LEN 和 DATALENGTH。  
   
 ```sql  
-DECLARE @v1 varchar(40),  
-    @v2 nvarchar(40);  
+  DECLARE @v1 VARCHAR(40),  
+    @v2 NVARCHAR(40);  
 SELECT   
 @v1 = 'Test of 22 characters ',   
 @v2 = 'Test of 22 characters ';  
-SELECT LEN(@v1) AS [varchar LEN] , DATALENGTH(@v1) AS [varchar DATALENGTH];  
-SELECT LEN(@v2) AS [nvarchar LEN], DATALENGTH(@v2) AS [nvarchar DATALENGTH];  
+SELECT LEN(@v1) AS [VARCHAR LEN] , DATALENGTH(@v1) AS [VARCHAR DATALENGTH];  
+SELECT LEN(@v2) AS [NVARCHAR LEN], DATALENGTH(@v2) AS [NVARCHAR DATALENGTH];  
 ```  
 
 > [!NOTE]
