@@ -1,0 +1,77 @@
+### YamlMime:Landing
+title: Azure Data Studio
+summary: 了解如何使用 Azure Data Studio 執行 SQL Server、Azure SQL Database、PostgreSQL、Jupyter Notebook 等等。
+metadata:
+  title: Azure Data Studio
+  summary: 了解如何使用 Azure Data Studio 執行 SQL Server、Azure SQL Database、PostgreSQL、Jupyter Notebook 等等。
+  ms.prod: sql
+  ms.technology: azure-data-studio
+  ms.topic: landing-page
+  author: markingmyname
+  ms.author: maghan
+  ms.date: 05/09/2020
+  ms.openlocfilehash: b5020185efafd9e166c8d3dd627ee61a955a0d27
+  ms.sourcegitcommit: 812f572d13616c1bd085b0648603736ba1bc20d1
+  ms.translationtype: HT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 05/27/2020
+  ms.locfileid: "84112332"
+landingContent:
+- title: 關於 Azure Data Studio
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 什麼是 Azure Data Studio？
+      url: what-is.md
+  - linkListType: download
+    links:
+    - text: 下載 Azure Data Studio
+      url: download-azure-data-studio.md
+    - text: Azure Data Studio 版本資訊
+      url: release-notes-azure-data-studio.md
+- title: 快速入門
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: 連線及查詢 SQL Server
+      url: quickstart-sql-server.md
+    - text: 連線及查詢 Azure SQL 資料庫
+      url: quickstart-sql-database.md
+    - text: 連線及查詢 Azure SQL 資料倉儲中的資料
+      url: quickstart-sql-dw.md
+    - text: 連線及查詢 PostgreSQL 中的資料
+      url: quickstart-postgres.md
+- title: Azure Data Studio 功能
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 啟用 Kerberos
+      url: enable-kerberos.md
+    - text: 在 Azure Data Studio 中使用見解小工具，管理伺服器與資料庫
+      url: insight-widgets.md
+    - text: 修改使用者與工作區設定
+      url: settings.md
+- title: Notebooks
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 在 Azure Data Studio 中的 Notebooks
+      url: notebooks-guidance.md
+    - text: 如何使用 SQL 核心
+      url: notebooks-tutorial-sql-kernel.md
+    - text: 如何管理 Azure Data Studio 中的筆記本
+      url: notebooks-manage-sql-server.md
+    - text: Azure Data Studio 中的 kqlmagic 延伸模組
+      url: notebooks-kqlmagic.md
+- title: 延伸模組
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 擴充 Azure Data Studio 的功能
+      url: extensions.md
+    - text: 藉由建立 Azure Data Studio 延伸模組來擴充功能
+      url: extension-authoring.md
+    - text: PostgreSQL 延伸模組
+      url: postgres-extension.md
+    - text: PowerShell 編輯器支援
+      url: powershell-extension.md
