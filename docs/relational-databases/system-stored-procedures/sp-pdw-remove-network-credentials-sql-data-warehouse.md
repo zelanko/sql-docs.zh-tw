@@ -14,15 +14,15 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 12adbc7c7f10b16591b2fc8c6b0473e86036957b
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: be447109a1432fdf8c3f3ae4a44f34a2eed1fd46
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627564"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196773"
 ---
-# <a name="sp_pdw_remove_network_credentials-sql-data-warehouse"></a>sp_pdw_remove_network_credentials （SQL 資料倉儲）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# <a name="sp_pdw_remove_network_credentials-sql-data-warehouse"></a>sp_pdw_remove_network_credentials (SQL 資料倉儲) 
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   這會移除中儲存的網路認證 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ，以存取網路檔案共用。 例如，您可以使用這個預存程式，移除在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 位於您自己網路中的伺服器上執行備份和還原作業的許可權。  
   
@@ -40,7 +40,7 @@ sp_pdw_remove_network_credentials 'target_server_name'
  '*target_server_name*'  
  指定目標伺服器主機名稱或 IP 位址。 將會從移除存取此伺服器的認證 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。 這不會變更或移除您自己小組所管理之實際目標伺服器上的任何許可權。  
   
- *target_server_name*定義為 Nvarchar （337）。  
+ *target_server_name*定義為 Nvarchar (337) 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

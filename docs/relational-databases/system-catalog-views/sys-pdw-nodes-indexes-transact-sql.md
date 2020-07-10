@@ -1,5 +1,5 @@
 ---
-title: sys.databases pdw_nodes_indexes （Transact-sql） |Microsoft Docs
+title: pdw_nodes_indexes (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -12,24 +12,24 @@ ms.assetid: 261bcb7f-a906-4979-b274-bc5f1aa66426
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: bb20ecd4fe212f4004061a6c39ad33c3ffc8ac8e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f3d749eb32c8e7369c10e904f9e13991aa85be20
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68809934"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197367"
 ---
-# <a name="syspdw_nodes_indexes-transact-sql"></a>sys.databases pdw_nodes_indexes （Transact-sql）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# <a name="syspdw_nodes_indexes-transact-sql"></a>pdw_nodes_indexes (Transact-sql) 
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  傳回的[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]索引。  
+  傳回的索引 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。  
   
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|此索引所屬物件的識別碼。||  
-|NAME|**sysname**|索引的名稱。 Name 只有在物件內才是唯一的。 NULL = 堆積||  
+|name|**sysname**|索引的名稱。 Name 只有在物件內才是唯一的。 NULL = 堆積||  
 |index_id|**int**|索引的識別碼。 index_id 只在物件內才是唯一的<br /><br /> 0 = 堆積<br /><br /> 1 = 叢集索引<br /><br /> > 1 = 非叢集索引||  
-|type|**tinyint**|索引的類型：<br /><br /> 0 = 堆積<br /><br /> 1 = 叢集<br /><br /> 2 = 非叢集<br /><br /> 5 = 叢集 xVelocity 記憶體優化的資料行存放區索引|  
+|類型|**tinyint**|索引的類型：<br /><br /> 0 = 堆積<br /><br /> 1 = 叢集<br /><br /> 2 = 非叢集<br /><br /> 5 = 叢集 xVelocity 記憶體優化的資料行存放區索引|  
 |type_desc|**nvarchar(60)**|索引類型的描述：<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> 叢集資料行存放區||  
 |is_unique|**bit**|0 = 索引不是唯一的。|一律是 0。|  
 |data_space_id|**int**|此索引的資料空間識別碼。 資料空間是一個檔案群組或分割區結構描述。<br /><br /> 0 = object_id 是資料表值函式。||  
@@ -44,7 +44,7 @@ ms.locfileid: "68809934"
 |allow_page_locks|**bit**|1 = 索引允許頁面鎖定。|一律為1。|  
 |has_filter|**bit**|0 = 索引沒有篩選。|一律是 0。|  
 |filter_definition|**nvarchar(max)**|包含在已篩選之索引內的資料列子集運算式。|一律為 Null。|  
-|pdw_node_id|**int**|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]節點的唯一識別碼。|NOT NULL|  
+|pdw_node_id|**int**|節點的唯一識別碼 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。|NOT NULL|  
   
 ## <a name="permissions"></a>權限  
  需要 CONTROL SERVER 權限。  

@@ -1,5 +1,5 @@
 ---
-title: sys.databases dm_db_stats_histogram （Transact-sql） |Microsoft Docs
+title: dm_db_stats_histogram (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,16 +20,18 @@ ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50b5ae0a00161b00c432f0ea88c1cd08c45b4219
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a9346aa6dbf98bbc827b90423f02b5027481f956
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011881"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196399"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-傳回目前資料庫中指定之資料庫物件（資料表或索引視圖）的統計資料長條圖 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 類似於 `DBCC SHOW_STATISTICS WITH HISTOGRAM`。
+傳回目前資料庫中 (資料表或索引視圖) 之指定資料庫物件的統計資料長條圖 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 類似於 `DBCC SHOW_STATISTICS WITH HISTOGRAM`。
 
 > [!NOTE] 
 > 從 SP1 CU2 開始提供此 DMF [!INCLUDE[ssSQL15](../../includes/ssSQL15-md.md)]
@@ -58,7 +60,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 |range_rows |**real** |資料行值在長條圖步驟內的預估資料列數，不包括上限。 |
 |equal_rows |**real** |資料行值等於長條圖步驟之上限的預估資料列數。 |
 |distinct_range_rows |**bigint** |在長條圖步驟內具有相異資料行值的預估資料列數，不包括上限。 |
-|average_range_rows |**real** |在長條圖步驟內具有重復資料行值的平均資料列數，不包括上限（ `RANGE_ROWS / DISTINCT_RANGE_ROWS` 適用于 `DISTINCT_RANGE_ROWS > 0` ）。 |
+|average_range_rows |**real** |在長條圖步驟內具有重復資料行值的平均資料列數，但不包括) 的上限 (`RANGE_ROWS / DISTINCT_RANGE_ROWS` `DISTINCT_RANGE_ROWS > 0` 。 |
   
  ## <a name="remarks"></a>備註  
  
@@ -74,7 +76,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
  下列長條圖顯示包含六個步驟的長條圖。 第一個上限值左側的區域就是第一個步驟。  
   
- ![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histogram")  
+ ![長條圖](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "長條圖")  
   
  每一個長條圖步驟：  
   
@@ -82,7 +84,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 -   *range_high_key* 左邊的實線區域代表資料行值範圍，以及每一個資料行值發生的平均次數 (*average_range_rows*)。 第一個長條圖步驟的 *average_range_rows* 一定是 0。  
   
--   虛線代表用來預估範圍內相異值總數的取樣值（*distinct_range_rows*），以及範圍內的值總數（*range_rows*）。 查詢最佳化工具會使用 *range_rows* 和 *distinct_range_rows* 來計算 *average_range_rows*，而且不會儲存取樣值。  
+-   虛線代表用來預估範圍內相異值總數的取樣值 (*distinct_range_rows*) 以及範圍 (*range_rows*) 中的總值數目。 查詢最佳化工具會使用 *range_rows* 和 *distinct_range_rows* 來計算 *average_range_rows*，而且不會儲存取樣值。  
   
  查詢最佳化工具會根據長條圖步驟的統計重要性來定義長條圖步驟。 它會使用最大值差異演算法，讓長條圖中的步驟數減至最少，同時讓界限值之間的差異最大化。 步驟數的最大值為 200。 長條圖步驟的數目可以少於相異值數目，即使包含了少於 200 個界限點的資料行也是如此。 例如，包含 100 個相異值的資料行可以擁有少於 100 個界限點的長條圖。  
   
@@ -144,6 +146,6 @@ WHERE ss.[object_id] = OBJECT_ID('Country')
 ```
   
 ## <a name="see-also"></a>另請參閱  
-[DBCC SHOW_STATISTICS （Transact-sql）](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
+[DBCC SHOW_STATISTICS (Transact-sql) ](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
 [物件相關的動態管理檢視和函數 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
 [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  

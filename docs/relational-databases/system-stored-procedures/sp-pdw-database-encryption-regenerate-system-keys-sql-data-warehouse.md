@@ -1,5 +1,5 @@
 ---
-title: sp_pdw_database_encryption_regenerate_system_keys （SQL 資料倉儲） |Microsoft Docs
+title: sp_pdw_database_encryption_regenerate_system_keys (SQL 資料倉儲) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -12,16 +12,16 @@ author: ronortloff
 ms.author: rortloff
 ms.reviewer: ''
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 323b7602fd375bc393828663f1d2c749332dc9ac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 06ce871e8f67a9cf4fa57b81eb84f47161e8fd28
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67463473"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197324"
 ---
-# <a name="sp_pdw_database_encryption_regenerate_system_keys-sql-data-warehouse"></a>sp_pdw_database_encryption_regenerate_system_keys （SQL 資料倉儲）
+# <a name="sp_pdw_database_encryption_regenerate_system_keys-sql-data-warehouse"></a>sp_pdw_database_encryption_regenerate_system_keys (SQL 資料倉儲) 
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   使用**sp_pdw_database_encryption_regenerate_system_keys**在設備上啟用 TDE 時，針對已加密的內部資料庫，旋轉憑證和資料庫加密金鑰。 這包括 `tempdb`。 只有在啟用 TDE 時，才會成功。  
   
@@ -34,7 +34,7 @@ sp_pdw_database_encryption_regenerate_system_keys  ;
 ```  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或**1** (失敗)   
   
 ## <a name="remarks"></a>備註  
  程式沒有任何參數。  

@@ -1,5 +1,5 @@
 ---
-title: sys.databases dm_pdw_dms_external_work （Transact-sql） |Microsoft Docs
+title: dm_pdw_dms_external_work (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ ms.assetid: 47345015-f861-451e-97c4-6e1cb81d1922
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a1778cbb88fcd6a4142e800cd45109602509125d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f87d950f4fe876e6b04e1df1f529d22126058113
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899495"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197127"
 ---
-# <a name="sysdm_pdw_dms_external_work-transact-sql"></a>sys.databases dm_pdw_dms_external_work （Transact-sql）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# <a name="sysdm_pdw_dms_external_work-transact-sql"></a>dm_pdw_dms_external_work (Transact-sql) 
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]此系統檢視會保存外部作業的所有資料移動服務（DMS）步驟的相關資訊。  
+  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]此系統檢視會保存所有資料移動服務的相關資訊 (DMS) 外部作業的步驟。  
   
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
@@ -30,7 +30,7 @@ ms.locfileid: "67899495"
 |step_index|**int**|叫用此 DMS 背景工作角色的查詢步驟。<br /><br /> request_id、step_index 和 dms_step_index 會形成此視圖的索引鍵。|與[sys. dm_pdw_request_steps &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)中的 step_index 相同。|  
 |dms_step_index|**int**|DMS 計畫中的目前步驟。<br /><br /> request_id、step_index 和 dms_step_index 會形成此視圖的索引鍵。|與[sys. dm_pdw_dms_workers &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md)中的 dms___step_index 相同。|  
 |pdw_node_id|**int**|正在執行 DMS 背景工作角色的節點。|與[sys. dm_pdw_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)中的 node_id 相同。|  
-|型別|**nvarchar(60)**|此節點正在執行之外部作業的類型。<br /><br /> 檔案分割是外部 Hadoop 檔案的作業，已分割成多個較小的範圍。|「檔案分割」|  
+|類型|**nvarchar(60)**|此節點正在執行之外部作業的類型。<br /><br /> 檔案分割是外部 Hadoop 檔案的作業，已分割成多個較小的範圍。|「檔案分割」|  
 |work_id|**int**|檔案分割識別碼。|大於或等於0。<br /><br /> 每個計算節點都是唯一的。|  
 |input_name|**nvarchar(60)**|要讀取之輸入的字串名稱。|針對 Hadoop 檔案，這是 Hadoop 檔案名。|  
 |read_location|**bigint**|讀取位置的位移。||  

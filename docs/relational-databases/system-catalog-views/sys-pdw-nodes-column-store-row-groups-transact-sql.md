@@ -1,5 +1,5 @@
 ---
-title: sys.databases pdw_nodes_column_store_row_groups （Transact-sql）
+title: 'pdw_nodes_column_store_row_groups (Transact-sql) '
 ms.custom: seo-dt-2019
 ms.date: 03/03/2017
 ms.prod: sql
@@ -12,21 +12,21 @@ ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b1cbdc63907933f173c7d32a2dde3151dd4db7af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1e65d2212dea9f8d2bbe9aad1854a2b8cd904dd3
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74399869"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197348"
 ---
-# <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys.databases pdw_nodes_column_store_row_groups （Transact-sql）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>pdw_nodes_column_store_row_groups (Transact-sql) 
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  提供每個區段的叢集資料行存放區索引資訊，以協助系統管理員在中[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]進行系統管理決策。 **pdw_nodes_column_store_row_groups**具有實際儲存之資料列總數的資料行（包括標示為已刪除的資料列），以及標示為已刪除之資料列數目的資料行。 請使用**pdw_nodes_column_store_row_groups**來判斷哪些資料列群組具有較高百分比的已刪除資料列，而且應該重建。  
+  提供每個區段的叢集資料行存放區索引資訊，以協助系統管理員在中進行系統管理決策 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。 **pdw_nodes_column_store_row_groups**具有實際儲存 (（包括標示為已) 刪除的資料列總數）的資料行，以及標示為已刪除之資料列數目的資料行。 請使用**pdw_nodes_column_store_row_groups**來判斷哪些資料列群組具有較高百分比的已刪除資料列，而且應該重建。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|基礎資料表的識別碼。 這是計算節點上的實體資料表，而不是控制節點上邏輯資料表的 object_id。 例如，object_id 與 sys.databases 中的 object_id 不相符。<br /><br /> 若要與 sys.databases 聯結，請使用 sys.databases pdw_index_mappings。|  
+|object_id|**int**|基礎資料表的識別碼。 這是計算節點上的實體資料表，而不是控制節點上邏輯資料表的 object_id。 例如，object_id 與 sys.databases 中的 object_id 不相符。<br /><br /> 若要與 sys.databases 聯結，請使用 sys.databases pdw_index_mappings。|  
 |**index_id**|**int**|*Object_id*資料表上叢集資料行存放區索引的識別碼。|  
 |**partition_number**|**int**|保留資料列群組*row_group_id*之資料表資料分割的識別碼。 您可以使用*partition_number*將此 DMV 加入至 sys.databases。|  
 |**row_group_id**|**int**|此資料列群組的識別碼。 此號碼在分割區中是唯一的。|  
@@ -36,7 +36,7 @@ ms.locfileid: "74399869"
 |**total_rows**|**bigint**|實際儲存在資料列群組中的總列數。 有些可能已刪除，但是仍然保存。 資料列群組中資料列數目的上限為 1,048,576 (十六進位 FFFFF)。|  
 |**deleted_rows**|**bigint**|實際儲存在標示為要刪除之資料列群組中的資料列數目。<br /><br /> 差異資料列群組一律為0。|  
 |**size_in_bytes**|**int**|此資料列群組中所有頁面的組合大小（以位元組為單位）。 此大小不包含儲存中繼資料或共用字典所需的大小。|  
-|**pdw_node_id**|**int**|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]節點的唯一識別碼。|  
+|**pdw_node_id**|**int**|節點的唯一識別碼 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。|  
 |**distribution_id**|**int**|散發的唯一識別碼。|
   
 ## <a name="remarks"></a>備註  
@@ -80,7 +80,7 @@ AND CSRowGroups.index_id = NI.index_id
 ORDER BY object_name(i.object_id), i.name, IndexMap.physical_name, pdw_node_id;  
 ```  
 
-下列[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]範例會計算叢集資料行存放區的每個資料分割，以及開啟、關閉或壓縮資料列群組中的資料列數目：  
+下列範例會計算叢集資料行存放 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 區的每個資料分割，以及開啟、關閉或壓縮資料列群組中的資料列數目：  
 
 ```
 SELECT

@@ -1,5 +1,5 @@
 ---
-title: sp_datatype_info_90 （SQL 資料倉儲） |Microsoft Docs
+title: sp_datatype_info_90 (SQL 資料倉儲) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.service: sql-data-warehouse
@@ -11,15 +11,15 @@ ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7919dac422a0033d9bac02a928da2ff7445c6cc9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d19a2ef405fef8b62de96f621ddc13a816b4fc5
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108326"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196921"
 ---
-# <a name="sp_datatype_info_90-sql-data-warehouse"></a>sp_datatype_info_90 （SQL 資料倉儲）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# <a name="sp_datatype_info_90-sql-data-warehouse"></a>sp_datatype_info_90 (SQL 資料倉儲) 
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   傳回目前環境所支援之資料類型的相關資訊。  
   
@@ -40,7 +40,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 `[ @ODBCVer = ] odbc_version`這是所使用的 ODBC 版本。 *odbc_version*是**Tinyint**，預設值是2。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- None  
+ 無  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -49,12 +49,12 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |TYPE_NAME|**sysname**|DBMS 相依資料類型。|  
 |DATA_TYPE|**smallint**|這個類型的所有資料行所對應之 ODBC 類型的代碼。|  
 |PRECISION|**int**|資料來源的資料類型最大有效位數。 有效位數不適用的資料類型會傳回 NULL。 PRECISION 資料行的傳回值為十進位數。|  
-|LITERAL_PREFIX|**Varchar （** 32 **）**|常數前面所用的一或多個字元。 例如，單引號（**'**）用於字元類型，0x 用於二進位。|  
-|LITERAL_SUFFIX|**Varchar （** 32 **）**|用來結束常數的一或多個字元。 例如，適用于字元類型的單引號（**'**），二進位的沒有引號。|  
-|CREATE_PARAMS|**Varchar （** 32 **）**|這個資料類型之建立參數的描述。 例如， **decimal**是「precision，scale」， **float**是 Null，而**Varchar**是「max_length」。|  
+|LITERAL_PREFIX|**Varchar (** 32 **) **|常數前面所用的一或多個字元。 例如，單引號 (**'**) 用於字元類型，0x 用於二進位。|  
+|LITERAL_SUFFIX|**Varchar (** 32 **) **|用來結束常數的一或多個字元。 例如，單引號 (**'**) 用於字元類型，而不是二進位的引號。|  
+|CREATE_PARAMS|**Varchar (** 32 **) **|這個資料類型之建立參數的描述。 例如， **decimal**是「precision，scale」， **float**是 Null，而**Varchar**是「max_length」。|  
 |NULLABLE|**smallint**|指定 Null 屬性。<br /><br /> 1 = 允許 Null 值。<br /><br /> 0 = 不允許 Null 值。|  
 |CASE_SENSITIVE|**smallint**|指定是否區分大小寫。<br /><br /> 1 = 這類型的所有資料行都會區分大小寫 (用於定序)。<br /><br /> 0 = 這個類型的所有資料行都不區分大小寫。|  
-|SEARCHABLE|**smallint**|指定資料行類型的搜尋功能：<br /><br /> 1 = 無法搜尋。<br /><br /> 2 = 可使用 LIKE 搜尋。<br /><br /> 3 = 可使用 WHERE 搜尋。<br /><br /> 4 = 可使用 WHERE 或 LIKE 搜尋。|  
+|可搜尋|**smallint**|指定資料行類型的搜尋功能：<br /><br /> 1 = 無法搜尋。<br /><br /> 2 = 可使用 LIKE 搜尋。<br /><br /> 3 = 可使用 WHERE 搜尋。<br /><br /> 4 = 可使用 WHERE 或 LIKE 搜尋。|  
 |UNSIGNED_ATTRIBUTE|**smallint**|指定資料類型的正負號。<br /><br /> 1 = 資料類型不帶正負號。<br /><br /> 0 = 資料類型帶正負號。|  
 |MONEY|**smallint**|指定**money**資料類型。<br /><br /> 1 = **money**資料類型。<br /><br /> 0 = 不是**money**資料類型。|  
 |AUTO_INCREMENT|**smallint**|指定自動累加。<br /><br /> 1 = 自動累加。<br /><br /> 0 = 不自動累加。<br /><br /> NULL = 屬性不適用。<br /><br /> 應用程式可以將值插入包含這個屬性的資料行中，但應用程式不能更新這個資料行中的值。 除了**bit**資料類型之外，AUTO_INCREMENT 僅適用于屬於精確數值和近似數值資料類型類別目錄的資料類型。|  
@@ -74,7 +74,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
  需要 public 角色中的成員資格。  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下列範例會藉由指定的*data_type*值，來抓取**sysname**和**Nvarchar**資料類型的`-9`資訊。  
+ 下列範例會藉由指定的*data_type*值，來抓取**sysname**和**Nvarchar**資料類型的資訊 `-9` 。  
   
 ```  
 USE master;  

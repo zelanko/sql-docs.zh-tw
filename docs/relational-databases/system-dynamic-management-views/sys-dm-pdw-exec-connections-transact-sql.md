@@ -1,5 +1,5 @@
 ---
-title: sys.databases dm_pdw_exec_connections （Transact-sql） |Microsoft Docs
+title: dm_pdw_exec_connections (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,26 +12,26 @@ ms.assetid: 2625466b-d0ef-4c71-bedc-6d13491a8351
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b333af29e3d39c0f4ce59ea68602f652c042003f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f47fb9d9047e02fde6a7e8a7f758e455e3fc789
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899422"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197113"
 ---
-# <a name="sysdm_pdw_exec_connections-transact-sql"></a>sys.databases dm_pdw_exec_connections （Transact-sql）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# <a name="sysdm_pdw_exec_connections-transact-sql"></a>dm_pdw_exec_connections (Transact-sql) 
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   傳回有關與這個 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 執行個體建立之連接及每一個連接之詳細資料的資訊。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|session_id|**int**|識別這項連接的相關工作階段。 `session_id`使用`SESSION_ID()`傳回目前連接的。|  
+|session_id|**int**|識別這項連接的相關工作階段。 使用傳回 `SESSION_ID()` `session_id` 目前連接的。|  
 |connect_time|**datetime**|建立連接的時間戳記。 不可為 Null。|  
-|encrypt_option|**nvarchar(40)**|表示 TRUE （連接已加密）或 FALSE （連接未 enctypred）。|  
+|encrypt_option|**nvarchar(40)**|表示 (連接已加密) 或 FALSE (未 enctypred) 連接。|  
 |auth_scheme|**nvarchar(40)**|指定搭配這個連接使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Windows 驗證配置。 不可為 Null。|  
 |client_id|**varchar(48)**|連接到這部伺服器之用戶端的 IP 位址。 可為 Null。|  
-|sql_spid|**int**|連接的伺服器處理序識別碼。 `sql_spid`使用`@@SPID`傳回目前連接的。對於大部分的制定目的，請`session_id`改用。|  
+|sql_spid|**int**|連接的伺服器處理序識別碼。 使用傳回 `@@SPID` `sql_spid` 目前連接的。對於大部分的制定目的，請改用 `session_id` 。|  
   
 ## <a name="permissions"></a>權限  
  需要伺服器的**VIEW SERVER STATE**許可權。  

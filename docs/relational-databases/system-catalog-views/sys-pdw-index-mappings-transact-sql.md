@@ -1,5 +1,5 @@
 ---
-title: sys.databases pdw_index_mappings （Transact-sql） |Microsoft Docs
+title: pdw_index_mappings (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -12,15 +12,15 @@ ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 298a24276ff9c1d73a7b15ddc977d0623af70af3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3e51acd0ef179d4bb9bf85bed34593f9676db063
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68127478"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196782"
 ---
-# <a name="syspdw_index_mappings-transact-sql"></a>sys.databases pdw_index_mappings （Transact-sql）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# <a name="syspdw_index_mappings-transact-sql"></a>pdw_index_mappings (Transact-sql) 
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   會將邏輯索引對應到計算節點上所使用的機構名稱，這是由保留該資料表內特定索引之索引和**index_id**之資料表的唯一**object_id**組合所反映。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "68127478"
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|此索引所在之邏輯資料表的物件識別碼。 請參閱[&#40;transact-sql&#41;的 sys.databases ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。<br /><br /> **physical_name**和**object_id**形成此視圖的索引鍵。||  
 |index_id|**nvarchar(32)**|索引的識別碼。 請參閱[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)。||  
-|physical_name|**Nvarchar （36）**|計算節點上資料庫中索引的名稱。<br /><br /> **physical_name**和**object_id**形成此視圖的索引鍵。||  
+|physical_name|**Nvarchar (36) **|計算節點上資料庫中索引的名稱。<br /><br /> **physical_name**和**object_id**形成此視圖的索引鍵。||  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL 資料倉儲與平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   

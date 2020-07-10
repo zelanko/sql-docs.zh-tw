@@ -11,22 +11,22 @@ dev_langs:
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: bbf63d4553630cce6d1d890f2d353442c14d6afd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 399389b3b3decb92a9184d10dc2b8ca90232e114
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401627"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197274"
 ---
 # <a name="sql-and-parallel-data-warehouse-dynamic-management-views"></a>SQL 和平行處理資料倉儲動態管理檢視
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-本主題列出[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]動態管理檢視（dmv）。  
+本主題列出 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] (dmv) 的和動態管理 views。  
   
- All [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] dmv 的開頭都是**sys. dm_pdw**。  
+ All [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] dmv 的開頭都是**sys. dm_pdw**。  
   
-## <a name="sssdw-and-sspdw-dynamic-management-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]動態管理檢視  
- 下列動態管理檢視適用于[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和： [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="sssdw-and-sspdw-dynamic-management-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 動態管理檢視  
+ 下列動態管理檢視適用于 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ：  
   
  [dm_pdw_dms_cores &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-cores-transact-sql.md)  
   
@@ -65,7 +65,7 @@ ms.locfileid: "74401627"
  [dm_pdw_waits &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)
 
 ## <a name="sssdw-dynamic-management-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]動態管理檢視 
- 下列動態管理檢視[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]僅適用于：
+ 下列動態管理檢視僅適用于 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ：
  
 [dm_pdw_nodes_exec_query_plan &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-plan-transact-sql.md)  
 
@@ -77,10 +77,10 @@ ms.locfileid: "74401627"
 
 [dm_pdw_nodes_exec_text_query_plan &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-text-query-plan-transact-sql.md)
 
- [dm_workload_management_workload_groups_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md) （預覽）
+ [dm_workload_management_workload_groups_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md) (Preview) 
 
 ## <a name="sspdw-dynamic-management-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]動態管理檢視  
- 下列動態管理檢視[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]僅適用于：  
+ 下列動態管理檢視僅適用于 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ：  
   
  [dm_pdw_component_health_active_alerts &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md)  
   

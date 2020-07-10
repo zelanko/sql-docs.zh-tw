@@ -1,5 +1,5 @@
 ---
-title: sys.databases dm_pdw_wait_stats （Transact-sql） |Microsoft Docs
+title: dm_pdw_wait_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ ms.assetid: cfb8d905-c34f-44de-9574-dde81e170916
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 2d5815783528b89716cc8bfb426ea7c1b274802e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 28fb7ffe37631fc7f77333683f6bda4ccf1ddedf
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68088725"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197042"
 ---
-# <a name="sysdm_pdw_wait_stats-transact-sql"></a>sys.databases dm_pdw_wait_stats （Transact-sql）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# <a name="sysdm_pdw_wait_stats-transact-sql"></a>dm_pdw_wait_stats (Transact-sql) 
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  保存與在不同節點[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上執行之實例相關的 OS 狀態相關資訊。 如需等候類型及其描述的清單，請參閱[sys.databases dm_os_wait_stats](https://msdn.microsoft.com/library/ms179984\(v=sql.120\).aspx)。  
+  保存與在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不同節點上執行之實例相關的 OS 狀態相關資訊。 如需等候類型及其描述的清單，請參閱[sys.databases dm_os_wait_stats](https://msdn.microsoft.com/library/ms179984\(v=sql.120\).aspx)。  
   
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
