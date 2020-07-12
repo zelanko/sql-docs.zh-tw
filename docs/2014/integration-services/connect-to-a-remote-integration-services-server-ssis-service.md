@@ -1,5 +1,5 @@
 ---
-title: 連接至遠端 Integration Services 伺服器（SSIS 服務） |Microsoft Docs
+title: 連接至遠端 Integration Services 伺服器 (SSIS 服務) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9487aff1-44d8-42c1-8176-bb9891d4632d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 48369c2691386bc41675571c892302e3e4b7ece1
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: a106a07f985dcc8d263304f574a911b84222903c
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85434655"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279472"
 ---
 # <a name="connect-to-a-remote-integration-services-server-ssis-service"></a>連接到遠端 Integration Services 伺服器 (SSIS 服務)
     
@@ -46,7 +46,7 @@ ms.locfileid: "85434655"
     > [!NOTE]  
     >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務不是執行個體特定的。 您可以使用 Integration Services 服務執行所在的電腦名稱來連接此服務。  
   
-5.  按一下 [ **連接**]。  
+5.  按一下 [連線]。  
   
 > [!NOTE]  
 >  [瀏覽伺服器]**** 對話方塊不會顯示 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的遠端執行個體。 此外，[連接到伺服器]**** 對話方塊的 [連接選項]**** 索引標籤 (按一下 [選項]**** 按鈕即可顯示) 上的可用選項不適用於 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 連接。  
@@ -96,13 +96,6 @@ ms.locfileid: "85434655"
   
 ## <a name="connecting-by-using-a-local-account"></a>使用本機帳戶進行連接  
  如果您是在用戶端電腦上使用本機 Windows 帳戶工作，那麼只有當遠端電腦上存在和本機帳戶相同名稱與密碼以及適當權限的帳戶，您才能連接到遠端電腦上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務。  
-  
-## <a name="by-default-the-ssis-service-does-not-support-delegation"></a>SSIS 服務預設不支援委派  
-根據預設 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ，服務不支援認證的委派，或有時稱為雙躍點。 在這種情況中，您是在用戶端電腦上工作、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務是在第二部電腦上執行， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 則是在第三部電腦上執行。 首先， [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 已順利將認證從用戶端電腦傳遞至正在其上執行 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務的第二部電腦。 接著，不過， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務無法將認證從第二部電腦委派至正在其上執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的第三部電腦。
-
-將 [信任這個使用者，可委派任何服務 (只限 Kerberos)]**** 權限授與 SQL Server 服務帳戶 (可將 Integration Services 服務 (ISServerExec.exe) 啟動為子處理序)，即可啟用認證委派。 在授與此權限之前，請考慮它是否符合您組織的安全性需求。
-
-如需詳細資訊，請參閱 [取得使用 SSIS 封裝的跨網域 Kerberos 和委派](https://blogs.msdn.microsoft.com/psssql/2014/06/26/getting-cross-domain-kerberos-and-delegation-working-with-ssis-package/)。
   
 ## <a name="see-also"></a>另請參閱  
  [針對 SSIS 服務的存取設定 Windows 防火牆](../../2014/integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)  

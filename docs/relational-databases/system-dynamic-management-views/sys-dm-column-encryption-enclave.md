@@ -1,5 +1,5 @@
 ---
-title: sys.databases dm_column_encryption_enclave （Transact-sql） |Microsoft Docs
+title: dm_column_encryption_enclave (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/11/2019
 ms.prod: sql
@@ -9,19 +9,19 @@ ms.topic: language-reference
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: d10bef0df04501c177086b6c89b3f67dec3bab10
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f41a5f704a50924a882e220786ac8cafc090237a
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73599241"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279557"
 ---
 # <a name="sysdm_column_encryption_enclave-transact-sql"></a>sys.dm_column_encryption_enclave (Transact-SQL)
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 傳回 Always Encrypted 安全記憶體保護區的效能計數器。 如需詳細資訊，請參閱[具有安全記憶體保護區的 Always Encrypted](../security/encryption/always-encrypted-enclaves.md)。
 
-如果記憶體保護區已設定，而且在上次重新開機後已正確初始化[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則此視圖只會包含一個資料列。 如果記憶體保護區未設定，或未正確地初始化，則此視圖不會傳回任何資料列。 
+如果記憶體保護區已設定，而且在上次重新開機後已正確初始化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則此視圖只會包含一個資料列。 如果記憶體保護區未設定，或未正確地初始化，則此視圖不會傳回任何資料列。 
 
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  

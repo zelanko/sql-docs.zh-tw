@@ -14,18 +14,16 @@ helpviewer_keywords:
 ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4e09d61ef516e846798dd3af2d07dafa78af4605
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f56def542b71906d1e9432d724fdab8143ccb346
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299653"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279586"
 ---
 # <a name="sqlcompleteasync-function"></a>SQLCompleteAsync 函式
 **標準**  
- 引進的版本： ODBC 3。8  
-  
- 標準合規性：無  
+ 引進的版本： ODBC 3.8 標準合規性：無  
   
  **摘要**  
  **SQLCompleteAsync**可以用來判斷非同步函式何時使用以通知或輪詢為基礎的處理完成。 如需非同步作業的詳細資訊，請參閱[非同步執行](../../../odbc/reference/develop-app/asynchronous-execution.md)。  
@@ -58,7 +56,7 @@ SQLRETURN SQLCompleteAsync(
  *AsyncRetCodePtr*  
  輸出緩衝區的指標，將包含非同步 API 的傳回碼。 如果*AsyncRetCodePtr*為 Null，則**SQLCompleteAsync**會傳回 SQL_ERROR。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  SQL_SUCCESS、SQL_ERROR、SQL_NO_DATA 或 SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診斷  
@@ -72,8 +70,8 @@ SQLRETURN SQLCompleteAsync(
   
 -   SQL_NO_DATA：在通知模式中，非同步作業不在進行中，或驅動程式管理員尚未通知應用程式。 在輪詢模式中，非同步作業不在進行中。  
   
-## <a name="comments"></a>評價  
+## <a name="comments"></a>註解  
  在以輪詢為基礎的非同步處理模式中， *AsyncRetCodePtr*可能會在**SQLCompleteAsync**傳回 SQL_SUCCESS 時 SQL_STILL_EXECUTING。 應用程式應該持續輪詢，直到*AsyncRetCodePtr*不 SQL_STILL_EXECUTING 為止。 在以通知為基礎的非同步處理模式中， *AsyncRetCodePtr*永遠不會 SQL_STILL_EXECUTING。  
   
 ## <a name="see-also"></a>另請參閱  
- [非同步執行 (輪詢方法)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)
+ [非同步執行 (輪詢方法) ](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

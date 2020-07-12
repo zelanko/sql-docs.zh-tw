@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 542828e26b82d0df0174886f706117feb8ad2322
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6740c3491ff9a10f611f3b1fe26cd5b3acc1788c
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883828"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279374"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>保護主資料管理員 Web 應用程式
 
@@ -32,7 +32,11 @@ ms.locfileid: "85883828"
 -   您必須是 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 安裝所在之 Web 伺服器的系統管理員。  
   
 -   MDS 必須安裝在 Web 伺服器，而且 Web 應用程式必須存在。 如需詳細資訊，請參閱 [安裝 Master Data Services](../../master-data-services/install-windows/install-master-data-services.md) 和 [建立主資料管理員 Web 應用程式 &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)。  
-  
+
+- [Windows 驗證的 IIS 擴充保護](/iis/configuration/system.webserver/security/authentication/windowsauthentication/extendedprotection/)不應啟用。 
+
+- 設定網頁伺服器接聽所有可用的 IP 位址。 請勿將網頁伺服器設定為在特定 IP 位址上接聽。 
+
 ### <a name="to-secure-the-master-data-manager-web-application-with-https"></a>若要使用 HTTPS 保護主資料管理員 Web 應用程式  
   
 1.  在確認 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式已經使用 HTTP 正確設定之後，在 IIS 中建立憑證。 如需詳細資訊，請參閱 [在 IIS 7 中設定伺服器憑證](https://technet.microsoft.com/library/cc732230\(WS.10\).aspx)。  
@@ -41,13 +45,13 @@ ms.locfileid: "85883828"
   
 3.  在 [動作]**** 窗格中，按一下 [繫結]****。  
   
-4.  按一下 **[新增]** 。  
+4.  按一下 [新增]。  
   
 5.  從清單中選取 [https]****。  
   
 6.  選取 TLS/SSL 憑證。  
   
-7.  按一下 [確定] 。  
+7.  按一下 [確定]。  
   
 8.  選擇性。 若要移除 HTTP，讓使用者只能使用 HTTPS 存取網站，請從清單中按一下含有 **http**的資料列。 按一下 [移除]****，然後在確認對話方塊中按一下 [是]****。  
   
