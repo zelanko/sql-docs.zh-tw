@@ -1,5 +1,6 @@
 ---
 title: SQL Server 監視器概觀 | Microsoft Docs
+description: 了解 SQL Server 監視器。 查看如何使用其「複寫監視器」和「資料庫鏡像監視器」模組。 檢視使用此監視器所需的權限。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - SQL Server Monitor [SQL Server]
 ms.assetid: 048ae16d-31c3-489a-9f1e-1400a3bacd39
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a6f5e2b2bcd92c0a17ccada2ca755cbc14b9d647
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1bb99ef49e22c578ec1ebd8cc715a6e70e5bb6df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68032495"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771798"
 ---
 # <a name="sql-server-monitor-overview"></a>SQL Server 監視器概觀
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   「SQL Server 監視器」不會執行監視功能，但是它所主控的模組會執行該項功能。 「SQL Server 監視器」的模組包括「複寫監視器」和「資料庫鏡像監視器」。  
   
  若要使用其中一個模組，請在 **[執行]** 功能表上選取該模組。 目前選取的模組即擁有導覽窗格和詳細資料窗格的內容、使用者在詳細資料窗格中所做的動作，以及對內容和狀態的查詢。  
@@ -46,7 +47,7 @@ ms.locfileid: "68032495"
  下列是與「SQL Server 監視器」相關的功能表選項：  
   
  **檔案**  
- 這個功能表包含 [結束]  命令。  
+ 這個功能表包含 [結束] 命令。  
   
  **動作**  
  包含導覽樹狀目錄中選取之節點的內容功能表。  

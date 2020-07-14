@@ -1,5 +1,6 @@
 ---
 title: 使用 PowerShell 設定 Always Encrypted | Microsoft Docs
+description: 了解如何匯入及使用 SqlServer PowerShell 模組，其提供 Cmdlet 讓您在 Azure SQL Database 與 SQL Server 中設定 Always Encrypted。
 ms.custom: ''
 ms.date: 10/01/2019
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.assetid: 12f2bde5-e100-41fa-b474-2d2332fc7650
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5c90ea22849dd1d0437cdf058f639bbe546ccab9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 93cc3ccad555d366593632b3fc9975d070a67a0b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73594419"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765123"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>使用 PowerShell 設定永遠加密
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 SqlServer PowerShell 模組提供 Cmdlet 讓您在 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中設定 [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)。
 
@@ -30,7 +31,7 @@ SqlServer PowerShell 模組提供 Cmdlet 讓您在 [!INCLUDE[ssSDSFull](../../..
 
  如需其他建議，請參閱 [金鑰管理的安全性考量](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management)。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 在未裝載 SQL Server 執行個體的安全電腦上安裝 [SqlServer 模組](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/sqlserver) 。 此模組可以直接從 PowerShell 資源庫進行安裝。  如需更多詳細資料，請參閱[下載](../../../ssms/download-sql-server-ps-module.md)指示。
 

@@ -5,20 +5,20 @@ ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 08/28/2017
+ms.date: 06/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e10f354a8f0af2467a9519a794995043864a4cd6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: abe2613d421e07107c6ce81b18f5f9f83c8fe66d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558576"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897306"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>設定容錯移轉叢集執行個體 - iSCSI - Linux 上的 SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 此文章說明如何針對 Linux 上的容錯移轉叢集執行個體 (FCI) 設定 iSCSI 儲存體。 
 
@@ -66,7 +66,7 @@ iSCSI 會使用網路將磁碟從一部已知為目標的伺服器呈現給其�
     sudo iscsiadm -m discovery -t sendtargets -I <iSCSINetName> -p <TargetIPAddress>:<TargetPort>
     ```
 
-     \<iSCSINetName> 是網路的唯一/易記名稱、\<TargetIPAddress> 是 iSCSI 目標的 IP 位址，而\<TargetPort> 是 iSCSI 目標的連接埠。 
+     \<iSCSINetName> 是網路的唯一/易記名稱，\<TargetIPAddress> 是 iSCSI 目標的 IP 位址，而 \<TargetPort> 是 iSCSI 目標的連接埠。 
 
     ![iSCSITargetResults][3]
 
@@ -138,208 +138,209 @@ iSCSI 會使用網路將磁碟從一部已知為目標的伺服器呈現給其�
 
 12. 針對系統資料庫或任何儲存在預設資料位置的內容，請遵循這些步驟。 否則，請跳到步驟 13。
 
-   *    確定您正在處理之伺服器上的 SQL Server 已經停止。
+   * 確定您正在處理之伺服器上的 SQL Server 已經停止。
 
-    ```bash
-    sudo systemctl stop mssql-server
-    sudo systemctl status mssql-server
-    ```
-
-   *    完全切換成超級使用者。 如果成功，您將不會收到任何通知。
-
-    ```bash
-    sudo -i
-    ```
-
-   *    切換成 mssql 使用者。 如果成功，您將不會收到任何通知。
-
-    ```bash
-    su mssql
-    ```
-
-   *    建立暫存目錄來儲存 SQL Server 資料和記錄檔。 如果成功，您將不會收到任何通知。
-
-    ```bash
-    mkdir <TempDir>
-    ```
-
-    \<TempDir> 是資料夾的名稱。 下列範例會建立名為 /var/opt/mssql/TempDir 的資料夾。
-
-    ```bash
-    mkdir /var/opt/mssql/TempDir
-    ```
+        ```bash
+        sudo systemctl stop mssql-server
+        sudo systemctl status mssql-server
+        ```
     
-   *    將 SQL Server 資料和記錄檔複製到暫存目錄。 如果成功，您將不會收到任何通知。
+   * 完全切換成超級使用者。 如果成功，您將不會收到任何通知。
 
-    ```bash
-    cp /var/opt/mssql/data/* <TempDir>
-    ```
-
-    \<TempDir> 是上一個步驟中的資料夾名稱。
+        ```bash
+        sudo -i
+        ```
     
-   *    確認檔案位於目錄中。
+   * 切換成 mssql 使用者。 如果成功，您將不會收到任何通知。
 
-    ```bash
-    ls \<TempDir>
-    ```
-    \<TempDir> 是步驟 d 中資料夾的名稱。
+        ```bash
+        su mssql
+        ```
+    
+   * 建立暫存目錄來儲存 SQL Server 資料和記錄檔。 如果成功，您將不會收到任何通知。
 
-   *    將檔案從現有的 SQL Server 資料目錄中刪除。 如果成功，您將不會收到任何通知。
+        ```bash
+        mkdir <TempDir>
+        ```
+    
+        \<TempDir> 是資料夾的名稱。 下列範例會建立名為 /var/opt/mssql/TempDir 的資料夾。
 
-    ```bash
-    rm - f /var/opt/mssql/data/*
-    ```
+        ```bash
+        mkdir /var/opt/mssql/TempDir
+        ```
+        
+   * 將 SQL Server 資料和記錄檔複製到暫存目錄。 如果成功，您將不會收到任何通知。
 
-   *    確認檔案已被刪除。 下圖顯示從 c 到 h 的整個序列的範例。
+        ```bash
+        cp /var/opt/mssql/data/* <TempDir>
+        ```
+    
+        \<TempDir> 是上一個步驟中的資料夾名稱。
+    
+   * 確認檔案位於目錄中。
 
-    ```bash
-    ls /var/opt/mssql/data
-    ```
-
-    ![45-CopyMove][8]
+        ```bash
+        ls \<TempDir>
+        ```
  
-   *    輸入 `exit` 以切換回根使用者。
+        \<TempDir> 是步驟 d 中資料夾的名稱。
 
-   *    在 SQL Server 資料資料夾中裝載 iSCSI 邏輯磁碟區。 如果成功，您將不會收到任何通知。
+   * 將檔案從現有的 SQL Server 資料目錄中刪除。 如果成功，您將不會收到任何通知。
 
-    ```bash
-    mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
-    ``` 
+        ```bash
+        rm - f /var/opt/mssql/data/*
+        ```
+    
+   * 確認檔案已被刪除。 下圖顯示從 c 到 h 的整個序列的範例。
 
-    \<VolumeGroupName> 是磁碟區群組的名稱，而 \<LogicalVolumeName> 是所建立之邏輯磁碟區的名稱。 下列範例語法符合上一個命令中的磁碟區群組和邏輯磁碟區。
+        ```bash
+        ls /var/opt/mssql/data
+        ```
+    
+        ![45-CopyMove][8]
 
-    ```bash
-    mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data
-    ``` 
+   * 輸入 `exit` 以切換回根使用者。
 
-   *    將裝載的擁有者變更為 mssql。 如果成功，您將不會收到任何通知。
+   * 在 SQL Server 資料資料夾中裝載 iSCSI 邏輯磁碟區。 如果成功，您將不會收到任何通知。
 
-    ```bash
-    chown mssql /var/opt/mssql/data
-    ```
+        ```bash
+        mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
+        ```
 
-   *    將裝載群組的擁有權變更為 mssql。 如果成功，您將不會收到任何通知。
+        \<VolumeGroupName> 是磁碟區群組的名稱，而 \<LogicalVolumeName> 是所建立之邏輯磁碟區的名稱。 下列範例語法符合上一個命令中的磁碟區群組和邏輯磁碟區。
 
-    ```bash
-    chgrp mssql /var/opt/mssql/data
-    ``` 
+        ```bash
+        mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data
+        ```
 
-   *    切換成 mssql 使用者。 如果成功，您將不會收到任何通知。
+   * 將裝載的擁有者變更為 mssql。 如果成功，您將不會收到任何通知。
 
-    ```bash
-    su mssql
-    ``` 
+        ```bash
+        chown mssql /var/opt/mssql/data
+        ```
 
-   *    複製暫存目錄 /var/opt/mssql/data 中的檔案。 如果成功，您將不會收到任何通知。
+   * 將裝載群組的擁有權變更為 mssql。 如果成功，您將不會收到任何通知。
 
-    ```bash
-    cp /var/opt/mssql/TempDir/* /var/opt/mssql/data
-    ``` 
+        ```bash
+        chgrp mssql /var/opt/mssql/data
+        ```
 
-   *    驗證檔案存在。
+   * 切換成 mssql 使用者。 如果成功，您將不會收到任何通知。
 
-    ```bash
-    ls /var/opt/mssql/data
-    ``` 
- 
+        ```bash
+        su mssql
+        ``` 
+
+   * 複製暫存目錄 /var/opt/mssql/data 中的檔案。 如果成功，您將不會收到任何通知。
+
+        ```bash
+        cp /var/opt/mssql/TempDir/* /var/opt/mssql/data
+        ``` 
+    
+   * 驗證檔案存在。
+
+        ```bash
+        ls /var/opt/mssql/data
+        ``` 
+
    *    輸入 `exit` 以退出 mssql 使用者。
-    
+
    *    輸入 `exit` 以退出根使用者角色。
 
    *    啟動 SQL Server。 如果所有內容皆已正確複製，並正確地套用安全性，SQL Server 應該會顯示為已啟動。
 
-    ```bash
-    sudo systemctl start mssql-server
-    sudo systemctl status mssql-server
-    ``` 
- 
+        ```bash
+        sudo systemctl start mssql-server
+        sudo systemctl status mssql-server
+        ``` 
+
    *    停止 SQL Server 並驗證它已關閉。
 
-    ```bash
-    sudo systemctl stop mssql-server
-    sudo systemctl status mssql-server
-    ``` 
+        ```bash
+        sudo systemctl stop mssql-server
+        sudo systemctl status mssql-server
+        ``` 
 
 13. 針對系統資料庫以外的其他內容 (例如，使用者資料庫或備份)，請遵循這些步驟。 如果僅使用預設位置，請跳到步驟 14。
 
    *    切換成超級使用者。 如果成功，您將不會收到任何通知。
 
-    ```bash
-    sudo -i
-    ```
+        ```bash
+        sudo -i
+        ```
 
    *    建立 SQL Server 將會使用的資料夾。 
 
-    ```bash
-    mkdir <FolderName>
-    ```
+        ```bash
+        mkdir <FolderName>
+        ```
 
-    \<FolderName> 是資料夾的名稱。 如果資料夾不是位於正確的位置，則必須指定其完整路徑。 下列範例會建立名為 /var/opt/mssql/userdata 的資料夾。
+        \<FolderName> 是資料夾的名稱。 如果資料夾不是位於正確的位置，則必須指定其完整路徑。 下列範例會建立名為 /var/opt/mssql/userdata 的資料夾。
 
-    ```bash
-    mkdir /var/opt/mssql/userdata
-    ```
+        ```bash
+        mkdir /var/opt/mssql/userdata
+        ```
 
    *    將 iSCSI 邏輯磁碟區裝載在上一個步驟中所建立的資料夾中。 如果成功，您將不會收到任何通知。
-    
-    ```bash
-    mount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
-    ```
 
-    \<VolumeGroupName> 是磁碟區群組的名稱、\<LogicalVolumeName> 是所建立之邏輯磁碟區的名稱，而 \<FolderName> 是資料夾的名稱。 範例語法如下所示。
+        ```bash
+        mount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
+        ```
 
-    ```bash
-    mount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
-    ```
+        \<VolumeGroupName> 是磁碟區群組的名稱，\<LogicalVolumeName> 是所建立之邏輯磁碟區的名稱，而 \<FolderName> 是資料夾的名稱。 範例語法如下所示。
+
+        ```bash
+        mount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
+        ```
 
    *    將建立之資料夾的擁有權變更為 mssql。 如果成功，您將不會收到任何通知。
 
-    ```bash
-    chown mssql <FolderName>
-    ```
+        ```bash
+        chown mssql <FolderName>
+        ```
 
-    \<FolderName> 是所建立之資料夾的名稱。 範例如下所示。
+        \<FolderName> 是所建立之資料夾的名稱。 範例如下所示。
 
-    ```bash
-    chown mssql /var/opt/mssql/userdata
-    ```
-  
+        ```bash
+        chown mssql /var/opt/mssql/userdata
+        ```
+
    *    將建立的資料夾群組變更為 mssql。 如果成功，您將不會收到任何通知。
 
-    ```bash
-    chown mssql <FolderName>
-    ```
+        ```bash
+        chown mssql <FolderName>
+        ```
 
-    \<FolderName> 是所建立之資料夾的名稱。 範例如下所示。
+        \<FolderName> 是所建立之資料夾的名稱。 範例如下所示。
 
-    ```bash
-    chown mssql /var/opt/mssql/userdata
-    ```
+        ```bash
+        chown mssql /var/opt/mssql/userdata
+        ```
 
    *    輸入 `exit` 來退出超級使用者。
 
    *    若要進行測試，請在該資料夾中建立資料庫。 下列所示範例會使用 sqlcmd 來建立資料庫，將內容切換至它，確認檔案存在於 OS 層級，然後刪除暫存位置。 您可以使用 SSMS。
   
-    ![50-ExampleCreateSSMS][9]
+        ![50-ExampleCreateSSMS][9]
 
    *    將共用取消掛接 
 
-    ```bash
-    sudo umount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
-    ```
+        ```bash
+        sudo umount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
+        ```
 
-    \<VolumeGroupName> 是磁碟區群組的名稱、\<LogicalVolumeName> 是所建立之邏輯磁碟區的名稱，而 \<FolderName> 是資料夾的名稱。 範例語法如下所示。
+        \<VolumeGroupName> 是磁碟區群組的名稱，\<LogicalVolumeName> 是所建立之邏輯磁碟區的名稱，而 \<FolderName> 是資料夾的名稱。 範例語法如下所示。
 
-    ```bash
-    sudo umount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
-    ```
+        ```bash
+        sudo umount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
+        ```
 
 14. 設定伺服器，以便只有 Pacemaker 可以啟動磁碟區群組。
 
     ```bash
     sudo lvmconf --enable-halvm --services -startstopservices
     ```
- 
+
 15. 產生伺服器上的磁碟區群組清單。 系統會使用非 iSCSI 磁碟所列出的任何項目，例如 OS 磁碟。
 
     ```bash
@@ -355,8 +356,7 @@ iSCSI 會使用網路將磁碟從一部已知為目標的伺服器呈現給其�
     \<ListOfVGsNotUsedByPacemaker> 是步驟 20 的輸出中，FCI 將不會使用的磁碟區群組清單。 將每一個放在引號中，並以逗號分隔。 範例如下所示。
 
     ![55-ListOfVGs][11]
- 
- 
+
 17. 當 Linux 啟動時，它會裝載檔案系統。 為確保只有 Pacemaker 可以裝載 iSCSI 磁碟，請重建根檔案系統映像。 
 
     執行下列命令，這可能需要幾分鐘的時間才能完成。 如果成功，您將不會收到任何訊息。
@@ -374,6 +374,7 @@ iSCSI 會使用網路將磁碟從一部已知為目標的伺服器呈現給其�
     ```bash
     sudo vgs
     ``` 
+
 23. 啟動 SQL Server，並確認它可以在這部伺服器上啟動。
 
     ```bash
@@ -387,14 +388,15 @@ iSCSI 會使用網路將磁碟從一部已知為目標的伺服器呈現給其�
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
+
 25. 在將參與 FCI 的任何其他伺服器上重複步驟 1 - 6。
 
 您現在已準備好設定 FCI。
 
-|散發 |主題 
-|----- |-----
-|**Red Hat Enterprise Linux (包含 HA 附加元件)** |[設定](sql-server-linux-shared-disk-cluster-configure.md)<br/>[操作](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
-|**SUSE Linux Enterprise Server (包含 HA 附加元件)** |[設定](sql-server-linux-shared-disk-cluster-sles-configure.md)
+| 散發 | 主題 |
+| :----------- | :---- |
+| Red Hat Enterprise Linux (包含 HA 附加元件) | [設定](sql-server-linux-shared-disk-cluster-configure.md)<br/>[操作](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md) |
+| SUSE Linux Enterprise Server (包含 HA 附加元件) | [設定](sql-server-linux-shared-disk-cluster-sles-configure.md) |
 
 ## <a name="next-steps"></a>後續步驟
 

@@ -1,8 +1,8 @@
 ---
-title: 資料庫卸離與附加 (SQL Server) | Microsoft Docs
+title: 資料庫卸離與附加 (SQL Server)
 description: 您可以 SQL Server 資料庫的資料與交易記錄檔卸離並重新附加，以將資料庫變更為不同的執行個體或移動該資料庫。
 ms.custom: ''
-ms.date: 11/26/2018
+ms.date: 06/30/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -28,15 +28,15 @@ helpviewer_keywords:
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a43fcc0dade0c030546e76bf36f242973f918d2e
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: e9922e70d8ee4327bfb01c9c8657e8fabfe6a28c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138150"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756281"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>資料庫卸離與附加 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 您可以將資料庫的資料和交易記錄檔卸離，然後再重新附加至相同或不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。 若要將資料庫變更至同一台電腦上的不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，或要移動資料庫，卸離和附加資料庫相當有用。  
   
   
@@ -63,7 +63,13 @@ ms.locfileid: "82138150"
   
     > [!NOTE]  
     > 無法卸離或附加資料庫快照集。  
+
+-   資料庫是 Always On 可用性群組的一部分。  
   
+    您必須先從可用性群組中移除資料庫，才能將其中斷連結。 如需詳細資訊，請參閱[將主要資料庫從 Always On 可用性群組移除](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md)。
+  
+
+
 -   資料庫正在資料庫鏡像工作階段中進行鏡像。  
   
     除非工作階段結束，否則，您無法卸離資料庫。 如需詳細資訊，請參閱 [移除資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)＞。  

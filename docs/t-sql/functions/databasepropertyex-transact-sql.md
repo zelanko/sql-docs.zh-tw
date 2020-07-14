@@ -17,18 +17,18 @@ helpviewer_keywords:
 - displaying database properties
 - database properties [SQL Server]
 ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0bae370acd535f331d287cea38de04375891db0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d9d655cdbec3b353455f2da13ea0cb17e9d4cee0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823891"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011469"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的指定資料庫，此函式會傳回指定資料庫選項或屬性的目前設定。
   
@@ -87,7 +87,7 @@ DATABASEPROPERTYEX ( database , property )
 |IsXTPSupported|指出資料庫是否支援記憶體內部 OLTP，即建立及使用經記憶體最佳化的資料表和原生編譯模組。<br /><br /> 特定於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：<br /><br /> IsXTPSupported 是獨立於任何建立記憶體內部 OLTP 物件所必須之 MEMORY_OPTIMIZED_DATA 檔案群組的存在之外。|**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：輸入無效、發生錯誤或不適用<br /><br /> 基底資料類型：**int**|  
 |LastGoodCheckDbTime|最後一個成功 DBCC CHECKDB 在指定的資料庫上執行的日期和時間。<sup>1</sup> 如果 DBCC CHECKDB 尚未在資料庫上執行，則回傳回 1900-01-01 00:00:00.000。|**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (從 SP2 開始)。</br>[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 從 CU9 開始。</br>[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] 或更新版本。</br>Azure SQL Database。<br/><br/>日期時間值<br /><br /> NULL：輸入無效<br /><br /> 基底資料型別：**datetime**| 
 |LCID|Windows 的定序地區設定識別碼 (LCID)。|LCID 值 (十進位格式)。<br /><br /> 基底資料類型：**int**|  
-|MaxSizeInBytes|資料庫的大小上限 (以位元組為單位)。|**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL：資料庫未啟動<br /><br /> 基底資料型別：**bigint**|  
+|MaxSizeInBytes|資料庫的大小上限 (以位元組為單位)。|**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。<br /><br />[Azure SQL Database 和 Azure Synapse Analytics (SQL DW)](/azure/sql-database/sql-database-single-database-scale#dtu-based-purchasing-model) - 值會以 SLO 為基礎，除非已購買額外的儲存體。<br /><br />[vCore](/azure/sql-database/sql-database-single-database-scale#vcore-based-purchasing-model) - 值會以 1GB 為單位遞增，直到大小上限為止。<br /><br />NULL：資料庫未啟動<br /><br /> 基底資料型別：**bigint**|  
 |復原|資料庫復原模式|FULL：完整復原模式<br /><br /> BULK_LOGGED：大量記錄模式<br /><br /> SIMPLE：簡單復原模式<br /><br /> 基底資料型別：**nvarchar(128)**|  
 |ServiceObjective|描述 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 或 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中資料庫的效能層級。|下列其中之一：<br /><br /> Null：資料庫尚未啟動<br /><br /> 共用 (適用於 Web/Business 版本)<br /><br /> 基本<br /><br /> S0<br /><br /> S1<br /><br /> S2<br /><br /> S3<br /><br /> P1<br /><br /> P2<br /><br /> P3<br /><br /> ElasticPool<br /><br /> 系統 (適用於 master 資料庫)<br /><br /> 基底資料型別：**nvarchar(32)**|  
 |ServiceObjectiveId|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 中服務目標的識別碼。|識別服務目標的 **uniqueidentifier**。|  

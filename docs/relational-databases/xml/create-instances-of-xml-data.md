@@ -1,5 +1,6 @@
 ---
 title: 建立 XML 資料的執行個體 | Microsoft Docs
+description: 了解如何使用大量載入、常數指派、SELECT 陳述式和 FOR XML 子句，或類型轉換字串執行個體，來建立 XML 資料的執行個體。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 743ed3d936a51bf3c94f0bbd28ef490093edd570
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: ac342c20eb38411c4b0d1d689c34a70cda04b873
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664673"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752572"
 ---
 # <a name="create-instances-of-xml-data"></a>建立 XML 資料的執行個體
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   這個主題描述如何產生 XML 執行個體。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，您可以用下列方式產生 XML 執行個體：  
@@ -94,7 +95,7 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
   
  如果未使用 *style* 參數或是將其值設為 0，在轉換 xml DT 執行個體時，將不會保留不重要的空白。 如需如何使用 CONVERT 運算子以及將字串資料轉換成 xmlDT 執行個體時其 *style* 參數的詳細資訊，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。  
   
-### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>範例：將字串值轉換成具類型的 xml 並將它指派給資料行  
+### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>範例：將字串值轉換成具類型的 XML 並將它指派給資料行  
  下列範例將含有 XML 片段的字串變數轉換成 **xml** 資料類型，然後在 **xml** 類型資料行中予以儲存：  
   
 ```  
@@ -122,7 +123,7 @@ INSERT INTO T VALUES (3, cast (@s as xml))
 INSERT INTO T VALUES (3, convert (xml, @s))   
 ```  
   
-### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>範例：將字串轉換成具類型的 xml 並將它指派給變數  
+### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>範例：將字串轉換成具類型的 XML 並將它指派給變數  
  在下列範例中，字串會轉換成 **xml** 類型，並受指派給 **xml** 的變數。  
   
 ```  

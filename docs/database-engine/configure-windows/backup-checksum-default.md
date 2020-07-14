@@ -1,5 +1,6 @@
 ---
 title: 備份總和檢查碼預設 | Microsoft Docs
+description: 了解 [備份總和檢查碼預設] 選項。 查看如何在 SQL Server 備份和還原作業期間，使用此選項來開啟或關閉備份總和檢查碼。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: eef42653-85d0-4eaf-94bd-2ea1b024cd23
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: eb631212791a80fbcf32bd461a2ef476eebe8703
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8dc3e92c294b2afd1374af45c51b349443b76828
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013140"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725251"
 ---
 # <a name="backup-checksum-default"></a>備份總和檢查碼預設
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   使用備份總和檢查碼預設設定，在備份及還原期間啟用或停用備份總和檢查碼。  
   

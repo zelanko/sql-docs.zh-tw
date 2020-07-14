@@ -1,5 +1,6 @@
 ---
 title: 選擇資料庫引擎升級方法 | Microsoft Docs
+description: 此文章描述 SQL Server 中資料庫引擎的升級路徑，包括就地升級、移轉至新的安裝，以及輪流升級。
 ms.custom: ''
 ms.date: 07/19/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6dffa188f5641510f2ad47c17af3b40ad16a3ec9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7331bc542db301e519b8a75c43b47129c845bb45
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287042"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901586"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>選擇資料庫引擎升級方法
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 當您為了讓停機時間及風險減到最少，而打算從舊版 SQL Server 升級 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 時，有多種方法可以考慮。 您可以就地執行升級、遷移到新的安裝或執行輪流升級。 下圖將協助您在這些方法中做出選擇。 下方也將討論圖表中的各個方法。 為協助您了解圖表中的決策點，另請檢閱 [計劃和測試資料庫引擎升級計畫](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)。  
   

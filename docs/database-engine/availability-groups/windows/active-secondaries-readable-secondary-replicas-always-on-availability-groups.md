@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7433fa5404db80a04f5800faad35dcadffee432e
-ms.sourcegitcommit: f6200d3d9cdf2627b243384835dc37d2bd40480e
+ms.openlocfilehash: 006a18f65350cd94e0070834e21b1ee846883770
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82784634"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882999"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>將唯讀工作負載卸載至 Always On 可用性群組的次要複本
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 使用中次要功能包含對一個或多個次要複本進行唯讀存取的支援 ( *「可讀取的次要複本」* (Readable Secondary Replicas))。 可讀取次要複本可以處於同步認可可用性模式或非同步認可可用性模式。 可讀取的次要複本允許對其所有次要資料庫進行唯讀存取。 但可讀取的次要資料庫並不會設定為唯讀。 這些資料庫是動態的。 隨著對應主要資料庫變更而衍生的給定次要資料庫變更，會套用至次要資料庫。 對於一般次要複本而言，次要資料庫中的資料 (包含持久記憶體最佳化資料表) 幾近即時。 此外，全文檢索索引會與次要資料庫進行同步處理。 在許多情況下，主要資料庫和對應次要資料庫之間的資料延遲只在幾秒鐘內。  
   
@@ -60,9 +60,13 @@ ms.locfileid: "82784634"
      資料庫管理員必須設定一個或多個複本，以便在以次要角色執行時，這些複本可以允許所有連接 (僅供唯讀存取) 或只允許讀取意圖的連接。  
   
     > [!NOTE]  
-    >  除此之外，資料庫管理員也可選擇在以主要角色執行時，將可用性複本設定為排除唯讀連接。  
+    >  除此之外，資料庫管理員也可選擇在以主要角色執行時，將可用性複本設定為排除唯讀連接。
   
      如需詳細資訊，請參閱本主題稍後的 [關於可用性複本的用戶端連接存取 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md))。  
+  
+    >[!WARNING]
+    >  只有位於相同 SQL Server 主要組建上的複本才可讀取。 如需詳細資訊，請參閱[輪流升級基本概念](upgrading-always-on-availability-group-replica-instances.md#rolling-upgrade-basics-for-always-on-ags)。
+  
   
 -   **可用性群組接聽程式**  
   

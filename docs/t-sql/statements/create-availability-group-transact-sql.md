@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5260ccc53fbdba1e0773dc43c021f0ec4f21e255
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 6d4cae8c42f8a29842e62f94cfcd7a87e187b4e0
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151552"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091626"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體啟用了 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 功能，則會建立新的可用性群組。  
   
@@ -162,7 +162,7 @@ CREATE AVAILABILITY GROUP group_name
  FAILURE_CONDITION_LEVEL 和 HEALTH_CHECK_TIMEOUT 值會針對給定群組定義「彈性容錯移轉原則」。 這個具彈性的容錯移轉原則讓您能夠更精確控制哪些條件必須造成自動容錯移轉。 如需詳細資訊，請參閱[可用性群組自動容錯移轉的彈性容錯移轉原則 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)。  
   
  HEALTH_CHECK_TIMEOUT **=** *milliseconds*  
- 指定在 WSFC 叢集假設伺服器執行個體很慢或無回應之前，[sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 系統預存程序傳回伺服器健康情況資訊的等候時間 (以毫秒為單位)。 HEALTH_CHECK_TIMEOUT 是在群組層級上設定，但是只有在為具有自動容錯移轉的同步認可可用性模式 (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT) 設定的可用性複本上才會顯出重要性。  此外，只有當主要和次要複本已設定自動容錯移轉模式 (FAILOVER_MODE **=** AUTOMATIC) 而且次要複本目前與主要複本同步時，健康情況檢查逾時才可以觸發自動容錯移轉。  
+ 指定在 WSFC 叢集假設伺服器執行個體緩慢或沒有回應之前，[sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 系統預存程序傳回伺服器健全狀況資訊的等候時間 (以毫秒為單位)。 HEALTH_CHECK_TIMEOUT 是在群組層級上設定，但是只有在為具有自動容錯移轉的同步認可可用性模式 (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT) 設定的可用性複本上才會顯出重要性。  此外，只有當主要和次要複本已設定自動容錯移轉模式 (FAILOVER_MODE **=** AUTOMATIC) 而且次要複本目前與主要複本同步時，健康情況檢查逾時才可以觸發自動容錯移轉。  
   
  預設 HEALTH_CHECK_TIMEOUT 值為 30000 毫秒 (30 秒)。 最小值為 15000 毫秒 (15 秒)，最大值為 4294967295 毫秒。  
   
@@ -339,7 +339,7 @@ CREATE AVAILABILITY GROUP group_name
  ALL  
  主要複本的資料庫允許所有連接。 此為預設行為。  
   
- READ_ONLY_ROUTING_LIST **=** { **('** \<server_instance> **'** [ **,** ...*n* ] **)** | NONE } 指定為此可用性群組裝載可用性複本之伺服器執行個體的逗號分隔清單，以次要角色執行時，此可用性群組會符合下列需求：  
+ READ_ONLY_ROUTING_LIST **=** { **('** \<server_instance> **'** [ **,** ...*n* ] **)** | NONE } 指定為此可用性群組裝載可用性複本之伺服器執行個體的逗號分隔清單，以次要角色執行時，這些複本會符合下列需求：  
   
 -   設定為允許所有連接或唯讀連接 (請參閱 SECONDARY_ROLE 選項的 ALLOW_CONNECTIONS 引數，如上所示)。  
   
@@ -347,7 +347,7 @@ CREATE AVAILABILITY GROUP group_name
   
  READ_ONLY_ROUTING_LIST 值如下：  
   
- \<server_instance> 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之執行個體的位址，此為在以次要角色執行時之可讀取之次要複本的複本。  
+ \<server_instance> 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的位址，其為在以次要角色執行時可讀取次要複本之複本的主機。  
   
  使用逗號分隔清單指定可能裝載可讀取之次要複本的所有伺服器執行個體。 唯讀的路由會遵循清單中指定伺服器執行個體的順序。 如果您將複本的主機伺服器執行個體包含在複本的唯讀路由清單中，將此伺服器執行個體放在清單結尾通常是很好的作法，讓讀取意圖的連接通往次要複本 (如果有一個可用的次要複本的話)。  
   
@@ -422,7 +422,7 @@ CREATE AVAILABILITY GROUP group_name
  MANUAL  
  指定手動植入 (預設值)。 此方法會要求您在主要複本上建立資料庫的備份，並在次要可用性群組複本上手動還原該備份。  
   
- LISTENER **'** _dns\_name_ **'(** \<listener_option\> **)** 定義此可用性群組的新可用性群組接聽程式。 LISTENER 是選擇性引數。  
+ LISTENER **'** _dns\_name_ **'(** \<listener_option\> **)** 為這個可用性群組定義新的可用性群組接聽程式。 LISTENER 是選擇性引數。  
   
 > [!IMPORTANT]
 >  在建立第一個接聽程式之前，強烈建議您閱讀[建立或設定可用性群組接聽程式 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
@@ -442,7 +442,7 @@ CREATE AVAILABILITY GROUP group_name
 > [!IMPORTANT]  
 >  NetBIOS 只會辨識 DNS 名稱中的前 15 個字元。 如果您有兩個由相同 Active Directory 所控制的 WSFC 叢集，而且嘗試使用超過 15 個字元的名稱以及完全相同的 15 個字元前置詞，在這兩個叢集中建立可用性群組接聽程式，就會收到一則錯誤，指出系統無法讓虛擬網路名稱資源上線。 如需有關 DNS 名稱之前置詞命名規則的詳細資訊，請參閱＜ [指派網域名稱](https://technet.microsoft.com/library/cc731265\(WS.10\).aspx)＞。  
   
- \<listener_option> LISTENER 會採用下列其中一個 \<listener_option> 選項： 
+ \<listener_option> LISTENER 可接受下列其中一個 \<listener_option> 選項： 
   
  WITH DHCP [ ON { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4\_mask_ **')** } ]  
  指定可用性群組接聽程式會使用動態主機設定通訊協定 (DHCP)。  或者，使用 ON 子句以識別建立此接聽程式的網路。 DHCP 受限於單一子網路，這個子網路用於可用性群組中主控複本的每個伺服器執行個體。  
@@ -496,7 +496,7 @@ CREATE AVAILABILITY GROUP group_name
 |------------------|-------------|-----------------|  
 |AUTOMATED_BACKUP_PREFERENCE|SECONDARY|這個自動備份喜好設定會指示應該在次要複本上進行備份，但是主要複本是唯一線上複本 (這是預設行為) 的情況例外。 若要讓 AUTOMATED_BACKUP_PREFERENCE 設定有任何效果，您必須在可用性資料庫上撰寫備份工作的指令碼，以便將自動備份喜好設定納入考量。|  
 |FAILURE_CONDITION_LEVEL|3|這個失敗狀況層級會指定應該在嚴重 SQL Server 內部錯誤發生時起始自動容錯移轉，例如執行緒同步鎖定遭到遺棄、嚴重的寫入存取違規或是傾印過多。|  
-|HEALTH_CHECK_TIMEOUT|600000|這個健全狀況檢查逾時值 (60 秒) 會指定 WSFC 叢集將等待 60000 毫秒，讓 [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 系統預存程序傳回關於伺服器執行個體的伺服器健康情況資訊，這個伺服器執行個體會在叢集假設主機伺服器執行個體緩慢或無回應之前，自動主控同步認可的複本。 (預設值為 30000 毫秒)。|  
+|HEALTH_CHECK_TIMEOUT|600000|這個健康情況檢查逾時值 (60 秒) 會指定 WSFC 叢集將等待 60000 毫秒，讓 [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 系統預存程序傳回關於伺服器執行個體的伺服器健全狀況資訊，這個伺服器執行個體會在叢集假設主機伺服器執行個體緩慢或無回應之前，自動裝載同步認可的複本。 (預設值為 30000 毫秒)。|  
   
  三個可用性複本會由 `COMPUTER01`、`COMPUTER02` 和 `COMPUTER03` 電腦上的預設伺服器執行個體所主控。 下表摘要說明針對每個複本之複本選項所指定的值。  
   
@@ -584,6 +584,3 @@ GO
  [針對 AlwaysOn 可用性群組設定進行疑難排解 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)   
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [可用性群組接聽程式、用戶端連線及應用程式容錯移轉 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
-  
-  
-

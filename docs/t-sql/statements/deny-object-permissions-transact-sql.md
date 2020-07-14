@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 05f0d6d99ca4e5274882ec5d4e751ba658b62a1e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2416295cd79ae7b4e4da53ef71bcf7dfbf0702f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68114796"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766681"
 ---
 # <a name="deny-object-permissions-transact-sql"></a>DENY 物件權限 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   為安全性實體之 OBJECT 類別的成員定義權限。 OBJECT 類別的成員包括：資料表、檢視表、資料表值函式、預存程序、擴充預存程序、純量函數、彙總函式、服務佇列和同義字。  
 
@@ -32,7 +32,7 @@ ms.locfileid: "68114796"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 DENY <permission> [ ,...n ] ON   
     [ OBJECT :: ][ schema_name ]. object_name [ ( column [ ,...n ] ) ]  
         TO <database_principal> [ ,...n ]   
@@ -60,7 +60,7 @@ DENY <permission> [ ,...n ] ON
  ALL  
  拒絕 ALL 不會拒絕所有可能的權限。 拒絕 ALL 相當於拒絕所有適用於指定物件的 ANSI-92 權限。 ALL 有多種意義，如下所示：  
   
- - 純量函數權限：EXECUTE、REFERENCES。  
+ - 純量函式權限：EXECUTE、REFERENCES。  
  - 資料表值函式權限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
  - 預存程序權限：EXECUTE。  
  - 資料表權限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  

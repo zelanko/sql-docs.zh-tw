@@ -15,15 +15,15 @@ ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 926822356c6e7f9f4d775ca0710ee2f815c0e7f5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1cc39f3a2a849bd60cda71c5988eeb0cadcd9a88
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74094499"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737598"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>建立 SQL Server Agent 作業以封存 Database Mail 訊息及事件記錄檔
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Database Mail 訊息的副本及其附件會隨著 Database Mail 事件記錄檔一起保留在 **msdb** 資料表。 您可能需要定期減少資料表的大小，並封存不再需要的訊息和事件。 下列程序可建立 SQL Server Agent 作業以便自動執行程序。  
   
 -   **開始之前**  ： [必要條件](#Prerequisites)、 [建議](#Recommendations)、 [權限](#Permissions)  
@@ -47,11 +47,11 @@ ms.locfileid: "74094499"
   
 -   第一個程序會建立一個名稱為「封存 Database Mail」的作業，此作業包含下列步驟。  
   
-    1.  將 Database Mail 資料表的所有訊息複製到新資料表，該新資料表是以上個月來命名，格式為 **DBMailArchive_** <年_月>  。  
+    1.  將 Database Mail 資料表的所有訊息複製到新資料表，該新資料表是以上個月來命名，格式為 **DBMailArchive_** <年_月>。  
   
-    2.  將第一個步驟複製之訊息的相關附件，從 Database Mail 資料表複製到新資料表，該新資料表是以上個月來命名，格式為 **DBMailArchive_Attachments_** <年_月>  。  
+    2.  將第一個步驟複製之訊息的相關附件，從 Database Mail 資料表複製到新資料表，該新資料表是以上個月來命名，格式為 **DBMailArchive_Attachments_** <年_月>。  
   
-    3.  將 Database Mail 事件記錄檔中第一個步驟複製之訊息的相關事件，從 Database Mail 資料表複製到新資料表，該新資料表是以上個月來命名，格式為 **DBMailArchive_Log_** <年_月>  。  
+    3.  將 Database Mail 事件記錄檔中第一個步驟複製之訊息的相關事件，從 Database Mail 資料表複製到新資料表，該新資料表是以上個月來命名，格式為 **DBMailArchive_Log_** <年_月>。  
   
     4.  刪除 Database Mail 資料表中已轉移郵件項目的記錄。  
   
@@ -208,7 +208,7 @@ ms.locfileid: "74094499"
   
 5.  在 **[頻率]** 區域中，選取定期執行作業的選項 (例如一個月一次)。  
   
-6.  在 [每日頻率]  區域中，選取 [執行一次於 \<時間>]  。  
+6.  在 [每日頻率] 區域中，選取 [執行一次於 \<time>]。  
   
 7.  視需要設定其他選項，然後按一下 **[確定]** 儲存排程。  
   

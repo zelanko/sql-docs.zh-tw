@@ -1,5 +1,6 @@
 ---
 title: 監視複寫代理程式 | Microsoft Docs
+description: SQL Server 複寫監視器提供複寫活動的系統性檢視，並讓您尋找特定代理程式的資訊。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ ms.assetid: d06ed24f-82d7-4b9e-9e40-cc9780476a71
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: fd19ef065c98022d0f8fecd8e4fd044007759005
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7984491281088f345e3e263356c6dad323d2cf5a
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288065"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807604"
 ---
 # <a name="monitor-replication-agents"></a>監視複寫代理程式
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "76288065"
   
     -   佇列讀取器代理程式  
   
-     透過下列索引標籤，存取與這些代理程式相關聯的資訊和工作： **[代理程式]** (每個發行者和發行集都可使用) 和 **[警告]** (每個發行集都可使用)。 如需詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+     透過下列索引標籤，可存取與這些代理程式建立關聯的資訊和工作：[代理程式] (適用於每個「發行者」和發行集) 和 [警告] (適用於每個發行集)。 如需詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 -   下列代理程式與複寫監視器中的訂閱相關聯：  
   
@@ -47,7 +48,7 @@ ms.locfileid: "76288065"
   
     -   合併代理程式  
   
-     透過下列索引標籤，存取與這些代理程式相關聯的資訊和工作： **[訂閱監看清單]** (每個發行者皆可用) 或者 **[所有訂閱]** 索引標籤 (每個發行者皆可用)。 如需詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+     透過下列索引標籤，可存取與這些代理程式建立關聯的資訊和工作：[訂閱監看清單] (適用於每個「發行者」) 或 [所有訂閱] 索引標籤 (適用於每個發行集)。 如需詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 ## <a name="using-sql-server-management-studio-to-monitor-replication-agents"></a>使用 SQL Server Management Studio 監視複寫代理程式  
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 提供下列用於監視複寫代理程式的對話方塊：  
@@ -76,7 +77,7 @@ ms.locfileid: "76288065"
   
     -   按一下 **[監視器]** 以啟動 **[複寫監視器]** 。  
   
-5.  按一下 [關閉]  。  
+5.  按一下 [關閉] 。  
   
 #### <a name="to-monitor-the-distribution-agent-and-merge-agent-from-the-publisher"></a>若要監視散發代理程式與合併代理程式 (從發行者)  
   
@@ -98,7 +99,7 @@ ms.locfileid: "76288065"
   
     -   對於提取訂閱，按一下 **[檢視作業記錄]** 以啟動 **[記錄檔檢視器]** ，該檢視器會顯示代理程式記錄的輸出。  
   
-6.  按一下 [關閉]  。  
+6.  按一下 [關閉] 。  
   
 #### <a name="to-monitor-the-distribution-agent-and-merge-agent-from-the-subscriber"></a>若要監視散發代理程式與合併代理程式 (從訂閱者)  
   
@@ -116,7 +117,7 @@ ms.locfileid: "76288065"
   
     -   按一下 **[檢視作業記錄]** 以啟動 **[記錄檔檢視器]** ，該檢視器會顯示代理程式記錄的輸出。  
   
-5.  按一下 [關閉]  。  
+5.  按一下 [關閉] 。  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫代理程式概觀](../../../relational-databases/replication/agents/replication-agents-overview.md)  

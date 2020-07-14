@@ -10,26 +10,26 @@ ms.topic: language-reference
 ms.assetid: ed9d7fa3-61a1-4e21-ba43-1ead7dfc74eb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6d31ad18b9a7de5b045a9ed868d20a0f35ab441b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 486820bf4e3bbae793a23625fe687bd875210cc3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71281375"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749794"
 ---
 # <a name="catalogadd_data_tap_by_guid"></a>catalog.add_data_tap_by_guid 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對執行的執行個體，在封裝資料流程中，將資料點選加入至特定的資料流程路徑。  
   
 ## <a name="syntax"></a>語法  
   
 ```sql  
-catalog add_data_tap_by_guid [ @execution_id = ] execution_id  
+catalog.add_data_tap_by_guid [ @execution_id = ] execution_id  
 , [ @dataflow_task_guid = ] dataflow_task_guid   
 , [ @dataflow_path_id_string = ] dataflow_path_id_string  
 , [ @data_filename = ] data_filename  
@@ -47,12 +47,12 @@ catalog add_data_tap_by_guid [ @execution_id = ] execution_id
  [ @dataflow_path_id_string = ] *dataflow_path_id_string*  
  資料流程路徑的識別字串。 路徑會連接兩個資料流程元件。 路徑的 **IdentificationString** 屬性會指定字串。  
   
- 若要尋找識別字串，在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中以滑鼠右鍵按一下兩個資料流程元件之間的路徑，然後按一下 [屬性]  。 **IdentificationString** 屬性會出現在 [屬性]  視窗中。  
+ 若要尋找識別字串，在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中以滑鼠右鍵按一下兩個資料流程元件之間的路徑，然後按一下 [屬性]。 **IdentificationString** 屬性會出現在 [屬性] 視窗中。  
   
  *dataflow_path_id_string* 是 **nvarchar(4000)** 。  
   
  [ @data_filename = ] *data_filename*  
- 儲存點選資料的檔案名稱。 如果資料流程工作是在 Foreach 迴圈或 For 迴圈容器中執行，個別檔案會針對迴圈的每次反覆運算，來儲存點選資料。 每個檔案都會以對應於反覆運算的號碼為字首。 資料點選檔案會寫入至資料夾 "\<SQL Server 安裝資料夾>\130\DTS\\"。 *data_filename* 是 **nvarchar(4000)** 。  
+ 儲存點選資料的檔案名稱。 如果資料流程工作是在 Foreach 迴圈或 For 迴圈容器中執行，個別檔案會針對迴圈的每次反覆運算，來儲存點選資料。 每個檔案都會以對應於反覆運算的號碼為字首。 資料點選檔案會寫入到資料夾 " *\<SQL Server installation folder>* \130\DTS\\"。 *data_filename* 是 **nvarchar(4000)** 。  
   
  [ @max_rows = ] max_rows  
  在資料點選期間擷取的資料列數目。 如果沒有指定此值，則會擷取所有資料列。 max_rows 是 **int**。  

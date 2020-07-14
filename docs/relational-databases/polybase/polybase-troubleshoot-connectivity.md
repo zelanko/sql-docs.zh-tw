@@ -11,12 +11,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 23aaaef5f85b814bda8f576fc6a0cfe671fea8e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5e732d55daa55a8a3abc171ead7b7b1e87e92992
+ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215850"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84203555"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>對 PolyBase Kerberos 的連線問題進行疑難排解
 
@@ -31,7 +31,7 @@ ms.locfileid: "80215850"
 > 這項工具可協助您排除非 SQL Server 的問題，以協助您專注於解決 HDFS Kerberos 設定問題，亦即識別使用者名稱/密碼錯誤設定的問題，以及叢集 Kerberos 設定的錯誤設定。      
 > 此工具完全獨立於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 它作為 Jupyter Notebook 提供，並需要 Azure Data Studio。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 1. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM CU6/[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU3/[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 或更新版本 (已安裝 PolyBase)
 1. 受 Kerberos (Active Directory 或 MIT) 保護的 Hadoop 叢集 (Cloudera 或 Hortonworks)
@@ -89,6 +89,8 @@ PolyBase 具備下列 XML 設定檔，其中包含 Hadoop 叢集的屬性：
     <value>KERBEROS</value>
 </property>
 ```
+> [!NOTE]
+> `polybase.kerberos.realm` 屬性的值必須全部大寫。
 
 若要進行下推作業，之後也必須更新其他 XML，不過只要有設定此檔案，至少就能夠存取 HDFS 檔案系統。
 
@@ -107,7 +109,7 @@ PolyBase 具備下列 XML 設定檔，其中包含 Hadoop 叢集的屬性：
 | *Name Node Port* | 名稱節點的連接埠。 這會參考 CREATE EXTERNAL DATA SOURCE T-SQL 中的 "LOCATION" 引數。 例如，8020。 |
 | *Service Principal* | KDC 的管理服務主體。 這會與 `CREATE DATABASE SCOPED CREDENTIAL` T-SQL 中的 "IDENTITY" 引數相符。|
 | *Service Password* | 將密碼儲存在檔案中，並將檔案路徑傳遞至此處，而不在主控台鍵入密碼。 檔案內容應該要與您在 `CREATE DATABASE SCOPED CREDENTIAL` T-SQL 之 "SECRET" 引數中使用的值相符。 |
-| 遠端 HDFS 檔案路徑 (選擇性)  | 所要存取之現有檔案的路徑。 若未指定，將會使用根 "/"。 |
+| 遠端 HDFS 檔案路徑 (選擇性) | 所要存取之現有檔案的路徑。 若未指定，將會使用根 "/"。 |
 
 ## <a name="example"></a>範例
 
@@ -196,7 +198,7 @@ PolyBase 將會嘗試存取 HDFS，但因為要求未包含必要的服務票證
 ```
 
 ## <a name="common-errors"></a>常見錯誤
-若已執行工具，但是卻「未」  列印目標路徑的檔案屬性 (檢查點 4)，則會在中途擲回例外狀況。 請檢閱例外狀況，並細想在這四個步驟的流程中，是哪個環節的內容出了問題。 請依序思考下列可能發生的常見問題：
+若已執行工具，但是卻「未」列印目標路徑的檔案屬性 (檢查點 4)，則會在中途擲回例外狀況。 請檢閱例外狀況，並細想在這四個步驟的流程中，是哪個環節的內容出了問題。 請依序思考下列可能發生的常見問題：
 
 | 例外狀況及訊息 | 原因 | 
 | --- | --- |

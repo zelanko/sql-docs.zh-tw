@@ -1,5 +1,6 @@
 ---
 title: 原生編譯預存程序 - 資料存取應用程式
+description: 尋找從資料存取應用程式呼叫原生編譯之預存程序的指導方針，其中包含使用 SQL Server Native Client ODBC 驅動程式的範例。
 ms.custom: seo-dt-2019
 ms.date: 03/16/2017
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: abc9aa1f61d241f3fe24196ad9d8ad4244b951f2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 05dcd994a1cf2387bfe7e1a1be46e7a95d24249d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412773"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723370"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>從資料存取應用程式呼叫原生編譯預存程序
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 本主題討論從資料存取應用程式呼叫原生編譯之預存程序的相關指引。
 
@@ -32,7 +33,7 @@ ms.locfileid: "74412773"
 
 ### <a name="sqlclient"></a>SqlClient
 
-- 對於 SqlClient，「備妥」  的執行和「直接」  執行之間沒有差別。 使用具有 CommandType = CommandType.StoredProcedure 的 SqlCommand 來執行預存程序。
+- 對於 SqlClient，「備妥」的執行和「直接」執行之間沒有差別。 使用具有 CommandType = CommandType.StoredProcedure 的 SqlCommand 來執行預存程序。
 
 - SqlClient 不支援備妥的 RPC 程序呼叫。
 
@@ -48,9 +49,9 @@ ms.locfileid: "74412773"
 
 下列建議適用於使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 的 ODBC 驅動程式時的原生編譯預存程序呼叫。
 
-呼叫一次：  呼叫一次預存程序之最有效率的方式是使用 **SQLExecDirect** 和 ODBC CALL 子句來發出直接 RPC 呼叫。 請勿使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXECUTE** 陳述式。 如果預存程序多次呼叫，備妥的執行更有效率。
+呼叫一次：呼叫一次預存程序之最有效率的方式是使用 **SQLExecDirect** 和 ODBC CALL 子句來發出直接 RPC 呼叫。 請勿使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXECUTE** 陳述式。 如果預存程序多次呼叫，備妥的執行更有效率。
 
-呼叫多次：  多次呼叫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預存程序最有效率的方式是透過備妥的 RPC 程序呼叫。 備妥的 RPC 呼叫是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 的 ODBC 驅動程式，執行如下：
+呼叫多次：多次呼叫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預存程序最有效率的方式是透過備妥的 RPC 程序呼叫。 備妥的 RPC 呼叫是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 的 ODBC 驅動程式，執行如下：
 
 1. 開啟資料庫的連接。
 2. 使用 **SQLBindParameter** 繫結參數。

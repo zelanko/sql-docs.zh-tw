@@ -1,29 +1,28 @@
 ---
-title: 使用 Active Directory 驗證 (Kerberos)
-titleSuffix: Azure Data Studio
+title: 使用 Windows 驗證連線您的 SQL Server (Kerberos)
 description: 了解如何啟用 Kerberos，以針對 Azure Data Studio 使用 Active Directory 驗證
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+author: markingmyname
+ms.author: maghan
+ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
-author: meet-bhagdev
-ms.author: meetb
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 8aa4502fca51ef8dc15fceb119297915a64bc682
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c2e6b303217d420d439d510fc3fc24886657684b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957062"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774666"
 ---
-# <a name="connect-name-sos-to-your-sql-server-using-windows-authentication---kerberos"></a>使用 Windows 驗證將 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 連線到您的 SQL Server - Kerberos 
+# <a name="connect-azure-data-studio-to-your-sql-server-using-windows-authentication---kerberos"></a>使用 Windows 驗證將 Azure Data Studio 連線到您的 SQL Server - Kerberos
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 支援使用 Kerberos 連線到 SQL Server。
+Azure Data Studio 支援使用 Kerberos 連線到 SQL Server。
 
-為了在 macOS 或 Linux 上使用整合式驗證 (Windows 驗證)，您必須設定 **Kerberos 票證**，將目前的使用者連結至 Windows 網域帳戶。 
+為了在 macOS 或 Linux 上使用整合式驗證 (Windows 驗證)，您必須設定 **Kerberos 票證**，將目前的使用者連結至 Windows 網域帳戶。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 - 存取已加入網域的 Windows 電腦，以查詢您的 Kerberos 網域控制站。
 - SQL Server 應設定為允許 Kerberos 驗證。 針對在 UNIX 上執行的用戶端驅動程式，只有使用 Kerberos 才支援整合式驗證。 如需詳細資訊，請參閱[使用 Kerberos 整合式驗證連線到 SQL Server](../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)。 針對您嘗試連線的每個 SQL Servr 執行個體，應該會註冊一個 SPN。 如需詳細資訊，請參閱[註冊服務主體名稱](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)。
@@ -167,12 +166,12 @@ klist
 krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 ```
 
-## <a name="connect-using-name-sos"></a>使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 連線
+## <a name="connect-using-azure-data-studio"></a>使用 Azure Data Studio 連線
 
 * 建立新的連線設定檔
 
-* 選擇 [Windows 驗證]  作為驗證類型
+* 選擇 [Windows 驗證] 作為驗證類型
 
-* 完成連線設定檔，按一下 [連線] 
+* 完成連線設定檔，按一下 [連線]
 
-成功連線之後，您的伺服器就會顯示在 [伺服器]  資料看板中。
+成功連線之後，您的伺服器就會顯示在 [伺服器] 資料看板中。

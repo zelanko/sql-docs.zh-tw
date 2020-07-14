@@ -1,5 +1,6 @@
 ---
 title: 設定和使用具有安全記憶體保護區的 Always Encrypted | Microsoft Docs
+description: 了解如何在 SQL Server 中搭配安全記憶體保護區設定及使用 Always Encrypted，以在敏感性資料上啟用更豐富的功能。
 ms.custom: ''
 ms.date: 10/18/2019
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 568944db62ca94048c45450500d3060daa957680
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d73d337e750e287066531017710b733c92a312ff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74317935"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85627024"
 ---
 # <a name="configure-and-use-always-encrypted-with-secure-enclaves"></a>設定和使用具有安全記憶體保護區的 Always Encrypted 
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../../../includes/applies-to-version/sqlserver2019.md)]
 
 [具有安全記憶體保護區的 Always Encrypted](always-encrypted-enclaves.md) 會擴充現有 [Always Encrypted](always-encrypted-database-engine.md) 功能，以啟用更豐富的敏感性資料功能，同時保持資料的機密性。 本文列出設定和使用功能的一般工作。
 

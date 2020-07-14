@@ -1,5 +1,6 @@
 ---
 title: 搭配 FOR XML 使用 AUTO 模式 | Microsoft 文件
+description: 了解如何搭配 FOR XML 子句使用 AUTO 模式，以將查詢結果當作巢狀 XML 元素傳回。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4d8d3674766bfa6cb96a23e53b9f2aee440beb37
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f77aaefd763a1902c1cd4e4be1dbf78e5f85a19a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665200"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758496"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>搭配 FOR XML 使用 AUTO 模式
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   如同 [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)中所述，AUTO 模式會將查詢結果當作巢狀 XML 元素傳回。 這對於從查詢結果產生出來的 XML 外觀，並未提供很大的控制權。 如果您想要產生簡單的階層，AUTO 模式查詢會很有用。 不過， [搭配 FOR XML 使用 EXPLICIT 模式](../../relational-databases/xml/use-explicit-mode-with-for-xml.md) 和 [搭配 FOR XML 使用 PATH 模式](../../relational-databases/xml/use-path-mode-with-for-xml.md) 提供更多控制權和彈性來從查詢結果決定 XML 的形狀。  
   
  FROM 子句中的每個資料表都至少有一資料行是列在 SELECT 子句中，這些資料表是以 XML 元素表示。 若在 FOR XML 子句中指定選用性的 ELEMENTS 選項，SELECT 子句中所列的資料行就會對應至屬性或子元素。  
@@ -122,7 +123,7 @@ FOR XML AUTO, ELEMENTS
 ...  
 ```  
   
- 在此查詢中，建立 \<Cust> 項目時，會一一比較資料列中的 CustomerID 值，因為 CustomerID 是資料表的主索引鍵。 若未將 CustomerID 識別成資料表的主索引鍵，則會一一比較資料列中的所有資料行值 (在此查詢中是 CustomerID、CustomerType)。 若值有所差異，就會加入新的 \<Cust> 項目至 XML。  
+ 在此查詢中，建立 \<Cust> 元素時，會一一比較資料列中的 CustomerID 值，因為 CustomerID 是資料表的主索引鍵。 若未將 CustomerID 識別成資料表的主索引鍵，則會一一比較資料列中的所有資料行值 (在此查詢中是 CustomerID、CustomerType)。 若值有所差異，就會將新的 \<Cust> 元素加入 XML。  
   
  在比較這些資料行的值時，如果所要比較的任何資料行中具有 **text**、 **ntext**、 **image**或 **xml**類型，FOR XML 就會認定該值是不同的 (即使該值可能是相同的)，而不加以比較。 這是因為不支援比較大型物件。 針對所選取的每個資料列，都會將元素加入結果中。 請注意， **(n)varchar(max)** 及 **varbinary(max)** 的資料行會進行比較。  
   

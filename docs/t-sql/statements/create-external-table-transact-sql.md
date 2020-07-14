@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee3ae71f906b56fa91698d5238e2391d928d8be2
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 8b208b63dd096f35faa151f6f739d5e20cc3917b
+ms.sourcegitcommit: 38639b67a135ca1a50a8e38fa61a089efe90e3f1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633364"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84454501"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -93,7 +93,7 @@ column_name <data_type>
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 所要建立資料表的名稱，由一到三個部分組成。 針對外部資料表，SQL 只會儲存資料表中繼資料，以及 Hadoop 或 Azure Blob 儲存體中所參考檔案或資料夾的基本統計資料。 實際上不會有任何資料會移至或儲存於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。
 
-\<欄位定義> [ ,...*n* ] CREATE EXTERNAL TABLE 支援設定資料行名稱、資料類型、可 NULL 性和定序功能。 您無法在外部資料表上使用 DEFAULT CONSTRAINT。
+\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE 支援設定資料行名稱、資料類型、可 NULL 性和定序功能。 您無法在外部資料表上使用 DEFAULT CONSTRAINT。
 
 資料行定義 (包括資料類型及資料行數目) 必須符合外部檔案中的資料。 若有不相符的情形，系統在查詢實際資料時將會拒絕檔案資料列。
 
@@ -113,7 +113,7 @@ DATA_SOURCE = *external_data_source_name* 指定包含外部資料位置的外�
 
 FILE_FORMAT = *external_file_format_name* 指定儲存外部資料檔案類型和壓縮方法的外部檔案格式物件名稱。 若要建立外部檔案格式，請使用 [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)。
 
-拒絕選項：您可以指定拒絕參數，決定 PolyBase 處理從外部資料來源所擷取「已變更」  記錄的方式。 若資料記錄的實際資料類型或資料行數目，與外部資料表的資料行定義不相符，該資料記錄就會被系統視為「已修改」。
+拒絕選項：您可以指定拒絕參數，決定 PolyBase 處理從外部資料來源所擷取「已變更」記錄的方式。 若資料記錄的實際資料類型或資料行數目，與外部資料表的資料行定義不相符，該資料記錄就會被系統視為「已修改」。
 
 當您不指定或變更拒絕值時，PolyBase 就會使用預設值。 拒絕參數的相關資訊會在您搭配 CREATE EXTERNAL TABLE 陳述式建立外部資料表時，以額外中繼資料的形式儲存。 當未來有 SELECT 陳述式或 SELECT INTO SELECT 陳述式從外部資料表中選取資料時，PolyBase 將會使用拒絕選項來判斷在實際的查詢失敗之前，可以拒絕的資料列數目或百分比。 查詢將會傳回 (部分) 結果，直到超過拒絕閾值為止。 接著它便會失敗並顯示適當的錯誤訊息。
 
@@ -610,7 +610,7 @@ column_name <data_type>
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 所要建立資料表的名稱，由一到三個部分組成。 針對外部資料表，SQL 只會儲存資料表中繼資料，以及 Azure SQL Database 中所參考檔案或資料夾的基本統計資料。 不會在 Azure SQL Database 中移動或儲存任何實際資料。
 
-\<欄位定義> [ ,...*n* ] CREATE EXTERNAL TABLE 支援設定資料行名稱、資料類型、可 NULL 性和定序功能。 您無法在外部資料表上使用 DEFAULT CONSTRAINT。
+\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE 支援設定資料行名稱、資料類型、可 NULL 性和定序功能。 您無法在外部資料表上使用 DEFAULT CONSTRAINT。
 
 > [!NOTE]
 > Azure SQL Database 外部資料表中的資料行不支援 `Text`、`nText` 和 `XML` 資料類型。
@@ -756,7 +756,7 @@ column_name <data_type>
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 所要建立資料表的名稱，由一到三個部分組成。 針對外部資料表，只有資料表中繼資料，以及 Azure Data Lake、Hadoop 或 Azure Blob 儲存體中所參考檔案或資料夾的基本統計資料。 建立外部資料表時，不會移動或儲存實際資料。
 
-\<欄位定義> [ ,...*n* ] CREATE EXTERNAL TABLE 支援設定資料行名稱、資料類型、可 NULL 性和定序功能。 您無法在外部資料表上使用 DEFAULT CONSTRAINT。
+\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE 支援設定資料行名稱、資料類型、可 NULL 性和定序功能。 您無法在外部資料表上使用 DEFAULT CONSTRAINT。
 
 > [!NOTE]
 > Azure SQL 資料倉儲外部資料表中的資料行不支援 `Text`、`nText` 和 `XML` 資料類型。
@@ -777,7 +777,7 @@ DATA_SOURCE = *external_data_source_name* 指定包含外部資料位置的外�
 
 FILE_FORMAT = *external_file_format_name* 指定儲存外部資料檔案類型和壓縮方法的外部檔案格式物件名稱。 若要建立外部檔案格式，請使用 [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)。
 
-拒絕選項：您可以指定拒絕參數，決定 PolyBase 處理從外部資料來源所擷取「已變更」  記錄的方式。 若資料記錄的實際資料類型或資料行數目，與外部資料表的資料行定義不相符，該資料記錄就會被系統視為「已修改」。
+拒絕選項：您可以指定拒絕參數，決定 PolyBase 處理從外部資料來源所擷取「已變更」記錄的方式。 若資料記錄的實際資料類型或資料行數目，與外部資料表的資料行定義不相符，該資料記錄就會被系統視為「已修改」。
 
 當您不指定或變更拒絕值時，PolyBase 就會使用預設值。 拒絕參數的相關資訊會在您搭配 CREATE EXTERNAL TABLE 陳述式建立外部資料表時，以額外中繼資料的形式儲存。 當未來有 SELECT 陳述式或 SELECT INTO SELECT 陳述式從外部資料表中選取資料時，PolyBase 將會使用拒絕選項來判斷在實際的查詢失敗之前，可以拒絕的資料列數目或百分比。 查詢將會傳回 (部分) 結果，直到超過拒絕閾值為止。 接著它便會失敗並顯示適當的錯誤訊息。
 
@@ -829,7 +829,9 @@ REJECTED_ROW_LOCATION = *Directory Location*
 - **ALTER ANY SCHEMA**
 - **ALTER ANY EXTERNAL DATA SOURCE**
 - **ALTER ANY EXTERNAL FILE FORMAT**
-- **CONTROL DATABASE**
+
+> [!NOTE]
+> 只有建立主要 MASTER KEY、DATABASE SCOPED CREDENTIAL 和 EXTERNAL DATA SOURCE 時，才需要 CONTROL DATABASE 權限
 
 請注意，建立外部資料來源的登入，必須具有讀取和寫入位於 Hadoop 或 Azure Blob 儲存體上之外部資料來源的權限。
 
@@ -982,7 +984,7 @@ column_name <data_type>
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 所要建立資料表的名稱，由一到三個部分組成。 針對外部資料表，Analytics Platform System 只會儲存資料表中繼資料，以及 Hadoop 或 Azure Blob 儲存體中所參考檔案或資料夾的基本統計資料。 不會在 Analytics Platform System 中移動或儲存任何實際資料。
 
-\<欄位定義> [ ,...*n* ] CREATE EXTERNAL TABLE 支援設定資料行名稱、資料類型、可 NULL 性和定序功能。 您無法在外部資料表上使用 DEFAULT CONSTRAINT。
+\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE 支援設定資料行名稱、資料類型、可 NULL 性和定序功能。 您無法在外部資料表上使用 DEFAULT CONSTRAINT。
 
 資料行定義 (包括資料類型及資料行數目) 必須符合外部檔案中的資料。 若有不相符的情形，系統在查詢實際資料時將會拒絕檔案資料列。
 
@@ -1002,7 +1004,7 @@ DATA_SOURCE = *external_data_source_name* 指定包含外部資料位置的外�
 
 FILE_FORMAT = *external_file_format_name* 指定儲存外部資料檔案類型和壓縮方法的外部檔案格式物件名稱。 若要建立外部檔案格式，請使用 [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)。
 
-拒絕選項：您可以指定拒絕參數，決定 PolyBase 處理從外部資料來源所擷取「已變更」  記錄的方式。 若資料記錄的實際資料類型或資料行數目，與外部資料表的資料行定義不相符，該資料記錄就會被系統視為「已修改」。
+拒絕選項：您可以指定拒絕參數，決定 PolyBase 處理從外部資料來源所擷取「已變更」記錄的方式。 若資料記錄的實際資料類型或資料行數目，與外部資料表的資料行定義不相符，該資料記錄就會被系統視為「已修改」。
 
 當您不指定或變更拒絕值時，PolyBase 就會使用預設值。 拒絕參數的相關資訊會在您搭配 CREATE EXTERNAL TABLE 陳述式建立外部資料表時，以額外中繼資料的形式儲存。 當未來有 SELECT 陳述式或 SELECT INTO SELECT 陳述式從外部資料表中選取資料時，PolyBase 將會使用拒絕選項來判斷在實際的查詢失敗之前，可以拒絕的資料列數目或百分比。 查詢將會傳回 (部分) 結果，直到超過拒絕閾值為止。 接著它便會失敗並顯示適當的錯誤訊息。
 

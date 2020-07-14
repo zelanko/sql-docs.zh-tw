@@ -26,15 +26,15 @@ ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7efc30e37b1242c66df856f79944de687650b99d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a2d74236b0c58776a43f4f2a56f7f240de72d2c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982572"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002505"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   在資料表、索引檢視表或外部資料表的一或多個資料行建立查詢最佳化統計資料。 對於大部分查詢而言，查詢最佳化工具已經產生高品質查詢計劃的必要統計資料。不過，在少數情況下，您必須使用 CREATE STATISTICS 來建立其他統計資料或修改查詢設計，以便改善查詢效能。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "73982572"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 -- Create statistics on an external table  
@@ -88,7 +88,7 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
     [ PAGECOUNT = numeric_contant ] 
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE STATISTICS statistics_name   
@@ -243,6 +243,7 @@ MAXDOP = *max_degree_of_parallelism*
 * 您最多可以針對每個統計資料物件列出 64 個資料行。
 * MAXDOP 選項與 STATS_STREAM、ROWCOUNT 及 PAGECOUNT 選項不相容。
 * 如果使用 MAXDOP 選項，會受限於 Resource Governor 工作負載群組 MAX_DOP 設定。
+* Azure SQL Database 不支援在外部資料表上使用 CREATE 和 DROP STATISTICS。
   
 ## <a name="examples"></a>範例  
 
@@ -278,7 +279,7 @@ GO
 ```  
   
 ### <a name="d-create-statistics-on-an-external-table"></a>D. 在外部資料表上建立統計資料  
- 在外部資料表上建立統計資料時，除了提供資料行清單之外，您唯一要做的決定是要透過為資料列進行取樣或透過掃描所有資料列來建立統計資料。  
+ 在外部資料表上建立統計資料時，除了提供資料行清單之外，您唯一要做的決定是要透過為資料列進行取樣或透過掃描所有資料列來建立統計資料。 Azure SQL Database 不支援在外部資料表上使用 CREATE 和 DROP STATISTICS。
   
  由於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會從外部資料表匯入資料到暫存資料表中，以建立統計資料，因此完整掃描選項會花費更長的時間。 針對大型資料表，預設的取樣方法通常就已足夠。  
   

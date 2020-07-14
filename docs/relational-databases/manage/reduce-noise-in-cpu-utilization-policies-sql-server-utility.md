@@ -1,5 +1,6 @@
 ---
 title: 降低 CPU 使用量原則的雜訊 (SQL Server 公用程式) | Microsoft Docs
+description: 檢視減少 SQL Server 公用程式結果中的雜訊和不必要違規的策略。 查看哪一些原則選項會影響處理器使用率報告。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 94bf4d93-c0ff-4869-bde7-80c24866092e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a9fc6db57277044267a89cc89e6c196c782ea920
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3617249a1309a86c5ff0a083f3c0db15ee91299d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115346"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773538"
 ---
 # <a name="reduce-noise-in-cpu-utilization-policies-sql-server-utility"></a>降低 CPU 使用量原則的雜訊 (SQL Server 公用程式)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用下列策略，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式資源使用量原則中減少報告雜訊及不必要的違規。  
   
 ## <a name="how-frequently-should-processor-utilization-be-in-violation-before-it-is-reported-as-overutilized"></a>將處理器使用量報告為過高之前，其違規的頻率應該是多少？  

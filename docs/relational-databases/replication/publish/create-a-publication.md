@@ -1,5 +1,6 @@
 ---
 title: 建立發行集 | Microsoft 文件
+description: 了解如何使用 SQL Server Management Studio、Transact-SQL 或 Replication Management Objects，在 SQL Server 中建立發行集。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5bb28692ee8e4b9cc70554b2589025db57291fc7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: af5e23db429ddd7dcb41b6bf84c1c513e0332609
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286520"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807898"
 ---
 # <a name="create-a-publication"></a>建立發行集
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "76286520"
   
 -   **若要建立發行集並定義發行項，請使用：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -57,7 +58,7 @@ ms.locfileid: "76286520"
   
 #### <a name="to-create-a-publication-and-define-articles"></a>建立發行集並定義發行項  
   
-1.  連線到 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的發行者，然後展開伺服器節點。  
+1.  連線至 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的發行者，然後展開伺服器節點。  
   
 2.  展開 **[複寫]** 資料夾，然後以滑鼠右鍵按一下 **[本機發行集]** 資料夾。  
   
@@ -110,7 +111,7 @@ ms.locfileid: "76286520"
   
     -   如果您不確定發行的資料庫是否有記錄讀取器代理程式作業存在，請在發行集資料庫的發行者端執行 [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)。  
   
-    -   如果結果集是空的，請建立記錄讀取器代理程式作業。 在發行者端，執行 [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)。 為 **\@job_name** 和 **\@password** 指定執行代理程式所使用的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 認證。 如果代理程式會在連接到發行者時使用 SQL Server 驗證，您也必須為  publisher_security_mode **指定 \@0** 值，並為 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]publisher_login **和 \@** publisher_password**指定 \@**  的登入資訊。 請繼續進行步驟 3。  
+    -   如果結果集是空的，請建立記錄讀取器代理程式作業。 在發行者端，執行 [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)。 為 **\@job_name** 和 **\@password** 指定執行代理程式所使用的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 認證。 如果代理程式會在連接到發行者時使用 SQL Server 驗證，您也必須為 **\@publisher_security_mode** 指定 **0** 值，並為 **\@publisher_login** 和 **\@publisher_password**指定 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的登入資訊。 請繼續進行步驟 3。  
   
 3.  在發行者端，執行 [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)。 為 **\@publication** 指定發行集名稱，並為 **\@repl_freq** 參數指定 **snapshot** 值 (適用於快照式發行集) 或 **continuous** (適用於交易式發行集) 值。 指定任何其他發行集選項。 這樣會定義此發行集。  
   

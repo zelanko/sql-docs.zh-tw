@@ -1,5 +1,6 @@
 ---
 title: 建立原生編譯的預存程序 | Microsoft Docs
+description: 了解僅針對原生編譯的預存程序支援的 Transact-SQL 功能。 查看如何在 SQL Server 中建立原生編譯的預存程序。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb7b029527eec87c87b9b21b4da8aff5e289424e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5ef2ee1bbc863de8f3be94733beac3f04fa90b3c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68032025"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723291"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>建立原生編譯的預存程序
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 原生編譯預存程序不會實作完整 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可程式性和查詢介面區。 某些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 建構無法在原生編譯的預存程序內使用。 如需詳細資訊，請參閱 [原生編譯的 T-SQL 模組支援的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)。  
   
@@ -33,7 +34,7 @@ ms.locfileid: "68032025"
   
     -   DECLARE @myVarchar  varchar(32)  **not null = "Hello"** ; -- *(必須初始化為值。)*  
   
-    -   SET @myVarchar **= null**; -- (編譯，但是在執行階段期間會失敗。)   
+    -   SET @myVarchar **= null**; -- (編譯，但是在執行階段期間會失敗。)  
   
 -   原生編譯預存程序的結構描述繫結。  
   

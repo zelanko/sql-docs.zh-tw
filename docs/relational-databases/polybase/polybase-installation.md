@@ -11,20 +11,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: d6c9585f536c92e1f2776831434614c59919ddf3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cb70f4f5746bace6f4f7ad097a852853fea6c3ca
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80217112"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901287"
 ---
 # <a name="install-polybase-on-windows"></a>在 Windows 上安裝 PolyBase
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 若要安裝 SQL Server 試用版，請移至 [SQL Server 評估版](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)。 
    
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
    
 - 64 位元 SQL Server Evaluation 版。  
    
@@ -66,16 +66,16 @@ ms.locfileid: "80217112"
    
 1. 執行 SQL Server setup.exe。   
    
-2. 選取 [安裝]  ，然後選取 [新的獨立 SQL Server 安裝或新增功能]  。  
+2. 選取 [安裝]，然後選取 [新的獨立 SQL Server 安裝或新增功能]。  
    
-3. 在 [功能選取] 頁面上，選取 [適用於外部資料的 PolyBase 查詢服務]  。  
+3. 在 [功能選取] 頁面上，選取 [適用於外部資料的 PolyBase 查詢服務]。  
 
    ![PolyBase 服務](../../relational-databases/polybase/media/install-wizard.png "PolyBase 服務")  
    
    >[!NOTE]
-   >SQL Server 2019 PolyBase 現在包含額外選項 [適用於 HDFS 資料來源的 Java 連接器]  。 如需此功能的詳細資訊，請參閱 [SQL Server 預覽功能](https://cloudblogs.microsoft.com/sqlserver/2019/04/24/sql-server-2019-community-technology-preview-2-5-is-now-available/) \(英文\)。
+   >SQL Server 2019 PolyBase 現在包含額外選項 [適用於 HDFS 資料來源的 Java 連接器]。 如需此功能的詳細資訊，請參閱 [SQL Server 預覽功能](https://cloudblogs.microsoft.com/sqlserver/2019/04/24/sql-server-2019-community-technology-preview-2-5-is-now-available/) \(英文\)。
    
-4. 在 [伺服器設定] 頁面上，將 [SQL Server PolyBase 引擎服務]  和 [SQL Server PolyBase 資料移動服務]  設定為在同一個網域帳戶下執行。  
+4. 在 [伺服器設定] 頁面上，將 [SQL Server PolyBase 引擎服務] 和 [SQL Server PolyBase 資料移動服務] 設定為在同一個網域帳戶下執行。  
 
    >[!IMPORTANT]
    >在 PolyBase 向外延展群組中，所有節點上的 PolyBase 引擎和 PolyBase 資料移動服務必須在同一個網域帳戶執行。 請參閱 [PolyBase 向外延展群組](#enable)。
@@ -179,7 +179,7 @@ SELECT SERVERPROPERTY ('IsPolyBaseInstalled') AS IsPolyBaseInstalled;
 
 SQL Server PolyBase 安裝程式會在電腦上建立下列防火牆規則：  
    
-- SQL Server PolyBase - Database Engine - \<SQLServerInstanceName> (TCP-In)  
+- SQL Server PolyBase - 資料庫引擎 - \<SQLServerInstanceName> (TCP-In)  
    
 - SQL Server PolyBase - PolyBase 服務 - \<SQLServerInstanceName> (TCP-In)  
 
@@ -191,11 +191,11 @@ SQL Server PolyBase 安裝程式會在電腦上建立下列防火牆規則：
 
 1. 開啟 [ **控制台**]。  
 
-2. 選取 [系統及安全性]  ，然後選取 [Windows 防火牆]  。  
+2. 選取 [系統及安全性]，然後選取 [Windows 防火牆]。  
    
-3. 選取 [進階設定]  ，然後選取 [輸入規則]  。  
+3. 選取 [進階設定]，然後選取 [輸入規則]。  
    
-4. 以滑鼠右鍵按一下已停用的規則，然後選取 [啟用規則]  。  
+4. 以滑鼠右鍵按一下已停用的規則，然後選取 [啟用規則]。  
    
 ### <a name="polybase-service-accounts"></a>PolyBase 服務帳戶
 

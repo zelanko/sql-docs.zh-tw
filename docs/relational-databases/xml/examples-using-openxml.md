@@ -1,5 +1,6 @@
 ---
 title: 範例：使用 OPENXML | Microsoft Docs
+description: 檢視示範如何使用 OPENXML 來建立 XML 文件資料列集檢視的範例。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -26,15 +27,15 @@ helpviewer_keywords:
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4ea3ad1c2f7cb482888f0cd4d31a91f9975745b7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 560e3b6ff5b9beeed4dcf93f831a51b941b9d74e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67943389"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729967"
 ---
 # <a name="examples-using-openxml"></a>範例：使用 OPENXML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   在此主題下的範例將說明如何使用 OPENXML 來建立 XML 文件的資料列集檢視。 如需 OPENXML 語法的相關資訊，請參閱 [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)。 範例中將說明 OPENXML 的各個方面，但是不指定 OPENXML 的中繼屬性。 如需如何指定 OPENXML 的中繼屬性的詳細資訊，請參閱 [在 OPENXML 中指定中繼屬性](../../relational-databases/xml/specify-metaproperties-in-openxml.md)。  
   
 ## <a name="examples"></a>範例  
@@ -605,25 +606,25 @@ id  lname   xmlname                   OverFlow
 -   假如 WITH 子句中的資料行是具類型的 XML 資料行，但 XML 執行個體不符合此結構描述，則會傳回錯誤。  
   
 ### <a name="j-retrieving-individual-values-from-multivalued-attributes"></a>J. 從多值屬性中擷取個別的值  
- XML 文件可以擁有多重值的屬性。 例如， **IDREFS** 屬性可為多重值。 在 XML 文件中，多重值的屬性值是指定為字串，並以空格區隔其值。 在下列 XML 文件中，\<學生> 項目的 **attends** 屬性與 \<班級> 的 **attendedBy** 屬性為多重值。 從多重值 XML 屬性中擷取個別的值，並將每個值儲存於資料庫中的個別資料列需要額外的工作。 此範例顯示其處理過程。  
+ XML 文件可以擁有多重值的屬性。 例如， **IDREFS** 屬性可為多重值。 在 XML 文件中，多重值的屬性值是指定為字串，並以空格區隔其值。 在下列 XML 文件中，\<Student> 元素的 **attends** 屬性與 \<Class> 的 **attendedBy** 屬性為多重值。 從多重值 XML 屬性中擷取個別的值，並將每個值儲存於資料庫中的個別資料列需要額外的工作。 此範例顯示其處理過程。  
   
  此範例 XML 文件由下列元素構成：  
   
--   \<學生>  
+-   \<Student>  
   
      **id** (學生識別碼)、 **name**與 **attends** 屬性。 **attends** 屬性為多重值屬性。  
   
--   \<班級>  
+-   \<Class>  
   
      **id** (班級識別碼)、 **name**與 **attendedBy** 屬性。 **attendedBy** 屬性為多重值屬性。  
   
- \<學生> 中的 **attends** 屬性與 \<班級> 中的 **attendedBy** 屬性代表學生與類別資料表之間的 **m:n** 關聯性。 一位學生可以選擇多種學科而一種學科可以收授多位學生。  
+ \<Student> 中的 **attends** 屬性與 \<Class> 中的 **attendedBy** 屬性代表學生與類別資料表之間的 **m:n** 關聯性。 一位學生可以選擇多種學科而一種學科可以收授多位學生。  
   
  假設您要切割此文件並將文件儲存於資料庫，如下所示：  
   
--   將 \<學生> 資料儲存於 Students 資料表中。  
+-   將 \<Student> 資料儲存於 Students 資料表中。  
   
--   將 \<班級> 資料儲存於 Courses 資料表中。  
+-   將 \<Class> 資料儲存於 Courses 資料表中。  
   
 -   將 Student 與 Class 之間的 **m:n** 關聯性資料儲存於 CourseAttendence 資料表中。 取出這些值需要額外的工作。 若要擷取此資訊並將之儲存於資料表，請使用下列預存程序：  
   
@@ -633,7 +634,7 @@ id  lname   xmlname                   OverFlow
   
     -   **Extract_idrefs_values**  
   
-         從每個 \<課程> 項目中擷取個別的學生識別碼。 使用邊緣資料表來擷取這些值。  
+         從每個 \<Course> 元素中擷取個別的學生識別碼。 使用邊緣資料表來擷取這些值。  
   
  以下為其步驟：  
   

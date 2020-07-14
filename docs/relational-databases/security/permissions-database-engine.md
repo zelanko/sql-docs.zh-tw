@@ -1,5 +1,6 @@
 ---
 title: 權限 (Database Engine) | Microsoft Docs
+description: 請參閱此 SQL Server 權限的完整清單，找出哪些權限適用於您所使用的平台。
 ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8488462e75a6f836a1b77c49052a9cfdd0c82d2e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3f6155dd29c2d4afd5f422ad3499521451ccfc82
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68995856"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009398"
 ---
 # <a name="permissions-database-engine"></a>權限 (Database Engine)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性實體都具有可授與主體的關聯權限。 在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中，指派給登入與伺服器角色的權限會在伺服器層級管理，而指派給資料庫使用者與資料庫角色的權限則會在資料庫層級進行管理。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 模型的權限與資料庫權限系統相同，但無法使用伺服器層級的權限。 本主題包含完整的權限清單。 如需權限的一般實作，請參閱 [資料庫引擎權限使用者入門](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)。  
   
@@ -51,11 +52,11 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
   
      授與變更特定安全性實體之屬性 (除了擁有權之外) 的能力。 在特定範圍授與 ALTER 權限時，也會一併授與改變、建立或卸除該範圍內包含之任何安全性實體的能力。 例如，結構描述上的 ALTER 權限包括建立、改變與卸除結構描述之物件的能力。  
   
--   ALTER ANY \<*伺服器安全性實體*>，其中「伺服器安全性實體」  可以是任何伺服器安全性實體。  
+-   ALTER ANY \<*Server Securable*>，其中 *Server Securable* 可以是任何伺服器安全性實體。  
   
      授與 *伺服器安全性實體*的 CREATE、ALTER 或 DROP 個別執行個體的能力。 例如，ALTER ANY LOGIN 會授與建立、改變或卸除執行個體中任何登入的能力。  
   
--   ALTER ANY \<*資料庫安全性實體*>，其中「資料庫安全性實體」  可以是資料庫層級上的任何安全性實體。  
+-   ALTER ANY \<*Database Securable*>，其中 *Database Securable* 可以是資料庫層級上的任何安全性實體。  
   
      授與 *資料庫安全性實體*的 CREATE、ALTER 或 DROP 個別執行個體能力。 例如，ALTER ANY SCHEMA 會授與建立、改變或卸除資料庫中任何結構描述的能力。  
   
@@ -63,23 +64,23 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
   
      讓被授與者可以取得被授與之安全性實體的擁有權。  
   
--   IMPERSONATE \<*登入*>  
+-   IMPERSONATE \<*Login*>  
   
      讓被授與者可以模擬登入。  
   
--   IMPERSONATE \<*使用者*>  
+-   IMPERSONATE \<*User*>  
   
      讓被授與者可以模擬使用者。  
   
--   CREATE \<*伺服器安全性實體*>  
+-   CREATE \<*Server Securable*>  
   
      為被授與者授與建立 *伺服器安全性實體*的能力。  
   
--   CREATE \<*資料庫安全性實體*>  
+-   CREATE \<*Database Securable*>  
   
      為被授與者授與建立 *資料庫安全性實體*的能力。  
   
--   CREATE \<*包含結構描述的安全性實體*>  
+-   CREATE \<*Schema-contained Securable*>  
   
      授與建立結構描述包含的安全性實體之能力。 然而，需要結構描述上的 ALTER 權限才能在特定結構描述中建立該安全性實體。  
   
@@ -102,8 +103,8 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |權限|適用於|  
 |----------------|----------------|  
 |ALTER|除了 TYPE 之外的所有物件類別。|  
-|CONTROL|所有物件類別︰ <br />AGGREGATE、<br />APPLICATION ROLE、<br />ASSEMBLY、<br />ASYMMETRIC KEY、<br />AVAILABILITY GROUP、<br />CERTIFICATE、<br />CONTRACT、<br />CREDENTIALS, DATABASE、<br />DATABASE SCOPED CREDENTIAL、<br /> DEFAULT、<br />ENDPOINT、<br />FULLTEXT CATALOG、<br />FULLTEXT STOPLIST、<br />FUNCTION、<br />LOGIN、<br />MESSAGE TYPE、<br />PROCEDURE、<br />QUEUE、 <br />REMOTE SERVICE BINDING、<br />ROLE、<br />ROUTE、<br />RULE、<br />SCHEMA、<br />SEARCH PROPERTY LIST、<br />SERVER、<br />SERVER ROLE、<br />SERVICE、<br />SYMMETRIC KEY、<br />SYNONYM、<br />TABLE、<br />TYPE、USER、<br />VIEW，以及<br />XML SCHEMA COLLECTION|  
-|刪除|除了 DATABASE SCOPED CONFIGURATION 及 SERVER 以外的所有物件類別。|  
+|CONTROL|所有物件類別︰ <br />AGGREGATE、<br />APPLICATION ROLE、<br />ASSEMBLY、<br />ASYMMETRIC KEY、<br />AVAILABILITY GROUP、<br />CERTIFICATE、<br />CONTRACT、<br />CREDENTIALS, DATABASE、<br />DATABASE SCOPED CREDENTIAL、<br /> DEFAULT、<br />ENDPOINT、<br />FULLTEXT CATALOG、<br />FULLTEXT STOPLIST、<br />FUNCTION、<br />LOGIN、<br />MESSAGE TYPE、<br />PROCEDURE、<br />QUEUE、 <br />REMOTE SERVICE BINDING、<br />ROLE、<br />ROUTE、<br />RULE、<br />SCHEMA、<br />SEARCH PROPERTY LIST、<br />SERVER、<br />SERVER ROLE、<br />SERVICE、<br />SYMMETRIC KEY、<br />SYNONYM、<br />TABLE、<br />TYPE、<br /> USER、<br />VIEW，以及<br />XML SCHEMA COLLECTION|  
+|刪除|除了 DATABASE SCOPED CONFIGURATION、SERVER 及 TYPE 之外的所有物件類別。|  
 |執行 CREATE 陳述式之前，請先執行|CLR 類型、外部指令碼、程序 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 與 CLR)、純量與彙總函式 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 與 CLR)，及同義字|  
 |IMPERSONATE|登入和使用者|  
 |Insert|同義字、資料表與資料行、檢視與資料行。 權限可以在資料庫、結構描述或物件層級授與。|  

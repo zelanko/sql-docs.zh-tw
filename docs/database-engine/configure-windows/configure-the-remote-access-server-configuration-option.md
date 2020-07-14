@@ -1,5 +1,6 @@
 ---
 title: 設定 remote access 伺服器組態選項 | Microsoft Docs
+description: 了解即將淘汰之遠端存取選項的替代方案。 檢視可用來對 SQL Server 連線問題進行疑難排解的其他來源。
 ms.custom: ''
 ms.date: 08/11/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - remote servers [SQL Server], stored procedure execution
 ms.assetid: f5de748d-1c55-4714-9661-38fe62e5095f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 52d6f73b585f3d0857186bef9c6c440e8655adc1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fba193e5f6493e722bd1171c333b4aa2e700ff50
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012337"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785802"
 ---
 # <a name="configure-the-remote-access-server-configuration-option"></a>設定 remote access 伺服器組態選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   本主題是關於「遠端存取」功能。 這個組態選項是即將淘汰的模糊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通訊功能，建議您不要使用這項功能。 如果您因為無法連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]而到達此頁面，請改為參閱下列其中一項主題：  
   
@@ -63,7 +64,7 @@ ms.locfileid: "68012337"
   
 -   **使用下列方法設定 remote access 選項：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -73,7 +74,7 @@ ms.locfileid: "68012337"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
--   [遠端存取]  選項只適用於透過 [sp_addserver](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md) 新增的伺服器，且其包含回溯相容性。  
+-   [遠端存取] 選項只適用於透過 [sp_addserver](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md) 新增的伺服器，且其包含回溯相容性。  
   
 ###  <a name="security"></a><a name="Security"></a> Security  
   
@@ -84,7 +85,7 @@ ms.locfileid: "68012337"
   
 #### <a name="to-configure-the-remote-access-option"></a>設定 remote access 選項  
   
-1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]  。  
+1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
   
 2.  按一下 **[連接]** 節點。  
   

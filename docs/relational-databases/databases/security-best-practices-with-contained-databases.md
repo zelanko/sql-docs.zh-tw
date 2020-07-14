@@ -1,5 +1,6 @@
 ---
 title: 自主資料庫的安全性最佳做法 | Microsoft Docs
+description: 了解並減輕自主資料庫的獨特威脅，包括那些與 SQL Server 中的 USER WITH PASSWORD 驗證程序相關的風險。
 ms.custom: ''
 ms.date: 03/14/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: jaszymas
-ms.openlocfilehash: 4d7b428534462779abeb72c65b05f551bfd4b0eb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 20b864e61050b4bd49582d5579f222091e8c7329
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75246131"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759007"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>自主資料庫的安全性最佳做法
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   自主資料庫具有一些 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 系統管理員應該了解並降低的獨特威脅。 其中大部分威脅都與 **USER WITH PASSWORD** 驗證處理序相關，而這個處理序會將驗證界限從 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 層級移至資料庫層級。  
   
@@ -56,7 +57,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ### <a name="creating-a-user-that-duplicates-a-login"></a>建立重複登入的使用者  
  如果您使用與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入相同的名稱來建立具有密碼之自主資料庫使用者，而且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入連接時指定自主資料庫做為初始目錄，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入將無法連接。 系統會將此連接評估為自主資料庫上具有密碼主體之自主資料庫使用者，而不是以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入為基礎的使用者。 這可能會導致系統蓄意或意外阻斷 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的服務。  
   
--   最佳作法是系統管理員 ( **sysadmin** ) 固定伺服器角色的成員應該考慮永遠不使用初始目錄選項來連接。 這樣會將登入連接至 master 資料庫，並且避免資料庫擁有者濫用登入嘗試的任何嘗試行為。 然後，系統管理員就可以使用 **USE** _\<資料庫>_ 陳述式來變更為自主資料庫。 此外，您也可以將登入的預設資料庫設定為自主資料庫，以便完成登入 **master**的作業，然後將登入傳送至自主資料庫。  
+-   最佳作法是系統管理員 ( **sysadmin** ) 固定伺服器角色的成員應該考慮永遠不使用初始目錄選項來連接。 這樣會將登入連接至 master 資料庫，並且避免資料庫擁有者濫用登入嘗試的任何嘗試行為。 然後，系統管理員就可以使用 **USE** _\<database>_ 陳述式來變更為自主資料庫。 此外，您也可以將登入的預設資料庫設定為自主資料庫，以便完成登入 **master**的作業，然後將登入傳送至自主資料庫。  
   
 -   最佳作法是不要使用具有密碼且與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入具有相同名稱之自主資料庫使用者。  
   
@@ -65,7 +66,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 -   當自主資料庫存在時，非自主資料庫的資料庫使用者應該連接至 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 而不使用初始目錄，或指定非自主資料庫的資料庫名稱做為初始目錄。 這樣可避免連接至 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 系統管理員直接控制權較低之自主資料庫。  
   
 ### <a name="increasing-access-by-changing-the-containment-status-of-a-database"></a>變更資料庫的內含項目狀態來提高存取權  
- 擁有 **ALTER ANY DATABASE** 權限的登入 (例如 **dbcreator** 固定伺服器角色的成員) 以及非自主資料庫中擁有 **CONTROL DATABASE** 權限的使用者 (例如 **db_owner** 固定資料庫角色的成員) 都可以變更資料庫的內含項目設定。 如果資料庫的內含項目設定從 **NONE** 變更為 **PARTIAL** 或 **FULL**，您就可以透過建立具有密碼之自主資料庫使用者，授與使用者存取權。 這樣可能會在未經 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員認可或同意的情況下提供存取權。 若要防止包含任何資料庫，請將 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [自主資料庫驗證]  選項設為 0。 若要針對選取之自主資料庫防止具有密碼之自主資料庫使用者連接，請使用登入觸發程序來取消具有密碼之自主資料庫使用者所進行的登入嘗試。  
+ 擁有 **ALTER ANY DATABASE** 權限的登入 (例如 **dbcreator** 固定伺服器角色的成員) 以及非自主資料庫中擁有 **CONTROL DATABASE** 權限的使用者 (例如 **db_owner** 固定資料庫角色的成員) 都可以變更資料庫的內含項目設定。 如果資料庫的內含項目設定從 **NONE** 變更為 **PARTIAL** 或 **FULL**，您就可以透過建立具有密碼之自主資料庫使用者，授與使用者存取權。 這樣可能會在未經 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員認可或同意的情況下提供存取權。 若要防止包含任何資料庫，請將 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [自主資料庫驗證] 選項設為 0。 若要針對選取之自主資料庫防止具有密碼之自主資料庫使用者連接，請使用登入觸發程序來取消具有密碼之自主資料庫使用者所進行的登入嘗試。  
   
 ### <a name="attaching-a-contained-database"></a>附加自主資料庫  
  透過附加自主資料庫，系統管理員可能會將 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體的存取權提供給不想要的使用者。 擔心這項風險的系統管理員可以在 **RESTRICTED_USER** 模式下讓資料庫上線，以便防止系統驗證具有密碼之自主資料庫使用者。 此時，只有透過登入授權的主體才能存取 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  

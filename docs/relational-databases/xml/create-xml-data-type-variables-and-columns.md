@@ -1,5 +1,6 @@
 ---
 title: 建立 XML 資料類型變數與資料行 | Microsoft Docs
+description: 了解如何在 SQL Server 中建立 XML 資料類型的資料行和變數。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 71bda739146d1729cdf09d510c8d8c7dfb835a84
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 0471d842c56abf7ca888542d36ea9b688797dd64
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664615"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85691473"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>建立 XML 資料類型變數與資料行
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   **xml** 資料類型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的內建資料類型，而且與其他內建類型有些相似，例如 **int** 與 **varchar**。 如同其他內建類型，當您建立資料表作為變數類型、參數類型、函數傳回類型，或是在 **CAST 和 CONVERT** 中建立資料表時，可以使用 [xml](../../t-sql/functions/cast-and-convert-transact-sql.md)資料類型作為資料行類型。  
   
 ## <a name="creating-columns-and-variables"></a>建立資料行和變數  

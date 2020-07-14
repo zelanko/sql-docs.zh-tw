@@ -1,7 +1,8 @@
 ---
-title: PREDICT (Transact-SQL) | Microsoft Docs
+title: PREDICT (Transact-SQL)
+titleSuffix: SQL machine learning
 ms.custom: ''
-ms.date: 10/24/2019
+ms.date: 06/26/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -16,26 +17,28 @@ helpviewer_keywords:
 - PREDICT clause
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c97363e7f13c3b42cf447ecf69929171544f3a6b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions'
+ms.openlocfilehash: e570c7cbc06c6d2e384d34571e0af7ca93003ceb
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907254"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012578"
 ---
-# <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+# <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)
 
-根據預存模型產生預測值或分數。 如需詳細資訊，請參閱[使用 PREDICT T-SQL 函式進行原生評分](../../advanced-analytics/sql-native-scoring.md)。
+[!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]
+
+根據預存模型產生預測值或分數。 如需詳細資訊，請參閱[使用 PREDICT T-SQL 函式進行原生評分](../../machine-learning/predictions/native-scoring-predict-transact-sql.md)。
 
 ## <a name="syntax"></a>語法
 
-```
+```syntaxsql
 PREDICT  
 (  
   MODEL = @model | model_literal,  
-  DATA = object AS <table_alias>  
+  DATA = object AS <table_alias>
+  [, RUNTIME = ONNX ]
 )  
 WITH ( <result_set_definition> )  
 
@@ -54,21 +57,32 @@ MODEL = @model | model_literal
 
 ### <a name="arguments"></a>引數
 
-**model**
+**MODEL**
 
 `MODEL` 參數用來指定用於計分或預測的模型。 模型指定為變數、常值或純量運算式。
 
-使用 R 或 Python 或其他工具，可以建立模型物件。
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=sqlallproducts-allversions"
+`PREDICT` 支援使用 [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) 和 [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md) 套件進行定型的模型。
+::: moniker-end
 
-**data**
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+在 Azure SQL 受控執行個體中，`PREDICT` 支援具有 [Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html) \(英文\) 格式的模型，或是使用 [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) 和 [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md) 套件進行定型的模型。
+::: moniker-end
+
+::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+在 Azure Synapse Analytics 中，`PREDICT` 支援具有 [Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html) \(英文\) 格式的模型。
+::: moniker-end
+
+**資料**
 
 DATA 參數用來指定用於計分或預測的資料。 資料是以查詢中的資料表來源形式指定。 資料表來源可以是資料表、資料表別名、CTE 別名、檢視或資料表值函數。
 
-**parameters**
+**RUNTIME = ONNX**
 
-PARAMETERS 參數用來指定用於計分或預測的選擇性使用者定義參數。
+> [!IMPORTANT]
+> `RUNTIME = ONNX` 引數僅在 [Azure SQL 受控執行個體](/azure/azure-sql/managed-instance/machine-learning-services-overview)和 [Azure SQL Edge](/azure/sql-database-edge/onnx-overview) 中提供。
 
-每個參數的名稱都與模型類型有關。 例如，RevoScaleR 中的 [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) 函數援參數 `@computeResiduals`，表示評分羅吉斯迴歸模型時是否應該計算殘值。 如果您呼叫相容模型，就可以將該參數名稱與 TRUE 或 FALSE 值傳遞到 `PREDICT` 函數。
+指出機器學習引擎是用於模型執行。 `RUNTIME` 參數值一律是 `ONNX`。 該參數為 Azure SQL Edge 的必要項目。 在 Azure SQL 受控執行個體上，該參數為選擇性，且只會在使用 ONNX 模型時使用。
 
 **WITH ( <result_set_definition> )**
 
@@ -78,27 +92,30 @@ WITH 子句用來指定 `PREDICT` 函數傳回之輸出的結構描述。
 
 ### <a name="return-values"></a>傳回值
 
-沒有預先定義的結構描述。SQL Server 不會驗證模型的內容，也不會驗證傳回的資料行值。
+沒有預先定義的結構描述可用；模型的內容不會驗證，且傳回的資料行值也不會驗證。
 
 - `PREDICT` 函數會傳入資料行做為輸入。
 - `PREDICT` 函數也會產生新的資料行，但資料行數目和資料類型取決於用於預測的模型類型。
 
 與模型相關聯的基礎預測函數，會傳回與資料、模型或資料行格式相關的任何錯誤訊息。
 
-- 對於 RevoScaleR，對等的函數是 [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict)  
-- 對於 MicrosoftML，對等的函數是 [rxPredict.mlModel](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxpredict)  
-
-使用 `PREDICT` 無法檢視內部模型結構。 如果您想要了解模型本身的內容，必須載入模型物件、將物件還原序列化，並使用適當的 R 程式碼剖析模型。
-
+::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ## <a name="remarks"></a>備註
 
-Windows 和 Linux 上所有版本的 SQL Server 2017 和更新版本都支援 `PREDICT` 函式。 雲端的 Azure SQL Database 也支援 `PREDICT`。 這些支援都已啟用，不論是否已啟用其他機器學習功能。
-
-在要使用 `PREDICT` 函數的伺服器上，不一定要安裝 R、Python 或其他機器學習語言。 您可以在另一個環境中訓練模型，並將它儲存到 SQL Server 資料表，搭配 `PREDICT` 使用，或從儲存模型的另一個 SQL Server 執行個體呼叫模型。
+Windows 和 Linux 上所有版本的 SQL Server 2017 和更新版本都支援 `PREDICT` 函式。 並不需要啟用[機器學習服務](../../machine-learning/sql-server-machine-learning-services.md)以使用 `PREDICT`。
+::: moniker-end
 
 ### <a name="supported-algorithms"></a>支援的演算法
 
-您使用的模型必須使用 RevoScaleR 套件中其中一種支援的演算法建立。 如需目前支援的模型清單，請參閱[即時計分](../../advanced-analytics/real-time-scoring.md)。
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=sqlallproducts-allversions"
+您使用的模型必須使用 [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) 或 [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md) 套件中其中一種支援的演算法建立。 如需目前所支援模型的清單，請參閱[使用 PREDICT T-SQL 函式進行原生評分](../../machine-learning/predictions/native-scoring-predict-transact-sql.md)。
+::: moniker-end
+::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+支援可轉換為 [ONNX](https://onnx.ai/) \(英文\) 模型格式的演算法。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+支援可轉換為 [ONNX](https://onnx.ai/) \(英文\) 模型格式的演算法，以及使用 [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) 或 [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md) 套件中其中一種支援的演算法所建立的模型。 如需 RevoScaleR 和 revoscalepy 中目前所支援演算法的清單，請參閱[使用 PREDICT T-SQL 函式進行原生評分](../../machine-learning/predictions/native-scoring-predict-transact-sql.md)。
+::: moniker-end
 
 ### <a name="permissions"></a>權限
 
@@ -114,72 +131,38 @@ Windows 和 Linux 上所有版本的 SQL Server 2017 和更新版本都支援 `P
 
 ```sql
 SELECT d.*, p.Score
-FROM PREDICT(MODEL = @logit_model, 
-  DATA = dbo.mytable AS d) WITH (Score float) AS p;
+FROM PREDICT(MODEL = @model,
+    DATA = dbo.mytable AS d) WITH (Score float) AS p;
 ```
 
-`DATA` 參數中為資料表來源指定的別名 **d** 用來參考屬於 dbo.mytable 的資料行。 為 **PREDICT** 函數指定的別名 **p** 用來參考 PREDICT 函數所傳回的資料行。
+`DATA` 參數中為資料表來源指定的別名 **d** 是用來參考屬於 `dbo.mytable` 的資料行。 為 `PREDICT` 函式指定的別名 **p** 是用來參考 `PREDICT` 函式所傳回的資料行。
+
+- 模型會以 `varbinary(max)` 資料行的形式儲存在名為 **Models** 的資料表中。 如**識別碼**和**描述**的其他資訊會儲存在資料表中以識別模式。
+- `DATA` 參數中為資料表來源指定的別名 **d** 是用來參考屬於 `dbo.mytable` 的資料行。 輸入資料資料行應該要符合模型的輸入名稱。
+- 為 `PREDICT` 函式指定的別名 **p** 是用來參考 `PREDICT` 函式所傳回的預測資料行。 資料行名稱應該要有和模型的輸出名稱相同的名稱。
+- 所有輸入資料資料行和預測資料行都可在 SELECT 陳述式中顯示。
 
 ### <a name="combining-predict-with-an-insert-statement"></a>合併 PREDICT 與 INSERT 陳述式
 
-其中一個用於預測的常見使用案例是為輸入資料產生分數，然後再將預測的值插入資料表。 下列範例假設呼叫應用程式使用預存程序，將包含預測值的資料列插入資料表：
+預測的常見使用案例是為輸入資料產生分數，然後再將預測的值插入資料表。 下列範例假設呼叫應用程式是使用預存程序，將包含預測值的資料列插入資料表：
 
 ```sql
-CREATE PROCEDURE InsertLoanApplication
-(@p1 varchar(100), @p2 varchar(200), @p3 money, @p4 int)
-AS
-BEGIN
-  DECLARE @model varbinary(max) = (select model
-  FROM scoring_model
-  WHERE model_name = 'ScoringModelV1');
-  WITH d as ( SELECT * FROM (values(@p1, @p2, @p3, @p4)) as t(c1, c2, c3, c4) )
+DECLARE @model varbinary(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
 
-  INSERT INTO loan_applications (c1, c2, c3, c4, score)
-  SELECT d.c1, d.c2, d.c3, d.c4, p.score
-  FROM PREDICT(MODEL = @model, DATA = d) WITH(score float) as p;
-END;
+INSERT INTO loan_applications (c1, c2, c3, c4, score)
+SELECT d.c1, d.c2, d.c3, d.c4, p.score
+FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d) WITH(score float) AS p;
 ```
 
-如果程序透過資料表值參數取得多個資料列，就可以如下撰寫為：
-
-```sql
-CREATE PROCEDURE InsertLoanApplications (@new_applications dbo.loan_application_type)
-AS
-BEGIN
-  DECLARE @model varbinary(max) = (SELECT model_bin FROM scoring_models WHERE model_name = 'ScoringModelV1');
-  INSERT INTO loan_applications (c1, c2, c3, c4, score)
-  SELECT d.c1, d.c2, d.c3, d.c4, p.score
-  FROM PREDICT(MODEL = @model, DATA = @new_applications as d)
-  WITH (score float) as p;
-END;
-```
-
-### <a name="creating-an-r-model-and-generating-scores-using-optional-model-parameters"></a>建立 R 模型，並使用選擇性的模型參數產生分數
-
-此範例假設您已使用 RevoScaleR 的呼叫，建立一個以共變數矩陣擬合的羅吉斯迴歸模型，如下所示：
-
-```R
-logitObj <- rxLogit(Kyphosis ~ Age + Start + Number, data = kyphosis, covCoef = TRUE)
-```
-
-如果您以二進位格式將模型儲存在 SQL Server 中，使用 PREDICT 函數不只可以產生預測，還能產生模型類型支援的其他資訊，例如誤差或信賴區間。
-
-下列程式碼示範從 R 對 [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) 的對等呼叫：
-
-```R
-rxPredict(logitObj, data = new_kyphosis_data, computeStdErr = TRUE, interval = "confidence")
-```
-
-使用 `PREDICT` 函數的對等呼叫也提供分數 (預測值)、誤差和信賴區間：
-
-```sql
-SELECT d.Age, d.Start, d.Number, p.pred AS Kyphosis_Pred, p.stdErr, p.pred_lower, p.pred_higher
-FROM PREDICT( MODEL = @logitObj,  DATA = new_kyphosis_data AS d,
-  PARAMETERS = N'computeStdErr bit, interval varchar(30)',
-  computeStdErr = 1, interval = 'confidence')
-WITH (pred float, stdErr float, pred_lower float, pred_higher float) AS p;
-```
+- `PREDICT` 的結果會儲存在稱為 PredictionResults 的資料表中。 
+- 模型會以 `varbinary(max)` 資料行的形式儲存在名為 **Models** 的資料表中。 如識別碼和描述的其他資訊可以儲存在資料表中以識別模型。
+- 在 `DATA` 參數中針對資料表來源所指定的別名 **d** 是用來參考 `dbo.mytable` 中的資料行。輸入資料資料行名稱應該要符合模型的輸入名稱。
+- 為 `PREDICT` 函式指定的別名 **p** 是用來參考 `PREDICT` 函式所傳回的預測資料行。 資料行名稱應該要有和模型的輸出名稱相同的名稱。
+- 所有輸入資料行和預測資料行都可在 SELECT 陳述式中顯示。
 
 ## <a name="next-steps"></a>後續步驟
 
-- [使用 PREDICT T-SQL 函式進行原生評分](../../advanced-analytics/sql-native-scoring.md)
+- [使用 PREDICT T-SQL 函式進行原生評分](../../machine-learning/predictions/native-scoring-predict-transact-sql.md)
+::: moniker range="=azure-sqldw-latest||=azuresqldb-mi-current||=sqlallproducts-allversions"
+-   [深入了解 ONNX 模型](/azure/machine-learning/concept-onnx#get-onnx-models)
+::: moniker-end

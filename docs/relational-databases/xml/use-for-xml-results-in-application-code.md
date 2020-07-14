@@ -1,5 +1,6 @@
 ---
 title: 在應用程式的程式碼中使用 FOR XML 結果 | Microsoft 文件
+description: 了解如何在應用程式中搭配 FOR XML 子句使用 SQL 查詢的結果。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9927e5a4477961fbd7122ae96b05e42c74bf2196
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 430c7118d4185f123973c0ca7b00b02fb8ba39a9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665052"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775538"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>在應用程式的程式碼中使用 FOR XML 結果
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   藉由在 SQL 查詢中使用 FOR XML 子句，您就可以將查詢結果擷取為 XML 資料，以及將其轉換為 XML 資料。 如果可以在 XML 應用程式的程式碼中使用 FOR XML 查詢結果，此功能便能讓您執行下列功能：  
   
 -   針對 [XML 資料 &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md) 值的執行個體，查詢 SQL 資料表  
@@ -154,25 +155,25 @@ ms.locfileid: "80665052"
   
 ##### <a name="client-side-processing-of-xml-document-mydataisle"></a>XML 文件 MyDataIsle 的用戶端處理  
   
--   **AnnualSales:** 1500000  
+-   **AnnualSales：** 1500000  
   
--   **AnnualRevenue:** 150000  
+-   **AnnualRevenue：** 150000  
   
--   **BankName:** Primary International  
+-   **BankName：** Primary International  
   
--   **BusinessType:** OS  
+-   **BusinessType：** OS  
   
--   **YearOpened:** 1974  
+-   **YearOpened：** 1974  
   
--   **Specialty:** Road  
+-   **Specialty：** 路段  
   
--   **SquareFeet:** 38000  
+-   **SquareFeet：** 38000  
   
--   **Brands:** 3  
+-   **Brands：** 3  
   
--   **Internet:** DSL  
+-   **Internet：** DSL  
   
--   **NumberEmployees:** 40  
+-   **NumberEmployees：** 40  
   
  VBScript 訊息方塊會顯示下列由 FOR XML 查詢結果所傳回之原始而未篩選過的 XML 資料島內容。  
   

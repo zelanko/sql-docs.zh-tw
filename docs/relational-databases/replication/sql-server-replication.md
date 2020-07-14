@@ -1,5 +1,6 @@
 ---
 title: SQL Server 複寫 | Microsoft Docs
+description: 了解 SQL Server 中的複寫，此為在資料庫之間複製和散發資料及資料庫物件，以及在資料庫之間進行同步處理的技術。
 ms.custom: ''
 ms.date: 11/20/2018
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: eb45cf400b0fe8318d0bef5a99b36f20bff8ef21
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6644a84c2134735cefd489c4ddf6abdae775c412
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287115"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723099"
 ---
 # <a name="sql-server-replication"></a>SQL Server 複寫
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   複寫是指，將資料和資料庫物件從某個資料庫複製和散發到另一個資料庫，然後在兩個資料庫之間進行同步處理，以維護一致性的一組技術。 使用複寫，以透過區域網路、廣域網路、撥號連接、無線連接及網際網路，將資料散發到不同的位置，以及散發到遠端或行動使用者。  
   
  異動複寫一般用於需要高輸送量的伺服器對伺服器案例中，其中包括：提升延展性和可用性、資料倉儲和報表、整合多個站台的資料、整合異質資料，以及卸載批次處理。 合併式複寫主要是為了可能具有資料衝突的行動應用程式或分散式伺服器應用程式而設計。 常見的案例包括：與行動使用者交換資料、消費者銷售點 (POS) 應用程式，以及多個站台的資料整合。 快照式複寫用於提供交易式和合併式複寫的初始資料集；它也可以用於適合將資料完全重新整理時。 使用這三種複寫， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了強大且彈性的系統，可同步處理您企業中的資料。 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 和 [!INCLUDE[win8](../../includes/win8-md.md)]支援複寫至 SQLCE 3.5 和 SQLCE 4.0。  

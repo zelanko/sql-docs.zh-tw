@@ -29,15 +29,15 @@ ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d88b0c8e36b69bbc2a341917ec96e12ed8bfdc17
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0c4e7add7cdc8d4dd804c91730db3bb7c121b9df
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981721"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007598"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO 子句 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 SELECT...INTO 會在預設的檔案群組中建立新的資料表，然後將查詢的結果資料列插入其中。 若要檢視完整的 SELECT 語法，請參閱 [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)。  
   
@@ -99,7 +99,9 @@ SELECT...INTO 會在預設的檔案群組中建立新的資料表，然後將查
  當選取清單包括計算資料行時，新資料表變數中對應的資料行並不是計算資料行。 新資料行中的值是執行 `SELECT...INTO` 時所計算的值。  
   
 ## <a name="logging-behavior"></a>記錄行為  
- `SELECT...INTO` 的記錄數量主要取決於資料庫目前使用的復原模式。 在簡單復原模式或大量記錄復原模式下，大量作業會進行最低限度記錄。 透過最低限度記錄，使用 `SELECT...INTO` 陳述式可能會比建立資料表後使用 INSERT 陳述式來擴展資料表更有效率。 如需詳細資訊，請參閱 [交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
+ `SELECT...INTO` 的記錄數量主要取決於資料庫目前使用的復原模式。 在簡單復原模式或大量記錄復原模式下，大量作業會進行最低限度記錄。 透過最低限度記錄，使用 `SELECT...INTO` 陳述式可能會比建立資料表後使用 INSERT 陳述式來擴展資料表更有效率。 如需詳細資訊，請參閱 [交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)。
+ 
+包含使用者定義函式 (UDF) 的 `SELECT...INTO` 陳述式為完整記錄的作業。 如果用於 `SELECT...INTO` 陳述式中的使用者定義函式不會執行任何資料存取作業，您可以針對使用者定義函式指定 SCHEMABINDING 子句，其會將那些使用者定義函式的衍生 UserDataAccess 屬性設定為 0。 在此變更之後，`SELECT...INTO` 陳述式將會以最低限度記錄。 如果 `SELECT...INTO` 陳述式仍然會參考至少一個將此屬性設定為 1 的使用者定義函式，作業便會完整記錄。
   
 ## <a name="permissions"></a>權限  
  需要目的地資料庫中的 CREATE TABLE 權限。  

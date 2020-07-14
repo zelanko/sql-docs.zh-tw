@@ -9,25 +9,26 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ce461246f0afef31ab4b60b772f92aeeb479a4cb
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 11e29a27597b7710ab38497a0b862aed9b65b404
+ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606871"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83868436"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Microsoft Connector for Oracle
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
-Microsoft Connector for Oracle 能讓您以 SSIS 套件將資料從 Oracle 資料來源匯出，或將資料匯入其中。
+Microsoft Connector for Oracle 能讓您以 SSIS 套件將資料從 Oracle 資料來源匯出，或將資料載入其中。
 
 ## <a name="version-support"></a>版本支援
 
 Microsoft Connector for Oracle 支援下列 Microsoft SQL Server 產品：
 
 - 自 SQL Server 2019 CU1 起
-- 從 15.9.3 版開始的 SQL Server Data Tools (SSDT)
+- 適用於 Visual Studio 2017 的 SQL Server Data Tools (SSDT) 15.9.3 或更新版本
+- 適用於 Visual Studio 2019 的 Microsoft SQL Server Data Tools (SSDT)
 
 以下是支援的資料來源 Oracle 資料庫版本：
 

@@ -1,6 +1,6 @@
 ---
 title: 管理 SQL Server Integration Services Scale Out 的憑證 | Microsoft Docs
-ms.description: This article describes how to manage certificates to secure communications between SSIS Scale Out Master and Scale Out Workers.
+description: 此文章描述如何管理憑證，以保護 SSIS Scale Out 主機和 Scale Out 背景工作角色之間的通訊。
 ms.date: 12/19/2017
 ms.prod: sql
 ms.prod_service: integration-services
@@ -10,12 +10,12 @@ ms.custom: performance
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: ab701d44e14bbbd6234f5301a5fb3abdba451ef2
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 425d307d6afe1da1edca7c3ed5796cee5a7b2c5b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488127"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733956"
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>管理 SQL Server Integration Services Scale Out 的憑證
 
@@ -29,13 +29,13 @@ ms.locfileid: "81488127"
 
 在大部分情況下，系統會在 Scale Out Master 安裝期間設定 Scale Out Master 憑證。
 
-在 [SQL Server 安裝精靈] 的 [Integration Services 擴增設定 - 主要節點]  頁面中，您可以選擇建立新的自我簽署 TLS/SSL 憑證，或使用現有的 TLS/SSL 憑證。
+在 [SQL Server 安裝精靈] 的 [Integration Services 擴增設定 - 主要節點] 頁面中，您可以選擇建立新的自我簽署 TLS/SSL 憑證，或使用現有的 TLS/SSL 憑證。
 
 ![主機設定](media/master-config.PNG)
 
 **新憑證**。 如果您對憑證沒有特殊需求，可以選擇建立新的自我簽署 TLS/SSL 憑證。 您可以進一步在憑證中指定 CN。 請確定 CN 中包含 Scale Out Worker 稍後要使用的主要端點主機名稱。 預設會包含主要節點的電腦名稱和 IP 位址。 
 
-**現有憑證**。 如果您選擇使用現有的憑證，請按一下 [瀏覽]  從本機電腦的**根**憑證存放區中選取 TLS/SSL 憑證。
+**現有憑證**。 如果您選擇使用現有的憑證，請按一下 [瀏覽] 從本機電腦的**根**憑證存放區中選取 TLS/SSL 憑證。
 
 ### <a name="change-the-scale-out-master-certificate"></a>變更 Scale Out Master 憑證
 

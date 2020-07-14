@@ -1,6 +1,6 @@
 ---
 title: 資料庫鏡像和資料庫快照集
-description: 了解搭配資料庫鏡像使用資料庫快照集的互通性。
+description: 了解如何搭配資料庫鏡像使用資料庫快照集，以在 SQL Server 中卸載報表的互通性。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0bf1be90-7ce4-484c-aaa7-f8a782f57c5f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a184bdf227b412ea5464c86058d33903fa7d8d7a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b0a3e349633184bf838f2d9dc599d8355db6b100
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258808"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789712"
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>資料庫鏡像和資料庫快照集 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   您可以利用為了提供可用性而維護的鏡像資料庫卸載報表。 若要對報表使用鏡像資料庫，請在鏡像資料庫上建立資料庫快照集，然後將用戶端連接要求導向最近一次的快照集。 資料庫快照集是其來源資料庫的一個靜態、唯讀、交易一致的快照集，存在於快照集建立時。 若要在鏡像資料庫上建立資料庫快照集，資料庫必須處於同步處理的鏡像狀態。  
   
  不像鏡像資料庫，用戶端可以存取資料庫快照集。 只要鏡像伺服器仍與主體伺服器進行通訊，就可以將報表用戶端導向連接到快照集。 請注意，因為資料庫快照集是靜態的，所以不會有新的資料可用。 若要使較新的資料可供使用者使用，您必須定期建立新的資料庫快照集，並使應用程式與最新快照集之間有直接傳入用戶端的連接。  

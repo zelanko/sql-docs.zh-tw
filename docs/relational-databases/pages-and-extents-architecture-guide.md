@@ -14,15 +14,15 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 971848a9feddd9cff64bafb5cadf36ab8bdc01e3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e7eefffe6d401c401c7fffa290000a63f4947f0d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288272"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006223"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>分頁與範圍架構指南
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 頁面是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中資料儲存的基本單位。 範圍是八個實體連續頁面的集合。 範圍可以協助系統有效地管理頁面。 本指南說明所有 SQL Server 版本中用於管理分頁與範圍的資料結構。 了解頁面與範圍的架構對於設計和開發有效執行的資料庫很重要。
 
@@ -142,7 +142,7 @@ ms.locfileid: "79288272"
 
 ## <a name="managing-space-used-by-objects"></a>管理由物件所使用的空間 
 
-[索引配置對應 (IAM)]  頁面會對應配置單位所使用資料庫檔案 4 GB 部分中的範圍。 配置單位為下列三種類型中的一種：
+[索引配置對應 (IAM)] 頁面會對應配置單位所使用資料庫檔案 4 GB 部分中的範圍。 配置單位為下列三種類型中的一種：
 
 - IN_ROW_DATA   
     保存堆積或索引的資料分割。
@@ -162,7 +162,7 @@ IAM 頁面涵蓋檔案中的 4 GB 範圍，和 GAM 和 SGAM 頁面的涵蓋範�
 IAM 頁面是視需要配置給每個配置單位，而且在檔案中的位置是隨機的。 系統檢視 (sys.system_internals_allocation_units) 會指向配置單位的第一個 IAM 頁面。 該配置單位的所有 IAM 頁面都會連成一條鏈結。
 
 > [!IMPORTANT]
-> `sys.system_internals_allocation_units` 系統檢視僅用於內部，且往後可能會變更。 我們無法確保其相容性。
+> `sys.system_internals_allocation_units` 系統檢視僅用於內部，且往後可能會變更。 我們無法確保其相容性。 在 Azure SQL Database 中無法取得此檢視。 
 
 ![iam_chain](../relational-databases/media/iam-chain.gif)
  

@@ -1,5 +1,6 @@
 ---
 title: SQL Server 加密 | Microsoft Docs
+description: 使用這些資源來了解 SQL Server 如何使用加密來增強資料庫的安全性。
 ms.custom: ''
 ms.date: 05/15/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e3fea2c9fdd532385378e2c66af08eefd4804442
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d749c2707c78aa452bdb6a55f2f2d477ea0fb465
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957307"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720435"
 ---
 # <a name="sql-server-encryption"></a>SQL Server 加密
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   加密是透過金鑰或密碼的使用讓資料模糊化的程序。 這樣可以讓資料變成毫無用處，而不需要對應的解密金鑰或密碼。 加密並不能解決存取控制問題。 但是，若發生存取控制失靈的情形，加密可限縮資料遺失的風險以增強安全性。 例如，只要資料已加密，即使資料庫主機電腦設定不當而遭駭客取得敏感性資料，失竊的資訊就可能毫無用處。  
   
 
@@ -79,7 +80,7 @@ ms.locfileid: "74957307"
  有關如何使用憑證來加密資料的資訊。  
   
 ## <a name="external-resources"></a>外部資源  
- [Microsoft TechNet：SQL Server TechCenter：SQL Server 2012 安全性和保護](https://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)  
+ [Microsoft TechNet：SQL Server TechCenter：SQL Server 2012 安全性與保護](https://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)  
  有關 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全性的最新資訊。  
   
 ## <a name="see-also"></a>另請參閱  

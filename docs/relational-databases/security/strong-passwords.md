@@ -1,5 +1,6 @@
 ---
 title: 增強式密碼 | Microsoft Docs
+description: 深入了解 SQL Server 中的密碼，並了解構成強式密碼的項目，以增強部署的安全性。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ ms.assetid: 338548f4-c4d8-47ca-b597-5c9c0f2fa205
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 297dc4127fbfd040ba0d9cc970f3a044395b5e21
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ac636ae2b994b359921e164fe884de80a7d3486a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79448220"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001044"
 ---
 # <a name="strong-passwords"></a>增強式密碼
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   密碼會是伺服器安全性部署中最薄弱的連結。 當選取密碼時，請格外小心。 增強式密碼具有下列特性：  
   
 -   長度至少為 8 個字元。  

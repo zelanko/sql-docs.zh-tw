@@ -1,5 +1,6 @@
 ---
 title: 將功能新增至 SQL Server 的執行個體 (安裝程式) | Microsoft Docs
+description: 此文章提供將執行個體感知功能新增至 SQL Server 2019 執行個體的逐步程序。
 ms.custom: ''
 ms.date: 09/07/2017
 ms.prod: sql
@@ -14,22 +15,22 @@ ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0b7cdfe016a1010bef5322c3d39b7ee436437aa5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a3ddd9eba40cc7df81b0e86df7733d840bccace2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68051199"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899697"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>將功能新增至 SQL Server 的執行個體 (安裝程式)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
  本文提供將功能新增至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體的逐步程序。 某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件或服務是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體所特有， 也可感知執行個體。 這些元件或服務也會與裝載它們的執行個體共用相同的版本，並專門用於該執行個體。 如果還未安裝感知執行個體元件及其共用元件，可以將其加入執行個體 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2017 的版本及支援的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
   
  若要從命令提示字元，將功能新增至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，請參閱[從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
  在繼續進行之前，請檢閱[規劃 SQL Server 安裝](../../sql-server/install/planning-a-sql-server-installation.md)中的文章。  
   
 > [!NOTE]  
@@ -42,15 +43,15 @@ ms.locfileid: "68051199"
   
 #### <a name="to-add-features-to-an-instance-of-sscurrent"></a>若要從命令提示字元，將功能加入 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
-1.  插入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝媒體。 在根資料夾中，按兩下 setup.exe。 若要從網路共用進行安裝，請導覽至共用上的根資料夾，然後按兩下 setup.exe。 如果出現 [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝程式] 對話方塊，請[!INCLUDE[clickOK](../../includes/clickok-md.md)] 安裝必要條件，然後按一下 [取消]  以結束 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝。  
+1.  插入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝媒體。 在根資料夾中，按兩下 setup.exe。 若要從網路共用進行安裝，請導覽至共用上的根資料夾，然後按兩下 setup.exe。 如果出現 [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝程式] 對話方塊，請[!INCLUDE[clickOK](../../includes/clickok-md.md)] 安裝必要條件，然後按一下 [取消] 以結束 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝。  
   
 2.  安裝精靈將會啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝中心。 若要將功能加入現有的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體，請在左側導覽區域中，按一下 **「安裝」** ，然後按一下 **新增 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]「 獨立安裝或將功能加入至現有安裝」** 。  
   
-3.  系統組態檢查將會在電腦上執行探索作業。 若要檢視驗證詳細資料，請按一下 [檢視詳細資料]  。 若要繼續，請[!INCLUDE[clickOK](../../includes/clickok-md.md)]。  
+3.  系統組態檢查將會在電腦上執行探索作業。 若要檢視驗證詳細資料，請按一下 [檢視詳細資料]。 若要繼續，請[!INCLUDE[clickOK](../../includes/clickok-md.md)]。  
   
 4.  最新可用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品更新會隨即顯示在 [產品更新] 頁面上。 如果不想包含更新，請清除 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品更新程式 核取方塊。 如果未偵測到任何產品更新， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將不會顯示此頁面，而會自動前往 **[安裝安裝程式檔案]** 頁面。  
   
-5.  安裝程式會在 [安裝安裝程式檔案] 頁面上，顯示下載、擷取及安裝安裝程式檔案的進度。 如有找到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式的更新，並指定要包含該更新，將會一併安裝。 按一下 [安裝]  ，以安裝安裝程式支援檔案。  
+5.  安裝程式會在 [安裝安裝程式檔案] 頁面上，顯示下載、擷取及安裝安裝程式檔案的進度。 如有找到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式的更新，並指定要包含該更新，將會一併安裝。 按一下 [安裝]，以安裝安裝程式支援檔案。  
   
 6.  系統組態檢查將會先確認電腦的系統狀態，然後安裝程式才會繼續進行。  
   
@@ -60,7 +61,7 @@ ms.locfileid: "68051199"
   
      右窗格會顯示選取功能的必要條件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將會在這個程序稍後說明的安裝步驟期間安裝尚未安裝的必要條件。  
   
-     系統組態檢查將會先確認電腦的系統狀態，然後安裝程式才會繼續進行。 選取 [下一步]  以繼續操作。  
+     系統組態檢查將會先確認電腦的系統狀態，然後安裝程式才會繼續進行。 選取 [下一步] 以繼續操作。  
   
 9. [磁碟空間需求] 頁面會計算您所指定之功能的所需磁碟空間，並且比較空間需求與執行安裝程式之電腦的可用磁碟空間。  
   
@@ -76,7 +77,7 @@ ms.locfileid: "68051199"
   
      當您完成針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務指定登入資訊之後，請按 **[下一步]** 。  
   
-12. 使用 [伺服器組態 - 定序]  索引標籤，為 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 指定非預設的定序。 如需詳細資訊，請參閱[伺服器組態 - 定序](https://msdn.microsoft.com/library/e3986870-5be4-458b-b671-5ff12a27b022)。  
+12. 使用 [伺服器組態 - 定序] 索引標籤，為 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 指定非預設的定序。 如需詳細資訊，請參閱[伺服器組態 - 定序](https://msdn.microsoft.com/library/e3986870-5be4-458b-b671-5ff12a27b022)。  
   
 13. 使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [組態 - 帳戶提供] 頁面來指定以下項目：  
   
@@ -97,7 +98,7 @@ ms.locfileid: "68051199"
   
 15. 使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [組態 - FILESTREAM] 頁面來針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體啟用 FILESTREAM。 如需 FILESTREAM 的詳細資訊，請參閱 [Database Engine 組態 - Filestream](https://msdn.microsoft.com/library/641a10a1-ae52-4d26-8f1c-a032a4aeff02)。 若要繼續進行，請按 [下一步]。  
   
-16. 您可以使用 [[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 組態 - 帳戶提供] 頁面指定伺服器模式以及要擁有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 之管理員權限的使用者或帳戶。 伺服器模式會決定在伺服器上所要使用的記憶體及儲存體子系統。 不同方案類型會在不同的伺服器模式中執行。 如果要在伺服器上執行多維度 Cube 資料庫，請選擇預設選項 [多維度及資料採礦伺服器模式]。 無論系統管理員權限為何，至少須為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]指定一名系統管理員。 如果要加入執行 SQL Server 安裝程式的帳戶，請按一下 [加入目前使用者]  。 若要在系統管理員清單中加入或移除帳戶，請按一下 **[加入]** 或 **[移除]** ，然後編輯在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中將會有管理員權限的使用者、群組或電腦清單。 如需伺服器模式及系統管理員權限的詳細資訊，請參閱 [Analysis Services 組態 - 帳戶提供](https://msdn.microsoft.com/library/169b1af2-6fe2-467f-8ca4-919f24c620ce)。  
+16. 您可以使用 [[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 組態 - 帳戶提供] 頁面指定伺服器模式以及要擁有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 之管理員權限的使用者或帳戶。 伺服器模式會決定在伺服器上所要使用的記憶體及儲存體子系統。 不同方案類型會在不同的伺服器模式中執行。 如果要在伺服器上執行多維度 Cube 資料庫，請選擇預設選項 [多維度及資料採礦伺服器模式]。 無論系統管理員權限為何，至少須為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]指定一名系統管理員。 如果要加入執行 SQL Server 安裝程式的帳戶，請按一下 [加入目前使用者] 。 若要在系統管理員清單中加入或移除帳戶，請按一下 **[加入]** 或 **[移除]** ，然後編輯在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中將會有管理員權限的使用者、群組或電腦清單。 如需伺服器模式及系統管理員權限的詳細資訊，請參閱 [Analysis Services 組態 - 帳戶提供](https://msdn.microsoft.com/library/169b1af2-6fe2-467f-8ca4-919f24c620ce)。  
   
      當您完成清單的編輯之後，請按一下 **[確定]** 。 然後，在組態對話方塊中確認管理員的清單。 當此清單完成時，請按 **[下一步]** 。  
   
@@ -118,15 +119,15 @@ ms.locfileid: "68051199"
   
 20. 您可以使用 [Distributed Replay Client 組態] 頁面，指定要授與 Distributed Replay Client 服務之管理權限的使用者。 擁有管理權限的使用者將可不受限制地存取 Distributed Replay Client 服務。  
   
-     [控制器名稱]  是選擇性參數，預設值為 \<空白  >。 針對 Distributed Replay Client 服務，輸入將與用戶端電腦進行通訊之控制器的名稱。 請注意：  
+     **Controller Name** 是選擇性參數，且預設值為 \<*blank*>。 針對 Distributed Replay Client 服務，輸入將與用戶端電腦進行通訊之控制器的名稱。 請注意：  
   
     -   如果您已經設定了控制器，請在設定每個用戶端時輸入該控制器的名稱。  
   
     -   如果您尚未設定控制器，則可以將控制器名稱留白。 不過，您必須在 [用戶端組態]  檔中，手動輸入控制器名稱。  
   
-     指定 Distributed Replay Client 服務的 **工作目錄** 。 預設工作目錄為 \<磁碟機代號  >:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\。  
+     指定 Distributed Replay Client 服務的 **工作目錄** 。 預設工作目錄為 \<*drive letter*>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\。  
   
-     指定 Distributed Replay Client 服務的 **結果目錄** 。 預設工作目錄為 \<磁碟機代號  >:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\。  
+     指定 Distributed Replay Client 服務的 **結果目錄** 。 預設結果目錄為 \<*drive letter*>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\。  
   
      若要繼續進行，請按 **[下一步]** 。  
   

@@ -20,20 +20,19 @@ helpviewer_keywords:
 ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.date: 09/25/2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: fe9d407b446177004715ae5d3403e856028985d3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a9f62a8a6aa679624e78def2dd5bea1ddeb7f5db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980571"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715401"
 ---
 # <a name="use-bulk-insert-or-openrowsetbulk-to-import-data-to-sql-server"></a>使用 BULK INSERT 或 OPENROWSET(BULK...) 將資料匯入 SQL Server
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 本文提供一個概觀，說明如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT 陳述式與 INSERT...SELECT * FROM OPENROWSET(BULK...) 陳述式，從資料檔案大量匯入資料到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure SQL Database 資料表中。 本文也會描述有關使用 BULK INSERT 和 OPENROWSET(BULK…)，以及使用這些方法從遠端資料來源大量匯入時的安全性考量。
 
@@ -90,11 +89,11 @@ INSERT ...SELECT * FROM OPENROWSET(BULK...)
 
 例如，有個使用者使用 Windows 驗證登入了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如果這個使用者要用 BULK INSERT 或 OPENROWSET 從資料檔案匯入資料到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中，則使用者帳戶必須具有資料檔案的讀取權限。 有了資料檔案的存取權之後，即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序沒有權限存取檔案，使用者還是可以將檔案中的資料匯入到資料表。 使用者不需要將檔案存取權限授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序。
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 可以設定為，透過轉送已驗證 Windows 使用者的認證，讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體連接到另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 此設置也稱為「模擬」  或「委派」  。 當您使用 BULK INSERT 或 OPENROWSET 時，請務必了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本如何處理使用者模擬的安全性。 使用者模擬允許資料檔案位於和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序或使用者不同的電腦上。 例如，如果位於 **Computer_A** 的使用者可以存取 **Computer_B**上的資料檔案，且已適當設定認證委派，則使用者可以連接到執行於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Computer_C **上的**執行個體，然後存取 **Computer_B**上的資料檔案，並從該檔案大量匯入資料到 **Computer_C**上的資料表。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 可以設定為，透過轉送已驗證 Windows 使用者的認證，讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體連接到另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 此設置也稱為「模擬」或「委派」。 當您使用 BULK INSERT 或 OPENROWSET 時，請務必了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本如何處理使用者模擬的安全性。 使用者模擬允許資料檔案位於和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序或使用者不同的電腦上。 例如，如果位於 **Computer_A** 的使用者可以存取 **Computer_B**上的資料檔案，且已適當設定認證委派，則使用者可以連接到執行於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Computer_C **上的**執行個體，然後存取 **Computer_B**上的資料檔案，並從該檔案大量匯入資料到 **Computer_C**上的資料表。
 
 ## <a name="bulk-importing-to-sql-server-from-a-remote-data-file"></a>從遠端資料檔案大量匯入至 SQL Server
 
-若要使用 BULK INSERT 或 INSERT...SELECT \* FROM OPENROWSET(BULK...) 從另一部電腦大量匯入資料，則必須在兩部電腦之間共用資料檔案。 若要指定共用資料檔案，請使用它的通用命名慣例 (UNC) 名稱，其使用一般格式： **\\\\** <伺服器名稱>  **\\** <共用名稱>  **\\** <路徑>  **\\** <檔案名稱>  。 此外，用來存取資料檔案的帳戶必須擁有在遠端磁碟上讀取檔案所需的權限。
+若要使用 BULK INSERT 或 INSERT...SELECT \* FROM OPENROWSET(BULK...) 從另一部電腦大量匯入資料，則必須在兩部電腦之間共用資料檔案。 若要指定共用資料檔案，請使用它的通用命名慣例 (UNC) 名稱，其使用一般格式： **\\\\** <伺服器名稱> **\\** <共用名稱> **\\** <路徑> **\\** <檔案名稱>。 此外，用來存取資料檔案的帳戶必須擁有在遠端磁碟上讀取檔案所需的權限。
 
 例如，下列 `BULK INSERT` 陳述式會從名為 `SalesOrderDetail` 的資料檔案大量匯入資料到 `AdventureWorks` 資料庫的 `newdata.txt`資料表。 此資料檔案位於 `\dailyorders` 系統上的 `salesforce` 網路共用目錄上的 `computer2`共用資料夾中。
 
@@ -109,6 +108,9 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 ## <a name="bulk-importing-from-azure-blob-storage"></a>從 Azure Blob 儲存體大量匯入
 
 從 Azure Blob 儲存體匯入且資料不是公用 (匿名存取) 時，請依據使用 [MASTER KEY](../../t-sql/statements/create-master-key-transact-sql.md) 加密的 SAS 金鑰建立 [DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)，然後建立要用於 BULK INSERT 命令中的[外部資料來源](../../t-sql/statements/create-external-data-source-transact-sql.md)。
+
+> [!NOTE]
+> 請不要使用明確交易，否則您將會收到 4861 錯誤。
 
 ### <a name="using-bulk-insert"></a>使用 BULK INSERT
 

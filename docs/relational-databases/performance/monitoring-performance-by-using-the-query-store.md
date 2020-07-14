@@ -14,16 +14,16 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 8142cb9868a1daa8f7c73c6b30da1b29c12bf3bc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 010d18fff933ee1bd362d1ebd59ef86905d493ed
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816412"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006209"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>使用查詢存放區監視效能
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢存放區功能為您提供關於查詢計劃選擇及效能的深入資訊。 其可協助您您快速找出由於查詢計劃變更所導致的效能差異，以簡化效能疑難排解作業。 查詢存放區會自動擷取查詢、計劃和執行階段統計資料的歷程記錄，並將其保留供您檢閱。 其會以時段來區分資料、供您查看資料庫使用模式，並了解何時在伺服器上發生查詢計劃變更。 使用 [[ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md)] 選項可設定查詢存放區。
 
@@ -38,14 +38,14 @@ ms.locfileid: "82816412"
 
 ### <a name="use-the-query-store-page-in-ssmanstudiofull"></a>使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [查詢存放區] 頁面
 
-1. 在 [物件總管] 中，以滑鼠右鍵按一下資料庫，然後按一下 [屬性]  。
+1. 在 [物件總管] 中，以滑鼠右鍵按一下資料庫，然後按一下 [屬性] 。
 
    > [!NOTE]
    > 至少需要 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 16 版。
 
 2. 在 [資料庫屬性]  對話方塊中，選取 [查詢存放區]  頁面。
 
-3. 在 [作業模式 (要求)]  方塊中，選取 [讀取寫入]  。
+3. 在 [作業模式 (要求)]  方塊中，選取 [讀取寫入] 。
 
 ### <a name="use-transact-sql-statements"></a>使用 Transact-SQL 陳述式
 
@@ -111,7 +111,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 
 ## <a name="use-the-regressed-queries-feature"></a><a name="Regressed"></a> 使用迴歸查詢功能
 
-啟用查詢存放區之後，請重新整理 [物件總管] 窗格中的資料庫部分，以新增查詢存放區  區段。
+啟用查詢存放區之後，請重新整理 [物件總管] 窗格中的資料庫部分，以新增查詢存放區 區段。
 
 ![SSMS 物件總管中的 SQL Server 2016 查詢存放區樹狀結構](../../relational-databases/performance/media/objectexplorerquerystore.PNG "SSMS 物件總管中的 SQL Server 2016 查詢存放區樹狀結構") ![SSMS 物件總管中的 SQL Server 2017 查詢存放區樹狀結構](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "SSMS 物件總管中的 SQL Server 2017 查詢存放區樹狀結構")
 
@@ -121,7 +121,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 
 ![SSMS 物件總管中的 SQL Server 2016 迴歸查詢](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "SSMS 物件總管中的 SQL Server 2016 迴歸查詢")
 
-若要強制執行計劃，請選取查詢與計劃，然後按一下 [強制執行計劃]  。 您只可以強制執行由查詢計劃功能所儲存且仍保留在查詢計劃快取中的計劃。
+若要強制執行計劃，請選取查詢與計劃，然後按一下 [強制執行計劃] 。 您只可以強制執行由查詢計劃功能所儲存且仍保留在查詢計劃快取中的計劃。
 
 ## <a name="finding-waiting-queries"></a><a name="Waiting"></a> 尋找等候查詢
 
@@ -129,7 +129,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 
 在查詢存放區中，等候類型會合併到**等候類別**。 [sys.query_store_wait_stats & #40;TRANSACT-SQL & #41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table) 可將等候類別對應至等候類型。
 
-選取 [查詢等候統計資料]  ，以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 或更新版本中開啟 [查詢等候統計資料]  窗格。 [查詢等候統計資料] 窗格會在查詢存放區中顯示包含前幾個等候類別的長條圖。 使用頂端的下拉式清單來選取等候時間彙總準則：平均值、最大值、最小值、標準差及**總計** (預設)。
+選取 [查詢等候統計資料]，以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 或更新版本中開啟 [查詢等候統計資料] 窗格。 [查詢等候統計資料] 窗格會在查詢存放區中顯示包含前幾個等候類別的長條圖。 使用頂端的下拉式清單來選取等候時間彙總準則：平均值、最大值、最小值、標準差及**總計** (預設)。
 
 ![SSMS 物件總管中的 SQL Server 2017 查詢等候統計資料](../../relational-databases/performance/media/query-store-waits.PNG "SSMS 物件總管中的 SQL Server 2017 查詢等候統計資料")
 
@@ -153,29 +153,11 @@ INNER JOIN sys.query_store_query_text AS Txt
 
 ## <a name="configuration-options"></a><a name="Options"></a> 組態選項
 
-設定查詢存放區參數可使用下列選項。
-
-*OPERATION_MODE* 可以是 **READ_WRITE** (預設) 或 READ_ONLY。
-
-*CLEANUP_POLICY (STALE_QUERY_THRESHOLD_DAYS)* 設定 `STALE_QUERY_THRESHOLD_DAYS` 引數，可指定在查詢存放區中保留資料的天數。 預設值是 30。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic 版的預設值為 **7** 天。
-
-*DATA_FLUSH_INTERVAL_SECONDS* 決定將寫入查詢存放區資料保存到磁碟的頻率。 為了獲得最佳效能，查詢存放區所收集的資料會以非同步方式寫入磁碟。 此非同步傳輸發生的頻率是透過 `DATA_FLUSH_INTERVAL_SECONDS` 所設定。 預設值為 **900** (15 分鐘)。
-
-*MAX_STORAGE_SIZE_MB* 設定查詢存放區的大小上限。 若查詢存放區中的資料達到 `MAX_STORAGE_SIZE_MB` 限制，查詢存放區會自動從讀寫狀態變更為唯讀狀態，並停止收集新的資料。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) 的預設值為 **100 MB**。 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，預設值為 **1 GB**。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium 版的預設值為 **1 GB**，而 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic 版的預設值為 **10 MB**。
-
-*INTERVAL_LENGTH_MINUTES* 決定執行階段執行統計資料彙總至查詢存放區的時間間隔。 若要最佳化空間的使用量，在執行階段統計資料存放區中的執行階段執行統計資料，會以固定的時段彙總。 這個固定時段是透過 `INTERVAL_LENGTH_MINUTES` 所設定。 預設值是 **60**秒。
-
-*SIZE_BASED_CLEANUP_MODE* 控制當總資料量接近大小上限時，是否將自動啟用清除處理序。 可以是 **AUTO** (預設) 或 OFF。
-
-*QUERY_CAPTURE_MODE* 指定讓查詢存放區根據執行計數和資源耗用來擷取所有查詢或相關查詢，或停止新增查詢而僅追蹤目前的查詢。 可以是 **ALL** (擷取所有查詢)、AUTO (忽略不頻繁及具有無意義編譯和執行期間的查詢)、CUSTOM (使用者定義擷取原則) 或 NONE (停止擷取新查詢)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) 的預設值為 **ALL**。 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，預設值為 **AUTO**。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的預設值是 **AUTO**。
-
-*MAX_PLANS_PER_QUERY* 表示為每個查詢所維護計畫數目上限的整數。 預設值為 **200**。
-
-*WAIT_STATS_CAPTURE_MODE* 控制查詢存放區是否擷取等候統計資料資訊。 可以是 OFF 或 **ON** (預設)。
+如需設定查詢存放區參數的可用選項，請參閱 [ALTER DATABASE SET 選項 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store)。
 
 查詢 **sys.database_query_store_options** 檢視以判斷查詢存放區的目前選項。 如需值的詳細資訊，請參閱 [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)。
 
-如需使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式設定選項的詳細資訊，請參閱 [選項管理](#OptionMgmt)。
+如需使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式設定組態選項的範例，請參閱[選項管理](#OptionMgmt)。
 
 ## <a name="related-views-functions-and-procedures"></a><a name="Related"></a> 相關檢視、函數與程序
 

@@ -1,5 +1,6 @@
 ---
 title: 加密資料行 | Microsoft Docs
+description: 了解如何在使用 Transact-SQL 的 SQL Server 中，使用對稱式加密 (有時稱為資料行層級或資料格層級加密) 將資料行加密。
 ms.custom: ''
 ms.date: 01/02/2019
 ms.prod: sql
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 08899661d3638b03aaf848bd207625e168812e87
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
+ms.openlocfilehash: 90987ec581d734116f386e1a0f3bfd72e4bf15b6
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957412"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091739"
 ---
 # <a name="encrypt-a-column-of-data"></a>加密資料行
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]  
 
-  本文描述如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中透過對稱加密來加密資料行。 這有時候稱為資料行層級加密或資料格層級加密。  
+  本文描述如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中透過對稱加密來加密資料行。 這有時候稱為資料行層級加密或資料格層級加密。 此功能處於預覽狀態，適用於 Azure Synapse Analytics (SQL DW)
 
 ## <a name="security"></a>安全性  
   

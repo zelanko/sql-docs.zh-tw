@@ -15,15 +15,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 821d9e5339c70551a3503faa81ca15276892ed86
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 39e2660619221af7957a2d84530d2ab800333cf7
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529217"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004689"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>使用格式檔案將資料表資料行對應至資料檔欄位 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 資料檔中包含的欄位順序可以與資料表中對應資料行的順序不同。 此主題呈現非 XML 與 XML 格式檔案，這些檔案已經過修改，以配合欄位順序與資料表資料行不同的資料檔。 已修改的格式檔案可將資料欄位對應到與它們對應的資料表資料行。  如需其他資訊，請參閱 [建立格式檔案 (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) 。
 
 |外框|
@@ -114,44 +114,44 @@ bcp TestDatabase.dbo.myRemap format nul -c -x -f D:\BCP\myRemap.xml -t, -T
 ```
 ### <a name="modifying-the-xml-format-file"></a>修改 XML 格式檔案 <a name="modify_xml_format_file"></a>
 請參閱 [XML 格式檔案的結構描述語法](../../relational-databases/import-export/xml-format-files-sql-server.md#StructureOfXmlFFs) 以了解此術語。  在 [記事本] 中開啟 `D:\BCP\myRemap.xml` 並執行下列修改：
-1. 在格式檔案中宣告 \<FIELD> 元素的順序會是這些欄位出現在資料檔案中的順序，因此請將識別碼屬性 2 和 3 的 \<FIELD> 元素順序反轉。
+1. 在格式檔案中宣告 \<FIELD> 元素的順序會是那些欄位出現在資料檔案中的順序，因此請將識別碼屬性 2 和 3 的 \<FIELD> 元素順序反轉。
 2. 確定 \<FIELD> 識別碼屬性值是連續的。
-3. \<ROW> 元素中的 \<COLUMN> 元素順序會定義大量作業將其傳回目標的順序。  XML 格式檔案會將本機名稱指派給每個 \<COLUMN> 元素，而此名稱與大量匯入作業之目標資料表中的資料行沒有任何關聯性。  \<COLUMN> 元素的順序與 \<RECORD> 定義中的 \<FIELD> 元素順序無關。  每個 \<COLUMN> 元素都會對應到 \<FIELD> 元素 (其識別碼是在 \<COLUMN> 元素的 SOURCE 屬性中指定)。  因此，\<COLUMN> SOURCE 的值是唯一需要修訂的屬性。  將 \<COLUMN> SOURCE 屬性 2 和 3 的順序反轉。
+3. \<ROW> 元素中的 \<COLUMN> 元素順序會定義大量作業將其傳送至目標的順序。  XML 格式檔案會將本機名稱指派給每個 \<COLUMN> 元素，而此名稱與大量匯入作業之目標資料表中的資料行沒有任何關聯性。  \<COLUMN> 元素的順序與 \<RECORD> 定義中 \<FIELD> 元素的順序無關。  每個 \<COLUMN> 元素都會對應到 \<FIELD> 元素 (其識別碼是在 \<COLUMN> 元素的 SOURCE 屬性中指定)。  因此，\<COLUMN> SOURCE 的值是唯一需要修訂的屬性。  將 \<COLUMN> SOURCE 屬性 2 和 3 的順序反轉。
 
 比較下列變更  
 **之前**
 ```
-\<?xml version="1.0"?>
-\<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<?xml version="1.0"?>
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  <RECORD>
-  \<FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>
-  \<FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
-  \<FIELD ID="3" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="30" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
-  \<FIELD ID="4" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="1" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>
+  <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="3" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="30" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="4" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="1" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
  </RECORD>
  <ROW>
-  \<COLUMN SOURCE="1" NAME="PersonID" xsi:type="SQLSMALLINT"/>
-  \<COLUMN SOURCE="2" NAME="FirstName" xsi:type="SQLVARYCHAR"/>
-  \<COLUMN SOURCE="3" NAME="LastName" xsi:type="SQLVARYCHAR"/>
-  \<COLUMN SOURCE="4" NAME="Gender" xsi:type="SQLCHAR"/>
+  <COLUMN SOURCE="1" NAME="PersonID" xsi:type="SQLSMALLINT"/>
+  <COLUMN SOURCE="2" NAME="FirstName" xsi:type="SQLVARYCHAR"/>
+  <COLUMN SOURCE="3" NAME="LastName" xsi:type="SQLVARYCHAR"/>
+  <COLUMN SOURCE="4" NAME="Gender" xsi:type="SQLCHAR"/>
  </ROW>
 </BCPFORMAT>
 ```
 **之後**
 ```
-\<?xml version="1.0"?>
-\<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<?xml version="1.0"?>
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  <RECORD>
-  \<FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>
-  \<FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="30" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
-  \<FIELD ID="3" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
-  \<FIELD ID="4" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="1" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>
+  <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="30" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="3" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="4" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="1" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
  </RECORD>
  <ROW>
-  \<COLUMN SOURCE="1" NAME="PersonID" xsi:type="SQLSMALLINT"/>
-  \<COLUMN SOURCE="3" NAME="FirstName" xsi:type="SQLVARYCHAR"/>
-  \<COLUMN SOURCE="2" NAME="LastName" xsi:type="SQLVARYCHAR"/>
-  \<COLUMN SOURCE="4" NAME="Gender" xsi:type="SQLCHAR"/>
+  <COLUMN SOURCE="1" NAME="PersonID" xsi:type="SQLSMALLINT"/>
+  <COLUMN SOURCE="3" NAME="FirstName" xsi:type="SQLVARYCHAR"/>
+  <COLUMN SOURCE="2" NAME="LastName" xsi:type="SQLVARYCHAR"/>
+  <COLUMN SOURCE="4" NAME="Gender" xsi:type="SQLCHAR"/>
  </ROW>
 </BCPFORMAT>
 ```

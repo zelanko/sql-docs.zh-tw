@@ -1,5 +1,6 @@
 ---
 title: 預設 SQL Server 網路通訊協定組態 | Microsoft Docs
+description: 檢視在 SQL Server 安裝期間，影響是否要開啟或關閉網路通訊協定的因素。 查看如何在安裝後設定通訊協定。
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - protocols [SQL Server], default settings
 - default protocols, after install
 ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 218389eaf76336e33d866f16c6b79ef54661be0b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9197a6838b62c970f9c8b9fad624a7229766628c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68011956"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772576"
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>預設 SQL Server 網路通訊協定組態
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 為了加強安全性， [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 會為新安裝停用網路連接性。 如果您正在使用 Enterprise、Standard、Evaluation 或 Workgroup Edition 或是 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 的舊版安裝仍然存在，就不會停用使用 TCP/IP 的網路連接。 所有的安裝都會啟用共用記憶體通訊協定，以允許本機連接到伺服器。 視安裝條件和安裝選項而定， [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser 服務有可能會停止。
 
 使用 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 組態管理員的 [ [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 網路組態] 節點，在安裝後設定網路通訊協定。 使用 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 組態管理員的 [ [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 服務] 節點，設定 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser 服務自動啟動。 如需詳細資訊，請參閱 [啟用或停用伺服器網路通訊協定](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。

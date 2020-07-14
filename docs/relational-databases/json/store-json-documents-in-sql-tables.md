@@ -1,20 +1,20 @@
 ---
 title: 將 JSON 文件儲存在 SQL Server 或 SQL Database
-ms.description: This article describes why and how to store and index JSON documents in SQL Server or SQL Database, and how to optimize queries over the JSON documents.
-ms.date: 01/04/2018
+description: 此文章描述對 SQL Server 或 SQL Database 中的 JSON 文件進行儲存和編製索引的原因及方法，以及如何最佳化對 JSON 文件的查詢。
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: ea43d88fea017c723177e4b83c86b5c8165b734b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1809ea2c3f99528eb15518808e13387c519878da
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74096030"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760767"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>將 JSON 文件儲存在 SQL Server 或 SQL Database
 SQL Server 和 Azure SQL Database 有原生 JSON 函式，可讓您使用標準 SQL 語言剖析 JSON 文件。 您可以在 SQL Server 或 SQL Database 中儲存 JSON 文件及查詢 JSON 資料，如同在 NoSQL 資料庫中一樣。 本文描述將 JSON 文件儲存在 SQL Server 或 SQL Database 中的選項。
@@ -61,7 +61,7 @@ SELECT TOP 100 JSON_VALUE(log, '$.severity'), AVG( CAST( JSON_VALUE(log,'$.durat
  ORDER BY AVG( CAST( JSON_VALUE(log,'$.duration') as float) ) DESC
 ```
 
-有一項強大的優點，就是您可以使用「任何」  T-SQL 函式和查詢子句來查詢 JSON 文件。 SQL Server 和 SQL Database 不會導入查詢中您可用來分析 JSON 文件的任何條件約束。 您可以使用 `JSON_VALUE` 函式從 JSON 文件擷取值，並像任何其他值將其用於查詢。
+有一項強大的優點，就是您可以使用「任何」T-SQL 函式和查詢子句來查詢 JSON 文件。 SQL Server 和 SQL Database 不會導入查詢中您可用來分析 JSON 文件的任何條件約束。 您可以使用 `JSON_VALUE` 函式從 JSON 文件擷取值，並像任何其他值將其用於查詢。
 
 可使用豐富 T-SQL 查詢語法這項功能是 SQL Server 和 SQL Database 與傳統 NoSQL 資料庫之間的主要差異；在 Transact-SQL 中，您可能有處理 JSON 資料所需的任何函式。
 

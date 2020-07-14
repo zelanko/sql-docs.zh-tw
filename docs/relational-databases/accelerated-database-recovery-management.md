@@ -12,16 +12,16 @@ author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8fea43ea41bc3e65fa0a6b36c7557322431e95fd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 99229b68f99cf96af3916ac6946ba5d931f50bce
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75245256"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727922"
 ---
 # <a name="manage-accelerated-database-recovery"></a>管理加速資料庫復原
 
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
 ## <a name="enabling-and-controlling-adr"></a>啟用和控制 ADR
 
@@ -32,7 +32,7 @@ ALTER DATABASE [DB] SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 ```
 
-使用此語法來控制是否開啟或關閉功能，或是為「持續版本存放區」  (PVS) 資料指定特定的檔案群組。 若沒有指定檔案群組，PVS 將會儲存在 PRIMARY 檔案群組中。
+使用此語法來控制是否開啟或關閉功能，或是為「持續版本存放區」(PVS) 資料指定特定的檔案群組。 若沒有指定檔案群組，PVS 將會儲存在 PRIMARY 檔案群組中。
 
 ## <a name="managing-the-persistent-version-store-filegroup"></a>管理持續版本存放區檔案群組
 ADR 功能是以為變更建立版本，並將資料項目的不同版本儲存在 PVS 中作為基礎。
@@ -103,6 +103,9 @@ GO
    ```
 
 ## <a name="troubleshooting"></a>疑難排解
+
+> [!NOTE]
+> 此節也適用於 Azure SQL Database。
 
 查詢 `sys.dm_tran_persistent_version_store_stats` 以檢查 PVS 大小。
 

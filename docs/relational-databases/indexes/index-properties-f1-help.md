@@ -19,15 +19,15 @@ ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c6d84af2893cc535717c2785d35875ca2b0d5550
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f9ca6fc85701a0056074d4ce3a1ff76abfe1cfb4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68476294"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760806"
 ---
 # <a name="index-properties-f1-help"></a>索引屬性 F1 說明
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   本主題中的章節參考使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 對話方塊提供的各種不同索引屬性。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68476294"
  顯示索引的名稱。 這個檔案對現有的索引而言是唯讀的。 建立新的索引時，請輸入索引的名稱。  
   
  **索引類型**  
- 表示索引的類型。 如果是新的索引，則表示開啟此對話方塊時所選取的索引類型。 索引可以是： **[叢集]** 、 **[非叢集]** 、 **[主要 XML]** 、 **[次要 XML]** 、 **[空間]** 、 **[叢集資料行存放區]** 或 **[非叢集資料行存放區]** 。  
+ 表示索引的類型。 如果是新的索引，則表示開啟此對話方塊時所選取的索引類型。 索引可以是：[叢集]、[非叢集]、[主要 XML]、[次要 XML]、[空間]、[叢集資料行存放區] 或 [非叢集資料行存放區]。  
   
  **注意** ：每個資料表只允許有一個叢集索引。 每個資料表只允許有一個 xVelocity 記憶體最佳化的資料行存放區索引。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "68476294"
  顯示參與索引鍵的資料行是否允許在資料表或檢視資料行中儲存 NULL 值。  
   
  **加入**  
- 將資料行加入索引鍵。 請從您按一下 [新增]  時所出現的 [從 *資料表名稱> 選取資料行]\<*  對話方塊中，選取資料表資料行。 如果是空間索引，在您選取一個資料行之後，此按鈕會呈暗灰色。  
+ 將資料行加入索引鍵。 從您按一下 [加入] 時所出現的 [從 *\<table name>* 選取資料行] 對話方塊中，選取資料表資料行。 如果是空間索引，在您選取一個資料行之後，此按鈕會呈暗灰色。  
   
  **移除**  
  從索引鍵中的參與裡移除選取的資料行。  
@@ -108,7 +108,7 @@ ms.locfileid: "68476294"
  在索引鍵方格中將選取的資料行向下移動。  
   
  **資料行存放區資料行**  
- 按一下 [加入]  ，選取資料行存放區索引的資料行。 如需資料行存放區索引的限制，請參閱 [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)。  
+ 按一下 [加入]，選取資料行存放區索引的資料行。 如需資料行存放區索引的限制，請參閱 [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)。  
   
  **包含的資料行**  
  在非叢集索引中包含非索引鍵資料行。 此選項可藉由在非叢集索引的分葉層級中加入資料行當做非索引鍵資料行，以略過索引鍵大小總計的目前索引限制，以及參與索引鍵的最大資料行數目。 如需詳細資訊，請參閱 [建立內含資料行的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)  

@@ -1,5 +1,6 @@
 ---
 title: PH 逾時伺服器組態選項 | Microsoft Docs
+description: 了解 [PH 逾時] 選項。 查看此選項如何限制全文檢索通訊協定處理常式配置來連線到 SQL Server 資料庫的時間。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - protocols [SQL Server], timing out
 - ph timeout option
 ms.assetid: ed19a07c-83fe-4582-9c9e-41b1ce571850
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 3d918c816bc4a4053435fcd5d71f94c09f9c4ace
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a0173d6e5c5b10ac05b757f483518999fc526992
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67997932"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730962"
 ---
 # <a name="ph-timeout-server-configuration-option"></a>PH 逾時伺服器組態選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   使用 PH 逾時選項來指定全文檢索通訊協定處理常式在資料庫連接逾時之前，需先等候的時間 (以秒為單位)。預設值為 60 秒。 若連接嘗試因為暫時性的網路問題而逾時，請增加 ph timeout 值。  
   

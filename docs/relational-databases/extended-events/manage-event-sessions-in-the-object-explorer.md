@@ -11,16 +11,16 @@ ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 390e8d4c65951f7b2b6c1f17d161a8ddc6d71242
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e90efcea33406b176706ce8d6fe0196d3c825fb3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79434085"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727321"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>在物件總管中管理事件工作階段
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   本主題將討論您可以在 **[物件總管]** 中採取以影響「擴充事件」的動作：  
   
@@ -77,7 +77,7 @@ STATE = STOP
   
 1.  依序展開 **[管理]** 、 **[擴充事件]** 和 **[工作階段]** 節點。  
   
-2.  以滑鼠右鍵按一下您想要匯出的工作階段，然後選取 [匯出工作階段]  。  
+2.  以滑鼠右鍵按一下您想要匯出的工作階段，然後選取 [匯出工作階段]。  
   
 3.  在 **[另存新檔]** 對話方塊中，選取儲存檔案的位置，並在 **[檔案名稱]** 方塊中輸入檔案名稱，然後按一下 **[儲存]** 。  
   
@@ -94,13 +94,13 @@ STATE = STOP
   
 1.  在 **[物件總管]** 中，依序展開 **[管理]** 和 **[擴充事件]** 節點。  
   
-2.  以滑鼠右鍵按一下 [工作階段]  ，然後選取 [新增工作階段]  。  
+2.  以滑鼠右鍵按一下 [工作階段]，然後選取 [新增工作階段]。  
   
 3.  指定工作階段的名稱。  
   
 4.  展開 **[範本]** 下拉式方塊。  
   
-5.  按一下 [\<檔案來源 …>開啟]  ，然後巡覽至您想要匯入的工作階段 (XML 檔案)。  
+5.  按一下 [\<File From ...>開啟]，然後瀏覽至您想要匯入的工作階段 (XML 檔案)。  
   
  此工作階段會顯示在 **[工作階段]** 節點底下。 根據預設，工作階段不會啟動。  
   
@@ -111,7 +111,7 @@ STATE = STOP
   
 1.  在 **[物件總管]** 中，依序展開 **[管理]** 、 **[擴充事件]** 和 **[工作階段]** 節點。  
   
-2.  以滑鼠右鍵按一下工作階段，然後選取 [屬性]  。  
+2.  以滑鼠右鍵按一下工作階段，然後選取 [屬性]。  
   
 3.  在 **[選取頁面]** 區段中，選取要編輯的頁面。  
   
@@ -140,13 +140,13 @@ STATE = STOP
   
 1.  依序展開 **[管理]** 、 **[擴充事件]** 和 **[工作階段]** 節點。  
   
-2.  以滑鼠右鍵按一下工作階段，然後選取 [刪除]  。  
+2.  以滑鼠右鍵按一下工作階段，然後選取 [刪除]。  
   
 3.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]** 。  
   
 4.  完成事件工作階段的修訂之後，請按一下 **[確定]** 。  
   
- 若要在 [查詢編輯器]  中刪除「擴充事件」工作階段，請發出下列陳述式，使用您想要刪除的「擴充事件」工作階段名稱來取代 *session_name*：  
+ 若要在 [查詢編輯器] 中刪除「擴充事件」工作階段，請發出下列陳述式，使用您想要刪除的「擴充事件」工作階段名稱來取代 *session_name*：  
   
 ```  
 DROP EVENT SESSION [session_name]  

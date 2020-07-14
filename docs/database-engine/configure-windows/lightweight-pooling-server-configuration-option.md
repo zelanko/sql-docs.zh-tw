@@ -1,5 +1,6 @@
 ---
 title: 輕量型共用伺服器組態選項 | Microsoft Docs
+description: 了解 [輕量型共用] 選項。 查看此選項如何在發生過多環境切換的對稱式多處理環境中提供更好的輸送量。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -18,19 +19,19 @@ helpviewer_keywords:
 - reducing overhead
 - overhead [SQL Server]
 ms.assetid: 2dc11b61-d065-4126-8e00-acf40390f9fb
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 5d18b51a3868534089c88dc1c951148711e0d0c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 13efd00252dac50756a243475816a5a2e4119110
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67998034"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772435"
 ---
 # <a name="lightweight-pooling-server-configuration-option"></a>輕量型共用伺服器組態選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  在對稱式多處理 (SMP) 環境中，有時候會出現內容切換過多的現象，[輕量型共用]  選項可用來減少這種現象對系統所造成的額外負擔。 發生內容切換過多的現象時，輕量型共用可以執行內容切換內嵌，藉此幫助減少使用者/核心的環狀轉換，而提供較佳的效能。  
+  在對稱式多處理 (SMP) 環境中，有時候會出現內容切換過多的現象，[輕量型共用] 選項可用來減少這種現象對系統所造成的額外負擔。 發生內容切換過多的現象時，輕量型共用可以執行內容切換內嵌，藉此幫助減少使用者/核心的環狀轉換，而提供較佳的效能。  
   
  Fiber 模式適用於 UMS 工作者的環境切換是重大效能瓶頸的某些狀況。 因為這個狀況非常罕見，所以 Fiber 模式幾乎不太會提高一般系統上的效能或延展性。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 中改善的環境切換也減少了 Fiber 模式需求。 我們不建議您針對例行作業使用 Fiber 模式排程。 這是因為 Fiber 模式可能會抑制內容切換通常會有的好處而降低效能，而且使用執行緒本機存放裝置 (TLS) 或執行緒擁有之物件 (例如 Win32 核心物件) 的某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件無法在 Fiber 模式下正確運作。  
   

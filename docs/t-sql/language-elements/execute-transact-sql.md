@@ -31,12 +31,12 @@ ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51b327832b5ad5cae52791efdbf1df756aade3a5
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 74ab018b017b675e08abb53036f88c3eaf2e5618
+ms.sourcegitcommit: 05fdc50006a9abdda79c3a4685b075796068c4fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636324"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84748590"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,9 +49,77 @@ ms.locfileid: "81636324"
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
-  
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
+下列程式碼區塊顯示 SQL Server 2019 中的語法。 或者，請改為參閱 [SQL Server 2017 和更早版本中的語法](execute-transact-sql.md?view=sql-server-2017)。 
+
 ```syntaxsql
--- Syntax for SQL Server  
+-- Syntax for SQL Server 2019
+  
+Execute a stored procedure or function  
+[ { EXEC | EXECUTE } ]  
+    {   
+      [ @return_status = ]  
+      { module_name [ ;number ] | @module_name_var }   
+        [ [ @parameter = ] { value   
+                           | @variable [ OUTPUT ]   
+                           | [ DEFAULT ]   
+                           }  
+        ]  
+      [ ,...n ]  
+      [ WITH <execute_option> [ ,...n ] ]  
+    }  
+[;]  
+  
+Execute a character string  
+{ EXEC | EXECUTE }   
+    ( { @string_variable | [ N ]'tsql_string' } [ + ...n ] )  
+    [ AS { LOGIN | USER } = ' name ' ]  
+[;]  
+  
+Execute a pass-through command against a linked server  
+{ EXEC | EXECUTE }  
+    ( { @string_variable | [ N ] 'command_string [ ? ]' } [ + ...n ]  
+        [ { , { value | @variable [ OUTPUT ] } } [ ...n ] ]  
+    )   
+    [ AS { LOGIN | USER } = ' name ' ]  
+    [ AT linked_server_name ]  
+    [ AT DATA_SOURCE data_source_name ]  
+[;]  
+  
+<execute_option>::=  
+{  
+        RECOMPILE   
+    | { RESULT SETS UNDEFINED }   
+    | { RESULT SETS NONE }   
+    | { RESULT SETS ( <result_sets_definition> [,...n ] ) }  
+}   
+  
+<result_sets_definition> ::=   
+{  
+    (  
+         { column_name   
+           data_type   
+         [ COLLATE collation_name ]   
+         [ NULL | NOT NULL ] }  
+         [,...n ]  
+    )  
+    | AS OBJECT   
+        [ db_name . [ schema_name ] . | schema_name . ]   
+        {table_name | view_name | table_valued_function_name }  
+    | AS TYPE [ schema_name.]table_type_name  
+    | AS FOR XML   
+}  
+```  
+::: moniker-end
+
+::: monikerRange=">=sql-server-2016 ||=sqlallproducts-allversions"
+
+下列程式碼區塊顯示 SQL Server 2017 和更早版本中的語法。 或者，請改為參閱 [SQL Server 2019 中的語法](execute-transact-sql.md?view=sql-server-ver15)。
+
+
+```syntaxsql
+-- Syntax for SQL Server 2017 and earleir  
   
 Execute a stored procedure or function  
 [ { EXEC | EXECUTE } ]  
@@ -107,6 +175,8 @@ Execute a pass-through command against a linked server
     | AS FOR XML   
 }  
 ```  
+::: moniker-end
+
   
 ```syntaxsql
 -- In-Memory OLTP   
@@ -179,7 +249,8 @@ Execute a character string
     | AS TYPE [ schema_name.]table_type_name  
     | AS FOR XML  
   
-```  
+```
+
   
 ```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
@@ -195,6 +266,8 @@ Execute a character string
     ( { @string_variable | [ N ] 'tsql_string' } [ +...n ] )  
 [;]  
 ```  
+
+
   
 ## <a name="arguments"></a>引數  
  @*return_status*  
@@ -288,12 +361,19 @@ Execute a character string
  這是包含要傳遞到連結伺服器之命令的常數字串。 如果包含 N，則字串解譯為 **nvarchar** 資料類型。  
   
  [?]  
- 指出為其在 EXEC('...', \<arg-list>) AT \<linkedsrv> 陳述式所使用之通過命令的 \<arg-list> 中提供值的參數。  
+ 指出其值已在用於 EXEC('...', \<arg-list>) AT \<linkedsrv> 陳述式之傳遞命令的 \<arg-list> 中提供的參數。  
   
  AT *linked_server_name*  
 **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本
   
  指定 *command_string* 對 *linked_server_name* 執行，並將結果 (若有) 傳回用戶端。 *linked_server_name* 必須參考本機伺服器中現有的連結伺服器定義。 連結伺服器是利用 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 所定義。  
+  
+ WITH \<execute_option>  
+ 可能的執行選項。 INSERT...EXEC 陳述式中不可指定 RESULT SETS 選項。  
+ 
+AT DATA_SOURCE data_source_name **適用於**：[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] 和更新版本
+  
+ 指定 *command_string* 是對 *data_source_name* 執行，並會將結果 (若有的話) 傳回用戶端。 *data_source_name* 必須參考資料庫中現有的 EXTERNAL DATA SOURCE 定義。 僅支援指向 SQL Server 的資料來源。 此外，針對指向計算集區的 SQL Server 巨量資料叢集資料來源，支援資料集區或存放集區。 資料來源是透過使用 [CREATE EXTERNAL DATA SOURCE](../statements/create-external-data-source-transact-sql.md) 來定義。  
   
  WITH \<execute_option>  
  可能的執行選項。 INSERT...EXEC 陳述式中不可指定 RESULT SETS 選項。  
@@ -303,9 +383,10 @@ Execute a character string
 |RECOMPILE|在執行模組之後，強制編譯、使用和捨棄新計畫。 如果該模組有現有的查詢計畫，這個計畫便會保留在快取中。<br /><br /> 如果您所提供的參數不合規則，或者如果資料已經大幅變更，請使用這個選項。 這個選項不適用於擴充預存程序。 我們建議您少用這個選項，因為它的成本很高。<br /><br /> **注意：** 呼叫使用 OPENDATASOURCE 語法的預存程序時，您無法使用 WITH RECOMPILE。 指定物件名稱四部分時，會忽略 WITH RECOMPILE 選項。<br /><br /> **注意：** RECOMPILE 不支援搭配原生編譯的純量使用者定義函式。 如果您需要重新編譯，請使用 [sp_recompile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md)。|  
 |**RESULT SETS UNDEFINED**|**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 這個選項不保證會傳回何種結果 (如果有的話)，也不提供定義。 如果傳回任何結果或未傳回結果，陳述式會正確無誤地執行。 如果未提供 result_sets_option，RESULT SETS UNDEFINED 是預設行為。<br /><br /> 對於解譯的純量使用者定義函數和原生編譯的純量使用者定義函數，這個選項沒有作用，因為函數永遠不會傳回結果集。|  
 |RESULT SETS NONE|**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 保證 Execute 陳述式不會傳回任何結果。 如果傳回任何結果，會中止批次。<br /><br /> 對於解譯的純量使用者定義函數和原生編譯的純量使用者定義函數，這個選項沒有作用，因為函數永遠不會傳回結果集。|  
-|*\<result_sets_definition>*|**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 保證結果會依 result_sets_definition 中所指定傳回。 針對傳回多個結果集的陳述式，請提供多個 *result_sets_definition* 區段。 將每個 *result_sets_definition* 括在括號中，並以逗號分隔。 如需詳細資訊，請參閱本主題稍後的 \<result_sets_definition>。<br /><br /> 此選項對於原生編譯的純量使用者定義函數一律會產生錯誤，因為函數永遠不會傳回結果集。|
+|*\<result_sets_definition>*|**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 保證結果會依 result_sets_definition 中所指定傳回。 針對傳回多個結果集的陳述式，請提供多個 *result_sets_definition* 區段。 將每個 *result_sets_definition* 括在括號中，並以逗號分隔。 如需詳細資訊，請參閱此主題稍後的 \<result_sets_definition>。<br /><br /> 此選項對於原生編譯的純量使用者定義函數一律會產生錯誤，因為函數永遠不會傳回結果集。|
   
-\<result_sets_definition >**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+\<result_sets_definition>
+**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  描述執行的陳述式所傳回的結果集。 result_sets_definition 子句有下列的意義  
   
@@ -389,26 +470,26 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
 ### <a name="context-switching-permissions"></a>內容切換權限  
  若要指定某項登入的 EXECUTE AS 權限，則這位呼叫端必須具有指定之登入名稱的 IMPERSONATE 權限。 若要指定資料庫使用者的 EXECUTE AS 權限，則這位呼叫端必須具有指定之使用者名稱的 IMPERSONATE 權限。 如果未指定任何執行內容，或者沒有指定 EXECUTE AS CALLER，就不需要 IMPERSONATE 權限。  
   
-## <a name="examples"></a>範例  
+## <a name="examples-sql-server"></a>範例：SQL Server
   
 ### <a name="a-using-execute-to-pass-a-single-parameter"></a>A. 使用 EXECUTE 傳遞單一參數  
  [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中的 `uspGetEmployeeManagers` 預存程序預期需要一個參數 (`@EmployeeID`)。 下列範例會將 `Employee ID 6` 當做參數值來執行 `uspGetEmployeeManagers` 預存程序。  
   
-```  
+```sql    
 EXEC dbo.uspGetEmployeeManagers 6;  
 GO  
 ```  
   
  此變數可以在執行作業中明確命名：  
   
-```  
+```sql    
 EXEC dbo.uspGetEmployeeManagers @EmployeeID = 6;  
 GO  
 ```  
   
  如果下列陳述式是批次、**osql** 或 **sqlcmd** 指令碼中的第一個陳述式，即不需要 EXEC。  
   
-```  
+```sql    
 dbo.uspGetEmployeeManagers 6;  
 GO  
 --Or  
@@ -419,7 +500,7 @@ GO
 ### <a name="b-using-multiple-parameters"></a>B. 使用多個參數  
  下列範例會執行 `spGetWhereUsedProductID` 資料庫中的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 預存程序。 它會傳遞兩個參數：第一個參數是產品識別碼 (`819`)，第二個參數 `@CheckDate,` 則是 `datetime` 值。  
   
-```  
+```sql    
 DECLARE @CheckDate datetime;  
 SET @CheckDate = GETDATE();  
 EXEC dbo.uspGetWhereUsedProductID 819, @CheckDate;  
@@ -429,7 +510,7 @@ GO
 ### <a name="c-using-execute-tsql_string-with-a-variable"></a>C. 使用 EXECUTE 'tsql_string' 與變數  
  下列範例會示範 `EXECUTE` 如何處理含有變數的動態建立字串。 這個範例會建立 `tables_cursor` 資料指標來保存一份 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中所有使用者定義資料表的清單，然後再利用這份清單在資料表上重建所有的索引。  
   
-```  
+```sql    
 DECLARE tables_cursor CURSOR  
    FOR  
    SELECT s.name, t.name   
@@ -457,7 +538,7 @@ GO
   
 **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本
   
-```  
+```sql    
 DECLARE @retstat int;  
 EXECUTE @retstat = SQLSERVER1.AdventureWorks2012.dbo.uspGetEmployeeManagers @BusinessEntityID = 6;  
 ```  
@@ -475,7 +556,7 @@ EXEC @proc_name;
 ### <a name="f-using-execute-with-default"></a>F. 使用 EXECUTE 與 DEFAULT  
  下列範例會針對第一個和第三個參數採用預設值來建立預存程序。 在執行程序時，如果呼叫中沒有傳遞任何值，或者如果未指定預設值，就會針對第一個和第三個參數插入這些預設值。 請注意各種可以使用 `DEFAULT` 關鍵字的方法。  
   
-```  
+```sql    
 IF OBJECT_ID(N'dbo.ProcTestDefaults', N'P')IS NOT NULL  
    DROP PROCEDURE dbo.ProcTestDefaults;  
 GO  
@@ -494,7 +575,7 @@ GO
   
  您可以利用多種組合執行 `Proc_Test_Defaults` 預存程序。  
   
-```  
+```sql    
 -- Specifying a value only for one parameter (@p2).  
 EXECUTE dbo.ProcTestDefaults @p2 = 'A';  
 -- Specifying a value for the first two parameters.  
@@ -516,7 +597,7 @@ EXECUTE dbo.ProcTestDefaults DEFAULT, 'I', @p3 = DEFAULT;
   
 **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本
   
-```  
+```sql    
 EXEC sp_addlinkedserver 'SeattleSales', 'SQL Server'  
 GO  
 EXECUTE ( 'CREATE TABLE AdventureWorks2012.dbo.SalesTbl   
@@ -527,7 +608,7 @@ GO
 ### <a name="h-using-execute-with-recompile"></a>H. 使用 EXECUTE WITH RECOMPILE  
  下列範例會執行 `Proc_Test_Defaults` 預存程序，並在執行模組之後，強制編譯、使用和捨棄新的查詢計劃。  
   
-```  
+```sql    
 EXECUTE dbo.Proc_Test_Defaults @p2 = 'A' WITH RECOMPILE;  
 GO  
 ```  
@@ -535,7 +616,7 @@ GO
 ### <a name="i-using-execute-with-a-user-defined-function"></a>I. 使用 EXECUTE 與使用者定義函數  
  下列範例會執行 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中的 `ufnGetSalesOrderStatusText` 純量使用者定義函數。 它會使用變數 `@returnstatus` 來儲存該函數所傳回的值。 該函數會預期接受一個輸入參數 `@Status`。 它定義為 **tinyint** 資料類型。  
   
-```  
+```sql    
 DECLARE @returnstatus nvarchar(15);  
 SET @returnstatus = NULL;  
 EXEC @returnstatus = dbo.ufnGetSalesOrderStatusText @Status = 2;  
@@ -548,7 +629,7 @@ GO
   
 **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本
   
-```  
+```sql    
 -- Setup the linked server.  
 EXEC sp_addlinkedserver    
         @server='ORACLE',  
@@ -580,7 +661,7 @@ GO
 ### <a name="k-using-execute-as-user-to-switch-context-to-another-user"></a>K. 使用 EXECUTE AS USER 將內容切換到其他使用者  
  下列範例會執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 字串來建立一個資料表，以及指定 `AS USER` 子句，將陳述式的執行內容從呼叫端切換到 `User1`。 執行陳述式時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會檢查 `User1` 的權限。 `User1` 必須是資料庫中的使用者，並須具備在 `Sales` 結構描述中建立資料表的權限，否則陳述式將會失敗。  
   
-```  
+```sql    
 EXECUTE ('CREATE TABLE Sales.SalesTable (SalesID int, SalesName varchar(10));')  
 AS USER = 'User1';  
 GO  
@@ -591,7 +672,7 @@ GO
   
 **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本
   
-```  
+```sql    
 -- Setup the linked server.  
 EXEC sp_addlinkedserver 'SeattleSales', 'SQL Server'  
 GO  
@@ -607,7 +688,7 @@ GO
   
 **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
-```  
+```sql    
 EXEC uspGetEmployeeManagers 16  
 WITH RESULT SETS  
 (   
@@ -627,7 +708,7 @@ WITH RESULT SETS
   
 **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
-```  
+```sql    
 --Create the procedure  
 CREATE PROC Production.ProductList @ProdName nvarchar(50)  
 AS  
@@ -657,53 +738,103 @@ WITH RESULT SETS
 );  
   
 ```  
+  ### <a name="o-using-execute-with-at-data_source-data_source_name-to-query-a-remote-sql-server"></a>O. 搭配 AT DATA_SOURCE data_source_name 使用 EXECUTE 來查詢遠端 SQL Server 
   
-## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 下列範例會將命令字串傳遞至指向 SQL Server 執行個體的外部資料來源。 
   
-### <a name="example-o-basic-procedure-execution"></a>範例 O：基本程序執行  
+**適用於**：[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] 和更新版本
+  
+```sql    
+EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE my_sql_server;  
+GO  
+```  
+  
+### <a name="p-using-execute-with-at-data_source-data_source_name-to-query-compute-pool-in-sql-server-big-data-cluster"></a>P. 搭配 AT DATA_SOURCE data_source_name 使用 EXECUTE 來查詢 SQL Server 巨量資料叢集中的計算集區 
+
+ 下列範例會將命令字串傳遞至指向 SQL Server 巨量資料叢集中計算集區的外部資料來源。 此範例會針對 SQL Server 巨量資料叢集中的計算集區建立資料來源 `SqlComputePool`，然後針對該資料來源執行 `SELECT` 陳述式。 
+  
+**適用於**：[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] 和更新版本
+  
+```sql  
+CREATE EXTERNAL DATA SOURCE SqlComputePool 
+WITH (LOCATION = 'sqlcomputepool://controller-svc/default');
+EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE SqlComputePool;  
+GO  
+```  
+
+### <a name="q-using-execute-with-at-data_source-data_source_name-to-query-data-pool-in-sql-server-big-data-cluster"></a>Q. 搭配 AT DATA_SOURCE data_source_name 使用 EXECUTE 來查詢 SQL Server 巨量資料叢集中的資料集區 
+ 下列範例會將命令字串傳遞至指向 SQL Server 巨量資料叢集中計算集區的外部資料來源。 此範例會針對 SQL Server 巨量資料叢集中的資料集區建立資料來源 `SqlDataPool`，然後針對該資料來源執行 `SELECT` 陳述式。 
+  
+**適用於**：[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] 和更新版本
+  
+```sql  
+CREATE EXTERNAL DATA SOURCE SqlDataPool 
+WITH (LOCATION = 'sqldatapool://controller-svc/default');
+EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE SqlDataPool;  
+GO  
+```
+
+### <a name="r-using-execute-with-at-data_source-data_source_name-to-query-storage-pool-in-sql-server-big-data-cluster"></a>R. 搭配 AT DATA_SOURCE data_source_name 使用 EXECUTE 來查詢 SQL Server 巨量資料叢集中的存放集區 
+
+ 下列範例會將命令字串傳遞至指向 SQL Server 巨量資料叢集中計算集區的外部資料來源。 此範例會針對 SQL Server 巨量資料叢集中的資料集區建立資料來源 `SqlStoragePool`，然後針對該資料來源執行 `SELECT` 陳述式。 
+  
+**適用於**：[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] 和更新版本
+  
+```sql  
+CREATE EXTERNAL DATA SOURCE SqlStoragePool
+WITH (LOCATION = 'sqlhdfs://controller-svc/default');
+EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE SqlStoragePool;  
+GO  
+```
+
+  
+## <a name="examples-azure-synapse-analytics"></a>範例：Azure Synapse Analytics 
+  
+### <a name="a-basic-procedure-execution"></a>A：基本程序執行  
  執行預存程序：  
   
-```  
+```sql  
 EXEC proc1;  
 ```  
   
  在執行階段以決定的名稱呼叫預存程序：  
   
-```  
+```sql    
 EXEC ('EXEC ' + @var);  
 ```  
   
  從預存程序內呼叫預存程序：  
   
-```  
+```sql   
 CREATE sp_first AS EXEC sp_second; EXEC sp_third;  
 ```  
   
-### <a name="example-p-executing-strings"></a>範例 P：執行字串  
+### <a name="b-executing-strings"></a>B：執行字串  
  執行 SQL 字串：  
   
-```  
+```sql   
 EXEC ('SELECT * FROM sys.types');  
 ```  
   
  執行巢狀字串：  
   
-```  
+```sql  
 EXEC ('EXEC (''SELECT * FROM sys.types'')');  
 ```  
   
  執行字串變數：  
   
-```  
+```sql  
 DECLARE @stringVar nvarchar(100);  
 SET @stringVar = N'SELECT name FROM' + ' sys.sql_logins';  
 EXEC (@stringVar);  
 ```  
   
-### <a name="example-q-procedures-with-parameters"></a>範例 Q：具參數的程序  
+### <a name="c-procedures-with-parameters"></a>C.具參數的程序  
+
  下列範例建立有參數的程序，並示範 3 種執行程序的方式：  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 CREATE PROC ProcWithParameters  

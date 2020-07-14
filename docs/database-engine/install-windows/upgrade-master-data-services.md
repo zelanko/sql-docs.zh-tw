@@ -1,5 +1,6 @@
 ---
 title: 升級 Master Data Services | Microsoft Docs
+description: 探索升級 Microsoft SQL Server Master Data Services 的四個案例。 了解檔案位置與升級疑難排解。
 ms.custom: ''
 ms.date: 07/21/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d1b9131442160969e7511f42b91ed09a3b4001e1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e58b0ea07dc97ac7573934112dd3969cadb53c26
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67934829"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900276"
 ---
 # <a name="upgrade-master-data-services"></a>升級 Master Data Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
   升級 Microsoft [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Master Data Services 的情況如下。  
   
@@ -40,7 +41,7 @@ ms.locfileid: "67934829"
   
 ##  <a name="file-location"></a><a name="fileLocation"></a> 檔案位置  
   
--   根據預設，在 [!INCLUDE[ss2017](../../includes/sssqlv14-md.md)]中，檔案會安裝到 <磁碟機>  :\Program Files\Microsoft SQL Server\140\Master Data Services。  
+-   根據預設，在 [!INCLUDE[ss2017](../../includes/sssqlv14-md.md)]中，檔案會安裝到 <磁碟機>:\Program Files\Microsoft SQL Server\140\Master Data Services。  
 
 -   根據預設，在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]中，檔案會安裝到 *磁碟機*:\Program Files\Microsoft SQL Server\130\Master Data Services。  
   
@@ -61,9 +62,9 @@ ms.locfileid: "67934829"
   
     1.  開啟 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] 安裝程式精靈。  
   
-    2.  按一下左窗格中的 [安裝]  。  
+    2.  按一下左窗格中的 [安裝]。  
   
-    3.  按一下右窗格中的 [新增 SQL Server 獨立安裝或將功能加入至現有安裝]  。  
+    3.  按一下右窗格中的 [新增 SQL Server 獨立安裝或將功能加入至現有安裝]。  
   
     4.  在 [功能選擇] 頁面上，選取 [[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]] 以及您想要安裝的其他任何功能。  
   
@@ -74,13 +75,13 @@ ms.locfileid: "67934829"
     1.  開啟目前的 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。  
   
         > [!IMPORTANT]  
-        >  若要升級 MDS 資料庫結構描述，您必須以建立 MDS 資料庫時指定之系統管理員帳戶的身分登入。 在 MDS 資料庫的 mdm.tblUser 中，這位使用者的 [識別碼]  值為 **1**。  
+        >  若要升級 MDS 資料庫結構描述，您必須以建立 MDS 資料庫時指定之系統管理員帳戶的身分登入。 在 MDS 資料庫的 mdm.tblUser 中，這位使用者的 [識別碼] 值為 **1**。  
   
-    2.  按一下左窗格中的 [資料庫組態]  。  
+    2.  按一下左窗格中的 [資料庫組態]。  
   
-    3.  按一下右窗格中的 [選取資料庫]  ，然後指定 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 資料庫執行個體的資訊。  
+    3.  按一下右窗格中的 [選取資料庫]，然後指定 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 資料庫執行個體的資訊。  
   
-    4.  按一下 [升級資料庫]  可啟動 [升級資料庫精靈]  。 如需詳細資訊，請參閱[升級資料庫精靈 &#40;Master Data Services 組態管理員&#41;](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md)。  
+    4.  按一下 [升級資料庫] 可啟動 [升級資料庫精靈]。 如需詳細資訊，請參閱[升級資料庫精靈 &#40;Master Data Services 組態管理員&#41;](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md)。  
   
 3.  建立 Web 應用程式。  
   
@@ -88,11 +89,11 @@ ms.locfileid: "67934829"
   
     2.  按一下左窗格中的 **[Web 組態]** 。  
   
-    3.  從右窗格的 [網站]  清單中，選取下列其中一個選項：  
+    3.  從右窗格的 [網站] 清單中，選取下列其中一個選項：  
   
-        -   [預設的網站]  ，然後按一下 [建立應用程式]  。  
+        -   [預設的網站]，然後按一下 [建立應用程式]。  
   
-        -   [建立新的網站]  。 建立網站時，便會自動建立新的 Web 應用程式。  
+        -   [建立新的網站]。 建立網站時，便會自動建立新的 Web 應用程式。  
   
         > [!IMPORTANT]  
         >  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版的 Master Data Services 組態管理員中，可讓您選取您在舊版 SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 中的現有 MDS Web 應用程式。 您絕不能選取現有的 Web 應用程式，而是必須建立 MDS 的 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Web 應用程式。 否則，當您嘗試將 Web 應用程式與升級的 MDS 資料庫建立關聯時，將會收到錯誤，說明因為該頁面的相關組態資料無效，所以無法存取所要求的頁面。  
@@ -101,18 +102,18 @@ ms.locfileid: "67934829"
   
 4.  建立新 Web 應用程式與升級的 MDS 資料庫的關聯。  
   
-    1.  在 [建立應用程式與資料庫間的關聯]  區段中，按一下 [選取]  。  
+    1.  在 [建立應用程式與資料庫間的關聯] 區段中，按一下 [選取]。  
   
     2.  選取 MDS 資料庫。  
   
-    3.  按一下 [套用]  。  
+    3.  按一下 [套用]。  
   
 ##  <a name="upgrade-with-database-engine-upgrade"></a><a name="engine"></a> 升級且包含 Database Engine 升級  
  在此案例中，您要將資料庫引擎和 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 應用程式從舊版本升級至 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 或 [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)]。  
   
  **升級且包含 Database Engine 升級**  
   
-1.  **僅適用於 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]** ：開啟 [控制台]   > [程式和功能]  ，並解除安裝 Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]。  
+1.  **僅限 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]** ：開啟 [控制台] > [程式和功能]，並解除安裝 Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]。  
   
 2.  將資料庫引擎升級至 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 或 [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)]。 如需詳細資訊，請參閱 [選擇 Database Engine 升級方法](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)。  
   
@@ -136,9 +137,9 @@ ms.locfileid: "67934829"
   
     1.  開啟 [!INCLUDE[sssnoversion](../../includes/ssnoversion-md.md)] 安裝程式精靈。  
   
-    2.  按一下左窗格中的 [安裝]  。  
+    2.  按一下左窗格中的 [安裝]。  
   
-    3.  按一下右窗格中的 [新增 SQL Server 獨立安裝或將功能加入至現有安裝]  。  
+    3.  按一下右窗格中的 [新增 SQL Server 獨立安裝或將功能加入至現有安裝]。  
   
     4.  在 [功能選擇] 頁面上，選取 [[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]] 以及您想要安裝的其他任何功能。  
   
@@ -149,11 +150,11 @@ ms.locfileid: "67934829"
 3.  升級 MDS 資料庫結構描述，並建立 Web 應用程式，以及建立新 Web 應用程式與升級之 MDS 資料庫的關聯。 如需指示，請參閱 [升級但不包含 Database Engine 升級](#noengine)中的步驟 2-4  
   
 ## <a name="troubleshooting"></a>疑難排解  
- **問題：** 當您開啟 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Web 應用程式時，會顯示「用戶端版本與資料庫版本不相容」錯誤訊息。  
+ **問題：** 當您開啟 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Web 應用程式時，會顯示「用戶端版本與資料庫版本不相容」的錯誤訊息。  
   
- **解決方法：** 當 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Master Data Manager Web 應用程式嘗試存取已升級到 [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] Master Data Services 的資料庫時，就會發生此問題。 您必須改用 [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] Web 應用程式。  
+ **解決方案：** 當 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 主資料管理員 Web 應用程式嘗試存取已升級到 [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] Master Data Services 的資料庫時，就會發生此問題。 您必須改用 [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] Web 應用程式。  
   
- 如果您升級 MDS 資料庫結構描述時，未在 IIS 中停止 [MDS 應用程式集區]  然後再重新啟動，也可能會發生此問題。 重新啟動 [MDS 應用程式集區]  即可更正此問題。  
+ 如果您升級 MDS 資料庫結構描述時，未在 IIS 中停止 [MDS 應用程式集區] 然後再重新啟動，也可能會發生此問題。 重新啟動 [MDS 應用程式集區] 即可更正此問題。  
   
 ## <a name="see-also"></a>另請參閱  
  [安裝 Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  

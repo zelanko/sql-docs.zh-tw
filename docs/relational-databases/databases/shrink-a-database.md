@@ -1,5 +1,6 @@
 ---
 title: 壓縮資料庫 | Microsoft 文件
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL，在 SQL Server 中使用物件來壓縮資料庫。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 13c20f7fb8cd282251c734df1a4bb7b3adab3712
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5cacfade7921a099d618704b3145f5de2acd2b73
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909619"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715506"
 ---
 # <a name="shrink-a-database"></a>壓縮資料庫
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ， [!INCLUDE[tsql](../../includes/tsql-md.md)]中壓縮資料庫。  
   
  將資料頁面從檔案結尾移到靠近檔案前端的未使用空間，以壓縮資料並復原儲存空間。 當檔案結尾建立了足夠的可用空間後，檔案結尾的資料頁面便可取消配置並返回檔案系統。  
@@ -44,7 +45,7 @@ ms.locfileid: "72909619"
   
 -   **使用下列方法壓縮資料庫：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -85,7 +86,7 @@ ms.locfileid: "72909619"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  展開 [資料庫]  ，然後以滑鼠右鍵按一下您要壓縮的資料庫。  
+2.  展開 [資料庫]，然後以滑鼠右鍵按一下您要壓縮的資料庫。  
   
 3.  指向 **[工作]** 的 **[壓縮]** ，然後按一下 **[資料庫]** 。  
   
@@ -104,7 +105,7 @@ ms.locfileid: "72909619"
      **壓縮後檔案的最大可用空間**  
      輸入在資料庫壓縮後，資料庫檔案中剩餘可用空間的最大百分比。 允許值介於 0 和 99 之間。  
   
-4.  按一下 [確定]  。  
+4.  按一下 [確定]。  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

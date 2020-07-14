@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 994018ab8b574bc313072f7a353ff999d645e0d9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 848c53ce4ca004cec84609b12869a98fa45fa78d
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292757"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469323"
 ---
 # <a name="error-handling-in-data"></a>處理資料中的錯誤
 
@@ -58,7 +58,7 @@ ms.locfileid: "71292757"
  如需詳細資訊，請參閱 [資料流程](../../integration-services/data-flow/data-flow.md) 和 [Integration Services 路徑](../../integration-services/data-flow/integration-services-paths.md)。  
 
 ## <a name="configure-error-output-dialog-box"></a>[設定錯誤輸出] 對話方塊
-使用 [設定錯誤輸出]  對話方塊，即可為支援錯誤輸出的資料流程轉換設定錯誤處理選項。  
+使用 [設定錯誤輸出] 對話方塊，即可為支援錯誤輸出的資料流程轉換設定錯誤處理選項。  
   
  若要深入了解如何使用錯誤輸出，請參閱[處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "71292757"
   
  這兩項數值若無對應的錯誤描述和資料行名稱，則用途有限。 以下是一些方法，以取得錯誤描述和資料行名稱。  
   
--   您可以藉由附加至錯誤輸出的資料檢視器看到錯誤描述和資料行名稱。 在 [SSIS 設計師] 中，以滑鼠右鍵按一下連至錯誤輸出的紅色箭頭，然後選取 [啟用資料檢視器]  。  
+-   您可以藉由附加至錯誤輸出的資料檢視器看到錯誤描述和資料行名稱。 在 [SSIS 設計師] 中，以滑鼠右鍵按一下連至錯誤輸出的紅色箭頭，然後選取 [啟用資料檢視器]。  
   
 -   您可以啟用記錄並選取 **DiagnosticEx** 事件，找到資料行名稱。 此事件會將資料流程資料行對應寫入記錄檔。 接著從這個資料行對應中的資料行識別項，查閱資料行名稱。 請注意， **DiagnosticEx** 事件不會在其 XML 輸出中保留空白，以縮減記錄檔的大小。 若要改善可讀性，可將記錄檔複製到 XML 編輯器 (例如，在 Visual Studio 中)，該編輯器需支援 XML 格式設定和語法反白顯示。 如需記錄的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "71292757"
   
     -   您可以使用單行指令碼來呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> 介面的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 方法，以便將錯誤描述包含在其他的資料行中。  
   
-    -   您可以使用單行指令碼呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetIdentificationStringByID%2A> 介面的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 方法，以便將錯誤描述包含在其他的資料行中。  
+    -   透過使用單行指令碼呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 介面的 [Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetIdentificationStringByID*] (/previous-versions/sql/sql-server-2016/mt657629(v=sql.130)) 方法，將資料行名稱包含在其他的資料行中。  
   
      您可以將指令碼元件加入資料流程元件 (此元件有您想要擷取的錯誤) 下游內，任何一處的資料流程錯誤區段中。 通常您會在錯誤資料列寫入目的地之前，立刻放入指令碼元件。 如此一來指令碼就只會查閱寫入之錯誤資料列的描述。 資料流程的錯誤區段可能會更新某些錯誤，而且不會將這些資料列寫入錯誤目的地。  
 

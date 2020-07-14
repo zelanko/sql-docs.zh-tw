@@ -1,5 +1,6 @@
 ---
 title: 將 TCP/IP 連接埠對應到 NUMA 節點 (SQL Server) | Microsoft Docs
+description: 了解如何使用 SQL Server 組態管理員，將 TCP/IP 連接埠對應到非統一記憶體存取 (NUMA) 節點。 查看如何建立節點識別點陣圖。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,17 +19,17 @@ helpviewer_keywords:
 - TCP/IP [SQL Server], NUMA support
 - non-uniform memory access
 ms.assetid: 07727642-0266-4cbc-8c55-3c367e4458ca
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 48c645bd85034f226650cf5e98ddd18a6b8efa9e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e6926fba5e248b51df28b342b5c7d49ecf497f89
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67997981"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85680957"
 ---
 # <a name="map-tcp-ip-ports-to-numa-nodes-sql-server"></a>將 TCP/IP 連接埠對應到 NUMA 節點 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   此主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員，將 TCP/IP 通訊埠對應到非統一記憶體存取 (NUMA) 節點。 在啟動時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將節點資訊寫入錯誤記錄檔。  
   
  若要判斷您想要使用之節點的節點號碼，請從錯誤記錄檔或從 **sys.dm_os_schedulers** 檢視中讀取節點資訊。 若要將 TCP/IP 位址和通訊埠設為單一或多重節點，請在通訊埠編號後面用方括號附加節點識別點陣圖 (相似性遮罩)。 可以用十進位或十六進位格式指定節點。 若要建立點陣圖，請由零開始，將節點從右到左編號，例如 76543210。 建立節點清單的二進位表示法，以 1 代表您要使用的節點，以 0 代表您不要使用的節點。 例如，若要使用 NUMA 節點 0、2 和 5，請指定 00100101。  
@@ -49,9 +50,9 @@ ms.locfileid: "67997981"
   
 #### <a name="to-map-a-tcpip-port-to-a-numa-node"></a>若要將 TCP/IP 通訊埠對應到 NUMA 節點  
   
-1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中展開 [SQL Server 網路組態]  ，然後按一下 [**執行個體名稱> 的通訊協定]** *\<* 。  
+1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中，展開 [SQL Server 網路組態]，然後按一下 [ *\<instance name>* 的通訊協定]。  
   
-2.  在詳細資料窗格中，按兩下 [TCP/IP]  。  
+2.  在詳細資料窗格中，按兩下 [TCP/IP]。  
   
 3.  在 **[IP 位址]** 索引標籤上，在對應到要設定之 IP 位址的區段中，在 **[TCP 通訊埠]** 方塊中，在通訊埠編號後面以方括號加入 NUMA 節點識別碼中。 例如，對於 TCP 通訊埠 1500 和節點 0、2 和 5，請使用 **1500[37]** 或 **1500[0x25]** 。  
   

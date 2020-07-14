@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cbdf7d05c25aad00e084c15929cce857cb6614d3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff824174a3c9f806267e5b2a6a58e056fb57d513
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822298"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643419"
 ---
 # <a name="configure-database-mirroring"></a>設定資料庫鏡像
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。  
@@ -67,13 +67,13 @@ ms.locfileid: "74822298"
   
      ALTER DATABASE *\<database_name\>* SET PARTNER **=** _\<server\_network\_address\>_  
   
-     其中 _\<database\_name\>_ 是要鏡像的資料庫名稱 (此名稱在兩個夥伴中都相同)，而 _\<server\_network\_address\>_ 是主體伺服器的伺服器網路位址。  
+     其中 _\<database\_name\>_ 是要鏡像的資料庫名稱 (此名稱在兩個合作夥伴中都相同)，而 _\<server\_network\_address\>_ 是主體伺服器的伺服器網路位址。  
   
      伺服器網路位址的語法如下：  
   
      TCP<b>\://</b> _\<system-address\>_ <b>\:</b> _\<port\>_  
   
-     其中 _系統位址>\<_ 是清楚識別目的地電腦系統的字串，_通訊埠>\<_ 是夥伴伺服器執行個體之鏡像端點使用的通訊埠編號。 如需詳細資訊，請參閱 [指定伺服器網路位址 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
+     其中 _\<system-address>_ 是清楚識別目的地電腦系統的字串，而 _\<port>_ 是合作夥伴伺服器執行個體之鏡像端點使用的連接埠號碼。 如需詳細資訊，請參閱 [指定伺服器網路位址 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
   
      例如，在鏡像伺服器執行個體上，下列 ALTER DATABASE 陳述式將夥伴設為原始主體伺服器執行個體。 資料庫名稱是 **AdventureWorks**、系統位址是 DBSERVER1 (夥伴系統的名稱)，而夥伴資料庫鏡像端點使用的通訊埠是 7022：  
   

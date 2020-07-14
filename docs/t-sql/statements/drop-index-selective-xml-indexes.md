@@ -14,15 +14,15 @@ dev_langs:
 ms.assetid: 4779ae84-e5f4-4d04-8fc1-e24a6631b428
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 912db4ce3841791e2bddde6f53be9869093bbcd2
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 6fb75992f2bcd229217c40582cd8087c6099d34f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636044"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766319"
 ---
 # <a name="drop-index-selective-xml-indexes"></a>DROP INDEX (選擇性 XML 索引)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   卸除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中現有的選擇性 XML 索引或次要選擇性 XML 索引。 如需詳細資訊，請參閱[選擇性 XML 索引 &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)。  
   
@@ -48,7 +48,7 @@ DROP INDEX index_name ON <object>
  *index_name*  
  這是要卸除之現有索引的名稱。  
   
- *\< object>* 是包含已編制索引之 XML 資料行的資料表。 請使用下列其中一個格式：  
+ *\< object>* 這是包含 XML 資料行 (已編製索引) 的資料表。 請使用下列其中一個格式：  
   
 -   `database_name.schema_name.table_name`  
   

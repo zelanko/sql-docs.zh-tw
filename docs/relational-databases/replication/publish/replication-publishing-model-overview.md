@@ -1,5 +1,6 @@
 ---
 title: 複寫發行模型概觀 | Microsoft Docs
+description: 了解 SQL Server 中的複寫發行模型，包括發行者、散發者、訂閱者、發行集、發行項，以及訂閱。
 ms.custom: ''
 ms.date: 09/01/2016
 ms.prod: sql
@@ -23,12 +24,12 @@ ms.assetid: b9567832-e6a8-45b2-a3ed-ea12aa002f4b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d0983db7dee94269981933f115594bdbb9c6a115
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 963e9c1ffba4c1286793c564e22cd1a122c795b3
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287550"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807084"
 ---
 # <a name="replication-publishing-model-overview"></a>複寫發行模型概觀
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

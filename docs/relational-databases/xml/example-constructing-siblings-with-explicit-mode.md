@@ -1,5 +1,6 @@
 ---
 title: 範例：使用 EXPLICIT 模式建構同層級 | Microsoft Docs
+description: 請檢視使用 EXPLICIT 模式搭配 FOR XML 子句來建構 XML 同層級的 SQL 查詢範例。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 606c83c59147bf6ef171d4fa4f802d13f55f8219
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e969fd0d003d44b3aaf97efad6e029d52e146dfa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006829"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633110"
 ---
 # <a name="example-constructing-siblings-with-explicit-mode"></a>範例：使用 EXPLICIT 模式建構同層級
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   假設您想要建構提供銷售訂單資訊的 XML。 請注意，<`SalesPerson`> 與 <`OrderDetail`> 元素為同層級。 每個 Order 都有一個 <`OrderHeader`> 元素、一個 <`SalesPerson`> 元素，以及一或多個 <`OrderDetail`> 元素。  
   
 ```  

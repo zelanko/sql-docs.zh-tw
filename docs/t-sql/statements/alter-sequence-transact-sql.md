@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 39a7bb9baed65d136b5c0f1c6bc64159473ca72d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d17c59e38b30ef8492d20348e06cbc9ac75c0c5e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81626548"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735959"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   修改現有順序物件的引數。 如果順序是以 **CACHE** 選項建立，改變順序時會重新建立快取。  
   
@@ -54,16 +54,16 @@ ALTER SEQUENCE [schema_name. ] sequence_name
  *sequence_name*  
  指定資料庫中順序的唯一識別名稱。 類型是 **sysname**。  
   
- RESTART [ WITH \<常數> ]  
+ RESTART [ WITH \<constant> ]  
  順序物件會傳回的下一個值。 如果提供的話，RESTART WITH 值必須是小於或等於順序物件最大值，而且大於或等於最小值的整數。 如果省略 WITH 值，順序編號會依據原始 CREATE SEQUENCE 選項重新啟動。  
   
  INCREMENT BY \<constant>  
  每次呼叫 NEXT VALUE FOR 函式時，用來遞增順序物件基底值的值 (如果是負數則遞減)。 如果增量是負值，則會遞減順序物件，否則會遞增。 增量不能為 0。  
   
- [ MINVALUE \<常數> | NO MINVALUE ]  
+ [ MINVALUE \<constant> | NO MINVALUE ]  
  指定順序物件的界限。 如果指定 NO MINVALUE，則使用順序資料類型的最小可能值。  
   
- [ MAXVALUE \<常數> | NO MAXVALUE  
+ [ MAXVALUE \<constant> | NO MAXVALUE  
  指定順序物件的界限。 如果指定 NO MAXVALUE，則使用順序資料類型的最大可能值。  
   
  [ CYCLE | NO CYCLE ]  
@@ -72,7 +72,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
 > [!NOTE]  
 >  在循環之後，下一個值是順序的最小值或最大值，而不是 START VALUE。  
   
- [ CACHE [\<常數> ] | NO CACHE ]  
+ [ CACHE [\<constant> ] | NO CACHE ]  
  藉由減少產生的值保存至系統資料表時所需的 IO 數目，對使用順序物件的應用程式提升效能。  
   
  如需快取行為的詳細資訊，請參閱 [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)。  

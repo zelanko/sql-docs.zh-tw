@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 4ed75956-ebb8-4d8c-9c16-fc0eb00bd3a0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5d5216f831a187911cc6b5d979b3b94d38cc9dfb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0cf96745f6b2b2c904262a4952f63b6ec37f263e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68086227"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85667368"
 ---
 # <a name="execute-sql-server-agent-job-task-maintenance-plan"></a>執行 SQL Server Agent 作業工作 (維護計畫)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  使用 [執行 SQL Server Agent 作業工作]  對話方塊，即可在維護計畫內執行 Microsoft SQL Server Agent 作業。 如果選取的連接上沒有 SQL Server Agent 作業，將無法使用此選項。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  使用 [執行 SQL Server Agent 作業工作] 對話方塊，即可在維護計畫內執行 Microsoft SQL Server Agent 作業。 如果選取的連接上沒有 SQL Server Agent 作業，將無法使用此選項。  
   
  此工作使用 **.sp_start_job** 陳述式。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  **[連接]**  
  選取執行此工作時要使用的伺服器連接。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68086227"
  建立新的伺服器連接，以便執行此工作時使用。 下面會描述 **[新增連接]** 對話方塊。  
   
  **可用的 SQL 代理程式作業**  
- 選取要執行的作業。 方格提供 [作業名稱]  和 [描述]  來識別作業。  
+ 選取要執行的作業。 方格提供 [作業名稱] 和 [描述] 來識別作業。  
   
  **檢視 T-SQL**  
  根據選取的選項，檢視此工作在伺服器上執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
@@ -60,7 +60,7 @@ ms.locfileid: "68086227"
  使用 Microsoft Windows 驗證連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體。  
   
  **使用特定的使用者名稱和密碼**  
- 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證連線到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 無法使用此選項。  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體。 無法使用此選項。  
   
  **使用者名稱**  
  提供驗證時要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 無法使用此選項。  

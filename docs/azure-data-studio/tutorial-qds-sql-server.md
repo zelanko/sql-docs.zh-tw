@@ -1,25 +1,24 @@
 ---
 title: 啟用五個最慢速查詢範例小工具
-titleSuffix: Azure Data Studio
 description: 本教學課程示範如何在資料庫儀表板上啟用五個最慢速查詢範例小工具。
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
-ms.date: 08/02/2019
-ms.openlocfilehash: 3f940f0f18df676eae2ca101a2eccaa2be7169e2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.date: 06/01/2020
+ms.openlocfilehash: f4e8e76583a90ce64a9f99ef3c94875b2c1fc6dd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957042"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774541"
 ---
-# <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>教學課程：將「五個最慢速查詢」  範例小工具新增至資料庫儀表板
+# <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>教學課程：將「五個最慢速查詢」範例小工具新增至資料庫儀表板
 
-本教學課程示範如何將 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 內建的其中一個範例小工具新增至*資料庫儀表板*，以便快速檢視資料庫的五個最慢速查詢。 您也將了解如何使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 的功能，檢視慢速查詢和查詢計劃的詳細資料。 在本教學課程中，您將了解如何：
+此教學課程所示範的程序可將其中一個內建的 Azure Data Studio 範例小工具新增至「資料庫儀表板」，以快速檢視資料庫的五個最慢速查詢。 您也將了解如何使用 Azure Data Studio 功能，來檢視慢速查詢和查詢計劃的詳細資料。 在本教學課程中，您將了解如何：
 
 > [!div class="checklist"]
 > * 在資料庫上啟用查詢存放區
@@ -27,9 +26,9 @@ ms.locfileid: "74957042"
 > * 檢視資料庫最慢速查詢的詳細資料
 > * 檢視慢速查詢的查詢執行計畫
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 包含數個現成的深入解析小工具。 本教學課程示範如何新增 *query-data-store-db-insight* 小工具，但步驟基本上與新增所有小工具相同。
+Azure Data Studio 包含數個現成的見解小工具。 本教學課程示範如何新增 *query-data-store-db-insight* 小工具，但步驟基本上與新增所有小工具相同。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。 若要建立 *TutorialDB* 資料庫，請完成下列任一項快速入門：
 
@@ -39,11 +38,11 @@ ms.locfileid: "74957042"
 
 ## <a name="turn-on-query-store-for-your-database"></a>為資料庫開啟查詢存放區
 
-此範例中的小工具需要啟用 [查詢存放區]  。
+此範例中的小工具需要啟用 [查詢存放區]。
 
-1. 以滑鼠右鍵按一下 [TutorialDB]  資料庫 (在 [伺服器]  提要欄位中)，然後選取 [新增查詢]  。
+1. 以滑鼠右鍵按一下 [TutorialDB] 資料庫 (在 [伺服器] 提要欄位中)，然後選取 [新增查詢]。
 
-2. 將下列 Transact-SQL (T-SQL) 陳述式貼到查詢編輯器，然後按一下 [執行]  ：
+2. 將下列 Transact-SQL (T-SQL) 陳述式貼到查詢編輯器，然後按一下 [執行]：
 
    ```sql
     ALTER DATABASE TutorialDB SET QUERY_STORE = ON
@@ -51,11 +50,11 @@ ms.locfileid: "74957042"
 
 ## <a name="add-the-slow-queries-widget-to-your-database-dashboard"></a>將慢速查詢小工具新增至資料庫儀表板
 
-若要將「慢速查詢小工具」  新增至儀表板，請編輯 [使用者設定]  檔案中的 *dashboard.database.widgets* 設定。
+若要將「慢速查詢小工具」新增至儀表板，請編輯 [使用者設定] 檔案中的 *dashboard.database.widgets* 設定。
 
-1. 按 **Ctrl+Shift+P** 開啟 [命令選擇區]  ，開啟 [使用者設定]  。
+1. 按 **Ctrl+Shift+P** 開啟 [命令選擇區]，開啟 [使用者設定]。
 
-2. 在搜尋方塊中鍵入 *settings*，然後選取 [Preferences:  Open User Settings] \(喜好設定: 開啟使用者設定\)。
+2. 在搜尋方塊中鍵入 *settings*，然後選取 [Preferences:Open User Settings] \(喜好設定: 開啟使用者設定\)。
 
    ![開啟使用者設定命令](./media/tutorial-qds-sql-server/open-user-settings.png)
 
@@ -99,9 +98,9 @@ ms.locfileid: "74957042"
    ]
    ```
 
-5. 按 **Ctrl+S** 儲存修改的 [使用者設定]  。
+5. 按 **Ctrl+S** 儲存修改的 [使用者設定]。
 
-6. 巡覽至 [伺服器]  提要欄位中的 [TutorialDB]  ，然後選取 [管理]  ，開啟 [資料庫儀表板]  。
+6. 巡覽至 [伺服器] 提要欄位中的 [TutorialDB]，然後選取 [管理]，開啟 [資料庫儀表板]。
 
    ![開啟儀表板](./media/tutorial-qds-sql-server/insight-open-dashboard.png)
 
@@ -111,21 +110,19 @@ ms.locfileid: "74957042"
 
 ## <a name="view-insight-details-for-more-information"></a>如需詳細資訊，請檢視深入解析詳細資料
 
-1. 若要檢視深入解析小工具的其他資訊，請按一下右上方的省略符號 ([...]  )，然後選取 [顯示詳細資料]  。
+1. 若要檢視深入解析小工具的其他資訊，請按一下右上方的省略符號 ([...])，然後選取 [顯示詳細資料]。
 
-2. 若要顯示項目的更多詳細資料，請選取 [圖表資料]  清單中的任意項目。
+2. 若要顯示項目的更多詳細資料，請選取 [圖表資料] 清單中的任意項目。
 
    ![深入解析詳細資料對話方塊](./media/tutorial-qds-sql-server/insight-details-dialog.png)
 
-3. 在 [項目詳細資料]  中，以滑鼠右鍵按一下 **query_sql_txt** 右方的儲存格，然後按一下 [複製儲存格]  。
-
-4. 關閉 [深入解析]  窗格。
+3. 關閉 [深入解析] 窗格。
 
 ## <a name="view-the-query-plan"></a>檢視查詢計劃
 
-1. 以滑鼠右鍵按一下 [TutorialDB]  資料庫，然後選取 [管理] 
+1. 以滑鼠右鍵按一下 [TutorialDB] 資料庫，然後選取 [管理]
 
-2. 在 [緩慢查詢小工具]  中，若要檢視見解小工具的其他資訊，請按一下右上方的省略符號 ([...]  )，然後選取 [執行查詢]  。
+2. 在 [緩慢查詢小工具] 中，若要檢視見解小工具的其他資訊，請按一下右上方的省略符號 ([...])，然後選取 [執行查詢]。
 
     ![執行查詢](media/tutorial-qds-sql-server/run-query.png)
 
@@ -133,7 +130,7 @@ ms.locfileid: "74957042"
 
     ![執行查詢結果](media/tutorial-qds-sql-server/run-query-results.png)
 
-4. 按一下 [解說]  。
+4. 按一下 [解說]。
 
    ![深入解析 QDS 解說](./media/tutorial-qds-sql-server/insight-qds-explain.png)
 

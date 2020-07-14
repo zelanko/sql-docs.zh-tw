@@ -1,5 +1,6 @@
 ---
 title: 是否應將資料表或預存程序匯出至記憶體中 OLTP
+description: 使用 SQL Server Management Studio 中的交易效能分析報告，來協助評估記憶體內部 OLTP 是否能改善資料庫應用程式效能。
 ms.custom: seo-dt-2019
 ms.date: 08/02/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8a11fe894dc9b1e0e9770565bef5f702e29c387f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1a445b423375a9ca577435424c0bd89016cd53f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412695"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723275"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>判斷是否應將資料表或預存程序匯出至記憶體中 OLTP
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的交易效能分析報表，可協助您評估 In-Memory OLTP 是否能改善資料庫應用程式的效能。 此報表還能指出在應用程式中啟用記憶體內部 OLTP 所需執行的工作。 識別您要匯出至記憶體內部 OLTP 的磁碟資料表之後，即可使用 [記憶體最佳化建議程式](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)協助您遷移資料表。 同樣地， [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) 可協助您將預存程序匯出為原生編譯的預存程序。 如需移轉方法的資訊，請參閱 [In-Memory OLTP - 一般工作負載模式和移轉考量](https://msdn.microsoft.com/library/dn673538.aspx)。  
   
@@ -42,7 +43,7 @@ ms.locfileid: "74412695"
  若您在安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或[下載 SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) 時，選取 [管理工具 - 基本] 或 [管理工具 - 進階]，則會安裝交易效能分析報表和移轉建議程式作為 SQL Server Management Studio (SSMS) 的一部分。    
   
 ## <a name="transaction-performance-analysis-reports"></a>交易效能分析報表  
- 若要在**物件總管**中產生交易效能分析報表，請以滑鼠右鍵按一下資料庫，依序選取 [報表]  、[標準報表]  和 [交易效能分析概觀]  。 資料庫必須具有作用中的工作負載或是最近執行的工作負載，以產生有意義的分析報表。  
+ 若要在**物件總管**中產生交易效能分析報表，請以滑鼠右鍵按一下資料庫，依序選取 [報表]、[標準報表] 和 [交易效能分析概觀]。 資料庫必須具有作用中的工作負載或是最近執行的工作負載，以產生有意義的分析報表。  
   
 ### <a name="tables"></a>資料表
   
@@ -107,9 +108,9 @@ ms.locfileid: "74412695"
   
 **使用 UI 命令產生移轉檢查清單**  
   
-1.  在**物件總管**中，以滑鼠右鍵按一下非系統資料庫的資料庫，按一下 [工作]  ，然後按一下 [產生記憶體內 OLTP 移轉檢查清單]  。  
+1.  在**物件總管**中，以滑鼠右鍵按一下非系統資料庫的資料庫，按一下 [工作]，然後按一下 [產生記憶體內 OLTP 移轉檢查清單]。  
   
-2.  在 [產生記憶體內 OLTP 移轉檢查清單] 對話方塊中，按一下 [下一步] 巡覽至 [設定檢查清單產生選項]  頁面。 在頁面上執行下列動作。  
+2.  在 [產生記憶體內 OLTP 移轉檢查清單] 對話方塊中，按一下 [下一步] 巡覽至 [設定檢查清單產生選項] 頁面。 在頁面上執行下列動作。  
   
     1.  在 [將檢查清單儲存至]  方塊中，輸入資料夾路徑。  
   
@@ -121,13 +122,13 @@ ms.locfileid: "74412695"
   
 3.  按一下 [下一步]  ，然後確認工作清單符合位於 [設定檢查清單產生選項]  頁面的設定。  
   
-4.  按一下 [完成]  ，然後確認僅針對您選取的物件產生移轉檢查清單報表。  
+4.  按一下 [完成] ，然後確認僅針對您選取的物件產生移轉檢查清單報表。  
 
  您可將這些報表與記憶體最佳化建議程式工具和原生編譯建議程式工具產生的報表加以比較，以確認報表的精確度。 如需相關資訊，請參閱 [Memory Optimization Advisor](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) 及 [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md)。  
   
 **使用 SQL Server PowerShell 產生移轉檢查清單**  
   
-1.  在 [物件總管]  中，按一下資料庫然後再按一下 [啟動 PowerShell]  。 確認顯示下列提示。  
+1.  在 [物件總管] 中，按一下資料庫然後再按一下 [啟動 PowerShell] 。 確認顯示下列提示。  
   
     ```  
     PS SQLSERVER: \SQL\{Instance Name}\DEFAULT\Databases\{two-part DB Name}>  

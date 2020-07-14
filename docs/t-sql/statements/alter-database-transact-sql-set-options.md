@@ -2,7 +2,7 @@
 title: ALTER DATABASE SET 選項 (Transact-SQL) | Microsoft Docs
 description: 深入了解如何在 SQL Server 和 Azure SQL Database 中設定資料庫選項，例如自動調整、加密、查詢存放區。
 ms.custom: ''
-ms.date: 01/10/2020
+ms.date: 06/22/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 482451fbe9a94696f434bd005b95b49e5dd5dd5e
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: cfaf0b5cdb8ddddc3a27ed5fb80b6fcfb7b8afbd
+ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138277"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85215170"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL)
 
@@ -297,7 +297,7 @@ SET
 要修改之資料庫的名稱。
 
 CURRENT     
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本)
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始)
 
 會在目前資料庫中執行動作。 所有選項在所有內容中不支援 `CURRENT`。 如果 `CURRENT` 失敗，請提供資料庫名稱。
 
@@ -306,7 +306,7 @@ CURRENT
 
 啟用每個資料庫的[加速資料庫復原](../../relational-databases/accelerated-database-recovery-management.md) (ADR)。 依據 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中的預設，ADR 設定為 OFF。 透過使用此語法，您就有為持續版本存放區 (PVS) 資料指定特定檔案群組的選項。 若沒有指定檔案群組，PVS 將會儲存在 PRIMARY 檔案群組中。 如需範例和詳細資訊，請參閱[加速資料庫復原](../../relational-databases/accelerated-database-recovery-management.md)。
 
-**\<自動選項> ::=**      
+**\<auto_option> ::=**      
 控制自動選項。
 
 <a name="auto_close"></a> AUTO_CLOSE { ON | **OFF** }     
@@ -328,7 +328,7 @@ OFF
 >
 > 資料庫鏡像需要 AUTO_CLOSE OFF。
 
-當資料庫設為 AUTOCLOSE = ON 時，起始自動資料庫關閉的作業會清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的計畫快取。 清除計畫快取會導致重新編譯所有後續執行計畫，而且可能會導致查詢效能突然暫時下降。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 與更新版本中，針對計畫快取中每個已清除的快取存放區，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔會包含下列參考訊息：`SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`。 只要在該時間間隔內快取發生排清，這個訊息就會每五分鐘記錄一次。
+當資料庫設為 AUTOCLOSE = ON 時，起始自動資料庫關閉的作業會清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的計畫快取。 清除計畫快取會導致重新編譯所有後續執行計畫，而且可能會導致查詢效能突然暫時下降。 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 開始，針對計畫快取中每個已清除的快取存放區，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔會包含下列資訊訊息：`SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`。 只要在該時間間隔內快取發生排清，這個訊息就會每五分鐘記錄一次。
 
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { **ON** | OFF }     
 開啟     
@@ -344,7 +344,7 @@ OFF
 如需詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)中的＜使用資料庫範圍統計資料選項＞一節。
 
 INCREMENTAL = ON | **OFF**     
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 將 AUTO_CREATE_STATISTICS 設定為 ON，並將 INCREMENTAL 設定為 ON。 此設定會在每次支援累加統計資料時，以累加方式自動建立統計資料。 預設值是 OFF。 如需詳細資訊，請參閱 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)。
 
@@ -406,7 +406,7 @@ OFF
 
 如需描述何時應使用同步或非同步統計資料更新的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md#statistics-options)中的＜統計資料選項＞一節。
 
-<a name="auto_tuning"></a> **\<自動調整選項> ::=**      
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**      
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 開始)
 
 啟用或停用 `FORCE_LAST_GOOD_PLAN` [自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)選項。
@@ -415,7 +415,7 @@ FORCE_LAST_GOOD_PLAN = { ON | **OFF** }
 開啟     
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會對新查詢計劃將造成效能衰退的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查詢，自動強制執行最後一個已知的良好計劃。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會使用強制方案持續監視 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查詢的查詢效能。
 
-如果效能有所提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會繼續使用最後一個已知的良好計劃。 如果未偵測到效能提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會產生新的查詢計劃。 如果未啟用查詢存放區，或其不在「讀寫」  模式中，陳述式便會失敗。
+如果效能有所提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會繼續使用最後一個已知的良好計劃。 如果未偵測到效能提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會產生新的查詢計劃。 如果未啟用查詢存放區，或其不在「讀寫」模式中，陳述式便會失敗。
 
 OFF     
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會在 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 檢視中報告查詢計劃變更所造成可能的查詢效能衰退。 不過，不會自動套用這些建議。 使用者可以套用檢視中顯示的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 指令碼，來監視使用中建議並修正已識別的問題。 預設值是 OFF。
@@ -446,7 +446,7 @@ OFF
 停用資料庫的變更追蹤。 在您停用資料庫的變更追蹤之前，請先在所有資料表上停用變更追蹤。
 
 **\<containment_option> ::=**      
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本)
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始)
 
 控制資料庫內含項目選項。
 
@@ -489,7 +489,7 @@ GLOBAL
 
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中 `is_local_cursor_default` 資料行來判斷這個選項的狀態。 您也可以檢查 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函式的 `IsLocalCursorsDefault` 屬性來判斷狀態。
 
-**\<database_mirroring>**      
+**\<database_mirroring>**     
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 如需引數描述，請參閱 [ALTER DATABASE 資料庫鏡像](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)。
@@ -510,7 +510,7 @@ OFF
 
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中 `is_date_correlation_on` 資料行來判斷此選項的目前設定。
 
-**\<DB 加密選項> ::=**      
+**\<db_encryption_option> ::=**      
 控制資料庫加密狀態。
 
 ENCRYPTION { ON | **OFF** | SUSPEND | RESUME }     
@@ -572,9 +572,9 @@ READ_WRITE
 若要變更這個狀態，您必須具有資料庫的獨佔存取權。 如需詳細資訊，請參閱 SINGLE_USER 子句。
 
 > [!NOTE]
-> 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]同盟資料庫上，SET { READ_ONLY | READ_WRITE } 會停用。
+> 在 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 同盟資料庫上，已停用 `SET { READ_ONLY | READ_WRITE }`。
 
-**\<DB 使用者存取選項> ::=**      
+**\<db_user_access_option> ::=**      
 控制使用者對資料庫的存取權。
 
 SINGLE_USER     
@@ -601,18 +601,18 @@ MULTI_USER
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中 `user_access` 資料行來判斷這個選項的狀態。 您也可以檢查 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函式的 `UserAccess` 屬性來判斷狀態。
 
 **\<delayed_durability_option> ::=**      
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本)
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 開始)
 
 控制交易是否認可完全持久或延遲的持久。
 
 DISABLED     
-接在 SET DISABLED 後面的所有交易都是完全持久。 在不可部分完成的區塊或 Commit 陳述式中設定的任何持久性選項都會被忽略。
+`SET DISABLED` 之後的所有交易都具有完全持久性。 在不可部分完成的區塊或 Commit 陳述式中設定的任何持久性選項都會被忽略。
 
 ALLOWED     
-接在 SET ALLOWED 後面的所有交易都是完全持久或延遲的持久，視不可部分完成的區塊或 Commit 陳述式中設定的持久性選項而定。
+`SET ALLOWED` 之後的所有交易都具有完全持久性或延遲持久性，視在 ATOMIC 區塊或 Commit 陳述式中設定的持久性選項而定。
 
 FORCED     
-接在 SET FORCED 後面的所有交易都是延遲的持久。 在不可部分完成的區塊或 Commit 陳述式中設定的任何持久性選項都會被忽略。
+`SET FORCED` 之後的所有交易都具有延遲持久性。 在不可部分完成的區塊或 Commit 陳述式中設定的任何持久性選項都會被忽略。
 
 **\<external_access_option> ::=**      
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
@@ -651,7 +651,7 @@ OFF
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中 `is_trustworthy_on` 資料行來判斷這個選項的狀態。
 
 DEFAULT_FULLTEXT_LANGUAGE     
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本)
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始)
 
 指定全文檢索索引資料行的預設語言值。
 
@@ -659,27 +659,27 @@ DEFAULT_FULLTEXT_LANGUAGE
 > 只有當 CONTAINMENT 已經設為 PARTIAL 時，才允許這個選項。 如果 CONTAINMENT 設定為 NONE，便會發生錯誤。
 
 DEFAULT_LANGUAGE     
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本)
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始)
 
 指定所有新建立之登入的預設語言。 語言可藉由提供地區設定識別碼 (LCID)、語言名稱或語言別名來指定。 如需可接受語言名稱和別名的清單，請參閱 [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)。 只有當 CONTAINMENT 已經設為 PARTIAL 時，才允許這個選項。 如果 CONTAINMENT 設定為 NONE，便會發生錯誤。
 
 NESTED_TRIGGERS     
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本)
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始)
 
 指定 AFTER 觸發程序是否可以重疊顯示；亦即，執行起始另一個觸發程序的動作，後者再起始另一個觸發程序等。 只有當 CONTAINMENT 已經設為 PARTIAL 時，才允許這個選項。 如果 CONTAINMENT 設定為 NONE，便會發生錯誤。
 
 TRANSFORM_NOISE_WORDS     
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本)
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始)
 
 如果非搜尋字或停用字詞造成全文檢索查詢的布林運算失敗，用來隱藏錯誤訊息。 只有當 CONTAINMENT 已經設為 PARTIAL 時，才允許這個選項。 如果 CONTAINMENT 設定為 NONE，便會發生錯誤。
 
 TWO_DIGIT_YEAR_CUTOFF     
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本)
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始)
 
 從 1753 到 9999 中指定一個整數來表示截止年份，以便將兩位數年份解譯為四位數年份。 只有當 CONTAINMENT 已經設為 PARTIAL 時，才允許這個選項。 如果 CONTAINMENT 設定為 NONE，便會發生錯誤。
 
 **\<FILESTREAM_option> ::=**      
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本)
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始)
 
 控制 FileTable 的設定。
 
@@ -693,7 +693,7 @@ READ_ONLY
 FULL     
 啟用 FileTable 中 FILESTREAM 資料的完整非交易式存取。
 
-DIRECTORY_NAME = *\<目錄名稱>*      
+DIRECTORY_NAME = *\<directory_name>*      
 Windows 相容的目錄名稱。 此名稱在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的所有資料庫層級目錄名稱之間必須是唯一的。 無論定序設定為何，唯一性比較皆不會區分大小寫。 在此資料庫中建立 FileTable 之前，必須先設定這個選項。
 
 **\<HADR_options> ::=**      
@@ -702,7 +702,7 @@ Windows 相容的目錄名稱。 此名稱在 [!INCLUDE[ssNoVersion](../../inclu
 請參閱 [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)。
 
 **\<mixed_page_allocation_option> ::=**      
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本)
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始)
 
 控制資料庫是否可以針對資料表或索引的前八個頁面使用混合範圍來建立初始頁面。
 
@@ -727,17 +727,20 @@ FORCED
 
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中 `is_parameterization_forced column` 來判斷此選項的目前設定。
 
-<a name="query-store"></a> **\<查詢存放區選項> ::=**      
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本)
+<a name="query-store"></a> **\<query_store_options> ::=**      
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始)
 
-ON | **OFF** | CLEAR [ ALL ]     
+ON | **OFF** [ FORCED ] | CLEAR [ ALL ]     
 控制是否在此資料庫中啟用查詢存放區，且控制查詢存放區內容的移除。 如需詳細資訊，請參閱[查詢存放區使用案例](../../relational-databases/performance/query-store-usage-scenarios.md)。
 
 開啟     
 啟用查詢存放區。
 
-OFF     
-停用查詢存放區。 OFF 是預設值。
+OFF [ FORCED ]     
+停用查詢存放區。 OFF 是預設值。 FORCED 為選擇性。 FORCED 會中止所有執行中的查詢存放區背景工作，並略過查詢存放區關閉時的同步排清。 導致查詢存放區以最快的速度關機。 基本上會立即將查詢存放區關閉。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 引進了 FORCED。
+
+> [!NOTE]  
+> 您無法在 Azure SQL Database 單一資料庫和彈性集區中停用查詢存放區。 執行 ALTER DATABASE [database] SET QUERY_STORE = OFF 將會傳回「此版本的 SQL Server 不支援 'QUERY_STORE=OFF'」的警告。 
 
 CLEAR     
 移除查詢存放區的內容。
@@ -752,21 +755,25 @@ READ_ONLY
 可以從查詢存放區讀取資訊，但不會新增資訊。 如果查詢存放區所發出的最大空間已用盡，則查詢存放區會將作業模式變更為 READ_ONLY。
 
 CLEANUP_POLICY     
-描述查詢存放區的資料保留原則。 STALE_QUERY_THRESHOLD_DAYS 會決定在查詢存放區中保留查詢資訊的天數。 STALE_QUERY_THRESHOLD_DAYS 的類型為 **bigint**。
+描述查詢存放區的資料保留原則。 STALE_QUERY_THRESHOLD_DAYS 會決定在查詢存放區中保留查詢資訊的天數。 STALE_QUERY_THRESHOLD_DAYS 的類型為 **bigint**。 預設值是 30。
 
 DATA_FLUSH_INTERVAL_SECONDS     
-決定將寫入查詢存放區之資料保存到磁碟的頻率。 為了獲得最佳效能，查詢存放區所收集的資料會以非同步方式寫入磁碟。 此非同步傳輸發生的頻率是使用 DATA_FLUSH_INTERVAL_SECONDS 引數所設定。 DATA_FLUSH_INTERVAL_SECONDS 的類型為 **bigint**。
+決定將寫入查詢存放區之資料保存到磁碟的頻率。 為了獲得最佳效能，查詢存放區所收集的資料會以非同步方式寫入磁碟。 此非同步傳輸發生的頻率是使用 DATA_FLUSH_INTERVAL_SECONDS 引數所設定。 DATA_FLUSH_INTERVAL_SECONDS 的類型為 **bigint**。 預設值為 **900** (15 分鐘)。
 
 MAX_STORAGE_SIZE_MB     
-決定發給查詢存放區的空間。 MAX_STORAGE_SIZE_MB 的類型為 **bigint**。
+決定發給查詢存放區的空間。 MAX_STORAGE_SIZE_MB 的類型為 **bigint**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) 的預設值為 **100 MB**。 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，預設值為 **1 GB**。
 
 > [!NOTE]
-> 系統不會嚴格強制執行 MAX_STORAGE_SIZE_MB 的限制。 只有當查詢存放區將資料寫入磁碟時，系統才會檢查儲存體大小。 這個間隔是由 DATA_FLUSH_INTERVAL_SECONDS 選項或是 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 查詢存放區對話方塊選項的 [資料排清間隔]  所設定。 間隔預設值為 900 秒 (15 分鐘)。
-> 如果查詢存放區違反儲存體大小檢查之間的 MAX_STORAGE_SIZE_MB 限制，即會轉換為唯讀模式。 如果啟用 SIZE_BASED_CLEANUP_MOD，也會觸發強制執行 MAX_STORAGE_SIZE_MB 限制的清除機制。
+> 系統不會嚴格強制執行 `MAX_STORAGE_SIZE_MB` 限制。 只有當查詢存放區將資料寫入磁碟時，系統才會檢查儲存體大小。 這個間隔是由 `DATA_FLUSH_INTERVAL_SECONDS` 選項或是 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 查詢存放區對話方塊選項 [資料排清間隔] 所設定。 間隔預設值為 900 秒 (15 分鐘)。
+> 如果查詢存放區違反儲存體大小檢查之間的 `MAX_STORAGE_SIZE_MB` 限制，即會轉換為唯讀模式。 如果已啟用 `SIZE_BASED_CLEANUP_MODE`，也會觸發強制執行 `MAX_STORAGE_SIZE_MB` 限制的清除機制。
 > 清除了足夠的空間之後，查詢存放區模式就會自動切換回讀寫。
 
+> [!IMPORTANT]
+> 如果您認為自己的工作負載擷取將會需要超過 10 GB 的磁碟空間，便應該重新思考並最佳化您的工作負載以重新使用查詢計劃 (例如使用[強制參數化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)，或是調整查詢存放區設定。    
+> 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始以及在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，您可以將 `QUERY_CAPTURE_MODE` 設定為 CUSTOM 以進一步控制查詢擷取原則。
+
 INTERVAL_LENGTH_MINUTES     
-決定執行階段執行統計資料彙總至查詢存放區的時間間隔。 若要將空間使用量最佳化，在執行階段統計資料存放區中的執行階段執行統計資料會透過固定的時段彙總。 這個固定的時段是使用 INTERVAL_LENGTH_MINUTES 引數所設定。 INTERVAL_LENGTH_MINUTES 的類型為 **bigint**。
+決定執行階段執行統計資料彙總至查詢存放區的時間間隔。 若要將空間使用量最佳化，在執行階段統計資料存放區中的執行階段執行統計資料會透過固定的時段彙總。 這個固定的時段是使用 INTERVAL_LENGTH_MINUTES 引數所設定。 INTERVAL_LENGTH_MINUTES 的類型為 **bigint**。 預設值是 **60**秒。
 
 SIZE_BASED_CLEANUP_MODE { **AUTO** | OFF }     
 控制當總資料量接近大小上限時，是否會自動啟用清除。
@@ -779,7 +786,7 @@ OFF
 
 SIZE_BASED_CLEANUP_MODE 的類型為 **nvarchar**。
 
-QUERY_CAPTURE_MODE { ALL | AUTO | NONE | CUSTOM }     
+QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
 指定目前使用中的查詢擷取模式。 每個模式都會定義特定的查詢擷取原則。
 
 > [!NOTE]
@@ -795,17 +802,28 @@ AUTO
 停止擷取新的查詢。 查詢存放區將會繼續收集已擷取查詢的編譯和執行階段統計資料。 因為您可能會錯過擷取重要查詢，請小心使用此設定。
 
 CUSTOM     
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 開始)
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始)
 
 允許對 QUERY_CAPTURE_POLICY 選項的控制。
 
-QUERY_CAPTURE_MODE 的類型為 **nvarchar**。
+QUERY_CAPTURE_MODE 的類型為 **nvarchar**。 
 
 max_plans_per_query     
-定義為每個查詢維持的計劃最大數目。 預設值為 200。 MAX_PLANS_PER_QUERY 的類型為 **int**。
+定義為每個查詢維持的計劃最大數目。 MAX_PLANS_PER_QUERY 的類型為 **int**。預設值為 **200**。
+
+WAIT_STATS_CAPTURE_MODE { **ON** | OFF }     
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始)
+
+控制是否會針對每個查詢擷取等候統計資料。
+
+開啟    
+會擷取每個查詢的等候統計資料資訊。 此值是預設設定值。
+
+OFF    
+不會擷取每個查詢的等候統計資料資訊。
 
 **\<query_capture_policy_option_list> :: =**      
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 開始)
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始)
 
 控制查詢存放區擷取原則選項。 除了 STALE_CAPTURE_POLICY_THRESHOLD，這些選項會定義必須進行的 OR 條件，以便在定義的過時擷取原則閾值中擷取查詢。
 
@@ -872,7 +890,7 @@ TORN_PAGE_DETECTION
 - 當使用者或系統資料庫升級至 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更新版本時，PAGE_VERIFY 值 (NONE 或 TORN_PAGE_DETECTION) 不會變更。 我們建議您變更為 CHECKSUM。
 
     > [!NOTE]
-    > 在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，TempDB 資料庫的 PAGE_VERIFY 資料庫選項設定為 NONE 且無法修改。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本中，新安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] TempDB 資料庫的預設值為 CHECKSUM。 升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝時，預設值仍然維持 NONE。 此選項可以進行修改。 我們建議您針對 tempdb 資料庫使用 CHECKSUM。
+    > 在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，TempDB 資料庫的 PAGE_VERIFY 資料庫選項設定為 NONE 且無法修改。 從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 開始，新安裝之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 TempDB 資料庫預設值為 CHECKSUM。 升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝時，預設值仍然維持 NONE。 此選項可以進行修改。 我們建議您針對 tempdb 資料庫使用 CHECKSUM。
 
 - TORN_PAGE_DETECTION 可以使用較少資源，但所提供的 CHECKSUM 保護最少。
 - 在資料庫不離線、不鎖定，或不妨礙資料庫並行作業的情況下，可以設定 PAGE_VERIFY。
@@ -891,7 +909,7 @@ TORN_PAGE_DETECTION
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中的 `page_verify_option` 資料行，或檢查 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函式的 `IsTornPageDetectionEnabled` 屬性，以判斷這個選項的目前設定。
 
 **\<remote_data_archive_option> ::=**      
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本)
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始)
 
 為資料庫啟用或停用 Stretch Database。 如需詳細資訊，請參閱 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。
 
@@ -938,7 +956,7 @@ ENABLE_BROKER
 DISABLE_BROKER     
 指定針對指定的資料庫停用 [!INCLUDE[ssSB](../../includes/sssb-md.md)]。 停止訊息傳遞，且 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中的 is_broker_enabled 旗標會設為 false。 資料庫會保留現有的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 識別碼。
 
-NEW_BROKER      
+NEW_BROKER     
 指定資料庫應該接收新的 Broker 識別碼。 資料庫會作為新的 Service Broker。 因此，系統會立即移除資料庫中所有現有的交談，不會產生結束對話訊息。 您必須使用新的識別碼來重新建立參考舊 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 識別碼的任何路由。
 
 ERROR_BROKER_CONVERSATIONS     
@@ -955,7 +973,7 @@ HONOR_BROKER_PRIORITY 選項的變更對於沒有等候要傳送之訊息的新�
 
 此屬性的前設定會在 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視的 `is_broker_priority_honored` 資料行中報告。
 
-**\<快照選項> ::=**      
+**\<snapshot_option> ::=**      
 計算交易隔離等級。
 
 ALLOW_SNAPSHOT_ISOLATION { ON | **OFF** }     
@@ -996,7 +1014,7 @@ master、tempdb 或 msdb 系統資料庫的 READ_COMMITTED_SNAPSHOT 不能設為
 > 使用 **DURABILITY = SCHEMA_ONLY**, 和 **READ_COMMITTED_SNAPSHOT** 建立的資料表，在使用 **ALTER DATABASE** 進行變更時， 資料表中的資料會遺失。
 
 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT { ON | **OFF** }     
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本)
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 開始)
 
 開啟     
 當交易隔離等級設定為 SNAPSHOT 以下的任何隔離等級時，記憶體最佳化資料表上所有解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業都會在 SNAPSHOT 隔離下執行。 SNAPSHOT 以下的隔離等級範例包括 READ COMMITTED 或 READ UNCOMMITTED。 不論是在工作階段層級明確設定交易隔離等級，或隱含使用預設值，都會執行這些作業。
@@ -1010,7 +1028,7 @@ OFF
 
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中 `is_memory_optimized_elevate_to_snapshot_on` 資料行來判斷此選項的目前設定。
 
-**\<QL 選項> ::=**      
+**\<sql_option> ::=**      
 控制資料庫層級的 ANSI 合規性選項。
 
 ANSI_NULL_DEFAULT { ON | **OFF** }     
@@ -1108,7 +1126,7 @@ OFF
 
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中 `is_concat_null_yields_null_on` 資料行來判斷這個選項的狀態。 您也可以檢查 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函式的 `IsNullConcat` 屬性來判斷狀態。
 
-QUOTED_IDENTIFIER { ON | OFF }      
+QUOTED_IDENTIFIER { ON | OFF }     
 開啟     
 可以利用雙引號來含括分隔識別碼。
 
@@ -1150,7 +1168,7 @@ OFF
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中 `is_recursive_triggers_on` 資料行或 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函式 `IsRecursiveTriggersEnabled` 屬性來判斷這個選項的狀態。
 
 **\<target_recovery_time_option> ::=**      
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本)
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始)
 
 為每個資料庫指定間接檢查點的頻率。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，新資料庫的預設值為 **1 分鐘**，這表示資料庫將會使用間接檢查點。 舊版的預設值為 0，這表示資料庫將使用自動檢查點，其頻率取決於伺服器執行個體的復原間隔設定。 對於大多數的系統，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議使用 1 分鐘。
 
@@ -1166,11 +1184,11 @@ MINUTES
 
 如需間接檢查點的詳細資訊，請參閱[資料庫檢查點](../../relational-databases/logs/database-checkpoints-sql-server.md)。
 
-**WITH \<> ::=**      
+**WITH \<termination> ::=**      
 指定資料庫狀態轉換時，何時回復不完整的交易。 如果省略 termination 子句，且資料庫有任何鎖定，則 ALTER DATABASE 陳述式會無限等候。 只能指定一個 termination 子句，它在 SET 子句之後。
 
 > [!NOTE]
-> 並非所有的資料庫選項都會使用 WITH \<termination> 子句。 如需詳細資訊，請參閱本文＜備註＞一節中[＜設定選項＞](#SettingOptions)下的表格。
+> 並非所有資料庫選項都會使用 WITH \<termination> 子句。 如需詳細資訊，請參閱本文＜備註＞一節中[＜設定選項＞](#SettingOptions)下的表格。
 
 ROLLBACK AFTER *number* [SECONDS] | ROLLBACK IMMEDIATE     
 指定在指定的秒數之後回復，或是立即回復。 *number* 的類型為 **int**。
@@ -1185,7 +1203,7 @@ NO_WAIT
 
 您可以針對所有新建立的資料庫，變更任何一個資料庫選項的預設值。 若要執行這項操作，請變更 model 資料庫中的適當資料庫選項。
 
-並非所有資料庫選項都會使用 WITH \<termination> 子句，也並非所有資料庫選項都能夠結合其他選項來指定。 下表列出這些選項及其選項和終止狀態。
+並非所有資料庫選項都會使用 WITH \<termination> 子句，或可以搭配其他選項來指定。 下表列出這些選項及其選項和終止狀態。
 
 |選項類別目錄|可以搭配其他選項指定|可以使用 WITH \<termination> 子句|
 |----------------------|-----------------------------------------|---------------------------------------------|
@@ -1320,7 +1338,7 @@ SET CHANGE_TRACKING = OFF;
 
 ### <a name="e-enabling-the-query-store"></a>E. 啟用查詢存放區
 
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本)
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始)
 
 下列範例會啟用查詢存放區並設定其參數。
 
@@ -1517,9 +1535,19 @@ SET
   | DATA_FLUSH_INTERVAL_SECONDS = number
   | MAX_STORAGE_SIZE_MB = number
   | INTERVAL_LENGTH_MINUTES = number
-  | SIZE_BASED_CLEANUP_MODE = [ AUTO | OFF ]
-  | QUERY_CAPTURE_MODE = [ ALL | AUTO | NONE ]
+  | SIZE_BASED_CLEANUP_MODE = { AUTO | OFF }
+  | QUERY_CAPTURE_MODE = { ALL | AUTO | CUSTOM | NONE }
   | MAX_PLANS_PER_QUERY = number
+  | WAIT_STATS_CAPTURE_MODE = { ON | OFF }
+  | QUERY_CAPTURE_POLICY = ( <query_capture_policy_option_list> [,...n] )
+}
+
+<query_capture_policy_option_list> :: =
+{
+    STALE_CAPTURE_POLICY_THRESHOLD = number { DAYS | HOURS }
+    | EXECUTION_COUNT = number
+    | TOTAL_COMPILE_CPU_TIME_MS = number
+    | TOTAL_EXECUTION_CPU_TIME_MS = number
 }
 
 <snapshot_option> ::=
@@ -1560,7 +1588,7 @@ SET
 CURRENT     
 `CURRENT` 會在目前資料庫中執行動作。 所有選項在所有內容中不支援 `CURRENT`。 如果 `CURRENT` 失敗，請提供資料庫名稱。
 
-**\<自動選項> ::=**      
+**\<auto_option> ::=**      
 控制自動選項。
 
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { ON | OFF }     
@@ -1636,7 +1664,7 @@ OFF
 
 如需描述何時應使用同步或非同步統計資料更新的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md#statistics-options)中的＜統計資料選項＞一節。
 
-<a name="auto_tuning"></a> **\<自動調整選項> ::=**      
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**      
 **適用於**：[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
 控制[自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)的自動選項。
@@ -1682,7 +1710,7 @@ DEFAULT
 從伺服器繼承預設設定。 在這種情況下，就會在伺服器層級定義啟用或停用個別自動調整功能的選項。
 
 開啟     
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會對新查詢計劃將造成效能衰退的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查詢，自動強制執行最後一個已知的良好計劃。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會使用強制方案持續監視 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查詢的查詢效能。 如果效能有所提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會繼續使用最後一個已知的良好計劃。 如果未偵測到效能提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會產生新的查詢計劃。 如果未啟用查詢存放區，或其不在「讀寫」  模式中，陳述式便會失敗。
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會對新查詢計劃將造成效能衰退的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查詢，自動強制執行最後一個已知的良好計劃。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會使用強制方案持續監視 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查詢的查詢效能。 如果效能有所提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會繼續使用最後一個已知的良好計劃。 如果未偵測到效能提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會產生新的查詢計劃。 如果未啟用查詢存放區，或其不在「讀寫」模式中，陳述式便會失敗。
 
 OFF     
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會在 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 檢視中報告查詢計劃變更所造成可能的查詢效能衰退。 不過，不會自動套用這些建議。 使用者可以套用檢視中顯示的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 指令碼，來監視使用中建議並修正已識別的問題。 這是預設值。
@@ -1710,7 +1738,7 @@ CHANGE_RETENTION = *retention_period* { **DAYS** | HOURS | MINUTES }
 OFF     
 停用資料庫的變更追蹤。 在您停用資料庫的變更追蹤之前，請先在所有資料表上停用變更追蹤。
 
-**\<游標選項> ::=**      
+**\<cursor_option> ::=**      
 控制資料指標選項。
 
 CURSOR_CLOSE_ON_COMMIT { ON | OFF }     
@@ -1724,7 +1752,7 @@ OFF
 
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中 `is_cursor_close_on_commit_on` 資料行或 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函式 `IsCloseCursorsOnCommitEnabled` 屬性來判斷這個選項的狀態。 只有在中斷連接時，才會隱含地取消配置資料指標。 如需詳細資訊，請參閱 [DECLARE CURSOR](../../t-sql/language-elements/declare-cursor-transact-sql.md)。
 
-**\<DB 加密選項> ::=**      
+**\<db_encryption_option> ::=**      
 控制資料庫加密狀態。
 
 ENCRYPTION { ON | OFF }     
@@ -1734,7 +1762,7 @@ ENCRYPTION { ON | OFF }
 
 您可以使用 [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 動態管理檢視來查看資料庫的加密狀態。
 
-**\<DB 更新選項> ::=**      
+**\<db_update_option> ::=**      
 控制是否允許更新資料庫。
 
 READ_ONLY     
@@ -1749,9 +1777,9 @@ READ_WRITE
 若要變更這個狀態，您必須具有資料庫的獨佔存取權。 如需詳細資訊，請參閱 SINGLE_USER 子句。
 
 > [!NOTE]
-> 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]同盟資料庫上，SET { READ_ONLY | READ_WRITE } 會停用。
+> 在 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 同盟資料庫上，已停用 `SET { READ_ONLY | READ_WRITE }`。
 
-**\<DB 使用者存取選項> ::=**      
+**\<db_user_access_option> ::=**      
 控制使用者對資料庫的存取權。
 
 RESTRICTED_USER     
@@ -1766,15 +1794,15 @@ MULTI_USER
 控制交易是否認可完全持久或延遲的持久。
 
 DISABLED     
-接在 SET DISABLED 後面的所有交易都是完全持久。 在不可部分完成的區塊或 Commit 陳述式中設定的任何持久性選項都會被忽略。
+`SET DISABLED` 之後的所有交易都具有完全持久性。 在不可部分完成的區塊或 Commit 陳述式中設定的任何持久性選項都會被忽略。
 
 ALLOWED     
-接在 SET ALLOWED 後面的所有交易都是完全持久或延遲的持久，視不可部分完成的區塊或 Commit 陳述式中設定的持久性選項而定。
+`SET ALLOWED` 之後的所有交易都具有完全持久性或延遲持久性，視在 ATOMIC 區塊或 Commit 陳述式中設定的持久性選項而定。
 
 FORCED     
-接在 SET FORCED 後面的所有交易都是延遲的持久。 在不可部分完成的區塊或 Commit 陳述式中設定的任何持久性選項都會被忽略。
+`SET FORCED` 之後的所有交易都具有延遲持久性。 在不可部分完成的區塊或 Commit 陳述式中設定的任何持久性選項都會被忽略。
 
-**\<選項> ::=**      
+**\<PARAMETERIZATION_option> ::=**      
 控制參數化選項。
 
 PARAMETERIZATION { **SIMPLE** | FORCED }     
@@ -1786,7 +1814,7 @@ FORCED
 
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中 `is_parameterization_forced` 資料行來判斷此選項的目前設定。
 
-**\<query_store_options> ::=**
+<a name="query-store"></a> **\<query_store_options> ::=**
 
 ON | OFF | CLEAR [ ALL ]     
 控制是否在此資料庫中啟用查詢存放區，且控制查詢存放區內容的移除。
@@ -1804,21 +1832,28 @@ OPERATION_MODE
 描述查詢存放區的作業模式。 有效值為 READ_ONLY 和 READ_WRITE。 在 READ_WRITE 模式中，查詢存放區會收集並保存查詢計劃和執行階段執行統計資料資訊。 在 READ_ONLY 模式中，可以從查詢存放區讀取資訊，但不會新增資訊。 如果查詢存放區所配置的最大空間已用盡，則查詢存放區會將作業模式變更為 READ_ONLY。
 
 CLEANUP_POLICY     
-描述查詢存放區的資料保留原則。 STALE_QUERY_THRESHOLD_DAYS 會決定在查詢存放區中保留查詢資訊的天數。 STALE_QUERY_THRESHOLD_DAYS 的類型為 **bigint**。
+描述查詢存放區的資料保留原則。 STALE_QUERY_THRESHOLD_DAYS 會決定在查詢存放區中保留查詢資訊的天數。 STALE_QUERY_THRESHOLD_DAYS 的類型為 **bigint**。 預設值是 30。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic 版的預設值為 **7** 天。
 
 DATA_FLUSH_INTERVAL_SECONDS     
-決定將寫入查詢存放區之資料保存到磁碟的頻率。 為了獲得最佳效能，查詢存放區所收集的資料會以非同步方式寫入磁碟。 此非同步傳輸發生的頻率是使用 DATA_FLUSH_INTERVAL_SECONDS 引數所設定。 DATA_FLUSH_INTERVAL_SECONDS 的類型為 **bigint**。
+決定將寫入查詢存放區之資料保存到磁碟的頻率。 為了獲得最佳效能，查詢存放區所收集的資料會以非同步方式寫入磁碟。 此非同步傳輸發生的頻率是使用 DATA_FLUSH_INTERVAL_SECONDS 引數所設定。 DATA_FLUSH_INTERVAL_SECONDS 的類型為 **bigint**。 預設值為 **900** (15 分鐘)。
 
 MAX_STORAGE_SIZE_MB     
-決定配置給查詢存放區的空間。 MAX_STORAGE_SIZE_MB 的類型為 **bigint**。
+決定配置給查詢存放區的空間。 MAX_STORAGE_SIZE_MB 的類型為 **bigint**。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium 版的預設值為 **1 GB**，而 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic 版的預設值為 **10 MB**。
 
 > [!NOTE]
-> 系統不會嚴格強制執行 MAX_STORAGE_SIZE_MB 的限制。 只有當查詢存放區將資料寫入磁碟時，系統才會檢查儲存體大小。 這個間隔是由 DATA_FLUSH_INTERVAL_SECONDS 選項或是 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 查詢存放區對話方塊選項的 [資料排清間隔]  所設定。 間隔預設值為 900 秒 (15 分鐘)。
-> 如果查詢存放區違反儲存體大小檢查之間的 MAX_STORAGE_SIZE_MB 限制，即會轉換為唯讀模式。 如果啟用 SIZE_BASED_CLEANUP_MOD，也會觸發強制執行 MAX_STORAGE_SIZE_MB 限制的清除機制。
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上的 `MAX_STORAGE_SIZE_MB` 設定限制為 10,240 MB。 
+
+> [!NOTE]
+> 系統不會嚴格強制執行 `MAX_STORAGE_SIZE_MB` 限制。 只有當查詢存放區將資料寫入磁碟時，系統才會檢查儲存體大小。 這個間隔是由 `DATA_FLUSH_INTERVAL_SECONDS` 選項或是 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 查詢存放區對話方塊選項 [資料排清間隔] 所設定。 間隔預設值為 900 秒 (15 分鐘)。
+> 如果查詢存放區違反儲存體大小檢查之間的 `MAX_STORAGE_SIZE_MB` 限制，即會轉換為唯讀模式。 如果已啟用 `SIZE_BASED_CLEANUP_MODE`，也會觸發強制執行 `MAX_STORAGE_SIZE_MB` 限制的清除機制。
 > 清除了足夠的空間之後，查詢存放區模式就會自動切換回讀寫。
 
+> [!IMPORTANT]
+> 如果您認為自己的工作負載擷取將會需要超過 10 GB 的磁碟空間，便應該重新思考並最佳化您的工作負載以重新使用查詢計劃 (例如使用[強制參數化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)，或是調整查詢存放區設定。    
+> 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始以及在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，您可以將 `QUERY_CAPTURE_MODE` 設定為 CUSTOM 以進一步控制查詢擷取原則。
+
 INTERVAL_LENGTH_MINUTES     
-決定執行階段執行統計資料彙總至查詢存放區的時間間隔。 若要將空間使用量最佳化，在執行階段統計資料存放區中的執行階段執行統計資料會透過固定的時段彙總。 這個固定的時段是使用 INTERVAL_LENGTH_MINUTES 引數所設定。 INTERVAL_LENGTH_MINUTES 的類型為 **bigint**。
+決定執行階段執行統計資料彙總至查詢存放區的時間間隔。 若要將空間使用量最佳化，在執行階段統計資料存放區中的執行階段執行統計資料會透過固定的時段彙總。 這個固定的時段是使用 INTERVAL_LENGTH_MINUTES 引數所設定。 INTERVAL_LENGTH_MINUTES 的類型為 **bigint**。 預設值是 **60**秒。
 
 SIZE_BASED_CLEANUP_MODE     
 控制當總資料量接近大小上限時，是否將自動啟用清除。
@@ -1831,11 +1866,14 @@ AUTO
 
 SIZE_BASED_CLEANUP_MODE 的類型為 **nvarchar**。
 
-QUERY_CAPTURE_MODE     
-指定目前使用中的查詢擷取模式：
+QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
+指定目前使用中的查詢擷取模式。 每個模式都會定義特定的查詢擷取原則。   
+
+> [!NOTE]
+> 當查詢擷取模式被設定為 ALL、AUTO 或 CUSTOM 時，一律都會擷取資料指標、預存程序中的查詢，以及原生編譯的查詢。
 
 ALL     
-擷取所有查詢。
+擷取所有的查詢。
 
 AUTO     
 根據執行計數和資源耗用量擷取相關的查詢。 這是 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的預設組態值。
@@ -1843,12 +1881,39 @@ AUTO
 無     
 停止擷取新的查詢。 查詢存放區將會繼續收集已擷取查詢的編譯和執行階段統計資料。 因為您可能會錯過擷取重要查詢，請小心使用此設定。
 
+CUSTOM     
+允許對 QUERY_CAPTURE_POLICY 選項的控制。
+
 QUERY_CAPTURE_MODE 的類型為 **nvarchar**。
 
 max_plans_per_query     
-表示維護每個查詢計劃的大數目的整數。 預設值為 200。
+定義為每個查詢維持的計劃最大數目。 MAX_PLANS_PER_QUERY 的類型為 **int**。預設值為 **200**。
 
-**\<快照選項> ::=**      
+WAIT_STATS_CAPTURE_MODE { **ON** | OFF }     
+控制是否會針對每個查詢擷取等候統計資料。
+
+開啟    
+會擷取每個查詢的等候統計資料資訊。 此值是預設設定值。
+
+OFF    
+不會擷取每個查詢的等候統計資料資訊。
+
+**\<query_capture_policy_option_list> :: =**      
+控制查詢存放區擷取原則選項。 除了 STALE_CAPTURE_POLICY_THRESHOLD，這些選項會定義必須進行的 OR 條件，以便在定義的過時擷取原則閾值中擷取查詢。
+
+STALE_CAPTURE_POLICY_THRESHOLD = *number* { DAYS | HOURS }     
+定義評估間隔週期以判斷是否應該擷取查詢。 預設為 1 天，且可設為 1 小時到七天。 *number* 的類型為 **int**。
+
+EXECUTION_COUNT     
+定義在評估週期內執行查詢的次數。 預設為 30，這表示針對過時擷取原則閾值的預設值，查詢必須在一天內至少執行 30 次才能保存在查詢存放區中。 EXECUTION_COUNT 的類型為 **int**。
+
+TOTAL_COMPILE_CPU_TIME_MS     
+定義查詢在評估週期內使用的總耗用編譯 CPU 時間。 預設為 1000，這表示針對過時擷取原則閾值的預設值，查詢在一天之中的查詢編譯期間內，必須總共至少有一秒的 CPU 時間，才能保存在查詢存放區中。 TOTAL_COMPILE_CPU_TIME_MS 的類型為 **int**。
+
+TOTAL_EXECUTION_CPU_TIME_MS     
+定義查詢在評估週期內使用的總耗用執行 CPU 時間。 預設為 100，這表示針對過時擷取原則閾值的預設值，查詢在一天之中的執行期間內，必須總共至少有 100 毫秒的 CPU 時間，才能保存在查詢存放區中。 TOTAL_EXECUTION_CPU_TIME_MS 的類型為 **int**。
+
+**\<snapshot_option> ::=**      
 決定交易隔離等級。
 
 ALLOW_SNAPSHOT_ISOLATION { ON | **OFF** }     
@@ -1901,7 +1966,7 @@ OFF
 
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中 `is_memory_optimized_elevate_to_snapshot_on` 資料行來判斷此選項的目前設定。
 
-**\<QL 選項> ::=**      
+**\<sql_option> ::=**      
 控制資料庫層級的 ANSI 合規性選項。
 
 ANSI_NULL_DEFAULT { ON | **OFF** }     
@@ -1999,7 +2064,7 @@ OFF
 
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中 `is_concat_null_yields_null_on` 資料行來判斷這個選項的狀態。 您也可以檢查 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函式的 `IsNullConcat` 屬性來判斷狀態。
 
-QUOTED_IDENTIFIER { ON | OFF }      
+QUOTED_IDENTIFIER { ON | OFF }     
 開啟     
 可以利用雙引號來含括分隔識別碼。
 
@@ -2055,11 +2120,11 @@ MINUTES
 
 如需間接檢查點的詳細資訊，請參閱[資料庫檢查點](../../relational-databases/logs/database-checkpoints-sql-server.md)。
 
-**WITH \<> ::=**      
+**WITH \<termination> ::=**      
 指定資料庫狀態轉換時，何時回復不完整的交易。 如果省略 termination 子句，且資料庫有任何鎖定，則 ALTER DATABASE 陳述式會無限等候。 只能指定一個 termination 子句，它在 SET 子句之後。
 
 > [!NOTE]
-> 並非所有的資料庫選項都會使用 WITH \<termination> 子句。 如需詳細資訊，請參閱本文＜備註＞一節中[＜設定選項＞](#SettingOptions)下的表格。
+> 並非所有資料庫選項都會使用 WITH \<termination> 子句。 如需詳細資訊，請參閱本文＜備註＞一節中[＜設定選項＞](#SettingOptions)下的表格。
 
 ROLLBACK AFTER *integer* [SECONDS] | ROLLBACK IMMEDIATE     
 指定在指定的秒數之後回復，或是立即回復。
@@ -2075,7 +2140,7 @@ NO_WAIT
 
 您可以針對所有新建立的資料庫，變更任何一個資料庫選項的預設值。 若要執行這項操作，請變更 model 資料庫中的適當資料庫選項。
 
-並非所有資料庫選項都會使用 WITH \<termination> 子句，也並非所有資料庫選項都能夠結合其他選項來指定。 下表列出這些選項及其選項和終止狀態。
+並非所有資料庫選項都會使用 WITH \<termination> 子句，或可以搭配其他選項來指定。 下表列出這些選項及其選項和終止狀態。
 
 |選項類別目錄|可以搭配其他選項指定|可以使用 WITH \<termination> 子句|
 |----------------------|-----------------------------------------|---------------------------------------------|
@@ -2097,7 +2162,6 @@ NO_WAIT
 ## <a name="examples"></a>範例
 
 ### <a name="a-setting-the-database-to-read_only"></a>A. 將資料庫設為 READ_ONLY
-
 將資料庫或檔案群組的狀態改成 READ_ONLY 或 READ_WRITE 時，需要資料庫的獨佔存取權。 下列範例會將資料庫設成 `RESTRICTED_USER` 模式來限制存取。 之後，範例會將 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的狀態設成 `READ_ONLY` ，並將資料庫的存取權還給所有使用者。
 
 ```sql
@@ -2116,7 +2180,6 @@ GO
 ```
 
 ### <a name="b-enabling-snapshot-isolation-on-a-database"></a>B. 啟用資料庫的快照集隔離
-
 下列範例會啟用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的快照集隔離架構選項。
 
 ```sql
@@ -2142,7 +2205,6 @@ GO
 |[database_name] |1| 開啟 |
 
 ### <a name="c-enabling-modifying-and-disabling-change-tracking"></a>C. 啟用、修改及停用變更追蹤
-
 下列範例會啟用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的變更追蹤，並將保留週期設定為 `2` 天。
 
 ```sql
@@ -2166,18 +2228,61 @@ SET CHANGE_TRACKING = OFF;
 ```
 
 ### <a name="d-enabling-the-query-store"></a>D. 啟用查詢存放區
-
 下列範例會啟用查詢存放區並設定查詢存放區參數。
 
 ```sql
 ALTER DATABASE [database_name]
 SET QUERY_STORE = ON
-(
-      OPERATION_MODE = READ_WRITE
-    , CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 )
-    , DATA_FLUSH_INTERVAL_SECONDS = 900
-    , MAX_STORAGE_SIZE_MB = 1024
-    , INTERVAL_LENGTH_MINUTES = 60
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60
+    );
+```
+
+### <a name="e-enabling-the-query-store-with-wait-statistics"></a>E. 啟用包含等候統計資料的查詢存放區
+下列範例會啟用查詢存放區並設定其參數。
+
+```sql
+ALTER DATABASE [database_name]
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO,
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+    );
+```
+
+### <a name="f-enabling-the-query-store-with-custom-capture-policy-options"></a>F. 啟用包含自訂擷取原則選項的查詢存放區
+下列範例會啟用查詢存放區並設定其參數。
+
+```sql
+ALTER DATABASE [database_name]
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO,
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+      QUERY_CAPTURE_MODE = CUSTOM,
+      QUERY_CAPTURE_POLICY = (
+        STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS,
+        EXECUTION_COUNT = 30,
+        TOTAL_COMPILE_CPU_TIME_MS = 1000,
+        TOTAL_EXECUTION_CPU_TIME_MS = 100
+      )
     );
 ```
 
@@ -2298,9 +2403,19 @@ SET
   | DATA_FLUSH_INTERVAL_SECONDS = number
   | MAX_STORAGE_SIZE_MB = number
   | INTERVAL_LENGTH_MINUTES = number
-  | SIZE_BASED_CLEANUP_MODE = [ AUTO | OFF ]
-  | QUERY_CAPTURE_MODE = [ ALL | AUTO | NONE ]
+  | SIZE_BASED_CLEANUP_MODE = { AUTO | OFF }
+  | QUERY_CAPTURE_MODE = { ALL | AUTO | CUSTOM | NONE }
   | MAX_PLANS_PER_QUERY = number
+  | WAIT_STATS_CAPTURE_MODE = { ON | OFF }
+  | QUERY_CAPTURE_POLICY = ( <query_capture_policy_option_list> [,...n] )
+}
+
+<query_capture_policy_option_list> :: =
+{
+    STALE_CAPTURE_POLICY_THRESHOLD = number { DAYS | HOURS }
+    | EXECUTION_COUNT = number
+    | TOTAL_COMPILE_CPU_TIME_MS = number
+    | TOTAL_EXECUTION_CPU_TIME_MS = number
 }
 
 <snapshot_option> ::=
@@ -2334,7 +2449,7 @@ SET
 CURRENT     
 `CURRENT` 會在目前資料庫中執行動作。 所有選項在所有內容中不支援 `CURRENT`。 如果 `CURRENT` 失敗，請提供資料庫名稱。
 
-**\<自動選項> ::=**      
+**\<auto_option> ::=**      
 控制自動選項。
 
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { **ON** | OFF }     
@@ -2410,14 +2525,14 @@ OFF
 
 如需描述使用同步或非同步統計資料更新的時機詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)中的＜使用資料庫範圍統計資料選項＞一節。
 
-<a name="auto_tuning"></a> **\<自動調整選項> ::=**      
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**      
 **適用於**：[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
 啟用或停用 `FORCE_LAST_GOOD_PLAN` [自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)選項。
 
 FORCE_LAST_GOOD_PLAN = { ON | **OFF** }     
 開啟     
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會對新查詢計劃將造成效能衰退的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查詢，自動強制執行最後一個已知的良好計劃。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會使用強制方案持續監視 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查詢的查詢效能。 如果效能有所提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會繼續使用最後一個已知的良好計劃。 如果未偵測到效能提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會產生新的查詢計劃。 如果未啟用查詢存放區，或其不在「讀寫」  模式中，陳述式便會失敗。
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會對新查詢計劃將造成效能衰退的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查詢，自動強制執行最後一個已知的良好計劃。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會使用強制方案持續監視 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查詢的查詢效能。 如果效能有所提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會繼續使用最後一個已知的良好計劃。 如果未偵測到效能提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會產生新的查詢計劃。 如果未啟用查詢存放區，或其不在「讀寫」模式中，陳述式便會失敗。
 
 OFF     
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會在 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 檢視中報告查詢計劃變更所造成可能的查詢效能衰退。 不過，不會自動套用這些建議。 使用者可以套用檢視中顯示的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 指令碼，來監視使用中建議並修正已識別的問題。 這是預設值。
@@ -2444,7 +2559,7 @@ CHANGE_RETENTION = *retention_period* { **DAYS** | HOURS | MINUTES }
 OFF     
 停用資料庫的變更追蹤。 在您停用資料庫的變更追蹤之前，請先在所有資料表上停用變更追蹤。
 
-**\<游標選項> ::=**      
+**\<cursor_option> ::=**      
 控制資料指標選項。
 
 CURSOR_CLOSE_ON_COMMIT { ON | OFF }     
@@ -2458,7 +2573,7 @@ OFF
 
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中的 is_cursor_close_on_commit_on 資料行，或 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函式 IsCloseCursorsOnCommitEnabled 屬性來判斷這個選項的狀態。 只有在中斷連接時，才會隱含地取消配置資料指標。 如需詳細資訊，請參閱 [DECLARE CURSOR](../../t-sql/language-elements/declare-cursor-transact-sql.md)。
 
-**\<DB 加密選項> ::=**      
+**\<db_encryption_option> ::=**      
 控制資料庫加密狀態。
 
 ENCRYPTION { ON | **OFF** }     
@@ -2468,7 +2583,7 @@ ENCRYPTION { ON | **OFF** }
 
 您可以使用 [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 動態管理檢視來查看資料庫的加密狀態。
 
-**\<DB 更新選項> ::=**      
+**\<db_update_option> ::=**      
 控制是否允許更新資料庫。
 
 READ_ONLY     
@@ -2482,7 +2597,7 @@ READ_WRITE
 
 若要變更這個狀態，您必須具有資料庫的獨佔存取權。
 
-**\<DB 使用者存取選項> ::=**      
+**\<db_user_access_option> ::=**      
 控制使用者對資料庫的存取權。
 
 RESTRICTED_USER     
@@ -2497,15 +2612,15 @@ MULTI_USER
 控制交易是否認可完全持久或延遲的持久。
 
 DISABLED     
-接在 SET DISABLED 後面的所有交易都是完全持久。 在不可部分完成的區塊或 Commit 陳述式中設定的任何持久性選項都會被忽略。
+`SET DISABLED` 之後的所有交易都具有完全持久性。 在不可部分完成的區塊或 Commit 陳述式中設定的任何持久性選項都會被忽略。
 
 ALLOWED     
-接在 SET ALLOWED 後面的所有交易都是完全持久或延遲的持久，視不可部分完成的區塊或 Commit 陳述式中設定的持久性選項而定。
+`SET ALLOWED` 之後的所有交易都具有完全持久性或延遲持久性，視在 ATOMIC 區塊或 Commit 陳述式中設定的持久性選項而定。
 
 FORCED     
-接在 SET FORCED 後面的所有交易都是延遲的持久。 在不可部分完成的區塊或 Commit 陳述式中設定的任何持久性選項都會被忽略。
+`SET FORCED` 之後的所有交易都具有延遲持久性。 在不可部分完成的區塊或 Commit 陳述式中設定的任何持久性選項都會被忽略。
 
-**\<選項> ::=**      
+**\<PARAMETERIZATION_option> ::=**      
 控制參數化選項。
 
 PARAMETERIZATION { **SIMPLE** | FORCED }     
@@ -2517,7 +2632,7 @@ FORCED
 
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中 `is_parameterization_forced` 資料行來判斷此選項的目前設定。
 
-**\<query_store_options> ::=**
+<a name="query-store"></a> **\<query_store_options> ::=**
 
 ON | OFF | CLEAR [ ALL ]     
 控制是否在此資料庫中啟用查詢存放區，且控制查詢存放區內容的移除。
@@ -2535,16 +2650,25 @@ OPERATION_MODE
 描述查詢存放區的作業模式。 有效值為 READ_ONLY 和 READ_WRITE。 在 READ_WRITE 模式中，查詢存放區會收集並保存查詢計劃和執行階段執行統計資料資訊。 在 READ_ONLY 模式中，可以從查詢存放區讀取資訊，但不會新增資訊。 如果查詢存放區所配置的最大空間已用盡，則查詢存放區會將作業模式變更為 READ_ONLY。
 
 CLEANUP_POLICY     
-描述查詢存放區的資料保留原則。 STALE_QUERY_THRESHOLD_DAYS 會決定在查詢存放區中保留查詢資訊的天數。 STALE_QUERY_THRESHOLD_DAYS 的類型為 **bigint**。
+描述查詢存放區的資料保留原則。 STALE_QUERY_THRESHOLD_DAYS 會決定在查詢存放區中保留查詢資訊的天數。 STALE_QUERY_THRESHOLD_DAYS 的類型為 **bigint**。 預設值是 30。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic 版的預設值為 **7** 天。
 
 DATA_FLUSH_INTERVAL_SECONDS     
-決定將寫入查詢存放區之資料保存到磁碟的頻率。 為了獲得最佳效能，查詢存放區所收集的資料會以非同步方式寫入磁碟。 此非同步傳輸發生的頻率是使用 DATA_FLUSH_INTERVAL_SECONDS 引數所設定。 DATA_FLUSH_INTERVAL_SECONDS 的類型為 **bigint**。
+決定將寫入查詢存放區之資料保存到磁碟的頻率。 為了獲得最佳效能，查詢存放區所收集的資料會以非同步方式寫入磁碟。 此非同步傳輸發生的頻率是使用 DATA_FLUSH_INTERVAL_SECONDS 引數所設定。 DATA_FLUSH_INTERVAL_SECONDS 的類型為 **bigint**。 預設值為 **900** (15 分鐘)。
 
 MAX_STORAGE_SIZE_MB     
-決定配置給查詢存放區的空間。 MAX_STORAGE_SIZE_MB 的類型為 **bigint**。
+決定配置給查詢存放區的空間。 MAX_STORAGE_SIZE_MB 的類型為 **bigint**。 預設值為 **100 MB**。
+
+> [!NOTE]
+> 系統不會嚴格強制執行 `MAX_STORAGE_SIZE_MB` 限制。 只有當查詢存放區將資料寫入磁碟時，系統才會檢查儲存體大小。 這個間隔是由 `DATA_FLUSH_INTERVAL_SECONDS` 選項或是 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 查詢存放區對話方塊選項 [資料排清間隔] 所設定。 間隔預設值為 900 秒 (15 分鐘)。
+> 如果查詢存放區違反儲存體大小檢查之間的 `MAX_STORAGE_SIZE_MB` 限制，即會轉換為唯讀模式。 如果已啟用 `SIZE_BASED_CLEANUP_MODE`，也會觸發強制執行 `MAX_STORAGE_SIZE_MB` 限制的清除機制。
+> 清除了足夠的空間之後，查詢存放區模式就會自動切換回讀寫。
+
+> [!IMPORTANT]
+> 如果您認為自己的工作負載擷取將會需要超過 10 GB 的磁碟空間，便應該重新思考並最佳化您的工作負載以重新使用查詢計劃 (例如使用[強制參數化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)，或是調整查詢存放區設定。    
+> 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始以及在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，您可以將 `QUERY_CAPTURE_MODE` 設定為 CUSTOM 以進一步控制查詢擷取原則。
 
 INTERVAL_LENGTH_MINUTES     
-決定執行階段執行統計資料彙總至查詢存放區的時間間隔。 若要將空間使用量最佳化，在執行階段統計資料存放區中的執行階段執行統計資料會透過固定的時段彙總。 這個固定的時段是使用 INTERVAL_LENGTH_MINUTES 引數所設定。 INTERVAL_LENGTH_MINUTES 的類型為 **bigint**。
+決定執行階段執行統計資料彙總至查詢存放區的時間間隔。 若要將空間使用量最佳化，在執行階段統計資料存放區中的執行階段執行統計資料會透過固定的時段彙總。 這個固定的時段是使用 INTERVAL_LENGTH_MINUTES 引數所設定。 INTERVAL_LENGTH_MINUTES 的類型為 **bigint**。 預設值是 **60**秒。
 
 SIZE_BASED_CLEANUP_MODE     
 控制當總資料量接近大小上限時，是否將自動啟用清除。
@@ -2557,7 +2681,7 @@ AUTO
 
 SIZE_BASED_CLEANUP_MODE 的類型為 **nvarchar**。
 
-QUERY_CAPTURE_MODE     
+QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
 指定目前使用中的查詢擷取模式。
 
 ALL     
@@ -2572,7 +2696,31 @@ AUTO
 QUERY_CAPTURE_MODE 的類型為 **nvarchar**。
 
 max_plans_per_query     
-表示維護每個查詢計劃的大數目的整數。 預設值為 200。
+表示維護每個查詢計劃的大數目的整數。 MAX_PLANS_PER_QUERY 的類型為 **int**。預設值為 **200**。
+
+WAIT_STATS_CAPTURE_MODE { **ON** | OFF }     
+控制是否會針對每個查詢擷取等候統計資料。
+
+開啟    
+會擷取每個查詢的等候統計資料資訊。 此值是預設設定值。
+
+OFF    
+不會擷取每個查詢的等候統計資料資訊。
+
+**\<query_capture_policy_option_list> :: =**      
+控制查詢存放區擷取原則選項。 除了 STALE_CAPTURE_POLICY_THRESHOLD，這些選項會定義必須進行的 OR 條件，以便在定義的過時擷取原則閾值中擷取查詢。
+
+STALE_CAPTURE_POLICY_THRESHOLD = *number* { DAYS | HOURS }     
+定義評估間隔週期以判斷是否應該擷取查詢。 預設為 1 天，且可設為 1 小時到七天。 *number* 的類型為 **int**。
+
+EXECUTION_COUNT     
+定義在評估週期內執行查詢的次數。 預設為 30，這表示針對過時擷取原則閾值的預設值，查詢必須在一天內至少執行 30 次才能保存在查詢存放區中。 EXECUTION_COUNT 的類型為 **int**。
+
+TOTAL_COMPILE_CPU_TIME_MS     
+定義查詢在評估週期內使用的總耗用編譯 CPU 時間。 預設為 1000，這表示針對過時擷取原則閾值的預設值，查詢在一天之中的查詢編譯期間內，必須總共至少有一秒的 CPU 時間，才能保存在查詢存放區中。 TOTAL_COMPILE_CPU_TIME_MS 的類型為 **int**。
+
+TOTAL_EXECUTION_CPU_TIME_MS     
+定義查詢在評估週期內使用的總耗用執行 CPU 時間。 預設為 100，這表示針對過時擷取原則閾值的預設值，查詢在一天之中的執行期間內，必須總共至少有 100 毫秒的 CPU 時間，才能保存在查詢存放區中。 TOTAL_EXECUTION_CPU_TIME_MS 的類型為 **int**。
 
 **\<snapshot_option> ::=**
 
@@ -2628,7 +2776,7 @@ OFF
 
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中 `is_memory_optimized_elevate_to_snapshot_on` 資料行來判斷此選項的目前設定。
 
-**\<QL 選項> ::=**      
+**\<sql_option> ::=**      
 控制資料庫層級的 ANSI 合規性選項。
 
 ANSI_NULL_DEFAULT { ON | OFF }     
@@ -2726,7 +2874,7 @@ OFF
 
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中 `is_concat_null_yields_null_on` 資料行來判斷這個選項的狀態。 您也可以檢查 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函式的 `IsNullConcat` 屬性來判斷狀態。
 
-QUOTED_IDENTIFIER { ON | OFF }      
+QUOTED_IDENTIFIER { ON | OFF }     
 開啟     
 可以利用雙引號來含括分隔識別碼。
 
@@ -2798,7 +2946,6 @@ NO_WAIT
 ## <a name="examples"></a>範例
 
 ### <a name="a-setting-the-database-to-read_only"></a>A. 將資料庫設為 READ_ONLY
-
 將資料庫或檔案群組的狀態改成 READ_ONLY 或 READ_WRITE 時，需要資料庫的獨佔存取權。 下列範例會將資料庫設成 `RESTRICTED_USER` 模式來限制存取。 之後，範例會將 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的狀態設成 `READ_ONLY` ，並將資料庫的存取權還給所有使用者。
 
 ```sql
@@ -2816,7 +2963,6 @@ GO
 ```
 
 ### <a name="b-enabling-snapshot-isolation-on-a-database"></a>B. 啟用資料庫的快照集隔離
-
 下列範例會啟用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的快照集隔離架構選項。
 
 ```sql
@@ -2842,7 +2988,6 @@ GO
 |[database_name] |1| 開啟 |
 
 ### <a name="c-enabling-modifying-and-disabling-change-tracking"></a>C. 啟用、修改及停用變更追蹤
-
 下列範例會啟用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的變更追蹤，並將保留週期設定為 `2` 天。
 
 ```sql
@@ -2866,18 +3011,61 @@ SET CHANGE_TRACKING = OFF;
 ```
 
 ### <a name="d-enabling-the-query-store"></a>D. 啟用查詢存放區
-
 下列範例會啟用查詢存放區並設定查詢存放區參數。
 
 ```sql
 ALTER DATABASE [database_name]
 SET QUERY_STORE = ON
-  (  
-      OPERATION_MODE = READ_WRITE
-    , CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 )
-    , DATA_FLUSH_INTERVAL_SECONDS = 900
-    , MAX_STORAGE_SIZE_MB = 1024
-    , INTERVAL_LENGTH_MINUTES = 60
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60
+    );
+```
+
+### <a name="e-enabling-the-query-store-with-wait-statistics"></a>E. 啟用包含等候統計資料的查詢存放區
+下列範例會啟用查詢存放區並設定其參數。
+
+```sql
+ALTER DATABASE [database_name]
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO,
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+    );
+```
+
+### <a name="f-enabling-the-query-store-with-custom-capture-policy-options"></a>F. 啟用包含自訂擷取原則選項的查詢存放區
+下列範例會啟用查詢存放區並設定其參數。
+
+```sql
+ALTER DATABASE [database_name]
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO,
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+      QUERY_CAPTURE_MODE = CUSTOM,
+      QUERY_CAPTURE_POLICY = (
+        STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS,
+        EXECUTION_COUNT = 30,
+        TOTAL_COMPILE_CPU_TIME_MS = 1000,
+        TOTAL_EXECUTION_CPU_TIME_MS = 100
+      )
     );
 ```
 

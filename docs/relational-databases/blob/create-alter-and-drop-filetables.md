@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bb0dd2a0196fbc832b0d0afeb0f02889ac1369a4
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: c0df880a36a0822c3c397be4f2ed9aa14d47c2bc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000089"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768012"
 ---
 # <a name="create-alter-and-drop-filetables"></a>建立、改變及卸除 FileTable
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   描述如何建立新的 FileTable，或是改變或卸除現有的 FileTable。  
   
 ##  <a name="creating-a-filetable"></a><a name="BasicsCreate"></a> 建立 FileTable  
@@ -85,7 +85,7 @@ GO
 ```  
   
  **使用 SQL Server Management Studio 建立 FileTable**  
- 在物件總管中，展開選取之資料庫底下的物件、以滑鼠右鍵按一下 [資料表]  資料夾，然後選取 [New FileTable (新增 FileTable)]  。  
+ 在物件總管中，展開選取之資料庫底下的物件、以滑鼠右鍵按一下 [資料表] 資料夾，然後選取 [New FileTable (新增 FileTable)]。  
   
  此選項會開啟新的指令碼視窗，其中包含您可以自訂及執行以建立 FileTable 的 Transact-SQL 指令碼範本。 使用 **[查詢]** 功能表上的 **[指定範本參數的值]** 選項，輕鬆地自訂指令碼。  
   
@@ -121,7 +121,7 @@ GO
 ```  
   
  **使用 SQL Server Management Studio 變更 FileTable 的目錄**  
- 在物件總管中，以滑鼠右鍵按一下 [FileTable]，並選取 [屬性]  開啟 [資料表屬性]  對話方塊。 在 **[FileTable]** 頁面上，輸入 **[FileTable 目錄名稱]** 的新值。  
+ 在物件總管中，以滑鼠右鍵按一下 [FileTable]，並選取 [屬性] 開啟 [資料表屬性] 對話方塊。 在 **[FileTable]** 頁面上，輸入 **[FileTable 目錄名稱]** 的新值。  
   
 ###  <a name="requirements-and-restrictions-for-altering-a-filetable"></a><a name="ReqAlter"></a> 改變 FileTable 的需求和限制  
   
@@ -176,11 +176,11 @@ GO
 |檢查條件約束|系統定義的檢查條件約束會強制執行下列需求：<br /><br /> 有效的檔案名稱。<br /><br /> 有效的檔案屬性。<br /><br /> 父物件必須是目錄。<br /><br /> 在檔案操作期間，會鎖定命名空間階層。|  
   
  **系統定義之條件約束的命名慣例**  
- 上述系統定義條件約束的命名格式為 **\<條件約束類型>_\<資料表名稱>[\_\<資料行名稱>]\_\<唯一碼>** ，其中：  
+ 上述系統定義的條件約束會使用 **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** 格式來命名，其中：  
   
--   其中的 <條件約束類型>  是 CK (檢查條件約束)、DF (預設條件約束)、FK (外部索引鍵)、PK (主索引鍵) 或 UQ (唯一條件約束)。  
+-   其中的 <條件約束類型> 是 CK (檢查條件約束)、DF (預設條件約束)、FK (外部索引鍵)、PK (主索引鍵) 或 UQ (唯一條件約束)。  
   
--   *\<唯一碼>* 是讓名稱成為唯一名稱的系統產生字串。 這個字串可能會包含 FileTable 名稱和唯一識別碼。  
+-   *\<uniquifier>* 是讓名稱成為唯一名稱的系統產生字串。 這個字串可能會包含 FileTable 名稱和唯一識別碼。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理 FileTable](../../relational-databases/blob/manage-filetables.md)  

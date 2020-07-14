@@ -1,5 +1,6 @@
 ---
 title: 檢視資源健全狀況原則結果 (SQL Server 公用程式) | Microsoft 文件
+description: 了解如何使用 SQL Server Management Studio 來檢視 SQL Server 執行個體及資料層應用程式的 SQL Server 公用程式資源健康情況原則結果。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,30 +11,30 @@ ms.topic: conceptual
 ms.assetid: 80cb14fb-f4c6-4be2-ba17-eb4e4cddd35f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3e10d2bcd280e1c353fb30613a6d65b715caf82e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3f6397ebab2f53ebb37c54df20313926ebc84e68
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907532"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650778"
 ---
 # <a name="view-resource-health-policy-results-sql-server-utility"></a>檢視資源健全狀況原則結果 (SQL Server 公用程式)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用公用程式儀表板，針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體和資料層應用程式檢視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式資源參數。 如需詳細資訊，請參閱 [SQL Server 公用程式的功能與工作](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)。  
   
 ##  <a name="SSMSProcedure"></a>  
   
 #### <a name="view-sql-server-utility-resource-health-policy-results"></a>檢視 SQL Server 公用程式資源健全狀況原則結果  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中，按一下 [檢視]  ，然後按一下 [公用程式總管]  ，檢視公用程式總管瀏覽窗格。 若要檢視此內容窗格，請按一下 **[檢視]** ，然後按一下 **[公用程式總管內容]** 。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中，按一下 [檢視]，然後按一下 [公用程式總管]，檢視公用程式總管瀏覽窗格。 若要檢視此內容窗格，請按一下 **[檢視]** ，然後按一下 **[公用程式總管內容]** 。  
   
-2.  在瀏覽窗格中，按一下 ![[連線到公用程式]](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")  。 如果您尚未建立公用程式控制點 (UCP) 或是您尚未將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體或資料層應用程式註冊到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內，請參閱 [SQL Server 公用程式的功能與工作](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)。  
+2.  在瀏覽窗格中，按一下 ![[連線到公用程式]](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")。 如果您尚未建立公用程式控制點 (UCP) 或是您尚未將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體或資料層應用程式註冊到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內，請參閱 [SQL Server 公用程式的功能與工作](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)。  
   
 3.  按一下 [UCP] 節點，檢視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體和資料層應用程式的摘要資料 (按一下滑鼠右鍵重新整理)。 儀表板資料會顯示在內容窗格中。  
   
-4.  按一下 [受管理的執行個體]  節點，檢視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理執行個體的清單檢視資料 (按一下滑鼠右鍵重新整理)。 清單檢視資料會顯示在內容窗格中。  
+4.  按一下 [受管理的執行個體] 節點，檢視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理執行個體的清單檢視資料 (按一下滑鼠右鍵重新整理)。 清單檢視資料會顯示在內容窗格中。  
   
-5.  按一下 [部署的資料層應用程式]  節點，檢視資料層應用程式的清單檢視資料 (按一下滑鼠右鍵重新整理)。 清單檢視資料會顯示在內容窗格中。  
+5.  按一下 [部署的資料層應用程式] 節點，檢視資料層應用程式的清單檢視資料 (按一下滑鼠右鍵重新整理)。 清單檢視資料會顯示在內容窗格中。  
 
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 公用程式的功能與工作](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   

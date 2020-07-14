@@ -1,5 +1,6 @@
 ---
 title: FILESTREAM (SQL Server) | Microsoft Docs
+description: 了解 FILESTREAM，這是將資料儲存在檔案系統中的 SQL Server 功能。 閱讀其如何儲存、保護及提供資料存取權的相關資訊。
 ms.custom: ''
 ms.date: 01/11/2018
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: c56f702b6946662657f35fd7e0c8e6b9bc791c36
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 180e13a7a8e5d85aa43ae47d7e9ae955d421991b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287282"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893798"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 FILESTREAM 可讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]架構應用程式在檔案系統上儲存非結構化的資料，例如文件和影像。 應用程式可以利用檔案系統的豐富資料流 API 和效能，並同時維護非結構化資料與對應結構化資料之間的交易一致性。  
   
@@ -49,7 +50,7 @@ FILESTREAM 儲存體會實作為 **varbinary(max)** 資料行，該資料行中�
   
 若要指定資料行應該將資料儲存在檔案系統上，請在 **varbinary(max)** 資料行上指定 FILESTREAM 屬性。 如此會讓 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 將該資料行的所有資料都儲存在檔案系統上，而不是儲存在資料庫檔案中。  
   
-FILESTREAM 資料必須儲存在 FILESTREAM 檔案群組中。 FILESTREAM 檔案群組是包含檔案系統目錄 (而非檔案本身) 的特殊檔案群組， 這些檔案系統目錄稱為「資料容器」  。 資料容器是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 儲存體與檔案系統儲存體之間的介面。 
+FILESTREAM 資料必須儲存在 FILESTREAM 檔案群組中。 FILESTREAM 檔案群組是包含檔案系統目錄 (而非檔案本身) 的特殊檔案群組， 這些檔案系統目錄稱為「資料容器」。 資料容器是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 儲存體與檔案系統儲存體之間的介面。 
 
 當您使用 FILESTREAM 儲存體時，請考慮以下事項：  
 

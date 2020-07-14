@@ -1,5 +1,6 @@
 ---
 title: 資料庫屬性 (查詢存放區頁面) | Microsoft 文件
+description: 了解如何使用 [資料庫屬性] 對話方塊中的 [查詢存放區] 索引標籤來設定查詢存放區模式、間隔、閾值和其他屬性。
 ms.custom: ''
 ms.date: 11/09/2015
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: da47d75e-291a-4305-acef-4b0aaf5215da
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 592fa533d6c6d6c518f1dcaaa3e70da2808b93b9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 57e3494bbb60128d24d047f904acb6990cde477c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67947029"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631018"
 ---
 # <a name="database-properties-query-store-page"></a>資料庫屬性 (查詢存放區頁面)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   請從主體資料庫存取此頁面，並將其用於設定及修改資料庫查詢存放區的屬性。 這些選項也可使用 [ALTER DATABASE SET 選項](../../t-sql/statements/alter-database-transact-sql-set-options.md)加以設定。 如需查詢存放區的相關資訊，請參閱 [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
   
 ||  

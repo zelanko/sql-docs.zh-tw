@@ -1,5 +1,6 @@
 ---
 title: 遠端伺服器 | Microsoft Docs
+description: 了解已在 SQL Server 中使用連結伺服器取代的遠端伺服器。 檢視功能、組態及安全性的相關資訊。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,17 +15,17 @@ helpviewer_keywords:
 - servers [SQL Server], remote
 - remote access option
 ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2b3c4937d87d166d87711389be7acd0c4ae0f8ff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 393688d3ecb5d0e29a1b05aa6f00d7eec7ca7e22
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67938187"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651582"
 ---
 # <a name="remote-servers"></a>遠端伺服器
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   基於回溯相容性，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中支援遠端伺服器。 新應用程式應該改用連結的伺服器。 如需詳細資訊，請參閱 [連結的伺服器 &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)。  
   
  遠端伺服器設定可讓連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的用戶端不須建立另一個連接，就可以在另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上執行預存程序。 而且，與用戶端連接的伺服器會接受用戶端的要求，並以用戶端的身分將要求傳送至遠端伺服器。 遠端伺服器會處理要求並將任何結果傳回到原始伺服器。 此伺服器接著就會將結果傳遞至用戶端。 設定遠端伺服器組態時，您應該也要考慮如何建立安全性。  
@@ -36,7 +37,7 @@ ms.locfileid: "67938187"
   
  大部份的情況下，您不需要設定遠端伺服器的組態選項。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在本機和遠端電腦上設定預設值，以允許遠端伺服器的連接。  
   
- 若要讓遠端伺服器存取可以進行，在本機與遠端電腦上的 [遠端存取]  組態選項都必須設定為 1 (這是預設值)。[遠端存取]  會控制遠端伺服器的登入。 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] **sp_configure** 預存程序或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 重設此組態選項。 若要重設 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的選項，請使用 [伺服器屬性連接]  頁面的 [允許此伺服器的遠端連接]  。 若要存取 [伺服器屬性連接]  頁面，請在物件總管中以滑鼠右鍵按一下伺服器名稱，然後按一下 [屬性]  。 在 [伺服器屬性]  頁面上，按一下 [連接]  頁面。  
+ 若要讓遠端伺服器存取可以進行，在本機與遠端電腦上的 [遠端存取] 組態選項都必須設定為 1 (這是預設值)。[遠端存取] 會控制遠端伺服器的登入。 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] **sp_configure** 預存程序或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 重設此組態選項。 若要重設 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的選項，請使用 [伺服器屬性連接] 頁面的 [允許此伺服器的遠端連接]。 若要存取 [伺服器屬性連接] 頁面，請在物件總管中以滑鼠右鍵按一下伺服器名稱，然後按一下 [屬性]。 在 [伺服器屬性] 頁面上，按一下 [連接] 頁面。  
   
  您可以從本機伺服器來停用遠端伺服器組態，以防止其配對遠端伺服器上的使用者存取本機伺服器。  
   

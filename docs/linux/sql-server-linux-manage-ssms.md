@@ -8,21 +8,21 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.openlocfilehash: 3ddc3ffa91b62956fdfef91ff3c19a784fc2fe2b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8520c3741102597ac3b7e93aceabc3ec6c114230
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216652"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883921"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>使用 Windows 上的 SQL Server Management Studio 來管理 Linux 上的 SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 本文介紹 [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)，並逐步引導您完成幾個常見工作。 SSMS 是 Windows 應用程式，因此當您的 Windows 電腦可以連線到 Linux 遠端 SQL Server 執行個體時，請使用 SSMS。
 
 > [!TIP]
-> 如果您沒有要在其上執行 SSMS 的 Windows 電腦，請考慮使用新的 [Azure Data Studio](../azure-data-studio/index.md)。 它提供用來管理 SQL Server 的圖形化工具，並可在 Linux 和 Windows 上執行。
+> 如果您沒有要在其上執行 SSMS 的 Windows 電腦，請考慮使用新的 [Azure Data Studio](../azure-data-studio/index.yml)。 它提供用來管理 SQL Server 的圖形化工具，並可在 Linux 和 Windows 上執行。
 
 [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) 是 Microsoft 針對開發和管理需求免費提供的部分 SQL 工具套件。 SSMS 是一種整合式環境，可存取、設定、管理及開發 SQL Server 的所有元件。 它可以連線到內部部署、Docker 容器和雲端中任何平台上執行的 SQL Server。 它也會連線到 Azure SQL Database 和 Azure SQL 資料倉儲。 SSMS 使用許多豐富指令碼編輯器來合併一群非常廣泛的圖形工具，使所有技術層級的開發人員及系統管理員都能夠存取 SQL Server。
 
@@ -53,13 +53,13 @@ SSMS 為 SQL Server 提供一組廣泛的開發和管理功能，包括可執行
 
     ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png)
 
-1. 在 [連線到伺服器]  視窗中，輸入下列資訊 (如果 SSMS 已在執行中，請按一下 [連線] > [資料庫引擎]  來開啟 [連線到伺服器]  視窗)：
+1. 在 [連線到伺服器] 視窗中，輸入下列資訊 (如果 SSMS 已在執行中，請按一下 [連線] > [資料庫引擎] 來開啟 [連線到伺服器] 視窗)：
 
    | 設定 | 描述 |
    |-----|-----|
    | **伺服器類型** | 預設值為資料庫引擎；請勿變更此值。 |
-   | **伺服器名稱** | 輸入目標 Linux SQL Server 電腦的名稱或其 IP 位址。 |
-   | **驗證** | 如果是 Linux 上的 SQL Server，請使用 [SQL Server 驗證]  。 |
+   | **伺服器名稱** | 輸入目標 Linux SQL Server 電腦的名稱，或其 IP 位址與連接埠 (以 `IP,port` 的格式)。 |
+   | **驗證** | 如果是 Linux 上的 SQL Server，請使用 [SQL Server 驗證]。 |
    | **登入** | 輸入有權存取伺服器上資料庫的使用者名稱 (例如，安裝期間建立的預設 **SA** 帳戶)。 |
    | **密碼** | 輸入指定使用者的密碼 (針對 **SA** 帳戶，您在安裝期間建立了此密碼)。 |
 
@@ -70,15 +70,15 @@ SSMS 為 SQL Server 提供一組廣泛的開發和管理功能，包括可執行
     > [!TIP]
     > 如果您收到連線失敗，請先嘗試從錯誤訊息診斷問題。 然後檢閱[連線疑難排解建議](sql-server-linux-troubleshooting-guide.md#connection)。
  
-1. 成功連線到 SQL Server 之後，[物件總管]  隨即開啟，您現在就可以存取資料庫來執行系統管理工作或查詢資料。
+1. 成功連線到 SQL Server 之後，[物件總管] 隨即開啟，您現在就可以存取資料庫來執行系統管理工作或查詢資料。
 
 ## <a name="run-transact-sql-queries"></a>執行 Transact-SQL 查詢
 
 連線到伺服器之後，您就可以連線到資料庫並執行 Transact-SQL 查詢。 Transact-SQL 查詢幾乎可用於任何資料庫工作。
 
-1. 在 [物件總管]  中，巡覽至伺服器上的目標資料庫。 例如，展開 [系統資料庫]  以使用 **master** 資料庫。
+1. 在 [物件總管] 中，巡覽至伺服器上的目標資料庫。 例如，展開 [系統資料庫] 以使用 **master** 資料庫。
 
-1. 以滑鼠右鍵按一下資料庫，然後選取 [新增查詢]  。
+1. 以滑鼠右鍵按一下資料庫，然後選取 [新增查詢]。
 
 1. 在查詢視窗中，撰寫 Transact-SQL 查詢以選擇傳回伺服器上所有資料庫的名稱。
 
@@ -89,7 +89,7 @@ SSMS 為 SQL Server 提供一組廣泛的開發和管理功能，包括可執行
 
    如果您不熟悉撰寫查詢，請參閱[撰寫 Transact-SQL 陳述式](../t-sql/tutorial-writing-transact-sql-statements.md)。
 
-1. 按一下 [執行]  按鈕以執行查詢並查看結果。
+1. 按一下 [執行] 按鈕以執行查詢並查看結果。
 
    ![成功。 連線到 SQL Database 伺服器：SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
 
@@ -103,9 +103,9 @@ SSMS 為 SQL Server 提供一組廣泛的開發和管理功能，包括可執行
 
 1. 啟動 SSMS 並連線到您在 Linux 上 SQL Server 中的伺服器
 
-2. 在 [物件總管] 中，以滑鼠右鍵按一下 [資料庫]  資料夾，然後按一下 [新增資料庫...]
+2. 在 [物件總管] 中，以滑鼠右鍵按一下 [資料庫] 資料夾，然後按一下 [新增資料庫...]
 
-3. 在 [新增資料庫]  對話方塊中，輸入新資料庫的名稱，然後按一下 [確定] 
+3. 在 [新增資料庫] 對話方塊中，輸入新資料庫的名稱，然後按一下 [確定]
 
 隨即在您的伺服器中成功建立新資料庫。 如果您想要使用 T-SQL 建立新的資料庫，請參閱 [CREATE DATABASE (SQL Server Transact-SQL)](../t-sql/statements/create-database-sql-server-transact-sql.md)。
 
@@ -113,11 +113,11 @@ SSMS 為 SQL Server 提供一組廣泛的開發和管理功能，包括可執行
 
 1. 啟動 SSMS 並連線到您在 Linux 上 SQL Server 中的伺服器
 
-2. 在 [物件總管] 中，展開 [資料庫]  資料夾，以查看伺服器上所有資料庫的清單。
+2. 在 [物件總管] 中，展開 [資料庫] 資料夾，以查看伺服器上所有資料庫的清單。
 
-3. 在 [物件總管] 中，以滑鼠右鍵按一下您想要卸除的資料庫，然後按一下 [刪除] 
+3. 在 [物件總管] 中，以滑鼠右鍵按一下您想要卸除的資料庫，然後按一下 [刪除]
 
-4. 在 [刪除物件]  對話方塊中，選取 [關閉現有的連線]  ，然後按一下 [確定] 
+4. 在 [刪除物件] 對話方塊中，選取 [關閉現有的連線]，然後按一下 [確定]
 
 隨即從您的伺服器成功卸除資料庫。 如果您想要使用 T-SQL 卸除資料庫，請參閱 [DROP DATABASE (SQL Server Transact-SQL)](../t-sql/statements/drop-database-transact-sql.md)。
 
@@ -127,7 +127,7 @@ SSMS 為 SQL Server 提供一組廣泛的開發和管理功能，包括可執行
 
 1. 啟動 SSMS 並連線到您在 Linux 上 SQL Server 中的伺服器
 
-1. 在 [物件總管] 中，以滑鼠右鍵按一下 [伺服器]  節點，然後按一下 [活動監視器] 
+1. 在 [物件總管] 中，以滑鼠右鍵按一下 [伺服器] 節點，然後按一下 [活動監視器]
 
 活動監視器會顯示可展開且可摺疊的窗格，其中包含下列資訊：
 

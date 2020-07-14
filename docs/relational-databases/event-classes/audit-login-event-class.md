@@ -1,5 +1,6 @@
 ---
 title: Audit Login 事件類別 | Microsoft Docs
+description: Audit Login 事件類別表示使用者已成功登入 Microsoft SQL Server。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: ad0bdb48-7f9f-4335-805d-7769d6df89b2
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 47f7ec984eed0ae86d031aa18a52c91a94f41a74
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 908120d252bbaa499e94eab4e0dd74819f42735f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67897533"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629936"
 ---
 # <a name="audit-login-event-class"></a>Audit Login 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Audit Login** 事件類別表示使用者已成功登入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此類別中的事件是由新連接引發，或是由連接集區中重複使用的連接所引發。  
   
 ## <a name="audit-login-event-class-data-columns"></a>Audit Login 事件類別資料行  
@@ -47,7 +48,7 @@ ms.locfileid: "67897533"
 |**SessionLoginName**|**nvarchar**|引發工作階段的使用者登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 執行陳述式，則 **SessionLoginName** 將顯示 Login1 而 **LoginName** 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |**SPID**|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
-|「成功」 |**int**|1 = 成功。 0 = 失敗。 這個事件永遠會顯示成功。|23|是|  
+|「成功」|**int**|1 = 成功。 0 = 失敗。 這個事件永遠會顯示成功。|23|是|  
 |**TextData**|**ntext**|以分號分隔的所有設定選項清單。|1|是|  
 |**GroupID**|**int**|SQL 追蹤事件引發所在之工作負載群組的識別碼。|66|是|  
   

@@ -29,15 +29,15 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 20b7649fe184382fe7a5b1a5f38b28e6b0982284
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b2790ce463d7ff6114bf96726d899cbe5d65f01f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635989"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004733"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   將使用者加入目前資料庫中。 以下列出 12 種使用者類型與最基本的語法範例：  
   
@@ -176,7 +176,7 @@ CREATE USER user_name
  指定在這個資料庫內用來識別使用者的名稱。 *user_name* 是一種 **sysname**。 該名稱長度最多可達 128 個字元。 當建立依據 Windows 主體的使用者時，除非指定另一個使用者名稱，否則 Windows 主體名稱會成為使用者名稱。  
   
  LOGIN *login_name*  
- 指定目前建立之資料庫使用者的登入。 *login_name* 必須是伺服器中的有效登入。 可以是依據 Windows 主體 (使用者或群組) 的登入，或是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入。 當這個 SQL Server 登入進入資料庫時，它會取得正在建立之資料庫使用者的名稱和識別碼。 在建立與 Windows 主體對應的登入時，請使用以下格式： **[** _\<domainName\>_ **\\** _\<loginName\>_ **]** 。 如需範例，請參閱[語法摘要](#SyntaxSummary)。  
+ 指定目前建立之資料庫使用者的登入。 *login_name* 必須是伺服器中的有效登入。 可以是依據 Windows 主體 (使用者或群組) 的登入，或是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入。 當這個 SQL Server 登入進入資料庫時，它會取得正在建立之資料庫使用者的名稱和識別碼。 在建立從 Windows 主體所對應的登入時，請使用以下格式： **[** _\<domainName\>_ **\\** _\<loginName\>_ **]** 。 如需範例，請參閱[語法摘要](#SyntaxSummary)。  
   
  如果 CREATE USER 陳述式是 SQL 批次中的唯一陳述式，Azure SQL Database 會支援 WITH LOGIN 子句。 如果 CREATE USER 陳述式不是 SQL 批次中的唯一陳述式或是在動態 SQL 中執行，則不支援 WITH LOGIN 子句。  
   
@@ -184,7 +184,7 @@ CREATE USER user_name
  指定在解析這個資料庫使用者的物件名稱時，伺服器所搜尋到的第一個結構描述。  
   
  '*windows_principal*'  
- 為正在建立的資料庫使用者指定 Windows 主體。 *windows_principal* 可以是 Windows 使用者或 Windows 群組。 即使 *windows_principal* 不具備登入，也可以建立使用者。 當連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，如果 *windows_principal* 不具備登入，則 Windows 主體必須透過具有登入的 Windows 群組成員資格在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 進行驗證，或者，連接字串必須將自主資料庫指定為初始目錄。 要透過 Windows 主體建立使用者時，請使用以下格式： **[** _\<domainName\>_ **\\** _\<loginName\>_ **]** 。 如需範例，請參閱[語法摘要](#SyntaxSummary)。 具有 Active Directory 使用者身分的使用者，其名稱僅限 21 個字元以內。
+ 為正在建立的資料庫使用者指定 Windows 主體。 *windows_principal* 可以是 Windows 使用者或 Windows 群組。 即使 *windows_principal* 不具備登入，也可以建立使用者。 當連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，如果 *windows_principal* 不具備登入，則 Windows 主體必須透過具有登入的 Windows 群組成員資格在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 進行驗證，或者，連接字串必須將自主資料庫指定為初始目錄。 從 Windows 主體建立使用者時，請使用以下格式： **[** _\<domainName\>_ **\\** _\<loginName\>_ **]** 。 如需範例，請參閱[語法摘要](#SyntaxSummary)。 具有 Active Directory 使用者身分的使用者，其名稱僅限 21 個字元以內。
   
  '*Azure_Active_Directory_principal*'  
  **適用於**：[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]、[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]。  
@@ -198,7 +198,7 @@ CREATE USER user_name
   - `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;`  
   - `CREATE USER [alice@fabrikam.onmicrosoft.com] FROM EXTERNAL PROVIDER;`
 
-- 適用於 Azure AD 群組和 Azure AD 應用程式之 Azure AD 物件的 DisplayName。 如果您有「護士」  安全性群組，則可以使用：  
+- 適用於 Azure AD 群組和 Azure AD 應用程式之 Azure AD 物件的 DisplayName。 如果您有「護士」安全性群組，則可以使用：  
   
   - `CREATE USER [Nurses] FROM EXTERNAL PROVIDER;`  
   
@@ -222,7 +222,7 @@ ASYMMETRIC KEY *asym_key_name*
   
  指定目前建立之資料庫使用者的非對稱金鑰。  
   
-DEFAULT_LANGUAGE = *{ NONE | \<lcid> | \<語言名稱> | \<語言別名> }*  
+DEFAULT_LANGUAGE = *{ NONE | \<lcid> | \<language name> | \<language alias> }*  
  **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  指定新使用者的預設語言。 如果已指定使用者的預設語言，但稍後變更資料庫的預設語言，使用者預設語言會保持為指定值。 如果未指定預設語言，則使用者的預設語言將是資料庫的預設語言。 如果未指定使用者的預設語言，而稍後變更資料庫的預設語言，使用者的預設語言會變成資料庫的新預設語言。  

@@ -1,5 +1,6 @@
 ---
 title: 散發資料庫 | Microsoft Docs
+description: 在 SQL Server 中，散發資料庫會儲存所有複寫類型的中繼資料和記錄資料，以及異動複寫的交易。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 5b42a083-7a11-41d8-9e3f-320c7c907237
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9f86ef648812c553a2445afac6a50f03824e8e72
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0a16f02ec25e37b0c0a24505f33e441030332802
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76284415"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85653595"
 ---
 # <a name="distribution-database"></a>散發資料庫
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   散發資料庫會儲存所有複寫類型的中繼資料和記錄資料，以及異動複寫的交易。  
   
  在許多情況下，單一散發資料庫即已足夠。 不過，如果多個發行者使用單一散發者，請考慮為每個發行者建立一個散發資料庫。 這樣可以確保流經每個散發資料庫的資料都不同。 您可以為使用設定散發精靈的散發者指定一個散發資料庫。 如有需要，請在 **[散發者屬性]** 對話方塊中指定其他散發資料庫。  

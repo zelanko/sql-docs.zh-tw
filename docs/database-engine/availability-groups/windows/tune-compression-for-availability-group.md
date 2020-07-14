@@ -1,5 +1,6 @@
 ---
 title: 微調可用性群組的壓縮 | Microsoft Docs
+description: 了解 SQL Server 如何壓縮可用性群組的資料流，這樣可以減少網路流量、增加 CPU 負載，而且可能引發延遲。
 ms.custom: ''
 ms.date: 06/22/2016
 ms.prod: sql
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3891d30ef5bfffb19ca1d4bfcaab290e3903816b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f8af4702abe127dc0bf5b53be7618515c21cd13c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013672"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888017"
 ---
 # <a name="tune-compression-for-availability-group"></a>微調可用性群組的壓縮
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 依預設，SQL Server 會適合可用性群組的時機壓縮資料流。 壓縮會減少網路流量、增加 CPU 負載，並可能誘使延遲。 您必須是系統管理員 (sysadmin) 固定伺服器角色的成員，才能啟用壓縮。 下表顯示 SQL Server 針對可用性群組記錄資料流使用壓縮的時機︰
 
 | 狀況 | 壓縮設定
@@ -24,6 +25,7 @@ ms.locfileid: "68013672"
 | 同步認可複本 | 未壓縮
 | 非同步認可複本 | Compressed
 | 自動植入期間 | 未壓縮
+| 已在資料庫中啟用 TDE  | 未壓縮
 
 ## <a name="trace-flags-for-availability-group-compression"></a>可用性群組壓縮的追蹤旗標 
 

@@ -15,35 +15,35 @@ helpviewer_keywords:
 ms.assetid: f172d631-3b8c-4912-bd0f-568366cd9870
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8449d7c6c766824628c3352897c25303f10e3a29
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a58c4a27a90a36acc47c3338b39a802a2209060d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75320760"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900655"
 ---
 # <a name="specify-data-type-mappings-for-an-oracle-publisher"></a>指定 Oracle 發行者的資料類型對應
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中指定 Oracle 發行者的資料類型對應。 雖然有針對 Oracle 發行者提供一組預設的資料類型對應，但是可能需要針對給定的發行集指定不同的對應。  
   
  **本主題內容**  
   
 -   **若要指定 Oracle 發行者的資料類型對應，請使用：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 您可以在 [發行項屬性 - \<發行項>] 對話方塊的 [資料對應] 索引標籤上，指定資料類型對應。 您可以從 [新增發行集精靈] 的 [發行項] 頁面，以及 [發行集屬性 - \<發行集>] 對話方塊存取這個對話方塊。 如需使用精靈和存取對話方塊的詳細資訊，請參閱[從 Oracle 資料庫建立發行集](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)和[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 您可以在 [發行項屬性 - \<Article>] 對話方塊的 [資料對應] 索引標籤上，指定資料類型對應。 您可以從 [新增發行集] 精靈的 [發行項] 頁面，以及 [發行集屬性 - \<Publication>] 對話方塊存取這個對話方塊。 如需使用精靈和存取對話方塊的詳細資訊，請參閱[從 Oracle 資料庫建立發行集](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)和[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-specify-a-data-type-mapping"></a>若要指定資料類型對應  
   
-1.  在 [新增發行集精靈] 的 [發行項] 頁面上，或是在 [發行集屬性 - \<發行集>] 對話方塊中，選取一個資料表，然後按一下 [發行項屬性]。  
+1.  在 [新增發行集] 精靈的 [發行項] 頁面上，或是在 [發行集屬性 - \<Publication>] 對話方塊中，選取一個資料表，然後按一下 [發行項屬性]。  
   
 2.  按一下 **[設定反白顯示資料表發行項的屬性]** 。  
   
-3.  在 [發行項屬性 - \<發行項>] 對話方塊的 [資料對應] 索引標籤上，從 [訂閱者資料類型] 資料行選取對應：  
+3.  在 [發行項屬性 - \<Article>] 對話方塊的 [資料對應] 索引標籤上，從 [訂閱者資料類型] 資料行選取對應：  
   
     -   針對某些資料類型，只有一個可能的對應，在此情況下，屬性方格中的資料行為唯讀。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "75320760"
   
 3.  在散發者上，執行 [sp_helparticlecolumns](../../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md) ，以檢視已發行之發行項中資料行的現有對應。  
   
-4.  在散發者上，執行 [sp_changearticlecolumndatatype](../../../relational-databases/system-stored-procedures/sp-changearticlecolumndatatype-transact-sql.md)。 針對 **\@publisher** 指定 Oracle 發行者的名稱，並指定 **\@publication**、 **\@article** 和 **\@column** 來定義已發佈的資料行。 針對 **\@type** 指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 要對應的資料類型名稱，並指定適用的 **\@length**、**\@precision** 和 **\@scale**。  
+4.  在散發者上，執行 [sp_changearticlecolumndatatype](../../../relational-databases/system-stored-procedures/sp-changearticlecolumndatatype-transact-sql.md)。 針對 **\@publisher** 指定 Oracle 發行者的名稱，並指定 **\@publication**、 **\@article** 和 **\@column** 來定義已發佈的資料行。 針對 **\@type** 指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 要對應的資料類型名稱，並指定適用的 **\@length**、 **\@precision** 和 **\@scale**。  
   
 5.  在散發者上執行 [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)。 這樣會建立用來從 Oracle 發行集產生快照集的檢視。  
   

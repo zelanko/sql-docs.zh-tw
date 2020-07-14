@@ -1,5 +1,6 @@
 ---
 title: 手動容錯移轉資料庫鏡像工作階段 (SQL Server Management Studio) | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio，來起始手動容錯移轉至鏡像伺服器。 鏡像資料庫之後會變成主體資料庫。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4ecf9c63-b3a4-4c54-b553-5bc37973232b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ab61ea2aeebb4e901e93a113fb24a7a74640b059
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 05e11b27e618dfc38f818f8dc86199cce3343d21
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68041755"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754632"
 ---
 # <a name="manually-fail-over-a-database-mirroring-session-sql-server-management-studio"></a>手動容錯移轉資料庫鏡像工作階段 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   鏡像資料庫已同步處理時 (亦即，資料庫為 SYNCHRONIZED 狀態時)，資料庫擁有者可以初始化至鏡像伺服器的手動容錯移轉。  
   
  在手動容錯移轉期間，會針對發生容錯移轉的資料庫互換主體伺服器和鏡像伺服器角色。 鏡像資料庫變成主體資料庫，而主體資料庫變成鏡像。 例如，下表顯示手動容錯移轉如何互換這兩個鏡像夥伴 ( `SQLDBENGINE0_1` 和 `SQLDBENGINE0_2`) 的角色。  
@@ -38,20 +39,20 @@ ms.locfileid: "68041755"
   
 1.  連接到主體伺服器執行個體，在 **[物件總管]** 窗格中按一下伺服器名稱，以展開伺服器樹狀目錄。  
   
-2.  展開 [資料庫]  ，然後選取要容錯移轉的資料庫。  
+2.  展開 [資料庫]，然後選取要容錯移轉的資料庫。  
   
-3.  以滑鼠右鍵按一下資料庫，選取 [工作]  ，然後按一下 [鏡像]  。 這將會開啟在 **[資料庫屬性]** 對話方塊中的 **[鏡像]** 頁面。  
+3.  以滑鼠右鍵按一下資料庫，選取 [工作]，然後按一下 [鏡像]。 這將會開啟在 **[資料庫屬性]** 對話方塊中的 **[鏡像]** 頁面。  
   
-4.  按一下 [容錯移轉]  。  
+4.  按一下 [容錯移轉]。  
   
-     確認方塊隨即顯示。  主體伺服器一開始會使用 Windows 驗證來嘗試連接至鏡像伺服器。 如果 Windows 驗證沒有用，主體伺服器就會顯示 [連接到伺服器]  對話方塊。 如果鏡像伺服器使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，請在 [驗證] 方塊中選取 [SQL Server 驗證]。 在 [登入]  文字方塊中，指定要用來連接至鏡像伺服器的登入帳戶，然後在 [密碼]  文字方塊中，指定該帳戶的密碼。  
+     確認方塊隨即顯示。  主體伺服器一開始會使用 Windows 驗證來嘗試連接至鏡像伺服器。 如果 Windows 驗證沒有用，主體伺服器就會顯示 [連接到伺服器] 對話方塊。 如果鏡像伺服器使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，請在 [驗證] 方塊中選取 [SQL Server 驗證]。 在 [登入] 文字方塊中，指定要用來連接至鏡像伺服器的登入帳戶，然後在 [密碼] 文字方塊中，指定該帳戶的密碼。  
   
-     如果容錯移轉成功，[資料庫屬性]  對話方塊就會關閉。 鏡像資料庫變成主體資料庫，而主體資料庫變成鏡像。  
+     如果容錯移轉成功，[資料庫屬性] 對話方塊就會關閉。 鏡像資料庫變成主體資料庫，而主體資料庫變成鏡像。  
   
      如果容錯移轉失敗，則會顯示錯誤訊息，而且對話方塊會保持開啟狀態。  
   
     > [!IMPORTANT]  
-    >  如果您在開啟 [鏡像]  頁面後修改了任何屬性，將不會儲存那些變更。  
+    >  如果您在開啟 [鏡像] 頁面後修改了任何屬性，將不會儲存那些變更。  
   
      對話方塊會自動關閉。  
   

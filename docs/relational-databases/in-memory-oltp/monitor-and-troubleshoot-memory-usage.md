@@ -1,5 +1,6 @@
 ---
 title: 監視和針對使用量進行記憶體疑難排解 |Microsoft Docs
+description: 了解針對與 SQL Server 中的磁碟資料表具有不同模式的記憶體內部 OLTP 記憶體耗用量進行監視及疑難排解。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ceeaedd10d8c9e38664083365ee943422a2ca91
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fc6f2d5a0dbd24295d92bb53cbbf4003043be4db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907539"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722479"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>監視與疑難排解記憶體使用量
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 耗用記憶體的模式與磁碟資料表不同。 您可以使用針對記憶體和記憶體回收子系統提供的 DMV 或效能計數器，監視資料庫中記憶體最佳化資料表和索引所配置和使用的記憶體數量。  如此就能讓您同時深入查看系統和資料庫層級，並且讓您防止因記憶體耗盡而發生問題。  
   
  本主題將涵蓋監視您的 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 記憶體使用量。  
@@ -137,7 +138,7 @@ ms.locfileid: "72907539"
   
 2.  在 [物件總管] 中，以滑鼠右鍵按一下要產生報表的資料庫。  
   
-3.  在操作功能表中，依序選取 [報表]   -> [標準報表]   -> [記憶體最佳化物件的記憶體使用量]   
+3.  在操作功能表中，依序選取 [報表] -> [標準報表] -> [記憶體最佳化物件的記憶體使用量]  
   
  ![HK_MM_SSMS](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")  
   

@@ -34,15 +34,15 @@ helpviewer_keywords:
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 98fc6b89cfe05b7c03d4d4211bea9387c5ef4e80
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1f0bf0dd95bbb209c0e6320c4ba91eb1bc84ff41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635854"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736321"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中搜尋單字和片語的精確或模糊 (較不精確) 相符項目、彼此在一定距離之間的單字，或加權相符項目。 CONTAINS 為用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT 陳述式之 [WHERE 子句](../../t-sql/queries/where-transact-sql.md)中的述詞，可在包含以字元為基礎之資料類型的全文檢索索引資料行上執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 全文檢索搜尋。  
@@ -210,7 +210,7 @@ WHERE CONTAINS(Description, @SearchWord);
 >  部分語言 (如亞洲某些地區所撰寫的語言) 可能會有不用空格來分隔的一個或多個單字所組成的片語。  
   
 \<simple_term>  
-指定符合完整的單字或片語。 "blue berry"、blueberry 和 "Microsoft SQL Server" 都是有效的簡單詞彙範例。 片語應該用雙引號 ("") 括住。 片語中的單字順序必須依照於 *\<contains_search_condition>* 中指定的順序顯示，如同它們在資料庫資料行中出現的方式。 在單字或片語中搜尋字元並不區分大小寫。 全文檢索索引資料行中的非搜尋字 (或[停用字詞](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)，如 a、and 或 the) 不會儲存在全文檢索索引中。 如果在單一字的搜尋中使用非搜尋字，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回一則錯誤訊息，指出查詢只包含非搜尋字。 在每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 \Mssql\Binn\FTERef 目錄中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都併入了一份標準非搜尋字清單。  
+指定符合完整的單字或片語。 "blue berry"、blueberry 和 "Microsoft SQL Server" 都是有效的簡單詞彙範例。 片語應該用雙引號 ("") 括住。 片語中的單字必須依照 *\<contains_search_condition>* 所指定、符合其出現在資料庫資料行中的相同順序顯示。 在單字或片語中搜尋字元並不區分大小寫。 全文檢索索引資料行中的非搜尋字 (或[停用字詞](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)，如 a、and 或 the) 不會儲存在全文檢索索引中。 如果在單一字的搜尋中使用非搜尋字，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回一則錯誤訊息，指出查詢只包含非搜尋字。 在每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 \Mssql\Binn\FTERef 目錄中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都併入了一份標準非搜尋字清單。  
   
  系統會忽略標點符號。 因此，`CONTAINS(testing, "computer failure")` 將比對含有此值的資料列："Where is my computer? Failure to find it would be expensive"。 如需斷詞工具行為的詳細資訊，請參閱[設定及管理搜尋的斷詞工具與字幹分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
   
@@ -225,16 +225,16 @@ WHERE CONTAINS(Description, @SearchWord);
  INFLECTIONAL  
  在指定的簡單詞彙上，指定所用之特定語言的字幹分析器。 字幹分析器的行為是以每種特定語言的詞幹分析規則來定義的。 中性語言並沒有相關聯的字幹分析器。 系統會利用查詢之資料行的資料行語言來參考所需的字幹分析器。 如果有指定 *language_term*，便會使用對應於這個語言的字幹分析器。  
   
- 位於 *\<generation_term>* 內的指定 *\<simple_term>* 將不會同時符合名詞和動詞。  
+ *\<generation_term>* 內指定的 *\<simple_term>* 不會同時符合名詞和動詞。  
   
  THESAURUS  
- 指定使用對應於資料行全文檢索語言或查詢指定之語言的同義字。 系統會利用 *\<simple_term>* 中最長的模式來比對這些同義字，且會產生其他詞彙來擴充或取代原始模式。 如果針對所有或部分 *\<simple_term>* 找不到相符項目，就會將不相符的部分當做 *simple_term* 來處理。 如需全文檢索搜尋同義字的詳細資訊，請參閱[設定及管理全文檢索搜尋的同義字檔案](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)。  
+ 指定使用對應於資料行全文檢索語言或查詢指定之語言的同義字。 系統會利用 *\<simple_term>* 中一或多個最長的模式來比對這些同義字，且會產生其他詞彙來擴充或取代原始模式。 如果找不到 *\<simple_term>* 的完全或部分相符項目，就會將不相符的部分當做 *simple_term* 來處理。 如需全文檢索搜尋同義字的詳細資訊，請參閱[設定及管理全文檢索搜尋的同義字檔案](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)。  
   
  \<generic_proximity_term>  
  指定必須符合要搜尋之文件中的單字或片語。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 我們建議您使用 \<custom_proximity_term>。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 建議您使用 \<custom_proximity_term>。  
   
  NEAR | ~  
  指出 NEAR 或 ~ 運算子兩側的單字或片語必須出現在要傳回之相符項目的文件中。 您必須指定兩個搜尋詞彙。 指定的搜尋詞彙可以是由雙引號分隔的一個單字或片語 ("*片語*")。  
@@ -248,7 +248,7 @@ WHERE CONTAINS(Description, @SearchWord);
  \<custom_proximity_term>  
 **適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。
   
- 指定單字或片語比對，並選擇性地指定搜尋詞彙之間所允許的最大距離。 您也可以指定搜尋詞彙必須依指定的正確順序 (\<match_order>) 尋找。  
+ 指定單字或片語比對，並選擇性地指定搜尋詞彙之間所允許的最大距離。 您也可以指定搜尋字詞必須依您指定的確切順序 (\<match_order>) 尋找。  
   
  指定的搜尋詞彙可以是由雙引號分隔的一個單字或片語 ("*片語*")。 每個指定的詞彙必須在要傳回之相符項目的文件中。 您必須至少指定兩個搜尋詞彙。 最大搜尋詞彙數目為 64。  
   
@@ -290,7 +290,7 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
  \<match_order>  
  指定詞彙是否必須依指定順序出現，才會由搜尋查詢傳回。 若要指定 \<match_order>，您也必須指定 \<maximum_distance>。  
   
- \<match_order> 採用下列其中一個值：  
+ \<match_order> 會採用下列其中一個值：  
   
  **TRUE**  
  強制詞彙內的指定順序。 例如，`NEAR(A,B)` 只符合 `A ... B`。  
@@ -332,7 +332,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  { OR | | }  
  指出相符項目必須符合兩個包含搜尋條件的其中之一。 您可以利用垂直線符號 (|) 取代 OR 關鍵字來表示 OR 運算子。  
   
- 當 *\<contains_search_condition>* 包含附加括號的群組時，系統會先評估這些附加括號的群組。 在評估附加括號的群組之後，當在包含搜尋條件中使用這些邏輯運算子，便適用下列規則：  
+ 當 *\<contains_search_condition>* 包含小括號內的群組時，會先評估這些小括號內的群組。 在評估附加括號的群組之後，當在包含搜尋條件中使用這些邏輯運算子，便適用下列規則：  
   
 -   NOT 在 AND 前面套用。  
   

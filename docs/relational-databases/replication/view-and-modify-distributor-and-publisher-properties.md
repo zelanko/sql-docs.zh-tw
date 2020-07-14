@@ -17,15 +17,15 @@ ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e577144d9c259d097e28b435b0d0eedc4252e82a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 18b5f2e898638823e20aa237d9bbbc43bb025967
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286935"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720595"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>檢視及修改散發者和發行者屬性
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中檢視及修改「散發者」和「發行者」屬性。  
   
  **本主題內容**  
@@ -38,7 +38,7 @@ ms.locfileid: "76286935"
   
 -   **若要檢視及修改「散發者」和「發行者」屬性，請使用：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "76286935"
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
--   對於執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前版本的「發行者」，**sysadmin** 固定伺服器角色中的使用者可在 [訂閱者]  頁面上註冊「訂閱者」。 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]開始，它不再需要明確註冊複寫的「訂閱者」。  
+-   對於執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前版本的「發行者」，**sysadmin** 固定伺服器角色中的使用者可在 [訂閱者] 頁面上註冊「訂閱者」。 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]開始，它不再需要明確註冊複寫的「訂閱者」。  
   
 ###  <a name="security"></a><a name="Security"></a> Security  
  可能的話，會在執行階段提示使用者輸入安全性認證。  
@@ -61,9 +61,9 @@ ms.locfileid: "76286935"
   
 2.  以滑鼠右鍵按一下 **[複寫]** 資料夾，然後按一下 **[散發者屬性]** 。  
   
-3.  檢視和修改 [散發者屬性 - \<散發者>] 對話方塊中的屬性。  
+3.  檢視和修改 [散發者屬性 - \<Distributor>] 對話方塊中的屬性。  
   
-    -   若要檢視和修改散發資料庫的屬性，請按一下對話方塊中 [一般] 頁面上資料庫的屬性按鈕 (**...**)。  
+    -   若要檢視和修改散發資料庫的屬性，請按一下對話方塊中 [一般] 頁面上資料庫的屬性按鈕 ( **...** )。  
   
     -   若要檢視和修改與「散發者」相關聯的「發行者」屬性，請按一下對話方塊中 **[發行者]** 頁面上「發行者」的屬性按鈕 ( **[...]** )。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "76286935"
   
 2.  以滑鼠右鍵按一下 **[複寫]** 資料夾，然後按一下 **[發行者屬性]** 。  
   
-3.  檢視和修改 [發行者屬性 - <發行者>]  對話方塊中的屬性。  
+3.  檢視和修改 [發行者屬性 - <發行者>] 對話方塊中的屬性。  
   
     -   **sysadmin** 固定伺服器角色中的使用者能啟用 **[發行集資料庫]** 頁面上複寫的資料庫。 啟用資料庫不會發行此資料庫；不過，它允許該資料庫之 **db_owner** 固定資料庫角色中的任何使用者在資料庫中建立一個或多個發行集。  
   

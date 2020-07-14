@@ -1,5 +1,6 @@
 ---
 title: 估計資料表的大小 | Microsoft Docs
+description: 使用此程序估計在 SQL Server 的資料表中儲存資料所需的空間量。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -26,15 +27,15 @@ ms.assetid: 15c17c92-616f-402e-894b-907a296efe5f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49e63511a23b670575f517640bb0b9f0eb06870a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d2cec3c9f67a07cb36c6ba7f4a11225b5544b252
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909026"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002190"
 ---
 # <a name="estimate-the-size-of-a-table"></a>估計資料表的大小
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   您可以使用下列步驟來估計將資料儲存於資料表中所需的空間量：  
   
 1.  遵循 [估計堆積的大小](../../relational-databases/databases/estimate-the-size-of-a-heap.md) 或 [估計叢集索引的大小](../../relational-databases/databases/estimate-the-size-of-a-clustered-index.md)中的指示，來計算堆積或叢集索引所需的空間。  

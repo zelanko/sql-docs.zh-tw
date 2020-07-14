@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest'
-ms.openlocfilehash: d90503571b10aa614af24a4ee35601b266ab290f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0772efddcd9743f23e1658c5e29e12310b029275
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80217118"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84818197"
 ---
 # <a name="what-is-polybase"></a>什麼是 PolyBase？
 
@@ -93,7 +93,7 @@ PolyBase 可在 SQL Server 中啟用下列情節：
 
 ## <a name="performance"></a>效能
 
-- **將計算推送到 Hadoop。** 查詢最佳化工具會做出成本型決策，以將計算推送到 Hadoop，而這麼做可以改善查詢效能。  它使用外部資料表上的統計資料來做出成本型決策。 推送計算會建立 MapReduce 工作，並利用 Hadoop 的分散式運算資源。
+- **將計算推送到 Hadoop。** 查詢最佳化工具會做出成本型決策，以將計算推送到 Hadoop (在那麼做可以改善查詢效能的前提下)。  查詢最佳化工具會使用外部資料表上的統計資料來做出成本型決策。 推送計算會建立 MapReduce 工作，並利用 Hadoop 的分散式運算資源。
 
 - **調整計算資源。** 若要改善查詢效能，您可以使用 SQL Server [PolyBase 向外延展群組](../../relational-databases/polybase/polybase-scale-out-groups.md)。 這可啟用 SQL Server 執行個體與 Hadoop 節點之間的平行資料傳輸，而且會加入在外部資料上運作的計算資源。
 

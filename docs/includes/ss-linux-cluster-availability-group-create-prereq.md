@@ -1,4 +1,4 @@
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 建立可用性群組之前，您需要：
 
@@ -77,7 +77,7 @@ ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
 
-如需此 XE 工作階段的詳細資訊，請參閱 [AlwaysOn 擴充事件](https://msdn.microsoft.com/library/dn135324.aspx) \(英文\)。
+如需此 XE 工作階段的詳細資訊，請參閱 [Always On 擴充事件](../database-engine/availability-groups/windows/always-on-extended-events.md)。
 
 ## <a name="create-a-certificate"></a>建立憑證
 

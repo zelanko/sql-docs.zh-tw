@@ -1,5 +1,6 @@
 ---
 title: XML 索引 (SQL Server) | Microsoft Docs
+description: 了解在 XML 資料類型資料行上建立 XML 索引，會如何藉由改善查詢效能為您的應用程式帶來好處。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -33,15 +34,15 @@ helpviewer_keywords:
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b9cfd2d1e81d3778653a59b697dc740680169071
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8f5ab347d15e0363411640431f4d833f38e13234
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68096910"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729785"
 ---
 # <a name="xml-indexes-sql-server"></a>XML 索引 (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   可以在 **xml** 資料類型資料行上建立 XML 索引。 它們會在資料行中為整個 XML 執行個體的所有標記、值和路徑編制索引，進而提高查詢效能。 在下列情況下，您的應用程式可從 XML 索引獲益：  
   
 -   在您的工作負載中，經常會查詢 XML 資料行。 必須將資料修改期間的 XML 索引維護成本納入考量。  
@@ -54,7 +55,7 @@ ms.locfileid: "68096910"
   
 -   次要 XML 索引  
   
- 在 **xml** 類型資料行上的第一個索引必須是主要 XML 索引。 使用主要 XML 索引時，可支援下列次要索引類型：PATH、VALUE 及 PROPERTY。 視查詢類型而定，這些次要索引可協助改善查詢效能。  
+ 在 **xml** 類型資料行上的第一個索引必須是主要 XML 索引。 使用主要 XML 索引時，可支援下列次要索引類型：PATH、VALUE 和 PROPERTY。 視查詢類型而定，這些次要索引可協助改善查詢效能。  
   
 > [!NOTE]  
 >  除非您已正確設定資料庫選項使其可以處理 **xml** 資料類型，否則無法建立或修改 XML 索引。 如需詳細資訊，請參閱 [使用 XML 資料行進行全文檢索搜尋](../../relational-databases/xml/use-full-text-search-with-xml-columns.md)。  
@@ -133,7 +134,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
   
 -   如果您的工作負載使用路徑運算式，從個別的 XML 執行個體中擷取多個值，則在 PROPERTY 索引中將路徑叢集在每個 XML 執行個體中，可能會有所幫助。 當物件的屬性被提取，且已知其主索引鍵值時，此案例通常會發生在屬性包案例中。  
   
--   如果您的工作負載需要查詢 XML 執行個體中的值，但您不知道含有那些值的元素或屬性名稱，您可能會想要建立 VALUE 索引。 這通常會發生在子系座標軸查閱，例如 //author[last-name="Howard"]，其中 \<author> 項目可出現在階層中的任何層級。 這也會發生在萬用字元查詢中，例如 /book [@* = "novel"]，此查詢是要尋找屬性中具有 "novel" 值的 \<book> 項目。  
+-   如果您的工作負載需要查詢 XML 執行個體中的值，但您不知道含有那些值的元素或屬性名稱，您可能會想要建立 VALUE 索引。 這通常會發生在子系座標軸查閱，例如 //author[last-name="Howard"]，其中 \<author> 元素可出現在階層中的任何層級。 這也會發生在萬用字元查詢中，例如 /book [@* = "novel"]，此查詢是要尋找屬性中具有 "novel" 值的 \<book> 元素。  
   
 ### <a name="path-secondary-xml-index"></a>PATH 次要 XML 索引  
  如果您的查詢通常會在 **xml** 類型資料行上指定路徑運算式，則使用 PATH 次要索引將可使搜尋速度變快。 如本主題前面所述，當您的查詢在 WHERE 子句中指定 **exist()** 方法時，主索引就非常有用。 如果您加入 PATH 次要索引，也可以改善這類查詢的搜尋效能。  

@@ -1,5 +1,6 @@
 ---
 title: 為記憶體最佳化物件定義持久性 | Microsoft 文件
+description: 了解 SQL Server 中適用於經記憶體最佳化的資料表的持久性選項：預設的 SCHEMA_AND_DATA 和 SCHEMA_ONLY。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 0fe85fbf-8e8d-4983-96fd-d04b3c7d6d65
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 764824a74480b6d17c890f57714b0df9221bf523
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a6fb32139ff2d3330616d842b092dac13ec1f1b4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68219876"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723285"
 ---
 # <a name="defining-durability-for-memory-optimized-objects"></a>為記憶體最佳化的物件定義持久性
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   記憶體最佳化的資料表有兩個持久性選項：  
   

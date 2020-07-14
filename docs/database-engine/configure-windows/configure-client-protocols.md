@@ -1,5 +1,6 @@
 ---
 title: 設定用戶端通訊協定 | Microsoft Docs
+description: 了解設定用戶端應用程式在 SQL Server 中使用之通訊協定的各種方式。 支援的通訊協定包括 TCP/IP、具名管道和共用記憶體。
 ms.custom: ''
 ms.date: 07/27/2016
 ms.prod: sql
@@ -19,17 +20,17 @@ helpviewer_keywords:
 - protocols [SQL Server], client configuration
 - default protocols, client
 ms.assetid: 3dfa2702-ba65-43b4-a777-6727846e133a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2fa898451638503b2f91c97026158e7331a25e90
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5cca0b54c983fe7a4ef122a45070e53d2143a05e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012807"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85697976"
 ---
 # <a name="configure-client-protocols"></a>設定用戶端通訊協定
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 組態管理員，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中設定用戶端應用程式所使用的用戶端通訊協定。 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援使用 TCP/IP 網路通訊協定和具名管道通訊協定來進行用戶端通訊。 如果用戶端是連接到同一部電腦上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，也可以使用共用記憶體通訊協定。 選取通訊協定有三種常見的方法。  
   
 -   您可以在「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員」中設定通訊協定順序，來設定所有用戶端應用程式使用相同的網路通訊協定。  
@@ -42,7 +43,7 @@ ms.locfileid: "68012807"
   
 ###  <a name="to-enable-or-disable-a-client-protocol"></a><a name="EnableDisable"></a> 啟用或停用用戶端通訊協定  
   
-1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中，展開 [SQL Server Native Client Configuration (SQL Server Native Client 組態)]  ，並以滑鼠右鍵按一下 [用戶端通訊協定]  ，然後按一下 [屬性]  。  
+1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中，展開 [SQL Server Native Client Configuration (SQL Server Native Client 組態)]，並以滑鼠右鍵按一下 [用戶端通訊協定]，然後按一下 [屬性]。  
   
 2.  在 **[停用的通訊協定]** 方塊中按一下某通訊協定，再按一下 **[啟用]** ，即可啟用通訊協定。  
   
@@ -50,7 +51,7 @@ ms.locfileid: "68012807"
   
 ###  <a name="to-change-the-default-protocol-or-the-protocol-order-for-client-computers"></a><a name="ChangeDefault"></a> 變更用戶端電腦的預設通訊協定或通訊協定順序  
   
-1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中，展開 [SQL Server Native Client Configuration (SQL Server Native Client 組態)]  ，並以滑鼠右鍵按一下 [用戶端通訊協定]  ，然後按一下 [屬性]  。  
+1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中，展開 [SQL Server Native Client Configuration (SQL Server Native Client 組態)]，並以滑鼠右鍵按一下 [用戶端通訊協定]，然後按一下 [屬性]。  
   
 2.  在 **[啟用的通訊協定]** 方塊中，按一下 **[上移]** 或 **[下移]** ，來變更要連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時使用通訊協定的順序。 **[啟用的通訊協定]** 方塊裡最上方的通訊協定，是預設通訊協定。  
   
@@ -59,7 +60,7 @@ ms.locfileid: "68012807"
   
 ###  <a name="to-configure-a-client-to-use-tcpip"></a><a name="Configure"></a> 設定用戶端使用 TCP/IP  
   
-1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中，展開 [SQL Server Native Client Configuration (SQL Server Native Client 組態)]  ，並以滑鼠右鍵按一下 [用戶端通訊協定]  ，然後按一下 [屬性]  。  
+1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中，展開 [SQL Server Native Client Configuration (SQL Server Native Client 組態)]，並以滑鼠右鍵按一下 [用戶端通訊協定]，然後按一下 [屬性]。  
   
 2.  請在 **[啟用的通訊協定]** 方塊中，按一下向上箭號與向下箭號，以便在嘗試連接 SQL Server 時變更通訊協定的順序。 **[啟用的通訊協定]** 方塊裡最上方的通訊協定，是預設通訊協定。  
   

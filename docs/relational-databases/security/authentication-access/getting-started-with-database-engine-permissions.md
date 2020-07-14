@@ -1,5 +1,6 @@
 ---
 title: Database Engine 權限使用者入門 | Microsoft Docs
+description: 請檢閱 SQL Server 中的一些基本安全性概念，並了解資料庫引擎權限的一般實作。
 ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0fd86c132a0a51ea6bbba533bc7e8a2ab1083ddc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c5d6f2daf6b37c260b84683e3f85395a88b1f218
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903024"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005655"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>資料庫引擎權限使用者入門
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   透過登入與伺服器角色的伺服器等級，以及資料庫使用者與資料庫角色的資料庫等級，管理 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 中的權限。 適用於 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 的模型會在每個資料庫中公開同個系統，但不提供伺服器等級權限。 本主題會檢閱一些基本的安全性概念，並接著說明典型的權限實作資訊。  
   
@@ -40,7 +41,7 @@ ms.locfileid: "72903024"
 ##### <a name="database-users"></a>資料庫使用者  
  在資料庫中建立資料庫使用者，並將該資料庫使用者對應至登入，以針對登入授與資料庫存取權。 資料庫使用者名稱通常會與登入名稱相同，但這兩種名稱不一定非得相同。 每個資料庫使用者皆會對應至單一登入。 登入僅可對應至一個資料庫中的單一使用者，但其可對應做為數個不同資料庫中的資料庫使用者。  
   
- 您亦可建立未具備對應登入的資料庫使用者。 這些使用者稱為「自主資料庫使用者」  。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建議您使用自主資料庫使用者，原因在於其可更輕鬆地將資料庫移至不同的伺服器。 自主資料庫與登入相似，可使用 Windows 驗證或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證。 如需詳細資訊，請參閱 [自主的資料庫使用者 - 使資料庫可攜](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
+ 您亦可建立未具備對應登入的資料庫使用者。 這些使用者稱為「自主資料庫使用者」 。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建議您使用自主資料庫使用者，原因在於其可更輕鬆地將資料庫移至不同的伺服器。 自主資料庫與登入相似，可使用 Windows 驗證或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證。 如需詳細資訊，請參閱 [自主的資料庫使用者 - 使資料庫可攜](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
   
  共有 12 個類型的使用者，其僅在驗證方式與顯示對象方面略有差異。 若要查看使用者清單，請參閱 [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)。  
   
@@ -125,7 +126,7 @@ GRANT UPDATE ON OBJECT::Production.Parts TO PartsTeam;
 -   若系統管理員未正確執行 `DENY SELECT ON OBJECT::OrderStatus TO Sales;` ，則 Ted 「銷售」角色成員的 `SELECT` 權限將會遭到拒絕，這是因為「銷售」的 `DENY` 會覆寫其個別的  `GRANT`。  
   
 > [!NOTE]  
->  您可使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]來設定權限。 在 [物件總管] 中找到安全性實體，以滑鼠右鍵按一下安全性實體，然後按一下 [屬性]  。 選取 [權限]  頁面。 如需使用權限頁面的說明，請參閱 [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md)。  
+>  您可使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]來設定權限。 在 [物件總管] 中找到安全性實體，以滑鼠右鍵按一下安全性實體，然後按一下 [屬性]。 選取 [權限]  頁面。 如需使用權限頁面的說明，請參閱 [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md)。  
   
 ## <a name="permission-hierarchy"></a>權限階層  
  權限具有父子式階層。 也就是說，若您在資料庫上授與 `SELECT` 權限，則該權限在資料庫中會包含所有 (子系) 結構描述的 `SELECT` 權限。 若您在結構描述上授與 `SELECT` 權限，則其在結構描述中會包含所有 (子系) 資料表的 `SELECT` 權限。 權限可轉移；亦即若您在資料庫上授與 `SELECT` 權限，則其會包含所有 (子系) 結構描述以及所有 (孫系) 資料表與檢視上的 `SELECT` 權限。  
@@ -228,13 +229,13 @@ JOIN sys.database_principals AS dRole
 ## <a name="next-steps"></a>後續步驟  
  如需更多關於快速入門的主題資訊，請參閱：  
   
--   [教學課程：Database Engine 使用者入門](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) 
+-   [教學課程：資料庫引擎使用者入門](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) 
 
 -   [建立資料庫 &#40;教學課程&#41;](../../../t-sql/lesson-1-creating-database-objects.md)  
   
 -   [教學課程：SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
   
--   [教學課程：撰寫國際性通用的 Transact-SQL 陳述式](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
+-   [教學課程：撰寫 Transact-SQL 陳述式](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   

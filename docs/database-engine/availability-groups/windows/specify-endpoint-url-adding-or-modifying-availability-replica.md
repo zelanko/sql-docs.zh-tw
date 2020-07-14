@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 28954a81cac3a5adacd037dbccb2e7584e060e79
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b96c091413e5ded9f3cff862f2c5650ce38fe5d1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251279"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902367"
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>指定端點 URL - 新增或修改可用性複本
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  若要裝載可用性群組的可用性複本，伺服器執行個體必須擁有資料庫鏡像端點。 伺服器執行個體使用此端點接聽來自其他伺服器執行個體所裝載之可用性複本的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 訊息。 若要定義可用性群組的可用性複本，您必須指定將要裝載此複本之伺服器執行個體的端點 URL。 「端點 URL」  會識別資料庫鏡像端點的傳輸通訊協定 (TCP)、伺服器執行個體的系統位址，以及與端點相關聯的連接埠號碼。  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  若要裝載可用性群組的可用性複本，伺服器執行個體必須擁有資料庫鏡像端點。 伺服器執行個體使用此端點接聽來自其他伺服器執行個體所裝載之可用性複本的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 訊息。 若要定義可用性群組的可用性複本，您必須指定將要裝載此複本之伺服器執行個體的端點 URL。 「端點 URL」會識別資料庫鏡像端點的傳輸通訊協定 (TCP)、伺服器執行個體的系統位址，以及與端點相關聯的連接埠號碼。  
   
 > [!NOTE]  
 >  「端點 URL」一詞是資料庫鏡像使用者介面和文件集所用「伺服器網路位址」一詞的同義詞。  
@@ -33,15 +33,15 @@ ms.locfileid: "75251279"
 ##  <a name="syntax-for-an-endpoint-url"></a><a name="SyntaxOfURL"></a> 端點 URL 的語法  
  端點 URL 的語法採用以下格式：  
   
- TCP<strong>://</strong> *\<系統位址>* <strong>:</strong> *\<通訊埠>*  
+ TCP<strong>://</strong> *\<system-address>* <strong>:</strong> *\<port>*  
   
  其中  
   
--   *\<系統位址>* 是可明確識別目標電腦系統的字串。 伺服器位址通常是系統名稱 (如果系統位於同一個網域內)、完整網域名稱或 IP 位址。  
+-   *\<system-address>* 是可明確識別目標電腦系統的字串。 伺服器位址通常是系統名稱 (如果系統位於同一個網域內)、完整網域名稱或 IP 位址。  
   
     -   因為 Windows Server 容錯移轉叢集 (WSFC) 叢集的節點都是在相同網域中，您可以使用電腦系統的名稱，例如 `SYSTEM46`。  
   
-    -   若要使用 IP 位址，則它在您的環境中必須是唯一的。 建議您只使用靜態的 IP 位址。 此 IP 位址可以是 IP 第 4 版 (IPv4) 或 IP 第 6 版 (IPv6)。 IPv6 位址必須使用方括弧括住，例如： **[** <IPv6 位址>  **]** 。  
+    -   若要使用 IP 位址，則它在您的環境中必須是唯一的。 建議您只使用靜態的 IP 位址。 此 IP 位址可以是 IP 第 4 版 (IPv4) 或 IP 第 6 版 (IPv6)。 IPv6 位址必須使用方括弧括住，例如： **[** <IPv6 位址> **]** 。  
   
          若要取得系統的 IP 位址，請在 Windows 命令提示字元下，輸入 **ipconfig** 命令。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "75251279"
   
          網域區段的內容和數目是在公司或組織的內部決定的。 如需詳細資訊，請參閱本主題後面的＜ [尋找完整網域名稱](#Finding_FQDN)＞。  
   
--   *\<連接埠>* 是夥伴伺服器執行個體的鏡像端點所使用的連接埠號碼。  
+-   *\<port>* 是夥伴伺服器執行個體的鏡像端點所使用的連接埠號碼。  
   
      資料庫鏡像端點可以使用電腦系統上任何可用的通訊埠。 每個通訊埠編號必須只與一個端點產生關聯，而且每個端點會與單一伺服器執行個體產生關聯，因此相同伺服器上的不同伺服器執行個體會在具有不同通訊埠的不同端點上接聽。 因此，當您指定可用性複本時，在端點 URL 中指定的通訊埠，會永遠把內送訊息導向到端點與該通訊埠產生關聯的伺服器執行個體。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "75251279"
   
  **IPCONFIG /ALL**  
   
- 若要形成完整的網域名稱，請串連 <主機名稱>  和 <主要 DNS 尾碼>  的值，如下所示：  
+ 若要形成完整的網域名稱，請串連 <主機名稱> 和 <主要 DNS 尾碼> 的值，如下所示：  
   
  _<主機名稱>_ **.** _<主要 DNS 尾碼>_  
   

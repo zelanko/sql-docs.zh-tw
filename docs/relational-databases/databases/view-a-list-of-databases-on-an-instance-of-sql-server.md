@@ -1,6 +1,6 @@
 ---
 title: 檢視 SQL Server 上的資料庫清單
-ms.custom: seo-lt-2019
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL，檢視 SQL Server 之執行個體上的資料庫清單。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -20,15 +20,16 @@ ms.assetid: 7ee7a789-db36-4be9-8a0e-0362a1e152dd
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f6333815c8d741c69bd4d0ea651f6b31489881f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 5c22331de5c4848c28125d8c46d8eced7acc8cab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056438"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758994"
 ---
-# <a name="view-list-of-databases-on-sql-server"></a>檢視 SQL Server 上的資料庫清單
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="view-list-of-databases-on-sql-server"></a>檢視 SQL Server 上的資料庫清單     
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   此主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來檢視 [!INCLUDE[tsql](../../includes/tsql-md.md)]執行個體上的資料庫清單。  
   
  **本主題內容**  
@@ -39,7 +40,7 @@ ms.locfileid: "74056438"
   
 -   **使用下列方法檢視 SQL Server 執行個體上的資料庫清單：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   

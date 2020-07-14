@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 3969c7e9-ca10-4c67-971b-25d2dfccf650
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: abc81687b3d75575d1bf8c7727ae3415fc7b3c91
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 3cd5a1b5404728dde5f72928111391e13842fe35
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634038"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735345"
 ---
 # <a name="revoke-type-permissions-transact-sql"></a>REVOKE 類型權限 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   撤銷類型的權限。  
   
@@ -58,7 +58,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  ON TYPE **::** [ *schema_name* ] **.** *type_name*  
  指定要撤銷其權限的類型。 範圍限定詞 ( **::** ) 是必要項。 若未指定 *schema_name*，則會使用預設結構描述。 如果指定 *schema_name*，則結構描述範圍限定詞 ( **.** ) 為必要項目。  
   
- { FROM | TO } \<database_principal> 指定要對其撤銷權限的主體。  
+ { FROM | TO } \<database_principal> 指定要撤銷其權限的主體。  
   
  GRANT OPTION  
  指出會撤銷對其他主體授與指定權限的權限。 不會撤銷權限本身。  
@@ -72,7 +72,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!CAUTION]  
 >  獲得授與 WITH GRANT OPTION 之權限的串聯撤銷，會同時撤銷該權限的 GRANT 和 DENY。  
   
- AS \<database_principal> 指定主體，執行這項查詢的主體就是從這個主體衍生權限來撤銷權限。  
+ AS \<database_principal> 指定主體，執行此查詢的主體會從這個主體衍生其權限來撤銷權限。  
   
  *Database_user*  
  指定資料庫使用者。  

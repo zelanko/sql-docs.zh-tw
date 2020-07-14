@@ -5,21 +5,21 @@ description: 此快速入門說明如何在 Red Hat Enterprise Linux (RHEL) 上�
 author: VanMSFT
 ms.custom: seo-lt-2019
 ms.author: vanto
-ms.date: 04/10/2020
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 55bdeab8f54b8aca9aea83cc0e4b1cb2c780da56
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 136f2ec1b7bc795db2b95561f4fad31f8dfff42f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760644"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901572"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>快速入門：在 Red Hat 上安裝 SQL Server 並建立資料庫
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -37,9 +37,21 @@ ms.locfileid: "82760644"
 > [!TIP]
 > 本教學課程需要使用者輸入和網際網路連線。 如果您對[自動](sql-server-linux-setup.md#unattended)或[離線](sql-server-linux-setup.md#offline)安裝程序感興趣，請參閱 [ Linux 上的 SQL Server 安裝指引](sql-server-linux-setup.md)。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
-RHEL 7.3、7.4、7.5、7.6 或 8 機器必須**至少有 2 GB** 的記憶體。
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+RHEL 7.3 - 7.8，或 8.0 - 8.2 機器必須**至少有 2 GB** 的記憶體。
+
+::: moniker-end
+
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
+RHEL 7.3、7.4、7.5、7.6 或 8.0 機器必須**至少有 2 GB** 的記憶體。
+
+::: moniker-end
 
 若您要在自己的機器上安裝 Red Hat Enterprise Linux，請前往 [https://access.redhat.com/products/red-hat-enterprise-linux/evaluation](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)。 您也可以在 Azure 中建立 RHEL 虛擬機器。 請參閱[使用 Azure CLI 建立和管理 Linux VM](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)，並於呼叫 `az vm create`時使用 `--image RHEL`。
 

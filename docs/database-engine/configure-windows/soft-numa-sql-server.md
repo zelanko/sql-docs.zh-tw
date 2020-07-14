@@ -1,5 +1,6 @@
 ---
 title: 軟體 NUMA (SQL Server) | Microsoft Docs
+description: 了解 SQL Server 2014 SP2 和更新版本中的軟體式 NUMA。 查看如何使用自動軟體式 NUMA，以及如何手動將 SQL Server 設定為使用軟體式 NUMA。
 ms.custom: ''
 ms.date: 02/13/2018
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ee31095ad1650ce17af6ddaa19237cd3ae73486d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e65fb9a246013c756e5c2642836e57efcb1dd58
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288092"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789756"
 ---
 # <a name="soft-numa-sql-server"></a>軟體 NUMA (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 現代處理器的每個插槽有多個核心。 每個插槽通常代表單一 NUMA 節點。 SQL Server 資料庫引擎資料分割將每個 NUMA 節點分為內部結構和資料分割服務執行緒。  只要有了在每個插槽都含有 10 個或更多核心的處理器，使用軟體 NUMA 分割硬體 NUMA 節點通常會增加延展性和效能。 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 之前，軟體 NUMA 會要求您編輯登錄來新增節點設定親和性遮罩，並且是在主機層級進行設定，而不是根據執行個體。 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，當 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 服務啟動時，會自動在資料庫執行個體層級設定軟體 NUMA。  
   

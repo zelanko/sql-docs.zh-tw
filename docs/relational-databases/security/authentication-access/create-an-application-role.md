@@ -1,5 +1,6 @@
 ---
 title: 建立應用程式角色 | Microsoft Docs
+description: 使用 SQL Server Management Studio 或 Transact-SQL，在 SQL Server 中建立應用程式角色，以限制對資料庫的存取，但不包括透過應用程式。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 09f90bcf10db6d5a1406aa7a68f90b4704270d95
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0f76734e5c640e7044c9b6ddc2eed5d62ce50e4c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903154"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85628118"
 ---
 # <a name="create-an-application-role"></a>建立應用程式角色
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中建立應用程式角色。 應用程式角色限制使用者必須經由特定應用程式存取資料庫。 應用程式角色沒有使用者，所以選取 **[應用程式角色]** 時，不會顯示 **[角色成員]** 。  
   
 > [!IMPORTANT]  
@@ -37,7 +38,7 @@ ms.locfileid: "72903154"
   
 -   **若要使用下列項目建立應用程式角色：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -58,11 +59,11 @@ ms.locfileid: "72903154"
   
 3.  展開 **[角色]** 資料夾。  
   
-4.  以滑鼠右鍵按一下 [應用程式角色]  資料夾，然後選取 [新增應用程式角色]  。  
+4.  以滑鼠右鍵按一下 [應用程式角色] 資料夾，然後選取 [新增應用程式角色]。  
   
-5.  在 [應用程式角色 - 新增]  對話方塊，於 [一般]  頁面上的 [角色名稱]  方塊中輸入新應用程式角色的名稱。  
+5.  在 [應用程式角色 - 新增] 對話方塊，於 [一般] 頁面上的 [角色名稱] 方塊中輸入新應用程式角色的名稱。  
   
-6.  在 **[預設結構描述]** 方塊中，透過輸入物件名稱，指定擁有此角色建立的物件之結構描述。 或者，按一下省略符號 **(...)** ，開啟 [尋找結構描述]  對話方塊。  
+6.  在 **[預設結構描述]** 方塊中，透過輸入物件名稱，指定擁有此角色建立的物件之結構描述。 或者，按一下省略符號 **(...)** ，開啟 [尋找結構描述] 對話方塊。  
   
 7.  在 **[密碼]** 方塊中，輸入新角色的密碼。 在 [確認密碼]  方塊中再次輸入密碼。  
   
@@ -71,7 +72,7 @@ ms.locfileid: "72903154"
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
 ### <a name="additional-options"></a>其他選項  
- [應用程式角色 - 新增]  對話方塊也在其他兩個頁面上提供選項：[安全性實體]  和 [擴充屬性]  。  
+ [應用程式角色 - 新增] 對話方塊也在其他兩個頁面上提供選項：[安全性實體] 和 [擴充屬性]。  
   
 -   **[安全性實體]** 頁面列出所有可能的安全性實體以及可授與登入的安全性實體權限。  
   

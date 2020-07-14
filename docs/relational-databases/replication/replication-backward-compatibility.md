@@ -1,5 +1,6 @@
 ---
 title: 複寫回溯相容性 | Microsoft Docs
+description: 在您升級之前，或是在複寫拓撲中具有數個版本的 SQL Server 時，請針對複寫中的回溯相容性檢閱這些資源。
 ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: sql
@@ -19,15 +20,15 @@ ms.assetid: 091c51dc-8b32-4b4f-847e-b317456c8394
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 265f7fa72b6cdcd59ff7c74ec456e533471ddd0a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4ef157ef3c8a95bd08cc8dd2d8567dbc6e8ec6ff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287394"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767716"
 ---
 # <a name="replication-backward-compatibility"></a>複寫回溯相容性
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 如果您要升級，或是複寫拓撲中有不只一個 SQL Server 版本，則一定要了解回溯相容性。 
 

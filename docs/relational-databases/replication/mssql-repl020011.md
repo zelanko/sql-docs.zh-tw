@@ -13,15 +13,15 @@ ms.assetid: f72072d7-bbb6-48ad-ac88-afa74aeb4d58
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b0d53d04f8aecde4ddbe23b28316fc0e50d38dd2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 110f7a99f1d502951fe979072cdf9a5bc0730a87
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286706"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85721289"
 ---
 # <a name="mssql_repl020011"></a>MSSQL_REPL020011
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
     
 ## <a name="message-details"></a>訊息詳細資料  
   
@@ -35,7 +35,7 @@ ms.locfileid: "76286706"
 |訊息文字|該處理無法執行 '%1' (在 '%2')。|  
   
 ## <a name="explanation"></a>說明  
- 在許多情況下，異動複寫處理期間都會出現此錯誤，例如當記錄讀取器代理程式執行 **sp_replcmds** (處理序無法在 \<伺服器名稱> 上執行 'sp_replcmds') 或 **sp_repldone** (處理序無法在 \<伺服器名稱> 上執行 'sp_repldone' ) 時。  
+ 在許多情況下，異動複寫處理期間都會出現此錯誤，例如當記錄讀取器代理程式執行 **sp_replcmds** (處理序無法在 \<ServerName> 上執行 'sp_replcmds') 或 **sp_repldone** (處理序無法在 \<ServerName> 上執行 'sp_repldone' ) 時。  
   
 ## <a name="user-action"></a>使用者動作  
  如果在您剛從備份還原的資料庫中發生此錯誤，請務必按照備份與還原文件集中所述的步驟進行操作，包括執行 **sp_replrestart** (如有必要)。 如需詳細資訊，請參閱 [備份與還原快照式和異動複寫的策略](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)。  

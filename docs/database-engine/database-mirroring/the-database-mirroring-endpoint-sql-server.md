@@ -1,5 +1,6 @@
 ---
 title: 資料庫鏡像端點 (SQL Server) | Microsoft Docs
+description: 了解專用的資料庫鏡像端點，這是每部伺服器參與 Always On 可用性群組或資料庫鏡像的必要項目。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,16 +18,16 @@ ms.assetid: 39332dc5-678e-4650-9217-6aa3cdc41635
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f8652f227c43354f54e8ec76f9c174f4551dcb2a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dd3477fb75040443fdfa56969ba9772baaabb0c0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68047996"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896988"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>資料庫鏡像端點 (SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   若要參與 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 或資料庫鏡像，伺服器執行個體就需要有自己專用的 *「資料庫鏡像端點」* (Database Mirroring Endpoint)。 這個端點是特殊目的之端點，專門用來接收其他伺服器執行個體的連接。 在給定的伺服器執行個體上，任何其他伺服器執行個體的每個 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 或資料庫鏡像連接都需要一個資料庫鏡像端點。  
   
@@ -40,7 +41,7 @@ ms.locfileid: "68047996"
   
   
 ##  <a name="server-network-address"></a><a name="ServerNetworkAddress"></a> 伺服器網路位址  
- 伺服器執行個體的網路位址 (其「伺服器網路位址」  或「端點 URL」  ) 包含其端點的通訊埠編號，以及其主機電腦的系統和網域名稱。 通訊埠編號會唯一識別特定伺服器執行個體。  
+ 伺服器執行個體的網路位址 (其「伺服器網路位址」或「端點 URL」) 包含其端點的通訊埠編號，以及其主機電腦的系統和網域名稱。 通訊埠編號會唯一識別特定伺服器執行個體。  
   
  下圖說明如何唯一識別相同伺服器上的兩個伺服器執行個體。 這兩個伺服器執行個體的伺服器網路位址包含相同的系統名稱 `MYSYSTEM`和網域名稱 `Adventure-Works.MyDomain.com`。 若要讓系統將連接傳送到伺服器執行個體，伺服器網路位址會包含與特定伺服器執行個體之鏡像端點相關聯的通訊埠編號。  
   

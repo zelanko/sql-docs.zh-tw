@@ -1,5 +1,6 @@
 ---
 title: 前置處理結構描述以合併包含的結構描述 | Microsoft Docs
+description: 了解如何處理包含 xsd:include 指示詞的 XML 結構描述，將任何所包含的結構描述內容複製並合併成單一結構描述。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 28dbb25bb3952c586b2dfc4e2b05556c41ee7602
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 48afad6a8cb4c5e3dcc65118a73fa7b3079d02f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664916"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757509"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>前置處理結構描述以合併包含的結構描述
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   W3C XSD **include** 元素提供結構描述模組化的支援，在模組化中可以將 XML 結構描述分割成一個以上的實體檔案。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目前不支援這個元素。 伺服器將會拒絕包含此元素的 XML 結構描述。  
   
- 可預先處理作為解決方案且包含 \<xsd:include> 指示詞的 XML 結構描述，以便將任何包含結構描述的內容複製和合併成單一結構描述，以利上傳至伺服器。 下列 C#  程式碼可用以預先處理。 在程式碼開始部份的註解提供如何使用它的資訊。  
+ 作為解決方案，可預先處理包含 \<xsd:include> 指示詞的 XML 結構描述，以便將任何所包含之結構描述的內容複製並合併成單一結構描述，以利上傳至伺服器。 下列 C#  程式碼可用以預先處理。 在程式碼開始部份的註解提供如何使用它的資訊。  
   
 ```  
 // XSD Schema Include Normalizer  

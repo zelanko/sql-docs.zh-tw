@@ -1,5 +1,6 @@
 ---
 title: 使用巢狀 AUTO 模式查詢產生同層級 | Microsoft Docs
+description: 了解如何透過使用巢狀 AUTO 模式查詢做為使用 EXPLICIT 模式的替代方法來產生 XML 同層級。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2e39eb810ec59b6947ff088234cf874cf4cef13b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 3f65bb2dab5e00a52943a58686d6f5d448391903
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665295"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85691319"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>使用巢狀 AUTO 模式查詢產生同層級
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   以下範例示範如何使用巢狀 AUTO 模式查詢產生同層級。 其他產生這類 XML 的唯一方式是使用 EXPLICIT 模式。 但是，這可能會相當繁雜。  
   
 ## <a name="example"></a>範例  

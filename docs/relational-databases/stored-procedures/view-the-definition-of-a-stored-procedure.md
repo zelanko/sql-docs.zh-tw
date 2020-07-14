@@ -15,17 +15,19 @@ ms.assetid: 93318587-a0c5-4788-946f-3b5dc8372ea9
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de250fd158bdd02764e992e0ccbb69e072b4c6ab
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 72ee7154ec834e30522d0eb49486b7de6ccb34ce
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907339"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85997425"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>檢視預存程序的定義
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
     
-##  <a name="you-can-view-the-definition-of-a-stored-procedure-in-ssmanstudiofull-using-object-explorer-menu-options-or-in-the-query-editor-using-tsql-this-topic-describes-how-to-view-the-definition-of-procedure-in-object-explorer-and-by-using-a-system-stored-procedure-system-function-and-object-catalog-view-in-the-query-editor"></a><a name="Top"></a> 您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用 [物件總管] 功能表選項，或在查詢編輯器中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]，檢視預存程序的定義。 本主題描述如何在 [物件總管] 中，以及透過系統預存程序、系統函數和查詢編輯器中的物件目錄檢視，來檢視程序的定義。  
+##  <a name="view-the-definition-of-a-stored-procedure"></a><a name="Top"></a> 檢視預存程序的定義 
+
+本主題描述如何在 [物件總管] 中，以及透過系統預存程序、系統函數和查詢編輯器中的物件目錄檢視，來檢視程序的定義。  
   
 -   **開始之前：** [安全性](#Security)  
   
@@ -48,7 +50,7 @@ ms.locfileid: "72907339"
 ##  <a name="how-to-view-the-definition-of-a-stored-procedure"></a><a name="Procedures"></a> 如何檢視預存程序的定義  
  您可以使用下列其中一項：  
   
--   [Transact-SQL](#SSMSProcedure)  
+-   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
@@ -59,9 +61,9 @@ ms.locfileid: "72907339"
   
 2.  依序展開 **[資料庫]** 、程序所屬的資料庫，以及 **[可程式性]** 。  
   
-3.  展開 [預存程序]  ，以滑鼠右鍵按一下程序，然後按一下 [產生預存程序的指令碼為]  ，然後按一下下列其中一個項目：[建立為]  、[變更為]  或 [DROP 並 CREATE 至]  。  
+3.  展開 [預存程序]，以滑鼠右鍵按一下程序，然後按一下 [產生預存程序的指令碼為]，然後按一下下列其中一個項目：[建立為]、[變更為] 或 [DROP 並 CREATE 至]。  
   
-4.  選取 [新增查詢編輯器視窗]  。 這會顯示程序定義。  
+4.  選取 [新增查詢編輯器視窗]。 這會顯示程序定義。  
 
 ###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **在查詢編輯器中檢視程序的定義**  

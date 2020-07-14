@@ -28,15 +28,15 @@ ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 1bda4ebd946bfd8adf31190c36125075d50dc28d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e36315d58721fc6c50393b0bff10c7e8a2e3dee0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68073166"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757204"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 壓縮指定之資料庫中的資料和記錄檔大小。
   
@@ -44,7 +44,7 @@ ms.locfileid: "68073166"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 DBCC SHRINKDATABASE   
 ( database_name | database_id | 0   
      [ , target_percent ]   
@@ -120,7 +120,7 @@ DBCC SHRINKDATABASE 會以個別檔案為基礎來壓縮資料檔案，但會依
   
 假設 **mydb** 的資料檔案包含 7 MB 的資料。 將 _target\_percent_ 指定為 30，可以將這個資料檔案壓縮到可用百分比 30。 不過，將 _target\_percent_ 指定為 40 並不會壓縮資料檔案，因為 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不會將檔案壓縮成小於資料目前所佔用的大小。 
 
-您也可以用另一個方式來考慮這個問題：40% 需要的可用空間 + 70% 完整資料檔案 (10 MB 中的 7 MB) 會超出 100%。 大於 30 的任何 _target\_size_ 都不會壓縮資料檔案。 它不會壓縮，因為您想要的可用百分比加上目前資料檔案所佔百分比已超過 100%。
+您也可以用另一種方法思考此問題：40% 需要的可用空間 + 70% 完整資料檔案 (10 MB 中的 7 MB) 會超出 100%。 大於 30 的任何 _target\_size_ 都不會壓縮資料檔案。 它不會壓縮，因為您想要的可用百分比加上目前資料檔案所佔百分比已超過 100%。
   
 針對記錄檔，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會使用 _target\_percent_ 來計算整份記錄的目標大小。 這就是為什麼 _target\_percent_ 是壓縮作業之後的記錄檔可用空間量。 之後，便會將整份記錄的目標大小轉換成每個記錄檔的目標大小。
   
@@ -130,7 +130,7 @@ DBCC SHRINKDATABASE 會試圖將每個實體記錄檔立即壓縮成目標大小
   
 ## <a name="best-practices"></a>最佳做法  
 當您計畫壓縮資料庫時，請考量下列資訊：
--   壓縮作業在作業之後最有效。 這個作業會建立未使用的空間，例如截斷資料表或卸除資料表作業。  
+-   壓縮作業在進行會產生未用空間的作業 (例如截斷資料表或卸除資料表作業) 之後最有效。
 -   大部分資料庫都需要一些可用空間來執行每天的例行作業。 您可以反覆壓縮資料庫，且注意到資料庫大小再次成長。 這種成長表示例行作業需要壓縮空間。 在這些情況之下，反覆壓縮資料庫是一項會造成浪費的作業。  
 -   壓縮作業不會保留資料庫中索引的片段狀態，它通常會使片段增加到某個程度。 這個結果就是不要反覆壓縮資料庫的另一個原因。  
 -   除非您有特定的需求，否則請不要將 AUTO_SHRINK 資料庫選項設定為 ON。  

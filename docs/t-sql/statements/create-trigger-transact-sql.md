@@ -28,15 +28,15 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 ms.reviewer: mathoma
-ms.openlocfilehash: b272bed73c4b51070fd1b5c9840f39db210501ab
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 70a32b0f5c3a80d4d3c5af0cad7adcd1e15f5088
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635545"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766947"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
 建立 DML、DDL 或登入觸發程序。 觸發程序是一種特殊的預存程序，其會在資料庫伺服器發生事件時自動執行。 當使用者試圖透過資料操作語言 (DML) 事件來修改資料時，便會執行 DML 觸發程序。 DML 事件包括資料表或檢視的 INSERT、UPDATE 或 DELETE 陳述式。 無論資料表的資料列有無受到影響，這些觸發程序皆會在引發任何有效事件時引發。 如需詳細資訊，請參閱 [DML Triggers](../../relational-databases/triggers/dml-triggers.md)。  
@@ -211,7 +211,7 @@ FOR 或 AFTER 指定只在觸發 SQL 陳述式指定的所有作業都成功啟�
 您不能在檢視表上定義 AFTER 觸發程序。  
   
 INSTEAD OF  
-指定要啟動 DML 觸發程序，而「不是」  觸發 SQL 陳述式，因此會覆寫觸發陳述式的動作。 您不能針對 DDL 或登入觸發程序指定 INSTEAD OF。  
+指定要啟動 DML 觸發程序，而「不是」觸發 SQL 陳述式，因此會覆寫觸發陳述式的動作。 您不能針對 DDL 或登入觸發程序指定 INSTEAD OF。  
   
 您最多只能在資料表或檢視表上的每個 INSERT、UPDATE 或 DELETE 陳述式，各定義一個 INSTEAD OF 觸發程序。 不過，您可以定義檢視表中的檢視表，讓每份檢視表都有它自己的 INSTEAD OF 觸發程序。  
   
@@ -264,7 +264,8 @@ DDL 和登入觸發程序會使用 [EVENTDATA &#40;Transact-SQL&#41;](../../t-sq
   
 針對經記憶體最佳化資料表上的觸發程序，唯一允許的最上層 *sql_statement* 是 ATOMIC 區塊。 ATOMIC 區塊內允許使用哪些 T-SQL 則受限於原生程序內允許使用的 T-SQL 而定。  
   
-\< method_specifier > **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
+\< method_specifier > 
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
 對於 CLR 觸發程序，指定繫結觸發程序的組件方法。 此方法不可使用任何引數，且必須傳回空值。 *class_name* 必須是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼，且必須以類別的形式存在於可以顯示的組件中。 如果該類別的名稱符合命名空間規定，利用 '.' 來分隔命名空間的各個部分，您就必須用 [ ] 或 " " 分隔字元來分隔類別名稱。 這個類別不能是巢狀類別。  
   
@@ -352,7 +353,7 @@ RETURN;
 DDL 觸發程序不像 DML 觸發程序，並不以結構描述為範圍。 因此，您不能使用 OBJECT_ID、OBJECT_NAME、OBJECTPROPERTY 和 OBJECTPROPERTYEX 等函式來查詢 DDL 觸發程序的相關中繼資料。 請改用目錄檢視。 如需詳細資訊，請參閱[取得 DDL 觸發程序的詳細資訊](../../relational-databases/triggers/get-information-about-ddl-triggers.md)。  
   
 > [!NOTE]  
->  伺服器範圍的 DDL 觸發程序會出現在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 物件總管的 [觸發程序]  資料夾中。 這個資料夾在 **[伺服器物件]** 資料夾之下。 資料庫範圍的 DDL 觸發程序則會出現在 [資料庫觸發程序]  資料夾中。 這個資料夾在對應資料庫的 **[可程式性]** 資料夾之下。  
+>  伺服器範圍的 DDL 觸發程序會出現在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 物件總管的 [觸發程序] 資料夾中。 這個資料夾在 **[伺服器物件]** 資料夾之下。 資料庫範圍的 DDL 觸發程序則會出現在 [資料庫觸發程序] 資料夾中。 這個資料夾在對應資料庫的 **[可程式性]** 資料夾之下。  
   
 ## <a name="logon-triggers"></a>登入觸發程序  
 登入觸發程序會執行預存程序來回應 LOGON 事件。 當使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體建立使用者工作階段時，就會引發這個事件。 登入觸發程序會在登入驗證階段結束之後、使用者工作階段建立之前引發。 因此，從觸發程序內產生且通常會傳遞給使用者的所有訊息 (例如錯誤訊息和來自 PRINT 陳述式的訊息)，都會轉向至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔。 如需詳細資訊，請參閱[登入觸發程序](../../relational-databases/triggers/logon-triggers.md)。  
@@ -401,7 +402,7 @@ SQL Server 的未來版本將移除從觸發程序傳回結果的功能。 如�
   
 若要停用巢狀觸發程序，請將 sp_configure 的 nested triggers 選項設成 0 (關閉)。 預設設定可支援巢狀觸發程序。 如果關閉巢狀觸發程序，遞迴觸發程序也會停用，不論使用 ALTER DATABASE 設定的 RECURSIVE_TRIGGERS 設定為何，都是如此。  
   
-即使 [巢狀觸發程序]  伺服器設定選項為 0，仍會引發 INSTEAD OF 觸發程序內部的第一個巢狀 AFTER 觸發程序。 不過，在此設定下，不會引發後續的 AFTER 觸發程序。 檢閱應用程式的巢狀觸發程序，以判斷當 [巢狀觸發程序]  伺服器設定選項設為 0 時，應用程式是否會遵循您的商務規則。 若否，請進行適當的修改。  
+即使 [巢狀觸發程序] 伺服器設定選項為 0，仍會引發 INSTEAD OF 觸發程序內部的第一個巢狀 AFTER 觸發程序。 不過，在此設定下，不會引發後續的 AFTER 觸發程序。 檢閱應用程式的巢狀觸發程序，以判斷當 [巢狀觸發程序] 伺服器設定選項設為 0 時，應用程式是否會遵循您的商務規則。 若否，請進行適當的修改。  
   
 ### <a name="deferred-name-resolution"></a>延遲名稱解析  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允許 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序、觸發程序和批次參考在編譯時期並不存在的資料表。 這項功能稱為延遲名稱解析。  

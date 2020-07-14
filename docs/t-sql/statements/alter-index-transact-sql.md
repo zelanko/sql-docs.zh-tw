@@ -46,15 +46,15 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82fb30a374ea9ac4cdabf0ab5f7b4d8eefb8f4c4
-ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
+ms.openlocfilehash: e8c9b9fb9b58cee42c11e821e940966f2acce498
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82588228"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000709"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   藉由停用、重建或重新組織索引或設定索引選項，修改現有的資料表或檢視表索引 (資料列存放區、資料行存放區或 XML)。  
   
@@ -399,7 +399,7 @@ STATISTICS_INCREMENTAL = { ON | **OFF** }
 -   在內部資料表上建立的統計資料  
 -   使用空間索引或 XML 索引建立的統計資料  
   
- ONLINE **=** { ON | **OFF** } \<在套用至 rebuild_index_option 時>  
+ ONLINE **=** { ON | **OFF** } \<as applies to rebuild_index_option>  
  指定在索引作業期間，查詢和資料修改是否能夠使用基礎資料表和相關聯的索引。 預設值為 OFF。  
   
  如果是 XML 索引或空間索引，則只支援 `ONLINE = OFF`，而如果將 ONLINE 設定為 ON，將會引發錯誤。  
@@ -547,7 +547,7 @@ COMPRESSION_DELAY **=** { **0** |*持續時間 [分鐘]* }
   
  指定套用 DATA_COMPRESSION 設定的分割區。 如果未分割此索引，ON PARTITIONS 引數將會產生錯誤。 如果未提供 ON PARTITIONS 子句，DATA_COMPRESSION 選項會套用到分割區索引的所有分割區。  
   
- 可以使用以下方式來指定 \<partition_number_expression>：  
+ 可以使用下列方式來指定 \<partition_number_expression>：  
   
 -   提供分割區的編號，例如：`ON PARTITIONS (2)`。  
 -   為數個個別分割區提供以逗號分隔的分割區編號，例如：`ON PARTITIONS (1, 5)`。  
@@ -566,7 +566,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 );  
 ```  
   
- ONLINE **=** { ON  | **OFF** } \<在套用至 single_partition_rebuild_index_option 時>  
+ ONLINE **=** { ON  | **OFF** } \<as applies to single_partition_rebuild_index_option>  
  指定基礎資料表的索引或索引分割區可以在線上重建或離線重建。 如果 **REBUILD** 是在線上執行 (**ON**)，這個資料表中的資料可以在索引作業期間用於查詢和資料修改。  預設值為 **OFF**。  
   
  開啟  

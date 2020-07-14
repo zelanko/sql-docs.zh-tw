@@ -1,5 +1,6 @@
 ---
 title: 某些可用性複本沒有狀況良好的角色 | Microsoft Docs
+description: 可用性複本角色狀態會檢查是否有任何可用性複本不是狀況良好的角色。
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7ec5b337-7201-4a66-a541-7560f8b18784
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ce157b3d188f7841df4f7dc626928029219c3088
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2c5d7047940aea0368e5fc3fe8058bab0714ffa8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68014070"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883114"
 ---
 # <a name="some-availability-replicas-do-not-have-a-healthy-role"></a>某些可用性複本沒有狀況良好的角色
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="introduction"></a>簡介  
   

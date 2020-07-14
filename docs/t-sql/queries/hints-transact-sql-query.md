@@ -55,15 +55,15 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: 260de27d8a092ceabbf066d1546f471b90aa2c33
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4718bcb629f1aabbc458ac505eab3ae92bab52cd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746382"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731296"
 ---
 # <a name="hints-transact-sql---query"></a>提示 (Transact-SQL) - 查詢
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 查詢提示會指定所指出的提示應該用於整個查詢。 查詢提示會影響陳述式中的所有運算子。 如果主要查詢涉及 UNION，只有最後一個包含 UNION 作業的查詢可以有 OPTION 子句。 查詢提示是在 [OPTION 子句](../../t-sql/queries/option-clause-transact-sql.md)中指定。 如果一或多個查詢提示造成查詢最佳化工具不會產生有效的計劃，就會產生 8622 錯誤。  
   
@@ -238,7 +238,7 @@ _literal\_constant_
 OPTIMIZE FOR 可以抵制最佳化工具的預設參數偵測行為。 當您建立計畫指南時，也請使用 OPTIMIZE FOR。 如需詳細資訊，請參閱[重新編譯預存程序](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md)。  
   
 OPTIMIZE FOR UNKNOWN  
-指示查詢最佳化工具在編譯及最佳化查詢時，將統計資料 (而非初始值) 用於所有的區域變數。 這項最佳化會包含以強制參數化所建立的參數。  
+指示查詢最佳化工具在所有資料行值上使用述詞的平均選擇性，而非在查詢已編譯並最佳化後使用執行階段參數值。  
   
 如果您使用 OPTIMIZE FOR @variable_name = _literal\_constant_，且在相同的查詢提示中使用 OPTIMIZE FOR UNKNOWN，則查詢最佳化工具會將指定的 _literal\_constant_ 用於特定值。 查詢最佳化工具會將 UNKNOWN 用於其餘的變數值。 只有在查詢最佳化期間才使用這些值，查詢執行期間則不使用這些值。  
 
@@ -349,7 +349,7 @@ ROBUST PLAN
 <a name="use-plan"></a> USE PLAN N'_xml\_plan_'  
  強制查詢最佳化工具針對 **'** _xml\_plan_ **'** 所指定的查詢使用現有查詢計劃。 USE PLAN 無法搭配 INSERT、UPDATE、MERGE 或 DELETE 陳述式一起使用。  
   
-TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_ ] ] **)** 將資料表提示套用至與 _exposed\_object\_name_相對應的資料表或檢視表。 我們建議您只在 [計劃指南](../../relational-databases/performance/plan-guides.md)的內容中，才將資料表提示當做查詢提示使用。  
+TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_ ] ] **)** 將指定的資料表提示套用至與 _exposed\_object\_name_ 相對應的資料表或檢視。 我們建議您只在 [計劃指南](../../relational-databases/performance/plan-guides.md)的內容中，才將資料表提示當做查詢提示使用。  
   
  _exposed\_object\_name_ 可以是下列其中一個參考：  
   
@@ -359,7 +359,7 @@ TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_
   
  當您指定 _exposed\_object\_name_ 但未同時指定資料表提示時，您在查詢中針對物件指定為資料表提示一部分的任何索引都會被忽略。 然後，查詢最佳化工具會決定索引使用方式。 當您無法修改原始的查詢時，就可以使用這項技巧來排除 INDEX 資料表提示的影響。 請參閱＜範例 J＞。  
   
-**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( _index\_value_ [ ,..._n_ ] ) | INDEX = ( _index\_value_ ) | FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } 是要作為查詢提示，套用到與 *exposed_object_name* 對應資料表或檢視的資料表提示。 如需這些提示的說明，請參閱[資料表提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)。  
+**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( _index\_value_ [ ,..._n_ ] ) | INDEX = ( _index\_value_ ) | FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } 是要套用到對應至 *exposed_object_name* 以做為查詢提示之資料表或檢視的資料表提示。 如需這些提示的說明，請參閱[資料表提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)。  
   
  除非查詢已有指定資料表提示的 WITH 子句，否則不可使用 INDEX、FORCESCAN 和 FORCESEEK 以外的資料表提示做為查詢提示。 如需詳細資訊，請參閱＜備註＞。  
   
@@ -404,17 +404,17 @@ GO
 ```  
   
 ### <a name="b-using-optimize-for"></a>B. 使用 OPTIMIZE FOR  
- 下列範例指示查詢最佳化工具在最佳化查詢時，將 `'Seattle'` 值用於區域變數 `@city_name` 並使用統計資料來判斷區域變數 `@postal_code` 的值。 此範例會使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫。  
+ 下列範例會指示查詢最佳化工具使用 `'Seattle'` 值做為 `@city_name`，然後於最佳化查詢時在適用於 `@postal_code` 的所有資料行值上使用述詞的平均選擇性。 此範例會使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫。  
   
 ```sql  
-DECLARE @city_name nvarchar(30);  
-DECLARE @postal_code nvarchar(15);  
-SET @city_name = 'Ascheim';  
-SET @postal_code = 86171;  
+CREATE PROCEDURE dbo.RetrievePersonAddress
+@city_name nvarchar(30),  
+ @postal_code nvarchar(15)
+AS
 SELECT * FROM Person.Address  
 WHERE City = @city_name AND PostalCode = @postal_code  
 OPTION ( OPTIMIZE FOR (@city_name = 'Seattle', @postal_code UNKNOWN) );  
-GO  
+GO
 ```  
   
 ### <a name="c-using-maxrecursion"></a>C. 使用 MAXRECURSION  

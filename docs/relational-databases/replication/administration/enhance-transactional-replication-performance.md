@@ -1,5 +1,6 @@
 ---
 title: 增強異動複寫效能 | Microsoft Docs
+description: 除了強化 SQL Server 中複寫效能的一般效能提示之外，了解異動複寫的其他技術。
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -22,12 +23,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8ed18a3ea7ce4804146d448765d9f18e8b2a7f73
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e386c475975e94408ed4260f35bb0646c6878575
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288175"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807990"
 ---
 # <a name="enhance-transactional-replication-performance"></a>增強異動複寫效能
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -68,7 +69,7 @@ ms.locfileid: "76288175"
   
      將代理程式設定為連續執行來代替建立頻繁的排程 (例如每分鐘) 可提升複寫效能，因為代理程式不必啟動和停止。 當您將「散發代理程式」設定為連續執行時，變更將以低度延遲傳播到拓撲中連接的其他伺服器。 如需詳細資訊，請參閱  
   
-    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：[指定同步處理排程](../../../relational-databases/replication/specify-synchronization-schedules.md)  
+    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]:[指定同步處理排程](../../../relational-databases/replication/specify-synchronization-schedules.md)  
   
 ## <a name="distribution-agent-and-log-reader-agent-parameters"></a>散發代理程式和記錄讀取器代理程式參數  
 代理程式設定檔參數會經常調整，目的是要讓「記錄讀取器」和「散發代理程式」的輸送量與高流量 OLTP 系統一同增加。 
@@ -76,9 +77,9 @@ ms.locfileid: "76288175"
 進行測試的目的是要決定最合適的值，以提高「記錄讀取器」和「散發代理程式」的效能。 此測試的結論是：工作負載已成為值在何種情況下才有效的決定性因素了，因此，不可能只調整單一值就改善每種情況下的效能。 
 
 結果： 
-- 若「記錄讀取器代理程式」  具有較小型交易的工作負載 (少於 500 個命令) 時，**ReadBatchSize** 較高的值可能會對輸送量產生有利的影響。 不過，針對具有大型交易的工作負載，變更這值不會改善效能。 
+- 若「記錄讀取器代理程式」具有較小型交易的工作負載 (少於 500 個命令) 時，**ReadBatchSize** 較高的值可能會對輸送量產生有利的影響。 不過，針對具有大型交易的工作負載，變更這值不會改善效能。 
     - 當同一個伺服器上有多個「記錄讀取器代理程式」和多個「散發代理程式」平行執行時，**ReadBatchSize** 較大的值會導致散發資料庫出現爭用的狀況。 
-- 針對「散發代理程式」 
+- 針對「散發代理程式」
     - 增加 **CommitBatchSize** 可以改善輸送量。 缺點是，如果發生失敗，「散發代理程式」必須復原並從頭再次套用更大的交易量。 
     - 增加 **SubscriptionStreams** 值有助於提升「散發代理程式」的整體輸送量，因為多個訂閱者連線會平行套用變更批次。 不過，根據處理器數目以及其他中繼資料的條件 (例如主索引鍵、外部索引鍵、唯一限制式和索引)，SubscriptionStreams 較高的值，實際上可能會有不利的影響。 此外，如果資料流無法執行或認可，則「散發代理程式」會退而使用單一資料流來重試失敗的批次。
 
@@ -142,11 +143,11 @@ ms.locfileid: "76288175"
 
 在這段查詢逾時期間，您可能會注意到散發代理程式效能計數器有下列趨勢： 
 
-- **Dist: Delivered Cmds/sec** 效能計數器的值一直是 0。
-- **Dist: Delivered Trans/sec** 效能計數器的值一直是 0。
-- **Dist: Delivery Latency** 效能計數器回報值的增加，直到執行緒死結解決為止。
+- **Dist:Delivered Cmds/sec** 效能計數器的值一律為 0。
+- **Dist:Delivered Trans/sec** 效能計數器的值一律為 0。
+- **Dist:Delivery Latency** 效能計數器會回報值增加的情況，直到執行緒死結解決為止。
 
-SQL Server 線上叢書的＜複寫散發代理程式＞中，包含 *SubscriptionStreams* 參數的以下描述：「如果其中一個連線無法執行或認可，所有連線就都會中止目前的批次，而代理程式會使用單一資料流來重試失敗的批次。」
+《SQL Server 線上叢書》中的＜複寫散發代理程式＞主題包含 *SubscriptionStreams* 參數的下列描述：「如果有無法執行或認可某個連線，則所有連線都將中止目前批次，且代理程式將使用單一資料流重試失敗的批次。」
 
 散發代理程式會使用一個工作階段來重試無法套用的批次。 在散發代理程式成功套用批次之後，散發代理程式會繼續使用多個工作階段，而不會重新啟動。
 

@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6b19fa67007f68373d2d24fb1bfdfe1a6709adfd
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b778cf08b4d017916ea9249eeddeb1cdf6afb422
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81628838"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895667"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>ALTER DATABASE (Transact-SQL) 資料庫鏡像
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 > [!NOTE]
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。
 
-控制資料庫的資料庫鏡像。 資料庫鏡像選項所指定的值會套用至資料庫的這兩個複本，而且會當做一個整體套用在資料庫鏡像工作階段上。 每個 ALTER DATABASE 陳述式都只能有一個 \<database_mirroring_option>。
+控制資料庫的資料庫鏡像。 資料庫鏡像選項所指定的值會套用至資料庫的這兩個複本，而且會當做一個整體套用在資料庫鏡像工作階段上。 每個 ALTER DATABASE 陳述式只允許一個 \<database_mirroring_option> 選項。
 
 > [!NOTE]
 > 我們建議您將資料庫鏡像作業設定在離峰時間執行，因為組態會影響效能。
@@ -72,7 +72,7 @@ SET { <partner_option> | <witness_option> }
 
 *database_name*：這是要修改的資料庫名稱。
 
-PARTNER \<partner_option> 控制定義資料庫鏡像工作階段容錯移轉夥伴及其行為的資料庫屬性。 部分 SET PARTNER 選項可以在任何一個夥伴上設定，但其他選項只適用於主體伺服器或鏡像伺服器。 如需詳細資訊，請參閱下面的個別 PARTNER 選項。 SET PARTNER 子句會影響資料庫的這兩個複本，不論哪個夥伴指定它，都是如此。
+PARTNER \<partner_option> 控制定義資料庫鏡像工作階段的容錯移轉夥伴及其行為的資料庫屬性。 部分 SET PARTNER 選項可以在任何一個夥伴上設定，但其他選項只適用於主體伺服器或鏡像伺服器。 如需詳細資訊，請參閱下面的個別 PARTNER 選項。 SET PARTNER 子句會影響資料庫的這兩個複本，不論哪個夥伴指定它，都是如此。
 
 若要執行 SET PARTNER 陳述式，兩個夥伴的端點狀態 (STATE) 必須都設為 STARTED。 另外，也請注意，每個夥伴伺服器執行個體之資料庫鏡像端點的 ROLE 都必須設成 PARTNER 或 ALL。 如需如何指定端點的資訊，請參閱[建立 Windows 驗證的資料庫鏡像端點](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)。 若要了解伺服器執行個體之資料庫鏡像端點的角色和狀態，請在這個執行個體上，使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：
 
@@ -91,11 +91,11 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 
 *partner_server* 的值是一個伺服器網路位址。 這個值的語法如下：
 
-TCP **://** _\<系統位址>_ **:** _\<通訊埠>_
+TCP **://** _\<system-address>_ **:** _\<port>_
 
 其中
 
-- *\<system-address>* 是明確識別目的地電腦系統的字串，例如系統名稱、完整網域名稱或 IP 位址。
+- *\<system-address>* 這是明確識別目的地電腦系統的字串，例如系統名稱、完整網域名稱或 IP 位址。
 - *\<port>* 是與夥伴伺服器執行個體鏡像端點相關聯的連接埠號碼。
 
 如需詳細資訊，請參閱[指定伺服器網路位址 - 資料庫鏡像](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。
@@ -131,7 +131,7 @@ RESUME 繼續暫止的資料庫鏡像工作階段。 您只能在主體伺服器
 
 SAFETY { FULL | OFF } 設定交易安全層級。 您只能在主體伺服器上指定 SAFETY。
 
-預設值是 FULL。 使用完整安全性時，資料庫鏡像工作階段會同步執行 (在「高安全性模式」  中)。 如果 SAFETY 設定為 OFF，則資料庫鏡像工作階段會非同步執行 (在「高效能模式」  中)。
+預設值是 FULL。 使用完整安全性時，資料庫鏡像工作階段會同步執行 (在「高安全性模式」 中)。 如果 SAFETY 設定為 OFF，則資料庫鏡像工作階段會非同步執行 (在「高效能模式」中)。
 
 高安全性模式行為會依見證而有部分的不同，如下所述：
 

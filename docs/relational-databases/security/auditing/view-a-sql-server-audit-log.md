@@ -1,5 +1,6 @@
 ---
 title: 檢視 SQL Server Audit 記錄 | Microsoft 文件
+description: 了解如何使用 SQL Server Management Studio 在 SQL Server 中檢視 SQL Server 稽核記錄。 檢視需要 CONTROL SERVER 權限。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e8feaca0-7852-422b-895a-319b965d8d9b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9bc987034cde54d5c90392876f223ef5cf428562
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 02ed692b38f37c5818f7e8a24e5abf32ab1a186a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903799"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884927"
 ---
 # <a name="view-a-sql-server-audit-log"></a>檢視 SQL Server Audit 記錄
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 登入 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]，以檢視 SQL Server 稽核記錄。  
   
  **本主題內容**  
@@ -33,7 +34,7 @@ ms.locfileid: "72903799"
   
 -   **若要使用下列項目檢視 SQL Server 稽核記錄：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   

@@ -1,5 +1,6 @@
 ---
 title: ObjectType 追蹤事件資料行 | Microsoft Docs
+description: 涉及 Object Type 追蹤事件資料行的可能值，該資料行用於 SQL Server 中各種不同的追蹤事件。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 76675cf49ba1ac19e18b3bb4b96980aa30c4f6c3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f583813ae44cb180005b0cb9eeb592b3a946508c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115891"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755977"
 ---
 # <a name="objecttype-trace-event-column"></a>ObjectType 追蹤事件資料行
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Object Type 追蹤事件資料行會用於各種追蹤事件。 此主題描述此資料行和其相關聯定義的可能值。  
   
 ## <a name="object-type-column-values"></a>Object Type 資料行值  

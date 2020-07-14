@@ -1,5 +1,6 @@
 ---
 title: Always Encrypted 密碼編譯 | Microsoft Docs
+description: 了解在 SQL Server 和 Azure SQL Database 的 Always Encrypted 功能中，衍生密碼編譯內容的加密演算法和機制。
 ms.custom: ''
 ms.date: 10/30/2019
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b0fe0e861e8139416250ffc2677230dbc2aeab6d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 364dbefa72708910d54977600ecb47942a5d96e1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73594408"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85627556"
 ---
 # <a name="always-encrypted-cryptography"></a>Always Encrypted 密碼編譯
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
   本文件描述加密演算法和機制，以衍生在 [和](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 永遠加密 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]功能中使用的密碼編譯內容。  
   

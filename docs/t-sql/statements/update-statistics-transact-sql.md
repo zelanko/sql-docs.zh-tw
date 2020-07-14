@@ -21,15 +21,15 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b33e22b3d6575e7f83572eeca5692d538b58a16b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5197708ff1e12aae5b2df32bc82b08cd48f1222c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77253323"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009627"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 針對資料表或索引檢視表更新查詢最佳化統計資料。 根據預設，查詢最佳化工具已經會視需要更新統計資料來改善查詢計劃。在某些情況下，您可以使用 `UPDATE STATISTICS` 或 [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) 預存程序，讓統計資料的更新頻率高於預設更新頻率，以改善查詢效能。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "77253323"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 UPDATE STATISTICS table_or_indexed_view_name   
@@ -71,7 +71,7 @@ UPDATE STATISTICS table_or_indexed_view_name
     [ PAGECOUNT = numeric_contant ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 UPDATE STATISTICS [ schema_name . ] table_name   
@@ -133,7 +133,7 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
  
  **適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4 開始) 及更新版本 (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 開始)。  
  
- ON PARTITIONS ( { \<partition_number> | \<range> } [, ...n] ) ] 強制重新計算包含 ON PARTITIONS 子句所指定之資料分割的分葉層級統計資料，然後合併來建置全域統計資料。 由於無法將使用不同取樣率建立的分割區區統計資料合併在一起，因此需要 WITH RESAMPLE。  
+ ON PARTITIONS ( { \<partition_number> | \<range> } [, ...n] ) ] 強制重新計算包含 ON PARTITIONS 子句所指定分割區的分葉層級統計資料，然後合併以建立全域統計資料。 由於無法將使用不同取樣率建立的分割區區統計資料合併在一起，因此需要 WITH RESAMPLE。  
   
 **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更新版本
   
@@ -181,7 +181,7 @@ MAXDOP = *max_degree_of_parallelism*
  0 (預設值)  
  根據目前的系統工作負載，使用實際數目或比實際數目更少的處理器。  
   
- \<更新統計資料串流選項> 
+ \<update_stats_stream_option> 
  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
 
@@ -211,7 +211,7 @@ EXEC sp_updatestats;
 ### <a name="pdw--sql-data-warehouse"></a>PDW / SQL 資料倉儲  
  PDW / SQL 資料倉儲不支援下列語法  
   
-```sql  
+```syntaxsql
 update statistics t1 (a,b);   
 ```  
   

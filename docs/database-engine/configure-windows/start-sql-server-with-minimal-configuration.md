@@ -1,5 +1,6 @@
 ---
 title: 以最低組態啟動 SQL Server | Microsoft Docs
+description: 熟悉 SQL Server 中的最低組態啟動選項。 查看使用時機和方式，並了解其如何限制功能。
 ms.custom: ''
 ms.date: 01/20/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - minimal configuration [SQL Server]
 - starting SQL Server, minimal configuration
 ms.assetid: 4d733c99-28b3-42d8-b7f6-7b943b548173
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 0c919ad9202c99c7b010b6aee9c921e76784eb24
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e6e301cd7dc29cc5e2a2cffc34066369ed67d57a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79027957"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763997"
 ---
 # <a name="start-sql-server-with-minimal-configuration"></a>以最低組態啟動 SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   如果因組態問題而無法啟動伺服器，則可使用最低組態啟動選項來啟動 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 此為啟動選項 **-f**。 以最低組態啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，會自動將伺服器設定為單一使用者模式。  
   

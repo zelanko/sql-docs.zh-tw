@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 946ea5d404db51c5241e5657524cf3dbc1a519a7
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: eb93961b516623f0a22b3baeae4bc29026c3a994
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152162"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091779"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools"></a>SQL Server Integration Services (SSIS) DevOps 工具
 
@@ -314,7 +314,7 @@ SSIS 目錄組態的內嵌 JSON。 只有當選取 [內嵌] 作為組態檔來�
 |屬性  |描述  |注意  |
 |---------|---------|---------|
 |NAME|參數的名稱。|參數可以是「專案參數」或「套件參數」。 <br> 如果父資料表中不存在參數，則會略過參數。|
-|容器|參數的容器。|<li>如果參數是專案參數，則 *container* 應該是專案名稱。 <li>如果是套件參數，則 *container* 應該是副檔名為 **.dtsx** 的套件名稱。 <li> 如果參數是連線管理員屬性，則名稱的格式應該如下：**CM.\<連線管理員名稱>.\<屬性名稱>** 。|
+|容器|參數的容器。|<li>如果參數是專案參數，則 *container* 應該是專案名稱。 <li>如果是套件參數，則 *container* 應該是副檔名為 **.dtsx** 的套件名稱。 <li> 如果參數是連線管理員屬性，則名稱的格式應該如下：**CM.\<Connection Manager Name>.\<Property Name>** 。|
 |value|參數的值。|<li>當 *valueType* 是 *referenced* 時：此值是 *string* 類型的環境變數參考。 <li> 當 *valueType* 是 *literal* 時：此屬性支援任何有效的 *boolean*、*number* 和 *string* JSON 值。 <br> 系統會將此值轉換成目標參數類型。 如果無法轉換，則會發生錯誤。<li> *null* 值無效。 該工作將略過此參數物件，並發出警告。|
 |valueType|參數值類型。|有效類型包括： <br> *literal*：*value* 屬性代表常值。 <br> *referenced*：*value* 屬性代表環境變數參考。|
 
@@ -344,6 +344,12 @@ SSIS 目錄組態的內嵌 JSON。 只有當選取 [內嵌] 作為組態檔來�
 |sensitive|環境變數的值是否具敏感性。|有效輸入包括： <br> *true* <br> *false*|
 
 ## <a name="release-notes"></a>版本資訊
+
+### <a name="version-102"></a>1\.0.2 版
+
+發行日期：2020 年 5 月 26 日
+
+- 已修正在設定工作完成後，SSIS 目錄設定工作可能會失敗的問題。
 
 ### <a name="version-101"></a>1\.0.1 版
 

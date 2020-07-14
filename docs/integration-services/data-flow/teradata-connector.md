@@ -9,14 +9,15 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ca25b7425ce74cea820e295a6a99bc3a3c1e2817
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 521cc4edfb5033b545822b6ac145549fa802e707
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75755850"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001149"
 ---
-# <a name="microsoft-connector-for-teradata-preview"></a>Microsoft Connector for Teradata (預覽)
+# <a name="microsoft-connector-for-teradata"></a>Microsoft Connector for Teradata
+
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 Microsoft Connector for Teradata 能讓您以 SSIS 套件將資料從 Teradata 資料庫匯出，並將資料載入到其中。
@@ -28,7 +29,8 @@ Microsoft Connector for Teradata 能讓您以 SSIS 套件將資料從 Teradata �
 Microsoft Connector for Teradata 支援下列 Microsoft SQL Server 產品：
 
 - Microsoft SQL Server 2019
-- Microsoft SQL Server Data Tools (SSDT)
+- 適用於 Visual Studio 2017 的 Microsoft SQL Server Data Tools (SSDT) 15.8.1 或更新版本
+- 適用於 Visual Studio 2019 的 Microsoft SQL Server Data Tools (SSDT)
 
 Microsoft Connector for Teradata 會使用 Teradata Parallel Transporter 應用程式設計語言介面，從 Teradata 資料庫載入及匯出資料。 下面是支援的版本：
 
@@ -46,8 +48,6 @@ Microsoft Connector for Teradata 會使用 Teradata Parallel Transporter 應用�
 
 ## <a name="installation"></a>安裝
 
-### <a name="prerequisite"></a>必要條件
-
 在 32 位元電腦上，從 [Teradata 工具和公用程式 - Windows 安裝套件](https://downloads.teradata.com/download/tools/teradata-tools-and-utilities-windows-installation-package)安裝下列驅動程式：
 
 - Teradata ODBC 驅動程式 (32 位元)
@@ -62,12 +62,38 @@ Microsoft Connector for Teradata 會使用 Teradata Parallel Transporter 應用�
 
 安裝連接器之後，您必須重新啟動 SQL Server Integration Service，以確保 Teradata 來源和目的地能正常運作。
 
-若要執行以 SQL Server 2017 和以下版本為目標的 SSIS 套件，您需要從下列連結安裝相對應版本的 **Microsoft Connector for Teradata by Attunity**：
+## <a name="design-and-execute-ssis-packages"></a>設計並執行 SSIS 套件
+
+Microsoft Connector for Teradata 可提供與 Attunity Teradata Connector 類似的使用者體驗。 使用者可以根據先前的經驗使用 SSDT for VS 2017 或 VS 2019 來設計新的套件，並*以 SQL server 2019 為目標*。
+
+Teradata 來源與目的地位於 [一般] 類別之下。
+
+![Teradata 元件](media/teradata-component.png)
+
+Teradata 連線管理員會顯示為 "TERADATA"。
+
+![Teradata 連線管理員型別](media/teradata-connection-manager-type.png)
+
+已使用 Attunity Teradata Connector 設計的現有 SSIS 套件會自動升級為使用 Microsoft Connector for Teradata。 圖示也會變更。
+
+若要執行「以 SQL Server 2017 與以下版本為目標」的 SSIS 套件，您需要從下列連結安裝相對應版本的 **Microsoft Connector for Teradata by Attunity**：
 
 - [SQL Server 2017：Microsoft Connector Version 5.0 for Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=55179)
 - [SQL Server 2016：Microsoft Connector Version 4.0 for Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=52950)
 - [SQL Server 2014：Microsoft Connector Version 3.0 for Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=44582)
 - [SQL Server 2012：Microsoft Connector Version 2.0 for Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=29283)
+
+若要以 SSDT 設計「以 SQL Server 2017 與以下版本為目標」的 SSIS 套件，您必須擁有 **Microsoft Connector for Teradata** 並安裝相對應版本的 **Microsoft Connector for Teradata by Attunity**。
+
+## <a name="limitationsandknownissues"></a>限制與已知問題
+
+- Teradata 來源/目的地編輯器， **預設資料庫** 屬性不會生效。 因應措施是在下拉式清單方塊中輸入資料庫名稱，以篩選資料表或檢視。
+
+- Teradata 來源/目的地編輯器，當輸入  \<database>.<table/view> 時，無法使用對應步驟。 因應措施是輸入  \<database>.<table/view>，然後按一下下拉式按鈕。
+
+- Teradata 來源編輯器，當資料存取模式為 "Table Name – TPT Export" 時，無法顯示檢視。 因應措施是使用 Teradata 來源進階編輯器。
+
+- Teradata 目的地，屬性 'PackMaximum' 不能設定為 'True'。 否則就會發生錯誤。
 
 ## <a name="uninstallation"></a>解除安裝
 

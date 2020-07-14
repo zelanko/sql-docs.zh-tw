@@ -1,5 +1,6 @@
 ---
 title: 搭配 FOR XML 使用 EXPLICIT 模式 | Microsoft 文件
+description: 了解為何使用 FOR XML EXPLICIT 模式能在從查詢結果產生 XML 上提供最大的彈性。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cd64762cced69019e1d58414b43af061933c4437
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 193eae657a73f6801546c7234b141dae8f422e67
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665018"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736551"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>搭配 FOR XML 使用 EXPLICIT 模式
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   如 [使用 FOR XML 建構 XML](../../relational-databases/xml/for-xml-sql-server.md)主題中所述，RAW 和 AUTO 模式對從查詢結果產生之 XML 形式的控制不大。 但是，EXPLICIT 模式在由查詢結果產生想要的 XML 方面，可提供的彈性最大。  
   
  EXPLICIT 模式詢必須以特定方式寫入，如此一來有關所需 XML 的額外資訊 (例如 XML 中將會構成的巢狀結構 )，就可以明確指定在查詢內。 根據您要求使用的 XML，撰寫 EXPLICIT 模式查詢會相當繁雜。 您可能會發現對撰寫 EXPLICIT 模式查詢而言， [使用 PATH 模式](../../relational-databases/xml/use-path-mode-with-for-xml.md) 搭配巢狀結構是較為簡單的替代方法。  
@@ -112,24 +113,24 @@ ElementName!TagNumber!AttributeName!Directive
  以下是格式的部份描述。  
   
  *ElementName*  
- 是產生的元素一般識別碼。 例如，若將 **Customers** 指定為 *ElementName*，就會產生 \<Customers> 項目。  
+ 是產生的元素一般識別碼。 例如，若將 **Customers** 指定為 *ElementName*，就會產生 \<Customers> 元素。  
   
  *TagNumber*  
  是指派給元素的唯一標記值。 此值搭配兩個中繼資料資料行 **Tag** 及 **Parent**，就可以決定結果 XML 中元素的巢狀結構。  
   
  *AttributeName*  
- 提供要在指定的 *ElementName*中建構的屬性名稱。 如果未指定「指示詞」  ，就會使用這個行為。  
+ 提供要在指定的 *ElementName*中建構的屬性名稱。 如果未指定「指示詞」，就會使用這個行為。  
   
- 如果指定「指示詞」  而且它是 **xml**、**cdata** 或 **element**，就會使用此值建構 *ElementName* 的元素子系，而且會加入資料行值。  
+ 如果指定「指示詞」而且它是 **xml**、**cdata** 或 **element**，就會使用此值建構 *ElementName* 的元素子系，而且會加入資料行值。  
   
- 如果指定「指示詞」  ，*AttributeName* 可以為空白。 例如，ElementName!TagNumber!!Directive。 在此情況下， *ElementName*會直接包含資料行值。  
+ 如果指定「指示詞」，*AttributeName* 可以為空白。 例如，ElementName!TagNumber!!Directive。 在此情況下， *ElementName*會直接包含資料行值。  
   
  *Directive*  
- 「指示詞」是選擇性的，而且您可以用以提供建構 XML 的額外資訊。  「指示詞」  有兩種用途。  
+ 「指示詞」是選擇性的，而且您可以用以提供建構 XML 的額外資訊。  「指示詞」有兩種用途。  
   
- 其中一項用途是將值編碼為 ID、IDREF 及 IDREFS。 您可以指定 **ID**、**IDREF** 及 **IDREFS** 關鍵字作為「指示詞」  。 這些指示詞會覆寫屬性類型。 您可以藉此建立內部文件連結。  
+ 其中一項用途是將值編碼為 ID、IDREF 及 IDREFS。 您可以指定 **ID**、**IDREF** 及 **IDREFS** 關鍵字作為「指示詞」。 這些指示詞會覆寫屬性類型。 您可以藉此建立內部文件連結。  
   
- 此外，您可以使用「指示詞」  指出要如何將字串資料對應到 XML。 **hide**、**element、elementxsinil**、**xml**、**xmltext** 及 **cdata** 關鍵字可以作為「指示詞」  。 **hide** 指示詞會隱藏節點。 只是為了進行排序而擷取值，但不希望產生 XML 時，這就很有用。  
+ 此外，您可以使用「指示詞」指出要如何將字串資料對應到 XML。 **hide**、**element、elementxsinil**、**xml**、**xmltext** 及 **cdata** 關鍵字可以作為「指示詞」。 **hide** 指示詞會隱藏節點。 只是為了進行排序而擷取值，但不希望產生 XML 時，這就很有用。  
   
  **element** 指示詞會產生內含元素而不是屬性。 內含的資料會被編碼為實體。 例如， **<** 字元會變成 &lt;。 對於 NULL 資料行值，不會產生任何元素。 如果希望 Null 資料行值會產生一個元素，您可以指定 **elementxsinil** 指示詞。 這將會產生具有屬性 xsi:nil=TRUE 的元素。  
   
@@ -139,7 +140,7 @@ ElementName!TagNumber!AttributeName!Directive
   
  在大部份情況下，您可以合併這兩個群組織間的指示詞，但不可以合併指示詞本身。  
   
- 如果未指定「指示詞」  及 *AttributeName* (例如 **Customer!1**)，就會隱含 **element** 指示詞 (例如 **Customer!1!!element**)，而 *ElementName* 中會包含資料行資料。  
+ 如果未指定「指示詞」及 *AttributeName* (例如 **Customer!1**)，就會隱含 **element** 指示詞 (例如 **Customer!1!!element**)，而 *ElementName* 中會包含資料行資料。  
   
  如果指定 **xmltext** 指示詞，資料行內容會包裝在單一標記中，與文件的其他部分整合。 此指示詞用來取得 OPENXML 儲存在資料行的溢位 (未消耗) XML 資料很有用。 如需詳細資訊，請參閱 [OPENXML &#40;SQL Server&#41;](../../relational-databases/xml/openxml-sql-server.md)。  
   
@@ -156,9 +157,9 @@ ElementName!TagNumber!AttributeName!Directive
   
 -   [範例：使用 EXPLICIT 模式建構同層級](../../relational-databases/xml/example-constructing-siblings-with-explicit-mode.md)  
   
--   [範例：指定 ID 和 IDREF 指示詞](../../relational-databases/xml/example-specifying-the-id-and-idref-directives.md)  
+-   [範例：指定識別碼和 IDREF 指示詞](../../relational-databases/xml/example-specifying-the-id-and-idref-directives.md)  
   
--   [範例：指定 ID 和 IDREFS 指示詞](../../relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md)  
+-   [範例：指定識別碼和 IDREFS 指示詞](../../relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md)  
   
 -   [範例：指定 HIDE 指示詞](../../relational-databases/xml/example-specifying-the-hide-directive.md)  
   

@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e5937edb162883ac0dfde2d6c444b86092e0a4a
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 25574476947c3232c8491923d1e5c69b87c43960
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633419"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902253"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -83,13 +83,15 @@ WITH
 | 外部資料來源    | 位置前置詞 | 位置路徑                                         | 支援的位置 (依產品/服務) |
 | ----------------------- | --------------- | ----------------------------------------------------- | ---------------------------------------- |
 | Cloudera 或 Hortonworks | `hdfs`          | `<Namenode>[:port]`                                   | 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始                       |
-| Azure Blob 儲存體      | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始                       |
+| Azure 儲存體帳戶 (V2) | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始         **不**支援階層命名空間 |
 | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]              | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始                       |
 | Oracle                  | `oracle`        | `<server_name>[:port]`                                | 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始                       |
 | Teradata                | `teradata`      | `<server_name>[:port]`                                | 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始                       |
 | MongoDB 或 CosmosDB     | `mongodb`       | `<server_name>[:port]`                                | 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始                       |
 | ODBC                    | `odbc`          | `<server_name>[:port]`                                | 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始 - 僅限 Windows        |
 | 大量作業         | `https`         | `<storage_account>.blob.core.windows.net/<container>` | 從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始                        |
+| Edge 中樞         | `edgehub`         | 不適用 | EdgeHub 對於 [Azure SQL Edge](/azure/azure-sql-edge/overview/) 執行個體一律是本機的。 因此，不需要指定路徑或連接埠值。 僅適用於 Azure SQL Edge。                      |
+| Kafka        | `kafka`         | `<Kafka IP Address>[:port]` | 僅適用於 Azure SQL Edge。                      |
 
 位置路徑：
 
@@ -106,7 +108,9 @@ WITH
 - 查詢 Hadoop 時，請針對所有資料表使用相同的外部資料來源，以確保查詢語意一致。
 - 您可以使用 `sqlserver` 位置前置詞，將 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 連接到另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 或 Azure Synapse Analytics。
 - 透過 `ODBC` 連線時，請指定 `Driver={<Name of Driver>}`。
-- `wasb` 是 Azure Blob 儲存體的預設通訊協定。 `wasbs` 為選擇性，但由於資料會使用安全的 TLS/SSL 連線傳送，因此建議使用。
+- 針對存取 Azure 儲存體帳戶，`wasbs` 是選擇性的，但由於資料會使用安全的 TLS/SSL 連線傳送，因此建議使用。
+- 存取 Azure 儲存體帳戶時，不支援 `abfs` 或 `abfss` API。
+- 不支援 Azure 儲存體帳戶 (V2) 的 [階層式命名空間] 選項。 請確認此選項保持**停用**。
 - 為確保在 Hadoop `Namenode` 容錯移轉期間能成功進行 PolyBase 查詢，請考慮使用虛擬 IP 位址作為 Hadoop 叢集的 `Namenode`。 若未這樣做，請執行 [ALTER EXTERNAL DATA SOURCE][alter_eds] 命令以指向新位置。
 
 ### <a name="connection_options--key_value_pair"></a>CONNECTION_OPTIONS = *key_value_pair*
@@ -131,13 +135,13 @@ WITH
 
 建立認證時的其他注意事項和指引：
 
-- 只有在 Blob 受到保護時才需要 `CREDENTIAL`。 允許匿名存取的資料集不需要 `CREDENTIAL`。
+- 只有在資料受到保護時才需要 `CREDENTIAL`。 允許匿名存取的資料集不需要 `CREDENTIAL`。
 - 當 `TYPE` = `BLOB_STORAGE` 時，必須使用 `SHARED ACCESS SIGNATURE` 作為身分識別來建立認證。 此外，SAS 權杖應設定如下：
   - 設定為祕密時，請排除前置 `?`
   - 至少擁有應載入檔案的讀取權限 (例如 `srt=o&sp=r`)
   - 使用有效的到期時間 (所有日期都是 UTC 時間)。
 
-如需使用具有 `SHARED ACCESS SIGNATURE` 之 `CREDENTIAL` 且 `TYPE` =`BLOB_STORAGE` 的範例，請參閱[建立外部資料來源以執行大量作業並將資料從 Azure Blob 儲存體擷取到 SQL Database](#g-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
+如需搭配 `SHARED ACCESS SIGNATURE` 和 `TYPE` = `BLOB_STORAGE` 使用 `CREDENTIAL` 的範例，請參閱[建立外部資料來源以執行大量作業並將資料從 Azure 儲存體擷取到 SQL Database](#i-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage)
 
 若要建立資料庫範圍認證，請參閱 [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]。
 
@@ -145,13 +149,13 @@ WITH
 
 指定要設定的外部資料來源類型。 不一定需要此參數。
 
-- 當外部資料來源為 Cloudera、Hortonworks 或 Azure Blob 儲存體時，請使用 HADOOP。
-- 使用 [BULK INSERT][bulk_insert] 或 [OPENROWSET][openrowset] 搭配 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 執行大量作業時，請使用 BLOB_STORAGE。
+- 當外部資料來源為 Cloudera、Hortonworks 或 Azure 儲存體帳戶時，請使用 HADOOP。
+- 搭配 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 使用 [BULK INSERT][bulk_insert] 或 [OPENROWSET][openrowset] 執行來自 Azure 儲存體帳戶的大量作業時，請使用 BLOB_STORAGE。
 
 > [!IMPORTANT]
 > 如果使用任何其他外部資料來源，請不要設定 `TYPE`。
 
-如需使用 `TYPE` = `HADOOP` 從 Azure Blob 儲存體載入資料的範例，請參閱[建立參考 Azure Blob 儲存體的外部資料來源](#e-create-external-data-source-to-reference-azure-blob-storage)。
+如需使用 `TYPE` = `HADOOP` 從 Azure 儲存體帳戶載入資料的範例，請參閱[使用 wasb:// 介面建立存取 Azure 儲存體中資料的外部資料來源](#e-create-external-data-source-to-access-data-in-azure-storage-using-the-wasb-interface) <!--[Create external data source to reference Azure Storage](#e-create-external-data-source-to-reference-azure-storage).-->
 
 ### <a name="resource_manager_location--resourcemanager_uriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
@@ -276,11 +280,10 @@ WITH
   );
 ```
 
-### <a name="e-create-external-data-source-to-reference-azure-blob-storage"></a>E. 建立參考 Azure Blob 儲存體的外部資料來源
+### <a name="e-create-external-data-source-to-access-data-in-azure-storage-using-the-wasb-interface"></a>E. 使用 wasb:// 介面建立存取 Azure 儲存體中資料的外部資料來源
+在此範例中，外部資料來源是名為 `logs` 的 Azure V2 儲存體帳戶。 容器名稱為 `daily`。 Azure 儲存體外部資料來源僅供資料傳輸使用。 不支援述詞下推。 透過 `wasb://` 介面存取資料時，不支援階層命名空間。
 
-在此範例中，外部資料來源是名為 `logs` 的 Azure 儲存體帳戶底下，稱為 `daily` 的 Azure Blob 儲存體容器。 Azure 儲存體外部資料來源僅供資料傳輸使用。 不支援述詞下推。
-
-此範例示範如何建立資料庫範圍的認證，以便向 Azure 儲存體進行驗證。 在資料庫認證密碼中指定 Azure 儲存體帳戶金鑰。 您可以在資料庫範圍認證身分識別中指定任何字串，因為系統不會使用它向 Azure 儲存體進行驗證。
+此範例示範如何建立資料庫範圍認證，以便向 Azure V2 儲存體帳戶進行驗證。 在資料庫認證祕密中指定 Azure 儲存體帳戶金鑰。 您可以在資料庫範圍認證身分識別中指定任何字串，因為系統不會使用其向 Azure 儲存體進行驗證。
 
 ```sql
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
@@ -297,11 +300,11 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage
 WITH
   ( LOCATION = 'wasbs://daily@logs.blob.core.windows.net/' ,
     CREDENTIAL = AzureStorageCredential ,
-    TYPE = BLOB_STORAGE
+    TYPE = HADOOP
   ) ;
 ```
 
-### <a name="f-create-external-data-source-to-reference-a-sql-server-named-instance-via-polybase-connectivity-sql-server-2019"></a>F. 透過 Polybase 連線建立參考 SQL Server 具名執行個體的外部資料來源 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+### <a name="f-create-external-data-source-to-reference-a-sql-server-named-instance-via-polybase-connectivity-sql-server-2019"></a>F. 透過 PolyBase 連線建立參考 SQL Server 具名執行個體的外部資料來源 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
 若要建立參考 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 具名執行個體的外部資料來源，您可以使用 CONNECTION_OPTIONS 來指定執行個體名稱。 在以下範例中，`WINSQL2019` 是主機名稱，而 `SQL2019` 是執行個體名稱。
 
@@ -324,12 +327,36 @@ WITH (
 ) ;
 ```
 
+### <a name="g-create-external-data-source-to-reference-kafka"></a>G. 建立參考 Kafka 的外部資料來源
+
+在此範例中，外部資料來源是 Kafak 伺服器，其 IP 位址為 xxx.xxx.xxx.xxx 且在連接埠 1900 上接聽。 Kafka 外部資料來源僅供資料串流使用，而且不支援述詞下推。
+
+```sql
+-- Create an External Data Source for Kafka
+CREATE EXTERNAL DATA SOURCE MyKafkaServer WITH (
+    LOCATION = 'kafka://xxx.xxx.xxx.xxx:1900'
+)
+go
+```
+
+### <a name="h-create-external-data-source-to-reference-edgehub"></a>H. 建立參考 EdgeHub 的外部資料來源
+
+在此範例中，外部資料來源是在與 Azure SQL Edge 相同的邊緣裝置上執行的 EdgeHub。 EdgeHub 外部資料來源僅供資料串流使用，而且不支援述詞下推。
+
+```sql
+-- Create an External Data Source for Kafka
+CREATE EXTERNAL DATA SOURCE MyEdgeHub WITH (
+    LOCATION = 'edgehub://'
+)
+go
+```
+
 ## <a name="examples-bulk-operations"></a>範例：大量作業
 
 > [!IMPORTANT]
 > 設定大量作業的外部資料來源時，請不要在 `LOCATION` URL 的結尾處新增尾端 **/** 、檔案名稱或共用存取簽章參數。
 
-### <a name="g-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>G. 針對從 Azure Blob 儲存體擷取資料的大量作業，建立外部資料來源
+### <a name="i-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage"></a>I. 針對從 Azure 儲存體擷取資料的大量作業，建立外部資料來源
 
 **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。
 針對使用 [BULK INSERT][bulk_insert] 或 [OPENROWSET][openrowset] 的大量作業，請使用下列資料來源。 認證必須將 `SHARED ACCESS SIGNATURE` 設定為身分識別、不得在 SAS 權杖中有前置 `?`、必須至少擁有應載入檔案的讀取權限 (例如 `srt=o&sp=r`)，且到期時間應該有效 (所有日期都是 UTC 時間)。 如需共用存取簽章的詳細資訊，請參閱[使用共用存取簽章 (SAS)][sas_token]。
@@ -363,7 +390,7 @@ WITH
 <!-- links to external pages -->
 <!-- SQL Docs -->
 [bulk_insert]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql
-[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-blob-storage
+[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-storage
 [openrowset]: https://docs.microsoft.com/sql/t-sql/functions/openrowset-transact-sql
 
 [create_dsc]: https://docs.microsoft.com/sql/t-sql/statements/create-database-scoped-credential-transact-sql
@@ -447,14 +474,14 @@ WITH
 
 建立認證時的其他注意事項和指引：
 
-- 若要將 Azure Blob 儲存體的資料載入 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，請使用 Azure 儲存體金鑰。
-- 只有在 Blob 受到保護時才需要 `CREDENTIAL`。 允許匿名存取的資料集不需要 `CREDENTIAL`。
+- 若要將 Azure 儲存體的資料載入 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，請使用 Azure 儲存體金鑰。
+- 只有在資料受到保護時才需要 `CREDENTIAL`。 允許匿名存取的資料集不需要 `CREDENTIAL`。
 - 當 `TYPE` = `BLOB_STORAGE` 時，必須使用 `SHARED ACCESS SIGNATURE` 作為身分識別來建立認證。 此外，SAS 權杖應設定如下：
   - 設定為祕密時，請排除前置 `?`
   - 至少擁有應載入檔案的讀取權限 (例如 `srt=o&sp=r`)
   - 使用有效的到期時間 (所有日期都是 UTC 時間)。
 
-如需使用具有 `SHARED ACCESS SIGNATURE` 之 `CREDENTIAL` 且 `TYPE` =`BLOB_STORAGE` 的範例，請參閱[建立外部資料來源以執行大量作業並將資料從 Azure Blob 儲存體擷取到 SQL Database](#c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
+如需搭配 `SHARED ACCESS SIGNATURE` 和 `TYPE` = `BLOB_STORAGE` 使用 `CREDENTIAL` 的範例，請參閱[建立外部資料來源以執行大量作業並將資料從 Azure 儲存體擷取到 SQL Database](#c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage)
 
 若要建立資料庫範圍認證，請參閱 [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]。
 
@@ -548,7 +575,7 @@ WITH
 > [!IMPORTANT]
 > 設定大量作業的外部資料來源時，請不要在 `LOCATION` URL 的結尾處新增尾端 **/** 、檔案名稱或共用存取簽章參數。
 
-### <a name="c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>C. 針對從 Azure Blob 儲存體擷取資料的大量作業，建立外部資料來源
+### <a name="c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage"></a>C. 針對從 Azure 儲存體擷取資料的大量作業，建立外部資料來源
 
 針對使用 [BULK INSERT][bulk_insert] 或 [OPENROWSET][openrowset] 的大量作業，請使用下列資料來源。 認證必須將 `SHARED ACCESS SIGNATURE` 設定為身分識別、不得在 SAS 權杖中有前置 `?`、必須至少擁有應載入檔案的讀取權限 (例如 `srt=o&sp=r`)，且到期時間應該有效 (所有日期都是 UTC 時間)。 如需共用存取簽章的詳細資訊，請參閱[使用共用存取簽章 (SAS)][sas_token]。
 
@@ -580,7 +607,7 @@ WITH
 <!-- links to external pages -->
 <!-- SQL Docs -->
 [bulk_insert]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql
-[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-blob-storage
+[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-storage
 [openrowset]: https://docs.microsoft.com/sql/t-sql/functions/openrowset-transact-sql
 [create_dsc]: https://docs.microsoft.com/sql/t-sql/statements/create-database-scoped-credential-transact-sql
 [create_etb]: https://docs.microsoft.com/sql/t-sql/statements/create-external-data-source
@@ -643,9 +670,9 @@ WITH
 
 | 外部資料來源        | 位置前置詞 | 位置路徑                                         |
 | --------------------------- | --------------- | ----------------------------------------------------- |
-| Azure Blob 儲存體          | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` |
 | Azure Data Lake Store Gen 1 | `adl`           | `<storage_account>.azuredatalake.net`                 |
 | Azure Data Lake Store Gen 2 | `abfs[s]`       | `<container>@<storage_account>.dfs.core.windows.net`  |
+| Azure V2 儲存體帳戶    | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` |
 
 位置路徑：
 
@@ -657,7 +684,8 @@ WITH
 - 預設選項是在佈建 Azure Data Lake Storage Gen 2 時使用 `enable secure SSL connections`。 當啟用此項目時，您必須在選取了安全 TLS/SSL 連線時使用 `abfss`。 請注意，`abfss` 也適用於不安全的 TLS 連線。
 - 在建立物件時，Azure Synapse 不會驗證外部資料來源是否存在。 。 若要驗證，請使用外部資料來源建立外部資料表。
 - 查詢 Hadoop 時，請針對所有資料表使用相同的外部資料來源，以確保查詢語意一致。
-- `wasb` 是 Azure Blob 儲存體的預設通訊協定。 `wasbs` 為選擇性，但由於資料會使用安全的 TLS 連線傳送，因此建議使用。
+- 由於資料會使用安全的 TLS 連線傳送，因此建議使用 `wasbs`
+- 使用 wasb://介面透過 PolyBase 存取資料時，不支援搭配 Azure V2 儲存體帳戶使用階層命名空間。
 
 ### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*
 
@@ -665,8 +693,8 @@ WITH
 
 建立認證時的其他注意事項和指引：
 
-- 若要將資料從 Azure Blob 儲存體或 Azure Data Lake Store (ADLS) Gen 2 載入 SQL DW，請使用 Azure 儲存體金鑰。
-- 只有在 Blob 受到保護時才需要 `CREDENTIAL`。 允許匿名存取的資料集不需要 `CREDENTIAL`。
+- 若要將資料從 Azure 儲存體或 Azure Data Lake Store (ADLS) Gen 2 載入 SQL DW，請使用 Azure 儲存體金鑰。
+- 只有在資料受到保護時才需要 `CREDENTIAL`。 允許匿名存取的資料集不需要 `CREDENTIAL`。
 
 若要建立資料庫範圍認證，請參閱 [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]。
 
@@ -674,12 +702,9 @@ WITH
 
 指定要設定的外部資料來源類型。 不一定需要此參數。
 
-- 當外部資料來源為 Azure Blob 儲存體、ADLS Gen 1 或 ADLS Gen 2 時，請使用 HADOOP。
+- 當外部資料來源為 Azure 儲存體、ADLS Gen 1 或 ADLS Gen 2 時，請使用 HADOOP。
 
-> [!IMPORTANT]
-> 如果使用任何其他外部資料來源，請不要設定 `TYPE`。
-
-如需使用 `TYPE` =`HADOOP` 從 Azure Blob 儲存體載入資料的範例，請參閱[建立參考 Azure Blob 儲存體的外部資料來源](#a-create-external-data-source-to-reference-azure-blob-storage)。
+如需使用 `TYPE` = `HADOOP` 從 Azure 儲存體載入資料的範例，請參閱[使用服務主體建立參考 Azure Data Lake Store Gen 1 或 2 的外部資料來源](#b-create-external-data-source-to-reference-azure-data-lake-store-gen-1-or-2-using-a-service-principal)。
 
 ## <a name="permissions"></a>權限
 
@@ -701,11 +726,10 @@ PolyBase 支援大多數外部資料來源的 Proxy 驗證。 建立資料庫範
 
 ## <a name="examples"></a>範例：
 
-### <a name="a-create-external-data-source-to-reference-azure-blob-storage"></a>A. 建立參考 Azure Blob 儲存體的外部資料來源
+### <a name="a-create-external-data-source-to-access-data-in-azure-storage-using-the-wasb-interface"></a>A. 使用 wasb:// 介面建立存取 Azure 儲存體中資料的外部資料來源
+在此範例中，外部資料來源是名為 `logs` 的 Azure V2 儲存體帳戶。 容器名稱為 `daily`。 Azure 儲存體外部資料來源僅供資料傳輸使用。 不支援述詞下推。 透過 `wasb://` 介面存取資料時，不支援階層命名空間。
 
-在此範例中，外部資料來源是名為 `logs` 的 Azure 儲存體帳戶底下，稱為 `daily` 的 Azure Blob 儲存體容器。 Azure 儲存體外部資料來源僅供資料傳輸使用。 不支援述詞下推。
-
-此範例示範如何建立資料庫範圍的認證，以便向 Azure 儲存體進行驗證。 在資料庫認證密碼中指定 Azure 儲存體帳戶金鑰。 您可以在資料庫範圍認證身分識別中指定任何字串，因為系統不會使用它向 Azure 儲存體進行驗證。
+此範例示範如何建立資料庫範圍認證，以便向 Azure 儲存體進行驗證。 在資料庫認證祕密中指定 Azure 儲存體帳戶金鑰。 您可以在資料庫範圍認證身分識別中指定任何字串，因為系統不會使用它向 Azure 儲存體進行驗證。
 
 ```sql
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
@@ -722,13 +746,13 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage
 WITH
   ( LOCATION = 'wasbs://daily@logs.blob.core.windows.net/' ,
     CREDENTIAL = AzureStorageCredential ,
-    TYPE = BLOB_STORAGE
+    TYPE = HADOOP
   ) ;
 ```
 
 ### <a name="b-create-external-data-source-to-reference-azure-data-lake-store-gen-1-or-2-using-a-service-principal"></a>B. 使用服務主體建立外部資料來源，來參考 Azure Data Lake Store Gen 1 或 2
 
-Azure Data Lake Store 連線能力以您的 ADLS URI 與 Azure Acitve Directory 應用程式服務主體為基礎。 您可在 [使用 Active Directory 的 Data Lake Store 驗證][azure_ad[] 中找到說明如何建立此應用程式的文件。
+Azure Data Lake Store 連線能力以您的 ADLS URI 與 Azure Active Directory 應用程式服務主體為基礎。 說明如何建立此應用程式的文件可以在[使用 Azure Active Directory 的 Data Lake Store 驗證][azure_ad]中找到。
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.
@@ -790,7 +814,7 @@ WITH
   ) ;
 ```
 
-### <a name="d-create-external-data-source-to-reference-polybase-connectivity-to-azure-data-lake-store-gen-2"></a>D. 建立外部資料來源以參考 Polybase 與 Azure Data Lake Store Gen 2 的連線
+### <a name="d-create-external-data-source-to-reference-polybase-connectivity-to-azure-data-lake-store-gen-2-using-abfs"></a>D. 建立外部資料來源以使用 abfs:// 參考 Polybase 與 Azure Data Lake Store Gen 2 的連線
 
 當連線至具有[受控識別](/azure/active-directory/managed-identities-azure-resources/overview
 )機制的 Azure Data Lake 存放區 Gen2 帳戶時，不需要指定祕密。
@@ -827,7 +851,7 @@ WITH
 <!-- links to external pages -->
 <!-- SQL Docs -->
 [bulk_insert]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql
-[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-blob-storage
+[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-storage
 [openrowset]: https://docs.microsoft.com/sql/t-sql/functions/openrowset-transact-sql
 
 [create_dsc]: https://docs.microsoft.com/sql/t-sql/statements/create-database-scoped-credential-transact-sql
@@ -895,7 +919,7 @@ WITH
 | 外部資料來源    | 位置前置詞 | 位置路徑                                         |
 | ----------------------- | --------------- | ----------------------------------------------------- |
 | Cloudera 或 Hortonworks | `hdfs`          | `<Namenode>[:port]`                                   |
-| Azure Blob 儲存體      | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` |
+| Azure 儲存體帳戶   | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` |
 
 位置路徑：
 
@@ -908,7 +932,8 @@ WITH
 
 - 在建立物件時，PDW 引擎不會驗證外部資料來源是否存在。 若要驗證，請使用外部資料來源建立外部資料表。
 - 查詢 Hadoop 時，請針對所有資料表使用相同的外部資料來源，以確保查詢語意一致。
-- `wasb` 是 Azure Blob 儲存體的預設通訊協定。 `wasbs` 為選擇性，但由於資料會使用安全的 TLS 連線傳送，因此建議使用。
+- 由於資料會使用安全的 TLS 連線傳送，因此建議使用 `wasbs`。
+- 透過 wasb:// 搭配 Azure 儲存體帳戶使用時，不支援階層命名空間。
 - 為確保在 Hadoop `Namenode` 容錯移轉期間能成功進行 PolyBase 查詢，請考慮使用虛擬 IP 位址作為 Hadoop 叢集的 `Namenode`。 若未這樣做，請執行 [ALTER EXTERNAL DATA SOURCE][alter_eds] 命令以指向新位置。
 
 ### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*
@@ -917,19 +942,16 @@ WITH
 
 建立認證時的其他注意事項和指引：
 
-- 若要將資料從 Azure Blob 儲存體或 Azure Data Lake Store (ADLS) Gen 2 載入 SQL DW 或 PDW，請使用 Azure 儲存體金鑰。
-- 只有在 Blob 受到保護時才需要 `CREDENTIAL`。 允許匿名存取的資料集不需要 `CREDENTIAL`。
+- 若要將 Azure 儲存體的資料載入 Azure Synapse 或 PDW，請使用 Azure 儲存體金鑰。
+- 只有在資料受到保護時才需要 `CREDENTIAL`。 允許匿名存取的資料集不需要 `CREDENTIAL`。
 
 ### <a name="type---hadoop-"></a>TYPE = *[ HADOOP ]*
 
 指定要設定的外部資料來源類型。 不一定需要此參數。
 
-- 當外部資料來源為 Cloudera、Hortonworks 或 Azure Blob 儲存體時，請使用 HADOOP。
+- 當外部資料來源為 Cloudera、Hortonworks 或 Azure 儲存體時，請使用 HADOOP。
 
-> [!IMPORTANT]
-> 如果使用任何其他外部資料來源，請不要設定 `TYPE`。
-
-如需使用 `TYPE` = `HADOOP` 從 Azure Blob 儲存體載入資料的範例，請參閱[建立參考 Azure Blob 儲存體的外部資料來源](#d-create-external-data-source-to-reference-azure-blob-storage)。
+如需使用 `TYPE` = `HADOOP` 從 Azure 儲存體載入資料的範例，請參閱[建立參考 Hadoop 的外部資料來源](#a-create-external-data-source-to-reference-hadoop)。
 
 ### <a name="resource_manager_location--resourcemanager_uriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
@@ -1028,9 +1050,9 @@ WITH
   ) ;
 ```
 
-### <a name="d-create-external-data-source-to-reference-azure-blob-storage"></a>D. 建立參考 Azure Blob 儲存體的外部資料來源
+### <a name="d-create-external-data-source-to-access-data-in-azure-storage-using-the-wasb-interface"></a>D. 使用 wasb:// 介面建立存取 Azure 儲存體中資料的外部資料來源
 
-在此範例中，外部資料來源是名為 `logs` 的 Azure 儲存體帳戶底下，稱為 `daily` 的 Azure Blob 儲存體容器。 Azure 儲存體外部資料來源僅供資料傳輸使用。 不支援述詞下推。
+在此範例中，外部資料來源是名為 `logs` 的 Azure V2 儲存體帳戶。 容器名稱為 `daily`。 Azure 儲存體外部資料來源僅供資料傳輸使用。 不支援述詞下推。 透過 `wasb://` 介面存取資料時，不支援階層命名空間。
 
 此範例示範如何建立資料庫範圍的認證，以便向 Azure 儲存體進行驗證。 在資料庫認證密碼中指定 Azure 儲存體帳戶金鑰。 您可以在資料庫範圍認證身分識別中指定任何字串，因為系統不會使用它向 Azure 儲存體進行驗證。
 
@@ -1049,9 +1071,10 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage
 WITH
   ( LOCATION = 'wasbs://daily@logs.blob.core.windows.net/'
     CREDENTIAL = AzureStorageCredential
-    TYPE = BLOB_STORAGE
+    TYPE = HADOOP
   ) ;
 ```
+
 
 ## <a name="see-also"></a>另請參閱
 
@@ -1064,7 +1087,7 @@ WITH
 <!-- links to external pages -->
 <!-- SQL Docs -->
 [bulk_insert]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql
-[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-blob-storage
+[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-storage
 [openrowset]: https://docs.microsoft.com/sql/t-sql/functions/openrowset-transact-sql
 
 [create_dsc]: https://docs.microsoft.com/sql/t-sql/statements/create-database-scoped-credential-transact-sql

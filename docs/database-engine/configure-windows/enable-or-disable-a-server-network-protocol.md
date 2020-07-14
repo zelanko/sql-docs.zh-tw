@@ -1,5 +1,6 @@
 ---
 title: 啟用或停用伺服器網路通訊協定 | Microsoft Docs
+description: 了解如何啟用或停用伺服器網路通訊協定。 查看如何使用 SQL Server 組態管理員或 PowerShell 來執行此工作。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,17 +19,17 @@ helpviewer_keywords:
 - surface area configuration [SQL Server], connection protocols
 - connections [SQL Server], enabling remote using Configuration Manager
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 914250b46e7608f3b0977a2b5c4d7218032989f5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4b63c205a6953a751507abdd67abb229b5f15387
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68011826"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772496"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>啟用或停用伺服器網路通訊協定
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   所有網路通訊協定都是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式所安裝，但是有些會啟用，有些不會啟用。 本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 組態管理員或 PowerShell，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中啟用或停用伺服器網路通訊協定。 必須停止並重新啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，才能讓變更生效。  
   
 > [!IMPORTANT]  
@@ -51,13 +52,13 @@ ms.locfileid: "68011826"
   
 1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員的主控台窗格中，展開 **[SQL Server 網路組態]** 。  
   
-2.  在主控台窗格中，按一下 [**執行個體名稱> 的通訊協定]** _\<_ 。  
+2.  在主控台窗格中，按一下 [ _\<instance name>_ 的通訊協定]。  
   
-3.  在詳細資料窗格中，以滑鼠右鍵按一下要變更的通訊協定，然後按一下 [啟用]  或 [停用]  。  
+3.  在詳細資料窗格中，以滑鼠右鍵按一下要變更的通訊協定，然後按一下 [啟用] 或 [停用]。  
   
-4.  在主控台窗格中，按一下 [SQL Server 服務]  。  
+4.  在主控台窗格中，按一下 [SQL Server 服務]。  
   
-5.  在詳細資料窗格中，以滑鼠右鍵按一下 [SQL Server (\<執行個體名稱>)]，然後按一下 [重新啟動]，以停止並重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。  
+5.  在詳細資料窗格中，以滑鼠右鍵按一下 [SQL Server ( _\<instance name>_ )]，然後按一下 [重新啟動]，先停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務後再重新啟動。  
   
 ##  <a name="using-sql-server-powershell"></a><a name="PowerShellProcedure"></a> 使用 SQL Server PowerShell  
   

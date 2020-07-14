@@ -1,25 +1,24 @@
 ---
 title: 擴充性 API
-titleSuffix: Azure Data Studio
 description: 了解適用於 Azure Data Studio 的擴充性 API
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 8a4ebe26cbbf768222c7b97b95fa7df238faded3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c94935e7d8b1a72b6a99f83618fb0e8855379ed8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75001893"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774645"
 ---
 # <a name="azure-data-studio-extensibility-apis"></a>Azure Data Studio 擴充性 API
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] 提供 API，供延伸模組用來與 Azure Data Studio 的其他部分 (例如物件總管) 互動。 這些 API 可從 [`src/sql/azdata.d.ts`](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/azdata.d.ts) 檔案取得，如下所述。
+Azure Data Studio 提供 API，讓延伸模組可用來與 Azure Data Studio 的其他部分 (例如物件總管) 互動。 這些 API 可從 [`src/sql/azdata.d.ts`](https://github.com/Microsoft/azuredatastudio/blob/main/src/sql/azdata.d.ts) 檔案取得，如下所述。
 
 ## <a name="connection-management"></a>連線管理
 `azdata.connection`
@@ -159,6 +158,6 @@ vscode.commands.registerCommand('mssql.objectexplorer.interact', () => {
 
 ## <a name="proposed-apis"></a>建議的 API
 
-我們新增了建議的 API，允許延伸模組在對話方塊、精靈和文件索引標籤中顯示自訂 UI，以及其他功能。 如需進一步說明，請參閱[建議的 API 類型檔案](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/azdata.proposed.d.ts)，但請注意，這些 API 隨時可能會變更。 您可以在 ["sqlservices" 範例延伸模組](https://github.com/Microsoft/azuredatastudio/tree/master/samples/sqlservices)中，找到如何使用其中一些 API 的範例。
+我們新增了建議的 API，允許延伸模組在對話方塊、精靈和文件索引標籤中顯示自訂 UI，以及其他功能。 如需進一步說明，請參閱[建議的 API 類型檔案](https://github.com/Microsoft/azuredatastudio/blob/main/src/sql/azdata.proposed.d.ts)，但請注意，這些 API 隨時可能會變更。 您可以在 ["sqlservices" 範例延伸模組](https://github.com/Microsoft/azuredatastudio/tree/main/samples/sqlservices)中，找到如何使用其中一些 API 的範例。
 
 

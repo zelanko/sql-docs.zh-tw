@@ -1,5 +1,6 @@
 ---
 title: 應用程式角色 | Microsoft Docs
+description: 使用應用程式角色，只針對透過 SQL Server 中的特定應用程式連線的使用者，啟用資料的存取權。
 ms.custom: ''
 ms.date: 08/06/2019
 ms.prod: sql
@@ -21,15 +22,15 @@ ms.assetid: dca18b8a-ca03-4b7f-9a46-8474d5b66f76
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 928e7eafe6de60c71f3a79cef89eb93d5521e2fe
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 8232644c8d44b4df541d8301dffa75771fbba44f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81305219"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85628431"
 ---
 # <a name="application-roles"></a>應用程式角色
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   應用程式角色是資料庫主體，可以讓應用程式以其自有、類似使用者的權限來執行。 利用應用程式角色，您可以只允許透過特定應用程式來連接的使用者存取特定的資料。 不像資料庫角色，應用程式角色不包含任何成員，且依預設是非使用中狀態。 應用程式角色是使用 **sp_setapprole**(需要有密碼) 予以啟用。 因為應用程式角色是資料庫層級主體，所以它們只可以透過那些資料庫中授與 **guest**的權限來存取其他資料庫。 因此，其他資料庫中的應用程式角色將無法存取任何已停用 **guest** 的資料庫。  
   
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，因為應用程式角色未與伺服器層級主體產生關聯，所以應用程式角色無法存取伺服器層級中繼資料。 若要停用這項限制，並藉此允許應用程式角色存取伺服器層級中繼資料，請設定全域旗標 4616。 如需詳細資訊，請參閱[追蹤旗標 &#40;Transact-SQL&#41;](../../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 和 [DBCC TRACEON &#40;Transact-SQL&#41;](../../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)。  
@@ -52,7 +53,7 @@ ms.locfileid: "81305219"
  在舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，使用者在啟動應用程式角色後要重新取得其原始安全性內容的唯一方式，就是中斷連接並重新連接 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 從 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]開始， **sp_setapprole** 就有一個選項可建立 Cookie。 此 Cookie 包含在啟用應用程式角色之前的內容資訊。 **sp_unsetapprole** 可使用此 Cookie 將工作階段還原為其原始內容。 如需有關這個新選項與範例的詳細資訊，請參閱 [sp_setapprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)的權限來存取其他資料庫。  
   
 > [!IMPORTANT]  
->  **SqlClient** 不支援 ODBC [加密]  選項。 當您透過網路傳輸機密資訊時，請使用傳輸層安全性 (TLS) (先前稱為安全通訊端層 (SSL)) 或 IPsec 來加密該通道。 如果您必須將認證保存在用戶端應用程式中，請使用 Cypto API 函數來加密認證。 在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 及更新的版本中， *password* 參數儲存為單向雜湊。  
+>  **SqlClient** 不支援 ODBC [加密] 選項。 當您透過網路傳輸機密資訊時，請使用傳輸層安全性 (TLS) (先前稱為安全通訊端層 (SSL)) 或 IPsec 來加密該通道。 如果您必須將認證保存在用戶端應用程式中，請使用 Cypto API 函數來加密認證。 在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 及更新的版本中， *password* 參數儲存為單向雜湊。  
   
 ## <a name="related-tasks"></a>相關工作  
   

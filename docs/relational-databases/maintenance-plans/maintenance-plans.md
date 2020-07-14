@@ -1,5 +1,6 @@
 ---
 title: 維護計畫 | Microsoft Docs
+description: 了解維護計畫，其會建立工作流程以確保 SQL Server 資料庫已最佳化、定期備份，而且沒有任何不一致性。
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f773e5188716e7f74fc75567b0c6e000607d47c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fb0036acec4ec0c416f6fa01ccf99663be741514
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115884"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789460"
 ---
 # <a name="maintenance-plans"></a>維護計畫
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   維護計畫會建立必要的工作流程，確保資料庫已最佳化、定期備份，而且沒有任何不一致性。 「維護計畫精靈」也會建立核心維護計畫，但手動建立計畫能提供更大的彈性。  
   
 ## <a name="benefits-of-maintenance-plans"></a>維護計畫的優點  
@@ -57,7 +58,7 @@ ms.locfileid: "68115884"
   
 -   執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業。 這可用來建立執行各種動作的作業，以及執行這些作業的維護計畫。  
   
- 維護工作產生的結果可以當作報表寫入文字檔，或寫入 **msdb** 中的維護計畫資料表 (**sysmaintplan_log** 和 **sysmaintplan_logdetail**)。 若要在記錄檔檢視器中檢視結果，請以滑鼠右鍵按一下 [維護計畫]  ，然後按一下 [檢視記錄]  。  
+ 維護工作產生的結果可以當作報表寫入文字檔，或寫入 **msdb** 中的維護計畫資料表 (**sysmaintplan_log** 和 **sysmaintplan_logdetail**)。 若要在記錄檔檢視器中檢視結果，請以滑鼠右鍵按一下 [維護計畫]，然後按一下 [檢視記錄]。  
   
 ## <a name="related-tasks"></a>相關工作  
  若要開始使用維護計畫，請使用下列主題。  

@@ -1,25 +1,24 @@
 ---
 title: 透過擴充性新增其他功能
-titleSuffix: Azure Data Studio
 description: 了解用於擴充 Azure Data Studio 功能的擴充性模型和重要擴充性領域
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 8ca24836766307584c43e1636bb33f5bd198f585
-ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
+ms.openlocfilehash: 6409dd44381b1d927b07f8ecee043465eacdd14e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82107889"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774650"
 ---
-# <a name="getting-started-with-name-sos-extensibility"></a>開始使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 擴充性
+# <a name="azure-data-studio-extensibility"></a>Azure Data Studio 擴充性
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] 具有數個擴充性機制，可自訂使用者體驗，並將這些自訂項目提供給整個使用者社群。 核心 [!INCLUDE[name-sos](../includes/name-sos.md)] 平台是以 Visual Studio Code 為建置基礎，因此大部分的 Visual Studio Code 擴充性 API 都可供使用。 此外，我們也為資料管理特定活動提供了額外的擴充點。
+Azure Data Studio 具有數個擴充性機制，可自訂使用者體驗，並將那些自訂項目提供給整個使用者社群使用。 核心 Azure Data Studio 平台是以 Visual Studio Code 為建置基礎，因此大部分的 Visual Studio Code 擴充性 API 都可供使用。 此外，我們也為資料管理特定活動提供了額外的擴充點。
 
 其中一些重要的擴充點包括：
 
@@ -32,7 +31,7 @@ ms.locfileid: "82107889"
 
 ## <a name="visual-studio-code-extensibility-apis"></a>Visual Studio Code 擴充性 API
 
-由於核心 [!INCLUDE[name-sos](../includes/name-sos.md)] 平台是以 Visual Studio Code 為建置基礎，因此您可以在 Visual Studio Code 網站的[延伸模組撰寫](https://code.visualstudio.com/docs/extensions/overview)和[延伸模組 API](https://code.visualstudio.com/docs/extensionAPI/overview) 文件中，找到 Visual Studio Code 擴充性 API 的詳細資料。
+由於核心 Azure Data Studio 平台是以 Visual Studio Code 為建置基礎，因此，您可以在 Visual Studio Code 網站的[延伸模組撰寫](https://code.visualstudio.com/docs/extensions/overview) \(英文\) 和[延伸模組 API](https://code.visualstudio.com/docs/extensionAPI/overview) \(英文\) 文件中，找到有關 Visual Studio Code 擴充性 API 的詳細資料。
 
 ## <a name="manage-dashboard-tab-panel-contributions"></a>管理儀表板索引標籤面板貢獻
 

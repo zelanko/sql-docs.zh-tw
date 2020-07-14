@@ -32,15 +32,15 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2d20f0cd4a08e22787caecfb663ef0d2dcd47003
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 63084232460e60aedb0b0a1abe267caa7687e9dd
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75831818"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091910"
 ---
 # <a name="collation-and-unicode-support"></a>定序與 Unicode 支援
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的定序會提供資料的排序規則、大小寫和區分腔調字屬性。 與字元資料類型 (例如 **char** 和 **varchar**) 搭配使用的定序會指示字碼頁，以及可針對該資料類型表示的對應字元。 
 
 不論您是安裝新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體、還原資料庫備份，還是將伺服器連線至用戶端資料庫，都請務必了解您要使用之資料的地區設定需求、排序次序和區分大小寫與腔調字。 若要列出您 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體所提供的定序，請參閱 [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)。    
@@ -235,7 +235,7 @@ Windows 定序會定義規則，以便依據相關聯的 Windows 系統地區設
 |法文 (摩納哥)|0x180c|0x040c|French_CI_AS|
 |法文 (瑞士)|0x100c|0x040c|French_CI_AS|
 |夫里斯蘭文 (荷蘭)|0x0462|0x0462|Latin1_General_CI_AI|
-|加利西亞文 (西班牙)|0x0456|0x0409|Latin1_General_CI_AS|
+|加利西亞文|0x0456|0x0409|Latin1_General_CI_AS|
 |喬治亞文 (喬治亞)|0x10437|0x10437|Georgian_Modern_Sort_CI_AS|
 |喬治亞文 (喬治亞)|0x0437|0x0419|Latin1_General_CI_AS|
 |德文 - 電話簿排序 (DIN)|0x10407|0x10407|German_PhoneBook_CI_AS|
@@ -275,7 +275,7 @@ Windows 定序會定義規則，以便依據相關聯的 Windows 系統地區設
 |立陶宛文 (立陶宛)|0x0427|0x0427|Lithuanian_CI_AS|
 |下索布語 (德國)|0x082e|0x0409|Latin1_General_CI_AS|
 |盧森堡文 (盧森堡)|0x046e|0x0409|Latin1_General_CI_AS|
-|馬其頓文 (馬其頓，馬其頓共和國)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
+|馬其頓文 (北馬其頓，FYROM)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
 |馬來文 (汶萊達魯薩蘭)|0x083e|0x0409|Latin1_General_CI_AS|
 |馬來文 (馬來西亞)|0x043e|0x0409|Latin1_General_CI_AS|
 |馬來亞拉姆文 (印度)|0x044c|0x0439|伺服器層級無法使用|
@@ -290,7 +290,7 @@ Windows 定序會定義規則，以便依據相關聯的 Windows 系統地區設
 |挪威文 (巴克摩，挪威)|0x0414|0x0414|Latin1_General_CI_AI|
 |挪威文 (耐諾斯克，挪威)|0x0814|0x0414|Latin1_General_CI_AI|
 |奧西坦文 (法國)|0x0482|0x040c|French_CI_AS|
-|歐利亞文 (印度)|0x0448|0x0439|伺服器層級無法使用|
+|歐迪亞文 (印度)|0x0448|0x0439|伺服器層級無法使用|
 |普什圖文 (阿富汗)|0x0463|0x0463|伺服器層級無法使用|
 |波斯文 (伊朗)|0x0429|0x0429|Latin1_General_CI_AI|
 |波蘭文 (波蘭)|0x0415|0x0415|Polish_CI_AS|
@@ -303,6 +303,7 @@ Windows 定序會定義規則，以便依據相關聯的 Windows 系統地區設
 |羅馬尼亞文 (羅馬尼亞)|0x0418|0x0418|Romanian_CI_AS|
 |羅曼斯文 (瑞士)|0x0417|0x0417|Latin1_General_CI_AI|
 |俄文 (俄羅斯)|0x0419|0x0419|Cyrillic_General_CI_AS|
+|薩哈文 (俄羅斯)|0x0485|0x0485|Latin1_General_CI_AI|
 |沙米文 (伊納立，芬蘭)|0x243b|0x083b|Latin1_General_CI_AI|
 |沙米文 (盧勒，挪威)|0x103b|0x043b|Latin1_General_CI_AI|
 |沙米文 (盧勒，瑞典)|0x143b|0x083b|Latin1_General_CI_AI|
@@ -366,7 +367,6 @@ Windows 定序會定義規則，以便依據相關聯的 Windows 系統地區設
 |威爾斯文 (英國)|0x0452|0x0452|Latin1_General_CI_AI|
 |沃洛夫文 (塞內加爾)|0x0488|0x040c|French_CI_AS|
 |科薩文/科薩文 (南非)|0x0434|0x0409|Latin1_General_CI_AS|
-|雅庫特語 (俄羅斯)|0x0485|0x0485|Latin1_General_CI_AI|
 |爨文 (中國)|0x0478|0x0409|Latin1_General_CI_AS|
 |優魯巴文 (奈及利亞)|0x046a|0x0409|Latin1_General_CI_AS|
 |祖魯文/祖魯文 (南非)|0x0435|0x0409|Latin1_General_CI_AS|
@@ -433,7 +433,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 地區設定是一組與某個地點或文化特性建立關聯的資訊。 這項資訊包括口語的名稱和識別碼、用來撰寫該語言的指令碼及文化習慣。 定序可與一個或多個地區設定產生關聯。 如需詳細資訊，請參閱 [Microsoft 指派的地區設定識別碼](https://msdn.microsoft.com/goglobal/bb964664.aspx)。    
     
 ###  <a name="code-page"></a><a name="Code_Page_Defn"></a> 字碼頁    
-字碼頁是給定的指令碼的已排序字元集，其中每一個字元與數字索引或字碼指標值相關聯。 Windows 字碼頁一般稱為「字元集」  或 *charset*。 字碼頁是用來提供不同 Windows 系統地區設定所使用的字元集和鍵盤配置的支援。     
+字碼頁是給定的指令碼的已排序字元集，其中每一個字元與數字索引或字碼指標值相關聯。 Windows 字碼頁一般稱為「字元集」或 *charset*。 字碼頁是用來提供不同 Windows 系統地區設定所使用的字元集和鍵盤配置的支援。     
  
 ###  <a name="sort-order"></a><a name="Sort_Order_Defn"></a> 排序次序    
 排序次序會指定如何排序資料值。 次序會影響資料比較的結果。 資料是使用定序來排序，而且可以使用索引來最佳化。    
@@ -508,7 +508,7 @@ Unicode 是將字碼指標對應到字元的標準用法。 由於 Unicode 主�
 ##  <a name="supplementary-characters"></a><a name="Supplementary_Characters"></a> 增補字元    
 Unicode Consortium 會為每個字元配置唯一的字碼指碼，其值介於 000000 到 10FFFF 的範圍。 最常用的字元會具備介於 000000 到 00FFFF 範圍 (65,535 個字元) 內的字碼指碼值，其在記憶體和硬碟上可容於 8 位元或 16 位元的字組中。 此範圍通常會指定為基本多語系平面 (BMP)。 
 
-但 Unicode Consortium 已建立其它 16 個字元「平面」，每個平面的大小都與 BMP 相同。 此定義可讓 Unicode 具備表示 1,114,112 個字元的潛力 (即 2<sup>16</sup> * 17 個字元)，介於字碼指碼範圍 000000 到 10FFFF 中。 字碼元素值大於 00FFFF 的字元需要二至四個連續的 8 位元字組 (UTF-8) 或兩個連續的 16 位元字組 (UTF-16)。 這些字元位於 BMP 範圍之外，稱為「增補字元」  的範圍內，並且額外的連續 8 位元或 16 位元字組稱為「代理字組」  。 如需增補字元、代理及代理字組的詳細資訊，請參閱 [Unicode Standard](http://www.unicode.org/standard/standard.html) (Unicode 標準)。    
+但 Unicode Consortium 已建立其它 16 個字元「平面」，每個平面的大小都與 BMP 相同。 此定義可讓 Unicode 具備表示 1,114,112 個字元的潛力 (即 2<sup>16</sup> * 17 個字元)，介於字碼指碼範圍 000000 到 10FFFF 中。 字碼元素值大於 00FFFF 的字元需要二至四個連續的 8 位元字組 (UTF-8) 或兩個連續的 16 位元字組 (UTF-16)。 這些字元位於 BMP 範圍之外，稱為「增補字元」的範圍內，並且額外的連續 8 位元或 16 位元字組稱為「代理字組」。 如需增補字元、代理及代理字組的詳細資訊，請參閱 [Unicode Standard](http://www.unicode.org/standard/standard.html) (Unicode 標準)。    
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供 **nchar** 和 **nvarchar** 等資料類型，用來儲存 BMP 範圍 (000000 到 00FFFF) 中的 Unicode 資料，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會使用 UCS-2 來進行編碼。 
 
@@ -597,14 +597,14 @@ Unicode Consortium 會為每個字元配置唯一的字碼指碼，其值介於 
 |000800–003FFF<br />004000–00FFFF|2,048–16,383<br />16,384–65,535|3|2|
 |010000–03FFFF<sup>2</sup><br /><br />040000–10FFFF<sup>2</sup>|65,536–262,143<sup>2</sup><br /><br />262,144–1,114,111<sup>2</sup>|4|4|
 
-<sup>1</sup>「儲存體位元組」  意指編碼的位元組長度，而非資料類型在磁碟上的儲存大小。 如需磁碟上儲存大小的詳細資訊，請參閱 [nchar 與 nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 和 [char 與 varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)。
+<sup>1</sup>「儲存體位元組」意指編碼的位元組長度，而非資料類型在磁碟上的儲存大小。 如需磁碟上儲存大小的詳細資訊，請參閱 [nchar 與 nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 和 [char 與 varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)。
 
 <sup>2</sup>[增補字元](#Supplementary_Characters)的字碼指碼範圍。
 
 > [!TIP]   
 > 一般認為在 [CHAR(*n*) 和 VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 中，或在 [NCHAR(*n*) 和 NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 中，*n* 會定義字元數。 這是因為在 CHAR(10) 資料行的範例中，可以使用定序 (例如 **Latin1_General_100_CI_AI**) 來儲存範圍 0-127 中的 10 個 ASCII 字元，因為此範圍內的每個字元只會使用 1 個位元組。
 >    
-> 不過，在 [CHAR(*n*) 和 VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 中，*n* 會以「位元組」  為單位 (0-8,000) 來定義字串大小，且在 [NCHAR(*n*) 和 NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 中，*n* 會以「位元組配對」  為單位 (0-4,000) 來定義字串大小。 *n* 一律不會定義可儲存的字元數。
+> 不過，在 [CHAR(*n*) 和 VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 中，*n* 會以「位元組」為單位 (0-8,000) 來定義字串大小，且在 [NCHAR(*n*) 和 NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 中，*n* 會以「位元組配對」 為單位 (0-4,000) 來定義字串大小。 *n* 一律不會定義可儲存的字元數。
 
 如以上所見，取決於使用的字元集，選擇適當 Unicode 編碼和資料類型可能會節省大量儲存體或增加目前體存體使用量。 例如，使用啟用 UTF-8 的拉丁定序 (例如 **Latin1_General_100_CI_AI_SC_UTF8**) 時，`CHAR(10)` 資料行會儲存 10 個位元組，且可以保留範圍 0-127 內的 10 個 ASCII 字元。 但在範圍為 128-2047 時只能保留 5 個字元，而在範圍為 2048-65535 時只能保留 3 個字元。 相較之下，由於 `NCHAR(10)` 資料行會儲存 10 個位元組配對 (20 個位元組)，因此可以保留範圍 0-65535 內的 10 個字元。  
 
@@ -656,4 +656,3 @@ Unicode Consortium 會為每個字元配置唯一的字碼指碼，其值介於 
 [選擇建立全文檢索索引時的語言](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)     
 [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)       
 [單位元組和多位元組字元集](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)      
- 

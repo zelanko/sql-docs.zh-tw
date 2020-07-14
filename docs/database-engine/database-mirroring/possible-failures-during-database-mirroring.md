@@ -1,5 +1,6 @@
 ---
 title: 資料庫鏡像期間可能發生的失敗 | Microsoft Docs
+description: 了解資料庫鏡像工作階段中因實體、作業系統或 SQL Server 問題而造成的失敗，以及如何回應錯誤。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9d8530425db1353a22365b0de165619f6e8eee74
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6b1e2a216a38ed3a9009d446ebf8d5abd79048df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70874278"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735226"
 ---
 # <a name="possible-failures-during-database-mirroring"></a>資料庫鏡像期間可能發生的失敗
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  實體、作業系統或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 問題都可能會在資料庫鏡像工作階段中導致失敗。 資料庫鏡像不會為了確認 Sqlservr.exe 所依賴的元件是正常運作或已失敗，而定期檢查這些元件。 不過，針對某些類型的錯誤，受影響的元件會對 Sqlservr.exe 報告錯誤。 由其他元件所報告的錯誤稱為「重大錯誤」  (Hard Error)。 為了偵測其他沒有通知的失敗，資料庫鏡像會實作其本身的逾時機制。 當鏡像逾時發生時，資料庫鏡像會假設失敗已經發生，並宣告「軟性錯誤」  。 但是，某些發生在 SQL Server 執行個體層級的失敗並不會造成鏡像逾時，而且可能無法偵測到。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  實體、作業系統或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 問題都可能會在資料庫鏡像工作階段中導致失敗。 資料庫鏡像不會為了確認 Sqlservr.exe 所依賴的元件是正常運作或已失敗，而定期檢查這些元件。 不過，針對某些類型的錯誤，受影響的元件會對 Sqlservr.exe 報告錯誤。 由其他元件所報告的錯誤稱為「重大錯誤」(Hard Error)。 為了偵測其他沒有通知的失敗，資料庫鏡像會實作其本身的逾時機制。 當鏡像逾時發生時，資料庫鏡像會假設失敗已經發生，並宣告「軟性錯誤」。 但是，某些發生在 SQL Server 執行個體層級的失敗並不會造成鏡像逾時，而且可能無法偵測到。  
   
 > [!IMPORTANT]  
 >  在資料庫鏡像工作階段中，偵測不到鏡像資料庫以外之資料庫中的失敗。 而且，除非是因為資料磁碟失敗而重新啟動資料庫，否則不太可能偵測得到資料磁碟失敗。  
@@ -99,7 +100,7 @@ ms.locfileid: "70874278"
   
  **若要變更逾時值 (僅高安全性模式)**  
   
--   使用 [ALTER DATABASE \<資料庫> SET PARTNER TIMEOUT \<整數>](../../t-sql/statements/alter-database-transact-sql.md) 陳述式。  
+-   使用 [ALTER DATABASE \<database> SET PARTNER TIMEOUT \<integer>](../../t-sql/statements/alter-database-transact-sql.md) 陳述式。  
   
  **若要檢視目前的逾時值**  
   

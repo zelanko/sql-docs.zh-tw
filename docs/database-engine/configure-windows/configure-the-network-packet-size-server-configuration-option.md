@@ -1,5 +1,6 @@
 ---
 title: 設定 network packet size 伺服器組態選項 | Microsoft Docs
+description: 了解如何使用 [網路封包大小] 選項，來設定 SQL Server 在用戶端與伺服器之間傳輸要求和結果時所使用的封包大小。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -13,19 +14,19 @@ helpviewer_keywords:
 - packets [SQL Server], size
 - network packet size option
 ms.assetid: 236985bf-fc4a-4a57-98f7-a71ef977fd7b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: b749231e6be3560ceadf24a51cc1f5cb880c24b3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8c87703d399f9f8906c4a3c4a7ea0703d092c333
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81288224"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785894"
 ---
 # <a name="configure-the-network-packet-size-server-configuration-option"></a>設定 network packet size 伺服器組態選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] network packet size [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 [網路封包大小]  選項會設定用於整個網路的封包大小 (以位元組為單位)。 封包是在用戶端與伺服器之間傳送要求與結果的固定大小資料區塊。 預設的封包大小為 4096 個位元組。  
+  此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] network packet size [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 [網路封包大小] 選項會設定用於整個網路的封包大小 (以位元組為單位)。 封包是在用戶端與伺服器之間傳送要求與結果的固定大小資料區塊。 預設的封包大小為 4096 個位元組。  
   
 > [!NOTE]  
 >  除非確信有助於提升效能，否則請勿變更封包大小。 對於大部分應用程式而言，預設封包大小是最適當的大小。  
@@ -42,7 +43,7 @@ ms.locfileid: "81288224"
   
 -   **使用下列方法設定 network packet size 選項：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -78,7 +79,7 @@ ms.locfileid: "81288224"
   
 #### <a name="to-configure-the-network-packet-size-option"></a>設定 network packet size 選項  
   
-1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]  。  
+1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
   
 2.  按一下 **[進階]** 節點。  
   

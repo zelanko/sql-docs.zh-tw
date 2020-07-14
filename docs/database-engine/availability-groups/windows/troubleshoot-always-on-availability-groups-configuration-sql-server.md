@@ -1,6 +1,6 @@
 ---
 title: 可用性群組的常見問題 & 解決方案
-description: 了解如何找出並解決 SQL Server 上 Always On 可用性群組的常見問題。
+description: 針對在 SQL Server 中設定 Always On 伺服器執行個體的可用性群組時常遇到的問題進行疑難排解。
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 068ccbd9e7f4d94ebba52ffc824efb70b9623f06
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 5e4972b2e6207a2ffcd33be6f0a95a848d8d8bdc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925342"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882414"
 ---
 # <a name="troubleshoot-always-on-availability-groups-configuration-sql-server"></a>疑難排解 AlwaysOn 可用性群組組態 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   此主題中的資訊可協助您疑難排解為 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]設定伺服器執行個體時常見的問題。 一般組態問題包含 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 未啟用、不正確地設定帳戶、資料庫鏡像端點不存在、端點無法存取 (SQL Server 錯誤 1418)、網路存取不存在，以及聯結資料庫命令失敗 (SQL Server 錯誤 35250)。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "82925342"
 ##  <a name="endpoints"></a><a name="Endpoints"></a> Endpoints  
  必須正確設定端點。  
   
-1.  確定將要裝載可用性複本的每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體 (每個「複本位置」  )，都擁有資料庫鏡像端點。 若要判斷指定的伺服器執行個體上是否有資料庫鏡像端點，請使用 [sys.database_mirroring_endpoints](../../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) 目錄檢視。 如需詳細資訊，請參閱[建立 Windows 驗證的資料庫鏡像端點 &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) 或[允許資料庫鏡像端點使用輸出連線的憑證 &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)。  
+1.  確定將要裝載可用性複本的每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體 (每個「複本位置」)，都擁有資料庫鏡像端點。 若要判斷指定的伺服器執行個體上是否有資料庫鏡像端點，請使用 [sys.database_mirroring_endpoints](../../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) 目錄檢視。 如需詳細資訊，請參閱[建立 Windows 驗證的資料庫鏡像端點 &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) 或[允許資料庫鏡像端點使用輸出連線的憑證 &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)。  
   
 2.  檢查通訊埠編號是否正確。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "82925342"
 ||開啟...|動作|註解|連結|  
 |------|---------|------------|--------------|----------|  
 |![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|目前主要複本|確定可用性群組接聽程式在線上。|**確認接聽程式是否在線上：**<br /><br /> `SELECT * FROM sys.dm_tcp_listener_states;`<br /><br /> **重新啟動離線接聽程式：**<br /><br /> `ALTER AVAILABILITY GROUP myAG RESTART LISTENER 'myAG_Listener';`|[sys.dm_tcp_listener_states &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
-|![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|目前主要複本|確認 READ_ONLY_ROUTING_LIST 只包含裝載可讀取之次要複本的伺服器執行個體。|**識別可讀取的次要複本** ：sys.availability_replicas (**secondary_role_allow_connections_desc** 資料行)<br /><br /> **檢視唯讀路由清單：** sys.availability_read_only_routing_lists<br /><br /> **變更唯讀路由清單：** ALTER AVAILABILITY GROUP|[sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [sys.availability_read_only_routing_lists &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
+|![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|目前主要複本|確認 READ_ONLY_ROUTING_LIST 只包含裝載可讀取之次要複本的伺服器執行個體。|**識別可讀取的次要複本** ：sys.availability_replicas (**secondary_role_allow_connections_desc** 資料行)<br /><br /> **檢視唯讀路由清單：** sys.availability_read_only_routing_lists<br /><br /> **若要變更唯讀路由清單：** ALTER AVAILABILITY GROUP|[sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [sys.availability_read_only_routing_lists &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
 |![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|read_only_routing_list 中的每個複本|確定 Windows 防火牆未封鎖 READ_ONLY_ROUTING_URL 通訊埠。|-|[設定用於 Database Engine 存取的 Windows 防火牆](../../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|read_only_routing_list 中的每個複本|在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員中，確認：<br /><br /> SQL Server 遠端連接已啟用。<br /><br /> TCP/IP 已啟用。<br /><br /> IP 位址已正確設定。|-|[檢視或變更伺服器屬性 &#40;SQL Server&#41;](../../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)<br /><br /> [設定伺服器接聽特定 TCP 通訊埠 &#40;SQL Server 組態管理員&#41;](../../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)|  
 |![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|read_only_routing_list 中的每個複本|確定 READ_ONLY_ROUTING_URL (TCP<strong>://</strong>*system-address*<strong>:</strong>*port*) 包含正確的完整網域名稱 (FQDN) 和通訊埠編號。|-|[Calculating read_only_routing_url for Always On](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)<br /><br /> [sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
@@ -163,7 +163,7 @@ ms.locfileid: "82925342"
   
 -   [Get-ClusterLog 容錯移轉叢集指令程式](https://technet.microsoft.com/library/ee461045.aspx)  
   
--   [SQL Server AlwaysOn 團隊部落格：SQL Server AlwaysOn 官方團隊部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On 小組部落格：官方 SQL Server Always On 小組部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫鏡像和 Always On 可用性群組的傳輸安全性 &#40;SQL Server&#41;](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   

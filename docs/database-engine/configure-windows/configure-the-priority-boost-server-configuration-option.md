@@ -1,5 +1,6 @@
 ---
 title: 設定 priority boost 伺服器組態選項 | Microsoft Docs
+description: 了解 [優先權提升] 選項。 查看如何使用此選項，在 Windows 2008 或 Windows Server 2008 R2 排程器中，為 SQL Server 設定優先權基底。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -10,19 +11,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - priority boost option
 ms.assetid: 765f1e83-dd52-44fb-b0c8-1078f213607b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 7c18eabf73f964e03ec65981e610aae8ad061b6c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2d2793ad9a8b92efd65cba0be745fc3ad77f715e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012483"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785883"
 ---
 # <a name="configure-the-priority-boost-server-configuration-option"></a>設定 priority boost 伺服器組態選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] priority boost [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 使用 [優先權提升]  選項，指定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否應以高於同一部電腦上其他處理序的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2008 或 Windows 2008 R2 排程優先權執行。 如果將此選項設定為 1， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 Windows 2008 或 Windows Server 2008 R2 排程器中會以優先權基底 13 執行。 預設值是 0，也就是優先權基底 7。  
+  此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] priority boost [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 使用 [優先權提升] 選項，指定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否應以高於同一部電腦上其他處理序的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2008 或 Windows 2008 R2 排程優先權執行。 如果將此選項設定為 1， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 Windows 2008 或 Windows Server 2008 R2 排程器中會以優先權基底 13 執行。 預設值是 0，也就是優先權基底 7。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
@@ -37,7 +38,7 @@ ms.locfileid: "68012483"
   
 -   **使用下列方法設定 priority boost 選項：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -58,7 +59,7 @@ ms.locfileid: "68012483"
   
 #### <a name="to-configure-the-priority-boost-option"></a>若要設定 priority boost 選項  
   
-1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]  。  
+1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
   
 2.  按一下 **[處理器]** 節點。  
   

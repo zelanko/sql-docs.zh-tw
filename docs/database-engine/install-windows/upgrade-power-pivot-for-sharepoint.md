@@ -11,16 +11,16 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 8d13d6df17cad82076813c5fee93ed794d3439f2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ed9b17969e54f620ee22c237526f59e2f49700b5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68892578"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900242"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>升級 Power Pivot for SharePoint
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
   本文摘要說明將 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 部署升級至 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] 所需的步驟。 特定步驟取決於您環境目前執行的 SharePoint 版本，並包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 增益集 (**spPowerPivot.msi**)。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "68892578"
   
     1.  在 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈] 中，按一下 **[安裝]** 。  
   
-    2.  按一下 [從 SQL Server 升級...]  。  
+    2.  按一下 [從 SQL Server 升級...]。  
   
     3.  在 **[選取執行個體]** 頁面上，選取 **[POWERPIVOT]** 執行個體名稱，然後按 **[下一步]** 。  
   
@@ -96,13 +96,13 @@ ms.locfileid: "68892578"
   
 4.  **在 SharePoint 2013 伺服器陣列中的每部伺服器上，執行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 組態** 工具，以增益集所安裝的更新方案檔來設定 SharePoint 伺服器陣列。 您無法使用 SharePoint 管理中心來進行此步驟。 如需詳細資訊，請參閱下列：  
   
-    1.  在 Windows [開始] 頁面中，輸入 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** ，然後在搜尋結果中，按一下 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 組態]  。 請注意，搜尋可能會將組態工具的兩個版本皆傳回。  
+    1.  在 Windows [開始] 頁面中，輸入 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** ，然後在搜尋結果中，按一下 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 組態]。 請注意，搜尋可能會將組態工具的兩個版本皆傳回。  
   
          ![兩個 PowerPivot 組態工具](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/as-powerpivot-configtools-bothicons.gif "兩個 PowerPivot 組態工具")  
   
          Or  
   
-         在 [開始]  功能表上，指向 [所有程式]  ，然後依序按一下 [[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、[組態工具]  和 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 組態工具]  。 請注意，只有在本機伺服器上安裝了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 時，才會列出此工具。  
+         在 [開始] 功能表上，指向 [所有程式]，然後依序按一下 [[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、[組態工具] 和 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 組態工具]。 請注意，只有在本機伺服器上安裝了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 時，才會列出此工具。  
   
     2.  啟動時，組態工具會檢查 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器陣列方案與 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Web 應用程式方案的升級狀態。 如果偵測到這些方案的舊版，您將看到「**偵測到較新版本的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 方案檔。請選取升級選項以升級您的伺服器陣列**」。 按一下 [確定]  以關閉系統驗證訊息。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "68892578"
         > [!IMPORTANT]  
         >  您必須一律先處理第一個動作 **[升級伺服器陣列方案]** 。 此動作會註冊用來設定伺服器的 PowerShell 指令程式。 如果此動作出現錯誤，請不要繼續。 在處理工作清單中的其他動作之前，請改用此錯誤所提供的資訊診斷並解決問題。  
   
-    7.  按一下 **[執行]** ，執行適用於此工作的所有動作。 只有在通過驗證檢查的情況下，才可以使用 **[執行]** 。 當您按一下 [執行]  時，會出現下列警告，提醒您動作是在批次模式下處理：「**工具中標示為有效的所有組態設定都會套用到 SharePoint 伺服器陣列。您要繼續嗎？** 」  
+    7.  按一下 **[執行]** ，執行適用於此工作的所有動作。 只有在通過驗證檢查的情況下，才可以使用 **[執行]** 。 當您按一下 [執行] 時，會出現下列警告，提醒您動作是在批次模式下處理：「**工具中標示為有效的所有組態設定都會套用到 SharePoint 伺服器陣列。您要繼續嗎？** 」  
   
     8.  按一下 **[是]** 繼續。  
   
@@ -170,7 +170,7 @@ ms.locfileid: "68892578"
   
 7.  **在 SharePoint 2013 伺服器陣列中的每部伺服器上，執行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ) 服務的第一部 SharePoint 應用程式伺服器上，** 組態工具[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]，以升級 SharePoint 中的方案和 Web 服務。 您無法使用管理中心進行此步驟。  
   
-    1.  在 [開始]  功能表上，指向 [所有程式]  ，然後依序按一下 [[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、[組態工具]  及 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具]  。 請注意，只有在本機伺服器上安裝了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 時，才會列出此工具。  
+    1.  在 [開始]  功能表上，指向 [所有程式]，然後依序按一下 [[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、[組態工具] 及 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具]。 請注意，只有在本機伺服器上安裝了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 時，才會列出此工具。  
   
     2.  啟動時，組態工具會檢查 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器陣列方案與 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Web 應用程式方案的升級狀態。 如果偵測到這些方案的舊版，您將看到「偵測到較新版本的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 方案檔。 請選取升級選項以升級您的伺服器陣列」。 按一下 **[確定]** 以關閉訊息。  
   
@@ -197,7 +197,7 @@ ms.locfileid: "68892578"
         > [!IMPORTANT]  
         >  您必須一律先處理第一個動作 **[升級伺服器陣列方案]** 。 此動作會註冊用來設定伺服器的 PowerShell 指令程式。 如果此動作出現錯誤，請不要繼續。 在處理工作清單中的其他動作之前，請改用此錯誤所提供的資訊診斷並解決問題。  
   
-    8.  按一下 **[執行]** ，執行適用於此工作的所有動作。 只有在通過驗證檢查的情況下，才可以使用 **[執行]** 。 當您按一下 [執行]  時，會出現下列警告，提醒您動作是在批次模式下處理：「工具中標示為有效的所有組態設定都會套用到 SharePoint 伺服器陣列。 您要繼續嗎？」  
+    8.  按一下 **[執行]** ，執行適用於此工作的所有動作。 只有在通過驗證檢查的情況下，才可以使用 **[執行]** 。 當您按一下 [執行] 時，會出現下列警告，提醒您動作是在批次模式下處理：「工具中標示為有效的所有組態設定都會套用到 SharePoint 伺服器陣列。 您要繼續嗎？」  
   
     9. 按一下 **[是]** 繼續。  
   
@@ -219,7 +219,7 @@ ms.locfileid: "68892578"
         Stsadm -o enumdeployments  
         ```  
   
-    2.  檢閱現有部署的下列資訊：[類型]  是 [撤銷] 或 [部署]、[檔案]  是 powerpivotwebapp.wsp 或 powerpivotfarm.wsp。  
+    2.  檢閱現有部署的下列資訊：[類型] 是 [撤銷] 或 [部署]、[檔案] 是 powerpivotwebapp.wsp 或 powerpivotfarm.wsp。  
   
     3.  若是與 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 方案相關的部署或撤銷，請複製 **JobId** 的 GUID 值，然後將其貼入下列命令 (使用命令介面之 [編輯] 功能表上的 [標記]、[複製] 和 [貼上] 命令來複製 GUID)：  
   
@@ -247,7 +247,7 @@ ms.locfileid: "68892578"
 Get-PowerPivotSystemService  
 ```  
   
- 驗證 **CurrentSolutionVersion**。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 是 13.0.\<主要組建>.\<次要組建> 版  
+ 驗證 **CurrentSolutionVersion**。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 為 13.0.\<major build>.\<minor build> 版  
   
 ### <a name="verify-the-version-of-the-analysis-services-windows-service"></a>驗證 Analysis Services Windows 服務的版本  
  如果您只有升級 SharePoint 2010 伺服陣列中的部分 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 伺服器，則未升級之伺服器上的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體將會比預期在伺服器陣列中的版本還舊。 您必須將所有的伺服器升級至相同版本，才可以加以使用。 使用下列其中一種方法來驗證每部電腦上的 SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) Windows 服務版本。  
@@ -258,9 +258,9 @@ Get-PowerPivotSystemService
   
 2.  以滑鼠右鍵按一下 `msmdsrv.exe`，然後選取 **[屬性]** 。  
   
-3.  按一下 [詳細資訊]  。  
+3.  按一下 [詳細資訊] 。  
   
-4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 檔案版本應該為 13.00.\<主要組建>.\<次要組建>。  
+4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 檔案版本應為 13.00.\<major build>.\<minor build>。  
   
 5.  確認這個編號與 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 方案和系統服務版本相同。  
   
@@ -310,7 +310,7 @@ Get-PowerPivotSystemService
   
 2.  依組件名稱排序，並搜尋 **Microsoft.Analysis Services.Adomd.Client**。  
   
-3.  確認您有 13.0.\<組建編號> 版。  
+3.  確認您有 13.0.\<build number> 版。  
   
 ##  <a name="upgrading-multiple-power-pivot-for-sharepoint-servers-in-a-sharepoint-farm"></a><a name="geminifarm"></a> 在 SharePoint 伺服器陣列中升級多部 Power Pivot for SharePoint 伺服器  
  在包含多部 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 伺服器的多重伺服器拓撲中，所有伺服器執行個體和元件都必須是相同版本。 執行最新軟體版本的伺服器會設定伺服陣列中所有伺服器的層級。 如果您只要升級部分伺服器，執行較舊版軟體的伺服器在升級之前將變成無法使用。  

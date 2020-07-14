@@ -1,5 +1,6 @@
 ---
 title: 使用 PowerShell 佈建 Always Encrypted 金鑰 | Microsoft Docs
+description: 了解如何使用 SqlServer PowerShell 模組為 Always Encrypted 佈建金鑰，以提供加密金鑰和資料庫的控制存取權。
 ms.custom: ''
 ms.date: 06/26/2019
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.assetid: 3bdf8629-738c-489f-959b-2f5afdaf7d61
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2748ffa055927670b840a17590dc4e29436deb30
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bc9baa4cb8d27c458b92eb952a7121906dcfb1ab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73594469"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85627106"
 ---
 # <a name="provision-always-encrypted-keys-using-powershell"></a>使用 PowerShell 佈建 Always Encrypted 金鑰
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
     
 本文提供使用 [SqlServer PowerShell 模組](../../../relational-databases/scripting/sql-server-powershell-provider.md)佈建永遠加密金鑰的步驟。 您可以使用 PowerShell 佈建永遠加密金鑰， [用不用角色隔離皆可](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#KeyManagementRoles)，控制能夠存取金鑰存放區中實際加密金鑰以及能夠存取資料庫的人員。 
@@ -31,7 +32,7 @@ ms.locfileid: "73594469"
 
 本節中所述金鑰佈建方法不支援安全性系統管理員與 DBA 之間的角色隔離。 下列步驟有些會結合實體金鑰作業和金鑰中繼資料作業。 因此，使用 DevOps 模型的組織，或如果資料庫裝載於雲端且主要目標是限制雲端管理員 (而不是內部部署 DBA) 存取敏感性資料，則建議使用這種方法來佈建金鑰。 如果潛在的敵人包括 DBA，或 DBA 不應具有存取敏感性資料的權限，即不建議使用。
 
-請先確定 PowerShell 環境是在不同於裝載資料庫之電腦的安全電腦上執行，再執行與存取純文字金鑰或金鑰存放區相關的任何步驟 (下表中的 [存取純文字金鑰/金鑰存放區]  資料行)。 如需詳細資訊，請參閱 [金鑰管理的安全性考量](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management)。
+請先確定 PowerShell 環境是在不同於裝載資料庫之電腦的安全電腦上執行，再執行與存取純文字金鑰或金鑰存放區相關的任何步驟 (下表中的 [存取純文字金鑰/金鑰存放區] 資料行)。 如需詳細資訊，請參閱 [金鑰管理的安全性考量](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management)。
 
 
 Task  |發行項  |存取純文字金鑰/金鑰存放區  |存取資料庫   
@@ -171,7 +172,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 ### <a name="security-administrator"></a>安全性系統管理員
 
-執行與存取純文字金鑰或金鑰存放區相關的任何步驟 (下表中的 [存取純文字金鑰/金鑰存放區]  資料行) 前，請確定︰
+執行與存取純文字金鑰或金鑰存放區相關的任何步驟 (下表中的 [存取純文字金鑰/金鑰存放區] 資料行) 前，請確定︰
 1.  PowerShell 環境執行所在的安全電腦，與裝載您資料庫的電腦不同。
 2.  貴組織的 DBA 沒有電腦存取權 (會破壞的角色隔離的目的)。
 

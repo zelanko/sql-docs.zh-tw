@@ -31,15 +31,15 @@ helpviewer_keywords:
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b4352a1b050bc27be18d490c8790f793f57e1839
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7a8290a80438b41a201f268c7388c06d2d7df930
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632172"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902288"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   建立端點及定義其屬性，包括用戶端應用程式可用的方法。 如需相關的權限資訊，請參閱 [GRANT 端點權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "81632172"
   
      在這個部分，您定義端點上支援的裝載。 裝載可以是下列數個支援類型之一：[!INCLUDE[tsql](../../includes/tsql-md.md)]、Service Broker 及資料庫鏡像。 在這個部分，您還會併入特定語言資訊。  
   
-> **注意：** 已移除 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中的原生 XML Web Service (SOAP/HTTP 端點)。  
+> **注意：** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 已移除原生 XML Web Service (SOAP/HTTP 端點)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -159,7 +159,7 @@ FOR DATABASE_MIRRORING (
 > [!NOTE]  
 >  有關 SERVICE_BROKER 特定的選項，請參閱本節稍後的「SERVICE_BROKER 選項」。 有關 DATABASE_MIRRORING 特定的選項，請參閱本節稍後的「DATABASE_MIRRORING 選項」。  
   
- AUTHENTICATION **=** \<驗證選項>：指定此端點連接的 TCP/IP 驗證需求。 預設值是 WINDOWS。  
+ AUTHENTICATION **=** \<authentication_options> 指定此端點連接的 TCP/IP 驗證需求。 預設值是 WINDOWS。  
   
  支援的驗證方法包括 NTLM 及 (或) Kerberos。  
   

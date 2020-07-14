@@ -1,5 +1,6 @@
 ---
 title: 設定用於資料庫引擎存取的 Windows 防火牆 | Microsoft Docs
+description: 了解如何設定 Windows 防火牆，讓用戶端電腦可以透過防火牆存取 SQL Server 資料庫引擎的執行個體。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - firewall systems, [Database Engine]
 - security [SQL Server], firewalls
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d3ec56a8e4961985a6c809983f671edf0234491d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 815ecb54acf22b1ac28adae534847fa842b2e87a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012891"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784143"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>設定用於 Database Engine 存取的 Windows 防火牆
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 
   此主題描述如何使用 SQL Server 組態管理員，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定用於 Database Engine 存取的 Windows 防火牆。 防火牆系統有助於預防未經授權存取電腦資源。 若要透過防火牆存取 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，您必須在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之電腦上的防火牆設定為允許存取。  
@@ -71,13 +72,13 @@ ms.locfileid: "68012891"
   
 3.  在 **[規則類型]** 對話方塊中，選取 **[通訊埠]** ，然後按 **[下一步]** 。  
   
-4.  在 **[通訊協定及連接埠]** 對話方塊中，選取 **[TCP]** 。 選取 **[特定本機連接埠]** ，然後輸入 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體的通訊埠編號，例如 **1433** 表示預設執行個體。 按 [下一步]  。  
+4.  在 **[通訊協定及連接埠]** 對話方塊中，選取 **[TCP]** 。 選取 **[特定本機連接埠]** ，然後輸入 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體的通訊埠編號，例如 **1433** 表示預設執行個體。 按 [下一步] 。  
   
 5.  在 **[執行動作]** 對話方塊中，選取 **[允許連線]** ，然後按 **[下一步]** 。  
   
 6.  在 **[設定檔]** 對話方塊中，選取您想要連線至 [!INCLUDE[ssDE](../../includes/ssde-md.md)]時，描述電腦連線環境的設定檔，然後按 **[下一步]** 。  
   
-7.  在 [名稱]  對話方塊中輸入此規則的名稱和描述，然後按一下 [完成]  。  
+7.  在 [名稱] 對話方塊中輸入此規則的名稱和描述，然後按一下 [完成]。  
   
 #### <a name="to-open-access-to-sql-server-when-using-dynamic-ports"></a>若要在使用動態通訊埠時開放 SQL Server 的存取  
   
@@ -87,15 +88,15 @@ ms.locfileid: "68012891"
   
 3.  在 **[規則類型]** 對話方塊中，選取 **[程式]** ，然後按 **[下一步]** 。  
   
-4.  在 **[程式]** 對話方塊中，選取 **[這個程式路徑]** 。 按一下 **[瀏覽]** ，並導覽至您想要透過防火牆存取的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，然後按一下 **[開啟]** 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設位於 **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**。 按 [下一步]  。  
+4.  在 **[程式]** 對話方塊中，選取 **[這個程式路徑]** 。 按一下 **[瀏覽]** ，並導覽至您想要透過防火牆存取的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，然後按一下 **[開啟]** 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設位於 **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**。 按 [下一步] 。  
   
 5.  在 **[執行動作]** 對話方塊中，選取 **[允許連線]** ，然後按 **[下一步]** 。  
   
 6.  在 **[設定檔]** 對話方塊中，選取您想要連線至 [!INCLUDE[ssDE](../../includes/ssde-md.md)]時，描述電腦連線環境的設定檔，然後按 **[下一步]** 。  
   
-7.  在 [名稱]  對話方塊中輸入此規則的名稱和描述，然後按一下 [完成]  。  
+7.  在 [名稱] 對話方塊中輸入此規則的名稱和描述，然後按一下 [完成]。  
   
 ## <a name="see-also"></a>另請參閱  
- [如何：設定防火牆設定 (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
+ [操作說明：設定防火牆設定 (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   
   

@@ -38,15 +38,15 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da8b8b87eceba11f6a39a10527ef90046232676a
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 530e207035ea2442b9413d92ec4215f3d72d5086
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606804"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011359"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   變更 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料表或檢視表中現有的資料。 如需範例，請參閱[範例](#UpdateExamples)。  
   
@@ -249,7 +249,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
 CURRENT OF  
  指定在指定資料指標目前的位置執行更新。  
   
- 利用 WHERE CURRENT OF 子句來進行的定位更新，會在資料指標目前位置更新單一資料列。 這比利用 WHERE \<search_condition> 子句來限定要更新之資料列的搜尋更新還要精確。 當搜尋條件並未唯一識別單一資料列時，搜尋更新會修改多個資料列。  
+ 利用 WHERE CURRENT OF 子句來進行的定位更新，會在資料指標目前位置更新單一資料列。 這可能會比使用 WHERE \<search_condition> 子句來限定要更新之資料列的搜尋更新還要精確。 當搜尋條件並未唯一識別單一資料列時，搜尋更新會修改多個資料列。  
   
 GLOBAL  
  指定 *cursor_name* 是全域資料指標。  
@@ -1164,21 +1164,18 @@ SELECT * FROM YearlyTotalSales;
 CREATE TABLE dbo.Table1   
     (ColA int NOT NULL, ColB decimal(10,3) NOT NULL);  
 GO  
-
 CREATE TABLE dbo.Table2   
-    (ColA int PRIMARY KEY NOT NULL, ColB decimal(10,3) NOT NULL);  
+    (ColA int NOT NULL, ColB decimal(10,3) NOT NULL);  
 GO  
-INSERT INTO dbo.Table1 VALUES(1, 10.0), (1, 20.0);  
+INSERT INTO dbo.Table1 VALUES(1, 10.0);  
 INSERT INTO dbo.Table2 VALUES(1, 0.0);  
 GO  
-
 UPDATE dbo.Table2   
 SET dbo.Table2.ColB = dbo.Table2.ColB + dbo.Table1.ColB  
 FROM dbo.Table2   
     INNER JOIN dbo.Table1   
     ON (dbo.Table2.ColA = dbo.Table1.ColA);  
 GO  
-
 SELECT ColA, ColB   
 FROM dbo.Table2;
 GO

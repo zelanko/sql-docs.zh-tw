@@ -18,23 +18,23 @@ helpviewer_keywords:
 ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 13680aea1d34b83d76647d39d0f40b84609b2e8c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6cfbecf5689432a0e9053abf043225b9f9ff596b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67910649"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631572"
 ---
 # <a name="grouping_id-transact-sql"></a>GROUPING_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  這是計算群組層級的函數。 當指定 GROUP BY 時，GROUPING_ID 只能在 SELECT \<select> 清單、HAVING 或 ORDER BY 子句中使用。  
+  這是計算群組層級的函數。 GROUPING_ID 只能在已指定 GROUP BY 的情況下於 SELECT \<select> 清單、HAVING 或 ORDER BY 子句中使用。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 GROUPING_ID ( <column_expression>[ ,...n ] )  
 ```  
@@ -47,10 +47,10 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
  **int**  
   
 ## <a name="remarks"></a>備註  
- GROUPING_ID \<column_expression> 必須完全符合 GROUP BY 清單中的運算式。 例如，若您要根據 DATEPART (yyyy, \<*column name*>) 分組，請使用 GROUPING_ID (DATEPART (yyyy, \<資料行名稱  >))。若您要根據 \<資料行名稱  > 分組，請使用 GROUPING_ID (\<資料行名稱  >)。  
+ GROUPING_ID \<column_expression> 必須完全符合 GROUP BY 清單中的運算式。 例如，如果您要根據 DATEPART (yyyy, \<*column name*>) 分組，請使用 GROUPING_ID (DATEPART (yyyy, \<*column name*>))；如果您要根據 \<*column name*> 分組，請使用 GROUPING_ID (\<*column name*>)。  
   
 ## <a name="comparing-grouping_id--to-grouping-"></a>比較 GROUPING_ID () 與 GROUPING ()  
- GROUPING_ID (\<column_expression> [ **,** ...*n* ]) 針對每一個輸出資料列中資料行清單中的每一個資料行輸入等於 GROUPING (\<column_expression>) 傳回的項目 (當作一和零的字串)。 GROUPING_ID 會將此字串解譯為以 2 為基底的數字，並傳回對等的整數。 例如，假設有以下的陳述式：`SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`。 下表顯示 GROUPING_ID () 輸入和輸出值。  
+ GROUPING_ID (\<column_expression> [ **,** ...*n* ]) 會以一和零字串的形式，輸入針對每一個輸出資料列中資料行清單的每一個資料行傳回之 GROUPING (\<column_expression>) 的對等項目。 GROUPING_ID 會將此字串解譯為以 2 為基底的數字，並傳回對等的整數。 例如，假設有以下的陳述式：`SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`。 下表顯示 GROUPING_ID () 輸入和輸出值。  
   
 |彙總資料行|GROUPING_ID (a, b, c) 輸入 = GROUPING(a) + GROUPING(b) + GROUPING(c)|GROUPING_ID () 輸出|  
 |------------------------|---------------------------------------------------------------------------------------|------------------------------|  
@@ -66,7 +66,7 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
  每一個 GROUPING_ID 引數都必須是 GROUP BY 清單中的元素。 GROUPING_ID () 會傳回**整數**點陣圖，可能會引發其最低的 N 位元。 引發的**位元**表示對應的引數不是指定輸出資料列的群組資料行。 最低順位的**位元**會對應到引數 N；而第 N-1 個<sup></sup>最低順位的**位元**會對應到引數 1。  
   
 ## <a name="grouping_id--equivalents"></a>GROUPING_ID () 對等項目  
- 如果是單一群組查詢，GROUPING (\<column_expression>) 會等於 GROUPING_ID (\<column_expression>) 並傳回 0。  
+ 針對單一群組查詢，GROUPING (\<column_expression>) 相當於 GROUPING_ID (\<column_expression>column_expression>)，且兩者皆會傳回 0。  
   
  例如，下列陳述式是相等的：  
   

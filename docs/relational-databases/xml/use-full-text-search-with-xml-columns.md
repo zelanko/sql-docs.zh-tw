@@ -1,5 +1,6 @@
 ---
 title: 使用 XML 資料行進行全文檢索搜尋 | Microsoft 文件
+description: 了解如何建立 XML 資料行的全文檢索索引，並使用 SQL 來執行 XML 值的全文檢索搜尋。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 108a54614bb6d77be53b28b42a128f9db7a46aae
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 0c3cc821a8630bc7afcd919c4a45140bb9a2621d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665016"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752551"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>使用 XML 資料行進行全文檢索搜尋
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   您可以在 XML 資料行上建立全文檢索索引，以檢索 XML 值的內容，但忽略 XML 標記。 元素標記會當做 Token 界限來使用。 其中會檢索下列項目：  
   
@@ -52,7 +53,7 @@ AND    xCol.exist('/book/title/text()[contains(.,"custom")]') =1
   
  此外，全文檢索搜尋會使用詞幹，但 XQuery **contains()** 是逐字比對的相符項。 下一個範例將舉例說明之間的差異。  
   
-## <a name="example-full-text-search-on-xml-values-using-stemming"></a>範例：使用詞幹在 XML 值上進行全文檢索搜尋  
+## <a name="example-full-text-search-on-xml-values-using-stemming"></a>範例：使用詞幹對 XML 值進行全文檢索搜尋  
  在上個範例中執行的 XQuery **contains()** 檢查通常是無法排除的。 請考量這項查詢：  
   
 ```sql

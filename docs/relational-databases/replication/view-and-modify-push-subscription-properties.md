@@ -18,15 +18,15 @@ ms.assetid: 801d2995-7aa5-4626-906e-c8190758ec71
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 84e3655fac042e213ad82ac02fb39969b4993026
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 17b8f3d9d1a1701aa3642d841433ed7c7386a052
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71174229"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720630"
 ---
 # <a name="view-and-modify-push-subscription-properties"></a>檢視及修改發送訂閱屬性
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中檢視及修改發送訂閱屬性。  
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "71174229"
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  從「發行者」在以下項目中檢視並修改發送訂閱屬性：  
   
--   [訂閱屬性 - \<發行者>: \<發行集資料庫>] 對話方塊，該對話方塊可從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 存取。  
+-   [訂閱屬性 - \<Publisher>: \<PublicationDatabase>] 對話方塊，該對話方塊會在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中提供。  
   
 -   **[所有訂閱]** 索引標籤，在「複寫監視器」中可用。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "71174229"
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>檢視快照式或交易式發行集之發送訂閱的屬性  
   
-1.  在發行集資料庫的發行者上，執行 [sp_helpsubscription](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)。 指定 **\@publication**、**\@subscriber**，並針對 **\@article** 將值指定為 **all**。  
+1.  在發行集資料庫的發行者上，執行 [sp_helpsubscription](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)。 指定 **\@publication**、 **\@subscriber**，並針對 **\@article** 將值指定為 **all**。  
   
 2.  在發行集資料庫的發行者上，執行 [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)，並指定 **\@subscriber**。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "71174229"
   
 1.  在發行集資料庫的發行者上，執行 [sp_changesubscriber](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)，並指定 **\@subscriber** 及針對所變更的訂閱者屬性指定任何參數。  
   
-2.  在發行集資料庫的發行者上，執行 [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)。 指定 **\@publication**、**\@subscriber**、**\@destination_db**，並將 **\@article** 指定為 **all** 值、將變更的訂閱屬性指定為 **\@property**，並將新的值指定為 **\@value**。 這樣會變更發送訂閱的安全性設定。  
+2.  在發行集資料庫的發行者上，執行 [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)。 指定 **\@publication**、 **\@subscriber**、 **\@destination_db**，並將 **\@article** 指定為 **all** 值、將變更的訂閱屬性指定為 **\@property**，並將新的值指定為 **\@value**。 這樣會變更發送訂閱的安全性設定。  
   
 3.  (選擇性) 若要變更訂閱的 Data Transformation Services (DTS) 封裝屬性，請在訂閱資料庫的訂閱者上，執行 [sp_changesubscriptiondtsinfo](../../relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql.md) 。 針對 **\@jobid** 指定散發代理程式作業的識別碼及下列 DTS 套件屬性：  
   

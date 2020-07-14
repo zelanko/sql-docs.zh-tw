@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 1eb71c17-fe15-430b-8916-e4e312dcf9c0
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: cc9716cbd1e27c6589b964c3c3d6208105f4863c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: aeac2877165b3d0b00d33fd62e8e81086d951f0b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68101953"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894878"
 ---
 # <a name="dbcc-dllname-free-transact-sql"></a>DBCC dllname (FREE) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 可從記憶體卸載指定的擴充預存程序 DLL。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
@@ -65,7 +65,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 需要 **系統管理員** 固定伺服器角色或 **db_owner** 固定資料庫角色中的成員資格。
   
 ## <a name="examples"></a>範例  
-下列範例假設 `xp_sample` 是實作為 Xp_sample.dll，而且已經執行。 DBCC \<*dllname*> (FREE) 會卸載與 `xp_sample` 擴充程序相關的 xp_sample.dll 檔。
+下列範例假設 `xp_sample` 是實作為 Xp_sample.dll，而且已經執行。 DBCC \<*dllname*> (FREE) 會卸載與 `xp_sample` 擴充程序相關聯的 xp_sample.dll 檔案。
   
 ```sql  
 DBCC xp_sample (FREE);  

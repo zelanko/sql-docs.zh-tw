@@ -1,5 +1,6 @@
 ---
 title: 移除資料庫鏡像 (SQL Server) | Microsoft Docs
+description: 了解停止資料庫鏡像工作階段的影響，資料庫擁有者可以隨時在 SQL Server 中的任一個合作夥伴上執行此動作。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 40c72091-8f03-4037-8b55-5e95309fe145
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ae494ae5b12cf99e836869f65c055803dd9666e6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d3da88574635b01afd7f309bb09b8850e072a241
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025266"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735168"
 ---
 # <a name="removing-database-mirroring-sql-server"></a>移除資料庫鏡像 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   資料庫擁有者可隨時在夥伴上手動停止資料庫鏡像工作階段。  
   
 ## <a name="impact-of-removing-mirroring"></a>移除鏡像的影響  

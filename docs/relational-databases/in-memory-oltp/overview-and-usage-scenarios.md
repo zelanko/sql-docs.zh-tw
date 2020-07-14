@@ -1,5 +1,6 @@
 ---
 title: 概觀和使用案例 | Microsoft Docs
+description: 了解記憶體內部 OLTP，此為 SQL Server 和 Azure SQL Database 中適用於最佳化交易處理的技術。 檢閱範例和其他資源。
 ms.custom: ''
 ms.date: 04/10/2017
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b6fdfbbdd70ad0abf95c3860c2349cc55b5e12b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c4f98e06aa52d2fe7e3c0a911f793a038c8dee9a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75831850"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722424"
 ---
 # <a name="overview-and-usage-scenarios"></a>概觀和使用案例
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 記憶體內部 OLTP 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中提供的首要技術，可提高交易處理、資料擷取、資料載入及暫時性資料案例的效能。 本文包含這項技術的概觀，並將概述記憶體內部 OLTP 的使用案例。 使用此資訊來判斷記憶體內部 OLTP 是否適合您的應用程式。 本文隨附的範例會顯示記憶體內部 OLTP 物件、效能示範的參考，以及您可在後續步驟中使用之資源的參考。
 

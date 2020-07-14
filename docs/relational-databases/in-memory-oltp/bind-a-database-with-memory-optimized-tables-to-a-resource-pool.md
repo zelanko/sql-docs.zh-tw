@@ -1,5 +1,6 @@
 ---
 title: 將包含記憶體最佳化資料表的資料庫繫結至資源集區
+description: 了解如何建立個別的資源集區，來管理具有經記憶體最佳化的資料表之 SQL Server 資料庫的記憶體耗用量。
 ms.custom: seo-dt-2019
 ms.date: 08/29/2016
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8bc12c4ef792fe1df3d9855df72e025a2dafa6ac
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e976cd81fb6d52e320ec18ea1c661a25f71baa07
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412758"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723382"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>將包含記憶體最佳化資料表的資料庫繫結至資源集區
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   資源集區代表可受管制的實體資源子集。 根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫會繫結至預設資源集區並取用其資源。 為了防止一個或多個記憶體最佳化資料表取用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有資源，以及避免其他記憶體使用者耗用記憶體最佳化資料表所需的記憶體，您應該針對具有記憶體最佳化資料表的資料庫建立另一個資源集區來管理記憶體耗用量。  
   
@@ -54,7 +55,7 @@ ms.locfileid: "74412758"
  您可以按照任何順序建立資料庫和資源集區。 重點在於這兩者必須事先存在，才能將資料庫繫結至資源集區。  
   
 ###  <a name="create-the-database"></a><a name="bkmk_CreateDatabase"></a> 建立資料庫  
- 下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 會建立名為 IMOLTP_DB 的資料庫，其中將包含一個或多個記憶體最佳化資料表。 執行此命令之前，路徑 \<磁碟機和路徑> 必須存在。  
+ 下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 會建立名為 IMOLTP_DB 的資料庫，其中將包含一個或多個記憶體最佳化資料表。 執行此命令之前，路徑 \<driveAndPath> 必須存在。  
   
 ```sql  
 CREATE DATABASE IMOLTP_DB  
@@ -86,7 +87,7 @@ GO
 ###  <a name="create-a-resource-pool-and-configure-memory"></a><a name="bkmk_CreateResourcePool"></a> 建立資源集區和設定記憶體  
  設定記憶體最佳化資料表的記憶體時，應該依據 MIN_MEMORY_PERCENT 規劃容量，而不是依據 MAX_MEMORY_PERCENT。  如需有關 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的詳細資訊，請參閱 [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)。 這樣可以為記憶體最佳化資料提供更可預測的記憶體可用性，因為 MIN_MEMORY_PERCENT 會對其他資源集區造成記憶體壓力，以確保記憶體可被接受。 若要確保記憶體可用，並幫助避免記憶體不足狀況，MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值應相同。 如需以認可記憶體數量為基礎，可用於記憶體最佳化資料表的記憶體百分比，請參閱以下的 [可用記憶體最佳化資料表和索引的記憶體百分比](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable) 。  
   
- 如需有關在 VM 環境下作業的詳細資訊，請參閱 [最佳做法：在 VM 環境使用記憶體內部 OLTP](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) 。  
+ 請參閱[最佳做法：在 VM 環境使用記憶體內部 OLTP](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9)，以了解有關在 VM 環境下作業的詳細資訊。  
   
  下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼會建立名為 Pool_IMOLTP 的資源集區，而且一半的記憶體可供它使用。  建立集區之後，資源管理員會重新設定為包含 Pool_IMOLTP。  
   
@@ -142,7 +143,7 @@ GO
  此時，資料庫已繫結至資源集區。  
   
 ##  <a name="change-min_memory_percent-and-max_memory_percent-on-an-existing-pool"></a><a name="bkmk_ChangeAllocation"></a> 變更現有集區上的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT  
- 如果您為伺服器另外再加入記憶體，或是您的記憶體最佳化資料表所需的記憶體數量已變更，可能就必須更改 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值。 下列步驟將為您示範如何更改資源集區的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 值。 請參閱下一節提供的指引，以得知 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 應該使用哪些值。  如需詳細資訊，請參閱 [最佳做法：在 VM 環境使用記憶體內部 OLTP](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) 主題。  
+ 如果您為伺服器另外再加入記憶體，或是您的記憶體最佳化資料表所需的記憶體數量已變更，可能就必須更改 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值。 下列步驟將為您示範如何更改資源集區的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 值。 請參閱下一節提供的指引，以得知 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 應該使用哪些值。  請參閱[最佳做法：在 VM 環境使用記憶體內部 OLTP](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9)主題，以了解詳細資訊。  
   
 1.  使用 `ALTER RESOURCE POOL` 變更 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值。  
   

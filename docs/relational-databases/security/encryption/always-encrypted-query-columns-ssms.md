@@ -1,5 +1,6 @@
 ---
 title: 使用 Always Encrypted 與 SQL Server Management Studio 查詢資料行 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 在 Always Encrypted 中查詢資料行。 擷取加密資料行中儲存的加密文字或文字值。
 ms.custom: ''
 ms.date: 10/31/2019
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 221c5c0fa216b8d5fba7f133b717a3d102aea963
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f33d58a0fe9b61519c8946708dcd22c84dff90ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287132"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85627405"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>使用 Always Encrypted 與 SQL Server Management Studio 查詢資料行
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 本文描述如何使用 [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md) 來查詢以 [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 加密的資料行。 您可以使用 SSMS：
 - 擷取加密資料行中儲存的加密文字值。 
@@ -86,25 +87,25 @@ ms.locfileid: "79287132"
 
 如果您未針對連接啟用 Always Encrypted，則 SSMS 所使用的 .NET Framework Data Provider for SQL Server 不會嘗試加密查詢參數或將結果解密。
 
-您可以在建立新連接或變更現有的連接時，使用 [連接到伺服器]  對話方塊來啟用或停用 Always Encrypted。 
+您可以在建立新連接或變更現有的連接時，使用 [連接到伺服器] 對話方塊來啟用或停用 Always Encrypted。 
 
 若要啟用 (停用) Always Encrypted：
-1. 開啟 [連接到伺服器]  對話方塊 (如需詳細資料，請參閱[連接到 SQL Server 執行個體](../../../ssms/tutorials/connect-query-sql-server.md#connect-to-a-sql-server-instance))。
-1. 按一下 [選項 >>]  。
+1. 開啟 [連接到伺服器] 對話方塊 (如需詳細資料，請參閱[連接到 SQL Server 執行個體](../../../ssms/tutorials/connect-query-sql-server.md#connect-to-a-sql-server-instance))。
+1. 按一下 [選項 >>]。
 1. 如果您使用 SSMS 18 或更新版本：
-    1. 選取 [Always Encrypted]  索引標籤。
-    1. 若要啟用 Always Encrypted，請選取 [啟用 Always Encrypted (資料行加密)]  。 若要停用 Always Encrypted，請確定未選取 [啟用 Always Encrypted (資料行加密)]  。
-    1. 如果您使用 [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)]，且您的 SQL Server 執行個體已設定安全記憶體保護區，您可以指定記憶體保護區證明 URL。 如果您的 SQL Server 執行個體未使用安全記憶體保護區，請確定將 [記憶體保護區證明 URL]  文字方塊留白。 如需詳細資訊，請參閱[具有安全記憶體保護區的 Always Encrypted](always-encrypted-enclaves.md)。
+    1. 選取 [Always Encrypted] 索引標籤。
+    1. 若要啟用 Always Encrypted，請選取 [啟用 Always Encrypted (資料行加密)]。 若要停用 Always Encrypted，請確定未選取 [啟用 Always Encrypted (資料行加密)]。
+    1. 如果您使用 [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)]，且您的 SQL Server 執行個體已設定安全記憶體保護區，您可以指定記憶體保護區證明 URL。 如果您的 SQL Server 執行個體未使用安全記憶體保護區，請確定將 [記憶體保護區證明 URL] 文字方塊留白。 如需詳細資訊，請參閱[具有安全記憶體保護區的 Always Encrypted](always-encrypted-enclaves.md)。
 1. 如果您使用 SSMS 17 或更舊版本：
-    1. 選取 [其他屬性]  索引標籤。
-    1. 若要啟用 Always Encrypted，請鍵入 `Column Encryption Setting = Enabled`。 若要停用 Always Encrypted，請指定 `Column Encryption Setting = Disabled`，或從 [其他屬性]  索引標籤中移除 [資料行加密設定]  的設定 (預設值為 [停用]  )。   
+    1. 選取 [其他屬性] 索引標籤。
+    1. 若要啟用 Always Encrypted，請鍵入 `Column Encryption Setting = Enabled`。 若要停用 Always Encrypted，請指定 `Column Encryption Setting = Disabled`，或從 [其他屬性] 索引標籤中移除 [資料行加密設定] 的設定 (預設值為 [停用])。   
  1. 按一下 [ **連接**]。
 
 > [!TIP]
 > 在已針對現有的 [查詢編輯器] 視窗啟用和停用的 Always Encrypted 之間進行切換：   
 > 1.    以滑鼠右鍵按一下 [查詢編輯器] 視窗中的任何位置。
-> 2.    選取 [連接]   > [變更連接...]  。這會針對 [查詢編輯器] 視窗的目前連接開啟 [連接到伺服器]  對話方塊。 
-> 2.    啟用或停用 Always Encrypted，然後遵循上述步驟並按一下 [連接]  。  
+> 2.    選取 [連接] > [變更連接...]。這會針對 [查詢編輯器] 視窗的目前連接開啟 [連接到伺服器] 對話方塊。 
+> 2.    啟用或停用 Always Encrypted，然後遵循上述步驟並按一下 [連接]。  
    
 ## <a name="parameterization-for-always-encrypted"></a><a name="param"></a>Always Encrypted 的參數化   
  
@@ -125,18 +126,18 @@ WHERE [SSN] = @SSN
 針對目前的 [查詢編輯器] 視窗啟用/停用 [Always Encrypted 的參數化]：
 
 1. 從主功能表選取 [查詢]  。
-2. 選取 [查詢選項]  。
-3. 瀏覽至 [執行]   > [進階]  。
-4. 選取或取消選取 [啟用 Always Encrypted 的參數化]  。
-5. 按一下 [確定]  。
+2. 選取 [查詢選項]。
+3. 瀏覽至 [執行] > [進階]。
+4. 選取或取消選取 [啟用 Always Encrypted 的參數化] 。
+5. 按一下 [確定]。
 
 針對未來的 [查詢編輯器] 視窗啟用/停用 [Always Encrypted 的參數化]：
 
 1. 從主功能表選取 [工具]  。
-2. 選取 [選項]  。
-3. 瀏覽至 [查詢執行]   > [SQL Server]   > [進階]  。
-4. 選取或取消選取 [啟用 Always Encrypted 的參數化]  。
-5. 按一下 [確定]  。
+2. 選取 [選項]。
+3. 瀏覽至 [查詢執行] > [SQL Server] > [進階]。
+4. 選取或取消選取 [啟用 Always Encrypted 的參數化] 。
+5. 按一下 [確定]。
 
 如果您執行查詢的 [查詢編輯器] 視窗使用已啟用 Always Encrypted 的資料庫連接，但尚未針對 [查詢編輯器] 視窗啟用參數化，則系統會提示您啟用它。
 
@@ -172,7 +173,7 @@ DECLARE @NewSalary money = @Salary * 1.1; -- an expression used instead of a lit
  
 若要成功嘗試進行參數化：   
 - 針對要參數化之變數初始化所使用的常值類型必須符合變數宣告中的類型。   
-- 如果變數的宣告類型是日期類型或時間類型，就必須使用字串，以其中一個遵循 ISO 8601 規範的格式來初始化變數。   
+- 如果變數的宣告類型是日期類型或時間類型，就必須使用字串，以下列其中一個遵循 [ISO 8601 規範的格式](https://docs.microsoft.com/sql/t-sql/functions/cast-and-convert-transact-sql#date-and-time-styles)來初始化變數。    
 
 以下是將產生參數化錯誤的 Transact-SQL 變數宣告範例：   
 ```sql
@@ -182,9 +183,9 @@ DECLARE @Number int = 1.1 -- the type of the literal does not match the type of 
 ```
 SQL Server Management Studio 會使用 Intellisense，來告知您哪些變數可以成功參數化，以及哪些參數化嘗試失敗 (與原因)。   
 
-在 [查詢編輯器] 中，會以警告底線標示可成功參數化的變數宣告。 如果您將滑鼠停留在以警告底線標示的宣告陳述式上，您會看到參數化程序的結果，包括所產生 [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) 物件 (變數要與其對應) 的主要屬性值：[SqlDbType](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx)、[Size](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.size.aspx)、[Precision](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.precision.aspx)、[Scale](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.scale.aspx)、[SqlValue](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqlvalue.aspx)。 您也可以在 [錯誤清單]  檢視的 [警告]  索引標籤中，查看已成功地參數化的所有變數的完整清單。 若要開啟 [錯誤清單]  檢視，從主功能表選取 [檢視]  ，然後選取 [錯誤清單]  。    
+在 [查詢編輯器] 中，會以警告底線標示可成功參數化的變數宣告。 如果您將滑鼠停留在以警告底線標示的宣告陳述式上，您會看到參數化程序的結果，包括所產生 [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) 物件 (變數要與其對應) 的主要屬性值：[SqlDbType](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx)、[Size](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.size.aspx)、[Precision](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.precision.aspx)、[Scale](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.scale.aspx)、[SqlValue](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqlvalue.aspx)。 您也可以在 [錯誤清單]  檢視的 [警告]  索引標籤中，查看已成功地參數化的所有變數的完整清單。 若要開啟 [錯誤清單]  檢視，從主功能表選取 [檢視]  ，然後選取 [錯誤清單] 。    
 
-如果 SQL Server Management Studio 已嘗試將變數參數化，但參數化失敗，則將會以錯誤底線標示變數的宣告。 如果您將滑鼠停留在已使用錯誤底線標示的宣告陳述式上，您會取得有關錯誤的結果。 您也可以在 [錯誤清單]  檢視的 [錯誤]  索引標籤中，查看所有變數的參數化錯誤的完整清單。 若要開啟 [錯誤清單]  檢視，從主功能表選取 [檢視]  ，然後選取 [錯誤清單]  。   
+如果 SQL Server Management Studio 已嘗試將變數參數化，但參數化失敗，則將會以錯誤底線標示變數的宣告。 如果您將滑鼠停留在已使用錯誤底線標示的宣告陳述式上，您會取得有關錯誤的結果。 您也可以在 [錯誤清單]  檢視的 [錯誤]  索引標籤中，查看所有變數的參數化錯誤的完整清單。 若要開啟 [錯誤清單]  檢視，從主功能表選取 [檢視]  ，然後選取 [錯誤清單] 。   
 
 以下螢幕擷取畫面顯示六個變數宣告的範例。 SQL Server Management Studio 已成功將前三個變數參數化。 最後三個變數不符合參數化的必要條件情況，因此，SQL Server Management Studio 未嘗試將它們參數化 (未以任何方式標示它們的宣告)。
 

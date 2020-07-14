@@ -1,21 +1,20 @@
 ---
 title: 什麼是 Azure Data Studio
-titleSuffix: Azure Data Studio
 description: Azure Data Studio 是在 Windows、macOS 和 Linux 上執行，以便管理 SQL Server、Azure SQL Database 和 Azure SQL 資料倉儲的免費輕量型工具。
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: overview
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 01/15/2020
-ms.openlocfilehash: 7cf4f98a4cb8d191cebd9b361fd63217b9cd2228
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 05819f1bafef5095ac9d3534b0293817f3841f96
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75956491"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771931"
 ---
 # <a name="what-is-azure-data-studio"></a>什麼是 Azure Data Studio？
 
@@ -25,17 +24,17 @@ Azure Data Studio 提供新式編輯器體驗，其中包含 IntelliSense、程�
 
 Azure Data Studio 及其提供者的原始程式碼根據原始程式碼 EULA 提供在 GitHub 上，該合約提供修改和使用軟體的權限，但不能在雲端服務中進行重新散發或裝載。 如需詳細資訊，請參閱 [Azure Data Studio 常見問題集](faq.md)。
 
-**[下載並安裝 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
+**[下載並安裝 Azure Data Studio](download.md)**
 
 ## <a name="sql-code-editor-with-intellisense"></a>具備 IntelliSense 的 SQL 程式碼編輯器
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 提供新式、以鍵盤為主的 SQL 程式碼撰寫體驗，利用多個索引標籤視窗、豐富的 SQL 編輯器、IntelliSense、關鍵字完成、程式碼片段、程式碼導覽和原始檔控制整合 (Git) 等內建功能，讓您輕鬆執行日常工作。 執行隨選 SQL 查詢、檢視結果並將其儲存為文字、JSON 或 Excel。 在熟悉的物件瀏覽體驗中編輯資料、管理您慣用的資料庫連線，以及瀏覽資料庫物件。 若要了解如何使用 SQL 編輯器，請參閱[使用 SQL 編輯器建立資料庫物件](tutorial-sql-editor.md)。
+Azure Data Studio 提供新式、以鍵盤為主的 SQL 程式碼撰寫體驗，利用多個索引標籤視窗、豐富的 SQL 編輯器、IntelliSense、關鍵字完成、程式碼片段、程式碼導覽和原始檔控制整合 (Git) 等內建功能，讓您能夠輕鬆執行日常工作。 執行隨選 SQL 查詢、檢視結果並將其儲存為文字、JSON 或 Excel。 在熟悉的物件瀏覽體驗中編輯資料、管理您慣用的資料庫連線，以及瀏覽資料庫物件。 若要了解如何使用 SQL 編輯器，請參閱[使用 SQL 編輯器建立資料庫物件](tutorial-sql-editor.md)。
 
 ## <a name="smart-sql-code-snippets"></a>智慧型 SQL 程式碼片段
 
 SQL 程式碼片段會產生適當的 SQL 語法，來建立資料庫、資料表、檢視、預存程序、使用者、登入、角色，以及更新現有的資料庫物件。 使用智慧型程式碼片段，快速建立資料庫的複本以供進行開發或測試，以及產生和執行 CREATE 和 INSERT 指令碼。
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 也提供建立自訂 SQL 程式碼片段的功能。 若要深入了解，請參閱[建立和使用程式碼片段](code-snippets.md)。
+Azure Data Studio 也提供建立自訂 SQL 程式碼片段的功能。 若要深入了解，請參閱[建立和使用程式碼片段](code-snippets.md)。
 
 ## <a name="customizable-server-and-database-dashboards"></a>可自訂的伺服器和資料庫儀表板
 
@@ -47,13 +46,13 @@ SQL 程式碼片段會產生適當的 SQL 語法，來建立資料庫、資料�
 
 ## <a name="integrated-terminal"></a>整合式終端
 
-在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 使用者介面的整合式終端視窗中，使用您慣用的命令列工具 (例如 Bash、PowerShell、sqlcmd、bcp 和 ssh)。 若要了解整合式終端，請參閱[整合式終端](integrated-terminal.md)。
+在 Azure Data Studio 使用者介面的整合式終端視窗中，使用您慣用的命令列工具 (例如 Bash、PowerShell、sqlcmd、bcp 與 ssh)。 若要了解整合式終端，請參閱[整合式終端](integrated-terminal.md)。
 
 ## <a name="extensibility-and-extension-authoring"></a>擴充性和延伸模組撰寫
 
-透過擴充基本安裝的功能增強 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 體驗。 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 提供資料管理活動的擴充點，以及延伸模組撰寫的支援。
+透過擴充基底安裝的功能來增強 Azure Data Studio 體驗。 Azure Data Studio 提供資料管理活動的擴充點，以及對於延伸模組撰寫的支援。
 
-若要了解 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 中的擴充性，請參閱[擴充性](extensibility.md)。
+若要了解 Azure Data Studio 中的擴充性，請參閱[擴充性](extensibility.md)。
 若要了解如何撰寫延伸模組，請參閱[延伸模組撰寫](extension-authoring.md)。
 
 ## <a name="feature-comparison-with-sql-server-management-studio-ssms"></a>與 SQL Server Management Studio (SSMS) 的功能比較
@@ -166,7 +165,7 @@ SQL 程式碼片段會產生適當的 SQL 語法，來建立資料庫、資料�
 
 ## <a name="next-steps"></a>後續步驟
 
-- [下載並安裝 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
+- [下載並安裝 Azure Data Studio](download.md)
 - [連線及查詢 SQL Server](quickstart-sql-server.md)
 - [連線及查詢 Azure SQL Database](quickstart-sql-database.md)
 

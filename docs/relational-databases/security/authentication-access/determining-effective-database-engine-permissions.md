@@ -1,5 +1,6 @@
 ---
 title: 判斷有效的 Database Engine 權限 | Microsoft Docs
+description: 了解如何判斷誰擁有 SQL Server 資料庫引擎中各種物件的權限，包括目前和先前的權限系統。
 ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7c27c18cb862a753bc1a71c38d732c72a040a48
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: f4e26da02da69955a3bc3f589753efa1007ae3a1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488027"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005628"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>判斷有效的 Database Engine 權限
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 本文描述如何判斷哪些使用者具有 SQL Server 資料庫引擎中各種物件的權限。 SQL Server 會實作 Database Engine 的兩個權限系統。 舊的固定角色系統具有預先設定的權限。 從 SQL Server 2005 開始，提供更具彈性且更精確的系統 (本文的資訊適用於 SQL Server 2005 以上的版本。 有些版本的 SQL Server 無法使用某些類型的權限)。
 

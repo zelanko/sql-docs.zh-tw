@@ -1,6 +1,6 @@
 ---
 title: 強制資料庫鏡像服務
-description: 如果主體伺服器失敗且鏡像伺服器可用，透過將伺服器強制容錯移轉至鏡像資料庫 (可能會遺失資料) 來使資料庫可用
+description: 如果主體伺服器失敗且鏡像伺服器可用，透過將服務強制容錯移轉至鏡像資料庫來使資料庫可用。
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8b6ffe77-35f3-4e2a-a658-8a38a8e1c794
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 970f399ab6227fdaf2672bf887c250b6be02de1e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9ac9ebf9538ad7800deb5807ac5bb1980b2f472b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822226"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754620"
 ---
 # <a name="force-service-in-a-database-mirroring-session-transact-sql"></a>在資料庫鏡像工作階段中強制服務 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   在高效能模式與不含自動容錯移轉的高安全性模式中，若主體伺服器失敗而鏡像伺服器可用，則資料庫擁有者就可以強制將服務容錯移轉到鏡像資料庫 (有遺失資料的可能)，讓資料庫成為可用。 只在下列所有狀況成立時才可使用此選項：  
   
 -   主體伺服器已關閉。  
@@ -40,9 +40,9 @@ ms.locfileid: "74822226"
   
 2.  發出下列陳述式：  
   
-     ALTER DATABASE <資料庫名稱>  SET PARTNER FORCE_SERVICE_ALLOW_DATA_LOSS  
+     ALTER DATABASE <資料庫名稱> SET PARTNER FORCE_SERVICE_ALLOW_DATA_LOSS  
   
-     其中 <資料庫名稱>  是鏡像資料庫。  
+     其中 <資料庫名稱> 是鏡像資料庫。  
   
      鏡像伺服器會立即轉換為主體伺服器，並暫停鏡像。  
   

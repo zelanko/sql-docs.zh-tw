@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 67a36e80059c58fe1666ba147b0b8a5df94e2044
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 16cd0a4dd5d32d47a471c98392b62989201650d6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922213"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896015"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE 陳述式 - 引數 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本主題說明 RESTORE {DATABASE|LOG} 陳述式和下列輔助陳述式關聯集之「語法」一節中所述的引數：RESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY、RESTORE REWINDONLY 和 RESTORE VERIFYONLY。 大部份引數都只得到這六個引數其中一部份的支援。 在每個引數的描述中，都會指出引數所得到的支援。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "82922213"
  指定要將交易記錄備份套用在這個資料庫上。 您必須依照順序來套用交易記錄。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會檢查備份的交易記錄，以確保交易是依照正確順序載入正確的資料庫。 若要套用多個交易記錄，請在所有還原作業上使用 NORECOVERY 選項，但最後一項還原作業除外。  
   
 > [!NOTE]  
->  最後還原的記錄通常是結尾記錄備份。 「結尾記錄備份」  是在剛要還原資料庫之前 (通常是在資料庫作業失敗之後) 所建立的記錄備份。 從可能已損毀的資料庫中取得結尾記錄備份，可以擷取尚未備份的記錄 (記錄結尾) 來防止遺失工作。 如需詳細資訊，請參閱[結尾記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)。  
+>  最後還原的記錄通常是結尾記錄備份。 「結尾記錄備份」是在剛要還原資料庫之前 (通常是在資料庫作業失敗之後) 所建立的記錄備份。 從可能已損毀的資料庫中取得結尾記錄備份，可以擷取尚未備份的記錄 (記錄結尾) 來防止遺失工作。 如需詳細資訊，請參閱[結尾記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)。  
   
  如需詳細資訊，請參閱[套用交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)。  
   
@@ -116,15 +116,15 @@ PAGE
  [ **,** ...*n* ]  
  這是一個預留位置，表示可以在逗號分隔清單中指定多個檔案、檔案群組和頁面。 數目沒有限制。  
   
-FROM { \<backup_device> [ **,** ...*n* ]| \<database_snapshot> } 通常指定要還原備份的來源備份裝置。 另外，您也可以在 RESTORE DATABASE 陳述式中，利用 FROM 子句來指定資料庫所要還原的資料庫快照集名稱，此時不能使用 WITH 子句。  
+FROM { \<backup_device> [ **,** ...*n* ]| \<database_snapshot> } 通常用來指定備份裝置，將會從中還原備份。 另外，您也可以在 RESTORE DATABASE 陳述式中，利用 FROM 子句來指定資料庫所要還原的資料庫快照集名稱，此時不能使用 WITH 子句。  
   
  如果省略 FROM 子句，就不會還原備份。 相反地，此時會復原資料庫。 這可讓您復原已利用 NORECOVERY 選項來還原的資料庫，或切換到待命伺服器。 如果省略 FROM 子句，就必須在 WITH 子句中指定 NORECOVERY、RECOVERY 或 STANDBY。  
   
- \<backup_device> [ **,** ...*n* ] 指定還原作業要用的邏輯或實體備份裝置。  
+ \<backup_device> [ **,** ...*n* ] 指定還原作業要使用的邏輯或實體備份裝置。  
   
  **支援者：** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)、[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)、[RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)、[RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md) 和 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
- \<backup_device>::= 指定備份作業要用的邏輯或實體備份裝置，如下所示：  
+ \<backup_device>::= 指定備份作業要使用的邏輯或實體備份裝置，如下列：  
   
  { _logical\_backup\_device\_name_ |  **@** _logical\_backup\_device\_name\_var_ }  
  這是用來還原資料庫 **sp_addumpdevice** 所建立備份裝置的邏輯名稱，它必須遵循識別碼的規則。 如果備份裝置名稱是以變數 ( **@** _logical\_backup\_device\_name\_var_) 的方式來提供，您可以將此名稱指定為字串常數 ( **@** _logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_)，或指定為字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。  
@@ -469,7 +469,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
   
  如需如何搭配資料庫鏡像使用異動資料擷取的詳細資訊，請參閱[異動資料擷取和其他 SQL Server 功能](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md)。  
   
-#### <a name="service_broker_with_options"></a>\<service_broker_WITH_options>  
+#### \<service_broker_WITH_options>  
  開啟或關閉 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 訊息傳遞，或設定新的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 識別碼。 只有在建立備份時，資料庫啟用 (啟動) 了 [!INCLUDE[ssSB](../../includes/sssb-md.md)]，這個選項才會相關。  
   
  { ENABLE_BROKER  | ERROR_BROKER_CONVERSATIONS  | NEW_BROKER }  
@@ -484,7 +484,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
  NEW_BROKER  
  指定資料庫應該被指派新的 Service Broker 識別碼。 由於資料庫會被視為新的 Service Broker，因此系統會立即移除資料庫中所有現有的交談，而不會產生結束對話訊息。 您必須使用新的識別碼來重新建立參考舊 Service Broker 識別碼的任何路由。  
   
-#### <a name="point_in_time_with_options"></a>\<point_in_time_WITH_options>  
+#### \<point_in_time_WITH_options>  
  **支援者：** [RESTORE {DATABASE|LOG}](../../t-sql/statements/restore-statements-transact-sql.md)，且只適用於完整或大量記錄復原模式。  
   
  您可以在 STOPAT、STOPATMARK 或 STOPBEFOREMARK 子句中指定目標復原點，藉以將資料庫還原至特定時間點或交易。 指定的時間或交易一律是從記錄備份中還原。 在還原順序的每個 RESTORE LOG 陳述式中，您必須在相同的 STOPAT、STOPATMARK 或 STOPBEFOREMARK 子句中指定目標時間或交易。  
@@ -555,7 +555,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
 -   [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
 ## <a name="specifying-a-backup-set"></a>指定備份組  
- 「備份組」  包含單次成功備份作業的備份。 RESTORE、RESTORE FILELISTONLY、RESTORE HEADERONLY 和 RESTORE VERIFYONLY 陳述式會在位於指定之單一或多重備份裝置上媒體集內單一備份組上操作。 您應該在媒體集內指定所需的備份。 您可以使用 *RESTORE HEADERONLY* 陳述式來取得備份組的 [backup_set_file_number](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) 。  
+ 「備份組」包含單次成功備份作業的備份。 RESTORE、RESTORE FILELISTONLY、RESTORE HEADERONLY 和 RESTORE VERIFYONLY 陳述式會在位於指定之單一或多重備份裝置上媒體集內單一備份組上操作。 您應該在媒體集內指定所需的備份。 您可以使用 *RESTORE HEADERONLY* 陳述式來取得備份組的 [backup_set_file_number](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) 。  
   
  用於指定要還原之備份組的選項為：  
   
@@ -569,7 +569,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
 |---------------|-----------------------------------------|  
 |RESTORE|預設的備份組檔案編號為 1。 RESTORE 陳述式中只允許使用一個備份組 FILE 選項。 依序指定備份組很重要。|  
 |RESTORE FILELISTONLY|預設的備份組檔案編號為 1。|  
-|RESTORE HEADERONLY|依預設會處理媒體集中的所有備份組。 RESTORE HEADERONLY 結果集會傳回每個備份組的相關資訊，包括它在媒體集中的 [位置]  。 若要傳回指定備份組的相關資訊，請使用它的位置編號作為 FILE 選項中的 *backup_set_file_number* 值。<br /><br /> 注意:針對磁帶媒體，RESTORE HEADER 只會處理已載入磁帶上的備份組。|  
+|RESTORE HEADERONLY|依預設會處理媒體集中的所有備份組。 RESTORE HEADERONLY 結果集會傳回每個備份組的相關資訊，包括它在媒體集中的 [位置]。 若要傳回指定備份組的相關資訊，請使用它的位置編號作為 FILE 選項中的 *backup_set_file_number* 值。<br /><br /> 注意:針對磁帶媒體，RESTORE HEADER 只會處理已載入磁帶上的備份組。|  
 |RESTORE VERIFYONLY|*backup_set_file_number* 預設值為 1。|  
   
 > [!NOTE]  

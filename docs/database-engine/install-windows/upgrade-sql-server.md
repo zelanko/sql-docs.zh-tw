@@ -1,5 +1,6 @@
 ---
 title: 升級 SQL Server | Microsoft Docs
+description: 此文章提供資源的連結，其中包含不同版本 SQL Server 執行個體的升級資訊。
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5a023389a6c3d0ea087d003af09464481af2089c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8689e210cd0faf265fc1dcf96705a87cecccf5ed
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79198305"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900210"
 ---
 # <a name="upgrade-sql-server"></a>升級 SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
  
  您可以將 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、[!INCLUDE[ss2016](../../includes/sssql15-md.md)] 或 [!INCLUDE[ss2017](../../includes/sssqlv14-md.md)] 的執行個體直接升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 針對 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]，由於支援的主要作業系統之間沒有共同重疊，所以您必須執行並存升級 (或移轉) 才能移至 SQL Server 2019。 在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式以升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之前，請先檢閱下列升級程序的相關文章和版本資訊。  
   

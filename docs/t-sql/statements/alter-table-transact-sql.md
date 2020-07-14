@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/31/2020
+ms.date: 06/23/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -59,16 +59,16 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abe671baec987e5fa98528b59671b48f7b0d8180
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 55f3b740365fc3fa20e93538eb3abdd2ca9b0526
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925380"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000665"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 改變、新增或卸除資料行和條件約束來修改資料表定義。 ALTER TABLE 也會重新指派和重建資料分割，或停用和啟用條件約束和觸發程序。
 
@@ -349,6 +349,8 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
 
 ```
 
+## <a name="syntax-for-azure-synapse-analytics"></a>Azure Synapse Analytics 的語法
+
 ```syntaxsql
 -- Syntax for Azure Synapse Analytics and Analytics Platform System
 
@@ -385,7 +387,7 @@ ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_t
     [ CONSTRAINT constraint_name ] 
     {
         DEFAULT DEFAULT constant_expression
-        | PRIMARY KEY (column_name) NONCLUSTERED  NOT ENFORCED -- Applies to Azure Synapse Analytics only
+        | PRIMARY KEY NONCLUSTERED (column_name) NOT ENFORCED -- Applies to Azure Synapse Analytics only
         | UNIQUE (column_name) NOT ENFORCED -- Applies to Azure Synapse Analytics only
     }
 <rebuild_option > ::=
@@ -499,7 +501,7 @@ WHERE s.object_id = OBJECT_ID('<table_name>');
 
 只適用於 **xml** 資料類型，可用來將 XML 結構描述與該類型產生關聯。 將 **L** 資料行鍵入結構描述集合之前，您必須先使用 [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) 在資料庫中建立結構描述集合。
 
-COLLATE \<定序名稱 >   
+COLLATE \< *collation_name* >  
 指定變更資料行的新定序。 若未指定，就會將資料庫的預設定序指派給資料行。 定序名稱可以是 Windows 定序名稱或 SQL 定序名稱。 如需清單和詳細資訊，請參閱 [Windows 定序名稱](../../t-sql/statements/windows-collation-name-transact-sql.md)和 [SQL Server 定序名稱](../../t-sql/statements/sql-server-collation-name-transact-sql.md)。
 
 COLLATE 子句會變更 **char**、**varchar**、**nchar** 與 **nvarchar** 資料類型之資料行的定序。 若要變更使用者定義別名資料類型資料行的定序，請使用個別的 ALTER TABLE 陳述式來將資料行變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料類型。 然後變更其定序，並將資料行變更回別名資料類型。
@@ -563,7 +565,7 @@ ADD MASKED WITH ( FUNCTION = ' *mask_function* ')
 
 若要卸除遮罩，請使用 `DROP MASKED`。 如需函式參數，請參閱[動態資料遮罩](../../relational-databases/security/dynamic-data-masking.md)。
 
-WITH ( ONLINE = ON | OFF) \<適用於改變資料行>  
+WITH ( ONLINE = ON | OFF) \<as applies to altering a column>  
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 資料表仍可使用時，允許執行多個改變資料行動作。 預設是 OFF。 您可以在線上針對資料類型、資料行長度或有效位數、Null 屬性、疏鬆度和定序來改變資料行。
@@ -621,7 +623,7 @@ PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_n
 
 使用這個引數與 SET SYSTEM_VERSIONING 引數，在現有資料表上啟用系統版本設定。 如需詳細資訊，請參閱[時態表](../../relational-databases/tables/temporal-tables.md)和[開始使用 Azure SQL Database 中的時態表](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/)。
 
-在 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中，使用者可以使用 **HIDDEN** 旗標來標記一或兩個期間資料行來隱含隱藏這些資料行，使 **SELECT \* FROM \<table_name>** 在查詢這些資料行時不會傳回任何值。 根據預設，不會隱藏期間資料行。 為了方便我們使用，隱藏的資料行必須明確包含在所有會直接參考時態表的查詢中。
+在 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中，使用者可以使用 **HIDDEN** 旗標來標記一或兩個期間資料行來隱含隱藏這些資料行，使 **SELECT \* FROM \<table_name>** 不會傳回資料行的值。 根據預設，不會隱藏期間資料行。 為了方便我們使用，隱藏的資料行必須明確包含在所有會直接參考時態表的查詢中。
 
 DROP  
 指定卸除一或多個資料行定義、計算資料行定義或資料表條件約束，或卸除系統將用於系統版本設定的資料行。
@@ -685,7 +687,7 @@ MAXDOP = *max_degree_of_parallelism*
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每個版本都無法使用平行索引作業。 如需詳細資訊，請參閱 [SQL Server 2016 的版本及支援功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)和 [SQL Server 2017 的版本及支援功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。
 
-ONLINE **=** { ON | **OFF** } \<適用於 drop_clustered_constraint_option>  
+ONLINE **=** { ON | **OFF** } \<as applies to drop_clustered_constraint_option>  
 指定在索引作業期間，查詢和資料修改是否能夠使用基礎資料表和相關聯的索引。 預設值為 OFF。 您可以將 REBUILD 用作 ONLINE 作業執行。
 
 開啟  
@@ -845,7 +847,7 @@ COLUMNSTORE_ARCHIVE
 
 若要同時重建多個分割區，請參閱 [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md)。 如果資料表沒有叢集索引，變更資料壓縮將會重建堆積和非叢集索引。 如需與壓縮有關的詳細資訊，請參閱[資料壓縮](../../relational-databases/data-compression/data-compression.md)。
 
-ONLINE **=** { ON | **OFF** } \<適用於 single_partition_rebuild_option>  
+ONLINE **=** { ON | **OFF** } \<as applies to single_partition_rebuild_option>  
 指定在索引作業期間，查詢和資料修改是否能夠使用基礎資料表的單一資料分割，以及相關聯的索引。 預設值為 OFF。 您可以將 REBUILD 用作 ONLINE 作業執行。
 
 開啟  
@@ -987,7 +989,7 @@ IF EXISTS
 
 ### <a name="adding-not-null-columns-as-an-online-operation"></a>以線上作業的方式加入 NOT NULL 資料行
 
-從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise Edition 開始，當預設值是「執行階段常數」  時，加入含有預設值的 NOT NULL 資料行就是線上作業。 這表示，不論資料表中的資料列數目為何，此作業幾乎會立即完成。 因為資料表中的現有資料列不會在作業期間更新。 相反地，預設值只會儲存在資料表的中繼資料內，且存取這些資料列的查詢會視需要查閱此值。 此行為是自動的。 不需要任何額外的語法，即可實作超越 ADD COLUMN 語法的線上作業。 執行階段常數是一種運算式，會在執行階段針對資料表中的每個資料列產生相同的值，不論其決定性為何。 例如，常數運算式 "My temporary data" 或系統函數 GETUTCDATETIME() 都是執行階段常數。 相反地，`NEWID()` 或 `NEWSEQUENTIALID()` 函式不是執行階段常數，因為系統會針對資料表中的每個資料列產生唯一值。 新增含有非執行階段常數之預設值的 NOT NULL 資料行一律以離線方式執行，且系統會在作業期間取得獨佔 (SCH-M) 鎖定。
+從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise Edition 開始，當預設值是「執行階段常數」時，加入含有預設值的 NOT NULL 資料行就是線上作業。 這表示，不論資料表中的資料列數目為何，此作業幾乎會立即完成。 因為資料表中的現有資料列不會在作業期間更新。 相反地，預設值只會儲存在資料表的中繼資料內，且存取這些資料列的查詢會視需要查閱此值。 此行為是自動的。 不需要任何額外的語法，即可實作超越 ADD COLUMN 語法的線上作業。 執行階段常數是一種運算式，會在執行階段針對資料表中的每個資料列產生相同的值，不論其決定性為何。 例如，常數運算式 "My temporary data" 或系統函數 GETUTCDATETIME() 都是執行階段常數。 相反地，`NEWID()` 或 `NEWSEQUENTIALID()` 函式不是執行階段常數，因為系統會針對資料表中的每個資料列產生唯一值。 新增含有非執行階段常數之預設值的 NOT NULL 資料行一律以離線方式執行，且系統會在作業期間取得獨佔 (SCH-M) 鎖定。
 
 當現有資料列參考中繼資料內儲存的值時，如果已插入任何新資料列但並未針對資料行指定另一個值，預設值就會儲存在資料列上。 當您更新資料列 (即使沒有在 UPDATE 陳述式中指定實際的資料行) 或是重建資料表或叢集索引時，中繼資料內儲存的預設值會移至現有資料列。
 
@@ -1031,7 +1033,7 @@ ONLINE **=** ON 有下列限制：
 卸除叢集索引時，需要一個大小等於現有叢集索引的暫存磁碟空間。 作業完成時，會立即釋放此額外空間。
 
 > [!NOTE]
-> *\<drop_clustered_constraint_option>* 底下所列的選項可套用至資料表上的叢集索引，但不可套用至檢視表上的叢集索引，或套用至非叢集索引。
+> *\<drop_clustered_constraint_option>* 下所列的選項，可以套用至資料表的叢集索引，但不可套用至檢視表的叢集索引或套用至非叢集索引。
 
 ## <a name="replicating-schema-changes"></a>複寫結構描述變更
 

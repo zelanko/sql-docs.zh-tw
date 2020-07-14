@@ -1,5 +1,6 @@
 ---
 title: 將商務邏輯新增至 XML 資料 | Microsoft Docs
+description: 了解如何藉由套用 XSL 轉換、對資料使用特定於領域的條件約束，或藉由觸發驗證規則，來將商務邏輯加入至 XML 資料。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,22 +13,22 @@ helpviewer_keywords:
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: aaabf611574c60620df600264537436b41e85c18
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 524be57031368538271d1bde0016121644b9fed4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664815"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729165"
 ---
 # <a name="add-business-logic-to-xml-data"></a>將商務邏輯加入至 XML 資料
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   將商務邏輯加入至 XML 資料的方法有好幾種：  
   
 -   您可以撰寫資料列或資料行條件約束，以在插入及修改 XML 資料時，強制執行網域專屬的條件約束。  
   
 -   您可以在 XML 資料行上撰寫觸發程序，當您在資料行中插入或更新值時，即引發該觸發程序。 觸發程序可包含網域專屬的驗證規則，或是擴展屬性資料表。  
   
--   Database Engine 包含執行 Managed 程式碼的能力。 您可以使用這項 Common Language Runtime (CLR) 整合功能來撰寫要接收 XML 值的 Managed 程式碼函數，並使用 System.Xml 命名空間所提供的 XML 處理功能。 例如，將 XSL 轉換套用至 XML 資料。 或者，您可以將 XML 還原序列化成一個或多個 Managed 類別，並使用 Managed 程式碼來加以操作。  
+-   資料庫引擎包含執行受控程式碼的能力。 您可以使用這項 Common Language Runtime (CLR) 整合功能來撰寫要接收 XML 值的 Managed 程式碼函數，並使用 System.Xml 命名空間所提供的 XML 處理功能。 例如，將 XSL 轉換套用至 XML 資料。 或者，您可以將 XML 還原序列化成一個或多個 Managed 類別，並使用 Managed 程式碼來加以操作。  
   
 -   您可以撰寫 Transact-SQL 預存程序及函數，以針對您的商業需求開始處理 XML 資料行。  
   

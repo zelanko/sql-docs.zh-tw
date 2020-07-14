@@ -1,5 +1,6 @@
 ---
 title: 比較具類型的 XML 與不具類型的 XML | Microsoft Docs
+description: 了解具類型的 XML 和不具類型的 XML 之間的差異。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,16 +26,16 @@ helpviewer_keywords:
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b71c6f867bcc03b220b99ac1e28e930dbe8ea89d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a31b8e27147f0c9b06c79bf56c1b8ae34f4e8e14
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907201"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775548"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>比較具類型的 XML 與不具類型的 XML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  您可以建立 **XML** 類型的變數、參數和資料行。 此外，也可以選擇性地將 XML 結構描述的集合與 **XML** 類型的變數、參數和資料行建立關聯。 在此情況下，此 **XML** 資料類型的執行個體即稱為「具類型」  。 非此種情況下的 XML 執行個體則稱為「不具類型」  。  
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  您可以建立 **XML** 類型的變數、參數和資料行。 此外，也可以選擇性地將 XML 結構描述的集合與 **XML** 類型的變數、參數和資料行建立關聯。 在此情況下，此 **XML** 資料類型的執行個體即稱為「具類型」。 非此種情況下的 XML 執行個體則稱為「不具類型」。  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>格式正確的 XML 和 xml 資料類型  
  **XML** 資料類型會實作 ISO 標準 **XML** 資料類型。 因此，它可以在不具類型的 XML 資料行中儲存格式良好的 XML 1.0 版文件，也可以儲存含有文字節點和任意數量之最上層元素的所謂 XML 內容片段。 系統會確認資料的格式良好、不需要將資料行繫結到 XML 結構描述，並拒絕在某種程度上格式不良的資料。 對於不具類型的 XML 變數和參數而言，也是如此。  
@@ -106,7 +107,7 @@ AS
   
  在資料類型階層中， **XML** 資料類型會出現在 **sql_variant** 和使用者定義類型的下面，但會出現在任何內建類型的上面。  
   
-### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>範例：指定 Facet 來約束 xml 類型的資料行  
+### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>範例：指定 Facet 來約束具類型的 xml 資料行  
  對於具類型的 **XML** 資料行而言，您可以約束資料行，讓儲存在其中的每個執行個體只能有單一的最上層元素。 作法是，在建立資料表時指定選擇性的 `DOCUMENT` Facet，如下列範例所示：  
   
 ```  

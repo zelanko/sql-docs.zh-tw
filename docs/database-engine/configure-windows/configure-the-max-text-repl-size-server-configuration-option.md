@@ -1,5 +1,6 @@
 ---
 title: 設定 max text repl size 伺服器組態選項 | Microsoft Docs
+description: 了解如何使用 max text repl size 選項，來限制 SQL Server 新增至已複寫或已擷取之資料行的特定資料類型大小。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -10,14 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - max text repl size option
 ms.assetid: 3056cf64-621d-4996-9162-3913f6bc6d5b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: abbdd3ed8e522150ad03ec334752e7ec3cf2763f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 85a47542c9681cd2dc004dae788d77010e2e0efd
+ms.sourcegitcommit: da836a2e23bd2ed56d2a72983f7b5b18c6f13342
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012554"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85090560"
 ---
 # <a name="configure-the-max-text-repl-size-server-configuration-option"></a>設定 max text repl size 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "68012554"
   
 -   **使用下列方法設定 max text repl size 選項：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -55,7 +56,7 @@ ms.locfileid: "68012554"
   
 #### <a name="to-configure-the-max-text-repl-size-option"></a>若要設定 max text repl size 選項  
   
-1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]  。  
+1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
   
 2.  按一下 **[進階]** 節點。  
   

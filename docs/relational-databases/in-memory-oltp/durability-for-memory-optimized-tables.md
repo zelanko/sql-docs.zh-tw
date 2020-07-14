@@ -1,5 +1,6 @@
 ---
 title: 記憶體最佳化資料表的持久性 | Microsoft Docs
+description: 了解記憶體內部 OLTP 如何透過使用交易記錄，以及將資料變更儲存到磁碟上儲存體，來針對經記憶體最佳化的資料表提供完整的持久性。
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ca651634947e730df4ae4dda70999c7839521659
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: abd3180e88d1950719ba07b4ef49def277655217
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67942800"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723247"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>記憶體最佳化資料表的持久性
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 為記憶體最佳化的資料表提供完整的持久性。 當變更記憶體最佳化資料表的交易認可時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (對磁碟基礎的資料表也一樣) 會保證這些變更是永久的 (即使資料庫重新啟動後也會存在)，前提是要提供基礎儲存。 持久性有兩個重要元件：交易記錄及磁碟儲存的保存資料變更。  
   
@@ -49,7 +50,7 @@ ms.locfileid: "67942800"
  當資料列遭到刪除時，並不會從資料檔案移除該資料列，而是該資料列的參考將附加到與該資料列插入當時的交易範圍相關聯的差異檔案。 由於要刪除的資料列已存在於資料檔案中，差異檔案只會儲存參考資訊 `{inserting_tx_id, row_id, deleting_tx_id }` ，且將遵照原始刪除或更新作業的交易記錄順序。  
   
 
- 大小：若為記憶體大於 16GB 的電腦，每個差異檔案的大小約為 16MB；若為記憶體小於或等於 16GB 的電腦，每個差異檔案的大小約為 1MB。 如果儲存子系統速度認定夠快，從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SQL Server 開始就可以使用大型的檢查點模式。 在大型的檢查點模式中，差異檔案的大小為 128MB。  
+ 大小：若為記憶體大於 16 GB 的電腦，每個差異檔案的大小約為 16 MB；若為記憶體小於或等於 16 GB 的電腦，每個差異檔案的大小約為 1 MB。 如果儲存子系統速度認定夠快，從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SQL Server 開始就可以使用大型的檢查點模式。 在大型的檢查點模式中，差異檔案的大小為 128MB。  
  
 ## <a name="populating-data-and-delta-files"></a>擴展資料檔案和差異檔案  
  資料檔案和差異檔案會根據記憶體最佳化資料表認可交易所產生的交易記錄填寫，再將已插入及刪除的資料列相關資訊附加到適當的資料檔案和差異檔案。 不同於在檢查點完成時以隨機 I/O 方式排清資料/索引頁的磁碟資料表，記憶體最佳化資料表的保存是連續的背景作業。 如此將會存取多個差異檔案，因為交易可以刪除或更新任何先前交易所插入的任何資料列。 刪除資訊一律會附加到差異檔案的結尾。 例如，認可時間戳記為 600 的交易會插入一個新的資料列，並且刪除認可時間戳記為 150、250 和 450 的交易所插入的資料列，如下圖所示。 所有 4 個檔案 I/O 作業 (三個用於已刪除的資料列，一個用於新插入的資料列) 都是對應的差異檔案和資料檔案的附加專用作業。  

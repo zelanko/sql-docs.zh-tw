@@ -1,5 +1,6 @@
 ---
 title: 伺服器屬性 (資料庫設定頁面) | Microsoft Docs
+description: 熟悉 SQL Server 中的資料庫設定。 了解可控制備份行為、填滿因數、檔案位置及其他屬性的選項。
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -8,20 +9,20 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.databasesettings.f1
 ms.assetid: 1cebdbd3-cbfd-4a02-bba6-a5addf4e3ada
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ms.custom: ''
 ms.date: 05/23/2019
-ms.openlocfilehash: d6d7982384d8e83db35e35feb2e106ddae727fac
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: a4f5a0dacaeeeadf0446df9e4d3cdf54fcad7be2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152060"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784124"
 ---
 # <a name="server-properties---database-settings-page"></a>伺服器屬性 - 資料庫設定頁面
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用此頁面來檢視或修改您的資料庫設定。  
   
 ## <a name="options"></a>選項。
@@ -52,7 +53,7 @@ ms.locfileid: "83152060"
 
 #### <a name="compress-backup"></a>壓縮備份
 
-在 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (或更新的版本) 中，表示 [備份壓縮預設]  選項的目前設定。 這一個選項會決定壓縮備份的伺服器層級預設值，如下所示：
+在 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (或更新的版本) 中，表示 [備份壓縮預設] 選項的目前設定。 這一個選項會決定壓縮備份的伺服器層級預設值，如下所示：
 
 - 如果 **[壓縮備份]** 方塊是空的，新備份預設不會進行壓縮。
 
@@ -67,7 +68,7 @@ ms.locfileid: "83152060"
 
 #### <a name="backup-checksum"></a>備份總和檢查碼
 
-此選項可讓您切換「備份總和檢查碼預設值」  的 sp_configure 設定。 這項功能可讓您輕鬆啟用備份總和檢查碼預設值。
+此選項可讓您切換「備份總和檢查碼預設值」的 sp_configure 設定。 這項功能可讓您輕鬆啟用備份總和檢查碼預設值。
 
 ### <a name="recovery-interval-minutes"></a>復原間隔 (分鐘)
 

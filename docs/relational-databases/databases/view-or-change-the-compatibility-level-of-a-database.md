@@ -1,5 +1,6 @@
 ---
 title: 檢視或變更資料庫的相容性層級 | Microsoft 文件
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL，在 SQL Server 中檢視或變更資料庫的相容性層級。
 ms.custom: ''
 ms.date: 11/24/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 579867ec-57cb-4cb8-af35-9688c1e9e15d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e86955f75593c27e18de12bbcaf5bb6b7cf88b6a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d43fb7c4138c0070b3b3ca36c16e480f9d798683
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73843544"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727546"
 ---
 # <a name="view-or-change-the-compatibility-level-of-a-database"></a>檢視或變更資料庫的相容性層級
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中檢視或變更資料庫的相容性層級。 在變更資料庫的相容性層級之前，您應該先了解此變更對應用程式的影響。 如需詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
   
  **本主題內容**  
@@ -34,7 +35,7 @@ ms.locfileid: "73843544"
   
 -   **使用下列方法檢視或變更資料庫的相容性層級：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -53,7 +54,7 @@ ms.locfileid: "73843544"
   
 2.  展開 **[資料庫]** ，然後視資料庫而定，選取使用者資料庫，或者展開 **[系統資料庫]** 並選取一個系統資料庫。  
   
-3.  以滑鼠右鍵按一下此資料庫，然後按一下 [屬性]  。  
+3.  以滑鼠右鍵按一下此資料庫，然後按一下 [屬性]。  
   
      **[資料庫屬性]** 對話方塊隨即開啟。  
   

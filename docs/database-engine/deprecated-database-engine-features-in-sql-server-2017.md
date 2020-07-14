@@ -17,16 +17,16 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9fcc5f3ebca860e35365bd640a3473b478e06b49
-ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
+ms.openlocfilehash: 33b12c2b68c067db1a47159c201f5cd04a9b1c45
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80550167"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759137"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017 中已取代的資料庫引擎功能
 
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 
   本主題描述 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 中仍然可用但已被取代的 [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]功能。 已被取代的功能不應在新應用程式中使用。  
   
@@ -50,7 +50,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 ## <a name="features-deprecated-in-the-next-version-of-sql-server"></a>下一版的 SQL Server 中已淘汰的功能
 
-下列 SQL Server 資料庫引擎功能將在下一版的 SQL Server 中淘汰。 請勿在新的開發工作中使用這些功能，並且儘速修改使用這些功能的應用程式。 **功能名稱**值會作為 ObjectName 出現在追蹤事件中，並在效能計數器與 `sys.dm_os_performance_counters` 中作為執行個體名稱。 [功能識別碼]  值會出現在追蹤事件中當做 ObjectId。
+下列 SQL Server 資料庫引擎功能將在下一版的 SQL Server 中淘汰。 請勿在新的開發工作中使用這些功能，並且儘速修改使用這些功能的應用程式。 **功能名稱**值會作為 ObjectName 出現在追蹤事件中，並在效能計數器與 `sys.dm_os_performance_counters` 中作為執行個體名稱。 [功能識別碼] 值會出現在追蹤事件中當做 ObjectId。
 
 ### <a name="back-up-and-restore"></a>備份與還原
 
@@ -325,7 +325,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 | 已被取代的功能 | 取代 | 功能名稱 |
 |--------------------|-------------|--------------|
-| :: 函數呼叫順序 | 取代為 SELECT *column_list* FROM sys.\<函式名稱  >().<br /><br />例如，以 `SELECT * FROM ::fn_virtualfilestats(2,1)`取代 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。 | '::' 函數呼叫語法 |
+| :: 函數呼叫順序 | 取代為 SELECT *column_list* FROM sys.\<*function_name*>()。<br /><br />例如，以 `SELECT * FROM ::fn_virtualfilestats(2,1)`取代 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。 | '::' 函數呼叫語法 |
 | 三部分和四部分資料行參考。 | 兩部分名稱是符合標準的行為。|兩部分以上的資料行名稱 |
 | 加上引號的字串，在 SELECT 清單中當做運算式的資料行別名使用：<br /><br />'*string_alias*' = *expression* | *expression* [AS] *column_alias*<br /><br />*expression* [AS] [*column_alias*]<br /><br />*expression* [AS] "*column_alias*"<br /><br />*expression* [AS] '*column_alias*'<br /><br />*column_alias* = *expression* | 當做資料行別名的字串常值 |
 | 編號程序。 | 無。 請勿使用。 | ProcNums |

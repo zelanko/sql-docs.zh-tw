@@ -1,5 +1,6 @@
 ---
 title: 建立維護計畫 | Microsoft 文件
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 在 SQL Server 中建立單一伺服器或多部伺服器維護計畫。
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: a945cb65-ba7a-42f4-bbd9-6ec675745523
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1dc50611e1497d84335f29d763c280cb09e9d41b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c8e76cdbc5adfb617511d81a1c5af938a95dba10
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70874747"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85667472"
 ---
 # <a name="create-a-maintenance-plan"></a>建立維護計畫
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立單一伺服器或多伺服器維護計畫。 您可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]透過兩種方式的其中一種建立這些維護計畫：使用「維護計畫精靈」或設計介面。 本精靈最適用於建立基本的維護計畫，使用設計介面建立計畫時可讓您利用加強的工作流程。  
   
  **本主題內容**  
@@ -35,7 +36,7 @@ ms.locfileid: "70874747"
   
 -   **使用下列方法建立維護計畫：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -60,7 +61,7 @@ ms.locfileid: "70874747"
   
 2.  按一下加號展開 **[管理]** 資料夾。  
   
-3.  以滑鼠右鍵按一下 [維護計畫]  資料夾，然後選取 [維護計畫精靈]  。  
+3.  以滑鼠右鍵按一下 [維護計畫] 資料夾，然後選取 [維護計畫精靈]。  
   
 4.  請遵循精靈的步驟來建立維護計畫。 如需詳細資訊，請參閱 [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)。  
   
@@ -70,7 +71,7 @@ ms.locfileid: "70874747"
   
 2.  按一下加號展開 **[管理]** 資料夾。  
   
-3.  以滑鼠右鍵按一下 [維護計畫]  資料夾，然後選取 [新增維護計畫]  。  
+3.  以滑鼠右鍵按一下 [維護計畫] 資料夾，然後選取 [新增維護計畫]。  
   
 4.  遵循[建立維護計畫 &#40;維護計畫設計介面&#41;](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md) 中的步驟建立維護計畫。  
   

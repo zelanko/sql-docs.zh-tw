@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3661b840340f4fb14e5dcc52f2ae0aa296b7520e
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: ba9a1a0b2922cba5c2aadef862bec56bbc66666b
+ms.sourcegitcommit: e6c260a139326f5a400a57ece812d39ef8b820bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922168"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86032448"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 陳述式 (Transact-SQL)
 
@@ -320,13 +320,13 @@ RESTORE LOG 可以包括一份檔案清單，讓您在向前復原期間建立�
 
 - RECOVERY (預設) 表示在完成目前備份的向前復原之後應該執行復原。
 
-  復原資料庫時，會要求要還原的整組資料 (「向前復原集」  ) 與資料庫一致。 如果向前復原集尚未向前復原到足以與資料庫一致的範圍，且指定了 RECOVERY，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 就會發出錯誤。 如需復原流程的詳細資訊，請參閱[還原和復原概觀 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)。
+  復原資料庫時，會要求要還原的整組資料 (「向前復原集」) 與資料庫一致。 如果向前復原集尚未向前復原到足以與資料庫一致的範圍，且指定了 RECOVERY，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 就會發出錯誤。 如需復原流程的詳細資訊，請參閱[還原和復原概觀 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)。
 
 ## <a name="compatibility-support"></a>相容性支援
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 無法還原使用舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來建立的 **master** **model** 及 **msdb** 備份。
 
 > [!NOTE]
-> 您無法將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份還原成比建立備份所用之版本還舊的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。
+> 您無法將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份還原成比建立備份所用版本還舊的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每一個版本都會使用與舊版不同的預設路徑。 因此，若要還原在舊版備份之預設位置中所建立的資料庫，就必須使用 MOVE 選項。 如需有關新預設路徑的資訊，請參閱 [SQL Server 的預設和具名執行個體的檔案位置](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)。
 
@@ -405,7 +405,7 @@ REPLACE 選項會覆寫還原通常會執行的數項重要安全檢查。 會�
 您可以還原受影響之檔案的整個內容來中止和重新開始還原順序。
 
 ## <a name="reverting-a-database-to-a-database-snapshot"></a>將資料庫還原為資料庫快照集
-「還原資料庫作業」  (使用 DATABASE_SNAPSHOT 選項來指定) 會藉由將整個來源資料庫還原至資料庫快照集的時間，也就是使用在所指定資料庫快照集中維護的時間點資料來覆寫來源資料庫，讓整個來源資料庫回到過去的時間。 目前能存在的快照集只限於您要還原的目標快照集。 之後，還原作業會重建記錄 (因此，無法稍後再將所還原資料庫向前復原到發生使用者錯誤的該時間點)。
+「還原資料庫作業」(使用 DATABASE_SNAPSHOT 選項來指定) 會藉由將整個來源資料庫還原至資料庫快照集的時間，也就是使用在所指定資料庫快照集中維護的時間點資料來覆寫來源資料庫，讓整個來源資料庫回到過去的時間。 目前能存在的快照集只限於您要還原的目標快照集。 之後，還原作業會重建記錄 (因此，無法稍後再將所還原資料庫向前復原到發生使用者錯誤的該時間點)。
 
 您只會失去建立快照集之後的資料庫更新資料。 還原資料庫的中繼資料與建立快照集時的中繼資料相同。 不過，還原為快照集會卸除所有全文檢索目錄。
 

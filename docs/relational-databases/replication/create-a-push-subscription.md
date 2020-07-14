@@ -1,5 +1,6 @@
 ---
 title: 建立發送訂閱 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio、Transact-SQL 或 Replication Management Objects，在 SQL Server 中建立發送訂閱。
 ms.custom: ''
 ms.date: 08/25/2016
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 6eca1e80614772a1aa65faa60351fb73f83ba433
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d02267b12a80abb7784b552eb8d71fcca89aa8a6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70059289"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773954"
 ---
 # <a name="create-a-push-subscription"></a>建立發送訂閱
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO) 來建立 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的發送訂閱。 如需為非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者建立發送訂閱的資訊，請參閱[為非 SQL Server 訂閱者建立訂閱](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)。  
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
@@ -62,7 +63,7 @@ ms.locfileid: "70059289"
   
 2. 展開 **[複寫]** 資料夾，然後展開 **[本機發行集]** 資料夾。  
   
-3. 以滑鼠右鍵按一下您要建立一或多個訂閱的發行集，然後選取 [新增訂閱]  。  
+3. 以滑鼠右鍵按一下您要建立一或多個訂閱的發行集，然後選取 [新增訂閱]。  
   
 4. 在新增訂閱精靈中完成頁面。  
   
@@ -72,9 +73,9 @@ ms.locfileid: "70059289"
   
 2. 展開 **[複寫]** 資料夾。  
   
-3. 以滑鼠右鍵按一下 [區域訂閱]  資料夾，然後選取 [新增訂閱]  。  
+3. 以滑鼠右鍵按一下 [區域訂閱] 資料夾，然後選取 [新增訂閱]。  
   
-4. 在 [新增訂閱精靈] 的 [發行集] 頁面上，從 [發行者] 下拉式清單中選取 [\<尋找 SQL Server 發行者>] 或 [\<尋找 Oracle 發行者>]。  
+4. 在 [新增訂閱] 精靈的 [發行集] 頁面上，從 [發行者] 下拉式清單中選取 [\<Find SQL Server Publisher>] 或 [\<Find Oracle Publisher>]。  
   
 5. 連接到 **[連接到伺服器]** 對話方塊中的發行者。  
   
@@ -107,7 +108,7 @@ ms.locfileid: "70059289"
      > [!NOTE]
      > 透過 Windows 整合式驗證進行的連線，一律使用由 **\@job_login** 和 **\@job_password** 指定的 Windows 認證。 散發代理程式一律使用 Windows 整合式驗證建立與散發者的本機連線。 根據預設，代理程式會使用 Windows 整合式驗證連線至訂閱者。  
   
-   - (選擇性)  subscriber_security_mode **的值 \@0**，以及 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]subscriber_login **和 \@** subscriber_password**的 \@** 登入資訊。 如果您在連接到「訂閱者」時需要使用「SQL Server 驗證」，請指定這些參數。  
+   - (選擇性) **\@subscriber_security_mode** 的值 **0**，以及 **\@subscriber_login** 和 **\@subscriber_password** 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入資訊。 如果您在連接到「訂閱者」時需要使用「SQL Server 驗證」，請指定這些參數。  
   
    - 此訂閱之散發代理程式作業的排程。 如需詳細資訊，請參閱[指定同步處理排程](../../relational-databases/replication/specify-synchronization-schedules.md)。  
   

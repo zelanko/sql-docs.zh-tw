@@ -1,5 +1,6 @@
 ---
 title: 準備升級：Data Migration Assistant
+description: 下載並執行 Microsoft Data Migration Assistant，以準備好升級 OLTP 資料庫，以及採用 SQL Server 中的新功能。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: eabcc635-7adf-4e45-b6f1-158d6e024908
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 982ca86d373cde6b37faa8a88ae93cd3cb2d6702
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 577b65a693fd1955daed3600f75b8b67fdc4483e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258823"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900333"
 ---
 # <a name="prepare-for-upgrade-by-running-data-migration-assistant"></a>執行 Data Migration Assistant 準備進行升級
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
 下載並執行 Microsoft Data Migration Assistant，以準備好升級 OLTP 資料庫，及採用 [!INCLUDE[ssnover](../../includes/ssnoversion-md.md)] 中的新功能。  
   

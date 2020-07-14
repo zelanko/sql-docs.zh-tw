@@ -1,5 +1,6 @@
 ---
 title: 移轉觸發程序 | Microsoft Docs
+description: 了解經記憶體最佳化的資料表和 DDL 觸發程序，其會針對 SQL Server 執行個體上的 CREATE、ALTER、DROP、GRANT、DENY、REVOKE 或 UPDATE STATISTICS 進行引發。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: ad5385c5-5a50-40ca-a319-97d5606b8511
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4629b9f18cdf0b97b5a79cff0696973cb60f7c36
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7457f974820d1438d2e6d0293d31562c8c5f6a64
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050142"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722471"
 ---
 # <a name="migrating-triggers"></a>移轉觸發程序
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   本主題討論 DDL 觸發程序以及記憶體最佳化的資料表。  
   

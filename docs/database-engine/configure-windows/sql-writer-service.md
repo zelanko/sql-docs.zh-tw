@@ -1,5 +1,6 @@
 ---
 title: SQL 寫入器服務 | Microsoft Docs
+description: 了解 SQL 寫入器服務。 查看此服務如何在 SQL Server 中，透過磁碟區陰影複製服務架構來提供新增的備份和還原功能。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,17 +20,17 @@ helpviewer_keywords:
 - MSDE Writer
 - VSS
 ms.assetid: 0f299867-f499-4c2a-ad6f-b2ef1869381d
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 79b0ba2bad207b92e0227ed5c8d3999dab335df6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 940bdce1d104627850aed3532754429c5ceef050
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71816669"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764022"
 ---
 # <a name="sql-writer-service"></a>SQL 寫入器服務
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   SQL 寫入器服務能透過「磁碟區陰影複製服務」架構，提供附加功能給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的備份和還原。  
   
  系統會自動安裝 SQL 寫入器服務。 當磁碟區陰影複製服務 (VSS) 應用程式要求備份或還原時，此服務必須已在執行中。 若要設定此服務，請使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Services Applet。 SQL 寫入器服務會安裝在所有作業系統上。  
@@ -45,7 +46,7 @@ ms.locfileid: "71816669"
  VSS 能在不過度降低所提供服務的效能與穩定性之下，在執行中的系統，特別是伺服器上，擷取和複製可靠的影像以供備份。 如需有關 VSS 的詳細資訊，請參閱 Windows 文件集。  
 
 > [!NOTE]
-> 使用 VSS 來備份裝載基本可用性群組的虛擬機器時，若虛擬機器目前裝載處於次要狀態的資料庫，從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 與 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU9 開始，那些資料庫將「不」會  隨著虛擬機器備份。  這是因為基本可用性群組不支援備份次要複本上的資料庫。  在這些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本之前的版本上，備份將會因為發生錯誤而失敗。
+> 使用 VSS 來備份裝載基本可用性群組的虛擬機器時，若虛擬機器目前裝載處於次要狀態的資料庫，從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 與 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU9 開始，那些資料庫將「不」會 隨著虛擬機器備份。  這是因為基本可用性群組不支援備份次要複本上的資料庫。  在這些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本之前的版本上，備份將會因為發生錯誤而失敗。
   
 ## <a name="virtual-backup-device-interface-vdi"></a>虛擬備份裝置介面 (VDI)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供一種稱為「虛擬備份裝置介面 (VDI)」的 API，可讓獨立軟體廠商將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 整合到他們的產品中，以對備份和還原作業提供支援。 這些 API 可提供最高的可靠性與效能，並能支援所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份和還原功能，包括所有熱備份與快照集備份能力。 如果協力廠商應用程式要求快照集 (VSS) 備份，則 SQL 寫入器服務會呼叫 VDI API 函式來執行實際備份。 請注意，VDI API 與 VSS 無關，且經常用於不採用 VSS API 的軟體解決方案。

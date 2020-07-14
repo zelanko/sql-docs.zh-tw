@@ -1,5 +1,6 @@
 ---
 title: 設定 media retention 伺服器組態選項 | Microsoft Docs
+description: 了解 [媒體保留] 選項。 查看如何使用此選項，來指定 SQL Server 保留交易記錄和資料庫備份的時間長度。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - backup sets [SQL Server], retention duration
 - media retention option
 ms.assetid: 12e9fe6a-20a5-4c6e-9cc9-d500c003b70a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4009241922196894100c362fe3787fdd40d4f7dd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c7e699d9af02a8d24e01d1e7461aa9ee22c956bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012529"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696969"
 ---
 # <a name="configure-the-media-retention-server-configuration-option"></a>設定 media retention 伺服器組態選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] media retention [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **media retention** 選項指定每個備份組的保留時間。 此選項協助保護備份，在指定的天數經過之前不被覆寫。 在設定 **media retention** 選項之後，每次執行備份時不需指定保留系統備份的時間長度。 預設值是 0 天，最大值是 365 天。  
   
@@ -38,7 +39,7 @@ ms.locfileid: "68012529"
   
 -   **使用下列方法設定 media retention 選項：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -65,7 +66,7 @@ ms.locfileid: "68012529"
   
 #### <a name="to-configure-the-media-retention-option"></a>設定 media retention 選項  
   
-1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]  。  
+1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
   
 2.  按一下 **[資料庫設定]** 節點。  
   

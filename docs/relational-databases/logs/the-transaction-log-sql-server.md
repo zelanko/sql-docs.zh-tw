@@ -1,5 +1,6 @@
 ---
 title: 交易記錄 (SQL Server) | Microsoft Docs
+description: 了解交易記錄。 每個 SQL Server 資料庫都會記錄您在發生系統失敗時可能會需要的所有交易和資料庫修改。
 ms.custom: ''
 ms.date: 10/23/2019
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cd975ed830f9a0b705e516707d550697fbf34325
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 74220a441301bdb44c00a6e6a998861df2c6ce02
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287802"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834759"
 ---
 # <a name="the-transaction-log-sql-server"></a>交易記錄 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫都有交易記錄來記錄所有交易及每項交易所作的資料庫修改。
   
 交易記錄是資料庫的重要元件。 若系統故障，您便需要該記錄檔讓資料庫返回一致的狀態。 
@@ -143,7 +144,7 @@ ms.locfileid: "79287802"
   
 -   插入或附加新資料時，在 [UPDATE](../../t-sql/queries/update-transact-sql.md) 陳述式中使用 `.WRITE` 子句，對大數值資料類型執行的部分更新。 請注意，更新現有值時不使用最低限度記錄。 如需有關大數值資料類型的詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。  
   
--   將新的資料插入或附加至[WRITETEXT](../../t-sql/queries/writetext-transact-sql.md) 、 [UPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) 和 **text**, **ntext**, 、 **image** 陳述式。 請注意，更新現有值時不使用最低限度記錄。  
+-   將新的資料插入或附加至 **text**、**ntext** 及 **image** 資料類型資料行時的 [WRITETEXT](../../t-sql/queries/writetext-transact-sql.md) 和 [UPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) 陳述式。 請注意，更新現有值時不使用最低限度記錄。  
   
     > [!WARNING]
     > `WRITETEXT` 與 `UPDATETEXT` 陳述式**已被取代**，所以您應該避免在新的應用程式中加以使用。  
@@ -157,8 +158,11 @@ ms.locfileid: "79287802"
         > [!WARNING]
         > `DBCC DBREINDEX` 陳述式**已被淘汰**；請避免在新的應用程式中使用。  
   
+        > [!NOTE]
+        > 索引建置作業會使用最低限度記錄，但在同時執行備份時可能會有所延遲。 此延遲是在使用簡單或大量記錄復原模式時，由最低限度記錄之緩衝集區頁面的同步處理需求所造成。 
+      
     -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 新堆積重建 (如果適用)。 `DROP INDEX`作業期間的索引頁取消配置**一律**經完整記錄。
-  
+
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
 **管理交易記錄**  
   

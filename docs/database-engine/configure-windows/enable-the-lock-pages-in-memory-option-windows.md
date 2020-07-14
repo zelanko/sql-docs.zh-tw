@@ -1,5 +1,6 @@
 ---
 title: 啟用記憶體選項中的鎖定頁面 (Windows) | Microsoft Docs
+description: 了解如何開啟 [鎖定記憶體內部分頁] 選項。 查看此選項如何藉由將資料保留於實體記憶體中，而不是將其分頁到磁碟上，來提升效能。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Lock Pages in Memory option
 ms.assetid: cd581fbc-4747-439e-87f9-2f18e39c5bb9
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 8041f5f057962af79d75f121423233d3d6a3a806
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6390c4a4bb4d8ea2ed9b5e5be1712eb7e782a29b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68011769"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772481"
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>啟用鎖定記憶體分頁選項 (Windows)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   此 Windows 原則決定哪些帳戶可以使用處理序將資料保留在實體記憶體中，以防止系統將資料傳送到磁碟上的虛擬記憶體。  
   
 > [!NOTE]  
@@ -30,21 +31,21 @@ ms.locfileid: "68011769"
   
 ### <a name="to-enable-the-lock-pages-in-memory-option"></a>若要啟用鎖定記憶體分頁選項  
   
-1.  在 **[開始]** 功能表上，按一下 **[執行]** 。 在 [開啟舊檔]  方塊中，輸入 **gpedit.msc**。  
+1.  在 **[開始]** 功能表上，按一下 **[執行]** 。 在 [開啟舊檔] 方塊中，輸入 **gpedit.msc**。  
   
-2.  在 [本機群組原則編輯器]  主控台中，依序展開 [電腦設定]  和 [Windows 設定]  。  
+2.  在 [本機群組原則編輯器] 主控台中，依序展開 [電腦設定] 和 [Windows 設定]。  
   
-3.  展開 [安全性設定]  ，然後展開 [本機原則]  。  
+3.  展開 [安全性設定]，然後展開 [本機原則]。  
   
-4.  選取 [使用者權限指派]  資料夾。  
+4.  選取 [使用者權限指派] 資料夾。  
   
      這些原則會顯示在詳細資料窗格中。  
   
-5.  在窗格中按兩下 [鎖定記憶體中的分頁]  。  
+5.  在窗格中按兩下 [鎖定記憶體中的分頁]。  
   
-6.  在 [本機安全性設定 - 鎖定記憶體中的分頁]  對話方塊中，按一下 [新增使用者或群組]  。  
+6.  在 [本機安全性設定 - 鎖定記憶體中的分頁] 對話方塊中，按一下 [新增使用者或群組]。  
   
-7.  在 [Select Users, Service Accounts, or Groups] \(選取使用者、服務帳戶或群組)  對話方塊方塊中，選取 SQL Server 服務帳戶。  
+7.  在 [Select Users, Service Accounts, or Groups] \(選取使用者、服務帳戶或群組) 對話方塊方塊中，選取 SQL Server 服務帳戶。  
   
 8.  重新啟動 SQL Server 服務，這項設定才會生效。
   

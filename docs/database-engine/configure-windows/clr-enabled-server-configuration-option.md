@@ -1,5 +1,6 @@
 ---
 title: CLR 已啟用伺服器組態選項 | Microsoft Docs
+description: 了解如何使用 [CLR 已啟用] 選項來指定 SQL Server 是否能執行使用者組件。 查看不支援 Common Language Runtime 執行的時機。
 ms.custom: ''
 ms.date: 06/20/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - assemblies [CLR integration], verifying can run
 - clr enabled option
 ms.assetid: 0722d382-8fd3-4fac-b4a8-cd2b7a7e0293
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 71392e537cb034976b3c47d819897356e3bb58cb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 56ddc21a660ba8316a9c311546e4ced48067f270
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71682089"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759162"
 ---
 # <a name="clr-enabled-server-configuration-option"></a>CLR 已啟用伺服器組態選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   使用 clr enabled 選項來指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是否能執行使用者組件。 [CLR 已啟用] 選項提供下列值： 
   

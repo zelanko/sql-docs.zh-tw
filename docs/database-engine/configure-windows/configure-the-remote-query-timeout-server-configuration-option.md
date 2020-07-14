@@ -1,5 +1,6 @@
 ---
 title: 設定 remote query timeout 伺服器組態選項 | Microsoft Docs
+description: 了解 [遠端查詢逾時] 選項。 查看此選項如何判斷遠端作業在 SQL Server 逾時之前可執行的秒數。
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql
@@ -11,21 +12,21 @@ helpviewer_keywords:
 - time limit for remote queries [SQL Server]
 - remote query timeout option
 ms.assetid: 888c8448-933b-41e3-8aa1-c206bc0cdb78
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d1559e997270712dd701a1295de4a896a2425642
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8ab8099b514027c69b32427c27c22ed06614150e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012301"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715583"
 ---
 # <a name="configure-the-remote-query-timeout-server-configuration-option"></a>設定 remote query timeout 伺服器組態選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] remote query timeout [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **remote query timeout** 選項會指定在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 逾時之前，遠端作業可以執行多久 (以秒為單位)。此選項的預設值是 600，這允許 10 分鐘的等待。 此值可套用到由 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 啟始做為遠端查詢的傳出連接。 此值對 [!INCLUDE[ssDE](../../includes/ssde-md.md)]收到的查詢沒有影響。 若要停用逾時，請將值設定為 0。 查詢會等候，直到完成。  
   
- 對於異質性查詢，[遠端查詢逾時]  可指定遠端提供者在等候查詢結果集時，應等候幾秒 (使用 DBPROP_COMMANDTIMEOUT 資料列集屬性在命令物件中初始化) 後，查詢才會逾時。這個值也用來設定 DBPROP_GENERALTIMEOUT (如果遠端提供者支援的話)。 這會使其他任何作業在指定秒數後變逾時。  
+ 對於異質性查詢，[遠端查詢逾時] 可指定遠端提供者在等候查詢結果集時，應等候幾秒 (使用 DBPROP_COMMANDTIMEOUT 資料列集屬性在命令物件中初始化) 後，查詢才會逾時。這個值也用來設定 DBPROP_GENERALTIMEOUT (如果遠端提供者支援的話)。 這會使其他任何作業在指定秒數後變逾時。  
   
  對於遠端預存程序， **remote query timeout** 會指定在傳送遠端 `EXEC` 陳述式之後，遠端預存程序逾時之前必須經過的秒數。  
   
@@ -39,7 +40,7 @@ ms.locfileid: "68012301"
   
 -   **使用下列方法設定 remote query timeout 選項：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -60,7 +61,7 @@ ms.locfileid: "68012301"
   
 #### <a name="to-configure-the-remote-query-timeout-option"></a>設定 remote query timeout 選項  
   
-1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]  。  
+1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
   
 2.  按一下 **[連接]** 節點。  
   

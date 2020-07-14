@@ -46,16 +46,16 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3645b913b4e806d964a2da420d987ca10b2217f0
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 384b474180e17eaed9827da2d2e2b2f9157c6f4b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81297303"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766957"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中建立新的資料表。
 
@@ -654,7 +654,7 @@ COMPRESSION_DELAY **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnovers
 
 如需 `COMPRESSION_DELAY` 使用時機的建議，請參閱[開始使用資料行存放區進行即時作業分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)
 
-\< table_option> ::= 指定一個或多個資料表選項。
+\< table_option> ::= 指定一或多個資料表選項。
 
 DATA_COMPRESSION 針對指定的資料表、分割區編號或分割區範圍指定資料壓縮選項。 選項如下：
 

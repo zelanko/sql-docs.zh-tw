@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 61fe5d7ffb5dfc6ec98f6d5350eff396deaa0312
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f468697c165eefca98e5d5d7492b9a3d5eab25e8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558323"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897276"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>設定容錯移轉叢集執行個體 - Linux 上的 SQL Server (RHEL)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 SQL Server 雙節點共用磁碟容錯移轉叢集執行個體能提供伺服器層級的備援，以達成高可用性。 在本教學課程中，您會了解如何針對 Linux 上的 SQL Server 建立雙節點容錯移轉叢集執行個體。 您將會完成的特定步驟包括：
 
@@ -35,7 +35,7 @@ SQL Server 雙節點共用磁碟容錯移轉叢集執行個體能提供伺服器
 
 如需概念性資訊，請參閱 [Linux 上的 SQL Server 容錯移轉叢集執行個體 (FCI)](sql-server-linux-shared-disk-cluster-concepts.md)。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 若要完成下列端對端情節，您需要兩部電腦來部署兩個節點叢集，以及另一部伺服器作為儲存體。 以下步驟概述這些伺服器的設定方式。
 
@@ -182,11 +182,11 @@ SQL Server 雙節點共用磁碟容錯移轉叢集執行個體能提供伺服器
 
     \<VolumeGroupName> 是磁碟區群組的名稱  
 
-    \<LogicalVolumeName> 是所建立邏輯磁碟區的名稱  
+    \<LogicalVolumeName> 是所建立之邏輯磁碟區的名稱  
 
-    \<FolderToMountiSCSIDIsk> 是要裝載磁碟的資料夾 (針對系統資料庫和預設位置，它會是 /var/opt/mssql/data)
+    \<FolderToMountiSCSIDIsk> 是要掛接磁碟的資料夾 (針對系統資料庫與預設位置，其會是 /var/opt/mssql/data)
 
-    \<FileSystemType> 會是 EXT4 或 XFS；這取決於項目的格式化方式，以及散發套件所支援的內容。 
+    \<FileSystemType> 會是 EXT4 或 XFS，這取決於項目的格式化方式，以及散發套件所支援的內容。 
 
     **NFS**
 
@@ -201,7 +201,7 @@ SQL Server 雙節點共用磁碟容錯移轉叢集執行個體能提供伺服器
 
     \<FolderOnNFSServer> 是 NFS 共用的名稱
 
-    \<FolderToMountNFSShare> 是要裝載磁碟的資料夾 (針對系統資料庫和預設位置，它會是 /var/opt/mssql/data)
+    \<FolderToMountNFSShare> 是要掛接磁碟的資料夾 (針對系統資料庫與預設位置，其會是 /var/opt/mssql/data)
 
     以下顯示一個範例：
 
@@ -215,7 +215,7 @@ SQL Server 雙節點共用磁碟容錯移轉叢集執行個體能提供伺服器
     sudo pcs resource create SMBDiskResourceName Filesystem device="//<ServerName>/<ShareName>" directory="<FolderName>" fstype=cifs options="vers=3.0,username=<UserName>,password=<Password>,domain=<ADDomain>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777" --group <RGName>
     ```
 
-    \<ServerName> 是具有 SMB 共用之伺服器的名稱
+    \<ServerName> 是使用 SMB 共用之伺服器的名稱
 
     \<ShareName> 是共用的名稱
 
@@ -223,7 +223,7 @@ SQL Server 雙節點共用磁碟容錯移轉叢集執行個體能提供伺服器
     
     \<UserName> 是要存取共用之使用者的名稱
 
-    \<Password> 是該使用者的密碼
+    \<Password> 是使用者的密碼
 
     \<ADDomain> 是 AD DS 網域 (若在使用 Windows Server 型 SMB 共用時適用的話)
 
@@ -243,9 +243,9 @@ SQL Server 雙節點共用磁碟容錯移轉叢集執行個體能提供伺服器
 
     \<IPAddress> 是 FCI 的 IP 位址
 
-    \<NetworkCard> 是與子網路相關聯的網路卡 (也就是 eth0)
+    \<NetworkCard> 是與子網路相關聯的網路卡 (例如 eth0)
 
-    \<NetMask> 是子網路的網路遮罩 (也就是 24)
+    \<NetMask> 是子網路的網路遮罩 (例如 24)
 
     \<RGName> 是資源群組的名稱
  

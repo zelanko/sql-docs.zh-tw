@@ -11,16 +11,16 @@ ms.assetid: 5f398470-c531-47b5-84d5-7c67c27df6e5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7cd858693ed429fd7b776a20f9300657337fa0f8
-ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
+ms.openlocfilehash: 9eec9c506d6026bef09a3cd6415a786a8a4f01af
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82107969"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002482"
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>修改系統建立版本時態表中的資料
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 系統建立版本時態表中的資料是使用一般的 DML 陳述式來修改但有一個重要差異：無法直接修改期間資料行的資料。 更新資料時，即會為它建立版本，將每個更新資料列的舊版本插入至記錄資料表。 刪除資料時，刪除是邏輯性的，會將該資料列從記錄資料表移至目前的資料表 - 不會將它永久刪除。
 
@@ -150,7 +150,7 @@ SWITCH TO [dbo].[Department] PARTITION 2;
 
 ## <a name="updating-data"></a>更新資料
 
-您可以利用一般的 **UPDATE** 陳述式，來更新目前資料表中的資料。 您可以針對「糟糕」案例從記錄資料表中更新目前資料表中的資料。 但是，您不能更新 **PERIOD** 資料行，而且當 **SYSTEM_VERSIONING = ON**時，您無法直接更新記錄資料表中的資料。
+您可以利用一般的 **UPDATE** 陳述式，來更新目前資料表中的資料。 您可以針對「糟糕」案例從記錄資料表中更新目前資料表中的資料。 但是，您不能更新 **PERIOD** 資料行，而且當 **SYSTEM_VERSIONING = ON** 時，您無法直接更新記錄資料表中的資料。
 
 設定 **SYSTEM_VERSIONING = OFF** 並從目前和記錄資料表更新資料列，但請注意，這樣一來，系統將不會保留變更的記錄。
 

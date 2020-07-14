@@ -21,15 +21,15 @@ ms.assetid: 20275755-4fa7-47b1-a9be-ac85606d63b0
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d572117c10673d86c71fb943a3d58cec423618c1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bdef927107ea547345d767d088a89b808344d565
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67943077"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004013"
 ---
 # <a name="amp-bitwise-and-transact-sql"></a>&amp; (位元 AND) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   在兩個整數值之間，執行位元邏輯 AND 運算。  
   
@@ -58,17 +58,15 @@ expression & expression
 ## <a name="remarks"></a>備註  
  **&** 位元運算子會在這兩個運算式之間執行位元邏輯 AND 運算，每個運算式各有一個對應的位元。 只有在輸入運算式的兩個位元 (針對目前所解析的位元) 的值都是 1 時，結果中的兩個位元才會都設為 1；否則，結果中的位元便設為 0。  
   
- 如果左右運算式的整數資料類型不同 (例如，左邊的 *expression* 是 **smallint**，而右邊的 *expression* 是 **int**)，就會將較小資料類型的引數轉換為較大的資料類型。 在此案例中，會將 **smallint**_expression_ 轉換為 **int**。  
+ 如果左右運算式的整數資料類型不同 (例如，左邊的 *expression* 是 **smallint**，而右邊的 *expression* 是 **int**)，就會將較小資料類型的引數轉換為較大的資料類型。 在此案例中，會將 **smallint** _expression_ 轉換為 **int**。  
   
 ## <a name="examples"></a>範例  
  下列範例會使用 **int** 資料類型建立資料表來儲存值，並在單一資料列中插入兩個值。  
   
 ```  
-CREATE TABLE bitwise  
-(   
-a_int_value int NOT NULL,  
-b_int_value int NOT NULL  
-);  
+CREATE TABLE bitwise (   
+  a_int_value INT NOT NULL,  
+  b_int_value INT NOT NULL);  
 GO  
 INSERT bitwise VALUES (170, 75);  
 GO  

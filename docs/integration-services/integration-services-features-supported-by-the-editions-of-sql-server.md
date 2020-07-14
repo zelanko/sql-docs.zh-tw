@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9963f137470c7e252bc00be189c37ac98e6374e4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4149e9a9a956aaf5a212d8a6ba2a7b65b1523ee3
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71284352"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84817786"
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>SQL Server 各版本支援的 Integration Services 功能
 
@@ -44,6 +44,7 @@ SQL Server Evaluation Edition 提供了 180 天的試用期。
 |Scale Out Master|是|||||
 |Scale Out Worker|是|是 <sup>1</sup>|TBD|TBD|TBD|
 |OData 元件中的 Microsoft Dynamics AX 和 Microsoft Dynamics CRM 支援 <sup>2</sup>|是|是||||
+|Linux 支援|是|是|||是|
 
 <sup>1</sup> 如果您執行的套件需要 Scale Out 中的僅限企業功能，則 Scale Out Worker 也必須在 SQL Server Enterprise 執行個體上執行。
 
@@ -53,7 +54,10 @@ SQL Server Evaluation Edition 提供了 180 天的試用期。
 
 |功能|Enterprise|標準|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|SQL Server 匯入和匯出精靈|是|是|是|是|是|  
+|SQL Server 匯入和匯出精靈|是|是|是|是<sup>1</sup>|是<sup>1</sup>|
+
+<sup>1</sup> DTSWizard.exe 未隨附於 Linux 上的 SQL。 不過，Linux 上的 dtexec 可以用來執行 DTSWizard on Windows 所建立的套件。
+
 
 ## <a name="integration-services"></a><a name="IS"></a> Integration Services  
   

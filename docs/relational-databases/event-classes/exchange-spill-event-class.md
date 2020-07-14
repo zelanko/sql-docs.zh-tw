@@ -12,15 +12,15 @@ ms.assetid: fb876cec-f88d-4975-b3fd-0fb85dc0a7ff
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 12c4552ac8a78c5347f700144afa316d64774602
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 234c70cb0724bd313f7e98b92f8d043ff1e2bf5f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68089363"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85642327"
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Exchange Spill** 事件類別指出平行查詢計劃中的通訊緩衝區，已暫時寫入 **tempdb** 資料庫。 這種情況並不常見，只有在查詢計畫有多重範圍掃描時才會發生。  
   
  通常，產生這類範圍掃描的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢，會有多個 BETWEEN 運算子，而每個運算子都會選取資料表中某個範圍的資料列，或選取某個索引。 或者，您也可以使用像是 (T.a > 10 AND T.a < 20) OR (T.a > 100 AND T.a < 120) 這類的運算式取得多個範圍。 此外，查詢計畫一定需要依序掃描這些範圍，這是因為 T.a 上有 ORDER BY 子句，或是計畫中有 Iterator，因此必須以排序順序取用 Tuple 所致。  
@@ -60,7 +60,7 @@ ms.locfileid: "68089363"
 |**GroupID**|**int**|SQL 追蹤事件引發所在之工作負載群組的識別碼。|66|是|  
 |**HostName**|**nvarchar**|執行用戶端的電腦名稱。 如果用戶端提供主機名稱，這個資料行就會擴展。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  
 |**IsSystem**|**int**|指出事件是發生在系統處理序或使用者處理序。 1 = 系統，0 = 使用者。|60|是|  
-|**LoginName**|**nvarchar**|使用者登入的名稱 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性登入或 *\<網域>\\<使用者名稱\>* 格式的 Windows 登入認證)。|11|是|  
+|**LoginName**|**nvarchar**|使用者的登入名稱 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性登入或 *\<DOMAIN>\\<使用者名稱\>* 格式的 Windows 登入認證)。|11|是|  
 |**LoginSid**|**image**|已登入之使用者的安全性識別碼 (SID)。 您可以在 **master** 資料庫的 **syslogins** 資料表中找到這項資訊。 伺服器上的每一個登入之 SID 是唯一的。|41|是|  
 |**NTDomainName**|**nvarchar**|使用者所隸屬的 Windows 網域。|7|是|  
 |**NTUserName**|**nvarchar**|Windows 使用者名稱。|6|是|  

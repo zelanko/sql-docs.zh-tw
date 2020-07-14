@@ -1,5 +1,6 @@
 ---
 title: 升級或修補複寫的資料庫 | Microsoft Docs
+description: SQL Server 支援從舊版的 SQL Server 升級已複寫的資料庫，而不需要停止其他節點上的活動。
 ms.custom: ''
 ms.date: 07/24/2016
 ms.prod: sql
@@ -16,16 +17,16 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 46156a9e7b1180d5ed70f0dbcb6b25d2f608f0fc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0c2d6d5fc367e66b7a5ca84e2d1c290203f61b8d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72008461"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900221"
 ---
 # <a name="upgrade-or-patch-replicated-databases"></a>升級或修補複寫的資料庫
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
   [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] 支援從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級複寫資料庫。升級節點時，不需要停止其他節點上的活動。 請確定您遵守有關拓撲中支援之版本的規則：  
   
@@ -120,7 +121,7 @@ SQL Server 的升級路徑視部署模式而有所不同。 SQL Server 在一般
 
 
   >[!NOTE]
-  > 若要減少停機時間，建議您將「並存移轉」  散發者作為一個活動執行，並將「就地升級至 SQL Server 2016」  作為另一個活動執行。 這可讓您採取階段式方法、降低風險，並將停機時間縮至最短。
+  > 若要減少停機時間，建議您將「並存移轉」散發者作為一個活動執行，並將「就地升級至 SQL Server 2016」作為另一個活動執行。 這可讓您採取階段式方法、降低風險，並將停機時間縮至最短。
 
 ## <a name="web-synchronization-for-merge-replication"></a>合併式複寫的 Web 同步處理  
  合併式複寫的 Web 同步處理選項要求，必須將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (replisapi.dll) 複製到用於同步處理之 Internet Information Services (IIS) 伺服器上的虛擬目錄。 當您設定 Web 同步處理時，「設定 Web 同步處理精靈」會將檔案複製到虛擬目錄。 如果您升級安裝在 IIS 伺服器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件，就必須將 replisapi.dll 從 COM 目錄手動複製到 IIS 伺服器上的虛擬目錄。 如需設定 Web 同步處理的詳細資訊，請參閱 [設定 Web 同步處理](../../relational-databases/replication/configure-web-synchronization.md)。  

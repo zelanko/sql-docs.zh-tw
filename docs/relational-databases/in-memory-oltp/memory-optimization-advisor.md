@@ -1,5 +1,6 @@
 ---
 title: 記憶體最佳化建議程式 | Microsoft Docs
+description: 使用 SQL Server Management Studio 中的記憶體最佳化建議程式，來協助您從磁碟資料表移轉到經記憶體最佳化的資料表。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0a148e1725d1ce74d206e85cd9a8fd2b88f18eb0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9579587e39b4becd16be9bcae1e206703eb4720c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050188"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730856"
 ---
 # <a name="memory-optimization-advisor"></a>記憶體最佳化 Advisor
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   交易效能分析報表 (請參閱 [判斷是否應將資料表或預存程序移植到記憶體內部 OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) 會通知您，資料庫中哪些資料表在移植為使用記憶體內部 OLTP 時會有加分效果。 識別您要移植為使用記憶體內部 OLTP 的資料表之後，即可使用 SQL Server Management Studio 中的記憶體最佳化建議程式，協助您將磁碟資料表遷移到記憶體最佳化資料表。  
   
@@ -91,7 +92,7 @@ ms.locfileid: "68050188"
 > [!WARNING]  
 >  只有在您了解非持久性資料表的相關資料遺失風險時，才可選取此選項。  
   
- 選取 [下一步]  以繼續操作。  
+ 選取 [下一步] 以繼續操作。  
   
 ### <a name="review-primary-key-conversion"></a>檢閱主索引鍵轉換  
  下一個畫面是 **[檢閱主索引鍵轉換]** 。 記憶體最佳化 Advisor 會偵測資料表中是否有一個或多個主索引鍵，並根據主索引鍵的中繼資料填入資料行的清單。 否則，如果您想要移轉至持久性記憶體最佳化資料表，就必須建立主索引鍵。  

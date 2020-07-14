@@ -1,5 +1,6 @@
 ---
 title: 建立伺服器角色 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 在 SQL Server 中建立伺服器角色。 檢閱限制和必要權限。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 869ee9f88d8cb52f10fbb9120b6815868f7de5fe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5f90781fd5e293c4de5821fc89588b9b1e38ac0b
+ms.sourcegitcommit: 22f687e9e8b4f37b877b2d19c5090dade8fa26d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68094948"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334266"
 ---
 # <a name="create-a-server-role"></a>建立伺服器角色
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "68094948"
   
 -   **若要建立新的伺服器角色，可使用下列項目：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -69,19 +70,19 @@ ms.locfileid: "68094948"
   
 2.  展開 **[安全性]** 資料夾。  
   
-3.  以滑鼠右鍵按一下 [伺服器角色]  資料夾，然後選取 [新增伺服器角色...]  。  
+3.  以滑鼠右鍵按一下 [伺服器角色] 資料夾，然後選取 [新增伺服器角色...]。  
   
 4.  在 [新增伺服器角色 -_server\_role\_name_] 對話方塊中，於 [一般] 頁面的 [伺服器角色名稱] 方塊中輸入新伺服器角色的名稱。  
   
-5.  在 **[擁有者]** 方塊中，輸入將擁有新角色之伺服器主體的名稱。 或者，按一下省略符號 **(...)** ，開啟 [選取伺服器登入或角色]  對話方塊。  
+5.  在 **[擁有者]** 方塊中，輸入將擁有新角色之伺服器主體的名稱。 或者，按一下省略符號 **(...)** ，開啟 [選取伺服器登入或角色] 對話方塊。  
   
-6.  在 [安全性實體]  底下，選取一或多個伺服器層級安全性實體。 已選取安全性實體時，您可以對這個伺服器角色授與或拒絕該安全性實體的權限。  
+6.  在 [安全性實體] 底下，選取一或多個伺服器層級安全性實體。 已選取安全性實體時，您可以對這個伺服器角色授與或拒絕該安全性實體的權限。  
   
-7.  在 **[權限: 明確]** 方塊中，選取核取方塊，對此伺服器角色授與、以授與選項授與 (grant with grant)，或拒絕所選取安全性實體的權限。 如果不能授與或拒絕所有選取之安全性實體的權限，此權限表示為部分選取。  
+7.  在 [權限；明確] 方塊中，選取核取方塊，對此伺服器角色授與、以授與選項授與 (grant with grant)，或拒絕所選取安全性實體的權限。 如果不能授與或拒絕所有選取之安全性實體的權限，此權限表示為部分選取。  
   
 8.  在 **[成員]** 頁面上，使用 **[加入]** 按鈕，將代表個人或群組的登入加入至新的伺服器角色。  
   
-9. 使用者定義的伺服器角色可以是另一個伺服器角色的成員。 在 [成員資格]  頁面上，選取核取方塊，讓目前使用者定義的伺服器角色成為選取之伺服器角色的成員。  
+9. 使用者定義的伺服器角色可以是另一個伺服器角色的成員。 在 [成員資格] 頁面上，選取核取方塊，讓目前使用者定義的伺服器角色成為選取之伺服器角色的成員。  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

@@ -1,5 +1,6 @@
 ---
 title: 萬用字元元件和內容驗證 | Microsoft Docs
+description: 了解 XML 元素和屬性萬用字元元件是如何用來增加可出現在內容模型中之內容的彈性。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b8613bed755158854851483faf3ea6af4fb60402
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: e1fac8a7a0e7eafc4b3bb04809ad51ee2f1b970e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665349"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729824"
 ---
 # <a name="wildcard-components-and-content-validation"></a>萬用字元元件和內容驗證
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   萬用字元元件可用以增加可出現在內容模型中的內容彈性。 在 XSD 語言中，可透過下列方式支援這些元件：  
   
--   元素萬用字元元件。 這些是以 **\<xsd:any>** 項目表示。  
+-   元素萬用字元元件。 這些是以 **\<xsd:any>** 元素表示。  
   
--   屬性萬用字元元件。 這些是以 **\<xsd:anyAttribute>** 項目表示。  
+-   屬性萬用字元元件。 這些是以 **\<xsd:anyAttribute>** 元素表示。  
   
- **\<xsd:any>** 和 **\<xsd:anyAttribute>** 這兩個萬用字元項目都支援使用 **processContents** 屬性。 這可讓您指定一個值，以指出 XML 應用程式如何處理與這些萬用字元元素關聯的文件內容驗證。 以下是不同的值所產生的效果：  
+ **\<xsd:any>** 與 **\<xsd:anyAttribute>** 這兩個萬用字元元素都支援使用 **processContents** 屬性。 這可讓您指定一個值，以指出 XML 應用程式如何處理與這些萬用字元元素關聯的文件內容驗證。 以下是不同的值所產生的效果：  
   
 -   **strict** 值指定完整驗證內容。  
   

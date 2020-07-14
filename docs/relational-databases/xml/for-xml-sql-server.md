@@ -1,5 +1,6 @@
 ---
 title: FOR XML (SQL Server) | Microsoft Docs
+description: 了解在 SQL 查詢中用來以 XML 擷取結果的 FOR XML 子句。
 ms.custom: fresh2019may
 ms.date: 04/03/2020
 ms.prod: sql
@@ -19,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
 author: RothJa
 ms.author: jroth
-ms.openlocfilehash: 6b59b52321f9c4e9489617bb8da9edf58f78b588
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 8cacd5efbc5d94c639c6dbc76c0a8865c4d4d7dd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665144"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729934"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 SELECT 查詢會將結果以資料列集的形式傳回。 在查詢中指定 FOR XML 子句，您就可選擇以 XML 格式擷取 SQL 查詢的正式結果。 FOR XML 子句可以在最上層的查詢與子查詢中使用。 最上層的 FOR XML 子句只能用在 SELECT 陳述式中。 在子查詢中，FOR XML 可以在 INSERT、UPDATE 與 DELETE 陳述式中使用。 FOR XML 也可以用在指派陳述式中。
 
@@ -39,7 +40,7 @@ SELECT 查詢會將結果以資料列集的形式傳回。 在查詢中指定 FO
 - EXPLICIT
 - PATH
 
-RAW 模式會對資料列集中 SELECT 陳述式傳回的每一個資料列，產生一個 \<資料列> 項目。 您可以撰寫巢狀 FOR XML 查詢來產生 XML 階層。
+RAW 模式會對資料列集中 SELECT 陳述式傳回的每一個資料列，產生單一 \<row> 元素。 您可以撰寫巢狀 FOR XML 查詢來產生 XML 階層。
 
 AUTO 模式會使用啟發學習法 (根據 SELECT 陳述式的指定方式)，在所產生的 XML 中產生巢狀結構。 您對產生的 XML 之外觀只有最少的控制權。 您可以撰寫巢狀的 FOR XML 查詢，以產生 AUTO 模式啟發學習法所產生之 XML 外觀以外的 XML 階層。
 

@@ -1,40 +1,39 @@
 ---
 title: 整合式終端
-titleSuffix: Azure Data Studio
 description: 了解 Azure Data Studio 中的整合式終端。
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 13a0e3c17f45e0ba136d83f832d3531bc8059884
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ecd96299a29619bdf52894b36782f6d71e3a0c19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959531"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774588"
 ---
 # <a name="integrated-terminal"></a>整合式終端
 
-在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 中，您可以開啟整合式終端，一開始會先從工作區的根目錄開始。 這可能很方便，因為您不必切換視窗或改變現有終端的狀態，即可執行快速命令列工作。
+在 Azure Data Studio 中，您可以開啟整合式終端，最初先從工作區的根目錄開始。 這可能很方便，因為您不必切換視窗或改變現有終端的狀態，即可執行快速命令列工作。
 
 若要開啟終端：
 
 * 使用 **Ctrl+`** 鍵盤快速鍵 (搭配反引號字元)。
-* 使用 [檢視]   | [整合式終端]  功能表命令。
-* 從**命令選擇區** (**Ctrl+Shift+P**)，使用 [View:Toggle Integrated Terminal] \(檢視: 切換整合式終端\)  命令。
+* 使用 [檢視] | [整合式終端] 功能表命令。
+* 從**命令選擇區** (**Ctrl+Shift+P**)，使用 [View:Toggle Integrated Terminal] \(檢視: 切換整合式終端\) 命令。
 
 ![終端](media/integrated-terminal/terminal-screen.png)
 
 > [!NOTE]
-> 如果您想要在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 外部工作，您仍然可以使用 Explorer 的 [在命令提示字元中開啟]  命令 (在 Mac 或 Linux 上為 [在終端中開啟]  )，開啟外部殼層。
+> 如果您偏好在 Azure Data Studio 外部工作，您仍然可以使用 Explorer 的 [在命令提示字元中開啟] 命令 (在 Mac 或 Linux 上為 [在終端機中開啟])，開啟外部殼層。
 
 ## <a name="managing-multiple-terminals"></a>管理多個終端
 
-您可以建立多個在不同位置開啟的終端，並輕鬆地在其間巡覽。 藉由叫用 [終端]  面板右上方的加號圖示或觸發 **Ctrl+Shift+`** 命令，即可新增終端執行個體。 這會在下拉式清單中建立另一個可用於在其間切換的項目。
+您可以建立多個在不同位置開啟的終端，並輕鬆地在其間巡覽。 藉由叫用 [終端] 面板右上方的加號圖示或觸發 **Ctrl+Shift+`** 命令，即可新增終端執行個體。 這會在下拉式清單中建立另一個可用於在其間切換的項目。
 
 ![多個終端](media/integrated-terminal/terminal-multiple-instances.png)
 
@@ -66,7 +65,7 @@ ms.locfileid: "67959531"
 > 若要作為整合式終端使用，殼層可執行檔必須是主控台應用程式，才能重新導向 `stdin/stdout/stderr`。
 
 > [!TIP]
-> 整合式終端殼層是以 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 的權限執行。 如果您需要以較高 (系統管理員) 或不同的權限執行殼層命令，您可以在終端內使用平台公用程式 (例如 `runas.exe`)。
+> 整合式終端殼層會以 Azure Data Studio 的權限執行。 如果您需要以較高 (系統管理員) 或不同的權限執行殼層命令，您可以在終端內使用平台公用程式 (例如 `runas.exe`)。
 
 ### <a name="shell-arguments"></a>殼層引數
 
@@ -89,7 +88,7 @@ ms.locfileid: "67959531"
 
 ## <a name="terminal-key-bindings"></a><a id="key-bindings"></a>終端按鍵繫結關係
 
-[View:  Toggle Integrated Terminal] \(檢視: 切換整合式終端\) 命令會繫結至 **Ctrl+`** ，快速在檢視中開啟和關閉整合式終端面板。
+[View: Toggle Integrated Terminal] \(檢視: 切換整合式終端\) 命令會繫結至 **Ctrl+`** ，快速在檢視中開啟和關閉整合式終端面板。
 
 以下是可在整合式終端內快速巡覽的鍵盤快速鍵：
 
@@ -118,7 +117,7 @@ ms.locfileid: "67959531"
 
 ### <a name="run-selected-text"></a>執行選取的文字
 
-若要使用 `runSelectedText` 命令，請在編輯器中選取文字，然後執行 [終端:  在使用中的終端執行選取的文字] (透過**命令選擇區** (**Ctrl+Shift+P**))。 終端會嘗試執行選取的文字：
+若要使用 `runSelectedText` 命令，請在編輯器中選取文字，然後執行 [終端:在使用中的終端執行選取的文字] (透過**命令選擇區** (**Ctrl+Shift+P**))。 終端會嘗試執行選取的文字：
 
 ![執行選取的文字](media/integrated-terminal/terminal_run_selected.png)
 
@@ -145,9 +144,9 @@ ms.locfileid: "67959531"
 
 ### <a name="rename-terminal-sessions"></a>重新命名終端工作階段
 
-現在可以使用[終端:  重新命名] (`workbench.action.terminal.rename`) 命令，重新命名整合式終端工作階段。 新的名稱會顯示在終端選取下拉式清單中。
+現在可以使用[終端:重新命名] (`workbench.action.terminal.rename`) 命令，重新命名整合式終端工作階段。 新的名稱會顯示在終端選取下拉式清單中。
 
 ### <a name="forcing-key-bindings-to-pass-through-the-terminal"></a>強制按鍵繫結關係通過終端
 
-雖然焦點是在整合式終端，但許多按鍵繫結關係會因為按鍵輸入傳遞至終端本身並由其取用而無法運作。 `terminal.integrated.commandsToSkipShell` 設定可用來解決此問題。 它包含命令名稱陣列，其按鍵繫結關係會略過殼層處理，而改由 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 按鍵繫結關係系統處理。 根據預設，這包括所有的終端按鍵繫結關係，以及幾個選取的常用按鍵繫結關係。
+雖然焦點是在整合式終端，但許多按鍵繫結關係會因為按鍵輸入傳遞至終端本身並由其取用而無法運作。 `terminal.integrated.commandsToSkipShell` 設定可用來解決此問題。 此設定包含命令名稱的陣列，其按鍵繫結關係會略過殼層處理，而改由 Azure Data Studio 按鍵繫結關係系統處理。 根據預設，這包括所有的終端按鍵繫結關係，以及幾個選取的常用按鍵繫結關係。
 

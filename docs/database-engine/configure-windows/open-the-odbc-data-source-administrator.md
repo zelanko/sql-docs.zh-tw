@@ -1,5 +1,6 @@
 ---
 title: 開啟 ODBC 資料來源管理員 | Microsoft Docs
+description: 了解如何在各種作業系統上開啟 ODBC 資料來源管理員。 您可以使用這個 Windows 元件來建立和管理 ODBC 資料來源。
 ms.custom: ''
 ms.date: 11/07/2016
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - ODBC Data Source Administrator
 - opening ODBC Data Source Administrator
 ms.assetid: 7d475d33-a776-4776-a174-2c8a4acd476f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: ebb0be56f5d4401ba296733d6430bb82d602d3da
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 86a7cc5f6a52b0492ceb45a65a4a68c6a0109c3d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67997936"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696725"
 ---
 # <a name="open-the-odbc-data-source-administrator"></a>開啟 ODBC 資料來源管理員
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   此主題描述如何開啟 ODBC 資料來源管理員。 「ODBC 資料來源管理員」是 Windows 元件。 使用「ODBC 資料來源管理員」來建立及管理 ODBC 資料來源。  
   
@@ -29,7 +30,7 @@ ms.locfileid: "67997936"
 
 #### <a name="to-open-the-odbc-data-source-administrator-in-windows-10"></a>在 Windows 10 中開啟 ODBC 資料來源管理員   
 
-1.  在 [開始]  頁面上輸入 **ODBC 資料來源**。 「ODBC 資料來源傳統型應用程式」  應該會出現在搜尋選項中。 
+1.  在 [開始] 頁面上輸入 **ODBC 資料來源**。 「ODBC 資料來源傳統型應用程式」應該會出現在搜尋選項中。 
 
   
 #### <a name="to-open-the-odbc-data-source-administrator-in-windows-7"></a>若要在 Windows 7 中開啟 ODBC 資料來源管理員  
@@ -38,12 +39,12 @@ ms.locfileid: "67997936"
   
 2.  在 **[控制台]** 中，按一下 **[系統管理工具]** 。  
   
-3.  在 [系統管理工具]  中，按一下 [資料來源 (ODBC)]  。  
+3.  在 [系統管理工具] 中，按一下 [資料來源 (ODBC)]。  
 
 
 #### <a name="to-open-the-odbc-data-source-administrator-in-windows-server-2008"></a>若要在 Windows Server 2008 中開啟 ODBC 資料來源管理員  
   
-1.  在 [開始]  功能表上，指向 [系統管理工具]  ，然後按一下 [資料來源 (ODBC)]  。  
+1.  在 [開始] 功能表上，指向 [系統管理工具]，然後按一下 [資料來源 (ODBC)]。  
 
 
 > [!NOTE]  

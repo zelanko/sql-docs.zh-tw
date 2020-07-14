@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 97a47998-81d9-4331-a244-9eb8b6fe4a56
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 5a67079be4ee6f64c4386b9c44e5f52a3e22893f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a84cae4e79d4b2bd1438bdae9778a4af37d4a231
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828638"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736406"
 ---
 # <a name="x40x40rowcount-transact-sql"></a>&#x40;&#x40;ROWCOUNT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   傳回受到前一個陳述式所影響的資料列數。 如果資料列的數目超過 20 億，請使用 [ROWCOUNT_BIG](../../t-sql/functions/rowcount-big-transact-sql.md)。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "82828638"
   
 -   將 @@ROWCOUNT 重設為 0，但不將該值傳回用戶端。  
   
- 進行簡單指派的陳述式一律會將 @@ROWCOUNT 值設為 1。 它不會傳送任何資料列給用戶端。 以下是這些陳述式的範例：SET @*local_variable*、RETURN、READTEXT 以及 select without query 陳述式 (例如，SELECT GETDATE() 或 SELECT **'***Generic Text***'** 。  
+ 進行簡單指派的陳述式一律會將 @@ROWCOUNT 值設為 1。 它不會傳送任何資料列給用戶端。 這些陳述式的範例如下：SET @*local_variable*、RETURN、READTEXT，以及如 SELECT GETDATE() 或 SELECT **'***一般文字***'** 等無查詢的選取陳述式。  
   
  在查詢中進行指派的陳述式，或是在查詢中使用 RETURN 的陳述式，會將 @@ROWCOUNT 值設為受到該查詢影響或讀取的資料列數，例如：SELECT @*local_variable* = c1 FROM t1。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "82828638"
   
  EXECUTE 陳述式會保留前一個 @@ROWCOUNT。  
   
- USE、SET \<選項>、DEALLOCATE CURSOR、CLOSE CURSOR、PRINT、RAISERROR、BEGIN TRANSACTION 或 COMMIT TRANSACTION 等陳述式，會將 ROWCOUNT 值重設為 0。  
+ USE、SET \<option>、DEALLOCATE CURSOR、CLOSE CURSOR、PRINT、RAISERROR、BEGIN TRANSACTION 或 COMMIT TRANSACTION 等陳述式，會將 ROWCOUNT 值重設為 0。  
   
  原生編譯的預存程序會保留上一個 @@ROWCOUNT。 原生編譯預存程序中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式不會設定 @@ROWCOUNT。 如需詳細資訊，請參閱[原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。  
   

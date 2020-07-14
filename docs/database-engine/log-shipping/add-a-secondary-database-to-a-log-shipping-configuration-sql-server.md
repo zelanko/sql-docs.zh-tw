@@ -1,6 +1,6 @@
 ---
 title: 新增記錄傳送次要
-description: 描述如何將次要資料庫新增至現有的記錄傳送設定。
+description: 描述如何在 SQL Server 中使用 SQL Server Management Studio 或 Transact-SQL 將次要資料庫加入至現有的記錄傳送設定。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b02eba13-f8e6-4684-b7e4-75ea038ea473
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 66a194a26529834a3d77229a21b7556b03da635e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a140f44e848c7b8b00b8c8b7891467dde74822cb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822156"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696733"
 ---
 # <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>將次要資料庫加入至記錄傳送組態 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，將次要資料庫加入至 [!INCLUDE[tsql](../../includes/tsql-md.md)]中現有的記錄傳送組態。  
   
   
@@ -38,7 +38,7 @@ ms.locfileid: "74822156"
   
 #### <a name="to-add-a-log-shipping-secondary-database"></a>若要加入記錄傳送次要資料庫  
   
-1.  以滑鼠右鍵按一下記錄傳送組態中要作為主要資料庫的資料庫，然後按一下 [屬性]  。  
+1.  以滑鼠右鍵按一下記錄傳送組態中要作為主要資料庫的資料庫，然後按一下 [屬性]。  
   
 2.  在 **[選取頁面]** 下，按一下 **[交易記錄傳送]** 。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "74822156"
   
 13. 請注意 **[還原作業]** 下之 **[排程]** 方塊中所列的還原排程。 如果您要自訂安裝的排程，請按一下 **[排程]** ，然後視需要調整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 排程。 這個排程應接近備份排程。  
   
-14. 按一下 [確定]  。  
+14. 按一下 [確定]。  
   
 15. 按一下 [資料庫屬性] 對話方塊上的 **[確定]** ，開始執行組態處理序。  
   

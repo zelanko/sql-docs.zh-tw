@@ -1,28 +1,26 @@
 ---
 title: 新增延伸模組
-titleSuffix: Azure Data Studio
 description: 將延伸模組市集中的延伸模組新增至 Azure Data Studio
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 10/03/2019
-ms.openlocfilehash: 6f0a2ab021873a2a9414bfbcdb7aed63c2d31056
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e74d0dd7b904cba5b332eb20163c96237ac6d6e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72166731"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774624"
 ---
-# <a name="extend-the-functionality-of-name-sos"></a>擴充 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 的功能
+# <a name="extend-the-functionality-of-azure-data-studio"></a>擴充 Azure Data Studio 的功能
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 中的延伸模組提供一種簡單方式，讓您將更多功能新增至基底 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 安裝。 
+Azure Data Studio 中的延伸模組提供一種簡單方式，讓您將更多功能新增至基底 Azure Data Studio 安裝。
 
 延伸模組是由 Azure Data Studio 小組 (Microsoft) 及協力廠商社群 (您！) 提供。 如需建立延伸模組的詳細資訊，請參閱[延伸模組撰寫](extension-authoring.md)。
-
 
 ## <a name="add-azure-data-studio-extensions"></a>新增 Azure Data Studio 延伸模組
 

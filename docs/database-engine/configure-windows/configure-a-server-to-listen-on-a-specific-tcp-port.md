@@ -1,5 +1,6 @@
 ---
 title: 將伺服器設定為在特定 TCP 連接埠上接聽 | Microsoft Docs
+description: 了解如何使用 SQL Server 組態管理員，將資料庫引擎設定為在預設連接埠 1433 以外的特定固定連接埠上接聽。
 ms.custom: ''
 ms.date: 04/25/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - dynamic ports [SQL Server]
 - TCP/IP [SQL Server], port numbers
 ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 48736a721cad475c6956e1715a3912481bc83c40
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 15d1d1ab04adb47772706f8b1495b8ddef8b4fa3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012924"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789841"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>將伺服器設定為在特定 TCP 連接埠上接聽
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   此主題描述如何使用 SQL Server 組態管理員，將 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體設定為在特定固定通訊埠上接聽。 當啟用時，預設的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體會在 TCP 通訊埠 1433 上接聽。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 的具名執行個體是針對 [動態通訊埠](../../tools/configuration-manager/tcp-ip-properties-ip-addresses-tab.md)所設定。 這表示，當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務啟動時，它們會選取可用的通訊埠。 透過防火牆連接到具名執行個體時，設定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 接聽特定通訊埠，如此才能在防火牆中開啟適當的通訊埠。  
 
@@ -44,26 +45,26 @@ ms.locfileid: "68012924"
   
 #### <a name="to-assign-a-tcpip-port-number-to-the-sql-server-database-engine"></a>若要為 SQL Server Database Engine 指派 TCP/IP 通訊埠編號  
   
-1.  在 SQL Server 組態管理員的主控台窗格中，依序展開 [SQL Server 網路組態]  和 [\<執行個體名稱> 的通訊協定]  ，然後按兩下 [TCP/IP]  。  
+1.  在 [SQL Server 組態管理員] 的主控台窗格中，依序展開 [SQL Server 網路組態] 和 [\<instance name> 的通訊協定]，然後按兩下 [TCP/IP]。  
   
     > [!NOTE]  
     >  如果您無法開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員，請參閱 [SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md)。  
   
-2.  在 [TCP/IP 內容]  對話方塊的 [IP 位址]  索引標籤上會出現數個 IP 位址，這些 IP 位址的格式是 **IP1**、**IP2** 到 **IPAll**。 其中一個是供回送介面卡的 IP 位址 127.0.0.1 使用。 同時會出現額外的 IP 位址代表電腦上的每個 IP 位址。 (您可能會看到 IP 第 4 版和 IP 第 6 版位址)。以滑鼠右鍵按一下每個位址，然後按一下 [屬性]  以識別要設定的 IP 位址。  
+2.  在 [TCP/IP 內容] 對話方塊的 [IP 位址] 索引標籤上會出現數個 IP 位址，這些 IP 位址的格式是 **IP1**、**IP2** 到 **IPAll**。 其中一個是供回送介面卡的 IP 位址 127.0.0.1 使用。 同時會出現額外的 IP 位址代表電腦上的每個 IP 位址。 (您可能會看到 IP 第 4 版和 IP 第 6 版位址)。以滑鼠右鍵按一下每個位址，然後按一下 [屬性] 以識別要設定的 IP 位址。  
   
 3.  如果 **[TCP 動態通訊埠]** 對話方塊包含 **0**，代表 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 正在接聽動態通訊埠，請將 0 刪除。  
   
      ![TCP_ports](../../database-engine/configure-windows/media/tcp-ports.png "TCP_ports")  
   
-4.  在 [IP_n_ 屬性]   區域方塊的 [TCP 通訊埠]  方塊中，鍵入您想要讓此 IP 位址接聽的連接埠號碼，然後按一下 [確定]  。 請以逗號分隔來指定多個連接埠。
+4.  在 [IP_n_ 屬性]  區域方塊的 [TCP 通訊埠] 方塊中，鍵入您想要讓此 IP 位址接聽的連接埠號碼，然後按一下 [確定]。 請以逗號分隔來指定多個連接埠。
 
     > [!NOTE] 
-    > 如果 [通訊協定]  索引標籤上的 [全部接聽]  設定設為 [是]，則只會使用 [IPAll]  區段下的 [TCP 連接埠]  和 [TCP 動態連接埠]  值，而完全略過個別 **IP**_n_ 區段。 如果 [全部接聽]  設定設為 [否]，則會略過 [IPAll]  區段下的 [TCP 連接埠]  和 [TCP 動態連接埠]  設定，而改用個別 **IP**_n_ 區段上的 [TCP 連接埠]  、[TCP 動態連接埠]  和 [已啟用]  設定。
-    > 每個 **IP**_n_ 區段都有一個 [已啟用]  設定，其預設值為 [否]，這會導致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 略過此 IP 位址，即使已定義連接埠也一樣。  
+    > 如果 [通訊協定] 索引標籤上的 [全部接聽] 設定設為 [是]，則只會使用 [IPAll] 區段下的 [TCP 連接埠] 和 [TCP 動態連接埠] 值，而完全略過個別 **IP**_n_ 區段。 如果 [全部接聽] 設定設為 [否]，則會略過 [IPAll] 區段下的 [TCP 連接埠] 和 [TCP 動態連接埠] 設定，而改用個別 **IP**_n_ 區段上的 [TCP 連接埠]、[TCP 動態連接埠] 和 [已啟用] 設定。
+    > 每個 **IP**_n_ 區段都有一個 [已啟用] 設定，其預設值為 [否]，這會導致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 略過此 IP 位址，即使已定義連接埠也一樣。  
   
-5.  在主控台窗格中，按一下 [SQL Server 服務]  。  
+5.  在主控台窗格中，按一下 [SQL Server 服務]。  
   
-6.  在詳細資料窗格中，以滑鼠右鍵按一下 [SQL Server (\<執行個體名稱>)]   ，然後按一下 [重新啟動]  ，以停止並重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+6.  在詳細資料窗格中，以滑鼠右鍵按一下 [SQL Server (\<instance name>)]，然後按一下 [重新啟動]，先停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 後再重新啟動。  
   
 ## <a name="connecting"></a>Connecting  
 設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接聽特定通訊埠之後，有三種方式可利用用戶端應用程式連接到特定通訊埠：  

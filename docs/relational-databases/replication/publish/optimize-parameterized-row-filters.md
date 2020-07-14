@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 49349605-ebd0-4757-95be-c0447f30ba13
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: baa8ac4db20eab2ce24ec3bb3963cd847f707fa4
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: 8de8c84c20c410283372cb68cd871c55f9b0d043
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219347"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891980"
 ---
 # <a name="optimize-parameterized-row-filters"></a>最佳化參數化資料列篩選
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中最佳化參數化資料列篩選。  
   
  **本主題內容**  
@@ -34,7 +34,7 @@ ms.locfileid: "81219347"
   
 -   **若要最佳化參數化資料列篩選，請使用：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -50,19 +50,19 @@ ms.locfileid: "81219347"
  下列設定可用於最佳化參數化資料列篩選器：  
   
  **資料分割選項**  
- 您可以在 [發行項屬性 - \<發行項>]  對話方塊的 [屬性]  頁面上，或是在 [新增篩選]  對話方塊中，設定這個選項。 [新增發行集精靈] 和 [發行集屬性 - \<發行集>]  對話方塊中都有提供這兩個對話方塊。 [發行項屬性 - \<發行項>]  對話方塊還可讓您針對這個選項，指定 [新增篩選]  對話方塊中未提供的其他值。  
+ 您可以在 [發行項屬性 - \<Article>] 對話方塊的 [屬性] 頁面上，或是在 [新增篩選] 對話方塊中，設定此選項。 [新增發行集] 精靈和 [發行集屬性 - \<Publication>] 對話方塊中皆提供這兩個對話方塊。 [發行項屬性 - \<Article>] 對話方塊可讓您針對此選項，指定 [新增篩選] 對話方塊中未提供的其他值。  
   
  **預先計算資料分割**  
- 依預設，如果發行集中的發行項符合一組需求，則此選項要設定為 **[True]** 。 如需這些需求的詳細資訊，請參閱[使用預先計算的資料分割最佳化參數化篩選效能](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)。 您可以在 [發行集屬性 - \<發行集>]  對話方塊的 [訂閱選項]  頁面上，修改這個選項。  
+ 依預設，如果發行集中的發行項符合一組需求，則此選項要設定為 **[True]** 。 如需這些需求的詳細資訊，請參閱[使用預先計算的資料分割最佳化參數化篩選效能](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)。 您可以在 [發行集屬性 - \<Publication>] 對話方塊的 [訂閱選項] 頁面上，修改此選項。  
   
  **最佳化同步處理**  
- 只有在 **[預先計算資料分割]** 設定為 **[False]** 時，此選項才應設定為 **[True]** 。 您可以在 [發行集屬性 - \<發行集>]  對話方塊的 [訂閱選項]  頁面上，設定這個選項。  
+ 只有在 **[預先計算資料分割]** 設定為 **[False]** 時，此選項才應設定為 **[True]** 。 您可以在 [發行集屬性 - \<Publication>] 對話方塊的 [訂閱選項] 頁面上，設定此選項。  
   
- 如需使用 [新增發行集精靈] 並存取 [發行集屬性 - \<發行集>]  對話方塊的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)和[檢視和修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 如需使用 [新增發行集] 精靈並存取 [發行集屬性 - \<Publication>] 對話方塊的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)和[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-set-partition-options-in-the-add-filter-or-edit-filter-dialog-box"></a>若要在加入篩選或編輯篩選對話方塊中設定資料分割選項  
   
-1.  在 [新增發行集精靈] 的 [篩選資料表的資料列]  頁面上，或是在 [發行集屬性 - \<發行集>]  對話方塊的 [篩選資料列]  頁面上，按一下 [新增]  ，然後按一下 [新增篩選]  。  
+1.  在 [新增發行集] 精靈的 [篩選資料表的資料列] 頁面上，或是在 [發行集屬性 - \<Publication>] 對話方塊的 [篩選資料列] 頁面上，按一下 [新增]，然後按一下 [新增篩選]。  
   
 2.  建立參數化篩選。 如需詳細資訊，請參閱 [針對合併發行項定義及修改參數化資料列篩選](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
   
@@ -76,15 +76,15 @@ ms.locfileid: "81219347"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  如果您在 [發行集屬性 - \<發行集>]  對話方塊中，請按一下 [確定]  以儲存並關閉對話方塊。  
+5.  如果您位於 [發行集屬性 - \<Publication>] 對話方塊中，請按一下 [確定] 以儲存並關閉對話方塊。  
   
-#### <a name="to-set-partition-options-in-the-article-properties---article-dialog-box"></a>設定發行項屬性 - \<發行項> 對話方塊中的資料分割選項  
+#### <a name="to-set-partition-options-in-the-article-properties---article-dialog-box"></a>設定 [發行項屬性 - \<Article>] 對話方塊中的分割區選項  
   
-1.  在 [新增發行集精靈] 的 [發行項]  頁面上，或是在 [發行集屬性 - \<發行集>]  對話方塊中，選取一個資料表，然後按一下 [發行項屬性]  。  
+1.  在 [新增發行集] 精靈的 [發行項] 頁面上，或是在 [發行集屬性 - \<Publication>] 對話方塊中，選取一個資料表，然後按一下 [發行項屬性]。  
   
 2.  按一下 **[設定反白顯示資料表發行項的屬性]** 或 **[設定所有資料表發行項的屬性]** 。  
   
-3.  在 [發行項屬性 - \<發行項>]  對話方塊之 [屬性]  索引標籤的 [目的地物件]  區段中，指定 [資料分割選項]  的下列其中一個值：  
+3.  在 [發行項屬性 - \<Article>] 對話方塊之 [屬性] 索引標籤的 [目的地物件] 區段中，指定 [分割區選項] 的下列其中一個值：  
   
     -   **重疊**  
   
@@ -98,11 +98,11 @@ ms.locfileid: "81219347"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  如果您在 [發行集屬性 - \<發行集>]  對話方塊中，請按一下 [確定]  以儲存並關閉對話方塊。  
+5.  如果您位於 [發行集屬性 - \<Publication>] 對話方塊中，請按一下 [確定] 以儲存並關閉對話方塊。  
   
 #### <a name="to-set-precompute-partitions"></a>若要設定預先計算資料分割  
   
-1.  在 [發行集屬性 - \<發行集>]  對話方塊的 [訂閱選項]  頁面上，選取 [預先計算資料分割]  選項的值。 在下列情況下，該屬性是唯讀的：  
+1.  在 [發行集屬性 - \<Publication>] 對話方塊的 [訂閱選項] 頁面上，選取 [預先計算分割區] 選項的值。 在下列情況下，該屬性是唯讀的：  
   
     -   發行集不符合預先計算資料分割的需求。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "81219347"
   
 #### <a name="to-set-optimize-synchronization"></a>若要設定最佳化同步處理  
   
-1.  在  [發行屬性 - \<發行集>]  對話方塊的 [發行集選項]  頁面上，針對 [最佳化同步處理]  選項，請選取 `True` 的值。  
+1.  在 [發行集屬性 - \<Publication>] 對話方塊的 [訂閱選項] 頁面上，針對 [最佳化同步處理] 選項選取 `True` 的值。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

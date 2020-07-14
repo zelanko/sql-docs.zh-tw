@@ -25,15 +25,15 @@ ms.assetid: f38f0ad4-46d0-40ea-9851-0f928fda5293
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 664e3cd0fc687509c630258a681c155d94863d39
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 579c73661c3893fdd1346ccc60b64103a4326c2d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67943051"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003989"
 ---
 # <a name="-bitwise-exclusive-or-transact-sql"></a>^ (位元互斥 OR) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   在兩個整數值之間，執行位元互斥 OR 運算。  
   
@@ -62,17 +62,15 @@ expression ^ expression
 ## <a name="remarks"></a>備註  
  **^** 位元運算子會在兩個運算式之間執行位元邏輯排除 OR 運算，其中會針對兩個運算式拿取每個對應的位元。 如果輸入運算式的其中一個位元 (針對目前所解析的位元) 的值是 1 (兩個位元值不能同時是 1)，結果中的兩個位元都會設為 1。 如果兩個位元同時是 0 或同時是 1，便會清除結果中的位元而成為 0 值。  
   
- 如果左右運算式的整數資料類型不同 (例如，左邊的 *expression* 是 **smallint**，而右邊的 *expression* 是 **int**)，就會將較小資料類型的引數轉換為較大的資料類型。 在此案例中，會將 **smallint**_expression_ 轉換為 **int**。  
+ 如果左右運算式的整數資料類型不同 (例如，左邊的 *expression* 是 **smallint**，而右邊的 *expression* 是 **int**)，就會將較小資料類型的引數轉換為較大的資料類型。 在此案例中，會將 **smallint** _expression_ 轉換為 **int**。  
   
 ## <a name="examples"></a>範例  
  下列範例會使用 **int** 資料類型來建立資料表以儲存原始值，並將兩個值插入到單一資料列中。  
   
 ```  
-CREATE TABLE bitwise  
-(   
-a_int_value int NOT NULL,  
-b_int_value int NOT NULL  
-);  
+CREATE TABLE bitwise (   
+  a_int_value INT NOT NULL,  
+  b_int_value INT NOT NULL);
 GO  
 INSERT bitwise VALUES (170, 75);  
 GO  

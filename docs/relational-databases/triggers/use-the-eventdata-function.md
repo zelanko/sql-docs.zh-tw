@@ -13,15 +13,15 @@ ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aef51bd94bf7cffb3e9481b409477a3830fabffb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f49da6a68a3d0897dc545215c9260904cdb8bb11
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68058597"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727103"
 ---
 # <a name="use-the-eventdata-function"></a>使用 EVENTDATA 函數
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   使用 EVENTDATA 函數擷取引發 DDL 觸發程序之事件的相關資訊。 此函數會傳回 **xml** 值。 XML 結構描述包括有關下列項目的資訊：  
   
 -   事件的時間。  
@@ -50,7 +50,7 @@ AS
   
  `CREATE TABLE NewTable (Column1 int);`  
   
- DDL 觸發程序中的 `EVENTDATA()` 陳述式，會擷取到不容許的 `CREATE TABLE` 陳述式文字。 對 EVENTDATA 產生的 **xml** 資料使用 XQuery 陳述式並擷取 \<CommandText> 項目，即可完成這項作業。 如需詳細資訊，請參閱 [XQuery 語言參考 &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)。  
+ DDL 觸發程序中的 `EVENTDATA()` 陳述式，會擷取到不容許的 `CREATE TABLE` 陳述式文字。 對 EVENTDATA 產生的 **xml** 資料使用 XQuery 陳述式並擷取 \<CommandText> 元素，即可完成此作業。 如需詳細資訊，請參閱 [XQuery 語言參考 &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)。  
   
 > [!CAUTION]  
 >  EVENTDATA 會擷取 CREATE_SCHEMA 事件的資料，以及對應之 CREATE SCHEMA 定義的 <schema_element> (如果有的話)。 此外，EVENTDATA 還會將 <schema_element> 定義識別為個別事件。 因此，在 CREATE_SCHEMA 事件和 CREATE SCHEMA 定義之 <schema_element> 代表的事件上建立的 DDL 觸發程序，可能會傳回相同的事件資料兩次，例如 `TSQLCommand` 資料。 例如，假設在 CREATE_SCHEMA 和 CREATE_TABLE 兩個事件上建立 DDL 觸發程序，並執行下列批次：  
@@ -128,7 +128,7 @@ GO
 > [!NOTE]  
 >  若要傳回事件資料，建議您使用 **query()** 方法的 XQuery **value()** 方法。 **query()** 方法會在輸出中傳回 XML 和 &amp; 符號逸出歸位字元及換行字元 (CRLF) 執行個體， **value()** 方法則會將 CRLF 執行個體轉譯成在輸出中不可見。  
   
- [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫中則提供了相似的 DDL 觸發程序範例。 若要取得此範例，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來尋找 [Database Triggers] 資料夾。 這個資料夾位在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 [可程式性] 資料夾下。 以滑鼠右鍵按一下 [ddlDatabaseTriggerLog]  ，然後選取 [編寫資料庫觸發程序的指令碼為]  。 依預設，會停用 DDL 觸發程序 **ddlDatabaseTriggerLog**。  
+ [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫中則提供了相似的 DDL 觸發程序範例。 若要取得此範例，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來尋找 [Database Triggers] 資料夾。 這個資料夾位在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 [可程式性] 資料夾下。 以滑鼠右鍵按一下 [ddlDatabaseTriggerLog]，然後選取 [編寫資料庫觸發程序的指令碼為]。 依預設，會停用 DDL 觸發程序 **ddlDatabaseTriggerLog**。  
   
 ## <a name="see-also"></a>另請參閱  
  [DDL 事件](../../relational-databases/triggers/ddl-events.md)   

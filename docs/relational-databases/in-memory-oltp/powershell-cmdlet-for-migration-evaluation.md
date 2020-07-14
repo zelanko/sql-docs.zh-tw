@@ -1,5 +1,6 @@
 ---
 title: 用於移轉評估的 PowerShell Cmdlet | Microsoft Docs
+description: 了解 Save-SqlMigrationReport，其會針對記憶體內部 OLTP 評估 SQL Server 資料庫中物件的移轉適用性。
 ms.custom: ''
 ms.date: 07/30/2019
 ms.prod: sql
@@ -11,22 +12,22 @@ ms.assetid: 117250d3-9982-47fe-94fd-6f29f6159940
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5272203fb1a1c0ac2f755a4da99c654b2595a7f0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f0c3489dab411718eb32e8ff4dd6c182ec59f2b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68698310"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722376"
 ---
 # <a name="powershell-cmdlet-for-migration-evaluation"></a>用於移轉評估的 PowerShell Cmdlet
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 `Save-SqlMigrationReport` Cmdlet 是一種工具，可評估 SQL Server 資料庫中多個物件的移轉適用性。
 
 目前，此 Cmdlet 僅限於評估記憶體內部 OLTP 的移轉適用性。 您可在提高權限的 Windows PowerShell 環境和 sqlps 中執行此 Cmdlet。
 
-除了直接執行此 PowerShell Cmdlet 外，您也可以使用 SQL Server Management Studio (SSMS) 來隱含執行 Cmdlet。 在 SSMS [物件總管]  中，您可以滑鼠右鍵按一下資料表，然後按一下 [記憶體最佳化建議程式]  。
+除了直接執行此 PowerShell Cmdlet 外，您也可以使用 SQL Server Management Studio (SSMS) 來隱含執行 Cmdlet。 在 SSMS [物件總管] 中，您可以滑鼠右鍵按一下資料表，然後按一下 [記憶體最佳化建議程式]。
 
 ## <a name="syntax"></a>語法
 
@@ -55,7 +56,7 @@ Save-SqlMigrationReport
 - `-Schema`
 - `-Object`
 
-相反的，若您「沒有」  指定 `-InputObject` 參數，您便必須指定 `-Server` 和 `-Database`。 若您指定 `-Server`，您可以選擇指定 `-Schema` 或 `-Object`，或同時指定兩者來縮小範圍。
+相反的，若您「沒有」指定 `-InputObject` 參數，您便必須指定 `-Server` 和 `-Database`。 若您指定 `-Server`，您可以選擇指定 `-Schema` 或 `-Object`，或同時指定兩者來縮小範圍。
 
 | 參數名稱 | 描述 |
 | :------------- | :---------- |
@@ -70,7 +71,7 @@ Save-SqlMigrationReport
 | 使用者名稱 | 透過 SQL Server 驗證而非透過 Windows 驗證進行連線時，此為必要項目。 否則請省略它。 |
 | &nbsp; | &nbsp; |
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 在執行此 Cmdlet 前，您必須先安裝名為 **SqlServer** 的模組：
 

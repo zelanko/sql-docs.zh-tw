@@ -1,5 +1,6 @@
 ---
 title: 壓縮檔案 | Microsoft 文件
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL，在 SQL Server 中壓縮資料或記錄檔。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: ce5c8798-c039-4ab2-81e7-90a8d688b893
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3adf38c1908e17dbac530cab0cc47658e9241559
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 14fe5218577618cea4957fc819879374233210a7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71961924"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715501"
 ---
 # <a name="shrink-a-file"></a>壓縮檔案
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中壓縮資料或記錄檔。  
   
  將資料頁面從檔案結尾移到靠近檔案前端的未使用空間，以壓縮資料並復原儲存空間。 當檔案結尾建立了足夠的可用空間後，檔案結尾的資料頁面便可取消配置並返回檔案系統。  
@@ -44,7 +45,7 @@ ms.locfileid: "71961924"
   
 -   **使用下列方法壓縮資料或記錄檔：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -122,7 +123,7 @@ ms.locfileid: "71961924"
   
      選取此選項，使檔案群組中指定檔案內的所有資料都移到其他檔案內。 然後即可刪除空白檔案。 這個選項的作用與使用 EMPTYFILE 選項執行 DBCC SHRINKFILE 的作用相同。  
   
-9. 按一下 [確定]  。  
+9. 按一下 [確定]。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

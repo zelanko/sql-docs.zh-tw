@@ -17,15 +17,15 @@ ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3cb02f0cbb395b8e3f730e62139eb7b7d89b4c96
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bc37d9d18d75a9e24b1e894b28b8e7a0a29f602c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908112"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753116"
 ---
 # <a name="create-filtered-indexes"></a>建立篩選的索引
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立篩選索引。 篩選索引是最佳化的非叢集索引，特別適合涵蓋從妥善定義的資料子集選取而來的查詢。 篩選索引會使用篩選述詞對資料表中的部分資料列進行索引。 與完整資料表索引相較，設計良好的篩選索引可以提升查詢效能、降低索引維護成本和儲存成本。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "72908112"
   
 -   **使用下列方法建立篩選的索引：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -83,7 +83,7 @@ ms.locfileid: "72908112"
   
     -   非唯一索引。 篩選索引可以是非唯一的，而索引檢視表則必須是唯一的。  
   
--   篩選索引定義於單一資料表，僅支援簡單比較運算子。 如果需要參考多個資料表或具有複雜邏輯的篩選運算式，則應該建立檢視。  
+-   篩選索引定義於單一資料表，且僅支援簡單[比較運算子](../../t-sql/language-elements/comparison-operators-transact-sql.md)。 如果需要參考多個資料表或具有複雜邏輯的篩選運算式，則應該建立檢視。 篩選索引不支援 `LIKE` 運算子。 
   
 -   如果篩選索引運算式相等於查詢述詞，且查詢並未以篩選索引運算式中的資料行傳回查詢結果，則篩選索引運算式中的資料行不需要是篩選索引定義中的索引鍵或內含資料行。  
   
@@ -112,19 +112,19 @@ ms.locfileid: "72908112"
   
 3.  按一下加號展開要建立篩選索引的資料表。  
   
-4.  以滑鼠右鍵按一下 [索引]  資料夾，指向 [新增索引]  ，然後選取 [非叢集索引…]  。  
+4.  以滑鼠右鍵按一下 [索引] 資料夾，指向 [新增索引]，然後選取 [非叢集索引…]。  
   
 5.  在 **[新增索引]** 對話方塊，於 **[一般]** 頁面上的 **[索引名稱]** 方塊中輸入新索引的名稱。  
   
-6.  按一下 [索引鍵資料行]  下的 [新增...]  。  
+6.  按一下 [索引鍵資料行] 下的 [新增...]。  
   
 7.  在 [從 _table\_name_ 選取資料行] 對話方塊中，選取要新增至唯一索引之一或多個資料表資料行的一或多個核取方塊。  
   
-8.  按一下 [確定]  。  
+8.  按一下 [確定]。  
   
-9. 在 [篩選]  頁面的 [篩選運算式]  底下，輸入要用來建立篩選索引的 SQL 運算式。  
+9. 在 [篩選] 頁面的 [篩選運算式]底下，輸入要用來建立篩選索引的 SQL 運算式。  
   
-10. 按一下 [確定]  。  
+10. 按一下 [確定]。  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

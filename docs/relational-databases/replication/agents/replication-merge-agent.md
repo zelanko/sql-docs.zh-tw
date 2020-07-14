@@ -1,5 +1,6 @@
 ---
 title: 複寫合併代理程式 | Microsoft Docs
+description: 複寫合併代理程式會向訂閱者套用資料庫資料表中保存的初始快照集，合併累加資料變更，然後協調衝突。
 ms.custom: ''
 ms.date: 10/29/2018
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ddbb30c678599cafcde7e5cb8888a904b9cf7b58
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: a4dff5292a3cd0bfcd46e2615bc755665ff3e49d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529402"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897896"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   「複寫合併代理程式」是一個公用程式可執行檔，它會將資料庫資料表中保存的初始快照集套用至「訂閱者」。 此外，它也會合併建立初始快照集之後在「發行者」端發生的累加資料變更，並根據您設定的規則或使用您建立的自訂解析程式來調解衝突。  
   
 > [!NOTE]  
@@ -265,7 +266,7 @@ replmerg [-?]
  這是記錄執行緒檢查是否有任何現有的連接正在等候伺服器回應之前的秒數。 執行長時間執行的批次時，您可以減少這個值，避免檢查代理程式將合併代理程式標示為有疑問。 預設值是 **300** 秒。  
   
  **-LoginTimeOut** _login_time_out_seconds_  
- 這是登入逾時之前的秒數。  預設值為 15 秒。  
+ 這是登入逾時之前的秒數。 預設值為 15 秒。  
   
  **-MakeGenerationInterval** _make_generation_interval_seconds_  
  這是建立層代或變更批次之間等待的秒數，以便下載到用戶端。 預設值為 **1** 秒。  
@@ -288,7 +289,7 @@ replmerg [-?]
  這是代理程式輸出檔的路徑。 如果未提供檔案名稱，輸出將傳送至主控台。 如果指定的檔案名稱存在，輸出就會附加至該檔案。  
   
  **-OutputVerboseLevel** [**0**|**1**|**2**]  
- 指定輸出是否應該詳細。  如果詳細資訊層級為 0，系統就只會列印錯誤訊息。 如果詳細資訊層級為 **1**，系統就會列印所有進度報表訊息。  如果詳細資訊層級為 2 (預設值)，系統就會列印所有錯誤訊息和進度報表訊息 (可用於偵錯)。  
+ 指定輸出是否應該詳細。 如果詳細資訊層級為 0，系統就只會列印錯誤訊息。 如果詳細資訊層級為 **1**，系統就會列印所有進度報表訊息。  如果詳細資訊層級為 2 (預設值)，系統就會列印所有錯誤訊息和進度報表訊息 (可用於偵錯)。  
   
  **-ParallelUploadDownload** [**0**|**1**]  
  指定合併代理程式是否應該以平行方式處理上傳至發行者的變更以及下載至訂閱者的變更，而且這個參數在具有高網路頻寬的高容量環境中很有用。 如果 **ParallelUploadDownload** 是 **1**，就會啟用平行處理。  

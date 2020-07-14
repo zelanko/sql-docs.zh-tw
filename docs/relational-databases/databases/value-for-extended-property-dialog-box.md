@@ -16,18 +16,18 @@ ms.assetid: cf0ba215-cf83-48e0-bd98-a8ddc8810eab
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6b71f68ad0c85f95af5d069eae8249b1d729cb42
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fb86d74c3b8a3e2cc1efe0804336115cbf387bcf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68127106"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727562"
 ---
 # <a name="value-for-extended-property-dialog-box"></a>擴充屬性的值對話方塊
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  使用 [**屬性名稱> 的值]** _\<_ 對話方塊來輸入或檢視值。 這是一般的對話方塊，可以從數個位置加以開啟。  
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  使用 [ _\<property name>_ 的值] 對話方塊，來輸入或檢視值。 這是一般的對話方塊，可以從數個位置加以開啟。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  **擴充屬性名稱**  
  正在檢視或設定之擴充屬性的名稱。  
   

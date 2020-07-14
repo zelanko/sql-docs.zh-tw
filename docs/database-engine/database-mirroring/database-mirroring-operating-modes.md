@@ -1,5 +1,6 @@
 ---
 title: 資料庫鏡像作業模式 | Microsoft Docs
+description: 了解 SQL Server 中資料庫鏡像工作階段的同步與非同步作業模式。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6d39c2d0975f7be8a7e5481b9c91266528ae9ee2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9fdcdc937ba8509f67b71352dd1b87d8f98f92d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006355"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631417"
 ---
 # <a name="database-mirroring-operating-modes"></a>資料庫鏡像作業模式
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主題描述資料庫鏡像工作階段的同步與非同步作業模式。  
   
 > [!NOTE]  
@@ -156,7 +157,7 @@ ms.locfileid: "68006355"
   
  與兩位夥伴不同的是，見證並不是為資料庫服務。 見證只是藉由確認主體伺服器是否已啟動而且可以正常運作，來支援自動容錯移轉。 只有當鏡像和見證與主體伺服器中斷連接後仍然保持相互連接時，鏡像伺服器才會開始進行自動容錯移轉。  
   
- 當見證設定完成後，工作階段就會要求「仲裁」  (它是至少兩個伺服器執行個體之間的關聯性，以便讓資料庫可供使用)。 如需詳細資訊，請參閱[資料庫鏡像見證](../../database-engine/database-mirroring/database-mirroring-witness.md)和[仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
+ 當見證設定完成後，工作階段就會要求「仲裁」(它是至少兩個伺服器執行個體之間的關聯性，以便讓資料庫可供使用)。 如需詳細資訊，請參閱[資料庫鏡像見證](../../database-engine/database-mirroring/database-mirroring-witness.md)和[仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
  自動容錯移轉必須符合下列條件：  
   

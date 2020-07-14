@@ -1,7 +1,7 @@
 ---
 title: 查詢系統建立版本時態表中的資料 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/30/2020
+ms.date: 03/28/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,16 +11,16 @@ ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c64fbfa127f3e5992f2e924d7498fc68fec5db13
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 2ed4bcd1fb72c25520e935879305ff1c7d894707
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402678"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002334"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>查詢系統建立版本時態表中的資料
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 當您想要取得時態表中資料的最新 (實際) 狀態，您能夠以您查詢非時態表完全一樣的方式查詢。 如果 PERIOD 資料行未隱藏，其值會出現在 SELECT \* 查詢中。 如果您將 **PERIOD** 資料行指定為隱藏，其值不會出現在 SELECT \* 查詢中。 當 **PERIOD** 資料行隱藏時，請特別參考 SELECT 子句中的 **PERIOD** 資料行，以傳回這些資料行的值。
 
@@ -32,7 +32,7 @@ ms.locfileid: "80402678"
 - CONTAINED IN (<start_date_time> , <end_date_time>)
 - ALL
 
-在查詢中，可以針對每個資料表個別指定**FOR SYSTEM_TIME** 。 它可以在通用資料表運算式、資料表值函式和預存程序內使用。 搭配時態表使用資料表別名時，時態表名稱和別名之間必須包含 **FOR SYSTEM_TIME** 子句 - 請參閱[使用 AS OF 次子句查詢特定時間](#query-for-a-specific-time-using-the-as-of-sub-clause)中的第二個範例。
+在查詢中，可以針對每個資料表個別指定**FOR SYSTEM_TIME** 。 它可以在通用資料表運算式、資料表值函式和預存程序內使用。 搭配時態表使用資料表別名時，時態表名稱和別名之間必須包含 **FOR SYSTEM_TIME** 子句 (請參閱＜使用 AS OF 次子句查詢特定時間＞中的第二個範例，如下所示)。
 
 ## <a name="query-for-a-specific-time-using-the-as-of-sub-clause"></a>使用 AS OF 次子句查詢特定的時間
 

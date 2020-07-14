@@ -1,5 +1,6 @@
 ---
 title: 保護 SQL Server 的安全 | Microsoft Docs
+description: 使用這些文章，在 SQL Server 中建立及實作有效的安全性計畫。 了解平台、驗證、物件和應用程式。
 ms.custom: ''
 ms.date: 06/21/2019
 ms.prod: sql
@@ -18,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 473c12211ada579c3ceb441792788a1e975a85e0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 80c8c535c5463a6639c752a68e20fd95c54899b3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68892489"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729241"
 ---
 # <a name="securing-sql-server"></a>保護 SQL Server 的安全
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 維護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安全可視為一系列的步驟，與下列四個方面有關：平台、驗證、物件 (包括資料) 和存取系統的應用程式。 下列主題將會引導您逐步建立及實施有效的安全性計畫。  
   

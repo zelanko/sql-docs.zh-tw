@@ -1,5 +1,6 @@
 ---
 title: 建立 FILESTREAM 資料的用戶端應用程式 | Microsoft Docs
+description: 了解如何使用 Win32 API 來建立可存取 FILESTREAM 資料的用戶端應用程式。 查看可用的函式、必要的步驟、範例與最佳做法。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 385deb9dd689c6716ab8addaa64d8bf8bd62ed97
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f3eaf19bb73d4b36f5ba31ce61c0cc62b14a923d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68085388"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768008"
 ---
 # <a name="create-client-applications-for-filestream-data"></a>建立 FILESTREAM 資料的用戶端應用程式
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   您可以使用 Win32 API 來讀取及寫入資料至 FILESTREAM BLOB。 下面是必要的步驟：  
   
 -   讀取 FILESTREAM 檔案路徑。  
@@ -40,7 +41,7 @@ ms.locfileid: "68085388"
   
 -   [GET_FILESTREAM_TRANSACTION_CONTEXT()](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md) 會傳回代表工作階段之目前交易的 Token。 應用程式會使用此 Token 將 FILESTREAM 檔案系統資料流作業繫結至此交易。  
   
--   [OpenSqlFilestream API](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) 會取得 Win32 檔案控制代碼。 應用程式會使用此控制代碼來為 FILESTREAM 資料進行資料流處理，然後將此控制代碼傳遞給下列 Win32 API： [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)、 [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)、 [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)、 [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)、 [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)或 [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)。 如果應用程式使用此控制代碼呼叫任何其他 API，就會傳回 ERROR_ACCESS_DENIED 錯誤。 應用程式應該使用 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428)來關閉此控制代碼。  
+-   [OpenSqlFilestream API](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) 會取得 Win32 檔案控制代碼。 應用程式會使用此控制代碼來為 FILESTREAM 資料進行資料流處理，然後將此控制代碼傳遞給下列 Win32 API：[ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)、[WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)、[TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)、[SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)、[SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426) 或 [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)。 如果應用程式使用此控制代碼呼叫任何其他 API，就會傳回 ERROR_ACCESS_DENIED 錯誤。 應用程式應該使用 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428)來關閉此控制代碼。  
   
  所有 FILESTREAM 資料容器存取都是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易中執行。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式可以在相同的交易中執行，以維護 SQL 資料與 FILESTREAM 資料之間的一致性。  
   
@@ -57,7 +58,7 @@ ms.locfileid: "68085388"
  [!code-sql[FILESTREAM#FS_GET_TRANSACTION_CONTEXT](../../relational-databases/blob/codesnippet/tsql/create-client-applicatio_2.sql)]  
   
 ###  <a name="obtaining-a-win32-file-handle"></a><a name="handle"></a> 取得 Win32 檔案控制代碼  
- 若要取得 Win32 檔案控制代碼，請呼叫 OpenSqlFilestream API。 這個 API 是從 sqlncli.dll 檔案中匯出。 傳回的控制代碼可傳遞給下列任何 Win32 API： [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)、 [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)、 [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)、 [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)、 [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)或 [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)。 下列範例將示範如何取得 Win32 檔案控制代碼，並用它來讀取及寫入資料至 FILESTREAM BLOB。  
+ 若要取得 Win32 檔案控制代碼，請呼叫 OpenSqlFilestream API。 這個 API 是從 sqlncli.dll 檔案中匯出。 傳回的控制代碼可傳遞給下列任何 Win32 API：[ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)、[WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)、[TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)、[SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)、[SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426) 或 [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)。 下列範例將示範如何取得 Win32 檔案控制代碼，並用它來讀取及寫入資料至 FILESTREAM BLOB。  
   
  [!code-cs[FILESTREAM#FS_CS_ReadAndWriteBLOB](../../relational-databases/blob/codesnippet/csharp/create-client-applicatio_3.cs)]  
   

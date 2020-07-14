@@ -8,16 +8,16 @@ ms.date: 06/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5d341d7bbda403b405268fe253cff7d60cea4d0d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 72d1292b03bc518ec8dfbe7a8f2e5e281bc6978a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68077438"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896551"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>為 Linux 上的 SQL Server 建立和設定可用性群組
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 本教學課程涵蓋如何為 Linux 上的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 建立和設定可用性群組 (AG)。 不同於 Windows 上的 [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] 和更早版本，不論是否先建立基礎 Pacemaker 叢集，您都可以啟用 AG。 如果需要整合叢集，則會在稍後才進行。
 
@@ -320,17 +320,17 @@ sudo systemctl restart mssql-server
 
 本節顯示如何使用 SSMS 搭配 [新增可用性群組精靈]，建立叢集類型為「外部」的 AG。
 
-1.  在 SSMS 中，展開 [Always On 高可用性]  ，以滑鼠右鍵按一下[可用性群組]  ，然後選取 [新增可用性組精靈]  。
+1.  在 SSMS 中，展開 [Always On 高可用性]，以滑鼠右鍵按一下[可用性群組]，然後選取 [新增可用性組精靈]。
 
-2.  在 [簡介] 對話方塊上，按 [下一步]  。
+2.  在 [簡介] 對話方塊上，按 [下一步]。
 
-3.  在 [指定可用性群組選項] 對話方塊中，輸入可用性群組的名稱，然後在下拉式清單中選取 [外部] 或 [無] 的叢集類型。 如果要部署 Pacemaker，應該使用 [外部]。 [無] 適用於特定案例，例如，讀取擴增。選取 [資料庫層級健康情況偵測] 選項是選擇性的。 如需此選項的詳細資訊，請參閱[可用性群組資料庫層級健康情況偵測容錯移轉選項](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md)。 按 [下一步]  。
+3.  在 [指定可用性群組選項] 對話方塊中，輸入可用性群組的名稱，然後在下拉式清單中選取 [外部] 或 [無] 的叢集類型。 如果要部署 Pacemaker，應該使用 [外部]。 [無] 適用於特定案例，例如，讀取擴增。選取 [資料庫層級健康情況偵測] 選項是選擇性的。 如需此選項的詳細資訊，請參閱[可用性群組資料庫層級健康情況偵測容錯移轉選項](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md)。 按 [下一步] 。
 
     ![](./media/sql-server-linux-create-availability-group/image3.png)
 
-4.  在 [選取資料庫] 對話方塊中，選取將參與 AG 的資料庫。 每個資料庫都必須有完整備份，才能將它加入 AG。 按 [下一步]  。
+4.  在 [選取資料庫] 對話方塊中，選取將參與 AG 的資料庫。 每個資料庫都必須有完整備份，才能將它加入 AG。 按 [下一步] 。
 
-5.  在 [指定複本] 對話方塊中，按一下 [新增複本]  。
+5.  在 [指定複本] 對話方塊中，按一下 [新增複本]。
 
 6.  在 [連線至伺服器] 對話方塊中，輸入將作為次要複本 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Linux 執行個體的名稱，以及要連線的認證。 按一下 [ **連接**]。
 
@@ -348,7 +348,7 @@ sudo systemctl restart mssql-server
 
 9.  如果您想要變更備份喜好設定，請按一下 [備份喜好設定] 索引標籤。如需 AG 的備份喜好設定詳細資訊，請參閱[設定可用性複本的備份](../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)。
 
-10. 如果針對讀取縮放使用可讀取次要複本，或建立叢集類型為「無」的 AG，您可以選取 [接聽程式] 索引標籤來建立接聽程式。您也可以稍後再新增接聽程式。 若要建立接聽程式，請選擇 [建立可用性群組接聽程式]  選項，然後輸入名稱、TCP/IP 連接埠，以及要使用靜態或自動指派的 DHCP IP 位址。 請記住，對於叢集類型為「無」的 AG，IP 應為靜態，並設定為主要的 IP 位址。
+10. 如果針對讀取縮放使用可讀取次要複本，或建立叢集類型為「無」的 AG，您可以選取 [接聽程式] 索引標籤來建立接聽程式。您也可以稍後再新增接聽程式。 若要建立接聽程式，請選擇 [建立可用性群組接聽程式] 選項，然後輸入名稱、TCP/IP 連接埠，以及要使用靜態或自動指派的 DHCP IP 位址。 請記住，對於叢集類型為「無」的 AG，IP 應為靜態，並設定為主要的 IP 位址。
 
     ![](./media/sql-server-linux-create-availability-group/image6.png)
 
@@ -360,15 +360,15 @@ sudo systemctl restart mssql-server
 
     c.  選取每個 URL，然後從底部選取可讀取複本。 若要複選，請按住 SHIFT 或按一下並拖曳。
 
-12. 按 [下一步]  。
+12. 按 [下一步] 。
 
-13. 選擇次要複本將如何初始化。 預設值是使用[自動植入](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md)，這需要參與 AG 的所有伺服器上都有相同路徑。 您也可以讓精靈執行備份、複製和還原 (第二個選項)；如果您已在複本上手動備份、複製及還原資料庫，請將它加入 (第三個選項)；或者，稍後再新增資料庫 (最後一個選項)。 如同憑證，如果您要手動建立備份並複製它們，則必須在其他複本上設定備份檔案上的權限。 按 [下一步]  。
+13. 選擇次要複本將如何初始化。 預設值是使用[自動植入](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md)，這需要參與 AG 的所有伺服器上都有相同路徑。 您也可以讓精靈執行備份、複製和還原 (第二個選項)；如果您已在複本上手動備份、複製及還原資料庫，請將它加入 (第三個選項)；或者，稍後再新增資料庫 (最後一個選項)。 如同憑證，如果您要手動建立備份並複製它們，則必須在其他複本上設定備份檔案上的權限。 按 [下一步] 。
 
-14. 在 [驗證] 對話方塊中，如果所有項目都未傳回為 [成功]，請進行調查。 有些警告是可接受且不嚴重的，例如，如果您未建立接聽程式。 按 [下一步]  。
+14. 在 [驗證] 對話方塊中，如果所有項目都未傳回為 [成功]，請進行調查。 有些警告是可接受且不嚴重的，例如，如果您未建立接聽程式。 按 [下一步] 。
 
-15. 在 [摘要] 頁面上，按一下 [完成]  。 現在會開始建立 AG 的程序。
+15. 在 [摘要] 頁面上，按一下 [完成]。 現在會開始建立 AG 的程序。
 
-16. 當 AG 建立完成時，請按一下 [結果] 上的 [關閉]  。 您現在可以在複本上的動態管理檢視，以及 SSMS 中的 [Always On 高可用性] 資料夾底下看到 AG。
+16. 當 AG 建立完成時，請按一下 [結果] 上的 [關閉]。 您現在可以在複本上的動態管理檢視，以及 SSMS 中的 [Always On 高可用性] 資料夾底下看到 AG。
 
 ### <a name="use-transact-sql"></a>使用 Transact-SQL
 
@@ -582,7 +582,9 @@ Linux 上的基礎 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Pac
 
 在 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 中建立可用性群組之後，如果指定「外部」叢集類型，就必須在 Pacemaker 中建立對應的資源。 有兩個與 AG 相關聯的資源：AG 本身和 IP 位址。 如果您未使用接聽程式功能，則設定 IP 位址資源是選擇性的，但建議您這麼做。
 
-所建立的 AG 資源是稱為「複製品」的特殊資源。 AG 資源基本上在每個節點上都有複本，而且有一個稱為主資源 (Master) 的控制資源。 主資源會與裝載主要複本的伺服器相關聯。 次要複本 (一般或僅限設定) 被視為從屬資源 (Slave)，而且可以在容錯移轉時升階為主資源。
+所建立的 AG 資源是稱為「複製品」的特殊資源。 AG 資源基本上在每個節點上都有複本，而且有一個稱為主資源 (Master) 的控制資源。 主資源會與裝載主要複本的伺服器相關聯。 其他資源會裝載次要複本 (一般或僅限設定)，而且可以在容錯移轉時升階為主資源。
+
+[!INCLUDE [bias-sensitive-term-t](../includes/bias-sensitive-term-t.md)]
 
 1.  使用下列語法建立 AG 資源：
 

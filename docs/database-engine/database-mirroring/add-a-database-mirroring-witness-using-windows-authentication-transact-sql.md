@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4616e2c10657e1af8db9c706c518fdf690618303
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d62bfb55e8024e70f94f23eb1f9273fb91f3caa1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822305"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763936"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>使用 Windows 驗證加入資料庫鏡像見證 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   為設定資料庫的見證，資料庫擁有者會指派 Database Engine 執行個體給見證伺服器的角色。 見證伺服器執行個體可以與主體或鏡像伺服器執行個體在相同電腦上執行，但是這會大幅地減少自動容錯移轉的強固性。  
   
  我們強烈建議見證應該位在另一台電腦上。 給定的伺服器可以參與具有相同或不同夥伴的多個並行資料庫鏡像工作階段。 一個給定的伺服器可以在某些工作階段中是夥伴，在其他工作階段中是見證。  
@@ -60,9 +60,9 @@ ms.locfileid: "74822305"
   
      伺服器網路位址的語法如下：  
   
-     TCP<b>://</b> _\<系統位址>_ <b>:</b> _\<通訊埠>_  
+     TCP<b>://</b> _\<system-address>_ <b>:</b> _\<port>_  
   
-     其中 \<系統位址>  是清楚識別目的地電腦系統的字串，\<通訊埠>  是夥伴伺服器執行個體之鏡像端點使用的通訊埠編號。 如需詳細資訊，請參閱 [指定伺服器網路位址 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
+     其中 \<*system-address>* 是清楚識別目的地電腦系統的字串，而 \<*port>* 是合作夥伴伺服器執行個體之鏡像端點所使用的連接埠號碼。 如需詳細資訊，請參閱 [指定伺服器網路位址 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
   
      例如，在主體伺服器執行個體上，下列 ALTER DATABASE 陳述式會設定見證。 資料庫名稱是 **AdventureWorks**、系統位址是 DBSERVER3 (見證系統的名稱)，而見證之資料庫鏡像端點所使用的連接埠是 `7022`：  
   

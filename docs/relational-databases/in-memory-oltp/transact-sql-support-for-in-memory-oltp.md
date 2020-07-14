@@ -1,5 +1,6 @@
 ---
 title: 記憶體內部 OLTP 的 Transact-SQL 支援 | Microsoft 文件
+description: 了解包含語法選項以支援記憶體內部 OLTP 的 Transact-SQL 陳述式。 使用連結以取得關於支援功能的其他參考。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: b1cc7c30-1747-4c21-88ac-e95a5e58baac
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c8f67f3745ea4dfc4aa1b37f5b681b14a4b608ba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 27f21922951ad42dc4f26625a2558b03f0425715
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68081817"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753188"
 ---
 # <a name="transact-sql-support-for-in-memory-oltp"></a>記憶體中 OLTP 的 Transact-SQL 支援
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式包含語法選項，可支援記憶體內部 OLTP：  
   

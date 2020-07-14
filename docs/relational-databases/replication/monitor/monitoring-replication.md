@@ -1,5 +1,6 @@
 ---
 title: 監視 (複寫) | Microsoft Docs
+description: 了解用來在 SQL Server 複寫拓撲中追蹤複寫活動及狀態的監視工具。
 ms.custom: ''
 ms.date: 11/20/2018
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d884bfe3517fa8b45c19f1d4d286992c2e5453c1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c463b8e1a0726fcde961b418fb12a902d7ce9b4e
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288042"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807942"
 ---
 # <a name="monitoring-replication"></a>監視 (複寫)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "76288042"
 下列工具可用來監視複寫：  
   
 -   **SQL Server 複寫監視器** - 最重要的複寫監視工具，能夠呈現以「發行者」為焦點的所有複寫活動檢視。 如需詳細資訊，請參閱 [Monitoring Replication](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)。 
--   **SQL Server Management Studio** - 可讓您存取「複寫監視器」。 還允許您檢視下列代理程式記錄的目前狀態和上一條訊息，並允許您啟動及停止每一個代理程式：「記錄讀取器代理程式」、「快照代理程式」、「合併代理程式」及「散發代理程式」。 如需相關資訊，請參閱 [Monitor Replication Agents](../../../relational-databases/replication/monitor/monitor-replication-agents.md)。  
+-   **SQL Server Management Studio** - 可讓您存取「複寫監視器」。 它也可讓您檢視下列代理程式所記錄的目前狀態和最後訊息，並可讓您啟動和停止每個代理程式：記錄讀取器代理程式、快照集代理程式、合併代理程式，以及散發代理程式。 如需相關資訊，請參閱 [Monitor Replication Agents](../../../relational-databases/replication/monitor/monitor-replication-agents.md)。  
   
 -   **Transact-SQL (T-SQL) 和 Replication Management Objects (RMO)** - 兩個介面都可讓您監視來自「散發者」之所有類型的複寫。 合併式複寫還提供了監視「訂閱者」端複寫的能力。  
   

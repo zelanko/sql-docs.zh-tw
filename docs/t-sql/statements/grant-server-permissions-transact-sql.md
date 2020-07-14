@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 918821dfcdbddcd694b751d328332178f9f5770c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 668a7355cd1a2530b9f60a624391c2199724a62b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633691"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880389"
 ---
 # <a name="grant-server-permissions-transact-sql"></a>GRANT 伺服器權限 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   授與伺服器的權限。 
   
@@ -60,7 +60,7 @@ GRANT permission [ ,...n ]
   
  TO \<grantee_principal> 指定要對其授與權限的主體。  
   
- AS \<grantor_principal> 指定主體，以讓執行這項查詢的主體可從該主體衍生授與權限的權力。  
+ AS \<grantor_principal> 指定主體，執行此查詢的主體會從這個主體衍生權限來授與權限。  
   
  WITH GRANT OPTION  
  指出主體也有權授與指定權限給其他主體。  

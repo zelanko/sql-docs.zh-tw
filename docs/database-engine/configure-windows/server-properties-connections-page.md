@@ -1,5 +1,6 @@
 ---
 title: 伺服器屬性 (連接頁面) | Microsoft Docs
+description: 熟悉 SQL Server 中的連線設定。 了解可判斷延遲的限制式檢查、NULL 處理及其他行為的選項。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.connections.f1
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 15ab408465890a13fc6e87efd2f2e15e8f8a7fad
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4c92cc173544c1cd7985b3bf58d7ebd22ea100b6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025495"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759139"
 ---
 # <a name="server-properties---connections-page"></a>伺服器屬性 - 連接頁面
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用此頁面來檢視或修改您的連接選項。  
   
 ## <a name="connections"></a>連接  

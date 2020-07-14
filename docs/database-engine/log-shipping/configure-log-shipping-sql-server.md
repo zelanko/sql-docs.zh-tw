@@ -1,5 +1,6 @@
 ---
 title: 設定記錄傳送 (SQL Server) | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 在 SQL Server 中設定記錄傳送。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4a262ba4daf1a54e4a57a71baa0b97308d473720
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b9735e45e834f60cff3a9d7fa25360b8935ed9b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68057887"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696260"
 ---
 # <a name="configure-log-shipping-sql-server"></a>設定記錄傳送 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 設定 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的記錄傳送。  
   
 > [!NOTE]  
@@ -30,13 +31,13 @@ ms.locfileid: "68057887"
   
 -   **開始之前：**  
   
-     [必要條件](#Prerequisites)  
+     [先決條件](#Prerequisites)  
   
      [安全性](#Security)  
   
 -   **若要設定記錄傳送，請使用：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -78,9 +79,9 @@ ms.locfileid: "68057887"
   
 8.  請注意 **[備份作業]** 之下 **[排程]** 方塊所列的備份排程。 如果您想要自訂安裝的排程，請按一下 **[排程]** ，並視需要調整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 排程。  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援 [備份壓縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 在建立記錄傳送設定時，您可以選擇以下其中一個選項來控制記錄備份的備份壓縮行為： **[使用預設伺服器設定]** 、 **[壓縮備份]** 或 **[不要壓縮備份]** 。 如需詳細資訊，請參閱 [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md)。  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援 [備份壓縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 在建立記錄傳送設定時，您可以透過選擇下列其中一個選項，來控制記錄備份的備份壓縮行為：[使用預設伺服器設定]、[壓縮備份]，或 [不要壓縮備份]。 如需詳細資訊，請參閱 [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md)。  
   
-10. 按一下 [確定]  。  
+10. 按一下 [確定]。  
   
 11. 在 **[次要伺服器執行個體與資料庫]** 下，按一下 **[新增]** 。  
   
@@ -99,7 +100,7 @@ ms.locfileid: "68057887"
   
 17. 在 **[還原]** 索引標籤上的 **[還原備份時的資料庫狀態]** 下，選擇 **[不復原模式]** 或 **[待命模式]** 選項。  
     > [!IMPORTANT]  
-    > **待命模式**只是主要和次要伺服器版本相同時的選項。 次要伺服器的主要版本高於主要伺服器時，只允許 [No recovery mode] \(無復原模式\) 
+    > **待命模式**只是主要和次要伺服器版本相同時的選項。 次要伺服器的主要版本高於主要伺服器時，只允許 [No recovery mode] \(無復原模式\)
   
 18. 如果您選擇 **[待命模式]** 選項，請選擇是否要在還原作業進行時，中斷使用者與次要資料庫的連接。  
   
@@ -109,7 +110,7 @@ ms.locfileid: "68057887"
   
 21. 請注意 **[還原作業]** 下之 **[排程]** 方塊中所列的還原排程。 如果您要自訂安裝的排程，請按一下 **[排程]** ，然後視需要調整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 排程。 這個排程應接近備份排程。  
   
-22. 按一下 [確定]  。  
+22. 按一下 [確定]。  
   
 23. 在 **[監視伺服器執行個體]** 下，選取 **[使用監視伺服器執行個體]** 核取方塊，再按一下 **[設定]** 。  
   
@@ -122,7 +123,7 @@ ms.locfileid: "68057887"
   
 26. 在 **[記錄保留]** 下，選擇您要保留記錄傳送記錄的時間長度。  
   
-27. 按一下 [確定]  。  
+27. 按一下 [確定]。  
   
 28. 在 **[資料庫屬性]** 對話方塊上，按一下 **[確定]** 以開始設定處理序。  
   

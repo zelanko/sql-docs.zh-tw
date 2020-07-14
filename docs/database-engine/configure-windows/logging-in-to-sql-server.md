@@ -1,5 +1,6 @@
 ---
 title: 登入 SQL Server | Microsoft Docs
+description: 了解登入 SQL Server 執行個體的各種方式。 了解在各種環境中針對伺服器名稱使用的格式。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,17 +20,17 @@ helpviewer_keywords:
 - logging in [SQL Server]
 - logins [SQL Server]
 ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d9401f7d1e871b9844642ff39f99d7f19c3f0da4
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ec03d8cd7b6e29bf3241b1646ec7c2e92c41b39a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886243"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789805"
 ---
 # <a name="logging-in-to-sql-server"></a>登入 SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   您可以使用任何圖形化管理工具，或是從命令提示字元登入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
  當您利用圖形化管理工具 (例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) 登入 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]執行個體時，必要時會提示您輸入伺服器名稱、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入和密碼。 若使用「Windows 驗證」登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則不需要在每次存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體時提供 SQL Server 登入。 相反地， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會利用您的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶自動將您登入。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是以混合模式驗證 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 驗證模式) 執行，且您選擇使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證來登入，則必須提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入和密碼。 盡可能使用 Windows 驗證。  

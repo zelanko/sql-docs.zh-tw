@@ -1,5 +1,6 @@
 ---
 title: 使用解譯的 T-SQL 存取記憶體最佳化的資料表
+description: 了解使用解譯的 Transact-SQL (SQL Server 中的 Transact-SQL 批次或預存程序) 存取經記憶體最佳化的資料表。
 ms.custom: seo-dt-2019
 ms.date: 05/31/2016
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 402b945c68e68f73ba482c20b158f14aba2c818f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 50e15e99ce68b47b1cd87262ff12fda3e9836bcf
+ms.sourcegitcommit: 7a47aaffbd82bab2707cd69f44571a9037d2273b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412813"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85377799"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>使用解譯的 Transact-SQL 存取記憶體最佳化的資料表
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "74412813"
   
 - 隨選查詢和管理工作。  
   
-- 報告查詢，通常會使用原生編譯的預存程序中未提供的建構 (例如「視窗」  函數 (有時稱為 [OVER](../../t-sql/queries/select-over-clause-transact-sql.md) 函數))。  
+- 報告查詢，通常會使用原生編譯的預存程序中未提供的建構 (例如「視窗」函數 (有時稱為 [OVER](../../t-sql/queries/select-over-clause-transact-sql.md) 函數))。  
   
 - 為了將應用程式效能嚴重不足部分移轉至記憶體最佳化資料表，應用程式碼變更需求最低或完全不需要。 您可能會從移轉的資料表看到效能提升。 如果您之後將預存程序移轉到以原生方式編譯的預存程序，您可以查看進一步的效能改善情形。  
   

@@ -1,5 +1,6 @@
 ---
 title: 範例：擷取員工資訊 | Microsoft Docs
+description: 請檢視範例，了解如何搭配 FOR XML EXPLICIT 使用查詢，以將員工資訊從資料庫擷取為 XML。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: d3e123a5195d9eb6a5dd489c635cdd687b42f720
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 827334e3e132128ed78f612788c96e8ad15f5443
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006774"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632773"
 ---
 # <a name="example-retrieving-employee-information"></a>範例：擷取員工資訊
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   此範例會擷取每個員工的員工識別碼及員工名稱。 在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中，employeeID 可以從 Employee 資料表中的 BusinessEntityID 資料行取得。 員工名稱可以從 Person 資料表取得。 BusinessEntityID 資料行可用於聯結資料表。  
   
  假設想要 FOR XML EXPLICIT 轉換產生 XML，如下所示：  

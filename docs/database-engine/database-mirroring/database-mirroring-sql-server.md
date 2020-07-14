@@ -1,5 +1,6 @@
 ---
 title: 資料庫鏡像 (SQL Server) | Microsoft Docs
+description: 了解資料庫鏡像，這是提高 SQL Server 資料庫的可用性，並以每個資料庫為基準實作的解決方案。
 ms.custom: ''
 ms.date: 05/16/2016
 ms.prod: sql
@@ -23,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3f8ebb1119e84caa80c0faa03c5c1405992723b2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c1b95d55a979738f787e4814a9f40f929c521868
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006340"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754735"
 ---
 # <a name="database-mirroring-sql-server"></a>資料庫鏡像 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。  
@@ -53,7 +54,7 @@ ms.locfileid: "68006340"
   
      資料庫鏡像可提供完整或近乎完整的資料備援性，端視作業模式是高安全性模式或高效能模式而定。 如需詳細資訊，請參閱本主題稍後的 [作業模式](#OperatingModes)。  
   
-     在 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 或更新版本上執行的資料庫鏡像夥伴會自動嘗試解決阻礙讀取資料頁面的特定錯誤類型。 無法讀取頁面的夥伴會向其他夥伴要求全新副本。 如果這個要求成功，無法讀取的頁面就會使用副本取代，這通常會解決錯誤。 如需詳細資訊，請參閱本主題稍後的 [自動修復頁面 &#40;可用性群組：資料庫鏡像&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)。  
+     在 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 或更新版本上執行的資料庫鏡像夥伴會自動嘗試解決阻礙讀取資料頁面的特定錯誤類型。 無法讀取頁面的夥伴會向其他夥伴要求全新副本。 如果這個要求成功，無法讀取的頁面就會使用副本取代，這通常會解決錯誤。 如需詳細資訊，請參閱[自動修復頁面 &#40;可用性群組：資料庫鏡像&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)。  
   
 -   提升實際執行的資料庫在升級期間的可用性。  
   
@@ -118,7 +119,7 @@ ms.locfileid: "68006340"
 ##  <a name="overview-of-database-mirroring"></a><a name="HowWorks"></a> 資料庫鏡像概觀  
  資料庫鏡像會維護單一資料庫的兩份副本，而這兩份副本必須位於不同的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]伺服器執行個體上。 這些伺服器執行個體通常位於不同位置的電腦上。 在資料庫上啟動資料庫鏡像，起始這些伺服器執行個體之間的關係，稱為 *「資料庫鏡像工作階段」* (database mirroring session)。  
   
- 其中一個伺服器執行個體會提供資料庫給用戶端 (「主體伺服器」  )。 另一個執行個體則當做熱或暖待命伺服器 (「鏡像伺服器」  )，端視鏡像工作階段的組態而定。 同步處理資料庫鏡像工作階段時，資料庫鏡像會提供熱待命伺服器來支援快速容錯移轉，因而不會遺失任何已認可的交易資料。 當工作階段無法同步處理時，鏡像伺服器通常會當做暖待命伺服器使用 (可能發生資料遺失)。  
+ 其中一個伺服器執行個體會提供資料庫給用戶端 (「主體伺服器」)。 另一個執行個體則當做熱或暖待命伺服器 (「鏡像伺服器」)，端視鏡像工作階段的組態而定。 同步處理資料庫鏡像工作階段時，資料庫鏡像會提供熱待命伺服器來支援快速容錯移轉，因而不會遺失任何已認可的交易資料。 當工作階段無法同步處理時，鏡像伺服器通常會當做暖待命伺服器使用 (可能發生資料遺失)。  
   
  主體和鏡像伺服器會在 *「資料庫鏡像工作階段」* 內互相通訊，並如同 *「夥伴」* 般彼此合作。 這兩個夥伴在工作階段中扮演互補的角色： *「主體角色」* (Principal Role) 和 *「鏡像角色」* (Mirror Role)。 在任何時間內，一定有一個夥伴扮演主體角色，而另一個夥伴就扮演鏡像角色。 我們會以每個夥伴所 *「擁有」* 的目前角色來描述它們， 擁有主體角色的夥伴稱為 *「主體伺服器」* ，其資料庫副本就是目前的主體資料庫； 而擁有鏡像角色的夥伴則稱為 *「鏡像伺服器」* ，其資料庫副本就是目前的鏡像資料庫。 在實際執行環境中部署資料庫鏡像時，主體資料庫就是 *「實際執行的資料庫」* 。  
   
@@ -143,9 +144,9 @@ ms.locfileid: "68006340"
 ###  <a name="operating-modes"></a><a name="OperatingModes"></a> 作業模式  
  資料庫鏡像工作階段可與同步或非同步作業一起執行。 在非同步作業下，交易不會等待鏡像伺服器將記錄寫入磁碟，即逕行認可，藉以達到最大效能。 在同步作業下，交易將同時在兩個夥伴上進行認可，代價是會增加交易延遲性。  
   
- 鏡像作業模式共有兩種。 其中一種模式 (「高安全性模式」  ) 可支援同步作業。 在高安全性模式下，當工作階段開始時，鏡像伺服器會儘快將鏡像資料庫與主體資料庫進行同步處理。 一旦資料庫同步處理完成之後，交易將同時在兩個夥伴上進行認可，代價是會增加交易延遲性。  
+ 鏡像作業模式共有兩種。 其中一種模式 (「高安全性模式」) 可支援同步作業。 在高安全性模式下，當工作階段開始時，鏡像伺服器會儘快將鏡像資料庫與主體資料庫進行同步處理。 一旦資料庫同步處理完成之後，交易將同時在兩個夥伴上進行認可，代價是會增加交易延遲性。  
   
- 第二種作業模式 (「高效能模式」  ) 則以非同步方式執行。 鏡像伺服器會盡量跟上主體伺服器所傳送的記錄。 鏡像資料庫可能會稍微落後主體資料庫。 然而，在資料庫之間的間距通常很小。 但是，若主體伺服器的工作負載很大，或鏡像伺服器的系統超載時，此差距就會變大。  
+ 第二種作業模式 (「高效能模式」) 則以非同步方式執行。 鏡像伺服器會盡量跟上主體伺服器所傳送的記錄。 鏡像資料庫可能會稍微落後主體資料庫。 然而，在資料庫之間的間距通常很小。 但是，若主體伺服器的工作負載很大，或鏡像伺服器的系統超載時，此差距就會變大。  
   
  在高效能模式中，當主體伺服器傳送記錄到鏡像伺服器時，主體伺服器會立即傳送確認給用戶端。 它不會等候鏡像伺服器的收條。 這表示交易不會等待鏡像伺服器將記錄寫入磁碟，即逕行認可。 這種非同步作業可以讓主體伺服器在執行時將交易延遲性降到最低，但必須承擔可能遺失資料的風險。  
   
@@ -153,7 +154,7 @@ ms.locfileid: "68006340"
   
  ![資料庫鏡像工作階段中的夥伴](../../database-engine/database-mirroring/media/dbm-2-way-session-intro.gif "資料庫鏡像工作階段中的夥伴")  
   
- 具有自動容錯移轉的高安全性模式需要第三個伺服器執行個體，稱為「見證」  。 與兩位夥伴不同的是，見證並不是為資料庫服務。 見證會藉由確認主體伺服器是否已啟動而且可以正常運作，支援自動容錯移轉。 只有當鏡像和見證與主體伺服器中斷連接後仍然保持相互連接時，鏡像伺服器才會開始進行自動容錯移轉。  
+ 具有自動容錯移轉的高安全性模式需要第三個伺服器執行個體，稱為「見證」。 與兩位夥伴不同的是，見證並不是為資料庫服務。 見證會藉由確認主體伺服器是否已啟動而且可以正常運作，支援自動容錯移轉。 只有當鏡像和見證與主體伺服器中斷連接後仍然保持相互連接時，鏡像伺服器才會開始進行自動容錯移轉。  
   
  下圖顯示包括見證的組態。  
   
@@ -192,7 +193,7 @@ ms.locfileid: "68006340"
   
      這種形式需要使用高安全性模式。 夥伴必須互相連接，而且資料庫也必須已完成同步處理。  
   
--   強制服務  (可能發生資料遺失)  
+-   強制服務 (可能發生資料遺失)  
   
      在高效能模式與不含自動容錯移轉的高安全性模式中，如果主體伺服器已經故障，但鏡像伺服器仍然可用，就可以使用強制服務。  
   
@@ -329,7 +330,7 @@ ms.locfileid: "68006340"
   
 -   [移除資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)  
   
- **Transact-SQL**  
+ **SQL Server Management Studio**  
   
 -   [新增或取代資料庫鏡像見證 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   

@@ -1,5 +1,6 @@
 ---
 title: FOR XML 子句的基本語法 | Microsoft Docs
+description: 了解 FOR XML 子句的基本語法，以及如何用其來判斷 SQL 查詢所產生的 XML 形式。
 ms.custom: fresh2019may
 ms.date: 05/22/2019
 ms.prod: sql
@@ -16,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: df19ecbf-d28e-4e9c-aaa3-700f8bbd3be4
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ebaf884d584f87afab1afaa4c30a50287d348284
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1364b5b8c7f0a95c9e3710082feae10defc37dd7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664733"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85661977"
 ---
 # <a name="basic-syntax-of-the-for-xml-clause"></a>FOR XML 子句的基本語法
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 FOR XML 模式可以是 RAW、AUTO、EXPLICIT 或 PATH。 它可以決定產生 XML 的外觀。  
   
@@ -72,7 +73,7 @@ XML
 ## <a name="arguments"></a>引數
 
 **RAW** [('_ElementName_')]  
- 使用查詢結果並將結果集中的每一個資料列轉換為 XML 項目，該項目包含作為項目標記的泛用識別碼 \<資料列 />。 當您使用此指示詞時，您可以選擇性地指定資料列元素的名稱。 產生的 XML 將會使用指定的 *ElementName* 作為針對每個資料列所產生的資料列元素。 如需詳細資訊，請參閱 [搭配 FOR XML 使用 RAW 模式](../../relational-databases/xml/use-raw-mode-with-for-xml.md)。  
+ 使用查詢結果並將結果集中的每一個資料列轉換為 XML 元素，該元素包含作為元素標記的泛用識別碼 \<row />。 當您使用此指示詞時，您可以選擇性地指定資料列元素的名稱。 產生的 XML 將會使用指定的 *ElementName* 作為針對每個資料列所產生的資料列元素。 如需詳細資訊，請參閱 [搭配 FOR XML 使用 RAW 模式](../../relational-databases/xml/use-raw-mode-with-for-xml.md)。  
   
 **AUTO**  
  將查詢結果以簡易巢狀 XML 樹狀結構傳回。 FROM 子句中的每個資料表至少都有一個資料行是列在 SELECT 子句中，這些資料表是以 XML 元素表示。 列在 SELECT 子句中的資料行會對應到適當的元素屬性。 如需詳細資訊，請參閱 [搭配 FOR XML 使用 AUTO 模式](../../relational-databases/xml/use-auto-mode-with-for-xml.md)。  
@@ -81,7 +82,7 @@ XML
  指定產生之 XML 樹狀結構的形狀已明確地定義。 透過使用此模式，必須以特定方式撰寫查詢，這樣才能明確地指定您需要的巢狀其他資訊。 如需詳細資訊，請參閱 [搭配 FOR XML 使用 EXPLICIT 模式](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)。  
   
 **PATH**  
- 提供更簡單的方式來混合元素與屬性，並引用其他的巢狀來代表複雜的屬性。 您可以使用 FOR XML EXPLICIT 模式查詢來建構從資料列集而來的這類 XML，但是 PATH 模式對於可能會比較繁雜的 EXPLICIT 模式查詢提供較簡單的替代方案。 PATH 模式還可撰寫巢狀 FOR XML 查詢及 TYPE 指示詞，以傳回 **xml** 類型執行個體，這將可讓您撰寫較不複雜的查詢。 它為撰寫大部份的 EXPLICIT 模式查詢提供替代方案。 依預設，PATH 模式會針對結果集的每個資料列產生 \<資料列> 項目包裝函式。 您可以選擇性地指定元素名稱。 如果您有選擇，則會將指定名稱做為包裝函數的元素名稱。 如果您提供空白字串 (FOR XML PATH (''))，就不會產生包裝函數元素。 如需詳細資訊，請參閱 [搭配 FOR XML 使用 PATH 模式](../../relational-databases/xml/use-path-mode-with-for-xml.md)。  
+ 提供更簡單的方式來混合元素與屬性，並引用其他的巢狀來代表複雜的屬性。 您可以使用 FOR XML EXPLICIT 模式查詢來建構從資料列集而來的這類 XML，但是 PATH 模式對於可能會比較繁雜的 EXPLICIT 模式查詢提供較簡單的替代方案。 PATH 模式還可撰寫巢狀 FOR XML 查詢及 TYPE 指示詞，以傳回 **xml** 類型執行個體，這將可讓您撰寫較不複雜的查詢。 它為撰寫大部份的 EXPLICIT 模式查詢提供替代方案。 根據預設，PATH 模式會針對結果集中的每個資料列產生 \<row> 元素包裝函式。 您可以選擇性地指定元素名稱。 如果您有選擇，則會將指定名稱做為包裝函數的元素名稱。 如果您提供空白字串 (FOR XML PATH (''))，就不會產生包裝函數元素。 如需詳細資訊，請參閱 [搭配 FOR XML 使用 PATH 模式](../../relational-databases/xml/use-path-mode-with-for-xml.md)。  
   
 **MLDATA**  
  指定應傳回的內嵌 XML-Data Reduced (XDR) 結構描述。 結構描述則是文件預先決定的內嵌結構描述。 如需實用範例，請參閱 [搭配 FOR XML 使用 RAW 模式](../../relational-databases/xml/use-raw-mode-with-for-xml.md)。  

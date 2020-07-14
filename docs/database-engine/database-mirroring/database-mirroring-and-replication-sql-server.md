@@ -1,5 +1,6 @@
 ---
 title: 資料庫鏡像和複寫 (SQL Server) | Microsoft Docs
+description: 了解如何在 SQL Server 中搭配複寫使用資料庫鏡像，以改進發行集資料庫的可用性。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e957d0ae199375ffe13a756cc1a8b0872aa962e3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8d54e8831218a64d854ae6b42955f59de8728518
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68661436"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789690"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>資料庫鏡像和複寫 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   資料庫鏡像可以和複寫一起使用，以改進發行集資料庫的可用性。 資料庫鏡像是指單一資料庫的兩份副本，而且通常位在不同的電腦上。 在任何時間內，目前的用戶端都只能使用其中一份資料庫副本， 此份資料庫稱為主體資料庫。 用戶端對主體資料庫所做的更新會套用到其他份資料庫，也稱為鏡像資料庫。 鏡像作業涵蓋了針對主體資料庫上所進行的每個插入、更新或刪除動作，將其交易記錄套用至鏡像資料庫。  
   
  發行集資料庫完全支援複寫容錯移轉到鏡像，而散發資料庫則有限支援此功能。 散發資料庫不支援資料庫鏡像。 如需復原散發資料庫或訂閱資料庫而不需要重新設定複寫的詳細資訊，請參閱 [備份及還原複寫的資料庫](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)。   
@@ -122,7 +123,7 @@ ms.locfileid: "68661436"
 ## <a name="maintaining-a-mirrored-publication-database"></a>維護鏡像發行集資料庫  
  維護鏡像發行集資料庫基本上與維護非鏡像資料庫相同，不過請注意下列事項：  
   
--   管理和監視必須在使用中伺服器端發生。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，發行集只會出現在使用中伺服器的 [本機發行集]  資料夾下。 例如，如果您容錯移轉至鏡像，則發行集會在鏡像端顯示，而不會再顯示於主體端。 如果資料庫容錯移轉至鏡像，您可能需要手動重新整理 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 和複寫監視器，才能反映出變更。  
+-   管理和監視必須在使用中伺服器端發生。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，發行集只會出現在使用中伺服器的 [本機發行集] 資料夾下。 例如，如果您容錯移轉至鏡像，則發行集會在鏡像端顯示，而不會再顯示於主體端。 如果資料庫容錯移轉至鏡像，您可能需要手動重新整理 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 和複寫監視器，才能反映出變更。  
   
 -   複寫監視器會同時在主體和鏡像的物件樹中顯示「發行者」節點。 如果主體為使用中伺服器，則發行集資訊只會顯示在「複寫監視器」的主體節點下。  
   

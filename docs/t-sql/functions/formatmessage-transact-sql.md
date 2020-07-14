@@ -19,17 +19,17 @@ helpviewer_keywords:
 - messages [SQL Server], formats
 - errors [SQL Server], formats
 ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 8910f8cd38d1336a5da5c91e386d7458164b3208
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5909e4812ca554ffdd7b7586af652382358170fb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826918"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752388"
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   從 sys.messages 中現有的訊息或從提供的字串建構訊息。 FORMATMESSAGE 的功能類似於 RAISERROR 陳述式的功能。 不過，RAISERROR 會立即列印訊息，FORMATMESSAGE 則會傳回格式化的訊息，以便進一步處理。  
   
@@ -59,7 +59,7 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
 ## <a name="remarks"></a>備註  
  如同 RAISERROR 陳述式，FORMATMESSAGE 會用所提供的參數值來替代訊息中的預留位置變數，以編輯訊息。 如需有關錯誤訊息所允許之預留位置及編輯處理的詳細資訊，請參閱 [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)。  
   
- FORMATMESSAGE 會用使用者目前的語言來查閱訊息。 如果沒有當地語系化版本的訊息，就會使用 U.S. English 版本。  
+ FORMATMESSAGE 會用使用者目前的語言來查閱訊息。 針對系統訊息 (*msg_number* <=50000)，如果訊息沒有已當地語系化的版本，便會使用 OS 語言版本。 針對使用者訊息 (*msg_number* >50000)，如果訊息沒有已當地語系化的版本，便會使用英文版本。
   
  如果是當地語系化的訊息，提供的參數值必須對應於 U.S. English 版本中的參數預留位置英文版。 即當地語系化版本中的參數 1 必須對應於 U.S. English 版本中參數 1。參數 2 必須對應於參數 2，依此類推。  
   
@@ -68,7 +68,7 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
 ### <a name="a-example-with-a-message-number"></a>A. 具有訊息編號的範例  
  當「發行項 '%s' 無法加入到發行集 '%s' 中」時，下列範例會使用儲存在 sys.messages 中的複寫訊息 `20009`。FORMATMESSAGE 會將 `First Variable` 和 `Second Variable` 這兩個值代入參數預留位置中。 產生的字串「發行項 'First Variable' 無法加入到發行集 'Second Variable' 中」會儲存在區域變數 `@var1` 中。  
   
-```  
+```sql
 SELECT text FROM sys.messages WHERE message_id = 20009 AND language_id = 1033;  
 DECLARE @var1 VARCHAR(200);   
 SELECT @var1 = FORMATMESSAGE(20009, 'First Variable', 'Second Variable');   
@@ -81,7 +81,7 @@ SELECT @var1;
   
  下列範例會採用字串作為輸入。  
   
-```  
+```sql
 SELECT FORMATMESSAGE('This is the %s and this is the %s.', 'first variable', 'second variable') AS Result;  
 ```  
   
@@ -90,7 +90,7 @@ SELECT FORMATMESSAGE('This is the %s and this is the %s.', 'first variable', 'se
 ### <a name="c-additional-message-string-formatting-examples"></a>C. 其他訊息字串格式範例  
  下列範例顯示各種格式選項。  
   
-```  
+```sql
 SELECT FORMATMESSAGE('Signed int %i, %d %i, %d, %+i, %+d, %+i, %+d', 5, -5, 50, -50, -11, -11, 11, 11);
 SELECT FORMATMESSAGE('Signed int with up to 3 leading zeros %03i', 5);  
 SELECT FORMATMESSAGE('Signed int with up to 20 leading zeros %020i', 5);  

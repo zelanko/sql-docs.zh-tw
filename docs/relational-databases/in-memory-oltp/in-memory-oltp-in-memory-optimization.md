@@ -1,5 +1,6 @@
 ---
 title: 記憶體內部 OLTP (記憶體內部最佳化) | Microsoft Docs
+description: 使用這些適用於記憶體內部 OLTP 的範例及資源，此功能可大幅提升 SQL Server 中的效能。
 ms.custom: ''
 ms.date: 11/21/2019
 ms.prod: sql
@@ -14,16 +15,16 @@ ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1546b8fbf4abeafcb9051e17fae7c949babcfc24
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: b0575e8b5072dccf3c197180bec3941ca3585ba6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922124"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723126"
 ---
 # <a name="in-memory-oltp-and-memory-optimization"></a>記憶體內部 OLTP 與記憶體最佳化
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 可大幅提升交易處理、資料擷取和資料載入，以及暫時性資料案例的效能。  若要跳至快速測試您自己的記憶體最佳化資料表和原生編譯預存程序所需的基本程式碼和知識，請參閱
  -  [快速入門 1：可讓 Transact-SQL 擁有更快效能的記憶體內部 OLTP 技術](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)。  

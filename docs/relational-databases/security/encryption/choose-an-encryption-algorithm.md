@@ -1,5 +1,6 @@
 ---
 title: 選擇加密演算法 | Microsoft Docs
+description: 使用本指導方針來選擇加密演算法，以協助保護 SQL Server 的執行個體，以支援數個常見的演算法。
 ms.custom: ''
 ms.date: 08/14/2018
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e73d0d6cdf244cfb9e08993c91737a14a1d2b24b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 61fc3a3e63d2fe4ff17865253607944c722b154c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957453"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005587"
 ---
 # <a name="choose-an-encryption-algorithm"></a>選擇加密演算法
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   加密是全面防禦中的一環，可提供給想要維護 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體安全的管理員使用。  
   
  加密演算法會定義資料轉換，讓未經授權的使用者無法輕鬆地反轉資料轉換。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可讓管理員和開發人員在數種演算法中進行選擇，包括 DES、Triple DES、TRIPLE_DES_3KEY、RC2、RC4、128 位元 RC4、DESX、128 位元 AES、192 位元 AES 和 256 位元 AES。  

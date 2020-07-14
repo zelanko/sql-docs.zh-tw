@@ -1,5 +1,6 @@
 ---
 title: 伺服器屬性 (處理器頁面) | Microsoft Docs
+description: 熟悉 SQL Server 中的處理器設定。 了解哪些選項可以控制背景工作執行緒的數目、處理器指派及其他屬性。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.processor.f1
 ms.assetid: cc1581a2-492b-41f0-bda5-17909b65c4f7
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 42eaf4bc1742c5d9ff101c308d6c120ceb8f3ef8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a3652ee3b01383d8d029bb0eb7aeefaa4f8cc045
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68026125"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726604"
 ---
 # <a name="server-properties---processors-page"></a>伺服器屬性 - 處理器頁面
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用此頁面來檢視或修改處理器選項。 只有在安裝了一個以上的處理器時，處理器相似性設定才會啟用。  
   
 ## <a name="options"></a>選項。  

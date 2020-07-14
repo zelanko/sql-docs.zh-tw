@@ -1,5 +1,6 @@
 ---
 title: 在升級後使用查詢存放區
+description: 此文章描述使用查詢存放區來建立基準，並在 SQL Server 升級中變更資料庫相容性層級的位置。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -14,16 +15,16 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cdb24eff5efa62058aa2c20ecec0a85d43c83ae0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 91b08dcd61e6e038f03bd4af22707fc0f518fdc4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251542"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895397"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>變更資料庫相容性層級並使用查詢存放區
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本中，某些變更只在[資料庫相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)變更後才會啟用。 有數種原因可以完成這項作業：  
   

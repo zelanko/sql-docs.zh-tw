@@ -1,5 +1,6 @@
 ---
 title: 記錄傳送和複寫 (SQL Server) | Microsoft Docs
+description: 了解記錄傳送如何將交易記錄中對主要資料庫所做的每一個插入、更新或刪除，套用到次要資料庫上。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ce1bf24e0f76a7e6d61f2b3bdc3c43c89863d85a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6c72f43b6605821ad984a9ad9dc98378aea258bd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68030824"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696040"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>記錄傳送和複寫 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   記錄傳送牽涉的對象，通常和不同電腦上各自儲存的單一資料庫複本有關。 在任何時間內，目前的用戶端都只能使用其中一份資料庫副本， 此份資料庫稱為主要資料庫。 用戶端對主要資料庫所做的更新，會透過記錄傳送方式傳播到其他資料庫複本 (亦稱為次要資料庫)。 記錄傳送會將交易記錄中對主要資料庫所做的每一項插入、更新或刪除，套用到次要資料庫上。  
   
  記錄傳送可與複寫一起使用，且具有下列行為：  
@@ -109,7 +110,7 @@ ms.locfileid: "68030824"
   
     -   如果發行集未篩選，您可以透過與最新的「訂閱者」進行同步處理，使發行集資料庫處於最新狀態。  
   
-    -   如果發行集已篩選，則可能無法使發行集資料庫處於最新狀態。 請考慮進行資料分割的資料表，這樣可以使每個訂閱僅接收單一地區 (「北區」、「南區」、「東區」和「西區」) 客戶資料。 如果每個資料分割至少有一個「訂閱者」，則與每個資料分割的「訂閱者」進行同步處理就可使發行集資料庫處於最新狀態。 不過，如果在「西區」資料分割中的資料未複寫到任何「訂閱者」(舉例來說)，則「發行者」端的此資料將無法處於最新狀態。 在此情況下，建議您重新初始化所有訂閱，以讓發行者端和訂閱者端的資料聚合。 如需詳細資訊，請參閱 [重新初始化訂閱](../../relational-databases/replication/reinitialize-subscriptions.md)。  
+    -   如果發行集已篩選，則可能無法使發行集資料庫處於最新狀態。 請思考一下一個已進行資料分割的資料表，其中資料分割方式使得每個訂閱只會收到下列單一地區的客戶資料：北區、東區、南區及西區。 如果每個資料分割至少有一個「訂閱者」，則與每個資料分割的「訂閱者」進行同步處理就可使發行集資料庫處於最新狀態。 不過，如果在「西區」資料分割中的資料未複寫到任何「訂閱者」(舉例來說)，則「發行者」端的此資料將無法處於最新狀態。 在此情況下，建議您重新初始化所有訂閱，以讓發行者端和訂閱者端的資料聚合。 如需詳細資訊，請參閱 [重新初始化訂閱](../../relational-databases/replication/reinitialize-subscriptions.md)。  
   
      如果同步處理的「訂閱者」所執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本早於 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，則訂閱不可是匿名的，而必須是客訂閱或主訂閱 (在之前的版本中稱為本機訂閱與全域訂閱)。 如需詳細資訊，請參閱 [同步處理資料](../../relational-databases/replication/synchronize-data.md)。  
   

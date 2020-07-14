@@ -1,5 +1,6 @@
 ---
 title: access check cache 伺服器組態選項 | Microsoft Docs
+description: 了解存取檢查結果快取，以及控制快取行為的選項。 查看在 SQL Server 中變更這些選項的時機。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - access check cache option
 ms.assetid: 0a992ea8-3ec6-4a4d-97b5-460ae7326247
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 74b4e43ba9b973f83263ad36aabc859211926ef6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a389b84e673315a3c27f44c68a80092bf739d94b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013320"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751194"
 ---
 # <a name="access-check-cache-server-configuration-options"></a>存取檢查快取伺服器組態選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   當資料庫物件是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所存取時，存取檢查會在稱為 **access check result cache**的內部結構中進行快取。 **access check cache quota** 和 **access check cache bucket count** 選項會控制用於 **access check result cache**的項目數和雜湊值區數。 在罕見的情況下，可以變更這些選項來提升效能。  
   

@@ -1,5 +1,6 @@
 ---
 title: 建立、修改與卸除次要選擇性 XML 索引 | Microsoft Docs
+description: 了解如何建立新的次要選擇性 XML 索引，或是改變或卸除現有的次要選擇性 XML 索引。
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,15 +11,15 @@ ms.assetid: 45128105-833b-40a9-9cc9-1ae03ac0b52b
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: f86ff1eb81984414afaee99bd8fc76525825c219
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 85c338da45a60221d143012de4b8cff2bf5e716d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664626"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692191"
 ---
 # <a name="create-alter-and-drop-secondary-selective-xml-indexes"></a>建立、修改和卸除次要選擇性 XML 索引
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   描述如何建立新的次要選擇性 XML 索引，或是修改或卸除現有的次要選擇性 XML 索引。  
   
 ##  <a name="creating-a-secondary-selective-xml-index"></a><a name="create"></a> 建立次要選擇性 XML 索引  

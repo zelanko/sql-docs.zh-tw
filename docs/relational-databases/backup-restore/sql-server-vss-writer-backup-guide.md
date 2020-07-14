@@ -10,15 +10,15 @@ ms.technology: backup-restore
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c62a2dfb1a6728098c3faeed32ce842dbab4304e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9fe880bc4296985811d21b06b905b3ceb4bef58a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77146730"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85659475"
 ---
 # <a name="sql-server-back-up-applications---volume-shadow-copy-service-vss-and-sql-writer"></a>SQL Server 備份應用程式 - 磁碟區陰影複製服務 (VSS) 和 SQL 寫入器
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 SQL Server 會藉由提供寫入器 (SQL 寫入器) 來支援磁碟區陰影複製服務 (VSS)，讓協力廠商備份應用程式可以使用 VSS 架構來備份資料庫檔案。 本文件描述 SQL 寫入器元件及其在 SQL Server 資料庫的 VSS 快照集建立和還原程序中所扮演的角色。 其中也會詳細說明如何設定及使用 SQL 寫入器，以搭配 VSS 架構中的備份應用程式運作。
 
@@ -639,7 +639,7 @@ SQL 寫入器支援線上還原 model 和 msdb 資料庫，而不需要關閉執
         1. 如果要向前復原的使用者資料庫與系統資料庫不在相同磁碟區，則此時不應該復原磁碟區。 此案例需要在備份之前進行規劃。
         1. 如果使用者資料庫與系統資料庫位於相同的磁碟區，則必須向 SQL Server 隱藏使用者資料庫。
     1. 使用 -f 參數啟動 SQL Server 執行個體  (使用 -f 啟動選項時，只能還原 master 資料庫)。
-        1. 針對要向前復原的每個資料庫，發出 ALTER DATABASE \<x> SET OFFLINE  (或者中斷連結資料庫)。
+        1. 針對要向前復原的每個資料庫，發出 ALTER DATABASE \<x> SET OFFLINE。  (或者中斷連結資料庫)。
         1. 停止 SQL Server 執行個體。
         1. 啟動 SQL Server 執行個體 (SQL Server 不會看到要向前復原的使用者資料庫檔案)。
 

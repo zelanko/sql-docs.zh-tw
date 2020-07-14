@@ -1,5 +1,6 @@
 ---
-title: 範例：重新命名 &lt;資料列&gt; 項目 | Microsoft Docs
+title: 範例：重新命名 &lt;row&gt; 元素 | Microsoft Docs
+description: 檢視透過針對 FOR XML 子句中的 RAW 模式指定選擇性引數來將 XML 資料列元素重新命名的範例。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: b042292a-0b6e-40a3-b254-71c06e626706
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c9a082f5bd5159f8b1dc32c3c9e2ba233cce817b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: cc297571daec9825a91d4e35ebbac737d88b5619
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664518"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633049"
 ---
-# <a name="example-renaming-the-ltrowgt-element"></a>範例：重新命名 &lt;資料列&gt; 項目
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="example-renaming-the-ltrowgt-element"></a>範例：重新命名 &lt;row&gt; 元素
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   如果是結果集中的每一個資料列，RAW 模式會產生一個 `<row>`元素。 您可以將一個選擇性引數指定給 RAW 模式，選擇性地為此元素指定另一個名稱，如下列查詢所示。 此查詢會針對資料列集的每一個資料列，各傳回一個 <`ProductModel`> 元素。  
   
 ## <a name="example"></a>範例  

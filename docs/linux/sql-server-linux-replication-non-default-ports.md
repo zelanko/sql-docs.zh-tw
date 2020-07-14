@@ -4,30 +4,33 @@ titleSuffix: SQL Server on Linux
 description: 了解如何在 Linux 上使用 SQL Server 複寫的非預設連接埠，設定快照集資料夾共用。
 ms.custom: seo-lt-2019
 author: MikeRayMSFT
-ms.author: mikerayW
+ms.author: mikeray
 ms.reviewer: vanto
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cb715e2a0a056c18352361b58ce8ffd67e3da78e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cdb90854984c195258891178be8a3fd07345929b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558590"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882680"
 ---
 # <a name="configure-replication-with-non-default-ports-sql-server-linux"></a>使用非預設連接埠來設定複寫 (SQL Server Linux)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 您可以在 Linux 執行個體上使用 SQL Server 來設定複寫，接聽使用 network.tcpport mssql-conf 設定來進行設定的任何連接埠。 如果下列條件成立，則必須在設定期間將連接埠附加至伺服器名稱：
 
 1. 複寫設定涉及 Linux 上的 SQL Server 執行個體
 2. 任何執行個體 (Windows 或 Linux) 正在接聽非預設通訊埠。 
 
-在執行個體上執行 @@servername，即可找到執行個體的伺服器名稱。
+在執行個體上執行 @@servername，即可找到執行個體的伺服器名稱。 請勿使用 IP 位址代替伺服器名稱。 使用「發行者」、「散發者」或「訂閱者」的 IP 位址可能會導致錯誤。
+
+> [!NOTE]
+> 使用非預設連接埠在 Linux 上建立 SQL Server 複寫，僅適用於 SQL Server 2019 與更高版本。
 
 ## <a name="examples"></a>範例
 

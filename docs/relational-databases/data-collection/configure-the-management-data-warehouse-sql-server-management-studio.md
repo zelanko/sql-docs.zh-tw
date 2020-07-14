@@ -1,5 +1,6 @@
 ---
 title: 設定管理資料倉儲 (SSMS)
+description: 了解如何設定管理資料倉儲，以便支援使用資料收集器之一或多個 SQL Server 執行個體的資料儲存體。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 54badd0404ee5360aef4a7bc095c236e5b31f79d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1c82c79bcf0b1494890055c098e6c7efdbc733ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056467"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733869"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>設定管理資料倉儲 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   此主題描述如何設定管理資料倉儲，以支援使用資料收集器之一個或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資料儲存體。 這些執行個體可以在相同伺服器或不同伺服器上。 此主題也提供 [設定管理資料倉儲精靈](#Wizard) 對話方塊的使用者介面描述。 如需設定資料收集器的詳細資訊，請參閱＜ [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md)＞。  
   
 > [!NOTE]  
@@ -42,7 +43,7 @@ ms.locfileid: "74056467"
   
 2.  在 [物件總管] 中，展開 **[管理]** 節點。  
   
-3.  以滑鼠右鍵按一下 [資料收集]  ，展開 [工作]  ，然後按一下 [設定管理資料倉儲]  。  
+3.  以滑鼠右鍵按一下 [資料收集]，展開 [工作]，然後按一下 [設定管理資料倉儲]。  
   
 4.  使用 [設定管理資料倉儲精靈](#Wizard) 來建立管理資料倉儲、設定登入、啟用資料收集，並啟動 **[系統資料收集組]** 。  
   
@@ -55,7 +56,7 @@ ms.locfileid: "74056467"
   
     -   使用「設定管理資料倉儲精靈」來針對現有的管理資料倉儲設定資料收集。  
   
-    -   以滑鼠右鍵按一下 [資料收集]  ，然後按一下 [屬性]  。 在 **[一般]** 索引標籤中，指定現有的管理資料倉儲以及它安裝所在的伺服器。  
+    -   以滑鼠右鍵按一下 [資料收集]，然後按一下 [屬性]。 在 **[一般]** 索引標籤中，指定現有的管理資料倉儲以及它安裝所在的伺服器。  
   
 6.  重複步驟 5，直到使用資料收集器的所有資料庫執行個體都設定為可將資料上傳到共用管理資料倉儲為止。  
 
@@ -93,7 +94,7 @@ ms.locfileid: "74056467"
   
  為登入選取 **[對應]** 核取方塊來指定此登入。  
   
- **資料庫角色成員資格對象：** *資料倉儲名稱>\<*  
+ **資料庫角色成員資格對象:**  *\<data warehouse name>*  
  選取此登入所對應的管理資料倉儲角色，其方式是按一下下列一或多個選項旁邊的核取方塊：  
   
 -   **mdw_admin**  
@@ -103,7 +104,7 @@ ms.locfileid: "74056467"
 -   **mdw_writer**  
   
  **新增登入**  
- 開啟 [登入 - 新增]  對話方塊，並為此管理資料倉儲建立新的登入。  
+ 開啟 [登入 - 新增] 對話方塊，並為此管理資料倉儲建立新的登入。  
   
  **完成精靈頁面**  
   
@@ -114,7 +115,7 @@ ms.locfileid: "74056467"
  使用此頁面可檢視每一個組態步驟的結果。  
   
  **詳細資料**  
- 將每一個組態步驟顯示為 [詳細資料]  方格中的資料列。 每一個資料列都包含一個可描述此步驟的 **[動作]** 資料行，以及一個指示此步驟為成功或失敗的 **[狀態]** 資料行。 如果發生錯誤， **[訊息]** 資料行中會出現訊息。  
+ 將每一個組態步驟顯示為 [詳細資料] 方格中的資料列。 每一個資料列都包含一個可描述此步驟的 **[動作]** 資料行，以及一個指示此步驟為成功或失敗的 **[狀態]** 資料行。 如果發生錯誤， **[訊息]** 資料行中會出現訊息。  
   
  **停止**  
  停止精靈的處理。  

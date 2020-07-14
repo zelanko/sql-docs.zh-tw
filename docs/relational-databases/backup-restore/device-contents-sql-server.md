@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1c9819b7853121c006180d0a988dbc83e905505f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0c79fa26bb75373811b179ff73462d15f9791b87
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179181"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748054"
 ---
 # <a name="device-contents-sql-server"></a>裝置內容 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用此對話方塊來檢視備份資訊。 這個資訊描述裝置、媒體、媒體集，以及備份組。  
   
  **若要使用 SQL Server Management Studio 檢視備份裝置的內容**  
@@ -59,7 +59,7 @@ ms.locfileid: "82179181"
 |------------|------------|  
 |**名稱**|備份組的名稱。|  
 |**型別**|執行的備份類型：[完整]、[差異] 或 [交易記錄]。|  
-|**元件**|備份的元件：[資料庫]、[檔案] 或 [\<空白>]  (適用於交易記錄)。|  
+|**元件**|備份的元件：Database、File 或 *\<blank>* (適用於交易記錄)。|  
 |**Server**|執行備份作業之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的名稱。|  
 |**Database**|已備份資料庫的名稱。|  
 |**位置**|備份組在磁碟區中的位置。|  

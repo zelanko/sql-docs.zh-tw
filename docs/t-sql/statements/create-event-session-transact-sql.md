@@ -22,20 +22,20 @@ helpviewer_keywords:
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 371657ed68c4b52cbf2cac75569fd8b1ab764e05
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: aa73be808ed074ffcdb412119a676a1a4ce7f8f3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632125"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767125"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 建立擴充事件工作階段，可識別事件的來源、事件工作階段目標及事件工作階段選項。
 
-![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
 
 ## <a name="syntax"></a>語法
 
@@ -127,7 +127,7 @@ ACTION ( { [*event_module_guid*].*event_package_name*.*action_name* [ **,** ...*
 
 動作會出現在 sys.dm_xe_objects 檢視表中當做 object_type 'action'。
 
-WHERE \<predicate_expression> 指定用來判斷是否應該處理事件的述詞運算式。 如果 \<predicate_expression> 為 true，則工作階段的動作和目標會進一步處理此事件。 如果 \<predicate_expression> 為 false，則此事件會先由工作階段卸除，再由工作階段的動作和目標進行處理。 述詞運算式限制為 3000 個字元，這會限制字串引數。
+WHERE \<predicate_expression> 指定用來判斷是否應該處理事件的述詞運算式。 如果 \<predicate_expression> 為 True，則工作階段的動作和目標會進一步處理此事件。 如果 \<predicate_expression> 為 False，則此事件會先由工作階段卸除，再由工作階段的動作和目標進行處理。 述詞運算式限制為 3000 個字元，這會限制字串引數。
 
 *event_field_name* 是能識別述詞來源之事件欄位的名稱。
 
@@ -158,7 +158,7 @@ SET { *target_parameter_name*= \<value> [, ...*n*] } 設定目標參數。 目�
 > [!IMPORTANT]
 > 如果是使用信號緩衝區目標，建議您將 max_memory 目標參數設為 2048 KB，以避免 XML 輸出可能發生資料截斷。 如需不同目標類型的詳細資訊，請參閱 [SQL Server 擴充的事件目標](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)。
 
-WITH ( \<event_session_options> [ ,...*n*] ) 指定要與事件工作階段搭配使用的選項。
+WITH ( \<event_session_options> [ ,...*n*] ) 指定要搭配事件工作階段使用的選項。
 
 MAX_MEMORY =*size* [ KB | **MB** ] 指定要針對事件緩衝處理配置給工作階段的最大記憶體數量。 預設值是 4 MB。 *size* 是整數值，可以是 KB 或 MB 值。 最大數量不得超過 2 GB (小於 2048 MB)。 不過，不建議使用以 GB 範圍為單位的記憶體值。
 

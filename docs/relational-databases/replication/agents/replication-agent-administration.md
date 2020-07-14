@@ -1,5 +1,6 @@
 ---
 title: 複寫代理程式管理 | Microsoft Docs
+description: 了解管理複寫代理程式，其會執行複寫的工作，例如建立結構描述和資料的複本，以及在伺服器間傳播變更。
 ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
@@ -23,12 +24,12 @@ ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 43b3c6759f4ea213acf8bed789d67ff4952b4ae8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 97ab969b453176e3b5ecfa8e2f9d85908407241f
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288147"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807822"
 ---
 # <a name="replication-agent-administration"></a>複寫代理程式管理
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -79,7 +80,7 @@ ms.locfileid: "76288147"
   
     -   合併代理程式  
   
-     透過下列索引標籤，可存取與這些代理程式建立關聯的資訊和工作：[訂閱監看清單]  (適用於每個「發行者」) 或 [所有訂閱]  索引標籤 (適用於每個發行集)。 如需詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+     透過下列索引標籤，可存取與這些代理程式建立關聯的資訊和工作：[訂閱監看清單] (適用於每個「發行者」) 或 [所有訂閱] 索引標籤 (適用於每個發行集)。 如需詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 ## <a name="independent-and-shared-agents"></a>獨立與共用的代理程式  
  獨立代理程式即服務一個訂閱的代理程式。 共用的代理程式會服務多個訂閱；如果使用相同共用代理程式的多個訂閱需要同步，依預設，它們會在佇列中等候，該共用代理程式會一次服務其中之一。 使用獨立代理程式會降低延遲，因為代理程式會在訂閱需要同步時就緒。 合併式複寫通常使用獨立代理程式，依預設，異動複寫會使用在「新增發行集精靈」中建立的發行集之獨立代理程式 (在舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，依預設，異動複寫則使用共用代理程式)。  

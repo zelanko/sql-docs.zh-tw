@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 050b6ba215d9dc4db433ad81dd8fa48bed212803
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff383fface773da790fd52c498e861ee402dc862
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75557926"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882061"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>SQL Server 連接器維護和疑難排解
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   本主題提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器的補充資訊。 如需 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器的詳細資訊，請參閱[使用 Azure 金鑰保存庫進行可延伸金鑰管理 &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)、[使用 Azure 金鑰保存庫進行可延伸金鑰管理的設定步驟](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)和[搭配使用 SQL Server 連接器與 SQL 加密功能](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)。  
   
@@ -147,13 +147,13 @@ ms.locfileid: "75557926"
 
 綜上所述，以下為其步驟：  
   
-* 備份保存庫金鑰 (使用 Backup-AzureKeyVaultKey Powershell Cmdlet)。  
+* 備份保存庫金鑰 (使用 Backup-AzureKeyVaultKey PowerShell Cmdlet)。  
 * 如果保存庫失敗，請在相同的地理區域* 中建立新的保存庫。 進行這項建立的使用者應該位於與 SQL Server 之服務主體設定相同的預設目錄中。  
-* 將金鑰還原至新的保存庫 (使用 Restore-AzureKeyVaultKey Powershell Cmdlet - 這會使用與以前相同的名稱來還原金鑰)。 如果已經有相同名稱的金鑰，則還原會失敗。  
+* 將金鑰還原至新的保存庫 (使用 Restore-AzureKeyVaultKey PowerShell Cmdlet - 這會使用與以前相同的名稱來還原金鑰)。 如果已經有相同名稱的金鑰，則還原會失敗。  
 * 授與 SQL Server 服務主體使用新保存庫的權限。  
 * 修改 Database Engine 所使用的 SQL Server 認證，以反映新的保存庫名稱 (如果需要)。  
   
-只要金鑰備份位於相同的地理區域或國家雲端，就可以跨 Azure 區域進行還原：美國、加拿大、日本、澳洲、印度、亞太地區 (APAC)、歐洲巴西、中國、美國政府或德國。  
+金鑰備份可以跨 Azure 區域還原，只要它們仍存在於相同的地理區域或下列國家/地區雲端內：美國、加拿大、日本、澳洲、印度、亞太地區、 歐洲巴西、中國、美國政府或德國。  
   
   
 ##  <a name="b-frequently-asked-questions"></a><a name="AppendixB"></a> B. 常見問題集  
@@ -167,7 +167,7 @@ ms.locfileid: "75557926"
   
 ### <a name="on-configuring-ssnoversion"></a>設定時 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
-**SQL Server 連接器需要存取哪些端點？** 連接器會與兩個需要設為允許清單的端點通訊。 針對 HTTPS，這些其他服務之輸出通訊所需的唯一連接埠是 443：
+**SQL Server 連接器需要存取哪些端點？** 連接器會與兩個需要設為允許的端點通訊。 針對 HTTPS，這些其他服務之輸出通訊所需的唯一連接埠是 443：
 -  login.microsoftonline.com/*:443
 -  *.vault.azure.net/* :443
 
@@ -192,9 +192,9 @@ ms.locfileid: "75557926"
 ![aad-change-default-directory-helpsteps](../../../relational-databases/security/encryption/media/aad-change-default-directory-helpsteps.png)
 
 1. 請前往 Azure 傳統入口網站：[https://manage.windowsazure.com](https://manage.windowsazure.com)  
-2. 在左側的功能表中，向下捲動並選取 [設定]  。
-3. 選取目前使用的 Azure 訂用帳戶，並按一下畫面底部命令的 [編輯目錄]  。
-4. 在快顯視窗中，使用 [目錄]  下拉式清單選取您想使用的 Active Directory。 這樣即可讓它成為預設目錄。
+2. 在左側的功能表中，向下捲動並選取 [設定]。
+3. 選取目前使用的 Azure 訂用帳戶，並按一下畫面底部命令的 [編輯目錄]。
+4. 在快顯視窗中，使用 [目錄] 下拉式清單選取您想使用的 Active Directory。 這樣即可讓它成為預設目錄。
 5. 您必須是新選取之 Active Directory 的全域管理員。 如果您不是全域管理員，就可能會因為切換目錄而遺失管理權限。
 6. 快顯視窗關閉後，如果沒有看到任何訂用帳戶，您可能需要更新畫面右上角功能表中 [訂用帳戶] 篩選的 [依目錄篩選] 篩選，才能看到使用剛更新之 Active Directory 的訂用帳戶。
 

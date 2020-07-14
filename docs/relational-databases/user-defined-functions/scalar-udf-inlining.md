@@ -2,7 +2,7 @@
 title: Microsoft SQL Server 中的純量 UDF 內嵌 | Microsoft Docs
 description: 純量 UDF 內嵌功能可針對在 SQL Server (從 SQL Server 2019 開始) 中叫用純量 UDF 的查詢來改善其效能。
 ms.custom: ''
-ms.date: 03/17/2020
+ms.date: 06/23/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,16 +15,16 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 79608c96e56a7f70d10aaa4b897db837bdf03acc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 395d639cd62894c91fbf0690467e60aaeac57bea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79486554"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727089"
 ---
 # <a name="scalar-udf-inlining"></a>純量 UDF 內嵌
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本文介紹純量 UDF 內嵌，這是[智慧型查詢處理](../../relational-databases/performance/intelligent-query-processing.md)功能套件下的一項功能。 此功能可針對在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)] 開始) 中叫用純量 UDF 的查詢來改善其效能。
 
@@ -155,12 +155,24 @@ SELECT C_NAME, dbo.customer_category(C_CUSTKEY) FROM CUSTOMER;
 - UDF 中沒有新增任何簽章。
 - UDF 不是資料分割函式。
 - UDF 不包含對通用資料表運算式 (CTE) 的參考
+- UDF 不包含內建函式 (例如 @@ROWCOUNT) 的參考，這些函式可能會在內嵌時改變結果 (在 Microsoft SQL Server 2019 CU2 中新增的限制)。
+- UDF 不包含當作參數傳遞至純量 UDF 的彙總函式 (在 Microsoft SQL Server 2019 CU2 中新增的限制)。
+- UDF 不會參考內建檢視 (例如 OBJECT_ID，Microsoft SQL Server 2019 CU2 中新增的限制)。
+-   UDF 不會參考 XML 方法 (Microsoft SQL Server 2019 CU4 中新增的限制)。
+-   UDF 不包含使用 ORDER BY 的 SELECT 而沒有 "TOP 1" (Microsoft SQL Server 2019 CU4 中新增的限制)。
+-   UDF 不包含搭配 ORDER BY 子句執行指派的 SELECT 查詢 (例如，SELECT @x = @x +1 FROM table ORDER BY column_name，Microsoft SQL Server 2019 CU4 中新增的限制)。
+- UDF 不包含多個 RETURN 陳述式 (SQL Server 2019 CU5 中新增的限制)。
+- 不會從 RETURN 陳述式呼叫 UDF (在 SQL Server 2019 CU5 中新增的限制)。
+- UDF 不會參考 STRING_AGG 函式 (SQL Server 2019 CU5 中新增的限制)。 
 
 <sup>1</sup> 內嵌不支援具有變數累積/彙總的 `SELECT` (例如 `SELECT @val += col1 FROM table1`)。
 
 <sup>2</sup> 遞迴 UDF 只能內嵌到特定深度。
 
 <sup>3</sup> 其結果取決於目前系統時間的內建函式具有時間相依性。 可能會更新某個內部全域狀態之內建函式為具有副作用的函式範例。 這類函式會在每次呼叫時，根據內部狀態傳回不同的結果。
+
+> [!NOTE]
+> 如需最新的 T-SQL 純量 UDF 內嵌修正和內嵌資格案例變更的資訊，請參閱知識庫文章：[修正：SQL Server 2019 中的純量 UDF 內嵌問題](https://support.microsoft.com/en-us/help/4538581/fix-scalar-udf-inlining-issues-in-sql-server-2019) \(機器翻譯\)。
 
 ### <a name="checking-whether-or-not-a-udf-can-be-inlined"></a>檢查是否可以內嵌 UDF
 針對每個 T-SQL 純量 UDF，[sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) 目錄檢視包含一個稱為 `is_inlineable` 的屬性，其表示是否可內嵌 UDF。 
@@ -259,11 +271,13 @@ END
 1. 查詢層級的聯結提示可能不再有效，因為內嵌可能會引進新的聯結。 必須改為使用本機聯結提示。
 1. 參考內嵌純量 UDF 的檢視無法編製索引。 如果您需要在這類檢視上建立索引，請停用所參考 UDF 的內嵌功能。
 1. [動態資料遮罩](../security/dynamic-data-masking.md)與內嵌 UDF 的行為可能有一些差異。 在某些情況下 (視 UDF 中的邏輯而定)，對於遮罩輸出資料行，內嵌可能更為保守。 在 UDF 中所參考資料行不是輸出資料行的情況下，它們不會被遮罩。 
-1. 如果 UDF 參考內建函式 (例如 `SCOPE_IDENTITY()`、`@@ROWCOUNT` 或 `@@ERROR`)，則內建函式所傳回的值會隨著內嵌而變更。 此行為變更是因為內嵌變更了陳述式在 UDF 內的範圍。
+1. 如果 UDF 參考內建函式 (例如 `SCOPE_IDENTITY()`、`@@ROWCOUNT` 或 `@@ERROR`)，則內建函式所傳回的值會隨著內嵌而變更。 此行為變更是因為內嵌變更了陳述式在 UDF 內的範圍。 從 Microsoft SQL Server 2019 CU2 開始，如果 UDF 參考特定內建函式 (例如，@@ROWCOUNT)，我們就會封鎖內嵌。
 
 ## <a name="see-also"></a>另請參閱
 [SQL Server 資料庫引擎和 Azure SQL Database 的效能中心](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md)     
 [執行程序邏輯和實體運算子參考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)     
 [聯結](../../relational-databases/performance/joins.md)     
-[示範智慧查詢處理](https://aka.ms/IQPDemos) \(英文\)      
+[示範智慧查詢處理](https://aka.ms/IQPDemos)    \(英文\)  
+[修正：SQL Server 2019 中的純量 UDF 內嵌問題](https://support.microsoft.com/en-us/help/4538581/fix-scalar-udf-inlining-issues-in-sql-server-2019) \(機器翻譯\)     
+

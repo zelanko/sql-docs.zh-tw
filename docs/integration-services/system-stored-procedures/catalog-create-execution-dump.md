@@ -10,21 +10,21 @@ ms.topic: language-reference
 ms.assetid: 91319b0b-5536-4ab4-a403-9559ed9dd177
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 901f430f09621c6ad9be20759cddb757e2e96ee7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a93801d7d17ff8952d02b5351c1cf0dd9bce4486
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295509"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749669"
 ---
 # <a name="catalogcreate_execution_dump"></a>catalog.create_execution_dump 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  導致執行中的封裝暫停，並建立傾印檔案。 此檔案儲存於 \<磁碟機>:\Program Files\Microsoft SQL Server\130\Shared\ErrorDumps 資料夾。  
+  導致執行中的封裝暫停，並建立傾印檔案。 此檔案會儲存在 *\<drive>* :\Program Files\Microsoft SQL Server\130\Shared\ErrorDumps 資料夾。  
   
 ## <a name="syntax"></a>語法  
   

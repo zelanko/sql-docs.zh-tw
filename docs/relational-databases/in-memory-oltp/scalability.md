@@ -1,5 +1,6 @@
 ---
 title: 延展性 | Microsoft Docs
+description: 了解針對 SQL Server 中經記憶體最佳化的資料表磁碟上儲存體之可擴縮性的增強功能，例如使用多個執行緒來保存資料表。
 ms.custom: ''
 ms.date: 08/27/2015
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: a4891c57-56bb-49f4-9bb5-f11b745279e5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2762e024f3a94ed20c900833e56840b67af1685d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9f305153cca0ce9207c81f79ca423df476e6a841
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68111779"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735053"
 ---
 # <a name="scalability"></a>延展性
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 包含記憶體最佳化資料表磁碟上儲存體的延展性增強功能。 
 
 ## <a name="multiple-threads-to-persist-memory-optimized-tables"></a>保存記憶體最佳化資料表的多個執行緒  

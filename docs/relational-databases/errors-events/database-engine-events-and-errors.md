@@ -1,5 +1,6 @@
 ---
 title: 資料庫引擎事件和錯誤
+description: 請參閱此 MSSQL 錯誤碼清單以尋找 SQL Server 資料庫引擎事件之錯誤訊息的說明。
 ms.custom: ''
 ms.date: 01/28/2020
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2f8ad61d068689bb0bc5c47e4e0921eddd9aad7c
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: f87cf70ebcb3a491d31fc7523ac6a4c0a7889a2f
+ms.sourcegitcommit: 49dab56fc71dc394f4dde9962ec44d99cc15027c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728262"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84158617"
 ---
 # <a name="database-engine-errors"></a>資料庫引擎錯誤
 
@@ -4387,7 +4388,7 @@ ORDER BY message_id
 |    9639    |    16    |    否    |    已提供密碼且 pvk 檔案未加密。    |
 |    9640    |    16    |    否    |    作業發現作業系統錯誤。    |
 |    9641    |    16    |    否    |    密碼編譯作業失敗。 此錯誤表示 SQL Server 有嚴重的問題。 檢查 SQL Server 錯誤記錄檔和 Windows 事件記錄檔以取得進一步的資訊。    |
-|    9642    |    16    |    否    |    Service Broker/資料庫鏡像傳輸連接端點發生錯誤，錯誤: %i，狀態: %i  (近的端點角色: %S_MSG，遠的端點位址: '%.*hs')。    |
+|    9642    |    16    |    否    |    Service Broker/資料庫鏡像傳輸連接端點發生錯誤，錯誤: %i，狀態: %i (近的端點角色: %S_MSG，遠的端點位址: '%.*hs')。    |
 |    9643    |    16    |    否    |    Service Broker/資料庫鏡像傳輸管理員發生錯誤:錯誤: %i，狀態: %i。    |
 |    9644    |    16    |    否    |    Service Broker 訊息發送器發生錯誤。 錯誤: %i，狀態: %i。    |
 |    9645    |    16    |    否    |    Service Broker 管理員發生錯誤，錯誤: %i，狀態: %i。    |
@@ -4546,7 +4547,7 @@ ORDER BY message_id
 |    9811    |    16    |    否    |    無法擷取系統時區資訊。    |
 |    9812    |    16    |    否    |    提供給內建函數 %.*ls 的時區無效。    |
 |    9813    |    16    |    否    |    提供給內建函數 %.*ls 的時區會使 datetimeoffset 在處理 UTC 或本地時間中的有效日期範圍時發生溢位。    |
-|    9814    |    16    |    否    |    提供的日期在阿拉伯回曆開始之前，根據 Microsoft 的「科威特演算法」，這是指西元 622 年 7 月 15 日  (凱撒曆) 或西元 622 年 7 月 18 日 (前西曆)。    |
+|    9814    |    16    |    否    |    提供的日期在阿拉伯回曆開始之前，根據 Microsoft 的「科威特演算法」，這是指西元 622 年 7 月 15 日 (凱撒曆) 或西元 622 年 7 月 18 日 (前西曆)。    |
 |    9815    |    16    |    否    |    WAITFOR DELAY 和 WAITFOR TIME 不可為 %s 類型。    |
 |    9816    |    16    |    否    |    資料行集中的資料行數目超過 2048。 請減少資料行集中參考的資料行數目。    |
 |    9817    |    16    |    否    |    指定的資料行集值導致估計的資料列大小至少有 %d 個位元組。 這已超過允許的資料列大小上限 %d 個位元組。 若要縮小資料列大小，請減少資料行集中指定的資料行數目。    |
@@ -6378,7 +6379,7 @@ ORDER BY message_id
 |    15533    |    16    |    否    |    在 '%ls' 陳述式中提供了無效的資料類型。    |
 |    15534    |    16    |    否    |    在 '%ls' 陳述式中產生 Cookie 失敗。    |
 |    15535    |    16    |    否    |    無法設定主體 '%.*ls' 的憑證。    |
-|    15536    |    10    |    否    |    在所有資料庫中:     |
+|    15536    |    10    |    否    |    在所有資料庫中:    |
 |    15537    |    16    |    否    |    登入 '%.*ls' 不具有伺服器的存取權。    |
 |    15538    |    16    |    否    |    登入 '%.*ls' 不具有資料庫的存取權。    |
 |    15539    |    16    |    否    |    無法卸除使用者 '%s'，只能將它停用。 目前的資料庫已經停用該使用者。    |

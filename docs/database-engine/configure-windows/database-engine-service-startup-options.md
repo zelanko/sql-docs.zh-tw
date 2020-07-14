@@ -1,5 +1,6 @@
 ---
 title: 資料庫引擎服務啟動選項 | Microsoft Docs
+description: 熟悉 SQL Server 資料庫引擎啟動選項。 檢視如何使用這些選項的秘訣，並了解每個選項的用途。
 ms.custom: ''
 ms.date: 08/01/2019
 ms.prod: sql
@@ -23,18 +24,18 @@ helpviewer_keywords:
 - startup parameters [SQL Server]
 - starting SQL Server, parameters
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4518428d6dd583e5d9fe2a4da06f052b8b75da70
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f5cd9b549123545920c890616945156b37fd762b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252864"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772624"
 ---
 # <a name="database-engine-service-startup-options"></a>Database Engine 服務啟動選項
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 啟動選項指定啟動期間所需的特定檔案位置，並指定一些整個伺服器範圍的條件。 除非您疑難排解 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，或是發生異常問題而「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客戶支援」指示您使用啟動選項，否則大部分使用者都不需要指定啟動選項。  
   

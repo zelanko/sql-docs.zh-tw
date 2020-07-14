@@ -32,18 +32,18 @@ helpviewer_keywords:
 - time zones [SQL Server]
 - roundtrip conversions
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c11afeedcc46f53b57b90e7e5b117c13af188da1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1ce067a0ade3a84aed090532a92064db00a8bc9d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823326"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002235"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 和 CONVERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 這些函式會將某種資料類型的運算式轉換成另一種資料類型。  
 
@@ -165,7 +165,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 |值|輸出|  
 |---|---|
 |**0** (預設)|將 ASCII 字元轉譯成二進位位元組，或將二進位位元組轉譯成 ASCII 字元。 每個字元或位元組都會以 1:1 的方式轉換。<br /><br /> 針對二進位 *data_type*，會在結果的左側新增字元 0x。|  
-|**1**、**2**|針對二進位 *data_type*，運算式必須是字元運算式。 *expression* 必須具有**偶數**個十六進位數字 (0、1、2、3、4、5、6、7、8、9、A、B、C、D、E、F、a、b、c、d、e、f)。 如果 *style* 設為 1，則運算式的前兩個字元必須是 0x。 如果運算式包含奇數個字元，或者有任何字元無效，則會引發錯誤。<br /><br /> 如果所轉換運算式的長度超過 *data_type* 的長度，結果就是自右截斷。<br /><br /> 大於已轉換結果的固定長度 *data_type* 會在結果的右側新增零。<br /><br /> 字元類型的 *data_type* 需要二進位運算式。 每個二進位字元都會轉換成兩個十六進位字元。 如果所轉換運算式的長度超過 *data_type* 的長度，結果就是自右截斷。<br /><br /> 針對固定大小字元類型 *data_type*，如果已轉換結果的長度小於 *data_type* 的長度，則會在所轉換運算式的右側新增空格，以維持偶數個十六進位數字。<br /><br /> 針對 *style* 1 的已轉換結果，系統會在它的左邊加入字元 0x。|  
+|**1**、**2**|針對二進位 *data_type*，運算式必須是字元運算式。 *expression* 必須具有**偶數**個十六進位數字 (0、1、2、3、4、5、6、7、8、9、A、B、C、D、E、F、a、b、c、d、e、f)。 如果 *style* 設為 1，則運算式的前兩個字元必須是 0x。 如果運算式包含奇數個字元，或者有任何字元無效，則會引發錯誤。<br /><br /> 如果所轉換運算式的長度超過 *data_type* 的長度，結果就是自右截斷。<br /><br /> 大於已轉換結果的固定長度 *data_type* 會在結果的右側新增零。<br /><br /> 字元類型的 *data_type* 需要二進位運算式。 每個二進位字元都會轉換成兩個十六進位字元。 如果所轉換運算式的長度超過 *data_type* 的長度，結果就是自右截斷。<br /><br /> 針對固定大小字元類型 *data_type*，如果已轉換結果的長度小於 *data_type* 的長度，則會在所轉換運算式的右側新增空格，以維持偶數個十六進位數字。<br /><br /> 字元 0x 會新增到 *style* 2 之已轉換結果的左側。|  
   
 ## <a name="implicit-conversions"></a>隱含的轉換
 隱含轉換不需要指定 CAST 函式或 CONVERT 函式。 明確轉換需要指定 CAST 函式或 CONVERT 函式。 下圖顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統提供之資料類型所能使用的所有明確和隱含資料類型轉換。 這些包含 **bigint**、**sql_variant** 和 **xml**。 從 **sql_variant** 資料類型進行指派時，不可使用隱含轉換，但可以隱含轉換成 **sql_variant**。
@@ -302,13 +302,15 @@ SELECT  CAST(10.6496 AS int) as trunc1,
 將非數值 **char**、**nchar**、**nvarchar** 或 **varchar** 資料轉換成 **decimal**、**float**、**int** 或 **numeric** 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回錯誤訊息。 當空字串 (" ") 被轉換為 **numeric** 或 **decimal** 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也會傳回錯誤。
   
 ## <a name="certain-datetime-conversions-are-nondeterministic"></a>某些日期時間轉換不具決定性
-下表列出字串對日期時間轉換不具決定性的樣式。
+
+字串對日期時間轉換不具決定性的樣式如下所示：
   
-|||  
-|-|-|  
-|100 以下的所有樣式<sup>1</sup>|106|  
-|107|109|  
-|113|130|  
+- 100 以下的所有樣式<sup>1</sup>
+- 106  
+- 107
+- 109
+- 113
+- 130  
   
 <sup>1</sup> 樣式 20 和 21 除外
 

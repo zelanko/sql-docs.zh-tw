@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 4cbed281-5e1e-4d8b-b410-4c18a6cd0205
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0433232412135256e98e6f3292fd88fa58bef62d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 91df6d2f20f7ba5a18a5dbdff30712d17b8c0e24
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633690"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880361"
 ---
 # <a name="grant-server-principal-permissions-transact-sql"></a>GRANT 伺服器主體權限 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的權限。  
   
@@ -65,7 +65,7 @@ GRANT permission [ ,...n ] }
  SERVER ROLE **::** *server_role*  
  指定授與其權限之使用者定義伺服器角色。 範圍限定詞 ( **::** ) 是必要項。  
   
- TO \<server_principal> 指定要對其授與權限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或伺服器角色。  
+ TO \<server_principal> 指定要授與其權限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或伺服器角色。  
   
  *SQL_Server_login*  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的名稱。  

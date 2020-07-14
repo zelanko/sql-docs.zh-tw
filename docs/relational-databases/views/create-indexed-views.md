@@ -18,16 +18,16 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c1b80a81aa6c05727b0711e68219d5c0aa32cb9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 08e432e0470074a5861c070d26110478353817b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75325510"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727071"
 ---
 # <a name="create-indexed-views"></a>建立索引檢視表
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 此文章會說明如何在檢視上建立索引。 對檢視建立的第一個索引必須是唯一的叢集索引。 建好唯一的叢集索引後，才可以建立其他非叢集索引。 為檢視表建立唯一的叢集索引，可以提升查詢效能，因為檢視表儲存在資料庫中的方式與包含叢集索引之資料表的儲存方式一樣。 查詢最佳化工具可以利用索引檢視表來加快查詢執行的速度。 不必在查詢中參考此檢視表，最佳化工具仍會考慮以該檢視表做為替代方式。
 
@@ -51,7 +51,7 @@ ms.locfileid: "75325510"
 
 如果在查詢執行時有不同的使用中 SET 選項，則評估相同的運算式可能會在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中產生不同的結果。 例如，將 SET 選項 `CONCAT_NULL_YIELDS_NULL` 設為 ON 之後，運算式 `'abc' + NULL` 會傳回 `NULL` 值。 不過，將 `CONCAT_NULL_YIELDS_NULL` 設為 OFF 之後，相同的運算式則會產生 `'abc'`。
 
-若要確定檢視表可以正確地維護並傳回一致的結果，索引檢視表需要數個 SET 選項的固定值。 發生下列狀況時，必須將下表中的 SET 選項設為 [必要值]  欄中所顯示的值：
+若要確定檢視表可以正確地維護並傳回一致的結果，索引檢視表需要數個 SET 選項的固定值。 發生下列狀況時，必須將下表中的 SET 選項設為 [必要值] 欄中所顯示的值：
 
 - 建立檢視表和檢視表的後續索引。
 - 建立檢視時，檢視中所參考的基底資料表。
@@ -92,7 +92,7 @@ ms.locfileid: "75325510"
 - 當您建立索引時，`IGNORE_DUP_KEY` 選項必須設定為 OFF (預設值)。
 - 在檢視定義中，兩部分名稱 _schema_ **.** _tablename_ 必須參考資料表。
 - 檢視表中所參考的使用者定義函式，必須使用 `WITH SCHEMABINDING` 選項來建立。
-- 檢視表中所參考的任何使用者定義函式，必須透過 _\<結構描述\>_ **.** _\<函式\>_ 這兩部分名稱加以參考。
+- 檢視中參考的任何使用者定義函式，必須以兩部分名稱參考 ( _\<schema\>_ **.** _\<function\>_ )。
 - 使用者定義函式的資料存取屬性必須是 `NO SQL`，而外部存取屬性必須是 `NO`。
 - Common Language Runtime (CLR) 函數可以在檢視的選取清單中出現，但是不可以是叢集索引鍵定義的一部分。 CLR 函數不能出現在檢視的 WHERE 子句或檢視中之 JOIN 作業的 ON 子句。
 - 用於檢視定義中的 CLR 函數和 CLR 使用者定義型別的方法必須有下表所示的屬性。
