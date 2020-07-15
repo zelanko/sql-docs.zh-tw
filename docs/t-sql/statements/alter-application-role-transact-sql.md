@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 291c076d78b227487c6c4267343de5cffc7a3d63
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 6b0d65b5d4d68ac23f980e98405d4c19e0e970e1
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813886"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86302018"
 ---
 # <a name="alter-application-role-transact-sql"></a>ALTER APPLICATION ROLE (Transact-SQL)
 
@@ -47,7 +47,9 @@ ALTER APPLICATION ROLE application_role_name
     | PASSWORD = 'password'  
     | DEFAULT_SCHEMA = schema_name  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>引數
 
  *application_role_name*  

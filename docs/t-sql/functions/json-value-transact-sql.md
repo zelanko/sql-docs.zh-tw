@@ -17,12 +17,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: f4cd163d4ccbb622deb4278d4f0f0b2490d404e8
-ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
+ms.openlocfilehash: 7201224aa89f4add1d618b976f8bff0b8857f5c9
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84423064"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196796"
 ---
 # <a name="json_value-transact-sql"></a>JSON_VALUE (Transact-SQL)
 
@@ -139,7 +139,7 @@ CREATE TABLE dbo.Store
  (
   StoreID INT IDENTITY(1,1) NOT NULL,
   Address VARCHAR(500),
-  jsonContent NVARCHAR(8000),
+  jsonContent NVARCHAR(4000),
   Longitude AS JSON_VALUE(jsonContent, '$.address[0].longitude'),
   Latitude AS JSON_VALUE(jsonContent, '$.address[0].latitude')
  )

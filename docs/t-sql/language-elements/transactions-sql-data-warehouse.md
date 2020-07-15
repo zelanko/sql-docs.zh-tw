@@ -12,15 +12,15 @@ ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1b731a07ea0443ff925555e5b91e68368bf69392
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ac7b9a500bb87dca74082c9d16874131eb82402d
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631915"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197404"
 ---
 # <a name="transactions-sql-data-warehouse"></a>交易 (SQL 資料倉儲)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   交易是一組一或多個全部認可或全部復原的資料庫陳述式。 每個交易都是不可部分完成、一致、隔離和耐用 (ACID)。 如果交易成功，表示認可交易中的所有陳述式。 如果交易失敗，表示群組中至少有一個陳述式失敗，然後整個群組都會復原。  
   

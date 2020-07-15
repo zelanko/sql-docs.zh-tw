@@ -9,15 +9,15 @@ ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 084296bdca618bdf2810aab9e03c2dae4061fb68
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: fd44031ca0105aca7f7fa13df8e410eec196911c
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81630128"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197414"
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
 重新命名 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]中使用者建立的資料表。 重新命名 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中使用者建立的資料表、使用者所建立資料表或資料庫中的資料行。
 
