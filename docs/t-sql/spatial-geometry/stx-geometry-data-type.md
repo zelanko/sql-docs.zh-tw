@@ -1,7 +1,7 @@
 ---
 title: STX (geometry 資料型別) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/03/2017
+ms.date: 06/23/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2aef77e8-0460-43f9-bad6-2aae6d8c36f9
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 8a6b8896dadf8abc17d2fb3b3836d53815b7d3f8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b870071f474203a699494993f56f87109f9baf43
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68066163"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762105"
 ---
 # <a name="stx-geometry-data-type"></a>STX (geometry 資料類型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **Point** 執行個體的 X 座標屬性。
   

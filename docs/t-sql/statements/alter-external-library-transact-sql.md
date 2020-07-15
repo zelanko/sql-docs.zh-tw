@@ -1,7 +1,7 @@
 ---
 title: ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2019
+ms.date: 06/10/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning
@@ -16,17 +16,16 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 9da237047e7b42b83cc8aa039d6bd04aaca9549a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: b4c70e47b166e218bf6f08735360cd85755bb345
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74191078"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736015"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
-
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 修改現有外部套件程式庫的內容。
 
@@ -35,9 +34,9 @@ ms.locfileid: "74191078"
 > 在 SQL Server 2017 中，支援 R 語言和 Windows 平台。 SQL Server 2019 和更新版本支援 Windows 和 Linux 平台上的 R、Python 和外部語言。
 ::: moniker-end
 
-::: moniker range="=azuresqldb-current"
+::: moniker range="=azuresqldb-mi-current"
 > [!NOTE]
-> 在 Azure SQL Database 中，您可以藉由移除程式庫、使用 **sqlmlutils** 來安裝變更的版本以更改程式庫。 如需 **sqlmlutils** 的詳細資訊，請參閱[使用 sqlmlutils 新增套件](/azure/sql-database/sql-database-machine-learning-services-add-r-packages#add-a-package-with-sqlmlutils)。
+> 在 Azure SQL 受控執行個體中，您可更改程式庫，做法為移除程式庫，然後使用 **sqlmlutils** 來安裝變更的版本。 如需 **sqlmlutils** 的詳細資訊，請參閱[使用 sqlmlutils 安裝 Python 套件](https://docs.microsoft.com/sql/machine-learning/package-management/install-additional-python-packages-on-sql-server?context=/azure/azure-sql/managed-instance/context/ml-context&view=azuresqldb-mi-current)和[使用 sqlmlutils 安裝新的 R 套件](https://docs.microsoft.com/sql/machine-learning/package-management/install-additional-r-packages-on-sql-server?context=%2Fazure%2Fazure-sql%2Fmanaged-instance%2Fcontext%2Fml-context&view=azuresqldb-mi-current)。
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -83,7 +82,7 @@ WITH ( LANGUAGE = <language> )
 }
 ```
 ::: moniker-end
-::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 ## <a name="syntax-for-sql-server-2017"></a>SQL Server 2017 的語法
 
 ```text
@@ -114,14 +113,14 @@ WITH ( LANGUAGE = 'R' )
 ```
 ::: moniker-end
 
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-## <a name="syntax-for-azure-sql-database"></a>Azure SQL Database 的語法
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+## <a name="syntax-for-azure-sql-managed-instance"></a>Azure SQL 受控執行個體的語法
 
 ```text
 CREATE EXTERNAL LIBRARY library_name  
 [ AUTHORIZATION owner_name ]  
 FROM <file_spec> [ ,...2 ]  
-WITH ( LANGUAGE = 'R' )  
+WITH ( LANGUAGE = <language> )
 [ ; ]  
 
 <file_spec> ::=  
@@ -130,9 +129,15 @@ WITH ( LANGUAGE = 'R' )
 }  
 
 <library_bits> :: =  
-{ 
-      varbinary_literal 
-    | varbinary_expression 
+{
+      varbinary_literal
+    | varbinary_expression
+}
+
+<language> :: = 
+{
+      'R'
+    | 'Python'
 }
 ```
 ::: moniker-end
@@ -157,7 +162,6 @@ WITH ( LANGUAGE = 'R' )
 檔案可以本機路徑或網路路徑形式來指定。 如果指定了資料來源選項，檔案名稱就可以是相對於 `EXTERNAL DATA SOURCE` 中所參考之容器的相對路徑。
 
 (選擇性) 可以指定檔案的 OS 平台。 針對特定語言或執行階段，每個 OS 平台只允許一個檔案成品或內容。
-
 ::: moniker-end
 
 **library_bits**
@@ -188,10 +192,10 @@ WITH ( LANGUAGE = 'R' )
 指定套件的語言。 SQL Server 2017 支援 R。
 ::: moniker-end
 
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-**LANGUAGE = 'R'**
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+**language**
 
-指定套件的語言。 Azure SQL Database 支援 R。
+指定套件的語言。 在 Azure SQL 受控執行個體中，此值可以是 **R** 或 **Python**。
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -245,7 +249,7 @@ EXEC sp_execute_external_script
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-針對 SQL Server 2019 中的 Python 語言，只需要將範例中的 `'R'` 替換成 `'Python'` 即可正常運作。
+針對 Python 語言，只需要將範例中的 `'R'` 取代為 `'Python'` 即可正常運作。
 ::: moniker-end
 
 ### <a name="alter-an-existing-library-using-a-byte-stream"></a>使用位元組資料流改變現有程式庫
@@ -257,8 +261,8 @@ ALTER EXTERNAL LIBRARY customLibrary
 SET (CONTENT = 0xABC123...) WITH (LANGUAGE = 'R');
 ```
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-針對 SQL Server 2019 中的 Python 語言，只需要將範例中的 `'R'` 替換成 `'Python'` 即可正常運作。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+針對 Python 語言，只需要將範例中的 `'R'` 取代為 `'Python'` 即可正常運作。
 ::: moniker-end
 
 > [!NOTE]

@@ -1,5 +1,6 @@
 ---
 title: 以 FROM 或子查詢實作 UPDATE | Microsoft Docs
+description: 了解在原生編譯的 T-SQL 模組中，Transact-SQL UPDATE 陳述式內支援哪些語法元素。
 ms.custom: ''
 ms.date: 11/17/2016
 ms.prod: sql
@@ -11,25 +12,25 @@ ms.assetid: 138f5b0e-f8a4-400f-b581-8062aebc62b6
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c41165cf1e4a6b1ad8122cb674f8644f40d8ebe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 95e55e1519ab61eee3bed031d0d80565e56b0a69
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050262"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723146"
 ---
 # <a name="implementing-update-with-from-or-subqueries"></a>以 FROM 或子查詢實作 UPDATE
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
 
-在 Transact-SQL UPDATE 陳述式中，於原生編譯的 T-SQL 模組內，「不」  支援下列語法元素：
+在 Transact-SQL UPDATE 陳述式中，於原生編譯的 T-SQL 模組內，「不」支援下列語法元素：
 
 - FROM 子句
 - 子查詢
 
-相較之下，SELECT 陳述式上的原生編譯模組中則「支援」  上述元素。
+相較之下，SELECT 陳述式上的原生編譯模組中則「支援」上述元素。
 
 搭配 FROM 子句的 UPDATE 陳述式常會用來根據資料表值參數 (TVP) 更新資料表中資訊，或在 AFTER 觸發程序中更新資料表中的資料行。
 

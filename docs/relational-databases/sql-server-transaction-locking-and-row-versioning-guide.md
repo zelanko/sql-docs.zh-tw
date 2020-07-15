@@ -19,15 +19,15 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b7341273c36bacdbfd49596df535b9c73ba5049
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b39ab62ed76269869ae8c9327f5aaa0996672fba
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287172"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053744"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>交易鎖定與資料列版本設定指南
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 任何資料庫若交易管理不當，時常會導致多使用者的系統發生競爭與效能問題。 隨著存取資料的使用者數量增加，能夠有效使用交易的應用程式更形重要。 本指南描述 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 用以確保每筆交易實體完整性的鎖定及資料列版本設定機制，並提供有關應用程式如何能夠有效控制交易的資訊。  
   
@@ -238,7 +238,7 @@ GO
   
 -   **資料列更新造成遺漏讀取和重複讀取**  
   
-    -   遺漏更新的資料列或多次看到更新的資料列  
+    -   遺漏更新的資料列，或多次看到更新的資料列  
   
          在 `READ UNCOMMITTED` 等級執行的交易不會發出共用鎖定來防止其他交易修改目前交易所讀取的資料。 執行 READ COMMITTED 等級的交易則會發出共用鎖定，但是在讀取資料列後，就會解除資料列或頁面的鎖定。 在以上任一種情況下，當您掃描索引時，如果其他使用者變更了您讀取期間之資料列的索引鍵資料行，在索引鍵變更將資料列移到掃描前的任何位置後，該資料列可能會再次出現。 同樣地，如果索引鍵變更將資料列移到您已經讀取之索引中的位置，該資料列可能就不會出現。 若要避免這種情況，請使用 `SERIALIZABLE` 或 `HOLDLOCK` 提示，或資料列版本設定。 如需詳細資訊，請參閱[資料表提示 &#40;Transact-SQL&#41;](../t-sql/queries/hints-transact-sql-table.md)。  
   

@@ -1,5 +1,6 @@
 ---
 title: 原生編譯 Advisor | Microsoft Docs
+description: 了解如何使用原生編譯建議程式，將解譯的預存程序遷移至原生編譯，作為移轉至記憶體內部 OLTP 的一部分。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc5a4def5c32ffc39c0df58d5a7927a24c90860d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e31863944670cbb6e32e999ec06164792848236a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68135548"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722451"
 ---
 # <a name="native-compilation-advisor"></a>原生編譯 Advisor
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   交易效能分析報表會通知您，資料庫中哪些解譯的預存程序將能因匯出使用原生編譯而受益。 如需詳細資訊，請參閱 [判斷是否應將資料表或預存程序匯出至記憶體中 OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)。  
   
@@ -33,16 +34,16 @@ ms.locfileid: "68135548"
  如需移轉方法的資訊，請參閱 [In-Memory OLTP - 一般工作負載模式和移轉考量](https://msdn.microsoft.com/library/dn673538.aspx)。  
   
 ## <a name="walkthrough-using-the-native-compilation-advisor"></a>使用原生編譯 Advisor 的逐步解說  
- 在 [物件總管]  中，以滑鼠右鍵按一下您想要轉換的預存程序，然後選取 [原生編譯 Advisor]  。 隨即顯示 [預存程序原生編譯 Advisor]  的歡迎頁面。 選取 [下一步]  以繼續操作。  
+ 在 [物件總管] 中，以滑鼠右鍵按一下您想要轉換的預存程序，然後選取 [原生編譯 Advisor]。 隨即顯示 [預存程序原生編譯 Advisor] 的歡迎頁面。 選取 [下一步] 以繼續操作。  
   
 ### <a name="stored-procedure-validation"></a>預存程序驗證  
- 此頁面將會回報預存程序是否使用任何與原生編譯不相容的建構。 您可以按 [下一步]  查看詳細資料。 如果有與原生編譯不相容的建構，您可以按 [下一步]  查看詳細資料。  
+ 此頁面將會回報預存程序是否使用任何與原生編譯不相容的建構。 您可以按 [下一步] 查看詳細資料。 如果有與原生編譯不相容的建構，您可以按 [下一步] 查看詳細資料。  
   
 ### <a name="stored-procedure-validation-result"></a>預存程序驗證結果  
- 如果有與原生編譯不相容的建構，[預存程序驗證結果]  頁面會顯示詳細資料。 您可以產生報表 (按一下 [產生報表]  )、結束 [原生編譯 Advisor]  ，並更新您的程式碼，使其與原生編譯相容。  
+ 如果有與原生編譯不相容的建構，[預存程序驗證結果] 頁面會顯示詳細資料。 您可以產生報表 (按一下 [產生報表])、結束 [原生編譯 Advisor]，並更新您的程式碼，使其與原生編譯相容。  
   
 ## <a name="code-sample"></a>程式碼範例  
- 下列範例顯示解譯的預存程序及原生編譯的「對等」  預存程序。 該範例假設目錄名為 c:\data。  
+ 下列範例顯示解譯的預存程序及原生編譯的「對等」預存程序。 該範例假設目錄名為 c:\data。  
   
 > [!NOTE]  
 >  像往常一樣， **FILEGROUP** 元素和 **USE** mydatabase 陳述式，會套用至 Microsoft SQL Server，但是不會套用至 Azure SQL Database。  

@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL FILE FORMAT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/20/2018
+ms.date: 05/08/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
@@ -20,19 +20,19 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0402da002440e26697aeaa52245e78873033818
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 6c32db4bdc26e90faa74800076dade200c1348f6
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633447"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518638"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  建立外部檔案格式物件來定義儲存於 Hadoop、Azure Blob 儲存體或 Azure Data Lake Store 的外部資料。 建立外部檔案格式是建立外部資料表的先決條件。 透過建立外部檔案格式，您可以指定外部資料表所參考資料的實際配置。  
+  建立外部檔案格式物件來定義儲存於 Hadoop、Azure Blob 儲存體、Azure Data Lake Store 的外部資料，或用於與外部資料流建立關聯的輸入和輸出資料流。 建立外部檔案格式是建立外部資料表的先決條件。 透過建立外部檔案格式，您可以指定外部資料表所參考資料的實際配置。  
   
- PolyBase 支援下列檔案格式：
+支援下列檔案格式：
   
 -   分隔符號文字  
   
@@ -40,8 +40,11 @@ ms.locfileid: "81633447"
   
 -   Hive ORC
   
--   Parquet  
-  
+-   Parquet
+
+-   JSON - 僅適用於 Azure SQL Edge。
+
+
 若要建立外部資料表，請參閱 [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)。
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -87,7 +90,17 @@ WITH (
          | 'org.apache.hadoop.io.compress.DefaultCodec'  
         }  
      ]);  
-  
+
+-- Create an external file format for JSON files.
+CREATE EXTERNAL FILE FORMAT file_format_name  
+WITH (  
+    FORMAT_TYPE = JSON  
+     [ , DATA_COMPRESSION = {  
+        'org.apache.hadoop.io.compress.SnappyCodec'  
+      | 'org.apache.hadoop.io.compress.GzipCodec'      
+      | 'org.apache.hadoop.io.compress.DefaultCodec'  }  
+    ]);  
+ 
 <format_options> ::=  
 {  
     FIELD_TERMINATOR = field_terminator  
@@ -119,6 +132,8 @@ WITH (
     -   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
 
    -   DELIMITEDTEXT 指定具有欄分隔符號的文字格式，也稱為欄位結束字元。
+   
+   -  JSON 指定 JSON 格式。 僅適用於 Azure SQL Edge。 
   
  FIELD_TERMINATOR = *field_terminator*  
 僅適用於分隔符號文字檔。 欄位結束字元會指定一或多個字元，在文字分隔檔案中標記每個欄位 (欄) 的結尾。 預設值是管道字元 ꞌ|ꞌ。 若要保證支援，我們建議使用一或多個 ASCII 字元。
@@ -270,6 +285,14 @@ PolyBase 只會使用自訂日期格式來匯入資料。 它不會使用自訂�
 -   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
   
 -   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
+
+ JSON 檔案格式類型支援下列壓縮方法：
+  
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
+  
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
+
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
   
 ## <a name="permissions"></a>權限  
  需要 ALTER ANY EXTERNAL FILE FORMAT 權限。
@@ -365,6 +388,16 @@ WITH (FORMAT_TYPE = DELIMITEDTEXT,
           USE_TYPE_DEFAULT = True)
 )
 ```   
+### <a name="f-create-a-json-external-file-format"></a>F. 建立 JSON 外部檔案格式  
+ 這個範例會針對使用 org.apache.io.compress.SnappyCodec 資料壓縮方法來壓縮資料的 JSON 檔案建立外部檔案格式。 如果未指定 DATA_COMPRESSION，預設為不壓縮。 此範例適用於 Azure SQL Edge，但其他 SQL 產品目前不支援此範例。 
+  
+```  
+CREATE EXTERNAL FILE FORMAT jsonFileFormat  
+WITH (  
+    FORMAT_TYPE = JSON,  
+    DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'  
+);  
+```  
 
 ## <a name="see-also"></a>另請參閱
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   

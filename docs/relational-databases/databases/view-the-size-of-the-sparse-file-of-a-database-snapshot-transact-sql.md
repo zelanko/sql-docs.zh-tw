@@ -1,10 +1,10 @@
 ---
 title: 檢視資料庫快照集的疏鬆檔案大小 (T-SQL)
+description: 使用 Transact-SQL 來確認 SQL Server 資料庫檔案為疏鬆檔案，並找出其實際與最大的大小。 資料庫快照集會使用疏鬆檔案。
 ms.date: 07/28/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.custom: seo-lt-2019
 ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,15 +18,16 @@ helpviewer_keywords:
 ms.assetid: 1867c5f8-d57c-46d3-933d-3642ab0a8e24
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 71881edf1c98b0588a731964cf6f23dcffe6aa82
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: f62d33f45d390a4449bf603254ccc54be16a38b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74055203"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727531"
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>檢視資料庫快照集的疏鬆檔案大小 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   此主題描述如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 來確認 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫檔案是疏鬆檔案，以及了解其實際和最大大小。 疏鬆檔案是 NTFS 檔案系統的功能，提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫快照集所使用。  
   
 > [!NOTE]  
@@ -47,9 +48,9 @@ ms.locfileid: "74055203"
 > [!NOTE]  
 >  疏鬆檔案是以每次遞增 64 KB 的方式成長；因此磁碟上的疏鬆檔案大小一律是 64 KB 的倍數。  
   
- 若要檢視快照集每個疏鬆檔案目前在磁碟上使用的位元組數，請查詢  sys.dm_io_virtual_file_stats[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 動態管理檢視的 [size_on_disk_bytes](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) 資料行。  
+ 若要檢視快照集每個疏鬆檔案目前在磁碟上使用的位元組數，請查詢 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [sys.dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) 動態管理檢視的 **size_on_disk_bytes** 資料行。  
   
- 若要檢視疏鬆檔案使用的磁碟空間，請以滑鼠右鍵按一下 Microsoft Windows 中的檔案，然後按一下 [內容]  並查看 [磁碟大小]  值。  
+ 若要檢視疏鬆檔案使用的磁碟空間，請以滑鼠右鍵按一下 Microsoft Windows 中的檔案，然後按一下 [內容]並查看 [磁碟大小] 值。  
   
 ## <a name="find-out-the-maximum-size-of-a-sparse-file"></a>查明疏鬆檔案的大小上限  
  疏鬆檔案的成長大小上限，為建立快照集時對應來源資料庫檔案的大小。 若要知道此大小，您可以使用以下其中一種方式：  

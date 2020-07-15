@@ -1,5 +1,6 @@
 ---
 title: 使用 SQL Server Management Studio 佈建 Always Encrypted 金鑰 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio (SSMS) 來佈建 Always Encrypted 資料行主要金鑰和資料行加密金鑰。
 ms.custom: ''
 ms.date: 10/01/2019
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 13bb5944c5907f3bebc9f01eb969b4b8979f8c97
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8b84de259222b9e2bde8c9b99f67328ea317e645
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287122"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765138"
 ---
 # <a name="provision-always-encrypted-keys-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 佈建 Always Encrypted 金鑰
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 本文提供使用 [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md) 佈建 Always Encrypted 資料行主要金鑰和資料行加密金鑰的步驟。
 
@@ -34,14 +35,14 @@ ms.locfileid: "79287122"
 
 [新增資料行主要金鑰]  對話方塊可讓您產生資料行主要金鑰或挑選金鑰存放區中的現有金鑰，以及建立資料庫中所建立或所選取金鑰的資料行主要金鑰中繼資料。
 
-1.  使用物件總管  ，巡覽至資料庫下的 [安全性 > 永遠加密金鑰]  資料夾。
-2.  以滑鼠右鍵按一下 [資料行主要金鑰]  資料夾，然後選取 [新增資料行主要金鑰]  。 
+1.  使用物件總管，巡覽至資料庫下的 [安全性 > 永遠加密金鑰] 資料夾。
+2.  以滑鼠右鍵按一下 [資料行主要金鑰] 資料夾，然後選取 [新增資料行主要金鑰]。 
 3.  在 [新增資料行主要金鑰]  對話方塊中，輸入資料行主要金鑰中繼資料物件的名稱。
 4.  選取金鑰存放區︰
     - **憑證存放區 - 目前使用者** - 指出 Windows 憑證存放區中的目前使用者憑證存放區位置 (即個人存放區)。 
     - **憑證存放區 - 本機電腦** - 指出 Windows 憑證存放區中的本機電腦憑證存放區位置。 
-    - **Azure Key Vault** - 您需要登入 Azure (按一下 [登入]  )。 登入之後，就可以挑選其中一個 Azure 訂用帳戶和金鑰保存庫。
-    - **金鑰存放區提供者 (KSP)** ：指出金鑰存放區，可透過實作新一代密碼編譯 (CNG) API 的金鑰存放區提供者 (KSP) 存取。 這種類型的存放區通常是硬體安全性模組 (HSM)。 在您選取此選項之後，需要挑選 KSP。 預設會選取 [ (Microsoft 軟體金鑰存放區提供者)]  。 如果您想要使用 HSM 中所儲存的資料行主要金鑰，請選取裝置的 KSP (它必須先安裝和設定於電腦上，您才能開啟對話方塊)。
+    - **Azure Key Vault** - 您需要登入 Azure (按一下 [登入])。 登入之後，就可以挑選其中一個 Azure 訂用帳戶和金鑰保存庫。
+    - **金鑰存放區提供者 (KSP)** ：指出金鑰存放區，可透過實作新一代密碼編譯 (CNG) API 的金鑰存放區提供者 (KSP) 存取。 這種類型的存放區通常是硬體安全性模組 (HSM)。 在您選取此選項之後，需要挑選 KSP。 預設會選取 [ (Microsoft 軟體金鑰存放區提供者)] 。 如果您想要使用 HSM 中所儲存的資料行主要金鑰，請選取裝置的 KSP (它必須先安裝和設定於電腦上，您才能開啟對話方塊)。
     -   **密碼編譯服務提供者 (CSP)** ：一種金鑰存放區，可透過實作密碼編譯 API (CAPI) 的密碼編譯服務提供者 (CSP) 存取。 這類存放區通常是硬體安全性模組 (HSM)。 在您選取此選項之後，需要挑選 CSP。  如果您想要使用 HSM 中所儲存的資料行主要金鑰，請選取裝置的 CSP (它必須先安裝和設定於電腦上，您才能開啟對話方塊)。
     
     > [!NOTE]
@@ -49,10 +50,10 @@ ms.locfileid: "79287122"
    
     如需上述金鑰存放區的詳細資訊，請參閱[建立及儲存 Always Encrypted 的資料行主要金鑰](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)。
 
-5. 如果您使用 [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)]，且 SQL Server 執行個體已設定安全記憶體保護區，您可以選取 [允許記憶體保護區計算]  核取方塊，將主要金鑰設為已啟用記憶體保護區。 如需詳細資料，請參閱[具有安全記憶體保護區的 Always Encrypted](always-encrypted-enclaves.md)。 
+5. 如果您使用 [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)]，且 SQL Server 執行個體已設定安全記憶體保護區，您可以選取 [允許記憶體保護區計算] 核取方塊，將主要金鑰設為已啟用記憶體保護區。 如需詳細資料，請參閱[具有安全記憶體保護區的 Always Encrypted](always-encrypted-enclaves.md)。 
 
     > [!NOTE]
-    > 如果 SQL Server 執行個體未正確設定安全記憶體保護區，則不會出現 [允許記憶體保護區計算]  核取方塊。
+    > 如果 SQL Server 執行個體未正確設定安全記憶體保護區，則不會出現 [允許記憶體保護區計算] 核取方塊。
 
 6.  挑選金鑰存放區中的現有金鑰，或按一下 [產生金鑰]  或 [產生憑證]  按鈕，以在金鑰存放區中建立金鑰。 
 7.  按一下 [確定]  ，新的金鑰即會顯示在清單中。 
@@ -80,11 +81,11 @@ ms.locfileid: "79287122"
 
 [新增資料行加密金鑰]  對話方塊可讓您產生資料行加密金鑰、使用資料行主要金鑰進行加密，以及在資料庫中建立資料行加密金鑰中繼資料。
 
-1.  使用物件總管  ，巡覽至資料庫下的 [安全性]/[永遠加密金鑰]  資料夾。
-2.  以滑鼠右鍵按一下 [資料行加密金鑰]  資料夾，然後選取 [新增資料行加密金鑰]  。 
+1.  使用物件總管 ，巡覽至資料庫下的 [安全性]/[永遠加密金鑰]  資料夾。
+2.  以滑鼠右鍵按一下 [資料行加密金鑰] 資料夾，然後選取 [新增資料行加密金鑰]。 
 3.  在 [新增資料行加密金鑰]  對話方塊中，輸入資料行加密金鑰中繼資料物件的名稱。
 4.  選取代表資料庫中資料行主要金鑰的中繼資料物件。
-5.  按一下 [確定]  。 
+5.  按一下 [確定]。 
 
 完成對話方塊之後，SQL Server Management Studio 會產生新的資料行加密金鑰，然後擷取您從資料庫所選資料行主要金鑰的中繼資料。 SSMS 接著會使用資料行主要金鑰中繼資料來連絡包含資料行主要金鑰的金鑰存放區，並加密資料行加密金鑰。 最後，SSMS 會產生並發出 [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) 陳述式，在資料庫中建立新資料行加密的中繼資料。
 

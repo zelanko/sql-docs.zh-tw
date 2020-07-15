@@ -1,5 +1,6 @@
 ---
 title: SQL Server Express LocalDB | Microsoft Docs
+description: 了解 SQL Server Express LocalDB。 開發人員可使用這個輕量型資料庫引擎來撰寫及測試 Transact-SQL 程式碼。
 ms.custom: ''
 ms.date: 04/17/2019
 ms.prod: sql
@@ -14,18 +15,18 @@ helpviewer_keywords:
 - file database
 - LocalDB
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 6f954ae7a2b2316acd70450db4f986b80b6ef73d
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 51bc81253c63834e2fa9b4238ef9bf62f19f1ce9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528262"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771785"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Microsoft SQL Server Express LocalDB 是 [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-version-15.md) 的功能，專供開發人員使用。 SQL Server Express with Advanced Services 中也會提供。
 
@@ -46,7 +47,7 @@ LocalDB 是您在安裝 SQL Server Express 期間選取的功能，而且可以�
 
 透過安裝精靈或使用 SqlLocalDB.msi 程式來安裝 LocalDB。 LocalDB 是安裝 SQL Server Express LocalDB 時的選項。 
  
-在安裝期間，在 [功能選取]/[共用功能]  頁面上選取 [LocalDB]。 每個主要 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]版本都只能有 LocalDB 二進位檔案的一個安裝。 多個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理序可以啟動，而且全部都會使用相同的二進位檔案。 以 LocalDB 形式啟動的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體，其限制與 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 相同。
+在安裝期間，在 [功能選取]/[共用功能] 頁面上選取 [LocalDB]。 每個主要 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]版本都只能有 LocalDB 二進位檔案的一個安裝。 多個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理序可以啟動，而且全部都會使用相同的二進位檔案。 以 LocalDB 形式啟動的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體，其限制與 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 相同。
 
 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB 的執行個體是使用 `SqlLocalDB.exe` 公用程式來管理。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB 應該用來取代已過時的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 使用者執行個體功能。
 
@@ -118,16 +119,16 @@ REM Gather information about the instance of LocalDB
 |||
 |-|-|
 |名稱|`LocalDBApp1`|
-|版本|\<目前版本>|
+|版本|\<Current Version>|
 |共用名稱|""|
-|擁有者|"\<您的 Windows 使用者>"|
+|擁有者|"\<Your Windows User>"|
 |自動建立|否|
 |State|執行中|
-|上次啟動時間|\<日期和時間>|
+|上次啟動時間|\<Date and Time>|
 |執行個體管道名稱|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|
 
 >[!NOTE]
->如果應用程式使用 .NET 4.0.2 之前的版本，您必須直接連線到 LocalDB 的具名管道。 執行個體管道名稱值是 LocalDB 執行個體接聽的具名管道。 執行個體管道名稱中 LOCALDB# 後面的部分會隨著每次 LocalDB 執行個體啟動而變更。 若要使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 連線到 LocalDB 執行個體，請在 [連線到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]]  對話方塊的 [伺服器名稱]  方塊中，輸入執行個體管道名稱。 從您的自訂程式，您可以使用類似於 `SqlConnection conn = new SqlConnection(@"Server=np:\\.\pipe\LOCALDB#F365A78E\tsql\query");` 的連接字串來建立對 LocalDB 執行個體的連線
+>如果應用程式使用 .NET 4.0.2 之前的版本，您必須直接連線到 LocalDB 的具名管道。 執行個體管道名稱值是 LocalDB 執行個體接聽的具名管道。 執行個體管道名稱中 LOCALDB# 後面的部分會隨著每次 LocalDB 執行個體啟動而變更。 若要使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 連線到 LocalDB 執行個體，請在 [連線到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]] 對話方塊的 [伺服器名稱] 方塊中，輸入執行個體管道名稱。 從您的自訂程式，您可以使用類似於 `SqlConnection conn = new SqlConnection(@"Server=np:\\.\pipe\LOCALDB#F365A78E\tsql\query");` 的連接字串來建立對 LocalDB 執行個體的連線
 
 ### <a name="connect-to-a-shared-instance-of-localdb"></a>連線到 LocalDB 共用執行個體
 

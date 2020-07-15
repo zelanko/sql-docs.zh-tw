@@ -1,5 +1,6 @@
 ---
 title: 範例：指定 ELEMENTXSINIL 指示詞 | Microsoft Docs
+description: 了解如何在 SQL 中指定 ELEMENTXSINIL 指示詞，以產生 Null 值的 XML 元素，其中 xsi:nil 屬性為 True。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: bbcb6f9e-a51b-4775-9795-947c9d6d758f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f717b4e5830fd9ab6089da3b7e97cb028a14ff13
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 64e44b8f84f2ff4b908556b31b6088a6a2c77c55
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662973"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632503"
 ---
 # <a name="example-specifying-the-elementxsinil-directive"></a>範例：指定 ELEMENTXSINIL 指示詞
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   當您指定 ELEMENT 指示詞來擷取元素中心的 XML 時，如果資料行有 NULL 值，EXPLICIT 模式就不會產生與其對應的元素。 您可以在 **xsi:nil** 屬性設為值 TRUE 之處，選擇性地指定 ELEMENTXSINIL 指示詞，要求產生 NULL 值的元素。  
   
  以下查詢會建構包括員工地址在內的 XML。 對於 `AddressLine2` 及 `City` 資料行，資料行名稱會指定 `ELEMENTXSINIL` 指示詞。 這會在資料列集中，為 `AddressLine2` 及 `City` 資料行中的 NULL 值產生元素。  

@@ -1,5 +1,6 @@
 ---
 title: 停用發行和散發 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio、Transact-SQL 或 Replication Management Objects，在 SQL Server 中停用發行和散發。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7d48edb0024261bee87071cbd3ac77e3c49aabfd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3b8c2e87e15f1ed30940f33953a339fc711305b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76284730"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85653861"
 ---
 # <a name="disable-publishing-and-distribution"></a>停用發行和散發
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中停用發行和散發。  
   
  您可以執行下列工作：  
@@ -42,11 +43,11 @@ ms.locfileid: "76284730"
   
 -   **開始之前：**  
   
-     [必要條件](#Prerequisites)  
+     [先決條件](#Prerequisites)  
   
 -   **若要停用發行和散發，請使用：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   

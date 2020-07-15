@@ -1,5 +1,6 @@
 ---
 title: 選擇驗證模式 | Microsoft Docs
+description: 在安裝期間，針對 SQL Server 資料庫引擎選擇 Windows 驗證模式或混合模式驗證。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,16 +26,16 @@ helpviewer_keywords:
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: caee3b1fab893e456a5a781641b6cf70222b16ff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ffe53e3f7819a2ca9bdd8adc9cb3db66aad57371
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75721353"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85627583"
 ---
 # <a name="choose-an-authentication-mode"></a>選擇驗證模式
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  在安裝期間，您必須選取 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的驗證模式。 有兩種可能的模式：Windows 驗證模式和混合模式。 Windows 驗證模式會啟用 Windows 驗證並停用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 混合模式會啟用 Windows 驗證及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 Windows 驗證一定可用而且無法停用。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  在安裝期間，您必須選取 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的驗證模式。 有兩種可能的模式：Windows 驗證模式與混合模式。 Windows 驗證模式會啟用 Windows 驗證並停用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 混合模式會啟用 Windows 驗證及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 Windows 驗證一定可用而且無法停用。  
   
 ## <a name="configuring-the-authentication-mode"></a>設定驗證模式  
  如果您在安裝期間選取混合模式驗證，就必須為名為 sa 的內建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員帳戶提供並確認增強式密碼。 sa 帳戶會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證進行連接。  
@@ -70,9 +71,9 @@ ms.locfileid: "75721353"
   
 1.  在 **[開始]** 功能表上，按一下 **[執行]** 。  
   
-2.  在 [執行]  對話方塊中，輸入 **secpol.msc**，然後按一下 [確定]  。  
+2.  在 [執行] 對話方塊中，輸入 **secpol.msc**，然後按一下 [確定]。  
   
-3.  在 [本機安全性設定]  應用程式中，依序展開 [安全性設定]  和 [帳戶原則]  ，然後按一下 [密碼原則]  。  
+3.  在 [本機安全性設定] 應用程式中，依序展開 [安全性設定] 和 [帳戶原則]，然後按一下 [密碼原則]。  
 
      密碼原則就會描述在結果窗格中。  
   

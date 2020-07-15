@@ -1,5 +1,6 @@
 ---
 title: 建立或刪除用戶端使用的伺服器別名 | Microsoft Docs
+description: 了解如何建立及刪除別名，也就是當連線到 SQL Server 的執行個體時，可以使用的替代名稱。 了解別名的優點。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,40 +14,40 @@ helpviewer_keywords:
 - aliases [SQL Server], deleting
 - aliases [SQL Server], creating
 ms.assetid: b687e376-ee33-470d-b65a-87246bfefe6f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a0a678d3b5df450377517bc9c94d3771c45f22e0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 12010d334ee814422a9f2f55a034b7a211cc370d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012067"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772587"
 ---
 # <a name="create-or-delete-a-server-alias-for-use-by-a-client"></a>建立或刪除用戶端使用的伺服器別名
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   此主題描述如何使用 SQL Server 組態管理員，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中建立或刪除伺服器別名。 別名是可用於進行連接的替代名稱。 別名會封裝連接字串的必要元素，並以使用者選擇的名稱來公開這些元素。 別名可用於任何用戶端應用程式。 藉由建立伺服器別名，用戶端電腦可使用不同網路通訊協定來連接到多個伺服器，而不必指定每一個伺服器的通訊協定和連接詳細資料。 此外，您也可以一直啟用不同的網路通訊協定，即使您只需要偶而使用它們。 若您已設定伺服器在非預設通訊埠編號或具名管道上接聽，且您已停用 SQL Server Browser 服務，請建立指定新通訊埠編號或具名管道的別名。  
   
 ##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> 使用 SQL Server 組態管理員  
   
 #### <a name="to-create-an-alias"></a>若要建立別名  
   
-1.  在 SQL Server 組態管理員中，展開 [SQL Server Native Client Configuration (SQL Server Native Client 組態)]  ，並以滑鼠右鍵按一下 [別名]  ，然後按一下 [新增別名]  。  
+1.  在 SQL Server 組態管理員中，展開 [SQL Server Native Client Configuration (SQL Server Native Client 組態)]，並以滑鼠右鍵按一下 [別名]，然後按一下 [新增別名]。  
   
-2.  在 [別名名稱]  方塊中，輸入別名的名稱。 當用戶端應用程式連接時使用此名稱。  
+2.  在 [別名名稱] 方塊中，輸入別名的名稱。 當用戶端應用程式連接時使用此名稱。  
   
-3.  在 [伺服器]  方塊中，輸入伺服器的名稱或 IP 位址。 針對具名執行個體，請附加執行個體名稱。  
+3.  在 [伺服器] 方塊中，輸入伺服器的名稱或 IP 位址。 針對具名執行個體，請附加執行個體名稱。  
   
-4.  在 [通訊協定]  方塊中，選取用於此別名的通訊協定。 選取通訊協定，將選用屬性方塊的標題變更為「通訊埠編號」、「管道名稱」或「連接字串」。  
+4.  在 [通訊協定] 方塊中，選取用於此別名的通訊協定。 選取通訊協定，將選用屬性方塊的標題變更為「通訊埠編號」、「管道名稱」或「連接字串」。  
   
- ＜[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員說明＞中描述的連接字串，對於建立自己連接字串的程式設計人員會很有幫助。 若要存取此資訊，在 [新增別名]  對話方塊，按 F1，或按一下 [說明]  。  
+ ＜[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員說明＞中描述的連接字串，對於建立自己連接字串的程式設計人員會很有幫助。 若要存取此資訊，在 [新增別名] 對話方塊，按 F1，或按一下 [說明]。  
   
 > [!NOTE]  
 >  如果已設定的別名連接到錯誤的伺服器或執行個體，請停用再重新啟用相關的網路通訊協定。 這麼做可清除任何快取的連接資訊，讓用戶端能夠正確連接。  
   
 #### <a name="to-delete-an-alias"></a>若要刪除別名  
   
-1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中，展開 [SQL Server Native Client Configuration (SQL Server Native Client 組態)]  ，再按一下 [別名]  。  
+1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中，展開 [SQL Server Native Client Configuration (SQL Server Native Client 組態)]，再按一下 [別名]。  
   
-2.  在詳細資料窗格中，以滑鼠右鍵按一下要刪除的別名，然後按一下 [刪除]  。  
+2.  在詳細資料窗格中，以滑鼠右鍵按一下要刪除的別名，然後按一下 [刪除]。  
   
   

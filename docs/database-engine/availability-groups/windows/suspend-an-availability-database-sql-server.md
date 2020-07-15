@@ -1,6 +1,6 @@
 ---
 title: 暫止可用性資料庫
-description: 了解如何使用 SQL Server Management Studio (SSMS)、Transact-SQL (T-SQL) 或 SQL PowerShell 將 Always On 可用性群組內資料庫的資料移動暫止。
+description: 了解如何使用 SQL Server Management Studio、Transact-SQL 或 SQL PowerShell，將 Always On 可用性群組內資料庫的資料移動暫止。
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 92f83bb31569a055bf9158a0388d9cb0630e9a1d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b56a461019a7b99bd73db3ed287020f0923b627f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251268"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900712"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>暫止可用性資料庫 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   您可以使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]的 PowerShell，暫停 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的可用性資料庫。 請注意，暫停命令必須在裝載要暫停或回復之資料庫的伺服器執行個體上發出。  
   
  暫停命令的效果取決於您暫停的是次要資料庫或主要資料庫，如下所示：  
   
 |暫停的資料庫|暫停命令的效果|  
 |------------------------|-------------------------------|  
-|次要資料庫|只有本機次要資料庫會暫停，而且其同步處理狀態會變成 NOT SYNCHRONIZING。 其他次要資料庫不受影響。 暫停的資料庫會停止接收和套用資料 (記錄檔記錄)，並且開始落後於主要資料庫。 可讀取次要複本上的現有連接會保持可用狀態。 在資料移動繼續執行之前，不允許可讀取次要複本上已暫停之資料庫的新連接。<br /><br /> 主要資料庫仍然可用。 如果您暫停每個對應的次要資料庫，則主要資料庫會公開執行。<br /><br /> **\*\* 重要事項 \*\*** 次要資料庫暫停期間，所對應之主要資料庫的傳送佇列將會累積未傳送的交易記錄檔記錄。 次要複本的連接會傳回在資料移動暫停時可用的資料。|  
+|次要資料庫|只有本機次要資料庫會暫停，而且其同步處理狀態會變成 NOT SYNCHRONIZING。 其他次要資料庫不受影響。 暫停的資料庫會停止接收和套用資料 (記錄檔記錄)，並且開始落後於主要資料庫。 可讀取次要複本上的現有連接會保持可用狀態。 在資料移動繼續執行之前，不允許可讀取次要複本上已暫停之資料庫的新連接。 只有在使用接聽程式和唯讀路由開啟連線時，此行為才適用。<br /><br /> 主要資料庫仍然可用。 如果您暫停每個對應的次要資料庫，則主要資料庫會公開執行。<br /><br /> **\*\* 重要事項 \*\*** 次要資料庫暫停期間，所對應之主要資料庫的傳送佇列將會累積未傳送的交易記錄檔記錄。 次要複本的連接會傳回在資料移動暫停時可用的資料。|  
 |主要資料庫|主要資料庫會停止將資料移動到每個連接的次要資料庫。 主要資料庫會繼續以公開模式執行。 主要資料庫仍然可供用戶端使用，而可讀取次要資料庫上的現有連接仍然可以使用，並且可以建立新連接。|  
   
 > [!NOTE]  
@@ -50,7 +50,7 @@ ms.locfileid: "75251268"
   
 -   **若要使用下列項目暫停資料庫：**  
   
--   [Transact-SQL](#SSMSProcedure)  
+-   [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -83,11 +83,11 @@ ms.locfileid: "75251268"
   
 1.  在 [物件總管] 中，連接到裝載您要暫停資料庫之可用性複本的伺服器執行個體，然後展開伺服器樹狀目錄。 如需詳細資訊，請參閱本主題前面的＜ [必要條件](#Prerequisites)＞。  
   
-2.  依序展開 [Always On 高可用性]  節點和 [可用性群組]  節點。  
+2.  依序展開 [Always On 高可用性] 節點和 [可用性群組] 節點。  
   
 3.  展開可用性群組。  
   
-4.  展開 [可用性資料庫]  節點，以滑鼠右鍵按一下資料庫，然後按一下 [暫停進行資料移動]  。  
+4.  展開 [可用性資料庫] 節點，以滑鼠右鍵按一下資料庫，然後按一下 [暫停進行資料移動]。  
   
 5.  在 **[暫停資料移動]** 對話方塊中，按一下 **[確定]** 。  
   

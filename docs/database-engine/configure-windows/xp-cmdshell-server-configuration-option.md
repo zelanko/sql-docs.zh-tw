@@ -1,48 +1,55 @@
 ---
-title: xp_cmdshell 伺服器組態選項 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2017
+title: xp_cmdshell 伺服器組態選項
+description: 了解 "xp_cmdshell" 選項。 了解其如何控制 SQL Server 是否可執行 "xp_cmdshell" 擴充預存程序。 了解開啟該功能的方法。
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
-dev_langs:
-- TSQL
 helpviewer_keywords:
 - xp_cmdshell
 ms.assetid: c147c9e1-b81d-49c8-b800-3019f4d86a13
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 40efe03850259a3b900375e3a47c12d80a448b39
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.custom: contperfq4
+ms.date: 06/12/2020
+ms.openlocfilehash: b2d4364d01b871364fda3ac42d98536e99269c29
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68040070"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763949"
 ---
 # <a name="xp_cmdshell-server-configuration-option"></a>xp_cmdshell 伺服器組態選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  **xp_cmdshell** 選項是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 伺服器組態選項，可讓系統管理員控制 **xp_cmdshell** 擴充預存程序是否可在系統上執行。 根據預設，新安裝的 **xp_cmdshell** 選項為停用。 啟用此選項前，請務必考量與使用此選項相關的潛在安全性影響。 新開發的程式碼不應使用此選項，原因是其通常應停用。 有些舊版應用程式必須啟用此選項，而且如果不能將其修改以避免使用，可使用原則式管理或執行 **sp_configure** 系統預存程序加以啟用，如下列程式碼範例所示：  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+本文描述如何啟用 **xp_cmdshell** SQL Server 組態選項。 此選項可供系統管理員控制 [xp_cmdshell 擴充預存程序](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)是否可在系統上執行。 根據預設，新安裝的 **xp_cmdshell** 選項為停用。
+
+啟用此選項前，請務必考量潛在安全性影響。
+
+- 新開發的程式碼不應使用 **xp_cmdshell** 預存程序，且通常應該保持停用。
+- 某些繼承應用程式則必須啟用 **xp_cmdshell**。 如果無法修改這些應用程式以避免使用這個預存程序，則可依照下述來加以啟用。
+
+如果需要啟用 **xp_cmdshell**，則可使用[原則式管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)或執行 **sp_configure** 系統預存程序，如下列程式碼範例所示：  
   
-```  
+``` sql
 -- To allow advanced options to be changed.  
-EXEC sp_configure 'show advanced options', 1;  
+EXECUTE sp_configure 'show advanced options', 1;  
 GO  
 -- To update the currently configured value for advanced options.  
 RECONFIGURE;  
 GO  
 -- To enable the feature.  
-EXEC sp_configure 'xp_cmdshell', 1;  
+EXECUTE sp_configure 'xp_cmdshell', 1;  
 GO  
 -- To update the currently configured value for this feature.  
 RECONFIGURE;  
 GO  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
- [使用原則式管理來管理伺服器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
-  
-  
+## <a name="next-steps"></a>後續步驟
+
+- [xp_cmdshell 擴充預存程序](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)
+- [伺服器組態選項 (SQL Server)](server-configuration-options-sql-server.md)
+- [使用原則式管理來管理伺服器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  

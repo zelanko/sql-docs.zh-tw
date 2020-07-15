@@ -25,15 +25,15 @@ ms.assetid: 3d544eed-3993-4055-983d-ea334f8c5c58
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 078a6b8ebdef8604c4023f6e652f5f431ee59d5b
-ms.sourcegitcommit: ed5f063d02a019becf866c4cb4900e5f39b8db18
+ms.openlocfilehash: 8bed7fa9d84cc3100d5da0f784c9e2551071156e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643369"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012842"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 從資料表中移除所有資料列或資料庫的指定資料分割，而不需記錄個別資料列刪除。 TRUNCATE TABLE 類似於不含 WHERE 子句的 DELETE 陳述式；不過，TRUNCATE TABLE 比較快，使用的系統資源和交易記錄資源也比較少。  
   
@@ -76,7 +76,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
   
  指定要截斷的資料分割，或要移除所有資料列的部分。 如果未分割此資料表，此 `WITH PARTITIONS` 引數將會產生錯誤。 如果 `WITH PARTITIONS` 未提供子句，則將會截斷整個資料表。  
   
- 您可以使用下列方式來指定 *\<partition_number_expression>* ： 
+ 可使用下列方式來指定 *\<partition_number_expression>* ： 
   
 -   提供資料分割的編號，例如：`WITH (PARTITIONS (2))`  
   
@@ -84,7 +84,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
   
 -   同時提供範圍和個別資料分割，例如：`WITH (PARTITIONS (2, 4, 6 TO 8))`  
   
--   *\<range>* 可以指定為以 **TO** 一字分隔的資料分割編號，例如：`WITH (PARTITIONS (6 TO 8))`  
+-   *\<range>* 可指定為以 **TO** 一字分隔的分割區編號，例如：`WITH (PARTITIONS (6 TO 8))`  
   
  若要截斷資料分割資料表，必須將資料表與索引對齊 (已在同一個資料分割函數上加以分割)。  
   

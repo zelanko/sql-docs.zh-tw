@@ -1,7 +1,8 @@
 ---
 title: 原生編譯 T-SQL 模組的功能
+description: 深入了解原生編譯 T-SQL 模組主體的 T-SQL 介面區和支援功能，例如預存程序和純量使用者定義函數。
 ms.custom: seo-dt-2019
-ms.date: 10/23/2017
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,36 +12,20 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 472a654a0bee8b386c6573c8ab1ed8fdb0b4cf8d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 172e3a271086564c0ae4da7fd01a3084d65a85e5
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286662"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834719"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>原生編譯的 T-SQL 模組支援的功能
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
   本主題包含原生編譯 T-SQL 模組主體的 T-SQL 介面區和支援功能的清單，如預存程序 ([CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md))、純量使用者定義函數、內嵌資料表值的函數和觸發程序。  
 
  如需原生模組定義支援的功能，請參閱 [原生編譯的預存程序上支援的建構](../../relational-databases/in-memory-oltp/supported-ddl-for-natively-compiled-t-sql-modules.md)。  
-
--   [原生模組中的查詢介面區](#qsancsp)  
-
--   [資料修改](#dml)  
-
--   [流程控制語言](#cof)  
-
--   [支援的運算子](#so)  
-
--   [原生編譯模組中的內建函數](#bfncsp)  
-
--   [稽核](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#auditing)  
-
--   [資料表和查詢提示](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#tqh)  
-
--   [排序的限制](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#los)  
 
  如需有關不支援之建構的完整資訊，以及如何處理某些原生編譯模組不支援功能的相關資訊，請參閱 [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)。 如需不支援功能的詳細資訊，請參閱 [記憶體中的 OLTP 不支援 Transact-SQL 建構](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)。  
 
@@ -66,7 +51,7 @@ SELECT 子句：
     - **適用於：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
       從 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 開始，原生編譯模組支援 DISTINCT 運算子。
 
-              DISTINCT aggregates are not supported.  
+        - 不支援相異彙總。  
 
 -   UNION 和 UNION ALL
     - **適用於：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
@@ -76,9 +61,9 @@ SELECT 子句：
 
 FROM 子句：  
 
--   FROM \<記憶體最佳化的資料表或資料表變數>  
+-   FROM \<memory optimized table or table variable>  
 
--   FROM \<原生編譯的內嵌 TVF>  
+-   FROM \<natively compiled inline TVF>  
 
 -   LEFT OUTER JOIN、RIGHT OUTER JOIN、CROSS JOIN 和 INNER JOIN。
     - **適用於：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
@@ -169,7 +154,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 
 -   [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)  
 
-               To achieve optimal performance, use a single TRY/CATCH block for an entire natively compiled T-SQL module.  
+    - 若要最佳化效能，整個原生編譯 T-SQL 模組請使用單一 TRY/CATCH 區塊。  
 
 -   [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)  
 
@@ -178,13 +163,13 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 ##  <a name="supported-operators"></a><a name="so"></a> 支援的運算子  
  下列為支援的運算子。  
 
--   [比較運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md) (例如，>、\<、>= 和 <=)  
+-   [比較運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md) (例如，>、\<, >= 和 <=)  
 
 -   一元運算子 (+、-)。  
 
 -   二元運算子 (*、/、+、-、% (模數) )。  
 
-               The plus operator (+) is supported on both numbers and strings.  
+    - 數字和字串都支援加號運算子 (+)。  
 
 -   邏輯運算子 (AND、OR、NOT)。  
 
@@ -244,7 +229,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 ##  <a name="limitations-on-sorting"></a><a name="los"></a> 排序的限制  
  在使用 [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) 和一個 [ORDER BY 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md) 的查詢中，您可以排序 8000 多個資料列。 但是沒有 [ORDER BY 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)，[TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) 最多只能排序 8000 個資料列 (如果有聯結則資料列更少)。  
 
- 如果查詢同時使用 [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) 運算子和一個 [ORDER BY 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)，TOP 運算子最多可以指定 8192 個資料列。 如果您指定超過 8192 個資料列，則會收到錯誤訊息：**Msg 41398，層級 16，狀態 1、程序\<程序名稱>  、行 \<行號>  。TOP 運算子最多可以傳回 8192 個資料列；要求 \<數字>  個。**  
+ 如果查詢同時使用 [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) 運算子和一個 [ORDER BY 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)，TOP 運算子最多可以指定 8192 個資料列。 如果您指定超過 8192 個資料列，則會收到錯誤訊息：**訊息 41398，層級 16，狀態 1、程序 *\<procedureName>* ，行 *\<lineNumber>* TOP 運算子可傳回最多 8192 個資料列；要求的數目為 *\<number>* 。**  
 
  如果您沒有 TOP 子句，則可以使用 ORDER BY 排序任意數目的資料列。  
 

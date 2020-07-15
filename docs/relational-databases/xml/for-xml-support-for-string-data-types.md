@@ -1,5 +1,6 @@
 ---
 title: 字串資料類型的 FOR XML 支援 | Microsoft Docs
+description: 了解當 SQL 查詢中的 FOR XML 子句產生 XML 時，如何處理字串資料類型。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: bf069da8-de1e-44d2-a1fb-ade383076ac1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 15f876fde9403d65ba6af81b7038519d4318100f
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: cdaa7560b5dad561d981acee2d2d48ccca44146c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665117"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729906"
 ---
 # <a name="for-xml-support-for-string-data-types"></a>字串資料類型的 FOR XML 支援
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   實體化資料中 FOR XML 空白字元所產生的 XML。  
   
  下列範例將建立範例資料表 **T** ，並插入含有換行字元、歸位字元以及定位字元的範例資料。 SELECT 陳述式會從資料表擷取資料。  

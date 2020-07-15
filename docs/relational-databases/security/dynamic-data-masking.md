@@ -1,5 +1,6 @@
 ---
 title: 動態資料遮罩 | Microsoft Docs
+description: 了解動態資料遮罩；其可藉由遮罩處理，對不具權限的使用者限制所呈現的敏感性資料。 如此可大幅簡化 SQL Server 中的安全性。
 ms.date: 05/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
@@ -10,15 +11,15 @@ ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c0f2a5d652b23efec6b4dd1c6d021f85e1155247
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bf3c9a827a4a3318bbee7e550aa8759a8dcc0eb4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67997721"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005597"
 ---
 # <a name="dynamic-data-masking"></a>動態資料遮罩
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 ![動態資料遮罩](../../relational-databases/security/media/dynamic-data-masking.png)
 
@@ -43,9 +44,9 @@ ms.locfileid: "67997721"
 |函式|描述|範例|  
 |--------------|-----------------|--------------|  
 |預設|請依據指定欄位的資料類型進行完整遮罩。<br /><br /> 對於字串資料類型，請使用 XXXX，或在欄位大小少於 4 個字元時使用較少的 X (**char**、**nchar**、**varchar**、**nvarchar**、**text**、**ntext**)。  <br /><br /> 對於數值資料類型，請使用零值 (**bigint**、**bit**、**decimal**、**int**、**money** **numeric** **smallint**、**smallmoney**、**tinyint**、**float**、**real**)。<br /><br /> 對於日期與時間資料類型，請使用 01.01.1900 00:00:00.0000000 (**date**、**datetime2**、**datetime**、**datetimeoffset**、**smalldatetime**、**time**)。<br /><br />對於二進位資料類型，請使用單一位元組的 ASCII 值 0 (**binary**、 **varbinary**、 **image**)。|範例資料行定義語法： `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> 替代語法的範例：`ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
-|電子郵件|此遮罩方法會讓電子郵件地址的第一個字母和常數後置詞 ".com" 以形式為電子郵件地址形式來公開。 `aXXX@XXXX.com`第 1 課：建立 Windows Azure 儲存體物件`aXXX@XXXX.com`。|範例定義語法： `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> 替代語法的範例：`ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
+|電子郵件|此遮罩方法會讓電子郵件地址的第一個字母和常數後置詞 ".com" 以形式為電子郵件地址形式來公開。 第 1 課：建立 Windows Azure 儲存體物件`aXXX@XXXX.com`。|範例定義語法： `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> 替代語法的範例：`ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
 |隨機|此隨機遮罩函數可用在任何數值類型，會以指定範圍內隨機的值遮罩原始值。|範例定義語法： `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> 替代語法的範例：`ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
-|自訂字串|此遮罩方法會公開第一個及最後一個字母，並在中間新增自訂填補字串。 `prefix,[padding],suffix`<br /><br /> 注意：如果原始的值過短，而無法完成整個遮罩，一部分的前置詞或後置詞就不會曝光。|範例定義語法： `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> 替代語法的範例：`ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> 其他範例：<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`<br /><br /> `ALTER COLUMN [Social Security Number] ADD MASKED WITH (FUNCTION = 'partial(0,"XXX-XX-",4)')`|  
+|自訂字串|此遮罩方法會公開第一個及最後一個字母，並在中間新增自訂填補字串。 `prefix,[padding],suffix`<br /><br /> 注意:如果原始的值過短，而無法完成整個遮罩，一部分的前置詞或後置詞就不會曝光。|範例定義語法： `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> 替代語法的範例：`ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> 其他範例：<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`<br /><br /> `ALTER COLUMN [Social Security Number] ADD MASKED WITH (FUNCTION = 'partial(0,"XXX-XX-",4)')`|  
   
 ## <a name="permissions"></a>權限  
  您不需要任何特殊權限，只要有結構描述的標準 **CREATE TABLE** 和 **ALTER** 權限，就能建立含有動態資料遮罩的資料表。  
@@ -93,7 +94,7 @@ WHERE is_masked = 1;
  新增動態資料遮罩會實作為基礎資料表上的結構描述變更，因此無法在具有相依性的資料行上執行。 若要暫時解決這項限制，您可以先移除相依性，並新增動態資料遮罩，然後重新建立相依性。 例如，如果相依性是基於相依於該資料行索引，則您可以卸除索引，並新增遮罩，然後重新建立相依索引。
  
 
-## <a name="security-note-bypassing-masking-using-inference-or-brute-force-techniques"></a>安全性注意事項︰使用推斷或暴力破解方法略過遮罩
+## <a name="security-note-bypassing-masking-using-inference-or-brute-force-techniques"></a>安全性注意事項：使用推斷或暴力破解方法略過遮罩
 
 動態資料遮罩的設計是要藉由限制應用程式所使用之預先定義查詢集的資料曝光，簡化應用程式開發。 雖然動態資料遮罩也可以用來避免在直接存取生產資料庫時意外洩露機密資料，您必須特別注意具有特定查詢權限的無特殊權限使用者，可以套用技術以存取實際的資料。 如果需要授與這類特定存取權，應該使用稽核來監視所有的資料庫活動，並減輕這種情況。
  

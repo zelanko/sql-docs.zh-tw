@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2881c4ee5145506158585611f61219983b764936
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2424982eebaed7a4d9b3d73ea7d4475b7ec758c2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68066107"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892574"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   修改組件的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目錄屬性來改變組件。 ALTER ASSEMBLY 會將其更新為保留其實作的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 模組最新複本，且新增或移除其相關檔案。 組件是利用 [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) 加以建立的。  
 
@@ -42,7 +42,7 @@ ms.locfileid: "68066107"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 ALTER ASSEMBLY assembly_name  
     [ FROM <client_assembly_specifier> | <assembly_bits> ]  
     [ WITH <assembly_option> [ ,...n ] ]  
@@ -74,7 +74,7 @@ ALTER ASSEMBLY assembly_name
  FROM \<client_assembly_specifier> | \<assembly_bits>  
  將組件更新為保留其實作的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 模組最新備份。 只有在沒有與指定組件相關的檔案時，才能使用這個選項。  
   
- \<client_assembly_specifier> 會指定正在重新整理之組件所在的網路或本機位置。 網路位置包含電腦名稱、共用名稱，以及該共用內的路徑。 *manifest_file_name* 指定包含組件資訊清單的檔案名稱。  
+ \<client_assembly_specifier> 會指定正在重新整理的組件所在網路或本機位置。 網路位置包含電腦名稱、共用名稱，以及該共用內的路徑。 *manifest_file_name* 指定包含組件資訊清單的檔案名稱。  
 
 > [!IMPORTANT]
 > Azure SQL Database 不支援參考檔案。

@@ -1,7 +1,6 @@
 ---
 title: 大量存取 Azure Blob 儲存體中的資料
-description: 這些 Transact-SQL 範例會說明如何使用 BULK INSERT 與 OPENROWSET 陳述式，以直接存取 Azure Blob 儲存體帳戶中的檔案。
-ms.description: Transact-SQL examples that use BULK INSERT and OPENROWSET to access data in an Azure Blob storage account.
+description: 使用 BULK INSERT 和 OPENROWSET 來存取 Azure Blob 儲存體帳戶中資料的 Transact-SQL 範例。
 ms.date: 10/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,16 +17,16 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4ed55e856a6a23da04b6f3a2812699c2b457a220
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7d05c7c6b049958f2f6280f3ee8ed2ae56ce325d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980455"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650851"
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>大量存取 Azure Blob 儲存體中資料的範例
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
 `BULK INSERT` 和 `OPENROWSET` 陳述式可以直接存取 Azure Blob 儲存體中的檔案。 下列範例會使用 CSV (逗號分隔值) 檔案 (名為 `inv-2017-01-19.csv`)、容器 (名為 `Week3`) 中所儲存或儲存體帳戶 (名為 `newinvoices`) 中所儲存的資料。 您可以使用格式檔案的路徑，但該檔案未包括在這些範例中。
 
@@ -41,7 +40,7 @@ ms.locfileid: "80980455"
 下列所有範例都需要參考一個共用存取簽章的資料庫範圍認證。
 
 > [!IMPORTANT]
-> 必須透過使用 `SHARED ACCESS SIGNATURE` 識別的資料庫範圍認證建立外部資料來源。 若要建立儲存體帳戶的共用存取簽章，請參閱 Azure 入口網站之儲存體帳戶屬性頁面上的 [共用存取簽章]  屬性。 如需共用存取簽章的詳細資訊，請參閱[使用共用存取簽章 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。 如需認證的詳細資訊，請參閱 [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。
+> 必須透過使用 `SHARED ACCESS SIGNATURE` 識別的資料庫範圍認證建立外部資料來源。 若要建立儲存體帳戶的共用存取簽章，請參閱 Azure 入口網站之儲存體帳戶屬性頁面上的 [共用存取簽章] 屬性。 如需共用存取簽章的詳細資訊，請參閱[使用共用存取簽章 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。 如需認證的詳細資訊，請參閱 [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。
 
 使用必須為 `SHARED ACCESS SIGNATURE` 的 `IDENTITY` 建立資料庫範圍認證。 使用針對 Blob 儲存體帳戶所產生的 SAS 權杖。 請確認您的 SAS 權杖沒有前置 `?`、您至少擁有應載入物件的讀取權限，以及到期期間是否有效 (所有日期都是 UTC 時間)。
 

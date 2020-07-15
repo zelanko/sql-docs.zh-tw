@@ -1,5 +1,6 @@
 ---
 title: 計劃和測試資料庫引擎升級計畫 | Microsoft Docs
+description: 本文描述開始進行 SQL Server 升級之前的規劃，包括規劃檢查清單，以及開發和測試升級計畫。
 ms.custom: ''
 ms.date: 05/18/2018
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8deba047941509d294f6eb331fa610a453a71e82
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 65614af22873f907363bd721ff5c364e9cca5ea7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529452"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900347"
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>計劃和測試資料庫引擎升級計畫
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
  若要成功執行 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 升級，不論使用何種方法，都需要適當規劃。  
   

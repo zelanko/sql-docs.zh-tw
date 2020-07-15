@@ -18,16 +18,16 @@ ms.assetid: 36cc4e2c-5a24-4975-9920-9305f12c6e7c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b78ebdd157afe35a78900e8ceb3c2bad40bb04d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5b33c0e855e093e82a121e689850bfd80e1e6aa7
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73983231"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010742"
 ---
 # <a name="deny-database-permissions-transact-sql"></a>DENY 資料庫權限 (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 拒絕 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中資料庫的權限。
 
@@ -35,7 +35,7 @@ ms.locfileid: "73983231"
 
 ## <a name="syntax"></a>語法
 
-```
+```syntaxsql
 DENY <permission> [ ,...n ]
     TO <database_principal> [ ,...n ] [ CASCADE ]
     [ AS <database_principal> ]
@@ -58,13 +58,13 @@ DENY <permission> [ ,...n ]
 
 *permission* 指定可以拒絕的資料庫權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。
 
-ALL 這個選項不會拒絕所有可能的權限。 拒絕 ALL 相當於拒絕下列權限：BACKUP DATABASE、BACKUP LOG、CREATE DATABASE、CREATE DEFAULT、CREATE FUNCTION、CREATE PROCEDURE、CREATE RULE、CREATE TABLE 和 CREATE VIEW。
+ALL 這個選項不會拒絕所有可能的權限。 拒絕 ALL 等同於拒絕下列權限：BACKUP DATABASE、BACKUP LOG、CREATE DATABASE、CREATE DEFAULT、CREATE FUNCTION、CREATE PROCEDURE、CREATE RULE、CREATE TABLE 和 CREATE VIEW。
 
 PRIVILEGES 為符合 ISO 而包含這個項目。 不會變更 ALL 的行為。
 
 CASCADE 指出也會對指定主體對其授與權限的主體拒絕權限。
 
-AS \<database_principal> 指定主體，以讓執行這項查詢的主體可從該主體衍生拒絕權限的權力。
+AS \<database_principal> 指定主體，執行這項查詢的主體會從這個主體衍生權限來拒絕權限。
 
 *Database_user* 指定資料庫使用者。
 

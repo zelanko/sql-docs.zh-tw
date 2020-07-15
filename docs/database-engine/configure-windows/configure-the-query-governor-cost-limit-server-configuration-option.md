@@ -1,5 +1,6 @@
 ---
 title: 設定 query governor cost limit 伺服器組態選項 | Microsoft Docs
+description: 了解查詢管理員成本限制選項。 了解如何使用此選項來限制僅執行 SQL Server 預估會在特定時間內完成的查詢。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - query governor cost limit option [SQL Server]
 - time [SQL Server], query run time
 ms.assetid: e7b8f084-1052-4133-959b-cebf4add790f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 133f98c2a050c6c271f4bfdcb7565d9ccaa33354
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 016ca109ae4ad609637a1919c29515dea2548083
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012408"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785877"
 ---
 # <a name="configure-the-query-governor-cost-limit-server-configuration-option"></a>設定 query governor cost limit 伺服器組態選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] query governor cost limit [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 查詢管理員成本限制選項指定查詢可執行的時間週期上限。 查詢成本代表在特定的硬體組態上，預估完成查詢所需的時間 (以秒為單位)。 此選項的預設值為 0，這會將查詢管理員設定為關閉。 這允許所有查詢在沒有任何時間限制下執行。 如果指定非零的非負值，查詢若超過該值的估計成本，查詢管理員就不允許執行此查詢。  
   
@@ -36,7 +37,7 @@ ms.locfileid: "68012408"
   
 -   **使用下列方法設定 query governor cost limit 選項：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -59,7 +60,7 @@ ms.locfileid: "68012408"
   
 #### <a name="to-configure-the-query-governor-cost-limit-option"></a>設定 query governor cost limit 選項  
   
-1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]  。  
+1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
   
 2.  按一下 **[連接]** 頁面。  
   

@@ -1,6 +1,6 @@
 ---
 title: 將 Azure VM 設定為可用性群組中的次要複本
-description: 使用 [新增 Azure 複本精靈] 可以協助您在混合式 IT 中建立新的 Azure VM，並且將它設定為全新或現有 AlwaysOn 可用性群組的次要複本。
+description: 使用 [新增 Azure 複本精靈] 以在混合式 IT 中建立新的 Azure VM，且將其設為全新或現有 Always On 可用性群組的次要複本。
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2eb45257f2641b1e4e9f94865784f8910ebf27fd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 93f20096c1ccce60b5ea0e2299725a4037f71ae3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822667"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894186"
 ---
 # <a name="configure-azure-vm-as-a-secondary-replica-in-an-availability-group"></a>將 Azure VM 設定為可用性群組中的次要複本
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   使用 [新增 Azure 複本精靈] 可以協助您在混合式 IT 中建立新的 Azure VM，並且將它設定為全新或現有 AlwaysOn 可用性群組的次要複本。  
   
 
@@ -55,15 +55,15 @@ ms.locfileid: "74822667"
   
  一旦您啟動 [加入 Azure 複本精靈] 之後，請遵循下列步驟進行：  
   
-1.  首先，下載您的 Azure 訂用帳戶的管理憑證。 按一下 [下載]  開啟登入頁面。  
+1.  首先，下載您的 Azure 訂用帳戶的管理憑證。 按一下 [下載] 開啟登入頁面。  
   
 2.  使用您的 Microsoft 帳戶或您的組織帳戶登入 Microsoft Azure。 您的 Microsoft 或組織帳戶是電子郵件地址格式，例如 HYPERLINK "mailto:patc@contoso.com" patc@contoso.com。 如需 Azure 認證的詳細資訊，請參閱 [Microsoft Account for Organizations FAQ](https://technet.microsoft.com/jj592903) (組織的 Microsoft 帳戶常見問題集) 和 [疑難排解使用您的組織帳戶登入的問題](https://support.microsoft.com/kb/2756852)。  
   
-3.  接著，按一下 **[連接]** ，連接到您的訂用帳戶。 一旦您連線之後，下拉式清單就會填入您的 Azure 參數，例如 [虛擬網路]  和 [虛擬網路子網路]  。  
+3.  接著，按一下 **[連接]** ，連接到您的訂用帳戶。 一旦您連線之後，下拉式清單就會填入您的 Azure 參數，例如 [虛擬網路] 和 [虛擬網路子網路]。  
   
 4.  針對將裝載新次要複本的 Azure VM 指定設定：  
   
-     影像  
+     映像  
      要用於 Azure VM 的 SQL Server 映像名稱  
   
      VM 大小  

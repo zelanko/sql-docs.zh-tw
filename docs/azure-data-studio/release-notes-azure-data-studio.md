@@ -1,24 +1,68 @@
 ---
 title: 版本資訊
 description: Azure Data Studio 版本資訊
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.reviewer: maghan, sstein
+ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 04/30/2020
-ms.openlocfilehash: d7c54fbbb959085206cb993d4b9e9087ac8c3a50
-ms.sourcegitcommit: d3e7c06fe989135f70d97f5ec6613fad4d62b145
+ms.date: 06/15/2020
+ms.openlocfilehash: 09b894fb6604c912bafaa0fc2856134fe970a721
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619671"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758410"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的版本資訊
 
 **[下載並安裝最新版本！](download.md)**
+
+## <a name="june-2020"></a>2020 年 6 月
+
+2020 年 6 月 15 日 &nbsp; / &nbsp; 版本：1.19.0
+
+&nbsp;
+
+| 變更 | 詳細資料 |
+| :----- | :------ |
+| 已將 Azure Data Studio 新增至 Azure 入口網站整合 | 使用者現在可直接從 Azure SQL DB 連線、Azure Postgres 等啟動 Azure 入口網站。 |
+| 新增 Notebook 功能 | &bull; &nbsp; 新增筆記本工具列 <br/> &bull; &nbsp; 新增編輯儲存格工具列 <br/> &bull; &nbsp; Python 相依性精靈 UX 更新 <br/> &bull; &nbsp; 筆記本之間改善的間距 |
+| 宣告 SQL 評定 API 延伸模組 | 此延伸模組會在 ADS 中新增 SQL Server 最佳做法評定。 其會公開先前僅適用於 PowerShell SqlServer 課程模組與 SMO 的 SQL 評定 API，以供評估 SQL Server 執行個體，以及透過 SQL Server 小組接收建議。 了解有關 SQL 評定 API，以及其在[本文](https://docs.microsoft.com/sql/sql-assessment-api/sql-assessment-api-overview?view=sql-server-ver15)中的功能。 |
+| [機器學習延伸模組的改善](https://go.microsoft.com/fwlink/?linkid=2129918) | 現在支援 Azure SQL 受控執行個體。 |
+| 資料虛擬化延伸模組的改善 | 現在支援 MongoDB 與 Teradata |
+| Postgres 延伸模組 Bug 修正 | 固定的 Azure MFA |
+| 已解決的 Bug 和問題 | 如需完整的修正清單，請參閱 [GitHub 上的 Bug 和問題](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2020+Release%22+is%3Aclosed) \(英文\)。 |
+| &nbsp; | &nbsp; |
+
+## <a name="may-2020-hotfix"></a>2020 年 5月 (Hotfix)
+
+2020 年 5 月 27 日 &nbsp; / &nbsp; 版本：1.18.1
+
+&nbsp;
+
+| 變更 | 詳細資料 |
+| :----- | :------ |
+| 修正 Bug #10538 「執行目前的查詢」按鍵綁定的指令不再如預期般運作 | [#10538](https://github.com/microsoft/azuredatastudio/issues/10538)  |
+| 修正 Bug #10537 無法在 v 1.18 上開啟新的或現有 SQL 檔案 | [#10537](https://github.com/microsoft/azuredatastudio/issues/10537)  |
+| &nbsp; | &nbsp; |
+
+## <a name="may-2020"></a>2020 年 5 月
+
+2020 年 5 月 20 日 &nbsp; / &nbsp; 版本：1.18.0
+
+&nbsp;
+
+| 變更 | 詳細資料 |
+| :----- | :------ |
+| 宣告 Redgate SQL Prompt 延伸模組 | 此延伸模組可供直接在 Azure Data Studio 內管理格式化樣式，無須離開 IDE 即可建立及編輯樣式。 |
+| 宣告 Machine Learning 延伸模組 | 此延伸模組可供： <br/> &bull; &nbsp; 使用 SQL Server 機器學習服務搭配 Azure Data Studio 來管理 Python 與 R 套件 。<br/> &bull; &nbsp; 使用 ONNX 模型，在 Azure SQL Edge 中進行預測。<br/> &bull; &nbsp; 檢視 Azure SQL Edge 資料庫中的 ONNX 模型。 <br/> &bull; &nbsp; 將 ONNX 模型從檔案或 Azure Machine Learning 匯入到 Azure SQL Edge 資料庫。 <br/> &bull; &nbsp; 建立筆記本來執行實驗。 |
+| 新增 Notebook 功能 | &bull; &nbsp; 新增了 Python 相依性精靈，讓您更輕鬆地安裝 Python 相依性 <br/> &bull; &nbsp; 新增了 Markdown 工具列的底線支援 |
+| Always Encrypted 的參數化 | 可供執行依據加密資料庫資料行來插入、更新或篩選的查詢。|
+| 已解決的 Bug 和問題 | 如需完整的修正清單，請參閱 [GitHub 上的 Bug 和問題](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22May+2020+Release%22+is%3Aclosed) \(英文\)。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="april-2020-hotfix"></a>2020 年 4 月 (Hotfix)
 
@@ -191,7 +235,7 @@ ms.locfileid: "82619671"
 ### <a name="known-issues"></a>已知問題
 
 - Notebooks
-    - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) 不正確地序列化筆記本的罕見案例
+  - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) 不正確地序列化筆記本的罕見案例
 
 ## <a name="september-2019"></a>2019 年 9 月
 
@@ -202,7 +246,7 @@ ms.locfileid: "82619671"
 | 變更 | 詳細資料 |
 | :----- | :------ |
 | 啟用 SQLCMD 模式 | 查詢編輯器現在支援切換 SQLCMD 模式，以將查詢撰寫和編輯為 SQLCMD 指令碼 |
-| 社群延伸模組：查詢編輯器提升 | 查詢編輯器提升是一種開放原始碼延伸模組，著重於為經常撰寫查詢的使用者增強 Azure Data Studio 查詢編輯器。 &bull; &nbsp; 將目前的查詢儲存為程式碼片段 <br/>&bull; &nbsp; 使用 Ctrl+U 切換資料庫 <br/> &bull; &nbsp; 從範本新增查詢 <br/> &bull; &nbsp; 在[這裡](https://github.com/dzsquared/query-editor-boost) \(英文\) 檢視完整的改進清單 |
+| 社群延伸模組：查詢編輯器提升 | Query Editor Boost 是開放原始碼延伸模組，著重於為經常撰寫查詢的使用者增強 Azure Data Studio 查詢編輯器。 &bull; &nbsp; 將目前的查詢儲存為程式碼片段 <br/>&bull; &nbsp; 使用 Ctrl+U 切換資料庫 <br/> &bull; &nbsp; 從範本新增查詢 <br/> &bull; &nbsp; 在[這裡](https://github.com/dzsquared/query-editor-boost) \(英文\) 檢視完整的改進清單 |
 | Notebook 改進 | &bull; &nbsp; 支援較大筆記本檔案的效能改善 <br/> &bull; &nbsp; 在[這裡](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22September+2019+Release%22+label%3A%22Area%3A+Notebooks%22+is%3Aclosed) \(英文\) 檢視完整的改進清單 |
 | Visual Studio Code 8 月版本合併 1.38 | 您可以在[此處](https://code.visualstudio.com/updates/v1_38) \(英文\) 找到最新的改進。 |
 | 已解決的 Bug 和問題 | 如需完整的修正清單，請參閱 [GitHub 上的 Bug 和問題](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1) \(英文\)。 |
@@ -211,8 +255,7 @@ ms.locfileid: "82619671"
 ### <a name="known-issues"></a>已知問題
 
 - Notebooks
-    - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) 不正確地序列化筆記本的罕見案例
-
+  - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) 不正確地序列化筆記本的罕見案例
 
 ## <a name="august-2019"></a>2019 年 8 月
 
@@ -224,7 +267,7 @@ ms.locfileid: "82619671"
 | :----- | :------ |
 | SandDance 1.3.1 擴充功能的版本 | &bull; &nbsp; 智慧圖表偵測 <br/>&bull; &nbsp; 3D 視覺效果 <br/> &bull; &nbsp; 資料篩選 |
 | Notebook 改進 | &bull; &nbsp; 以內嵌方式新增程式碼或文字資料格 <br/>&bull; &nbsp; 已新增以滑鼠右鍵按一下 SQL 結果方格以將結果儲存為 CSV、JSON 等的功能 <br/> &bull; &nbsp; 已改善筆記本載入效能，加快載入 JSON 的速度 <br/> &bull; &nbsp; 在[這裡](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+label%3A%22Area%3A+Notebooks%22+milestone%3A%22August+2019+Release%22+is%3Aclosed) \(英文\) 檢視完整的改進清單 |
-| SQL Server 2019 支援 |  此版本包含對額外 SQL Server 2019 巨量資料叢集功能的支援，包括： <br/> &bull; &nbsp; 已縮短在物件對應頁面上載入資料表和資料行資訊所花費的時間。 <br/> &bull; &nbsp; 已修正在連線詳細資料頁面上載入現有資料庫範圍認證的錯誤 (Bug)。 <br/> &bull; &nbsp;已增加用於 PROSE 剖析的預設樣本大小。 | 
+| SQL Server 2019 支援 |  此版本包含對額外 SQL Server 2019 巨量資料叢集功能的支援，包括： <br/> &bull; &nbsp; 減少了在物件對應頁面上載入資料表與資料行資訊所花費的時間。 <br/> &bull; &nbsp; 已修正在連線詳細資料頁面上載入現有資料庫範圍認證的錯誤 (Bug)。 <br/> &bull; &nbsp;已增加用於 PROSE 剖析的預設樣本大小。 | 
 | Dacpac 延伸模組現在支援 AAD | 
 | Visual Studio Code 7 月版本合併 1.37 | 您可以在[此處](https://code.visualstudio.com/updates/v1_37) \(英文\) 找到最新的改進。 |
 | 已解決的 Bug 和問題 | 如需完整的修正清單，請參閱 [GitHub 上的 Bug 和問題](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1) \(英文\)。 |
@@ -301,9 +344,9 @@ ms.locfileid: "82619671"
 
 | 變更 | 詳細資料 |
 | :----- | :------ |
-| 已將 [伺服器]  索引標籤重新命名為 [連線]  | |
+| 已將 [伺服器] 索引標籤重新命名為 [連線] | |
 | 已移動 Azure 資源總管成為 [連線] 底下的 Azure Viewlet | 使用者現在可以透過 [連線] 檢視中的 Azure Viewlet 來檢視其 Azure SQL 執行個體，並展開以檢視每個伺服器或資料庫底下的物件。|
-| SQL Notebook 改進 | &bull; &nbsp; 已新增工具列上的按鈕，以清除所有資料格的輸出 <br/>&bull; &nbsp; 已新增工具列上的按鈕，以執行所有資料格 <br/>&bull; &nbsp; 已修正 [附加至] 下拉式清單中的連線名稱，而不是伺服器名稱 (如果已設定) <br/>&bull; &nbsp; 修正在使用相對影像路徑時不會呈現 Markdown 中的影像 <br/>&bull; &nbsp; 已藉由新增按兩下自動調整大小資料行大小和改善的滑鼠滾輪支援來改善筆記本方格中功能 <br/>&bull; &nbsp; 改進在透過筆記本安裝 Python 時的錯誤處理和 Python 安裝復原 <br/>&bull; &nbsp; 選取筆記本資料格時「全選」功能的改善 <br/>&bull; &nbsp; 改進筆記本連線，以防止關閉筆記本並影響物件總管連線 <br/>&bull; &nbsp; 已改進筆記本體驗，以在筆記本中斷連線並且需要連線來執行資料格時向使用者顯示訊息<br/>&bull;&nbsp; 已改進在重新啟動 ADS 時，於 ADS 中將未儲存筆記本解除凍結的支援 |
+| SQL Notebook 改進 | &bull; &nbsp; 已新增工具列上的按鈕，以清除所有資料格的輸出 <br/>&bull; &nbsp; 已新增工具列上的按鈕，以執行所有資料格 <br/>&bull; &nbsp; 已修正 [附加至] 下拉式清單中的連線名稱，而不是伺服器名稱 (如果已設定) <br/>&bull; &nbsp; 修正在使用相對影像路徑時不會呈現 Markdown 中的影像 <br/>&bull; &nbsp; 透過新增按兩下自動調整資料行大小與改善的滑鼠滾輪支援，以改善筆記本方格中的功能 <br/>&bull; &nbsp; 改進在透過筆記本安裝 Python 時的錯誤處理和 Python 安裝復原 <br/>&bull; &nbsp; 選取筆記本資料格時「全選」功能的改善 <br/>&bull; &nbsp; 改進筆記本連線，以防止關閉筆記本並影響物件總管連線 <br/>&bull; &nbsp; 已改進筆記本體驗，以在筆記本中斷連線並且需要連線來執行資料格時向使用者顯示訊息<br/>&bull;&nbsp; 已改進在重新啟動 ADS 時，於 ADS 中將未儲存筆記本解除凍結的支援 |
 | 已解決的 Bug 和問題。 | 請參閱 [GitHub 上的 Bug 和問題](https://github.com/Microsoft/azuredatastudio/milestone/26?closed=1) \(英文\)。 |
 | &nbsp; | &nbsp; |
 
@@ -374,7 +417,7 @@ ms.locfileid: "82619671"
 
 | 變更 | 詳細資料 |
 | :----- | :------ |
-| 已修正數個在 1.3.8 中發現的問題。 | 請參閱 [GitHub 上的 1 月 Hotfix 版本](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1) \(英文\)。<br/><br/>如需詳細資訊，請參閱：<br/>&bull; &nbsp; [GitHub 上的變更記錄檔](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md) \(英文\)。<br/>&bull; &nbsp; [GitHub 上的版本](https://github.com/Microsoft/azuredatastudio/releases) \(英文\)。 |
+| 已修正數個在 1.3.8 中發現的問題。 | 請參閱 [GitHub 上的 1 月 Hotfix 版本](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1) \(英文\)。<br/><br/>如需詳細資訊，請參閱：<br/>&bull; &nbsp; [GitHub 上的變更記錄檔](https://github.com/Microsoft/azuredatastudio/blob/main/CHANGELOG.md) \(英文\)。<br/>&bull; &nbsp; [GitHub 上的版本](https://github.com/Microsoft/azuredatastudio/releases) \(英文\)。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="january-2019"></a>2019 年 1 月
@@ -445,7 +488,7 @@ ms.locfileid: "82619671"
 - 修正[問題 #2851](https://github.com/Microsoft/azuredatastudio/issues/2851) \(英文\)：時間序列圖未正確呈現
 - 修正[問題 #2996](https://github.com/Microsoft/azuredatastudio/issues/2996) \(英文\)：暫存資料表因為突然發生的工作階段變更而遺失
 
-如需詳細資訊，請參閱[變更記錄檔](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md) \(英文\) 和[版本](https://github.com/Microsoft/azuredatastudio/releases) \(英文\)。
+如需詳細資訊，請參閱[變更記錄檔](https://github.com/Microsoft/azuredatastudio/blob/main/CHANGELOG.md) \(英文\) 和[版本](https://github.com/Microsoft/azuredatastudio/releases) \(英文\)。
 
 ## <a name="september-2018-ga-release"></a>2018 年 9 月 (GA 版本)
 
@@ -470,25 +513,25 @@ Azure Data Studio 的正式發行版本 (先前稱為 SQL Operations Studio)。
 | 變更 | 詳細資料 |
 | :----- | :------ |
 | 支援 SQL Server 2019 預覽功能，包括[巨量資料叢集](../big-data-cluster/big-data-cluster-overview.md)支援。 | 連線到 SQL Server 2019 Preview 隨附的 HDFS/Spark 閘道。<br/><br/>瀏覽 HDFS、上傳檔案、儲存檔案，以及啟動實用的動作，例如，在 Notebook 中分析 CSV 檔案。<br/><br/>從儀表板提交 Spark 作業，或以滑鼠右鍵按一下 [物件總管] 中的 HDFS/Spark 連線。 |
-| Azure Data Studio Notebooks。 | 使用整合式 Notebook 檢視器建立或開啟 Notebook。 在此版本中，Notebook 檢視器僅支援連線到本機核心和 SQL Server 2019 巨量資料叢集。<br/><br/>在您的 Notebook 中使用 PROSE 程式碼加速器程式庫來了解檔案格式和資料類型，以便快速進行資料準備。 |
-| Azure 資源總管。 | [Azure 資源總管] 檢視可讓您瀏覽 Azure 帳戶的資料相關端點，並在 [物件總管] 中建立與它們的連線。 在此版本中，支援 Azure SQL Database 和伺服器。 |
+| Azure Data Studio Notebooks。 | 使用整合式 Notebook 檢視器建立或開啟 Notebook。 在此版本中，Notebook 檢視器僅支援連線到本機核心與 SQL Server 2019 巨量資料叢集。<br/><br/>在您的 Notebook 中使用 PROSE 程式碼加速器程式庫來了解檔案格式和資料類型，以便快速進行資料準備。 |
+| Azure 資源總管。 | [Azure 資源總管] 檢視可讓您瀏覽 Azure 帳戶的資料相關端點，並在 [物件總管] 中建立與它們的連線。 此版本支援 Azure SQL Database 與伺服器。 |
 | SQL Server PolyBase 的建立外部資料表精靈。 | 使用簡單易用的精靈，來建立外部資料表及其支援的中繼資料結構。 在此版本中，支援遠端 SQL Server 和 Oracle 伺服器。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="bug-fixes-september-2018"></a>Bug 修正，2018 年 9 月
 
-- 修正[問題 #2647](https://github.com/Microsoft/azuredatastudio/issues/143) \(英文\)：圖表向後回溯了一大步。
+- 修正[問題 #2647](https://github.com/Microsoft/azuredatastudio/issues/143) \(英文\)：圖表向後退了一大步。
 - 修正[問題 #2648](https://github.com/Microsoft/azuredatastudio/issues/143) \(英文\)：SELECT 會傳回整個資料行的 JSON 超連結。
 
-如需詳細資訊，請參閱[變更記錄檔](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md) \(英文\) 和[版本](https://github.com/Microsoft/azuredatastudio/releases) \(英文\)。
+如需詳細資訊，請參閱[變更記錄檔](https://github.com/Microsoft/azuredatastudio/blob/main/CHANGELOG.md) \(英文\) 和[版本](https://github.com/Microsoft/azuredatastudio/releases) \(英文\)。
 
 ## <a name="august-2018"></a>2018 年 8 月
 
 2018 年 8 月 30 日 &nbsp; / &nbsp; 版本：0.32.8 &nbsp; / &nbsp; 公開預覽
 
-「8 月公開預覽」  著重於 Bug 修正、產品穩定性，以及填補現有案例中的差距。
+「8 月公開預覽」著重於 Bug 修正、產品穩定性，以及填補現有案例中的差距。
 
-0\.32.8 包含對於數個在 0.32.7 ([#1971](https://github.com/Microsoft/azuredatastudio/issues/1971) \(英文\)、[#2372](https://github.com/Microsoft/azuredatastudio/issues/2372) \(英文\)) 中找到之迴歸的修正 
+0\.32.8 包含對於數個在 0.32.7 ([#1971](https://github.com/Microsoft/azuredatastudio/issues/1971) \(英文\)、[#2372](https://github.com/Microsoft/azuredatastudio/issues/2372) \(英文\)) 中找到之迴歸的修正
 
 &nbsp;
 
@@ -523,7 +566,7 @@ Azure Data Studio 的正式發行版本 (先前稱為 SQL Operations Studio)。
 - 修正[問題 #1782](https://github.com/Microsoft/azuredatastudio/issues/1782) \(英文\)：編輯資料：資料格不會在按 Escape 鍵時還原為原始值。
 - 修正[問題 #1836](https://github.com/Microsoft/azuredatastudio/issues/1836) \(英文\)：.sql 檔案不會與 SQL Operations Studio 產生關聯。
 - 修正[問題 #1850](https://github.com/Microsoft/azuredatastudio/issues/1850) \(英文\)：輸入 N'' 會自動校正為 N'''。
-- 修正[問題 #1985](https://github.com/Microsoft/azuredatastudio/issues/1985) \(英文\)：從查詢結果方格中進行的複製少了 1 欄。
+- 修正[問題 #1985](https://github.com/Microsoft/azuredatastudio/issues/1985) \(英文\)：從查詢結果方格中進行的複製少了 1 個資料行。
 - 修正[問題 #1998](https://github.com/Microsoft/azuredatastudio/pull/1998) \(英文\)：將 VS Code 版本新增至 [關於] 對話方塊。
 - 修正[問題 #2042](https://github.com/Microsoft/azuredatastudio/pull/2042) \(英文\)：代理人員：已啟用按鈕，可從 sql 檔案匯入查詢。
 - 修正[問題 #2091](https://github.com/Microsoft/azuredatastudio/issues/2091) \(英文\)：無法使用 Ctrl+C 快速鍵來從結果窗格進行複製。
@@ -541,7 +584,7 @@ Azure Data Studio 的正式發行版本 (先前稱為 SQL Operations Studio)。
 
 2018 年 7 月 19 日 &nbsp; / &nbsp; 版本：0.31.4 &nbsp; / &nbsp; 公開預覽
 
-「7月公開預覽」  著重於下列項目：
+「7月公開預覽」著重於下列項目：
 
 - SQL Server Agent 設定案例的初始版本。
 - SQL Server Profiler 工作階段和檢視範本增強功能。
@@ -593,7 +636,7 @@ Azure Data Studio 的正式發行版本 (先前稱為 SQL Operations Studio)。
 
 ### <a name="github-issues-fixes-june-2018"></a>GitHub 問題修正，2018 年 6 月
 
-- 功能要求 ([問題 1204](https://github.com/Microsoft/azuredatastudio/issues/1204) \(英文\))：請讓結果方格自動調整資料行寬度以符合資料，並在重新執行相同查詢時，記住手動變更。
+- 功能要求 ([問題 1204](https://github.com/Microsoft/azuredatastudio/issues/1204) \(英文\))：讓結果方格自動調整資料行寬度以符合資料，並在重新執行相同查詢時記住手動變更。
 - 修正[問題 1398](https://github.com/Microsoft/azuredatastudio/issues/1398) \(英文\)：當連結的帳戶是空的時，應該顯示 [新增訊息] 和 [新增帳戶] 按鈕。
 - 修正[問題 1399](https://github.com/Microsoft/azuredatastudio/issues/1399) \(英文\)：摺疊檢視時，[連結帳戶] 索引標籤會中斷。
 - 修正[問題 1374](https://github.com/Microsoft/azuredatastudio/issues/1374) \(英文\)：從磁碟開啟 .sql 檔案時，SQL Tools 服務損毀。
@@ -606,7 +649,7 @@ Azure Data Studio 的正式發行版本 (先前稱為 SQL Operations Studio)。
 
 2018 年 5 月 7 日 &nbsp; / &nbsp; 版本：0.29.3 &nbsp; / &nbsp; 公開預覽
 
-「5 月公開預覽」  著重於穩定性和 Bug 修正。
+「5 月公開預覽」著重於穩定性和 Bug 修正。
 
 &nbsp;
 
@@ -634,7 +677,7 @@ Azure Data Studio 的正式發行版本 (先前稱為 SQL Operations Studio)。
 
 2018 年 4 月 25 日 &nbsp; / &nbsp; 版本：0.28.6 &nbsp; / &nbsp; 公開預覽
 
-「4 月公開預覽」  包含 Bug 修正和改進。
+「4 月公開預覽」包含 Bug 修正和改進。
 
 &nbsp;
 
@@ -690,13 +733,13 @@ Azure Data Studio 的正式發行版本 (先前稱為 SQL Operations Studio)。
 
 如需其他詳細資料，請參閱 [Visual Studio Code 2 月版本資訊](https://code.visualstudio.com/updates/v1_21) 及 [Visual Studio Code 1 月版本資訊](https://code.visualstudio.com/updates/v1_20)。
 
-如需詳細資訊，請參閱[變更記錄檔](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md) \(英文\)。
+如需詳細資訊，請參閱[變更記錄檔](https://github.com/Microsoft/azuredatastudio/blob/main/CHANGELOG.md) \(英文\)。
 
 ## <a name="march-2018"></a>2018 年 3 月
 
 2018 年 3 月 28 日 &nbsp; / &nbsp; 版本：0.27.3 &nbsp; / &nbsp; 公開預覽
 
-「3月公開預覽」  會繼續處理最重要的 GitHub 問題，並著重於改進我們的擴充性案例。 特別是啟用延伸模組管理員、改進儀表板管理，以及提供 SQL Agent 和深入解析延伸模組。 此版本包括下列增強功能：
+「3月公開預覽」會繼續處理最重要的 GitHub 問題，並著重於改進我們的擴充性案例。 特別是啟用延伸模組管理員、改進儀表板管理，以及提供 SQL Agent 和深入解析延伸模組。 此版本包括下列增強功能：
 
 &nbsp;
 
@@ -711,14 +754,14 @@ Azure Data Studio 的正式發行版本 (先前稱為 SQL Operations Studio)。
 
 2018 年 2 月 15 日 &nbsp; / &nbsp; 版本：0.26.7 &nbsp; / &nbsp; 公開預覽
 
-「2 月公開預覽」  包含一些功能建議和高優先順序的 Bug 修正。 此版本包括下列增強功能：
+「2 月公開預覽」包含一些功能建議和高優先順序的 Bug 修正。 此版本包括下列增強功能：
 
 &nbsp;
 
 | 變更 | 詳細資料 |
 | :----- | :------ |
 | 引進自動更新安裝，這會在有新版本可供下載時提供通知。 | &nbsp; |
-| 連線對話方塊的 [資料庫]  欄位現在是動態填入的下拉式清單，其中將包含從指定伺服器填入的資料庫清單。 | &nbsp; |
+| 連線對話方塊的 [資料庫] 欄位現在是動態填入的下拉式清單，其中將包含從指定伺服器填入的資料庫清單。 | &nbsp; |
 | 引進連線擴充性 API。 | &nbsp; |
 | VS Code 編輯器 1.19 整合。 | &nbsp; |
 | 更新 JustinPealing/html-query-plan 元件，以取得數個查詢計劃檢視器改善。 | &nbsp; |
@@ -730,7 +773,7 @@ Azure Data Studio 的正式發行版本 (先前稱為 SQL Operations Studio)。
 - 修正[問題 22](https://github.com/Microsoft/azuredatastudio/issues/22) \(英文\)：「伺服器名稱」和「資料庫名稱」：這些可以是下拉式清單而不是文字方塊嗎？
 - 修正[問題 549](https://github.com/Microsoft/azuredatastudio/issues/549) \(英文\)：無訊息/完全無訊息安裝導致應用程式在安裝後開啟。
 - 修正[問題 481](https://github.com/Microsoft/azuredatastudio/issues/481) \(英文\)：新增 [檢查更新] 選項。
-- SQL 編輯器顏色標示和自動完成修正：
+- SQL 編輯器顏色標示與自動完成修正：
   - 修正[問題 584](https://github.com/Microsoft/azuredatastudio/issues/584) \(英文\)：IntelliSense 未反白顯示關鍵字 "FULL"。
   - 修正[問題 345](https://github.com/Microsoft/azuredatastudio/issues/345) \(英文\)：在編輯器中為 SQL 函數添加色彩。
   - 修正[問題 300](https://github.com/Microsoft/azuredatastudio/issues/300) \(英文\)：[#tempData] 最新的 "]" 將顯示綠色。
@@ -741,17 +784,17 @@ Azure Data Studio 的正式發行版本 (先前稱為 SQL Operations Studio)。
 
 2018 年 1 月 17 日 &nbsp; / &nbsp; 版本：0.25.4 &nbsp; / &nbsp; 公開預覽
 
-「1 月公開預覽」  包含一些功能建議和高優先順序的 Bug 修正。 此版本包括下列增強功能：
+「1 月公開預覽」包含一些功能建議和高優先順序的 Bug 修正。 此版本包括下列增強功能：
 
 &nbsp;
 
 | 變更 | 詳細資料 |
 | :----- | :------ |
 | 連線對話方塊中提供已儲存的伺服器連線。 | &nbsp; |
-| 啟用 Hot Exit。 Hot Exit 預設會關閉，若要啟用，請參閱 [Hot Exit 設定](settings.md#hot-exit)。 | &nbsp; |
-| 以伺服器群組為依據的索引標籤色彩設定。 預設會關閉索引標籤色彩設定，若要啟用，請參閱[索引標籤色彩設定](settings.md#tab-color)。 | &nbsp; |
-| 將連線對話方塊中的「伺服器名稱」  變更為「伺服器」  。 | &nbsp; |
-| 修正已中斷的「執行目前查詢」  命令。 | &nbsp; |
+| 啟用 Hot Exit。 Hot Exit 預設為關閉。 若要啟用，請參閱 [Hot Exit 設定](settings.md#hot-exit)。 | &nbsp; |
+| 以伺服器群組為依據的索引標籤色彩設定。 索引標籤顏色設定預設為關閉。 若要啟用，請參閱[索引標籤色彩設定](settings.md#tab-color)。 | &nbsp; |
+| 將連線對話方塊中的「伺服器名稱」變更為「伺服器」。 | &nbsp; |
+| 修正已中斷的「執行目前查詢」命令。 | &nbsp; |
 | 修正拖放中斷指令碼處理 Bug。 | &nbsp; |
 | 修正未正確釘選的 [開始] 功能表圖示。 | &nbsp; |
 | 修正遺漏的 Azure 帳戶商標圖示。 | &nbsp; |
@@ -761,7 +804,7 @@ Azure Data Studio 的正式發行版本 (先前稱為 SQL Operations Studio)。
 
 2017 年 12 月 19 日 &nbsp; / &nbsp; 版本：0.24.1 &nbsp; / &nbsp; 公開預覽
 
-「12 月公開預覽」  包含所有功能區域中的數個 bug 修正，以及下列增強功能：
+「12 月公開預覽」包含所有功能區域中的數個 bug 修正，以及下列增強功能：
 
 &nbsp;
 
@@ -770,8 +813,8 @@ Azure Data Studio 的正式發行版本 (先前稱為 SQL Operations Studio)。
 | [建立防火牆規則] 對話方塊現在可用來協助連線到 Azure SQL Database 和 Azure SQL 資料倉儲。 | &nbsp; |
 | 已新增 Windows 安裝程式，以及 Linux DEB 和 RPM 安裝套件。 | &nbsp; |
 | 管理儀表板視覺效果版面配置編輯器。 | &nbsp; |
-| 「編寫指令碼為 Alter」  和「編寫指令碼為 Execute」  命令。 | &nbsp; |
-| 「使用實際計劃執行目前的查詢」  命令。 | &nbsp; |
+| 「編寫指令碼為 Alter」和「編寫指令碼為 Execute」 命令。 | &nbsp; |
+| 「使用實際計劃執行目前的查詢」命令。 | &nbsp; |
 | 整合 VS Code 1.18.1 編輯器平台。 | &nbsp; |
 | 啟用 VSIX 延伸模組檔案的側載。 | &nbsp; |
 | 支援 "GO N" 批次反覆項目語法。 | &nbsp; |
@@ -781,7 +824,7 @@ Azure Data Studio 的正式發行版本 (先前稱為 SQL Operations Studio)。
 
 2017 年 11 月 15 日 &nbsp; / &nbsp; 版本：0.23.6
 
-- [!INCLUDE[name-sos](../includes/name-sos-short.md)] 的初始版本。
+- Azure Data Studio 的初始版本。
 
 ## <a name="next-steps"></a>後續步驟
 
@@ -791,6 +834,6 @@ Azure Data Studio 的正式發行版本 (先前稱為 SQL Operations Studio)。
 - [連線與查詢 Azure SQL Database](quickstart-sql-database.md)
 - [連線與查詢 Azure 資料倉儲](quickstart-sql-dw.md)
 
-提供給 [!INCLUDE[name-sos](../includes/name-sos-short.md)]：
+Azure Data Studio 的參與者：
 
 - [https://github.com/Microsoft/azuredatastudio](https://github.com/Microsoft/azuredatastudio)

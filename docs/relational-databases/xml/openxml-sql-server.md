@@ -1,5 +1,6 @@
 ---
 title: OPENXML (SQL Server) | Microsoft Docs
+description: 了解 SQL Server 中的 OPENXML 陳述式，其提供 XML 文件中內部表示法的資料列集檢視。
 ms.custom: ''
 ms.date: 05/11/2020
 ms.prod: sql
@@ -23,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 770b00c8aa14a09be36dc81ac8f661ec822b243a
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 6acc03c2412ac33337236efba130344cc9f91c9e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269433"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753707"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   OPENXML 是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 關鍵字，可透過類似資料表或檢視表的記憶體中 XML 文件，提供資料列集。 OPENXML 允許對 XML 資料的存取像是關聯式資料列集一樣。 其做法是，提供 XML 文件內部表示法的資料列集檢視。 資料列集的記錄可以儲存在資料庫的資料表中。  
   
  OPENXML 可用於 SELECT 及 SELECT INTO 陳述式，其中出現的資料列集提供者、檢視或 OPENROWSET 都可做為來源。 如需 OPENXML 語法的相關資訊，請參閱 [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)。  

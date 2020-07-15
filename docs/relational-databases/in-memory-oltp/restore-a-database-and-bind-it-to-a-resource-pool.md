@@ -1,5 +1,6 @@
 ---
 title: 還原資料庫並將其繫結至資源集區 | Microsoft 文件
+description: 深入了解在 SQL Server 中還原含有記憶體最佳化資料表的資料庫。 遵循最佳做法，將資料庫繫結至具名資源集區。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 0d20a569-8a27-409c-bcab-0effefb48013
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4b19476f08398e6b704ee56125f3290d39c59954
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6a04204d4c3b5c637b4c3aac324bfe4b02265b39
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68111807"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722350"
 ---
 # <a name="restore-a-database-and-bind-it-to-a-resource-pool"></a>還原資料庫並將其繫結至資源集區
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   即使您有足夠的記憶體來還原含有記憶體最佳化資料表的資料庫，建議您還是依照最佳做法，將資料庫繫結至具名資源集區。 因為資料庫必須先存在，然後您才能將它繫結至集區，而且還原資料庫是一項具有多重步驟的程序。 本主題會逐步引導您完成該程序。  
   
 ## <a name="restoring-a-database-with-memory-optimized-tables"></a>還原含有記憶體最佳化資料表的資料庫  

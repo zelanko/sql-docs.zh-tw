@@ -1,5 +1,6 @@
 ---
 title: 升級鏡像執行個體 | Microsoft Docs
+description: 了解如何使用輪流升級來減少升級 SQL Server 鏡像執行個體時的停機。 本文包含最佳做法。
 ms.custom: ''
 ms.date: 02/01/2016
 ms.prod: sql
@@ -14,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2d1b8c8060309cfb2f5137e5b1ea4ad2eaf31d1a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eeb7b6d13a49262554dc98767b2bc8117ba007ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050627"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758217"
 ---
 # <a name="upgrading-mirrored-instances"></a>升級鏡像執行個體
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 鏡像執行個體升級至新的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本、新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Service Pack 或累積更新或新的 Windows Service Pack 或累積更新時，您可執行輪流升級以將每個鏡像資料庫的停機時間減少至僅單一手動容錯移轉 (回復為原始主要複本時則為兩次手動容錯移轉)。 輪流升級是一種多階段程序，其最簡單的形式包括升級目前在鏡像工作階段中當作鏡像伺服器的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體，然後手動容錯移轉鏡像資料庫、升級之前的主體 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體，以及繼續進行鏡像。 實際上，確切的程序會取決於作業模式以及在您要升級之 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體上執行的鏡像工作階段數目和配置而定。  
   
 > [!NOTE]  
 >  如需在移轉期間搭配使用資料庫鏡像與記錄傳送的資訊，請下載此 [Database Mirroring and Log Shipping](https://t.co/RmO6ruCT4J)(資料庫鏡像和記錄傳送) 技術白皮書。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
  在開始之前，請檢閱以下重要資訊：  
   
 -   [支援的版本與版本升級](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)：確認您可從您的 Windows 作業系統版本與 SQL Server 版本升級至 SQL Server 2016。 例如，您無法直接從 SQL Server 2005 執行個體升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  

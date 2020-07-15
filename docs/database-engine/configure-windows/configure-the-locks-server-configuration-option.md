@@ -1,5 +1,6 @@
 ---
 title: 設定 locks 伺服器組態選項 | Microsoft Docs
+description: 了解鎖定選項。 了解如何使用此選項來限制 SQL Server 資料庫引擎用於鎖定的記憶體量。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - locks option [SQL Server]
 ms.assetid: b0cf0f86-7652-4574-a9fb-908e10d03973
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2fa3483acfe078dbdd3537c0b327032765def62d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 98c7ad618b3691912b183d19a9a62dea1548071e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012598"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85697136"
 ---
 # <a name="configure-the-locks-server-configuration-option"></a>設定 locks 伺服器組態選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] locks [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **locks** 選項會設定可用鎖定的最大數目，藉此限制 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 用於鎖定的記憶體數量。 預設值為 0，允許 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 根據變更系統需求，動態配置與取消配置鎖定結構。  
   
@@ -37,7 +38,7 @@ ms.locfileid: "68012598"
   
 -   **使用下列方法設定 locks 選項：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -66,7 +67,7 @@ ms.locfileid: "68012598"
   
 #### <a name="to-configure-the-locks-option"></a>若要設定 locks 選項  
   
-1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]  。  
+1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
   
 2.  按一下 **[進階]** 節點。  
   

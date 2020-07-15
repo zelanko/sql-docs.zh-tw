@@ -1,5 +1,6 @@
 ---
 title: 原生編譯預存程序與設定選項
+description: 工作階段的 SET 選項不會影響預存程序的執行，但是某些 SET 選項會導致預存程序無法執行。
 ms.custom: seo-dt-2019
 ms.date: 10/26/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: c1869cf7-9030-4d18-85d6-0e419a4e9af7
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f626c997ac0615eefa7caede0f379c22fed25ab6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e92014f68ad400183bf2e0332a9ea7d2f1a7b2d2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412566"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722431"
 ---
 # <a name="natively-compiled-stored-procedures-and-execution-set-options"></a>原生編譯的預存程序和執行 Set 選項
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 工作階段選項在不可部分完成的區塊內是固定的，如[不可部分完成的區塊](atomic-blocks-in-native-procedures.md)中所述。 由於需要不可部分完成的區塊，因此預存程序的執行不會受到工作階段的 SET 選項所影響。 不過，某些 SET 選項 (例如 SET NOEXEC 和 SET SHOWPLAN_XML) 會造成預存程序 (包括原生編譯的預存程序) 不執行。   
   

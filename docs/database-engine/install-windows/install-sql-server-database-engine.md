@@ -1,5 +1,6 @@
 ---
 title: 安裝 SQL Server 資料庫引擎 | Microsoft Docs
+description: 了解當在 SQL Server 安裝精靈的 [要安裝的元件] 頁面上選取 [SQL Server Database Engine] 時，可安裝的功能。
 ms.custom: ''
 ms.date: 07/26/2019
 ms.prod: sql
@@ -12,16 +13,16 @@ ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e50fd6037b10008029d5373348605d11726b6199
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 79356d7b1a193b57625ceae1f545442b4ac80f23
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70148044"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883255"
 ---
 # <a name="install-sql-server-database-engine"></a>安裝 SQL Server Database Engine
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 ## <a name="overview"></a>概觀
 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件是用來儲存、處理及維護資料安全的核心服務。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 提供控制存取和快速交易處理，以符合企業中最需要的資料耗用應用程式的需求。  
@@ -39,15 +40,15 @@ ms.locfileid: "70148044"
 -   [SQL Server 複寫](../../relational-databases/replication/sql-server-replication.md) - 這是選擇性元件  
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
--   [機器學習服務](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) (R 和 Python) 和[語言擴充功能](../..//language-extensions/install/install-sql-server-language-extensions-on-windows.md) (Java) - 是選擇性元件
+-   [機器學習服務](../../machine-learning/install/sql-machine-learning-services-windows-install.md) (R 和 Python) 和[語言擴充功能](../..//language-extensions/install/install-sql-server-language-extensions-on-windows.md) (Java) - 是選擇性元件
 ::: moniker-end
 
 ::: monikerRange=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
--   [機器學習服務 (資料庫內)](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) (R 和 Python) - 是選擇性元件
+-   [機器學習服務 (資料庫內)](../../machine-learning/install/sql-machine-learning-services-windows-install.md) (R 和 Python) - 是選擇性元件
 ::: moniker-end
 
 ::: monikerRange=">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
--   [R 服務 (資料庫內)](../../advanced-analytics/install/sql-r-services-windows-install.md) - 是選擇性元件
+-   [R 服務 (資料庫內)](../../machine-learning/install/sql-r-services-windows-install.md) - 是選擇性元件
 ::: moniker-end
 
 -   全文檢索搜尋 (選擇性元件)  
@@ -55,7 +56,7 @@ ms.locfileid: "70148044"
 -   Data Quality Services (選擇性元件)  
   
     > [!NOTE]  
-    >  在這版的安裝程式中選取 [Data Quality Services]  核取方塊，並不會安裝 Data Quality Services (DQS) 伺服器。 您必須執行額外的安裝後步驟，才能安裝 DQS 伺服器。 如需詳細資訊，請參閱 [安裝 Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)。  
+    >  在這版的安裝程式中選取 [Data Quality Services] 核取方塊，並不會安裝 Data Quality Services (DQS) 伺服器。 您必須執行額外的安裝後步驟，才能安裝 DQS 伺服器。 如需詳細資訊，請參閱 [安裝 Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)。  
     
 - [外部資料的 PolyBase 查詢服務](../../relational-databases/polybase/polybase-guide.md) - 為選擇性元件。 自 SQL Server 2019 起，也提供適用於 HDFS 資料來源的 Java 連接器。
 

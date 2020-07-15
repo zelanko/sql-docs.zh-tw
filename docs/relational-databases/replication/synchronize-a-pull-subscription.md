@@ -15,22 +15,22 @@ ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 79f24f3115f61b088fce684d0b7ada0bc1d39697
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1ac16f73cc6b61aab0a47308179663b65bf50ff4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287036"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729324"
 ---
 # <a name="synchronize-a-pull-subscription"></a>同步處理提取訂閱
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]複寫代理程式 [或 Replication Management Objects (RMO) 來同步處理](../../relational-databases/replication/agents/replication-agents-overview.md)中的提取訂閱。  
   
  **本主題內容**  
   
 -   **若要同步處理提取訂閱，請使用：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Replication Agents](#ReplProg)  
   
@@ -49,9 +49,9 @@ ms.locfileid: "76287036"
   
 3.  以滑鼠右鍵按一下您要同步處理的訂閱，然後按一下 **[檢視同步處理的狀態]** 。  
   
-4.  在 [檢視同步處理的狀態 - \<訂閱者>:\<訂閱資料庫>] 對話方塊中，按一下 [啟動]。 同步處理完成後，會顯示 **[同步處理已完成]** 的訊息。  
+4.  在 [檢視同步處理的狀態 - \<Subscriber>\<SubscriptionDatabase>] 對話方塊中，按一下 [開始]。 同步處理完成後，會顯示 **[同步處理已完成]** 的訊息。  
   
-5.  按一下 [關閉]  。  
+5.  按一下 [關閉] 。  
   
 ##  <a name="replication-agents"></a><a name="ReplProg"></a> Replication Agents  
  提取訂閱可透過程式設計方式加以同步處理，以及視需要從命令提示字元叫用適當的複寫代理程式可執行檔加以同步處理。 叫用的複寫代理程式可執行檔取決於提取訂閱所屬的發行集類型。 如需詳細資訊，請參閱 [Replication Agents](../../relational-databases/replication/agents/replication-agents-overview.md)。  

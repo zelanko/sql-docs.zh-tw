@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 89f8616b13f80642a62922d9a1e1023f153b23cb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c6c5ecf91349a94acb2b18156f28056ce04da3a1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558440"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892336"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>設定 SQL Server 可用性群組的 SLES 叢集
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 本指南提供在 SUSE Linux Enterprise Server (SLES) 12 SP2 上，為 SQL Server 建立三個節點之叢集的指示。 為了提供高可用性，Linux 上的可用性群組需要三個節點，請參閱[可用性群組設定的高可用性和資料保護](sql-server-linux-availability-group-ha.md)。 叢集層會以建置於 [Pacemaker](https://clusterlabs.org/) \(英文\) 之上的 SUSE [高可用性擴充功能 (HAE)](https://www.suse.com/products/highavailability) \(英文\) 為基礎。 
 
@@ -28,6 +28,7 @@ ms.locfileid: "75558440"
 >[!NOTE]
 >目前，SQL Server 與 Linux 上的 Pacemaker 之間的整合程度，尚不如 Windows 上的 WSFC。 Linux 上的 SQL Server 服務不是叢集感知的。 Pacemaker 會控制叢集資源的所有協調流程，包括可用性群組資源。 在 Linux 上，您不應該依賴 Always On 可用性群組動態管理檢視 (DMV)，其會提供 sys.dm_hadr_cluster 之類的叢集資訊。 此外，虛擬網路名稱為 WSFC 特定，Pacemaker 中沒有相同的對應項。 您仍然可以建立接聽程式，在容錯移轉之後用它來進行透明重新連線，但您將必須在 DNS 伺服器中，使用建立虛擬 IP 資源所用的 IP，手動註冊接聽程式名稱 (如下列各節所述)。
 
+[!INCLUDE [bias-sensitive-term-t](../includes/bias-sensitive-term-t.md)]
 
 ## <a name="roadmap"></a>藍圖
 
@@ -48,7 +49,7 @@ ms.locfileid: "75558440"
 
 5. [將可用性群組新增為叢集中的資源](sql-server-linux-availability-group-cluster-sles.md#configure-the-cluster-resources-for-sql-server)。 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 若要完成下列端對端案例，您需要三部電腦來部署三個節點的叢集。 下列步驟概述如何設定這些伺服器。
 
@@ -313,8 +314,8 @@ commit
 1. 使用者會從節點 1 到節點 2，將資源移轉至可用性群組主要複本。
 2. 虛擬 IP 資源會在節點 1 上停止。
 3. 虛擬 IP 資源會在節點 2 上啟動。 此時，IP 位址會暫時指向節點 2，而節點 2 仍是容錯移轉前的次要複本。 
-4. 節點 1 上的可用性群組主要複本會降級為從屬複本。
-5. 節點 2 上的可用性群組從屬複本會升級為主要複本。 
+4. 節點 1 上的可用性群組主要複本已降級。
+5. 節點 2 上的可用性群組已升級為主要複本。 
 
 為了防止 IP 位址暫時指向含容錯移轉前之次要複本的節點，請新增排序限制式。 若要新增排序限制式，請在一個節點上執行下列命令： 
 

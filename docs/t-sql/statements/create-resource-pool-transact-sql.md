@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4d2c0278199684db2355d76c624ed6349e8aefda
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b043443f84ceb3b98484f88f4384c9e8e0a10442
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633951"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892525"
 ---
 # <a name="create-resource-pool-transact-sql"></a>CREATE RESOURCE POOL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中建立資源管理員資源集區。 資源集區代表資料庫引擎執行個體的實體資源 (記憶體、CPU 和 IO) 子集。 資源管理員可讓資料庫管理員在資源集區間散發伺服器資源，最多可達 64 個集區。 並非每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中都可使用資源管理員。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
@@ -81,9 +81,9 @@ AFFINITY {SCHEDULER = AUTO | ( \<scheduler_range_spec> ) | NUMANODE = (\<NUMA_no
   
 將資源集區附加至特定排程器。 預設值是 AUTO。  
   
-AFFINITY SCHEDULER = **(** \<排程器範圍規格> **)** 會將資源集區對應至指定識別碼所識別的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排程。 這些識別碼會對應至 [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md) 中 scheduler_id 資料行的值。 
+AFFINITY SCHEDULER = **(** \<scheduler_range_spec> **)** 會將資源集區對應至由指定識別碼識別的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排程。 這些識別碼會對應至 [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md) 中 scheduler_id 資料行的值。 
   
-當您使用 AFFINITY NUMANODE = **(** \<NUMA 節點範圍規格> **)** 時，資源集區會與對應至實體 CPU (該 CPU 對應至指定 的 NUMA 節點或節點範圍) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的排程器相似化。 您可以使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢探索實體 NUMA 組態與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排程器識別碼之間的對應。 
+當使用 AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)** 時，資源集區會與對應至實體 CPU (該 CPU 對應至指定的 NUMA 節點或節點範圍) 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排程器相似化。 您可以使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢探索實體 NUMA 組態與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排程器識別碼之間的對應。 
   
 ```sql  
 SELECT osn.memory_node_id AS [numa_node_id], sc.cpu_id, sc.scheduler_id  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 09eb8b767ce5995dede2b69efca3423a91c02b31
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1ddf8e31e274280f2fb53ee3b2a8f5c5a8e1884f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631840"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895574"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 修改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中目前伺服器的全域組態設定。  
   
@@ -153,7 +153,7 @@ OFF
 停止記錄診斷資料。  
   
 PATH = { 'os_file_path' | DEFAULT }  
-指定診斷記錄檔位置的路徑。 預設位置是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體之安裝資料夾內的 \<\MSSQL\Log>。  
+指定診斷記錄檔位置的路徑。 預設位置是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體其安裝資料夾內的 \<\MSSQL\Log>。  
   
 MAX_SIZE = { 'log_max_size' MB | DEFAULT }  
 每個診斷記錄檔可成長的大小上限 (以 MB 為單位)。 預設值是 100 MB。  
@@ -199,7 +199,7 @@ SQL Server Database Engine 資源 DLL 在將 SQL Server 執行個體視為無回
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 起)。   
   
 HADR CLUSTER CONTEXT **=** { **'** _remote\_windows\_cluster_ **'** | LOCAL }  
-將伺服器執行個體的 HADR 叢集內容切換至指定的 Windows Server 容錯移轉叢集 (WSFC)。 「HADR 叢集內容」  可決定由哪個 WSFC 管理可用性複本 (由伺服器執行個體所裝載) 的中繼資料。 僅在跨叢集移轉 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 至新 WSFC 上的 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 或更新版本執行個體時，才使用 SET HADR CLUSTER CONTEXT 選項。  
+將伺服器執行個體的 HADR 叢集內容切換至指定的 Windows Server 容錯移轉叢集 (WSFC)。 「HADR 叢集內容」可決定由哪個 WSFC 管理可用性複本 (由伺服器執行個體所裝載) 的中繼資料。 僅在跨叢集移轉 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 至新 WSFC 上的 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 或更新版本執行個體時，才使用 SET HADR CLUSTER CONTEXT 選項。  
   
 您只能將 HADR 叢集內容從本機 WSFC 切換至遠端 WSFC。 然後，您可能選擇從遠端 WSFC 切換回本機 WSFC。 HADR 叢集內容只有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體未裝載任何可用性複本時，才能切換至遠端叢集。  
   

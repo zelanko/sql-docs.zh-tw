@@ -1,5 +1,6 @@
 ---
 title: 擷取及查詢 XML 資料 | Microsoft 文件
+description: 了解查詢 XML 資料時必須指定的查詢選項，以及儲存在資料庫時不會保留的 XML 執行個體部分。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e754bc5e3fb738f36b309e7ff8a60c9f85bc258c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 86f908d6aa221b2c69be3d8960efac929cbf5306
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664867"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738403"
 ---
 # <a name="retrieve-and-query-xml-data"></a>擷取及查詢 XML 資料
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   本主題說明查詢 XML 資料必須指定的查詢選項。 也會描述當 XML 執行個體儲存於資料庫中時，未保留的 XML 執行個體部分。  
   
 ##  <a name="features-of-an-xml-instance-that-are-not-preserved"></a><a name="features"></a> 未保留的 XML 執行個體功能  

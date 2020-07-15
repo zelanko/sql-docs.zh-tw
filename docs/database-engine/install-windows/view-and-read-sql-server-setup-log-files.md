@@ -1,5 +1,6 @@
 ---
 title: 檢視與讀取 SQL Server 安裝程式記錄檔 | Microsoft Docs
+description: 本文描述 SQL Server 安裝程式所建立的記錄檔。 記錄檔會放在已加上日期和時間戳記的資料夾中。
 ms.custom: ''
 ms.date: 09/09/2016
 ms.prod: sql
@@ -18,16 +19,16 @@ ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b3ddfa9ee8866086fa16a384efb63a5392394d3a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: edeb881f5d589e0a2e09848cc4b4c7f7c958f9ba
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76929130"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900175"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>檢視與讀取 SQL Server 安裝程式記錄檔
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 SQL Server 安裝程式預設會將記錄檔建立在 **\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log** 內具有日期和時間戳記的資料夾中，*nnn* 為對應至要安裝之 SQL 版本的數字。 時間戳記記錄檔資料夾的名稱格式為 YYYYMMDD_hhmmss。 在自動安裝模式下執行安裝程式時，會在 %temp%\sqlsetup*.log 內建立記錄檔。 記錄檔資料夾中的所有檔案都會封存到個別記錄檔資料夾的 Log\*.cab 檔中。  
 
@@ -89,7 +90,7 @@ SQL Server 安裝程式預設會將記錄檔建立在 **\%programfiles%\Microsof
   
  若要尋找摘要文字檔中的錯誤，使用 "error" 或 "failed" 等關鍵字搜尋檔案。
   
-## <a name="summary_machinename_yyyymmdd_hhmmsstxt-file"></a>Summary_\<電腦名稱>_YYYYMMDD_HHMMss.txt 檔案
+## <a name="summary_machinename_yyyymmdd_hhmmsstxt-file"></a>Summary_\<MachineName>_YYYYMMDD_HHMMss.txt file
   
 ### <a name="overview"></a>概觀  
  summary_engine base 檔案與摘要檔案類似，而且是在主要工作流程期間產生的。
@@ -115,9 +116,9 @@ SQL Server 安裝程式預設會將記錄檔建立在 **\%programfiles%\Microsof
   
  MSI 記錄檔的類型：
   
--   \<功能>_\<架構>\_\<互動>.log   
--   \<功能>_\<架構>\_\<語言>\_\<互動>.log   
--   \<功能>_\<架構>\_\<互動>\_\<工作流程>.log  
+-   \<Feature>_\<Architecture>\_\<Interaction>.log   
+-   \<Feature>_\<Architecture>\_\<Language>\_\<Interaction>.log   
+-   \<Feature>_\<Architecture>\_\<Interaction>\_\<workflow>.log  
   
 ### <a name="location"></a>Location  
  MSI 記錄檔位於 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\<名稱\>.log。  

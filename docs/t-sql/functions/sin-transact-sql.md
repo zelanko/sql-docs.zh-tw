@@ -16,18 +16,18 @@ helpviewer_keywords:
 - SIN function
 - sine
 ms.assetid: bc1781e9-185f-4981-929b-e77371be6b26
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08463a1014a6226b12fa652e9bffb54782050289
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c6e08898a6a9c51e80c003ef871960a88b44bb54
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67907127"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005054"
 ---
 # <a name="sin-transact-sql"></a>SIN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   傳回 **float** 運算式中指定角度的三角正弦函式 (Sine) (以弧度和近似數值為單位)。  
   
@@ -42,7 +42,7 @@ SIN ( float_expression )
 
 ## <a name="arguments"></a>引數  
  *float_expression*  
- 為 **float** 類型或能夠隱含轉換成 float 類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 為 **float** 類型或能夠隱含轉換成 float 類型 (弧度) 的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 ## <a name="return-types"></a>傳回型別  
  **float**  

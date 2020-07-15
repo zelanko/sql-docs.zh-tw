@@ -1,5 +1,6 @@
 ---
 title: 複寫散發代理程式 | Microsoft Docs
+description: 使用複寫散發代理程式，將保存在散發資料庫資料表中的快照集和交易移動到訂閱者目的地資料表。
 ms.custom: ''
 ms.date: 10/29/2018
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c323fc0e0535b941b1349c3ceae2331aa55d7bb7
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: e36bac1d2455b82502c481ad811de7aac262a6b5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151884"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722225"
 ---
 # <a name="replication-distribution-agent"></a>複寫散發代理程式
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/applies-to-version/sql-asdb.md)]
   「複寫散發代理程式」是一個可執行檔，它會將快照集 (快照式複寫與異動複寫) 和散發資料庫資料表中保存的交易 (異動複寫) 移動至位於「訂閱者」端的目的地資料表。  
   
 > [!NOTE]  

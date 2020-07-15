@@ -17,18 +17,18 @@ helpviewer_keywords:
 - RIGHT function
 - character strings [SQL Server], RIGHT
 ms.assetid: 43f1fe1f-aa18-47e3-ba20-e03e32254a6d
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66627b7b430d15afe73ec823c0af90e2d19d9a39
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 86ec4ba1a3dce9ec818c9756261d19a775d3a1da
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70123179"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003718"
 ---
 # <a name="right-transact-sql"></a>RIGHT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   傳回指定字元數之字元字串的右側部分。  
   
@@ -36,13 +36,16 @@ ms.locfileid: "70123179"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 RIGHT ( character_expression , integer_expression )  
 ```  
   
 ## <a name="arguments"></a>引數  
  *character_expression*  
  這是字元或二進位資料的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *character_expression* 可以是常數、變數或資料行。 *character_expression* 可以是除了 **text** 或 **ntext** 之外的任何資料類型，可隱含地轉換為 **varchar** 或 **nvarchar**。 否則，請使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 函數來明確轉換 *character_expression*。  
+   
+> [!NOTE]  
+> 若 *string_expression* 是 **二進位** 或 **varbinary** 的類型，RIGHT 就會執行隱含轉換成 **varchar**，所以不會保留二進位輸入。  
   
  *integer_expression*  
  這是一個指定將傳回的 *character_expression* 字元數的正整數。 如果 *integer_expression* 是負數，則會傳回錯誤。 如果 *integer_expression* 是 **bigint** 類型且包含大數值，則 *character_expression* 必須屬於大型資料類型，例如 **varchar(max)** 。  

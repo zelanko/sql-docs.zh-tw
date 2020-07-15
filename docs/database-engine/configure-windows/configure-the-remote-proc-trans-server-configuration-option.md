@@ -1,5 +1,6 @@
 ---
 title: 設定 remote proc trans 伺服器組態選項 | Microsoft Docs
+description: 了解 "remote proc trans" 選項。 了解此選項透過 MS DTC 交易協助保護伺服器對伺服器程序動作的方式。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - remote proc trans option
 - distributed transactions [SQL Server], enforcing
 ms.assetid: cfbc6158-ab96-44b4-87eb-ea278c1b0c6b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 9a372bf572373d0c3557ec4e40a32ba937d57d88
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 466e0106b93196fd260d36c31f6f8d0a94e7bea9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012310"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785724"
 ---
 # <a name="configure-the-remote-proc-trans-server-configuration-option"></a>設定 remote proc trans 伺服器組態選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] remote proc trans [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **remote proc trans** 選項有助於保護透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散式交易協調器 (MS DTC) 交易的伺服器對伺服器程序的動作。  
   
@@ -42,7 +43,7 @@ ms.locfileid: "68012310"
   
 -   **使用下列方法設定 remote proc trans 選項：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -67,7 +68,7 @@ ms.locfileid: "68012310"
   
 #### <a name="to-configure-the-remote-proc-trans-option"></a>設定 remote proc trans 選項  
   
-1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]  。  
+1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
   
 2.  按一下 **[連接]** 節點。  
   

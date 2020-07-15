@@ -1,5 +1,6 @@
 ---
 title: 範例：指定 HIDE 指示詞 | Microsoft Docs
+description: 檢視在 SQL 查詢中使用 HIDE 指示詞的範例。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: d656dd0022a3c3234baf1e032e26ef77c80b9421
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f8f8f5a8eeeff444832d5cd6142f1bb0099c5913
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665379"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632501"
 ---
 # <a name="example-specifying-the-hide-directive"></a>範例：指定 HIDE 指示詞
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   此範例說明 **HIDE** 指示詞的用法。 當您希望查詢可以傳回由查詢傳回的通用資料表中，用以排序資料列的屬性，但又不希望在最後的結果 XML 文件中看見該屬性時，此指示詞就相當有用。  
   
  此查詢會建構以下 XML：  

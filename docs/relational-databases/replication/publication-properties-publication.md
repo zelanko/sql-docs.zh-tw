@@ -22,15 +22,15 @@ ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 952d0be032c470eae7dc34b468afc3b33f5040b9
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 01d90b3a146c8e110b5cfad11b4d198a1f97c609
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529212"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720877"
 ---
 # <a name="sql-server-replication-publication-properties--dialog-box"></a>SQL Server 複寫 [發行集屬性] 對話方塊
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 本頁說明 [發行集屬性] 對話方塊內的頁面。 
 
@@ -51,7 +51,7 @@ ms.locfileid: "81529212"
  發行集的類型 (唯讀)。  
   
  **訂閱過期**  
- 選取其中一個訂閱過期選項：[訂閱永遠不會過期]  或 [訂閱會過期]  ，並提供明確的時間週期 (**間隔**)。  
+ 選取其中一個訂閱過期選項：[訂閱永遠不會過期] 或 [訂閱會過期]，並提供明確的時間週期 (**間隔**)。  
   
  針對快照式發行集和交易式發行集， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您接受預設的 **[訂閱永遠不會過期]** 設定。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "81529212"
  當您在發行集的資料表發行項中加入篩選時，這些篩選就會擴展到窗格中。 含有資料列篩選的資料表，會顯示為窗格中的最上層節點。 若為合併式發行集，則透過聯結篩選而擴充篩選的資料表，就會顯示為子節點。  
   
  **加入**  
- 按一下 **[加入]** 即可啟動一個可讓您篩選資料表發行項的對話方塊。 在快照集或交易式發行集按一下 **[加入]** 會立即啟動對話方塊。 針對合併式發行集按一下 [加入]  會顯示三個選項：[加入篩選]  、[加入聯結以擴充選取的篩選]  ，以及 [自動產生篩選]  。  
+ 按一下 **[加入]** 即可啟動一個可讓您篩選資料表發行項的對話方塊。 在快照集或交易式發行集按一下 **[加入]** 會立即啟動對話方塊。 針對合併式發行集按一下 [加入] 會顯示三個選項：[加入篩選]、[加入聯結以擴充選取的篩選]，以及 [自動產生篩選]。  
   
 -   選取 **[加入篩選]** 即可啟動 **[加入篩選]** 對話方塊。 這個對話方塊可以讓您套用資料列篩選至資料表發行項。 例如，在 **[加入篩選]** 對話方塊中，您可以指定含有客戶資料的資料表在複寫到訂閱者時，只能包含法國客戶的資料。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "81529212"
  **尋找資料表**  
  僅合併式發行集。 按一下 **[尋找資料表]** ，即可在複雜篩選樹中尋找資料表。 在含有複雜關聯性的資料庫中，因為資料表可以聯結到多個資料表，所以資料表可能重複出現在篩選樹的多個位置。  
   
- 實際資料表只出現在篩選樹的一個位置，而在其他位置，資料表是以捷徑方式顯示。 資料表的捷徑只是資料表的參考，它不會顯示資料表的子節點。 捷徑節點會以捷徑箭頭標示，展開該節點會顯示這段文字：按一下 [尋找資料表]，以檢視 \<資料表名稱> 的資料表  。  
+ 實際資料表只出現在篩選樹的一個位置，而在其他位置，資料表是以捷徑方式顯示。 資料表的捷徑只是資料表的參考，它不會顯示資料表的子節點。 捷徑節點會以捷徑箭號標示，展開該節點會顯示這段文字：**按一下 [尋找資料表]，以查看 \<tablename> 的資料表**。  
   
  在窗格中選取捷徑節點，然後按一下 **[尋找資料表]** ，窗格就會展開並反白該資料表。 如果您按一下 **[尋找資料表]** 但未選取捷徑節點，則會啟動 **[尋找資料表]** 對話方塊。  
   
@@ -166,7 +166,7 @@ ms.locfileid: "81529212"
 
 ## <a name="data-partitions"></a>分割區
 分割區  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]  
   **[發行集屬性]** 對話方塊的 **[資料分割]** 頁面，可讓您定義使用參數化篩選之合併式發行集的資料分割。 定義資料分割之後，您可以為這些資料分割產生快照集，依據訂閱者的連接屬性 (登入及/或電腦名稱)，為不同的訂閱者提供不同的初始資料集。 如果訂閱者在第一次同步處理資料分割時沒有可用的快照集，您也可以選取來允許訂閱者要求快照集傳遞和產生。 如需詳細資訊，請參閱 [使用參數化篩選建立合併式發行集的快照集](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   
 ### <a name="options"></a>選項。  
@@ -190,7 +190,7 @@ ms.locfileid: "81529212"
 
 ## <a name="snapshot"></a>快照式
 快照式  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]  
   **[發行集屬性]** 對話方塊的 **[快照集]** 頁面，可以讓您設定快照集格式、快照集資料夾位置以及在快照集的應用程式之前和之後執行的指令碼。 快照集資料夾必須指定為共用，而且會讀取和寫入檔案到資料夾的代理程式需要有足夠的權限。 如需適當地保護資料夾的詳細資訊，請參閱[保護快照集資料夾](../../relational-databases/replication/security/secure-the-snapshot-folder.md)。  
   
 > [!NOTE]  
@@ -200,7 +200,7 @@ ms.locfileid: "81529212"
  **快照集格式**  
  為快照集格式選取原生模式或字元模式。  
   
--   如果所有的訂閱者都是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，而非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] 的執行個體，請選取 [原生 SQL Server - 所有訂閱者都必須是執行 SQL Server 的伺服器]  。 原生快照集格式可以提供最佳的效能。    
+-   如果所有的訂閱者都是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，而非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] 的執行個體，請選取 [原生 SQL Server - 所有訂閱者都必須是執行 SQL Server 的伺服器]。 原生快照集格式可以提供最佳的效能。    
 -   如果有任何訂閱者正在執行 **，或為非** 訂閱者，請選取 [!INCLUDE[ssEW](../../includes/ssew-md.md)] [字元 - 如果發行者或訂閱者沒有執行 SQL Server 則需要][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。    
  **快照集檔案的位置**  
  選取儲存快照集檔案的位置。 這些檔案可以儲存在預設位置；也可以儲存在取代預設位置的替代位置，或除了預設位置以外的替代位置。 儲存在替代位置的檔案可以壓縮。  

@@ -1,5 +1,6 @@
 ---
 title: 使用 XMLDATA 與 XMLSCHEMA 要求結構描述作為結果 | Microsoft Docs
+description: 了解如何搭配 FOR XML 子句在 RAW 模式中使用 XMLDATA 和 XMLSCHEMA 選項，以要求 XML-DATA 結構描述或查詢結果中的 XSD 架結構描述。
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,15 +14,15 @@ ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: ed72f442fa85a505ace0a1826028ee43f1ea6e97
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: e7dfada43a7f899339f9f6ab59ef94dda9853c36
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664508"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632925"
 ---
 # <a name="request-schemas-as-results-with-xmldata--xmlschema"></a>使用 XMLDATA 與 XMLSCHEMA 要求結構描述作為結果
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   下列查詢會傳回用於描述文件結構的 XML-DATA 結構描述。  
   
 ## <a name="example"></a>範例  
@@ -53,7 +54,7 @@ GO
 ```  
   
 > [!NOTE]  
->  <`Schema`> 會宣告為命名空間。 為了在不同 FOR XML 查詢中要求多個 XML-Data 結構描述時避免命名空間衝突，所以在每次執行查詢時都會變更命名空間識別碼 (此範例中為 `Schema1` )。 命名空間識別碼是由 **Schema** _**n**_ 所組成，其中 _**n**_ 是整數。  
+>  <`Schema`> 會宣告為命名空間。 為了在不同 FOR XML 查詢中要求多個 XML-Data 結構描述時避免命名空間衝突，所以在每次執行查詢時都會變更命名空間識別碼 (此範例中為 `Schema1` )。 命名空間識別碼是由 **Schema**_**n**_ 所組成，其中 _**n**_ 是整數。  
   
  指定 `XMLSCHEMA` 選項，則可要求結果傳回 XSD 結構描述。  
   

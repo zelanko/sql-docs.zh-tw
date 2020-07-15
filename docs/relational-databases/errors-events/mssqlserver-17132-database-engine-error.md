@@ -1,5 +1,6 @@
 ---
 title: MSSQLSERVER_17132 | Microsoft Docs
+description: SQL Server 電腦無法處理用戶端登入封包。 請參閱錯誤的說明及可能的解決方法。
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
@@ -11,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: d1d198bd-6730-4394-bd5f-28f320c01a38
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 335ba6a544023fd4eec16cd7461e2e17c224020f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4767ba217eab0d8cdbc6a9dc80f751868322f21f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68131796"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780845"
 ---
 # <a name="mssqlserver_17132"></a>MSSQLSERVER_17132
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細資料  
   
-|||  
-|-|-|  
+| 屬性 | 值 |  
+| :-------- | :---- |  
 |產品名稱|SQL Server|  
 |事件識別碼|17132|  
 |事件來源|MSSQLSERVER|  

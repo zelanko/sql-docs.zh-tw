@@ -1,5 +1,6 @@
 ---
 title: 設定 SQL Server 錯誤記錄檔 | Microsoft Docs
+description: 了解錯誤記錄檔回收。 了解如何設定記錄檔大小上限，以及如何設定 SQL Server 備份和封存的先前記錄檔數量。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,23 +11,23 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.configurelogs.configureerrorlogs.f1
 ms.assetid: 03f0d463-9b0b-4af9-a853-da936d75e5af
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 8e746861ef30305a901c388f7574a4a27e2edab4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 060b3828c772a030ab095ae1bea857dc8eaa3b5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74127486"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651374"
 ---
 # <a name="scm-services---configure-sql-server-error-logs"></a>SCM 服務 - 設定 SQL Server 錯誤記錄檔
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   此主題描述如何檢視或修改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔的回收方式。  
 
 ## <a name="to-open-the-configure-sql-server-error-logs-dialog-box"></a>若要開啟 [設定 SQL Server 錯誤記錄檔] 對話方塊  
 
-1. 在 [物件總管] 中展開 SQL Server 執行個體，展開 [管理]  ，以滑鼠右鍵按一下 [SQL Server 記錄檔]  ，然後按一下 [設定]  。
+1. 在 [物件總管] 中展開 SQL Server 執行個體，展開 [管理]，以滑鼠右鍵按一下 [SQL Server 記錄檔]，然後按一下 [設定]。
 
 2. 在 **[設定 SQL Server 錯誤記錄檔]** 對話方塊中，從下列選項中進行選擇。
 

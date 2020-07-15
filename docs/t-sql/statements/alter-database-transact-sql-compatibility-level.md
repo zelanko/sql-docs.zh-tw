@@ -24,16 +24,16 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba279273a8e0a477f24cc204abee7f29e2420e1e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 51889da6d3ce13b6815767fc7651d6d0ac203eca
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81629099"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85761966"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 相容性層級
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 設定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 及查詢處理行為，使其與指定版本的 SQL 引擎相容。 如需其他 ALTER DATABASE 選項，請參閱 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)。  
 
@@ -257,7 +257,7 @@ SQL Server 2017 之前的 SQL Server 較早版本中，追蹤旗標 4199 之下�
 
 |相容性層級設定為 110 或更低|相容性層級設定為 120|
 |--------------------------------------------------|-----------------------------------------|
-|使用舊版的查詢最佳化工具。|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 包括可建立及最佳化查詢計劃之元件的大幅改善。 這個新的查詢最佳化工具功能取決於資料庫相容性層級 120 的使用。 新的資料庫應用程式應該使用資料庫相容性層級 120 加以開發，以便充分利用這些改良功能。 從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉的應用程式應該謹慎測試，以確認良好的效能得以持續或改善。 如果效能降低，您可以將資料庫相容性層級設定為 110 或更低的數字，以便使用舊的查詢最佳化工具方法。<br /><br /> 資料庫相容性層級 120 會使用新的基數估計工具，其經過調整適合於新型資料倉儲和 OLTP 工作負載。 因效能問題而要將資料庫相容性層級設定為 110 之前，請先參閱[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][資料庫引擎的新功能](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)主題的＜查詢計劃＞  一節提供的建議。|
+|使用舊版的查詢最佳化工具。|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 包括可建立及最佳化查詢計劃之元件的大幅改善。 這個新的查詢最佳化工具功能取決於資料庫相容性層級 120 的使用。 新的資料庫應用程式應該使用資料庫相容性層級 120 加以開發，以便充分利用這些改良功能。 從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉的應用程式應該謹慎測試，以確認良好的效能得以持續或改善。 如果效能降低，您可以將資料庫相容性層級設定為 110 或更低的數字，以便使用舊的查詢最佳化工具方法。<br /><br /> 資料庫相容性層級 120 會使用新的基數估計工具，其經過調整適合於新型資料倉儲和 OLTP 工作負載。 因效能問題而要將資料庫相容性層級設定為 110 之前，請先參閱[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][資料庫引擎的新功能](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)主題的＜查詢計劃＞一節提供的建議。|
 |在低於 120 的相容性層級中，將**日期**值轉換成字串值時，會忽略語言設定。 請注意，此行為只針對**日期**類型。 請參閱下方＜範例＞一節中的範例 B。|將**日期**值轉換成字串值時，不會忽略語言設定。|
 |`EXCEPT` 子句右邊的遞迴參考會建立無限迴圈。 下方＜範例＞一節中的範例 C 會示範此行為。|`EXCEPT` 子句中的遞迴參考會產生符合 ANSI SQL 標準的錯誤。|
 |遞迴通用資料表運算式 (CTE) 允許複寫資料行名稱。|遞迴 CTE 不允許重複的資料行名稱。|
@@ -292,7 +292,7 @@ SQL Server 2017 之前的 SQL Server 較早版本中，追蹤旗標 4199 之下�
 |`OUTPUT` 子句中允許全文檢索述詞。|`OUTPUT` 子句中不允許全文檢索述詞。|低|
 |未支援 `CREATE FULLTEXT STOPLIST`、`ALTER FULLTEXT STOPLIST` 和 `DROP FULLTEXT STOPLIST`。 系統停用字詞表會自動與新的全文檢索索引產生關聯。|支援 `CREATE FULLTEXT STOPLIST`、`ALTER FULLTEXT STOPLIST`和 `DROP FULLTEXT STOPLIST`。|低|
 |`MERGE` 不會強制為保留關鍵字。|MERGE 是完整的保留關鍵字。 100 和 90 相容性層級之下都支援 `MERGE` 陳述式。|低|
-|使用 INSERT 陳述式的 \<dml_table_source> 引數會引發語法錯誤。|您可以在巢狀 INSERT、UPDATE、DELETE 或 MERGE 陳述式中擷取 OUTPUT 子句的結果，並將這些結果插入目標資料表或檢視表中。 這是利用 INSERT 陳述式中的 \<dml_table_source> 引數所完成的。|低|
+|使用 INSERT 陳述式的 \<dml_table_source> 引數會引發語法錯誤。|您可以在巢狀 INSERT、UPDATE、DELETE 或 MERGE 陳述式中擷取 OUTPUT 子句的結果，並將這些結果插入目標資料表或檢視表中。 這是利用 INSERT 陳述式的 \<dml_table_source> 引數所完成。|低|
 |除非指定了 `NOINDEX`X，否則 `DBCC CHECKDB` 或 `DBCC CHECKTABLE` 會針對單一資料表或索引檢視表及它的所有非叢集索引和 XML 索引進行實體和邏輯一致性檢查。 不支援空間索引。|除非指定了 `NOINDEX`X，否則 `DBCC CHECKDB` 或 `DBCC CHECKTABLE` 會針對單一資料表及它的所有非叢集索引進行實體和邏輯一致性檢查。 但是根據預設，XML 索引、空間索引和索引檢視表只會進行實體一致性檢查。<br /><br /> 如果指定了 `WITH EXTENDED_LOGICAL_CHECKS`，將會針對索引檢視表、XML 索引和空間索引 (如果有的話) 執行邏輯檢查。 根據預設，實體一致性檢查會在邏輯一致性檢查之前執行。 如果也指定了 `NOINDEX`，則只會執行邏輯檢查。|低|
 |搭配資料操作語言 (DML) 陳述式使用 OUTPUT 子句而且在陳述式執行期間發生執行階段錯誤時，就會終止和回復整個交易。|搭配資料操作語言 (DML) 陳述式使用 `OUTPUT` 子句，而且在陳述式執行期間發生執行階段錯誤時，其行為取決於 `SET XACT_ABORT` 設定。 如果 `SET XACT_ABORT` 為 OFF，使用 `OUTPUT` 子句之 DML 陳述式所產生的陳述式中止錯誤將會結束此陳述式，但是批次會繼續執行，而且不會回復交易。 如果 `SET XACT_ABORT` 為 ON，使用 OUTPUT 子句之 DML 陳述式所產生的所有執行階段錯誤將會結束批次，而且會回復交易。|低|
 |不會強制 CUBE 和 ROLLUP 必須為保留關鍵字。|`CUBE` 和 `ROLLUP` 在 GROUP BY 子句中為保留關鍵字。|低|

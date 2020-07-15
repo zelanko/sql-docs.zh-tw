@@ -1,5 +1,6 @@
 ---
 title: 記憶體最佳化資料表的還原與復原 | Microsoft Docs
+description: 了解在 SQL Server 中還原使用經記憶體最佳化資料表的資料庫，與還原僅使用磁碟資料表的資料庫有何不同。
 ms.custom: ''
 ms.date: 12/31/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 03974bc83cb9c7d9b6202f04db84ae96fe791eb3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5393fec82a0e1ab082369970f15756dc59e91846
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908433"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722338"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>記憶體最佳化資料表的還原與復原
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 復原或還原使用記憶體最佳化資料表之資料庫的基本機制，與僅使用磁碟資料表的資料庫機制類似。 但是與磁碟資料表不同之處在於，記憶體最佳化資料表必須載入記憶體中，資料庫才能供使用者存取。 這項需求會在資料庫復原中新增一個新步驟。  
   

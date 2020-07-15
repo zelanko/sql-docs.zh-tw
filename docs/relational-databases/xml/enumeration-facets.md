@@ -1,5 +1,6 @@
 ---
 title: 列舉 Facet | Microsoft Docs
+description: 了解 SQL Server 如何使用列舉 Facet 來驗證 XML 結構描述。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: dec23a79-ddd6-4701-9721-55a2c435a34d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5430f9549a2c0af3677d3ad374e9fb5513d6bd1f
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: e8939b3c8654452f50b280ad66fe221f94220754
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664576"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633142"
 ---
 # <a name="enumeration-facets"></a>列舉 Facet
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會拒絕類型含有模式 Facet 或列舉違反這些 Facet 的 XML 結構描述。  
   
 ## <a name="example"></a>範例  

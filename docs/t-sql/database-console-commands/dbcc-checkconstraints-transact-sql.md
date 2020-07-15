@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 05039c9634d62366cc8730a90a80bc4c2d3ab76f
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1ca0b3f46cba5fc2e64babbba4dd591b8fb0b095
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633518"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786559"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 檢查目前資料庫中之指定資料表的指定條件約束或所有條件約束的完整性。
   
@@ -90,7 +90,7 @@ DBCC CHECKCONSTRAINTS 會檢查 FOREIGN KEY 和 CHECK 條件約束的完整性�
   
 **適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本
   
-如果指定 *table_name* 或 *table_id*，並已針對系統版本設定啟用，DBCC CHECKCONSTRAINTS 也會在指定的資料表上執行時態性資料一致性檢查。 未指定 *NO_INFOMSGS* 時，此命令會在輸出的獨立一行中傳回每個一致性違規。 輸出的格式將為 ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>...)AND \<時態表記錄的問題>。
+如果指定 *table_name* 或 *table_id*，並已針對系統版本設定啟用，DBCC CHECKCONSTRAINTS 也會在指定的資料表上執行時態性資料一致性檢查。 未指定 *NO_INFOMSGS* 時，此命令會在輸出的獨立一行中傳回每個一致性違規。 輸出的格式將為([pkcol1]、[pkcol2]..) = (\<pkcol1_value>、\<pkcol2_value>...)與 \<what is wrong with temporal table record>。
   
 |勾選|檢查失敗時輸出中的其他資訊|  
 |-----------|-----------------------------------------------|  

@@ -1,42 +1,42 @@
 ---
 title: 快速入門：連線及查詢 PostgreSQL
-titleSuffix: Azure Data Studio
 description: 本快速入門說明如何使用 Azure Data Studio 連線到 PostgreSQL 並執行查詢
 ms.custom: seodec18
 ms.date: 09/18/2019
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
-ms.openlocfilehash: ac4d1a3ae93310475c284661e1b8dff1d9a9f523
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f429848636de075e64ebaf6f74bc69f7faef5359
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71127245"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717151"
 ---
-# <a name="quickstart-connect-and-query-postgresql-using-name-sos"></a>快速入門：使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 連線及查詢 PostgreSQL
-本快速入門說明如何使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 連線到 PostgreSQL，然後使用 SQL 陳述式建立並查詢資料庫 *tutorialdb*。
+# <a name="quickstart-use-azure-data-studio-to-connect-and-query-postgresql"></a>快速入門：使用 Azure Data Studio 連線及查詢 PostgreSQL
 
-## <a name="prerequisites"></a>Prerequisites
+本快速入門說明如何使用 Azure Data Studio 連線至 Postgres，然後使用 SQL 陳述式建立並查詢資料庫 *tutorialdb*。
 
-若要完成本快速入門，您需要 [!INCLUDE[name-sos](../includes/name-sos-short.md)]、適用於 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 的 PostgreSQL 延伸模組和 PostgreSQL 伺服器存取權。
+## <a name="prerequisites"></a>必要條件
 
-- [安裝 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)。
+若要完成本快速入門，則需要 Azure Data Studio、適用於 Azure Data Studio 的 PostgreSQL 延伸模組，以及 PostgreSQL 伺服器的存取權。
+
+- [安裝 Azure Data Studio](download.md)。
 - [安裝適用於 Azure Data Studio 的 PostgreSQL 延伸模組](postgres-extension.md)。
 - [安裝 PostgreSQL](https://www.postgresql.org/download/) (或者，您可以使用 [az postgres up](https://docs.microsoft.com/azure/postgresql/quickstart-create-server-up-azure-cli)，在雲端建立 Postgres 資料庫)。 
 
 ## <a name="connect-to-postgresql"></a>連線到 PostgreSQL
 
-1. 啟動 **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** 。
+1. 啟動 **Azure Data Studio**。
 
-2. 第一次啟動 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 時，會開啟 [連線]  對話方塊。 如果 [連線]  對話方塊未開啟，請按一下 [伺服器]  頁面中的**新增連線**圖示：
+2. 第一次啟動 Azure Data Studio 時，會隨即開啟 [連線] 對話方塊。 如果 [連線] 對話方塊未開啟，請按一下 [伺服器] 頁面中的**新增連線**圖示：
 
    ![新增連線圖示](media/quickstart-postgresql/new-connection-icon.png)
 
-3. 在快顯的表單中，移至 [連線類型]  ，然後從下拉式選單中選取 [PostgreSQL]  。
+3. 在快顯的表單中，移至 [連線類型]，然後從下拉式選單中選取 [PostgreSQL]。
 
 
 4. 使用 PostgreSQL 伺服器的伺服器名稱、使用者名稱和密碼，填入其餘欄位。 
@@ -49,20 +49,20 @@ ms.locfileid: "71127245"
    | **使用者名稱** | postgres | 您要用來登入的使用者名稱。 |
    | **密碼 (SQL 登入)** | *password* | 您要用來登入的帳戶密碼。 |
    | **密碼** | *檢查* | 如果您不想要每次連線都輸入密碼，請核取此方塊。 |
-   | **資料庫名稱** | \<預設值\> | 如果您希望連線能夠指定資料庫，請填入這個選項。 |
-   | **伺服器群組** | \<預設值\> | 這個選項可讓您將此連線指派給您所建立的特定伺服器群組。 | 
-   | **名稱 (選擇性)** | 保留空白  | 這個選項可讓您指定伺服器的易記名稱。 | 
+   | **資料庫名稱** | \<Default\> | 如果您希望連線能夠指定資料庫，請填入這個選項。 |
+   | **伺服器群組** | \<Default\> | 這個選項可讓您將此連線指派給您所建立的特定伺服器群組。 | 
+   | **名稱 (選擇性)** | 保留空白 | 這個選項可讓您指定伺服器的易記名稱。 | 
 
-5. 選取 [連接]  。 
+5. 選取 [連接]。 
 
-成功連線之後，您的伺服器就會在 [伺服器]  提要欄位中開啟。
+成功連線之後，您的伺服器就會在 [伺服器] 提要欄位中開啟。
 
 
 ## <a name="create-a-database"></a>建立資料庫
 
 下列步驟會建立名為 **tutorialdb** 的資料庫：
 
-1. 在 [伺服器]  提要欄位中，以滑鼠右鍵按一下您的 PostgreSQL 伺服器，然後選取 [新增查詢]  。
+1. 在 [伺服器] 提要欄位中，以滑鼠右鍵按一下您的 PostgreSQL 伺服器，然後選取 [新增查詢]。
 
 2. 將此 SQL 陳述式貼到開啟的查詢編輯器。
 
@@ -70,12 +70,12 @@ ms.locfileid: "71127245"
    CREATE DATABASE tutorialdb;
    ```
 
-3. 從工具列，選取 [執行]  執行查詢。 通知會出現在 [訊息]  窗格中，顯示查詢進度。
+3. 從工具列，選取 [執行] 執行查詢。 通知會出現在 [訊息] 窗格中，顯示查詢進度。
 
 >[!TIP]
-> 您可以使用鍵盤上的 **F5** 執行陳述式，而不是使用 [執行]  。
+> 您可以使用鍵盤上的 **F5** 執行陳述式，而不是使用 [執行]。
 
-查詢完成後，以滑鼠右鍵按一下 [資料庫]  ，然後選取 [重新整理]  ，即可在 [資料庫]  節點下的清單中看到 **tutorialdb**。
+查詢完成後，以滑鼠右鍵按一下 [資料庫]，然後選取 [重新整理]，即可在 [資料庫] 節點下的清單中看到 **tutorialdb**。
 
 
 ## <a name="create-a-table"></a>建立資料表
@@ -86,10 +86,10 @@ ms.locfileid: "71127245"
 
    ![變更內容](media/quickstart-postgresql/change-context.png)
 
-2. 將下列 SQL 陳述式貼到查詢編輯器，然後按一下 [執行]  。 
+2. 將下列 SQL 陳述式貼到查詢編輯器，然後按一下 [執行]。 
 
    > [!NOTE]
-   > 您可以在編輯器中附加此項目至查詢，或覆寫現有的查詢。 按一下 [執行]  只會執行醒目提示的查詢。 如果沒有醒目提示任何項目，按一下 [執行]  會執行編輯器中的所有查詢。
+   > 您可以在編輯器中附加此項目至查詢，或覆寫現有的查詢。 按一下 [執行] 只會執行醒目提示的查詢。 如果沒有醒目提示任何項目，按一下 [執行] 會執行編輯器中的所有查詢。
 
    ```sql
    -- Drop the table if it already exists
@@ -105,7 +105,7 @@ ms.locfileid: "71127245"
 
 ## <a name="insert-rows"></a>插入資料列
 
-將下列程式碼片段貼到查詢視窗，然後按一下 [執行]  ：
+將下列程式碼片段貼到查詢視窗，然後按一下 [執行]：
 
    ```sql
    -- Insert rows into table 'customers'
@@ -120,7 +120,7 @@ ms.locfileid: "71127245"
 
 ## <a name="query-the-data"></a>查詢資料
 
-1. 將下列程式碼片段貼到查詢編輯器，然後按一下 [執行]  ：
+1. 將下列程式碼片段貼到查詢編輯器，然後按一下 [執行]：
    
    ```sql
    -- Select rows from table 'customers'

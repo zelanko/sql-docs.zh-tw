@@ -1,5 +1,6 @@
 ---
 title: SQL Server Audit (Database Engine) | Microsoft Docs
+description: 了解 SQL Server 資料庫引擎或個別資料庫的伺服器稽核。 伺服器稽核包含伺服器和資料庫稽核規格。
 ms.custom: ''
 ms.date: 01/01/2020
 ms.prod: sql
@@ -16,17 +17,17 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: davidtrigano
 ms.author: datrigan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f13076ab831dbf3321a60aef8752d88c6193265a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1d9d459729a05078043b5365a54d16ade45df31d
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80243408"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85294636"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Database Engine)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  「稽核」  [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 執行個體或個別資料庫會在 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 上發生追蹤及記錄事件。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核可讓您建立伺服器稽核，其中可包含伺服器層級事件的伺服器稽核規格，以及資料庫層級事件的資料庫稽核規格。 稽核的事件可以寫入事件記錄或稽核檔案。  
+  「稽核」[!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 執行個體或個別資料庫會在 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 上發生追蹤及記錄事件。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核可讓您建立伺服器稽核，其中可包含伺服器層級事件的伺服器稽核規格，以及資料庫層級事件的資料庫稽核規格。 稽核的事件可以寫入事件記錄或稽核檔案。  
   
 [!INCLUDE[ssMIlimitation](../../../includes/sql-db-mi-limitation.md)]
   
@@ -59,7 +60,7 @@ ms.locfileid: "80243408"
 ### <a name="database-audit-specification"></a>資料庫稽核規格  
  「資料庫稽核規格」  物件屬於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit。 您可以針對每個稽核的每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫建立一個資料庫稽核規格。  
   
- 資料庫稽核規格會收集由擴充的事件功能所引發的資料庫層級稽核動作。 您可以將稽核動作群組或稽核事件加入資料庫稽核規格。 「稽核事件」  是可由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 引擎稽核之不可部分完成的動作。 「稽核動作群組」  是預先定義的動作群組。 這兩者都在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫範圍內。 這些動作會傳送給稽核，然後它會在目標中記錄這些動作。 請勿在使用者資料庫稽核規格中包含伺服器範圍的物件，例如系統檢視表。  
+ 資料庫稽核規格會收集由擴充的事件功能所引發的資料庫層級稽核動作。 您可以將稽核動作群組或稽核事件加入資料庫稽核規格。 「稽核事件」 是可由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 引擎稽核之不可部分完成的動作。 「稽核動作群組」 是預先定義的動作群組。 這兩者都在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫範圍內。 這些動作會傳送給稽核，然後它會在目標中記錄這些動作。 請勿在使用者資料庫稽核規格中包含伺服器範圍的物件，例如系統檢視表。  
   
  資料庫層級的稽核動作群組和稽核動作在 [SQL Server Audit 動作群組和動作](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)主題中有描述。  
   
@@ -69,7 +70,7 @@ ms.locfileid: "80243408"
 > [!IMPORTANT]  
 >  任何經過驗證的使用者都可以讀寫 Windows 應用程式事件記錄檔。 應用程式事件記錄檔所需的權限低於 Windows 安全性事件記錄檔，所以比起 Windows 安全性事件記錄檔是較不安全的。  
   
- 寫入到 Windows 安全性記錄檔需要將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶加入 [產生安全性稽核]  原則。 根據預設，本機系統、本機服務和網路服務都是此原則的一部分。 您可以使用安全性原則嵌入式管理單元 (secpol.msc) 來設定這項設定。 此外，[稽核物件存取]  安全性原則必須已啟用 [成功]  和 [失敗]  。 您可以使用安全性原則嵌入式管理單元 (secpol.msc) 來設定這項設定。 在 [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] 或 Windows Server 2008 中，您可以使用稽核原則程式 ( **AuditPol.exe)** 從命令列設定更細微的 [產生的應用程式]  原則。 如需啟用寫入 Windows 安全性記錄檔之步驟的詳細資訊，請參閱 [將 SQL Server Audit 事件寫入安全性記錄檔](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)。 如需 Auditpol.exe 程式的詳細資訊，請參閱知識庫文章 921469： [如何使用「群組原則」進行詳細的安全性稽核設定](https://support.microsoft.com/kb/921469/)。 Windows 事件記錄檔在 Windows 作業系統中為全域的範圍。 如需 Windows 事件記錄檔的詳細資訊，請參閱 [事件檢視器概觀](https://go.microsoft.com/fwlink/?LinkId=101455)。 如果您需要更精確的稽核權限，請使用二進位檔案目標。  
+ 寫入到 Windows 安全性記錄檔需要將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶加入 [產生安全性稽核]  原則。 根據預設，本機系統、本機服務和網路服務都是此原則的一部分。 您可以使用安全性原則嵌入式管理單元 (secpol.msc) 來設定這項設定。 此外，[稽核物件存取]  安全性原則必須已啟用 [成功]  和 [失敗] 。 您可以使用安全性原則嵌入式管理單元 (secpol.msc) 來設定這項設定。 在 [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] 或 Windows Server 2008 中，您可以使用稽核原則程式 ( **AuditPol.exe)** 從命令列設定更細微的 [產生的應用程式]原則。 如需啟用寫入 Windows 安全性記錄檔之步驟的詳細資訊，請參閱 [將 SQL Server Audit 事件寫入安全性記錄檔](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)。 如需 Auditpol.exe 程式的詳細資訊，請參閱知識庫文章 921469： [如何使用「群組原則」進行詳細的安全性稽核設定](https://support.microsoft.com/kb/921469/)。 Windows 事件記錄檔在 Windows 作業系統中為全域的範圍。 如需 Windows 事件記錄檔的詳細資訊，請參閱 [事件檢視器概觀](https://go.microsoft.com/fwlink/?LinkId=101455)。 如果您需要更精確的稽核權限，請使用二進位檔案目標。  
   
  當您將稽核資訊儲存到檔案時，為了避免遭到篡改，您可以使用以下方式來限制對檔案位置的存取：  
   
@@ -108,7 +109,7 @@ ms.locfileid: "80243408"
   
 3.  啟用稽核。  
   
-4.  使用 Windows [事件檢視器]  、[記錄檔檢視器]  或是 fn_get_audit_file 函數來閱讀稽核事件。  
+4.  使用 Windows [事件檢視器] 、[記錄檔檢視器] 或是 fn_get_audit_file 函數來閱讀稽核事件。  
 
  如需詳細資訊，請參閱 [建立伺服器稽核與伺服器稽核規格](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) 和 [建立伺服器稽核和資料庫稽核規格](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)。  
   
@@ -127,7 +128,7 @@ ms.locfileid: "80243408"
 ### <a name="database-mirroring-and-sql-server-audit"></a>資料庫鏡像和 SQL Server Audit  
  已定義資料庫稽核規格而且使用資料庫鏡像的資料庫將會包含資料庫稽核規格。 若要在鏡像的 SQL 執行個體上正確運作，必須設定下列項目：  
   
--   鏡像伺服器必須具有相同 GUID 的稽核，才能讓資料庫稽核規格寫入稽核記錄。 您可以使用 CREATE AUDIT WITH GUID **=** _\<來源伺服器稽核的 GUID_> 命令來進行這項設定。  
+-   鏡像伺服器必須具有相同 GUID 的稽核，才能讓資料庫稽核規格寫入稽核記錄。 您可使用 CREATE AUDIT WITH GUID **=** _\<GUID from source Server Audit_> 命令來設定此項目。  
   
 -   如果是二進位檔案目標，鏡像伺服器服務帳戶必須具有寫入稽核記錄之位置的適當權限。  
   
@@ -214,7 +215,7 @@ ms.locfileid: "80243408"
  [DDL 觸發程序](../../../relational-databases/triggers/ddl-triggers.md)  
  說明如何使用資料定義語言 (DDL) 觸發程序來追蹤資料庫的變更。  
   
- [Microsoft TechNet：SQL Server TechCenter：SQL Server 2005 安全性和保護](https://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet：SQL Server TechCenter：SQL Server 2005 安全性與保護](https://go.microsoft.com/fwlink/?LinkId=101152)  
  提供有關 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全性的最新資訊。  
   
 ## <a name="see-also"></a>另請參閱  

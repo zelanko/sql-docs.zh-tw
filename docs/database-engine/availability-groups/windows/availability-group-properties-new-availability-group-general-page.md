@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f379d55d2728d19a3321e99b342d8597622a6fc0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: df0484ee5fdbd6dc5890c661cf1d0cf914fe3289
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75254084"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900393"
 ---
 # <a name="availability-group-properties-new-availability-group-general-page"></a>可用性群組屬性：新增可用性群組 (一般頁面)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主題適用於 [新增可用性群組]  對話方塊和 [可用性群組屬性]  對話方塊的 [一般]  索引標籤。  [新增可用性群組]  對話方塊可讓您建立新的可用性群組，而不需要使用 [[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]]。 [可用性群組屬性]  對話方塊可讓您檢視和改變現有可用性群組的組態。  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  本主題適用於 [新增可用性群組] 對話方塊和 [可用性群組屬性] 對話方塊的 [一般] 索引標籤。  [新增可用性群組] 對話方塊可讓您建立新的可用性群組，而不需要使用 [[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]]。 [可用性群組屬性] 對話方塊可讓您檢視和改變現有可用性群組的組態。  
   
  **若要檢視可用性群組屬性**  
   
@@ -30,7 +30,7 @@ ms.locfileid: "75254084"
   
 -   [使用 AlwaysOn 儀表板 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  **可用性群組名稱**  
  可用性群組的名稱。 這是使用者指定的名稱，它在 Windows Server 容錯移轉叢集 (WSFC) 內必須是唯一的。  
   

@@ -3,16 +3,16 @@ title: Linux 上 SQL Server 2019 的版本資訊
 description: 此文章包含在 Linux 上執行之 SQL Server 2019 的版本資訊與支援功能。 其中包含最新版本和數個先前版本的版本資訊。
 author: VanMSFT
 ms.author: vanto
-ms.date: 03/31/2020
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 7782806a1ba44c4f18c4005dfa592998cc9f026b
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: b9b16d15bd3b819e0e14932e42db791118cf4e1e
+ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81301712"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85215818"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>Linux 上 SQL Server 2019 的版本資訊
 
@@ -23,17 +23,7 @@ ms.locfileid: "81301712"
 > [!TIP]
 > 若要了解 SQL Server 2019 中的新 Linux 功能，請參閱 [SQL Server 2019 中的新功能](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sql-server-on-linux)。
 
-## <a name="supported-platforms"></a>支援的平台
-
-| 平台 | 檔案系統 | 安裝指南 |
-|-----|-----|-----|
-| Red Hat Enterprise Linux 7.3, 7.4, 7.5, 7.6, 或 8 伺服器 | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-red-hat.md) | 
-| SUSE Enterprise Linux Server v12 SP2、SP3、SP4 或 SP5 | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-suse.md) |
-| Ubuntu 16.04 LTS、18.04 LTS | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-ubuntu.md) | 
-| Windows、Mac 或 Linux 上的 Docker Engine 1.8+ | N/A | [安裝指南](quickstart-install-connect-docker.md) | 
-
-> [!TIP]
-> 如需詳細資訊，請檢閱適用於 Linux 上的 SQL Server 的[系統需求](sql-server-linux-setup.md#system)。 如需適用於 SQL Server 2017 的最新支援原則，請參閱 [Microsoft SQL Server 的技術支援原則](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)。
+[!INCLUDE [linux-supported-platfoms-2019](../includes/linux-supported-platfoms-2019.md)]
 
 ## <a name="tools"></a>工具
 
@@ -45,6 +35,7 @@ ms.locfileid: "81301712"
 
 | 版本                   | 版本       | 發行日期 |
 |---------------------------|---------------|--------------|
+| [CU5](#cu5)               | 15.0.4043.16  | 2020-06-22   |
 | [CU4](#cu4)               | 15.0.4033.1   | 2020-03-31   |
 | [CU3](#cu3)               | 15.0.4023.6   | 2020-03-12   |
 | [CU2](#cu2)               | 15.0.4013.40  | 2020-02-13   |
@@ -64,6 +55,25 @@ ms.locfileid: "81301712"
 - [在 Linux 上安裝 SQL Server 2019 機器學習服務 R 和 Python 支援](sql-server-linux-setup-machine-learning.md)
 - [安裝 PolyBase 套件](../relational-databases/polybase/polybase-linux-setup.md)
 - [啟用 SQL Server Agent](sql-server-linux-setup-sql-agent.md)
+
+## <a name="cu5-june-2020"></a><a id="cu5"></a> CU5 (2020 年 6 月)
+
+此為 SQL Server 2019 (15.x) 的累積更新 5 (CU5) 版本。 此版次的 SQL Server 資料庫引擎版本為 15.0.4043.16。 如需修正和改善的資訊，請參閱 <https://support.microsoft.com/help/4552255>
+
+### <a name="package-details"></a>套件詳細資料
+
+針對手動或離線套件安裝，您可以運用下表中的資訊下載 RPM 和 Debian 套件：
+
+> [!NOTE]
+> 從 CU1 開始，Red Hat 的離線套件安裝連結會指向 RHEL 8 套件。 如果您要尋找 RHEL 7 套件，請參閱下載路徑 <https://packages.microsoft.com/rhel/7/mssql-server-2019/>
+>
+> SQL Server 2019 從 CU3 開始支援 **Ubuntu 18.04**。 Ubuntu 的離線套件安裝連結會指向 Ubuntu 18.04 套件。 若要尋找 Ubuntu 16.04 套件，請參閱下載路徑 <https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/>
+
+| Package | 套件版本 | 下載 |
+|-----|-----|-----|
+| Red Hat RPM 套件 | 15.0.4043.16-4 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-15.0.4043.16-4.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-ha-15.0.4043.16-4.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-fts-15.0.4043.16-4.x86_64.rpm)</br>[擴充性 RPM 套件](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-15.0.4043.16-4.x86_64.rpm)</br>[Java 擴充性 RPM 套件](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-java-15.0.4043.16-4.x86_64.rpm)</br>[PolyBase RPM 套件](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-polybase-15.0.4043.16-4.x86_64.rpm)|
+| SLES RPM 套件 | 15.0.4043.16-4 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.4043.16-4.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.4043.16-4.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.4043.16-4.x86_64.rpm)</br>[擴充性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.4043.16-4.x86_64.rpm)</br>[Java 擴充性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.4043.16-4.x86_64.rpm)</br>[PolyBase RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.4043.16-4.x86_64.rpm)|
+| Ubuntu 18.04 Debian 套件 | 15.0.4043.16-4 | [引擎 Debian 套件](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4043.16-4_amd64.deb)</br>[高可用性 Debian 套件](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4043.16-4_amd64.deb)</br>[全文檢索搜尋 Debian 套件](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4043.16-4_amd64.deb)</br>[擴充性 Debian 套件](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4043.16-4_amd64.deb)</br>[Java 擴充性 Debian 套件](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4043.16-4_amd64.deb)</br>[PolyBase RPM 套件](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4043.16-4_amd64.deb)|
 
 ## <a name="cu4-april-2020"></a><a id="cu4"></a> CU4 (2020 年 4 月)
 
@@ -264,7 +274,7 @@ ms.locfileid: "81301712"
    sudo MSSQL_LCID=<LcidValue> /opt/mssql/bin/mssql-conf setup
    ```
 
-- 執行 mssql-conf 設定及執行非英文的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝時，「正在設定 SQL Server...」當地語系化文字後面會顯示不正確的擴充字元。 或者，針對非拉丁文的安裝，此句子可能會完全遺失。 遺失的句子應該會顯示下列當地語系化字串：「已成功處理授權 PID。 新的版本為 [\<名稱\> 版本]」。 此字串的輸出只是用來提供資訊，下一個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 累積更新將會處理所有語言的這個問題。 這不會以任何方式影響成功的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝。 
+- 執行 mssql-conf 設定及執行非英文的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝時，「正在設定 SQL Server...」當地語系化文字後面會顯示不正確的擴充字元。 或者，針對非拉丁文的安裝，此句子可能會完全遺失。 遺失的句子應該會顯示下列當地語系化字串：「已成功處理授權 PID。 新的版本為 [\<Name\> 版本]」。 此字串的輸出只是用來提供資訊，下一個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 累積更新將會處理所有語言的這個問題。 這不會以任何方式影響成功的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝。 
 
 #### <a name="full-text-search"></a>全文檢索搜尋
 

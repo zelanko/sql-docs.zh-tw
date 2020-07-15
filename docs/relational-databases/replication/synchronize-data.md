@@ -1,5 +1,6 @@
 ---
 title: 同步處理資料 | Microsoft Docs
+description: 同步處理複寫中的資料，是指在 SQL Server 中的發行者與訂閱者之間傳播資料與結構描述變更。
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -22,15 +23,15 @@ ms.assetid: 724802f7-7d69-46d3-a330-bd8aa7f53114
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b458b4555276f4e9f6af1ce72e5981e06c984407
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a6c7ba7deddb6b2728a846cb454917ee6b065bf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287007"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716684"
 ---
 # <a name="synchronize-data"></a>同步處理資料
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   同步資料是指在「訂閱者」端套用初始快照集後，在「發行者」與「訂閱者」之間傳播資料和結構描述變更的處理。 同步處理將會：  
   
 -   連續發生，一般出現在異動複寫中。  
@@ -59,9 +60,9 @@ ms.locfileid: "76287007"
   
  **若要檢視並解決同步處理衝突**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[檢視並解決合併式發行集的資料衝突 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[檢視並解決合併式發行集的資料衝突 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md) (檢視交易式發行集的資料衝突 &#40;SQL Server Management Studio&#41;)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[檢視交易式發行集的資料衝突 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   
 ## <a name="executing-code-during-synchronization"></a>在同步處理期間執行程式碼  
  複寫支援兩種同步處理時的程式碼執行方法  

@@ -1,5 +1,6 @@
 ---
 title: 建立資料庫主要金鑰 | Microsoft 文件
+description: 使用 Transact-SQL 建立資料庫主要金鑰。 請確定擁有必要權限。
 ms.custom: ''
 ms.date: 09/12/2019
 ms.prod: sql
@@ -13,16 +14,16 @@ ms.assetid: 8cb24263-e97d-4e4d-9429-6cf494a4d5eb
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb8730a00c09b57fdabf3465b290cd2df63b1bc4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 200f10a76629eb94e1e9fc1b3e1c29811d9e7f67
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79510029"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005578"
 ---
 # <a name="create-a-database-master-key"></a>建立資料庫主要金鑰
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ，建立 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中的資料庫主要金鑰。
 
 ## <a name="security"></a>安全性
@@ -37,7 +38,7 @@ ms.locfileid: "79510029"
 
 1. 選擇密碼以加密即將儲存於資料庫的主要金鑰副本。
 2. 在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。
-3. 展開 [系統資料庫]  ，以滑鼠右鍵按一下 `master`，然後按一下 [新增查詢]  。
+3. 展開 [系統資料庫]，以滑鼠右鍵按一下 `master`，然後按一下 [新增查詢]。
 4. 複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。
 
    ```sql

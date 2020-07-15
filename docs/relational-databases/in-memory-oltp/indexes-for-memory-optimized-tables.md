@@ -1,5 +1,6 @@
 ---
 title: 記憶體最佳化資料表的索引 | Microsoft Docs
+description: 了解經記憶體最佳化資料表上的索引，與 SQL Server 和 Azure SQL Database 中磁碟資料表上的傳統索引有何不同。
 ms.custom: ''
 ms.date: 09/16/2019
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca93055e20dc550e4c9d4ee4122828529a3b3a9b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: bbc6a5f1be39d3b46de9c9cb9abea5e17ecc0b41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980640"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723109"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>記憶體最佳化資料表上的索引
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 所有記憶體最佳化資料表都必須至少有一個索引，因為它是將資料列連線在一起的索引。 在記憶體最佳化資料表上，每個索引也會進行記憶體最佳化。 有數種方式可用來區分經記憶體最佳化的資料表上的索引和以磁碟為基礎之資料表上的傳統索引：  
 
@@ -35,9 +36,9 @@ ms.locfileid: "80980640"
 - 雜湊索引  
 - 記憶體最佳化非叢集索引 (表示 B 型樹狀結構的預設內部結構) 
   
-「雜湊」  索引會在[記憶體最佳化資料表的雜湊索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)中詳細討論。  
-「非叢集」  索引會在[記憶體最佳化資料表的非叢集索引](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)中詳細討論。  
-「資料行存放區」  索引會在[另一篇文章](../../relational-databases/indexes/columnstore-indexes-overview.md)中討論。  
+「雜湊」索引會在[記憶體最佳化資料表的雜湊索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)中詳細討論。  
+「非叢集」索引會在[記憶體最佳化資料表的非叢集索引](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)中詳細討論。  
+「資料行存放區」索引會在[另一篇文章](../../relational-databases/indexes/columnstore-indexes-overview.md)中討論。  
 
 ## <a name="syntax-for-memory-optimized-indexes"></a>記憶體最佳化索引的語法  
   
@@ -213,7 +214,7 @@ WHERE col1 = 'dn';
 
 ## <a name="summary-table-to-compare-index-use-scenarios"></a>比較索引使用狀況案例的摘要資料表  
   
-下表列出各種索引類型支援的所有運算。 「是」  表示索引可以有效率地為要求提供服務，「否」  則表示索引無法有效率地滿足要求。 
+下表列出各種索引類型支援的所有運算。 「是」表示索引可以有效率地為要求提供服務，「否」則表示索引無法有效率地滿足要求。 
   
 | 作業 | 記憶體最佳化、 <br/> 雜湊 | 記憶體最佳化、 <br/> 非叢集 | 以磁碟為基礎、 <br/> (非)叢集 |  
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  

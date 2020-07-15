@@ -32,15 +32,15 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ad386f4137b43746eed82665715e2fef5957a79
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: daf046f217c37da8868cce538b4c136f8b782d82
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82181093"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009266"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的資料表或檢視表中加入一個或多個資料列。 如需範例，請參閱[範例](#InsertExamples)。  
@@ -199,7 +199,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
 OUTPUT 子句  
  在插入作業中，傳回插入的資料列。 這些結果可以傳回給處理應用程式或插入資料表或資料表變數，以便進一步處理。  
   
- OUTPUT 子句不支援 DML 陳述式 (其參考本機資料分割檢視、分散式資料分割檢視或遠端資料表)，或包含 *execute_statement* 的 INSERT 陳述式。 OUTPUT INTO 子句不支援含有 \<dml_table_source> 子句的 INSERT 陳述式 。 如需此子句的引數和行為詳細資訊，請參閱 [OUTPUT 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)。
+ OUTPUT 子句不支援 DML 陳述式 (其參考本機資料分割檢視、分散式資料分割檢視或遠端資料表)，或包含 *execute_statement* 的 INSERT 陳述式。 OUTPUT INTO 子句不支援含有 \<dml_table_source> 子句的 INSERT 陳述式。 如需此子句的引數和行為詳細資訊，請參閱 [OUTPUT 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)。
   
  VALUES  
  導入要插入的資料值清單。 *column_list* (如果有指定) 或資料表中的每個資料行，都必須有一個資料值。 這份值清單必須括在括號中。  
@@ -233,7 +233,7 @@ OUTPUT 子句
  您無法將資料表值參數指定為 INSERT EXEC 陳述式的目標。不過，您可以在 INSERT EXEC 字串或預存程序中，將它指定為來源。 如需詳細資訊，請參閱[使用資料表值參數 &#40;Database Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)。  
   
  \<dml_table_source>  
- 指定插入目標資料表中的資料列就是 INSERT、UPDATE、DELETE 或 MERGE 陳述式的 OUTPUT 子句所傳回的資料列 (可選擇由 WHERE 子句篩選)。 如果指定 \<dml_table_source>，外部 INSERT 陳述式的目標必須符合以下限制： 
+ 指定插入目標資料表中的資料列就是 INSERT、UPDATE、DELETE 或 MERGE 陳述式的 OUTPUT 子句所傳回的資料列 (可選擇由 WHERE 子句篩選)。 如果指定 \<dml_table_source>，則外部 INSERT 陳述式的目標必須符合下列限制： 
   
 -   它必須是基底資料表，而不是檢視表。  
   
@@ -251,13 +251,13 @@ OUTPUT 子句
  這是逗號分隔的清單，可指定要插入之 OUTPUT 子句所傳回的資料行。 \<select_list> 中的資料行必須與插入值的目標資料行相容。 \<select_list> 不能參考彙總函式或 TEXTPTR。 
   
 > [!NOTE]  
->  不論在 \<dml_statement_with_output_clause> 中對 SELECT 清單提列的變數做何變更，這些變數都會參考其原始值。  
+>  不論在 \<dml_statement_with_output_clause> 中對 SELECT 清單所列的變數做何變更，這些變數都會參考其原始值。  
   
  \<dml_statement_with_output_clause>  
  這是有效的 INSERT、UPDATE、DELETE 或 MERGE 陳述式，可在 OUTPUT 子句中傳回受影響的資料列。 此陳述式不能包含 WITH 子句，也不能以遠端資料表或資料分割檢視表為目標。 如果指定了 UPDATE 或 DELETE，它不能是以資料指標為基礎的 UPDATE 或 DELETE。 來源資料列不能當做巢狀 DML 陳述式來參考。  
   
  WHERE \<search_condition>  
- 這是包含有效 \<search_condition> 的任何 WHERE 子句，其可篩選 \<dml_statement_with_output_clause> 傳回的資料列。 如需詳細資訊，請參閱[搜尋條件 &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)。 當 \<search_condition> 用於此內容時，它不能包含子查詢、可執行資料存取的純量使用者定義函式、彙總函式、TEXTPTR 或是全文檢索搜尋述詞。 
+ 這是包含有效 \<search_condition> 的任何 WHERE 子句，可篩選 \<dml_statement_with_output_clause> 傳回的資料列。 如需詳細資訊，請參閱[搜尋條件 &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)。 當 \<search_condition> 用於此內容時，其不能包含子查詢、可執行資料存取的純量使用者定義函式、彙總函式、TEXTPTR 或是全文檢索搜尋述詞。 
   
  DEFAULT VALUES  
  **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
@@ -434,7 +434,7 @@ OUTPUT 子句
  本節的範例會使用所需的最少語法來示範 INSERT 陳述式的基本功能。  
   
 #### <a name="a-inserting-a-single-row-of-data"></a>A. 插入單一資料列  
- 下列範例會在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `Production.UnitMeasure` 資料表中插入一個資料列。 此資料表中的資料行為 `UnitMeasureCode`、`Name` 和 `ModifiedDate`。 由於所有資料行的值均已提供，並按資料表中資料行的相同順序列出；因此，您不需要在資料行清單中指定資料行名稱。   
+ 下列範例會在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `Production.UnitMeasure` 資料表中插入一個資料列。 此資料表中的資料行為 `UnitMeasureCode`、`Name` 和 `ModifiedDate`。 由於所有資料行的值均已提供，並按資料表中資料行的相同順序列出；因此，您不需要在資料行清單中指定資料行名稱。  
   
 ```sql
 INSERT INTO Production.UnitMeasure  

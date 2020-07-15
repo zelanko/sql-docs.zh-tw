@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eaac8c264caf9009006853e0f02e258ad5d7408f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e6a000df12b44b2da1913f45febfaa93e39f7af1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165737"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881222"
 ---
 # <a name="temporal-table-usage-scenarios"></a>時態表使用案例
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 時態表在需要追蹤資料變更歷程記錄的案例中通常很有用。 建議您在下列使用案例中考慮使用時態表，以獲得卓越的生產力優勢。
 
@@ -141,8 +141,8 @@ FROM Employee
 
 > [!TIP]
 > 以 FOR SYSTEM_TIME 在 Temporal 子句中指定的篩選條件可進行 SARG (也就是說， SQL Server 可以利用基礎叢集索引來執行搜尋作業，而非掃描作業)。
-> 如果您直接查詢記錄資料表，請以 \<期間資料行> {< | > | =, ...} date_condition AT TIME ZONE 'UTC' 的格式指定篩選，來確保您的篩選條件也是可進行 SARG 的。
-> 如果您將 AT TIME ZONE 套用到期間資料行，SQL Server 將會執行資料表/索引掃描，這可能會耗費相當多的資源。 請在查詢中避免此類條件：\<期間資料行> AT TIME ZONE '\<您的時區>' > {< | > | =, ...} date_condition。
+> 若直接查詢記錄資料表，請確定篩選條件透過指定 \<period column> {< | > | =, ...} 此形式的篩選也能夠使用 SARG date_condition AT TIME ZONE 'UTC' 的格式指定篩選，來確保您的篩選條件也是可進行 SARG 的。
+> 如果您將 AT TIME ZONE 套用到期間資料行，SQL Server 將會執行資料表/索引掃描，這可能會耗費相當多的資源。 請在查詢中避免這類條件：\<period column> AT TIME ZONE '\<your time zone>' > {< | > | =, ...} date_condition。
 
 另請參閱：[查詢系統建立版本時態表中的資料](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)。
 

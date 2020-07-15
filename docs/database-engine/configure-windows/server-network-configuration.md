@@ -1,5 +1,6 @@
 ---
 title: 伺服器網路組態 | Microsoft Docs
+description: 熟悉 SQL Server 網路設定工作。 檢視啟用通訊協定、設定加密、註冊 SPN 和其他動作的資訊。
 ms.custom: ''
 ms.date: 07/27/2016
 ms.prod: sql
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - ports [SQL Server], changing
 - server configuration [SQL Server]
 ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 826a2b2305354807b6db7bbb167f86d165b98b45
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ef32cd47093c2397752c01dc49dfa2af494fd8fe
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025607"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724016"
 ---
 # <a name="server-network-configuration"></a>伺服器網路組態
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   伺服器網路組態工作包括啟用通訊協定、修改通訊協定使用的通訊埠或管道、設定加密選項、設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務、在網路上公開或隱藏 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 以及註冊伺服器主體名稱。 大部分的情況下，您不需要變更伺服器網路組態。 除非有特殊的網路需求時，才需要重新設定伺服器網路通訊協定。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的網路組態是利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員進行設定。 如果是舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請使用這些產品隨附的伺服器網路公用程式。  
@@ -40,7 +41,7 @@ ms.locfileid: "68025607"
  設定為動態通訊埠時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 每次啟動時可能會變更所使用的通訊埠。 透過防火牆連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，您必須開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所使用的通訊埠。 請設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用特定的通訊埠，讓您可以設定防火牆來允許對伺服器的通訊。 如需詳細資訊，請參閱[設定伺服器接聽特定 TCP 通訊埠 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)。  
   
 ### <a name="changing-a-named-pipe"></a>變更具名管道  
- 您可以設定具名管道通訊協定來接聽指定的具名管道。 依預設，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的預設執行個體會接聽管道 \\\\.\pipe\sql\query (對於預設執行個體) 和 \\\\.\pipe\MSSQL$ *\<執行個體名稱>* \sql\query (對於具名執行個體)。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 只能接聽一個具名管道，但您可以視需要將該管道變更為其他名稱。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務可協助用戶端識別所連接的管道。 如需詳細資訊，請參閱[設定接聽替代管道的伺服器 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-an-alternate-pipe.md)。  
+ 您可以設定具名管道通訊協定來接聽指定的具名管道。 根據預設，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的預設執行個體會在管道 \\\\.\pipe\sql\query 上接聽 (預設執行個體)，或在管道 \\\\.\pipe\MSSQL$ *\<instancename>* \sql\query 上接聽 (具名執行個體)。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 只能接聽一個具名管道，但您可以視需要將該管道變更為其他名稱。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務可協助用戶端識別所連接的管道。 如需詳細資訊，請參閱[設定接聽替代管道的伺服器 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-an-alternate-pipe.md)。  
   
 ## <a name="force-encryption"></a>強制加密  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 可以設定為和用戶端應用程式通訊時需要加密。 如需詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  

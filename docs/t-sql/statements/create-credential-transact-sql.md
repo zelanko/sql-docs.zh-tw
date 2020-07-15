@@ -24,16 +24,16 @@ ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 94b2e39d9767a8f75660b533231e5fe4ac16d8de
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 5a83ae08c7392dcd26b22c304442c2872dc9213d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633255"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881916"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 建立伺服器層級認證。 認證是包含驗證資訊的記錄，而該資訊是連線到 SQL Server 外部資源時的必要資訊。 大部分認證都包含 Windows 使用者和密碼。 例如，將資料庫備份儲存至某位置，可能需要 SQL Server 提供特殊的認證才能存取該位置。 如需詳細資訊，請參閱[認證 (資料引擎)](../../relational-databases/security/authentication-access/credentials-database-engine.md)。
 
@@ -65,7 +65,7 @@ IDENTITY **='** _identity\_name_ **'** 指定連接到伺服器外部時要使�
 
 SECRET **='** _secret_ **'** 指定外寄驗證所需的祕密。
 
-當認證用來存取 Azure Key Vault 時，**CREATE CREDENTIAL** 的 **SECRET** 引數在 Azure Active Directory 中需要**服務主體**的 *\<Client ID>* (不含連字號) 和 *\<Secret>* 才能一起傳遞，並且之間沒有空格。 請參閱以下的範例 C。 當認證使用共用存取簽章時，**SECRET** 是共用存取簽章權杖。 請參閱下方範例 D。 如需有關在 Azure 容器上建立預存存取原則與共用存取簽章的詳細資訊，請參閱[第 1 課：在 Azure 容器上建立預存存取原則和共用存取簽章](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#1---create-stored-access-policy-and-shared-access-storage)。
+當認證用來存取 Azure Key Vault 時，**CREATE CREDENTIAL** 其 **SECRET** 引數要求 Azure Active Directory 中**服務主體**的 *\<Client ID>* (不含連字號) 和 *\<Secret>* 一併傳遞，且兩者之間沒有空格。 請參閱以下的範例 C。 當認證使用共用存取簽章時，**SECRET** 是共用存取簽章權杖。 請參閱下方範例 D。 如需有關在 Azure 容器上建立預存存取原則與共用存取簽章的詳細資訊，請參閱[第 1 課：在 Azure 容器上建立預存存取原則和共用存取簽章](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#1---create-stored-access-policy-and-shared-access-storage)。
 
 FOR CRYPTOGRAPHIC PROVIDER *cryptographic_provider_name* 指定*企業金鑰管理 (EKM) 提供者*的名稱。 如需金鑰管理的詳細資訊，請參閱[可延伸金鑰管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。
 
@@ -117,7 +117,7 @@ ADD CREDENTIAL CredentialForEKM;
 下列範例會建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證，供 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在使用**適用於 Microsoft Azure Key Vault 的 SQL Server 連接器**時用於存取 Azure Key Vault。 如需使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接器的完整範例，請參閱[使用 Azure Key Vault 進行可延伸金鑰管理 &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)。
 
 > [!IMPORTANT]
-> **CREATE CREDENTIAL** 的 **IDENTITY** 引數需要金鑰保存庫名稱。 **CREATE CREDENTIAL** 的 **SECRET** 引數要求 *\<Client ID>* (不含連字號) 和 *\<Secret>* 一併傳遞，而且兩者之間不含空格。
+> **CREATE CREDENTIAL** 的 **IDENTITY** 引數需要金鑰保存庫名稱。 **CREATE CREDENTIAL** 的 **SECRET** 引數要求 *\<Client ID>* (不含連字號) 和 *\<Secret>* 一併傳遞，且兩者之間不含空格。
 
  在下列範例中， **用戶端識別碼** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) 已移除連字號並以字串 `EF5C8E094D2A4A769998D93440D8115D` 輸入，而 **密碼** 會以字串 *SECRET_DBEngine*來表示。
 

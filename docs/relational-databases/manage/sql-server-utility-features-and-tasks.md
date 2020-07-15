@@ -1,5 +1,6 @@
 ---
 title: SQL Server 公用程式的功能與工作 | Microsoft Docs
+description: 更加了解 SQL Server 公用程式。 了解其功能，以及了解可如何使用此功能來監視 SQL Server 環境。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 08c4877b4fc3280826100cdfe7f0dfcad716ca22
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c48779de7f7edccd4401e1d60740b7cff6a046cd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115309"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755696"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>SQL Server 公用程式的功能與工作
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客戶有一項需求，也就是以整體方式管理其 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境，這項需求會在這一版中透過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內應用程式和多伺服器管理的概念來滿足。  
   
 ## <a name="benefits-of-the-sql-server-utility"></a>SQL Server 公用程式的優點  

@@ -1,5 +1,6 @@
 ---
 title: 與巢狀 FOR XML 查詢比較的 FOR XML 查詢 | Microsoft Docs
+description: 藉由檢視將單一層級 FOR XML 查詢與巢狀 FOR XML 查詢做比較的範例，以了解巢狀 FOR XML 查詢的優點。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 94e88af049ca5db3bb975c787cda18176d655346
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: bae8d986b497e1d641dcc972ece88e2b579847fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665158"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729965"
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>與巢狀 FOR XML 查詢比較的 FOR XML 查詢
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   本主題會將單一層 FOR XML 查詢與巢狀 FOR XML 查詢做比較。 使用巢狀 FOR XML 查詢的其中一個好處，就是可以針對查詢結果指定屬性中心及元素中心 XML 的組合。 以下範例將提供示範。  
   
 ## <a name="example"></a>範例  

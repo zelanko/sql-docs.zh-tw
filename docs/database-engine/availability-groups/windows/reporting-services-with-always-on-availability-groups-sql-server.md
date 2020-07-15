@@ -1,6 +1,6 @@
 ---
 title: 搭配可用性群組的 Reporting Services
-description: 了解如何搭配 Always On 可用性群組設定 SQL Server Reporting Services (SSRS)。
+description: 了解如何搭配 SQL Server 中的 Always On 可用性群組來設定 Reporting Services。 支援的功能會因不同案例而不同。
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 09a19680d9fff6a8d907dd17f3399ff632cba19b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2aec52249b366eac2057fe8cde5e3829e5125a5d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75243615"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893105"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services 與 AlwaysOn 可用性群組 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   本主題包含將 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 設定為使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)](AG) 的相關資訊。 使用 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的三種案例包括報表資料來源的資料庫、報表伺服器資料庫以及報表設計。 這三種案例的支援功能和必要組態有所不同。  
   
@@ -145,7 +145,7 @@ ms.locfileid: "75243615"
   
 -   **報表伺服器認證：** 您必須在次要與主要複本上建立適當的報表伺服器認證。 確切步驟主要取決於您在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 環境中使用的驗證類型：Windows [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服務帳戶、Windows 使用者帳戶或 SQL Server 驗證。 如需詳細資訊，請參閱[設定報表伺服器資料庫連接 &#40;SSRS 組態管理員&#41;](../../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   
--   將資料庫連接更新為使用接聽程式 DNS 名稱。 若為原生模式報表伺服器，請在 **組態管理員中變更** [報表伺服器資料庫名稱] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 。 若為 SharePoint 模式，請為 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服務應用程式變更 [資料庫伺服器名稱]  。  
+-   將資料庫連接更新為使用接聽程式 DNS 名稱。 若為原生模式報表伺服器，請在 **組態管理員中變更** [報表伺服器資料庫名稱] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 。 若為 SharePoint 模式，請為 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服務應用程式變更 [資料庫伺服器名稱]。  
   
 ###  <a name="steps-to-complete-disaster-recovery-of-report-server-databases"></a><a name="bkmk_steps_to_complete_failover"></a> 完成報表伺服器資料庫之災害復原的步驟  
  您必須在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 容錯移轉至次要複本之後完成下列步驟：  

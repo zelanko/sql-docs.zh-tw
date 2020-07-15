@@ -1,6 +1,6 @@
 ---
 title: 傳輸安全性：可用性群組和資料庫鏡像
-description: 了解如何保護在參與裝載於 SQL Server 上的 Always On 可用性群組或資料庫鏡像工作階段的資料庫之間所交換訊息的傳輸。
+description: 了解如何保護參與裝載於 SQL Server 上 Always On 可用性群組或資料庫鏡像工作階段的資料庫之間所傳輸訊息。
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 85ca560e24fac75897d0b65946121e3ca4251e20
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 36c0f0d6ff5e4da43291f27c7f7bd47d1b736d1b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252753"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719997"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>傳輸安全性 - 資料庫鏡像 - AlwaysOn 可用性
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   傳輸安全性牽涉到驗證，以及對資料庫間交換的訊息進行加密 (選擇性)。 對於資料庫鏡像和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]而言，驗證與加密是針對資料庫鏡像端點所設定。 如需資料庫鏡像端點的簡介，請參閱 [資料庫鏡像端點 &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)。  
   

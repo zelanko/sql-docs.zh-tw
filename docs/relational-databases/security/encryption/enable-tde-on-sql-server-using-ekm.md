@@ -1,5 +1,6 @@
 ---
 title: 使用 EKM 在 SQL Server 上啟用 TDE | Microsoft Docs
+description: 搭配 Transact-SQL 使用可延伸金鑰管理模組中的非對稱金鑰，在 SQL Server 中啟用透明資料加密 (TDE) 以保護資料庫金鑰。
 ms.custom: ''
 ms.date: 07/25/2019
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 2507328ccc1d2a8baa47e97353c17ccc0345d3d7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 205f1f3bbb4268545848903aa8b71915f746c601
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957432"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882169"
 ---
 # <a name="enable-tde-on-sql-server-using-ekm"></a>使用 EKM 在 SQL Server 上啟用 TDE
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   本文描述如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中透過使用可延伸金鑰管理 (EKM) 模組中所儲存的非對稱金鑰，啟用透明資料加密 (TDE) 以保護資料庫加密金鑰。  
   
  TDE 會使用稱為資料庫加密金鑰的對稱金鑰來加密整個資料庫的儲存體。 也可以使用憑證來保護資料庫加密金鑰，該憑證是由 master 資料庫的資料庫主要金鑰所保護。 如需有關使用資料庫主要金鑰來保護資料庫加密金鑰的詳細資訊，請參閱[透明資料加密 &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)。 如需 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在 Azure VM 上執行時設定 TDE 的相關資訊，請參閱[使用 Azure 金鑰保存庫進行可延伸金鑰管理 &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)。 如需使用 Azure 金鑰保存庫中的金鑰設定 TDE 的相關資訊，請參閱 [搭配使用 SQL Server 連接器與 SQL 加密功能](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)。 

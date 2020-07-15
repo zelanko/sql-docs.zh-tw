@@ -1,5 +1,6 @@
 ---
 title: 設定資料庫引擎執行個體 (SQL Server) | Microsoft Docs
+description: 熟悉 SQL Server 組態工作，如此即可設定資料庫引擎執行個體，以符合效能和可用性需求。
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 84e36fcb-2c78-48e8-8e4b-bf784a3ee557
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4eee1bc0ed571516463541fe1fcc38e27dcafd98
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b2b3900c41067e7f46f392ceab913f1d8d096816
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012787"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751934"
 ---
 # <a name="configure-database-engine-instances-sql-server"></a>設定 Database Engine 執行個體 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   每個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體都必須設定成符合針對執行個體所裝載之資料庫定義的效能和可用性需求。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 包含的組態選項可控制如資源使用狀況等行為，或是如稽核或觸發程序遞迴等功能的可用性。  
   
 ## <a name="instance-configuration"></a>執行個體組態  

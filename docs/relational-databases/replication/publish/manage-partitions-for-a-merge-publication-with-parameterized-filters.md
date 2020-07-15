@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9f375d81d77fb943f6cfe1b911ab8bcc9f385533
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4793260717225b731f6675098a8fa187884de206
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321220"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882182"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>使用參數化篩選管理合併式發行集的資料分割
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中使用參數化篩選管理合併式發行集的資料分割。 參數化資料列篩選器可用來產生非重疊的資料分割。 這些資料分割可以限制為只有一個訂閱能收到給定資料分割。 在這種狀況中，大量的訂閱者會導致大量的資料分割，而這種情況則需要同等數量的資料分割快照集。 如需詳細資訊，請參閱＜ [參數化資料列篩選器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞。  
   
  **本主題內容**  
@@ -34,7 +34,7 @@ ms.locfileid: "75321220"
   
 -   **若要使用參數化篩選管理合併式發行集的資料分割，請使用：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -49,11 +49,11 @@ ms.locfileid: "75321220"
 -   當發行集擁有會產生具有非重疊資料分割之訂閱的參數化篩選時，以及遺失了特定訂閱而需要重新建立時，您必須執行下列作業：移除先前訂閱的資料分割、重新建立訂閱，然後重新建立資料分割。 如需詳細資訊，請參閱＜ [參數化資料列篩選器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞。 複寫會在發行集建立指令碼產生時，針對現有的「訂閱者」資料分割產生建立指令碼。 如需詳細資訊，請參閱 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 您可以在 [發行集屬性 - \<發行集>] 對話方塊的 [資料分割] 頁面上，管理資料分割。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。 您可以在此頁面中：建立和刪除資料分割；允許「訂閱者」初始化快照集產生和傳遞；為一個或多個資料分割產生快照集；清除快照集。  
+ 您可在 [發行集屬性 - \<Publication>] 對話方塊的 [資料分割] 頁面上管理資料分割。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。 您可以在此頁面中：建立和刪除資料分割；允許「訂閱者」初始化快照集產生和傳遞；為一個或多個資料分割產生快照集；清除快照集。  
   
 #### <a name="to-create-a-partition"></a>若要建立資料分割  
   
-1.  在 [發行集屬性 - \<發行集>] 對話方塊的 [資料分割] 頁面上，按一下 [新增]。  
+1.  在 [發行集屬性 - \<Publication>] 對話方塊的 [資料分割] 頁面上，按一下 [新增]。  
   
 2.  在 **[加入資料分割]** 對話方塊中，輸入與您要建立之資料分割相關聯的 **[HOST_NAME()]** 和/或 **[SUSER_SNAME()]** 值。  
   

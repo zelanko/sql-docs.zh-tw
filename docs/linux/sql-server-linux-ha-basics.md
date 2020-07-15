@@ -9,16 +9,16 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c999228cdcd78ca2996ee134266a36543e97d913
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c7b22e569f17ca7297483d0b5286ecc77a9a14e5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216678"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895315"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>適用於 Linux 部署的 SQL Server 可用性基本概念
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 從 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 開始，Linux 和 Windows 上均支援 [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]。 如同 Windows 型 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 部署，[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 資料庫和執行個體必須在 Linux 下具有高可用性。 此文章涵蓋規劃和部署高可用性 Linux 型 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 資料庫和執行個體的技術層面，以及一些與 Windows 型安裝的差異。 因為 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 對 Linux 專業人員而言可能是新的，而 Linux 對 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 專業人員而言可能是新的，所以，此文章有時會介紹一些某些人可能很熟悉但其他人並不熟悉的概念。
 
@@ -31,7 +31,7 @@ ms.locfileid: "80216678"
 在 Windows 上，FCI 一律需要基礎 Windows Server 容錯移轉叢集 (WSFC)。 視部署案例而定，AG 通常需要基礎 WSFC，但 [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] 中新的「無」變體除外。 WSFC 不存在於 Linux 中。 Linux 中的叢集實作會在 [Linux 上適用於 Always On 可用性群組和容錯移轉叢集執行個體的 Pacemaker](#pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux) 一節中進行討論。
 
 ## <a name="a-quick-linux-primer"></a>Linux 快速入門
-雖然有些 Linux 安裝可能會與介面一併安裝，但大部分都不會，這表示在作業系統層上幾乎所有內容都是透過命令列完成的。 在 Linux 世界中，適用於此命令列的常見詞彙是「Bash 殼層」  。
+雖然有些 Linux 安裝可能會與介面一併安裝，但大部分都不會，這表示在作業系統層上幾乎所有內容都是透過命令列完成的。 在 Linux 世界中，適用於此命令列的常見詞彙是「Bash 殼層」。
 
 在 Linux 中，許多命令都需要以提高的權限來執行，非常類似於 Windows Server 中必須以系統管理員身分完成許多工作。 有兩個主要方法可使用提高的權限來執行：
 1. 在適當使用者的內容中執行。 若要變更為不同的使用者，請使用 `su` 命令。 如果 `su` 是在沒有使用者名稱的情況下單獨執行，只要您知道密碼，現在就能以 *root* 身分位於殼層中。
@@ -169,10 +169,13 @@ WSFC 和 Pacemaker 叢集具備資源的概念。 資源是在叢集內容中執
 
 Pacemaker 具有標準和複製資源。 複製資源是在所有節點上同時執行的資源。 基於負載平衡目的，在多個節點上執行的 IP 位址即為一例。 針對 FCI 建立的任何資源都會使用標準資源，因為在任何指定的時間中，只有一個節點可以裝載 FCI。
 
+[!INCLUDE [bias-sensitive-term-t](../includes/bias-sensitive-term-t.md)]
+
 建立 AG 時，它需要一個特殊形式的複製資源 (稱為多狀態資源)。 當 AG 只有一個主要複本時，AG 本身會在其設定來處理的所有節點上執行，而且可能允許唯讀存取之類的動作。 由於這是節點的「即時」使用方式，因此，資源具有兩種狀態的概念：「主要」和「從屬」。 如需詳細資訊，請參閱[多狀態資源：含有多重模式的資源](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/s1-multistateresource-HAAR.html)。
 
 #### <a name="resource-groupssets"></a>資源群組/集合
-類似於 WSFC 中的角色，Pacemaker 叢集具有資源群組的概念。 資源群組 (在 SLES 中稱為集合) 是一個資源集合，可一起運作，並以單一單位形式從一個節點容錯移轉到另一個節點。 資源群組不能包含設定為「主要/從屬」的資源；因為，它們無法用於 AG。 雖然資源群組可用於 FCI，但這通常不是建議的設定。
+
+類似於 WSFC 中的角色，Pacemaker 叢集具有資源群組的概念。 資源群組 (在 SLES 中稱為「集合」) 是一起搭配運作的，且可作為單一單位從一個節點容錯移轉到另外一個節點的資源集合。 資源群組不能包含設為「主要/從屬」的資源；因此，資源群組無法用於 AG。 雖然資源群組可用於 FCI，但這通常不是建議的設定。
 
 #### <a name="constraints"></a>條件約束
 WSFC 具有各種適用於資源的參數以及相依性之類的項目，這讓 WSFC 能夠得知兩個不同資源之間的父/子關聯性。 相依性只是一個規則，可用來告知 WSFC 必須先將哪些資源上線。
@@ -210,7 +213,7 @@ Pacemaker 叢集的記錄檔位置會因發行版本而有所不同。
 ### <a name="virtualizing-linux-based-pacemaker-clusters-for-ssnoversion-md"></a>針對 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 將 Linux 型 Pacemaker 叢集虛擬化
 使用虛擬機器來為 AG 和 FCI 部署 Linux 型[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 部署，會由與其 Windows 型對應項目相同的規則所涵蓋。 在 [Microsoft 支援服務 KB 956893](https://support.microsoft.com/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment) \(機器翻譯\) 中，有一組基本規則適用於 Microsoft 所提供之虛擬化 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 部署的支援能力。 由於平台本身的差異，不同的 Hypervisor (例如 Microsoft 的 Hyper-V 和 VMware 的 ESXi) 可能會有不同的差異。
 
-當它進入虛擬化的 AG 和 FCI 時，請確定已針對指定 Pacemaker 叢集的節點設定反親和性。 在 AG 或 FCI 設定中設定以取得高可用性時，裝載 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的 VM 應該永遠不會在相同的 Hypervisor 主機上執行。 例如，如果已部署兩個節點的 FCI，則「至少」  必須有三部 Hypervisor 主機，以便在某部主機發生故障時，讓其中一部裝載節點的 VM 能夠在某處執行，特別是使用「即時移轉」或 vMotion 之類的功能時。
+當它進入虛擬化的 AG 和 FCI 時，請確定已針對指定 Pacemaker 叢集的節點設定反親和性。 在 AG 或 FCI 設定中設定以取得高可用性時，裝載 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的 VM 應該永遠不會在相同的 Hypervisor 主機上執行。 例如，如果已部署兩個節點的 FCI，則「至少」必須有三部 Hypervisor 主機，以便在某部主機發生故障時，讓其中一部裝載節點的 VM 能夠在某處執行，特別是使用「即時移轉」或 vMotion 之類的功能時。
 
 如需更多詳細資訊，請參閱：
 -   Hyper-V 文件：[使用客體叢集以提供高可用性](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx) \(英文\)

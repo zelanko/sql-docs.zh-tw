@@ -1,5 +1,6 @@
 ---
 title: 伺服器屬性 (進階頁面) | Microsoft Docs
+description: 更加了解 SQL Server 的進階伺服器設定。 了解 FILESTREAM 選項、各種臨界值、全文檢索升級替代方案，以及其他設定。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.advanced.f1
 ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 1672b245f061f521c9114bca71f723fe75553c96
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 796c722db124b9eda448652dc29f5571ea41b747
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025587"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771809"
 ---
 # <a name="server-properties---advanced-page"></a>伺服器屬性 - 進階頁面
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用此頁面來檢視或修改進階的伺服器設定。  
   
  **若要檢視伺服器屬性頁面**  
@@ -88,7 +89,7 @@ ms.locfileid: "68025587"
 > [!NOTE]  
 >  也可以使用 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)upgrade_option 動作來設定全文檢索升級選項。  
   
- 當您將 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫附加、還原或複製到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 時，該資料庫會立即可用，然後自動升級。 如果資料庫具有全文檢索索引，升級程序就會根據 [全文檢索目錄升級選項]  伺服器屬性的設定，匯入、重設或重建這些索引。 如果升級選項設定為 [匯入]  或 [重建]  ，則全文檢索索引在升級期間將無法使用。 根據進行索引的資料數量而定，匯入可能需要數個小時，而重建可能需要十倍以上的時間。 此外，請注意，當升級選項設定為 [匯入]  時，如果全文檢索目錄無法使用，系統就會重建相關聯的全文檢索索引。 如需有關檢視或變更 **全文檢索目錄升級選項** 屬性設定的詳細資訊，請參閱＜ [管理及監視伺服器執行個體的全文檢索搜尋](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)＞。  
+ 當您將 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫附加、還原或複製到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 時，該資料庫會立即可用，然後自動升級。 如果資料庫具有全文檢索索引，升級程序就會根據 [全文檢索目錄升級選項] 伺服器屬性的設定，匯入、重設或重建這些索引。 如果升級選項設定為 [匯入] 或 [重建]，則全文檢索索引在升級期間將無法使用。 根據進行索引的資料數量而定，匯入可能需要數個小時，而重建可能需要十倍以上的時間。 此外，請注意，當升級選項設定為 [匯入] 時，如果全文檢索目錄無法使用，系統就會重建相關聯的全文檢索索引。 如需有關檢視或變更 **全文檢索目錄升級選項** 屬性設定的詳細資訊，請參閱＜ [管理及監視伺服器執行個體的全文檢索搜尋](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)＞。  
   
  **文字複寫大小上限**  
  指定在單一 INSERT、UPDATE、WRITETEXT 或 UPDATETEXT 陳述式中，可以加入複寫資料行或擷取資料行中的 **text**、 **ntext**、 **varchar(max)** 、 **nvarchar(max)** 、 **xml**和 **image** 資料的大小上限 (以位元組為單位)。 設定的變更會立即生效。 如需詳細資訊，請參閱 [設定 max text repl size 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)。  

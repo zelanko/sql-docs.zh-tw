@@ -1,5 +1,6 @@
 ---
 title: 設定 query wait 伺服器組態選項 | Microsoft Docs
+description: 了解查詢等待選項。 了解如何使用此選項來指定 SQL Server 查詢在逾時前等待資源的秒數。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - time [SQL Server], query wait time
 - query wait option [SQL Server]
 ms.assetid: 0fc4aa01-65a3-4a33-9ef4-caca41add238
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: bcba6def4229175c46a981dd03037006bfba2aa2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cdf9a2f14547eeda95b49a3f7705823e62f8b538
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012376"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785853"
 ---
 # <a name="configure-the-query-wait-server-configuration-option"></a>設定 query wait 伺服器組態選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] query wait [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 如果因為記憶體不足，無法執行會使用大量記憶體的查詢 (例如涉及排序與雜湊的查詢)，則這些查詢會排入佇列中。 **query wait** 選項會指定逾時前，查詢等候資源的秒數 (從 0 到 2147483647)。這個選項的預設值是 -1。 這表示逾時時間就會是估計查詢成本的 25 倍。  
   
@@ -39,7 +40,7 @@ ms.locfileid: "68012376"
   
 -   **若要使用下列項目設定 query wait 選項：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -60,7 +61,7 @@ ms.locfileid: "68012376"
   
 #### <a name="to-configure-the-query-wait-option"></a>若要設定查詢等候選項  
   
-1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]  。  
+1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
   
 2.  按一下 **[進階]** 節點。  
   

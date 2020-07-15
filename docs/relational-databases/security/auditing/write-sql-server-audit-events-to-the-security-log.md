@@ -1,5 +1,6 @@
 ---
 title: 將 SQL Server Audit 事件寫入安全性記錄檔 | Microsoft Docs
+description: 了解如何將 SQL Server 稽核事件寫入 Windows 安全性記錄檔。 了解使用該記錄檔的限制事項。
 ms.custom: ''
 ms.date: 09/21/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0c998b4d5ed5988d5a5e2a01bf0cbd611157f665
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 68228106bcd2620cb684bd61efec353fdb49585c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68095106"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884834"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>將 SQL Server Audit 事件寫入安全性記錄檔  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 在高度安全性的環境中，Windows 安全性記錄檔是寫入記錄物件存取之事件的適當位置。 雖然支援其他稽核位置，但是這些位置容易遭算改。  
   
@@ -55,7 +56,7 @@ ms.locfileid: "68095106"
   
 1.  以系統管理權限開啟命令提示字元。  
   
-    1.  在 [開始]  功能表上，依序指向 [所有程式]  和 [附屬應用程式]  、以滑鼠右鍵按一下 [命令提示字元]  ，然後按一下 [以系統管理員身分執行]  。  
+    1.  在 [開始] 功能表上，依序指向 [所有程式] 和 [附屬應用程式]、以滑鼠右鍵按一下 [命令提示字元]，然後按一下 [以系統管理員身分執行]。  
   
     2.  如果開啟 **[使用者帳戶控制]** 對話方塊，請按一下 **[繼續]** 。  
   
@@ -75,11 +76,11 @@ ms.locfileid: "68095106"
   
 3.  在本機安全性原則工具中，依序展開 **[安全性設定]** 和 **[本機原則]** ，然後按一下 **[使用者權限指派]** 。  
   
-4.  在結果窗格中，按兩下 [產生安全性稽核]  。  
+4.  在結果窗格中，按兩下 [產生安全性稽核]。  
   
 5.  在 **[本機安全性設定]** 索引標籤上，按一下 **[新增使用者或群組]** 。  
   
-6.  在 [選取使用者、電腦或群組]  對話方塊中，輸入使用者帳戶的名稱 (例如 **domain1\user1**) 並按一下 [確定]  ，或按一下 [進階]  並搜尋帳戶。  
+6.  在 [選取使用者、電腦或群組] 對話方塊中，輸入使用者帳戶的名稱 (例如 **domain1\user1**) 並按一下 [確定]，或按一下 [進階] 並搜尋帳戶。  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -95,7 +96,7 @@ ms.locfileid: "68095106"
   
 3.  在本機安全性原則工具中，依序展開 **[安全性設定]** 和 **[本機原則]** ，然後按一下 **[稽核原則]** 。  
   
-4.  在結果窗格中，按兩下 [稽核物件存取]  。  
+4.  在結果窗格中，按兩下 [稽核物件存取]。  
   
 5.  在 **[本機安全性設定]** 索引標籤的 **[稽核這些嘗試]** 區域中，同時選取 **[成功]** 和 **[失敗]** 。  
   

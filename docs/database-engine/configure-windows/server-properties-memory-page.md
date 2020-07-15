@@ -1,5 +1,6 @@
 ---
 title: 伺服器屬性 (記憶體頁面) | Microsoft Docs
+description: 更加了解 SQL Server 中的伺服器記憶體選項。 深入了解伺服器記憶體的最小值與最大值、索引建立記憶體，以及其他設定。
 ms.custom: ''
 ms.date: 03/08/2016
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.memory.f1
 ms.assetid: 46a77d4e-ab92-49d3-a14b-423462e50715
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 6eb32d81ccab79efa044ed4a21798bebe6ee3fd1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 83f8be52af8507203764cab7197359c1c99663a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025470"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726625"
 ---
 # <a name="server-properties---memory-page"></a>伺服器屬性 - 記憶體頁面
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用此頁面來檢視或修改伺服器記憶體選項。 **[最小伺服器記憶體]** 設定為 0 且 **[最大伺服器記憶體]** 設為 2147483647 MB 時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就可在任何特定時間利用最佳的記憶體數量，但受作業系統和其他應用程式目前所使用的記憶體數量所限制。 隨著電腦與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的負載有所變更，記憶體的配置也會變更。 您可以進一步將這個動態記憶體配置限制為下列所指定的最小值和最大值。  
   
 ## <a name="options"></a>選項。  

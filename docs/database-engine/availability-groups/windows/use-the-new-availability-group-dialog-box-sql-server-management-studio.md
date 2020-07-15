@@ -1,6 +1,6 @@
 ---
 title: SSMS 中的 [新增可用性群組] 對話方塊
-description: 此文章包含有關如何使用 SQL Server Management Studio 的 [新增可用性群組] 對話方塊來設定 Always On 可用性群組的資訊。
+description: 了解如何使用 SQL Server Management Studio 的 [新增可用性群組] 對話方塊來設定 Always On 可用性群組。
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2c53998ea56c02e43a62573b31767c1beea78a8d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a576ea3ed8aa89f8a0ff8bc77fcacaa895660892
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74821949"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882377"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>使用新增可用性群組對話方塊 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的 [新增可用性群組] 對話方塊，在已啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體建立 AlwaysOn 可用性群組。 *「可用性群組」* (Availability Group) 會定義當做單一單位容錯移轉的一組使用者資料庫，以及支援容錯移轉的一組容錯移轉夥伴 (也稱為 *「可用性複本」* (Availability Replica))。  
   
 > [!NOTE]  
@@ -45,7 +45,7 @@ ms.locfileid: "74821949"
 -   將次要複本聯結至可用性群組。    
 -   執行初始資料同步處理。  
   
- 如需有關這些組態工作的詳細資訊，請參閱本主題稍後的＜ [待處理：建立可用性群組之後](#FollowUp)＞。  
+ 如需這些設定工作的相關資訊，請參閱本主題稍後的＜[後續操作：建立可用性群組之後](#FollowUp)＞。  
   
 ##  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要 **系統管理員 (sysadmin)** 固定伺服器角色的成員資格，以及 CREATE AVAILABILITY GROUP 伺服器權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
@@ -55,9 +55,9 @@ ms.locfileid: "74821949"
   
 1.  在 [物件總管] 中，連接到裝載主要複本的伺服器執行個體，然後按一下伺服器名稱。  
   
-2.  展開 [AlwaysOn 高可用性]  節點。  
+2.  展開 [AlwaysOn 高可用性] 節點。  
   
-3.  以滑鼠右鍵按一下 [可用性群組]  節點，然後選取 [新增可用性群組]  命令。  
+3.  以滑鼠右鍵按一下 [可用性群組] 節點，然後選取 [新增可用性群組] 命令。  
   
 4.  這個命令會開啟 **[新增可用性群組]** 對話方塊。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "74821949"
   
      若要結束對話方塊而不建立可用性群組，請按一下 **[取消]** 。  
   
-##  <a name="follow-up-after-using-the-new-availability-group-dialog-box-to-create-an-availability-group"></a><a name="FollowUp"></a> 待處理：使用新增可用性群組對話方塊建立可用性群組之後  
+##  <a name="follow-up-after-using-the-new-availability-group-dialog-box-to-create-an-availability-group"></a><a name="FollowUp"></a> 後續操作：使用 [新增可用性群組] 對話方塊建立可用性群組之後  
   
 -   接著您需要連接到裝載此可用性群組之次要複本的每個伺服器執行個體，並完成下列步驟：  
   

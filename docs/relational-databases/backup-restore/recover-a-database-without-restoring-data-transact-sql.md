@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 7e8fa620-315d-4e10-a718-23fa5171c09e
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: ef3adbbf44c495e0449da174915704c4da9306dc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2d82dd94f3419b0f25c6c5ece04b94277144742c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834503"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85669946"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>在不還原資料的情況下復原資料庫 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  通常會先還原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的所有資料，再復原資料庫。 不過，還原作業可以復原資料庫，而不實際還原備份；例如，復原與資料庫一致的唯讀檔案時即是如此。 這稱為「僅復原的還原」  。 如果離線資料已與資料庫一致，而且只需要回復為可用狀態，僅復原的還原作業就會完成資料庫的復原，並讓資料回到線上。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  通常會先還原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的所有資料，再復原資料庫。 不過，還原作業可以復原資料庫，而不實際還原備份；例如，復原與資料庫一致的唯讀檔案時即是如此。 這稱為「僅復原的還原」。 如果離線資料已與資料庫一致，而且只需要回復為可用狀態，僅復原的還原作業就會完成資料庫的復原，並讓資料回到線上。  
   
  整個資料庫或一個或多個檔案或檔案群組，都可能發生僅復原的還原。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "82834503"
  `RESTORE DATABASE *database_name* WITH RECOVERY`  
   
 > [!NOTE]  
-> FROM **=** \<*backup_device>* 子句未使用於僅復原的還原，因為沒有備份的必要。  
+> FROM **=** \<*backup_device>* 子句未使用於僅復原的還原，這是因為沒有備份的必要。  
   
  **範例**  
   

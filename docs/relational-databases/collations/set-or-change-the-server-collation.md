@@ -1,7 +1,7 @@
 ---
 title: 設定或變更伺服器定序 | Microsoft Docs
 ms.custom: ''
-ms.date: 12/05/2019
+ms.date: 05/10/2020
 ms.prod: sql
 ms.technology: ''
 ms.topic: conceptual
@@ -12,16 +12,16 @@ ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
-ms.openlocfilehash: 578735009c72da997159484d308a25784ac64be0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6517111f63f2e28bf27e88003fa0c7b2e9b25fad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762889"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733946"
 ---
 # <a name="set-or-change-the-server-collation"></a>設定或變更伺服器定序
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   對於與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體一起安裝的所有系統資料庫，以及任何新建的使用者資料庫而言，伺服器定序會當做預設定序。 您應該仔細選擇伺服器層級定序，因為它會影響：
  - `=`、`JOIN`、`ORDER BY` 及比較文字資料之其他運算子的排序和比較規則。
  - 系統檢視表中 `CHAR`、`VARCHAR`、`NCHAR` 和 `NVARCHAR` 資料行以及系統函式和 TempDB (例如暫存資料表) 中物件的定序。
@@ -29,8 +29,11 @@ ms.locfileid: "82762889"
   
 ## <a name="setting-the-server-collation-in-sql-server"></a>設定 SQL Server 中的伺服器定序
 
-  伺服器定序是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間指定。 預設伺服器層級定序為 **SQL_Latin1_General_CP1_CI_AS**。 無法將僅限 Unicode 定序指定為伺服器層級定序。 如需詳細資訊，請參閱 [Collation and Unicode Support](collation-and-unicode-support.md)。
-  
+  伺服器定序是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間指定。 預設伺服器層級定序是以作業系統的地區設定為基礎。 例如，使用美式英文 (en-US) 系統的預設定序是 **SQL_Latin1_General_CP1_CI_AS**。 無法將僅限 Unicode 定序指定為伺服器層級定序。 如需詳細資訊，包括 OS 地區設定對應到預設定序的清單，請參閱[定序和 Unicode 支援](collation-and-unicode-support.md#Server-level-collations)的＜伺服器層級定序＞區段。
+
+> [!NOTE]  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express LocalDB 的伺服器層級定序是 **SQL_Latin1_General_CP1_CI_AS**，且在安裝期間和安裝後皆無法變更。  
+
 ## <a name="changing-the-server-collation-in-sql-server"></a>變更 SQL Server 中的伺服器定序
 
  變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的預設定序是相當複雜的作業，需要執行下列步驟：  
@@ -56,7 +59,7 @@ ms.locfileid: "82762889"
 - 匯入所有資料。  
   
 > [!NOTE]  
-> 您可以不變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的預設定序，而是針對每個建立的新資料庫指定預設定序。  
+> 您可為透過 `CREATE DATABASE` 和 `ALTER DATABASE` 陳述式的 `COLLATE` 子句建立的每個新資料庫指定預設定序，而不用變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的預設定序。 如需詳細資訊，請參閱 [設定或變更資料庫定序](set-or-change-the-database-collation.md)。  
   
 ## <a name="setting-the-server-collation-in-managed-instance"></a>設定受控執行個體中的伺服器定序
 建立 Azure SQL 受控執行個體時，可指定執行個體中的伺服器層級定序，且稍後無法變更。 您可以在建立執行個體時，透過 [Azure 入口網站](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance)或 [PowerShell 和 Resource Manager 範本](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template)來設定伺服器層級定序。 預設伺服器層級定序為 **SQL_Latin1_General_CP1_CI_AS**。 無法將僅限 Unicode 定序和新的 UTF-8 定序指定為伺服器層級定序。

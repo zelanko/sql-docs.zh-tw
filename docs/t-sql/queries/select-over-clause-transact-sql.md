@@ -25,15 +25,15 @@ ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ffdfd5662cd8bbfd4b9cd580a4df141a4c5a4bd
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: cfe397ae8b508e7821af6b3b9d837434129a3e56
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634188"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999765"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - OVER 子句 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   在套用相關的視窗函數之前，決定資料列集的資料分割和排序。 也就是說，OVER 子句會定義查詢結果集內的視窗或使用者指定的資料列集。 然後視窗函數會針對視窗中的每個資料列來計算值。 您可以搭配函數使用 OVER 子句，以便計算彙總值，例如移動平均值、累計彙總、累加值或是每組前 N 個結果。  
   
@@ -141,26 +141,26 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
   
  指定視窗從資料分割的第一個資料列開始。 只能將 UNBOUNDED PRECEDING 指定為視窗起點。  
   
- \<指定不帶正負號的值> PRECEDING  
- 與 \<指定不帶正負號的值> 一起指定，可指出要置於目前資料列前面的資料列或值的數目。 RANGE 不允許這項指定。  
+ \<unsigned value specification> PRECEDING  
+ 與 \<unsigned value specification> 一起指定，以指出要置於目前資料列前面的資料列或值數目。 RANGE 不允許這項指定。  
   
  CURRENT ROW  
 **適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。 
   
  指定在與 ROWS 一起使用時，視窗在目前的資料列開始或結束，或者在與 RANGE 一起使用時則為目前值。 CURRENT ROW 可以指定為開始點和結束點。  
   
- BETWEEN \<繫結的視窗框架 > AND \<繫結的視窗框架 >  
+ BETWEEN \<window frame bound > AND \<window frame bound >  
 **適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。 
   
- 與 ROWS 或 RANGE 一起使用，以指定視窗的下 (開始) 邊界點和上 (結束) 邊界點。 \<繫結的視窗框架> 會定義界限開始點，而 \<繫結的視窗框架> 則定義界限結束點。 上限不能小於下限。  
+ 與 ROWS 或 RANGE 一起使用，以指定視窗的下 (開始) 邊界點和上 (結束) 邊界點。 \<window frame bound> 會定義界限開始點，而 \<window frame bound> 則定義界限結束點。 上限不能小於下限。  
   
  UNBOUNDED FOLLOWING  
 **適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。 
   
  指定視窗在資料分割的最後一個資料列結束。 只能將 UNBOUNDED FOLLOWING 指定為視窗結束點。 例如，RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING 會定義一個視窗，此視窗從資料分割的目前資料列開始，並結束於資料分割的最後一個資料列。  
   
- \<指定不帶正負號的值> FOLLOWING  
- 與 \<指定不帶正負號的值> 一起指定，可指出要置於目前資料列後面的資料列或值的數目。 將 \<指定不帶正負號的值> FOLLOWING 指定為視窗開始點時，結束點必須是 \<指定不帶正負號的值> FOLLOWING。 例如，ROWS BETWEEN 2 FOLLOWING AND 10 FOLLOWING 會定義一個視窗，此視窗從目前資料列後面的第二個資料列開始，並結束於目前資料列後面的第十個資料列。 RANGE 不允許這項指定。  
+ \<unsigned value specification> FOLLOWING  
+ 與 \<unsigned value specification> 一起指定，可指出要置於目前資料列後面的資料列或值數目。 當 \<unsigned value specification> FOLLOWING 指定為視窗開始點時，結束點必須是 \<unsigned value specification> FOLLOWING。 例如，ROWS BETWEEN 2 FOLLOWING AND 10 FOLLOWING 會定義一個視窗，此視窗從目前資料列後面的第二個資料列開始，並結束於目前資料列後面的第十個資料列。 RANGE 不允許這項指定。  
   
  不帶正負號的整數常值  
 **適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。  
@@ -174,7 +174,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  
 ### <a name="important"></a>重要！
 
-如果指定了 ROWS/RANGE，而且 \<前面的視窗框架> 用於 \<視窗框架範圍> (簡短語法)，則這個指定會用於視窗框架界限開始點，而 CURRENT ROW 則用於界限結束點。 例如，"ROWS 5 PRECEDING" 等於 "ROWS BETWEEN 5 PRECEDING AND CURRENT ROW"。  
+如果指定了 ROWS/RANGE，且 \<window frame preceding> 用於 \<window frame extent> (簡短語法)，則這個指定會用於視窗框架界限開始點，而 CURRENT ROW 則用於界限結束點。 例如，"ROWS 5 PRECEDING" 等於 "ROWS BETWEEN 5 PRECEDING AND CURRENT ROW"。  
   
 > [!NOTE]
 > 如果未指定 ORDER BY，則將整個資料分割用於視窗框架。 這只適用於不需要 ORDER BY 子句的函數。 如果未指定 ROWS/RANGE，但指定了 ORDER BY，則將 RANGE UNBOUNDED PRECEDING AND CURRENT ROW 當做視窗框架的預設值。 這只適用於可以接受選擇性 ROWS/RANGE 指定的函數。 例如，排名函數不能接受 ROWS/RANGE，因此，即使存在 ORDER BY 而不存在 ROWS/RANGE，這個視窗框架依然不適用。  
@@ -182,9 +182,9 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
 ## <a name="limitations-and-restrictions"></a>限制事項  
  OVER 子句不能搭配 CHECKSUM 彙總函式使用。  
   
- RANGE 不能搭配 \<指定不帶正負號的值> PRECEDING 或 \<指定不帶正負號的值> FOLLOWING 使用。  
+ RANGE 不能與 \<unsigned value specification> PRECEDING 或 \<unsigned value specification> FOLLOWING 一起使用。  
   
- 視與 OVER 子句搭配使用的次序、彙總或分析函數而定，可能不支援 \<ORDER BY 子句> 及/或 \<ROWS 和 RANGE 子句>。  
+ 視與 OVER 子句搭配使用的次序、彙總或分析函數而定，可能不支援 \<ORDER BY clause> 及/或 \<ROWS and RANGE clause>。  
   
 ## <a name="examples"></a>範例  
   
@@ -323,11 +323,11 @@ USE AdventureWorks2012;
 GO  
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
-   ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
-   ,CONVERT(varchar(20),AVG(SalesYTD) OVER (PARTITION BY TerritoryID   
+   ,CONVERT(VARCHAR(20),SalesYTD,1) AS  SalesYTD  
+   ,CONVERT(VARCHAR(20),AVG(SalesYTD) OVER (PARTITION BY TerritoryID   
                                             ORDER BY DATEPART(yy,ModifiedDate)   
                                            ),1) AS MovingAvg  
-   ,CONVERT(varchar(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
+   ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
                                             ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
@@ -360,10 +360,10 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
 ```sql  
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
-   ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
-   ,CONVERT(varchar(20),AVG(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
+   ,CONVERT(VARCHAR(20),SalesYTD,1) AS SalesYTD  
+   ,CONVERT(VARCHAR(20),AVG(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS MovingAvg  
-   ,CONVERT(varchar(20),SUM(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
+   ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
 WHERE TerritoryID IS NULL OR TerritoryID < 5  
@@ -396,9 +396,9 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
 ```sql  
 SELECT BusinessEntityID, TerritoryID   
-    ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
+    ,CONVERT(VARCHAR(20),SalesYTD,1) AS SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
-    ,CONVERT(varchar(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
+    ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
                                              ORDER BY DATEPART(yy,ModifiedDate)   
                                              ROWS BETWEEN CURRENT ROW AND 1 FOLLOWING ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
@@ -426,9 +426,9 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
 ```sql  
 SELECT BusinessEntityID, TerritoryID   
-    ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
+    ,CONVERT(VARCHAR(20),SalesYTD,1) AS SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
-    ,CONVERT(varchar(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
+    ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
                                              ORDER BY DATEPART(yy,ModifiedDate)   
                                              ROWS UNBOUNDED PRECEDING),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
@@ -463,7 +463,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
 SELECT ROW_NUMBER() OVER(ORDER BY SUM(SalesAmountQuota) DESC) AS RowNumber,  
     FirstName, LastName,   
-CONVERT(varchar(13), SUM(SalesAmountQuota),1) AS SalesQuota   
+CONVERT(VARCHAR(13), SUM(SalesAmountQuota),1) AS SalesQuota   
 FROM dbo.DimEmployee AS e  
 INNER JOIN dbo.FactSalesQuota AS sq  
     ON e.EmployeeKey = sq.EmployeeKey  

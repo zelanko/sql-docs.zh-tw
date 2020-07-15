@@ -1,5 +1,6 @@
 ---
 title: 記錄檔檢視器 | Microsoft Docs
+description: 使用 SQL Server Management Studio 中的記錄檔檢視器，取得記錄檔中所擷取錯誤和事件的資訊。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: a4ea7fc8-1cb2-4c98-bc86-8991c5e748b2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7c587edde597b3b1dffeb60675a1c3c5cb886bc7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7425bb2175b9a2e7b813f63e7d78aec7e73ef5ec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68084068"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85668126"
 ---
 # <a name="log-file-viewer"></a>記錄檔檢視器
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的記錄檔檢視器是用於存取有關記錄檔中所擷取之錯誤和事件的資訊。  
   
 ## <a name="benefits-of-using-log-file-viewer"></a>記錄檔檢視器的優點  

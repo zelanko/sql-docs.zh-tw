@@ -1,5 +1,6 @@
 ---
 title: Missing Join Predicate 事件類別 | Microsoft Docs
+description: Missing Join Predicate 事件類別會指出正在執行的查詢在 SQL Server 中沒有聯結述詞。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 0668cb4d-5682-4140-aab5-7b0da5cd3479
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c59a45533e68eb1af5d3e62ee059aa022c5cc503
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0f0571750b7c8a9ba39c79bf640872c88241fe81
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115953"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756029"
 ---
 # <a name="missing-join-predicate-event-class"></a>遺失聯結述詞事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   「遺失聯結述詞」事件類別指示要執行的查詢沒有聯結述詞。 這可能造成長時間執行的查詢。 如需聯結述詞的詳細資訊，請參閱[述詞 &#40;Transact-SQL&#41;](~/t-sql/queries/predicates.md)。  
   
 ## <a name="missing-join-predicate-event-class-data-columns"></a>遺失聯結述詞事件類別資料行  

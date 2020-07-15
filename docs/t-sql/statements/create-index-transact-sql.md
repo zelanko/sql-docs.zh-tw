@@ -54,16 +54,16 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac07912de601370884d818c7d046f5c1f476672c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1cede57088f5d42041b28c00239ba29822f6c401
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632488"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010794"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 在資料表或檢視上建立關聯式索引。 也稱為資料列存放區索引，因為它是叢集或非叢集的 B 型樹狀結構索引。 您可以在資料表中含有資料之前，先建立資料列存放區索引。 特別是在查詢會從特定資料行中選取，或需要以特定順序排序值時，使用資料列存放區索引來改善查詢效能。
 
@@ -584,7 +584,7 @@ ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ..._n_
 
 指定套用 DATA_COMPRESSION 設定的分割區。 如果未分割此索引，ON PARTITIONS 引數將會產生錯誤。 如果未提供 ON PARTITIONS 子句，DATA_COMPRESSION 選項會套用到分割區索引的所有分割區。
 
-可以使用以下方式來指定 \<partition_number_expression>：
+可使用下列方式來指定 \<partition_number_expression>：
 
 - 提供分割區的編號，例如：ON PARTITIONS (2)。
 - 為數個個別分割區提供以逗號分隔的分割區編號，例如：ON PARTITIONS (1, 5)。
@@ -630,7 +630,7 @@ CREATE INDEX 陳述式的最佳化方式與其他任何查詢一樣。 若要儲
 ## <a name="partitioned-indexes"></a>分割區索引
 分割區索引與分割區資料表的建立和維護方式類似，不過，跟一般索引一樣，分割區索引會當做個別資料庫物件來處理。 未進行分割的資料表上可以有分割區索引；已進行分割的資料表上也可以有非分割區索引。
 
-如果您要在分割區資料表上建立索引，且不指定要從中放置索引的檔案群組，則索引的分割區方式與基礎資料表相同。 這是因為索引及其基礎資料表預設會置於同一個檔案群組內，且索引會供相同分割區配置中，使用相同分割區資料行的分割區資料表使用。 當索引使用與資料表相同的資料分割配置及分割資料行時，索引將會與資料表「對齊」  。
+如果您要在分割區資料表上建立索引，且不指定要從中放置索引的檔案群組，則索引的分割區方式與基礎資料表相同。 這是因為索引及其基礎資料表預設會置於同一個檔案群組內，且索引會供相同分割區配置中，使用相同分割區資料行的分割區資料表使用。 當索引使用與資料表相同的資料分割配置及分割資料行時，索引將會與資料表「對齊」。
 
 > [!WARNING]
 > 您可以對包含超過 1,000 個分割區的資料表，建立及重建不以資料表為準的索引，但不予支援。 此做法可能會導致在作業期間效能降低或耗用過多記憶體。 建議當分割區數超過 1,000 時，一律使用以資料表為準的索引。
@@ -721,11 +721,11 @@ INSERT INTO t1 VALUES (1, 0);
 您可以將非索引鍵資料行 (稱為內含資料行) 加入至非叢集索引的分葉層級，以處理查詢來提升查詢效能。 換句話說，查詢中參考的所有資料行都會併入索引中當做索引鍵資料行或非索引鍵資料行。 這可讓查詢最佳化工具從索引掃描中尋找所有的必要資訊；但不存取資料表或叢集索引。 如需詳細資訊，請參閱[建立內含資料行的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)及 [SQL Server 索引架構和設計指南](../../relational-databases/sql-server-index-design-guide.md)。
 
 ## <a name="specifying-index-options"></a>指定索引選項
-[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 導入新的索引選項，並修改選項的指定方式。 在與舊版本相容的語法中，WITH *option_name* 相當於 WITH **(** \<option_name> **= ON )** 。 當您設定索引選項時，適用下列規則：
+[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 導入新的索引選項，並修改選項的指定方式。 在回溯相容語法中，WITH *option_name* 相當於 WITH **(** \<option_name> **= ON )** 。 當您設定索引選項時，適用下列規則：
 
-- 只能使用 WITH ( **_option\_name_ = ON | OFF**) 來指定新的索引選項。
+- 只能使用 WITH (**_option\_name_ = ON | OFF**) 來指定新的索引選項。
 - 不能在相同的陳述式中同時利用與舊版本相容的語法和新語法來指定選項。 例如，指定 WITH (**DROP_EXISTING, ONLINE = ON**) 會造成陳述式失敗。
-- 當您建立 XML 索引時，必須搭配 WITH ( **_option_name_= ON | OFF**) 來指定選項。
+- 當您建立 XML 索引時，必須搭配 WITH (**_option_name_= ON | OFF**) 來指定選項。
 
 ## <a name="drop_existing-clause"></a>DROP_EXISTING 子句
 您可以利用 DROP_EXISTING 子句來重建索引、加入或卸除資料行、修改選項、修改資料行排序次序，或變更分割區配置或檔案群組。
@@ -814,8 +814,8 @@ INSERT INTO t1 VALUES (1, 0);
 下列限制適用於分割區索引：
 
 - 您無法在資料表具有非對齊索引時變更單一分割區的壓縮設定。
-- ALTER INDEX \<index> ...REBUILD PARTITION ... 語法會重建此索引的指定分割區。
-- ALTER INDEX \<index> ...REBUILD WITH ... 語法會重建此索引的所有分割區。
+- The ALTER INDEX \<index> ...REBUILD PARTITION ... 語法會重建此索引的指定分割區。
+- The ALTER INDEX \<index> ...REBUILD WITH ... 語法會重建此索引的所有分割區。
 
 若要評估變更壓縮狀態如何影響資料表、索引或分割區，請使用 [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) 預存程序。
 
@@ -1034,7 +1034,7 @@ GO
 ```
 
 ### <a name="i-create-an-index-with-included-non-key-columns"></a>I. 使用內含的 (非索引鍵) 資料行建立索引
-下列範例會利用一個索引鍵資料行 (`PostalCode`) 和四個非索引鍵資料行 (`AddressLine1`、`AddressLine2`、`City`、`StateProvinceID`) 來建立非叢集索引。 其後有一個由索引處理的查詢。 若要顯示查詢最佳化工具所選取的索引，請先在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [查詢]  功能表上選取 [Display Actual Execution Plan]  \(顯示實際執行計畫\)，然後再執行查詢。
+下列範例會利用一個索引鍵資料行 (`PostalCode`) 和四個非索引鍵資料行 (`AddressLine1`、`AddressLine2`、`City`、`StateProvinceID`) 來建立非叢集索引。 其後有一個由索引處理的查詢。 若要顯示查詢最佳化工具所選取的索引，請先在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [查詢] 功能表上選取 [Display Actual Execution Plan] \(顯示實際執行計畫\)，然後再執行查詢。
 
 ```sql
 CREATE NONCLUSTERED INDEX IX_Address_PostalCode

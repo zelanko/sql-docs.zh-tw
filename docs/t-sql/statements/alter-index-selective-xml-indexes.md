@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: cca96a8f-7737-42d2-bbcc-03d5f858dcc1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7883a99a223af67f536a0991bb0ba48f30211bc6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ce6f6005e3e2b6966a4bc9e457b1ee552ea017f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68071359"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85761872"
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX (選擇性 XML 索引)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   修改現有的選擇性 XML 索引。 ALTER INDEX 陳述式會變更下列一個或多個項目：  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68071359"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 ALTER INDEX index_name  
     ON <table_object>   
     [WITH XMLNAMESPACES ( <xmlnamespace_list> )]  

@@ -1,6 +1,6 @@
 ---
 title: 變更無法顯示於次要可用性群組複本
-ms.description: Troubleshoot to determine why changes occurring on a primary replica are not reflected on the secondary replica for an Always On availability group.
+description: 了解如何判斷為何在主要複本上變更不會反映在 Always On 可用性群組的次要複本上。
 ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 55dc6787960fbb4979bbe0d21f27f0fa43437662
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: MashaMSFT
+ms.author: mathoma
+ms.openlocfilehash: 67131a066a9885547e04ff58c80cd9f05d365051
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75243006"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888004"
 ---
 # <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>判斷為什麼來自主要複本的變更不會反映在 Always On 可用性群組次要複本上
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   用戶端應用程式在主要複本上成功完成更新，但是查詢次要複本卻顯示未反映變更。 此案例假設您的可用性有健康情況良好的同步處理狀態。 在大部分情況下，此行為會在幾分鐘後自行解決。  
   
  如果變更在幾分鐘後仍未反映在次要複本上，表示同步處理工作程序中可能有瓶頸。 造成瓶頸的位置取決於次要複本是設定為同步認可或非同步認可。  
@@ -127,6 +127,6 @@ from sys.dm_hadr_database_replica_states
  如果重做執行緒確實落後，則您需要調查次要複本效能降低的根本原因。 如果和報告工作負載有 I/O 競爭，您可以使用 [Resource Governor](~/relational-databases/resource-governor/resource-governor.md) 來控制報告工作負載使用的 CPU 週期，進而間接地在某種程度上控制 I/O 週期。 例如，如果您的報告工作負載取用百分之 10 的 CPU，但它是以 I/O 為主的工作負載，則您可以使用 Resource Governor 將 CPU 資源使用量限制為百分之 5，以限制讀取工作負載，進而降低對 I/O 的影響。  
   
 ## <a name="next-steps"></a>後續步驟  
- [對 SQL Server 2008 中的效能問題進行疑難排解](https://msdn.microsoft.com/library/dd672789(v=sql.100).aspx) \(英文\) 
+ [對 SQL Server 2008 中的效能問題進行疑難排解](https://msdn.microsoft.com/library/dd672789(v=sql.100).aspx) \(英文\)
   
   

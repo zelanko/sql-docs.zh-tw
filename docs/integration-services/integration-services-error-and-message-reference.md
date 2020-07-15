@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0f4ca1a9362abb1004829d34a3c7783850b1f3b0
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: fb8a305b4cec56e9c17209068f1a192edbaaaae7
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087388"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469353"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 錯誤和訊息參考
 
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  下表列出預先定義的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤、警告和參考用訊息 (依據每一個類別內的遞增號碼順序)，連同這些訊息的數字代碼和符號名稱。 每一個錯誤都會以欄位形式定義於 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 命名空間的 <xref:Microsoft.SqlServer.Dts.Runtime> 類別內。  
+  下表列出預先定義的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤、警告和參考用訊息 (依據每一個類別內的遞增號碼順序)，連同這些訊息的數字代碼和符號名稱。 每一個錯誤都會以欄位的形式定義在 <xref:Microsoft.SqlServer.Dts.Runtime> 命名空間中的 [Microsoft.SqlServer.Dts.Runtime.Hresults](/dotnet/api/microsoft.sqlserver.dts.runtime.hresults) 類別內。  
   
  當您遇到錯誤碼而沒有描述時，這個清單可能會非常有用。 此清單這次沒有包含疑難排解資訊。  
   

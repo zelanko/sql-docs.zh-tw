@@ -1,5 +1,6 @@
 ---
 title: 更新統計資料工作 (維護計畫) | Microsoft 文件
+description: 了解如何使用更新統計資料工作來更新資料表及索引中資料的 SQL Server 資訊。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 22902fd0-eb39-4f18-af94-3fcb69d2a3a4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d63b9d5d864dc9027eaf6b19a4e4964895699feb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d58c88a9ff10d1a53f7671d6c1d2cfce4203df61
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115505"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783491"
 ---
 # <a name="update-statistics-task-maintenance-plan"></a>更新統計資料工作 (維護計畫)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  使用 [更新統計資料工作]  對話方塊，更新資料表及索引中資料的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資訊。 此工作針對資料庫中使用者資料表所建立的每個索引，重新取樣散發統計資料。 在處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式的期間， [!INCLUDE[tsql](../../includes/tsql-md.md)] 會使用散發統計資料來最佳化資料表的導覽。 若要自動建立散發統計資料， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在每個索引的對應資料表中，定期地取樣資料。 取樣大小會視資料表的資料列數與資料修改的頻率而定。 使用此選項即可使用資料表中指定的資料百分比執行其他取樣。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用此資訊來建立更好的查詢計畫。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  使用 [更新統計資料工作] 對話方塊，更新資料表及索引中資料的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資訊。 此工作針對資料庫中使用者資料表所建立的每個索引，重新取樣散發統計資料。 在處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式的期間， [!INCLUDE[tsql](../../includes/tsql-md.md)] 會使用散發統計資料來最佳化資料表的導覽。 若要自動建立散發統計資料， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在每個索引的對應資料表中，定期地取樣資料。 取樣大小會視資料表的資料列數與資料修改的頻率而定。 使用此選項即可使用資料表中指定的資料百分比執行其他取樣。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用此資訊來建立更好的查詢計畫。  
   
 此工作會執行 `UPDATE STATISTICS` 陳述式。  
   
@@ -57,7 +58,7 @@ ms.locfileid: "68115505"
  > 維護計畫只針對相容性層級設為 80 (含) 以上的資料庫來執行。 不會顯示相容性層級設為 70 或更低的資料庫。  
   
  **Object**  
- 限制 [選取範圍]  格線僅顯示資料表、檢視或兩者。  
+ 限制 [選取範圍] 格線僅顯示資料表、檢視或兩者。  
   
  **選取範圍**  
  指定受此工作影響的資料表或索引。 [物件] 方塊中的 **[資料表和檢視]** 為選取狀態時無法使用。  
@@ -100,10 +101,10 @@ ms.locfileid: "68115505"
  指定如何對伺服器進行驗證。  
   
  **使用 Windows 整合式安全性**  
- 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 驗證連線到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的執行個體。  
+ 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體。  
   
  **使用特定的使用者名稱和密碼**  
- 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證連線到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 無法使用此選項。  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體。 無法使用此選項。  
   
  **使用者名稱**  
  提供驗證時要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 無法使用此選項。  

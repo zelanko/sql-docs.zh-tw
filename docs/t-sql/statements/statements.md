@@ -13,18 +13,18 @@ ms.assetid: d8d6f62a-e815-425c-a80e-a63fd34ec275
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf492b24e1473ce189f39a84096242773b78cc4a
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 287b86bd9cc368d2a04ea7f7be5e1397e2d6aab9
+ms.sourcegitcommit: 2e6c4104dca8680064eb64a7a79a3e15e1b4365f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82086809"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85942913"
 ---
 # <a name="transact-sql-statements"></a>Transact-SQL 陳述式
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-SQL 陳述式是不可部分完成的工作單位，而且不是完全成功就是完全失敗。 SQL 陳述式是一組指令，其中包含識別碼、參數、變數、名稱、資料類型，以及可成功編譯的 SQL 保留字。 如果 `BeginTransaction` 命令未指定交易的開始，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會為 SQL 陳述式建立「隱含」  交易。 如果陳述式成功，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 永遠都會認可隱含交易；如果命令失敗，則會復原隱含交易。  
+SQL 陳述式是不可部分完成的工作單位，而且不是完全成功就是完全失敗。 SQL 陳述式是一組指令，其中包含識別碼、參數、變數、名稱、資料類型，以及可成功編譯的 SQL 保留字。 如果 `BeginTransaction` 命令未指定交易的開始，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會為 SQL 陳述式建立「隱含」交易。 如果陳述式成功，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 永遠都會認可隱含交易；如果命令失敗，則會復原隱含交易。  
 
 有許多類型的陳述式。 也許最重要的是 [SELECT](../queries/select-transact-sql.md)，其可從資料庫中擷取資料列，並可讓您從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的一或多個資料表選取一或多個資料列或資料行。 此文章摘要說明用於 Transact-SQL (T-SQL) (除了 `SELECT` 陳述式之外) 的類別。 您可以在左側導覽中找到所有的陳述式。
 
@@ -34,7 +34,7 @@ BACKUP 及 RESTORE 陳述式可讓您建立備份並從備份進行還原。  �
 
 ## <a name="data-definition-language"></a>資料定義語言
 
-支援的資料定義語言 (DDL) 陳述式可定義資料結構。 使用這些陳述式建立、改變或卸除資料庫的資料結構。
+支援的資料定義語言 (DDL) 陳述式可定義資料結構。 使用這些陳述式建立、改變或卸除資料庫的資料結構。 這些陳述式包括：
 
 - ALTER
 - 定序
@@ -52,6 +52,7 @@ BACKUP 及 RESTORE 陳述式可讓您建立備份並從備份進行還原。  �
 - BULK INSERT
 - 刪除
 - Insert
+- SELECT
 - UPDATE
 - MERGE
 - TRUNCATE TABLE

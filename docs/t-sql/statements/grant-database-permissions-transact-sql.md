@@ -20,16 +20,16 @@ ms.assetid: 499e5ed6-945c-4791-ab45-68dec0b9c289
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7a73c0554c878aea4fa89ffb7170547d55271f15
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 185b3e77666739c92239adbb9c569683970b71f0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288192"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006283"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT 資料庫權限 (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中資料庫的權限。
 
@@ -37,7 +37,7 @@ ms.locfileid: "79288192"
 
 ## <a name="syntax"></a>語法
 
-```
+```syntaxsql
 
 GRANT <permission> [ ,...n ]
     TO <database_principal> [ ,...n ] [ WITH GRANT OPTION ]
@@ -61,13 +61,13 @@ permission | ALL [ PRIVILEGES ]
 
 *permission* 指定可以授與的資料庫權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。
 
-ALL 這個選項不會授與所有可能的權限。 授與 ALL 相當於授與下列權限：BACKUP DATABASE、BACKUP LOG、CREATE DATABASE、CREATE DEFAULT、CREATE FUNCTION、CREATE PROCEDURE、CREATE RULE、CREATE TABLE 和 CREATE VIEW。
+ALL 這個選項不會授與所有可能的權限。 授與 ALL 等同於授與下列權限：BACKUP DATABASE、BACKUP LOG、CREATE DATABASE、CREATE DEFAULT、CREATE FUNCTION、CREATE PROCEDURE、CREATE RULE、CREATE TABLE 和 CREATE VIEW。
 
 PRIVILEGES 為符合 ISO 而包含這個項目。 不會變更 ALL 的行為。
 
 WITH GRANT OPTION 指出主體也有權授與指定權限給其他主體。
 
-AS \<database_principal> 指定主體，以讓執行這項查詢的主體可從該主體衍生授與權限的權力。
+AS \<database_principal> 指定主體，執行這項查詢的主體會從這個主體衍生權限來授與權限。
 
 *Database_user* 指定資料庫使用者。
 
@@ -103,7 +103,7 @@ AS \<database_principal> 指定主體，以讓執行這項查詢的主體可從�
 ## <a name="remarks"></a>備註
 
 > [!IMPORTANT]
-> 在某些情況下，ALTER 與 REFERENCE 權限的結合可允許被授與者檢視資料或執行未經授權的函數。 例如：擁有資料表的 ALTER 權限和函數的 REFERENCE 權限之使用者，可以透過函數來建立計算資料行並執行它。 在此情況下，使用者也必須擁有計算資料行的 SELECT 權限。
+> 在某些情況下，ALTER 與 REFERENCE 權限的結合可允許被授與者檢視資料或執行未經授權的函數。 例如：擁有資料表 ALTER 權限和函式 REFERENCE 權限的使用者，可以透過函式建立並執行計算資料行。 在此情況下，使用者也必須擁有計算資料行的 SELECT 權限。
 
 資料庫是由伺服器所包含的安全性實體，而該伺服器是其權限階層中的父系。 下表所列的是可以授與之最特定和最有限的資料庫權限，並列出利用隱含方式來併入這些權限的較通用權限。
 

@@ -1,5 +1,6 @@
 ---
 title: SQL Server 稽核記錄 | Microsoft Docs
+description: SQL Server 稽核是由稽核動作項目所組成，這些項目會記錄到稽核目標。 檢查此摘要，以取得可傳送至目標的記錄。
 ms.custom: ''
 ms.date: 08/03/2017
 ms.prod: sql
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2681d021099e8b10150efd255e27cf436c665a90
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: de70d3235e6c8087b4932fdab5006e12a56d5734
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73926027"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885320"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit 記錄
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 功能可讓您稽核伺服器層級和資料庫層級的事件群組和事件。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]第 1 課：建立 Windows Azure 儲存體物件[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 功能可讓您稽核伺服器層級和資料庫層級的事件群組和事件。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。 第 1 課：建立 Windows Azure 儲存體物件[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
  稽核是由零或多個稽核動作項目所組成，這些項目會記錄到稽核 *「目標」* (Target)。 稽核目標可以是二進位檔案、Windows 應用程式事件記錄檔或 Windows 安全性事件記錄檔。 傳送給目標的記錄包含下表所述的項目：  
   
@@ -29,14 +30,14 @@ ms.locfileid: "73926027"
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|可稽核的動作引發時的日期/時間。|**datetime2**|是|  
 |**sequence_no**|追蹤單一稽核記錄中太長而無法納入稽核寫入緩衝區內的記錄順序。|**int**|是|  
-|**action_id**|動作的識別碼<br /><br /> 提示：若要使用 **action_id** 作為述詞，您必須將它從字元字串轉換為數值。 如需詳細資訊，請參閱 [針對 action_id/class_type 述詞篩選 SQL Server Audit](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)。|**varchar(4)**|是|  
+|**action_id**|動作的識別碼<br /><br /> 提示：若要使用 **action_id** 作為述詞，您必須將它從字元字串轉換為數值。 如需詳細資訊，請參閱 [針對 action_id/class_type 述詞篩選 SQL Server Audit](https://docs.microsoft.com/archive/blogs/sqlsecurity/filter-sql-server-audit-on-action_id-class_type-predicate)。|**varchar(4)**|是|  
 |**succeeded**|指出觸發稽核事件之動作的權限檢查成功還是失敗。 |**bit**<br /> -1 = 成功， <br />0 = 失敗|是|  
 |**permission_bitmask**|當適用時，顯示已授與、拒絕或撤銷的權限|**bigint**|否|  
 |**is_column_permission**|指出資料行層級權限的旗標|**bit** <br />- 1 = True， <br />0 = False|否|  
 |**session_id**|事件發生所在之工作階段的識別碼。|**int**|是|  
 |**server_principal_id**|動作執行所在之登入環境的識別碼。|**int**|是|  
 |**database_principal_id**|動作執行所在之資料庫使用者環境的識別碼。|**int**|否|  
-|object_id |稽核發生所在之實體的主要識別碼。 此識別碼可以是：<br /><br /> 伺服器物件<br /><br /> 資料庫<br /><br /> 資料庫物件<br /><br /> 結構描述物件|**int**|否|  
+|object_id|稽核發生所在之實體的主要識別碼。 此識別碼可以是：<br /><br /> 伺服器物件<br /><br /> 資料庫<br /><br /> 資料庫物件<br /><br /> 結構描述物件|**int**|否|  
 |**target_server_principal_id**|套用可稽核之動作的伺服器主體。|**int**|是|  
 |**target_database_principal_id**|套用可稽核之動作的資料庫主體。|**int**|否|  
 |**class_type**|稽核發生所在之可稽核的實體類型。|**varchar(2)**|是|  

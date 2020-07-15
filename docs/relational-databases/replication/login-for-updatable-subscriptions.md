@@ -12,20 +12,20 @@ f1_keywords:
 ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3bdb3585647e64ad1a175900263628b607eb0041
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d242fc31411bc0fdb05cca1f65355f49acec575a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71710361"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640423"
 ---
 # <a name="login-for-updatable-subscriptions"></a>可更新訂閱的登入
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  如果您在此精靈的 [可更新的訂閱]  頁面上選取 [複寫]  ，就必須以訂閱者端指定帳戶，並使用此帳戶建立發行者的連接，以進行立即更新。 
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  如果您在此精靈的 [可更新的訂閱] 頁面上選取 [複寫]，就必須以訂閱者端指定帳戶，並使用此帳戶建立發行者的連接，以進行立即更新。 
   
  在訂閱者端引發的觸發程序，會使用這些連接將變更傳播至發行者。 即使您已選取 [可更新的訂閱] 頁面上的 [佇列變更且盡可能認可]，仍需要此帳戶。 [新增訂閱精靈] 依預設會設定已排入佇列的更新能夠視需要切換到立即更新。  
   
-> **重要！！** 對於複寫在發行集資料庫中建立的檢視，為連接指定的帳戶應該只被授與插入、更新及刪除資料的權限。 它不應該被授與任何其他權限。 對於發行集資料庫中以 **syncobj_**\< 十六進位數字> 格式命名的檢視，您在每一個訂閱者端設定的帳戶都應該被授與這些檢視的權限。  
+> **重要！！** 對於複寫在發行集資料庫中建立的檢視，為連接指定的帳戶應該只被授與插入、更新及刪除資料的權限。 它不應該被授與任何其他權限。 對於發行集資料庫中以 **syncobj_** _\<HexadecimalNumber>_ 格式命名的檢視，您在每一個訂閱者端所設定帳戶都應該授與這些檢視的權限。  
   
  此連接類型有三個選項可用：  
   

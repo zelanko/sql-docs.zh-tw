@@ -1,5 +1,6 @@
 ---
 title: 解決記憶體不足問題 | Microsoft 文件
+description: 了解 SQL Server 記憶體內部 OLTP 中的記憶體不足情況、如何還原及解決影響、解決頁面配置失敗，以及最佳做法。
 ms.custom: ''
 ms.date: 12/21/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8171a91d18650285c7bcaf4eb780083e958a8789
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0db5cb560b4e50d903ceca431556f2bdc18365ad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908445"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722391"
 ---
 # <a name="resolve-out-of-memory-issues"></a>解決記憶體不足問題
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 所使用的記憶體比 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]更多，而且使用方式也不同。 您所安裝並配置給 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 的記憶體數量可能會變得不足以支應成長的需求。 若是如此，您可能會用完記憶體。 本主題將說明如何從 OOM 情況中復原。 如需可協助您避免多種 OOM 情況的指引，請參閱 [監視與疑難排解記憶體使用量](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md) 。  
   
@@ -26,13 +27,13 @@ ms.locfileid: "72908445"
   
 |主題|概觀|  
 |-----------|--------------|  
-|[解決由於 OOM 所造成的資料庫還原失敗](#bkmk_resolveRecoveryFailures)|若您收到錯誤訊息：「資料庫 '\<資料庫名稱>  ' 的還原作業因為資源集區 '\<資源集區名稱>  ' 中的記憶體不足而失敗」，該怎麼辦。|  
+|[解決由於 OOM 所造成的資料庫還原失敗](#bkmk_resolveRecoveryFailures)|如果收到錯誤訊息：「資料庫 ' *\<databaseName>* ' 還原作業因為資源集區 ' *\<resourcePoolName>* ' 中的記憶體不足而失敗」，該怎麼辦。|  
 |[解決低記憶體或 OOM 狀況對於工作負載的影響](#bkmk_recoverFromOOM)|如果您發現低記憶體問題對於效能造成負面影響，該怎麼辦。|  
-|[解決有足夠的記憶體可用但卻記憶體不足所造成的頁面配置失敗](#bkmk_PageAllocFailure)|若您收到錯誤訊息：「不允許資料庫 '\<資料庫名稱>  ' 的頁面配置，因為資源集區 '\<資源集區名稱>  ' 中的記憶體不足」，該怎麼辦。 ...」(前提是可用的記憶體足夠供執行作業)。|
+|[解決有足夠的記憶體可用但卻記憶體不足所造成的頁面配置失敗](#bkmk_PageAllocFailure)|如果收到錯誤訊息：「不允許資料庫 ' *\<databaseName>* ' 的頁面配置，因為資源集區 ' *\<resourcePoolName>* ' 中的記憶體不足」，該怎麼辦。 ...」(前提是可用的記憶體足夠供執行作業)。|
 |[在 VM 環境中使用記憶體內部 OLTP 的最佳做法](#bkmk_VMs)|在虛擬環境中使用記憶體內部 OLTP 的注意事項。|
   
 ##  <a name="resolve-database-restore-failures-due-to-oom"></a><a name="bkmk_resolveRecoveryFailures"></a> 解決由於 OOM 所造成的資料庫還原失敗  
- 當您嘗試還原資料庫時可能會收到錯誤訊息：「資料庫 ' *\<databaseName>* ' 的還原作業失敗，因為資源集區 ' *\<resourcePoolName>* ' 中的記憶體不足。」這表示伺服器沒有足夠的可用記憶體來還原資料庫。 
+ 當您嘗試還原資料庫時可能會收到錯誤訊息：「資料庫 ' *\<databaseName>* ' 還原作業因為資源集區 ' *\<resourcePoolName>* ' 中的記憶體不足而失敗」。這表示伺服器沒有足夠的可用記憶體來還原資料庫。 
    
 您還原資料庫的目標伺服器針對資料庫備份的記憶體最佳化資料表必須有足夠的可用記憶體，否則資料庫將不會恢復連線，並會標記為可疑。  
   

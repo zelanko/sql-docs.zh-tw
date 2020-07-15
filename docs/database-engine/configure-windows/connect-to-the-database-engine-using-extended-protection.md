@@ -1,5 +1,6 @@
 ---
 title: 使用擴充保護連接至資料庫引擎 | Microsoft Docs
+description: 擴充保護會使用服務繫結與通道繫結來防止驗證中繼攻擊。 請參閱如何啟用此功能。
 ms.custom: ''
 ms.date: 05/21/2019
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5216b324477f1af7fb727af3462ccce8d64e6a64
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9f54a62d7110f86087f796b6dc1f9a6c688d89d6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012105"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772635"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>使用擴充保護連接至 Database Engine
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   從 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 開始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就支援 [擴充保護]。 **驗證擴充保護** 是作業系統實作的網路元件功能。 Windows 7 和 Windows Server 2008 R2 上可支援 **[擴充保護]** 。 Service Pack 中內含**擴充保護** ，可供舊版 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 作業系統使用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在使用 **擴充保護**進行連接時較安全。  
   
 > [!IMPORTANT]  
@@ -86,7 +87,7 @@ ms.locfileid: "68012105"
   
 1.  在 **[開始]** 功能表上，選擇 **[所有程式]** ，指向 **[Microsoft SQL Server]** ，然後按一下 **[SQL Server 組態管理員]** 。  
   
-2.  展開 [SQL Server 網路組態]，然後在 [_\<_執行個體名稱*>* 的通訊協定] 上按一下滑鼠右鍵，再按一下 [屬性]。  
+2.  展開 [SQL Server 網路設定]，然後以滑鼠右鍵按一下 [通訊協定] _\<_InstanceName*>*，然後按一下 [屬性]。  
   
 3.  針對通道繫結和服務繫結，在 **[進階]** 索引標籤上將 **[擴充保護]** 設定為適當的設定值。  
   

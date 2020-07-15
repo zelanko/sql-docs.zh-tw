@@ -1,5 +1,6 @@
 ---
 title: 估計堆積的大小 | Microsoft Docs
+description: 使用此程序估計在 SQL Server 的堆積中，儲存資料所需的空間量。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 58d708811825fe42ca64c7e30f7e9ed0d92e62f3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a754dd4904cb106fc847beab843abca3837545a1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909049"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002965"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>估計堆積的大小
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   您可以使用下列步驟，估計儲存堆積中的資料所需的空間量：  
   
 1.  指定資料表中將會有的資料列數目：  
@@ -46,7 +47,7 @@ ms.locfileid: "72909049"
   
 3.  資料列中有一部分 (稱為 Null 點陣圖) 是保留的空間，用來管理資料行的 Null 屬性。 計算它的大小：  
   
-     **_Null_Bitmap_**  = 2 + (( **_Num_Cols_** + 7) / 8)  
+     **_Null_Bitmap_**  = 2 + ((**_Num_Cols_** + 7) / 8)  
   
      您應該僅使用這個運算式的整數部分。 請捨去任何餘數。  
   
@@ -54,7 +55,7 @@ ms.locfileid: "72909049"
   
      如果在索引中有可變長度的資料行，請決定將資料行儲存到索引列中所需的空間大小。  
   
-     **_Variable_Data_Size_**  = 2 + ( **_Num_Variable_Cols_** x 2) + **_Max_Var_Size_**  
+     **_Variable_Data_Size_**  = 2 + (**_Num_Variable_Cols_** x 2) + **_Max_Var_Size_**  
   
      新增到 **_Max_Var_Size_** 之位元組是用於追蹤每個可變長度的資料行。 這個公式假設所有可變長度的資料行是 100% 填滿的。 如果您預期可變長度資料行所佔儲存空間的百分比會比較低，您可以經由調整百分比所得的 **_Max_Var_Size_** 值，取得更精確的整體資料表大小估計值。  
   
@@ -65,19 +66,19 @@ ms.locfileid: "72909049"
   
 5.  計算資料列總大小：  
   
-     **_Row_Size_**   =  **_Fixed_Data_Size_**  +  **_Variable_Data_Size_**  +  **_Null_Bitmap_** + 4  
+     **_Row_Size_**  = **_Fixed_Data_Size_** + **_Variable_Data_Size_** + **_Null_Bitmap_** + 4  
   
      公式中 4 這個值是資料列的資料列標頭負擔。  
   
 6.  計算每個分頁的資料列數目 (每個分頁包含 8096 個可用位元組)：  
   
-     **_Rows_Per_Page_**  = 8096 / ( **_Row_Size_** + 2)  
+     **_Rows_Per_Page_**  = 8096 / (**_Row_Size_** + 2)  
   
      因為資料列不能跨頁，每個分頁的資料列數目必須無條件捨去小數，而取最接近的整數資料列。 公式中的 2 這個值是給分頁位置陣列中的該資料列項目。  
   
 7.  計算儲存所有資料列所需的分頁數目：  
   
-     **_Num_Pages_**   =  **_Num_Rows_**  /  **_Rows_Per_Page_**  
+     **_Num_Pages_**  = **_Num_Rows_** / **_Rows_Per_Page_**  
   
      估計的分頁數目應該要將小數進位到最接近的整分頁數。  
   

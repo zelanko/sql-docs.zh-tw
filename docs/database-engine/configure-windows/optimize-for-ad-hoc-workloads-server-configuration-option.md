@@ -1,5 +1,6 @@
 ---
 title: 針對特定工作負載最佳化伺服器組態選項 | Microsoft Docs
+description: 了解 [針對特定臨機操作工作負載最佳化] 選項。 使用此選項以在工作負載包含許多單次使用的臨機批次時改善 SQL Server 計畫快取的效率。
 ms.custom: ''
 ms.date: 11/17/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - optimize for ad hoc workloads option
 ms.assetid: 0972e028-3a8e-454b-a186-e814a1d431f2
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: c66a4d3826493d10974ab4ce8363e3adde1bd0fa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d93df848459f003fa4e2c2be0b88ddd9973422c5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67998420"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781855"
 ---
 # <a name="optimize-for-ad-hoc-workloads-server-configuration-option"></a>針對特定工作負載最佳化伺服器組態選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **optimize for ad hoc workloads** 選項是用來針對包含許多使用一次特定批次的工作負載，改善計畫快取的效率。 如果這個選項設定為 1， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 就會在首次編譯批次時，將小型已編譯計畫虛設常式 (而非完整的已編譯計畫) 儲存在計畫快取中。 這會透過避免計畫快取填滿不重複使用的已編譯計畫，協助減輕記憶體不足的壓力。 
   

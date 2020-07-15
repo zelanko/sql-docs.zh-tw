@@ -1,7 +1,7 @@
 ---
 title: PARSENAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 06/02/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -22,17 +22,17 @@ ms.assetid: abf34f99-9ee9-460b-85b2-930ca5c4b5ae
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71c741c677c83d9d0ba64e8d250442bb059c711d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1f2cda4a044f6980a5998371f1a7b0f70397e259
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832952"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737990"
 ---
 # <a name="parsename-transact-sql"></a>PARSENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  傳回物件名稱的指定部分。 物件的可擷取部分有物件名稱、擁有者名稱、資料庫名稱和伺服器名稱。  
+  傳回物件名稱的指定部分。 物件可擷取的部分包含物件名稱、結構描述名稱、資料庫名稱及伺服器名稱。 
   
 > [!NOTE]  
 >  PARSENAME 函數並不會指出指定名稱的物件是否存在。 PARSENAME 只會傳回指定物件名稱的指定部份。  
@@ -41,29 +41,27 @@ ms.locfileid: "82832952"
   
 ## <a name="syntax"></a>語法  
   
+```syntaxsql 
+PARSENAME ('object_name' , object_piece )
 ```  
-PARSENAME ( 'object_name' , object_piece )   
-```  
   
-## <a name="arguments"></a>引數  
- '*object_name*'  
- 這是要擷取指定物件部分的物件名稱。 *object_name* 是 **sysname**. 這個參數是一個選擇性限定的物件名稱。 如果限定了物件名稱的所有部分，這個名稱會有四個部分：伺服器名稱、資料庫名稱、擁有者名稱和物件名稱。  
+## <a name="arguments"></a>引數
+
+*'object_name'* ：此參數存放為了擷取指定物件部分的物件名稱。 這個參數是一個選擇性限定的物件名稱。 若限定了物件名稱的所有部分，則此名稱會有四個部分：伺服器名稱、資料庫名稱、結構描述名稱及物件名稱。  ' Object_name ' 字串的每個部分都是 *sysname* 類型，這相當於 Nvarchar (128) 或 256 個位元組。 若字串的任何部分超過 256 個位元組，則 PARSENAME 會針對該部分傳回 Null，因為其不是有效的 sysname。
   
- *object_piece*  
- 這是要傳回的物件部分。 *object_piece* 的類型是 **int**它可以有下列這些值：  
+*object_piece*  
+這是要傳回的物件部分。 *object_piece* 的類型是 **int**它可以有下列這些值：  
+    1 = 物件名稱  
+    2 = 結構描述名稱  
+    3 = 資料庫名稱  
+    4 = 伺服器名稱  
   
- 1 = 物件名稱  
+## <a name="return-type"></a>傳回類型
+
+ **sysname**
   
- 2 = 結構描述名稱  
-  
- 3 = 資料庫名稱  
-  
- 4 = 伺服器名稱  
-  
-## <a name="return-types"></a>傳回型別  
- **sysname**  
-  
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>備註
+
  如果符合下列條件之一，PARSENAME 會傳回 NULL：  
   
 -   *object_name* 或 *object_piece* 是 NULL。  
@@ -72,10 +70,11 @@ PARSENAME ( 'object_name' , object_piece )
   
  要求的物件部分，長度為 0，且不是有效的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼。 長度為零的物件名稱會將完整名稱轉譯為無效。  
   
-## <a name="examples"></a>範例  
+## <a name="examples"></a>範例
+
  下列範例會利用 `PARSENAME` 來傳回 `Person` 資料庫中之 `AdventureWorks2012` 資料表的相關資訊。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT PARSENAME('AdventureWorksPDW2012.dbo.DimCustomer', 1) AS 'Object Name';  
@@ -112,11 +111,12 @@ Server Name
 (1 row(s) affected)
 ```
   
-## <a name="see-also"></a>另請參閱  
- [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [系統函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
+## <a name="see-also"></a>另請參閱
+
+- [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
+- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
+- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
+- [系統函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
   
   
 

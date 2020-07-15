@@ -1,5 +1,6 @@
 ---
 title: 使用檔案輸入輸出 API 存取 FileTable | Microsoft Docs
+description: 了解如何使用含有 FileTable 的檔案 I/O API，以及了解哪些檔案系統作業與 FileTable 相容。
 ms.custom: ''
 ms.date: 08/25/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d1cdc6947c97052660dea3be9d6013a8e61a090d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d73f6f8e993784def2dd9325933778e2048d5eae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908779"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85744693"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>使用檔案輸入輸出 API 存取 FileTable
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   描述檔案系統 I/O 如何在 FileTable 上運作。  
   
 ##  <a name="get-started-using-file-io-apis-with-filetables"></a><a name="accessing"></a> 開始使用 FileTable 檔案的 I/O API  

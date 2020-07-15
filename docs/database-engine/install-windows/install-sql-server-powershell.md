@@ -1,5 +1,6 @@
 ---
 title: 安裝 SQL Server PowerShell | Microsoft Docs
+description: 本文描述當選取需要 PowerShell 支援的 SQL Server 功能時，安裝程式所安裝的 SQL Server PowerShell 元件。
 ms.custom: ''
 ms.date: 09/05/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f445d1b28c7f76274a2a64e813805f820d005aa6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7ad18b9f946bbf7fb8817f84a2bb06274edc8753
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74200479"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883534"
 ---
 # <a name="install-sql-server-powershell"></a>安裝 SQL Server PowerShell
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會自動設定 PowerShell 元件。  
 

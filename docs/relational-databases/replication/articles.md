@@ -13,15 +13,15 @@ ms.assetid: 7c743dc6-6c6d-4c92-b711-842e1b0b273e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 851f298d9a2b19a1f8a3bf3fc1ef415ac4a5e288
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 896ddcff70940742bae16e50b952cf62c6b06e27
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288096"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738891"
 ---
 # <a name="articles"></a>發行項
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   在 **[發行項]** 頁面上，您可以指定發行集內要包含哪些資料庫物件做為發行項。 如果您發行的資料庫物件相依於一或多個其他資料庫物件，就必須發行所有參考物件。 例如，如果您發行相依於資料表的檢視表，同時也必須發行該資料表。  
   
  無法發行的物件旁邊會有一個紅色的圖示，且精靈頁面底部的資訊面板中會顯示說明。 下列物件無法發行：  
@@ -58,14 +58,14 @@ ms.locfileid: "76288096"
 -   以滑鼠右鍵按一下窗格中的物件，以查看該物件的命令功能表。  
   
  **發行項屬性**  
- 按一下 [發行項屬性]  ，然後按一下下列其中一項：  
+ 按一下 [發行項屬性] ，然後按一下下列其中一項：  
   
--   按一下 [設定反白顯示 \<物件類型> 發行項的屬性]  啟動 [發行項屬性 - \<物件名稱>] 對話方塊；在這個對話方塊中所做的屬性變更，只會套用至 [發行項] 頁面的物件窗格中反白顯示的物件。  
+-   按一下 [設定醒目提示 \<ObjectType> 發行項的屬性]，以啟動 [發行項屬性 - \<ObjectName>] 對話方塊；在這個對話方塊中所做屬性變更只會套用至 [發行項] 頁面上物件窗格中醒目提示的物件。  
   
--   按一下 [設定所有 \<物件類型> 發行項的屬性] 啟動 [所有 \<物件類型> 發行項的屬性] 對話方塊；在這個對話方塊中所做的屬性變更，會套用至 [發行項] 頁面的物件窗格中屬於該類型的所有物件，包括尚未選取發行的物件。  
+-   按一下 [設定所有 \<ObjectType> 發行項的屬性]，以啟動 [所有 \<ObjectType> 發行項的屬性] 對話方塊；在這個對話方塊中所做的屬性變更會套用至 [發行項] 頁面上物件窗格中屬於該類型的所有物件，包含尚未選取發行的物件。  
   
     > [!NOTE]  
-    >  在 [所有 \<物件類型> 發行項的屬性] 對話方塊中所做的屬性變更，會覆寫之前在 [發行項屬性 - \<物件名稱>] 對話方塊中所做的任何變更。 例如，若要設定所有屬於某物件類型之發行項的一些預設值，但同時要設定個別物件的某些屬性，則請先設定所有發行項的預設值， 然後再設定個別物件的屬性。  
+    >  在 [所有 \<ObjectType> 發行項的屬性] 對話方塊中所做屬性變更，會覆寫先前在 [發行項屬性 - \<ObjectName>] 對話方塊中所做的任何變更。 例如，若要設定所有屬於某物件類型之發行項的一些預設值，但同時要設定個別物件的某些屬性，則請先設定所有發行項的預設值， 然後再設定個別物件的屬性。  
   
  **反白的資料表僅限下載**  
  僅限合併式複寫。 僅限 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本。 選取以指定如果使用客訂閱，則訂閱者端不允許變更。 因為僅限下載的發行項不能在訂閱者端進行更新，追蹤中繼資料不會傳送給訂閱者。 如此可減少訂閱者上的儲存體並提高效能，特別是網路連接緩慢時。 此選項對應至 **[發行項屬性]** 對話方塊中， **[同步處理方向]** 選項的 **[僅限下載至訂閱者，禁止訂閱者變更]** 值。 如需詳細資訊，請參閱[使用僅限下載的發行項最佳化合併式複寫效能](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)。  

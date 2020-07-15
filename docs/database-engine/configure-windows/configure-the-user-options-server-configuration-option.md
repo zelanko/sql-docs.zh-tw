@@ -1,5 +1,6 @@
 ---
 title: 設定 user options 伺服器組態選項 | Microsoft Docs
+description: 了解 [使用者選項] 選項。 了解此選項如何變更 SQL Server 針對使用者工作階段所建立查詢處理選項的預設值。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - users [SQL Server], global defaults
 - user options option [SQL Server]
 ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d06cb92287537293739fa9bd7b1a86ea7ffd767a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fe7a4f5bc7fb043533656041d5f10d5be1880273
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012160"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85659763"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>設定 user options 伺服器組態選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] user options [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **user options** 選項指定所有使用者的全域預設值。 會為使用者工作階段的持續時間建立預設查詢處理選項的清單。 **user options** 選項允許您變更 SET 選項的預設值 (如果伺服器的預設值不適當)。  
   
@@ -38,7 +39,7 @@ ms.locfileid: "68012160"
   
 -   **若要使用下列項目設定 user options 組態選項：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -79,7 +80,7 @@ ms.locfileid: "68012160"
   
 #### <a name="to-configure-the-user-options-configuration-option"></a>若要設定 user options 組態選項  
   
-1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]  。  
+1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
   
 2.  按一下 **[連接]** 節點。  
   

@@ -1,5 +1,6 @@
 ---
 title: 保護 SQL Server 智慧財產權 | Microsoft Docs
+description: 了解在散發給客戶的 SQL Server 資料應用程式中，用來保護智慧財產權的選項。
 ms.custom: ''
 ms.date: 01/31/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 174a646a-d65c-4074-8249-d783e91be2dd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: afe179023f72ec509af5828bb89afb51f93b53a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dc6b2c88fc2405aea99ac8ce7de9c38cf43c99aa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67986598"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773884"
 ---
 # <a name="protecting-your-sql-server-intellectual-property"></a>保護 SQL Server 智慧財產權
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 軟體開發人員通常會問，要如何將其 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 資料應用程式散發給客戶，同時防止客戶分析和解構其應用程式。 這裡的重要原則在於保護智慧財產權、本身為法律問題，而且透過授權合約進行保護。 在其他人所管理的電腦上安裝 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 時，原本就會遺失一些控制權。 
 

@@ -1,5 +1,6 @@
 ---
 title: Audit Logout 事件類別 | Microsoft Docs
+description: Audit Logout 事件類別指出使用者已經登出 SQL Server。 本文描述 Audit Logout 事件類別資料行。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 16a0178c-ca03-4078-bbdd-f481385fa2f1
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 72a37ac98e6b4c557b06294c1d0ddeb1a3072356
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5848a29de18615da895572bede48014f9aecff2f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67897467"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726342"
 ---
 # <a name="audit-logout-event-class"></a>Audit Logout 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Audit Logout** 事件類別表示使用者已經登出 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此類別中的事件是由新連接引發，或是由連接集區中重複使用的連接所引發。  
   
 ## <a name="audit-logout-event-class-data-columns"></a>Audit Logout 事件類別資料行  
@@ -49,7 +50,7 @@ ms.locfileid: "67897467"
 |**SessionLoginName**|**Nvarchar**|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 執行陳述式，則 **SessionLoginName** 將顯示 Login1 而 **LoginName** 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |**SPID**|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |**StartTime**|**datetime**|相關稽核登入事件的 StartTime (若可用的話)。|14|是|  
-|「成功」 |**int**|1 = 成功。 0 = 失敗。 例如，值為 1 指出權限檢查成功，而值為 0 指出該檢查失敗。|23|是|  
+|「成功」|**int**|1 = 成功。 0 = 失敗。 例如，值為 1 指出權限檢查成功，而值為 0 指出該檢查失敗。|23|是|  
 |**Writes**|**bigint**|使用者於連接期間發出的邏輯寫入 I/O 數。|17|是|  
 |**GroupID**|**int**|SQL 追蹤事件引發所在之工作負載群組的識別碼。|66|是|  
   

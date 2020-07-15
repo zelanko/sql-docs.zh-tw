@@ -1,7 +1,8 @@
 ---
 title: 執行緒和工作架構指南 | Microsoft Docs
+description: 了解 SQL Server 中的執行緒和工作架構，包括工作排程、熱新增 CPU 及最佳做法來使用超過 64 個 CPU 的電腦。
 ms.custom: ''
-ms.date: 10/11/2019
+ms.date: 07/06/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,15 +15,15 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c19e3ad3589cad6f7503ff9f0e92c090bef5035
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c6e8ee2bd3910f3b7ae4bbdba37b973c095fef00
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287352"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091909"
 ---
 # <a name="thread-and-task-architecture-guide"></a>執行緒和工作架構指南
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 
 ## <a name="operating-system-task-scheduling"></a>作業系統工作排程
 執行緒是作業系統可以執行的最小處理單位，可讓應用程式邏輯分成數個同時執行路徑。 當複雜應用程式有許多可同時執行的工作時，執行緒就很實用。 
@@ -34,16 +35,111 @@ ms.locfileid: "79287352"
 ## <a name="sql-server-task-scheduling"></a>SQL Server 工作排程
 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的範圍中，**要求**是查詢或批次的邏輯表示法。 要求也代表系統執行緒要求的作業，例如檢查點或記錄寫入器。 要求在其整個生命週期中以各種狀態存在，而且當執行要求所需的資源無法使用 (例如[鎖定](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md#locks)或[閂鎖](../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md#latches)) 時可累積等候。 如需有關要求狀態的詳細資訊，請參閱 [sys.dm_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)。
 
-**工作**代表必須完成以滿足要求的工作單位。 您可以將一或多個工作指派給單一要求。 平行要求將有數個同時 (而非依序) 執行的作用中工作。 依序執行的要求在任何給定的時間點都只會有一個作用中工作。 工作在其整個生命週期中以各種狀態存在。 如需有關工作狀態的詳細資訊，請參閱 [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)。 處於「暫停」狀態的工作正在等候執行工作所需資源成為可用。 如需有關等候中工作的詳細資訊，請參閱 [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md)。
+**工作**代表必須完成以滿足要求的工作單位。 您可以將一或多個工作指派給單一要求。 
+-  平行要求會有數個同時 (而不是以序列方式) 執行的作用中工作，其中會有一個**父工作** (或協調工作) 和多個**子工作**。 平行要求的執行計畫可能會具有序列分支，亦即計畫區域，其包含不平行執行的運算子。 父工作也會負責執行這些序列運算子。
+-  在執行期間，序列要求在任何指定的時間點都只會有一個作用中工作。     
+工作在其整個生命週期中以各種狀態存在。 如需有關工作狀態的詳細資訊，請參閱 [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)。 處於「暫停」狀態的工作正在等候執行工作所需資源成為可用。 如需等候中工作的詳細資訊，請參閱 [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md)。
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **背景工作執行緒** (也稱為背景工作角色或執行緒) 是作業系統執行緒的邏輯表示法。 當執行序列要求時，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 將會繁衍背景工作角色以執行作用中工作。 當以[資料列模式](../relational-databases/query-processing-architecture-guide.md#execution-modes)執行平行要求時，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會指派背景工作角色以協調負責完成指派給它們的工作的子背景工作角色。 為每個工作繁衍的背景工作執行緒數目取決於：
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **背景工作執行緒** (也稱為背景工作角色或執行緒) 是作業系統執行緒的邏輯表示法。 當執行**序列要求**時，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 將會繁衍背景工作角色以執行作用中工作 (1:1)。 當以[資料列模式](../relational-databases/query-processing-architecture-guide.md#execution-modes)執行**平行要求**時，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會指派背景工作角色，以協調負責完成受指派工作的子背景工作角色 (也是 1:1)，稱為**父執行緒**。 父執行緒具有與其建立關聯的父工作。 為每個工作繁衍的背景工作執行緒數目取決於：
 -   要求是否符合平行處理原則的資格 (由查詢最佳化工具判斷)。
--   根據目前的工作負載，實際可用[平行處理原則 (DOP)](../relational-databases/query-processing-architecture-guide.md#DOP) 為何。 這可能會與預估 DOP 有所差異，後者是以平行處理原則的最大程度 (MAXDOP) 伺服器組態為基礎的。 例如，MAXDOP 伺服器組態選項可能是 8，執行階段的可用 DOP 只能是 2，這會影響查詢效能。 
+-   根據目前的工作負載，實際可用[平行處理原則 (DOP)](../relational-databases/query-processing-architecture-guide.md#DOP) 為何。 這可能會與預估 DOP 有所差異，後者是以平行處理原則的最大程度 (MAXDOP) 伺服器組態為基礎。 例如，MAXDOP 伺服器組態選項可能是 8，執行階段的可用 DOP 只能是 2，這會影響查詢效能。 
 
 > [!NOTE]
-> **平行處理原則的最大程度 (MAXDOP)** 限制是以個別工作 (而非個別要求) 為基礎所設定的。 這表示在平行查詢執行期間，單一要求可以繁衍多個工作，而且每個工作都可以使用多個背景工作角色，最多為 MAXDOP 限制。 如需有關 MAXDOP 的詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
+> **平行處理原則的最大程度 (MAXDOP)** 限制是以個別工作 (而非個別要求) 為基礎所設定的。 這表示在平行查詢執行期間，單一要求可繁衍多個工作 (最多為 MAXDOP 限制)，且每個工作都會使用一個背景工作。 如需有關 MAXDOP 的詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
 
 **排程器** (亦稱為 SOS 排程器) 會管理需要處理時間來代表工作 (Task) 執行工作 (Work) 的背景工作執行緒。 每個排程器都對應到個別處理器 (CPU)。 背景工作角色可在排程器中維持作用中的時間稱為 OS 配量，其最大值為 4 毫秒。 在經過此配量時間之後，背景工作角色會將其時間分配給需要存取 CPU 資源的背景工作角色，並變更其狀態。 這個背景工作角色之間的合作以最大化 CPU 資源存取的機制稱為**合作式排程**，亦稱為非先佔式排程。 接著，背景工作角色中的變更會傳播到與該背景工作角色關聯的工作，以及傳播到與該工作關聯的要求。 如需有關背景工作角色狀態的詳細資訊，請參閱 [sys.dm_os_workers](../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)。 如需有關排程器的詳細資訊，請參閱 [sys.dm_os_schedulers](../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)。 
+
+總結來說，**要求**可能會繁衍一或多個**工作**以執行工作的單位。 每個工作都會指派給負責完成此工作的**背景工作執行緒**。 每個背景工作執行緒都必須排程 (位於**排程器**上) 才能確實執行工作。 
+
+### <a name="scheduling-parallel-tasks"></a>排程平行工作
+假設 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 以 MaxDOP 8 設定，且 CPU 親和性設為跨 NUMA 節點 0 和 1 的 24 個 CPU (排程器)。 排程器 0 到 11 屬於 NUMA 節點 0，而排程器 12 到 23 屬於 NUMA 節點 1。 應用程式會將下列查詢 (要求) 傳送至 [!INCLUDE[ssde_md](../includes/ssde_md.md)]：
+
+```sql
+SELECT h.SalesOrderID, h.OrderDate, h.DueDate, h.ShipDate
+FROM Sales.SalesOrderHeaderBulk AS h 
+INNER JOIN Sales.SalesOrderDetailBulk AS d ON h.SalesOrderID = d.SalesOrderID 
+WHERE (h.OrderDate >= '2014-3-28 00:00:00');
+```
+
+> [!TIP]
+> 您可使用 [AdventureWorks2016_EXT 範例資料庫](../samples/adventureworks-install-configure.md) 資料庫來執行範例查詢。 資料表 `Sales.SalesOrderHeader` 和 `Sales.SalesOrderDetail` 已擴大了 50 倍，並已重新命名為 `Sales.SalesOrderHeaderBulk` 和 `Sales.SalesOrderDetailBulk`。
+
+執行計畫會顯示兩個資料表之間的[雜湊聯結](../relational-databases/performance/joins.md#hash)，且每個運算子會以平行方式執行，如具有兩個箭號的黃色圓圈所指示。 每個平行處理原則運算子都是計畫中的不同分支。 因此，下列執行計畫中有三個分支。 
+
+![平行查詢計畫](../relational-databases/media/schedule-parallel-query-plan.png)
+
+> [!NOTE]
+> 如果將執行計畫視為樹狀結構，則**分支**就是計畫的一個區域，其可在平行處理原則運算子 (也稱為交換迭代器) 之間將一或多個運算子分組。 如需計畫運算子的詳細資訊，請參閱[執行程序表邏輯和實體運算子參考](../relational-databases/showplan-logical-and-physical-operators-reference.md)。 
+
+雖然執行計畫中有三個分支，但在執行期間的任何時間點，只能在此執行計畫中同時執行兩個分支：
+1.  在 `Sales.SalesOrderHeaderBulk` (聯結的建置輸入) 上使用「叢集索引掃描」的分支，會與在 `Sales.SalesOrderDetailBulk` (聯結的探查輸入) 上使用「叢集索引掃描」的分支同時執行。
+2. 在 `Sales.SalesOrderDetailBulk` (聯結的探查輸入) 上使用「叢集索引掃描」的分支，會與建立「點陣圖」的分支同時執行，且目前正在執行「雜湊比對」。
+
+執行程序表 XML 顯示已保留 16 個背景工作執行緒，並用於 NUMA 節點 0 和 1：
+
+```xml
+<ThreadStat Branches="2" UsedThreads="16">
+  <ThreadReservation NodeId="0" ReservedThreads="8" />
+  <ThreadReservation NodeId="1" ReservedThreads="8" />
+</ThreadStat>
+```
+
+執行緒保留可確保 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 擁有足夠背景工作執行緒，以執行要求所需的所有工作。 您可在所有 NUMA 節點上保留執行緒，或只保留在一個 NUMA 節點中。 執行緒保留會在執行開始之前於執行階段完成，並相依於排程器載入。 保留的背景工作執行緒數目通常衍生自公式 ***concurrent branches* * *runtime DOP***，並排除父系背景工作執行緒。 每個分支都會受限於等於 MaxDOP 的背景工作執行緒數目。 在此範例中有兩個平行分支，而 MaxDOP 設為 8，因此 **2 * 8 = 16**。
+
+如需參考，請觀察[即時查詢統計資料](../relational-databases/performance/live-query-statistics.md)中的即時執行計畫，其中一個分支已完成，且兩個分支同時執行。
+
+![即時平行查詢計畫](../relational-databases/media/schedule-parallel-query-live-plan.png)
+
+[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會指派背景工作執行緒來執行作用中的工作 (1:1)，可藉由查詢 [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md) DMV 在查詢執行期間觀察到，如下列範例所示：
+
+```sql
+SELECT parent_task_address, task_address, 
+       task_state, scheduler_id, worker_address
+FROM sys.dm_os_tasks
+WHERE session_id = <insert_session_id>
+ORDER BY parent_task_address, scheduler_id;
+```
+
+> [!TIP]
+> 父工作的資料行 `parent_task_address` 一律為 Null。 
+
+[!INCLUDE[ssResult](../includes/ssresult-md.md)] 請注意，目前正在執行的分支有 17 個作用中工作：對應至保留執行緒的 16 個子工作，加上父工作，或協調工作。
+
+|parent_task_address|task_address|task_state|scheduler_id|worker_address|
+|--------|--------|--------|--------|--------|
+|NULL|**0x000001EF4758ACA8**|SUSPENDED|3|0x000001EFE6CB6160|
+|0x000001EF4758ACA8|0x000001EFE43F3468|SUSPENDED|0|0x000001EF6DB70160|
+|0x000001EF4758ACA8|0x000001EEB243A4E8|SUSPENDED|0|0x000001EF6DB7A160|
+|0x000001EF4758ACA8|0x000001EC86251468|SUSPENDED|5|0x000001EEC05E8160|
+|0x000001EF4758ACA8|0x000001EFE3023468|SUSPENDED|5|0x000001EF6B46A160|
+|0x000001EF4758ACA8|0x000001EFE3AF1468|SUSPENDED|6|0x000001EF6BD38160|
+|0x000001EF4758ACA8|0x000001EFE4AFCCA8|SUSPENDED|6|0x000001EF6ACB4160|
+|0x000001EF4758ACA8|0x000001EFDE043848|SUSPENDED|7|0x000001EEA18C2160|
+|0x000001EF4758ACA8|0x000001EF69038108|SUSPENDED|7|0x000001EF6AEBA160|
+|0x000001EF4758ACA8|0x000001EFCFDD8CA8|SUSPENDED|8|0x000001EFCB6F0160|
+|0x000001EF4758ACA8|0x000001EFCFDD88C8|SUSPENDED|8|0x000001EF6DC46160|
+|0x000001EF4758ACA8|0x000001EFBCC54108|SUSPENDED|9|0x000001EFCB886160|
+|0x000001EF4758ACA8|0x000001EC86279468|SUSPENDED|9|0x000001EF6DE08160|
+|0x000001EF4758ACA8|0x000001EFDE901848|SUSPENDED|10|0x000001EFF56E0160|
+|0x000001EF4758ACA8|0x000001EF6DB32108|SUSPENDED|10|0x000001EFCC3D0160|
+|0x000001EF4758ACA8|0x000001EC8628D468|SUSPENDED|11|0x000001EFBFA4A160|
+|0x000001EF4758ACA8|0x000001EFBD3A1C28|SUSPENDED|11|0x000001EF6BD72160|
+
+> [!TIP]
+> 您可能會在非常忙碌的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 上，看到作用中工作數目超過保留執行緒所設定的限制。 這些工作可能屬於已不再使用的分支，且處於暫時性狀態，等待著清除作業。 
+
+請觀察這 16 個子工作每個都已獲指派不同的背景工作執行緒 (在 `worker_address` 資料行中可見)，但所有背景工作都會指派給相同集區的 8 個排程器 (0、5、6、7、8、9、10、11)，且父工作會指派給此集區以外的排程器 (3)。
+
+> [!IMPORTANT]
+> 在排程指定分支上的第一組平行工作之後，[!INCLUDE[ssde_md](../includes/ssde_md.md)] 會針對其他分支上任何其他工作使用相同的排程器集區。 這表示同一組排程器會用於整個執行計畫中的所有平行工作，只受限於 MaxDOP。      
+> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 一律會嘗試從相同的 NUMA 節點指派排程器，以用於執行工作。 不過，指派給父工作的背景工作執行緒，可能會放置在與其他工作不同的 NUMA 節點中。
+
+背景工作執行緒只能在其配量的持續時間 (4 毫秒) 於排程器中維持作用中狀態，且在經過該配量之後必須讓出排程器，以便讓指派給另一個工作的背景工作執行緒能成為作用中狀態。 當背景工作的配量過期且不再為作用中時，假設工作不需要存取目前尚未提供的資源 (例如閂鎖或鎖定)，則個別的工作會以 RUNNABLE 狀態放在 FIFO 佇列中，直到其再次移至 RUNNING 狀態為止；在此情況下，工作會進入 SUSPENDED 狀態 (而不是 RUNNABLE)，直到這些資源可供使用的時候為止。  
+
+> [!TIP] 
+> 針對上面所見 DMV 的輸出，所有作用中的工作都處於 SUSPENDED 狀態。 如需等候工作的詳細資料，請查詢 [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md) DMV。 
+
+總結來說，平行要求會繁衍多個工作，每個工作都必須指派給單一背景工作執行緒，且每個背景工作執行緒都必須指派給單一排程器。 因此，使用中排程器數目不能超過每個分支的平行工作數目，其由 MaxDOP 所設定。 
 
 ### <a name="allocating-threads-to-a-cpu"></a>配置執行緒給 CPU
 根據預設，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的每個執行個體會啟動每個執行緒，且作業系統會根據負載從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體，將執行緒散發給電腦上的處理器 (CPU)。 如果已在作業系統層級啟用處理序親和性，則作業系統就會將每個執行緒指派給特定的 CPU。 相反地，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **背景工作執行緒**指派給**排程器**，以便將這些執行緒平均分配給 CPU。
@@ -73,7 +169,7 @@ Microsoft Windows 使用數值優先權系統，從 1 到 31 的範圍來排程�
 
 根據預設，每個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的優先權為 7，這稱為一般優先權。 這讓 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行緒有夠高的優先權，可以取得足夠的 CPU 資源，而不會影響其他的應用程式。 
 
-使用[優先權提升](../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md)設定選項，可將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體中執行緒的優先權增加至 13。 這稱為高優先權。 這個設定讓 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行緒擁有比大部份其他應用程式更高的優先權。 因此，每當 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行緒可以執行時，通常系統會先分派執行緒，而且其他應用程式不會預先清空執行緒。 當伺服器僅執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體、而沒有執行其他應用程式時，可以改善系統的效能。 然而，如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中發生需要大量記憶體的作業，則其他應用程式可能無法擁有夠高的優先權，以預先清空 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行緒。 
+使用[優先權提升](../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md)設定選項，可將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體中執行緒的優先權增加至 13。 這稱為高優先權。 這個設定讓 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行緒擁有比大部份其他應用程式更高的優先權。 因此，每當 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行緒就緒可執行時，通常系統會先分派執行緒，且其他應用程式不會預先清空執行緒。 當伺服器僅執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體、而沒有執行其他應用程式時，可以改善系統的效能。 然而，如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中發生需要大量記憶體的作業，則其他應用程式可能無法擁有夠高的優先權，以預先清空 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行緒。 
 
 如果您在電腦上執行多個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體，並且僅提高部份執行個體的優先權，則以一般優先權執行的所有執行個體之效能都將受到影響。 另外，如果有開啟優先權提升，就可能會降低伺服器上其他應用程式與元件的效能。 因此，它應該在嚴格控制的情況下使用。
 
@@ -115,7 +211,7 @@ Microsoft Windows 使用數值優先權系統，從 1 到 31 的範圍來排程�
 > [!IMPORTANT]
 > SQL 追蹤和 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 已被淘汰。 包含 Microsoft SQL Server 追蹤和重新執行物件的 *Microsoft.SqlServer.Management.Trace* 命名空間也會被淘汰。 
 > [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] 
-> 請改用擴充事件。 如需[擴充事件](../relational-databases/extended-events/extended-events.md)的詳細資訊，請參閱[快速入門︰SQL Server 中的擴充事件](../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)和 [SSMS XEvent 分析工具](../relational-databases/extended-events/use-the-ssms-xe-profiler.md)。
+> 請改用擴充事件。 如需[延伸事件](../relational-databases/extended-events/extended-events.md)的詳細資訊，請參閱[快速入門：SQL Server 中的延伸事件](../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)和 [SSMS XEvent 分析工具](../relational-databases/extended-events/use-the-ssms-xe-profiler.md)。
 
 > [!NOTE]
 > 適用於 Analysis Services 工作負載的 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]「未」遭淘汰，而且將會繼續受支援。

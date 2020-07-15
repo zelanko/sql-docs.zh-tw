@@ -1,5 +1,6 @@
 ---
 title: 移動啟用 FILESTREAM 功能的資料庫 | Microsoft Docs
+description: 探索如何移動啟用 FILESTREAM 的資料庫。 查看在 SQL Server Management Studio 查詢編輯器中使用的 Transact-SQL 指令碼。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: dd4d270d-9283-431a-aa6b-e571fced1893
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 33d2f34f9f2ea63f23c570c0b4ada95906649215
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 706581c6fa44170d1bf8b9901a2dec0b47574be8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68091530"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631137"
 ---
 # <a name="move-a-filestream-enabled-database"></a>移動啟用 FILESTREAM 功能的資料庫
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主題將示範如何移動已啟用 FILESTREAM 功能的資料庫。  
   
 > [!NOTE]  
@@ -28,9 +29,9 @@ ms.locfileid: "68091530"
   
 ### <a name="to-move-a-filestream-enabled-database"></a>移動已啟用 FILESTREAM 功能的資料庫  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，按一下 [新增查詢]  開啟 [查詢編輯器]。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，按一下 [新增查詢] 開啟 [查詢編輯器]。  
   
-2.  將下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼複製到 [查詢編輯器]，然後按一下 [執行]  。 此指令碼會顯示 FILESTREAM 資料庫使用之實體資料庫檔案的位置。  
+2.  將下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼複製到 [查詢編輯器]，然後按一下 [執行]。 此指令碼會顯示 FILESTREAM 資料庫使用之實體資料庫檔案的位置。  
   
     ```sql  
     USE Archive  
@@ -38,7 +39,7 @@ ms.locfileid: "68091530"
     SELECT type_desc, name, physical_name from sys.database_files  
     ```  
   
-3.  將下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼複製到 [查詢編輯器]，然後按一下 [執行]  。 此程式碼會讓 `Archive` 資料庫離線。  
+3.  將下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼複製到 [查詢編輯器]，然後按一下 [執行]。 此程式碼會讓 `Archive` 資料庫離線。  
   
     ```sql  
     USE master  
@@ -48,7 +49,7 @@ ms.locfileid: "68091530"
   
 4.  建立 `C:\moved_location`資料夾，然後將步驟 2 所列的檔案和資料夾移到這個資料夾中。  
   
-5.  將下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼複製到 [查詢編輯器]，然後按一下 [執行]  。 此指令碼會將 `Archive` 資料庫設定為線上。  
+5.  將下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼複製到 [查詢編輯器]，然後按一下 [執行]。 此指令碼會將 `Archive` 資料庫設定為線上。  
   
     ```sql  
     CREATE DATABASE Archive ON  

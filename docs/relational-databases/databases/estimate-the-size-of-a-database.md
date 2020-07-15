@@ -1,5 +1,6 @@
 ---
 title: 估計資料庫的大小 | Microsoft Docs
+description: 當在 SQL Server 中設計資料庫時，評估其大小可協助判斷效能與磁碟空間所需的硬體設定。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -20,15 +21,15 @@ ms.assetid: 5b240161-eba4-44b0-946c-61a8fc00fc8c
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9a11d6d83b4c2c56d6448431028beec89265a0d5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 444513824770954f44919051d96a0a573f63b84f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67934486"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008199"
 ---
 # <a name="estimate-the-size-of-a-database"></a>估計資料庫的大小
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   在設計資料庫時，您可能需要估計資料庫填滿資料時的大小。 估計資料庫的大小可協助您判斷執行下列事項所需的硬體組態：  
   
 -   達到應用程式所需的效能。  

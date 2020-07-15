@@ -1,5 +1,6 @@
 ---
 title: 鏡像狀態 (SQL Server) | Microsoft Docs
+description: 了解 SQL Server 中資料庫鏡像工作階段的資料庫狀態。 狀態會反映通訊狀態、資料流程及資料的差異。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -19,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 90062917-74f9-471b-b49e-bc153ae1a468
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 03455038964c06c5a101c7259e65dfecff5b4404
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a50f4a4a81267d8bb515fd4890d1d3fe66fb75a1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67996553"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715552"
 ---
 # <a name="mirroring-states-sql-server"></a>鏡像狀態 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  在資料庫鏡像工作階段期間，鏡像資料庫一定會處於特定狀態 (「鏡像狀態」  )。 資料庫的狀態會反映通訊狀態、資料流程，以及夥伴之間的資料差異。 資料庫鏡像工作階段會與主體資料庫採用相同的狀態。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  在資料庫鏡像工作階段期間，鏡像資料庫一定會處於特定狀態 (「鏡像狀態」)。 資料庫的狀態會反映通訊狀態、資料流程，以及夥伴之間的資料差異。 資料庫鏡像工作階段會與主體資料庫採用相同的狀態。  
   
  在資料庫鏡像工作階段內，伺服器執行個體會彼此監視。 夥伴會使用鏡像狀態來監視資料庫。 除了 PENDING_FAILOVER 狀態之外，主體資料庫和鏡像資料庫永遠處於相同的狀態。 若為工作階段設定見證，則每部夥伴伺服器都會利用其連接狀態 (CONNECTED 或 DISCONNECTED) 來監視見證。  
   
@@ -38,7 +39,7 @@ ms.locfileid: "67996553"
 |---------------------|-----------------|  
 |SYNCHRONIZING|鏡像資料庫的內容落後於主體資料庫的內容。 主體伺服器將記錄檔記錄傳送至鏡像伺服器，將所做的變更套用到鏡像資料庫來向前復原。<br /><br /> 在資料庫鏡像工作階段開始時，資料庫處於 SYNCHRONIZING 狀態。 主體伺服器正為資料庫提供服務，而鏡像伺服器則試圖趕上。|  
 |SYNCHRONIZED|當鏡像伺服器足以追趕上主體伺服器時，鏡像狀態就會變更為 SYNCHRONIZED。 只要主體伺服器繼續傳送變更到鏡像伺服器，而鏡像伺服器也繼續將變更套用到鏡像資料庫，資料庫便會保持在這種狀態。<br /><br /> 如果交易安全性設定為 FULL，SYNCHRONIZED 狀態將可同時支援自動容錯移轉和手動容錯移轉，而且容錯移轉之後不會遺失任何資料。<br /><br /> 如果關閉交易安全性，永遠都有可能遺失部分資料，即使是在 SYNCHRONIZED 狀態也是如此。|  
-|SUSPENDED|無法使用資料庫的鏡像副本。 主體資料庫執行時並沒有傳送任何記錄檔到鏡像伺服器，這種狀況稱為「執行公開」  。 這是容錯移轉之後的狀態。<br /><br /> 工作階段也會因為重做錯誤或管理員暫停工作階段而變成 SUSPENDED。<br /><br /> SUSPENDED 是夥伴關機和啟動時仍然有效的永續性狀態。|  
+|SUSPENDED|無法使用資料庫的鏡像副本。 主體資料庫執行時並沒有傳送任何記錄檔到鏡像伺服器，這種狀況稱為「執行公開」。 這是容錯移轉之後的狀態。<br /><br /> 工作階段也會因為重做錯誤或管理員暫停工作階段而變成 SUSPENDED。<br /><br /> SUSPENDED 是夥伴關機和啟動時仍然有效的永續性狀態。|  
 |PENDING_FAILOVER|唯有開始進行容錯移轉之後但伺服器尚未轉換為鏡像角色之前，主體伺服器上才會出現此狀態。<br /><br /> 起始容錯移轉時，主體資料庫便會進入 PENDING_FAILOVER 狀態，迅速終止任何使用者連接，然後馬上接替鏡像角色。|  
 |DISCONNECTED|夥伴已經與其他夥伴失去通訊。|  
   

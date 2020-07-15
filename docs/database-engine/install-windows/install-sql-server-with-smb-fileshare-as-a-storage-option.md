@@ -1,5 +1,6 @@
 ---
 title: 安裝 SQL Server 與 SMB 檔案共用儲存體 | Microsoft Docs
+description: 在 SQL Server 中，系統資料庫和資料庫引擎使用者資料庫可當作儲存選項與伺服器訊息區塊 (SMB) 檔案伺服器一同安裝。
 ms.custom: ''
 ms.date: 09/05/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0b1d78acdaee97c38536969481c79fc3a94d6c9e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff25352a7aefe716c66cb01a4abafcfb9742e6ca
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67990934"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883515"
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>安裝 SQL Server 與 SMB 檔案共用儲存體
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]開始，系統資料庫 (Master、Model、MSDB 和 TempDB) 與 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 使用者資料庫可以當作儲存選項與伺服器訊息區塊 (SMB) 檔案伺服器一起安裝。 這同時適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立安裝和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝 (FCI)。  
   
@@ -97,12 +98,12 @@ ms.locfileid: "67990934"
     > [!NOTE]  
     >  SMB 共用資料夾的 FULL CONTROL 共用權限及 NTFS 權限僅限於： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶以及具有管理伺服器角色的 Windows 使用者。  
   
-     建議使用網域帳戶當做 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶。 如果將系統帳戶當作服務帳戶使用，請以下列格式授與電腦帳戶的權限：\<<網域名稱>  >\\<電腦名稱><  >\*$*。  
+     建議使用網域帳戶當做 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶。 如果將系統帳戶當作服務帳戶使用，請使用以下格式來授與電腦帳戶的權限：\<*domain_name*>\\<*電腦名稱*>\*$*。  
   
     > [!NOTE]  
     >  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間，如果將 SMB 檔案共用指定為儲存選項，則必須將網域帳戶指定為服務帳戶。 在 SMB 檔案共用中，系統帳戶只能指定為服務帳戶後續 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝。  
     >   
-    >  虛擬帳戶無法對遠端位置驗證。 所有虛擬帳戶都使用電腦帳戶的權限。 使用下列格式佈建電腦帳戶：\<<網域名稱>  >\\<<電腦名稱>  >\*$*。  
+    >  虛擬帳戶無法對遠端位置驗證。 所有虛擬帳戶都使用電腦帳戶的權限。 使用以下格式來佈建電腦帳戶：\<*domain_name*>\\<*電腦名稱*>\*$*。  
   
 -   在叢集安裝期間，用來安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的帳戶應該擁有當做資料目錄使用之 SMB 檔案共用資料夾，或是其他任何資料夾 (使用者資料庫目錄、使用者資料庫記錄檔目錄、TempDB 目錄、TempDB 記錄檔目錄、備份目錄) 的 FULL CONTROL 權限。  
   

@@ -1,5 +1,6 @@
 ---
 title: 管理 FileTable | Microsoft Docs
+description: 探索可用來管理 FileTable 的一般管理工作，並了解 FileTable 安全性、備份和稽核。
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ef64d09c7f99f5081ebd1cbcdd7418614c3b41f1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3ebab9c25ea864c20c6fbf0d4c601f9f01cd7e20
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908750"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631270"
 ---
 # <a name="manage-filetables"></a>管理 FileTable
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   描述用於管理 FileTable 的常見管理工作。  
   
 ##  <a name="how-to-get-a-list-of-filetables-and-related-objects"></a><a name="HowToEnumerate"></a> 如何：取得 FileTable 和相關物件的清單  
@@ -62,7 +63,7 @@ GO
   
      如果 ALTER DATABASE 命令已取消或因逾時而結束，則交易式存取的層級不會變更。  
   
--   如果您使用 WITH \<終止> 子句 (ROLLBACK AFTER integer [ SECONDS ] | ROLLBACK IMMEDIATE | NO_WAIT) 來呼叫 ALTER DATABASE 陳述式，則系統會終止所有開啟的非交易式檔案控制代碼。  
+-   如果使用 WITH \<termination> 子句 (ROLLBACK AFTER integer [ SECONDS ] | ROLLBACK IMMEDIATE | NO_WAIT) 來呼叫 ALTER DATABASE 陳述式，則系統會終止所有開啟的非交易式檔案控制代碼。  
   
 > [!WARNING]  
 >  終止開啟檔案控制代碼，可能會導致使用者遺失未儲存的資料。 此行為與檔案系統本身的行為一致。  
@@ -106,7 +107,7 @@ SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL );
 GO  
 ```  
   
-###  <a name="how-to-ensure-the-visibility-of-the-filetables-in-a-database"></a><a name="visible"></a> 如何：確保資料庫中 FileTable 的可見性  
+###  <a name="how-to-ensure-the-visibility-of-the-filetables-in-a-database"></a><a name="visible"></a> 如何：確保資料庫中 FileTable 的可見度  
  如果下列所有條件都成立，就會顯示資料庫層級目錄和其下的 FileTable 目錄 (如果有的話)：  
   
 1.  在執行個體層級啟用 FILESTREAM。  
@@ -161,7 +162,7 @@ GO
 > [!WARNING]  
 >  終止開啟檔案控制代碼，可能會導致使用者遺失未儲存的資料。 此行為與檔案系統本身的行為一致。  
   
-###  <a name="how-to-get-a-list-of-open-file-handles-associated-with-a-filetable"></a><a name="HowToListOpen"></a> 如何：取得與 FileTable 相關聯的開啟檔案控制代碼清單  
+###  <a name="how-to-get-a-list-of-open-file-handles-associated-with-a-filetable"></a><a name="HowToListOpen"></a> 如何：取得與 FileTable 建立關聯的開啟檔案控制代碼清單  
  查詢 [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md) 目錄檢視。  
   
 ```sql  
@@ -169,7 +170,7 @@ SELECT * FROM sys.dm_filestream_non_transacted_handles;
 GO  
 ```  
   
-###  <a name="how-to-kill-open-file-handles-associated-with-a-filetable"></a><a name="HowToKill"></a> 如何：終止與 FileTable 相關聯的開啟檔案控制代碼  
+###  <a name="how-to-kill-open-file-handles-associated-with-a-filetable"></a><a name="HowToKill"></a> 如何：終止與 FileTable 建立關聯的開啟檔案控制代碼  
  使用適當的引數來呼叫預存程序 [sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)，可終止資料庫或 FileTable 中的所有開啟檔案控制代碼，或是終止特定控制代碼。  
   
 ```sql  

@@ -1,6 +1,6 @@
 ---
 title: 新增或取代鏡像見證 (SSMS)
-description: 了解如何使用 SQL Server Management Studio (SSMS) 來新增或取代資料庫鏡像見證。
+description: 了解當資料庫鏡像端點使用 Windows 驗證時，如何使用 SQL Server Management Studio 來新增或取代資料庫鏡像見證。
 ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 61e7be7b4e1f61f243d896d5073ae469bebe6940
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4cf7d77550f96c72867ecc8133df3cb4f64b7300
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75247499"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763924"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>加入或取代資料庫鏡像見證 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   如果資料庫鏡像端點使用 Windows 驗證，您就可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來加入或取代見證。 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中加入見證也會將作業模式變更為具有自動容錯移轉的高安全性模式。  
   
 > [!NOTE]  
@@ -34,7 +34,7 @@ ms.locfileid: "75247499"
   
 2.  展開 **[資料庫]** ，然後選取您要加入或取代見證之工作階段的主體資料庫。  
   
-3.  以滑鼠右鍵按一下資料庫，選取 [工作]  ，然後按一下 [鏡像]  。 這將會開啟在 **[資料庫屬性]** 對話方塊中的 **[鏡像]** 頁面。  
+3.  以滑鼠右鍵按一下資料庫，選取 [工作]，然後按一下 [鏡像]。 這將會開啟在 **[資料庫屬性]** 對話方塊中的 **[鏡像]** 頁面。  
   
 4.  按一下 **[設定安全性]** 。  
   
@@ -42,15 +42,15 @@ ms.locfileid: "75247499"
   
 6.  在 **[包含見證伺服器]** 對話方塊中，按一下 **[是]** ，然後按 **[下一步]** 。  
   
-7.  在 **[選擇要設定的伺服器]** 對話方塊中，會自動核取 **[見證伺服器執行個體]** 核取方塊。 按 [下一步]  。  
+7.  在 **[選擇要設定的伺服器]** 對話方塊中，會自動核取 **[見證伺服器執行個體]** 核取方塊。 按 [下一步] 。  
   
-8.  在 **[主體伺服器執行個體]** 對話方塊中，保留現有的通訊埠和端點。 按 [下一步]  。  
+8.  在 **[主體伺服器執行個體]** 對話方塊中，保留現有的通訊埠和端點。 按 [下一步] 。  
   
 9. 在 **[見證伺服器執行個體]** 對話方塊中，按一下 **[連接]** 。  
   
-10. 在 [連接到伺服器]  對話方塊的 [伺服器名稱]  欄位中，指定見證伺服器執行個體，並使用 Windows 驗證 (預設值)。 按一下 [ **連接**]。  
+10. 在 [連接到伺服器] 對話方塊的 [伺服器名稱] 欄位中，指定見證伺服器執行個體，並使用 Windows 驗證 (預設值)。 按一下 [ **連接**]。  
   
-11. 一旦連接建立後， **[見證伺服器執行個體]** 對話方塊中就會顯示見證伺服器執行個體的接聽程式通訊埠和資料庫鏡像端點。 按 [下一步]  。  
+11. 一旦連接建立後， **[見證伺服器執行個體]** 對話方塊中就會顯示見證伺服器執行個體的接聽程式通訊埠和資料庫鏡像端點。 按 [下一步] 。  
   
 12. **[服務帳戶]** 對話方塊會包含主體、鏡像及見證伺服器執行個體之網域服務帳戶的欄位。  
   
@@ -58,17 +58,17 @@ ms.locfileid: "75247499"
   
     -   如果見證伺服器執行個體與其中一個夥伴使用不同的服務帳戶，請在 **[主體]** 、 **[鏡像]** 及 **[見證]** 欄位中填入帳戶名稱：  
   
-         網域名稱  **\\** 使用者名稱   
+         網域名稱 **\\** 使用者名稱  
   
          網域名稱必須使用大寫。  
   
-     按 [下一步]  。  
+     按 [下一步] 。  
   
 13. 在 **[完成精靈]** 摘要畫面中，選擇性地驗證見證組態，然後按一下 **[完成]** 。  
   
-14. 完成之後，精靈就會讓您返回 **[資料庫屬性]** 對話方塊，而且見證的伺服器網路位址現在會顯示在 **[見證]** 欄位中。 此外，會自動選取見證所需的 [具有自動容錯移轉的高安全性 (同步)]  。  
+14. 完成之後，精靈就會讓您返回 **[資料庫屬性]** 對話方塊，而且見證的伺服器網路位址現在會顯示在 **[見證]** 欄位中。 此外，會自動選取見證所需的 [具有自動容錯移轉的高安全性 (同步)]。  
   
-     若要啟用見證並將工作階段變更為具有自動容錯移轉的高安全性模式，請按一下 [確定]  。  
+     若要啟用見證並將工作階段變更為具有自動容錯移轉的高安全性模式，請按一下 [確定]。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫鏡像見證](../../database-engine/database-mirroring/database-mirroring-witness.md)   

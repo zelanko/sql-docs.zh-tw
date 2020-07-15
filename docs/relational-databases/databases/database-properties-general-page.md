@@ -1,5 +1,6 @@
 ---
 title: 資料庫屬性 (一般頁面) | Microsoft 文件
+description: 了解如何使用 [資料庫屬性] 對話方塊中 [一般] 索引標籤來檢視或修改資料庫的屬性。
 ms.custom: ''
 ms.date: 10/27/2015
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7b9ba71d5f7791b442989a5194c9cc6aede98677
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 35ab83fe9c30cd51143f7267a9156d4f95a56236
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099599"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756197"
 ---
 # <a name="database-properties-general-page"></a>資料庫屬性 (一般頁面)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用此頁面來檢視或修改選取之資料庫的屬性。  
   
 ## <a name="options"></a>選項。  

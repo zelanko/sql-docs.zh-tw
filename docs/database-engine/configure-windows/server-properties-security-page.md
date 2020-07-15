@@ -1,5 +1,6 @@
 ---
 title: 伺服器屬性 (安全性頁面) | Microsoft Docs
+description: 熟悉 SQL Server 中的伺服器安全性設定。 了解可控制伺服器驗證、Proxy 帳戶和其他功能的選項。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.security.f1
 ms.assetid: b8a131c7-e7bd-4203-bf26-234f1ebfe622
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 11a8e63d75f4194727344009dfac6f2fed77edaa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e864eced90a190dc7e7c0f204691ed02b9a2cff8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68031434"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723999"
 ---
 # <a name="server-properties---security-page"></a>伺服器屬性 - 安全性頁面
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用此頁面來檢視或修改伺服器安全性選項。  
   
 ## <a name="server-authentication"></a>伺服器驗證  

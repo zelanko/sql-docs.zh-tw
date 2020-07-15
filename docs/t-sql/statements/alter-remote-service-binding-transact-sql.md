@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: ee620b4a-9375-4eaa-a016-69916c9e1e68
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 80a1df40d0c7bd5122d64ccc0d63fa2753844804
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b4485b8a5100ac59c3b5012d7318754a4ce4b091
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81627105"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895646"
 ---
 # <a name="alter-remote-service-binding-transact-sql"></a>ALTER REMOTE SERVICE BINDING (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   變更遠端服務繫結的相關使用者，或變更繫結的匿名驗證設定。  
   

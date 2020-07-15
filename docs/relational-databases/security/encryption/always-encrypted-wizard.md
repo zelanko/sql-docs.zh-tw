@@ -1,5 +1,6 @@
 ---
 title: 使用 [Always Encrypted 精靈] 設定資料行加密 | Microsoft Docs
+description: 了解如何透過使用 SQL Server 中的 [Always Encrypted 精靈]，以設定資料庫資料行的 Always Encrypted 組態。
 ms.custom: ''
 ms.date: 10/30/2019
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 71df93e5e7d628fadf5839e980f42a92138a5e0c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f592004e96a9b469a56bc9ff85b8f4080af38406
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73594508"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85627448"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-wizard"></a>使用 [Always Encrypted 精靈] 設定資料行加密
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 [Always Encrypted 精靈] 是一個功能強大的工具，可讓您設定所選取資料庫資料行所需的 [Always Encrypted](always-encrypted-database-engine.md) 設定。 根據目前設定和所需目標設定，精靈可以加密資料行、將其解密 (移除加密) 或重新加密 (例如，使用新的資料行加密金鑰，或與針對資料行所設定目前類型不同的加密類型)。 在精靈的單一執行中，可以設定多個資料行。
 
@@ -70,22 +71,22 @@ ms.locfileid: "73594508"
  1. 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的物件總管元件，連接到您的 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]。  
    
  2. 加密：
-     1. 資料庫中位於不同資料表內的多個資料行：請以滑鼠右鍵按一下您的資料庫、指向 [工作]  ，然後選取 [加密資料行]  。
-     1. 位於相同資料表中的多個資料行：請巡覽至資料表、以滑鼠右鍵按一下資料表，然後選取 [加密資料行]  。
-     1. 個別資料行：請巡覽至資料行、以滑鼠右鍵按一下資料行，然後選取 [加密資料行]  。
+     1. 資料庫中位於不同資料表內的多個資料行：請以滑鼠右鍵按一下您的資料庫、指向 [工作]，然後選取 [加密資料行]。
+     1. 位於相同資料表中的多個資料行：請巡覽至資料表、以滑鼠右鍵按一下資料表，然後選取 [加密資料行]。
+     1. 個別資料行：請巡覽至資料行、以滑鼠右鍵按一下資料行，然後選取 [加密資料行]。
 
 
    
  ## <a name="column-selection-page"></a>資料行選取頁面
 在此頁面中，您可以選取您想要加密、重新加密或解密的資料行，且您可以為所選取的資料行定義目標加密設定。
 
-若要加密純文字資料行 (並未加密的資料行)，請為資料行選取加密類型 ([決定性]  或 [隨機]  ) 和加密金鑰。 
+若要加密純文字資料行 (並未加密的資料行)，請為資料行選取加密類型 ([決定性] 或 [隨機]) 和加密金鑰。 
 
 若要為已加密的資料行變更加密類型或輪替 (變更) 資料行加密金鑰，請選取所需的加密類型和金鑰。 
 
 若您想要精靈使用新的資料行加密金鑰加密或重新加密一或多個資料行，請挑選其名稱中包含 **(新增)** 的金鑰。 精靈將會產生金鑰。
 
-若要解密目前已加密的資料行，請針對加密類型選取 [純文字]  。
+若要解密目前已加密的資料行，請針對加密類型選取 [純文字]。
 
 
 > [!NOTE]
@@ -99,7 +100,7 @@ ms.locfileid: "73594508"
 如需在 Windows 憑證存放區、Azure Key Vault 或其他金鑰存放區中建立和儲存資料行主要金鑰的詳細資訊，請參閱[對 Always Encrypted 建立和儲存資料行主要金鑰](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)。
 
 > [!TIP]
-> 精靈只允許您在 Windows 憑證存放區和 Azure Key Vault 中瀏覽和建立金鑰。 精靈也會自動產生兩個新金鑰的名稱，以及描述金鑰的資料庫中繼資料物件。 若您需要深入控制您金鑰的佈建方式 (以及針對包含您資料行主要金鑰的金鑰存放區擁有更多選擇)，您可以先使用 [新增資料行主要金鑰]  和 [新增資料行加密金鑰]  對話方塊來建立金鑰，然後執行精靈並挑選您已建立的金鑰。 請參閱[使用 [新增資料行主要金鑰] 對話方塊佈建資料行主要金鑰](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog)和[使用 [新增資料行加密金鑰] 對話方塊佈建資料行加密金鑰](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog)。 
+> 精靈只允許您在 Windows 憑證存放區和 Azure Key Vault 中瀏覽和建立金鑰。 精靈也會自動產生兩個新金鑰的名稱，以及描述金鑰的資料庫中繼資料物件。 若您需要深入控制您金鑰的佈建方式 (以及針對包含您資料行主要金鑰的金鑰存放區擁有更多選擇)，您可以先使用 [新增資料行主要金鑰] 和 [新增資料行加密金鑰] 對話方塊來建立金鑰，然後執行精靈並挑選您已建立的金鑰。 請參閱[使用 [新增資料行主要金鑰] 對話方塊佈建資料行主要金鑰](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog)和[使用 [新增資料行加密金鑰] 對話方塊佈建資料行加密金鑰](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog)。 
 
 ## <a name="next-steps"></a>後續步驟
 - [使用 Always Encrypted 與 SQL Server Management Studio 查詢資料行](always-encrypted-query-columns-ssms.md)

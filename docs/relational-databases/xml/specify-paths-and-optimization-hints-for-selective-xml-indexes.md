@@ -1,5 +1,6 @@
 ---
 title: 選擇性 XML 索引的路徑與最佳化提示 | Microsoft Docs
+description: 了解如何在建立或更改選擇性 XML 索引時指定節點路徑和最佳化提示。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,15 +11,15 @@ ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6053f7fbff8126976d607cb7423a93976621fa8c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 460ad75c1596ce6eaf45e35d9c03b2db2d5267bd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665236"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729847"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>指定選擇性 XML 索引的路徑和最佳化提示
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   本主題描述如何指定建立或修改選擇性 XML 索引時，要索引的節點路徑以及索引的最佳化提示。  
   
  您會同時在下列其中一個陳述式中指定節點路徑及最佳化提示：  

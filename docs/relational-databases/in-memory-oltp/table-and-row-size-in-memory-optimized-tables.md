@@ -1,5 +1,6 @@
 ---
 title: 記憶體最佳化資料表中的資料表和資料列大小 | Microsoft Docs
+description: 深入了解記憶體最佳化資料表的資料表與資料列大小。 您可使用多個大型與 LOB 資料行建立資料表。
 ms.custom: ''
 ms.date: 06/19/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3d52368ac0eaeba118d0ba6e7abc88ef5e69db9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4d7b59adddba4266499b90ec0ee523aeb7308673
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68063138"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651011"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>記憶體最佳化資料表中的資料表和資料列大小
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之前，記憶體最佳化資料表的 in-row 資料大小不能超過 [8,060 個位元組](https://msdn.microsoft.com/library/dn205318(v=sql.120).aspx)。 不過，自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，可在 Azure SQL Database 中建立具有多個大型資料行 (例如，多個 varbinary(8000) 資料行) 和 LOB 資料行 (即 varbinary(max)、varchar(max) 和 nvarchar(max)) 的記憶體最佳化資料表，並可使用原生編譯的 T-SQL 模組和資料表類型對它們執行作業。 
   
@@ -49,7 +50,7 @@ ms.locfileid: "68063138"
 [table size] = [size of index 1] + ... + [size of index n] + ([row size] * [row count])  
 ```  
   
-雜湊索引的大小在資料表建立時就已固定，並且取決於實際值區計數。 使用索引定義所指定 `bucket_count` 會無條件進位到最接近的二乘冪，以取得「實際貯體計數」  。 例如，如果指定的 bucket_count 是 100000，則索引的「實際貯體計數」  為 131072。  
+雜湊索引的大小在資料表建立時就已固定，並且取決於實際值區計數。 使用索引定義所指定 `bucket_count` 會無條件進位到最接近的二乘冪，以取得「實際貯體計數」。 例如，如果指定的 bucket_count 是 100000，則索引的「實際貯體計數」為 131072。  
   
 ```  
 [hash index size] = 8 * [actual bucket count]  
@@ -85,15 +86,15 @@ ms.locfileid: "68063138"
   
 因此，名稱雜湊索引的鏈結如下：  
   
--   第一個貯體：(John, Beijing)、(John, Paris)、(Jane, Prague)  
+-   第一個貯體：(John, Beijing)；(John, Paris)；(Jane, Prague)  
   
 -   第二個貯體：(Susan, Bogota)  
   
 城市索引的鏈結如下：  
   
--   第一個貯體：(John, Beijing)、(Susan, Bogota)  
+-   第一個貯體：(John, Beijing)，(Susan, Bogota)  
   
--   第二個貯體：(John, Paris)、(Jane, Prague)  
+-   第二個貯體：(John, Paris)，(Jane, Prague)  
   
 結束時間戳記 ∞ (無限大) 指出這是資料列的目前有效版本。 自從這個資料列版本寫入後，資料列尚未更新或刪除。  
   
@@ -122,19 +123,19 @@ ms.locfileid: "68063138"
   
 *計算的資料列主體大小*及*實際的資料列主體大小*計算方式相似。 唯一的差異在於 (n)varchar(i) 和 varbinary(i) 資料行大小的計算，如下列資料表底部所反映。 計算的資料列主體大小使用宣告的大小 *i* 作為資料行的大小，而實際的資料列主體大小使用實際的資料大小。  
   
-下表描述資料列主體大小的計算，指定為 [實際資料列主體大小]  = SUM([淺層類型的大小]  ) + 2 + 2 * [深層類型資料行數目]  。  
+下表描述資料列主體大小的計算，指定為 [實際資料列主體大小] = SUM([淺層類型的大小]) + 2 + 2 * [深層類型資料行數目]。  
   
 |區段|大小|註解|  
 |-------------|----------|--------------|  
-|淺層類型資料行|SUM([淺層類型的大小])。 個別類型的大小如下所示 (以位元組為單位)：<br /><br /> **Bit**：1<br /><br /> **Tinyint**：1<br /><br /> **Smallint**：2<br /><br /> **Int**：4<br /><br /> **Real**：4<br /><br /> **Smalldatetime**：4<br /><br /> **Smallmoney**：4<br /><br /> **Bigint**：8<br /><br /> **Datetime**：8<br /><br /> **Datetime2**：8<br /><br /> **Float**：8<br /><br /> **Money**：8<br /><br /> **Numeric** (precision <=18)：8<br /><br /> **Time**：8<br /><br /> **Numeric**(precision>18)：16<br /><br /> **Uniqueidentifier**：16||  
+|淺層類型資料行|SUM([淺層類型的大小])。 個別類型的大小如下所示 (以位元組為單位)：<br /><br /> **Bit**：1<br /><br /> **Tinyint**：1<br /><br /> **Smallint**：2<br /><br /> **Int**：4<br /><br /> **Real**：4<br /><br /> **Smalldatetime**：4<br /><br /> **Smallmoney**：4<br /><br /> **Bigint**：8<br /><br /> **Datetime**：8<br /><br /> **Datetime2**：8<br /><br /> **Float**：8<br /><br /> **Money**：8<br /><br /> **Numeric** (精確度 <=18)：8<br /><br /> **Time**：8<br /><br /> **Numeric** (精確度 >18)：16<br /><br /> **Uniqueidentifier**：16||  
 |淺層資料行填補|可能的值包括：<br /><br /> 如果有深層類型資料行且淺層資料行的資料大小總計為奇數，則為 1。<br /><br /> 否則為 0|深層類型是指 (var)binary 和 (n)(var)char 類型。|  
 |深層類型資料行的位移陣列|可能的值包括：<br /><br /> 如果沒有深層類型資料行則為 0<br /><br /> 否則為 2 + 2 * [深層類型資料行數目]|深層類型是指 (var)binary 和 (n)(var)char 類型。|  
 |NULL 陣列|[可為 null 的資料行數目] / 8，無條件進位到完整的位元組。|陣列中每個可為 null 的資料行都有一個位元。 這個位元會無條件進位到完整的位元組。|  
 |NULL 陣列填補|可能的值包括：<br /><br /> 如果有深層類型資料行且 NULL 陣列的大小為奇數個位元組，則為 1。<br /><br /> 否則為 0|深層類型是指 (var)binary 和 (n)(var)char 類型。|  
 |填補|如果沒有深層類型資料行：0<br /><br /> 如果有深層類型資料行，則會根據淺層資料行所需的最大對齊加入 0-7 個位元組填補。 每個淺層資料行的對齊都需等於其大小 (如上面所記載)，除了 GUID 資料行需要 1 個位元組 (非 16) 的對齊，而數值資料行一律需要 8 個位元組 (絕不是 16) 的對齊。 所有淺層資料行之間都會使用最大對齊需求，並且加入 0-7 個位元組填補，使得目前為止的大小總計 (不包括深層類型資料行) 為所需對齊的倍數。|深層類型是指 (var)binary 和 (n)(var)char 類型。|  
-|固定長度的深層類型資料行|SUM([固定長度的深層類型資料行大小]  )<br /><br /> 每個資料行的大小如下所示：<br /><br /> i 代表 char(i) 和 binary(i)。<br /><br /> 2 * i 代表 nchar(i)|固定長度的深層類型資料行為 char(i)、nchar(i) 或 binary(i) 類型的資料行。|  
-|可變長度的深層類型資料行「計算的大小」 |SUM([可變長度的深層類型資料行計算的大小]  )<br /><br /> 每個資料行計算的大小如下所示：<br /><br /> i 代表 varchar(i) 和 varbinary(i)<br /><br /> 2 * i 代表 nvarchar(i)|此資料行僅適用於 *計算的資料行主體大小*。<br /><br /> 可變長度的深層類型資料行為 varchar(i)、nvarchar(i) 或 varbinary(i) 類型的資料行。 計算的大小是由資料行的最大長度 (i) 所決定。|  
-|可變長度的深層類型資料行「實際大小」 |SUM([可變長度的深層類型資料行實際大小]  )<br /><br /> 每個資料行的實際大小如下所示：<br /><br /> n (n 是儲存在資料行中的字元數) 代表 varchar(i)。<br /><br /> 2 * n (n 是儲存在資料行中的字元數) 代表 nvarchar(i)。<br /><br /> n (n 是儲存在資料行中的位元組數) 代表 varbinary(i)。|此資料行僅適用於 *實際資料行主體大小*。<br /><br /> 實際大小是由儲存在資料列的資料行中的資料所決定。|   
+|固定長度的深層類型資料行|SUM([固定長度的深層類型資料行大小])<br /><br /> 每個資料行的大小如下所示：<br /><br /> i 代表 char(i) 和 binary(i)。<br /><br /> 2 * i 代表 nchar(i)|固定長度的深層類型資料行為 char(i)、nchar(i) 或 binary(i) 類型的資料行。|  
+|可變長度的深層類型資料行「計算的大小」|SUM([可變長度的深層類型資料行計算的大小])<br /><br /> 每個資料行計算的大小如下所示：<br /><br /> i 代表 varchar(i) 和 varbinary(i)<br /><br /> 2 * i 代表 nvarchar(i)|此資料行僅適用於 *計算的資料行主體大小*。<br /><br /> 可變長度的深層類型資料行為 varchar(i)、nvarchar(i) 或 varbinary(i) 類型的資料行。 計算的大小是由資料行的最大長度 (i) 所決定。|  
+|可變長度的深層類型資料行「實際大小」|SUM([可變長度的深層類型資料行實際大小])<br /><br /> 每個資料行的實際大小如下所示：<br /><br /> n (n 是儲存在資料行中的字元數) 代表 varchar(i)。<br /><br /> 2 * n (n 是儲存在資料行中的字元數) 代表 nvarchar(i)。<br /><br /> n (n 是儲存在資料行中的位元組數) 代表 varbinary(i)。|此資料行僅適用於 *實際資料行主體大小*。<br /><br /> 實際大小是由儲存在資料列的資料行中的資料所決定。|   
   
 ##  <a name="example-table-and-row-size-computation"></a><a name="bkmk_ExampleComputation"></a> 範例：資料表和資料列大小計算  
  若是雜湊索引，實際值區計數會無條件進位到最接近的二乘冪。 例如，如果指定的 `bucket_count` 是 100000，則索引的實際貯體計數為 131072。  
@@ -204,7 +205,7 @@ GO
   
     -   總填補為 24 - 22 = 2 個位元組。  
   
--   沒有固定長度的深層類型資料行 (固定長度的深層類型資料行：0)。  
+-   沒有固定長度的深層類型資料行 (固定長度的深層類型資料行：0。)。  
   
 -   深層類型資料行的實際大小為 2 * 78 = 156。 單一深層類型資料行 `OrderDescription` 具有 `nvarchar` 類型。  
   

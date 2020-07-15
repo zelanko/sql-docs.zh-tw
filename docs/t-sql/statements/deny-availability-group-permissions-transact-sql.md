@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: bda60b36-a0b9-4c20-80c1-6a5cb1d638a5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: dc29fadcbe0fe3a3f2eca8616b89e9ec3e45a7a9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f1d843feede96fbecb75575f3899491931c95598
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258316"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766800"
 ---
 # <a name="deny-availability-group-permissions-transact-sql"></a>拒絕可用性群組權限 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   拒絕 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中 AlwaysOn 可用性群組的權限。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "75258316"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name  
         TO < server_principal >  [ ,...n ]  
     [ CASCADE ]  

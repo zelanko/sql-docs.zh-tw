@@ -23,16 +23,16 @@ helpviewer_keywords:
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 2879807d7eb64446a26ea5857f33c52fe7b78970
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7ee56255d55a8676fd55b903af70c002cefc9bea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165934"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737102"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>使用 SQL Server Profiler 建立及測試計畫指南
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  當您建立計畫指南時，可使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來擷取精確的查詢文字，以供使用於 **sp_create_plan_guide** 預存程序的 <陳述式文字>  引數。 這有助於確保計畫指南符合編譯時期的查詢。 在建立計畫指南之後， [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 也可用來測試計畫指南實際上是否符合查詢。 一般而言，您應該使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來測試計畫指南，以確認查詢符合您的計畫指南。  
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  當您建立計畫指南時，可使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來擷取精確的查詢文字，以供使用於 **sp_create_plan_guide** 預存程序的 <陳述式文字> 引數。 這有助於確保計畫指南符合編譯時期的查詢。 在建立計畫指南之後， [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 也可用來測試計畫指南實際上是否符合查詢。 一般而言，您應該使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來測試計畫指南，以確認查詢符合您的計畫指南。  
   
 ## <a name="capturing-query-text-by-using-sql-server-profiler"></a>使用 SQL Server Profiler 擷取查詢文字  
  如果您執行查詢並使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來擷取與提交至 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]完全相同的文字，您可以建立 SQL 或 TEMPLATE 類型的計畫指南來完全符合查詢文字。 這可確保計畫指南是由查詢最佳化工具使用。  
@@ -51,15 +51,15 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
  若要擷取和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所接收的一模一樣的查詢文字，請遵循這些步驟：  
   
-1.  啟動 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 追蹤，確定已選取 [SQL:BatchStarting]  事件類型。  
+1.  啟動 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 追蹤，確定已選取 [SQL:BatchStarting] 事件類型。  
   
 2.  讓應用程式執行查詢。  
   
 3.  暫停 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 追蹤。  
   
-4.  按一下對應到此查詢的 [SQL:BatchStarting]  事件。  
+4.  按一下對應到此查詢的 [SQL:BatchStarting] 事件。  
   
-5.  以滑鼠右鍵按一下，並選取 [擷取事件資料]  。  
+5.  以滑鼠右鍵按一下，並選取 [擷取事件資料]。  
   
     > [!IMPORTANT]  
     >  請勿嘗試從 Profiler 追蹤視窗的下方窗格選取要複製的批次文字。 這可能造成建立的計畫指南與原始批次不符。  
@@ -85,18 +85,18 @@ EXEC sp_create_plan_guide
 ## <a name="testing-plan-guides-by-using-sql-server-profiler"></a>使用 SQL Server Profiler 測試計畫指南  
  若要確認計畫指南符合查詢，請遵循這些步驟：  
   
-1.  啟動 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 追蹤，確定已選取 [執行程序表 XML]  事件類型 (位於 [效能]  節點之下)。  
+1.  啟動 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 追蹤，確定已選取 [執行程序表 XML] 事件類型 (位於 [效能] 節點之下)。  
   
 2.  讓應用程式執行查詢。  
   
 3.  暫停 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 追蹤。  
   
-4.  為受影響的查詢尋找 [執行程序表 XML]  事件。  
+4.  為受影響的查詢尋找 [執行程序表 XML] 事件。  
   
     > [!NOTE]  
-    >  不可使用 [Showplan XML for Query Compile]  事件。 [PlanGuideDB]  不存在該事件中。  
+    >  不可使用 [Showplan XML for Query Compile] 事件。 [PlanGuideDB] 不存在該事件中。  
   
-5.  如果計畫指南的類型為 OBJECT 或 SQL，請確認 [執行程序表 XML]  事件包含您預期符合查詢之計畫指南的 **PlanGuideDB** 和 **PlanGuideName** 屬性。 若為 TEMPLATE 計畫指南，則請確認 [執行程序表 XML]  事件包含預期計畫指南的 **TemplatePlanGuideDB** 和 **TemplatePlanGuideName** 屬性。 這可確認計畫指南有用。 這些屬性包含在計畫的 **\<StmtSimple>** 項目之下。  
+5.  如果計畫指南的類型為 OBJECT 或 SQL，請確認 [執行程序表 XML] 事件包含您預期符合查詢之計畫指南的 **PlanGuideDB** 和 **PlanGuideName** 屬性。 若為 TEMPLATE 計畫指南，則請確認 [執行程序表 XML] 事件包含預期計畫指南的 **TemplatePlanGuideDB** 和 **TemplatePlanGuideName** 屬性。 這可確認計畫指南有用。 這些屬性包含在計畫的 **\<StmtSimple>** 元素下。  
   
 ## <a name="see-also"></a>另請參閱  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)  

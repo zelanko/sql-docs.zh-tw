@@ -1,5 +1,6 @@
 ---
 title: 複寫 XPs 伺服器組態選項 | Microsoft Docs
+description: 檢視「XPs 伺服器」設定選項的資訊。 此選項僅適用於 SQL Server 中的內部使用。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Replication XPs option
 ms.assetid: e170326f-d126-4ed5-bb01-246e1934b710
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 04eb7dcce16e107cadcce53400d23d995a19fd03
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5f46dffeeeaddea64c71b24a360eb0641be035c8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67915984"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651551"
 ---
 # <a name="replication-xps-server-configuration-option"></a>複寫 XPs 伺服器組態選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   此選項僅供內部使用。  
   

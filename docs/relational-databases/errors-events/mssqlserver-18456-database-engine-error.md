@@ -1,5 +1,6 @@
 ---
 title: MSSQLSERVER_18456 | Microsoft Docs
+description: 因為 SQL Server 中的密碼或使用者名稱不正確，所以導致連線嘗試遭到拒絕。 請參閱錯誤的說明及可能解決方法。
 ms.custom: ''
 ms.date: 06/09/2017
 ms.prod: sql
@@ -11,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ab33fa19b968990e81851edac9d91fb55db81049
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d3e1ad2ab6cda565e59268b063494c17941a81e5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77146312"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780635"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細資料  
   
-|||  
-|-|-|  
+| 屬性 | 值 |  
+| :-------- | :---- |  
 |產品名稱|SQL Server|  
 |事件識別碼|18456|  
 |事件來源|MSSQLSERVER|  
@@ -69,7 +70,7 @@ ms.locfileid: "77146312"
 |7|已停用登入且密碼不正確。|  
 |8|密碼不正確。|  
 |9|密碼無效。|  
-|11|登入有效，但伺服器存取失敗。 導致此錯誤的一個可能原因是：Windows 使用者可以使用本機 Administrators 群組成員的身分存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但 Windows 不會提供系統管理員認證。 若要連接，請使用 [以系統管理員身分執行]  選項開始連接程式，然後以特定登入，將 Windows 使用者新增至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
+|11|登入有效，但伺服器存取失敗。 導致此錯誤的一個可能原因是：Windows 使用者可以使用本機 Administrators 群組成員的身分存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但 Windows 不會提供系統管理員認證。 若要連接，請使用 [以系統管理員身分執行] 選項開始連接程式，然後以特定登入，將 Windows 使用者新增至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |12|登入是有效的登入，但伺服器存取失敗。|  
 |18|密碼必須變更。|  
 |38, 46|找不到使用者所要求的資料庫。|
@@ -111,7 +112,7 @@ ms.locfileid: "77146312"
   
 如果您的錯誤表示狀態 1，請連絡 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理員。  
   
-如果您正嘗試使用系統管理員認證進行連接，請使用 [以系統管理員身分執行]  選項啟動應用程式。 連接之後，請將您的 Windows 使用者當做個別登入加入。  
+如果您正嘗試使用系統管理員認證進行連接，請使用 [以系統管理員身分執行] 選項啟動應用程式。 連接之後，請將您的 Windows 使用者當做個別登入加入。  
   
 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 支援自主資料庫，請確認在移轉至自主資料庫使用者之後，登入不會遭到刪除。  
   

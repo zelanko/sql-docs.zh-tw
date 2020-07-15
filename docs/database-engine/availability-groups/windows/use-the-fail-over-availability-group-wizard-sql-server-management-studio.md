@@ -1,6 +1,6 @@
 ---
 title: 對可用性群組進行容錯移轉
-description: 說明如何使用 SQL Server Management Studio (SSMS)、Transact-SQL (T-SQL) 或 SQL PowerShell，執行 Always On 可用性群組的強制手動容錯移轉。
+description: 描述如何使用 SQL Server Management Studio、Transact-SQL 或 SQL PowerShell 來執行 Always On 可用性群組的規劃/強制手動容錯移轉。
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -20,21 +20,21 @@ helpviewer_keywords:
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5a98049201636bf521ae7162bd4ac0de71d74725
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d5010c559ffc7e1f89ebce87129c0b16a6853753
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74821941"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882404"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>使用容錯移轉可用性群組精靈 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中的 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell，針對 AlwaysOn 可用性群組執行規劃的手動容錯移轉或強制手動容錯移轉 (強制容錯移轉)。 可用性群組會在可用性複本層級容錯移轉。 如果您容錯移轉至處於 SYNCHRONIZED 狀態的次要複本，此精靈就會執行規劃的手動容錯移轉 (不會遺失資料)。 如果您容錯移轉至處於 UNSYNCHRONIZED 或 NOT SYNCHRONIZING 狀態的次要複本，此精靈就會執行強制手動容錯移轉，也稱為「強制容錯移轉」  (可能會遺失資料)。 這兩種手動容錯移轉形式都會將您所連接的次要複本轉換成主要角色。 規劃的手動容錯移轉目前會將先前的主要複本會轉換成次要角色。 強制容錯移轉之後，當先前的主要複本上線時，它就會轉換成次要角色。  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中的 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell，針對 AlwaysOn 可用性群組執行規劃的手動容錯移轉或強制手動容錯移轉 (強制容錯移轉)。 可用性群組會在可用性複本層級容錯移轉。 如果您容錯移轉至處於 SYNCHRONIZED 狀態的次要複本，此精靈就會執行規劃的手動容錯移轉 (不會遺失資料)。 如果您容錯移轉至處於 UNSYNCHRONIZED 或 NOT SYNCHRONIZING 狀態的次要複本，此精靈就會執行強制手動容錯移轉，也稱為「強制容錯移轉」 (可能會遺失資料)。 這兩種手動容錯移轉形式都會將您所連接的次要複本轉換成主要角色。 規劃的手動容錯移轉目前會將先前的主要複本會轉換成次要角色。 強制容錯移轉之後，當先前的主要複本上線時，它就會轉換成次要角色。  
 
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
  第一次進行規劃的手動容錯移轉之前，請參閱 [執行可用性群組的已規劃手動容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)或 PowerShell，針對 AlwaysOn 可用性群組執行規劃的手動容錯移轉或強制手動容錯移轉 (強制容錯移轉)。  
   
- 第一次進行強制容錯移轉之前，請先參閱 [執行可用性群組的強制手動容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)或 PowerShell，針對 AlwaysOn 可用性群組執行規劃的手動容錯移轉或強制手動容錯移轉 (強制容錯移轉)。  
+ 第一次進行強制容錯移轉之前，請先參閱＜開始之前＞和＜後續：強制容錯移轉後的重要任務＞小節 (位於[執行可用性群組的強制手動容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md) 中)。  
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
@@ -54,13 +54,13 @@ ms.locfileid: "74821941"
   
 1.  在 [物件總管] 中，連接到裝載需要容錯移轉之可用性群組次要複本的伺服器執行個體，然後展開伺服器樹狀目錄。  
   
-2.  依序展開 [Always On 高可用性]  節點和 [可用性群組]  節點。  
+2.  依序展開 [Always On 高可用性] 節點和 [可用性群組] 節點。  
   
-3.  若要啟動 [容錯移轉可用性群組精靈]，請以滑鼠右鍵按一下您要容錯移轉的可用性群組，然後選取 [容錯移轉]  。  
+3.  若要啟動 [容錯移轉可用性群組精靈]，請以滑鼠右鍵按一下您要容錯移轉的可用性群組，然後選取 [容錯移轉] 。  
   
 4.  **[簡介]** 頁面所呈現的資訊主要取決於任何次要複本是否符合規劃容錯移轉的資格。 如果此頁面顯示 **[執行這個可用性群組的計劃的容錯移轉]** ，表示您可以在不遺失資料的情況下容錯移轉可用性群組。  
   
-5.  在 [選取新的主要複本]  頁面上，您可以在選擇將成為新主要複本的次要複本 (「容錯移轉目標」  ) 之前，檢視目前主要複本和 WSFC 仲裁的狀態。 若為規劃的手動容錯移轉，請務必選取 **[容錯移轉整備]** 值為 **[無資料遺失]** 的次要複本。 若為強制容錯移轉，則對於所有可能的容錯移轉目標而言，這個值都是「**資料遺失，警告 (** _#_ **)** 」，其中 *#* 表示針對指定之次要複本存在的警告數目。 若要檢視給定容錯移轉目標的警告，請按一下其 [容錯移轉整備] 值。  
+5.  在 [選取新的主要複本]  頁面上，您可以在選擇將成為新主要複本的次要複本 (「容錯移轉目標」 ) 之前，檢視目前主要複本和 WSFC 仲裁的狀態。 若為規劃的手動容錯移轉，請務必選取 **[容錯移轉整備]** 值為 **[無資料遺失]** 的次要複本。 若為強制容錯移轉，則對於所有可能的容錯移轉目標而言，這個值都是「**資料遺失，警告 (** _#_ **)** 」，其中 *#* 表示針對指定之次要複本存在的警告數目。 若要檢視給定容錯移轉目標的警告，請按一下其 [容錯移轉整備] 值。  
   
      如需詳細資訊，請參閱本主題稍後的＜ [選取新的主要複本頁面](#SelectNewPrimaryReplica)＞。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "74821941"
   
      如需詳細資訊，請參閱 [結果頁面 &#40;AlwaysOn 可用性群組精靈&#41;](../../../database-engine/availability-groups/windows/results-page-always-on-availability-group-wizards.md)或 PowerShell，針對 AlwaysOn 可用性群組執行規劃的手動容錯移轉或強制手動容錯移轉 (強制容錯移轉)。  
   
-11. 強制容錯移轉之後，請參閱 [執行可用性群組的強制手動容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)或 PowerShell，針對 AlwaysOn 可用性群組執行規劃的手動容錯移轉或強制手動容錯移轉 (強制容錯移轉)。  
+11. 在進行強制容錯移轉之後，請參閱＜後續：強制容錯移轉後＞一節 (位於[執行可用性群組的強制手動容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md) 中)。  
   
 ## <a name="help-for-pages-that-are-exclusive-to-this-wizard"></a>此精靈專用頁面的說明  
  本節描述的是 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]特有的頁面。  

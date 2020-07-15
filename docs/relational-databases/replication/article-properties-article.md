@@ -15,15 +15,15 @@ ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 22410fd71e91084c99823ceba020ed43f54ed75e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 46fbde4be37677cc873089b00b53dd0be706a333
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288252"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722205"
 ---
 # <a name="article-properties---ltarticlegt"></a>發行項屬性 - &lt;發行項&gt;
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   從新增發行集精靈和 **[發行集屬性]** 對話方塊中，可以使用 **[發行項屬性]** 對話方塊。 它可讓您檢視和設定所有類型之發行項的屬性。 某些屬性只有在建立發行集時才能設定，而其他的則只有在發行集沒有使用中的訂閱時才能設定。 無法設定的屬性會以唯讀顯示。  
   
 > [!NOTE]  
@@ -47,7 +47,7 @@ ms.locfileid: "76288252"
  在訂閱者端建立物件時，決定是否從使用者自訂資料類型轉換為基底資料型別。 使用者定義資料類型包括 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中導入的使用者定義 CLR 類型。 如果您要將這些資料類型複寫到舊版的 **，請指定** [True] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]值；這可確保訂閱者端能夠正確地處理這些類型。  
   
  **在訂閱者端建立結構描述**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 導入了結構描述，這是使用 CREATE SCHEMA 陳述式來定義的。 結構描述是物件的擁有者 (在多重部分名稱中使用)，例如 \<資料庫>.\<結構描述>.\<物件>。 如果您有物件位於 DBO 以外之結構描述所擁有的資料庫中，複寫就可以在訂閱者端建立這些結構描述，使得發行的物件得以建立。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 導入了結構描述，這是使用 CREATE SCHEMA 陳述式來定義的。 結構描述是物件的擁有者 (在多部分名稱中使用)，例如 \<Database>.\<Schema>.\<Object>。如果您有物件位於 DBO 以外之結構描述所擁有的資料庫中，複寫就可以在訂閱者端建立這些結構描述，使得發行的物件得以建立。  
   
  如果您要將資料複寫到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]版本：  
   
@@ -90,7 +90,7 @@ ms.locfileid: "76288252"
  此選項僅適用於儲存程序。 它決定是否要複寫預存程序 (CREATE PROCEDURE 陳述式) 或其執行的定義。 如果您複寫程序的執行，程序定義會在初始化訂閱之後複寫到訂閱者端；在發行者端執行程序時，複寫會在訂閱者端執行對應的程序。 這可在執行大量批次作業時大幅提升效能。 如需詳細資訊，請參閱 [Publishing Stored Procedure Execution in Transactional Replication](../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md)。  
   
 ## <a name="options-for-merge-publications"></a>合併式發行集的選項  
- 合併式發行集的 **[發行項屬性]** 對話方塊有兩個索引標籤： **[屬性]** 和 **[解析程式]** 。  
+ 合併式發行集的 [發行項屬性] 對話方塊有兩個索引標籤：[屬性] 和 [解析程式]。  
   
 ### <a name="properties-tab"></a>屬性索引標籤  
  **同步處理方向**  
@@ -137,7 +137,7 @@ ms.locfileid: "76288252"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 提供的所有以 COM 為基礎的解析程式都已簽署。 選取此選項即可驗證同步處理時解析程式是有效的。  
   
 ## <a name="options-for-oracle-publications"></a>Oracle 發行集的選項  
- Oracle 發行集的 **[發行項屬性]** 對話方塊有兩個索引標籤： **[屬性]** 和 **[資料對應]** 。 Oracle 發行集並不支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集支援的所有屬性。 如需詳細資訊，請參閱＜ [Design Considerations and Limitations for Oracle Publishers](../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)＞。  
+ Oracle 發行集的 [發行項屬性] 對話方塊有兩個索引標籤：[屬性] 和 [資料對應]。 Oracle 發行集並不支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集支援的所有屬性。 如需詳細資訊，請參閱＜ [Design Considerations and Limitations for Oracle Publishers](../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)＞。  
   
 ### <a name="properties-tab"></a>屬性索引標籤  
  **複製 INSERT、UPDATE 和 DELETE 預存程序**  

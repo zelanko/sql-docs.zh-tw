@@ -3,21 +3,21 @@ title: Linux 上的 SQL Server 2017 版本資訊
 description: 此文章包含在 Linux 上執行之 SQL Server 2017 的版本資訊和支援功能。 其中包含最新版本和數個先前版本的版本資訊。
 author: VanMSFT
 ms.author: vanto
-ms.date: 04/10/2020
+ms.date: 07/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 0decf0cbaf3d64353e76c4927369503add744808
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: be72cfb4fd0645af7ca07ae8c1042ec41bf75052
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81298258"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882701"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上的 SQL Server 2017 版本資訊
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 下列版本資訊適用於在 Linux 上執行的 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]。 此文章已針對每個版本細分為數個小節。 GA 版本會列出詳細的可支援性和已知問題。 每個累積更新 (CU) 或一般發行版本 (GDR) 除了有 Linux 套件下載連結之外，還有說明 CU 變更的支援文章連結。
 
@@ -46,6 +46,7 @@ ms.locfileid: "81298258"
 
 | 版本               | 版本       | 發行日期 |
 |-----------------------|---------------|--------------|
+| [CU21](#CU21)         | 14.0.3335.7   | 2020-07-01   |
 | [CU20](#CU20)         | 14.0.3294.2   | 2020-04-10   |
 | [CU19](#CU19)         | 14.0.3281.6   | 2020-02-05   |
 | [CU18](#CU18)         | 14.0.3257.3   | 2019-12-09   |
@@ -81,6 +82,27 @@ ms.locfileid: "81298258"
 - [安裝全文檢索搜尋套件](sql-server-linux-setup-full-text-search.md)
 - [安裝 SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [啟用 SQL Server Agent](sql-server-linux-setup-sql-agent.md)
+
+## <a name="cu21-july-2020"></a><a id="CU21"></a> CU21 (2020 年 7 月)
+
+這是 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的累積更新 21 (CU21) 版。 此版本的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本為 14.0.3335.7。 如需此版本中的修正和改善資訊，請參閱 <https://support.microsoft.com/help/4557397>。
+
+### <a name="package-details"></a>套件詳細資料
+
+針對手動或離線套件安裝，您可以運用下表中的資訊下載 RPM 和 Debian 套件：
+
+> [!NOTE]
+> 從 CU20 開始，SQL Server 2017 現在支援 **Ubuntu 18.04** 和 **RHEL 8**。
+>
+> 除了 SSIS 套件之外 (Ubuntu 18.04 無法使用)，Ubuntu 的離線套件安裝連結會指向 Ubuntu 18.04 套件。 若要尋找 Ubuntu 16.04 套件，請參閱下載路徑 <https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/>。
+>
+> 除了 SSIS 套件之外 (RHEL 8 無法使用)，Red Hat 的離線套件安裝連結會指向 RHEL 8 套件。 如果您要尋找 RHEL 7 套件，請參閱下載路徑 <https://packages.microsoft.com/rhel/7/mssql-server-2017/>。
+
+| Package | 套件版本 | 下載 |
+|-----|-----|-----|
+| Red Hat RPM 套件 | 14.0.3335.7-17 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-14.0.3335.7-17.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-ha-14.0.3335.7-17.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-fts-14.0.3335.7-17.x86_64.rpm)</br>[SSIS 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM 套件 | 14.0.3335.7-17 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3335.7-17.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3335.7-17.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3335.7-17.x86_64.rpm) | 
+| Ubuntu 18.04 Debian 套件 | 14.0.3335.7-17 | [引擎 Debian 套件](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3335.7-17_amd64.deb)</br>[高可用性 Debian 套件](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3335.7-17_amd64.deb)</br>[全文檢索搜尋 Debian 套件](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3335.7-17_amd64.deb)<br/>[SSIS 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a name="cu20-april-2020"></a><a id="CU20"></a> CU20 (2020 年 4 月)
 
@@ -583,7 +605,7 @@ sudo systemctl start mssql-server
    sudo MSSQL_LCID=<LcidValue> /opt/mssql/bin/mssql-conf setup
    ```
 
-- 執行 mssql-conf 設定及執行非英文的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝時，「正在設定 SQL Server...」當地語系化文字後面會顯示不正確的擴充字元。 或者，針對非拉丁文的安裝，此句子可能會完全遺失。 遺失的句子應該會顯示下列當地語系化字串：「已成功處理授權 PID。 新的版本為 [\<名稱\> 版本]」。 此字串的輸出只是用來提供資訊，下一個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 累積更新將會處理所有語言的這個問題。 這不會以任何方式影響成功的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝。 
+- 執行 mssql-conf 設定及執行非英文的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝時，「正在設定 SQL Server...」當地語系化文字後面會顯示不正確的擴充字元。 或者，針對非拉丁文的安裝，此句子可能會完全遺失。 遺失的句子應該會顯示下列當地語系化字串：「已成功處理授權 PID。 新的版本為 [\<Name\> 版本]」。 此字串的輸出只是用來提供資訊，下一個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 累積更新將會處理所有語言的這個問題。 這不會以任何方式影響成功的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝。 
 
 #### <a name="full-text-search"></a>全文檢索搜尋
 

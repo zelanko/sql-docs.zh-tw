@@ -1,5 +1,6 @@
 ---
 title: 複寫管理的最佳做法 | Microsoft Docs
+description: 設定複寫後，使用這些最佳做法來管理在 SQL Server 中的複寫拓撲。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,16 +15,16 @@ ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5d0948f6732b97da93b1136635175b90d5e92059
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 90c7651b8f739ab3009c37db7f1e10374eb07156
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286872"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83808011"
 ---
 # <a name="best-practices-for-replication-administration"></a>複寫管理的最佳做法
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  設定複寫之後，請務必了解如何管理複寫拓撲。 這個主題提供各個範疇的基本最佳做法指導，並可透過連結方式分別取得進一步資訊。 除了依照此主題中呈現的最佳做法指導以外，請考慮閱讀常見問答集，以更加熟悉一般問題：[複寫管理員的常見問題集](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)。  
+  設定複寫之後，請務必了解如何管理複寫拓撲。 這個主題提供各個範疇的基本最佳做法指導，並可透過連結方式分別取得進一步資訊。 除了依照本主題中提出的最佳做法指導以外，請考慮閱讀常見問答集主題來熟悉常見的問題：[複寫管理員的常見問題集](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)。  
   
  將最佳做法指南分成兩個方面非常有用：  
   

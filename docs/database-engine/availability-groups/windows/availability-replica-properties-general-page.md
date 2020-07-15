@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1b708c987f1e9d0bbaf069a5d105e6feab57b9b9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2a94f6331b19a0b3c5f4cc523f5933f8c451c476
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75241744"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896208"
 ---
 # <a name="availability-replica-properties-general-page-for-always-on-availability-groups"></a>Always On 可用性群組的可用性複本屬性 (一般頁面)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   使用此對話方塊來檢視可用性複本的屬性。  
   
 ## <a name="task-list"></a>工作清單  
@@ -30,7 +30,7 @@ ms.locfileid: "75241744"
   
 -   [使用 AlwaysOn 儀表板 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  **可用性群組名稱**  
  可用性群組的名稱。 這是使用者指定的名稱，它在 Windows Server 容錯移轉叢集 (WSFC) 內必須是唯一的。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "75241744"
  **是**  
  允許與這個複本的次要資料庫之間的所有連接，但只供讀取存取。 可以讀取所有次要資料庫。  
   
- 如需詳細資訊，請參閱 [使用中次要：可讀取的次要複本 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)中心概念。  
+ 如需詳細資訊，請參閱[使用中次要：可讀取的次要複本 &#40;Always On 可用性群組&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
  **工作階段逾時 (秒)**  
  逾時期間 (以秒為單位)。 逾時期間是將主要複本與次要複本之間的連接視為失敗之前，複本等待接收另一個複本之訊息的時間上限。 工作階段逾時會偵測次要複本是否連接到主要複本。 一旦偵測到與次要複本之間的連接失敗時，主要複本會將次要複本視為 NOT_SYNCHRONIZED。 一旦偵測到與主要複本之間的連接失敗時，次要複本只會嘗試重新連接。  

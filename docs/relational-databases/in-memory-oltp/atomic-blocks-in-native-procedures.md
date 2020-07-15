@@ -1,5 +1,6 @@
 ---
 title: 不可部分完成的區塊 | Microsoft Docs
+description: 深入了解 BEGIN ATOMIC；這是 ANSI SQL 標準的一部分。 SQL Server 支援原生程序中的 ATOMIC 區塊。
 ms.custom: ''
 ms.date: 10/26/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 329fb8644219d750595ff8a9cb2ddb5a6b804e4d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 662d5c2fe285e92f8e8fdf74836eb1dddca77206
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951227"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723425"
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>原生程序中不可部分完成的區塊
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   **BEGIN ATOMIC** 是 ANSI SQL 標準的一部分。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援原生編譯之預存程序最上層的 ATOMIC 區塊，以及原生編譯之純量使用者定義函式的 ATOMIC 區塊。 如需這些函數的詳細資訊，請參閱 [記憶體內部 OLTP 的純量使用者定義函數](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)。  
   
@@ -126,7 +127,7 @@ ORDER BY c1
 GO  
 ```  
   
- 記憶體最佳化資料表特有的以下錯誤訊息會毀滅交易。 如果發生在不可部分完成的區塊範圍內，將會造成交易中止：10772、41301、41302、41305、41325、41332、41333 和 41839。  
+ 記憶體最佳化資料表特有的以下錯誤訊息會毀滅交易。 如果它們發生在不可部分完成的區塊範圍內，將造成交易中止：10772、41301、41302、41305、41325、41332、41333 及 41839。  
   
 ## <a name="session-settings"></a>工作階段設定  
  當編譯預存程序時，將會修復不可部分完成的區塊內的工作階段設定。 某些設定可以使用 **BEGIN ATOMIC** 來指定，而其他設定則一律固定為相同的值。  

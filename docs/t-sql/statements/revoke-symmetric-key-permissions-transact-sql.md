@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 091da030-a768-4aa3-9509-cc23bd719cea
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5adf46b8464541db3068dc439cd382e1562dfe7f
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ead3a0c0b9feeeffff7491995c63926ec64ad5f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634062"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765940"
 ---
 # <a name="revoke-symmetric-key-permissions-transact-sql"></a>REVOKE 對稱金鑰權限 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   撤銷授與及拒絕對稱金鑰的權限。  
    
@@ -73,7 +73,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  { TO | FROM } \<*database_principal*>  
  指定要撤銷其權限的主體。  
   
- AS \<database_principal> 指定主體，執行這項查詢的主體就是從這個主體衍生權限來撤銷權限。  
+ AS \<database_principal> 指定主體，執行這項查詢的主體會從這個主體衍生權利來撤銷權限。  
   
  *Database_user*  
  指定資料庫使用者。  

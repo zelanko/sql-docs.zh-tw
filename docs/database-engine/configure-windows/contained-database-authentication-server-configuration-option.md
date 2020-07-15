@@ -1,5 +1,6 @@
 ---
 title: 自主資料庫驗證伺服器組態選項 | Microsoft Docs
+description: 了解 [自主資料庫驗證] 選項。 了解如何開啟此選項，如此即可將自主資料庫附加到 SQL Server 資料庫引擎。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - contained database, enabling
 - contained database authentication option
 ms.assetid: b80768d2-ac20-4035-a335-d9adb74b3f6e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: f571690b4af27d4099e0750eeacedcafd943f1fa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 29439e7957ad9c6563a282e9a4264a5f2d1f5c5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012120"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772608"
 ---
 # <a name="contained-database-authentication-server-configuration-option"></a>自主資料庫驗證伺服器組態選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   使用  [自主資料庫驗證] 選項，可在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體上啟用自主資料庫。  
   

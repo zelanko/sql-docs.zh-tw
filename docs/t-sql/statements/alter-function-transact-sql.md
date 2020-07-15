@@ -20,12 +20,12 @@ ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7de5bc19cd49959663bf4ead3f8ebff62b3b982b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b9afe006b96d7b447b508d59a55163f8838caa1e
+ms.sourcegitcommit: d498110ec0c7c62782fb694d14436f06681f2c30
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982855"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85195815"
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "73982855"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 -- Transact-SQL Scalar Function Syntax    
 ALTER FUNCTION [ schema_name. ] function_name   
 ( [ { @parameter_name [ AS ][ type_schema_name. ] parameter_data_type   
@@ -54,7 +54,7 @@ RETURNS return_data_type
 [ ; ]
 ```  
 
-```
+```syntaxsql
 -- Transact-SQL Inline Table-Valued Function Syntax
 ALTER FUNCTION [ schema_name. ] function_name   
 ( [ { @parameter_name [ AS ] [ type_schema_name. ] parameter_data_type   
@@ -69,7 +69,7 @@ RETURNS TABLE
 [ ; ]  
 ```
   
-```
+```syntaxsql
 -- Transact-SQL Multistatement Table-valued Function Syntax
 ALTER FUNCTION [ schema_name. ] function_name   
 ( [ { @parameter_name [ AS ] [ type_schema_name. ] parameter_data_type   
@@ -87,7 +87,7 @@ RETURNS @return_variable TABLE <table_type_definition>
 [ ; ]  
 ```
 
-```  
+```syntaxsql
 -- Transact-SQL Function Clauses   
 <function_option>::=   
 {  
@@ -147,7 +147,7 @@ column_name AS computed_column_expression
 }  
 ```
   
-```
+```syntaxsql
 -- CLR Scalar and Table-Valued Function Syntax
 ALTER FUNCTION [ schema_name. ] function_name   
 ( { @parameter_name [AS] [ type_schema_name. ] parameter_data_type   
@@ -160,7 +160,7 @@ RETURNS { return_data_type | TABLE <clr_table_type_definition> }
 [ ; ]  
 ```
   
-```
+```syntaxsql
 -- CLR Function Clauses
 <method_specifier>::=  
     assembly_name.class_name.method_name  
@@ -177,7 +177,7 @@ RETURNS { return_data_type | TABLE <clr_table_type_definition> }
   
 ```  
   
-```  
+```syntaxsql
 -- Syntax for In-Memory OLTP: Natively compiled, scalar user-defined function  
 ALTER FUNCTION [ schema_name. ] function_name    
  ( [ { @parameter_name [ AS ][ type_schema_name. ] parameter_data_type   
@@ -295,7 +295,7 @@ RETURNS return_data_type
  SCHEMABINDING  
  SCHEMABINDING 是原生編譯之純量使用者定義函式的必要引數。  
   
- **\<function_option>::= and \<clr_function_option>::=**  
+ **\<function_option>::= 和 \<clr_function_option>::=**  
   
  指定函數必須有下列其中一個或多個選項。  
   
@@ -305,7 +305,7 @@ RETURNS return_data_type
  指出 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會對包含 ALTER FUNCTION 陳述式文字的目錄檢視表資料行進行加密。 使用 ENCRYPTION 可防止在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫中發行這個函數。 無法為 CLR 函數指定 ENCRYPTION。  
   
  SCHEMABINDING  
- 指定函數必須繫結到它所參考的資料庫物件。 如果其他結構描述繫結的物件正在參考函數，這個條件可防止對函數進行變更。  
+ 指定函數必須繫結到它所參考的資料庫物件。 當指定 SCHEMABINDING 時，無法依照會影響函數定義的方式來修改基底物件。 您必須先修改或卸除函數定義，才能移除對於所要修改物件的相依性。  
   
  只有在下發生下列其中一個動作時，才會移除函數與其參考的物件之間的繫結：  
   
@@ -318,7 +318,7 @@ RETURNS return_data_type
  RETURNS NULL ON NULL INPUT | CALLED ON NULL INPUT  
  指定純量值函式的 **OnNULLCall** 屬性。 若未指定，預設情況下意味著 CALLED ON NULL INPUT。 這表示，即使傳遞 NULL 做為引數，函數主體仍會執行。  
   
- 如果在 CLR 函數中指定 RETURNS NULL ON NULL INPUT，它會指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以在它接收的任何引數是 NULL 時傳回 NULL，而不必實際叫用函數主體。 如果 \<method_specifier> 中指定的方法已經有一個指出 RETURNS NULL ON NULL INPUT 的自訂屬性，但 ALTER FUNCTION 陳述式卻指出 CALLED ON NULL INPUT，則優先使用 ALTER FUNCTION 陳述式。 無法為 CLR 資料表值函式指定 **OnNULLCall** 屬性。  
+ 如果在 CLR 函數中指定 RETURNS NULL ON NULL INPUT，它會指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以在它接收的任何引數是 NULL 時傳回 NULL，而不必實際叫用函數主體。 如果 \<method_specifier> 中所指定方法已經有一個指出 RETURNS NULL ON NULL INPUT 的自訂屬性，但 ALTER FUNCTION 陳述式卻指出 CALLED ON NULL INPUT，則優先使用 ALTER FUNCTION 陳述式。 無法為 CLR 資料表值函式指定 **OnNULLCall** 屬性。  
   
  EXECUTE AS 子句  
  指定執行使用者定義函數時所在的安全性內容。 因此，您可以控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 要利用哪個使用者帳戶來驗證在函數參考的任何資料庫物件上的權限。  

@@ -9,22 +9,22 @@ manager: cgronlun
 ms.date: 05/11/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c5bb573a3d8d5e93b51bb0536b5fc2171987a0ee
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: c07c92b65fe8ebed54ac75f3b9180bbd39534109
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269417"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882509"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-docker"></a>在 Docker 上安裝 SQL Server 機器學習服務 (Python 與 R)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 本文說明如何在 Docker 上安裝 SQL Server 機器學習服務。 您可以使用機器學習服務來在資料庫中執行 Python 和 R 指令碼。 我們不會提供具有機器學習服務的預先建立容器， 但可使用 [GitHub 上提供的範例範本](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices)，從 SQL Server 容器建立。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 - Git 命令列介面。
 
@@ -36,7 +36,7 @@ ms.locfileid: "83269417"
 
 下列命令會將 `mssql-docker` Git 存放庫複製到本機目錄。
 
-1. 在 Linux 或 Mac 上開啟 Bash 終端機，或在 Windows 上開啟 Windows 子系統 Linux 版終端機。
+1. 開啟 Linux 或 Mac 上的 Bash 終端機。
 
 2. 建立目錄，以保存 mssql-docker 存放庫的本機複本。
 
@@ -65,10 +65,12 @@ ms.locfileid: "83269417"
 3. 執行命令：
 
     ```bash
-    docker runs -d -e MSSQL_PID=Developer -e ACCEPT_EULA=Y -e ACCEPT_EULA_ML=Y -e SA_PASSWORD=<your_sa_password> -v OS>:/var/opt/mssql -p 1433:1433 mssql-server-mlservices
+    docker run -d -e MSSQL_PID=Developer -e ACCEPT_EULA=Y -e ACCEPT_EULA_ML=Y -e MSSQL_SA_PASSWORD=<password> -v <directory on the host OS>:/var/opt/mssql -p 1433:1433 mssql-server-mlservices
     ```
-
-    變更 `SA_PASSWORD=<your_sa_password>` 中的 `<your_sa_password>`，並變更 `-v` 路徑。 
+  
+    > [!NOTE]
+    > 您可針對 MSSQL_PID 使用下列任何值：Developer (free)、Express (free)、Enteprise (paid)、Standard (paid)。 如果使用付費版本，請確定已購買授權。 將 (password) 取代成實際密碼。 使用 -v 進行磁碟區掛接為選擇性。 將 (directory on the host OS) 取代成希望掛接資料庫資料和記錄檔的實際目錄。
+    
 
 4. 執行下列命令以確認：
 
@@ -89,30 +91,19 @@ ms.locfileid: "83269417"
    export ACCEPT_EULA_ML='Y'
    export PATH_TO_MSSQL='/home/mssql/'
    ```
-
-2. 執行 run.sh 指令碼：
-
-   ```bash
-   ./run.sh
-   ```
-
-   此命令會使用 Developer 版本 (預設值) 建立具有機器學習服務的 SQL Server 容器。 SQL Server 連接埠 **1433** 在主機上會公開為連接埠 **1401**。
-
+  
    > [!NOTE]
    > 在容器中執行生產環境 SQL Server 版本的程序會稍有不同。 如需詳細資訊，請參閱[在 Docker 上設定 SQL Server 容器映像](sql-server-linux-configure-docker.md)。 如果您使用相同的容器名稱和連接埠，則本逐步解說的其餘部分仍適用於生產環境容器。
 
-3. 若要檢視 Docker 容器，請執行 `docker ps` 命令：
+2. 若要檢視 Docker 容器，請執行 `docker ps` 命令：
 
    ```bash
    sudo docker ps -a
    ```
 
-4. 若 **STATUS** 資料行顯示的狀態含 **Up**，表示 SQL Server 正在容器中執行且接聽於 **PORTS** 資料行中指定的連接埠。 若 SQL Server 容器的 **STATUS** 欄位顯示 **Exited**，請參閱[設定指南的＜疑難排解＞一節](sql-server-linux-configure-docker.md#troubleshooting)。
+3. 若 **STATUS** 資料行顯示的狀態含 **Up**，表示 SQL Server 正在容器中執行且接聽於 **PORTS** 資料行中指定的連接埠。 若 SQL Server 容器的 **STATUS** 欄位顯示 **Exited**，請參閱[設定指南的＜疑難排解＞一節](sql-server-linux-configure-docker.md#troubleshooting)。
 
-   ```bash
-   $ sudo docker ps -a
-   ```
-
+ 
     輸出：
 
     ```

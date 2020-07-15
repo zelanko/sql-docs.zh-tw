@@ -1,5 +1,6 @@
 ---
 title: 設定 cursor threshold 伺服器組態選項 | Microsoft Docs
+description: 了解資料指標選項。 了解其值如何影響 SQL Server 以非同步方式產生資料指標索引鍵集，以及了解如何進行設定。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - cursor threshold option
 ms.assetid: 189f2067-c6c4-48bd-9bd9-65f6b2021c12
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 243798abec1a00d3c5ea3a9426449c3bd42e462b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0a8d61714928482cf15f00a74175606ec43ca6e9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012737"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85697910"
 ---
 # <a name="configure-the-cursor-threshold-server-configuration-option"></a>設定 cursor threshold 伺服器組態選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] cursor threshold [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **cursor threshold** 選項會指定資料指標集中以非同步方式產生資料指標索引鍵集的列數。 當資料指標為結果集產生索引鍵集時，查詢最佳化工具會估計將在該結果集傳回的資料列數。 如果查詢最佳化工具估計將傳回的列數會大於這個臨界值，就會以非同步方式產生資料指標，讓使用者在資料指標繼續擴展的同時，可以從資料指標擷取資料列。 否則，會以同步的方式產生資料指標，使查詢等到所有資料列都傳回為止。  
   
@@ -36,7 +37,7 @@ ms.locfileid: "68012737"
   
 -   **使用下列方法設定 cursor threshold 選項：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -54,7 +55,7 @@ ms.locfileid: "68012737"
   
 -   此選項是進階選項，只有具經驗的資料庫管理員或通過認證的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 專業人員才可變更。  
   
--   如果將 [資料指標臨界值]  設定為 -1，所有索引鍵集都會以同步方式產生，這有益於小型的資料指標集。 如果將 **cursor threshold** 設成 0，所有資料指標索引鍵集都會以非同步方式產生。 若使用其他值，查詢最佳化工具會比較資料指標集中預期的列數，如果列數超過 **cursor threshold**中設定的數字，就以非同步方式建立索引鍵集。 請不要將 **cursor threshold** 設得太低，因為小的結果集最好是以同步的方式建立。  
+-   如果將 [資料指標臨界值] 設定為 -1，所有索引鍵集都會以同步方式產生，這有益於小型的資料指標集。 如果將 **cursor threshold** 設成 0，所有資料指標索引鍵集都會以非同步方式產生。 若使用其他值，查詢最佳化工具會比較資料指標集中預期的列數，如果列數超過 **cursor threshold**中設定的數字，就以非同步方式建立索引鍵集。 請不要將 **cursor threshold** 設得太低，因為小的結果集最好是以同步的方式建立。  
   
 ###  <a name="security"></a><a name="Security"></a> Security  
   
@@ -65,7 +66,7 @@ ms.locfileid: "68012737"
   
 #### <a name="to-configure-the-cursor-threshold-option"></a>若要設定資料指標臨界值選項  
   
-1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]  。  
+1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
   
 2.  按一下 **[進階]** 節點。  
   

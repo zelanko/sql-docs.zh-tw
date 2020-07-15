@@ -1,5 +1,6 @@
 ---
 title: 資料庫屬性 (交易記錄傳送頁面) | Microsoft 文件
+description: 使用 [資料庫屬性] 對話方塊中 [交易記錄傳送] 索引標籤，讓資料庫成為記錄傳送的主要資料庫，並設定其選項。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 72c4e539-fe11-4d57-b977-65b418d5916f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8155524f6e5d8172092630c04dbb0540514b56ed
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 75c87efd24b1e345cb99413d1a524e872f0eb022
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099572"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630963"
 ---
 # <a name="database-properties-transaction-log-shipping-page"></a>資料庫屬性 (交易記錄傳送頁面)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用此頁面即可設定和修改資料庫記錄傳送的屬性。  
   
  如需記錄傳送概念的說明，請參閱 [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。  
@@ -30,7 +31,7 @@ ms.locfileid: "68099572"
  啟用此資料庫為記錄傳送的主要資料庫。 先選取它，然後設定此頁面上的其他選項。 如果您清除此核取方塊，就會卸除此資料庫的記錄傳送組態。  
   
  **備份設定**  
- 按一下 [備份設定]  即可設定備份排程、位置、警示及封存參數。  
+ 按一下 [備份設定] 即可設定備份排程、位置、警示及封存參數。  
   
  **備份排程**  
  顯示主要資料庫目前選取的備份排程。 按一下 **[備份設定]** 即可修改這些設定。  
@@ -42,7 +43,7 @@ ms.locfileid: "68099572"
  列出此主要資料庫目前設定的次要伺服器與資料庫。 反白顯示資料庫，然後按一下 **[...]** 即可修改與次要資料庫相關聯的參數。  
   
  **加入**  
- 按一下 [加入]  ，即可將次要資料庫加入此主要資料庫的記錄傳送組態。  
+ 按一下 [加入]，即可將次要資料庫加入此主要資料庫的記錄傳送組態。  
   
  **移除**  
  從這個記錄傳送組態中，移除選取的資料庫。 先選取資料庫，然後按一下 **[移除]** 。  

@@ -1,5 +1,6 @@
 ---
 title: 改變記憶體最佳化資料表 | Microsoft Docs
+description: 了解 ALTER TABLE 陳述式會在記憶體最佳化資料表上執行結構描述與索引變更。 在單一陳述式中結合 ADD、DROP 與 ALTER 作業。
 ms.custom: ''
 ms.date: 10/22/2018
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d65b6931053c7eccbb96093fb2cd840f8277cb7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: db339d9063378b29f6902f7e52e3006ac57295b7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951299"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776077"
 ---
 # <a name="altering-memory-optimized-tables"></a>改變記憶體最佳化資料表
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 使用 ALTER TABLE 陳述式，可以在記憶體最佳化資料表上執行結構描述與索引變更。 在 SQL Server 2016 和 Azure SQL Database 中，記憶體最佳化資料表的 ALTER TABLE 作業是「離線」，表示當作業正在進行時，資料表不提供查詢。 資料庫應用程式可以繼續執行，但會封鎖任何存取資料表的作業，直到改變程序完成。 單一的 ALTER TABLE 陳述式中可以合併多個 ADD、DROP 或 ALTER 作業。
 

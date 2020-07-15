@@ -1,5 +1,6 @@
 ---
 title: 備份資料庫主要金鑰 | Microsoft Docs
+description: 了解如何使用 Transact-SQL 來備份 SQL Server 中的資料庫主要金鑰。 這個重要金鑰會加密其他金鑰和憑證。
 ms.custom: ''
 ms.date: 01/02/2019
 ms.prod: sql
@@ -11,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 7ad9a0a0-6e4f-4f7b-8801-8c1b9d49c4d8
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 55db3923f26acaad667e444afb13ae0d86bcc59e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 922b921649892673f51876c6e2336e05244a1e17
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957498"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892430"
 ---
 # <a name="back-up-a-database-master-key"></a>備份資料庫主要金鑰
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ，備份 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中的資料庫主要金鑰。 資料庫主要金鑰可用來加密資料庫內部的其他金鑰和憑證。 如果遭到刪除或損毀， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可能就無法解密那些金鑰，而使用這些金鑰加密的資料實際上等於遺失了。 因此，您應該備份資料庫主要金鑰，並將該備份存放在安全且位於異地的位置。  
   
 ## <a name="before-you-begin"></a>開始之前  

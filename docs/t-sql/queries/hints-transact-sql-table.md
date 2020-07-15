@@ -36,15 +36,15 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 225a92fc082a2778a7146923a9d138d0ce86aa7b
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: cdc73ac23a6d95d46b6ec02bb1aeb194df96422a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087513"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731334"
 ---
 # <a name="hints-transact-sql---table"></a>提示 (Transact-SQL) - 資料表
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   資料表提示會在資料操作語言 (DML) 陳述式持續時間覆寫查詢最佳化工具的預設行為，其方式是指定鎖定方法、一或多個索引、查詢處理作業 (例如資料表掃描或索引搜尋) 或是其他選項。 資料表提示會在 DML 陳述式的 FROM 子句中指定，並只會影響該子句中參考的資料表或檢視表。  
   
@@ -121,7 +121,7 @@ WITH  ( <table_hint> [ [, ]...n ] )
 ```  
   
 ## <a name="arguments"></a>引數  
-WITH **(** \<> **)** [ [ **,** ]...*n* ]  
+WITH **(** \<table_hint> **)** [ [ **,** ]...*n* ]  
 但有某些例外，僅當利用 WITH 關鍵字指定提示時，FROM 子句才會支援資料表提示。 資料表提示也必須用括號來指定。  
   
 > [!IMPORTANT]  

@@ -1,5 +1,6 @@
 ---
 title: 用戶端網路組態 | Microsoft Docs
+description: 了解用戶端電腦如何連線到網路上的 SQL Server 執行個體。 了解可用來管理用戶端的工具。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,18 +17,18 @@ helpviewer_keywords:
 - client connections [SQL Server]
 - network connections [SQL Server], client configuration
 ms.assetid: c382eacd-0a0c-40a4-958f-9b774eb2d734
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4fcbb9e6ee0f68433034cd2c3a29f565e05359e9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 65e9cff3efd309e25104e0f283a1902d8a0392e6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012969"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759175"
 ---
 # <a name="client-network-configuration"></a>用戶端網路組態
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  用戶端軟體可讓用戶端電腦連線到網路上的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 「用戶端」是前端應用程式，它會使用伺服器 (如 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]) 所提供的服務。 主控這個應用程式的電腦稱為「用戶端電腦」  。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  用戶端軟體可讓用戶端電腦連線到網路上的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 「用戶端」是前端應用程式，它會使用伺服器 (如 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]) 所提供的服務。 主控這個應用程式的電腦稱為「用戶端電腦」。  
   
  在最簡單的層級中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端可以與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體位在相同的機器上。 不過，用戶端通常會透過網路連接到一或多個遠端伺服器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的用戶端/伺服器架構可供完美無缺地管理網路上的多個用戶端及伺服器。 預設用戶端組態在大部分情況下都會足夠。  
   

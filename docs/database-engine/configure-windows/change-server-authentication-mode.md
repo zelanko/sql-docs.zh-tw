@@ -1,5 +1,6 @@
 ---
 title: 變更伺服器驗證模式 | Microsoft Docs
+description: 了解如何在 SQL Server 中變更伺服器驗證模式。 您可針對此工作使用 SQL Server Management Studio 或 Transact-SQL。
 ms.custom: ''
 ms.date: 02/18/2020
 ms.prod: sql
@@ -13,21 +14,21 @@ helpviewer_keywords:
 - server authentication mode [SQL Server]
 - modifying server authentication mode
 ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a8ffafae40991d6134925481409b5898b06c20c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 67fe4768a07460ebac0b533b6e886ab565d82029
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288562"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759228"
 ---
 # <a name="change-server-authentication-mode"></a>變更伺服器驗證模式
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 變更 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的伺服器驗證模式。 在安裝期間， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會設為 **[Windows 驗證模式]** 或 **[SQL Server 及 Windows 驗證模式]** 。 安裝後，您可以隨時變更驗證模式。
 
-如果您在安裝期間選取 [Windows 驗證模式]  ，sa 登入便會停用，且安裝程式會指派密碼。 即使稍後將驗證模式改成 [SQL Server 及 Windows 驗證模式]  ，sa 登入也會保持停用狀態。 若要使用 sa 登入，請使用 ALTER LOGIN 陳述式啟用 sa 登入並指派新密碼。 sa 登入只能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證連接到伺服器。
+如果您在安裝期間選取 [Windows 驗證模式]，sa 登入便會停用，且安裝程式會指派密碼。 即使稍後將驗證模式改成 [SQL Server 及 Windows 驗證模式]，sa 登入也會保持停用狀態。 若要使用 sa 登入，請使用 ALTER LOGIN 陳述式啟用 sa 登入並指派新密碼。 sa 登入只能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證連接到伺服器。
 
 ## <a name="before-you-begin"></a>開始之前
 
@@ -35,13 +36,13 @@ sa 帳戶是已知的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
 
 ## <a name="change-authentication-mode-with-ssms"></a>使用 SSMS 變更驗證模式
 
-1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的物件總管中，以滑鼠右鍵按一下伺服器，然後按一下 [屬性]  。
+1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的物件總管中，以滑鼠右鍵按一下伺服器，然後按一下 [屬性]。
 
 2. 在 **[安全性]** 頁面上的 **[伺服器驗證]** 中，選取新的伺服器驗證模式，然後按一下 **[確定]** 。
 
 3. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 對話方塊中，按一下 **[確定]** 以確認需要重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
 
-4. 在物件總管中，以滑鼠右鍵按一下伺服器，然後按一下 [重新啟動]  。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 正在執行，也必須將它重新啟動。
+4. 在物件總管中，以滑鼠右鍵按一下伺服器，然後按一下 [重新啟動]。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 正在執行，也必須將它重新啟動。
 
 ## <a name="enable-sa-login"></a>啟用 SA 登入
 
@@ -49,9 +50,9 @@ sa 帳戶是已知的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
 
 ### <a name="use-ssms"></a>使用 SSMS
 
-1. 在物件總管中，依序展開 [安全性]  和 [登入]，並以滑鼠右鍵按一下 [sa]  ，然後按一下 [屬性]  。
+1. 在物件總管中，依序展開 [安全性] 和 [登入]，並以滑鼠右鍵按一下 [sa]，然後按一下 [屬性]。
 
-2. 在 [一般]  頁面上，您可能必須為 **sa** 登入建立並確認密碼。
+2. 在 [一般] 頁面上，您可能必須為 **sa** 登入建立並確認密碼。
 
 3. 在 **[狀態]** 頁面的 **[登入]** 區段中按一下 **[已啟用]** ，然後按一下 **[確定]** 。
 

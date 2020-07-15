@@ -1,5 +1,6 @@
 ---
 title: 使用物件總管詳細資料監視可用性群組 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 來監視及管理現有的 AlwaysOn 可用性群組、可用性複本與可用性資料庫。
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9d0296e1427d4af206e101513bd54b0d67f7ff46
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e7ee1430cd764c02c05f2bf3f8f935d397a6155a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013636"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894158"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>使用物件總管詳細資料監視可用性群組
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的 [物件總管詳細資料] 窗格來監視及管理現有的 AlwaysOn 可用性群組、可用性複本和可用性資料庫。  
   
 > [!NOTE]  
@@ -40,9 +41,9 @@ ms.locfileid: "68013636"
   
 2.  在 [物件總管] 中，連接到您要監視可用性群組的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體，然後按一下伺服器名稱以展開伺服器樹狀目錄。  
   
-3.  依序展開 [Always On 高可用性]  節點和 [可用性群組]  節點。  
+3.  依序展開 [Always On 高可用性] 節點和 [可用性群組] 節點。  
   
-4.  **[物件總管詳細資料]** 窗格會顯示連接之伺服器執行個體裝載複本的每個可用性群組。 對於每個可用性群組，[伺服器執行個體 (主要)]  資料行會顯示目前裝載主要複本的伺服器執行個體名稱。  若要顯示有關給定之可用性群組的詳細資訊，請在 [物件總管] 中選取它。  
+4.  **[物件總管詳細資料]** 窗格會顯示連接之伺服器執行個體裝載複本的每個可用性群組。 對於每個可用性群組，[伺服器執行個體 (主要)] 資料行會顯示目前裝載主要複本的伺服器執行個體名稱。  若要顯示有關給定之可用性群組的詳細資訊，請在 [物件總管] 中選取它。  
   
 5.  接著 **[物件總管詳細資料]** 窗格會顯示此可用性群組的 **[可用性複本]** 和 **[可用性資料庫]** 節點：  
   
@@ -58,7 +59,7 @@ ms.locfileid: "68013636"
  **[可用性群組]** 詳細資料畫面顯示下列資料行：  
   
  **名稱**  
- 列出所選可用性群組的 [可用性複本]  、[可用性資料庫]  和 [可用性群組接聽程式]  資料夾。  
+ 列出所選可用性群組的 [可用性複本]、[可用性資料庫] 和 [可用性群組接聽程式] 資料夾。  
   
 ##  <a name="availability-replica-details"></a><a name="AvReplicaDetails"></a> 可用性複本詳細資料  
  **[可用性複本]** 詳細資料畫面顯示下列資料行：  
@@ -95,7 +96,7 @@ ms.locfileid: "68013636"
 |值|描述|  
 |-----------|-----------------|  
 |**[未同步處理]**|資料庫未同步處理或者尚未聯結至可用性群組。|  
-|**已同步處理**|資料庫會與目前主要複本 (如果有的話) 或最後一個主要複本的主要資料庫進行同步處理。<br /><br /> 注意：在效能模式中，資料庫永遠不會處於同步處理狀態。|  
+|**已同步處理**|資料庫會與目前主要複本 (如果有的話) 或最後一個主要複本的主要資料庫進行同步處理。<br /><br /> 注意:在效能模式中，資料庫永遠不會處於同步處理狀態。|  
 |**NULL**|未知的狀態。 當本機伺服器執行個體無法與 WSFC 容錯移轉叢集通訊 (亦即，本機節點不屬於 WSFC 仲裁的一部分) 時，就會出現這個值。|  
   
 > [!NOTE]  
@@ -114,7 +115,7 @@ ms.locfileid: "68013636"
   
 |值|描述|  
 |-----------|-----------------|  
-|正在同步處理|次要資料庫已經收到主要資料庫中尚未寫入磁碟 (強行寫入) 的交易記錄檔記錄。<br /><br /> 注意：在非同步認可模式中，同步處理模式一律為 **正在同步處理**。|  
+|正在同步處理|次要資料庫已經收到主要資料庫中尚未寫入磁碟 (強行寫入) 的交易記錄檔記錄。<br /><br /> 注意:在非同步認可模式中，同步處理模式一律為 [正在同步處理]。|  
 |||  
   
  **已暫停**  

@@ -1,5 +1,6 @@
 ---
 title: 設定 Always Encrypted 伺服器設定選項的記憶體保護區類型 | Microsoft Docs
+description: 了解如何啟用或停用 Always Encrypted 的安全記憶體保護區。 了解如何確認記憶體保護區是否已正確初始化。
 ms.custom: ''
 ms.date: 09/24/2018
 ms.prod: sql
@@ -10,19 +11,19 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4786c512850d161d9b7ab33f2a12cd0bd077b2bd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6e16bbd33d9353c02cf72e3c931a5d8749197f5d
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73593825"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84818353"
 ---
 # <a name="configure-the-enclave-type-for-always-encrypted-server-configuration-option"></a>設定 Always Encrypted 伺服器設定選項的記憶體保護區類型
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 本文描述如何針對具有安全記憶體保護區的 Always Encrypted 啟用或停用安全記憶體保護區。 如需詳細資訊，請參閱[具有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。
 
-[資料行加密記憶體保護區類型]  伺服器設定選項可控制用於 Always Encrypted 的安全記憶體保護區類型。 可將此選項設定為下列其中一個值：  
+[資料行加密記憶體保護區類型] 伺服器設定選項可控制用於 Always Encrypted 的安全記憶體保護區類型。 可將此選項設定為下列其中一個值：  
   
 |值|描述|  
 |-------------------|-----------------| 

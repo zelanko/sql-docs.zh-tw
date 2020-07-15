@@ -1,5 +1,6 @@
 ---
 title: 預先計算陣序規範伺服器組態選項 | Microsoft Docs
+description: 了解已經過期的 SQL Server 選項「預先計算次序」。 了解使用此選項的應用程式會如何受到影響，並查看要對其採取什麼動作。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - precompute rank option
 - FREETEXTTABLE function (Transact-SQL)
 ms.assetid: f55ab955-542e-4a4b-be21-deaf1997ad6e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: f50c3cd17c21ba822950807e02fcc962dac0fb8e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1195066a4f6039e969614c634e927fac00f09189
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67938229"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781842"
 ---
 # <a name="precompute-rank-server-configuration-option"></a>預先計算次序伺服器組態選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   這個選項不會在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中實作。 這是一項重大變更。 請盡快修改目前仍使用這項功能的應用程式。  
   

@@ -9,18 +9,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 20039429b5368dc560baba68061c4f42c73b95a1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b8af2373969353597036a3c538d0a8ab8945ae24
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80217108"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901273"
 ---
 # <a name="pushdown-computations-in-polybase"></a>PolyBase 中的下推計算
 
 ## <a name="dmv"></a>DMV
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 下推計算可改善 Hadoop 叢集的查詢效能。
 
@@ -55,7 +55,7 @@ SELECT customer.name, customer.zip_code FROM customer WHERE customer.account_bal
 
 SQL Server 允許述詞下推的下列基本運算式和運算子。
 
-+ 數值、日期和時間值的二進位比較運算子 (\<、>、=、!=、<>、>=、<=)。
++ 數值、日期和時間值的二進位比較運算子 (\<, >、=、!=、<>、>=、<=)。
 
 + 算術運算子 (+、-、*、/、% )。
 

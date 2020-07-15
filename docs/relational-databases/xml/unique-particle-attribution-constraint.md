@@ -1,5 +1,6 @@
 ---
 title: 唯一物件屬性條件約束 | Microsoft 文件
+description: 了解唯一物件屬性 (UPA) 條件約束規則如何拒絕 XSD 結構描述 (若其包含具有可能模稜兩可內容模式的類型)。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2c64ff3f819e0d30db6654cbeed6cf5c19e43aa7
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 9d7b6de76fdb5310a5121908779d4565a4b6ff1c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665216"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729831"
 ---
 # <a name="unique-particle-attribution-constraint"></a>唯一物件屬性條件約束
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   在 XSD 中，會以唯一物件屬性 (UPA) 條件約束規則來限制複雜的內容模型。 此規則要求執行個體文件中的每個元素，都要明確地對應至其父系內容模型中的一個 `<xsd:element>` 或 `<xsd:any>` 物件。 若有任何結構描述，其包含的類型可能含有模稜兩可的內容模型，都會被拒絕。  
   
  導致內容模型模稜兩可的最常見原因，就是 `<xsd:any>` 萬用字元，以及具有變動出現範圍的物件，例如：minOccurs < maxOccurs。 例如，下列內容模型是模稜兩可的，因為 <`e1`> 元素可以符合 `<xsd:element>`，也可以符合 `<xsd:any>` 元素。  
@@ -81,11 +82,11 @@ ms.locfileid: "80665216"
 ## <a name="finding-more-information"></a>尋找詳細資訊  
  下列文件是由全球資訊網協會 (W3C) 所發行，其中包含唯一物件屬性條件約束的技術說明：  
   
- ＜XML 結構描述第一部份：結構第二版，W3C 提出的編輯建議＞(英文)：  
+ "XML Schema Part 1:Structures Second Edition, W3C Proposed Edited Recommendation" (XML 結構描述第 1 部分：結構第二版，W3C 提出的編輯建議)：  
   
--   第 3.8.6 節：模型群組結構描述元件的條件約束 (Section 3.8.6: Constraints on Model Group Schema Components)  
+-   3\.8.6 節：Constraints on Model Group Schema Components (模型群組結構描述元件的條件約束)  
   
--   附錄 H：唯一物件屬性條件約束的分析 (非標準的) (Appendix H: Analysis of the Unique Particle Attribution Constraint (non-normative))  
+-   附錄 H：Analysis of the Unique Particle Attribution Constraint (non-normative) (唯一物件屬性條件約束的分析 (非標準))  
   
  若要查看文件，請瀏覽 [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881)。  
   

@@ -1,7 +1,8 @@
 ---
 title: 在 Server Core 上安裝 SQL Server | Microsoft Docs
+description: 您可在 Server Core 安裝上安裝 SQL Server。 Server Core 安裝選項提供執行特定伺服器角色的基本環境。
 ms.custom: ''
-ms.date: 09/05/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -10,16 +11,16 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 95b6a5bfd44aafe8b76bf04d42a71808718172ab
-ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
+ms.openlocfilehash: edde54e4f64f55bac2b3e25912a256b3c3b99bdd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82872794"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883561"
 ---
 # <a name="install-sql-server-on-server-core"></a>在 Server Core 上安裝 SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 您可以在 Server Core 安裝上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。   
   
@@ -27,7 +28,7 @@ Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可�
   
  如需目前支援的作業系統清單，請參閱[安裝 SQL Server 的硬體和軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。
 
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
   
 |需求|安裝方式|  
 |-----------------|--------------------|  
@@ -65,7 +66,7 @@ Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可�
 ## <a name="supported-scenarios"></a>支援的案例  
  下表顯示在 Server Core 上安裝 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 的支援案例矩陣。  
   
-|||  
+| 安裝 | 有效的目標 |  
 |-|-|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本|所有 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 64 位元版本 |  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 語言|所有語言|  
@@ -118,7 +119,7 @@ Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可�
   
      若要使用命令提示字元安裝選項安裝特定功能，請使用 /FEATURES 參數，然後指定父功能或功能值。 下面是有關從命令列使用參數的範例：  
   
-    ```  
+    ```console
     Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /TCPENABLED=1 /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
@@ -129,44 +130,44 @@ Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可�
     - 安裝 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 
     
     下列範例示範如何安裝包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]的新獨立執行個體：  
-  
-        ```  
-        ; SQL Server Configuration File  
-        [OPTIONS]  
-  
-        ; Specifies a Setup work flow, like INSTALL, UNINSTALL, or UPGRADE. This is a required parameter.   
-  
-        ACTION="Install"  
-  
-        ; Specifies features to install, uninstall, or upgrade. The lists of features include SQLEngine, FullText, Replication, AS, IS, and Conn.   
-  
-        FEATURES=SQLENGINE  
-  
-        ; Specify a default or named instance. MSSQLSERVER is the default instance for non-Express editions and SQLExpress for Express editions. This parameter is required when installing the ssNoVersion Database Engine, and Analysis Services (AS).  
-  
-        INSTANCENAME="MSSQLSERVER"  
-  
-        ; Specify the Instance ID for the ssNoVersion features you have specified. ssNoVersion directory structure, registry structure, and service names will incorporate the instance ID of the ssNoVersion instance.   
-  
-        INSTANCEID="MSSQLSERVER"  
-  
-        ; Account for ssNoVersion service: Domain\User or system account.   
-  
-        SQLSVCACCOUNT="NT Service\MSSQLSERVER"  
-  
-        ; Windows account(s) to provision as ssNoVersion system administrators.   
-  
-        SQLSYSADMINACCOUNTS="\<DomainName\UserName>"  
-  
-        ; Accept the License agreement to continue with Installation  
-  
-        IAcceptSQLServerLicenseTerms="True"  
-  
-        ```  
-  
+
+    ```console
+    ; SQL Server Configuration File  
+    [OPTIONS]  
+    
+    ; Specifies a Setup work flow, like INSTALL, UNINSTALL, or UPGRADE. This is a required parameter.   
+    
+    ACTION="Install"  
+    
+    ; Specifies features to install, uninstall, or upgrade. The lists of features include SQLEngine, FullText, Replication, AS, IS, and Conn.   
+    
+    FEATURES=SQLENGINE  
+    
+    ; Specify a default or named instance. MSSQLSERVER is the default instance for non-Express editions and SQLExpress for Express editions. This parameter is required when installing the ssNoVersion Database Engine, and Analysis Services (AS).  
+    
+    INSTANCENAME="MSSQLSERVER"  
+    
+    ; Specify the Instance ID for the ssNoVersion features you have specified. ssNoVersion directory structure, registry structure, and service names will incorporate the instance ID of the ssNoVersion instance.   
+    
+    INSTANCEID="MSSQLSERVER"  
+    
+    ; Account for ssNoVersion service: Domain\User or system account.   
+    
+    SQLSVCACCOUNT="NT Service\MSSQLSERVER"  
+    
+    ; Windows account(s) to provision as ssNoVersion system administrators.   
+    
+    SQLSYSADMINACCOUNTS="\<DomainName\UserName>"  
+    
+    ; Accept the License agreement to continue with Installation  
+    
+    IAcceptSQLServerLicenseTerms="True"  
+    
+    ```
+
     -   安裝連接元件。 下列範例示範如何安裝連接元件：  
   
-        ```  
+        ```console
         ; SQL Server Configuration File  
         [OPTIONS]  
   
@@ -188,7 +189,7 @@ Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可�
   
         下列範例示範如何在 Server Core 上安裝 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 支援的所有功能：  
   
-        ```  
+        ```console
         ; SQL Server Configuration File  
         [OPTIONS]  
         ; Specifies a Setup work flow, like INSTALL, UNINSTALL, or UPGRADE. This is a required parameter.   
@@ -242,13 +243,13 @@ Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可�
   
          若要在命令提示字元中指定組態檔：  
   
-        ```  
+        ```console
         Setup.exe /QS /ConfigurationFile=MyConfigurationFile.INI  
         ```  
   
          若要在命令提示字元而非組態檔中指定密碼：  
   
-        ```  
+        ```console
         Setup.exe /QS /SQLSVCPASSWORD="************" /ASSVCPASSWORD="************"  /ConfigurationFile=MyConfigurationFile.INI  
         ```  
   
@@ -265,12 +266,12 @@ Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可�
 
 若要啟用遠端連接，請在本機使用 SQLCMD.exe，然後針對 Server Core 執行個體執行下列陳述式：  
 
-   ```Transact-SQL
-   EXEC sys.sp_configure N'remote access', N'1'  
-   GO
-   RECONFIGURE WITH OVERRIDE
-   GO
-   ```  
+```sql
+EXEC sys.sp_configure N'remote access', N'1'  
+GO
+RECONFIGURE WITH OVERRIDE
+GO
+```  
   
 ### <a name="enable-and-start-the-ssnoversion-browser-service"></a>啟用及啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] browser service  
  根據預設，Browser 服務是停用的。  如果在 Server Core 上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體已停用此服務，請從命令提示字元執行下列命令，以啟用服務：  
@@ -308,7 +309,7 @@ $Tcp
   
  解除安裝現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體：  
   
-```  
+```console
 Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERVER  
 ```  
   
@@ -319,8 +320,8 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
 如果您不小心關閉命令提示字元，您可以遵循下列步驟啟動新的命令提示字元：  
  
 1.  按 Ctrl+Shift+Esc 鍵顯示 [工作管理員]。  
-2.  在 [應用程式]  索引標籤上，按一下 [新工作]  。  
-3.  在 [建立新工作]  對話方塊的 [開啟]  欄位中，輸入 **cmd**，然後[!INCLUDE[clickOK](../../includes/clickok-md.md)]。  
+2.  在 [應用程式] 索引標籤上，按一下 [新工作]。  
+3.  在 [建立新工作] 對話方塊的 [開啟] 欄位中，輸入 **cmd**，然後[!INCLUDE[clickOK](../../includes/clickok-md.md)]。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用組態檔安裝 SQL Server](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)   

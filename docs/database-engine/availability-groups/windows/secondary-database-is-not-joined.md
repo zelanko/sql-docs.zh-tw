@@ -1,5 +1,6 @@
 ---
 title: 次要資料庫未聯結 | Microsoft Docs
+description: 可用性資料庫聯結狀態會檢查次要資料庫的聯結狀態，作為 Always On 可用性群組其原則式管理的一部分。
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 10817e5e-75fa-42dd-baa2-359bea3ad051
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0fa4abf575c847bae10342a3870fc2c3785d16a0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a0b7ee3ee59a1ebf21854555c8ab75b6a2fc01b6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68014227"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899843"
 ---
 # <a name="secondary-database-is-not-joined"></a>次要資料庫未加入
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="introduction"></a>簡介  
   

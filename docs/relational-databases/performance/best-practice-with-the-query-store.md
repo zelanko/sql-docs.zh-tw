@@ -13,16 +13,16 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c07131e3991fd7cceb77e1874b7150184345b546
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f304dea7c49965bbb511034c09fb6ef781f2311f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287572"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006007"
 ---
 # <a name="best-practices-with-query-store"></a>使用查詢存放區的最佳做法
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 本文概述工作負載與 SQL Server 查詢存放區搭配使用的最佳做法。
 
@@ -34,9 +34,9 @@ ms.locfileid: "79287572"
 
 ## <a name="use-query-performance-insight-in-azure-sql-database"></a><a name="Insight"></a> 在 Azure SQL 資料庫中使用查詢效能深入解析
 
-如果您在 Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中執行查詢存放區，則可使用[查詢效能見解](https://docs.microsoft.com/azure/sql-database/sql-database-query-performance)來分析一段時間內的資源耗用量。 雖然可使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 和 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) 來取得所有查詢的資源耗用量詳細資訊 (例如 CPU、記憶體和 I/O)，但查詢效能見解能提供一個快速並有效率方式來判斷資源耗用量對資料庫整體 DTU 耗用量的影響。 如需詳細資訊，請參閱 [Azure SQL 資料庫查詢效能深入解析](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/)。
+如果在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中執行查詢存放區，則可使用[查詢效能見解](https://docs.microsoft.com/azure/sql-database/sql-database-query-performance)來分析隨時間的資源使用量。 雖然可使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 和 [Azure Data Studio](../../azure-data-studio/what-is.md) 來取得所有查詢的資源耗用量詳細資訊 (例如 CPU、記憶體和 I/O)，但查詢效能見解能提供一個快速並有效率方式來判斷資源耗用量對資料庫整體 DTU 耗用量的影響。 如需詳細資訊，請參閱 [Azure SQL 資料庫查詢效能深入解析](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/)。
 
-本節描述最佳的組態預設值，其設計目的是確保查詢存放區及相依功能可確實運作。 預設組態已針對持續收集資料最佳化，也就是在 OFF/READ_ONLY 狀態花費最少的時間。
+本節描述最佳的組態預設值，其設計目的是確保查詢存放區及相依功能可確實運作。 預設組態已針對持續收集資料最佳化，也就是在 OFF/READ_ONLY 狀態花費最少的時間。 如需所有可用查詢存放區選項的詳細資訊，請參閱 [LTER DATABASE SET 選項 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store)。
 
 | 組態 | 描述 | 預設 | 註解 |
 | --- | --- | --- | --- |
@@ -49,11 +49,14 @@ ms.locfileid: "79287572"
 | | | | |
 
 > [!IMPORTANT]
-> 在所有 Azure SQL 資料庫中查詢存放區啟用的最後階段會自動套用這些預設值 (請參閱上面的重要附註)。 在這次推出之後，Azure SQL Database 不會變更客戶設定的組態值，除非該組態值會對主要工作負載或查詢存放區的可靠操作造成負面影響。
+> 這些預設會自動套用在所有 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 查詢存放區啟用的最終階段中。 在啟用後，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 便不會變更客戶設定的組態值，除非這些組態值會對主要工作負載或查詢存放區的可靠作業造成負面影響。
 
-如果您想要繼續使用自訂設定，請使用 [ALTER DATABASE 搭配查詢存放區選項](https://msdn.microsoft.com/library/bb522682.aspx) ，以將組態還原到先前的狀態。 請查看 [使用查詢存放區的最佳作法](https://msdn.microsoft.com/library/mt604821.aspx) ，以了解如何選擇最佳的組態參數。
+> [!NOTE]  
+> 您無法在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 單一資料庫和彈性集區停用查詢存放區。 執行 `ALTER DATABASE [database] SET QUERY_STORE = OFF` 將會傳回警告 `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`。 
 
-## <a name="use-query-store-with-elastic-pool-databases"></a>搭配使用彈性集區資料庫與查詢存放區
+如果您想要繼續使用自訂設定，請使用 [ALTER DATABASE 搭配查詢存放區選項](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store) ，以將組態還原到先前的狀態。 請查看[使用查詢存放區的最佳做法](../../relational-databases/performance/best-practice-with-the-query-store.md)來了解如何選擇最佳的組態參數。
+
+## <a name="use-query-store-with-elastic-pool-databases"></a>搭配彈性集區資料庫使用查詢存放區
 
 您可以放心地在所有資料庫中使用查詢存放區，即使在緊密壓縮的集區中也是一樣。 我們已妥善解決在彈性集區中啟用大量資料庫的查詢存放區時，可能發生的所有過度使用資源問題。
 
@@ -66,14 +69,14 @@ ms.locfileid: "79287572"
 
  以下是設定參數值時可遵循的指導方針：
 
-[大小上限 (MB)]  ：指定查詢存放區可在您資料庫內使用的資料空間限制。 這是最重要的設定，它會直接影響查詢存放區的作業模式。
+[大小上限 (MB)]：指定查詢存放區可在您資料庫內使用的資料空間限制。 這是最重要的設定，它會直接影響查詢存放區的作業模式。
 
 由於查詢存放區會收集查詢、執行計劃和統計資料，因此它在資料庫中的大小會逐漸增加，直到達到此限制為止。 發生此情況時，查詢存放區會自動將作業模式變更為唯讀，並停止收集新的資料，這表示您的效能分析已不再正確。
 
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中的預設值是 100 MB。 如果您的工作負載會產生很多不同查詢和計劃，或您想保留更長時間的查詢記錄，則此大小可能會不夠。 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，預設值為 1 GB。 追蹤目前的空間使用量，並增加 [大小上限 (MB)]  值以防查詢存放區轉換為唯讀模式。
+[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中的預設值是 100 MB。 如果您的工作負載會產生很多不同查詢和計劃，或您想保留更長時間的查詢記錄，則此大小可能會不夠。 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，預設值為 1 GB。 追蹤目前的空間使用量，並增加 [大小上限 (MB)] 值以防查詢存放區轉換為唯讀模式。
 
 > [!IMPORTANT]
-> 系統不會嚴格強制執行 [大小上限 (MB)]  的限制。 只有當查詢存放區將資料寫入磁碟時，系統才會檢查儲存體大小。 此間隔是由 [資料排清間隔 (分鐘)]  選項所設定。 如果查詢存放區違反儲存體大小檢查之間的大小上限，即會轉換為唯讀模式。 如果啟用 [以大小為基準的清除模式]  ，也會觸發強制執行大小上限的清除機制。
+> 系統不會嚴格強制執行 [大小上限 (MB)] 的限制。 只有當查詢存放區將資料寫入磁碟時，系統才會檢查儲存體大小。 此間隔是由 [資料排清間隔 (分鐘)] 選項所設定。 如果查詢存放區違反儲存體大小檢查之間的大小上限，即會轉換為唯讀模式。 如果啟用 [以大小為基準的清除模式]，也會觸發強制執行大小上限的清除機制。
 
 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或執行下列指令碼取得有關查詢存放區大小的最新資訊：
 
@@ -86,33 +89,33 @@ SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
 FROM sys.database_query_store_options;
 ```
 
-下列指令碼會設定新的 [大小上限 (MB)]  值：
+下列指令碼會設定新的 [大小上限 (MB)] 值：
 
 ```sql
 ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);
 ```
 
- [資料排清間隔 (分鐘)]  ：它定義將所收集執行階段統計資料保存到磁碟的頻率。 在圖形化使用者介面 (GUI) 中是以分鐘表示，但在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中則是以秒表示。 預設值為 900 秒，在圖形化使用者介面即 15 分鐘。 如果您的工作負載不會產生大量不同的查詢與計劃，或您可以在資料庫關閉之前承受較長的資料保存時間，請考慮使用較高的值。
+ [資料排清間隔 (分鐘)]：它定義將所收集執行階段統計資料保存到磁碟的頻率。 在圖形化使用者介面 (GUI) 中是以分鐘表示，但在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中則是以秒表示。 預設值為 900 秒，在圖形化使用者介面即 15 分鐘。 如果您的工作負載不會產生大量不同的查詢與計劃，或您可以在資料庫關閉之前承受較長的資料保存時間，請考慮使用較高的值。
 
 > [!NOTE]
 > 您可以使用追蹤旗標 7745，防止查詢存放區在發生容錯移轉或關機命令時將資料寫入磁碟。 如需詳細資訊，請參閱 [在任務關鍵性伺服器上使用追蹤旗標](#Recovery)一節。
 
-使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 為 [資料排清間隔]  設定不同的值：
+使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 為 [資料排清間隔] 設定不同的值：
 
 ```sql
 ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS = 900);
 ```
 
-[統計資料收集間隔]  ：定義所收集執行階段統計資料的資料粒度層級 (以分鐘表示)。 預設值是 60 分鐘。 如果您需要更精細的資料粒度或使用較短時間來偵測與解決問題，請考慮使用較低的值。 但請注意，它會直接影響查詢存放區資料的大小。 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 為 [統計資料收集間隔]  設定不同的值：
+[統計資料收集間隔]：定義所收集執行階段統計資料的資料粒度層級 (以分鐘表示)。 預設值是 60 分鐘。 如果您需要更精細的資料粒度或使用較短時間來偵測與解決問題，請考慮使用較低的值。 但請注意，它會直接影響查詢存放區資料的大小。 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 為 [統計資料收集間隔] 設定不同的值：
 
 ```sql
 ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);
 ```
 
-[過時查詢臨界值 (天數)]  ：以時間為基礎的清除原則，可控制所保存執行階段統計資料和非作用中查詢的保留期限 (以天表示)。 根據預設，查詢存放區設定為保留資料 30 天，但對您的案例來說，可能並不需要這麼久。
+[過時查詢臨界值 (天數)]：以時間為基礎的清除原則，可控制所保存執行階段統計資料和非作用中查詢的保留期限 (以天表示)。 根據預設，查詢存放區設定為保留資料 30 天，但對您的案例來說，可能並不需要這麼久。
 
 請避免保留您不打算使用的歷史資料。 這個做法可降低變更為唯讀狀態的機率。 您也可以更輕鬆預測出查詢存放區資料大小及偵測/解決問題的時間。 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或下列指令碼來設定以時間為基礎的清除原則：
 
@@ -121,22 +124,22 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));
 ```
 
-[以大小為基準的清除模式]  ：可指定當查詢存放區的資料大小到達限制時是否自動清除資料。 請啟用 [以大小為基準的清除模式]，以確保查詢存放區一律以讀寫模式執行並收集最新的資料。
+[以大小為基準的清除模式]：可指定當查詢存放區的資料大小到達限制時是否自動清除資料。 請啟用 [以大小為基準的清除模式]，以確保查詢存放區一律以讀寫模式執行並收集最新的資料。
 
 ```sql
 ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
 ```
 
-[查詢存放區擷取模式]  ：可指定查詢存放區的查詢擷取原則。
+[查詢存放區擷取模式]：可指定查詢存放區的查詢擷取原則。
 
 - **全部**：擷取所有的查詢。 此為 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中的預設選項。
-- [自動]  ：會忽略不頻繁的查詢，以及包含無意義編譯和執行期間的查詢。 執行計數、編譯和執行階段持續時間的臨界值由系統內部決定。 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，這是預設選項。
+- [自動]：會忽略不頻繁的查詢，以及包含無意義編譯和執行期間的查詢。 執行計數、編譯和執行階段持續時間的臨界值由系統內部決定。 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，這是預設選項。
 - **無**：查詢存放區會停止擷取新的查詢。
-- [自訂]  ：允許額外控制及微調資料收集原則的功能。 新的自訂設定可定義在內部擷取原則時間臨界值期間會發生什麼情況。 這是評估可設定條件的時間界限；如果任何條件成立的話，即可由查詢存放區來擷取查詢。
+- [自訂]：允許額外控制及微調資料收集原則的功能。 新的自訂設定可定義在內部擷取原則時間臨界值期間會發生什麼情況。 這是評估可設定條件的時間界限；如果任何條件成立的話，即可由查詢存放區來擷取查詢。
 
 > [!IMPORTANT]
-> 當 [查詢存放區擷取模式] 設定為 [全部]  、[自動]  或 [自訂]  時，系統一律會擷取資料指標、預存程序中的查詢，以及原生編譯的查詢。 若要擷取原生編譯查詢，請使用 [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 來啟用收集每個查詢的統計資料。
+> 當 [查詢存放區擷取模式] 設定為 [全部]、[自動] 或 [自訂] 時，系統一律會擷取資料指標、預存程序中的查詢，以及原生編譯的查詢。 若要擷取原生編譯查詢，請使用 [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 來啟用收集每個查詢的統計資料。
 
  下列指令碼會將 QUERY_CAPTURE_MODE 設定為 AUTO：
 
@@ -180,7 +183,7 @@ SET QUERY_STORE = ON
     );
 ```
 
-下列範例會將 QUERY_CAPTURE_MODE 設定為 AUTO，並在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中設定其他建議選項，並「選擇性」  使用其預設值來設定 CUSTOM 擷取原則，而不是新的預設 AUTO 擷取模式：
+下列範例會將 QUERY_CAPTURE_MODE 設定為 AUTO，並在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中設定其他建議選項，並「選擇性」使用其預設值來設定 CUSTOM 擷取原則，而不是新的預設 AUTO 擷取模式：
 
 ```sql
 ALTER DATABASE [QueryStoreDB]
@@ -309,7 +312,7 @@ SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
 
 - 您可以套用最佳作法，以避免無訊息的操作模式變更。 確認查詢存放區大小一律低於允許的最大值，以大幅降低轉換為唯讀模式的機率。 啟用以大小為基礎的原則，如[設定查詢存放區](#Configure)一節所述，以讓查詢存放區在接近大小限制時自動清除資料。
 - 若要確認保留最新的資料，請設定以時間為基礎的原則，以定期移除過時的資訊。
-- 最後，請考慮將 [查詢擷取模式]  設定為 [自動]  ，因為這會篩選掉和工作負載較不相關的查詢。
+- 最後，請考慮將 [查詢擷取模式] 設定為 [自動]，因為這會篩選掉和工作負載較不相關的查詢。
 
 ### <a name="error-state"></a>ERROR 狀態
 
@@ -345,7 +348,7 @@ GO
 SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
     max_storage_size_mb, readonly_reason, interval_length_minutes,
     stale_query_threshold_days, size_based_cleanup_mode_desc,
-    query_capture_mode_de
+    query_capture_mode_desc
 FROM sys.database_query_store_options;
 ```
 
@@ -361,7 +364,7 @@ FROM sys.database_query_store_options;
 |**Custom**|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 會在 `ALTER DATABASE SET QUERY_STORE` 命令下引進 [自訂] 擷取模式。 啟用後，即可在新的查詢存放區擷取原則設定下，使用額外查詢存放區設定來微調特定伺服器中的資料收集。<br /><br />新的自訂設定可定義在內部擷取原則時間臨界值期間會發生什麼情況。 這是評估可設定條件的時間界限；如果任何條件成立的話，即可由查詢存放區來擷取查詢。 如需詳細資訊，請參閱 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。|
 
 > [!NOTE]
-> 當 [查詢存放區擷取模式] 設定為 [全部]  、[自動]  或 [自訂]  時，系統一律會擷取資料指標、預存程序中的查詢，以及原生編譯的查詢。 若要擷取原生編譯查詢，請使用 [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 來啟用收集每個查詢的統計資料。
+> 當 [查詢存放區擷取模式] 設定為 [全部]、[自動] 或 [自訂] 時，系統一律會擷取資料指標、預存程序中的查詢，以及原生編譯的查詢。 若要擷取原生編譯查詢，請使用 [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 來啟用收集每個查詢的統計資料。
 
 ## <a name="keep-the-most-relevant-data-in-query-store"></a>在查詢存放區中保留最相關的資料
 
@@ -371,7 +374,7 @@ FROM sys.database_query_store_options;
 |最佳做法|設定|
 |-------------------|-------------|
 |限制保留的歷程記錄資料。|設定以時間為基礎的原則，以啟用自動清除。|
-|篩選掉不相關的查詢。|將 [查詢存放區擷取模式]  設定為 [自動]  。|
+|篩選掉不相關的查詢。|將 [查詢存放區擷取模式] 設定為 [自動]。|
 |當到達大小上限時，刪除比較不相關的查詢。|啟用大小基礎的清除原則。|
 
 ## <a name="avoid-using-non-parameterized-queries"></a><a name="Parameterize"></a> 請避免使用非參數化查詢

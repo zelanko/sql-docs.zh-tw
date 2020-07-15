@@ -1,5 +1,6 @@
 ---
 title: Lock:Timeout 事件類別 | Microsoft Docs
+description: Lock:Timeout 事件類別會指出資源上的鎖定要求已逾時，因為 SQL Server 中的該資源上已有封鎖鎖定。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 8492f4be-4ea9-4059-80e0-9e7b71597da9
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc89f8df5d34a2a2c1f20756c743c74a5a5851f2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d0f1a43ab06c931fd9fda6498790ccc7dce3476
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67910335"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737196"
 ---
 # <a name="locktimeout-event-class"></a>Lock:Timeout 事件類別
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Lock:Timeout 事件類別指出資源 (例如分頁) 上的鎖定要求已逾時，因為其他交易在所需資源上已有封鎖的鎖定。 逾時由 @@LOCK_TIMEOUT 系統函式決定，且可使用 SET LOCK_TIMEOUT 陳述式來設定。  
   
  請使用 Lock:Timeout 事件類別來監視發生逾時狀況的時間。 此資訊有助於判斷逾時是否會明顯影響應用程式的效能及包含哪些物件。 您可以檢查修改這些物件的應用程式碼，以判斷是否可以變更來減少逾時。  

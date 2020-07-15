@@ -1,5 +1,6 @@
 ---
 title: 開啟記錄檔檢視器 | Microsoft Docs
+description: 學習使用 SQL Server Management Studio 中記錄檔檢視器來存取多個記錄中所擷取到錯誤和事件的資訊。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9e76c7eb85306f63e9be230c76159efbab25444a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e6124fa7c8b4a0ab4637c52d7ceb38d4abc698fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68083978"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85667958"
 ---
 # <a name="open-log-file-viewer"></a>開啟記錄檔檢視器
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用記錄檔檢視器，以存取下列記錄中所擷取之錯誤和事件的相關資訊：  
   
 -   稽核集合  
@@ -53,51 +54,51 @@ ms.locfileid: "68083978"
   
 ##### <a name="to-view-logs-that-are-related-to-general-sql-server-activity"></a>若要檢視與一般 SQL Server 活動相關的記錄檔  
   
-1.  在物件總管中，展開 [管理]  。  
+1.  在物件總管中，展開 [管理]。  
   
 2.  執行下列任一步驟：  
   
-    -   以滑鼠右鍵按一下 [SQL Server 記錄檔]  ，指向 [檢視]  ，然後按一下 [SQL Server 記錄檔]  或 [SQL Server 與 Windows 記錄檔]  。  
+    -   以滑鼠右鍵按一下 [SQL Server 記錄檔]，指向 [檢視]，然後按一下 [SQL Server 記錄檔] 或 [SQL Server 與 Windows 記錄檔]。  
   
-    -   展開 [SQL Server 記錄檔]  ，以滑鼠右鍵按一下任何記錄檔，然後按一下 [檢視 SQL Server 記錄檔]  。 您也可以按兩下任何記錄檔。  
+    -   展開 [SQL Server 記錄檔]，以滑鼠右鍵按一下任何記錄檔，然後按一下 [檢視 SQL Server 記錄檔]。 您也可以按兩下任何記錄檔。  
   
-     這些記錄檔包含 [Database Mail]  、[SQL Server]  、[SQL Server Agent]  和 [Windows NT]  。  
+     這些記錄檔包含 [Database Mail]、[SQL Server]、[SQL Server Agent] 和 [Windows NT]。  
   
 ##### <a name="to-view-logs-that-are-related-to-jobs"></a>若要檢視與作業相關的記錄檔  
   
--   在物件總管中，展開 [SQL Server Agent]  ，以滑鼠右鍵按一下 [作業]  ，然後按一下 [檢視記錄]  。  
+-   在物件總管中，展開 [SQL Server Agent]，以滑鼠右鍵按一下 [作業]，然後按一下 [檢視記錄]。  
   
-     這些記錄檔包含 [Database Mail]  、[作業記錄]  和 [SQL Server Agent]  。  
+     這些記錄檔包含 [Database Mail]、[作業記錄] 和 [SQL Server Agent]。  
   
 ##### <a name="to-view-logs-that-are-related-to-maintenance-plans"></a>若要檢視與維護計畫相關的記錄檔  
   
--   在物件總管中，展開 [管理]  ，以滑鼠右鍵按一下 [維護計畫]  ，然後按一下 [檢視記錄]  。  
+-   在物件總管中，展開 [管理]，以滑鼠右鍵按一下 [維護計畫]，然後按一下 [檢視記錄]。  
   
-     這些記錄檔包含 [Database Mail]  、[作業記錄]  、[維護計畫]  、[遠端維護計畫]  和 [SQL Server Agent]  。  
+     這些記錄檔包含 [Database Mail]、[作業記錄]、[維護計畫]、[遠端維護計畫] 和 [SQL Server Agent]。  
   
 ##### <a name="to-view-logs-that-are-related-to-data-collection"></a>若要檢視與資料收集相關的記錄檔  
   
--   在物件總管中，展開 [管理]  ，以滑鼠右鍵按一下 [資料收集]  ，然後按一下 [檢視記錄]  。  
+-   在物件總管中，展開 [管理]，以滑鼠右鍵按一下 [資料收集]，然後按一下 [檢視記錄]。  
   
-     這些記錄檔包含 [資料收集]  、[作業記錄]  和 [SQL Server Agent]  。  
+     這些記錄檔包含 [資料收集]、[作業記錄] 和 [SQL Server Agent]。  
   
 ##### <a name="to-view-logs-that-are-related-to-database-mail"></a>若要檢視與 Database Mail 相關的記錄檔  
   
--   在物件總管中，展開 [管理]  ，以滑鼠右鍵按一下 [Database Mail]  ，然後按一下 [檢視 Database Mail 記錄]  。  
+-   在物件總管中，展開 [管理]，以滑鼠右鍵按一下 [Database Mail]，然後按一下 [檢視 Database Mail 記錄]。  
   
-     這些記錄檔包含 [Database Mail]、[作業記錄]  、[維護計畫]  、[遠端維護計畫]  、[SQL Server]  、[SQL Server Agent]  和 [Windows NT]  。  
-  
-##### <a name="to-view-logs-that-are-related-to-audits-collections"></a>若要檢視與稽核收集相關的記錄檔  
-  
--   在物件總管中，依序展開 [安全性]  和 [稽核]  ，以滑鼠右鍵按一下稽核，然後按一下 [檢視稽核記錄]  。  
-  
-     這些記錄檔包含 [稽核收集]  和 [Windows NT]  。  
+     這些記錄檔包含 [Database Mail]、[作業記錄]、[維護計畫]、[遠端維護計畫]、[SQL Server]、[SQL Server Agent] 和 [Windows NT]。  
   
 ##### <a name="to-view-logs-that-are-related-to-audits-collections"></a>若要檢視與稽核收集相關的記錄檔  
   
--   在物件總管中，依序展開 [安全性]  和 [稽核]  ，以滑鼠右鍵按一下稽核，然後按一下 [檢視稽核記錄]  。  
+-   在物件總管中，依序展開 [安全性] 和 [稽核]，以滑鼠右鍵按一下稽核，然後按一下 [檢視稽核記錄]。  
   
-     這些記錄檔包含 [稽核收集]  和 [Windows NT]  。  
+     這些記錄檔包含 [稽核收集] 和 [Windows NT]。  
+  
+##### <a name="to-view-logs-that-are-related-to-audits-collections"></a>若要檢視與稽核收集相關的記錄檔  
+  
+-   在物件總管中，依序展開 [安全性] 和 [稽核]，以滑鼠右鍵按一下稽核，然後按一下 [檢視稽核記錄]。  
+  
+     這些記錄檔包含 [稽核收集] 和 [Windows NT]。  
   
 ## <a name="see-also"></a>另請參閱  
  [記錄檔檢視器](../../relational-databases/logs/log-file-viewer.md)   

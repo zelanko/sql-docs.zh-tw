@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c6ec9ac5c4e868a9022a11cc153c9638cab737dc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c2ff609e78a0076cd3d6c0ff15348869cc717cfe
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71710996"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893286"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>透過 FTP 傳遞快照集
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中透過 FTP 傳遞快照集。  
 
 依預設，快照集儲存在定義為「通用命名慣例」(UNC) 共用的資料夾中。 複寫還允許您指定「檔案傳輸通訊協定」(FTP) 共用，而不是 UNC 共用。 若要使用 FTP，您必須設定 FTP 伺服器，然後設定使用 FTP 的一個發行集和一個或多個訂閱。 如需有關如何設定 FTP 伺服器的詳細資訊，請參閱 Internet Information Services (IIS) 文件集。 如果您為發行集指定 FTP 資訊，依預設，該發行集的訂閱會使用 FTP。 只有當執行 IIS 的電腦與「散發者」之間被防火牆隔開時，Web 同步處理才會使用 FTP。 在此情況下，可以使用 FTP，從散發者和執行 IIS 的電腦來傳送快照集 (快照集一定會使用 HTTPS 傳送到訂閱者)。  
@@ -35,7 +35,7 @@ ms.locfileid: "71710996"
   
 -   快照集代理程式必須有您指定之目錄的寫入權限，而散發代理程式或合併代理程式則必須有讀取權限。 如果使用提取訂閱，則您必須指定共用目錄為通用命名慣例 (UNC) 路徑，例如 \\\ftpserver\home\snapshots。 如需詳細資訊，請參閱[保護快照集資料夾](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
   
 -   若要使用「檔案傳輸通訊協定」(FTP) 傳送快照集檔案，您必須先設定 FTP 伺服器。 如需詳細資訊，請參閱 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Information Services (IIS) 文件集。  
   
@@ -47,19 +47,19 @@ ms.locfileid: "71710996"
  可能的話，會在執行階段提示使用者輸入其認證。 如果將認證儲存在指令碼檔案中，您必須維護此檔案的安全。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 設定 FTP 伺服器之後，請在 [發行集屬性 \<發行集>] 對話方塊中，指定此伺服器的目錄和安全性資訊。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。  
+ 設定 FTP 伺服器之後，請在 [發行集屬性 \<Publication>] 對話方塊中，指定此伺服器的目錄與安全性資訊。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。  
   
 #### <a name="to-specify-ftp-information"></a>若要指定 FTP 資訊  
   
-1.  從以下頁面之一的 [發行集屬性 - \<發行集>]  對話方塊中，選取 [允許訂閱者使用 FTP 下載快照集檔案]：  
+1.  從下列其中一個頁面的 [發行集屬性 - \<Publication>]  對話方塊中，選取 [允許訂閱者使用 FTP 下載快照集檔案]：  
   
-    -   [FTP 快照集]  頁面，適用於快照式和交易式發行集，以及執行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前版本的「發行者」所用合併式發行集。  
+    -   [FTP 快照集] 頁面，適用於快照式和交易式發行集，以及執行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前版本的「發行者」所用合併式發行集。  
   
     -   **[FTP 快照集和網際網路]** 頁面，適用於執行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更新版本「發行者」的合併式發行集。  
   
 2.  指定 **[FTP 伺服器名稱]** 、 **[通訊埠編號]** 、 **[FTP 根資料夾的路徑]** 、 **[登入]** 以及 **[密碼]** 的值。  
   
-     例如，如果 FTP 伺服器根目錄為 \\\ftpserver\home，而您想將快照集儲存在 \\\ftpserver\home\snapshots 中，請將 [FTP 根資料夾的路徑]  屬性指定為 \snapshots\ftp (複寫會在建立快照集檔案時，在快照集資料夾路徑後加上 'ftp')。  
+     例如，如果 FTP 伺服器根目錄為 \\\ftpserver\home，而您想將快照集儲存在 \\\ftpserver\home\snapshots 中，請將 [FTP 根資料夾的路徑] 屬性指定為 \snapshots\ftp (複寫會在建立快照集檔案時，在快照集資料夾路徑後加上 'ftp')。  
   
 3.  指定快照集代理程式應該將快照集檔案複製到步驟 2 中指定的目錄。 例如，若要讓快照集代理程式將快照集檔案寫入到 \\\ftpserver\home\snapshots\ftp 中，您必須在以下兩處位置的其中一處指定路徑 \\\ftpserver\home\snapshots：  
   

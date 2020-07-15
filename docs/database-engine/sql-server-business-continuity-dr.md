@@ -1,6 +1,6 @@
 ---
 title: SQL Server 的災害復原 | Microsoft Docs
-description: ''
+description: 使用此商務持續性解決方案的概觀，在 SQL Server 中實現高可用性和災害復原，以在盡可能減少中斷的情況下提供資源。
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: mikeray
@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: high-availability
 ms.assetid: c75717c8-c677-4033-8ca6-d0ac93aee04d
-ms.openlocfilehash: e08700fda793e2290e47b4499faa6bb97b37592f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0ebc96b201b46461d5ab2586189628e3c4df3418
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68020756"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748534"
 ---
 # <a name="business-continuity-and-database-recovery---sql-server"></a>商務持續性與資料庫復原 - SQL Server
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
 [!INCLUDE[HA-Story](../includes/sql-server-ha-story.md)]
 
 ## <a name="next-steps"></a>後續步驟

@@ -1,5 +1,6 @@
 ---
 title: 備份服務主要金鑰 | Microsoft Docs
+description: 了解如何使用 Transact-SQL 來備份 SQL Server 中的服務主要金鑰。 服務主要金鑰是加密階層的根。
 ms.custom: ''
 ms.date: 01/02/2019
 ms.prod: sql
@@ -11,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: f60b917c-6408-48be-b911-f93b05796904
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 1fa730e1143516df2fe5f14c04afcbb9292ac67f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c333346b0c8ef728966f8e0b6d42a5be53d1b187
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957482"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895912"
 ---
 # <a name="back-up-the-service-master-key"></a>備份服務主要金鑰
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   本文描述如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 備份 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中的服務主要金鑰。 服務主要金鑰是加密階層的根。 應該將服務主要金鑰備份並儲存在安全且位於異地的位置。 建立這個備份，應該是必須在伺服器上執行的首要管理動作之一。  
 
 ## <a name="before-you-begin"></a>開始之前  

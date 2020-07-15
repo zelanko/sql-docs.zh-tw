@@ -1,5 +1,6 @@
 ---
 title: affinity Input-Output mask 伺服器組態選項 | Microsoft Docs
+description: 了解 [親和性 I/O 遮罩] 選項。 使用此選項來強化 SQL Server 執行緒的效能，其透過將磁碟 I/O 繫結至指定的 CPU 來發行 I/O。
 ms.custom: ''
 ms.date: 07/06/2017
 ms.prod: sql
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - binding processors [SQL Server]
 - CPU affinity mask option
 ms.assetid: 9950a8c9-9fe0-4003-95df-6f0d1becb0e7
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 0f7af8a254bea06745c85cfdd0442b28eef876de
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fa19cdc7db8b5966eb5ab89a5df8103e7f417244
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013225"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789846"
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>affinity Input-Output mask 伺服器組態選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   為了執行多工作業， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 有時會在不同的處理器之間移動處理序執行緒。 雖然從作業系統的觀點來看很有效率，但是在繁重的系統負載下，這項活動可能會降低 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的效能，因為每個處理器快取會重複重新載入資料。 將處理器指派給特定的執行緒，可藉由去除處理器的重新載入，而在這些狀況下增進效能；執行緒與處理器之間的這種關聯，稱為處理器相似性。  
   

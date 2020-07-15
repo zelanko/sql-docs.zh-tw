@@ -1,5 +1,6 @@
 ---
 title: 點對點異動複寫 | Microsoft Docs
+description: 在 SQL Server 中，點對點複寫藉由維護多個伺服器執行個體之間的資料複本，以提供向外延展和高可用性解決方案。
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4dcb5f8bd05b5cd1b5b68927abfef49576d6b072
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d85b1f3460dc55f7d6cd24420f2d86bb0f9623c2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71710725"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901248"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>點對點 - 異動複寫
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   點對點複寫藉由維護多個伺服器執行個體之間的資料複本 (也稱為 *「節點」* ) 來提供向外延展和高可用性解決方案。 點對點複寫是以異動複寫為基礎，會以接近即時、交易式的方式傳播一致的變更。 如此可讓需要向外延展讀取作業的應用程式將來自用戶端的讀取散發到多個節點之間。 由於會以接近即時的方式在節點之間維護資料，所以點對點複寫會提供資料備援性，這樣可提高資料的可用性。  
   

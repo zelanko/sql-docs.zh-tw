@@ -1,5 +1,6 @@
 ---
 title: 疑難排解：可用性群組超過 RTO (SQL Server) | Microsoft Docs
+description: 了解如何在容錯移轉所花費的時間超過在 SQL Server 中的復原時間目標時，針對 Always On 可用性群組上的容錯移轉進行疑難排解。
 ms.custom: ag-guide
 ms.date: 06/13/2017
 ms.prod: sql
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9b62bcc1eebe8371bc45ae7f565d9aa712f1b1d4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 959361d64316618ce6b7ccc997f7ef958b1259f5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013745"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888018"
 ---
-# <a name="troubleshoot-availability-group-exceeded-rto"></a>疑難排解：可用性群組超過 RTO
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="troubleshoot-availability-group-exceeded-rto"></a>疑難排解：可用性群組已超過 RTO
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   在可用性群組上進行自動容錯移轉或規劃的手動容錯移轉之後沒有資料遺失，您可能會發現容錯移轉時間超過您的復原時間目標 (RTO)。 或者，當您在使用[監視 Always On 可用性群組的效能](monitor-performance-for-always-on-availability-groups.md)中的方法評估同步認可次要複本的容錯移轉時間時，發現它超過您的 RTO。  
   
  如果您的自動容錯移轉仍未完成，請參閱[針對 SQL Server 2012 Always On 環境中的自動容錯移轉問題進行疑難排解](https://support.microsoft.com/kb/2833707) \(機器翻譯\)。  

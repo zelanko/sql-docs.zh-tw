@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e7cf36879a08f50095a158311179b9ae303d4ebc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 83b5031ac62e79005b4c6fb2d6d3aaf76607444b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74901879"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766926"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的目前資料庫中建立別名資料類型或使用者定義型別。 別名資料類型的實作是以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生系統類型為基礎。 使用者定義型別是使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 通用語言執行平台 (CLR) 中之組件的類別來實作的。 若要將使用者定義型別繫結到它的實作，必須先在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中使用 [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) 來註冊內含該型別之實作的 CLR 組件。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "74901879"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 -- User-defined Data Type Syntax    
 CREATE TYPE [ schema_name. ] type_name  
 {   
@@ -121,7 +121,7 @@ column_name AS computed_column_expression
      [ CLUSTERED | NONCLUSTERED ]   (column [ ASC | DESC ] [ ,... n ] )} }  
 ```  
   
-```  
+```syntaxsql
 -- User-defined Memory Optimized Table Types Syntax  
 CREATE TYPE [schema_name. ] type_name  
 AS TABLE ( { <column_definition> [ ,... n ] }  
@@ -268,7 +268,7 @@ column_name <data_type>
   
  **public** 資料庫角色與使用 **sp_addtype** 建立的使用者定義型別不同，前者不會在使用 CREATE TYPE 建立的類型上自動被授與 REFERENCES 權限。 這個權限必須另外授與。  
   
- 在使用者定義的資料表類型中，*column_name* \<資料類型> 中使用的結構化使用者定義類型屬於資料表類型定義所在之資料庫結構描述範圍的一部分。 若要在資料庫中存取不同範圍內的結構化使用者定義型別，請使用兩部分的名稱。  
+ 在使用者定義的資料表類型中，*column_name* \<data type> 所使用結構化使用者定義類型屬於資料表類型定義所在資料庫結構描述範圍的一部分。 若要在資料庫中存取不同範圍內的結構化使用者定義型別，請使用兩部分的名稱。  
   
  在使用者定義的資料表類型中，計算資料行的主索引鍵必須是 PERSISTED 和 NOT NULL。  
   

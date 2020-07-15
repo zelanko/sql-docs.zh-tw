@@ -1,5 +1,6 @@
 ---
 title: 使用 SysPrep 安裝 SQL Server
+description: SQL Server Sysprep 可供在電腦上準備 SQL Server 的獨立執行個體，並於稍後完成設定。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 448906ca9a9dcb1a29b4cfab323e610909546171
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 67c6dd12c7c4829c2dc615ce8e440f8518d5fd09
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251572"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883232"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>使用 SysPrep 安裝 SQL Server 的考量
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 可讓您在電腦上準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的獨立執行個體，並於稍後完成設定。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 需要使用包含兩個步驟的程序來取得已設定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]獨立執行個體。 這些步驟包含以下內容：  
   

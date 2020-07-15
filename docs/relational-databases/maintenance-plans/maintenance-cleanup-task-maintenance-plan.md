@@ -1,5 +1,6 @@
 ---
 title: 維護清除工作 (維護計畫) | Microsoft Docs
+description: 了解如何使用 [維護清除工作] 來移除維護計畫的舊檔案 (包括維護計畫與資料庫備份檔案的文字報表)。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bd0f58fc45889bfef8701538bebc4ec94af85944
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b7e01cbee4a518b7b2f6b9ef9dea783f1a6ce24d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115746"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85666968"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>維護清除工作 (維護計畫)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用 **[維護清除工作]** ，即可移除與維護計畫相關的舊檔案 (包括維護計畫和資料庫備份檔案所建立的文字報表)。  
   
 > [!NOTE]  
->  維護清除工作不會自動刪除所指定目錄之子資料夾中的檔案。 這項功能可降低利用「維護清除」工作刪除檔案這類惡意攻擊的可能性。 如果您要刪除第一層子資料夾中的檔案，必須選取 [包含第一層的子資料夾]  。  
+>  維護清除工作不會自動刪除所指定目錄之子資料夾中的檔案。 這項功能可降低利用「維護清除」工作刪除檔案這類惡意攻擊的可能性。 如果您要刪除第一層子資料夾中的檔案，必須選取 [包含第一層的子資料夾]。  
   
 ## <a name="options"></a>選項。  
  **[連接]**  
@@ -42,7 +43,7 @@ ms.locfileid: "68115746"
  刪除先前執行之維護計畫的文字報表。  
   
  **刪除特定檔案**  
- 刪除 [檔案名稱]  方塊中提供的特定檔案。  
+ 刪除 [檔案名稱] 方塊中提供的特定檔案。  
   
  **檔案名稱**  
  要刪除的檔案路徑與名稱。  
@@ -60,7 +61,7 @@ ms.locfileid: "68115746"
  從 [資料夾] 底下的第一層子資料夾中，刪除具有 [副檔名] 中所指定之副檔名的檔案。  
   
  **在工作執行階段依據檔案存在時間刪除檔案**  
- 在 [刪除早於下列時限的檔案]  方塊中提供數字以及時間單位，以指定您要刪除之檔案的最低存在時間。  
+ 在 [刪除早於下列時限的檔案] 方塊中提供數字以及時間單位，以指定您要刪除之檔案的最低存在時間。  
   
  **刪除早於下列時限的檔案**  
  提供數字以及時間單位 (日、週、月或年)，以指定您要刪除之檔案的最低存在時間。 存在時間超過指定時間的檔案會遭到刪除。  

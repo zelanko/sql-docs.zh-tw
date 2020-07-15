@@ -1,5 +1,6 @@
 ---
 title: 時間戳記資料類型的 FOR XML 支援 | Microsoft Docs
+description: 了解在 SQL 查詢中使用 FOR XML 子句時，對時間戳記資料類型的支援。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4e1920e1-e7a4-4069-965e-3f6039a6099e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: df404c4c666b43bf9b2c7275196e5cb7ba74bb48
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 374cc13dbb95f548db632ab89f41e6b57302e436
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665155"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729936"
 ---
 # <a name="for-xml-support-for-the-timestamp-data-type"></a>Timestamp 資料類型的 FOR XML 支援
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   在 FOR XML 轉換中， **timestamp** 類型值會被當作 **varbinary(8)** 資料來處理，而且一律為 Base 64 編碼。 XSD 或 XDR 結構描述 (若有要求時) 會反映此類型。  
   
 ```  

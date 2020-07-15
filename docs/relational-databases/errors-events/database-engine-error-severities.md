@@ -1,5 +1,6 @@
 ---
 title: Database Engine 錯誤嚴重性 | Microsoft 文件
+description: 使用此嚴重性層級清單來了解 SQL Server 在 SQL Server 資料庫引擎引發錯誤時遇到的問題類型。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d0984d0003f6a20c410b91f99dc6fd1b4ae3f545
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 16bf5154c5ab08b790739e287ccb2934b942e591
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73844334"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727517"
 ---
 # <a name="database-engine-error-severities"></a>Database Engine 錯誤嚴重性
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   當 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]產生錯誤時，錯誤的嚴重性會指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所發生的問題類型。  
   
 ## <a name="levels-of-severity"></a>嚴重性層級  

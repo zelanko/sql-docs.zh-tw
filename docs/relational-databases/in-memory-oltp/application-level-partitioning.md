@@ -1,5 +1,6 @@
 ---
 title: 應用程式層級資料分割 | Microsoft Docs
+description: 檢閱處理訂單的此範例。 此應用程式會將最近訂單儲存在經記憶體最佳化的資料表中，並將較舊的訂單儲存在以磁碟為基礎資料表中。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 20fe12efc4bbc7ba948a89e5b15fb3f869651d4f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 047d337dd8ce561924a6f27de7ac43a4d57f4c60
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951251"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629708"
 ---
 # <a name="application-level-partitioning"></a>應用程式層級資料分割
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   此應用程式會處理訂單。 未在最近的訂單上進行多項處理。 舊訂單上未進行多項處理。 最近的訂單位於記憶體最佳化的資料表中。 舊訂單位於磁碟資料表中。 *hotDate* 之後的所有訂單都位於記憶體最佳化資料表中。 *hotDate* 之前的所有訂單都位於磁碟資料表中。 假設有一個具有許多並行交易的極端 OLTP 工作負載。 即使有數項並行交易嘗試變更 *hotDate*，仍必須強制執行此商務規則 (記憶體最佳化資料表中最近的訂單)。  
   
  此範例不會針對磁碟資料表使用分割區資料表，但會使用第三個資料表來追蹤兩個資料表之間的明確分割點。 分割點可用來確定新插入的資料一律會根據日期插入適當的資料表。 其也可用來判斷資料的位置。 晚抵達的資料仍會插入適當的資料表。  

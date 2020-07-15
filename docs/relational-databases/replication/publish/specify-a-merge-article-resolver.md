@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4c1267e08bfdb1361223f3a93ec465b3da83d8ce
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cf9ee7fc22e29e7e757b2c615b398a9233d0ad7a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70846566"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880254"
 ---
 # <a name="specify-a-merge-article-resolver"></a>指定合併發行項解析程式
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中指定合併發行項解析程式。  
 
   
@@ -45,15 +45,15 @@ ms.locfileid: "70846566"
     -   使用 Web 同步處理來提取訂閱的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Information Services (IIS)  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 註冊解析程式之後，您可以指定發行項應該使用 [發行項屬性 - \<發行項>] 對話方塊之 [解析程式] 索引標籤上的解析程式，此對話方塊位於 [新增發行集精靈] 和 [發行集屬性 - \<發行集>] 對話方塊中。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)和[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 註冊解析程式之後，指定發行項應該使用 [發行項屬性 - \<Article>] 對話方塊的 [解析程式] 索引標籤上解析程式；此對話方塊可從 [新增發行集精靈] 與 [發行集屬性 - \<Publication>] 對話方塊中取得。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)和[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-specify-a-resolver"></a>若要指定解決器  
   
-1.  在 [新增發行集精靈] 的 [發行項] 頁面上，或是在 [發行集屬性 - \<發行集>] 對話方塊中，選取一個資料表。  
+1.  在 [新增發行集精靈] 的 [發行項] 頁面上，或在 [發行集屬性 - \<Publication>] 對話方塊中，選取一個資料表。  
   
 2.  按一下 **[發行項屬性]** ，然後按一下 **[設定反白顯示資料表發行項的屬性]** 。  
   
-3.  在 [發行項屬性 - \<發行項>] 頁面上，按一下 [解析程式] 索引標籤。  
+3.  在 [發行項屬性 - \<Article>] 頁面上，按一下 [解析程式] 索引標籤。  
   
 4.  選取 **[使用自訂解決器 (已在散發者註冊)]** ，然後在清單中按一下解決器。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "70846566"
   
 1.  如果您打算使用自訂衝突解決器，請使用以上的程序建立及註冊解決器。  
   
-2.  在發行者端，執行 [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)，並記下結果集中 [value]  欄位內所需的自訂解析程式名稱。  
+2.  在發行者端，執行 [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)，並記下結果集中 [value] 欄位內所需的自訂解析程式名稱。  
   
 3.  在發行集資料庫的發行者端，執行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 為 **\@article_resolver** 指定步驟 2 中的解析程式名稱，並使用 **\@resolver_info** 參數指定自訂解析程式的任何必要輸入。 如果是以預存程序為基礎的自訂解析程式， **\@resolver_info** 會是預存程序的名稱。 如需 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 提供之解析程式所需輸入的詳細資訊，請參閱 [Microsoft 以 COM 為基礎的解析程式](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "70846566"
   
 1.  若要判斷是否已針對發行項定義自訂解析程式，或是要取得解析程式的名稱，請執行 [sp_helpmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)。 如果已針對發行項定義自訂解決器，它的名稱會顯示在 **article_resolver** 欄位中。 為解決器提供的任何輸入都會顯示在結果集的 **resolver_info** 欄位中。  
   
-2.  在發行者端，執行 [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)，並記下結果集中 [value]  欄位內所需的自訂解析程式名稱。  
+2.  在發行者端，執行 [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)，並記下結果集中 [value] 欄位內所需的自訂解析程式名稱。  
   
 3.  在發行集資料庫的發行者端，執行 [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 為 **\@property** 指定 **article_resolver** 值，包括商務邏輯處理常式的完整路徑，並為 **\@value** 指定步驟 2 中所需的自訂解析程式名稱。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "70846566"
   
 ## <a name="unregister-a-custom-conflict-resolver"></a>將自訂衝突解析程式取消註冊  
   
-1.  在發行者端，執行 [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)，並記下結果集中 [value]  欄位內所需的自訂解析程式名稱。  
+1.  在發行者端，執行 [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)，並記下結果集中 [value] 欄位內所需的自訂解析程式名稱。  
   
 2.  在散發者端，執行 [sp_unregistercustomresolver &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)。 為 **\@article_resolver** 指定步驟 1 中自訂解析程式的完整名稱。  
   

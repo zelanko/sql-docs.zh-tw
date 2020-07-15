@@ -22,15 +22,15 @@ ms.assetid: 0a760138-460e-410a-a3c1-d60af03bf2ed
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4bb0b9c6b9d6fe47b69678211122e5c8be7023c7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6799fefe08e3c57d6bac0924f2192094c1b9e428
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78937659"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091832"
 ---
 # <a name="alter-schema-transact-sql"></a>ALTER SCHEMA (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   在結構描述之間傳送安全性實體。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "78937659"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 ALTER SCHEMA schema_name   
@@ -51,7 +51,7 @@ ALTER SCHEMA schema_name
     }  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 ALTER SCHEMA schema_name   
@@ -82,7 +82,9 @@ ALTER SCHEMA schema_name
   
  移動資料表或同義字之類的物件，不會自動更新指向這個物件的參考。 您必須手動修改任何參考已傳輸之物件的物件。 例如，如果您移動了資料表，而且觸發程序參考該資料表，您就必須修改觸發程序來反映新的結構描述名稱。 在移動物件之前，請利用 [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) 來列出其相依性。  
 
- 若要使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來變更資料表的結構描述，請在 [物件總管] 中，以滑鼠右鍵按一下資料表，然後按一下 [設計]  。 按下 **F4** 開啟 [屬性] 視窗。 在 [結構描述]  方塊中，選取新的結構描述。  
+ 若要使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來變更資料表的結構描述，請在 [物件總管] 中，以滑鼠右鍵按一下資料表，然後按一下 [設計]。 按下 **F4** 開啟 [屬性] 視窗。 在 [結構描述] 方塊中，選取新的結構描述。  
+ 
+ ALTER SCHEMA 會使用結構描述層級鎖定。
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  

@@ -11,16 +11,16 @@ ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba6894a7e30c9b5112ced867766598cd62a0552f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 99d4cd492ffd35f36a1f44754128ce54f028aaed
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165466"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85984485"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>系統版本設定時態表與記憶體最佳化資料表
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 [記憶體最佳化資料表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) 之系統版本設定時態表的設計，是為了在利用記憶體內部 OLTP 工作負載所收集的最上層資料需要 [資料稽核與時間點分析](https://msdn.microsoft.com/library/mt631669.aspx) 時，提供符合成本效益的解決方案。 它們提供高交易處理能力、無鎖定同時並行處理，儲存大量歷程記錄資料並可輕鬆查詢的功能。
 
@@ -52,9 +52,9 @@ ms.locfileid: "74165466"
 
 內部記憶體最佳化暫存資料表是由系統建立的內部物件，用來最佳化 DML 作業。
 
-- 資料表名稱會以下列格式產生：**Memory_Optimized_History_Table_<物件識別碼>** ，其中 <物件識別碼>  是目前時態表的識別碼。
+- 資料表名稱會以下列格式產生：**Memory_Optimized_History_Table_<物件識別碼>** ，其中 <物件識別碼> 是目前時態表的識別碼。
 - 資料表會複寫目前時態表的結構描述，加上一個 BIGINT 資料行。 這個額外的資料行可保證移動到內部歷程記錄緩衝區之資料列的唯一性。
-- 額外的資料行具有下列名稱格式：**Change_ID[_<後置詞>]** ，其中 *_\<後置詞>* 是在資料表已經有 *Change_ID* 資料行時選擇性加入。
+- 其他資料行具有下列名稱格式：**Change_ID[_<尾碼>]** ，其中 *_\<suffix>* 是在資料表已具備 *Change_ID* 資料行時選擇性新增的項目。
 - 因為暫存資料表中額外的 BIGINT 資料行，系統建立版本記憶體最佳化資料表的資料列大小上限減少 8 個位元組。 現在新的最大值為 8052 位元組。
 - 內部記憶體最佳化暫存資料表不會出現在 SQL Server Management Studio 的「物件總管」中。
 - 關於此資料表的中繼資料與其目前時態表的連線，可在 [sys.internal_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) 中找到。

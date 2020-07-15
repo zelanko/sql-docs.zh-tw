@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 99c7146e-d2e7-4f1a-80ff-21a05bc5e8bb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 64b5d7f680379265a25bb8aa6566b1905cb7ca4c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: cce49d6dcad43375dc1c1e25721116f18be039e9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633056"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897037"
 ---
 # <a name="revoke-object-permissions-transact-sql"></a>REVOKE 物件權限 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   撤銷資料表、檢視表、資料表值函式、預存程序、擴充預存程序、純量函數、彙總函式、服務佇列或同義字的權限。 
   
@@ -62,7 +62,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
  ALL  
  撤銷 ALL 不會撤銷所有可能的權限。 撤銷 ALL 相當於撤銷所有適用於指定物件的 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 權限。 ALL 有多種意義，如下所示：  
   
- 純量函數權限：EXECUTE、REFERENCES。  
+ 純量函式權限：EXECUTE、REFERENCES。  
   
  資料表值函式權限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
   
@@ -81,7 +81,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
  ON [ OBJECT :: ] [ *schema_name* ] . *object_name*  
  指定要撤銷其權限的物件。 若指定 *schema_name*，則 OBJECT 片語為選擇性。 如果使用 OBJECT 片語，則需要範圍限定詞 (::)。 若未指定 *schema_name*，則會使用預設結構描述。 若指定 *schema_name*，則結構描述範圍限定詞 (.) 是必要項目。  
   
- { FROM | TO } \<database_principal> 指定要對其撤銷權限的主體。  
+ { FROM | TO } \<database_principal> 指定要撤銷其權限的主體。  
   
  GRANT OPTION  
  指出會撤銷對其他主體授與指定權限的權限。 不會撤銷權限本身。  
@@ -95,7 +95,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
 > [!CAUTION]  
 >  獲得授與 WITH GRANT OPTION 之權限的串聯撤銷，會同時撤銷該權限的 GRANT 和 DENY。  
   
- AS \<database_principal> 指定主體，執行這項查詢的主體就是從這個主體衍生權限來撤銷權限。  
+ AS \<database_principal> 指定主體，執行此查詢其主體會從這個主體衍生撤銷權限的權利。  
   
  *Database_user*  
  指定資料庫使用者。  

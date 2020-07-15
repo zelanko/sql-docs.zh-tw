@@ -1,5 +1,6 @@
 ---
 title: 記憶體內部 OLTP 不支援 T-SQL
+description: 了解經記憶體最佳化的資料表、原生編譯的預存程序和使用者定義函數不支援哪些 Transact-SQL 功能。
 ms.custom: seo-dt-2019
 ms.date: 11/21/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e1052544d1243dea4e6c3da377de2dbbe36d5af
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ad82e31acbe105810b00b1f6bfc59ec433ca273b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412492"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753203"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>記憶體中的 OLTP 不支援 Transact-SQL 建構
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   記憶體最佳化資料表、原生編譯預存程序和使用者定義函數，不支援磁碟資料表、轉譯過的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序和使用者定義函數所支援的全部 [!INCLUDE[tsql](../../includes/tsql-md.md)] 介面區。 嘗試使用其中一項不支援的功能時，伺服器會傳回錯誤。  
   

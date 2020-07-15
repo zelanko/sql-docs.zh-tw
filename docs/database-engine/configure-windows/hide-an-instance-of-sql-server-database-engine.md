@@ -1,5 +1,6 @@
 ---
 title: 隱藏 SQL Server 資料庫引擎的執行個體 | Microsoft Docs
+description: 了解如何隱藏 SQL Server Database Engine 的執行個體。 用戶端電腦無法使用 SQL Server Browser 服務來尋找隱藏的執行個體。
 ms.custom: ''
 ms.date: 08/19/2015
 ms.prod: sql
@@ -11,24 +12,24 @@ helpviewer_keywords:
 - Database Engine [SQL Server], hiding instances
 - hiding instances of Database Engine
 ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 28d7a01ce3c11ce332de7e7af70ff0c57746e840
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5be741205c17d32e9a2ddb253574c8dd50e4c4fe
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71682093"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772445"
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>隱藏 SQL Server Database Engine 的執行個體
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   此主題描述如何使用 SQL Server 組態管理員，在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中隱藏 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務來列舉電腦上安裝的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體。 這可讓用戶端應用程式瀏覽伺服器，並可幫助用戶端區別同一部電腦上的多個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體。 您可以使用下列程序防止 SQL Server Browser 服務向嘗試利用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [瀏覽] **按鈕尋找執行個體的用戶端電腦公開** 執行個體。  
   
 ##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> 使用 SQL Server 組態管理員  
   
 #### <a name="to-hide-an-instance-of-the-sql-server-database-engine"></a>若要隱藏 SQL Server Database Engine 的執行個體  
   
-1.  在 [SQL Server 組態管理員]  中展開 [SQL Server 網路組態]  ，以滑鼠右鍵按一下 [**伺服器執行個體> 的通訊協定]** *\<* ，然後選取 [屬性]  。  
+1.  在 [SQL Server 組態管理員] 中，展開 [SQL Server 網路組態]，然後以滑鼠右鍵按一下 [通訊協定] *\<server instance>* ，然後選取 [屬性]。  
   
 2.  在 **[旗標]** 索引標籤的 **[HideInstance]** 方塊中，選取 **[是]** ，然後按一下 **[確定]** 關閉對話方塊。 此變更在新連接時會立即生效。  
   

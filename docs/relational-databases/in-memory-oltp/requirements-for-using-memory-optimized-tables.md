@@ -1,5 +1,6 @@
 ---
 title: 使用記憶體最佳化資料表的需求 | Microsoft 文件
+description: 了解使用記憶體內部 OLTP 的需求，包括 SQL Database 版本、記憶體和儲存體考量事項，以及安裝。
 ms.custom: ''
 ms.date: 11/24/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2a8830fbf4b9418f80cf07c7586e71689001d455
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: afb7af65cca7d2ee33a2fde38d77b6236320514b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68109610"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722374"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>使用記憶體最佳化資料表的需求
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   若要在 Azure DB 中使用記憶體內部 OLTP，請參閱 [在 SQL Database 中開始使用 In-Memory](https://azure.microsoft.com/documentation/articles/sql-database-in-memory/)。  
   

@@ -1,22 +1,21 @@
 ---
 title: PowerShell 延伸模組
-titleSuffix: Azure Data Studio
 description: 安裝和使用適用於 Azure Data Studio 的 PowerShell
 ms.custom: seodec18
 ms.date: 04/19/2019
-ms.reviewer: alayu; sstein
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.reviewer: alayu, maghan, sstein
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 manager: matthend
-ms.openlocfilehash: fd5fabd1627968287c60fc8636964f4ac4831004
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 5f30d6078b28026dec2c6a4eef22eb1f3279755d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81484587"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637741"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>Azure Data Studio 的 PowerShell 編輯器支援
 
@@ -24,7 +23,6 @@ ms.locfileid: "81484587"
 現在，您可以使用 Azure Data Studio 所提供近似於 IDE 的絕佳介面，撰寫和偵錯 PowerShell 指令碼。
 
 ![PowerShell 延伸模組](media/powershell-extension/powershell-extension.png)
-
 
 ## <a name="features"></a>特性
 
@@ -38,7 +36,6 @@ ms.locfileid: "81484587"
 - 使用 <kbd>F8</kbd> 執行選取的 PowerShell 程式碼選取範圍
 - 使用 <kbd>Ctrl</kbd>+<kbd>F1</kbd> 為游標下的符號啟動線上說明
 - 基本互動式主控台支援！
-
 
 ## <a name="installing-the-extension"></a>安裝延伸模組
 
@@ -61,10 +58,10 @@ azuredatastudio --install-extension PowerShell-<version>.vsix
 
 ## <a name="installing-powershell-core"></a>安裝 PowerShell Core
 
-如果您在 MacOS 或 Linux 上執行 Azure Data Studio，您可能也需要安裝 PowerShell Core。
+若在 macOS 或 Linux 上執行 Azure Data Studio，則可能也須要安裝 PowerShell Core。
 
 PowerShell Core 是 [GitHub](https://github.com/powershell/powershell) 上的開放原始碼專案。
-如需在 MacOS 或 Linux 平台上安裝 PowerShell Core 的詳細資訊，請參閱下列文章：
+如需在 macOS 或 Linux 平台上安裝 PowerShell Core 的詳細資訊，請參閱下列文章：
 
 - [在 Linux 上安裝 PowerShell Core](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
 - [在 macOS 上安裝 PowerShell Core](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
@@ -147,7 +144,7 @@ Instance Name             Version    ProductLevel UpdateLevel  HostPlatform Host
 ServerA                   13.0.5233  SP2          CU4          Windows      Windows Server 2016 Datacenter
 ServerB                   14.0.3045  RTM          CU12         Linux        Ubuntu
 ```
-`SqlServer` 模組包含名為 `SQLRegistration` 的提供者，可讓您以程式設計方式存取下列儲存的 SQL Server 連接類型：
+`SqlServer` 模組包含稱為 `SQLRegistration` 的提供者，其可供以程式設計方式存取下列已儲存 SQL Server 連線的類型：
 
 + 資料庫引擎伺服器 (已註冊的伺服器)
 + 中央管理伺服器 (CMS)
@@ -259,7 +256,7 @@ WideWorldImporters   Normal         3.2 GB     2.6 GB Simple       130 sa
 
 此延伸模組是[依據 MIT 授權條款授權](https://github.com/PowerShell/vscode-powershell/blob/master/LICENSE.txt)。 如需此專案版本隨附協力廠商二進位檔的詳細資訊，請參閱[協力廠商通知](https://github.com/PowerShell/vscode-powershell/blob/master/Third%20Party%20Notices.txt)檔案。
 
-## <a name="code-of-conductconduct-md"></a>[管理辦法][conduct-md]
+## <a name="code-of-conduct"></a>管理辦法
 
 此專案採用了 [Microsoft 開放原始碼管理辦法][conduct-code]。
 如需詳細資訊，請參閱[管理辦法常見問題集][conduct-FAQ]，如有其他問題或意見，請連絡 [opencode@microsoft.com][conduct-email]。

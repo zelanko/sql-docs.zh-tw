@@ -1,5 +1,6 @@
 ---
 title: 使用 FOR XML 的 RAW 模式 | Microsoft 文件
+description: 了解在 SQL 查詢中搭配 FOR XML 子句使用 RAW 模式轉換所產生 XML 資料的方式。
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,18 +19,18 @@ ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 1c82fc52acaf8d3bbd351463803ae682ccfebc1b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: eaaa138461a2e3c96acf1b475de860ac0deeb1c4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664947"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784673"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>搭配 FOR XML 使用 RAW 模式
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-RAW 模式會將查詢結果集的每一個資料列轉換成具有泛用識別碼 \<資料列> 的 XML 項目，或選擇性提供的項目名稱。 依預設，資料列集內每一個非 NULL 的資料行值，都會對應到一個 \<資料列> 項目的屬性。 若將 ELEMENTS 指示詞加入 FOR XML 子句，則每一個資料行值都會對應到一個 \<資料列> 項目的子項目。 您還可以搭配 ELEMENTS 指示詞，選擇性地指定 XSINIL 選項，將結果集的 NULL 資料行值對應到具有 `xsi:nil="true"` 屬性的項目。
+RAW 模式會將查詢結果集中的每個資料列轉換成具備一般識別碼 \<row>，或可選擇性提供元素名稱的 XML 元素。 根據預設，資料列集中每個不是 NULL 的資料行值都會對應到 \<row> 元素的屬性。 若將 ELEMENTS 指示詞新增到 FOR XML 子句，則每個資料行值都會對應到 \<row> 元素的子元素。 您還可以搭配 ELEMENTS 指示詞，選擇性地指定 XSINIL 選項，將結果集的 NULL 資料行值對應到具有 `xsi:nil="true"` 屬性的項目。
   
  您可以要求結果 XML 傳回結構描述。 指定 XMLDATA 選項可傳回內嵌 XDR 結構描述。 指定 XMLSCHEMA 選項則可傳回內嵌 XSD 結構描述。 結構描述會出現在資料的開頭。 在結果中，結構描述命名空間參考會在每個最上層的元素重複出現。  
   
@@ -38,7 +39,7 @@ RAW 模式會將查詢結果集的每一個資料列轉換成具有泛用識別�
 ## <a name="in-this-section"></a>本節內容  
  本區段包含下列範例：  
   
--   [範例：將產品型號資訊當做 XML 來擷取](../../relational-databases/xml/example-retrieving-product-model-information-as-xml.md)  
+-   [範例：以 XML 的形式擷取產品型號資訊](../../relational-databases/xml/example-retrieving-product-model-information-as-xml.md)  
   
 -   [範例：使用 ELEMENTS 指示詞指定 XSINIL](../../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md)  
   

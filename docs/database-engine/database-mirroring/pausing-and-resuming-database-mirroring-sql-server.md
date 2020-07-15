@@ -1,6 +1,6 @@
 ---
 title: 暫停與繼續資料庫鏡像
-description: 了解如何隨時暫停並於稍後繼續您的 SQL Server 資料庫鏡像工作階段。
+description: 了解如何暫停並在稍後繼續 SQL Server 資料庫鏡像工作階段，以在暫停鏡像時保留工作階段狀態。
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b6a46805e9dfe86d7560a2786f10a99b66344a97
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8b71dd9efc29735d618e6cf7cbabab5615f31fb0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75254146"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735253"
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>暫停與繼續資料庫鏡像 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   資料庫擁有者隨時都可以先暫停資料庫鏡像工作階段，稍後再繼續。 暫停會保留工作階段狀態，同時暫停鏡像。 發生瓶頸時，暫停可能會對改進主體伺服器的效能有所幫助。  
   
  工作階段暫停時，主體資料庫仍然可以使用。 暫停會使鏡像工作階段的狀態設定為 SUSPENDED，鏡像資料庫不再與主體資料庫同步，造成主體資料庫需公開執行。  

@@ -1,5 +1,6 @@
 ---
 title: 管理資料倉儲 | Microsoft Docs
+description: SQL Server 中的管理資料倉儲是一種關聯式資料庫，其包含從目標伺服器收集的資料。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8723d9750eb03eda14a7983cba8919ea8e92eb81
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3699812972a7119552a53b76c73a373a89dc0622
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68133615"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758099"
 ---
 # <a name="management-data-warehouse"></a>管理資料倉儲
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   管理資料倉儲是一種關聯式資料庫，其中包含從伺服器 (它是資料收集目標) 收集而來的資料。 這項資料是用來產生系統資料收集組的報表，而且也可用來建立自訂報表。  
   
  資料收集器基礎結構會定義實作資料庫管理員所定義之保留原則所需的作業和維護計畫。  

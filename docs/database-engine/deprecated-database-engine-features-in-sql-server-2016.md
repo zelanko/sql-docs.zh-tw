@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 77c45273b5381a158d8a5cf317f292fd46dec55d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9c707c97df5b6c639a2c9df5847ff4f14fc400db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79190551"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729443"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 中已被取代的 Database Engine 功能
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
 
 本主題描述 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 中仍然可用但已被取代的 [!INCLUDE[sssql15-md](../includes/sssql15-md.md)]功能。 已被取代的功能不應在新應用程式中使用。  
   
@@ -45,7 +45,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 ```  
   
 ## <a name="features-deprecated-in-the-next-version-of-sql-server"></a>下一版的 SQL Server 中已淘汰的功能
- 下一版的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 將不再支援以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能。 請勿在新的開發工作中使用這些功能，並且儘速修改使用這些功能的應用程式。 **功能名稱**值會作為 ObjectName 出現在追蹤事件中，並在效能計數器與 `sys.dm_os_performance_counters` 中作為執行個體名稱。 [功能識別碼]  值會出現在追蹤事件中當做 ObjectId。  
+ 下一版的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 將不再支援以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能。 請勿在新的開發工作中使用這些功能，並且儘速修改使用這些功能的應用程式。 **功能名稱**值會作為 ObjectName 出現在追蹤事件中，並在效能計數器與 `sys.dm_os_performance_counters` 中作為執行個體名稱。 [功能識別碼] 值會出現在追蹤事件中當做 ObjectId。  
   
 |類別|已被取代的功能|取代|功能名稱|功能識別碼|  
 |--------------|------------------------|-----------------|------------------|----------------|  
@@ -146,7 +146,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |資料表提示|INSERT_HINTS||INSERT_HINTS|34|  
 |Textpointer|WRITETEXT<br /><br /> UPDATETEXT<br /><br /> READTEXT|None|UPDATETEXT 或 WRITETEXT<br /><br /> READTEXT|115<br /><br /> 114|  
 |Textpointer|TEXTPTR()<br /><br /> TEXTVALID()|None|TEXTPTR<br /><br /> TEXTVALID|5<br /><br /> 6|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|:: 函數呼叫順序|取代為 SELECT *column_list* FROM sys.\<函式名稱  >().<br /><br /> 例如，以 `SELECT * FROM ::fn_virtualfilestats(2,1)`取代 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。|'::' 函數呼叫語法|166|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|:: 函數呼叫順序|取代為 SELECT *column_list* FROM sys.\<*function_name*>()。<br /><br /> 例如，以 `SELECT * FROM ::fn_virtualfilestats(2,1)`取代 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。|'::' 函數呼叫語法|166|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|三部分和四部分資料行參考。|兩部分名稱是符合標準的行為。|兩部分以上的資料行名稱|3|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|加上引號的字串，在 SELECT 清單中當做運算式的資料行別名使用：<br /><br /> '*string_alias*' = *expression*|*expression* [AS] *column_alias*<br /><br /> *expression* [AS] [*column_alias*]<br /><br /> *expression* [AS] "*column_alias*"<br /><br /> *expression* [AS] '*column_alias*'<br /><br /> *column_alias* = *expression*|當做資料行別名的字串常值|184|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|編號程序。|無。 請勿使用。|ProcNums|160|  

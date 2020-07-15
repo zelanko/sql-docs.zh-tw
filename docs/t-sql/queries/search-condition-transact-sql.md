@@ -37,15 +37,15 @@ ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b35445b9b04eafb6d8d302c8627c08ca90bd745e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 84a7961292625aa3d818dbbab62aa7b455dabea7
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635535"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999818"
 ---
 # <a name="search-condition-transact-sql"></a>搜尋條件 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   這是使用 AND、OR 和 NOT 邏輯運算子的一個或多個述詞的組合。  
   
@@ -180,7 +180,7 @@ ms.locfileid: "81635535"
  指定搜尋 NULL 值或非 NULL 值，這會隨著所用的關鍵字而不同。 如果有任何運算元是 NULL，含位元或算術運算子的運算式便會得出 NULL。  
   
  CONTAINS  
- 搜尋包含字元型資料的資料行，以進行下列各種比對：單字和片語的精確或較不精確 (模糊  ) 比對、單字彼此在一定距離之間的接近度，或加權比對。 這個選項只能搭配 SELECT 陳述式使用。 如需詳細資訊，請參閱 [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)。  
+ 搜尋包含字元型資料的資料行，以進行下列各種比對：單字和片語的精確或較不精確 (模糊) 比對、單字彼此在一定距離之間的接近度，或加權比對。 這個選項只能搭配 SELECT 陳述式使用。 如需詳細資訊，請參閱 [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)。  
   
  FREETEXT  
  提供簡單的自然語言查詢形式，它會搜尋包含以字元為基礎的資料之資料行，以找出符合述詞中之意義 (而不是確實文字) 的值。 這個選項只能搭配 SELECT 陳述式使用。 如需詳細資訊，請參閱 [FREETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md)。  
@@ -189,13 +189,13 @@ ms.locfileid: "81635535"
  指定根據運算式是否在清單中來搜尋運算式。 搜尋運算式可以是常數或資料行名稱，清單可能是一組常數，也可能是一個子查詢，通常是一個子查詢。 將值的清單括在括號內。 如需詳細資訊，請參閱 [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)。  
   
  *subquery*  
- 這可視為受限制的 SELECT 陳述式，類似於 SELECT 陳述式中的 \<query_expression>。 不允許使用 ORDER BY 子句和 INTO 關鍵字。 如需詳細資訊，請參閱 [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)。  
+ 這可視為受限制的 SELECT 陳述式，且類似於 SELECT 陳述式中的 \<query_expression>。 不允許使用 ORDER BY 子句和 INTO 關鍵字。 如需詳細資訊，請參閱 [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)。  
   
  ALL  
- 用來搭配比較運算子和子查詢使用。 當為子查詢擷取的所有值都滿足比較運算時，會針對 \<predicate> 傳回 TRUE，當並非所有值都滿足比較時，或當子查詢未傳回任何資料列給外部陳述式時，則傳回 FALSE。 如需詳細資訊，請參閱 [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)。  
+ 用來搭配比較運算子和子查詢使用。 當為子查詢擷取的所有值都滿足比較運算時，會針對 \<predicate> 傳回 TRUE；當並非所有值都滿足比較時，或當子查詢未傳回任何資料列給外部陳述式時，則傳回 FALSE。 如需詳細資訊，請參閱 [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)。  
   
  { SOME | ANY }  
- 用來搭配比較運算子和子查詢使用。 當為子查詢擷取的任何值滿足比較運算時，會針對 \<predicate> 傳回 TRUE，當子查詢中沒有任何值滿足比較時，或當子查詢未傳回任何資料列給外部陳述式時，則傳回 FALSE。 否則，運算式便是 UNKNOWN。 如需詳細資訊，請參閱 [SOME &#124; ANY &#40;Transact-SQL&#41;](../../t-sql/language-elements/some-any-transact-sql.md)。  
+ 用來搭配比較運算子和子查詢使用。 當為子查詢擷取的任何值滿足比較運算時，會針對 \<predicate> 傳回 TRUE；當子查詢中沒有任何值滿足比較時，或當子查詢未傳回任何資料列給外部陳述式時，則傳回 FALSE。 否則，運算式便是 UNKNOWN。 如需詳細資訊，請參閱 [SOME &#124; ANY &#40;Transact-SQL&#41;](../../t-sql/language-elements/some-any-transact-sql.md)。  
   
  EXISTS  
  搭配子查詢來測試子查詢傳回的資料列是否存在。 如需詳細資訊，請參閱 [EXISTS &#40;Transact-SQL&#41;](../../t-sql/language-elements/exists-transact-sql.md)。  

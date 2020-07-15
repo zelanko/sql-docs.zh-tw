@@ -1,5 +1,6 @@
 ---
 title: 資料庫快照集 (SQL Server) | Microsoft 文件
+description: 了解如何使用資料庫快照集，在 SQL Server 中建立資料庫的唯讀、靜態檢視。 請參閱其優點、先決條件及限制。
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -18,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 724511cb3a60278c6642eb31cbb3481fe92f0d72
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fdf81fde342a3c7f0e250d467e7b486d753a8588
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68300431"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630818"
 ---
 # <a name="database-snapshots-sql-server"></a>資料庫快照集 (SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-資料庫快照集是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫 (「來源資料庫」  ) 的唯讀、靜態檢視。 資料庫快照集會與快照集建立時的來源資料庫維持交易的一致性。 資料庫快照集一律會與其來源資料庫位於相同的伺服器執行個體上。 雖然資料庫快照集會以建立快照集時的相同狀態提供資料唯讀檢視，但快照集檔案大小會隨著來源資料庫變更而增加。 如需詳細資料，請參閱下面的[功能概觀](#FeatureOverview)一節。
+資料庫快照集是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫 (「來源資料庫」) 的唯讀、靜態檢視。 資料庫快照集會與快照集建立時的來源資料庫維持交易的一致性。 資料庫快照集一律會與其來源資料庫位於相同的伺服器執行個體上。 雖然資料庫快照集會以建立快照集時的相同狀態提供資料唯讀檢視，但快照集檔案大小會隨著來源資料庫變更而增加。 如需詳細資料，請參閱下面的[功能概觀](#FeatureOverview)一節。
   
  給定來源資料庫中可以存在多個快照集。 每個資料庫快照集會一直保存，直到資料庫擁有者明確卸除為止。  
   
@@ -109,7 +110,7 @@ ms.locfileid: "68300431"
 ##  <a name="prerequisites-for-and-limitations-on-database-snapshots"></a><a name="LimitationsRequirements"></a> 資料庫快照集的必要條件和限制  
  **本節內容：**  
   
--   [必要條件](#Prerequisites)  
+-   [先決條件](#Prerequisites)  
   
 -   [對來源資料庫的限制](#LimitsOnSourceDb)  
   

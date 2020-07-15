@@ -1,5 +1,6 @@
 ---
 title: 緩衝集區延伸模組 | Microsoft Docs
+description: 了解緩衝集區延伸模組及其優點，其中包括改善的 I/O 輸送量。 檢視開啟此功能時可遵循的最佳做法。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 8083433f2b9e5af63abac4e4fba59d06e42dd86f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 13c6c2a0f4b2b96911a05b0ec9d8fdd2325ffa9b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76918346"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759180"
 ---
 # <a name="buffer-pool-extension"></a>緩衝集區擴充
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]中導入緩衝集區擴充，可將非動態隨機存取記憶體 (也就是固態硬碟) 擴充完全整合到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 緩衝集區，如此能大幅提升 I/O 輸送量。 並非每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都有提供緩衝集區擴充。 如需詳細資訊，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
 ## <a name="benefits-of-the-buffer-pool-extension"></a>緩衝集區擴充的優點  
@@ -26,7 +27,7 @@ ms.locfileid: "76918346"
   
  資料與索引頁面都會從磁碟讀入緩衝集區，而修改的頁面 (也稱為中途分頁) 則會重新寫入磁碟。 伺服器和資料庫檢查點的記憶體壓力會導致緩衝區快取中使用頻繁 (使用中) 的中途分頁從快取收回並寫入機械磁碟，然後再重新讀入快取中。 這些 I/O 作業通常是很小的隨機讀取和寫入 (4 到 16 KB 的資料順序)。 小型隨機 I/O 模式會產生頻繁的搜尋、競爭機械磁碟臂、增加 I/O 延遲，並降低系統的彙總 I/O 輸送量。  
   
- 解決這些 I/O 瓶頸的一般方法是加入更多 DRAM，或者加入高效能的 SAS 主軸。 雖然這些選項很有用，但是有很大的缺點：DRAM 比資料存放磁碟更為昂貴，而且增加主軸會增加硬體採購的資本支出，而且也會因為增加用電量和元件故障機率而增加營運成本。  
+ 解決這些 I/O 瓶頸的一般方法是加入更多 DRAM，或者加入高效能的 SAS 主軸。 雖然這些選項很有用，但是有很大的缺點：DRAM 比資料存放磁碟更為昂貴，且增加主軸會增加硬體採購的資本支出，且也會因為增加用電量和元件故障機率而增加營運成本。  
   
  緩衝集區擴充功能可透過非動態儲存 (通常是 SSD) 延伸緩衝集區快取。 因為有了這個延伸模組，緩衝集區可以容納更大的資料庫工作集，強制將 RAM 與 SSD 之間的 I/O 分頁。 這樣可有效地將機械磁碟中的小型隨機 I/O 卸載到 SSD。 由於 SSD 的延遲較低而且隨機 I/O 效能更好，所以緩衝集區擴充會大幅提高 I/O 輸送量。  
   

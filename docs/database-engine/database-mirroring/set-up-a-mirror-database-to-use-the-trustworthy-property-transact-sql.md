@@ -1,6 +1,6 @@
 ---
 title: 針對鏡像資料庫啟用 Trustworthy 屬性
-description: 描述在新鏡像資料庫上啟用 Trustworthy 屬性的必要步驟。
+description: 了解如何在 SQL Server 中使用 Transact-SQL，於新鏡像的資料庫上啟用 TRUSTWORTHY 資料庫屬性。
 ms.custom: seo-lt-2019
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6993b076-78ef-453e-b0ea-e341b8e5ee3e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 20ee7631b1fd4ca8613191ac67a0e13ee1cb028c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3c187be44a25edd24c3e9f8f7e91ae52a55ff925
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822385"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735182"
 ---
 # <a name="set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql"></a>設定鏡像資料庫可使用 Trustworthy 屬性 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   備份資料庫時，TRUSTWORTHY 資料庫屬性將設為 OFF。 因此，新鏡像資料庫上的 TRUSTWORTHY 一律為 OFF。 您必須在鏡像開始之後執行額外的設定步驟，以確保資料庫在容錯移轉之後的可信度。  
   
 > [!NOTE]  

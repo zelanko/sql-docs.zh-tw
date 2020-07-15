@@ -1,5 +1,6 @@
 ---
 title: 對發行集資料庫進行結構描述變更 | Microsoft Docs
+description: 複寫支援對已發佈物件進行大範圍的結構描述變更。 了解根據預設會散佈到所有 SQL Server 訂閱者的結構描述變更。
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 79f0e12422f299a78e28c5ca21c370d7a973771a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5e0da92258088cde7dec9d4981e270e87e09f67a
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287667"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807623"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>對發行集資料庫進行結構描述變更
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

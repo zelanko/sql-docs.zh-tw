@@ -17,15 +17,15 @@ ms.assetid: df5c4dfb-d372-4d0f-859a-a2d2533ee0d7
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e6aee1619c5abaab84f4b201507c179f3ce7e8d1
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: e186d1da5ab42b25c120303a545c9164d949ad45
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220703"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786475"
 ---
 # <a name="heaps-tables-without-clustered-indexes"></a>堆積 (無叢集索引的資料表)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   堆積是一種沒有叢集索引的資料表。 一個或多個可以建立在儲存為堆積之資料表上的非叢集索引。 資料會以無指定順序的方式儲存於堆積中。 一般來說，資料一開始是會以資料表中插入資料列的順序儲存，但是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會移動堆積中的資料，以有效率地儲存資料列，因此無法預期資料順序。 為確保從堆積中傳回之資料列順序，您必須使用 `ORDER BY` 子句。 若要指定儲存資料列的永久邏輯順序，請於資料表上建立叢集索引，如此一來資料表便不是堆積。  
   
@@ -33,8 +33,15 @@ ms.locfileid: "82220703"
 > 有些時候不建立叢集索引，而讓資料表保持為堆積反而有助於工作，但有效地使用堆積是一項進階的技巧。 除非有將資料表保留為堆積的特殊理由，否則大多數的資料表都應該選擇一個適合的叢集索引。  
   
 ## <a name="when-to-use-a-heap"></a>使用堆積的時機  
-當資料表儲存為堆積時，參考會將各個資料列識別為 8 位元組資料列識別碼 (RID)，該識別碼由檔案編號、資料頁碼及頁面上的位置 (FileID:PageID:SlotID) 所構成。 資料列識別碼是一種小型而高效率的結構。 當資料一律透過非叢集索引存取且 RID 比叢集索引鍵還小時，資料專業人員有時候會使用堆積。 堆積也用於下列情況   
- 
+當資料表儲存為堆積時，參考會將各個資料列識別為 8 位元組資料列識別碼 (RID)，該識別碼由檔案編號、資料頁碼及頁面上的位置 (FileID:PageID:SlotID) 所構成。 資料列識別碼是一種小型而高效率的結構。 
+
+堆積可用來作為未排序插入作業的大型暫存表格。 由於插入資料時不會強制執行嚴格的順序，因此插入作業通常會比同等的插入叢集索引作業快。 如果堆積的資料會讀取並處理到最終目的地，則建立包含讀取查詢所用搜尋述詞的窄小非叢集索引可能會很有用。 
+
+> [!NOTE]  
+> 資料會依資料頁的順序從堆積中擷取，但不一定是插入資料的順序。 
+
+當資料一律透過非叢集索引存取且 RID 比叢集索引鍵還小時，資料專業人員有時候也會使用堆積。 
+
 如果資料表為堆積且沒有任何非叢集索引，則必須讀取整份資料表 (資料表掃描) 才能找到資料列。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法直接在堆積上尋找 RID。 當資料表很小時，此種方式是可接受的。  
   
 ## <a name="when-not-to-use-a-heap"></a>切勿使用堆積的情況  

@@ -1,5 +1,6 @@
 ---
 title: 範例：指定 XMLTEXT 指示詞 | Microsoft Docs
+description: 了解如何使用 EXPLICIT 模式，透過在 SELECT 陳述式中指定 XMLTEXT 指示詞來處理 XML 文件的未取用部分。
 ms.custom: ''
 ms.date: 04/05/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 52e3d6ea8cff9d1984ee11a510a6c21833034c29
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 93e6735f9b4e30a97d86366b512c27489a921f2a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006682"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632318"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>範例：指定 XMLTEXT 指示詞
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   此範例說明如何在使用 EXPLICIT 模式的 **陳述式中，使用** XMLTEXT `SELECT` 指示詞將溢位資料行中的資料定址。  
   
  假設有 `Person` 資料表。 此資料表有一個 `Overflow` 資料行，可用來儲存 XML 文件的未消耗部分。  
@@ -36,7 +37,7 @@ INSERT INTO Person VALUES
    ,('P3','Joe',N'<SomeTag attr3="data" PersonID="P">content</SomeTag>');  
 ```  
   
- 此查詢從 `Person` 資料表擷取資料行。 對於 `Overflow` 資料行，並未指定 *AttributeName*，但「指示詞」  會將 `XMLTEXT` 設為提供通用資料表資料行名稱的一部分。  
+ 此查詢從 `Person` 資料表擷取資料行。 對於 `Overflow` 資料行，並未指定 *AttributeName*，但「指示詞」會將 `XMLTEXT` 設為提供通用資料表資料行名稱的一部分。  
   
 ```  
 SELECT 1 as Tag, NULL as parent,  
@@ -99,7 +100,7 @@ FOR XML EXPLICIT;
   
  如果以 `xmltext` 指示詞指定 *AttributeName*，則 <`overflow`> 元素的屬性將會新增為封閉式 <`Parent`> 元素的子元素屬性。 為 *AttributeName* 所指定的名稱將成為子元素的名稱。  
   
- 在此查詢中，*AttributeName* (<`overflow`>) 會與 `xmltext` 指示詞一起指定：   
+ 在此查詢中，*AttributeName* (<`overflow`>) 會與 `xmltext` 指示詞一起指定：  
   
 ```  
 SELECT 1 as Tag, NULL as parent,  

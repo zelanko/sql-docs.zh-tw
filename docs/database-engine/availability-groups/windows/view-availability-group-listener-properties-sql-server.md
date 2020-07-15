@@ -1,6 +1,6 @@
 ---
 title: 檢視可用性群組接聽程式屬性
-description: '說明如何使用 SQL Server Management Studio (SSMS)、Transact-SQL (T-SQL) 或 SQL PowerShell，檢視 Always On 可用性群組接聽程式的屬性。 '
+description: 描述如何使用 SQL Server Management Studio、Transact-SQL 或 PowerShell，在 SQL Server 中檢視 Always On 可用性群組接聽程式的屬性。
 ms.custom: seo-lt-2019
 ms.date: 07/11/2016
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: aca0d016-3228-40b8-bdc3-285ed6d9b280
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 74f8a0823f281a9260ba2d8ba322ac97c0e7056b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f2f148deff16e26b8eec4d3c34b0e602e5e7f06e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74821778"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893823"
 ---
 # <a name="view-availability-group-listener-properties-sql-server"></a>檢視可用性群組接聽程式屬性 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   此主題描述如何使用 *中的* 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 來檢視 AlwaysOn [!INCLUDE[tsql](../../../includes/tsql-md.md)] 「可用性群組接聽程式」 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)](Availability Group Listener) 的屬性。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -30,11 +30,11 @@ ms.locfileid: "74821778"
   
 1.  在 [物件總管] 中，連接到裝載您想要檢視其接聽程式之可用性群組的任何可用性複本的伺服器執行個體。 按一下伺服器名稱展開伺服器樹狀目錄。  
   
-2.  依序展開 [Always On 高可用性]  節點和 [可用性群組]  節點。  
+2.  依序展開 [Always On 高可用性] 節點和 [可用性群組] 節點。  
   
 3.  展開可用性群組的節點，然後展開 **[可用性群組接聽程式]** 節點。  
   
-4.  以滑鼠右鍵按一下您想要檢視的接聽程式，然後選取 [屬性]  命令。  
+4.  以滑鼠右鍵按一下您想要檢視的接聽程式，然後選取 [屬性] 命令。  
   
 5.  這樣就會開啟 **[可用性群組接聽項屬性]** 對話方塊。 如需詳細資訊，請參閱本主題稍後的 [可用性群組接聽程式屬性 (對話方塊)](#AgListenerPropertiesDialog)。  
   

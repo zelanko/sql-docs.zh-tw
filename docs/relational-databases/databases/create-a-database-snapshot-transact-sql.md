@@ -1,5 +1,6 @@
 ---
 title: 建立資料庫快照集 (Transact-SQL) | Microsoft 文件
+description: 了解如何使用 Transact-SQL 建立 SQL Server 資料庫快照集。 了解建立快照集的先決條件和最佳做法。
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 652ef86f26f92068465668cadeccf8e193db1f90
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 232b3af50be2c00cc1685e031b335c1b798a42b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71708281"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763544"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>建立資料庫快照集 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是建立 [!INCLUDE[tsql](../../includes/tsql-md.md)]資料庫快照集的唯一方式。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 不支援建立資料庫快照集。  
   
   
@@ -45,13 +46,13 @@ ms.locfileid: "71708281"
 ##  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
  本節討論下列最佳作法：  
   
--   [最佳作法：命名資料庫快照集](#Naming)  
+-   [最佳做法：命名資料庫快照集](#Naming)  
   
--   [最佳作法：限制資料庫快照集的數目](#Limiting_Number)  
+-   [最佳做法：限制資料庫快照集的數目](#Limiting_Number)  
   
--   [最佳作法：用戶端連接到資料庫快照集](#Client_Connections)  
+-   [最佳做法：用戶端連線到資料庫快照集](#Client_Connections)  
   
-####  <a name="best-practice-naming-database-snapshots"></a><a name="Naming"></a> 最佳作法：命名資料庫快照集  
+####  <a name="best-practice-naming-database-snapshots"></a><a name="Naming"></a> 最佳做法：命名資料庫快照集  
  建立快照集之前，務必先考慮如何命名快照集。 每個資料庫快照集都需要一個唯一的資料庫名稱。 為了方便管理，快照集的名稱可加入用於識別資料庫的資訊，例如：  
   
 -   來源資料庫的名稱。  
@@ -76,13 +77,13 @@ AdventureWorks_snapshot_noon
 AdventureWorks_snapshot_evening  
 ```  
   
-#### <a name="best-practice-limiting-the-number-of-database-snapshots"></a><a name="Limiting_Number"></a> 最佳作法：限制資料庫快照集的數目  
+#### <a name="best-practice-limiting-the-number-of-database-snapshots"></a><a name="Limiting_Number"></a> 最佳做法：限制資料庫快照集的數目  
  隨時間建立一系列的快照集，可擷取來源資料庫的循序快照集。 每個快照集都會一直保存到確實卸除該快照集為止。 因為每個快照集都會隨著原始頁面更新而不斷成長，所以您可能想要在建立新快照集之後，刪除較早的快照集，以節省磁碟空間。  
   
 
 **注意！** 若要還原為資料庫快照集，您需要刪除該資訊庫中的任何其他快照集。  
   
-####  <a name="best-practice-client-connections-to-a-database-snapshot"></a><a name="Client_Connections"></a> 最佳作法：用戶端連接到資料庫快照集  
+####  <a name="best-practice-client-connections-to-a-database-snapshot"></a><a name="Client_Connections"></a> 最佳做法：用戶端連線到資料庫快照集  
  若要使用資料庫快照集，用戶端需要知道去哪裡尋找。 正在建立或刪除某個資料庫快照集時，使用者仍可讀取其他快照集。 但是，當您以新的快照集取代現有的快照集時，必須將用戶端重新導向至新的快照集。 使用者可以利用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，手動連接到資料庫快照集。 但是，若要支援實際執行環境，您應該建立程式設計方案，將撰寫報表的用戶端明確導向至資料庫最新的資料庫快照集。  
   
 

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8df94f31b6a036677f5d62ae60ffb4cf53a082be
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e066a82da2994c14a23ad647c103402232a7d1c0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321221"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882090"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>定義合併資料表發行項之間的邏輯記錄關聯性
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中定義合併資料表發行項之間的邏輯記錄關聯性。  
   
  合併式複寫可讓您在不同資料表內定義相關資料列之間的關聯性。 然後這些資料列在同步處理期間，可以當做交易式單位來處理。 可以在兩個發行項之間定義邏輯記錄，不論這些發行項是否有聯結篩選關聯性。 如需詳細資訊，請參閱[使用邏輯記錄分組相關資料列的變更](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)。  
@@ -39,7 +39,7 @@ ms.locfileid: "75321221"
   
 -   **若要定義合併資料表發行項之間的邏輯記錄關聯性，請使用：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -52,13 +52,13 @@ ms.locfileid: "75321221"
 -   如果您在初始化發行集的訂閱後，新增、修改或刪除邏輯記錄，則必須在進行變更後產生新的快照集並重新初始化所有訂閱。 如需屬性變更需求的詳細資訊，請參閱[變更發行集與發行項屬性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 您可以在位於 [新增發行集精靈] 和 [發行集屬性 - \<發行集>] 對話方塊的 [加入聯結] 對話方塊中，定義邏輯記錄。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)和[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 您可在位於 [新增發行集精靈] 和 [發行集屬性 - \<Publication>] 對話方塊的 [新增聯結] 對話方塊中定義邏輯記錄。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)和[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
  只有將邏輯記錄套用至合併式發行集中的聯結篩選，並且該發行集符合使用預先計算的資料分割要求時，方可在 **[加入聯結]** 對話方塊中定義這些邏輯記錄。 若要定義未套用至聯結篩選的邏輯記錄，並在邏輯記錄層級設定衝突偵測和解決方案，您必須使用預存程序。  
   
 #### <a name="to-define-a-logical-record-relationship"></a>若要定義邏輯記錄關聯性  
   
-1.  在 [新增發行集精靈] 的 [篩選資料表的資料列] 頁面上，或是在 [發行集屬性 - \<發行集>] 對話方塊的 [篩選資料列] 頁面上，從 [已篩選的資料表] 窗格中選取一個資料列篩選。  
+1.  在 [新增發行集精靈] 的 [篩選資料表的資料列] 頁面上，或在 [發行集屬性 - \<Publication>] 對話方塊的 [篩選資料列] 頁面上，從 [已篩選的資料表] 窗格中選取一個資料列篩選。  
   
      邏輯記錄關聯性與聯結篩選相關聯，這會擴充資料列篩選。 因此，您必須在使用聯結擴充篩選並套用邏輯記錄關聯性之前，先定義資料列篩選。 定義好一個聯結篩選後，您可以以另一個聯結篩選擴充這個聯結篩選。 如需定義聯結篩選的詳細資訊，請參閱＜ [定義和修改合併發行項之間的聯結篩選](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)＞。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "75321221"
   
 3.  在 **[加入聯結]** 對話方塊中定義聯結篩選，然後選取 **[邏輯記錄]** 核取方塊。  
   
-4.  如果您在 [發行集屬性 - \<發行集>] 對話方塊中，請按一下 [確定] 以儲存並關閉對話方塊。  
+4.  如果在 [發行集屬性 - \<Publication>] 對話方塊中，請按一下 [確定] 以儲存並關閉對話方塊。  
   
 #### <a name="to-delete-a-logical-record-relationship"></a>若要刪除邏輯記錄關聯性  
   
@@ -74,7 +74,7 @@ ms.locfileid: "75321221"
   
      若要僅刪除邏輯記錄關聯性：  
   
-    1.  在 [新增發行集精靈] 的 [篩選資料列] 頁面上，或是在 [發行集屬性 - \<發行集>] 對話方塊的 [篩選資料列] 頁面上，從 [已篩選的資料表] 窗格中選取與邏輯記錄關聯性相關聯的聯結篩選，然後按一下 [編輯]。  
+    1.  在 [新增發行集精靈] 的 [篩選資料列] 頁面上，或在 [發行集屬性 - \<Publication>] 對話方塊的 [篩選資料列] 頁面上，從 [已篩選的資料表] 窗格中選取與邏輯記錄關聯性建立關聯的聯結篩選，然後按一下 [編輯]。  
   
     2.  在 **[編輯聯結]** 對話方塊中，清除 **[邏輯記錄]** 核取方塊。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "75321221"
   
      若要刪除邏輯記錄關聯性及與其關聯的聯結篩選：  
   
-    -   在 [新增發行集精靈] 或 [發行集屬性 - \<發行集>] 對話方塊的 [篩選資料列] 頁面上，從 [已篩選的資料表] 窗格中選取一個篩選，然後按一下 [刪除]。 如果您刪除的聯結篩選本身已由其他聯結擴充，也會一併刪除這些聯結。  
+    -   在 [新增發行集精靈] 或 [發行集屬性 - \<Publication>] 對話方塊的 [篩選資料列] 頁面上，從 [已篩選的資料表] 窗格中選取一個篩選，然後按一下 [刪除]。 如果您刪除的聯結篩選本身已由其他聯結擴充，也會一併刪除這些聯結。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  您可以使用複寫預存程序，以程式設計方式指定發行項之間的邏輯記錄關聯性。  

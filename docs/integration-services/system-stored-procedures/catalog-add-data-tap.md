@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: a25ebcc7-535e-4619-adf6-4e2b5a62ba37
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 513e4874c858d6ce83b65a9a846aa05617229481
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6df265a27d050dd554af2f57be15d398f635aa3e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295569"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749777"
 ---
 # <a name="catalogadd_data_tap"></a>catalog.add_data_tap 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對執行的執行個體，在封裝資料流程中的元件輸出上，加入資料點選。  
   
@@ -42,21 +42,21 @@ catalog.add_data_tap [ @execution_id = ] execution_id
  含有封裝之執行的執行識別碼。 *execution_id* 是 **bigint**。  
   
  [ @task_package_path = ] *task_package_path*  
- 資料流程工作的封裝路徑。 資料流程工作的 **PackagePath** 屬性會指定路徑。 路徑會區分大小寫。 若要尋找套件路徑，請在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中以滑鼠右鍵按一下 [資料流程] 工作，然後按一下 [屬性]  。 **PackagePath** 屬性會出現在 [屬性]  視窗中。  
+ 資料流程工作的封裝路徑。 資料流程工作的 **PackagePath** 屬性會指定路徑。 路徑會區分大小寫。 若要尋找套件路徑，請在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中以滑鼠右鍵按一下 [資料流程] 工作，然後按一下 [屬性]。 **PackagePath** 屬性會出現在 [屬性] 視窗中。  
   
  *task_package_path* 是 **nvarchar(max)** 。  
   
  [ @dataflow_path_id_string = ] *dataflow_path_id_string*  
  資料流程路徑的識別字串。 路徑會連接兩個資料流程元件。 路徑的 **IdentificationString** 屬性會指定字串。  
   
- 若要尋找識別字串，在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中以滑鼠右鍵按一下兩個資料流程元件之間的路徑，然後按一下 [屬性]  。 **IdentificationString** 屬性會出現在 [屬性]  視窗中。  
+ 若要尋找識別字串，在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中以滑鼠右鍵按一下兩個資料流程元件之間的路徑，然後按一下 [屬性]。 **IdentificationString** 屬性會出現在 [屬性] 視窗中。  
   
  *dataflow_path_id_string* 是 **nvarchar(4000)** 。  
   
  [ @data_filename = ] *data_filename*  
  儲存點選資料的檔案名稱。 如果資料流程工作是在 Foreach 迴圈或 For 迴圈容器中執行，個別檔案會針對迴圈的每次反覆運算，來儲存點選資料。 每個檔案都會以對應於反覆運算的號碼為字首。  
   
- 根據預設，檔案會儲存至 \<磁碟機  >:\Program Files\Microsoft SQL Server\130\DTS\DataDumps 資料夾。  
+ 根據預設，檔案會儲存至 \<*drive*>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps 資料夾。  
   
  *data_filename* 是 **nvarchar(4000)** 。  
   
@@ -67,7 +67,7 @@ catalog.add_data_tap [ @execution_id = ] execution_id
  傳回資料點選的識別碼。 *data_tap_id* 是 **bigint**。  
   
 ## <a name="example"></a>範例  
- 下列範例會在資料流程工作 `'Paths[OLE DB Source.OLE DB Source Output]` 中的資料流程路徑 `\Package\Data Flow Task` 上建立資料點選。 點選的資料會儲存在 DataDumps 資料夾 (\<磁碟機>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps) 的 `output0.txt` 檔案中。  
+ 下列範例會在資料流程工作 `'Paths[OLE DB Source.OLE DB Source Output]` 中的資料流程路徑 `\Package\Data Flow Task` 上建立資料點選。 點選的資料會儲存在 DataDumps 資料夾 (\<*drive*>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps) 的 `output0.txt` 檔案中。  
   
 ```sql
 Declare @execution_id bigint  
@@ -126,7 +126,7 @@ Exec SSISDB.Catalog.start_execution @execution_id
 ## <a name="requirements"></a>需求  
   
 ## <a name="external-resources"></a>外部資源  
- rafael-salas.com 上的部落格文章：[SSIS 2012：資料點選一覽](https://go.microsoft.com/fwlink/?LinkId=239983)。  
+ rafael-salas.com 上的部落格文章：[SSIS 2012:資料點選一覽](https://go.microsoft.com/fwlink/?LinkId=239983)。  
   
 ## <a name="see-also"></a>另請參閱  
  [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)  

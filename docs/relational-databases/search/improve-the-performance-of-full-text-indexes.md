@@ -17,15 +17,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a755ba9aa8915734768c56c096ea917a6e0c5564
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4fd63c14206848107e2fea8c2e8972e76b77cc1c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68021228"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629493"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>改善全文檢索索引的效能
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 本主題描述全文檢索索引和查詢效能降低的一些常見原因。 它也會提供一些建議，以減少這些問題的發生並改善效能。
   
 ##  <a name="common-causes-of-performance-issues"></a><a name="causes"></a> Common causes of performance issues
@@ -66,9 +66,9 @@ ms.locfileid: "68021228"
   
 -   請使用 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) 陳述式來更新基底資料表的統計資料。 更重要的是，請更新叢集索引上的統計資料或完整母體擴展的全文檢索索引鍵。 這有助於多重範圍母體擴展在資料表上產生良好的資料分割。  
   
--   在大型的多重 CPU 電腦上執行完整母體擴展之前，建議您設定 [最大伺服器記憶體]  值來暫時限制緩衝集區的大小，以便保留足夠的記憶體供 fdhost.exe 處理序和作業系統使用。 如需詳細資訊，請參閱本主題稍後的＜估計篩選背景程式主機處理序 (fdhost.exe) 的記憶體需求＞一節。
+-   在大型的多重 CPU 電腦上執行完整母體擴展之前，建議您設定 [最大伺服器記憶體] 值來暫時限制緩衝集區的大小，以便保留足夠的記憶體供 fdhost.exe 處理序和作業系統使用。 如需詳細資訊，請參閱本主題稍後的＜估計篩選背景程式主機處理序 (fdhost.exe) 的記憶體需求＞一節。
 
--   如果您使用根據時間戳記資料行的累加母體擴展，請在 [時間戳記]  資料行上建置次要索引以改善累加母體擴展的效能。  
+-   如果您使用根據時間戳記資料行的累加母體擴展，請在 [時間戳記] 資料行上建置次要索引以改善累加母體擴展的效能。  
   
 ##  <a name="troubleshoot-the-performance-of-full-populations"></a><a name="full"></a> 為完整母體擴展的效能進行疑難排解  
 ### <a name="review-the-full-text-crawl-logs"></a>檢閱全文檢索編目記錄檔
@@ -97,7 +97,7 @@ ms.locfileid: "68021228"
   
 -   **記憶體不足**。 如果完整母體擴展期間可用的實體記憶體數量為零，表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 緩衝集區可能耗用系統上的大部分實體記憶體。  
   
-     sqlservr.exe 處理序嘗試擷取緩衝集區的所有可用記憶體，最多至已設定的最大伺服器記憶體。 如果 [最大伺服器記憶體]  配置太大，fdhost.exe 處理序可能會發生記憶體不足以及無法配置共用記憶體的狀況。  
+     sqlservr.exe 處理序嘗試擷取緩衝集區的所有可用記憶體，最多至已設定的最大伺服器記憶體。 如果 [最大伺服器記憶體] 配置太大，fdhost.exe 處理序可能會發生記憶體不足以及無法配置共用記憶體的狀況。  
   
      您可以透過適當設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 緩衝集區的 [最大伺服器記憶體] 來解決此問題。 如需詳細資訊，請參閱本主題稍後的＜估計篩選背景程式主機處理序 (fdhost.exe) 的記憶體需求＞一節。 減少全文檢索索引所使用的批次大小可能也會有所幫助。  
 
@@ -126,7 +126,7 @@ ms.locfileid: "68021228"
   
 -   *T*，這是系統上可用的實體記憶體總計 (以 MB 為單位)。  
   
--   *M*，這是最佳 [最大伺服器記憶體]  設定。  
+-   *M*，這是最佳 [最大伺服器記憶體] 設定。  
   
 如需下列公式的基本資訊，請參閱資料表後面的附註。  
   
@@ -150,9 +150,9 @@ ms.locfileid: "68021228"
   
  `M = 8192-640-500=7052`  
   
- #### <a name="example-setting-max-server-memory"></a>範例：設定 max server memory  
+ #### <a name="example-setting-max-server-memory"></a>範例：設定最大伺服器記憶體  
   
- 此範例使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 和 [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，將 [最大伺服器記憶體]  設為上述範例中計算的 *M* 值，即 `7052`：  
+ 此範例使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 和 [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，將 [最大伺服器記憶體] 設為上述範例中計算的 *M* 值，即 `7052`：  
   
 ```  
 USE master;  

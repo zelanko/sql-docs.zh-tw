@@ -1,5 +1,6 @@
 ---
 title: 設定 min memory per query 伺服器組態選項 | Microsoft Docs
+description: 了解如何使用 [每個查詢的記憶體下限] 選項來指定記憶體授與下限，或 SQL Server 為查詢配置的最小 KB 數。
 ms.custom: ''
 ms.date: 11/24/2017
 ms.prod: sql
@@ -14,17 +15,17 @@ helpviewer_keywords:
 - min memory per query option
 - min memory grant
 ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 9e7a08defb9ff222ac1699c924691c923a7f2c2e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 784dc57403cdb5c8dad6ba3e8f910ecd6d4dee26
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287482"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696855"
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>設定 min memory per query 伺服器組態選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] min memory per query [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **每個查詢的最小記憶體** 選項會指定為執行查詢所配置的最小記憶體數量 (以 KB 為單位)。 這也稱為最小記憶體授與。 例如，如果將 **min memory per query** 設成 2,048 KB，就可以保證查詢至少有這些記憶體量可使用。 預設值為 1,024 KB。 最小值是 512 KB，最大值則是 2,147,483,647 KB (2 GB)。  
   
@@ -40,7 +41,7 @@ ms.locfileid: "79287482"
   
 -   **使用下列方法設定 min memory per query 選項：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -71,7 +72,7 @@ ms.locfileid: "79287482"
   
 #### <a name="to-configure-the-min-memory-per-query-option"></a>設定 min memory per query 選項  
   
-1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]  。  
+1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
   
 2.  按一下 **[記憶體]** 節點。  
   

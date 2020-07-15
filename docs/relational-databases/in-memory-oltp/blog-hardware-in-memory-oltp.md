@@ -1,5 +1,6 @@
 ---
 title: SQL In-Memory OLTP 的硬體 | Microsoft Docs
+description: 了解 SQL Server 中記憶體內部 OLTP 效能的硬體考量事項。 記憶體內部 OLTP 使用記憶體和磁碟其方式與以磁碟為基礎的資料表不同。
 ms.custom: ''
 ms.date: 03/28/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 21293308f2b21d0a41cca901a084d65ca0250573
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e5486dddb1b71d2a32055cb4175ed300ce19320f
+ms.sourcegitcommit: 7a47aaffbd82bab2707cd69f44571a9037d2273b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951132"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85377619"
 ---
 # <a name="hardware-considerations-for-in-memory-oltp-in-sql-server"></a>SQL Server 中記憶體內部 OLTP 的硬體考量
 

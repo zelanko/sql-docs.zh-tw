@@ -15,19 +15,19 @@ f1_keywords:
 ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 87201ed5c3d2368f54e2ffb0c57391322066a30b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2c11f154d37543488cebbc0bf6bafb1f002253f9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68014469"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888094"
 ---
 # <a name="progress-page-always-on-availability-group-wizards"></a>進度頁面 (AlwaysOn 可用性群組精靈)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   使用此對話方塊可以檢視您在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中執行之 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]精靈的進度。 進度列會指出精靈所執行之步驟的相對進度。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  **更多詳細資料**  
  按一下向下箭號可顯示進度方格，這個方格會依照順序列出任何已完成的步驟，接著列出目前進行中的作業。 方格包含下列資料行：  
   
@@ -40,8 +40,8 @@ ms.locfileid: "68014469"
 |結果|描述|  
 |------------|-----------------|  
 |**錯誤**|表示這個步驟的作業發生錯誤。 按一下連結可顯示描述錯誤的訊息對話方塊。|  
-|**進行中 (** 完成百分比  **)**|表示作業目前正在進行，並且估計這個步驟已完成的百分比。|  
-|「成功」 |表示這個步驟的作業已順利完成。|  
+|**進行中 (** 完成百分比 **)**|表示作業目前正在進行，並且估計這個步驟已完成的百分比。|  
+|「成功」|表示這個步驟的作業已順利完成。|  
   
  **較少詳細資料**  
  按一下可隱藏進度方格。  

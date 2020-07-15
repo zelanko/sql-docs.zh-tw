@@ -1,30 +1,28 @@
 ---
-title: 常見問題集
-titleSuffix: Azure Data Studio
+title: Azure Data Studio 常見問題集
 description: 關於 Azure Data Studio 的常見問題集 (FAQ)。
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 1916a10a468fdc44c021e410eb1521cb7c219d58
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dfcab918073fedd80def91d3556e15f632a62edc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959541"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774610"
 ---
-# <a name="azure-data-studio-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] 常見問題集
+# <a name="azure-data-studio-faq"></a>Azure Data Studio 常見問題集
 
 ## <a name="what-is-azure-data-studio"></a>什麼是 Azure Data Studio？
 
-Azure Data Studio 是新的開放原始碼、跨平台的桌面環境，適用於在 Windows、MacOS 和 Linux 上使用內部部署和雲端資料平台的 Azure 資料系列的資料專業人員。 Azure Data Studio 過去是以 SQL Operations Studio 的預覽名稱發行，它可提供新式編輯器體驗，其中包含快速的 IntelliSense、程式碼片段、原始檔控制整合及整合式終端。 在工程設計時，考量到資料平台使用者，並內建查詢結果集的圖表和可自訂的儀表板。
+Azure Data Studio 是新的開放原始碼、跨平台桌面環境，適用於在 Windows、macOS 和 Linux 上使用內部部署和雲端資料平台的 Azure 資料系列資料專業人員。 Azure Data Studio 過去是以 SQL Operations Studio 的預覽名稱發行，它可提供新式編輯器體驗，其中包含快速的 IntelliSense、程式碼片段、原始檔控制整合及整合式終端。 在工程設計時，考量到資料平台使用者，並內建查詢結果集的圖表和可自訂的儀表板。
 
 研究顯示使用者在查詢編輯時所花費的時間量，比 SQL Server Management Studio 的任何其他工作更多。 基於這個理由，Azure Data Studio 的設計極端著重於最常使用的功能，並提供額外的體驗作為產品的選擇性延伸模組。 這可讓每個使用者將其環境自訂為最常使用的工作流程。
-
 
 ## <a name="how-much-does-azure-data-studio-cost"></a>Azure Data Studio 的成本是多少？
 
@@ -59,8 +57,8 @@ Azure Data Studio 提供一致的資料庫備份與還原體驗。 透過 SQL Se
 *在下列情況下使用 Azure Data Studio：*
 
 - 將大部分的時間花在編輯或執行查詢。
-- 需要能夠快速繪製和視覺化結果集。
-- 可以使用 sqlcmd 或 Powershell 透過整合式終端機來執行大部分的系統管理工作。
+- 需要能夠快速繪製圖表和視覺化結果集。
+- 可以使用 sqlcmd 或 PowerShell 透過整合式終端執行大部分的管理工作。
 - 對精靈體驗的需求最少。
 - 不需要執行深層管理或平台相關設定。
 - 需要在 macOS 或 Linux 上執行。

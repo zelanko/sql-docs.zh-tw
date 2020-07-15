@@ -1,5 +1,6 @@
 ---
 title: 記憶體內部 OLTP 記憶體回收 | Microsoft Docs
+description: 了解 SQL Server 中記憶體內部 OLTP 的記憶體回收。 記憶體回收的主旨是讓不再使用的交易刪除資料列。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 940140a7-4785-46fc-8bf4-151435dccd3c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 13263d1f35d930b3bab81fc9cec099f1a96a6510
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ed9bc2a1d7791c593ab33335aea2967411117bac
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050255"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723143"
 ---
 # <a name="in-memory-oltp-garbage-collection"></a>記憶體中的 OLTP 記憶體回收
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   如果某個不再使用的交易刪除資料列，則該資料列視為過時。 過時的資料列適合進行記憶體回收。 以下是 [!INCLUDE[hek_2](../../includes/hek-2-md.md)]之記憶體回收的特性：  
   
 -   非鎖定。 記憶體回收會隨著時間散發，藉此將對工作負載的影響降到最低。  

@@ -1,5 +1,6 @@
 ---
 title: 編寫複寫指令碼 | Microsoft Docs
+description: 指令碼包含實作 SQL Server 複寫元件必要的 Transact-SQL 系統預存程序，例如發行集或訂閱。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ ms.assetid: e50fac44-54c0-470c-a4ea-9c111fa4322b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8cda2b7729f205da7908fa481b2e1a5639a095a1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 88f805876602f30cfd53defa93257a4102eaf52c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287312"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765188"
 ---
 # <a name="scripting-replication"></a>編寫複寫指令碼
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   拓撲中的所有複寫元件都應作為損毀復原計畫的一部份來編寫指令碼，而指令碼也可以用於自動執行重複性工作。 指令碼包含實作已編寫指令碼之複寫元件所必要的 Transact-SQL 系統預存程序，例如，發行集或訂閱。 指令碼可以在精靈中建立 (例如 [新增發行集精靈])，或可在建立元件之後，於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中建立。 您可使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 **sqlcmd**，檢視、修改和執行指令碼。 指令碼可以和備份檔案一起儲存，萬一必須重新設定複寫拓撲時即可使用。  
   
  如果對任何屬性進行了變更，則應對該元件重新編寫指令碼。 若您在異動複寫中使用自訂預存程序，每個程序副本會與指令碼同時儲存；若程序變更，則副本必須更新 (程序通常在結構描述變更或改變應用程式需求時進行更新)。 如需自訂程序的詳細資訊，請參閱[指定交易式發行項變更的傳播方式](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。  
@@ -47,7 +48,7 @@ ms.locfileid: "76287312"
 5.  在多個「訂閱者」端執行指令碼以產生需要的提取訂閱。  
   
 ## <a name="script-replication-objects"></a>撰寫複寫物件的指令碼  
- 您可以從複寫精靈或從   的 [複寫][!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 資料夾來撰寫複寫物件指令碼。 如果您從精靈編寫指令碼，可以選擇建立物件並編寫其指令碼，也可以選擇只編寫其指令碼。  
+ 您可以從複寫精靈或從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [複寫] 資料夾來撰寫複寫物件指令碼。 如果您從精靈編寫指令碼，可以選擇建立物件並編寫其指令碼，也可以選擇只編寫其指令碼。  
   
 > [!IMPORTANT]  
 >  所有密碼的指令碼都會編寫為 NULL。 可能的話，會在執行階段提示使用者輸入安全性認證。 如果您將認證儲存在指令碼檔案中，必須保護該檔案免於未經授權的存取。  
@@ -84,7 +85,7 @@ ms.locfileid: "76287312"
   
 3.  以滑鼠右鍵按一下發行集或訂閱，然後按一下 **[產生指令碼]** 。  
   
-4.  指定 [產生 SQL 指令碼 - \<複寫物件>] 對話方塊中的選項。  
+4.  指定 [產生 SQL 指令碼 - \<ReplicationObject>] 對話方塊中的選項。  
   
 5.  按一下 **[編寫指令碼至檔案]** 。  
   

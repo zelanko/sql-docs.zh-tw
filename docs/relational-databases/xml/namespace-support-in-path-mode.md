@@ -1,5 +1,6 @@
 ---
 title: PATH 模式中的命名空間支援 | Microsoft Docs
+description: 深入了解使用 PATH 模式從選取查詢產生 XML 時的命名空間支援。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5f128ea2-0ceb-4b23-bce7-c8b3fd615466
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f75729d1e31989bde851d1fde3a05ab932b6f460
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: fb8691f3cdd847a626db99a43e949a4b87a5aefe
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665036"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85661646"
 ---
 # <a name="namespace-support-in-path-mode"></a>PATH 模式中的命名空間支援
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   PATH 模式中的命名空間支援是使用 WITH NAMESPACES 來提供。 例如，下列查詢示範 WITH NAMESPACES 語法以宣告命名空間 ("a:")，它可用於後續的 SELECT 陳述式中：  
   
 ```  

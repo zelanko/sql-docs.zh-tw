@@ -11,23 +11,23 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5625c3429a9bae89ae940fb552a3e6d1e58678c9
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 76af9a82a53004d01443a0442946e28fed73d0f0
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999417"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858870"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>具有安全記憶體保護區的 Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
  
 具有安全記憶體保護區的 Always Encrypted 可為 [Always Encrypted](always-encrypted-database-engine.md) 功能提供額外功能。
 
-Always Encrypted 已在 SQL Server 2016 中引進，可保護敏感性資料的機密性，免於遭受惡意程式碼和 SQL Server 高權限的「未經授權」  使用者威脅。 高權限的未經授權使用者為 DBA、電腦系統管理員、雲端系統管理員，或是對伺服器執行個體、硬體等具有合法存取權，但不應該具有部分或所有實際資料存取權的其他人。  
+Always Encrypted 已在 SQL Server 2016 中引進，可保護敏感性資料的機密性，免於遭受惡意程式碼和 SQL Server 高權限的「未經授權」使用者威脅。 高權限的未經授權使用者為 DBA、電腦系統管理員、雲端系統管理員，或是對伺服器執行個體、硬體等具有合法存取權，但不應該具有部分或所有實際資料存取權的其他人。  
 
 若沒有此文章討論的增強功能，Always Encrypted 將透過在用戶端將資料加密來保護資料，並且絕不允許資料或對應的密碼編譯金鑰以純文字形式出現在 SQL Server 引擎內部。 因此，資料庫內部的加密資料行功能受到嚴格限制。 SQL Server 可對加密資料執行相的唯一作業是相等比較 (而且僅適用於確定性加密)。 資料庫內部不支援所有其他作業，包括密碼編譯作業 (初始資料加密或金鑰輪替) 及/或豐富計算 (例如，模式比對)。 使用者需要將資料移出資料庫以在用戶端執行這些作業。
 
-具有安全記憶體保護區的  Always Encrypted 允許在伺服器端的安全記憶體保護區內部進行純文字資料計算，藉以解決這些限制。 安全記憶體保護區是 SQL Server 處理序內受保護的記憶體區域，並可作為受信任的執行環境來處理 SQL Server 引擎內部的敏感性資料。 安全記憶體保護區對於主控電腦上其餘部分的 SQL Server 和其他處理序會顯示為黑盒子。 即使使用偵錯工具，也沒有辦法從外部檢視記憶體保護區內部的任何資料或程式碼。  
+具有安全記憶體保護區的 Always Encrypted 允許在伺服器端的安全記憶體保護區內部進行純文字資料計算，藉以解決這些限制。 安全記憶體保護區是 SQL Server 處理序內受保護的記憶體區域，並可作為受信任的執行環境來處理 SQL Server 引擎內部的敏感性資料。 安全記憶體保護區對於主控電腦上其餘部分的 SQL Server 和其他處理序會顯示為黑盒子。 即使使用偵錯工具，也沒有辦法從外部檢視記憶體保護區內部的任何資料或程式碼。  
 
 
 Always Encrypted 會使用安全記憶體保護區，如下圖所示：
@@ -51,7 +51,7 @@ Always Encrypted 會使用安全記憶體保護區，如下圖所示：
 
 - **就地加密** - 敏感性資料的密碼編譯作業 (例如：初始資料加密或輪替資料行加密金鑰) 會在安全記憶體保護區內執行，而不需要將資料移出資料庫。 您可以使用 ALTER TABLE Transact-SQL 陳述式來發出就地加密，而不需要使用 SSMS 中的 [Always Encrypted 精靈] 或 Set-SqlColumnEncryption PowerShell Cmdlet 等工具。
 
-- **豐富計算 (預覽)** - 安全記憶體保護區內支援加密資料行作業，包括模式比對 (LIKE 述詞) 及範圍比較，這可為需要在資料庫系統內執行這類計算的各種應用程式和案例解除鎖定 Always Encrypted 功能。
+- **豐富計算** - 安全記憶體保護區內支援加密資料行作業，包括模式比對 (LIKE 述詞) 及範圍比較，這可為需要在資料庫系統內執行這類計算的各種應用程式和案例解除鎖定 Always Encrypted 功能。
 
 ## <a name="secure-enclave-attestation"></a>安全記憶體保護區證明
 

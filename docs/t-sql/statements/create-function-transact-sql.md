@@ -40,16 +40,16 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a011f82fc465be79f18a45e71e1dc7e62710d31e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: f92ce95ce8427773c57b34511e3ab458e67d8358
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631484"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767100"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中建立使用者定義函數。 使用者定義函數是一種 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或 Common Language Runtime (CLR) 常式，它會接受參數、執行動作 (例如複雜計算) 並且將該動作的結果傳回成值。 傳回值可以是純量 (單一) 值或資料表。 您可以使用這個陳述式來建立可用下列方式使用的可重複使用常式：
 
@@ -328,7 +328,7 @@ TABLE：指定資料表值函式 (TVF) 的傳回值是資料表。 只有常數�
 
 ORDER (\<order_clause>) 指定從資料表值函式傳回結果的順序。 如需詳細資訊，請參閱本主題稍後的[在 CLR 資料表值函式中使用排序次序](#using-sort-order-in-clr-table-valued-functions)。
 
-EXTERNAL NAME \<方法規範> *assembly_name*.*class_name*.*method_name*
+EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name*
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 及更新版本)
 
 指定建立函式名稱時應該要參考的組件和方法。
@@ -352,9 +352,9 @@ EXTERNAL NAME \<方法規範> *assembly_name*.*class_name*.*method_name*
 > - 依預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能執行 CLR 程式碼。 您可以建立、修改和卸除參考通用語言執行平台模組的資料庫物件；不過，必須等到您啟用 [clr enabled 選項](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)之後，才能在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中執行這些參考。 若要啟用這個選項，請使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。
 > - 自主資料庫無法使用這個選項。
 
- \<資料表類型定義 *>* ( { \<資料行定義> \<條件約束>| \<計算資料行定義> } [ \<資料表條件約束> ] [ ,...*n* ] ) 定義 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式的資料表資料類型。 資料表宣告包括資料行定義和資料行或資料表條件約束。 資料表一律放在主要檔案群組中。
+*\<*table_type_definition*>* ({\<column_definition> \<column_constraint>| \<computed_column_definition>} [\<table_constraint>] [,...*n*]) 定義 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式的資料表資料類型。 資料表宣告包括資料行定義和資料行或資料表條件約束。 資料表一律放在主要檔案群組中。
 
-\<CLR iobuc資料表類型定義>  ( { *column_name**data_type* } [ ,...*n* ] ) **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([某些區域為預覽版本](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。
+*\< clr_table_type_definition >* ({*column_name**data_type*} [,...*n*]) **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([某些區域為預覽版本](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。
 
 定義 CLR 函數的資料表資料類型。 資料表宣告只包含資料行名稱和資料類型。 資料表一律放在主要檔案群組中。
 
@@ -368,7 +368,7 @@ SCHEMABINDING：SCHEMABINDING 是原生編譯的純量使用者定義函式必�
 
 EXECUTE AS：EXECUTE AS 是原生編譯的純量使用者定義函式必要項目。
 
-**\<function_option>::= and \<clr_function_option>::=**
+**\<function_option>::= 與 \<clr_function_option>::=**
 
 指定此函數將會有下列其中一個或多個選項。
 
@@ -395,7 +395,7 @@ SCHEMABINDING：指定函式必須繫結至其所參考的資料庫物件。 當
 
 RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**：指定純量函式的 **OnNULLCall** 屬性。 若未指定，預設情況下意味著 CALLED ON NULL INPUT。 這表示，即使傳遞 NULL 做為引數，函數主體仍會執行。
 
-如果在 CLR 函數中指定 RETURNS NULL ON NULL INPUT，它會指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以在它接收的任何引數是 NULL 時傳回 NULL，而不必實際叫用函數主體。 如果 \<method_specifier> 中指定的 CLR 函式方法已經有一個指出 RETURNS NULL ON NULL INPUT 的自訂屬性，但 CREATE FUNCTION 陳述式指出 CALLED ON NULL INPUT，則會優先使用 CREATE FUNCTION 陳述式。 無法為 CLR 資料表值函式指定 **OnNULLCall** 屬性。
+如果在 CLR 函數中指定 RETURNS NULL ON NULL INPUT，它會指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以在它接收的任何引數是 NULL 時傳回 NULL，而不必實際叫用函數主體。 若 \<method_specifier> 中指定的 CLR 函式方法已經表示 RETURNS NULL ON NULL INPUT 的自訂屬性，但 CREATE FUNCTION 陳述式表示 CALLED ON NULL INPUT，則會優先使用 CREATE FUNCTION 陳述式。 無法為 CLR 資料表值函式指定 **OnNULLCall** 屬性。
 
 EXECUTE AS 子句：指定執行使用者定義函式時所在的資訊安全內容。 因此，您可以控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 要利用哪個使用者帳戶來驗證在函數參考的任何資料庫物件上的權限。
 
@@ -437,7 +437,7 @@ IDENTITY 指出新資料行是識別欄位。 新資料列加入至資料表時�
 
 *increment*：這是要新增至資料表中後續資料列 *seed* 值的整數值。
 
- **\< column_constraint >::= 和 \< table_constraint>::=**
+ **\< column_constraint >::= 與 \< table_constraint>::=**
 
 定義指定之資料行或資料表的條件約束。 就 CLR 函數而言，唯一允許的條件約束類型是 NULL。 不允許具名條件約束。
 
@@ -495,13 +495,13 @@ ALLOW_PAGE_LOCKS = { **ON** | OFF }：指定是否允許頁面鎖定。 預設�
 
 如果在 CLR 函式中指定參數，這些參數應該是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型，如同先前針對 *scalar_parameter_data_type* 所下的定義。 如需有關比較 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料類型與 CLR 整合資料類型或 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 通用語言執行平台資料類型的詳細資訊，請參閱[對應 CLR 參數資料](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。
 
-若要讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在正確方法於類別中出現多載時參考該正確方法，\<method_specifier> 中所指出的方法必須具有下列特性：
+若要讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在正確方法於類別中出現多載時參考該正確方法，則 \<method_specifier> 中所指出的方法必須具有下列特性：
 
 - 接收的參數數目與 [ ,...*n* ] 中所指定的數目相同。
 - 依值 (而不是依參考) 接收所有參數。
 - 使用與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 函數中指定之類型相容的參數類型。
 
-如果 CLR 函式的傳回資料類型指定資料表類型 (RETURNS TABLE)，則 \<method_specifier> 中方法的傳回資料類型應該屬於 **IEnumerator** 或 **IEnumerable** 類型，且會假設由函式建立者實作介面。 與 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式不同，CLR 函式不能在 \<table_type_definition> 中包含 PRIMARY KEY、UNIQUE 或 CHECK 條件約束。 \<table_type_definition> 中所指定資料行的資料類型必須與 \<method_specifier> 中方法在執行時所傳回的相對應結果集資料行相符。 這項類型檢查作業不會在建立函數時執行。
+若 CLR 函式的傳回資料類型指定資料表類型 (RETURNS TABLE)，則 \<method_specifier> 中方法的傳回資料類型應該屬於 **IEnumerator** 或 **IEnumerable** 類型，且會假設由函式建立者實作介面。 與 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式不同，CLR 函式無法在 \<table_type_definition> 中包含 PRIMARY KEY、UNIQUE 或 CHECK 條件約束。 \<table_type_definition> 中所指定資料行其資料類型必須符合 \<method_specifier> 方法設定在執行時所傳回結果對應資料行的類型。 這項類型檢查作業不會在建立函數時執行。
 
 如需有關如何設計 CLR 函式的詳細資訊，請參閱 [CLR 使用者定義函式](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)。
 

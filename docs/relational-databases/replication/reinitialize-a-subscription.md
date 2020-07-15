@@ -1,5 +1,6 @@
 ---
 title: 重新初始化訂閱 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio、Transact-SQL 或 Replication Management Objects，在 SQL Server 中重新初始化訂閱。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 733e63f6dd01c09fd007a7176721533f7a1c57d3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 76c0c1bfc0542dce7dadc3beb047e16f64959f54
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70846512"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767730"
 ---
 # <a name="reinitialize-a-subscription"></a>重新初始化訂閱
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO) 來重新初始化 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的訂閱。 個別訂閱可標示為要重新初始化，好讓下一次同步處理期間會套用新的快照集。  
   
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "70846512"
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  重新初始化訂閱處理分為兩部份：  
   
-1.  *「標示」* 要重新初始化之發行集的單個或所有訂閱。 在 [重新初始化訂閱]  對話方塊中，標示要重新初始化的訂閱；您可以從   的 [本機發行集]  資料夾和 [本機訂閱][!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 資料夾來存取此對話方塊。 您也可以從「複寫監視器」中的 **[所有訂閱]** 索引標籤和發行集節點中標示訂閱。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。 當您要標示訂閱進行重新初始化時，可用的選項如下：  
+1.  *「標示」* 要重新初始化之發行集的單個或所有訂閱。 在 [重新初始化訂閱] 對話方塊中，標示要重新初始化的訂閱；您可以從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [本機發行集] 資料夾和 [本機訂閱] 資料夾來存取此對話方塊。 您也可以從「複寫監視器」中的 **[所有訂閱]** 索引標籤和發行集節點中標示訂閱。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。 當您要標示訂閱進行重新初始化時，可用的選項如下：  
   
      **使用目前的快照集**  
      選取即可將目前的快照集套用至散發代理程式或合併代理程式下一次將執行的訂閱者。 如果沒有任何有效的快照集可以使用，則不可以選取此選項。  

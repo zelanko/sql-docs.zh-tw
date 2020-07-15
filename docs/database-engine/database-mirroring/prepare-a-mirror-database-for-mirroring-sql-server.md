@@ -1,6 +1,6 @@
 ---
 title: 準備資料庫以進行鏡像
-description: 了解如何準備 SQL Server 資料庫，進行資料庫鏡像。
+description: 了解如何在 SQL Server 中使用 SQL Server Management Studio 或 Transact-SQL，準備 SQL Server 資料庫以進行資料庫鏡像。
 ms.custom: seo-lt-2019
 ms.date: 11/10/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f93ea5a9b37abcfac0310619b971e3ec5f1e625f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 74cd9b60e38fb011360bbfc678ccd49509531b59
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75255984"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735241"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>準備鏡像資料庫以進行鏡像 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   資料庫擁有者或系統管理員必須確認鏡像資料庫已經建立且做好鏡像的準備，才能啟動資料庫鏡像工作階段。 建立新的鏡像資料庫時，最少需要建立主體資料庫的完整備份，以及一個後續記錄備份，並使用 WITH NORECOVERY 將這兩者同時還原到鏡像伺服器執行個體。  
   
  此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中準備鏡像資料庫。  

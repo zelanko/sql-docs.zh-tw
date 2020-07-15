@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3ac40457-7529-4eda-95a4-5247345cc8cf
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b7bb0f690305320f5ae0f5d4ecdeb8f59b33cb01
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: be8be48997be82e3781df5d4f569e8fd4c90237e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68114853"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902267"
 ---
 # <a name="deny-endpoint-permissions-transact-sql"></a>DENY 端點權限 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   拒絕端點的權限。  
 
@@ -34,7 +34,7 @@ ms.locfileid: "68114853"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name  
     TO < server_principal >  [ ,...n ]  
     [ CASCADE ]  
@@ -54,7 +54,7 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
  ON ENDPOINT **::** _endpoint_name_  
  指定要拒絕其權限的端點。 範圍限定詞 ( **::** ) 是必要項。  
   
- TO \<server_principal>  
+ 到 \<server_principal>  
  指定要拒絕其權限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。  
   
  *SQL_Server_login*  

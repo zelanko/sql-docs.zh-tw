@@ -4,7 +4,7 @@ TOCTitle: Latest updates for Microsoft SQL Server
 ms:assetid: 0d1835fd-2b44-47cf-8f90-305ca14b7823
 ms:mtpsurl: https://technet.microsoft.com/library/Ff803383(v=MSDN.10)
 ms:contentKeyID: 31804705
-ms.date: 2/13/2020
+ms.date: 06/22/2020
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
@@ -12,12 +12,12 @@ author: tmichael-ms
 ms.author: tmichael
 ms.reviewer: hristins
 mtps_version: v=MSDN.10
-ms.openlocfilehash: c5a6c25db072de12c5f011e33bda8017b6d5658a
-ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
+ms.openlocfilehash: 616612742861ceb9ef6a99d0cdc955df3b3f9f6a
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80873124"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834819"
 ---
 # <a name="latest-updates-for-microsoft-sql-server"></a>適用於 Microsoft SQL Server 的最新更新
 
@@ -31,13 +31,13 @@ ms.locfileid: "80873124"
 
 ## <a name="latest-updates"></a>最新的更新
 
-每個連結都提供有關此頁面之 [適用於]  區段中所有適用產品與技術的資訊。
+每個連結都提供有關此頁面之 [適用於] 區段中所有適用產品與技術的資訊。
 
 |產品版本   | 最新的 Service Pack |  最新的 GDR | 最新的累積更新 | CU 發行日期 | 一般指導方針  |
 |--|--|--|--|--|--|
-|SQL Server 2019|N/A|[KB 4517790](https://support.microsoft.com/help/4517790)|CU 4 [(KB 4548597)](https://support.microsoft.com/help/4548597)|3/31/2020|[SQL Server 2019 安裝](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server)|
-|SQL Server 2017|N/A|[KB 4505224](https://support.microsoft.com/help/4505224)|CU 20 [(KB 4541283)](https://support.microsoft.com/help/4541283)|2/5/2020|[SQL Server 2017 安裝](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server)|
-|SQL Server 2016|SP2 [(KB 4052908)](https://support.microsoft.com/help/4052908)|[KB 4532097](https://support.microsoft.com/help/4532097)|CU 12 [(KB 4536648)](https://support.microsoft.com/kb/4536648)|2/25/2020|[SQL Server 2016 安裝](https://technet.microsoft.com/library/bb500469.aspx)|
+|SQL Server 2019|N/A|[KB 4517790](https://support.microsoft.com/help/4517790)|CU 5 [(KB 4552255)](https://support.microsoft.com/help/4552255)|2020/6/22|[SQL Server 2019 安裝](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server)|
+|SQL Server 2017|N/A|[KB 4505224](https://support.microsoft.com/help/4505224)|CU 21 [(KB 4557397)](https://support.microsoft.com/help/4557397)|7/1/2020|[SQL Server 2017 安裝](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server)|
+|SQL Server 2016|SP2 [(KB 4052908)](https://support.microsoft.com/help/4052908)|[KB 4532097](https://support.microsoft.com/help/4532097)|CU 13 [(KB 4549825)](https://support.microsoft.com/kb/4549825)|5/28/2020|[SQL Server 2016 安裝](https://technet.microsoft.com/library/bb500469.aspx)|
 |SQL Server 2016|SP1 [(KB 3182545)](https://support.microsoft.com/help/3182545/sql-server-2016-service-pack-1-release-information)|[KB 4505219](https://support.microsoft.com/help/4505219)|CU 15 + GDR [(KB 4505221)](https://support.microsoft.com/help/4505221)|2019/7/9|[SQL Server 2016 安裝](https://technet.microsoft.com/library/bb500469.aspx)|
 |SQL Server 2016|N/A|[KB4058560](https://support.microsoft.com/help/4058560)|CU 9 [(KB 4058559)](https://support.microsoft.com/help/4058559)|2017/11/22|[SQL Server 2016 安裝](https://technet.microsoft.com/library/bb500469.aspx)|
 |SQL Server 2014|SP3 [(KB 4022619)](https://support.microsoft.com/kb/4022619)|[KB 4532095](https://support.microsoft.com/help/4532095)|CU 4 [(KB 4535288)](https://support.microsoft.com/kb/4535288)|2/11/2020|[SQL Server 2014 安裝](https://technet.microsoft.com/library/cc281837(v=sql.120).aspx)|
@@ -56,6 +56,8 @@ ms.locfileid: "80873124"
 |SQL Server 2000|SP4 [(KB 290211)](https://support.microsoft.com/kb/290211)|N/A|N/A|N/A|[SQL Server 2000 安裝](https://technet.microsoft.com/library/aa197941(sql.80).aspx)|
 
 **了解如何測試更新：**  [測試及開發 ISV 應用程式的支援能力藍圖 (PDF)](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/85/48/Files/0827.Testing%20And%20Developing%20Supportability%20Roadmaps%20for%20ISV%20Applications.pdf)
+
+[!INCLUDE [sql-server-servicing-updates-version-15](../../includes/sql-server-servicing-updates-version-15.md)]
 
 ### <a name="knowledge-base"></a>知識庫
 

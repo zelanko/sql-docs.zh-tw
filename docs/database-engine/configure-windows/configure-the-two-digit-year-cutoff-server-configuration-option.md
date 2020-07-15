@@ -1,5 +1,6 @@
 ---
-title: 設定 two digit year cutoff 伺服器組態選項 | Microsoft Docs
+title: 設定兩位數年份截止伺服器組態選項 | Microsoft Docs
+description: 更加了解「兩位數年份截止」選項。 了解此選項如何判斷 SQL Server 將兩位數年份轉譯成四位數年份。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - two digit year cutoff option
 - four-digit years [SQL Server]
 ms.assetid: d94e81b6-f2e6-47ef-b497-ec3d827a1646
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2c33209236b866816ce1c597ab5cfe1a8971d976
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8aa50fbd2eaa934c13704dc218084655c0f0f089
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012277"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764036"
 ---
 # <a name="configure-the-two-digit-year-cutoff-server-configuration-option"></a>設定 two digit year cutoff 伺服器組態選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] two digit year cutoff [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **two digit year cutoff** 選項會指定從 1753 到 9999 之間的整數，以代表將兩位數年份解譯為四位數年份時的截止年份 (Cutoff Year)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預設時間範圍為 1950-2049，代表截止年份為 2049。 這表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動把兩位數字年份 49 解譯為 2049，兩位數字年份 50 解譯為 1950，兩位數字年份 99 解譯為 1999。 若要維持回溯相容性，請保留預設值。  
   
@@ -35,7 +36,7 @@ ms.locfileid: "68012277"
   
 -   **使用下列方法設定 two digit year cutoff 選項：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -60,11 +61,11 @@ ms.locfileid: "68012277"
   
 #### <a name="to-configure-the-two-digit-year-cutoff-option"></a>若要設定 two digit year cutoff 選項  
   
-1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]  。  
+1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
   
 2.  按一下 **[其他伺服器設定]** 節點。  
   
-3.  在 [Two digit year support (兩位數年份支援)]  下的 [當輸入兩位數年份時，解譯為下列之間的年份]   方塊中，輸入或選取一個值作為時間範圍的結束年份。  
+3.  在 [Two digit year support (兩位數年份支援)] 下的 [當輸入兩位數年份時，解譯為下列之間的年份]  方塊中，輸入或選取一個值作為時間範圍的結束年份。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5e8523831fd181c17bd8fcff1698d85f46c824e2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c9759a56800cd03c107fb9f578e9af2dbe86d1d5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73983321"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760937"
 ---
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   修改 CREATE TRIGGER 陳述式先前所建立之 DML、DDL 或登入觸發程序的定義。 觸發程序是使用 CREATE TRIGGER 建立的。 您可以直接從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式建立觸發程序，也可以使用在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 通用語言執行平台 (CLR) 中建立的組件方法來建立觸發程序，並將其上傳到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 如需用於 ALTER TRIGGER 陳述式的參數詳細資訊，請參閱 [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "73983321"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 -- SQL Server Syntax  
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)  
 
@@ -107,7 +107,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >
     assembly_name.class_name.method_name  
 ```  
   
-```  
+```syntaxsql
 -- Azure SQL Database Syntax   
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)   
   

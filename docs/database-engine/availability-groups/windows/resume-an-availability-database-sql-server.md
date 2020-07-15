@@ -1,6 +1,6 @@
 ---
 title: 繼續可用性群組資料庫
-description: 使用 SQL Server Management Studio (SSMS)、Transact-SQL (T-SQL) 或 SQL PowerShell 將在 Always On 可用性群組內暫停的資料庫繼續的步驟。
+description: 使用 SQL Server 中的 SQL Server Management Studio、Transact-SQL 或 PowerShell，在 Always On 可用性群組中繼續暫止的可用性資料庫。
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 64a0bf6fff2869834f30a9e0e7a6694088550c8e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c8e44e677210316a74f44d8300ad0e10d8feece9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822599"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893118"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>繼續可用性資料庫 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   您可以使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]的 PowerShell，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中繼續暫停的可用性資料庫。 繼續暫停的資料庫會使資料庫處於 SYNCHRONIZING 狀態。 繼續主要資料庫也會繼續因為暫停主要資料庫而暫停的任何次要資料庫。 如果在本機 (從裝載次要複本的伺服器執行個體) 暫停任何次要資料庫，該次要資料庫必須在本機繼續。 給定的次要資料庫與對應的主要資料庫都處於 SYNCHRONIZING 狀態之後，資料同步處理就會在次要資料庫上繼續。  
   
 > [!NOTE]  
@@ -53,11 +53,11 @@ ms.locfileid: "74822599"
   
 1.  在 [物件總管] 中，連接到裝載您要繼續資料庫之可用性複本的伺服器執行個體，然後展開伺服器樹狀目錄。  
   
-2.  依序展開 [Always On 高可用性]  節點和 [可用性群組]  節點。  
+2.  依序展開 [Always On 高可用性] 節點和 [可用性群組] 節點。  
   
 3.  展開可用性群組。  
   
-4.  展開 [可用性資料庫]  節點、以滑鼠右鍵按一下資料庫，然後按一下 [繼續進行資料移動]  。  
+4.  展開 [可用性資料庫] 節點、以滑鼠右鍵按一下資料庫，然後按一下 [繼續進行資料移動]。  
   
 5.  在 **[繼續進行資料移動]** 對話方塊中，按一下 **[確定]** 。  
   

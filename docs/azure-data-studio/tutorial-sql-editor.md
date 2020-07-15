@@ -1,23 +1,22 @@
 ---
 title: 使用 Transact-SQL 編輯器建立資料庫物件
-titleSuffix: Azure Data Studio
 description: 本教學課程示範 Azure Data Studio 中簡化 T-SQL 使用的主要功能。
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: 65f078c16080f9ae54563acb5bd21c50d2036057
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b8e5bd6cb986601baf97a02a3f167432e0c29b95
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957032"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726744"
 ---
-# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---name-sos"></a>教學課程：使用 Transact-SQL 編輯器建立資料庫物件 - [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---azure-data-studio"></a>教學課程：使用 Transact-SQL 編輯器建立資料庫物件 - Azure Data Studio
 
 建立和執行查詢、預存程序、指令碼等是資料庫專業人員的核心工作。 本教學課程示範 T-SQL 編輯器中用來建立資料庫物件的主要功能。
 
@@ -26,10 +25,10 @@ ms.locfileid: "74957032"
 > * 搜尋資料庫物件
 > * 編輯資料表資料 
 > * 使用程式碼片段快速撰寫 T-SQL
-> * 使用 [查看定義]  和 [移至定義]  ，檢視資料庫物件詳細資料
+> * 使用 [查看定義] 和 [移至定義]，檢視資料庫物件詳細資料
 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。 若要建立 *TutorialDB* 資料庫，請完成下列任一項快速入門：
 
@@ -39,28 +38,28 @@ ms.locfileid: "74957032"
 
 ## <a name="quickly-locate-a-database-object-and-perform-a-common-task"></a>快速尋找資料庫物件並執行常見工作
 
-[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 提供搜尋小工具，快速尋找資料庫物件。 結果清單提供與所選物件相關的常見工作操作功能表，例如對資料表 [編輯資料]  。
+[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 提供搜尋小工具，快速尋找資料庫物件。 結果清單提供與所選物件相關的常見工作操作功能表，例如對資料表 [編輯資料]。
 
-1. 開啟 [伺服器] 提要欄位 (**Ctrl+G**)，展開 [資料庫]  ，然後選取 [TutorialDB]  。 
+1. 開啟 [伺服器] 提要欄位 (**Ctrl+G**)，展開 [資料庫]，然後選取 [TutorialDB]。 
 
-1. 以滑鼠右鍵按一下 [TutorialDB]  ，然後從操作功能表選取 [管理]  ，開啟 [TutorialDB 儀表板]  ：
+1. 以滑鼠右鍵按一下 [TutorialDB]，然後從操作功能表選取 [管理]，開啟 [TutorialDB 儀表板]：
 
    ![操作功能表 - 管理](./media/tutorial-sql-editor/insight-open-dashboard.png)
 
-1. 在儀表板上，以滑鼠右鍵按一下 [dbo.Customers]  (在搜尋小工具中)，然後選取 [編輯資料]  。
+1. 在儀表板上，以滑鼠右鍵按一下 [dbo.Customers] (在搜尋小工具中)，然後選取 [編輯資料]。
    
    > [!TIP]
    > 對於具有許多物件的資料庫，使用搜尋小工具可快速找出您要尋找的資料表、檢視等。
 
    ![快速搜尋小工具](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. 編輯第一個資料列中的 [電子郵件]  資料行，輸入 *orlando0\@adventure-works.com*，然後按 **Enter** 儲存變更。
+1. 編輯第一個資料列中的 [電子郵件] 資料行，輸入 *orlando0\@adventure-works.com*，然後按 **Enter** 儲存變更。
 
    ![編輯資料](./media/tutorial-sql-editor/edit-data.png)
 
 ## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>使用 T-SQL 程式碼片段建立預存程序
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 提供許多內建的 T-SQL 程式碼片段，用來快速建立陳述式。
+Azure Data Studio 提供許多內建的 T-SQL 程式碼片段，其用來快速建立陳述式。
 
 
 1. 按 **Ctrl+N** 開啟新的查詢編輯器。
@@ -69,7 +68,7 @@ ms.locfileid: "74957032"
 
    ![程式碼片段清單](./media/tutorial-sql-editor/snippet-list.png)
 
-3. 建立預存程序程式碼片段已設定兩個可快速編輯的欄位：[StoredProcedureName]  和 [SchemaName]  。 選取 [StoredProcedureName]  ，按一下滑鼠右鍵並選取 [變更所有發生次數]  。 現在鍵入 *getCustomer*，所有的 *StoredProcedureName* 項目都會變更為 *getCustomer*。
+3. 建立預存程序程式碼片段已設定兩個可快速編輯的欄位：[StoredProcedureName] 和 [SchemaName]。 選取 [StoredProcedureName]，按一下滑鼠右鍵並選取 [變更所有發生次數]。 現在鍵入 *getCustomer*，所有的 *StoredProcedureName* 項目都會變更為 *getCustomer*。
 
    ![程式碼片段](./media/tutorial-sql-editor/snippet.png)
 
@@ -109,17 +108,17 @@ ms.locfileid: "74957032"
     
 5. 若要建立預存程序並進行測試回合，請按 **F5**。
 
-現在已建立預存程序，且 [結果]  窗格會以 JSON 顯示傳回的客戶。 若要查看格式化的 JSON，請按一下傳回的記錄。 
+現在已建立預存程序，且 [結果] 窗格會以 JSON 顯示傳回的客戶。 若要查看格式化的 JSON，請按一下傳回的記錄。 
 
 
 ## <a name="use-peek-definition"></a>使用查看定義 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 可讓您使用 [查看定義] 功能，檢視物件定義。 此區段會建立第二個預存程序，並使用 [查看定義] 查看資料表中有哪些資料行，以便快速建立預存程序的主體。
+Azure Data Studio 可供使用查看定義功能來檢視物件定義。 此區段會建立第二個預存程序，並使用 [查看定義] 查看資料表中有哪些資料行，以便快速建立預存程序的主體。
 
 1. 按 **Ctrl+N** 開啟新的編輯器。 
 
 2. 在編輯器中鍵入 *sql*，按向下鍵到 *sqlCreateStoredProcedure*，然後按 *Tab* 鍵 (或 *Enter*) 載入建立預存程序程式碼片段。
-3. 在 [StoredProcedureName]  鍵入 *setCustomer*，並在 [SchemaName]  鍵入 *dbo*
+3. 在 [StoredProcedureName] 鍵入 *setCustomer*，並在 [SchemaName] 鍵入 *dbo*
 
 3. 將 @param 預留位置取代為下列參數定義：
 
@@ -132,7 +131,7 @@ ms.locfileid: "74957032"
    INSERT INTO dbo.Customers
    ```
 
-5. 在您剛才新增的 *INSERT* 行中，以滑鼠右鍵按一下 [dbo.Customers]  ，然後選取 [查看定義]  。
+5. 在您剛才新增的 *INSERT* 行中，以滑鼠右鍵按一下 [dbo.Customers]，然後選取 [查看定義]。
 
    ![查看定義](./media/tutorial-sql-editor/peek-definition.png)
 
@@ -184,10 +183,10 @@ ms.locfileid: "74957032"
 
 在上一節中建立的 *setCustomer* 預存程序需要將 JSON 資料傳遞至 tion requires JSON data be passed into the *\@json_val* 參數。 本節說明如何取得一些格式正確的 JSON 並傳遞至參數，讓我們可以測試預存程序。
 
-1. 在 [伺服器]  提要欄位中，以滑鼠右鍵按一下 [dbo.Customers]  資料表，然後按一下 [SELECT TOP 1000 Rows] \(選取前 1000 個資料列\)  。
+1. 在 [伺服器] 提要欄位中，以滑鼠右鍵按一下 [dbo.Customers] 資料表，然後按一下 [SELECT TOP 1000 Rows] \(選取前 1000 個資料列\)。
 
-2. 選取結果檢視中的第一個資料列，確認已選取整個資料列 (按一下最左方資料行中的數字 1)，然後選取 [另存為 JSON]  。  
-3. 將資料夾變更為您記得的位置，讓您可以在稍後刪除檔案 (例如桌面)，然後按一下 [儲存]  。 JSON 格式的檔案隨即開啟。
+2. 選取結果檢視中的第一個資料列，確認已選取整個資料列 (按一下最左方資料行中的數字 1)，然後選取 [另存為 JSON]。  
+3. 將資料夾變更為您記得的位置，讓您可以在稍後刪除檔案 (例如桌面)，然後按一下 [儲存]。 JSON 格式的檔案隨即開啟。
 
    ![另存為 JSON](./media/tutorial-sql-editor/save-as-json.png)
 

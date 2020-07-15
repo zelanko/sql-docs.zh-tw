@@ -30,19 +30,19 @@ helpviewer_keywords:
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 12d392c73d1e68bee57bb0a534bd65d39e48946d
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: fc69b2a0615745966971ad83da2b0acadf3b2488
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262154"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773149"
 ---
 # <a name="use-sql-server-objects"></a>使用 SQL Server 物件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所提供的物件與計數器，可供「系統監視器」用來對執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的電腦監視其中的活動。 物件可以是任何一種 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 鎖定或 Windows 處理序。 每個物件都包含一個或多個計數器，可決定欲監視之物件的不同層面。 例如， **SQL Server Locks** 物件包含了稱為 **Number of Deadlocks/sec** 與 **Lock Timeouts/sec**的計數器。  
   
- 若給定類型的多個資源存在於電腦內，一些物件將擁有多個執行個體。 例如，若系統擁有多個處理器， **Processor** 物件類型將擁有多個執行個體。 **Databases** 物件類型對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的每個資料庫都擁有一個執行個體。 有些物件類型 (例如 **Memory Manager** 物件) 則只有一個執行個體。 若物件擁有多個執行個體，您可增加計數器來追蹤每個執行個體的統計資料，在許多狀況下，則可同時追蹤所有的執行個體。 預設執行個體的計數器會以 **SQLServer:** \<物件名稱>  格式顯示。 具名執行個體的計數器會以 **MSSQL$** \<執行個體名稱>  **:** \<計數器名稱>  或 **SQLAgent$** \<執行個體名稱>  **:** \<計數器名稱>  格式顯示。  
+ 若給定類型的多個資源存在於電腦內，一些物件將擁有多個執行個體。 例如，若系統擁有多個處理器， **Processor** 物件類型將擁有多個執行個體。 **Databases** 物件類型對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的每個資料庫都擁有一個執行個體。 有些物件類型 (例如 **Memory Manager** 物件) 則只有一個執行個體。 若物件擁有多個執行個體，您可增加計數器來追蹤每個執行個體的統計資料，在許多狀況下，則可同時追蹤所有的執行個體。 預設執行個體的計數器會以 **SQLServer:** _\<object name>_ 格式顯示。 具名執行個體的計數器會以 **MSSQL$:** _\<instance name>_  _\<counter name>_ 或 **SQLAgent$** _\<instance name>_  _\<counter name>_ 格式顯示。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 效能計數器值是使用 Windows 效能計數器 (WPC) 引擎所產生。 某些計數器值不會直接由 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 計算。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會為 WPC 引擎提供基底值，該引擎會執行所需的計算 (例如百分比)。 [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) 動態管理檢視會提供具有由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所產生原始值的所有計數器。 `cntr_type` 資料行會指出計數器的類型。 WPC 引擎處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 計數器值的方式取決於此類型。 如需效能計數器類型的詳細資訊，請參閱 [WMI 文件](https://docs.microsoft.com/windows/win32/wmisdk/wmi-performance-counter-types)。
   
@@ -138,7 +138,7 @@ ms.locfileid: "82262154"
  如需 **SSIS Pipeline** 計數器的相關資訊，請參閱 [效能計數器](../../integration-services/performance/performance-counters.md)。  
   
 ##  <a name="required-permissions"></a><a name="RequiredPermissions"></a> 必要權限  
- 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件時必須具備 Windows 權限，[SQLAgent:Alerts]  除外。 使用者必須是**系統管理員**固定伺服器角色的成員，才能使用 [SQLAgent:Alerts]  。  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件時必須具備 Windows 權限，[SQLAgent:Alerts] 除外。 使用者必須是**系統管理員**固定伺服器角色的成員，才能使用 [SQLAgent:Alerts]。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用效能物件](../../ssms/agent/use-performance-objects.md)   

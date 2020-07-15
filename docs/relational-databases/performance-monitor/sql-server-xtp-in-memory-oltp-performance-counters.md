@@ -10,23 +10,23 @@ ms.topic: conceptual
 ms.assetid: fe3cbaf4-65f4-44c5-acc6-7b735cda0c5d
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f963d8d7fe186d889856c108de1541110beb16a3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 84d07784cbd167f036cfe4540faf93784ba762cd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165516"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715235"
 ---
 # <a name="sql-server-xtp-in-memory-oltp-performance-counters"></a>SQL Server XTP (記憶體中 OLTP) 效能計數器
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供物件和計數器，可供效能監視器用來監視記憶體中 OLTP 活動。 從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開始，電腦上所有指定版本的 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]執行個體之間都可共用物件和計數器。  
   
  物件和計數器名稱以前都是以 *XTP*開頭，如 **XTP 資料指標**。 現在都以 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]開頭，名稱格式如下︰  
   
--   **SQL Server** *\<版本>* **XTP 資料指標**  
+-   **SQL Server** *\<version>* **XTP 資料指標**  
   
- *\<版本>* 的值會是諸如 2016 之類。  
+ *\<version>* 的值會是如 2016 之類。  
   
 ##  <a name="sql-server-xtp-performance-objects"></a><a name="SQLServerPOs"></a> SQL Server XTP 效能物件  
  下表說明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 效能物件。  

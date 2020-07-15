@@ -1,5 +1,6 @@
 ---
 title: 高可用性 - 記憶體內部 OLTP 資料庫
+description: 不論是否具有原生編譯的預存程序，具有經記憶體最佳化資料表的資料庫皆可完整支援 Always On 可用性群組。
 ms.custom: seo-dt-2019
 ms.date: 08/31/2016
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dd467c8f6d942f53dade5ec6bb7d46ae9f39bdd9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d411bff221ed82f1d31252aa2530efcef68a614a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412665"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723211"
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>記憶體內部 OLTP 資料庫的高可用性支援
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   不論是否具有原生編譯的預存程序，包含記憶體最佳化資料表的資料庫皆可完整支援 AlwaysOn 可用性群組。  設定中並沒有任何差異，但與不含的情況相比，包含原生編譯的預存程序還支援包含 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 物件的資料庫。  
   
  在 AlwaysOn 可用性群組組態中部署記憶體內部 OLTP 資料庫時，主要複本上記憶體最佳化資料表的變更會以記憶體內部方式套用至次要複本上的資料表 (套用 REDO 時)。 這表示容錯移轉至次要複本可能會非常快速，因為資料已在記憶體中。 此外，資料表可供已設定讀取權限之次要複本上的查詢使用。  
@@ -50,7 +51,7 @@ ms.locfileid: "74412665"
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組 (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [使用中次要：可讀取的次要複本 (AlwaysOn 可用性群組)](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [使用中次要：可讀取的次要複本 (Always On 可用性群組)](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [複寫至記憶體最佳化資料表訂閱者](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md)  
   
   

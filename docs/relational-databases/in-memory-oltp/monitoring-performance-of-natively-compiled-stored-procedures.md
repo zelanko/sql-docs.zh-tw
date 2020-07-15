@@ -1,5 +1,6 @@
 ---
 title: 監視原生編譯預存程序的效能
+description: 了解如何監視原生編譯預存程序和其他原生編譯 T-SQL 模組的效能。
 ms.custom: seo-dt-2019
 ms.date: 04/03/2018
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b1970c5953373c500f85e82281a69be1d46f1be0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 38de30346d867d67770ce9b988d986f5f886c8fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78180057"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722458"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>監視原生編譯預存程序的效能
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   本文討論如何監視原生編譯預存程序和其他原生編譯 T-SQL 模組的效能。  
   
 ## <a name="using-extended-events"></a>使用擴充的事件  
@@ -42,12 +43,12 @@ SELECT [definition]
 
 ## <a name="procedure-level-execution-statistics"></a>程序層級執行統計資料
 
-**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** ：使用 [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md) 在程序層級啟用和停用原生編譯預存程序的統計資料收集。  下列陳述式可以在目前的執行個體上啟用所有原生編譯 T-SQL 模組的程序層級執行統計資料收集：
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** ：使用 [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md) 在程序層級啟用或停用原生編譯預存程序的統計資料收集。  下列陳述式可以在目前的執行個體上啟用所有原生編譯 T-SQL 模組的程序層級執行統計資料收集：
 ```sql
 EXEC sys.sp_xtp_control_proc_exec_stats 1
 ```
 
-**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** ：使用 [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 選項 `XTP_PROCEDURE_EXECUTION_STATISTICS` 來啟用或停用原生編譯預存程序的程序層級統計資料收集。 下列陳述式可以在目前的資料庫上啟用所有原生編譯 T-SQL 模組的程序層級執行統計資料收集：
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** ：使用 [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 選項 `XTP_PROCEDURE_EXECUTION_STATISTICS` 來在程序層級啟用或停用原生編譯預存程序的統計資料收集。 下列陳述式可以在目前的資料庫上啟用所有原生編譯 T-SQL 模組的程序層級執行統計資料收集：
 ```sql
 ALTER DATABASE
     SCOPED CONFIGURATION
@@ -61,7 +62,7 @@ ALTER DATABASE
 EXEC sys.sp_xtp_control_query_exec_stats 1
 ```
 
-**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** ：使用 [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 選項 `XTP_QUERY_EXECUTION_STATISTICS` 啟用或停用原生編譯預存程序的陳述式層級統計資料收集。 下列陳述式可以在目前的資料庫上啟用所有原生編譯 T-SQL 模組的陳述式層級執行統計資料收集：
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** ：使用 [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 選項 `XTP_QUERY_EXECUTION_STATISTICS` 在陳述式層級啟用或停用原生編譯預存程序的統計資料收集。 下列陳述式可以在目前的資料庫上啟用所有原生編譯 T-SQL 模組的陳述式層級執行統計資料收集：
 ```sql
 ALTER DATABASE
     SCOPED CONFIGURATION

@@ -1,5 +1,6 @@
 ---
 title: 記憶體最佳化資料表的交易 | Microsoft 文件
+description: 了解經記憶體最佳化資料表和原生編譯預存程序的交易，以及其與磁碟資料表的交易有何不同。
 ms.custom: ''
 ms.date: 01/16/2018
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c80e52eff233c2d04cb77fb5cf5d85bdac8fe34
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e86e2957a4c9961a5d82d13737a3239deb9a7342
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68081759"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753187"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>記憶體最佳化資料表的交易
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 本文說明記憶體最佳化資料表和原生編譯預存程序特定的所有交易層面。  
   
@@ -114,17 +115,17 @@ ALTER DATABASE CURRENT
   
 後面接著階段描述。  
   
-#### <a name="regular-processing-phase-1-of-3"></a>一般處理：階段 1 (之 3)  
+#### <a name="regular-processing-phase-1-of-3"></a>正常處理：階段 1 (共 3 個)  
   
 - 這個階段是由查詢中的所有查詢和 DML 陳述式的執行所組成。  
 - 在此階段，陳述式會將記憶體最佳化資料表的版本視為交易的邏輯開始時間。  
   
-#### <a name="validation-phase-2-of-3"></a>驗證：階段 2 (之 3)  
+#### <a name="validation-phase-2-of-3"></a>驗證：階段 2 (共 3 個)  
   
 - 指定結束時間即開始驗證階段，將交易標示為邏輯方面已完成。 完成此作業可讓依賴這筆交易的其他交易看到交易的所有變更。 成功認可此交易前，不允許認可相依的交易。 此外，不允許保留這類相依性的交易將結果集傳回用戶端，以確保用戶端只會看到已成功向資料庫認可的資料。  
 - 這個階段包含可重複的讀取和可序列化的驗證。 針對可重複讀取驗證，會檢查是否有任何交易讀取的資料列在此之後更新。 針對可序列化驗證，會檢查是否已將任何資料列插入此交易掃描的任何資料範圍。 根據 [隔離等級和衝突](#isolation-levels)中的資料表，使用快照集隔離時，都會發生可重複讀取和可序列化驗證，以驗證唯一外部索引鍵條件約束的一致性。  
   
-#### <a name="commit-processing-phase-3-of-3"></a>認可處理：階段 3 (之 3)  
+#### <a name="commit-processing-phase-3-of-3"></a>認可處理：階段 3 (共 3 個)  
   
 - 在認可階段，耐久資料表的變更會寫入記錄中，而記錄會寫入磁碟中。 控制項接著會傳回用戶端。  
 - 認可處理完成之後，所有相依的交易都會收到進行認可通知。  

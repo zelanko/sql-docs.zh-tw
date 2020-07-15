@@ -1,5 +1,6 @@
 ---
 title: 安裝 SQL Server 服務更新 | Microsoft Docs
+description: 本文提供在新安裝期間或安裝 SQL Server 後，安裝 SQL Server 更新的資訊。
 ms.custom: ''
 ms.date: 09/05/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7d88350f00b90156cd1e33a4d816ae649cc6910f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5067ed61243e777cd2d0a4f9fab76830f6207a6e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67990941"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899686"
 ---
 # <a name="install-sql-server-servicing-updates"></a>安裝 SQL Server 服務更新
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 本文提供安裝 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 更新的資訊。 本節提供下列作業的相關資訊：
   

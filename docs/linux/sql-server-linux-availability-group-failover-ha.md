@@ -1,26 +1,26 @@
 ---
 title: 管理可用性群組容錯移轉 - Linux 上的 SQL Server
 description: 本文描述容錯移轉的類型：自動、規劃的手動容錯移轉，以及強制手動容錯移轉。 自動及規劃的手動容錯移轉會保留所有資料。
-author: MikeRayMSFT
-ms.author: mikeray
+author: tejasaks
+ms.author: tejasaks
 ms.reviewer: vanto
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 635c567722fd5744aa56a16a6f48e8c4284f8ba8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 60dbfed32581a7646da590004c839fc7cf3d316f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216847"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892307"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Linux 上的 Always On 可用性群組容錯移轉
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-在可用性群組 (AG) 的內容中，可用性複本主要角色和次要角色在稱為容錯移轉的程序中通常可以互換。 容錯移轉共有三種形式，包括自動容錯移轉 (不會遺失資料)、規劃的手動容錯移轉 (不會遺失資料)，以及強制手動容錯移轉 (可能會遺失資料)，這種形式通常稱為「強制容錯移轉」  。 自動及經過規劃的手動容錯移轉會保留所有資料。 AG 會在可用性複本層級容錯移轉。 亦即 AG 會容錯移轉至其中一個次要複本 (目前的容錯移轉目標)。 
+在可用性群組 (AG) 的內容中，可用性複本主要角色和次要角色在稱為容錯移轉的程序中通常可以互換。 容錯移轉共有三種形式，包括自動容錯移轉 (不會遺失資料)、規劃的手動容錯移轉 (不會遺失資料)，以及強制手動容錯移轉 (可能會遺失資料)，這種形式通常稱為「強制容錯移轉」。 自動及經過規劃的手動容錯移轉會保留所有資料。 AG 會在可用性複本層級容錯移轉。 亦即 AG 會容錯移轉至其中一個次要複本 (目前的容錯移轉目標)。 
 
 如需容錯移轉的背景資訊，請參閱[容錯移轉與容錯移轉模式](../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)。
 
@@ -81,14 +81,29 @@ ms.locfileid: "80216847"
 因手動容錯移轉而建立的條件約束範例。 
  `Enabled on: Node1 (score:INFINITY) (role: Master) (id:cli-prefer-ag_cluster-master)`
 
+   > [!NOTE]
+   > Red Hat Enterprise Linux 8.x 和 Ubuntu 18.04 上 Pacemaker 叢集的 AG 資源名稱可能類似於 *ag_cluster-clone*，因為資源的相關命名法已演變為使用「可提升複本」。 
+
 - **RHEL/Ubuntu 範例**
 
    在下列命令中，`cli-prefer-ag_cluster-master` 是需要移除的條件約束識別碼。 `sudo pcs constraint list --full` 會傳回此識別碼。 
    
    ```bash
+   sudo pcs resource clear ag_cluster-master  
+   ```
+   Or
+   
+   ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  
    ```
-   
+  
+   或者，您也可以在單一行中移動和清除自動產生的條件約束，如下所示。 下列範例會根據 Red Hat Enterprise Linux 8.x 使用 *clone* 術語。 
+  
+   ```bash
+   sudo pcs resource move ag_cluster-clone --master nodeName2 && sleep 30 && sudo pcs resource clear ag_cluster-clone
+
+   ```
+  
 - **SLES 範例**
 
    在下列命令中，`cli-prefer-ms-ag_cluster` 是條件約束的識別碼。 `crm config show` 會傳回此識別碼。 
@@ -162,7 +177,7 @@ ms.locfileid: "80216847"
 
 ## <a name="database-level-monitoring-and-failover-trigger"></a>資料庫層級監視和容錯移轉觸發程序
 
-針對 `CLUSTER_TYPE=EXTERNAL`，相較於 WSFC，容錯移轉觸發程序的語意會不同。 當 AG 位於 WSFC 的 SQL Server 執行個體上時，從資料庫的 `ONLINE` 狀態轉換會導致 AG 健康狀態回報錯誤。 為了回應，叢集管理員會觸發容錯移轉動作。 在 Linux 上，SQL Server 執行個體無法與叢集通訊。 監視資料庫健康狀態的作業是「由外而內」  進行。 如果使用者選擇進行資料庫層級的容錯移轉監視和容錯移轉 (透過在建立 AG 時設定 `DB_FAILOVER=ON` 選項)，叢集會在每次執行監視動作時，檢查資料庫狀態是否為 `ONLINE`。 叢集會查詢 `sys.databases` 中的狀態。 針對不同於 `ONLINE` 的狀態，它會自動觸發容錯移轉 (如果符合自動容錯移轉條件的話)。 容錯移轉實際時間取決於監視動作的頻率，以及 sys.databases 中所更新的資料庫狀態。
+針對 `CLUSTER_TYPE=EXTERNAL`，相較於 WSFC，容錯移轉觸發程序的語意會不同。 當 AG 位於 WSFC 的 SQL Server 執行個體上時，從資料庫的 `ONLINE` 狀態轉換會導致 AG 健康狀態回報錯誤。 為了回應，叢集管理員會觸發容錯移轉動作。 在 Linux 上，SQL Server 執行個體無法與叢集通訊。 監視資料庫健康狀態的作業是「由外而內」進行。 如果使用者選擇進行資料庫層級的容錯移轉監視和容錯移轉 (透過在建立 AG 時設定 `DB_FAILOVER=ON` 選項)，叢集會在每次執行監視動作時，檢查資料庫狀態是否為 `ONLINE`。 叢集會查詢 `sys.databases` 中的狀態。 針對不同於 `ONLINE` 的狀態，它會自動觸發容錯移轉 (如果符合自動容錯移轉條件的話)。 容錯移轉實際時間取決於監視動作的頻率，以及 sys.databases 中所更新的資料庫狀態。
 
 自動容錯移轉需要至少一個同步複本。
 

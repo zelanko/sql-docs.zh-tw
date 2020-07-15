@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 57d18e823d76e039f93eff8e5c685239686fe505
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c734833e71bcfc0ffb04deb227404b089b78d3cb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634270"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736292"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT - FOR 子句 (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 您可以使用 FOR 子句來為查詢結果指定下列其中一個選項。
   
@@ -225,7 +225,7 @@ _隱藏不想要的分行符號：_ 您可以使用 SQL Server Management Studio
  指出對於 NULL 資料行值而言，不會在 XML 結果中加入對應的 XML 元素。 請只搭配 ELEMENTS 來指定這個選項。  
   
  PATH [ **('** _ElementName_ **')** ]  
- 針對結果集內的每個資料列產生 \<row> 元素包裝函式。 您可以視需要為 \<row> 元素包裝函式指定元素名稱。 如果提供空字串 (例如 FOR XML PATH ( **''** ) )，就不會產生包裝函式元素。 使用 PATH 可能會針對利用 EXPLICIT 指示詞來撰寫的查詢提供較簡單的替代方案。 如需詳細資訊，請參閱 [搭配 FOR XML 使用 PATH 模式](../../relational-databases/xml/use-path-mode-with-for-xml.md)。  
+ 針對結果集內的每個資料列產生 \<row> 元素包裝函式。 您可視需要為 \<row> 元素包裝函式指定元素名稱。 如果提供空字串 (例如 FOR XML PATH ( **''** ) )，就不會產生包裝函式元素。 使用 PATH 可能會針對利用 EXPLICIT 指示詞來撰寫的查詢提供較簡單的替代方案。 如需詳細資訊，請參閱 [搭配 FOR XML 使用 PATH 模式](../../relational-databases/xml/use-path-mode-with-for-xml.md)。  
   
  BINARY BASE64  
  指定查詢用二進位 Base64 編碼格式來傳回二進位資料。 當您利用 RAW 和 EXPLICIT 模式來擷取二進位資料時，您必須指定這個選項。 這是 AUTO 模式的預設值。  

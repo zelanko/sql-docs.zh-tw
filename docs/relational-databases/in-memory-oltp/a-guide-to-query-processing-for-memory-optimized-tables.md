@@ -1,5 +1,6 @@
 ---
 title: 記憶體最佳化資料表的查詢處理
+description: 了解針對 SQL Server 中記憶體內部 OLTP 其記憶體最佳化資料表與原生編譯預存程序的查詢處理。
 ms.custom: seo-dt-2019
 ms.date: 05/09/2019
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8aae0e199fa1e82116baf0164b0d5c11b68e3711
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a6a13f70bfffbdbeba0ba08882c4dcc9b53aaa69
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79112348"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85668877"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>記憶體最佳化資料表的查詢處理指南
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   記憶體中 OLTP 推出記憶體最佳化資料表以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的原生編譯預存程序。 本文針對記憶體最佳化資料表和原生編譯的預存程序提供查詢處理的概觀。  
   
@@ -242,7 +243,7 @@ END
  參數探測不會用於編譯原生編譯的預存程序。 預存程序的所有參數都會視為具有 UNKNOWN 值。 與解譯的預存程序相同，原生編譯的預存程序也支援 **OPTIMIZE FOR** 提示。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>擷取原生編譯預存程序的查詢執行計畫  
- 原生編譯預存程序的查詢執行計畫，可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的 [Estimated Execution Plan (估計的執行計畫)]  或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的 SHOWPLAN_XML 選項加以擷取。 例如：  
+ 原生編譯預存程序的查詢執行計畫，可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的 [Estimated Execution Plan (估計的執行計畫)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的 SHOWPLAN_XML 選項加以擷取。 例如：  
   
 ```sql  
 SET SHOWPLAN_XML ON  

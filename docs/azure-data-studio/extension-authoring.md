@@ -1,25 +1,24 @@
 ---
 title: 建立延伸模組
-titleSuffix: Azure Data Studio
 description: 了解如何建立延伸模組，並將其新增至 Azure Data Studio
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: d0c43df8b24a33f3763dc5ff3a80e989b9b85038
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: adfff7f2aa0fbda1b5e8bdacaddfaef36d16342f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959601"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774628"
 ---
 # <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>藉由建立 Azure Data Studio 延伸模組來擴充功能
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 中的延伸模組提供一種簡單方式，讓您將更多功能新增至基底 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 安裝。
+Azure Data Studio 中的延伸模組提供一種簡單方式，其可將更多功能新增至基底 Azure Data Studio 安裝。
 
 延伸模組是由 Azure Data Studio 小組 (Microsoft) 及協力廠商社群 (您！) 提供。
 
@@ -30,7 +29,7 @@ ms.locfileid: "67959601"
 
 **撰寫延伸模組**
 
-***必要條件***
+***先決條件***
 
 若要開發延伸模組，您需要安裝 node.js，並使其可在 $PATH 中使用。 Node.js 包含 npm，也就是 Node.js 套件管理員，可用來安裝延伸模組產生器。
 
@@ -43,7 +42,7 @@ ms.locfileid: "67959601"
 
 **擴充性參考**
 
-若要了解 Azure Data Studio 擴充性，請參閱[擴充性概觀](extensibility.md)。 您也可以在現有[範例](https://github.com/Microsoft/azuredatastudio/tree/master/samples)中查看如何使用 API 的範例。
+若要了解 Azure Data Studio 擴充性，請參閱[擴充性概觀](extensibility.md)。 您也可以在現有[範例](https://github.com/Microsoft/azuredatastudio/tree/main/samples)中查看如何使用 API 的範例。
 
 
 ## <a name="debug-an-extension"></a>對延伸模組進行偵錯
@@ -53,7 +52,7 @@ ms.locfileid: "67959601"
 步驟
 - 使用 [Visual Studio Code](https://code.visualstudio.com/) 開啟您的延伸模組
 - 安裝 Azure Data Studio Debug 延伸模組
-- 按 **F5** 或按一下偵錯圖示，然後按一下 [啟動]  。
+- 按 **F5** 或按一下偵錯圖示，然後按一下 [啟動]。
 - Azure Data Studio 的新執行個體會以特殊模式 (延伸模組開發主機) 啟動，且這個新執行個體現可識別您的延伸模組。
 
 

@@ -1,5 +1,6 @@
 ---
 title: 將 AUTO_CLOSE 資料庫選項設定為 OFF | Microsoft Docs
+description: 檢查 AUTO_CLOSE 選項是否為關閉。 AUTO_CLOSE 選項會影響 SQL Server 中的效能。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: e6b03364-263a-4ec4-9794-de9869d396ce
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: acadbc6e8834c32983ae366133b2fbd5c96a586e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0dbcc137a97af6d447dafd44c71bdb8181c69577
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68021701"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774203"
 ---
 # <a name="set-the-auto_close-database-option-to-off"></a>將 AUTO_CLOSE 資料庫選項設定為 OFF
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   這個規則會檢查 AUTO_ CLOSE 選項是否設定為 OFF。 當 AUTO_CLOSE 設定為 ON 時，這個選項可能會造成經常存取之資料庫的效能降低，因為在每一個連接之後都會增加開啟和關閉資料庫的負擔。 在每一個連接之後，AUTO_CLOSE 也會排清程序快取。  
   
 ## <a name="best-practices-recommendations"></a>最佳做法建議  

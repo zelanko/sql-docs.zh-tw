@@ -1,5 +1,6 @@
 ---
 title: 建立 XML 資料行檢視 | Microsoft Docs
+description: 了解如何建立一個檢視，在此檢視中使用 XML 資料類型的 value() 方法，擷取 XML 類型資料行中的值。
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -11,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 40c91548b4bf106f938f4bce8298a162937e7ffc
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 5d4a9d8d0aa40f8454a2bd0fd089022630c34ca2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664601"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85691534"
 ---
 # <a name="create-views-over-xml-columns"></a>建立 XML 資料行檢視
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   您可以使用 **xml** 類型的資料行建立檢視。 下列範例會建立一個檢視，而在此檢視中會使用 `xml` xml **資料類型的** value() **方法，擷取** 類型資料行中的值。  
   
 ```  

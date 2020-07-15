@@ -1,5 +1,6 @@
 ---
 title: 密碼原則 | Microsoft Docs
+description: Windows 密碼原則機制適用於使用 SQL Server 驗證的登入，以及適用於具有密碼的自主資料庫使用者。
 ms.custom: ''
 ms.date: 01/16/2019
 ms.prod: sql
@@ -32,16 +33,16 @@ helpviewer_keywords:
 ms.assetid: c0040c0a-a18f-45b9-9c40-0625685649b1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: aa626cb69e22e56e1769d45b2cbfd652c51bc3b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f3bd3bf3de9e70095ed217a160d7f29234a65cea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68010820"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725929"
 ---
 # <a name="password-policy"></a>密碼原則
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以使用 Windows 密碼原則機制。 密碼原則適用於使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入，以及適用於具有密碼的自主資料庫使用者。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可將 Windows 所使用的相同複雜性和到期原則套用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]內部使用的密碼。 這項功能取決於 `NetValidatePasswordPolicy` API。  
@@ -83,7 +84,7 @@ ms.locfileid: "68010820"
   
   - 密碼記錄會使用目前密碼雜湊的值來初始化。  
   
-  - [帳戶鎖定期間]  、[帳戶鎖定閾值]  和 [重設帳戶鎖定計數器的時間]  也會啟用。  
+  - [帳戶鎖定期間]、[帳戶鎖定閾值] 和 [重設帳戶鎖定計數器的時間] 也會啟用。  
   
 - 當 CHECK_POLICY 改為 OFF 時，會發生下列行為：  
   

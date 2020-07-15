@@ -30,15 +30,15 @@ helpviewer_keywords:
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2122954c2ce126441eba6d5d05db69e9a8bfa30e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4b4eb7bcfc5711d041a354f4187e506ee130a0ea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75952442"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706030"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 子句 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   從 INSERT、UPDATE、DELETE 或 MERGE 陳述式所影響的每個資料列傳回資訊，或傳回以 INSERT、UPDATE、DELETE 或 MERGE 陳述式所影響的每個資料列為基礎的運算式。 這些結果可以傳回給負責處理的應用程式，以便用在確認訊息、封存或其他這類應用程式需求等用途上。 這些結果也可以插入資料表或資料表變數中。 此外，您也可以在巢狀 INSERT、UPDATE、DELETE 或 MERGE 陳述式中擷取 OUTPUT 子句的結果，並將這些結果插入目標資料表或檢視中。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "75952442"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 <OUTPUT_CLAUSE> ::=  
 {  
@@ -133,13 +133,13 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- 這是一個明確的資料行參考。 若要參考所要修改的資料表，必須依據適用情況，以 INSERTED 或 DELETED 前置詞正確地限定該參考，例如：INSERTED **.** _column\_name_。  
+ 這是一個明確的資料行參考。 指向正經修改之資料表的任何參考，都必須由 INSERTED 或 DELETED 前置詞來適當地加以限定，例如：INSERTED **.** _column\_name_。  
   
  $action  
- 僅適用於 MERGE 陳述式。 在 MERGE 陳述式的 OUTPUT 子句中指定 **nvarchar(10)** 類型的資料行，此陳述式會針對每個資料列傳回下列三個值其中之一：'INSERT'、'UPDATE' 或 'DELETE' (依據在該資料列上執行的動作而定)。  
+ 僅適用於 MERGE 陳述式。 在 MERGE 陳述式的 OUTPUT 子句中指定類型為 **navchar(10)** 的資料行，傳回每個資料列下列三個值中的其中一個：'INSERT'、'UPDATE' 或 'DELETE'，根據在該資料列執行的動作而定。  
   
 ## <a name="remarks"></a>備註  
- 您可以在單一 INSERT、UPDATE、DELETE 或 MERGE 陳述式中，定義 OUTPUT \<dml_select_list> 子句和 OUTPUT \<dml_select_list> INTO { **\@** _table\_variable_ | _output\_table_ } 子句。  
+ 您可在單一 INSERT、UPDATE、DELETE 或 MERGE 陳述式中，定義 OUTPUT \<dml_select_list> 子句和 OUTPUT \<dml_select_list> INTO { **\@** _table\_variable_ | _output\_table_ } 子句。  
   
 > [!NOTE]  
 >  除非另有指定，否則，指向 OUTPUT 子句的參考會同時參考 OUTPUT 子句和 OUTPUT INTO 子句。  
@@ -201,7 +201,7 @@ DELETE Sales.ShoppingCartItem
   
     -   來源本身不可包含 \<dml_table_source> 子句。  
   
--   OUTPUT INTO 子句不支援含有 \<dml_table_source> 子句的 INSERT 陳述式 。  
+-   OUTPUT INTO 子句不支援含有 \<dml_table_source> 子句的 INSERT 陳述式。  
   
 -   \@\@ROWCOUNT 只會傳回外部 INSERT 陳述式所插入的資料列。  
   
@@ -209,7 +209,7 @@ DELETE Sales.ShoppingCartItem
   
 -   查詢通知會將此陳述式視為單一實體，而且所建立的任何訊息類型都將成為巢狀 DML 的類型，即使重大變更來自外部 INSERT 陳述式本身也一樣。  
   
--   在 \<dml_table_source> 子句中，SELECT 和 WHERE 子句不可包含子查詢、彙總函數、次序函數、全文檢索述詞、執行資料存取的使用者定義函數或 TEXTPTR 函數。  
+-   在 \<dml_table_source> 子句中，SELECT 和 WHERE 子句不可包含子查詢、彙總函式、次序函數、全文檢索述詞、執行資料存取的使用者定義函數或 TEXTPTR 函數。  
 
 ## <a name="parallelism"></a>平行處理原則
  會將結果傳回給用戶端的 OUTPUT 子句一律是使用序列計劃。
@@ -307,7 +307,7 @@ DROP TABLE dbo.table1;
 >  如果您的狀況允許多個應用程式執行單一資料表的破壞性讀取，請在 UPDATE 和 DELETE 陳述式中使用 READPAST 資料表提示。 這可以防止當另一個應用程式已在讀取資料表中第一個符合的記錄時，所可能出現的鎖定問題。  
   
 ## <a name="permissions"></a>權限  
- 在透過 \<dml_select_list> 來擷取或在 \<scalar_expression> 中使用的所有資料行上，必須要有 SELECT 權限。  
+ 在透過 \<dml_select_list> 擷取或在 \<scalar_expression> 中使用的所有資料行上，必須要有 SELECT 權限。  
   
  在 \<output_table> 中指定的所有資料表上，必須要有 INSERT 權限。  
   

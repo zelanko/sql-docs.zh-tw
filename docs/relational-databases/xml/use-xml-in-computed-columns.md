@@ -1,5 +1,6 @@
 ---
 title: 在計算資料行中使用 XML | Microsoft 文件
+description: 檢視下列範例：如何在 SQL 中，使用含有計算資料行的 XML 執行個體與 XML 資料行。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b11588e7f8a1e075b5091e73fe71879c7b035fd4
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: fcd9657ce64ef5be2cd1210eebb21f6b4e1d113c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664945"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775534"
 ---
 # <a name="use-xml-in-computed-columns"></a>使用計算資料行中的 XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   XML 執行個體可依計算資料行的來源或依計算資料行的類型顯示。 本主題的範例將示範如何搭配計算資料行使用 XML。  
   
 ## <a name="creating-computed-columns-from-xml-columns"></a>從 XML 資料行建立計算資料行  

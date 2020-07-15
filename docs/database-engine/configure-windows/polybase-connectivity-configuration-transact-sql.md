@@ -1,24 +1,25 @@
 ---
 title: PolyBase 連接組態 (Transact-SQL) | Microsoft Docs
+description: 了解如何使用 sp_configure 來顯示或變更適用於 PolyBase Hadoop 和 Azure Blob 儲存體連線的全域組態設定。
 ms.custom: ''
 ms.date: 08/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
-ms.technology: configuration
-ms.topic: conceptual
+ms.technology: polybase
+ms.topic: reference
 helpviewer_keywords:
 - PolyBase
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: d86483245f8a4f06dfcb357d5d105539dd56f3a7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b3daf000381fbfaa5481ae18f348bd987689e46b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67997921"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938945"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>PolyBase 連接組態 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -56,7 +57,7 @@ RECONFIGURE
   
  這些是 Hadoop 連接性設定及其對應的支援 Hadoop 資料來源。 一次只能有一個設定生效。 選項 1、 4 和 7 可讓多個類型的外部資料來源能夠在伺服器上的所有工作階段之間建立和使用。  
   
--   選項 0︰停用 Hadoop 連接  
+-   選項 0︰停用 Hadoop 連線  
   
 -   選項 1：Windows Server 上的 Hortonworks HDP 1.3  
   

@@ -10,20 +10,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 5d74fd03a75b9b583eb92d34c45e7e0004ff9912
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7592100b7f8faec7dcfba35977e6b1cb5865854c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215866"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85741759"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>設定 PolyBase 存取 MongoDB 中的外部資料
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本文說明如何在 SQL Server 執行個體上使用 PolyBase 查詢位於 MongoDB 中的外部資料。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 如果您尚未安裝 PolyBase，請參閱 [PolyBase 安裝](polybase-installation.md)。
 
@@ -75,20 +75,19 @@ ms.locfileid: "80215866"
 >當您建立外部資料來源之後，可以使用 [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) 命令透過該來源建立可查詢的資料表。 
 
 ## <a name="flattening"></a>壓平合併
- 針對來自 MongoDB 文件集合的巢狀及重複資料會啟用壓平合併。 使用者必須啟用 `create an external table`，並明確指定可能具有巢狀和/或重複資料之 MongoDB 文件集合的關聯式結構描述。 我們會在未來的里程碑中針對 MongoDB 文件集合啟用自動結構描述偵測。
-JSON 巢狀/重複資料類型會以下列方式壓平合併
+針對來自 MongoDB 文件集合的巢狀及重複資料會啟用壓平合併。 使用者必須啟用 `create an external table`，並明確指定可能具有巢狀和/或重複資料之 MongoDB 文件集合的關聯式結構描述。 JSON 巢狀/重複資料類型會以下列方式壓平合併
 
 * 物件：未排序索引鍵/值集合會包圍在大括弧中 (巢狀)
 
-   - 我們會為每個物件機碼建立資料表資料行
+   - SQl Server 會為每個物件機碼建立資料表資料行
 
      * 資料行名稱：objectname_keyname
 
 * 陣列：排序值，以逗號分隔，並包圍在方括弧內 (重複)
 
-   - 我們會為每個陣列項目新增新資料表資料列
+   - SQL Server 會為每個陣列項目新增新的資料表資料列
 
-   - 我們會為每個陣列建立資料行，以儲存陣列項目索引
+   - SQL Server 會為每個陣列建立資料行，以儲存陣列項目索引
 
      * 資料行名稱：arrayname_index
 
@@ -100,7 +99,7 @@ JSON 巢狀/重複資料類型會以下列方式壓平合併
 
 * 多個重複欄位可能會導致所產生資料列的數量暴增
 
-例如，假設我們評估一個儲存在非關聯式 JSON 格式中的 MongoDB 範例資料集餐廳集合。 每間餐廳都有巢狀地址欄位，以及在不同天所獲指派的等級。 下圖說明具有巢狀地址和巢狀重複等級的典型餐廳。
+例如，假設 SQL Server 評估一個儲存在非關聯式 JSON 格式中的 MongoDB 範例資料集餐廳集合。 每間餐廳都有巢狀地址欄位，以及在不同天所獲指派的等級。 下圖說明具有巢狀地址和巢狀重複等級的典型餐廳。
 
 ![MongoDB 壓平合併](../../relational-databases/polybase/media/mongo-flattening.png "MongoDB 餐廳壓平合併")
 

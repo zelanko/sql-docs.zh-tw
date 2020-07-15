@@ -1,5 +1,6 @@
 ---
 title: Oracle 發行者的資料類型對應 | Microsoft Docs
+description: 了解當資料從 Oracle 發行者移至 SQL Server 散發者時，Oracle 與 SQL Server 之間資料類型的預設對應。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2b9d63f55ec7baacb4e387f6ee2f4a063ffa645b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7d7063beae88d6bbf0de9af735e6e5d87c94a15a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67901124"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896804"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Oracle 發行者的資料類型對應
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Oracle 資料類型與 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型並非一律完全相符。 若有可能，將在發行 Oracle 資料表時自動選取相符的資料類型。 如果單一資料類型對應不清楚，將提供替代的資料類型對應。 如需有關如何選取替代對應的詳細資訊，請參閱本主題稍後的「指定替代資料類型對應」一節。  
   
  下表顯示了將資料從「Oracle 發行者」移至「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」時，資料類型在 Oracle 與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之間的預設對應方式。 「替代方案」一欄會指示替代對應是否可用。  

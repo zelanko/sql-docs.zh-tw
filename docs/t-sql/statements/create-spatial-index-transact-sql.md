@@ -22,23 +22,23 @@ helpviewer_keywords:
 ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2bc1c2c7951efceca6d50a30098284f2bc3ef132
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a1f87c0c69a990ffa98a560998068b95b52df319
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982585"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766987"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，於指定的資料表和資料行上建立空間索引。 可以在資料表中有資料之前建立索引。 指定限定的資料庫名稱，就可以在另一個資料庫的資料表或檢視上建立索引。 空間索引要求資料表具有叢集主索引鍵。 如需空間索引的資訊，請參閱[空間索引概觀](../../relational-databases/spatial/spatial-indexes-overview.md)。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，於指定的資料表和資料行上建立空間索引。 可以在資料表中有資料之前建立索引。 指定限定的資料庫名稱，就可以在另一個資料庫的資料表或檢視上建立索引。 空間索引要求資料表具有叢集主索引鍵。 不能在索引檢視表上指定空間索引。 如需空間索引的資訊，請參閱[空間索引概觀](../../relational-databases/spatial/spatial-indexes-overview.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
-```
+```syntaxsql
 CREATE SPATIAL INDEX index_name
   ON <object> ( spatial_column_name )  
     {  

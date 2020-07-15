@@ -1,5 +1,6 @@
 ---
 title: 全文檢索編目最大範圍伺服器組態選項 | Microsoft Docs
+description: 了解 [全文檢索搜耙最大範圍] 選項。 了解其如何將 SQL Server 的 CPU 使用率最佳化，以在完整編目期間改善編目效能。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - crawls [full-text search]
 - max full-text crawl range option
 ms.assetid: a49de86b-0891-4dcd-89c0-ead30aab00e0
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 740d952640cef0400c379e9dfb25157331c9bfab
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 73a6223467b2da09d26e351c2cf2eb1a12576d80
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68023750"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85680848"
 ---
 # <a name="max-full-text-crawl-range-server-configuration-option"></a>全文檢索搜耙最大範圍伺服器組態選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   使用 **max full-text crawl range** 選項可最佳化 CPU 使用率，這會在完整搜耙期間增進搜耙效能。 使用這個選項，您可以指定完整索引搜耙期間 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應該使用的資料分割數目。 例如，如果有多個 CPU 且其使用率不是最好的，則您可以增加這個選項的最大值。 除了這個選項之外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 還會使用一些其他因素，如資料表中的資料列數目及 CPU 數目，來判斷實際使用的資料分割數目。  
   

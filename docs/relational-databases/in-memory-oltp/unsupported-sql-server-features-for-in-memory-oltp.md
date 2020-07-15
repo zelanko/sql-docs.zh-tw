@@ -1,5 +1,6 @@
 ---
 title: 不支援的功能 - 記憶體內部 OLTP
+description: 了解使用記憶體最佳化物件時無法支援的 SQL Server 功能。 檢視已支援的記憶體內部 OLTP 功能。
 ms.custom: ''
 ms.date: 02/21/2020
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8464f56274308694ada9e5721ae8e0ceb5ed85ed
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a2460e174ab0e8207c3e37f2e0dc999663a1dd8b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77558328"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753172"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>記憶體內部 OLTP 不支援的 SQL Server 功能
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 本主題探討在使用記憶體最佳化的物件時不受支援的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。 此外，最後段會列出記憶體內部 OLTP 原先不支援，但未來會支援的功能。
   
@@ -53,7 +54,7 @@ ms.locfileid: "77558328"
 
 |資料庫|允許|描述|  
 |---------------|-------------|-----------------|  
-| 使用者資料庫、**model** 及 **msdb**。 | 否 | 在大部分情況下，「不」  支援跨資料庫的查詢及交易。<br /><br />任一查詢如使用了經記憶體最佳化的資料表或者原生編譯的預存程序，該查詢即無法存取其他資料庫。 這項限制適用於交易及查詢。<br /><br />系統資料庫 **tempdb** 及 **master** 則是例外。 在這裡，**master** 資料庫可供唯讀存取。 |
+| 使用者資料庫、**model** 及 **msdb**。 | 否 | 在大部分情況下，「不」支援跨資料庫的查詢及交易。<br /><br />任一查詢如使用了經記憶體最佳化的資料表或者原生編譯的預存程序，該查詢即無法存取其他資料庫。 這項限制適用於交易及查詢。<br /><br />系統資料庫 **tempdb** 及 **master** 則是例外。 在這裡，**master** 資料庫可供唯讀存取。 |
 | **Resource** 資料庫、**tempdb** | 是 | 在接觸記憶體內部 OLTP 物件的交易中，可以無限制地使用 **Resource** 及 **tempdb** 系統資料庫。
 ||||
 
@@ -84,7 +85,7 @@ ms.locfileid: "77558328"
 
 有時 SQL Server 較新版本會新增支援先前不支援的功能。 此區段列出記憶體內部 OLTP 原先不支援，但會在未來支援記憶體內部 OLTP 的功能。
 
-在下表中，「版本」  值 (例如 `(15.x)`) 代表 Transact-SQL 陳述式 `SELECT @@Version;` 所傳回的值。
+在下表中，「版本」值 (例如 `(15.x)`) 代表 Transact-SQL 陳述式 `SELECT @@Version;` 所傳回的值。
 
 | 功能名稱 | SQL Server 的版本 | 註解 |
 | :----------- | :-------------------- | :------- |

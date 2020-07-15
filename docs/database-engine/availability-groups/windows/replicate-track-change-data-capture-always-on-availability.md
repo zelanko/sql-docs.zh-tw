@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5f1920374f62f98eed81323eca05ce1e45e66fc6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fbc22ea4b3673d6ed4d0d4ee581da8fadb473fb8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79433755"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888056"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>複寫、變更追蹤和異動資料擷取 - AlwaysOn 可用性群組
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]支援複寫、異動資料擷取 (CDC) 和變更追蹤 (CT)。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 有助於提供高可用性以及其他資料庫復原功能。  
   
@@ -190,7 +190,7 @@ ms.locfileid: "79433755"
 ##  <a name="prerequisites-restrictions-and-considerations-for-using-replication"></a><a name="Prereqs"></a> 使用複寫的必要條件、限制和考量  
  本節描述使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]來部署複寫的考量，包括必要條件、限制和建議。  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>必要條件  
   
 -   當使用異動複寫，而且發行集資料庫是在可用性群組時，發行者和散發者都必須至少執行 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。 訂閱者可以使用較低層級的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
@@ -198,7 +198,7 @@ ms.locfileid: "79433755"
   
     -   發送訂閱：發行者和散發者都必須至少執行 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。  
   
-    -   提取訂閱：發行者、散發者和訂閱者資料庫必須至少是在 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。 這是因為訂閱者的合併代理程式必須知道可用性群組如何容錯移轉到次要複本。  
+    -   提取訂閱：發行者、散發者和訂閱者資料庫都必須至少是 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。 這是因為訂閱者的合併代理程式必須知道可用性群組如何容錯移轉到次要複本。  
   
 -   發行者執行個體必須滿足參與 AlwaysOn 可用性群組所需的所有必要條件。 如需詳細資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)支援複寫、異動資料擷取 (CDC) 和變更追蹤 (CT)。  
   
@@ -208,7 +208,7 @@ ms.locfileid: "79433755"
 |||||  
 |-|-|-|-|  
 ||**發行者**|**散發者**|**訂閱者**|  
-|**異動**|是<br /><br /> 注意：不包含雙向和相互異動複寫的支援。|是|是| 
+|**異動**|是<br /><br /> 注意:不包含對雙向和相互異動複寫的支援。|是|是| 
 |**P2P**|否|否|否|  
 |**合併式**|是|否|否|  
 |**快照式**|是|否|是|
@@ -217,11 +217,15 @@ ms.locfileid: "79433755"
   
 ### <a name="considerations"></a>考量  
   
--   散發資料庫不支援搭配 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 或資料庫鏡像使用。 複寫組態會結合至設定散發者所在的 SQL Server 執行個體。因此，無法鏡像或複寫散發資料庫。 若要針對散發者提供高可用性，請使用 SQL Server 容錯移轉叢集。 如需詳細資訊，請參閱 [AlwaysOn 容錯移轉叢集執行個體 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
+-   散發資料庫不支援與資料庫鏡像搭配使用，但支援在受到特定限制的情況下與 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 搭配使用，請參閱[設定散發可用性群組](../../../relational-databases/replication/configure-distribution-availability-group.md#limitations-or-exclusions)。 複寫組態會結合至設定散發者所在的 SQL Server 執行個體。因此，無法鏡像或複寫散發資料庫。 您也可以使用 SQL Server 容錯移轉叢集來為散發者提供高可用性。 如需詳細資訊，請參閱 [AlwaysOn 容錯移轉叢集執行個體 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
   
 -   雖然支援訂閱者容錯移轉至次要資料庫，不過這是合併式複寫訂閱者的手動程序。 此程序基本上與用來容錯移轉鏡像訂閱者資料庫的方法完全相同。 異動複寫訂閱者不需要特殊處理就能參與 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 訂閱者必須執行 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 或更新版本，才能參與可用性群組。  如需詳細資訊，請參閱 [複寫訂閱者及 AlwaysOn 可用性群組 (SQL Server)](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)
   
 -   存在於資料庫之外的中繼資料和物件不會傳播到次要複本，包括登入、作業、連結的伺服器。 如果您需要在容錯移轉後使用新主要資料庫上的中繼資料和物件，則必須手動加以複製。 如需詳細資訊，請參閱 [管理可用性群組之資料庫的登入及工作 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md)(Failover) 的程序中通常可以互換。  
+
+### <a name="distributed-availability-groups"></a>分散式可用性群組
+
+發行者，或可用性群組中散發資料庫無法作為散發可用性群組的一部分來設定。 可用性群組中發行者資料庫和可用性群組中的散發資料庫都需要接聽程式端點，才能進行適當的設定和使用。 但是，您無法為散發可用性群組設定接聽程式端點。
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **複寫**  
@@ -252,7 +256,7 @@ ms.locfileid: "79433755"
  [複寫訂閱者及 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [AlwaysOn 可用性群組︰互通性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
+ [Always On 可用性群組：互通性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [AlwaysOn 容錯移轉叢集執行個體 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
  [關於異動資料擷取 &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [關於變更追蹤 &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   

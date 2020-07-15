@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: e31a24a949968e3d17b50c32b42e92cdd0997483
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 681396511bbcee9b68800ccd86e62837a95efd77
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76516549"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728396"
 ---
 # <a name="rebuild-system-databases"></a>重建系統資料庫
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   您必須重建系統資料庫，才能在 [master](../../relational-databases/databases/master-database.md)、 [model](../../relational-databases/databases/model-database.md)、 [msdb](../../relational-databases/databases/msdb-database.md)或 [resource](../../relational-databases/databases/resource-database.md) 系統資料庫中修正損毀問題，或修改預設的伺服器層級定序。 本主題將提供在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中重建系統資料庫的逐步指示。  
   
  **本主題內容**  
@@ -32,7 +32,7 @@ ms.locfileid: "76516549"
   
      [限制事項](#Restrictions)  
   
-     [必要條件](#Prerequisites)  
+     [先決條件](#Prerequisites)  
   
 -   **程序：**  
   
@@ -111,10 +111,10 @@ ms.locfileid: "76516549"
     |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|指定 tempdb 資料檔案數目。 此值可以增加為 8 個或與核心數目相同 (兩者取其較高者)。<br /><br /> 預設值：8 個或核心數目 (兩者取其較低者)。|  
     |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|指定每個 tempdb 資料檔案的初始大小 (MB)。 安裝程式允許的大小上限為 1024 MB。<br /><br /> 預設值：8|  
     |[ /SQLTEMPDBFILEGROWTH=FileSizeInMB ]|指定每個 tempdb 資料檔案的檔案成長增量 (MB)。 0 值指出自動成長是關閉的，且不允許其他空間。 安裝程式允許的大小上限為 1024 MB。<br /><br /> 預設值：64|  
-    |[ /SQLTEMPDBLOGFILESIZE=FileSizeInMB ]|指定 tempdb 記錄檔的初始大小 (MB)。 安裝程式允許的大小上限為 1024 MB。<br /><br /> 預設值：8。<br /><br /> 允許的範圍︰最小值 = 8，最大值 = 1024。|  
-    |[ /SQLTEMPDBLOGFILEGROWTH=FileSizeInMB ]|指定 tempdb 記錄檔的檔案成長增量 (MB)。 0 值指出自動成長是關閉的，且不允許其他空間。 安裝程式允許的大小上限為 1024 MB。<br /><br /> 預設值：64<br /><br /> 允許的範圍︰最小值 = 8，最大值 = 1024。|  
-    |[ /SQLTEMPDBDIR=Directories ]|指定 tempdb 資料檔案的目錄。 指定多個目錄時，請以空格隔開這些目錄。 若指定多個目錄，tempdb 資料檔案將以循環配置資源方式跨多個目錄存放。<br /><br /> 預設值︰系統資料目錄|  
-    |[ /SQLTEMPDBLOGDIR=Directory ]|指定 tempdb 記錄檔的目錄。<br /><br /> 預設值︰系統資料目錄|  
+    |[ /SQLTEMPDBLOGFILESIZE=FileSizeInMB ]|指定 tempdb 記錄檔的初始大小 (MB)。 安裝程式允許的大小上限為 1024 MB。<br /><br /> 預設值：8.<br /><br /> 允許的範圍：最小值 = 8，最大值 = 1024。|  
+    |[ /SQLTEMPDBLOGFILEGROWTH=FileSizeInMB ]|指定 tempdb 記錄檔的檔案成長增量 (MB)。 0 值指出自動成長是關閉的，且不允許其他空間。 安裝程式允許的大小上限為 1024 MB。<br /><br /> 預設值：64<br /><br /> 允許的範圍：最小值 = 8，最大值 = 1024。|  
+    |[ /SQLTEMPDBDIR=Directories ]|指定 tempdb 資料檔案的目錄。 指定多個目錄時，請以空格隔開這些目錄。 若指定多個目錄，tempdb 資料檔案將以循環配置資源方式跨多個目錄存放。<br /><br /> 預設值：系統資料目錄|  
+    |[ /SQLTEMPDBLOGDIR=Directory ]|指定 tempdb 記錄檔的目錄。<br /><br /> 預設值：系統資料目錄|  
   
 3.  當安裝程式完成系統資料庫的重建作業時，它就會返回命令提示字元，而且不會顯示任何訊息。 您可以檢查 Summary.txt 記錄檔來確認此程序是否順利完成。 這個檔案位於 C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Logs。  
   
@@ -168,7 +168,7 @@ ms.locfileid: "76516549"
   
      如需詳細資訊，請參閱 [启动、停止、暂停、继续、重启 SQL Server 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
-3.  在另一個命令列視窗中，執行下列命令卸離 **msdb** 資料庫，並且將 *\<servername>* 取代為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體：`SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
+3.  在其他命令列視窗中，透過執行下列命令來卸離 **msdb** 資料庫，然後將 *\<servername>* 取代為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"` 的執行個體  
   
 4.  使用 [Windows 檔案總管] 重新命名 **msdb** 資料庫檔案。 根據預設，這些檔案位於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 DATA 子資料夾中。  
   

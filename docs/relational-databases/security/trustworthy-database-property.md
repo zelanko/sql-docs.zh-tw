@@ -1,5 +1,6 @@
 ---
 title: TRUSTWORTHY 資料庫屬性 | Microsoft 文件
+description: 了解 TRUSTWORTHY 資料庫屬性，此屬性可指出 SQL Server 執行個體是否信任資料庫及其內容。 預設值為 OFF。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 64b2a53d-4416-4a19-acc0-664a61b45348
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ec745810697b325b8f1e1b2d5e67871136b9f089
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4db2515c51085e79d67e6ace4cbbe1abedc91023
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68126815"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736956"
 ---
 # <a name="trustworthy-database-property"></a>TRUSTWORTHY 資料庫屬性
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   TRUSTWORTHY 資料庫屬性是用來指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體是否信任資料庫及其中的內容。 依預設，此設定為 OFF，但可使用 ALTER DATABASE 陳述式來將它設為 ON。 例如： `ALTER DATABASE AdventureWorks2012 SET TRUSTWORTHY ON;` 。  
   
 > [!NOTE]  

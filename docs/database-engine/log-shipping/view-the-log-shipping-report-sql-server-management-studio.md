@@ -1,6 +1,6 @@
 ---
 title: 檢視記錄傳送報表 (SSMS)
-description: 了解如何使用 SQL Server Management Studio (SSMS) GUI 檢視記錄傳送報表。
+description: 檢視 SQL Server Management Studio 中的「交易記錄傳送狀態」報表。 在監視伺服器、主要伺服器或次要伺服器執行狀態報表。
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: de5a925e9d583d1263fb8b99ebca2f8edac51165
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ba4a8e1d48587046ecceb9007ca57f580b0338c2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258557"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748541"
 ---
 # <a name="view-the-log-shipping-report-sql-server-management-studio"></a>檢視記錄傳送報表 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   此主題說明如何檢視 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的「交易記錄傳送狀態」報表。 您可以在監視伺服器、主要伺服器或次要伺服器執行狀態報表。 若要查看有關記錄傳送組態的最完整資訊，請在監視伺服器執行個體中檢視報表。  
   
  此報表會顯示您所連接的伺服器執行個體中，有可用狀態的任何記錄傳送活動的狀態。 如果該伺服器執行個體牽涉到不同角色的多個組態 (例如，當做某個資料庫的監視伺服器，但同時又是另一個資料庫的次要伺服器)，則顯示的結果將包含每一個角色觀點的所有組態資訊。 如果預存程序可以透過給定的記錄傳送組態連接到監視伺服器執行個體，報表便可以顯示該組態的額外狀態。  
@@ -44,7 +44,7 @@ ms.locfileid: "75258557"
   
 1.  連接到監視伺服器、主要伺服器或次要伺服器。  
   
-2.  以滑鼠右鍵按一下 [物件總管] 中的伺服器執行個體，然後依序指向 [報表]  和 [標準報表]  。  
+2.  以滑鼠右鍵按一下 [物件總管] 中的伺服器執行個體，然後依序指向 [報表] 和 [標準報表]。  
   
 3.  按一下 **[交易記錄傳送狀態]** 。  
   

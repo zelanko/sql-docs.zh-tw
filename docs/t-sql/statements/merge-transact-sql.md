@@ -24,16 +24,16 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ff70ad2a8aa50c0e4121a6a597b8e150d0f35a54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 48dabb9e01a3b5dbddaa07cbe7534321207f1d0f
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82181090"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834669"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 從與來源資料表聯結的結果，在目標資料表上執行插入、更新或刪除作業。 例如，根據在另一個資料表中所找到的差異在資料表中插入、更新或刪除資料列，以同步處理兩個資料表。  
   
@@ -78,41 +78,12 @@ MERGE
     { [ <table_hint_limited> [ ,...n ] ]  
     [ [ , ] INDEX ( index_val [ ,...n ] ) ] }  
 }  
-  
-<table_source> ::=
-{  
-    table_or_view_name [ [ AS ] table_alias ] [ <tablesample_clause> ]
-        [ WITH ( table_hint [ [ , ]...n ] ) ]
-  | rowset_function [ [ AS ] table_alias ]
-        [ ( bulk_column_alias [ ,...n ] ) ]
-  | user_defined_function [ [ AS ] table_alias ]  
-  | OPENXML <openxml_clause>
-  | derived_table [ AS ] table_alias [ ( column_alias [ ,...n ] ) ]
-  | <joined_table>
-  | <pivoted_table>
-  | <unpivoted_table>
-}  
-  
+
 <merge_search_condition> ::=  
     <search_condition>  
   
 <merge_matched>::=  
     { UPDATE SET <set_clause> | DELETE }  
-  
-<set_clause>::=  
-SET  
-  { column_name = { expression | DEFAULT | NULL }  
-  | { udt_column_name.{ { property_name = expression  
-                        | field_name = expression }  
-                        | method_name ( argument [ ,...n ] ) }  
-    }  
-  | column_name { .WRITE ( expression , @Offset , @Length ) }  
-  | @variable = expression  
-  | @variable = column = expression  
-  | column_name { += | -= | *= | /= | %= | &= | ^= | |= } expression  
-  | @variable { += | -= | *= | /= | %= | &= | ^= | |= } expression  
-  | @variable = column { += | -= | *= | /= | %= | &= | ^= | |= } expression  
-  } [ ,...n ]
   
 <merge_not_matched>::=  
 {  
@@ -122,58 +93,7 @@ SET
 }  
   
 <clause_search_condition> ::=  
-    <search_condition>  
-  
-<search condition> ::=  
-    MATCH(<graph_search_pattern>) | <search_condition_without_match> | <search_condition> AND <search_condition>
-
-<search_condition_without_match> ::=
-    { [ NOT ] <predicate> | ( <search_condition_without_match> )
-    [ { AND | OR } [ NOT ] { <predicate> | ( <search_condition_without_match> ) } ]
-[ ,...n ]  
-
-<predicate> ::=
-    { expression { = | < > | ! = | > | > = | ! > | < | < = | ! < } expression
-    | string_expression [ NOT ] LIKE string_expression
-  [ ESCAPE 'escape_character' ]
-    | expression [ NOT ] BETWEEN expression AND expression
-    | expression IS [ NOT ] NULL
-    | CONTAINS
-  ( { column | * } , '< contains_search_condition >' )
-    | FREETEXT ( { column | * } , 'freetext_string' )
-    | expression [ NOT ] IN ( subquery | expression [ ,...n ] )
-    | expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
-  { ALL | SOME | ANY} ( subquery )
-    | EXISTS ( subquery ) }
-
-<graph_search_pattern> ::=
-    { <node_alias> {
-                      { <-( <edge_alias> )- }
-                    | { -( <edge_alias> )-> }
-                    <node_alias>
-                   }
-    }
-  
-<node_alias> ::=
-    node_table_name | node_table_alias
-
-<edge_alias> ::=
-    edge_table_name | edge_table_alias
-
-<output_clause>::=  
-{  
-    [ OUTPUT <dml_select_list> INTO { @table_variable | output_table }  
-        [ (column_list) ] ]  
-    [ OUTPUT <dml_select_list> ]  
-}  
-  
-<dml_select_list>::=  
-    { <column_name> | scalar_expression }
-        [ [AS] column_alias_identifier ] [ ,...n ]  
-  
-<column_name> ::=  
-    { DELETED | INSERTED | from_table_name } . { * | column_name }  
-    | $action  
+    <search_condition> 
 ```  
   
 ## <a name="arguments"></a>引數
@@ -195,7 +115,7 @@ TOP ( *expression* ) [ PERCENT ]
 *target_table* 所屬的結構描述名稱。  
   
 *target_table*  
-\<table_source> 之資料列會根據 \<clause_search_condition> 來進行比對的資料表或檢視表。 *target_table* 是 MERGE 陳述式的 WHEN 子句所指定之任何插入、更新或刪除作業的目標。  
+\<table_source> 中資料列會根據 \<clause_search_condition> 來進行比對的資料表或檢視。 *target_table* 是 MERGE 陳述式的 WHEN 子句所指定之任何插入、更新或刪除作業的目標。  
   
 如果 *target_table* 是檢視，則對其進行的任何動作都必須滿足更新檢視的條件。 如需詳細資訊，請參閱[透過檢視修改資料](../../relational-databases/views/modify-data-through-a-view.md)。  
   
@@ -205,9 +125,9 @@ TOP ( *expression* ) [ PERCENT ]
 用於參考資料表的替代名稱。  
   
 USING \<table_source>  
-會根據 \<merge_search condition>，指定與 *target_table* 中資料列進行比對的資料來源。 此項比對的結果會指定 MERGE 陳述式的 WHEN 子句所採取的動作。 \<table_source> 可以是遠端資料表或存取遠端資料表的衍生資料表。
+根據 \<merge_search condition>，指定與 *target_table* 中資料列進行比對的資料來源。 此項比對的結果會指定 MERGE 陳述式的 WHEN 子句所採取的動作。 \<table_source> 可以是遠端資料表或存取遠端資料表的衍生資料表。
   
-\<來源> 可以是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] [資料表值建構函式](../../t-sql/queries/table-value-constructor-transact-sql.md)的衍生資料表，藉由指定多個資料列來建構資料表。  
+\<table_source> 可以是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] [資料表值建構函式](../../t-sql/queries/table-value-constructor-transact-sql.md)的衍生資料表，藉由指定多個資料列來建構該資料表。  
   
 如需有關此子句語法和引數的詳細資訊，請參閱 [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)。  
   
@@ -218,19 +138,19 @@ ON \<merge_search_condition>
 > 請務必只從目標資料表指定用於比對用途的資料行。 也就是說，從目標資料表中指定要與來源資料表的對應資料行進行比較的資料行。 請勿嘗試在 ON 子句中篩選出目標資料表的資料列 (例如指定 `AND NOT target_table.column_x = value`) 來改善查詢效能。 這樣做可能會傳回非預期且不正確的結果。  
   
 WHEN MATCHED THEN \<merge_matched>  
-指定所有符合 \<table_source> ON \<merge_search_condition> 傳回的資料列，且滿足任何其他搜尋條件的 *target_table 資料列，都會根據 \<merge_matched> 子句更新或刪除。  
+指定所有符合 \<table_source> ON \<merge_search_condition> 傳回的資料列，且滿足任何其他搜尋條件的 *target_table 資料列，都會根據 \<merge_matched> 子句來更新或刪除。  
   
-MERGE 陳述式最多可以具有兩個 WHEN MATCHED 子句。 如果指定兩個子句，則第一個子句必須附帶 AND \<search_condition> 子句。 對於任何指定的資料列，只有第一個 WHEN MATCHED 子句未套用時，才會套用第二個 WHEN MATCHED 子句。 如果有兩個 WHEN MATCHED 子句，則一個必須指定 UPDATE 動作，另一個則必須指定 DELETE 動作。 在 \<merge_matched> 子句中指定 UPDATE，且根據 \<merge_search_condition>，有一個以上的 \<table_source> 資料列符合 *target_table* 的資料列時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回錯誤。 MERGE 陳述式無法更新同一資料列一次以上或更新及刪除同一資料列。  
+MERGE 陳述式最多可以具有兩個 WHEN MATCHED 子句。 如果指定兩個子句，則第一個子句必須附帶 AND \<search_condition> 子句。 對於任何指定的資料列，只有第一個 WHEN MATCHED 子句未套用時，才會套用第二個 WHEN MATCHED 子句。 如果有兩個 WHEN MATCHED 子句，則一個必須指定 UPDATE 動作，另一個則必須指定 DELETE 動作。 在 \<merge_matched> 子句中指定 UPDATE，且根據 \<merge_search_condition>，有一個以上的 \<table_source> 資料列符合 *target_table* 資料列時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 即會傳回錯誤。 MERGE 陳述式無法更新同一資料列一次以上或更新及刪除同一資料列。  
   
 WHEN NOT MATCHED [ BY TARGET ] THEN \<merge_not_matched>  
-指定由 \<table_source> ON \<merge_search_condition> 傳回的每一資料列若不符合 *target_table* 的資料列，但滿足其他的搜尋條件 (若存在)，就會在 *target_table* 中插入一個資料列。 插入的值是由 \<merge_not_matched> 子句決定。 MERGE 陳述式只能具有一個 WHEN NOT MATCHED [ BY TARGET ] 子句。
+指定由 \<table_source> ON \<merge_search_condition> 傳回的每一資料列若不符合 *target_table* 資料列，但滿足其他的搜尋條件 (若存在)，即會在 *target_table* 中插入一個資料列。 插入的值是由 \<merge_not_matched> 子句所指定。 MERGE 陳述式只能具有一個 WHEN NOT MATCHED [ BY TARGET ] 子句。
 
 WHEN NOT MATCHED BY SOURCE THEN \<merge_matched>  
-指定所有不符合 \<table_source> ON \<merge_search_condition> 傳回的資料列，卻能滿足任何其他搜尋條件的 *target_table 資料列，都會根據 \<merge_matched> 子句更新或刪除。  
+指定所有不符合 \<table_source> ON \<merge_search_condition> 所傳回的資料列，但卻滿足任何其他搜尋條件的 *target_table 資料列，都會根據 \<merge_matched> 子句更新或刪除。  
   
-MERGE 陳述式最多可以具有兩個 WHEN NOT MATCHED BY SOURCE 子句。 如果指定兩個子句，則第一個子句必須附帶 AND \<clause_search_condition> 子句。 對於任何指定的資料列，只有第一個 WHEN NOT MATCHED BY SOURCE 子句未套用時，才會套用第二個 WHEN NOT MATCHED BY SOURCE 子句。 如果有兩個 WHEN NOT MATCHED BY SOURCE 子句，則一個必須指定 UPDATE 動作，另一個則必須指定 DELETE 動作。 只有目標資料表中的資料行才可以在 \<clause_search_condition> 中參考。  
+MERGE 陳述式最多可以具有兩個 WHEN NOT MATCHED BY SOURCE 子句。 如果指定兩個子句，則第一個子句必須附帶 AND \<clause_search_condition> 子句。 對於任何指定的資料列，只有第一個 WHEN NOT MATCHED BY SOURCE 子句未套用時，才會套用第二個 WHEN NOT MATCHED BY SOURCE 子句。 如果有兩個 WHEN NOT MATCHED BY SOURCE 子句，則一個必須指定 UPDATE 動作，另一個則必須指定 DELETE 動作。 只有目標資料表中的資料行才能在 \<clause_search_condition> 中參考。  
   
-當 \<table_source> 未傳回任何資料列時，就無法存取來源資料表的資料行。 如果 \<merge_matched> 子句所指定的更新或刪除動作參考了來源資料表的資料行，就會傳回錯誤 207 (資料行名稱無效)。 例如，子句 `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = SourceTable.Col1` 可能會導致陳述式失敗，因為無法存取來源資料表的 `Col1`。  
+當 \<table_source> 未傳回任何資料列時，即無法存取來源資料表的資料行。 如果 \<merge_matched> 子句所指定更新或刪除動作參考了來源資料表的資料行，即會傳回錯誤 207 (資料行名稱無效)。 例如，子句 `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = SourceTable.Col1` 可能會導致陳述式失敗，因為無法存取來源資料表的 `Col1`。  
   
 AND \<clause_search_condition>  
 指定任何有效的搜尋條件。 如需詳細資訊，請參閱[搜尋條件 &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)。  
@@ -255,7 +175,7 @@ OPTION ( \<query_hint> [ ,...n ] )
 指定利用最佳化工具提示來自訂 Database Engine 處理陳述式的方式。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 \<merge_matched>  
-指定所有不符合 \<table_source> ON \<merge_search_condition> 傳回的資料列、但卻滿足任何其他搜尋條件的 *target_table* 資料列，所會套用的更新或刪除動作。  
+指定所有不符合 \<table_source> ON \<merge_search_condition> 所傳回的資料列，但卻滿足任何其他搜尋條件的 *target_table* 資料列，所會套用的更新或刪除動作。  
   
 UPDATE SET \<set_clause>  
 指定要在目標資料表中更新的資料行或變數名稱清單，以及用於更新這些名稱的值。  
@@ -279,10 +199,10 @@ DEFAULT VALUES
   
 如需此子句的詳細資訊，請參閱 [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)。  
   
-\<search condition>  
+\<search_condition>  
 指定搜尋條件來指定 \<merge_search_condition> 或 \<clause_search_condition>。 如需有關此子句之引數的詳細資訊，請參閱[搜尋條件 &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)。  
 
-\<圖形搜尋模式>  
+\<graph search pattern>  
 指定圖形搜尋模式。 如需此子句的引數詳細資訊，請參閱 [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
   
 ## <a name="remarks"></a>備註

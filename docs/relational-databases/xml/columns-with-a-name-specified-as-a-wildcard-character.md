@@ -1,5 +1,6 @@
 ---
 title: 使用萬用字元指定資料行 (SQLXML) |Microsoft Docs
+description: 了解指定為萬用字元的資料行名稱會如何影響 XQuery 結果。
 ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,16 +13,16 @@ ms.assetid: d9551df1-5bb4-4c0b-880a-5bb049834884
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 0820b0d43c51dd7aeabf773f5f9809b7a8005d68
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 915bd2824f6e3a706587769413c0f116df859f06
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664695"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775586"
 ---
 # <a name="columns-with-a-name-specified-as-a-wildcard-character"></a>以萬用字元 (*) 指定名稱的資料行
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 如果以萬用字元 (\*) 指定資料行名稱，則插入該資料行內容的方式，就像是沒有指定資料行名稱一樣。 如果此資料行是非**xml** 類型的資料行，則會以文字節點插入資料行內容，如下列範例所示：  
   

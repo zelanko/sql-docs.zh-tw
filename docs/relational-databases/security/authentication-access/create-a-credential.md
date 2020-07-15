@@ -1,5 +1,6 @@
 ---
 title: 建立認證 | Microsoft 文件
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 在 SQL Server 中建立認證。 了解如何在限制中工作。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: c1e77e91-2a69-40d9-b8b3-97cffc710586
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 675e152dfffa6bfce8decf37dc1716e7149bae83
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 541b8fc68dd5ae92864612b017f04d619fe444c6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68095044"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900627"
 ---
 # <a name="create-a-credential"></a>建立認證
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中建立認證。  
   
  認證提供允許 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證使用者擁有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]以外之識別的方法。 這主要是用來執行具 EXTERNAL_ACCESS 權限集之組件中的程式碼。 認證也可以在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證使用者需要存取網域資源時使用，例如儲存備份的檔案位置。  
   
- 認證可以同時對應至數個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入每次只能對應至一個認證。 建立認證之後，請使用 [登入屬性 (一般頁面)]  將登入對應至認證。  
+ 認證可以同時對應至數個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入每次只能對應至一個認證。 建立認證之後，請使用 [登入屬性 (一般頁面)] 將登入對應至認證。  
   
  **本主題內容**  
   
@@ -39,7 +40,7 @@ ms.locfileid: "68095044"
   
 -   **若要使用下列項目建立認證：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -62,17 +63,17 @@ ms.locfileid: "68095044"
   
 1.  在物件總管中，展開 [安全性]  資料夾。  
   
-2.  以滑鼠右鍵按一下 [認證]  資料夾，然後選取 [新增認證]  。  
+2.  以滑鼠右鍵按一下 [認證] 資料夾，然後選取 [新增認證]。  
   
 3.  在 **[新增認證]** 對話方塊的 **[認證名稱]** 方塊中，輸入認證的名稱。  
   
-4.  在 [識別]  方塊中，輸入用於傳出連線 (離開 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 內容時) 的帳戶名稱。 通常，這將是 Windows 使用者帳戶，但識別可以是另一種類型的帳戶。  
+4.  在 [識別] 方塊中，輸入用於傳出連線 (離開 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 內容時) 的帳戶名稱。 通常，這將是 Windows 使用者帳戶，但識別可以是另一種類型的帳戶。  
   
-     或者，按一下省略符號 **(...)** 開啟 [選取使用者或群組]  對話方塊。  
+     或者，按一下省略符號 **(...)** 開啟 [選取使用者或群組] 對話方塊。  
   
 5.  在 **[密碼]** 與 **[確認密碼]** 方塊中，輸入 **[識別]** 方塊中所指定的帳戶密碼。 如果 **[識別]** 是 Windows 使用者帳戶，則為 Windows 密碼。 如果不需要密碼， **[密碼]** 可以是空白。  
   
-6.  選取 [使用加密提供者]  ，設定要由可延伸金鑰管理 (EKM) 提供者所驗證的認證。 如需詳細資訊，請參閱[可延伸金鑰管理 &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
+6.  選取 [使用加密提供者]，設定要由可延伸金鑰管理 (EKM) 提供者所驗證的認證。 如需詳細資訊，請參閱[可延伸金鑰管理 &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

@@ -1,5 +1,6 @@
 ---
 title: 監視記錄傳送 (Transact-SQL) | Microsoft Docs
+description: 了解哪些資料表會儲存記錄，這些記錄包含 SQL Server 中監視資訊及用於監視記錄傳送的預存程序。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 33bb8320abf11400e5224af747d71bcb49fc2d16
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 87d17a3f6051e497b64dd88c1dd2e005a4411e27
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68030716"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85695873"
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>監視記錄傳送 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   在您設定了記錄傳送之後，即可監視所有記錄傳送伺服器的狀態相關資訊。 記錄傳送作業的記錄和狀態一律是由記錄傳送作業儲存在本端。 備份作業的記錄和狀態會儲存在主要伺服器，而複製和還原作業的記錄和狀態會儲存在次要伺服器上。 若您已實作遠端監視伺服器，此資訊也會儲存在監視伺服器中。  
   
  您可以設定若記錄傳送作業無法依排程執行時將要引發的警示。 負責監視備份及還原作業狀態的警示作業會引發錯誤。 您可以定義當這些錯誤產生時，要用來通知操作員的警示。 若已設定監視伺服器，就會在監視伺服器上執行一項警示作業，針對記錄傳送組態中的所有作業來引發錯誤。 若未指定監視伺服器，就會在負責監視備份作業的主要伺服器執行個體上執行警示作業。 若未指定監視伺服器，警示作業也會在每個次要伺服器執行個體上執行，以監視本端的複製和還原作業。  

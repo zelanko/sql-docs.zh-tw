@@ -28,15 +28,15 @@ helpviewer_keywords:
 ms.assetid: e311c425-742a-4b0d-b847-8b974bf66d53
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2ae87d5c125ae3eac01013843c9fe2db183b9c1c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 832b8a0c0d66a1e9754366e7735ebbac84b3ac7b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68055964"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895557"
 ---
 # <a name="alter-xml-schema-collection-transact-sql"></a>ALTER XML SCHEMA COLLECTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   將結構描述元件加入至現有的 XML 結構描述集合中。  
   
@@ -62,7 +62,7 @@ ALTER XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier ADD 'Schema Com
 ## <a name="remarks"></a>備註  
  請利用 ALTER XML SCHEMA COLLECTION 來加入新的 XML 結構描述，其命名空間尚未存在於 XML 結構描述集合中，或將新的元件加入至集合的現有命名空間中。  
   
- 下列範例會將新的 \<element> 加入至集合 `MyColl` 的現有命名空間 `https://MySchema/test_xml_schema` 中。  
+ 下列範例會將新 \<element> 新增至集合 `MyColl` 的現有命名空間 `https://MySchema/test_xml_schema` 中。  
   
 ```  
 -- First create an XML schema collection.  

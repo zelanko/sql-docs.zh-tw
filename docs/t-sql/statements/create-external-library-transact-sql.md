@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2019
+ms.date: 06/10/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning
@@ -18,28 +18,29 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: cb698f95037cb6ab39c5a98dbf725f9decc66cd0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 56b15b96bf6f54ea2d58569afedacb9027e3b367
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73536250"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735835"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
-
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-
-將 R、Python 或 Java 套件檔案從指定的位元組資料流或檔案路徑上傳到資料庫。 此陳述式可作為一般機制，供資料庫管理員針對 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 支援的任何新外部語言執行階段和 OS 平台，上傳所需的成品。 
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
+將 R、Python 或 Java 套件檔案從指定的位元組資料流或檔案路徑上傳到資料庫。 此陳述式可作為一般機制，供資料庫管理員針對 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 支援的任何新外部語言執行階段和 OS 平台，上傳所需的成品。 
+
 > [!NOTE]
 > 在 SQL Server 2017 中，支援 R 語言和 Windows 平台。 SQL Server 2019 和更新版本支援 Windows 和 Linux 平台上的 R、Python 和外部語言。
 ::: moniker-end
 
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+將 R 或 Python 套件檔案從指定的位元組資料流或檔案路徑上傳到資料庫。 此陳述式可以作為資料庫管理員上傳所需成品的一般機制。 
+
 > [!NOTE]
-> 在 Azure SQL Database 中，您可以使用 **sqlmlutils** 來安裝程式庫。 如需詳細資料，請參閱[使用 sqlmlutils 新增套件](/azure/sql-database/sql-database-machine-learning-services-add-r-packages#add-a-package-with-sqlmlutils)。
+> 在 Azure SQL 受控執行個體中，您可使用 **sqlmlutils** 來安裝程式庫。 如需詳細資料，請參閱[使用 sqlmlutils 安裝 Python 套件](https://docs.microsoft.com/sql/machine-learning/package-management/install-additional-python-packages-on-sql-server?context=/azure/azure-sql/managed-instance/context/ml-context&view=azuresqldb-mi-current)和[使用 sqlmlutils 安裝新的 R 套件](https://docs.microsoft.com/sql/machine-learning/package-management/install-additional-r-packages-on-sql-server?context=%2Fazure%2Fazure-sql%2Fmanaged-instance%2Fcontext%2Fml-context&view=azuresqldb-mi-current)。
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -113,14 +114,14 @@ WITH ( LANGUAGE = 'R' )
 ```
 ::: moniker-end
 
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-## <a name="syntax-for-azure-sql-database"></a>Azure SQL Database 的語法
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+## <a name="syntax-for-azure-sql-managed-instance"></a>Azure SQL 受控執行個體的語法
 
 ```text
 CREATE EXTERNAL LIBRARY library_name  
 [ AUTHORIZATION owner_name ]  
 FROM <file_spec> [ ,...2 ]  
-WITH ( LANGUAGE = 'R' )  
+WITH ( LANGUAGE = <language> )  
 [ ; ]  
 
 <file_spec> ::=  
@@ -132,6 +133,12 @@ WITH ( LANGUAGE = 'R' )
 { 
       varbinary_literal 
     | varbinary_expression 
+}
+
+<language> :: = 
+{
+      'R'
+    | 'Python'
 }
 ```
 ::: moniker-end
@@ -170,7 +177,7 @@ WITH ( LANGUAGE = 'R' )
 
 如果您必須建立程式庫或更改現有的程式庫 (並且具備執行此操作所需的權限)，但伺服器上的檔案系統受到限制，而您無法將程式庫檔案複製到伺服器能夠存取的位置，此選項會相當有用。
 
-::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 **PLATFORM = WINDOWS**
 
 指定程式庫內容的平台。 此值會預設為 SQL Server 執行所在的主機平台。 因此，使用者不需要指定此值。 當支援多個平台或使用者必須指定不同的平台時，才需要指定此值。
@@ -184,18 +191,16 @@ WITH ( LANGUAGE = 'R' )
 在 SQL Server 2019 中，支援 Windows 和 Linux 平台。
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 **LANGUAGE = 'R'**
 
-指定套件的語言。
-SQL Server 2017 支援 R。
+指定套件的語言。 SQL Server 2017 支援 R。
 ::: moniker-end
 
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-**LANGUAGE = 'R'**
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+**language**
 
-指定套件的語言。
-Azure SQL Database 支援 R。
+指定套件的語言。 在 Azure SQL 受控執行個體中，這個值可以是 `R` 或 `Python`。
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -266,7 +271,7 @@ EXEC sp_execute_external_script
 
 ### <a name="installing-packages-with-dependencies"></a>安裝具有相依性的套件
 
-如果您想要安裝的套件具有許多相依性，請務必在嘗試安裝目標套件「之前」  ，先分析第一層和第二層的相依性，並確定所有必要的套件都可供使用。
+如果您想要安裝的套件具有許多相依性，請務必在嘗試安裝目標套件「之前」，先分析第一層和第二層的相依性，並確定所有必要的套件都可供使用。
 
 例如，假設您想要安裝新套件 `packageA`：
 

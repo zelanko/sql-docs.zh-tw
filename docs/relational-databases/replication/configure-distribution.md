@@ -1,5 +1,6 @@
 ---
 title: 設定散發 | Microsoft Docs
+description: SQL Server 散發者裝載散發資料庫，該資料庫會儲存複寫的中繼資料和歷程記錄，以及異動複寫的交易。
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -21,15 +22,15 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 66e6135ee2144de5936c041c34450d7fd0ce3d62
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 21364f104674ec081da5c49d229a5c04a09af016
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76284693"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774036"
 ---
 # <a name="configure-distribution"></a>設定散發
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   「散發者」是包含散發資料庫的伺服器，該資料庫會存儲所有類型之複寫的中繼資料和記錄資料，以及異動複寫的交易。 若要設定複寫，您必須設定「散發者」。 每個「發行者」可以僅指派給一個「散發者」執行個體，但是多個發行者可以共用一個「散發者」。 散發者會使用所在伺服器的下列額外資源：  
   
 -   如果發行集的快照集檔案儲存於「散發者」(通常如此) 時，則使用額外的磁碟空間。  

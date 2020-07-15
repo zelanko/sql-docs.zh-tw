@@ -1,5 +1,6 @@
 ---
-title: 範例：將產品型號資訊當作 XML 來擷取 | Microsoft Docs
+title: 範例：以 XML 的形式擷取產品型號資訊 | Microsoft Docs
+description: 請檢視範例，以了解如何搭配 FOR XML 子句來使用 RAW 模式將產品模型資訊作為 XML 擷取。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 3828b4ca-3ab2-444f-9c58-8be6e7f064a6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 82ed3302c9a0bc3046f999bafd31258023db8856
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 4850857682bddf64be8312cea67d577cc3a1f939
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664485"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632762"
 ---
 # <a name="example-retrieving-product-model-information-as-xml"></a>範例：將產品型號資訊當做 XML 來擷取
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   下列查詢會傳回產品型號資訊。 `RAW` 模式是在 `FOR XML` 子句中指定。  
   
 ## <a name="example"></a>範例  

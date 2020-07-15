@@ -1,6 +1,6 @@
 ---
 title: 切換資料庫鏡像角色
-description: 了解切換資料庫鏡像角色。
+description: 如何切換資料庫鏡像角色，其中鏡像伺服器會為了回應失敗，或為了系統管理員在 SQL Server 中的用途，而變成主體 。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b310083d3317c9099532b8d08f2482efe193d95c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 624b42ae39cddd56c2401db346c497e6914fe7a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252787"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735156"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>資料庫鏡像工作階段期間的角色切換 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  在資料庫鏡像工作階段的內容中，主體與鏡像角色通常可以用一種稱為 *「角色切換」* 的程序交換。 在角色切換中，鏡像伺服器將充當主體伺服器的「容錯移轉夥伴」  、接替主體角色、復原其資料庫副本，並使其上線以作為新的主體資料庫。 先前的主體伺服器可用時，會擔任鏡像角色，而其資料庫即成為新的鏡像資料庫。 原則上，這些角色可以來回切換，以回應多項失敗或達成管理目的。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  在資料庫鏡像工作階段的內容中，主體與鏡像角色通常可以用一種稱為 *「角色切換」* 的程序交換。 在角色切換中，鏡像伺服器將充當主體伺服器的「容錯移轉夥伴」、接替主體角色、復原其資料庫副本，並使其上線以作為新的主體資料庫。 先前的主體伺服器可用時，會擔任鏡像角色，而其資料庫即成為新的鏡像資料庫。 原則上，這些角色可以來回切換，以回應多項失敗或達成管理目的。  
   
 > [!NOTE]  
 >  本主題假設您已熟悉資料庫鏡像作業模式。 如需詳細資訊，請參閱 [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。  
@@ -134,7 +134,7 @@ ms.locfileid: "75252787"
 -   [手動容錯移轉資料庫鏡像工作階段 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md)。  
   
 ##  <a name="automatic-failover"></a><a name="AutomaticFailover"></a> Automatic Failover  
- 只有在高安全性模式下搭配見證執行的資料庫鏡像工作階段才支援自動容錯移轉 (「具有自動容錯移轉的高安全性模式」  )。 在具有自動容錯移轉的高安全性模式下，一旦資料庫同步處理後，如果主體資料庫無法使用，就會進行自動容錯移轉。 自動容錯移轉會使鏡像伺服器接替主體伺服器的角色，使其資料庫副本連接成為主體資料庫。 同步處理資料庫的需求可避免容錯移轉期間發生資料遺失的狀況，因為主體資料庫上認可的每一筆交易也會在鏡像資料庫上認可。  
+ 只有在高安全性模式下搭配見證執行的資料庫鏡像工作階段才支援自動容錯移轉 (「具有自動容錯移轉的高安全性模式」)。 在具有自動容錯移轉的高安全性模式下，一旦資料庫同步處理後，如果主體資料庫無法使用，就會進行自動容錯移轉。 自動容錯移轉會使鏡像伺服器接替主體伺服器的角色，使其資料庫副本連接成為主體資料庫。 同步處理資料庫的需求可避免容錯移轉期間發生資料遺失的狀況，因為主體資料庫上認可的每一筆交易也會在鏡像資料庫上認可。  
   
 > [!IMPORTANT]  
 >  為了讓自動容錯移轉能夠提高可靠性，鏡像與主體資料庫必須位於不同的電腦上。  
@@ -193,7 +193,7 @@ ms.locfileid: "75252787"
 >  在容錯移轉發生時，凡是已利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散式交易協調器準備好但尚未認可的交易，都會在資料庫完成容錯移轉後被視為已中止。  
   
 ###  <a name="to-disable-automatic-failover-sql-server-management-studio"></a><a name="DisableAutoSSMS"></a> 若要停用自動容錯移轉 (SQL Server Management Studio)  
- 開啟 [資料庫屬性] 的 [鏡像]  頁面，並選取下列其中一項來變更作業模式：  
+ 開啟 [資料庫屬性] 的 [鏡像] 頁面，並選取下列其中一項來變更作業模式：  
   
 -   **不具有自動容錯移轉的高安全性 (同步)**  
   
@@ -244,7 +244,7 @@ ms.locfileid: "75252787"
   
  ![在可能遺失資料的情況下強制服務](../../database-engine/database-mirroring/media/dbm-forced-service.gif "在可能遺失資料的情況下強制服務")  
   
- 在該圖中，原始的主體伺服器 **Partner_A**無法讓鏡像伺服器 **Partner_B**使用，進而導致鏡像資料庫中斷連接。 在確定用戶端無法使用 **Partner_A** 後，資料庫管理員便在 **Partner_B** 上進行強制服務 (可能遺失資料)。 **Partner_B** 成為主體伺服器，並「公開」  資料庫執行 (亦即未鏡像)。 此時，用戶端可以重新連接至 **Partner_B**。  
+ 在該圖中，原始的主體伺服器 **Partner_A**無法讓鏡像伺服器 **Partner_B**使用，進而導致鏡像資料庫中斷連接。 在確定用戶端無法使用 **Partner_A** 後，資料庫管理員便在 **Partner_B** 上進行強制服務 (可能遺失資料)。 **Partner_B** 成為主體伺服器，並「公開」資料庫執行 (亦即未鏡像)。 此時，用戶端可以重新連接至 **Partner_B**。  
   
  當 **Partner_A** 可以使用後，它就會重新連接至新的主體伺服器，並重新加入工作階段和擔任鏡像角色。 鏡像工作階段會立即暫停，而不會與新的鏡像資料庫進行同步處理。 暫停工作階段可讓資料庫管理員決定要繼續進行工作階段 (在極端情況下)，還是移除鏡像並嘗試搶救之前主體資料庫中的資料。 在這個情況中，資料庫管理員選擇繼續進行鏡像。 此時， **Partner_A** 會接管鏡像伺服器的角色並將之前的主體資料庫回復至上次成功同步處理交易的時間點。如果進行強制服務之前，任何已認可的交易未寫入鏡像伺服器的磁碟，這些交易就會遺失。 然後，**Partner_A** 會藉由套用自從之前鏡像伺服器成為新主體伺服器以來在新主體資料庫上進行的所有變更，向前復原新的鏡像資料庫。  
   

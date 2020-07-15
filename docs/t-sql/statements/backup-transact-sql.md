@@ -1,7 +1,7 @@
 ---
 title: BACKUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/13/2019
+ms.date: 06/22/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 61d9071b5afa65e65bd05320409ffd0839a07201
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 52672baf04075f13e4bb88578689a82405145282
+ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922230"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85215826"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -185,7 +185,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 
 DATABASE 指定完整的資料庫備份。 如果指定了檔案和檔案群組清單，就只會備份這些檔案和檔案群組。 在完整或差異資料庫備份期間，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會備份足夠的交易記錄，以便在還原備份時，產生一致的資料庫。
 
-當您還原 BACKUP DATABASE 所建立的備份 (「資料備份」  ) 時，就會還原整個備份。 只有記錄備份可以還原至備份內的特定時間或交易。
+當您還原 BACKUP DATABASE 所建立的備份 (「資料備份」) 時，就會還原整個備份。 只有記錄備份可以還原至備份內的特定時間或交易。
 
 > [!NOTE]
 > **master** 資料庫上只能執行完整資料庫備份。
@@ -204,7 +204,7 @@ DATABASE 指定完整的資料庫備份。 如果指定了檔案和檔案群組�
 > [!NOTE]
 > 資料庫鏡像合作關係中的鏡像資料庫無法備份。
 
-\<file_or_filegroup> [ **,** ...*n* ] 只能搭配 BACKUP DATABASE 使用，可用來指定要包含在檔案備份中的資料庫檔案或檔案群組，或是指定要包含在部分備份中的唯讀檔案或檔案群組。
+\<file_or_filegroup> [ **,** ...*n* ] 只能搭配 BACKUP DATABASE 使用，可用來指定要包含在檔案備份中的資料庫檔案或檔案群組，或指定要包含在部分備份中的唯讀檔案或檔案群組。
 
 FILE **=** { *logical_file_name* | **@** _logical\_file\_name\_var_ } 這是要包含在備份中的檔案邏輯名稱，或是其值等於該檔案邏輯名稱的變數。
 
@@ -224,13 +224,13 @@ READ_WRITE_FILEGROUPS 指定要在部分備份進行備份的所有讀取/寫入
 > [!IMPORTANT]
 > 使用 FILEGROUP 取代 READ_WRITE_FILEGROUPS 來明確列出讀取/寫入檔案群組，以建立檔案備份。
 
-FILEGROUP = { *logical_filegroup_name* |  **@** _logical\_filegroup\_name\_var_ } 這是指要包含在部分備份中的唯讀檔案群組邏輯名稱，或是其值等於該唯讀檔案群組邏輯名稱的變數。 如需詳細資訊，請參閱本主題前面的 "\<file_or_filegroup>"。
+FILEGROUP = { *logical_filegroup_name* |  **@** _logical\_filegroup\_name\_var_ } 這是指要包含在部分備份中的唯讀檔案群組邏輯名稱，或是其值等於該唯讀檔案群組邏輯名稱的變數。 如需詳細資訊，請參閱本主題先前討論的 "\<file_or_filegroup>"。
 
 *n* 這是一個預留位置，表示可以在逗號分隔清單中指定多個唯讀檔案群組。
 
 如需部分備份的詳細資訊，請參閱[部分備份](../../relational-databases/backup-restore/partial-backups-sql-server.md)。
 
-TO \<backup_device> [ **,** ...*n* ] 指出隨附的[備份裝置](../../relational-databases/backup-restore/backup-devices-sql-server.md)集是未鏡像的媒體集，或是鏡像媒體集內的前幾個鏡像 (已針對其宣告了一或多個 MIRROR TO 子句)。
+TO \<backup_device> [ **,** ...*n* ] 指出隨附的[備份裝置](../../relational-databases/backup-restore/backup-devices-sql-server.md)集合是未鏡像的媒體集，或鏡像媒體集內的第一個鏡像 (已為其宣告了一或多個 MIRROR TO 子句)。
 
 \<backup_device>
 
@@ -267,7 +267,7 @@ MIRROR TO \<backup_device> [ **,** ...*n* ] 指定一組最多三個的次要備
 > [!NOTE]
 > 如果 MIRROR TO = DISK，BACKUP 會自動根據磁碟的磁區大小，來判斷磁碟裝置的適當區塊大小。 如果使用與指定為主要備份裝置的磁碟不同的磁區大小來格式化 MIRROR TO 磁碟，備份命令將會失敗。 為了鏡像具有不同磁區大小的裝置備份，必須指定 BLOCKSIZE 參數，且應該設定為所有目標裝置之間的最大磁區大小。 如需區塊大小的詳細資訊，請參閱本主題稍後的＜BLOCKSIZE＞。
 
-\<backup_device> 請參閱本節前面的 "\<backup_device>"。
+\<backup_device> 請參閱本節先前討論的 "\<backup_device>"。
 
 *n* 這是一個預留位置，表示可以在逗號分隔清單中指定最多達 64 個備份裝置。 MIRROR TO 子句中的裝置數目必須等於 TO 子句中的裝置數目。
 
@@ -320,7 +320,7 @@ ENCRYPTION 用來指定備份的加密。 您可以指定加密演算法來加�
 > [!NOTE]
 > 若要指定還原作業的備份組，請使用 `FILE = <backup_set_file_number>` 選項。 如需如何指定備份組的詳細資訊，請參閱 [RESTORE 引數](../../t-sql/statements/restore-statements-arguments-transact-sql.md)中的＜指定備份組＞。
 
-COPY_ONLY：指定備份為「僅複製備份」  ，這不會影響正常的備份順序。 僅複製備份的建立與定期排程的傳統備份無關。 僅複製備份並不會影響資料庫的整體備份和還原程序。
+COPY_ONLY：指定備份為「僅複製備份」，這不會影響正常的備份順序。 僅複製備份的建立與定期排程的傳統備份無關。 僅複製備份並不會影響資料庫的整體備份和還原程序。
 
 僅複製備份應該用於需要執行備份來達成特定用途的情況 (例如，在線上檔案還原之前備份記錄檔)。 通常，僅複製記錄備份用過一次後便會刪除。
 
@@ -329,7 +329,7 @@ COPY_ONLY：指定備份為「僅複製備份」  ，這不會影響正常的備
     > [!IMPORTANT]
     > 如果同時使用 `DIFFERENTIAL` 和 `COPY_ONLY`，即會忽略 `COPY_ONLY` 並建立差異備份。
 
-- 搭配 `BACKUP LOG` 使用時，`COPY_ONLY` 選項會建立「僅複製記錄備份」  ，這不會截斷交易記錄。 僅複製記錄備份不會影響記錄檔鏈結，而且其他記錄備份的行為會如同僅複製備份並不存在。
+- 搭配 `BACKUP LOG` 使用時，`COPY_ONLY` 選項會建立「僅複製記錄備份」，這不會截斷交易記錄。 僅複製記錄備份不會影響記錄檔鏈結，而且其他記錄備份的行為會如同僅複製備份並不存在。
 
 如需詳細資訊，請參閱[只複製備份](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)。
 
@@ -436,7 +436,7 @@ BUFFERCOUNT **=** { *buffercount* |  **@** _buffercount\_variable_ } 指定要�
 > [!NOTE]
 > 如需使用 `BUFFERCOUNT` 選項的重要資訊，請參閱[不正確的 BufferCount 資料傳輸選項可能導致 OOM 狀況](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) \(英文\) 部落格文章。
 
-MAXTRANSFERSIZE **=** { *maxtransfersize* |  _**@** maxtransfersize\_variable_ } 以位元組為單位，指定要用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與備份媒體之間的最大傳輸單位。 可能的值是 65536 位元組 (64 KB) 的倍數，最大可達 4194304 位元組 (4 MB)。
+MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } 以位元組為單位，指定要用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與備份媒體之間的最大傳輸單位。 可能的值是 65536 位元組 (64 KB) 的倍數，最大可達 4194304 位元組 (4 MB)。
 
 > [!NOTE]
 > 使用 SQL 寫入器服務建立備份時，如果已為資料庫設定 [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md)，或該資料庫包含[記憶體最佳化檔案群組](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)，則在還原期間的 `MAXTRANSFERSIZE` 應該大於或等於建立備份時所使用的 `MAXTRANSFERSIZE`。
@@ -568,7 +568,7 @@ BACKUP LOG 的 NO_TRUNCATE 選項相當於同時指定 COPY_ONLY 和 CONTINUE_AF
     |部分資料庫|[部份備份](../../relational-databases/backup-restore/partial-backups-sql-server.md)包含讀取/寫入檔案群組，可能的話，還會包含一或多個唯讀檔案或檔案群組。<br /><br /> 或者，每個部份備份都可作為一系列一或多個[差異部份備份](../../relational-databases/backup-restore/differential-backups-sql-server.md)的基底。|
     |檔案或檔案群組|[檔案備份](../../relational-databases/backup-restore/full-file-backups-sql-server.md)包含一或多個檔案或檔案群組，而且只會與包含多個檔案群組的資料庫有關。 在簡單復原模式下，檔案備份基本上會限制用於唯讀的次要檔案群組。<br /> 或者，每個檔案備份都可作為一系列一或多個[差異檔案備份](../../relational-databases/backup-restore/differential-backups-sql-server.md)的基底。|
 
-- 在完整復原模式或大量記錄復原模式下，傳統備份也必須包含循序的「交易記錄備份」  (或「記錄備份」  )。 每個記錄備份都包含建立備份時為使用中的交易記錄部分，而且會包含上一次記錄備份沒有備份的所有記錄檔記錄。
+- 在完整復原模式或大量記錄復原模式下，傳統備份也必須包含循序的「交易記錄備份」 (或「記錄備份」)。 每個記錄備份都包含建立備份時為使用中的交易記錄部分，而且會包含上一次記錄備份沒有備份的所有記錄檔記錄。
 
     若要將遺失工作的風險降到最低 (但會耗用管理負擔成本)，您應該排定經常性的記錄備份。 在完整備份之間排定差異備份，可減少您在還原資料後必須還原的記錄備份數目，從而減少還原時間。
 
@@ -577,7 +577,7 @@ BACKUP LOG 的 NO_TRUNCATE 選項相當於同時指定 COPY_ONLY 和 CONTINUE_AF
     > [!NOTE]
     > 您必須先建立完整備份，才能建立第一個記錄備份。
 
-- 「僅複製備份」  是特殊用途的完整備份或記錄備份，與傳統備份的正常順序無關。 若要建立僅複製備份，請在 BACKUP 陳述式中指定 COPY_ONLY 選項。 如需詳細資訊，請參閱[只複製備份](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)。
+- 「僅複製備份」是特殊用途的完整備份或記錄備份，與傳統備份的正常順序無關。 若要建立僅複製備份，請在 BACKUP 陳述式中指定 COPY_ONLY 選項。 如需詳細資訊，請參閱[只複製備份](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)。
 
 ### <a name="transaction-log-truncation"></a><a name="Tlog_Truncation"></a> 交易記錄截斷
 
@@ -597,7 +597,7 @@ BACKUP LOG 的 NO_TRUNCATE 選項相當於同時指定 COPY_ONLY 和 CONTINUE_AF
 ### <a name="working-with-backup-devices-and-media-sets"></a><a name="Backup_Devices_and_Media_Sets"></a> 使用備份裝置和媒體集
 
 #### <a name="backup-devices-in-a-striped-media-set-a-stripe-set"></a>等量媒體集 (等量集) 中的備份裝置
-「等量集」  是一組磁碟檔案，其中的資料會分成幾個區塊，並依照固定順序散發。 等量集中所使用的備份裝置數目必須維持相同 (除非使用 `FORMAT` 來將媒體重新初始化)。
+「等量集」是一組磁碟檔案，其中的資料會分成幾個區塊，並依照固定順序散發。 等量集中所使用的備份裝置數目必須維持相同 (除非使用 `FORMAT` 來將媒體重新初始化)。
 
 下列範例會將 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 資料庫的備份寫入使用三個磁碟檔案的新等量媒體集。
 
@@ -690,8 +690,9 @@ BACKUP 支援 `RESTART` 選項，以提供與舊版 [!INCLUDE[ssNoVersion](../..
 
 只要作業系統支援資料庫的定序，便可以執行跨平台的備份作業，即使在不同類型的處理器之間，也是如此。
 
-搭配含有單一資料檔案且已啟用[透明資料加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) 的資料庫使用備份壓縮時，建議使用**大於 65536 (64 KB)** 的 `MAXTRANSFERSIZE` 設定。
-從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，這會針對 TDE 加密的資料庫啟用最佳化壓縮演算法，此演算法會先將頁面解密、將其壓縮，然後再次加密。 如果使用 `MAXTRANSFERSIZE = 65536` (64 KB)，搭配 TDE 加密資料庫的備份壓縮就會直接壓縮加密的頁面，可能不會產生良好的壓縮率。 如需詳細資訊，請參閱[適用於已啟用 TDE 之資料庫的備份壓縮](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/) \(英文\)。
+從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，設定**大於 65536 (64 KB)** 的 `MAXTRANSFERSIZE` 會針對[透明資料加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) 加密的資料庫啟用最佳化壓縮演算法，此演算法會先將頁面解密、將其壓縮，然後再次加密。 如果未指定 `MAXTRANSFERSIZE` 或使用了 `MAXTRANSFERSIZE = 65536` (64 KB)，則搭配 TDE 加密資料庫的備份壓縮就會直接壓縮已加密頁面，且可能不會產生良好的壓縮率。 如需詳細資訊，請參閱[適用於已啟用 TDE 之資料庫的備份壓縮](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/) \(英文\)。
+
+從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 開始，不再需要設定 `MAXTRANSFERSIZE` 來啟用搭配 TDE 的這個最佳化壓縮演算法。 如果備份命令指定了 `WITH COMPRESSION`，或 *backup compression default* 伺服器組態設為 1，則 `MAXTRANSFERSIZE` 會自動增加至 128K，以啟用最佳化演算法。 如果在備份命令上指定了值大於 64K 的 `MAXTRANSFERSIZE`，則會接受提供的值。 換句話說，SQL Server 永遠不會自動降低值，其只會增加。 如果需要使用 `MAXTRANSFERSIZE = 65536` 備份 TDE 加密的資料庫，則必須指定 `WITH NO_COMPRESSION`，或確定 *backup compression default* 伺服器組態設為 0。
 
 > [!NOTE]
 > 某些情況下，預設值 `MAXTRANSFERSIZE` 大於 64K：
@@ -699,7 +700,7 @@ BACKUP 支援 `RESTART` 選項，以提供與舊版 [!INCLUDE[ssNoVersion](../..
 > - 當資料庫已建立多個資料檔案時，它會使用 `MAXTRANSFERSIZE` > 64K
 > - 執行備份至 URL 時，預設 `MAXTRANSFERSIZE = 1048576` (1MB)
 >
-> 即使其中一個條件適用，您也必須在備份命令中明確設定 `MAXTRANSFERSIZE` 大於 64K，以取得新的備份壓縮演算法。
+> 除非使用 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 或更新版本，否則即使其中一個條件適用，您也必須在備份命令中明確設定 `MAXTRANSFERSIZE` 大於 64K，以取得最佳化的備份壓縮演算法。
 
 根據預設，每項成功的備份作業都會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔與系統事件記錄檔中，加入一個項目。 如果您經常備份記錄檔，這些成功訊息可能會快速累積，因而產生龐大的錯誤記錄檔，讓您難以尋找其他訊息。 在這類情況下，如果沒有任何指令碼相依於這些記錄項目，您就可以使用追蹤旗標 3226 來隱藏這些記錄項目。 如需詳細資訊，請參閱[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
 
@@ -981,7 +982,7 @@ DATABASE 指定完整的資料庫備份。 在資料庫備份期間，受控執�
 > [!IMPORTANT]
 > 在受控執行個體上建立的資料庫備份，只能在其他受控執行個體上還原。 它無法還原至 SQL Server 內部部署執行個體 (如同 SQL Server 2016 資料庫的備份無法還原至 SQL Server 2012 執行個體)。
 
-當您還原 BACKUP DATABASE 所建立的備份 (「資料備份」  ) 時，就會還原整個備份。 若要從 Azure SQL Database 受控執行個體自動備份進行還原，請參閱[將資料庫還原到受控執行個體](/azure/sql-database/sql-database-managed-instance-get-started-restore)。
+當您還原 BACKUP DATABASE 所建立的備份 (「資料備份」) 時，就會還原整個備份。 若要從 Azure SQL Database 受控執行個體自動備份進行還原，請參閱[將資料庫還原到受控執行個體](/azure/sql-database/sql-database-managed-instance-get-started-restore)。
 
 { *database_name* |  **@** _database\_name\_var_ } 這是要備份完整資料庫的來源資料庫。 如果這個名稱是以變數 ( **@** _database\_name\_var_) 的形式提供，您還可以將這個名稱指定為字串常數 ( **@** _database\_name\_var_ **=** _database name_)，或指定為字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。
 
@@ -1015,7 +1016,7 @@ ENCRYPTION 用來指定備份的加密。 您可以指定加密演算法來加�
 
 **備份組選項**
 
-COPY_ONLY：指定備份為「僅複製備份」  ，這不會影響正常的備份順序。 僅複製備份的建立與 Azure SQL Database 自動備份無關。 如需詳細資訊，請參閱[只複製備份](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)。
+COPY_ONLY：指定備份為「僅複製備份」，這不會影響正常的備份順序。 僅複製備份的建立與 Azure SQL Database 自動備份無關。 如需詳細資訊，請參閱[只複製備份](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)。
 
 { COMPRESSION | NO_COMPRESSION } 指定是否要在此備份上執行[備份壓縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)，以覆寫伺服器層級的預設值。
 
@@ -1044,7 +1045,7 @@ BUFFERCOUNT **=** { *buffercount* |  **@** _buffercount\_variable_ } 指定要�
 > [!NOTE]
 > 如需使用 `BUFFERCOUNT` 選項的重要資訊，請參閱[不正確的 BufferCount 資料傳輸選項可能導致 OOM 狀況](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) \(英文\) 部落格文章。
 
-MAXTRANSFERSIZE **=** { *maxtransfersize* |  _**@** maxtransfersize\_variable_ } 以位元組為單位，指定要用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與備份媒體之間的最大傳輸單位。 可能的值是 65536 位元組 (64 KB) 的倍數，最大可達 4194304 位元組 (4 MB)。
+MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } 以位元組為單位，指定要用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與備份媒體之間的最大傳輸單位。 可能的值是 65536 位元組 (64 KB) 的倍數，最大可達 4194304 位元組 (4 MB)。
 
 > [!NOTE]
 > 針對含有單一資料檔案且已啟用[透明資料加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) 的資料庫，預設的 `MAXTRANSFERSIZE` 為 65536 (64 KB)。 針對非 TDE 加密的資料庫，使用備份至 DISK 時，預設的 `MAXTRANSFERSIZE` 為 1048576 (1 MB)，而使用 VDI 或 TAPE 時為 65536 (64 KB)。
@@ -1124,7 +1125,7 @@ WITH STATS = 5, COPY_ONLY;
 
 **在您開始前**，請先參閱[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]中的＜Acquire and Configure a Backup Server＞(取得並設定備份伺服器)。
 
-[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中有兩種類型的備份。 「完整資料庫備份」  會備份整個[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]資料庫。 「差異資料庫備份」  僅包含自上次進行完整備份之後所做的變更。 使用者資料庫的備份會包含資料庫使用者及資料庫角色。 master 資料庫的備份會包含登入。
+[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中有兩種類型的備份。 「完整資料庫備份」會備份整個[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]資料庫。 「差異資料庫備份」僅包含自上次進行完整備份之後所做的變更。 使用者資料庫的備份會包含資料庫使用者及資料庫角色。 master 資料庫的備份會包含登入。
 
 如需有關[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]資料庫備份的詳細資訊，請參閱[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]中的＜Backup and Restore＞(備份和還原)。
 

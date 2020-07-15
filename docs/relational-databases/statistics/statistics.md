@@ -1,7 +1,7 @@
 ---
 title: 統計資料 | Microsoft Docs
 ms.custom: ''
-ms.date: 12/18/2017
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -23,35 +23,35 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 371ef48f968bbc6cfd6a99d225dd8edf81cff6ca
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4cda8a71b0023cfc5cb7e697bf98e06b4e8955f8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286732"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012233"
 ---
 # <a name="statistics"></a>統計資料
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   查詢最佳化工具會使用統計資料來建立可改善查詢效能的查詢計劃。 對於大部分查詢而言，查詢最佳化工具已經產生高品質查詢計劃的必要統計資料。不過，在少數情況下，您必須建立其他統計資料或修改查詢設計，以便獲得最佳結果。 本主題將討論有效使用查詢最佳化統計資料的概念和指導方針。  
   
 ##  <a name="components-and-concepts"></a><a name="DefinitionQOStatistics"></a> 元件和概念  
 ### <a name="statistics"></a>統計資料  
  查詢最佳化的統計資料是指包含資料表或索引檢視表之一或多個資料行中值分佈相關統計資料的二進位大型物件 (BLOB)。 查詢最佳化工具會使用這些統計資料來估計查詢結果中的*基數*或資料列數目。 這些*基數估計值*可讓查詢最佳化工具建立高品質的查詢計劃。 例如，根據您的述詞而定，查詢最佳化工具可使用基數估計值來選擇索引搜尋運算子，而非需要更大量資源的索引掃描運算子 (如果這樣做會改善查詢效能)。  
   
- 每個統計資料物件都是針對一或多個資料表資料行的清單所建立，其中包含「長條圖」  以顯示第一個資料行中的值分佈狀態。 多個資料行的統計資料物件也會儲存這些資料行之間值相互關聯的相關統計資料。 這些相互關聯統計資料 (或稱「密度」  ) 衍生自資料行值之相異資料列的數目。 
+ 每個統計資料物件都是針對一或多個資料表資料行的清單所建立，其中包含「長條圖」以顯示第一個資料行中的值分佈狀態。 多個資料行的統計資料物件也會儲存這些資料行之間值相互關聯的相關統計資料。 這些相互關聯統計資料 (或稱「密度」) 衍生自資料行值之相異資料列的數目。 
 
 #### <a name="histogram"></a><a name="histogram"></a> 長條圖  
-「長條圖」  可測量資料集中每一個相異值的發生頻率。 查詢最佳化工具會計算有關統計資料物件之第一個索引鍵資料行中資料行值的長條圖，以統計方式取樣資料列或執行資料表或檢視表中所有資料列的完整掃描來選取資料行值。 如果長條圖是從一組取樣的資料列所建立，資料列數和相異值數的儲存總計會是預估值，而且不需要為整數。
+「長條圖」可測量資料集中每一個相異值的發生頻率。 查詢最佳化工具會計算有關統計資料物件之第一個索引鍵資料行中資料行值的長條圖，以統計方式取樣資料列或執行資料表或檢視表中所有資料列的完整掃描來選取資料行值。 如果長條圖是從一組取樣的資料列所建立，資料列數和相異值數的儲存總計會是預估值，而且不需要為整數。
 
 > [!NOTE]
 > <a name="frequency"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的長條圖只會針對單一資料行建置；也就是統計資料物件的索引鍵資料行集合中第一個資料行。
   
 若要建立長條圖，查詢最佳化工具會排序資料行值、計算符合每一個相異資料行值的值數目，然後將資料行值彙總成最多 200 個連續長條圖步驟。 每一個長條圖步驟都包含某個範圍的資料行值，後面緊接著上限資料行值。 此範圍包括界限值之間的所有可能資料行值，但是不包括界限值本身。 最低的已排序資料行值就是第一個長條圖步驟的上限值。
 
-更詳細來說，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會以下列三個步驟，從已排序的資料行值集合來建立「長條圖」  ：
+更詳細來說，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會以下列三個步驟，從已排序的資料行值集合來建立「長條圖」：
 
-- **長條圖初始化**：第一個步驟會從已排序的集合開頭處理一連串的值，並收集最多 200 個 *range_high_key*、*equal_rows*、*range_rows* 和 *distinct_range_rows* 的值 (在此步驟中，*range_rows* 和 *distinct_range_rows* 一定是零)。 當所有的輸入都已用完，或已找到 200 個值時，就會結束第一個步驟。 
-- **使用貯體合併掃描**：第二個步驟會依順序處理統計資料索引鍵之前置資料行的每一個額外值；每個後續的值可以新增到最後一個範圍，或在結束時建立新的範圍 (由於輸入的值會排序，因此這是可行的)。 建立新的範圍時，會將現有的一組相鄰範圍摺疊成單一範圍。 系統會選取這一組範圍，以將資訊遺失的機率降至最低。 此方法會使用「最大差異」  演算法，讓長條圖中的步驟數減至最少，同時讓界限值之間的差異最大化。 在這整個步驟期間，範圍摺疊之後的步驟數目仍然為 200。
+- **長條圖初始化**：第一個步驟會從已排序的集合開頭處理一連串值，並收集最多 200 個 *range_high_key*、*equal_rows*、*range_rows* 和 *distinct_range_rows* 的值 (在此步驟中，*range_rows* 和 *distinct_range_rows* 一律為零)。 當所有的輸入都已用完，或已找到 200 個值時，就會結束第一個步驟。 
+- **使用貯體合併掃描**：第二個步驟會依順序處理統計資料索引鍵之前置資料行的每一個額外值；每個後續的值可以新增到最後一個範圍，或在結束時建立新的範圍 (由於輸入的值會排序，因此這是可行的)。 建立新的範圍時，會將現有的一組相鄰範圍摺疊成單一範圍。 系統會選取這一組範圍，以將資訊遺失的機率降至最低。 此方法會使用「最大差異」演算法，讓長條圖中的步驟數減至最少，同時讓界限值之間的差異最大化。 在這整個步驟期間，範圍摺疊之後的步驟數目仍然為 200。
 - **長條圖彙總**：第三個步驟可能會摺疊更多範圍 (如果不會遺失大量資訊的話)。 長條圖步驟的數目可以少於相異值數目，即使包含了少於 200 個界限點的資料行也是如此。 因此，即使資料行具有超過 200 個唯一值，長條圖仍可能只需 200 個以下的步驟。 若資料行都是由唯一值組成，則合併的長條圖將只有最少的三個步驟。
 
 > [!NOTE]
@@ -137,7 +137,11 @@ AUTO_UPDATE_STATISTICS 選項會套用至針對索引所建立的統計資料物
 * 您的應用程式經常會執行相同的查詢、相似的查詢或相似的快取查詢計劃。 相較於使用同步統計資料更新，使用非同步統計資料更新可能會讓您更容易預測查詢的回應時間，因為查詢最佳化工具不需要等候最新的統計資料，就可以執行傳入的查詢。 這樣會避免延遲某些查詢，但無法避免延遲其他查詢。  
   
 * 您的應用程式遇到等候更新統計資料之一或多個查詢所造成的用戶端要求逾時。 在某些情況下，等候同步統計資料可能會造成具有彙總逾時的應用程式失敗。  
-  
+
+非同步統計資料更新是由背景要求執行的。 當要求準備好將更新後的統計資料寫入資料庫時，要求會嘗試取得統計資料中繼資料物件的結構描述修改鎖定。 如果不同工作階段已取得相同物件的鎖定，非同步統計資料更新即會遭到封鎖，直到可取得結構描述修改鎖定為止。 同樣地，需要取得統計資料中繼資料物件結構描述穩定性鎖定，以編譯查詢的工作階段可能也會遭到非同步統計資料更新背景工作階段封鎖，因為後者已取得或正在等待取得結構描述修改鎖定。 因此，針對需要經常進行查詢編譯和統計資料更新的工作負載，使用非同步統計資料可能會增加因鎖定封鎖而產生並行問題的可能性。
+
+在 Azure SQL Database 中，若啟用 ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY [資料庫範圍組態](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)，即可使用非同步統計資料更新來避免潛在的並行問題。 啟用這項組態時，背景要求將會在另外一個低優先順序的佇列中等待取得結構描述修改鎖定，允許其他要求繼續使用現有的統計資料編譯查詢。 一旦沒有其他工作階段持有統計資料中繼資料物件的鎖定，背景要求便會取得其結構描述修改鎖定，並更新統計資料。 雖然不常發生，但若背景要求無法在數分鐘的逾時期間內取得鎖定，非同步統計資料更新即會中止，且統計資料將不會更新，直到觸發另一個自動統計資料更新，或直到統計資料都已[手動更新](update-statistics.md)為止。
+
 #### <a name="incremental"></a>INCREMENTAL  
  當 CREATE STATISTICS 的 INCREMENTAL 選項為 ON 時，所建立的統計資料會依據每個分割區統計資料累加。 關閉 (OFF) 時，會卸除統計資料樹狀結構，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會重新計算統計資料。 預設值為 OFF。 此設定會覆寫資料庫層級 INCREMENTAL 屬性。 如需建立累加統計資料的詳細資訊，請參閱 [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)。 如需自動建立每個分割區統計資料的詳細資訊，請參閱[資料庫屬性 &#40;選項頁面&#41;](../../relational-databases/databases/database-properties-options-page.md#automatic) 和 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。 
   
@@ -177,7 +181,7 @@ AUTO_UPDATE_STATISTICS 選項會套用至針對索引所建立的統計資料物
 * 查詢具有遺失的統計資料。  
   
 ### <a name="query-predicate-contains-multiple-correlated-columns"></a>查詢述詞包含多個相互關聯的資料行  
-當查詢述詞包含多個具有跨資料行關聯性與相依性的資料行時，多個資料行的統計資料可能會改善查詢計劃。 多個資料行的統計資料包含跨資料行相互關聯統計資料 (稱為「密度」  ，而且這些統計資料不會在單一資料行統計資料中提供。 當查詢結果相依於多個資料行之間的資料關聯性時，密度可以改善基數估計值。  
+當查詢述詞包含多個具有跨資料行關聯性與相依性的資料行時，多個資料行的統計資料可能會改善查詢計劃。 多個資料行的統計資料包含跨資料行相互關聯統計資料 (稱為「密度」，而且這些統計資料不會在單一資料行統計資料中提供。 當查詢結果相依於多個資料行之間的資料關聯性時，密度可以改善基數估計值。  
   
 如果資料行已經存在相同的索引中，就表示多重資料行統計資料物件已經存在，而且您不需要手動建立此物件。 如果資料行尚未存在相同的索引中，您可以針對資料行建立索引或使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 陳述式，藉以建立多重資料行統計資料。 相較於統計資料物件而言，這種統計資料需要更多系統資源來維護索引。 如果應用程式不需要多重資料行索引，您就可以建立統計資料物件而不建立索引，藉以節省系統資源。  
   
@@ -202,7 +206,7 @@ GO
 ### <a name="query-selects-from-a-subset-of-data"></a>查詢會從資料子集中選取  
 當查詢最佳化工具針對單一資料行和索引建立統計資料時，它就會針對所有資料列中的值建立統計資料。 當查詢從資料列的子集中選取，而且該資料列子集具有唯一的資料分佈時，篩選的統計資料就可以改善查詢計劃。 您可以使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 陳述式搭配 [WHERE](../../t-sql/queries/where-transact-sql.md) 子句來定義篩選述詞運算式，藉此建立篩選統計資料。  
   
-例如，在使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 時，`Production.Product` 資料表中的每個產品都屬於 `Production.ProductCategory` 資料表的其中一個類別目錄：Bikes、Components、Clothing 及 Accessories。 其中每個類別目錄都具有不同的重量資料分佈：腳踏車 (Bikes) 的重量範圍是從 13.77 到 30.0、元件 (Components) 的重量範圍是從 2.12 到 1050.00 且有些是 NULL 值、衣服 (Clothing) 的重量全部為 NULL，配件 (Accessories) 的重量也是 NULL。  
+例如，在使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 時，`Production.Product` 資料表中的每個產品都屬於 `Production.ProductCategory` 資料表的四個類別目錄之一：Bikes、Components、Clothing 及 Accessories。 其中每個類別目錄都具有不同的重量資料分佈：腳踏車 (Bikes) 的重量範圍是從 13.77 到 30.0、元件 (Components) 的重量範圍是從 2.12 到 1050.00 且有些是 NULL 值、衣服 (Clothing) 的重量全部為 NULL，配件 (Accessories) 的重量也是 NULL。  
   
 以 Bikes 為例，相較於在 Weight 資料行上具有完整資料表統計資料或不存在統計資料而言，針對所有腳踏車重量的篩選統計資料將能為查詢最佳化工具提供更精確的統計資料，而且可以改善查詢計劃品質。 雖然腳踏車重量資料行適合做為篩選的統計資料，但是不一定適合做為篩選的索引 (如果重量查閱的數目相當小的話)。 篩選索引為查閱所提供的效能提升程度可能不會超過將篩選索引加入至資料庫的額外維護和儲存成本。  
   
@@ -280,7 +284,7 @@ GO
 ##  <a name="queries-that-use-statistics-effectively"></a><a name="DesignStatistics"></a> 有效使用統計資料的查詢  
  某些查詢實作 (例如查詢述詞中的區域變數和複雜運算式) 可能會導致次佳的查詢計劃。 不過，遵循查詢設計指導方針來有效使用統計資料有助於避免這種情況發生。 如需查詢述詞的詳細資訊，請參閱[搜尋條件 &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)。  
   
- 您可以套用有效使用統計資料的查詢設計指導方針來改善查詢述詞中使用之運算式、變數和函數的「基數估計值」  ，藉以改善查詢計劃。 當查詢最佳化工具不知道運算式、變數或函式的值時，它就不知道要在長條圖中查閱哪個值，因此無法從長條圖中擷取最佳的基數估計值。 此時，查詢最佳化工具會改為以長條圖中所有取樣資料列之每個相異值的平均資料列數目做為基數估計值的基礎。 這樣會導致次佳的基數估計值，而且可能會損及查詢效能。 如需長條圖的詳細資訊，請參閱本頁面中的[長條圖](#histogram)一節，或是 [sys.dm_db_stats_histogram](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)。
+ 您可以套用有效使用統計資料的查詢設計指導方針來改善查詢述詞中使用之運算式、變數和函數的「基數估計值」，藉以改善查詢計劃。 當查詢最佳化工具不知道運算式、變數或函式的值時，它就不知道要在長條圖中查閱哪個值，因此無法從長條圖中擷取最佳的基數估計值。 此時，查詢最佳化工具會改為以長條圖中所有取樣資料列之每個相異值的平均資料列數目做為基數估計值的基礎。 這樣會導致次佳的基數估計值，而且可能會損及查詢效能。 如需長條圖的詳細資訊，請參閱本頁面中的[長條圖](#histogram)一節，或是 [sys.dm_db_stats_histogram](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)。
   
  下列指導方針描述的是如何撰寫查詢，以便透過改善基數估計值，改善查詢計劃。  
   

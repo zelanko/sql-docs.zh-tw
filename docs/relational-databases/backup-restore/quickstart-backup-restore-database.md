@@ -1,7 +1,7 @@
 ---
 title: 快速入門：備份與還原資料庫
 titleSuffix: SQL Server
-description: 此快速入門說明如何備份和還原內部部署 SQL Server 資料庫。
+description: 在本文中，您將了解如何在 SQL Server 中建立新的資料庫、備份資料庫，以及還原備份。
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
@@ -11,21 +11,21 @@ ms.prod: sql
 ms.technology: backup-restore
 ms.prod_service: backup-restore
 ms.assetid: ''
-ms.openlocfilehash: 97993d621de9b10d930feb2fc54f53bc83f00293
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6e261914baec4774d0e7ae1f343874e4a3154d42
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258637"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85669952"
 ---
 # <a name="quickstart-backup-and-restore-a-sql-server-database-on-premises"></a>快速入門：備份與還原內部部署的 SQL Server 資料庫
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 在本快速入門中，您將建立新的資料庫、進行簡單備份，然後將它還原。 
 
 如需更詳細的操作說明，請參閱[建立完整資料庫備份](create-a-full-database-backup-sql-server.md)和[使用 SSMS 還原備份](restore-a-database-backup-using-ssms.md)。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 若要完成本快速入門，您需要下列項目： 
 
 - [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)
@@ -34,8 +34,8 @@ ms.locfileid: "75258637"
 ## <a name="create-a-test-database"></a>建立測試資料庫 
 
 1. 啟動 [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) 並連線至 SQL Server 執行個體。
-1. 開啟 [新增查詢]  視窗。 
-1. 執行下列 Transact-SQL (T-SQL) 程式碼以建立測試資料庫。 重新整理 [物件總管]  中的 [資料庫]  節點以查看新的資料庫。 
+1. 開啟 [新增查詢] 視窗。 
+1. 執行下列 Transact-SQL (T-SQL) 程式碼以建立測試資料庫。 重新整理 [物件總管] 中的 [資料庫] 節點以查看新的資料庫。 
 
 ```sql
 USE [master]
@@ -72,10 +72,10 @@ GO
 若要備份資料庫，請執行下列作業： 
 
 1. 啟動 [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) 並連線至 SQL Server 執行個體。
-1. 在 [物件總管]  中，展開 [資料庫]  節點。  
-1. 以滑鼠右鍵按一下資料庫、將滑鼠游標暫留在[工作]  上，然後選取 [備份]  。 
-1. 在 [目的地]  下方，確認您的備份路徑正確。 如果您需要變更此路徑，請選取 [移除]  以移除現有路徑，然後選取 [新增]  以輸入新的路徑。 您可以使用省略符號來瀏覽至特定檔案。 
-1. 選取 [確定]  ，即會備份您的資料庫。 
+1. 在 [物件總管] 中，展開 [資料庫] 節點。  
+1. 以滑鼠右鍵按一下資料庫、將滑鼠游標暫留在[工作] 上，然後選取 [備份]。 
+1. 在 [目的地] 下方，確認您的備份路徑正確。 如果您需要變更此路徑，請選取 [移除] 以移除現有路徑，然後選取 [新增] 以輸入新的路徑。 您可以使用省略符號來瀏覽至特定檔案。 
+1. 選取 [確定]，即會備份您的資料庫。 
 
 ![進行 SQL 備份](media/quickstart-backup-restore-database/backup-db-ssms.png)
 
@@ -94,14 +94,14 @@ GO
 若要還原資料庫，請執行下列作業： 
 
 1. 啟動 [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) 並連線至 SQL Server 執行個體。
-1. 以滑鼠右鍵按一下 [物件總管]  中的 [資料庫]  節點，然後選取 [還原資料庫]  。
+1. 以滑鼠右鍵按一下 [物件總管] 中的 [資料庫] 節點，然後選取 [還原資料庫]。
 
     ![還原資料庫](media/quickstart-backup-restore-database/restore-db-ssms1.png)
 
-1. 選取 [裝置:]  ，然後選取省略符號 (...) 以找出您的備份檔案。 
-1. 選取 [新增]  ，然後瀏覽至您的 `.bak` 檔案所在位置。 選取 `.bak` 檔案，然後選取 [確定]  。 
-1. 選取 [確定]  以關閉 [選取備份裝置]  對話方塊。 
-1. 選取 [確定]  ，即會還原您的資料庫備份。 
+1. 選取 [裝置:]，然後選取省略符號 (...) 以找出您的備份檔案。 
+1. 選取 [新增]，然後瀏覽至您的 `.bak` 檔案所在位置。 選取 `.bak` 檔案，然後選取 [確定]。 
+1. 選取 [確定] 以關閉 [選取備份裝置] 對話方塊。 
+1. 選取 [確定]，即會還原您的資料庫備份。 
 
     ![還原資料庫](media/quickstart-backup-restore-database/restore-db-ssms2.png)
 

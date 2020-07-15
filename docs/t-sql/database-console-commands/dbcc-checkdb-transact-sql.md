@@ -34,15 +34,15 @@ helpviewer_keywords:
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 743c3c6d24be39ae9c2b56da26017bd4b15852a6
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 4003b08205f1c7db98d2656e17fe653a3616638d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635912"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748953"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 藉由執行下列作業，檢查指定資料庫中所有物件的邏輯完整性和實體完整性：    
     
@@ -125,7 +125,7 @@ ALL_ERRORMSGS
 
 EXTENDED_LOGICAL_CHECKS  
  如果相容性層級為 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) 或更高，則會針對索引檢視表、XML 索引和空間索引 (如果有的話) 執行邏輯一致性檢查。  
- 如需詳細資訊，請參閱本主題稍後[備註](#remarks)一節中的＜對索引執行邏輯一致性檢查＞  。  
+ 如需詳細資訊，請參閱本主題稍後[備註](#remarks)一節中的＜對索引執行邏輯一致性檢查＞。  
     
 NO_INFOMSGS  
  隱藏所有參考訊息。  
@@ -221,7 +221,13 @@ DBCC CHECKDB 命令執行完成之後，[!INCLUDE[ssNoVersion](../../includes/ss
 |3|這表示中繼資料中的損毀導致 DBCC 命令結束。|    
 |4|偵測到判斷提示或存取違規。|    
 |5|發生使 DBCC 命令終止的未知錯誤。|    
+
+> [!NOTE]
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會記錄資料庫執行一致性檢查且沒有錯誤的日期和時間 (或「乾淨的」一致性檢查)。 這稱為 `last known clean check`。 在第一次啟動資料庫時，此日期會以下列格式寫入至 EventLog (EventID-17573) 和 ERRORLOG： 
+>
+>`CHECKDB for database '<database>' finished without errors on 2019-05-05 18:08:22.803 (local time). This is an informational message only; no user action is required.`
     
+
 ## <a name="error-reporting"></a>錯誤報告    
 每當 DBCC CHECKDB 偵測到損毀錯誤時，都會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] LOG 目錄中建立傾印檔案 (`SQLDUMP*nnnn*.txt`)。 當針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體啟用*功能使用方式*資料收集及*錯誤報告*功能時，這個檔案會自動轉送到 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。 收集的資料是用來提升 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的功能。
 傾印檔案包含 DBCC CHECKDB 命令的結果以及其他診斷輸出。 存取權會限制為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶及系統管理員 (sysadmin) 角色的成員。 依預設，系統管理員 (sysadmin) 角色包含 Windows `BUILTIN\Administrators` 群組及本機系統管理員群組的所有成員。 如果資料收集程序失敗，DBCC 命令不會失敗。

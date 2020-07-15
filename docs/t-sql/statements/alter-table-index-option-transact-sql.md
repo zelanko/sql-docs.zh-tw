@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ba0e9f1edc59b6f1b51bff6afa040fa489cd9858
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 054782a6b6dd4ee381c0a70b857a945c72a66372
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631587"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760954"
 ---
 # <a name="alter-table-index_option-transact-sql"></a>ALTER TABLE index_option (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   指定使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 所建立之條件約束定義中的索引所能套用的一組選項。  
   
@@ -213,17 +213,17 @@ ms.locfileid: "81631587"
   
  如需與壓縮有關的詳細資訊，請參閱[資料壓縮](../../relational-databases/data-compression/data-compression.md)。  
   
-ON PARTITIONS **(** { \<> | \<範圍> } [ **,** ...*n* ] **)** **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
+ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ...*n* ] **)** **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
  指定套用 DATA_COMPRESSION 設定的分割區。 如果未分割此資料表，ON PARTITIONS 引數會產生錯誤。 如果未提供 ON PARTITIONS 子句，DATA_COMPRESSION 選項會套用到分割區資料表的所有分割區。  
   
-可以使用以下方式來指定 \<partition_number_expression>：  
+\<partition_number_expression> 可使用下列方式進行指定：  
   
--   提供資料分割的編號，例如：ON PARTITIONS (2)。  
+-   提供分割區的編號，例如：ON PARTITIONS (2)。  
 -   為數個個別分割區提供以逗號分隔的分割區編號，例如：ON PARTITIONS (1, 5)。  
 -   同時提供範圍和個別分割區，例如：ON PARTITIONS (2, 4, 6 TO 8)。  
   
-\<range> 可以指定為以 TO 一字分隔的資料分割編號，例如：ON PARTITIONS (6 TO 8)。  
+\<range> 可以指定為以 TO 一字分隔的分割區編號，例如：ON PARTITIONS (6 TO 8)。  
   
  若要為不同的分割區設定不同類型的資料壓縮，請指定 DATA_COMPRESSION 選項一次以上，例如：  
   

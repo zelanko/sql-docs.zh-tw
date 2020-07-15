@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (預覽)
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: 在 Azure SQL 資料倉儲中使用 COPY 陳述式，從外部儲存體帳戶載入。
-ms.date: 04/30/2020
+ms.date: 06/19/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 455e75d13c8b083d37bbab1c6a15916871b1ffba
-ms.sourcegitcommit: c53bab7513f574b81739e5930f374c893fc33ca2
+ms.openlocfilehash: 5d2b3040c53c2bbffb6fd073fa9f385f78e28798
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82987434"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091672"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (預覽)
 
@@ -44,28 +44,34 @@ ms.locfileid: "82987434"
 > [!NOTE]  
 > COPY 陳述式目前處於公開預覽階段。
 
+請瀏覽下列文件，以取得使用 COPY 陳述式的完整範例和快速入門：
+
+- [快速入門：使用 COPY 陳述式大量載入資料](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
+- [快速入門：使用 COPY 陳述式和其支援驗證方法的範例](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
+- [快速入門：使用豐富的 Synapse Studio UI 建立 COPY 陳述式 (工作區預覽)](https://docs.microsoft.com/azure/synapse-analytics/quickstart-load-studio-sql-pool)
+
 ## <a name="syntax"></a>語法  
 
 ```syntaxsql
 COPY INTO [schema.]table_name
 [(Column_list)] 
-FROM ‘<external_location>’ [,...n]
+FROM '<external_location>' [,...n]
 WITH  
  ( 
  [FILE_TYPE = {'CSV' | 'PARQUET' | 'ORC'} ]
  [,FILE_FORMAT = EXTERNAL FILE FORMAT OBJECT ]  
  [,CREDENTIAL = (AZURE CREDENTIAL) ]
- [,ERRORFILE = '[http(s)://storageaccount/container]/errorfile_directory[/]] 
+ [,ERRORFILE = '[http(s)://storageaccount/container]/errorfile_directory[/]]' 
  [,ERRORFILE_CREDENTIAL = (AZURE CREDENTIAL) ]
  [,MAXERRORS = max_errors ] 
- [,COMPRESSION = { 'Gzip' | 'DefaultCodec'|’Snappy’}] 
- [,FIELDQUOTE = ‘string_delimiter’] 
- [,FIELDTERMINATOR =  ‘field_terminator’]  
- [,ROWTERMINATOR = ‘row_terminator’]
+ [,COMPRESSION = { 'Gzip' | 'DefaultCodec'| 'Snappy'}] 
+ [,FIELDQUOTE = 'string_delimiter'] 
+ [,FIELDTERMINATOR =  'field_terminator']  
+ [,ROWTERMINATOR = 'row_terminator']
  [,FIRSTROW = first_row]
- [,DATEFORMAT = ‘date_format’] 
+ [,DATEFORMAT = 'date_format'] 
  [,ENCODING = {'UTF8'|'UTF16'}] 
- [,IDENTITY_INSERT = {‘ON’ | ‘OFF’}]
+ [,IDENTITY_INSERT = {'ON' | 'OFF'}]
 )
 ```
 
@@ -125,7 +131,7 @@ WITH
 - ORC：指定 Optimized Row Columnar (ORC) 格式。
 
 >[!NOTE]  
-> Polybase 中的檔案類型「分隔符號文字」已由 ' CSV ' 檔案格式所取代，其中預設的逗號分隔符號可以透過 FIELDTERMINATOR 參數設定。 
+>Polybase 中的檔案類型「分隔符號文字」已由 ' CSV ' 檔案格式所取代，其中預設的逗號分隔符號可以透過 FIELDTERMINATOR 參數設定。 
 
 *FILE_FORMAT = external_file_format_name*</br>
 *FILE_FORMAT* 僅適用於 Parquet 和 ORC 檔案，而且會指定儲存外部資料檔案類型和壓縮方法的外部檔案格式物件名稱。 若要建立外部檔案格式，請使用 [CREATE EXTERNAL FILE FORMAT](create-external-file-format-transact-sql.md?view=azure-sqldw-latest)。
@@ -356,7 +362,7 @@ WITH (
 COPY INTO test_parquet
 FROM 'https://myaccount.blob.core.windows.net/myblobcontainer/folder1/*.parquet'
 WITH (
-    FILE_FORMAT = myFileFormat
+    FILE_FORMAT = myFileFormat,
     CREDENTIAL=(IDENTITY= 'Shared Access Signature', SECRET='<Your_SAS_Token>')
 )
 ```
@@ -369,7 +375,7 @@ FROM
 'https://myaccount.blob.core.windows.net/myblobcontainer/folder0/*.txt', 
     'https://myaccount.blob.core.windows.net/myblobcontainer/folder1'
 WITH ( 
-    FILE_TYPE = 'CSV'
+    FILE_TYPE = 'CSV',
     CREDENTIAL=(IDENTITY= '<client_id>@<OAuth_2.0_Token_EndPoint>',SECRET='<key>'),
     FIELDTERMINATOR = '|'
 )

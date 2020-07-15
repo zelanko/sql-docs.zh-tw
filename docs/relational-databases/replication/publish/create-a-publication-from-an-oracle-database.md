@@ -13,26 +13,26 @@ helpviewer_keywords:
 ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8b43b3b2f67554a59388ccd6a50485e4c71d9e1a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cdb8847a7aaf7aaa9b21a64ed6736738da6df9dc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908593"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882211"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>從 Oracle 資料庫建立發行集
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中從 Oracle 資料庫建立發行集。  
   
  **本主題內容**  
   
 -   **開始之前：**  
   
-     [必要條件](#Prerequisites)  
+     [先決條件](#Prerequisites)  
   
 -   **若要從 Oracle 資料庫建立發行集，請使用：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "72908593"
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  使用「新增發行集精靈」從「Oracle 資料庫」建立快照式或交易式發行集。  
   
- 第一次從 Oracle 資料庫建立發行集時，必須在「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」端識別「Oracle 發行者」(如果是同一資料庫的後續發行集，則不需要執行這個動作)。 可以從 [新增發行集精靈] 或 [散發者屬性 - \<散發者>] 對話方塊來完成 Oracle 發行者的識別；本主題會顯示 [散發者屬性 - \<散發者>] 對話方塊。  
+ 第一次從 Oracle 資料庫建立發行集時，必須在「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」端識別「Oracle 發行者」(如果是同一資料庫的後續發行集，則不需要執行這個動作)。 可從 [新增發行集精靈] 或 [散發者屬性 - \<Distributor>] 對話方塊來完成 Oracle 發行者的識別；本主題會顯示 [散發者屬性 - \<Distributor>] 對話方塊。  
   
 #### <a name="to-identify-the-oracle-publisher-at-the-sql-server-distributor"></a>若要在 SQL Server 散發者端識別 Oracle 發行者  
   
@@ -53,7 +53,7 @@ ms.locfileid: "72908593"
   
 2.  以滑鼠右鍵按一下 **[複寫]** 資料夾，然後按一下 **[散發者屬性]** 。  
   
-3.  在 [散發者屬性 - \<散發者>] 對話方塊的 [發行者] 頁面上，按一下 [加入]，然後按一下 [加入 Oracle 發行者]。  
+3.  在 [散發者屬性 - \<Distributor>] 對話方塊的 [發行者] 頁面上，按一下 [新增]，然後按一下 [新增 Oracle 發行者]。  
   
 4.  在 **[連接到伺服器]** 對話方塊上，按一下 **[選項]** 按鈕。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "72908593"
   
      **[完整]** 選項可以為 Oracle 發行提供具有完整支援功能的快照式和交易式發行集。 **[閘道]** 選項可以在複寫作為系統之間的閘道時，提供特定的設計最佳化以提升效能。 如果您計畫在多個交易式發行集內發行相同的資料表，就無法使用 **[閘道]** 選項。 如果您選取 **[閘道]** ，則資料表最多只能在一個交易式發行集裡出現，但可以在任意數目的快照式發行集裡出現。  
   
-7.  按一下 **[連接]** ，建立與「Oracle 發行者」的連接，並為複寫設定該連接。 [連接到伺服器] 對話方塊隨即關閉，並將您返回至 [散發者屬性 - \<散發者>] 對話方塊。  
+7.  按一下 **[連接]** ，建立與「Oracle 發行者」的連接，並為複寫設定該連接。 [連線到伺服器] 對話方塊隨即關閉，並會將您返回至 [散發者屬性 - \<Distributor>] 對話方塊。  
   
     > [!NOTE]  
     >  如果網路組態有問題，此時您會收到一條錯誤訊息。 如果您遇到連接到 Oracle 資料庫的問題，請參閱在＜ [Troubleshooting Oracle Publishers](../../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)＞中的「SQL Server 散發者無法連接到 Oracle 資料庫執行個體」一節。  

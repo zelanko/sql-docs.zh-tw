@@ -1,31 +1,30 @@
 ---
 title: 連線與查詢 Azure SQL 資料庫
-titleSuffix: Azure Data Studio
 description: 本快速入門說明如何使用 Azure Data Studio 連線到 SQL 資料庫並執行查詢
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.reviewer: alayu; maghan; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
 ms.date: 05/14/2019
-ms.openlocfilehash: 2ed7841c3e6205ad0a6df4f232f021aeb24983cd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 73e910b6d199a4918eafca067a95136e31ac079c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957072"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771960"
 ---
-# <a name="quickstart-use-name-sos-to-connect-and-query-azure-sql-database"></a>快速入門：使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 連線與查詢 Azure SQL 資料庫
+# <a name="quickstart-use-azure-data-studio-to-connect-and-query-azure-sql-database"></a>快速入門：使用 Azure Data Studio 連線及查詢 Azure SQL 資料庫
 
-在本快速入門中，您將使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 連線到 Azure SQL Database 伺服器。 接著，您會執行 Transact-SQL (T-SQL) 陳述式來建立和查詢 TutorialDB d資料庫，而此資料庫會在其他 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 教學課程中使用。
+在本快速入門中，您將使用 Azure Data Studio 連線到 Azure SQL Database 伺服器。 接著，您會執行 Transact-SQL (T-SQL) 陳述式來建立及查詢 TutorialDB 資料庫，且此資料庫會在其他 Azure Data Studio 教學課程中使用。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
-若要完成本快速入門，您需要 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 和 Azure SQL Database 伺服器。
+若要完成本快速入門，則需要 Azure Data Studio 與 Azure SQL Database 伺服器。
 
-- [安裝 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
+- [安裝 Azure Data Studio](download.md)
 
 如果您沒有 Azure SQL 伺服器，請完成下列其中一個 Azure SQL Database 快速入門。 請記住完整伺服器名稱和登入認證，以供後續步驟執行：
 
@@ -36,9 +35,9 @@ ms.locfileid: "74957072"
 
 ## <a name="connect-to-your-azure-sql-database-server"></a>連接到 Azure SQL Database 伺服器
 
-使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 來建立與您 Azure SQL Database 伺服器的連線。
+使用 Azure Data Studio 建立對 Azure SQL Database 伺服器的連線。
 
-1. 第一次執行 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 時，應該會開啟 [歡迎使用]  頁面。 如果您沒有看到 [歡迎使用]  頁面，請選取 [說明]   > [歡迎使用]  。 選取 [新增連線]  ，開啟 [連線]  窗格：
+1. 第一次執行 Azure Data Studio 時，應該會開啟 [歡迎使用] 頁面。 如果您沒有看到 [歡迎使用] 頁面，請選取 [說明] > [歡迎使用]。 選取 [新增連線]，開啟 [連線] 窗格：
    
    ![新增連線圖示](media/quickstart-sql-database/new-connection-icon.png)
 
@@ -50,25 +49,25 @@ ms.locfileid: "74957072"
    | **驗證** | SQL 登入| 本教學課程使用 SQL 驗證。 |
    | **使用者名稱** | 伺服器系統管理員帳戶使用者名稱 | 用來建立伺服器之帳戶的使用者名稱。 |
    | **密碼 (SQL 登入)** | 伺服器系統管理員帳戶密碼 | 用來建立伺服器之帳戶的密碼。 |
-   | **儲存密碼嗎？** | [是] 或 [否] | 如果您不想要每次都輸入密碼，請選取 [是]  。 |
-   | **資料庫名稱** | 保留空白  | 您在這裡只會連線至伺服器。 |
+   | **儲存密碼嗎？** | [是] 或 [否] | 如果您不想要每次都輸入密碼，請選取 [是]。 |
+   | **資料庫名稱** | 保留空白 | 您在這裡只會連線至伺服器。 |
    | **伺服器群組** | 選取 <Default> | 您可以將此欄位設定為您所建立的特定伺服器群組。 | 
 
    ![新增連線圖示](media/quickstart-sql-database/new-connection-screen.png)  
 
-3. 選取 [連接]  。
+3. 選取 [連接]。
 
-4. 如果您伺服器的防火牆規則沒有允許 Azure Data Studio 進行連線，就會開啟 [建立新的防火牆規則]  表單。 完成表單，以便建立新的防火牆規則。 如需詳細資訊，請參閱[防火牆規則](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)。
+4. 如果您伺服器的防火牆規則沒有允許 Azure Data Studio 進行連線，就會開啟 [建立新的防火牆規則] 表單。 完成表單，以便建立新的防火牆規則。 如需詳細資訊，請參閱[防火牆規則](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)。
 
    ![新增防火牆規則](media/quickstart-sql-database/firewall.png)  
 
-成功連線之後，您的伺服器就會在 [伺服器]  提要欄位中開啟。
+成功連線之後，您的伺服器就會在 [伺服器] 提要欄位中開啟。
 
 ## <a name="create-the-tutorial-database"></a>建立教學課程資料庫
 
-下一節會建立其他 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 教學課程中所使用的 TutorialDB 資料庫。
+下一節會建立其他 Azure Data Studio 教學課程中所使用的 TutorialDB 資料庫。
 
-1. 在 [伺服器]  提要欄位中，以滑鼠右鍵按一下您的 Azure SQL 伺服器，然後選取 [新增查詢]  。
+1. 在 [伺服器] 提要欄位中，以滑鼠右鍵按一下您的 Azure SQL 伺服器，然後選取 [新增查詢]。
 
 1. 將此 SQL 貼到查詢編輯器中。
 
@@ -85,7 +84,7 @@ ms.locfileid: "74957072"
    GO
    ```
 
-1. 從工具列中，選取 [執行]  。 通知會出現在顯示查詢進度的 [訊息]  窗格中。
+1. 從工具列中，選取 [執行]。 通知會出現在顯示查詢進度的 [訊息] 窗格中。
 
 ## <a name="create-a-table"></a>建立資料表
 
@@ -99,7 +98,7 @@ ms.locfileid: "74957072"
 
 1. 建立 `Customers` 資料表。 
 
-   在查詢編輯器中將先前的查詢取代為此項，然後選取 [執行]  。
+   在查詢編輯器中將先前的查詢取代為此項，然後選取 [執行]。
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -121,7 +120,7 @@ ms.locfileid: "74957072"
 
 ## <a name="insert-rows-into-the-table"></a>在資料表中插入資料列
 
-將先前的查詢取代為此項，然後選取 [執行]  。
+將先前的查詢取代為此項，然後選取 [執行]。
 
    ```sql
    -- Insert rows into table 'Customers'
@@ -137,7 +136,7 @@ ms.locfileid: "74957072"
 
 ## <a name="view-the-result"></a>檢視結果
 
-將先前的查詢取代為此項，然後選取 [執行]  。
+將先前的查詢取代為此項，然後選取 [執行]。
 
    ```sql
    -- Select rows from table 'Customers'

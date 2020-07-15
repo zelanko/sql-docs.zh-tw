@@ -1,5 +1,6 @@
 ---
 title: 建立 XML 索引 | Microsoft Docs
+description: 了解如何在 SQL Server 中建立主要和次要 XML 索引。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3c83cf778439ed8508c3c0128d90b085ae358c60
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2113062f446100fc119f7eab590a610c27800075
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664587"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85691413"
 ---
 # <a name="create-xml-indexes"></a>建立 XML 索引
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   此主題描述如何建立主要和次要 XML 索引。  
   
 ## <a name="creating-a-primary-xml-index"></a>建立主要 XML 索引  

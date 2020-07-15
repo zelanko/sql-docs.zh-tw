@@ -37,15 +37,15 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f29027f7b9ab16b1cb9de5c92f5aaf7dccf9765
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: de62120fd28e67c4323a88f73bc5bac939aedc64
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634847"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002489"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   建立由查詢定義其內容 (資料行和資料列) 的虛擬資料表。 您可以使用這個陳述式來建立資料庫中一個或多個資料表內資料的檢視。 例如，檢視可用於下列目的：  
   

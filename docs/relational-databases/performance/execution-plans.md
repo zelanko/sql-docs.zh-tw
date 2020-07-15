@@ -16,15 +16,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753f
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 241df9557a141eb45933ced261a7b55f98a6ec8e
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 8f9a92ee9ac1ed87a20515a267a80b8372c95366
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087348"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751796"
 ---
 # <a name="execution-plans"></a>執行計劃
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 為了能夠執行查詢，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 必須分析陳述式來判斷存取必要資料最有效率的方式。 這項分析會由稱為「查詢最佳化工具」的元件處理。 查詢最佳化工具的輸入是由查詢、資料庫結構描述 (資料表和索引定義) 以及資料庫統計資料所組成。 查詢最佳化工具的輸出是查詢執行計畫，有時稱為查詢計劃或執行計畫。   
 
@@ -45,7 +45,7 @@ ms.locfileid: "82087348"
 
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 有三個選項可顯示執行計畫：        
-> -  ***[估計執行計畫](../../relational-databases/performance/display-the-estimated-execution-plan.md)*** 是已編譯的計畫，且是由查詢最佳化工具根據估計所產生。 這是儲存在計畫快取中的查詢計劃。        
+> -  ***[估計執行計畫](../../relational-databases/performance/display-the-estimated-execution-plan.md)*** 是已編譯的計畫，且是由查詢最佳化工具根據估計所產生。 這是儲存在計畫快取中的查詢計畫。        
 > -  ***[實際執行計畫](../../relational-databases/performance/display-an-actual-execution-plan.md)*** 是已編譯的計畫再加上其[執行內容](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)。 其會在**查詢執行完成之後**提供使用。 這包括實際的執行階段資訊 (例如執行警告)，在較新版本的 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 中則是執行期間所使用的耗用時間與 CPU 時間。         
 > -  ***[即時查詢統計資料](../../relational-databases/performance/live-query-statistics.md)*** 是已編譯的計畫加上其執行內容。 其可供**執行中的查詢執行**使用，且會每秒更新一次。 這包括如流經[運算子](../../relational-databases/showplan-logical-and-physical-operators-reference.md)的資料列實際數目、經過的時間，以及估計的查詢進度等執行階段資訊。
 

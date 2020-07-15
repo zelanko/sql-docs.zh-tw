@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 673c0cb67bb93329a8a31eb218a016b4c59becfd
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d6382439c22ba36c2b04b3b58526e93a53d3545e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633929"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004725"
 ---
 # <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   建立資料列層級安全性的安全性原則。  
   
@@ -74,7 +74,7 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
  *table_schema_name.table_name*  
  這是套用安全性述詞的目標資料表。 您可以將多個已停用的安全性原則目標設為特定 DML 作業的單一資料表，但無論何時都只能啟用一個安全性原則。  
   
- *\<block_dml_operation>* 要套用封鎖述詞的特定 DML 作業。 AFTER 可指定在 DML 作業 (INSERT 或 UPDATE) 執行之後，根據資料列的值來評估述詞。 BEFORE 可指定在 DML 作業 (UPDATE 或 DELETE) 執行之前，根據資料列的值來評估述詞。 如果沒有指定作業，則會將述詞套用至所有作業。  
+ *\<block_dml_operation>* 將套用 BLOCK 述詞的特定 DML 作業。 AFTER 可指定在 DML 作業 (INSERT 或 UPDATE) 執行之後，根據資料列的值來評估述詞。 BEFORE 可指定在 DML 作業 (UPDATE 或 DELETE) 執行之前，根據資料列的值來評估述詞。 如果沒有指定作業，則會將述詞套用至所有作業。  
   
  [ STATE = { **ON** | OFF } ]  
  啟用或停用強制對目標資料表執行其安全性述詞的安全性原則。 如果未指定，則會啟用正在建立的安全性原則。  

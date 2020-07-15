@@ -1,5 +1,6 @@
 ---
 title: 檢視或設定遠端伺服器連線選項 (SQL Server) | Microsoft Docs
+description: 了解如何在伺服器層級檢視和設定遠端伺服器連線選項。 您可針對此用途使用 SQL Server Management Studio 或 Transact-SQL。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - servers [SQL Server], remote
 - connections [SQL Server], remote servers
 ms.assetid: 356d3e6b-8514-4bd2-a683-9de147949b2b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 11ca900d4a6f0f820379b0446bcca85e97462177
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ec50e6ae39798add5a564dbeb8a971e879c18c27
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67945686"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85680709"
 ---
 # <a name="view-or-configure-remote-server-connection-options-sql-server"></a>檢視或設定遠端伺服器連接選項 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中檢視或設定伺服器層級的遠端伺服器連接選項。  
   
  **本主題內容**  
@@ -33,7 +34,7 @@ ms.locfileid: "67945686"
   
 -   **若要使用下列項目檢視或設定遠端伺服器連接選項：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -50,9 +51,9 @@ ms.locfileid: "67945686"
   
 #### <a name="to-view-or-configure-remote-server-connection-options"></a>若要檢視或設定遠端伺服器連接選項  
   
-1.  在物件總管中，以滑鼠右鍵按一下伺服器，然後按一下 [屬性]  。  
+1.  在物件總管中，以滑鼠右鍵按一下伺服器，然後按一下 [屬性]。  
   
-2.  在 [SQL Server 屬性 - \<伺服器名稱>]    對話方塊中，按一下 [連接]  。  
+2.  在 [SQL Server 屬性 - \<**_server_name_**>] 對話方塊中，按一下 [連線]。  
   
 3.  檢閱 **[連接]** 頁面上的 **[遠端伺服器連接]** 設定，並視需要加以修改。  
   

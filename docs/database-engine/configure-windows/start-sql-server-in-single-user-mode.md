@@ -1,5 +1,6 @@
 ---
 title: 以單一使用者模式啟動 SQL Server | Microsoft Docs
+description: 了解 SQL Server 中的單一使用者模式。 查看此模式何時有用，以及如何使用啟動選項「-m」，在此模式中啟動 SQL Server 的執行個體。
 ms.custom: ''
 ms.date: 09/20/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - starting SQL Server, single-user mode
 - single-user mode [SQL Server]
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 1cb488b6ce3dc21567b4f64738f9c26910c61f17
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 31b0075dfa6b3f4fa380e8b43054d0c98ebd8d81
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68037160"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764011"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>以單一使用者模式啟動 SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   在某些情況下，您可能需要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] startup option -m **，在單一使用者模式下啟動**的執行個體。 例如，您可能想要變更伺服器組態選項，或復原損毀的 master 資料庫或其他系統資料庫。 這兩個動作都需要在單一使用者模式下啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
  在單一使用者模式下啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可讓電腦本機管理員群組的任何成員以 sysadmin 固定伺服器角色的成員身分，連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 如需詳細資訊，請參閱 [當系統管理員遭到鎖定時連接到 SQL Server](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)。  
@@ -61,7 +62,7 @@ ms.locfileid: "68037160"
   
 4.  從叢集管理員或是容錯移轉叢集管理主控台確認 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源依然為離線狀態。  
   
-5.  現在使用下列命令連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，並執行必要作業：SQLCMD -E -S\<伺服器名稱>。  
+5.  現在使用下列命令連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，並執行必要作業：SQLCMD -E -S\<servername>。  
   
 6.  當此操作完成之後，關閉命令提示字元，並透過叢集管理員將 SQL 和其他資源帶回線上。  
   

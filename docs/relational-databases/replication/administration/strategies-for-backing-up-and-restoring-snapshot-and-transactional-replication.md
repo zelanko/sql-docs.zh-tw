@@ -1,5 +1,6 @@
 ---
 title: 備份與還原快照式和異動複寫的策略 | Microsoft Docs
+description: 了解在 SQL Server 中為快照式及異動複寫設計備份與還原策略時，所需考量的事項。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,15 +22,15 @@ ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 94135f0fea3373dbab2b1bfba363e9cd9e8385e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 490dc9907114db22c0b506f6fa436f429cbd1fad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71710336"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85740846"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>備份與還原快照式和異動複寫的策略
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/applies-to-version/sql-asdb.md)]
   當為快照式及異動複寫設計備份與還原策略時，需要考慮三個方面：  
   
 -   要備份的資料庫。

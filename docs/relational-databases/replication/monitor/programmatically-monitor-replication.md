@@ -1,5 +1,6 @@
 ---
 title: 以程式設計方式監視複寫 | Microsoft Docs
+description: 複寫監視器是一種圖形化工具。 使用複寫監視器來監視 SQL Server 中的複寫拓撲。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -29,12 +30,12 @@ ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0926264c25affe2f110227fad4c0fb2b113c9590
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fbbf44a1efbb38bf81b027d2e3299d1e0a670db2
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287855"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807953"
 ---
 # <a name="programmatically-monitor-replication"></a>以程式設計方式監視複寫
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

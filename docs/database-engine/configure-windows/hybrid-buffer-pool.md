@@ -1,5 +1,6 @@
 ---
 title: 混合式緩衝集區 | Microsoft Docs
+description: 了解混合式緩衝集區如何讓持續性記憶體裝置可透過記憶體匯流排存取。 開啟或關閉此 SQL Server 2019 功能，並檢視最佳做法。
 ms.custom: ''
 ms.date: 10/31/2019
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: e2aafb77145fbe22a980ef158cfa7c78db6288d2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 73f4abc0c1b2a7cd6943ab6b216133812c145d19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216257"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772422"
 ---
 # <a name="hybrid-buffer-pool"></a>混合式緩衝集區
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 混合式緩衝集區可讓緩衝集區物件參考位於持續性記憶體 (PMEM) 裝置上資料庫檔案中的資料頁，而不是在揮發性 DRAM 中快取的資料頁複本。 這項功能是在 [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)] 中引進。
 
@@ -94,12 +95,12 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 ## <a name="best-practices-for-hybrid-buffer-pool"></a>混合式緩衝集區的最佳做法
 
-在 Windows 上格式化 PMEM 裝置時，請使用 NTFS 可提供的最大配置單位大小 (Windows Server 2019 為 2 MB)，並確定裝置已針對 DAX (直接存取) 格式化。
+ - 在 Windows 上格式化 PMEM 裝置時，請使用 NTFS 可提供的最大配置單位大小 (Windows Server 2019 為 2 MB)，並確定裝置已針對 DAX (直接存取) 格式化。
 
-在 Windows 中，使用[記憶體的鎖定分頁](./enable-the-lock-pages-in-memory-option-windows.md)。
+ - 在 Windows 中，使用[記憶體的鎖定分頁](./enable-the-lock-pages-in-memory-option-windows.md)。
 
-檔案大小應該是 2 MB 的倍數 (模數 2 MB 應該等於零)。
+ - 檔案大小應該是 2 MB 的倍數 (模數 2 MB 應該等於零)。
 
-如果混合式緩衝集區的伺服器範圍設定為停用，則任何使用者資料庫都不會使用此功能。
+ - 如果混合式緩衝集區的伺服器範圍設定為停用，則任何使用者資料庫都不會使用此功能。
 
-如果混合式緩衝集區的伺服器範圍設定為啟用，則您可以使用資料庫範圍設定來停用個別使用者資料庫的功能。
+ - 如果混合式緩衝集區的伺服器範圍設定為啟用，則您可以使用資料庫範圍設定來停用個別使用者資料庫的功能。

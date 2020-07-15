@@ -1,5 +1,6 @@
 ---
 title: Agent XPs 伺服器組態選項 | Microsoft Docs
+description: 探索如何使用 Agent XP 選項以啟用 SQL Server Agent 擴充預存程序。 檢視使用此選項的範例。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - Agent XPs option
 - extended stored procedures [SQL Server], SQL Server Agent
 ms.assetid: 2e1c6c64-5ce7-4357-98c7-ac7763a9f9de
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e7e2e655be19ac8f84378930e1dfada525007504
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 19e6eb1601d0640e68ee17617154e4964a1f43a3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013157"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725273"
 ---
 # <a name="agent-xps-server-configuration-option"></a>Agent XPs 伺服器組態選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   使用 **代理程式 XP** 選項以啟用此伺服器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 擴充預存程序。 未啟用此選項時，「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件總管」中就沒有 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Agent 節點可用。  
   
@@ -43,7 +44,7 @@ ms.locfileid: "68013157"
 
 1. 從 Microsoft SQL Server Management Studio，連接到資料庫引擎。
 
-2.  在標準列中，按一下 [新增查詢]  。
+2.  在標準列中，按一下 [新增查詢]。
 
 3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 
   

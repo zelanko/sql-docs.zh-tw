@@ -1,5 +1,6 @@
 ---
 title: 建立資料庫 | Microsoft 文件
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 在 SQL Server 2019 中建立資料庫。 檢視針對程序的建議。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 4233a277fa20a4bd951b717bfad0039612b5e77e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 463f442c15fdd6bfa29e97c650d5b7d8ee95fe91
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68037621"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631025"
 ---
 # <a name="create-a-database"></a>建立資料庫
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立資料庫。  
 
 > [!NOTE]
@@ -34,7 +35,7 @@ ms.locfileid: "68037621"
   
      [限制事項](#Restrictions)  
   
-     [必要條件](#Prerequisites)  
+     [先決條件](#Prerequisites)  
   
      [建議](#Recommendations)  
   
@@ -42,7 +43,7 @@ ms.locfileid: "68037621"
   
 -   **使用下列方法建立資料庫：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -75,7 +76,7 @@ ms.locfileid: "68037621"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  以滑鼠右鍵按一下 [資料庫]  ，然後按一下 [新增資料庫]  。  
+2.  以滑鼠右鍵按一下 [資料庫]，然後按一下 [新增資料庫]。  
   
 3.  在 **[新增資料庫]** 中，輸入資料庫名稱。  
   
@@ -84,7 +85,7 @@ ms.locfileid: "68037621"
 5.  若要變更擁有者名稱，請按一下 ( **…** ) 來選取其他擁有者。  
   
     > [!NOTE]  
-    >  [使用全文檢索索引]  選項一定是核取狀態而且呈暗灰色，因為從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 開始，所有使用者資料庫都會啟用全文檢索。  
+    >  [使用全文檢索索引] 選項一定是核取狀態而且呈暗灰色，因為從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 開始，所有使用者資料庫都會啟用全文檢索。  
   
 6.  若要變更主要資料與交易記錄檔的預設值，請在 **[資料庫檔案]** 方格中按一下適當的資料格，並輸入新的值。 如需詳細資訊，請參閱 [將資料或記錄檔加入資料庫](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)。  
   

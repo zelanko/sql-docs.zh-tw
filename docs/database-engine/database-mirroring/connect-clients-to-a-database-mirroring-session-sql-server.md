@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b43cbcb051a1c6be2d26288a427d7a75e89a7f70
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8da63d8ff15d03b55586a72a578d6074fa2a5473
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258886"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789773"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>將用戶端連接至資料庫鏡像工作階段 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   若要連接至資料庫鏡像工作階段，用戶端可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 或 .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 針對 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫設定之後，這兩個資料存取提供者就會完全支援資料庫鏡像。 如需使用鏡像資料庫之程式設計考量的詳細資訊，請參閱＜ [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)＞。 此外，目前的主體伺服器執行個體必須可以使用，而且必須在此伺服器執行個體上建立用戶端的登入。 如需詳細資訊，請參閱[孤立的使用者疑難排解 &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)。 資料庫鏡像工作階段的用戶端連接不會涉及見證伺服器執行個體 (如果此執行個體存在的話)。  
   
   
@@ -56,7 +56,7 @@ ms.locfileid: "75258886"
   
  如果連接字串中已提供容錯移轉夥伴名稱，資料存取提供者的行為就會根據用戶端的網路通訊協定和作業系統而定，如下所示：  
   
--   若為 TCP/IP，連接嘗試就會由資料庫鏡像專用的連接重試演算法進行管制。 「連線重試演算法」  會判斷指定連線嘗試中針對開啟連線所分配的最大時間 (「重試時間」  )。  
+-   若為 TCP/IP，連接嘗試就會由資料庫鏡像專用的連接重試演算法進行管制。 「連線重試演算法」會判斷指定連線嘗試中針對開啟連線所分配的最大時間 (「重試時間」)。  
   
 -   若為其他網路通訊協定  
   
@@ -88,7 +88,7 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Server 屬性  
  連接字串必須包含 **Server** 屬性，以便提供初始夥伴名稱 (應該可識別目前的主體伺服器執行個體)。  
   
- 識別伺服器執行個體最簡單的方式就是指定名稱： *<伺服器名稱>* [ **\\** <SQL Server 執行個體名稱>  ]。 例如：  
+ 識別伺服器執行個體最簡單的方式就是指定名稱： *<伺服器名稱>* [ **\\** <SQL Server 執行個體名稱>]。 例如：  
   
  `Server=Partner_A;`  
   
@@ -101,7 +101,7 @@ Network=dbnmpntw;
 > [!NOTE]  
 >  如果連接字串指定了具名執行個體的名稱而非通訊埠，SQL Server Browser 查詢就是必要項目。  
   
- 若要指定 IP 位址和連接埠，**Server** 屬性會採用下列格式：`Server=`<IP 位址>  `,`\<連接埠>  ，例如：  
+ 若要指定 IP 位址和連接埠，則 **Server** 屬性會採用下列格式：`Server=` *<IP 位址>* `,` *\<port>* ，例如：  
   
 ```  
 Server=123.34.45.56,4724;   
@@ -121,7 +121,7 @@ Server=123.34.45.56,4724;
 >  此字串省略了驗證資訊。  
   
 > [!IMPORTANT]  
->  將通訊協定前置詞和 **Server** 屬性結合在一起 (`Server=tcp:`\<伺服器名稱>  ) 時，其與 **Network** 屬性不相容，而且在兩個位置指定通訊協定可能會導致錯誤發生。 因此，我們建議連接字串應該使用 **Network** 屬性來指定通訊協定，並且在 **Server** 屬性中僅指定伺服器名稱 (`"Network=dbmssocn; Server=`\<伺服器名稱>  `"`)。  
+>  將通訊協定前置詞和 **Server** 屬性結合在一起 (`Server=tcp:` *\<servername>* ) 時，其與 **Network** 屬性不相容，且同時在兩個位置指定通訊協定可能會導致錯誤發生。 因此，我們建議連接字串應該使用 **Network** 屬性來指定通訊協定，且在 **Server** 屬性中僅指定伺服器名稱 (`"Network=dbmssocn; Server=` *\<servername>* `"`)。  
   
 #### <a name="failover-partner-attribute"></a>Failover Partner 屬性  
  除了初始夥伴名稱以外，用戶端也可以指定容錯移轉夥伴名稱 (應該可識別目前的鏡像伺服器執行個體)。 容錯移轉夥伴是由 Failover Partner 屬性的其中一個關鍵字指定的。 這個屬性的關鍵字會因您所使用的 API 而不同。 下表將列出這些關鍵字：  
@@ -132,7 +132,7 @@ Server=123.34.45.56,4724;
 |ODBC 驅動程式|**Failover_Partner**|  
 |ActiveX Data Objects (ADO)|**Failover Partner**|  
   
- 識別伺服器執行個體最簡單的方式就是指定其系統名稱：<伺服器名稱>  [ **\\** <SQL Server 執行個體名稱>  ]。  
+ 識別伺服器執行個體最簡單的方式就是指定其系統名稱：<伺服器名稱>[ **\\** <SQL Server 執行個體名稱>]。  
   
  此外，您可以在 **Failover Partner** 屬性中提供 IP 位址和通訊埠編號。 如果第一次連接至資料庫時，初始連接嘗試失敗，連接至容錯移轉夥伴的嘗試將不再仰賴 DNS 和 SQL Server Browser。 建立連接後，就會以容錯移轉夥伴名稱覆寫容錯移轉夥伴名稱，因此當容錯移轉發生時，重新導向的連接就會需要 DNS 和 SQL Server Browser。  
   
@@ -226,7 +226,7 @@ Server=123.34.45.56,4724;
 ##  <a name="Benefits"></a>   
   
 ##  <a name="the-impact-of-a-stale-failover-partner-name"></a><a name="StalePartnerName"></a> 過時容錯移轉夥伴名稱的影響  
- 資料庫管理員可隨時變更容錯移轉夥伴。 因此，用戶端提供的容錯移轉夥伴名稱可能會過期或「過時」  。 例如，考慮由另一個伺服器執行個體 Partner_C 取代的容錯移轉夥伴 Partner_B。 若用戶端接著提供 Partner_B 做為容錯移轉夥伴名稱，該名稱就會過時。 當用戶端提供過時的容錯移轉夥伴名稱時，資料存取提供者的行為跟用戶端未提供容錯移轉夥伴名稱時一樣。  
+ 資料庫管理員可隨時變更容錯移轉夥伴。 因此，用戶端提供的容錯移轉夥伴名稱可能會過期或「過時」。 例如，考慮由另一個伺服器執行個體 Partner_C 取代的容錯移轉夥伴 Partner_B。 若用戶端接著提供 Partner_B 做為容錯移轉夥伴名稱，該名稱就會過時。 當用戶端提供過時的容錯移轉夥伴名稱時，資料存取提供者的行為跟用戶端未提供容錯移轉夥伴名稱時一樣。  
   
  例如，假設用戶端使用同一個連接字串連續進行四次連接嘗試。 在連接字串中，初始夥伴名稱是 Partner_A，而容錯移轉夥伴名稱是 Partner_B：  
   

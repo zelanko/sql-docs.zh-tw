@@ -1,5 +1,6 @@
 ---
 title: 資料庫識別碼 | Microsoft 文件
+description: 更加了解資料庫識別碼。 了解其定序、各種類別、分隔需求與命名規則。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -21,16 +22,16 @@ ms.assetid: 171291bb-f57f-4ad1-8cea-0b092d5d150c
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1179633f88bef025648b08892859e73b06f14b8
-ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
+ms.openlocfilehash: f0a42282f0f6f0c4cf645c64d1df94e95eae79b5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80550144"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85980200"
 ---
 # <a name="database-identifiers"></a>資料庫識別碼
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   資料庫物件名稱又稱為識別碼。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的每一個物件都具有識別碼。 伺服器、資料庫與資料庫物件 (如資料表、檢視、資料行、索引、觸發程序、程序、條件約束、規則) 都可以有識別碼。 大多數物件都需要識別碼，但對部分物件如條件約束，則是選擇性的需求。
 
  定義物件時會建立物件識別碼。 之後就可以使用識別碼來參考物件。 例如，以下陳述式會建立具有識別碼 `TableX`的資料表，以及具有識別碼 `KeyCol` 與 `Description`的兩個資料行：

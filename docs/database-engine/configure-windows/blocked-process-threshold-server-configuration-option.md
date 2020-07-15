@@ -1,5 +1,6 @@
 ---
 title: 已封鎖的處理序臨界值伺服器組態選項 | Microsoft Docs
+description: 了解如何使用已封鎖處理序臨界值選項來指定 SQL Server 產生已封鎖處理序報表及發出警示的間隔。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -11,19 +12,21 @@ helpviewer_keywords:
 - thresholds [SQL Server]
 - blocked process threshold option
 ms.assetid: 3d46d143-bc6a-4220-8b55-6baa37547c25
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 84a94dc6b1d4f2f6f0c921f81746eb64f41d2f07
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bdd5f7d01e7271609562fb7d42126746d6163de4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013110"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725239"
 ---
 # <a name="blocked-process-threshold-server-configuration-option"></a>已封鎖的處理序臨界值伺服器組態選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  使用 **blocked process threshold** 選項，以秒為單位來指定產生已封鎖處理序報表的臨界值。 此臨界值可設定為 0 到 86,400 的值。 預設不會針對已封鎖的處理序產生任何報告。 對於系統工作或在等待不產生可偵測死結的資源的工作，並不會產生此事件。  
+ 使用 **blocked process threshold** 選項，以秒為單位來指定產生已封鎖處理序報表的臨界值。 此臨界值可設定為 5 到 86,400 之間的值。  鎖定監視器只會每隔 5 秒喚醒一次以偵測封鎖條件 (其會尋找其他條件，例如鎖死)。 因此，如果將「已封鎖的處理序臨界值」設為 1，則其將不會偵測到已封鎖 1 秒的處理序。 其可偵測已封鎖處理序的最短時間為 5 秒。
+ 
+ 預設不會針對已封鎖的處理序產生任何報告。 對於系統工作或在等待不產生可偵測死結的資源的工作，並不會產生此事件。  
   
  您可以定義在產生此事件時要執行的 [警示](../../ssms/agent/alerts.md) 。 例如，您可以選擇呼叫管理員，以採取適當的動作來處理此封鎖狀況。  
   

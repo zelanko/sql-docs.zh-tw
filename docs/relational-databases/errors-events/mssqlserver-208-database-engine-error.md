@@ -1,5 +1,6 @@
 ---
 title: MSSQLSERVER_208 | Microsoft Docs
+description: 找不到指定的物件，因此增加了無效物件名稱訊息。 查看錯誤的說明及可能的解決方法。
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
@@ -11,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 4b1895f5-3197-4da1-af86-954c93507956
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a1b39638bf7ac09cac4a37d948ba13753ffb6d04
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7d61a9510e87eff01b33aef43e3b0db2836fb40c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68056799"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780556"
 ---
 # <a name="mssqlserver_208"></a>MSSQLSERVER_208
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細資料  
   
-|||  
-|-|-|  
+| 屬性 | 值 |  
+| :-------- | :---- |  
 |產品名稱|SQL Server|  
 |事件識別碼|208|  
 |事件來源|MSSQLSERVER|  

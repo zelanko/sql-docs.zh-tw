@@ -1,6 +1,6 @@
 ---
 title: 資料庫鏡像及容錯移轉叢集執行個體
-description: 了解如何結合資料庫鏡像及 SQL Server 容錯移轉叢集執行個體。
+description: 了解如何合併資料庫鏡像及 SQL Server 容錯移轉叢集執行個體。 了解具備和不具備容錯移轉的高效能模式和高安全性模式。
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f1dd6a79-698b-4e31-b923-6bfc3ea0b617
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 04d0864d07eeb741690df26fb9aee02c3f0bc547
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 00434abb76721e5aecf75bdce589964c69e6903e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75254166"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789682"
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>資料庫鏡像及 SQL Server 容錯移轉叢集執行個體
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   容錯移轉叢集是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 叢集服務 (MSCS) 叢集群組 (即所謂的資源群組) 中一或多個實體磁碟的結合，它們是叢集的參與節點。 資源群組會設定為主控 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的容錯移轉叢集執行個體。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體會以單一電腦的型態出現在網路上，但是它具有在一個節點無法使用時，提供從一個節點容錯移轉到另一個節點的功能。 如需詳細資訊，請參閱 [AlwaysOn 容錯移轉叢集執行個體 &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
   
  與可為單一資料庫提供高可用性支援的資料庫鏡像相比，容錯移轉叢集提供整個 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的高可用性支援。 資料庫鏡像可在容錯移轉叢集之間運作，也可以在容錯移轉叢集與非叢集主機之間運作。  
@@ -45,7 +45,7 @@ ms.locfileid: "75254166"
   
  ![叢集上的容錯移轉](../../database-engine/database-mirroring/media/dbm-and-failover-clustering.gif "叢集上的容錯移轉")  
   
- 鏡像工作階段中的三個伺服器執行個體位於三個不同的叢集： **Cluster_A**、 **Cluster_B**，以及 **Cluster_C**。 在每一個叢集上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預設執行個體會以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體的身分來執行。 鏡像工作階段啟動時， **Cluster_A** 上的容錯移轉叢集執行個體是主體伺服器、 **Cluster_B** 上的容錯移轉叢集執行個體是鏡像伺服器，而 **Cluster_C** 上的容錯移轉叢集執行個體則是鏡像工作階段中的見證。 最後， **Cluster_A** 上的使用中節點失敗，這造成主體伺服器無法使用。  
+ 鏡像工作階段中的三個伺服器執行個體位於三個不同的叢集：**Cluster_A**、**Cluster_B** 和 **Cluster_C**。 在每一個叢集上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預設執行個體會以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體的身分來執行。 鏡像工作階段啟動時， **Cluster_A** 上的容錯移轉叢集執行個體是主體伺服器、 **Cluster_B** 上的容錯移轉叢集執行個體是鏡像伺服器，而 **Cluster_C** 上的容錯移轉叢集執行個體則是鏡像工作階段中的見證。 最後， **Cluster_A** 上的使用中節點失敗，這造成主體伺服器無法使用。  
   
  在叢集有時間進行容錯移轉之前，鏡像伺服器透過見證的協助，而偵測到主體伺服器遺失。 鏡像伺服器會向前復原它的資料庫，並儘快將它與新的主體資料庫連線。 **Cluster_A** 完成容錯移轉時，先前的主體伺服器現在是鏡像伺服器，而且它會與目前在 **Cluster_B**上的主體資料庫同步處理其資料庫。  
   

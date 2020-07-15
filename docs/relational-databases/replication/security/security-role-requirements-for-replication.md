@@ -1,5 +1,6 @@
 ---
 title: 複寫的安全性角色需求 | Microsoft Docs
+description: 了解一般複寫設定工作所需的驗證層級，以及 SQL Server 中的一般複寫維護工作。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: b324a80f-4319-4cb2-847b-1910c49d90e0
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: dea5f4a6c7333452c7c5a74c67445ac3cfb4c60b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 56084b0cd0dd5dfd16030051ece4670c7ffd0885
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287293"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83808033"
 ---
 # <a name="security-role-requirements-for-replication"></a>複寫的安全性角色需求
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

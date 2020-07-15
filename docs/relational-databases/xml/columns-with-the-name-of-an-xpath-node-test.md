@@ -1,5 +1,6 @@
 ---
 title: 具有 XPath 節點測試名稱的資料行 | Microsoft 文件
+description: 了解當 SQL 查詢包含具有 XPath 節點測試名稱的資料行 (例如 text () 或 comment ()) 時，XML 內容會如何對應。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: b48adccd-3b6b-486a-b326-20f57170186f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 632fe07b7ffdf74f01d9cf87367fee9fa7886f27
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2605e407cabf004ba05d48fca092a7db269ecacd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664637"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692319"
 ---
 # <a name="columns-with-the-name-of-an-xpath-node-test"></a>具有 XPath 節點測試名稱的資料行
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   如果資料行名稱是其中一個 XPath 節點測試，將會對應內容，如下表所示。 如果資料行名稱是 XPath 節點測試，會將內容對應至對應的節點。 如果資料行的 SQL 類型是 **xml**，就會傳回錯誤。  
   
 |資料行名稱|行為|  

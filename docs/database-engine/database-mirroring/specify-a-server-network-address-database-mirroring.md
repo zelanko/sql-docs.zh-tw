@@ -1,6 +1,6 @@
 ---
 title: 指定伺服器網路位址 (資料庫鏡像)
-description: 指定資料庫鏡像端點的伺服器網路位址。
+description: 了解如何指定資料庫鏡像端點的伺服器網路位址。 資料庫鏡像工作階段需要針對每個伺服器執行個體具備位址。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1fbb4df1ef746c885bb2bec9d4fe815bef8a693d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 87872d393af6b9312a3cfc4b33cc39233be3a463
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252756"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789610"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>指定伺服器網路位址 (資料庫鏡像)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   設定資料庫鏡像工作階段時，需要有每一個伺服器執行個體的伺服器網路位址。 伺服器執行個體的伺服器網路位址必須透過提供系統位址和執行個體所接聽的通訊埠編號，以明確識別該執行個體。  
   
  伺服器執行個體上必須有資料庫鏡像端點，您才能在伺服器網路位址中指定通訊埠。 如需詳細資訊，請參閱[建立 Windows 驗證的資料庫鏡像端點 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)。  
@@ -33,15 +33,15 @@ ms.locfileid: "75252756"
 ##  <a name="syntax-for-a-server-network-address"></a><a name="Syntax"></a> 伺服器網路位址的語法  
  伺服器網路位址的語法採用下列格式：  
   
- TCP<strong>://</strong> *\<系統位址>* <strong>:</strong> *\<通訊埠>*  
+ TCP<strong>://</strong> *\<system-address>* <strong>:</strong> *\<port>*  
   
  其中  
   
--   *\<系統位址>* 是可明確識別目標電腦系統的字串。 伺服器位址通常是系統名稱 (如果系統位於同一個網域內)、完整網域名稱或 IP 位址。  
+-   *\<system-address>* 是可明確識別目的地電腦系統的字串。 伺服器位址通常是系統名稱 (如果系統位於同一個網域內)、完整網域名稱或 IP 位址。  
   
     -   如果系統位於同一個網域，您可以使用電腦系統的名稱，例如 `SYSTEM46`。  
   
-    -   若要使用 IP 位址，則它在您的環境中必須是唯一的。 建議您只使用靜態的 IP 位址。 此 IP 位址可以是 IP 第 4 版 (IPv4) 或 IP 第 6 版 (IPv6)。 IPv6 位址必須使用方括弧括住，例如： **[** <IPv6 位址>  **]** 。  
+    -   若要使用 IP 位址，則它在您的環境中必須是唯一的。 建議您只使用靜態的 IP 位址。 此 IP 位址可以是 IP 第 4 版 (IPv4) 或 IP 第 6 版 (IPv6)。 IPv6 位址必須使用方括弧括住，例如： **[** <IPv6 位址> **]** 。  
   
          若要取得系統的 IP 位址，請在 Windows 命令提示字元下，輸入 **ipconfig** 命令。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "75252756"
         > [!NOTE]  
         >  如需有關如何尋找完整網域名稱的詳細資訊，請參閱本主題稍後的「尋找完整網域名稱」。  
   
--   *\<連接埠>* 是夥伴伺服器執行個體的鏡像端點所使用的連接埠號碼。 如需指定端點的資訊，請參閱 [建立 Windows 驗證的資料庫鏡像端點 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)。  
+-   *\<port>* 是夥伴伺服器執行個體鏡像端點所使用的連接埠號碼。 如需指定端點的資訊，請參閱 [建立 Windows 驗證的資料庫鏡像端點 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)。  
   
      資料庫鏡像端點可以使用電腦系統上任何可用的通訊埠。 電腦系統上的每個通訊埠編號必須只與一個端點產生關聯，而且每個端點會與單一伺服器執行個體產生關聯，因此相同伺服器上的不同伺服器執行個體會利用不同通訊埠接聽不同端點。 因此，當您設定資料庫鏡像工作階段時，在伺服器網路位址中指定的通訊埠，會永遠把工作階段導向到端點與該通訊埠產生關聯的伺服器執行個體。  
   
@@ -107,7 +107,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  **IPCONFIG /ALL**  
   
- 若要形成完整的網域名稱，請串連 <主機名稱>  和 <主要 DNS 尾碼>  的值，如下所示：  
+ 若要形成完整的網域名稱，請串連 <主機名稱> 和 <主要 DNS 尾碼> 的值，如下所示：  
   
  _<主機名稱>_ **.** _<主要 DNS 尾碼>_  
   

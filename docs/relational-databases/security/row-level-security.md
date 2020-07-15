@@ -1,5 +1,6 @@
 ---
 title: 資料列層級安全性 | Microsoft 文件
+description: 了解資料列層級安全性使用群組成員資格或執行內容，對 SQL Server 中資料庫資料表內資料列的存取進行控制的方式。
 ms.custom: ''
 ms.date: 05/14/2019
 ms.prod: sql
@@ -17,16 +18,16 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9e604ba803b1116c9867071f547a1d1958437b7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5573bcc6762e8a03651ba1573bc6254aaa2c80a0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78288980"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000533"
 ---
 # <a name="row-level-security"></a>資料列層級安全性
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   ![資料列層級安全性圖形](../../relational-databases/security/media/row-level-security-graphic.png "資料列層級安全性圖形")  
   
@@ -41,7 +42,7 @@ ms.locfileid: "78288980"
 **適用對象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([立即取得](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。
   
 > [!NOTE]
-> Azure SQL 資料倉儲僅支援篩選述詞。 Azure SQL 資料倉儲目前不支援封鎖述詞。
+> Azure Synapse 僅支援篩選述詞。 Azure Synpase 目前不支援封鎖述詞。
 
 ## <a name="description"></a><a name="Description"></a> 描述
 
@@ -159,7 +160,7 @@ RLS 可支援兩種類型的安全性述詞。
   
 - **Filestream：** RLS 與 Filestream 不相容。  
   
-- **PolyBase：** RLS 只針對 Azure SQL 資料倉儲支援 Polybase 外部資料表。
+- **PolyBase：** RLS 只針對 Azure Synapse 支援 Polybase 外部資料表。
 
 - **經記憶體最佳化的資料表：** 在經記憶體最佳化的資料表上作為安全性述詞的內嵌資料表值函式必須使用 `WITH NATIVE_COMPILATION` 選項來定義。 使用此選項將會禁止記憶體最佳化資料表不支援的語言功能，並會在建立階段發出適當的錯誤。 如需詳細資訊，請參閱 **記憶體最佳化的資料表簡介** 中的 [記憶體最佳化資料表中的資料列層級安全性](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)一節。  
   
@@ -185,8 +186,6 @@ RLS 可支援兩種類型的安全性述詞。
   
  建立三個使用者帳戶，將示範不同的存取功能。  
 
-> [!NOTE]
-> Azure SQL 資料倉儲不支援 EXECUTE AS USER (以使用者身分執行)，因此您必須事先為每位使用者 CREATE LOGIN (建立登入)。 稍後，您將會以適當的使用者身分登入來測試此行為。
 
 ```sql  
 CREATE USER Manager WITHOUT LOGIN;  
@@ -273,10 +272,6 @@ EXECUTE AS USER = 'Manager';
 SELECT * FROM Sales;
 REVERT;  
 ```
-
-> [!NOTE]
-> Azure SQL 資料倉儲不支援 EXECUTE AS USER，因此請以適當的使用者身分登入來測試上述行為。
-
 管理員應該會看到所有六個資料列。 Sales1 和 Sales2 使用者只能看到他們自己的銷售。
 
 變更安全性原則，以停用原則。
@@ -301,7 +296,7 @@ DROP FUNCTION Security.fn_securitypredicate;
 DROP SCHEMA Security;
 ```
 
-### <a name="b-scenarios-for-using-row-level-security-on-an-azure-sql-data-warehouse-external-table"></a><a name="external"></a> B. 在 Azure SQL 資料倉儲外部資料表上使用資料列層級安全性的案例
+### <a name="b-scenarios-for-using-row-level-security-on-an-azure-synapse-external-table"></a><a name="external"></a> B. 在 Azure Synapse 外部資料表上使用資料列層級安全性的案例
 
 此範例會建立三個使用者，以及包含六個資料列的外部資料表。 它接著為該外部資料表建立內嵌資料表值函式和安全性原則。 此範例示範如何針對不同的使用者篩選 select 陳述式。
 
@@ -345,7 +340,7 @@ INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
 SELECT * FROM Sales;
 ```
 
-從所建立的 Sales 資料表建立 Azure SQL 資料倉儲外部資料表。
+從所建立的 Sales 資料表建立 Azure Synapse 外部資料表。
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'somepassword';
@@ -394,7 +389,7 @@ WITH (STATE = OFF);
 
 現在 Sales1 和 Sales2 使用者可以看到所有六個資料列。
 
-連線到 SQL 資料倉儲資料庫以清除資源
+連線到 Azure Synapse 資料庫以清除資源
 
 ```sql
 DROP USER Sales1;
@@ -421,7 +416,7 @@ DROP LOGIN Manager;
 ### <a name="c-scenario-for-users-who-connect-to-the-database-through-a-middle-tier-application"></a><a name="MidTier"></a> C. 透過中介層應用程式連接到資料庫的使用者案例
 
 > [!NOTE]
-> 在此範例中，Azure SQL Data Warehouse 目前不支援區塊預測功能，因此插入錯誤使用者識別碼的列不會使用 Azure SQL Data Warehouse 封鎖。
+> 在此範例中，Azure Synapse 目前不支援封鎖述詞功能，因此插入錯誤使用者識別碼的資料列不會使用 Azure Synapse 封鎖。
 
 此範例示範中介層應用程式如何實作連線篩選，其中應用程式使用者 (或租用戶) 共用相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者 (應用程式)。 應用程式在連接到資料庫之後，會在 [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) 中設定目前應用程式使用者識別碼，然後安全性原則會明確地篩選此 ID 不應該看到的資料列，並同時避免使用者插入錯誤使用者識別碼的資料列。 不需要任何其他的應用程式變更。  
   

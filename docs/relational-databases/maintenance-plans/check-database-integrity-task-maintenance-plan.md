@@ -1,5 +1,6 @@
 ---
 title: 檢查資料庫完整性工作 (維護計畫) | Microsoft Docs
+description: 使用檢查資料庫完整性工作來檢查使用者和系統資料表的配置和結構完整性，以及 SQL Server 資料庫中的索引。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 3534494a-5dfe-4738-b49a-e7fabd731c47
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 68bdea5d7c63f8d4781dadd8250a14f258c0866f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a833b67471ad05e45f54776d49ec529c7fbb6fb5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68083922"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85667865"
 ---
 # <a name="check-database-integrity-task-maintenance-plan"></a>檢查資料庫完整性工作 (維護計畫)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  使用 [檢查資料庫完整性工作]  對話方塊，並執行 `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，以檢查使用者和系統資料表的配置和結構完整性以及資料庫的索引。 執行 `DBCC` 以確實回報任何有關資料庫完整性的問題，以便系統管理員或資料庫擁有者稍後解決。  
+  使用 [檢查資料庫完整性工作] 對話方塊，並執行 `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，以檢查使用者和系統資料表的配置和結構完整性以及資料庫的索引。 執行 `DBCC` 以確實回報任何有關資料庫完整性的問題，以便系統管理員或資料庫擁有者稍後解決。  
   
 ## <a name="options"></a>選項。  
  **[連接]**  
@@ -88,7 +89,7 @@ ms.locfileid: "68083922"
  使用 Windows 驗證連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體。  
   
  **使用特定的使用者名稱和密碼**  
- 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證連線到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 無法使用此選項。  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體。 無法使用此選項。  
   
  **使用者名稱**  
  提供驗證時要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 無法使用此選項。  

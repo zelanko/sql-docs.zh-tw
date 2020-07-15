@@ -1,5 +1,6 @@
 ---
 title: 中繼資料可見性組態 | Microsoft Docs
+description: 了解如何針對使用者擁有，或已在 SQL Server 中獲得授與權限的安全性實體設定中繼資料可見度。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -20,15 +21,15 @@ ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eba613c3736024de71a67e7cdb749960e91e89ff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 63c00456e36742d62074a65eb291dc19e23a2863
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68661219"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85979418"
 ---
 # <a name="metadata-visibility-configuration"></a>中繼資料可見性組態
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   中繼資料的可見性會限制在使用者所擁有的安全性實體，或已授與使用者某些權限的安全性實體。 例如，如果授與使用者資料表 `myTable`的 SELECT 或 INSERT 權限，則下列查詢會傳回一個資料列。  
   
 ```  
@@ -104,7 +105,7 @@ GO
 ## <a name="benefits-and-limits-of-metadata-visibility-configuration"></a>中繼資料可見性組態的優點和限制  
  中繼資料可見性組態在整體安全性計畫中扮演著重要的角色。 但在某些情況中，技術純熟又執意操作的使用者還是能夠強制洩漏某些中繼資料。 我們建議您將中繼資料權限部署為全面防禦中的一環。  
   
- 強制發出錯誤訊息中的中繼資料，理論上是可行的，做法是在查詢中操縱述詞評估的順序。 這種「嘗試與錯誤攻擊」  的可能性不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所特有。 它由關聯式代數所允許的關聯式和交換式轉換所暗示。 您可以限制錯誤訊息所傳回的資訊來減輕此風險。 若要以此方式進一步限制中繼資料的可見性，您可以用追蹤旗標 3625 來啟動伺服器。 此追蹤旗標限制錯誤訊息所顯示的資訊量。 而這有助於防止強制洩漏。 代價是錯誤訊息會簡單一些，用於偵錯時可能會比較困難。 如需詳細資訊，請參閱 [Database Engine 服務啟動選項](../../database-engine/configure-windows/database-engine-service-startup-options.md)和[追蹤旗標 &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  
+ 強制發出錯誤訊息中的中繼資料，理論上是可行的，做法是在查詢中操縱述詞評估的順序。 這種「嘗試與錯誤攻擊」的可能性不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所特有。 它由關聯式代數所允許的關聯式和交換式轉換所暗示。 您可以限制錯誤訊息所傳回的資訊來減輕此風險。 若要以此方式進一步限制中繼資料的可見性，您可以用追蹤旗標 3625 來啟動伺服器。 此追蹤旗標限制錯誤訊息所顯示的資訊量。 而這有助於防止強制洩漏。 代價是錯誤訊息會簡單一些，用於偵錯時可能會比較困難。 如需詳細資訊，請參閱 [Database Engine 服務啟動選項](../../database-engine/configure-windows/database-engine-service-startup-options.md)和[追蹤旗標 &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  
   
  下列的中繼資料不會被強制洩漏：  
   

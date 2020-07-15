@@ -1,5 +1,6 @@
 ---
 title: 刪除資料庫的資料或記錄檔 | Microsoft 文件
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQ 來刪除在 SQL Server 中的資料或紀錄檔。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,28 +19,28 @@ helpviewer_keywords:
 ms.assetid: 0db4018c-ce2c-4ba1-bb29-1e4f3791c925
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8cdc8f15cedb170ae6c5aeab35c8f92a979d30d6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d7f24f353cf65c864ecce2b372deaf4d35708538
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909059"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756215"
 ---
 # <a name="delete-data-or-log-files-from-a-database"></a>刪除資料庫的資料或記錄檔
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來刪除 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的資料或記錄檔。  
   
  **本主題內容**  
   
 -   **開始之前：**  
   
-     [必要條件](#Prerequisites)  
+     [先決條件](#Prerequisites)  
   
      [安全性](#Security)  
   
 -   **使用下列方法刪除資料庫的資料或記錄檔：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -66,7 +67,7 @@ ms.locfileid: "72909059"
   
 4.  在 **[資料庫檔案]** 方格中，選取要刪除的檔案，再按一下 **[移除]** 。  
   
-5.  按一下 [確定]  。  
+5.  按一下 [確定]。  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

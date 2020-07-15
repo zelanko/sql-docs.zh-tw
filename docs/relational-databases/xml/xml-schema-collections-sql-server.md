@@ -1,5 +1,6 @@
 ---
 title: XML 結構描述集合 (SQL Server) | Microsoft Docs
+description: 了解當 XML 資料儲存於 SQL Server 資料庫時，XML 結構描述集合如何儲存匯入的 XML 結構描述，以驗證 XML 執行個體並鍵入 XML 資料。
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 850e6b9b1961809f51939edfc07fc1d11943fda7
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2db7f06f0e68b1a03bf4b2a205666fcf90a58d32
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664899"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729769"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 結構描述集合 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   如 [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) 主題所述，SQL Server 是透過 **XML** 資料類型來提供原生的 XML 資料儲存體。 您可以選擇透過 XML 結構描述集合，使 XSD 結構描述與  類型的變數或資料行產生關聯。 XML 結構描述集合會儲存匯入的 XML 結構描述，然後用來執行下列作業：  
   
 -   驗證 XML 執行個體  
@@ -38,7 +39,7 @@ ms.locfileid: "80664899"
   
  請注意，XML 結構描述集合是一個中繼資料實體，就像資料庫中的資料表。 您可以加以建立、修改及卸除。 系統會將 [CREATE XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) 陳述式中所指定的結構描述，自動匯入新建的 XML 結構描述集合物件中。 您可以使用 [ALTER XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md) 陳述式，將其他的結構描述或結構描述元件匯入資料庫的現有集合物件中。  
   
- 如 [比較具類型的 XML 與不具類型的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)主題所述，如果 XML 是儲存在有關聯之結構描述的資料行或變數中，即為 **具類型的** XML，因為結構描述會提供執行個體資料所需的資料類型資訊。 SQL Server 會使用此類型資訊來將資料儲存最佳化。  
+ 如[比較具類型的 XML 與不具類型的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md) 主題所述，如果 XML 是儲存在有關聯之結構描述的資料行或變數中，即為**具類型的** XML，因為結構描述會提供執行個體資料所需的資料類型資訊。 SQL Server 會使用此類型資訊來將資料儲存最佳化。  
   
  查詢處理引擎也會使用結構描述來檢查類型，以及將查詢和資料修改最佳化。  
   
@@ -120,7 +121,7 @@ ms.locfileid: "80664899"
   
 -   **Customer** 是 ELEMENT 元件。  
   
- 當您將結構描述匯入資料庫後， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並不會儲存結構描述本身。 不過， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會儲存各種個別的元件。 也就是說，並未儲存 \<Schema> 標記，只是保留定義於其中的元件。 所有的結構描述元素都沒有保留。 如果 \<Schema> 標記包含指定其元件預設行為的屬性，則這些屬性會在匯入程序期間移到標記內的結構描述元件，如下表所示。  
+ 當您將結構描述匯入資料庫後， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並不會儲存結構描述本身。 不過， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會儲存各種個別的元件。 亦即，並未儲存 \<Schema> 標記，只是保留定義於其中的元件。 所有的結構描述元素都沒有保留。 若 \<Schema> 標記包含指定其元件預設行為的屬性，則這些屬性會在匯入程序期間移至標記內的結構描述元件，如下表所示。  
   
 |屬性名稱|行為|  
 |--------------------|--------------|  
@@ -193,7 +194,7 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')
  您可以將目標命名空間指定為 **XML_SCHEMA_NAMESPACE()** 的第三個引數，以 **xml**資料類型執行個體的型式來取得集合中的個別 XML 結構描述。 下列範例會顯示這一點。  
   
 ### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>範例：從 XML 結構描述集合輸出指定的結構描述  
- 下列陳述式會從關聯式結構描述 dbo 內的 XML 結構描述集合 "myCollection"，輸出含有「假設」  目標命名空間 https/\/www.microsoft.com/was-books 的 XML 結構描述。  
+ 下列陳述式會從關聯式結構描述 dbo 內的 XML 結構描述集合 "myCollection"，輸出含有「假設」目標命名空間 https/\/www.microsoft.com/was-books 的 XML 結構描述。  
   
 ```sql
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',   

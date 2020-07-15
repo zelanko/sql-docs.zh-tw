@@ -17,15 +17,15 @@ ms.assetid: 442acfc6-af97-40a3-b546-91cd485ee2be
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: adcdc5c9c33a0a62d9922b0d6c4f9fdec7906abe
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 365f39eb24fde04d76e9424df12b77b65d411b40
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635835"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998539"
 ---
 # <a name="revoke-database-permissions-transact-sql"></a>REVOKE 資料庫權限 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   撤銷授與及拒絕的資料庫權限。  
   
@@ -59,7 +59,7 @@ permission | ALL [ PRIVILEGES ]
  指定可以拒絕的資料庫權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
  ALL  
- 這個選項不會撤銷所有可能的權限。 撤銷 ALL 相當於撤銷下列權限：BACKUP DATABASE、BACKUP LOG、CREATE DATABASE、CREATE DEFAULT、CREATE FUNCTION、CREATE PROCEDURE、CREATE RULE、CREATE TABLE 和 CREATE VIEW。  
+ 這個選項不會撤銷所有可能的權限。 撤銷 ALL 等同於撤銷下列權限：BACKUP DATABASE、BACKUP LOG、CREATE DATABASE、CREATE DEFAULT、CREATE FUNCTION、CREATE PROCEDURE、CREATE RULE、CREATE TABLE 和 CREATE VIEW。  
   
  PRIVILEGES  
  為符合 ISO 而包含這個項目。 不會變更 ALL 的行為。  
@@ -76,7 +76,7 @@ permission | ALL [ PRIVILEGES ]
 > [!CAUTION]  
 >  獲得授與 WITH GRANT OPTION 之權限的串聯撤銷，會同時撤銷該權限的 GRANT 和 DENY。  
   
- AS \<database_principal> 指定主體，執行這項查詢的主體就是從這個主體衍生權限來撤銷權限。  
+ AS \<database_principal> 指定主體，執行這項查詢的主體會從這個主體衍生權利來撤銷權限。  
   
  *Database_user*  
  指定資料庫使用者。  

@@ -1,5 +1,6 @@
 ---
 title: 應用程式模式 - 分割記憶體最佳化資料表
+description: 了解記憶體內部 OLTP 應用程式設計模式，其會將目前作用中的資料儲存在記憶體最佳化資料表中，並將較舊的資料儲存在資料分割資料表中。
 ms.custom: seo-dt-2019,issue-PR=4700-14820
 ms.date: 05/03/2020
 ms.prod: sql
@@ -10,20 +11,20 @@ ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ee8450f69d87bce0691de5d4641c0ab68b6fe3b7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0da2cd346f2f71b190d4192646bc58a70c116933
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762829"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730416"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>分割記憶體最佳化資料表的應用程式模式
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-[!INCLUDE[hek_2](../../includes/hek-2-md.md)] 支援應用程式設計模式，可為較新的資料大量提供效能資源。 當目前資料的讀取或更新頻率高於較舊資料時，即可套用此模式。 在此情況下，我們會將目前的資料稱作「作用中」  或「經常性」  資料，而較舊的資料則稱為「非經常性」  資料。
+[!INCLUDE[hek_2](../../includes/hek-2-md.md)] 支援應用程式設計模式，可為較新的資料大量提供效能資源。 當目前資料的讀取或更新頻率高於較舊資料時，即可套用此模式。 在此情況下，我們會將目前的資料稱作「作用中」或「經常性」資料，而較舊的資料則稱為「非經常性」資料。
 
-此模式的主要概念是將「經常性」  資料儲存在記憶體最佳化資料表中。 轉變為「非經常性」  的較舊資料會在每週或每月移至分割資料表。 分割資料表會將其資料儲存在磁碟或其他硬碟，而非記憶體中。
+此模式的主要概念是將「經常性」資料儲存在記憶體最佳化資料表中。 轉變為「非經常性」的較舊資料會在每週或每月移至分割資料表。 分割資料表會將其資料儲存在磁碟或其他硬碟，而非記憶體中。
 
 這種設計通常會使用 **datetime** 索引鍵，以讓移動程序能夠有效率地區分經常性與非經常性資料。
 

@@ -1,5 +1,6 @@
 ---
 title: 選擇性 XML 索引 (SXI) | Microsoft Docs
+description: 了解如何使用選擇性 XML 索引 (SXI) 來改善查詢效能、支援更快的編製索引，以及降低 XML 索引的儲存成本。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 548bb347bb71c9819f8a36213ce896aec92e3b50
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1330b409b40bfeea9b265d93e6f6b55cc1b674da
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665059"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757497"
 ---
 # <a name="selective-xml-indexes-sxi"></a>選擇性 XML 索引 (SXI)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   選擇性 XML 索引是除了一般 XML 索引之外，另一種可供您使用 XML 索引類型。 選擇性 XML 索引功能的目標如下：  
   
 -   改善 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中所儲存 XML 資料的查詢效能。  
@@ -120,7 +121,7 @@ FOR
   
 -   索引包含二進位 XS 類型的節點：例如 base64Binary 和 hexBinary。  
   
--   使用結尾包含萬用字元 `*` 的 XPath 運算式指定要索引的節點：例如  `/a/b/c/*`、 `/a//b/*`或 `/a/b/*:c`。  
+-   使用結尾包含萬用字元 `*` 的 XPath 運算式指定要編製索引的節點：例如 `/a/b/c/*`、`/a//b/*` 或 `/a/b/*:c`。  
   
 -   索引子系、屬性或下階以外的任何座標軸。 `//<step>` 案例可做為特殊案例。  
   

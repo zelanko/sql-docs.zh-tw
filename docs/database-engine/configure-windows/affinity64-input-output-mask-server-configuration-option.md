@@ -1,5 +1,6 @@
 ---
 title: Affinity64 I/O Mask 伺服器組態選項 | Microsoft Docs
+description: 了解 Affinity64 I/O Mask 選項。 查看何時該使用此選項將 SQL Server 磁碟 I/O 繫結至指定的 CPU 子集。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - binding processors [SQL Server]
 - affinity64 I/O mask option
 ms.assetid: d304eae7-5116-40ee-a0fa-0a3c0bc20c01
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 9a0f63af10e8baf21cf17d316f64e66d4e663852
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c056959118deba7473471808db228d646fc7f64c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013186"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724013"
 ---
 # <a name="affinity64-input-output-mask-server-configuration-option"></a>affinity64 輸入輸出伺服器組態選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **affinity64 I/O mask** 會將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 磁碟 I/O 繫結至指定的 CPU 子集 (與 **affinity I/O mask** 選項很相似)。 請使用 **affinity I/O mask** 來繫結前 32 個處理器，然後使用 **affinity64 I/O mask** 來繫結電腦上剩餘的處理器。 如果您重新設定 **affinity64 I/O mask**，就必須重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體。 這個選項只出現在 64 位元版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   

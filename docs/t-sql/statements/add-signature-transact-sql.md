@@ -1,14 +1,11 @@
 ---
-title: ADD SIGNATURE (Transact-SQL) | Microsoft Docs
-ms.date: 05/15/2017
+title: ADD SIGNATURE (Transact-SQL)
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
 - ADD SIGNATURE
 - ADD_SIGNATURE_TSQL
-dev_langs:
-- TSQL
 helpviewer_keywords:
 - ADD SIGNATURE statement
 - adding digital signatures
@@ -17,39 +14,45 @@ helpviewer_keywords:
 ms.assetid: 64d8b682-6ec1-4e5b-8aee-3ba11e72d21f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 284f5fb33d8842747805a27c68522929ddfbc59d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 06/10/2020
+ms.openlocfilehash: 4b5781ba73a340c72befdcde81559ac22d45a6a7
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634916"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813161"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  將數位簽章加入至預存程序、函數、組件或觸發程序。 也將副署簽章加入至預存程序、函數、組件或觸發程序。  
-  
-  
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## <a name="syntax"></a>語法  
-  
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+
+將數位簽章加入至預存程序、函數、組件或觸發程序。 也將副署簽章加入至預存程序、函數、組件或觸發程序。
+
+![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
+## <a name="syntax"></a>語法
+
 ```syntaxsql
-ADD [ COUNTER ] SIGNATURE TO module_class::module_name   
-    BY <crypto_list> [ ,...n ]  
+ADD [ COUNTER ] SIGNATURE TO module_class::module_name
+    BY <crypto_list> [ ,...n ]
   
 <crypto_list> ::=  
     CERTIFICATE cert_name  
-    | CERTIFICATE cert_name [ WITH PASSWORD = 'password' ]  
-    | CERTIFICATE cert_name WITH SIGNATURE = signed_blob   
+    | CERTIFICATE cert_name [ WITH PASSWORD = 'password' ]
+    | CERTIFICATE cert_name WITH SIGNATURE = signed_blob
     | ASYMMETRIC KEY Asym_Key_Name  
-    | ASYMMETRIC KEY Asym_Key_Name [ WITH PASSWORD = 'password'.]  
-    | ASYMMETRIC KEY Asym_Key_Name WITH SIGNATURE = signed_blob  
-```  
-  
-## <a name="arguments"></a>引數  
- *module_class*  
- 這是要加入簽章之模組的類別。 結構描述範圍模組的預設值是 OBJECT。  
+    | ASYMMETRIC KEY Asym_Key_Name [ WITH PASSWORD = 'password'.]
+    | ASYMMETRIC KEY Asym_Key_Name WITH SIGNATURE = signed_blob
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
+
+*module_class*  
+這是要加入簽章之模組的類別。 結構描述範圍模組的預設值是 OBJECT。  
   
  *module_name*  
  這是要簽署或反簽署的預存程序、函數、組件或觸發程序的名稱。  
@@ -66,8 +69,9 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
  ASYMMETRIC KEY *Asym_Key_Name*  
  這是預存程序、函數、組件或觸發程序用來簽署或副署的非對稱金鑰名稱。  
   
-## <a name="remarks"></a>備註  
- 簽署或副署的模組及用來簽署的憑證或非對稱金鑰必須已存在。 模組中的每個字元都會包含在簽章計算中。 這包括開頭的歸位字元和換行字元。  
+## <a name="remarks"></a>備註
+
+簽署或副署的模組及用來簽署的憑證或非對稱金鑰必須已存在。 模組中的每個字元都會包含在簽章計算中。 這包括開頭的歸位字元和換行字元。  
   
  可用任何數目的憑證和非對稱金鑰來簽署和副署模組。  
   
@@ -75,35 +79,37 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
   
  如果模組包含 EXECUTE AS 子句，則主體的安全性識別碼 (SID) 也會併入成為簽署程序的一部分。  
   
-> [!CAUTION]  
->  模組簽署只能用來授與權限，絕對不能用來拒絕或撤銷權限。  
+> [!CAUTION]
+> 模組簽署只能用來授與權限，絕對不能用來拒絕或撤銷權限。  
   
  無法簽署內嵌資料表值函數。  
   
  您可以在 sys.crypt_properties 目錄檢視中，看到有關簽章的資訊。  
   
-> [!WARNING]  
+> [!WARNING]
 >  當重新建立簽章的程序時，在原始批次的所有陳述式必須符合當重新建立批次。 如果批次中有任何部分不同 (即使是在空格或註解)，產生的簽章會有所不同。  
   
 ## <a name="countersignatures"></a>副署  
- 當執行簽署的模組時，簽章會暫時新增至 SQL Token，但是如果此模組執行另一個模組或是此模組結束執行，簽章將會遺失。 副署是一種特殊形式的簽章。 副署簽章本身並不會授與任何權限，但是它可允許在呼叫副署物件的期間，保留相同憑證或非對稱金鑰所做的簽章。  
+ 當執行簽署的模組時，簽章會暫時新增至 SQL Token，但是如果此模組執行另一個模組或是此模組結束執行，簽章將會遺失。 副署是一種特殊形式的簽章。 副署簽章本身並不會授與任何權限，但是可允許在呼叫副署物件的期間，保留相同憑證或非對稱金鑰所做的簽章。  
   
  例如，假設使用者 Alice 呼叫 ProcSelectT1ForAlice 程序，此程序呼叫 procSelectT1 程序，後者是從資料表 T1 選取而來。 Alice 擁有 ProcSelectT1ForAlice 和 procSelectT1 的 EXECUTE 權限，但是沒有 T1 的 SELECT 權限，所以這整個鏈結中並未牽涉到任何擁有權鏈結。 Alice 無法存取資料表 T1，不論是直接存取還是透過 ProcSelectT1ForAlice 和 procSelectT1 的使用。 因為我們希望 Alice 一律使用 ProcSelectT1ForAlice 進行存取，所以我們不想要授與其執行 procSelectT1 的權限。 我們該怎麼完成呢？  
   
 -   如果我們簽署 procSelectT1，好讓 procSelectT1 可以存取 T1，則 Alice 就可以直接叫用 procSelectT1，而且他不必呼叫 ProcSelectT1ForAlice。  
   
--   我們可以拒絕將 procSelectT1 的 EXECUTE 權限授與給 Alice，但是 Alice 也就無法透過 ProcSelectT1ForAlice 來呼叫 procSelectT1。  
+-   我們可拒絕將 procSelectT1 的 EXECUTE 權限授與給 Alice，但 這樣 Alice 即無法透過 ProcSelectT1ForAlice 來呼叫 procSelectT1。
   
 -   只簽署 ProcSelectT1ForAlice 是不可行的，因為在呼叫 procSelectT1 時將會遺失簽章。  
   
 但是，透過用來簽署 ProcSelectT1ForAlice 的相同憑證副署 procSelectT1 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在整個呼叫鏈結中保留簽章，而且允許存取 T1。 如果 Alice 嘗試直接呼叫 procSelectT1，他就無法存取 T1，因為副署不會授與任何權限。 例如，底下的 C 顯示這個範例的 [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
   
 ## <a name="permissions"></a>權限  
- 需要物件的 ALTER 權限，以及憑證或非對稱金鑰的 CONTROL 權限。 如果相關聯的私密金鑰受到密碼保護，則使用者也必須有密碼。  
+
+需要物件的 ALTER 權限，以及憑證或非對稱金鑰的 CONTROL 權限。 如果相關聯的私密金鑰受到密碼保護，則使用者也必須有密碼。  
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-signing-a-stored-procedure-by-using-a-certificate"></a>A. 使用憑證來簽署預存程序  
+### <a name="a-signing-a-stored-procedure-by-using-a-certificate"></a>A. 使用憑證來簽署預存程序
+
  下列範例以 `HumanResources.uspUpdateEmployeeLogin` 憑證簽署預存程序 `HumanResourcesDP`。  
   
 ```  
@@ -113,8 +119,9 @@ ADD SIGNATURE TO HumanResources.uspUpdateEmployeeLogin
 GO  
 ```  
   
-### <a name="b-signing-a-stored-procedure-by-using-a-signed-blob"></a>B. 使用簽署的 BLOB 來簽署預存程序  
- 下列範例會建立新的資料庫，並建立要在此範例中使用的憑證。 此範例會建立及簽署簡單預存程序，並從 `sys.crypt_properties` 中擷取 BLOB 簽章。 然後卸除及重新加入簽章。 這個範例會使用 WITH SIGNATURE 語法簽署此程序。  
+### <a name="b-signing-a-stored-procedure-by-using-a-signed-blob"></a>B. 使用簽署的 BLOB 來簽署預存程序
+
+下列範例會建立新的資料庫，並建立要在此範例中使用的憑證。 此範例會建立及簽署簡單預存程序，並從 `sys.crypt_properties` 中擷取 BLOB 簽章。 然後卸除及重新加入簽章。 這個範例會使用 WITH SIGNATURE 語法簽署此程序。  
   
 ```  
 CREATE DATABASE TestSignature ;  
@@ -159,8 +166,9 @@ ADD SIGNATURE TO [sp_signature_demo]
 GO  
 ```  
   
-### <a name="c-accessing-a-procedure-using-a-countersignature"></a>C. 使用副署簽章存取程序  
- 下列範例示範副署簽章如何控制物件的存取。  
+### <a name="c-accessing-a-procedure-using-a-countersignature"></a>C. 使用副署簽章存取程序
+
+下列範例示範副署簽章如何控制物件的存取。  
   
 ```  
 -- Create tesT1 database  
@@ -245,8 +253,7 @@ DROP LOGIN Alice;
   
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [sys.crypt_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
- [DROP SIGNATURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-signature-transact-sql.md)  
-  
-  
+## <a name="see-also"></a>另請參閱
+
+- [sys.crypt_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)
+- [DROP SIGNATURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-signature-transact-sql.md)

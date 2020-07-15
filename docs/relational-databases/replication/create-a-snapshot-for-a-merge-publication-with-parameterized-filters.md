@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 88c43b8d37861e52b5bda5afc0a38753f2b70d6e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6b4f57e1593d9f8335f62095cf309ee85f74e1a4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321819"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773914"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>使用參數化篩選建立合併式發行集的快照集
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中使用參數化篩選建立合併式發行集的快照集。  
 
 在合併發行集內使用參數化資料列篩選器時，覆寫會以兩段式的快照集來初始化每一個訂閱。 首先建立包含複寫所需之所有物件以及已發行物件之結構描述的結構描述快照集，但不含資料。 然後使用包含結構描述快照集中物件與結構描述以及訂閱之資料分割所屬資料的快照集，來初始化每個訂閱。 如果有多個訂閱收到給定的資料分割 (即收到相同的結構描述和資料)，該資料分割的快照集只會建立一次，多個訂閱均從同一快照集初始化。 如需參數化資料列篩選器的詳細資訊，請參閱＜ [參數化資料列篩選器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞。  
@@ -59,7 +59,7 @@ ms.locfileid: "75321819"
 -   如果發行集內的一或多個發行項的篩選產生對每個訂閱而言是唯一的非重疊資料分割，則只要合併代理程式一執行，就會清除中繼資料。 這表示分割快照集會更快過期。 使用這個選項時，您應該考慮允許訂閱者初始化快照集的產生與傳遞。 
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 您可以在 [發行集屬性 - \<發行集>]  對話方塊的 [資料分割]  頁面上，產生資料分割的快照集。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。 您可以讓訂閱者初始化快照集產生和傳遞，並且/或者產生快照集。  
+ 您可在 [發行集屬性 - \<Publication>] 對話方塊的 [資料分割區] 頁面上，產生分割區的快照集。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。 您可以讓訂閱者初始化快照集產生和傳遞，並且/或者產生快照集。  
   
  產生一個或多個資料分割的快照集之前，必須：  
   
@@ -75,19 +75,19 @@ ms.locfileid: "75321819"
   
 3.  以滑鼠右鍵按一下您要為其建立快照集的發行集，然後按一下 **[檢視快照集代理程式的狀態]** 。  
   
-4.  在 [檢視快照集代理程式的狀態 - \<發行集>]  對話方塊中，按一下 [啟動]  。  
+4.  在 [檢視快照集代理程式的狀態 - \<Publication>] 對話方塊中，按一下 [啟動]。  
   
      快照集代理程式產生完快照集後，就會顯示一個訊息，例如「[100%] 已產生 17 個發行項的快照集」。  
   
 #### <a name="to-allow-subscribers-to-initiate-snapshot-generation-and-delivery"></a>若要允許訂閱者初始化快照集的產生與傳遞  
   
-1.  在 [發行集屬性 - \<發行集>]  對話方塊的 [資料分割]  頁面上，選取 [新的訂閱者嘗試進行同步處理時，自動定義資料分割並依需要產生快照]  。  
+1.  在 [發行集屬性 - \<Publication>] 對話方塊的 [資料分割區] 頁面上，選取 [新的訂閱者嘗試進行同步處理時，自動定義分割區並依需要產生快照集]。  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 #### <a name="to-generate-and-refresh-snapshots"></a>若要產生和重新整理快照集  
   
-1.  在 [發行集屬性 - \<發行集>]  對話方塊的 [資料分割]  頁面上，按一下 [新增]  。  
+1.  在 [發行集屬性 - \<Publication>] 對話方塊的 [資料分割區] 頁面上，按一下 [新增]。  
   
 2.  輸入與您要建立快照集的資料分割關聯之 **HOST_NAME()** 和 (或) **SUSER_SNAME()** 的值。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "75321819"
   
     2.  接受重新重理快照集的預設排程，或按一下 **[變更]** 以指定其他排程。  
   
-4.  按一下 [確定]  回到 [發行集屬性 - \<發行集>]  對話方塊。  
+4.  按一下 [確定] 回到 [發行集屬性 - \<Publication>] 對話方塊。  
   
 5.  在屬性方格中選取資料分割，然後按一下 **[立即產生選取的快照集]** 。  
   

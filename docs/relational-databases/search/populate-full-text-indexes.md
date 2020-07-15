@@ -24,16 +24,16 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 52fc7d3d43c1f0adcf7ab94d78cf301254a9a18d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 90224fd31bcb4592055ca22890dd63996eadba34
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903873"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629270"
 ---
 # <a name="populate-full-text-indexes"></a>擴展全文檢索索引
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  建立和維護全文檢索索引包括使用稱為「母體擴展」  (Population) (也稱為「搜耙」  (Crawl)) 的處理序來擴展索引。  
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  建立和維護全文檢索索引包括使用稱為「母體擴展」(Population) (也稱為「搜耙」(Crawl)) 的處理序來擴展索引。  
   
 ##  <a name="types-of-population"></a><a name="types"></a> Types of population  
 全文檢索索引支援下列類型的母體擴展：
@@ -175,36 +175,36 @@ ALTER FULLTEXT INDEX ON Production.Document
   
 1.  在 Management Studio 中，於 [物件總管] 中展開伺服器。  
   
-2.  展開 [資料庫]  ，然後展開包含全文檢索索引的資料庫。  
+2.  展開 [資料庫]，然後展開包含全文檢索索引的資料庫。  
   
 3.  展開 **[資料表]** 。  
   
-    以滑鼠右鍵按一下已定義全文檢索索引的資料表、選取 [全文檢索索引]  ，然後按一下 [全文檢索索引]  內容功能表上的 [屬性]  。 這樣就會開啟 [全文檢索索引屬性]  對話方塊。  
+    以滑鼠右鍵按一下已定義全文檢索索引的資料表、選取 [全文檢索索引]，然後按一下 [全文檢索索引] 內容功能表上的 [屬性]。 這樣就會開啟 [全文檢索索引屬性] 對話方塊。  
 
     > [!IMPORTANT]  
     >  如果基底資料表或檢視表未包含 **timestamp** 資料類型的資料行，則無法執行累加母體擴展。
       
-1.  在 [選取頁面]  窗格中，選取 [排程]  。  
+1.  在 [選取頁面] 窗格中，選取 [排程]。  
   
      您可以使用這個頁面來建立或管理 SQL Server Agent 作業的排程，以便針對全文檢索索引的基底資料表或索引檢視表啟動累加資料表母體擴展。  
 
      選項如下：  
   
-    -   若要**建立**新的排程，請按一下 [新增]  。  
+    -   若要**建立**新的排程，請按一下 [新增]。  
   
-        這樣就會開啟 [新增全文檢索索引資料表排程]  對話方塊，可讓您建立排程。 若要儲存排程，請按一下 [確定]  。  
+        這樣就會開啟 [新增全文檢索索引資料表排程] 對話方塊，可讓您建立排程。 若要儲存排程，請按一下 [確定]。  
   
         > [!IMPORTANT]  
-        >  在您結束 [全文檢索索引屬性]  對話方塊之後，SQL Server Agent 作業 (針對 <資料庫名稱>  .<資料表名稱>  啟動累加資料表母體擴展) 就會與新的排程相關聯。 如果您針對相同的全文檢索索引建立多個排程，它們都會使用相同的作業。  
+        >  在您結束 [全文檢索索引屬性] 對話方塊之後，SQL Server Agent 作業 (針對 <資料庫名稱>.<資料表名稱> 啟動累加資料表母體擴展) 就會與新的排程相關聯。 如果您針對相同的全文檢索索引建立多個排程，它們都會使用相同的作業。  
   
-    -   若要**變更**現有排程，請選取現有排程，然後按一下 [編輯]  。  
+    -   若要**變更**現有排程，請選取現有排程，然後按一下 [編輯]。  
   
-         這樣就會開啟 [新增全文檢索索引資料表排程]  對話方塊，可讓您修改排程。  
+         這樣就會開啟 [新增全文檢索索引資料表排程] 對話方塊，可讓您修改排程。  
   
         > [!NOTE]  
         >  如需修改 SQL Server Agent 作業的資訊，請參閱[修改作業](../../ssms/agent/modify-a-job.md)。  
   
-    -   若要**移除**現有排程，請選取現有排程，然後按一下 [刪除]  。  
+    -   若要**移除**現有排程，請選取現有排程，然後按一下 [刪除]。  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]   
 
@@ -216,8 +216,8 @@ ALTER FULLTEXT INDEX ON Production.Document
 `SQLFT<DatabaseID><FullTextCatalogID>.LOG[<n>]`
   
 以下是編目記錄檔名稱的變動部分。
--   <**DatabaseID**> - 資料庫的識別碼。 \<**dbid**> 是開頭為零的五位數數字。  
--   <**FullTextCatalogID**> - 全文檢索目錄識別碼。 \<**catid**> 是開頭為零的五位數數字。  
+-   <**DatabaseID**> - 資料庫的識別碼。 \<**dbid**> 是前置字元為零的五位數數字。  
+-   <**FullTextCatalogID**> - 全文檢索目錄識別碼。 \<**catid**> 是前置字元為零的五位數數字。  
 -   <**n**> - 是一個整數，指示相同全文檢索目錄的編目記錄檔數目。  
   
  例如，`SQLFT0000500008.2` 是指資料庫識別碼 = 5 而且全文檢索目錄識別碼 = 8 之資料庫的編目記錄檔。 位於檔案名稱結尾的 2 表示此資料庫/目錄組有兩個搜耙記錄檔。  

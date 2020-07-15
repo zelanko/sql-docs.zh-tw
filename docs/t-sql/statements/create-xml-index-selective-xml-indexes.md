@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: 1f510151-41d5-45c2-9cd0-b1ca0246fffe
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c63162f11794299e0708c71219a639de9566456e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 902cebc510572b8900acf6f12666398ef9d147b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635467"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766902"
 ---
 # <a name="create-xml-index-selective-xml-indexes"></a>CREATE XML INDEX (選擇性 XML 索引)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   在已由現有選擇性 XML 索引建立索引的單一路徑上，建立新的次要選擇性 XML 索引。 您也可以建立主要選擇性 XML 索引。 如相關資訊，請參閱[建立、修改和卸除選擇性 XML 索引](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)。  
   
@@ -69,7 +69,7 @@ xmlnamespace_uri AS xmlnamespace_prefix
  *index_name*  
  這是要建立之新索引的名稱。 索引名稱在資料表中必須是唯一的，但是在資料庫中不一定要是唯一的。 索引名稱必須遵照[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。  
   
- ON *\<table_object>* 是包含要索引之 XML 資料行的資料表。 您可以使用下列格式：  
+ ON *\<table_object>* 是資料表，其包含要索引的 XML 資料行。 您可以使用下列格式：  
   
 -   `database_name.schema_name.table_name`  
   
@@ -83,9 +83,9 @@ xmlnamespace_uri AS xmlnamespace_prefix
  USING XML INDEX *sxi_index_name*  
  這是現有選擇性 XML 索引的名稱。  
   
- FOR **(** XQuery 或 SQL 值路徑or_sql_values_path> \< **)** ：這是要在其中建立次要選擇性 XML 索引的索引路徑名稱。 索引路徑是來自 CREATE SELECTIVE XML INDEX 陳述式的指派名稱。 如需詳細資訊，請參閱 [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md)。  
+ FOR **(** \<xquery_or_sql_values_path> **)** 是要在其中建立次要選擇性 XML 索引的索引路徑名稱。 索引路徑是來自 CREATE SELECTIVE XML INDEX 陳述式的指派名稱。 如需詳細資訊，請參閱 [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md)。  
   
- WITH \<index_options> 如需索引選項的相關資訊，請參閱 [CREATE XML INDEX](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)。  
+ WITH \<index_options> 如需索引選項的資訊，請參閱 [CREATE XML INDEX](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)。  
   
 ## <a name="remarks"></a>備註  
  基底資料表中的每個 XML 資料行可以擁有多個次要選擇性 XML 索引。  

@@ -15,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b64985281c98d15399e7cd561a05746e0634f057
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cecd24ccf5aba44beff0a258ee75cf26722358f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75322001"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773906"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>為非 SQL Server 訂閱者建立訂閱
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中針對非 SQL Server 訂閱者建立訂閱。 異動複寫與快照式複寫支援向非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者發佈資料。 如需有關支援之訂閱者平台的資訊，請參閱＜ [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)中針對非 SQL Server 訂閱者建立訂閱。  
   
  **本主題內容**  
   
 -   **若要針對非 SQL Server 訂閱者建立訂閱，請使用：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "75322001"
   
          為非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者啟用發行集後建立快照集，以確定「快照集代理程式」會產生適用於非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者的快照集與初始化指令碼。  
   
-3.  使用 [發行集屬性 - \<發行集名稱>] 對話方塊，啟用非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者的發行集。 如需有關此步驟的詳細資訊，請參閱＜ [Publication Properties, Subscription Options](../../relational-databases/replication/publication-properties-subscription-options.md) ＞。  
+3.  使用 [發行集屬性 - \<PublicationName>] 對話方塊，啟用非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者的發行集。 如需有關此步驟的詳細資訊，請參閱＜ [Publication Properties, Subscription Options](../../relational-databases/replication/publication-properties-subscription-options.md) ＞。  
   
 4.  使用「新增訂閱精靈」建立訂閱。 本主題提供有關這個步驟的詳細資訊。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "75322001"
         Persist Security Info=False;Connection Pooling=True;  
         ```  
   
-         字串中的大多數選項是您設定之 DB2 伺服器的專用選項，但 **將二進位當作字元處理** 選項，應一律設定為 [False]  。 需要為 **初始目錄** 選項指定值，以便識別訂閱資料庫。  
+         字串中的大多數選項是您設定之 DB2 伺服器的專用選項，但 **將二進位當作字元處理** 選項，應一律設定為 [False] 。 需要為 **初始目錄** 選項指定值，以便識別訂閱資料庫。  
   
 10. 在 **[同步排程]** 頁面中，從 **[代理程式排程]** 功能表中選取「散發代理程式」的排程 (排程通常為 **[連續執行]** )。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "75322001"
   
 #### <a name="to-retain-tables-at-the-subscriber"></a>將資料表保留在訂閱者端  
   
--   依預設，若啟用非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者的發行集，就會將 **pre_creation_cmd** 發行項屬性的值設定為 'drop'。 這項設定會指定當複寫符合發行項中的資料表名稱時，應該要卸除「訂閱者」端的資料表。 如果您在訂閱者端有想要保留的現有資料表，請針對每一個發行項使用 [sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 預存程序，並為 **pre_creation_cmd**指定 'none' 值。 `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`第 1 課：建立 Windows Azure 儲存體物件`sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`。  
+-   依預設，若啟用非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者的發行集，就會將 **pre_creation_cmd** 發行項屬性的值設定為 'drop'。 這項設定會指定當複寫符合發行項中的資料表名稱時，應該要卸除「訂閱者」端的資料表。 如果您在訂閱者端有想要保留的現有資料表，請針對每一個發行項使用 [sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 預存程序，並為 **pre_creation_cmd**指定 'none' 值。 第 1 課：建立 Windows Azure 儲存體物件`sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`。  
   
 #### <a name="to-generate-a-snapshot-for-the-publication"></a>產生發行集的快照集  
   
@@ -139,7 +139,7 @@ ms.locfileid: "75322001"
   
 2.  以滑鼠右鍵按一下發行集，然後再按一下 **[檢視快照集代理程式的狀態]** 。  
   
-3.  在 [檢視快照集代理程式的狀態 - \<發行集>] 對話方塊中，按一下 [啟動]。  
+3.  在 [檢視快照集代理程式的狀態 - \<Publication>] 對話方塊中，按一下 [啟動]。  
   
  「快照集代理程式」完成產生快照集後，會顯示一個訊息，例如「[100%] 已產生了 17 個發行項的快照集」。  
   

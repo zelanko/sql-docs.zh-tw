@@ -1,5 +1,6 @@
 ---
 title: ad hoc distributed queries 伺服器組態選項 | Microsoft Docs
+description: 了解如何在 SQL Server 中啟用特定分散式查詢。 然後即可使用 OPENROWSET 和 OPENDATASOURCE 連線至遠端 OLE DB 資料來源。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - OPENDATASOURCE function, ad hoc distributed queries option
 - ad hoc access
 ms.assetid: 5b982015-e196-44c3-83b8-275fb9d769b2
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 8c8387f833fbfb877393fc0180008557509ed8ed
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d05a89446b42feb09d46f1b407991226a7d234db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013276"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85698272"
 ---
 # <a name="ad-hoc-distributed-queries-server-configuration-option"></a>特定分散式查詢伺服器組態選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允許使用 OPENROWSET 和 OPENDATASOURCE 進行特定分散式查詢。 當此選項設定為 1 時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會允許特定存取。 當此選項未設定或設定為 0 時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就不允許特定存取。  
   
@@ -35,7 +36,7 @@ ms.locfileid: "68013276"
 >  啟用特定名稱，表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的任何驗證登入都可以存取該提供者。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對於任何可安全由本機登入存取的提供者，系統管理員應該為他啟用此功能。  
   
 ## <a name="remarks"></a>備註  
- 嘗試進行特定連接但是未啟用 **特定分散式查詢** 會產生錯誤：訊息 7415、層級 16、狀態 1、行 1  
+ 嘗試建立未啟用**特定分散式查詢**的特定連線，產生錯誤：訊息 7415、層級 16、狀態 1、行 1  
   
  特定存取至 OLE DB 提供者 'Microsoft.ACE.OLEDB.12.0' 已經遭到拒絕。 您必須透過連結伺服器來存取此提供者。  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a3ff2605e0c872bd5e544d618c88dc179e3c3b43
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ad3a4659009ceb6d36aba9e3e97dc4e6f170788c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74564803"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736512"
 ---
 # <a name="table-transact-sql"></a>資料表 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 一種特殊的資料類型，用於儲存結果集以供後續處理。 **table** 主要用來暫時儲存資料列集，這些資料列會當作資料表值函式的結果集傳回。 函式和變數可以宣告為 **table** 類型。 **table** 變數可以在函式、預存程序和批次中使用。 若要宣告 **table** 類型的變數，請使用 [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)。
   
@@ -34,7 +34,7 @@ ms.locfileid: "74564803"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 table_type_definition ::=   
     TABLE ( { <column_definition> | <table_constraint> } [ ,...n ] )   
   
@@ -82,7 +82,7 @@ JOIN Employee on (m.EmployeeID =Employee.EmployeeID AND
 ```  
   
 若為查詢計畫不變更的小規模查詢，且以重新編譯考量為主時，**table** 變數可提供下列優點：
--   **table** 變數的行為類似於區域變數。 它有一個定義妥善的範圍。 此變數是其宣告所在的函式、預存程序或批次。  
+-   **table** 變數的行為類似於區域變數。 它有一個定義妥善的範圍。 此變數可用於其宣告所在的函式、預存程序或批次。  
      在 **table** 變數的範圍內，您可以依照一般資料表的方式來使用它。 在 SELECT、INSERT、UPDATE 和 DELETE 陳述式中，任何使用資料表或資料表運算式的位置都可以套用它。 不過在下列陳述式中，不能使用 **table**：  
   
 ```sql

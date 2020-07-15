@@ -1,5 +1,6 @@
 ---
 title: Microsoft Azure 中的 SQL Server 資料檔案 | Microsoft Docs
+description: 探索將 SQL Server 資料檔案儲存在 Microsoft Azure 儲存體中的核心概念與考量，以及使用 Azure 儲存體的一些優點。
 ms.custom: ''
 ms.date: 12/04/2019
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ba61e7cc35d9cd0a0f63e3e2f89980b12c6904d5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5314f43ea17351f54cf1815346a0820cc5cd77e3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74833584"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715494"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 中的 SQL Server 資料檔案
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   ![Azure 上的資料檔案](../../relational-databases/databases/media/data-files-on-azure.png "Azure 上的資料檔案")  
   
 Microsoft Azure 中的 SQL Server 資料檔案可提供將 SQL Server 資料庫檔案儲存為 Blob 的原生支援。 它可讓您在內部部署執行的 SQL Server 或 Microsoft Azure 虛擬機器執行的 SQL Server 中建立資料庫，以將您的 Microsoft Azure Blob 儲存體資料儲存在專用儲存位置。 它也簡化了在機器之間移動資料庫的程序。 您可以從一部機器中斷連結資料庫，並將其連結到另一部機器。 此外，它可讓您還原至 Microsoft Azure 儲存體或從中還原，為您的資料庫備份檔案提供替代儲存位置。 因此，它會針對資料虛擬化、資料移動、安全性和可用性提供許多優點，進而實現許多混合式方案，而且成本低廉、維護簡單，即可達到高可用性和彈性調整的效果。
@@ -144,7 +145,7 @@ ON
 ### <a name="sql-server-management-studio-support"></a>SQL Server Management Studio 支援  
  SQL Server Management Studio 可讓您經由許多對話方塊視窗使用此功能。 例如，`https://teststorageaccnt.blob.core.windows.net/testcontainer/` 代表儲存體容器的 URL 路徑。
  
- 作為**路徑**，例如 [新增資料庫]  、[附加資料庫]  和 [還原資料庫]  。 如需詳細資訊，請參閱[教學課程：搭配 SQL Server 2016 資料庫使用 Microsoft Azure Blob 儲存體服務](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
+ 作為**路徑**，例如 [新增資料庫]、[附加資料庫] 和 [還原資料庫]。 如需詳細資訊，請參閱[教學課程：搭配 SQL Server 2016 資料庫使用 Microsoft Azure Blob 儲存體服務](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
   
 ### <a name="sql-server-management-objects-smo-support"></a>SQL Server 管理物件 (SMO) 支援  
  使用 Azure 功能中的 SQL Server 資料檔案時，可支援所有 SQL Server 管理物件 (SMO)。 如果 SMO 物件需要檔案路徑，請使用 BLOB URL 格式而非本機檔案路徑，例如 `https://teststorageaccnt.blob.core.windows.net/testcontainer/`。 如需 SQL Server 管理物件 (SMO) 的詳細資訊，請參閱《SQL Server 線上叢書》中的 [SQL Server 管理物件 &#40;SMO&#41; 程式設計指南](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)。  
@@ -168,7 +169,7 @@ ON
      解決方案：請確定您已經在容器上正確建立共用存取簽章。 請檢閱以下連結中第 2 課所提供的指示：[教學課程：搭配 SQL Server 2016 資料庫使用 Microsoft Azure Blob 儲存體服務](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)。  
   
 - *尚未正確建立 SQL Server 認證。*    
-    解決方案：請確定您已經針對 [識別]  欄位使用「共用存取簽章」，並正確建立密碼。 請檢閱以下連結中第 3 課所提供的指示：[教學課程：搭配 SQL Server 2016 資料庫使用 Microsoft Azure Blob 儲存體服務](../lesson-3-database-backup-to-url.md)。  
+    解決方案：請確定您已經針對 [識別] 欄位使用「共用存取簽章」，並正確建立密碼。 請檢閱以下連結中第 3 課所提供的指示：[教學課程：搭配 SQL Server 2016 資料庫使用 Microsoft Azure Blob 儲存體服務](../lesson-3-database-backup-to-url.md)。  
   
  **租用 Blob 錯誤：**  
   

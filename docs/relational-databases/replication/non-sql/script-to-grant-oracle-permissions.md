@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: d742fd30-347a-452f-b5fc-b03232360c6b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8158aed0298afe295e82a1b240a3f24ec05b1647
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4a25137ba445620e3af67a34105e1aff034faadf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68100009"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894418"
 ---
 # <a name="script-to-grant-oracle-permissions"></a>授與 Oracle 權限的指令碼
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主題中所提供指令碼用於 Oracle 資料庫的設定期間，該資料庫會使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫來發佈資料。 安裝後，可在以下目錄中取得此指令碼： *\<磁碟機>* :\\\Program Files\Microsoft SQL Server\\ *\<執行個體名稱>* \MSSQL\Install\oracleadmin.sql。 如需設定 Oracle 資料庫的詳細資訊，請參閱[設定 Oracle 發行者](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)。  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  本主題中所提供指令碼用於 Oracle 資料庫的設定期間，該資料庫會使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫來發佈資料。 安裝後，也可在下列目錄中取得此指令碼： *\<drive>* :\\\Program Files\Microsoft SQL Server\\ *\<InstanceName>* \MSSQL\Install\oracleadmin.sql。 如需設定 Oracle 資料庫的詳細資訊，請參閱[設定 Oracle 發行者](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)。  
   
 > [!NOTE]  
 >  此指令碼包括由異動複寫使用之觸發程序所需要的陳述式 `GRANT CREATE ANY TRIGGER TO &&AdminLogin;`。 如果您僅使用快照式複寫，則從指令碼中移除此行。  

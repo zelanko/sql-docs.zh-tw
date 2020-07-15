@@ -1,6 +1,6 @@
 ---
 title: 失敗的可用性群組新增檔案作業
-decription: Possible resolutions for failing to add a file to an availability group.
+description: 對 AlwaysOn 可用性群組中失敗的新增檔案作業進行疑難排解。 檔案路徑在裝載主要及次要複本的系統之間可能會有所不同。
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 31ceaebf-864b-4dd0-9112-0d047b0316ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1655992526096035eb109821d8950980921951ad
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4d2cffb3b857e7d75bc8429876fd30b5a66f54c1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251221"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900682"
 ---
 # <a name="troubleshoot-a-failed-add-file-operation-always-on-availability-groups"></a>疑難排解失敗的加入檔案作業 (AlwaysOn 可用性群組)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   在某些 AlwaysOn 可用性群組部署中，在裝載主要複本的系統和裝載次要複本的系統之間會有檔案路徑差異。 如果加入檔案作業的檔案路徑不存在於次要複本，則加入檔案作業將會在主要資料庫上成功完成。 但是加入檔案作業會造成次要資料庫暫停。 而這又會導致次要複本進入 NOT SYNCHRONIZING 狀態。  
   

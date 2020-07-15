@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 6575e2a8-16bb-449c-bdca-4a4202d0972f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5caaa59fd28f3557a6ae7edf90c6a53497d24a1a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ef28a7831ad5d4c63b450da177037d55534b5f63
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321591"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716767"
 ---
 # <a name="log-reader-agent-security-peer-to-peer-replication"></a>記錄讀取器代理程式安全性 (點對點複寫)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **[記錄讀取器代理程式安全性]** 頁面，可讓您指定記錄讀取器代理程式在每個對等 (Peer) 端執行和連接的帳戶。 如需代理程式所需權限和複寫安全性最佳做法的資訊，請參閱[複寫代理程式安全性模型](../../relational-databases/replication/security/replication-agent-security-model.md)和[複寫安全性最佳做法](../../relational-databases/replication/security/replication-security-best-practices.md)。  
   
 > [!NOTE]  
@@ -39,10 +39,10 @@ ms.locfileid: "75321591"
  在每個對等 (Peer) 端作為發行集資料庫和訂閱資料庫的資料庫。  
   
  **散發者的連接**  
- 用於連接到散發者的內容。 散發者的本機連接一律會使用執行代理程式之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶的內容進行，所以這個欄位一律顯示 [模擬 '\<網域>\\<登入\>']  或 [模擬 '\<電腦>\\<登入\>']  。  
+ 用於連接到散發者的內容。 散發者的本機連接一律會使用代理程式所執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶的內容進行，所以這個欄位將一律顯示 [模擬 '\<Domain>\\<登入\>']，或 [模擬 '\<Computer>\\<登入\>']。  
   
  **發行者的連接**  
- 用於連接到發行者的內容。 發行者的連接可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，或使用執行代理程式之 Windows 帳戶的內容進行。 這個欄位會顯示下列其中一項資訊：[使用登入 '\<登入>']  、[模擬 '\<網域>\\<登入\>']  或 [模擬 '\<電腦>\\<登入\>']  。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議使用 Windows 帳戶的內容進行所有連接。  
+ 用於連接到發行者的內容。 發行者的連接可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，或使用執行代理程式之 Windows 帳戶的內容進行。 這個欄位會顯示下列其中一項資訊：[使用登入 '\<Login>']、[模擬 '\<Domain>\\<登入\>']，或 [模擬 '\<Computer>\\<登入\>']。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議使用 Windows 帳戶的內容進行所有連接。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理點對點拓撲 &#40;複寫 Transact-SQL 程式設計&#41;](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   

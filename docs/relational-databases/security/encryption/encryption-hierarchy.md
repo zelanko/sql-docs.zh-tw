@@ -1,5 +1,6 @@
 ---
 title: 加密階層 | Microsoft Docs
+description: 了解 SQL Server 中的階層式加密與金鑰管理基礎結構。 將金鑰儲存在可延伸金鑰管理模組中。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 672631b7ef5e6453e49b269d035586949f03ece6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 805a468d462a28c3e43bddc32cfd2673546a26e5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957418"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764994"
 ---
 # <a name="encryption-hierarchy"></a>加密階層
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用階層式加密與金鑰管理基礎結構來加密資料。 在某一階層執行加密時，會使用憑證、非對稱金鑰、對稱金鑰的組合來加密該階層下的所有階層。 非對稱金鑰和對稱金鑰可以儲存在可延伸金鑰管理 (EKM) 模組內 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的外部。  
   
  下圖顯示每一層的加密階層為該層以下的所有階層進行加密，並顯示最常見的加密組態。 階層開始的存取通常受到密碼保護。  
@@ -81,7 +82,7 @@ ms.locfileid: "74957418"
   
 -   有效期間。 憑證在這段期間內都會視為有效。  
   
-     超過這段期間憑證則無效；每個憑證都包含 [有效期限自]  與 [有效期限至]  日期。 這些日期會指定有效期間。 當憑證的有效期過期時，憑證的主體應該要求取得新憑證。  
+     超過這段期間憑證則無效；每個憑證都包含 [有效期限自]與 [有效期限至]日期。 這些日期會指定有效期間。 當憑證的有效期過期時，憑證的主體應該要求取得新憑證。  
   
 -   簽發者識別資訊。  
   

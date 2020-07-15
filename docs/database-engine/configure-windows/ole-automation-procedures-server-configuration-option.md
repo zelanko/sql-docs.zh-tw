@@ -1,5 +1,6 @@
 ---
 title: OLE Automation 程序伺服器組態選項 | Microsoft Docs
+description: 深入了解 [OLE Automation 程序] 選項。 查看其如何指定 SQL Server 是否可在 Transact-SQL 批次內具現化 OLE Automation 物件。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -10,21 +11,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Ole Automation Procedures option
 ms.assetid: e8982e05-4984-4406-9760-285e8c028ddf
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: cb13d9b50c78ff3d067d97b2d5dd1b763e024608
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5390fce7517b56ea26a33392a72da7cb39dcd34d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67997958"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773684"
 ---
 # <a name="ole-automation-procedures-server-configuration-option"></a>OLE Automation 程序伺服器組態選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  使用 [OLE Automation 程序]  選項可指定 OLE Automation 物件是否可在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次內部啟動。 您也可以使用以原則為基礎的管理或 **sp_configure** 預存程序來設定這個選項。 如需詳細資訊，請參閱＜ [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)＞。  
+  使用 [OLE Automation 程序] 選項可指定 OLE Automation 物件是否可在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次內部啟動。 您也可以使用以原則為基礎的管理或 **sp_configure** 預存程序來設定這個選項。 如需詳細資訊，請參閱＜ [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)＞。  
   
- [Ole Automation 程序]  選項可以設定為下列值。  
+ [Ole Automation 程序] 選項可以設定為下列值。  
   
  0  
  停用 OLE Automation Procedures。 這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]新執行個體的預設值。  

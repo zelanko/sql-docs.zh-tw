@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d6c0aa05f095907b39cacf39f65dfc3b09d9786e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b2b277707c8da44d141036c7e19055383c6c56a8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907192"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900009"
 ---
 # <a name="configure-an-oracle-publisher"></a>設定 Oracle 發行者
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   「Oracle 發行者」之發行集的建立方式與典型的快照式及交易式發行集的建立方式相同，但是在從「Oracle 發行者」端建立發行集之前，您必須完成下列步驟 (步驟一、三和四在本主題中有詳細描述)：  
   
 1.  使用提供的指令碼在 Oracle 資料庫中建立複寫管理使用者。  
@@ -56,7 +56,7 @@ ms.locfileid: "72907192"
 > [!NOTE]  
 >  用 **CASCADE** 選項來卸除 **MSSQLSERVERDISTRIBUTOR** 公用同義字和設定的 Oracle 複寫使用者，會從「Oracle 發行者」移除所有的複寫物件。  
   
- 在 Oracle 複寫使用者結構描述的安裝程式中會提供範例指令碼進行輔助。 安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 後，可在下列目錄中取得此指令碼： *\<磁碟機>* :\\\Program Files\Microsoft SQL Server\\ *\<執行個體名稱>* \MSSQL\Install\oracleadmin.sql。 它也包含在＜ [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md)＞主題中。  
+ 在 Oracle 複寫使用者結構描述的安裝程式中會提供範例指令碼進行輔助。 安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之後，可在下列目錄中取得指令碼： *\<drive>* :\\\Program Files\Microsoft SQL Server\\ *\<InstanceName>* \MSSQL\Install\oracleadmin.sql。 它也包含在＜ [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md)＞主題中。  
   
  使用具有 DBA 權限的帳戶連接到 Oracle 資料庫並執行指令碼。 此指令碼會提示輸入複寫管理使用者結構描述的使用者與密碼，以及要在其中建立物件的預設資料表空間 (資料表空間必須已經存在於 Oracle 資料庫中)。 如需如何為物件指定其他資料表空間的資訊，請參閱[管理 Oracle 資料表空間](../../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)。 可以選擇任何使用者名稱和強式密碼，但是需將兩者都記下來，因為稍後當您將 Oracle 資料庫設為「發行者」時必須提供此資訊。 建議僅將結構描僅用於複寫所需的物件；不要建立資料表來發行於此結構描述中。  
   

@@ -1,5 +1,6 @@
 ---
 title: 安裝 SQL Server 複寫 | Microsoft Docs
+description: 您可使用 [SQL Server 安裝精靈] 或在命令提示視窗中安裝複寫元件。
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -16,16 +17,16 @@ ms.assetid: c50ad078-060b-4a8d-ad45-9e31a8d85729
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 336566cdcdedd378199716cc1369e148e0239863
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e5635065e77921b661d5b60e5ebcd0aad850295b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67991055"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883493"
 ---
 # <a name="install-sql-server-replication"></a>安裝 SQL Server 複寫
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈或命令提示字元來安裝複寫元件。 請在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或修改現有的執行個體時安裝複寫。  
   

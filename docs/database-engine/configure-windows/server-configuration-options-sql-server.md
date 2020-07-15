@@ -1,5 +1,6 @@
 ---
 title: 伺服器組態選項 (SQL Server) | Microsoft Docs
+description: 了解如何管理及最佳化 SQL Server 資源。 檢視可用的組態選項、可能的設定、預設值和重新啟動需求。
 ms.custom: ''
 ms.date: 04/13/2017
 ms.prod: sql
@@ -27,17 +28,17 @@ helpviewer_keywords:
 - server configuration [SQL Server]
 - administering SQL Server, configuration options
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: c42c9501772972c523d5635a159fcdeb54bf107b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 73a75a500c0833099bc2cdd146fb8f3f9978c42a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75001967"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715568"
 ---
 # <a name="server-configuration-options-sql-server"></a>伺服器組態選項 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 sp_configure 系統預存程序，透過組態選項來管理及最佳化 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 資源。 最常使用的伺服器組態選項可以透過 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來使用，而所有組態選項都可以透過 sp_configure 來存取。 在設定這些選項前，請仔細考慮這些選項對系統所造成的效果。 如需詳細資訊，請參閱[檢視或變更伺服器屬性 &#40;SQL Server&#41;](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)。  
   
@@ -56,7 +57,7 @@ ms.locfileid: "75001967"
   
 有些選項需要重新啟動伺服器，新的組態值才能生效。 如果在重新啟動伺服器之前就設定新值並執行 sp_configure 的話，新值會出現在組態選項的 **value** 資料行，但不會出現在 **value_in_use** 資料行。 重新啟動伺服器之後，新的值就會出現在 **value_in_use** 資料行。  
   
-自我設定的選項是指 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會根據系統需要而自行調整的選項。 在大多數情況下，都不需以手動方式來設定這些值。 範例包括 [最大背景工作執行緒]  選項與 [使用者連線] 選項。  
+自我設定的選項是指 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會根據系統需要而自行調整的選項。 在大多數情況下，都不需以手動方式來設定這些值。 範例包括 [最大背景工作執行緒] 選項與 [使用者連線] 選項。  
   
 ## <a name="configuration-options-table"></a>組態選項表  
  下表列出所有可用的組態選項、可能的設定範圍以及預設值。 組態選項會加上字母標示，如下所示：  
@@ -74,6 +75,8 @@ ms.locfileid: "75001967"
     |[access check cache bucket count](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md) (A)|0|16384|0|  
     |[access check cache quota](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md) (A)|0|2147483647|0|  
     |[ad hoc distributed queries](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md) (A)|0|1|0|  
+    |[ADR cleaner retry timeout (分鐘)](../../database-engine/configure-windows/adr-cleaner-retry-timeout-configuration-option.md)<br><br> 在 SQL Server 2019 中引進|0|32767|15|  
+    |[ADR Preallocation Factor](../../database-engine/configure-windows/adr-preallocation-factor-server-configuration-option.md)<br><br> 在 SQL Server 2019 中引進|0|32767|4|  
     |[affinity I/O mask](../../database-engine/configure-windows/affinity-input-output-mask-server-configuration-option.md) (A、RR)|-2147483648|2147483647|0|  
     |[affinity64 I/O mask](../../database-engine/configure-windows/affinity64-input-output-mask-server-configuration-option.md) (A，只能用於 64 位元版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])|-2147483648|2147483647|0|  
     |[affinity mask](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md) (A)|-2147483648|2147483647|0|  
@@ -83,7 +86,7 @@ ms.locfileid: "75001967"
     |[停用自動軟體 NUMA](soft-numa-sql-server.md)|0|1|0|  
     |[備份總和檢查碼預設](../../database-engine/configure-windows/backup-checksum-default.md)|0|1|0|  
     |[backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)|0|1|0| 
-    |[已封鎖的處理序臨界值](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md) (A)|0|86400|0|  
+    |[已封鎖的處理序臨界值](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md) (A)|5|86400|0|  
     |[c2 audit mode](../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md) (A、RR)|0|1|0|  
     |[clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)|0|1|0|  
     |[CLR 嚴格安全性](../../database-engine/configure-windows/clr-strict-security.md) (A) <br /> **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 及更新版本)。|0|1|0|  
@@ -114,7 +117,7 @@ ms.locfileid: "75001967"
     |[max full-text crawl range](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
     |[max server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A、SC)|16|2147483647|2147483647|  
     |[max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
-    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> 1024 是 32 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的最大建議值，而 64 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 則為 2048。 **注意：** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 是 32 位元作業系統上可用的最後一個版本。|0<br /><br /> 零表示根據處理器數目來自動設定最大背景工作執行緒數目，透過用於 32 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的公式 (256 + (\<處理器> -4) * 8) 來決定，而 64 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 則為 (512 + (*\<處理器>* - 4) * 8)。 **注意：** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 是 32 位元作業系統上可用的最後一個版本。|  
+    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> 1024 是 32 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的最大建議值，而 64 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 則為 2048。 **注意：** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 是 32 位元作業系統上可用的最後一個版本。|0<br /><br /> 零表示自動設定 max worker threads 數目，而這個數目是根據處理器數目，透過用於 32 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的公式 (256 + ( *\<processors>* -4) * 8) 來決定，而 64 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 則為 (512 + ( *\<processors>* - 4) * 8)。 **注意：** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 是 32 位元作業系統上可用的最後一個版本。|  
     |[media retention](../../database-engine/configure-windows/configure-the-media-retention-server-configuration-option.md) (A、RR)|0|365|0|  
     |[min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
     |[min server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A、SC)|0|2147483647|0|  
@@ -124,6 +127,7 @@ ms.locfileid: "75001967"
     |[open objects](../../database-engine/configure-windows/open-objects-server-configuration-option.md) (A、RR，已過時)|0|2147483647|0|  
     |[optimize for ad hoc workloads](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) (A)|0|1|0|  
     |[PH_timeout](../../database-engine/configure-windows/ph-timeout-server-configuration-option.md) (A)|1|3600|60|  
+    |[Polybase 網路加密](../../relational-databases/polybase/polybase-installation.md#enable) | 0|1 |1
     |[啟用 Polybase](../../relational-databases/polybase/polybase-installation.md#enable) (RR) **適用於**：[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)])|0|1|0|
     |[precompute rank](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md) (A)|0|1|0|  
     |[priority boost](../../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) (A、RR)|0|1|0|  

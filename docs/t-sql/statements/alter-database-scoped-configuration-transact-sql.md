@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
-ms.openlocfilehash: 5c43d6da25aa93b146346ff45057edba9445ebab
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a37a0b4c0f474323680213d3719ae85cff7a5ecc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81629048"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895684"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -37,7 +37,7 @@ ms.locfileid: "81629048"
 
 此命令可以在**個別資料庫**層級設定幾項資料庫設定。 
 
-[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 及自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開始支援下列設定： 
+如[＜引數＞](#arguments)一節中每個設定的 [適用於] 一行所示，[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中支援下列設定： 
 
 - 清除程序快取。
 - 針對主要資料庫將 MAXDOP 參數設定為任意值 (1、2、...，以最適用於該特定資料庫的值為準)，並且針對所使用的所有次要資料庫 (例如，用於報表查詢) 設定不同的值 (例如 0)。
@@ -56,6 +56,7 @@ ms.locfileid: "81629048"
 - 啟用或停用新的 `String or binary data would be truncated` 錯誤訊息。
 - 啟用或停用 [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) 中最後一個實際執行計畫的集合。
 - 指定暫停的可繼續索引作業在被 SQL Server 引擎自動中止之前，所暫停的分鐘數。
+- 啟用或停用非同步統計資料更新的低優先順序等候鎖定
 
 此設定僅適用於 Azure Synapse Analytics (原來為 SQL DW)。
 - 設定使用者資料庫相容性層級
@@ -101,6 +102,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | LAST_QUERY_PLAN_STATS = { ON | OFF }
     | PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = <time>
     | ISOLATE_SECURITY_POLICY_CARDINALITY  = { ON | OFF }
+    | ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY = { ON | OFF }
 }
 ```
 
@@ -110,8 +112,8 @@ ALTER DATABASE SCOPED CONFIGURATION
 > -  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` 變更為 `BATCH_MODE_MEMORY_GRANT_FEEDBACK`
 > -  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` 變更為 `BATCH_MODE_ADAPTIVE_JOINS`
 
-```syntaxsql
--- Synatx for Azure Synapse Analytics (Formerly SQL DW)
+```SQL
+-- Syntax for Azure Synapse Analytics (Formerly SQL DW)
 
 ALTER DATABASE SCOPED CONFIGURATION
 {
@@ -121,7 +123,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 
 < set_options > ::=
 {
-    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 } -- Preview 
+    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 } 
 }
 ```
 
@@ -139,7 +141,7 @@ CLEAR PROCEDURE_CACHE [plan_handle]
 
 **適用於**：指定查詢的計畫控制代碼適用於 Azure SQL Database 和 SQL Server 2019 或更高版本。
 
-MAXDOP **=** {\<值> | PRIMARY } **\<值>**
+MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 
 指定應該用於陳述式的預設**平行處理原則最大程度 (MAXDOP)** 設定。 0 是預設值，表示將改用伺服器組態。 資料庫範圍的 MAXDOP 會覆寫 (設定為 0 時除外) sp_configure 在伺服器層級設定的**平行處理原則的最大程度**。 查詢提示仍然可以覆寫資料庫範圍的 MAXDOP 來調整需要不同設定的特定查詢。 所有這些設定都會受到針對[工作負載群組](create-workload-group-transact-sql.md)設定的 MAXDOP 限制。
 
@@ -164,7 +166,7 @@ PRIMARY
 
 LEGACY_CARDINALITY_ESTIMATION **=** { ON | **OFF** | PRIMARY }
 
-可讓您將查詢最佳化工具基數估計模型設定為 SQL Server 2012 和更舊版本，而不根據資料庫的相容性層級。 預設值為 **OFF**，這會根據資料庫的相容性層級來設定查詢最佳化工具基數估計模型。 將 LEGACY_CARDINALITY_ESTIMATION 設為 [ON]  相當於啟用[追蹤旗標 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
+可讓您將查詢最佳化工具基數估計模型設定為 SQL Server 2012 和更舊版本，而不根據資料庫的相容性層級。 預設值為 **OFF**，這會根據資料庫的相容性層級來設定查詢最佳化工具基數估計模型。 將 LEGACY_CARDINALITY_ESTIMATION 設為 [ON] 相當於啟用[追蹤旗標 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
 
 > [!TIP]
 > 若要在查詢層級完成此操作，請新增 **QUERYTRACEON** [查詢提示](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
@@ -397,7 +399,7 @@ ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF**}
 
 可讓您控制[資料列層級安全性](../../relational-databases/security/row-level-security.md) (RLS) 述詞是否會影響整體使用者查詢的執行計畫基數。 當 ISOLATE_SECURITY_POLICY_CARDINALITY 為 ON 時，RLS 述詞不會影響執行計畫的基數。 例如，假設某資料表包含 1 百萬個資料列以及一個 RLS 述詞，此述詞會針對發出查詢的特定使用者將結果限制為 10 個資料列。 將此資料庫範圍的設定設為 OFF 時，此述詞的基數估計值會是 10。 當此資料庫範圍的設定為 ON 時，查詢最佳化會估計 1 百萬個資料列。 建議針對大部分工作負載使用預設值。
 
-DW_COMPATIBILITY_LEVEL (預覽) **=** {**AUTO** | 10 | 20 }
+DW 相容性層級 **=** { **AUTO** | 10 | 20 }
 
 **適用於**：僅限 Azure Synapse Analytics (前身為 SQL DW)
 
@@ -405,13 +407,19 @@ DW_COMPATIBILITY_LEVEL (預覽) **=** {**AUTO** | 10 | 20 }
 
 |相容性層級    |   註解|  
 |-----------------------|--------------|
-|**AUTO**| 預設值。  其值等於最新支援的相容性層級。|
+|**AUTO**| 預設值。  Synapse Analytics 引擎會自動更新其值。  目前的值為 20。|
 |**10**| 在引進相容性層級支援之前，先執行 Transact-SQL 與查詢處理行為。|
 |**20**| 第 1 層相容性層級包含受限的 Transact-SQL 與查詢處理行為。 |
 
+ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY **=** { ON | **OFF**}
+
+**適用於**：僅限 Azure SQL Database (功能目前處於公開預覽階段)
+
+如果已啟用非同步統計資料更新，則啟用這項組態會導致背景要求更新統計資料，以等待對低優先順序佇列進行 Sch-M 鎖定，而避免在高並行處理案例中封鎖其他工作階段。 如需詳細資訊，請參閱 [AUTO_UPDATE_STATISTICS_ASYNC](../../relational-databases/statistics/statistics.md#auto_update_statistics_async)。
+
 ## <a name="permissions"></a><a name="Permissions"></a> 權限
 
-資料庫上需要 `ALTER ANY DATABASE SCOPE CONFIGURATION`。 可由在資料庫上具有 CONTROL 權限的使用者來授與此權限。
+資料庫上需要 `ALTER ANY DATABASE SCOPED CONFIGURATION`。 可由在資料庫上具有 CONTROL 權限的使用者來授與此權限。
 
 ## <a name="general-remarks"></a>一般備註
 
@@ -419,7 +427,7 @@ DW_COMPATIBILITY_LEVEL (預覽) **=** {**AUTO** | 10 | 20 }
 
 執行此陳述式會清除目前資料庫中的程序快取，這意謂著所有查詢都必須重新編譯。
 
-針對有 3 部分名稱的查詢，會採用查詢的目前資料庫連線設定，而不會採用在目前資料庫內容中編譯 SQL 模組 (例如程序、函式及觸發程序) 的設定，因此會使用其所在資料庫的選項。
+針對有 3 部分名稱的查詢，會採用查詢的目前資料庫連線設定，而不會採用另一個資料庫內容中所編譯 SQL 模組 (例如程序、函式及觸發程序) 的設定，因此會使用其所在資料庫的選項。 同樣地，以非同步方式更新統計資料時，就會採用統計資料所在資料庫的 ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY 設定。
 
 `ALTER_DATABASE_SCOPED_CONFIGURATION` 事件會以 DDL 事件的形式新增，可用來引發 DDL 觸發程序，且是 `ALTER_DATABASE_EVENTS` 觸發程序群組的子觸發程序。
 

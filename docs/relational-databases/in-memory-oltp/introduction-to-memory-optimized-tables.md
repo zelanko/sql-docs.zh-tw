@@ -1,5 +1,6 @@
 ---
 title: 記憶體最佳化的資料表簡介 | Microsoft Docs
+description: 了解記憶體最佳化資料表，這些資料表持久且支援不可部分完成、一致、隔離且持久的交易。
 ms.custom: ''
 ms.date: 12/02/2016
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9fe7d83331ee1dc0824e77602c60be04e070fb6f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 32129e87589c982c2ae620abbf91eeeb245dc3a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050205"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723120"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>記憶體最佳化的資料表簡介
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   記憶體最佳化資料表是使用 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) 所建立。  
   
@@ -69,20 +70,20 @@ ms.locfileid: "68050205"
 
 下列因素會影響記憶體中 OLTP 可達到的效能提升：  
   
-*通訊：* 相較於具有較少呼叫而且每個預存程序中實作更多功能的應用程式，具有簡短預存程序的許多呼叫的應用程式可能會看到較少的效能增益。  
+通訊：相較於具有較少呼叫而且每個預存程序中實作更多功能的應用程式，具有簡短預存程序的許多呼叫的應用程式可能會看到較少的效能增益。  
   
-「*執行」：[!INCLUDE[tsql](../../includes/tsql-md.md)]* 記憶體內部 OLTP 使用原生編譯的預存程序時可達到最佳效能，而不是使用解譯的預存程序或查詢執行時。 從這樣的預存程序存取記憶體最佳化資料表頗有助益。  
+[!INCLUDE[tsql](../../includes/tsql-md.md)] 執行：記憶體中 OLTP 使用原生編譯的預存程序時可達到最佳效能，而不是使用解譯的預存程序或查詢執行。 從這樣的預存程序存取記憶體最佳化資料表頗有助益。  
   
-*範圍掃描與點查閱的比較︰* 記憶體最佳化非叢集索引可支援範圍掃描和排序的掃描。 對於點查閱而言，記憶體最佳化雜湊索引的效能比記憶體最佳化的非叢集索引更好。 記憶體最佳化非叢集索引的效能比以磁碟為基礎的索引更好。
+範圍掃描和點查閱的比較：記憶體最佳化的非叢集索引可支援範圍掃描和排序掃描。 對於點查閱而言，記憶體最佳化雜湊索引的效能比記憶體最佳化的非叢集索引更好。 記憶體最佳化非叢集索引的效能比以磁碟為基礎的索引更好。
 
 - 自 SQL Server 2016 起，記憶體最佳化資料表的查詢計畫能以平行方式掃描資料表。 這可改善分析查詢的效能。
   - 雜湊索引在 SQL Server 2016 也能以平行方式掃描。
   - 非叢集索引在 SQL Server 2016 也能以平行方式掃描。
   - 資料行存放區索引自 SQL Server 2014 起始以來，即能以平行方式掃描。
   
-「索引作業」：  索引作業不會記錄下來，且只存在於記憶體中。  
+索引作業：索引作業不會記錄下來，且只存在於記憶體中。  
   
-「並行」：  效能受到引擎層級並行影響的應用程式，如閂鎖競爭或封鎖，改用記憶體內部 OLTP 之後，將可大幅改善其效能。  
+並行：效能受到引擎層級並行 (例如閂鎖競爭或封鎖) 影響的應用程式改用記憶體中 OLTP 之後，將可大幅改善其效能。  
   
 下表列出關聯式資料庫中經常發現的效能和延展性問題，以及記憶體中 OLTP 如何改善效能。  
   

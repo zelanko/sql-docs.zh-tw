@@ -1,5 +1,6 @@
 ---
 title: 設定 scan for startup procs 伺服器組態選項 | Microsoft Docs
+description: 了解 [掃描啟動程序] 選項。 查看此選項如何在啟動時，指定 SQL Server 是否掃描及執行所有自動執行的預存程序。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - scan for startup procs option
 ms.assetid: 6bf9d252-e766-458d-9dcd-23d895f032a2
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: ecccde508e3b83a8c0f6995aeb0d142785766976
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0547d5a800533a2414a8dbf666c85a8e9f4bc4c1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012289"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785645"
 ---
 # <a name="configure-the-scan-for-startup-procs-server-configuration-option"></a>設定 scan for startup procs 伺服器組態選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] scan for startup procs [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 您可以使用 **scan for startup procs** 選項，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動期間掃描預存程序的自動執行。 如果這個選項設定為 1， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會掃描及執行伺服器上所定義的所有自動執行預存程序。 **掃描啟動程序** 的預設值是 0 (不掃描)。  
   
@@ -34,7 +35,7 @@ ms.locfileid: "68012289"
   
 -   **使用下列方法設定 scan for startup procs 選項：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -57,7 +58,7 @@ ms.locfileid: "68012289"
   
 #### <a name="to-configure-the-scan-for-startup-procs-option"></a>若要設定 scan for startup procs 選項  
   
-1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]  。  
+1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
   
 2.  按一下 **[進階]** 節點。  
   

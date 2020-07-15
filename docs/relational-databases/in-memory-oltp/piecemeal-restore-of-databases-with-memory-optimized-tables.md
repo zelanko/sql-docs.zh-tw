@@ -1,5 +1,6 @@
 ---
 title: 分次還原資料庫 - 記憶體最佳化資料表
+description: 具有經記憶體最佳化資料表的資料庫支援在 SQL Server 中進行分次還原。 了解分次備份和還原的主要狀況。
 ms.custom: seo-dt-2019
 ms.date: 03/06/2017
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 732c9721-8dd4-481d-8ff9-1feaaa63f84f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a546e2aeceb60e42f4fc9dc8b1170431fd581ef3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7d484e919fca78b3b77546f659ed198cdea7ab1b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412584"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722404"
 ---
 # <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>分次還原具有記憶體最佳化資料表的資料庫
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   具有記憶體最佳化資料表的資料庫支援分次還原，但受到下列一項限制。 如需分次備份和還原的詳細資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) 和[分次還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)。  
   
  記憶體最佳化的檔案群組必須與主要檔案群組同時備份和還原：  
@@ -110,7 +111,7 @@ BACKUP database imoltp
     with init;
 ```
   
-### <a name="restore"></a>{1}還原{2}  
+### <a name="restore"></a>還原  
  下列範例顯示如何同時還原主要檔案群組和記憶體最佳化的檔案群組。  
 
 ```sql

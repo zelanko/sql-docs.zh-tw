@@ -1,5 +1,6 @@
 ---
 title: 複寫類型 | Microsoft 文件
+description: 了解 SQL Server 提供用於分散式應用程式的不同複寫類型。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: c1655e8d-d14c-455a-a7f9-9d2f43e88ab4
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: aa6cc0eb253c0f21a1b66870f9dac2607f65e2e3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c581a9d715e231fc593100549b3704b531292ed2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68769302"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720685"
 ---
 # <a name="types-of-replication"></a>複寫類型
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供下列可用於分散式應用程式的複寫類型：  
 
 | **型別** | **說明** |

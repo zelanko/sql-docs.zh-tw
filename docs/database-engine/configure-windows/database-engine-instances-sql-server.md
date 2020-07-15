@@ -1,5 +1,6 @@
 ---
 title: 資料庫引擎執行個體 (SQL Server) | Microsoft Docs
+description: 了解資料庫引擎執行個體。 檢視可在執行個體上執行的工作其資訊，例如設定屬性及啟用通訊協定。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2d5f89f5e3aa801386642bfb75470cef15db6e96
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f5364e0120c6bb4cbd9d6f7bbf5dfa021a5591f2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012050"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772600"
 ---
 # <a name="database-engine-instances-sql-server"></a>Database Engine 執行個體 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體是作為作業系統服務執行之 **sqlservr.exe** 可執行檔的複本。 每個執行個體都會管理數個系統資料庫以及一個或多個使用者資料庫。 每部電腦都可以執行多個 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體。 應用程式會連接至執行個體，以在執行個體所管理的資料庫中執行工作。  
   
 ## <a name="instances"></a>執行個體  

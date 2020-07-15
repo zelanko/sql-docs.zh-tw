@@ -1,27 +1,26 @@
 ---
 title: 建立可重複使用的程式碼片段
-titleSuffix: Azure Data Studio
 description: 了解如何在 Azure Data Studio 中建立和使用 SQL 程式碼片段
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 09a8432d10a70bb8530654d76bce874f735788a6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8e2c6883840513fb9f09f8dc58080d36402bdf9f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959705"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774696"
 ---
-# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-name-sos"></a>建立和使用程式碼片段，以便在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 中快速建立 Transact-SQL (T-SQL) 指令碼
+# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-azure-data-studio"></a>建立和使用程式碼片段，以在 Azure Data Studio 中快速建立 Transact-SQL (T-SQL) 指令碼
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 中的程式碼片段是範本，讓您輕鬆建立資料庫和資料庫物件。 
+Azure Data Studio 中的程式碼片段是範本，其可供輕鬆建立資料庫和資料庫物件。 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 提供數個 T-SQL 程式碼片段，協助您快速產生適當的語法。 
+Azure Data Studio 提供數個 T-SQL 程式碼片段，以協助快速產生適當的語法。 
 
 您也可以建立使用者定義的程式碼片段。
 
@@ -39,7 +38,7 @@ ms.locfileid: "67959705"
 
    ![取代範本欄位](media/code-snippets/table-from-snippet.png)
 
-   如果您要變更的欄位不再醒目提示 (當您在編輯器中四處移動游標時，就會發生這種情況)，請以滑鼠右鍵按一下您要變更的文字，然後選取 [變更所有發生次數]  ：
+   如果您要變更的欄位不再醒目提示 (當您在編輯器中四處移動游標時，就會發生這種情況)，請以滑鼠右鍵按一下您要變更的文字，然後選取 [變更所有發生次數]：
 
    ![取代範本欄位](media/code-snippets/change-all.png)
 
@@ -51,14 +50,14 @@ ms.locfileid: "67959705"
 
 您可以定義自己的程式碼片段。 若要開啟 SQL 程式碼片段檔案進行編輯：
 
-1. 開啟*命令選擇區* (**Shift+Ctrl+P**)，並鍵入 *snip*，然後選取 [喜好設定:  開啟使用者程式碼片段]：
+1. 開啟*命令選擇區* (**Shift+Ctrl+P**)，並鍵入 *snip*，然後選取 [喜好設定:開啟使用者程式碼片段]：
 
    ![取代範本欄位](media/code-snippets/user-snippets.png)
 
-1. 選取 [SQL]  ：
+1. 選取 [SQL]：
 
    > [!NOTE]
-   > [!INCLUDE[name-sos](../includes/name-sos-short.md)] 會從 Visual Studio Code 繼承程式碼片段功能，因此本文專門討論如何使用 SQL 程式碼片段。 如需詳細資訊，請參閱 Visual Studio Code 文件中的 [Creating your own snippets](https://code.visualstudio.com/docs/editor/userdefinedsnippets) (建立您自己的程式碼片段)。 
+   > Azure Data Studio 會從 Visual Studio Code 繼承程式碼片段功能，因此本文專門討論如何使用 SQL 程式碼片段。 如需詳細資訊，請參閱 Visual Studio Code 文件中的 [Creating your own snippets](https://code.visualstudio.com/docs/editor/userdefinedsnippets) (建立您自己的程式碼片段)。 
 
    ![取代範本欄位](media/code-snippets/select-sql.png)
 

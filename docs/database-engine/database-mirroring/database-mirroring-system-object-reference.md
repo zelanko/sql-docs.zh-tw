@@ -1,5 +1,6 @@
 ---
 title: 資料庫鏡像系統物件參考 | Microsoft Docs
+description: 查看資料庫鏡像系統物件、系統目錄檢視、系統動態管理檢視和系統資料表的資訊。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -9,15 +10,15 @@ ms.technology: high-availability
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e61f8d9df3cb6dcaf545819d630c70bc18709d15
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c37c75f9824f85705f92d1fabb6519303a76fafb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68041782"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754716"
 ---
 # <a name="database-mirroring-system-object-reference"></a>資料庫鏡像系統物件參考
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="system-catalog-views"></a>系統目錄檢視
 

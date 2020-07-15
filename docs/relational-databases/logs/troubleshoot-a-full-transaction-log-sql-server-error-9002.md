@@ -1,6 +1,6 @@
 ---
 title: 針對寫滿交易記錄錯誤 9002 進行疑難排解
-ms.custom: seo-lt-2019
+description: 了解 SQL Server 中完整交易記錄的可能回應，以及如何避免未來發生問題。
 ms.date: 08/05/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,15 +18,16 @@ helpviewer_keywords:
 ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ad8b68338987256f1c7fa01f1f0d56242cef6a7f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 79e33cb5b5bea6c3eb264052dade0a3906a44efb
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056068"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006545"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>寫滿交易記錄疑難排解 (SQL Server 錯誤 9002)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主題將討論對於寫滿交易記錄的可能回應，並建議將來可採用的避免方法。 
   
   當交易記錄寫滿時， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 就會發出 **9002 錯誤**。 此記錄可能會在資料庫處於線上或復原狀態時填滿。 如果記錄已滿時，資料庫正在線上，則資料庫仍會保持在線上，但只能讀取並無法更新。 如果此記錄是在復原期間填滿，則 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將資料庫標示為 RESOURCE PENDING。 不論是哪一種情況，使用者都必須採取動作，以便提供足夠的記錄空間。  
@@ -111,7 +112,7 @@ ms.locfileid: "74056068"
 有時您必須結束處理序；您可能必須使用 [KILL](../../t-sql/language-elements/kill-transact-sql.md) 陳述式。 請小心使用此陳述式，尤其是執行您不想刪除的重要處理序時。 如需詳細資訊，請參閱 [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)
 
 ## <a name="see-also"></a>另請參閱  
-[知識庫支援文章 - SQL Server 中的交易記錄異常增長或填滿](https://support.microsoft.com/kb/317375) [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [管理交易記錄檔的大小](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
  [交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)  

@@ -8,16 +8,16 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 498518fbc119629d2e7da7717b1f6e41c68984ce
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e386bb61142faca2ce81d2e95a46b3399bce15c0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558575"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902355"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>設定容錯移轉叢集執行個體 - SMB - Linux 上的 SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 此文章說明如何針對 Linux 上的容錯移轉叢集執行個體 (FCI) 設定 SMB 儲存體。 
  
@@ -46,7 +46,7 @@ ms.locfileid: "75558575"
    
 1. 執行 `sudo smbclient -L //NameOrIP/ShareName -U User`。
    
-   \<NameOrIP> 是裝載 SMB 共用之伺服器的 DNS 名稱或 IP 位址。
+   \<NameOrIP> 是裝載 SMB 共用的伺服器其 DNS 名稱或 IP 位址。
    
    \<ShareName> 是 SMB 共用的名稱。 
    
@@ -118,13 +118,13 @@ ms.locfileid: "75558575"
       Mount -t cifs //<ServerName>/<ShareName> /var/opt/mssql/data -o vers=3.0,username=<UserName>,password=<Password>,domain=<domain>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777
       ```
       
-      \<ServerName> 是具有 SMB 共用之伺服器的名稱
+      \<ServerName> 是具有 SMB 共用的伺服器其名稱
       
       \<ShareName> 是共用的名稱
       
-      \<UserName> 是要存取共用之使用者的名稱
+      \<UserName> 是要存取共用的使用者其名稱
       
-      \<Password> 是該使用者的密碼
+      \<Password> 是使用者的密碼
       
       \<domain> 是 Active Directory 的名稱
       
@@ -216,15 +216,15 @@ ms.locfileid: "75558575"
       Mount -t cifs //<ServerName>/<ShareName> <FolderName> -o vers=3.0,username=<UserName>,password=<Password>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777
       ```
       
-      \<ServerName> 是具有 SMB 共用之伺服器的名稱
+      \<ServerName> 是具有 SMB 共用的伺服器其名稱
       
       \<ShareName> 是共用的名稱
       
-      \<FolderName> 是在最後步驟中所建立之資料夾的名稱  
+      \<FolderName> 是在最後步驟中所建立資料夾的名稱  
       
-      \<UserName> 是要存取共用之使用者的名稱
+      \<UserName> 是要存取共用的使用者其名稱
       
-      \<Password> 是該使用者的密碼
+      \<Password> 是使用者的密碼
       
       \<mssqlUID> 是 mssql 使用者的 UID
       

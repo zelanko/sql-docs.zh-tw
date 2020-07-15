@@ -1,5 +1,6 @@
 ---
 title: 針對雜湊索引進行疑難排解 - 記憶體最佳化資料表
+description: 您可使用這項資訊，針對 SQL Server 和 Azure SQL Database 中經記憶體最佳化的資料表雜湊索引進行疑難排解。
 ms.custom: seo-dt-2019
 ms.date: 12/01/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6216e8e008bff92ce502aa6dda8025c5ef63f0ba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 13117bad78c1cfc843bbe68caeb2abb5c5f64dff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412664"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723222"
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>為記憶體最佳化資料表的雜湊索引進行疑難排解
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 ## <a name="prerequisite"></a>必要條件  
   
@@ -46,7 +47,7 @@ ms.locfileid: "74412664"
   
 如果雜湊索引值有高比率的重複項目，則雜湊值區會受到較長鏈結影響。  
   
-假設您有來自較早 T-SQL 語法程式碼區塊的相同 SupportEvent 資料表。 下列 T-SQL 程式碼示範如何尋找並顯示「所有」  值與「唯一」  值的比率︰  
+假設您有來自較早 T-SQL 語法程式碼區塊的相同 SupportEvent 資料表。 下列 T-SQL 程式碼示範如何尋找並顯示「所有」值與「唯一」值的比率︰  
   
 ```sql
 -- Calculate ratio of:  Rows / Unique_Values.  
@@ -177,7 +178,7 @@ go
   
 我們的 `SELECT` 結果顯示在程式碼之後，以手動方式分割成兩個較窄的結果資料表，以獲得較佳的顯示效果。  
   
-- 以下是「值區計數」的結果  。  
+- 以下是「值區計數」的結果。  
   
 | IndexName | total_bucket_count | empty_bucket_count | EmptyBucketPercent |  
 | :-------- | -----------------: | -----------------: | -----------------: |  
@@ -185,7 +186,7 @@ go
 | ix_StatusCode | 8 | 4 | 50 |  
 | PK_SalesOrd_B14003... | 262144 | 96525 | 36 |  
   
-- 接下來是為「鏈結長度」  的結果。  
+- 接下來是為「鏈結長度」的結果。  
   
 | IndexName | avg_chain_length | max_chain_length |  
 | :-------- | ---------------: | ---------------: |  

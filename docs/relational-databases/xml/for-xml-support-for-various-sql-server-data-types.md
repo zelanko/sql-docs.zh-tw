@@ -1,5 +1,6 @@
 ---
 title: 各個 SQL Server 資料類型的 FOR XML 支援 | Microsoft Docs
+description: 檢視 SQL 查詢中，FOR XML 子句所支援各種 SQL Server 資料類型的資訊。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: b8aeb87f-9cce-40e2-a47c-2dc1460548af
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e050c3f6817bc6c975f8bf28f561fb91af109dd8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 7b4e3d1ecc08c94e516b532cc8f0d68ef370e1e4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662947"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729902"
 ---
 # <a name="for-xml-support-for-various-sql-server-data-types"></a>各個 SQL Server 資料類型的 FOR XML 支援
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   本章節的主題將描述對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中資料類型的 FOR XML 支援。  
   
 ## <a name="in-this-section"></a>本節內容  

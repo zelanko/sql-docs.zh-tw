@@ -1,5 +1,6 @@
 ---
 title: 移除記錄傳送 (SQL Server) | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 在 SQL Server 中移除記錄傳送。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 859373db-c744-4a4b-8479-45163f61e8cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 817bfeccb29de6b1531b83a48da4d78f8397b4ca
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a62ae437349e5a00ae119b4cc9130d1b8882752f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68058255"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85695813"
 ---
 # <a name="remove-log-shipping-sql-server"></a>移除記錄傳送 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 移除 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的記錄傳送。  
   
  **本主題內容**  
@@ -32,7 +33,7 @@ ms.locfileid: "68058255"
   
 -   **若要移除記錄傳送，請使用：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -51,7 +52,7 @@ ms.locfileid: "68058255"
   
 1.  連接至目前是記錄傳送主要伺服器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，並展開該執行個體。  
   
-2.  展開 [資料庫]  ，以滑鼠右鍵按一下記錄傳送主要資料庫，然後按一下 [屬性]  。  
+2.  展開 [資料庫]，以滑鼠右鍵按一下記錄傳送主要資料庫，然後按一下 [屬性]。  
   
 3.  在 **[選取頁面]** 下，按一下 **[交易記錄傳送]** 。  
   

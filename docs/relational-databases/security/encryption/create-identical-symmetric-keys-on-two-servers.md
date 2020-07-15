@@ -1,5 +1,6 @@
 ---
 title: 在兩部伺服器上建立相同的對稱金鑰 | Microsoft Docs
+description: 了解如何使用 Transact-SQL 在 SQL Server 中的兩部伺服器上建立相同對稱金鑰。 這支援在不同資料庫或伺服器中進行加密。
 ms.custom: ''
 ms.date: 05/30/2019
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: a13d0b21-a43b-43c0-9c22-7ba8f3d15e80
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77707d460262864cafa8884281c69fb957945f20
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6a65944d2ee5e4a3d0844ebb50cdd3d4b6dad135
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80243388"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765034"
 ---
 # <a name="create-identical-symmetric-keys-on-two-servers"></a>在兩部伺服器上建立相同的對稱金鑰
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中於兩部不同的伺服器上建立相同的對稱金鑰 若要解密加密文字，您就需要用來加密的金鑰。 在單一資料庫中同時進行加密和解密時，此金鑰會儲存在資料庫中，然後根據權限提供金鑰，以便進行加密和解密。 但是，在不同的資料庫或不同的伺服器上進行加密和解密時，儲存在某個資料庫中的金鑰將無法在第二個資料庫上使用。
   
 ## <a name="before-you-begin"></a>開始之前  

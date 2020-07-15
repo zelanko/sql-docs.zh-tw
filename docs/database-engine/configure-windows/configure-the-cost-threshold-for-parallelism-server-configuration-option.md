@@ -1,5 +1,6 @@
 ---
 title: 設定 cost threshold for parallelism 伺服器組態選項 | Microsoft Docs
+description: 了解平行處理原則選項的成本閾值。 了解其值如何影響 SQL Server 是否會針對查詢執行平行計畫，以及了解如何進行設定。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - cost threshold for parallelism option
 ms.assetid: dad21bee-fe28-41f6-9d2f-e6ababfaf9db
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 783740852d4e979bcaff79dc3aa24068247b5e32
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c71e7d74d7ba2844d1891b7cf926c9bbded8e115
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012754"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728660"
 ---
 # <a name="configure-the-cost-threshold-for-parallelism-server-configuration-option"></a>設定 cost threshold for parallelism 伺服器組態選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] cost threshold for parallelism [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **平行處理原則的成本臨界值** 選項指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為查詢建立及執行平行計劃的臨界值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 **或**。 成本是指在特定硬體組態下，執行序列計畫所需的估計成本，並不是時間單位。 **cost threshold for parallelism** 選項可設成從 0 到 32767 的任何值。 預設值為 5。  
   
@@ -36,7 +37,7 @@ ms.locfileid: "68012754"
   
 -   **使用下列方法設定 cost threshold for parallelism 選項：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -81,11 +82,11 @@ FROM sys.dm_os_sys_info
   
 #### <a name="to-configure-the-cost-threshold-for-parallelism-option"></a>設定 cost threshold for parallelism 選項  
   
-1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]  。  
+1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
   
 2.  按一下 **[進階]** 節點。  
   
-3.  在 [平行處理原則]  下，將 [平行處理原則的成本閾值]  選項變更為所需的值。 輸入或選取 0 到 32767 之間的值。  
+3.  在 [平行處理原則] 下，將 [平行處理原則的成本閾值] 選項變更為所需的值。 輸入或選取 0 到 32767 之間的值。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

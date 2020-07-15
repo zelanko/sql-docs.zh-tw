@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57639c3705f38396fdc3ebf5dd65b34c145c324d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 57f44934fa5ecfe7c14b4c4b2427656ccd4ef633
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79526793"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255421"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -87,7 +87,7 @@ CREATE LOGIN login_name { WITH <option_list1> | FROM <sources> }
 
 ## <a name="arguments"></a>引數
 
-*login_name* 指定建立的登入名稱。 有四種登入：SQL Server 登入、Windows 登入、憑證對應登入和非對稱金鑰對應登入。 當您建立從 Windows 網域帳戶對應的登入時，對於 Windows 2000 之前版本的使用者登入名稱，您必須使用 [\<domainName>\\<login_name>] 格式。 您無法使用 login_name@DomainName 格式的 UPN。 如需範例，請參閱本文稍後的範例 D。 驗證登入屬於 **sysname** 類型、必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則，而且不得包含 ' **\\** '。 Windows 登入可以包含 ' **\\** '。 以 Active Directory 使用者為基礎的登入，其名稱僅限 21 個字元以內。
+*login_name* 指定建立的登入名稱。 有四種登入：SQL Server 登入、Windows 登入、憑證對應登入和非對稱金鑰對應登入。 當建立從 Windows 網域帳戶對應的登入時，對於 Windows 2000 之前版本的使用者登入名稱，您必須使用 [\<domainName>\\<登入名稱>] 格式。 您無法使用 login_name@DomainName 格式的 UPN。 如需範例，請參閱本文稍後的範例 D。 驗證登入屬於 **sysname** 類型、必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則，而且不得包含 ' **\\** '。 Windows 登入可以包含 ' **\\** '。 以 Active Directory 使用者為基礎的登入，其名稱僅限 21 個字元以內。
 
 ASSWORD **=** '*password*' 僅適用於 SQL Server 登入。 指定要建立的登入密碼。 請使用增強式密碼。 如需詳細資訊，請參閱[強式密碼](../../relational-databases/security/strong-passwords.md)和[密碼原則](../../relational-databases/security/password-policy.md)。 從 SQL Server 2012 (11.x) 開始，預存密碼資訊會使用加料式 (Salted) 密碼的 SHA-512 加以計算。
 
@@ -316,7 +316,7 @@ SID = *sid* 用來重新建立登入。 僅適用於 SQL Server 驗證登入，�
 
 在 SQL Database 中，必須連線至 master 資料庫以適當的權限建立登入。 如需詳細資訊，請參閱[建立其他登入和具有系統管理權限的使用者](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#create-additional-logins-and-users-having-administrative-permissions) (機器翻譯)。
 
-SQL Server 規則可讓您建立 \<loginname>@\<servername> 格式的 SQL Server 驗證登入。 如果您的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 伺服器是 **myazureserver**，而您的登入是 **myemail@live.com** ，則必須以 **myemail@live.com@myazureserver** 提供登入。
+SQL Server 規則可供建立 \<loginname>@\<servername> 格式的 SQL Server 驗證登入。 如果您的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 伺服器是 **myazureserver**，而您的登入是 **myemail@live.com** ，則必須以 **myemail@live.com@myazureserver** 提供登入。
 
 在 SQL Database 中，驗證連線需要登入資料，且伺服器層級防火牆規則會暫時快取在每個資料庫中。 此快取會定期重新整理。 若要重新整理驗證快取，並確定資料庫擁有登入資料表的最新版本，請執行 [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。
 
@@ -457,6 +457,12 @@ SID **=** *sid* 用來重新建立登入。 僅適用於 SQL Server 驗證登入
   - EXECUTE AS USER
   - EXECUTE AS LOGIN
 - 從另一個 Azure AD 目錄匯入的外部 (來賓) 使用者，無法直接設定為受控執行個體的 Azure AD 系統管理員。 反之，請將外部使用者加入已啟用 Azure AD 安全性的群組，並將該群組設定為執行個體系統管理員。
+- 登入不會複寫至容錯移轉群組中的次要執行個體。 登入會儲存在主要資料庫 (也就是系統資料庫) 中，因此不會進行異地複寫。 若要解決此問題，使用者必須在次要執行個體上使用相同的 SID 來建立登入。
+
+```SQL
+-- Code to create login on the secondary instance
+CREATE LOGIN foo WITH PASSWORD = '<enterStrongPasswordHere>', SID = <login_sid>;
+```
 
 ## <a name="examples"></a>範例
 
@@ -597,7 +603,7 @@ PASSWORD **='** password* *'* 指定要建立的 SQL 登入密碼。 請使用�
 
 若要建立登入，您必須連接至 master 資料庫。
 
-SQL Server 規則可讓您建立 \<loginname>@\<servername> 格式的 SQL Server 驗證登入。 如果您的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 伺服器是 **myazureserver**，而您的登入是 **myemail@live.com** ，則必須以 **myemail@live.com@myazureserver** 提供登入。
+SQL Server 規則可供建立 \<loginname>@\<servername> 格式的 SQL Server 驗證登入。 如果您的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 伺服器是 **myazureserver**，而您的登入是 **myemail@live.com** ，則必須以 **myemail@live.com@myazureserver** 提供登入。
 
 驗證連線所需的登入資料，以及伺服器層級防火牆規則，會暫時快取在每個資料庫中。 此快取會定期重新整理。 若要重新整理驗證快取，並確定資料庫擁有登入資料表的最新版本，請執行 [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。
 
@@ -690,7 +696,7 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
 
 ## <a name="arguments"></a>引數
 
-*login_name* 指定建立的登入名稱。 有四種登入：SQL Server 登入、Windows 登入、憑證對應登入和非對稱金鑰對應登入。 當您建立從 Windows 網域帳戶對應的登入時，對於 Windows 2000 之前版本的使用者登入名稱，您必須使用 [\<domainName>\\<login_name>] 格式。 您無法使用 login_name@DomainName 格式的 UPN。 如需範例，請參閱本文稍後的範例 D。 驗證登入屬於 **sysname** 類型、必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則，而且不得包含 ' **\\** '。 Windows 登入可以包含 ' **\\** '。 以 Active Directory 使用者為基礎的登入，其名稱僅限 21 個字元以內。
+*login_name* 指定建立的登入名稱。 有四種登入：SQL Server 登入、Windows 登入、憑證對應登入和非對稱金鑰對應登入。 當建立從 Windows 網域帳戶對應的登入時，對於 Windows 2000 之前版本的使用者登入名稱，您必須使用 [\<domainName>\\<登入名稱>] 格式。 您無法使用 login_name@DomainName 格式的 UPN。 如需範例，請參閱本文稍後的範例 D。 驗證登入屬於 **sysname** 類型、必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則，而且不得包含 ' **\\** '。 Windows 登入可以包含 ' **\\** '。 以 Active Directory 使用者為基礎的登入，其名稱僅限 21 個字元以內。
 
 ASSWORD **='** _password_' 僅適用於 SQL Server 登入。 指定要建立的登入密碼。 請使用增強式密碼。 如需詳細資訊，請參閱[強式密碼](../../relational-databases/security/strong-passwords.md)和[密碼原則](../../relational-databases/security/password-policy.md)。 從 SQL Server 2012 (11.x) 開始，預存密碼資訊會使用加料式 (Salted) 密碼的 SHA-512 加以計算。
 

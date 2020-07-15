@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 826f513e-9ad0-46b9-87ad-7525713638c8
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: db85df99a2b37e2d92997dce579d77d0f31f7c0e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5a8dc7b925b493dda94257e65d21508a1543959e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68082283"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897056"
 ---
 # <a name="revoke-endpoint-permissions-transact-sql"></a>REVOKE 端點權限 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   撤銷授與或拒絕的端點權限。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "68082283"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]   
     ON ENDPOINT :: endpoint_name  

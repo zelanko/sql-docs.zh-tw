@@ -24,15 +24,15 @@ ms.assetid: df74fc36-20da-4efa-b412-c4e191786695
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 365abc8df7c64650e3be6c79bcd00725149ec25d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9fe651c706bcbe41ea688d0f9e661ff483a70d72
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68117304"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001494"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   在目前資料庫中建立結構描述。 CREATE SCHEMA 異動也可在新結構描述中建立資料表與檢視，以及設定這些物件的 GRANT、DENY 或 REVOKE 權限。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68117304"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 CREATE SCHEMA schema_name_clause [ <schema_element> [ ...n ] ]  
@@ -59,7 +59,7 @@ CREATE SCHEMA schema_name_clause [ <schema_element> [ ...n ] ]
     }  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]  
@@ -123,7 +123,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
  必須有這個行為，才能允許基於 Windows 群組的使用者建立和擁有物件。 不過，它可能會導致意外建立結構描述和使用者。 為了避免隱含建立使用者和結構描述，請盡可能地明確建立資料庫主體並指派預設結構描述。 或者當在資料庫中建立物件時，使用二或三部份的物件名稱，明確指定現有的結構描述。  
 
 > [!NOTE]
->  無法在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上隱含建立 Azure Active Directory 使用者。 由於從外部提供者建立 Azure AD 使用者必須檢查使用者在 AAD 中的狀態，因此建立使用者將會失敗，並傳回錯誤 2760：**指定的結構描述名稱 "\<user_name@domain>" 不存在或是您無權使用它。** 以及錯誤 2759：**CREATE SCHEMA 由於先前的錯誤而失敗。** 若要解決這些錯誤，請先從外部提供者建立 Azure AD 使用者，再重新執行建立物件的陳述式。
+>  無法在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上隱含建立 Azure Active Directory 使用者。 由於從外部提供者建立 Azure AD 使用者必須檢查使用者在 AAD 中的狀態，因此建立使用者將會失敗，並傳回錯誤 2760：**指定的結構描述名稱 "\<user_name@domain>" 不存在，或您沒有使用它的權限。** 以及錯誤 2759：**CREATE SCHEMA 由於先前的錯誤而失敗。** 若要解決這些錯誤，請先從外部提供者建立 Azure AD 使用者，再重新執行建立物件的陳述式。
  
   
 ## <a name="deprecation-notice"></a>取代通知  
@@ -161,7 +161,7 @@ GO
   
 ```  
 CREATE SCHEMA Sales;  
-GO;  
+GO
   
 CREATE TABLE Sales.Region   
 (Region_id int NOT NULL,  

@@ -1,5 +1,6 @@
 ---
 title: 資料庫屬性 (檔案頁面) | Microsoft 文件
+description: 了解如何在 SQL Server Management Studio 中檢視或修改資料庫的屬性，以及如何建立新的資料庫。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -12,18 +13,18 @@ f1_keywords:
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f3c0493192381bc3dedbf23ab1e01c0142e88be4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0ddd5b76d37f170ed195c6b08f6debcb0f032e77
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099613"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756179"
 ---
 # <a name="database-properties-files-page"></a>資料庫屬性 (檔案頁面)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  使用此頁面來建立新的資料庫，或者檢視或修改選取之資料庫的屬性。 此主題適用於現有資料庫的 [資料庫屬性 (檔案頁面)]  ，以及 [新增資料庫 (一般頁面)]  。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  使用此頁面來建立新的資料庫，或者檢視或修改選取之資料庫的屬性。 此主題適用於現有資料庫的 [資料庫屬性 (檔案頁面)]，以及 [新增資料庫 (一般頁面)]。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  **資料庫名稱**  
  加入或顯示資料庫的名稱。  
   
@@ -42,14 +43,14 @@ ms.locfileid: "68099613"
  **檔案類型**  
  從清單中選取檔案類型。 檔案類型可以是 **[資料]** 、 **[記錄檔]** 或 **[FILESTREAM 資料]** 。 您無法修改現有檔案的檔案類型。  
   
- 如果您要將檔案 (容器) 加入至記憶體最佳化檔案群組，請選取 [FILESTREAM 資料]  。  
+ 如果您要將檔案 (容器) 加入至記憶體最佳化檔案群組，請選取 [FILESTREAM 資料]。  
   
  若要將檔案 (容器) 加入至 Filestream 資料檔案群組，就必須啟用 FILESTREAM。 您可以使用 [[伺服器屬性 (進階頁面)]](../../database-engine/configure-windows/server-properties-advanced-page.md) 對話方塊來啟用 FILESTREAM。  
   
  **檔案群組**  
- 從清單中選取檔案的檔案群組。 依預設，此檔案群組為 PRIMARY。 您可以選取 [\<新增檔案群組>]，並在 [新增檔案群組] 對話方塊中輸入有關檔案群組的資訊，以建立新的檔案群組。 新的檔案群組亦可在 **[檔案群組]** 頁面上建立。 您無法修改現有檔案的檔案群組。  
+ 從清單中選取檔案的檔案群組。 依預設，此檔案群組為 PRIMARY。 您可選取 [\<new filegroup>]，並在 [新增檔案群組] 對話方塊中輸入有關檔案群組的資訊，以建立新的檔案群組。 新的檔案群組亦可在 **[檔案群組]** 頁面上建立。 您無法修改現有檔案的檔案群組。  
   
- 將檔案 (容器) 加入至記憶體最佳化檔案群組時，[檔案群組]  欄位會填入資料庫之記憶體最佳化檔案群組的名稱。  
+ 將檔案 (容器) 加入至記憶體最佳化檔案群組時，[檔案群組] 欄位會填入資料庫之記憶體最佳化檔案群組的名稱。  
   
  **初始大小**  
  輸入或修改檔案的初始大小 (以 MB 表示)。 依預設，這是 **[model]** 資料庫的值。  
@@ -63,7 +64,7 @@ ms.locfileid: "68099613"
   
  這個欄位對於 FILESTREAM 檔案無效。  
   
- 若為記憶體最佳化檔案群組中的檔案，此欄位應該是 [無限制]  。  
+ 若為記憶體最佳化檔案群組中的檔案，此欄位應該是 [無限制]。  
   
  **路徑**  
  顯示選取之檔案的路徑。 若要指定新檔案的路徑，請按一下該檔案路徑旁的 [編輯] 按鈕，並導覽到目的資料夾。 您無法修改現有檔案的路徑。  

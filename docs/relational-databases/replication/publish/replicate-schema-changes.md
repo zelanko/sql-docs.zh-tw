@@ -1,5 +1,6 @@
 ---
 title: 複寫結構描述變更 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 在 SQL Server 中複寫結構描述變更。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: c09007f0-9374-4f60-956b-8a87670cd043
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 956ce42f5fc4d9d367e496b4ff3f22f0c6ee24da
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e81c7b72962f02f9179bf458b84a1cd9dac9e411
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287575"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807231"
 ---
 # <a name="replicate-schema-changes"></a>複寫結構描述變更
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "76287575"
   
 -   **若要複寫結構描述變更，請使用：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -56,11 +57,11 @@ ms.locfileid: "76287575"
 -   ALTER TABLE ...DROP COLUMN 陳述式一定會複寫至訂閱包含要卸除之資料行的所有「訂閱者」，即使您停用結構描述變更的複寫也是如此。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 如果您不想複寫發行集的結構描述變更，請在 [發行集屬性 - \<發行集>]  對話方塊中停用結構描述變更的複寫。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。  
+ 如果您不想複寫發行集的結構描述變更，請在 [發行集屬性 - \<發行集>] 對話方塊中停用結構描述變更的複寫。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。  
   
 #### <a name="to-disable-replication-of-schema-changes"></a>若要停用結構描述變更的複寫  
   
-1.  在 [發行集屬性 - \<發行集>]  對話方塊的 [訂閱選項]  頁面上，將 [複寫結構描述變更]  屬性的值設定為 [False]  。  
+1.  在 [發行集屬性 - \<發行集>] 對話方塊的 [訂閱選項] 頁面上，將 [複寫結構描述變更] 屬性的值設定為 [False]。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 

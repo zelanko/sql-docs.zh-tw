@@ -1,5 +1,6 @@
 ---
 title: 複寫快照集代理程式 | Microsoft Docs
+description: 在 SQL Server 中，複寫快照集代理程式會準備快照集檔案、將這些檔案儲存在資料夾中，以及記錄散發資料庫中的同步處理作業。
 ms.custom: ''
 ms.date: 10/29/2018
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 3c48422e86cfd3f42e6634a3ca3be1d0dbc85f24
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 7132154bcb61e84d052891c200589cf157b31f65
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528482"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730224"
 ---
 # <a name="replication-snapshot-agent"></a>複寫快照集代理程式
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/applies-to-version/sql-asdb.md)]
   「複寫快照集代理程式」是一個可執行檔，它會準備包含已發行資料表與資料庫物件之結構描述及資料的快照集檔案、將這些檔案儲存在快照集資料夾內，然後記錄散發資料庫中的同步處理作業。  
   
 > [!NOTE]  
@@ -142,7 +143,7 @@ snapshot [ -?]
  如需詳細資訊，請參閱[檢視及修改複寫安全性設定](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)。  
   
  **-FieldDelimiter** _field_delimiter_  
- 這是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大量複製資料檔案中標示欄位結尾的字元或字元序列。 預設值是 \n\<x$3>\n。  
+ 這是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大量複製資料檔案中標示欄位結尾的字元或字元序列。 預設為 \n\<x$3>\n。  
   
  **-HistoryVerboseLevel** [ **1**| **2**| **3**]  
  指定在快照集作業期間記錄的記錄量。 您可以透過選取 **1**，盡量減少記錄作業對效能造成的影響。  
@@ -176,7 +177,7 @@ snapshot [ -?]
  這是將「正在等候後端訊息」記錄至 [MSsnapshot_history](../../../relational-databases/system-tables/mssnapshot-history-transact-sql.md) 資料表之前，快照集代理程式等候的時間量 (以秒為單位)。 預設值為 300 秒。  
   
  **-LoginTimeOut** _login_time_out_seconds_  
- 這是登入逾時之前的秒數。  預設值為 15 秒。  
+ 這是登入逾時之前的秒數。 預設值為 15 秒。  
   
  **-MaxBcpThreads** _number_of_threads_  
  指定可用平行方式執行的大量複製作業數目。 同時存在之執行緒和 ODBC 連接的最大數目是 **MaxBcpThreads** 或散發資料庫之同步處理交易中顯示的大量複製要求數目的較小者。 **MaxBcpThreads** 必須具有大於 **0** 的值而且沒有硬式編碼的上限。 預設值為處理器數目的兩倍。  
@@ -247,7 +248,7 @@ snapshot [ -?]
  指定複寫的類型。 值為 **1** 表示異動複寫，而值為 **2** 則表示合併式複寫。  
   
  **-RowDelimiter** _row_delimiter_  
- 這是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大量複製資料檔案中標示資料列結尾的字元或字元序列。 預設值是 \n\<,@g>\n。  
+ 這是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大量複製資料檔案中標示資料列結尾的字元或字元序列。 預設為 \n\<,@g>\n。  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
  這是當執行中並行動態快照集處理序數目到達 [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 的 `@max_concurrent_dynamic_snapshots` 屬性所設定限制時，快照集代理程式等候的最大秒數。 如果已到達最大秒數而且快照集代理程式仍然等候中，它就會結束。 值為 0 表示代理程式會永遠等候，不過您可以取消它。  

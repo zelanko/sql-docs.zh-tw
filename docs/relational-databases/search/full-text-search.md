@@ -12,15 +12,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 81a3e6268b74c6aeb4a3fc7ea7c492133abf372d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 87924fccd112be6090d24e64826c72b79381e062
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72930276"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091748"
 ---
 # <a name="full-text-search"></a>全文檢索搜尋
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 中的全文檢索搜尋可讓使用者和應用程式針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中以字元為主的資料，執行全文檢索查詢。
   
@@ -149,7 +149,7 @@ ms.locfileid: "72930276"
   
  從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]開始，全文檢索索引會與 Database Engine 整合在一起，而非位於檔案系統中，如同舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在新的資料庫中，全文檢索目錄現在是不屬於任何檔案群組的虛擬物件。它只是參考一組全文檢索索引的邏輯概念。 不過，請注意，在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫 (含有資料檔案的任何全文檢索目錄) 的升級期間，系統會建立新的檔案群組。如需詳細資訊，請參閱 [升級全文檢索搜尋](../../relational-databases/search/upgrade-full-text-search.md)。  
   
-每個資料表只允許有一個全文檢索索引。 若要對資料表建立全文檢索索引，該資料表必須有單一的非 Null 唯一資料行。 您可以針對 **char**、 **varchar**、 **nchar**、 **nvarchar**、 **text**、 **ntext**、 **image**、 **xml**、 **varbinary**和 **varbinary(max)** 類型的資料行建立全文檢索索引，並且建立全文檢索搜尋的索引。 針對資料類型為 **varbinary**、**varbinary(max)** 、**image** 或 **xml** 的資料行建立全文檢索索引會要求您指定類型資料行。 「類型資料行」  是一個資料表資料行，您可以在每個資料列中儲存文件的副檔名 (.doc、.pdf 與 .xls 等)。  
+每個資料表只允許有一個全文檢索索引。 若要對資料表建立全文檢索索引，該資料表必須有單一的非 Null 唯一資料行。 您可以針對 **char**、 **varchar**、 **nchar**、 **nvarchar**、 **text**、 **ntext**、 **image**、 **xml**、 **varbinary**和 **varbinary(max)** 類型的資料行建立全文檢索索引，並且建立全文檢索搜尋的索引。 針對資料類型為 **varbinary**、**varbinary(max)** 、**image** 或 **xml** 的資料行建立全文檢索索引會要求您指定類型資料行。 「類型資料行」是一個資料表資料行，您可以在每個資料列中儲存文件的副檔名 (.doc、.pdf 與 .xls 等)。  
 
 ###  <a name="full-text-index-structure"></a><a name="structure"></a> 全文檢索索引結構  
  若能充分了解全文檢索索引的結構，將有助於了解全文檢索引擎的運作方式。 本主題會使用下列 **之** Document [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 資料表的摘錄當做範例資料表。 這個摘錄只會顯示該資料表中的兩個資料行 ( **DocumentID** 資料行和 **Title** 資料行) 和三個資料列。  
@@ -211,7 +211,7 @@ ms.locfileid: "72930276"
 |Rear|1|3|1|  
 |Reflector|1|3|2|  
   
- 如片段 2 所示，全文檢索查詢必須在內部查詢每個片段並捨棄較舊的項目。 因此，如果全文檢索索引包含過多全文檢索索引片段，可能會導致查詢效能大幅降低。 若要減少片段的數目，請使用 [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的 REORGANIZE 選項來重新組織全文檢索目錄。 這個陳述式會執行「主要合併」  ，將片段合併成較大的單一片段，然後從全文檢索索引中移除所有已過時的項目。  
+ 如片段 2 所示，全文檢索查詢必須在內部查詢每個片段並捨棄較舊的項目。 因此，如果全文檢索索引包含過多全文檢索索引片段，可能會導致查詢效能大幅降低。 若要減少片段的數目，請使用 [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的 REORGANIZE 選項來重新組織全文檢索目錄。 這個陳述式會執行「主要合併」，將片段合併成較大的單一片段，然後從全文檢索索引中移除所有已過時的項目。  
   
  重新組織之後，範例索引就會包含下列資料列：  
   
@@ -235,7 +235,7 @@ ms.locfileid: "72930276"
 |全文檢索索引|一般 SQL Server 索引|  
 |------------------------|--------------------------------|  
 |每個資料表只允許有一個全文檢索索引。|每個資料表允許有多個一般索引。|  
-|將資料加入至全文檢索索引的作業稱為「母體擴展」  (Population)，可透過排程或特定的要求來要求執行，也可在加入新的資料時自動執行。|當依據的資料有插入、更新或刪除時，會自動更新索引內容。|  
+|將資料加入至全文檢索索引的作業稱為「母體擴展」(Population)，可透過排程或特定的要求來要求執行，也可在加入新的資料時自動執行。|當依據的資料有插入、更新或刪除時，會自動更新索引內容。|  
 |在相同的資料庫中分組為一個或多個全文檢索目錄。|沒有分組。|  
 
 ##  <a name="full-text-search-linguistic-components-and-language-support"></a><a name="components"></a> 全文檢索搜尋語言元件和語言支援
@@ -254,4 +254,3 @@ ms.locfileid: "72930276"
  斷詞工具 (和字幹分析器) 與篩選會在篩選背景程式主機處理序 (fdhost.exe) 中執行。  
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-

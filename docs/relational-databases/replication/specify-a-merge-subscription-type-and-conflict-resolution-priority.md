@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 2b828d83-2341-4924-b92a-4f81a22246c0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a988935a1d0a614f1b7b336cc95ed82ce2a36214
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2981f84bd2cbf6c813a4adf761ddd271c8b68fd1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321735"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737053"
 ---
 # <a name="specify-a-merge-subscription-type-and-conflict-resolution-priority"></a>指定合併訂閱類型和衝突解決方法優先權
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   在「新增訂閱精靈」的 **[訂閱類型]** 頁面中指定合併訂閱類型和衝突解決優先權。 如需使用此精靈的詳細資訊，請參閱＜ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md) ＞和＜ [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)＞。  
   
- 訂閱建立後便無法修改其類型，但可以在 [訂閱屬性 - \<發行者>: \<發行集資料庫>] 對話方塊中修改伺服器訂閱類型的優先權。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Push Subscription Properties](../../relational-databases/replication/view-and-modify-push-subscription-properties.md) ＞與＜ [View and Modify Pull Subscription Properties](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)＞。  
+ 訂閱建立後即無法修改其類型，但可在 [訂閱屬性 - \<Publisher> \<PublicationDatabase>] 對話方塊中修改伺服器訂閱類型的優先權。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Push Subscription Properties](../../relational-databases/replication/view-and-modify-push-subscription-properties.md) ＞與＜ [View and Modify Pull Subscription Properties](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)＞。  
   
 ### <a name="to-specify-a-merge-subscription-type-and-conflict-resolution-priority"></a>若要指定合併訂閱類型與衝突解決優先權  
   
@@ -35,7 +35,7 @@ ms.locfileid: "75321735"
   
 ### <a name="to-modify-the-conflict-resolution-priority"></a>若要修改衝突解決優先權  
   
-1.  在發行者端的 [訂閱屬性 - \<發行者>: \<發行集資料庫>] 中輸入 [優先權] 選項的值 (0.00 到 99.99)。  
+1.  在發行者端的 [訂閱屬性 - \<Publisher> \<PublicationDatabase>] 中，輸入 [優先權] 選項的值 (0.00 到 99.99)。  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

@@ -1,5 +1,6 @@
 ---
 title: 發行資料和資料庫物件 | Microsoft Docs
+description: 本文摘要說明可在 SQL Server 中發佈，以進行複寫的資料表與其他資料庫物件。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -42,12 +43,12 @@ ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5db7d4d73c4d6c03ce31935a9eb874bdd605fa99
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 89f88671ec51fedbfd075d82685892378fb5e840
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287605"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807302"
 ---
 # <a name="publish-data-and-database-objects"></a>發行資料和資料庫物件
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -182,7 +183,7 @@ ms.locfileid: "76287605"
   
 -   針對使用字元模式快照集之發行集內的發行項 (用於非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者和 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 訂閱者)：依預設，會將擁有者保留空白。 擁有者預設為與散發代理程式或合併代理程式用於連接到訂閱者之帳戶相關聯的擁有者。  
   
- 物件擁有者可以透過 **[發行項屬性 -\<** <發行項>  **>]** 對話方塊和透過下列預存程序變更︰**sp_addarticle**、**sp_addmergearticle**、**sp_changearticle** 和 **sp_changemergearticle**。 如需詳細資訊，請參閱[檢視和修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)、[定義發行項](../../../relational-databases/replication/publish/define-an-article.md)和[檢視和修改發行項屬性](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)。  
+ 物件擁有者可以透過 **[發行項屬性 -\<** <發行項> **>]** 對話方塊和透過下列預存程序變更︰**sp_addarticle**、**sp_addmergearticle**、**sp_changearticle** 和 **sp_changemergearticle**。 如需詳細資訊，請參閱[檢視和修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)、[定義發行項](../../../relational-databases/replication/publish/define-an-article.md)和[檢視和修改發行項屬性](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)。  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>將資料發行給執行舊版 SQL Server 的訂閱者  
   

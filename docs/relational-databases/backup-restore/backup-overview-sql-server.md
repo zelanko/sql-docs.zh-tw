@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6cae13ac9137a7c7f47e9574367115d6133338be
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: d13429793a2dcab0247042fcac49ee03174527ac
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220491"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834799"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主題介紹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份元件。 備份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫對於保護資料非常重要。 此討論涵蓋備份類型和備份限制。 本主題同時介紹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份裝置和備份媒體。  
   
   
@@ -61,7 +61,7 @@ ms.locfileid: "82220491"
  資料庫的備份。 完整資料庫備份代表備份完成時的整個資料庫。 差異資料庫備份僅包含自其最近的完整資料庫備份以來，對資料庫所做的變更。  
   
  **[差異備份](../../relational-databases/backup-restore/full-database-backups-sql-server.md)**  
- 一種資料備份，是以整個或部分資料庫或一組資料檔案或檔案群組 (「差異基底」  ) 的最新完整備份為基礎，而且只包含自差異基底以來變更的資料範圍。  
+ 一種資料備份，是以整個或部分資料庫或一組資料檔案或檔案群組 (「差異基底」) 的最新完整備份為基礎，而且只包含自差異基底以來變更的資料範圍。  
   
  差異部分備份僅記錄自上一次部分備份後在檔案群組中變更過的資料範圍，稱為差異基底。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "82220491"
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 和更新版本支援壓縮備份，而 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本可以還原壓縮的備份。 如需詳細資訊，請參閱[備份壓縮 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md)。  
   
 ##  <a name="backup-operations-restrictions"></a><a name="Restrictions"></a>  備份作業限制 
- 可在資料庫仍在線上運作以及正在使用中的時候進行備份。 不過，會有下列限制：  
+ 可在資料庫仍在線上運作以及正在使用中的時候進行備份。 然而，會有下列限制：  
   
 ### <a name="cannot-back-up-offline-data"></a>無法備份離線資料  
  隱含或明確參考離線資料的任何備份作業都會失敗。 一些典型的例子如下：  
@@ -155,7 +155,7 @@ ms.locfileid: "82220491"
  **建立備份**  
   
 > [!NOTE]  
->  如果是部分備份或只複製備份，就必須分別搭配 PARTIAL 或 COPY_ONLY 選項來使用 [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) 陳述式。  
+>  針對部分備份或只複製備份，則必須分別搭配 PARTIAL 或 COPY_ONLY 選項來使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) 陳述式。  
   
 -   [建立完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   

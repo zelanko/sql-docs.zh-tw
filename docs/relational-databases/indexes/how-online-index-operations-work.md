@@ -18,15 +18,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: database-engine, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2dd4970cc25e382706f63ed94b7bcc3700549d9f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a61295dcadd884f2b54d23bd74dfee66cd866dc4
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67909748"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812643"
 ---
 # <a name="how-online-index-operations-work"></a>線上索引作業如何運作
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   此主題定義線上索引作業期間存在的結構，以及顯示有關這些結構的活動。  
   
@@ -65,12 +65,14 @@ ms.locfileid: "67909748"
 |Build<br /><br /> 主要階段|在大量載入作業中，資料會被掃描、排序、合併且插入目標。<br /><br /> 並行使用者的選取、插入、更新和刪除作業，會同時套用到預先存在的索引和任何建立的新索引。|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
 |完成<br /><br /> 短期階段|所有無法認可的更新交易必須在此階段開始之前完成。 根據所取得的鎖定，所有新的使用者讀取或寫入交易會短時間封鎖，直到此階段完成為止。<br /><br /> 系統中繼資料會更新，以目標取代來源。<br /><br /> 如果需要來源，會卸除來源。 例如，在重建或卸除叢集索引之後。|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> 如果正在建立非叢集索引，資料表上是 S。\*<br /><br /> 如果卸除任何來源結構 (索引或資料表)，則是 SCH-M (結構描述修改)。\*|  
   
- \* 索引作業會等待任何未認可的更新交易先完成，然後才取得資料表的 S 鎖定或 SCH-M 鎖定。  
+ \* 索引作業會等待任何未認可的更新交易先完成，然後才取得資料表的 S 鎖定或 SCH-M 鎖定。 如果正在進行長時間執行的查詢，則線上索引作業會等到查詢完成為止。
   
  ** 當索引作業正在處理時，資源鎖定 INDEX_BUILD_INTERNAL_RESOURCE 可預防執行來源上的並行資料定義語言 (DDL) 作業和預先存在的結構。 例如，此鎖定可預防在相同資料表上同時重建兩個索引。 雖然此種資源鎖定與 SCH-M 鎖定相關，但無法預防資料管理陳述式。  
   
  上表顯示在牽涉單一索引的線上索引作業建立階段期間所獲得的單一共用 (S) 鎖定。 建立或重建叢集和非叢集索引時，在單一線上索引作業中 (例如在包含一個或多個非叢集索引的資料表上建立初始叢集索引期間)，建立階段期間會先獲得兩個短時間的 S 鎖定，然後是長時間的意圖共用 (IS) 鎖定。 建立叢集索引會先獲得一個 S 鎖定，然後建立叢集索引完成時，就會獲得第二個短時間的 S 鎖定，以建立非叢集索引。 建立非叢集索引之後，S 鎖定就會降級為 IS 鎖定，直到線上索引作業的完成階段為止。  
-  
+
+如需如何使用鎖定以及如何管理鎖定的詳細資訊，請參閱 [引數](../../t-sql/statements/alter-table-index-option-transact-sql.md#arguments)。
+
 ### <a name="target-structure-activities"></a>目標結構活動  
  下表列出索引作業每個階段中，與目標結構有關的活動，以及對應的鎖定策略。  
   
@@ -91,4 +93,6 @@ ms.locfileid: "67909748"
   
  [線上索引作業的指導方針](../../relational-databases/indexes/guidelines-for-online-index-operations.md)  
   
-  
+## <a name="next-steps"></a>後續步驟
+
+[ALTER TABLE 索引選項](../../t-sql/statements/alter-table-index-option-transact-sql.md#arguments)

@@ -21,21 +21,23 @@ helpviewer_keywords:
 - messages [SQL Server], stored procedure where occurred
 - errors [SQL Server], trigger where occurred
 ms.assetid: b81edbf0-856a-498f-ba87-48ff1426d980
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75e3664517ac0ce66f2a56499286303df81513ab
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 087e1cad75702da5b1077fcfaee2ec283074c1e9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68094685"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999072"
 ---
 # <a name="error_procedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]  
 
-此函式會在發生錯誤且該錯誤造成執行 TRY...CATCH 建構的 CATCH 區塊時，傳回預存程序或觸發程序的名稱。  
-  
+此函式會在發生錯誤且該錯誤造成執行 TRY...CATCH 建構的 CATCH 區塊時，傳回預存程序或觸發程序的名稱。 
+- SQL Server 2017 到[目前的版本](../../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15)會傳回 schema_name.stored_procedure_name
+- SQL Server 2016 會傳回 stored_procedure_name
+
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  

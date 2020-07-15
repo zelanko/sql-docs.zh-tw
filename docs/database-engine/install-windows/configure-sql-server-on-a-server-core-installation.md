@@ -1,5 +1,6 @@
 ---
 title: 設定 Server Core 安裝
+description: 本文涵蓋有關在 Server Core 安裝上設定 SQL Server 的詳細資料，包括疑難排解工具。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -13,16 +14,16 @@ ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ce38e546aa77e375d65a9f95f708718d283a53b0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1791807519f8e7a6fb47c8ec838f7f9da112a3ed
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251601"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883261"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>在 Server Core 安裝上設定 SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 本文涵蓋在 Server Core 安裝上設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的詳細資料。  
 
@@ -39,7 +40,7 @@ ms.locfileid: "75251601"
   
 - [在 Server Core 伺服器 Windows Server 2012 R2 上安裝伺服器角色和功能](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx)
   
-- [Managing a Server Core installation: Overview](https://go.microsoft.com/fwlink/?LinkId=245962)  
+- [Managing a Server Core installation:Overview](https://go.microsoft.com/fwlink/?LinkId=245962) (管理 Server Core 安裝：概觀)  
   
 - [Administering a Server Core installation](https://go.microsoft.com/fwlink/?LinkId=245963)
   
@@ -99,17 +100,17 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine /INSTANCENAME=MSSQLSERVER /SQL
 ### <a name="using-ssnoversion-configuration-manager-remotely"></a>在遠端使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員  
 這些步驟要在執行用戶端版的 Windows 電腦或已安裝伺服器圖形化介面的 Windows Server 上執行。  
   
-1. 開啟 [電腦管理]  。 若要開啟 [電腦管理]  ，請按一下 [開始]  ，鍵入 `compmgmt.msc`，然後按一下 [確定]  。    
+1. 開啟 [電腦管理]。 若要開啟 [電腦管理]，請按一下 [開始]，鍵入 `compmgmt.msc`，然後按一下 [確定]。    
   
-2. 在主控台樹狀目錄中，以滑鼠右鍵按一下 [電腦管理]  ，然後按一下 [連線到另一部電腦]  。  
+2. 在主控台樹狀目錄中，以滑鼠右鍵按一下 [電腦管理]，然後按一下 [連線到另一部電腦]。  
   
-3. 在 [選取電腦]  對話方塊中，鍵入要管理的 Server Core 電腦名稱，或按一下 [瀏覽]  尋找此電腦，然後按一下 [確定]  。  
+3. 在 [選取電腦] 對話方塊中，鍵入要管理的 Server Core 電腦名稱，或按一下 [瀏覽] 尋找此電腦，然後按一下 [確定]。  
   
-4. 在主控台樹狀目錄中，於 Server Core 電腦的 [電腦管理]  底下按一下 [服務與應用程式]  。  
+4. 在主控台樹狀目錄中，於 Server Core 電腦的 [電腦管理] 底下按一下 [服務與應用程式]。  
   
 5. 按兩下 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員]。  
   
-6. 在 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員**中，按一下 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務]，以滑鼠右鍵按一下 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (\<執行個體名稱>)，這裡的 \<執行個體名稱> 是您想要啟用 AlwaysOn 可用性群組的本機伺服器執行個體名稱，然後按一下 [屬性]。  
+6. 在 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager** 中，按一下 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務]，以滑鼠右鍵按一下 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (\<instance name>)，其中的 \<instance name> 是您想要啟用 Always On 可用性群組的本機伺服器執行個體名稱，然後按一下 [屬性]。  
   
 7. 選取 **[AlwaysOn 高可用性]** 索引標籤。  
   
@@ -177,9 +178,9 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
 ### <a name="enable-tcpip-on-the-instance-of-ssnoversion"></a>在執行個體上啟用 TCP/IP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  您可以針對 Server Core 上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，透過 Windows PowerShell 啟用 TCP/IP 通訊協定。 請遵循下列步驟：  
   
-1.  在執行 Windows Server Core 的電腦上，啟動 [工作管理員]  。  
+1.  在執行 Windows Server Core 的電腦上，啟動 [工作管理員]。  
   
-2.  在 [應用程式]  索引標籤上，按一下 [新工作]  。  
+2.  在 [應用程式] 索引標籤上，按一下 [新工作]。  
   
 3.  在 [建立新工作] 對話方塊的 [開啟] 欄位中輸入 **sqlps.exe**，然後按一下 [確定]。 隨即開啟 [**Microsoft[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell**] 視窗。  
   
@@ -215,17 +216,17 @@ $Tcp
 |[dtexec 公用程式](../../integration-services/packages/dtexec-utility.md)|用以設定及執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  
 |[dtutil 公用程式](../../integration-services/dtutil-utility.md)|用來管理 SSIS 封裝。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  
 |[osql 公用程式](../../tools/osql-utility.md)|可讓您在命令提示字元之下，輸入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、系統程序和指令碼檔案。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[sqlagent90 應用程式](../../tools/sqlagent90-application.md)|用來從命令提示字元啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent。|\<磁碟機>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<執行個體名稱  >\MSSQL\Binn|  
+|[sqlagent90 應用程式](../../tools/sqlagent90-application.md)|用來從命令提示字元啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent。|\<drive>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<*執行個體名稱*>\MSSQL\Binn|  
 |[sqlcmd 公用程式](../../tools/sqlcmd-utility.md)|可讓您在命令提示字元之下，輸入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、系統程序和指令碼檔案。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[SQLdiag 公用程式](../../tools/sqldiag-utility.md)|用以收集可供 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客戶服務與支援部門使用的診斷資訊。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[sqlmaint 公用程式](../../tools/sqlmaint-utility.md)|用來執行舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所建立的資料庫維護計畫。|\<磁碟機>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.MSSQLSERVER\MSSQL\Binn|  
+|[sqlmaint 公用程式](../../tools/sqlmaint-utility.md)|用來執行舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所建立的資料庫維護計畫。|\<drive>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.MSSQLSERVER\MSSQL\Binn|  
 |[sqlps 公用程式](../../tools/sqlps-utility.md)|用來執行 PowerShell 命令和指令碼。 載入並註冊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供者和 cmdlet。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[sqlservr 應用程式](../../tools/sqlservr-application.md)|用來從命令提示字元啟動和停止 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，以進行疑難排解。|\<磁碟機>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.MSSQLSERVER\MSSQL\Binn|  
+|[sqlservr 應用程式](../../tools/sqlservr-application.md)|用來從命令提示字元啟動和停止 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，以進行疑難排解。|\<drive>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.MSSQLSERVER\MSSQL\Binn|  
   
 ##  <a name="use-troubleshooting-tools"></a><a name="BKMK_troubleshoot"></a> 使用疑難排解工具  
  您可以使用 [SQLdiag 公用程式](../../tools/sqldiag-utility.md) ，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和其他類型的伺服器收集記錄檔案和資料檔案，並使用其監視您的伺服器一段時間，或為伺服器的特定問題疑難排解。 SQLdiag 用於加速和簡化 Microsoft 客戶支援服務部門對診斷資訊的收集過程。  
   
- 您可以在 Server Core 上的系統管理員命令提示字元中，使用 [SQLdiag 公用程式](../../tools/sqldiag-utility.md)一文中指定的語法來法啟動此公用程式。  
+ 您可以在 Server Core 上的系統管理員命令提示字元中，使用下列文章中指定的語法來啟動此公用程式：[SQLdiag 公用程式](../../tools/sqldiag-utility.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [在 Server Core 上安裝 SQL Server](../../database-engine/install-windows/install-sql-server-on-server-core.md)   

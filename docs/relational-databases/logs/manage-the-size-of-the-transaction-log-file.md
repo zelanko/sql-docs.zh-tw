@@ -1,5 +1,6 @@
 ---
 title: 管理交易記錄檔的大小 | Microsoft Docs
+description: 了解如何監視 SQL Server 交易記錄大小、壓縮記錄、加大記錄、最佳化 tempdb 記錄成長率，以及控制交易記錄的成長。
 ms.custom: ''
 ms.date: 01/05/2018
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ff886f2eea70b010a2e64513cd561cf7f78d8dee
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a722331a28cf741adb5b17ac8a398c106e7cd1c5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68084024"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85668010"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>管理交易記錄檔的大小
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 本主題涵蓋如何監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易記錄大小、壓縮交易記錄、加入或加大交易記錄檔、最佳化 **tempdb** 交易記錄成長率，以及控制交易記錄檔的成長。  
 
 ##  <a name="monitor-log-space-use"></a><a name="MonitorSpaceUse"></a>監視記錄空間的使用  
@@ -39,7 +40,7 @@ ms.locfileid: "68084024"
 > [!NOTE]
 > 如長時間執行的交易之類的因素，使 [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 保持作用中一段很長的時間，可能限制記錄檔壓縮，甚至完全阻止記錄檔壓縮。 如需資訊，請參閱[可能會延遲記錄截斷的因素](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation)。  
   
-壓縮記錄檔會移除一或多個不保留任何邏輯記錄的 [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) (即「非使用中 VLF」  )。 當交易記錄檔壓縮之後，就會從記錄檔的結尾移除非使用中的 VLF，將記錄縮減至大約目標大小。 
+壓縮記錄檔會移除一或多個不保留任何邏輯記錄的 [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) (即「非使用中 VLF」)。 當交易記錄檔壓縮之後，就會從記錄檔的結尾移除非使用中的 VLF，將記錄縮減至大約目標大小。 
 
 > [!IMPORTANT]
 > 壓縮交易記錄檔之前，請記住[可能會延遲記錄截斷的因素](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation)。 如果壓縮記錄檔之後再次需要儲存空間，交易記錄檔將再次成長，並且會因此在記錄檔成長作業期間導入效能額外負荷。 如需詳細資訊，請參閱本主題中的[建議](#Recommendations)。

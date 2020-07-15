@@ -1,5 +1,6 @@
 ---
 title: 訂閱發行集 | Microsoft Docs
+description: 了解 SQL Server 複寫中的訂閱類型、如何選擇所需要的類型，以及如何建立訂閱。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -25,15 +26,15 @@ ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e08891eb7cb9fb897b48e37d6d8caa0e12620d06
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5c1734fba82d819b9bce8e253d780d44952dbea7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68768362"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765161"
 ---
 # <a name="subscribe-to-publications"></a>訂閱發行集
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
   訂閱是指要求一份發行集中的資料和資料庫物件。 訂閱會定義將收到的發行集，以及收到的位置和時間。 規劃訂閱時，請考慮要執行代理程式處理的位置。 您選擇的訂閱類型會控制代理程式執行的位置。 若為發送訂閱，則「合併代理程式」或「散發代理程式」會在「散發者」執行；若為提取訂閱，則代理程式會在「訂閱者」執行。 建立訂閱之後，就不能變更訂閱的類型。  
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
@@ -76,14 +77,14 @@ ms.locfileid: "68768362"
   
  **若要刪除發送訂閱**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[刪除發送訂閱](../../relational-databases/replication/delete-a-push-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[刪除發送訂閱](../../relational-databases/replication/delete-a-push-subscription.md)  
   
 > [!NOTE]  
 >  刪除訂閱並不會移除「訂閱者」中已發行的物件。  
   
  **若要建立提取訂閱**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[建立提取訂閱](../../relational-databases/replication/create-a-pull-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[建立提取訂閱](../../relational-databases/replication/create-a-pull-subscription.md)  
   
  **若要檢視或修改提取訂閱屬性**  
   

@@ -1,5 +1,6 @@
 ---
 title: 含有記憶體最佳化資料表的資料庫備份
+description: 了解經記憶體最佳化資料表作為正常資料庫備份一部分進行備份的方式。 閱讀完整的資料庫備份和差異備份。
 ms.custom: seo-dt-2019
 ms.date: 03/20/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c08f3c1ba1c31b0f6a1d34faeb5c6e2f77e404f8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0e1b2bf585b1b44f0f8e3b01eca46faaeda2a053
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412794"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723396"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>備份含有記憶體最佳化資料表的資料庫
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   記憶體最佳化資料表會當做正常資料庫備份的一部分進行備份。 如果是磁碟資料表，資料庫備份作業會驗證資料的 CHECKSUM 和差異檔案組，以便偵測是否有儲存體損毀。  
   

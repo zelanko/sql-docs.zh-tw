@@ -1,5 +1,6 @@
 ---
 title: 資料庫管理員的診斷連接 | Microsoft Docs
+description: 了解專用管理員連接 (DAC)。 檢視其限制、建立該連接的指示，以及示範其使用方式的範例。
 ms.custom: ''
 ms.date: 02/27/2019
 ms.prod: sql
@@ -18,17 +19,17 @@ helpviewer_keywords:
 - ports [SQL Server]
 - dedicated administrator connections [SQL Server]
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 6123b5259f6927c41281fb99264432062fc252bd
-ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a7843b981dbad450e49f0c1f5cf27b175ce635e6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82588104"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772537"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>資料庫管理員的診斷連接
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為系統管理員提供了特殊的診斷連接，可在伺服器的標準連接失效時使用。 這個診斷連接可讓系統管理員存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以執行診斷查詢和排解疑難問題，即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未回應標準連接要求。  
   
  此專用管理員連接 (DAC) 支援加密以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的其他安全性功能。 DAC 只允許將使用者內容變更為其他管理使用者。  
@@ -47,7 +48,7 @@ ms.locfileid: "82588104"
 > [!Note]  
 > 從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 建立 DAC
 > - 中斷與相關 SQL Server 執行個體的所有連線，包括 [物件總管] 和所有開啟的查詢視窗。
-> - 從功能表中選取 [檔案]   > [新增]   > [資料庫引擎查詢] 
+> - 從功能表中選取 [檔案] > [新增] > [資料庫引擎查詢]
 > - 在 [伺服器名稱] 欄位的連線對話方塊中，如果使用預設執行個體，請輸入 `admin:<server_name>`；如果使用具名執行個體，則輸入 `admin:<server_name>\<instance_name>`。
 
 ## <a name="restrictions"></a>限制  

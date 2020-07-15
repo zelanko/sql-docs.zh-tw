@@ -1,5 +1,6 @@
 ---
 title: 記憶體最佳化檔案群組 | Microsoft Docs
+description: 在 SQL Server 中建立記憶體最佳化的資料表之前，請先了解如何建立記憶體最佳化的檔案群組，其中包含資料檔案與差異檔案的容器。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 265419b25df79ce491567cf563188ac70cdccc42
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 636bc0ebcfbd85f9da38ecff6cd1ff4a966164c8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68024961"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715353"
 ---
 # <a name="the-memory-optimized-filegroup"></a>記憶體最佳化檔案群組
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   若要建立記憶體最佳化資料表，您必須先建立記憶體最佳化檔案群組。 記憶體最佳化檔案群組會保存一個或多個容器。 每個容器都包含資料檔案及/或差異檔案。  
   
  即使 `SCHEMA_ONLY` 資料表中的資料列並未保存，而且記憶體最佳化資料表和原生編譯預存程序的中繼資料儲存在傳統目錄中，則 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎仍然需要 `SCHEMA_ONLY` 記憶體最佳化資料表的記憶體最佳化檔案群組，以便針對具有記憶體最佳化資料表的資料庫提供一致體驗。  

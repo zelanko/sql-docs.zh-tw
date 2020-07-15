@@ -1,6 +1,6 @@
 ---
 title: 資料庫鏡像和全文檢索目錄
-description: 描述如何在具有全文檢索目錄的資料庫上設定資料庫鏡像。
+description: 了解如何在具有全文檢索目錄的資料庫上設定資料庫鏡像，以及了解容錯移轉前後的索引。
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e34072ae-fe8a-462d-bb03-02fa0987f793
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 816c5f5dea693a03054f2e35315ed3d121c7abaf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d4cecfbee8c76b08cf76801b099e0a1b8feee582
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822282"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789745"
 ---
 # <a name="database-mirroring-and-full-text-catalogs-sql-server"></a>資料庫鏡像和全文檢索目錄 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   若要建立具有全文檢索目錄之資料庫的鏡像，請如往常使用備份來建立主體資料庫的完整資料庫備份，然後還原備份，以將該資料庫複製到鏡像伺服器。 如需詳細資訊，請參閱 [準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)。  
   
 ## <a name="full-text-catalog-and-indexes-before-failover"></a>容錯移轉之前的全文檢索目錄和索引  

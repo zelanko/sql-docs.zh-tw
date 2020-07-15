@@ -15,15 +15,15 @@ ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 2ab65d61abb497c1930b94868f0a8b3433b44c95
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a3a9a890f5532e2ed2d37d3630cabd4466d48be6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70212303"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730215"
 ---
 # <a name="secure-the-subscriber"></a>保護訂閱者
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/applies-to-version/sql-asdb.md)]
   「合併代理程式」與「散發代理程式」會連接到「訂閱者」。 這些連接會在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入或 Windows 登入的內容下進行。 為遵循授與所需最小權限的原則，並同時保護所有密碼的儲存，有必要為這些代理程式提供適當的登入。 如需有關各代理程式需要的權限資訊，請參閱＜ [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)＞。  
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../../includes/azure-sql-db-replication-supportability-note.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "70212303"
  如需詳細資訊，請參閱[建立交易式發行集的可更新訂閱](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)和[檢視及修改複寫安全性設定](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)。  
   
 > [!IMPORTANT]  
->  對於複寫在發行集資料庫中建立的檢視，為連接指定的帳戶應該只被授與插入、更新及刪除資料的權限，而不應該被授與任何其他權限。 對於發行集資料庫中以 **syncobj_** _\<十六進位數字>_ 格式命名的檢視，您在每一個訂閱者端設定的帳戶都應該被授與這些檢視的權限。  
+>  對於複寫在發行集資料庫中建立的檢視，為連接指定的帳戶應該只被授與插入、更新及刪除資料的權限，而不應該被授與任何其他權限。 針對發行集資料庫中以 **syncobj_** _\<HexadecimalNumber>_ 格式命名的檢視，您在每一個訂閱者端所設定帳戶都應該被授與這些檢視的權限。  
   
 ## <a name="queued-updating-subscriptions"></a>佇列更新訂閱  
  設定佇列更新訂閱時，請注意與安全性相關的兩方面：  

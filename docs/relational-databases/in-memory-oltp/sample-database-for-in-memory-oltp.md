@@ -1,5 +1,6 @@
 ---
 title: 記憶體內部 OLTP 的範例資料庫 | Microsoft 文件
+description: 了解記憶體內部 OLTP 功能及其效能優勢。 此範例會示範經記憶體最佳化的資料表和原生編譯預存程序。
 ms.custom: ''
 ms.date: 12/14/2019
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fea6c071434a50dc0e592533ccc3647aadec0106
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 4859a35269e0664b07f08db795e3e57a4c8feb70
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487649"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735045"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>記憶體內部 OLTP 的範例資料庫
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
     
 ## <a name="overview"></a>概觀  
  此範例示範了記憶體內部 OLTP 功能。 其顯示經記憶體最佳化的資料表和原生編譯的預存程序，並可用來示範記憶體內部 OLTP 的效能優勢。  
@@ -139,13 +140,13 @@ ms.locfileid: "81487649"
   
  Sales.SalesOrderHeader_inmem  
   
--   記憶體最佳化資料表支援「預設條件約束」  ，且大部分的預設條件約束在移轉後會保持原狀。 不過，原始資料表 Sales.SalesOrderHeader 包含兩個預設條件約束，會擷取資料行 OrderDate 和 ModifiedDate 的目前日期。 在具有大量並行的高輸送量訂單處理工作負載中，任何全域資源都可能會成為競爭重點。 系統時間即為這類全域資源。根據觀察，執行插入銷售訂單的記憶體內部 OLTP 工作負載時，系統時間可能會成為瓶頸，特別是在需要針對銷售訂單標頭的多個資料行擷取系統時間，並同時擷取銷售訂單詳細資料時。 這個問題已在此範例中獲得解決，只對每個插入的銷售訂單擷取一次系統時間，然後在預存程序 Sales.usp_InsertSalesOrder_inmem 中，將此值做為 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 的日期時間資料行使用。  
+-   記憶體最佳化資料表支援「預設條件約束」 ，且大部分的預設條件約束在移轉後會保持原狀。 不過，原始資料表 Sales.SalesOrderHeader 包含兩個預設條件約束，會擷取資料行 OrderDate 和 ModifiedDate 的目前日期。 在具有大量並行的高輸送量訂單處理工作負載中，任何全域資源都可能會成為競爭重點。 系統時間即為這類全域資源。根據觀察，執行插入銷售訂單的記憶體內部 OLTP 工作負載時，系統時間可能會成為瓶頸，特別是在需要針對銷售訂單標頭的多個資料行擷取系統時間，並同時擷取銷售訂單詳細資料時。 這個問題已在此範例中獲得解決，只對每個插入的銷售訂單擷取一次系統時間，然後在預存程序 Sales.usp_InsertSalesOrder_inmem 中，將此值做為 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 的日期時間資料行使用。  
   
--   別名使用者定義資料類型 (UDT)  - 原始資料表針對資料行 PurchaseOrderNumber 和 AccountNumber，分別使用兩個別名使用者定義資料類型 (UDT) dbo.OrderNumber 和 dbo.AccountNumber。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 不支援在記憶體最佳化資料表中使用別名 UDT，因此新資料表會分別使用系統資料類型 Nvarchar(25) 和 Nvarchar(15)。  
+-   別名使用者定義資料類型 (UDT) - 原始資料表針對資料行 PurchaseOrderNumber 和 AccountNumber，分別使用兩個別名使用者定義資料類型 (UDT) dbo.OrderNumber 和 dbo.AccountNumber。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 不支援在記憶體最佳化資料表中使用別名 UDT，因此新資料表會分別使用系統資料類型 Nvarchar(25) 和 Nvarchar(15)。  
   
--   「索引鍵中的資料行可為 Null」  - 在原始資料表中，資料行 SalesPersonID 可為 Null，但是在新資料表中，資料行不可為 Null，且預設條件約束必須帶有值 (-1)。 這種情況是因為經記憶體最佳化的資料表上的索引不可以在索引鍵中有可為 Null 的資料行，在此情況下，-1 會代替 NULL 值。  
+-   「索引鍵中的資料行可為 Null」 - 在原始資料表中，資料行 SalesPersonID 可為 Null，但是在新資料表中，資料行不可為 Null，且預設條件約束必須帶有值 (-1)。 這種情況是因為經記憶體最佳化的資料表上的索引不可以在索引鍵中有可為 Null 的資料行，在此情況下，-1 會代替 NULL 值。  
   
--   「計算資料行」  - 由於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 不支援在記憶體最佳化資料表中使用計算資料行，因此會省略計算資料行 SalesOrderNumber 和 TotalDue。 新檢視 Sales.vSalesOrderHeader_extended_inmem 會反映資料行 SalesOrderNumber 和 TotalDue。 因此，如果需要這些資料行，您可以使用此檢視。  
+-   「計算資料行」 - 由於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 不支援在記憶體最佳化資料表中使用計算資料行，因此會省略計算資料行 SalesOrderNumber 和 TotalDue。 新檢視 Sales.vSalesOrderHeader_extended_inmem 會反映資料行 SalesOrderNumber 和 TotalDue。 因此，如果需要這些資料行，您可以使用此檢視。  
 
     - **適用範圍：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。  
 從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，記憶體最佳化的資料表和索引支援計算資料行。

@@ -1,5 +1,6 @@
 ---
 title: 還原服務主要金鑰 | Microsoft 文件
+description: 了解如何使用 Transact-SQL 來還原 SQL Server 中的服務主要金鑰。 服務主要金鑰是 SQL Server 加密階層的根。
 ms.custom: ''
 ms.date: 01/02/2019
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 14bdbbbe-d384-4692-b670-4243d2466fe1
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: e27516fb2b0931c2df8f4a76a4153ee8c38616b9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b4e2d053a232d374360177159cb3b97785f73a4f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957382"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898022"
 ---
 # <a name="restore-the-service-master-key"></a>還原服務主要金鑰
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ，還原 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中的服務主要金鑰。  
   
 > [!WARNING]  

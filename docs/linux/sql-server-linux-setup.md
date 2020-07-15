@@ -4,22 +4,22 @@ titleSuffix: SQL Server
 description: 安裝、更新與解除安裝 Linux 上的 SQL Server。 此文章涵蓋線上、離線及自動安裝的情節。
 author: VanMSFT
 ms.author: vanto
-ms.date: 03/13/2020
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: ea308fca55cd5cc19a6d8cd74427a87e8fbe9ee2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 915aaabeedeb7c240495e635ebb679c252112385
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79319838"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897308"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux 上的 SQL Server 的安裝指引
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 本文提供在 Linux 上安裝、更新及解除安裝 SQL Server 2017 和 SQL Server 2019 的指導方針。
 
@@ -47,7 +47,7 @@ Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES) 及 Ubuntu
 
 | 平台 | 支援的版本 | Get
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3、7.4、7.5、7.6 | [取得 RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **Red Hat Enterprise Linux** | 7.3、7.4、7.5、7.6、8  | [取得 RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2 | [取得 SLES v12 SP2](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [取得 Ubuntu 16.04](http://releases.ubuntu.com/xenial/)
 | **Docker 引擎** | 1.8+ | [取得 Docker](https://www.docker.com/get-started)
@@ -57,19 +57,14 @@ Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES) 及 Ubuntu
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-| 平台 | 支援的版本 | Get
-|-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3、7.4、7.5、7.6、8.0 | [取得 RHEL 8.0](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
-| **SUSE Linux Enterprise Server** | v12 SP2, SP3, SP4, SP5 | [取得 SLES v12](https://www.suse.com/products/server)
-| **Ubuntu** | 16.04, 18.04 | [Get Ubuntu 18.04](http://releases.ubuntu.com/bionic/)
-| **Docker 引擎** | 1.8+ | [取得 Docker](https://www.docker.com/get-started)
+[!INCLUDE [linux-supported-platfoms-2019](../includes/linux-supported-platfoms-2019.md)]
 
 ::: moniker-end
 
 Microsoft 也支援使用 OpenShift 和 Kubernetes 來部署和管理 SQL Server 容器。
 
 > [!NOTE]
-> SQL Server 已針對先前列出的發行版本，在 Linux 上經過測試並受到支援。 但如果選擇在不支援的作業系統上安裝 SQL Server，請檢閱 [Microsoft SQL Server 的技術支援原則](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) \(機器翻譯\) 的＜支援原則＞  一節以了解隱含的支援。
+> SQL Server 已針對先前列出的發行版本，在 Linux 上經過測試並受到支援。 但如果選擇在不支援的作業系統上安裝 SQL Server，請檢閱 [Microsoft SQL Server 的技術支援原則](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) \(機器翻譯\) 的＜支援原則＞一節以了解隱含的支援。
 
 ## <a name="system-requirements"></a><a id="system"></a> 系統需求
 

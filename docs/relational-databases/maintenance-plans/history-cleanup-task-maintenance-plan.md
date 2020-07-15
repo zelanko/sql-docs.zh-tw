@@ -1,5 +1,6 @@
 ---
 title: 記錄清除工作 (維護計畫) | Microsoft Docs
+description: 了解如何使用記錄清除工作，從 msdb 資料庫中捨棄備份/還原歷程記錄、SQL Server Agent 作業記錄及維護計畫記錄。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,20 +14,20 @@ ms.assetid: 66bb6c39-958c-4053-a27f-b1118d2567f5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 37841e848aab5ff991741e5d460500834c9185e6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a8fecc3eb56a015ac420ca2cd5167098bbce84ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115788"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85667057"
 ---
 # <a name="history-cleanup-task-maintenance-plan"></a>記錄清除工作 (維護計畫)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用 **[記錄清除工作]** 對話方塊，即可從 msdb 資料庫的資料表中捨棄舊的記錄資訊。 這個工作支援備份和還原記錄、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業記錄，以及維護計畫記錄的刪除。  
   
  此陳述式會使用 **sp_purge_jobhistory** 和 **sp_delete_backuphistory** 陳述式。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
  **[連接]**  
  選取執行此工作時要使用的伺服器連接。  
   

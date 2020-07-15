@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 67f0b04b6ac0ce0fc9d8e20ac8b8088061a6ab0a
-ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
+ms.openlocfilehash: e2d32824b62cf54132c6168e5f44d93fa0cd6289
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82107999"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726150"
 ---
 # <a name="query-processing-architecture-guide"></a>查詢處理架構指南
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 可在多種資料儲存架構處理查詢，例如本機資料表、資料分割資料表及散發到多部伺服器的資料表。 下列主題涵蓋了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 如何處理查詢以及透過執行計畫快取最佳化查詢重複使用。
 
@@ -33,13 +33,13 @@ ms.locfileid: "82107999"
 - 批次模式執行
 
 ### <a name="row-mode-execution"></a>資料列模式執行
-「資料列模式執行」  是可搭配傳統 RDMBS 資料表使用的查詢處理方法，其中資料是以資料列格式儲存。 當查詢執行並存取資料列存放區資料表中的資料時，執行樹狀目錄運算子和子運算子會在資料表結構描述中指定的所有資料行之間，讀取每個必要的資料列。 從所讀取的每個資料列，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會接著擷取結果集所需的資料行，以供 SELECT 陳述式、聯結述詞或篩選述詞參考。
+「資料列模式執行」是可搭配傳統 RDMBS 資料表使用的查詢處理方法，其中資料是以資料列格式儲存。 當查詢執行並存取資料列存放區資料表中的資料時，執行樹狀目錄運算子和子運算子會在資料表結構描述中指定的所有資料行之間，讀取每個必要的資料列。 從所讀取的每個資料列，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會接著擷取結果集所需的資料行，以供 SELECT 陳述式、聯結述詞或篩選述詞參考。
 
 > [!NOTE]
 > 資料列模式執行針對 OLTP 案例非常有效率，但在掃描大量資料時 (例如在資料倉儲案例中) 可能比較沒有效率。
 
 ### <a name="batch-mode-execution"></a>批次模式執行  
-「批次模式執行」  是用來同時處理多個資料列的查詢處理方法 (如批次一詞所指)。 批次內的每個資料行會儲存為不同記憶體區域中的向量，因此批次模式處理是以向量為基礎。 批次模式處理也會使用演算法，這些演算法已針對現代硬體上發現的多核心 CPU 和增加的記憶體輸送量進行最佳化。      
+「批次模式執行」是用來同時處理多個資料列的查詢處理方法 (如批次一詞所指)。 批次內的每個資料行會儲存為不同記憶體區域中的向量，因此批次模式處理是以向量為基礎。 批次模式處理也會使用演算法，這些演算法已針對現代硬體上發現的多核心 CPU 和增加的記憶體輸送量進行最佳化。      
 
 批次模式執行與資料行存放區儲存格式緊密整合，並以其為中心進行最佳化。 當情況允許時，批次模式處理會在壓縮的資料上作業，並排除資料列模式執行所使用的 [Exchange 運算子](../relational-databases/showplan-logical-and-physical-operators-reference.md#exchange)。 結果會是較佳的平行處理原則與更快的效能。    
 
@@ -834,7 +834,7 @@ WHERE ProductSubcategoryID = 4;
 #### <a name="data-types-of-parameters"></a>參數的資料類型
 當 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 將常值參數化時，參數會轉換為下列資料類型：
 
-* 將以其他方式調整大小以符合 int 資料類型的整數常值會參數化為 int。屬於含有任何比較運算子之述詞的較大整數常值 (包括 <、\<=、=、!=、>、>=,、!\<、!>、<>、`ALL`、`ANY`、`SOME`、`BETWEEN` 和 `IN`) 會參數化為 numeric(38,0)。 不屬於含有比較運算子之述詞的較大常值會參數化為 numeric，其有效位數夠大正好足以支援其大小，而其小數位數為 0。
+* 將以其他方式調整大小以符合 int 資料類型的整數常值會參數化為 int。屬於含有任何比較運算子述詞的較大整數常值 (包括 <、\<=, =, !=, >、>=,、!\<, !>、<>、`ALL`、`ANY`、`SOME`、`BETWEEN` 和 `IN`) 會參數化為 numeric(38,0)。 不屬於含有比較運算子之述詞的較大常值會參數化為 numeric，其有效位數夠大正好足以支援其大小，而其小數位數為 0。
 * 屬於含有比較運算子之述詞的固定點數值常值會參數化為 numeric，其有效位數為 38，而其小數位數夠大正好足以支援其大小。 不屬於含有比較運算子之述詞的固定點數值常值會參數化為 numeric，其有效位數與小數位數夠大正好足以支援其大小。
 * 浮點數值常值會參數化為 float(53)。
 * 如果非 Unicode 字串常值可容納於 8,000 個字元中，即會參數化為 varchar(8000)，如果該常值大於 8,000 個字元，則會參數化為 varchar(max)。
@@ -1195,7 +1195,7 @@ CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 
 ### <a name="displaying-partitioning-information-in-query-execution-plans"></a>在查詢執行計畫中顯示資料分割資訊
 
-資料分割資料表和索引上的查詢執行計畫可以使用 [!INCLUDE[tsql](../includes/tsql-md.md)] `SET` 陳述式 `SET SHOWPLAN_XML` 或 `SET STATISTICS XML`，或是使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio 中的圖形化執行計畫輸出進行檢查。 例如，您可以在查詢編輯器工具列上，按一下 [顯示估計執行計畫]  來顯示編譯時間執行計畫，以及按一下 [包括實際執行計畫]  來顯示執行階段計畫。 
+資料分割資料表和索引上的查詢執行計畫可以使用 [!INCLUDE[tsql](../includes/tsql-md.md)] `SET` 陳述式 `SET SHOWPLAN_XML` 或 `SET STATISTICS XML`，或是使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio 中的圖形化執行計畫輸出進行檢查。 例如，您可以在查詢編輯器工具列上，按一下 [顯示估計執行計畫]  來顯示編譯時間執行計畫，以及按一下 [包括實際執行計畫] 來顯示執行階段計畫。 
 
 您可以使用這些工具來確定以下資訊：
 

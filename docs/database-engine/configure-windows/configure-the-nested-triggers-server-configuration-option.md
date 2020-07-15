@@ -1,5 +1,6 @@
 ---
 title: 設定 nested triggers 伺服器組態選項 | Microsoft Docs
+description: 了解巢狀觸發程序選項。 請參閱如何使用此選項來設定可在 SQL Server 中串聯的 AFTER 觸發層級數目。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - nested triggers option
 ms.assetid: 29d7372b-d406-4a5b-80c6-a2d231d25211
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2ac59b4fb2923aacd377bb974e49dd8edebf5587
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9b236dc0cb810a6ba8d63ef7c68367eab2252b8b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012501"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758249"
 ---
 # <a name="configure-the-nested-triggers-server-configuration-option"></a>設定 nested triggers 伺服器組態選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] nested triggers [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **nested triggers** 選項控制 AFTER 觸發程序是否可以重疊顯示。 亦即，執行起始另一個觸發程序的動作，後者再起始另一個觸發程序等。 **nested triggers** 設定為 0 時，AFTER 觸發程序不能重疊顯示。 **nested triggers** 設定為 1 (預設值) 時，AFTER 觸發程序最多可以重疊顯示 32 層。 不論這個選項的設定為何，INSTEAD OF 觸發程序都可以巢狀。  
   
@@ -32,7 +33,7 @@ ms.locfileid: "68012501"
   
 -   **使用下列方法設定 nested triggers 選項：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -49,7 +50,7 @@ ms.locfileid: "68012501"
   
 #### <a name="to-configure-the-nested-triggers-option"></a>設定 nested triggers 選項  
   
-1.  在物件總管  中，以滑鼠右鍵按一下伺服器，然後選取 [屬性]  。  
+1.  在物件總管中，以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
   
 2.  在 **[進階]** 頁面上，將 **[允許觸發程序引發其他觸發程序]** 選項設定為 **[True]** (預設值) 或 **[False]** 。  
   

@@ -1,5 +1,6 @@
 ---
 title: 不能肯定的交易解析伺服器組態選項 | Microsoft Docs
+description: 熟悉 [不能肯定的交易解析] 選項。 了解該選項如何判斷 SQL Server 中未決交易的預設結果。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,19 +13,19 @@ helpviewer_keywords:
 - unresolved transactions
 - in-doubt xact resolution option
 ms.assetid: 3426fd32-cad2-4f2f-8ca9-e0296cc12703
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 6bfdee182770e24896796bc3837d5c17d3d73da9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 946f36bb379e5fde01f4232b01699405dd63aa8d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67998043"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772417"
 ---
 # <a name="in-doubt-xact-resolution-server-configuration-option"></a>不能肯定的交易解析伺服器組態選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  使用 [不能肯定的交易解析]  選項，可控制 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) 無法解析之交易的預設結果。 無法解析交易的原因，可能與 MS DTC 停機，或在復原時出現未知的交易結果等狀況有關。  
+  使用 [不能肯定的交易解析] 選項，可控制 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) 無法解析之交易的預設結果。 無法解析交易的原因，可能與 MS DTC 停機，或在復原時出現未知的交易結果等狀況有關。  
   
  下表列出解析不確定的交易時，可能出現的結果值。  
   
@@ -74,7 +75,7 @@ GO
   
 ```  
   
- [不能肯定的交易解析]  選項屬於進階選項。 如果您要使用 **sp_configure** 系統預存程序來變更此設定，只有在 [顯示進階選項]  設為 1 時，才能變更 [不能肯定的交易解析]  。 設定會立即生效，伺服器不必重新啟動。  
+ [不能肯定的交易解析] 選項屬於進階選項。 如果您要使用 **sp_configure** 系統預存程序來變更此設定，只有在 [顯示進階選項] 設為 1 時，才能變更 [不能肯定的交易解析]。 設定會立即生效，伺服器不必重新啟動。  
   
 > [!NOTE]
 >  在與分散式交易相關的所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上，讓此選項的組態都維持一致，將有助於避免資料不一致。  

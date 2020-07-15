@@ -1,5 +1,6 @@
 ---
 title: Affinity64 Mask 伺服器組態選項 | Microsoft Docs
+description: 了解 affinity64 mask 選項。 查看何時要在 SQL Server 中使用此選項，以將處理器繫結至特定執行緒。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - affinity64 mask option
 - binding processors [SQL Server]
 ms.assetid: 75ed08c7-f85c-4e15-9ee1-e7bc545d3293
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2888394a73e7ce56e55c867adb21a54d6be81cc3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 452075955c30d7e49eb317f40bf377a6e894af29
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013174"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631408"
 ---
 # <a name="affinity64-mask-server-configuration-option"></a>affinity64 mask 伺服器組態選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   與 affinity mask 選項類似，affinity64 mask 會將處理器繫結到特定的執行緒。 請使用 affinity mask 來繫結前 32 個處理器，然後使用 affinity64 mask 來繫結電腦上剩餘的處理器。 這個選項只出現在 64 位元版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   

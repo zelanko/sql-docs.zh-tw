@@ -1,6 +1,6 @@
 ---
 title: 變更資料庫的目標復原時間
-ms.custom: seo-lt-2019
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL，在 SQL Server 中設定或變更 SQL Server 資料庫的目標復原時間。
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,16 +10,17 @@ ms.topic: conceptual
 ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 24a87adf77ea4217cb27b20d2452fcbd5ba26135
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: cbc9d56a0c084fe912ad9af0136166cdcf804ebf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056249"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734966"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>變更資料庫的目標復原時間 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中設定或變更 [!INCLUDE[tsql](../../includes/tsql-md.md)]資料庫的目標復原時間。 根據預設，目標復原時間為 60 秒，而且資料庫使用「間接檢查點」  。 目標復原時間會建立此資料庫的復原時間上限。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 設定或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定或變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的目標復原時間。 根據預設，目標復原時間為 60 秒，而且資料庫使用「間接檢查點」。 目標復原時間會建立此資料庫的復原時間上限。  
   
 > [!NOTE]  
 >  如果長時間執行的交易造成過多的復原次數，可能會超過目標復原時間設定針對給定資料庫所指定的上限。  
@@ -43,13 +44,13 @@ ms.locfileid: "74056249"
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **若要變更目標復原時間**  
   
-1.  在 [物件總管]  中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
+1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  展開 [資料庫]  容器、以滑鼠右鍵按一下您想要變更的資料庫，然後按一下 [屬性]  命令。  
+2.  展開 [資料庫] 容器、以滑鼠右鍵按一下您想要變更的資料庫，然後按一下 [屬性] 命令。  
   
 3.  在 [資料庫屬性]  對話方塊中按一下 [選項]  頁面。  
   
-4.  在 [復原]  面板的 [目標復原時間 (秒)]  欄位中，指定您想要作為此資料庫復原時間上限的秒數。  
+4.  在 [復原] 面板的 [目標復原時間 (秒)] 欄位中，指定您想要作為此資料庫復原時間上限的秒數。  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要變更目標復原時間**  

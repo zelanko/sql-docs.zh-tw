@@ -25,16 +25,16 @@ helpviewer_keywords:
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b1446d4b43524a1e670084812279284d86eb1b0b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c307a383d97691a49f437822e4a92cf64fcfb832
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71326100"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892514"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 在資料庫中建立新的佇列。 佇列會儲存訊息。 當服務的訊息到達時，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會將訊息放在與服務相關聯的佇列中。
 
@@ -42,7 +42,7 @@ ms.locfileid: "71326100"
 
 ## <a name="syntax"></a>語法
 
-```
+```syntaxsql
 CREATE QUEUE <object>
    [ WITH
      [ STATUS = { ON | OFF } [ , ] ]
@@ -86,7 +86,7 @@ ACTIVATION 會指定為了處理這個佇列中訊息而必須啟動的預存程
 
 STATUS (啟用) 會指定 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 是否啟動預存程序。 當 STATUS = ON 時，如果目前執行的程序數目低於 MAX_QUEUE_READERS，且訊息到達佇列的速度比預存程序接收訊息快，佇列便會啟動 PROCEDURE_NAME 所指定的預存程序。 當 STATUS = OFF 時，佇列不會啟動預存程序。 如果未指定這個子句，預設值便是 ON。
 
-PROCEDURE_NAME = \<程序> 會指定為了處理這個佇列中訊息所要啟動的預存程序名稱。 這個值必須是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼。
+PROCEDURE_NAME = \<procedure> 指定為了處理這個佇列中訊息所要啟動的預存程序名稱。 這個值必須是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼。
 
 *database_name*(程序) 是包含預存程序的資料庫名稱。
 
