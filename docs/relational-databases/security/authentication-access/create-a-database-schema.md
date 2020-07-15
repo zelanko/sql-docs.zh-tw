@@ -1,5 +1,6 @@
 ---
 title: 建立資料庫結構描述 | Microsoft 文件
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 在 SQL Server 中建立結構描述，包括限制。
 ms.custom: ''
 ms.date: 07/05/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 980b179f39edc3e93e5cb0bc105b6b2f8d12bb58
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: faa0ea1e841edfde76cdfeb4f3285116a47a50fd
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903748"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005708"
 ---
 # <a name="create-a-database-schema"></a>建立資料庫結構描述
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中建立結構描述。  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
@@ -53,9 +54,9 @@ ms.locfileid: "72903748"
   
 2.  展開要建立新資料庫結構描述的資料庫。  
   
-3.  以滑鼠右鍵按一下 [安全性]  資料夾，指向 [新增]  ，然後選取 [結構描述]  。  
+3.  以滑鼠右鍵按一下 [安全性] 資料夾，指向 [新增]，然後選取 [結構描述]。  
   
-4.  在 [結構描述 - 新增]  對話方塊的 [一般]  頁面上，將新結構描述的名稱輸入 [結構描述名稱]  方塊中。  
+4.  在 [結構描述 - 新增] 對話方塊的 [一般] 頁面上，將新結構描述的名稱輸入 [結構描述名稱] 方塊中。  
   
 5.  在 **[結構描述擁有者]** 方塊中，輸入擁有結構描述之資料庫使用者或角色的名稱。 或者，按一下 **[搜尋]** 開啟 **[搜尋角色和使用者]** 對話方塊。  
   
@@ -65,7 +66,7 @@ ms.locfileid: "72903748"
 > 如果對 **Azure SQL Database** 或 **Azure SQL 資料倉儲**使用 SSMS 建立結構描述，則不會顯示對話方塊。 您將需要執行所產生的「建立結構描述範本 T-SQL 陳述式」。
   
 ### <a name="additional-options"></a>其他選項  
- [結構描述 - 新增]  對話方塊也在其他兩個頁面上提供選項： [權限]  和 [擴充屬性]  。  
+ [結構描述 - 新增] 對話方塊也在其他兩個頁面上提供選項：[權限] 和 [延伸屬性]。  
   
 -   **[權限]** 頁面列出所有可能的安全性實體以及可授與登入的安全性實體權限。  
   
