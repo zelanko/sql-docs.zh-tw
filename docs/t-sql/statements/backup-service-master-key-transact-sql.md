@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: f8356683-6680-4f1c-9eaf-5c29a9a9020d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 23c401f4af8785518d57c40a3bd0d54c6e89c99f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bd00cd524f0d8b1ea0f22e339e29cea1474bccdd
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895528"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86380911"
 ---
 # <a name="backup-service-master-key-transact-sql"></a>BACKUP SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,9 @@ BACKUP SERVICE MASTER KEY TO FILE = 'path_to_file'
     ENCRYPTION BY PASSWORD = 'password'  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  FILE **='***path_to_file***'**  
  指定要作為服務主要金鑰匯出目的地之檔案的完整路徑，包含檔案名稱。 這可能是本機路徑或是通往網路位置的 UNC 路徑。  
   

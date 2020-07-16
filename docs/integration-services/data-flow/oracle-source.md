@@ -1,5 +1,5 @@
 ---
-title: Oracle 來源 | Microsoft Docs
+title: Oracle 來源
 ms.custom: ''
 ms.date: 08/14/2019
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4444236d19c9d7c67aba5a36ba079e1dfa9189b0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eced263351bc6c9add5fbd46894c08ccc65fb2be
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74542199"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196079"
 ---
 # <a name="oracle-source"></a>Oracle 來源
 
@@ -52,9 +52,9 @@ Oracle 來源的自訂屬性如下所示。 所有屬性都是可讀寫的。
 |屬性名稱|資料類型|描述|
 |:-|:-|:-|
 |AccessMode|整數 (列舉)|用來存取資料庫的模式。 可能的值為**資料表名稱**與 **SQL 命令**。 預設值為**資料表名稱**。|
-|BatchSize|整數|大量載入的批次大小。 這是當做陣列擷取的記錄數目。 <br>這個屬性僅由 [進階編輯器]  設定|
-|DefaultCodePage|整數|當資料來源沒有字碼頁資訊時，所要使用的字碼頁。 <br>這個屬性僅由 [進階編輯器]  設定。|
-|PreFetchCount|整數|預先擷取的資料列數。 <br>這個屬性僅由 [進階編輯器]  設定。|
+|BatchSize|整數|大量載入的批次大小。 這是當做陣列擷取的記錄數目。 <br>這個屬性僅由 [進階編輯器] 設定|
+|DefaultCodePage|整數|當資料來源沒有字碼頁資訊時，所要使用的字碼頁。 <br>這個屬性僅由 [進階編輯器] 設定。|
+|PreFetchCount|整數|預先擷取的資料列數。 <br>這個屬性僅由 [進階編輯器] 設定。|
 |SqlCommand|String|當 AccessMode 設為 [SQL 命令] 時要執行的 SQL 命令。|
 |TableName|String|當 AccessMode 設定為 [資料表名稱] 時所使用之資料的資料表名稱。|
 
@@ -70,19 +70,19 @@ Oracle 來源的自訂屬性如下所示。 所有屬性都是可讀寫的。
 - [Oracle 來源編輯器 (資料行頁面)](#oracle-source-editor-columns-page)
 - [Oracle 來源編輯器 (錯誤輸出頁面)](#oracle-source-editor-error-output-page)
 
-![](media/oracle-source.png)
+![Oracle 來源](media/oracle-source.png)
 
-[進階編輯器]  對話方塊包含能以程式設計方式設定的屬性。
+[進階編輯器] 對話方塊包含能以程式設計方式設定的屬性。
 
 若要開啟 **[進階編輯器]** 對話方塊：
 
-- 在 Integration Services 專案的 [資料流程]  畫面中，以滑鼠右鍵按一下 Oracle 來源，然後選取 [顯示進階編輯器]  。
+- 在 Integration Services 專案的 [資料流程] 畫面中，以滑鼠右鍵按一下 Oracle 來源，然後選取 [顯示進階編輯器]。
 
-如需有關可在 [進階編輯器]  對話方塊中設定之屬性的詳細資訊，請參閱 [Oracle 來源自訂屬性](#oracle-source-custom-properties)。
+如需有關可在 [進階編輯器] 對話方塊中設定之屬性的詳細資訊，請參閱 [Oracle 來源自訂屬性](#oracle-source-custom-properties)。
 
 ## <a name="oracle-source-editor-connection-manager-page"></a>Oracle 來源編輯器 (連線管理員頁面)
 
-在 [連線管理員]  頁面上，[Oracle 來源編輯器]  對話方塊中是用來從資料庫中選取 Oracle Database 作為來源、資料表或檢視。
+在 [連線管理員] 頁面上，[Oracle 來源編輯器] 對話方塊中是用來從資料庫中選取 Oracle Database 作為來源、資料表或檢視。
 
 **開啟 Oracle 來源編輯器的連線管理員頁面**
 
@@ -93,11 +93,11 @@ Oracle 來源的自訂屬性如下所示。 所有屬性都是可讀寫的。
 
 **[ODBC 目的地編輯器]**
 
-從清單中選取現有的連線管理員，或按一下 [新增]  來建立新的 Oracle 連線管理員。
+從清單中選取現有的連線管理員，或按一下 [新增] 來建立新的 Oracle 連線管理員。
 
 **新增**
 
-按一下 **[新增]** 。 [Oracle 連線管理員編輯器]  對話方塊隨即開啟，讓您能夠建立新的連線管理員。
+按一下 **[新增]** 。 [Oracle 連線管理員編輯器] 對話方塊隨即開啟，讓您能夠建立新的連線管理員。
 
 **資料存取模式**
 
@@ -114,7 +114,7 @@ Oracle 來源的自訂屬性如下所示。 所有屬性都是可讀寫的。
 
 ## <a name="oracle-source-editor-columns-page"></a>Oracle 來源編輯器 (資料行頁面)
 
-在 [資料行]  頁面上，可使用 [Oracle 來源編輯器]  對話方塊將輸出資料行對應至每個外部 (來源) 資料行。
+在 [資料行] 頁面上，可使用 [Oracle 來源編輯器] 對話方塊將輸出資料行對應至每個外部 (來源) 資料行。
 
 **開啟 Oracle 來源編輯器的資料行頁面**
 
@@ -128,9 +128,9 @@ Oracle 來源的自訂屬性如下所示。 所有屬性都是可讀寫的。
 
 **可用的外部資料行**
 
-可用的外部資料行清單，您可以選取這些資料行，依選取的順序加入 [外部資料行]  清單。 無法使用此資料表來加入或刪除資料行。
+可用的外部資料行清單，您可以選取這些資料行，依選取的順序加入 [外部資料行] 清單。 無法使用此資料表來加入或刪除資料行。
 
-選取 [全選]  核取方塊以選取所有資料行。
+選取 [全選] 核取方塊以選取所有資料行。
 
 **外部資料行**
 
@@ -146,7 +146,7 @@ Oracle 來源的自訂屬性如下所示。 所有屬性都是可讀寫的。
 
 ## <a name="oracle-source-editor-error-output-page"></a>Oracle 來源編輯器 (錯誤輸出頁面)
 
-使用 [Oracle 來源編輯器]  對話方塊的 [錯誤輸出]  頁面，即可選取錯誤處理選項。
+使用 [Oracle 來源編輯器] 對話方塊的 [錯誤輸出] 頁面，即可選取錯誤處理選項。
 
 **開啟 Oracle 來源編輯器的錯誤輸出頁面**
 

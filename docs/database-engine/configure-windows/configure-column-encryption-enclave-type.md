@@ -11,15 +11,16 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6e16bbd33d9353c02cf72e3c931a5d8749197f5d
-ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
+ms.openlocfilehash: 39ad6bdc8911a0596d619f6d6a68de07d733dd6f
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84818353"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279412"
 ---
 # <a name="configure-the-enclave-type-for-always-encrypted-server-configuration-option"></a>設定 Always Encrypted 伺服器設定選項的記憶體保護區類型
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+
+[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 本文描述如何針對具有安全記憶體保護區的 Always Encrypted 啟用或停用安全記憶體保護區。 如需詳細資訊，請參閱[具有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。
 

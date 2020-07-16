@@ -13,15 +13,15 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 636b304d99ee244ef7a367fb8a474ebe8df312a0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9ddfb9836650028c0f6aae150a2f70e4758b6ca2
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75557750"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279277"
 ---
 # <a name="tutorial-create-and-use-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>教學課程：使用隨機化加密在已啟用記憶體保護區的資料行上建立及使用索引
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 本教學課程會指導您使用[具有安全記憶體保護區的 Always Encrypted](encryption/always-encrypted-enclaves.md) 中所支援的隨機化加密，在已啟用記憶體保護區的資料行上建立及使用索引的方式。 它會顯示：
 

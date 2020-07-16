@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: d8d3a22e-1ff8-48a4-891f-4c8619437e24
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d03b67e5a047d615a53e1053d39b75d41f7cbc09
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 514e0d342fb542ade5cefaf0f405f9caf1cd0b1d
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733825"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279594"
 ---
 # <a name="mssqlserver_605"></a>MSSQLSERVER_605
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,6 +54,7 @@ ms.locfileid: "85733825"
   
 1.  執行下列查詢，找出與訊息中指定的配置單位關聯的資料表。 請將 `allocation_unit_id` 改為錯誤訊息中指定的配置單位。  
   
+    ```sql  
     USE`database_name`;  
   
     GO  
@@ -73,6 +74,7 @@ ms.locfileid: "85733825"
     ORDER BY au.allocation_unit_id;  
   
     GO  
+    ```
   
 2.  找出與錯誤訊息中指定的第二個配置單位識別碼關聯的資料表之後，對該資料表執行不含 REPAIR 子句的 DBCC CHECKTABLE。  
   

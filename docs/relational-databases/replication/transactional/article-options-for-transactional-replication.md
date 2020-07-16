@@ -14,15 +14,15 @@ ms.assetid: 3469b185-0ea5-4690-a71c-717230d886b6
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 943f2c6c1507753644c841aa013c5df78f926c80
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1b8745e278486d899d070757d58bae326f79551d
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286967"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159436"
 ---
 # <a name="article-options-for-transactional-replication"></a>異動複寫的發行項選項
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   針對交易式發行集中的發行項提供了一些選項。 使用異動複寫，您可以執行下列項目：  
   
 -   指定變更從「發行者」傳播到「訂閱者」的方式。 如需詳細資訊，請參閱[指定交易式發行項變更的傳播方式](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。  

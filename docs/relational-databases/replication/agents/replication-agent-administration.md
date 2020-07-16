@@ -24,15 +24,15 @@ ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 97ab969b453176e3b5ecfa8e2f9d85908407241f
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: f0a59dff4420aa4cab9a7ce62a99315196007691
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807822"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159686"
 ---
 # <a name="replication-agent-administration"></a>複寫代理程式管理
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   複寫代理程式可執行許多有關複寫的工作，包含建立結構描述和資料的副本、偵測「發行者」或「訂閱者」端的更新，以及在伺服器之間傳播變更。 根據預設，複寫代理程式在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 作業步驟下執行。 此代理程式只不過是可執行檔，所以也可以從命令列和批次指令碼直接呼叫。 每個複寫代理程式都支援一組用於控制其執行方式的執行時期參數；這些參數在代理程式設定檔或命令列中指定。  
   
 > [!IMPORTANT]  

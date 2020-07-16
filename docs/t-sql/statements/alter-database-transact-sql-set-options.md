@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: cfaf0b5cdb8ddddc3a27ed5fb80b6fcfb7b8afbd
-ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
+ms.openlocfilehash: 822cd1efc21dbdeae7a5194bc659f73c00eddb7d
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85215170"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159736"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL)
 
@@ -730,17 +730,17 @@ FORCED
 <a name="query-store"></a> **\<query_store_options> ::=**      
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始)
 
-ON | **OFF** [ FORCED ] | CLEAR [ ALL ]     
+ON | **OFF** | CLEAR [ ALL ]     
 控制是否在此資料庫中啟用查詢存放區，且控制查詢存放區內容的移除。 如需詳細資訊，請參閱[查詢存放區使用案例](../../relational-databases/performance/query-store-usage-scenarios.md)。
 
 開啟     
 啟用查詢存放區。
 
-OFF [ FORCED ]     
-停用查詢存放區。 OFF 是預設值。 FORCED 為選擇性。 FORCED 會中止所有執行中的查詢存放區背景工作，並略過查詢存放區關閉時的同步排清。 導致查詢存放區以最快的速度關機。 基本上會立即將查詢存放區關閉。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 引進了 FORCED。
+OFF      
+停用查詢存放區。 OFF 是預設值。 
 
 > [!NOTE]  
-> 您無法在 Azure SQL Database 單一資料庫和彈性集區中停用查詢存放區。 執行 ALTER DATABASE [database] SET QUERY_STORE = OFF 將會傳回「此版本的 SQL Server 不支援 'QUERY_STORE=OFF'」的警告。 
+> 您無法在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 單一資料庫和彈性集區停用查詢存放區。 執行 `ALTER DATABASE [database] SET QUERY_STORE = OFF` 將會傳回警告 `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`。 
 
 CLEAR     
 移除查詢存放區的內容。

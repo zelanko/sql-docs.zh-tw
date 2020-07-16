@@ -14,15 +14,15 @@ ms.assetid: 25b7af05-2721-4b24-9083-fb671e8bf4e0
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: cab28a63e72cf085c62ed6f35beefe7cafd06a05
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 123c63710dce6161e6ddb78c67642d7fcf00258b
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287229"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159446"
 ---
 # <a name="securing-replication-over-the-internet"></a>Securing Replication Over the Internet
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   網際網路複寫可以提供彈性，特別是對於行動訂閱者，但是您必須正確設定網際網路複寫以保證充分的安全性。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建議使用下列兩個透過網際網路安全共用資訊的技術之一：  
   
 -   虛擬私人網路 (VPN)  

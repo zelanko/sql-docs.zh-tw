@@ -23,15 +23,15 @@ ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 3e9353cc5d22cae0f148661ca5a31651803bc00e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 71dc0b6a274b6545169cfcd20487c935086c7764
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286353"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159586"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>在複寫監視器中檢視發行集和訂閱狀態
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫監視器會顯示發行集和訂閱的狀態資訊：  
   
 -   發行集的狀態是由其訂閱的最高優先權狀態所決定。 例如，如果發行集的某個訂閱發生錯誤，而另一個訂閱發生效能問題，則會針對該發行集顯示錯誤狀態。  

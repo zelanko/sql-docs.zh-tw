@@ -22,26 +22,30 @@ ms.assetid: 5704aa04-68a3-4b29-b62b-8868af487817
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ea8b8b77ac4445bc40bea2a2dcc9359de0f6a09
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c9ace52421c194c7b3c2a7cc9d900cb611d900d5
+ms.sourcegitcommit: 4231364ab5bc15b74952ca5d20508b7ba9ca347e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67898282"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86291351"
 ---
 # <a name="drop-certificate-transact-sql"></a>DROP CERTIFICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdb-asa-pdw](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]
 
   從資料庫中移除憑證。  
   
 > [!IMPORTANT]  
 >  凡是用於資料庫加密的憑證都應該保留備份，即便是資料庫已經不再啟用加密。 就算資料庫已不再加密，交易記錄的某些部分可能仍受到保護，因而有些作業截至資料庫執行完整備份為止或許都需要此憑證。 您也必須有此憑證，才能夠從資料庫加密當時所建立的備份還原。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
+
+  
+> [!Note]
+> [!INCLUDE [Synapse preview note](../../includes/synapse-preview-note.md)]
   
 ## <a name="syntax"></a>語法  
   
-```  
+```synaxsql  
 DROP CERTIFICATE certificate_name  
 ```  
   

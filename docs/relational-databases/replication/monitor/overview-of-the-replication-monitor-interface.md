@@ -14,15 +14,15 @@ ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 591cb0ff055a4a3556ac4b6200d052ffc58a6963
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4906f088a20b6028958bf1d613e839dbfe568f26
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286915"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159786"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>複寫監視器介面概觀
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   「[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫監視器」以兩個窗格來針對所有複寫活動呈現以「發行者」或「散發者」為焦點的檢視。 您可將發行者加入監視器的左窗格中，監視器的右窗格便會顯示關於發行者及其發行集、這些發行集的訂閱，以及各種複寫代理程式的資訊。 除了呈現複寫拓撲的資訊外，「複寫監視器」還可讓您執行一些工作，例如啟動和停止代理程式，以及驗證資料。  
   
 ## <a name="viewing-information-for-the-entire-topology"></a>檢視整個拓撲的資訊  
@@ -227,7 +227,7 @@ ms.locfileid: "76286915"
   
      此對話方塊可讓您變更設定檔的屬性、建立及刪除設定檔、指定預設設定檔，以及指定所有特定類型的代理程式 (如快照集代理程式) 都應該使用給定的設定檔。  
   
--   **\<AgentProfileName> 屬性**  
+-   **\<AgentProfileName>屬性**  
   
      此對話方塊可讓您檢視和編輯設定檔中的參數設定。  
   

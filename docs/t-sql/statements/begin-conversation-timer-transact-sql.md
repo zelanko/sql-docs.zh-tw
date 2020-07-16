@@ -32,12 +32,12 @@ helpviewer_keywords:
 ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d7b84efd22c7d5d240d041f7da408e6d84604448
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7143f1aee0047f00c0b21507f8b25290866f3faf
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895521"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86380901"
 ---
 # <a name="begin-conversation-timer-transact-sql"></a>BEGIN CONVERSATION TIMER (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -55,7 +55,9 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  BEGIN CONVERSATION TIMER **(** _conversation\_handle_ **)**  
  指定要計時的交談。 *conversation_handle* 必須是 **uniqueidentifier** 型別。  
   

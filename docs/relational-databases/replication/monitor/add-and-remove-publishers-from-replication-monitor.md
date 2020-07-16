@@ -14,15 +14,15 @@ ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8bd540f4fa1ba34fde5d804bae0b64e642a13237
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5b3b3eb54bb02491aab2491227748fdff2867124
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287737"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159976"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>從複寫監視器加入及移除發行者
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   從中啟動「複寫監視器」的伺服器會自動新增至監視器 (如果它是「發行者」)。 其他「發行者」可透過 **[加入發行者]** 對話方塊來新增。 在新增「發行者」之後，它會顯示在監視器左窗格的群組中。 依預設會包括 **[我的發行者]** 群組，但您可以建立新的群組來管理一個或多個複寫拓撲。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
 ### <a name="to-add-a-sql-server-publisher"></a>若要新增 SQL Server 發行者  

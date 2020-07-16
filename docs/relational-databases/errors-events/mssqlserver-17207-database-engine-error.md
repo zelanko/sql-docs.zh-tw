@@ -1,7 +1,7 @@
 ---
 title: MSSQLSERVER_17204 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/03/2020
+ms.date: 07/10/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: PijoCoder
 ms.author: mathoma
-ms.openlocfilehash: 362f907187d7fe738216ea2000f2a5c48eca7b5f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1c0c799af360e10780c35ba6848031fb5a4d6737
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85780783"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279613"
 ---
 # <a name="mssqlserver_17207"></a>MSSQLSERVER_17207
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -103,7 +103,7 @@ STREAMFCB::Startup: Operating system error 2(The system cannot find the file spe
         Impersonating: DomainName\UserName
         ```
   
-1. 如果您收到 ```The system cannot find the file specified``` OS 錯誤 = 3：
+1. 如果您收到 `The system cannot find the file specified` OS 錯誤 = 3：
    - 請檢閱錯誤訊息中的完整路徑。
    - 確定可從 Windows 檔案總管看見及存取磁碟機和資料夾路徑。
    - 檢閱 Windows 事件記錄檔，以找出此磁碟機是否有任何現有問題。
@@ -113,7 +113,7 @@ STREAMFCB::Startup: Operating system error 2(The system cannot find the file spe
      - 如果產生錯誤的檔案是交易記錄檔，請檢閱 [CREATE DATABASE (Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md) 主題的＜FOR ATTACH＞和＜FOR ATTACH_REBUILD_LOG＞小節底下的資訊，以了解如何重新建立遺失的交易記錄檔。
    - 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 嘗試存取任何磁碟或網路位置 [例如 iSCSI 磁碟] 上的資料庫檔案之前，請先確保這些位置是可供使用的。 如果必要，請在叢集系統管理員或服務控制管理員中建立必要的相依性。
 
-1. 如果您收到 ```The process cannot access the file because it is being used by another process``` 作業系統錯誤 = 32：
+1. 如果您收到 `The process cannot access the file because it is being used by another process` 作業系統錯誤 = 32：
    - 請使用來自 Windows Sysinternals 的 [Process Explorer](https://docs.microsoft.com/sysinternals/downloads/process-explorer) \(英文\) 或 [Handle](https://docs.microsoft.com/sysinternals/downloads/handle) \(英文\) 之類的工具，來找出是否有另一個處理序或服務已取得此資料庫檔案的獨佔鎖定。
    - 停止該處理序存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫檔案。 常見的範例包括防毒程式 (請參閱後續[知識庫文章](https://support.microsoft.com/help/309422/choosing-antivirus-software-for-computers-that-run-sql-server)中針對檔案排除的指導方針)。
    - 在叢集環境中，請確保來自先前擁有節點的 sqlservr.exe 處理序已確實釋放資料庫檔案的控制代碼。 雖然通常並不會發生此情況，但叢集或 I/O 路徑設定錯誤可能會導致這類問題。

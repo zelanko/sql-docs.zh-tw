@@ -18,15 +18,15 @@ ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: cdf335fe061bfd6c7c8646f87b6b4c1798243e9b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ac80080f663d43f9084932ca697970d50c9f307c
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288145"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159616"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>針對異動複寫測量延遲及驗證連接
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   本主題描述如何使用複寫監視器、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中測量延遲及驗證異動複寫的連接。 異動複寫具有追蹤 Token 功能，該功能會提供便利的方式來計算異動複寫拓撲中的延遲並驗證「發行者」、「散發者」及「訂閱者」之間的連接。 Token (即少量的資料) 會寫入發行集資料庫的交易記錄，會標示為典型的已複寫交易並且會透過系統傳送，它可允許計算：  
   
 -   在發行者端認可交易和在散發者端之散發資料庫插入對應的命令之間，所經過的時間。  

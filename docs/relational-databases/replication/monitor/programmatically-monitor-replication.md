@@ -30,15 +30,15 @@ ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: fbbf44a1efbb38bf81b027d2e3299d1e0a670db2
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 0a91efd6e7a7845243c75f1811417abdecc5fcb9
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807953"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159776"
 ---
 # <a name="programmatically-monitor-replication"></a>以程式設計方式監視複寫
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   「複寫監視器」是一個允許您監視複寫拓撲之全面健全狀況的圖形化工具。 您可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 複寫預存程序或 Replication Management Objects (RMO)，以程式設計的方式存取相同的監視資料。 這些物件可用來設計下列工作：  
   
 -   監視「發行者」、發行集和訂閱的狀態。  

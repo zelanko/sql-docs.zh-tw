@@ -17,15 +17,16 @@ helpviewer_keywords:
 ms.assetid: f88dac4b-efe0-47ed-9808-972a4381377e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cda016d7f8d1c671cf47faa930a89bce0944e4ba
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
+ms.openlocfilehash: d4683e635e6eb30d8ac628e55d109d0d81794764
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091822"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86301960"
 ---
 # <a name="alter-database-encryption-key-transact-sql"></a>ALTER DATABASE ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE [sql-pdw](../../includes/applies-to-version/sql-pdw.md)]
+[!INCLUDE [sql-asa-pdw](../../includes/applies-to-version/sql-asa-pdw.md)]
 
   改變用於以透明方式加密資料庫的加密金鑰和憑證。 如需透明資料庫加密的詳細資訊，請參閱[透明資料加密 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)。  
   
@@ -45,10 +46,13 @@ ALTER DATABASE ENCRYPTION KEY
         ASYMMETRIC KEY Encryptor_Name  
     }  
 [ ; ]  
-```  
+```
+  
+> [!Note]
+> [!INCLUDE [Synapse preview note](../../includes/synapse-preview-note.md)]
   
 ```syntaxsql
--- Syntax for Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 ALTER DATABASE ENCRYPTION KEY  
     {  
@@ -62,7 +66,9 @@ ALTER DATABASE ENCRYPTION KEY
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  REGENERATE WITH ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY }  
  指定用於加密金鑰的加密演算法。  
   

@@ -13,15 +13,15 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2a6e27fb84267c1de09a3812747b063050b944e9
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 35a7f19d04edc8cdcacbd9d41ec27ce3c91f6fd1
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807722"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279364"
 ---
 # <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>教學課程：使用 SSMS 提供安全記憶體保護區的 Always Encrypted
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 本教學課程將教導您如何開始使用[具有安全記憶體保護區的 Always Encrypted](encryption/always-encrypted-enclaves.md)。 它會顯示：
 - 如何建立基本環境來測試和評估具有安全記憶體保護區的 Always Encrypted。
