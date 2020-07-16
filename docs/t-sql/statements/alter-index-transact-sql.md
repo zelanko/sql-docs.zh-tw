@@ -46,14 +46,15 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8c9b9fb9b58cee42c11e821e940966f2acce498
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6c16150f2023a863bbdcbecb138cc7ff6053b26a
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000709"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381212"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   藉由停用、重建或重新組織索引或設定索引選項，修改現有的資料表或檢視表索引 (資料列存放區、資料行存放區或 XML)。  
@@ -173,6 +174,9 @@ ALTER INDEX { index_name | ALL }
 }  
   
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>引數
 
  *index_name*  
@@ -677,8 +681,8 @@ ALTER INDEX 無法用來重新進行索引的分割區，或將它移到另一�
   
 如果指定 ALL，且設定了資料列或頁面鎖定，便會將這些設定套用至所有索引上。 當基礎資料表是堆積時，會依照下列方式來套用設定：  
   
-|||  
-|-|-|  
+|選項|詳細資料|
+|------|-------|
 |ALLOW_ROW_LOCKS = ON 或 OFF|套用在堆積和任何相關聯的非叢集索引上。|  
 |ALLOW_PAGE_LOCKS = ON|套用在堆積和任何相關聯的非叢集索引上。|  
 |ALLOW_PAGE_LOCKS = OFF|完整套用在非叢集索引上。 這表示在非叢集索引上，不允許所有頁面鎖定。 在堆積上，不允許的鎖定只有頁面的共用 (S)、更新 (U) 和獨佔 (X) 鎖定。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 仍能取得意圖頁面鎖定 (IS、IU 或 IX)，供內部使用。|  
@@ -752,7 +756,7 @@ ALTER INDEX 無法用來重新進行索引的分割區，或將它移到另一�
   
 -   使用 ALTER INDEX ALL ... 時，您無法在資料表具有非對齊索引時變更單一分割區的壓縮設定。  
 -   ALTER INDEX \<index> ...REBUILD PARTITION ... 語法會重建此索引的指定分割區。  
--   ALTER INDEX \<index> ...REBUILD WITH ... 語法會重建此索引的所有分割區。  
+-   The ALTER INDEX \<index> ...REBUILD WITH ... 語法會重建此索引的所有分割區。  
   
 ## <a name="statistics"></a>統計資料  
  當您針對資料表執行 **ALTER INDEX ALL ...** 時，只會更新與索引相關聯的統計資料。 針對資料表 (而非索引) 所建立的自動或手動統計資料不會進行更新。  
