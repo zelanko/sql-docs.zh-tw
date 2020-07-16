@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: f01d6880-9800-4cfb-8d11-d4be21efc8ca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 53949b7fd1f937c8a2e816ac438f295fa95ebbf6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3baca278dfaa94c51dfddff84a8a5c760c1275ae
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735979"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381252"
 ---
 # <a name="alter-partition-scheme-transact-sql"></a>ALTER PARTITION SCHEME (Transact-SQL)
 
@@ -47,7 +47,10 @@ ALTER PARTITION SCHEME partition_scheme_name
 NEXT USED [ filegroup_name ] [ ; ]  
 ```  
   
-## <a name="arguments"></a>引數  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *partition_scheme_name*  
  這是要變更的資料分割結構描述名稱。  
   
