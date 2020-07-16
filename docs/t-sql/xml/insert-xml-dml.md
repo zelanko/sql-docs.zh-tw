@@ -1,5 +1,5 @@
 ---
-title: insert (XML DML) | Microsoft Docs
+title: insert (XML DML)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fc19088f8ee34202b5157015ac9ef71a8d24922c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 895fda87dd1c78744f7f95b334927940c76fdcd7
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731070"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393066"
 ---
 # <a name="insert-xml-dml"></a>insert (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,9 @@ insert
                 )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *Expression1*  
  識別一或多個要插入的節點。 這可以是固定的 XML 執行個體、修改方法套用所在之相同 XML 結構描述集合的具類型 XML 資料類型執行個體的參考、使用獨立 **sql:column()** /**sql:variable()** 函數之不具類型的 XML 資料類型執行個體，或是 XQuery 運算式。 運算式可產生節點、文字節點，或經過排序的節點序列。 它不能解析成根 (/) 節點。 如果運算式會產生一個值或值的序列，這些值會以單一文字節點插入，並以空格隔開序列中的每個值。 如果您指定多個節點做為常數，這些節點會以括號括住，並以逗點隔開。 您不能插入異質性序列，例如含有元素、屬性或值的序列。 如果 *Expression1* 解析成空的序列，則不會進行插入，也不會傳回錯誤。  
   

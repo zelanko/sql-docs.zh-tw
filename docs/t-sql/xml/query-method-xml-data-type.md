@@ -1,5 +1,5 @@
 ---
-title: query() 方法 (xml 資料類型) | Microsoft Docs
+title: query() 方法 (xml 資料類型)
 ms.custom: ''
 ms.date: 04/16/2020
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6e864e6c6b9b0d604d853fdcf11d07a18799c3d4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fa686b8cac90a783fa8286b739a6e88195fa8ba4
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893894"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393036"
 ---
 # <a name="query-method-xml-data-type"></a>query() 方法 (xml 資料類型)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,9 @@ ms.locfileid: "85893894"
 query ('XQuery')  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
 XQuery  
 是字串類型的 XQuery 運算式，可查詢 XML 執行個體中的項目和屬性等 XML 節點。  
   
@@ -41,9 +43,9 @@ XQuery
 此節提供一些使用 **xml** 資料類型的 query() 方法之範例。  
   
 ### <a name="a-using-the-query-method-against-an-xml-type-variable"></a>A. 針對 xml 類型變數使用 query() 方法  
-下列範例可宣告 **xml\@ 類型的** **myDoc** 變數並指派 XML 執行個體給它。 **query()** 方法可用以指定針對文件的 XQuery。  
+下列範例可宣告 **xml** 類型的 **\@myDoc** 變數並指派 XML 執行個體給它。 **query()** 方法可用以指定針對文件的 XQuery。  
   
-查詢會擷取 <`Features`> 元素的 <`ProductDescription`> 子元素：  
+查詢會擷取 <`ProductDescription`> 元素的 <`Features`> 子元素：  
   
 ```sql
 declare @myDoc xml  
@@ -86,7 +88,7 @@ declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-
   
 -   CatalogDescription 資料行是具類型的 **xml** 資料行，這表示它有與其建立關聯的結構描述集合。 在 [XQuery 初構](../../xquery/modules-and-prologs-xquery-prolog.md)中，**namespace** 關鍵字可定義稍後要用於查詢主體的前置詞。  
   
--   **query()** 方法會建構 XML、具有 `Product`ProductModelID **屬性的 <** > 元素，其中 **ProductModelID** 屬性值是從資料庫擷取而來。 如需 XML 建構的詳細資訊，請參閱 [XML 建構 &#40;XQuery&#41;](../../xquery/xml-construction-xquery.md)。  
+-   **query()** 方法會建構 XML、具有 **ProductModelID** 屬性的 <`Product`> 元素，其中 **ProductModelID** 屬性值是從資料庫擷取而來。 如需 XML 建構的詳細資訊，請參閱 [XML 建構 &#40;XQuery&#41;](../../xquery/xml-construction-xquery.md)。  
   
 -   WHERE 子句的 [exist() 方法 (XML 資料類型)](../../t-sql/xml/exist-method-xml-data-type.md) 只會尋找 XML 中包含 <`Warranty`> 項目的資料列。 同樣地，**namespace** 關鍵字可定義兩個命名空間的前置詞。  
   

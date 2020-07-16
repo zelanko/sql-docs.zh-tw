@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f47844d1eab39240c29041b930afe862e0c03728
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c1443f941f4399e0df24cd69ccc62040b06564ca
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767065"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391564"
 ---
 # <a name="create-search-property-list-transact-sql"></a>CREATE SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,9 @@ CREATE SEARCH PROPERTY LIST new_list_name
 ;  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *new_list_name*  
  這是新搜尋屬性清單的名稱。 *new_list_name* 是最多 128 個字元的識別碼。 *new_list_name* 在目前資料庫的所有屬性清單中必須是唯一的，且符合識別碼的規則。 在建立全文檢索索引時，會使用 *new_list_name*。  
   

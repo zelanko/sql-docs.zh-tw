@@ -1,5 +1,5 @@
 ---
-title: CREATE PROCEDURE (Transact-SQL) | Microsoft Docs
+title: CREATE PROCEDURE (Transact-SQL)
 ms.custom: ''
 ms.date: 09/06/2017
 ms.prod: sql
@@ -46,12 +46,12 @@ ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66ee4bfb4884fe649993eeefde51ea9c329ad696
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f0897e58e9d60ef8d53ce4d9be07fb5f1f3228c4
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010782"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392886"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 
@@ -141,6 +141,8 @@ AS { [ BEGIN ] sql_statement [;][ ,...n ] [ END ] }
 [;]
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>引數
 
 OR ALTER
@@ -215,7 +217,7 @@ ENCRYPTION
 
 使用這個選項建立的程序，不能發行為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫的一部分。
 
-EXECUTE AS 「子句」  指定執行程序時所在的資訊安全內容。
+EXECUTE AS 「子句」 指定執行程序時所在的資訊安全內容。
 
 針對原生編譯的預存程序，從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的 EXECUTE AS 子句均無限制。 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，SELF、OWNER 和 *'user_name'* 子句均支援原生編譯的預存程序。
 
@@ -401,13 +403,16 @@ CREATE PROCEDURE 陳述式無法在單一批次中，與其他 [!INCLUDE[tsql](.
 
 下列陳述式無法在預存程序主體中的任何位置使用。
 
-||||
-|-|-|-|
-|CREATE AGGREGATE|CREATE SCHEMA|SET SHOWPLAN_TEXT|
-|CREATE DEFAULT|CREATE 或 ALTER TRIGGER|SET SHOWPLAN_XML|
-|CREATE 或 ALTER FUNCTION|CREATE 或 ALTER VIEW|USE *database_name*|
-|CREATE 或 ALTER PROCEDURE|SET PARSEONLY||
-|CREATE RULE|SET SHOWPLAN_ALL||
+| CREATE | SET | USE |
+|--------|-----|-----|
+| CREATE AGGREGATE | SET SHOWPLAN_TEXT | USE *database_name*|
+| CREATE DEFAULT | SET SHOWPLAN_XML
+| CREATE RULE | SET PARSEONLY |
+| CREATE SCHEMA | SET SHOWPLAN_ALL |
+| CREATE 或 ALTER TRIGGER |
+| CREATE 或 ALTER FUNCTION |
+| CREATE 或 ALTER PROCEDURE |
+| CREATE 或 ALTER VIEW |
 
  程序可以參考尚未存在的資料表。 在建立時，只會執行語法檢查。 在第一次執行程序之前，不會編譯該程序。 只有在編譯期間才會解析程序中參考的所有物件。 因此，即使程序參考了不存在的資料表，仍可在語意正確的情況下順利建立；不過，如果參考的資料表不存在，該程序就會在執行階段時失敗。
 
@@ -659,7 +664,7 @@ SET @ComparePrice = @MaxPrice;
 GO
 ```
 
-執行 `uspGetList` 以傳回成本低於 `$700` 的 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 產品 (自行車) 清單。 您可以搭配流程控制語言使用 `OUTPUT` 參數 `@Cost` 和 `@ComparePrices`，以在 [訊息]  視窗中傳回訊息。
+執行 `uspGetList` 以傳回成本低於 `$700` 的 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 產品 (自行車) 清單。 您可以搭配流程控制語言使用 `OUTPUT` 參數 `@Cost` 和 `@ComparePrices`，以在 [訊息] 視窗中傳回訊息。
 
 > [!NOTE]
 > 建立程序以及使用變數時，都必須定義 OUTPUT 變數。 參數名稱與變數名稱不一定要相符；不過，除非使用 `@ListPrice` = *variable*，否則資料類型與參數定位必須相符。

@@ -1,5 +1,5 @@
 ---
-title: replace value of (XML DML) | Microsoft Docs
+title: replace value of (XML DML)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1269b119a6f8bdcfe14890a911a4dd6b0e618328
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 70ef0ec9f3cec26b7e0a55df770a3983d0d8594e
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731041"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393046"
 ---
 # <a name="replace-value-of-xml-dml"></a>replace value of (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ replace value of Expression1
 with Expression2  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
 *Expression1*  
 識別要更新的值節點。 它必須只識別一個節點。 也就是說，*Expression1* 必須是靜態單一的。 如果輸入 XML，節點類型必須是簡單類型。 如果選取多個節點，就會引發錯誤。 如果 *Expression1* 傳回空的序列，將不會發生值取代，而且也不會傳回錯誤。 *Expression1* 必須傳回單一項目，其具有簡單類型的內容 (清單或不可部分完成類型)、文字節點或屬性節點。 *Expression1* 不能是聯集類型、複雜類型、處理指示、文件節點或註解節點，否則會傳回錯誤。  
   

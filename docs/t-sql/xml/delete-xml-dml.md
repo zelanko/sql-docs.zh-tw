@@ -1,5 +1,5 @@
 ---
-title: delete (XML DML) | Microsoft Docs
+title: delete (XML DML)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b22c93a4-b84d-4356-af4c-6013322a4b71
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1e06e1679a8a416bbcdba8d1a2930ccd50f4ce74
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 340ad7968aeb31449f4b5200944ab591e08ae08b
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765647"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393096"
 ---
 # <a name="delete-xml-dml"></a>delete (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,9 @@ ms.locfileid: "85765647"
 delete Expression  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *運算式*  
  是一種 XQuery 運算式，可識別要刪除的節點。 會刪除運算式所選取的所有節點，以及選取節點內所包含的所有節點或值。 如 [insert (XML DML)](../../t-sql/xml/insert-xml-dml.md) 中所述，必須是文件中現有節點的參考。 它不能是建構節點。 運算式不可以是根 (/) 節點。 如果運算式傳回空白時序，就不會發生刪除，也不會傳回錯誤。  
   

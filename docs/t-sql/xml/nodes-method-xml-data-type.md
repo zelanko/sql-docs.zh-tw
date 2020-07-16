@@ -1,5 +1,5 @@
 ---
-title: nodes() 方法 (xml 資料類型) | Microsoft Docs
+title: nodes() 方法 (xml 資料類型)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 65cff00f57d98746c77b51c38ed426a14d1dd066
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ee5721f2fef1117f1f4d6da5664a644f32dadb92
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731050"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393056"
 ---
 # <a name="nodes-method-xml-data-type"></a>nodes() 方法 (xml 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,9 @@ ms.locfileid: "85731050"
 nodes (XQuery) as Table(Column)  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
 *XQuery*  
 是字串常值，一個 XQuery 運算式。 如果查詢運算式建構了節點，所建構的這些節點會公開在結果資料列集中。 如果查詢運算式的結果是空白序列，資料列集也會是空白。 如果查詢運算式以靜態方式產生了序列 (其中包含不可部分完成的值) 而不是產生節點，則會引發靜態錯誤。  
   

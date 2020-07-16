@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 0669b1d0-46cc-4fac-8df7-5f7fa7af5db4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 966bf472bddc213ee639d200818eb1c95181135e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ec2dac854349ad7e05fcbf9738b4cafb78228cc6
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767118"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392916"
 ---
 # <a name="create-fulltext-stoplist-transact-sql"></a>CREATE FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,8 +53,10 @@ CREATE FULLTEXT STOPLIST stoplist_name
 [ AUTHORIZATION owner_name ]  
 ;  
 ```  
-  
-## <a name="arguments"></a>引數  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *stoplist_name*  
  這是停用字詞表的名稱。 *stoplist_name* 最多可有 128 個字元。 *stoplist_name* 在目前資料庫的所有停用字詞表中必須是唯一的，而且必須符合識別碼的規則。  
   
