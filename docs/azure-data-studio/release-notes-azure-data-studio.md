@@ -8,17 +8,33 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 06/15/2020
-ms.openlocfilehash: 09b894fb6604c912bafaa0fc2856134fe970a721
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.date: 07/15/2020
+ms.openlocfilehash: 3f6766e32369c2002b6da7df62646572a4cf8507
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758410"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406251"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的版本資訊
 
 **[下載並安裝最新版本！](download.md)**
+
+## <a name="july-2020"></a>2020 年 7 月
+
+2020 年 7 月 15 日 &nbsp; / &nbsp; 版本：1.20.0
+
+&nbsp;
+
+| 變更 | 詳細資料 |
+| :----- | :------ |
+| 新增功能導覽 | 在歡迎頁面與命令選擇區中，使用者現在可以啟動功能導覽，以取得常用功能的逐步解說，包括連線 Viewlet、Notebooks Viewlet，以及延伸模組 Marketplace |
+| 新增 Notebook 功能 | &bull; &nbsp; Markdown 工具列中的標頭支援<br/> &bull; &nbsp; 文字資料格中的並排 Markdown 預覽
+| 在查詢編輯器中拖放資料行與資料表 | 使用者現在可以將資料行與資料表直接從連線 viewlet 拖放到查詢編輯器 |
+| Azure 帳戶圖示已新增至活動列) | 更容易探索以登入 Azure |
+| 已解決的 Bug 和問題 | 如需完整的修正清單，請參閱 [GitHub 上的 Bug 和問題](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22July+2020+Release%22+is%3Aclosed) \(英文\)。 |
+| &nbsp; | &nbsp; |
+
 
 ## <a name="june-2020"></a>2020 年 6 月
 
