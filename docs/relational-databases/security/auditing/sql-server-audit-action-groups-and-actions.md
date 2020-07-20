@@ -2,7 +2,7 @@
 title: SQL Server Audit 動作群組和動作 | Microsoft Docs
 description: 了解伺服器層級、資料庫層級和稽核層級的動作群組，以及 SQL Server Audit 中的個別動作。
 ms.custom: ''
-ms.date: 10/19/2016
+ms.date: 07/13/2020
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: vanto
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: DavidTrigano
 ms.author: datrigan
-ms.openlocfilehash: cd25caf80cffef2810139ce1a2ab63269e5ec6ad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 68943b7b57794d779656ca8537a7c59d4f486db8
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885602"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86301893"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server Audit 動作群組和動作
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -78,8 +78,8 @@ ms.locfileid: "85885602"
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|每當變更應用程式角色的密碼時，就會引發這個事件。 等於＜ [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md)＞。|  
 |AUDIT_CHANGE_GROUP|每當建立、修改或刪除稽核時，就會引發這個事件。 每當建立、修改或刪除任何稽核規格時，就會引發這個事件。 稽核的任何變更都會在該稽核中進行稽核。 等於＜ [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md)＞。|  
 |BACKUP_RESTORE_GROUP|每當發出備份或還原命令時，就會引發這個事件。 相當於 [Audit Backup 和 Restore 事件類別](../../../relational-databases/event-classes/audit-backup-and-restore-event-class.md)。|  
-|BATCH_COMPLETED_GROUP|每當任何批次文字、預存程序或交易管理作業完成執行時，就會引發這個事件。 此事件會如同從用戶端傳送一樣在執行前引發，且會稽核整個批次或預存程序文字。|  
-|BATCH_STARTED_GROUP|每當任何批次文字、預存程序或交易管理作業開始執行時，就會引發這個事件。 此事件會如同從用戶端傳送一樣在執行前引發，且會稽核整個批次或預存程序文字。|  
+|BATCH_COMPLETED_GROUP|每當任何批次文字、預存程序或交易管理作業完成執行時，就會引發這個事件。 此事件會如同從用戶端傳送一樣在執行前引發，且會稽核整個批次或預存程序文字。 **在 SQL Server 2019 中新增。**|  
+|BATCH_STARTED_GROUP|每當任何批次文字、預存程序或交易管理作業開始執行時，就會引發這個事件。 此事件會如同從用戶端傳送一樣在執行前引發，且會稽核整個批次或預存程序文字。 **在 SQL Server 2019 中新增。**|  
 |BROKER_LOGIN_GROUP|引發這個事件來報告與 Service Broker 傳輸安全性相關的稽核訊息。 等於＜ [Audit Broker Login Event Class](../../../relational-databases/event-classes/audit-broker-login-event-class.md)＞。|  
 |DATABASE_CHANGE_GROUP|當建立、改變或卸除資料庫時，就會引發這個事件。 每當建立、改變或卸除任何資料庫時，就會引發這個事件。 等於＜ [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md)＞。|  
 |DATABASE_LOGOUT_GROUP|當自主資料庫使用者登出資料庫時，就會引發這個事件。|  

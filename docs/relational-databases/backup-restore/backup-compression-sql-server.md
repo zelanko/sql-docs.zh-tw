@@ -2,7 +2,7 @@
 title: 備份壓縮 (SQL Server) | Microsoft Docs
 description: 了解 SQL Server 備份的壓縮，包括限制、效能取捨、備份壓縮設定以及壓縮比率。
 ms.custom: ''
-ms.date: 08/08/2016
+ms.date: 07/08/2020
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2111c5c96c808202369d0516755263283a4d08b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f3351a709eef1550ab172e90b61d2cb67673ba27
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728542"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196941"
 ---
 # <a name="backup-compression-sql-server"></a>備份壓縮 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -82,15 +82,24 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
   
      一般而言，如果某個頁面包含許多資料列，而且其中某個欄位包含相同的值，則系統可能會針對該值進行大幅壓縮。 反之，如果某個資料庫包含隨機資料或者每個頁面僅包含單一大型資料列，則壓縮的備份幾乎會與未壓縮的備份一樣大。  
   
--   資料是否經過加密。  
+-   資料是否經過加密  
   
-     加密資料的壓縮比大幅低於對等的未加密資料。 如果使用透明資料加密來加密整個資料庫，則壓縮備份可能不會大幅縮減其大小 (如果有的話)。  
-  
+     加密資料的壓縮比大幅低於對等的未加密資料。 例如，如果在資料行層級以 Always Encrypted 加密資料，或使用其他應用層級加密來加密資料，則壓縮備份可能不會明顯縮減大小。
+
+     如需壓縮以透明資料加密 (TDE) 加密的資料庫詳細資訊，請參閱[使用 TDE 備份壓縮](#backup-compression-with-tde)。
+
 -   資料庫是否經過壓縮。  
   
      如果資料庫已壓縮，壓縮備份可能不會大幅縮減其大小 (如果有的話)。  
-  
-  
+
+## <a name="backup-compression-with-tde"></a>使用 TDE 備份壓縮
+
+從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，設定**大於 65536 (64 KB)** 的 `MAXTRANSFERSIZE` 會針對[透明資料加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) 加密的資料庫啟用最佳化壓縮演算法，此演算法會先將頁面解密、將其壓縮，然後再次加密。 如果未指定 `MAXTRANSFERSIZE` 或使用了 `MAXTRANSFERSIZE = 65536` (64 KB)，則搭配 TDE 加密資料庫的備份壓縮就會直接壓縮已加密頁面，且可能不會產生良好的壓縮率。 如需詳細資訊，請參閱[適用於已啟用 TDE 之資料庫的備份壓縮](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/) \(英文\)。
+
+從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 開始，不再需要設定 `MAXTRANSFERSIZE` 來啟用搭配 TDE 的這個最佳化壓縮演算法。 如果備份命令指定了 `WITH COMPRESSION`，或 *backup compression default* 伺服器組態設為 1，則 `MAXTRANSFERSIZE` 會自動增加至 128K，以啟用最佳化演算法。 如果在備份命令上指定了值大於 64K 的 `MAXTRANSFERSIZE`，則會接受提供的值。 換句話說，SQL Server 永遠不會自動降低值，其只會增加。 如果需要使用 `MAXTRANSFERSIZE = 65536` 備份 TDE 加密的資料庫，則必須指定 `WITH NO_COMPRESSION`，或確定 *backup compression default* 伺服器組態設為 0。
+
+如需詳細資訊，請參閱 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)。
+
 ##  <a name="allocation-of-space-for-the-backup-file"></a><a name="Allocation"></a> 配置備份檔案的空間  
  對於壓縮備份，最後備份檔案的大小取決於資料可壓縮的程度，但是在備份作業完成之前，無法得知這項資訊。  因此，根據預設，使用壓縮備份資料庫時，Database Engine 會針對備份檔案使用預先配置的演算法。 此演算法預先為備份檔案配置了預先定義的資料庫大小百分比。 如果在備份作業期間需要更多空間，Database Engine 會增加檔案大小。 如果最後的大小小於配置的空間，在備份作業結束時，Database Engine 會將檔案縮小為最後的實際備份大小。  
   

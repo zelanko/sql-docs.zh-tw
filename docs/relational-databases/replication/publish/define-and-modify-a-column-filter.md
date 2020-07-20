@@ -16,15 +16,15 @@ ms.assetid: d7c3186a-9a8c-45d8-ab34-05beec4c26dd
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: efda97d51b3cbbe5137c89405c3534f48027a633
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c711285e4b51876548934c41030e154a81fcf4a6
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286365"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159606"
 ---
 # <a name="define-and-modify-a-column-filter"></a>定義及修改資料行篩選
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中定義及修改資料行篩選。  
   
  **本主題內容**  
@@ -35,7 +35,7 @@ ms.locfileid: "76286365"
   
 -   **若要定義及修改資料行篩選，請使用：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "76286365"
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  在「新增發行集精靈」的 **[發行項]** 頁面中定義資料行篩選。 如需使用「新增發行集精靈」的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)。  
   
- 在 [發行集屬性 - \<發行集>] 對話方塊的 [發行項] 頁面上定義及修改資料行篩選。 如需發行集和發行項屬性的詳細資訊，請參閱[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 在 [發行集屬性 - \<Publication>] 對話方塊的 [發行項] 頁面上定義及修改資料行篩選。 如需發行集和發行項屬性的詳細資訊，請參閱[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-define-a-column-filter"></a>若要定義資料行篩選  
   
@@ -58,7 +58,7 @@ ms.locfileid: "76286365"
   
 #### <a name="to-modify-column-filtering"></a>若要修改資料行篩選  
   
-1.  在 [發行集屬性 - \<發行集>] 對話方塊的 [發行項] 頁面中，展開要在 [發行的物件] 窗格中篩選的資料表。  
+1.  在 [發行集屬性 - \<Publication>] 對話方塊的 [發行項] 頁面中，展開要在 [發行的物件] 窗格中篩選的資料表。  
   
 2.  清除每個您要篩選之資料行旁邊的核取方塊，並確保為每個應包含在發行項中的資料行選取核取方塊。  
   

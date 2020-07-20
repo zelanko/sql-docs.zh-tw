@@ -33,14 +33,15 @@ ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3c9b007bd8714814cedeb33c78684f82bd6dd1e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: be4e5d401bd9269c3cedc0264648423259b7d948
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003429"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197441"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 DBCC SHOW_STATISTICS 會針對資料表或索引檢視表顯示目前的查詢最佳化統計資料。 查詢最佳化工具會使用統計資料來預估基數或查詢結果中的資料列數，如此可讓查詢最佳化工具建立高品質的查詢計畫。 例如，查詢最佳化工具可使用基數預估來選擇查詢計畫中的索引搜尋運算子，而不是索引掃描運算子，避免發生資源密集的索引掃描來提高查詢效能。
@@ -53,8 +54,8 @@ DBCC SHOW_STATISTICS 會根據儲存在統計資料物件中的資料來顯示�
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
-## <a name="syntax"></a>語法  
-  
+## <a name="syntax"></a>語法
+
 ```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
@@ -69,10 +70,13 @@ DBCC SHOW_STATISTICS ( table_or_indexed_view_name , target )
 
 DBCC SHOW_STATISTICS ( table_name , target )   
     [ WITH {STAT_HEADER | DENSITY_VECTOR | HISTOGRAM } [ ,...n ] ]  
-[;]  
-```  
-  
-## <a name="arguments"></a>引數  
+[;]
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
+
  *table_or_indexed_view_name*  
  要顯示統計資料資訊之資料表或索引檢視表的名稱。  
   
@@ -80,18 +84,18 @@ DBCC SHOW_STATISTICS ( table_name , target )
  包含要顯示之統計資料的資料表名稱。 資料表不得為外部資料表。  
   
  *目標*  
- 要顯示統計資料資訊之索引、統計資料或資料行的名稱。 「目標」  以括號、單引號、雙引號括住，或是沒有引號。 如果「目標」  是資料表或索引檢視表上現有索引或統計資料的名稱，便會傳回這個目標的相關統計資料資訊。 如果「目標」  是現有資料行的名稱，而且這個資料行含有自動建立的統計資料，便會傳回自動建立之統計資料的相關資訊。 如果資料行目標之自動建立的統計資料不存在，就會傳回錯誤訊息 2767。  
- 在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中，「目標」  不可以是資料行名稱。  
+ 要顯示統計資料資訊之索引、統計資料或資料行的名稱。 「目標」以括號、單引號、雙引號括住，或是沒有引號。 如果「目標」是資料表或索引檢視表上現有索引或統計資料的名稱，便會傳回這個目標的相關統計資料資訊。 如果「目標」是現有資料行的名稱，而且這個資料行含有自動建立的統計資料，便會傳回自動建立之統計資料的相關資訊。 如果資料行目標之自動建立的統計資料不存在，就會傳回錯誤訊息 2767。  
+ 在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中，「目標」不可以是資料行名稱。  
   
  NO_INFOMSGS  
  抑制所有嚴重性層級在 0 到 10 的參考用訊息。  
   
- STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,** _n_ ]  
- 如果指定其中一或多個選項，就會限制陳述式針對指定之選項所傳回的結果集。 如果沒有指定任何選項，便會傳回所有的統計資料資訊。  
-  
+ STAT_HEADER \| DENSITY_VECTOR \| HISTOGRAM \| STATS_STREAM [ **,** _n_ ] 如果指定其中一或多個選項，即會限制陳述式針對指定選項所傳回的結果集。 如果沒有指定任何選項，便會傳回所有的統計資料資訊。  
+
  STATS_STREAM 是 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-## <a name="result-sets"></a>結果集  
+## <a name="result-sets"></a>結果集
+
 下表描述指定 STAT_HEADER 時，結果集所傳回的資料行。
   
 |資料行名稱|描述|  
@@ -101,7 +105,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 |資料列|上一次更新統計資料時位於資料表或索引檢視表中的資料列總數。 如果篩選了統計資料或是統計資料對應至篩選過的索引，此資料列數可能會少於資料表中的資料列數。 如需詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。|  
 |取樣的資料列|針對統計資料計算進行取樣的資料列總數。 如果取樣的資料列數 < 資料列數，顯示的長條圖和密度結果將會是根據取樣資料列數的預估值。|  
 |步驟|長條圖中的步驟數。 每一個步驟都會跨越某個範圍的資料行值，後面緊接著上限資料行值。 長條圖步驟會在統計資料中的第一個索引鍵資料行上定義。 步驟數的最大值為 200。|  
-|密度|針對統計資料物件第一個索引鍵資料行中的所有值，計算為 1 / 相異值  ，不包括長條圖界限值。 查詢最佳化工具不會使用這個 Density 值，而且會針對與 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前版本之間的回溯相容性顯示。|  
+|密度|針對統計資料物件第一個索引鍵資料行中的所有值，計算為 1 / 相異值，不包括長條圖界限值。 查詢最佳化工具不會使用這個 Density 值，而且會針對與 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前版本之間的回溯相容性顯示。|  
 |平均索引鍵長度|針對統計資料物件中的所有索引鍵資料行計算之每個值的平均位元組數。|  
 |String Index|Yes 表示統計資料物件包含了字串摘要統計資料來改善使用 LIKE 運算子之查詢述詞的基數預估，例如 `WHERE ProductName LIKE '%Bike'`。 字串摘要統計資料會與長條圖分開儲存，而且會在具有 **char**、**varchar**、**nchar**、**nvarchar**、**varchar(max)** 、**nvarchar(max)** 、**text** 或 **ntext** 類型時於統計資料物件的第一個索引鍵資料行上建立。|  
 |篩選運算式|包含在統計資料物件中之資料表資料列子集的述詞。 NULL = 非篩選的統計資料。 如需篩選述詞的詳細資訊，請參閱[建立篩選的索引](../../relational-databases/indexes/create-filtered-indexes.md)。 如需已篩選統計資料的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。|  
@@ -112,7 +116,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 |資料行名稱|描述|  
 |-----------------|-----------------|  
-|所有密度|密度是 1 / 相異值  。 結果會針對統計資料物件中資料行的每個前置詞來顯示密度，一個密度一個資料列。 相異值是每個資料列和每個資料行前置詞的資料行值相異清單。 例如，如果統計資料物件包含索引鍵資料行 (A, B, C)，結果就會報告每一個資料行前置詞中相異值清單的密度：(A)、(A,B) 和 (A, B, C)。 使用前置詞 (A, B, C) 時，這些清單的每一個都會是相異值清單：(3, 5, 6)、(4, 4, 6)、(4, 5, 6)、(4, 5, 7)。 使用前置詞 (A, B) 時，相同的資料行值都會有這些相異值清單：(3, 5)、(4, 4) 和 (4, 5)|  
+|所有密度|密度是 1 / 相異值。 結果會針對統計資料物件中資料行的每個前置詞來顯示密度，一個密度一個資料列。 相異值是每個資料列和每個資料行前置詞的資料行值相異清單。 例如，如果統計資料物件包含索引鍵資料行 (A, B, C)，結果就會報告每一個資料行前置詞中相異值清單的密度：(A)、(A,B) 和 (A, B, C)。 使用前置詞 (A, B, C) 時，這些清單的每一個都會是相異值清單：(3, 5, 6)、(4, 4, 6)、(4, 5, 6)、(4, 5, 7)。 使用前置詞 (A, B) 時，相同的資料行值都會有這些相異值清單：(3, 5)、(4, 4) 和 (4, 5)|  
 |平均長度|平均長度 (以位元組為單位)，用來儲存資料行前置詞的資料行值清單。 例如，如果清單 (3, 5, 6) 中的每一個值都需要 4 位元組，長度就是 12 位元組。|  
 |資料行|在前置詞中顯示 All density 和 Average length 的資料行名稱。|  
   
@@ -128,16 +132,17 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 ## <a name="remarks"></a><a name="Remarks"></a> 備註 
 
-統計資料更新日期儲存在[統計資料 Blob 物件](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)中，其中還有[長條圖](#histogram)和[密度向量](#density)，不是儲存在中繼資料中。 如果沒有讀取資料以產生統計資料，則不會建立統計 Blob、沒有日期，且「已更新」  資料行為 NULL。 這是已篩選統計資料的情況，其中述詞未傳回任何資料列，或為新的空白資料表的情況。
+統計資料更新日期儲存在[統計資料 Blob 物件](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)中，其中還有[長條圖](#histogram)和[密度向量](#density)，不是儲存在中繼資料中。 如果沒有讀取資料以產生統計資料，則不會建立統計 Blob、沒有日期，且「已更新」資料行為 NULL。 這是已篩選統計資料的情況，其中述詞未傳回任何資料列，或為新的空白資料表的情況。
   
-## <a name="histogram"></a><a name="histogram"></a> 長條圖  
+## <a name="histogram"></a><a name="histogram"></a> 長條圖
+
 長條圖會測量資料集中每一個相異值的發生頻率。 查詢最佳化工具會計算有關統計資料物件之第一個索引鍵資料行中資料行值的長條圖，以統計方式取樣資料列或執行資料表或檢視表中所有資料列的完整掃描來選取資料行值。 如果長條圖是從一組取樣的資料列所建立，資料列數和相異值數的儲存總計會是預估值，而且不需要為整數。
   
 若要建立長條圖，查詢最佳化工具會排序資料行值、計算符合每一個相異資料行值的值數目，然後將資料行值彙總成最多 200 個連續長條圖步驟。 每一個步驟都包含某個範圍的資料行值，後面緊接著上限資料行值。 此範圍包括界限值之間的所有可能資料行值，但是不包括界限值本身。 最低的已排序資料行值就是第一個長條圖步驟的上限值。
   
 下列長條圖顯示包含六個步驟的長條圖。 第一個上限值左側的區域就是第一個步驟。
   
-![](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")
+![長條圖](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")
   
 每一個長條圖步驟：
 -   粗線代表上限值 (RANGE_HI_KEY) 以及其所發生的次數 (EQ_ROWS)  

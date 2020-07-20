@@ -11,12 +11,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 5e732d55daa55a8a3abc171ead7b7b1e87e92992
-ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
+ms.openlocfilehash: 9e50701d0486ee7bc00bf765d2a71cb4de0c0b25
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84203555"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196166"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>對 PolyBase Kerberos 的連線問題進行疑難排解
 
@@ -52,7 +52,7 @@ ms.locfileid: "84203555"
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 回到 KDC，傳回 TGT，然後要求 ST 以存取該特定的受保護資源。 受保護服務的私密金鑰會用來為 ST 加密。
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將 ST 轉送至 Hadoop，並完成驗證以對該服務建立工作階段。
 
-![](./media/polybase-sqlserver.png)
+![Polybase SQL Server](./media/polybase-sqlserver.png)
 
 驗證問題會歸類至一或多個上述步驟中。 為了協助加快偵錯流程，PolyBase 引入了整合式診斷工具，能夠協助識別失敗點。
 

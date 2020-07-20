@@ -1,5 +1,5 @@
 ---
-title: CREATE SERVER AUDIT (Transact-SQL) | Microsoft Docs
+title: CREATE SERVER AUDIT (Transact-SQL)
 ms.custom: ''
 ms.date: 01/07/2019
 ms.prod: sql
@@ -22,14 +22,15 @@ ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 6a1ca0be2ca87754dc753b7ceb8721ad7da29691
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d16fcf886e074fb71a148a7f36741c1c7f0a3f74
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767019"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392936"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 來建立伺服器稽核物件。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
@@ -73,8 +74,10 @@ CREATE SERVER AUDIT audit_name
     event_field_name { = | < > | ! = | > | > = | < | < = | LIKE } { number | ' string ' }  
 ```  
   
-## <a name="arguments"></a>引數  
- TO { FILE | APPLICATION_LOG | SECURITY_LOG | URL | EXTERNAL_MONITOR } 會決定稽核目標的位置。 選項有二進位檔案、Windows 應用程式記錄檔或 Windows 安全性記錄檔。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就無法寫入 Windows 安全性記錄檔。 如需詳細資訊，請參閱 [將 SQL Server Audit 事件寫入安全性記錄檔](../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)。  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
+ TO { FILE \| APPLICATION_LOG \| SECURITY_LOG \| URL \| EXTERNAL_MONITOR } 決定稽核目標的位置。 選項有二進位檔案、Windows 應用程式記錄檔或 Windows 安全性記錄檔。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就無法寫入 Windows 安全性記錄檔。 如需詳細資訊，請參閱 [將 SQL Server Audit 事件寫入安全性記錄檔](../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)。  
 
 > [!IMPORTANT]
 > 在 Azure SQL Database 受控執行個體中，SQL 稽核會在伺服器層級執行。 位置只能是 `URL` 或 `EXTERNAL_MONITOR`。

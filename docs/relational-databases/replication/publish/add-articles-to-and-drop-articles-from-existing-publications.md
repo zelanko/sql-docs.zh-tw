@@ -21,15 +21,15 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1bd5e9d25a2f45718e7ac03de1edced942702198
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4bfaa32b87c5e7cffa60f3eef9d5b20ae85a747e
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286523"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159916"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>在現有發行集中加入和卸除發行項
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   建立發行集後，可以新增或卸除發行項。 發行項可以隨時新增，但卸除發行項所需的動作取決於複寫的類型以及卸除發行項的時機。  
   
 ## <a name="adding-articles"></a>加入發行項  
@@ -59,7 +59,7 @@ ms.locfileid: "76286523"
 ## <a name="dropping-articles"></a>卸除發行項  
  發行項可以隨時從發行集中卸除，但必須考慮下列行為：  
   
--   從發行集中卸除發行項不會從發行集資料庫中移除物件，或從訂閱資料庫中移除對應物件。 必要時請使用 DROP \<物件> 來移除這些物件。 透過外部索引鍵條件約束來卸除與其他已發行之發行項相關的發行項時，建議您手動或使用視需要的指令碼執行在訂閱者端卸除資料表：指定包含適當的 DROP \<物件> 陳述式的指令碼。 如需詳細資訊，請參閱[在同步處理期間執行指令碼 &#40;複寫 Transact-SQL 程式設計&#41;](../../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)。  
+-   從發行集中卸除發行項不會從發行集資料庫中移除物件，或從訂閱資料庫中移除對應物件。 必要時請使用 DROP \<Object> 來移除這些物件。 透過外部索引鍵條件約束卸除與其他已發佈發行項相關的發行項時，建議手動卸除訂閱者端的資料表，或執行視需要的指令碼：指定包含適當 DROP \<Object> 陳述式的指令碼。 如需詳細資訊，請參閱[在同步處理期間執行指令碼 &#40;複寫 Transact-SQL 程式設計&#41;](../../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)。  
   
 -   如果合併式發行集的相容性層級為 90RTM 或更高，可以隨時卸除發行項，但需要一個新快照集。 此外：  
   

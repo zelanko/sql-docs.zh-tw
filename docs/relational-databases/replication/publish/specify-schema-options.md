@@ -16,15 +16,15 @@ ms.assetid: 1f85a479-bd6e-4023-abf7-7435a7e5b567
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1ce8df82856f7a6a495fdd026dec0d46eaba4c89
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a035d525492c1a99e7df28a13fcbd26a2fbbbdd2
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287521"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159526"
 ---
 # <a name="specify-schema-options-for-sql-server-replication"></a>指定 SQL Server 複寫的結構描述選項
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中指定結構描述選項。 當您發行資料表或檢視表時，您可以控制針對發行之物件複寫的物件建立選項。 您可以在建立發行項時設定這些選項，而且也可以在之後變更這些選項。 如果您不明確針對發行項指定這些選項，將會定義一組預設選項。  
   
 > [!NOTE]  
@@ -40,7 +40,7 @@ ms.locfileid: "76287521"
   
 -   **若要指定結構描述選項，請使用：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -55,26 +55,26 @@ ms.locfileid: "76287521"
 -   如需結構描述選項的完整清單，請參閱 [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 和 [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 的 `@schema_option` 參數。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 在 [發行項屬性 - \<發行項>] 對話方塊的 [屬性] 索引標籤上指定結構描述選項，例如是否將條件約束與觸發程序複製至訂閱者。 [新增發行集精靈] 與 [發行集屬性 - \<發行集>] 對話方塊中都有提供此索引標籤。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)和[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 在 [發行項屬性 - \<Article>] 對話方塊的 [屬性] 索引標籤上指定結構描述選項，例如是否將條件約束與觸發程序複製至訂閱者。 [新增發行集精靈] 與 [發行集屬性 - \<Publication>] 對話方塊中都有提供此索引標籤。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)和[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-specify-schema-options"></a>若要指定結構描述選項  
   
-1.  在 [新增發行集精靈] 的 [發行項] 頁面上，或是在 [發行集屬性 - \<發行集>] 對話方塊中，選取一個發行項，然後按一下 [發行項屬性]。  
+1.  在 [新增發行集精靈] 的 [發行項] 頁面上，或在 [發行集屬性 - \<Publication>] 對話方塊中，選取一個發行項，然後按一下 [發行項屬性]。  
   
 2.  選取哪些結構描述選項變更應套用至：  
   
-    -   按一下 [設定反白顯示 \<物件類型> 發行項的屬性]  啟動 [發行項屬性 - \<物件名稱>] 對話方塊；在這個對話方塊中所做的屬性變更，只會套用至 [發行項] 頁面的物件窗格中反白顯示的物件。  
+    -   按一下 [設定醒目提示 \<ObjectType> 發行項的屬性]，以啟動 [發行項屬性 - \<ObjectName>] 對話方塊；在這個對話方塊中所做屬性變更只會套用至 [發行項] 頁面上物件窗格中醒目提示的物件。  
   
-    -   按一下 [設定所有 \<物件類型> 發行項的屬性] 啟動 [所有 \<物件類型> 發行項的屬性] 對話方塊；在這個對話方塊中所做的屬性變更，會套用至 [發行項] 頁面的物件窗格中屬於該類型的所有物件，包括尚未選取發行的物件。  
+    -   按一下 [設定所有 \<ObjectType> 發行項的屬性] 以啟動 [所有 \<ObjectType> 發行項的屬性] 對話方塊；在這個對話方塊中所做屬性變更會套用至 [發行項] 頁面上物件窗格中屬於該類型的所有物件，包括尚未選取發行的物件。  
   
         > [!NOTE]  
-        >  在 [所有 \<物件類型> 發行項的屬性] 對話方塊中所做的屬性變更，會覆寫之前在 [發行項屬性 - \<物件名稱>] 對話方塊中所做的任何變更。 例如，若要設定所有屬於某物件類型之發行項的一些預設值，但同時要設定個別物件的某些屬性，則請先設定所有發行項的預設值， 然後再設定個別物件的屬性。  
+        >  在 [所有 \<ObjectType> 發行項的屬性] 對話方塊中所做屬性變更，會覆寫先前在 [發行項屬性 - \<ObjectName>] 對話方塊中所做的任何變更。 例如，若要設定所有屬於某物件類型之發行項的一些預設值，但同時要設定個別物件的某些屬性，則請先設定所有發行項的預設值， 然後再設定個別物件的屬性。  
   
-3.  在 [發行項屬性 - \<發行項>] 對話方塊之 [屬性] 索引標籤的 [將物件與設定複製到訂閱者] 與 [目的地物件] 區段中，指定選項的值。  
+3.  在 [發行項屬性 - \<Article>] 對話方塊其 [屬性] 索引標籤的 [複製物件和設定到訂閱者] 與 [目的地物件] 區段中，指定選項的值。  
   
 4.  必要時修改任何屬性，然後按一下 **[確定]** 。  
   
-5.  如果您在 [發行集屬性 - \<發行集>] 對話方塊中，請按一下 [確定] 以儲存並關閉對話方塊。  
+5.  如果位於 [發行集屬性 - \<Publication>] 對話方塊中，請按一下 [確定] 以儲存並關閉對話方塊。  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  結構描述選項會指定為十六進位值，這個值是一個或多個選項的 [| (Bitwise OR)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) 結果。 如需詳細資訊，請參閱＜ [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) ＞和＜ [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)＞。  

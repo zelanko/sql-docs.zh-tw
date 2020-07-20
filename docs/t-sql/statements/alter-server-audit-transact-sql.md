@@ -20,12 +20,12 @@ ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: ac2182dd3878f5b61ed4ae1fea6b2f2851f8c129
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8f61833c4c532056d7af9980360e04e9d124854d
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735987"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381292"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT  (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -73,9 +73,11 @@ ALTER SERVER AUDIT audit_name
 <predicate_factor>::=   
     event_field_name { = | < > | ! = | > | > = | < | < = } { number | ' string ' }  
 ```  
-  
-## <a name="arguments"></a>引數  
- TO { FILE | APPLICATION_LOG | SECURITY |URL}  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
+ TO { FILE \| APPLICATION_LOG \| SECURITY \|URL}  
  判斷稽核目標的位置。 選項有二進位檔案、Windows 應用程式記錄檔或 Windows 安全性記錄檔。  
 
 > [!IMPORTANT]
@@ -107,7 +109,7 @@ ALTER SERVER AUDIT audit_name
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作業繼續進行。 系統不會保留稽核記錄。 稽核會繼續嘗試記錄事件，而且如果失敗狀況已解決，就會恢復稽核。 選取繼續選項會允許可能違反安全性原則的未稽核活動。 當繼續進行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 作業比維持完整稽核更重要時，請使用此選項。  
   
 SHUTDOWN  
-如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 因為任何原因無法將資料寫入稽核目標，則會強制關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 執行 `ALTER` 陳述式的登入在 `SHUTDOWN` 內必須擁有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 權限。 即使稍後已從執行中的登入撤銷 `SHUTDOWN` 權限，關閉的行為仍會持續。 如果使用者沒有此權限，則陳述式將會失敗，且將不會修改稽核。 當稽核失敗可能危害系統的安全性或完整性時，請使用此選項。 如需詳細資訊，請參閱 [SHUTDOWN](../../t-sql/language-elements/shutdown-transact-sql.md)。 
+如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 因為任何原因無法將資料寫入稽核目標，則會強制關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 執行 `ALTER` 陳述式的登入在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內必須擁有 `SHUTDOWN` 權限。 即使稍後已從執行中的登入撤銷 `SHUTDOWN` 權限，關閉的行為仍會持續。 如果使用者沒有此權限，則陳述式將會失敗，且將不會修改稽核。 當稽核失敗可能危害系統的安全性或完整性時，請使用此選項。 如需詳細資訊，請參閱 [SHUTDOWN](../../t-sql/language-elements/shutdown-transact-sql.md)。 
   
  FAIL_OPERATION  
  如果資料庫動作導致稽核的事件，這些動作就會失敗。 雖然不會導致稽核事件的動作可繼續進行，不過也無法發生稽核的事件。 稽核會繼續嘗試記錄事件，而且如果失敗狀況已解決，就會恢復稽核。 當維持完整稽核比 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的完整存取權更重要時，請使用此選項。  

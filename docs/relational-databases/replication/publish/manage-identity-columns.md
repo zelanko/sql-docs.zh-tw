@@ -17,15 +17,15 @@ ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ee2425a5b2ff846e37dfe6acb06d8b26b54fd7da
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 137a7d29806baf4eee6a4380338f1bb383119f40
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287621"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159886"
 ---
 # <a name="manage-identity-columns"></a>管理識別欄位
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中管理識別欄位。 當訂閱者插入複寫回發行者時，必須管理識別欄位，以免在訂閱者和發行者上指派相同的識別值。 複寫可以自動管理識別範圍，或者您可以選擇手動處理識別範圍管理。  如需複寫提供之識別範圍管理選項的詳細資訊，請參閱[複寫識別欄位](../../../relational-databases/replication/publish/replicate-identity-columns.md)。  
   
  **本主題內容**  
@@ -36,7 +36,7 @@ ms.locfileid: "76287621"
   
 -   **若要管理識別欄位，請使用：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -49,13 +49,13 @@ ms.locfileid: "76287621"
 -   若要建立可用於多個資料表中或可在不參考任何資料表的情況下從應用程式進行呼叫的自動遞增數字，請參閱 [序號](../../../relational-databases/sequence-numbers/sequence-numbers.md)。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 在 [新增發行集精靈] 的 [發行項屬性 - \<發行項>] 對話方塊的 [屬性] 索引標籤上，指定識別欄位管理選項。 如需使用此精靈的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)。 在「新增發行集精靈」中：  
+ 在 [新增發行集精靈] 的 [發行項屬性 - \<Article>] 對話方塊的 [屬性] 索引標籤上，指定識別欄位管理選項。 如需使用此精靈的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)。 在「新增發行集精靈」中：  
   
 -   如果在 **[發行集類型]** 頁面中選取 **[合併式發行集]** 或 **[具更新訂閱的交易式發行集]** ，請選取自動或手動識別範圍管理 (依預設為自動，建議使用)。 發行資料表後，將無法修改其屬性，但是可以修改其他相關屬性。  
   
 -   如果選取其他發行集類型，應將識別範圍管理設定為手動。  
   
- 在 [發行項屬性 - \<發行項>] 對話方塊的 [屬性] 索引標籤上修改識別範圍和臨界值，其可於 [發行集屬性 - \<發行集>] 對話方塊中提供。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。  
+ 在 [發行項屬性 - \<Article>] 的 [屬性] 索引標籤上修改識別範圍和閾值，其可於 [發行集屬性 - \<Publication>] 對話方塊中取得。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。  
   
 #### <a name="to-specify-an-identity-column-management-option"></a>若要指定識別欄位管理選項  
   
@@ -65,7 +65,7 @@ ms.locfileid: "76287621"
   
 3.  按一下 **[發行項屬性]** ，然後按一下 **[設定反白顯示資料表發行項的屬性]** 。  
   
-4.  在 [發行項屬性 - \<發行項>] 對話方塊的 [屬性] 索引標籤上，於 [識別範圍管理] 區段中，將 [自動管理識別範圍] 屬性設定為 [自動] 或 [手動] (針對執行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更新版本的發行者) 或是 [True] 或 [False] (針對執行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本的發行者)。  
+4.  在 [發行項屬性 - \<Article>] 對話方塊的 [屬性] 索引標籤上，於 [識別範圍管理] 區段中，將 [自動管理識別範圍] 屬性設定為 [自動] 或 [手動] (針對執行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更新版本的發行者) 或是 [True] 或 [False] (針對執行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本的發行者)。  
   
 5.  如果在步驟 4 中選取了 **[自動]** 或 **[True]** ，請在下表中輸入選項的值。 如需如何使用這些設定的詳細資訊，請參閱[複寫識別欄位](../../../relational-databases/replication/publish/replicate-identity-columns.md)中的＜指派識別範圍＞一節。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "76287621"
     |------------|-----------|-----------------|  
     |**發行者範圍大小**|範圍大小的整數值 (例如 20000)。|請參閱[複寫識別欄位](../../../relational-databases/replication/publish/replicate-identity-columns.md)中的＜指派識別範圍＞一節。|  
     |**訂閱者範圍大小**|範圍大小的整數值 (例如 10000)。|請參閱[複寫識別欄位](../../../relational-databases/replication/publish/replicate-identity-columns.md)中的＜指派識別範圍＞一節。|  
-    |**範圍臨界值百分比**|臨界值百分比的整數值 (例如 90 相當於 90%)。|指派新的識別範圍之前，節點處所用的識別值總計百分比。<br /><br /> <br /><br /> 注意：必須指定這個值，但只能由下列人員使用：使用佇列更新訂閱的訂閱者；以及執行 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 或其他舊版 SQL Server 之合併式發行集的訂閱者。 如需詳細資訊，請參閱[複寫識別欄位](../../../relational-databases/replication/publish/replicate-identity-columns.md)中的＜指派識別範圍＞一節。|  
+    |**範圍臨界值百分比**|臨界值百分比的整數值 (例如 90 相當於 90%)。|指派新的識別範圍之前，節點處所用的識別值總計百分比。<br /><br /> <br /><br /> 注意:必須指定這個值，但該值只能由下列人員使用：使用佇列更新訂閱的訂閱者；以及執行 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 或其他舊版 SQL Server 合併式發行集的訂閱者。 如需詳細資訊，請參閱[複寫識別欄位](../../../relational-databases/replication/publish/replicate-identity-columns.md)中的＜指派識別範圍＞一節。|  
     |**[下一個範圍起始值]**|整數值。 唯讀。|下一個範圍的開始值。 例如，如果目前範圍是 5001-6000，則該值為 6001。|  
     |**[最大識別值]**|整數值。 唯讀。|識別欄位的最大值。 由資料行的基底資料型別決定。|  
     |**[遞增]**|整數值。 唯讀。|每次插入時，應增加或是減少的識別欄位的值數量：通常設定為 1。|  
@@ -82,15 +82,15 @@ ms.locfileid: "76287621"
   
 #### <a name="to-modify-identity-ranges-and-thresholds-after-a-table-is-published"></a>若要在發行資料表後修改識別範圍和臨界值  
   
-1.  在 [發行集屬性 - \<發行集>] 對話方塊的 [發行項] 頁面上，選取具有識別欄位的資料表。  
+1.  在 [發行集屬性 - \<Publication>] 對話方塊的 [發行項] 頁面上，選取具有識別欄位的資料表。  
   
 2.  按一下 **[發行項屬性]** ，然後按一下 **[設定反白顯示資料表發行項的屬性]** 。  
   
-3.  在 [發行項屬性 - \<發行項>] 對話方塊的 [屬性] 索引標籤上，於 [識別範圍管理] 區段中輸入下列其中一或多個屬性的值：[發行者範圍大小]、[訂閱者範圍大小] 和 [範圍臨界值百分比]。  
+3.  在 [發行項屬性 - \<Article>] 對話方塊的 [屬性] 索引標籤上，於 [識別範圍管理] 區段中輸入下列一或多個屬性的值：[發行者範圍大小]、[訂閱者範圍大小] 和 [範圍閾值百分比]。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  在 [發行集屬性 - \<發行集>] 對話方塊上，按一下 [確定]。  
+5.  在 [發行集屬性 - \<Publication>] 對話方塊上，按一下 [確定]。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  您可以在建立發行項時，使用複寫預存程序來指定識別範圍管理選項。  

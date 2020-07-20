@@ -19,15 +19,15 @@ ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5e0da92258088cde7dec9d4981e270e87e09f67a
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: f7bc2b9d94b53ab1d0418d05ae9e9c8ee93ee301
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807623"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86160126"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>對發行集資料庫進行結構描述變更
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   複寫支援對已發行物件進行大範圍的結構描述變更。 當您對「[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 發行者」端適當的已發行物件進行下列任何結構描述變更時，依預設，該變更會傳播給所有的「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」：  
   
 -   ALTER TABLE  
@@ -90,11 +90,11 @@ ms.locfileid: "83807623"
   
 #### <a name="adding-columns"></a>新增資料行  
   
--   若要將新資料行新增至資料表，並將該資料行包含在現有發行集中，則執行 ALTER TABLE \<資料表> 新增 \<資料行>。 依預設，資料行然後便會寫至所有「訂閱者」。 資料行必須允許 NULL 值或包含預設條件約束。 如需有關加入資料行的詳細資訊，請參閱本主題中的「合併式複寫」一節。  
+-   若要將新資料行新增至資料表，並將該資料行包含在現有的發行集中，請執行 ALTER TABLE \<Table> ADD \<Column>。 依預設，資料行然後便會寫至所有「訂閱者」。 資料行必須允許 NULL 值或包含預設條件約束。 如需有關加入資料行的詳細資訊，請參閱本主題中的「合併式複寫」一節。  
   
--   若要將新資料行新增至資料表，並且在現有發行集中不包含該資料行，則停用結構描述變更的複寫，然後執行 ALTER TABLE \<資料表> 新增 \<資料行>。  
+-   若要將新資料行新增至資料表，且不在現有的發行集中包含該資料行，則請停用結構描述變更的複寫，然後執行 ALTER TABLE \<Table> ADD \<Column>。  
   
--   若要在現有發行集中包含現有資料行，則使用 [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)、[sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) 或 [發行集屬性 - \<發行集>] 對話方塊。  
+-   若要在現有發行集中包含現有的資料行，請使用 [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)、[sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) 或 [發行集屬性 - \<Publication>] 對話方塊。  
   
      如需詳細資訊，請參閱 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。 這需要重新初始化訂閱。  
   
@@ -102,9 +102,9 @@ ms.locfileid: "83807623"
   
 #### <a name="dropping-columns"></a>卸除資料行  
   
--   若要從現有發行集卸除資料行，並從「發行者」端的資料表卸除該資料行，則執行 ALTER TABLE \<資料表> 卸除 \<資料行>。 依預設，資料行然後便會從所有「訂閱者」端的資料表中卸除。  
+-   若要從現有的發行集卸除資料行，並從發行者端的資料表卸除該資料行，請執行 ALTER TABLE \<Table> DROP \<Column>。 依預設，資料行然後便會從所有「訂閱者」端的資料表中卸除。  
   
--   若要從現有發行集卸除資料行，但要將該資料行保留在「發行者」端的資料表中，則使用 [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)、[sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) 或 [發行集屬性 - \<發行集>] 對話方塊。  
+-   若要從現有的發行集卸除資料行，但要在發行者端的資料表中保留該資料行，請使用 [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)、[sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) 或 [發行集屬性 - \<Publication>] 對話方塊。  
   
      如需詳細資訊，請參閱 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。 這需要產生新的快照集。  
   

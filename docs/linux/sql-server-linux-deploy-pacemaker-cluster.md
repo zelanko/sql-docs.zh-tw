@@ -8,12 +8,12 @@ ms.date: 12/11/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: da852f20d9109c5c4e2988cbdfc3915fe226718f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b48511e9e737f4fb775925d8a6bff81e31ef2a5a
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896520"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196756"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>為 Linux 上的 SQL Server 部署 Pacemaker 叢集
 
@@ -21,7 +21,7 @@ ms.locfileid: "85896520"
 
 本教學課程記載為 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Always On 可用性群組 (AG) 或容錯移轉叢集執行個體 (FCI) 部署 Linux Pacemaker 叢集所需的工作。 與緊密結合的 Windows Server/ [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 堆疊不同，Linux 上的 Pacemaker 叢集建立以及可用性群組 (AG) 設定可以在安裝 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 之前或之後完成。 在設定叢集之後，將完成 AG 或 FCI 部署的 Pacemaker 部分的資源整合和設定。
 > [!IMPORTANT]
-> 叢集類型為 None 的 AG「不需要」  Pacemaker 叢集，也不能由 Pacemaker 管理。 
+> 叢集類型為 None 的 AG「不需要」Pacemaker 叢集，也不能由 Pacemaker 管理。 
 
 > [!div class="checklist"]
 > * 安裝高可用性附加元件並安裝 Pacemaker。
@@ -175,7 +175,7 @@ Pacemaker 本身使用在名為 *hacluster* 的散發上建立的使用者。 �
    ```
    
 7. 如果您已設定 IP 位址以進行管理，您可以在瀏覽器中進行測試，這也會測試 *hacluster* 的密碼變更。
-   ![](./media/sql-server-linux-deploy-pacemaker-cluster/image2.png)
+   ![hacLuster](./media/sql-server-linux-deploy-pacemaker-cluster/image2.png)
    
 8. 在另一個將成為叢集節點的 SLES 伺服器上，執行 
    ```bash

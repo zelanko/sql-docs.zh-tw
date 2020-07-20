@@ -1,5 +1,5 @@
 ---
-title: 統計資料 | Microsoft Docs
+title: 統計資料
 ms.custom: ''
 ms.date: 06/03/2020
 ms.prod: sql
@@ -23,14 +23,15 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4cda8a71b0023cfc5cb7e697bf98e06b4e8955f8
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b509109cd155d0990950afbd073709325b01f5b9
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012233"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196746"
 ---
 # <a name="statistics"></a>統計資料
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   查詢最佳化工具會使用統計資料來建立可改善查詢效能的查詢計劃。 對於大部分查詢而言，查詢最佳化工具已經產生高品質查詢計劃的必要統計資料。不過，在少數情況下，您必須建立其他統計資料或修改查詢設計，以便獲得最佳結果。 本主題將討論有效使用查詢最佳化統計資料的概念和指導方針。  
   
@@ -59,7 +60,7 @@ ms.locfileid: "86012233"
 
 下列長條圖顯示包含六個步驟的長條圖。 第一個上限值左側的區域就是第一個步驟。
   
-![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histogram") 
+![長條圖](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "長條圖") 
   
 針對上述每一個長條圖步驟：
 -   粗線代表上限值 (*range_high_key*) 以及其所發生的次數 (*equal_rows*)  

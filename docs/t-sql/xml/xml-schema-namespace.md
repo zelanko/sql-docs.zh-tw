@@ -1,5 +1,5 @@
 ---
-title: xml_schema_namespace (Transact-SQL) | Microsoft Docs
+title: xml_schema_namespace (Transact-SQL)
 ms.custom: ''
 ms.date: 07/27/2017
 ms.prod: sql
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ee9873d8-dd3a-4bff-a10c-68bbadbdf1a6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c5749c942f5da62dee1cc1f4bb0345c6165bd649
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4f3035f1883f12924956958ab35ac4f3ca571814
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902207"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391853"
 ---
 # <a name="xml_schema_namespace"></a>xml_schema_namespace
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,9 @@ ms.locfileid: "85902207"
 xml_schema_namespace( Relational_schema , XML_schema_collection_name , [ Namespace ] )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *Relational_schema*  
  這是關聯式結構描述名稱。 *Relational_schema* 是 **sysname**。  
   

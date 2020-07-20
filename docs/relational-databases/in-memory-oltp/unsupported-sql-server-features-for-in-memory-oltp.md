@@ -12,12 +12,12 @@ ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2460e174ab0e8207c3e37f2e0dc999663a1dd8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 611fb6d081167053240bcf105d28e63b74c69ada
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753172"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279242"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>記憶體內部 OLTP 不支援的 SQL Server 功能
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "85753172"
 |連結的伺服器|在以記憶體最佳化資料表形式的相同查詢或交易中，您無法存取連結的伺服器。 如需詳細資訊，請參閱 [連結的伺服器 &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)。|  
 |大量記錄|無論資料庫使用何種復原模式，所有在持久性記憶體最佳化的資料表上的作業，一律會完整記錄。|  
 |最低限度記錄|記憶體最佳化資料表不支援最低限度記錄。 如需最低限度記錄的詳細資訊，請參閱[交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) 和[大量匯入採用最低限度記錄的必要條件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。|  
-|變更追蹤|變更追蹤無法在包含記憶體內部 OLTP 物件的資料庫上啟用。 |
+|變更追蹤|記憶體最佳化的資料表不支援變更追蹤。 |
 | DDL 觸發程序 | 資料庫層級及伺服器層級的 DLL 觸發程序均不受記憶體內部 OLTP 資料表或原生編譯模組支援。 |  
 | 異動資料擷取 (CDC) | SQL Server 2017 CU15 和更新版本支援在具有經記憶體最佳化之資料表的資料庫上啟用 CDC。 這僅適用於資料庫和資料庫中的任何磁碟資料表。 在舊版 SQL Server 中，因為內部 CDC 會針對 DROP TABLE 使用 DDL 觸發程序，所以 CDC 無法搭配具有經記憶體最佳化之資料表的資料庫使用。 |  
 | Fiber 模式 | 記憶體最佳化資料表不支援 Fiber 模式：<br /><br />若 Fiber 模式處於使用中的狀態，您就無法建立具有記憶體最佳化檔案群組的資料庫，也無法將記憶體最佳化檔案群組新增至現有的資料庫。<br /><br />如果具有記憶體最佳化檔案群組的資料庫已存在，您可以啟用 Fiber 模式。 不過，啟動 Fiber 模式需要重新啟動伺服器。 在此情況下，無法復原具有記憶體最佳化檔案群組的資料庫。 然後您會看到錯誤訊息，建議您停用 Fiber 模式以使用具有記憶體最佳化檔案群組的資料庫。<br /><br />若 Fiber 模式處於使用中的狀態，將無法附加及還原具有記憶體最佳化檔案群組的資料庫。 資料庫會標記為「可疑」。<br /><br />如需詳細資訊，請參閱 [輕量型共用伺服器組態選項](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md)。 |  

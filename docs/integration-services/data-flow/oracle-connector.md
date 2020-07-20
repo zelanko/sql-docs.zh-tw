@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 11e29a27597b7710ab38497a0b862aed9b65b404
-ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
+ms.openlocfilehash: 9ee026ab80e7afcd801b96411575f5ef4a61afd9
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83868436"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196078"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Microsoft Connector for Oracle
 
@@ -36,6 +36,7 @@ Microsoft Connector for Oracle 支援下列 Microsoft SQL Server 產品：
 - Oracle 11.x
 - Oracle 12c
 - Oracle 18c (不含 Windows 驗證支援)
+- Oracle 19c (不含 Windows 驗證支援)
 
 所有作業系統和平台都支援 Oracle 資料庫。
 > [!NOTE]

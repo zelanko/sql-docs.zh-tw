@@ -20,15 +20,15 @@ ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e3320e75c5938ca1d5f5eec945a051d498580826
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 98257dc148bbcedf58365267914704fb1f9e006d
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633403"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197150"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   建立外部資料表，然後將 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式的結果以平行方式匯出至 Hadoop 或「Azure 儲存體 Blob」。  
   
@@ -90,7 +90,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
  例如，如果 REJECT_VALUE = 5 且 REJECT_TYPE = value，資料庫就會在 5 個資料列發生匯入失敗時，停止匯入資料列。  
   
  percentage  
- REJECT_VALUE 是百分比，而不是常值。 當失敗的資料列「百分比」  超出 *reject_value* 時，資料庫將會停止從外部資料檔案匯入資料列。 失敗的資料列百分比會每隔一段時間就計算一次。  
+ REJECT_VALUE 是百分比，而不是常值。 當失敗的資料列「百分比」超出 *reject_value* 時，資料庫將會停止從外部資料檔案匯入資料列。 失敗的資料列百分比會每隔一段時間就計算一次。  
   
  REJECT_SAMPLE_VALUE = *reject_sample_value*  
  當 REJECT_TYPE = percentage 時便為必要項目，這指定了資料庫重新計算失敗的資料列百分比之前，會嘗試匯入的資料列數目。  
@@ -117,7 +117,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
  WITH *common_table_expression*  
  指定稱為通用資料表運算式 (CTE) 的暫存具名結果集。 如需詳細資訊，請參閱 [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)。  
   
- SELECT \<select_criteria> 在新資料表中填入 SELECT 陳述式所產生的結果。 *select_criteria* 是 SELECT 陳述式的主體，可決定要複製到新資料表的資料。 如需 SELECT 陳述式的相關資訊，請參閱 [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)。  
+ SELECT \<select_criteria> 將 SELECT 陳述式的結果填入新資料表。 *select_criteria* 是 SELECT 陳述式的主體，可決定要複製到新資料表的資料。 如需 SELECT 陳述式的相關資訊，請參閱 [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)。  
   
 ## <a name="permissions"></a>權限  
  若要執行此命令，**資料庫使用者**需要具備下列所有權限或成員資格：  

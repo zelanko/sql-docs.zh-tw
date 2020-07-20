@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 909bca7ee100b89362a877fcea2df54a0718b2a4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ebdcdb325ba39d163ef63c04008d86a46cb6bec4
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767243"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86380861"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -79,6 +79,8 @@ BULK INSERT
     )]
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>引數
 
 *database_name* 這是指定的資料表或檢視表所在資料庫名稱。 如果未指定，這就是目前的資料庫。
@@ -120,7 +122,7 @@ CHECK_CONSTRAINTS 指定在大量匯入作業期間，必須檢查目標資料�
 > [!NOTE]
 > MAXERRORS 選項不適用於條件約束檢查。
 
-CODEPAGE **=** { **'** ACP **'**  |  **'** OEM **'**  |  **'** RAW **'**  |  **'** _code_page_ **'** } 指定資料檔中資料的字碼頁。 只有當資料包含字元值大於 **127** 或小於 **32** 的 **char**、**varchar** 或 **text** 資料行時，CODEPAGE 才會相關。 如需範例，請參閱[指定字碼頁](#d-specifying-a-code-page)。
+CODEPAGE **=** { **'** ACP **'** \| **'** OEM **'** \| **'** RAW **'** \| **'** _code_page_ **'** } 指定資料檔中的資料字碼頁。 只有當資料包含字元值大於 **127** 或小於 **32** 的 **char**、**varchar** 或 **text** 資料行時，CODEPAGE 才會相關。 如需範例，請參閱[指定字碼頁](#d-specifying-a-code-page)。
 
 > [!IMPORTANT]
 > 針對 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]，Linux 上不支援 CODEPAGE 選項。 針對 [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)]，CODEPAGE 只允許使用 **'RAW'** 選項。
@@ -136,7 +138,7 @@ CODEPAGE **=** { **'** ACP **'**  |  **'** OEM **'**  |  **'** RAW **'**  |  **'
 |*code_page*|特定字碼頁編號，如 850。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 版之前的版本不支援字碼頁 65001 (UTF-8 編碼)。|
 | &nbsp; | &nbsp; |
 
-DATAFILETYPE **=** { **'char'**  |  **'native'**  |  **'widechar'**  |  **'widenative'** } 指定 BULK INSERT 使用指定的資料檔案類型值來執行匯入作業。
+DATAFILETYPE **=** { **'char'** \| **'native'** \| **'widechar'** \| **'widenative'** } 指定 BULK INSERT 使用指定的資料檔案類型值來執行匯入作業。
 
 &nbsp;
 

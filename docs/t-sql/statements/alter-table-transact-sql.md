@@ -59,12 +59,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55f3b740365fc3fa20e93538eb3abdd2ca9b0526
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1c83519d96d336da2e7577a2b9ea7d3693732d5c
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000665"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391833"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -401,6 +401,8 @@ ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_t
     DATA_COMPRESSION = { COLUMNSTORE | COLUMNSTORE_ARCHIVE }
 }
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引數
 
@@ -765,7 +767,7 @@ SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_ **
 
 針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 CTP1 以及 SQL Database V12 之前版本建置的非叢集資料行存放區索引是唯讀格式。 執行任何 PARTITION 作業之前，您必須將非叢集資料行存放區索引重建成最新格式 (可以更新的格式)。
 
-SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* |  **"** default **"**  |  **"** NULL **"** } **)**  
+SET **(** FILESTREAM_ON = { *partition_scheme_name* \| *filestream_filegroup_name* \| **"** 預設值 **"** \| **"** NULL **"** } **)**  
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本)。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 不支援 `FILESTREAM`。
 
 指定 FILESTREAM 資料存放的位置。
@@ -785,12 +787,12 @@ SET **(** SYSTEM_VERSIONING **=** { OFF | ON [ ( HISTORY_TABLE = schema_name . h
 
 停用或啟用資料表的系統版本設定。 為啟用資料表的系統版本設定，系統會確認資料類型、可 Null 性條件約束、 主索引鍵條件約束是否符合系統版本設定的各需求。 如果您未使用 HISTORY_TABLE 引數，系統會產生與目前資料表之結構描述相符的新記錄資料表，並在兩個資料表之間建立連結，然後讓系統將目前資料表中的每一筆資料記錄到記錄資料表。 此記錄資料表的名稱將會是 `MSSQL_TemporalHistoryFor<primary_table_object_id>`。 如果您使用 HISTORY_TABLE 引數來建立連結，並使用現有的記錄資料表，則系統會在目前資料表和指定資料表之間建立連結。 建立現有記錄資料表的連結時，您可以選擇執行資料一致性檢查。 這個資料一致性檢查可確保現有的記錄不會重疊。 預設會執行資料一致性檢查。 如需相關資訊，請參閱 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)。
 
-HISTORY_RETENTION_PERIOD = { **INFINITE** | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS} }  
+HISTORY_RETENTION_PERIOD = { **INFINITE** \| 數字 {DAY \| DAYS \| WEEK \| WEEKS \| MONTH \| MONTHS \| YEAR \| YEARS} }  
 **適用對象**：[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 為時態表中的歷程記錄資料指定有限或無限保留期。 如果省略，會使用無限保留期。
 
-SET **(** LOCK_ESCALATION = { AUTO | TABLE | DISABLE } **)**  
+SET **(** LOCK_ESCALATION = { AUTO \| TABLE \| DISABLE } **)**  
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 指定資料表鎖定擴大的允許方法。

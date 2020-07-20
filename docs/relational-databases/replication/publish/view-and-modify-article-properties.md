@@ -22,15 +22,15 @@ ms.assetid: e71831fa-3d39-4e4a-9706-4d3a497082cc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 63fa5ab8c3eea6db950fb2c74a26b7087c5927c1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4f84fc174f63ebf6e58e93a3ba19b39897fbf7e9
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287515"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159516"
 ---
 # <a name="view-and-modify-article-properties"></a>檢視和修改發行項屬性
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中檢視及修改發行項屬性。  
   
  **本主題內容**  
@@ -43,7 +43,7 @@ ms.locfileid: "76287515"
   
 -   **若要檢視和修改發行項屬性，請使用：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "76287515"
 -   建立發行集之後，某些屬性變更需要新的快照集。 如果發行集有訂閱，則某些變更還需要重新初始化所有訂閱。 如需詳細資訊，請參閱[變更發行集與發行項屬性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)和[在現有發行集中新增和卸除發行項](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 您可以在位於 **\< 和複寫監視器的 [發行集屬性 -** 發行集>][!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 對話方塊中檢視及修改發行項屬性。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
+ 您可在位於 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 和複寫監視器的 [發行集屬性 - \<Publication>] 對話方塊中檢視及修改發行項屬性。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
 -   **[一般]** 頁面包含發行集名稱和描述、發行集類型以及訂閱過期設定。  
   
@@ -84,20 +84,20 @@ ms.locfileid: "76287515"
   
 #### <a name="to-view-and-modify-article-properties"></a>若要檢視和修改發行項屬性  
   
-1.  在 [發行集屬性 - \<發行集>]  對話方塊的 [發行項] 頁面上，選取一個發行項，然後按一下 [發行項屬性]。  
+1.  在 [發行集屬性 - \<Publication>]  對話方塊的 [發行項] 頁面上，選取一個發行項，然後按一下 [發行項屬性]。  
   
 2.  選取應套用發行項屬性變更的物件︰  
   
-    -   按一下 [設定反白顯示 \<物件類型> 發行項的屬性]  啟動 [發行項屬性 - \<物件名稱>] 對話方塊；在這個對話方塊中所做的屬性變更，只會套用至 [發行項] 頁面的物件窗格中反白顯示的物件。  
+    -   按一下 [設定醒目提示 \<ObjectType> 發行項的屬性]，以啟動 [發行項屬性 - \<ObjectName>] 對話方塊；在這個對話方塊中所做屬性變更只會套用至 [發行項] 頁面上物件窗格中醒目提示的物件。  
   
-    -   按一下 [設定所有 \<物件類型> 發行項的屬性] 啟動 [所有 \<物件類型> 發行項的屬性] 對話方塊；在這個對話方塊中所做的屬性變更，會套用至 [發行項] 頁面的物件窗格中屬於該類型的所有物件，包括尚未選取發行的物件。  
+    -   按一下 [設定所有 \<ObjectType> 發行項的屬性]，以啟動 [所有 \<ObjectType> 發行項的屬性] 對話方塊；在這個對話方塊中所做的屬性變更會套用至 [發行項] 頁面上物件窗格中屬於該類型的所有物件，包含尚未選取發行的物件。  
   
         > [!NOTE]  
-        >  在 [所有 \<物件類型> 發行項的屬性] 對話方塊中所做的屬性變更，會覆寫之前在 [發行項屬性 - \<物件名稱>] 對話方塊中所做的任何變更。 例如，若要設定所有屬於某物件類型之發行項的一些預設值，但同時要設定個別物件的某些屬性，則請先設定所有發行項的預設值， 然後再設定個別物件的屬性。  
+        >  在 [所有 \<ObjectType> 發行項的屬性] 對話方塊中所做屬性變更，會覆寫先前在 [發行項屬性 - \<ObjectName>] 對話方塊中所做的任何變更。 例如，若要設定所有屬於某物件類型之發行項的一些預設值，但同時要設定個別物件的某些屬性，則請先設定所有發行項的預設值， 然後再設定個別物件的屬性。  
   
 3.  必要時修改任何屬性，然後按一下 **[確定]** 。  
   
-4.  在 [發行集屬性 - \<發行集>] 對話方塊上，按一下 [確定]。  
+4.  在 [發行集屬性 - \<Publication>] 對話方塊上，按一下 [確定]。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  您可以使用複寫預存程序來以程式設計的方式修改發行項及傳回其屬性。 使用哪些預存程序要依發行項所屬的發行集類型而定。  

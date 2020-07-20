@@ -24,17 +24,18 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6d4cae8c42f8a29842e62f94cfcd7a87e187b4e0
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 1f287a864113bdd5cc1d8829ad080277c1a1d91d
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091626"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393176"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體啟用了 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 功能，則會建立新的可用性群組。  
+如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體啟用了 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 功能，則會建立新的可用性群組。  
   
 > [!IMPORTANT]  
 >  在您預定要做為新可用性群組的初始主要複本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上執行 CREATE AVAILABILITY GROUP。 這個伺服器執行個體必須位於 Windows Server 容錯移轉叢集 (WSFC) 節點。  
@@ -113,11 +114,14 @@ CREATE AVAILABILITY GROUP group_name
   
 ```  
   
-## <a name="arguments"></a>引數  
- *group_name*  
- 指定新的可用性群組名稱。 *group_name* 必須是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][識別碼](../../relational-databases/databases/database-identifiers.md)，而且它在 WSFC 叢集的所有可用性群組上都必須是唯一的。 可用性群組名稱的最大長度為 128 個字元。  
-  
- AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY | SECONDARY_ONLY| SECONDARY | NONE }  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
+
+*group_name*  
+指定新的可用性群組名稱。 *group_name* 必須是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][識別碼](../../relational-databases/databases/database-identifiers.md)，而且它在 WSFC 叢集的所有可用性群組上都必須是唯一的。 可用性群組名稱的最大長度為 128 個字元。  
+
+AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NONE }  
  指定在選擇要在何處執行備份時，有關備份作業應該如何評估主要複本的喜好設定。 您可以編寫給定備份作業，將自動備份喜好設定納入考量。 請務必了解，喜好設定並不是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 強制施行，所以它對於隨選備份沒有任何影響。  
   
  支援的值如下所示：  
@@ -143,7 +147,7 @@ CREATE AVAILABILITY GROUP group_name
 > [!NOTE]  
 >  若要檢視現有可用性群組的自動備份喜好設定，請選取 [sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) 目錄檢視的 **automated_backup_preference** 或 **automated_backup_preference_desc** 資料行。 此外，[sys.fn_hadr_backup_is_preferred_replica  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) 可用來判斷慣用備份複本。  此函式會針對至少其中一個複本傳回 1，即使當 `AUTOMATED_BACKUP_PREFERENCE = NONE` 時亦然。  
   
- FAILURE_CONDITION_LEVEL **=** { 1 | 2 | **3** | 4 | 5 }  
+ FAILURE_CONDITION_LEVEL **=** { 1 \| 2 \| **3** \| 4 \| 5 }  
  指定哪一個失敗狀況會針對這個可用性群組觸發自動容錯移轉。 FAILURE_CONDITION_LEVEL 是在群組層級上設定，但只有在為同步認可可用性模式 (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT) 設定的可用性複本上才會顯出重要性。 此外，只有當主要和次要複本已設定自動容錯移轉模式 (FAILOVER_MODE **=** AUTOMATIC) 而且次要複本目前與主要複本同步時，失敗狀況才可以觸發自動容錯移轉。  
   
  失敗狀況層級 (1-5) 的範圍從最低限制 (層級 1) 到最高限制 (層級 5)。 給定的狀況層級包含所有較少限制的層級。 因此，最嚴格的狀況層級 5 包含四個較少限制的狀況層級 (1-4)，層級 4 則包含層級 1-3，依此類推。 下表描述與每個層級對應的失敗狀況。  

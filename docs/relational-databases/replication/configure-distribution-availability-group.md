@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 39d990e334c790840eab7c47634dde6c6f9ff065
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ad1dbfa9c39167d6bef9ae14afc4245225cfb4cb
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774049"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159826"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>設定 Always On 可用性群組中的複寫散發資料庫
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -74,7 +74,7 @@ SQL Server 2017 CU6 和 SQL Server 2016 SP2-CU3 透過下列機制引進 AG 中�
    >[!NOTE]
    >在次要複本上執行任何複寫預存程序 (例如：`sp_dropdistpublisher`、`sp_dropdistributiondb`、`sp_dropdistributor`、`sp_adddistributiondb`、`sp_adddistpublisher`) 之前，請確定複本已完全同步。
 
-- 散發資料庫 AG 中的所有次要複本都必須可供讀取。
+- 散發資料庫 AG 中的所有次要複本應該都可供讀取。 如果無法讀取次要複本，即無法存取特定次要複本上 SQL Server Management Studio 中的散發者屬性，但複寫會繼續正常運作。 
 - 散發資料庫 AG 中的所有節點都需要使用相同的網域帳戶來執行 SQL Server Agent，而且此網域帳戶需要具有每個節點的相同權限。
 - 如果使用 Proxy 帳戶執行任何複寫代理程式，Proxy 帳戶需要存在於散發資料庫 AG 中的每個節點，並且具有每個節點的相同權限。
 - 變更所有參與散發資料庫 AG 的複本中的散發者或散發資料庫屬性。
@@ -117,12 +117,18 @@ SQL Server 2017 CU6 和 SQL Server 2016 SP2-CU3 透過下列機制引進 AG 中�
 
    `@working_directory` 的值應該是與 DIST1、DIST2 和 DIST3 無關的網路路徑。
 
-1. 在 DIST2 和 DIST3 上，執行：  
+1. 在 DIST2 和 DIST3 上，如果複本可讀取為次要複本，請執行：  
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```
 
+   如果複本無法讀取為次要複本，請執行容錯移轉，讓複本變成主要複本，然後執行 
+
+   ```sql
+   sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
+   ```
+   
    `@working_directory` 的值應該與上一個步驟相同。
 
 ### <a name="publisher-workflow"></a>發行者工作流程
@@ -196,12 +202,18 @@ SQL Server 2017 CU6 和 SQL Server 2016 SP2-CU3 透過下列機制引進 AG 中�
    sp_adddistributiondb 'distribution'
    ```
 
-4. 在 DIST3 上，執行： 
+4. 在 DIST3 上，如果複本可讀取為次要複本，請執行： 
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```
 
+   如果複本無法讀取為次要複本，請執行容錯移轉，讓複本變成主要複本，然後執行：
+
+   ```sql
+   sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
+   ```
+   
    `@working_directory` 的值應該與針對 DIST1 和 DIST2 所指定的密碼相同。
 
 4. 在 DIST3 上，您必須重建與訂閱者的連結伺服器。

@@ -19,12 +19,12 @@ author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b37932efe96f0892e5e2e3ce6c30c4adf1de557d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8d1ba3c44a911130a4f86eb5be3789657b24288b
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002793"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86380881"
 ---
 # <a name="transparent-data-encryption-tde"></a>透明資料加密 (TDE)
 
@@ -82,7 +82,7 @@ TDE 會保護待用資料，亦即資料檔和記錄檔。 這讓您必須遵循
 
 ![透明資料庫加密架構](../../../relational-databases/security/encryption/media/tde-architecture.png)
 
-## <a name="using-transparent-data-encryption"></a>使用透明資料加密
+## <a name="enable-tde"></a>啟用 TDE
 
 若要使用 TDE，請遵循下列步驟。
 
@@ -171,7 +171,7 @@ GO
 > [!TIP]
 > 若要監視資料庫的 TDE 狀態變更，請使用 SQL Server Audit 或 SQL Database 稽核。 SQL Server 將 TDE 追蹤記錄放在稽核動作群組 DATABASE_CHANGE_GROUP 下，此群組位於 [動作群組和動作](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)中。
 
-### <a name="restrictions"></a>限制
+## <a name="restrictions"></a>限制
 
 在初始資料庫加密、金鑰變更或資料庫解密期間，不允許下列作業：
 
@@ -223,7 +223,29 @@ GO
 
 為了使用非對稱金鑰來加密資料庫加密金鑰，此非對稱金鑰必須位在可延伸的金鑰管理提供者上。
 
-### <a name="transparent-data-encryption-and-transaction-logs"></a>透明資料加密和交易記錄
+## <a name="tde-scan"></a>TDE 掃描
+
+若要啟用資料庫上的 TDE，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 必須執行加密掃描。 掃描會將資料檔案的每一頁都讀入緩衝集區，然後將加密的頁面寫回磁片。
+
+為了讓您能更充分掌握加密掃描，[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 引進具有暫停和繼續語法的 TDE 掃描。 您可在系統工作負載過重或業務忙碌時段暫停掃描，再於稍後時間繼續掃描。
+
+使用下列語法可暫停 TDE 加密掃描：
+
+```sql
+ALTER DATABASE <db_name> SET ENCRYPTION SUSPEND;
+```
+
+您也可以使用下列語法繼續 TDE 加密掃描：
+
+```sql
+ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
+```
+
+encryption_scan_state 資料行已新增至 sys.dm_database_encryption_keys 動態管理檢視。 其顯示加密掃描目前的狀態。 另有稱為 encryption_scan_modify_date 的新資料行，其包含上次加密掃描狀態變更的日期和時間。
+
+如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體在加密掃描暫停期間重新開機，則啟動時即會在錯誤記錄檔中記錄訊息。 該訊息會指出現有的掃描已暫停。
+
+## <a name="tde-and-transaction-logs"></a>TDE 和交易記錄
 
 讓資料庫使用 TDE 會移除目前虛擬交易記錄的其餘部分。 移除會強制建立下一筆交易記錄。 此行為保證在設定資料庫加密之後，記錄中不會留下任何純文字。
 
@@ -246,11 +268,11 @@ GO
 
 如要變更兩次資料庫加密金鑰，則必須先執行記錄備份，才能再次變更資料庫加密金鑰。
 
-### <a name="transparent-data-encryption-and-the-tempdb-system-database"></a>透明資料加密和 tempdb 系統資料庫
+## <a name="tde-and-the-tempdb-system-database"></a>TDE 和 tempdb 系統資料庫
 
 如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上有任一其他資料庫使用 TDE 進行加密，則會加密 **tempdb** 系統資料庫。 這加密可能會影響相同 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上未加密的資料庫效能。 如需 **tempdb** 系統資料庫的詳細資訊，請參閱 [tempdb 資料庫](../../../relational-databases/databases/tempdb-database.md)。
 
-### <a name="transparent-data-encryption-and-replication"></a>透明資料加密和複寫
+## <a name="tde-and-replication"></a>TDE 和複寫
 
 複寫不會自動以加密形式複寫啟用 TDE 的資料庫資料。 如果想要保護散發資料庫和訂閱者資料庫，請分別啟用 TDE。
 
@@ -258,39 +280,39 @@ GO
 
 如需詳細資訊，請參閱[啟用資料庫引擎的加密連線 (SQL Server 組態管理員)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。
 
-### <a name="transparent-data-encryption-and-filestream-data"></a>透明資料加密和 FILESTREAM 資料
+## <a name="tde-and-always-on"></a>TDE 和 Always On    
+您可[將加密的資料庫新增至 Always On 可用性群組](../../../database-engine/availability-groups/windows/encrypted-databases-with-always-on-availability-groups-sql-server.md)。  
+
+若要加密屬於可用性群組的資料庫，請先在所有次要複本上建立主要金鑰和憑證或非對稱金鑰 (EKM)，再於主要複本上建立[資料庫加密金鑰](../../../t-sql/statements/create-database-encryption-key-transact-sql.md)。  
+
+如果使用憑證保護資料庫加密金鑰 (DEK)，請[備份在主要複本上建立的憑證](../../../t-sql/statements/backup-certificate-transact-sql.md)，然後[先在所有次要複本上使用檔案建立憑證](../../../t-sql/statements/create-certificate-transact-sql.md)，再於主要複本上建立資料庫加密金鑰。 
+
+## <a name="tde-and-filestream-data"></a>TDE 和 FILESTREAM 資料
 
 即使啟用 TDE 也不會加密 **FILESTREAM** 資料。
 
 <a name="scan-suspend-resume"></a>
 
-## <a name="transparent-data-encryption-scan"></a>透明資料加密掃描
+## <a name="remove-tde"></a>移除 TDE
 
-若要啟用資料庫上的 TDE，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 必須執行加密掃描。 掃描會將資料檔案的每一頁都讀入緩衝集區，然後將加密的頁面寫回磁片。
-
-為了讓您能更充分掌握加密掃描，[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 引進具有暫停和繼續語法的 TDE 掃描。 您可在系統工作負載過重或業務忙碌時段暫停掃描，再於稍後時間繼續掃描。
-
-使用下列語法可暫停 TDE 加密掃描：
+使用 `ALTER DATABASE` 陳述式移除資料庫的加密。
 
 ```sql
-ALTER DATABASE <db_name> SET ENCRYPTION SUSPEND;
+ALTER DATABASE <db_name> SET ENCRYPTION OFF;
 ```
 
-您也可以使用下列語法繼續 TDE 加密掃描：
+若要檢視資料庫的狀態，請使用 [sys.dm_database_encryption_keys](../../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 動態管理檢視。
 
-```sql
-ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
-```
+等候解密完成，然後使用 [DROP DATABASE ENCRYPTION KEY](../../../t-sql/statements/drop-database-encryption-key-transact-sql.md) 來移除資料庫加密金鑰。
 
-encryption_scan_state 資料行已新增至 sys.dm_database_encryption_keys 動態管理檢視。 其顯示加密掃描目前的狀態。 另有稱為 encryption_scan_modify_date 的新資料行，其包含上次加密掃描狀態變更的日期和時間。
+> [!IMPORTANT]
+> 將用於 TDE 的主要金鑰和憑證備份至安全位置。 需有主要金鑰和憑證才能還原以 TDE 加密資料庫時所取得的備份。 移除資料庫加密金鑰之後，請先進行記錄備份，再建立已解密資料庫的全新完整備份。 
 
-如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體在加密掃描暫停期間重新開機，則啟動時即會在錯誤記錄檔中記錄訊息。 該訊息會指出現有的掃描已暫停。
-
-## <a name="transparent-data-encryption-and-buffer-pool-extension"></a>透明資料加密和緩衝集區延伸模組
+## <a name="tde-and-buffer-pool-extension"></a>TDE 和緩衝集區延伸
 
 使用 TDE 加密資料庫時，不會加密與緩衝集區延伸模組 (BPE) 相關的檔案。 針對這些檔案，請在檔案系統層級使用 Bitlocker 或 EFS 等加密工具。
 
-## <a name="transparent-data-encryption-and-in-memory-oltp"></a>透明資料加密和記憶體中 OLTP
+## <a name="tde-and-in-memory-oltp"></a>TDE 和記憶體內部 OLTP
 
 您可對具有記憶體中 OLTP 物件的資料庫啟用 TDE。 在 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 中，如果啟用 TDE，即會加密記憶體中 OLTP 記錄和資料。 在 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 中，如果啟用 TDE，即會加密記憶體中 OLTP 記錄檔的記錄，但不會加密 MEMORY_OPTIMIZED_DATA 檔案群組中的檔案。
 

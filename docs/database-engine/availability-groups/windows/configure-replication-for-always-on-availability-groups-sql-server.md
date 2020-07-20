@@ -14,12 +14,12 @@ ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7975474859081eb5567c2ee12adf26f9e6501556
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 881385dbd03af3a2425a4b853ce4b194d474bb4d
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72689664"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196887"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>設定 Always On 可用性群組的複寫
 
@@ -224,9 +224,8 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 -   [建立或設定可用性群組接聽程式 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
- [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Always On 可用性群組：互通性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
- [SQL Server 複寫](../../../relational-databases/replication/sql-server-replication.md)  
-  
-  
+- [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
+- [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 
+- [Always On 可用性群組：互通性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
+- [SQL Server 複寫](../../../relational-databases/replication/sql-server-replication.md)  
+- 如果使用非預設的連接埠，請參閱 [Walkthrough Publisher, Distributor, Subscriber in AlwaysOn Availability Groups](https://repltalk.com/2019/03/09/walkthrough-publisher-distributor-subscriber-in-alwayson-availability-groups) (AlwaysOn 可用性群組中的逐步解說發行者、散發者、訂閱者)。

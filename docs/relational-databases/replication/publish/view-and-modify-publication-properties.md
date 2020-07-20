@@ -20,15 +20,15 @@ ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: eab592c7a0b95262e551eea02eef625ad653e12d
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 84d062ef8fb1754baf3cbca2ff9f6148593f731d
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807840"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159506"
 ---
 # <a name="view-and-modify-publication-properties"></a>檢視及修改發行集屬性
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中檢視及修改發行集屬性。  
   
  **本主題內容**  
@@ -58,9 +58,9 @@ ms.locfileid: "83807840"
 -   建立發行集之後，某些屬性變更需要新的快照集。 如果發行集有訂閱，則某些變更還需要重新初始化所有訂閱。 如需詳細資訊，請參閱[變更發行集與發行項屬性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)和[在現有發行集中新增和卸除發行項](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 您可以在位於 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 與複寫監視器的 [發行集屬性 - \<發行集>] 對話方塊中，檢視及修改發行集屬性。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
+ 您可在位於 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 與複寫監視器的 [發行集屬性 - \<Publication>] 對話方塊中檢視及修改發行集屬性。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
- [發行集屬性 - \<發行集>] 對話方塊上包含下列頁面：  
+ [發行集屬性 - \<Publication>] 對話方塊包含下列頁面：  
   
 -   **[一般]** 頁面包含發行集名稱和描述、發行集類型以及訂閱過期設定。  
   

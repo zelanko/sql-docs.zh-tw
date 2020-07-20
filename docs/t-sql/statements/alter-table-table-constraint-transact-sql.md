@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9baaecd792c2dae1d23a47fa6ab7a72933412a55
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c0346aa532756905d04cdd1f7938962ac6be39cc
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760944"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381102"
 ---
 # <a name="alter-table-table_constraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,7 +59,9 @@ ms.locfileid: "85760944"
 }  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  CONSTRAINT  
  指定開始定義 PRIMARY KEY、UNIQUE、FOREIGN KEY 或 CHECK 條件約束，或 DEFAULT。  
   
@@ -107,7 +109,7 @@ ms.locfileid: "85760944"
  *ref_column*  
  這是新 FOREIGN KEY 條件約束所參考的一個資料行或一份資料行清單 (用括號括住)。  
   
- ON DELETE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }  
+ ON DELETE { **NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT }  
  指定如果變更的資料表中之資料列有參考關聯性，且在父資料表中刪除了所參考的資料列，變更的資料表中之資料列會發生什麼動作。 預設值是 NO ACTION。  
   
  NO ACTION  
@@ -130,9 +132,9 @@ ms.locfileid: "85760944"
   
  如果在 **Vendor** 資料表的某資料列上執行 DELETE 陳述式，且指定了 **ProductVendor.VendorID** 的 ON DELETE CASCADE 動作，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 便會檢查 **ProductVendor** 資料表中一或多個相依的資料列。 如果有任何相依的資料列存在，除了會將 **Vendor** 資料表中所參考的資料列刪除，還會刪除 **ProductVendor** 資料表中的相依資料列。  
   
- 相反地，如果指定 NO ACTION，當 [!INCLUDE[ssDE](../../includes/ssde-md.md)]ProductVendor**資料表中有至少一個資料列參考**Vendor **資料列時，** 會產生一則錯誤，且會回復 Vendor 資料列的刪除動作。  
+ 相反地，如果指定 NO ACTION，當 **ProductVendor** 資料表中有至少一個資料列參考 **Vendor** 資料列時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會產生一則錯誤，且會回復 Vendor 資料列的刪除動作。  
   
- ON UPDATE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }  
+ ON UPDATE { **NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT }  
  指定當變更的資料表中之資料列有參考關聯性，且在父資料表中所參考的資料列有了更新時，變更的資料表中之資料列會發生什麼動作。 預設值是 NO ACTION。  
   
  NO ACTION  
@@ -155,7 +157,7 @@ ms.locfileid: "85760944"
   
  如果在 **Vendor** 資料表的某資料列上執行 UPDATE 陳述式，且指定了 **ProductVendor.VendorID** 的 ON UPDATE CASCADE 動作，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 便會檢查 **ProductVendor** 資料表中一或多個相依的資料列。 如果有任何相依的資料列存在，便會更新 **ProductVendor** 資料表中的相依資料列，以及 **Vendor** 資料表中所參考的資料列。  
   
- 相反地，如果指定了 NO ACTION，當 [!INCLUDE[ssDE](../../includes/ssde-md.md)]ProductVendor **資料表中有至少一個資料列參考 Vendor 資料列時，** 會產生一則錯誤，且會回復 **Vendor** 資料列的更新動作。  
+ 相反地，如果指定了 NO ACTION，當 **ProductVendor** 資料表中有至少一個資料列參考 Vendor 資料列時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會產生一則錯誤，且會回復 **Vendor** 資料列的更新動作。  
   
  NOT FOR REPLICATION  
  **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  

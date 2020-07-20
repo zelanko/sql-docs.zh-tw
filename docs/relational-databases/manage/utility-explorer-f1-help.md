@@ -1,5 +1,5 @@
 ---
-title: 公用程式總管 F1 說明 | Microsoft 文件
+title: 公用程式總管 F1 說明
 description: 熟悉 SQL Server 公用程式在各方面所提供的功能。 了解 [檢視]、[儀表板] 和 [公用程式管理] 索引標籤。
 ms.custom: ''
 ms.date: 08/19/2016
@@ -20,14 +20,15 @@ helpviewer_keywords:
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 264c809ce03cca9a6bb9b84300d3780a1ddc33f1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e97a0e8ddae735865b4314e33f3a5ce6d365de0
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640412"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197266"
 ---
 # <a name="utility-explorer-f1-help"></a>公用程式總管 F1 說明
+
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   下列各節說明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式的功能和關聯的作業。  
   
@@ -124,11 +125,11 @@ ms.locfileid: "85640412"
  [清單] 檢視  
  上方窗格中的清單檢視會顯示有關個別資料層應用程式的資料。 健全狀態圖示會依據使用量類別提供每一個資料層應用程式的狀態摘要：  
   
--   綠色核取符號 - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - 不違反資源使用量原則的資料層應用程式數目。 資源的使用情況良好。  
+-   綠色核取符號 - :::image type="icon" source="media/well-utilized.png" border="false"::: - 不違反資源使用量原則的資料層應用程式數目。 資源的使用情況良好。  
   
--   綠色向下箭頭 - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - 資源使用量過低。  
+-   綠色向下箭頭 - ![向下箭頭](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - 資源使用量過低。  
   
--   紅色向上箭頭 - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - 資源使用量過高。  
+-   紅色向上箭頭 - ![向上箭頭](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - 資源使用量過高。  
   
  您可以變更清單檢視中資料行的順序，其方式是將資料行拖曳到左邊或右邊。 您可以加入或刪除清單檢視中的資料行，其方式是以滑鼠右鍵按一下資料行標題，並選取或取消選取資料行。 右鍵功能表也會提供排序選項。 您也可以按一下資料行名稱的上方來啟動排序。  
   
@@ -266,11 +267,11 @@ ms.locfileid: "85640412"
   
  健全狀態圖示會依據使用量類別提供每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的狀態摘要：  
   
--   綠色核取符號 - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - 不違反資源使用量原則的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受控執行個體數目。 資源的使用情況良好。  
+-   綠色核取符號 - ![綠色核取符號](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - 不違反資源使用量原則的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受控執行個體數目。 資源的使用情況良好。  
   
--   綠色向下箭頭 - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - 資源使用量過低。  
+-   綠色向下箭頭 - ![向下箭頭](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - 資源使用量過低。  
   
--   紅色向上箭頭 - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - 資源使用量過高。  
+-   紅色向上箭頭 - ![向上箭頭](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - 資源使用量過高。  
   
  您可以變更清單檢視中資料行的順序，其方式是將資料行拖曳到左邊或右邊。 您可以加入或刪除清單檢視中的資料行，其方式是以滑鼠右鍵按一下資料行標題，並選取或取消選取資料行。 右鍵功能表也會提供排序選項。 您也可以按一下資料行名稱的上方來啟動排序。  
   

@@ -23,12 +23,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2facc71bae52bf1e8706abdc6ac874ae16f11575
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: d44a81dbe1b010ff4f42363062aafeb7e5571021
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262097"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279504"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE 陳述式 - HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -99,7 +99,7 @@ FROM <backup_device>
 |**ExpirationDate**|**datetime**|備份組的到期日。|  
 |**Compressed**|**BIT(1)**|是否利用以軟體為基礎的壓縮來壓縮備份組：<br /><br /> **0** = 否<br /><br /> **1** = 是|  
 |**位置**|**smallint**|備份組在磁碟區中的位置 (用來搭配 FILE = 選項)。|  
-|**DeviceType**|**tinyint**|備份作業所用裝置的對應號碼。<br /><br /> 磁碟：<br /><br /> **2** = 邏輯<br /><br /> **102** = 實體<br /><br /> 磁帶：<br /><br /> **5** = 邏輯<br /><br /> **105** = 實體<br /><br /> 虛擬裝置：<br /><br /> **7** = 邏輯<br /><br /> **107** = 實體<br /><br /> 邏輯裝置名稱和裝置號碼在 **sys.backup_devices** 中；如需詳細資訊，請參閱 [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)。|  
+|**DeviceType**|**tinyint**|備份作業所用裝置的對應號碼。<br /><br /> 磁碟：<br /><br /> **2** = 邏輯<br /><br /> **102** = 實體<br /><br /> 磁帶：<br /><br /> **5** = 邏輯<br /><br /> **105** = 實體<br /><br /> 虛擬裝置：<br /><br /> **7** = 邏輯<br /><br /> **107** = 實體<br /><br /> URL<br /><br /> **9** = 邏輯<br /><br /> **109** = 實體<br /><br />  邏輯裝置名稱和裝置號碼在 **sys.backup_devices** 中；如需詳細資訊，請參閱 [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)。|  
 |**UserName**|**nvarchar(128)**|執行備份作業的使用者名稱。|  
 |**ServerName**|**nvarchar(128)**|寫入備份組的伺服器名稱。|  
 |**DatabaseName**|**nvarchar(128)**|備份的資料庫名稱。|  
@@ -151,7 +151,7 @@ FROM <backup_device>
 |**EncryptorType**|**nvarchar(32)**|**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) 至目前的版本)。<br /><br /> 使用的加密程式類型：憑證或非對稱金鑰。 備份未加密時，這個值會是 NULL。|  
   
 > [!NOTE]  
->  如果定義了備份組的密碼，RESTORE HEADERONLY 只會顯示密碼符合命令指定的 PASSWORD 選項的備份組。 另外，RESTORE HEADERONLY 也只會顯示未受保護之備份組的完整資訊。 媒體上其他受密碼保護之備份組的 **BackupName** 資料行會設為 ' **_Password Protected_** '，所有其他資料行則為 NULL。  
+>  如果定義了備份組的密碼，RESTORE HEADERONLY 只會顯示密碼符合命令指定的 PASSWORD 選項的備份組。 另外，RESTORE HEADERONLY 也只會顯示未受保護之備份組的完整資訊。 媒體上其他受密碼保護之備份組的 **BackupName** 資料行會設為 '**_Password Protected_**'，所有其他資料行則為 NULL。  
   
 ## <a name="general-remarks"></a>一般備註  
  用戶端可以利用 RESTORE HEADERONLY 來擷取特定備份裝置上的所有備份之所有備份標頭資訊。 對於備份裝置中的每個備份，伺服器會將標頭資訊當做一個資料列來傳送。  

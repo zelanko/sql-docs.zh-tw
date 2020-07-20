@@ -28,15 +28,15 @@ ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: e36315d58721fc6c50393b0bff10c7e8a2e3dee0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 38d542d84121b41311cd8aa64d4ec9747bfc2bf8
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757204"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279527"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [sql-asdb-asa.md](../../includes/applies-to-version/sql-asdb-asa.md)]
 
 壓縮指定之資料庫中的資料和記錄檔大小。
   
@@ -52,7 +52,18 @@ DBCC SHRINKDATABASE
 )  
 [ WITH NO_INFOMSGS ]  
 ```  
-  
+
+```syntaxsql
+-- Azure Synapse Analytics (formerly SQL DW)
+
+DBCC SHRINKDATABASE   
+( database_name   
+     [ , target_percent ]   
+)  
+[ WITH NO_INFOMSGS ]
+
+```  
+
 ## <a name="arguments"></a>引數  
 _database\_name_ | _database\_id_ | 0  
 這是要壓縮的資料庫名稱或識別碼。 0 指定使用目前的資料庫。  
@@ -93,7 +104,7 @@ WITH NO_INFOMSGS
 ## <a name="remarks"></a>備註  
 
 >[!NOTE]
-> Azure SQL 資料倉儲目前不支援 DBCC SHRINKDATABASE。 不建議執行此命令，因為這是 I/O 密集作業，而且可以讓您的資料倉儲離線。 此外，執行此命令之後將會對您的資料倉儲快照集成本有所影響。 
+> 不建議執行此命令，因為這是 I/O 密集作業，而且可以讓您的資料倉儲離線。 此外，執行此命令之後將會對您的資料倉儲快照集成本有所影響。 
 
 若要壓縮特定資料庫的所有資料和記錄檔，請執行 DBCC SHRINKDATABASE 命令。 若要一次壓縮特定資料庫的一個資料或記錄檔，請執行 [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) 命令。
   
@@ -170,7 +181,14 @@ GO
 ```sql  
 DBCC SHRINKDATABASE (AdventureWorks2012, TRUNCATEONLY);  
 ```  
-  
+### <a name="c-shrinking-an-azure-synapse-analytics-database"></a>C. 縮小 Azure Synapse Analytics 資料庫
+
+```
+DBCC SHRINKDATABASE (database_A);
+DBCC SHRINKDATABASE (database_B, 10); 
+
+```
+
 ## <a name="see-also"></a>另請參閱  
 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  

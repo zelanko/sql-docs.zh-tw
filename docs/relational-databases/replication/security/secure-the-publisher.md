@@ -18,15 +18,15 @@ ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 346e0686062b130a76b6d95781665d1a8223e3b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f6f3b56ec2a45420e56add4d3e746bcca5fb6eba
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287263"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159496"
 ---
 # <a name="secure-the-publisher"></a>保護發行者
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   
 下列複寫代理程式連接到發行者：  
   
@@ -43,7 +43,7 @@ ms.locfileid: "76287263"
  PAL 是在發行者端保護發行集安全的主要機制。 PAL 功能類似於 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 存取控制清單。 建立發行集之後，複寫便會建立此發行集的 PAL。 PAL 可進行設定，使其包含已授與了對發行集存取權的登入與群組清單。 當代理程式連接到「發行者」或「散發者」並要求存取發行集時，便會將 PAL 上的驗證資訊與代理程式提供的「發行者」登入進行比較。 這項處理序藉由防止用戶端工具使用「發行者」與「散發者」登入在「發行者」上直接進行修改，為「發行者」提供了額外的安全性。  
   
 > [!NOTE]  
->  複寫會在「發行者」上為每個發行集建立角色，以強制賦予 PAL 成員資格。 該角色的名稱格式為 **Msmerge_** _\<發行集識別碼>_ (合併式複寫) 及 **MSReplPAL_** _\<發行集資料庫識別碼>_ **_** _\<發行集識別碼>_ (異動複寫和快照式複寫)。  
+>  複寫會在「發行者」上為每個發行集建立角色，以強制賦予 PAL 成員資格。 該角色的名稱格式為 **Msmerge_** _\<PublicationID>_ (合併式複寫) 及 **MSReplPAL_** _\<PublicationDatabaseID>_ **_** _\<PublicationID>_ (異動複寫和快照式複寫)。  
   
  根據預設，下列登入包含在 PAL 內：建立發行集時的 **sysadmin** (系統管理員) 固定伺服器角色成員，以及用來建立發行集的登入。 依預設，對於發行集資料庫上所有 **系統管理員 (sysadmin)** 固定伺服器角色或 **db_owner** 固定資料庫角色的成員，其登入均可訂閱發行集而不需將其明確加入 PAL 中。  
   

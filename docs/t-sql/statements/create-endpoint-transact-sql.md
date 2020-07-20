@@ -1,5 +1,5 @@
 ---
-title: CREATE ENDPOINT (Transact-SQL) | Microsoft Docs
+title: CREATE ENDPOINT (Transact-SQL)
 ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql
@@ -31,14 +31,15 @@ helpviewer_keywords:
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7a8290a80438b41a201f268c7388c06d2d7df930
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c095857b42255551d8686d3809b5e13e4b1d7889
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902288"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392736"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   建立端點及定義其屬性，包括用戶端應用程式可用的方法。 如需相關的權限資訊，請參閱 [GRANT 端點權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)。  
@@ -107,7 +108,9 @@ FOR DATABASE_MIRRORING (
 )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *endPointName*  
  這是您要建立之端點的指派名稱。 更新或刪除端點時可使用該名稱。  
   
@@ -168,7 +171,7 @@ FOR DATABASE_MIRRORING (
   
  **\<authentication_options> ::=**  
   
- **WINDOWS** [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
+ **WINDOWS** [ { NTLM \| KERBEROS \| **NEGOTIATE** } ]  
  指定端點要利用 Windows 驗證通訊協定連接來驗證端點。 這是預設值。  
   
  如果您指定授權方法 (NTLM 或 KERBEROS)，一律以該方法做為驗證通訊協定。 預設值 NEGOTIATE 會導致端點利用 Windows 交涉通訊協定來選擇 NTLM 或 Kerberos。  
@@ -176,13 +179,13 @@ FOR DATABASE_MIRRORING (
  CERTIFICATE *certificate_name*  
  指定端點必須利用 *certificate_name* 所指定的憑證驗證連接，來建立授權的身分識別。 遠端點必須有一個特定憑證，該憑證含有符合指定憑證之私密金鑰的公開金鑰。  
   
- WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ] CERTIFICATE *certificate_name*  
+ WINDOWS [ { NTLM \| KERBEROS \| **NEGOTIATE** } ] CERTIFICATE *certificate_name*  
  指定端點必須嘗試利用 Windows 驗證連接，而且，如果該嘗試失敗，則嘗試使用指定的憑證。  
   
- CERTIFICATE *certificate_name* WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
+ CERTIFICATE *certificate_name* WINDOWS [ { NTLM \| KERBEROS \| **NEGOTIATE** } ]  
  指定端點必須嘗試利用指定的憑證連接，而且，如果該嘗試失敗，則嘗試使用 Windows 驗證。  
   
- ENCRYPTION = { DISABLED | SUPPORTED | **REQUIRED** } [ALGORITHM { **AES** | RC4 | AES RC4 | RC4 AES } ]  
+ ENCRYPTION = { DISABLED \| SUPPORTED \| **REQUIRED** } [ALGORITHM { **AES** \| RC4 \| AES RC4 \| RC4 AES } ]  
  指定是否要在處理序中使用加密。 預設值是 REQUIRED。  
   
  DISABLED  

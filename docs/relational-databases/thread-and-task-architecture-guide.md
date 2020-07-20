@@ -15,12 +15,12 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c6e8ee2bd3910f3b7ae4bbdba37b973c095fef00
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: df923a4a1509520b95e5efcf87e9eac51497e4a8
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091909"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86158916"
 ---
 # <a name="thread-and-task-architecture-guide"></a>執行緒和工作架構指南
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,16 @@ ms.locfileid: "86091909"
 -  在執行期間，序列要求在任何指定的時間點都只會有一個作用中工作。     
 工作在其整個生命週期中以各種狀態存在。 如需有關工作狀態的詳細資訊，請參閱 [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)。 處於「暫停」狀態的工作正在等候執行工作所需資源成為可用。 如需等候中工作的詳細資訊，請參閱 [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md)。
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **背景工作執行緒** (也稱為背景工作角色或執行緒) 是作業系統執行緒的邏輯表示法。 當執行**序列要求**時，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 將會繁衍背景工作角色以執行作用中工作 (1:1)。 當以[資料列模式](../relational-databases/query-processing-architecture-guide.md#execution-modes)執行**平行要求**時，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會指派背景工作角色，以協調負責完成受指派工作的子背景工作角色 (也是 1:1)，稱為**父執行緒**。 父執行緒具有與其建立關聯的父工作。 為每個工作繁衍的背景工作執行緒數目取決於：
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **背景工作執行緒** (也稱為背景工作角色或執行緒) 是作業系統執行緒的邏輯表示法。 當執行**序列要求**時，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 將會繁衍背景工作角色以執行作用中工作 (1:1)。 當以[資料列模式](../relational-databases/query-processing-architecture-guide.md#execution-modes)執行**平行要求**時，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會指派背景工作角色，以協調負責完成受指派工作的子背景工作角色 (也是 1:1)，稱為**父執行緒** (協調執行緒)。 父執行緒具有與其建立關聯的父工作。 父執行緒是要求的進入點，在引擎剖析查詢之前即已存在。 父執行緒的主要責任如下： 
+-  協調平行掃描。
+-  啟動子平行背景工作角色。
+-  從平行執行緒收集資料列，並傳送至用戶端。
+-  執行本機和全域彙總。    
+
+> [!NOTE]
+> 如果查詢計劃有序列和平行分支，則其中一項平行工作會負責執行序列分支。 
+
+為每個工作繁衍的背景工作執行緒數目取決於：
 -   要求是否符合平行處理原則的資格 (由查詢最佳化工具判斷)。
 -   根據目前的工作負載，實際可用[平行處理原則 (DOP)](../relational-databases/query-processing-architecture-guide.md#DOP) 為何。 這可能會與預估 DOP 有所差異，後者是以平行處理原則的最大程度 (MAXDOP) 伺服器組態為基礎。 例如，MAXDOP 伺服器組態選項可能是 8，執行階段的可用 DOP 只能是 2，這會影響查詢效能。 
 
@@ -72,19 +81,18 @@ WHERE (h.OrderDate >= '2014-3-28 00:00:00');
 > 如果將執行計畫視為樹狀結構，則**分支**就是計畫的一個區域，其可在平行處理原則運算子 (也稱為交換迭代器) 之間將一或多個運算子分組。 如需計畫運算子的詳細資訊，請參閱[執行程序表邏輯和實體運算子參考](../relational-databases/showplan-logical-and-physical-operators-reference.md)。 
 
 雖然執行計畫中有三個分支，但在執行期間的任何時間點，只能在此執行計畫中同時執行兩個分支：
-1.  在 `Sales.SalesOrderHeaderBulk` (聯結的建置輸入) 上使用「叢集索引掃描」的分支，會與在 `Sales.SalesOrderDetailBulk` (聯結的探查輸入) 上使用「叢集索引掃描」的分支同時執行。
-2. 在 `Sales.SalesOrderDetailBulk` (聯結的探查輸入) 上使用「叢集索引掃描」的分支，會與建立「點陣圖」的分支同時執行，且目前正在執行「雜湊比對」。
+1.  在 `Sales.SalesOrderHeaderBulk` (聯結的組建輸入) 使用「叢集索引掃描」的分支會單獨執行。
+2.  然後，在 `Sales.SalesOrderDetailBulk` (聯結的探查輸入) 使用「叢集索引掃描」的分支，會與建立「點陣圖」且目前正在執行「雜湊比對」的分支同時執行。
 
-執行程序表 XML 顯示已保留 16 個背景工作執行緒，並用於 NUMA 節點 0 和 1：
+執行程序表 XML 顯示已在 NUMA 節點 0 保留並使用 16 個背景工作執行緒：
 
 ```xml
 <ThreadStat Branches="2" UsedThreads="16">
-  <ThreadReservation NodeId="0" ReservedThreads="8" />
-  <ThreadReservation NodeId="1" ReservedThreads="8" />
+  <ThreadReservation NodeId="0" ReservedThreads="16" />
 </ThreadStat>
 ```
 
-執行緒保留可確保 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 擁有足夠背景工作執行緒，以執行要求所需的所有工作。 您可在所有 NUMA 節點上保留執行緒，或只保留在一個 NUMA 節點中。 執行緒保留會在執行開始之前於執行階段完成，並相依於排程器載入。 保留的背景工作執行緒數目通常衍生自公式 ***concurrent branches* * *runtime DOP***，並排除父系背景工作執行緒。 每個分支都會受限於等於 MaxDOP 的背景工作執行緒數目。 在此範例中有兩個平行分支，而 MaxDOP 設為 8，因此 **2 * 8 = 16**。
+執行緒保留可確保 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 擁有足夠背景工作執行緒，以執行要求所需的所有工作。 您可在數個 NUMA 節點上保留執行緒，也可以只保留在一個 NUMA 節點中。 執行緒保留會在執行開始之前於執行階段完成，並相依於排程器載入。 保留的背景工作執行緒數目通常衍生自公式 ***concurrent branches* * *runtime DOP***，並排除父系背景工作執行緒。 每個分支都會受限於等於 MaxDOP 的背景工作執行緒數目。 在此範例中有兩個平行分支，而 MaxDOP 設為 8，因此 **2 * 8 = 16**。
 
 如需參考，請觀察[即時查詢統計資料](../relational-databases/performance/live-query-statistics.md)中的即時執行計畫，其中一個分支已完成，且兩個分支同時執行。
 
@@ -131,8 +139,8 @@ ORDER BY parent_task_address, scheduler_id;
 請觀察這 16 個子工作每個都已獲指派不同的背景工作執行緒 (在 `worker_address` 資料行中可見)，但所有背景工作都會指派給相同集區的 8 個排程器 (0、5、6、7、8、9、10、11)，且父工作會指派給此集區以外的排程器 (3)。
 
 > [!IMPORTANT]
-> 在排程指定分支上的第一組平行工作之後，[!INCLUDE[ssde_md](../includes/ssde_md.md)] 會針對其他分支上任何其他工作使用相同的排程器集區。 這表示同一組排程器會用於整個執行計畫中的所有平行工作，只受限於 MaxDOP。      
-> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 一律會嘗試從相同的 NUMA 節點指派排程器，以用於執行工作。 不過，指派給父工作的背景工作執行緒，可能會放置在與其他工作不同的 NUMA 節點中。
+> 在排程指定分支上的第一組平行工作之後，[!INCLUDE[ssde_md](../includes/ssde_md.md)] 會針對其他分支上任何其他工作使用相同的排程器集區。 這表示同一組排程器會用於整個執行計畫中的所有平行工作，只受限於 MaxDOP。  
+> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 一律會嘗試從相同的 NUMA 節點指派排程器以執行工作，並在排程器可供使用時，(以循環配置資源的方式) 依序指派排程器。 不過，指派給父工作的背景工作執行緒，可能會放置在與其他工作不同的 NUMA 節點中。
 
 背景工作執行緒只能在其配量的持續時間 (4 毫秒) 於排程器中維持作用中狀態，且在經過該配量之後必須讓出排程器，以便讓指派給另一個工作的背景工作執行緒能成為作用中狀態。 當背景工作的配量過期且不再為作用中時，假設工作不需要存取目前尚未提供的資源 (例如閂鎖或鎖定)，則個別的工作會以 RUNNABLE 狀態放在 FIFO 佇列中，直到其再次移至 RUNNING 狀態為止；在此情況下，工作會進入 SUSPENDED 狀態 (而不是 RUNNABLE)，直到這些資源可供使用的時候為止。  
 
@@ -142,7 +150,7 @@ ORDER BY parent_task_address, scheduler_id;
 總結來說，平行要求會繁衍多個工作，每個工作都必須指派給單一背景工作執行緒，且每個背景工作執行緒都必須指派給單一排程器。 因此，使用中排程器數目不能超過每個分支的平行工作數目，其由 MaxDOP 所設定。 
 
 ### <a name="allocating-threads-to-a-cpu"></a>配置執行緒給 CPU
-根據預設，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的每個執行個體會啟動每個執行緒，且作業系統會根據負載從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體，將執行緒散發給電腦上的處理器 (CPU)。 如果已在作業系統層級啟用處理序親和性，則作業系統就會將每個執行緒指派給特定的 CPU。 相反地，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **背景工作執行緒**指派給**排程器**，以便將這些執行緒平均分配給 CPU。
+根據預設，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的每個執行個體會啟動每個執行緒，且作業系統會根據負載從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體，將執行緒散發給電腦上的處理器 (CPU)。 如果已在作業系統層級啟用處理序親和性，則作業系統就會將每個執行緒指派給特定的 CPU。 相反地，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **背景工作執行緒**指派給**排程器**，以循環配置資源的方式將這些執行緒平均分配給 CPU。
     
 為了執行多工作業 (例如當多個應用程式存取一組相同的 CPU 時)，作業系統有時會在不同的 CPU 之間移動背景工作執行緒。 雖然從作業系統的觀點來看很有效率，但是在繁重的系統負載下，這項活動可能會降低 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的效能，因為每個處理器快取會重複地重新載入資料。 在這些情況中，將特定執行緒指定給 CPU，可降低處理器重新載入的情形並減少跨 CPU 移轉執行緒的問題 (藉此減少內容切換)，進而提升效能，而執行緒與處理器之間的關聯則稱為處理器同質性。 如果已經啟用相似性，作業系統就會將每個執行緒指派給特定的 CPU。 
 

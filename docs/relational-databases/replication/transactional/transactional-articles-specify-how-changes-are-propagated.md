@@ -14,15 +14,15 @@ ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c86cfa1337323ed03cdb8b22cae9c951c110a139
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f50946b1540300bafbae9cac9b59b21dbb7eddf5
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286958"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159396"
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>交易式發行項 - 指定變更的傳播方式
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   異動複寫可讓您指定資料變更從「發行者」傳播到「訂閱者」的方式。 對於每個發行的資料表，您都可以指定四種方法之一來傳播每個要傳播到「訂閱者」的作業 (INSERT、UPDATE 或 DELETE)：  
   
 -   指定異動複寫應先編寫指令碼，然後呼叫預存程序，以將變更傳播至「訂閱者」(預設值)。  
@@ -40,13 +40,13 @@ ms.locfileid: "76286958"
 ## <a name="default-and-custom-stored-procedures"></a>預設與自訂預存程序  
  依預設，複寫為每個資料表發行項建立的三個程序為：  
   
--   處理插入的 **sp_MSins_\<** *tablename* **>** 。  
+-   **sp_MSins_\<** *tablename* **>** ，負責處理插入。  
   
--   處理更新的 **sp_MSupd_\<** *tablename* **>** 。  
+-   **sp_MSupd_\<** *tablename* **>** ，負責處理更新。  
   
--   處理刪除的 **sp_MSdel_\<** *tablename* **>** 。  
+-   **sp_MSdel_\<** *tablename* **>** ，負責處理刪除。  
   
- 程序中使用的 **\<** _tablename_ **>** 取決於發行項新增至發行集的方式，以及訂閱資料庫是否包含與不同擁有者具有相同名稱的資料表。  
+ 程序中使用的 **\<**_tablename_**>** 取決於發行項新增至發行集的方式，以及訂閱資料庫是否包含擁有者不同的同名資料表。  
   
  以上任何程序均可取代為您在將發行項新增至發行集時指定的自訂程序。 如果應用程式需要自訂邏輯，例如在「訂閱者」端更新資料列時將資料插入稽核資料表，就要使用自訂程序。 如需指定自訂預存程序的詳細資訊，請參閱以上所列的「如何」主題。  
   

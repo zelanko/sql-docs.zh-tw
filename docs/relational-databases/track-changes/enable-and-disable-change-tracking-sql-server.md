@@ -18,12 +18,12 @@ ms.assetid: 1c92ec7e-ae53-4498-8bfd-c66a42a24d54
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f3820ea3e450e00f2cdf812e52170ada80495c74
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 775feb5c2393c8b482deb2deb919fc93576e3ce6
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85638895"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279068"
 ---
 # <a name="enable-and-disable-change-tracking-sql-server"></a>啟用和停用變更追蹤 (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,7 @@ SET CHANGE_TRACKING = ON
 (CHANGE_RETENTION = 2 DAYS, AUTO_CLEANUP = ON)  
 ```  
   
- 您也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 資料庫屬性 &amp;#40;變更追蹤頁面&amp;#41; [資料庫屬性 &#40;變更追蹤頁面&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) 中的變更追蹤。  
+ 您也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 資料庫屬性 &#40;變更追蹤頁面&#41; [資料庫屬性 &amp;#40;變更追蹤頁面&amp;#41;](../../relational-databases/databases/database-properties-changetracking-page.md) 中的變更追蹤。 如果資料庫包含記憶體最佳化資料表，即無法使用 SQL Server Management Studio 來啟用變更追蹤。 若要啟用，請使用 T-SQL。
   
  當您啟用變更追蹤時，可以指定 CHANGE_RETENTION 和 AUTO_CLEANUP 選項，而且您可以在啟用變更追蹤之後的任何時間變更這些值。  
   
@@ -64,7 +64,7 @@ ENABLE CHANGE_TRACKING
 WITH (TRACK_COLUMNS_UPDATED = ON)  
 ```  
   
- 您也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 資料庫屬性 &amp;#40;變更追蹤頁面&amp;#41; [資料庫屬性 &#40;變更追蹤頁面&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) 中的變更追蹤。  
+ 您也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 資料庫屬性 &#40;變更追蹤頁面&#41; [資料庫屬性 &amp;#40;變更追蹤頁面&amp;#41;](../../relational-databases/databases/database-properties-changetracking-page.md) 中的變更追蹤。  
   
  當 TRACK_COLUMNS_UPDATED 選項設定為 ON 時， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會將哪些資料行已更新的相關額外資訊儲存到內部變更追蹤資料表。 資料行追蹤只能讓應用程式同步處理已經更新的那些資料行。 這樣可以改善效率與效能。 但是，由於維護資料行追蹤資訊會增加額外的儲存負擔，所以此選項預設為 OFF。  
   

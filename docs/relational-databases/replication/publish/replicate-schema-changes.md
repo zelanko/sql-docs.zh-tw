@@ -15,15 +15,15 @@ ms.assetid: c09007f0-9374-4f60-956b-8a87670cd043
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e81c7b72962f02f9179bf458b84a1cd9dac9e411
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 222726b75703b5c59204e2180d453a8f54aeaff8
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807231"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86160066"
 ---
 # <a name="replicate-schema-changes"></a>複寫結構描述變更
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中複寫結構描述變更。  
   
  如果您要針對發佈的發行項進行下列結構描述變更，則這些變更預設會傳播到 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者：  
@@ -57,11 +57,11 @@ ms.locfileid: "83807231"
 -   ALTER TABLE ...DROP COLUMN 陳述式一定會複寫至訂閱包含要卸除之資料行的所有「訂閱者」，即使您停用結構描述變更的複寫也是如此。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 如果您不想複寫發行集的結構描述變更，請在 [發行集屬性 - \<發行集>] 對話方塊中停用結構描述變更的複寫。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。  
+ 如果不想複寫發行集的結構描述變更，請在 [發行集屬性 - \<Publication>] 對話方塊中停用結構描述變更的複寫。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。  
   
 #### <a name="to-disable-replication-of-schema-changes"></a>若要停用結構描述變更的複寫  
   
-1.  在 [發行集屬性 - \<發行集>] 對話方塊的 [訂閱選項] 頁面上，將 [複寫結構描述變更] 屬性的值設定為 [False]。  
+1.  在 [發行集屬性 - \<Publication>] 對話方塊的 [訂閱選項] 頁面上，將 [複寫結構描述變更] 屬性的值設定為 [False]。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 

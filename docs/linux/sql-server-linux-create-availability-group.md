@@ -8,12 +8,12 @@ ms.date: 06/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 72d1292b03bc518ec8dfbe7a8f2e5e281bc6978a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d2bc4c05c711645b0cff669acbf847da4998f5d2
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896551"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196736"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>為 Linux 上的 SQL Server 建立和設定可用性群組
 
@@ -326,7 +326,7 @@ sudo systemctl restart mssql-server
 
 3.  在 [指定可用性群組選項] 對話方塊中，輸入可用性群組的名稱，然後在下拉式清單中選取 [外部] 或 [無] 的叢集類型。 如果要部署 Pacemaker，應該使用 [外部]。 [無] 適用於特定案例，例如，讀取擴增。選取 [資料庫層級健康情況偵測] 選項是選擇性的。 如需此選項的詳細資訊，請參閱[可用性群組資料庫層級健康情況偵測容錯移轉選項](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md)。 按 [下一步] 。
 
-    ![](./media/sql-server-linux-create-availability-group/image3.png)
+    ![建立可用性群組 03](./media/sql-server-linux-create-availability-group/image3.png)
 
 4.  在 [選取資料庫] 對話方塊中，選取將參與 AG 的資料庫。 每個資料庫都必須有完整備份，才能將它加入 AG。 按 [下一步] 。
 
@@ -340,17 +340,17 @@ sudo systemctl restart mssql-server
 
     下列範例顯示的 AG 包含兩個複本、一個「外部」類型叢集，以及一個僅限設定複本。
 
-    ![](./media/sql-server-linux-create-availability-group/image4.png)
+    ![建立可用性群組 04](./media/sql-server-linux-create-availability-group/image4.png)
 
     下列範例顯示的 AG 包含兩個複本、一個「無」類型叢集，以及一個僅限設定複本。
 
-    ![](./media/sql-server-linux-create-availability-group/image5.png)
+    ![建立可用性群組 05](./media/sql-server-linux-create-availability-group/image5.png)
 
 9.  如果您想要變更備份喜好設定，請按一下 [備份喜好設定] 索引標籤。如需 AG 的備份喜好設定詳細資訊，請參閱[設定可用性複本的備份](../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)。
 
 10. 如果針對讀取縮放使用可讀取次要複本，或建立叢集類型為「無」的 AG，您可以選取 [接聽程式] 索引標籤來建立接聽程式。您也可以稍後再新增接聽程式。 若要建立接聽程式，請選擇 [建立可用性群組接聽程式] 選項，然後輸入名稱、TCP/IP 連接埠，以及要使用靜態或自動指派的 DHCP IP 位址。 請記住，對於叢集類型為「無」的 AG，IP 應為靜態，並設定為主要的 IP 位址。
 
-    ![](./media/sql-server-linux-create-availability-group/image6.png)
+    ![建立可用性群組 06](./media/sql-server-linux-create-availability-group/image6.png)
 
 11. 如果接聽程式是為可讀取的案例建立，SSMS 17.3 或更新版本允許在精靈中建立唯讀路由。 您也可以在稍後透過 SSMS 或 Transact-SQL 新增它。 現在新增唯讀路由：
 

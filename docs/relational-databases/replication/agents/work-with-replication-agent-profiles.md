@@ -16,22 +16,22 @@ ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7b0a47ff73186642e0b0b48aec06e5320fc44d15
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0c3ee49fac628bc733ac5394d47e5a9187081a1a
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288235"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159966"
 ---
 # <a name="work-with-replication-agent-profiles"></a>處理複寫代理程式設定檔
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中處理複寫代理程式設定檔。 每個複寫代理程式的行為由一組可在代理程式設定檔中設定的參數來控制。 各代理程式都有預設的設定檔，某些代理程式還擁有其他預先定義的設定檔；在某一給定時刻，代理程式只使用一個設定檔。  
   
  **本主題內容**  
   
 -   **若要處理複寫代理程式設定檔，請使用：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
     -   存取代理程式設定檔對話方塊  
   
@@ -69,7 +69,7 @@ ms.locfileid: "76288235"
   
 ###  <a name="to-access-the-agent-profiles-dialog-box-from-sql-server-management-studio"></a><a name="Access_SSMS"></a> 若要透過 SQL Server Management Studio 存取代理程式設定檔對話方塊  
   
-1.  在 [散發者屬性 - \<散發者>]  對話方塊的 [一般]  頁面上，按一下 [設定檔預設值]  。  
+1.  在 [散發者屬性 - \<Distributor>] 對話方塊的 [一般] 頁面上，按一下 [設定檔預設值]。  
 
 #### <a name="to-access-the-agent-profiles-dialog-box-from-replication-monitor"></a>若要透過複寫監視器存取代理程式設定檔對話方塊  
   
@@ -93,15 +93,15 @@ ms.locfileid: "76288235"
   
 1.  如果 **[代理程式設定檔]** 對話方塊顯示一個以上的代理程式設定檔，請選取一個代理程式。  
   
-2.  按一下設定檔旁邊的屬性按鈕 ([...]  )。  
+2.  按一下設定檔旁邊的屬性按鈕 ([...])。  
   
-3.  檢視 [\<設定檔名稱> 設定檔屬性]  對話方塊中的參數和值。  
+3.  檢視 [\<ProfileName> 設定檔屬性] 對話方塊中的參數和值。  
   
     -   可以編輯使用者自訂之設定檔中的參數；但無法編輯預先定義之系統設定檔中的參數。  
   
     -   若要檢視代理程式的所有參數，請清除 **[只顯示這個設定檔中使用的參數]** 核取方塊。 如需有關代理程式參數的資訊，請參閱此主題結尾處的連結。  
   
-4.  按一下 [關閉]  。  
+4.  按一下 [關閉] 。  
   
 ###  <a name="to-create-a-user-defined-profile"></a><a name="Create_SSMS"></a> 若要建立使用者自訂的設定檔  
   

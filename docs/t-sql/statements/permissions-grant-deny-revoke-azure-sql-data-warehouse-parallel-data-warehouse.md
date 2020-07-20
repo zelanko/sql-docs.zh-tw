@@ -14,15 +14,15 @@ ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 2aa15e60680419fc2f6c74034ce7063ecabdbf77
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c8d19d21b7bcd1e9ab72732dab439355da1794e0
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81626028"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197433"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>權限：GRANT、DENY、REVOKE (Azure SQL 資料倉儲、平行處理資料倉儲)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   使用 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]的 **GRANT** 和 **DENY** 陳述式，以針對安全性主體 (登入、資料庫使用者或資料庫角色) 授與或拒絕對安全性實體 (例如資料庫、資料表、檢視等) 的權限 (例如 **UPDATE**)。 使用 **REVOKE** 來移除某個權限的授與或拒絕。  
   
@@ -81,7 +81,7 @@ REVOKE
  \<permission>[ **,** ...*n* ]  
  一或多個要授與、拒絕或撤銷的權限。  
   
- ON [ \<class_type> :: ] *securable* **ON** 子句描述要作為授與、拒絕或撤銷權限時之執行對象的 securable 參數。  
+ ON [ \<class_type> :: ] *securable* The **ON** 子句描述要對其授與、拒絕或撤銷權限的安全性實體參數。  
   
  \<class_type> 安全性實體的類別類型。 這可以是 **LOGIN**、**DATABASE**、**OBJECT**、**SCHEMA**、**ROLE** 或 **USER**。 您也可以將權限授與 **SERVER**_class\_type_，但針對這些權限不需指定 **SERVER**。 當權限包含 **DATABASE** 一字 (例如 **ALTER ANY DATABASE**) 時，不需指定 **DATABASE**。 未指定任何 *class_type* 且權限類型未限制為伺服器或資料庫類別時，會假設類別為 **OBJECT**。  
   
@@ -120,14 +120,14 @@ REVOKE
  PDW 有時會執行預存程序，以將使用者動作散發至計算集點。 因此，不能拒絕整個資料庫的執行權限。 (例如 `DENY EXECUTE ON DATABASE::<name> TO <user>;` 會失敗)。因應之道就是拒絕對使用者結構描述或特定物件 (程序) 的執行權限。  
   
 ### <a name="implicit-and-explicit-permissions"></a>隱含和明確權限  
- 「明確權限」  是藉由 **GRANT** 或 **DENY** 陳述式來賦予主體的 **GRANT** 或 **DENY** 權限。  
+ 「明確權限」 是藉由 **GRANT** 或 **DENY** 陳述式來賦予主體的 **GRANT** 或 **DENY** 權限。  
   
- 「隱含權限」  是主體 (登入、使用者或資料庫角色) 從另一個資料庫角色繼承的 **GRANT** 或 **DENY** 權限。  
+ 「隱含權限」 是主體 (登入、使用者或資料庫角色) 從另一個資料庫角色繼承的 **GRANT** 或 **DENY** 權限。  
   
  隱含權限也可以繼承自涵蓋權限或父權限。 例如，藉由擁有資料表之上層結構描述的 **UPDATE** 權限或資料表的 **CONTROL** 權限，即可繼承資料表的 **UPDATE** 權限。  
   
 ### <a name="ownership-chaining"></a>擁有權鏈結  
- 當多個資料庫物件依序存取彼此時，此順序即稱為「鏈結」  。 雖然此類鏈結不會獨立存在，當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 周遊鏈結中的連結時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 評估要素物件權限的方式，與單獨存取物件時不同。 擁有權鏈結對於管理安全性有很重要的影響。 如需擁有權鏈結的詳細資訊，請參閱[擁有權鏈結](https://msdn.microsoft.com/library/ms188676\(v=sql11\).aspx)和[教學課程：擁有權鏈結和內容切換](../../relational-databases/tutorial-ownership-chains-and-context-switching.md)。  
+ 當多個資料庫物件依序存取彼此時，此順序即稱為「鏈結」。 雖然此類鏈結不會獨立存在，當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 周遊鏈結中的連結時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 評估要素物件權限的方式，與單獨存取物件時不同。 擁有權鏈結對於管理安全性有很重要的影響。 如需擁有權鏈結的詳細資訊，請參閱[擁有權鏈結](https://msdn.microsoft.com/library/ms188676\(v=sql11\).aspx)和[教學課程：擁有權鏈結和內容切換](../../relational-databases/tutorial-ownership-chains-and-context-switching.md)。  
   
 ## <a name="permission-list"></a>權限清單  
   

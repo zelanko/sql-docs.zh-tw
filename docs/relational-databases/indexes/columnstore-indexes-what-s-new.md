@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a5d2e90088d844bbd897f2a0efae9379e9a1a585
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9c0a353c91b952571932ae6d2abe318f70decc4a
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007485"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279218"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>資料行存放區索引 - 新功能
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,6 +49,9 @@ ms.locfileid: "86007485"
 |資料行存放區索引可以具有非保存的計算資料行||||是|||   
   
  <sup>1</sup> 若要建立唯讀的非叢集資料行存放區索引，請將索引儲存在唯讀的檔案群組中。  
+ 
+> [!NOTE]
+> [批次模式](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution)作業的平行處理原則程度 (DOP) 限制如下：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition 為 2，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web Edition 和 Express Edition 為 1。 這會參考以磁碟式資料表和記憶體最佳化資料表建立的資料行存放區索引。
 
 ## [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 新增這些新功能。
@@ -85,22 +88,26 @@ ms.locfileid: "86007485"
   
 -   資料行存放區透過移除刪除的資料列，但不必明確重建索引，來支援索引重組。 `ALTER INDEX ... REORGANIZE` 陳述式會根據內部定義的原則，如同線上作業從資料行存放區中移除已刪除的資料列  
   
--   您可以在 AlwaysOn 可讀取次要複本上存取資料行存放區索引。 您可以將分析查詢卸載到 AlwaysOn 次要複本，以改善作業分析的效能。  
+-   您可在 Always On 可讀取次要複本上存取資料行存放區索引。 您可將分析查詢卸載到 Always On 次要複本，以改善作業分析的效能。  
   
--   為改善效能，當資料類型使用不超過 8 個位元組，且不是字串類型時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在資料表掃描期間計算彙總函式 `MIN`、`MAX`、`SUM`、`COUNT` 和 `AVG`。 無論是否使用 Group By 子句，叢集資料行存放區索引和非叢集資料行存放區都支援彙總下推。  
+-   當資料類型使用不超過 8 個位元組，且不是字串類型時，彙總下推會在資料表掃描期間計算彙總函式 `MIN`、`MAX`、`SUM`、`COUNT` 和 `AVG`。 無論是否使用 `GROUP BY` 子句，叢集資料行存放區索引和非叢集資料行存放區都支援彙總下推。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上，這項增強功能已保留給 Enterprise Edition。
   
--   述詞下推會加快比較 [v]archar 或 n[v]archar 字串類型的查詢。 這適用於一般比較運算子和包括運算子，如使用點陣圖篩選器的 LIKE。 這對 SQL Server 支援的所有定序都有效。  
+-   字串述詞下推會加速比較 VARCHAR/CHAR 或 NVARCHAR/NCHAR 字串類型的查詢。 這適用於一般比較運算子和包括運算子，例如使用點陣圖篩選的 `LIKE`。 這適用於所有支援的定序。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上，這項增強功能已保留給 Enterprise Edition。 
+
+-   利用向量型硬體功能增強批次模式作業。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會偵測 AVX 2 (Advanced Vector Extensions) 和 SSE 4 (Streaming SIMD Extensions 4) 硬體擴充的 CPU 支援層級，並在支援時使用。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上，這項增強功能已保留給 Enterprise Edition。
   
 ### <a name="performance-for-database-compatibility-level-130"></a>資料庫相容性等級 130 的效能  
   
 -   新的批次模式執行支援使用任一這些作業的查詢︰  
-    -   SORT  
-    -   使用多個不同的函式進行彙總。 部分範例：`COUNT/COUNT`、`AVG/SUM`、`CHECKSUM_AGG`、`STDEV/STDEVP`。  
-    -   視窗彙總函式：`COUNT`、`COUNT_BIG`、`SUM`、`AVG`、`MIN`、`MAX` 和 `CLR`。  
-    -   視窗使用者定義彙總：`CHECKSUM_AGG`、`STDEV`、`STDEVP`、`VAR`、`VARP` 和 `GROUPING`。  
-    -   視窗彙總分析函式：`LAG`、`LEAD`、`FIRST_VALUE`、`LAST_VALUE`、`PERCENTILE_CONT`、`PERCENTILE_DISC`、`CUME_DIST` 和 `PERCENT_RANK`。  
+    -   `SORT`  
+    -   使用多個不同的函式進行彙總。 部分範例：`COUNT/COUNT`、`AVG/SUM`、`CHECKSUM_AGG`、`STDEV/STDEVP`  
+    -   視窗彙總函式：`COUNT`、`COUNT_BIG`、`SUM`、`AVG`、`MIN`、`MAX` 和 `CLR`  
+    -   視窗使用者定義彙總：`CHECKSUM_AGG`、`STDEV`、`STDEVP`、`VAR`、`VARP` 和 `GROUPING`  
+    -   視窗彙總分析函式：`LAG`、`LEAD`、`FIRST_VALUE`、`LAST_VALUE`、`PERCENTILE_CONT`、`PERCENTILE_DISC`、`CUME_DIST` 和 `PERCENT_RANK`  
+
 -   在 `MAXDOP 1` 下執行，或以批次模式執行序列查詢計畫的單一執行緒查詢。 以前只有多執行緒查詢可以批次執行的方式來執行。  
--   在存取資料列存放區或資料行存放區索引中的資料時，記憶體最佳化資料表查詢在 SQL InterOp 模式中可以有平行計畫。  
+
+-   在存取資料列存放區或資料行存放區索引中的資料時，記憶體最佳化資料表查詢在 SQL InterOp 模式中可以有平行計畫。
   
 ### <a name="supportability"></a>支援能力  
 這些系統檢視表對資料行存放區而言是新的︰  

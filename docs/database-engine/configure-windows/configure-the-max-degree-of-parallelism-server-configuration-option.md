@@ -17,12 +17,12 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: markingmyname
 ms.author: maghan
 ms.custom: contperfq4
-ms.openlocfilehash: 023c80f9f2e5ab5194c5e58ae2066e4758ad440c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f1b4b8db6d5af2ff76b85933ab4fcdc3f67e4987
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85697186"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159726"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>設定 max degree of parallelism 伺服器組態選項
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "85697186"
   
 -   如果 affinity mask 選項不是設成預設值，它可能會限制對稱式多處理 (SMP) 系統上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可用的處理器個數。  
 
--   **平行處理原則最大程度 (MAXDOP)** 限制的設定會根據[工作](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)。 它不是根據[要求](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)或查詢限制。 這表示平行查詢執行期間，單一要求可能會產生指派至排程器的多個工作。 如需詳細資訊，請參閱[執行緒與工作架構指南](../../relational-databases/thread-and-task-architecture-guide.md)。 
+-   **平行處理原則最大程度 (MAXDOP)** 限制的設定會根據[工作](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)。 它不是根據[要求](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)或查詢限制。 這表示在平行查詢執行期間，單一要求可繁衍多個工作 (最多為 MAXDOP 限制)，且每個工作都會使用一個背景工作和一個排程器。 如需詳細資訊，請參閱[執行緒和工作架構指南](../../relational-databases/thread-and-task-architecture-guide.md)中的＜排程平行工作＞一節。 
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   

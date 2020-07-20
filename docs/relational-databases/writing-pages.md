@@ -13,12 +13,12 @@ ms.assetid: 409c8753-03c4-436d-839c-6a5879971551
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c5ffdb81cd5c1242a6a97dcb978683488c5a755b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f9bf3a75323a18b500c5bec35e0a01cb48fa754e
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998305"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86302007"
 ---
 # <a name="writing-pages"></a>寫入分頁
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "85998305"
  延遲寫入器是一個系統處理序，會從緩衝快取移除不常使用的頁面以持續提供可用的緩衝區空間。 中途分頁會首先寫入磁碟。 
 
 * 急切寫入   
- 急切寫入處理序會寫入與非記錄作業 (例如大量插入與選取插入) 相關聯的中途資料頁。 此處理序允許建立頁面與寫入新頁面的作業平行進行。 也就是說，呼叫作業不需要等到整個作業完成，即可將頁面寫入磁碟。
+ 急切寫入處理序會寫入與 bulk insert 和 select into 等最少記錄作業建立關聯的已變更資料。 此處理序允許建立頁面與寫入新頁面的作業平行進行。 也就是說，呼叫作業不需要等到整個作業完成，即可將頁面寫入磁碟。
 
 * Checkpoint   
  檢查點處理序會定期掃描緩衝快取，檢查是否有內含來自指定資料庫之頁面的緩衝區，並將所有中途分頁寫入磁碟。 藉由建立一個點來確保所有中途分頁都已寫入磁碟中，檢查點可讓稍後的復原節省時間。 使用者可以使用 CHECKPOINT 命令來要求檢查點作業，或者也可以由 [!INCLUDE[ssDE](../includes/ssde-md.md)] 根據自最後一個檢查點以來所使用的記錄空間數量及經過的時間，自動產生檢查點。 此外，檢查點還會在發生特定活動時產生。 例如，從資料庫加入或移除資料或記錄檔時，或者在停止 SQL Server 的執行個體時。 如需詳細資訊，請參閱 [檢查點與記錄檔的使用中部份](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)。

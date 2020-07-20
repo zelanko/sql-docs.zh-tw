@@ -12,19 +12,19 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b73d24edb139e36f11e05c854c9d10d885994e18
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 62c4954663f7553fd6df7461f5b5c967f7386721
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595483"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279354"
 ---
 # <a name="tutorial-develop-a-net-framework-application-using-always-encrypted-with-secure-enclaves"></a>教學課程：使用具有安全記憶體保護區的 Always Encrypted 開發 .NET Framework 應用程式
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 本教學課程會教您如何開發簡單的應用程式來發出資料庫查詢，其使用[具有安全記憶體保護區 Always Encrypted](encryption/always-encrypted-enclaves.md) 的伺服器端安全記憶體保護區。 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 本教學課程是[教學課程：使用 SSMS，開始使用具有安全記憶體保護區的 Always Encrypted](./tutorial-getting-started-with-always-encrypted-enclaves.md)。 請確定您已完成它，再繼續進行下列步驟。
 
 此外，您還需要 Visual Studio (建議使用版本 2019)；您可以從 [https://visualstudio.microsoft.com/](https://visualstudio.microsoft.com) 進行下載。 您的應用程式開發電腦必須執行 .NET Framework 4.7.2 或更新版本。
@@ -39,13 +39,13 @@ ms.locfileid: "73595483"
 
 3. 請確定您專案的目標至少為 .NET Framework 4.7.2。 以滑鼠右鍵按一下 [方案總管] 中的專案，並選取 [屬性]，然後將 [目標架構] 設定為 .NET Framework 4.7.2。
 
-4. 移至 [工具]  \(主功能表) > [NuGet 套件管理員]   > [套件管理員主控台]  ，以安裝下列 NuGet 套件。 在 [套件管理員主控台] 中，執行下列程式碼。
+4. 移至 [工具]\(主功能表) > [NuGet 套件管理員] > [套件管理員主控台]，以安裝下列 NuGet 套件。 在 [套件管理員主控台] 中，執行下列程式碼。
 
    ```powershell
    Install-Package Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders -IncludePrerelease
    ```
 
-5. 如果您使用 Azure Key Vault 來儲存資料行主要金鑰，請移至 [工具]  \(主功能表) > [NuGet 套件管理員]   > [套件管理員主控台]  ，以安裝下列 NuGet 套件。 在 [套件管理員主控台] 中，執行下列程式碼。
+5. 如果您使用 Azure Key Vault 來儲存資料行主要金鑰，請移至 [工具]\(主功能表) > [NuGet 套件管理員] > [套件管理員主控台]，以安裝下列 NuGet 套件。 在 [套件管理員主控台] 中，執行下列程式碼。
 
    ```powershell
    Install-Package Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider -IncludePrerelease -Version 2.2.0
@@ -54,22 +54,22 @@ ms.locfileid: "73595483"
 
 7. 開啟您專案的 App.config 檔。
 
-8. 找到 \<configuration\> 區段，然後新增或更新 \<configSections\> 區段。
+8. 找到 \<configuration\> 區段，然後新增或更新這些 \<configSections\> 區段。
 
-   a. 若 \<configuration\> 區段**不**包含 \<configSections\> 區段，則請在 \<configuration\> 的下方立即新增下列內容。
+   a. 若 \<configuration\> 區段**不**包含 \<configSections\> 區段，請緊接在 \<configuration\> 的下方新增下列內容。
    
       ```xml
       <configSections>
          <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
       </configSections>
       ```
-   b. 如果 \<configruation\> 區段已包含了 \<configSections\> 區段，則請於 \<configSections\> 內新增下行：
+   b. 如果 \<configruation\> 區段已包含 \<configSections\> 區段，請在 \<configSections\> 內新增下行程式碼：
 
    ```xml
    <section name="SqlColumnEncryptionEnclaveProviders"  type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data,  Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" /\>
    ```
 
-9. 在設定區段的 \<configSections\> 下，新增下列區段，以指定要用來證明以及與 VBS 記憶體保護區互動的記憶體保護區提供者：
+9. 在組態區段的 \<configSections\> 下方，新增下列區段，以指定要用來證明以及與 VBS 記憶體保護區互動的記憶體保護區提供者：
 
    ```xml
    <SqlColumnEncryptionEnclaveProviders>

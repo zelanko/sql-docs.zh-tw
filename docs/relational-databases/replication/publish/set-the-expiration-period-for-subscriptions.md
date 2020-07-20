@@ -16,15 +16,15 @@ ms.assetid: 542f0613-5817-42d0-b841-fb2c94010665
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 6dc18d925e014ccd17303e4e3d2698ad72b3758d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b043256a60aa5d057139e1eab1127fff8debeecf
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287538"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159946"
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>設定訂閱的逾期期限
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中設定訂閱的逾期期限。 訂閱的逾期期限可決定訂閱到期及移除之前的期間。 如需詳細資訊，請參閱 [Subscription Expiration and Deactivation](../../../relational-databases/replication/subscription-expiration-and-deactivation.md)。  
   
  **本主題內容**  
@@ -35,7 +35,7 @@ ms.locfileid: "76287538"
   
 -   **若要設定訂閱的逾期期限，請使用：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -52,11 +52,11 @@ ms.locfileid: "76287538"
     -   您可以將訂閱指定為永不過期，不過強烈建議您不要使用此值，因為如此便無法清除中繼資料了。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 您可以在 [發行集屬性 - \<發行集>] 對話方塊的 [一般] 頁面上，設定訂閱的逾期期限。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。  
+ 您可在 [發行集屬性 - \<Publication>] 對話方塊的 [一般] 頁面上，設定訂閱的逾期期限。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。  
   
 #### <a name="to-set-the-expiration-period-for-subscriptions"></a>若要設定訂閱的過期期間  
   
-1.  在 [發行集屬性 - \<發行集>] 對話方塊之 [一般] 頁面的 [訂閱過期] 區段中，指定訂閱是否應過期。  
+1.  在 [發行集屬性 - \<Publication>] 對話方塊其 [一般] 頁面的 [訂閱過期] 區段中，指定訂閱是否應過期。  
   
 2.  如果應過期，則指定過期期間。  
   

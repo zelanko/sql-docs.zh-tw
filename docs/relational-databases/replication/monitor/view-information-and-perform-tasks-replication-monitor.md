@@ -16,15 +16,15 @@ ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1e78db0d3844ee7581bd57da1e57f14ee80e29cf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: be851d2ff0919125699a4e33c4b4d1d6445c0fc6
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286385"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159626"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>使用複寫監視器來檢視資訊及執行工作
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
 複寫監視器提供一些索引標籤和選項，來檢視資訊及執行各種工作。 本文說明使用「複寫監視器」時，可以檢視和完成的各種不同項目。 
 
 
@@ -44,16 +44,16 @@ ms.locfileid: "76286385"
   
 -   **追蹤 Token** - (僅限異動複寫) 此索引標籤可讓您測量延遲，亦即「發行者」端所認可之交易與「訂閱者」端所認可之對應交易之間經過的時間。  
   
- 如需有關每個索引標籤上選項的詳細資訊，請在右窗格中選取索引標籤，然後選取功能表列上的 [說明]  。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
+ 如需有關每個索引標籤上選項的詳細資訊，請在右窗格中選取索引標籤，然後選取功能表列上的 [說明]。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
 ### <a name="perform-tasks"></a>執行工作
   
 1.  在左窗格中依序展開某個「發行者」群組和「發行者」，然後選取發行集。   
-2.  若要檢視及修改發行集屬性，請在發行集上按一下滑鼠右鍵，然後選取 [屬性]  。    
-3.  若要檢視有關訂閱的資訊，請選取 [所有訂閱]  索引標籤，在訂閱上按一下滑鼠右鍵，然後選取 [屬性]  。 您也可以透過這個索引標籤存取更多詳細資訊並可執行工作。 
-4.  若要檢視有關代理程式的資訊，請選取 [代理程式]  索引標籤。您也可以透過這個索引標籤存取更多詳細資訊並可執行工作。 
-5.  若要檢視有關代理程式警告和閾值的資訊，請選取 [警告]  索引標籤。如需相關資訊，請參閱 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
-6.  若要檢視有關追蹤 Token 的資訊，請選取 [追蹤 Token]  索引標籤。如需如何使用追蹤 Token 的詳細資訊，請參閱＜ [針對異動複寫測量延遲及驗證連接](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)＞。  
+2.  若要檢視及修改發行集屬性，請在發行集上按一下滑鼠右鍵，然後選取 [屬性]。    
+3.  若要檢視有關訂閱的資訊，請選取 [所有訂閱] 索引標籤，在訂閱上按一下滑鼠右鍵，然後選取 [屬性]。 您也可以透過這個索引標籤存取更多詳細資訊並可執行工作。 
+4.  若要檢視有關代理程式的資訊，請選取 [代理程式] 索引標籤。您也可以透過這個索引標籤存取更多詳細資訊並可執行工作。 
+5.  若要檢視有關代理程式警告和閾值的資訊，請選取 [警告] 索引標籤。如需相關資訊，請參閱 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
+6.  若要檢視有關追蹤 Token 的資訊，請選取 [追蹤 Token] 索引標籤。如需如何使用追蹤 Token 的詳細資訊，請參閱＜ [針對異動複寫測量延遲及驗證連接](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)＞。  
   
 ## <a name="for-a-publisher"></a>針對發行者 
 
@@ -97,7 +97,7 @@ ms.locfileid: "76286385"
   
 1.  在左窗格中展開發行者群組，然後按一下發行者。    
 2.  若要檢視有關訂閱的資訊，請按一下 **[訂閱監看清單]** 索引標籤。    
-3.  從 [顯示 \<訂閱類型> 訂閱]  下拉式清單中選取要顯示的訂閱類型。 若只要檢視給定狀態中的訂閱，如同步處理，請從 **[顯示]** 下拉式清單中選取某選項。    
+3.  從 [顯示 \<SubscriptionType> 訂閱] 下拉式清單中選取要顯示的訂閱類型。 若只要檢視給定狀態中的訂閱，如同步處理，請從 **[顯示]** 下拉式清單中選取某選項。    
 4.  若要檢視和修改訂閱屬性，以滑鼠右鍵按一下訂閱，然後按一下 **[屬性]** 。 您也可以透過這個索引標籤存取更多詳細資訊並可執行工作。 
   
   

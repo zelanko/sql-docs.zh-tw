@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: bd4a4e98f464c56e5c46c669b7ca26e5db5c814e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 82cd5d463b74fb432b781d6fd721badaa1e836c1
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883082"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279334"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server 和資料庫加密金鑰 (Database Engine)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用加密金鑰來保護儲存於伺服器資料庫中之資料、認證和連接資訊的安全。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 有兩種類型的金鑰： *「對稱」* (Symmetric) 與 *「非對稱」* (Asymmetric)。 對稱金鑰會使用相同的密碼為資料加密與解密。 非對稱金鑰會使用某個密碼來加密資料 (稱為「公開」  金鑰)，並使用另一個密碼來解密資料 (稱為「私密」  金鑰)。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用加密金鑰來保護儲存於伺服器資料庫中之資料、認證和連接資訊的安全。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 有兩種類型的金鑰： *「對稱」* (Symmetric) 與 *「非對稱」* (Asymmetric)。 對稱金鑰會使用相同的密碼為資料加密與解密。 非對稱金鑰會使用某個密碼來加密資料 (稱為「公開」金鑰)，並使用另一個密碼來解密資料 (稱為「私密」金鑰)。  
   
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，加密金鑰包括用於保護機密資料的公開、私密和對稱金鑰的組合。 當您初次啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體時，會在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 初始化期間建立對稱金鑰。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用此金鑰來加密 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]內所儲存的敏感性資料。 公開金鑰和私密金鑰是由作業系統所建立，可用來保護對稱金鑰。 針對負責儲存資料庫中之敏感性資料的每一個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體，建立一組公開金鑰和私密金鑰。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "85883082"
 
 ### <a name="service-master-key"></a>服務主要金鑰
   
- 服務主要金鑰是 SQL Server 加密階層的根。 SMK 會在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體第一次啟動時自動產生，並用來加密連結伺服器密碼、認證和資料庫主要金鑰。 SMK 是以本機電腦金鑰或 Windows 資料保護 API (DPAPI) 加密。 DPAPI 會使用一個衍生自 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶和電腦認證之 Windows 認證的金鑰。 服務主要金鑰只能由建立它時所使用的服務帳戶解密，或是只能由可以存取電腦認證的主體解密。
+ 服務主要金鑰是 SQL Server 加密階層的根。 SMK 會在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體第一次啟動時自動產生，且用以加密各資料庫的連結伺服器密碼、認證和資料庫主要金鑰。 SMK 是以本機電腦金鑰或 Windows 資料保護 API (DPAPI) 加密。 DPAPI 會使用一個衍生自 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶和電腦認證之 Windows 認證的金鑰。 服務主要金鑰只能由建立它時所使用的服務帳戶解密，或是只能由可以存取電腦認證的主體解密。
 
 服務主要金鑰只能由建立此金鑰的 Windows 服務帳戶來開啟，或是由可存取服務帳戶名稱及其密碼的主體來開啟。
 

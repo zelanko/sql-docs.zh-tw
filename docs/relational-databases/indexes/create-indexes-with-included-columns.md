@@ -21,12 +21,12 @@ ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9aa3bdca463f48f35b5114d4aa905f05d50dc30f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1042bcf452b369b295476a662028350f75e2aaab
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760824"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279151"
 ---
 # <a name="create-indexes-with-included-columns"></a>建立內含資料行的索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "85760824"
  查詢中所有的資料行在索引中當做索引鍵或非索引鍵資料行時，非索引鍵資料行的索引可以大幅改進查詢效能。 因為查詢最佳化工具可以在索引中找到所有資料行值，所以可以提高效能；不存取資料表或叢集索引資料，導致磁碟 I/O 作業變少。  
   
 > [!NOTE]  
-> 索引包含查詢參考的所有資料行時，通常就是指「涵蓋查詢」  。  
+> 索引包含查詢參考的所有資料行時，通常就是指「涵蓋查詢」。  
    
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
@@ -82,21 +82,21 @@ ms.locfileid: "85760824"
   
 3.  按一下加號展開要建立非索引鍵資料行之索引的資料表。  
   
-4.  以滑鼠右鍵按一下 [索引]  資料夾，指向 [新增索引]  ，然後選取 [非叢集索引…]  。  
+4.  以滑鼠右鍵按一下 [索引] 資料夾，指向 [新增索引]，然後選取 [非叢集索引…]。  
   
 5.  在 **[新增索引]** 對話方塊，於 **[一般]** 頁面上的 **[索引名稱]** 方塊中輸入新索引的名稱。  
   
-6.  按一下 [索引鍵資料行]  索引標籤底下的 [加入...]  。  
+6.  按一下 [索引鍵資料行] 索引標籤底下的 [加入...]。  
   
 7.  在 [從 _table\_name_ 選取資料行] 對話方塊中，選取要新增至索引之一或多個資料表資料行的一或多個核取方塊。  
   
-8.  按一下 [確定]  。  
+8.  按一下 [確定]。  
   
-9. 按一下 [包含的資料行]  索引標籤底下的 [加入...]  。  
+9. 按一下 [包含的資料行] 索引標籤底下的 [加入...]。  
   
 10. 在 [從 _table\_name_ 選取資料行] 對話方塊中，選取要新增至索引中作為非索引鍵資料行之一或多個資料表資料行的一或多個核取方塊。  
   
-11. 按一下 [確定]  。  
+11. 按一下 [確定]。  
   
 12. 在 **[新增索引]** 對話方塊中，按一下 **[確定]** 。  
   

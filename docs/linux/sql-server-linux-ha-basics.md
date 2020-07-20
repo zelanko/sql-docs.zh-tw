@@ -9,12 +9,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c7b22e569f17ca7297483d0b5286ecc77a9a14e5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 67a5219e955ccd9d4b0303276823d8cafbce4963
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895315"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196843"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>適用於 Linux 部署的 SQL Server 可用性基本概念
 
@@ -146,7 +146,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 
 此解決方案在某些方面很類似，但在許多方面不同於使用 Windows 部署叢集設定。 在 Windows 中，叢集的可用性形式 (稱為 Windows Server 容錯移轉叢集 (WSFC)) 內建於作業系統中，而能夠建立 WSFC 的功能 (容錯移轉叢集) 預設為停用。 在 Windows 中，AG 和 FCI 建置於 WSFC 之上，而且因為 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 所提供的特定資源 DLL 而共用緊密整合。 這種緊密結合的解決方案基本上是可行的，因為它全都來自一個廠商。
 
-![](./media/sql-server-linux-ha-basics/image1.png)
+![HA 基本概念](./media/sql-server-linux-ha-basics/image1.png)
 
 在 Linux 上，雖然每個支援的發行版本都有可用的 Pacemaker，但每個發行版本都可以自訂，而且實作和版本會有些微不同。 此文章中的指示將反映部分差異。 叢集層是開放原始碼，因此，即使它隨附於發行版本，也不會以 WSFC 在 Windows 底下的相同方式緊密整合。 這就是 Microsoft 提供 *mssql-server-ha* 的原因，因此 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 和 Pacemaker 堆疊可以提供接近 Windows 底下但不完全相同的 AGs 和 FCI 體驗。
 

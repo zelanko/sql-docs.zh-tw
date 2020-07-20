@@ -15,15 +15,15 @@ ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 00ab2a45675b237e3e15e340cc3789b1b79cdafc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 95c083aeb156915bb9819479619332b3abaa954f
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287537"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159876"
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>設定對交易式發行項之資料變更的傳播方法
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，針對 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中交易式發行項的資料變更設定傳播方法。  
   
  根據預設，異動複寫會針對各發行項使用一組預存程序將變更傳遞至「訂閱者」。 您也可以使用自訂程序取代這些程序。 如需詳細資訊，請參閱[指定交易式發行項變更的傳播方式](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。  
@@ -36,7 +36,7 @@ ms.locfileid: "76287537"
   
 -   **若要針對交易式發行項的資料變更設定傳播方法，請使用：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -47,31 +47,31 @@ ms.locfileid: "76287537"
 -   編輯複寫所產生的任何快照集檔案時必須特別小心。 您必須在自訂預存程序中測試並支援自訂邏輯。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 不提供自訂邏輯的支援。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 在 [發行項屬性 - \<發行項>] 對話方塊的 [屬性] 索引標籤上指定傳遞方法，其可於 [新增發行集精靈] 和 [發行集屬性 - \<發行集>] 對話方塊中提供。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)和[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 在 [發行項屬性 - \<Article>] 對話方塊的 [屬性] 索引標籤上指定傳播方法，其可於 [新增發行集精靈] 和 [發行集屬性 - \<Publication>] 對話方塊中取得。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)和[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-specify-the-propagation-method"></a>指定傳遞方法  
   
-1.  在 [新增發行集精靈] 的 [發行項] 頁面上，或是在 [發行集屬性 - \<發行集>] 對話方塊中，選取一個資料表，然後按一下 [發行項屬性]。  
+1.  在 [新增發行集] 精靈的 [發行項] 頁面上，或是在 [發行集屬性 - \<Publication>] 對話方塊中，選取一個資料表，然後按一下 [發行項屬性]。  
   
 2.  按一下 **[設定反白顯示資料表發行項的屬性]** 。  
   
-3.  在 [發行項屬性 - \<發行項>] 對話方塊中 [屬性] 索引標籤的 [陳述式傳遞] 區段中，使用 [INSERT 傳遞格式]、[UPDATE 傳遞格式] 以及 [DELETE 傳遞格式] 功能表，指定各項作業的傳播方法。  
+3.  在 [發行項屬性 - \<Article>] 對話方塊其 [屬性] 索引標籤的 [陳述式傳遞] 區段中，使用 [INSERT 傳遞格式]、[UPDATE 傳遞格式] 以及 [DELETE 傳遞格式] 功能表，以指定各項作業的傳播方法。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  如果您在 [發行集屬性 - \<發行集>] 對話方塊中，請按一下 [確定] 以儲存並關閉對話方塊。  
+5.  如果位於 [發行集屬性 - \<Publication>] 對話方塊中，請按一下 [確定] 以儲存並關閉對話方塊。  
 
 #### <a name="to-generate-and-use-custom-stored-procedures"></a>產生及使用自訂預存程序  
   
-1.  在 [新增發行集精靈] 的 [發行項] 頁面上，或是在 [發行集屬性 - \<發行集>] 對話方塊中，選取一個資料表，然後按一下 [發行項屬性]。  
+1.  在 [新增發行集] 精靈的 [發行項] 頁面上，或是在 [發行集屬性 - \<Publication>] 對話方塊中，選取一個資料表，然後按一下 [發行項屬性]。  
   
 2.  按一下 **[設定反白顯示資料表發行項的屬性]** 。  
   
-     在 [發行項屬性 - \<發行項>] 對話方塊的 [屬性] 索引標籤上，於 [陳述式傳遞] 區段中適當的傳遞格式功能表 ([INSERT 傳遞格式]、[UPDATE 傳遞格式] 或 [DELETE 傳遞格式]) 中選取 CALL 語法，然後輸入要在 [INSERT 預存程序]、[DELETE 預存程序] 或 [UPDATE 預存程序] 中使用的程序名稱。 如需 CALL 語法的詳細資訊，請參閱[指定交易式發行項變更的傳播方式](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)中的＜預存程序的 Call 語法＞一節。  
+     在 [發行項屬性 - \<Article>] 對話方塊的 [屬性] 索引標籤上，於 [陳述式傳遞] 區段中適當的傳遞格式功能表 ([INSERT 傳遞格式]、[UPDATE 傳遞格式] 或 [DELETE 傳遞格式]) 中選取 CALL 語法，然後鍵入要在 [INSERT 預存程序]、[DELETE 預存程序] 或 [UPDATE 預存程序] 中使用的程序名稱。 如需 CALL 語法的詳細資訊，請參閱[指定交易式發行項變更的傳播方式](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)中的＜預存程序的 Call 語法＞一節。  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-4.  如果您在 [發行集屬性 - \<發行集>] 對話方塊中，請按一下 [確定] 以儲存並關閉對話方塊。  
+4.  如果位於 [發行集屬性 - \<Publication>] 對話方塊中，請按一下 [確定] 以儲存並關閉對話方塊。  
   
 5.  產生發行集的快照集時，其中會包含您在前一個步驟中指定的程序。 這些程序將使用您指定的 CALL 語法，但是會包含複寫使用的預設邏輯。  
   
@@ -157,7 +157,7 @@ ms.locfileid: "76287537"
   
 #### <a name="to-change-the-method-of-propagating-changes-for-an-existing-article"></a>變更傳播現有發行項之變更的方法  
   
-1.  在發行集資料庫的發行者上，執行 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)。 指定 **\@publication**、**\@article**，並針對 **\@property** 指定 **ins_cmd**、**upd_cmd**、或 **del_cmd** 的值，以及針對 **\@value** 指定適當的傳播方法。  
+1.  在發行集資料庫的發行者上，執行 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)。 指定 **\@publication**、 **\@article**，並針對 **\@property** 指定 **ins_cmd**、**upd_cmd**、或 **del_cmd** 的值，以及針對 **\@value** 指定適當的傳播方法。  
   
 2.  針對要變更的每一個傳播方法重複步驟 1。  
   

@@ -43,15 +43,15 @@ ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 89f88671ec51fedbfd075d82685892378fb5e840
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 7c1b58a9396daba1a4b10b4a52fd02eaa30fc642
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807302"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159536"
 ---
 # <a name="publish-data-and-database-objects"></a>發行資料和資料庫物件
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   在建立發行集時，您可以選擇想要發行的資料表和其他資料庫物件。 您可以使用複寫發行下列資料庫物件。  
   
 |資料庫物件|快照式複寫和異動複寫|合併式複寫|  
@@ -183,7 +183,7 @@ ms.locfileid: "83807302"
   
 -   針對使用字元模式快照集之發行集內的發行項 (用於非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者和 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 訂閱者)：依預設，會將擁有者保留空白。 擁有者預設為與散發代理程式或合併代理程式用於連接到訂閱者之帳戶相關聯的擁有者。  
   
- 物件擁有者可以透過 **[發行項屬性 -\<** <發行項> **>]** 對話方塊和透過下列預存程序變更︰**sp_addarticle**、**sp_addmergearticle**、**sp_changearticle** 和 **sp_changemergearticle**。 如需詳細資訊，請參閱[檢視和修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)、[定義發行項](../../../relational-databases/replication/publish/define-an-article.md)和[檢視和修改發行項屬性](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)。  
+ 物件擁有者可透過 [發行項屬性 -\<**_Article_**>] 對話方塊變更，也可以透過下列預存程序來進行變更︰**sp_addarticle**、**sp_addmergearticle**、**sp_changearticle** 和 **sp_changemergearticle**。 如需詳細資訊，請參閱[檢視和修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)、[定義發行項](../../../relational-databases/replication/publish/define-an-article.md)和[檢視和修改發行項屬性](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)。  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>將資料發行給執行舊版 SQL Server 的訂閱者  
   
