@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 0f58338d-2ea0-48b8-8a20-c438b0940433
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 59c732d80ccfafc8f242bb1c42fe60e3dea81f19
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 65387159ee6372a57fa898905fd5912147442002
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84947778"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552343"
 ---
 # <a name="mssqlserver_125"></a>MSSQLSERVER_125
     
 ## <a name="details"></a>詳細資料  
   
-|||  
+|屬性|值|  
 |-|-|  
 |產品名稱|SQL Server|  
 |事件識別碼|125|  

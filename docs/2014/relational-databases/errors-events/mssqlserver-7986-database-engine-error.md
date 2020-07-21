@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: ae64276c-4e1e-4ef3-9ee9-ebeb2f61e565
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 05577850e65e7bb180aebf2d535d7d59e3fb1986
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 87a6fc35b72b608e57fe3f3eb4b9273a13eab40c
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032020"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553284"
 ---
 # <a name="mssqlserver_7986"></a>MSSQLSERVER_7986
     
 ## <a name="details"></a>詳細資料  
   
-|||  
+|屬性|值|  
 |-|-|  
 |產品名稱|SQL Server|  
 |事件識別碼|7986|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC2_PRE_CHECKS_CROSS_OBJECT_LINKAGE|  
-|訊息文字|系統資料表預先檢查: 物件識別碼 O_ID 有跨物件的鏈結。 頁面 P_ID1 指向位於配置單位識別碼 A_ID1 (應該為 A_ID2) 中的 P_ID2。 由於無法修復的錯誤，檢查陳述式已經結束。|  
+|訊息文字|系統資料表預先檢查:物件識別碼 O_ID 有跨物件的鏈結。 頁面 P_ID1 指向位於配置單位識別碼 A_ID1 (應該為 A_ID2) 中的 P_ID2。 由於無法修復的錯誤，檢查陳述式已經結束。|  
   
 ## <a name="explanation"></a>說明  
  DBCC CHECKDB 的第一階段是針對關鍵的系統資料表，執行資料頁的基本檢查。 如果找到任何錯誤，由於無法修復錯誤，因此 DBCC CHECKDB 會立即結束。 指定物件資料層級中頁面 *P_ID1* 的下一頁指標指向位於不同物件的頁面 *P_ID2*。  

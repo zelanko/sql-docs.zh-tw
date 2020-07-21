@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: e0a01f3d-d0aa-4c38-8bcc-82e59de50512
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 11137ba334b66f20c7d9a6caaaf7d1ef42c15dec
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: e7ddd06b7a49cb0b7d1495e0960248c0aa6564d2
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969478"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553733"
 ---
 # <a name="mssqlserver_17053"></a>MSSQLSERVER_17053
     
 ## <a name="details"></a>詳細資料  
   
-|||  
+|屬性|值|  
 |-|-|  
 |產品名稱|SQL Server|  
 |事件識別碼|17053|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|OS_ERROR|  
-|訊息文字|%ls: 發現作業系統錯誤 %ls。|  
+|訊息文字|%ls:發現作業系統錯誤 %ls。|  
   
 ## <a name="explanation"></a>說明  
  發生一般作業系統錯誤。  不確定產生的狀態為何。  

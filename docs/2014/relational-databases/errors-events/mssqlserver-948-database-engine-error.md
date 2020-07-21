@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 95c4ad45-a518-4165-a5c4-6e6b932b0570
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e8461069a3fceb7bdca318b82a522f7f51af83d2
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 3a554f8cdd312f08e8e0930c0d3eb49776cbc4e8
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85031384"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553097"
 ---
 # <a name="mssqlserver_948"></a>MSSQLSERVER_948
     
 ## <a name="details"></a>詳細資料  
   
-|||  
+|屬性|值|  
 |-|-|  
 |產品名稱|SQL Server|  
 |事件識別碼|948|  

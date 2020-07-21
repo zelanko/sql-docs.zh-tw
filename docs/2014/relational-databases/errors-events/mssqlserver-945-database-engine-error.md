@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: ee501d13-0bd9-4627-896c-ed5b1bdb88b3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 51284cdcf48f1bf713a853f9c87457cb5291cc4e
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 913778fc4c40a76cb3a7f5aca07b981567428253
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85053467"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553063"
 ---
 # <a name="mssqlserver_945"></a>MSSQLSERVER_945
     
 ## <a name="details"></a>詳細資料  
   
-|||  
+|屬性|值|  
 |-|-|  
 |產品名稱|SQL Server|  
 |事件識別碼|945|  

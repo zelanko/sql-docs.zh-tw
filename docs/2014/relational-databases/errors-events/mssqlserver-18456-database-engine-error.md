@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 14b233839901167ca92a1d2aed5a8c1441fefe0e
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: d0f1216bf1b617a80288c6e5112674c2447979f4
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85034971"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552243"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
     
 ## <a name="details"></a>詳細資料  
   
-|||  
+|屬性|值|  
 |-|-|  
 |產品名稱|SQL Server|  
 |事件識別碼|18456|  
@@ -68,7 +68,7 @@ ms.locfileid: "85034971"
 |7|已停用登入且密碼不正確。|  
 |8|密碼不正確。|  
 |9|密碼無效。|  
-|11|登入有效，但伺服器存取失敗。 導致此錯誤的一個可能原因是：Windows 使用者可以使用本機 Administrators 群組成員的身分存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但 Windows 不會提供系統管理員認證。 若要連接，請使用 [以系統管理員身分執行]  選項開始連接程式，然後以特定登入，將 Windows 使用者新增至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
+|11|登入有效，但伺服器存取失敗。 導致此錯誤的一個可能原因是：Windows 使用者可以使用本機 Administrators 群組成員的身分存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但 Windows 不會提供系統管理員認證。 若要連接，請使用 [以系統管理員身分執行] 選項開始連接程式，然後以特定登入，將 Windows 使用者新增至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |12|登入是有效的登入，但伺服器存取失敗。|  
 |18|密碼必須變更。|  
   
@@ -76,7 +76,7 @@ ms.locfileid: "85034971"
   
  **另一個不尋常的可能原因**  
   
- 錯誤原因 **：嘗試使用 SQL 驗證登入失敗。伺服器只設定為 Windows 驗證。** 會在下列情況傳回。  
+ 如有下列情況，可能會傳回這個錯誤原因：**嘗試使用 SQL 驗證登入失敗。伺服器設定成只允許 Windows 驗證。** 會在下列情況傳回。  
   
 -   伺服器是設定成混合模式驗證，而 ODBC 連接使用了 TCP 通訊協定，且此連接並未明確指定連接應使用信任連接。  
   
@@ -89,11 +89,11 @@ ms.locfileid: "85034971"
   
 |Date|來源|訊息|  
 |----------|------------|-------------|  
-|2007-12-05 20:12:56.34|登入|錯誤: 18456，嚴重性: 14，狀態: 8。|  
+|2007-12-05 20:12:56.34|登入|錯誤：18456，嚴重性：14，狀態：8.|  
 |2007-12-05 20:12:56.34|登入|使用者 '<user_name>' 登入失敗。 [CLIENT: \<ip address>]|  
   
 > [!NOTE]  
->  若您使用 Windows 驗證模式來安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，並於之後將其變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與 Windows 驗證模式，就會先停用 **sa** 登入。 這會導致狀態7錯誤：「使用者 ' sa ' 的登入失敗。」若要啟用**sa**登入，請參閱[變更伺服器驗證模式](../../database-engine/configure-windows/change-server-authentication-mode.md)。  
+>  若您使用 Windows 驗證模式來安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，並於之後將其變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與 Windows 驗證模式，就會先停用 **sa** 登入。 這將造成狀態 7 錯誤：「使用者 'sa' 登入失敗。」若要啟用 **sa** 登入，請參閱[變更伺服器驗證模式](../../database-engine/configure-windows/change-server-authentication-mode.md)。  
   
 ## <a name="user-action"></a>使用者動作  
  如果您正嘗試使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證進行連接，請確定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是在混合驗證模式下設定。  
@@ -104,10 +104,10 @@ ms.locfileid: "85034971"
   
  如果您的錯誤表示狀態 1，請連絡 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理員。  
   
- 如果您正嘗試使用系統管理員認證進行連接，請使用 [以系統管理員身分執行]**** 選項啟動應用程式。 連接之後，請將您的 Windows 使用者當做個別登入加入。  
+ 如果您正嘗試使用系統管理員認證進行連接，請使用 [以系統管理員身分執行] 選項啟動應用程式。 連接之後，請將您的 Windows 使用者當做個別登入加入。  
   
  如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 支援自主資料庫，請確認在移轉至自主資料庫使用者之後，登入不會遭到刪除。  
   
- 本機連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，如果要從以 **NT AUTHORITY\NETWORK SERVICE** 執行的服務來連線，則必須使用電腦的完整網域名稱進行驗證。 如需詳細資訊，請參閱[如何：使用網路服務帳戶存取 ASP.NET 中的資源](https://msdn.microsoft.com/library/ff647402.aspx)。  
+ 本機連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，如果要從以 **NT AUTHORITY\NETWORK SERVICE** 執行的服務來連線，則必須使用電腦的完整網域名稱進行驗證。 如需詳細資訊，請參閱本主題中的[如何：使用網路服務帳戶存取 ASP.NET 中的資源](https://msdn.microsoft.com/library/ff647402.aspx)  
   
   

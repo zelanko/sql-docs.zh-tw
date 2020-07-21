@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 helpviewer_keywords:
-- Installing the Extension Pack
+- Installing the extension pack
 - SQL Server Database Objects
 ms.assetid: 33070e5f-4e39-4b70-ae81-b8af6e4983c5
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 736807d427b08a1b3a32df1d295b84f4ea3d23d2
-ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
+ms.openlocfilehash: 2495d1b61b0251deee1b86ce66c03b6474f36cd8
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411659"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554823"
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>在 SQL Server 上安裝 SSMA 元件（OracleToSQL）
 
@@ -30,7 +30,7 @@ SSMA 延伸模組套件會將**sysdb**和**ssmatesterdb**資料庫加入至指�
 
 此外，當您將資料移轉至時 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在伺服器端資料移轉引擎用於遷移資料時，建立 Agent 作業。
 
-### <a name="prerequisites"></a>必要條件
+### <a name="prerequisites"></a>先決條件
 
 在上安裝 SSMA for Oracle server 元件之前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請確定系統符合下列需求：
 
@@ -60,9 +60,7 @@ SSMA 延伸模組套件會將**sysdb**和**ssmatesterdb**資料庫加入至指�
 6. 在 [已可安裝] **** 頁面上，選取 [安裝] ****。
 7. 在 [**完成安裝的第一個步驟**] 頁面上，選取 **[下一步]**。
   
-   此時會出現新的對話方塊，您可以在其中選取延伸模組套件安裝的類型。
-
-   延伸模組 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 套件安裝的實例。
+   新的對話方塊隨即出現。 選取擴充功能套件類型。
   
 8. 選取所需的安裝類型，然後按 **[下一步]**。
 

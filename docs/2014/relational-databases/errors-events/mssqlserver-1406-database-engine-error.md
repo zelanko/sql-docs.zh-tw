@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 915f97de-9b74-41f8-8bd5-b2d061416718
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8e823c14fcb6e1a408d1589d0588a3fb966552d7
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 7e46a807631bc18a1edb7c152969858333392997
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967948"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552273"
 ---
 # <a name="mssqlserver_1406"></a>MSSQLSERVER_1406
     
 ## <a name="details"></a>詳細資料  
   
-|||  
+|屬性|值|  
 |-|-|  
 |產品名稱|SQL Server|  
 |事件識別碼|1406|  
@@ -38,7 +38,7 @@ ms.locfileid: "84967948"
  移除資料庫鏡像。 然後，您就可以復原鏡像資料庫，以取得存取權。  
   
 ## <a name="see-also"></a>另請參閱  
- [在資料庫鏡像會話中強制服務 &#40;Transact-sql&#41;](../../database-engine/database-mirroring/force-service-in-a-database-mirroring-session-transact-sql.md)   
+ [在資料庫鏡像工作階段中強制服務 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/force-service-in-a-database-mirroring-session-transact-sql.md)   
  [移除資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   
   

@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 2a35d57d-74e2-45a2-8f67-3f2e51d69712
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 568cfe7499c041c2ee6a8ac3698b31698171bece
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 6301326d0100981b12109ef67a599478b4896b74
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85034802"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552203"
 ---
 # <a name="mssqlserver_1904"></a>MSSQLSERVER_1904
     
 ## <a name="details"></a>詳細資料  
   
-|||  
+|屬性|值|  
 |-|-|  
 |產品名稱|SQL Server|  
 |事件識別碼|1904|  

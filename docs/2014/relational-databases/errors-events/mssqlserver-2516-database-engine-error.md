@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 79ed14b5-f53c-40c6-8334-8a083f732207
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7e356b3de7ce46ae64d2d94461eed16b2d36baa6
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: a963119e19bf1561d3d14bf11cdec3271af1ffb0
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85034430"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552093"
 ---
 # <a name="mssqlserver_2516"></a>MSSQLSERVER_2516
     
 ## <a name="details"></a>詳細資料  
   
-|||  
+|屬性|值|  
 |-|-|  
 |產品名稱|SQL Server|  
 |事件識別碼|2516|  

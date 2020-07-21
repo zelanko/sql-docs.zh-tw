@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 470045b0-ebe9-44a7-b456-480e7a516a2c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5f8a3ddf0282ee76655d930baf101c73c9110938
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: deb4f24860a8cbe7f15ec824f48943724fdd68e6
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032335"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553353"
 ---
 # <a name="mssqlserver_7908"></a>MSSQLSERVER_7908
     
 ## <a name="details"></a>詳細資料  
   
-|||  
+|屬性|值|  
 |-|-|  
 |產品名稱|SQL Server|  
 |事件識別碼|7908|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC2_FS_INVALID_COLUMN_LEVEL_FILE|  
-|訊息文字|資料表錯誤: 在分割區識別碼 PN_ID 中的檔案 'FILE' 不是有效的 Filestream 檔案。|  
+|訊息文字|資料表錯誤：在分割區識別碼 PN_ID 中的檔案 'FILE' 不是有效 Filestream 檔案。|  
   
 ## <a name="explanation"></a>說明  
  資料行目錄中 FILESTREAM 檔案的名稱是 ROWGUID。 如果無法將資料行目錄中的檔案名稱轉換成 ROWGUID，則表示該檔案不是有效的檔案。  
