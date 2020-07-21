@@ -10,11 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 316c3c95e0928fc4b1ed0c0d4235220c527e68f6
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 9c60bea64ad528a953101da7625347ca659b1c6d
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052744"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485093"
 ---
 # <a name="adventureworks-sample-databases"></a>AdventureWorks 範例資料庫
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -23,19 +24,21 @@ ms.locfileid: "86052744"
 
 如需範例的詳細資訊，請參閱[範例 GitHub 存放庫](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases)。 
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 - [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2019)或[Azure SQL Database](https://azure.microsoft.com/services/sql-database/)
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)或[Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
 
 
-## <a name="download-bak-files"></a>下載 .bak 檔案 
+## <a name="download-backup-files"></a>下載備份檔案 
 
 使用下列連結，為您的案例下載適當的範例資料庫。 
 
 - **OLTP**資料適用于大部分的一般線上交易處理工作負載。 
 - 資料倉儲 **（DW）** 資料適用于資料倉儲工作負載。 
 - **輕量（LT）** 資料是**OLTP**範例的羽量級和精簡版本。 
+
+如果您不確定所需的專案，請從符合您 SQL Server 版本的 OLTP 版本開始。 
 
 |**OLTP** |**資料倉儲** |**輕量型**|
 |---------|---------|---------|
@@ -64,7 +67,7 @@ ms.locfileid: "86052744"
 
 若要在 SQL Server Management Studio 中還原資料庫，請遵循下列步驟：
 
-1. `.bak`從[下載 .bak](#download-bak-files)檔案一節中提供的其中一個連結下載適當的檔案。
+1. `.bak`從 [[下載備份檔案](#download-backup-files)] 區段中提供的其中一個連結下載適當的檔案。
 2. 將檔案移 `.bak` 至您的 SQL Server 備份位置。 這會根據您的安裝位置、實例名稱和 SQL Server 版本而有所不同。 例如，SQL Server 2019 預設實例的預設位置為：
 
    `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup`. 
@@ -106,7 +109,7 @@ GO
 
 若要在 Azure Data Studio 中還原資料庫，請遵循下列步驟：
 
-1. `.bak`從[下載 .bak](#download-bak-files)檔案一節中提供的其中一個連結下載適當的檔案。
+1. `.bak`從 [[下載備份檔案](#download-backup-files)] 區段中提供的其中一個連結下載適當的檔案。
 1. 將檔案移 `.bak` 至您的 SQL Server 備份位置。 這會根據您的安裝位置、實例名稱和 SQL Server 版本而有所不同。 例如，SQL Server 2019 預設實例的預設位置為：
 
     `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup`.
@@ -150,7 +153,7 @@ GO
 
 1. 連接到您的 Azure 入口網站。
 1. 選取流覽窗格左上方的 [**建立資源**]。 
-1. 選取 [資料庫]****，然後選取 [SQL Database]****。 
+1. 選取 [**資料庫**]，然後選取 [ **SQL Database**]。 
 1. 填入要求的資訊，以建立您的資料庫。 
 1. 在 [**其他設定**] 索引標籤上，選擇 [**範例**] 做為 [**資料來源**] 底下的現有資料： 
 
