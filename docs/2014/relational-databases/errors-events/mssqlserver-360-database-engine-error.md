@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: e2b7c1b2-3679-4206-9b25-6bd55ef96a2c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b30311d7f55231c1e7a6d5969d49c5d1bc07a848
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 21534d6cd1499634b5d93c7140b4f8f47b3e242b
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85033380"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551543"
 ---
 # <a name="mssqlserver_360"></a>MSSQLSERVER_360
     
 ## <a name="details"></a>詳細資料  
   
-|||  
+|屬性|值|  
 |-|-|  
 |產品名稱|SQL Server|  
 |事件識別碼|360|  

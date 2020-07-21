@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: d16290ea-3875-4148-8d53-057bfee00438
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d8084a0542e9163ad72623336a909e65ca7617f5
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 3b32810f05ca989e0421de447dee2f9806923d31
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85053680"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86550979"
 ---
 # <a name="mssqlserver_7920"></a>MSSQLSERVER_7920
     
 ## <a name="details"></a>詳細資料  
   
-|||  
+|屬性|值|  
 |-|-|  
 |產品名稱|SQL Server|  
 |事件識別碼|7920|  

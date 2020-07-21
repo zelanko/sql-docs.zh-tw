@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: d8d3a22e-1ff8-48a4-891f-4c8619437e24
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e196fba84af492b25e798629d3e808b1bf22857e
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 27ba618aca17efe06a6f2fa094e6e6cad2fec8c6
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85053840"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551133"
 ---
 # <a name="mssqlserver_605"></a>MSSQLSERVER_605
     
 ## <a name="details"></a>詳細資料  
   
-|||  
+|屬性|值|  
 |-|-|  
 |產品名稱|SQL Server|  
 |事件識別碼|605|  

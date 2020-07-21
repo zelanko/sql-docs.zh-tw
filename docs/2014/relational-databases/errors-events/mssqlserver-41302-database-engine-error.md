@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 01e75618-afec-4232-ba68-93ab7bc31003
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ff9d54b81c7f91bf85e2d0ffb1b38a9be91f9ec7
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 8d872809cb8bddf62424523927eed37b44ec966a
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85033171"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551463"
 ---
 # <a name="mssqlserver_41302"></a>MSSQLSERVER_41302
     
 ## <a name="details"></a>詳細資料  
   
-|||  
+|屬性|值|  
 |-|-|  
 |產品名稱|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |事件識別碼|41302|  

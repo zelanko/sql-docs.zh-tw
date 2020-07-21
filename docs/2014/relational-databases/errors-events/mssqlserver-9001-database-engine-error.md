@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: a54de936-90c6-4845-aa96-29d32f154601
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0e61894d0d071fbdb36dcfb77895c46c61d0bbd1
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: e1a2f311ddd5ae1c6eee51ac3960b36fe1f2716e
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85031447"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86550793"
 ---
 # <a name="mssqlserver_9001"></a>MSSQLSERVER_9001
     
 ## <a name="details"></a>詳細資料  
   
-|||  
+|屬性|值|  
 |-|-|  
 |產品名稱|SQL Server|  
 |事件識別碼|9001|  

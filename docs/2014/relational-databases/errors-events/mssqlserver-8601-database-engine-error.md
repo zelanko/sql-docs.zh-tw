@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: d8603ea1-27b7-4379-a451-744787daea66
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 17458e92beb38b6597e056aa2d566896dc743324
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 30879123ce2a0d52669ddf83e18d40fa1be7231e
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85053578"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86550863"
 ---
 # <a name="mssqlserver_8601"></a>MSSQLSERVER_8601
     
 ## <a name="details"></a>詳細資料  
   
-|||  
+|屬性|值|  
 |-|-|  
 |產品名稱|SQL Server|  
 |事件識別碼|8601|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|INVALID_INTERFACE_ERR|  
-|訊息文字|內部查詢處理器錯誤: 查詢處理器無法取得到所需介面的存取。|  
+|訊息文字|內部查詢處理器錯誤:查詢處理器無法取得到所需介面的存取。|  
   
 ## <a name="explanation"></a>說明  
  內部處理錯誤，無法取得所需介面的存取權。  

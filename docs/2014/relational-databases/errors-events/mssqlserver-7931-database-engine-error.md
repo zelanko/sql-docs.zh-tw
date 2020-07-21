@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 18e7a3dc-7d8a-41b9-8724-d2a8587b6903
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6a6ae45133cd8e41479a243b0c1181851f262ca6
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 8d147f5373c1284f25ee9ffbe6b71f2c7b237ec6
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85053703"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551011"
 ---
 # <a name="mssqlserver_7931"></a>MSSQLSERVER_7931
     
 ## <a name="details"></a>詳細資料  
   
-|||  
+|屬性|值|  
 |-|-|  
 |產品名稱|SQL Server|  
 |事件識別碼|7931|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC2_FS_DOUBLE_ROWSET_ACTUAL_FACT|  
-|訊息文字|資料庫錯誤: 分割區的 FileStream 目錄識別碼 F_ID 出現兩次。|  
+|訊息文字|資料庫錯誤:分割區的 FileStream 目錄識別碼 F_ID 出現兩次。|  
   
 ## <a name="explanation"></a>說明  
  在中繼資料中找到 Filestream 目錄的同一個分割區識別碼。  

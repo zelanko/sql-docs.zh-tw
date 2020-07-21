@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 45ab21a3-024a-4523-9bd9-1175d01f9c8a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1183b787e38821592e9fb3da81e07ba3c6ecd551
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: dca357f63065940963bad899086f9ac88dfdbaf6
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032203"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86550988"
 ---
 # <a name="mssqlserver_7935"></a>MSSQLSERVER_7935
     
 ## <a name="details"></a>詳細資料  
   
-|||  
+|屬性|值|  
 |-|-|  
 |產品名稱|SQL Server|  
 |事件識別碼|7935|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC2_FS_MISSING_COLUMN|  
-|訊息文字|資料表錯誤: 物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID 的資料行已經有 Filestream 目錄識別碼 F_ID，但是該資料行不存在於分割區中。|  
+|訊息文字|資料表錯誤：物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID 的資料行已經有 Filestream 目錄識別碼 F_ID，但是該資料行不存在於分割區中。|  
   
 ## <a name="explanation"></a>說明  
  在 DBCC CHECKDB 執行期間，系統已在指定的物件中找到資料行的 FILESTREAM 目錄。不過，在分割區的對應中繼資料中找不到該資料行。  

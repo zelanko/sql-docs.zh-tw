@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 7d94f8d9-65ca-4fde-9c17-7b83e94a3779
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2328ee6366d47130a02c444bce65b7b655af7965
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: b22784370ed736b6f127dca2fe5265826028553c
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85033314"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551503"
 ---
 # <a name="mssqlserver_3619"></a>MSSQLSERVER_3619
     
 ## <a name="details"></a>詳細資料  
   
-|||  
+|屬性|值|  
 |-|-|  
 |產品名稱|SQL Server|  
 |事件識別碼|3619|  

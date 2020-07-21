@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: efba507a-b5ad-4f1d-b0c8-f73b663a0562
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f164c8ce321272f7d92a8d3b1ff02400c881a108
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 88e3d0edb06c88fbdd443add2e2ceac0b987b362
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85054083"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551973"
 ---
 # <a name="mssqlserver_2574"></a>MSSQLSERVER_2574
     
 ## <a name="details"></a>詳細資料  
   
-|||  
+|屬性|值|  
 |-|-|  
 |產品名稱|SQL Server|  
 |事件識別碼|2574|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC_EMPTY_INDEX_TREE_LEVEL_PAGE|  
-|訊息文字|資料表錯誤: 物件識別碼 O_ID 中的頁面 P_ID 是空的，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID (類型 TYPE)。 這在 B 型樹狀目錄的層級 LEVEL 中是不允許的。|  
+|訊息文字|資料表錯誤：物件識別碼 O_ID 中，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID (類型 TYPE) 的頁面 P_ID 為空白。 這在 B 型樹狀目錄的層級 LEVEL 中是不允許的。|  
   
 ## <a name="explanation"></a>說明  
  在指定之索引的分葉層級上方的 B 型樹狀目錄頁面是空的，沒有任何資料列。 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 中的分葉層級頁面可能會出現這種行為，但是樹狀目錄層級絕對不可能出現這種行為。  

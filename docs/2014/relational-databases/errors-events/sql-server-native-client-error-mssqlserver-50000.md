@@ -11,24 +11,24 @@ helpviewer_keywords:
 ms.assetid: 5426d87a-d5d9-4984-b211-b07d69e834a2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3cc805042bff7259a311ca3f2acf4c26db59381b
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 9ea7a03ebe05bffee2c3e664bd233b23ea05c764
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85031129"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86550743"
 ---
 # <a name="mssqlserver_50000"></a>MSSQLSERVER_50000
     
 ## <a name="details"></a>詳細資料  
   
-|||  
+|屬性|值|  
 |-|-|  
 |產品名稱|SQL Server|  
 |產品版本|11.0|  
 |事件識別碼|50000|  
 |事件來源|SETUP|  
-|元件|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client{2}|  
+|元件|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client|  
 |符號名稱||  
 |訊息文字|嘗試讀取檔案 '%.*ls' 時發生網路錯誤。|  
   

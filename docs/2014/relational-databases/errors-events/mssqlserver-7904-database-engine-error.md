@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: d047920c-f864-4338-b15f-49820886fbc5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b3ff8ccff569dd1b00335e3b418cf985454c74f7
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 7a97063e21f0f9989177f60d68067e8e852dd26d
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032556"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551063"
 ---
 # <a name="mssqlserver_7904"></a>MSSQLSERVER_7904
     
 ## <a name="details"></a>詳細資料  
   
-|||  
+|屬性|值|  
 |-|-|  
 |產品名稱|SQL Server|  
 |事件識別碼|7904|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC2_FS_MISSING_FILE|  
-|訊息文字|資料表錯誤: 在物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID 中找不到資料行識別碼 C_ID，ROWGUID RG_ID 的 filestream 檔案。|  
+|訊息文字|資料表錯誤：在物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID 中找不到資料行識別碼 C_ID，ROWGUID RG_ID 的 filestream 檔案。|  
   
 ## <a name="explanation"></a>說明  
  分割區的資料行值在對應的 FILESTREAM 資料行目錄中沒有相符的 FILESTREAM 檔案。  

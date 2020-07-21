@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 2d0d19b9-947b-4474-9ff8-7e03019ab93d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fae6e55cbe7170f795aff85400da2c5cdaef780a
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 6dd4d2721967049295f3fcf5fc8b38807268879a
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032440"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551055"
 ---
 # <a name="mssqlserver_7901"></a>MSSQLSERVER_7901
     
 ## <a name="details"></a>詳細資料  
   
-|||  
+|屬性|值|  
 |-|-|  
 |產品名稱|SQL Server|  
 |事件識別碼|7901|  

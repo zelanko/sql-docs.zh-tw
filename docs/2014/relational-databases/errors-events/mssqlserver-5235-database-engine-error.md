@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 1aa7e6a5-7ccb-43c8-a1fd-d50e92e0a798
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 42c807944d7506a6a118de97ccd8c2c488942c8e
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: b19e643a77a2cdd3d74d05f87480fe66e3b0cf60
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032848"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551253"
 ---
 # <a name="mssqlserver_5235"></a>MSSQLSERVER_5235
     
 ## <a name="details"></a>詳細資料  
   
-|||  
+|屬性|值|  
 |-|-|  
 |產品名稱|SQL Server|  
 |事件識別碼|5235|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC4_ERRORLOG_SUMMARY_PREMATURE_TERMINATION|  
-|訊息文字|USER_NAME 執行的 [EMERGENCY] DBCC DBCC_COMMAND_DETAILS 因為錯誤狀態 ERROR_STATE 而異常結束。 經過時間: HOURS 小時 MINUTES 分 SECONDS 秒。|  
+|訊息文字|USER_NAME 執行的 [EMERGENCY] DBCC DBCC_COMMAND_DETAILS 因為錯誤狀態 ERROR_STATE 而異常結束。 已耗用時間：HOURS 小時 MINUTES 分 SECONDS 秒。|  
   
 ## <a name="explanation"></a>說明  
  這是當執行命令時發生非預期終止錯誤時，DBCC 列印到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔的摘要訊息。 訊息中報告的錯誤狀態定義未預期終止的類型。  
