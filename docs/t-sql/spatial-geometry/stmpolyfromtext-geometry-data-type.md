@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f087a61c-f063-4fb8-8f1c-251a2fed76a1
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 4592965d484785f3f5a5407d517010288743b5d9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 015de9248eb9e3af834a2c595abc8efdc2fc3794
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762306"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554973"
 ---
 # <a name="stmpolyfromtext-geometry-data-type"></a>STMPolyFromText (geometry 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85762306"
 STMPolyFromText ( 'multipolygon_tagged_text' , SRID )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *multipolygon_tagged_text*  
  這是要傳回之 **geometryMultiPolygon** 執行個體的 WKT 表示法。 *multipolygon_tagged_text* 是 **nvarchar(max)** 運算式。  
   

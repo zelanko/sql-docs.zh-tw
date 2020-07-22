@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9d7c9885-5d1b-49ae-af31-5ef9fb8acaba
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 849fc974147d06e6b31713666498b0df00e7a279
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 167db7fb7dd3dc03c4b1a1f6b819af2b8e09150d
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85705481"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555823"
 ---
 # <a name="shortestlineto-geography-data-type"></a>ShortestLineTo (geography 資料類型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85705481"
 .ShortestLineTo ( geography_other )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *geography_other*  
  指定第二個 **geography** 執行個體，呼叫 **geography** 執行個體正在嘗試判斷與其相距的最短距離。  
   

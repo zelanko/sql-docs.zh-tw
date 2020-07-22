@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6546ddb0-4a5f-46e5-ba04-8007486c95ec
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 4faed55b3c98c8e8aa646a84fdeb969a3a9ee410
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 898b3a613f96de95074547f66962df22033827f8
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762460"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555561"
 ---
 # <a name="stgeomfromwkb-geometry-data-type"></a>STGeomFromWKB (geometry 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85762460"
 STGeomFromWKB ( 'WKB_geometry' , SRID )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *WKB_geometry*  
  這是要傳回之 **geometry** 執行個體的 WKB 表示法。 *WKB_geometry* 是一個 **varbinary(max)** 運算式。  
   

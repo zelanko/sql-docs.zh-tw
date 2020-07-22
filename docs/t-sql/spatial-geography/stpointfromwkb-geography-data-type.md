@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b3b4e3bb-47bc-4621-99c4-c97aa60cdf8b
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7ae061db7e5eb45e3c949b96e89e8e083162d98c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 11c7ec547778eb07d1713081b55f4d8c192bb9ed
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85702285"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555121"
 ---
 # <a name="stpointfromwkb-geography-data-type"></a>STPointFromWKB (geography 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85702285"
 STPointFromWKB ( 'WKB_point' , SRID )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *WKB_point*  
  這是您想要傳回之 **geographyPoint** 執行個體的 WKB 表示法。 *WKB_point* 是 **varbinary(max)** 運算式。  
   

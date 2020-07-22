@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7c554334-d2d9-4eae-a4ae-097aa4020e1a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5e68559c2f795a16bd9257d53a92f1cb5899d711
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3394e41418a45c56625af084e4dca0afeefa50b8
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729620"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554783"
 ---
 # <a name="write-database-engine"></a>Write (Database Engine)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,8 +34,10 @@ Write 會寫出 **SqlHierarchyId** 的二進位表示法到傳入的 **BinaryWri
 ```sql
 void Write( BinaryWriter w )   
 ```  
-  
-## <a name="arguments"></a>引數  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
 *w*  
 此 **hierarchyid** 節點的二進位表示法寫出的 **BinaryWriter** 物件。
   

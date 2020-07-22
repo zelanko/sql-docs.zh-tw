@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa378943-252a-4079-848b-6c59344fcfce
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: b412ef00cf5253478471fb5cc351e790107a1ccd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2bb62f6c4f2064ed5bbfd82b0c5c9a15ad0feace
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748873"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555659"
 ---
 # <a name="hasz-geometry-datatype"></a>HasZ (geometry 資料類型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,9 @@ ms.locfileid: "85748873"
 .HasZ  
 ```  
   
-## <a name="return-types"></a>傳回型別  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>傳回型別
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
   
  CLR 傳回類型：**Boolean**  

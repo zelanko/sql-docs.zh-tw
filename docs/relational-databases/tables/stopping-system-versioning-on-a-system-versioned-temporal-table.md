@@ -11,16 +11,16 @@ ms.assetid: dddd707e-bfb1-44ff-937b-a84c5e5d1a94
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cea12f4415cc99519ae8a5119cf5952a89dc2d27
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b145a9f68fe87909113c06b2f081ec156c525dd5
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007084"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554863"
 ---
 # <a name="stopping-system-versioning-on-a-system-versioned-temporal-table"></a>停止系統建立版本時態表上的系統版本設定功能
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 您可能想要暫時或永久停止在時態表上的版本設定。 您可以藉由將 **SYSTEM_VERSIONING** 子句設定為 **OFF**來完成。
 

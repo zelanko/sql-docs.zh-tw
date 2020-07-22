@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8e8f0c41-0c62-4919-9d4c-d37c93fdd31c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 6b732254b9b900a2513243641f8a309695d5eaf9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b46ac4b887c28cd5ad7600ff19cb0a694da79550
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762185"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555615"
 ---
 # <a name="stpolyfromwkb-geometry-data-type"></a>STPolyFromWKB (geometry 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85762185"
 STPolyFromWKB ( 'WKB_polygon' , SRID )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *WKB_polygon*  
  這是要傳回之 **geometryPolygon** 執行個體的 WKB 表示法。 *WKB_polygon* 是 **varbinary(max)** 運算式。  
   

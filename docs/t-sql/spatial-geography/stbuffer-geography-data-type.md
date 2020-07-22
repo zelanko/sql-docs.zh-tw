@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 366cd986b9c707c6cef6d8b814204ce506afb601
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 55160039220f949f68837e71d75b11e916839378
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85704961"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554717"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer (geography 資料類型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,9 @@ ms.locfileid: "85704961"
 .STBuffer ( distance )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *distance*  
  這是 **float** 類型 (.NET Framework 中的 **double**) 的值，可指定與 **geography** 執行個體之間的距離 (將會從此執行個體的周圍計算緩衝)。  
   

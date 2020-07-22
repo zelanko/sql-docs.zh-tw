@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f6c2e130-05f3-4ef3-921b-d78b51437d48
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: f6d1cac186583ea5b3eea58d92946f959d4c6105
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 61673238e63ac43d30811d3ff983917ce916a6b5
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85700942"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555713"
 ---
 # <a name="asgml-geometry-data-type"></a>AsGml (geometry 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,9 @@ ms.locfileid: "85700942"
 .AsGml ( )  
 ```  
   
-## <a name="return-types"></a>傳回型別  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>傳回型別
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**xml**  
   
  CLR 傳回類型：**SqlXml**  

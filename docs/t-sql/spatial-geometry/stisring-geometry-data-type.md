@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ea0063be-1c74-4cc4-ac6f-b65321ddfa54
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 17e505ebf3bab38b17d6b4ed554928f0f08cb50f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ad91e97b30f5cc0e232437dcc8ae775253801abc
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762411"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555960"
 ---
 # <a name="stisring-geometry-data-type"></a>STIsRing (geometry 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,9 @@ ms.locfileid: "85762411"
 .STIsRing ( )  
 ```  
   
-## <a name="return-types"></a>傳回型別  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>傳回型別
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
   
  CLR 傳回類型：**SqlBoolean**  

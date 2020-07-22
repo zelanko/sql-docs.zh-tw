@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7a2e593a-4d4c-4214-b0c5-02d1ac46bc66
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: da858d3f778a6e1177975107418f6640d68d086b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 01120cec31bae66a2c9becb9b7e36e9c54c147aa
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748843"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555086"
 ---
 # <a name="point-geometry-data-type"></a>Point (geometry 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85748843"
 Point ( X, Y, SRID )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *X*  
  這是 **float** 運算式，代表所要產生之 **Point** 的 X 座標。  
   

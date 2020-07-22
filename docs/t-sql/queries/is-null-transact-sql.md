@@ -32,12 +32,12 @@ ms.assetid: cdc45cd8-e9b6-4648-8417-892fbeab15af
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a20ed4afa262bcf891682c759f519f9b94f8868b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 327c641ff7d5ec9fabf67f2d8f1f9cf7231e7e49
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999187"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555860"
 ---
 # <a name="is-null-transact-sql"></a>IS NULL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +52,9 @@ ms.locfileid: "85999187"
 expression IS [ NOT ] NULL  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *expression*  
  這是任何有效的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fb435db7-31bb-4243-9d8b-35379184cfb4
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9e5f68a89ef0579df0de314c3215ade147d62d0b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: efdde1449a16862b93c52c9b9b205d0d82fa89b4
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85704359"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86556112"
 ---
 # <a name="stconvexhull-geography-data-type"></a>STConvexHull (geography 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,9 @@ ms.locfileid: "85704359"
 .STConvexHull ( )  
 ```  
   
-## <a name="return-types"></a>傳回型別  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>傳回型別
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
  CLR 傳回類型：**SqlGeography**  

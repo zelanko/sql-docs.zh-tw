@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b0d8769c-7598-4f97-8162-ace5f182b5bc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2881ad1cc83e7916c325c0492c8243d09833c3b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 95d3209fd08f08820966294b96b0fd11831e73ea
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734215"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555931"
 ---
 # <a name="ntext-text-and-image-transact-sql"></a>ntext、text 和 image (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,8 +35,7 @@ ms.locfileid: "85734215"
   
 >**重要！**  SQL Server 的未來版本將會移除 **ntext**、**text** 及 **image** 資料類型。 請避免在新的開發工作中使用這些資料類型，並規劃修改目前在使用這些資料類型的應用程式。 請改用 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)和 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 。  
   
-  
-## <a name="arguments"></a>引數  
+## <a name="arguments"></a>引數
 **ntext**  
 最大字串長度為 2^30 - 1 (1,073,741,823) 位元組的可變長度 Unicode 資料。 儲存體大小 (以位元組為單位) 是輸入字串長度的兩倍。 **ntext** 的 ISO 同義字為 **national text**。
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4dc5a004-7a53-4cce-81dd-9f5e1dd0db78
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: f842ad81c61b521c5e98348062fb546212c21dc3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 716f26e14e5d97701965cc57e8d304eb25b89b6f
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748753"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555070"
 ---
 # <a name="stcentroid-geometry-data-type"></a>STCentroid (geometry 資料類型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85748753"
 .STCentroid ( )  
 ```  
   
-## <a name="return-types"></a>傳回型別  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>傳回型別
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
  CLR 傳回類型：**SqlGeometry**  

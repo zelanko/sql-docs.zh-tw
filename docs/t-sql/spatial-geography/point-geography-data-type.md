@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0dc6f422-7aae-4016-b7f4-3289fa8f989c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 36b39355ad9d2983945fcc7710d23b5e18e792d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 04db3c6617669010f63e173415de0ebf6b7a3dca
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85705811"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86556152"
 ---
 # <a name="point-geography-data-type"></a>Point (geography 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,9 @@ ms.locfileid: "85705811"
 Point ( Lat, Long, SRID )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *Lat*  
  這是 **float** 運算式，代表所要產生之 **Point** 的 Y 座標。  
   

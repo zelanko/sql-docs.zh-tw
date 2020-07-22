@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: fddf57d8-8607-4f88-85a0-1b683087b491
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e4ad4f9578913e3a6fd9d78e50a7c44e9c8642bf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0ef0288f71cba036e9118b9d9d80f2370d0b1221
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295096"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86899977"
 ---
 # <a name="debugging-script"></a>偵錯指令碼
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   您可以撰寫指令碼工作和指令碼元件在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 中使用的指令碼。  

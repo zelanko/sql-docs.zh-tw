@@ -11,16 +11,16 @@ ms.assetid: ec081d42-57e4-43c7-9e1c-317ba8f23437
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6295d47cb61c0066e25abbeea2d733f8e04699d1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2a6b62ef573638a1cd3602eecc14e3f489f87d2b
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999346"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555266"
 ---
 # <a name="temporal-table-system-consistency-checks"></a>時態表系統一致性檢查
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 使用時態表時，系統會執行多項一致性檢查，以確保結構描述符合 Temporal 需求，資料一致且保持一致。 此外，Temporal 檢查已加入 **DBCC CHECKCONSTRAINTS** 陳述式中。
 

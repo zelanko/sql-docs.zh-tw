@@ -11,16 +11,16 @@ ms.assetid: e5d23ec9-7d18-40f6-add4-bea13132d0b9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68b5a453aced3f456156300e9768812ed3072a15
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 455305f89d22ba63884097b8a9fdcaa6e9386ac0
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85982564"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554842"
 ---
 # <a name="temporal-table-metadata-views-and-functions"></a>暫存資料表中繼資料檢視和函數
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 包括數個 Metabase 檢視及函數，可讓系統管理員擷取暫存資料表的相關資訊。
 

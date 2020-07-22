@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 354843f5-cc14-478c-974a-04f363f9530f
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 63edfe76d39fe00c01134e79b34511b78fe5984a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bbb66fd5a2436b8852172db17612330e4a1ccf07
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762441"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555631"
 ---
 # <a name="stintersection-geometry-data-type"></a>STIntersection (geometry 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85762441"
 .STIntersection ( other_geometry )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *other_geometry*  
  這是要與 `STIntersection()` 叫用所在之執行個體相比較的另一個 **geometry** 執行個體，以判斷兩者相交的地方。  
   

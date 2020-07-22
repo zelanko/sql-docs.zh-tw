@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 132184bf-c4d2-4a27-900d-8373445dce2a
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 56f2efd4fe6b84cb7758c0da723d9c11c51afc21
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 16ac1ced9d2bfbfa8de4b2c8cc577aeb83d15be0
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748831"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554688"
 ---
 # <a name="reduce-geometry-data-type"></a>Reduce (geometry 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85748831"
 .Reduce ( tolerance )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *tolerance*  
  這是 **float** 類型的值。 *tolerance* 是近似值演算法的輸入容錯。  
   

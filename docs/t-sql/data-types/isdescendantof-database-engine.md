@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: edc80444-b697-410f-9419-0f63c9b5618d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 286e318eed678eda21259d87d477829d5704e8d9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 263531ea638b7d5430d563cf6e7e94e5292185c8
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757216"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86556194"
 ---
 # <a name="isdescendantof-database-engine"></a>IsDescendantOf (Database Engine)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,8 +40,10 @@ child. IsDescendantOf ( parent )
 -- CLR syntax  
 SqlHierarchyId IsDescendantOf (SqlHierarchyId parent )  
 ```  
-  
-## <a name="arguments"></a>引數  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
 *parent*  
 應執行 IsDescendantOf 測試的 **hierarchyid** 節點。
   

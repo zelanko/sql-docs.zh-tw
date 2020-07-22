@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: eeb7d806-3cbb-405d-8199-8b82282c53df
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 002f4e9cda4e58a7d91d055bc20d68c262321e66
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8056e60488ee156e86ca0462dfb436ad6d22bd7a
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85702785"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555750"
 ---
 # <a name="stmpointfromwkb-geography-data-type"></a>STMPointFromWKB (geography 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85702785"
 STMPointFromWKB ( 'WKB_multipoint' , SRID )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *WKB_multipoint*  
  這是要傳回之 **geographyMultiPoint** 執行個體的 WKB 表示法。 *WKB_multipoint* 是 **varbinary(max)** 運算式。  
   

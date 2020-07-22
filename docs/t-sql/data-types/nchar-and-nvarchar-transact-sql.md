@@ -16,19 +16,19 @@ ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e5661008bcb550461466deddea947f205639ae98
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 63673258e2fa368544c6cc43158025770861a8f9
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008008"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555603"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar 和 nvarchar (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 固定大小 **nchar** 或變動大小 **nvarchar** 的字元資料類型。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，當使用支援[補充字元 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 的定序時，這些資料類型會存放完整範圍的 [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) 字元並使用 [UTF-16](https://www.wikipedia.org/wiki/UTF-16) 字元編碼。 若指定非 SC 定序，則這些資料類型只會存放 [UCS-2](https://www.wikipedia.org/wiki/Universal_Coded_Character_Set#Encoding_forms) 字元編碼所支援之字元資料的子集。
-  
-## <a name="arguments"></a>引數  
+
+## <a name="arguments"></a>引數
 **nchar** [ ( n ) ]  
 固定大小字串資料。 *n* 會定義字串大小 (單位為位元組配對)，且必須是 1 到 4,000 之間的值。 儲存體大小是 *n* 個位元組的兩倍。 針對 [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) 編碼，儲存大小是 *n* 位元組的兩倍，而可存放的字元數目也是 *n*。 針對 UTF-16 編碼，儲存大小仍是 *n* 位元組的兩倍，但可存放的字元數目可能小於 *n*，因為補充字元使用兩個位元組配對 (亦稱為[代理配對 (surrogate-pair)](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF))。 **nchar** 的 ISO 同義字為 **national char** 及 **national character**。
   

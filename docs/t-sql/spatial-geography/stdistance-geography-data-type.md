@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 063d8722-e019-4d3d-8fcf-dbf5325823e7
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: c958f789e1c8eadc027c4144bae711b1288599c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 795fa917f598ed1dd477916f42808d4abb0c8a69
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85703746"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555153"
 ---
 # <a name="stdistance-geography-data-type"></a>STDistance (geography 資料類型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,9 @@ ms.locfileid: "85703746"
 .STDistance ( other_geography )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *other_geography*  
  這是另一個 **geography** 執行個體，用來測量它與 STDistance() 叫用所在之執行個體之間的距離。 如果 *other_geography* 為空白集合，STDistance() 會傳回 null。  
   

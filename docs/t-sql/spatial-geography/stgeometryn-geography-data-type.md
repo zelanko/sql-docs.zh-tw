@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 53755f69-cd50-475b-b3b8-a1a9157cf03a
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 0c05ded2f6c00dd4c2f28336fb5054796f40607d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1deed4d716bbee62dac425a9d71780aec445602e
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85703265"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555769"
 ---
 # <a name="stgeometryn-geography-data-type"></a>STGeometryN (geography 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,9 @@ ms.locfileid: "85703265"
 .STGeometryN ( expression )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *expression*  
  這是介於 1 和 **GeometryCollection** 內的 **geography** 執行個體數目之間的 **int** 運算式。  
   

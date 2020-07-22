@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: ce2c0b78-e1f1-409a-9f4c-f90027c70c07
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aa3c520480930e9a2c21272d483b1a2e6b9e8cc4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9efcafa393af9f7c767280159a41a315c09a36ad
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295074"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86899885"
 ---
 # <a name="troubleshoot-integration-services-ssis-packages"></a>疑難排解 Integration Services (SSIS) 封裝
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 ## <a name="in-this-section"></a>本節內容

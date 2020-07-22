@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: eba1643f-07c4-4500-8643-b7e90f908147
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 41a0f923e997951e52b23ed0b1c2860a8c1532b0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 06190fa6cc6a0377e49f423c50369a7ceb4b51d7
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736106"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555756"
 ---
 # <a name="stisclosed-geography-data-type"></a>STIsClosed (geography 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,9 @@ ms.locfileid: "85736106"
 .STIsClosed ( )  
 ```  
   
-## <a name="return-types"></a>傳回型別  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>傳回型別
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
   
  CLR 傳回類型：**SqlBoolean**  

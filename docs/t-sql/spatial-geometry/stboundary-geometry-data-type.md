@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f0551674-e6e8-4926-9038-df03f2c807d7
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 94862dc99312cb495aa8f9dceba4959c8f4fa706
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2f99cc9931a136d7b3d3919687e5e5b8ffee269c
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748758"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555988"
 ---
 # <a name="stboundary-geometry-data-type"></a>STBoundary (geometry 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85748758"
 .STBoundary ( )  
 ```  
   
-## <a name="return-types"></a>傳回型別  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>傳回型別
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
  CLR 傳回類型：**SqlGeometry**  

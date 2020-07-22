@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 91b69853-1381-4306-8343-afdb73105738
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 516c2c3efefd0c9a1384823b8eb1f6c04abd29c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3b9ee26c8fcda094228e7bc5a26a4173c8a8d69b
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85705973"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554763"
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,9 @@ ms.locfileid: "85705973"
 READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
 _table_ **.** _column_  
 這是要讀取的資料表和資料行名稱。 資料表和資料行名稱必須滿足[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。 您必須指定資料表和資料行名稱；不過，資料庫名稱和擁有者名稱的指定是選擇性的。  
   

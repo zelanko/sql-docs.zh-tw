@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 37246adb-814d-4113-9983-4d336de8182c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 43587a5d42afdcdefe875d1b33b6f88070f61066
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 105a1e97e919485ed239c9f74cd1d41a0a67c7ae
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731226"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555523"
 ---
 # <a name="asbinaryzm-geography-data-type"></a>AsBinaryZM (geography 資料類型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85731226"
   
 .AsBinaryZM()  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**varbinary(max)**  
   

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 976c495cca321a5731a59ff69e3d7935323cdce5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f2c2a71afd526aa177490c817631dd9cd1f5fdc2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294655"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86901166"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Oracle 補充記錄指令碼
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   此對話方塊會顯示 Oracle 補充記錄指令碼。  

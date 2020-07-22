@@ -1,5 +1,5 @@
 ---
-title: ToString (資料庫引擎) | Microsoft Docs
+title: ToString (Database Engine)
 ms.custom: ''
 ms.date: 07/23/2017
 ms.prod: sql
@@ -17,14 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9b08bb0737507f6d4fbeb8ec62b932fa6e674b08
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9c1bf4c72881482ed1b4d99224554576f6a7a3cc
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729646"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555920"
 ---
 # <a name="tostring-database-engine"></a>ToString (Database Engine)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 傳回具有 *this* 邏輯表示法的字串。 當從 **hierarchyid** 轉換成字串類型時，即會隱含地呼叫 ToString。 其行為是 [Parse &#40;Database Engine&#41;](../../t-sql/data-types/parse-database-engine.md) 的相反。
@@ -43,8 +44,11 @@ CAST(node AS nvarchar(4000))
 -- CLR syntax  
 string ToString  ( )   
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-types"></a>傳回類型
+
 **SQL Server 傳回型別：nvarchar(4000)**
   
 **CLR 傳回型別：String**

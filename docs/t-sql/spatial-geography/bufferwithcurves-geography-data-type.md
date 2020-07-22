@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 079b3ba5345dc5bf31a336b473f24e546873f417
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 614e099ef075ac4bb4ce5ad4755eded9860c6b7b
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736216"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555499"
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves (geography 資料類型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85736216"
 .BufferWithCurves ( distance )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *distance*  
  這是 **float**，指出形成緩衝之點與 geography 執行個體相距的最大可能距離。  
   

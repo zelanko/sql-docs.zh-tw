@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 39a2d0e4-4f93-4e94-a27e-6ad9537cfe74
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: bd65f185f2fac61c85eb6b21ab22c3d1d9abf622
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 37008718b66d96ba604a72b49a5f082cc29766bc
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748818"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555629"
 ---
 # <a name="shortestlineto-geometry-data-type"></a>ShortestLineTo (geometry 資料類型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,9 @@ ms.locfileid: "85748818"
 .ShortestLineTo ( geometry_other )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *geometry_other*  
  呼叫 **geometry** 執行個體的第二個 **geometry** 執行個體正在嘗試判斷與其相距的最短距離。  
   

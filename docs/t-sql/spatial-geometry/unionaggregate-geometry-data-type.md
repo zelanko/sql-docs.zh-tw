@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dc7929cc-55ca-4a2c-a4b9-f5452f95bde8
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 3f0d5de286e36671341f60e13c5837a132f748e2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1f518b22b4d7aaaf6e100a4f10c91d463d80e495
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762078"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554880"
 ---
 # <a name="unionaggregate-geometry-data-type"></a>UnionAggregate (geometry 資料類型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,9 @@ ms.locfileid: "85762078"
 UnionAggregate ( geometry_operand )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *geometry_operand*  
  這是 **geometry** 類型資料表資料行，可保留要在其上執行聯集作業的一組 **geometry** 物件。  
   

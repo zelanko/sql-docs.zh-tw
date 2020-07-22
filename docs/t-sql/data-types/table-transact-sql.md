@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ad3a4659009ceb6d36aba9e3e97dc4e6f170788c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8a03e05ac53db4d7391738bbc0eaabc835a7f2db
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736512"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554793"
 ---
 # <a name="table-transact-sql"></a>資料表 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +57,9 @@ table_type_definition ::=
      }   
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
 *table_type_definition*  
 這是在 CREATE TABLE 中，用來定義資料表的相同資訊子集。 資料表宣告包括資料行定義、名稱、資料類型和條件約束。 允許使用的條件約束類型只有 PRIMARY KEY、UNIQUE KEY 和 NULL。  
 如需語法的詳細資訊，請參閱 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)、[CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)，及 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)。

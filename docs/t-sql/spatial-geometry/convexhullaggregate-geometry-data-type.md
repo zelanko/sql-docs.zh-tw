@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ca3d3b55-e02d-4599-8817-a54f5e047db8
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5ea01bd48dea04e5ae5d00a480d6ce43662d96d0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ff540360dc48dec0d13d6c0fe1093710263ac12f
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85700489"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86556014"
 ---
 # <a name="convexhullaggregate-geometry-data-type"></a>ConvexHullAggregate (geometry 資料類型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,9 @@ ms.locfileid: "85700489"
 ConvexHullAggregate ( geometry_operand )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *geometry_operand*  
  這是 **geometry** 類型資料表資料行，代表一組 geometry 物件。  
   

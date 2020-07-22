@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 28393d15ade12562dbcaa4af457bf0de0e51948b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 67e178d43f07a7b2b2e9f2af822cee74ac49e1f7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295016"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86899889"
 ---
 # <a name="view-package-objects"></a>檢視封裝物件
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   在「[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師」中，[封裝總管]  索引標籤提供封裝的總管檢視。 此檢視反映 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 架構的容器階層。 封裝容器位於階層的頂端，您可以展開封裝以檢視其中的連接、可執行檔、事件處理常式、記錄提供者、優先順序條件約束和變數。  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 67795c64-d8d3-48dc-93ef-3c8a9274deb6
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: df20fa04f8d60760b5587a48d2a5563a19ef3f21
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f6b4dc7090262a11d17239d8be50c72a637b04f3
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736207"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555524"
 ---
 #  <a name="asgml---geography-data-type"></a>AsGml - geography 資料型別
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,9 @@ ms.locfileid: "85736207"
   
 .AsGml ( )  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**xml**  
   

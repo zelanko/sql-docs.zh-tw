@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a5b3c344-1045-43a4-82fa-47f6206a288e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 78f17c846500173f080dbf95f33c06f0c2f372d2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d72d49a08deb05bc5e5750e98493047257c6f2ed
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85703653"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86556105"
 ---
 # <a name="stgeomcollfromtext-geography-data-type"></a>STGeomCollFromText (geography 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85703653"
 STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *geometrycollection_tagged_text*  
  這是您想要傳回之 **geography** 執行個體的 WKT 表示法。 *geometrycollection_tagged_text* 是 **nvarchar(max)** 運算式。  
   

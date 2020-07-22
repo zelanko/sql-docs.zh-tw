@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e2a1a4f1-211b-4e82-abed-03fc7140a83c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 2cb6064347176b34e4141e8c7c5c3bf466669145
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6865a5246f7bb0afa7dd280041e98fada88c3099
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85705670"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555176"
 ---
 # <a name="reorientobject-geography-data-type"></a>ReorientObject (geography 資料類型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,9 @@ ms.locfileid: "85705670"
 .ReorientObject (geography)  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
 _地理位置_  
 這是叫用 `ReorientObject()` 所在的另一個 **geography** 執行個體。  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 37059074-5ee8-4f55-9414-1e958fd3adaf
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: fd39a71c08d95abfe5de5e753a487826c232e01f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 79e5bd417c46aa3cd2bbf15809928952e31cc9f7
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762321"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554980"
 ---
 # <a name="stmpointfromtext-geometry-data-type"></a>STMPointFromText (geometry 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85762321"
 STMPointFromText ( 'multipoint_tagged_text', SRID )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *multipoint_tagged_text*  
  這是要傳回之 **geometryMultiPoint** 執行個體的 WKT 表示法。 *multipoint_tagged_text* 是 **nvarchar(max)** 運算式。  
   

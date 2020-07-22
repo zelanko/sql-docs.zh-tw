@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 08ac8aa0-aff7-4b22-87e0-1a1d55dcbc04
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7754190fe629412ddc08e7087626b05ff2c093d9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d3a321893f6764eb2d6d8de97cf2d3d1dc5fbc65
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85700832"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555703"
 ---
 # <a name="astextzm-geometry-data-type"></a>AsTextZM (geometry 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,9 @@ ms.locfileid: "85700832"
 .AsTextZM ()  
 ```  
   
-## <a name="return-types"></a>傳回型別  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>傳回型別
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**nvarchar(max)**  
   
  CLR 傳回類型：**SqlChars**  

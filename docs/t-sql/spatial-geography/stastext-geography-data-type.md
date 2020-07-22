@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d3d2635d-ca6c-4205-9d6c-eb939ee314fd
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 207341d09f153ed819d331960cf00dbb6c410bf3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 17a7d957b5c85ef21889af21de03f6cc2154ac62
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85704954"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555167"
 ---
 # <a name="stastext-geography-data-type"></a>STAsText (geography 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,9 @@ ms.locfileid: "85704954"
 .STAsText ( )  
 ```  
   
-## <a name="return-types"></a>傳回型別  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>傳回型別
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**nvarchar(max)**  
   
  CLR 傳回類型：**SqlChars**  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5e0de983-a0fe-48b7-9e08-30588d7271e2
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: e2611f5bfee1a74e961fee69af3dfb58d0530fcd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ee8dcb533b2949a671fc8d90e9d3d20a89688cd7
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762171"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554914"
 ---
 # <a name="stsrid-geometry-data-type"></a>STSrid (geometry 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,9 @@ ms.locfileid: "85762171"
 STSrid  
 ```  
   
-## <a name="return-types"></a>傳回型別  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>傳回型別
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型別：**int**  
   
  CLR 型別：**SqlInt32**  

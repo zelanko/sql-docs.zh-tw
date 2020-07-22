@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 30f47275-2727-4d22-bbec-c0c54bcb3ac2
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5d1639e33d52777b55845ecc489a5faf552536d8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 420fe265e6871fe02d4f3dc62936b5de9d0da3de
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85705699"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555833"
 ---
 # <a name="ringn-geography-data-type"></a>RingN (geography 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85705699"
 .RingN (expression )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *expression*  
  這是介於 1 和 **polygon** 執行個體中環形數之間的 **int** 運算式。  
   

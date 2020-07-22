@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 470d0997-3cb0-4d34-9a45-b332fe432b14
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: b26d8a7fa1c72a3c31f43d6d8e99bfceedde96a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ccde42f9243c775ffe7e5044ba9df7aa3b7efbe6
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731205"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555197"
 ---
 # <a name="geomfromgml-geography-data-type"></a>GeomFromGML (geography 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,9 @@ ms.locfileid: "85731205"
 GeomFromGml ( GML_input, SRID )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *GML_input*  
  這是 XML 輸入，GML 將會從此輸入傳回值。  
   

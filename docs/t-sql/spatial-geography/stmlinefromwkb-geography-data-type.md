@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 05ca6d65-4799-4b9a-9672-cfebae95f23e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 74743e0a91601ff210236a355739559ad03ecdb1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 35c2776a6749f4f087cc32daa5abf3ddd121cc9f
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85703031"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555124"
 ---
 # <a name="stmlinefromwkb-geography-data-type"></a>STMLineFromWKB (geography 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85703031"
 STMLineFromWKB ( 'WKB_multilinestring' , SRID )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *WKB_multilinestring*  
  這是您想要傳回之 **geographyMultiLineString** 執行個體的 WKB 表示法。 *WKB_multilinestring* 是 **varbinary(max)** 運算式。  
   

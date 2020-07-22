@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 443ae2ea-739b-41ef-96cc-ac5dfd65e10b
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 0acb70b63e0c488913bd5633606acb63fa31b2b7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b8d0c4dd1b813ce5da8f0272a0c2e19e7beab1c6
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759544"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555637"
 ---
 # <a name="m-geometry-data-type"></a>M (geometry 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85759544"
 .M  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
   
 ## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型：**float**  

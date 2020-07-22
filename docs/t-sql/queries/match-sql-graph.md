@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 576e026f19310ac596e4808b104e21bfb94cee7e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ce954aaf4bab45b359bd57fea9af7b6e94933124
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731246"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555581"
 ---
 # <a name="match-transact-sql"></a>MATCH (Transact-SQL)
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -113,7 +113,9 @@ n -  positive integer only.
  
 ```
 
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
 *graph_search_pattern*  
 指定要在圖表中搜尋的模式或周遊的路徑。 此模式會使用 ASCII 作品語法來周遊圖表中的路徑。 此模式會朝著所提供的箭頭方向，透過邊緣從一個節點移至另一個節點。 邊緣名稱或別名會以括弧括住。 節點名稱或別名會顯示在箭頭的兩端。 箭頭在模式中可以朝任一方向。
 

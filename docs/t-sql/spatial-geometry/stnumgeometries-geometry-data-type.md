@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9402b03d-3039-42ca-ac59-f96b7f1a48de
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 3bd050fc07c39dc33781a2c9c1ec09128540f216
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3911bb969378088a18aa635bb42e2f40f9686b1e
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762278"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555324"
 ---
 # <a name="stnumgeometries-geometry-data-type"></a>STNumGeometries (geometry 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85762278"
 .STNumGeometries ( )  
 ```  
   
-## <a name="return-types"></a>傳回型別  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>傳回型別
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**int**  
   
  CLR 傳回類型：**SqlInt32**  

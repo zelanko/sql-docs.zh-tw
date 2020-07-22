@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 049917db-3f76-4053-8cd2-bc54158e89bc
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7493206d502062196bab87aab90094d17997176c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 059c9a471bcce4e724cb19eaf74542b2c24f30a1
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762164"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555945"
 ---
 # <a name="ststartpoint-geometry-data-type"></a>STStartPoint (geometry 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85762164"
 .STStartPoint ( )  
 ```  
   
-## <a name="return-types"></a>傳回型別  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>傳回型別
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
  CLR 傳回類型：**SqlGeometry**  

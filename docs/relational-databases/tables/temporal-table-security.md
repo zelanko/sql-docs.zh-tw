@@ -11,16 +11,16 @@ ms.assetid: 60e5d6f6-a26d-4bba-aada-42e382bbcd38
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 66afff04e14964c4540b47b6ebaabe45d9aefcf9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4eb809ddbd1acfdd3a01f5601b30e9cf6e9259e0
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006154"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555253"
 ---
 # <a name="temporal-table-security"></a>時態表安全性
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 若要了解適用於時態表的安全性，請務必了解適用於時態表的安全性原則。 了解這些安全性原則之後，您就已經準備好深入了解關於 **CREATE TABLE**、 **ALTER TABLE**及 **SELECT** 陳述式的安全性。
 

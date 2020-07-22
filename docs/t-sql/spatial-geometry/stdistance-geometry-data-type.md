@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ac815bc7-5342-4cc4-af40-c80a1c4c8b68
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 2a93c1063ceb29ef4c67a568b6630e9e44f9f5f8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5bcb10fc64d6bac02b8ecc6faba0c8d7662b0adc
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748648"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554998"
 ---
 # <a name="stdistance-geometry-data-type"></a>STDistance (geometry 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85748648"
 .STDistance ( other_geometry )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *other_geometry*  
  這是另一個**geometry** 執行個體，用來測量它與叫用 `STDistance()` 所在之執行個體之間的距離。 如果 *other_geometry* 是空的集合，`STDistance()` 會傳回 Null。  
   

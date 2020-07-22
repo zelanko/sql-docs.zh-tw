@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 8fc476ac-bd69-434e-9636-70776e0b3b6c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a746df126c3652108217ea3dfedeb37be4f1751e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7a9525a8fb130b7fcf08c22d5b9fe9012d28c518
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295093"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86901170"
 ---
 # <a name="troubleshooting-reports-for-package-execution"></a>疑難排解封裝執行的報表
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的目前版本中， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供一些標準報表，可協助您監視和疑難排解已部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。 其中兩份封裝報表特別有助於您檢視封裝執行狀態以及識別執行失敗的原因。  

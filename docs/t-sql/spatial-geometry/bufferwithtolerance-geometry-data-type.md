@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: d1f071250b80ce1368b7a30ae9ca8ea66a3e7194
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ea306ec0acca8cdb2a21a1ecbeff2c5efe5bf56b
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85700720"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555122"
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (geometry 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85700720"
 .BufferWithTolerance ( distance, tolerance, relative )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *distance*  
  這是一個 **float** 運算式，用來指定與 **geometry** 執行個體相距的距離 (將會從此執行個體的周圍計算緩衝)。  
   
