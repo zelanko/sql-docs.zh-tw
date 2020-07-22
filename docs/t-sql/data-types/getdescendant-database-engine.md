@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f5f39596-033e-4243-acbc-caa188b45b03
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 02ee75dbee946558171ffd1c3d06aabe9f418188
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1e6471b791a4ff1196321de649c645d8775d9308
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732785"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554472"
 ---
 # <a name="getdescendant-database-engine"></a>GetDescendant (Database Engine)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,8 +40,10 @@ parent.GetDescendant ( child1 , child2 )
 -- CLR syntax  
 SqlHierarchyId GetDescendant ( SqlHierarchyId child1 , SqlHierarchyId child2 )   
 ```  
-  
-## <a name="arguments"></a>引數  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
 *child1*  
 NULL 或目前節點子系的 **hierarchyid**。
   

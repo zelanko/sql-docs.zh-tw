@@ -1,5 +1,5 @@
 ---
-title: float 和 real (Transact-SQL) | Microsoft Docs
+title: float 和 real (Transact-SQL)
 ms.custom: ''
 ms.date: 09/10/2019
 ms.prod: sql
@@ -23,14 +23,15 @@ ms.assetid: 08ea66b7-624e-4d8b-86bc-750ff76cdfc5
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75b888832f9694907af1fbab7031294f32fdda0e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 921f6e0b26f9187f8dcf241996b601e46ba1cb2e
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999230"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554500"
 ---
 # <a name="float-and-real-transact-sql"></a>float 和 real (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 用來搭配浮點數值資料使用的近似數值資料類型。 浮點數資料是近似的；因此，並非資料類型範圍內的所有值都能夠精確地表示。 **real** 的 ISO 同義字是 **float(24)** 。
@@ -49,7 +50,9 @@ ms.locfileid: "85999230"
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將 *n* 當做兩個可能值的其中一個來處理。 如果 **1**<=n<=**24**，則將 *n* 當作 **24** 來處理。 如果 **25**<=n<=**53**，則將 *n* 當作 **53** 來處理。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float**[ **(n)** ] 資料類型從 *1* 到 **53** 的所有 **n** 值都符合 ISO 標準。 **double precision** 的同義字是 **float(53)** 。
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="remarks"></a>備註  
   
 |資料類型|範圍|儲存體|  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0e4e4fa2-b608-4cc4-98ba-0845ddb4214c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 0f94b30d3f9f44fac2af7483ab0cfb7396666951
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0b85a8842a7bc33753394c5de96582ca41b9d635
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85705879"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552488"
 ---
 # <a name="numrings-geography-data-type"></a>NumRings (geography 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,9 @@ ms.locfileid: "85705879"
   
 .NumRings ()  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-type"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**int**  
   

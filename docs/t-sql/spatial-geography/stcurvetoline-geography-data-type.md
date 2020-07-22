@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2f863a85-6168-465a-b32f-bb5e3de58dee
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 61719cd9ddf153c2552bdac3046a7e24ce8deb86
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2d0c930d7963cfe6ec712a72e1c2d0d3496f1007
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85704064"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552475"
 ---
 # <a name="stcurvetoline-geography-data-type"></a>STCurveToLine (geography 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85704064"
 .STCurveToLine()  
 ```  
   
-## <a name="return-types"></a>傳回型別  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>傳回型別
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
  CLR 傳回類型：**SqlGeography**  

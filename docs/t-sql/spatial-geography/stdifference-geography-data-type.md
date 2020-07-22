@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1cde5054-b91a-41bb-812a-08c9308738af
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 39465a009ac7b7d8cc19470e3e735779337c276f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8165c78e7eced334e31ed7b0ccb0d2bfbab74af4
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85704072"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552883"
 ---
 # <a name="stdifference-geography-data-type"></a>STDifference (geography 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85704072"
 .STDifference ( other_geography )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *other_geography*  
  這是另一個 **geography** 執行個體，指示要從 STDifference() 叫用所在的執行個體中移除哪些點。  
   

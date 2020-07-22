@@ -23,19 +23,19 @@ ms.assetid: 9d862a90-e6b7-4692-8605-92358dccccdf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2f812c03b26df551aa90ecb5dbcca5f0c43ba7a3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f7bd1dcb906e7ba0ced0939313b21952d5ecd090
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008032"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554499"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal 和 numeric (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 具有固定有效位數和小數位數的數值資料類型。 Decimal 和 numeric 是同義字，可以交換使用。
   
-## <a name="arguments"></a>引數  
+## <a name="arguments"></a>引數
 **decimal**[ **(** _p_[ **,** _s_] **)** ] 和 **numeric**[ **(** _p_[ **,** _s_] **)** ]  
 固定有效位數和小數位數的數字。 當使用最大有效位數時，有效的值是從 - 10^38 +1 到 10^38 - 1。 **decimal** 的 ISO 同義字為 **dec** 及 **dec(** _p_, _s_ **)** 。 **numeric** 在功能上與 **decimal** 相同。
   

@@ -17,14 +17,15 @@ helpviewer_keywords:
 ms.assetid: 81577d7e-8ff6-4e73-b7f4-94c03d4921e7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7c834f32ff09946e50622203b61460f43e0c7b71
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f205c91f7375e52a944dbcc18c026edb9712d944
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738211"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554466"
 ---
 # <a name="getlevel-database-engine"></a>GetLevel (Database Engine)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 傳回代表樹狀結構中 *this* 節點深度的整數。
@@ -40,7 +41,9 @@ node.GetLevel ( )
 -- CLR syntax  
 SqlInt16 GetLevel ( )   
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-types"></a>傳回型別  
 **SQL Server 傳回型別：smallint**
   

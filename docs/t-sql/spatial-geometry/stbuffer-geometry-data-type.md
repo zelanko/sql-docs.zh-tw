@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 0a091906818ffea85a8b30b3678f75f02de3a886
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b461b711ba7e91e4c29a362523b3ebb4a1228004
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748741"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552802"
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (geometry 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85748741"
 .STBuffer ( distance )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *distance*  
  這是 **float** 類型 (.NET Framework 中的 **double**) 的值，用來指定與 geometry 執行個體相距的距離 (將會從此執行個體的周圍計算緩衝)。  
   

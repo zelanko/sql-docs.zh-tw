@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cdba04f0-4e17-48f6-bafb-b1f918c5a501
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 2a9890c63b47b39fa898accb8af7c4098bb83ec9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 580feb4d6727e84f982a09ca8a96337d5b1a31df
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731105"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552540"
 ---
 # <a name="m-geography-data-type"></a>M (geography 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,8 +35,10 @@ ms.locfileid: "85731105"
   
 .M  
 ```  
-  
-## <a name="return-types"></a>傳回型別  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>傳回型別
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型：**float**  
   
  CLR 類型：**SqlDouble**  

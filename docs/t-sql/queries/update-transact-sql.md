@@ -38,12 +38,12 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 530e207035ea2442b9413d92ec4215f3d72d5086
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a8db85a2dc347cbfda62713dab61946e6f57cc0e
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011359"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554425"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -135,7 +135,9 @@ SET { column_name = { expression | NULL } } [ ,...n ]
 [;]  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  WITH \<common_table_expression>  
  指定定義在 UPDATE 陳述式範圍內的暫存具名結果集或檢視表，也稱為通用資料表運算式 (CTE)。 CTE 結果集是從簡單查詢衍生而來，由 UPDATE 陳述式來加以參考。  
   
@@ -187,7 +189,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  DEFAULT  
  指定資料行所定義的預設值要取代資料行中現有的值。 如果資料行沒有預設值，且定義成允許空值，您可以利用這個方式，將資料行改成 NULL。  
   
- { **+=**  |  **-=**  |  **\*=**  |  **/=**  |  **%=**  |  **&=**  |  **^=**  |  **|=** }  
+ { **+=** \| **-=** \| **\*=** \| **/=** \| **%=** \| **&=** \| **^=** \| **|=** }  
  複合指派運算子：  
  +=                       加並指派  
  -=                        減並指派  

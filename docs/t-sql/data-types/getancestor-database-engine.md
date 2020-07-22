@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b96a986f-d5e4-4034-8013-de7974594ee9
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1c4f082b427aaafb8b93aff7f3247859a92a3b62
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a6bbdeb7e8f54bbdb02d7daff3b08f83bf0a98d1
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738227"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554495"
 ---
 # <a name="getancestor-database-engine"></a>GetAncestor (Database Engine)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,9 @@ child.GetAncestor ( n )
 SqlHierarchyId GetAncestor ( int n )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
 *n*  
 **int**，代表要在階層中向上移動的層級數目。
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 348c7047-3442-4590-8879-fe841e79058c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a733fdd692a1a6af724a73ed5ff442594d61629e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fcc6ccdb16dbc7091defe0405588da435f672c88
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762509"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552794"
 ---
 # <a name="stgeometryn-geometry-data-type"></a>STGeometryN (geometry 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85762509"
 .STGeometryN ( expression )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *expression*  
  這是介於 1 和 **geometrycollection** 內的 **geometry** 執行個體數目之間的 **int** 運算式。  
   

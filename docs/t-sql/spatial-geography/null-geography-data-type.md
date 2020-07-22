@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bb464b06-86e0-4b8b-ad78-04bd33b6069c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 90e574a27ea57c21478c7457b50c57ffe1a5862c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4896de83781df95d4c3cbd673e866e51c04bd5fe
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85705895"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552514"
 ---
 # <a name="null-geography-data-type"></a>Null (geography 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,8 +35,10 @@ ms.locfileid: "85705895"
   
 Null  
 ```  
-  
-## <a name="arguments"></a>引數  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
   
 ## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型別：**geography**  

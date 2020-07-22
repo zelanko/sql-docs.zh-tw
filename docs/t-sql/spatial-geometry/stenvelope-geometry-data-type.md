@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 781d22e9-38df-4c23-836f-6dd0bdef49c5
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 4c2d8650f5a0ab1f8fe30569f9f5a096cf006605
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 87146a39fda67da157c48abed2b06dab926e7194
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762515"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554673"
 ---
 # <a name="stenvelope-geometry-data-type"></a>STEnvelope (geometry 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85762515"
 STEnvelope ( )  
 ```  
   
-## <a name="return-types"></a>傳回型別  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>傳回型別
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
  CLR 傳回類型：**SqlGeometry**  

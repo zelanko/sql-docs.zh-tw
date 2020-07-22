@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 39fe8559-c4c2-4d61-8508-86eb0a103807
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9b8e09118b13c016bbd8abedbfb009c76d9661e9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 70a1b678578612265491803b748db95ba9e3ac96
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762338"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554269"
 ---
 # <a name="stmlinefromtext-geometry-data-type"></a>STMLineFromText (geometry 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85762338"
 STMLineFromText ( 'multilinestring_tagged_text' , SRID )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *multilinestring_tagged_text*  
  這是要傳回之 **geometryMultiLineString** 執行個體的 WKT 表示法。 *multilinestring_tagged_text* 是一個 **nvarchar(max)** 運算式。  
   

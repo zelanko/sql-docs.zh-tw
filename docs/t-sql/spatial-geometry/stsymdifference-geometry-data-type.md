@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1d4cf35a-ca89-4aa4-ae30-e61a0ff18b53
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 63122ab29322432be181aa162e7727f342470974
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a6924bec676d8de525e29c8f124774b41edf0a2d
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762151"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554575"
 ---
 # <a name="stsymdifference-geometry-data-type"></a>STSymDifference (geometry 資料類型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85762151"
 .STSymDifference ( other_geometry )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *other_geometry*  
  這是除了 `STSymDifference()` 叫用所在的執行個體之外的另一個 **geometry** 執行個體。  
   

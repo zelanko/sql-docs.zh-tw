@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7e09468f-499f-4a38-ba4b-bb30b8821e3b
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ec264773787fd89f8cb36ba2e2386a186dc78816
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9107a97c775aaf5b249ee0a16e8e916c700d00a4
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736123"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554386"
 ---
 # <a name="stintersection-geography-data-type"></a>STIntersection (geography 資料類型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85736123"
 .STIntersection ( other_geography )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *other_geography*  
  這是要與叫用 STIntersection() 所在之執行個體相比較的另一個 **geography** 執行個體。  
   

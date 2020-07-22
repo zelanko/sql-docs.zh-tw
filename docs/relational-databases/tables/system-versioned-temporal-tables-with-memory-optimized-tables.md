@@ -11,16 +11,16 @@ ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 99d4cd492ffd35f36a1f44754128ce54f028aaed
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cd143092a666a9e1fd661651d0bfe9620db7cc8c
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85984485"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554533"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>系統版本設定時態表與記憶體最佳化資料表
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 [記憶體最佳化資料表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) 之系統版本設定時態表的設計，是為了在利用記憶體內部 OLTP 工作負載所收集的最上層資料需要 [資料稽核與時間點分析](https://msdn.microsoft.com/library/mt631669.aspx) 時，提供符合成本效益的解決方案。 它們提供高交易處理能力、無鎖定同時並行處理，儲存大量歷程記錄資料並可輕鬆查詢的功能。
 

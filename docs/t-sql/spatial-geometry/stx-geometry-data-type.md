@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2aef77e8-0460-43f9-bad6-2aae6d8c36f9
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: b870071f474203a699494993f56f87109f9baf43
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c98ff07648163059d64ffc49041cb2d688694ed1
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762105"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554563"
 ---
 # <a name="stx-geometry-data-type"></a>STX (geometry 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85762105"
 .STX  
 ```  
   
-## <a name="return-types"></a>傳回型別  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>傳回型別
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型：**float**  
   
  CLR 類型：**SqlDouble**  

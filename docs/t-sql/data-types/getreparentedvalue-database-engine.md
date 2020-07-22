@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2fe15544cd689004eb2fcc56ae4083651e6c02ae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5a1b6700c10a73a2b3f0ab59dbad7f0a5d2c435c
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732791"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554465"
 ---
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue (Database Engine)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,9 @@ node. GetReparentedValue ( oldRoot, newRoot )
 SqlHierarchyId GetReparentedValue ( SqlHierarchyId oldRoot , SqlHierarchyId newRoot )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
 _oldRoot_  
 **hierarchyid**，代表即將修改之階層層級的節點。
   

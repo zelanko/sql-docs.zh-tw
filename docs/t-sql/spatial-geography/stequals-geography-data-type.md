@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0766ff37-0b9e-49bf-83c0-019f4354fe44
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 6aabb6a29b4d03d8fcec086e75bfd9788554f9cb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 730e84147c4201f9eca316335d2328dd50ceae76
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85703681"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552502"
 ---
 # <a name="stequals-geography-data-type"></a>STEquals (geography 資料類型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85703681"
 .STEquals ( other_geography )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *other_geography*  
  這是要與叫用 `STEquals()` 所在之執行個體相比較的另一個 **geography** 執行個體。  
   

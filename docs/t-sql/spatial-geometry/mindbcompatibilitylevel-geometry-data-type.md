@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c848b974-8ccb-4c5c-a7eb-b019a9538d99
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: c4407c6a6725a1fa19382b2bc91aa7567f56e7a3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 373c9eb4a1482bf92ae41c39af2f8852d19aac9f
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759507"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554337"
 ---
 # <a name="mindbcompatibilitylevel-geometry-data-type"></a>MinDbCompatibilityLevel (geometry 資料類型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,9 @@ ms.locfileid: "85759507"
 .MinDbCompatibilityLevel ( )  
 ```  
   
-## <a name="return-types"></a>傳回型別  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>傳回型別
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**int**  
   
  CLR 傳回類型：**int**  

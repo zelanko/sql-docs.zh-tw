@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f2b8207c-b69f-4327-a874-100b3a1f27d8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ee08e8278b2b302f91360a8f74690050c28ba556
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 89739f7e53ddccfc95cb9e84311f1ed18e147de6
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85644013"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552583"
 ---
 # <a name="read-database-engine-by-using-csharp"></a>使用 CSharp 讀取 (資料庫引擎)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,8 +41,8 @@ I am making this fix now, from ```sql to ```cs, on 2020/04/16.  GeneMi.
 ```csharp
 void Read( BinaryReader r )   
 ```  
-  
-## <a name="arguments"></a>引數  
+
+## <a name="arguments"></a>引數
 *r*  
  產生二進位資料流的 **BinaryReader** 物件，該資料流會對應到 **hierarchyid** 節點的二進位表示法。  
   

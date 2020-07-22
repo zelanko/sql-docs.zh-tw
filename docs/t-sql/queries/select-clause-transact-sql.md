@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a6c854560982ceddf7d6237d77ba81562e97fc9a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 47d4c1eea37f8c9edbba8bfdd9712a27cd0f0f0f
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85705945"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554426"
 ---
 # <a name="select-clause-transact-sql"></a>SELECT 子句 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,7 +63,9 @@ SELECT [ ALL | DISTINCT ]
     } [ ,...n ]   
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  **ALL**  
  指定結果集中可以有重複的資料列。 ALL 是預設值。  
   
