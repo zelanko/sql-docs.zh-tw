@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: d457f052-ffbb-4485-833f-f4bed4349b69
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bc5c349835acb6211fb3d46c0bad37d377760063
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8d322ff646d4908f968c068def3d2ca10d4c6a15
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71288835"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86904942"
 ---
 # <a name="-multiply-ssis-expression"></a>* (乘) (SSIS 運算式)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   將兩個數值運算式相乘。  

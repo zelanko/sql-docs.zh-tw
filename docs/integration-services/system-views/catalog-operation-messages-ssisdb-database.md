@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 05fb06f9e15557628f37d0bc6c113606f04dd19b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6e2dddde1f4c6ac3cf058e45b0c049bd89fb76bc
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85671879"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86912484"
 ---
 # <a name="catalogoperation_messages-ssisdb-database"></a>catalog.operation_messages (SSISDB 資料庫)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -10,19 +10,19 @@ ms.topic: language-reference
 author: haoqian
 ms.author: haoqian
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: afcd5083c5b0132d2594c45690b10f2a69371e70
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a400275aa68d9906ad16ae7d1236b019f4e9f6ad
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85673988"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86912744"
 ---
 # <a name="catalogupdate_master_address-ssisdb-database"></a>catalog.update_master_address (SSISDB 資料庫)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/applies-to-version/sqlserver2017.md)]
+[!INCLUDE[sqlserver2017](../../includes/applies-to-version/sqlserver2017.md)]
 
 更新 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out 主端點。
 

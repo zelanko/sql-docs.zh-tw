@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: e70c4ce9-79f5-44df-ac75-6c29b6e38776
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8f47b58cbac71800715a5f2ec091b6ce026484e0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: af72db9d78859f9065673aa145bc4b763199b298
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85673439"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86912669"
 ---
 # <a name="catalogeffective_object_permissions-ssisdb-database"></a>catalog.effective_object_permissions (SSISDB 資料庫)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

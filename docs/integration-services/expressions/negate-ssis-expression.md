@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: f0118dfc-aced-4de2-953e-5ebf9c962b8d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 25f4ee4514e56bc581b2b7c9f7f843f7aaf32baf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9322d5a25b8b65432e83ddeac03f486722a50b7c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297469"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86911778"
 ---
 # <a name="--negate-ssis-expression"></a>- (負) (SSIS 運算式)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   執行數值運算式的否定運算。  

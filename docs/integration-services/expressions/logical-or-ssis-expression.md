@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: a3c07c09-f121-4187-9617-b01adcf843c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e9154b2ad6d574f251f3248903f2518e0f6b0b3d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 72e8bb24671524b77585d4a3e151eab9bc225a85
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71289025"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86908004"
 ---
 # <a name="-logical-or-ssis-expression"></a>|| (邏輯 OR) (SSIS 運算式)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   執行邏輯 OR 運算。 如果其中一項或兩項條件均為 TRUE，則運算式的評估結果為 TRUE。  
