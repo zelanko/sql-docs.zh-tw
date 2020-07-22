@@ -1,5 +1,5 @@
 ---
-title: DBCC CHECKIDENT (Transact-SQL) | Microsoft Docs
+title: DBCC CHECKIDENT (Transact-SQL)
 ms.custom: ''
 ms.date: 03/07/2019
 ms.prod: sql
@@ -29,12 +29,12 @@ ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 2a3c1885d6796977ea48585858fa5d2a271e6a46
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a3be9148e4ae5e8daae7528923506fc0bbde665d
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72798368"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484387"
 ---
 # <a name="dbcc-checkident-transact-sql"></a>DBCC CHECKIDENT (Transact-SQL)
 

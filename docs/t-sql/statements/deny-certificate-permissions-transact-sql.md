@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5971ff9e-d6a4-414b-ae1f-819bc2e348f5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7b06bf59120229a9661c7503ee556e899c3fd480
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4bbf8f2aa031b7f8a33993d6054d27137011814c
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766734"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484989"
 ---
 # <a name="deny-certificate-permissions-transact-sql"></a>DENY 憑證權限 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,9 @@ DENY permission  [ ,...n ]
     [ AS denying_principal ]  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *permission*  
  指定可以拒絕的憑證權限。 如下所列。  
   

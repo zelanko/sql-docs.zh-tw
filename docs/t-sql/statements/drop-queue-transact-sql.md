@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: fd866520-ca00-477d-b2e9-0110e9610ed4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9fe58999c34e67ee0cf9b5c6fd92ad91b3796ea7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7f335af8eaeb9c217b252b6b683d3652ebac999c
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895121"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484082"
 ---
 # <a name="drop-queue-transact-sql"></a>DROP QUEUE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,7 +46,9 @@ DROP QUEUE <object>
 { database_name.schema_name.queue_name | schema_name.queue_name | queue_name }
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *database_name*  
  要卸除之佇列所在的資料庫名稱。 若未提供 *database_name*，預設為目前的資料庫。  
   

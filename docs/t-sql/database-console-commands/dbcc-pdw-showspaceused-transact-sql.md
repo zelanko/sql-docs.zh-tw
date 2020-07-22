@@ -1,5 +1,5 @@
 ---
-title: DBCC PDW_SHOWSPACEUSED (Transact-SQL) | Microsoft Docs
+title: DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql
@@ -12,21 +12,22 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5a8a016fe9852c076b563796caf4cc196ea3ecce
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 748ed216b16788e176db5ad459d8e2b05c563c96
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197222"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484233"
 ---
 # <a name="dbcc-pdw_showspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
+
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
 顯示 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 資料庫中的資料列數目、保留的磁碟空間和 特定的資料表或所有資料表使用的磁碟空間。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>語法
   
 ```syntaxsql
 -- Show the space used for all user tables and system tables in the current database  
@@ -37,15 +38,18 @@ DBCC PDW_SHOWSPACEUSED
 DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name .] table_name  " )  
 [;]  
 ```  
-  
-## <a name="arguments"></a>引數  
+
+## <a name="arguments"></a>引數
+
  `[ database_name . [ schema_name ] . | schema_name . ] table_name`  
- 要顯示的資料表的一段式、兩段式或三段式名稱。 兩段式或三段式的資料表名稱必須以雙引號 ("") 括住。 您可以選擇是否使用引號括住一段式資料表名稱。 未指定資料表名稱時，會顯示目前資料庫的資訊。  
+要顯示的資料表的一段式、兩段式或三段式名稱。 兩段式或三段式的資料表名稱必須以雙引號 ("") 括住。 您可以選擇是否使用引號括住一段式資料表名稱。 未指定資料表名稱時，會顯示目前資料庫的資訊。  
   
-## <a name="permissions"></a>權限  
+## <a name="permissions"></a>權限
+
 需要 VIEW SERVER STATE 權限。
   
-## <a name="result-sets"></a>結果集  
+## <a name="result-sets"></a>結果集
+
 這是所有資料表的結果集。
   
 |資料行|資料類型|描述|  
@@ -82,6 +86,7 @@ DBCC PDW_SHOWSPACEUSED ( FactInternetSales );
 ```  
   
 ### <a name="b-show-the-disk-space-used-by-all-tables-in-the-current-database"></a>B. 顯示目前資料庫中的所有資料表使用的磁碟空間  
+
  下列範例示範 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 資料庫中的所有使用者資料表和系統資料表保留和使用的磁碟空間。  
   
 ```sql
@@ -89,8 +94,8 @@ DBCC PDW_SHOWSPACEUSED ( FactInternetSales );
   
 DBCC PDW_SHOWSPACEUSED;  
 ```  
- ## <a name="see-also"></a>另請參閱
-[DBCC PDW_SHOWEXECUTIONPLAN &#40;Transact-SQL&#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
-[DBCC PDW_SHOWPARTITIONSTATS &#40;Transact-SQL&#41;](dbcc-pdw-showpartitionstats-transact-sql.md)
 
-  
+## <a name="see-also"></a>另請參閱
+
+- [DBCC PDW_SHOWEXECUTIONPLAN &#40;Transact-SQL&#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
+- [DBCC PDW_SHOWPARTITIONSTATS &#40;Transact-SQL&#41;](dbcc-pdw-showpartitionstats-transact-sql.md)

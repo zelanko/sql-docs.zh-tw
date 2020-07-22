@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2ff0b9740cbdd8eb25bdfa6d8c55e7551fe946a8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 45ad55bdf67be6dae67a69994320f9cf282a7beb
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897857"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485414"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -59,7 +59,9 @@ ms.locfileid: "85897857"
 { database_name.schema_name.queue_name | schema_name.queue_name | queue_name }
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  WAITFOR  
  指定如果目前沒有訊息，RECEIVE 陳述式便等待訊息到達佇列。  
   

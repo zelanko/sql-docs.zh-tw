@@ -1,5 +1,5 @@
 ---
-title: DENY (Transact-SQL) | Microsoft Docs
+title: DENY (Transact-SQL)
 ms.custom: ''
 ms.date: 05/15/2017
 ms.prod: sql
@@ -27,14 +27,15 @@ ms.assetid: c32d1e01-9ee9-4665-a516-fcfece58078e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e0b77901f1a4c625f241c057f22af6b5fd437f10
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e146021bf3bd601e01f6220ffcf42de970e63657
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012566"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484816"
 ---
 # <a name="deny-transact-sql"></a>DENY (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   對主體拒絕權限。 防止主體透過其群組或角色成員資格繼承權限。 DENY 的優先順序高於所有權限，不同之處在於 DENY 不適用至物件擁有者或 sysadmin 固定伺服器角色的成員。
@@ -86,7 +87,9 @@ DENY
 }  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  ALL  
  這個選項不會拒絕所有可能的權限。 拒絕 ALL 等同於拒絕下列權限。  
   
@@ -153,11 +156,12 @@ DENY
   
  CONTROL SERVER 權限的被授與者 (例如系統管理員 (sysadmin) 固定伺服器角色的成員)，可以拒絕伺服器中任何安全性實體的任何權限。 資料庫之 CONTROL 權限的被授與者 (例如 db_owner 固定資料庫角色的成員)，可以拒絕資料庫中任何安全性實體的任何權限。 結構描述之 CONTROL 權限的被授與者，可以拒絕結構描述中任何物件的任何權限。 如果使用 AS 子句，指定的主體必須擁有要拒絕其權限的類型。  
   
-## <a name="examples"></a>範例  
+## <a name="examples"></a>範例
+
  下表列出安全性實體和描述安全性實體特定語法的主題。  
   
-|||  
-|-|-|  
+|安全性實體|語法|
+|----------|------|
 |應用程式角色|[DENY 資料庫主體權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
 |組件|[DENY 組件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-assembly-permissions-transact-sql.md)|  
 |非對稱金鑰|[DENY 非對稱金鑰權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-asymmetric-key-permissions-transact-sql.md)|  

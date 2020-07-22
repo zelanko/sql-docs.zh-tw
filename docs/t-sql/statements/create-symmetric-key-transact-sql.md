@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f6e294c0bca1a871cc7b0ccb6c45a92072d7b0fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 37e46ba0453f9606a5ddc5310e15d4263de57fcf
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767000"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483196"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -68,7 +68,9 @@ CREATE SYMMETRIC KEY key_name
     | ASYMMETRIC KEY asym_key_name  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *Key_name*  
  依據資料庫中已知之對稱金鑰指定唯一的名稱。 當 _key_name_ 的開頭是數字 (#) 符號時，會指定暫存金鑰。 例如， **#temporaryKey900007**。 您無法建立名稱開頭有多個數字符號 (#) 的對稱金鑰。 您無法使用 EKM 提供者建立暫時對稱金鑰。  
   

@@ -21,12 +21,12 @@ ms.assetid: 1eb7fb34-1937-4a39-a936-f5c0c7c7e06f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d4def6fc7ca08e5b7e239364f9149ba66f69d0c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 492c51a2a026dbc205c259c3b9f419ae713cce25
+ms.sourcegitcommit: 41ff0446bd8e4380aad40510ad579a3a4e096dfa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008779"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86465214"
 ---
 # <a name="log10-transact-sql"></a>LOG10 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "86008779"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 LOG10 ( float_expression )  
 ```  
   
@@ -56,7 +56,7 @@ LOG10 ( float_expression )
 ### <a name="a-calculating-the-base-10-logarithm-for-a-variable"></a>A. 針對某個變數，計算以 10 為基底的對數。  
  下列範例會計算指定變數的 `LOG10`。  
   
-```  
+```sql  
 DECLARE @var FLOAT;  
 SET @var = 145.175643;  
 SELECT 'The LOG10 of the variable is: ' + CONVERT(VARCHAR,LOG10(@var));  
@@ -74,7 +74,7 @@ The LOG10 of the variable is: 2.16189
 ### <a name="b-calculating-the-result-of-raising-a-base-10-logarithm-to-a-specified-power"></a>B. 將以 10 為基底的對數提升到指定的乘冪，再計算其結果。  
  下列範例會傳回將以 10 為基底的對數提升到指定乘冪之後所得出的結果。  
   
-```  
+```sql  
 SELECT POWER (10, LOG10(5));   
 ```  
   
@@ -92,7 +92,7 @@ SELECT POWER (10, LOG10(5));
 ### <a name="c-calculating-the-base-10-logarithm-for-a-value"></a>C：針對某個值，計算以 10 為基底的對數。  
  下列範例會計算指定值的 `LOG10`。  
   
-```  
+```sql  
 SELECT LOG10(145.175642);  
 ```  
   

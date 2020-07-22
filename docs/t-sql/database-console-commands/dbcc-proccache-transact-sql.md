@@ -21,14 +21,15 @@ helpviewer_keywords:
 ms.assetid: 7a4f9f8a-13ff-4bf2-ba29-c17012a23659
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: d021905cfd1a75a35487499ef383d6e0a78c8323
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f847da8dec94f7344087d836e651b9edf2c4fa35
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85685470"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484246"
 ---
 # <a name="dbcc-proccache-transact-sql"></a>DBCC PROCCACHE (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 以表格形式顯示程序快取區的相關資訊。
@@ -41,7 +42,9 @@ ms.locfileid: "85685470"
 DBCC PROCCACHE [ WITH NO_INFOMSGS ]  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  WITH  
  接受即將指定的選項。  
   

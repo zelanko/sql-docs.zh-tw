@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 48dabb9e01a3b5dbddaa07cbe7534321207f1d0f
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
+ms.openlocfilehash: 45401b7deb905931c6204ddd28f13c4212dc977b
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834669"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485159"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -96,6 +96,8 @@ MERGE
     <search_condition> 
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>引數
 
 WITH \<common_table_expression>  

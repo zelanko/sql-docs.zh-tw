@@ -25,12 +25,12 @@ ms.assetid: 9dd8aff7-b0fc-45df-b316-ead14ee9b8b7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05ab7281448d8e20d23bf31c3da2a9ff08a7cd41
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 06cf89e2cb596ee7ced369fcd1ae7076264f702f
+ms.sourcegitcommit: 41ff0446bd8e4380aad40510ad579a3a4e096dfa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005107"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86465245"
 ---
 # <a name="month-transact-sql"></a>MONTH (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "86005107"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```sqlsyntax  
 MONTH ( date )  
 ```  
   
@@ -62,20 +62,20 @@ MONTH ( date )
 ## <a name="examples"></a>範例  
  下列陳述式會傳回 `4`。 這是月份。  
   
-```  
+```sql  
 SELECT MONTH('2007-04-30T01:01:01.1234567 -07:00');  
 ```  
   
  下列陳述式會傳回 `1900, 1, 1`。 *date* 的引數是數字 `0`。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將 `0` 解譯為 1900 年 1 月 1 日。  
   
-```  
+```sql  
 SELECT YEAR(0), MONTH(0), DAY(0);  
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下列範例會傳回 `4`。 這是月份。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT TOP 1 MONTH('2007-04-30T01:01:01.1234')   
@@ -84,7 +84,7 @@ FROM dbo.DimCustomer;
   
  下列範例會傳回 `1900, 1, 1`。 *date* 的引數是數字 `0`。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將 `0` 解譯為 1900 年 1 月 1 日。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT TOP 1 YEAR(0), MONTH(0), DAY(0) FROM dbo.DimCustomer;  

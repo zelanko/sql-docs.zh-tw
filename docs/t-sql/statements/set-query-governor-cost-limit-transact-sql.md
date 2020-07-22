@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3424bb44-6915-462d-a8d7-fe834af81387
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 56a071487c2cd3f6a6116c3d90d1572a450aa73d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 20eaa69a9c0f07926d937128a7fc10c43d4128ef
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765761"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484329"
 ---
 # <a name="set-query_governor_cost_limit-transact-sql"></a>SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,9 @@ ms.locfileid: "85765761"
 SET QUERY_GOVERNOR_COST_LIMIT value  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *value*  
  這是指定查詢可以執行的最長時間之數值或整數值。 值會捨到最接近的整數。 負值會進位到 0。 查詢若超過該值的估計成本，查詢管理員就不允許執行此查詢。 將這個選項指定為 0 (預設值) 會關閉查詢管理員，並允許無限期地執行所有查詢。  
   

@@ -1,5 +1,5 @@
 ---
-title: CREATE SYNONYM (Transact-SQL) | Microsoft Docs
+title: CREATE SYNONYM (Transact-SQL)
 ms.custom: ''
 ms.date: 04/11/2017
 ms.prod: sql
@@ -22,14 +22,15 @@ helpviewer_keywords:
 ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8f4fd357cb833832beb03e23e3b7ba6e1f26fb03
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7d4131868fbaf40c59be2b55aad5fe078490c824
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766966"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484557"
 ---
 # <a name="create-synonym-transact-sql"></a>CREATE SYNONYM (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   建立新的同義字。  
@@ -61,7 +62,9 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
 }  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *schema_name_1*  
  指定建立同義字的結構描述。 如果未指定 *schema*，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用目前使用者的預設結構描述。  
   
@@ -89,15 +92,19 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
  您可以建立下列物件類型的同義字：  
   
-|||  
-|-|-|  
-|組件 (CLR) 預存程序|組件 (CLR) 資料表值函式|  
-|組件 (CLR) 純量函數|組件彙總 (CLR) 彙總函式|  
-|複寫篩選程序|擴充預存程序|  
-|SQL 純量函數|SQL 資料表值函式|  
-|SQL 嵌入資料表值函式|SQL 預存程序|  
-|檢視|資料表<sup>1</sup> (使用者定義)|  
-  
+- 組件 (CLR) 預存程序
+- 組件 (CLR) 資料表值函式
+- 組件 (CLR) 純量函數
+- 組件彙總 (CLR) 彙總函式
+- 複寫篩選程序
+- 擴充預存程序
+- SQL 純量函數
+- SQL 資料表值函式
+- SQL 嵌入資料表值函式
+- SQL 預存程序
+- 資料表<sup>1</sup> (使用者定義)
+- 檢視
+
  <sup>1 包括本機和全域暫存資料表</sup>  
   
  不支援函數基底物件的四部份名稱。  

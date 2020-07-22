@@ -17,12 +17,12 @@ ms.assetid: 56483d24-add7-483d-9b96-c6fda460ddbc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 94fa842b9af3fed45e9ad40e04c0029ffc135097
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4b3c1c19be32a8d023a3f151cb29f7acf210d36b
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009224"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483879"
 ---
 # <a name="sql-server-collation-name-transact-sql"></a>SQL Server 定序名稱 (Transact-SQL)
 
@@ -43,6 +43,8 @@ SQL_SortRules[_Pref]_CPCodepage_<ComparisonStyle>
 <ComparisonStyle> ::=
 _CaseSensitivity_AccentSensitivity | _BIN
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引數
 

@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a0f885f15371460e79df287738fce96ac9ce2d7d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a8aa04b27ec929809e55896421f9f0656fbf9b44
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766891"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485009"
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -74,7 +74,9 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  [PRIMARY] XML  
  在指定的 **xml** 資料行上建立 XML 索引。 當指定 PRIMARY 時，會利用使用者資料表和 XML 節點識別碼所構成的叢集索引鍵來建立叢集索引。 每一份資料表最多可以有 249 個 XML 索引。 建立 XML 索引時，請注意下列事項：  
   

@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 4d284ae9-3f5f-465a-b0dd-1328a4832a03
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b327105398388615aa507ceaf30734347fbf2683
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d72a643f1bc9774ebfa412ff50db21b8800e934e
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882594"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484849"
 ---
 # <a name="set-remote_proc_transactions-transact-sql"></a>SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,9 @@ ms.locfileid: "85882594"
 SET REMOTE_PROC_TRANSACTIONS { ON | OFF }   
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  ON | OFF  
  如果設為 ON，當從本機交易執行遠端預存程序時，會啟動 [!INCLUDE[tsql](../../includes/tsql-md.md)] 分散式交易。 如果設為 OFF，當從本機交易呼叫遠端預存程序時，並不會啟動 [!INCLUDE[tsql](../../includes/tsql-md.md)] 分散式交易。  
   

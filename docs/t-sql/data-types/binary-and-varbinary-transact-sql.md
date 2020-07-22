@@ -21,19 +21,21 @@ ms.assetid: bcce65f9-10db-4b3e-bfaf-dfc06c6f820f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c8013a0a8cefc9623500a65df5560333a63632af
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f267da97eeb409be81bfcca71af602ebce1ffe1c
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002544"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86548736"
 ---
 # <a name="binary-and-varbinary-transact-sql"></a>binary 和 varbinary (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 固定長度或可變長度的二進位資料類型。
   
-## <a name="arguments"></a>引數  
+## <a name="arguments"></a>引數
+
 **binary** [ ( _n_ ) ] 固定長度的二進位資料，其長度為 _n_ 位元組，其中 _n_ 是 1 到 8,000 的值。 儲存體大小是 _n_ 位元組。
   
 **varbinary** [ ( _n_ | **max**) ] 可變長度的二進位資料。 _n_ 可以是從 1 到 8,000 之間的值。 **max** 表示儲存體大小上限是 2^31-1 個位元組。 儲存體大小是輸入資料的實際長度再加上 2 位元組。 輸入的資料有可能是 0 位元組。 **varbinary** 的 ANSI SQL 同義字是 **binary varying**。

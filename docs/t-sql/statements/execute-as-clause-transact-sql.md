@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f48d933dec2dc87d0171641146f652a4e881045e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5ad156a9164d2b59833b3103a8f08b9cbe1ab284
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735684"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483708"
 ---
 # <a name="execute-as-clause-transact-sql"></a>EXECUTE AS 子句 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -71,7 +71,9 @@ DDL Triggers with Database Scope
   
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  **CALLER**  
  指定模組內的陳述式，是在該模組的呼叫者內容當中執行。 執行該模組的使用者，不僅必須具有模組本身的適當權限，也必須具有該模組所參考之任何資料庫物件的權限。  
   

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 26ffe6c73d00056b9b15bd07f41349b367bef02d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 542613ad0404170d7af90a3cddc93feb685039eb
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735694"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485189"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,9 @@ ENABLE TRIGGER { [ schema_name . ] trigger_name [ ,...n ] | ALL }
 ON { object_name | DATABASE | ALL SERVER } [ ; ]  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
 *schema_name*  
 這是觸發程序所屬的結構描述名稱。 您不能為 DDL 或登入觸發程序指定 *schema_name*。  
   

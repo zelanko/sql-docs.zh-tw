@@ -24,12 +24,12 @@ ms.assetid: 222806b7-4e45-445b-8cd0-bd5461f3ca4a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef2a22baa6be2298e398485c0fbbc97cd05bbef5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d10b55c020bcd037f82eb841fba549c17a707992
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003402"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483946"
 ---
 # <a name="drop-statistics-transact-sql"></a>DROP STATISTICS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,9 @@ DROP STATISTICS [ schema_name . ] table_name.statistics_name
 [;]  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *table* | *view*  
  這是應該卸除統計資料之目標資料表或索引檢視的名稱。 資料表和檢視名稱必須符合[資料庫識別碼](../../relational-databases/databases/database-identifiers.md)的規則。 資料表或檢視擁有者名稱的指定是選擇性的。  
   
