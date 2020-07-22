@@ -9,16 +9,16 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eced263351bc6c9add5fbd46894c08ccc65fb2be
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 6260504afcaabfefb6de7e6f262aa475479cf487
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196079"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913740"
 ---
 # <a name="oracle-source"></a>Oracle 來源
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 Oracle 來源會使用下列模式從 Oracle Database 擷取資料：
 

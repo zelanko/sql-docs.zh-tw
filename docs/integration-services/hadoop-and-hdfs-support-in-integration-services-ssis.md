@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: fea03c62-9361-4b6f-b4ce-8fe0f94b34f2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dc008fc1f59d8ea6b5f015f2028779aa270d3b2a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b958b948261a70200f9529be7e6e7a71ce0cf363
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71285863"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914685"
 ---
 # <a name="hadoop-and-hdfs-support-in-integration-services-ssis"></a>Integration Services (SSIS) 中的 Hadoop 和 HDFS 支援
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   SQL Server 2016 Integration Services (SSIS) 包含下列元件，提供在內部部署對 Hadoop 和 HDFS 的支援。  

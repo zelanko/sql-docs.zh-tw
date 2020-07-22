@@ -19,15 +19,15 @@ ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 824e5c768ab36b7af5d228e5879eae4f05916051
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 23803485a7734bf9f077aa70d136e8730055ccd0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159756"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913202"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>在複寫監視器中設定臨界值和警告
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫監視器會顯示發行集和訂閱的狀態資訊。 依預設，複寫監視器只針對未初始化的訂閱顯示警告，但您可以啟用於其他條件下發出警告。 建議您啟用拓撲警告，這樣您才能收到即時的狀態和效能資訊。  
   
  在您啟用警告時，必須指定臨界值。 達到或超過臨界值時，會顯示警告 (除非有更高優先順序的問題需要顯示)。 除了在複寫監視器顯示警告外，達到臨界值也會觸發警示。 您可啟用滿足下列條件時的警告：  

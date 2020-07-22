@@ -11,16 +11,16 @@ ms.author: haoqian
 ms.reviewer: maghan
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
-ms.openlocfilehash: c2457b1425e8c769439f62ddae3848c82ec1b4aa
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 522b522c5afeedd71314bb53f0c4679828bf44e1
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763219"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914844"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>執行 Integration Services (SSIS) Scale Out 中的套件
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 將套件部署至 Integration Services 伺服器之後，即可使用下列其中一種方法在 Scale Out 中予以執行：

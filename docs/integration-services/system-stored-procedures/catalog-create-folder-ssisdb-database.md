@@ -10,16 +10,16 @@ ms.topic: language-reference
 ms.assetid: 06fb3549-e970-4ca2-a61f-59affb9c6dcc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 95f74f595481d9cf373c51be18cccf404b824e49
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3590308c901dc27ec417a925f316d290f499ca55
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749655"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913129"
 ---
 # <a name="catalogcreate_folder-ssisdb-database"></a>catalog.create_folder (SSISDB 資料庫)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

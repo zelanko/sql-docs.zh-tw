@@ -10,16 +10,16 @@ ms.topic: language-reference
 ms.assetid: c1deb31e-b8d1-44ca-b355-570959bc6478
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f1984edf4ff6800f51018dcd88244e3b8fa41fdb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: adb5a783c928cf9bac1f3ac9668306bff5eb8456
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758168"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86912861"
 ---
 # <a name="catalogset_environment_variable_property-ssisdb-database"></a>catalog.set_environment_variable_property (SSISDB 資料庫)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

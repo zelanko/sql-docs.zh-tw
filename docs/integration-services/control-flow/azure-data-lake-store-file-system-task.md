@@ -11,16 +11,16 @@ f1_keywords:
 author: Lingxi-Li
 ms.author: lingxl
 ms.reviewer: maghan
-ms.openlocfilehash: f5cd88953a9f33fa4ba44784d30333487a8d832b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9460730ae4756bb2862de751bc72cad649e38298
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763639"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913884"
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Azure Data Lake Store 檔案系統工作
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

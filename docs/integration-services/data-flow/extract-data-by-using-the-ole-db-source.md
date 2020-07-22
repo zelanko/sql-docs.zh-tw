@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 82bebe29ff6fe9eb385a078aa762d5b8f171783a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 190762cad4b58f5a1c127a664b901530dbaee68a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292601"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914407"
 ---
 # <a name="extract-data-by-using-the-ole-db-source"></a>使用 OLE DB 來源來擷取資料
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   若要加入及設定 OLE DB 來源，封裝必須已包含至少一個「資料流程」工作。  

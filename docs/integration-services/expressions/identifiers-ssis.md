@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6ddde15e9ca4fac2fd98b598ee8334f3ff28d6df
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2ae07f10db51458fed1836a4f815107a27c55304
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297559"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914571"
 ---
 # <a name="identifiers-ssis"></a>識別碼 (SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   在運算式中，識別碼是可供運算的資料行和變數。 運算式可使用一般和限定識別碼。  

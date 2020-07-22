@@ -17,15 +17,15 @@ ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f2cea103f2bc9f19d06f19a1258b84d617957cc7
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 8d2da3afadaf9dc56a7003b007be28cf6c3f1c63
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159906"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914431"
 ---
 # <a name="change-publication-and-article-properties"></a>變更發行集與發行項屬性
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   在建立發行集後，可以變更大多數發行集與發行項屬性，但某些屬性要求重新產生快照集和 (或) 重新初始化訂閱。 本主題提供在變更時需要執行一個或兩個動作的所有屬性之資訊。  
   
 ## <a name="publication-properties-for-snapshot-and-transactional-replication"></a>快照式和異動複寫的發行集屬性  

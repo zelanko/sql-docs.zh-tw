@@ -15,15 +15,15 @@ ms.assetid: 1d3a3525-0bc5-466f-b097-5359dc74432d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5f2080ec477f25289db266918b90a40ff2041f98
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 58d5393e95c1ab12d2815799a25267ea4c84958c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86160116"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914597"
 ---
 # <a name="publish-execution-of-stored-procedure-in-transactional-publication"></a>在交易式發行集中發行預存程序的執行項
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   指定應在 [發行項屬性 - \<Article>] 對話方塊中發佈預存程序的執行 (而不僅是其定義)。 [新增發行集精靈] 與 [發行集屬性 - \<Publication>] 對話方塊中都有此對話方塊。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)和[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
  初始化訂閱時，會將程序的定義 (CREATE PROCEDURE 陳述式) 複寫到訂閱者；在發行者端執行程序時，複寫會在訂閱者端執行對應的程序。  

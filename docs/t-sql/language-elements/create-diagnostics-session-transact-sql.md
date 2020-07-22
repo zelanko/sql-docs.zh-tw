@@ -12,12 +12,12 @@ ms.assetid: 662d019e-f217-49df-9e2f-b5662fa0342d
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0d4148e002ba84677e13e101a4830f0b6da10915
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1c7d3419d7dfe087dfbae8ce11d8afd68f461892
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68088967"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914044"
 ---
 # <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68088967"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 Creating a new diagnostics session:  
 CREATE DIAGNOSTICS SESSION diagnostics_name AS N'{<session_xml>}';  
   
@@ -55,7 +55,9 @@ Removing results for a diagnostics session:
 DROP DIAGNOSTICS SESSION diagnostics_name ;  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *diagnostics_name*  
  診斷工作階段的名稱。 診斷工作階段名稱只能包含字元 a-z、A-Z 和 0-9。 此外，診斷工作階段名稱必須以字元作為開頭。 *diagnostics_name* 限制為 127 個字元。  
   

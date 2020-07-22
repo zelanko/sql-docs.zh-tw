@@ -24,16 +24,16 @@ helpviewer_keywords:
 ms.assetid: 072bc4b8-363a-4131-87c3-240338e2fa5c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 565252bee563fc0808a5ada6b515606c35f42187
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3f8818197bffefd42004dbd4d0cc4d1732d79029
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296953"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913414"
 ---
 # <a name="extending-the-data-flow-with-the-script-component"></a>Extending the Data Flow with the Script Component
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   指令碼元件會以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Visual C# 所撰寫且在套件執行階段編譯並執行的自訂程式碼，以擴充 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 套件的資料流程功能。 當 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 隨附的來源、轉換和目的地無法完全滿足您的需求時，指令碼元件會簡化自訂資料流程來源、轉換或目的地的開發作業。 在您使用預期的輸入和輸出來設定此元件之後，它會為您撰寫所有必要的基礎結構程式碼，讓您專門著重在自訂處理所需的程式碼。  

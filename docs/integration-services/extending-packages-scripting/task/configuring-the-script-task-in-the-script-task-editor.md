@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9ac35433b8e197da585f18a6cf87328d493c9bda
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 40edbb718dac8f1be4a33fa1766c757aa1962306
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71286048"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913939"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>在指令碼工作編輯器設定指令碼工作
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   在指令碼工作內撰寫自訂程式碼之前，必須先在 [指令碼工作編輯器]  的三個頁面中設定其主要屬性。 您可以使用 [屬性] 視窗，設定其他非指令碼工作專用的工作屬性。  

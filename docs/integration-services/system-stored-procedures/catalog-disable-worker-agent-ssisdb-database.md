@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 3f19dc4c-a000-4318-8fe1-e80d56720e66
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cc3aae082a59cf122971798739e5add2b1886689
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 5e8b7714662bfeaa54a36af1805597cfb89e3347
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053690"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913028"
 ---
 # <a name="catalogdisable_worker_agent-ssisdb-database"></a>catalog.disable_worker_agent (SSISDB 資料庫)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 停用處理此 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄之 Scale Out Master 的 Scale Out Worker。
 

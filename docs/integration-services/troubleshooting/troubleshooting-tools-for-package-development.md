@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 38c5c4daa65542dd8da14fa5c51a1b964a271fff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 652ebe1e842acd6b51b53f229bed09b60ab0fe41
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296509"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913727"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>疑難排解封裝開發的工具
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中開發封裝時可以用於疑難排解封裝的功能和工具。  

@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: d5c4d1e1-7be4-4d25-bcd9-5b6ddb53b3b3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7ce0a8e44a89dbac275b8c2df320a20e7bc14f14
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bb3d9bc9fb9ff483e86f1ddd4a451f440bac2824
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297501"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914480"
 ---
 # <a name="-logical-not-ssis-expression"></a>! (邏輯 Not) (SSIS 運算式)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   執行布林運算元的否定運算。  

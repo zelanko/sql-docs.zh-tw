@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f2e884e7a34af6cae14b4b057038e54b20255200
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a5f9955f32db6b9d803541229a700671ec666b55
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71289680"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914551"
 ---
 # <a name="integration-services-ssis-expressions"></a>Integration Services (SSIS) 運算式
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   運算式是產生單一資料值的符號組合 (識別碼、常值、函數和運算子)。 簡單的運算式可以是單一常數、變數或函數。 通常運算式都比較複雜，更常使用多個運算子和函數，並參考多個資料行和變數。 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，運算式可用於定義 CASE 陳述式的條件、建立和更新資料行中的值、指派值到變數、在執行階段更新或擴展屬性、定義優先順序條件約束中的條件約束和提供「For 迴圈」容器所使用的運算式。  

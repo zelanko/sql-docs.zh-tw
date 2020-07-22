@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 66365c942bc3f996d834f0217f29bd82cc911457
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2df00ea414e24b1863fcae16832b5f3bbb1f5b79
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298111"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913595"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>SAP BW 目的地編輯器 (連接管理員頁面)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   使用 **[SAP BW 目的地編輯器]** 的 **[連接管理員]** 頁面可以選取 SAP BW 目的地將使用的 SAP BW 連接管理員。 在這個頁面上，您也可以選取將資料載入 SAP Netweaver BW 系統中所用的參數。  

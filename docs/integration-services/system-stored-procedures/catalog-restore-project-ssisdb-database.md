@@ -10,16 +10,16 @@ ms.topic: language-reference
 ms.assetid: 8adee525-579b-4d2f-b807-e2ecc07fb2e9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f7434afe50772f5696d7799b3c079353ff1e00e8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3996b376ef456502dff95836008e81e6c9ef1a88
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85674567"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86912944"
 ---
 # <a name="catalogrestore_project-ssisdb-database"></a>catalog.restore_project (SSISDB 資料庫)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

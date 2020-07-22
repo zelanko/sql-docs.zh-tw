@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 83e70e75-4be5-4783-a8cf-032f82afe16e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1dcd15de93893b34a6842110767b2242fbc3a146
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 46614c3875226936b9fa555351dcd6da2dcb26e5
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297403"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913514"
 ---
 # <a name="right-ssis-expression"></a>RIGHT (SSIS 運算式)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   傳回來自給定字元運算式最右邊部分的指定字元數。  

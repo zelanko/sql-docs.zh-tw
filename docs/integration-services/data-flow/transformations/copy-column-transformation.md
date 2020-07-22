@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 1c72a313-9026-46bc-a57f-c6b3f47346f8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c9f0671e364ae22440d84874f3fff2f80865ab1e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: af29ab26c4bd67bdb4ac00eadcfa59bb61bbb7ba
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71291581"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914596"
 ---
 # <a name="copy-column-transformation"></a>複製資料行轉換
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   「複製資料行」轉換會複製輸入資料行，並將新資料行加入轉換輸出，以建立新資料行。 稍後在資料流程中，可將不同的轉換套用至資料行副本。 例如，您可以使用「複製資料行」轉換建立資料行複本，然後使用「字元對應」轉換將複製的資料轉換為大寫字元，或使用「彙總」轉換將彙總套用至新資料行。  

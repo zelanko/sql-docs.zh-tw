@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 87205984-507a-49f3-b27c-36a0075c234d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4c533cb10f1d51c2e1e74e51978e720f764bf4e6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a4704a619f6c8230ff811dc4d7e25d1bdf031297
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298363"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913226"
 ---
 # <a name="column-statistics-profile-request-options-data-profiling-task"></a>資料行統計資料設定檔要求選項 (資料分析工作)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   您可以使用 [設定檔要求]  頁面的 [要求屬性]  窗格，針對要求窗格中選取的 [資料行統計資料設定檔要求]  設定選項。 資料行統計資料設定檔會報告數值資料行的最小值、最大值、平均和標準差，以及 **datetime** 資料行的最小值和最大值等統計資料。 這個設定檔可協助您識別資料中的問題，例如無效的日期。 舉例來說，您分析了歷程記錄日期的資料行，並發現屬於未來的最大日期。  

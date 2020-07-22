@@ -9,16 +9,16 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c28efd8106056ea900fef0cd57791837cf79e21a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: abbcea42546421fb7c0d3fef9824ef8ef56d2a0c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "69553224"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913784"
 ---
 # <a name="microsoft-connector-for-oracle-data-type-support"></a>Microsoft Connector for Oracle 資料類型支援
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 Oracle 的 SSIS 元件不支援所有 Oracle 資料類型。 在 SSDT 中設計套件時，具有不支援之資料類型的資料行將出現警告，而且將會從對應資料行中刪除。 無法將資料載入具有不支援之資料類型的資料行。
 

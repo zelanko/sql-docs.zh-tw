@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 17330bafe2655f0569f0828706d5e29ed2af3812
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2c15c03c5041aeebb2ac46776eb65921f4725bd8
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71285356"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914095"
 ---
 # <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>連接到 Azure Blob 儲存體 (SQL Server 匯入和匯出精靈)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 本主題示範如何透過 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面，連接到 **Azure Blob 儲存體**資料來源。

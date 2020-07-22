@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: ec59b75d-ba09-44ac-9039-9d593bb462d9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a14ae64026443324f7a5dc3f47dcea15f9907f5f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5c45f6a5b59a65046a0e48fd930fd27d689c0a0a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295725"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913304"
 ---
 # <a name="managing-packages-and-folders-programmatically"></a>以程式設計方式管理封裝與資料夾
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 <a name="top"></a> 當您以程式設計方式使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件時，您可能想要判斷個別的套件或資料夾是否存在，或是管理儲存套件的資料夾。 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 命名空間的 <xref:Microsoft.SqlServer.Dts.Runtime> 類別，提供各種方法以滿足這些需求。    

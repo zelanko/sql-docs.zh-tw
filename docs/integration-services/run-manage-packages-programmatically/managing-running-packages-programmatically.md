@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 0e91f4ac-6f29-40d7-8c28-9b82e4802c35
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ae990092e930bb1f017e10c0b6e1f07917e3a446
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4ccccb2982bf48949366b2dc37a334484062ec19
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71281965"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913294"
 ---
 # <a name="managing-running-packages-programmatically"></a>以程式設計方式管理執行中的封裝
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   當您以程式設計方式處理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝時，您可能會想要判斷目前正在執行的封裝。 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 命名空間的 <xref:Microsoft.SqlServer.Dts.Runtime> 類別提供了各種方法和類別來滿足這些需求。  

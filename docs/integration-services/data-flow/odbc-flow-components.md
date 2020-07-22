@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e7035802b5b4e13c2696af9d76c6a2904547ea25
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 339d8c68dcafba40b73edbc8c003376a20ae8822
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292279"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914754"
 ---
 # <a name="odbc-flow-components"></a>ODBC 流程元件
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   此主題描述使用 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  

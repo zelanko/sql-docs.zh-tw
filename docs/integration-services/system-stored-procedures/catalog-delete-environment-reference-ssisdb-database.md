@@ -10,16 +10,16 @@ ms.topic: language-reference
 ms.assetid: 1f68f157-c4e9-412c-92b3-53a2faaba29b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6354ca6d5326e4b38e18f38be3b6e5095ad8d1b1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 92ca0764b48e54fc8a8548446001728d91677f99
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749647"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913114"
 ---
 # <a name="catalogdelete_environment_reference-ssisdb-database"></a>catalog.delete_environment_reference (SSISDB 資料庫)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 1c10dd54-67cb-4b63-9e4d-aa6ff0452ecb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d3b3ccea56d367e7870826b39830e415e26bb2ac
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 770cd336ff96cdc4d3833e48845ba4954bf9c866
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295904"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914854"
 ---
 # <a name="lesson-5-add-ssis-package-configurations-for-the-package-deployment-model"></a>第 5 課：新增套件部署模型的 SSIS 套件設定
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

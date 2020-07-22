@@ -10,16 +10,16 @@ ms.topic: language-reference
 ms.assetid: b77db3e6-478c-441a-a838-82c4de750275
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0b46bd78709861b4967bdb9657f445d35d819e3f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7faaa82587b8e16037b91c2da5f1fd6977583b2b
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85637585"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86912966"
 ---
 # <a name="catalogremove_data_tap"></a>catalog.remove_data_tap 
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

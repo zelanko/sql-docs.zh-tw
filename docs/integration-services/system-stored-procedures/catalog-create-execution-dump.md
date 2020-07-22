@@ -10,16 +10,16 @@ ms.topic: language-reference
 ms.assetid: 91319b0b-5536-4ab4-a403-9559ed9dd177
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a93801d7d17ff8952d02b5351c1cf0dd9bce4486
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a48142752c0016a2c215b9333dcbf518b63179c5
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749669"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914098"
 ---
 # <a name="catalogcreate_execution_dump"></a>catalog.create_execution_dump 
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

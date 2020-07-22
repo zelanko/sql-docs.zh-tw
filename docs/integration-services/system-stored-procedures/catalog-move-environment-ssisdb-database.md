@@ -10,16 +10,16 @@ ms.topic: language-reference
 ms.assetid: b3fb5242-3c4c-4a87-b3e5-beb22fbab053
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7646bb7498ed18c2e0e5e28268442b4638ee16bf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 128970f410897b9c9797b27a6d1e3af28407f1f5
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85637732"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86912979"
 ---
 # <a name="catalogmove_environment-ssisdb-database"></a>catalog.move_environment (SSISDB 資料庫)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

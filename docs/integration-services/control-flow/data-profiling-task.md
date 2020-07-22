@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 309fb584db245ee3da6b67e475a4881347f39bd5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e8076ccc258b7de7075bafc9f0a0f5c9bed6d6a0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294214"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914824"
 ---
 # <a name="data-profiling-task"></a>資料分析工作
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   資料分析工作會計算各種設定檔，協助您熟悉資料來源並在資料中識別必須修復的問題。  

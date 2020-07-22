@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 156747f6-e016-44cf-9a9f-ae8e4a1b4f17
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2d332c8cdffae320d602f0581c7641d69c31c4fa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8ba53861748db3d8b1d0a75800f4aa0151e81b2a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297693"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914365"
 ---
 # <a name="abs-ssis-expression"></a>ABS (SSIS 運算式)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   傳回數值運算式的絕對正數值。  

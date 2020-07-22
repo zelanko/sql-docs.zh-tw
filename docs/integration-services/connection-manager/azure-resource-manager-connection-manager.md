@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: 8ce8024f-153f-4066-b607-0d36fefc79ed
 author: Lingxi-Li
 ms.author: lingxl
-ms.openlocfilehash: cb8482fe4acee529da7462f5eb9400f2738439d6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 06cf645c41c27ec3a2275e19856c8ba935da73c4
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67968147"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913644"
 ---
 # <a name="azure-resource-manager-connection-manager"></a>Azure Resource Manager 連線管理員
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 **Azure Resource Manager 連線管理員** 可讓 SSIS 套件使用[服務主體](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal)來管理 Azure 資源。

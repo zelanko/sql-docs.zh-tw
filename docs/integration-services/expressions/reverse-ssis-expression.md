@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: bcebcc55-7247-4896-8f53-4d582d58cfb4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d7a0e8974f781f5f69817cf3374416de7bc32580
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2ccbd27bd16770c7e68f19ca8c5d2a5fcf44e7d1
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71288380"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913203"
 ---
 # <a name="reverse-ssis-expression"></a>REVERSE (SSIS 運算式)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   傳回反向順序的字元運算式。  

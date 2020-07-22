@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: e7a37b93-6d1d-42d5-9a65-de1790abf6a5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 198a1161d6af7f1b57f9480b3d00cd8dec3436d1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: baed2f92c1419731aec68ce8def41007842f7d9a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297431"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913231"
 ---
 # <a name="replicate-ssis-expression"></a>REPLICATE (SSIS 運算式)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   傳回複寫許多次的字元運算式。 *times* 引數必須評估為整數。  

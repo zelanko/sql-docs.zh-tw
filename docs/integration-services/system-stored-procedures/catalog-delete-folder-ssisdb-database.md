@@ -10,16 +10,16 @@ ms.topic: language-reference
 ms.assetid: b9c08992-500c-447e-bc19-1eb13c9b0293
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4e9986843ce2196cd4450bac806631a862147ef4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9e22bb36904b63d2fbe2832443992342606ae074
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749599"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913075"
 ---
 # <a name="catalogdelete_folder-ssisdb-database"></a>catalog.delete_folder (SSISDB 資料庫)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

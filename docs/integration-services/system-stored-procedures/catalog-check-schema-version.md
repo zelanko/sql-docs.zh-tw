@@ -10,16 +10,16 @@ ms.topic: language-reference
 ms.assetid: e0d5e9f5-59c6-4118-87b5-4aa5c37a7df6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eaa4293c13362a68b40855997143d135baaaa29d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d8b492f69eae6e3ffea4afe6fc61ae64528c80da
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749734"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913584"
 ---
 # <a name="catalogcheck_schema_version"></a>catalog.check_schema_version 
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

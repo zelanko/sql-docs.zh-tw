@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b6382de8778e5f11e76f4481519284d50b7b52e0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 64a9702fd642f40e96f0ac0d017b3ddc132502c0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71282163"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913326"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>以程式設計方式載入和執行遠端封裝
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   若要從沒有安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的本機電腦執行遠端封裝，請啟動封裝，讓它們在已安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的遠端電腦上執行。 完成這項工作的方法是讓本機電腦使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent、Web 服務或遠端元件來啟動遠端電腦上的封裝。 如果您嘗試直接從本機電腦啟動遠端封裝，該封裝將載入並嘗試從本機電腦執行。 如果本機電腦沒有安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，封裝將不會執行。  
