@@ -18,12 +18,12 @@ ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7b90b91773ab0497452e0c12c5f485a36f81b6e8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2f222261c21ecb96f3599b20917a441898e3325e
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719190"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977706"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,9 +52,9 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
 |值|描述|  
 |-----------|-----------------|  
-|**頭**|最先引發觸發程序。|  
+|**First**|最先引發觸發程序。|  
 |**次**|最後引發觸發程序。|  
-|**None**|觸發程序的引發，沒有任何既定順序。|  
+|**無**|觸發程序的引發，沒有任何既定順序。|  
   
 `[ @stmttype = ] 'statement_type'`指定引發觸發程式的 SQL 語句。 *statement_type*為**Varchar （50）** ，而且可以是 INSERT、UPDATE、DELETE、LOGON，或 [!INCLUDE[tsql](../../includes/tsql-md.md)] [DDL 事件](../../relational-databases/triggers/ddl-events.md)中所列的任何語句事件。 您不能指定事件群組。  
   
@@ -63,9 +63,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
  ** \@ 命名空間 =** { **' 資料庫 '**  |  **' 伺服器 '** |Null  
  當*triggername*是 DDL 觸發程式時， ** \@ namespace**會指定是否使用資料庫範圍或伺服器範圍來建立*triggername* 。 如果*triggername*是登入觸發程式，則必須指定伺服器。 如需 DDL 觸發程式範圍的詳細資訊，請參閱[Ddl 觸發](../../relational-databases/triggers/ddl-triggers.md)程式。 如果未指定，或指定了 Null， *triggername*就是 DML 觸發程式。  
   
-||  
-|-|  
-|伺服器適用于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。|  
+* 伺服器適用于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 和 1 (失敗)  

@@ -1,5 +1,5 @@
 ---
-title: 資料來源物件 (OLE DB) | Microsoft Docs
+title: 資料來源物件（Native Client OLE DB 提供者） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,11 +19,12 @@ ms.assetid: c1d4ed20-ad3b-4e33-a26b-38d7517237b7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b52f6b4efc831acb9786b1448ad02a1903345cc3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3f233e0ab3db0aa28a6fb7291d34ff2a27e0e777
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002765"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86976617"
 ---
 # <a name="data-source-objects-ole-db"></a>資料來源物件 (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

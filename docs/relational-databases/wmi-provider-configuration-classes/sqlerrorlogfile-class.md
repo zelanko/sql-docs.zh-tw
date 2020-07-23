@@ -10,15 +10,15 @@ ms.topic: reference
 ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fc333e99ab9dcf2b74c8c829ca27faf77d8b08b0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5949e1667040296e2eb5472dd92bdb2a12db424e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888473"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915602"
 ---
 # <a name="sqlerrorlogfile-class"></a>SqlErrorLogFile 類別
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   提供屬性，用來檢視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄檔的相關資訊。  
   
 ## <a name="syntax"></a>語法  
@@ -39,8 +39,8 @@ class SQLErrorLogFile
 ## <a name="properties"></a>屬性  
  SQLErrorLogFile 類別會定義下列屬性。  
   
-|||  
-|-|-|  
+| 屬性 | 描述 |
+| -------- | ----------- |
 |ArchiveNumber|資料類型： **uint32**<br /><br /> 存取類型：唯讀<br /><br /> <br /><br /> 記錄檔的封存數目。|  
 |InstanceName|資料類型：**字串**<br /><br /> 存取類型：唯讀<br /><br /> 限定詞：索引鍵<br /><br /> <br /><br /> 記錄檔所在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。|  
 |LastModified|資料類型： **datetime**<br /><br /> 存取類型：唯讀<br /><br /> <br /><br /> 上次修改記錄檔的日期。|  
@@ -49,8 +49,8 @@ class SQLErrorLogFile
   
 ## <a name="remarks"></a>備註  
   
-|||  
-|-|-|  
+| 類型 | 名稱 |
+| ---- | ---- |
 |MOF|Sqlmgmprovider xpsp2up.mof|  
 |DLL|Sqlmgmprovider.dll|  
 |命名空間|\root\Microsoft\SqlServer\ComputerManagement10|  

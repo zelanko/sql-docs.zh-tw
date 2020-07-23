@@ -26,12 +26,12 @@ ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2de8653c0a18cc6fabaf2570a10c73184e5c9706
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0f99e3497a8b1c2061ed54348943f1d087ed29bb
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825978"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977688"
 ---
 # <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -58,13 +58,12 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ## <a name="arguments"></a>引數  
 `[ @name = ] 'module\_name'`這是預存程式、使用者定義函數、view、DML 觸發程式、資料庫層級 DDL 觸發程式或伺服器層級 DDL 觸發程式的名稱。 *module_name*不可以是 common language RUNTIME （CLR）預存程式或 CLR 函數。 *module_name*不可以是架構系結。 *module_name*是**Nvarchar**，沒有預設值。 *module_name*可以是多部分的識別碼，但只能參考目前資料庫中的物件。  
   
-`[ , @namespace = ] ' \<class> '`這是指定之模組的類別。 當*module_name*是 DDL 觸發程式時， \< 就需要類別>。 * \< 類別>* 是**Nvarchar**（20）。 有效輸入包括：  
-  
-|||  
-|-|-|  
-|DATABASE_DDL_TRIGGER||  
-|SERVER_DDL_TRIGGER|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。|  
-  
+`[ , @namespace = ] ' \<class> '`這是指定之模組的類別。 當*module_name*是 DDL 觸發程式時， \<class> 則為必要。 *\<class>* 是**Nvarchar**（20）。 有效輸入包括：  
+
+* DATABASE_DDL_TRIGGER
+
+* SERVER_DDL_TRIGGER-**適用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
+
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或非零數字 (失敗)  
   
@@ -169,7 +168,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_refreshview &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
+ [sp_refreshview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
  [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   
