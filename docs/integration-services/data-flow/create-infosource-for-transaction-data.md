@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 19c8384a389db2032c36291e669d5dd2885ac8dd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 28c3d7da3777f20957d0bdd4cf0881453af2cc00
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293311"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923977"
 ---
 # <a name="create-infosource-for-transaction-data"></a>建立交易資料的 InfoSource
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   使用 [建立交易資料的 InfoSource]  對話方塊可以在 SAP Netweaver BW 系統中建立交易資料的新 InfoSource。  

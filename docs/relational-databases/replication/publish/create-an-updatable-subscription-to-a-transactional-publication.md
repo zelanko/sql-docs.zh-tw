@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 68f87213d310c909d266a20c235f1686f66e6902
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0d28fec80479a8eec877452763e78d4fadfa3d2c
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896808"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942832"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication"></a>建立交易式發行集的可更新訂閱
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "85896808"
     * `sync tran` - 啟用立即更新的訂閱。
     * `failover` - 啟用立即更新的訂閱，且利用佇列更新來做為容錯移轉選項。
     > [!NOTE]  
->  `failover` - 要求也要針對佇列更新訂閱啟用發行集。 
+    >  `failover` - 要求也要針對佇列更新訂閱啟用發行集。 
  
 4. 在訂閱者上，執行 [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)。 指定下列項目：
 
@@ -150,7 +150,7 @@ ms.locfileid: "85896808"
     * 散發代理程式在散發者上執行時，針對 `@job_login` 和 `@job_password`所使用的 Windows 認證。 
 
     > [!NOTE]  
->  使用「Windows 整合式驗證」建立的連接一律使用由 `@job_login` 和 `@job_password`指定的 Windows 認證。 散發代理程式一律使用「Windows 整合式驗證」建立與散發者的本機連接。 依預設，代理程式會使用「Windows 整合式驗證」連接到訂閱者。 
+    >  使用「Windows 整合式驗證」建立的連接一律使用由 `@job_login` 和 `@job_password`指定的 Windows 認證。 散發代理程式一律使用「Windows 整合式驗證」建立與散發者的本機連接。 依預設，代理程式會使用「Windows 整合式驗證」連接到訂閱者。 
 
     * (選擇性) `0` 的 `@subscriber_security_mode` 值和 `@subscriber_login` 和 `@subscriber_password`的 SQL Server 登入資訊，如果您需要在連接到訂閱者時使用 SQL Server 驗證的話。 
     * 此訂閱之散發代理程式作業的排程。
@@ -180,7 +180,7 @@ ms.locfileid: "85896808"
     * `queued failover` - 啟用佇列更新的支援，並將立即更新當作容錯移轉選項。
 
     > [!NOTE]  
->  `queued failover` - 要求也要針對立即更新訂閱啟用發行集。 若要容錯移轉到立即更新，您必須使用 [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) ，以定義訂閱者上的變更複寫到發行者時所用的認證。
+    >  `queued failover` - 要求也要針對立即更新訂閱啟用發行集。 若要容錯移轉到立即更新，您必須使用 [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) ，以定義訂閱者上的變更複寫到發行者時所用的認證。
  
 4. 在訂閱者上，執行 [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)。 指定下列參數：
 
