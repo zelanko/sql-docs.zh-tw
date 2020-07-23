@@ -30,12 +30,12 @@ ms.assetid: c6258df4-11f1-416a-816b-54f98c11145e
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6dc5c823a69d348e3206d55c3c49f8954204a794
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b0b37b62fd535f4d9a601f318fda494f872e6bea
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67910080"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919884"
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "67910080"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 --Applies to SQL Server and Azure SQL Database
  
 BEGIN { TRAN | TRANSACTION }   
@@ -56,7 +56,7 @@ BEGIN { TRAN | TRANSACTION }
 [ ; ]  
 ```  
  
-```  
+```syntaxsql
 --Applies to Azure SQL Data Warehouse and Parallel Data Warehouse
  
 BEGIN { TRAN | TRANSACTION }   
@@ -64,11 +64,13 @@ BEGIN { TRAN | TRANSACTION }
 ```  
 
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *transaction_name*  
  **適用於：** SQL Server (從 2008 開始)、Azure SQL Database
  
- 這是指派給交易的名稱。 *transaction_name* 必須符合識別碼的規則，但不允許超出 32 個字元的識別碼。 請只在巢狀 BEGIN...COMMIT 或 BEGIN...ROLLBACK 陳述式的最外一組使用交易名稱。 即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體不區分大小寫，*transaction_name* 一律還是會區分大小寫。  
+ 這是指派給交易的名稱。 *transaction_name* 必須符合識別碼的規則，但不允許超出 32 個字元的識別碼。 請只在巢狀 BEGIN...COMMIT 或 BEGIN...ROLLBACK 陳述式的最外一組使用交易名稱。 即使  *的執行個體不區分大小寫，* transaction_name[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一律還是會區分大小寫。  
   
  @*tran_name_variable*  
  **適用於：** SQL Server (從 2008 開始)、Azure SQL Database

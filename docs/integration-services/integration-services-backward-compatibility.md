@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb6f782de8d271edf005f5adb69e8c3e6b8945d3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 983e78ef4eedaa8aee55bb3d4c6575519a7d6b27
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296235"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919964"
 ---
 # <a name="integration-services-backward-compatibility"></a>Integration Services 回溯相容性
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   本主題描述 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 版本之間的變更。 它涵蓋不能再使用或已排程在未來版本中移除的功能。 此外，也將描述產品的變更，已知這些變更會中斷或變更包含 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 功能之現有應用程式的行為。  

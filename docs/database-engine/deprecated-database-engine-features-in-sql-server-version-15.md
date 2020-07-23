@@ -14,16 +14,16 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-ver15'
-ms.openlocfilehash: ffcd04d0368043fae2a8341f4ef9a8845b409514
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 552afb292f89eea602099fa095b86f587710229b
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85659537"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920264"
 ---
 # <a name="deprecated-database-engine-features-in-sssqlv15-md"></a>[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] 中已淘汰的資料庫引擎功能
 
-[!INCLUDE[tsql-appliesto-sssver15-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[sqlserver2019](../includes/applies-to-version/sqlserver2019.md)]
 
 SQL Server 2019 並未淘汰任何功能。
 

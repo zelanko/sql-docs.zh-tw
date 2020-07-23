@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: d33985f7-1048-4023-83e4-274090acda78
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2e5a444d6dea225f37b8640fd642d91ae83618d5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f14c91f8f1bd21701d43d42388963ed22d105a43
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297338"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920616"
 ---
 # <a name="upper-ssis-expression"></a>UPPER (SSIS 運算式)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   傳回小寫字元轉換為大寫字元之後的字元運算式。  

@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b1275f5cbb718f34ba1386d6d6313dd662901900
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 33e4ec58943372643ca25518634fdeea47047b27
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71284944"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920140"
 ---
 # <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>儲存並執行套件 (SQL Server 匯入和匯出精靈)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   在您指定及設定資料來源和目的地之後，[ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [儲存並執行封裝]  。 在此頁面上，您可以指定是否要立即執行複製作業。 根據組態，您也可以將設定儲存為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 套件，以便在稍後進行自訂並重複使用。

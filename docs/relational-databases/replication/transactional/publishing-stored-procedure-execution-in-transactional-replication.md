@@ -16,15 +16,15 @@ ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 466e63894ac6f735032dad2af99679bdcf28d5d3
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: ee448df6c962596b146c3c933406a23063873d96
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159406"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919944"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>在異動複寫中發行預存程序執行
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   如果您有一或多個預存程序在「發行者」端執行並且影響到已發行的資料表，請考慮在發行集中包含這些預存程序，以做為預存程序執行發行項。 初始化訂閱時，會將程序的定義 (CREATE PROCEDURE 陳述式) 複寫到訂閱者；在發行者端執行程序時，複寫會在訂閱者端執行對應的程序。 這可在執行大批量作業時大幅提升效能，因為只會複寫程序執行，而無需複寫每個資料列的個別變更。 例如，假設您在發行集資料庫中建立了下列預存程序：  
   
 ```  

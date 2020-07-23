@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 57941e52-374a-4c07-84eb-9899ff1bb119
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6ea77000e660405d9be5086d7d85625bcdd7ed99
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f54c4a0e32effba84652514844b16754f5dacdd2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293992"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921126"
 ---
 # <a name="select-objects-to-transfer"></a>選取要傳送的物件
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   使用此對話方塊，即可透過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳輸工作，選取要從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行個體傳輸到其他執行個體的物件。  

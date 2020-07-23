@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 7f2caeab-784c-4b0c-9b3e-6a88d1ccdbf9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 00387fee6a11d3a2416d8440fdb7ae35665c472b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eef1dd7c7cf1a977f8443f22e7bf3af9158b8ae7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292505"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919765"
 ---
 # <a name="flat-file-custom-properties"></a>一般檔案自訂屬性
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   **來源自訂屬性**  

@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 02461e15-49ca-445b-abb3-5c369c283ec2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 03b521f06925ad21847cf588b27c211167dbd425
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: aa36ccd8a161c15cf4d12d1f92bb1ec36b1ac0b2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297648"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920624"
 ---
 # <a name="data-truncation-ssis"></a>資料截斷 (SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   將某個資料類型的值轉換成其他類型，可能會導致值被截斷。  

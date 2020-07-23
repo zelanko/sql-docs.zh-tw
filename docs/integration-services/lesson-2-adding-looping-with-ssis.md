@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ccd3be3203aae382cda239ed6d7bdc2fa224923b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f8a7cb05ea7768877ad15ba0d71c5f7636ac8d58
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296059"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920384"
 ---
 # <a name="lesson-2-add-looping-with-ssis"></a>第 2 課：使用 SSIS 來新增迴圈
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
