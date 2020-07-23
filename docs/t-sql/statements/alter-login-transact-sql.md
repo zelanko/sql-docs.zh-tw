@@ -24,12 +24,12 @@ ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0610ec89a4475b9eb60922b1d52c7005d5692bb0
-ms.sourcegitcommit: 7ce4a81c1b91239c8871c50f97ecaf387f439f6c
+ms.openlocfilehash: 136706c3d7074b282eccb8ff910c7a57f8f41874
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86217796"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942260"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 
@@ -37,9 +37,7 @@ ms.locfileid: "86217796"
 
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
-## <a name="click-a-product"></a>按一下產品！
-
-在下一行中，按一下您感興趣的產品名稱。 視您所按下的產品而定，此點選會在本網頁的這裡顯示不同的內容。
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
@@ -149,10 +147,10 @@ DROP CREDENTIAL 將可延伸金鑰管理 (EKM) 提供者認證從登入移除。
 
 您無法使用含 DISABLE 引數的 ALTER LOGIN 來拒絕存取 Windows 群組。 例如，ALTER LOGIN [網域\群組] DISABLE 會傳回下列錯誤訊息：
 
-    `"Msg 15151, Level 16, State 1, Line 1
-    "Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
+`"Msg 15151, Level 16, State 1, Line 1
+"Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
 
-    This is by design.
+這是原廠設定。
   
 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中，驗證連線需要登入資料，且伺服器層級防火牆規則會暫時快取在每個資料庫中。 此快取會定期重新整理。 若要重新整理驗證快取，並確定資料庫擁有登入資料表的最新版本，請執行 [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。
 
@@ -552,8 +550,8 @@ DROP CREDENTIAL 將可延伸金鑰管理 (EKM) 提供者認證從登入移除。
 
 您無法使用含 DISABLE 引數的 ALTER_LOGIN 來拒絕存取 Windows 群組。 這是原廠設定。 例如，ALTER_LOGIN [*domain\group*] DISABLE 將傳回下列錯誤訊息：
 
-    `"Msg 15151, Level 16, State 1, Line 1
-    "Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
+`"Msg 15151, Level 16, State 1, Line 1
+"Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
 
 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中，驗證連線需要登入資料，且伺服器層級防火牆規則會暫時快取在每個資料庫中。 此快取會定期重新整理。 若要重新整理驗證快取，並確定資料庫擁有登入資料表的最新版本，請執行 [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。
 
@@ -906,8 +904,8 @@ UNLOCK 僅適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] �
 
 您無法使用含 DISABLE 引數的 ALTER_LOGIN 來拒絕存取 Windows 群組。 這是原廠設定。 例如，ALTER_LOGIN [*domain\group*] DISABLE 將傳回下列錯誤訊息：
 
-    `"Msg 15151, Level 16, State 1, Line 1
-    "Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
+`"Msg 15151, Level 16, State 1, Line 1
+"Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
 
 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中，驗證連線需要登入資料，且伺服器層級防火牆規則會暫時快取在每個資料庫中。 此快取會定期重新整理。 若要重新整理驗證快取，並確定資料庫擁有登入資料表的最新版本，請執行 [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。
 

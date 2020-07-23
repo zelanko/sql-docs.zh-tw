@@ -11,16 +11,16 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f58db948bbe7b6fe03f895dacc5fca0b74cc1c54
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 01ca3494bce1f392757206a5ae68ae736d0f9a95
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85977801"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552696"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>管理系統建立版本之時態表中的歷程記錄資料保留
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 使用系統設定版本的時態表時，歷程記錄資料表增加資料庫大小的程度可能會比一般資料表大，特別是在下列情況下︰
 
@@ -42,11 +42,13 @@ ms.locfileid: "85977801"
 
  對於以上任一種方式，移轉或清除歷程記錄資料的邏輯乃基於與目前資料表之期間結束相對應的資料行。 每個資料列的期間結束值決定資料列版本「關閉」時間，也就是落在歷程記錄資料表的時間。 例如， `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` 條件指定超過一個月的歷程記錄資料需要移除或移出歷程記錄資料表。
 
-> **注意：** 本主題中的範例使用此[時態表範例](creating-a-system-versioned-temporal-table.md)。
+> [!NOTE]
+> 本主題中的範例使用此[時態表範例](creating-a-system-versioned-temporal-table.md)。
 
 ## <a name="using-stretch-database-approach"></a>使用 Stretch Database 方法
 
-> **注意：** Stretch Database 方法僅適用於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，不適用於 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
+> [!NOTE]
+> Stretch Database 方法僅適用於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，不適用於 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
 
 [Stretch Database](../../sql-server/stretch-database/stretch-database.md) 中的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 能以透明的方式將歷程記錄資料移轉到 Azure。 若要提升安全性，您可以使用 SQL Server 的 [一律加密](https://msdn.microsoft.com/library/mt163865.aspx) 功能為移動中的資料加密。 此外，您還可以使用 [資料列層級安全性](../../relational-databases/security/row-level-security.md) 和其他先進的 SQL Server 安全性功能來搭配 Temporal 和 Stretch Database，藉此保護資料。
 
@@ -58,7 +60,8 @@ ms.locfileid: "85977801"
 
   藉由確定性述詞函數，您可以將歷程記錄的一部分保存在與目前資料相同的資料庫內，再將其他部分移轉到 Azure。 如需範例與限制，請參閱 [使用篩選函數來選取要移轉的資料列 (Stretch Database)](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)。 由於非確定性的函數不合法，所以如果您想要以滑動視窗的方式傳輸歷程記錄資料，必須定期變更內嵌述詞函數的定義，讓保存在本機之資料列視窗的存在時間保持不變。 滑動視窗可讓您不斷將超過一個月的歷程記錄資料移動到 Azure。 如需這個方法的範例，請參閱下文。
 
-> **注意：** Stretch Database 能將資料移轉到 Azure。 因此，您必須擁有 Azure 帳戶和計費用的訂閱。 若要取得免費試用的 Azure 帳戶，請按一下[免費試用一個月](https://azure.microsoft.com/pricing/free-trial/)。
+> [!NOTE]
+> Stretch Database 能將資料移轉到 Azure。 因此，您必須擁有 Azure 帳戶和計費用的訂閱。 若要取得免費試用的 Azure 帳戶，請按一下[免費試用一個月](https://azure.microsoft.com/pricing/free-trial/)。
 
 您可以使用延展精靈或 Transact-SQL 來設定 Stretch 的時態歷程記錄資料表，而且可以在系統版本設定功能設定為 [ON]  時啟用時態歷程記錄資料表的延展功能。 您無法延展目前的資料表，因為延展目前的資料表不具意義。
 
@@ -81,7 +84,8 @@ ms.locfileid: "85977801"
     ![ 精靈的 [選取 IP 位址] 頁面](../../relational-databases/tables/media/stretch-wizard-7.png "Stretch Database 精靈的 [選取 IP 位址] 頁面")
 6. 當精靈完成時，請確認資料庫是否成功啟用延展。 請注意，物件總管中的圖示指出資料庫已延展。
 
-> **注意：** 如果 [啟用資料庫的延展] 失敗，請檢閱錯誤記錄檔。 常見錯誤是防火牆規則的設定不正確。
+> [!NOTE]
+> 如果 [啟用資料庫的延展] 失敗，請檢閱錯誤記錄檔。 常見錯誤是防火牆規則的設定不正確。
 
 另請參閱：
 
@@ -159,7 +163,8 @@ COMMIT ;
 
 資料表資料分割可讓您實作滑動視窗方法，將歷程記錄資料最舊的部分移出歷程記錄資料表，並依照存在時間讓保留部分的大小維持不變 - 讓歷程記錄資料表中的資料等於需要的保留期限。 當 SYSTEM_VERSIONING 為 ON 時，系統支援將資料切換移出歷程記錄資料表的作業，這表示您可以在不採用維護期間或不阻礙正常工作負載的情況下清除一部分的歷程記錄資料。
 
-> **注意：** 若要執行資料分割切換，歷程記錄資料表上的叢集索引必須與資料分割結構描述對齊 (它必須含有 SysEndTime)。 由系統建立的預設歷程記錄資料表含有叢集索引，其中包含 SysEndTime 和 SysStartTime 資料行，最適合進行資料分割、插入新歷程記錄資料及一般時態查詢。 如需相關資訊，請參閱 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)。
+> [!NOTE]
+> 若要執行資料分割切換，歷程記錄資料表上的叢集索引必須與資料分割結構描述對齊 (它必須含有 SysEndTime)。 由系統建立的預設歷程記錄資料表含有叢集索引，其中包含 SysEndTime 和 SysStartTime 資料行，最適合進行資料分割、插入新歷程記錄資料及一般時態查詢。 如需相關資訊，請參閱 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)。
 
 採用滑動視窗方法時，您需要執行兩組工作︰
 
@@ -174,7 +179,8 @@ COMMIT ;
 
 ![資料分割](../../relational-databases/tables/media/partitioning.png "資料分割")
 
-> **注意：** 如需在設定資料分割時使用 RANGE LEFT 與 RANGE RIGHT 的效能含意，請參閱下文中的資料表資料分割效能考量。
+> [!NOTE]
+> 如需在設定資料分割時使用 RANGE LEFT 與 RANGE RIGHT 的效能含意，請參閱下文中的資料表資料分割效能考量。
 
 第一個和最後一個資料分割的上限和下限分別保持「開啟」，以確保不論分割資料行中的值為何，每個新資料列都有目的地資料分割。 隨著時間流逝，歷程記錄資料表中的新資料列將落在較高的資料分割。 當第 6 個資料分割填滿時，我們將達到預計的保留期限。 這是首次啟動週期性資料分割維護工作的時候 (您需要將它排程為定期執行，在本範例中為每月一次)。
 
@@ -410,7 +416,8 @@ COMMIT;
 
 ## <a name="using-temporal-history-retention-policy-approach"></a>使用時態歷程記錄保留原則方法
 
-> **注意：** 使用時態歷程記錄保留原則適用於 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 和 SQL Server 2017 (從 CTP 1.3 開始)。
+> [!NOTE]
+> 使用時態歷程記錄保留原則適用於 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 和 SQL Server 2017 (從 CTP 1.3 開始)。
 
 時態歷程記錄保留可在不同的資料表層級上設定，讓使用者建立彈性的過時原則。 套用暫時保留很簡單：只需要在資料表建立或結構描述變更期間設定一個參數。
 

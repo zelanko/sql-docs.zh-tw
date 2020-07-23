@@ -1,5 +1,5 @@
 ---
-title: CREATE TRIGGER (Transact-SQL) | Microsoft Docs
+title: CREATE TRIGGER (Transact-SQL)
 description: CREATE TRIGGER 陳述式的 Transact-SQL 參考用於建立 DML、DDL 或登入觸發程序。
 ms.date: 10/30/2019
 ms.prod: sql
@@ -28,16 +28,16 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 ms.reviewer: mathoma
-ms.openlocfilehash: 70a32b0f5c3a80d4d3c5af0cad7adcd1e15f5088
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2434250e8ea3fe4abd7c17ed5fc4041c63880321
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766947"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86481748"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 建立 DML、DDL 或登入觸發程序。 觸發程序是一種特殊的預存程序，其會在資料庫伺服器發生事件時自動執行。 當使用者試圖透過資料操作語言 (DML) 事件來修改資料時，便會執行 DML 觸發程序。 DML 事件包括資料表或檢視的 INSERT、UPDATE 或 DELETE 陳述式。 無論資料表的資料列有無受到影響，這些觸發程序皆會在引發任何有效事件時引發。 如需詳細資訊，請參閱 [DML Triggers](../../relational-databases/triggers/dml-triggers.md)。  
   
@@ -160,6 +160,8 @@ AS { sql_statement  [ ; ] [ ,...n ]  [ ; ] }
     [ EXECUTE AS Clause ]  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>引數
 OR ALTER  
 **適用於**：Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始)。 
@@ -310,20 +312,27 @@ CREATE TRIGGER 必須是批次中的第一個陳述式，且只能套用至一�
 WRITETEXT 陳述式，不論有沒有記錄，都不會啟動觸發程序。  
   
 DML 觸發程序中不可使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：  
-  
-||||  
-|-|-|-|  
-|ALTER DATABASE|CREATE DATABASE|DROP DATABASE|  
-|RESTORE DATABASE|RESTORE LOG|RECONFIGURE|  
-  
+
+- ALTER DATABASE
+- CREATE DATABASE
+- DROP DATABASE
+- RESTORE DATABASE
+- RESTORE LOG
+- RECONFIGURE
+
 此外，當 DML 觸發程序用於觸發動作的目標資料表或檢視表時，不可在 DML 觸發程序的主體內使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   
-||||  
-|-|-|-|  
-|CREATE INDEX (包括 CREATE SPATIAL INDEX 和 CREATE XML INDEX)|ALTER INDEX|DROP INDEX|  
-|DBCC DBREINDEX|ALTER PARTITION FUNCTION|DROP TABLE|  
-|用來執行下列動作的 ALTER TABLE：<br /><br /> 新增、修改或卸除資料行。<br /><br /> 切換資料分割。<br /><br /> 加入或卸除 PRIMARY KEY 或 UNIQUE 條件約束。|||  
-  
+- CREATE INDEX (包括 CREATE SPATIAL INDEX 和 CREATE XML INDEX)
+- ALTER INDEX
+- DROP INDEX
+- DROP TABLE
+- DBCC DBREINDEX
+- ALTER PARTITION FUNCTION
+- 用來執行下列動作的 ALTER TABLE：
+    - 新增、修改或卸除資料行。
+    - 切換資料分割。
+    - 加入或卸除 PRIMARY KEY 或 UNIQUE 條件約束。
+
 > [!NOTE]  
 >  由於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援系統資料表的使用者自訂觸發程序，因此，我們建議您不要在系統資料表上建立使用者自訂觸發程序。 
 
