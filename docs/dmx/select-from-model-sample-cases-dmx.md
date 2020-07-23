@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9e88ec6673a00e3776032f33390451207c2f399f
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 7eda9b0e13ee5cbf918d80f41b9a517906a56a57
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670117"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970500"
 ---
 # <a name="select-from-ltmodelgtsample_cases-dmx"></a>選取 [從 &lt; 模型] &gt; 。SAMPLE_CASES （DMX）
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   傳回代表用於培訓資料採礦模型之案例的範例案例。  
   
@@ -49,7 +49,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
 ## <a name="remarks"></a>備註  
  可能會產生範例案例，而且可能未實際存在於培訓資料中。 傳回的案例是指定之內容節點的代表。  
   
- 雖然時序 [!INCLUDE[msCoName](../includes/msconame-md.md)] 群集演算法是唯一 [!INCLUDE[msCoName](../includes/msconame-md.md)] 支援使用 SELECT FROM model> 的演算法 \< 。SAMPLE_CASES，協力廠商演算法也可能支援它。  
+ 雖然時序 [!INCLUDE[msCoName](../includes/msconame-md.md)] 群集演算法是唯一 [!INCLUDE[msCoName](../includes/msconame-md.md)] 支援使用 SELECT FROM 的演算法 \<model> 。SAMPLE_CASES，協力廠商演算法也可能支援它。  
   
 ## <a name="examples"></a>範例  
  下列範例會傳回用於培訓 Target Mail 採礦模型的範例案例。 在**WHERE**子句中使用[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)函數，只會傳回與 ' 000000003 ' 節點相關聯的案例。 節點字串可以在結構描述資料列集的 NODE_UNIQUE_NAME 資料行中找到。  

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9ce963b2322e19e4e3a98982a88f99d3546cabc2
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 21ac78f6ee0ed77bb9549f1749d73d29344a49d1
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83668732"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86968338"
 ---
 # <a name="or-dmx"></a>OR (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   在兩個數值運算式上執行邏輯分離的邏輯運算子。  
   

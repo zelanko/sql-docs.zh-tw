@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 33c2383cf6f83b59b1b7507fa4d7daaa9e82e82e
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 607f8f18688f9a16b2f80131e728031b3ca78608
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670258"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971746"
 ---
 # <a name="drop-mining-structure-dmx"></a>DROP MINING STRUCTURE (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   從資料庫卸除指定的採礦結構。 與結構相關聯的所有採礦模型也會從資料庫卸除。  
   
@@ -28,7 +28,7 @@ DROP MINING STRUCTURE <structure>
 ```  
   
 ## <a name="arguments"></a>引數  
- *structure*  
+ *表示*  
  結構識別碼。  
   
 ## <a name="examples"></a>範例  

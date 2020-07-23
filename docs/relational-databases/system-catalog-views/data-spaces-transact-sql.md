@@ -14,22 +14,30 @@ helpviewer_keywords:
 ms.assetid: ab95e6f8-51dc-4018-9d19-cc0a6de893a5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8c8cb57142832ce0e2caed5fe23b8a1e2e2cfdbe
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 01248e73c56ead5234e625105801f7e293518e54
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752985"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918034"
 ---
 # <a name="data-spaces-transact-sql"></a>資料空間 (Transact-SQL)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   此章節包含下列目錄檢視。  
-  
-|||  
-|-|-|  
-|[sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)|[sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)|  
-|[sys.destination_data_spaces](../../relational-databases/system-catalog-views/sys-destination-data-spaces-transact-sql.md)|[sys.partition_schemes](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)|  
+
+:::row:::
+    :::column:::
+        [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)
+        
+        [sys.destination_data_spaces](../../relational-databases/system-catalog-views/sys-destination-data-spaces-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)
+        
+        [sys.partition_schemes](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)
+    :::column-end:::
+:::row-end:::
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;Transact-sql&#41;的系統檢視](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   

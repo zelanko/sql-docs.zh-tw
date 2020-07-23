@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a66897fe02d33c3f614ad5a24e5b2f9a78e1e4c9
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: eedff3b14960fae68ad4e3a9ac54a0034c1a9300
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670078"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969771"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   處理指定的資料採礦物件。 如需有關處理採礦模型和採礦結構的詳細資訊，請參閱[&#40;資料採礦&#41;的處理需求和考慮](https://docs.microsoft.com/analysis-services/data-mining/processing-requirements-and-considerations-data-mining)。  
   
@@ -34,7 +34,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
  *model*  
  模型識別碼。  
   
- *structure*  
+ *表示*  
  結構識別碼。  
   
  *對應的模型資料行*  
@@ -46,9 +46,9 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
 ## <a name="remarks"></a>備註  
  如果您未指定 [**採礦模型**] 或 [**採礦結構**]，會 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 根據名稱來搜尋物件類型，並處理正確的物件。 如果伺服器包含具有相同名稱的採礦結構與採礦模型，就會傳回錯誤。  
   
- 藉由使用第二個語法形式，插入* \< 物件>*。COLUMN_VALUES，您可以將資料直接插入模型資料行，而不需要定型模型。 這種方法以精簡、已排序的方式提供模型的資料行資料，當您處理包含階層或已排序資料行的資料集時很有用。  
+ 藉由使用第二個語法形式，將插入 *\<object>* 。COLUMN_VALUES，您可以將資料直接插入模型資料行，而不需要定型模型。 這種方法以精簡、已排序的方式提供模型的資料行資料，當您處理包含階層或已排序資料行的資料集時很有用。  
   
- 如果您使用 [**插入至**] 與 [採礦模型] 或 [採礦結構]，並保留 [ \< 對應的模型資料行]> 和 [ \< 來源資料] 查詢> 引數，則語句的行為就像**ProcessDefault**，使用已經存在的系結。 如果繫結不存在，陳述式就會傳回錯誤。 如需有關**ProcessDefault**的詳細資訊，請參閱[處理選項和設定 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services)。 下列範例會顯示語法：  
+ 如果您使用 [**插入至**] 與 [採礦模型] 或 [採礦結構]，並保留 \<mapped model columns> 和 \<source data query> 引數，則語句的行為就像**ProcessDefault**，使用已經存在的系結。 如果繫結不存在，陳述式就會傳回錯誤。 如需有關**ProcessDefault**的詳細資訊，請參閱[處理選項和設定 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services)。 下列範例會顯示語法：  
   
 ```  
 INSERT INTO [MINING MODEL] <model>  
@@ -60,14 +60,14 @@ INSERT INTO [MINING MODEL] <model>
   
 |引數|物件的狀態|結果|  
 |---------------|----------------------|------------|  
-|插入至採礦模型* \< 模型>*|處理採礦結構。|處理採礦模型。|  
+|插入至採礦模型*\<model>*|處理採礦結構。|處理採礦模型。|  
 ||不處理採礦結構。|處理採礦模型與採礦結構。|  
 ||採礦結構包含其他的採礦模型。|處理失敗。 您必須重新處理結構與相關聯的採礦模型。|  
-|插入至採礦結構* \< 結構>*|處理或不處理採礦結構。|處理採礦結構與相關聯的採礦模型。|  
-|插入包含來源查詢的「採礦模型* \< 模型>* 」<br /><br /> 或<br /><br /> 插入包含來源查詢的採礦結構* \< 結構>*|結構或模型早已包含內容。|處理失敗。 在執行此作業之前，您必須先清除物件，方法是使用[DELETE &#40;DMX&#41;](../dmx/delete-dmx.md)。|  
+|插入至採礦結構*\<structure>*|處理或不處理採礦結構。|處理採礦結構與相關聯的採礦模型。|  
+|插入 *\<model>* 包含來源查詢的採礦模型<br /><br /> 或<br /><br /> 插入 *\<structure>* 包含來源查詢的採礦結構|結構或模型早已包含內容。|處理失敗。 在執行此作業之前，您必須先清除物件，方法是使用[DELETE &#40;DMX&#41;](../dmx/delete-dmx.md)。|  
   
 ## <a name="mapped-model-columns"></a>對應的模型資料行  
- 藉由使用 \< 對應的模型資料行> 專案，您可以將資料來源中的資料行對應至您的採礦模型中的資料行。 \<對應的模型資料行> 元素具有下列格式：  
+ 藉由使用專案 \<mapped model columns> ，您可以將資料來源中的資料行對應至您的採礦模型中的資料行。 \<mapped model columns>元素具有下列格式：  
   
 ```  
 <column identifier> | SKIP | <table identifier> (<column identifier> | SKIP), ...  
@@ -80,7 +80,7 @@ INSERT INTO [MINING MODEL] <model>
  SKIP 的語法要求您在沒有對應採礦結構資料行的輸入資料列集中的個別資料行位置插入 SKIP。 例如，在底下的巢狀資料表範例中，必須在 APPEND 子句中選取 OrderNumber，好讓它可以在 RELATE 子句中用來指定聯結；但是，您不想要將 OrderNumber 資料插入採礦結構的巢狀資料表內。 因此，此範例會在 INSERT INTO 引數中使用 SKIP 關鍵字，而不是 OrderNumber。  
   
 ## <a name="source-data-query"></a>來源資料查詢  
- \<來源資料查詢> 元素可以包含下列資料來源類型：  
+ \<source data query>元素可以包含下列資料來源類型：  
   
 -   **OPENQUERY**  
   

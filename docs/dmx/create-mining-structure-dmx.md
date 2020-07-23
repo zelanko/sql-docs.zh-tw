@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 07cda29c288f574fd960398f8a607c04f1d8dce7
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: efe160fc3bb50f80b70c0d510eedd880f985f9b9
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669456"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971799"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   在資料庫中建立新的採礦結構，並選擇性地定義培訓和測試資料分割。 建立了採礦結構之後，您可以使用[ALTER 採礦結構 &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)語句，將模型加入至採礦結構。  
   
@@ -34,7 +34,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 ```  
   
 ## <a name="arguments"></a>引數  
- *structure*  
+ *表示*  
  結構的唯一名稱。  
   
  *資料行定義清單*  
@@ -73,7 +73,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
 -   資料類型 (強制的)  
   
--   散發  
+-   發行版本  
   
 -   模型旗標的清單  
   
@@ -106,7 +106,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  您可以為一個資料行定義多個模型旗標值。 不過，對於一個資料行，您僅能擁有一個內容類型和一個資料類型。  
   
 ### <a name="column-relationships"></a>資料行關聯性  
- 您可以在任何資料行定義陳述式中加入子句，以描述兩個資料行之間的關聯性。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支援使用下列資料 \< 行關聯性> 子句。  
+ 您可以在任何資料行定義陳述式中加入子句，以描述兩個資料行之間的關聯性。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支援使用下列 \<column relationship> 子句。  
   
  **與**  
  表示階層。 RELATED TO 資料行的目標可以是巢狀資料表中的索引鍵資料行、案例資料列中的分隔值資料行，或者使用 RELATED TO 子句的另一個資料行 (表示更深的階層)。  

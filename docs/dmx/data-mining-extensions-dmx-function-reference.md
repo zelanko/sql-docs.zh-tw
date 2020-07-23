@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c296948a41096c5c63b0e7019649d48bac8a23ca
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 7b25146ce36a0b58bb46bcacb4348f8e34221068
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669431"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971800"
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>資料採礦延伸模組 (DMX) 函數參考
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支援資料採礦延伸模組 (DMX) 語言中的數個函數。 函數會展開預測查詢的結果，以包含更深入描述預測的資訊。 函數也提供如何傳回預測結果的更多控制。 下表提供資源的連結，以協助您了解如何在 DMX 中使用函數。  
   

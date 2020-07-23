@@ -8,19 +8,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3f2f97ef9c7a1cdfa2bb1ba1b86dbe4cf60c8404
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: a91941241b61f74190b9ab1ef0c29dffded5dc79
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669920"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970233"
 ---
 # <a name="toppercent-dmx"></a>TopPercent (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   **TopPercent**函數會以遞減的次序，傳回累計總和至少為指定百分比之資料表的最上層資料列。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -28,13 +28,13 @@ TopPercent(<table expression>, <rank expression>, <percent>)
 ```  
   
 ## <a name="applies-to"></a>套用至  
- 傳回資料表的運算式，例如 \< 資料表資料行參考>，或傳回資料表的函數。  
+ 傳回資料表的運算式，例如 \<table column reference> ，或傳回資料表的函數。  
   
 ## <a name="return-type"></a>傳回類型  
- \<資料表運算式>  
+ \<table expression>  
   
 ## <a name="remarks"></a>備註  
- **TopPercent**函數會根據每個資料列的次序運算式> 引數的評估值，以遞減的次序順序傳回最頂部的資料列 \< ，讓 \< 次序運算式> 值的總和至少是 \< 百分比> 引數所指定的給定百分比。 **TopPercent**會傳回仍然符合指定之百分比值的最小元素數目。  
+ **TopPercent**函數會根據每個資料列之引數的評估值，以遞減的次序順序傳回最頂部的 \<rank expression> 資料列，因此值的總和 \<rank expression> 至少是引數所指定的給定百分比 \<percent> 。 **TopPercent**會傳回仍然符合指定之百分比值的最小元素數目。  
   
 ## <a name="examples"></a>範例  
  下列範例會針對您使用[基本資料採礦教學](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)課程所建立的關聯模型，建立預測查詢。  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: fafed718-8c3c-403f-93ee-ec51fc157a6e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 78511d83ad75df4fe458bb5a5b3d2d59a8636c7f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bc416f49610aa5641aa06d8e3fbd7f6da89c7977
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720016"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86901884"
 ---
 # <a name="functions-related-to-qnames---local-name-from-qname"></a>與 QNames 相關的函式 - local-name-from-QName
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   傳回 xs： NCNAME，代表 *$arg*所指定之 QName 的本機部分。 如果 *$arg*是空的序列，則結果會是空的序列。  
   

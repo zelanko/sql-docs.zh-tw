@@ -8,21 +8,21 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0d34ea224efd5b218cafee58dec09ff4590b8511
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: a834c87c3febf0554ad07334000d62f1f9a93fee
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83668767"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86968192"
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   預測關聯的成員資格。  
   
 例如，您可以使用 PredictAssociation 函式，根據客戶的購物籃目前狀態來取得建議集合。 
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -33,7 +33,7 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
  包含可預測的嵌套資料表的演算法，包括關聯和一些分類演算法。 支援嵌套資料表的分類演算法包括 [!INCLUDE[msCoName](../includes/msconame-md.md)] 決策樹、 [!INCLUDE[msCoName](../includes/msconame-md.md)] 貝氏貝氏機率分類和類 [!INCLUDE[msCoName](../includes/msconame-md.md)] 神經網路演算法。  
   
 ## <a name="return-type"></a>傳回類型  
- \<資料表運算式>  
+ \<table expression>  
   
 ## <a name="remarks"></a>備註  
  **PredictAssociation**函數的選項包括 EXCLUDE_Null、INCLUDE_Null、內含、獨佔（預設）、INPUT_ONLY、INCLUDE_STATISTICS 和 INCLUDE_NODE_ID。  

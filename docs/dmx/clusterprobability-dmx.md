@@ -8,19 +8,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e06563d9b6a69bc8903a55ee1e67cda962f246ba
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 60c95521ba42dc5877c0e10a3f34453a497ad438
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669357"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969933"
 ---
 # <a name="clusterprobability-dmx"></a>ClusterProbability (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   傳回輸入案例屬於指定之群集的機率。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -40,9 +40,9 @@ ClusterProbability([<Node_Caption>])
 SELECT NODE_CAPTION FROM <model>.CONTENT  
 ```  
   
- 如需使用此語法的詳細資訊，請參閱[SELECT FROM &#60;model&#62;。DMX&#41;的內容 &#40;](../dmx/select-from-model-content-dmx.md)。 如需有關「採礦模型內容架構資料列集」的詳細資訊，請參閱 DMSCHEMA_MINING_MODEL_CONTENT 資料列[集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)。  
+ 如需使用此語法的詳細資訊，請參閱[SELECT FROM &#60;model&#62;。DMX&#41;的內容 &#40;](../dmx/select-from-model-content-dmx.md)。 如需有關「採礦模型內容架構資料列集」的詳細資訊，請參閱 DMSCHEMA_MINING_MODEL_CONTENT 資料列[集](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126267(v=sql.110))。  
   
- 如果 \< 未指定節點標題>，此函數會傳回輸入案例屬於最可能之群集的機率。 使用**cluster**函數來傳回最可能的叢集。  
+ 如果 \<node caption> 未指定，此函數會傳回輸入案例屬於最可能之群集的機率。 使用**cluster**函數來傳回最可能的叢集。  
   
 ## <a name="examples"></a>範例  
  下列範例傳回指定的案例存在標示為 Cluster 2 之叢集內的機率。  

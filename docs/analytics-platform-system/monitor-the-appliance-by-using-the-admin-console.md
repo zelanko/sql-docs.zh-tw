@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 977e38016fbb58356d22ccfc5f783539e5f852d5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 88e1619ce37de7c7a334ee7d915115f2deef47ef
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74400947"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86941070"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>使用管理主控台分析平臺系統來監視設備
 管理主控台是一個 SQL Server PDW web 應用程式，可呈現設備狀態、健康情況和效能資訊。 使用者透過 Internet Explorer 連接到管理主控台。  
@@ -22,11 +22,11 @@ ms.locfileid: "74400947"
 ## <a name="about-the-admin-console"></a><a name="About"></a>關於管理主控台  
 ![應用裝置主控台首頁](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
   
-**台**  
-Home  
+**設備**  
+首頁  
 提供設備狀態的快速摘要。  
   
-健康情況  
+醫療  
 顯示裝置拓朴，其中包含指示器，顯示每個節點內每個受監視元件的健全狀況。 可讓您查看節點元件之個別節點和屬性的目前狀態。  
   
 顯示硬體和軟體警示。  
@@ -35,7 +35,7 @@ Home
 顯示效能監視器圖形。  
   
 **平行處理資料倉儲**  
-Home  
+首頁  
 提供 PDW 狀態的快速摘要。  
   
 工作階段  
@@ -44,13 +44,13 @@ Home
 查詢  
 顯示執行中查詢和最近完成的查詢清單。 它會顯示相關的錯誤（如果有的話）。 也可讓您查看查詢執行計畫和節點執行資訊的詳細資料。  
   
-載入  
+負載  
 顯示載入計畫、PDW 載入的目前狀態，以及相關的錯誤（如果有的話）。  
   
 備份/還原  
 顯示 PDW 備份和還原作業的記錄檔。  
   
-健康情況  
+醫療  
 顯示 PDW 拓撲，其中包含指示器，顯示每個節點內每個受監視元件的健全狀況。 可讓您查看節點元件之個別節點和屬性的目前狀態。  
   
 顯示硬體和軟體警示。  
@@ -76,14 +76,13 @@ Home
   
 -   控制節點叢集的 IP 位址。  從您的 SQL Server PDW 系統管理員取得此帳戶。  
   
-若要連接到管理主控台，請使用 Internet Explorer 和 HTTPs 流覽至控制節點叢集的 IP 位址。 例如，如果控制節點叢集的 IP 位址是`10.192.63.102`，請在您的`https://10.192.63.102`瀏覽器網址列中輸入。 第一個畫面會要求您的**登**入和**密碼**。 提供 SQL Server Authentication 登入和密碼，或是 Windows 驗證登入和 Windows 密碼。 如果使用 Windows 驗證登入，管理主控台將會使用模擬。  
+若要連接到管理主控台，請使用 Internet Explorer 和 HTTPs 流覽至控制節點叢集的 IP 位址。 例如，如果控制節點叢集的 IP 位址是 `10.192.63.102` ，請 `https://10.192.63.102` 在您的瀏覽器網址列中輸入。 第一個畫面會要求您的**登**入和**密碼**。 提供 SQL Server Authentication 登入和密碼，或是 Windows 驗證登入和 Windows 密碼。 如果使用 Windows 驗證登入，管理主控台將會使用模擬。  
   
 ## <a name="admin-console-tasks"></a><a name="RelatedTasks"></a>管理主控台工作  
 管理主控台提供監視下列功能的能力：  
   
-|||  
-|-|-|  
-|**資訊類型**|**如何在管理主控台中存取**|  
+|資訊類型|如何在管理主控台中存取|
+|-|-|
 |設備的整體狀態|按一下頂端功能表中的 [**設備狀態**] 或 [**首頁**]。|  
 |警示|按一下 [警示]****。 如需詳細資訊，請參閱[瞭解管理主控台警示 &#40;分析平臺系統&#41;](understanding-admin-console-alerts.md)。|  
 |設備元件及其狀態|按一下頂端功能表中的 [**設備狀態**] 或 [**首頁**]。|  

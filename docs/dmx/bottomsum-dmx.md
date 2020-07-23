@@ -8,19 +8,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1fdb72a4067a9b48e648cffe1d12b29b23f1652a
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: cceeac44646b904a7d7e1b45bd3c92d4ad07a0d5
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669838"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969928"
 ---
 # <a name="bottomsum-dmx"></a>BottomSum (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   以遞增次序的順序，傳回累計總和至少達指定值的最底部資料表資料列。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -28,13 +28,13 @@ BottomSum(<table expression>, <rank expression>, <sum>)
 ```  
   
 ## <a name="applies-to"></a>套用至  
- 傳回資料表的運算式，例如 \< 資料表資料行參考>，或傳回資料表的函數。  
+ 傳回資料表的運算式，例如 \<table column reference> ，或傳回資料表的函數。  
   
 ## <a name="return-type"></a>傳回類型  
- \<資料表運算式>  
+ \<table expression>  
   
 ## <a name="remarks"></a>備註  
- **BottomSum**函數會以遞增的次序順序傳回最底端的資料列。 次序是 \< 以每個資料列的次序運算式> 引數的評估值為基礎，因此 \< 次序運算式> 值的總和至少是 \< 總和> 引數所指定的給定總和。 **BottomSum**會在仍符合指定總和值的情況下，傳回可能的最小元素數目。  
+ **BottomSum**函數會以遞增的次序順序傳回最底端的資料列。 次序是 \<rank expression> 以每個資料列之引數的評估值為基礎，因此值的總和 \<rank expression> 至少是引數所指定的給定總和 \<sum> 。 **BottomSum**會在仍符合指定總和值的情況下，傳回可能的最小元素數目。  
   
 ## <a name="examples"></a>範例  
  下列範例會針對您使用[基本資料採礦教學](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)課程所建立的關聯模型，建立預測查詢。  

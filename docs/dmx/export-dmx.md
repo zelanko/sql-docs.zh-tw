@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 59e4a78c9432c5ba8f75eb7bfaa6ab46a0b052cf
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 620bb13d50461e850cc08de1e1b1b71709d78c7c
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670271"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971726"
 ---
 # <a name="export-dmx"></a>EXPORT (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   從伺服器中將採礦模型或採礦結構物件擷取到 Analysis Services 備份檔案 (.abf)。  
   
@@ -34,7 +34,7 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
  *物件名稱*  
  選擇性。 要匯出的物件名稱。  
   
- *名稱*  
+ *filename*  
  要當成字串匯出之檔案的名稱和位置。  
   
 ## <a name="remarks"></a>備註  

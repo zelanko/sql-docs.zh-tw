@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 262d8f9f62718bcb91ef034177375035a37dfc84
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 4fcf803bb76bfb894faa75e6e51180cc25434abe
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83668966"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969809"
 ---
 # <a name="dmx-tutorials-analysis-services---data-mining"></a>DMX 教學課程 (Analysis Services - 資料採礦)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   下列的教學課程將為您介紹如何搭配資料採礦結構和模型使用「資料採礦延伸模組」(DMX) 陳述式。  
   

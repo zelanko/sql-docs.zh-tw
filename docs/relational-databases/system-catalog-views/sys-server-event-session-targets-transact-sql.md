@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: dda4879d-57ae-4267-b410-1ef5c37404c7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f2dde670bb6a52bbfd103200112caaa6de09e74c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1053382a7236794cadd6637d6e19091cf7508496
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893767"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86908554"
 ---
 # <a name="sysserver_event_session_targets-transact-sql"></a>sys.server_event_session_targets (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回事件工作階段中每一個事件目標的資料列。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "85893767"
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|事件工作階段的識別碼。 不可為 Null。|  
 |target_id|**int**|目標的識別碼。 這個識別碼在事件工作階段物件中是唯一的。 不可為 Null。|  
-|NAME|**sysname**|事件目標的名稱。 不可為 Null。|  
+|名稱|**sysname**|事件目標的名稱。 不可為 Null。|  
 |套件|**sysname**|包含此事件目標之事件封裝的名稱。 不可為 Null。|  
 |name|**sysname**|包含此事件目標之模組的名稱。 不可為 Null。|  
   
@@ -46,13 +46,12 @@ ms.locfileid: "85893767"
 ## <a name="remarks"></a>備註  
  此檢視有下列關聯性基數。  
   
-||||  
-|-|-|-|  
-|從|至|關聯性|  
+| 寄件者 | 收件者 | 關聯性 |
+| ---- | -- | ------------ |
 |sys.server_event_session_targets.event_session_id|server_event_sessions. event_session_id|多對一|  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [擴充事件目錄檢視 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [擴充事件](../../relational-databases/extended-events/extended-events.md)  
   

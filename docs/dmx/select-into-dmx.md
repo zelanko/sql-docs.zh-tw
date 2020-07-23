@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: bf2e0f2d57ce8bf1834813d4e39d06afc9724fd7
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: a0a245d152ddd9946142f5f115ee1db64ee5998b
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670096"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970503"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   建立一個以現有採礦模型的採礦結構為基礎的採礦模型。 **SELECT INTO**語句會藉由複製架構和其他非實際演算法特有的資訊，來建立新的採礦模型。  
   

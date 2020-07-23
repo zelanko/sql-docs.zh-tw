@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6fdb1563f644b544fd9c0bd2ee0857bf4b403329
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 647f0cdaaef28f1da7ca51157388288cfdd729dc
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669835"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969946"
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   以遞增次序的順序，傳回累計總和至少達指定百分比的最底部資料表資料列。  
   
@@ -28,20 +28,20 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
 ```  
   
 ## <a name="arguments"></a>引數  
- *\<資料表運算式>*  
+ *\<Table expression>*  
  巢狀資料表資料行的名稱或資料表值運算式。  
   
- *\<次序運算式>*  
+ *\<rank expression>*  
  巢狀資料表中的資料行，或評估為資料行的運算式。  
   
- *\<>百分比*  
+ *\<percent>*  
  表示總目標百分比的雙精確度浮點數。  
   
 ## <a name="result-type"></a>結果類型  
  資料表。  
   
 ## <a name="remarks"></a>備註  
- **BottomPercent**函數會以遞增的次序順序傳回最底端的資料列。 次序是 \< 以每個資料列的次序運算式> 引數的評估值為基礎，因此 \< 次序運算式> 值的總和至少是 \< percent> 引數所指定的給定百分比。 **BottomPercent**會傳回仍然符合指定之百分比值的最小元素數目。  
+ **BottomPercent**函數會以遞增的次序順序傳回最底端的資料列。 次序是 \<rank expression> 以每個資料列之引數的評估值為基礎，因此值的總和 \<rank expression> 至少是引數所指定的給定百分比 \<percent> 。 **BottomPercent**會傳回仍然符合指定之百分比值的最小元素數目。  
   
 ## <a name="examples"></a>範例  
  下列範例會針對您在[基本資料採礦教學](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)課程中建立的關聯模型，建立預測查詢。  

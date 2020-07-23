@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 83dc56056e6000a789c8944b38326c23d7632bb7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2ddfb32ec5d7d5fb93e6dff12c41e56a7f789604
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68049280"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970059"
 ---
 # <a name="drilldownlevelbottom-mdx"></a>DrilldownLevelBottom (MDX)
 
@@ -49,7 +49,7 @@ DrilldownLevelBottom(Set_Expression, Count [,[<Level_Expression>] [,[<Numeric_Ex
   
  **DrilldownLevelBottom**函數與[DrilldownLevel](../mdx/drilldownlevel-mdx.md)函數類似，但不會包含指定層級上每個成員的所有子系，而**DrilldownLevelBottom**函式會傳回最右下的子成員數目。  
   
- 查詢 XMLA 屬性 MdpropMdxDrillFunctions 可讓您驗證服務器為鑽孔函數提供的支援層級;如需詳細資訊，請參閱[支援的 Xmla 屬性 &#40;xmla&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 。  
+ 查詢 XMLA 屬性 MdpropMdxDrillFunctions 可讓您驗證服務器為鑽孔函數提供的支援層級;如需詳細資訊，請參閱[支援的 Xmla 屬性 &#40;xmla&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 。  
   
 ## <a name="examples"></a>範例  
  下列範例會根據預設量值來傳回 Product Category 層級的後三個子系。 在 Adventure Works 範例 Cube 中，Accessories 的後三個子系為 Tires and Tubes、Pumps 及 Panniers。 您可以在 Management Studio 的 MDX 查詢視窗中，導覽至 Products | Product Categories | Members | All Products | Accessories 以檢視完整清單。 您可以增加 Count 引數以傳回更多成員。  

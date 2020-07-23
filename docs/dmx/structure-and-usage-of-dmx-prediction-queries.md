@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 167bf7e17b172b9d3e6c58df1f52510f93a668aa
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: e2aaeedff9eb0d22d6a7175641177f803379adaa
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669996"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970267"
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>DMX 預測查詢的結構和使用方式
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   在中 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，您可以使用資料採礦延伸模組（DMX）中的預測查詢，根據採礦模型的結果，預測新資料集內的未知資料行值。  
   
@@ -44,13 +44,13 @@ ms.locfileid: "83669996"
   
 -   **返回頁首**  
   
--   **從*** \< 模型>***預測聯結**      
+-   **從** *\<model>***預測聯結**      
   
 -   **ON**  
   
--   **希望**  
+-   **WHERE**  
   
--   **排序依據**  
+-   **ORDER BY**  
   
  預測查詢的**SELECT**元素會定義將出現在結果集內的資料行和運算式，而且可以包含下列資料：  
   
@@ -60,7 +60,7 @@ ms.locfileid: "83669996"
   
 -   傳回資料行的函數。  
   
- **FROM** * \< model>* **預測聯結**元素會定義要用來建立預測的來源資料。 若是單一查詢，這是指派至資料行的一連串值。 若是空白預測聯結，這會保持空白。  
+ **FROM** *\<model>* **預測聯結**元素會定義要用來建立預測的來源資料。 若是單一查詢，這是指派至資料行的一連串值。 若是空白預測聯結，這會保持空白。  
   
  **ON**元素會將在採礦模型中定義的資料行對應至外部資料集內的資料行。 如果是建立空白預測聯結查詢或自然預測聯結，不必包含這個元素。  
   

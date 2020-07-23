@@ -8,19 +8,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9f93c9cc6330aba88317a96698bd3e3232e3efaa
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 7c9646fa7e2ba438bb2f2b57ac37b2ceca5a957c
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669751"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969839"
 ---
 # <a name="dmx-statements---data-definition"></a>DMX 陳述式 - 資料定義 
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   下表會列出屬於資料採礦延伸模組 (DMX) 中之資料採礦資料定義語言 (DDL) 一部份的陳述式。  
   
-|引數|Description|  
+|引數|描述|  
 |---------------|-----------------|  
 |[CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)|在資料庫中建立新的採礦結構。|  
 |[改變 &#40;DMX&#41;的採礦結構](../dmx/alter-mining-structure-dmx.md)|將採礦模型加入現有的採礦結構。|  

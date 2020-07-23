@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 82317f4a4e5f4c4fddd4ffaf45c5897dfd4d0df5
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: cb07dd463ddbbc15942ca6f62c4ccb708a8c5efd
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669987"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970298"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   傳回對應到指定之案例的結構資料行值，或是指定之案例內巢狀資料表的資料表值。  
   
@@ -32,7 +32,7 @@ StructureColumn('structure column name')
  案例或巢狀資料表採礦結構資料行的名稱。  
   
 ## <a name="result-type"></a>結果類型  
- 傳回的類型取決於結構資料行名稱中所參考的資料行類型 \<> 參數。 例如，如果所參考的採礦結構資料行包含純量值，此函數會傳回純量值。  
+ 傳回的類型取決於參數中所參考的資料行類型 \<structure column name> 。 例如，如果所參考的採礦結構資料行包含純量值，此函數會傳回純量值。  
   
  如果所參考的採礦結構資料行是巢狀資料表，此函數會傳回資料表值。 傳回的資料表值可用於子 SELECT 陳述式的 FROM 子句中。  
   

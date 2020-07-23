@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e45433b1a7e031c0aa5e549f9b2d48c036ef91c6
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 4da4243aaf7592e7c5a8a9df63ed1aea352448f4
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669786"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969879"
 ---
 # <a name="data-types-dmx"></a>資料類型 (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   當您使用資料採礦延伸模組（DMX）在中定義新的採礦模型時 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，您必須為模型中的每個資料行提供資料類型。 資料類型描述資料採礦演算法建立模型時，將會使用的資料。  
   

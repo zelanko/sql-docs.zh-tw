@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f1bab9e4-1715-4c06-9cb0-06c7e0c9c97f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 82774aa6d515d7056f59e432807c6560ecb70772
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 83f744f2b9361a81afada82245bf2d4265cea833
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783576"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923630"
 ---
 # <a name="context-functions---position-xquery"></a>內容函式 - position (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   傳回整數值，以指出目前所處理的項目序列中內容項目的位置。  
   

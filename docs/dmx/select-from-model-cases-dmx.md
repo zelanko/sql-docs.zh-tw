@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6753f90b76f70de9f7368a5656ba93b16a3740d1
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 1fa1da730fc370995b22927604f9550c865877f4
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669615"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970606"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>選取 [從 &lt; 模型] &gt; 。案例（DMX）
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   支援鑽研，並傳回用於培訓模型的案例。 如果已經在採礦結構和採礦模型上啟用鑽研，而且有適當的權限，您也可以傳回不包含在模型中的結構資料行。  
   

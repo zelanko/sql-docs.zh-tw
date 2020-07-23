@@ -8,19 +8,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6c14bc8189bdea705ab37c66863d74bcef66e23c
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 0cd7b2e0a78f2d47349de2701572b2f9dc4b0095
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669827"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969919"
 ---
 # <a name="cluster-dmx"></a>群集 (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   傳回最可能包含輸入案例的群集。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -33,7 +33,7 @@ Cluster()
 ## <a name="return-type"></a>傳回類型  
  **Cluster**函數不需要參數。  
   
- 叢集**函數會**傳回純量值的叢集名稱。 不過，如果您使用此函數做為另一個函式的引數，則必須將它視為叢集資料 \< 行參考>。  
+ 叢集**函數會**傳回純量值的叢集名稱。 不過，如果您使用此函數做為另一個函式的引數，則必須將它視為 \<cluster column reference> 。  
   
 ## <a name="remarks"></a>備註  
  叢集**也可以當做** `<` `>` **PredictHistogram**函數的叢集資料行參考使用。  

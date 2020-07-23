@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: baa7ed6209daf3de76c20d8ff67a9b76a36be4e8
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 2e0fc30945396f22184e1d18c6b132d8e2e2d781
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670102"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970428"
 ---
 # <a name="select-from-ltstructuregtcases"></a>選取 [從 &lt; 結構] &gt; 。種
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   傳回用於建立採礦結構的案例。  
   
@@ -46,7 +46,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
   
  運算式可以包含資料行識別碼、使用者定義函數，以及 VBA 函數。  
   
- *structure*  
+ *表示*  
  結構的名稱。  
   
  *條件運算式*  

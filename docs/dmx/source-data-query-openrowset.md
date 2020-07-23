@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 125fe829c3b76be0d92a3519249df571890efbf2
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: b19b897b65ffb3a4c9e940370ffdead1e10b6d31
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670026"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970315"
 ---
 # <a name="ltsource-data-querygt---openrowset"></a>&lt;來源資料查詢 &gt; -OPENROWSET
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   以對外部提供者的查詢取代來源資料查詢。 INSERT、SELECT FROM 預測聯結，以及 SELECT FROM 天然預測聯結語句支援**OPENROWSET**。  
   

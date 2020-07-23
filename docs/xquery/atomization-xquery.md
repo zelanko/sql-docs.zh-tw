@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e3d7cf2f-c6fb-43c2-8538-4470a6375af5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0264c6d5c533510e7350e2f88e270d2cc7538dd3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 24840ac01f448270e43065887746fd7230be4d35
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85643600"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914655"
 ---
 # <a name="atomization-xquery"></a>自動化 (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   自動化是擷取項目的具類型值之處理序。 此處理序在某些情況下是隱含的。 有些 XQuery 運算子 (例如算術和比較運算子) 與此處理序相依。 例如，當您將算術運算子直接套用至節點時，節點的具類型值會先隱含叫用[資料函數](../xquery/data-accessor-functions-data-xquery.md)來取得。 這將會以運算元將不可部份完成值傳遞至算術運算子。  
   

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 610e9f5d575134d3d6948528622637662b65c9f3
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 6359b17825e1f62c38492acb6747ca52a264c7bc
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669656"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970625"
 ---
 # <a name="reserved-keywords-dmx"></a>保留關鍵字 (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)]保留特定關鍵字供其獨佔使用。 這些關鍵字只能用於 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 在資料採礦延伸模組 (DMX) 語言參考中定義的位置，不能用於 DMX 陳述式中其他任何地方。 這些限制 DMX 關鍵字包括下列成員：  
   

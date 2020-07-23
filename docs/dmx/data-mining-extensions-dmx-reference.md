@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: eeaeef25f27f29234aaa5a96a9272b4bea43dca3
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 02c7185ebbf264ebf8ed8adda4915170f888e74b
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670398"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971774"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>資料採礦延伸模組 (DMX) 參考
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   資料採礦延伸模組（DMX）是一種語言，您可以在中用來建立和使用資料採礦模型 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 您可以使用 DMX 建立新資料採礦模型的結構、培訓這些模型，以及瀏覽、管理與預測模型。 DMX 是由資料定義語言 (DDL) 陳述式、資料操作語言 (DML) 陳述式及函數和運算子所組成。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "83670398"
   
  您可以使用 DMX 中的資料操作陳述式執行下列工作：  
   
--   使用[INSERT INTO](../dmx/insert-into-dmx.md)語句來定型「採礦模型」。 這不會將實際的來源資料插入資料採礦模型物件，而是會建立描述演算法建立之採礦模型的摘要。 在[ \< 來源資料查詢>](../dmx/source-data-query.md)中會描述 INSERT INTO 語句的來源查詢。  
+-   使用[INSERT INTO](../dmx/insert-into-dmx.md)語句來定型「採礦模型」。 這不會將實際的來源資料插入資料採礦模型物件，而是會建立描述演算法建立之採礦模型的摘要。 INSERT INTO 語句的來源查詢會在中說明 [\<source data query>](../dmx/source-data-query.md) 。  
   
 -   擴充 SELECT 語句，以流覽模型定型期間所計算的資訊，並儲存在資料採礦模型中，例如來源資料的統計資料。 以下是您可以加入以擴充 SELECT 語句之功能的子句：  
   
@@ -82,7 +82,7 @@ ms.locfileid: "83670398"
   
     -   [從 &#60;模型&#62; 中選取。DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)  
   
--   使用 SELECT 語句的[預測聯結](../dmx/select-from-model-prediction-join-dmx.md)子句，建立以現有的採礦模型為基礎的預測。 在[ \< 來源資料查詢>](../dmx/source-data-query.md)中，會描述預測聯結語句的來源查詢。  
+-   使用 SELECT 語句的[預測聯結](../dmx/select-from-model-prediction-join-dmx.md)子句，建立以現有的採礦模型為基礎的預測。 預測聯結語句的來源查詢會在中說明 [\<source data query>](../dmx/source-data-query.md) 。  
   
 -   使用[DELETE &#40;DMX&#41;](../dmx/delete-dmx.md)語句，從模型或結構中移除所有定型的資料。  
   

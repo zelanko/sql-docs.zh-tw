@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b9c623a1e99053e796609dc82f27519f27c07a9d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6fdbc6ef265d51484160ab57a87e5672362326cc
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68049294"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970069"
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (MDX)
 
@@ -35,7 +35,7 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
  *Level_Expression*  
  (選擇性)。 MDX 運算式，明確地識別要向下鑽研的層級。 若指定了層級運算式，請略過下列索引引數。  
   
- *索引*  
+ *Index*  
  (選擇性)。 指定集合內向下鑽研階層編號的有效數值運算式。 您可以使用索引層級而不是 Level_Expression，以明確識別要向下鑽研的層級。  
   
  *Include_Calc_Members*  
@@ -52,7 +52,7 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
   
  如果沒有指定層級運算式或索引值，此函數只會擷取指定之集合中所參考之第一個維度其最低層級的那些成員其子系，以階層順序來建構集合。  
   
- 查詢 XMLA 屬性 MdpropMdxDrillFunctions 可讓您驗證服務器為鑽孔函數提供的支援層級;如需詳細資訊，請參閱[支援的 Xmla 屬性 &#40;xmla&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 。  
+ 查詢 XMLA 屬性 MdpropMdxDrillFunctions 可讓您驗證服務器為鑽孔函數提供的支援層級;如需詳細資訊，請參閱[支援的 Xmla 屬性 &#40;xmla&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 。  
   
 ## <a name="examples"></a>範例  
  您可以在 SSMS 的 MDX 查詢視窗中使用 Adventure Works Cube，嘗試下列範例。  

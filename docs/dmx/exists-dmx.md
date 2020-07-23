@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: df52a83c2e60395e72b6f81903d0372d1dc05614
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: fdf58a943986dc43f82ef7023b68a2c6168a5518
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670246"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971709"
 ---
 # <a name="exists-dmx"></a>Exists (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   如果指定的子查詢至少傳回一個資料列，則傳回**true** 。  
   
@@ -28,8 +28,8 @@ EXISTS(<subquery>)
 ```  
   
 ## <a name="arguments"></a>引數  
- *種子*  
- [從資料行名稱] 表單 SELECT * 的 SELECT 語句 \<> [WHERE 述詞 \< 清單>]。  
+ *subquery*  
+ Select * FROM [WHERE] 格式的 SELECT 語句 \<column name> \<predicate list> 。  
   
 ## <a name="result-type"></a>結果類型  
  如果子查詢所傳回的結果集至少包含一個資料列，則會傳回**true** ;否則，會傳回**false**。  

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e9dfbe291c1aa7d856862de54ed10c845b4e5544
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 980a13c88abc8d6cbe0fcb71f22f4c0a9f564094
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670393"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969801"
 ---
 # <a name="identifiers-dmx"></a>識別碼 (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   中的所有物件都 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 必須有識別碼。 物件的名稱是其識別碼。 伺服器、資料庫與資料庫物件 (例如資料來源、資料來源檢視、Cube、維度、採礦模型等等) 都有識別碼。  
   

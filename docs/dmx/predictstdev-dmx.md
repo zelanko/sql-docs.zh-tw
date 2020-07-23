@@ -8,19 +8,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: def9b352b97921b080e379d235972bb9dfc84510
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 25dde754c2e71c6aa40d763d7e3a81c3edca6938
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666750"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970706"
 ---
 # <a name="predictstdev-dmx"></a>PredictStdev (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   傳回指定之資料行的預測標準差。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -31,7 +31,7 @@ PredictStdev(<scalar column reference>)
  純量資料行。  
   
 ## <a name="return-type"></a>傳回類型  
- 純量資料* \< 行參考*所指定之類型的純量值>。  
+ 所指定之類型的純量值 *\<scalar column reference>* 。  
   
 ## <a name="remarks"></a>備註  
  如果資料行參考是離散的，則**PredictStdev**會傳回0，因為無法從離散值計算標準差。  

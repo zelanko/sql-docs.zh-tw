@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0156d12fe2d3d3f62105dccf05f99c2eebab8833
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: e3e4e9a4d929d9533b10d87654f685e45dafd238
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670135"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970499"
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>從 &lt; 模型 &gt; 預測聯結（DMX）選取
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   使用採礦模型預測外部資料來源中的資料行狀態。 **預測聯結**語句會將來源查詢中的每個案例與模型進行比對。  
   
@@ -57,7 +57,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  選擇性。 傳回純量值的運算式。  
   
 ## <a name="remarks"></a>備註  
- ON 子句會定義來源查詢中的資料行與採礦模型中的資料行之間的對應。 這個對應用於將來源查詢中的資料行導向採礦模型中的資料行，使資料行能做為建立預測時的輸入。 \<*聯結對應清單*中的資料行> 會使用等號（=）相關聯，如下列範例所示：  
+ ON 子句會定義來源查詢中的資料行與採礦模型中的資料行之間的對應。 這個對應用於將來源查詢中的資料行導向採礦模型中的資料行，使資料行能做為建立預測時的輸入。 中的資料行 \<*join mapping list*> 是使用等號（=）所關聯，如下列範例所示：  
   
 ```  
 [MiningModel].ColumnA = [source data query].Column1 AND   
@@ -69,7 +69,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
  預測聯結的來源查詢可以是資料表或單一查詢。  
   
- 您可以指定不會在 [選取運算式] 清單中傳回資料表運算式的預測函數 \< *select expression list*> 和 \< *條件運算式*>。  
+ 您可以指定不會在和中傳回資料表運算式的預測函數 \<*select expression list*> \<*condition expression*> 。  
   
  **自然預測聯結**會自動將來源查詢中符合模型中資料行名稱的資料行名稱對應在一起。 如果您使用**自然預測**，就可以省略 ON 子句。  
   

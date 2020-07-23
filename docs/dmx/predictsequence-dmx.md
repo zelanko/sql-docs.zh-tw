@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 09911d0d0d8553ab26d0fc141bcc07ed2f479728
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: acb1982e61e622b150ee79af08e36ddcf24048ba
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666977"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970736"
 ---
 # <a name="predictsequence-dmx"></a>PredictSequence (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   預測指定之時序資料集合的未來時序值。  
   
@@ -30,7 +30,7 @@ PredictSequence(\<table column reference, n-start, n-end>)
 ```  
   
 ## <a name="return-type"></a>傳回類型  
- \<資料表運算式>。  
+ \<table expression>。  
   
 ## <a name="remarks"></a>備註  
  如果指定了*n*參數，它會傳回下列值：  

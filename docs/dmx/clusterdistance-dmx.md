@@ -8,19 +8,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 149285ac5888d6b23272b40fbbb1aef9cf55909e
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 5a4e589455a86f4ffe47e34a6d74d0b6890a5528
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669816"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969948"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   **ClusterDistance**函式會從指定的叢集傳回輸入案例的距離，如果未指定任何叢集，則為輸入案例與最可能叢集的距離。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
   

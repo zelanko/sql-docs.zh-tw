@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c0355c8f0286fe894b7c723177c4146b1e460758
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 440256a7349d7c77581c4369e901ce0da9c3212f
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669469"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971805"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   在資料庫中建立新採礦模型與採礦結構。 您可以在陳述式中定義新模型，或者使用預測模型標記語言 (PMML)，來建立模型。 第二個選項只供進階使用者使用。  
   
@@ -47,7 +47,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  目前提供者所定義之資料採礦演算法的名稱。  
   
 > [!NOTE]  
->  您可以使用 DMSCHEMA_MINING_SERVICES 資料列[集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)來抓取目前提供者所支援的演算法清單。 若要查看目前實例中支援的演算法 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，請參閱[資料採礦屬性](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)。  
+>  您可以使用 DMSCHEMA_MINING_SERVICES 資料列[集](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126251(v=sql.110))來抓取目前提供者所支援的演算法清單。 若要查看目前實例中支援的演算法 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，請參閱[資料採礦屬性](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)。  
   
  *參數清單*  
  選擇性。 提供者自訂之演算法參數的逗號分隔清單。  
@@ -68,7 +68,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   資料類型 (強制的)  
   
--   散發  
+-   發行版本  
   
 -   模型旗標的清單  
   
@@ -102,16 +102,16 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   [模型旗標 &#40;資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
   
- 您可以在陳述式中加入子句，以描述兩個資料行之間的關聯性。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支援使用下列資料 \< 行關聯性> 子句。  
+ 您可以在陳述式中加入子句，以描述兩個資料行之間的關聯性。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支援使用下列 \<Column relationship> 子句。  
   
  **與**  
  這個表單表示階層。 RELATED TO 資料行的目標可以是巢狀資料表中的索引鍵資料行、案例資料列中的分隔值資料行，或者使用 RELATED TO 子句的另一個資料行 (表示更深的階層)。  
   
  使用預測子句描述如何使用預測資料行。 下表描述兩個可能的子句。  
   
-|\<預測> 子句|Description|  
+|\<prediction> 子句|描述|  
 |---------------------------|-----------------|  
-|**PREDICT**|這個資料行可以依模型預測，也可以在輸入案例中提供以預測其他可預測資料行的值。|  
+|**預報**|這個資料行可以依模型預測，也可以在輸入案例中提供以預測其他可預測資料行的值。|  
 |**PREDICT_ONLY**|這個資料行可以依模型預測，但是其值不能用於輸入案例中以預測其他可預測資料行的值。|  
   
 ### <a name="parameter-definition-list"></a>參數定義清單  
@@ -174,7 +174,7 @@ USING Microsoft_Sequence_Clustering
  以下範例使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 時間序列演算法，透過 ARTxp 演算法建立新的採礦模型。 ReportingDate 是時間序列的索引鍵資料行，而 ModelRegion 則是資料數列的索引鍵資料行。 在這個範例中，假設資料的週期是每 12 個月。 因此， *PERIODICITY_HINT*參數會設定為12。  
   
 > [!NOTE]  
->  您必須使用大括弧字元來指定*PERIODICITY_HINT*參數。 此外，因為此值為字串，所以必須以單引號括住： "{ \< numeric value>}"。  
+>  您必須使用大括弧字元來指定*PERIODICITY_HINT*參數。 此外，因為此值為字串，所以必須以單引號括住： "{ \<numeric value> }"。  
   
 ```  
 CREATE MINING MODEL SalesForecast (  

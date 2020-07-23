@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d1c8892-4bbc-4e71-bf4b-ba52c0ea9549
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8862cc58889c4446c23e994a9c8e0f6a54a50d38
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 30de657985eafdc5a601d61fedbd666455f3dbc9
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751962"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86941060"
 ---
 # <a name="internettimeout-property-rds"></a>InternetTimeout 屬性 (RDS)
 表示要求超時前等待的毫秒數。  
@@ -35,11 +35,16 @@ ms.locfileid: "82751962"
  三層環境中的要求可能需要幾分鐘的時間來執行。 使用此屬性來指定長時間執行之要求的額外時間。  
   
 ## <a name="applies-to"></a>套用至  
-  
-|||  
-|-|-|  
-|[DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[DataSpace 物件 (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)|  
-  
+
+:::row:::
+    :::column:::
+        [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+    :::column-end:::
+    :::column:::
+        [DataSpace 物件 (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另請參閱  
  [InternetTimeout 屬性範例（VB）](../../../ado/reference/rds-api/internettimeout-property-example-vb.md)   
  [InternetTimeout 屬性範例 (VC++)](../../../ado/reference/rds-api/internettimeout-property-example-vc.md)   

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 54489088aa6edc540dd2da0fb0d9121fc0c6d4b9
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 1b8fe4c8a83eaf56aea70abc810e7dc45f35eebb
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670411"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971766"
 ---
 # <a name="data-mining-extensions-dmx-statements"></a>資料採礦延伸模組 (DMX) 陳述式
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   在中使用資料採礦模型 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 包含下列主要工作：  
   
@@ -49,7 +49,7 @@ ms.locfileid: "83670411"
  使用[SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md)語句，將現有的採礦模型結構複製到新的採礦模型，並使用相同的資料來定型新模型。  
   
  瀏覽採礦模型  
- 使用[SELECT &#40;DMX&#41;](../dmx/select-dmx.md)語句，流覽資料採礦演算法在模型定型期間計算並儲存在資料採礦模型中的資訊。 與相似 [!INCLUDE[tsql](../includes/tsql-md.md)] 之處是，您可以使用數個子句搭配 SELECT 語句來擴充其功能。 這些子句包含[不同于 \< model> 的模型>](../dmx/select-distinct-from-model-dmx.md) [ \< 。案例](../dmx/select-from-model-cases-dmx.md)，[從 \< 模型>。SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)，[從 \< 模型>。內容](../dmx/select-from-model-content-dmx.md)和[從 \< 模型>。DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)。  
+ 使用[SELECT &#40;DMX&#41;](../dmx/select-dmx.md)語句，流覽資料採礦演算法在模型定型期間計算並儲存在資料採礦模型中的資訊。 與相似 [!INCLUDE[tsql](../includes/tsql-md.md)] 之處是，您可以使用數個子句搭配 SELECT 語句來擴充其功能。 這些子句包含 from 的[ \<model> DISTINCT](../dmx/select-distinct-from-model-dmx.md) [ \<model> 。案例](../dmx/select-from-model-cases-dmx.md)，[來自 \<model> 。SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)，[從 \<model> 。內容](../dmx/select-from-model-content-dmx.md)和[ \<model> 。DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)。  
   
  針對採礦模型預測  
  請使用 SELECT 語句的[預測聯結](../dmx/select-from-model-prediction-join-dmx.md)子句來建立以現有的採礦模型為基礎的預測。  

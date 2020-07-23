@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a1017c3332ca4e399984c01c68585d96aad86666
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c039ce9a5f54f3c0498ef613df15353217d91036
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716184"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923452"
 ---
 # <a name="sp_attachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
 
   將現有的訂閱資料庫附加至任何訂閱者。 這個預存程序執行於 master 資料庫的新訂閱者端。  
   

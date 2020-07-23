@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: dfd1616c-a75c-4f32-bdb1-7569e367bf41
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 880cf38105bd70198a52c55feec151e163f21c28
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 404fab4ed966fd8b29bc4160e7a7d721dd6397e7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900993"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923078"
 ---
 # <a name="create-a-custom-workflow---example"></a>建立自訂工作流程 - 範例
 
@@ -46,9 +46,9 @@ namespace MDSWorkflowTestLib
         public void StartWorkflow(string workflowType, System.Xml.XmlElement dataElement)  
         {  
             // Extract the attributes we want out of the element data.  
-            XmlNode NameNode = dataElement.SelectSingleNode("//ExternalAction/MemberData/Name");  
-            XmlNode CodeNode = dataElement.SelectSingleNode("//ExternalAction/MemberData/Code");  
-            XmlNode EnteringUserNode = dataElement.SelectSingleNode("//ExternalAction/MemberData/LastChgUserName");  
+            XmlNode NameNode = dataElement.SelectSingleNode("./MemberData/Name");  
+            XmlNode CodeNode = dataElement.SelectSingleNode("./MemberData/Code");  
+            XmlNode EnteringUserNode = dataElement.SelectSingleNode("./MemberData/LastChgUserName");  
   
             // Open a connection on the workflow database.  
             SqlConnection workflowConn = new SqlConnection(@"Data Source=<Server instance>; Initial Catalog=WorkflowTest; Integrated Security=True");  

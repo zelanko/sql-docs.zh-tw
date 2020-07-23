@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 04b06d1cbe14ee83915bd5626337720acf9bd2a9
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: e011fc48b63aa653cd63e11678b84d8356370bd0
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670339"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969249"
 ---
 # <a name="lag-dmx"></a>Lag (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   傳回目前案例的日期與培訓集的最後日期之間的時間配量。  
   

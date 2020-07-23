@@ -8,19 +8,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: be257e4da206c1c30d54341fbfda4c0aed894ab2
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: db7e660b5b92d49f5a5151d5d71e9ac31f9e9013
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669855"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969956"
 ---
 # <a name="bottomcount-dmx"></a>BottomCount (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   依照運算式指定的遞增次序順序，傳回指定數目的最底部資料列。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -28,13 +28,13 @@ BottomCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>套用至  
- 傳回資料表的運算式，例如 \< 資料表資料行參考>，或傳回資料表的函數。  
+ 傳回資料表的運算式，例如 \<table column reference> ，或傳回資料表的函數。  
   
 ## <a name="return-type"></a>傳回類型  
- \<資料表運算式>  
+ \<table expression>  
   
 ## <a name="remarks"></a>備註  
- \<次序運算式> 引數所提供的值，會決定資料表運算式中提供之資料列的次序增加順序 \<> 引數，並 \< 傳回在 count> 引數中指定的最底層資料列數目。  
+ 引數所提供的值會 \<rank expression> 決定引數中所提供資料列的次序增加順序 \<table expression> ，並傳回引數中指定的最底部資料列數目 \<count> 。  
   
 ## <a name="examples"></a>範例  
  下列範例會針對您使用[基本資料採礦教學](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)課程所建立的關聯模型，建立預測查詢。  

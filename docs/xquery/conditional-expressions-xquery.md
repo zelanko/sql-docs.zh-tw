@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a73d468a5304182f90f0bfdd9c5c1799b1876415
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 81fe55de0119fc2b9327d623155ed610de4ef06b
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85638027"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916274"
 ---
 # <a name="conditional-expressions-xquery"></a>條件運算式 (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   XQuery 支援下列條件**式 if-then-else**語句：  
   

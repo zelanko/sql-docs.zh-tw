@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0633540153f2dd9dfd60831a58744ea2d6331fbd
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: e7cc8176094ec49627018975b9e25fe5c30e12ca
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670296"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971708"
 ---
 # <a name="-equal-to-dmx"></a>= (等於) (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   執行比較作業，判斷某個資料採礦延伸模組 (DMX) 運算式的值是否等於另一個 DMX 運算式的值。  
   
