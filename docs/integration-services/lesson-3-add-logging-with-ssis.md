@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6ebbc82f5570fb97d7b1169563bfde7c67f5be0d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b55334e76b74bd873aa52e783e1047e913e6ba6a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296017"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922175"
 ---
 # <a name="lesson-3-add-logging-with-ssis"></a>第 3 課：使用 SSIS 來新增記錄功能
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

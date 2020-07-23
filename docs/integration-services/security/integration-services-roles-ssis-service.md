@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3290aa2297ca849ed175b7db109f6b200debc789
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 86ebb4c5420b1fa7abcbae00a190f11023b73b0b
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295677"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922084"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Integration Services 角色 (SSIS 服務)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供某些固定資料庫層級角色，以協助保護對儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中套件的存取。 可用的角色根據您將封裝儲存在 SSIS 目錄資料庫 (SSISDB) 或 msdb 資料庫而有所不同。  

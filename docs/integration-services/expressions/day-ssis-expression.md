@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: d8447187-49df-45b7-a98e-142ad44fd3e2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 344e3eca9359d3bafa0dd0fd529c939f84575921
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9b170928624565d8dc1f80cea93eed4473db3e5e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297621"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921273"
 ---
 # <a name="day-ssis-expression"></a>DAY (SSIS 運算式)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   傳回代表日期之日部分的整數。  

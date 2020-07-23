@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 9d88dead-ace8-44b9-b8e2-916c1842e155
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c3583baedb1766944a89b9f4491c53a94a17f3fa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 091e739b3c7c367db3f44222cc65c61dfc11c1f5
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297306"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922248"
 ---
 # <a name="year-ssis-expression"></a>YEAR (SSIS 運算式)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   傳回代表日期之年份部分的整數。  

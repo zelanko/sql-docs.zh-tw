@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1b17fc99cc7746739f381ba22f55a973d55497a1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 11d621289dbff6e6940df75e13f07af287c4e9ef
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71283558"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922245"
 ---
 # <a name="lesson-2-4-test-the-lesson-2-tutorial-package"></a>課程 2-4：測試第 2 課教學課程套件
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

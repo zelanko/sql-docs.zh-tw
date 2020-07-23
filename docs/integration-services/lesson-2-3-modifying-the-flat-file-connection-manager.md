@@ -10,18 +10,16 @@ ms.topic: tutorial
 ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5f09ac0b6b7a1d0536205596a553eddb06765b93
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 348b7e9b948443f1cfd14390f30c58ab17d08ec6
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296022"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921497"
 ---
 # <a name="lesson-2-3-modify-the-flat-file-connection-manager"></a>課程 2-3：修改一般檔案連線管理員
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
-
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 在此工作中，您會修改來自第 1 課的「一般檔案」連線管理員。 「一般檔案」連線管理員已設定成以靜態方式載入單一檔案。 若要讓「一般檔案」連線管理員反覆載入檔案，您需將連線管理員的 ConnectionString 屬性變更成使用使用者定義的變數 `User::varFileName`，此變數包含在執行階段要載入的檔案路徑。  
   

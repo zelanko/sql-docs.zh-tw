@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ae05c1015fe885c7488af0b0c9c7e340dc25d056
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 75854b88a3041def807b621b3e9f4caf6cf3b1c3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294744"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921637"
 ---
 # <a name="edit-the-table-properties"></a>編輯資料表屬性
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   使用此對話方塊，從正在擷取變更的選定資料表中編輯特定資料行。 您也可以編輯 **[安全性角色]** 和 **[擷取執行個體]** 資訊。  

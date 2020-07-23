@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4dff74cd1e21ba743fa425bb632c736ee1cce158
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 14318e122888c4baa89a3919c08456545690cfa0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295011"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922272"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>以程式設計方式使用連接管理員
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中，當您在受控碼使用連線管理員時，最常呼叫的方法是相關聯之連線管理員類別的 AcquireConnection 方法。 當您撰寫受控碼時，必須呼叫 AcquireConnection 方法才能使用連線管理員的功能。 不論是在指令碼工作、指令碼元件、自訂物件或是自訂應用程式中撰寫 Managed 程式碼，都必須呼叫這個方法。  

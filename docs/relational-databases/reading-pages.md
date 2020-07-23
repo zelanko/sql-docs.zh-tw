@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: f8da760e-aacb-4661-9f3a-2578d8c11e4e
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 710a9796ae2eb68da9d95c7d9a075bba8b7a7482
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cf1f0f443bbc89e38291b9ecb6927cace18334e8
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726131"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921784"
 ---
 # <a name="reading-pages"></a>讀取分頁
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 SQL Server [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體中的 I/O 包括邏輯和實體讀取。 每當 [!INCLUDE[ssDE](../includes/ssde-md.md)] 向 [緩衝快取](../relational-databases/memory-management-architecture-guide.md)要求分頁時，便會發生邏輯讀取。 如果頁面目前不在緩衝快取中，實體讀取會先從磁碟複製頁面到快取中。
 

@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a0c50372c199d80dc0e6d3d7e3326918011f8a28
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dec02c9a17a2eb1db3411c9b359ad55a83ac4fa5
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71283070"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922364"
 ---
 # <a name="lesson-6-3-test-the-lesson-6-package"></a>第 6-3 課：測試第 6 課套件
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 在執行階段，您的套件會從 **VarFolderName** 參數取得 **Directory** 屬性值。  

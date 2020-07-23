@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 1114a1bb-7556-40d9-b44e-f18ff7f63ed5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 03d0bab629c717b39e09d66e37f7664e1491ef65
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 124682b94fd3512141c267ed43b93b45c1eb77a3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298752"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921643"
 ---
 # <a name="edit-the-advanced-properties"></a>編輯進階屬性
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   使用 **[進階]** 索引標籤，將特殊屬性加入至 CDC 執行個體。  

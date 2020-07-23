@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dc7e5d4deb17335dfc1910b44306f611092e0984
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 82c3d3d2cdac0bb13eb1fd740da96bd7a7f7589a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294682"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922502"
 ---
 # <a name="manage-an-oracle-cdc-service"></a>Manage an Oracle CDC Service
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   您可以使用 CDC 服務組態主控台來管理特定的 CDC 服務。  

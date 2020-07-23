@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ae02b9188ecc9917d26532633e4d5a253d4f326b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da6900fe4c109dfaf96d22824fbd79dc45ab0916
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295951"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922130"
 ---
 # <a name="lesson-4-4-add-a-flat-file-destination"></a>課程 4-4：新增一般檔案目的地
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

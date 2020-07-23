@@ -21,12 +21,12 @@ ms.assetid: 44c7b67e-74c7-4bb9-93a4-7a3016bd2feb
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 534c9fb569f8098ed4a9cf11bb3ac002f62c555d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b5db97fd036dfa614a5a9c6c399a3100d5128d73
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012169"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922334"
 ---
 # <a name="nullif-transact-sql"></a>NULLIF (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +45,9 @@ NULLIF ( expression , expression )
  *expression*  
  這是任何有效的純量[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
-## <a name="return-types"></a>傳回型別  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>傳回型別
  傳回與第一個 *expression* 相同的類型。  
   
  如果這兩個運算式不相等，NULLIF 會傳回第一個 *expression*。 如果運算式相等，NULLIF 會傳回第一個 *expression* 類型的 Null 值。  

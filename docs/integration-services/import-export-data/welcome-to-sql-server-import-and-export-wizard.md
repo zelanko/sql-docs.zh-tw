@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 8a56d80d-8e31-4542-87cc-a41b3fdd5a7d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4767267c1fc88eab6dafe646a0f61e3bd1992de8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7a18a16353ff2d015bdd5f19c59c6cf9d7fd279b
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71284973"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922845"
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>歡迎使用 SQL Server 匯入和匯出精靈
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   當您啟動 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 時，第一頁是 [歡迎使用 SQL Server 匯入和匯出精靈]  。 您不需要在此頁面上採取任何動作。
