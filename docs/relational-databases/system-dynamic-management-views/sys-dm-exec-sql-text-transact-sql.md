@@ -20,12 +20,12 @@ ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b2a7a5e9f8410ab8ca66f0621d6a2c955258c28c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7ee50d943daf4f5970c162788659092ad31ef8c6
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734661"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943100"
 ---
 # <a name="sysdm_exec_sql_text-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -110,7 +110,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
         WAITFOR DELAY '00:02:00';
       ```
       
-    2.  使用**CROSS APPLY**。  
+  2.  使用**CROSS APPLY**。  
     從**sys. dm_exec_requests**的 sql_handle 將會傳遞至**sys。 DM_EXEC_SQL_TEXT**使用**CROSS APPLY**。 開啟新的查詢視窗，並傳遞步驟1中識別的 spid。 在此範例中，spid 的結果會是 `59` 。
 
         ```sql
@@ -120,7 +120,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
         WHERE session_id = 59 -- modify this value with your actual spid
          ```      
  
-    2.  直接傳遞**sql_handle** 。  
+  2.  直接傳遞**sql_handle** 。  
 從 sys.databases **sql_handle**取得 sql_handle **dm_exec_requests**。 然後，將**sql_handle**直接傳遞至**sys.databases，dm_exec_sql_text**。 開啟新的查詢視窗，並將步驟1中識別的 spid 傳遞至**sys. dm_exec_requests**。 在此範例中，spid 的結果會是 `59` 。 然後將傳回的**sql_handle**當做引數傳遞至**sys.databases dm_exec_sql_text**。
 
         ```sql
@@ -179,10 +179,10 @@ ORDER BY s1.sql_handle, s1.statement_start_offset, s1.statement_end_offset;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理 Views 和函數 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動態管理檢視與函數 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [執行相關的動態管理檢視和函數 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [dm_exec_query_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
- [dm_exec_requests &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
  [dm_exec_cursors &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)   
  [dm_exec_xml_handles &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)   
  [dm_exec_query_memory_grants &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   

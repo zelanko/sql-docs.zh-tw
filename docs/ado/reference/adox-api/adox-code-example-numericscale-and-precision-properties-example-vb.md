@@ -1,5 +1,5 @@
 ---
-title: NumericScale 和 Precision 屬性範例（VB） |Microsoft Docs
+title: NumericScale 和 Precision 屬性 ADOX 程式碼範例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea2ec614-34c8-41b7-8ebd-063798bd56b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38204684695f166032c61898457e697f60659723
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2d7a9f2ccb99d8ef442a45f6739efa5046620449
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764189"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942730"
 ---
 # <a name="adox-code-example-numericscale-and-precision-properties-example-vb"></a>ADOX 程式碼範例：NumericScale 和 Precision 屬性範例 (VB)
 這個範例會示範[Column](../../../ado/reference/adox-api/column-object-adox.md)物件的[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)和[Precision](../../../ado/reference/adox-api/precision-property-adox.md)屬性。 此程式碼會顯示*Northwind*資料庫之**Order Details**資料表的值。  

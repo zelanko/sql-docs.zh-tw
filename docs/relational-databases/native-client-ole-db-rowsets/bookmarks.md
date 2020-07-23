@@ -1,5 +1,5 @@
 ---
-title: 書籤 | Microsoft Docs
+title: 資料列書簽（Native Client OLE DB 提供者） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,11 +16,12 @@ ms.assetid: 7d9076f2-bf9c-452e-b816-70371a0c1644
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8229a1b1debd56ebcd2e5e2dc7b70339971a8150
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 149f40d2bc6ddb9313c7e20b76fb6ec7738cd5ce
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005249"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942141"
 ---
 # <a name="bookmarks"></a>書籤
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

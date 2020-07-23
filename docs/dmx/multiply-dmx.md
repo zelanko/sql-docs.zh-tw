@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 13ec459afba8080b9708fa49a00ff945ce7e320b
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 3a8df192cc04741ca1136f0c89c46893e5463370
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83667674"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971630"
 ---
 # <a name="-multiply-dmx"></a>* (乘) (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   執行以一個數目乘上另一個數目的算術運算。  
   

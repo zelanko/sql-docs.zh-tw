@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0fe7de8ce6ee6f40d0d50ce76a148dc3d000a808
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 15294c85fc119aff6b8c3cc43b1a99a6b79dc141
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669597"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970596"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>選取 [從 &lt; 模型] &gt; 。內容（DMX）
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   傳回指定之資料採礦模型的採礦模型結構描述資料列集。  
   
@@ -46,14 +46,14 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  選擇性。 傳回純量值的運算式。  
   
 ## <a name="remarks"></a>備註  
- [**從** _ \< 模型_選取]>**。CONTENT**語句會傳回每個演算法特定的內容。 例如，您可能想要使用自訂應用程式中關聯規則模型之所有規則的描述。 您可以使用 [**從模型選取] \<>。** 要在模型的 NODE_RULE 資料行中傳回值的 CONTENT 語句。  
+ **SELECT FROM** _\<model>_ **。CONTENT**語句會傳回每個演算法特定的內容。 例如，您可能想要使用自訂應用程式中關聯規則模型之所有規則的描述。 您可以使用**SELECT FROM \<model> 。** 要在模型的 NODE_RULE 資料行中傳回值的 CONTENT 語句。  
   
  下表列出包含在採礦模型內容中的資料行。  
   
 > [!NOTE]  
 >  演算法可能對資料行有不同的解譯，以便正確地表示內容。 如需每個演算法的「採礦模型」內容的描述，以及如何解讀及查詢每個模型類型之「採礦模型」內容的秘訣，請參閱[&#40;Analysis Services 資料採礦&#41;的「採礦模型內容](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)」。  
   
-|CONTENT 資料列集資料行|Description|  
+|CONTENT 資料列集資料行|描述|  
 |---------------------------|-----------------|  
 |MODEL_CATALOG|目錄名稱。 如果提供者不支援目錄，則為 NULL。|  
 |MODEL_SCHEMA|不合格的結構描述名稱。 如果提供者不支援結構描述，則為 NULL。|  

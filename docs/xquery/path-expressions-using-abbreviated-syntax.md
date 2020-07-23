@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f83c2e41-5722-47c3-b5b8-bf0f8cbe05d3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83dab3384810943901813b90286674253b88b8f1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4b8270babb8fe592c050a9352a7fd687660b178e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765632"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920094"
 ---
 # <a name="path-expressions---using-abbreviated-syntax"></a>路徑運算式 - 使用縮寫語法
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   [瞭解 XQuery 中路徑運算式](../xquery/path-expressions-xquery.md)的所有範例，都使用未縮寫的路徑運算式語法。 在路徑運算式中軸步的不縮寫語法包含軸名稱與節點測試，並以雙冒號分隔，後面接著零步或多步的限定詞。  
   

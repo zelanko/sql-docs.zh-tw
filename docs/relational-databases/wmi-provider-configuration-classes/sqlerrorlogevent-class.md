@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 61769119b041f629884b99660a5937b72a83acbd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3c2ea09a98128ff5d4c1df9ba61c918360613641
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880680"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918459"
 ---
 # <a name="sqlerrorlogevent-class"></a>SqlErrorLogEvent 類別
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   提供屬性，用來檢視指定之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄檔中的事件。  
   
 ## <a name="syntax"></a>語法  
@@ -41,8 +41,8 @@ class SQLErrorLogEvent
 ## <a name="properties"></a>屬性  
  SQLErrorLogEvent 類別會定義下列屬性。  
   
-|||  
-|-|-|  
+| 屬性 | 描述 |
+| -------- | ----------- |
 |FileName|資料類型：**字串**<br /><br /> 存取類型：唯讀<br /><br /> <br /><br /> 錯誤記錄檔的名稱。|  
 |InstanceName|資料類型：**字串**<br /><br /> 存取類型：唯讀<br /><br /> 限定詞：索引鍵<br /><br /> 記錄檔所在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。|  
 |LogDate|資料類型： **datetime**<br /><br /> 存取類型：唯讀<br /><br /> 限定詞：索引鍵<br /><br /> <br /><br /> 將事件記錄到記錄檔中的日期和時間。|  
@@ -51,8 +51,8 @@ class SQLErrorLogEvent
   
 ## <a name="remarks"></a>備註  
   
-|||  
-|-|-|  
+| 類型 | 名稱 |
+| ---- | ---- |
 |MOF|Sqlmgmproviderxpsp2up.mof|  
 |DLL|Sqlmgmprovider.dll|  
 |命名空間|\root\Microsoft\SqlServer\ComputerManagement10|  

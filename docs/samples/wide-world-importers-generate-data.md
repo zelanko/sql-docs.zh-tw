@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: af15f93b869fed56bed19a495c64810b0f2436c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2936ac69cc4053e68fc92d2bb5c2cae95ac68673
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718599"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942189"
 ---
 # <a name="wideworldimporters-data-generation"></a>WideWorldImporters 資料產生
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -69,11 +69,11 @@ WideWorldImportersDW 可以任意增加資料大小以進行效能測試。 例�
 
 #### <a name="name"></a>名稱
 
-    Application.Configuration_PopulateLargeSaleTable
+`Application.Configuration_PopulateLargeSaleTable`
 
 #### <a name="parameters"></a>參數
 
-  `@EstimatedRowsFor2012`**Bigint** （預設值為12000000）
+`@EstimatedRowsFor2012`**Bigint** （預設值為12000000）
 
 #### <a name="result"></a>結果
 

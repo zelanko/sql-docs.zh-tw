@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 55ee67c7-a583-42aa-849a-78264b4cb614
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 343d5ec73a9720085f450cde3f35a187cf4b7302
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b49fbddab49266ee5a5d530867c281e72878b6d7
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762809"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943020"
 ---
 # <a name="rightsenum"></a>RightsEnum
 指定物件上群組或使用者的許可權。  
   
-|持續性|值|說明|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
 |**adRightCreate**|16384（&H4000）|使用者或群組有權建立此類型的新物件。|  
 |**adRightDelete**|65536（&H 10000）|使用者或群組具有從物件刪除資料的許可權。 對於**資料表**之類的物件，使用者有權從記錄中刪除資料值。|  
@@ -47,7 +47,12 @@ ms.locfileid: "82762809"
 |**adRightWritePermissions**|262144（&H40000）|使用者或群組可以修改目錄中物件的特定許可權。|  
   
 ## <a name="applies-to"></a>套用至  
-  
-|||  
-|-|-|  
-|[GetPermissions 方法 (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)|[SetPermissions 方法 (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)|
+
+:::row:::
+    :::column:::
+        [GetPermissions 方法 (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)  
+    :::column-end:::
+    :::column:::
+        [SetPermissions 方法 (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)  
+    :::column-end:::
+:::row-end:::

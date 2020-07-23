@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 83a381e36a31542d6ad39ed9d26864350004af5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97b9f5fd13a6cfb017f128564f0f0cf93c22ad58
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68891144"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86967369"
 ---
 # <a name="mdx-data-manipulation---select"></a>MDX 資料操作 - SELECT
 
@@ -116,7 +116,7 @@ FROM
   
  子選擇陳述式中的 NON VISUAL 選項，可以讓您在篩選出成員的同時，保留實際總計而非篩選後的總計。 如此一來，您可以查詢前十筆銷售 (人員/產品/地區) 並取得所有查詢成員的實際銷售總計，而不只是傳回的前十筆銷售額總計。 如需詳細資訊，請參閱以下範例。  
   
- 每次使用連接字串參數\<*子查詢 = 1*開啟連接時，匯出成員就可以包含在 SELECT 查詢座標軸子句中>如需參數使用方式，請參閱<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> [支援的 XMLA 屬性 &#40;xmla&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)和。 以下提供子選擇中的導出成員範例。  
+ \<SELECT query axis clause>每次使用連接字串參數*子查詢 = 1*開啟連接時，都可以包含匯出成員，請參閱[支援的 xmla 屬性 &#40;xmla&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)和 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 參數使用方式。 以下提供子選擇中的導出成員範例。  
   
 ## <a name="autoexists"></a>自動存在  
  在 SELECT 陳述式中使用兩個或多個維度屬性時，Analysis Services 會評估屬性的運算式來確認這些屬性的成員有受到正確的限制以符合所有其他屬性的準則。 例如，假設您正在使用來自 Geography 維度的屬性。 如果您所擁有的其中一個運算式會從 City 屬性傳回所有成員，而另一個運算式會將 Country 屬性的成員限制為歐洲所有國家 (地區)，這將會使得 City 成員限制為只有屬於歐洲國家 (地區) 的城市。 Analysis Services 的這個特性稱為「自動存在」，僅適用於相同維度中的屬性。 「自動存在」僅適用於相同維度的屬性的原因是，它會嘗試防止某個屬性運算式加入其他屬性運算式中排除的維度記錄。 您也可以將「自動存在」視為不同之屬性運算式在維度記錄上所產生的交集。 請參閱下列範例：  
@@ -339,10 +339,10 @@ FROM
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- 您可以在連接字串中使用自動存在 = [1 | 2 | 3] 參數來修改自動存在行為;如需參數使用方式，請參閱<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> [支援的 XMLA 屬性 &#40;xmla&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)和。  
+ 您可以在連接字串中使用自動存在 = [1 | 2 | 3] 參數來修改自動存在行為;如需參數使用方式，請參閱[支援的 Xmla 屬性 &#40;xmla&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)和 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 。  
   
 ## <a name="examples"></a>範例  
- 下列範例會從「**艾德公司**」 `Measures.[Order Quantity]` cube 中傳回成員的總和（在`Date`維度中包含的前八2003個月內）。  
+ 下列範例 `Measures.[Order Quantity]` 會 `Date` 從「**艾德公司**」 cube 中傳回成員的總和（在維度中包含的前八2003個月內）。  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -377,11 +377,11 @@ WHERE
   
 |||||||  
 |-|-|-|-|-|-|  
-||**All Products**|**Accessories**|**Bikes**|**服飾**|**元件**|  
+||**所有產品**|**Accessories**|**自行車**|**Clothing**|**元件**|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$66,302,381.56**|**$1,777,840.84**|**$11,799,076.66**|  
 |**Specialty Bike Shop**|**$6,756,166.18**|**$65,125.48**|**$6,080,117.73**|**$252,933.91**|**$357,989.07**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$30,892,354.33**|**$592,385.71**|**$3,307,774.48**|  
-|**式**|**$38,726,913.48**|**$331,169.64**|**$29,329,909.50**|**$932,521.23**|**$8,133,313.11**|  
+|**倉儲**|**$38,726,913.48**|**$331,169.64**|**$29,329,909.50**|**$932,521.23**|**$8,133,313.11**|  
   
  若要只針對產品為 Accessories 和 Clothing，且轉售商為 Value Added Reseller 和 Warehouse 的資料產生資料表，但同時保留全部項目的總計，可以使用 NON VISUAL 撰寫如下：  
   
@@ -401,10 +401,10 @@ WHERE
   
 |||||  
 |-|-|-|-|  
-||**All Products**|**Accessories**|**服飾**|  
+||**所有產品**|**Accessories**|**Clothing**|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$1,777,840.84**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$592,385.71**|  
-|**式**|**$38,726,913.48**|**$331,169.64**|**$932,521.23**|  
+|**倉儲**|**$38,726,913.48**|**$331,169.64**|**$932,521.23**|  
   
  若要產生可以視覺化總計資料行，但就資料列總計傳回所有 [Category] 的實際總計，應發出下列查詢：  
   

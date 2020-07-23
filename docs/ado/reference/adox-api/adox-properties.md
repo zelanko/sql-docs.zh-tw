@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6aed31fef1f685effc3216d6055de0faf0e22698
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6441c637b371cb059ebaad94380d6bfd4f24c8f9
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764099"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942813"
 ---
 # <a name="adox-properties"></a>ADOX 屬性
 
-|||  
+|屬性|描述|  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|表示目錄所屬的 ADO**連接**物件。|  
 |[屬性](../../../ado/reference/adox-api/attributes-property-adox.md)|描述資料行特性。|  
@@ -34,7 +34,7 @@ ms.locfileid: "82764099"
 |[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)|表示資料行的指定大小上限。|  
 |[DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)|指出刪除主要金鑰時所執行的動作。|  
 |[IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)|指出索引欄位中具有 null 值的記錄是否有索引項目。|  
-|[項目](../../../ado/reference/ado-api/item-property-ado.md)|以名稱或序數表示集合的特定成員。|  
+|[Item](../../../ado/reference/ado-api/item-property-ado.md)|以名稱或序數表示集合的特定成員。|  
 |[名稱](../../../ado/reference/adox-api/name-property-adox.md)|指出物件的名稱。|  
 |[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)|表示資料行中數值的小數位數。|  
 |[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)|指定資料表或資料行的父目錄，以提供提供者特定屬性的存取權。|  

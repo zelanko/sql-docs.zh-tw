@@ -8,19 +8,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 610d304f2634a4de8f8578fff3258f4b1f2dbc67
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 735df047307f78c238fbf29669f0e0b1e0933e37
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669288"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971555"
 ---
 # <a name="predictadjustedprobability-dmx"></a>PredictAdjustedProbability (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   傳回指定狀態的已調整機率。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -34,9 +34,9 @@ PredictAdjustedProbability(<scalar column reference>, [<predicted state>])
  純量值。  
   
 ## <a name="remarks"></a>備註  
- 如果省略預測狀態，就會使用可預測之機率最高的狀態，遺漏狀態值區除外。 若要包含遺漏的狀態值區，請將 \< 預測的狀態> 設定為**INCLUDE_Null**。  
+ 如果省略預測狀態，就會使用可預測之機率最高的狀態，遺漏狀態值區除外。 若要包含遺漏的狀態值區，請將設定 \<predicted state> 為**INCLUDE_Null**。  
   
- 若要傳回遺漏狀態的已調整機率，請將 \< 預測的狀態> 設定為 Null。  
+ 若要傳回遺漏狀態的已調整機率，請將設定 \<predicted state> 為 Null。  
   
  **PredictAdjustedProbability**函數是 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] 資料採礦規格 OLE DB 的延伸模組。  
   

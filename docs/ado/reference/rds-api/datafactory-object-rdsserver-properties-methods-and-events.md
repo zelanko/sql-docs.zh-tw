@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: 36a1f49b-91f4-44f4-b6e2-52fc7ed06d7e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 15cc2596022889fe855145cd538d82676620aa13
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2ac5645910a4b5339e696d793c167222b80cc6c3
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752631"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942852"
 ---
 # <a name="datafactory-object-rdsserver-properties-methods-and-events"></a>DataFactory 物件 (RDSServer) 屬性、方法和事件
 > [!IMPORTANT]
 >  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統不再包含 RDS 伺服器元件（如需詳細資訊，請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)）。 RDS 用戶端元件將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
-## <a name="properties"></a>屬性  
+## <a name="properties"></a>[內容]  
  無。  
   
 ## <a name="methods"></a>方法  
   
-|||  
+|方法|描述|  
 |-|-|  
 |[ConvertToString 方法 (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)|將記錄集轉換成 MIME64 字串。|  
 |[CreateRecordset 方法 (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|建立並傳回空的記錄集。|  

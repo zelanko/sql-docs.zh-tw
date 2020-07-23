@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bc2d295f43dfab4327ac1b0ea47382324a22db41
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: aaad5923695e6cb8e98e2c7f40fa2bb9a044a7ce
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786515"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915544"
 ---
 # <a name="path-expressions---specifying-node-test"></a>路徑運算式 - 指定節點測試
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   路徑運算式中的軸步包含下列部份：  
   

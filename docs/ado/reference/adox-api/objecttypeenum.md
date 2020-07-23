@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3fdecfca-aa91-4596-ad98-610f1b7f840b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d493218f31965c04b5a64321c4a1bf87a2518f6f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fe7d97909a2d38e548a072245b08110b1d61eb3c
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763789"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943160"
 ---
 # <a name="objecttypeenum"></a>ObjectTypeEnum
 指定要設定其許可權或擁有權的資料庫物件類型。  
   
-|持續性|值|說明|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
 |**adPermObjColumn**|2|物件是資料行。|  
 |**adPermObjDatabase**|3|物件是資料庫。|  
@@ -35,8 +35,14 @@ ms.locfileid: "82763789"
 |**adPermObjView**|5|物件是一個視圖。|  
   
 ## <a name="applies-to"></a>套用至  
-  
-|||  
-|-|-|  
-|[GetObjectOwner 方法 (ADOX)](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|[GetPermissions 方法 (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)|  
-|[SetObjectOwner 方法](../../../ado/reference/adox-api/setobjectowner-method.md)|[SetPermissions 方法 (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)|
+
+:::row:::
+    :::column:::
+        [GetObjectOwner 方法 (ADOX)](../../../ado/reference/adox-api/getobjectowner-method-adox.md)  
+        [GetPermissions 方法 (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)  
+    :::column-end:::
+    :::column:::
+        [SetObjectOwner 方法](../../../ado/reference/adox-api/setobjectowner-method.md)  
+        [SetPermissions 方法 (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)  
+    :::column-end:::
+:::row-end:::

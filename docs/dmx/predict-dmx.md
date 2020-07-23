@@ -8,19 +8,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9a21336db54ab6fadaa219a3ef3d743dcf860087
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: d323794af598cb621b7fb8f9939cd2ae1c0f2746
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669271"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86968337"
 ---
 # <a name="predict-dmx"></a>Predict (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   **Predict**函數會針對指定的資料行傳回預測值或一組值。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -32,11 +32,11 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
  純量資料行參考或資料表資料行參考。  
   
 ## <a name="return-type"></a>傳回類型  
- \<純量資料行參考>  
+ \<scalar column reference>  
   
  或  
   
- \<資料表資料行參考>  
+ \<table column reference>  
   
  傳回類型會視這個函數適用的資料行類型而定。  
   

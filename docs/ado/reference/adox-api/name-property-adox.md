@@ -41,12 +41,12 @@ helpviewer_keywords:
 ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 68e9625b1e5acb7ef0d7b8d1389895d8a96dcbef
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 24d86b384a1eb2916e488c17c99e4b9b5962dd1a
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763819"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942720"
 ---
 # <a name="name-property-adox"></a>Name 屬性 (ADOX)
 指出物件的名稱。  
@@ -65,13 +65,25 @@ ms.locfileid: "82763819"
 >  針對索引鍵，此屬性在已附加至集合的索引**鍵**物件上是唯讀的。 對於資料表而言，這個屬性對於已經附加至集合的**資料表**物件而言是唯讀的。  
   
 ## <a name="applies-to"></a>套用至  
-  
-||||  
-|-|-|-|  
-|[Column 物件 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)|[Group 物件 (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)|[Index 物件 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)|  
-|[Key 物件 (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)|[Procedure 物件 (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[Property 物件 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
-|[Table 物件 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[User 物件 (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|[View 物件 (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Column 物件 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+        [Group 物件 (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)  
+        [Index 物件 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
+    :::column-end:::
+    :::column:::
+        [Key 物件 (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
+        [Procedure 物件 (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)  
+        [Property 物件 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Table 物件 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)  
+        [User 物件 (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
+        [View 物件 (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另請參閱  
  [Columns 和 Tables Append 方法、Name 屬性範例（VB）](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [Keys Append 方法、Key Type、RelatedColumn、RelatedTable 和 UpdateRule 屬性範例（VB）](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   

@@ -20,12 +20,12 @@ ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9d0c2366e0d05fb7d3abe6488d8a2f8ff969f011
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a467a445dda5f4d950c5bf4813f5ec69606df487
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717441"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943056"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,17 +60,15 @@ sys.dm_sql_referencing_entities (
 ```  
   
 ## <a name="arguments"></a>引數  
- *schema_name。參考的*_*entity_name*  
- 這是受參考實體的名稱。  
+ `schema_name.referenced_entity_name`這是受參考實體的名稱。  
   
- *schema_name*是必要的，除非 PARTITION_FUNCTION 參考的類別。  
+ `schema_name` 是必要項目，但受參考類別為 PARTITION_FUNCTION 的情況除外。  
   
- *schema_name。 referenced_entity_name*是**Nvarchar （517）**。  
+ `schema_name.referenced_entity_name`是**Nvarchar （517）**。  
   
- *<referenced_class>* ：： = {OBJECT |類型 |XML_SCHEMA_COLLECTION |PARTITION_FUNCTION}  
- 這是受參考實體的類別。 每個陳述式只能指定一個類別。  
+ `<referenced_class> ::= { OBJECT  | TYPE | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION }`這是受參考實體的類別。 每個陳述式只能指定一個類別。  
   
- *<referenced_class>* 是**Nvarchar**（60）。  
+ `<referenced_class>`是**Nvarchar**（60）。  
   
 ## <a name="table-returned"></a>傳回的資料表  
   

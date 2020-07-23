@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 158cb4ed1f02133597e9ed5470d20b5864139d03
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: f4dfae8259c1ea9379500d426ce1c8ac22762068
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669709"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971653"
 ---
 # <a name="gt-greater-than-or-equal-to-dmx"></a>&gt;= （大於或等於）（DMX）
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   執行比較作業，判斷某個資料採礦延伸模組 (DMX) 運算式的值是否大於或等於另一個 DMX 運算式的值。  
   

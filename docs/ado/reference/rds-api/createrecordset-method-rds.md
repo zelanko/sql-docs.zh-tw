@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ae2d78f4647e2aefa707e97349daa73d08ee492
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 53a391ccb25a32d628703543d95dc8e24668fcd5
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748845"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942490"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset 方法 (RDS)
 建立空的、中斷連接的[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
@@ -40,7 +40,7 @@ object.CreateRecordset(ColumnInfos)
 ```  
   
 #### <a name="parameters"></a>參數  
- *目標*  
+ *Object*  
  代表[RDSServer DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)或 RDS 的物件變數[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件。  
   
  *ColumnsInfos*  
@@ -50,7 +50,7 @@ object.CreateRecordset(ColumnInfos)
 |---------------|-----------------|  
 |名稱|欄標題的名稱。|  
 |類型|資料類型的整數。|  
-|大小|寬度（以字元為單位）的整數，不論資料類型為何。|  
+|Size|寬度（以字元為單位）的整數，不論資料類型為何。|  
 |Null 屬性|布林值。|  
 |Scale （選擇性）|這個選擇性屬性會定義數值欄位的尺規。 如果未指定此值，數值會被截斷為三個小數位數。 精確度不受影響，但小數點後面的位數將會截斷為三。|  
   
@@ -65,28 +65,28 @@ object.CreateRecordset(ColumnInfos)
   
  針對某些變數資料類型，類型可以強制轉型為替代欄位中所記下的類型。 在建立並填入**記錄集**之前，您將不會看到替換。 然後，您可以視需要檢查實際的資料類型。  
   
-|長度|持續性|數字|Substitution|  
+|長度|持續性|Number|Substitution|  
 |------------|--------------|------------|------------------|  
-|固定式|**adTinyInt**|16||  
-|固定式|**adSmallInt**|2||  
-|固定式|**adInteger**|3||  
-|固定式|**adBigInt**|20||  
-|固定式|**adUnsignedTinyInt**|17||  
-|固定式|**adUnsignedSmallInt**|18||  
-|固定式|**adUnsignedInt**|19||  
-|固定式|**adUnsignedBigInt**|21||  
-|固定式|**adSingle**|4||  
-|固定式|**adDouble**|5||  
-|固定式|**adCurrency**|6||  
-|固定式|**adDecimal**|14||  
-|固定式|**adNumeric**|131||  
-|固定式|**adBoolean**|11||  
-|固定式|**adError**|10||  
-|固定式|**adGuid**|72||  
-|固定式|**adDate**|7||  
-|固定式|**adDBDate**|133||  
-|固定式|**adDBTime**|134||  
-|固定式|**adDBTimestamp**|135|7|  
+|已修正|**adTinyInt**|16||  
+|已修正|**adSmallInt**|2||  
+|已修正|**adInteger**|3||  
+|已修正|**adBigInt**|20||  
+|已修正|**adUnsignedTinyInt**|17||  
+|已修正|**adUnsignedSmallInt**|18||  
+|已修正|**adUnsignedInt**|19||  
+|已修正|**adUnsignedBigInt**|21||  
+|已修正|**adSingle**|4||  
+|已修正|**adDouble**|5||  
+|已修正|**adCurrency**|6||  
+|已修正|**adDecimal**|14||  
+|已修正|**adNumeric**|131||  
+|已修正|**adBoolean**|11||  
+|已修正|**adError**|10||  
+|已修正|**adGuid**|72||  
+|已修正|**adDate**|7||  
+|已修正|**adDBDate**|133||  
+|已修正|**adDBTime**|134||  
+|已修正|**adDBTimestamp**|135|7|  
 |變數|**adBSTR**|8|130|  
 |變數|**adChar**|129|200|  
 |變數|**adVarChar**|200||  
@@ -99,11 +99,16 @@ object.CreateRecordset(ColumnInfos)
 |變數|**adLongVarBinary**|205|204|  
   
 ## <a name="applies-to"></a>套用至  
-  
-|||  
-|-|-|  
-|[DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[DataFactory 物件 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|  
-  
+
+:::row:::
+    :::column:::
+        [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+    :::column-end:::
+    :::column:::
+        [DataFactory 物件 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另請參閱  
  [CreateRecordset 方法範例（VB）](../../../ado/reference/ado-api/createrecordset-method-example-vb.md)   
  [CreateRecordset 方法範例（VBScript）](../../../ado/reference/rds-api/createrecordset-method-example-vbscript.md)   

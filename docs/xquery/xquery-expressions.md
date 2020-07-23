@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a6150940-4d1c-4bff-a8f9-eda667fc45eb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b75a37be658fbc8909f5dbc8d3eec0e3afd1a0f3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0144663029fb4e2a000eda590c85ee97d349dab6
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775429"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917946"
 ---
 # <a name="xquery-expressions"></a>XQuery 運算式
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   描述 XQuery 運算式的主題。  
   

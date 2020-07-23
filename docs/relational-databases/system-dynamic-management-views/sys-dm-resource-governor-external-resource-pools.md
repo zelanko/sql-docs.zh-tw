@@ -20,15 +20,15 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5a143d4f7052995dddd8bc9cc5239b8ccc7a366f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c4058d22364361da622d94c199bedf98562e0531
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718748"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920834"
 ---
 # <a name="sysdm_resource_governor_external_resource_pools-transact-sql"></a>sys.databases dm_resource_governor_external_resource_pools （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 傳回目前外部資源集區狀態的相關資訊、資源集區的目前設定，以及資源集區統計資料。 
   
@@ -37,7 +37,7 @@ ms.locfileid: "85718748"
 |資料行名稱      |資料類型      |描述|  
 |----------------|---------------|-----------------| 
 | external_pool_id|**int**|資源集區的識別碼。 不可為 Null。 |
-| NAME|**sysname**|資源集區的名稱。 不可為 Null。 
+| 名稱|**sysname**|資源集區的名稱。 不可為 Null。 
 | pool_version|**int**|內部版本號碼。|
 | max_cpu_percent|**int**|當 CPU 出現競爭時，資源集區中所有要求允許之最大平均 CPU 頻寬的目前組態。 不可為 Null。 |
 | max_processes|**int**|並行外部進程的最大數目。 預設值為 0 時，不會指定任何限制。 不可為 Null。|

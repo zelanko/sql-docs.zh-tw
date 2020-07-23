@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e1182d174e3281fda944c0b6490b114d4b6f2244
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8a4936aeb696f8cca36cad419d7c64198d4b290
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401240"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942537"
 ---
 # <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>連線至分析平臺系統中的應用裝置節點
 本文說明各種連接到 Analytics Platform System 設備中每個節點的方式。  
@@ -30,10 +30,9 @@ ms.locfileid: "74401240"
 > [!WARNING]  
 > 變更控制或計算節點上的資料庫或資料表設定，而不明確同意產品小組或 AP 的客戶支援小組可能會導致您的 AP 應用裝置不受支援。
   
-|||  
-|-|-|  
-|**節點**|**存取案例**|  
-|控制節點|使用網頁瀏覽器來存取管理主控台，它會在控制節點上執行。 如需詳細資訊，請參閱[使用管理主控台監視設備 &#40;分析平臺系統&#41;](monitor-the-appliance-by-using-the-admin-console.md)。<br /><br />所有用戶端應用程式和工具都會連接到控制節點，不論連接使用的是乙太網路或不受限制。<br /><br />若要設定與控制節點的乙太網路連線，請使用控制節點叢集 IP 位址和埠**17001**。 例如，"192.168.0.1，17001"。<br /><br />若要設定與控制節點的未使用連接，請使用<strong> *appliance_domain*-SQLCTL01</strong>和埠**17001**。 藉由使用<strong> *appliance_domain*SQLCTL01</strong>，應用裝置 DNS 伺服器會將您的伺服器連線到作用中的未受使用網路。 若要設定您的非應用裝置伺服器以使用此元件，請參閱設定不佔用的[網路介面卡](configure-infiniband-network-adapters.md)。<br /><br />裝置管理員會連線到控制節點來執行管理作業。 例如，裝置管理員會從控制節點執行下列作業：<br /><br />使用**dwconfig**設定工具設定分析平臺系統。|  
+|節點|存取案例|
+|-|-|
+|控制節點|使用網頁瀏覽器來存取管理主控台，它會在控制節點上執行。 如需詳細資訊，請參閱[使用管理主控台監視設備 &#40;分析平臺系統&#41;](monitor-the-appliance-by-using-the-admin-console.md)。<br /><br />所有用戶端應用程式和工具都會連接到控制節點，不論連接使用的是乙太網路或不受限制。<br /><br />若要設定與控制節點的乙太網路連線，請使用控制節點叢集 IP 位址和埠**17001**。 例如，"192.168.0.1，17001"。<br /><br />若要設定與控制節點的未使用連接，請使用<strong> *appliance_domain*-SQLCTL01</strong>和埠**17001**。 藉由使用<strong> *appliance_domain*SQLCTL01</strong>，應用裝置 DNS 伺服器會將您的伺服器連線到作用中的未受使用網路。 若要設定您的非應用裝置伺服器以使用此元件，請參閱設定不佔用的[網路介面卡](configure-infiniband-network-adapters.md)。<br /><br />裝置管理員會連線到控制節點來執行管理作業。 例如，裝置管理員會從控制節點執行下列作業：<br /><br />使用**dwconfig.exe**設定工具設定分析平臺系統。|  
 |計算節點|計算節點連接是由控制節點所導向。 計算節點的 IP 位址永遠不會在應用程式命令中輸入為參數。<br /><br />針對載入、備份、遠端資料表複製和 Hadoop，SQL Server PDW 會直接在計算節點和非應用裝置節點或伺服器之間平行傳送或接收資料。 這些應用程式會連接到控制節點來與 SQL Server PDW 連線，然後控制節點會指示 SQL Server PDW 在計算節點與非設備伺服器之間建立通訊。<br /><br />例如，這些資料傳輸作業會與計算節點的直接連接平行發生：<br /><br />從載入伺服器載入到 SQL Server PDW。<br /><br />將資料庫從 SQL Server PDW 備份到備份伺服器。<br /><br />將資料庫從備份伺服器還原到 SQL Server PDW。<br /><br />從 SQL Server PDW 查詢 Hadoop 資料。<br /><br />將資料從 SQL Server PDW 匯出至外部 Hadoop 資料表。<br /><br />將 SQL Server PDW 資料表複製到遠端 SMP SQL Server 資料庫。|  
   
 ## <a name="connecting-to-the-ethernet-and-infiniband-networks"></a>連接到 Ethernet 和不會網路  

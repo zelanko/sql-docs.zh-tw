@@ -1,5 +1,5 @@
 ---
-title: NumericScale 和 Precision 屬性範例（VB） |Microsoft Docs
+title: NumericScale 和 Precision 屬性 ADO 程式碼範例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9c1e2322-c225-49d1-a120-a343f23cea73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fe33e513ebb5645952fcf1b57dc819e64af90315
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3a5f34efc7063e4c644734f770bd3fe80f2b51de
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762341"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942500"
 ---
 # <a name="numericscale-and-precision-properties-example-vb"></a>NumericScale 和 Precision 屬性範例 (VB)
 這個範例會使用[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)和[Precision](../../../ado/reference/ado-api/precision-property-ado.md)屬性，在***Pubs***資料庫的***折扣***資料表中顯示欄位的數值小數位數和有效位數。  
