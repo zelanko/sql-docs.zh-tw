@@ -10,12 +10,12 @@ metadata:
   author: markingmyname
   ms.author: maghan
   ms.date: 05/09/2020
-  ms.openlocfilehash: b5020185efafd9e166c8d3dd627ee61a955a0d27
-  ms.sourcegitcommit: 812f572d13616c1bd085b0648603736ba1bc20d1
+  ms.openlocfilehash: c7e8bdc53740ff2030b27c4d855b5b6a7de2ded9
+  ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/27/2020
-  ms.locfileid: "84112332"
+  ms.lasthandoff: 07/22/2020
+  ms.locfileid: "86914527"
 landingContent:
 - title: 關於 Azure Data Studio
   linkLists:
@@ -59,8 +59,8 @@ landingContent:
       url: notebooks-guidance.md
     - text: 如何使用 SQL 核心
       url: notebooks-tutorial-sql-kernel.md
-    - text: 如何管理 Azure Data Studio 中的筆記本
-      url: notebooks-manage-sql-server.md
+    - text: 如何使用 Python 核心
+      url: notebooks-tutorial-python-kernel.md
     - text: Azure Data Studio 中的 kqlmagic 延伸模組
       url: notebooks-kqlmagic.md
 - title: 延伸模組
