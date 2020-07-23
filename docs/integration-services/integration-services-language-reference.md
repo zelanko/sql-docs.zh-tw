@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: c67b72f1-0a1e-42f0-878a-84e85efc915b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 83f65e243a719756c254f663c5cc91898d28f2de
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6ceae007a461f3c47df5dd0a13c24df4b484cbd6
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729418"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917565"
 ---
 # <a name="integration-services-language-reference"></a>Integration Services 語言參考
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   本節描述用來管理 [!INCLUDE[tsql](../includes/tsql-md.md)] 專案 (已部署至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的執行個體) 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] API。  
   

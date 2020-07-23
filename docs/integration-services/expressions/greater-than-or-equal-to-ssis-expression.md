@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 52ad504d-2f54-44de-b5e2-620577c0e289
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c312bd28a56dd3a22596e61b0612591a0a1a2712
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 165c016e7352b1ca90b3962763074b2df81a83ee
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71289897"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916974"
 ---
 # <a name="gt-greater-than-or-equal-to-ssis-expression"></a>&gt;= (大於或等於) (SSIS 運算式)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   執行比較來決定第一個運算式是否大於或等於第二個運算式。 運算式評估工具會在執行比較之前，自動轉換許多資料類型。  

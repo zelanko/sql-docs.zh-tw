@@ -25,12 +25,12 @@ ms.assetid: 6882c5bc-ff74-476a-984b-164aeb036c66
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfd14c6cd0147d9e4c163a4802f060ecc4374754
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a7cf13b0056a659fb59f236cf7d49c1ea1f12368
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68121815"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915584"
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,16 +42,18 @@ ms.locfileid: "68121815"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 ROLLBACK { TRAN | TRANSACTION }   
      [ transaction_name | @tran_name_variable  
      | savepoint_name | @savepoint_variable ]   
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *transaction_name*  
- 指派給 BEGIN TRANSACTION 之交易的名稱。 *transaction_name* 必須符合識別碼的規則，但只可使用交易名稱的前 32 個字元。 當建立巢狀交易時，*transaction_name* 必須是最外層 BEGIN TRANSACTION 陳述式的名稱。 即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體不區分大小寫，*transaction_name* 還是一律都會區分大小寫。  
+ 指派給 BEGIN TRANSACTION 之交易的名稱。 *transaction_name* 必須符合識別碼的規則，但只可使用交易名稱的前 32 個字元。 當建立巢狀交易時，*transaction_name* 必須是最外層 BEGIN TRANSACTION 陳述式的名稱。 即使  *執行個體不區分大小寫，* transaction_name[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 還是一律都會區分大小寫。  
   
  **@** *tran_name_variable*  
  這是包含有效交易名稱之使用者定義變數的名稱。 這個變數必須用 **char**、**varchar**、**nchar** 或 **nvarchar** 資料類型來宣告。  

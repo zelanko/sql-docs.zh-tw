@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 64f1b991d0978e45cbfa9dbf19ba796cc824bf5c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cee61de08afac103f0280b905100683011460972
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292932"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916730"
 ---
 # <a name="define-a-state-variable"></a>定義狀態變數
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   此程序描述如何定義 CDC 狀態儲存所在的封裝變數。  
@@ -32,7 +32,7 @@ ms.locfileid: "71292932"
   
 |元件|描述|  
 |---------------|-----------------|  
-|**\<狀態名稱>**|此為目前 CDC 狀態的名稱。|  
+|**\<state-name>**|此為目前 CDC 狀態的名稱。|  
 |**CS**|此標示目前處理範圍的起點 (Current Start)。|  
 |**\<cs-lsn>**|此為上一個 CDC 回合最後處理的 LSN (記錄序號)。|  
 |**CE**|此標示目前處理範圍的終點 (Current End)。 CDC 狀態中若存在 CE 元件，代表目前正在處理 CDC 封裝，或是 CDC 封裝在其 CDC 處理範圍未處理完全之前即已失敗。|  
@@ -41,9 +41,9 @@ ms.locfileid: "71292932"
 |**\<ir-start>**|此為初始載入剛要開始前之異動的 LSN。|  
 |**\<ir-end>**|此為初始載入才剛結束後之異動的 LSN。|  
 |**TS**|此標示上次 CDC 狀態更新的時間戳記。|  
-|**\<時間戳記>**|此為 64 位元 System.DateTime.UtcNow 屬性的十進位表示法。|  
+|**\<timestamp>**|此為 64 位元 System.DateTime.UtcNow 屬性的十進位表示法。|  
 |**ER**|此將在上次作業失敗時出現，且包含錯誤原因的簡短描述。 若存在此元件，則其一定出現於最後。|  
-|**\<簡短的錯誤描述>**|此為簡短的錯誤描述。|  
+|**\<short-error-text>**|此為簡短的錯誤描述。|  
   
  每個 LSN 和序號都是編碼為多達 20 位數的十六進位字串，代表 Binary(10) 的 LSN 值。  
   

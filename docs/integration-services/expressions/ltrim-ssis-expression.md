@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: d082f42a-d7e7-49f5-a503-ac44ba630832
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0687540f0008bb354d3cbd40601261727d5124eb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2eb27d666478719acc41b2ca4078be233cea013f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71288933"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915473"
 ---
 # <a name="ltrim-ssis-expression"></a>LTRIM (SSIS 運算式)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   傳回移除開頭空白之後的字元運算式。  

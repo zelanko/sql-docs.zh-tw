@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 1d9c8247-fd89-4544-be9c-01c95b745db0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d47b798f9af00fc3cae3699001b645fc5564b4b0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 89ccceece9d5d84faaae9b63c6846bfbd351f666
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706210"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915608"
 ---
 # <a name="return-transact-sql"></a>RETURN (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +49,9 @@ RETURN [ integer_expression ]
  *integer_expression*  
  這是傳回的整數值。 預存程序可以向發出呼叫的程序或應用程式傳回一個整數值。  
   
-## <a name="return-types"></a>傳回型別  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>傳回型別
  選擇性地傳回 **int**。  
   
 > [!NOTE]  

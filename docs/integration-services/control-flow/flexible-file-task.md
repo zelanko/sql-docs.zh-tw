@@ -12,16 +12,16 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 83ef614593641b762a628838354a6a3bef9dfadd
-ms.sourcegitcommit: 52925f1928205af15dcaaf765346901e438ccc25
+ms.openlocfilehash: 14850ea141db133fe7d3bdfe879ad0e6d47111b8
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80607860"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917884"
 ---
 # <a name="flexible-file-task"></a>彈性檔案工作
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 彈性檔案工作讓使用者能夠在各種支援的儲存體服務上執行檔案作業。
 以下為目前支援的儲存體服務：

@@ -16,16 +16,16 @@ f1_keywords:
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 38ccbeaf23e6d2daab46739064e30c4fc508d10f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1adc541d08e5ce74e6130d6994bd583ae58030d1
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75501913"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916069"
 ---
 # <a name="power-query-source-preview"></a>Power Query 來源 (預覽)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 本文說明如何在 SQL Server Integration Services (SSIS) 資料流程中設定 Power Query 來源的屬性。 Power Query 是一種技術，可讓您使用 Excel/Power BI Desktop 連線到各種資料來源並轉換資料。 如需詳細資訊，請參閱 [Power Query - 概觀與學習](https://support.office.com/article/power-query-overview-and-learning-ed614c81-4b00-4291-bd3a-55d80767f81d) \(機器翻譯\) 一文。 Power Query 所產生的指令碼可以複製並貼到 SSIS 資料流程中的 Power Query 來源並加以設定。
   
@@ -57,7 +57,7 @@ ms.locfileid: "75501913"
 ## <a name="configure-the-power-query-connection-manager"></a>設定 Power Query 連線管理員
 
 在 SSDT 上使用 Power Query 來源設計資料流程時，您可以透過下列方式來建立新的 Power Query 連線管理員：
-- 在選取 [新增]/[偵測資料來源] 按鈕，然後從下拉式功能表中選取 [<New connection...>] 之後 (如上所述)，間接在 Power Query 來源的 [連線管理員] 索引標籤上建立它。
+- 在選取 [新增]  **[偵測資料來源]** / 按鈕，然後從下拉式功能表中選取 [ **]** **之後 (如上所述)，間接在 Power Query 來源的 [連線管理員]<New connection...>** 索引標籤上建立它。
 - 以滑鼠右鍵按一下封裝的 [連線管理員]  面板，然後從下拉式功能表中選取 [新增連線...]  。
 
 ![PQ 來源 [連線管理員] 面板新增](media/power-query-source/pq-source-connection-managers-panel-add.png)
@@ -70,7 +70,7 @@ ms.locfileid: "75501913"
 
 ![PQ 來源 [連線管理員編輯器] 種類](media/power-query-source/pq-source-connection-manager-editor-kind.png)
 
-在這些來源 (**Oracle**、**DB2**、**MySQL**、**PostgreSQL**、**Teradata**、**Sybase**) 中，有一些需要額外安裝可從 [Power Query 必要條件](https://support.office.com/article/data-source-prerequisites-power-query-6062cf52-c764-45d0-a1c6-fbf8fc05b05a) \(機器翻譯\) 一文取得的 ADO.NET 驅動程式。 您可以使用自訂安裝介面，在 Azure-SSIS IR 上安裝它們，請參閱[自訂 Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) 一文。
+在這些來源 (**Oracle**、**DB2**、**MySQL**、**PostgreSQL**、**Teradata**、**Sybase**) 中，有一些需要額外安裝可從 [Power Query 必要條件](/power-bi/desktop-data-source-prerequisites) \(機器翻譯\) 一文取得的 ADO.NET 驅動程式。 您可以使用自訂安裝介面，在 Azure-SSIS IR 上安裝它們，請參閱[自訂 Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) 一文。
 
 對於**資料來源路徑**，您可以輸入不需驗證資訊，即可組成連接字串的資料來源特有屬性。 例如，適用於 **SQL** 資料來源的路徑格式為 `<Server>;<Database>`。 您可以選取 [編輯]  按鈕，以將值指派給組成路徑的資料來源特有屬性。
 
@@ -82,7 +82,7 @@ ms.locfileid: "75501913"
 
 ### <a name="current-limitations"></a>目前的限制
 
--   目前無法在 Azure-SSIS IR 上使用 **Oracle** 資料來源，因為 Oracle ADO.NET 驅動程式無法在該處安裝；因此請暫時改為安裝 Oracle ODBC 驅動程式，並使用 **ODBC** 資料來源連線到 Oracle，請參閱[自訂 Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) 一文中的 **ORACLE 標準 ODBC** 範例。
+-   目前無法在 Azure-SSIS IR 上使用 **Oracle** 資料來源，因為 Oracle ADO.NET 驅動程式無法在該處安裝；因此請暫時改為安裝 Oracle ODBC 驅動程式，並使用 **ODBC** 資料來源連線到 Oracle，請參閱**自訂 Azure-SSIS IR** 一文中的 [ORACLE 標準 ODBC](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) 範例。
 
 -   目前無法以自訂安裝的狀態在 Azure-SSIS IR 上使用 **Web** 資料來源，所以請暫時以無自訂安裝的狀態在 Azure-SSIS IR 上使用。
 

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 1568ed6a-022c-4839-b73e-4eb49558bbc2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a8c4908e3a2269733a71dc8fe5c6d6a9e697a576
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3cc9691c3ed3f894a5231e76870f8075d6d08f4b
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292045"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916008"
 ---
 # <a name="recordset-destination-custom-properties"></a>資料錄集目的地自訂屬性
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   資料錄集目的地同時具有自訂屬性以及所有資料流程元件通用的屬性。  

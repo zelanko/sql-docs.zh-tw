@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7c4a51bfb9da9abe3e50c85896f32269e3fee5ff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c72ac0393733511f63844ae50b20a40e4c12ea4a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296101"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917332"
 ---
 # <a name="lesson-1-7-add-and-configure-the-ole-db-destination"></a>課程 1-7：新增及設定 OLE DB 目的地
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

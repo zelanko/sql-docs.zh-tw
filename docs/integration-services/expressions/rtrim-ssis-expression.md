@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 529bd43e-3f8a-4682-a33e-569176aa7fc4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb899229cf38697ea7abf25fb82dddb7d2826842
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c58da8b33c431f62f4567379beca8b5b12beea4f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297390"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914941"
 ---
 # <a name="rtrim-ssis-expression"></a>RTRIM (SSIS 運算式)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   傳回移除尾端空白之後的字元運算式。  

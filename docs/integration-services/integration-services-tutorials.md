@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: e74217c8-234a-4095-b3c0-5870707e5a87
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 724fca0d77c897ae15d3f6ed1ab1848c265e37de
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b33d565e73983ee1980998142478294ee7ef966b
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296133"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917464"
 ---
 # <a name="integration-services-tutorials"></a>Integration Services 教學課程
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 本章節包含 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]教學課程。  
