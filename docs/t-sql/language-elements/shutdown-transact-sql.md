@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1f3d338531b2d7e7d76571ad2d04793c6200c63d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: db543ba464af2c71ba3390cb4574797713b8c764
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893393"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918770"
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,9 @@ ms.locfileid: "85893393"
 SHUTDOWN [ WITH NOWAIT ]   
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  WITH NOWAIT  
  選擇性。 在不執行每個資料庫之檢查點的情況下，關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在嘗試終止所有使用者處理序之後，結束 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 當重新啟動伺服器時，會執行未完成的交易之回復作業。  
   

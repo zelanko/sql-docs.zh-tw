@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 1547db08-4329-4781-91c2-36898ed71b15
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d98782b0c007f584c5d013c49dafe47a01106a38
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 593c17254c06e22e26e4e131fd74c5dacd1a5621
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71288638"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919051"
 ---
 # <a name="sign-ssis-expression"></a>SIGN (SSIS 運算式)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   傳回數值運算式的正 (+1)、負 (-1) 或零 (0) 符號。  

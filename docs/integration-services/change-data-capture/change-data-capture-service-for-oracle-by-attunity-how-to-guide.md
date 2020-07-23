@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: f50178e7-6d9a-45f9-bfce-61260aa882c1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c1d2cbcf5d9b6751bf0b5842af77462b1b753267
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 32fc2a2ea6e97cb7d7072892b6307b7e4626be73
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294804"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918636"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-how-to-guide"></a>Attunity Oracle Change Data Capture (CDC) 服務使用說明指南
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   本章節描述如何在 CDC 服務組態主控台中執行工作。  

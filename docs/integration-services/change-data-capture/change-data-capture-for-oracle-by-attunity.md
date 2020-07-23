@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 520dc05b-83de-4668-8d27-07ee0ef08185
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ab96499d8c4185e14481e18518cad514992b2e96
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a78ef76f0b8a1c133d09747e460837e1d68dd318
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294814"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918658"
 ---
 # <a name="change-data-capture-for-oracle-by-attunity"></a>Change Data Capture for Oracle by Attunity
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 Change Data Capture for Oracle by Attunity 下載包含下列 2 個元件。

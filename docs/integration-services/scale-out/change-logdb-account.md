@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.reviewer: maghan
-ms.openlocfilehash: f5e6ab35e67f675c20349a7e968ff9d8d7131c68
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0478b685adffa36b4ec344f4f13c52da6436300c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785609"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919034"
 ---
 # <a name="change-the-account-for-scale-out-logging"></a>變更 Scale Out 記錄的帳戶
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 在 Scale Out 中執行 SSIS 套件時，會使用名為 **##MS_SSISLogDBWorkerAgentLogin##** 之自動建立的使用者帳戶將事件訊息記錄到 SSISDB 資料庫中。 此使用者的登入使用 SQL Server 驗證。

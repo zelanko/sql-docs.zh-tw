@@ -17,15 +17,15 @@ ms.assetid: cd253a17-0c85-42b4-912c-690169ebe799
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f2b5b186a5c2fde1537aff652169c9018f4a63f8
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 8c3f1c186774b803794315644c5c8aa9f8cef7ce
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86158896"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918274"
 ---
 # <a name="compare-differences-between-replicated-tables-replication-programming"></a>比較複寫資料表的差異 (複寫程式設計)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   發行項驗證可用來判斷「發行者」和「訂閱者」端資料表發行項的發行資料是否互異，若有則可能代表無法聚合。 如需詳細資訊，請參閱[驗證複寫的資料](../../../relational-databases/replication/validate-data-at-the-subscriber.md)。 不過，驗證只會傳回通過或失敗資訊，而不會針對來源及目的地資料表之間的差異提供任何相關資訊。 **tablediff** 命令提示字元公用程式會傳回兩個資料表之間差異的詳細資訊，甚至可能產生 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 指令碼，將訂閱向發行者端的資料聚合。  
   
 > [!NOTE]  

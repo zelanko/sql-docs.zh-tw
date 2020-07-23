@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: e2920821-2f5b-4c76-8db8-8b9eddf4606f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c6b663a99e8e0e5dd7d9d91a81fe39fecef6802b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a4065651c097d4cf9d2671ac486f294d7884b43a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71288802"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918734"
 ---
 # <a name="modulo-ssis-expression"></a>(模數) (SSIS 運算式)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   提供第一個數值運算式除以第二個數值運算式之後的整數餘數。  

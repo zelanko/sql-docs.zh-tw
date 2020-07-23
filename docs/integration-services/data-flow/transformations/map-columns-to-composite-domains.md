@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: d9422412-8a3d-45ae-af7f-072c902a09ba
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c33d928d7cba81c58053ecc983a3d32b4bffd59d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 311b7d3117d0c8675ed6399c9eeaf85247373295
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297861"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919234"
 ---
 # <a name="map-columns-to-composite-domains"></a>將資料行對應到複合定義域
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   複合定義域是由兩個以上的單一定義域所組成。 您可以將多個資料行對應到定義域，也可將具有分隔值的單一資料行對應到定義域。  

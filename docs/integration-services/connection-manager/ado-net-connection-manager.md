@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d3cf4e302df6e28d898a2790d928cf40085f7915
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 13248409cca973de00f0ee04f6fcb22e020f64fd
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74687269"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918585"
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET 連接管理員
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連接管理員可讓封裝使用 .NET 提供者來存取資料來源。 通常，您會使用此連線管理員來存取資料來源，例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您也可以存取透過自訂工作 (使用如 C# 這類語言以受控程式碼撰寫) 中之 OLE DB 和 XML 公開的資料來源。  

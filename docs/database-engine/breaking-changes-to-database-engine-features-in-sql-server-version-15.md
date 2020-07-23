@@ -15,15 +15,15 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: f716001712ec1e1b893fe12752a37fd176e64241
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 42dcedd7eec5e69259fb32a3939e6a6c42598f4d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751179"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919577"
 ---
 # <a name="breaking-changes-to-database-engine-in-sssqlv15-md"></a>[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] 資料庫引擎的重大變更
-[!INCLUDE[tsql-appliesto-sssver15-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[sqlserver2019](../includes/applies-to-version/sqlserver2019.md)]
 
 SQL Server 2019 沒有引進重大變更。
 

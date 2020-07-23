@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.reviewer: maghan
-ms.openlocfilehash: a631e6e3192e6b727d6fc50feaae2aadaa2d7dc2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 48ed32fedde7d3874f01644eec257f4450e0555e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764859"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919017"
 ---
 # <a name="get-started-with-integration-services-ssis-scale-out-on-a-single-computer"></a>在單一電腦上開始使用 Integration Services (SSIS) Scale Out
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 本節提供在單一電腦環境中使用預設設定來設定 Integration Services Scale Out 的指引。

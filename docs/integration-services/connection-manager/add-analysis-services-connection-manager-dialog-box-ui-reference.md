@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0de4fe433a1f34b49dbfb12082759c954e87a7a4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ffc3d2786ff20ec500fed130dcf6058c9f3f627d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298563"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918614"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>加入 Analysis Services 連接管理員對話方塊 UI 參考
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   使用 [新增 Analysis Services 連線管理員]  對話方塊來建立連線至執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的伺服器，或編輯連線屬性。  

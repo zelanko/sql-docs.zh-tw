@@ -10,16 +10,16 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 6fd7b8d17790fcc1747116b9454a3aaf38136935
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: b77fbcf909d534304bbaf2a27ca55daccb2a94c4
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488243"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918978"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Integration Services (SSIS) 擴增背景工作
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

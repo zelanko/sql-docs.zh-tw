@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: e4d62b73-77c5-4b26-9b6d-d5f245768fc8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 85f97f8e7fe754a4c52b34f52ecb45d142a43c4b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d4147da3260a2b8620d880e2d20c3ed4fd610d05
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297774"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919457"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>緩時變維度精靈 F1 說明
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   使用 **[緩時變維度精靈]** ，以設定將資料載入至各種類型的緩時變維度。 此章節提供 **[緩時變維度精靈]** 之頁面的 F1 說明。 下表描述此章節的主題。  

@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 8d5652e0-cf57-483f-828b-10f00c08418b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 86e63eb6ab4c8d851d442e50b68cc56d2456580c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a1e742bfc0254cddf38a73a8b5923168fb58745f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298443"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918239"
 ---
 # <a name="suggest-column-types-dialog-box-ui-reference"></a>建議資料行類型對話方塊 UI 參考
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   使用 [建議資料行類型]  對話方塊，根據檔案內容的取樣來識別一般檔案連線管理員中之資料行的資料類型與長度。  

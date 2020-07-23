@@ -23,16 +23,16 @@ helpviewer_keywords:
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 651311d70b17ce4be761e7ecc246e8839ef34eb0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5e41b5ffc1ff1cbd524298a17e32f5f677954f24
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295825"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919203"
 ---
 # <a name="execute-package-utility-dtexecui"></a>執行套件公用程式 (dtexecui)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   您可使用 **[執行封裝公用程式]** 來執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。 此公用程式會執行儲存在下列三個位置之一的套件：[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫、[!INCLUDE[ssIS](../../includes/ssis-md.md)] 套件存放區及檔案系統。 此使用者介面可以從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 開啟或藉由在命令提示字元輸入 **dtexecui** 加以開啟，作為使用 **DTExec** 命令提示字元工具執行封裝的替代方案。  

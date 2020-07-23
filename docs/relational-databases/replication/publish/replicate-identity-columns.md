@@ -19,15 +19,15 @@ ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: a750eb05a8f4cb024e1837d46f028c72c76f4a29
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 1473f9f603f85e0e03fb4d7c23f4367daf63bf7b
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86160096"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919435"
 ---
 # <a name="replicate-identity-columns"></a>複寫識別欄位
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   將 IDENTITY 屬性指派給資料行時，[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會自動為含有識別欄位之資料表的新資料列產生序號。 如需詳細資訊，請參閱 [IDENTITY &#40;屬性&#41; &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql-identity-property.md)。 由於識別欄位可能會做為主索引鍵的一部分，因此請務必避免在識別欄位中重複值。 若要在具有多個節點更新的複寫拓撲裡使用識別欄位，複寫拓撲中的每個節點必須使用不同的識別值範圍，以免出現重複。  
   
  例如，「發行者」可指派範圍 1-100、訂閱者 A 指派範圍 101-200，訂閱者 B 則指派範圍 201-300。 如果在「發行者」插入資料列，而且識別值是 65，該值就會複寫到每個「訂閱者」。 當複寫在每個「訂閱者」端插入資料時，不會遞增「訂閱者」資料表中的識別欄位值，而是插入常值 65。 只有使用者插入會導致識別欄位值遞增，複寫代理程式插入則不會。  

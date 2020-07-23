@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 890bd202912cea88491acd79906c873c44e53658
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 431c88eb4f341b55060c23a06b06cf5e599c38e0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71282615"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918297"
 ---
 # <a name="performance-counters"></a>效能計數器
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會安裝一組您可以用於監視資料流程引擎效能的效能計數器。 例如,，您可以監看 "Buffers spooled" 計數器以判斷是否要在封裝執行時，暫時將資料緩衝區寫入到磁碟中。 這種交換會降低效能，並指出電腦的記憶體不足。  
@@ -87,35 +87,35 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 ### <a name="to-add-logging-of-performance-counters"></a>若要加入效能計數器的記錄  
   
-1.  在 [控制台]  中，如果使用傳統檢視，請按一下 [系統管理工具]  。 如果使用類別檢視，請按一下 [效能及維護]  ，然後按一下 [系統管理工具]  。  
+1.  在 [控制台] 中，如果使用傳統檢視，請按一下 [系統管理工具]。 如果使用類別檢視，請按一下 [效能及維護]，然後按一下 [系統管理工具]。  
   
-2.  按一下 [效能]  。  
+2.  按一下 [效能]。  
   
-3.  在 [效能]  對話方塊中，展開 [效能記錄檔及警示]  ，以滑鼠右鍵按一下 [計數器記錄檔]  ，然後按一下 [新記錄檔設定]  。 鍵入記錄檔的名稱。 例如，輸入 **MyLog**。  
+3.  在 [效能] 對話方塊中，展開 [效能記錄檔及警示]，以滑鼠右鍵按一下 [計數器記錄檔]，然後按一下 [新記錄檔設定]。 鍵入記錄檔的名稱。 例如，輸入 **MyLog**。  
   
-4.  按一下 [確定]  。  
+4.  按一下 [確定]。  
   
-5.  在 [MyLog]  對話方塊中，按一下 [加入計數器]  。  
+5.  在 [MyLog] 對話方塊中，按一下 [加入計數器]。  
   
-6.  按一下 [使用本機電腦計數器]  ，以記錄本機電腦上的效能計數器，或按一下 [從下列電腦選取計數器]  ，然後從清單選取電腦，以記錄指定之電腦上的效能計數器。  
+6.  按一下 [使用本機電腦計數器]，以記錄本機電腦上的效能計數器，或按一下 [從下列電腦選取計數器]，然後從清單選取電腦，以記錄指定之電腦上的效能計數器。  
   
 7.  在 [加入計數器] 對話方塊中，選取 [效能物件] 清單中的 [SQL Server:SSIS Pipeline]。  
   
 8.  若要選取效能計數器，請執行下列其中之一：  
   
-    -   選取 [所有計數器]  ，以記錄所有效能計數器。  
+    -   選取 [所有計數器]，以記錄所有效能計數器。  
   
-    -   選取 [從清單選取計數器]  ，並選取要使用的效能計數器。  
+    -   選取 [從清單選取計數器]，並選取要使用的效能計數器。  
   
-9. 按一下 [新增]  。  
+9. 按一下 [新增] 。  
   
-10. 按一下 [關閉]  。  
+10. 按一下 [關閉] 。  
   
-11. 在 [MyLog]  對話方塊中，檢閱 [計數器]  清單中記錄效能計數器的清單。  
+11. 在 [MyLog] 對話方塊中，檢閱 [計數器] 清單中記錄效能計數器的清單。  
   
 12. 若要加入其他計數器，請重複步驟 5 至 10。  
   
-13. 按一下 [確定]  。  
+13. 按一下 [確定]。  
   
     > [!NOTE]  
     >  您必須使用 Administrators 群組成員的本機帳戶或網域帳戶，啟動「效能記錄檔及警示」服務。  
