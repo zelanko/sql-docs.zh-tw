@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a70105791ed9c6dea0371bd941dcae185ab05b2d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3ae80e8db245c5a70db238a17b5d09bb682b09b1
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898598"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942350"
 ---
 # <a name="sysdm_xe_packages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,9 +52,8 @@ ms.locfileid: "85898598"
   
 ## <a name="relationship-cardinalities"></a>關聯性基數  
   
-||||  
-|-|-|-|  
-|從|至|關聯性|  
+| 寄件者 | 收件者 | 關聯性 |
+| ---- | -- | ------------ |  
 |sys.dm_xe_packages.module_address|sys.dm_os_loaded_modules.base_address|多對一|  
   
 ## <a name="see-also"></a>另請參閱  

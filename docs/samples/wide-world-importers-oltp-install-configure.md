@@ -10,18 +10,18 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6d37575864666c5aa2b8c47484b5bcac798b3e9a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d49a56c7d545a69729f222daad1e9504802e7bcc
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718669"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942370"
 ---
 # <a name="installation-and-configuration"></a>安裝和組態
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 Wide World 匯入 OLTP 資料庫安裝和設定指示。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) （或更新版本）或[Azure SQL Database](https://azure.microsoft.com/services/sql-database/)。 如需完整版本的範例，請使用 SQL Server Evaluation/Developer/Enterprise Edition。
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。 若要獲得最佳結果，請使用2016年6月版本或更新版本。
@@ -48,9 +48,9 @@ Wide World 匯入 OLTP 資料庫安裝和設定指示。
 1. 開啟 SQL Server Management Studio，並連接到目標 SQL Server 實例。
 2. 以滑鼠右鍵按一下 [**資料庫**] 節點，然後選取 [**還原資料庫**]。
 3. 選取 [**裝置**]，然後按一下 **[...] 按鈕。**
-4. 在對話方塊中，**選取 [備份裝置**]，按一下 [**新增**]，流覽至伺服器檔案系統中的資料庫備份，然後選取備份。 按一下 [確定] 。
+4. 在對話方塊中，**選取 [備份裝置**]，按一下 [**新增**]，流覽至伺服器檔案系統中的資料庫備份，然後選取備份。 按一下 [確定]  。
 5. 如有需要，請在 [檔案] 窗格中變更**資料檔案和**記錄檔的目標位置。 請注意，最佳做法是將資料和記錄檔放在不同的磁片磁碟機上。
-6. 按一下 [確定] 。 這會起始資料庫還原。 完成之後，您的 SQL Server 實例上會安裝資料庫 WideWorldImporters。
+6. 按一下 [確定]  。 這會起始資料庫還原。 完成之後，您的 SQL Server 實例上會安裝資料庫 WideWorldImporters。
 
 ### <a name="azure-sql-database"></a>Azure SQL Database
 
@@ -80,7 +80,9 @@ Wide World 匯入 OLTP 資料庫安裝和設定指示。
 
 在 SQL Server 中啟用審核需要伺服器設定。 若要啟用 WideWorldImporters 範例的 SQL Server audit，請在資料庫中執行下列語句：
 
-    EXECUTE [Application].[Configuration_ApplyAuditing]
+```sql
+EXECUTE [Application].[Configuration_ApplyAuditing]
+```
 
 在 Azure SQL Database 中，會透過[Azure 入口網站](https://portal.azure.com/)設定 Audit。
 
@@ -90,5 +92,7 @@ Wide World 匯入 OLTP 資料庫安裝和設定指示。
 
 在 WideWorldImporters 的 bacpac 下載中，預設不會啟用資料列層級安全性。 若要在資料庫中啟用資料列層級安全性，請執行下列預存程式：
 
-    EXECUTE [Application].[Configuration_ApplyRowLevelSecurity]
+```sql
+EXECUTE [Application].[Configuration_ApplyRowLevelSecurity]
+```
 

@@ -1,5 +1,5 @@
 ---
-title: 使用 SCOM 監視
+title: 使用 System Center Operations Manager 來監視 AP
 description: 使用 System Center Operations Manager （SCOM）來監視分析平臺系統（AP）應用裝置。
 author: mzaman1
 ms.prod: sql
@@ -9,19 +9,19 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 0b244d85e601e46fe778298e723c0a7d01e669bb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 539c18efe43afcf5436c6913c20cab081974b7f5
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74400974"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86941120"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>使用 System Center Operations Manager 分析平臺系統進行監視
 使用 System Center Operations Manager （SCOM）來監視分析平臺系統（AP）應用裝置。
   
 ## <a name="before-you-begin"></a>開始之前  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>先決條件  
   
 1.  System Center Operations Manager 2007 R2、2012或 2012 SP1 必須已安裝且正在執行。  
   

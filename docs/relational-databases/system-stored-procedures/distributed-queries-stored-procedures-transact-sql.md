@@ -15,29 +15,53 @@ helpviewer_keywords:
 ms.assetid: 0fbf2846-885e-4de2-b552-f6453c3ca136
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6cb0a52e4a9b65f2b874d7e0419ff6221889ba98
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 788140d9936b0e90f7f6e0ad5ea2f5aa6f04e239
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790388"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977565"
 ---
 # <a name="distributed-queries-stored-procedures-transact-sql"></a>分散式查詢預存程序 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援下列用來實作和管理分散式查詢的系統預存程序。  
-  
-|||  
-|-|-|  
-|[sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)|[sp_indexes](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)|  
-|[sp_addlinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)|[sp_linkedservers](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)|  
-|[sp_catalogs](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)|[sp_primarykeys](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)|  
-|[sp_column_privileges_ex](../../relational-databases/system-stored-procedures/sp-column-privileges-ex-transact-sql.md)|[sp_serveroption](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)|  
-|[sp_columns_ex](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)|[sp_table_privileges_ex](../../relational-databases/system-stored-procedures/sp-table-privileges-ex-transact-sql.md)|  
-|[sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)|[sp_tables_ex](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)|  
-|[sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)|[sp_testlinkedserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-testlinkedserver-transact-sql.md)|  
-|[sp_foreignkeys](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)||  
-  
+
+:::row:::
+    :::column:::
+        [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)
+
+        [sp_addlinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)
+
+        [sp_catalogs](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)
+
+        [sp_column_privileges_ex](../../relational-databases/system-stored-procedures/sp-column-privileges-ex-transact-sql.md)
+
+        [sp_columns_ex](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)
+
+        [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)
+
+        [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)
+
+        [sp_foreignkeys](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sp_indexes](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)
+
+        [sp_linkedservers](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)
+
+        [sp_primarykeys](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)
+
+        [sp_serveroption](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)
+
+        [sp_table_privileges_ex](../../relational-databases/system-stored-procedures/sp-table-privileges-ex-transact-sql.md)
+
+        [sp_tables_ex](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)
+
+        [sp_testlinkedserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-testlinkedserver-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

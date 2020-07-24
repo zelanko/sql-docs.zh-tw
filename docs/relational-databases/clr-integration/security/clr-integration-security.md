@@ -2,7 +2,7 @@
 title: CLR 整合安全性 |Microsoft Docs
 description: SQL Server 與 .NET Framework CLR 安全性整合，會管理物件之間的存取。 在物件上執行的安全性檢查取決於涉及的呼叫。
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 07/22/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: clr
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 86785198441bab1210f6b089293d4f174e8dd1b7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dd0f9f37b3381705a2e739276a7a044837fb20ad
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885783"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110159"
 ---
 # <a name="clr-integration-security"></a>CLR 整合安全性
 
@@ -56,7 +56,7 @@ ms.locfileid: "85885783"
  [允許部分信任的呼叫端](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
  討論 Managed 方法叫用其他組件所包含之類別中的方法時所引發的問題。  
   
- [應用程式網域和 CLR 整合安全性](/sql/database-engine/dev-guide/allowing-partially-trusted-callers?view=sql-server-2014)  
+ [應用程式網域和 CLR 整合安全性](/previous-versions/sql/2014/database-engine/dev-guide/allowing-partially-trusted-callers?view=sql-server-2014)  
  描述如何將組件載入應用程式網域中。  
   
 ## <a name="see-also"></a>另請參閱  

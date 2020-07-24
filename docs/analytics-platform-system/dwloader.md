@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 8ea941e45f5125beed0820c5d5242b0f86073f76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f5236d35009c67eb6e205129cd629fa5f7eca54d
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401170"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942340"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>平行處理資料倉儲的 dwloader 命令列載入器
 **dwloader**是平行處理資料倉儲（PDW）命令列工具，可將大量的資料表資料列載入至現有的資料表。 載入資料列時，您可以將所有資料列加入至資料表的結尾（*附加模式*或*fastappend 模式*）、附加新的資料列並更新現有的資料列（*upsert 模式*），或在載入前刪除所有現有的資料列，然後將所有資料列插入空白資料表（*重載模式*）。  
@@ -43,7 +43,7 @@ ms.locfileid: "74401170"
   
 5.  執行**dwloader**。  
   
-    使用適當的命令列選項，登入載入伺服器，並執行可執行檔**dwloader** 。  
+    使用適當的命令列選項，登入載入伺服器，並執行可執行檔**dwloader.exe** 。  
   
 6.  驗證結果。  
   
@@ -123,7 +123,7 @@ dwloader.exe
 **-U** *login_name*  
 具有適當許可權可執行負載的有效 SQL Server Authentication 登入。  
   
-**-P** *密碼*  
+**-P** *password*  
 SQL Server 驗證*login_name*的密碼。  
   
 **-W**  
@@ -136,7 +136,7 @@ For information about configuring Windows Authentication, see [Security - Config
 **-f** *parameter_file_name*  
 使用參數檔案（ *parameter_file_name*）來取代命令列參數。 *parameter_file_name*可以包含*user_name*和*password*以外的任何命令列參數。 如果在命令列和參數檔案中指定參數，命令列會覆寫 file 參數。  
   
-參數檔案包含一個參數，每行沒有**-** 前置詞。  
+參數檔案包含一個參數， **-** 每行沒有前置詞。  
   
 範例：  
   
@@ -195,21 +195,21 @@ For more information about this install option, see [Install dwloader Command-Li
   
 範例：  
   
--   -i \\\loadserver\loads\daily\\*. gz  
+-   -i \\ \loadserver\loads\daily \\ *. gz  
   
--   -i \\\loadserver\loads\daily\\* .txt  
+-   -i \\ \loadserver\loads\daily \\ * .txt  
   
--   -i \\\loadserver\loads\daily\monday. *  
+-   -i \\ \loadserver\loads\daily\monday. *  
   
 -   -i \\\loadserver\loads\daily\monday.txt  
   
--   -i \\\loadserver\loads\daily\\*  
+-   -i \\ \loadserver\loads\daily\\*  
   
 **-R** *load_failure_file_name*  
 如果發生載入失敗， **dwloader**會儲存無法載入的資料列，而失敗會將失敗資訊描述在名為*load_failure_file_name*的檔案中。 如果此檔案已經存在，dwloader 就會覆寫現有的檔案。 當第一次失敗時，會建立*load_failure_file_name* 。 如果所有資料列都載入成功，則不會建立*load_failure_file_name* 。  
   
 **-fh** *number_header_rows*  
-*Source_data_file_name*開頭要忽略的行（列）數目。 預設值為 0。  
+*Source_data_file_name*開頭要忽略的行（列）數目。 預設值是 0。  
   
 <variable_length_column_options>  
 具有以字元分隔之可變長度資料行的*source_data_file_name*選項。 根據預設， *source_data_file_name*包含可變長度資料行中的 ASCII 字元。  
@@ -290,9 +290,9 @@ Unix 需要 LF。 Windows 需要 CR。
   
 這個檔案必須位於載入伺服器上。 路徑可以是 UNC、相對或絕對路徑。 *Fixed_width_config_file*中的每一行都包含一欄的名稱，以及該資料行的字元數。 每個資料行都有一行，如下所示，而且檔案中的順序必須符合目的地資料表中的順序：  
   
-*column_name*=*num_chars*  
+*column_name* =*num_chars*  
   
-*column_name*=*num_chars*  
+*column_name* =*num_chars*  
   
 範例固定寬度設定檔：  
   
@@ -340,17 +340,17 @@ LF 的範例：
   
 Unix 需要 LF。 Windows 需要 CR。  
   
-**-D** { **ymd** | ydm | mdy | myd | dmy |dym |*custom_date_format* }  
+**-D** { **ymd** \| ydm \| mdy \| myd \| dmy \| dym \| *custom_date_format* }  
 指定輸入檔中所有日期時間欄位的月份（m）、日期（d）和年份（y）順序。 預設順序為 ymd。 若要為相同的原始程式檔指定多個訂單格式，請使用-dt 選項。  
   
-ymd |dmy  
+ymd \| dmy  
 ydm 和 dmy 允許相同的輸入格式。 兩者都允許年份在日期的開頭或結尾。 例如，針對**ydm**和**dmy**日期格式，輸入檔中可能會有2013-02-03 或02-03-2013。  
   
 ydm  
 您只能將格式化為 ydm 的輸入載入 datetime 和 Smalldatetime 資料類型的資料行中。 您無法將 ydm 值載入 datetime2、date 或 datetimeoffset 資料類型的資料行。  
   
 mdy  
-<month> <space> <day>mdy 允許<comma>。 <year>  
+mdy 允許 \<month> \<space> \<day> \<comma> \<year> 。  
   
 1975年1月1日 mdy 輸入資料的範例：  
   
@@ -443,7 +443,7 @@ upsert **-K**  *merge_column* [,.。。*n* ]
 當搭配-rt 百分比使用時，載入器會以間隔（-rs 選項）來計算百分比。 因此，失敗資料列的百分比可能會超過*reject_value*。  
   
 **-rs** *reject_sample_size*  
-與`-rt percentage`選項搭配使用，以指定增量百分比檢查。 例如，如果 reject_sample_size 是1000，載入器會在嘗試載入1000個數據列之後，計算失敗的資料列百分比。 它會在嘗試載入每個額外的1000資料列之後重新計算失敗的資料列百分比。  
+與選項搭配使用 `-rt percentage` ，以指定增量百分比檢查。 例如，如果 reject_sample_size 是1000，載入器會在嘗試載入1000個數據列之後，計算失敗的資料列百分比。 它會在嘗試載入每個額外的1000資料列之後重新計算失敗的資料列百分比。  
   
 **-c**  
 移除 char、Nchar、Varchar 和 Nvarchar 欄位左側和右邊的空白字元。 將只包含空白字元的每個欄位轉換為空字串。  
@@ -490,7 +490,7 @@ fastappend 需要 **-m** 。
 ## <a name="return-code-values"></a>傳回碼值  
 0（成功）或其他整數值（失敗）  
   
-在命令視窗或批次檔中，使用`errorlevel`來顯示傳回碼。 例如：  
+在命令視窗或批次檔中，使用 `errorlevel` 來顯示傳回碼。 例如：  
   
 ```  
 dwloader  
@@ -499,7 +499,7 @@ if not %errorlevel%==0 echo Fail
 if %errorlevel%==0 echo Success  
 ```  
   
-使用 PowerShell 時，請`$LastExitCode`使用。  
+使用 PowerShell 時，請使用 `$LastExitCode` 。  
   
 ## <a name="permissions"></a>權限  
 需要目的地資料表的載入許可權和適用的許可權（INSERT、UPDATE、DELETE）。 需要在臨時資料庫上建立許可權（用於建立臨時表）。 如果未使用臨時資料庫，則必須在目的地資料庫上建立許可權。 
@@ -554,13 +554,13 @@ Append 可以在多重交易模式下執行（使用-m 引數），但它不是�
   
 |資料表類型|多重交易<br />模式（-m）|資料表是空的|支援的並行|記錄|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
-|堆積|是|是|是|最小|  
-|堆積|是|否|是|最小|  
-|堆積|否|是|否|最小|  
-|堆積|否|否|否|最小|  
-|Cl|是|是|否|最小|  
+|堆積|是|是|是|基本|  
+|堆積|是|否|是|基本|  
+|堆積|否|是|否|基本|  
+|堆積|否|否|否|基本|  
+|Cl|是|是|否|基本|  
 |Cl|是|否|是|完整|  
-|Cl|否|是|否|最小|  
+|Cl|否|是|否|基本|  
 |Cl|否|否|是|完整|  
   
 上表顯示使用附加模式載入至堆積或叢集索引（CI）資料表的**dwloader** ，其中包含或不含多重交易旗標，並載入至空白資料表或非空白資料表。 每個這種負載組合的鎖定和記錄行為都會顯示在資料表中。 例如，以附加模式將（第2個）階段載入至不含多重交易模式的叢集索引，且在空的資料表中，將會在資料表上建立獨佔鎖定，而且記錄是最小的。 這表示客戶將無法同時載入（第二個）階段，並同時查詢到空白資料表。 不過，使用相同的設定載入非空白資料表時，PDW 不會發出資料表的獨佔鎖定，而且可能會進行平行存取。 可惜的是，完整的記錄會使程式變慢。  
@@ -568,7 +568,7 @@ Append 可以在多重交易模式下執行（使用-m 引數），但它不是�
 ## <a name="examples"></a>範例  
   
 ### <a name="a-simple-dwloader-example"></a>A. 簡單的 dwloader 範例  
-下列範例只會顯示已選取必要選項的**載入**器起始。 其他選項則取自全域設定檔（ *loadparamfile .txt*）。  
+下列範例只會顯示已選取必要選項的**載入**器起始。 其他選項則取自全域設定檔， *loadparamfile.txt*。  
   
 使用 SQL Server 驗證的範例。  
   
@@ -598,13 +598,13 @@ dwloader.exe -U mylogin -P 123jkl -S 10.192.63.148  -i C:\SQLData\AWDimEmployees
 ```  
   
 ### <a name="b-load-data-into-an-adventureworks-table"></a>B. 將資料載入 AdventureWorks 資料表  
-下列範例是批次腳本的一部分，它會將資料載入**AdventureWorksPDW2012**。  若要查看完整的腳本，請開啟**AdventureWorksPDW2012**安裝套件隨附的 aw_create .bat 檔案。 
+下列範例是批次腳本的一部分，它會將資料載入**AdventureWorksPDW2012**。  若要查看完整的腳本，請開啟**AdventureWorksPDW2012**安裝套件隨附的 aw_create.bat 檔案。 
 
 <!-- Missing link
 For more information, see [Install AdventureWorksPDW2012](install-adventureworkspdw2012.md).  
 -->
 
-下列腳本程式碼片段會使用 dwloader 將資料載入至 Dbo.dimaccount 和 DimCurrency 資料表。 此腳本會使用乙太網路位址。 如果使用的是 [不允許]，伺服器會 *<appliance_name>* `-SQLCTL01`。  
+下列腳本程式碼片段會使用 dwloader 將資料載入至 Dbo.dimaccount 和 DimCurrency 資料表。 此腳本會使用乙太網路位址。 如果使用的是 [不允許]，伺服器會 *<appliance_name>* `-SQLCTL01` 。  
   
 ```  
 set server=10.193.63.134  
@@ -646,7 +646,7 @@ with (CLUSTERED INDEX(AccountKey),
 DISTRIBUTION = REPLICATE);  
 ```  
   
-以下是資料檔案 Dbo.dimaccount 的範例，其中包含要載入資料表 Dbo.dimaccount 中的資料。  
+以下是資料檔案的範例，DimAccount.txt，其中包含要載入資料表 Dbo.dimaccount 的資料。  
   
 ```  
 --Sample of data in the DimAccount.txt load file.  
@@ -675,7 +675,7 @@ C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe -
   
 命令列參數的描述：  
   
--   *C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe*是已安裝的 dwloader 位置。  
+-   *C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe*是 dwloader.exe 的安裝位置。  
   
 -   *-S*後面接著控制節點的 IP 位址。  
   
@@ -685,17 +685,17 @@ C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe -
   
 -   *-e UTF16*表示來源檔案使用位元組由小到大字元編碼類型。  
   
--   *-i .\DimAccount.txt*指定資料位於名為 dbo.dimaccount 的檔案中，該檔案存在於目前目錄中。  
+-   *-i .\DimAccount.txt*指定資料位於名為 DimAccount.txt 的檔案中，該檔案存在於目前目錄中。  
   
 -   *-T AdventureWorksPDW2012：* 指定要接收資料之資料表的三部分名稱。  
   
 -   *-R dbo.dimaccount。錯誤*指定無法載入的資料列將會寫入名為 dbo.dimaccount 的檔案。錯誤。  
   
--   *-t "|"* 指出輸入檔（Dbo.dimaccount）中的欄位是以管道字元分隔。  
+-   *-t "|"* 指出輸入檔中的欄位（DimAccount.txt）是以管線字元分隔。  
   
--   *-r \r\n*會指定 dbo.dimaccount 中的每個資料列都以回車和換行字元做為結尾。  
+-   *-r \r\n*會將 DimAccount.txt 結尾的每個資料列指定為回車和換行字元。  
   
--   *-U <login_name>-P <password> *指定具有執行負載之許可權的登入和密碼。  
+-   *-U <login_name>-P <password> *指定具有執行負載許可權之登入的登入和密碼。  
   
 
 <!-- MISSING LINK

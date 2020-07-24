@@ -1,6 +1,6 @@
 ---
 title: CREATE MEMBER 語句（MDX） |Microsoft Docs
-ms.date: 06/04/2018
+ms.date: 07/22/2020
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 220741cb2103c3428737cdcb9def9463381db900
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3ca2c664246dfeab8070337a0daf818fb0a3327c
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69494068"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110155"
 ---
 # <a name="mdx-data-definition---create-member"></a>MDX 資料定義 - CREATE MEMBER
 
@@ -105,7 +105,7 @@ WHERE ProfitRatio
 ```  
   
 ## <a name="standard-properties"></a>標準屬性  
- 每個導出成員都有一組預設屬性。 當用戶端應用程式連接到[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]時，預設屬性會受到支援，或可在系統管理員選擇時提供支援。  
+ 每個導出成員都有一組預設屬性。 當用戶端應用程式連接到時 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，預設屬性會受到支援，或可在系統管理員選擇時提供支援。  
   
  可能會有其他的成員屬性可用，視 Cube 定義而定。 以下屬性代表與 Cube 中維度層級相關的資訊。  
   
@@ -114,9 +114,9 @@ WHERE ProfitRatio
 |SOLVE_ORDER|當導出成員參考另一個導出成員 (亦即，導出成員彼此交叉) 時，解析導出成員的順序。|  
 |FORMAT_STRING|用戶端應用程式在顯示資料格值時可以使用的 Office 樣式格式字串。|  
 |VISIBLE|指出是否可以看見結構描述資料列集中導出成員的值。 可見的匯出成員可以使用[AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md)函數新增至集合。 非零的值代表可以看見導出成員。 這個屬性的預設值是*可見*的。<br /><br /> 不可見的導出成員 (此值會設為零) 一般會在較為複雜的導出成員中作為中間步驟。 其他成員類型 (例如，量值) 也可以參考這些導出成員。|  
-|NON_EMPTY_BEHAVIOR|解析空白資料格時，用以決定導出成員行為的量值或集合。<br /><br /> ** \*警告\* \* **此屬性已被取代。 請勿設定。 如需詳細資訊，請參閱[SQL Server 2014 中已淘汰的 Analysis Services 功能](/sql/analysis-services/deprecated-analysis-services-features-in-sql-server-2014)。|  
+|NON_EMPTY_BEHAVIOR|解析空白資料格時，用以決定導出成員行為的量值或集合。<br /><br /> 警告此屬性已被取代。 ** \* \* \* \* ** 請勿設定。 如需詳細資訊，請參閱[SQL Server 2014 中已淘汰的 Analysis Services 功能](/previous-versions/sql/2014/analysis-services/deprecated-analysis-services-features-in-sql-server-2014?view=sql-server-2014)。|  
 |CAPTION|用戶端應用程式當做成員標題使用的字串。|  
-|DISPLAY_FOLDER|識別用戶端應用程式用於顯示成員之顯示資料夾路徑的字串。 資料夾層級的分隔符號是由用戶端應用程式所定義。 針對所提供的工具和客戶[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]端，反斜線\\（）為層級分隔符號。 若要針對已定義的成員提供多個顯示資料夾，請使用分號 (;) 來分隔資料夾。|  
+|DISPLAY_FOLDER|識別用戶端應用程式用於顯示成員之顯示資料夾路徑的字串。 資料夾層級的分隔符號是由用戶端應用程式所定義。 針對所提供的工具和用戶端 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，反斜線（ \\ ）為層級分隔符號。 若要針對已定義的成員提供多個顯示資料夾，請使用分號 (;) 來分隔資料夾。|  
 |ASSOCIATED_MEASURE_GROUP|與此成員建立關聯之量值群組的名稱。|  
   
 ## <a name="see-also"></a>另請參閱  

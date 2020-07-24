@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f4f4cd71f7ecfaa0f8221f599a2814c153af97be
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: ace89ae45aff0e740691025d2039213cfacebff9
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669870"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971830"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   建立以現有採礦結構為基礎的新採礦模型。  當您使用**ALTER database**語句來建立新的採礦模型時，該結構必須已經存在。 相反地，當您使用語句時，[建立 &#40;DMX&#41;的「採礦模型](../dmx/create-mining-model-dmx.md)」時，您會建立模型，並同時自動產生其基礎的「採礦結構」。  
   
@@ -36,7 +36,7 @@ USING <algorithm> [(<parameter list>)]
 ```  
   
 ## <a name="arguments"></a>引數  
- *structure*  
+ *表示*  
  要對其加入採礦模型之採礦結構的名稱。  
   
  *model*  
@@ -55,7 +55,7 @@ USING <algorithm> [(<parameter list>)]
  提供者所定義的資料採礦演算法名稱。  
   
 > [!NOTE]  
->  您可以使用 DMSCHEMA_MINING_SERVICES 資料列[集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)來抓取目前提供者所支援的演算法清單。 若要查看目前實例中支援的演算法 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，請參閱[資料採礦屬性](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)。  
+>  您可以使用 DMSCHEMA_MINING_SERVICES 資料列[集](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126251(v=sql.110))來抓取目前提供者所支援的演算法清單。 若要查看目前實例中支援的演算法 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，請參閱[資料採礦屬性](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)。  
   
  *參數清單*  
  選擇性。 提供者自訂之演算法參數的逗號分隔清單。  
@@ -121,7 +121,7 @@ USING <algorithm> [(<parameter list>)]
   
 |||  
 |-|-|  
-|**PREDICT**|這個資料行可以由模型預測，而其值可以用來當做輸入以預測其他可預測資料行的值。|  
+|**預報**|這個資料行可以由模型預測，而其值可以用來當做輸入以預測其他可預測資料行的值。|  
 |**PREDICT_ONLY**|這個資料行可以依模型預測，但是其值不能用於輸入案例中以預測其他可預測資料行的值。|  
   
 ## <a name="filter-criteria-expressions"></a>篩選準則運算式  

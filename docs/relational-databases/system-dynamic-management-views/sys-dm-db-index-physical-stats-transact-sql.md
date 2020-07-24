@@ -21,12 +21,12 @@ ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8dcde5de27764979cf2258d3d1895574a4ca4e54
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e1ebbe98efecd97cb7ddda6284d4a28176e8ec1
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85677917"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112764"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -110,10 +110,16 @@ sys.dm_db_index_physical_stats (
 |avg_record_size_in_bytes|**float**|記錄大小平均值 (以位元組為單位)。<br /><br /> 如果是索引，則為 IN_ROW_DATA 配置單位中 B 型樹狀目錄目前層級的平均記錄大小。<br /><br /> 如果是堆積，則為 IN_ROW_DATA 配置單位中的平均記錄大小。<br /><br /> 如果是 LOB_DATA 或 ROW_OVERFLOW_DATA 配置單位，則為完整配置單位中的平均記錄大小。<br /><br /> 當*mode* = 有限時，則為 Null。|  
 |forwarded_record_count|**bigint**|在堆積中，有指向另一個資料位置之轉送指標的記錄數目 (此狀態發生於更新期間，原始位置的空間不足以儲存新資料列時)。<br /><br /> 如果是 IN_ROW_DATA 配置單位以外的任何堆積配置單位，則為 NULL。<br /><br /> 當*mode* = 有限時，則為 Null。|  
 |compressed_page_count|**bigint**|壓縮的頁面數。<br /><br /> 如果是堆積，新配置的頁面不會使用 PAGE 壓縮方式。 堆積會在兩個特殊情況下使用 PAGE 壓縮方式：大量匯入資料或是重建堆積時。 造成頁面配置的一般 DML 作業將不會使用 PAGE 壓縮方式。 當 compressed_page_count 值成長到大於您要的臨界值時，重建堆積。<br /><br /> 如果是具有叢集索引的資料表，compressed_page_count 值會指示 PAGE 壓縮的效能。|  
-|hobt_id|BIGINT|**適用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。<br /><br /> 僅適用于資料行存放區索引，這是資料列集的識別碼，用來追蹤資料分割的內部資料行存放區資料。 資料列集會儲存為數據堆積或二進位樹狀結構。 它們具有與父資料行存放區索引相同的索引識別碼。 如需詳細資訊，請參閱[internal_partitions &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)。<br /><br /> 如果為，則為 Null|  
-|column_store_delete_buffer_state|TINYINT|**適用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = 清空<br /><br /> 3 = 排清<br /><br /> 4 = 淘汰<br /><br /> 5 = 就緒|  
-|column_store_delete_buff_state_desc||**適用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。<br /><br /> 無效-父索引不是資料行存放區索引。<br /><br /> Deleters 和掃描器會使用此。<br /><br /> 清空-deleters 會清空，但掃描器仍會使用它。<br /><br /> 清除緩衝區已關閉，緩衝區中的資料列會寫入至刪除點陣圖。<br /><br /> 正在淘汰-關閉的刪除緩衝區中的資料列已寫入刪除點陣圖，但緩衝區並未被截斷，因為掃描器仍在使用它。 新的掃描器不需要使用淘汰緩衝區，因為開啟的緩衝區已足夠。<br /><br /> 就緒-此刪除緩衝區已準備好可供使用。|  
-  
+|hobt_id|BIGINT|僅適用于資料行存放區索引，這是資料列集的識別碼，用來追蹤資料分割的內部資料行存放區資料。 資料列集會儲存為數據堆積或二進位樹狀結構。 它們具有與父資料行存放區索引相同的索引識別碼。 如需詳細資訊，請參閱[internal_partitions &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)。<br /><br /> 如果為，則為 Null <br /><br /> **適用于**： SQL Server 2016 和更新版本、Azure SQL Database、Azure SQL 受控執行個體|  
+|column_store_delete_buffer_state|TINYINT| 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = 清空<br /><br /> 3 = 排清<br /><br /> 4 = 淘汰<br /><br /> 5 = 就緒<br /><br />**適用于**： SQL Server 2016 和更新版本、Azure SQL Database、Azure SQL 受控執行個體|  
+|column_store_delete_buff_state_desc|| 無效-父索引不是資料行存放區索引。<br /><br /> Deleters 和掃描器會使用此。<br /><br /> 清空-deleters 會清空，但掃描器仍會使用它。<br /><br /> 清除緩衝區已關閉，緩衝區中的資料列會寫入至刪除點陣圖。<br /><br /> 正在淘汰-關閉的刪除緩衝區中的資料列已寫入刪除點陣圖，但緩衝區並未被截斷，因為掃描器仍在使用它。 新的掃描器不需要使用淘汰緩衝區，因為開啟的緩衝區已足夠。<br /><br /> 就緒-此刪除緩衝區已準備好可供使用。 <br /><br /> **適用于**： SQL Server 2016 和更新版本、Azure SQL Database、Azure SQL 受控執行個體|  
+|version_record_count|**bigint**|這是在此索引中維護的資料列版本記錄計數。  這些資料列版本是由[加速資料庫](../../relational-databases/accelerated-database-recovery-concepts.md)復原功能所維護。 <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
+|inrow_version_record_count|**bigint**|保留在資料列中以供快速抓取的 ADR 版本記錄計數。 <br /><br />  [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)]、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e|  
+|inrow_diff_version_record_count|**bigint**| 與基底版本不同的 ADR 版本記錄計數。 <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|total_inrow_version_payload_size_in_bytes|**bigint**|此索引的 inrow 版本記錄大小總計（以位元組為單位）。 <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|offrow_regular_version_record_count|**bigint**|要保留在原始資料列之外的版本記錄計數。 <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|offrow_long_term_version_record_count|**bigint**|視為長期的版本記錄計數。 <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
+
 ## <a name="remarks"></a>備註  
  sys.dm_db_index_physical_stats 動態管理函數會取代 DBCC SHOWCONTIG 陳述式。  
   
@@ -424,12 +430,12 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [索引相關的動態管理檢視和函式 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [dm_db_index_operational_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
  [dm_db_index_usage_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
  [dm_db_partition_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
- [allocation_units &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [&#40;Transact-sql&#41;的系統檢視](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

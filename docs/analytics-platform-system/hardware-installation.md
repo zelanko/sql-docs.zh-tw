@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 60e27e2251cd2f613ca00266d76d4aaaf3b5c442
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e6a0d89b4976076f14fe567b7a95e7cbb47c9f9
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401118"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942330"
 ---
 # <a name="hardware-installation-for-analytics-platform-system-aps-appliance"></a>分析平臺系統（AP）設備的硬體安裝
 本文說明如何針對您的 SQL Server PDW 設備移動、打開封裝和安裝硬體。 本文僅供參考，其目的是協助您瞭解此程式。 您的設備應該先解壓縮、安裝及驗證，然後才會變成您的裝置。 資料中心存取、電力和乙太網路連線等專案都需要客戶參與。  
@@ -54,12 +54,12 @@ ms.locfileid: "74401118"
 ## <a name="install-additional-components"></a><a name="AfterMoving"></a>安裝其他元件  
 請使用下列檢查清單來安裝其他元件。  
   
-|工作|描述||  
-|--------|---------------|-|  
-|打開包裝和機架網路交換器和 Pdu|使用機架圖表將網路交換器和 Pdu 放在機架中的適當位置。||  
-|根據纜線標籤來連接未通過和乙太網路纜線|請參閱纜線圖。 每個纜線的每一端都有一個標籤，以指定需要連線的位置。||  
-|連接所有電源線|請參閱纜線圖。||  
-|開啟機架和 Pdu 的電源供應器|將電源供應器與機架連線，以及從機架連接到 Pdu。 **目前請勿開啟任何其他設備元件的電源。**||  
+|工作|描述|
+|--------|---------------|
+|打開包裝和機架網路交換器和 Pdu|使用機架圖表將網路交換器和 Pdu 放在機架中的適當位置。|
+|根據纜線標籤來連接未通過和乙太網路纜線|請參閱纜線圖。 每個纜線的每一端都有一個標籤，以指定需要連線的位置。|
+|連接所有電源線|請參閱纜線圖。|
+|開啟機架和 Pdu 的電源供應器|將電源供應器與機架連線，以及從機架連接到 Pdu。 **目前請勿開啟任何其他設備元件的電源。**|
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

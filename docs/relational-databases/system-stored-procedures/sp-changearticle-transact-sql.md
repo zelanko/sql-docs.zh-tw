@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 223f1feb346a48a2afaae9e89437ba1b06bcd2c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e0f9b47d2a8d5732aa42ed92f2b5af00524052e6
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717396"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977535"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -210,9 +210,8 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="valid-schema-options"></a>有效結構描述選項  
  下表根據複寫類型（顯示在頂端）和發行項類型（顯示在第一個資料行下方），描述允許的*schema_option*值。  
   
-|發行項類型|複寫類型||  
-|------------------|----------------------|------|  
-||交易式|快照式|  
+| 發行項類型 | 複寫類型-交易式 | 複寫類型-快照集 |
+| ------------ | -------------------------------- | --------------------------- |
 |**logbased**|所有選項|所有選項，但**0x02**|  
 |**logbased manualfilter**|所有選項|所有選項，但**0x02**|  
 |**logbased manualview**|所有選項|所有選項，但**0x02**|  
@@ -242,7 +241,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
  [sp_addarticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlecolumn &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_droparticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
- [sp_helparticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
+ [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [sp_helparticlecolumns &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
   
   

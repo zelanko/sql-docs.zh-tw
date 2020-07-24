@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3a11adb93f3de8f0887eefe964f1c85836ccc43e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3291b5ca72ab984ecd8487612384ece6d5b76f9a
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750577"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942275"
 ---
 # <a name="submitchanges-method-rds"></a>SubmitChanges 方法 (RDS)
 將本機快取和可更新[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)的暫止變更提交至[Connect](../../../ado/reference/rds-api/connect-property-rds.md)屬性或[URL](../../../ado/reference/rds-api/url-property-rds.md)屬性中所指定的資料來源。  
@@ -40,7 +40,7 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  *DataFactory*  
  代表[RDSServer DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)物件的物件變數。  
   
- *建立*  
+ *連線*  
  **字串**值，表示使用 RDS 建立的連接 **。DataControl**物件的[Connect](../../../ado/reference/rds-api/connect-property-rds.md)屬性。  
   
  *Recordset*  
@@ -58,11 +58,16 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  如果已設定**url**屬性， **SubmitChanges**會將變更提交至 url 所指定的位置。  
   
 ## <a name="applies-to"></a>套用至  
-  
-|||  
-|-|-|  
-|[DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[DataFactory 物件 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|  
-  
+
+:::row:::
+    :::column:::
+        [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+    :::column-end:::
+    :::column:::
+        [DataFactory 物件 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另請參閱  
  [SubmitChanges 方法範例（VBScript）](../../../ado/reference/rds-api/submitchanges-method-example-vbscript.md)   
  [通訊錄命令按鈕](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bc56f1434c0b1670495d30accdb70e0456295b01
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0068e1afb8f096b3758d45a770f1aac56512d0c6
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717437"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977587"
 ---
 # <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,9 +53,8 @@ sp_filestream_force_garbage_collection
   
 ## <a name="return-code-values"></a>傳回碼值  
   
-|||  
-|-|-|  
-|值|描述|  
+| 值 | 描述 |
+| ----- | ----------- |   
 |0|作業成功|  
 |1|作業失敗|  
   
@@ -106,7 +105,7 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB',
 ```  
   
 ## <a name="see-also"></a>另請參閱  
-[檔案資料流](../../relational-databases/blob/filestream-sql-server.md)
+[Filestream](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Filetable](../../relational-databases/blob/filetables-sql-server.md)
 <br>[Filestream 及 FileTable 動態管理檢視 (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
 <br>[Filestream 和 FileTable 目錄檢視 (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)

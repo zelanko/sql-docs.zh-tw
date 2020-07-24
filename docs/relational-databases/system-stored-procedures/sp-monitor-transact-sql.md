@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 21d6e73f79c2cb8c1c0a749f4d8e849d644c8291
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 400d6f484ee80d9b4b1244aad6b91c8836aa95d4
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891578"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977704"
 ---
 # <a name="sp_monitor-transact-sql"></a>sp_monitor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,37 +65,35 @@ sp_monitor
  針對每個資料行，統計資料會以*數位*（*數位*）-*數位*% 或*數位*（*數位*）的形式列印。 第一個*數位*是指自從重新開機之後的秒數（ **cpu_busy**、 **io_busy**和**閒置**）或總數（針對其他變數） [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 括弧中的*數位*指的是上次執行**sp_monitor**後的秒數或總數。 百分比是上次執行**sp_monitor**以來的時間百分比。 例如，如果報表顯示**cpu_busy**為4250（215）-68%，則 cpu 在上次啟動後已忙碌4250秒 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，自上次執行**sp_monitor**起的215秒，以及自上次執行**sp_monitor**以來的總時間為68%。  
   
 ## <a name="permissions"></a>權限  
- 需要**系統管理員（sysadmin** ）固定伺服器角色中的成員資格。  
+ 需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
  下列範例會報告有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 忙碌情形的資訊。  
   
-```  
+```console
 USE master  
 EXEC sp_monitor  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-||||  
-|-|-|-|  
-|**last_run**|**current_run**|**表示**|  
-|Mar 29 1998 11:55AM|Apr 4 1998 2:22 PM|561|  
-  
-||||  
-|-|-|-|  
-|**cpu_busy**|**io_busy**|**忙**|  
-|190（0）-0%|187（0）-0%|148（556）-99%|  
-  
-||||  
-|-|-|-|  
-|**packets_received**|**packets_sent**|**packet_errors**|  
-|16（1）|20（2）|0（0）|  
-  
-|||||  
-|-|-|-|-|  
-|**total_read**|**total_write**|**total_errors**|**介面**|  
-|141（0）|54920（127）|0（0）|4（0）|  
+
+```console
+last_run       current_run                   seconds
+-----------    --------------------------    ---------
+Mar 29 1998    11:55AM Apr 4 1998 2:22 PM    561
+
+cpu_busy           io_busy     idle
+---------------    ---------   --------------
+190(0)-0%          187(0)-0%   148(556)-99%
+
+packets_received       packets_sent    packet_errors
+----------------       ------------    -------------
+16(1)                  20(2)           0(0)
+
+total_read     total_write   total_errors    connections
+-----------    -----------   -------------   -----------
+141(0)         54920(127)    0(0)            4(0)
+```
   
 ## <a name="see-also"></a>另請參閱  
  [sp_who &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   

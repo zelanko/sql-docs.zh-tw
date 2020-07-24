@@ -20,11 +20,12 @@ ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2281586bfe77b7cadaa2b3a8f7ae7a9b18c655ab
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 000c71e284f77b5024cd45727803af55fa8d8b06
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091774"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977733"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -107,9 +108,8 @@ GO
   
  這則範例會從資料表中傳回所有 DocId 和全文檢索索引鍵，如下所示：  
   
-||||  
-|-|-|-|  
-||`docid`|`key`|  
+| TABLE | docid | 索引鍵 |
+| ----- | ----- | --- |
 |`1`|`1`|`1`|  
 |`2`|`2`|`2`|  
 |`3`|`3`|`3`|  
@@ -132,9 +132,8 @@ GO
   
  這則範例會傳回下列結果。  
   
-||||  
-|-|-|-|  
-||`docid`|`key`|  
+| TABLE | docid | 索引鍵 |
+| ----- | ----- | --- |
 |`4`|`4`|`4`|  
   
 ## <a name="see-also"></a>另請參閱  

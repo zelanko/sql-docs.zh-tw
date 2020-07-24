@@ -20,11 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 572cc4eb126114697d4fc4ecfeb9589458c46baa
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 7ce40edcea8e734aae84b5f24ec5f0e71890c7d6
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053492"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977509"
 ---
 # <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a>managed_backup. sp_get_backup_diagnostics （Transact-sql）
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "86053492"
 managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@begin_time = ] 'time1' ] [, [@end_time = ] 'time2'VARCHAR(255) = 'Xevent',@begin_time DATETIME = NULL,@end_time DATETIME = NULL  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>參量  
+##  <a name="arguments"></a><a name="Arguments"></a> 引數  
  @xevent_channel  
  擴充事件類型。 預設值會設定為傳回過去 30 分鐘內記錄的所有事件。 記錄的事件會視啟用的擴充事件類型而定。 您可以使用此參數篩選預存程序，僅顯示特定類型的事件。 您可以指定完整的事件名稱，或指定子字串，例如： **' admin**'、 **' 分析 '**、 **' Operational '** 和 **' Debug '**。 @event_channel為**VARCHAR （255）**。  
   
@@ -56,12 +57,11 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
 ## <a name="table-returned"></a>傳回的資料表  
  此預存程序會傳回內含下列資訊的資料表：  
   
-||||  
-|-|-|-|  
-|資料行名稱|資料類型|描述|  
+| 資料行名稱 | 資料類型 | 描述 |  
+| ----------- | --------- | ----------- |
 |event_type|NVARCHAR （512）|擴充事件類型。|  
 |事件|NVARCHAR （512）|事件記錄的摘要。|  
-|時間戳記|timestamp|顯示事件引發時間的事件時間戳記。|  
+|Timestamp|timestamp|顯示事件引發時間的事件時間戳記。|  
   
 ## <a name="security"></a>安全性  
   

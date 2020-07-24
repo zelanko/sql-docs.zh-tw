@@ -20,12 +20,12 @@ ms.assetid: 6bd46fe1-417d-452d-a9e6-5375ee8690d8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 948feee2b133f7135f753d789cca119af60bd8b7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d128ee81a4465bdb24b9e6fde48d5dbe8cc8b8cc
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85676659"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942360"
 ---
 # <a name="sysdm_exec_connections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -71,8 +71,8 @@ ms.locfileid: "85676659"
   
 ## <a name="relationship-cardinalities"></a>關聯性基數  
   
-||||  
-|-|-|-|  
+| 第一個元素 | 第二個元素 | 關聯性 |
+| --------------| -------------- | ------------ |  
 |dm_exec_sessions.session_id|dm_exec_connections.session_id|一對一|  
 |dm_exec_requests.connection_id|dm_exec_connections.connection_id|多對一|  
 |dm_broker_connections.connection_id|dm_exec_connections.connection_id|一對一|  
