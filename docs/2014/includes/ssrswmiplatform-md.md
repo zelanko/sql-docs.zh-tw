@@ -1,1 +1,0 @@
-Windows Server 2003 Datacenter Edition;Windows Server 2003，Enterprise Edition;Windows Server 2003，Standard Edition;Windows Vista;Windows XP Professional Service Pack \(2 SP2\)或 Service pack 1 \(SP1;\)或 Windows 2000 \(所有版本\)
