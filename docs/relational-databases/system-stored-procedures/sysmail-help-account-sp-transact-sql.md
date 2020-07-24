@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8374beba2eda97df3817dc27c337e46f9ba57780
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 11242eae3f17e24c428aac3a6f344d937f15dd33
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890926"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122686"
 ---
 # <a name="sysmail_help_account_sp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,9 +49,8 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ## <a name="result-sets"></a>結果集  
  傳回包含下列資料行的結果集。  
   
-||||  
-|-|-|-|  
-|資料行名稱|資料類型|描述|  
+| 資料行名稱 | 資料類型 | 描述 |
+| ----------- | --------- | ----------- |
 |**account_id**|**int**|帳戶的識別碼。|  
 |**name**|**sysname**|帳戶的名稱。|  
 |**description**|**nvarchar(256)**|帳戶的描述。|  

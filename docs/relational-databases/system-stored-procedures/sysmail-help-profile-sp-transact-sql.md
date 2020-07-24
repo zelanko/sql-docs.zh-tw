@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 061016b3a9f1283f82263a4f89fdb81acfc86889
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 947038e26a4367425576261594befff032f6eeea
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890915"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122726"
 ---
 # <a name="sysmail_help_profile_sp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,9 +49,8 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 ## <a name="result-sets"></a>結果集  
  傳回含下列資料行的結果集。  
   
-||||  
-|-|-|-|  
-|資料行名稱|資料類型|描述|  
+| 資料行名稱 | 資料類型 | 描述 |
+| ----------- | --------- | ----------- |
 |**profile_id**|**int**|設定檔的設定檔識別碼。|  
 |**name**|**sysname**|設定檔的設定檔名稱。|  
 |**description**|**nvarchar(256)**|設定檔的描述。|  

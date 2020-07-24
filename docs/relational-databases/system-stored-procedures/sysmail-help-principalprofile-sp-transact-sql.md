@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 024eec5c9e74eb48ac57dcf16a40a7783d79f5b3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9f4d5af37675811b978e444e40e730ad59fd823b
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890896"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122728"
 ---
 # <a name="sysmail_help_principalprofile_sp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,9 +55,8 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 ## <a name="result-sets"></a>結果集  
  傳回包含下表所列資料行的結果集。  
   
-||||  
-|-|-|-|  
-|資料行名稱|資料類型|描述|  
+| 資料行名稱 | 資料類型 | 描述 |
+| ----------- | --------- | ----------- |
 |**principal_id**|**int**|資料庫使用者的識別碼。|  
 |**principal_name**|**sysname**|資料庫使用者的名稱。|  
 |**profile_id**|**int**|Database Mail 設定檔的識別碼。|  
@@ -70,7 +69,7 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
  **sysmail_help_principalprofile_sp**是在**msdb**資料庫中，而且是由**dbo**架構所擁有。 如果目前的資料庫不是**msdb**，就必須以三部分的名稱來執行此程式。  
   
 ## <a name="permissions"></a>權限  
- 需要**系統管理員（sysadmin** ）固定伺服器角色中的成員資格。  
+ 需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fb13be5e26fb4bdb74b4776ca34ab42eacc7eb03
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 307b1a1259210890d0b21abdc7a26f0e321e49b3
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890907"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122685"
 ---
 # <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,9 +47,8 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ## <a name="result-sets"></a>結果集  
  若未指定** \@ parameter_name** ，會傳回具有下列資料行的結果集。  
   
-||||  
-|-|-|-|  
-|資料行名稱|資料類型|描述|  
+| 資料行名稱 | 資料類型 | 描述 |
+| ----------- | --------- | ----------- |
 |**paramname**|**nvarchar(256)**|組態參數的名稱。|  
 |**paramvalue**|**nvarchar(256)**|組態參數值。|  
 |**description**|**nvarchar(256)**|組態參數的描述。|  

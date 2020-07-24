@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: faa96f7e-be92-47b1-8bc5-4dbba5331655
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ea9690011e963e6374b562f37d64573546a170c3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1c434dda6a19a6090c9ba3c670ce33e673d7abf7
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85871116"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122239"
 ---
 # <a name="sp_clean_db_free_space-transact-sql"></a>sp_clean_db_free_space (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,47 +34,46 @@ ms.locfileid: "85871116"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql 
 sp_clean_db_free_space   
-[ @dbname ] = 'database_name'   
-[ , [ @cleaning_delay = ] 'delay_in_seconds' ] [;]  
+  [ @dbname = ] 'database_name'   
+  [ , [ @cleaning_delay = ] 'delay_in_seconds' ] [;]  
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @dbname =] '*database_name*'  
+ @dbname= '*database_name*'  
  這是要清除的資料庫名稱。 *dbname*是**sysname** ，不能是 Null。  
   
- [ @cleaning_delay =] '*delay_in_seconds*'  
+ @cleaning_delay= '*delay_in_seconds*'  
  指定頁面清除之間的延遲間隔。 如此有助於減少對 I/O 系統的影響。 *delay_in_seconds*是**int** ，預設值是0。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="remarks"></a>備註  
- 資料表中的刪除作業或是造成資料列移動的更新作業可以立即釋放頁面上的空間，其方式是移除資料列的參考。 但是在某些情況下，此資料列可以當做準刪除記錄實際存留在資料頁上。 背景處理序會定期移除準刪除記錄。 回應查詢時，不會傳回這 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 項剩餘資料。 但是，在資料或備份檔案的實體安全性遇到風險的環境中，您可以使用 sp_clean_db_free_space 清除這些準刪除記錄。  
+ 資料表中的刪除作業或是造成資料列移動的更新作業可以立即釋放頁面上的空間，其方式是移除資料列的參考。 但是在某些情況下，此資料列可以當做準刪除記錄實際存留在資料頁上。 背景處理序會定期移除準刪除記錄。 回應查詢時，不會傳回這 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 項剩餘資料。 不過，在資料或備份檔案的實體安全性有風險的環境中，您可以使用 `sp_clean_db_free_space` 來清除這些准刪除記錄。 若要針對每個資料庫檔案執行此作業，請使用[sp_clean_db_file_free_space （transact-sql）](../../relational-databases/system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md)。 
   
- 執行 sp_clean_db_free_space 所需的時間長度取決於檔案的大小、可用的空間及磁碟的容量。 因為執行 sp_clean_db_free_space 會大幅影響 I/O 活動，所以我們建議您在日常作業的時間之外執行這項程序。  
+ 執行 sp_clean_db_free_space 所需的時間長度取決於檔案的大小、可用的空間及磁碟的容量。 由於 `sp_clean_db_free_space` 執行可能會大幅影響 i/o 活動，因此建議您在一般作業時數以外執行此程式。  
   
- 在執行 sp_clean_db_free_space 之前，我們建議您最好建立完整資料庫備份。  
+ 在執行之前 `sp_clean_db_free_space` ，建議您先建立完整資料庫備份。  
   
  相關的[sp_clean_db_file_free_space](../../relational-databases/system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md)預存程式可以清除單一檔案。  
   
 ## <a name="permissions"></a>權限  
- 需要 db_owner 資料庫角色中的成員資格。  
+ 需要資料庫角色中的成員資格 `db_owner` 。  
   
 ## <a name="examples"></a>範例  
  下列範例會從 `AdventureWorks2012` 資料庫中清除所有剩餘的資訊。  
   
-```  
+```sql  
 USE master;  
 GO  
-EXEC sp_clean_db_free_space   
-@dbname = N'AdventureWorks2012' ;  
+EXEC sp_clean_db_free_space @dbname = N'AdventureWorks2012';  
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)
- <br>[准刪除清除程式指南](../ghost-record-cleanup-process-guide.md) 
+ [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [准刪除清除程式指南](../ghost-record-cleanup-process-guide.md)    
+ [sp_clean_db_file_free_space (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md)
   
   

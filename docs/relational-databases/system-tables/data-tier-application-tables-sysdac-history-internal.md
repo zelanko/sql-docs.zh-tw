@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 08b90446625fb2d2f8375c44d2854f3f679cea32
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a5095dbc6dae56a8e8ebf534cdd196b3785b43bf
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890577"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87123019"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>資料層應用程式資料表 - sysdac_history_internal
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,9 +54,8 @@ ms.locfileid: "85890577"
 ## <a name="remarks"></a>備註  
  DAC 管理動作 (例如，部署或刪除 DAC) 會產生多個步驟。 針對每個動作都會指派一個動作識別碼。 每個步驟都會指派序號和**sysdac_history_internal**中的資料列，其中會記錄步驟的狀態。 當動作步驟啟動時，會建立每個資料列，並在需要時進行更新，以反映作業的狀態。 例如，您可以將部署 DAC 動作指派**action_id** 12，並在**sysdac_history_internal**中取得四個數據列：  
   
-|||||  
-|-|-|-|-|  
-|**action_id**|**sequence_id**|**action_type_name**|**dac_object_type_name**|  
+| action_id | sequence_id | action_type_name | dac_object_type_name |
+| --------- | ----------- | ---------------- | -------------------- |
 |12|0|建立|dacpac|  
 |12|1|建立|login|  
 |12|2|建立|[資料庫]|  
