@@ -23,16 +23,16 @@ helpviewer_keywords:
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a81d65cfd0716ba386db98b3d9973fb4e57876a7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 046e23f3861af9e1a1b6877036d90f249bb04723
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298182"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86908294"
 ---
 # <a name="ole-db-destination"></a>OLE DB 目的地
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   OLE DB 目的地會使用資料庫的資料表、檢視或 SQL 命令將資料載入各種符合 OLE DB 標準的資料庫。 例如，OLE DB 來源可以將資料載入至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料表中。  
@@ -95,9 +95,9 @@ ms.locfileid: "71298182"
   
 |快速載入選項|描述|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|指定要插入的大小 (以 KB 為單位)。 選項的格式為 **KILOBYTES_PER_BATCH** = \<正整數值 **>** 。|  
+|KILOBYTES_PER_BATCH|指定要插入的大小 (以 KB 為單位)。 選項的格式為 **KILOBYTES_PER_BATCH** = \<positive integer value**>**。|  
 |FIRE_TRIGGERS|指定是否要針對插入資料表上引發觸發程序。 選項的格式為 **FIRE_TRIGGERS**。 選項的存在代表觸發程序會引發。|  
-|ORDER|指定如何儲存輸入資料。 選項的格式為 ORDER \<資料行名稱> ASC&#124;DESC。 可以列出任何數目的資料行，也可以選擇包含排序順序。 如果省略排序順序，大量插入作業會假設資料沒有排序。<br /><br /> 注意:如果您使用 ORDER 選項依照資料表的叢集索引來排序輸入資料，將可改善效能。|  
+|ORDER|指定如何儲存輸入資料。 選項的格式為 ORDER \<column name> ASC&#124;DESC。 可以列出任何數目的資料行，也可以選擇包含排序順序。 如果省略排序順序，大量插入作業會假設資料沒有排序。<br /><br /> 注意:如果您使用 ORDER 選項依照資料表的叢集索引來排序輸入資料，將可改善效能。|  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 關鍵字通常是以大寫字母輸入，但是這些關鍵字並不區分大小寫。  
   
@@ -268,7 +268,7 @@ ms.locfileid: "71298182"
  檢視可用的目的地資料行清單。 使用拖放作業，即可將資料表中的可用目的地資料行對應到輸入資料行。  
   
  **輸入資料行**  
- 檢視所選取的輸入資料行。 您可以選取 [\<忽略>]  移除對應，排除輸出的資料行。  
+ 檢視所選取的輸入資料行。 您可選取 **\<ignore>** 從輸出中將資料行排除來移除對應。  
   
  **目的地資料行**  
  檢視每個可用的目的地資料行，不論是否已經對應。  

@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aa6235337aab70ed826a5507e7bd8ff2a45c4636
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e265f95741ba3957902e7f502232bc4c08bbcbd
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71286583"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914227"
 ---
 # <a name="understanding-the-script-component-object-model"></a>了解指令碼元件物件模型
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   如同[指令碼元件的程式碼撰寫和偵錯](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)中所討論，指令碼元件專案包含了三個專案項目：  
@@ -119,27 +119,27 @@ public override void PreExecute()
   
 -   每一個選定輸入資料行的具名、具類型存取子屬性。 這些屬性是唯讀或可讀寫，這取決於在 [指令碼轉換編輯器]  的 [輸入資料行]  頁面上針對資料行所指定的 [使用類型]  。  
   
--   每一個選定輸入資料行的 **\<資料行>_IsNull** 屬性。 這個屬性也是唯讀或可讀寫，這取決於針對資料行指定的 [使用類型]  而定。  
+-   每一個選定輸入資料行的 **\<column>_IsNull** 屬性。 這個屬性也是唯讀或可讀寫，這取決於針對資料行指定的 [使用類型]  而定。  
   
--   每個已設定輸出的 **DirectRowTo\<輸出緩衝區>** 方法。 當您在相同的 **ExclusionGroup** 中將資料列篩選成數個輸出的其中一個時，您將會使用這些方法。  
+-   每一個已設定輸出的 **DirectRowTo\<outputbuffer>** 方法。 當您在相同的 **ExclusionGroup** 中將資料列篩選成數個輸出的其中一個時，您將會使用這些方法。  
   
 -   取得下一個輸入資料列的 **NextRow** 函數，以及判斷上一個資料緩衝區是否已經處理的 **EndOfRowset** 函數。 當您使用 **UserComponent** 基底類別內所實作的輸入處理方法時，通常不需要這些函數。 下一節會提供有關 **UserComponent** 基底類別的詳細資訊。  
   
 #### <a name="what-the-componentwrapper-project-item-provides"></a>ComponentWrapper 專案項目提供的內容  
  ComponentWrapper 專案項目包含了衍生自 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 的 **UserComponent** 類別。 接著您撰寫自訂程式碼所使用的 **ScriptMain** 類別就會衍生自 **UserComponent**。 **UserComponent** 類別包含以下的方法：  
   
--   已覆寫的 **ProcessInput** 方法實作。 這是資料流程引擎在執行階段的 **PreExecute** 方法之後所呼叫的方法，而且它可呼叫多次。 **ProcessInput** 將處理交給 **\<輸入緩衝區>_ProcessInput** 方法。 然後 **ProcessInput** 方法會檢查輸入緩衝區的結尾，如果到達了緩衝區結尾，會呼叫可覆寫的 **FinishOutputs** 方法和私用 **MarkOutputsAsFinished** 方法。 **MarkOutputsAsFinished** 方法會接著呼叫最後一個輸出緩衝區上的 **SetEndOfRowset**。  
+-   已覆寫的 **ProcessInput** 方法實作。 這是資料流程引擎在執行階段的 **PreExecute** 方法之後所呼叫的方法，而且它可呼叫多次。 **ProcessInput** 將處理交給 **\<inputbuffer>_ProcessInput** 方法。 然後 **ProcessInput** 方法會檢查輸入緩衝區的結尾，如果到達了緩衝區結尾，會呼叫可覆寫的 **FinishOutputs** 方法和私用 **MarkOutputsAsFinished** 方法。 **MarkOutputsAsFinished** 方法會接著呼叫最後一個輸出緩衝區上的 **SetEndOfRowset**。  
   
--   可覆寫的 **\<輸入緩衝區>_ProcessInput** 方法實作。 這個預設實作只會在每一個輸入資料列中執行迴圈，並呼叫 **\<輸入緩衝區>_ProcessInputRow**。  
+-   可覆寫的 **\<inputbuffer>_ProcessInput** 方法實作。 這個預設實作只會在每一個輸入資料列中執行迴圈，並呼叫 **\<inputbuffer>_ProcessInputRow**。  
   
--   可覆寫的 **\<輸入緩衝區>_ProcessInputRow** 方法實作。 預設的實作是空的。 這是您通常會覆寫，以撰寫自訂資料處理程式碼的方法。  
+-   可覆寫的 **\<inputbuffer>_ProcessInputRow** 方法實作。 預設的實作是空的。 這是您通常會覆寫，以撰寫自訂資料處理程式碼的方法。  
   
 #### <a name="what-your-custom-code-should-do"></a>自訂程式碼應該做的事  
  您可以使用下列方法，在 **ScriptMain** 類別中處理輸入：  
   
--   覆寫 **\<輸入緩衝區>_ProcessInputRow**，以處理每一個輸入資料列中通過的資料。  
+-   覆寫 **\<inputbuffer>_ProcessInputRow**，以處理每一個輸入資料列中通過的資料。  
   
--   只有當您在輸入資料列中執行迴圈時必須做其他額外的動作的時候，才會覆寫 **\<輸入緩衝區>_ProcessInput**。 (例如，您必須測試 **EndOfRowset**，在處理完所有資料列以後採取某個其他動作。)呼叫 **\<輸入緩衝區>_ProcessInputRow** 來執行資料列處理。  
+-   只有當在輸入資料列中執行迴圈時必須執行其他額外動作的時候，才會覆寫 **\<inputbuffer>_ProcessInput**。 (例如，您必須測試 **EndOfRowset**，在處理完所有資料列以後採取某個其他動作。)呼叫 **\<inputbuffer>_ProcessInputRow** 來執行資料列處理。  
   
 -   如果您必須在關閉輸出以前先對輸出做某些事，請覆寫 **FinishOutputs**。  
   
@@ -153,7 +153,7 @@ public override void PreExecute()
   
 -   每一個輸出資料行的具名、具類型、唯寫的存取子屬性。  
   
--   每一個選定輸出資料行的唯寫 **\<資料行>_IsNull** 屬性，您可用它來將資料行值設定為 **null**。  
+-   每一個選定輸出資料行的唯寫 **\<column>_IsNull** 屬性，您可用來將資料行值設定為 **null**。  
   
 -   要將空白的新資料列新增至輸出緩衝區的 **AddRow** 方法。  
   

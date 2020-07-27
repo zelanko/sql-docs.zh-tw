@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 486339cc1c5ef550dbf4eee227bec3ad67ce0e3a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 94be603d8982e4c05baed997b1072afbe66c2eec
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294104"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915249"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   「訊息佇列」工作可讓您使用 Message Queuing (又稱為 MSMQ) 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件之間傳送和接收訊息，或將訊息傳送至由自訂應用程式處理的應用程式佇列。 這些訊息可採用簡單文字、檔案或變數及其值的形式。  
@@ -120,7 +120,7 @@ ms.locfileid: "71294104"
  指示是否使用 Message Queuing (又稱為 MSMQ) 的 2000 格式。 預設值為 **False**。  
   
  **MSMQConnection**  
- 選取現有的 MSMQ 連線管理員，或按一下 [\<新增連線...>]  建立新的連線管理員。  
+ 選取現有的 MSMQ 連線管理員或按一下 \<**New connection...**>，即可建立新的連線管理員。  
   
  **相關主題**：[MSMQ 連線管理員](../../integration-services/connection-manager/msmq-connection-manager.md)、[MSMQ 連線管理員編輯器](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
   
@@ -230,7 +230,7 @@ ms.locfileid: "71294104"
 |**來自封裝**|訊息只接收來自指定之封裝的訊息。 選取此值會顯示動態選項 **識別碼**＞。|  
   
  **變數**  
- 鍵入變數名稱，或按一下 [\<新增變數…>]  ，然後設定新的變數。  
+ 輸入變數名稱，或按一下 \<**New variable...**>，然後設定新的變數。  
   
  **相關主題：** [新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -275,7 +275,7 @@ ms.locfileid: "71294104"
  除非 [比較]  選項設定為 [無]  ，否則請提供訊息要比較的字串。  
   
  **變數**  
- 鍵入要保存已接收訊息的變數名稱，或按一下 [\<新增變數…>]  ，然後設定新的變數。  
+ 鍵入要保存已接收訊息的變數名稱，或按一下 \<**New variable...**>，然後設定新的變數。  
   
  **相關主題：** [新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

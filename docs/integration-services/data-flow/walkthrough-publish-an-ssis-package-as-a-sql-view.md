@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 52c4f92994068e0c5de8afd7233bd53c1244e38d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 410fb5cc9ebfe04b62b6d196e7757f2455234014
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216892"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920327"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>逐步解說︰發行 SSIS 封裝做為 SQL 檢視
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   本逐步解說提供詳細的步驟來發行 SSIS 封裝，以做為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的 SQL 檢視。  
@@ -164,9 +164,9 @@ ms.locfileid: "80216892"
   
 1.  啟動 SQL Server Management Studio。  
   
-2.  依序展開 [\<機器名稱>]  、[資料庫]  、[\<您在精靈中選取的資料庫>]  及 [檢視]  。  
+2.  展開 [\<**machine name**>]、[資料庫]、[\<**database you selected in the wizard**>] 和 [檢視]。  
   
-3.  以滑鼠右鍵按一下精靈建立的 [\<精靈建立的檢視>]  ，然後按一下 [選取前 1000 個資料列]  。  
+3.  以滑鼠右鍵按一下精靈建立的 [\<**view created by the wizard**>]，然後按一下 [選取前 1000 個資料列]。  
   
 4.  確認您看到 SSIS 封裝的結果。  
   

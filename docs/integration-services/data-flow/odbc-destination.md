@@ -15,16 +15,16 @@ f1_keywords:
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 153cbd447fa84087b50501005d0ea457f47d1eda
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2ca597190bb5ace7a2f81532ae6482b3e423c81f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298219"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914761"
 ---
 # <a name="odbc-destination"></a>ODBC 目的地
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   ODBC 目的地會將資料大量載入到 ODBC 支援的資料庫資料表。 ODBC 目的地使用 ODBC 連接管理員來連接到資料來源。  
@@ -59,7 +59,7 @@ ms.locfileid: "71298219"
  您還必須知道同時載入到相同資料表可能會因為標準記錄鎖定而降低效能。 這取決於正在載入的資料和資料表組織。  
   
 ## <a name="troubleshooting-the-odbc-destination"></a>ODBC 目的地疑難排解  
- 您可以記錄 ODBC 來源對外部資料提供者所執行的呼叫。 您可以使用這項記錄功能，針對 ODBC 目的地所執行之將資料儲存至外部資料來源的作業進行疑難排解。 若要記錄 ODBC 目的地對外部資料提供者執行的呼叫，請啟用 ODBC 驅動程式管理員追蹤。 如需詳細資訊，請參閱 Microsoft 文件集＜如何使用 ODBC 資料來源管理員產生 ODBC 追蹤＞。   
+ 您可以記錄 ODBC 來源對外部資料提供者所執行的呼叫。 您可以使用這項記錄功能，針對 ODBC 目的地所執行之將資料儲存至外部資料來源的作業進行疑難排解。 若要記錄 ODBC 目的地對外部資料提供者執行的呼叫，請啟用 ODBC 驅動程式管理員追蹤。 如需詳細資訊，請參閱 Microsoft 文件集＜如何使用 ODBC 資料來源管理員產生 ODBC 追蹤＞。  
   
 ## <a name="configuring-the-odbc-destination"></a>設定 ODBC 目的地  
  您可以透過程式設計方式或 SSIS 設計師來設定 ODBC 目的地。  
@@ -132,7 +132,7 @@ ms.locfileid: "71298219"
  可用目的地資料行的清單。 將目的地資料行拖放至可用的輸入資料行，即可對應資料行。  
   
 #### <a name="input-column"></a>輸入資料行  
- 檢視所選取的輸入資料行。 您可以選取 [\<忽略>] 移除對應，排除輸出的資料行。  
+ 檢視所選取的輸入資料行。 您可選取 **\<ignore>** 從輸出中將資料行排除來移除對應。  
   
 #### <a name="destination-column"></a>目的地資料行  
  檢視所有可用的目的地資料行，包括對應和取消對應的資料行。  

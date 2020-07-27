@@ -24,16 +24,16 @@ helpviewer_keywords:
 ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3c458257766e52898d0924b2f8ad57ddd2423b19
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c4941e8bfbb47a5d4d4e7139a6c761483dec7ad8
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295671"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921935"
 ---
 # <a name="ssis-designer"></a>SSIS 設計師
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師是可以用於建立及維護 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝的圖形工具。 [!INCLUDE[ssIS](../includes/ssis-md.md)][!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 提供的設計師是 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案的一部分。  
@@ -158,7 +158,7 @@ ms.locfileid: "71295671"
  **刪除**  
  選取事件處理常式，然後按一下 [刪除]  即可從封裝中移除它。  
   
- **按一下此處即可為可執行檔\<可執行檔名稱\>建立\<事件處理常式名稱\>**  
+ **按一下此處，即可針對可執行檔 \<executable name\> 建立 \<event handler name\>**  
  按一下即可建立事件處理常式。  
   
  從 [工具箱]  中，將代表 [!INCLUDE[ssIS](../includes/ssis-md.md)] 工作和容器的圖形物件拖曳至 [事件處理常式]  索引標籤的設計介面來建立控制流程，然後使用優先順序條件約束以定義它們執行的順序來連接物件。  

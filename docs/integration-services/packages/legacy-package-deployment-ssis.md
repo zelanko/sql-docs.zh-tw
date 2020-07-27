@@ -31,16 +31,16 @@ helpviewer_keywords:
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6fc3a1e41edd95a8e1cf9b4489732cff7ac2852d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4ab6bc0a45ec2ac3b72fb029e6ef3ec74601c183
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287392"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919195"
 ---
 # <a name="legacy-package-deployment-ssis"></a>舊版封裝部署 (SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所包含工具和精靈可以簡化將套件從開發電腦部署到實際伺服器或部署到其他電腦的流程。  
@@ -149,7 +149,7 @@ ms.locfileid: "79287392"
 #### <a name="registry-entry"></a>登錄項目  
  如果您想使用登錄項目儲存組態，可以使用現有的機碼或在 HKEY_CURRENT_USER 中建立新的機碼。 您所使用的登錄機碼必須具有名為 **Value**的值。 該值可以是 DWORD 或字串。  
   
- 如果您選取 [登錄項目]  組態類型，就要在 [登錄項目] 方塊中輸入登錄機碼的名稱。 格式為 \<登錄機碼>。 如果您想要使用不是在 HKEY_CURRENT_USER 根目錄的登錄機碼，請使用 \<登錄機碼\登錄機碼\\...> 格式識別該機碼。 例如，若要使用位於 SSISPackages 中的 MyPackage 機碼，請輸入 **SSISPackages\MyPackage**。  
+ 如果您選取 [登錄項目]  組態類型，就要在 [登錄項目] 方塊中輸入登錄機碼的名稱。 格式為 \<registry key>。 如果想要使用不是在 HKEY_CURRENT_USER 根目錄的登錄機碼，請使用 \<Registry key\registry key\\...> 格式識別該機碼。 例如，若要使用位於 SSISPackages 中的 MyPackage 機碼，請輸入 **SSISPackages\MyPackage**。  
   
 #### <a name="sql-server"></a>SQL Server  
  如果選取 [SQL Server]  組態類型，則需要指定要儲存組態之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的連接。 您可以將組態儲存至現有的資料表，或者在指定的資料庫中建立新的資料表。  
@@ -360,7 +360,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 |值|描述|  
 |-----------|-----------------|  
-|**登錄項目**|輸入包含組態資訊的登錄機碼。 格式為 \<登錄機碼>。<br /><br /> 登錄機碼必須已經存在於 HKEY_CURRENT_USER 中且具有名為 Value 的值。 該值可以是 DWORD 或字串。<br /><br /> 如果您想要使用不是在 HKEY_CURRENT_USER 根目錄的登錄機碼，請使用 \<登錄機碼\登錄機碼\\...> 格式來識別該機碼。|  
+|**登錄項目**|輸入包含組態資訊的登錄機碼。 格式為 \<registry key>。<br /><br /> 登錄機碼必須已經存在於 HKEY_CURRENT_USER 中且具有名為 Value 的值。 該值可以是 DWORD 或字串。<br /><br /> 如果想要使用不是在 HKEY_CURRENT_USER 根目錄的登錄機碼，請使用 \<Registry key\registry key\\...> 格式來識別該機碼。|  
   
  **組態位置儲存在環境變數中**  
  這可用來指定儲存組態的環境變數。  
@@ -488,7 +488,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 |[CreateDeploymentUtility]|指定建立專案時是否建立封裝部署公用程式的值。 此屬性必須為 **True** ，才能建立部署公用程式。|  
 |DeploymentOutputPath|與部署公用程式之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案相關的位置。|  
   
- 建立 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案時，會建立資訊清單檔 \<專案名稱>.SSISDeploymentManifest.xml，以及專案套件和套件相依性的複本，並將資訊清單檔和這些複本新增至專案的 bin\Deployment 資料夾，或新增至 DeploymentOutputPath 屬性所指定的位置。 資訊清單檔會列出專案中的封裝、封裝組態和任何其他檔案。  
+ 建立 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案時，會建立資訊清單檔 \<project name>.SSISDeploymentManifest.xml，以及專案套件和套件相依性的複本，並將資訊清單檔和這些複本新增至專案的 bin\Deployment 資料夾，或新增至 DeploymentOutputPath 屬性所指定的位置。 資訊清單檔會列出專案中的封裝、封裝組態和任何其他檔案。  
   
  每次建立專案時，都會重新整理部署資料夾的內容。 這表示系統將會刪除儲存在這個資料夾，而建立程序並未重新複製到資料夾中的任何檔案。 例如，儲存在部署資料夾的封裝組態檔案將會被刪除。  
   
@@ -498,7 +498,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 2.  以滑鼠右鍵按一下專案，然後按一下 [屬性]  。  
   
-3.  在 [\<專案名稱> 屬性頁]  對話方塊中，按一下 [部署公用程式]  。  
+3.  在 [\<project name> 屬性頁面] 對話方塊中，按一下 [部署公用程式]。  
   
 4.  若要在部署封裝時更新封裝組態，請將 **[AllowConfigurationChanges]** 設為 **True**。  
   
@@ -517,7 +517,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  部署資料夾的路徑是在為其建立部署公用程式之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案的 DeploymentOutputPath 屬性中指定的。 預設路徑為 bin\Deployment (相對於 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案)。 如需詳細資訊，請參閱 [建立部署公用程式](../../integration-services/packages/create-a-deployment-utility.md)。  
   
- 請使用「封裝安裝精靈」來安裝封裝。 若要啟動此精靈，請在將部署資料夾複製到伺服器後按兩下部署公用程式檔案。 此檔案名為 \<專案名稱>.SSISDeploymentManifest；您可以在目的地電腦的部署資料夾中找到這個檔案。  
+ 請使用「封裝安裝精靈」來安裝封裝。 若要啟動此精靈，請在將部署資料夾複製到伺服器後按兩下部署公用程式檔案。 此檔案名為 \<project name>.SSISDeploymentManifest，您可在目的地電腦的部署資料夾中找到這個檔案。  
   
 > [!NOTE]  
 >  根據所部署的封裝版本，如果有不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並存安裝，可能會發生錯誤。 因為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]所有版本的 .SSISDeploymentManifest 副檔名都相同，所以可能會發生這項錯誤。 按兩下此檔案就會針對最近安裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]版本 (可能與部署公用程式檔案的版本不同) 呼叫安裝程式 (dtsinstall.exe)。 若要解決此問題，請從命令列執行正確的 dtsinstall.exe 版本，並且提供部署公用程式檔案的路徑。  
@@ -540,7 +540,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 1.  開啟目標電腦上的部署資料夾。  
   
-2.  按兩下資訊清單檔 \<專案名稱>.SSISDeploymentManifest，以啟動 [套件安裝精靈]。  
+2.  按兩下資訊清單檔 \<project name>.SSISDeploymentManifest，以啟動 [套件安裝精靈]。  
   
 3.  在 [部署 SSIS 封裝]  頁面上，選取 [SQL Server 部署]  選項。  
   

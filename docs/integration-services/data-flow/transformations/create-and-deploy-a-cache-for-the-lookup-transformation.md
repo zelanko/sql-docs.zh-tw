@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e53569a8680ec3a6414aeeaa83e9322e77568ecf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d0f402739a63d4e11983c4ad1b50d0c2f337a9e1
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297978"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918847"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>針對查閱轉換來建立及部署快取
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   您可以針對查閱轉換建立及部署快取檔案 (.caw)。 參考資料集會儲存在快取檔案中。  
@@ -90,7 +90,7 @@ ms.locfileid: "71297978"
   
 4.  將專案設定為建立部署公用程式，然後建立專案。 如需詳細資訊，請參閱 [建立部署公用程式](../../../integration-services/packages/create-a-deployment-utility.md)。  
   
-     資訊清單檔 \<專案名稱  >.SSISDeploymentManifest.xml 會建立，並列出專案中的其他檔案、封裝以及封裝組態。  
+     資訊清單檔 \<*project name*>.SSISDeploymentManifest.xml 會建立，並列出專案中的其他檔案、套件以及套件組態。  
   
 5.  將封裝部署到檔案系統。 如需詳細資訊，請參閱 [使用部署公用程式來部署封裝](../../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md)。  
   

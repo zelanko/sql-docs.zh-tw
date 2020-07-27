@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1e331b974bee3017e17e75dbf8c3ecb8506349b2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4f334633fa164a22f8e23175fd3ba6b25c4f6423
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298308"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917924"
 ---
 # <a name="execute-sql-task"></a>執行 SQL 工作
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   「執行 SQL」工作會執行封裝中的 SQL 陳述式或預存程序。 工作可以包含逐次執行的單一 SQL 陳述式或多重 SQL 陳述式。 您可將執行 SQL 工作用於下列用途：  
@@ -148,7 +148,7 @@ ms.locfileid: "71298308"
  **相關主題：** [OLE DB 連線管理員](../../integration-services/connection-manager/ole-db-connection-manager.md)、[ODBC 連線管理員](../../integration-services/connection-manager/odbc-connection-manager.md)、[ADO 連線管理員](../../integration-services/connection-manager/ado-connection-manager.md)、[ADO.NET 連線管理員](../../integration-services/connection-manager/ado-net-connection-manager.md)、[SQL Server Compact Edition 連線管理員](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **[連接]**  
- 從已定義的連接管理員清單中選擇連接。 若要建立新的連線，請選取 [\<新增連線...>]  。  
+ 從已定義的連接管理員清單中選擇連接。 若要建立新的連線，請選取 \<**New connection...**>。  
   
  **SQLSourceType**  
  選取工作執行之 SQL 陳述式的來源類型。  
@@ -190,13 +190,13 @@ ms.locfileid: "71298308"
   
 #### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = 檔案連接  
  **FileConnection**  
- 選取現有的檔案連線管理員，或按一下 [\<新增連線...>]  建立新的連線管理員。  
+ 選取現有的檔案連線管理員，或按一下 \<**New connection...**> 以建立新的連線管理員。  
   
  **相關主題：** [檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)、[檔案連線管理員編輯器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="sqlsourcetype--variable"></a>SQLSourceType = 變數  
  **SourceVariable**  
- 選取現有的變數，或按一下 [\<新增變數...>]  以建立新的變數。  
+ 選取現有的變數，或按一下 \<**New variable...**> 以建立新的變數。  
   
  **相關主題：** [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
  
@@ -205,7 +205,7 @@ ms.locfileid: "71298308"
   
 ### <a name="options"></a>選項。  
  **變數名稱**  
- 按一下 [新增]  新增參數對應之後，請從清單中選取系統或使用者定義變數，或按一下 [\<新增變數...>]  以使用 [新增變數]  對話方塊新增新的變數。  
+ 按一下 [新增] 新增參數對應之後，請從清單中選取系統或使用者定義變數，或按一下 \<**New variable...**> 以使用 [新增變數] 對話方塊新增新的變數。  
   
  **相關主題：** [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)  
   
@@ -244,7 +244,7 @@ ms.locfileid: "71298308"
  
   
  **變數名稱**  
- 選取變數來將結果集對應至變數，或是按一下 [\<新增變數...>]  ，使用 [新增變數]  對話方塊來新增新的變數。  
+ 選取變數來將結果集對應至變數，或按一下 \<**New variable...**>，使用 [新增變數] 對話方塊來新增新的變數。  
   
  **加入**  
  按一下即可新增結果集對應。  
@@ -282,7 +282,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
 |連線類型|參數標記|參數名稱|範例 SQL 命令|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|\@\<參數名稱>|\@\<參數名稱>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
+|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|\@\<parameter name>|\@\<parameter name>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
 |ODBC|?|1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL 和 OLE DB|?|0, 1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
@@ -303,7 +303,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
  依據連接管理員使用的提供者而定，部分 OLE DB 資料類型可能不受支援。 例如，Excel 驅動程式只能辨識有限的一組資料類型。 如需具有 Excel 驅動程式之 Jet 提供者行為的詳細資訊，請參閱 [Excel 來源](../../integration-services/data-flow/excel-source.md)。  
   
 #### <a name="use-parameters-with-ole-db-connection-managers"></a>搭配 OLE DB 連線管理員使用參數  
- 「執行 SQL」工作使用 OLE DB 連線管理員時，即可使用工作的 BypassPrepare 屬性。 如果「執行 SQL」工作搭配參數使用 SQL 陳述式，您應該將這個屬性設為 [true]  。  
+ 「執行 SQL」工作使用 OLE DB 連線管理員時，即可使用工作的 BypassPrepare 屬性。 如果「執行 SQL」工作搭配參數使用 SQL 陳述式，您應該將這個屬性設為 [true]。  
   
  您在使用 OLE DB 連接管理員時無法使用參數化的子查詢，因為執行 SQL 工作無法透過 OLE DB 提供者衍生參數資訊。 不過，您可以使用運算式，將參數值串連到查詢字串，並設定工作的 SqlStatementSource 屬性。  
   
@@ -386,7 +386,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
 |---------------------|-----------------|  
 |EXCEL 和 OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
 |ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> 如需 ODBC CALL 語法的詳細資訊，請參閱 MSDN Library 之《ODBC 程式設計人員參考》中的主題 [程序參數](https://go.microsoft.com/fwlink/?LinkId=89462)。|  
-|ADO|如果 IsQueryStoredProcedure 設為 [False]  ，則 `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> 如果 IsQueryStoredProcedure 設為 [True]  ，則 `uspGetBillOfMaterials`|  
+|ADO|如果 IsQueryStoredProcedure 設為 [False]，則 `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> 如果 IsQueryStoredProcedure 設為 [True]，則 `uspGetBillOfMaterials`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|如果 IsQueryStoredProcedure 設為 [False]  ，則 `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> 如果 IsQueryStoredProcedure 設為 [True]  ，則 `uspGetBillOfMaterials`|  
   
  若要使用輸出參數，此語法要求您必須在每個參數標記後面加上 OUTPUT 關鍵字。 例如，下列輸出參數語法是正確的： `EXEC myStoredProcedure ? OUTPUT`。  
@@ -410,7 +410,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
   
     -   使用直接輸入，並在 SQLStatement 屬性中輸入 SQL 命令。  
   
-    -   使用直接輸入，按一下 [建立查詢]  ，然後使用「查詢產生器」提供的圖形工具來建立 SQL 命令。  
+    -   使用直接輸入，按一下 [建立查詢]，然後使用「查詢產生器」提供的圖形工具來建立 SQL 命令。  
   
     -   使用檔案連接，然後參考包含 SQL 命令的檔案。  
   
@@ -421,7 +421,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
     |連線類型|參數標記|  
     |---------------------|----------------------|  
     |ADO|?|  
-    |ADO.NET 和 SQLMOBILE|\@\<參數名稱>|  
+    |ADO.NET 和 SQLMOBILE|\@\<parameter name>|  
     |ODBC|?|  
     |EXCEL 和 OLE DB|?|  
   
@@ -433,26 +433,26 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
     |ADO|`SELECT* FROM Production.Product WHERE ProductId > ? AND ProductID < ?`|  
     |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|`SELECT* FROM Production.Product WHERE ProductId > @parmMinProductID AND ProductID < @parmMaxProductID`|  
    
-7.  按一下 [參數對應]  。  
+7.  按一下 [參數對應]。  
   
-8.  若要加入參數對應，請按一下 [加入]  。  
+8.  若要加入參數對應，請按一下 [加入]。  
   
-9. 在 [參數名稱]  方塊中提供名稱。  
+9. 在 [參數名稱] 方塊中提供名稱。  
   
      您所使用的參數名稱需視「執行 SQL」工作所使用的連接類型而定。  
   
     |連線類型|參數名稱|  
     |---------------------|--------------------|  
     |ADO|Param1, Param2, ...|  
-    |ADO.NET 和 SQLMOBILE|\@\<參數名稱>|  
+    |ADO.NET 和 SQLMOBILE|\@\<parameter name>|  
     |ODBC|1, 2, 3, ...|  
     |EXCEL 和 OLE DB|0, 1, 2, 3, ...|  
   
-10. 從 [變數名稱]  清單中，選取一個變數。 如需詳細資訊，請參閱[加入、刪除、變更封裝中使用者定義變數的範圍](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)。  
+10. 從 [變數名稱] 清單中，選取一個變數。 如需詳細資訊，請參閱[加入、刪除、變更封裝中使用者定義變數的範圍](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)。  
   
-11. 在 [方向]  清單中，指定參數是輸入、輸出還是傳回值。  
+11. 在 [方向] 清單中，指定參數是輸入、輸出還是傳回值。  
   
-12. 在 [資料類型]  清單中，設定參數的資料類型。  
+12. 在 [資料類型] 清單中，設定參數的資料類型。  
   
     > [!IMPORTANT]  
     >  參數的資料類型必須與變數的資料類型相容。  
@@ -462,7 +462,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
     > [!IMPORTANT]  
     >  參數對應的順序必須與參數在 SQL 陳述式中出現的順序相同。  
   
-14. 按一下 [確定]  。  
+14. 按一下 [確定]。  
 
 ##  <a name="get-the-values-of-return-codes"></a><a name="Return_codes"></a> 取得傳回碼的值  
  預存程序可以傳回稱為傳回碼的整數值，以指出程序的執行狀態。 若要在「執行 SQL」工作中實作傳回碼，請使用 **ReturnValue** 類型的參數。  
@@ -475,10 +475,10 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
 |---------------------|-----------------|  
 |EXCEL 和 OLEDB|`EXEC ? = myStoredProcedure 1`|  
 |ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> 如需 ODBC CALL 語法的詳細資訊，請參閱 MSDN Library 之《ODBC 程式設計人員參考》中的主題 [程序參數](https://go.microsoft.com/fwlink/?LinkId=89462)。|  
-|ADO|如果 IsQueryStoreProcedure 設為 [False]  ，則 `EXEC ? = myStoredProcedure 1`<br /><br /> 如果 IsQueryStoreProcedure 設為 [True]  ，則 `myStoredProcedure`|  
-|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|將 IsQueryStoreProcedure 設為 [True]  。<br /><br /> `myStoredProcedure`|  
+|ADO|如果 IsQueryStoreProcedure 設為 [False]，則 `EXEC ? = myStoredProcedure 1`<br /><br /> 如果 IsQueryStoreProcedure 設為 [True]，則 `myStoredProcedure`|  
+|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|將 IsQueryStoreProcedure 設為 [True]。<br /><br /> `myStoredProcedure`|  
   
- 在上表顯示的語法中，「執行 SQL」工作使用 [直接輸入]  來源類型執行預存程序。 「執行 SQL」工作也可以使用 [檔案連接]  來源類型執行預存程序。 不論「執行 SQL」工作是使用 [直接輸入]  或 [檔案連接]  來源類型，都請使用 **ReturnValue** 類型的參數來實作傳回碼。
+ 在上表顯示的語法中，「執行 SQL」工作使用 [直接輸入] 來源類型執行預存程序。 「執行 SQL」工作也可以使用 [檔案連接] 來源類型執行預存程序。 不論「執行 SQL」工作是使用 [直接輸入] 或 [檔案連接] 來源類型，都請使用 **ReturnValue** 類型的參數來實作傳回碼。
   
  如需搭配 Transact-SQL 預存程序使用傳回碼的詳細資訊，請參閱 [RETURN &#40;Transact-SQL&#41;](../../t-sql/language-elements/return-transact-sql.md)。  
   
@@ -511,7 +511,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
   
  如果結果集類型為 **Single row**，則可以藉由使用資料行名稱做為結果集名稱將傳回結果中的資料行繫結至變數，或者可以使用資料行清單中資料行的序數位置做為結果集名稱。 例如，查詢 `SELECT Color FROM Production.Product WHERE ProductID = ?` 的結果集名稱可以為 **Color** 或 **0**。 如果查詢傳回多個資料行，並且您要存取所有資料行中的值，則您必須將每個資料行繫結至不同的變數。 如果您透過使用數字做為結果集名稱將資料行對應至變數，則該數字會反映資料行在查詢的資料行清單中所顯示的順序。 例如，在查詢 `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`中，您將 0 用於 **Color** 資料行，將 1 用於 **ListPrice** 資料行。 使用資料行名稱做為結果集名稱的功能取決於將該工作設定為使用的提供者。 並非所有的提供者可以使用資料行名稱做為結果集名稱。  
   
- 部分傳回單一值的查詢可能不包含資料行名稱。 例如， `SELECT COUNT (*) FROM Production.Product` 陳述式不會傳回任何資料行名稱。 您可以使用序數位置 0 做為結果名稱來存取傳回的結果。 若要依據資料行名稱存取傳回的結果，查詢必須包含用來提供資料行名稱的 AS \<別名名稱> 子句。 `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`陳述式會提供 **CountOfProduct** 資料行。 接著您可以使用 **CountOfProduct** 資料行名稱或序數位置 0 來存取傳回結果資料行。  
+ 部分傳回單一值的查詢可能不包含資料行名稱。 例如， `SELECT COUNT (*) FROM Production.Product` 陳述式不會傳回任何資料行名稱。 您可以使用序數位置 0 做為結果名稱來存取傳回的結果。 若要依據資料行名稱存取傳回的結果，則查詢必須包含用來提供資料行名稱的 AS \<alias name> 子句。 `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`陳述式會提供 **CountOfProduct** 資料行。 接著您可以使用 **CountOfProduct** 資料行名稱或序數位置 0 來存取傳回結果資料行。  
   
  如果結果集類型為 **完整結果集** 或 **XML**，則必須使用 0 作為結果集名稱。  
   
@@ -551,22 +551,22 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
   
 5.  按兩下執行 SQL 工作。  
   
-6.  在 [執行 SQL 工作編輯器]  對話方塊的 [一般]  頁面上，選取 [單一資料列]  、[完整結果集]  或 [XML]  結果集類型。  
+6.  在 [執行 SQL 工作編輯器] 對話方塊的 [一般] 頁面上，選取 [單一資料列]、[完整結果集] 或 [XML] 結果集類型。  
 
-7.  按一下 [結果集]  。  
+7.  按一下 [結果集]。  
   
-8.  若要加入結果集對應，請按一下 [加入]  。  
+8.  若要加入結果集對應，請按一下 [加入]。  
   
-9. 從 [變數名稱]  清單中，選取變數或新建變數。 如需詳細資訊，請參閱[加入、刪除、變更封裝中使用者定義變數的範圍](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)。  
+9. 從 [變數名稱] 清單中，選取變數或新建變數。 如需詳細資訊，請參閱[加入、刪除、變更封裝中使用者定義變數的範圍](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)。  
   
-10. 在 [結果名稱]  清單中，選擇性地修改結果集的名稱。  
+10. 在 [結果名稱] 清單中，選擇性地修改結果集的名稱。  
   
      一般而言，您可以使用資料行名稱做為結果集名稱，也可以資料行清單中資料行的序數位置做為結果集。 使用資料行名稱做為結果集名稱的功能取決於將該工作設定為使用的提供者。 並非所有的提供者可以使用資料行名稱做為結果集名稱。  
   
-11. 按一下 [確定]  。  
+11. 按一下 [確定]。  
 
 ## <a name="troubleshoot-the-execute-sql-task"></a>針對執行 SQL 工作進行疑難排解  
- 您可以記錄執行 SQL 工作對外部資料提供者執行的呼叫。 您可以使用這項記錄功能，疑難排解執行 SQL 工作所執行的 SQL 命令。 若要記錄「執行 SQL」工作對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級選取 [診斷]  事件。 如需詳細資訊，請參閱 [封裝執行的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。  
+ 您可以記錄執行 SQL 工作對外部資料提供者執行的呼叫。 您可以使用這項記錄功能，疑難排解執行 SQL 工作所執行的 SQL 命令。 若要記錄「執行 SQL」工作對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級選取 [診斷] 事件。 如需詳細資訊，請參閱 [封裝執行的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。  
   
  有時 SQL 命令或預存程序會傳回多個結果集。 這些結果集不只包括屬於 **SELECT** 查詢結果的資料列集，也包括屬於 **RAISERROR** 或 **PRINT** 陳述式之錯誤結果的單一值。 工作是否忽略發生在第一個結果集之後之結果集中的錯誤，將取決於所使用的連接管理員類型：  
   

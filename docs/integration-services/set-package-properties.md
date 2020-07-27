@@ -25,16 +25,16 @@ helpviewer_keywords:
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b6f3217854bf72f3c7300c87aefceab24220401a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dd679e14920099a6383a414772bc162cdf470645
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71281932"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921964"
 ---
 # <a name="set-package-properties"></a>設定封裝屬性
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   當您使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 所提供的圖形介面，在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中建立封裝時，可以在 [屬性] 視窗中設定封裝物件的屬性。  
@@ -112,7 +112,7 @@ ms.locfileid: "71281932"
 |**CreatorComputerName**|用來建立封裝的電腦名稱。|  
 |**CreatorName**|封裝建立者名稱。|  
 |**說明**|封裝功能描述。|  
-|**識別碼**|在建立封裝時所指派的封裝 GUID。 這個屬性是唯讀的。 若要為 **ID** 屬性產生新的隨機值，請選取下拉式清單中的 **\<產生新的識別碼\>** 。|  
+|**識別碼**|在建立封裝時所指派的封裝 GUID。 這個屬性是唯讀的。 若要為 **ID** 屬性產生新的隨機值，請在下拉式清單中選取 **\<Generate New ID\>** 。|  
 |**名稱**|封裝名稱。|  
 |**PackageType**|封裝類型。 可能的值為 **Default**、 **DTSDesigner**、 **DTSDesigner100**、 **DTSWizard**、 **SQLDBMaint**和 **SQLReplication**。 此屬性的預設值為 **Default**。 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>。|  
   

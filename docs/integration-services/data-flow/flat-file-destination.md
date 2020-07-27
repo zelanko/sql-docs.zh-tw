@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c837241abfaebe3776a21e03a9c2cbf4c4f5ee9d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bf49a6cd604350ca9b3e73ee96bb6c61b1977a60
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292536"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920865"
 ---
 # <a name="flat-file-destination"></a>一般檔案目的地
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   「一般檔案」目的地會將資料寫入文字檔。 該文字檔的格式可以是使用分隔符號、固定寬度、具有資料列分隔符號的固定寬度，或不齊右。  
@@ -91,7 +91,7 @@ ms.locfileid: "71292536"
  檢視可用的目的地資料行清單。 使用拖放作業，即可將可用的目的地資料行對應到輸入資料行。  
   
  **輸入資料行**  
- 檢視在這個主題中稍早選取的輸入資料行。 您可以使用 **[可用的輸入資料行]** 清單來變更對應。 選取 [\<忽略>] 即可從輸出中將資料行排除。  
+ 檢視在這個主題中稍早選取的輸入資料行。 您可以使用 **[可用的輸入資料行]** 清單來變更對應。 選取 [\<ignore>] 即可從輸出中將資料行排除。  
   
  **目的地資料行**  
  檢視每個可用的目的地資料行，不論是否已經對應。  

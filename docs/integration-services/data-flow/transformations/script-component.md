@@ -22,16 +22,16 @@ helpviewer_keywords:
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a40336899e804ee634cf586078ec7c219f31c486
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e26918f5b545068ad5e121452dc704f7d72abe35
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297874"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919505"
 ---
 # <a name="script-component"></a>指令碼元件
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   指令碼元件可裝載指令碼，並讓封裝包含及執行自訂指令碼。 您可在封裝中使用指令碼元件以達到下列目的：  
@@ -133,7 +133,7 @@ ms.locfileid: "71297874"
  輸入連接的唯一和描述性名稱。  
   
  **連線管理員**  
- 從可用的連線管理員清單中選取，或選取 [\<新增連線>] 以開啟 [新增 SSIS 連線管理員] 對話方塊。  
+ 從可用的連線管理員清單中選取，或選取 **\<New connection>** 以開啟 [新增 SSIS 連線管理員] 對話方塊。  
   
  **說明**  
  輸入連接的描述。  

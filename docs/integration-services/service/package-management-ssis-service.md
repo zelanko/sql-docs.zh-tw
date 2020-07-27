@@ -27,16 +27,16 @@ helpviewer_keywords:
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 33ce0a748381e425371b6f36c1ceeaaba4b62501
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d7121efa290a8cea45804467243e11dbfd98f275
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296873"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921994"
 ---
 # <a name="package-management-ssis-service"></a>封裝管理 (SSIS 服務)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   套件管理包含監視、管理、匯入和匯出套件。  
@@ -130,7 +130,7 @@ ms.locfileid: "71296873"
   
     -   在 [伺服器類型]  方塊中，選取 [Integration Services]  。  
   
-    -   在 [伺服器名稱] 方塊中提供伺服器名稱，或按一下 [\<瀏覽其他...>]，並尋找要使用的伺服器。  
+    -   在 [伺服器名稱] 方塊中，提供伺服器名稱，或按一下 [\<Browse for more...>] 並尋找要使用的伺服器。  
   
 3.  如果物件總管尚未開啟，請在 [檢視]  功能表上，按一下物件總管  。  
   
@@ -166,7 +166,7 @@ ms.locfileid: "71296873"
   
     -   在 [伺服器類型]  方塊中，選取 [Integration Services]  。  
   
-    -   在 [伺服器名稱] 方塊中提供伺服器名稱，或按一下 [\<瀏覽其他...>]，並尋找要使用的伺服器。  
+    -   在 [伺服器名稱] 方塊中，提供伺服器名稱，或按一下 [\<Browse for more...>] 並尋找要使用的伺服器。  
   
 3.  如果物件總管尚未開啟，請在 [檢視]  功能表上，按一下物件總管  。  
   

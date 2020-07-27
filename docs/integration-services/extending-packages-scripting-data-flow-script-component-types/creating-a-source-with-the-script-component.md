@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6b3362c4761d6ad17618a2c390ada247be9071f1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e936a0afefa71969cf9e27c2c222d8780532610
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296451"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914134"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>以指令碼元件建立來源
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   您在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的資料流程中使用來源元件，以從資料來源載入資料，進而將其傳遞至下游轉換與目的地。 通常您會透過現有的連接管理員來連接到資料來源。  
@@ -64,7 +64,7 @@ ms.locfileid: "71296451"
 -   您可能會想要建立一或多個其他輸出，例如含有非預期值的資料列之模擬錯誤輸出。 使用 [新增輸出]  和 [移除輸出]  按鈕管理來源元件的輸出。 所有的輸入資料列都會導向至所有可用的輸出，除非您也為那些輸出的 **ExclusionGroup** 屬性指定相同的非零值，也就是您想要將每個輸入資料列導向至有著相同 **ExclusionGroup** 值的其中一個輸出。 至於選取哪一個特定的整數值以識別 **ExclusionGroup** 則無關緊要。  
   
     > [!NOTE]  
-    >  當您不想要輸出所有的資料列時，也可以使用具有單一輸出的非零 **ExclusionGroup** 屬性值。 然而，在此情況下，您必須為要傳送至輸出的每個資料列，明確地呼叫 **DirectRowTo\<outputbuffer>** 方法。  
+    >  當您不想要輸出所有的資料列時，也可以使用具有單一輸出的非零 **ExclusionGroup** 屬性值。 不過，在此情況下，您必須為要傳送至輸出的每個資料列，明確地呼叫 **DirectRowTo\<outputbuffer>** 方法。  
   
 -   您可能會想要將易記名稱指派給輸出。 之後，您將在指令碼中使用輸出的名稱來加以參考，方法是使用在自動產生的程式碼中為您建立的具有類型之存取子屬性。  
   

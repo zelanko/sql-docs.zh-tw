@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 13ab80fe810559105027070e15ca64c87ddc4161
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3ef2d8078dedfb15c1f4be27d4970c7eaaf4731a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903922"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919394"
 ---
 # <a name="derive-column-values-with-the-derived-column-transformation"></a>使用衍生的資料行轉換來衍生資料行值
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   若要加入及設定「衍生的資料行」轉換，封裝中必須已包含至少一個「資料流程」工作和一個來源。  
@@ -48,7 +48,7 @@ ms.locfileid: "77903922"
     > [!NOTE]  
     >  如果運算式無效，則運算式文字會反白顯示，且資料行上的「工具提示」會描述錯誤。  
   
-7.  在 [衍生的資料行] 清單中，選取 [\<以新資料行加入>] 以便將運算式的評估結果寫入新資料行，或選取要以評估結果更新的現有資料行。  
+7.  在 [衍生的資料行] 清單中，選取 **\<add as new column>** 以將運算式的評估結果寫入新資料行，或選取要以評估結果更新的現有資料行。  
   
      如果您選擇使用新資料行， **[衍生的資料行轉換編輯器]** 對話方塊就會依據資料類型、長度、有效位數、小數位數和字碼頁，評估運算式並指派資料類型到資料行。  
   

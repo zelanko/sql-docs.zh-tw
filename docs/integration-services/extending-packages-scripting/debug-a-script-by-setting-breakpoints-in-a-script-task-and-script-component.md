@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 6c03464f-3f7d-4882-b7f8-8e396f8e2944
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7b9fddccdf8f6f89c7b03074d052c49c94692bc6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0c9380a9e8699b2c0f38436228b0a2fdf820096e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71286286"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913384"
 ---
 # <a name="debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component"></a>在指令碼工作和指令碼元件中設定中斷點來偵錯指令碼
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   此程序描述如何在用於指令碼工作和指令碼元件的指令碼中設定中斷點。  
   
- 在指令碼中設定中斷點後，[設定中斷點 - \<物件名稱>] 對話方塊會列出中斷點與內建的中斷點。  
+ 在指令碼中設定中斷點後，[設定中斷點 - \<object name>] 對話方塊會列出中斷點與內建的中斷點。  
   
 > [!IMPORTANT]  
 >  在某些情況下，會忽略指令碼工作和指令碼元件的中斷點。 如需詳細資訊，請參閱[指令碼工作的程式碼撰寫和偵錯](../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)中的**偵錯指令碼工作**一節和[指令碼元件的程式碼撰寫和偵錯](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)中的**偵錯指令碼元件**一節。  

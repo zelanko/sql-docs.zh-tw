@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 343d3d0d16a19e6d7e1610eff84f6e1aa8ff860a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4db56206a629a4bf392ef56641564208ff1a9d3c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293803"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913810"
 ---
 # <a name="web-service-task"></a>Web 服務工作
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   「Web 服務」工作執行一個 Web 服務方法。 您可將「Web 服務」工作用於下列用途：  
@@ -87,7 +87,7 @@ ms.locfileid: "71293803"
   
 ### <a name="options"></a>選項。  
  **HTTPConnection**  
- 在清單中選取連線管理員，或按一下 [\<新增連線...>]  建立新的連線管理員。  
+ 在清單中選取連線管理員，或按一下 \<**New connection...**> 來建立新的連線管理員。  
   
 > [!IMPORTANT]  
 >  HTTP 連接管理員僅支援匿名驗證和基本驗證， 而不支援 Windows 驗證。  
@@ -173,13 +173,13 @@ ms.locfileid: "71293803"
   
 #### <a name="outputtype--file-connection"></a>OutputType = 檔案連接  
  **檔案**  
- 在清單中選取檔案連線管理員，或按一下 [\<新增連線...>]  建立新的連線管理員。  
+ 在清單中選取檔案連線管理員，或按一下 \<**New Connection...**> 以建立新的連線管理員。  
   
  **相關主題：** [檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)、[檔案連線管理員編輯器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="outputtype--variable"></a>OutputType = 變數  
  **變數**  
- 在清單中選取變數，或按一下 [\<新增變數...>]  建立新的變數。  
+ 在清單中選取變數，或按一下 \<**New Variable...**> 以建立新的變數。  
   
  **相關主題：** [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

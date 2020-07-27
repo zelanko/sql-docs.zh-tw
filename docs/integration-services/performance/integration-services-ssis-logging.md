@@ -29,16 +29,16 @@ helpviewer_keywords:
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: baad15da62c4452361fe8ff3cdf46582dd3727ea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ba8e26a75af5508e2fe18390e92fda3aea73c648
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287882"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918338"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) 記錄
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括可用於在套件、容器和工作中實作記錄的記錄提供者。 使用記錄，可以擷取有關封裝的執行階段資訊，藉此幫助您在每次執行封裝時對其進行稽核和疑難排解。 例如，記錄可以擷取執行封裝之操作員的名稱，以及封裝開始和結束的時間。  
@@ -230,7 +230,7 @@ ms.locfileid: "79287882"
   
 3.  在 [提供者類型]  清單中選取記錄提供者，然後按一下 [加入]  。  
   
-4.  在 [設定] 資料行中，選取連線管理員，或按一下 [\<新增連線>]，為記錄提供者建立適當類型的新連線管理員。 因所選提供者的不同，使用下列連接管理員之一：  
+4.  在 [組態] 資料行中，選取連線管理員，或按一下 **\<New connection>** ，為記錄提供者建立適當類型的新連線管理員。 因所選提供者的不同，使用下列連接管理員之一：  
   
     -   若為「文字」檔案，請使用「檔案」連接管理員。 如需詳細資訊，請參閱 [檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)  
   
@@ -312,7 +312,7 @@ ms.locfileid: "79287882"
  描述欄位是可編輯的。 按一下，然後修改記錄的預設描述。  
   
  **組態**  
- 在清單中選取現有連線管理員，或按一下 [\<新增連線...>]  ，即可建立新的連線管理員。 視記錄提供者的類型而定，您可以設定 OLE DB 連接管理員或檔案連接管理員。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件記錄檔的記錄提供者不需要有連接。  
+ 在清單中選取現有的連線管理員，或按一下 \<**New connection...**> 以建立新的連線管理員。 視記錄提供者的類型而定，您可以設定 OLE DB 連接管理員或檔案連接管理員。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件記錄檔的記錄提供者不需要有連接。  
   
  相關主題： [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) 、 [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   

@@ -30,16 +30,16 @@ helpviewer_keywords:
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2266b837ce7822a6b03b3f6a26d4d1d818aade72
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 176e5f4d638f6093f7239c347cbc0d3e0e5b75bb
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298295"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918229"
 ---
 # <a name="foreach-loop-container"></a>Foreach 迴圈容器
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   「Foreach 迴圈」容器定義封裝中重複的控制流程。 迴圈實作與程式設計語言中 **Foreach** 迴圈的結構類似。 在封裝中，迴圈是使用 Foreach 列舉值啟用。  「Foreach 迴圈」容器會為指定列舉值的每個成員重複控制流程。  
@@ -168,7 +168,7 @@ ms.locfileid: "71298295"
   
 7.  (選擇性) 按一下 [變數對應]  ，以將物件屬性對應至集合值，然後執行下列操作：  
   
-    1.  在 [變數]  清單中選取變數，或按一下 [\<新增變數>]  ，以建立新的變數。  
+    1.  在 [變數] 清單中選取變數，或按一下 **\<New Variable>** ，以建立新的變數。  
   
     2.  如果您加入新的變數，請在 [加入變數]  對話方塊中設定變數屬性，然後按一下 [確定]  。  
   
@@ -294,7 +294,7 @@ ms.locfileid: "71298295"
  Foreach ADO 列舉值可用來列舉 ADO 或 ADO.NET 物件中的資料列或資料表，而這類物件是儲存在變數中。 例如，如果 Foreach 迴圈包括將資料集寫入變數的指令碼工作，您可以使用 Foreach ADO 列舉值來列舉該資料集中的資料列。 如果變數包含 ADO.NET 資料集，則可將列舉值設定成列舉多個資料表中的資料列，或設定成列舉資料表。  
   
  **ADO 物件來源變數**  
- 在清單中選取使用者定義變數，或按一下 [\<新增變數...>]  ，以建立新的變數。  
+ 在清單中選取使用者自訂變數，或按一下 \<**New variable...**> 以建立新的變數。  
   
 > [!NOTE]  
 >  變數必須為物件資料類型，否則會發生錯誤。  
@@ -314,7 +314,7 @@ ms.locfileid: "71298295"
  Foreach ADO.NET 結構描述資料列集列舉值可用來列舉所指定之資料來源的結構描述。 例如，如果 Foreach 迴圈包括「執行 SQL」工作，您可以使用 Foreach ADO.NET 結構描述資料列集列舉值來列舉結構描述 (例如 **AdventureWorks** 資料庫中的資料行)，以及使用「執行 SQL」工作來取得結構描述權限。  
   
  **[連接]**  
- 在清單中選 ADO.NET 連線管理員，或按一下 [\<新增連線...>]  ，以建立新的 ADO.NET 連線管理員。  
+ 在清單中選取一個 ADO.NET 連線管理員，或按一下 \<**New connection...**> 即可建立新的 ADO.NET 連線管理員。  
   
 > [!IMPORTANT]  
 >  ADO.NET 連接管理員必須使用 OLE DB 的 .NET 提供者。 如果連接到 SQL Server，則建議使用的提供者是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，會列在 **[連接管理員]** 對話方塊的 **[OleDb 的 .Net 提供者]** 區段中。  
@@ -333,7 +333,7 @@ ms.locfileid: "71298295"
  Foreach From Variable 列舉值可用來列舉所指定之變數中可列舉的物件。 例如，如果 Foreach 迴圈包括執行查詢並將結果儲存在變數中的「執行 SQL」工作，您可以使用 Foreach From Variable 列舉值來列舉查詢結果。  
   
  **變數**  
- 在清單中選取變數，或按一下 [\<新增變數...>]  建立新的變數。  
+ 在清單中選取變數，或按一下 \<**New variable...**> 以建立新的變數。  
   
  **相關主題：** [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -356,11 +356,11 @@ ms.locfileid: "71298295"
  **DocumentSource**  
  如果 [DocumentSourceType]  設定為 [直接輸入]  ，請提供 XML 程式碼，或按一下省略符號 (...) 按鈕，以使用 [文件來源編輯器]  對話方塊來提供 XML。  
   
- 如果 [DocumentSourceType]  設定為 [檔案連線]  ，請選取檔案連線管理員，或按一下 [\<新增連線...>]  ，以建立新的連線管理員。  
+ 如果 [DocumentSourceType] 設定為 [檔案連線]，請選取檔案連線管理員，或按一下 \<**New connection...**>，以建立新的連線管理員。  
   
  **相關主題：** [檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)、[檔案連線管理員編輯器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- 如果 [DocumentSourceType]  設定為 [變數]  ，請選取現有的變數，或按一下 [\<新增變數...>]  ，以建立新的變數。  
+ 如果 [DocumentSourceType] 設定為 [變數]，請選取現有的變數，或按一下 \<**New variable...**>，以建立新的變數。  
   
  **相關主題：** [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
@@ -386,11 +386,11 @@ ms.locfileid: "71298295"
  **OuterXPathString**  
  如果 [OuterXPathStringSourceType]  設定為 [直接輸入]  ，請提供 XPath 字串。  
   
- 如果 [OuterXPathStringSourceType]  設定為 [檔案連線]  ，請選取檔案連線管理員，或按一下 [\<新增連線...>]  ，以建立新的連線管理員。  
+ 如果 [OuterXPathStringSourceType] 設定為 [檔案連線]，請選取檔案連線管理員，或按一下 \<**New connection...**> 以建立新的連線管理員。  
   
  **相關主題：** [檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)、[檔案連線管理員編輯器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- 如果 [OuterXPathStringSourceType]  設定為 [變數]  ，請選取現有的變數，或按一下 [\<新增變數...>]  ，以建立新的變數。  
+ 如果 [OuterXPathStringSourceType] 設定為 [變數]，請選取現有的變數，或按一下 \<**New variable...**> 以建立新的變數。  
   
  **相關主題：** [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
@@ -409,11 +409,11 @@ ms.locfileid: "71298295"
  **InnerXPathString**  
  如果 [InnerXPathStringSourceType]  設定為 [直接輸入]  ，請提供 XPath 字串。  
   
- 如果 [InnerXPathStringSourceType]  設定為 [檔案連線]  ，請選取檔案連線管理員，或按一下 [\<新增連線...>]  ，以建立新的連線管理員。  
+ 如果 [InnerXPathStringSourceType] 設定為 [檔案連線]，請選取檔案連線管理員，或按一下 \<**New connection...**> 以建立新的連線管理員。  
   
  **相關主題：** [檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)、[檔案連線管理員編輯器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- 如果 [InnerXPathStringSourceType]  設定為 [變數]  ，請選取現有的變數，或按一下 [\<新增變數...>]  ，以建立新的變數。  
+ 如果 [InnerXPathStringSourceType] 設定為 [變數]，請選取現有的變數，或按一下 \<**New variable...**> 以建立新的變數。  
   
  **相關主題：** [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
@@ -421,7 +421,7 @@ ms.locfileid: "71298295"
  Foreach SMO 列舉值可用來列舉 SQL Server 管理物件 (SMO) 物件。 例如，如果 Foreach 迴圈包括「執行 SQL」工作，您可以使用 Foreach SMO 列舉值來列舉 **AdventureWorks** 資料庫中的資料表，並執行用來計算每個資料表中資料列數目的查詢。  
   
  **[連接]**  
- 選取現有的 ADO.NET 連線管理員，或按一下 [\<新增連線...>]  ，以建立新的連線管理員。  
+ 選取現有的 ADO.NET 連線管理員，或按一下 \<**New connection...**> 以建立新的連線管理員。  
   
  相關主題：[ADO.NET 連線管理員](../../integration-services/connection-manager/ado-net-connection-manager.md)、[設定 ADO.NET 連線管理員](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
   

@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0eef24cbeac94a6447c2cd6b4f5a43fd0ca93657
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 54581ad36eea167316d9e6c4cdb68b23e69a1cbd
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292289"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916459"
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>在資料流程元件中將查詢參數對應至變數
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   將 OLE DB 來源設定為使用參數化查詢時，可以將參數對應至變數。  
@@ -47,7 +47,7 @@ ms.locfileid: "71292289"
   
 7.  按一下 **[參數]** 。  
   
-8.  在 [設定查詢參數] 對話方塊中，將 [參數] 清單中的每個參數對應至 [變數] 清單中的變數，或按一下 [\<新增變數>] 來建立新變數。 按一下 [確定]  。  
+8.  在 [設定查詢參數] 對話方塊中，將 [參數] 清單中每個參數對應至 [變數] 清單中的變數，或按一下 **\<New variable>** 來建立新變數。 按一下 [確定]  。  
   
     > [!NOTE]  
     >  只有封裝、「Foreach 迴圈」之類的父容器或包含資料流程元件之「資料流程」工作等範圍內的系統變數和使用者自訂變數才可用於對應。 變數的資料類型必須與指派參數之 WHERE 子句中的資料行相容。  

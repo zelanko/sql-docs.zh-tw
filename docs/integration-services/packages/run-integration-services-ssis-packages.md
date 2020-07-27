@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fe82e7d6746f3a5fc76fda3f960f069ef4345525
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 29d9fce968a000a2212ada9776d1b5f3a812c25f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287382"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919157"
 ---
 # <a name="run-integration-services-ssis-packages"></a>執行 Integration Services (SSIS) 封裝
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   若要執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝，您可以根據這些封裝的儲存位置使用數種工具的其中一種。 工具會列在下表中。  
@@ -85,7 +85,7 @@ ms.locfileid: "79287382"
   
 1.  在方案總管中，以滑鼠右鍵按一下包含您要執行之封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案資料夾，然後按一下 [屬性]  。  
   
-2.  在 [\<專案名稱> 屬性頁]  對話方塊中，按一下 [建置]  。  
+2.  在 [\<project name> 屬性頁面] 對話方塊中，按一下 [建置]。  
   
 3.  更新 OutputPath 屬性中的值，以指定要用於設計階段部署的資料夾，然後按一下 [確定]  。  
 
@@ -156,7 +156,7 @@ ms.locfileid: "79287382"
 ###  <a name="set-the-options-on-the-advanced-tab"></a><a name="advanced"></a> 設定 [進階] 索引標籤上的 [選項]  
  使用 [進階] 索引標籤管理屬性和其他封裝設定。  
   
- [加入]  、[編輯]  、[移除]   
+ [加入]  、[編輯]  、[移除]  
  按一下可加入、編輯或移除屬性。  
   
  **記錄層級**  

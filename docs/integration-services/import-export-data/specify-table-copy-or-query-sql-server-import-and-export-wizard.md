@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f561fd0e5817ecc03e8d5fe4cc8c32661ebdca21
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da112bf3a58d33fd7fae154d5a437c309ab7d2a6
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296248"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914334"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>指定資料表複製或查詢 (SQL Server 匯入和匯出精靈)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   在您提供有關資料目的地及其連接方式的資訊之後，[ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 顯示 [指定資料表複製或查詢]  。 在此頁面上，您可以選擇下列其中一個選項。
@@ -56,7 +56,7 @@ ms.locfileid: "71296248"
 只要您知道想要匯出之資料表的名稱，則仍然可以使用 [Write a query] (撰寫查詢)  選項，即使通常不會撰寫 SQL 查詢也是一樣。 在您按一下 [下一步]  後看到的 [提供來源查詢]  對話方塊中，將查詢輸入為 `SELECT * FROM <name of table>`。 如果資料表的名稱包含空格或其他特殊字元，則請使用方括弧括住名稱：`SELECT * FROM [<name of table>]`。
 
 ### <a name="more-info"></a>其他資訊
- [從一個或多個資料表或檢視表複製資料]  選項僅適用於在 ProviderDescriptors.xml 檔案中具有 ProviderDescription 區段的提供者。 (此檔案預設位於 \<磁碟機  >:\Program Files\Microsoft SQL Server\130\DTS\ProviderDescriptors)。此檔案中的每個 ProviderDescription 區段都會包含從對應提供者擷取中繼資料所需的資訊。    
+ [從一個或多個資料表或檢視表複製資料]  選項僅適用於在 ProviderDescriptors.xml 檔案中具有 ProviderDescription 區段的提供者。 (根據預設，這個檔案位於 \<*drive*>:\Program Files\Microsoft SQL Server\130\DTS\ProviderDescriptors。)此檔案中的每個 ProviderDescription 區段都會包含從對應提供者擷取中繼資料所需的資訊。    
     
  依預設，只有針對下列清單中的提供者，ProviderDescriptors.xml 檔案才會包含 ProviderDescription 區段。    
     

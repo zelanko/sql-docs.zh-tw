@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e2b43837de8617af559e2a810c89115e5a3963d3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 348ec6768d7a1eb47c77759c039d0a465aabed65
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71283264"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922224"
 ---
 # <a name="lesson-3-2-add-and-configure-logging"></a>課程 3-2：新增及設定記錄
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -39,7 +39,7 @@ ms.locfileid: "71283264"
   
 5.  可選擇性地修改 **[描述]** 。  
   
-6.  在 [設定]  資料行中，選取 [\<新連接>]  以指定 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 寫入記錄資訊的位置。  
+6.  在 [設定] 資料行中，選取 [\<New Connection>] 以指定 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 寫入記錄資訊的位置。  
   
     在 [檔案連線管理員編輯器]  對話方塊中，針對 [使用類型]  選取 [建立檔案]  ，然後選取 [瀏覽]  。 [選取檔案]  對話方塊預設會開啟專案資料夾，但您可以將記錄資訊儲存至任何位置。  
   

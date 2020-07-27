@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 0d053786-5203-43f3-a613-27a8dd2bc44a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5fb38e4be2b7d7c780dae3ee819e146958541c9f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a5d6eec55e339d8aaf23d04b88d14fc945e8f0c7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295971"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922144"
 ---
 # <a name="lesson-4-1-copy-the-lesson-3-package"></a>課程 4-1：複製第 3 課套件
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -45,7 +45,7 @@ ms.locfileid: "71295971"
 
 7.  在 [屬性]  視窗中，將 [名稱]  屬性變更為**第 4 課**。
 
-8.  依序選取 [識別碼]  屬性的方塊、下拉式箭頭，以及 [\<產生新的識別碼>]  。
+8.  依序選取 [識別碼] 屬性的方塊、下拉式箭頭和 [\<Generate New ID>]。
 
 ## <a name="add-the-completed-lesson-3-package"></a>新增已完成的第 3 課套件
 

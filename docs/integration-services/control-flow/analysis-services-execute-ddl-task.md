@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a160e61e390f58dc640a5d1da265cdb77d5d9be1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9823a3075e1b333bfbe7c0f68e2f5cdedec6c979
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294335"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86899498"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Analysis Services 執行 DDL 工作
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   「 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行 DDL」工作會執行可建立、卸除或修改採礦模型和多維度物件 (如 Cube 和維度) 的資料定義語言 (DDL) 陳述式。 例如，DDL 陳述式可在 **Adventure Works** Cube 中建立資料分割，或在 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] ([!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中所含的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]範例資料庫) 中刪除維度。  
@@ -253,7 +253,7 @@ ms.locfileid: "71294335"
   
 ### <a name="static-options"></a>靜態選項  
  **[連接]**  
- 選取清單中的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連線管理員，或是按一下 [\<新增連線...>]  並使用 [新增 Analysis Services 連線管理員]  對話方塊，即可建立新的連線。  
+ 選取清單中的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連線管理員，或按一下 \<**New connection...**> 並使用 [新增 Analysis Services 連線管理員] 對話方塊，即可建立新的連線。  
   
  **相關主題：** [加入 Analysis Services 連線管理員對話方塊 UI 參考](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)、[Analysis Services 連線管理員](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   
@@ -274,13 +274,13 @@ ms.locfileid: "71294335"
   
 #### <a name="sourcetype--file-connection"></a>SourceType = 檔案連接  
  **Source**  
- 選取清單中的 [檔案連線]，或是按一下 [\<新增連線...>]  再使用 [檔案連線管理員]  對話方塊，即可建立新的連線。  
+ 選取清單中的 [檔案連線]，或按一下 \<**New connection...**> 並使用 [檔案連線管理員] 對話方塊，即可建立新的連線。  
   
  **相關主題：** [檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)  
   
 #### <a name="sourcetype--variable"></a>SourceType = 變數  
  **Source**  
- 在清單中選取變數，或按一下 [\<新增變數...>]  並使用 [新增變數]  對話方塊，以建立新的變數。  
+ 在清單中選取變數，或按一下 \<**New variable...**> 並使用 [新增變數] 對話方塊，即可建立新的變數。  
   
  **相關主題：** [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)  
   

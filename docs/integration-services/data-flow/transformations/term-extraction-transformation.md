@@ -28,16 +28,16 @@ helpviewer_keywords:
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 23ae71eff12e7155580eff8238a459c47211c5de
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c76fff59151ffd2e291cd259fbe35fdffd9c4eec
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297761"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914254"
 ---
 # <a name="term-extraction-transformation"></a>詞彙擷取轉換
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   「詞彙擷取」轉換會從轉換輸入資料行的文字中擷取詞彙，然後將這些詞彙寫入轉換輸出資料行。 轉換只適用於英文字，它使用自己的英文字典和有關英文的語言資訊。  
@@ -153,7 +153,7 @@ ms.locfileid: "71297761"
   
 -   數字、標點符號和字母字元的組合。 例如， *A23B#99* 會傳回詞彙 *A23B*。  
   
--   字元 %、@、&、$、#、\*、:、;、.、 **,** 、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、" 和 '。  
+-   字元 %、@、&、$、#、\*、:、;、.、 **,** 、!、?、\<, >、+、=、^、~、|、\\、/、(、)、[、]、{、}、" 和 '。  
   
     > [!NOTE]  
     >  包含一或多個句號 (.) 的縮寫字不會分隔為多個句子。  

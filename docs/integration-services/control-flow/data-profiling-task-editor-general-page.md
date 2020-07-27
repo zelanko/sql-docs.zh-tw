@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 46eb7c7f0834f864aba8e3951f4caf9092f5bb7b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8c1d3d2c727deea49e68e9f58e3ad0bf14245899
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294203"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919775"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>資料分析工作編輯器 (一般頁面)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   您可以使用 [資料分析工作編輯器] 的 [一般] 頁面來設定下列選項：  
@@ -62,9 +62,9 @@ ms.locfileid: "71294203"
  **目的地**  
  指定哪一個檔案連線管理員或封裝變數包含資料設定檔輸出：  
   
--   如果 [DestinationType]  選項設定為 [FileConnection]  ，[目的地]  選項就會顯示可用的檔案連線管理員。 您可以選取其中一個連線管理員，或選取 [\<新增檔案連線>] 來建立新的檔案連線管理員。  
+-   如果 [DestinationType]  選項設定為 [FileConnection]  ，[目的地]  選項就會顯示可用的檔案連線管理員。 您可選取其中一個連線管理員，或選取 \<New File connection> 來建立新的檔案連線管理員。  
   
--   如果 [DestinationType]  選項設定為 [變數]  ，[目的地]  選項就會在 [目的地]  清單中顯示可用的封裝變數。 您可以選取其中一個變數，或選取 [\<新增變數>] 來建立新的變數。  
+-   如果 [DestinationType]  選項設定為 [變數]  ，[目的地]  選項就會在 [目的地]  清單中顯示可用的封裝變數。 您可選取其中一個變數，或選取 \<New Variable> 來建立新的變數。  
   
  **OverwriteDestination**  
  指定是否要覆寫輸出檔 (如果它已經存在的話)。 預設值為 **[False]** 。 只有當 [DestinationType] 選項設定為 [FileConnection] 時，系統才會使用這個屬性的值。 當 [DestinationType] 選項設定為 [變數] 時，此工作永遠會覆寫變數的上一個值。  
@@ -80,7 +80,7 @@ ms.locfileid: "71294203"
  開啟資料設定檔檢視器。 獨立資料設定檔檢視器會顯示資料分析工作的資料設定檔輸出。 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝內部執行資料分析工作並計算資料設定檔後，您可以檢視資料設定檔輸出。  
   
 > [!NOTE]  
->  您也可以藉由執行 \<磁碟機>:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 資料夾中的 DataProfileViewer.exe，開啟資料設定檔檢視器。  
+>  您也可以藉由在 *\<drive>* :\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 資料夾中執行 DataProfileViewer.exe 的方式來開啟資料設定檔檢視器。  
   
 ## <a name="see-also"></a>另請參閱  
  [單一資料表快速分析表單 &#40;資料分析工作&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)   

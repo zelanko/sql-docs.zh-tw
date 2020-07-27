@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aa8a5454fb85c4a6bcfe53088549107f09b9772f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d98222a9f8663dfb2495220ee43af34c1f0c02d9
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298204"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920784"
 ---
 # <a name="provide-an-odata-source-query-at-runtime"></a>在執行階段提供 OData 來源查詢
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
  您可以在執行階段修改 OData 來源查詢，修改的方式是將「運算式」  加入資料流程工作的 **[OData Source].[Query]** 屬性。  
@@ -33,7 +33,7 @@ ms.locfileid: "71298204"
   
 1.  以滑鼠右鍵按一下 [資料流程工作]  ，然後選取 [參數化...]  選項。  
   
-2.  在 [參數化] 對話方塊中，針對 [屬性] 選取 **[\<OData 來源元件的名稱>].[Query]**。  
+2.  在 [參數化] 對話方塊中，針對 [屬性] 選取 [\<Name of the OData Source Component>].[Query]。  
   
 3.  選擇是要 [建立新的參數]  還是 [使用現有的參數]  。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "71298204"
   
     3.  為參數指定 [範圍]  ([封裝]  或 [專案]  )。  
   
-    4.  指定參數是否為 [必要]   
+    4.  指定參數是否為 [必要]  
   
 5.  按一下 **[確定]** ，關閉對話方塊。  
   

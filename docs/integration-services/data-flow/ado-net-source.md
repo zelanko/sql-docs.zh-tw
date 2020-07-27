@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ade0d29ed20bb8b39d9ac2a1762977abe24d8f65
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: acbf13282531e22c37acd247a42f4f346fa6b393
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293518"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922800"
 ---
 # <a name="ado-net-source"></a>ADO NET 來源
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   ADO NET 來源會從 .NET 提供者取用資料，並使該資料可供資料流程使用。  
@@ -124,7 +124,7 @@ ms.locfileid: "71293518"
  使用 [資料檢視]  對話方塊來預覽結果。 [預覽]  最多可顯示 200 個資料列。  
   
 > [!NOTE]  
->  在預覽資料時，具有 CLR 使用者定義型別的資料行不會包含資料。 而會顯示 \<數值太大而無法顯示> 或 System.Byte[]。 使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 提供者存取資料來源時會顯示前者，而使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 提供者時會顯示後者。  
+>  在預覽資料時，具有 CLR 使用者定義型別的資料行不會包含資料。 而會顯示值 \<value too big to display> 或 System.Byte[]。 使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 提供者存取資料來源時會顯示前者，而使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 提供者時會顯示後者。  
   
 ### <a name="data-access-mode-dynamic-options"></a>資料存取模式動態選項  
   

@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 183c95bf39c504c7444f1604206f5acef517a53d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a01b75cc3d3e804d9329b57676eecc28d17c121c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71284162"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917445"
 ---
 # <a name="integration-services-user-interface"></a>Integration Services 使用者介面
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   除了 [ [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 索引標籤上的設計介面以外，使用者介面還提供對下列視窗和對話方塊 (用以將功能加入封裝及設定封裝物件屬性) 的存取權：  
@@ -51,7 +51,7 @@ ms.locfileid: "71284162"
 |**數位簽章**|簽署封裝或從封裝中移除簽章。|在 **[SSIS]** 功能表上，按一下 **數位簽章**。<br /><br /> -或-<br /><br /> 以滑鼠右鍵按一下 [控制流程]  索引標籤之設計介面的任意位置，然後按一下 [數位簽章]  。|  
 |**設定中斷點**|啟用工作上的中斷點並設定中斷點屬性。|在 [控制流程]  索引標籤的設計介面上，以滑鼠右鍵按一下工作或容器，然後按一下 [編輯中斷點]  。 若要設定封裝上的中斷點，請以滑鼠右鍵按一下 [控制流程]  索引標籤之設計介面的任意位置，然後按一下 [編輯中斷點]  。|  
   
- [使用者入門]  視窗提供範例、教學課程和影片的連結。 若要加入其他內容的連結，請修改目前版本 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]隨附的 SamplesSites.xml 檔案。 建議您不要修改指定 RSS 摘要 URL 的 \<GettingStartedSamples> 元素值。 檔案位於 \<磁碟機>:\Program Files\Microsoft SQL Server\110\DTS\Binn 資料夾。 在 64 位元電腦上，檔案位於 \<磁碟機>:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn 資料夾  
+ [使用者入門]  視窗提供範例、教學課程和影片的連結。 若要加入其他內容的連結，請修改目前版本 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]隨附的 SamplesSites.xml 檔案。 建議不要修改指定 RSS 摘要 URL 的 \<GettingStartedSamples> 元素值。 檔案位於 *\<drive>* :\Program Files\Microsoft SQL Server\110\DTS\Binn 資料夾。 在 64 位元電腦上，檔案位於 *\<drive>* :\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn 資料夾  
   
  如果 SamplesSites.xml 檔案未損毀，請使用下列預設 xml 取代檔案中的 xml。  
   
