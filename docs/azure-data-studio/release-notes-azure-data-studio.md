@@ -8,17 +8,33 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 07/15/2020
-ms.openlocfilehash: 3f6766e32369c2002b6da7df62646572a4cf8507
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.date: 07/17/2020
+ms.openlocfilehash: 5acbadb8d019b6d7d468f756bd25b70d890251c8
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406251"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458883"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的版本資訊
 
 **[下載並安裝最新版本！](download.md)**
+
+## <a name="july-2020-hotfix"></a>2020 年 7月 (Hotfix)
+
+2020 年 7 月 17 日 &nbsp; / &nbsp; 版本：1.20.1
+
+&nbsp;
+
+| 變更 | 詳細資料 |
+| :----- | :------ |
+| 修正 Bug #11372 物件總管拖放資料表不正確地包裝資料表名稱 | [#11372](https://github.com/microsoft/azuredatastudio/issues/11372)  |
+| 修正 Bug #11356 深色佈景主題現在是預設佈景主題 | [#11356](https://github.com/microsoft/azuredatastudio/issues/11356)  |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issue"></a>已知問題
+
+- 某些使用者已回報此版本所隨附的新 Microsoft.Data.SqlClient v2.0.0 發生連線錯誤。 使用者發現[遵循這些指示](https://github.com/microsoft/azuredatastudio/issues/11367#issuecomment-659614111)可成功連線
 
 ## <a name="july-2020"></a>2020 年 7 月
 

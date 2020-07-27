@@ -1,5 +1,6 @@
 ---
 title: 啟用資源管理員 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 來啟用 Resource Governor。 您必須具有 CONTROL SERVER 權限。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4d17af53-cf11-4ce4-aab4-deda94a49836
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: acb23caea9e74af5a1f25f8d6d2acab31fbeb39f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7e58987e36ee4119b282a303265d2b6d898c9b0b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720455"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457840"
 ---
 # <a name="enable-resource-governor"></a>啟用資源管理員
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,14 +47,14 @@ ms.locfileid: "85720455"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]** 。  
   
-2.  以滑鼠右鍵按一下 [資源管理員]  ，然後按一下 [啟用]  。  
+2.  以滑鼠右鍵按一下 [資源管理員]，然後按一下 [啟用]。  
   
 ##  <a name="enable-resource-governor-using-resource-governor-properties"></a><a name="RGOnProp"></a> 使用資源管理員屬性啟用資源管理員  
  **若要使用資源管理員屬性頁面來啟用資源管理員**  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]** 。  
   
-2.  以滑鼠右鍵按一下 [資源管理員]  ，然後按一下 [屬性]  ，這會開啟 [資源管理員屬性]  頁面。  
+2.  以滑鼠右鍵按一下 [資源管理員]，然後按一下 [屬性]，這會開啟 [資源管理員屬性] 頁面。  
   
 3.  按一下 **[啟用資源管理員]** 核取方塊，然後按一下 **[確定]** 。  
   

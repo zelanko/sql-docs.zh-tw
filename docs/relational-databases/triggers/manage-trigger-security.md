@@ -12,12 +12,12 @@ ms.assetid: e94720a8-a3a2-4364-b0a3-bbe86e3ce4d5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de347e9f950c16ccbbe014a9b2c07a76aaf168a5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bdbc04c4a1294605b59c04fb9df9a3c44b1f077f
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881177"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483689"
 ---
 # <a name="manage-trigger-security"></a>管理觸發程序安全性
 
@@ -60,7 +60,7 @@ GO
     ```  
 
    > [!NOTE]
-   > 除非您是使用受控執行個體，否則 Azure SQL Database 只能使用 **sys.triggers**。
+   > 除非正在使用 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]，否則 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 只能使用 **sys.triggers**。
 
 ::: moniker-end
 
@@ -124,5 +124,4 @@ GO
  [DML 觸發程序](../../relational-databases/triggers/dml-triggers.md)   
  [DDL 觸發程序](../../relational-databases/triggers/ddl-triggers.md)  
  [登入觸發程序](../../relational-databases/triggers/logon-triggers.md)  
-  
   

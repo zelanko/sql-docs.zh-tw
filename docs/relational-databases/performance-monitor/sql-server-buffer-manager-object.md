@@ -1,5 +1,6 @@
 ---
 title: SQL Server 的 Buffer Manager 物件 | Microsoft Docs
+description: 了解 Buffer Manager 物件，這會提供用於監視頁面記憶體的計數器、用於監視實體 I/O 的計數器，以及緩衝集區延伸。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 81f487db3622de86fdf041acab5acee93c68d1ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 63ecd1f64db0a3065bc513e935fc832292d5dd00
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85656447"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457419"
 ---
 # <a name="sql-server-buffer-manager-object"></a>SQL Server 的 Buffer Manager 物件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +59,7 @@ ms.locfileid: "85656447"
 |**每秒的延伸模組頁面寫入數**|每秒寫入緩衝集區延伸模組檔案的頁數。|  
 |**Free list stalls/sec**|表示每秒鐘必須等待可用頁面的要求數。|  
 |**Integral Controller Slope**|緩衝集區的整體控制器上次使用的斜率，乘以 -100 億。| 
-|**Lazy writes/sec**|表示每秒鐘由緩衝區管理員的延遲寫入器所寫入的緩衝區數目。 「延遲寫入器」  是一種系統處理序，可排清整批已變更且過時的緩衝區 (這種緩衝區包含必須重新寫入磁碟以便讓緩衝區可重複用於其他頁面的變更)，使其可供使用者處理序使用。 使用延遲寫入器，即不需經常執行檢查點來建立可用的緩衝區。|  
+|**Lazy writes/sec**|表示每秒鐘由緩衝區管理員的延遲寫入器所寫入的緩衝區數目。 「延遲寫入器」是一種系統處理序，可排清整批已變更且過時的緩衝區 (這種緩衝區包含必須重新寫入磁碟以便讓緩衝區可重複用於其他頁面的變更)，使其可供使用者處理序使用。 使用延遲寫入器，即不需經常執行檢查點來建立可用的緩衝區。|  
 |**Page life expectancy**|表示頁面停留在這個沒有參考之緩衝集區中的秒數。|  
 |**Page lookups/sec**|表示每秒鐘在緩衝集區中尋找頁面的要求數。|  
 |**Page reads/sec**|表示每秒鐘發出的實體資料庫頁面讀取數。 這項統計資料可顯示所有資料庫的實體頁面讀取總數。 由於實體 I/O 成本很高，因此您可以藉由使用較大的資料快取、智慧型索引、和較有效的查詢，或藉由變更資料庫設計，盡可能降低成本。|  

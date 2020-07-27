@@ -1,5 +1,6 @@
 ---
 title: 移動工作負載群組 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL，將 Resource Governor 工作負載群組移至不同的資源集區。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f2068636-6e53-486a-a6fc-c12de2a38424
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: d7db094db50938b08125b6605040eba935b77273
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a3ff2eff8f72499506aa129b064690693f1b14ff
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720470"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86456610"
 ---
 # <a name="move-a-workload-group"></a>移動工作負載群組
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,11 +44,11 @@ ms.locfileid: "85720470"
   
 1.  在 [物件總管] 中，遞迴地向下展開 **[管理]** 節點至 **[資源管理員]** 。  
   
-2.  以滑鼠右鍵按一下 [資源管理員]  ，然後按一下 [屬性]  ，這會開啟 [資源管理員屬性]  頁面。  
+2.  以滑鼠右鍵按一下 [資源管理員]，然後按一下 [屬性]，這會開啟 [資源管理員屬性] 頁面。  
   
 3.  在 **[資源集區]** 視窗中，按一下包含要移動之工作負載群組的資源集區。 **[工作負載群組]** 視窗現在會列出該資源集區中的工作負載群組。  
   
-4.  在 [工作負載群組]  視窗中，以滑鼠右鍵按一下要移動之工作負載群組左側的向右箭頭，然後按一下 [移至]  。 這會顯示 **[移動工作負載群組]** 視窗。  
+4.  在 [工作負載群組] 視窗中，以滑鼠右鍵按一下要移動之工作負載群組左側的向右箭頭，然後按一下 [移至]。 這會顯示 **[移動工作負載群組]** 視窗。  
   
 5.  可用的資源集區會顯示在此視窗中。 按一下您想要將工作負載群組移到其中的資源集區名稱，然後按一下 **[確定]** 執行此動作。  
   

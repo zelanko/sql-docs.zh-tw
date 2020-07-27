@@ -1,6 +1,6 @@
 ---
 title: 建立與測試分類使用者定義函數 - Resource Governor
-description: 本主題說明如何建立和測試分類使用者定義函數 (UDF)。
+description: 了解如何建立與測試分類使用者定義函式，這牽涉到在 SQL Server Management Studio 查詢編輯器中執行 Transact-SQL 陳述式。
 ms.custom: seo-dt-2019
 ms.date: 07/11/2017
 ms.prod: sql
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 405e99a8cfda0792b29da8ff40ab6e8d7687a706
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e5b1b0accf599793fdaac0bd492b648d1b302cae
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720495"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457865"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>建立和測試分類使用者定義函數
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

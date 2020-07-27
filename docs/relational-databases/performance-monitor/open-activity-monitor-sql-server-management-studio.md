@@ -1,6 +1,6 @@
 ---
 title: 開啟活動監視器 (SSMS)
-description: 如何在 SQL Server Management Studio (SSMS) 中開啟活動監視器
+description: 了解如何在 SQL Server Management Studio 中開啟活動監視器。 活動監視器會查詢受監視的執行個體，以取得並顯示資訊。
 ms.custom: seo-dt-2019
 ms.date: 08/05/2016
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 16d08bbc2b651ef21ee80be1e8af74a00b45a253
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d570faf51200708bcbd56371d68f53a12776d12e
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787435"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457466"
 ---
 # <a name="open-activity-monitor-in-sql-server-management-studio-ssms"></a>在 SQL Server Management Studio (SSMS) 中開啟活動監視器
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,20 +44,20 @@ ms.locfileid: "85787435"
 
 ### <a name="toolbar"></a>工具列
 
-從標準工具列，按一下 [活動監視器]  。 它位於正中間，就在 [復原/取消復原] 按鈕的右邊。
+從標準工具列，按一下 [活動監視器]。 它位於正中間，就在 [復原/取消復原] 按鈕的右邊。
 ![Activity_Monitor_icon](../../relational-databases/performance-monitor/media/activity-monitor-icon.png)  
   
-如果您尚未連接到所要監視的 SQL Server 執行個體，請完成 [連接到伺服器]  對話方塊。
+如果您尚未連接到所要監視的 SQL Server 執行個體，請完成 [連接到伺服器] 對話方塊。
   
 ## <a name="launch-activity-monitor-and-object-explorer-on-startup"></a>在啟動時啟動活動監視器和物件總管
   
 1.  在 **[工具]** 功能表中，按一下 **[選項]** 。  
   
-2.  在 [選項]  對話方塊中，展開 [環境]  ，然後選取 [啟動]  。  
+2.  在 [選項] 對話方塊中，展開 [環境]，然後選取 [啟動]。  
   
-3.  從 [啟動時]  下拉式清單，選取 [開啟物件總管和活動監視器]  。  
+3.  從 [啟動時] 下拉式清單，選取 [開啟物件總管和活動監視器]。  
 
-4.  按一下 [確定]  。
+4.  按一下 [確定]。
 
 ![open_object_explorer](../../relational-databases/performance-monitor/media/open-object-explorer.png)
   
@@ -66,6 +66,6 @@ ms.locfileid: "85787435"
   
 1.   開啟 [活動監視器]。  
   
-2.   以滑鼠右鍵按一下 [概觀]  ，選取 [重新整理間隔]  ，然後選取活動監視器應該用來取得新執行個體資訊的間隔。  
+2.   以滑鼠右鍵按一下 [概觀]，選取 [重新整理間隔]，然後選取活動監視器應該用來取得新執行個體資訊的間隔。  
   
   

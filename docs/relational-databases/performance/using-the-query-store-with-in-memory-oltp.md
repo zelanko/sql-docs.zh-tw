@@ -1,5 +1,6 @@
 ---
 title: 使用含有記憶體內部 OLTP 的查詢存放區 | Microsoft 文件
+description: 了解 SQL Server 查詢存放區如何允許針對執行記憶體內部 OLTP 的工作負載來監視原生編譯程式碼的效能。
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8962776175617293c1acdc979852232dbca95c5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b18741804460a5a95f74345f2158cb647ab3689c
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737116"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86456953"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>使用含有記憶體內部 OLTP 的查詢存放區
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

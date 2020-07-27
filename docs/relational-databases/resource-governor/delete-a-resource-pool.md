@@ -1,5 +1,6 @@
 ---
 title: 刪除資源集區 | Microsoft 文件
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 來刪除資源集區。 您必須具有 CONTROL SERVER 權限。
 ms.custom: ''
 ms.date: 03/17/2016
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3bdd348b-6582-4ffa-80ef-d49e50596ce5
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 65ebdd2cfac33202437d0c6f515a838ed71e9534
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1b2494442986bd24febc90318502736faf5f2367
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720485"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457850"
 ---
 # <a name="delete-a-resource-pool"></a>刪除資源集區
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85720485"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]** 。  
   
-2.  以滑鼠右鍵按一下要刪除的資源集區，然後按一下 [刪除]  。  
+2.  以滑鼠右鍵按一下要刪除的資源集區，然後按一下 [刪除]。  
   
 3.  在 **[刪除物件]** 視窗中，資源集區列於 **[要刪除的物件]** 清單內。 若要刪除資源集區，請按一下 **[確定]** 。  
 

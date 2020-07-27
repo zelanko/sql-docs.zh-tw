@@ -1,5 +1,6 @@
 ---
 title: SQL Server 的 Memory Broker Clerks 物件 | Microsoft Docs
+description: 了解 SQLServer:Memory Broker Clerks 效能物件，這會提供與 Memory Broker Clerks 相關統計資料的計數器。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 47b9c236-66a3-4c42-97ee-da5555bdc046
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 5a14877c98b4abb2487712cfed2bd744c20933d2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 728a660b3737410e9f235cb8632cbf948f7bcf82
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775811"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458793"
 ---
 # <a name="sql-server-memory-broker-clerks-object"></a>SQL Server, Memory Broker Clerks 物件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

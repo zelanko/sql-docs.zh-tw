@@ -1,5 +1,6 @@
 ---
 title: 刪除統計資料 | Microsoft 文件
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL，從 SQL Server 的資料表及檢視中刪除或置放統計資料。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: eccce0aa-591e-4a1d-bd10-373b022f8749
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc76dc81d61d4fb10821129e668312c9010bc40a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8cf698e4a1148a54b440bb0ee29c316d921c654b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012214"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458222"
 ---
 # <a name="delete-statistics"></a>刪除統計資料
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "86012214"
   
 -   **若要使用下列項目卸除資料表或檢視的統計資訊：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -63,7 +64,7 @@ ms.locfileid: "86012214"
   
 4.  按一下加號展開 **[統計資料]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您想要刪除的統計資料物件，然後選取 [刪除]  。  
+5.  以滑鼠右鍵按一下您想要刪除的統計資料物件，然後選取 [刪除]。  
   
 6.  在 **[刪除物件]** 對話方塊中，確定已選取正確的統計資料，然後按一下 **[確定]** 。  
 

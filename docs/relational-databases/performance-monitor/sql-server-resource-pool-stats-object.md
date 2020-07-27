@@ -1,5 +1,6 @@
 ---
 title: SQL Server 的 Resource Pool Stats 物件 | Microsoft Docs
+description: 了解 SQLServer:Resource Pool Stats 物件，其包含可報告 Resource Governor 資源集區統計資料的效能計數器。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 35053d98db9b87b06512064e75adf06b4bcd6c51
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4629cc0e109946c6dcd2f146e7e18568eca082f0
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758922"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458754"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQL Server, Resource Pool Stats 物件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,5 +1,6 @@
 ---
 title: SQL Server XTP 交易 | Microsoft Docs
+description: 了解 SQL Server XTP Transactions 效能物件，其中包含與 SQL Server 中記憶體內部 OLTP 交易相關的計數器。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 443d67e4-1c7f-41d7-b18d-2d657f58c22a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b8da1956665775cf54da529140a10a8477cd86ad
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 384e2feb7d638a7ff8cad4e22346ba58369cc6aa
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85741521"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458063"
 ---
 # <a name="sql-server-xtp-transactions"></a>SQL Server XTP 交易
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

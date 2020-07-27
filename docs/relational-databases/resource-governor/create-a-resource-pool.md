@@ -1,5 +1,6 @@
 ---
 title: 建立資源集區 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 來建立資源集區。 您必須具有 CONTROL SERVER 權限。
 ms.custom: ''
 ms.date: 03/17/2016
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 44dd0567-a4c8-4c72-89ff-e76f6ddef344
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 4ddcb42d6a91eab41cddf3beb53c0de6a6b25d36
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cc46e2e759dbfec54064975281101cb694039786
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720540"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457540"
 ---
 # <a name="create-a-resource-pool"></a>建立資源集區
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,11 +44,11 @@ ms.locfileid: "85720540"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]** 。  
   
-2.  以滑鼠右鍵按一下 [資源管理員]  ，然後按一下 [屬性]  。  
+2.  以滑鼠右鍵按一下 [資源管理員]，然後按一下 [屬性]。  
   
 3.  在 **[資源集區]** 方格中，按一下空白資料列的第一個資料行。 這個資料行標示有星號 (*)。  
   
-4.  按兩下 [名稱]  資料行中的空白儲存格。 輸入您想要用於資源集區的名稱。  
+4.  按兩下 [名稱] 資料行中的空白儲存格。 輸入您想要用於資源集區的名稱。  
   
 5.  在資料列中按一下或按兩下要變更的任何其他資料格，然後輸入新值。  
   

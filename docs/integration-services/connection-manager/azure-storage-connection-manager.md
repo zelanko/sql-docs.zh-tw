@@ -14,16 +14,16 @@ f1_keywords:
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6d3912e2b5cbf8051348191cf3efb6ed2d20d551
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 76257fd464a7107297d609bfb6a4ef150d6f58bc
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74687197"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913632"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure 儲存體連線管理員
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 Azure 儲存體連線管理員可讓 SQL Server Integration Services (SSIS) 套件連線到 Azure 儲存體帳戶。 連線管理員是 [SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) 的元件。 
   
@@ -33,11 +33,15 @@ Azure 儲存體連線管理員可讓 SQL Server Integration Services (SSIS) 套�
 
 - **服務：** 指定要連線的目標儲存體服務。
 - **帳戶名稱：** 指定儲存體帳戶名稱。
-- **驗證：** 指定要使用的驗證方法。 支援 AccessKey 和 ServicePrincipal 驗證。
+- **驗證：** 指定要使用的驗證方法。 支援 AccessKey、ServicePrincipal 和 SharedAccessSignature 驗證。
     - **AccessKey：** 針對這種驗證方法，指定**帳戶金鑰**。
     - **ServicePrincipal：** 針對此驗證方法，請指定服務主體的**應用程式識別碼**、**應用程式金鑰**和**租用戶識別碼**。
       若要讓**測試連線**正常執行，應將服務主體至少指派給儲存體帳戶的**儲存體 Blob 資料讀者**角色。
       如需詳細資訊，請參閱[在 Azure 入口網站中使用 RBAC 授與 Azure Blob 和佇列資料的存取權](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) \(部分機器翻譯\)。
+    - **SharedAccessSignature：** 針對此驗證方法，請至少指定共用存取簽章的**權杖**。
+      若要測試連線，請另外指定要測試的資源範圍。 例如**服務**、**容器**或 **Blob**。
+      針對**容器**和 **Blob**，請分別指定容器名稱和 Blob 路徑。
+      如需詳細資訊，請參閱 [Azure 儲存體共用存取簽章概觀](https://docs.microsoft.com/azure/storage/common/storage-sas-overview) (機器翻譯)。
 - **環境：** 指定裝載儲存體帳戶的雲端環境。
 
 ## <a name="managed-identities-for-azure-resources-authentication"></a>Azure 資源驗證的受控識別
@@ -45,7 +49,7 @@ Azure 儲存體連線管理員可讓 SQL Server Integration Services (SSIS) 套�
 
 如需 Azure 儲存體驗證的一般資訊，請參閱[使用 Azure Active Directory 授權存取 Azure Blob 和佇列](https://docs.microsoft.com/azure/storage/common/storage-auth-aad) \(部分機器翻譯\)。 針對 Azure 儲存體使用受控識別驗證：
 
-1. [從 Azure 入口網站尋找資料處理站受控識別](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity)。 前往您資料處理站的**屬性**。 複製 [受控識別應用程式識別碼]  (不是 [受控識別物件識別碼]  )。
+1. [從 Azure 入口網站尋找資料處理站受控識別](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity)。 前往您資料處理站的**屬性**。 複製 [受控識別應用程式識別碼] (不是 [受控識別物件識別碼])。
 
 1. 在您的儲存體帳戶中將適當權限授與受控識別。 如需角色的詳細資訊，請參閱[使用 RBAC 管理 Azure 儲存體資料的存取權](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal) \(部分機器翻譯\)。
 
@@ -54,7 +58,7 @@ Azure 儲存體連線管理員可讓 SQL Server Integration Services (SSIS) 套�
 
 接著為 Azure 儲存體連線管理員設定受控識別驗證。 有兩個選項可以執行此操作：
 
-- **在設計階段設定。** 在 [SSIS 設計工具] 中，按兩下 [Azure 儲存體連線管理員] 以開啟 [Azure 儲存體連線管理員編輯器]  。 選取 [在 Azure 上使用受控識別進行驗證]  。
+- **在設計階段設定。** 在 [SSIS 設計工具] 中，按兩下 [Azure 儲存體連線管理員] 以開啟 [Azure 儲存體連線管理員編輯器]。 選取 [在 Azure 上使用受控識別進行驗證]。
     > [!NOTE]
     >  目前，當您在 SSIS 設計工具中或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 中執行 SSIS 套件時，此選項不會生效 (表示受控識別驗證無法運作)。
     

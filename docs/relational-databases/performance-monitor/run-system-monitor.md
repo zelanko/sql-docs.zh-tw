@@ -1,5 +1,6 @@
 ---
 title: 執行活動監視器 | Microsoft 文件
+description: 系統監視器使用遠端程序呼叫從 SQL Server 收集資訊。 任何具有執行系統監視器權限的使用者都可監視 SQL Server。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 05297984-bc8d-43df-829c-032387f7ea61
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: de2b4facacb6066763ff6673fd9dcb48ee81299d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6487ad070ee5c1be02f904f1f8e05c98530a2c3f
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787412"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457740"
 ---
 # <a name="run-system-monitor"></a>執行系統監視器
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

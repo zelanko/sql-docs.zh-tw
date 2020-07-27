@@ -1,5 +1,6 @@
 ---
 title: 分析實際執行計劃 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 計畫分析功能來分析實際圖形化執行計畫，其中包含執行階段資訊。
 ms.custom: ''
 ms.date: 10/11/2019
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 089cc2fd9a2131ab18fea01262f9bc0d476355e4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1424558566e544acd1a65aeb39c9a83747bbbb64
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773140"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458587"
 ---
 # <a name="analyze-an-actual-execution-plan"></a>分析實際執行計劃
 
@@ -40,14 +41,14 @@ ms.locfileid: "85773140"
   
 ## <a name="to-analyze-an-execution-plan-for-a-query"></a>分析查詢的執行計劃  
   
-1.  使用 [檔案]  功能表並按一下 [開啟檔案]  來開啟先前已儲存的查詢執行計劃檔案 (.sqlplan)，或將計劃檔案拖曳至 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 視窗。 或者，如果您只執行查詢並選擇顯示它的執行計劃，請移至結果窗格中的 [執行計劃]  索引標籤。 
+1.  使用 [檔案] 功能表並按一下 [開啟檔案] 來開啟先前已儲存的查詢執行計劃檔案 (.sqlplan)，或將計劃檔案拖曳至 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 視窗。 或者，如果您只執行查詢並選擇顯示它的執行計劃，請移至結果窗格中的 [執行計劃] 索引標籤。 
 
-2.  以滑鼠右鍵按一下執行計劃的空白區域，然後按一下 [分析實際執行計劃]  。 
+2.  以滑鼠右鍵按一下執行計劃的空白區域，然後按一下 [分析實際執行計劃]。 
 
     ![以滑鼠右鍵按一下 [分析實際執行計畫]](../../relational-databases/performance/media/plananalysismenuoption.png "以滑鼠右鍵按一下 [分析實際執行計畫]")   
 
-3.  [執行程序表分析]  視窗隨即在底部開啟。 使用多個陳述式來分析計劃時，藉由使用正確的陳述式進行分析，[多個陳述式]  索引標籤非常實用。
+3.  [執行程序表分析] 視窗隨即在底部開啟。 使用多個陳述式來分析計劃時，藉由使用正確的陳述式進行分析，[多個陳述式] 索引標籤非常實用。
 
-4.  選取 [案例] 索引標籤，以查看實際執行計劃中所發現問題的詳細資料。 針對左窗格上每個列出的運算子，右窗格會在 [按一下這裡可取得此案例的詳細資訊]  連結中顯示有關案例的詳細資料，並列出可能原因來說明該案例。
+4.  選取 [案例] 索引標籤，以查看實際執行計劃中所發現問題的詳細資料。 針對左窗格上每個列出的運算子，右窗格會在 [按一下這裡可取得此案例的詳細資訊] 連結中顯示有關案例的詳細資料，並列出可能原因來說明該案例。
 
     ![執行計畫分析結果](../../relational-databases/performance/media/plananalysis-scenarios.png "執行計畫分析結果") 

@@ -1,5 +1,6 @@
 ---
 title: 變更工作負載群組設定 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 來變更預設和使用者定義工作負載群組的工作負載群組設定。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 73b6109c-2ad0-4915-b11b-d40d5a0fdc25
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1e94646c6cab4a143fb87db9443d219d79262f39
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 882d0f15b946e49bf33338707ddeb2ea5354f922
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720551"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457550"
 ---
 # <a name="change-workload-group-settings"></a>變更工作負載群組設定
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "85720551"
   
 1.  在 [物件總管] 中，遞迴地向下展開 **[管理]** 節點至 **[資源管理員]** 資料夾，此資料夾包含要修改的工作負載群組。  
   
-2.  以滑鼠右鍵按一下要修改的工作負載群組，然後選取 [屬性]  。  
+2.  以滑鼠右鍵按一下要修改的工作負載群組，然後選取 [屬性]。  
   
 3.  在 **[資源管理員屬性]** 頁面的 **[資源集區的工作負載群組]** 方格中，選取工作負載群組的資料列 (如果系統沒有自動選取的話)。  
   

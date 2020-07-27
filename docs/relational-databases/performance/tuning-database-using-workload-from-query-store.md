@@ -1,5 +1,6 @@
 ---
 title: 使用查詢存放區的工作負載調整資料庫 | Microsoft 文件
+description: Database Engine Tuning Advisor 支援使用查詢存放區自動選取適當工作負載以進行微調的選項。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 17107549-5073-4fa2-8ee7-5ed33b38821e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: a308c4d7236c7822398cd9c8bf9aee94e0ffc61e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d7e279c7fe8cb6dd1ea2a716cd2a7a15d73c68e2
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737132"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457574"
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>使用查詢存放區的工作負載調整資料庫
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,9 +36,9 @@ ms.locfileid: "85737132"
 從命令列 (dta.exe) 中，選擇 **-iq** 選項，以選取查詢存放區的工作負載。 
 
 有另外兩個選項可透過命令列，協助您從查詢存放區中選取工作負載時，調整 DTA 的行為。 透過 GUI 無法使用這些選項：
-  1. **要調整的工作負載事件數目**︰使用 **-n** 命令列引數指定的這個選項，可讓使用者控制查詢存放區中調整的事件數目。 根據預設，DTA 會針對此選項使用 1000 這個值。 DTA 一律會選擇總持續期間最耗費資源的事件數。 
+  1. **要調整的工作負載事件數目**：使用 **-n** 命令列引數指定的這個選項，可讓使用者控制查詢存放區中調整的事件數目。 根據預設，DTA 會針對此選項使用 1000 這個值。 DTA 一律會選擇總持續期間最耗費資源的事件數。 
   
-  2. **要調整的事件時間範圍**︰因為查詢存放區可能包含很久以前執行的查詢，所以此選項可讓使用者指定過去的時間範圍 (以時數為單位)，只有在此時間範圍執行的查詢，DTA 才會考慮進行調整。 您可以使用 **-I** 命令列引數來指定此選項。 
+  2. **要調整的事件時間範圍**：因為查詢存放區可能包含很久以前執行的查詢，所以此選項可讓使用者指定過去的時間範圍 (以時數為單位)，只有在此時間範圍執行的查詢，DTA 才會考慮進行調整。 您可以使用 **-I** 命令列引數來指定此選項。 
 
 如需詳細資訊，請參閱 [dta 公用程式](../../tools/dta/dta-utility.md)。
 

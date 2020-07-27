@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6cce219b5e5d5d324e5e116bb9f55a931d7caaf8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c58323e0684b7b3e0397854cf6abec148f616248
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287702"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914014"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 資料庫
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Oracle CDC 執行個體與目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上同名的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫有關聯。 此資料庫稱為 Oracle CDC 資料庫 (或 CDC 資料庫)。  
@@ -49,7 +49,7 @@ ms.locfileid: "79287702"
  當建立 CDC 資料庫及設定 CDC 來源 Oracle 資料表時，CDC 資料庫擁有者可以授與鏡像資料表的 SELECT 權限，並定義 SQL Server CDC 控制角色來控制存取變更資料的人。  
   
 ## <a name="mirror-tables"></a>鏡像資料表  
- 對於每一個擷取的資料表 \<結構描述名稱>.\<資料表名稱> 而言 (在 Oracle 來源資料庫中)，都會在 CDC 資料庫中建立類似的空白資料表，而且具有相同的結構描述與資料表名稱。 無法擷取結構描述名稱為 `cdc` (不區分大小寫) 的 Oracle 來源資料表，因為會保留 `cdc` 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 結構描述給 SQL Server CDC。  
+ 針對每一個擷取的資料表 \<schema-name>.\<table-name> (在 Oracle 來源資料庫中)，都會在 CDC 資料庫中建立類似的空白資料表，且具有相同的結構描述與資料表名稱。 無法擷取結構描述名稱為 `cdc` (不區分大小寫) 的 Oracle 來源資料表，因為會保留 `cdc` 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 結構描述給 SQL Server CDC。  
   
  鏡像資料表是空的，其中不會儲存任何資料。 鏡像資料表是用來啟用 Oracle CDC 執行個體所使用的標準 SQL Server CDC 基礎結構。 為了避免將資料插入或更新到鏡像資料表中，PUBLIC 拒絕所有的 UPDATE、DELETE 和 INSERT 作業。 這可確保無法修改這些資料表。  
   

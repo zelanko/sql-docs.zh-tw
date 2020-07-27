@@ -1,5 +1,6 @@
 ---
 title: 聯結 (SQL Server) | Microsoft Docs
+description: 了解 SQL Server 所採用的聯結作業類型。 SQL Server 可透過聯結作業支援資料表垂直分割或單欄式儲存。
 ms.custom: ''
 ms.date: 07/19/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c7f2ff4782923eef9ee4d91fa0a7c69239e298c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c4c93c73aa3f20304a5e58fda096565d0db0456a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009687"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915844"
 ---
 # <a name="joins-sql-server"></a>聯結 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -111,9 +112,9 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 ## <a name="understanding-nested-loops-joins"></a><a name="nested_loops"></a> 認識巢狀迴圈聯結
 如果一個聯結輸入相當小 (少於 10 個資料列)，但另一個聯結輸入相當大而且在聯結資料行建有索引的話，索引巢狀迴圈是最快速的聯結作業，因為它們需要的 I/O 最少，需要的比較也最少。 
 
-巢狀迴圈聯結 (也稱為「巢狀反覆運算」  ) 會使用一個聯結輸入作為外部輸入資料表 (在圖形化執行計劃中顯示為上方輸入)，另一個聯結作為內部 (下方) 輸入資料表。 外部迴圈會逐列消耗外部輸入資料表。 內部迴圈 (針對外部每一列各執行一次) 會在內部輸入資料表中搜尋符合的資料列。   
+巢狀迴圈聯結 (也稱為「巢狀反覆運算」) 會使用一個聯結輸入作為外部輸入資料表 (在圖形化執行計劃中顯示為上方輸入)，另一個聯結作為內部 (下方) 輸入資料表。 外部迴圈會逐列消耗外部輸入資料表。 內部迴圈 (針對外部每一列各執行一次) 會在內部輸入資料表中搜尋符合的資料列。   
 
-在最簡單的情況下，搜尋會掃描整個資料表或索引；這稱為「單純巢狀迴圈聯結」  。 如果搜尋會利用索引，就稱為「索引巢狀迴圈聯結」  。 如果索引是隨著查詢計劃一起建立 (並且在查詢完成時終結)，則稱為「暫存索引巢狀迴圈聯結」  。 「查詢最佳化工具」會將所有這些變化都列入考慮。   
+在最簡單的情況下，搜尋會掃描整個資料表或索引；這稱為「單純巢狀迴圈聯結」。 如果搜尋會利用索引，就稱為「索引巢狀迴圈聯結」。 如果索引是隨著查詢計劃一起建立 (並且在查詢完成時終結)，則稱為「暫存索引巢狀迴圈聯結」。 「查詢最佳化工具」會將所有這些變化都列入考慮。   
 
 如果外部輸入相當小，內部輸入已預先建立索引而且很大的話，巢狀迴圈聯結會特別有效率。 在許多小型交易中 (如只影響一小組資料列的交易)，索引巢狀迴圈聯結比合併聯結與雜湊聯結要好得多。 然而在大型查詢中，巢狀迴圈聯結多半不是最佳選擇。    
 
@@ -224,7 +225,7 @@ WHERE [fo].[Quantity] = 361;
 
 批次模式自適性聯結適合初次執行的陳述式使用，而且一旦編譯，連續執行仍會根據編譯的自適性聯結閾值和流經外部輸入建置階段的執行階段資料列聯結自動調整。
 
-如果自適性聯結切換成巢狀迴圈作業，便會使用已由雜湊聯結組建讀取的資料列。 運算子「不會」  再次重新讀取外部參考資料列。
+如果自適性聯結切換成巢狀迴圈作業，便會使用已由雜湊聯結組建讀取的資料列。 運算子「不會」再次重新讀取外部參考資料列。
 
 ### <a name="tracking-adaptive-join-activity"></a>追蹤自適性聯結活動
 自適性聯結運算子有下列計劃運算子屬性：
@@ -245,7 +246,7 @@ WHERE [fo].[Quantity] = 361;
 - 資料庫相容性層級為 140 以上。
 - 查詢是 `SELECT` 陳述式 (資料修改陳述式目前不適合)。
 - 聯結能夠由索引巢狀迴圈聯結或雜湊聯結實體演算法執行。
-- 雜湊聯結使用[批次模式](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution)，不論是透過存在於整體查詢中的資料行存放區索引，或是由聯結直接參考的資料行存放區索引資料表。
+- 雜湊聯結使用批次模式，可透過存在於整體查詢中的資料行存放區索引、由聯結直接參考的資料行存放區索引資料表，或透過使用[資料列存放區功能中的批次模式](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore)加以啟用。
 - 產生的巢狀迴圈聯結和雜湊聯結替代解決方案應該有相同的第一個子系 (外部參考)。
 
 ### <a name="adaptive-threshold-rows"></a>自適性閾值資料列

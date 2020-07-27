@@ -1,5 +1,6 @@
 ---
 title: 比較執行計畫 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 計畫比較功能，以比較實際圖形化執行計畫之間的相似處和差異。
 ms.custom: ''
 ms.date: 11/21/2018
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: a7e1b2c3b56086e6b08e0f14c49505796921faeb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 855d893ddde9c3eba9f9197c510ed0d03bc658ce
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655733"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457368"
 ---
 # <a name="compare-execution-plans"></a>比較執行計畫
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "85655733"
 -   了解重新撰寫查詢的影響。
 -   觀察已導入至結構描述設計的特定效能增強變更 (例如，新索引) 如何有效地變更執行計畫。  
  
-[計畫比較]  功能表選項能夠對兩個不同的執行計畫進行並排比較，可更容易識別出相似之處與變更，基於上述所有因素來說明不同的行為。 此選項可在下列項目之間進行比較：
+[計畫比較] 功能表選項能夠對兩個不同的執行計畫進行並排比較，可更容易識別出相似之處與變更，基於上述所有因素來說明不同的行為。 此選項可在下列項目之間進行比較：
 - 兩個先前儲存的執行計畫檔案 ( *.sqlplan* 延伸模組)。
 - 一個使用中的執行計畫和一個先前儲存的查詢執行計畫。
 - [查詢存放區](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)中兩個已選取的查詢計畫。
@@ -51,9 +52,9 @@ ms.locfileid: "85655733"
   
 ## <a name="to-compare-execution-plans"></a>比較執行計畫
   
-1.  使用 [檔案]  功能表並按一下 [開啟檔案]  來開啟先前已儲存的查詢執行計劃檔案 (.sqlplan)，或將計劃檔案拖曳至 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 視窗。 或者，如果您只執行查詢並選擇顯示它的執行計劃，請移至結果窗格中的 [執行計劃]  索引標籤。 
+1.  使用 [檔案] 功能表並按一下 [開啟檔案] 來開啟先前已儲存的查詢執行計劃檔案 (.sqlplan)，或將計劃檔案拖曳至 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 視窗。 或者，如果您只執行查詢並選擇顯示它的執行計劃，請移至結果窗格中的 [執行計劃] 索引標籤。 
 
-2.  以滑鼠右鍵按一下執行計畫的空白區域，然後按一下 [比較執行程序表]  。 
+2.  以滑鼠右鍵按一下執行計畫的空白區域，然後按一下 [比較執行程序表]。 
 
     ![以滑鼠右鍵按一下 [比較執行程序表]](../../relational-databases/performance/media/plancomparisonmenuoption.png "以滑鼠右鍵按一下 [比較執行程序表]")   
 
@@ -64,33 +65,33 @@ ms.locfileid: "85655733"
     ![兩個已儲存計畫檔案的計畫比較](../../relational-databases/performance/media/plancomparison-plans.png "兩個已儲存計畫檔案的計畫比較")  
 
      > [!TIP]
-     > 您可以滑鼠右鍵按一下執行計畫的空白區域，然後選取 [切換分隔器方向]  ，來將執行計畫比較的顯示切換為並排顯示。
+     > 您可以滑鼠右鍵按一下執行計畫的空白區域，然後選取 [切換分隔器方向]，來將執行計畫比較的顯示切換為並排顯示。
 
      > [!TIP]
      > 所有適用於執行計畫的縮放和導覽選項均可在計畫比較模式中運作。 如需更多詳細資料，請參閱[顯示實際執行計畫](../../relational-databases/performance/display-an-actual-execution-plan.md)。
 
-5.  雙重屬性視窗也會在預設選項的範圍內，於右側開啟。 存在於這兩個比較運算子中但有差異的屬性會在前面加上「不等於」  符號 (&ne;)，以便更容易識別。
+5.  雙重屬性視窗也會在預設選項的範圍內，於右側開啟。 存在於這兩個比較運算子中但有差異的屬性會在前面加上「不等於」符號 (&ne;)，以便更容易識別。
 
     ![雙重屬性視窗](../../relational-databases/performance/media/plancomparison-properties.png "雙重屬性視窗")  
 
-6.  [執行程序表分析]  比較導覽視窗也會在底部開啟。 有三個索引標籤可供使用：
+6.  [執行程序表分析] 比較導覽視窗也會在底部開啟。 有三個索引標籤可供使用：
 
-    1.  在 [陳述式選項]  索引標籤中，預設選項是 [反白顯示類似作業]  ，而比較計畫中相同的反白顯示運算子或節點會共用相同的色彩和線條圖樣。 按一下線條圖樣，在比較計畫中的類似區域之間導覽。 您也可以藉由選取 [反白顯示與類似區段不符的作業]  ，來選擇在計畫中反白顯示差異而非相似之處。 
+    1.  在 [陳述式選項] 索引標籤中，預設選項是 [反白顯示類似作業]，而比較計畫中相同的反白顯示運算子或節點會共用相同的色彩和線條圖樣。 按一下線條圖樣，在比較計畫中的類似區域之間導覽。 您也可以藉由選取 [反白顯示與類似區段不符的作業]，來選擇在計畫中反白顯示差異而非相似之處。 
     
        > [!NOTE]
-       > 根據預設，在比較計畫以允許對具有不同名稱但共用相同結構描述的資料庫擷取的計畫進行比較時，會忽略資料庫名稱。 例如，從資料庫 *ProdDB* 和 *TestDB* 比較計畫時。 此行為可以利用 [在比較運算子時忽略資料庫名稱]  選項來變更。
+       > 根據預設，在比較計畫以允許對具有不同名稱但共用相同結構描述的資料庫擷取的計畫進行比較時，會忽略資料庫名稱。 例如，從資料庫 *ProdDB* 和 *TestDB* 比較計畫時。 此行為可以利用 [在比較運算子時忽略資料庫名稱] 選項來變更。
 
        ![[執行程序表分析] 視窗](../../relational-databases/performance/media/plancomparison-analysis.png "[執行程序表分析] 視窗") 
 
-    2.  使用多個陳述式比較計畫時，由於能夠比較成對的正確陳述式，[多重陳述式]  索引標籤非常實用。
+    2.  使用多個陳述式比較計畫時，由於能夠比較成對的正確陳述式，[多重陳述式] 索引標籤非常實用。
 
         ![比較計畫中的多個陳述式](../../relational-databases/performance/media/plancomparison-multiple.png "比較計畫中的多個陳述式")  
 
-    3.  在 [案例]  索引標籤中，您可以找到一些最相關層面的自動化分析，來查看比較計畫中與[基數估計](../../relational-databases/performance/cardinality-estimation-sql-server.md)差異相關的項目。 針對左窗格上每個列出的運算子，右窗格會在 [按一下這裡可取得此案例的詳細資訊]  連結中顯示有關案例的詳細資料，並列出可能原因來說明該案例。 
+    3.  在 [案例] 索引標籤中，您可以找到一些最相關層面的自動化分析，來查看比較計畫中與[基數估計](../../relational-databases/performance/cardinality-estimation-sql-server.md)差異相關的項目。 針對左窗格上每個列出的運算子，右窗格會在 [按一下這裡可取得此案例的詳細資訊] 連結中顯示有關案例的詳細資料，並列出可能原因來說明該案例。 
 
         ![不同的估計資料列](../../relational-databases/performance/media/plancomparison-scenarios.png "不同的估計資料列")  
 
-    如果這個視窗已關閉，以滑鼠右鍵按一下比較計畫的空白區域，然後選取 [執行程序表比較選項]  以重新開啟。
+    如果這個視窗已關閉，以滑鼠右鍵按一下比較計畫的空白區域，然後選取 [執行程序表比較選項] 以重新開啟。
 
     ![計畫比較選項](../../relational-databases/performance/media/plancomparison-options.png "計畫比較選項")  
 
@@ -102,6 +103,6 @@ ms.locfileid: "85655733"
 
     ![在查詢存放區中選取兩個計畫](../../relational-databases/performance/media/plancomparison-querystore.png "在查詢存放區中選取兩個計畫")   
 
-3.  使用 [Compare the plans for the select query in a separate window] \(在另一個視窗中比較所選查詢的計劃\)  按鈕，開始比較計劃。 接著適用「比較執行計畫」  的步驟 4 到 6。 
+3.  使用 [Compare the plans for the select query in a separate window] \(在另一個視窗中比較所選查詢的計劃\) 按鈕，開始比較計劃。 接著適用「比較執行計畫」的步驟 4 到 6。 
 
     ![在查詢存放區中比較執行程序表](../../relational-databases/performance/media/plancomparison-querystoreoption.png "在查詢存放區中比較執行程序表") 

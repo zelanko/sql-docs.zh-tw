@@ -1,5 +1,6 @@
 ---
 title: 顯示並儲存執行計畫 | Microsoft Docs
+description: 了解如何顯示執行計畫，以及如何使用 SQL Server Management Studio 將執行計畫儲存至 XML 格式的檔案。
 ms.custom: ''
 ms.date: 08/21/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: bcd6f094-c613-4835-ae19-4caaadb4bb17
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2d049990cd2c60db36105d3c03da36bc25b4f4b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 19c0cee8d1ff56167032f7a0ff918b3adee24056
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749543"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457288"
 ---
 # <a name="display-and-save-execution-plans"></a>顯示並儲存執行計畫
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

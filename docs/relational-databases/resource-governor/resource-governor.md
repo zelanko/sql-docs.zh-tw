@@ -1,5 +1,6 @@
 ---
 title: 資源管理員 | Microsoft 文件
+description: 了解 SQL Server Resource Governor 功能，以限制內送應用程式要求所能使用的 CPU、實體 I/O 和記憶體數量。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: cc24afebe163f3fbab8c7f1a2317b62d8c818223
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8654f25318bfc947394b0acaf0df19a8f7eb2bc3
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729290"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457817"
 ---
 # <a name="resource-governor"></a>資源管理員
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

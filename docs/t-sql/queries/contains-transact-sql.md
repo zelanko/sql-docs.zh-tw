@@ -34,16 +34,16 @@ helpviewer_keywords:
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1f0bf0dd95bbb209c0e6320c4ba91eb1bc84ff41
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 30942bd7f9c5ff8180eb9adfddedff72d1d97f05
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736321"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552570"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中搜尋單字和片語的精確或模糊 (較不精確) 相符項目、彼此在一定距離之間的單字，或加權相符項目。 CONTAINS 為用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT 陳述式之 [WHERE 子句](../../t-sql/queries/where-transact-sql.md)中的述詞，可在包含以字元為基礎之資料類型的全文檢索索引資料行上執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 全文檢索搜尋。  
   
@@ -140,7 +140,9 @@ CONTAINS (
   
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *column_name*  
  這是在 FROM 子句中指定之資料表全文檢索索引資料行的名稱。 資料行可為以下類型：**char**、**varchar**、**nchar**、**nvarchar**、**text**、**ntext**、**image**、**xml**、**varbinary** 或 **varbinary(max)** 。  
   
@@ -318,18 +320,18 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  指定加權值，它是 0.0 至 1.0 的數字。 *\<weighted_term>* 中的每個元件都可以包含 *weight_value*。 *weight_value* 是一種可變更查詢的各個部分，以影響已指派給符合該查詢各個資料列之等級值的方法。 WEIGHT 不會影響 CONTAINS 查詢的結果，但 WEIGHT 會影響 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 查詢中的等級。  
   
 > [!NOTE]  
->  不論作業系統地區設定為何，小數分隔符號一定是句點。  
+> 不論作業系統地區設定為何，小數分隔符號一定是句點。  
   
- { AND | & } | { AND NOT | &! } | { OR | | }  
+ { AND \| & } \| { AND NOT \| &! } \| { OR \| \| }  
  指定兩個包含搜尋條件之間的邏輯運算。  
   
- { AND | & }  
+ { AND \| & }  
  指出相符項目必須符合這兩個包含搜尋條件。 您可以使用 & 符號取代 AND 關鍵字來表示 AND 運算子。  
   
- { AND NOT | &! }  
+ { AND NOT \| &! }  
  指出相符項目不能有第二個搜尋條件。 您可以使用後面接著驚歎號的 & 符號 (&!) 取代 AND NOT 關鍵字來表示 AND NOT 運算子。  
   
- { OR | | }  
+ { OR \| \| }  
  指出相符項目必須符合兩個包含搜尋條件的其中之一。 您可以利用垂直線符號 (|) 取代 OR 關鍵字來表示 OR 運算子。  
   
  當 *\<contains_search_condition>* 包含小括號內的群組時，會先評估這些小括號內的群組。 在評估附加括號的群組之後，當在包含搜尋條件中使用這些邏輯運算子，便適用下列規則：  

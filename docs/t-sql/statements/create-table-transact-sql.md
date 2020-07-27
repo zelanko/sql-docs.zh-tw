@@ -1,5 +1,5 @@
 ---
-title: CREATE TABLE (Transact-SQL) | Microsoft Docs
+title: CREATE TABLE (Transact-SQL)
 ms.custom: ''
 ms.date: 02/24/2020
 ms.prod: sql
@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 384b474180e17eaed9827da2d2e2b2f9157c6f4b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: be5b8f28ec06b48f0f35d8d246ad12ccbc3c8292
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766957"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86482029"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -343,6 +343,8 @@ column_name <data_type>
 }
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>引數
 
 *database_name* 這是建立資料表的資料庫名稱。 *database_name* 必須指定現有資料庫的名稱。 如果未指定，*database_name* 會預設為目前的資料庫。 目前連接的登入必須與 *database_name* 指定的資料庫中現有使用者識別碼有關聯，且這個使用者識別碼必須具有 CREATE TABLE 權限。
@@ -578,7 +580,7 @@ FOREIGN KEY REFERENCES 這是一個條件約束，它提供一或多個資料行
 
 **(** *ref_column* [ **,** ... *n* ] **)** 這是 FOREIGN KEY 條件約束所參考資料表中的一個資料行或資料行清單。
 
-ON DELETE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT } 指定如果所建立資料表中的資料列有參考關聯性，且在父資料表中刪除了所參考的資料列，則所建立資料表中的資料列會發生什麼動作。 預設值是 NO ACTION。
+ON DELETE { **NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT } 指定如果所建立資料表中的資料列有參考關聯性，且在父資料表中刪除了所參考的資料列，則所建立資料表中的資料列會發生什麼動作。 預設值是 NO ACTION。
 
 NO ACTION [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會產生一則錯誤，且會回復父資料表中資料列的刪除動作。
 
@@ -598,7 +600,7 @@ SET DEFAULT 如果刪除父資料表中對應的資料列，所有組成外部�
 
 相反地，如果指定了 `NO ACTION`，且 **ProductVendor** 資料表中有至少一個資料列參考 **Vendor** 資料列，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 便會產生錯誤，且會回復該資料列的刪除動作。
 
-ON UPDATE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT } 指定當所改變資料表中的資料列有參考關聯性，且在父資料表中所參考的資料列有了更新時，所改變資料表中的資料列會發生什麼動作。 預設值是 NO ACTION。
+ON UPDATE { **NO ACTION** \| CASCADE \ SET NULL \| SET DEFAULT } 指定當所改變資料表中的資料列有參考關聯性，且在父資料表中所參考的資料列有了更新時，所改變資料表中的資料列會發生什麼動作。 預設值是 NO ACTION。
 
 NO ACTION [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會產生一則錯誤，且會回復父資料表中資料列的更新動作。
 

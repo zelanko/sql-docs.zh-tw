@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 00c117a2282216f5f326cbf524f3326af5cc93e1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 81ac32f8fff04a1a81d4397cc196c506eab164d2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294333"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923300"
 ---
 # <a name="bulk-insert-task"></a>大量插入工作
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   「大量插入」工作提供有效的方式，將大量資料複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表或檢視。 例如，假設您的公司將百萬個資料列的產品清單儲存在大型電腦系統上，但公司的電子商務系統是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴展網頁。 您必須在晚上以大型電腦的主產品清單更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品資料表。 若要更新資料表，請以 Tab 分隔的格式儲存產品清單，並使用「大量插入」工作將資料直接複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中。  
@@ -125,7 +125,7 @@ ms.locfileid: "71294333"
   
 ### <a name="options"></a>選項。  
  **[連接]**  
- 在清單中選取 OLE DB 連線管理員，或按一下 [\<新增連接…>]  建立新的連接。  
+ 在清單中選取 OLE DB 連線管理員，或按一下 [\<**New connection...**>] 以建立新的連線。  
   
  **相關主題：** [OLE DB 連線管理員](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
@@ -141,7 +141,7 @@ ms.locfileid: "71294333"
 |**指定**|指定格式。 選取此選項會顯示動態選項 [RowDelimiter]  和 [ColumnDelimiter]  。|  
   
  **檔案**  
- 在清單中選取檔案或一般檔案連線管理員，或按一下 [\<新增連接...>]  建立新的連接。  
+ 在清單中選取檔案連線管理員或一般檔案連線管理員，或按一下 [\<**New connection...**>] 以建立新的連線。  
   
  檔案位置相對於在此工作之連接管理員中指定的 SQL Server Database Engine。 SQL Server Database Engine 必須可以在伺服器上的本機硬碟，或透過 SQL Server 的共用或對應磁碟機，存取文字檔。 SSIS 執行階段無法存取檔案。  
   

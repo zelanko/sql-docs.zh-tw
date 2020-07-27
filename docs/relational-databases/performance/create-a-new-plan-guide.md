@@ -1,5 +1,6 @@
 ---
 title: 建立新的計畫指南 | Microsoft 文件
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 來建立計畫指南。 計畫指南會將固定查詢計畫及查詢提示套用至查詢。
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: c8301bfe9073a31020fe4481edfff24d89b68994
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 46a3cc2e95093a9d4d3a69f1b5ca0e1eddb38d21
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655639"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457344"
 ---
 # <a name="create-a-new-plan-guide"></a>建立新的計畫指南
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85655639"
 ##  <a name="create-a-plan-guide-using-ssms"></a><a name="SSMSProcedure"></a> 使用 SSMS 建立計劃指南  
 1.  按一下加號，展開您要在其中建立計畫指南的資料庫，然後按一下加號展開 **[可程式性]** 資料夾。  
   
-2.  以滑鼠右鍵按一下 [計畫指南]  資料夾，然後選取 [新增計畫指南…]  。![select_plan_guide](../../relational-databases/performance/media/select-plan-guide.png)
+2.  以滑鼠右鍵按一下 [計畫指南] 資料夾，然後選取 [新增計畫指南…]。![select_plan_guide](../../relational-databases/performance/media/select-plan-guide.png)
   
 3.  在 **[新增維護計畫]** 對話方塊中的 **[名稱]** 方塊，輸入計畫指南的名稱。  
   
@@ -66,7 +67,7 @@ ms.locfileid: "85655639"
   
 10. 在 **[提示]** 方塊中，輸入套用到 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的查詢提示或查詢計畫。 如需指定一或多個查詢提示，請輸入有效的 OPTION 子句。  
   
-11. 按一下 [確定]  。  
+11. 按一下 [確定]。  
 
 ![plan_guide](../../relational-databases/performance/media/plan-guide.png)  
 

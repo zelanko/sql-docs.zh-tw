@@ -1,5 +1,6 @@
 ---
 title: SQL Server 的 Databases 物件 | Microsoft Docs
+description: 了解 SQLServer:Databases 物件，其所提供計數器可監視大量複製作業、備份和還原輸送量以及交易記錄活動。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: da5bdd3fe0ea6e53e3943054470011040e9fe0c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d775ca3158b642c6184f9d6c909b349d49d779ef
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655956"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457980"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server、Databases 物件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "85655956"
 |**Log Flush Write Time (ms)**|執行在最後一筆記錄中完成之記錄檔排清寫入的時間 (以毫秒為單位)。|  
 |**Log Flushes/sec**|每秒的記錄檔排清數目。|  
 |**Log Growths**|資料庫之交易記錄檔的擴大總次數。|  
-|**Log Pool Cache Misses/sec**|記錄檔區塊無法在記錄檔集區中使用的要求數目。 「記錄集區」  是交易記錄的記憶體中快取。 此快取是用來最佳化記錄的讀取，以便進行復原、交易複寫、回復和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。|  
+|**Log Pool Cache Misses/sec**|記錄檔區塊無法在記錄檔集區中使用的要求數目。 「記錄集區」是交易記錄的記憶體中快取。 此快取是用來最佳化記錄的讀取，以便進行復原、交易複寫、回復和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。|  
 |**Log Pool Disk Reads/sec**|由記錄檔集區發出來提取記錄檔區塊的磁碟讀取數目。|  
 |**Log Pool Hash Deletes/sec**|從記錄集區刪除原始雜湊項目的比率。|
 |**Log Pool Hash Inserts/sec**|原始雜湊項目插入記錄集區的速率。|
@@ -75,7 +76,7 @@ ms.locfileid: "85655956"
 |**Repl.Trans.Rate**|每秒自發行集資料的交易記錄檔讀取並傳送至散發資料庫的交易數。|  
 |**Shrink Data Movement Bytes/sec**|經由自動壓縮作業或是 DBCC SHRINKDATABASE 或 DBCC SHRINKFILE 陳述式移動的每秒資料量。|  
 |**Tracked transactions/sec**|資料庫的認可資料表中記錄的已認可交易數目。|  
-|**Transactions/sec**|每秒針對資料庫啟動的交易數。<br /><br /> [Transactions/sec]  並未計入僅限 XTP 交易 (由原生編譯的預存程序啟動的交易)。|  
+|**Transactions/sec**|每秒針對資料庫啟動的交易數。<br /><br /> [Transactions/sec] 並未計入僅限 XTP 交易 (由原生編譯的預存程序啟動的交易)。|  
 |**Write Transactions/sec**|上一秒寫入資料庫並認可的交易數目。|  
 |**XTP Controller DLC Latency Base**|僅供內部使用。| 
 |**XTP Controller DLC Latency/Fetch**|從記錄區塊輸入直接記錄取用者到 XTP 控制器加以擷取之間，每秒的平均延遲 (微秒)。|

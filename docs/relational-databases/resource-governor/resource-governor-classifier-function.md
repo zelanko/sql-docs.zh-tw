@@ -1,5 +1,6 @@
 ---
 title: 資源管理員分類函式 | Microsoft 文件
+description: SQL Server Resource Governor 分類程序會根據內送工作階段的特性，將工作階段指派給工作負載群組。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 2b96e494e10bb99fa316fa417c16e2f4a7034855
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 80ece7e7de3896cffc8bbf274071ceed3d53f39a
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729268"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457501"
 ---
 # <a name="resource-governor-classifier-function"></a>Resource Governor Classifier Function
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

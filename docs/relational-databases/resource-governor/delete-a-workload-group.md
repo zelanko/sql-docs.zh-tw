@@ -1,5 +1,6 @@
 ---
 title: 刪除工作負載群組 | Microsoft 文件
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 來刪除工作負載群組或資源集區。 您必須具有 CONTROL SERVER 權限。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 11a0723882b5af2002ead9d8645b047f69aae43e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 160f7f998aa42ed86a9f46d9fab70e38ac1b2d02
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729304"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457889"
 ---
 # <a name="delete-a-workload-group"></a>刪除工作負載群組
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85729304"
   
 -   等到受影響之群組的所有工作階段已經中斷連接後，重新執行 ALTER RESOURCE GOVERNOR RECONFIGURE 陳述式。  
   
--   在受影響的群組中，使用 KILL 命令明確地停止工作階段，然後重新執行 ALTER RESOURCE GOVERNOR RECONFIGURE 陳述式。 在您使用 [刪除]  之後但停止使用中工作階段之前，如果您決定不想要明確地停止工作階段，請使用原始名稱來重新建立群組，然後將該群組移到原始的資源集區。  
+-   在受影響的群組中，使用 KILL 命令明確地停止工作階段，然後重新執行 ALTER RESOURCE GOVERNOR RECONFIGURE 陳述式。 在您使用 [刪除] 之後但停止使用中工作階段之前，如果您決定不想要明確地停止工作階段，請使用原始名稱來重新建立群組，然後將該群組移到原始的資源集區。  
   
 -   重新啟動伺服器。 重新啟動程序完成後，將不會建立已經刪除的群組，而且已經移動的群組將會使用新的資源集區指派。  
   
@@ -49,7 +50,7 @@ ms.locfileid: "85729304"
   
 2.  遞迴地向下展開 **[資源集區]** 至資源集區中的 **[工作負載群組]** 節點，此資源集區包含要刪除的工作負載群組。  
   
-3.  以滑鼠右鍵按一下工作負載群組，然後按一下 [刪除]  。  
+3.  以滑鼠右鍵按一下工作負載群組，然後按一下 [刪除]。  
   
 4.  在 **[刪除物件]** 視窗中，工作負載群組便列於 **[要刪除的物件]** 清單內。 若要刪除工作負載群組，請按一下 **[確定]** 。  
   
@@ -58,9 +59,9 @@ ms.locfileid: "85729304"
   
 1.  在 [物件總管] 中，遞迴地展開 **[管理]** 節點底下，包括 **[資源集區]** 。  
   
-2.  以滑鼠右鍵按一下包含要修改之工作負載群組的資源集區，然後選取 [屬性]  。 這會開啟 **[資源管理員屬性]** 頁面。  
+2.  以滑鼠右鍵按一下包含要修改之工作負載群組的資源集區，然後選取 [屬性]。 這會開啟 **[資源管理員屬性]** 頁面。  
   
-3.  在 [資源集區的工作負載群組]  視窗中，按一下要刪除之工作負載群組的資料列，然後以滑鼠右鍵按一下資料列左側的向右箭頭，再按一下 [刪除]  。  
+3.  在 [資源集區的工作負載群組] 視窗中，按一下要刪除之工作負載群組的資料列，然後以滑鼠右鍵按一下資料列左側的向右箭頭，再按一下 [刪除]。  
   
 4.  若要刪除工作負載群組，請按一下 **[確定]** 。  
   

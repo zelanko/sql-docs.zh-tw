@@ -1,5 +1,6 @@
 ---
 title: Database Engine Tuning Advisor | Microsoft 文件
+description: 了解如何使用 Database Engine Tuning Advisor 進行疑難排解、微調一組大型查詢、分析設計變更，以及管理 SQL Server 中的儲存空間。
 ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: c5e5dbbe43dfb0bff348f68bcd0f237e570eed75
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 84ff76946cacefee80cc61f7e1b66e6a1e77fb21
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655503"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458300"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

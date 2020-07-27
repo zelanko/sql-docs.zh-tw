@@ -1,5 +1,6 @@
 ---
 title: SQL Server XTP 交易記錄 | Microsoft Docs
+description: 了解 SQL Server XTP Transaction Log 效能物件，其中包含與 SQL Server 中記憶體內部 OLTP 交易記錄活動相關的計數器。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d16491ef-4a25-4e02-88a7-ab7c0812904a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 6a04e6cb09f40af918532613c32bddcaff11a57c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d167ee7ac85e206d79fdce0f13aba7c5d6f86827
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715203"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458078"
 ---
 # <a name="sql-server-xtp-transaction-log"></a>SQL Server XTP 交易記錄
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

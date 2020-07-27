@@ -1,5 +1,6 @@
 ---
 title: 使用範本設定資源管理員 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 中提供的範本來設定 Resource Governor。 您必須具有 CONTROL SERVER 權限。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bb17a0d2b42528d886430e92b82908a3e08b5694
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b815330ad5088ca449ab3b73f540b3ec2e521629
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720529"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458211"
 ---
 # <a name="configure-resource-governor-using-a-template"></a>使用範本來設定資源管理員
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -35,9 +36,9 @@ ms.locfileid: "85720529"
 ##  <a name="configure-resource-governor-using-a-template"></a><a name="ConfRGTemplate"></a> 使用範本來設定資源管理員  
  **若要使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 [檢視]  功能表上，按一下 [範本總管]  。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 [檢視]  功能表上，按一下 [範本總管] 。  
   
-2.  在 [範本總管]  中，展開 [Resource Governor]  ，然後按兩下 [設定 Resource Governor]  。  
+2.  在 [範本總管] 中，展開 [Resource Governor]，然後按兩下 [設定 Resource Governor]。  
   
 3.  在 **[連接到 Database Engine]** 中，輸入必要資訊，然後按一下 **[確定]** 。 此時，[查詢編輯器] 就會提供 Configure Resource Governor.sql 範本。 您可以使用此範本來建立並設定資源集區、工作負載群組和分類函數。  
   

@@ -1,5 +1,6 @@
 ---
 title: SQL Server 的 Wait Statistics 物件 | Microsoft Docs
+description: 了解 SQLServer:Wait Statistics 效能物件，其中包含可報告等候狀態資訊的效能計數器。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cb7f917d-4291-4115-9b78-ee7692ebbb2d
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b5b9a2ccdd73150eeaa1dda8403c4b73aed03009
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 64a21ac3072869f74c71997be5160b55758fc917
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758912"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457394"
 ---
 # <a name="sql-server-wait-statistics-object"></a>SQL Server 的 Wait Statistics 物件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "85758912"
   
  物件中的每個計數器均包含下列執行個體：  
   
-|Item|描述|  
+|項目|描述|  
 |----------|-----------------|  
 |**Average wait time (ms)**|所選取等候類型的平均等候時間。|  
 |**Cumulative wait time (ms) per second**|所選取等候類型的每秒彙總等候時間。|  

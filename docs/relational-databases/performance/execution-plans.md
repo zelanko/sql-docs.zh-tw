@@ -1,5 +1,6 @@
 ---
 title: 執行計劃 | Microsoft Docs
+description: 了解查詢最佳化工具為 SQL Server 資料庫引擎所建立以執行查詢的執行計畫或查詢計畫。
 ms.custom: ''
 ms.date: 03/01/2020
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753f
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 8f9a92ee9ac1ed87a20515a267a80b8372c95366
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9b0f95a4afa1397783547f2804d92dd3fc37b357
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751796"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457249"
 ---
 # <a name="execution-plans"></a>執行計劃
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85751796"
   `TableC`、 `TableB`、 `TableA`或  
   `TableB`、 `TableA`、 `TableC`或  
   `TableB`、 `TableC`、 `TableA`或  
-  `TableC`、`TableA`、`TableB`  
+  `TableC`, `TableA`, `TableB`  
 
 - **用來從每個資料表擷取資料的方法。**  
   一般而言，有各種不同的方式可存取每個資料表中的資料。 如果僅需要特定索引鍵值的一些資料列，則資料庫伺服器可以使用索引。 如果需要資料表中的所有資料列，則資料庫伺服器可以忽略索引，並執行資料表掃描。 如果需要資料表中的所有資料列，但其中有一個索引的索引鍵資料行是在 `ORDER BY`中，那麼，執行索引掃描來替代資料表掃描，就能儲存不同排序的結果集。 如果資料表非常小，則資料表掃描可能是所有資料表存取中最有效率的方式。

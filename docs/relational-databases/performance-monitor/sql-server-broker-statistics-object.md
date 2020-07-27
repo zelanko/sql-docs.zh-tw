@@ -1,5 +1,6 @@
 ---
 title: SQL Server 的 Broker Statistics 物件 | Microsoft Docs
+description: 了解 SQLServer:Broker Statistics 效能物件，其中包含可針對資料庫引擎報告 Service Broker 資訊的效能計數器。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e9e36f01-93f6-4e6e-90c6-c7f3fd121737
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 6dd7b9d542bb72b570a59244639685d3e56d6377
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8a32f1013418afa01abee65ab9c8fdb78c794918
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85657039"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458457"
 ---
 # <a name="sql-server-broker-statistics-object"></a>SQL Server 的 Broker Statistics 物件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

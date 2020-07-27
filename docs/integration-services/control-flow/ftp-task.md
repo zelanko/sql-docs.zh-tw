@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d606e66c3ad7a78edf3808578fe3021d2933b22d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1c33ec0b3d8b597e46403337a11b4f3d99bc3393
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294135"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918222"
 ---
 # <a name="ftp-task"></a>FTP 工作
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   FTP 工作會下載和上傳資料檔以及管理伺服器上的目錄。 例如，封裝可從遠端伺服器或網際網路位置下載資料檔，此工作可視為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝工作流程的一部分。 您可將 FTP 工作用於下列用途：  
@@ -85,7 +85,7 @@ ms.locfileid: "71294135"
   
 ### <a name="options"></a>選項。  
  **FtpConnection**  
- 選取現有的 FTP 連線管理員，或按一下 [\<新增連線...>]  建立連線管理員。  
+ 選取現有的 FTP 連線管理員，或按一下 \<**New connection...**> 來建立連線管理員。  
   
 > [!IMPORTANT]  
 >  FTP 連接管理員僅支援匿名驗證和基本驗證， 而不支援 Windows 驗證。  
@@ -148,13 +148,13 @@ ms.locfileid: "71294135"
   
 #### <a name="isremotepathvariable--true"></a>IsRemotePathVariable = True  
  **[RemoteVariable]**  
- 選取現有的使用者定義變數，或按一下 [\<新增變數...>]  來建立使用者定義變數。  
+ 選取現有的使用者定義變數，或按一下 \<**New variable...**> 來建立使用者定義變數。  
   
  **相關主題：** [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、新增變數  
   
 #### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
  **[RemotePath]**  
- 選取現有的 FTP 連線管理員，或按一下 [\<新增連線...>]  建立連線管理員。  
+ 選取現有的 FTP 連線管理員，或按一下 \<**New connection...**> 來建立連線管理員。  
   
  **相關主題：** [FTP 連線管理員](../../integration-services/connection-manager/ftp-connection-manager.md)、[FTP 連線管理員編輯器](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
   
@@ -162,13 +162,13 @@ ms.locfileid: "71294135"
   
 #### <a name="islocalpathvariable--true"></a>IsLocalPathVariable = True  
  **[LocalVariable]**  
- 選取現有的使用者定義變數，或按一下 [\<新增變數...>]  來建立變數。  
+ 選取現有的使用者定義變數，或按一下 \<**New variable...**> 來建立變數。  
   
  **相關主題：** [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、新增變數  
   
 #### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
  **[LocalPath]**  
- 選取現有的檔案連線管理員，或按一下 [\<新增連線...>]  建立連線管理員。  
+ 選取現有的檔案連線管理員，或按一下 \<**New connection...**> 來建立連線管理員。  
   
  **相關主題**：[一般檔案連線管理員](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   

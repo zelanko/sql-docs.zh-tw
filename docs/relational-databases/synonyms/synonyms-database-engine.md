@@ -15,15 +15,15 @@ ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e863a04214a27f61581f10c4a2610671bde43635
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0e992a6629f3dbff2e8ed5e3b2b9cc568a7b8811
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787252"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918064"
 ---
 # <a name="synonyms-database-engine"></a>同義字 (Database Engine)
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   同義字是具有下列用途的資料庫物件：  
   
 -   對在本機或遠端伺服器上的另一個資料庫物件 (稱為基底物件) 提供別名。  
@@ -35,17 +35,37 @@ ms.locfileid: "85787252"
 若要解決這些問題，您可以在 **Server2**上建立同義字 **EmpTable** ，來代表 **Server1** 的 **Employee**資料表。 現在，用戶端應用程式只需要使用 **EmpTable**單一部分的名稱，即可參考 **Employee** 資料表。 此外，如果 **Employee** 資料表的位置變更，您必須修改同義字 **EmpTable**以指向 **Employee** 資料表的新位置。 由於沒有 ALTER SYNONYM 陳述式，因此您必須先卸除同義字 **EmpTable**，再以相同的名稱重新建立同義字，但要將同義字指向 **Employee**的新位置。  
   
 同義字放在結構描述中，如同結構描述中的其他物件一樣，同義字的名稱也必須是唯一的。 您可以為下列資料庫物件建立同義字：  
-  
-|||  
-|-|-|  
-|組件 (CLR) 預存程序|組件 (CLR) 資料表值函式|  
-|組件 (CLR) 純量函數|組件 (CLR) 彙總函式|  
-|複寫篩選程序|擴充預存程序|  
-|SQL 純量函數|SQL 資料表值函式|  
-|SQL 內嵌資料表值函式|SQL 預存程序|  
-|檢視|資料表* (使用者定義)|  
-  
- *包括本機和全域暫存資料表  
+
+:::row:::
+    :::column:::
+        組件 (CLR) 預存程序
+
+        組件 (CLR) 純量函數
+
+        複寫篩選程序
+
+        SQL 純量函數
+
+        SQL 內嵌資料表值函式
+
+        檢視
+    :::column-end:::
+    :::column:::
+        組件 (CLR) 資料表值函式
+
+        組件 (CLR) 彙總函式
+
+        組件 (CLR) 彙總函式
+
+        SQL 資料表值函式
+
+        SQL 預存程序
+
+        資料表* (使用者定義)
+    :::column-end:::
+:::row-end:::
+
+*包括本機和全域暫存資料表  
   
 > [!NOTE]  
 > 不支援函數基底物件的四部份名稱。  
@@ -63,23 +83,48 @@ ms.locfileid: "85787252"
 只有同義字擁有者、 **db_owner**的成員或 **db_ddladmin** 的成員，才可授與同義字的權限。  
   
 您可以 `GRANT`、`DENY` 及 `REVOKE` 同義字上的任何或所有下列權限：  
-  
-|||  
-|-|-|  
-|CONTROL|刪除|  
-|執行 CREATE 陳述式之前，請先執行|Insert|  
-|SELECT|TAKE OWNERSHIP|  
-|UPDATE|VIEW DEFINITION|  
-  
+
+:::row:::
+    :::column:::
+      CONTROL
+
+      執行 CREATE 陳述式之前，請先執行
+
+      SELECT
+
+      UPDATE
+    :::column-end:::
+    :::column:::
+      刪除
+
+      Insert
+
+      TAKE OWNERSHIP
+
+      VIEW DEFINITION
+    :::column-end:::
+:::row-end:::
+
 ## <a name="using-synonyms"></a>使用同義字  
- 您可以使用同義字在數個 SQL 陳述式和運算式內容中取代其參考的基底物件。 下表包含這些陳述式及運算式內容的清單：  
-  
-|||  
-|-|-|  
-|SELECT|Insert|  
-|UPDATE|刪除|  
-|執行 CREATE 陳述式之前，請先執行|子 SELECT|  
-  
+ 您可以使用同義字在數個 SQL 陳述式和運算式內容中取代其參考的基底物件。 下列資料行包含這些陳述式及運算式內容的清單：  
+
+:::row:::
+    :::column:::
+        SELECT
+
+        UPDATE
+
+        執行 CREATE 陳述式之前，請先執行
+    :::column-end:::
+    :::column:::
+        Insert
+
+        刪除
+
+        子 SELECT
+    :::column-end:::
+:::row-end:::
+ 
  當您正在先前陳述的內容中使用同義字時，基底物件會受影響。 例如，如果同義字參考的基底物件是資料表，而且您將資料列插入同義字，則實際上您是將資料列插入參考的資料表。  
   
 > [!NOTE]  
@@ -97,19 +142,36 @@ EXEC ('ALTER TABLE dbo.MyProduct
 ```  
   
 下列權限陳述式只與同義字有關聯，但與基底物件無關：  
-  
-|||  
-|-|-|  
-|GRANT|拒絕|  
-|REVOKE||  
-  
+
+:::row:::
+    :::column:::
+        GRANT
+
+        REVOKE
+    :::column-end:::
+    :::column:::
+        拒絕
+    :::column-end:::
+:::row-end:::
+
 同義字不是結構描述繫結性質，因此，下列結構描述繫結的運算式內容無法參考同義字：  
-  
-|||  
-|-|-|  
-|CHECK 條件約束|計算資料行|  
-|預設運算式|規則運算式|  
-|結構描述繫結的檢視|結構描述繫結的函數|  
+
+:::row:::
+    :::column:::
+        CHECK 條件約束
+
+        預設運算式
+
+        結構描述繫結的檢視
+    :::column-end:::
+    :::column:::
+        計算資料行
+
+        規則運算式
+
+        結構描述繫結的函數
+    :::column-end:::
+:::row-end:::
   
 如需結構描述繫結函數的詳細資訊，請參閱[建立使用者定義函數 &#40;Database Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)。  
   

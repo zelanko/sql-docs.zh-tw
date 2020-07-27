@@ -1,5 +1,6 @@
 ---
 title: 建立工作負載群組 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 來建立工作負載群組。 您必須具有 CONTROL SERVER 權限。
 ms.custom: ''
 ms.date: 03/17/2016
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - workload groups [SQL Server], create
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 60d01508250c68bfb6143f5f53596fe9fefc4973
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eb23f8926cff87651ba0feda1b398112dec930af
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720504"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86456748"
 ---
 # <a name="create-a-workload-group"></a>建立工作負載群組
 
@@ -48,7 +49,7 @@ ms.locfileid: "85720504"
   
 1.  在 [物件總管] 中，遞迴地向下展開 **[管理]** 節點至包含要修改之工作負載群組的資源集區。  
   
-2.  以滑鼠右鍵按一下 [工作負載群組]  資料夾，然後按一下 [新增工作負載群組]  。  
+2.  以滑鼠右鍵按一下 [工作負載群組] 資料夾，然後按一下 [新增工作負載群組]。  
   
 3.  在 **[資源集區]** 方格中，確定已反白顯示要新增工作負載群組的資源集區。  
   

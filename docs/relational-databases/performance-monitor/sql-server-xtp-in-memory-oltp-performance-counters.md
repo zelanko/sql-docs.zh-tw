@@ -1,5 +1,6 @@
 ---
 title: XTP (記憶體中 OLTP) 效能計數器
+description: SQL Server 提供物件和計數器，其可供效能監視器用來監視記憶體內部 OLTP 活動。
 ms.custom: seo-dt-2019
 ms.date: 04/06/2016
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: fe3cbaf4-65f4-44c5-acc6-7b735cda0c5d
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 84d07784cbd167f036cfe4540faf93784ba762cd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: da65c189145f9233194f7b86ab6acf8f11765bfa
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715235"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457950"
 ---
 # <a name="sql-server-xtp-in-memory-oltp-performance-counters"></a>SQL Server XTP (記憶體中 OLTP) 效能計數器
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

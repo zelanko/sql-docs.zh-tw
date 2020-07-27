@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f145b536072314594af473488bc0b933c443230e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a275dbc088774355c3546b7234174e5b7b585e43
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294694"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922524"
 ---
 # <a name="manage-a-cdc-instance"></a>管理 CDC 執行個體
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   您可以使用 CDC 設計工具主控台來檢視有關您所建立之執行個體的資訊，並管理執行個體的操作。  
@@ -107,17 +107,17 @@ ms.locfileid: "71294694"
     -   **寫入的變更**：寫入 SQL Server 變更資料表的變更數目。  
   
  **Oracle**  
- 顯示有關 CDC 執行個體以及它與 Oracle 資料庫之連接的資訊。 此索引標籤是唯讀的。 若要編輯這些屬性，請以滑鼠右鍵在左窗格中按一下執行個體，並選取 [屬性]  或按一下右窗格中的 [屬性]  ，開啟 [\<執行個體> 屬性] 對話方塊。  
+ 顯示有關 CDC 執行個體以及它與 Oracle 資料庫之連接的資訊。 此索引標籤是唯讀的。 若要編輯這些屬性，請以滑鼠右鍵按一下左窗格中的執行個體，然後選取 [屬性] 或按一下右窗格中的 [屬性] 以開啟 [\<instance> 屬性] 對話方塊。  
   
  如需有關這些屬性以及如何加以編輯的詳細資訊，請參閱＜ [Edit the Oracle Database Properties](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md)＞。  
   
  **資料表**  
- 顯示有關 CDC 執行個體中包含之資料表的資訊。 這裡也會提供資料行資訊。 此索引標籤是唯讀的。 若要編輯這些屬性，請以滑鼠右鍵在左窗格中按一下執行個體，並選取 [屬性]  或按一下右窗格中的 [屬性]  ，開啟 [\<執行個體> 屬性] 對話方塊。  
+ 顯示有關 CDC 執行個體中包含之資料表的資訊。 這裡也會提供資料行資訊。 此索引標籤是唯讀的。 若要編輯這些屬性，請以滑鼠右鍵按一下左窗格中的執行個體，然後選取 [屬性] 或按一下右窗格中的 [屬性] 以開啟 [\<instance> 屬性] 對話方塊。  
   
  如需有關這些屬性以及如何加以編輯的詳細資訊，請參閱＜ [Edit Tables](../../integration-services/change-data-capture/edit-tables.md)＞。  
   
  **進階**  
- 顯示 CDC 執行個體的進階屬性和屬性值。 此索引標籤是唯讀的。 若要編輯這些屬性，請以滑鼠右鍵在左窗格中按一下執行個體，並選取 [屬性]  或按一下右窗格中的 [屬性]  ，開啟 [\<執行個體> 屬性] 對話方塊。  
+ 顯示 CDC 執行個體的進階屬性和屬性值。 此索引標籤是唯讀的。 若要編輯這些屬性，請以滑鼠右鍵按一下左窗格中的執行個體，然後選取 [屬性] 或按一下右窗格中的 [屬性] 以開啟 [\<instance> 屬性] 對話方塊。  
   
  如需有關這些屬性以及如何加以編輯的詳細資訊，請參閱＜ [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md)＞。  
   

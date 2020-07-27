@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 214f28fbb977414d4e14fdd14f2be53e9b705bc1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a47088f610dc016fe904b9b772e261b9bd2adcf0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298333"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920679"
 ---
 # <a name="execute-process-task"></a>執行處理工作
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   「執行處理」工作會隨 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件工作流程來執行應用程式或批次檔。 雖然可以使用「執行處理」工作來開啟任何標準應用程式，例如 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 或 [!INCLUDE[ofprword](../../includes/ofprword-md.md)]，但通常您會使用它來執行處理資料來源的商業應用程式或批次檔。 例如，您可以使用「執行處理」工作展開壓縮的文字檔。 然後封裝就可以使用文字檔做為封裝中資料流程的資料來源。 另一項範例為：您可以使用「執行處理」工作來執行產生每日銷售報表的自訂 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 應用程式。 接著，您就可將報告附加至「傳送郵件」工作，並將報告轉寄到通訊群組清單。  
@@ -116,15 +116,15 @@ ms.locfileid: "71298333"
  鍵入包含可執行檔的資料夾路徑，或按一下瀏覽按鈕 **(...)** 並尋找資料夾。  
   
  **StandardInputVariable**  
- 選取變數來提供處理序的輸入，或按一下 [\<新增變數...>]  建立新的變數：  
+ 選取變數來提供處理序的輸入，或按一下 [\<**New variable...**>] 以建立新的變數：  
   
  **相關主題：** [新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **StandardOutputVariable**  
- 選取變數來擷取處理序的輸出，或按一下 [\<新增變數...>]  建立新的變數。  
+ 選取變數來擷取處理序的輸出，或按一下 [\<**New variable...**>] 以建立新的變數。  
   
  **StandardErrorVariable**  
- 選取變數來擷取處理器的錯誤輸出，或按一下 [\<新增變數...>]  建立新的變數。  
+ 選取變數來擷取處理器的錯誤輸出，或按一下 [\<**New variable...**>] 以建立新的變數。  
   
  **FailTaskIfReturnCodeIsNotSuccessValue**  
  指出如果處理序的結束碼和 **SuccessValue**中指定的值不同時，工作是否失敗。  

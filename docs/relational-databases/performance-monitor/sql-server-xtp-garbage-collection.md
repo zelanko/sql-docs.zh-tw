@@ -1,5 +1,6 @@
 ---
 title: SQL Server XTP 記憶體回收 | Microsoft Docs
+description: 了解 SQL Server XTP Garbage Collection 效能物件，其中包含與記憶體內部 OLTP 引擎記憶體回收行程相關的計數器。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 64ae91e5-b420-44b4-af1a-f8bca83d7f41
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0edeb2fef45d23faec92846b65626bdc3c00d049
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8575295948b5560f25dc0e967fa419699587af7b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774227"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457960"
 ---
 # <a name="sql-server-xtp-garbage-collection"></a>SQL Server XTP 記憶體回收
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

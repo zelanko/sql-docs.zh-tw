@@ -1,5 +1,6 @@
 ---
 title: SQL Server 的 Memory Node | Microsoft Docs
+description: 了解 Memory Node 物件，其所提供計數器可在 SQL Server 中監視 NUMA 節點上的伺服器記憶體使用量。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 55b28ba9-b6d5-4ea9-8103-db8a72f42982
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: cfa8eb11b89919a3a1f151a0deddd24528631fe1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9afe187c8a9a732145862040ab09f0377aa59a60
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775795"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458780"
 ---
 # <a name="sql-server-memory-node"></a>SQL Server, Memory Node
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

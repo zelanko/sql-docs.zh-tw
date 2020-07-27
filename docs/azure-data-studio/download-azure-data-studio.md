@@ -8,13 +8,13 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 7/15/2020
-ms.openlocfilehash: 793dde7b683f5e66a6841367e82c78d64bf01f86
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.date: 7/17/2020
+ms.openlocfilehash: 367711588e9a58358abff972a8f8637aefdf013a
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406261"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86459030"
 ---
 # <a name="download-and-install-azure-data-studio"></a>下載並安裝 Azure Data Studio
 
@@ -27,9 +27,9 @@ Azure Data Studio 在 Windows、macOS 和 Linux 上執行。
 
 |平台|下載|發行日期| 版本 |
 |:---|:---|:---|:---|
-| Windows | [使用者安裝程式 (建議)](https://go.microsoft.com/fwlink/?linkid=2135512)<br>[系統安裝程式](https://go.microsoft.com/fwlink/?linkid=2135513)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2135514) | 2020 年 7 月 15 日 | 1.20.0 |
-| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2135266) | 2020 年 7 月 15 日 | 1.20.0 |
-| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2135515)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2135268)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2135267) | 2020 年 7 月 15 日| 1.20.0 |
+| Windows | [使用者安裝程式 (建議)](https://go.microsoft.com/fwlink/?linkid=2135512)<br>[系統安裝程式](https://go.microsoft.com/fwlink/?linkid=2135513)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2135514) | 2020 年 7 月 17 日 | 1.20.1 |
+| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2135266) | 2020 年 7 月 17 日 | 1.20.1 |
+| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2135515)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2135268)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2135267) | 2020 年 7 月 17 日| 1.20.1 |
 
 如需最新版本的詳細資訊，請參閱[版本資訊](release-notes.md)。
 

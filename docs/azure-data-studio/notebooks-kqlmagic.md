@@ -9,12 +9,12 @@ ms.prod: azure-data-studio
 ms.technology: ''
 ms.custom: ''
 ms.date: 04/27/2020
-ms.openlocfilehash: 2ee07ea6d3999d7ab3f0c32f7d5d47e1429f844d
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: ef59ecb200b30af6c30a5ea602cd89bc2c951e24
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091868"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920466"
 ---
 # <a name="kqlmagic-extension-in-azure-data-studio"></a>Azure Data Studio 中的 kqlmagic 延伸模組
 
@@ -255,5 +255,4 @@ ms.locfileid: "86091868"
 - [Jupyter 筆記本和 Jupyter 實驗室的延伸模組 (Magic) 可供獲得使用 Kusto、Application Insights 和 LogAnalytics 資料的筆記本體驗](https://github.com/Microsoft/jupyter-Kqlmagic)
 - [Kqlmagic](https://pypi.org/project/Kqlmagic/)
 - [KustoMagicSamples](https://notebooks.azure.com/RknDzgn/projects/KustoMagicSamples/html/Getting%20Started%20with%20Kqlmagic%20on%20Azure%20Data%20Explorer-Copy.ipynb)
-- [如何使用筆記本](notebooks-guidance.md)
-- [如何管理 Azure Data Studio 中的 Notebook](notebooks-manage-sql-server.md)
+- [如何在 Azure Data Studio 中使用筆記本](notebooks-guidance.md)

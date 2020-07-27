@@ -8,13 +8,13 @@ ms.topic: tutorial
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.custom: ''
-ms.date: 04/27/2020
-ms.openlocfilehash: e4c431cba395b8e0c732fa7ac4ab96942cac7144
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.date: 07/01/2020
+ms.openlocfilehash: 7eb7af0577cb74f180991bf455c36c9122972643
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728858"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920449"
 ---
 # <a name="create-and-run-a-python-notebook"></a>建立及執行 Python 筆記本
 
@@ -26,7 +26,7 @@ ms.locfileid: "85728858"
 
 - [已安裝 Azure Data Studio](download-azure-data-studio.md)
 
-## <a name="new-notebook"></a>新增筆記本
+## <a name="create-a-notebook"></a>建立 Notebook
 
 下列步驟說明如何在 Azure Data Studio 中建立筆記本檔案：
 
@@ -34,57 +34,64 @@ ms.locfileid: "85728858"
 
 1. 在 [檔案]  功能表中選取 [新增筆記本]  。
 
-1. 針對 [核心]  選取 [Python 3]  。
+1. 針對 [核心]  選取 [Python 3]  。 [附加至] 已設定為 [localhost]。
 
    :::image type="content" source="media/notebook-tutorial-python/set-kernel-and-attach-to-python.png" alt-text="設定核心":::
 
-1. 如果系統提示設定 Python，則請在 [為筆記本設定 Python]  中選取下列其中一項：
+您可從 [檔案] 功能表使用 [儲存] 或 [另存新檔...] 命令來儲存筆記本。 
 
-   - [新增 Python 安裝]  ，以安裝適用於 Azure Data Studio 的新 Python 複本，或
-   - [使用現有的 Python 安裝]  ，以指定現有 Python 安裝的路徑
+若要開啟筆記本，您可從 [檔案] 功能表使用 [開啟檔案...] 命令，在 [歡迎使用] 頁面上選取 [開啟檔案]，或從命令選擇區使用 [檔案:開啟] 命令。
 
-## <a name="run-a-notebook-cell"></a>執行筆記本資料格
+## <a name="change-the-python-kernel"></a>變更 Python 核心
 
-您可建立包含程式碼或文字的資料格。 您可就地執行程式碼資料格，在資料格完成執行之後，結果將顯示在筆記本中。 文字資料格可供使用程式碼來穿插格式化的文件。
+第一次連線到筆記本中的 Python 核心時，會顯示 [為 Notebooks 設定 Python] 頁面。 您可選取下列其中一項：
 
-### <a name="code"></a>程式碼
+- [新增 Python 安裝]  ，以安裝適用於 Azure Data Studio 的新 Python 複本，或
+- [使用現有的 Python 安裝]  ，以指定現有 Python 安裝的路徑來供 Azure Data Studio 使用
 
-選取工具列中的 [+程式碼]  命令來新增 Python 程式碼資料格。
-
-:::image type="content" source="media/notebook-tutorial-python/notebook-toolbar-python.png" alt-text="筆記本工具列":::
-
-此範例會執行簡單的數學運算。
+若要查看使用中 Python 核心的位置和版本，請建立程式碼資料格，並執行下列 Python 命令：
 
 ```python
-a = 1
-b = 2
-c = a/b
-print(c)
+import os
+import sys
+print(sys.version_info)
+print(os.path.dirname(sys.executable))
 ```
-按一下資料格左側的播放按鈕來執行資料格。 結果如下所示。
 
-:::image type="content" source="media/notebook-tutorial-python/run-notebook-cell-python.png" alt-text="執行筆記本資料格":::
+若要連線到不同的 Python 安裝：
 
-### <a name="text"></a>Text
+1. 從 [檔案]  功能表選取 [喜好設定]  ，然後選取 [設定]  。
+1. 捲動至 [延伸模組]  底下的 [筆記本組態]  。
+1. 在 [使用現有的 Python]  底下，取消核取 [筆記本所使用現有 Python安裝的本機路徑] 選項。
+1. 重新啟動 Azure Data Studio。
 
-選取工具列中的 [+文字]  命令來新增新文字儲存格。
+當啟動 Azure Data Studio 且連線到 Python 核心時，會顯示 [為 Notebooks 設定 Python] 頁面。您可選擇建立新的 Python 安裝，或指定現有安裝的路徑。
 
-:::image type="content" source="media/notebook-tutorial-python/notebook-toolbar-python-text.png" alt-text="筆記本工具列":::
+## <a name="run-a-code-cell"></a>執行程式碼資料格
 
-資料格會變更為編輯模式；現在當鍵入 Markdown 時，即可同時查看預覽。
+您可建立資料格，其中包含可藉由按一下資料格左邊 [執行資料格] 按鈕 (圓形黑色箭號) 來就地執行的 SQL 程式碼。 資料格完成執行之後，會在筆記本中顯示結果。
 
-:::image type="content" source="media/notebook-tutorial-python/notebook-markdown-cell-python.png" alt-text="Markdown 資料格":::
+例如：
 
-選取文字資料格以外的地方只會顯示 Markdown 文字。
+1. 選取工具列中的 [+程式碼]  命令來新增 Python 程式碼資料格。
 
-:::image type="content" source="media/notebook-tutorial-python/notebook-markdown-preview-python.png" alt-text="Markdown 文字":::
+   :::image type="content" source="media/notebook-tutorial-python/notebook-toolbar-python.png" alt-text="筆記本工具列":::
+
+1. 將下列範例複製並貼到資料格中，然後按一下 [執行資料格]。 此範例會執行簡單的數學運算，且結果如下所示。
+
+   ```python
+   a = 1
+   b = 2
+   c = a/b
+   print(c)
+   ```
+
+   :::image type="content" source="media/notebook-tutorial-python/run-notebook-cell-python.png" alt-text="執行筆記本資料格":::
 
 ## <a name="next-steps"></a>後續步驟
 
 深入了解筆記本：
 
-- [如何搭配 SQL Server 使用筆記本](notebooks-guidance.md)
-
+- [利用 Kqlmagic 擴充 Python](notebooks-kqlmagic.md)
+- [如何在 Azure Data Studio 中使用筆記本](notebooks-guidance.md)
 - [建立並執行 SQL Server 筆記本](notebooks-tutorial-sql-kernel.md)
-
-- [如何管理 Azure Data Studio 中的 Notebook](notebooks-manage-sql-server.md)

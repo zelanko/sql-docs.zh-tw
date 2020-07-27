@@ -1,5 +1,6 @@
 ---
 title: SQL Server 的 Memory Manager 物件 | Microsoft Docs
+description: 了解 Memory Manager 物件，其所提供計數器可在 SQL Server 中監視整體的伺服器記憶體使用量。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bab9dfb83a918fe072cc4a97f974f77b0243d06e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ad1317d52ca3075a5726e528216f569bd91c2a15
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775798"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458792"
 ---
 # <a name="sql-server-memory-manager-object"></a>SQL Server 的 Memory Manager 物件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

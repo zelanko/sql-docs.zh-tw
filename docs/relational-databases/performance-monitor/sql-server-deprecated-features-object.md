@@ -1,5 +1,6 @@
 ---
 title: SQL Server 的 Deprecated Features 物件 | Microsoft Docs
+description: 了解 SQLServer:Deprecated Features 物件，其所提供計數器可監視指定為已淘汰的功能。
 ms.custom: ''
 ms.date: 05/03/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 69c415d66ca3f490f0a3b293090ccac36bf9cc51
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6c52fb67b4536da8d164784301f17237fdd0b24a
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724784"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458825"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server、Deprecated Features 物件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |SQL Server 已被取代的功能計數器執行個體|描述|  
 |------------------------------------------------------|-----------------|  
 |做為暫存資料表和預存程序名稱的 '#' 和 '##'。|遇到一個不包含 # 以外之任何字元的識別碼。 請至少使用一個其他字元。 每次編譯時發生一次。|  
-|'::' 函數呼叫語法|資料表值函式遇到 :: 函式呼叫語法。 取代為 `SELECT column_list FROM` <函式名稱>  `()`。 例如，以 `SELECT * FROM ::fn_virtualfilestats(2,1)`取代 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。 每次編譯時發生一次。|  
+|'::' 函數呼叫語法|資料表值函式遇到 :: 函式呼叫語法。 取代為 `SELECT column_list FROM` <函式名稱>`()`。 例如，以 `SELECT * FROM ::fn_virtualfilestats(2,1)`取代 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。 每次編譯時發生一次。|  
 |'\@' 和以 '\@\@' 開頭的名稱作為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 識別碼|出現了以 \@ 或 \@\@ 開頭的識別碼。 請勿使用 \@、\@v @ 或是以 \@\@ 開頭的名稱作為識別碼。 每次編譯時發生一次。|  
 |ADDING TAPE DEVICE|遇到已被取代的功能 sp_addumpdevice'**tape**'。 請改用 sp_addumpdevice'**disk**'。 每次使用時發生一次。|  
 |ALL 權限|遇到 GRANT ALL、DENY ALL 或 REVOKE ALL 語法的總次數。 請修改語法來拒絕特定權限。 每次查詢時發生一次。|  
@@ -53,7 +54,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |ALTER LOGIN WITH SET CREDENTIAL|遇到已被取代的功能語法 ALTER LOGIN WITH SET CREDENTIAL 或 ALTER LOGIN WITH NO CREDENTIAL。 請改用 ADD 或 DROP CREDENTIAL 語法。 每次編譯時發生一次。|  
 |Azeri_Cyrilllic_90|每次啟動資料庫及使用定序時，事件會發生一次。 請規劃修改使用此定序的應用程式。|  
 |Azeri_Latin_90|每次啟動資料庫及使用定序時，事件會發生一次。 請規劃修改使用此定序的應用程式。|  
-|BACKUP DATABASE 或 LOG TO TAPE|遇到已被取代的功能 BACKUP { DATABASE &#124; LOG } TO TAPE 或 BACKUP { DATABASE &#124; LOG } TO <磁帶裝置>  。<br /><br /> 請改用 BACKUP { DATABASE &#124; LOG } TO DISK 或 BACKUP { DATABASE &#124; LOG } TO <磁帶裝置>  。 每次使用時發生一次。|  
+|BACKUP DATABASE 或 LOG TO TAPE|遇到已被取代的功能 BACKUP { DATABASE &#124; LOG } TO TAPE 或 BACKUP { DATABASE &#124; LOG } TO <磁帶裝置>。<br /><br /> 請改用 BACKUP { DATABASE &#124; LOG } TO DISK 或 BACKUP { DATABASE &#124; LOG } TO <磁帶裝置>。 每次使用時發生一次。|  
 |BACKUP DATABASE 或 LOG WITH MEDIAPASSWORD|遇到了已被取代的功能 BACKUP DATABASE WITH MEDIAPASSWORD 或 BACKUP LOG WITH MEDIAPASSWORD。 請勿使用 WITH MEDIAPASSWORD。|  
 |BACKUP DATABASE 或 LOG WITH PASSWORD|遇到了已被取代的功能 BACKUP DATABASE WITH PASSWORD 或 BACKUP LOG WITH PASSWORD。 請勿使用 WITH PASSWORD。|  
 |COMPUTE [BY]|遇到了 COMPUTE 或 COMPUTE BY 語法。 請重寫查詢，以搭配 ROLLUP 使用 GROUP BY。 每次編譯時發生一次。|  
@@ -86,7 +87,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |dm_fts_active_catalogs.worker_count|遇到了 sys.dm_fts_active_catalogs 動態管理檢視的 worker_count 資料行。 請避免使用這個資料行。 每當伺服器執行個體偵測到此資料行的參考時，都會發生。|  
 |dm_fts_memory_buffers|dm_fts_memory_buffers 計數器一定會保持為 0，因為 sys.dm_fts_memory_buffers 檢視表的大部分資料行都未被取代。 若要監視已被取代的資料行，請使用資料行特定的計數器：dm_fts_memory_buffers.row_count。|  
 |dm_fts_memory_buffers.row_count|遇到了 [sys.dm_fts_memory_buffers](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md) 動態管理檢視的 row_count 資料行。 請避免使用這個資料行。 每當伺服器執行個體偵測到此資料行的參考時，都會發生。|  
-|具有兩部分名稱的 DROP INDEX|DROP INDEX 語法在 DROP INDEX 中包含了 <資料表名稱>.<索引名稱>  語法格式。 在 DROP INDEX 陳述式中取代為 <索引名稱>  ON <資料表名稱>  的語法。 每次編譯時發生一次。|  
+|具有兩部分名稱的 DROP INDEX|DROP INDEX 語法在 DROP INDEX 中包含了 <資料表名稱>.<索引名稱> 語法格式。 在 DROP INDEX 陳述式中取代為 <索引名稱> ON <資料表名稱> 的語法。 每次編譯時發生一次。|  
 |EXT_CREATE_ALTER_SOAP_ENDPOINT|遇到了 FOR SOAP 選項的 CREATE 或 ALTER ENDPOINT 陳述式。 原生 XML Web Service 已被取代。 請改用 Windows Communications Foundation (WCF) 或 ASP.NET。|  
 |EXT_endpoint_webmethods|遇到 sys.endpoint_webmethods。 原生 XML Web Service 已被取代。 請改用 Windows Communications Foundation (WCF) 或 ASP.NET。|  
 |EXT_soap_endpoints|遇到 sys.soap_endpoints。 原生 XML Web Service 已被取代。 請改用 Windows Communications Foundation (WCF) 或 ASP.NET。|  

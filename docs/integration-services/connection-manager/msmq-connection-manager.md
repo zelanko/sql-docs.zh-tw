@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a6cd2bbabd1cae5fd23dd0522c9664d39b66084f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a99770eded434ef15966535f082bbd25e07aece7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298531"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923108"
 ---
 # <a name="msmq-connection-manager"></a>MSMQ 連接管理員
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   MSMQ 連接管理員可讓封裝連接到使用 Message Queuing (又稱為 MSMQ) 的訊息佇列。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的「訊息佇列」工作會使用 MSMQ 連線管理員。  
@@ -43,8 +43,8 @@ ms.locfileid: "71298531"
   
 |佇列類型|範例路徑|  
 |----------------|-----------------|  
-|公開|\<電腦名稱>\\<佇列名稱\>|  
-|Private|\<電腦名稱>\Private$\\<佇列名稱\>|  
+|公開|\<computer name>\\<佇列名稱\>|  
+|Private|\<computer name>\Private$\\<佇列名稱\>|  
   
  您可以使用句號 (.) 代表本機電腦。  
   
@@ -75,8 +75,8 @@ ms.locfileid: "71298531"
   
 |佇列類型|範例路徑|  
 |----------------|-----------------|  
-|公開|\<電腦名稱>\\<佇列名稱\>|  
-|Private|\<電腦名稱>\Private$\\<佇列名稱\>|  
+|公開|\<computer name>\\<佇列名稱\>|  
+|Private|\<computer name>\Private$\\<佇列名稱\>|  
   
  您可以使用 "." 代表本機電腦。  
   

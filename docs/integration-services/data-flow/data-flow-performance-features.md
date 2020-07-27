@@ -23,16 +23,16 @@ helpviewer_keywords:
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0c5c86d90536d1ba7c8acd5402317ff364ffdc67
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ec9af02a6c7259741e75eae826bc9e15afe3aa80
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73637951"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86906735"
 ---
 # <a name="data-flow-performance-features"></a>資料流程效能的功能
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   本主題提供有關如何設計 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝以避免常見效能問題的建議。 本主題同時也提供有關您可以用於疑難排解封裝效能之功能與工具的資訊。  
@@ -102,7 +102,7 @@ ms.locfileid: "73637951"
  不管資料流程元件為何，都有兩個您應該遵循的一般指導方針來改善效能：最佳化查詢與避免不必要的字串。  
   
 #### <a name="optimize-queries"></a>最佳化查詢  
- 某些資料流程元件會在從來源擷取資料時或在查閱作業中使用查詢，以建立參考資料表。 預設查詢會使用 SELECT * FROM \<資料表名稱> 語法。 這種類型的查詢會傳回來源資料表中的所有資料行。 讓所有資料行都在設計階段可用，您便可以選擇任何資料行作為查閱、傳遞或來源資料行。 不過，在選擇要使用的資料行後，您應該將查詢修訂為只包含選取的資料行。 移除多餘的資料行可讓封裝中的資料流程更為有效，因為資料行越少，就會建立越小的資料列。 資料列越小，表示有越多的資料列可以納入同一個緩衝區，而且處理資料集中全部資料列所需的工作也就越少。  
+ 某些資料流程元件會在從來源擷取資料時或在查閱作業中使用查詢，以建立參考資料表。 預設查詢會使用 SELECT * FROM \<tableName> 語法。 這種類型的查詢會傳回來源資料表中的所有資料行。 讓所有資料行都在設計階段可用，您便可以選擇任何資料行作為查閱、傳遞或來源資料行。 不過，在選擇要使用的資料行後，您應該將查詢修訂為只包含選取的資料行。 移除多餘的資料行可讓封裝中的資料流程更為有效，因為資料行越少，就會建立越小的資料列。 資料列越小，表示有越多的資料列可以納入同一個緩衝區，而且處理資料集中全部資料列所需的工作也就越少。  
   
  若要建構查詢，您可以輸入查詢或使用「查詢產生器」。  
   

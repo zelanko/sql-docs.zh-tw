@@ -1,5 +1,5 @@
 ---
-title: SELECT @local_variable (Transact-SQL) | Microsoft Docs
+title: SELECT @local_variable (Transact-SQL)
 ms.custom: ''
 ms.date: 09/06/2017
 ms.prod: sql
@@ -25,14 +25,15 @@ ms.assetid: 8e1a9387-2c5d-4e51-a1fd-a2a95f026d6f
 author: rothja
 ms.author: jroth
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||= azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 415c2ff263a4a501de441cc04c0f845a1e3592bb
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 2f1d8bad77c52fcabb3190e28767c945718e1d72
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81630230"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86910531"
 ---
 # <a name="select-local_variable-transact-sql"></a>SELECT @local_variable (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   將區域變數設為運算式的值。  
@@ -48,38 +49,43 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
     [ ,...n ] [ ; ]  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
+
 @*local_variable*  
  這是將指派值的宣告變數。  
   
-{= | += | -= | \*= | /= | %= | &= | ^= | |= }   
+{= \| += \| -= \| \*= \| /= \| %= \| &= \| ^= \| \|= }  
 將右邊的值指派給左邊的變數。  
   
 複合指派運算子：  
-  |! 運算子之後 |動作 |   
-  |-----|-----|  
-  | = | 將後面的運算式指派給變數。 |  
-  | += | 加並指派 |   
-  | -= | 減並指派 |  
-  | \*= | 乘並指派 |  
-  | /= | 除並指派 |  
-  | %= | 取餘數並指派 |  
-  | &= | 位元 AND 並指派 |  
-  | ^= | 位元 XOR 並指派 |  
-  | \|= | 位元 OR 並指派 |  
-  
- *expression*  
- 這是任何有效的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 其中包括純量子查詢。  
-  
-## <a name="remarks"></a>備註  
- SELECT @*local_variable* 通常用來將單一值傳回給變數。 不過，當 *expression* 是資料行名稱時，它可以傳回多個值。 如果 SELECT 陳述式傳回多個值，就會將最後傳回的值指派給變數。  
-  
- 如果 SELECT 陳述式未傳回任何資料列，變數會保留它目前的值。 如果 *expression* 是未傳回任何值的純量子查詢，變數會設為 NULL。  
-  
- 一個 SELECT 陳述式可以初始化多個本機變數。  
-  
-> [!NOTE]  
->  您不能也利用包含變數指派的 SELECT 陳述式來執行一般結果集擷取作業。  
+
+| ! 運算子之後 | 動作 |  
+| -------- | ------ |  
+| = | 將後面的運算式指派給變數。 |  
+| += | 加並指派 |  
+| -= | 減並指派 |  
+| \*= | 乘並指派 |  
+| /= | 除並指派 |  
+| %= | 取餘數並指派 |  
+| &= | 位元 AND 並指派 |  
+| ^= | 位元 XOR 並指派 |  
+| \|= | 位元 OR 並指派 |  
+
+*expression*  
+這是任何有效的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 其中包括純量子查詢。  
+
+## <a name="remarks"></a>備註
+
+SELECT @*local_variable* 通常用來將單一值傳回給變數。 不過，當 *expression* 是資料行名稱時，它可以傳回多個值。 如果 SELECT 陳述式傳回多個值，就會將最後傳回的值指派給變數。  
+
+如果 SELECT 陳述式未傳回任何資料列，變數會保留它目前的值。 如果 *expression* 是未傳回任何值的純量子查詢，變數會設為 NULL。  
+
+一個 SELECT 陳述式可以初始化多個本機變數。  
+
+> [!NOTE]
+> 您不能也利用包含變數指派的 SELECT 陳述式來執行一般結果集擷取作業。  
   
 ## <a name="examples"></a>範例  
   
@@ -99,7 +105,7 @@ SELECT @var1 AS 'Company Name';
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```  
+ ```
  Company Name  
  ------------------------------  
  Generic Name  
@@ -121,7 +127,7 @@ SELECT @var1 AS 'Company Name' ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```
 Company Name  
 ----------------------------  
 NULL  
@@ -132,5 +138,3 @@ NULL
  [運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [複合運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
-  
-  

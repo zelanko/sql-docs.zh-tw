@@ -1,5 +1,6 @@
 ---
 title: SQL Server XTP 資料庫 | Microsoft Docs
+description: 了解 SQL Server XTP Databases 效能物件，這會提供記憶體內部 OLTP 資料庫特定的計數器。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f40d6d4afd6195e65ded4e010268251a5bda8b0b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3dea94fe092f4481386a9fd8a5649d0ea4dd18c2
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774246"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457388"
 ---
 # <a name="sql-server-xtp-databases"></a>SQL Server XTP 資料庫
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

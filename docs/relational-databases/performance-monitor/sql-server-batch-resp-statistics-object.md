@@ -1,5 +1,6 @@
 ---
 title: SQL Server 的 Batch Resp Statistics 物件 | Microsoft Docs
+description: 了解 SQLServer:Batch Resp Statistics 效能物件，其提供計數器來追蹤 SQL Server 批次回應時間。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 447ab09f049a5177a68a1c4a1d3d00239161149a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b28b0d8af863c21f4764f5c7126fca20b18c1ab1
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787381"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458146"
 ---
 # <a name="sql-server-batch-resp-statistics-object"></a>SQL Server 的 Batch Resp Statistics 物件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "85787381"
 
 物件中的每個計數器均包含下列執行個體：  
   
-|Item|描述|  
+|項目|描述|  
 |----------|-----------------|  
 |**CPU Time:Requests**|CPU 花費在要求上的時間。|  
 |**CPU Time:Total(ms)**|CPU 花費在批次上的時間總計。|  

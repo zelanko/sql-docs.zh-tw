@@ -10,16 +10,16 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 6e46ebc13ddd9368a2234c99979c9036a702e11e
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 00a31303aac5f562462cf6950e233fa84be31215
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82924828"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922104"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Scale Out 透過 SQL Server 容錯移轉叢集執行個體支援高可用性
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -47,7 +47,7 @@ ms.locfileid: "82924828"
 遵循 [3.在次要節點上安裝 Scale Out Master](scale-out-support-for-high-availability.md#3-install-scale-out-master-on-the-secondary-node)
 
 ## <a name="5-update-the-scale-out-master-service-configuration-file"></a>5.更新 Scale Out Master 服務設定檔
-更新主要和次要節點上的 Scale Out Master 服務設定檔：\<磁碟機\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config。 將 **SqlServerName** 更新為 [SQL Server 網路名稱]//[執行個體名稱] 或預設執行個體的 [SQL Server 網路名稱]。
+更新主要和次要節點上的 Scale Out Master 服務設定檔：\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config。 將 **SqlServerName** 更新為 [SQL Server 網路名稱]//[執行個體名稱] 或預設執行個體的 [SQL Server 網路名稱]。
 
 ## <a name="6-add-scale-out-master-service-to-sql-server-role-in-windows-failover-cluster"></a>6.將 Scale Out Master 服務新增至 Windows 容錯移轉叢集的 SQL Server 角色
 在容錯移轉叢集管理員中，連線至 Scale Out 的叢集。在總管中選取角色，再以滑鼠右鍵按一下 SQL Server 角色，然後選取 [新增資源] 和 [泛型服務]。 

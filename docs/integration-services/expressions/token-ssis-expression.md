@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c025eac60079e601d755439573b35257038d9275
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ca682adb998ad20b04e40cda29d5a083f4c4e58f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297359"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913484"
 ---
 # <a name="token--ssis-expression"></a>TOKEN (SSIS 運算式)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   依據字串中用來分隔 Token 的指定分隔符號，以及表示要傳回哪個 Token 的 Token 號碼，從字串傳回 Token (子字串)。  
@@ -44,13 +44,13 @@ TOKEN(character_expression, delimiter_string, occurrence)
  DT_WSTR  
   
 ## <a name="remarks"></a>備註  
- 此函數會將 <character_expression> 字串分割成一組以 <delimiter_string> 中指定之分隔符號來分隔的 Token，然後傳回第 N 個 Token (其中 N 是 \<occurrence> 參數指定的 Token 出現編號)。 如需此函數的範例用法，請參閱＜範例＞一節。  
+ 此函式會將 <character_expression> 字串分割成一組以 <delimiter_string> 中所指定分隔符號來分隔的 Token，然後傳回第 N 個 Token (其中 N 是 \<occurrence> 參數指定的 Token 出現編號)。 如需此函數的範例用法，請參閱＜範例＞一節。  
   
  下列備註適用於 TOKEN 函數：  
   
 -   分隔符號字串可以包含一個或多個分隔符號字元。  
   
--   如果 \<occurrence> 參數的值大於字串中的 Token 總數，函數就會傳回 NULL。  
+-   如果 \<occurrence> 參數值大於字串中的 Token 總數，則函式就會傳回 NULL。  
   
 -   前導分隔符號會予略過。  
   

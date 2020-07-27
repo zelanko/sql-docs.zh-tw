@@ -1,5 +1,6 @@
 ---
 title: 資料列壓縮實作 | Microsoft 文件
+description: 了解 SQL Server 資料庫引擎如何實作資料列壓縮，以協助規劃資料所需的儲存空間。
 ms.custom: ''
 ms.date: 06/30/2016
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: dcd97ac1-1c85-4142-9594-9182e62f6832
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5af131c9824de651a198fb99afaa526f3dd0bd6f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bbe2358e2be461666378cc18c5a735a71574f17a
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85637293"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86456110"
 ---
 # <a name="row-compression-implementation"></a>資料列壓縮實作
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

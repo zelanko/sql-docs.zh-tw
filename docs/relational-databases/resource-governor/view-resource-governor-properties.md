@@ -1,5 +1,6 @@
 ---
 title: 檢視資源管理員屬性 | Microsoft 文件
+description: 了解如何使用 SQL Server Management Studio 中的 [Resource Governor 屬性] 頁面來建立或設定 Resource Governor 實體。
 ms.custom: ''
 ms.date: 07/18/2016
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: c19adf7c918fa4a2bd2f48227a8109cef26c64f2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5ff1c4429b14e359ae249f7a9e9baf2f5da46224
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729262"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457812"
 ---
 # <a name="view-resource-governor-properties"></a>檢視資源管理員屬性
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -56,7 +57,7 @@ ms.locfileid: "85729262"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]** 。  
   
-2.  以滑鼠右鍵按一下 [資源管理員]  ，然後按一下 [屬性]  ，這會開啟 [資源管理員屬性]  頁面。  
+2.  以滑鼠右鍵按一下 [資源管理員]，然後按一下 [屬性]，這會開啟 [資源管理員屬性] 頁面。  
   
 3.  如需有關該頁中之欄位的說明，請參閱＜ [資源管理員屬性](#RGProp)＞。  
   

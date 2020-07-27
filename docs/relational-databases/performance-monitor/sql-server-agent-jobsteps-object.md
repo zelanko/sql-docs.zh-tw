@@ -1,5 +1,6 @@
 ---
 title: SQL Server Agent、JobSteps 物件 | Microsoft Docs
+description: 了解 SQL Server Agent 的 JobSteps 效能物件，其中包含可報告 SQL Server Agent 作業步驟資訊的效能計數器。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b3d0c8197f275801140bec48ab05dc6bc19324eb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 14a13671c5447872e1c4c0030c8717e471d8114f
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787390"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457450"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>SQL Server Agent、JobSteps 物件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "85787390"
   
  下表包含 **SQLAgent:JobSteps** 計數器。  
   
-|名稱|描述|  
+|Name|描述|  
 |----------|-----------------|  
 |**Active steps**|此計數器會報告目前在執行中的作業步驟數目。|  
 |**Queued steps**|此計數器會報告準備供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 執行，但尚未開始執行的作業步驟數目。|  

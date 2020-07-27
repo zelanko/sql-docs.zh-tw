@@ -1,5 +1,6 @@
 ---
 title: 資料壓縮 | Microsoft Docs
+description: 使用 SQL Server 和 Azure SQL Database，套用資料列和頁面資料壓縮，或資料行存放區和資料行存放區封存壓縮。
 ms.custom: ''
 ms.date: 08/31/2017
 ms.prod: sql
@@ -23,12 +24,12 @@ ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 464f83e573f76bb74158fc8eee6a798089734006
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5da071f378edb771d4b1dc70ac8257febd78a522
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85679724"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86459007"
 ---
 # <a name="data-compression"></a>資料壓縮
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -186,7 +187,7 @@ REBUILD PARTITION = ALL WITH (
 |使用者意圖|複寫資料表或索引的資料分割配置|複寫壓縮設定|指令碼行為|  
 |-----------------|-----------------------------------------------------|------------------------------------|------------------------|  
 |複寫資料分割配置，以及在資料分割的訂閱者上啟用壓縮。|True|True|同時針對資料分割配置和壓縮設定編寫指令碼。|  
-|複寫資料分割配置，但是不壓縮訂閱者上的資料。|True|False|針對資料分割配置編寫指令碼，但是不針對資料分割的壓縮設定編寫指令碼。|  
+|複寫資料分割配置，但是不壓縮訂閱者上的資料。|是|否|針對資料分割配置編寫指令碼，但是不針對資料分割的壓縮設定編寫指令碼。|  
 |不複寫資料分割配置，而且不壓縮訂閱者上的資料。|False|False|不針對資料分割或壓縮設定編寫指令碼。|  
 |如果所有資料分割都在發行者上壓縮，則壓縮訂閱者上的資料表，但是不複寫資料分割配置。|False|True|檢查所有資料分割是否啟用壓縮。<br /><br /> 針對資料表層級上的壓縮編寫指令碼。|  
   

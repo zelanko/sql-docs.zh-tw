@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 95f2fc808723fa3a69222ead3f362007585231f1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cc7afe35c99a12e8e92111d05e62d9d0a5dd9c9c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288232"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922794"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>使用 Oracle CDC 服務
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   本章節描述 Oracle CDC 服務的一些重要概念。 本章節包含的概念如下：  
@@ -112,7 +112,7 @@ ms.locfileid: "79288232"
 |ref_count|這個項目會計算安裝相同 Oracle CDC 服務的電腦數目。 每次加入相同名稱的 Oracle CDC 服務時，這個數目就會遞增，每當移除這類服務時，這個數目就會遞減。 當計數器到達零時，這個資料列會遭到刪除。|  
 |active_service_node|目前處理 CDC 服務的 Windows 節點名稱。 當此服務正確停止時，這個資料行會設定為 null，表示不再有使用中的服務。|  
 |active_service_heartbeat|這個項目會追蹤目前的 CDC 服務來判斷它是否依然使用中。<br /><br /> 對於固定間隔的使用中 CDC 服務而言，將會使用目前資料庫 UTC 時間戳記來更新這個項目。 預設間隔為 30 秒，但是可以設定間隔。<br /><br /> 當暫止的 CDC 服務偵測到經過設定的間隔時間後並未更新活動訊號時，暫止的服務會嘗試接管使用中的 CDC 服務角色。|  
-|選項|這個項目會指定次要選項，例如追蹤或微調。 它會以 **name[=value][; ]** 格式寫入。 選項字串會使用與 ODBC 連接字串相同的語意。 如果選項為布林值 (值為是/否)，此值只能包含名稱。<br /><br /> 追蹤具有以下的可能值。<br /><br /> **true**<br /><br /> **on**<br /><br /> **false**<br /><br /> **關閉**<br /><br /> **\<class name>[,class name>]**<br /><br /> <br /><br /> 預設值為 **false**。<br /><br /> **service_heartbeat_interval** 是此服務更新 active_service_heartbeat 資料行的時間間隔 (以秒數為單位)。 預設值是 **30**。 最大值為 **3600**。<br /><br /> **service_config_polling_interval** 是 CDC 服務檢查組態變更的輪詢間隔 (以秒數為單位)。 預設值是 **30**。 最大值為 **3600**。<br /><br /> **sql_command_timeout** 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所使用的命令逾時。 預設值是 **1**秒。 最大值為 **3600**。|  
+|選項|這個項目會指定次要選項，例如追蹤或微調。 它會以 **name[=value][; ]** 格式寫入。 選項字串會使用與 ODBC 連接字串相同的語意。 如果選項為布林值 (值為是/否)，此值只能包含名稱。<br /><br /> 追蹤具有以下的可能值。<br /><br /> **true**<br /><br /> **on**<br /><br /> **false**<br /><br /> **關閉**<br /><br /> **\<class name>[,類別名稱>]**<br /><br /> <br /><br /> 預設值為 **false**。<br /><br /> **service_heartbeat_interval** 是此服務更新 active_service_heartbeat 資料行的時間間隔 (以秒數為單位)。 預設值是 **30**。 最大值為 **3600**。<br /><br /> **service_config_polling_interval** 是 CDC 服務檢查組態變更的輪詢間隔 (以秒數為單位)。 預設值是 **30**。 最大值為 **3600**。<br /><br /> **sql_command_timeout** 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所使用的命令逾時。 預設值是 **1**秒。 最大值為 **3600**。|  
 ||  
   
 ### <a name="the-msxdbcdc-database-stored-procedures"></a>MSXDBCDC 資料庫預存程序  
@@ -161,7 +161,7 @@ ms.locfileid: "79288232"
 ###  <a name="dboxcbcdc_add_servicesvcnamesqlusr"></a><a name="BKMK_dboxcbcdc_add_service"></a> dbo.xcbcdc_add_service(svcname,sqlusr)  
  **dbo.xcbcdc_add_service** 程序會將項目加入至 **MSXDBCDC.xdbcdc_services** 資料表，並針對 **MSXDBCDC.xdbcdc_services** 資料表中的服務名稱將 1 的遞增值加入 ref_count 資料行。 當 **ref_count** 為 0 時，它會刪除資料列。  
   
- 若要使用 **dbo.xcbcdc_add_service\<服務名稱, 使用者名稱>** 程序，使用者必須是所指名之 CDC 執行個體資料庫的 **db_owner** 資料庫角色成員，或是**系統管理員**或 **serveradmin** 固定伺服器角色的成員。  
+ 若要使用 **dbo.xcbcdc_add_service\<service name, username>** 程序，使用者必須是所指名 CDC 執行個體資料庫的 **db_owner** 資料庫角色成員，或 **sysadmin** 或 **serveradmin** 固定伺服器角色的成員。  
   
 ###  <a name="dboxdbcdc_startdbname"></a><a name="BKMK_dboxdbcdc_start"></a> dbo.xdbcdc_start(dbname)  
  **dbo.xdbcdc_start** 程序會傳送啟動要求給 CDC 服務，此服務會處理選取的 CDC 執行個體來開始變更處理。  

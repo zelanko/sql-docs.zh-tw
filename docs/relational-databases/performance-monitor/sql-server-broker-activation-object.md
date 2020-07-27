@@ -1,5 +1,6 @@
 ---
 title: SQL Server 的 Broker Activation 物件 | Microsoft Docs
+description: 了解 SQLServer:BrokerActivation 效能物件，其包含效能計數器，可報告預存程序啟用的資訊。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd9b6880-c924-42c7-b333-09c303317c0b
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0f2b877899a425397e7431d7b615c61356fb9d5a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 74031fb95207c1bb0a4916aa512893dd38aeb7b4
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787339"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458140"
 ---
 # <a name="sql-server-broker-activation-object"></a>SQL Server 的 Broker Activation 物件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

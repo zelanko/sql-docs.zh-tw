@@ -17,13 +17,13 @@ helpviewer_keywords:
 - PREDICT clause
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions'
-ms.openlocfilehash: e570c7cbc06c6d2e384d34571e0af7ca93003ceb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||>=azure-sqldw-latest||=sqlallproducts-allversions'
+ms.openlocfilehash: 039441b0029a5c2d92e16f7bc35bc496c6cd440c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012578"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918599"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)
 
@@ -32,6 +32,8 @@ ms.locfileid: "86012578"
 根據預存模型產生預測值或分數。 如需詳細資訊，請參閱[使用 PREDICT T-SQL 函式進行原生評分](../../machine-learning/predictions/native-scoring-predict-transact-sql.md)。
 
 ## <a name="syntax"></a>語法
+
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
 
 ```syntaxsql
 PREDICT  
@@ -55,21 +57,58 @@ WITH ( <result_set_definition> )
 MODEL = @model | model_literal  
 ```
 
+::: moniker-end
+
+::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+
+```syntaxsql
+PREDICT  
+(  
+  MODEL = <model_object>,
+  DATA = object AS <table_alias>
+  [, RUNTIME = ONNX ]
+)  
+WITH ( <result_set_definition> )  
+
+<result_set_definition> ::=  
+  {  
+    { column_name  
+      data_type  
+      [ COLLATE collation_name ]  
+      [ NULL | NOT NULL ]  
+    }  
+      [,...n ]  
+  }  
+
+<model_object> ::=
+  {
+    model_literal
+    | model_variable
+    | ( scalar_subquery )
+  }
+```
+
+::: moniker-end
+
 ### <a name="arguments"></a>引數
 
 **MODEL**
 
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=sqlallproducts-allversions"
 `MODEL` 參數用來指定用於計分或預測的模型。 模型指定為變數、常值或純量運算式。
 
-::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=sqlallproducts-allversions"
 `PREDICT` 支援使用 [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) 和 [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md) 套件進行定型的模型。
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+`MODEL` 參數用來指定用於計分或預測的模型。 模型指定為變數、常值或純量運算式。
+
 在 Azure SQL 受控執行個體中，`PREDICT` 支援具有 [Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html) \(英文\) 格式的模型，或是使用 [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) 和 [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md) 套件進行定型的模型。
 ::: moniker-end
 
 ::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+`MODEL` 參數用來指定用於計分或預測的模型。 此模型會指定為變數、常值、純量運算式或純量子查詢。
+
 在 Azure Synapse Analytics 中，`PREDICT` 支援具有 [Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html) \(英文\) 格式的模型。
 ::: moniker-end
 
@@ -129,11 +168,27 @@ Windows 和 Linux 上所有版本的 SQL Server 2017 和更新版本都支援 `P
 
 此範例在 `SELECT` 陳述式的 `FROM` 子句中參考 `PREDICT` 函數：
 
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+
 ```sql
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = @model,
     DATA = dbo.mytable AS d) WITH (Score float) AS p;
 ```
+
+:::moniker-end
+
+::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+
+```sql
+DECLARE @model varbinary(max) = (SELECT test_model FROM scoring_model WHERE model_id = 1);
+
+SELECT d.*, p.Score
+FROM PREDICT(MODEL = @model,
+    DATA = dbo.mytable AS d) WITH (Score float) AS p;
+```
+
+::: moniker-end
 
 `DATA` 參數中為資料表來源指定的別名 **d** 是用來參考屬於 `dbo.mytable` 的資料行。 為 `PREDICT` 函式指定的別名 **p** 是用來參考 `PREDICT` 函式所傳回的資料行。
 
@@ -141,6 +196,20 @@ FROM PREDICT(MODEL = @model,
 - `DATA` 參數中為資料表來源指定的別名 **d** 是用來參考屬於 `dbo.mytable` 的資料行。 輸入資料資料行應該要符合模型的輸入名稱。
 - 為 `PREDICT` 函式指定的別名 **p** 是用來參考 `PREDICT` 函式所傳回的預測資料行。 資料行名稱應該要有和模型的輸出名稱相同的名稱。
 - 所有輸入資料資料行和預測資料行都可在 SELECT 陳述式中顯示。
+
+::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+
+您可藉由將 `MODEL` 指定為純量子查詢來重寫上述範例查詢以建立檢視：
+
+```sql
+CREATE VIEW predictions
+AS
+SELECT d.*, p.Score
+FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
+             DATA = dbo.mytable AS d) WITH (Score float) AS p;
+```
+
+:::moniker-end
 
 ### <a name="combining-predict-with-an-insert-statement"></a>合併 PREDICT 與 INSERT 陳述式
 

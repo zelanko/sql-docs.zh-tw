@@ -1,5 +1,6 @@
 ---
 title: 子查詢 (SQL Server) | Microsoft Docs
+description: 透過範例了解子查詢：其為在 SELECT、INSERT、UPDATE 或 DELETE 陳述式中，或在 SQL Server 內另一個子查詢中的巢狀查詢。
 ms.custom: ''
 ms.date: 02/18/2018
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: bfc97432-c14c-4768-9dc5-a9c512f6b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a455e6a8bf07b41a35b9c71f9d024278d0387e65
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4df3e14fc35abd0de05f87bb79d442e62df7dc1d
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002328"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457590"
 ---
 # <a name="subqueries-sql-server"></a>子查詢 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

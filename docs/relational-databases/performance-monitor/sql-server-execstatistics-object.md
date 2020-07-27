@@ -1,5 +1,6 @@
 ---
 title: SQL Server 的 ExecStatistics 物件 | Microsoft Docs
+description: 了解 SQLServer:ExecStatistics 物件，其所提供計數器可監視各種執行情形。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f8557a8-345f-4622-a8a5-763a0388ad94
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: aaf66cf2be025262d0d59b7a06421689b93bab91
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1c6cf9cb90a6b19e3472e7d0fb41475b9deb47f6
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775907"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458408"
 ---
 # <a name="sql-server-execstatistics-object"></a>SQL Server 的 ExecStatistics 物件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85775907"
   
  物件中的每個計數器均包含下列執行個體：  
   
-|Item|描述|  
+|項目|描述|  
 |----------|-----------------|  
 |**平均執行時間 (ms)**|選取的執行類型之平均執行時間。|  
 |**每秒累計執行時間 (ms)**|選取的執行類型之每秒彙總執行時間。|  

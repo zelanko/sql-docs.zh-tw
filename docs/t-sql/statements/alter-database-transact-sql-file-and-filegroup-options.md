@@ -44,12 +44,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: fe0605cdfd2d2cf341ff6ab51939fee2c78ae797
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e16612058617d324d0b3c0e4534716b39a09527f
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216273"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552416"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE (Transact-SQL) 檔案及檔案群組選項
 
@@ -57,9 +57,7 @@ ms.locfileid: "80216273"
 
 如需語法慣例的詳細資訊，請參閱 [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
 
-## <a name="click-a-product"></a>按一下產品
-
-在下一行中，按一下您感興趣的產品名稱。 視您所按下的產品而定，此點選會在本網頁的這裡顯示不同的內容。
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
@@ -72,7 +70,7 @@ ms.locfileid: "80216273"
 
 ## <a name="syntax"></a>語法
 
-```
+```syntaxsql
 ALTER DATABASE database_name
 {
     <add_or_modify_files>
@@ -163,7 +161,7 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
 您可以將 FILESTREAM 檔案設定為 OFFLINE。 當 FILESTREAM 檔案離線時，它的父檔案群組會在內部標示為離線；因此，該檔案群組內 FILESTREAM 資料的所有存取都將失敗。
 
 > [!NOTE]
-> 「自主資料庫」無法使用 \<add_or_modify_files> 選項。
+> 自主資料庫中無法使用 \<add_or_modify_files> 選項。
 
 **\<filespec>::=**
 
@@ -279,7 +277,7 @@ REMOVE FILEGROUP *filegroup_name* 從資料庫中移除檔案群組。 除非檔
 
 MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=** _new\_filegroup\_name_ } 透過將狀態設定為 READ_ONLY 或 READ_WRITE 來修改檔案群組，讓檔案群組成為資料庫的預設檔案群組，或變更檔案群組名稱。
 
-\<filegroup_updatability_option> 將檔案群組的屬性設成唯讀或讀取/寫入。
+\<filegroup_updatability_option> 會將檔案群組的屬性設成唯讀或讀取/寫入。
 
 DEFAULT 將預設的資料庫檔案群組變更為 *filegroup_name*。 資料庫中只能有一個檔案群組是預設檔案群組。 如需相關資訊，請參閱 [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)。
 
@@ -339,7 +337,7 @@ READ_WRITE | READWRITE 將群組指定成 READ_WRITE 狀態。 檔案群組中�
 
 在未來的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，將移除 `READONLY` 關鍵字。 請避免在新的開發工作中使用 `READONLY`，並規劃修改目前使用 READONLY 的應用程式。 請改用 `READ_ONLY`。
 
-在未來的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，將移除 `READWRITE` 關鍵字。 請避免在新的開發工作中使用 `READWRITE`，並規劃修改目前在使用 `READWRITE` 的應用程式，改為使用 `READ_WRITE`。
+在未來的 `READWRITE`[!INCLUDE[msCoName](../../includes/msconame-md.md)] 版本中，將移除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關鍵字。 請避免在新的開發工作中使用 `READWRITE`，並規劃修改目前在使用 `READWRITE` 的應用程式，改為使用 `READ_WRITE`。
 
 ## <a name="moving-files"></a>移動檔案
 
@@ -692,7 +690,7 @@ GO
 
 ## <a name="syntax-for-databases-in-a-managed-instance"></a>用於受控執行個體中資料庫的語法
 
-```
+```syntaxsql
 ALTER DATABASE database_name
 {
     <add_or_modify_files>
@@ -812,7 +810,7 @@ REMOVE FILEGROUP *filegroup_name* 從資料庫中移除檔案群組。 除非檔
 
 MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT | NAME **=** _new\_filegroup\_name_ } 透過將狀態設定為 READ_ONLY 或 READ_WRITE 來修改檔案群組，讓檔案群組成為資料庫的預設檔案群組，或變更檔案群組名稱。
 
-\<filegroup_updatability_option> 將檔案群組的屬性設成唯讀或讀取/寫入。
+\<filegroup_updatability_option> 會將檔案群組的屬性設成唯讀或讀取/寫入。
 
 DEFAULT 將預設的資料庫檔案群組變更為 *filegroup_name*。 資料庫中只能有一個檔案群組是預設檔案群組。 如需相關資訊，請參閱 [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)。
 

@@ -1,5 +1,6 @@
 ---
 title: SQL Server 的 FileTable 物件 | Microsoft Docs
+description: 了解 SQLServer:FileTable 效能物件，這會提供與 FileTable 和非交易式存取相關聯的統計資料計數器。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 325f5e58-1095-450f-9321-dfacfe6fd55f
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f0411ae3768195fd1fb3f5e7f8776a7b71362817
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f6abfd3c7bdb7ba03a7ab91a7e242d645590796e
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775881"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458820"
 ---
 # <a name="sql-server-filetable-object"></a>SQL Server 的 FileTable 物件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

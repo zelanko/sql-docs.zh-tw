@@ -1,5 +1,6 @@
 ---
 title: 即時查詢統計資料 | Microsoft Docs
+description: 了解如何在 SQL Server Management Studio 中，檢視使用中查詢的即時執行計畫。 使用執行統計資料針對查詢效能問題進行偵錯。
 ms.custom: ''
 ms.date: 11/21/2018
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 2705923e404273046b828b2cc4144a3f65c296a9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0d23b18096f1be3feeaddbee6bc2517bcaae8130
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731805"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457876"
 ---
 # <a name="live-query-statistics"></a>即時查詢統計資料
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "85731805"
   
      ![工具列上的 [即時查詢統計資料] 按鈕](../../relational-databases/performance/media/livequerystatstoolbar.png "工具列上的 [即時查詢統計資料] 按鈕")  
   
-     您也可以用滑鼠右鍵按一下 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中選取的查詢來檢視存取即時查詢執行計畫，然後按一下 [包含即時查詢統計資料]  。  
+     您也可以用滑鼠右鍵按一下 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中選取的查詢來檢視存取即時查詢執行計畫，然後按一下 [包含即時查詢統計資料]。  
   
      ![快顯功能表上的 [即時查詢統計資料] 按鈕](../../relational-databases/performance/media/livequerystatsmenu.png "快顯功能表上的 [即時查詢統計資料] 按鈕")  
   

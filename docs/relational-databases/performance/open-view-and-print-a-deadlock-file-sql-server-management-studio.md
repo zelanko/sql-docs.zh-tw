@@ -1,5 +1,6 @@
 ---
 title: 開啟、檢視、列印死結檔案 (SSMS)
+description: 了解如何擷取 SQL Server Profiler 所產生的死結資訊，並在 SQL Server Management Studio 中進行檢視。
 ms.custom: seo-dt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: 5061b13f-2cb7-457a-b8d0-fbd437b510ab
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 61204492bad49c3d3d8ec01442cb9baca538a0f8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3c55ad170e9d6a9fe58865ab28ac75f018b6905b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758870"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458371"
 ---
 # <a name="open-view-and-print-a-deadlock-file-in-sql-server-management-studio-ssms"></a>在 SQL Server Management Studio (SSMS) 開啟、檢視及列印死結檔案
 
@@ -32,17 +33,17 @@ ms.locfileid: "85758870"
   
 1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [檔案] 功能表上，指向 [開啟]，然後選取 [檔案]。  
   
-2. 在 [開啟檔案]  對話方塊中，從 [檔案類型]  方塊中選取 .xdl 檔案類型。 您現在會有一份只有死結檔案的篩選清單。  
+2. 在 [開啟檔案] 對話方塊中，從 [檔案類型] 方塊中選取 .xdl 檔案類型。 您現在會有一份只有死結檔案的篩選清單。  
   
 ## <a name="print-a-deadlock-file"></a>列印死結檔案  
   
 1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [檔案] 功能表上，指向 [開啟]，然後選取 [檔案]。  
   
-2. 在 [開啟檔案]  對話方塊中，從 [檔案類型]  方塊中選取 .xdl 檔案類型。 您現在會有一份只有死結檔案的篩選清單。  
+2. 在 [開啟檔案] 對話方塊中，從 [檔案類型] 方塊中選取 .xdl 檔案類型。 您現在會有一份只有死結檔案的篩選清單。  
   
-3. 選取您要列印的死結檔案，然後選取 [開啟]  。  
+3. 選取您要列印的死結檔案，然後選取 [開啟]。  
   
-4. 在 [檔案]  功能表上，選取 [列印]  。  
+4. 在 [檔案] 功能表上，選取 [列印]。  
   
 ## <a name="see-also"></a>另請參閱  
  [儲存 Deadlock Graph &#40;SQL Server Profiler&#41;](../../relational-databases/performance/save-deadlock-graphs-sql-server-profiler.md)  

@@ -1,5 +1,6 @@
 ---
 title: SQL Server XTP 儲存體 | Microsoft Docs
+description: 了解 SQL Server XTP Storage 效能物件，其中包含與 SQL Server 中記憶體內部 OLTP 磁碟儲存相關的計數器。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4070580b-880d-4f4c-abcc-626a4fe0c9a2
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 853f9b125a67b95e5c26bd9e81a540e6febc7afe
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a623d68d5d738d773ab479bd0ca24c7454399f58
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715207"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457910"
 ---
 # <a name="sql-server-xtp-storage"></a>SQL Server XTP 儲存體
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

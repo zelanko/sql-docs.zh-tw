@@ -1,5 +1,6 @@
 ---
 title: SQL Server XTP 虛設處理器 | Microsoft Docs
+description: 了解 SQL Server XTP 虛設項目處理器效能物件，包含適用於記憶體內部 OLTP 引擎虛設項目處理子系統的計數器。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 0f691b3d-a8fd-4459-ad21-2cfc8574a8c0
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bb3c619edfc1fae76e8b497c46a882fbfc42ffd2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1ab23b48d001d9145a06b620a20812f856e699de
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85743166"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457919"
 ---
 # <a name="sql-server-xtp-phantom-processor"></a>SQL Server XTP 虛設項目處理器
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

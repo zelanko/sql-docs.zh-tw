@@ -1,5 +1,6 @@
 ---
 title: SQL Server 的 External Scripts 物件 | Microsoft Docs
+description: 了解 SQLServer:External Scripts 物件，提供計數器來監視與執行外部指令碼建立關聯的動作。
 ms.custom: ''
 ms.date: 03/21/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8a75ccce-b174-4937-bc92-8e413b55afe1
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 3d1a481dfc14e3c84df78f2950a140f1bb14c059
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fb8ded658e80c3530b916ea81595ac5fa5c99f52
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775870"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457412"
 ---
 # <a name="sql-server-external-scripts-object"></a>SQL Server, 外部指令碼物件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

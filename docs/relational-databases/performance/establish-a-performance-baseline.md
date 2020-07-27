@@ -1,5 +1,6 @@
 ---
 title: 建立效能基準 | Microsoft Docs
+description: 長時間定期測量效能 (即使沒有問題發生)，以在 SQL Server 中建立伺服器效能基準。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,12 +22,12 @@ ms.assetid: dc5aa8d6-2507-448f-ad86-4196443915fc
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7899ee364c66e3d2f402053231e88a3eafb8d97f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 619e9d6ad55f17fece2a9d327d4e0d67512e4b90
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762845"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457683"
 ---
 # <a name="establish-a-performance-baseline"></a>建立效能基準
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

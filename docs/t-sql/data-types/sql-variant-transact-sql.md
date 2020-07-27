@@ -1,5 +1,5 @@
 ---
-title: sql_variant (Transact-SQL) | Microsoft Docs
+title: sql_variant (Transact-SQL)
 ms.custom: ''
 ms.date: 09/12/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 81914007c22cf850693d2a38b0da83cd64cde6c5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a16ac1b62c5a0aad216db06dc4e11c8c7263da65
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754802"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86556198"
 ---
 # <a name="sql_variant-transact-sql"></a>sql_variant (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 儲存各種 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援之資料類型值的資料類型。
@@ -36,10 +37,12 @@ ms.locfileid: "85754802"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 sql_variant  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="remarks"></a>備註  
 **sql_variant** 可用在資料行、參數、變數及使用者定義函式的傳回值中。 **sql_variant** 可讓這些資料庫物件支援其他資料類型的值。
   
@@ -97,18 +100,24 @@ ODBC 不完全支援 **sql_variant**。 因此，當您使用 Microsoft OLE DB P
 ## <a name="converting-sql_variant-data"></a>轉換 sql_variant 資料  
 處理 **sql_variant** 資料類型時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援將有其他資料類型的物件隱含轉換成 **sql_variant** 類型。 但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援從 **sql_variant** 資料隱含轉換成其他資料類型的物件。
   
-## <a name="restrictions"></a>限制  
-下表列出無法使用 **sql_variant** 來儲存的值類型：
-  
-|||  
-|-|-|  
-|**varchar(max)**|**varbinary(max)**|  
-|**nvarchar(max)**|**xml**|  
-|**text**|**ntext**|  
-|**image**|**rowversion** (**timestamp**)|  
-|**sql_variant**|**地理位置**|  
-|**hierarchyid**|**幾何**|  
-|使用者定義型別|**datetimeoffset**<sup>1</sup>| 
+## <a name="restrictions"></a>限制
+
+以下列出無法使用 **sql_variant** 來儲存的值類型：
+
+- **datetimeoffset**<sup>1</sup>
+- **地理位置**
+- **幾何**
+- **hierarchyid**
+- **image**
+- **ntext**
+- **nvarchar(max)**
+- **rowversion** (**timestamp**)
+- **text**
+- **varchar(max)**
+- **varbinary(max)**
+- **sql_variant**
+- 使用者定義型別
+- **xml**
 
 <sup>1</sup> SQL Server 2012 和更新版本不會限制 **datetimeoffset**。
 

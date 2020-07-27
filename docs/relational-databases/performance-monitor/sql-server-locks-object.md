@@ -1,5 +1,6 @@
 ---
 title: SQL Server 的 Locks 物件 | Microsoft Docs
+description: 了解 SQLServer:Locks 物件，其提供有關個別資源類型的 SQL Server 鎖定資訊。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ace04f0d-3993-4444-8317-ca39d7087e49
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 853a19af5644e9c29659c5595a8ce9ee6357f499
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1553985a2c85eb183841491854ef010eb12d941a
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775826"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458117"
 ---
 # <a name="sql-server-locks-object"></a>SQL Server 的 Locks 物件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85775826"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可鎖定這些資源。  
   
-|Item|描述|  
+|項目|描述|  
 |----------|-----------------|  
 |**_Total**|所有鎖定的資訊。|  
 |**AllocUnit**|配置單位的鎖定。|  

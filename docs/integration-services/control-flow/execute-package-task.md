@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dcd1e0912f1bf0adcbae79da1f1d34f92233f467
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4e8e6b9a30146aff61464f4aeda46cc49f07abe7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294185"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920694"
 ---
 # <a name="execute-package-task"></a>執行封裝工作
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   「執行封裝」工作可讓封裝將其他封裝當做工作流程的一部分執行，以延伸 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的企業功能。  
@@ -155,7 +155,7 @@ ms.locfileid: "71294185"
   
 ###  <a name="set-the-options-on-the-package-page"></a><a name="package"></a> 設定 [封裝] 頁面上的 [選項]  
  **ReferenceType**  
- 為專案中的子封裝選取 [專案參考]  。 為封裝外部的子封裝選取 [外部參考]   
+ 為專案中的子封裝選取 [專案參考]  。 為封裝外部的子封裝選取 [外部參考]  
   
 > [!NOTE]  
 >  [ReferenceType]  選項是唯讀的，如果尚未將包含封裝的專案轉換為專案部署模型，則該選項設為 [外部參考]  。 [部署 Integration Services (SSIS) 專案和套件](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
@@ -191,7 +191,7 @@ ms.locfileid: "71294185"
   
 ##### <a name="location--sql-server"></a>位置 = SQL Server  
  **[連接]**  
- 在清單中選取 OLE DB 連線管理員，或按一下 [\<新增連線…>]  建立新的連線管理員。  
+ 在清單中選取 OLE DB 連線管理員，或按一下 [\<**New connection...**>] 以建立新的連線管理員。  
   
  **相關主題：** [OLE DB 連線管理員](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
@@ -200,7 +200,7 @@ ms.locfileid: "71294185"
   
 ##### <a name="location--file-system"></a>位置 = 檔案系統  
  **[連接]**  
- 在清單中選取檔案連線管理員，或按一下 [\<新增連線...>]  ，即可建立新的連線管理員。  
+ 在清單中選取檔案連線管理員，或按一下 [\<**New connection...**>] 以建立新的連線管理員。  
   
  **相關主題：** [檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)  
   

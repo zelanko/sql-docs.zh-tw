@@ -3,18 +3,18 @@ title: Ubuntu：在 Linux 上安裝 SQL Server
 description: 本快速入門說明如何在 Ubuntu 上安裝 SQL Server 2017 或 SQL Server 2019，然後使用 sqlcmd 建立及查詢資料庫。
 author: VanMSFT
 ms.author: vanto
-ms.date: 04/10/2020
+ms.date: 07/15/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: seo-lt-2019
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 98485bbe09cb7996aec6dacb93751ab1d69b17fe
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cce5af380f3706ef6fd6f22578c2b693aff1ad7c
+ms.sourcegitcommit: 56f6892b3795da308d226d4b3c5c859ead2e830a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894140"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86438110"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>快速入門：在 Ubuntu 上安裝 SQL Server 並建立資料庫
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
@@ -25,6 +25,9 @@ ms.locfileid: "85894140"
 
 在此快速入門中，您將會在 Ubuntu 18.04 上安裝 SQL Server 2017。 然後與 **sqlcmd** 連線，建立您的第一個資料庫並執行查詢。
 
+> [!TIP]
+> 本教學課程需要使用者輸入和網際網路連線。 如果您對自動或離線安裝程序感興趣，請參閱 [Linux 上的 SQL Server 安裝指引](sql-server-linux-setup.md)。 如需支援的平台清單，請參閱[版本資訊](sql-server-linux-release-notes.md)。
+
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
@@ -32,10 +35,10 @@ ms.locfileid: "85894140"
 
 您會在本快速入門中，了解如何在 Ubuntu 18.04 上安裝 SQL Server 2019。 然後與 **sqlcmd** 連線，建立您的第一個資料庫並執行查詢。
 
-::: moniker-end
-
 > [!TIP]
-> 本教學課程需要使用者輸入和網際網路連線。 如果您對自動或離線安裝程序感興趣，請參閱 [Linux 上的 SQL Server 安裝指引](sql-server-linux-setup.md)。
+> 本教學課程需要使用者輸入和網際網路連線。 如果您對自動或離線安裝程序感興趣，請參閱 [Linux 上的 SQL Server 安裝指引](sql-server-linux-setup.md)。 如需支援的平台清單，請參閱[版本資訊](sql-server-linux-release-notes-2019.md)。
+
+::: moniker-end
 
 ## <a name="prerequisites"></a>Prerequisites
 
