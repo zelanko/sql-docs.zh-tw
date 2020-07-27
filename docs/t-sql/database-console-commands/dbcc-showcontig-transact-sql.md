@@ -1,5 +1,5 @@
 ---
-title: DBCC SHOWCONTIG (Transact-SQL) | Microsoft Docs
+title: DBCC SHOWCONTIG (Transact-SQL)
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql
@@ -23,14 +23,15 @@ helpviewer_keywords:
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 3e177015f1d17ff28fe702a4c5998f97999b66ec
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dd596c6915c7df811ff06e7aa5a75472ee106a68
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882030"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485236"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 顯示指定資料表或檢視之資料與索引的片段資訊。
@@ -61,11 +62,13 @@ DBCC SHOWCONTIG
     ]  
 ```  
   
-## <a name="arguments"></a>引數  
- *table_name* | *table_id* | *view_name* | *view_id*  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
+ *table_name* \| *table_id* \| *view_name* \| *view_id*  
  檢查片段資訊的資料表或檢視。 若未指定，就會檢查目前資料庫中的所有資料表和索引檢視表。 若要取得資料表或檢視識別碼，請使用 [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) 函式。  
   
- *index_name* | *index_id*  
+ *index_name* \| *index_id*  
  檢查片段資訊的索引。 若未指定，陳述式會處理指定之資料表或檢視表的基本索引。 若要取得索引識別碼，請使用 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 目錄檢視。  
   
  WITH  

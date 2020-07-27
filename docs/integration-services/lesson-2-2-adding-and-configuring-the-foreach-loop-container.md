@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a5a0b804cb1e5bf130179c7a91ec04fa0d064f12
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ada4d9c133bbcb96e1a5c19fa505c4d51eb8b343
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296051"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917264"
 ---
 # <a name="lesson-2-2-add-and-configure-the-foreach-loop-container"></a>第 2-2 課：新增和設定 Foreach 迴圈容器
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -70,7 +70,7 @@ ms.locfileid: "71296051"
   
 1.  選取 [變數對應]  。  
   
-2.  在 [變數對應]  頁面的 [變數]  欄位中，選取空白資料格，然後選取 [\<新增變數...>]  。  
+2.  在 [變數對應] 頁面的 [變數] 欄位中，選取空白資料格，然後選取 **\<New Variable...>** 。  
   
 3.  在 [新增變數]  對話方塊中，對 [名稱]  輸入 **varFileName**。  
   

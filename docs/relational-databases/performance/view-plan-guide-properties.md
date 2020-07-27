@@ -1,5 +1,6 @@
 ---
 title: 檢視計畫指南屬性 | Microsoft 文件
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL，在 SQL Server 中檢視計畫指南的屬性。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 814538af8afd11a1962d2c4efa225a29dba4fc27
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 18c1d7f663d5006cae078753e028caf133ec2c5c
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655320"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458865"
 ---
 # <a name="view-plan-guide-properties"></a>檢視計畫指南屬性
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85655320"
   
 -   **使用下列方法來檢視計畫指南的屬性：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -52,7 +53,7 @@ ms.locfileid: "85655320"
   
 2.  按一下加號展開 **[計畫指南]** 資料夾。  
   
-3.  以滑鼠右鍵按一下要檢視其屬性的計劃指南，然後選取 [屬性]  。  
+3.  以滑鼠右鍵按一下要檢視其屬性的計劃指南，然後選取 [屬性]。  
   
      下列屬性會在 **[計畫指南屬性]** 對話方塊中顯示。  
   
@@ -83,7 +84,7 @@ ms.locfileid: "85655320"
      **陳述式**  
      顯示對照套用計畫指南的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   
-4.  按一下 [確定]  。  
+4.  按一下 [確定]。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

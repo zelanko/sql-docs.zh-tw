@@ -1,5 +1,6 @@
 ---
 title: 快速入門：備份及還原至 Azure Blob 儲存體服務
+description: 快速入門：了解如何將備份寫入至 Azure Blob 儲存體服務以及從中還原。 建立 Azure Blob 容器、寫入備份，然後進行還原。
 ms.custom: seo-dt-2019
 ms.date: 04/09/2018
 ms.prod: sql
@@ -10,18 +11,18 @@ ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 24847d7b14341e9a1d5a4d874eb0046f53261fea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 59968cad65f3a80c2d511dad3dc804d151d33095
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165520"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458040"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>快速入門：SQL 備份及還原至 Azure Blob 儲存體服務
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 本快速入門可協助您了解如何將備份寫入至 Azure Blob 儲存體服務以及從中還原。  此文章說明如何建立 Azure Blob 容器、將備份寫入到 Blob 服務，然後執行還原。
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
 若要完成本快速入門，您必須熟悉 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 備份與還原概念以及 T-SQL 語法。  您需要 Azure 儲存體帳戶、SQL Server Management Studio (SSMS)，以及對執行 SQL Server 伺服器之伺服器或 Azure SQL Database 受控執行個體的存取權。 此外，用來發出 BACKUP 或 RESTORE 命令的帳戶，應該位於擁有 **ALTER ANY CREDENTIAL** 權限的 **db_backupoperator** 資料庫角色中。 
 
 - 取得免費 [Azure 帳戶](https://azure.microsoft.com/offers/ms-azr-0044p/)。
@@ -37,10 +38,10 @@ ms.locfileid: "74165520"
 
 1. 開啟 Azure 入口網站。 
 1. 巡覽至您的儲存體帳戶。 
-1. 選取儲存體帳戶，向下捲動至 [Blob 服務]  。
-1. 選取 [Blob]  ，然後選取 [+ 容器]  以新增新的容器。 
+1. 選取儲存體帳戶，向下捲動至 [Blob 服務]。
+1. 選取 [Blob]，然後選取 [+ 容器] 以新增新的容器。 
 1. 輸入容器名稱，並記下您指定的容器名稱。 此資訊會在本快速入門稍後的 T-SQL 陳述式內的 URL (備份檔路徑) 中用到。 
-1. 選取 [確定]  。 
+1. 選取 [確定]。 
     
     ![新增容器](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/new-container.png)
 
@@ -51,8 +52,8 @@ ms.locfileid: "74165520"
 在此步驟中，使用 SQL Server Management Studio (SSMS) 來建立測試資料庫。 
 
 1. 啟動 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 並連線至 SQL Server 執行個體。
-1. 開啟 [新增查詢]  視窗。 
-1. 執行下列 Transact-SQL (T-SQL) 程式碼以建立測試資料庫。 重新整理 [物件總管]  中的 [資料庫]  節點以查看新的資料庫。 在 Azure SQL Database 受控執行個體上建立的新資料庫會自動啟用 TDE，因此您必須將它停用以繼續。 
+1. 開啟 [新增查詢] 視窗。 
+1. 執行下列 Transact-SQL (T-SQL) 程式碼以建立測試資料庫。 重新整理 [物件總管] 中的 [資料庫] 節點以查看新的資料庫。 在 Azure SQL Database 受控執行個體上建立的新資料庫會自動啟用 TDE，因此您必須將它停用以繼續。 
 
 ```sql
 USE [master]
@@ -97,26 +98,26 @@ GO
 
 依照下面的步驟使用 SQL Server Management Studio 中的 GUI 來建立認證。 或者，您也能以[程式設計](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#2---create-a-sql-server-credential-using-a-shared-access-signature)方式建立認證。 
 
-1. 展開 [SQL Server Management Studio(SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 之 [物件總管]  內的 [資料庫]  節點。
-1. 以滑鼠右鍵按一下新的 `SQLTestDB` 資料庫，將滑鼠游標移到 [工作]  上方並選取 [備份]  以啟動 [備份資料庫]  精靈。 
-1. 從 [備份至]  目的地下拉式清單選取 [URL]  ，然後選取 [新增]  以啟動 [選取備份目的地]  對話方塊。 
+1. 展開 [SQL Server Management Studio(SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 之 [物件總管] 內的 [資料庫] 節點。
+1. 以滑鼠右鍵按一下新的 `SQLTestDB` 資料庫，將滑鼠游標移到 [工作] 上方並選取 [備份] 以啟動 [備份資料庫] 精靈。 
+1. 從 [備份至] 目的地下拉式清單選取 [URL]，然後選取 [新增] 以啟動 [選取備份目的地] 對話方塊。 
 
    ![備份至 URL](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/back-up-to-url.png)
 
-1. 選取 [選取備份目的地]  對話方塊上的 [新增容器]  以啟動 [連線至 Microsoft 訂用帳戶]  視窗。 
+1. 選取 [選取備份目的地] 對話方塊上的 [新增容器] 以啟動 [連線至 Microsoft 訂用帳戶] 視窗。 
 
    ![備份目的地](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-backup-destination.png)
 
-1. 選取 [登入]  以登入 Azure 入口網站，然後繼續完成登入程序。 
+1. 選取 [登入] 以登入 Azure 入口網站，然後繼續完成登入程序。 
 1. 從下拉式清單選取您的**訂用帳戶**。 
 1. 從下拉式清單中選取您的**儲存體帳戶**。 
 1. 從下拉式清單選取您先前建立的容器。 
-1. 選取 [建立認證]  以產生您的*共用存取簽章 (SAS)* 。  **儲存此值，因為您將需要它才能進行還原。**
+1. 選取 [建立認證] 以產生您的*共用存取簽章 (SAS)* 。  **儲存此值，因為您將需要它才能進行還原。**
 
    ![建立認證](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/create-credential.png)
 
-1. 選取 [確定]  以關閉 [連線至 Microsoft 訂用帳戶]  視窗。 這會在 [選取備份目的地]  對話方塊上填入 *Azure 儲存體容器*值。 選取 [確定]  以選擇選取的儲存體容器，並關閉對話方塊。 
-1. 目前，您可以跳到下一節中的步驟 4 以快速建立資料庫備份，或關閉 [備份資料庫]  精靈以改為使用 Transact-SQL 備份資料庫來繼續。 
+1. 選取 [確定] 以關閉 [連線至 Microsoft 訂用帳戶] 視窗。 這會在 [選取備份目的地] 對話方塊上填入 *Azure 儲存體容器*值。 選取 [確定] 以選擇選取的儲存體容器，並關閉對話方塊。 
+1. 目前，您可以跳到下一節中的步驟 4 以快速建立資料庫備份，或關閉 [備份資料庫] 精靈以改為使用 Transact-SQL 備份資料庫來繼續。 
 
 
 ## <a name="back-up-database"></a>備份資料庫
@@ -124,21 +125,21 @@ GO
 
 # <a name="ssms"></a>[SSMS](#tab/SSMS)
 
-1. 若 [備份資料庫]  精靈尚未開啟，請展開 [SQL Server Management Studio(SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 之 [物件總管]  內的 [資料庫]  節點。
-1. 以滑鼠右鍵按一下新的 `SQLTestDB` 資料庫，將滑鼠游標移到 [工作]  上方並選取 [備份]  以啟動 [備份資料庫]  精靈。 
-1. 從 [備份至]  下拉式清單選取 [URL]  ，然後選取 [新增]  以啟動 [選取備份目的地]  對話方塊。 
+1. 若 [備份資料庫] 精靈尚未開啟，請展開 [SQL Server Management Studio(SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 之 [物件總管] 內的 [資料庫] 節點。
+1. 以滑鼠右鍵按一下新的 `SQLTestDB` 資料庫，將滑鼠游標移到 [工作] 上方並選取 [備份] 以啟動 [備份資料庫] 精靈。 
+1. 從 [備份至] 下拉式清單選取 [URL]，然後選取 [新增] 以啟動 [選取備份目的地] 對話方塊。 
 
    ![備份至 URL](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/back-up-to-url.png)
 
-1. 在 [Azure 儲存體容器]  下拉式清單中選取您在上一個步驟中建立的容器。 
+1. 在 [Azure 儲存體容器] 下拉式清單中選取您在上一個步驟中建立的容器。 
 
    ![Azure 儲存體容器](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/azure-storage-container.png)
 
-1. 選取 [備份資料庫]  精靈上的 [確定]  以備份您的資料庫。 
-1. 成功備份資料庫之後，請選取 [確定]  以關閉所有備份相關視窗。 
+1. 選取 [備份資料庫] 精靈上的 [確定] 以備份您的資料庫。 
+1. 成功備份資料庫之後，請選取 [確定] 以關閉所有備份相關視窗。 
 
    > [!TIP]
-   > 您可以透過選取 [備份資料庫]  精靈頂端的 [指令碼]  來建立此命令背後的 Transact-SQL：![指令碼命令](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/script-backup-command.png)
+   > 您可以透過選取 [備份資料庫] 精靈頂端的 [指令碼] 來建立此命令背後的 Transact-SQL：![指令碼命令](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/script-backup-command.png)
 
 
 # <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
@@ -162,8 +163,8 @@ GO
 
 # <a name="ssms"></a>[SSMS](#tab/SSMS)
 
-1. 展開 [物件總管]  中的 [資料庫]  節點、以滑鼠右鍵按一下 []`SQLTestDB` 資料庫，然後選取刪除以啟動 [刪除物件]  精靈。 
-1. 在受控執行個體上，選取 [確定]  以刪除資料庫。 在內部部署環境中，選取 [關閉現有的連接]  旁的核取方塊並選取 [確定]  以刪除資料庫。 
+1. 展開 [物件總管] 中的 [資料庫] 節點、以滑鼠右鍵按一下 []`SQLTestDB` 資料庫，然後選取刪除以啟動 [刪除物件] 精靈。 
+1. 在受控執行個體上，選取 [確定] 以刪除資料庫。 在內部部署環境中，選取 [關閉現有的連接] 旁的核取方塊並選取 [確定] 以刪除資料庫。 
 
 # <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 
@@ -194,12 +195,12 @@ GO
 
 # <a name="ssms"></a>[SSMS](#tab/SSMS)
 
-1. 以滑鼠右鍵按一下 SQL Server Management Studio 內 [物件總管]  中的 [資料庫]  節點，然後選取 [還原資料庫]  。 
-1. 選取 [裝置]  ，然後選取省略符號 (...) 以選擇裝置。 
+1. 以滑鼠右鍵按一下 SQL Server Management Studio 內 [物件總管] 中的 [資料庫] 節點，然後選取 [還原資料庫]。 
+1. 選取 [裝置]，然後選取省略符號 (...) 以選擇裝置。 
 
    ![選取還原裝置](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-restore-device.png)
 
-1. 從 [備份媒體類型]  下拉式清單選取 [URL]  並選取 [新增]  以新增您的裝置。 
+1. 從 [備份媒體類型] 下拉式清單選取 [URL] 並選取 [新增] 以新增您的裝置。 
 
    ![新增備份裝置](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/add-backup-device.png)
 
@@ -207,14 +208,14 @@ GO
 
    ![備份目的地](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/restore-from-container.png)
 
-1. 選取 [確定]  以選取備份檔案位置。 
-1. 展開 [容器]  並選取您的備份檔案所在的容器。 
-1. 選取您要還原的備份檔案，然後選取 [確定]  。 如果看不到任何檔案，則您可能使用了錯誤的 SAS 金鑰。 您可以遵循與先前相同的步驟來重新產生 SAS 金鑰，以新增容器。 
+1. 選取 [確定] 以選取備份檔案位置。 
+1. 展開 [容器] 並選取您的備份檔案所在的容器。 
+1. 選取您要還原的備份檔案，然後選取 [確定]。 如果看不到任何檔案，則您可能使用了錯誤的 SAS 金鑰。 您可以遵循與先前相同的步驟來重新產生 SAS 金鑰，以新增容器。 
 
    ![選取還原檔案](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-restore-file.png)
 
-1. 選取 [確定]  以關閉 [選取備份裝置]  對話方塊。 
-1. 選取 [確定]  以還原您的資料庫。 
+1. 選取 [確定] 以關閉 [選取備份裝置] 對話方塊。 
+1. 選取 [確定] 以還原您的資料庫。 
 
 # <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 

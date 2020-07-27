@@ -1,5 +1,6 @@
 ---
 title: 統計資料
+description: 查詢最佳化工具會使用統計資料來建立可改善查詢效能的查詢計劃。 了解使用查詢最佳化的概念和指導方針。
 ms.custom: ''
 ms.date: 06/03/2020
 ms.prod: sql
@@ -23,12 +24,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b509109cd155d0990950afbd073709325b01f5b9
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: ae25071d2740306c8ff6156a51cc380101046ba8
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196746"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86456813"
 ---
 # <a name="statistics"></a>統計資料
 

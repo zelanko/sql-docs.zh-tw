@@ -1,5 +1,6 @@
 ---
 title: 刪除計畫指南 | Microsoft 文件
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 來刪除或卸除 SQL Server 中的計畫指南。 使用 Transact-SQL 來刪除資料庫中的所有指南。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: aa4d3188-6927-43de-a3e3-90fc16eeaca7
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 3138d4fcda123d56af975b2f2cfd5d5e4c76536b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e93982c0ad59b7016902c64cd4dd81d0f81c270f
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655619"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457307"
 ---
 # <a name="delete-a-plan-guide"></a>刪除計畫指南
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

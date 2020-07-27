@@ -1,5 +1,6 @@
 ---
 title: 使用查詢存放區的最佳做法 | Microsoft Docs
+description: 了解工作負載與 SQL Server 查詢存放區搭配使用的最佳做法，例如使用最新的 SQL Server Management Studio 和查詢效能深入解析。
 ms.custom: ''
 ms.date: 03/04/2020
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f304dea7c49965bbb511034c09fb6ef781f2311f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 39c563da1d79492b36cdd13a29ef5ebf4401bed6
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006007"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457730"
 ---
 # <a name="best-practices-with-query-store"></a>使用查詢存放區的最佳做法
 

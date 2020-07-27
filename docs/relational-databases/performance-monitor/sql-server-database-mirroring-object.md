@@ -1,5 +1,6 @@
 ---
 title: SQL Server 的 Database Mirroring 物件 | Microsoft Docs
+description: 了解 SQLServer:Database Mirroring 效能物件，其中包含效能計數器，可報告 SQL Server 資料庫鏡像的資訊。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b2239718cae70fc5df05e65e7d310e86efe65efc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6c2d3dd59f6e2736938bfc9880e7258cf81dfafb
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760549"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458000"
 ---
 # <a name="sql-server-database-mirroring-object"></a>SQL Server 的 Database Mirroring 物件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **SQLServer:Database Mirroring** 效能物件含有效能計數器，可報告 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫鏡像的相關資訊。 下表列出這個物件包含的計數器。  
   
-|名稱|描述|  
+|Name|描述|  
 |----------|-----------------|  
 |**Bytes Received/sec**|每秒接收的位元組數目。|  
 |**Bytes Sent/sec**|每秒傳送的位元組數目。|  
@@ -46,9 +47,9 @@ ms.locfileid: "85760549"
 |**Receives/sec**|每秒接收的鏡像訊息數目。|  
 |**Redo Bytes/sec**|每秒在鏡像資料庫向前復原的記錄位元組數目。|  
 |**Redo Queue KB**|目前仍套用到鏡像資料庫以便向前復原的強化記錄 KB 總數。 這是從鏡像端傳送到主體端。|  
-|**Send/Receive Ack Time**|訊息在上一秒等候來自夥伴之收條的毫秒數。<br /><br /> 這個計數器對於排解可能由網路瓶頸造成的問題很有幫助，例如無法解釋的容錯移轉、大型傳送佇列或高度交易延遲等問題。 在這類情況下，您可以分析此計數器的值，以判斷網路是否發生問題。|  
+|**Send/Receive Ack Time**|訊息在上一秒等候來自夥伴通知的毫秒數。<br /><br /> 這個計數器對於排解可能由網路瓶頸造成的問題很有幫助，例如無法解釋的容錯移轉、大型傳送佇列或高度交易延遲等問題。 在這類情況下，您可以分析此計數器的值，以判斷網路是否發生問題。|  
 |**Sends/sec**|每秒傳送的鏡像訊息數目。|  
-|**Transaction Delay**|等候未終止之認可收條的延遲時間。|  
+|**Transaction Delay**|等候未終止認可通知的延遲時間。|  
   
 > [!NOTE]  
 >  在每一個夥伴伺服器上，有些計數器會顯示零值，這是依據夥伴伺服器目前正在執行的角色而定。  

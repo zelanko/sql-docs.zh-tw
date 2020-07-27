@@ -15,12 +15,12 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df923a4a1509520b95e5efcf87e9eac51497e4a8
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: f61fad1afac14c2e6a27314e2a65371722ee9b23
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86158916"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485572"
 ---
 # <a name="thread-and-task-architecture-guide"></a>執行緒和工作架構指南
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -111,6 +111,9 @@ ORDER BY parent_task_address, scheduler_id;
 > [!TIP]
 > 父工作的資料行 `parent_task_address` 一律為 Null。 
 
+> [!TIP]
+> 您可能會在非常忙碌的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 上，看到作用中工作數目超過保留執行緒所設定的限制。 這些工作可能屬於已不再使用的分支，且處於暫時性狀態，等待著清除作業。 
+
 [!INCLUDE[ssResult](../includes/ssresult-md.md)] 請注意，目前正在執行的分支有 17 個作用中工作：對應至保留執行緒的 16 個子工作，加上父工作，或協調工作。
 
 |parent_task_address|task_address|task_state|scheduler_id|worker_address|
@@ -133,9 +136,6 @@ ORDER BY parent_task_address, scheduler_id;
 |0x000001EF4758ACA8|0x000001EC8628D468|SUSPENDED|11|0x000001EFBFA4A160|
 |0x000001EF4758ACA8|0x000001EFBD3A1C28|SUSPENDED|11|0x000001EF6BD72160|
 
-> [!TIP]
-> 您可能會在非常忙碌的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 上，看到作用中工作數目超過保留執行緒所設定的限制。 這些工作可能屬於已不再使用的分支，且處於暫時性狀態，等待著清除作業。 
-
 請觀察這 16 個子工作每個都已獲指派不同的背景工作執行緒 (在 `worker_address` 資料行中可見)，但所有背景工作都會指派給相同集區的 8 個排程器 (0、5、6、7、8、9、10、11)，且父工作會指派給此集區以外的排程器 (3)。
 
 > [!IMPORTANT]
@@ -147,7 +147,7 @@ ORDER BY parent_task_address, scheduler_id;
 > [!TIP] 
 > 針對上面所見 DMV 的輸出，所有作用中的工作都處於 SUSPENDED 狀態。 如需等候工作的詳細資料，請查詢 [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md) DMV。 
 
-總結來說，平行要求會繁衍多個工作，每個工作都必須指派給單一背景工作執行緒，且每個背景工作執行緒都必須指派給單一排程器。 因此，使用中排程器數目不能超過每個分支的平行工作數目，其由 MaxDOP 所設定。 
+總而言之，平行要求會產生多項工作。 每項工作都必須指派給單一的背景工作執行緒。 每個背景工作執行緒都必須指派給單一排程器。 因此，每個分支的使用中排程器數目不能超過平行工作數目，此數目由 MaxDOP 組態或查詢提示所設定。 協調執行緒不會算在 MaxDOP 的限制中。 
 
 ### <a name="allocating-threads-to-a-cpu"></a>配置執行緒給 CPU
 根據預設，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的每個執行個體會啟動每個執行緒，且作業系統會根據負載從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體，將執行緒散發給電腦上的處理器 (CPU)。 如果已在作業系統層級啟用處理序親和性，則作業系統就會將每個執行緒指派給特定的 CPU。 相反地，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **背景工作執行緒**指派給**排程器**，以循環配置資源的方式將這些執行緒平均分配給 CPU。

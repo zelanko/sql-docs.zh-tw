@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2a16cd38eef12584f8d876e610bfda5d602c3076
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d17145c0fc275d9023446436e4c052c441e8c94
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71283018"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922354"
 ---
 # <a name="lesson-6-4-deploy-the-lesson-6-package"></a>第 6-4 課：部署第 6 課套件
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -38,7 +38,7 @@ ms.locfileid: "71283018"
   
 1.  選取 [開始]   > [所有程式]   > [Microsoft SQL Server 2017]  ，然後選取 [SQL Management Studio]  。  
   
-2.  在 [連線到伺服器]  對話方塊上，確認預設值，然後選取 [連線]  。 若要進行連線，**伺服器**名稱必須是 SQL Server 安裝所在電腦的名稱。 如果**資料庫引擎**是具名執行個體，則**伺服器**名稱必須是格式為 \<電腦名稱>\\\<執行個體名稱>  的執行個體名稱。 
+2.  在 [連線到伺服器]  對話方塊上，確認預設值，然後選取 [連線]  。 若要進行連線，**伺服器**名稱必須是 SQL Server 安裝所在電腦的名稱。 如果**資料庫引擎**是具名執行個體，則**伺服器**名稱必須是格式為 *\<computer_name>\\\<instance_name>* 的執行個體名稱。 
   
 3.  在 [物件總管]  中，展開 [Integration Services 目錄]  。  
   

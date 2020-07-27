@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c6076e4c02ccb4c91c88a22df7cd7c4a50b0f877
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 663ecd4dba689f394af61c4a26ff8edc1c241703
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295122"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86899934"
 ---
 # <a name="debugging-data-flow"></a>偵錯資料流程
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師包含許多功能和工具，可讓您用來對 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件中的資料流程進行疑難排解。  
@@ -172,7 +172,7 @@ order by source_component_name desc
   
 4.  以滑鼠右鍵按一下要設定其錯誤輸出資料行的元件，並按一下 [顯示進階編輯器]  。  
   
-5.  按一下 [輸入與輸出屬性] 索引標籤，並展開 [\<元件名稱> 錯誤輸出]，然後展開 [輸出資料行]。  
+5.  按一下 [輸入與輸出屬性] 索引標籤，並展開 [\<component name> 錯誤輸出]，然後展開 [輸出資料行]。  
   
 6.  按一下資料行並更新其屬性。  
   
@@ -249,7 +249,7 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
   
  add_data_tap 預存程序的 dataflow_path_id_string 參數對應到您要在其上加入資料點選之資料流程路徑的 IdentificationString 屬性。 若要取得 dataflow_path_id_string，請按一下資料流程路徑 (資料流程中位於工作之間的箭號)，並記下 [屬性] 視窗所示 **IdentificationString** 屬性的值。  
   
- 當您執行指令碼時，輸出檔會儲存於 \<Program Files>\Microsoft SQL Server\110\DTS\DataDumps。 如果已有同名的檔案存在，則將建立附帶尾碼的新檔案 (例如：output[1].txt)。  
+ 當執行指令碼時，輸出檔會儲存於 \<Program Files>\Microsoft SQL Server\110\DTS\DataDumps 中。 如果已有同名的檔案存在，則將建立附帶尾碼的新檔案 (例如：output[1].txt)。  
   
  如先前所述，您也可以使用 [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)預存程序，而不是使用 add_data_tap 預存程序。 此預存程序接受資料流程工作的識別碼當做參數，而非 task_package_path。 您可以從 Visual Studio 屬性視窗取得資料流程工作的識別碼。  
   

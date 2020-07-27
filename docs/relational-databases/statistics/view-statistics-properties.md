@@ -1,5 +1,6 @@
 ---
 title: 檢視統計資料屬性 | Microsoft 文件
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL，在 SQL Server 中針對資料表或索引檢視表顯示目前的查詢最佳化統計資料。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1fc876283635f3a3015efa957b90cf0d9d938386
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6ab4cc68a4fbc9e737498d68433de2effd9fe805
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001049"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457045"
 ---
 # <a name="view-statistics-properties"></a>檢視統計資料屬性
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "86001049"
   
 -   **若要使用下列項目檢視統計資料屬性：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -57,11 +58,11 @@ ms.locfileid: "86001049"
   
 4.  按一下加號展開 **[統計資料]** 資料夾。  
   
-5.  以滑鼠右鍵按一下要檢視其屬性的統計資料物件，然後選取 [屬性]  。  
+5.  以滑鼠右鍵按一下要檢視其屬性的統計資料物件，然後選取 [屬性]。  
   
-6.  在 [統計資料屬性 - **statistics_name**]  對話方塊的 [選取頁面]  窗格中，選取 [詳細資料]  。  
+6.  在 [統計資料屬性 - _statistics_name_] 對話方塊的 [選取頁面] 窗格中，選取 [詳細資料]。  
   
-     下列屬性會在 [統計資料屬性 - **statistics_name**]  對話方塊的 [詳細資料]  頁面中顯示。  
+     下列屬性會在 [統計資料屬性 - _statistics_name_] 對話方塊的 [詳細資料] 頁面中顯示。  
   
      **資料表名稱**  
      顯示統計資料所描述的資料表名稱。  
@@ -70,7 +71,7 @@ ms.locfileid: "86001049"
      顯示儲存統計資料的資料庫物件名稱。  
   
      **INDEXstatistics_name 的統計資料**  
-     此文字方塊顯示從統計資料物件傳回的屬性。 屬性分為三個部分：統計資料標頭、密度向量和長條圖。  
+     此文字方塊顯示從統計資料物件傳回的屬性。 此屬性分為三個區段：統計資料標頭、密度向量和長條圖。  
   
      下列資訊描述結果集針對統計資料標頭所傳回的資料行。  
   
@@ -90,7 +91,7 @@ ms.locfileid: "86001049"
      長條圖中的步驟數。 每一個步驟都會跨越某個範圍的資料行值，後面緊接著上限資料行值。 長條圖步驟會在統計資料中的第一個索引鍵資料行上定義。 步驟數的最大值為 200。  
   
      **密度**  
-     針對統計資料物件第一個索引鍵資料行中的所有值，計算為 1 / 相異值  ，不包括長條圖界限值。 查詢最佳化工具不會使用這個密度值，而且會針對與 SQL Server 2008 之前版本之間的回溯相容性顯示。  
+     針對統計資料物件第一個索引鍵資料行中的所有值，計算為 1 / 相異值，不包括長條圖界限值。 查詢最佳化工具不會使用這個密度值，而且會針對與 SQL Server 2008 之前版本之間的回溯相容性顯示。  
   
      **平均索引鍵長度**  
      針對統計資料物件中的所有索引鍵資料行計算之每個值的平均位元組數。  
@@ -107,7 +108,7 @@ ms.locfileid: "86001049"
      下列資訊描述結果集針對密度向量所傳回的資料行。  
   
      **所有密度**  
-     密度是 1 / 相異值  。 結果會針對統計資料物件中資料行的每個前置詞來顯示密度，一個密度一個資料列。 相異值是每個資料列和每個資料行前置詞的資料行值相異清單。 例如，如果統計資料物件包含索引鍵資料行 (A, B, C)，結果就會報告每一個資料行前置詞中相異值清單的密度：(A)、(A,B) 和 (A, B, C)。 使用前置詞 (A, B, C) 時，這些清單的每一個都會是相異值清單：(3, 5, 6)、(4, 4, 6)、(4, 5, 6)、(4, 5, 7)。 使用前置詞 (A, B) 時，相同的資料行值都會有這些相異值清單：(3, 5)、(4, 4) 和 (4, 5)。  
+     密度是 1 / 相異值。 結果會針對統計資料物件中資料行的每個前置詞來顯示密度，一個密度一個資料列。 相異值是每個資料列和每個資料行前置詞的資料行值相異清單。 例如，如果統計資料物件包含索引鍵資料行 (A, B, C)，結果就會報告每一個資料行前置詞中相異值清單的密度：(A)、(A,B) 和 (A, B, C)。 使用前置詞 (A, B, C) 時，這些清單的每一個都會是相異值清單：(3, 5, 6)、(4, 4, 6)、(4, 5, 6)、(4, 5, 7)。 使用前置詞 (A, B) 時，相同的資料行值都會有這些相異值清單：(3, 5)、(4, 4) 和 (4, 5)。  
   
      **平均長度**  
      平均長度 (以位元組為單位)，用來儲存資料行前置詞的資料行值清單。 例如，如果清單 (3, 5, 6) 中的每一個值都需要 4 位元組，長度就是 12 位元組。  
@@ -132,7 +133,7 @@ ms.locfileid: "86001049"
      **AVG_RANGE_ROWS**  
      在長條圖步驟內具有重複資料行值的平均資料列數，上限不包括在內 (RANGE_ROWS / DISTINCT_RANGE_ROWS for DISTINCT_RANGE_ROWS > 0)。  
   
-7.  按一下 [確定]  。  
+7.  按一下 [確定]。  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

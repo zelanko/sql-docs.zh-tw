@@ -1,5 +1,5 @@
 ---
-title: 加速資料庫復原 | Microsoft Docs
+title: 管理加速資料庫復原 | Microsoft Docs
 ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: backup-restore
@@ -12,16 +12,16 @@ author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 99229b68f99cf96af3916ac6946ba5d931f50bce
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b8f2433eb096e6b354c5f174a2e8db3437dede2d
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727922"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942657"
 ---
 # <a name="manage-accelerated-database-recovery"></a>管理加速資料庫復原
 
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 ## <a name="enabling-and-controlling-adr"></a>啟用和控制 ADR
 

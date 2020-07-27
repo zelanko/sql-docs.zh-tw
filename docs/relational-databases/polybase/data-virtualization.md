@@ -1,6 +1,6 @@
 ---
 title: 虛擬化外部資料
-description: 此頁面詳述針對關聯式資料來源使用 [建立外部資料表精靈] 的步驟
+description: 此頁面詳述針對 ODBC 資料來源使用 [建立外部資料表精靈] 的步驟
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
@@ -10,14 +10,14 @@ ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: f4bd7eec24be747fe6c0933d31467410bfecf2a9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c01095e77fa974088f8a10669aecf1a8c53fd11d
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75227507"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943002"
 ---
-# <a name="use-the-external-table-wizard-with-relational-data-sources"></a>搭配使用外部資料表精靈與關聯式資料來源
+# <a name="use-the-external-table-wizard-with-odbc-data-sources"></a>搭配使用外部資料表精靈與 ODBC 資料來源
 
 其中一個 SQL Server 2019 重要情節是可以虛擬化資料。 此程序允許將資料保留在其原始位置。 您可以在 SQL Server 執行個體中「虛擬化」  資料，以在該處查詢它，如同 SQL Server 中的任何其他資料表。 此程序會將 ETL 程序的需求降到最低。 此程序只要使用 PolyBase 連接器就能達成。 如需資料虛擬化的詳細資訊，請參閱[開始使用 PolyBase](polybase-guide.md)。
 
@@ -28,12 +28,12 @@ ms.locfileid: "75227507"
 
 ## <a name="start-the-external-table-wizard"></a>啟動外部資料表精靈
 
-以使用 [**azdata cluster endpoints list**](../../big-data-cluster/deployment-guidance.md#endpoints) 命令取得的 **sql-server-master** 端點 IP 位址/連接埠號碼來連線到主要執行個體。 展開 [物件總管] 中的 [資料庫]  節點。 然後選取您想要將資料從現有 SQL Server 執行個體虛擬化到其中的其中一個資料庫。 以滑鼠右鍵按一下資料庫，然後選取 [建立外部資料表]  以啟動 [虛擬化資料精靈]。 您也可以從命令選擇區啟動 [虛擬化資料精靈]。 使用 Ctrl+Shift+P (在 Windows 中) 或 Cmd+Shift+P (在 Mac 中)。
+以使用  azdata cluster endpoints list[**命令取得的**sql-server-master](../../big-data-cluster/deployment-guidance.md#endpoints) 端點 IP 位址/連接埠號碼來連線到主要執行個體。 展開 [物件總管] 中的 [資料庫]  節點。 然後選取您想要將資料從現有 SQL Server 執行個體虛擬化到其中的其中一個資料庫。 以滑鼠右鍵按一下資料庫，然後選取 [建立外部資料表]  以啟動 [虛擬化資料精靈]。 您也可以從命令選擇區啟動 [虛擬化資料精靈]。 使用 Ctrl+Shift+P (在 Windows 中) 或 Cmd+Shift+P (在 Mac 中)。
 
 ![虛擬化資料精靈](media/data-virtualization/virtualize-data-wizard.png)
 ## <a name="select-a-data-source"></a>選取資料來源
 
-如果您已從其中一個資料庫啟動此精靈，則目的地下拉式方塊會自動填入。 您也可以選擇在此頁面上輸入或變更目的地資料庫。 精靈所支援的外部資料來源類型是 SQL Server 和 Oracle。
+如果您已從其中一個資料庫啟動此精靈，則目的地下拉式方塊會自動填入。 您也可以選擇在此頁面上輸入或變更目的地資料庫。 精靈所支援的外部資料來源類型包括 SQL Server、Oracle、MongoDB 和 Teradata。
 
 > [!NOTE]
 >根據預設，會醒目提示 SQL Server。
@@ -56,7 +56,7 @@ ms.locfileid: "75227507"
 
 在此步驟中，輸入您的外部資料來源和認證詳細資料，以建立外部資料來源物件。 資料庫物件會使用這些認證連線到資料來源。 輸入外部資料來源的名稱。 例如 Test。 提供外部資料來源 SQL Server 連線詳細資料。 輸入您想要建立外部資料來源的 [伺服器名稱]  和 [資料庫名稱]  。
 
-下一個步驟是設定認證。 輸入認證的名稱。 此名稱是資料庫範圍認證，可用來安全地儲存您所建立外部資料來源的登入資訊。 例如 TestCred。 輸入使用者名稱與密碼以連線到資料來源。
+下一個步驟是設定認證。 輸入認證的名稱。 此名稱是資料庫範圍認證，可用來安全地儲存您所建立外部資料來源的登入資訊。 例如 `TestCred`。 輸入使用者名稱與密碼以連線到資料來源。
 
 ![外部資料來源認證](media/data-virtualization/data-source-credentials.png)
 
@@ -64,7 +64,7 @@ ms.locfileid: "75227507"
 
 在下一個頁面上，選取您想要建立外部檢視的資料表。 當您選取父資料庫時，也會包含子資料表。 選取資料表之後，對應資料表會出現在右側。 您可以在這裡進行類型變更。 您也可以變更所選取外部資料表本身的名稱。
 
-![外部資料來源認證](media/data-virtualization/data-table-mapping.png)
+![外部資料來源認證](media/data-virtualization/data-table-map.png)
 
 > [!NOTE]
 >若要變更對應檢視，請按兩下另一個選取的資料表。

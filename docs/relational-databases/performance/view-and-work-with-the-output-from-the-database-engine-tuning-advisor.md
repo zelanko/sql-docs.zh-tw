@@ -1,6 +1,6 @@
 ---
 title: DTA 的輸出
-description: 檢視及處理 Database Engine Tuning Advisor (DTA) 的輸出。
+description: 了解如何使用 Database Engine Tuning Advisor 在 SQL Server 安裝中所建立的摘要、建議、報表和微調記錄。
 ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 75a8ee28972b2b80fc1244a80b35b7c9d5d6daee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c6a6dace6d14ea38aa411924f0c74dfec2218f77
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737091"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458570"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>檢視及處理 Database Engine Tuning Advisor (DTA) 的輸出
 
@@ -265,7 +265,7 @@ ms.locfileid: "85737091"
  **詳細資料**  
  [建議的目標]  的描述。 可能的值包括資料分割函數的範圍，或資料分割配置為空白。  
   
- [資料分割的數目]   
+ [資料分割的數目]  
  由建議的資料分割函數所定義之資料分割的數目。 此函數與配置一起使用，並套用至資料表時，資料表中的資料就會劃分為多個資料分割。  
   
  **[定義]**  
