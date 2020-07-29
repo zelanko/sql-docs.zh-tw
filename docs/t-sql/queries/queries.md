@@ -13,12 +13,12 @@ ms.assetid: 5ff02a32-e8d3-479c-ae8b-07581e41f5f8
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 79afe251de0561bbf9dda840eb9ce578efa94b80
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a3f0f37da5def8b9154d655751f00eb7f63d63af
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68141304"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248686"
 ---
 # <a name="queries"></a>查詢
 
@@ -28,15 +28,48 @@ ms.locfileid: "68141304"
   
 ## <a name="in-this-section"></a>本節內容  
  下表列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所使用的 DML 陳述式。  
-  
-|||  
-|-|-|  
-|[BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)|[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|  
-|[DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)|  
-|[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)|[UPDATETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/updatetext-transact-sql.md)|  
-|[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)|[WRITETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/writetext-transact-sql.md)|  
-|[READTEXT &#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)| &nbsp; |  
-| &nbsp; | &nbsp; |
+
+:::row:::
+    :::column:::
+        [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [UPDATETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/updatetext-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [WRITETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/writetext-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [READTEXT &#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+
+&nbsp;
 
  下表列出用於多個 DML 陳述式或子句的子句。  
   

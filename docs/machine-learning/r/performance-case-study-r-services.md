@@ -2,22 +2,22 @@
 title: 針對結果進行效能微調
 description: 本文將摘要說明兩個測試過各種最佳化方法之案例研究的方法、結果和結論。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/29/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1313cc2074058b104ea0939d02cdac30ddf28595
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 1af68324f613c0e47cd8cc5eaca73dca5881db04
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486767"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242320"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R Services 的效能：結果和資源
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本文是一系列文章中的第四篇 (也是最後一篇)，會描述 R Services 的效能最佳化。 本文將摘要說明兩個測試過各種最佳化方法之案例研究的方法、結果和結論。
 
@@ -337,7 +337,7 @@ CPU 親和性會在繼續比對案例中強制執行，以評估對 R 作業的�
 
 許多使用者都注意到，第一次載入 R (或 Python) 執行階段時，會有短暫的暫停。 基於這個理由，如這些測試所述，通常會測量第一次執行的時間，但稍後就會捨棄。 後續的快取可能導致第一次和第二次執行之間產生顯著的效能差異。 在 SQL Server 和外部執行階段之間移動資料時，也有一些額外負荷，特別是當資料是透過網路傳遞，而不是直接從 SQL Server 載入時。
 
-基於上述所有原因，沒有單一解決方案可減輕此初始載入時間，因為效能影響會因工作而有顯著差異。 例如，針對批次中的單一資料列評分執行快取；因此，後續評分作業的速度會更快，而且不需重新載入模型和 R 執行階段。 您也可以使用[原生評分](../sql-native-scoring.md)，以避免完全載入 R 執行階段。
+基於上述所有原因，沒有單一解決方案可減輕此初始載入時間，因為效能影響會因工作而有顯著差異。 例如，針對批次中的單一資料列評分執行快取；因此，後續評分作業的速度會更快，而且不需重新載入模型和 R 執行階段。 您也可以使用[原生評分](../predictions/native-scoring-predict-transact-sql.md)，以避免完全載入 R 執行階段。
 
 若要將大型模型定型，或在大型批次中進行評分，相較於從避免資料移動或是從串流處理和平行處理中所獲得的利益，額外負荷可能是最低的。 如需其他效能指引，請參閱下列部落格文章：
 

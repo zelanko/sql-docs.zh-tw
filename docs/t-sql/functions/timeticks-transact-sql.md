@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9d036633-837f-4309-9c45-3d9600258018
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bdd3770bb282184193f8bb2cfb64e01f4abbcda5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 51bf793459483f970d037fe3b777176b44164948
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85858498"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112614"
 ---
 # <a name="x40x40timeticks-transact-sql"></a>&#x40;&#x40;TIMETICKS (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,9 @@ ms.locfileid: "85858498"
 @@TIMETICKS  
 ```  
   
-## <a name="return-types"></a>傳回型別  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>傳回型別
  **integer**  
   
 ## <a name="remarks"></a>備註  

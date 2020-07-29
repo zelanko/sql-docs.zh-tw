@@ -2,22 +2,22 @@
 title: 在 R 中建立資料分割型模型
 description: 了解如何在使用 SQL Server 機器學習服務的資料分割模型功能時，模型、定型並使用以動態方式建立的資料分割。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/30/2020
 ms.topic: tutorial
 ms.author: davidph
 author: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9c45fa9db06980f05bdaf059aae857a36b326c24
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: bf294501b1cb613bf97b581a30a193469c78b9f6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606680"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756398"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>教學課程：在 SQL Server 上的 R 中建立資料分割模型
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 在 SQL Server 2019 中，資料分割模型是透過分割資料來建立與定型模型的能力。 針對自然分割成指定分類配置的分層資料 (例如地理區域、日期和時間、年齡或性別)，您可以在整個資料集上執行指令碼，並能夠對維持不變的資料分割區進行模型化、定型並評分所有這些作業。 
 

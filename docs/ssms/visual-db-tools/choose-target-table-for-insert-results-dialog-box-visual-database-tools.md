@@ -12,17 +12,16 @@ f1_keywords:
 ms.assetid: 4ffd62c1-da72-4daf-832b-cc1268abf351
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 9cca772265de6ebf3596f05f8711fef66e86cb64
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 559b55405c8eef2d84e4f628dddb2328e844a5c7
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255555"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003889"
 ---
 # <a name="choose-target-table-for-insert-results-dialog-box-visual-database-tools"></a>選擇插入結果的目標資料表對話方塊 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 讓您指定資料表，以便將資料列加入做為 NSERT RESULTS 查詢的結果。 這個對話方塊會在啟動 NSERT RESULTS 查詢時出現。  
   
 ## <a name="options"></a>選項。  

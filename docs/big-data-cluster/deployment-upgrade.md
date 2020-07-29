@@ -9,16 +9,16 @@ ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 776c54ef7475b1ff7c5679f98e994a1b42784262
-ms.sourcegitcommit: 52925f1928205af15dcaaf765346901e438ccc25
+ms.openlocfilehash: dedae90b5242282fb550ebc59c5a4d98d21506f3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80607831"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764066"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>如何升級 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 升級路徑相依於 SQL Server 巨量資料叢集 (BDC) 的目前版本。 若要從支援的版本 (包括一般發行版本 (GDR)、累積更新 (CU) 或快速檢修 (QFE) 更新) 升級，您可以就地升級。 不支援從客戶技術預覽 (CTP) 或候選版 BDC 就地升級。 您必須移除並重新建立叢集。 下列小節說明針對每個案例所要執行的步驟：
 

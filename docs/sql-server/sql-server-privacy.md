@@ -2,6 +2,7 @@
 title: SQL Server 隱私權補充 | Microsoft Docs
 ms.date: 01/19/2019
 ms.prod: sql
+ms.technology: release-landing
 ms.reviewer: mikeray
 ms.custom: ''
 ms.topic: conceptual
@@ -9,16 +10,16 @@ f1_keywords: ''
 helpviewer_keywords: ''
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 946e99884b4c261393c29cd06747823c3aa7e3a1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9362402d6c02fe7ff140f4105c6f011441c457ad
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76761802"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916904"
 ---
 # <a name="sql-server-privacy-supplement"></a>SQL Server 隱私權補充
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 本文摘要說明使用已連線到網際網路的功能，可收集匿名的功能使用方式和診斷資料並傳送給 Microsoft。 SQL Server 可能會收集標準電腦資訊以及關於使用方式和效能的資料，這些資訊可能會傳送給 Microsoft，並基於改善產品品質、安全性和可靠性的目的加以分析。 如果您將 SQL Server 安裝在 Microsoft Azure 服務的虛擬機器中，環境資訊可能會傳送給 Microsoft，以便 Microsoft 向您 Azure 訂用帳戶內資源提供者註冊您的 SQL Server 虛擬機器資源，如[此處](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-register-with-resource-provider)所述。 註冊 SQL Server 虛擬機器資源時，SQL Server IaaS 代理程式延伸模組可能會安裝在您的虛擬機器上，如[此處](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-agent-extension)所述。 本文是整體 [Microsoft 隱私權聲明](https://go.microsoft.com/fwlink/?LinkId=521839)的增補合約。 本文中的資料分類只適用於 SQL Server 內部部署產品的版本。 它不適用於下列項目：
 

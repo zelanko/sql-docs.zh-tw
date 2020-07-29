@@ -2,22 +2,22 @@
 title: 安裝 Machine Learning Server (獨立式)
 description: 安裝適用於 Python 與 R 的獨立機器學習伺服器。SQL Server 安裝程式所安裝的獨立伺服器在功能上相當於非 SQL 品牌版本的 Microsoft Machine Learning Server。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 01/03/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e614579b3d4e64a73e5896c1be946cdb38d21dcf
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 15280d88b2219587ee63b15e8e98421be2734fab
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118311"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885945"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>使用 SQL Server 安裝程式安裝 Machine Learning Server (獨立式) 或 R Server (獨立式)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 SQL Server 安裝程式包含 [共用功能]  選項，可用於安裝在 SQL Server 外部執行的獨立機器學習伺服器。 其稱為 **Machine Learning Server (獨立式)** ，且包括 Python 與 R。 

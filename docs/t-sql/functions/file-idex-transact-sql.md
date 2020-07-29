@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 7532fea5-ee5e-4edd-b98b-111a7ba56c8e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e369ae57024b88ee65c4a81217661314e5533d47
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 63bfdc72ea7a8a71c0f96292902356b3a07702ee
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895784"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112460"
 ---
 # <a name="file_idex-transact-sql"></a>FILE_IDEX (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,9 @@ ms.locfileid: "85895784"
 FILE_IDEX ( file_name )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *file_name*  
 類型是 **sysname** 的運算式，此運算式會傳回檔案名稱的檔案識別碼值 'FILE_IDEX'。 
   

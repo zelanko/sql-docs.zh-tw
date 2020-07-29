@@ -9,16 +9,16 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 25a6b733eed0611b43fb1f17ad0fe8a0cc1d690a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 688031d9301710ada0ba5952ab45dba02bf46de0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75720815"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774533"
 ---
 # <a name="deploy-hdfs-name-node-and-shared-spark-services-in-a-highly-available-configuration"></a>在高可用性設定中部署 HDFS 名稱節點和共用 Spark 服務
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 除了使用可用性群組在高可用性設定中部署 SQL Server 主要執行個體以外，您還可以在巨量資料叢集中部署其他任務關鍵性服務，以確保有更高的可靠性。 您可以設定 `HDFS name node` 及為分組到 `sparkhead` 下的共用 Spark 服務設定一個額外複本。 在此情況下，也會在巨量資料叢集中部署 `Zookeeper`，作為下列服務的叢集協調器和中繼資料存放區： 
 

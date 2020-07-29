@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f8422cd501258d15365e7125c11e616c94d7dc8d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c011635e676cfc25cb4e5cc5acf357b11700080e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256232"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011112"
 ---
 # <a name="registered-servers-f1-help"></a>已註冊的伺服器 F1 說明
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   本節包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中 [已註冊的伺服器] 元件的 F1 說明。 它描述各種選項。
   
  若要了解已註冊的伺服器，並取得如何處理它們的連結，請移至 [註冊伺服器](../../tools/sql-server-management-studio/register-servers.md) 主題。 

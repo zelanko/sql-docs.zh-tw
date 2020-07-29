@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 36ba56d4-20d7-4cd1-aa2a-e40a6c0a4e39
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ee10024b38af62d88c2c3ca0776d84ba5cfc0280
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f3d7d2a5093f92d614a40d4d91e76849ba8ed0bb
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898972"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113508"
 ---
 # <a name="host_id-transact-sql"></a>HOST_ID (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,9 @@ ms.locfileid: "85898972"
 HOST_ID ()  
 ```  
   
-## <a name="return-types"></a>傳回型別  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>傳回型別
  **char(10)**  
   
 ## <a name="remarks"></a>備註  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4b8b0705-c083-4b07-b954-c83ee73b2ebb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7bde33153b10b7c708c92150104414d326fb1f0b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ec753666e5baac90e9098bc8718d0f0b8fa1878e
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011661"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113493"
 ---
 # <a name="host_name-transact-sql"></a>HOST_NAME (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -38,8 +38,8 @@ ms.locfileid: "86011661"
   
 HOST_NAME ()  
 ```  
-  
-## <a name="return-types"></a>傳回型別  
+
+## <a name="return-types"></a>傳回型別
  **nvarchar(128)**  
   
 ## <a name="remarks"></a>備註  

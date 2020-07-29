@@ -16,16 +16,16 @@ helpviewer_keywords:
 - SQL Server Management Studio for Analysis Services
 ms.custom: seo-lt-2019
 ms.date: 09/11/2019
-ms.openlocfilehash: 613e3eddce55fbc52cd011f5070def12d31d83b9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 80f6a13c952c09153713a36e3e0f8f979ee7bcd3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76037179"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001594"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>什麼是 SQL Server Management Studio (SSMS)？
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) 是用於管理任何 SQL 基礎結構的整合式環境。 使用 SSMS 來存取、設定、管理、掌管和開發 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、Azure SQL Database 和 SQL 資料倉儲的所有元件。 SSMS 能提供單一的完整公用程式，結合了廣泛的圖形工具和豐富的指令碼編輯器，使開發人員和資料庫管理員 (不管他們的技術水準如何) 都能夠存取 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 

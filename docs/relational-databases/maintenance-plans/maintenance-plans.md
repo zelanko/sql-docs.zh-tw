@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fb0036acec4ec0c416f6fa01ccf99663be741514
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e97723d6ea047aa86641c9074ff235c682519e7a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789460"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245189"
 ---
 # <a name="maintenance-plans"></a>維護計畫
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,9 +63,8 @@ ms.locfileid: "85789460"
 ## <a name="related-tasks"></a>相關工作  
  若要開始使用維護計畫，請使用下列主題。  
   
-|||  
+|描述|主題|  
 |-|-|  
-|**說明**|**主題**|  
 |設定 **Agent XPs** 伺服器組態選項，以啟用 SQL Server Agent 擴充預存程序。|[Agent XPs 伺服器組態選項](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)|
 |描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 建立維護計畫。|[建立維護計畫](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)|  
 |描述如何使用維護計畫設計介面建立維護計畫。|[建立維護計畫 &#40;維護計畫設計介面&#41;](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md)|  

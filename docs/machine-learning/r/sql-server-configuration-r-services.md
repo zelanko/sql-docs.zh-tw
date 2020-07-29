@@ -2,22 +2,22 @@
 title: 與 R 搭配使用的設定
 description: 本文會針對用來執行 SQL Server R Services 的電腦，提供關於其硬體和網路的設定指導方針。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/29/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6daadcd1e98e19f2d4f43c4b5a6c95f1cf137697
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 1bfd7de9d7ee576c726a6b4473937cc1d9a294ff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486703"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730903"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>與 R 搭配使用的 SQL Server 設定
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本文是一系列文章中的第二篇，會根據兩個案例研究來描述 R Services 的效能最佳化。  本文會針對用來執行 SQL Server R Services 的電腦，提供關於其硬體和網路的設定指導方針。 文中也有相關資訊可讓您了解如何設定解決方案中所使用的 SQL Server 執行個體、資料庫或資料表。 由於在 SQL Server 中使用 NUMA 會讓硬體與資料庫最佳化之間的界線變得模糊，因此第三節會詳細討論 CPU 親和與資源治理。
 

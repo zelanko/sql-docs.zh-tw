@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 6baeb311e52588c63fc24d38143a0e5a54c96801
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 528f02ccc8e341700b64cc0a73e0e3185d16a8ee
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85714529"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113266"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE - 觸發程序函式 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,9 @@ ms.locfileid: "85714529"
 UPDATE ( column )   
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *column*  
  這是進行 INSERT 或 UPDATE 動作測試的資料行名稱。 由於資料表名稱指定在觸發程序的 ON 子句中，因此，請勿在資料行名稱前面併入資料表名稱。 資料行可以是 [ 所支援的任何](../../t-sql/data-types/data-types-transact-sql.md)資料類型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 不過，在這個內容中，不能使用計算資料行。  
   

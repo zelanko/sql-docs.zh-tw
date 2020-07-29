@@ -1,22 +1,22 @@
 ---
 title: 監視 SQL Server 夥伴 | Microsoft Docs
 description: 具有 Server 監視解決方案的協力廠商夥伴清單。
-services: sql-server
 ms.topic: conceptual
 ms.custom: ''
 ms.date: 11/02/2017
 ms.prod: sql
+ms.technology: release-landing
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: acecd9a5ef362f591d71eee15550ee7daa96dfc4
-ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
+ms.openlocfilehash: 5b2ea5e22800d2fc8f65282f62fa52ce19e87722
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81002815"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921766"
 ---
 # <a name="sql-server-monitoring-partners"></a>SQL Server 監視夥伴
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 若要監視您的 SQL Server 服務，您可以從各種領先業界的工具中選擇。 本文章特別介紹提供 Microsoft SQL Server 監視解決方案支援的 Microsoft 夥伴公司。
 
 ## <a name="microsoft-monitoring-partners"></a>Microsoft 監視夥伴

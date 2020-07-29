@@ -9,13 +9,13 @@ ms.metadata: seo-lt-2019
 ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: big-data-cluster
-ms.openlocfilehash: 9d51cc4164cbb40ff647cad337240e689696b449
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.technology: machine-learning-bdc
+ms.openlocfilehash: be8a2e43c120f154cf998e49027c5025bd4feac4
+ms.sourcegitcommit: 56f6892b3795da308d226d4b3c5c859ead2e830a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531119"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86438080"
 ---
 # <a name="create-export-and-score-spark-machine-learning-models-on-big-data-clusters-2019"></a>在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上建立、匯出及評分 Spark 機器學習模型
 

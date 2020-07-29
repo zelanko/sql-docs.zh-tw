@@ -12,15 +12,15 @@ helpviewer_keywords:
 - large CLR user-defined types
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: acbdd170808ed9f6d7f67265a4e0d18f3b9e8eb0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 20469f3cd6a1b98a6fd08db195e883ccff4ac776
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67989075"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006957"
 ---
 # <a name="large-clr-user-defined-types"></a>大型 CLR 使用者定義型別
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

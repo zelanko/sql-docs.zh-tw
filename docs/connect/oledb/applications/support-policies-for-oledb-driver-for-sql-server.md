@@ -1,7 +1,7 @@
 ---
 title: OLE DB Driver for SQL Server 的支援原則 | Microsoft Docs
 description: OLE DB Driver for SQL Server 的支援原則
-ms.date: 03/18/2020
+ms.date: 05/25/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,15 +10,15 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 3f48aa8c68b364db98d1cd3111c11c6635ee5335
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7e4b77a700d494f1ed8f11a0004c60b37c5cc361
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79526823"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007046"
 ---
 # <a name="support-policies-for-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server 的支援原則
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -30,6 +30,7 @@ OLE DB Driver for SQL Server 已經過測試，並支援下列 SQL Server 版本
 
 | 驅動程式版本 | Azure SQL Database | Azure SQL DW | Azure SQL 受控執行個體 | SQL Server 2019 | SQL Server 2017 | SQL Server 2016 | SQL Server 2014 | SQL Server 2012 |
 |----|-|-|-|-|-|-|-|-|
+|18.4|Y|Y|Y|Y|Y|Y|Y|Y|
 |18.3|Y|Y|Y|Y|Y|Y|Y|Y|
 |18.2|Y|Y|Y|Y|Y|Y|Y|Y|
 |18.1|Y|Y|Y| |Y|Y|Y|Y|
@@ -42,6 +43,7 @@ OLE DB Driver for SQL Server 已經過測試，並支援下列 SQL Server 版本
 
 | 驅動程式版本 | Windows Server 2019 | Windows Server 2016 | Windows Server 2012<sup>1</sup> | Windows Server 2012 R2<sup>2</sup> | Windows 10 | Windows 8.1<sup>3</sup> |
 |----|-|-|-|-|-|-|
+|18.4|Y|Y|Y|Y|Y|Y|
 |18.3|Y|Y|Y|Y|Y|Y|
 |18.2|Y|Y|Y|Y|Y|Y|
 |18.1| |Y|Y|Y|Y|Y|
@@ -51,9 +53,6 @@ OLE DB Driver for SQL Server 已經過測試，並支援下列 SQL Server 版本
 <sup>1</sup> 支援 Windows Server 2012 (含 [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061))。  
 <sup>2</sup> 支援 Windows Server 2012 R2 (含 [2014 年 4 月更新](https://go.microsoft.com/fwlink/?linkid=2073785)和 [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061))。  
 <sup>3</sup> 支援 Windows 8.1 (含 [2014 年 4 月更新](https://go.microsoft.com/fwlink/?linkid=2073785)和 [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061))。  
-
-> [!NOTE]  
-> 不支援在 Windows 上使用 UTF-8 字碼頁 (「使用 Unicode UTF-8 取得全球語言支援」)。
 
 ## <a name="ado-support-policies"></a>ADO 支援原則  
 

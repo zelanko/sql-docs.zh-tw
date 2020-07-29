@@ -2,22 +2,22 @@
 title: R + T-SQL 教學課程：探索資料
 description: 教學課程說明如何使用 R 函數探索及視覺化 SQL Server 資料。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/03/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ff235cecbfc4bd01e6531d32f206dec56658a6c2
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: bc5434483fd6f63a73362fb42b1bd17aa749ebd3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632108"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757105"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>第 1 課：探索及視覺化資料
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本篇教學課程文章適用 SQL 開發人員，說明如何在 SQL Server 中使用 R。
 
@@ -79,7 +79,7 @@ ms.locfileid: "81632108"
     BEGIN
       SET NOCOUNT ON;
       DECLARE @query nvarchar(max) =  
-      N'SELECT tipped FROM nyctaxi_sample'  
+      N'SELECT tipped FROM [dbo].[nyctaxi_sample]'  
       EXECUTE sp_execute_external_script @language = N'R',  
                                          @script = N'  
        image_file = tempfile();  

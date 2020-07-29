@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 852a76d8-9e61-4a31-84ee-c7edb84a061c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: beb3e7ed1733bc3cb2f7a3c136de1168e3722df9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1cd6899dfdb19dad3b1f1c95ec12ffe67ab8e9da
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85858439"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112445"
 ---
 # <a name="filegroup_id-transact-sql"></a>FILEGROUP_ID (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,9 @@ ms.locfileid: "85858439"
 FILEGROUP_ID ( 'filegroup_name' )   
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
 *filegroup_name* 這是 **sysname** 類型的運算式，代表會傳回其檔案群組識別碼 `FILEGROUP_ID` 的檔案群組名稱。  
   
 ## <a name="return-types"></a>傳回型別  

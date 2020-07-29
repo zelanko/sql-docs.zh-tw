@@ -1,5 +1,6 @@
 ---
 title: sys.databases sp_rda_reconcile_batch （Transact-sql） |Microsoft Docs
+description: 瞭解如何使用 sp_rda_reconcile_batch sys.databases 來協調已啟用 Stretch 之 SQL Server 資料表中的批次識別碼，以及儲存在遠端 Azure 資料表中的批次識別碼。
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,11 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d21eac3-7b6c-4fe0-8bc4-bf503f3948a6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c8ce7b946005eca97d57ef709557ec9b4334339c
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: aa97030851e13eac020564eec7931a00595b8884
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053124"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247087"
 ---
 # <a name="syssp_rda_reconcile_batch-transact-sql"></a>sys.databases sp_rda_reconcile_batch （Transact-sql）
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

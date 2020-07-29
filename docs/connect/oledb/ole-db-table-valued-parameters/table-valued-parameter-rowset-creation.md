@@ -12,15 +12,15 @@ helpviewer_keywords:
 - table-valued parameters, rowset creation
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: c771d8bde657b464b29a109dadd7a4d6fa33fbdb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 00103e02efe284e9c5d60e2f251f8bc28646a30d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994113"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003341"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>建立資料表值參數資料列集
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
