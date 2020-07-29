@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 09e62428-ee0e-4ef5-b969-da9d255f1199
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 8cbb2fe7f7d0b5ee0cfc744bea1e2eedc700e923
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9fd94216bcb95eaa4a21a3d96a949d3a6ea67318
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893404"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110720"
 ---
 # <a name="x40x40total_errors-transact-sql"></a>&#x40;&#x40;TOTAL_ERRORS (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,9 @@ ms.locfileid: "85893404"
 @@TOTAL_ERRORS  
 ```  
   
-## <a name="return-types"></a>傳回型別  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>傳回型別
  **integer**  
   
 ## <a name="remarks"></a>備註  

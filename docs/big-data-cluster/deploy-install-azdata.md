@@ -9,16 +9,16 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 40338c4083241fedd113bca3a1beb839dbdd3fca
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dbb484c6858e9024fdbbaa4d12c15480d7314bc9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75721692"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784272"
 ---
 # <a name="install-azdata"></a>安裝 `azdata`
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 `azdata` 是以 Python 撰寫的命令列公用程式，可透過 REST API 啟動及管理巨量資料叢集。 
 

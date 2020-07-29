@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: cdede70c-4eb5-4c92-98ab-b07787ab7222
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0fd4b0459552330fcbc17b4e3409b1106abc8bd7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7b01f8dd8ed2b460a347ef2f80fb1f2f6eef9ffe
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732686"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113115"
 ---
 # <a name="checksum_agg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,9 @@ ms.locfileid: "85732686"
 CHECKSUM_AGG ( [ ALL | DISTINCT ] expression )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
 **ALL**  
 將彙總函式套用至所有值。 ALL 是預設引數。
   

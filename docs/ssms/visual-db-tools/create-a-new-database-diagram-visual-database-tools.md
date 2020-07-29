@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 843649c0-10bb-4b6a-9369-6b10733381e9
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 0c9d69f04fc7825b0902e101d1c8f8f40494da72
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f16ffac1272a0dd9bfc847d33b3232179d306c3d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254396"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751448"
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>建立新資料庫圖表 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 您可以使用 [物件總管] 建立新的資料庫圖表。 資料庫圖表以圖形方式顯示資料庫結構。 使用資料庫圖表可建立及修改資料表、資料行、關聯性和索引鍵。 此外，您可修改索引及條件約束。  
   
 ### <a name="to-create-a-new-database-diagram"></a>若要建立新的資料庫圖表  

@@ -11,12 +11,12 @@ ms.assetid: 60e5d6f6-a26d-4bba-aada-42e382bbcd38
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4eb809ddbd1acfdd3a01f5601b30e9cf6e9259e0
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 6f9392a6ef282d1a3201e5edb2a4fa026adc5752
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555253"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122769"
 ---
 # <a name="temporal-table-security"></a>時態表安全性
 
@@ -58,15 +58,15 @@ ms.locfileid: "86555253"
 
 ## <a name="security-of-the-create-temporal-table-statement"></a>建立時態表陳述式的安全性
 
-||建立新的記錄資料表|重複使用現有的記錄資料表|
-|-|------------------------------|----------------------------------|
+| 功能 | 建立新的記錄資料表 | 重複使用現有的記錄資料表 |
+| ------- | ------------------------ | ---------------------------- |
 |必要的權限|資料庫的**CREATE TABLE** 權限<br /><br /> 在建立目前和記錄資料表之結構描述上的**ALTER** 權限|資料庫的**CREATE TABLE** 權限<br /><br /> 在將建立目前資料表之結構描述上的**ALTER** 權限。<br /><br /> 記錄資料表上的**CONTROL** 權限會指定為建立時態表之 **CREATE TABLE** 陳述式的一部分|
 |稽核|稽核顯示使用者已嘗試建立兩個物件。 作業可能失敗的原因是在資料庫中建立資料表的權限不足，或者變更任一個資料表的結構描述的權限不足。|稽核顯示時態表已建立。 作業可能失敗的原因是在資料庫中建立資料表的權限不足、變更時態表的結構描述的權限不足，或者在記錄資料表上的權限不足。|
 
 ## <a name="security-of-the-alter-temporal-table-set-system_versioning-onoff-statement"></a>變更時態表 (SYSTEM_VERSIONING 為 ON/OFF) 陳述式的安全性
 
-||建立新的記錄資料表|重複使用現有的記錄資料表|
-|-|------------------------------|----------------------------------|
+| 功能 | 建立新的記錄資料表 | 重複使用現有的記錄資料表 |
+| ------- | ------------------------ | ---------------------------- |
 |必要的權限|資料庫的**CONTROL** 權限<br /><br /> 資料庫的**CREATE TABLE** 權限<br /><br /> 在建立記錄資料表之結構描述上的**ALTER** 權限|已變更之原始資料表上的**CONTROL** 權限<br /><br /> 記錄資料表上的**CONTROL** 權限會指定為 **ALTER TABLE** 陳述式的一部分|
 |稽核|稽核顯示時態表已變更，同時已建立記錄資料表。 作業可能失敗的原因是在資料庫中建立資料表的權限不足、變更記錄資料表的結構描述的權限不足，或者修改時態表的權限不足。|稽核顯示時態表已變更，但作業需要記錄資料表的存取權。 作業可能失敗的原因是記錄資料表上的權限不足，或者目前資料表上的權限不足。|
 

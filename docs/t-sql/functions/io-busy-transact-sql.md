@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3c26770c-41ae-4e34-8c82-7bef920ffbca
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3e2a464cb73eec675eb3162134bdd9ad0f0c5f6d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 37829d42f4133e374a71eb92be9d82c610addfa5
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894282"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111495"
 ---
 # <a name="x40x40io_busy-transact-sql"></a>&#x40;&#x40;IO_BUSY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,8 +44,10 @@ ms.locfileid: "85894282"
 ```  
 @@IO_BUSY  
 ```  
-  
-## <a name="return-types"></a>傳回型別  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>傳回型別
  **integer**  
   
 ## <a name="remarks"></a>備註  

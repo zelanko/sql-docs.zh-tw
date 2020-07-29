@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7a0fc089-2a48-4a81-9d78-2aaedb540d37
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bf0aa9d1bcdd2fc8de86d64c4a70455ef8f8864a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6098c5fc8eab31bd567390656d27cc13a5862086
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752218"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110932"
 ---
 # <a name="x40x40langid-transact-sql"></a>&#x40;&#x40;LANGID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,9 @@ ms.locfileid: "85752218"
 @@LANGID  
 ```  
   
-## <a name="return-types"></a>傳回型別  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>傳回型別
  **smallint**  
   
 ## <a name="remarks"></a>備註  

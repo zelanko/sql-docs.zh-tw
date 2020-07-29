@@ -16,12 +16,12 @@ ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 34af1cc4319135e7f2e30ed0c287a6567e420f64
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f7b87c06324bf168c9dce7441f14c78d89833f24
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85995377"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111315"
 ---
 # <a name="string_agg-transact-sql"></a>STRING_AGG (Transact-SQL)
 
@@ -41,6 +41,8 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
 <order_clause> ::=   
     WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )   
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引數
 

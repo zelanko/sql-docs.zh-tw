@@ -18,12 +18,12 @@ ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc0390a01bec10b58ed29d1824e8d0b482e78358
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 523a39498ebeae9652ded5834a5ebb73a8e90b70
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68091767"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248721"
 ---
 # <a name="reserved-keywords-transact-sql"></a>保留關鍵字 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -31,78 +31,698 @@ ms.locfileid: "68091767"
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用保留的關鍵字來定義、操作和存取資料庫。 保留的關鍵字是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 用來剖析及了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式和批次之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語言文法的一部分。 雖然在語意上可以利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 保留關鍵字做為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼中的識別碼及物件名稱，但您必須分隔這些識別碼。  
   
  下表列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Azure SQL 資料倉儲的保留關鍵字。  
-  
-||||  
-|-|-|-|  
-|ADD|EXTERNAL|PROCEDURE|  
-|ALL|FETCH|PUBLIC|  
-|ALTER|FILE|RAISERROR|  
-|AND|FILLFACTOR|READ|  
-|ANY|FOR|READTEXT|  
-|AS|FOREIGN|RECONFIGURE|  
-|ASC|FREETEXT|REFERENCES|  
-|AUTHORIZATION|FREETEXTTABLE|複寫|  
-|備份|FROM|RESTORE|  
-|BEGIN|FULL|RESTRICT|  
-|BETWEEN|FUNCTION|RETURN|  
-|BREAK|GOTO|REVERT|  
-|BROWSE|GRANT|REVOKE|  
-|BULK|GROUP|RIGHT|  
-|BY|HAVING|ROLLBACK|  
-|CASCADE|HOLDLOCK|ROWCOUNT|  
-|CASE|IDENTITY|ROWGUIDCOL|  
-|CHECK|IDENTITY_INSERT|RULE|  
-|CHECKPOINT|IDENTITYCOL|SAVE|  
-|CLOSE|IF|SCHEMA|  
-|CLUSTERED|IN|SECURITYAUDIT|  
-|COALESCE|INDEX|SELECT|  
-|COLLATE|INNER|SEMANTICKEYPHRASETABLE|  
-|COLUMN|Insert|SEMANTICSIMILARITYDETAILSTABLE|  
-|COMMIT|INTERSECT|SEMANTICSIMILARITYTABLE|  
-|COMPUTE|INTO|SESSION_USER|  
-|CONSTRAINT|IS|SET|  
-|CONTAINS|JOIN|SETUSER|  
-|CONTAINSTABLE|KEY|SHUTDOWN|  
-|CONTINUE|KILL|SOME|  
-|CONVERT|LEFT|STATISTICS|  
-|CREATE|LIKE|SYSTEM_USER|  
-|CROSS|LINENO|TABLE|  
-|CURRENT|LOAD|TABLESAMPLE|  
-|CURRENT_DATE|MERGE|TEXTSIZE|  
-|CURRENT_TIME|NATIONAL|THEN|  
-|CURRENT_TIMESTAMP|NOCHECK|TO|  
-|CURRENT_USER|NONCLUSTERED|頂端|  
-|CURSOR|NOT|TRAN|  
-|DATABASE|NULL|TRANSACTION|  
-|DBCC|NULLIF|TRIGGER|  
-|DEALLOCATE|OF|{1}TRUNCATE{2}|  
-|DECLARE|OFF|TRY_CONVERT|  
-|DEFAULT|OFFSETS|TSEQUAL|  
-|刪除|開啟|UNION|  
-|拒絕|OPEN|UNIQUE|  
-|DESC|OPENDATASOURCE|UNPIVOT|  
-|DISK|OPENQUERY|UPDATE|  
-|DISTINCT|OPENROWSET|UPDATETEXT|  
-|DISTRIBUTED|OPENXML|USE|  
-|DOUBLE|OPTION|USER|  
-|DROP|OR|VALUES|  
-|DUMP|ORDER|VARYING|  
-|ELSE|OUTER|VIEW|  
-|END|OVER|WAITFOR|  
-|ERRLVL|PERCENT|WHEN|  
-|ESCAPE|PIVOT|WHERE|  
-|EXCEPT|PLAN|WHILE|  
-|EXEC|PRECISION|WITH|  
-|執行 CREATE 陳述式之前，請先執行|PRIMARY|WITHIN GROUP|  
-|EXISTS|PRINT|WRITETEXT|  
-|EXIT|PROC||
+
+:::row:::
+    :::column:::
+        ADD
+    :::column-end:::
+    :::column:::
+        EXTERNAL
+    :::column-end:::
+    :::column:::
+        PROCEDURE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ALL
+    :::column-end:::
+    :::column:::
+        FETCH
+    :::column-end:::
+    :::column:::
+        PUBLIC
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ALTER
+    :::column-end:::
+    :::column:::
+        FILE
+    :::column-end:::
+    :::column:::
+        RAISERROR
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        AND
+    :::column-end:::
+    :::column:::
+        FILLFACTOR
+    :::column-end:::
+    :::column:::
+        READ
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ANY
+    :::column-end:::
+    :::column:::
+        FOR
+    :::column-end:::
+    :::column:::
+        READTEXT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        AS
+    :::column-end:::
+    :::column:::
+        FOREIGN
+    :::column-end:::
+    :::column:::
+        RECONFIGURE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ASC
+    :::column-end:::
+    :::column:::
+        FREETEXT
+    :::column-end:::
+    :::column:::
+        REFERENCES
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        AUTHORIZATION
+    :::column-end:::
+    :::column:::
+        FREETEXTTABLE
+    :::column-end:::
+    :::column:::
+        複寫
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        備份
+    :::column-end:::
+    :::column:::
+        FROM
+    :::column-end:::
+    :::column:::
+        RESTORE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        BEGIN
+    :::column-end:::
+    :::column:::
+        FULL
+    :::column-end:::
+    :::column:::
+        RESTRICT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        BETWEEN
+    :::column-end:::
+    :::column:::
+        FUNCTION
+    :::column-end:::
+    :::column:::
+        RETURN
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        BREAK
+    :::column-end:::
+    :::column:::
+        GOTO
+    :::column-end:::
+    :::column:::
+        REVERT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        BROWSE
+    :::column-end:::
+    :::column:::
+        GRANT
+    :::column-end:::
+    :::column:::
+        REVOKE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        BULK
+    :::column-end:::
+    :::column:::
+        GROUP
+    :::column-end:::
+    :::column:::
+        RIGHT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        BY
+    :::column-end:::
+    :::column:::
+        HAVING
+    :::column-end:::
+    :::column:::
+        ROLLBACK
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CASCADE
+    :::column-end:::
+    :::column:::
+        HOLDLOCK
+    :::column-end:::
+    :::column:::
+        ROWCOUNT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CASE
+    :::column-end:::
+    :::column:::
+        IDENTITY
+    :::column-end:::
+    :::column:::
+        ROWGUIDCOL
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CHECK
+    :::column-end:::
+    :::column:::
+        IDENTITY_INSERT
+    :::column-end:::
+    :::column:::
+        RULE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CHECKPOINT
+    :::column-end:::
+    :::column:::
+        IDENTITYCOL
+    :::column-end:::
+    :::column:::
+        SAVE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CLOSE
+    :::column-end:::
+    :::column:::
+        IF
+    :::column-end:::
+    :::column:::
+        SCHEMA
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CLUSTERED
+    :::column-end:::
+    :::column:::
+        IN
+    :::column-end:::
+    :::column:::
+        SECURITYAUDIT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        COALESCE
+    :::column-end:::
+    :::column:::
+        INDEX
+    :::column-end:::
+    :::column:::
+        SELECT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        COLLATE
+    :::column-end:::
+    :::column:::
+        INNER
+    :::column-end:::
+    :::column:::
+        SEMANTICKEYPHRASETABLE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        COLUMN
+    :::column-end:::
+    :::column:::
+        Insert
+    :::column-end:::
+    :::column:::
+        SEMANTICSIMILARITYDETAILSTABLE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        COMMIT
+    :::column-end:::
+    :::column:::
+        INTERSECT
+    :::column-end:::
+    :::column:::
+        SEMANTICSIMILARITYTABLE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        COMPUTE
+    :::column-end:::
+    :::column:::
+        INTO
+    :::column-end:::
+    :::column:::
+        SESSION_USER
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CONSTRAINT
+    :::column-end:::
+    :::column:::
+        IS
+    :::column-end:::
+    :::column:::
+        SET
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CONTAINS
+    :::column-end:::
+    :::column:::
+        JOIN
+    :::column-end:::
+    :::column:::
+        SETUSER
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CONTAINSTABLE
+    :::column-end:::
+    :::column:::
+        KEY
+    :::column-end:::
+    :::column:::
+        SHUTDOWN
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CONTINUE
+    :::column-end:::
+    :::column:::
+        KILL
+    :::column-end:::
+    :::column:::
+        SOME
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CONVERT
+    :::column-end:::
+    :::column:::
+        LEFT
+    :::column-end:::
+    :::column:::
+        STATISTICS
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE
+    :::column-end:::
+    :::column:::
+        LIKE
+    :::column-end:::
+    :::column:::
+        SYSTEM_USER
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CROSS
+    :::column-end:::
+    :::column:::
+        LINENO
+    :::column-end:::
+    :::column:::
+        TABLE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CURRENT
+    :::column-end:::
+    :::column:::
+        LOAD
+    :::column-end:::
+    :::column:::
+        TABLESAMPLE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CURRENT_DATE
+    :::column-end:::
+    :::column:::
+        MERGE
+    :::column-end:::
+    :::column:::
+        TEXTSIZE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CURRENT_TIME
+    :::column-end:::
+    :::column:::
+        NATIONAL
+    :::column-end:::
+    :::column:::
+        THEN
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CURRENT_TIMESTAMP
+    :::column-end:::
+    :::column:::
+        NOCHECK
+    :::column-end:::
+    :::column:::
+        TO
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CURRENT_USER
+    :::column-end:::
+    :::column:::
+        NONCLUSTERED
+    :::column-end:::
+    :::column:::
+        頂端
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CURSOR
+    :::column-end:::
+    :::column:::
+        NOT
+    :::column-end:::
+    :::column:::
+        TRAN
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DATABASE
+    :::column-end:::
+    :::column:::
+        NULL
+    :::column-end:::
+    :::column:::
+        TRANSACTION
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DBCC
+    :::column-end:::
+    :::column:::
+        NULLIF
+    :::column-end:::
+    :::column:::
+        TRIGGER
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DEALLOCATE
+    :::column-end:::
+    :::column:::
+        OF
+    :::column-end:::
+    :::column:::
+        {1}TRUNCATE{2}
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DECLARE
+    :::column-end:::
+    :::column:::
+        OFF
+    :::column-end:::
+    :::column:::
+        TRY_CONVERT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DEFAULT
+    :::column-end:::
+    :::column:::
+        OFFSETS
+    :::column-end:::
+    :::column:::
+        TSEQUAL
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        刪除
+    :::column-end:::
+    :::column:::
+        開啟
+    :::column-end:::
+    :::column:::
+        UNION
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        拒絕
+    :::column-end:::
+    :::column:::
+        OPEN
+    :::column-end:::
+    :::column:::
+        UNIQUE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DESC
+    :::column-end:::
+    :::column:::
+        OPENDATASOURCE
+    :::column-end:::
+    :::column:::
+        UNPIVOT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DISK
+    :::column-end:::
+    :::column:::
+        OPENQUERY
+    :::column-end:::
+    :::column:::
+        UPDATE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DISTINCT
+    :::column-end:::
+    :::column:::
+        OPENROWSET
+    :::column-end:::
+    :::column:::
+        UPDATETEXT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DISTRIBUTED
+    :::column-end:::
+    :::column:::
+        OPENXML
+    :::column-end:::
+    :::column:::
+        USE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DOUBLE
+    :::column-end:::
+    :::column:::
+        OPTION
+    :::column-end:::
+    :::column:::
+        USER
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DROP
+    :::column-end:::
+    :::column:::
+        OR
+    :::column-end:::
+    :::column:::
+        VALUES
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DUMP
+    :::column-end:::
+    :::column:::
+        ORDER
+    :::column-end:::
+    :::column:::
+        VARYING
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ELSE
+    :::column-end:::
+    :::column:::
+        OUTER
+    :::column-end:::
+    :::column:::
+        VIEW
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        END
+    :::column-end:::
+    :::column:::
+        OVER
+    :::column-end:::
+    :::column:::
+        WAITFOR
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ERRLVL
+    :::column-end:::
+    :::column:::
+        PERCENT
+    :::column-end:::
+    :::column:::
+        WHEN
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ESCAPE
+    :::column-end:::
+    :::column:::
+        PIVOT
+    :::column-end:::
+    :::column:::
+        WHERE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        EXCEPT
+    :::column-end:::
+    :::column:::
+        PLAN
+    :::column-end:::
+    :::column:::
+        WHILE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        EXEC
+    :::column-end:::
+    :::column:::
+        PRECISION
+    :::column-end:::
+    :::column:::
+        WITH
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        執行 CREATE 陳述式之前，請先執行
+    :::column-end:::
+    :::column:::
+        PRIMARY
+    :::column-end:::
+    :::column:::
+        WITHIN GROUP
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        EXISTS
+    :::column-end:::
+    :::column:::
+        PRINT
+    :::column-end:::
+    :::column:::
+        WRITETEXT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        EXIT
+    :::column-end:::
+    :::column:::
+        PROC
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+
   
 下表列出 **Azure SQL 資料倉儲**專屬的保留關鍵字。
-
-|||
-|-|-|
-|**LABEL**||
   
+:::row:::
+    :::column:::
+        **LABEL**
+    :::column-end:::
+:::row-end:::
+
  另外，ISO 標準也定義了一份保留關鍵字的清單。 請避免在物件名稱和識別碼上使用 ISO 保留關鍵字。 下表所顯示的 ODBC 保留關鍵字清單與 ISO 保留關鍵字清單相同。  
   
 > [!NOTE]  
@@ -115,185 +735,1879 @@ ms.locfileid: "68091767"
   
  這是目前的 ODBC 保留關鍵字清單。  
   
-||||  
-|-|-|-|  
-|**ABSOLUTE**|**EXEC**|**OVERLAPS**|  
-|**動作**|**EXECUTE**|**PAD**|  
-|**ADA**|**EXISTS**|**PARTIAL**|  
-|**ADD**|**EXTERNAL**|**PASCAL**|  
-|**ALL**|**EXTRACT**|**POSITION**|  
-|**ALLOCATE**|**FALSE**|**PRECISION**|  
-|**ALTER**|**FETCH**|**PREPARE**|  
-|**AND**|**FIRST**|**PRESERVE**|  
-|**ANY**|**FLOAT**|**PRIMARY**|  
-|**ARE**|**FOR**|**PRIOR**|  
-|**AS**|**FOREIGN**|**PRIVILEGES**|  
-|**ASC**|**FORTRAN**|**PROCEDURE**|  
-|**ASSERTION**|**FOUND**|**PUBLIC**|  
-|**AT**|**FROM**|**READ**|  
-|**AUTHORIZATION**|**FULL**|**REAL**|  
-|**AVG**|**GET**|**REFERENCES**|  
-|**BEGIN**|**GLOBAL**|**RELATIVE**|  
-|**BETWEEN**|**GO**|**RESTRICT**|  
-|**BIT**|**GOTO**|**REVOKE**|  
-|**BIT_LENGTH**|**GRANT**|**RIGHT**|  
-|**BOTH**|**GROUP**|**ROLLBACK**|  
-|**BY**|**HAVING**|**ROWS**|  
-|**CASCADE**|**HOUR**|**SCHEMA**|  
-|**CASCADED**|**IDENTITY**|**SCROLL**|  
-|**CASE**|**IMMEDIATE**|**SECOND**|  
-|**CAST**|**IN**|**SECTION**|  
-|**CATALOG**|**INCLUDE**|**SELECT**|  
-|**CHAR**|**INDEX**|**SESSION**|  
-|**CHAR_LENGTH**|**INDICATOR**|**SESSION_USER**|  
-|**CHARACTER**|**INITIALLY**|**SET**|  
-|**CHARACTER_LENGTH**|**INNER**|**SIZE**|  
-|**CHECK**|**INPUT**|**SMALLINT**|  
-|**CLOSE**|**INSENSITIVE**|**SOME**|  
-|**COALESCE**|**INSERT**|**SPACE**|  
-|**COLLATE**|**INT**|**SQL**|  
-|**COLLATION**|**INTEGER**|**SQLCA**|  
-|**COLUMN**|**INTERSECT**|**SQLCODE**|  
-|**COMMIT**|**INTERVAL**|**SQLERROR**|  
-|**CONNECT**|**INTO**|**SQLSTATE**|  
-|**CONNECTION**|**IS**|**SQLWARNING**|  
-|**CONSTRAINT**|**ISOLATION**|**SUBSTRING**|  
-|**CONSTRAINTS**|**JOIN**|**SUM**|  
-|**CONTINUE**|**KEY**|**SYSTEM_USER**|  
-|**CONVERT**|**LANGUAGE**|**TABLE**|  
-|**CORRESPONDING**|**LAST**|**TEMPORARY**|  
-|**COUNT**|**LEADING**|**THEN**|  
-|**CREATE**|**LEFT**|**TIME**|  
-|**CROSS**|**LEVEL**|**TIMESTAMP**|  
-|**CURRENT**|**LIKE**|**TIMEZONE_HOUR**|  
-|**CURRENT_DATE**|**LOCAL**|**TIMEZONE_MINUTE**|  
-|**CURRENT_TIME**|**LOWER**|**收件人**|  
-|**CURRENT_TIMESTAMP**|**MATCH**|**TRAILING**|  
-|**CURRENT_USER**|**MAX**|**TRANSACTION**|  
-|**CURSOR**|**MIN**|**TRANSLATE**|  
-|**DATE**|**MINUTE**|**TRANSLATION**|  
-|**DAY**|**MODULE**|**TRIM**|  
-|**DEALLOCATE**|**MONTH**|**TRUE**|  
-|**DEC**|**NAMES**|**UNION**|  
-|**DECIMAL**|**NATIONAL**|**UNIQUE**|  
-|**DECLARE**|**NATURAL**|**UNKNOWN**|  
-|**DEFAULT**|**NCHAR**|**UPDATE**|  
-|**DEFERRABLE**|**NEXT**|**UPPER**|  
-|**DEFERRED**|**NO**|**USAGE**|  
-|**DELETE**|**NONE**|**USER**|  
-|**DESC**|**NOT**|**USING**|  
-|**DESCRIBE**|**NULL**|**VALUE**|  
-|**DESCRIPTOR**|**NULLIF**|**VALUES**|  
-|**DIAGNOSTICS**|**NUMERIC**|**VARCHAR**|  
-|**DISCONNECT**|**OCTET_LENGTH**|**VARYING**|  
-|**DISTINCT**|**OF**|**VIEW**|  
-|**DOMAIN**|**ON**|**WHEN**|  
-|**DOUBLE**|**ONLY**|**WHENEVER**|  
-|**DROP**|**OPEN**|**WHERE**|  
-|**ELSE**|**OPTION**|**WITH**|  
-|**END**|**OR**|**WORK**|  
-|**END-EXEC**|**ORDER**|**WRITE**|  
-|**ESCAPE**|**OUTER**|**YEAR**|  
-|**EXCEPT**|**OUTPUT**|**ZONE**|  
-|**EXCEPTION**|||  
-  
+:::row:::
+    :::column:::
+        **ABSOLUTE**
+    :::column-end:::
+    :::column:::
+        **EXEC**
+    :::column-end:::
+    :::column:::
+        **OVERLAPS**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **動作**
+    :::column-end:::
+    :::column:::
+        **EXECUTE**
+    :::column-end:::
+    :::column:::
+        **PAD**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **ADA**
+    :::column-end:::
+    :::column:::
+        **EXISTS**
+    :::column-end:::
+    :::column:::
+        **PARTIAL**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **ADD**
+    :::column-end:::
+    :::column:::
+        **EXTERNAL**
+    :::column-end:::
+    :::column:::
+        **PASCAL**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **ALL**
+    :::column-end:::
+    :::column:::
+        **EXTRACT**
+    :::column-end:::
+    :::column:::
+        **POSITION**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **ALLOCATE**
+    :::column-end:::
+    :::column:::
+        **FALSE**
+    :::column-end:::
+    :::column:::
+        **PRECISION**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **ALTER**
+    :::column-end:::
+    :::column:::
+        **FETCH**
+    :::column-end:::
+    :::column:::
+        **PREPARE**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **AND**
+    :::column-end:::
+    :::column:::
+        **FIRST**
+    :::column-end:::
+    :::column:::
+        **PRESERVE**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **ANY**
+    :::column-end:::
+    :::column:::
+        **FLOAT**
+    :::column-end:::
+    :::column:::
+        **PRIMARY**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **ARE**
+    :::column-end:::
+    :::column:::
+        **FOR**
+    :::column-end:::
+    :::column:::
+        **PRIOR**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **AS**
+    :::column-end:::
+    :::column:::
+        **FOREIGN**
+    :::column-end:::
+    :::column:::
+        **PRIVILEGES**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **ASC**
+    :::column-end:::
+    :::column:::
+        **FORTRAN**
+    :::column-end:::
+    :::column:::
+        **PROCEDURE**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **ASSERTION**
+    :::column-end:::
+    :::column:::
+        **FOUND**
+    :::column-end:::
+    :::column:::
+        **PUBLIC**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **AT**
+    :::column-end:::
+    :::column:::
+        **FROM**
+    :::column-end:::
+    :::column:::
+        **READ**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **AUTHORIZATION**
+    :::column-end:::
+    :::column:::
+        **FULL**
+    :::column-end:::
+    :::column:::
+        **REAL**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **AVG**
+    :::column-end:::
+    :::column:::
+        **GET**
+    :::column-end:::
+    :::column:::
+        **REFERENCES**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **BEGIN**
+    :::column-end:::
+    :::column:::
+        **GLOBAL**
+    :::column-end:::
+    :::column:::
+        **RELATIVE**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **BETWEEN**
+    :::column-end:::
+    :::column:::
+        **GO**
+    :::column-end:::
+    :::column:::
+        **RESTRICT**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **BIT**
+    :::column-end:::
+    :::column:::
+        **GOTO**
+    :::column-end:::
+    :::column:::
+        **REVOKE**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **BIT_LENGTH**
+    :::column-end:::
+    :::column:::
+        **GRANT**
+    :::column-end:::
+    :::column:::
+        **RIGHT**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **BOTH**
+    :::column-end:::
+    :::column:::
+        **GROUP**
+    :::column-end:::
+    :::column:::
+        **ROLLBACK**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **BY**
+    :::column-end:::
+    :::column:::
+        **HAVING**
+    :::column-end:::
+    :::column:::
+        **ROWS**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **CASCADE**
+    :::column-end:::
+    :::column:::
+        **HOUR**
+    :::column-end:::
+    :::column:::
+        **SCHEMA**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **CASCADED**
+    :::column-end:::
+    :::column:::
+        **IDENTITY**
+    :::column-end:::
+    :::column:::
+        **SCROLL**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **CASE**
+    :::column-end:::
+    :::column:::
+        **IMMEDIATE**
+    :::column-end:::
+    :::column:::
+        **SECOND**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **CAST**
+    :::column-end:::
+    :::column:::
+        **IN**
+    :::column-end:::
+    :::column:::
+        **SECTION**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **CATALOG**
+    :::column-end:::
+    :::column:::
+        **INCLUDE**
+    :::column-end:::
+    :::column:::
+        **SELECT**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **CHAR**
+    :::column-end:::
+    :::column:::
+        **INDEX**
+    :::column-end:::
+    :::column:::
+        **SESSION**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **CHAR_LENGTH**
+    :::column-end:::
+    :::column:::
+        **INDICATOR**
+    :::column-end:::
+    :::column:::
+        **SESSION_USER**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **CHARACTER**
+    :::column-end:::
+    :::column:::
+        **INITIALLY**
+    :::column-end:::
+    :::column:::
+        **SET**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **CHARACTER_LENGTH**
+    :::column-end:::
+    :::column:::
+        **INNER**
+    :::column-end:::
+    :::column:::
+        **SIZE**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **CHECK**
+    :::column-end:::
+    :::column:::
+        **INPUT**
+    :::column-end:::
+    :::column:::
+        **SMALLINT**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **CLOSE**
+    :::column-end:::
+    :::column:::
+        **INSENSITIVE**
+    :::column-end:::
+    :::column:::
+        **SOME**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **COALESCE**
+    :::column-end:::
+    :::column:::
+        **INSERT**
+    :::column-end:::
+    :::column:::
+        **SPACE**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **COLLATE**
+    :::column-end:::
+    :::column:::
+        **INT**
+    :::column-end:::
+    :::column:::
+        **SQL**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **COLLATION**
+    :::column-end:::
+    :::column:::
+        **INTEGER**
+    :::column-end:::
+    :::column:::
+        **SQLCA**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **COLUMN**
+    :::column-end:::
+    :::column:::
+        **INTERSECT**
+    :::column-end:::
+    :::column:::
+        **SQLCODE**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **COMMIT**
+    :::column-end:::
+    :::column:::
+        **INTERVAL**
+    :::column-end:::
+    :::column:::
+        **SQLERROR**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **CONNECT**
+    :::column-end:::
+    :::column:::
+        **INTO**
+    :::column-end:::
+    :::column:::
+        **SQLSTATE**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **CONNECTION**
+    :::column-end:::
+    :::column:::
+        **IS**
+    :::column-end:::
+    :::column:::
+        **SQLWARNING**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **CONSTRAINT**
+    :::column-end:::
+    :::column:::
+        **ISOLATION**
+    :::column-end:::
+    :::column:::
+        **SUBSTRING**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **CONSTRAINTS**
+    :::column-end:::
+    :::column:::
+        **JOIN**
+    :::column-end:::
+    :::column:::
+        **SUM**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **CONTINUE**
+    :::column-end:::
+    :::column:::
+        **KEY**
+    :::column-end:::
+    :::column:::
+        **SYSTEM_USER**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **CONVERT**
+    :::column-end:::
+    :::column:::
+        **LANGUAGE**
+    :::column-end:::
+    :::column:::
+        **TABLE**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **CORRESPONDING**
+    :::column-end:::
+    :::column:::
+        **LAST**
+    :::column-end:::
+    :::column:::
+        **TEMPORARY**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **COUNT**
+    :::column-end:::
+    :::column:::
+        **LEADING**
+    :::column-end:::
+    :::column:::
+        **THEN**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **CREATE**
+    :::column-end:::
+    :::column:::
+        **LEFT**
+    :::column-end:::
+    :::column:::
+        **TIME**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **CROSS**
+    :::column-end:::
+    :::column:::
+        **LEVEL**
+    :::column-end:::
+    :::column:::
+        **TIMESTAMP**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **CURRENT**
+    :::column-end:::
+    :::column:::
+        **LIKE**
+    :::column-end:::
+    :::column:::
+        **TIMEZONE_HOUR**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **CURRENT_DATE**
+    :::column-end:::
+    :::column:::
+        **LOCAL**
+    :::column-end:::
+    :::column:::
+        **TIMEZONE_MINUTE**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **CURRENT_TIME**
+    :::column-end:::
+    :::column:::
+        **LOWER**
+    :::column-end:::
+    :::column:::
+        **收件人**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **CURRENT_TIMESTAMP**
+    :::column-end:::
+    :::column:::
+        **MATCH**
+    :::column-end:::
+    :::column:::
+        **TRAILING**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **CURRENT_USER**
+    :::column-end:::
+    :::column:::
+        **MAX**
+    :::column-end:::
+    :::column:::
+        **TRANSACTION**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **CURSOR**
+    :::column-end:::
+    :::column:::
+        **MIN**
+    :::column-end:::
+    :::column:::
+        **TRANSLATE**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **DATE**
+    :::column-end:::
+    :::column:::
+        **MINUTE**
+    :::column-end:::
+    :::column:::
+        **TRANSLATION**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **DAY**
+    :::column-end:::
+    :::column:::
+        **MODULE**
+    :::column-end:::
+    :::column:::
+        **TRIM**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **DEALLOCATE**
+    :::column-end:::
+    :::column:::
+        **MONTH**
+    :::column-end:::
+    :::column:::
+        **TRUE**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **DEC**
+    :::column-end:::
+    :::column:::
+        **NAMES**
+    :::column-end:::
+    :::column:::
+        **UNION**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **DECIMAL**
+    :::column-end:::
+    :::column:::
+        **NATIONAL**
+    :::column-end:::
+    :::column:::
+        **UNIQUE**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **DECLARE**
+    :::column-end:::
+    :::column:::
+        **NATURAL**
+    :::column-end:::
+    :::column:::
+        **UNKNOWN**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **DEFAULT**
+    :::column-end:::
+    :::column:::
+        **NCHAR**
+    :::column-end:::
+    :::column:::
+        **UPDATE**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **DEFERRABLE**
+    :::column-end:::
+    :::column:::
+        **NEXT**
+    :::column-end:::
+    :::column:::
+        **UPPER**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **DEFERRED**
+    :::column-end:::
+    :::column:::
+        **NO**
+    :::column-end:::
+    :::column:::
+        **USAGE**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **DELETE**
+    :::column-end:::
+    :::column:::
+        **NONE**
+    :::column-end:::
+    :::column:::
+        **USER**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **DESC**
+    :::column-end:::
+    :::column:::
+        **NOT**
+    :::column-end:::
+    :::column:::
+        **USING**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **DESCRIBE**
+    :::column-end:::
+    :::column:::
+        **NULL**
+    :::column-end:::
+    :::column:::
+        **VALUE**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **DESCRIPTOR**
+    :::column-end:::
+    :::column:::
+        **NULLIF**
+    :::column-end:::
+    :::column:::
+        **VALUES**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **DIAGNOSTICS**
+    :::column-end:::
+    :::column:::
+        **NUMERIC**
+    :::column-end:::
+    :::column:::
+        **VARCHAR**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **DISCONNECT**
+    :::column-end:::
+    :::column:::
+        **OCTET_LENGTH**
+    :::column-end:::
+    :::column:::
+        **VARYING**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **DISTINCT**
+    :::column-end:::
+    :::column:::
+        **OF**
+    :::column-end:::
+    :::column:::
+        **VIEW**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **DOMAIN**
+    :::column-end:::
+    :::column:::
+        **ON**
+    :::column-end:::
+    :::column:::
+        **WHEN**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **DOUBLE**
+    :::column-end:::
+    :::column:::
+        **ONLY**
+    :::column-end:::
+    :::column:::
+        **WHENEVER**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **DROP**
+    :::column-end:::
+    :::column:::
+        **OPEN**
+    :::column-end:::
+    :::column:::
+        **WHERE**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **ELSE**
+    :::column-end:::
+    :::column:::
+        **OPTION**
+    :::column-end:::
+    :::column:::
+        **WITH**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **END**
+    :::column-end:::
+    :::column:::
+        **OR**
+    :::column-end:::
+    :::column:::
+        **WORK**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **END-EXEC**
+    :::column-end:::
+    :::column:::
+        **ORDER**
+    :::column-end:::
+    :::column:::
+        **WRITE**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **ESCAPE**
+    :::column-end:::
+    :::column:::
+        **OUTER**
+    :::column-end:::
+    :::column:::
+        **YEAR**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **EXCEPT**
+    :::column-end:::
+    :::column:::
+        **OUTPUT**
+    :::column-end:::
+    :::column:::
+        **ZONE**
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        **EXCEPTION**
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+ 
 ## <a name="future-keywords"></a>未來關鍵字  
  下列關鍵字可能保留給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 實作新功能的未來版本。 請考慮避免使用這些字做為識別碼。  
   
-||||  
-|-|-|-|  
-|ABSOLUTE|HOST|RELATIVE|  
-|ACTION|HOUR|RELEASE|  
-|ADMIN|IGNORE|RESULT|  
-|AFTER|IMMEDIATE|RETURNS|  
-|AGGREGATE|INDICATOR|ROLE|  
-|ALIAS|INITIALIZE|ROLLUP|  
-|ALLOCATE|INITIALLY|ROUTINE|  
-|ARE|INOUT|ROW|  
-|ARRAY|INPUT|ROWS|  
-|ASENSITIVE|INT|SAVEPOINT|  
-|ASSERTION|INTEGER|SCROLL|  
-|ASYMMETRIC|INTERSECTION|SCOPE|  
-|AT|INTERVAL|SEARCH|  
-|ATOMIC|ISOLATION|SECOND|  
-|BEFORE|ITERATE|SECTION|  
-|BINARY|LANGUAGE|SENSITIVE|  
-|BIT|LARGE|SEQUENCE|  
-|BLOB|LAST|SESSION|  
-|BOOLEAN|LATERAL|SETS|  
-|BOTH|LEADING|SIMILAR|  
-|BREADTH|LESS|SIZE|  
-|CALL|LEVEL|SMALLINT|  
-|CALLED|LIKE_REGEX|SPACE|  
-|CARDINALITY|LIMIT|SPECIFIC|  
-|CASCADED|LN|SPECIFICTYPE|  
-|CAST|LOCAL|SQL|  
-|CATALOG|LOCALTIME|SQLEXCEPTION|  
-|CHAR|LOCALTIMESTAMP|SQLSTATE|  
-|CHARACTER|LOCATOR|SQLWARNING|  
-|CLASS|MAP|START|  
-|CLOB|MATCH|STATE|  
-|COLLATION|MEMBER|STATEMENT|  
-|COLLECT|METHOD|STATIC|  
-|COMPLETION|MINUTE|STDDEV_POP|  
-|CONDITION|MOD|STDDEV_SAMP|  
-|CONNECT|MODIFIES|STRUCTURE|  
-|CONNECTION|MODIFY|SUBMULTISET|  
-|CONSTRAINTS|MODULE|SUBSTRING_REGEX|  
-|CONSTRUCTOR|月|SYMMETRIC|  
-|CORR|MULTISET|系統|  
-|CORRESPONDING|NAMES|TEMPORARY|  
-|COVAR_POP|NATURAL|TERMINATE|  
-|COVAR_SAMP|NCHAR|THAN|  
-|CUBE|NCLOB|TIME|  
-|CUME_DIST|NEW|timestamp|  
-|CURRENT_CATALOG|NEXT|TIMEZONE_HOUR|  
-|CURRENT_DEFAULT_TRANSFORM_GROUP|否|TIMEZONE_MINUTE|  
-|CURRENT_PATH|無|TRAILING|  
-|CURRENT_ROLE|NORMALIZE|TRANSLATE_REGEX|  
-|CURRENT_SCHEMA|NUMERIC|TRANSLATION|  
-|CURRENT_TRANSFORM_GROUP_FOR_TYPE|OBJECT|TREAT|  
-|CYCLE|OCCURRENCES_REGEX|TRUE|  
-|DATA|OLD|UESCAPE|  
-|日期|ONLY|UNDER|  
-|DAY|OPERATION|UNKNOWN|  
-|DEC|ORDINALITY|UNNEST|  
-|DECIMAL|OUT|USAGE|  
-|DEFERRABLE|OVERLAY|USING|  
-|DEFERRED|OUTPUT|值|  
-|DEPTH|PAD|VAR_POP|  
-|DEREF|參數|VAR_SAMP|  
-|DESCRIBE|PARAMETERS|VARCHAR|  
-|DESCRIPTOR|PARTIAL|VARIABLE|  
-|DESTROY|PARTITION|WHENEVER|  
-|DESTRUCTOR|PATH|WIDTH_BUCKET|  
-|DETERMINISTIC|POSTFIX|WITHOUT|  
-|DICTIONARY|PREFIX|WINDOW|  
-|DIAGNOSTICS|PREORDER|WITHIN|  
-|DISCONNECT|PREPARE|WORK|  
-|DOMAIN|PERCENT_RANK|WRITE|  
-|DYNAMIC|PERCENTILE_CONT|XMLAGG|  
-|EACH|PERCENTILE_DISC|XMLATTRIBUTES|  
-|ELEMENT|POSITION_REGEX|XMLBINARY|  
-|END-EXEC|PRESERVE|XMLCAST|  
-|EQUALS|PRIOR|XMLCOMMENT|  
-|EVERY|PRIVILEGES|XMLCONCAT|  
-|EXCEPTION|RANGE|XMLDOCUMENT|  
-|FALSE|READS|XMLELEMENT|  
-|FILTER|real|XMLEXISTS|  
-|FIRST|RECURSIVE|XMLFOREST|  
-|FLOAT|REF|XMLITERATE|  
-|FOUND|REFERENCING|XMLNAMESPACES|  
-|FREE|REGR_AVGX|XMLPARSE|  
-|FULLTEXTTABLE|REGR_AVGY|XMLPI|  
-|FUSION|REGR_COUNT|XMLQUERY|  
-|GENERAL|REGR_INTERCEPT|XMLSERIALIZE|  
-|GET|REGR_R2|XMLTABLE|  
-|GLOBAL|REGR_SLOPE|XMLTEXT|  
-|GO|REGR_SXX|XMLVALIDATE|  
-|GROUPING|REGR_SXY|年|  
-|HOLD|REGR_SYY|ZONE|  
-  
+:::row:::
+    :::column:::
+        ABSOLUTE
+    :::column-end:::
+    :::column:::
+        HOST
+    :::column-end:::
+    :::column:::
+        RELATIVE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ACTION
+    :::column-end:::
+    :::column:::
+        HOUR
+    :::column-end:::
+    :::column:::
+        RELEASE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ADMIN
+    :::column-end:::
+    :::column:::
+        IGNORE
+    :::column-end:::
+    :::column:::
+        RESULT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        AFTER
+    :::column-end:::
+    :::column:::
+        IMMEDIATE
+    :::column-end:::
+    :::column:::
+        RETURNS
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        AGGREGATE
+    :::column-end:::
+    :::column:::
+        INDICATOR
+    :::column-end:::
+    :::column:::
+        ROLE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ALIAS
+    :::column-end:::
+    :::column:::
+        INITIALIZE
+    :::column-end:::
+    :::column:::
+        ROLLUP
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ALLOCATE
+    :::column-end:::
+    :::column:::
+        INITIALLY
+    :::column-end:::
+    :::column:::
+        ROUTINE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ARE
+    :::column-end:::
+    :::column:::
+        INOUT
+    :::column-end:::
+    :::column:::
+        ROW
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ARRAY
+    :::column-end:::
+    :::column:::
+        INPUT
+    :::column-end:::
+    :::column:::
+        ROWS
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ASENSITIVE
+    :::column-end:::
+    :::column:::
+        INT
+    :::column-end:::
+    :::column:::
+        SAVEPOINT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ASSERTION
+    :::column-end:::
+    :::column:::
+        INTEGER
+    :::column-end:::
+    :::column:::
+        SCROLL
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ASYMMETRIC
+    :::column-end:::
+    :::column:::
+        INTERSECTION
+    :::column-end:::
+    :::column:::
+        SCOPE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        AT
+    :::column-end:::
+    :::column:::
+        INTERVAL
+    :::column-end:::
+    :::column:::
+        SEARCH
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ATOMIC
+    :::column-end:::
+    :::column:::
+        ISOLATION
+    :::column-end:::
+    :::column:::
+        SECOND
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        BEFORE
+    :::column-end:::
+    :::column:::
+        ITERATE
+    :::column-end:::
+    :::column:::
+        SECTION
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        BINARY
+    :::column-end:::
+    :::column:::
+        LANGUAGE
+    :::column-end:::
+    :::column:::
+        SENSITIVE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        BIT
+    :::column-end:::
+    :::column:::
+        LARGE
+    :::column-end:::
+    :::column:::
+        SEQUENCE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        BLOB
+    :::column-end:::
+    :::column:::
+        LAST
+    :::column-end:::
+    :::column:::
+        SESSION
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        BOOLEAN
+    :::column-end:::
+    :::column:::
+        LATERAL
+    :::column-end:::
+    :::column:::
+        SETS
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        BOTH
+    :::column-end:::
+    :::column:::
+        LEADING
+    :::column-end:::
+    :::column:::
+        SIMILAR
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        BREADTH
+    :::column-end:::
+    :::column:::
+        LESS
+    :::column-end:::
+    :::column:::
+        SIZE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CALL
+    :::column-end:::
+    :::column:::
+        LEVEL
+    :::column-end:::
+    :::column:::
+        SMALLINT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CALLED
+    :::column-end:::
+    :::column:::
+        LIKE_REGEX
+    :::column-end:::
+    :::column:::
+        SPACE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CARDINALITY
+    :::column-end:::
+    :::column:::
+        LIMIT
+    :::column-end:::
+    :::column:::
+        SPECIFIC
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CASCADED
+    :::column-end:::
+    :::column:::
+        LN
+    :::column-end:::
+    :::column:::
+        SPECIFICTYPE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CAST
+    :::column-end:::
+    :::column:::
+        LOCAL
+    :::column-end:::
+    :::column:::
+        SQL
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CATALOG
+    :::column-end:::
+    :::column:::
+        LOCALTIME
+    :::column-end:::
+    :::column:::
+        SQLEXCEPTION
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CHAR
+    :::column-end:::
+    :::column:::
+        LOCALTIMESTAMP
+    :::column-end:::
+    :::column:::
+        SQLSTATE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CHARACTER
+    :::column-end:::
+    :::column:::
+        LOCATOR
+    :::column-end:::
+    :::column:::
+        SQLWARNING
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CLASS
+    :::column-end:::
+    :::column:::
+        MAP
+    :::column-end:::
+    :::column:::
+        START
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CLOB
+    :::column-end:::
+    :::column:::
+        MATCH
+    :::column-end:::
+    :::column:::
+        STATE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        COLLATION
+    :::column-end:::
+    :::column:::
+        MEMBER
+    :::column-end:::
+    :::column:::
+        STATEMENT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        COLLECT
+    :::column-end:::
+    :::column:::
+        METHOD
+    :::column-end:::
+    :::column:::
+        STATIC
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        COMPLETION
+    :::column-end:::
+    :::column:::
+        MINUTE
+    :::column-end:::
+    :::column:::
+        STDDEV_POP
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CONDITION
+    :::column-end:::
+    :::column:::
+        MOD
+    :::column-end:::
+    :::column:::
+        STDDEV_SAMP
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CONNECT
+    :::column-end:::
+    :::column:::
+        MODIFIES
+    :::column-end:::
+    :::column:::
+        STRUCTURE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CONNECTION
+    :::column-end:::
+    :::column:::
+        MODIFY
+    :::column-end:::
+    :::column:::
+        SUBMULTISET
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CONSTRAINTS
+    :::column-end:::
+    :::column:::
+        MODULE
+    :::column-end:::
+    :::column:::
+        SUBSTRING_REGEX
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CONSTRUCTOR
+    :::column-end:::
+    :::column:::
+        月
+    :::column-end:::
+    :::column:::
+        SYMMETRIC
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CORR
+    :::column-end:::
+    :::column:::
+        MULTISET
+    :::column-end:::
+    :::column:::
+        系統
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CORRESPONDING
+    :::column-end:::
+    :::column:::
+        NAMES
+    :::column-end:::
+    :::column:::
+        TEMPORARY
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        COVAR_POP
+    :::column-end:::
+    :::column:::
+        NATURAL
+    :::column-end:::
+    :::column:::
+        TERMINATE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        COVAR_SAMP
+    :::column-end:::
+    :::column:::
+        NCHAR
+    :::column-end:::
+    :::column:::
+        THAN
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CUBE
+    :::column-end:::
+    :::column:::
+        NCLOB
+    :::column-end:::
+    :::column:::
+        TIME
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CUME_DIST
+    :::column-end:::
+    :::column:::
+        NEW
+    :::column-end:::
+    :::column:::
+        timestamp
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CURRENT_CATALOG
+    :::column-end:::
+    :::column:::
+        NEXT
+    :::column-end:::
+    :::column:::
+        TIMEZONE_HOUR
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CURRENT_DEFAULT_TRANSFORM_GROUP
+    :::column-end:::
+    :::column:::
+        否
+    :::column-end:::
+    :::column:::
+        TIMEZONE_MINUTE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CURRENT_PATH
+    :::column-end:::
+    :::column:::
+        無
+    :::column-end:::
+    :::column:::
+        TRAILING
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CURRENT_ROLE
+    :::column-end:::
+    :::column:::
+        NORMALIZE
+    :::column-end:::
+    :::column:::
+        TRANSLATE_REGEX
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CURRENT_SCHEMA
+    :::column-end:::
+    :::column:::
+        NUMERIC
+    :::column-end:::
+    :::column:::
+        TRANSLATION
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CURRENT_TRANSFORM_GROUP_FOR_TYPE
+    :::column-end:::
+    :::column:::
+        OBJECT
+    :::column-end:::
+    :::column:::
+        TREAT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CYCLE
+    :::column-end:::
+    :::column:::
+        OCCURRENCES_REGEX
+    :::column-end:::
+    :::column:::
+        TRUE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DATA
+    :::column-end:::
+    :::column:::
+        OLD
+    :::column-end:::
+    :::column:::
+        UESCAPE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        日期
+    :::column-end:::
+    :::column:::
+        ONLY
+    :::column-end:::
+    :::column:::
+        UNDER
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DAY
+    :::column-end:::
+    :::column:::
+        OPERATION
+    :::column-end:::
+    :::column:::
+        UNKNOWN
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DEC
+    :::column-end:::
+    :::column:::
+        ORDINALITY
+    :::column-end:::
+    :::column:::
+        UNNEST
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DECIMAL
+    :::column-end:::
+    :::column:::
+        OUT
+    :::column-end:::
+    :::column:::
+        USAGE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DEFERRABLE
+    :::column-end:::
+    :::column:::
+        OVERLAY
+    :::column-end:::
+    :::column:::
+        USING
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DEFERRED
+    :::column-end:::
+    :::column:::
+        OUTPUT
+    :::column-end:::
+    :::column:::
+        值
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DEPTH
+    :::column-end:::
+    :::column:::
+        PAD
+    :::column-end:::
+    :::column:::
+        VAR_POP
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DEREF
+    :::column-end:::
+    :::column:::
+        參數
+    :::column-end:::
+    :::column:::
+        VAR_SAMP
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DESCRIBE
+    :::column-end:::
+    :::column:::
+        PARAMETERS
+    :::column-end:::
+    :::column:::
+        VARCHAR
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DESCRIPTOR
+    :::column-end:::
+    :::column:::
+        PARTIAL
+    :::column-end:::
+    :::column:::
+        VARIABLE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DESTROY
+    :::column-end:::
+    :::column:::
+        PARTITION
+    :::column-end:::
+    :::column:::
+        WHENEVER
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DESTRUCTOR
+    :::column-end:::
+    :::column:::
+        PATH
+    :::column-end:::
+    :::column:::
+        WIDTH_BUCKET
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DETERMINISTIC
+    :::column-end:::
+    :::column:::
+        POSTFIX
+    :::column-end:::
+    :::column:::
+        WITHOUT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DICTIONARY
+    :::column-end:::
+    :::column:::
+        PREFIX
+    :::column-end:::
+    :::column:::
+        WINDOW
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DIAGNOSTICS
+    :::column-end:::
+    :::column:::
+        PREORDER
+    :::column-end:::
+    :::column:::
+        WITHIN
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DISCONNECT
+    :::column-end:::
+    :::column:::
+        PREPARE
+    :::column-end:::
+    :::column:::
+        WORK
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DOMAIN
+    :::column-end:::
+    :::column:::
+        PERCENT_RANK
+    :::column-end:::
+    :::column:::
+        WRITE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DYNAMIC
+    :::column-end:::
+    :::column:::
+        PERCENTILE_CONT
+    :::column-end:::
+    :::column:::
+        XMLAGG
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        EACH
+    :::column-end:::
+    :::column:::
+        PERCENTILE_DISC
+    :::column-end:::
+    :::column:::
+        XMLATTRIBUTES
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ELEMENT
+    :::column-end:::
+    :::column:::
+        POSITION_REGEX
+    :::column-end:::
+    :::column:::
+        XMLBINARY
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        END-EXEC
+    :::column-end:::
+    :::column:::
+        PRESERVE
+    :::column-end:::
+    :::column:::
+        XMLCAST
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        EQUALS
+    :::column-end:::
+    :::column:::
+        PRIOR
+    :::column-end:::
+    :::column:::
+        XMLCOMMENT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        EVERY
+    :::column-end:::
+    :::column:::
+        PRIVILEGES
+    :::column-end:::
+    :::column:::
+        XMLCONCAT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        EXCEPTION
+    :::column-end:::
+    :::column:::
+        RANGE
+    :::column-end:::
+    :::column:::
+        XMLDOCUMENT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        FALSE
+    :::column-end:::
+    :::column:::
+        READS
+    :::column-end:::
+    :::column:::
+        XMLELEMENT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        FILTER
+    :::column-end:::
+    :::column:::
+        real
+    :::column-end:::
+    :::column:::
+        XMLEXISTS
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        FIRST
+    :::column-end:::
+    :::column:::
+        RECURSIVE
+    :::column-end:::
+    :::column:::
+        XMLFOREST
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        FLOAT
+    :::column-end:::
+    :::column:::
+        REF
+    :::column-end:::
+    :::column:::
+        XMLITERATE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        FOUND
+    :::column-end:::
+    :::column:::
+        REFERENCING
+    :::column-end:::
+    :::column:::
+        XMLNAMESPACES
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        FREE
+    :::column-end:::
+    :::column:::
+        REGR_AVGX
+    :::column-end:::
+    :::column:::
+        XMLPARSE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        FULLTEXTTABLE
+    :::column-end:::
+    :::column:::
+        REGR_AVGY
+    :::column-end:::
+    :::column:::
+        XMLPI
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        FUSION
+    :::column-end:::
+    :::column:::
+        REGR_COUNT
+    :::column-end:::
+    :::column:::
+        XMLQUERY
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        GENERAL
+    :::column-end:::
+    :::column:::
+        REGR_INTERCEPT
+    :::column-end:::
+    :::column:::
+        XMLSERIALIZE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        GET
+    :::column-end:::
+    :::column:::
+        REGR_R2
+    :::column-end:::
+    :::column:::
+        XMLTABLE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        GLOBAL
+    :::column-end:::
+    :::column:::
+        REGR_SLOPE
+    :::column-end:::
+    :::column:::
+        XMLTEXT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        GO
+    :::column-end:::
+    :::column:::
+        REGR_SXX
+    :::column-end:::
+    :::column:::
+        XMLVALIDATE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        GROUPING
+    :::column-end:::
+    :::column:::
+        REGR_SXY
+    :::column-end:::
+    :::column:::
+        年
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        HOLD
+    :::column-end:::
+    :::column:::
+        REGR_SYY
+    :::column-end:::
+    :::column:::
+        ZONE
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另請參閱  
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  

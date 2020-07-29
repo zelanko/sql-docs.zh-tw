@@ -22,12 +22,12 @@ ms.assetid: e21fb33a-a3ea-49b0-bb6b-8f789a675a0e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91cdc1bc82a339b6554e40286cfe041338da4423
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5c27b44eeb93e7164344287ceb640c8a5734f650
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007920"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113038"
 ---
 # <a name="db_name-transact-sql"></a>DB_NAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,9 @@ ms.locfileid: "86007920"
 DB_NAME ( [ database_id ] )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
 *database_id*  
 
 `DB_NAME` 會傳回其名稱之資料庫的識別碼 (ID)。 如果 `DB_NAME` 呼叫省略 *database_id*，`DB_NAME` 會傳回目前資料庫的名稱。

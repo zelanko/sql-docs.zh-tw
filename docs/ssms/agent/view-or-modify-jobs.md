@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 57f649b8-190c-4304-abd7-7ca5297deab7
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 93a81e3cc2dc7990c2bbf0207e72d258923eae66
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 674f27ad2534f6cabb44402ee675aad844a5e26c
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257542"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245529"
 ---
 # <a name="view-or-modify-jobs"></a>檢視或修改作業
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
@@ -64,9 +63,8 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 ## <a name="related-tasks"></a>相關工作  
   
-|||  
+|描述|主題|  
 |-|-|  
-|**說明**|**主題**|  
 |說明如何檢視 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業。|[View a Job](../../ssms/agent/view-a-job.md)|  
 |說明如何檢視 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的歷程記錄。|[View the Job History](../../ssms/agent/view-the-job-history.md)|  
 |說明如何刪除 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的歷程記錄內容。|[Clear the Job History Log](../../ssms/agent/clear-the-job-history-log.md)|  

@@ -1,36 +1,37 @@
 ---
 title: azdata app template reference
+titleSuffix: SQL Server big data clusters
 description: azdata app template 命令的參考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: da1b98649eeb48d5ae2d6ca05e61da53f519e944
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 89b5436536d221364f967548bf4a5c4dd70a1ebd
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251048"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942960"
 ---
 # <a name="azdata-app-template"></a>azdata app template
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-下文提供 `azdata` 工具中 `app template` 命令的參考。 如需其他 `azdata` 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)
+下文提供 `azdata` 工具中 `sql` 命令的參考。 如需其他 `azdata` 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)。
 
 ## <a name="commands"></a>命令
-|     |     |
+| 命令 | 說明 |
 | --- | --- |
-[`azdata app template list`](#azdata-app-template-list) | 擷取支援的範本。
-[`azdata app template pull`](#azdata-app-template-pull) | 下載支援的範本。
+[azdata app template list](#azdata-app-template-list) | 擷取支援的範本。
+[azdata app template pull](#azdata-app-template-pull) | 下載支援的範本。
 ## <a name="azdata-app-template-list"></a>azdata app template list
 在指定的 [URL] GitHub 存放庫底下擷取支援的範本。
 ```bash
-azdata app template list [--url -u]
+azdata app template list [--url -u] 
+                         
 ```
 ### <a name="examples"></a>範例
 在預設的範本存放庫位置底下擷取所有範本。
@@ -52,7 +53,7 @@ azdata app template list --url https://github.com/diffrent/templates.git
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org)。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 ## <a name="azdata-app-template-pull"></a>azdata app template pull
@@ -60,7 +61,8 @@ JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespat
 ```bash
 azdata app template pull [--name -n] 
                          [--url -u]  
-                         [--destination -d]
+                         
+[--destination -d]
 ```
 ### <a name="examples"></a>範例
 在預設的範本存放庫位置底下下載所有範本。
@@ -91,7 +93,7 @@ azdata app template pull --name ssis
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org)。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 

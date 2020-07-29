@@ -10,16 +10,16 @@ ms.metadata: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 604292d548d9368439b810fa4dfebf2d4388929e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 25e200cf5a38a98289dcba91d08a1ce7c0cab340
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634952"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726731"
 ---
 # <a name="submit-spark-jobs-on-big-data-clusters-2019-in-intellij"></a>在 IntelliJ 中於 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上提交 Spark 作業
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]的其中一個主要案例是提交 Spark 作業的能力。 Spark 作業提交功能可讓您提交具有 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]參考的本機 Jar 或 Py 檔案。 也可讓您執行已位於 HDFS 檔案系統中的 Jar 或 Py 檔案。 
 

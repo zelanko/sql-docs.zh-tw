@@ -19,12 +19,12 @@ ms.assetid: c9fa8ae1-3373-4f3e-9b97-fa05077c1040
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86e2f212d2ca94be08db1cf223673bdbc4009bdd
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2d3ffd5e10b1301b8b02c2381b36cf186b947a35
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011509"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113585"
 ---
 # <a name="cos-transact-sql"></a>COS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,9 @@ ms.locfileid: "86011509"
 COS ( float_expression )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
 *float_expression*  
 一個 [float](../../t-sql/language-elements/expressions-transact-sql.md) 類型的**運算式**。
   

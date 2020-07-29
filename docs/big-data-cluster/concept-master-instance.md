@@ -9,16 +9,16 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0cb2f253f56fc58e215d1c800788294e2df7b0aa
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: f7199663209c2d9a0dc51baa0e6986f16722ef94
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606628"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773656"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>什麼是 SQL Server 巨量資料叢集中的主要執行個體？
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 本文說明 SQL Server 2019 巨量資料叢集中的「SQL Server 主要執行個體」角色。 主要執行個體是在巨量資料叢集中執行的 SQL Server 執行個體，可管理連線能力、向外延展查詢、中繼資料與使用者資料庫，以及機器學習服務。
 

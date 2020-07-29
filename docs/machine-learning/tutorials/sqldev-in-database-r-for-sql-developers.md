@@ -2,22 +2,22 @@
 title: R + T-SQL 教學課程：開發模型
 description: 了解如何在 SQL Server 預存程序和 T-SQL 函數中內嵌 R 程式設計語言程式碼。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9669b2c38d2e8b571ef7e519100b13cf5a63a10d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: a27bd044dbdca7a05663080be08ebaff1acb86d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115981"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785599"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>教學課程：適用於 SQL 開發人員的 R 資料分析
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 這堂專供 SQL 程式設計師參加的教學課程，將說明如何使用 SQL Server 上的 [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) 資料庫來建置和部署 R 機器學習解決方案，以了解 R 整合。 您會使用 T-SQL、SQL Server Management Studio，以及具有[機器學習服務](../install/sql-machine-learning-services-windows-install.md)和 R 語言支援的資料庫引擎執行個體
 

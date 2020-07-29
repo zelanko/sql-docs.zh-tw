@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 000707710b01251741fc8594e580aba8a151b628
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ad86aa823fc10827e8f0d11aaf36ae10fc0622bf
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914572"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112557"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -56,10 +56,23 @@ ms.locfileid: "86914572"
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-|||||
-|-|-|-|-|
-|**_\* SQL Server \*_** &nbsp;| [SQL Database<br />單一資料庫/彈性集區](create-database-transact-sql.md?view=azuresqldb-current) | [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current) | [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
-|||||
+:::row:::
+    :::column:::
+        **_\* SQL Server \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />單一資料庫/彈性集區](create-database-transact-sql.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -849,9 +862,23 @@ GO
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
-> |||||
-> |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| **_\* SQL Database<br />單一資料庫/彈性集區 \*_** | [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current) | [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+:::row:::
+    :::column:::
+        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        **_\* SQL Database<br />單一資料庫/彈性集區 \*_**
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -1241,9 +1268,23 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> |||||
-> |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />單一資料庫/彈性集區](create-database-transact-sql.md?view=azuresqldb-current)| **_\* SQL Database<br />受控執行個體 \*_** | [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+:::row:::
+    :::column:::
+        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />單一資料庫/彈性集區](create-database-transact-sql.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        **_\* SQL Database<br />受控執行個體 \*_**
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -1311,9 +1352,23 @@ CREATE DATABASE TestDB1;
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
-> |||||
-> |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />單一資料庫/彈性集區](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current)| **_\* Azure Synapse<br />Analytics \*_**| [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+:::row:::
+    :::column:::
+        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />單一資料庫/彈性集區](create-database-transact-sql.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        **_\* Azure Synapse<br />Analytics \*_**
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -1422,9 +1477,23 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-> |||||
-> |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />單一資料庫/彈性集區](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics Platform<br />System (PDW) \*_** |
+:::row:::
+    :::column:::
+        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />單一資料庫/彈性集區](create-database-transact-sql.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
+    :::column-end:::
+    :::column:::
+        **_\* Analytics Platform<br />System (PDW) \*_**
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 

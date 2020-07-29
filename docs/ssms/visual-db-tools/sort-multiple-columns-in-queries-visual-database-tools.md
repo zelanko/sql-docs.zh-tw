@@ -11,17 +11,16 @@ helpviewer_keywords:
 ms.assetid: 5057a6ee-3ca8-4734-9e96-592b24624c55
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 84d6f39736839a36baba504b41cb069bc6b8713c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c9956d8df5d1445581f149073bff1c2b3bc39397
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255025"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000482"
 ---
 # <a name="sort-multiple-columns-in-queries-visual-database-tools"></a>排序查詢中的多個資料行 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 您可以藉由使用 **準則窗格** 中的 [排序次序](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)，指定排序資料時要使用之資料行的次序。  
   
 ### <a name="to-sort-query-results-by-more-than-one-column"></a>若要使用一個以上的資料行排序查詢結果  

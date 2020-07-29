@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 949f6e5f-bf5f-49d6-a763-c443d1d51fe2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 24f7edd211a2668809f47af2ed964d94da93c961
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d4eb54d5762466b19f83c1e03ce3194e1d996b19
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895134"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112061"
 ---
 # <a name="current_request_id-transact-sql"></a>CURRENT_REQUEST_ID (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85895134"
 ```sql
 CURRENT_REQUEST_ID()  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-types"></a>傳回類型
 **smallint**
   

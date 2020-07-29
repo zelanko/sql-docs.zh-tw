@@ -12,17 +12,16 @@ f1_keywords:
 ms.assetid: 0d9516bb-4ad3-4fcf-bb77-93474dea698f
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: cff110d8eccc22ac9c6705420c845713bfffdb74
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d049e23db7020ca84c4cec1e4ddc1ba5bbe84b4d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75224667"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011714"
 ---
 # <a name="join-dialog-box-visual-database-tools"></a>聯結對話方塊 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 使用此對話方塊可指定聯結資料表的選項。 若要存取此對話方塊，請在 [設計]  窗格中選取聯結線 (Join Line)。 然後，在 [屬性]  視窗中按一下 [聯結條件及類型]  ，並按一下顯示在屬性右邊的省略符號 **(...)** 。  
   
 依照預設，是使用根據包含聯結資料行中符合資訊資料列來建立結果集的內部聯結，將關聯資料表聯結在一起。 藉由設定 [聯結]  對話方塊中的選項，可以根據不同的運算子指定聯結，也可以指定外部聯結。  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2ac837c7-eca9-4d29-b06e-72e30450c68d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 437b69ca7a8c06a4f19b5c4c76e3c7327d978960
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 59f2044a1f7c23f5cb5c81dedf134eab69b880f5
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784355"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110398"
 ---
 # <a name="object_definition-transact-sql"></a>OBJECT_DEFINITION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,9 @@ ms.locfileid: "85784355"
 OBJECT_DEFINITION ( object_id )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  object_id   
  這是所要使用的物件識別碼。 *object_id* 為 **int**，並會用來代表目前資料庫內容中的物件。  
   

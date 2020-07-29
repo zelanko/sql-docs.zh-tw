@@ -2,22 +2,22 @@
 title: R 教學課程：特徵設計
 description: 本教學課程會示範如何使用 SQL Server 函數進行資料庫內分析來建立資料特徵。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 67d2c0bf73e24bc3f70e94cd6cf7ce94d13e5297
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 8ae7adc2285a9888778a1d0d560f36e64bafcef0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115761"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781800"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>使用 R 和 SQL Server 來建立資料特徵 (逐步解說)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 資料工程是機器學習服務的重要部分。 資料通常必須先進行轉換，才能用於預測模型。 如果資料沒有您所需的特徵，您就能從現有的值加以建立。
 

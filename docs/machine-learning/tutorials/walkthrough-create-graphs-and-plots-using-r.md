@@ -2,22 +2,22 @@
 title: R 教學課程：建立圖表及繪圖
 description: 示範如何在 SQL Server 上使用 R 語言函數建立圖表和繪圖的教學課程。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 34ec0c2814dda7d2cf4bada10e5e53c05f8e08b9
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 491c85f0f5c3a9532c6c196e14f49a06998e387e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115741"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781816"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>使用 SQL 和 R 建立圖表和繪圖 (逐步解說)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 在本逐步解說的這個部份中，您將學習使用 R 與 SQL Server 資料產生繪圖和地圖的技巧。 您將建立簡單的長條圖，接著再開發更複雜的地圖繪圖。
 

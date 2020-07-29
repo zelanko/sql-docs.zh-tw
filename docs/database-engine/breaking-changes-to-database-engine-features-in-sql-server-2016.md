@@ -3,7 +3,7 @@ title: 資料庫引擎：重大變更 | Microsoft Docs
 titleSuffix: SQL Server 2016
 description: 了解升級時 SQL Server 2016 (13.x) 及更早版本中可能會中斷先前版本功能的資料庫引擎變更。
 ms.custom: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 07/22/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8c6dad3c9ec55f9e895cc9f7ed430ed5816a73a8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bddfd0b06bfc64d68534548cfb90ea09ed2d4076
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751261"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87235981"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 資料庫引擎功能的重大變更
 
@@ -40,7 +40,7 @@ ms.locfileid: "85751261"
 
 ## <a name="previous-versions"></a><a name="previous-versions"></a> 舊版  
 
-如需 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 和某些舊版的重大變更相關資訊，請參閱 [SQL Server 2014 中對於資料庫引擎功能的重大變更](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)。
+如需 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 和某些舊版的重大變更相關資訊，請參閱 [SQL Server 2014 中對於資料庫引擎功能的重大變更](/previous-versions/sql/2014/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016)。
 
 #### <a name="archived-documentation-for-very-old-versions-of-sql-server"></a>非常舊版的 SQL Server 封存文件
 

@@ -5,16 +5,16 @@ description: 本文說明如何設定 HDFS 階層處理，以將外部 Azure Dat
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 11/05/2019
+ms.date: 06/29/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 543db5b96f9a2b02d579b7b6686049ff19af99d7
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: b0206ca193e6c03624c0d40d0c66e7474b00a7a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606520"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730651"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>如何在巨量資料叢集中掛接 ADLS Gen2 以進行 HDFS 階層處理
 
@@ -48,7 +48,7 @@ ms.locfileid: "83606520"
 1. 從右側導覽列中選取 [應用程式註冊]，然後建立新的註冊
 1. 建立 Web 應用程式並遵循精靈。 **請記下您此處建立之用程式的稱**。 您必須將此名稱新增至您的 ADLS 帳戶作為授權使用者。 另請記下您選取此應用時，概觀中顯示的應用程式用戶端識別碼。
 1. 建立 Web 應用程式之後，請移至 [憑證及密碼] 並建立**新的用戶端密碼**，然後選取金鑰期間。 **新增**此密碼。
-1.     返回 [應用程式註冊] 頁面，然後按一下頂端的 [端點]。 **記下 OAuth 權杖端點 (v2)** URL
+1. 返回 [應用程式註冊] 頁面，然後按一下頂端的 [端點]。 **記下 OAuth 權杖端點 (v2)** URL
 1. 您現在應該已記下 OAuth 的下列項目：
 
     - Web 應用程式的「應用程式用戶端識別碼」
@@ -71,13 +71,13 @@ ms.locfileid: "83606520"
 
 **請注意**，提供認證時，請務必移除逗號 "," 之間的所有分行符號或空格。 下列格式比較容易閱讀。
 
-   ```text
-    set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
-    fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
-    fs.azure.account.oauth2.client.endpoint=[token endpoint],
-    fs.azure.account.oauth2.client.id=[Application client ID],
-    fs.azure.account.oauth2.client.secret=[client secret]
-   ```
+```console
+   set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
+   fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
+   fs.azure.account.oauth2.client.endpoint=[token endpoint],
+   fs.azure.account.oauth2.client.id=[Application client ID],
+   fs.azure.account.oauth2.client.secret=[client secret]
+```
 
 ## <a name="use-access-keys-to-mount"></a>使用存取金鑰來掛接
 
@@ -94,10 +94,10 @@ ms.locfileid: "83606520"
 
 **請注意**，提供認證時，請務必移除逗號 "," 之間的所有分行符號或空格。 下列格式比較容易閱讀。
 
-   ```text
-   set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
-   fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
-   ```
+```console
+set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
+fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
+```
 
 ## <a name="mount-the-remote-hdfs-storage"></a><a id="mount"></a> 掛接遠端 HDFS 儲存體
 

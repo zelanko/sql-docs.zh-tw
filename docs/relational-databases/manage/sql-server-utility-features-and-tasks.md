@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c48779de7f7edccd4401e1d60740b7cff6a046cd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2378ecd42d821a818a539350f872ed0d12099a8d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755696"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242959"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>SQL Server 公用程式的功能與工作
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +40,8 @@ ms.locfileid: "85755696"
 ## <a name="related-tasks"></a>相關工作  
  若要開始使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式，請使用下列主題。  
   
-|||  
+|描述|主題|  
 |-|-|  
-|**說明**|**主題**|  
 |描述設定伺服器在相同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上執行公用程式和非公用程式收集組的考量。|[在相同 SQL Server 執行個體上執行公用程式和非公用程式收集組的考量](../../relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md)|  
 |描述如何建立 SQL Server 公用程式控制點。|[建立 SQL Server 公用程式控制點 &#40;SQL Server 公用程式&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)|  
 |描述如何連接至 SQL Server 公用程式。|[連接至 SQL Server 公用程式](../../relational-databases/manage/connect-to-a-sql-server-utility.md)|  

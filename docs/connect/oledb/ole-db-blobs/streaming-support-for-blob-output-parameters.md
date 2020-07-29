@@ -12,15 +12,15 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, BLOBs
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 0ff6386f1d2f953b2e28641edf7330ba85b9a19d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 00651e62fbd70c97c783473bfc41421a76cb5e8f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67936519"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006789"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>BLOB 輸出參數的串流支援
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

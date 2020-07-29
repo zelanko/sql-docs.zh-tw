@@ -20,18 +20,17 @@ helpviewer_keywords:
 ms.assetid: 71cb432b-631d-4b8b-9965-e731b3d8266d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0fdb46ddca31f870363385bef70adde37a7a36ef
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b4bfe163fb1f3ffe4eb5b5203bfced15f43069de
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252363"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87237358"
 ---
 # <a name="monitor-job-activity"></a>監視作業活動
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
@@ -62,9 +61,8 @@ ms.locfileid: "75252363"
   
 ## <a name="related-tasks"></a>相關工作  
   
-|||  
-|-|-|  
-|**說明**|**主題**|  
+|描述|主題|  
+|-|-|   
 |描述如何檢視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的執行階段狀態。|[View Job Activity](../../ssms/agent/view-job-activity.md)|  
   
 ## <a name="see-also"></a>另請參閱  

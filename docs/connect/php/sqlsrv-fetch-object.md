@@ -15,14 +15,14 @@ helpviewer_keywords:
 - API Reference, sqlsrv_fetch_object
 - retrieving data, as an object
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 36c0ae99e38da83e3d534423b8a09ba9e198ce3e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 90d900af5fe86862ad59df61d4640e38797c0a01
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67992745"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893176"
 ---
 # <a name="sqlsrv_fetch_object"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +32,6 @@ ms.locfileid: "67992745"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, row[, ]offset]]])  
 ```  
   
@@ -81,17 +80,21 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
   
 如果傳回沒有名稱的欄位，則 **sqlsrv_fetch_object** 會捨棄欄位值，並發出警告。 例如，請考量下列將值插入資料庫資料表中，並擷取伺服器產生之主索引鍵的 Transact-SQL 陳述式：  
   
-<pre>INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);  
-SELECT SCOPE_IDENTITY()</pre>  
+```sql
+INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);  
+SELECT SCOPE_IDENTITY()
+```
   
 如果以 **sqlsrv_fetch_object**擷取此查詢所傳回的結果， `SELECT SCOPE_IDENTITY()` 所傳回的值將會被捨棄，並且會發出警告。 若要避免此狀況，您可以在 Transact-SQL 陳述式中為傳回的欄位指定名稱。 以下是在 Transact-SQL 中指定資料行名稱的方式之一：  
   
-`SELECT SCOPE_IDENTITY() AS PictureID`  
+```sql
+SELECT SCOPE_IDENTITY() AS PictureID
+```
   
 ## <a name="example"></a>範例  
 下列範例會以 PHP 物件的形式，擷取結果集的每個資料列。 此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
-```  
+``` 
 <?php  
 /* Connect to the local server using Windows Authentication and  
 specify the AdventureWorks database as the database in use. */  
@@ -234,12 +237,16 @@ sqlsrv_close( $conn);
   
 如果傳回沒有名稱的欄位，則 **sqlsrv_fetch_object** 會捨棄欄位值，並發出警告。 例如，請考量下列將值插入資料庫資料表中，並擷取伺服器產生之主索引鍵的 Transact-SQL 陳述式：  
   
-<pre>INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);  
-SELECT SCOPE_IDENTITY()</pre>  
+```sql
+INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);  
+SELECT SCOPE_IDENTITY()
+```
   
 如果以 **sqlsrv_fetch_object**擷取此查詢所傳回的結果， `SELECT SCOPE_IDENTITY()` 所傳回的值將會被捨棄，並且會發出警告。 若要避免此狀況，您可以在 Transact-SQL 陳述式中為傳回的欄位指定名稱。 以下是在 Transact-SQL 中指定資料行名稱的方式之一：  
   
-`SELECT SCOPE_IDENTITY() AS PictureID`  
+```sql
+SELECT SCOPE_IDENTITY() AS PictureID
+```
   
 ## <a name="see-also"></a>另請參閱  
 [擷取資料](../../connect/php/retrieving-data.md)  

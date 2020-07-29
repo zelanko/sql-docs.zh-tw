@@ -2,22 +2,22 @@
 title: Python + T-SQL：資料特徵
 description: 此教學課程示範如何將計算新增至預存程序，以便在 Python 機器學習模型中使用。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: eb7f7b271c49922698058e396b69b91444c5b65a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 98a1ca3b012c5580e55dd6ea963c3869269f7136
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115921"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775343"
 ---
 # <a name="create-data-features-using-t-sql"></a>使用 T-SQL 建立資料特徵
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 瀏覽資料之後，您已從資料收集一些深入資訊，並準備好繼續進行「特徵工程」  。 從原始資料建立特徵的這個程序，會是建立進階分析模型的重要步驟。
 

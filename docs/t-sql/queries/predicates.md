@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ddbc530c-f44d-4551-9ca3-3430258eb6c0
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 92a1535156e4190238dad6a3274f684053b73ddf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 589eae77ae9d13befdf4f143142dd9dcaa67acd0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706022"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248700"
 ---
 # <a name="predicates"></a>述詞
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,13 +35,23 @@ ms.locfileid: "85706022"
   
 ## <a name="in-this-section"></a>本節內容  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供下列述詞。  
-  
-||  
-|-|  
-|[CONTAINS](../../t-sql/queries/contains-transact-sql.md)|  
-|[FREETEXT](../../t-sql/queries/freetext-transact-sql.md)|  
-|[IS &#91;NOT&#93; NULL](../../t-sql/queries/is-null-transact-sql.md)|  
-  
+
+:::row:::
+    :::column:::
+        [CONTAINS](../../t-sql/queries/contains-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [IS &#91;NOT&#93; NULL](../../t-sql/queries/is-null-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另請參閱  
  [BETWEEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/between-transact-sql.md)   
  [EXISTS &#40;Transact-SQL&#41;](../../t-sql/language-elements/exists-transact-sql.md)   

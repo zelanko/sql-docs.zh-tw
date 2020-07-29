@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 25c6f3f5-aaef-42a5-ad00-1786436db2a6
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: c01de70d549df0bcee801aac8fe2d58b11f4a8e1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7cb133b36d804a3d5a32906e2de735df20fb113f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245343"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999538"
 ---
 # <a name="arrange-tables-in-diagrams-visual-database-tools"></a>排列圖表中的資料表 (Visual Database Tools)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 您可快速地排列資料庫圖表中的資料表，以清楚地查看每個資料表與關聯性。  
   

@@ -5,19 +5,18 @@ ms.topic: conceptual
 ms.custom: seo-dt-2019
 ms.date: 09/17/2017
 ms.prod: sql
-ms.technology: ''
-ms.prod_service: database-engine
+ms.technology: release-landing
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: 769c421c087de366ec262c3e5b8744ffb78f3ba6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d0f2bb38923f52edd8f1dae3410d29c7d4babc95
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75656751"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923054"
 ---
 # <a name="sql-server-development-partners"></a>SQL Server 開發夥伴
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 如需開發 SQL Server 資料庫解決方案的支援，您有各種領先業界的工具可以選擇。  本文章特別介紹提供 Microsoft SQL Server 開發解決方案的 Microsoft 夥伴公司。
 
 ## <a name="our-development-partners"></a>我們的開發夥伴

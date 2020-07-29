@@ -1,6 +1,6 @@
 ---
 title: sys.databases fn_PageResCracker （Transact-sql） |Microsoft Docs
-description: Sys. fn_PageResCracker 系統函數的檔。
+description: 瞭解 sys.databases fn_PageResCracker 系統函數。 請參閱範例，並查看其他可用的資源。
 ms.custom: ''
 ms.date: 09/18/2018
 ms.prod: sql
@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: bluefooted
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: 460f1990a7020d7a57ea7ad543f3253576756d05
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a48b5ba06223130a83980bf6cf8ec410bd58e5a1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790433"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247577"
 ---
 # <a name="sysfn_pagerescracker-transact-sql"></a>sys.databases fn_PageResCracker （Transact-sql）
 [!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]

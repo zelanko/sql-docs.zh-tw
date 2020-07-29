@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1f3730b4-1495-4d3a-af43-e57952812df9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1083504e4b3075a3e3ec8429c1ab0b5a664f2998
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 59136d840df4bedb56f9b68f19bca28f2508ff1e
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85714943"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112315"
 ---
 # <a name="sessionproperty-transact-sql"></a>SESSIONPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,9 @@ ms.locfileid: "85714943"
 SESSIONPROPERTY (option)  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *選項*  
  這是此工作階段的目前選項設定。 *option* 可以是下列值之一。  
   

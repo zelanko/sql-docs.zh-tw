@@ -8,16 +8,16 @@ ms.date: 12/19/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1cc2a7778100be5c919c86a4c949d5aeb784d8e5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a3121351fce1ef6c86575789cee5dbb2860ce3c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76265990"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728812"
 ---
 # <a name="manually-update-azdata_password"></a>手動更新 `AZDATA_PASSWORD`
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 無論叢集是否使用 Active Directory 整合來運作，`AZDATA_PASSWORD` 都是在部署期間設定。 其提供叢集控制器與主要執行個體的基本驗證。 此文件說明如何手動更新 `AZDATA_PASSWORD`。
 

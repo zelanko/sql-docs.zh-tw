@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 014e4854-fed2-454b-8557-5f7c5bb6b17a
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: a0430897aa54a57637cac6eb7c3b99246b0cedfe
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: da9833c29c081d4b81e4ac680f284d1be2771347
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151947"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775031"
 ---
 # <a name="name-element-for-schema-dta"></a>結構描述的 Name 元素 (DTA)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 包含結構描述的名稱。  
   

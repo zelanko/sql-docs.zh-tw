@@ -2,23 +2,23 @@
 title: 為資料整頓工作產生程式碼
 titleSuffix: Azure Data Studio
 description: 本文說明如何使用 Azure Data Studio 中的 PROSE Code Accelerator，為常見的資料整頓工作自動產生程式碼。
-author: MikeRayMSFT
-ms.author: mikeray
+author: dphansen
+ms.author: davidph
 ms.reviewer: mihaelab
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: big-data-cluster
-ms.openlocfilehash: e21c172bf886695a3d424d25907a0c36e4b22f20
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.technology: machine-learning-bdc
+ms.openlocfilehash: 548db45e97fed2a5d955eef947c6d21004d439d2
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67957689"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243439"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>使用 PROSE Code Accelerator 進行資料整頓
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 PROSE Code Accelerator 會為您的資料整頓工作產生可讀取的 Python 程式碼。 當您在 Azure Data Studio 的筆記本中工作時，您可以順暢地將產生的程式碼與手寫的程式碼融合在一起。 本文提供如何使用 Code Accelerator 的概觀。
 
@@ -113,8 +113,8 @@ builder.learn().code()
 另一個常見的案例是在字串資料行中偵測模式，以便清除或分組。 例如，您可能有一個日期資料行，其中包含多種不同格式的日期。 若要將值標準化，您可能需要使用規則運算式來撰寫條件陳述式。
 
 
-|   |名稱                      |BirthDate      |
-|---|:-------------------------|:--------------|
+|資料列|名稱                      |BirthDate      |
+|--:|:-------------------------|:--------------|
 | 0 |Bertram du Plessis        |1995           |
 | 1 |Naiara Moravcikova        |Unknown        |
 | 2 |Jihoo Spel                |2014           |

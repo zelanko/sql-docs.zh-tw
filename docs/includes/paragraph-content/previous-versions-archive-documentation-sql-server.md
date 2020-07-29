@@ -5,16 +5,17 @@
 
 這些封存檔至少包含下列舊版的文件：
 
+- SQL Server 2014
 - SQL Server 2012
 - SQL Server 2008 R2
 - SQL Server 2008
 - SQL Server 2005
 
-我們的主要 Docs 位址仍然提供 [SQL Server 2014文件](https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014)。
+我們的主要 Docs 位址仍然提供 [SQL Server 2014文件](/previous-versions/sql/2014/index?view=sql-server-2014)。
 
 我們的主要 Docs 位址提供 [SQL Server 2019文件](https://docs.microsoft.com/sql/sql-server?view=sql-server-ver15)。 接著使用頁面頂端附近的版本設定下拉式清單，選取另一個感興趣的版本。
 
-如需舊版 SQL Server 文件的詳細資訊，請參閱[舊版 SQL Server 文件](/sql/toc/previous-versions-sql-server)。
+如需舊版 SQL Server 文件的詳細資訊，請參閱[舊版 SQL Server 文件](/previous-versions/sql/)。
 
 <!-- GM:
 On links to file 'previous-versions-sql-server.md', append 

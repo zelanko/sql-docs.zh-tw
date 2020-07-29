@@ -4,21 +4,21 @@ description: 針對不熟悉 R 或 SQL Server 使用者，了解有關在 SQL Se
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/06/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9a8402432904e724c0eee769f0f899ff12498ac8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: ad2650317958ffd43b0f4b910585d429249115b3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117951"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730541"
 ---
 # <a name="tips-for-using-r-packages"></a>使用 R 套件的祕訣
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 本文提供有關在 SQL Server 中使用 R 套件的實用秘訣。 這些秘訣適用於不熟悉 R 的 DBA，以及不熟悉 SQL Server 執行個體中之套件存取的有經驗 R 開發人員。
 
@@ -93,6 +93,6 @@ library("c:/Users/<username>/R/win-library/packagename")
 ::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
 + [使用 R 工具來安裝套件](install-r-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 + [使用 sqlmlutils 來安裝新的 R 套件](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

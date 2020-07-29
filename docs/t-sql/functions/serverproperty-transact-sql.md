@@ -23,12 +23,12 @@ ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 97979dbef582835c5fcb8a8e3ec04fdf99b5d205
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ba9181d1b34bf39711dac702a11687b3ca38f604
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003666"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113358"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 
@@ -47,7 +47,9 @@ SERVERPROPERTY ( 'propertyname' )
 > [!IMPORTANT]
 > SQL Server 和 Azure SQL Database 的資料庫引擎版本號碼無法彼此相互比較，且更像是這些個別產品的內部組建編號。 Azure SQL Database 資料庫引擎是以和 SQL Server 資料庫引擎相同的程式碼基底作為基礎。 最重要的是，Azure SQL Database 資料庫引擎一律具有最新的 SQL 資料庫引擎位元。 Azure SQL Database 版本 12 比 SQL Server 版本 15 更新。
 
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
 
 *propertyname*  
 這是包含要傳回伺服器之屬性資訊的運算式。 *propertyname* 可以是下列值之一。  

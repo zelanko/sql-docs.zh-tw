@@ -16,17 +16,16 @@ helpviewer_keywords:
 ms.assetid: a7de7a87-4249-49bd-863d-dc0b40a49e78
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: d6de3eef6b6903786a0edf3230f5500032d8cd89
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a8b69a12cd11006b00cabcffd6b3c2f6112bffc5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255218"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999460"
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>移除查詢結果的資料行 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 如果在選取查詢中使用資料行，但不要此資料行顯示於結果集 (也就是說，不要它出現在查詢的選取清單)，您可以將它從輸出中移除。 從查詢的輸出移除資料行後，仍可以在搜尋條件中使用它或做為排序欄位。  
   
 > [!NOTE]  

@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 24933338-3a47-44c0-87fc-c3dca8faf4de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7be77c2ce856a1940197a7b1d52550beac011e4b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a3d41b6e48a9b5125b661d2bbfc5dbc6b3a7fe3b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252335"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008064"
 ---
 # <a name="options-environment---help---online-page"></a>選項 (環境 - 說明 - 線上頁面)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [選項]  對話方塊可以讓您指定用於 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 搜尋的說明來源，包括 F1 說明。 在 [工具]  功能表上，按一下 [選項]  、展開 [環境]  資料夾、選取 [說明]  ，然後按一下 [線上]  。 如果 [線上]  頁面未出現在清單中，請在 [選項]  對話方塊中選取 [顯示所有設定]  核取方塊。  
   
 **載入說明內容時**  

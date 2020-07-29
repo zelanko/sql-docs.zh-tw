@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: b07082d5-4d55-4903-9af9-4c470554c6d3
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 508c7561dc77f375375e174d68d3955e044ae4ee
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 743b0ea95643555136ee5c785a1aea689ebb6d50
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247201"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011736"
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>群組查詢結果中的資料列 (Visual Database Tools)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 如果您要建立小計，或顯示資料表子集的其他摘要資訊，請使用彙總查詢 (Aggregate Query) 建立群組。 每個群組都會針對資料表中具有相同值的所有資料列摘要資料。  
   
 例如，您可能想查看 `titles` 資料表中某本書的平均價格，但是想依照簽發者顯示結果。 若要這麼做，請依照簽發者將查詢分組 (例如， `pub_id`)。 結果查詢輸出可能如下所示：  

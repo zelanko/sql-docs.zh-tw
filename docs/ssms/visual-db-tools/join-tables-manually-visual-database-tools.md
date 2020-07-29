@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 9c785356-646b-4c87-82d4-25efd6051d9d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 7bf66542a0176f991d6b7cfaf4653379af2912e4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b34c28fbbf015c9de92fd8b4b0585b871e4aa364
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75224626"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85996890"
 ---
 # <a name="join-tables-manually-visual-database-tools"></a>手動聯結資料表 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 在新增兩個 (或更多) 資料表至查詢時， [查詢和檢視表設計工具](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) 會根據通用資料或資料庫中所儲存有關資料表關聯方式的資訊，聯結這些資料表。 如需詳細資料，請參閱[自動聯結資料表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md)。 不過，如果 [查詢和檢視設計師] 尚未自動聯結資料表，或者想要在資料表間建立額外的聯結，則可以手動聯結資料表。  
   
 可以根據任兩個資料行間的比較來建立聯結，而不只是根據包含相同資訊的資料行。 例如，如果資料庫包含兩個資料表 `titles` 和 `roysched`，則可以比較 `ytd_sales` 資料表的 `titles` 資料行與 `lorange` 資料表的 `hirange` 和 `roysched` 資料行的值。 建立此聯結將可讓您找到年度迄今的版稅支出落於低和高範圍之間的書名。  
