@@ -11,17 +11,16 @@ helpviewer_keywords:
 ms.assetid: 696a080d-848f-44d3-a918-e29bafaab85a
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: f3b3719ae80dca63f8755e3c2a57179e219e1414
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1936f889e349f4ecf325c224e2afb76d18f6e451
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254287"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000045"
 ---
 # <a name="create-queries-visual-database-tools"></a>建立查詢 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 查詢可讓您從資料庫的資料表和檢視中擷取資料。 您可以在查詢和檢視表設計工具  中建立並使用查詢，這包含四個窗格：[[圖表] 窗格](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)、[[SQL] 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)、[[準則] 窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)及 [[結果] 窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)。  
   
 ### <a name="to-create-a-new-query"></a>若要建立新的查詢  

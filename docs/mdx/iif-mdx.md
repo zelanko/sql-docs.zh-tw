@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 87b7b030776c1c18bb13307bf97db721fe472bd3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ca6449308f9683bccf55e58d9cec6d5d5a97a59e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105329"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247132"
 ---
 # <a name="iif-mdx"></a>IIf (MDX)
 
@@ -28,7 +28,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
 ```  
   
 ## <a name="arguments"></a>引數  
- IIf 函式接受三個引數：\<IIf （條件\<>，then 分支\<>，否則為分支>）。  
+ IIf 函數接受三個引數： IIf （ \<condition> ， \<then branch> ， \<else branch> ）。  
   
  *Logical_Expression*  
  評估為**true** （1）或**false** （0）的條件。 它必須是有效的多維度運算式 (MDX) 邏輯運算式。  
@@ -63,7 +63,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  EAGER 和 STRICT 在提示中互斥，它們可以在不同的運算式中，用於相同的 IIF(,,)。  
   
- 如需詳細資訊，請參閱[SQL Server Analysis Services 2008 中的 IIF 函數查詢提示](https://go.microsoft.com/fwlink/?LinkId=269540)和[MDX IIF 函數和 CASE 語句的執行計畫和計畫提示](https://go.microsoft.com/fwlink/?LinkId=269565)。  
+ 如需詳細資訊，請參閱[SQL Server Analysis Services 2008 中的 IIF 函數查詢提示](http://www.ssas-info.com/analysis-services-articles/50-mdx/1103-iif-function-query-hints-in-sql-server-analysis-services-2008)和[MDX IIF 函數和 CASE 語句的執行計畫和計畫提示](https://go.microsoft.com/fwlink/?LinkId=269565)。  
   
 ## <a name="examples"></a>範例  
  下列查詢顯示在計算量值內使用**IIF**來傳回兩個不同字串值的其中一個（當量值網際網路銷售量大於或小於 $10000 時）：  

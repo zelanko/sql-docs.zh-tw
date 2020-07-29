@@ -2,21 +2,21 @@
 title: Azure Data Studio 筆記本 (Python、R)
 description: 了解如何使用 SQL Server 機器學習服務在 Azure Data Studio 的筆記本中執行 Python 和 R 指令碼。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/09/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4b6bb16013b75765ee5fdf6b1b52ab0bd65de37f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 1c5e16667f311c3afff9b2ada9e17c8ffe3751c2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487563"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916624"
 ---
 # <a name="run-python-and-r-scripts-in-azure-data-studio-notebooks-with-sql-server-machine-learning-services"></a>使用 SQL Server 機器學習服務在 Azure Data Studio 筆記本中執行 Python 和 R 指令碼
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 了解如何使用 [SQL Server 機器學習服務](https://docs.microsoft.com/sql/azure-data-studio/what-is)在 [Azure Data Studio](../sql-server-machine-learning-services.md) 筆記本中執行 Python 和 R 指令碼。 Azure Data Studio 是跨平台的資料庫工具。
 
@@ -26,11 +26,9 @@ ms.locfileid: "81487563"
 
 - 已安裝並啟用 SQL Server 機器學習服務的伺服器。 您可以在 Windows、Linux 或巨量資料叢集上使用機器學習服務：
 
-    - [在 Windows 上安裝 SQL Server 機器學習服務](sql-machine-learning-services-windows-install.md)。
-
-    - [在 Linux 上安裝 SQL Server 機器學習服務](../../linux/sql-server-linux-setup-machine-learning.md)。
-
-    - [對安裝有機器學習服務的 SQL Server 巨量資料叢集執行 Python 與 R 指令碼](../../big-data-cluster/machine-learning-services.md)。
+  - [在 Windows 上安裝 SQL Server 機器學習服務](sql-machine-learning-services-windows-install.md)。
+  - [在 Linux 上安裝 SQL Server 機器學習服務](../../linux/sql-server-linux-setup-machine-learning.md)。
+  - [對安裝有機器學習服務的 SQL Server 巨量資料叢集執行 Python 與 R 指令碼](../../big-data-cluster/machine-learning-services.md)。
 
 ## <a name="create-a-sql-notebook"></a>建立 SQL 筆記本
 
@@ -125,5 +123,7 @@ SQL 筆記本包含程式碼和文字資料格。 程式碼資料格可用來透
 
 ## <a name="next-steps"></a>後續步驟
 
+- [如何在 Azure Data Studio 中使用筆記本](../../azure-data-studio/notebooks-guidance.md)
+- [建立並執行 SQL Server 筆記本](../../azure-data-studio/notebooks-tutorial-sql-kernel.md)
 - [快速入門：使用 SQL Server 機器學習服務來執行簡單的 Python 指令碼](../tutorials/quickstart-python-create-script.md)
 - [快速入門：使用 SQL Server 機器學習服務來執行簡單的 R 指令碼](../tutorials/quickstart-r-create-script.md)

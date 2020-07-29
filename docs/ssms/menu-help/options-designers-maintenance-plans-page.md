@@ -12,18 +12,18 @@ f1_keywords:
 ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e1a6da50988a372514cf613f16896aea966fd153
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9cf4513c4094798f72b6e3f5012fd47afb29bdae
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245756"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001627"
 ---
 # <a name="options-designers---maintenance-plans-page"></a>選項 (設計工具 - 維護計畫頁面)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 使用 [選項]  對話方塊以決定將新形狀新增至設計介面時，設計工具的預設行為。 在 [工具]  功能表上按一下 [選項]  ，展開 [設計工具]  ，然後選取 [維護計畫]  。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
 **依預設，會將新形狀連接到選取的形狀**  
 如果選取此核取方塊，當新形狀加入到設計介面時會自動連接到其他的形狀。 如果清除此核取方塊，加入新形狀時就不會連接。 選取此核取方塊來啟用下列方塊。  
   

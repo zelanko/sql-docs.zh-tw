@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5b61b32ab266c4068f610b9138bf3fc8ea364f0e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9e9ecc82ab14bf73ab52219301ca5843673b3ba4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245695"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001579"
 ---
 # <a name="local-audit-for-ssms-usage-and-diagnostic-data-collection"></a>SSMS 使用方式和診斷資料收集的本機稽核
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 SQL Server Management Studio (SSMS) 包含使用已連線到網際網路的功能，可收集匿名的功能使用方式和診斷資料並傳送給 Microsoft。 SSMS 可能會收集標準的電腦資訊以及關於使用方式和效能的資訊，這些資訊可能會傳送給 Microsoft，並基於改善 SSMS 的品質、安全性和可靠性的目的加以分析。 我們不會收集您的姓名、地址或是其他連絡資訊等資料。 如需詳細資訊，請參閱 [Microsoft 隱私權聲明](https://privacy.microsoft.com/privacystatement)和 [SQL Server 隱私權補充](https://go.microsoft.com/fwlink/?LinkID=868444)。
 

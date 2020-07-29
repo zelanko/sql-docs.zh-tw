@@ -2,22 +2,22 @@
 title: 在 R 中使用 OLAP Cube 的資料
 description: 本文將說明 olapR API，並為可能不熟悉多維度 Cube 資料庫的 R 使用者概述 OLAP 和 MDX。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/15/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 99f67fb0fb52717eaa42e229a1b60c82f6223fad
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f27866a242cb03839a67a8f68478bc786222aa64
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117231"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86967920"
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>在 R 中使用 OLAP Cube 的資料
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 **olapR** 套件是由 Microsoft 提供的 R 套件，用於搭配 Machine Learning Server 和 SQL Server 使用，可讓您執行 MDX 查詢並從 OLAP Cube 取得資料。 透過此套件，您不需要建立連結的伺服器或清除扁平化資料列集；您可以直接從 R 中取得 OLAP 資料。
 
@@ -99,7 +99,7 @@ MDX (多維度運算式的簡稱) 是用來查詢 Cube 的語言。 MDX 查詢�
 
 如需查詢伺服器屬性的相關資訊，請參閱下列文章：
 
-+ [OLE DB for OLAP 結構描述資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets)
++ [OLE DB for OLAP 結構描述資料列集](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126079(v=sql.110))
 
 ### <a name="writeback-is-not-supported"></a>不支援回寫
 

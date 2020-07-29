@@ -14,17 +14,16 @@ helpviewer_keywords:
 ms.assetid: 178b7b75-8078-4e61-b2a8-4719b9d8033d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: b2b8a39bc08326db3cfe93e885b302b98df3a0ce
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 85dbdecd8b20ff27eb74c4078fca81dcbc39d53e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254225"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999977"
 ---
 # <a name="create-update-queries-visual-database-tools"></a>建立更新查詢 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 您可以使用更新查詢，在一次作業中變更多個資料列的內容。 例如，在 `titles` 資料表中，您可以使用更新查詢，將特定發行者所有書籍的價格增加 10%。  
   
 在建立更新查詢時，您指定：  

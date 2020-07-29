@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c0df880a36a0822c3c397be4f2ed9aa14d47c2bc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5356b49095c1a2601425f3b58c877117a2b45306
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768012"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246607"
 ---
 # <a name="create-alter-and-drop-filetables"></a>建立、改變及卸除 FileTable
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -160,9 +160,8 @@ GO
  **建立新 FileTable 時所建立的索引**  
  當您建立新的 FileTable 時，也會建立下列系統定義的索引：  
   
-|||  
+|資料行|索引類型|  
 |-|-|  
-|**資料行**|**索引類型**|  
 |[path_locator] ASC|主索引鍵，非叢集|  
 |[parent_path_locator] ASC、<br /><br /> [name] ASC|唯一，非叢集|  
 |[stream_id] ASC|唯一，非叢集|  

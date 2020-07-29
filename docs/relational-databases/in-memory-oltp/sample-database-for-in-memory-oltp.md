@@ -12,12 +12,12 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4859a35269e0664b07f08db795e3e57a4c8feb70
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4eaa35280b4f469f6fcf49fe9d73f4b33bfda672
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735045"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245196"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>記憶體內部 OLTP 的範例資料庫
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -465,14 +465,12 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
  以下是剛建立資料庫之後的快照集：  
   
-||||  
-|-|-|-|  
-|**type**|**name**|**pages_MB**|  
+| type | NAME | pages_MB |
+| ---- | ---- | -------- |
 |MEMORYCLERK_XTP|預設|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
 |MEMORYCLERK_XTP|預設|0|  
 |MEMORYCLERK_XTP|預設|0|  
-||||
   
  預設記憶體 Clerk 包含全系統記憶體結構，且規模相對較小。 使用者資料庫 (在此案例中為識別碼 5 的資料庫) 的記憶體 Clerk 約為 900 MB。  
   
@@ -490,9 +488,8 @@ WHERE t.type='U'
   
  下表顯示範例全新安裝的查詢結果：  
   
-||||  
-|-|-|-|  
-|**資料表名稱**|**memory_allocated_for_table_kb**|**memory_allocated_for_indexes_kb**|  
+| 資料表名稱 | memory_allocated_for_table_kb | memory_allocated_for_indexes_kb |
+| ---------- | ----------------------------- | ------------------------------- |
 |SpecialOfferProduct_inmem|64|3840|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
 |SalesOrderDetail_inmem|15316|663552|  
@@ -500,7 +497,6 @@ WHERE t.type='U'
 |SpecialOffer_inmem|3|8192|  
 |SalesOrderHeader_inmem|7168|147456|  
 |Product_inmem|124|12352|  
-||||
 
  如您所見，這些資料表相當小：SalesOrderHeader_inmem 的大小約為 7 MB，而 SalesOrderDetail_inmem 的大小約為 15 MB。  
   
@@ -516,14 +512,12 @@ SELECT type
 FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'  
 ```  
   
-||||  
-|-|-|-|  
-|**type**|**name**|**pages_MB**|  
+| type | NAME | pages_MB |
+| ---- | ---- | -------- |
 |MEMORYCLERK_XTP|預設|146|  
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
 |MEMORYCLERK_XTP|預設|0|  
 |MEMORYCLERK_XTP|預設|0|  
-||||
 
  如您所見，SQL Server 針對範例資料庫中的經記憶體最佳化的資料表和索引使用小於 8 GB 的記憶體。  
   
@@ -538,9 +532,8 @@ ON dms.object_id=t.object_id
 WHERE t.type='U'  
 ```  
   
-||||  
-|-|-|-|  
-|**資料表名稱**|**memory_allocated_for_table_kb**|**memory_allocated_for_indexes_kb**|  
+| 資料表名稱 | memory_allocated_for_table_kb | memory_allocated_for_indexes_kb |
+| ---------- | ----------------------------- | ------------------------------- |
 |SalesOrderDetail_inmem|5113761|663552|  
 |DemoSalesOrderDetailSeed|64|10368|  
 |SpecialOffer_inmem|2|8192|  
@@ -548,7 +541,6 @@ WHERE t.type='U'
 |Product_inmem|111|12032|  
 |SpecialOfferProduct_inmem|64|3712|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
-||||
 
  我們會看到總計約 6.5 GB 的資料。 請注意，資料表 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 上的索引大小，與插入銷售訂單之前的索引大小相同。 由於這兩個資料表使用雜湊索引，而雜湊索引是靜態的，因此索引大小不會改變。  
   
@@ -564,14 +556,12 @@ SELECT type
 FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'  
 ```  
   
-||||  
-|-|-|-|  
-|**type**|**name**|**pages_MB**|  
+| type | NAME | pages_MB |
+| ---- | ---- | -------- |
 |MEMORYCLERK_XTP|預設|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
 |MEMORYCLERK_XTP|預設|0|  
 |MEMORYCLERK_XTP|預設|0|  
-||||
 
  這是預期的結果：當交易式工作負載執行時，才會回收記憶體。  
   
@@ -584,14 +574,12 @@ SELECT type
 FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'  
 ```  
   
-||||  
-|-|-|-|  
-|**type**|**name**|**pages_MB**|  
+| type | NAME | pages_MB |
+| ---- | ---- | -------- |
 |MEMORYCLERK_XTP|預設|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
 |MEMORYCLERK_XTP|預設|0|  
 |MEMORYCLERK_XTP|預設|0|  
-||||
 
 ### <a name="disk-utilization-for-memory-optimized-tables"></a>記憶體最佳化資料表的磁碟使用狀況  
  您可以使用下列查詢，找到給定時間下，資料庫的檢查點檔案在磁碟上的整體大小：  
@@ -616,11 +604,9 @@ FROM sys.filegroups f JOIN sys.database_files df
 WHERE f.type=N'FX'  
 ```  
   
-||  
-|-|  
-|**在磁碟上的大小 (MB)**|  
+| 在磁碟上的大小 (MB) |
+| ------------------ |
 |2312|  
-||
 
  如您所見，檢查點檔案在磁碟上的大小與實際資料大小差距懸殊，磁碟上的大小是 2.3 GB，而實際資料大小則接近 30 MB。  
   
@@ -643,14 +629,12 @@ ORDER BY state, file_type
   
  初始狀態的範例結果，與具有 16 個邏輯處理器的伺服器相似：  
   
-|||||  
-|-|-|-|-|  
-|**state_desc**|**file_type_desc**|**計數**|**在磁碟上的大小 (MB)**|  
+| state_desc | file_type_desc | count | 在磁碟上的大小 (MB) |
+| ---------- | -------------- | ----- | --------------- |
 |已預先建立|DATA|16|2048|  
 |已預先建立|DELTA|16|128|  
 |建構中|DATA|1|128|  
 |建構中|DELTA|1|8|  
-|||||
 
  如您所見，預先建立的資料和差異檔案使用了大部分空間。 SQL Server 會針對每個邏輯處理器預先建立一組 (資料和差異) 檔案。 此外，系統會為資料檔案預留 128 MB 的大小，並為差異檔案預留 8 MB 的大小，以便更有效率地將資料插入這些檔案。  
   
@@ -666,11 +650,9 @@ FROM sys.filegroups f JOIN sys.database_files df
 WHERE f.type=N'FX'  
 ```  
   
-||  
-|-|  
-|**在磁碟上的大小 (MB)**|  
+| 在磁碟上的大小 (MB) |
+| ------------------ |
 |8828|
-||
   
  在磁碟上的大小接近 9 GB，與記憶體中的資料大小更接近。  
   
@@ -691,14 +673,12 @@ GROUP BY state, state_desc, file_type, file_type_desc
 ORDER BY state, file_type  
 ```  
   
-|||||  
-|-|-|-|-|  
-|**state_desc**|**file_type_desc**|**計數**|**在磁碟上的大小 (MB)**|  
+| state_desc | file_type_desc | count | 在磁碟上的大小 (MB) |
+| ---------- | -------------- | ----- | --------------- |
 |已預先建立|DATA|16|2048|  
 |已預先建立|DELTA|16|128|  
 |建構中|DATA|1|128|  
 |建構中|DELTA|1|8|  
-|||||
 
  我們還有 16 組預先建立的檔案，準備在關閉檢查點之後填入。  
   
@@ -716,11 +696,9 @@ FROM sys.filegroups f JOIN sys.database_files df
 WHERE f.type=N'FX'  
 ```  
   
-||  
-|-|  
-|**在磁碟上的大小 (MB)**|  
+| 在磁碟上的大小 (MB) |
+| ------------------ |
 |11839|
-||
   
  接近 12 GB，明顯大於重設示範之前的 9 GB。 這是因為已開始合併某些檢查點檔案，但尚未安裝部分合併目標，且尚未清除部分合併來源檔案 (如下所示)：  
   
@@ -739,9 +717,8 @@ GROUP BY state, state_desc, file_type, file_type_desc
 ORDER BY state, file_type  
 ```  
   
-|||||  
-|-|-|-|-|  
-|**state_desc**|**file_type_desc**|**計數**|**在磁碟上的大小 (MB)**|  
+| state_desc | file_type_desc | count | 在磁碟上的大小 (MB) |
+| ---------- | -------------- | ----- | --------------- |
 |已預先建立|DATA|16|2048|  
 |已預先建立|DELTA|16|128|  
 |使用中|DATA|38|5152|  
@@ -750,7 +727,6 @@ ORDER BY state, file_type
 |合併目標|DELTA|7|56|  
 |已合併來源|DATA|13|1772|  
 |已合併來源|DELTA|13|455|  
-|||||
 
  由於系統中發生交易活動，因此已安裝合併目標並清除已合併來源。  
   
@@ -773,16 +749,14 @@ GROUP BY state, state_desc, file_type, file_type_desc
 ORDER BY state, file_type  
 ```  
   
-|||||  
-|-|-|-|-|  
-|**state_desc**|**file_type_desc**|**計數**|**在磁碟上的大小 (MB)**|  
+| state_desc | file_type_desc | count | 在磁碟上的大小 (MB) |
+| ---------- | -------------- | ----- | --------------- |
 |已預先建立|DATA|16|2048|  
 |已預先建立|DELTA|16|128|  
 |建構中|DATA|2|268|  
 |建構中|DELTA|2|16|  
 |使用中|DATA|41|5608|  
 |使用中|DELTA|41|328|  
-|||||
 
  在本例中，有兩個檢查點檔案組在「建構中」狀態，這表示多組檔案已移至「建構中」狀態，這可能是由於工作負載中有高度並行所致。 多個並行執行緒會同時要求一個新的檔案組，因此會將一組檔案從「已預先建立」移至「建構中」。  
   

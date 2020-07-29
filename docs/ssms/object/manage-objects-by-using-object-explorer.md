@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d499666f51605e7df90332174c82681f8a386017
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 71e5db112d4949bc38f777a514754ef55e856308
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257223"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001944"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>使用物件總管管理物件
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 您可以使用物件總管管理像是資料庫、資料表和預存程序等物件。  
   
 ## <a name="viewing-objects-in-object-explorer"></a>在物件總管中檢視物件  

@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 和 Power View 的瀏覽器支援 | Microsoft Docs
+description: 了解支援管理和檢視 SQL Server Reporting Services、ReportViewer 控制項和 Power View 的瀏覽器版本。
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 46176d786314284f4056b58ba351dacee37a06e4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5a8b47d98cdb6da8b29983cadbe3c0f6f44ba924
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574812"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245177"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Reporting Services 和 Power View 的瀏覽器支援
 

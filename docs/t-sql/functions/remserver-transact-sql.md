@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0bb451a9-3866-4064-963d-b74a2f864049
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 159a0426cbaec61e197e0aed79b3de106ba21063
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0a0d2b5d50144ca96b9208dfa1c0d6844b456fe6
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896018"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110833"
 ---
 # <a name="x40x40remserver-transact-sql"></a>&#x40;&#x40;REMSERVER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,8 +42,10 @@ ms.locfileid: "85896018"
 ```  
 @@REMSERVER  
 ```  
-  
-## <a name="return-types"></a>傳回型別  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>傳回型別
  **nvarchar(128)**  
   
 ## <a name="remarks"></a>備註  

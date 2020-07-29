@@ -1,7 +1,7 @@
 ---
 title: Model 資料庫 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/19/2018
+ms.date: 07/22/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 04a328034388f5ad305b627106d178b73df040bc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dd0390e7e6b781d5ca5d2b0f5685aeb8fc95c88f
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726416"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87108332"
 ---
 # <a name="model-database"></a>Model 資料庫
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "85726416"
 |主要資料|modeldev|model.mdf|自動成長 64 KB，直到磁碟滿了為止。|  
 |Log|modellog|modellog.ldf|自動成長 64 KB，最多到 2 TB。|  
 
-針對 SQL Server 2014，請參閱[模型資料庫](https://docs.microsoft.com/sql/relational-databases/databases/model-database?view=sql-server-2014)來取得預設檔案成長值。  
+針對 SQL Server 2014，請參閱[模型資料庫](/previous-versions/sql/2014/relational-databases/databases/model-database?view=sql-server-2014)來取得預設檔案成長值。  
 
  若要移動 **Model** 資料庫或記錄檔，請參閱 [移動系統資料庫](../../relational-databases/databases/move-system-databases.md)。  
   

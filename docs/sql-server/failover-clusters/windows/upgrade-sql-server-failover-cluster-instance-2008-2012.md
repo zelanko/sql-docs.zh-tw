@@ -1,6 +1,7 @@
 ---
 title: 升級 SQL Server 執行個體：Windows Server 2012 和舊版叢集
 description: 描述如何升級在 Windows Server 2008、Windows Server 2008 R2 和 Windows Server 2012 上執行的 SQL Server 容錯移轉叢集執行個體。
+ms.date: 06/15/2020
 ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: high-availability
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - failover clustering [SQL Server], upgrading
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6b9d0c843e9a116a6d89198db22053224c2f1d19
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 61681e248ae49443518f8daeb3b86e8939ddd138
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242848"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779608"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>升級在 Windows Server 2008/2008 R2/2012 叢集上執行的 SQL Server 執行個體
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8b0085829346cd09f813e62fe50b1ce22f85b7f5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: afcafeeb554e60c84c3d5e5051db354721371416
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80342872"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86972126"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>匯出至 Microsoft Word (報表產生器及 SSRS)
 
@@ -151,7 +151,7 @@ ms.locfileid: "80342872"
 > [!IMPORTANT]  
 >  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 (.doc) 轉譯延伸模組已被取代。 如需詳細資訊，請參閱 [SQL Server 2016 中 SQL Server Reporting Services 已被取代的功能](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)。  
   
- Word 轉譯器與已安裝 Word、Excel 和 PowerPoint 之 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 相容性套件的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003 相容。 如需詳細資訊，請參閱 [Microsoft Office Word、Excel 及 PowerPoint 檔案格式相容性套件](https://www.microsoft.com/download/details.aspx?id=1285)。
+ Word 轉譯器與已安裝 Word、Excel 和 PowerPoint 之 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 相容性套件的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003 相容。 如需詳細資訊，請參閱 [Microsoft Office Word、Excel 及 PowerPoint 檔案格式相容性套件](https://www.microsoft.com/download/office.aspx)。
   
  與 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 相容的舊版 Word 轉譯延伸模組已重新命名為 Word 2003。 根據預設，只能使用 Word 轉譯延伸模組。 您必須更新 Reporting Services 組態檔，才能使用 Word 2003 轉譯延伸模組。 Word 2003 轉譯器會產生 **application/vnd.ms-word** 內容類型的檔案，而檔案的副檔名為 .doc。  
   

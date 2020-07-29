@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 2370b267-5d0a-46da-ba3a-b2bd04127e78
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1356626a0f9f8331b714bb4a4d220e14957b0ec4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a479e8ce7786b5ed8ed6a578c05bd8c26b405b1d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251952"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003265"
 ---
 # <a name="close-a-solution"></a>關閉方案
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 您可以關閉方案，再從 [方案總管] 中移除它。 關閉方案之後，[方案總管] 便無法使用它。  
   
 > [!NOTE]  

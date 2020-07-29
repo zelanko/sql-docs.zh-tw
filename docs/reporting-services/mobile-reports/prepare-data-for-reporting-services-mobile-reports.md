@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8adce9ad-6a08-4d20-b1cf-d3c45544d8de
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bbd04e9eef6d0775407e9b9893c59daefd7dc0a9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b138877b9afd07f85b90cb5ae2f7197790475c79
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448386"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942310"
 ---
 # <a name="prepare-data-for-reporting-services-mobile-reports"></a>準備 Reporting Services 行動報表的資料
   
@@ -23,14 +23,15 @@ ms.locfileid: "79448386"
 ## <a name="date-and-time-formats"></a>日期和時間格式 
 如果處理要用於行動報表中的日期和時間間隔 (特別是使用 TimeNavigator 時)，一定要適當地格式化日期/時間資料行，讓 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 將它識別為這類日期/時間。 以下是有效的日期/時間格式範例︰  
   
-    05/01/2009    
-    2009-05-01    
-    05/01/2009 14:57:32.8    
-    2009-05-01 14:57:32.8    
-    2009-05-01T14:57:32.8375298-04:00    
-    5/01/2008 14:57:32.80 -07:00    
-    1 May 2008 2:57:32.8 PM    
-    Fri, 15 May 2009 20:10:57 GMT    
+`05/01/2009`    
+`2009-05-01`    
+`05/01/2009 14:57:32.8`    
+`2009-05-01 14:57:32.8`    
+`2009-05-01T14:57:32.8375298-04:00`    
+`5/01/2008 14:57:32.80 -07:00`    
+`1 May 2008 2:57:32.8 PM`    
+`Fri, 15 May 2009 20:10:57 GMT`    
+
   
 在大部分情況下，可以根據一個以上的日期/時間間隔 (例如每小時、每日、每月、每季和每年) 來描述日期和時間資料集。 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 可以合併多個不同資料粒度的資料表，並在單一行動報表上予以顯示。 不過，請記住原始資料集的相關間隔，因為它們有助於決定最終行動報表中向使用者顯示的日期/時間篩選選項。  
 

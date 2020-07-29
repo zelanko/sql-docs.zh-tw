@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 0b114352-3c63-4d33-9220-182ede90e4aa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3a7484de48edaecea56fc135ca3b803875f9557c
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 2457667e374587e5e91a4c758dfbe641a0b02f78
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977775"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247118"
 ---
-# <a name="cursors"></a>資料指標
+# <a name="odbc-cursors"></a>ODBC 資料指標
 應用程式會使用資料*指標*來提取資料。 資料指標與結果集不同：結果集是符合特定搜尋條件的一組資料列，而資料指標則是將這些資料列傳回給應用程式的軟體。 名稱*游標*套用至資料庫時，可能是源自電腦終端機上的閃爍游標。 就如同該資料指標指出螢幕上的目前位置，以及輸入的單字接下來，結果集的資料指標會指出結果集內的目前位置，以及下一次將傳回的資料列。  
   
  ODBC 中的資料指標模型是以內嵌 SQL 中的資料指標模型為基礎。 這些模型之間有一項明顯的差異，就是資料指標的開啟方式。 在內嵌 SQL 中，必須先明確宣告並開啟資料指標，才能使用它。 在 ODBC 中，當執行建立結果集的語句時，會隱含地開啟資料指標。 當資料指標開啟時，它會位於結果集的第一個資料列之前。 在內嵌 SQL 和 ODBC 中，資料指標必須在應用程式完成使用之後關閉。  

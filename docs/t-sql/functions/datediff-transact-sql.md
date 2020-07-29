@@ -31,12 +31,12 @@ ms.assetid: eba979f2-1a8d-4cce-9d75-b74f9b519b37
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 847b69965c0bd7edb0b559fef95e6a2019cdbf7d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7e5f0fa70dc5c46d984a4d7003fc1ae6a00906a7
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011410"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112094"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
 
@@ -54,7 +54,9 @@ ms.locfileid: "86011410"
 DATEDIFF ( datepart , startdate , enddate )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
 
 *datepart*  
 **DATEDIFF** 所報告 _startdate_ 和 _enddate_ 之間差異的單位。 常用的 _datepart_ 單位包括 `month` 或 `second`。

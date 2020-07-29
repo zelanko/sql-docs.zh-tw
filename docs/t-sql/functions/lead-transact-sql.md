@@ -19,12 +19,12 @@ ms.assetid: 21f66bbf-d1ea-4f75-a3c4-20dc7fc1c69e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e936ceae720a9dc4f3306a067cdb3f6a38bf447
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 066020f0e7de04585bf805dfcf054b865ac7d11c
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008803"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110413"
 ---
 # <a name="lead-transact-sql"></a>LEAD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -40,7 +40,9 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] )
     OVER ( [ partition_by_clause ] order_by_clause )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *scalar_expression*  
  根據指定的位移傳回數值。 它是傳回單一 (純量) 值的任一類型運算式。 *scalar_expression* 不能是分析函數。  
   

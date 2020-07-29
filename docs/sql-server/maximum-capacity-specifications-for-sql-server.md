@@ -5,7 +5,7 @@ ms.date: 03/05/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - objects [SQL Server]
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - objects [SQL Server], capacity specifications
 - Database Engine [SQL Server], capacity specifications
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 03b4da335fad10135ef592913022e705adc0e9a0
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.author: mikeray
+author: MikeRayMSFT
+ms.openlocfilehash: a61a82771c08feb612a89f029788f004f6ea3a0a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999425"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917069"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server 的最大容量規格
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 本文會顯示 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 元件中已定義各種物件的大小和數量上限。
 

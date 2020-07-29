@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 3b8af28d-3095-40aa-b7db-636f2852d483
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 29fa345026d60f68f24cb2fbd2e13bc0f198c3f8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9a8d18ca192d6e85f518c557d325c60df677392a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251990"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003274"
 ---
 # <a name="change-the-default-location-for-projects"></a>變更專案的預設位置
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 檔案和專案的預設位置是 [我的文件] 資料夾中的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 專案資料夾。  
   
 ### <a name="to-change-the-default-location-for-projects"></a>變更專案的預設位置  

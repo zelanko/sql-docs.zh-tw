@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: e2d32824b62cf54132c6168e5f44d93fa0cd6289
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ff4ab76193c13b03fbd4d7fab05cbf212d1aae4b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726150"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247607"
 ---
 # <a name="query-processing-architecture-guide"></a>查詢處理架構指南
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -481,13 +481,61 @@ GO
 
 變更指定執行的下列任何 SET 選項，將會影響重複使用計畫的能力。這是因為 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 會執行[常數摺疊](#ConstantFolding)，而這些選項將會影響這類運算式的結果：
 
-|||   
-|-----------|------------|------------|    
-|ANSI_NULL_DFLT_OFF|FORCEPLAN|ARITHABORT|    
-|DATEFIRST|ANSI_PADDING|NUMERIC_ROUNDABORT|    
-|ANSI_NULL_DFLT_ON|LANGUAGE|CONCAT_NULL_YIELDS_NULL|    
-|DATEFORMAT|ANSI_WARNINGS|QUOTED_IDENTIFIER|    
-|ANSI_NULLS|NO_BROWSETABLE|ANSI_DEFAULTS|    
+:::row:::
+    :::column:::
+        ANSI_NULL_DFLT_OFF
+    :::column-end:::
+    :::column:::
+        FORCEPLAN
+    :::column-end:::
+    :::column:::
+        ARITHABORT
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        DATEFIRST
+    :::column-end:::
+    :::column:::
+        ANSI_PADDING
+    :::column-end:::
+    :::column:::
+        NUMERIC_ROUNDABORT
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        ANSI_NULL_DFLT_ON
+    :::column-end:::
+    :::column:::
+        LANGUAGE
+    :::column-end:::
+    :::column:::
+        CONCAT_NULL_YIELDS_NULL
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        DATEFORMAT
+    :::column-end:::
+    :::column:::
+        ANSI_WARNINGS
+    :::column-end:::
+    :::column:::
+        QUOTED_IDENTIFIER
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        ANSI_NULLS
+    :::column-end:::
+    :::column:::
+        NO_BROWSETABLE
+    :::column-end:::
+    :::column:::
+        ANSI_DEFAULTS
+    :::column-end:::
+:::row-end:::
 
 ### <a name="caching-multiple-plans-for-the-same-query"></a>為相同的查詢快取多個計畫 
 查詢與執行計畫在 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 中都是獨一無二的，與指紋非常類似：
@@ -671,16 +719,70 @@ sql_handle
 `sql_statement_recompile` 擴充事件 (xEvent) 會報告陳述式層級重新編譯。 當任何類型的批次需要陳述式層級重新編譯時，就會發生此 xEvent。 這包括預存程序、觸發程序、特定批次和查詢。 批次可透過數種介面提交，包括 sp_executesql、動態 SQL、Prepare 方法或 Execute 方法。
 `sql_statement_recompile` xEvent 的 `recompile_cause` 資料行包含一個整數碼，可指出重新編譯的原因。 下表包含可能的原因：
 
-|||
-|----|----|  
-|結構描述已變更|統計資料已變更|  
-|延遲編譯|SET 選項已變更|  
-|暫存資料表已變更|遠端資料列集已變更|  
-|`FOR BROWSE` 權限已變更|查詢通知環境已變更|  
-|資料分割檢視已變更|資料指標選項已變更|  
-|`OPTION (RECOMPILE)` 要求的|參數化計畫已排清|  
-|影響資料庫版本的計畫已變更|強制執行查詢存放區計畫原則已變更|  
-|強制執行查詢存放區計畫失敗|查詢存放區遺漏計畫|
+:::row:::
+    :::column:::
+        結構描述已變更
+    :::column-end:::
+    :::column:::
+        統計資料已變更
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        延遲編譯
+    :::column-end:::
+    :::column:::
+        SET 選項已變更
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        暫存資料表已變更
+    :::column-end:::
+    :::column:::
+        遠端資料列集已變更
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        `FOR BROWSE` 權限已變更
+    :::column-end:::
+    :::column:::
+        查詢通知環境已變更
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        資料分割檢視已變更
+    :::column-end:::
+    :::column:::
+        資料指標選項已變更
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        `OPTION (RECOMPILE)` 要求的
+    :::column-end:::
+    :::column:::
+        參數化計畫已排清
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        影響資料庫版本的計畫已變更
+    :::column-end:::
+    :::column:::
+        強制執行查詢存放區計畫原則已變更
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        強制執行查詢存放區計畫失敗
+    :::column-end:::
+    :::column:::
+        查詢存放區遺漏計畫
+    :::column-end:::
+:::row-end:::
 
 > [!NOTE]
 > 在沒有 xEvents 可用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本中，可以針對報告陳述式層級重新編譯的相同目的，使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler [SP:Recompile](../relational-databases/event-classes/sp-recompile-event-class.md) 追蹤事件。

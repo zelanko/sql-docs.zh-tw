@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e78380d509d2b291c0794cb408909a10622c3f53
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 84633c480003acc62b464c2609d7143051547de9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74822068"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897362"
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>將相依性加入 SQL Server 資源
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   本主題描述如何使用容錯移轉叢集管理員嵌入式管理單元，將相依性新增至 Always On 容錯移轉叢集執行個體 (FCI) 資源。 容錯移轉叢集管理員嵌入式管理單元是 Windows Server 容錯移轉叢集 (WSFC) 服務的叢集管理應用程式。  
   
 -   **開始之前：** [限制事項](#Restrictions)、[必要條件](#Prerequisites)  

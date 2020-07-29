@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 36025ec0-3c72-4e68-8083-58b38e42d03b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 51e9e14fc53c4b9904e64180307f7da8939408ab
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1ff264c620123dcbb73c58373871f568ff1d249e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924640"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243399"
 ---
 # <a name="jdbc-42-compliance-for-the-jdbc-driver"></a>適用於 JDBC 驅動程式的 JDBC 4.2 合規性
 
@@ -59,14 +59,12 @@ ms.locfileid: "80924640"
   
 ## <a name="sqlserverresultset-class"></a>SQLServerResultSet 類別
   
-||||  
-|-|-|-|  
 |新的方法|描述|值得注意的實作|  
+|-|-|-|  
 ||使用物件值，更新指定的資料行。 有 4 個新的 (多載) 方法來支援新的 SQLType 介面。|如 java.sql.ResultSet 介面中所述實作。 如需詳細資料，請參閱 [java.sql.ResultSet](https://docs.oracle.com/javase/8/docs/api/java/sql/ResultSet.html)。|  
   
  Microsoft JDBC Driver 4.2 for SQL Server 可使用下列資料類型對應，支援 Java 資料庫連線 API 4.2 規格。  
   
-|||  
-|-|-|  
 |新的資料類型對應|描述|  
+|-|-|  
 |**Java 8 中的新 Java 類別：** <br /> <br /> LocalDate/LocalTime/LocalDateTime<br /><br /> OffsetTime/OffsetDateTime<br /><br /> **新的 JDBC 類型：**<br /><br /> TIME_WITH_TIMEZONE<br /><br /> TIMESTAMP_WITH_TIMEZONE<br /><br /> REF_CURSOR|在 SQL Server 中不支援 REF_CURSOR。 如果使用了此類型，則驅動程式會擲回 SQLFeatureNotSupportedException 例外狀況。 該驅動程式支援所有其他新的 Java 和 JDBC 類型對應，如 JDBC 4.2 規格中所指定。|  

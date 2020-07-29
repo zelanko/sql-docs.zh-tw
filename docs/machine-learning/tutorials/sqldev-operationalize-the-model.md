@@ -2,22 +2,22 @@
 title: R + T-SQL 教學課程：執行預測
 description: 示範如何使用 T-SQL 函數在 SQL Server 預存程序中讓內嵌 R 指令碼的教學課程
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/16/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4b8e516d2e96c1cc4812a36800fd22371729445d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: bb530360e04df0e43c3c881ad203cd84af0f7678
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115971"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670807"
 ---
 # <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>第 4 課：在預存程序中使用 R 內嵌執行預測
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本篇教學課程文章適用 SQL 開發人員，說明如何在 SQL Server 中使用 R。
 

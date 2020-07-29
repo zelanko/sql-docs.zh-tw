@@ -23,12 +23,12 @@ ms.assetid: 348911ab-b0b6-4867-aee7-e6f42e053a4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8ebf42b9f8495690472e57baf6ccde33ef94aefd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a9328a48066848228533866547590a2e0e803df2
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897949"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110771"
 ---
 # <a name="suser_id-transact-sql"></a>SUSER_ID (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -47,7 +47,9 @@ ms.locfileid: "85897949"
 SUSER_ID ( [ 'login' ] )   
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  **'** *login* **'**  
  這是使用者的登入名稱。 *login* 為 **nchar**。 若將 *login* 指定為 **char**，則 *login* 便會隱含轉換成 **nchar**。 *login* 可以是有權連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或是 Windows 使用者或群組。 如果未指定 *login*，便會傳回目前使用者的登入識別碼。 如果參數包含 NULL 一詞，就會傳回 NULL。  
   

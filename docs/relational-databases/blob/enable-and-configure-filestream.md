@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b57c86074f91d5be0790294641dafe1cf0ccfc6e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4e9e0fca818c4988acacfbfa89af718eda8d8ac5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767987"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246577"
 ---
 # <a name="enable-and-configure-filestream"></a>啟用及設定 FILESTREAM
 
@@ -76,9 +76,8 @@ ms.locfileid: "85767987"
   
 -   針對容錯和應用程式所需的效能設定並微調 RAID 層級。  
   
-||||||  
-|-|-|-|-|-|  
 |RAID 層級|寫入效能|讀取效能|容錯|備註|  
+|-|-|-|-|-|   
 |RAID 5|正常|正常|非常好|效能高於單一磁碟或 JBOD，而低於具有條狀配置的 RAID 0 或 RAID 5。|  
 |RAID 0|非常好|非常好|None||  
 |RAID 5 + 條狀配置|非常好|非常好|非常好|成本最高的選項。|  

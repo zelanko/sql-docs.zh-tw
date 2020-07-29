@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 49d427b7e07d46e604bfbc46c06022414c486c43
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 27f37c0bfc246256274eb435ff8a79a9010c204e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718110"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248627"
 ---
 # <a name="enable-sql-server-managed-backup-to-azure"></a>啟用 SQL Server 到 Azure 的受控備份
 
@@ -100,7 +100,7 @@ ms.locfileid: "85718110"
   
 如果其中包含 URL，請使用問號將其和 SAS 權杖分隔 (不包含問號)。 例如，上述輸出會產生下列這兩個值。  
   
-|||  
+|類型|輸出|  
 |-|-|  
 |**容器 URL**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
 |**SAS 權杖**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  

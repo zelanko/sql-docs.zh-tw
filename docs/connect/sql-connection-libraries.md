@@ -8,12 +8,12 @@ ms.custom: ''
 ms.topic: article
 ms.date: 03/06/2020
 ms.author: v-daenge
-ms.openlocfilehash: a60c1314164ddc6b662914d828e4bf5973f38d2f
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: f6f75adc047f39ae3e0e0c21143f64cf57d2803a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219377"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244049"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Microsoft SQL 資料庫的連線模組
 
@@ -57,7 +57,7 @@ ms.locfileid: "81219377"
 | C# | [Entity Framework Core](https://docs.microsoft.com/ef/core/)<br />[Entity Framework (6.x 或更新版本)](https://docs.microsoft.com/ef/) |
 | Java | [Hibernate ORM](https://hibernate.org/orm)|
 | PHP | [Eloquent ORM，包含在 Laravel 安裝中](https://laravel.com/docs/) |
-| Node.js | [Sequelize ORM](https://docs.sequelizejs.com) |
+| Node.js | [Sequelize ORM](https://sequelize.org/) |
 | Python | [Django](https://www.djangoproject.com/) |
 | Ruby | [Ruby on Rails](https://rubyonrails.org/) |
 | &nbsp; | &nbsp; |
