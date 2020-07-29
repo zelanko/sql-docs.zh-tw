@@ -16,12 +16,12 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0a039d898915c6e1c2290dfadad630d1907acbc9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e99e37091732143f3cf412904f15f567a229e1c1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787519"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243819"
 ---
 # <a name="partitioned-tables-and-indexes"></a>分割資料表與索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -119,9 +119,8 @@ ms.locfileid: "85787519"
   
 ## <a name="related-tasks"></a>相關工作  
   
-|||  
-|-|-|  
-|**工作**|**主題**|  
+|工作|主題|  
+|-|-|   
 |描述如何建立分割區函數和分割區配置，然後將它們套用至資料表和索引。|[建立分割區資料表及索引](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md)|  
 |||  
   

@@ -26,16 +26,16 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 575c8d2ec6e6397f7a3444bcc718988b070e783d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4eae86044d8e0ec03268e23abc81df4945b46990
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257143"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245559"
 ---
 # <a name="object-explorer"></a>物件總管
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供的功能，可用於管理 [!INCLUDE[ssDE](../../includes/ssde_md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]及 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]執行個體中的物件。  
   
 ## <a name="benefits-of-object-explorer"></a>物件總管的優點  
@@ -49,5 +49,4 @@ ms.locfileid: "75257143"
 |描述如何將 [物件總管] 連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]及 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]執行個體。|[從物件總管連接到執行個體](../../ssms/object/connect-to-an-instance-from-object-explorer.md)|  
 |描述如何管理 [物件總管] 階層中以節點形式呈現的物件。|[使用物件總管管理物件](../../ssms/object/manage-objects-by-using-object-explorer.md)|  
 |描述 [物件總管詳細資料] 窗格，此窗格是以表格式檢視呈現伺服器中的所有物件，而伺服器具有可管理這些物件的使用者介面。|[物件總管詳細資料窗格](../../ssms/object/object-explorer-details-pane.md)|  
-|描述在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中執行自訂報表的方式。|[Management Studio 中的自訂報表](../../ssms/object/custom-reports-in-management-studio.md)|  
-  
+|描述在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中執行自訂報表的方式。|[Management Studio 中的自訂報表](../../ssms/object/custom-reports-in-management-studio.md)|

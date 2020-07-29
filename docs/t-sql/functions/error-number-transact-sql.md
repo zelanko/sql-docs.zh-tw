@@ -22,12 +22,12 @@ ms.assetid: 1de85fff-1ca2-4b31-841b-926e571cb150
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74e87d0cf31e866d21d2027e40513d0c0598ea7a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6b116fa8d49b3e007a35fe3bc846a29157839e22
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999009"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111625"
 ---
 # <a name="error_number-transact-sql"></a>ERROR_NUMBER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,9 @@ ms.locfileid: "85999009"
 ERROR_NUMBER ( )  
 ```  
   
-## <a name="return-types"></a>傳回型別  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>傳回型別
  **int**  
   
 ## <a name="return-value"></a>傳回值  

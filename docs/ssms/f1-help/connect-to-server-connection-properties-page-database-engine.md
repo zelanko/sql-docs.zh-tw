@@ -1,10 +1,7 @@
 ---
 title: 連接到伺服器 (連接屬性頁面) Database Engine
-ms.custom: seo-lt-2019
-ms.date: 08/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,15 +10,19 @@ f1_keywords:
 ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cb62bd419c08b1562a6b636685e360501f574ae3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 08/14/2017
+ms.openlocfilehash: d1136d29ee8ee62648922f008042266a59632475
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245013"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87123067"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>連接到伺服器 (連接屬性頁面) Database Engine
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 當您連接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 執行個體或在 [已註冊的伺服器]  中註冊 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 時，請使用這個索引標籤來檢視或指定選項。 連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 執行個體時，[連接]  和 [選項]  才會出現在這個對話方塊中。 註冊 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 時，[測試]  和 [儲存]  才會出現在這個對話方塊中。  
   
 **連接到資料庫**  

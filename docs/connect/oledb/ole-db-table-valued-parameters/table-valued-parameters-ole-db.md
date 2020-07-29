@@ -13,15 +13,15 @@ helpviewer_keywords:
 - table-valued parameters (OLE DB)
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 3f942130244aaf08d533ac4a1abdc1752971209d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8b93503bbf538cd5cb58488b5df7de9190dd3c78
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015267"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998922"
 ---
 # <a name="table-valued-parameters-ole-db"></a>資料表值參數 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

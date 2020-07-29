@@ -2,22 +2,22 @@
 title: 從命令提示字元安裝
 description: 執行 SQL Server 命令列安裝程式，以將 R 語言和 Python 整合新增至 SQL Server 的資料庫引擎執行個體。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/04/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a9bc48c3bb2631fc9f25a0c0aba761fd5bfaee56
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: b3c3d469cb016a562f069473923f470ce750dd5e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118261"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883900"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>從命令列安裝 SQL Server 機器學習 R 和 Python 元件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 本文提供從命令列安裝 SQL Server 機器學習服務元件的指示：
 

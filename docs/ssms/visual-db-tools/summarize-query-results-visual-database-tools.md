@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: c9e15350-ed57-4d95-814d-815fbebfd86b
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: c8903c23179d2743b39afd88d8f23c26e6da2790
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 184fd75abaa14e495307e2e710ab5434cf0a21b8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254854"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008147"
 ---
 # <a name="summarize-query-results-visual-database-tools"></a>摘要查詢結果 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 當您建立彙總查詢時，可以套用某些邏輯原則。 例如，您無法顯示摘要查詢中的個別資料列內容。 查詢和檢視設計工具可協助您依據 [圖表窗格](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) 與 [準則窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) 的運作模式來符合這些原則。  
   
 暸解彙總查詢和查詢和檢視設計工具的作業方式後，您就可以用邏輯方式來建立正確的彙總查詢。 使用彙總查詢的最重要的原則就是只能產生摘要資訊。 因此，其他的原則即說明可用來參考彙總查詢個別資料欄的其他方法。  

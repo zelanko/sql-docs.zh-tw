@@ -1,10 +1,7 @@
 ---
 title: 屬性視窗 F1 說明 (Management Studio)
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -23,20 +20,26 @@ helpviewer_keywords:
 ms.assetid: f682ff0d-0161-4b42-a689-26eeb077d9e9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6301ce8d1500cb4c71bbcf725e5abe81fa2130b8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: d6cbc1291e5370053f0cf1ebf70265f02187e449
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243864"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246427"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>屬性視窗 F1 說明 (Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
 使用 [屬性]  視窗來檢視所選取元素的屬性。 您也可以使用 [屬性]  視窗來檢視檔案、專案和方案屬性。 按一下 [檢視]  功能表上的 [屬性視窗]  ，就可以使用 [屬性]  視窗。  
   
 視特定屬性的需求而定，[屬性]  視窗會顯示不同類型的編輯欄位。 以灰色顯示的屬性是唯讀屬性。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項。
+
 **物件名稱**  
 列出目前選取的物件。 只有來自使用中編輯器或設計師的物件才可見。  
   
@@ -52,6 +55,6 @@ ms.locfileid: "75243864"
 **描述窗格**  
 描述窗格會在 [屬性]  視窗的底部顯示，並且會顯示屬性類型以及屬性的簡短描述。 您可以使用快速鍵功能表上的 [描述]  命令，來關閉和開啟屬性的描述。  
   
-## <a name="see-also"></a>另請參閱  
-[SQL Server Management Studio 中的屬性視窗](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)  
-  
+## <a name="see-also"></a>另請參閱
+
+- [SQL Server Management Studio 中的屬性視窗](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)

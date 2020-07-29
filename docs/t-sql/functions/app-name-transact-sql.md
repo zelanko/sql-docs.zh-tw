@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: e491e192-9b30-4243-bc19-33c133fe08a8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f28288b99fd67b41431c63d11f1174458cab2854
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5bba743ec083c5eda630e9d14799cae34726a848
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85684852"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113194"
 ---
 # <a name="app_name-transact-sql"></a>APP_NAME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "85684852"
 APP_NAME  ( )  
 ```  
   
-## <a name="return-types"></a>傳回型別  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>傳回型別
 **nvarchar(128)**
   
 ## <a name="remarks"></a>備註  

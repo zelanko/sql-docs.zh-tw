@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: f7da1b80-5cbe-42fa-be71-40c6af16383a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 686722bcceaaabd69c2293ec48f71df20352b65a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0358171ab4a149820b469ffb49b754a6d004f27f
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892168"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110356"
 ---
 # <a name="x40x40packet_errors-transact-sql"></a>&#x40;&#x40;PACKET_ERRORS (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,9 @@ ms.locfileid: "85892168"
 @@PACKET_ERRORS  
 ```  
   
-## <a name="return-types"></a>傳回型別  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>傳回型別
  **integer**  
   
 ## <a name="remarks"></a>備註  

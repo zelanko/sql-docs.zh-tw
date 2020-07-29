@@ -11,17 +11,16 @@ f1_keywords:
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 61a0a699c7d754d3b21b671da5cd29ea0ec0f240
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 214942feecf0161f373ca588c15510bcd5c0615f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251458"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999508"
 ---
 # <a name="open-file-dialog-box"></a>開啟檔案對話方塊
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 使用 [開啟檔案]  對話方塊來開啟磁碟中的現有檔案。 您也可以使用這個對話方塊，以不同的語言編碼選項來開啟已開啟的檔案。  
   
 若要存取這個對話方塊，請從 [檔案]  功能表選取 [開啟]  ，然後再選擇 [檔案]  。 從其他元素 (例如 [外部工具]  對話方塊) 開啟檔案時，也會出現這個對話方塊。 從 [檔案]  功能表選取 [開啟]  ，然後選擇 [專案/方案]  以開啟相同的 [開啟專案]  對話方塊。  

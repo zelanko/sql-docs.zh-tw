@@ -2,7 +2,6 @@
 title: 連接到伺服器 (Database Engine)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -15,18 +14,19 @@ f1_keywords:
 ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
-ms.openlocfilehash: 49bc9ee786c814da1322e9f44c1b80bf7bc63b23
-ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
+ms.openlocfilehash: d49edce2cf6c096711fc57903ea6599264ea1932
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80809701"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87123059"
 ---
 # <a name="connect-to-server-database-engine"></a>連接到伺服器 (Database Engine)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 連接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 時，使用此對話方塊來檢視或指定選項。 在大多數的情況下，您可以在 [伺服器名稱] 方塊中輸入資料庫伺服器的電腦名稱，然後按一下 [連接] 來進行連接。 如果您要連線至具名執行個體，請使用電腦名稱，後面依序加上反斜線及執行個體名稱。 例如： `mycomputer\myinstance` 。 如果要連接到 [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]，請使用電腦名稱並於後面加上 **\sqlexpress**。
   
 許多因素都可能影響連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的能力。 如需說明，請參閱下列資源：

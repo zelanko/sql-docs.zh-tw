@@ -11,17 +11,16 @@ helpviewer_keywords:
 ms.assetid: 4897c41a-324a-47b8-a30b-cbc9e9e19a8b
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: e14e968620f63a596ff9c5b65c547eab8017cc62
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f0cfe484f628040bf419738f79e6500cc6911f83
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257065"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003237"
 ---
 # <a name="parameter-queries-visual-database-tools"></a>參數查詢 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 有時候您想要建立可以使用多次的查詢，但每次都使用不同的值。 例如，您可能經常執行查詢尋找由某位作者所寫的所有 `title_ids` 。 除了每次使用的作者 ID 或名稱不同外，每次要求時您可以執行相同的查詢。  
   
 若要建立不同時候具有不同值的查詢，您必須在查詢中使用參數。 參數為一預留位置，執行查詢時提供參數值即可。 使用參數的 SQL 陳述式將如下所示，其中「?」是指作者的 ID 之參數：  

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: d697daf8-2106-4ebb-b09a-ca0be465d747
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2693cdfe7ec99d37fbd59d4889cf5c2ad1228a0e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 508840b147443fb82396d022b7438587cdf758ae
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734224"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113121"
 ---
 # <a name="asymkey_id-transact-sql"></a>ASYMKEY_ID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,9 @@ ms.locfileid: "85734224"
 ASYMKEY_ID ( 'Asym_Key_Name' )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
 *Asym_Key_Name*  
 資料庫中非對稱金鑰的名稱。
   

@@ -21,12 +21,12 @@ ms.assetid: de03531b-d9e7-4c3c-9604-14e582ac20c6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 58cfb510f3b7e0903a98a2c6cf44879326777167
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f918f7fa212c9342726d61cc04ac08d65771821a
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85995411"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113299"
 ---
 # <a name="str-transact-sql"></a>STR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,9 @@ ms.locfileid: "85995411"
 STR ( float_expression [ , length [ , decimal ] ] )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *float_expression*  
  這是含小數點的近似數值 (**float**) 資料類型的運算式。  
   

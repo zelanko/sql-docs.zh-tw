@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-manager: ''
-ms.openlocfilehash: 82d394cd3c940de43f8b9706b719515ed45d97a4
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 635c6ecbe6404b7e5466ecf5929dd2330183e7a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632751"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85793151"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Microsoft PHP Drivers for SQL Server 支援對照表
 

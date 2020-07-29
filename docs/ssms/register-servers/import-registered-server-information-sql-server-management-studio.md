@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: cc497a14-1360-4887-b70c-002f042823b6
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: d65ed04166e8b3d10559c46c2f17301e9646a484
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 77ae5807a5a509ecfa83973fe07d34fed1f4dbd3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256288"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011821"
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>匯入已註冊的伺服器資訊 (SQL Server Management Studio)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 本主題描述如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中匯入儲存的已註冊伺服器資訊。 先匯出然後再匯入已註冊的伺服器檔案，可以讓您輕鬆地在 [已註冊的伺服器] 中，使用相同的伺服器設定數部電腦。 從各地的電腦管理大量的伺服器時，或要為較沒有經驗的使用者設定基本連接設定時，這個作法非常有用。  
   

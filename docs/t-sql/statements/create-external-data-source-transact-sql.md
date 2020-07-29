@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 561235acc489c60742a393e444621c9dd7504d04
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 380246afdb4bdded42f83992d877ef2c363cc18a
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555293"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111039"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -38,10 +38,20 @@ ms.locfileid: "86555293"
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-|                               |                                                              |                                                              |                                                              |      |
-| ----------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
-| **_\* SQL Server \*_** &nbsp; | [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
-|                               |                                                              |                                                              |                                                              |      |
+:::row:::
+    :::column:::
+        **_\* SQL Server \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -413,10 +423,20 @@ WITH
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
-|                                                              |                                 |                                                              |                                                              |      |
-| ------------------------------------------------------------ | ------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
-| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | **_\* SQL Database \*_** &nbsp; | [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
-|                                                              |                                 |                                                              |                                                              |      |
+:::row:::
+    :::column:::
+        [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        **_\* SQL Database \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -631,10 +651,20 @@ WITH
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
-|                                                              |                                                              |                                            |                                                              |      |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------ | ------------------------------------------------------------ | ---- |
-| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current) | **_\* Azure Synapse<br />Analytics \*_** &nbsp; | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
-|                                                              |                                                              |                                            |                                                              |      |
+:::row:::
+    :::column:::
+        [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        **_\* Azure Synapse<br />Analytics \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -881,10 +911,20 @@ WITH
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-|                                                              |                                                              |                                                              |                                                         |      |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------- | ---- |
-| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | **_\* Analytics<br />Platform System (PDW) \*_** &nbsp; |      |
-|                                                              |                                                              |                                                              |                                                         |      |
+:::row:::
+    :::column:::
+        [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)
+    :::column-end:::
+    :::column:::
+        **_\* Analytics<br />Platform System (PDW) \*_** &nbsp;
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 

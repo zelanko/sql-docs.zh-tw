@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86415302-1383-4d36-9fc7-f780831a2d37
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: ee94e022443c90d601d03f710fcf05aa8bdaa22d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 2575bedc4c967bb4fc3227981cd52aca115a8d75
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484919"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110649"
 ---
 # <a name="drop-column-encryption-key-transact-sql"></a>DROP COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -40,8 +40,6 @@ ms.locfileid: "86484919"
   
 DROP COLUMN ENCRYPTION KEY key_name [;]  
 ```  
-  
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引數
  *key_name*  

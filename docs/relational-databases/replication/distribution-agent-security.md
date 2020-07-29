@@ -15,15 +15,15 @@ ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 91b5915324fc95d9199b4ec1d9aaa2ca0fee89d2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e664b1d96683d33ea9ffdc7cf38a5de0fe72a84e
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85653676"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111054"
 ---
 # <a name="distribution-agent-security"></a>散發代理程式安全性
-::: moniker range=">=sql-server-2014||=sqlallproducts-allversions" 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions" 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 **[散發代理程式安全性]** 對話方塊，可以讓您指定散發代理程式執行用的 Windows 帳戶。 若為發送訂閱，散發代理程式會在散發者端執行；若為提取訂閱，則散發代理程式會在訂閱者端執行。 此 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶亦稱為 *處理帳戶*，因為代理程式處理序會以此帳戶執行。 對話方塊中其他可用的選項會視您存取的方式而定：  
   

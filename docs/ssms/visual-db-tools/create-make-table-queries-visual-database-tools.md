@@ -15,17 +15,16 @@ helpviewer_keywords:
 ms.assetid: 4493cffa-7b2d-4c24-8ef0-d49329198972
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 8b4503c55545867639a3a437371d6265a85706af
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dc2c7c425bc9f75304917ec37531a2db7cab57da
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80271474"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010395"
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>建立製成資料表查詢 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 您可以使用製成資料表查詢 (Make Table Query)，將資料列複製到新的資料表中；這種方法非常適合用來建立要使用的資料子集，或是將資料表的內容從其中一個資料庫複製到另一個資料庫。 製成資料表查詢與插入結果查詢相似，但前者會建立用來複製資料列的新資料表。  
   
 建立製成資料表查詢時，請指定：  

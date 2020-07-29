@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: e7d813bf74f1779a2f9c04a2f78988cbab121c61
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cb3fd2d18f5602030de6231a0dbbcc92a200a5fc
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784383"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112907"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,9 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
    [ OVER (<over_order_by_clause>) ]  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *database_name*  
  包含順序物件的資料庫名稱。  
   

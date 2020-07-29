@@ -16,12 +16,12 @@ ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 362cb5e43414e6f43453f8efe201d8e4a2369f6d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8deea6a37a8aca7791d84d9d32d9735525305913
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727082"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247247"
 ---
 # <a name="user-defined-functions"></a>使用者定義的函式
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -89,27 +89,111 @@ ms.locfileid: "85727082"
 -   呼叫擴充預存程序的 `EXECUTE` 陳述式。  
   
 ### <a name="built-in-system-functions"></a>內建系統函數  
- 下列非決定性內建函數可用於 Transact-SQL 使用者定義函數中。  
+ 下列非決定性內建函數可用於 Transact-SQL 使用者定義函數中。
   
-|||  
-|-|-|  
-|CURRENT_TIMESTAMP|@@MAX_CONNECTIONS|  
-|GET_TRANSMISSION_STATUS|@@PACK_RECEIVED|  
-|GETDATE|@@PACK_SENT|  
-|GETUTCDATE|@@PACKET_ERRORS|  
-|@@CONNECTIONS|@@TIMETICKS|  
-|@@CPU_BUSY|@@TOTAL_ERRORS|  
-|@@DBTS|@@TOTAL_READ|  
-|@@IDLE|@@TOTAL_WRITE|  
-|@@IO_BUSY||  
-  
+:::row:::
+    :::column:::
+        CURRENT_TIMESTAMP
+    :::column-end:::
+    :::column:::
+        @@MAX_CONNECTIONS
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        GET_TRANSMISSION_STATUS
+    :::column-end:::
+    :::column:::
+        @@PACK_RECEIVED
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        GETDATE
+    :::column-end:::
+    :::column:::
+        @@PACK_SENT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        GETUTCDATE
+    :::column-end:::
+    :::column:::
+        @@PACKET_ERRORS
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@CONNECTIONS
+    :::column-end:::
+    :::column:::
+        @@TIMETICKS
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@CPU_BUSY
+    :::column-end:::
+    :::column:::
+        @@TOTAL_ERRORS
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@DBTS
+    :::column-end:::
+    :::column:::
+        @@TOTAL_READ
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@IDLE
+    :::column-end:::
+    :::column:::
+        @@TOTAL_WRITE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@IO_BUSY
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+ 
  下列非決定性內建函式**不得**用於 [!INCLUDE[tsql](../../includes/tsql-md.md)] 使用者定義函式中。  
   
-|||  
-|-|-|  
-|NEWID|RAND|  
-|NEWSEQUENTIALID|TEXTPTR|  
-  
+:::row:::
+    :::column:::
+        NEWID
+    :::column-end:::
+    :::column:::
+        RAND
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        NEWSEQUENTIALID
+    :::column-end:::
+    :::column:::
+        TEXTPTR
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+ 
  如需決定性與非決定性內建系統函數的清單，請參閱[決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
   
 ##  <a name="schema-bound-functions"></a><a name="SchemaBound"></a> 結構描述繫結的函式  
@@ -130,9 +214,8 @@ ms.locfileid: "85727082"
   
 ##  <a name="more-examples"></a><a name="Tasks"></a> 更多範例！  
   
-|||  
-|-|-|  
-|**工作描述**|**主題**|  
+|工作描述|主題|  
+|-|-|    
 |描述如何建立 Transact-SQL 使用者定義函數。|[建立使用者定義函式 &#40;資料庫引擎&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)|  
 |描述如何建立 CLR 函數。|[建立 CLR 函數](../../relational-databases/user-defined-functions/create-clr-functions.md)|  
 |描述如何建立使用者定義的彙總函式。|[建立使用者定義彙總](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)|  

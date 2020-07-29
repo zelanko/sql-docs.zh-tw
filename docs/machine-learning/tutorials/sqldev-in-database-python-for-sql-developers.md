@@ -2,22 +2,22 @@
 title: Python + T-SQL：開發模型
 description: 了解如何在 SQL Server 預存程序和 T-SQL 函數中內嵌 Python 程式碼。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 10/29/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3bafc3a524ec854dc9bf1669660827d5a6bc80f7
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: d5cdec0ad291fecf0606650d116f0c7979831c19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115991"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785635"
 ---
 # <a name="tutorial-python-data-analytics-for-sql-developers"></a>教學課程：適用於 SQL 開發人員的 Python 資料分析
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 這堂專供 SQL 程式設計師參加的教學課程，將說明使用 SQL Server 上的 [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) 資料庫來建置和部署 Python 機器學習解決方案，以了解 Python 整合。 您將使用 T-SQL、SQL Server Management Studio，以及具有[機器學習服務](../install/sql-machine-learning-services-windows-install.md)和 Python 語言支援的資料庫引擎執行個體。
 

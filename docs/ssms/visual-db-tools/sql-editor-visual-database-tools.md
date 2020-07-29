@@ -20,17 +20,16 @@ helpviewer_keywords:
 ms.assetid: 029abf7d-6414-47ca-a3a7-b3a057efb6c2
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 9fcf232da88714dd26ba7d9176057947e78ced34
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 95f34dec91f727bfb366af3e39ce9d3ef697e4ef
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254899"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008213"
 ---
 # <a name="sql-editor-visual-database-tools"></a>SQL 編輯器 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 使用 [SQL 編輯器] 可編輯現有的預存程序、函數、觸發程序和 SQL 指令碼。 在開啟上述任一物件時，此視窗會開啟。 若要建立針對資料來源執行的新 SQL 陳述式，請使用查詢設計工具的 [SQL 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) 。  
   
 SQL 編輯器提供許多實用的 SQL 文字編輯功能，包括：  

@@ -11,17 +11,16 @@ helpviewer_keywords:
 ms.assetid: c09a6bb7-efc3-4471-819e-c60f11de96f0
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: c3222a1ae0e951f2ee2a7fca7b2b08d6dda2669f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4c6c3928de56e853318978b0c4db131106fb5e79
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255364"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003205"
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>權限和 Visual Database Tools (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 允許使用者存取資料來源物件之使用權限，是在資料來源而非在 Visual Database Tools 中授與。 資料來源物件上所授與的存取使用權限，是由您安裝的安全性原則控制。 如果沒有存取某些資料庫物件的權限，您應該連絡資料庫管理員。  
   
 如果資料庫權限只可以用來檢視但不能修改資料庫結構，您可以使用變更指令碼來設計所做的修改，而不須將修改傳送到資料庫。  

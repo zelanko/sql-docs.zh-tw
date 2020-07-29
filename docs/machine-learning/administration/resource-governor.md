@@ -2,22 +2,22 @@
 title: 使用 Resource Governor 管理
 description: 了解如何使用 Resource Governor 來管理 SQL Server 機器學習服務中 Python 與 R 工作負載的 CPU、實體 IO 與記憶體資源配置。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 10/02/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 85556d545bd0ae9760f2adc92ef5a63c9a502a76
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f5a567ee0d4937341bb6d9f62a75955635118d1c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118811"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881972"
 ---
 # <a name="manage-python-and-r-workloads-with-resource-governor-in-sql-server-machine-learning-services"></a>使用 SQL Server 機器學習服務中的 Resource Governor 管理 Python 與 R 工作負載
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 了解如何使用 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) 來管理 SQL Server 機器學習服務中 Python 與 R 工作負載的 CPU、實體 IO 與記憶體資源配置。
 

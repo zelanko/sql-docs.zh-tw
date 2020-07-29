@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: f152af82-bcb6-49ca-af19-48cdb7fc9ac6
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: b0f6c9b3ead5073e0983c4f251957bcd8dc76b6c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a98ac8db359d4e47911ce3a2ca97b6cdd5494d90
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75224656"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011700"
 ---
 # <a name="join-tables-automatically-visual-database-tools"></a>自動聯結資料表 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 當您將兩個或多個資料表新增至查詢時， [查詢和檢視表設計工具](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) 會嘗試判斷它們是否相關。 如果相關聯，查詢和檢視設計師會自動在代表資料表或表格化物件的矩形之間加上聯結線 (Join Line)。  
   
 在下列狀況下，查詢和檢視設計師會將資料表當做已聯結：  

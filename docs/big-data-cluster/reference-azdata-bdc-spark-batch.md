@@ -1,29 +1,29 @@
 ---
 title: azdata bdc spark batch 參考
+titleSuffix: SQL Server big data clusters
 description: azdata bdc spark batch 命令的參考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5d141669313a90bd04cda2e54d5a9e9d5a3c68f6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a2921a1855ed02779bc30602c5b87ed4914d11f3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258627"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243039"
 ---
 # <a name="azdata-bdc-spark-batch"></a>azdata bdc spark batch
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-下文提供 `azdata` 工具中 `bdc spark batch` 命令的參考。 如需其他 `azdata` 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)
+下文提供 `azdata` 工具中 `sql` 命令的參考。 如需其他 `azdata` 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)。
 
 ## <a name="commands"></a>命令
-|     |     |
+| 命令 | 說明 |
 | --- | --- |
 [azdata bdc spark batch create](#azdata-bdc-spark-batch-create) | 建立新的 Spark 批次。
 [azdata bdc spark batch list](#azdata-bdc-spark-batch-list) | 列出 Spark 中的所有批次。
@@ -36,19 +36,32 @@ ms.locfileid: "75258627"
 ```bash
 azdata bdc spark batch create --file -f 
                               [--class-name -c]  
-                              [--arguments -a]  
-                              [--jar-files -j]  
-                              [--py-files -p]  
-                              [--files]  
-                              [--driver-memory]  
-                              [--driver-cores]  
-                              [--executor-memory]  
-                              [--executor-cores]  
-                              [--executor-count]  
-                              [--archives]  
-                              [--queue -q]  
-                              [--name -n]  
-                              [--config]
+                              
+[--arguments -a]  
+                              
+[--jar-files -j]  
+                              
+[--py-files -p]  
+                              
+[--files]  
+                              
+[--driver-memory]  
+                              
+[--driver-cores]  
+                              
+[--executor-memory]  
+                              
+[--executor-cores]  
+                              
+[--executor-count]  
+                              
+[--archives]  
+                              
+[--queue -q]  
+                              
+[--name -n]  
+                              
+[--config]
 ```
 ### <a name="examples"></a>範例
 建立新的 Spark 批次。
@@ -95,7 +108,7 @@ Spark 工作階段的名稱。
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org)。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 ## <a name="azdata-bdc-spark-batch-list"></a>azdata bdc spark batch list
@@ -116,16 +129,17 @@ azdata spark batch list
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org)。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 ## <a name="azdata-bdc-spark-batch-info"></a>azdata bdc spark batch info
 這會取得具有指定識別碼之 Spark 批次的相關資訊。  批次識別碼會從 'spark batch create' 傳回。
 ```bash
 azdata bdc spark batch info --batch-id -i 
-          ```
-### Examples
-Get batch info for batch with ID of 0.
+                            
+```
+### <a name="examples"></a>範例
+取得識別碼為 0 之批次的批次資訊。
 ```bash
 azdata spark batch info --batch-id 0
 ```
@@ -140,16 +154,17 @@ Spark 批次識別碼號碼。
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org)。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 ## <a name="azdata-bdc-spark-batch-log"></a>azdata bdc spark batch log
 這會取得具有指定識別碼之 Spark 批次的批次記錄項目。  批次識別碼會從 'spark batch create' 傳回。
 ```bash
 azdata bdc spark batch log --batch-id -i 
-         ```
-### Examples
-Get batch log for batch with ID of 0.
+                           
+```
+### <a name="examples"></a>範例
+取得識別碼為 0 之批次的批次記錄。
 ```bash
 azdata spark batch log --batch-id 0
 ```
@@ -164,16 +179,17 @@ Spark 批次識別碼號碼。
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org)。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 ## <a name="azdata-bdc-spark-batch-state"></a>azdata bdc spark batch state
 這會取得具有指定識別碼之 Spark 批次的批次狀態。  批次識別碼會從 'spark batch create' 傳回。
 ```bash
 azdata bdc spark batch state --batch-id -i 
-           ```
-### Examples
-Get batch state for batch with ID of 0.
+                             
+```
+### <a name="examples"></a>範例
+取得識別碼為 0 之批次的批次狀態。
 ```bash
 azdata spark batch state --batch-id 0
 ```
@@ -188,16 +204,17 @@ Spark 批次識別碼號碼。
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org)。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 ## <a name="azdata-bdc-spark-batch-delete"></a>azdata bdc spark batch delete
 這會刪除 Spark 批次。 批次識別碼會從 'spark batch create' 傳回。
 ```bash
 azdata bdc spark batch delete --batch-id -i 
-            ```
-### Examples
-Delete a batch.
+                              
+```
+### <a name="examples"></a>範例
+刪除批次。
 ```bash
 azdata spark batch delete --batch-id 0
 ```
@@ -212,7 +229,7 @@ Spark 批次識別碼號碼。
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org)。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 

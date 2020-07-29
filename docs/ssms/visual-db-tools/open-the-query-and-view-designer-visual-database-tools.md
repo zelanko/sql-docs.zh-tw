@@ -14,17 +14,16 @@ helpviewer_keywords:
 ms.assetid: b473f258-d53c-41c0-9ad9-528a2ff141f4
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: d496e53641b64a88fcf82016247b2ce4ab12b843
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9a5a9a1222723e04304356e3e1e8473811cbb642
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980414"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768148"
 ---
 # <a name="open-the-query-and-view-designer-visual-database-tools"></a>開啟查詢和檢視表設計工具 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/applies-to-version/sql-asdb.md)]
 在開啟檢視的定義、顯示查詢或檢視的結果，或者建立或開啟查詢時，[查詢和檢視設計師] 會開啟。 這包含四個個別的窗格：  
   
 -   [圖表] 窗格會以圖形顯示您從資料連接所選取的資料表或資料表值物件。 同時還會顯示資料表或物件之間的任何聯結關聯性。  

@@ -2,22 +2,22 @@
 title: 設定 Python 資料科學用戶端
 description: 設定 Python 本機環境 (Jupyter Notebook 或 PyCharm) 以針對搭配 Python 的 SQL Server 機器學習服務進行遠端連線。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/04/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ef03354afd3aa2318317ca4c946463a5b7355c12
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1857ba03808c4309f2573a7d8e58801d5f80199d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117771"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897216"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>在 SQL Server 機器學習服務上設定用於 Python 開發的資料科學用戶端
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 當您在[機器學習服務 (資料庫內) 安裝](../install/sql-machine-learning-services-windows-install.md)中包含 Python 選項時，Python 整合便可在 SQL Server 2017 及更新版中提供使用。 
 
@@ -51,9 +51,9 @@ SSMS 是個別的下載，很適合用來建立及執行 SQL Server 上的預存
 
 1. 下載安裝指令碼。
 
-  + [https://aka.ms/mls-py](https://aka.ms/mls-py) 會安裝 Microsoft Python 套件 9.2.1 版。 此版本會對應至預設 SQL Server 執行個體。 
+   + [https://aka.ms/mls-py](https://aka.ms/mls-py) 會安裝 Microsoft Python 套件 9.2.1 版。 此版本會對應至預設 SQL Server 執行個體。 
 
-  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) 會安裝 Microsoft Python 套件 9.3 版。 如果您的遠端 SQL Server 執行個體是[繫結至 Machine Learning Server 9.3](../install/upgrade-r-and-python.md)，則此版本會是較好的選擇。
+   + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) 會安裝 Microsoft Python 套件 9.3 版。 如果您的遠端 SQL Server 執行個體是[繫結至 Machine Learning Server 9.3](../install/upgrade-r-and-python.md)，則此版本會是較好的選擇。
 
 2. 以提高的系統管理員權限開啟 PowerShell 視窗 (以滑鼠右鍵按一下 [以系統管理員​​身分執行​​]  )。
 
@@ -79,7 +79,7 @@ SSMS 是個別的下載，很適合用來建立及執行 SQL Server 上的預存
 
 2. 輸入 `dir *.exe` 以列出可執行檔。 您應該會看見 **python.exe**、**pythonw.exe** 及 **uninstall-anaconda.exe**。
 
-  ![Python 可執行檔清單](media/powershell-python-exe.png)
+   ![Python 可執行檔清單](media/powershell-python-exe.png)
    
 在具有多個 Python 版本的系統上，如果您想要載入 **revoscalepy** 及其他 Microsoft 套件，請記得使用這個特定的 Python.exe。
 
@@ -94,17 +94,17 @@ Anaconda 包含 Jupyter Notebook。 作為下一個步驟，請建立筆記本�
 
 1. 於 Powershell 命令提示字元中，在仍然處於 C:\Program Files\Microsoft\PyForMLS 目錄的情況下，從 [Scripts] 資料夾開啟 Jupyter Notebook：
 
-  ```powershell
-  .\Scripts\jupyter-notebook
-  ```
+   ```powershell
+   .\Scripts\jupyter-notebook
+   ```
 
-  在您的預設瀏覽器中，應該會於 `https://localhost:8889/tree` 開啟筆記本。
+   在您的預設瀏覽器中，應該會於 `https://localhost:8889/tree` 開啟筆記本。
 
-  另一個啟動方式是按兩下 **jupyter-notebook.exe**。 
+   另一個啟動方式是按兩下 **jupyter-notebook.exe**。 
 
 2. 按一下 [新增]  ，然後按一下 [Python 3]  。
 
-  ![搭配 [新增 Python 3] 選項的 Jupyter 筆記本](media/jupyter-notebook-new-p3.png)
+   ![搭配 [新增 Python 3] 選項的 Jupyter 筆記本](media/jupyter-notebook-new-p3.png)
 
 3. 輸入 `import revoscalepy` 並執行命令以載入其中一個 Microsoft 特定程式庫。
 
@@ -112,17 +112,17 @@ Anaconda 包含 Jupyter Notebook。 作為下一個步驟，請建立筆記本�
 
 4. 輸入更複雜的陳述式系列。 此範例會在本機資料集上使用 [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) \(英文\) 來產生摘要統計資料。 其他函式會取得範例資料的位置，並針對本機 .xdf 檔案建立資料來源物件。
 
-  ```python
-  import os
-  from revoscalepy import rx_summary
-  from revoscalepy import RxXdfData
-  from revoscalepy import RxOptions
-  sample_data_path = RxOptions.get_option("sampleDataDir")
-  print(sample_data_path)
-  ds = RxXdfData(os.path.join(sample_data_path, "AirlineDemoSmall.xdf"))
-  summary = rx_summary("ArrDelay+DayOfWeek", ds)
-  print(summary)
-  ```
+   ```python
+   import os
+   from revoscalepy import rx_summary
+   from revoscalepy import RxXdfData
+   from revoscalepy import RxOptions
+   sample_data_path = RxOptions.get_option("sampleDataDir")
+   print(sample_data_path)
+   ds = RxXdfData(os.path.join(sample_data_path, "AirlineDemoSmall.xdf"))
+   summary = rx_summary("ArrDelay+DayOfWeek", ds)
+   print(summary)
+   ```
 
 下列螢幕擷取畫面會顯示輸入及一部分輸出 (為了簡潔起見而修剪)。
 

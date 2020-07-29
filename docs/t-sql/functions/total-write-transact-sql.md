@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: cd528126-51ee-4aa4-a21f-f32ce5c80fac
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0464eec31fb138fd58f2e3c2a1efd09e2aafc254
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7c50d5920c9386175362f31789cc877e5c6cc0d0
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85858546"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111787"
 ---
 # <a name="x40x40total_write-transact-sql"></a>&#x40;&#x40;TOTAL_WRITE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,9 @@ ms.locfileid: "85858546"
 @@TOTAL_WRITE  
 ```  
   
-## <a name="return-types"></a>傳回型別  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>傳回型別
  **integer**  
   
 ## <a name="remarks"></a>備註  

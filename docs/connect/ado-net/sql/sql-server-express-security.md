@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: cd6f71f5c42418ab9357a9aaeec9788ae3ea0d65
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0e9a0b87e0275846b1c1b9535b9485dd1cbae066
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920958"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243422"
 ---
 # <a name="sql-server-express-security"></a>SQL Server Express 安全性
 
@@ -40,7 +40,7 @@ SQL Server Express 通常會安裝為具名執行個體。 執行個體的預設
 ## <a name="external-resources"></a>外部資源  
 如需 SQL Server Express 的詳細資訊，請參閱下列資源。  
   
-|||  
+|資源|說明|
 |-|-|  
 |[Microsoft SQL Server 2005 Express Edition 線上叢書](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|SQL Server 2005 Express Edition 的完整文件。|  
 |《SQL Server 線上叢書》中的[非管理員的使用者執行個體](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100))|描述如何建立及部署使用者執行個體。|  

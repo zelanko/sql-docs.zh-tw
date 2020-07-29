@@ -3,21 +3,21 @@ title: 什麼是 SQL Server 2016 R Services？
 titleSuffix: ''
 description: R 服務是 SQL Server 2016 中的一項功能，可讓您使用關聯式資料來執行 R 指令碼。 您可以使用開放原始碼套件和架構及 Microsoft R 套件，來進行預測性分析和機器學習。 指令碼會在資料庫中執行，不需在 SQL Server 外部或透過網路來移動資料。 本文說明 SQL Server R Services 的基本概念。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 08/12/2019
-ms.topic: overview
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 25b21944db46a5054ad8765b83fe7e2985f8d894
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 974562d95ebf756de5f95eca0e89a6d5fc6e958f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486697"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775393"
 ---
 # <a name="what-is-sql-server-2016-r-services"></a>什麼是 SQL Server 2016 R Services？
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 R 服務是 SQL Server 2016 中的一項功能，可讓您使用關聯式資料來執行 R 指令碼。 您可以使用開放原始碼套件和架構及 [Microsoft R 套件](#packages)，來進行預測性分析和機器學習。 指令碼會在資料庫中執行，不需在 SQL Server 外部或透過網路來移動資料。 本文說明 SQL Server R Services 的基本概念。
 

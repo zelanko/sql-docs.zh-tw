@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bf355678b3219fb0bf32ecd1620c00b0e58f346f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 68b46562968cd53b0fb12f13cc82fd0b83f6e192
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230217"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729024"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>角色切換後針對登入和作業進行管理 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫部署高可用性或災害復原解決方案時，為該資料庫儲存的相關資訊務必完整重現於 **master** 或 **msdb** 資料庫中。 這類相關資訊通常包括主要/主體資料庫的各項作業，以及需要連接到該資料庫的使用者或處理序的登入。 您應將此資訊複寫於裝載次要/鏡像資料庫的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上。 可能的話，最好在角色切換之後，以程式設計方式在新的主要/主體資料庫上重現此資訊。  
   
 ## <a name="logins"></a>登入  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d4fcf2cf0eb10bc7312923c887314b36e04b369d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b58dd1c31069ed139cf3205ac4e0435af2e4758d
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85682654"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113019"
 ---
 # <a name="decompress-transact-sql"></a>DECOMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -35,7 +35,9 @@ ms.locfileid: "85682654"
 DECOMPRESS ( expression )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *expression*  
 **varbinary(** _n_ **)** 、**varbinary(max)** 或 **binary(** _n_ **)** 值。 如需詳細資訊，請參閱[運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)。  
   

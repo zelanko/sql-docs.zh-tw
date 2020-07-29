@@ -2,18 +2,19 @@
 title: 如何參與編輯 SQL Server 文件集 | Microsoft Docs
 ms.date: 08/13/2018
 ms.prod: sql
+ms.technology: release-landing
 ms.reviewer: ''
 ms.custom: ''
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5b63711b537358db7cbf3fa34dcbfdf7444d4b7a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d947ae25f6f01740e7c5826a7edf332ff422a9de
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286322"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247380"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>如何參與編輯 SQL Server 文件集
 
@@ -23,7 +24,7 @@ ms.locfileid: "79286322"
 
 若要參與編輯，您可以使用下列兩個主要的工作流程：
 
-|||
+|工作流程|描述|
 |---|---|
 | [在瀏覽器中編輯](#githubui) | 適合簡短、快速編輯任何文章。 |
 | [使用工具以在本機編輯](#tools) | 適用於更複雜、涉及多篇文章的編輯，以及頻繁參與編輯 docs.microsoft.com。 |
@@ -36,16 +37,16 @@ ms.locfileid: "79286322"
 
 下列步驟會摘要說明流程： 
 
-1. 在您想提供意見反應的頁面上，選取位於右上角的 [編輯]  連結。
+1. 在您想提供意見反應的頁面上，選取位於右上角的 [編輯] 連結。
 1. 在下一個頁面上，選取位於右上角的**鉛筆**圖示。
-1. 在下一個頁面上，於 [編輯檔案]  文字視窗中，直接對您想要變更的文字進行編輯。
+1. 在下一個頁面上，於 [編輯檔案] 文字視窗中，直接對您想要變更的文字進行編輯。
     若您需要格式化新文字或變更後文字的協助，請參閱 [Markdown 速查表](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)。
-1. 在您進行編輯後，請在 [認可變更]  下方：
+1. 在您進行編輯後，請在 [認可變更] 下方：
     1. 在第一個文字方塊中，輸入您所進行變更的簡短描述。
-    1. 在 [新增選擇性延伸描述]  方塊中，提供您變更的簡短描述。
-1. 選取 [建議檔案變更]  。
-1. 在 [比較變更]  頁面上，選取 [建立提取要求]  。 
-1. 在 [開啟提取要求]  頁面上，選取 [建立提取要求]  。 
+    1. 在 [新增選擇性延伸描述] 方塊中，提供您變更的簡短描述。
+1. 選取 [建議檔案變更]。
+1. 在 [比較變更] 頁面上，選取 [建立提取要求]。 
+1. 在 [開啟提取要求] 頁面上，選取 [建立提取要求]。 
 
 下列 GIF 會示範在您瀏覽器中提交變更的端對端過程：
 
@@ -93,7 +94,7 @@ ms.locfileid: "79286322"
 假設下列 Markdown 範例，其會在 **appliesto-ss-asdb-asdw-pdw-md.md** include 檔中提取。
 
 ```Markdown
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 ```
 
 這會將下列文字新增至文章的頂端：
@@ -104,7 +105,7 @@ ms.locfileid: "79286322"
 
 - 如需常用 include 檔案的清單，請參閱 [SQL Server 版本和 applies-to include 檔案](applies-to-includes.md)。
 - 查看其他涵蓋相同功能或相關工作的文章。 如果您要編輯這篇文章，可以複製 Markdown 以取得 applies-to include 連結 (您可以取消編輯而不送出)。
-- 搜尋 [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) 目錄，找出包含 "applies-to" 文字的檔案。 您可以使用 GitHub 中的 [尋找]  按鈕快速篩選。 按一下檔案以查看呈現的方式。
+- 搜尋 [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) 目錄，找出包含 "applies-to" 文字的檔案。 您可以使用 GitHub 中的 [尋找] 按鈕快速篩選。 按一下檔案以查看呈現的方式。
 - 請注意命名慣例。 如果名稱中有 x，它們通常是預留位置，表示不支援服務。 比方說，**appliesto-xx-xxxx-asdw-xxx-md.md** 表示只支援 Azure SQL 資料倉儲，因為只拼寫出 **asdw**，而其他欄位均為 x。
 - 某些 include 會指定版本號碼，例如 **tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md**。 當您知道某項功能是由特定版本的 SQL Server 導入時，請只使用該版本的 include。
 

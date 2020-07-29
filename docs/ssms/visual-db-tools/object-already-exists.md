@@ -12,17 +12,16 @@ f1_keywords:
 ms.assetid: f80735dd-06aa-4d69-b226-32dc57e3223f
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 0d20e4505419f5ff2bab06f8b937133530d43258
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8927f5b9caaf96c4fa3172aa56144006436f89cc
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75224584"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85996560"
 ---
 # <a name="object-already-exists"></a>物件已存在
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 您嘗試儲存的物件和資料庫中已有的物件名稱相同。 請選擇其他名稱，然後繼續。  
   
 也可能表示資料行名稱已存在。  

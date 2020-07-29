@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3fd92434-70f5-466e-bef0-7e0fd73ddb1c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 299b99a06666b42e45d63d920370aac30444bf65
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1f88ef2cd69bcb3beb8729830a35f40232c4bd04
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242825"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009651"
 ---
 # <a name="remove-or-delete-an-item-or-project"></a>移除或刪除項目或專案
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 專案中的專案項目有「查詢」、「連接」及「其他」檔案。 您可以在不從儲存體清除檔案的情況下，從方案中移除專案查詢和其他檔案。 當專案或項目在目前的方案中沒有用，而且您想要將它包含在另一個方案中時，就可移除它。  
   
 ### <a name="to-remove-a-project-item"></a>移除專案項目  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 82cd9f92-d935-45a0-a433-620d6e15b467
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 640fd2b0f64d6125279ad8d9446225bb9d54d945
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3304e738d93aa019f43505352d9491c6ccc42c9d
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011449"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112039"
 ---
 # <a name="current_transaction_id-transact-sql"></a>CURRENT_TRANSACTION_ID (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -37,8 +37,9 @@ ms.locfileid: "86011449"
 CURRENT_TRANSACTION_ID( )  
   
 ```  
-  
+
 ## <a name="return-types"></a>傳回類型
+
 **bigint**
   
 ## <a name="return-value"></a>傳回值  

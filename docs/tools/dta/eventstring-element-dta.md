@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: f76c37b4-2f6e-4274-8ee2-87e89d98e8a2
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: f9944a2e9d9dc1ec8aad069aa74b90a6a420fad4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 84adfcc937006ed9c1c079977d09e37bbfa5e922
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826512"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785983"
 ---
 # <a name="eventstring-element-dta"></a>EventString 元素 (DTA)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 在 XML 輸入檔中，直接指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼工作負載。  
   

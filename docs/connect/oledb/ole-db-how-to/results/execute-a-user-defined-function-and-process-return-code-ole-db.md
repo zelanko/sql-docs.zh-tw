@@ -12,15 +12,15 @@ helpviewer_keywords:
 - user-defined functions [OLE DB]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 8964bb97acef2a26f65740522f5f5a05aa7a9810
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a1acbc1aaca3a4618ac0f74da0cc85c628b04d79
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994749"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012524"
 ---
 # <a name="execute-a-user-defined-function-and-process-return-code-ole-db"></a>執行使用者定義函數和處理傳回碼 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 

@@ -18,12 +18,12 @@ ms.assetid: a00245aa-32c7-4ad4-a0d1-64f3d6841153
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azure-sqldw-latest||=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 67f77472faf201a3c36597c226bac139ddfd310f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3d17b3012e68e08af24ea1fe2b93cb02f206a69a
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85992413"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113292"
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
 
@@ -42,6 +42,8 @@ TRIM ( [ characters FROM ] string )
 -- Syntax for Azure SQL Data Warehouse
 TRIM ( string )
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引數
 

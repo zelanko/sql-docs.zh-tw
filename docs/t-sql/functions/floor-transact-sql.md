@@ -20,12 +20,12 @@ ms.assetid: 4f26c784-9240-491f-b854-754be3fccae4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fe97e52c540ba58252b4cdfaec66c2eae8bd35cf
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3dbce5ca4606e44b3c6e548e82d3266890c7c449
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010771"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110465"
 ---
 # <a name="floor-transact-sql"></a>FLOOR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,9 @@ ms.locfileid: "86010771"
 FLOOR ( numeric_expression )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *numeric_expression*  
  為精確數值或近似數值資料類型類別目錄的運算式，但 **bit** 資料類型除外。  
   

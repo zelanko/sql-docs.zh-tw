@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 465fb7fc-7622-4252-a178-ea51691c935b
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c743cde20e2761b37b004ec26869b96f6305d687
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0e13bbed917dff1f4b3382c3a4f519d0fc85e4ba
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252144"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246227"
 ---
 # <a name="create-jobs"></a>建立作業
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
@@ -38,9 +37,8 @@ ms.locfileid: "75252144"
   
 ## <a name="related-tasks"></a>相關工作  
   
-|||  
+|描述|主題|  
 |-|-|  
-|**說明**|**主題**|  
 |描述如何建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業。|[建立作業](../../ssms/agent/create-a-job.md)|  
 |描述如何將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的擁有權重新指派給其他使用者。|[Give Others Ownership of a Job](../../ssms/agent/give-others-ownership-of-a-job.md)|  
 |描述如何設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的作業記錄。|[Set Up the Job History Log](../../ssms/agent/set-up-the-job-history-log.md)|  

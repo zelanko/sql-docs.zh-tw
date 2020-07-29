@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6bd9ccae-af77-4a05-b97f-f8ab41cfde42
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 94eb8e6d45606da75c6661a78b5f296940248388
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ec888090ae3cd6b4a14487681c98f0a34795beae
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732588"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113577"
 ---
 # <a name="connectionproperty-transact-sql"></a>CONNECTIONPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,8 +36,10 @@ ms.locfileid: "85732588"
 ```sql
 CONNECTIONPROPERTY ( property )  
 ```  
-  
-## <a name="arguments"></a>引數  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
 *property*  
 連線的屬性。 *property* 可以是下列值之一：
   

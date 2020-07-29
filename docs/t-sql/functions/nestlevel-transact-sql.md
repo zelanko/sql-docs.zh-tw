@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8c0b2134-8616-44f6-addc-6583c432fb62
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f0be9ab485c6fab9ac8e09331f8421b3242d3a21
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b161917c13cba013b06a292493b58dca23e35b97
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784402"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110901"
 ---
 # <a name="x40x40nestlevel-transact-sql"></a>&#x40;&#x40;NESTLEVEL (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,9 @@ ms.locfileid: "85784402"
 @@NESTLEVEL  
 ```  
   
-## <a name="return-types"></a>傳回型別  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>傳回型別
  **int**  
   
 ## <a name="remarks"></a>備註  

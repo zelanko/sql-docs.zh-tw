@@ -1,6 +1,6 @@
 ---
 title: Reporting Services 的驗證擴充保護 | Microsoft Docs
-ms.date: 05/30/2017
+ms.date: 06/22/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: security
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8e4d8347b57c7dae62dc8261c6542badfb654bde
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c881376243e1e870c5d3aa6c8477eccfb4a17ac0
+ms.sourcegitcommit: 4fe7b0d5e8ef1bc076caa3819f7a7b058635a486
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635922"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85263775"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>含有 Reporting Services 的驗證擴充保護
 
@@ -153,13 +153,7 @@ SSRS 支援並強制執行已在作業系統中啟用的擴充保護。 如果�
 |ComputerNamePhysicalDnsHostname|本機電腦的 DNS 主機名稱。 如果本機電腦是叢集中的一個節點，則會使用本機電腦的 DNS 主機名稱，而非叢集虛擬伺服器的名稱。|  
 |ComputerNamePhysicalNetBIOS|本機電腦的 NetBIOS 名稱。 如果本機電腦是叢集中的一個節點，則會使用本機電腦的 NetBIOS 名稱，而非叢集虛擬伺服器的名稱。|  
   
- 由於系統已加入 SPN，因此會在追蹤記錄中加入一個項目，如下所示：  
-  
- `rshost!rshost!10a8!01/07/2010-19:29:38:: i INFO: SPN Whitelist Added <ComputerNamePhysicalNetBIOS> - <theservername>.`  
-  
- `rshost!rshost!10a8!01/07/2010-19:29:38:: i INFO: SPN Whitelist Added <ComputerNamePhysicalDnsHostname> - <theservername>.`  
-  
- 如需詳細資訊，請參閱[為報表伺服器註冊服務主要名稱 &#40;SPN&#41;](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md) 和[關於 URL 保留項目和註冊 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)。  
+如需詳細資訊，請參閱[為報表伺服器註冊服務主要名稱 &#40;SPN&#41;](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md) 和[關於 URL 保留項目和註冊 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)。  
   
 ## <a name="next-steps"></a>後續步驟
 

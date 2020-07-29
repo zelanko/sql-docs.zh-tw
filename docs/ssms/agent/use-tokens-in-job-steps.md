@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5800bd00faac0c34052a5930cfdb1ccaf86afbcb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6980c7914a10498d2f1d5cc08d60d63d9dd1f0ac
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257884"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895199"
 ---
 # <a name="use-tokens-in-job-steps"></a>在作業步驟中使用 Token
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
@@ -124,18 +123,22 @@ ms.locfileid: "75257884"
   
 執行更新指令碼之後，會使用此 Token 插入 `ESCAPE_NONE` 巨集。 不過，在此情況下，您必須依照下列方式重新撰寫不使用巢狀的指令碼，並插入 `ESCAPE_SQUOTE` 巨集，以便適當逸出可能會傳入 Token 取代字串的分隔符號：  
   
-<pre>DECLARE @msgString nvarchar(max)  
-SET @msgString = '$(ESCAPE_SQUOTE(A-MSG))'  
-SET @msgString = QUOTENAME(@msgString,'''')  
-PRINT N'Print ' + @msgString ;</pre>  
+```sql
+DECLARE @msgString nvarchar(max);
+SET @msgString = '$(ESCAPE_SQUOTE(A-MSG))';
+SET @msgString = QUOTENAME(@msgString,'''');
+PRINT N'Print ' + @msgString;
+```
   
 此外，請注意此範例中，QUOTENAME 函數會設定引號字元。  
   
 ### <a name="c-using-tokens-with-the-escape_none-macro"></a>C. 使用 Token 搭配 ESCAPE_NONE 巨集  
 下列範例是指令碼的一部分，而這個指令碼會從 `job_id` 資料表擷取 `sysjobs` 並使用 `JOBID` Token 來擴展 `@JobID` 變數 (之前在指令碼中宣告成二進位資料類型)。 請注意，由於二進位資料類型不需要任何分隔符號，所以 `ESCAPE_NONE` 巨集會搭配 `JOBID` Token 使用。 您不需要在執行更新指令碼之後，更新此作業步驟。  
   
-<pre>SELECT * FROM msdb.dbo.sysjobs  
-WHERE @JobID = CONVERT(uniqueidentifier, $(ESCAPE_NONE(JOBID))) ;</pre>  
+```sql
+SELECT * FROM msdb.dbo.sysjobs  
+WHERE @JobID = CONVERT(uniqueidentifier, $(ESCAPE_NONE(JOBID)));
+```
   
 ## <a name="see-also"></a>另請參閱  
 [實作作業](../../ssms/agent/implement-jobs.md)  

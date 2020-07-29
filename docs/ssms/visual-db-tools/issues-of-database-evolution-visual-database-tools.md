@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 1ed6ae10-d212-4ec2-8569-1b94ab1cba6d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 987f808a647966671e155c94a80270b1faf6da30
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4fbb7ae6e91f843b84277fc14ab45058a3fa7fac
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75225025"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010374"
 ---
 # <a name="issues-of-database-evolution-visual-database-tools"></a>資料庫演進問題 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 如果您變更了某部署資料庫的結構，您必須特別注意您的變更是否與現有資料和資料庫結構相容。 進行下列修改時您可能必須採取特殊步驟：  
   
 -   **新增條件約束**：如果您新增某樣條件約束，該資料庫可能已含有無法滿足該條件約束的資料。 當您儲存新的條件約束時，[儲存後告知對話方塊 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/post-save-notifications-dialog-box-visual-database-tools.md) 將通知您資料庫伺服器無法建立該條件約束。 若要強制資料庫接受新的條件約束，您可以清除 [建立時立即檢查現有資料]  核取方塊。  

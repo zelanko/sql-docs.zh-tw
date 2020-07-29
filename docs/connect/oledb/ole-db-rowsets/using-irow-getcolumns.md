@@ -17,15 +17,15 @@ helpviewer_keywords:
 - GetColumns method
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: ddec5950f9dd8acc55c8bf1b6fe751bd0f34ac1f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6f00e7c205e559864ed495dccd43f3a4f979260f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015336"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008769"
 ---
 # <a name="using-irowgetcolumns"></a>使用 IRow::GetColumns
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

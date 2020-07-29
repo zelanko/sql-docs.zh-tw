@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4308a7b9-8e8f-49e9-8246-8224e32f4953
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 8a3fd16fc891f1996014e7deee016d696e7ff51c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d216563a1e4e666ba7b9a15bdf412de0a7d91d5b
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85714664"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110294"
 ---
 # <a name="x40x40textsize-transact-sql"></a>&#x40;&#x40;TEXTSIZE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,9 @@ ms.locfileid: "85714664"
 @@TEXTSIZE  
 ```  
   
-## <a name="return-types"></a>傳回型別  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>傳回型別
  **integer**  
   
 ## <a name="examples"></a>範例  

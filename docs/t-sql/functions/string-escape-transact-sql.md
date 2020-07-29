@@ -18,12 +18,12 @@ ms.assetid: 2163bc7a-3816-4304-9c40-8954804f5465
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 491336ff6f405306fe7d74bd97769981ed909bfa
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b2d9e783ba7ea6c73059a7b37c5df2be5b702984
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85995089"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110307"
 ---
 # <a name="string_escape-transact-sql"></a>STRING_ESCAPE (Transact-SQL)
 
@@ -38,7 +38,7 @@ ms.locfileid: "85995089"
 ```sql
 STRING_ESCAPE( text , type )  
 ```  
-  
+
 ## <a name="arguments"></a>引數
 
  *text*  

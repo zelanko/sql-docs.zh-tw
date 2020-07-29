@@ -17,17 +17,16 @@ helpviewer_keywords:
 ms.assetid: a1147905-fe4a-4fac-b576-a17622477e66
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 227c2b460eac208827e188f35b4cc8630542c77c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 71e70000e6a4b1c6208e19f5d233f44fb31b965b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247541"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008331"
 ---
 # <a name="delete-rows-in-the-results-pane-visual-database-tools"></a>刪除結果窗格中的資料列 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 若要刪除資料庫中的資料錄，請刪除 [結果] 窗格中的資料列。 若要刪除所有的資料列，請使用刪除查詢。 如需詳細資訊，請參閱 [建立製成資料表查詢 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-delete-queries-visual-database-tools.md)。 如果只是要從 [結果] 窗格移除資料列，請變更查詢的準則。 如需詳細資訊，請參閱 [指定搜尋準則 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)。  
   
 ### <a name="to-delete-a-row-or-rows"></a>若要刪除資料列  

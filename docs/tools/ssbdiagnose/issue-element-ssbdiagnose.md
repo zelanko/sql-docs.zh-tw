@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 2246a886-686b-44ca-9771-b155cedad8be
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 0f0d339322dea349f7769ae32d7380f70c922539
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 56f677836fb1bd7fc28baf75de2abcb5fea56b7e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150572"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726800"
 ---
 # <a name="issue-element-ssbdiagnose"></a>Issue 元素 (ssbdiagnose)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 報告 **ssbdiagnose** 公用程式所發現的問題。 **ssbdiagnose** XML 輸出檔案中每個報告的問題都有一個 Issue 元素。  
   

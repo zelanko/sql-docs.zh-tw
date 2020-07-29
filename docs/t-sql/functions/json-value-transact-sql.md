@@ -17,12 +17,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 7201224aa89f4add1d618b976f8bff0b8857f5c9
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 702063d5d3af0a6e8a41c88e3d5b578cd608e0e5
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196796"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111484"
 ---
 # <a name="json_value-transact-sql"></a>JSON_VALUE (Transact-SQL)
 
@@ -40,6 +40,8 @@ ms.locfileid: "86196796"
 JSON_VALUE ( expression , path )  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>引數
 
  *expression*  

@@ -1,29 +1,29 @@
 ---
 title: azdata bdc spark session 參考
+titleSuffix: SQL Server big data clusters
 description: azdata bdc spark session 命令的參考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6829ce474b2f2f0b000a8ded5cfae2e293e1c2da
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c6b4001a18cbc609a6eaccd634e029b22d90f02a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258621"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243509"
 ---
 # <a name="azdata-bdc-spark-session"></a>azdata bdc spark session
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-下文提供 `azdata` 工具中 `bdc spark session` 命令的參考。 如需其他 `azdata` 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)
+下文提供 `azdata` 工具中 `sql` 命令的參考。 如需其他 `azdata` 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)。
 
 ## <a name="commands"></a>命令
-|     |     |
+| 命令 | 說明 |
 | --- | --- |
 [azdata bdc spark session create](#azdata-bdc-spark-session-create) | 建立新的 Spark 工作階段。
 [azdata bdc spark session list](#azdata-bdc-spark-session-list) | 列出 Spark 中所有作用中的工作階段。
@@ -36,18 +36,30 @@ ms.locfileid: "75258621"
 ```bash
 azdata bdc spark session create [--session-kind -k] 
                                 [--jar-files -j]  
-                                [--py-files -p]  
-                                [--files -f]  
-                                [--driver-memory]  
-                                [--driver-cores]  
-                                [--executor-memory]  
-                                [--executor-cores]  
-                                [--executor-count]  
-                                [--archives -a]  
-                                [--queue -q]  
-                                [--name -n]  
-                                [--config -c]  
-                                [--timeout-seconds -t]
+                                
+[--py-files -p]  
+                                
+[--files -f]  
+                                
+[--driver-memory]  
+                                
+[--driver-cores]  
+                                
+[--executor-memory]  
+                                
+[--executor-cores]  
+                                
+[--executor-count]  
+                                
+[--archives -a]  
+                                
+[--queue -q]  
+                                
+[--name -n]  
+                                
+[--config -c]  
+                                
+[--timeout-seconds -t]
 ```
 ### <a name="examples"></a>範例
 建立工作階段。
@@ -91,7 +103,7 @@ Spark 工作階段的名稱。
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org)。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 ## <a name="azdata-bdc-spark-session-list"></a>azdata bdc spark session list
@@ -112,16 +124,17 @@ azdata spark session list
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org)。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 ## <a name="azdata-bdc-spark-session-info"></a>azdata bdc spark session info
 這會取得具有指定識別碼的作用中 Spark 工作階段的工作階段資訊。  工作階段識別碼會從 'spark session create' 傳回。
 ```bash
 azdata bdc spark session info --session-id -i 
-            ```
-### Examples
-Get session info for session with ID of 0.
+                              
+```
+### <a name="examples"></a>範例
+取得識別碼為 0 之工作階段的工作階段資訊。
 ```bash
 azdata spark session info --session-id 0
 ```
@@ -136,16 +149,17 @@ Spark 工作階段識別碼。
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org)。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 ## <a name="azdata-bdc-spark-session-log"></a>azdata bdc spark session log
 這會取得具有指定識別碼的作用中 Spark 工作階段的工作階段記錄項目。  工作階段識別碼會從 'spark session create' 傳回。
 ```bash
 azdata bdc spark session log --session-id -i 
-           ```
-### Examples
-Get session log for session with ID of 0.
+                             
+```
+### <a name="examples"></a>範例
+取得識別碼為 0 之工作階段的工作階段記錄。
 ```bash
 azdata spark session log --session-id 0
 ```
@@ -160,16 +174,17 @@ Spark 工作階段識別碼。
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org)。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 ## <a name="azdata-bdc-spark-session-state"></a>azdata bdc spark session state
 這會取得具有指定識別碼的作用中 Spark 工作階段的工作階段狀態。  工作階段識別碼會從 'spark session create' 傳回。
 ```bash
 azdata bdc spark session state --session-id -i 
-             ```
-### Examples
-Get session state for session with ID of 0.
+                               
+```
+### <a name="examples"></a>範例
+取得識別碼為 0 之工作階段的工作階段狀態。
 ```bash
 azdata spark session state --session-id 0
 ```
@@ -184,16 +199,17 @@ Spark 工作階段識別碼。
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org)。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 ## <a name="azdata-bdc-spark-session-delete"></a>azdata bdc spark session delete
 這會刪除互動式 Spark 工作階段。 工作階段識別碼會從 'spark session create' 傳回。
 ```bash
 azdata bdc spark session delete --session-id -i 
-              ```
-### Examples
-Delete a session.
+                                
+```
+### <a name="examples"></a>範例
+刪除工作階段。
 ```bash
 azdata spark session delete --session-id 0
 ```
@@ -208,7 +224,7 @@ Spark 工作階段識別碼。
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org)。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 

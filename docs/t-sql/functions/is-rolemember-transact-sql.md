@@ -20,12 +20,12 @@ ms.assetid: 73efa688-ae91-4014-98bc-1cabe47321f7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e6359be0142896e79cdf9ebba275f523fcae5b5f
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 05ada0fde26bdd1e22ceea152539daae8967c1d4
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632012"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113425"
 ---
 # <a name="is_rolemember-transact-sql"></a>IS_ROLEMEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -41,7 +41,9 @@ ms.locfileid: "81632012"
 IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  **'** *role* **'**  
  要檢查之資料庫角色的名稱。 *role* 為 **sysname**。  
   

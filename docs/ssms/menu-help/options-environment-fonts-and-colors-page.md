@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 97d8667e7c6972331471622685d8a0bb97303dcd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fac8e4cdb99d19da39f60585db3f77a27975983a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245731"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011833"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>選項 (環境 - 字型和色彩頁面)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [選項]  對話方塊讓您能夠針對 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的各種使用者介面元素來建立自訂字型和色彩配置。 在 [工具]  功能表上按一下 [選項]  、展開 [環境]  資料夾，然後選取 [字型和色彩]  。  
   
 在對色彩配置進行變更的工作階段中，色彩配置的變更並不會生效。 您可以開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的其他執行個體，並產生您希望套用變更的條件，來評估色彩變更。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
 **顯示設定**  
 列出您可以變更字型和色彩配置的所有使用者介面元素。 從此清單中選取了項目之後，您可以自訂 [顯示項目]  中所選之項目的色彩設定。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "75245731"
 |--------|--------------|  
 |文字編輯器|變更文字編輯器的字型樣式、大小，以及色彩顯示設定，會影響預設文字編輯器裡文字的外觀。 這些設定並不會影響文字編輯器在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的外部所開啟的文件。|  
 |印表機|變更印表機的字型樣式、大小，以及色彩顯示設定，會影響列印文件裡文字的外觀。<br /><br />注意：您可以針對列印目的選取不同於文字編輯器所顯示字型的預設字型。 當列印同時包含單一位元組和雙位元組字元的程式碼時，這就非常有用。|  
-|[所有文字工具視窗] |變更此項目的字型樣式、大小，以及色彩顯示設定，會影響 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中有輸出窗格之工具視窗裡文字的外觀。 例如，[輸出] 視窗、[文字結果] 視窗等等。<br /><br />注意：對 [所有文字工具視窗] 項目的文字所做的變更，在您進行變更的工作階段中並不會生效。 您可以開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的其他執行個體，來評估這些變更。|  
+|[所有文字工具視窗]|變更此項目的字型樣式、大小，以及色彩顯示設定，會影響 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中有輸出窗格之工具視窗裡文字的外觀。 例如，[輸出] 視窗、[文字結果] 視窗等等。<br /><br />注意：對 [所有文字工具視窗] 項目的文字所做的變更，在您進行變更的工作階段中並不會生效。 您可以開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的其他執行個體，來評估這些變更。|  
 |尋找結果視窗|變更此項目的字型樣式、大小，以及色彩顯示設定，會影響 [尋找結果] 視窗裡文字的外觀。|  
 |輸出視窗|變更此項目的字型樣式、大小，以及色彩顯示設定，會影響 [輸出] 視窗裡文字的外觀。|  
 |方格結果|變更此項目的字型樣式、大小，以及色彩顯示設定，會影響 [查詢] 視窗的 [方格結果]  區域裡文字的外觀。|  
@@ -52,7 +52,7 @@ ms.locfileid: "75245731"
 列出您可以修改前景和背景色彩的項目。  
   
 > [!NOTE]  
->  預設的顯示項目是文字。 如此一來，指派給其他顯示項目的屬性就會覆寫指派給文字的屬性。 例如，如果您指派藍色給 **文字** ，且指派綠色給識別碼，則所有識別碼都會以綠色顯示。 在此範例中，識別碼屬性會覆寫文字屬性。  
+> 預設的顯示項目是文字。 如此一來，指派給其他顯示項目的屬性就會覆寫指派給文字的屬性。 例如，如果您指派藍色給 **文字** ，且指派綠色給識別碼，則所有識別碼都會以綠色顯示。 在此範例中，識別碼屬性會覆寫文字屬性。  
   
 某些顯示項目包含：  
   

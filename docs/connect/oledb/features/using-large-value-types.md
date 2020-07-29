@@ -16,15 +16,15 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, large value data types
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 2847838b37a9f5c233f649b6a712d4c0b2d150f4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 620ea4d2e41634f3c7da33d560affce1840fba53
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67988864"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006845"
 ---
 # <a name="using-large-value-types"></a>使用大數值類型
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

@@ -10,15 +10,15 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 3ca08ca3439c2dde50cb4a7a1226688854fd6fe0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: df9868d5cd5c7a47c88891abe6b837c68edc784b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994966"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003385"
 ---
 # <a name="using-the-output-clause-with-ole-db-in-ole-db-driver-for-sql-server"></a>在 OLE DB Driver for SQL Server 中使用具有 OLE DB 的 OUTPUT 子句
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

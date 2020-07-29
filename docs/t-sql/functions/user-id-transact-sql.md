@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 67fd29bc-eda9-4d4d-b148-5d3659181a43
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6b88db6d75e10da258edcf14425a080f01357c2a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 646ed2166a7519c12fd7695ef49bfe3aca7c0738
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85712374"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113273"
 ---
 # <a name="user_id-transact-sql"></a>USER_ID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,9 @@ ms.locfileid: "85712374"
 USER_ID ( [ 'user' ] )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *user*  
  要使用的使用者名稱。 *user* 為 **nchar**。 若指定 **char** 值，它會隱含轉換成 **nchar**。 它必須用括號括住。  
   

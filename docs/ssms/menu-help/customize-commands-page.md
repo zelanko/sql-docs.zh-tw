@@ -12,18 +12,18 @@ f1_keywords:
 ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c4e138eb6b530377b76fcb6e6fb21a2694bce63
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: df3c48dcab1ee71f8cfee1932099b034729451e3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255705"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000416"
 ---
 # <a name="customize-commands-page"></a>自訂 (命令頁面)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 此對話方塊讓您能夠在工具列和功能表上加入與移除命令，以及變更用作工具列按鈕或功能表命令的影像。 您可以按一下 [工具] 功能表上的 [自訂]，然後按一下 [命令] 來存取 [命令] 頁面。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
 **類別**  
 指定要顯示在 [命令]  清單方塊中的命令集。 命令的類別目錄，會依據工具和設計師所提供，且環境有支援的功能表標題而定。 此標題清單是動態的，因此類別目錄的順序和功能表標題會變更，變更會視工具與設計師以及所做的自訂作業而定。 所以由不同設計師所設計的兩個功能表，可能會有相同的名稱，因此同一個標題可以針對不同的命令集出現兩次。  
   
