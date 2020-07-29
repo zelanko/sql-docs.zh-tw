@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3a4a840e-04f8-43bd-aada-35d78c3cb6b0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2519c31b56f9f4509485db5d5dcd59b81d2eee7c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 63c1513e044b825ed3ffa036b1e7014e0e4d4a6f
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732435"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112126"
 ---
 # <a name="cursor_status-transact-sql"></a>CURSOR_STATUS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,9 @@ CURSOR_STATUS
      )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
 'local'  
 指定一個常數來指示資料指標來源是本機資料指標名稱。
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 333e9a43-1099-4b9b-b941-4b0b016f47f3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e6e6ebf976f7fc475761685090064d14d00f6f75
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6341652a8d7ea7ef4f27cecac4a8764a2f464e8d
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892131"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111414"
 ---
 # <a name="pwdencrypt-transact-sql"></a>PWDENCRYPT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,9 @@ ms.locfileid: "85892131"
 PWDENCRYPT ( 'password' )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *password*  
  這是要加密的密碼。 *password* 為 **sysname**。  
   

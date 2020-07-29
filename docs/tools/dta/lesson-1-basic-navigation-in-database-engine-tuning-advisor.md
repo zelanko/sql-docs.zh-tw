@@ -10,20 +10,19 @@ helpviewer_keywords:
 ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-dt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 3e7f0abd6003583858fbf323f96b4cf203236083
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 16843ff8599e9cda540c2a9f3ac264c8edc2dc88
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286642"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726916"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor-dta"></a>第 1 課：Database Engine Tuning Advisor (DTA) 基本導覽
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Database Engine Tuning Advisor 提供一種以圖形化使用者介面 (GUI) 為基礎的方法，供您檢視微調工作階段和微調建議報表。 這個課程將為您示範如何啟動這個工具，以及如何設定顯示畫面。 在這個課程結束時，您會知道多種啟動工具的方法，以及如何設定它的顯示畫面來支援您定期執行的微調工作。  
 

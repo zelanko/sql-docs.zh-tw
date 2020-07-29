@@ -22,18 +22,17 @@ helpviewer_keywords:
 ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3e5ecdc830550570f43484c61a87e315e9fc7661
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a500a4c03562d024bb64a65053fe1afc374844c8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247626"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246437"
 ---
-# <a name="operators"></a>操作員
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# <a name="operators"></a>運算子
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
@@ -80,7 +79,7 @@ ms.locfileid: "75247626"
   
         **主體：**  
   
-        副本：   
+        副本：  
   
         **收件者**：  
   
@@ -122,9 +121,8 @@ ms.locfileid: "75247626"
   
 ## <a name="related-tasks"></a>相關工作  
   
-|||  
+|工作|主題|  
 |-|-|  
-|**工作**|**主題**|  
 |與建立操作員相關的工作|[建立操作員](../../ssms/agent/create-an-operator.md)<br /><br />[Designate a Fail-Safe Operator](../../ssms/agent/designate-a-fail-safe-operator.md)|  
 |與指派警示相關的工作|[指派警示給操作員](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[定義對警示的回應 &#40;SQL Server Management Studio&#41;](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](https://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[指派警示給操作員](../../ssms/agent/assign-alerts-to-an-operator.md)|  
   

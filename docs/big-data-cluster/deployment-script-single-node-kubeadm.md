@@ -10,16 +10,16 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b69073a903a94435c8e73120e45109f1719d2ac6
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: ad5509d3718c0ccd579893d1b260e558437b882a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606780"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730660"
 ---
 # <a name="deploy-with-a-bash-script-to-a-single-node-kubeadm-cluster"></a>使用 Bash 指令碼部署至單一節點 kubeadm 叢集
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 在本教學課程中，您會使用範例 Bash 部署指令碼，利用 kubeadm 和 SQL Server 巨量資料叢集來部署單一節點 Kubernetes 叢集。
 

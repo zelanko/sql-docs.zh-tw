@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 4973d9ac-20fd-4ac3-bc9f-5d60e39fdb7d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 5f57cc81435aeb6542dfdd4a360e8e4c0a26d343
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: d4e7443a3263ac580b5619b6f44b5ad8dea8823f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151473"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731991"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>TuningTimeInMin 元素 (DTA)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 指定微調工作階段的最長時間 (分鐘)。  
   

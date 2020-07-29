@@ -3,18 +3,19 @@ title: SQL Server 說明與意見反應 |Microsoft Docs
 description: 用來尋找可協助您處理問題，或提交 SQL Server 產品，或是 SQL Server 技術文件意見反應方式的資源。
 ms.date: 07/11/2019
 ms.prod: sql
+ms.technology: release-landing
 ms.reviewer: ''
 ms.custom: ''
 ms.topic: conceptual
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7588cb2c2c49992bbed4ceea29b035200a70128d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 49bf5ae8b9ab88859bedaf114242b1dcf64bb641
+ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80380759"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83732177"
 ---
 # <a name="sql-server-help-and-feedback"></a>SQL Server 說明與意見反應
 

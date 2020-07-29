@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 49e61e85-8abf-4ca7-8c70-7e9f8f1078bd
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 14c8defcabde99a42993b4f1490094670a890cee
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b89cec27a4c31b8165129fe4b3565ce6f448ac15
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254232"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999983"
 ---
 # <a name="create-table-aliases-visual-database-tools"></a>建立資料表別名 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 別名可以更容易使用資料表名稱。 在下列狀況時，使用別名會非常有用：  
   
 -   讓 [SQL 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) 中的陳述式更簡短、更容易閱讀。  

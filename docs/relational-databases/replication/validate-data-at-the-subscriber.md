@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: cafc4d93c496da8a74c525f28a4682e20ad42776
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 58fdc4a2f811e93651da79b9732acbe6ecc00435
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914112"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110552"
 ---
 # <a name="validate-replicated-data"></a>驗證複寫的資料
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

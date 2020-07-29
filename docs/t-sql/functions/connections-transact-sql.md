@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c59836a8-443c-4b9a-8b96-8863ada97ac7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 26da6bd0224941773c91dda8703015e4200f5552
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1865e3c12a468b8d9483e221f9aacaa2bca666c2
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881999"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111645"
 ---
 # <a name="x40x40connections-transact-sql"></a>&#x40;&#x40;CONNECTIONS (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,9 @@ ms.locfileid: "85881999"
 ```sql
 @@CONNECTIONS  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-types"></a>傳回類型
 **integer**
   

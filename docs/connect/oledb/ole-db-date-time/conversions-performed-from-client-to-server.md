@@ -12,15 +12,15 @@ helpviewer_keywords:
 - conversions [OLE DB], client to server
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: a5a4dd3540f4171847014e6175b84bd861b7abb6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ccf1505fd896b627a83fe2ee7b3d1e6e19ab556e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67995141"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244875"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>從用戶端到伺服器執行的轉換
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -70,9 +70,8 @@ ms.locfileid: "67995141"
 |15|系統會針對 **datetime** 維護 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 之前的轉換語意。 描述會捨去為第 300 個最接近的秒數。|  
 |16|內嵌在 SSVARIANT 用戶端架構中之值 (屬於給定類型) 的轉換行為與未內嵌在 SSVARIANT 用戶端架構時之值和類型的行為相同。|  
   
-||||  
-|-|-|-|  
 |類型|長度 (以字元為單位)|調整|  
+|-|-|-|  
 |DBTIME2|8, 10..18|0、1..9|  
 |DBTIMESTAMP|19, 21..29|0、1..9|  
 |DBTIMESTAMPOFFSET|26, 28..36|0、1..9|  

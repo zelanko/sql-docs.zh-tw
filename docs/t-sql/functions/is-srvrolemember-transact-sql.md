@@ -1,5 +1,5 @@
 ---
-title: IS_SRVROLEMEMBER (Transact-SQL) | Microsoft Docs
+title: IS_SRVROLEMEMBER (Transact-SQL)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,14 +19,15 @@ helpviewer_keywords:
 ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e1bbd8bbac55c3cf9631f37702504b72bed3d473
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eb44adf219905a585b922fc280215f1c81465cda
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784509"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248507"
 ---
 # <a name="is_srvrolemember-transact-sql"></a>IS_SRVROLEMEMBER (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入是不是指定之伺服器角色的成員。  
@@ -40,19 +41,23 @@ ms.locfileid: "85784509"
 IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  **'** *role* **'**  
  這是要檢查的伺服器角色名稱。 *role* 為 **sysname**。  
   
  *role* 的有效值是使用者定義的伺服器角色和下列固定伺服器角色：  
-  
-|||  
-|-|-|  
-|系統管理員 (sysadmin)|serveradmin|  
-|dbcreator|setupadmin|  
-|bulkadmin|securityadmin|  
-|diskadmin|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 公開|  
-|processadmin||  
+
+- 系統管理員 (sysadmin)
+- serveradmin
+- dbcreator
+- setupadmin  
+- bulkadmin
+- securityadmin  
+- diskadmin
+- 公開  
+- processadmin
   
  **'** *login* **'**  
  為要檢查的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱。 *login* 是預設值為 NULL 的 **sysname**。 如果未指定值，結果將以目前的執行內容為依據。 如果參數包含 NULL 一詞，就會傳回 NULL。  

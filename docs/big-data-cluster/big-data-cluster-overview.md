@@ -9,16 +9,16 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 610f837c5354a72c665da067fcc8fea582ac6de3
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: bc83184b6cac6ab574090f8059e2a79fa9ca69ca
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152010"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942768"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>什麼是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]？
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 從 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 開始，[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]可讓您部署在 Kubernetes 上執行之 SQL Server、Spark 和 HDFS 容器的可調式叢集。 這些元件會並存執行，可供您讀取、寫入和處理來自 Transact-SQL 或 Spark 的巨量資料，讓您輕鬆地結合與分析具有大量巨量資料的高價值關聯式資料。
 
@@ -85,7 +85,7 @@ SQL Server 巨量資料叢集是由 [Kubernetes](https://kubernetes.io/docs/conc
 
 Kubernetes 是開放原始碼容器協調器，可根據需求調整容器部署。 下表定義一些重要的 Kubernetes 術語：
 
-|||
+|詞彙|描述|
 |:--|:--|
 | **Cluster** | Kubernetes 叢集是稱為節點的一組電腦。 其中一個節點會控制叢集，並受指定為主要節點，而其餘節點為背景工作節點。 Kubernetes 主要節點負責在背景工作節點間散發工作，並監視叢集的健康狀態。 |
 | **節點** | 節點會執行容器化應用程式。 節點可以是實體電腦或虛擬機器。 Kubernetes 叢集可包含實體機器和虛擬機器節點的混合。 |

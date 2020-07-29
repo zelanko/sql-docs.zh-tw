@@ -1,7 +1,7 @@
 ---
 title: 步驟 3：使用 Ruby 連線到 SQL 的概念證明 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/08/2017
+ms.date: 06/22/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cac20b18-0a6d-4243-bbda-a5d1b9476441
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 10ff3f651695b172396b89dc7de97d62a2824e84
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d0431ce7aaa9c7e40196c689591b7d56ec5d42ef
+ms.sourcegitcommit: 4fe7b0d5e8ef1bc076caa3819f7a7b058635a486
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926712"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85263782"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>步驟 3：使用 Ruby 連線到 SQL 的概念證明
 
@@ -25,7 +25,7 @@ ms.locfileid: "80926712"
   
 [TinyTDS::Client](https://github.com/rails-sqlserver/tiny_tds) 函式可用來連接到 SQL Database。  
   
-``` ruby
+```ruby
     require 'tiny_tds'  
     client = TinyTds::Client.new username: 'yourusername@yourserver', password: 'yourpassword',  
     host: 'yourserver.database.windows.net', port: 1433,  
@@ -36,11 +36,13 @@ ms.locfileid: "80926712"
   
 複製以下程式碼並貼到空白檔案中。 稱它為 test.rb。 然後執行它，方法是從命令提示字元輸入下列命令：  
   
+```ruby
     ruby test.rb  
+```
   
 在程式碼範例中， [TinyTds::Result](https://github.com/rails-sqlserver/tiny_tds) 函數可用來從針對 SQL Database 的查詢擷取結果集。 此函數會接受查詢，並傳回結果集。 結果集可使用 [result.each do |row|](https://github.com/rails-sqlserver/tiny_tds)重複列舉。  
   
-``` ruby 
+```ruby 
     require 'tiny_tds'    
     print 'test'       
     client = TinyTds::Client.new username: 'yourusername@yourserver', password: 'yourpassword',  
@@ -60,7 +62,7 @@ ms.locfileid: "80926712"
   
 為了與 Microsoft SQL Server [日期時間](../../t-sql/data-types/datetime-transact-sql.md)格式一致，請使用 [strftime](https://ruby-doc.org/core-2.2.0/Time.html#method-i-strftime) 函式來轉換成對應的日期時間格式。  
   
-``` ruby
+```ruby
     require 'tiny_tds'  
     client = TinyTds::Client.new username: 'yourusername@yourserver', password: 'yourpassword',  
     host: 'yourserver.database.windows.net', port: 1433,  

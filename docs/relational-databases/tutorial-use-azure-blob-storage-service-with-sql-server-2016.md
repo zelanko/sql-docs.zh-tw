@@ -1,7 +1,7 @@
 ---
 title: 教學課程：搭配使用 Azure Blob 儲存體服務和 SQL Server 2016
 ms.custom: seo-dt-2019
-ms.date: 01/10/2019
+ms.date: 07/22/2020
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -14,12 +14,12 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cd01280d2777fdab926c2e733224dc94b5fef834
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4e8d09fd7af7501427490178ef7cc9624b7e98a1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86906024"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247264"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>教學課程：搭配使用 Azure Blob 儲存體服務和 SQL Server 2016
 
@@ -37,7 +37,7 @@ Microsoft Azure Blob 儲存體服務的 SQL Server 整合支援一開始是 SQL 
 - 取得免費 [Azure 帳戶](https://azure.microsoft.com/offers/ms-azr-0044p/)。
 - 建立 [Azure 儲存體帳戶](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal)。
 - 安裝 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
-- 佈建[執行 SQL Server 的 Azure VM](https://azure.microsoft.com/documentation/articles/virtual-machines-provision-sql-server/)
+- 佈建[執行 SQL Server 的 Azure VM](https://azure.microsoft.com/services/virtual-machines/sql-server/)
 - 安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 - 下載 [AdventureWorks2016 範例資料庫](https://docs.microsoft.com/sql/samples/adventureworks-install-configure) \(英文\)。
 - 將使用者帳戶指派給 [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) 的角色，並授與 [ALTER ANY CREDENTIAL](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql) 權限。 
@@ -180,7 +180,7 @@ SQL Server 認證是用來儲存連接到 SQL Server 外部資源所需之驗證
 在本節中，您會將內部部署 SQL Server 2016 執行個體中的 AdventureWorks2016 資料庫備份到您在[第 1 節](#1---create-stored-access-policy-and-shared-access-storage)建立的 Azure 容器。
   
 > [!NOTE]  
-> 如果您想要將 SQL Server 2012 SP1 CU2 或更新版本的資料庫或 SQL Server 2014 資料庫備份至此 Azure 容器，您可以使用 [這裡](https://docs.microsoft.com/sql/relational-databases/backup-restore/sql-server-backup-to-url?view=sql-server-2014) 所記載之已被取代的語法，透過 WITH CREDENTIAL 語法備份至 URL。  
+> 如果您想要將 SQL Server 2012 SP1 CU2 或更新版本的資料庫或 SQL Server 2014 資料庫備份至此 Azure 容器，您可以使用 [這裡](/previous-versions/sql/2014/relational-databases/backup-restore/sql-server-backup-to-url?view=sql-server-2014) 所記載之已被取代的語法，透過 WITH CREDENTIAL 語法備份至 URL。  
   
 若要將資料庫備份至 Blob 儲存體，請遵循下列步驟：  
   

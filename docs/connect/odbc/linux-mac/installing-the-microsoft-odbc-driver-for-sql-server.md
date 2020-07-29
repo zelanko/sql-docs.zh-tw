@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6879315d04d5da536d4d2ae1dcb9c96768c2e526
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b61d9e849cbbfca79ce3ab35a0e4d0d38e20e6f2
+ms.sourcegitcommit: 6eae1fda4962050e8abd7f105a614744009712d9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82181039"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84723000"
 ---
 # <a name="install-the-microsoft-odbc-driver-for-sql-server-linux"></a>安裝 Microsoft ODBC Driver for SQL Server (Linux)
 
@@ -130,6 +130,8 @@ sudo yum install unixODBC-devel
 
 ```bash
 sudo su
+curl -O https://packages.microsoft.com/keys/microsoft.asc
+rpm --import microsoft.asc
 
 #Download appropriate package for the OS version
 #Choose only ONE of the following, corresponding to your OS version

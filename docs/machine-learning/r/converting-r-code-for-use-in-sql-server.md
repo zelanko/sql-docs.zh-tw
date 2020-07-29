@@ -2,22 +2,22 @@
 title: 轉換 R 程式碼以用於 SQL
 description: 將 R 程式碼移轉到 SQL Server 預存程序，以進行方案部署，以及對 SQL Server 上的關聯式資料進行資料存取。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/15/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 97bb0a54181f88703363bfbe598af26ede58ebf8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 47a96a6bf233a1d8f7fe70df6ab537a31fd2e896
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117711"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723885"
 ---
 # <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>轉換 R 程式碼以在 SQL Server (資料庫內) 執行個體中執行
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本文提供有關如何修改 R 程式碼以在 SQL Server 中運作的高階指引。 
 

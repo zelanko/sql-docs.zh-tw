@@ -9,15 +9,15 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 57755782f2907eff25db942600cebc63f09598e0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f5ef0b9dd1023f662850e6e680507f5bf4041051
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73658822"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921057"
 ---
 # <a name="what-is-sql-server-language-extensions"></a>什麼是 SQL Server 語言延伸模組？
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 語言延伸模組是 SQL Server 的一個功能，用來執行外部程式碼。 關聯式資料可使用[擴充性架構](concepts/extensibility-framework.md)，用於外部程式碼中。
 

@@ -12,18 +12,18 @@ f1_keywords:
 ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 09df28c2bcd304733250a90813773ede3a29c2ed
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d7b15f63893dfc052902f245cbb4a52220fd00c5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245705"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001606"
 ---
 # <a name="options-designers---table-and-database-designers-page"></a>選項 (設計工具 - 資料表和資料庫設計工具頁面)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 使用此頁面來決定設計師的預設行為。 若要存取設定，請在 [工具]  功能表上按一下 [選項]  、展開 [設計工具]  資料夾，然後按一下 [資料表設計工具]  。  
   
-## <a name="uielement-list"></a>UIElement 清單  
+## <a name="ui-element-list"></a>UI 元素清單  
 **覆寫資料表設計師更新的連接字串逾時值**  
 允許針對資料表設計師之動作設定新的逾時值。 當資料表設計師影響大型資料表而需要額外的時間來完成資料表修改時，這就非常有用。  
   

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6bf8bf97-60b8-40c1-b89d-8f5a00bcae2e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fd99b8be28b8b637a1d4128a83a359af7fea05f9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: aa8f92f7820954a6bc59e3843f2ba62f80ffe9b0
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732229"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110884"
 ---
 # <a name="x40x40lock_timeout-transact-sql"></a>&#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,9 @@ ms.locfileid: "85732229"
 @@LOCK_TIMEOUT  
 ```  
   
-## <a name="return-types"></a>傳回型別  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>傳回型別
  **integer**  
   
 ## <a name="remarks"></a>備註  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 7b0c8ac0-5941-4ac6-b960-87d9830d00de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6752ecd92795ff2ca6de17f8b3de671e6895482d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 15ae22db943edf33fcf09a7f8b854544b0713612
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252913"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000838"
 ---
 # <a name="add-an-existing-project-to-a-solution"></a>將現有專案加入方案中
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 您可以將一或多個專案加入現有的方案中。 一個專案可以與多個方案產生關聯。  
   
 ### <a name="to-add-an-existing-project-to-a-solution"></a>將現有的專案加入方案中  

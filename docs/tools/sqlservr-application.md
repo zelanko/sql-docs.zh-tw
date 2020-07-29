@@ -2,7 +2,7 @@
 title: sqlservr 應用程式
 description: Sqlservr 應用程式可從命令提示字元啟動、停止、暫停和繼續執行 SQL Server 的執行個體。
 ms.custom: seo-lt-2019
-ms.date: 08/01/2019
+ms.date: 07/22/2020
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -23,16 +23,16 @@ helpviewer_keywords:
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 56498901eb6f7eed8fa58f73bae58daddb36f874
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 1302360b6ab5175bed5a9776d7de5389c3d40c00
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150569"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112576"
 ---
 # <a name="sqlservr-application"></a>sqlservr 應用程式
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 **sqlservr** 應用程式會在命令提示字元之下，啟動、停止、暫停和繼續執行 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體。
 
@@ -86,7 +86,7 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 |參數 | 詳細資訊|
 |:-----|:-----|
 |**-h** | 在舊版 32 位元 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體使用此參數，在啟用 AWE 的情況下保留 Hot Add Memory 中繼資料的虛擬記憶體位址空間。 透過 [!INCLUDE[sssql14](../includes/sssql14-md.md)] 支援。 如需詳細資訊，請參閱 [SQL Server 2016 中已取代及已中止的 SQL Server 功能](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)。|
-|**-g** | *memory_to_reserve*<br/><br>適用於舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 32 位元執行個體。 透過 [!INCLUDE[sssql14](../includes/sssql14-md.md)] 支援。 指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 保留給在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 處理序之內但在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 記憶體集區之外的記憶體配置，所能使用的記憶體整數數量 (MB)。 如需詳細資訊，請參閱 [SQL Server 2014 文件的伺服器記憶體組態選項](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014)。|
+|**-g** | *memory_to_reserve*<br/><br>適用於舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 32 位元執行個體。 透過 [!INCLUDE[sssql14](../includes/sssql14-md.md)] 支援。 指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 保留給在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 處理序之內但在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 記憶體集區之外的記憶體配置，所能使用的記憶體整數數量 (MB)。 如需詳細資訊，請參閱 [SQL Server 2014 文件的伺服器記憶體組態選項](/previous-versions/sql/2014/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014)。|
 | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>另請參閱

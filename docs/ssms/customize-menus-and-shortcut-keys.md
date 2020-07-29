@@ -1,9 +1,8 @@
 ---
 title: 自訂功能表與快速鍵
 ms.custom: seo-lt-2019
-ms.date: 01/19/2017
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,17 +19,17 @@ ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: e2b398a1acd5e91a55e18f25b2094f9b671c70b8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: de57e987e933b7dee45b1dd9ff91698dd43488ee
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243916"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000173"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>自訂功能表與快速鍵
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-鍵盤快速鍵可讓您按 ALT+ *\<單一字母>* 來選取功能表命令或按鈕。 例如，若要開啟 [編輯]  功能表，請按下 ALT+E。 您可以利用 [自訂]  對話方塊來重新安排和修改工具列按鈕、功能表及功能表命令。 提供的指示將協助您利用滑鼠以及只用鍵盤來變更設定。  
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+鍵盤對應鍵可讓您按 ALT+ *\<single letter>* 來選取功能表命令或按鈕。 例如，若要開啟 [編輯]  功能表，請按下 ALT+E。 您可以利用 [自訂]  對話方塊來重新安排和修改工具列按鈕、功能表及功能表命令。 提供的指示將協助您利用滑鼠以及只用鍵盤來變更設定。  
   
 您可以從 [工具/選項] 對話方塊的 [鍵盤] 頁面上，建立使用 Ctrl 鍵的預存程序鍵盤對應鍵。  
   

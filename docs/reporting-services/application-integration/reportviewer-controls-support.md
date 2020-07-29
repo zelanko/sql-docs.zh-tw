@@ -2,20 +2,20 @@
 title: 支援報表檢視器控制項版本
 description: Microsoft 報表檢視器控制項相容於遵循新式支援週期原則的 SQL Server Reporting Services 以及 Power BI 報表伺服器。
 author: maggiesMSFT
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.author: maggies
 ms.reviewer: jonhp
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
-ms.date: 01/09/2019
-ms.openlocfilehash: 671aacd4855afe4d4d5d0a8012fe5565420ff3e2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 06/03/2020
+ms.openlocfilehash: 43d1e84377f7d08718ec4452b6b3376c627064ba
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79198485"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423192"
 ---
 # <a name="support-for-report-viewer-current-branch-versions"></a>報表檢視器最新分支版本的支援
 

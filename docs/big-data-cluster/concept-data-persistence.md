@@ -9,16 +9,16 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a138a8451211436d55da537b9d8a45d26c534e48
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8a3ca863818d11471b0ae6aadd38458faf8b9daf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80215739"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85661073"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>在 Kubernetes 上使用 SQL Server 巨量資料叢集的資料持續性
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 [永久性磁碟區](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) \(英文\) 為 Kubernetes 中的儲存體提供外掛程式模型。 在此模型中，提供儲存體的方式會從取用方式擷取。 因此，您可以攜帶自己的高可用性儲存體，並將它插入 SQL Server 巨量資料叢集。 這可讓您完全掌控所需的儲存體類型、可用性與效能。 Kubernetes 支援[各種類型的儲存體解決方案](https://kubernetes.io/docs/concepts/storage/storage-classes/#provisioner) \(英文\)，包括 Azure 磁碟與檔案、網路檔案系統 (NFS)、本機儲存體。
 

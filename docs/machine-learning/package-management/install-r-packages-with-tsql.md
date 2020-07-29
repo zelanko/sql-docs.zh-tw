@@ -2,22 +2,22 @@
 title: 使用 T-SQL (CREATE EXTERNAL LIBRARY) 來安裝 R 套件
 description: 新增 R 套件至 SQL Server 2016 R Services 或 SQL Server Machine Learning Services (資料庫內)。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/20/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 4e9aa1b7b2b21883e3034d32959a8267d67d56c0
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: cc65081551da08f74730b728869db0847928f4ac
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606900"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242348"
 ---
 # <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>使用 T-SQL (CREATE EXTERNAL LIBRARY) 在 SQL Server 上安裝 R 套件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 此文章說明如何在已啟用機器學習的 SQL Server 執行個體上安裝新的 R 套件。 有多種安裝方法可以選擇。 T-SQL 最適合不熟悉 R 的伺服器管理員採用。
 
@@ -48,7 +48,7 @@ ms.locfileid: "83606900"
 例如，下列陳述式會將包含 **randomForest** 套件的 miniCRAN 存放庫當做套件來源，連同其相依性一起命名。 
 
 ```sql
-CREATE EXTERNAL LIBRARY randomForest
+CREATE EXTERNAL LIBRARY [randomForest]
 FROM (CONTENT = 'C:\Temp\Rpackages\randomForest_4.6-12.zip')
 WITH (LANGUAGE = 'R');
 ```

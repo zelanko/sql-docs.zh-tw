@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0cfa7ae5-91d3-4a4f-9edf-a852d45783b5
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 67434f137137a443dc0ef7e8708f8d7f37811abd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 89a63fd6fcf51a3ad30923e05e41e599fc7e0413
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921369"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111755"
 ---
 # <a name="synchronize-a-push-subscription"></a>同步處理發送訂閱
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

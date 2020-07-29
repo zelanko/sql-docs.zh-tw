@@ -25,12 +25,12 @@ ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db5b1cc185c4fc3cb4c932867851703d8c134a14
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b0c6ba071498bb3c5fafac38618723046bd82bdc
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999746"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248732"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -102,16 +102,63 @@ SELECT <select_criteria>
   
 ## <a name="remarks"></a>備註  
  由於 SELECT 陳述式十分複雜，因此將會依子句顯示詳細的語法元素及引數：  
-  
-|||  
-|-|-|  
-|[WITH XMLNAMESPACES](../../t-sql/xml/with-xmlnamespaces.md)<br /><br /> [WITH common_table_expression](../../t-sql/queries/with-common-table-expression-transact-sql.md)|[HAVING](../../t-sql/queries/select-having-transact-sql.md)|  
-|[SELECT 子句](../../t-sql/queries/select-clause-transact-sql.md)|[UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md)|  
-|[INTO 子句](../../t-sql/queries/select-into-clause-transact-sql.md)|[EXCEPT 和 INTERSECT](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)|  
-|[FROM](../../t-sql/queries/from-transact-sql.md)|[ORDER BY](../../t-sql/queries/select-order-by-clause-transact-sql.md)|  
-|[WHERE](../../t-sql/queries/where-transact-sql.md)|[FOR 子句](../../t-sql/queries/select-for-clause-transact-sql.md)|  
-|[GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md)|[OPTION 子句](../../t-sql/queries/option-clause-transact-sql.md)|  
-  
+
+:::row:::
+    :::column:::
+        [WITH XMLNAMESPACES](../../t-sql/xml/with-xmlnamespaces.md)
+    :::column-end:::
+    :::column:::
+        [HAVING](../../t-sql/queries/select-having-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [WITH common_table_expression](../../t-sql/queries/with-common-table-expression-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [SELECT 子句](../../t-sql/queries/select-clause-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [EXCEPT 和 INTERSECT](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [INTO 子句](../../t-sql/queries/select-into-clause-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [ORDER BY](../../t-sql/queries/select-order-by-clause-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [FROM](../../t-sql/queries/from-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [FOR 子句](../../t-sql/queries/select-for-clause-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [WHERE](../../t-sql/queries/where-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [OPTION 子句](../../t-sql/queries/option-clause-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md)
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+
  子句順序對 SELECT 陳述式而言十分重要。 您可以省略任何選擇性的子句，但當使用選擇性的子句時，它們必須以適當的順序顯示。  
   
  只有在這些 SELECT 陳述式的選取清單包含指派使用者自訂函數之本機變數值的運算式時，才能在使用者自訂函數中，允許 SELECT 陳述式。  

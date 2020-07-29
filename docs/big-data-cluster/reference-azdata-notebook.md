@@ -5,25 +5,25 @@ description: azdata notebook 命令的參考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0a866dcca1debba47abf2e2e241d00151b8641ff
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7543666f7c8654cc0a28f44a8fe09fdd39f185c0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74820967"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242987"
 ---
 # <a name="azdata-notebook"></a>azdata notebook
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-下文提供 `azdata` 工具中 `notebook` 命令的參考。 如需其他 `azdata` 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)
+下文提供 `azdata` 工具中 `sql` 命令的參考。 如需其他 `azdata` 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)。
 
 ## <a name="commands"></a>命令
-|     |     |
+| 命令 | 說明 |
 | --- | --- |
 [azdata notebook view](#azdata-notebook-view) | 檢視筆記本。  在第一個儲存格執行錯誤時停止的選項。
 [azdata notebook run](#azdata-notebook-run) | 執行筆記本。  執行會在第一個錯誤時停止。
@@ -36,11 +36,11 @@ azdata notebook view --path -p
 ### <a name="examples"></a>範例
 檢視筆記本。  這會顯示所有儲存格。
 ```bash
-azdata notebook view --path '/home/me/notebooks/demo_notebook.ipynb'
+azdata notebook view --path "/home/me/notebooks/demo_notebook.ipynb"
 ```
 檢視筆記本。  除非遇到輸出中包含錯誤的儲存格，否則顯示所有儲存格。  在這種情況下，輸出就會停止。
 ```bash
-azdata notebook view --path '/home/me/notebooks/demo_notebook.ipynb' --stop-on-error
+azdata notebook view --path "/home/me/notebooks/demo_notebook.ipynb" --stop-on-error
 ```
 ### <a name="required-parameters"></a>必要參數
 #### `--path -p`
@@ -56,7 +56,7 @@ azdata notebook view --path '/home/me/notebooks/demo_notebook.ipynb' --stop-on-e
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org)。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 ## <a name="azdata-notebook-run"></a>azdata notebook run
@@ -64,16 +64,21 @@ JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespat
 ```bash
 azdata notebook run --path -p 
                     [--output-path]  
-                    [--output-html]  
-                    [--arguments -a]  
-                    [--interactive -i]  
-                    [--clear -c]  
-                    [--timeout -t]
+                    
+[--output-html]  
+                    
+[--arguments -a]  
+                    
+[--interactive -i]  
+                    
+[--clear -c]  
+                    
+[--timeout -t]
 ```
 ### <a name="examples"></a>範例
 執行筆記本。
 ```bash
-azdata notebook run --path '/home/me/notebooks/demo_notebook.ipynb'
+azdata notebook run --path "/home/me/notebooks/demo_notebook.ipynb"
 ```
 ### <a name="required-parameters"></a>必要參數
 #### `--path -p`
@@ -100,7 +105,7 @@ azdata notebook run --path '/home/me/notebooks/demo_notebook.ipynb'
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org)。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 

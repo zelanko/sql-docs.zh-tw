@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 436d9afb-09c3-4838-9b54-4449a5178d0f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8a046f3f94e6c1ab59342f61fac1750bd6da1459
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: aba6becbf3ef8ceb2804f068ab6e1d848728b366
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246885"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004749"
 ---
 # <a name="general-user-interface-elements"></a>一般使用者介面元素
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 在**編輯器**中，[屬性]  視窗和 [工具箱]  是 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的一些基本項目。  
   
 ## <a name="in-this-section"></a>本節內容  

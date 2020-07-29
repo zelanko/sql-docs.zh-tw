@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 719282c3-e9cc-4e0e-9a83-7fb8b8b17f67
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 039ad2ec8ea2e0d05eae0ec2d627c07117580bf8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c865561f66f9f40ce131e9b8dce563f77ca187aa
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258925"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001800"
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>SQL Server Management Studio 中的屬性頁
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中所有 [屬性頁] 對話方塊都會以共用格式來顯示展開和摺疊類別目錄的資訊。 顯示的欄位會隨著特定內容而不同。 以灰色顯示的屬性是唯讀屬性。 [分類] 和 [字母] 按鈕在每個屬性頁的頂端附近。  
   
 下表說明 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 屬性頁對話方塊的一般元素。  

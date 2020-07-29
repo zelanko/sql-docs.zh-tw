@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ef25e90b8a9deb641a72006faf0a0c903a554ba5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f3a760b0ae100259b8102f303f0747e0da81223e
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448371"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942320"
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>準備 Reporting Services 行動報表的 Excel 資料
   
@@ -70,11 +70,11 @@ ms.locfileid: "79448371"
   
 日期欄位對許多行動報表來說很重要，因此請在 Excel 中將資料格正確地格式化為日期。 在某些情況下這代表必須要轉換。 以下是在 Excel 中將資料格從文字轉換為日期的公式範例。  
   
-    Week 24-2013=DATE(MID(A2,9,4),1,-2)-WEEKDAY(DATE(MID(A2,9,4),1,3))+MID(A2,6,2)*7  
-  
-    2013/03/21=DATEVALUE(A1)  
-  
-    2013-mar-12=DATEVALUE(RIGHT(A1,2)&"-"&MID(A1,6,3)&"-"&LEFT(A1,4))  
+`Week 24-2013=DATE(MID(A2,9,4),1,-2)-WEEKDAY(DATE(MID(A2,9,4),1,3))+MID(A2,6,2)*7`  
+
+`2013/03/21=DATEVALUE(A1)`  
+
+`2013-mar-12=DATEVALUE(RIGHT(A1,2)&"-"&MID(A1,6,3)&"-"&LEFT(A1,4))`  
   
 在您轉換資料格後，您必須將它們格式化為日期，方法是選取它們或整個資料行 > **操作**功能表 > [儲存格格式]   > [類別目錄]  清單中的 [日期]  。 您也可以使用 Excel 資料剖析精靈將文字資料格轉換為正確格式的日期。  
   

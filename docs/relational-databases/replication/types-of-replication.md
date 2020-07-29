@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: c1655e8d-d14c-455a-a7f9-9d2f43e88ab4
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 21e1542801112d48b2981cb04d303b61cd7bd21e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: c7483eca0f573e901908d3fb5b2eb72f8317ef7c
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924030"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111164"
 ---
 # <a name="types-of-replication"></a>複寫類型
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

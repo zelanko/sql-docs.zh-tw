@@ -16,17 +16,16 @@ helpviewer_keywords:
 ms.assetid: 605c63af-f91e-410d-8d60-5cf6f899d756
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 7ce2afd0dd8fd7c63e348b72c9499314494c49ae
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 83534e704d4460e32a5d7c62307dbd8a9adba08e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244165"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004964"
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>顯示查詢和檢視表設計工具窗格 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 查詢和檢視設計工具由 4 個個別窗格組成：[圖表窗格]、[準則窗格]、[SQL 窗格] 及 [結果窗格]。 在開啟檢視或建立新的查詢時，4 個視窗通常會全部開啟。但是，如果您需要開啟其中一個視窗，只要查詢和檢視設計工具開啟，便可以開啟其中一個視窗。  
   
 ### <a name="to-display-query-and-view-designer-panes"></a>顯示查詢和檢視設計工具的窗格  

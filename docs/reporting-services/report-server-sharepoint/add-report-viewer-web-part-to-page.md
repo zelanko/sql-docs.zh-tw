@@ -1,5 +1,6 @@
 ---
 title: 將 SQL Server Reporting Services 報表檢視器網頁組件新增至 SharePoint 頁面 | Microsoft Docs
+description: 將報表檢視器網頁組件新增至 SharePoint 網頁，從 SQL Server Reporting Services 或 Power BI 報表伺服器顯示報表。
 ms.date: 11/26/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a101278bed81bf1c901cf22d25d82f46e8c94e7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8a70d7619f878b7091e7a49e05caf93dd814e3a0
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256726"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767392"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>將 SQL Server Reporting Services 報表檢視器網頁組件新增至 SharePoint 頁面
 
@@ -22,7 +23,7 @@ ms.locfileid: "77256726"
 
 ![SharePoint 頁面上的報表檢視器網頁組件](media/sharepoint-report-viewer-web-part-on-page.png)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 * 為順利載入報表，必須設定對 Windows Token 服務的宣告 (C2WTS) 以進行 Kerberos 限制委派。 如需如何設定 C2WTS 的詳細資訊，請參閱[對 Windows Token 服務的宣告 (c2WTS) 和 Reporting Services](../install-windows/claims-to-windows-token-service-c2wts-and-reporting-services.md)。
 
@@ -32,17 +33,17 @@ ms.locfileid: "77256726"
 
 ## <a name="add-web-part"></a>新增網頁組件
 
-1. 在 SharePoint 網站中，選取左上方的**齒輪**圖示，然後選取 [新增頁面]  。
+1. 在 SharePoint 網站中，選取左上方的**齒輪**圖示，然後選取 [新增頁面]。
 
     ![從齒輪圖示將頁面新增至 Sharepoint 網站。](media/sharepoint-add-a-page.png)
 
-2. 提供頁面名稱並選取 [建立]  。
+2. 提供頁面名稱並選取 [建立]。
 
-3. 在頁面的設計工具中，選取功能區中的 [插入]  索引標籤。 然後在 [組件] 區段內選取 [網頁組件]。
+3. 在頁面的設計工具中，選取功能區中的 [插入] 索引標籤。 然後在 [組件] 區段內選取 [網頁組件]。
 
     ![從 Office 功能區中插入網頁組件。](media/sharepoint-insert-web-part.png)
 
-4. 在 [類別目錄]  下選取 [SQL Server Reporting Services (原生模式)]**。 選取 [組件]  下的 [報表檢視器]  。 然後選取 [新增]  。
+4. 在 [類別目錄] 下選取 [SQL Server Reporting Services (原生模式)]**。 選取 [組件] 下的 [報表檢視器]。 然後選取 [新增]。
 
     ![新增報表檢視器網頁組件。](media/sharepoint-report-viewer-web-part.png)
 
@@ -52,7 +53,7 @@ ms.locfileid: "77256726"
 
 若要設定網頁組件指向特定報表，請執行下列步驟。
 
-1. 編輯 SharePoint 頁面時，請選取網頁組件右上角的向下箭號，然後選取 [編輯網頁組件]  。
+1. 編輯 SharePoint 頁面時，請選取網頁組件右上角的向下箭號，然後選取 [編輯網頁組件]。
 
     ![從 [網頁組件] 下拉式清單編輯網頁。](media/sharepoint-edit-web-part.png)
 
@@ -62,9 +63,9 @@ ms.locfileid: "77256726"
 
 4. 如果您的報表需要參數，請在提供報表伺服器 URL 及報表名稱後，選取 [參數] 區段內的 [載入參數]。
 
-5. 選取 [確定]  儲存網頁組件設定的變更。
+5. 選取 [確定] 儲存網頁組件設定的變更。
 
-6. 在 Office 功能區中選取 [儲存]  ，儲存 SharePoint 頁面的變更。
+6. 在 Office 功能區中選取 [儲存]，儲存 SharePoint 頁面的變更。
 
 ![SharePoint 頁面上的報表檢視器網頁組件](media/sharepoint-report-viewer-web-part-on-page.png)
 

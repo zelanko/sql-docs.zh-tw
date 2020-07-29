@@ -21,17 +21,16 @@ helpviewer_keywords:
 ms.assetid: 6309a1bc-a628-4141-8bb5-b35924bd19f9
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: b6c7817fd90085ab4a7520cb98481dabea3b9558
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 787593c4729f4337d0a6c84d79517690531f1b05
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255202"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85977851"
 ---
 # <a name="results-pane-visual-database-tools"></a>結果窗格 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [結果] 窗格顯示的是最近執行 SELECT 查詢的結果 (其他查詢類型的結果則顯示在訊息方塊中)。若要開啟結果窗格、開啟或建立查詢或檢視，或傳回資料表的資料。 如果結果窗格未預設顯示，可從 [ **查詢設計工具** ] 功能表，指向 [ **窗格**]，然後按一下 [ **結果**]。  
   
 ## <a name="what-you-can-do-in-the-results-pane"></a>結果窗格的功用  

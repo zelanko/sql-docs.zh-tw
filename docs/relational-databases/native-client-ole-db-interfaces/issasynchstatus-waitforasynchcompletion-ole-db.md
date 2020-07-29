@@ -1,5 +1,5 @@
 ---
-title: ISSAsynchStatus::WaitForAsynchCompletion (OLE DB) | Microsoft Docs
+title: ISSAsynchStatus：： WaitForAsynchCompletion （Native Client OLE DB 提供者） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: 9f65e9e7-eb93-47a1-bc42-acd4649fbd0e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c8f806124958f1b162e2b8f369345459be1ce1fd
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f5c3af0d700ff8ad4d06af98a4b0387bd9e0f850
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005340"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246894"
 ---
-# <a name="issasynchstatuswaitforasynchcompletion-ole-db"></a>ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
+# <a name="issasynchstatuswaitforasynchcompletion-in-sql-server-native-client-ole-db"></a>SQL Server Native Client 中的 ISSAsynchStatus：： WaitForAsynchCompletion （OLE DB）
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   等到非同步執行的作業完成或發生逾時為止。  

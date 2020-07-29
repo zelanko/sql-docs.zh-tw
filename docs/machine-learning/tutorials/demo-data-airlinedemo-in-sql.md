@@ -2,22 +2,22 @@
 title: 教學課程的航班示範資料
 Description: 從 R 和 Python 建立包含航空公司資料集的資料庫。 此資料集會用於 SQL Server 機器學習服務的 R 和 Python 教學課程。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 10/22/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9bb8d26acb21ff38725c6e993c0b6080a35410f1
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 4f697287bff5ad4734d11c3d6391154a3a970470
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116681"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728005"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>SQL Server Python 和 R 的航班抵達示範資料教學課程
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 在此練習中，請建立 SQL Server 資料庫，以儲存來自 R 或 Python 內建航空公司示範資料集的匯入資料。 R 和 Python 發佈提供對等的資料，您可以使用 Management Studio 將其匯入 SQL Server 資料庫。
 
