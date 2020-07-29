@@ -2,22 +2,22 @@
 title: Python + T-SQL：定型模型
 description: Python 教學課程示範如何在 SQL Server 上使用 Transact-SQL 來定型和儲存模型。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 87194c1a77964f0e5aef3d0fae008d14cbfb8eb2
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 8d7bc2e2d46cb5b3f0c9619e59ab448e95bf4db2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115801"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775330"
 ---
 # <a name="train-and-save-a-python-model-using-t-sql"></a>使用 T-SQL 定型及儲存 Python 模型
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本文是[適用於 SQL 開發人員的資料庫內 Python 分析](sqldev-in-database-python-for-sql-developers.md)教學課程的一部分。 
 

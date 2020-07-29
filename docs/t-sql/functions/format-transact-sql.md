@@ -18,12 +18,12 @@ ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 10136ba5d2b0d241de0960acb9df657dadfe9cc3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 897163a7273e68c93a829b58faaf5654a8c257da
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752398"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112961"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 
@@ -39,6 +39,8 @@ ms.locfileid: "85752398"
 FORMAT ( value, format [, culture ] )  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>引數
 
  *value*  

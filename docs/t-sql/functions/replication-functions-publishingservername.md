@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e7c278e5-ab23-419e-ab3e-3bb20b0636df
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 586dd6e2315e5041b8aebda601d8200030717b0a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5ce454f544fd1c1216b0c72dbdad3490e5fb11e6
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899140"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112854"
 ---
 # <a name="replication-functions---publishingservername"></a>複寫函式 - PUBLISHINGSERVERNAME
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,9 @@ ms.locfileid: "85899140"
 PUBLISHINGSERVERNAME()  
 ```  
   
-## <a name="return-types"></a>傳回型別  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>傳回型別
  **nvarchar**  
   
 ## <a name="remarks"></a>備註  

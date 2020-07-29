@@ -24,12 +24,12 @@ ms.assetid: a300ac43-e4c0-4329-8b79-a1a05e63370a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eba14b85c18ed8f64288839f5758ed4c4e456e08
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e2ca06a2b34d0c4823ad6e548ddba58f0c5589d9
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004977"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110272"
 ---
 # <a name="set-implicit_transactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,17 +46,64 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
   
 ## <a name="remarks"></a>備註  
  當設定為 ON 時，系統是處於「隱含」  交易模式。 這表示如果 @@TRANCOUNT = 0，任何下列 Transact-SQL 陳述式都會開始新的交易。 它相當於一個看不見的 BEGIN TRANSACTION 先被執行：  
-  
-||||  
-|-|-|-|  
-|ALTER TABLE|FETCH|REVOKE|  
-|BEGIN TRANSACTION|GRANT|SELECT (請參閱底下的例外狀況)。|  
-|CREATE|Insert|TRUNCATE TABLE|  
-|刪除|OPEN|UPDATE|  
-|DROP|。|。|  
-||||
-  
- 當設定為 OFF，每個前面的 T-SQL 陳述式會受限於看不見的 BEGIN TRANSACTION 和看不見的 COMMIT TRANSACTION 陳述式。 當設定為 OFF 時，我們稱交易模式為「自動認可」  。 如果您的 T-SQL 程式碼可見地發出 BEGIN TRANSACTION，我們稱交易模式為「明確」  。  
+
+:::row:::
+    :::column:::
+        ALTER TABLE
+    :::column-end:::
+    :::column:::
+        FETCH
+    :::column-end:::
+    :::column:::
+        REVOKE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        BEGIN TRANSACTION
+    :::column-end:::
+    :::column:::
+        GRANT
+    :::column-end:::
+    :::column:::
+        SELECT (請參閱底下的例外狀況)。
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        CREATE
+    :::column-end:::
+    :::column:::
+        Insert
+    :::column-end:::
+    :::column:::
+        TRUNCATE TABLE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        刪除
+    :::column-end:::
+    :::column:::
+        OPEN
+    :::column-end:::
+    :::column:::
+        UPDATE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        DROP
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+
+&nbsp;
+
+ 當設定為 OFF，每個前面的 T-SQL 陳述式會受限於看不見的 BEGIN TRANSACTION 和看不見的 COMMIT TRANSACTION 陳述式。 當設定為 OFF 時，我們稱交易模式為「自動認可」。 如果您的 T-SQL 程式碼可見地發出 BEGIN TRANSACTION，我們稱交易模式為「明確」。  
   
  下列是幾個要了解的說明要點：  
   

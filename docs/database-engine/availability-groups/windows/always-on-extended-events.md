@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8ce4c3e7568c9c8c135228beccc926924d08affd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: af4a34a41607a7410d2f2ca43ae9b8bb197ff682
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900942"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87235966"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>設定 Always On 可用性群組的延伸事件
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -248,9 +248,8 @@ GO
   
 #### <a name="event-fields"></a>事件欄位  
   
-||||  
-|-|-|-|  
 |名稱|Type_name|描述|  
+|-|-|-|  
 |availability_group_id|guid|可用性群組的識別碼。|  
 |availability_group_name|unicode_string|可用性群組的名稱 (如果有)。|  
 |availability_replica_id|guid|可用性複本的識別碼。|  

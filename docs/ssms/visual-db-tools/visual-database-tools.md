@@ -7,20 +7,19 @@ ms.topic: conceptual
 ms.assetid: 1b1921b1-dcb2-47cd-985e-5a264de0bcf5
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 4cc7ac6000027b1471c29d4657260a2c0408d68e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fb0bf5db131baadbb63bd7fdb29e6279821f2e9d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246285"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002625"
 ---
 # <a name="visual-database-tools"></a>Visual Database Tools
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 包含建置 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢、資料表及圖表資料庫的視覺化設計工具。  
   
 ## <a name="related-tasks"></a>相關工作

@@ -2,22 +2,22 @@
 title: 在預存程序中部署 R 程式碼
 description: 在 SQL Server 預存程序中內嵌 R 語言程式碼，以便讓任何有權存取 SQL Server 資料庫的用戶端應用程式使用。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/15/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 324cf4446a593175fd5a8cd11b2abc24bff7d2d7
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 9790f5a5d82584bb0d09fda92c1a7048d384e119
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486804"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242315"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>在 SQL Server 機器學習服務中使用預存程序以便讓 R 程式碼能夠運作
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 在 SQL Server 機器學習服務中使用 R 和 Python 功能時，將解決方案移至實際執行環境的最常見方法是在預存程序中內嵌程式碼。 本文將摘要說明在使用 SQL Server 以便讓 R 程式碼能夠運作時，SQL 開發人員需考慮的重點。
 
@@ -46,7 +46,7 @@ ms.locfileid: "81486804"
 
 + 即時評分，已針對小型批次進行最佳化
 + 單一資料列評分，用於從應用程式呼叫
-+ [原生評分](../sql-native-scoring.md)，用於從 SQL Server 進行快速批次預測，而不需呼叫 R
++ [原生評分](../predictions/native-scoring-predict-transact-sql.md)，用於從 SQL Server 進行快速批次預測，而不需呼叫 R
 
 此逐步解說提供在批次和單一資料列模式中使用預存程序進行評分的範例：
 

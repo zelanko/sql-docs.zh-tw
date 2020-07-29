@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1227c893dbbb3999182140e6b63a9f74206c4ec4
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 819799dbabbe28a254dbc1cbe1a069f6664a9eea
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301859"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111255"
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -118,9 +118,8 @@ ON SERVER
 
 ## <a name="arguments"></a>引數
   
-|||  
-|-|-|  
 |詞彙|定義|  
+|-|-|
 |*event_session_name*|這是現有事件工作階段的名稱。|  
 |STATE = START &#124; STOP|啟動或停止事件工作階段。 只有當 ALTER EVENT SESSION 套用到事件工作階段物件時，這個引數才有效。|  
 |ADD EVENT \<event_specifier>|將以 \<event_specifier> 識別的事件與事件工作階段建立關聯。|

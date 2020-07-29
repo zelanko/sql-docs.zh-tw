@@ -2,22 +2,22 @@
 title: RevoScaleR 深入教學課程
 description: 在此教學課程系列中，您將了解如何使用 SQL Server 機器學習 R 整合來呼叫 RevoScaleR 函式。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fc1f427659155b5379a681787a633b6037b4bd87
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 77cbd38bf873761496800cc4ad78d74eee414cf1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116921"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728572"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>教學課程：搭配 SQL Server 資料使用 RevoScaleR R 函式
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 在這個多部分的教學課程系列中，會為您介紹與資料科學相關聯工作的一些 **RevoScaleR** 函式。 在此程序中，您將會了解如何建立遠端計算內容、在本機與遠端計算內容之間移動資料，以及在遠端 SQL Server 上執行 R 程式碼。 您也會了解如何在本機與遠端伺服器上分析及繪製資料，以及如何建立及部署模型。
 

@@ -12,16 +12,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 02/04/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 3f457b485994d2619e68b4315a308e66a05715cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 59a376b17c6e4b396dba24999a52bf37ecc27988
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77051668"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009602"
 ---
 # <a name="sql-tools-overview"></a>SQL 工具概觀
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 若要管理您的資料庫，您需要工具。 不論您的資料庫是在雲端、Windows、macOS 或 [Linux](../linux/sql-server-linux-overview.md) 上執行，工具不一定要在與資料庫相同的平台上執行。
 

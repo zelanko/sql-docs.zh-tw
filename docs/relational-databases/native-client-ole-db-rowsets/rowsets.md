@@ -1,5 +1,5 @@
 ---
-title: 資料列集 | Microsoft Docs
+title: 資料列集（Native Client OLE DB 提供者）
 description: 讓所有資料提供者以表格形式公開結果集資料。 在 OLE DB 中，使用資料列集功能，這是一組包含資料行的資料列。
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,13 +18,14 @@ ms.assetid: 5e7b3cbe-3670-4e18-8172-2226e0b6b142
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0006be5acbff458e278d1719fcc5e6fe7d34ec6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2254c566e30cec9e0869e1a09c850e7013e0482a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86013112"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246827"
 ---
-# <a name="rowsets"></a>資料列集
+# <a name="rowsets-native-client-ole-db-provider"></a>資料列集（Native Client OLE DB 提供者）
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   資料列集是一組資料列，其中包含資料的資料行。 資料列集是能讓所有 OLE DB 資料提供者公開表格形式結果集資料的核心物件。  
@@ -61,7 +62,7 @@ ms.locfileid: "86013112"
   
 -   [使用 IRow 來提取單一資料列](../../relational-databases/native-client-ole-db-rowsets/fetching-a-single-row-with-irow.md)  
   
--   [書籤](../../relational-databases/native-client-ole-db-rowsets/bookmarks.md)  
+-   [Bookmarks](../../relational-databases/native-client-ole-db-rowsets/bookmarks.md)  
   
 -   [更新資料列集內的資料](../../relational-databases/native-client-ole-db-rowsets/updating-data-in-rowsets.md)  
   

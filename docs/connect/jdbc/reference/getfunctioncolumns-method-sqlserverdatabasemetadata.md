@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e2b0e0f7-717c-48e6-bcd2-a325d938a833
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2d6400652dfaac6074f19a343b9a4cf2c0ffbab8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 39b0c100c4ba80a24d0acd7ab2fdebaa32f1b1f7
+ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920338"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84203235"
 ---
 # <a name="getfunctioncolumns-method-sqlserverdatabasemetadata"></a>getFunctionColumns 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -79,7 +79,7 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 |REMARKS|**String**|資料行或參數的相關註解。|  
 |COLUMN_DEF|**String**|資料行的預設值。<br /><br /> **注意：** 此資訊由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供，且為 JDBC 驅動程式特定。|  
 |SQL_DATA_TYPE|**smallint**|除了 **datetime** 和 **ISO interval** 資料類型，這個資料行與 **DATA_TYPE** 資料行相同。<br /><br /> **注意：** 此資訊由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供，且為 JDBC 驅動程式特定。|  
-|SQL_DATETIME_SUB|**smallint**|**datetime** ISO **interval** 子代碼 (如果 **SQL_DATA_TYPE** 的值是 **SQL_DATETIME** 或 **SQL_INTERVAL**)。 針對 **datetime** 和 ISO **interval** 以外的資料類型，這個資料行會是 NULL。<br /><br /> **注意：** 這項資訊可由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供，而且是 JDBC 驅動程式的特定資訊。|  
+|SQL_DATETIME_SUB|**smallint**|**datetime** ISO **interval** 子代碼 (如果 **SQL_DATA_TYPE** 的值是 **SQL_DATETIME** 或 **SQL_INTERVAL**)。 針對 **datetime** 和 ISO **interval** 以外的資料類型，這個資料行會是 NULL。<br /><br /> **注意：** 此資訊由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供，且為 JDBC 驅動程式特定。|  
 |CHAR_OCTET_LENGTH|**int**|針對以字元為基礎的參數或資料行之最大二進位長度。 如果是其他資料類型，則為 NULL。|  
 |ORDINAL_POSITION|**int**|針對輸入和輸出參數，這代表從位置 1 開始。<br /><br /> 針對結果集資料行，這是結果集中從 1 開始的資料行位置。<br /><br /> 針對傳回值，這個值是 0。|  
 |IS_NULLABLE|**String**|決定參數或資料行的 Null 屬性。<br /><br /> 它可能是下列其中一個值：<br /><br /> **YES**：參數或資料行可以包含 NULL 值。<br /><br /> **NO**：參數或資料行不可以包含 NULL 值。<br /><br /> 空字串 ("")：未知。|  

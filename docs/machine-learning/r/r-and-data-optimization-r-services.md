@@ -2,22 +2,22 @@
 title: 資料的效能微調
 description: 此文章討論在 SQL Server 中執行之 R 或 Python 指令碼的效能最佳化。 它也說明您可以用來更新 R 程式碼的方法，以提高效能並避免已知的問題。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/15/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d966094277f47d3ef12239c32a75c9a3ecbf88c9
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: a2438ff265c788753a42bc01119f954359c799ec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117531"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753404"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services 的效能 - 資料最佳化
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 此文章是一系列文章中的第三篇，會根據兩個案例研究來說明 R Services 的效能最佳化。 此文章討論在 SQL Server 中執行之 R 或 Python 指令碼的效能最佳化。 它也說明您可以用來更新 R 程式碼的方法，以提高效能並避免已知的問題。
 

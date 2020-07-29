@@ -14,17 +14,16 @@ helpviewer_keywords:
 ms.assetid: 27c90b54-cc21-4f2f-a529-eacdc41f302e
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 2b91485a548fa8d9199e3e8cac60f8cfa6db1e96
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 79d11ec9e6fa2e2b740b492ad6ed5a65443a90b0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255236"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010679"
 ---
 # <a name="rename-a-database-diagram-visual-database-tools"></a>重新命名資料庫圖表 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 您可以在 [物件總管] 中重新命名資料庫圖表。 需要資料庫的 ALTER 權限。  
   
 ### <a name="to-rename-a-database-diagram"></a>若要為資料庫圖表重新命名  

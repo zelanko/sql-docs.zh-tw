@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6cffd5ec-239a-4b21-a14c-15899ada3d27
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 81664a2329e212002000f4cbd7c75abe814b2cb0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9a80a9296270dec681b51e7fcf13f3d6ec8f5916
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251859"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000795"
 ---
 # <a name="open-an-existing-solution"></a>開啟現有的方案
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 在 [方案總管] 中，每次只能開啟一個方案。  
   
 ### <a name="to-open-an-existing-solution"></a>開啟現有的方案  

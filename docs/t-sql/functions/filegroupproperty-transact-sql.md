@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b3a930e6-df05-4034-929c-f681f5f6fc6e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8804b058a851f6053f62ef8654f76edc5df3e980
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 48c0d9a2a3b83256e8ae32a13d615e3a36b10ccb
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899013"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111539"
 ---
 # <a name="filegroupproperty-transact-sql"></a>FILEGROUPPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,9 @@ ms.locfileid: "85899013"
 FILEGROUPPROPERTY ( filegroup_name, property )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *filegroup_name*  
 類型是 **sysname** 的運算式，代表 `FILEGROUPPROPERTY` 傳回具名屬性資訊的檔案群組名稱。  
   

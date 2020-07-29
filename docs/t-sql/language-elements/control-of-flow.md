@@ -15,26 +15,59 @@ helpviewer_keywords:
 ms.assetid: 1115a779-484a-4f32-bcd2-d8f0675945b7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f0f2a97cb765ae3139d87c0aaf583674da191404
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 18dd2df663babde055be4756e6f3e4d2bff40f42
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706549"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248477"
 ---
 # <a name="control-of-flow"></a>流程控制
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 流程控制語言關鍵字如下：  
   
-|||  
-|-|-|  
-|[BEGIN...END](../../t-sql/language-elements/begin-end-transact-sql.md)|[RETURN](../../t-sql/language-elements/return-transact-sql.md)|  
-|[BREAK](../../t-sql/language-elements/break-transact-sql.md)|[THROW](../../t-sql/language-elements/throw-transact-sql.md)|  
-|[CONTINUE](../../t-sql/language-elements/continue-transact-sql.md)|[TRY...CATCH](../../t-sql/language-elements/try-catch-transact-sql.md)|  
-|[GOTO](../../t-sql/language-elements/goto-transact-sql.md) 標籤 |[WAITFOR](../../t-sql/language-elements/waitfor-transact-sql.md)|  
-|[IF...ELSE](../../t-sql/language-elements/if-else-transact-sql.md)|[WHILE](../../t-sql/language-elements/while-transact-sql.md)|  
-  
+:::row:::
+    :::column:::
+        [BEGIN...END](../../t-sql/language-elements/begin-end-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [RETURN](../../t-sql/language-elements/return-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [BREAK](../../t-sql/language-elements/break-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [THROW](../../t-sql/language-elements/throw-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [CONTINUE](../../t-sql/language-elements/continue-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [TRY...CATCH](../../t-sql/language-elements/try-catch-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [GOTO](../../t-sql/language-elements/goto-transact-sql.md) 標籤 
+    :::column-end:::
+    :::column:::
+        [WAITFOR](../../t-sql/language-elements/waitfor-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [IF...ELSE](../../t-sql/language-elements/if-else-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [WHILE](../../t-sql/language-elements/while-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+ 
 ## <a name="see-also"></a>另請參閱  
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [斜線星形 &#40;區塊註解&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md)   

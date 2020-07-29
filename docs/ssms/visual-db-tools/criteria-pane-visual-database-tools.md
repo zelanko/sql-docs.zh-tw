@@ -17,17 +17,16 @@ helpviewer_keywords:
 ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 2e7bc19ea897e370617aeb8e0e0995e857489464
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6f1df4856844b162560f562e487f970dc1974d04
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258706"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999962"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>準則窗格 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 只要將您的選擇輸入於類似方格的試算表，[準則] 窗格便可以讓您指定查詢選項 (例如，要顯示的資料行、如何排序結果，以及要選取的資料列)。 您可以在 [準則窗格] 中指定下列項目：  
   
 -   要顯示的資料行和資料行名稱別名 (Alias)。  
