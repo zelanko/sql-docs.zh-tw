@@ -6,19 +6,19 @@ ms.date: 12/09/2019
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
-author: MashaMSFT
-ms.author: mathoma
+author: markingmyname
+ms.author: maghan
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 243ebc612e5d3786ec54d8ad089e317d440e4bba
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 3e585b0314b6306bdff84b07f2d12514ee015936
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488342"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900542"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>什麼是 SQL Server 的延伸安全性更新？
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 本文提供資訊，讓您了解如何使用 SQL Server 登錄服務來接收 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 的延伸安全性更新。 如需其他選項的詳細資訊，請參閱[終止支援選項](sql-server-end-of-life-overview.md)。 
 
