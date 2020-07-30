@@ -25,15 +25,15 @@ ms.assetid: 514ab042-c53e-4d96-be71-fb08fcc6ef3c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 069bc3ebb8423b24664a9b144471678a80c5ec95
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 69d2027a590c2e01a409460bce153a850740f36e
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632979"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395083"
 ---
 # <a name="set-parseonly-transact-sql"></a>SET PARSEONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   檢查每個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的語法，且會在未編譯或執行陳述式的情況下，傳回任何錯誤訊息。  
   

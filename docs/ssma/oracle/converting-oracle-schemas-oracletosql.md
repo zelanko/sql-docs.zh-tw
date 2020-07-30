@@ -13,12 +13,12 @@ ms.assetid: e021182d-31da-443d-b110-937f5db27272
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 5eaf0970f5bc7d3aef49e83906a32295e9138cd9
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 844d602168c063c90034469466ade816431481d4
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293575"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395163"
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>轉換 Oracle 結構描述 (OracleToSQL)
 當您連接到 Oracle、連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並設定專案和資料對應選項之後，就可以將 Oracle 資料庫物件轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫物件。  
@@ -34,10 +34,9 @@ ms.locfileid: "84293575"
 ## <a name="conversion-results"></a>轉換結果  
 下表顯示轉換的 Oracle 物件，以及產生的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件：  
   
-|||  
-|-|-|  
 |Oracle 物件|產生 SQL Server 物件|  
-|函數|如果函式可以直接轉換成，則 SSMA 會建立函式 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。<br /><br />在某些情況下，函數必須轉換成預存程式。 在此情況下，SSMA 會建立一個預存程式，以及一個呼叫預存程式的函數。|  
+|-|-|  
+|函式|如果函式可以直接轉換成，則 SSMA 會建立函式 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。<br /><br />在某些情況下，函數必須轉換成預存程式。 在此情況下，SSMA 會建立一個預存程式，以及一個呼叫預存程式的函數。|  
 |程序|如果程式可以直接轉換成，則 [!INCLUDE[tsql](../../includes/tsql-md.md)] SSMA 會建立預存程式。<br /><br />在某些情況下，必須在自發交易中呼叫預存程式。 在此情況下，SSMA 會建立兩個預存程式：一個用來執行程式，另一個則用來呼叫執行預存程式。|  
 |套件|SSMA 會建立一組預存程式和函式，並透過類似的物件名稱進行整合。|  
 |序列|SSMA 會建立順序物件（SQL Server 2012 或 SQL Server 2014）或模擬 Oracle 序列。|  
@@ -45,7 +44,7 @@ ms.locfileid: "84293575"
 |具有相依物件的視圖，例如觸發程式|SSMA 會建立具有相依物件的 views。|  
 |具體化檢視|**SSMA 會在 SQL server 上建立索引的視圖，但有一些例外狀況。如果具體化視圖包含下列一或多個結構，轉換就會失敗：**<br /><br />使用者定義函數<br /><br />SELECT、WHERE 或 GROUP BY 子句中的不具決定性的欄位/函數/運算式<br /><br />SELECT *、WHERE 或 GROUP BY 子句中的 Float 資料行使用方式（先前問題的特殊案例）<br /><br />自訂資料類型（包括 nested 資料表）<br /><br />計數（相異 &lt; 欄位 &gt; ）<br /><br />FETCH<br /><br />OUTER 聯結 (LEFT、RIGHT 或 FULL)<br /><br />子查詢，其他視圖<br /><br />OVER、RANK、LEAD、LOG<br /><br />MIN、MAX<br /><br />UNION、減號、INTERSECT<br /><br />HAVING|  
 |觸發程序|**SSMA 會根據下列規則建立觸發程式：**<br /><br />觸發程式轉換成 INSTEAD of 觸發程式之前。<br /><br />AFTER 觸發程式會轉換成 AFTER 觸發程式。<br /><br />INSTEAD of 觸發程式會轉換成 INSTEAD of 觸發程式。 在相同作業上定義的多個 INSTEAD of 觸發程式會合並成一個觸發程式。<br /><br />資料列層級觸發程式是使用資料指標來模擬。<br /><br />串聯式觸發程式會轉換成多個個別的觸發程式。|  
-|同義字|**同義字是針對下列物件類型所建立：**<br /><br />資料表和物件資料表<br /><br />視圖和物件檢視<br /><br />預存程序<br /><br />函數<br /><br />**下列物件的同義字會解析並由直接物件參考取代：**<br /><br />序列<br /><br />套件<br /><br />JAVA 類別架構物件<br /><br />使用者定義物件類型<br /><br />另一個同義字的同義字無法遷移，而且將會標示為錯誤。<br /><br />不會針對具體化視圖建立同義字。|  
+|同義字|**同義字是針對下列物件類型所建立：**<br /><br />資料表和物件資料表<br /><br />視圖和物件檢視<br /><br />預存程序<br /><br />函式<br /><br />**下列物件的同義字會解析並由直接物件參考取代：**<br /><br />序列<br /><br />套件<br /><br />JAVA 類別架構物件<br /><br />使用者定義物件類型<br /><br />另一個同義字的同義字無法遷移，而且將會標示為錯誤。<br /><br />不會針對具體化視圖建立同義字。|  
 |使用者定義型別|**SSMA 不支援使用者定義類型的轉換。使用者定義型別，包括其在 PL/SQL 程式中的使用方式，會以下列規則引導的特殊轉換錯誤來標示：**<br /><br />使用者定義類型的資料表資料行會轉換成 VARCHAR （8000）。<br /><br />預存程式或函數的使用者定義型別引數會轉換成 VARCHAR （8000）。<br /><br />PL/SQL 區塊中使用者定義類型的變數會轉換成 VARCHAR （8000）。<br /><br />物件資料表會轉換成標準資料表。<br /><br />物件檢視會轉換成標準的視圖。|  
   
 ## <a name="converting-oracle-database-objects"></a>轉換 Oracle Database 物件  

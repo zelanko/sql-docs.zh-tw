@@ -18,15 +18,15 @@ ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f015625f168693da0c3c204ca85cbee1beb5d897
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 65b65c0ff721742c1bccbd6998d358797bd6d10b
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152137"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87393944"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   顯示資料列的數目、所保留的磁碟空間和資料表所用的磁碟空間、索引檢視，或目前資料庫中的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 佇列，或顯示整個資料庫所保留和使用的磁碟空間。  
   
@@ -97,7 +97,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**留**|**Varchar （18）**|資料庫中的物件所配置的空間總量。|  
-|**資料**|**Varchar （18）**|資料所用的空間總量。|  
+|**data**|**Varchar （18）**|資料所用的空間總量。|  
 |**index_size**|**Varchar （18）**|索引所用的空間總量。|  
 |**未使用**|**Varchar （18）**|保留給資料庫中之物件但尚未使用的空間總量。|  
   
@@ -109,7 +109,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**database_size**|**Varchar （18）**|目前資料庫的大小 (以 MB 為單位)。 **database_size**同時包含資料和記錄檔。|  
 |**未配置空間**|**Varchar （18）**|資料庫中尚未保留給資料庫物件的空間。|  
 |**留**|**Varchar （18）**|資料庫中的物件所配置的空間總量。|  
-|**資料**|**Varchar （18）**|資料所用的空間總量。|  
+|**data**|**Varchar （18）**|資料所用的空間總量。|  
 |**index_size**|**Varchar （18）**|索引所用的空間總量。|  
 |**未使用**|**Varchar （18）**|保留給資料庫中之物件但尚未使用的空間總量。|  
   
@@ -120,7 +120,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**name**|**nvarchar(128)**|要求的空間使用方式資訊所屬的物件名稱。<br /><br /> 不會傳回物件的結構描述名稱。 如果需要架構名稱，請使用[sys.databases dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)或[dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)動態管理檢視來取得對等的大小資訊。|  
 |**行間**|**char （20）**|資料表現有的資料列數。 如果指定的物件是一個 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 佇列，這個資料行會指出佇列中的訊息數目。|  
 |**留**|**Varchar （18）**|*Objname*保留空間的總數量。|  
-|**資料**|**Varchar （18）**|*Objname*中的資料所使用的總空間量。|  
+|**data**|**Varchar （18）**|*Objname*中的資料所使用的總空間量。|  
 |**index_size**|**Varchar （18）**|*Objname*中的索引所使用的空間總量。|  
 |**未使用**|**Varchar （18）**|保留給*objname*但尚未使用的總空間量。|  
  
@@ -137,7 +137,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**留**|**Varchar （18）**|資料庫中的物件所配置的空間總量。|  
-|**資料**|**Varchar （18）**|資料所用的空間總量。|  
+|**data**|**Varchar （18）**|資料所用的空間總量。|  
 |**index_size**|**Varchar （18）**|索引所用的空間總量。|  
 |**未使用**|**Varchar （18）**|保留給資料庫中之物件但尚未使用的空間總量。|
 
@@ -157,7 +157,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**database_size**|**Varchar （18）**|目前資料庫的大小 (以 MB 為單位)。 **database_size**同時包含資料和記錄檔。 如果資料庫具有 MEMORY_OPTIMIZED_DATA 檔案群組，這會包含檔案群組中所有檢查點檔案的磁片大小總計。|
 |**未配置空間**|**Varchar （18）**|資料庫中尚未保留給資料庫物件的空間。 如果資料庫具有 MEMORY_OPTIMIZED_DATA 檔案群組，這會包含在檔案群組中具有狀態預先建立之檢查點檔案的磁片大小總計。|  
 |**留**|**Varchar （18）**|資料庫中的物件所配置的空間總量。|  
-|**資料**|**Varchar （18）**|資料所用的空間總量。|  
+|**data**|**Varchar （18）**|資料所用的空間總量。|  
 |**index_size**|**Varchar （18）**|索引所用的空間總量。|  
 |**未使用**|**Varchar （18）**|保留給資料庫中之物件但尚未使用的空間總量。|
 |**xtp_precreated**|**Varchar （18）**|具有狀態預先建立的檢查點檔案大小總計（以 KB 為單位）。 這會計入整個資料庫中的未配置空間。 如果資料庫沒有至少包含一個容器的 memory_optimized_data 檔案群組，則會傳回 Null。 *只有當 @include_total_xtp_storage = 1 時，才會包含這個資料行*。| 
@@ -249,9 +249,9 @@ GO
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DBCC UPDATEUSAGE &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
- [allocation_units &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
- [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [index_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
+ [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

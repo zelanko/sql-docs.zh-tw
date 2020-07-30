@@ -18,15 +18,15 @@ ms.assetid: 1d060d8e-3297-4244-afef-57df2f8f92e2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c43b0e8c7afdd72fa1698d084e7693e8401a3d1
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 1830be308e5c544906ac195b8267de872082c8e9
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113513"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397183"
 ---
 # <a name="eomonth-transact-sql"></a>EOMONTH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 此函式會以選擇性位移，傳回包含指定日期的當月最後一天。  
   

@@ -1,5 +1,5 @@
 ---
-title: 更新資料列集中的資料 | Microsoft Docs
+title: 更新資料列集內的資料（Native Client OLE DB 提供者）
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 37769b1c-c480-419a-8c54-5cc420bf73db
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 230ecf53d6260cb11411b2513e6b06a7fac883d1
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 34a2aeb4a6b971e196dd876a8bade429afddc792
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246798"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87393745"
 ---
 # <a name="updating-data-in-rowsets-in-sql-server-native-client"></a>更新 SQL Server Native Client 中資料列集內的資料
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

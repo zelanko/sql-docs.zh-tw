@@ -18,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 794d2f682c5a32ee348d229cfd2413687a57843e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d70d9599dda2f71edff911ad42821fdf101b524c
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85637820"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363168"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>次要到主要複本讀取/寫入連線重新導向 (Always On 可用性群組)
 
@@ -62,7 +62,7 @@ ms.locfileid: "85637820"
 
 根據預設，未設定複本的讀取/寫入複本連線重新導向。 次要複本處理連線要求的方式取決於次要複本是否設定為允許連線，以及連接字串中的 `ApplicationIntent` 設定是否設定為允許連線。 下表顯示次要複本如何根據 `SECONDARY_ROLE (ALLOW CONNECTIONS = )` 和 `ApplicationIntent` 來處理連線。
 
-||`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
+|`ApplicationIntent` 值|`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
 |-----|-----|-----|-----|
 |`ApplicationIntent=ReadWrite`<br/> 預設|連線失敗|連線失敗|連線成功<br/>讀取成功<br/>寫入失敗|
 |`ApplicationIntent=ReadOnly`|連線失敗|連線成功|連線成功
@@ -73,7 +73,7 @@ ms.locfileid: "85637820"
 
 在您設定讀取/寫入連線重新導向之後，複本處理連線要求的方式可能會不同。 連線行為仍然取決於 `SECONDARY_ROLE (ALLOW CONNECTIONS = )` 和 `ApplicationIntent` 設定。 下表顯示已設定 `READ_WRITE_ROUTING` 的次要複本如何根據 `SECONDARY_ROLE (ALLOW CONNECTIONS = )` 和 `ApplicationIntent` 來處理連線。
 
-||`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
+|`ApplicationIntent` 值|`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
 |-----|-----|-----|-----|
 |`ApplicationIntent=ReadWrite`<br/>預設|連線失敗|連線失敗|與主要的連線路由|
 |`ApplicationIntent=ReadOnly`|連線失敗|連線成功|連線成功

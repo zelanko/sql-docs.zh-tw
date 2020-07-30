@@ -12,15 +12,15 @@ ms.assetid: 1af14fe0-e562-4f48-a7f0-783f300a88ac
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1e8a4b17ad9f37546697714af9611b7e8dbf20c0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 01420356b4097fc7126eabd964b22173b91b38cd
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68068123"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394010"
 ---
 # <a name="syspdw_table_mappings-transact-sql"></a>sys.databases pdw_table_mappings （Transact-sql）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   藉由**object_id**，將使用者資料表系結至內建物件名稱。  
   

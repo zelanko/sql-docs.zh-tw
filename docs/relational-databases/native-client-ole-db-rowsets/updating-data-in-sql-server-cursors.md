@@ -1,5 +1,5 @@
 ---
-title: 更新 SQL Server 資料指標中的資料 | Microsoft Docs
+title: 更新資料指標中的資料（Native Client OLE DB 提供者）
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 732dafee-f2d5-4aef-aad7-3a8bf3b1e876
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c99ab25fdfece33961b72e4ea7c3ea6e233bb071
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 1d5c51d8956f2eea8f6be955c9daf1e6ed323f7d
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246787"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395787"
 ---
 # <a name="updating-data-in-sql-server-cursors-in-sql-server-native-client"></a>更新 SQL Server Native Client 中 SQL Server 資料指標內的資料
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

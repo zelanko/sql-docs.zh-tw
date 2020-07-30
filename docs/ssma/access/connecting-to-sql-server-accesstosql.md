@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f84cf007-ddf1-4396-a07c-3e0729abc769
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 6266eb0596b351a7ef54baed6a7a76a7a655ac60
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 757c0e040a047f96a6dcf364638f76593904adf1
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293085"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395857"
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>連接到 SQL Server （AccessToSQL）
 若要將 Access 資料庫移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，您必須連接到的目標實例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 當您連接時，SSMA 會取得實例中資料庫的相關中繼資料 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並在 [中繼資料] Explorer 中顯示資料庫中繼資料 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 SSMA 會儲存您所連接之實例的相關資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，但不會儲存密碼。  
@@ -95,15 +95,14 @@ ms.locfileid: "84293085"
   
 4.  較高版本的相容性對 SQL Azure 而言無效。  
   
-||||||||
+|專案類型與目標伺服器版本的比較|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005（版本： 9. x）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008（版本： 10. x）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012（版本： 11. x）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014（版本： 12. x）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016（版本： 13. x）|SQL Azure|  
 |-|-|-|-|-|-|-|
-|**專案類型與目標伺服器版本**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005（版本： 9. x）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008（版本： 10. x）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012（版本： 11. x）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014（版本： 12. x）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016（版本： 13. x）|SQL Azure|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|是|是|是|是|是||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||是|是|是|是||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||是|是|是||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||是|是||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||Yes||
-|SQL Azure||||||Yes|
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||是||
+|SQL Azure||||||是|
   
 > [!IMPORTANT]  
 > 資料庫物件的轉換是根據專案類型執行，而不是根據連接的 SQL Server 版本。 在 SQL Server 2005 專案的情況下，即使您已連接到較高版本的 SQL Server （SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016），還是會根據 SQL Server 2005 來執行轉換。  

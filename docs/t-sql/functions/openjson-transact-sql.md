@@ -17,16 +17,16 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 28a61eb05b015be7eee85a7376a3c0ce84cac27f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 27f83649fc0549854fa131bf1a859f0c20ebf65c
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112864"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394784"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 **OPENJSON** 是剖析 JSON 文字並將來自 JSON 輸入的物件和屬性以資料列和資料行傳回的資料表值函式。 換句話說，**OPENJSON** 提供了 JSON 文件的資料列集檢視。 您可以明確指定資料列集中的資料行，以及用來填入資料行的 JSON 屬性路徑。 因為 **OPENJSON** 會傳回一組資料列，所以您可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的 `FROM` 子句中使用 **OPENJSON**，其與您在其他資料表、檢視或資料表值函式中的用法相同。  
   

@@ -31,15 +31,15 @@ ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d4e9130ac3a22da474b7ce576969e26bd9205ac
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2d53fe144263d9e3a3b91d6f0e929076a7043b3f
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917932"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395288"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次或下列其中一個模組中執行命令字串或字元字串：系統預存程序、使用者定義預存程序、CLR 預存程序、純量值使用者定義函數或擴充預存程序。 EXECUTE 陳述式可用來將傳遞命令傳送到連結伺服器。 另外，執行字串或命令所在的內容也可以明確設定。 結果集的中繼資料可透過 WITH RESULT SETS 來定義。
   

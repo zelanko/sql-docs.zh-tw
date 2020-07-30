@@ -12,16 +12,16 @@ ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 5dca3564e8e2ccc83f0968d42c636112880f6e56
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: be817e164cfa26baf6264dc83e73fddba82ed435
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401678"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395833"
 ---
 # <a name="syspdw_materialized_view_distribution_properties-transact-sql-preview"></a>sys.databases pdw_materialized_view_distribution_properties （Transact-sql）（預覽）
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 顯示散發資訊具體化視圖。  
   

@@ -22,15 +22,15 @@ ms.assetid: bd746a4f-6498-4196-bf2e-b6f457a15d44
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5fd9255bc39b041f97e60cd3f64f0416cf49ac31
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a7bb8a457873a40eb4023ce780946428e6294430
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916248"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394123"
 ---
 # <a name="-bitwise-or-assignment-transact-sql"></a>|= (位元 OR 指派) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   當在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式內轉換成二進位運算式時，執行兩個指定整數值之間的位元邏輯 OR 運算，再將值設定為運算結果。  
   
