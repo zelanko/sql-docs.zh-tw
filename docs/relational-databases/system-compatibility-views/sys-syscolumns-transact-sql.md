@@ -1,5 +1,5 @@
 ---
-title: syscolumns （Transact-sql） |Microsoft Docs
+title: sys.sys資料行（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,15 +21,15 @@ ms.assetid: 863fd87b-ff33-4ac5-9aa9-df21140681da
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c158533188db7e3d72235a69bff1b14546a1a1a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c8dcf0f88fed4ef48cc90a6057a757a205d9e56b
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68089243"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396066"
 ---
 # <a name="syssyscolumns-transact-sql"></a>sys.syscolumns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   針對每份資料表和檢視中的每個資料行，各傳回一個資料列；針對資料庫內預存程序中的每個參數，各傳回一個資料列。  
   
@@ -52,11 +52,11 @@ ms.locfileid: "68089243"
 |**留**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colstat**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**cdefault**|**int**|這個資料行之預設值的識別碼。|  
-|**網域**|**int**|這個資料行的規則或 CHECK 條件約束的識別碼。|  
+|**domain**|**int**|這個資料行的規則或 CHECK 條件約束的識別碼。|  
 |**number**|**smallint**|程序分組時的子程序號碼。<br /><br /> 0 = 非程序項目|  
 |**colorder**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**autoval**|**varbinary(8000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**位移**|**smallint**|這個資料行出現在其中的資料列內位移。|  
+|**offset**|**smallint**|這個資料行出現在其中的資料列內位移。|  
 |**collationid**|**int**|資料行定序的識別碼。 以非字元為基礎的資料行是 NULL。|  
 |**status**|**tinyint**|用來描述資料行或參數屬性的點陣圖：<br /><br /> 0x08 = 資料行允許 Null 值。<br /><br /> 0x10 = 當加入**Varchar**或**Varbinary**資料行時，ANSI 填補已生效。 會保留**Varchar**的尾端空白，並保留**Varbinary**資料行的尾端零。<br /><br /> 0x40 = 參數是 OUTPUT 參數。<br /><br /> 0x80 = 資料行是一個識別欄位。|  
 |**type**|**tinyint**|**Sys**的實體儲存體類型。**類型**。|  

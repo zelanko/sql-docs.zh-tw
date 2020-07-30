@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 770bf86f62f243ea255693c7773e6fae48527cfd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 23ee532329e8104d3a0e02c9547d9ca7813b42a2
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747090"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242818"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction 介面
 **ADORecordsetConstruction**介面是用來從 C/c + + 應用程式中的 OLE DB 資料列**集**物件，來建立 ADO**記錄集**物件。  
@@ -29,7 +29,7 @@ ms.locfileid: "82747090"
   
 ## <a name="properties"></a>屬性  
   
-|||  
+|屬性|說明|  
 |-|-|  
 |[章節](../../../ado/reference/ado-api/chapter-property-ado.md)|讀取/寫入。<br />取得/設定此 ADO**記錄集**物件上/的 OLE DB**章節**物件。|  
 |[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|讀取/寫入。<br />取得/設定此 ADO**記錄集**物件上/的 OLE DB **RowPosition**物件。|  

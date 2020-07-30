@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c465e477-c479-4aa8-918d-58bf30884789
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: fcc1543a26c179ae6a775b6d735283ba068312ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: df1539bde5064dc9ae9211029631bb233be0f469
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68112867"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396784"
 ---
 # <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>使用 SSMA for Oracle 主控台 (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移轉小幫手（SSMA），可以在命令列透過主控台應用程式來存取 Sybase 調適型伺服器企業版（ASE）。 腳本檔案會形成應用程式用來執行命令的輸入。 做為主控台應用程式，SSMA 可啟用腳本層級的互動、減少遷移週期，並調整遷移工作。  
@@ -23,9 +23,8 @@ ms.locfileid: "68112867"
   
 本節涵蓋的主題包括：  
   
-|||  
+|主題|描述|  
 |-|-|  
-|**主題**|**說明**|  
 |[SSMA for Sybase 主控台的消費者入門 &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-console-sybasetosql.md)|說明執行主控台應用程式的步驟。|  
 |[SSMA 主控台中的命令列選項 &#40;SybaseToSQL&#41;](../../ssma/sybase/command-line-options-in-ssma-console-sybasetosql.md)|說明用來操作 SSMA 主控台應用程式的命令列選項和參數。|  
 |[建立指令檔 &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-script-files-sybasetosql.md)|說明如何建立腳本檔案。|  

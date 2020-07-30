@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b58dd1c31069ed139cf3205ac4e0435af2e4758d
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a4c4309a12f3db14af0d38f9e98e73b7e8c4e6b1
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113019"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396697"
 ---
 # <a name="decompress-transact-sql"></a>DECOMPRESS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 此函式會使用 GZIP 演算法來解壓縮輸入運算式值。 `DECOMPRESS` 會傳回位元組陣列 (VARBINARY(MAX) 類型)。  
   

@@ -19,15 +19,15 @@ ms.assetid: 4aaeaab7-9b2b-48e0-8487-04ed672ebcb1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b43fa24ddf0ba8ec5e6c1361925161b222fb72d9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 33bf02ad0b9f4718fc9d8e80596176304a8794f6
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913154"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396623"
 ---
 # <a name="-string-concatenation-assignment-transact-sql"></a>+= (字串串連指派) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   串連兩個字串，並將該字串設定為運算結果。 例如，如果變數 @x 等於 'Adventure'，則 @x += 'Works' 會採用 @x 的原始值、將 'Works' 加入到字串，然後將 @x 設定為 'AdventureWorks' 這個新值。  
   

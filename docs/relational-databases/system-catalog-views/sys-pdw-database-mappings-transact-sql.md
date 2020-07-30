@@ -12,15 +12,15 @@ ms.assetid: 4ae2c71e-dd56-41ea-a16b-64936175b459
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5a5f3e4f421fbe169d5acb049e5a91ce5ffa3612
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 013a6bcbba5e7647db1bec04204f8e8fec710c16
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627552"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396085"
 ---
 # <a name="syspdw_database_mappings-transact-sql"></a>sys.databases pdw_database_mappings （Transact-sql）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   將資料庫的**database_id**對應到計算節點上所使用的機構名稱，並提供系統上資料庫擁有**者的主體識別碼**。 將**sys. pdw_database_mappings**加入**sys.databases**和 sys.databases。 **pdw_nodes_pdw_physical_databases**。  
   

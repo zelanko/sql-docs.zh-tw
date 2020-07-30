@@ -11,12 +11,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 268844335920f88469119df5cc84a145369da1e1
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: c9d942e2255c2c60978d41004cfe53097c99209d
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197236"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332425"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL 資料倉儲)
 
@@ -256,7 +256,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 | `money`|8|  
 | `smallmoney` |4|  
   
- `bigint` | `int` | `smallint` | `tinyint`  
+ `bigint` \| `int` \| `smallint` \| `tinyint`  
  使用整數資料的 Exact-number 資料類型。 下表會顯示儲存體。  
   
 | 資料類型 | 儲存體位元組 |  
@@ -519,18 +519,18 @@ WITH
  在這個範例中，資料將排序到下列資料分割中：  
   
 - 資料分割 1：col <= 10
-- 資料分割 2：10 < col <= 20
-- 資料分割 3：20 < col <= 30
-- 資料分割 4：30 < col <= 40
-- 資料分割 5：40 < col  
+- 分割區 2：10 < col <= 20
+- 分割區 3：20 < col <= 30
+- 分割區 4：30 < col <= 40
+- 分割區 5：40 < col  
   
  如果這個相同的資料表分割為 RANGE RIGHT，而不是 RANGE LEFT (預設)，資料將排序到下列資料分割：  
   
 - 資料分割 1：col < 10  
-- 資料分割 2：10 <= col < 20
-- 資料分割 3：20 <= col < 30
-- 資料分割 4：30 <= col < 40
-- 資料分割 5：40 <= col  
+- 分割區 2：10 <= col < 20
+- 分割區 3：20 <= col < 30
+- 分割區 4：30 <= col < 40
+- 分割區 5：40 <= col  
   
 ### <a name="j-create-a-partitioned-table-with-one-partition"></a><a name="OnePartition"></a> J. 建立具有一個資料分割的資料分割資料表
 

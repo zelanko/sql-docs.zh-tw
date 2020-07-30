@@ -20,15 +20,15 @@ ms.assetid: 5b6d6498-bac6-4266-94b9-d16ef5089cf0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec4ee023960c573ac48ff66886181c2f88b374bb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 722aca86c43839e9deb4e558f447f5377dffe99a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825049"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396130"
 ---
 # <a name="sysnumbered_procedures-transact-sql"></a>sys.numbered_procedures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   針對建立為編號程序的每個 SQL Server 預存程序，各包含一個資料列。 這並不會顯示基底 (數字 = 1) 預存程序的一個資料列。 基底預存程式的專案可以在如**sys.databases**和**sys.databases**等視圖中找到。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "82825049"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|預存程序的物件識別碼。|  
+|object_id|**int**|預存程序的物件識別碼。|  
 |**procedure_number**|**smallint**|這個程序在物件內的編號，大於或等於 2。|  
 |**definition**|**nvarchar(max)**|定義這個程序的 SQL Server 文字。<br /><br /> NULL = 已加密。|  
   
@@ -48,7 +48,7 @@ ms.locfileid: "82825049"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的物件目錄檢視](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [物件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

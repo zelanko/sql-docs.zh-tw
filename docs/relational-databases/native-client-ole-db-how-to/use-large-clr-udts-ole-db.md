@@ -1,5 +1,5 @@
 ---
-title: 使用大型 CLR UDT (OLE DB) | Microsoft Docs
+title: 使用大型 CLR Udt （Native Client OLE DB 提供者）
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,25 +11,26 @@ ms.assetid: 30f59c11-3bca-41be-8bd7-0d1efaf1f0be
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 33378d8f5ea3252e5166e9a69ea292ce1a76d663
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 60f8978fa0dedfe40a3d48b7796bc4d0fb1359c7
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011861"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396883"
 ---
-# <a name="use-large-clr-udts-ole-db"></a>使用大型 CLR UDT (OLE DB)
+# <a name="use-large-clr-udts--in-sql-server-native-client-ole-db"></a>在 SQL Server Native Client 中使用大型 CLR Udt （OLE DB）
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   此範例會示範如何從結果集中提取具有大型使用者定義型別的資料列。 如需詳細資訊，請參閱[大型 CLR 使用者定義型別 &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md)。 此範例適用於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本。  
   
 ## <a name="example"></a>範例  
- 此範例包含兩個專案， 其中一個專案從 C# 原始程式碼建立組件 (DLL)。 這個組件包含 CLR 類型。 將會在資料庫中加入一個資料表。 資料表中的資料行屬於組件中所定義的類型，根據預設，此範例將會使用 master 資料庫。 第二個專案是原生的 C 應用程式，可從資料表讀取資料。  
+ 此範例包含兩個專案， 其中一個專案從 C# 原始程式碼建立組件 (DLL)。 這個組件包含 CLR 類型。 將會在資料庫中加入一個資料表。 資料表中的資料行將屬於元件中定義的類型。 根據預設，此範例會使用 master 資料庫。 第二個專案是原生的 C 應用程式，可從資料表讀取資料。  
   
  將第一個 (C#) 程式碼清單編譯成 DLL。  然後，將此 DLL 複製到 C 磁碟機的根目錄。  
   
  執行第二個 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單，以將組件新增至 master 資料庫。  
   
- 使用 ole32.lib oleaut32.lib 編譯並執行第三個 (C++) 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連線到具名執行個體，請將連接字串從 L"(local)" 變更為 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
+ 使用 ole32.lib oleaut32.lib 編譯並執行第三個 (C++) 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連接到已命名的實例，請將連接字串從 L "（local）" 變更為 L "（local） \\ \name"，其中 name 是已命名的實例。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
   
  執行第四個 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單，以從 master 資料庫中刪除組件。  
   

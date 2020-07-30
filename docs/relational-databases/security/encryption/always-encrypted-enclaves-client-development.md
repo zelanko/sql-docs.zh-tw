@@ -12,15 +12,15 @@ ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7ec032a9a6bd6d02372d77d8844d5e4938fbe945
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 971cce5ddf61f528e9e4ffdc0377603b6ce96946
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74492010"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411374"
 ---
 # <a name="develop-applications-using-always-encrypted-with-secure-enclaves"></a>使用具有安全記憶體保護區的 Always Encrypted 開發應用程式
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 [具有安全記憶體保護區的 Always Encrypted](always-encrypted-enclaves.md) 會延伸 [Always Encrypted](always-encrypted-database-engine.md)，讓您在已加密敏感性資料庫資料行上使用更豐富的應用程式查詢功能。 其利用安全記憶體保護區技術，讓 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 中的查詢執行程式將加密資料行上計算委派給 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 處理序內的安全記憶體保護區。
 

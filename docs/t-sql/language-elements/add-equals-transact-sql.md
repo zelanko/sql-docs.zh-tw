@@ -21,15 +21,15 @@ ms.assetid: 9ea52519-80d1-473f-b988-0572f0e2c92f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 27254df5f0e634f3a6a433efdb99dc53dc233da8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8ec2b25adc213be5b19ab3784a2a6e234c9477b1
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915516"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396763"
 ---
 # <a name="-addition-assignment-transact-sql"></a>+= (加法指派) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   兩數相加，再將值設定為運算結果。 例如，如果變數 @x 等於 35，則 @x += 2 會用 @x 的原始值加上 2，然後將 @x 設定為該新值 (37)。  
   

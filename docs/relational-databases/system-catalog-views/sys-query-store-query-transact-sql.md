@@ -21,15 +21,15 @@ ms.assetid: bdee149e-7556-4fc3-8242-925dd4b7b6ac
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 073c90b18d9f6fb8b75bf5da44f3d3817d8f296c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 676c7a8c20c6374d9ceff521622f030c8f8fb983
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831407"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396377"
 ---
 # <a name="sysquery_store_query-transact-sql"></a>sys.databases query_store_query （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   包含有關查詢的資訊，以及其相關聯的整體匯總執行時間執行統計資料。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82831407"
 |**query_id**|**bigint**|主索引鍵。|  
 |**query_text_id**|**bigint**|外鍵。 Query_store_query_text 的聯結[&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|  
 |**coNtext_settings_id**|**bigint**|外鍵。 [Query_coNtext_settings &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)的聯結。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|  
-|**object_id**|**bigint**|查詢所屬之資料庫物件的識別碼（預存程式、觸發程式、CLR UDF/UDAgg 等等）。 如果查詢不是當做資料庫物件（臨機操作查詢）的一部分來執行，則為0。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|  
+|object_id|**bigint**|查詢所屬之資料庫物件的識別碼（預存程式、觸發程式、CLR UDF/UDAgg 等等）。 如果查詢不是當做資料庫物件（臨機操作查詢）的一部分來執行，則為0。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|  
 |**batch_sql_handle**|**varbinary(64)**|查詢所屬之語句批次的識別碼。 只有在查詢參考臨時表或資料表變數時，才會填入。<br/>**注意：** Azure SQL 資料倉儲一律會傳回*Null*。|  
 |**query_hash**|**binary （8）**|個別查詢的 MD5 雜湊，以邏輯查詢樹狀結構為基礎。 包含優化工具提示。|  
 |**is_internal_query**|**bit**|查詢是在內部產生。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|  
@@ -78,8 +78,8 @@ ms.locfileid: "82831407"
  [query_store_runtime_stats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
  [query_store_runtime_stats_interval &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [相關檢視、函數與程序](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [查詢存放區預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
+ [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [查詢存放區預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
   
   
