@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 0b52f18f8a7247faae24f266c6d8dba3d6c2ea4c
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: d7fe937b95049788f4b488df2d36451df67c4c09
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293635"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396397"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>對應 MySQL 和 SQL Server 字元集 (MySQLToSQL)
 您可以為 MySQL 字元資料類型、運算式和常值指定字元集（字元集）。  
@@ -77,9 +77,8 @@ ms.locfileid: "84293635"
   
     以下提供 MySQL 資料庫和根中繼資料節點層級上的目標資料庫之間的字元集對應：  
   
-    ||||  
+    |字元集名稱|字元集描述|目標字元集類型（預設值）|  
     |-|-|-|  
-    |**字元集名稱**|**字元集描述**|**目標字元集類型（預設值）**|  
     |big5|繁體中文的 Big5|NCHAR/NVARCHAR （預設值）|  
     |dec8|DEC 西歐|CHAR/VARCHAR （預設值）|  
     |cp850|DOS 西歐|CHAR/VARCHAR （預設值）|  

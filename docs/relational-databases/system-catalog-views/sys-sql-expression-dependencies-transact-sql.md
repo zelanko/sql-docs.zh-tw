@@ -20,15 +20,15 @@ ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c66a822991bb347b429b1524f0b04aa768cb38f4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f358296320ebeeefcc6004a59754ba8e8052e789
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833952"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396667"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   針對在目前資料庫中使用者自訂實體的每個依據名稱相依性，各包含一個資料列。 這包括原生編譯的純量使用者定義函數和其他模組之間的相依性 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 當一個實體（稱為受*參考的實體*）以名稱出現在另一個實體的持續性 SQL 運算式中（稱為「*參考實體*」）時，就會建立兩個實體之間的相依性。 例如，在某個檢視的定義中參考資料表時，該檢視 (參考實體) 就會相依於資料表 (受參考的實體)。 如果資料表遭卸除，檢視便無法使用。  
   

@@ -19,15 +19,15 @@ ms.assetid: 21f66bbf-d1ea-4f75-a3c4-20dc7fc1c69e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 066020f0e7de04585bf805dfcf054b865ac7d11c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: b4660d84e45ae092f97c08bd472052d8ed6a35f3
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110413"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397042"
 ---
 # <a name="lead-transact-sql"></a>LEAD (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   在不使用開頭為 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的自我聯結下，於相同的資料集中，從後續的資料列存取資料。 LEAD 在跟隨目前資料列的已指定實體位移中，提供存取資料列。 在 SELECT 陳述式中使用這個分析函數，比較目前資料列中的值與下列資料列中的值。  
   

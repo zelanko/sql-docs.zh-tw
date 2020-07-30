@@ -10,12 +10,12 @@ ms.assetid: ef94e843-9f88-45a2-86c4-a0af268738c4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 6366ed7d6346fb6240a5d56ae6cc4d91575f2ed0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c470cf8ea61851b80f04bce716bc7c83c54929b0
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68259780"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396897"
 ---
 # <a name="working-with-ssma-for-access-console-accesstosql"></a>使用 SSMA for Access 主控台（AccessToSQL）
 您現在可以透過主控台應用程式，在命令列中存取 Microsoft SQL Server 移轉小幫手（SSMA）以進行存取。 腳本檔案會形成應用程式用來執行命令的輸入。 做為主控台應用程式，SSMA 可啟用腳本層級的互動、減少遷移週期，並調整遷移工作。  
@@ -24,9 +24,8 @@ ms.locfileid: "68259780"
   
 本節涵蓋的主題包括：  
   
-|||  
+|主題|描述|  
 |-|-|  
-|**主題**|**說明**|  
 |[消費者入門使用適用于 Access 主控台的 SSMA &#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-ssma-for-access-console-accesstosql.md)|說明執行主控台應用程式的步驟。|  
 |[SSMA 主控台中的命令列選項 &#40;AccessToSQL&#41;](../../ssma/access/command-line-options-in-ssma-console-accesstosql.md)|說明用來操作 SSMA 主控台應用程式的命令列選項和參數。|  
 |[建立指令檔 &#40;AccessToSQL&#41;](../../ssma/access/creating-script-files-accesstosql.md)|說明如何建立腳本檔案。|  
