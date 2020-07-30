@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 51bc81253c63834e2fa9b4238ef9bf62f19f1ce9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2bc9a5c4ca7481d9d3d1039e0e467e35d5c2631b
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771785"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363039"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -116,7 +116,7 @@ REM Gather information about the instance of LocalDB
 
  以上最後一行傳回的資訊如下所示。
 
-|||
+|類別|值|
 |-|-|
 |名稱|`LocalDBApp1`|
 |版本|\<Current Version>|

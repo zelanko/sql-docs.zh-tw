@@ -10,15 +10,15 @@ ms.assetid: d5c7589b-09b0-4f12-ab84-feb3ec3fbaaa
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4da5f6bfb520f853904ce53c9101d0c6dd4a6ba6
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 83bea79a009e25d54f9d0ae589936de7fed7d94a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626986"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396027"
 ---
 # <a name="syspdw_health_components-transact-sql"></a>sys.databases pdw_health_components （Transact-sql）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   儲存存在於系統中之所有元件和裝置的相關資訊。 其中包括硬體、存放裝置和網路裝置。  
   

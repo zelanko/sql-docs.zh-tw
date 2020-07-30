@@ -20,15 +20,15 @@ ms.assetid: 1d69893b-e5c3-441d-8dd8-0e5eb872ecfc
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 236d829e8c3b5f7ea41f1d9713d3b1ddd4c6f779
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ffecf5a297864765b7ce995ce9b39d1cbff97644
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923339"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394163"
 ---
 # <a name="-division-transact-sql"></a>/ (除法) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   將一個數字除以另一個數字 (算術除法運算子)。  
   

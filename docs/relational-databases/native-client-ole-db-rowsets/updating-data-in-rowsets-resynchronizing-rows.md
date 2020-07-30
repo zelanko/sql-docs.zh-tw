@@ -1,5 +1,5 @@
 ---
-title: 重新同步處理資料列 | Microsoft Docs
+title: 重新同步處理資料列（Native Client OLE DB 提供者）
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: d2d30505-a878-4aa9-b821-53d8118a45a5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7a54038c8c437a9eec1158ceb8fea6e48e756be
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: e260334701d49f31e42a289e08c3938955ce4fcd
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246806"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87393616"
 ---
 # <a name="updating-data-in-rowsets---resynchronizing-rows-in-sql-server-native-client"></a>更新資料列集內的資料-重新同步處理 SQL Server Native Client 中的資料列
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

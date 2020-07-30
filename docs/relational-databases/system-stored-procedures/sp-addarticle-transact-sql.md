@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 35aa02236cf3e8a11d03539042ccdaf9049dd8f9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9201e8f74a62315132743c36669892b7bd3cc90f
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731714"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394753"
 ---
 # <a name="sp_addarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -87,7 +87,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @type = ] 'type'`這是發行項的類型。 *類型*為**sysname**，而且可以是下列其中一個值。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |**aggregate schema only**|只含結構描述的彙總函式。|  
 |**func schema only**|只含結構描述的函數。|  
@@ -111,7 +111,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @ins_cmd = ] 'ins_cmd'`這是在複寫此發行項的插入時，所使用的複寫命令類型。 *ins_cmd*是**Nvarchar （255）**，它可以是下列其中一個值。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |**NONE**|不採取任何動作。|  
 |**CALL sp_MSins_**<br /> **_table_** （預設值）<br /><br /> -或-<br /><br /> **CALL custom_stored_procedure_name**|呼叫要在訂閱者端執行的預存程序。 若要使用這個複寫方法，請使用*schema_option*來指定自動建立預存程式，或在發行項之每個訂閱者的目的地資料庫中建立指定的預存程式。 *custom_stored_procedure*是使用者建立之預存程式的名稱。 <strong>sp_MSins_*資料表*</strong>包含目的地資料表的名稱，以取代參數的 *_table*部分。 當指定*destination_owner*時，它會在目的地資料表名稱前面加上。 例如，對於「訂閱者」端**生產**架構所擁有的**ProductCategory**資料表而言，參數會是 `CALL sp_MSins_ProductionProductCategory` 。 對於點對點複寫拓撲中的發行項， *_table*會附加 GUID 值。 更新訂閱者不支援指定*custom_stored_procedure* 。|  
@@ -121,7 +121,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @del_cmd = ] 'del_cmd'`這是複寫此發行項的刪除專案時，所使用的複寫命令類型。 *del_cmd*是**Nvarchar （255）**，它可以是下列其中一個值。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |**NONE**|不採取任何動作。|  
 |**CALLsp_MSdel_**<br /> **_table_** （預設值）<br /><br /> -或-<br /><br /> **CALL custom_stored_procedure_name**|呼叫要在訂閱者端執行的預存程序。 若要使用這個複寫方法，請使用*schema_option*來指定自動建立預存程式，或在發行項之每個訂閱者的目的地資料庫中建立指定的預存程式。 *custom_stored_procedure*是使用者建立之預存程式的名稱。 <strong>sp_MSdel_*資料表*</strong>包含目的地資料表的名稱，以取代參數的 *_table*部分。 當指定*destination_owner*時，它會在目的地資料表名稱前面加上。 例如，對於「訂閱者」端**生產**架構所擁有的**ProductCategory**資料表而言，參數會是 `CALL sp_MSdel_ProductionProductCategory` 。 對於點對點複寫拓撲中的發行項， *_table*會附加 GUID 值。 更新訂閱者不支援指定*custom_stored_procedure* 。|  
@@ -132,7 +132,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @upd_cmd = ] 'upd_cmd'`這是複寫本文的更新時所使用的複寫命令類型。 *upd_cmd*是**Nvarchar （255）**，它可以是下列其中一個值。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |**NONE**|不採取任何動作。|  
 |**CALL sp_MSupd_**<br /> **_目錄_**<br /><br /> -或-<br /><br /> **CALL custom_stored_procedure_name**|呼叫要在訂閱者端執行的預存程序。 若要使用這個複寫方法，請使用*schema_option*來指定自動建立預存程式，或在發行項之每個訂閱者的目的地資料庫中建立指定的預存程式。|  
@@ -150,7 +150,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @pre_creation_cmd = ] 'pre_creation_cmd'`如果在套用此發行項的快照集時，偵測到訂閱者端有相同名稱的現有物件，則指定系統應執行的動作。 *pre_creation_cmd*是**Nvarchar （10）**，而且可以是下列其中一個值。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |無|不使用命令。|  
 |**delete**|在套用快照集之前，從目的地資料表中刪除資料。 當水平篩選發行項時，只刪除篩選子句指定的資料行中之資料。 當定義水平篩選時，不支援 Oracle 發行者使用這個值。|  
@@ -164,7 +164,7 @@ sp_addarticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  如果這個值是 NULL，系統會相依於其他發行項屬性，自動產生發行項的有效結構描述選項。 [備註] 中提供的 [**預設架構選項**] 資料表會根據發行項類型和複寫類型的組合，顯示要選擇的值。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |**0x00**|停用快照集代理程式的腳本，並使用*creation_script*。|  
 |**0x01**|產生物件建立指令碼 (CREATE TABLE、CREATE PROCEDURE 等)。 這個值是預存程序發行項的預設值。|  
@@ -251,7 +251,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @auto_identity_range = ] 'auto_identity_range'`在發行集建立時，啟用和停用它的自動識別範圍處理。 *auto_identity_range*是**Nvarchar （5）**，它可以是下列其中一個值：  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |**true**|啟用自動識別範圍處理|  
 |**false**|停用自動識別範圍處理|  
@@ -285,7 +285,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @identityrangemanagementoption = ] identityrangemanagementoption`指定如何處理髮行項的識別範圍管理。 *identityrangemanagementoption*是**Nvarchar （10）**，它可以是下列值之一。  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |無|複寫未執行明確識別範圍管理。 建議您只將這個選項用於與舊版 SQL Server 的回溯相容性。 對等複寫不允許這個值。|  
 |**手動**|利用 NOT FOR REPLICATION 來標示識別欄位，以啟用手動的識別範圍處理。|  
@@ -342,9 +342,8 @@ sp_addarticle [ @publication = ] 'publication'
 ## <a name="default-schema-options"></a>預設結構描述選項  
  下表描述當使用者未指定*schema_options*時，複寫所設定的預設值，其中此值取決於複寫類型（顯示在頂端）和發行項類型（顯示在第一個資料行下方）。  
   
-|發行項類型|複寫類型||  
+|發行項類型|異動複寫|快照式複寫|  
 |------------------|----------------------|------|  
-||交易式|快照式|  
 |**aggregate schema only**|**0x01**|**0x01**|  
 |**func schema only**|**0x01**|**0x01**|  
 |**indexed view schema only**|**0x01**|**0x01**|  
@@ -366,9 +365,8 @@ sp_addarticle [ @publication = ] 'publication'
 ## <a name="valid-schema-options"></a>有效結構描述選項  
  下表描述以複寫類型（顯示在頂端）和發行項類型（顯示在第一個資料行下方）為依據的*schema_option*可允許的值。  
   
-|發行項類型|複寫類型||  
+|發行項類型|異動複寫|快照式複寫|  
 |------------------|----------------------|------|  
-||交易式|快照式|  
 |**logbased**|所有選項|所有選項，但**0x02**|  
 |**logbased manualfilter**|所有選項|所有選項，但**0x02**|  
 |**logbased manualview**|所有選項|所有選項，但**0x02**|  
@@ -399,7 +397,7 @@ sp_addarticle [ @publication = ] 'publication'
  [sp_articleview &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
  [sp_changearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_droparticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
- [sp_helparticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
+ [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [sp_helparticlecolumns &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)   
  [&#40;Transact-sql&#41;的複寫預存程式](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [發行資料和資料庫物件](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  

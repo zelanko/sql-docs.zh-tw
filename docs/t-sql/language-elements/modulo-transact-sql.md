@@ -25,15 +25,15 @@ ms.assetid: f93c662e-f405-486e-bf23-a2d03907b5bd
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8391d620955baf6e20c3c128475d1eb6649e8cfe
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3912a363d90006e31e6d600c5fa983fc6ae6b939
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916814"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395659"
 ---
 # <a name="-modulus-transact-sql"></a>% (模數) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   傳回某個數值除以另一個數值的餘數。  
   

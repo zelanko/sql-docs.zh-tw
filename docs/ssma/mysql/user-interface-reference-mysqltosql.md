@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2fad3fa2-5729-4b96-99d4-2c6edfab0a54
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 17a287b38eb1dd1c1d9e3cee6943f7c069a39c61
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 36cc006382bab28a93beed1ce8c6e48896719674
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67944622"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395173"
 ---
 # <a name="user-interface-reference-mysqltosql"></a>使用者介面參考 (MySQLToSQL)
 本節包含適用于 MySQL 的 SQL Server 移轉小幫手（SSMA）的說明主題。  
@@ -22,13 +22,12 @@ ms.locfileid: "67944622"
 ## <a name="in-this-section"></a>本節內容  
 下表列出 [SSMA] 對話方塊：  
   
-|||  
+|主題|說明|  
 |-|-|  
-|**主題**|**說明**|  
 |[&#40;MySQLToSQL&#41;的 Advanced 物件選取範圍](../../ssma/mysql/advanced-object-selection-mysqltosql.md)|使用 [**高級物件選取**] 對話方塊，即可使用篩選準則來尋找資料庫物件，然後選取或清除這些物件。|  
 |[評量報告 &#40;MySQLToSQL&#41;](../../ssma/mysql/assessment-report-mysqltosql.md)|使用報表來查看將 MySQL 物件轉換成 Transact-sql 語法的結果，以及估計遷移到 SQL Server 的時間和複雜度。|  
 |[連接到 MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)|使用 [**連接到 mysql** ] 對話方塊，即可連線到您想要遷移的 MySQL 資料庫。|  
-|[連接到 SQL Server](https://msdn.microsoft.com/d73abd3a-80df-4293-b973-1723069db049)|使用 [**連接到 SQL Server** ] 對話方塊，即可連接到您要遷移的 SQL Server 實例。|  
+|[連線到 SQL Server](https://msdn.microsoft.com/d73abd3a-80df-4293-b973-1723069db049)|使用 [**連接到 SQL Server** ] 對話方塊，即可連接到您要遷移的 SQL Server 實例。|  
 |[連接到 Azure SQL DB &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)|使用 [**連接到 Sql azure** ] 對話方塊，即可連接到您要遷移的 SQL Azure 實例。|  
 |[轉換設定（MySQL）](https://msdn.microsoft.com/f551cf6e-1575-4206-9cca-975b5b43a6b8)|使用 [**設定**] 索引標籤來設定節點層級設定。|  
 |[資料移轉報告 &#40;MySQLToSQL&#41;](../../ssma/mysql/data-migration-report-mysqltosql.md)|顯示將資料從 MySQL 遷移至 SQL Server 或 SQL Azure 的結果。|  

@@ -13,19 +13,19 @@ ms.assetid: 612e5c59-ba3e-49c3-a3df-56bac3d850a2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1dfe4da61d5ab8759f5a847f4274a22edca2f950
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 26b825d261d376cc2f63a671da33819d29500b5a
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85721668"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362916"
 ---
 # <a name="mssql_eng021076"></a>MSSQL_ENG021076
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
     
 ## <a name="message-details"></a>訊息詳細資料  
   
-|||  
+|屬性|值|  
 |-|-|  
 |產品名稱|SQL Server|  
 |事件識別碼|21076|  

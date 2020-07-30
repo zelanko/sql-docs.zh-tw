@@ -10,12 +10,12 @@ ms.assetid: c1f3b3f0-0f3e-4e07-b745-2fbdde85c67e
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: f6a2bb7e10e487d65c0fa8dfd406a30f9acd557a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b78f6ccae739b6fe70fc813959daa44adca7c22
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68265529"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394873"
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>SSMA 主控台中的命令列選項（AccessToSQL）
 Microsoft 為您提供了一組健全的命令列選項，以執行和控制 SSMA 活動。 後續章節會提供額外的詳細資料。  
@@ -25,7 +25,7 @@ Microsoft 為您提供了一組健全的命令列選項，以執行和控制 SSM
   
 基於此章節的目的，「選項」一詞也稱為「參數」。  
   
-選項不區分大小寫，而且開頭可能是 '**-**' 或 '**/**' 字元。  
+選項不區分大小寫，而且開頭可能是 ' **-** ' 或 ' **/** ' 字元。  
   
 如果指定了選項，則必須指定對應的 option 參數。  
   
@@ -117,16 +117,12 @@ Microsoft 為您提供了一組健全的命令列選項，以執行和控制 SSM
   
 `"C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  -e c:\SsmaProjects\CommonEnvironment`  
   
-||  
-|-|  
-||  
-  
 ### <a name="secure-password-option--psecurepassword"></a>安全密碼選項：-p/securepassword  
 此選項表示伺服器連接的加密密碼。 它與其他所有選項不同，因為它不會在任何遷移相關的活動中執行任何腳本或協助，但有助於管理用於遷移專案中之伺服器連接的密碼加密。  
   
 您不能輸入任何其他選項或密碼做為命令列參數。 否則，它會導致錯誤。 如需詳細資訊，請參閱[管理密碼](managing-passwords-accesstosql.md)一節。  
   
-以下是支援的子選項`-p/securepassword`：  
+以下是支援的子選項 `-p/securepassword` ：  
   
 -   若要針對指定的伺服器識別碼或伺服器連線檔案中定義的所有伺服器識別碼，將密碼或更新現有的密碼新增至受保護的存放裝置：  
   

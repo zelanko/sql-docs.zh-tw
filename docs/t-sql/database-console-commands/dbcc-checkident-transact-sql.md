@@ -29,16 +29,16 @@ ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: a3be9148e4ae5e8daae7528923506fc0bbde665d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: fd1523d0c1cb9d21240887f2d801e447828def0e
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484387"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395184"
 ---
 # <a name="dbcc-checkident-transact-sql"></a>DBCC CHECKIDENT (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中檢查指定資料表目前的識別值，必要的話，請變更識別值。 您也可以使用 DBCC CHECKIDENT，手動設定識別欄位的新目前識別值。  
   

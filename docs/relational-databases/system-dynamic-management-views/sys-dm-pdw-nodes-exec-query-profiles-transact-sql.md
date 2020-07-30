@@ -13,20 +13,20 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 7237e7f7b49916e09f4a8c5cab0d7d49486cb971
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cb63045fa1a34898e9c195e7a5c75bdf6b34b15a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73145653"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394343"
 ---
 # <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys.databases dm_pdw_nodes_exec_query_profiles （Transact-sql）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 監視執行查詢時的即時資料倉儲查詢進度。   
   
 ## <a name="table-returned"></a>傳回的資料表  
-傳回的計數器是以每個執行緒的每個運算子為基礎。 結果是動態的，而且不符合現有選項的結果，例如`SET STATISTICS XML ON` ，當查詢完成時，只會建立輸出。  
+傳回的計數器是以每個執行緒的每個運算子為基礎。 結果是動態的，而且不符合現有選項的結果，例如， `SET STATISTICS XML ON` 當查詢完成時，只會建立輸出。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -66,7 +66,7 @@ ms.locfileid: "73145653"
 |segment_read_count|**int**|目前為止的區段預先讀取數目。|  
 |segment_skip_count|**int**|目前為止略過的區段數目。| 
 |actual_read_row_count|**bigint**|套用剩餘述詞之前，由運算子讀取的資料列數目。| 
-|estimated_read_row_count|**bigint**|**適用物件：** 從[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 開始。 <br/>在套用剩餘述詞之前，由運算子讀取的估計資料列數目。|  
+|estimated_read_row_count|**bigint**|**適用物件：** 從 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 開始。 <br/>在套用剩餘述詞之前，由運算子讀取的估計資料列數目。|  
   
 ## <a name="remarks"></a>備註  
 [Dm_exec_query_profiles](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql?view=sql-server-ver15)適用相同的備註。  

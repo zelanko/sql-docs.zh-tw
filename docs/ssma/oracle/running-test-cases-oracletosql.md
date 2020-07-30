@@ -10,15 +10,15 @@ ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 79d3905c130e37c973a79a40369f97ae8f30ac5b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7905c76803bf637e581af934f473b070d44a6b09
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266552"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394859"
 ---
 # <a name="running-test-cases-oracletosql"></a>執行測試案例 (OracleToSQL)
-當 SSMA 測試人員執行測試案例時，它會執行選取進行測試的物件，並建立有關驗證結果的報表。 如果兩個平臺上的結果都相同，測試就會成功。 Oracle 與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之間物件的對應是根據目前 SSMA 專案的架構對應設定來決定。  
+當 SSMA 測試人員執行測試案例時，它會執行選取進行測試的物件，並建立有關驗證結果的報表。 如果兩個平臺上的結果都相同，測試就會成功。 Oracle 與之間物件的對應 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是根據目前 SSMA 專案的架構對應設定來決定。  
   
 成功測試的必要需求是所有 Oracle 物件都會轉換並載入目標資料庫中。 此外，應該遷移資料表資料，以同步處理兩個平臺上的資料表內容。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "68266552"
   
 ## <a name="test-case-execution-steps"></a>測試案例執行步驟  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>先決條件  
 SSMA 測試器會在測試開始之前，檢查是否符合測試執行的所有必要條件。 如果未滿足某些條件，則會出現錯誤訊息。  
   
 ### <a name="initialization"></a>初始化  
@@ -41,9 +41,8 @@ SSMA 測試器會在測試開始之前，檢查是否符合測試執行的所有
   
 假設已驗證的資料表已命名為 USER_TABLE。 針對這類資料表，會在 Oracle 中建立下列輔助物件。  
   
-||||  
-|-|-|-|  
 |名稱|類型|描述|  
+|-|-|-|  
 |USER_TABLE $ .Trg|觸發程序 (trigger)|觸發程式來審核已驗證資料表中的變更。|  
 |USER_TABLE $ AUD|資料表|儲存已刪除和已覆寫資料列的資料表。|  
 |USER_TABLE $ AUDID|資料表|儲存新的和變更的資料列的資料表。|  
@@ -52,18 +51,16 @@ SSMA 測試器會在測試開始之前，檢查是否符合測試執行的所有
 |USER_TABLE $ NEW_ID|檢視|識別已插入和已變更的資料列。|  
 |USER_TABLE $ OLD|檢視|簡化已刪除和已覆寫資料列的標記法。|  
   
-下列物件是在已驗證之資料表的架構中建立[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的。  
+下列物件是在已驗證之資料表的架構中建立的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-||||  
-|-|-|-|  
 |名稱|類型|描述|  
+|-|-|-|  
 |USER_TABLE $ .Trg|觸發程序 (trigger)|觸發程式來審核已驗證資料表中的變更。|  
   
-和下列物件是在 ssmatesterdb 資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的中建立。  
+和下列物件是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ssmatesterdb 資料庫的中建立。  
   
-||||  
-|-|-|-|  
 |名稱|類型|描述|  
+|-|-|-|  
 |USER_TABLE $ Aud|資料表|儲存已刪除和已覆寫資料列的資料表。|  
 |USER_TABLE $ AudID|資料表|儲存新的和變更的資料列的資料表。|  
 |USER_TABLE|檢視|簡化資料表修改的標記法。|  

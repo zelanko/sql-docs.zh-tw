@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 054bb22c1dfe2f1497af6e74bea0cfc0bca158b8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 09edac79bf52c2826436ecdfdf25b0db342f4aeb
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763626"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363556"
 ---
 # <a name="contained-database-collations"></a>自主資料庫定序
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -126,9 +126,8 @@ END;
   
  下表將摘要說明包含和非自主資料庫中各種物件的行為：  
   
-||||  
+|Item|非自主資料庫|自主資料庫|  
 |-|-|-|  
-|**Item**|**非自主資料庫**|**自主資料庫**|  
 |使用者資料 (預設值)|COLLATE|COLLATE|  
 |暫存資料 (預設值)|TempDB 定序|COLLATE|  
 |中繼資料|DATABASE_DEFAULT / CATALOG_DEFAULT|COLLATE|  

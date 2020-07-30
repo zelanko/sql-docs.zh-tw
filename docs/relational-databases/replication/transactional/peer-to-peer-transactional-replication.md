@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d85b1f3460dc55f7d6cd24420f2d86bb0f9623c2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 656b05414327e35b5aff1a982a0313835ded20a4
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901248"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394648"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>點對點 - 異動複寫
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -157,7 +157,7 @@ ms.locfileid: "85901248"
 ### <a name="maintenance-considerations"></a>維護考量  
  某些動作需要停止系統。 這表示停止所有節點上已發行之資料表的活動，並確定每個節點都已收到來自其他所有節點的所有變更。  
   
-||僅限 SQL Server 2005 對等，或 SQL Server 2005 對等與 SQL Server 2008 對等及更新版本的混合|僅限 SQL Server 2005 對等，或 SQL Server 2005 對等與 SQL Server 2008 對等及更新版本的混合|SQL2008 對等及更新版本|SQL2008 對等及更新版本|  
+|動作|僅限 SQL Server 2005 對等，或 SQL Server 2005 對等與 SQL Server 2008 對等及更新版本的混合|僅限 SQL Server 2005 對等，或 SQL Server 2005 對等與 SQL Server 2008 對等及更新版本的混合|SQL2008 對等及更新版本|SQL2008 對等及更新版本|  
 |-|------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|------------------------------|------------------------------|  
 |將節點加入拓撲中|完整拓撲中有 2 個節點︰不需要靜止。 使用 `sync_type = 'initialize with backup'`。|超過 2 個節點：需要靜止。|`sync_type = 'replication support only'`:需要靜止。|`sync_type = 'initialize with backup'` 和 `'initialize from lsn'`：不需要靜止。|  
   

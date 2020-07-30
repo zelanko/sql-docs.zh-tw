@@ -20,15 +20,15 @@ ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b96b1d6f1229dba624076abc4cb0c82e49249a2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 15a46fa3c1adc9478bd1da9c0152cb671be378cf
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752354"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395697"
 ---
 # <a name="what-are-the-sql-database-functions"></a>SQL 資料庫函式是什麼？
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 深入了解您可以與 SQL 資料庫搭配使用之內建函式的類別。 您可以使用內建函式，或建立您自己的使用者定義函式。
   

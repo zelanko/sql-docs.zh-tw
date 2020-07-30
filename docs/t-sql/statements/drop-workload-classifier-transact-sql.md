@@ -19,16 +19,16 @@ helpviewer_keywords:
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 5db3c50e4b0a21e2e1acf9512995870b62375dd8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 244166a9aefb08c5fe037776d47cf5a578c50481
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73632837"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394463"
 ---
 # <a name="drop-workload-classifier-transact-sql"></a>DROP WORKLOAD CLASSIFIER (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 卸除現有使用者定義的工作負載管理分類器。  如果要求在執行中或在要求佇列中處於暫止狀態，它們會保留其分類，因此可以立即卸除分類器。 卸除分類器並以不同的重要性加以重建，將不會影響已經分類的要求。
   

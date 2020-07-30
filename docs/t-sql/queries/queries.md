@@ -13,16 +13,16 @@ ms.assetid: 5ff02a32-e8d3-479c-ae8b-07581e41f5f8
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a3f0f37da5def8b9154d655751f00eb7f63d63af
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 008ea4f32b1cb159c67f77e449f1828397b628e8
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248686"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394734"
 ---
 # <a name="queries"></a>查詢
 
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   「資料操作語言」(DML) 是一種詞彙，可用來擷取和處理 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 SQL Database 中的資料。 大部分也都可在「SQL 資料倉儲」和 PDW 中運作 (如需詳細資訊，請檢閱每個個別的陳述式)。 請使用這些陳述式在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中加入、修改、查詢或移除資料。  
   

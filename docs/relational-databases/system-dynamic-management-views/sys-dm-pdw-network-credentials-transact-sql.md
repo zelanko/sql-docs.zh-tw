@@ -12,19 +12,19 @@ ms.assetid: d4fee3ad-6285-4ea5-8513-5e6eb617abb0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 87134a4898b0eb5e314aa4c0f860755a9618b4c5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8be0dde15dea7c02cda9fb59cdc71680ec494178
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830478"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395950"
 ---
 # <a name="sysdm_pdw_network_credentials-transact-sql"></a>sys.databases dm_pdw_network_credentials （Transact-sql）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   傳回所有目標伺服器在設備中儲存的所有網路認證清單 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 。 系統會針對控制項節點和每個計算節點列出結果。  
   
-|資料行名稱|資料類型|說明|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |pdw_node_id|**int**|與節點相關聯的唯一數值識別碼。|  
 |target_server_name|**nvarchar(32)**|[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]將使用使用者名稱和密碼認證存取的目標伺服器 IP 位址。|  

@@ -12,15 +12,15 @@ ms.assetid: 59bb3e9c-2829-49a0-b382-652ed1f54f88
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 234e3bb1178148dbea41f4058e1325028934a690
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: c103968698482c1d8845802173733b41f8ffede3
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627353"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397138"
 ---
 # <a name="syspdw_diag_events-transact-sql"></a>sys.databases pdw_diag_events （Transact-sql）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   保存可包含在系統上診斷會話中之事件的相關資訊。  
   

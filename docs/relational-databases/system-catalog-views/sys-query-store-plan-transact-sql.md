@@ -21,15 +21,15 @@ ms.assetid: b4d05439-6360-45db-b1cd-794f4a64935e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cc78decc0c911376b61cc429ba538be11cbaded6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 25272b586e84b498cfaa9da17a772692dad6f48a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831434"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87393985"
 ---
 # <a name="sysquery_store_plan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   包含與查詢相關聯之每個執行計畫的資訊。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "82831434"
 |**is_forced_plan**|**bit**|當使用者執行預存程式**sys. sp_query_store_force_plan**時，計畫會標示為強制。 強制機制*並不保證*會將此計畫用於**query_id**所參考的查詢。 強制執行計畫會再次編譯查詢，而且通常會針對**plan_id**所參考的計畫，產生完全相同或類似的計畫。 如果強制執行計畫不成功， **force_failure_count**會遞增，而**last_force_failure_reason**會填入失敗原因。 <br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|  
 |**is_natively_compiled**|**bit**|方案包含原生編譯的記憶體優化程式。 （0 = FALSE，1 = TRUE）。 <br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|  
 |**force_failure_count**|**bigint**|強制此計畫失敗的次數。 只有在重新編譯查詢（*而不是每次執行*時）時，它才會遞增。 每次**is_plan_forced**從**FALSE**變更為**TRUE**時，就會重設為0。 <br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|  
-|**last_force_failure_reason**|**int**|計畫強制失敗的原因。<br /><br /> 0：沒有失敗，否則導致強制失敗的錯誤錯誤號碼<br /><br /> 8637： ONLINE_INDEX_BUILD<br /><br /> 8683： INVALID_STARJOIN<br /><br /> 8684： TIME_OUT<br /><br /> 8689： NO_DB<br /><br /> 8690： HINT_CONFLICT<br /><br /> 8691： SETOPT_CONFLICT<br /><br /> 8694： DQ_NO_FORCING_SUPPORTED<br /><br /> 8698： NO_PLAN<br /><br /> 8712： NO_INDEX<br /><br /> 8713： VIEW_COMPILE_FAILED<br /><br /> \<其他值>： GENERAL_FAILURE <br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|  
+|**last_force_failure_reason**|**int**|計畫強制失敗的原因。<br /><br /> 0：沒有失敗，否則導致強制失敗的錯誤錯誤號碼<br /><br /> 8637： ONLINE_INDEX_BUILD<br /><br /> 8683： INVALID_STARJOIN<br /><br /> 8684： TIME_OUT<br /><br /> 8689： NO_DB<br /><br /> 8690： HINT_CONFLICT<br /><br /> 8691： SETOPT_CONFLICT<br /><br /> 8694： DQ_NO_FORCING_SUPPORTED<br /><br /> 8698： NO_PLAN<br /><br /> 8712： NO_INDEX<br /><br /> 8713： VIEW_COMPILE_FAILED<br /><br /> \<other value>： GENERAL_FAILURE <br/>**注意：** Azure SQL 資料倉儲一律會傳回零（0）。|  
 |**last_force_failure_reason_desc**|**nvarchar(128)**|Last_force_failure_reason_desc 的文字描述。<br /><br /> ONLINE_INDEX_BUILD：查詢嘗試修改資料，而目標資料表具有正在線上建立的索引<br /><br /> INVALID_STARJOIN：方案包含不正確 StarJoin 規格<br /><br /> TIME_OUT：優化工具在搜尋強制計畫所指定的計畫時，超過允許的作業數目<br /><br /> NO_DB：方案中指定的資料庫不存在<br /><br /> HINT_CONFLICT：無法編譯查詢，因為計畫與查詢提示衝突<br /><br /> DQ_NO_FORCING_SUPPORTED：無法執行查詢，因為計畫與分散式查詢或全文檢索作業的使用發生衝突。<br /><br /> NO_PLAN：查詢處理器無法產生查詢計劃，因為無法驗證強制計畫是否對查詢有效<br /><br /> NO_INDEX：方案中指定的索引已不存在<br /><br /> VIEW_COMPILE_FAILED：因為計畫中參考的索引視圖發生問題，所以無法強制查詢計劃<br /><br /> GENERAL_FAILURE：一般強制錯誤（未涵蓋上述原因） <br/>**注意：** Azure SQL 資料倉儲一律會傳回*NONE*。|  
 |**count_compiles**|**bigint**|規劃編譯統計資料。|  
 |**initial_compile_start_time**|**datetimeoffset**|規劃編譯統計資料。|  
@@ -94,7 +94,7 @@ ms.locfileid: "82831434"
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [query_store_runtime_stats_interval &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [相關檢視、函數與程序](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查詢存放區預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   
