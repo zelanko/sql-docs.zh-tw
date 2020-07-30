@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 39d90da404fd6bc230a3308c76b48fdc26da2b8f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5420d49b6e5d165168610d002424e3a3b9499748
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595813"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411054"
 ---
 # <a name="rotate-enclave-enabled-keys"></a>輪替已啟用記憶體保護區的金鑰
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 在 Always Encrypted 中，金鑰輪替是將現有資料行主要金鑰或資料行加密金鑰更換成新金鑰的程序。 本文描述當初始金鑰和/或目標 (新) 金鑰是已啟用記憶體保護區的金鑰時，[具有安全記憶體保護區的 Always Encrypted](always-encrypted-enclaves.md) 特定金鑰輪替的使用案例和考量。 如需管理 Always Encrypted 金鑰的一般指導方針和程序，請參閱 [Always Encrypted 的金鑰管理概觀](overview-of-key-management-for-always-encrypted.md)。 
 

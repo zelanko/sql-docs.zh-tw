@@ -14,11 +14,12 @@ ms.assetid: ffbf34c6-8268-434f-829a-82009a6cda59
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ff762ab39c2d915538dc58d2162175803895f877
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 84c0a5b48196ddb6fdc5f7fcfb7fe0f9d6cd4d55
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006610"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332328"
 ---
 # <a name="sqldescribecol"></a>SQLDescribeCol
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,8 +37,8 @@ ms.locfileid: "86006610"
 ## <a name="sqldescribecol-support-for-enhanced-date-and-time-features"></a>SQLDescribeCol 對增強型日期和時間功能的支援  
  針對日期/時間類型所傳回的值如下：  
   
-||*DataTypePtr*|*ColumnSizePtr*|*DecimalDigitsPtr*|  
-|-|-------------------|---------------------|------------------------|  
+| 屬性 | *DataTypePtr* | *ColumnSizePtr* | *DecimalDigitsPtr* |  
+| --------- | ------------- |---------------- | ------------------ |  
 |Datetime|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
 |date|SQL_TYPE_DATE|10|0|  

@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d774df3329c6c9e49e9e1bd9a86dbeaf30ac5765
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 425fdeb973918744b4aeab423629939a2a84f97a
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287142"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411373"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>規劃主機守護者服務證明
 
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 當您使用[具有安全記憶體保護區的 Always Encrypted](always-encrypted-enclaves.md) 時，請確定用戶端應用程式正在與 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 處理序中可信任的記憶體保護區通訊。 針對虛擬化型安全性 (VBS) 記憶體保護區，此需求包括同時驗證記憶體保護區內的程式碼有效，且裝載 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 的電腦值得信任。 遠端證明藉由引進協力廠商來驗證 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 電腦的身分識別 (或設定) 來達到此目標。 在 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 可以使用記憶體保護區執行查詢之前，必須提供其作業環境的相關資訊給證明服務，以取得健康情況憑證。 此健康情況憑證接著會傳送到用戶端，然後由用戶端透過證明服務獨立驗證其真確性。 一旦用戶端信任健康情況憑證，就能確定正在與可信任的 VBS 記憶體保護區通訊，並接著發出使用該記憶體保護區的查詢。
 

@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: d887e428773e6901544422edcb6960e6e9ae0580
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b4f794e66e881ddeb36c724fc583d95a42bce33d
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595513"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411429"
 ---
 # <a name="configure-column-encryption-in-place-using-always-encrypted-with-secure-enclaves"></a>使用具有安全記憶體保護區的 Always Encrypted 就地設定資料行加密 
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 [具有安全記憶體保護區的 Always Encrypted](always-encrypted-enclaves.md) 支援在資料庫資料行上就地進行密碼編譯作業 (即在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的安全記憶體保護區內部進行)。 就地加密讓您無須針對這類作業將資料移出資料庫，使密碼編譯作業更快且更加可靠。 
 

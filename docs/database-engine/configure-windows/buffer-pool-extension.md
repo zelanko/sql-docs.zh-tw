@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 13c6c2a0f4b2b96911a05b0ec9d8fdd2325ffa9b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0222df74a33fabb535354403bbf7cc550898708f
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759180"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362478"
 ---
 # <a name="buffer-pool-extension"></a>緩衝集區擴充
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -98,9 +98,8 @@ ms.locfileid: "85759180"
   
 ## <a name="related-tasks"></a>相關工作  
   
-|||  
+|工作描述|主題|  
 |-|-|  
-|**工作描述**|**主題**|  
 |啟用及設定緩衝集區擴充|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)|  
 |修改緩衝集區擴充組態|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)|  
 |檢視緩衝集區擴充組態|[sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)|  
