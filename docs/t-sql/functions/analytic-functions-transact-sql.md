@@ -13,15 +13,15 @@ ms.assetid: 60fbff84-673b-48ea-9254-6ecdad20e7fe
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 53e7b949cbfeef38d89c3d8332a7e62fab3c873b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fcb02ea9ba7b93c606bb6fa00fd8547fc0ef376b
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85684779"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396977"
 ---
 # <a name="analytic-functions-transact-sql"></a>分析函數 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 SQL Server 支援以下分析函式：
 

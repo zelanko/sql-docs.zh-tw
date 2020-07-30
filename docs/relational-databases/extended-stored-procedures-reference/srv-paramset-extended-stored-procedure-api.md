@@ -1,5 +1,6 @@
 ---
 title: srv_paramset (擴充預存程序 API) | Microsoft Docs
+description: 瞭解擴充預存程式 API 中的 srv_paramset 如何設定遠端預存程序呼叫傳回參數的值。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2a509206-a1b8-4b20-b0a2-ef680cef7bd8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8a2f3caa15eeb6e7ff25f511b4a0e92de68b383
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 645b87be7c1b5955975a370e9e1b49e6608272b3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756687"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248361"
 ---
 # <a name="srv_paramset-extended-stored-procedure-api"></a>srv_paramset (擴充預存程序 API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +61,7 @@ len
  *n*  
  表示要設定的參數數目。 第一個參數是 1。  
   
- *資料*  
+ *data*  
  這是指向要當做遠端預存程序傳回參數傳回給用戶端之資料值的指標。  
   
  *len*  

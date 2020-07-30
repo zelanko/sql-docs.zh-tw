@@ -1,5 +1,5 @@
 ---
-title: 擷取資料列 |Microsoft Docs
+title: 提取資料列（Native Client OLE DB 提供者） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,14 @@ ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f74d247ef06762d4ca5a9533e04b784aac4c477a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a200f97395336abd5425793393401ac4ab0c9346
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007877"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243620"
 ---
-# <a name="fetching-rows"></a>提取資料列
+# <a name="fetching-rows-native-client-ole-db-provider"></a>提取資料列（Native Client OLE DB 提供者）
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   **IRowset** 介面是基底資料列集介面。 **IRowset** 介面提供的方法會循序擷取資料列、從這些資料列中取得資料，以及管理資料列。 取用者會使用 **IRowset** 中的方法，進行所有基本資料列集作業。 這包括提取與釋放資料列，以及取得資料行值。  

@@ -16,14 +16,14 @@ ms.assetid: 0b8908d1-fd6d-47a9-9e30-514cee8f60c8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ec8dcb3a768e6067e44baf615c69c47d7928204
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 6a898f45d80a266b0d385b73832312e9046b157b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942460"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247897"
 ---
-# <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>使用 IRowsetFastLoad 大量複製資料 (OLE DB)
+# <a name="bulk-copy-data-using-irowsetfastload-ole-db-in--sql-server-native-client"></a>在 SQL Server Native Client 中使用 IRowsetFastLoad （OLE DB）大量資料複製
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   此範例會示範如何使用 IRowsetFastLoad，將記錄大量複製到資料表中。  

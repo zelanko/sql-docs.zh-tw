@@ -1,5 +1,6 @@
 ---
 title: srv_willconvert (擴充預存程序 API) | Microsoft Docs
+description: 瞭解 srv_willconvert 如何判斷 ODS 程式庫中是否有特定的資料類型轉換。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6f4db5fd-215a-461c-95e4-17697852733e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d9ba59555ce590c460854481d916e30ef942cba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ef515b200221a6bb439a65a02e546017046dd0e4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755804"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248207"
 ---
 # <a name="srv_willconvert-extended-stored-procedure-api"></a>srv_willconvert (擴充預存程序 API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

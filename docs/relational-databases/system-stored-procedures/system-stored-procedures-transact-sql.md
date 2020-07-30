@@ -22,11 +22,12 @@ ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5791ad4e14525c0f72f21c300c0191e67e24ee12
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 480b45d5b241b2c19b081d7a50f0d46c6e2ea6fd
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007882"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246497"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>系統預存程序 (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -80,96 +81,667 @@ ms.locfileid: "86007882"
   
  下列預存程序記載於《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》：  
   
-|||  
-|-|-|  
-|sp_catalogs|sp_column_privileges|  
-|sp_column_privileges_ex|sp_columns|  
-|sp_columns_ex|sp_databases|  
-|sp_cursor|sp_cursorclose|  
-|sp_cursorexecute|sp_cursorfetch|  
-|sp_cursoroption|sp_cursoropen|  
-|sp_cursorprepare|sp_cursorprepexec|  
-|sp_cursorunprepare|sp_execute|  
-|sp_datatype_info|sp_fkeys|  
-|sp_foreignkeys|sp_indexes|  
-|sp_pkeys|sp_primarykeys|  
-|sp_prepare|sp_prepexec|  
-|sp_prepexecrpc|sp_unprepare|  
-|sp_server_info|sp_special_columns|  
-|sp_sproc_columns|sp_statistics|  
-|sp_table_privileges|sp_table_privileges_ex|  
-|sp_tables|sp_tables_ex|  
+:::row:::
+    :::column:::
+        sp_catalogs
+    :::column-end:::
+    :::column:::
+        sp_column_privileges
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_column_privileges_ex
+    :::column-end:::
+    :::column:::
+        sp_columns
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_columns_ex
+    :::column-end:::
+    :::column:::
+        sp_databases
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_cursor
+    :::column-end:::
+    :::column:::
+        sp_cursorclose
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_cursorexecute
+    :::column-end:::
+    :::column:::
+        sp_cursorfetch
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_cursoroption
+    :::column-end:::
+    :::column:::
+        sp_cursoropen
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_cursorprepare
+    :::column-end:::
+    :::column:::
+        sp_cursorprepexec
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_cursorunprepare
+    :::column-end:::
+    :::column:::
+        sp_execute
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_datatype_info
+    :::column-end:::
+    :::column:::
+        sp_fkeys
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_foreignkeys
+    :::column-end:::
+    :::column:::
+        sp_indexes
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_pkeys
+    :::column-end:::
+    :::column:::
+        sp_primarykeys
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_prepare
+    :::column-end:::
+    :::column:::
+        sp_prepexec
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_prepexecrpc
+    :::column-end:::
+    :::column:::
+        sp_unprepare
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_server_info
+    :::column-end:::
+    :::column:::
+        sp_special_columns
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_sproc_columns
+    :::column-end:::
+    :::column:::
+        sp_statistics
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_table_privileges
+    :::column-end:::
+    :::column:::
+        sp_table_privileges_ex
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_tables
+    :::column-end:::
+    :::column:::
+        sp_tables_ex
+    :::column-end:::
+:::row-end:::
+
+&nbsp;
   
- 沒有記載下列預存程序：  
-  
-|||  
-|-|-|  
-|sp_assemblies_rowset|sp_assemblies_rowset_rmt|  
-|sp_assemblies_rowset2|sp_assembly_dependencies_rowset|  
-|sp_assembly_dependencies_rowset_rmt|sp_assembly_dependencies_rowset2|  
-|sp_bcp_dbcmptlevel|sp_catalogs_rowset|  
-|sp_catalogs_rowset;2|sp_catalogs_rowset;5|  
-|sp_catalogs_rowset_rmt|sp_catalogs_rowset2|  
-|sp_check_constbytable_rowset|sp_check_constbytable_rowset;2|  
-|sp_check_constbytable_rowset2|sp_check_constraints_rowset|  
-|sp_check_constraints_rowset;2|sp_check_constraints_rowset2|  
-|sp_column_privileges_rowset|sp_column_privileges_rowset;2|  
-|sp_column_privileges_rowset;5|sp_column_privileges_rowset_rmt|  
-|sp_column_privileges_rowset2|sp_columns_90|  
-|sp_columns_90_rowset|sp_columns_90_rowset_rmt|  
-|sp_columns_90_rowset2|sp_columns_ex_90|  
-|sp_columns_rowset|sp_columns_rowset;2|  
-|sp_columns_rowset;5|sp_columns_rowset_rmt|  
-|sp_columns_rowset2|sp_constr_col_usage_rowset|  
-|sp_datatype_info_90|sp_ddopen;1|  
-|sp_ddopen;10|sp_ddopen;11|  
-|sp_ddopen;12|sp_ddopen;13|  
-|sp_ddopen;2|sp_ddopen;3|  
-|sp_ddopen;4|sp_ddopen;5|  
-|sp_ddopen;6|sp_ddopen;7|  
-|sp_ddopen;8|sp_ddopen;9|  
-|sp_foreign_keys_rowset|sp_foreign_keys_rowset;2|  
-|sp_foreign_keys_rowset;3|sp_foreign_keys_rowset;5|  
-|sp_foreign_keys_rowset_rmt|sp_foreign_keys_rowset2|  
-|sp_foreign_keys_rowset3|sp_indexes_90_rowset|  
-|sp_indexes_90_rowset_rmt|sp_indexes_90_rowset2|  
-|sp_indexes_rowset|sp_indexes_rowset;2|  
-|sp_indexes_rowset;5|sp_indexes_rowset_rmt|  
-|sp_indexes_rowset2|sp_linkedservers_rowset|  
-|sp_linkedservers_rowset;2|sp_linkedservers_rowset2|  
-|sp_oledb_database|sp_oledb_defdb|  
-|sp_oledb_deflang|sp_oledb_language|  
-|sp_oledb_ro_usrname|sp_primary_keys_rowset|  
-|sp_primary_keys_rowset;2|sp_primary_keys_rowset;3|  
-|sp_primary_keys_rowset;5|sp_primary_keys_rowset_rmt|  
-|sp_primary_keys_rowset2|sp_procedure_params_90_rowset|  
-|sp_procedure_params_90_rowset2|sp_procedure_params_rowset|  
-|sp_procedure_params_rowset;2|sp_procedure_params_rowset2|  
-|sp_procedures_rowset|sp_procedures_rowset;2|  
-|sp_procedures_rowset2|sp_provider_types_90_rowset|  
-|sp_provider_types_rowset|sp_schemata_rowset|  
-|sp_schemata_rowset;3|sp_special_columns_90|  
-|sp_sproc_columns_90|sp_statistics_rowset|  
-|sp_statistics_rowset;2|sp_statistics_rowset2|  
-|sp_stored_procedures|sp_table_constraints_rowset|  
-|sp_table_constraints_rowset;2|sp_table_constraints_rowset2|  
-|sp_table_privileges_rowset|sp_table_privileges_rowset;2|  
-|sp_table_privileges_rowset;5|sp_table_privileges_rowset_rmt|  
-|sp_table_privileges_rowset2|sp_table_statistics_rowset|  
-|sp_table_statistics_rowset;2|sp_table_statistics2_rowset|  
-|sp_tablecollations|sp_tablecollations_90|  
-|sp_tables_info_90_rowset|sp_tables_info_90_rowset_64|  
-|sp_tables_info_90_rowset2|sp_tables_info_90_rowset2_64|  
-|sp_tables_info_rowset|sp_tables_info_rowset;2|  
-|sp_tables_info_rowset_64|sp_tables_info_rowset_64;2|  
-|sp_tables_info_rowset2|sp_tables_info_rowset2_64|  
-|sp_tables_rowset;2|sp_tables_rowset;5|  
-|sp_tables_rowset_rmt|sp_tables_rowset2|  
-|sp_usertypes_rowset|sp_usertypes_rowset_rmt|  
-|sp_usertypes_rowset2|sp_views_rowset|  
-|sp_views_rowset2|sp_xml_schema_rowset|  
-|sp_xml_schema_rowset2||  
-  
+沒有記載下列預存程序：  
+
+:::row:::
+    :::column:::
+        sp_assemblies_rowset
+    :::column-end:::
+    :::column:::
+        sp_assemblies_rowset_rmt
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_assemblies_rowset2
+    :::column-end:::
+    :::column:::
+        sp_assembly_dependencies_rowset
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_assembly_dependencies_rowset_rmt
+    :::column-end:::
+    :::column:::
+        sp_assembly_dependencies_rowset2
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_bcp_dbcmptlevel
+    :::column-end:::
+    :::column:::
+        sp_catalogs_rowset
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_catalogs_rowset;2
+    :::column-end:::
+    :::column:::
+        sp_catalogs_rowset;5
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_catalogs_rowset_rmt
+    :::column-end:::
+    :::column:::
+        sp_catalogs_rowset2
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_check_constbytable_rowset
+    :::column-end:::
+    :::column:::
+        sp_check_constbytable_rowset;2
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_check_constbytable_rowset2
+    :::column-end:::
+    :::column:::
+        sp_check_constraints_rowset
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_check_constraints_rowset;2
+    :::column-end:::
+    :::column:::
+        sp_check_constraints_rowset2
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_column_privileges_rowset
+    :::column-end:::
+    :::column:::
+        sp_column_privileges_rowset;2
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_column_privileges_rowset;5
+    :::column-end:::
+    :::column:::
+        sp_column_privileges_rowset_rmt
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_column_privileges_rowset2
+    :::column-end:::
+    :::column:::
+        sp_columns_90
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_columns_90_rowset
+    :::column-end:::
+    :::column:::
+        sp_columns_90_rowset_rmt
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_columns_90_rowset2
+    :::column-end:::
+    :::column:::
+        sp_columns_ex_90
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_columns_rowset
+    :::column-end:::
+    :::column:::
+        sp_columns_rowset;2
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_columns_rowset;5
+    :::column-end:::
+    :::column:::
+        sp_columns_rowset_rmt
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_columns_rowset2
+    :::column-end:::
+    :::column:::
+        sp_constr_col_usage_rowset
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_datatype_info_90
+    :::column-end:::
+    :::column:::
+        sp_ddopen;1
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_ddopen;10
+    :::column-end:::
+    :::column:::
+        sp_ddopen;11
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_ddopen;12
+    :::column-end:::
+    :::column:::
+        sp_ddopen;13
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_ddopen;2
+    :::column-end:::
+    :::column:::
+        sp_ddopen;3
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_ddopen;4
+    :::column-end:::
+    :::column:::
+        sp_ddopen;5
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_ddopen;6
+    :::column-end:::
+    :::column:::
+        sp_ddopen;7
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_ddopen;8
+    :::column-end:::
+    :::column:::
+        sp_ddopen;9
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_foreign_keys_rowset
+    :::column-end:::
+    :::column:::
+        sp_foreign_keys_rowset;2
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_foreign_keys_rowset;3
+    :::column-end:::
+    :::column:::
+        sp_foreign_keys_rowset;5
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_foreign_keys_rowset_rmt
+    :::column-end:::
+    :::column:::
+        sp_foreign_keys_rowset2
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_foreign_keys_rowset3
+    :::column-end:::
+    :::column:::
+        sp_indexes_90_rowset
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_indexes_90_rowset_rmt
+    :::column-end:::
+    :::column:::
+        sp_indexes_90_rowset2
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_indexes_rowset
+    :::column-end:::
+    :::column:::
+        sp_indexes_rowset;2
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_indexes_rowset;5
+    :::column-end:::
+    :::column:::
+        sp_indexes_rowset_rmt
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_indexes_rowset2
+    :::column-end:::
+    :::column:::
+        sp_linkedservers_rowset
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_linkedservers_rowset;2
+    :::column-end:::
+    :::column:::
+        sp_linkedservers_rowset2
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_oledb_database
+    :::column-end:::
+    :::column:::
+        sp_oledb_defdb
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_oledb_deflang
+    :::column-end:::
+    :::column:::
+        sp_oledb_language
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_oledb_ro_usrname
+    :::column-end:::
+    :::column:::
+        sp_primary_keys_rowset
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_primary_keys_rowset;2
+    :::column-end:::
+    :::column:::
+        sp_primary_keys_rowset;3
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_primary_keys_rowset;5
+    :::column-end:::
+    :::column:::
+        sp_primary_keys_rowset_rmt
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_primary_keys_rowset2
+    :::column-end:::
+    :::column:::
+        sp_procedure_params_90_rowset
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_procedure_params_90_rowset2
+    :::column-end:::
+    :::column:::
+        sp_procedure_params_rowset
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_procedure_params_rowset;2
+    :::column-end:::
+    :::column:::
+        sp_procedure_params_rowset2
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_procedures_rowset
+    :::column-end:::
+    :::column:::
+        sp_procedures_rowset;2
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_procedures_rowset2
+    :::column-end:::
+    :::column:::
+        sp_provider_types_90_rowset
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_provider_types_rowset
+    :::column-end:::
+    :::column:::
+        sp_schemata_rowset
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_schemata_rowset;3
+    :::column-end:::
+    :::column:::
+        sp_special_columns_90
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_sproc_columns_90
+    :::column-end:::
+    :::column:::
+        sp_statistics_rowset
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_statistics_rowset;2
+    :::column-end:::
+    :::column:::
+        sp_statistics_rowset2
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_stored_procedures
+    :::column-end:::
+    :::column:::
+        sp_table_constraints_rowset
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_table_constraints_rowset;2
+    :::column-end:::
+    :::column:::
+        sp_table_constraints_rowset2
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_table_privileges_rowset
+    :::column-end:::
+    :::column:::
+        sp_table_privileges_rowset;2
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_table_privileges_rowset;5
+    :::column-end:::
+    :::column:::
+        sp_table_privileges_rowset_rmt
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_table_privileges_rowset2
+    :::column-end:::
+    :::column:::
+        sp_table_statistics_rowset
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_table_statistics_rowset;2
+    :::column-end:::
+    :::column:::
+        sp_table_statistics2_rowset
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_tablecollations
+    :::column-end:::
+    :::column:::
+        sp_tablecollations_90
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_tables_info_90_rowset
+    :::column-end:::
+    :::column:::
+        sp_tables_info_90_rowset_64
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_tables_info_90_rowset2
+    :::column-end:::
+    :::column:::
+        sp_tables_info_90_rowset2_64
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_tables_info_rowset
+    :::column-end:::
+    :::column:::
+        sp_tables_info_rowset;2
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_tables_info_rowset_64
+    :::column-end:::
+    :::column:::
+        sp_tables_info_rowset_64;2
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_tables_info_rowset2
+    :::column-end:::
+    :::column:::
+        sp_tables_info_rowset2_64
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_tables_rowset;2
+    :::column-end:::
+    :::column:::
+        sp_tables_rowset;5
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_tables_rowset_rmt
+    :::column-end:::
+    :::column:::
+        sp_tables_rowset2
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_usertypes_rowset
+    :::column-end:::
+    :::column:::
+        sp_usertypes_rowset_rmt
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_usertypes_rowset2
+    :::column-end:::
+    :::column:::
+        sp_views_rowset
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_views_rowset2
+    :::column-end:::
+    :::column:::
+        sp_xml_schema_rowset
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        sp_xml_schema_rowset2
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+
 ## <a name="see-also"></a>另請參閱  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [預存程式 &#40;資料庫引擎&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   

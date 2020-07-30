@@ -9,20 +9,20 @@ ms.topic: reference
 ms.assetid: a7c5ce08-8841-49a3-b252-116807ba469a
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 61392e655f46e17d3641ee91e37433f0aa436fef
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b07c4eebc34872868da61d7af633d29f1758e313
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756893"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246065"
 ---
 # <a name="localdb_error_instance_exists_with_lower_version"></a>LOCALDB_ERROR_INSTANCE_EXISTS_WITH_LOWER_VERSION
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>詳細資料  
   
-|||  
-|-|-|  
+| 屬性 | 值 |
+| --------- | ----- |
 |產品名稱|SQL Server|  
 |事件識別碼|258|  
 |事件來源|SQL Server 本機資料庫執行階段 12.0|  

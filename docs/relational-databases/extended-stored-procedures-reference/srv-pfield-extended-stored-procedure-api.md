@@ -1,5 +1,6 @@
 ---
 title: srv_pfield (擴充預存程序 API) | Microsoft Docs
+description: 瞭解擴充預存程式 API 中的 srv_pfield 如何傳回資料庫連接的相關資訊。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2711fa3c1e7035b75228b02e9d52de8fd3dcd6d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 12d985ca974f923f37db9d19de048e14af143271
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755929"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248307"
 ---
 # <a name="srv_pfield-extended-stored-procedure-api"></a>srv_pfield (擴充預存程序 API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -14,15 +14,15 @@ ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1877f653244100126226b85b29a24ca458c1cf74
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a45bfb98fa5b8d5a9ce5c640d07c3c13ab7d5284
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71326132"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396167"
 ---
 # <a name="use-column-sets"></a>使用資料行集
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   使用疏鬆資料行的資料表可以指定資料行集，以傳回資料表中的所有疏鬆資料行。 資料行集是不具類型的 XML 表示，可將資料表的所有疏鬆資料行結合到結構化輸出中。 資料行集類似於計算資料行，因為資料行集並未實際儲存在資料表中。 資料行集與計算資料行不同的地方在於資料行集可直接更新。  
   

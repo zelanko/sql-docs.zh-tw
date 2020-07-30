@@ -17,13 +17,14 @@ ms.assetid: a75b4b69-b095-4690-9b31-a2b32a67489e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0be65fc5e045c13244cab2e3fbe4664afd454e00
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: faa764aae707ae785c7cfd1cb324427b9a941376
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010479"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243869"
 ---
-# <a name="schema-rowset-support-ole-db"></a>結構描述資料列集支援 (OLE DB)
+# <a name="schema-rowset-support-in-sql-server-native-client-ole-db"></a>SQL Server Native Client （OLE DB）中的架構資料列集支援
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者在處理分散式查詢時，也支援從連結伺服器傳回架構資訊 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 。  

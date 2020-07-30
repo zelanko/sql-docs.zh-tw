@@ -19,14 +19,14 @@ ms.assetid: 13292d1f-c17e-4d11-bf98-3460a10cbb18
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a308a4c7dfbff5462080d696675759c8c781815f
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 5fa2776bf9e14ccd42a3aecb871dbdbce817448d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86976612"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245925"
 ---
-# <a name="data-type-mapping-in-itabledefinition"></a>ITableDefinition 中的資料類型對應
+# <a name="sql-server-native-client-data-type-mapping-in-itabledefinition"></a>ITableDefinition 中的 SQL Server Native Client 資料類型對應
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   使用**ITableDefinition：： CreateTable**函數來建立資料表時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者取用者可以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在傳遞之 DBCOLUMNDESC 陣列的*pwszTypeName*成員中指定資料類型。 如果取用者依照名稱來指定資料行的資料類型，系統就會忽略 OLE DB 資料對應 (由 DBCOLUMNDESC 結構的 *wType* 成員代表)。  

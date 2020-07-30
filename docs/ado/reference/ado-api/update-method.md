@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6c0d75e8f9fb6d11315e327edd6f7d064c13e063
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: aeeb7bcbb79231a2d6ed842459355a09e2889e4f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759494"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243169"
 ---
 # <a name="update-method"></a>Update 方法
 儲存您對[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件的目前資料列或[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件的[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)集合所做的任何變更。  
@@ -37,7 +37,7 @@ record.Fields.Update
  *欄位*  
  選擇性。 表示單一名稱的**variant**或**variant**陣列，表示您想要修改之欄位或欄位的名稱或序數位置。  
   
- *閾值*  
+ *值*  
  選擇性。 表示單一值的**variant**或**variant**陣列，表示新記錄中的欄位或欄位的值。  
   
 ## <a name="remarks"></a>備註  
@@ -61,17 +61,22 @@ record.Fields.Update
   
  呼叫**Update**方法之後，目前的記錄仍維持最新。  
   
-## <a name="record"></a>Record  
+## <a name="record"></a>記錄  
  **Update**方法會針對**Record**物件的[fields](../../../ado/reference/ado-api/fields-collection-ado.md)集合中的欄位，完成新增、刪除和更新。  
   
  例如，使用**Delete**方法刪除的欄位會立即標示為要刪除，但會保留在集合中。 必須呼叫**Update**方法，才能從提供者的集合中實際刪除這些欄位。  
   
 ## <a name="applies-to"></a>套用至  
-  
-|||  
-|-|-|  
-|[Fields 集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Fields 集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另請參閱  
  [Update 和 CancelUpdate 方法範例（VB）](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
  [Update 和 CancelUpdate 方法範例（VC + +）](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   

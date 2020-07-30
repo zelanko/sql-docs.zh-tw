@@ -9,20 +9,20 @@ ms.topic: reference
 ms.assetid: 709ac713-aadd-4d5b-a0f9-d859a79dd24c
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c4e10965cc5ee10d65e62e6157c085495a0574cb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 320ace9a1fbeeb73598d380dfca46c04e1ab1cc0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85641689"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246025"
 ---
 # <a name="localdb_error_invalid_instance_name"></a>LOCALDB_ERROR_INVALID_INSTANCE_NAME
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>詳細資料  
   
-|||  
-|-|-|  
+| 屬性 | 值 |
+| --------- | ----- |
 |產品名稱|SQL Server|  
 |事件識別碼|283|  
 |事件來源|SQL Server 本機資料庫執行階段 12.0|  

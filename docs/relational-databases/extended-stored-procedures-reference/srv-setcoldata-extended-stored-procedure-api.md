@@ -1,5 +1,6 @@
 ---
 title: srv_setcoldata (擴充預存程序 API) | Microsoft Docs
+description: 瞭解擴充預存程式 API 中 srv_setcoldata 會指定資料行的目前位址。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2e19205a-25ca-4d4a-916b-d591cf2c892b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70612b61740c0467de31c01bb5383012ea953aea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3c9d151ca52e52d550d7eba42cb6e53af1d8417e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755819"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248212"
 ---
 # <a name="srv_setcoldata-extended-stored-procedure-api"></a>srv_setcoldata (擴充預存程序 API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +58,7 @@ data
  *column*  
  表示指定位址之目標資料行的編號。 資料行的編號會從 1 開始。  
   
- *資料*  
+ *data*  
  這是資料行資料的指標。 配置給 *data* 的記憶體要等到另一個 **srv_setcoldata** 呼叫取代資料行資料或是呼叫 **srv_senddone** 之後，才能釋放。  
   
 ## <a name="returns"></a>傳回  

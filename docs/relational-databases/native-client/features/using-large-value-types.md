@@ -18,13 +18,14 @@ ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b46af0e58d433f51fe4417bfe9245a35fbe1b629
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 40196c8ec895bbf6bfc8e092e82ca8704d4f803e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009875"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243897"
 ---
-# <a name="using-large-value-types"></a>使用大數值類型
+# <a name="using-large-value-types-in-sql-server-native-client"></a>在 SQL Server Native Client 中使用大數數值型別
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前，使用大數值資料類型時需要進行特殊處理。 大數值資料類型是指那些最大資料列大小超過 8 KB 的資料類型。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]引進**Varchar**、 **Nvarchar**和**Varbinary**資料類型的 max 規範，允許儲存**最**大可達 2 ^ 31-1 個位元組的值。 資料表資料行和 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 變數可以指定**Varchar （max）**、 **Nvarchar （max）** 或**Varbinary （max）** 資料類型。  

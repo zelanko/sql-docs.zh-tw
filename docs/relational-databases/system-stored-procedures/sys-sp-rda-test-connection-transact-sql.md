@@ -1,5 +1,6 @@
 ---
 title: sys.databases sp_rda_test_connection （Transact-sql） |Microsoft Docs
+description: 瞭解如何使用 sp_rda_test_connection sys.databases 來測試從 SQL Server 到遠端 Azure 伺服器的連線，並報告可能導致資料移轉無法進行的問題。
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,11 +17,12 @@ helpviewer_keywords:
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4edd3cfc40225b4b040c73fb0d3ba929d16debc5
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 8a49ec06172f7e28828566383137ed2d165c1e89
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053584"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246487"
 ---
 # <a name="syssp_rda_test_connection-transact-sql"></a>sys.databases sp_rda_test_connection （Transact-sql）
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

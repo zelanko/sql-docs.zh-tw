@@ -1,5 +1,6 @@
 ---
 title: srv_getbindtoken (擴充預存程序 API) | Microsoft Docs
+description: 瞭解 srv_getbindtoken 如何在目前的用戶端會話中，取得叫用擴充預存程式之交易的系結 token。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c947d011-08ac-4fb8-b925-3da6e0999277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 254bec49759ceff269f112d65156042271471b81
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 60e552bda81690d6c7a2dcc387389030bd929584
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756763"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248456"
 ---
 # <a name="srv_getbindtoken-extended-stored-procedure-api"></a>srv_getbindtoken (擴充預存程序 API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

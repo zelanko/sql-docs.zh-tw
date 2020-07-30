@@ -1,5 +1,6 @@
 ---
 title: sys.databases sp_rda_set_rpo_duration （Transact-sql） |Microsoft Docs
+description: 瞭解 sys.databases sp_rda_set_rpo_duration。 使用此預存程式，設定 SQL Server 保留在臨時表中的已遷移資料時數。
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,11 +17,12 @@ helpviewer_keywords:
 ms.assetid: 95c80c5b-9252-4612-9ea7-544c48834fd2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8e00939df070233efd2087a8534aaa711be01b3d
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: e3dde1d29cd72ce62a306d43d40c067ec140007d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053474"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243337"
 ---
 # <a name="syssp_rda_set_rpo_duration-transact-sql"></a>sys.databases sp_rda_set_rpo_duration （Transact-sql）
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

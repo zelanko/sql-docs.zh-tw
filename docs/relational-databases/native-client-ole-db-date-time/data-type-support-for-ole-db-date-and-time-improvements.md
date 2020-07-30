@@ -1,5 +1,5 @@
 ---
-title: 對 OLE DB 日期和時間改善的資料類型支援 | Microsoft Docs
+title: 日期和時間改善的資料類型支援（Native Client OLE DB 提供者） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,13 +14,14 @@ ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d414c4aaf8e316d4662448f7e19b847468bee0c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0a39a9c4d99ed94db0d70575f0047698b1a15074
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005460"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245830"
 ---
-# <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>對 OLE DB 日期和時間改善的資料類型支援
+# <a name="sql-server-native-client-data-type-support-for-ole-db-date-and-time-improvements"></a>OLE DB 日期和時間改善的 SQL Server Native Client 資料類型支援
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   本主題提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期/時間資料類型之 OLE DB （Native Client）類型的相關資訊。  
@@ -73,7 +74,7 @@ ms.locfileid: "86005460"
   
  下列現有 OLE DB 結構的實作已經經過修改，支援新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期和時間資料類型。 不過，定義尚未變更。  
   
--   DBTYPE_DATE (這是一個自動化 DATE 類型。 這在內部表示為 **double**。 整數部分為自 1899 年 12 月 30 日起的天數，而分數部分則為一天的分數部分。 此類型的精確度為 1 秒，因此，有效的小數位數為 0)。  
+-   DBTYPE_DATE (這是一個自動化 DATE 類型。 它在內部表示為**雙精度浮點數**。 整數部分為自 1899 年 12 月 30 日起的天數，而分數部分則為一天的分數部分。 此類型的精確度為 1 秒，因此，有效的小數位數為 0)。  
   
 -   DBTYPE_DBDATE  
   
@@ -179,7 +180,7 @@ enum SQLVARENUM {
 |DBTYPE_DBTIME2|**time**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者會檢查 DBCOLUMDESC *bScale*成員，以判斷小數秒數有效位數。|  
 |DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者會檢查 DBCOLUMDESC *bScale*成員，以判斷小數秒數有效位數。|  
   
- 當應用程式在 *wType* 中指定 DBTYPE_DBTIMESTAMP 時，其可在 *pwszTypeName* 中提供一個類型名稱，藉以將對應覆寫到 **datetime2**。 如果指定了 **datetime**，*bScale* 必須是 3。 如果指定了 **smalldatetime**，*bScale* 必須是 0。 如果*bScale*與*wType*和*pwszTypeName*不一致，則會傳回 DB_E_BADSCALE。  
+ 當應用程式在 *wType* 中指定 DBTYPE_DBTIMESTAMP 時，其可在 *pwszTypeName* 中提供一個類型名稱，藉以將對應覆寫到 **datetime2**。 如果指定了 **datetime**，*bScale* 必須是 3。 如果指定了 **smalldatetime**，*bScale* 必須是 0。 如果 *bScale* 與 *wType* 和 *pwszTypeName* 不一致，則會傳回 DB_E_BADSCALE。  
   
 ## <a name="see-also"></a>另請參閱  
  [日期和時間改善 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  

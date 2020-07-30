@@ -18,15 +18,15 @@ ms.assetid: 68e8aa6b-bcdc-42aa-93d8-d498f724c188
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 03687ea50b04c96aa4dbafab9d02d2bbc33a14b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 13d5138d5ebc318947d010e60d6d5cc175d89c62
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68079426"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396186"
 ---
 # <a name="sysdatabase_scoped_credentials-transact-sql"></a>sys.databases database_scoped_credentials （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   針對資料庫中的每個資料庫範圍認證，各傳回一個資料列。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68079426"
 |credential_identity|**nvarchar(4000)**|要使用之識別的名稱。 這通常是 Windows 使用者。 這不需要是唯一的。|  
 |create_date|**datetime**|建立資料庫範圍認證的時間。|  
 |modify_date|**datetime**|上次修改資料庫範圍認證的時間。|  
-|target_type|**Nvarchar （100）**|資料庫範圍認證的類型。 傳回`NULL`資料庫範圍認證的。|  
+|target_type|**Nvarchar （100）**|資料庫範圍認證的類型。 傳回 `NULL` 資料庫範圍認證的。|  
 |target_id|**int**|資料庫範圍認證所對應之物件的識別碼。 針對資料庫範圍認證傳回0|  
   
 ## <a name="permissions"></a>權限  
@@ -49,7 +49,7 @@ ms.locfileid: "68079426"
  [建立資料庫範圍認證 &#40;Transact-sql&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
  [ALTER DATABASE 範圍認證 &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
  [卸載資料庫範圍認證 &#40;Transact-sql&#41;](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)   
- [&#40;Transact-sql&#41;建立認證](../../t-sql/statements/create-credential-transact-sql.md)   
+ [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   
   

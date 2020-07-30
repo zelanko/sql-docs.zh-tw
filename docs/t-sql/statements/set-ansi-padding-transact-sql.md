@@ -24,15 +24,15 @@ ms.assetid: 92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fcbc2f6ae35c72f86ccbbc6d34f45384c88c2fd9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 29ae3ce5c5398a6ac8006f8b3af7ceb0477576fb
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68041906"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396517"
 ---
 # <a name="set-ansi_padding-transact-sql"></a>SET ANSI_PADDING (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   控制資料行針對數值長度短於資料行所定義大小的儲存方式，以及資料行針對 **char**、 **varchar**、 **binary**和 **varbinary** 資料尾端具有空白之數值的儲存方式。  
   
@@ -40,13 +40,13 @@ ms.locfileid: "68041906"
   
 ## <a name="syntax"></a>語法
   
-```
+```syntaxsql
 -- Syntax for SQL Server
 
 SET ANSI_PADDING { ON | OFF }
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
 
 SET ANSI_PADDING ON

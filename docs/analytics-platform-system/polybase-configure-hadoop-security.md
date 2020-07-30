@@ -9,14 +9,14 @@ ms.date: 10/26/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f275c77556e8abe8932e241075b9e24e2ae5db77
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4a1007529db6d861d3090fbbdcb6c85975fb882a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289676"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243494"
 ---
-# <a name="polybase-configuration-and-security-for-hadoop"></a>Hadoop 的 PolyBase 設定和安全性
+# <a name="configure-polybase-hadoop-security"></a>設定 PolyBase Hadoop 安全性
 
 本文提供各種設定的參考，這些設定會影響連線到 Hadoop 的 AP PolyBase。 如需 PolyBase 的相關逐步解說，請參閱[什麼是 polybase](configure-polybase-connectivity-to-external-data.md)。
 
@@ -115,7 +115,7 @@ hadoop 叢集中保護通訊的常見方式，是將 hadoop.rpc.protection 組�
 4. 建立資料庫範圍的認證物件，以指定每個 Hadoop 使用者的驗證資訊。 請參閱 [PolyBase T-SQL objects](../relational-databases/polybase/polybase-t-sql-objects.md)(PolyBase T-SQL 物件)。
 
 ## <a name="hadoop-encryption-zone-setup"></a><a id="encryptionzone"></a>Hadoop 加密區域設定
-如果您使用 Hadoop 加密區域，請修改 core-site.xml 和 hdfs-site.xml，如下所示。 提供 KMS 服務執行時使用對應埠號碼的 ip 位址。 CDH 上的 KMS 預設埠是16000。
+如果您使用 Hadoop 加密區域修改 core-site.xml 並 hdfs-site.xml 如下所示。 提供 KMS 服務執行時使用對應埠號碼的 ip 位址。 CDH 上的 KMS 預設埠是16000。
 
 **core-site.xml**
 ```xml

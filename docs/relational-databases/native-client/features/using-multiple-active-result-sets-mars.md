@@ -19,13 +19,14 @@ ms.assetid: ecfd9c6b-7d29-41d8-af2e-89d7fb9a1d83
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec67d9502653777307ed968763c23defc9248cb6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a1b31e142760e6799b743ab8771cc52c068d1b3e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009843"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243870"
 ---
-# <a name="using-multiple-active-result-sets-mars"></a>使用 Multiple Active Result Sets (MARS)
+# <a name="using-multiple-active-result-sets-mars-in-sql-server-native-client"></a>在 SQL Server Native Client 中使用 Multiple Active Result Sets （MARS）
 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

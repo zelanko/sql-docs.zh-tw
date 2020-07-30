@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: e69af0a5-3405-4b72-9c6e-6b188ff746fd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 57a440a97dcdf1c0fddcff8017e0c2d04967b92d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6a61dae9888628302da3326a1465f4182c49e39c
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763339"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243219"
 ---
 # <a name="positionenum"></a>PositionEnum
 指定記錄指標在[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)內的目前位置。  
   
-|持續性|值|說明|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
 |**adPosBOF**|-2|指出目前的記錄指標位於 BOF （也就是[bof](../../../ado/reference/ado-api/bof-eof-properties-ado.md)屬性為**True**）。|  
 |**adPosEOF**|-3|指出目前的記錄指標位於 EOF （也就是[eof](../../../ado/reference/ado-api/bof-eof-properties-ado.md)屬性為**True**）。|  
@@ -41,7 +41,12 @@ ms.locfileid: "82763339"
 |AdoEnums.Position.UNKNOWN|  
   
 ## <a name="applies-to"></a>套用至  
-  
-|||  
-|-|-|  
-|[AbsolutePage 屬性 (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)|[AbsolutePosition 屬性 (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|
+
+:::row:::
+    :::column:::
+        [AbsolutePage 屬性 (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)  
+    :::column-end:::
+    :::column:::
+        [AbsolutePosition 屬性 (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)  
+    :::column-end:::
+:::row-end:::

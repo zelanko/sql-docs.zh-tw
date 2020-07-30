@@ -9,20 +9,20 @@ ms.topic: reference
 ms.assetid: c178a308-8d99-47fc-8a49-5a480dc592f6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 08ea1c27612d0f0b47c545966fac22f1abd95c81
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a5bef5b71095d0cc23cf76cc822780c88a290baf
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85641823"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246049"
 ---
 # <a name="localdb_error_instance_folder_path_too_long"></a>LOCALDB_ERROR_INSTANCE_FOLDER_PATH_TOO_LONG
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>詳細資料  
   
-|||  
-|-|-|  
+| 屬性 | 值 |
+| --------- | ----- | 
 |產品名稱|SQL Server|  
 |事件識別碼|260|  
 |事件來源|SQL Server 本機資料庫執行階段 12.0|  

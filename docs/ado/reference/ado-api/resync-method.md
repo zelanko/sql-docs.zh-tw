@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 54c92fad618ffaad9b22a8ed73b287c0a5716959
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6907bfa9b83370074db9d9e2e522ed49d2c96e7e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756304"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243209"
 ---
 # <a name="resync-method"></a>Resync 方法
 從基礎資料庫重新整理目前[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件中的資料，或[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件的[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)集合。  
@@ -65,11 +65,16 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
  除非呼叫重新**同步**處理時發生錯誤，否則重新**同步**將不會修改**欄位**物件的**狀態值**。 例如，如果欄位已不存在，則提供者會傳回**欄位**物件的適當**狀態值**，例如**adFieldDoesNotExist**。 傳回的**狀態值**可以邏輯方式在**Status**屬性的值內結合。  
   
 ## <a name="applies-to"></a>套用至  
-  
-|||  
-|-|-|  
-|[Fields 集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Fields 集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另請參閱  
  [Resync 方法範例（VB）](../../../ado/reference/ado-api/resync-method-example-vb.md)   
  [Resync 方法範例（VC + +）](../../../ado/reference/ado-api/resync-method-example-vc.md)   

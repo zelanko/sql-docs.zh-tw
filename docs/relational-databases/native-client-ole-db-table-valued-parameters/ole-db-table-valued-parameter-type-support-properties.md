@@ -13,13 +13,14 @@ ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7974e0f902f990c664fc6442cb5fb6a3203811c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b9a79a82eaf8f3623435bd2330d87686eb9834c7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86013032"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246730"
 ---
-# <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB 資料表值參數類型支援 (屬性)
+# <a name="ole-db-table-valued-parameter-type-support-in-sql-server-native-client-properties"></a>OLE DB SQL Server Native Client 中的資料表值參數類型支援（屬性）
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   本主題提供與資料表值參數資料列集物件相關聯之 OLE DB 屬性和屬性集的相關資訊。  

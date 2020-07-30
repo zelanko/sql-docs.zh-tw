@@ -21,13 +21,14 @@ ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0648fda674a0dba83ae4560fa3744e3c1b1430dc
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 13d0e51b7b06acdfbe847976d093765203b51638
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009079"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245783"
 ---
-# <a name="changing-passwords-programmatically"></a>以程式設計方式變更密碼
+# <a name="changing-sql-server-native-client-passwords-programmatically"></a>以程式設計方式變更 SQL Server Native Client 密碼
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前，當使用者密碼到期時，只有系統管理員可以重設密碼。 從開始 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client 支援透過 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client OLE DB 提供者和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client ODBC 驅動程式，以及透過變更**SQL Server 登**入對話方塊，以程式設計方式處理密碼到期。  

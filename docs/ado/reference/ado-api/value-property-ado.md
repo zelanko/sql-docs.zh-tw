@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6648fcabe8890ef653558636738735a4f5e4012f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c84ab6806924649bdad9bb712f730c24011cdb38
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759444"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243159"
 ---
 # <a name="value-property-ado"></a>Value 屬性 (ADO)
 
@@ -43,11 +43,19 @@ ADO 允許使用**Value**屬性來設定和傳回長二進位資料。
 > 對於已附加至[Record](../../../ado/reference/ado-api/record-object-ado.md)物件之[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)集合的新**欄位**物件，必須先設定**Value**屬性，才能指定任何其他**欄位**屬性。 首先，必須已指派**value**屬性的特定值，並在呼叫的**Fields**集合上進行[更新](../../../ado/reference/ado-api/update-method.md)。 然後，可以存取其他屬性，例如[類型](../../../ado/reference/ado-api/type-property-ado.md)或[屬性](../../../ado/reference/ado-api/attributes-property-ado.md)。
   
 ## <a name="applies-to"></a>套用至
-  
-||||  
-|-|-|-|  
-|[Field 物件](../../../ado/reference/ado-api/field-object.md)|[Parameter 物件](../../../ado/reference/ado-api/parameter-object.md)|[Property 物件 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|
-  
+
+:::row:::
+    :::column:::
+        [Field 物件](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [Parameter 物件](../../../ado/reference/ado-api/parameter-object.md)  
+    :::column-end:::
+    :::column:::
+        [Property 物件 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另請參閱
 
 [Value 屬性範例（VB）](../../../ado/reference/ado-api/value-property-example-vb.md) 

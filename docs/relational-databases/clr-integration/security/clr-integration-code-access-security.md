@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e155e9c6f0e8a85eaf7ec905f9c9b471160a9ec
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b2706faaf181e609df6209758e60b2a46c87aa46
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885906"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248620"
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 整合程式碼存取安全性
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -104,14 +104,13 @@ ms.locfileid: "85885906"
 ## <a name="permission-set-summary"></a>權限集合摘要  
  下圖摘要說明授與**SAFE**、 **EXTERNAL_ACCESS**和**UNSAFE**許可權集合的限制和許可權。  
   
-|||||  
+|功能|**進入**|**EXTERNAL_ACCESS**|**不安全**|   
 |-|-|-|-|  
-||**進入**|**EXTERNAL_ACCESS**|**不安全**|  
-|**代碼啟用安全性許可權**|僅限 Execute|對外部資源的 Execute + 存取權|不受限制 (包括 P/Invoke)|  
-|**程式設計模型限制**|是|是|沒有限制|  
-|**可驗證性需求**|是|是|否|  
-|**本機資料存取**|是|是|是|  
-|**呼叫機器碼的能力**|否|否|是|  
+|代碼啟用安全性許可權|僅限 Execute|對外部資源的 Execute + 存取權|不受限制 (包括 P/Invoke)|  
+|程式設計模型限制|是|是|沒有限制|  
+|可驗證性需求|是|是|否|  
+|本機資料存取|是|是|是|  
+|呼叫機器碼的能力|否|否|是|  
   
 ## <a name="see-also"></a>另請參閱  
  [CLR 整合安全性](../../../relational-databases/clr-integration/security/clr-integration-security.md)   

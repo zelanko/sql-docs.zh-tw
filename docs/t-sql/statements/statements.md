@@ -13,16 +13,16 @@ ms.assetid: d8d6f62a-e815-425c-a80e-a63fd34ec275
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 287b86bd9cc368d2a04ea7f7be5e1397e2d6aab9
-ms.sourcegitcommit: 2e6c4104dca8680064eb64a7a79a3e15e1b4365f
+ms.openlocfilehash: 0fc44d29ca0b94f03fd94e89d5ba442f53fdf5da
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85942913"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87392006"
 ---
 # <a name="transact-sql-statements"></a>Transact-SQL 陳述式
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 SQL 陳述式是不可部分完成的工作單位，而且不是完全成功就是完全失敗。 SQL 陳述式是一組指令，其中包含識別碼、參數、變數、名稱、資料類型，以及可成功編譯的 SQL 保留字。 如果 `BeginTransaction` 命令未指定交易的開始，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會為 SQL 陳述式建立「隱含」交易。 如果陳述式成功，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 永遠都會認可隱含交易；如果命令失敗，則會復原隱含交易。  
 

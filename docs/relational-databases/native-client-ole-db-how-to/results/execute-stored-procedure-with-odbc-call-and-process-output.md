@@ -14,13 +14,14 @@ ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c674c515bd07f50e067ae25152702c5e6529033c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f5aa77741211b7f0fd1a118621aac9c8bf911902
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006454"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248177"
 ---
-# <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>使用 ODBC CALL 及處理輸出執行預存程序
+# <a name="execute-sql-server-native-client-stored-procedure-with-odbc-call-and-process-output"></a>使用 ODBC 呼叫和進程輸出執行 SQL Server Native Client 預存程式
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預存程序可以有整數傳回碼和輸出參數。 傳回碼和輸出參數會在來自伺服器的最後一個封包中傳送，因此要等到完全釋放資料列集之後才可供應用程式使用。 如果此命令傳回多個結果，則當 **IMultipleResults::GetResult** 傳回 DB_S_NORESULT 或是 **IMultipleResults** 介面完全釋放時 (以先發生者為準)，便可使用輸出參數資料。  
