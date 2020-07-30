@@ -9,19 +9,19 @@ ms.topic: reference
 ms.assetid: f1458ca8-54dd-48c4-86ae-a8bbedbb7db3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 180854441f893d8f8b67af7178052ef4e10a9ee3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4e2603573b06dfe08c5c4c320292c44b9300f577
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756965"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87361152"
 ---
 # <a name="localdb_error_cannot_access_instance_registry"></a>LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_REGISTRY
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>詳細資料  
   
-|||  
+|類別|值|  
 |-|-|  
 |產品名稱|SQL Server|  
 |事件識別碼|262|  

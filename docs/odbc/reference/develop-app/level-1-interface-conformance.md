@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3d31d5fe8aea1df4e7937104580efb820ba6f031
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 29f59cf06eac1ce0f6589ad9c7cba8491e8383b5
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306179"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363422"
 ---
 # <a name="level-1-interface-conformance"></a>層級 1 介面一致性
 層級1介面一致性層級包括核心介面一致性層級功能，以及通常在 OLTP 關聯式 DBMS 中提供的其他功能，例如交易。 層級1符合介面的驅動程式可讓應用程式執行下列動作，以及核心介面一致性層級中的功能：  
   
-|||  
+|功能編號|描述|  
 |-|-|  
 |101|指定資料庫資料表和視圖的架構（使用兩部分命名）。 （如需詳細資訊，請參閱[層級2介面一致性](../../../odbc/reference/develop-app/level-2-interface-conformance.md)中的三部分命名功能201）。|  
 |102|叫用 ODBC 函式的真正非同步執行，其中適用的 ODBC 函數在指定的連接上全都是同步或全部非同步。|  

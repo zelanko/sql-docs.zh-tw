@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 895dcfdd5acaa580b8ee719a3edac67d7308f605
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c9375c6050c3f401a47857c385348da1478f21ca
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897550"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362672"
 ---
 # <a name="building-a-knowledge-base"></a>建立知識庫
 
@@ -25,7 +25,7 @@ ms.locfileid: "85897550"
 ## <a name="in-this-section"></a>本節內容  
  您可以針對知識庫執行以下作業：  
   
-|||  
+|作業描述|主題|  
 |-|-|  
 |從頭開始建立全新的知識庫，或是從現有的知識庫或 .dqs 資料檔案建立新的知識庫。|[建立知識庫](../data-quality-services/create-a-knowledge-base.md)|  
 |開啟現有的知識庫來執行知識探索、定義域管理或加入比對原則。|[開啟知識庫](../data-quality-services/open-a-knowledge-base.md)|  

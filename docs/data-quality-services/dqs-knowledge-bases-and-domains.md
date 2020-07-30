@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: a4eff5b70e83b92e1c99e1d7c4b1c351dec35b7e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c677a999454f307f90b0f0444e67069ce81dfcc3
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895383"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362486"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>DQS 知識庫與定義域
 
@@ -146,7 +146,7 @@ ms.locfileid: "85895383"
 ## <a name="in-this-section"></a>本節內容  
  您可以在知識庫及其定義域上執行下列作業：  
   
-|||  
+|作業描述|主題|  
 |-|-|  
 |建立知識、開啟知識、將知識加入至知識庫，以及在知識庫上執行探索|[建立知識庫](../data-quality-services/building-a-knowledge-base.md)|  
 |在定義域和知識庫上執行匯入和匯出作業|[匯入和匯出知識](../data-quality-services/importing-and-exporting-knowledge.md)|  

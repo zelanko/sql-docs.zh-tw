@@ -19,12 +19,12 @@ ms.assetid: b42a85e6-1db9-4a22-8a70-014574c95198
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: a345e41f42cc70e941e4a87e3510312313d4dc03
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: aad472489192516d367185572d1c9ac67eb78154
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764670"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248774"
 ---
 # <a name="sysfulltext_semantic_languages-transact-sql"></a>sys.fulltext_semantic_languages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,9 +33,8 @@ ms.locfileid: "85764670"
   
  此目錄檢視類似于[fulltext_languages &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)。  
     
-||||  
-|-|-|-|  
-|**資料行名稱**|**型別**|**說明**|  
+|資料行名稱|類型|描述|  
+|-|-|-|   
 |lcid|int|語言的 Microsoft Windows 地區設定識別碼 (LCID)。|  
 |NAME|sysname|這是sys.sys語言中的別名值， [&#40;transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)對應至**lcid**的值，或是數值 lcid 的字串表示。|  
   

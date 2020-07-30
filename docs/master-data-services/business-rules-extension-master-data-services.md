@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c4d6ad76f68acb72072f04728e55793bad3aa9cd
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: f197ebbd41c32bb8cd8ee7eeae944dddd583f70d
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813669"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362468"
 ---
 # <a name="business-rules-extension-master-data-services"></a>商務規則延伸模組 (Master Data Services)
 
@@ -64,9 +64,8 @@ CREATE PROCEDURE [usr].[YourAction]
   
  會以 mds_br_user 身分執行指令碼動作，該身分具有下列權限  
   
-|||  
+|結構描述|權限|  
 |-|-|  
-|**結構描述**|**權限**|  
 |mdm|SELECT|  
 |stg|SELECT、UPDATE、DELETE、EXECUTE、INSERT|  
 |usr|FULL|  
@@ -92,7 +91,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
 5.  從 [成員類型] **** 下拉式清單中，選取要套用商務規則的成員類型。  
   
-6.  按一下 **[新增]** 。  
+6.  按一下 [新增]  。  
   
 7.  依下列方式來建立使用者定義指令碼作為條件。  
   

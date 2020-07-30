@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 077a6c6a-2c57-42c9-a4fd-4cf0e65cf7e2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e283bbc13f0d0dda055b047b027f7b9816502df5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 969296e377d398615ad95cf1337c3f9f97d5eb5c
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300678"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363398"
 ---
 # <a name="sql-conformance-levels-odbc-driver-for-oracle"></a>SQL 一致性層級 (ODBC Driver for Oracle)
 > [!IMPORTANT]  
@@ -32,42 +32,94 @@ ms.locfileid: "81300678"
 -   左方和右方外部聯結  
   
 -   數值函數：  
-  
-    |||||  
-    |-|-|-|-|  
-    |Abs|Log|round|tan|  
-    |Ceiling|Log10|second|truncate|  
-    |Cos|Mod|簽署||  
-    |Exp|Pi|sin||  
-    |樓層|電源|sqrt||  
-  
+
+    :::row:::
+        :::column:::
+            Abs  
+            Ceiling  
+            Cos  
+            Exp  
+            樓層  
+        :::column-end:::
+        :::column:::
+            Log  
+            Log10  
+            Mod  
+            Pi  
+            電源  
+        :::column-end:::
+        :::column:::
+            round  
+            second  
+            簽署  
+            sin  
+            sqrt  
+        :::column-end:::
+        :::column:::
+            tan  
+            truncate  
+        :::column-end:::
+    :::row-end:::
+    
 -   日期函式：  
-  
-    |||||  
-    |-|-|-|-|  
-    |Curdate|Dayofweek|monthname|second|  
-    |Curtime|Dayofyear|minute|week|  
-    |Dayname|Hour|就試試|year|  
-    |Dayofmonth|Month|quarter||  
-  
+
+    :::row:::
+        :::column:::
+            Curdate  
+            Curtime  
+            Dayname  
+            Dayofmonth  
+        :::column-end:::
+        :::column:::
+            Dayofweek  
+            Dayofyear  
+            小時  
+            Month  
+        :::column-end:::
+        :::column:::
+            monthname  
+            minute  
+            就試試  
+            quarter  
+        :::column-end:::
+        :::column:::
+            second  
+            week  
+            year  
+        :::column-end:::
+    :::row-end:::
+
 -   字串函式：  
-  
-    |||||  
-    |-|-|-|-|  
-    |Ascii|Left|向右|ucase|  
-    |Char|長度|rtrim||  
-    |Concat|Ltrim|soundex||  
-    |Lcase|Replace|substring||  
-  
+
+    :::row:::
+        :::column:::
+            Ascii  
+            Char  
+            Concat  
+            Lcase  
+        :::column-end:::
+        :::column:::
+            Left  
+            長度  
+            Ltrim  
+            取代  
+        :::column-end:::
+        :::column:::
+            向右  
+            rtrim  
+            soundex  
+            substring  
+        :::column-end:::
+        :::column:::
+            ucase  
+        :::column-end:::
+    :::row-end:::
+
 -   類型轉換函式：  
-  
-    ||  
-    |-|  
-    |轉換|  
-  
+
+    轉換  
+
 -   系統函數：  
   
-    ||  
-    |-|  
-    |Ifnull|  
-    |User|
+    Ifnull  
+    User

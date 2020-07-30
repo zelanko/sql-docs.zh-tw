@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6018a733-c2c8-4047-92ec-92cf85031767
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1bdd9b3b559d5cc78a0d44f5280aae347bc8996a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 366af9f48f709ec7414c1efc43000f1b565ff6d6
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300488"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363440"
 ---
 # <a name="sqlsetstmtattr-cursor-library"></a>SQLSetStmtAttr (資料指標程式庫)
 > [!IMPORTANT]  
@@ -26,15 +26,24 @@ ms.locfileid: "81300488"
  本主題討論如何在資料指標程式庫中使用**SQLSetStmtAttr**函數。 如需有關**SQLSetStmtAttr**的一般資訊，請參閱[SQLSetStmtAttr 函數](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)。  
   
  資料指標程式庫支援下列語句屬性搭配**SQLSetStmtAttr**：  
-  
-|||  
-|-|-|  
-|SQL_ATTR_CONCURRENCY|SQL_ATTR_ROW_BIND_OFFSET_PTR|  
-|SQL_ATTR_CURSOR_TYPE|SQL_ATTR_ROW_BIND_TYPE|  
-|SQL_ATTR_FETCH_BOOKMARK_PTR|SQL_ATTR_ROWSET_ARRAY_SIZE|  
-|SQL_ATTR_PARAM_BIND_OFFSET_PTR|SQL_ATTR_SIMULATE_CURSOR|  
-|SQL_ATTR_PARAM_BIND_TYPE|SQL_ATTR_USE_BOOKMARKS|  
-  
+
+:::row:::
+    :::column:::
+        SQL_ATTR_CONCURRENCY  
+        SQL_ATTR_CURSOR_TYPE  
+        SQL_ATTR_FETCH_BOOKMARK_PTR  
+        SQL_ATTR_PARAM_BIND_OFFSET_PTR  
+        SQL_ATTR_PARAM_BIND_TYPE  
+    :::column-end:::
+    :::column:::
+        SQL_ATTR_ROW_BIND_OFFSET_PTR  
+        SQL_ATTR_ROW_BIND_TYPE  
+        SQL_ATTR_ROWSET_ARRAY_SIZE  
+        SQL_ATTR_SIMULATE_CURSOR  
+        SQL_ATTR_USE_BOOKMARKS  
+    :::column-end:::
+:::row-end:::
+
  資料指標程式庫僅支援 SQL_ATTR_CURSOR_TYPE 語句屬性的 SQL_CURSOR_FORWARD_ONLY 和 SQL_CURSOR_STATIC 值。  
   
  對於順向資料指標而言，資料指標程式庫支援 SQL_ATTR_CONCURRENCY 語句屬性的 SQL_CONCUR_READ_ONLY 值。 若為靜態資料指標，資料指標程式庫支援 SQL_ATTR_CONCURRENCY 語句屬性的 SQL_CONCUR_READ_ONLY 和 SQL_CONCUR_VALUES 值。  

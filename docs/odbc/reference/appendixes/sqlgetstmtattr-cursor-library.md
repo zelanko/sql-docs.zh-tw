@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c34e1ef-4273-4afb-a7d3-f9017ab69c5e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a035a114e0ffd5c3fb44b856ea4c3016af240e82
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a9b29d21c166751f5a57b7951cb6c028861cb501
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305999"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362948"
 ---
 # <a name="sqlgetstmtattr-cursor-library"></a>SQLGetStmtAttr (資料指標程式庫)
 > [!IMPORTANT]  
@@ -26,11 +26,20 @@ ms.locfileid: "81305999"
  本主題討論如何在資料指標程式庫中使用**SQLGetStmtAttr**函數。 如需有關**SQLGetStmtAttr**的一般資訊，請參閱[SQLGetStmtAttr 函數](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)。  
   
  資料指標程式庫支援下列語句屬性搭配**SQLGetStmtAttr**：  
-  
-|||  
-|-|-|  
-|SQL_ATTR_CONCURRENCY|SQL_ATTR_ROW_BIND_OFFSET_PTR|  
-|SQL_ATTR_CURSOR_TYPE|SQL_ATTR_ROW_BIND_TYPE|  
-|SQL_ATTR_FETCH_BOOKMARK_PTR|SQL_ATTR_ROW_NUMBER|  
-|SQL_ATTR_PARAM_BIND_OFFSET_PTR|SQL_ATTR_ROW_ARRAY_SIZE|  
-|SQL_ATTR_PARAM_BIND_TYPE|SQL_ATTR_SIMULATE_CURSOR|
+
+:::row:::
+    :::column:::
+        SQL_ATTR_CONCURRENCY  
+        SQL_ATTR_CURSOR_TYPE  
+        SQL_ATTR_FETCH_BOOKMARK_PTR  
+        SQL_ATTR_PARAM_BIND_OFFSET_PTR  
+        SQL_ATTR_PARAM_BIND_TYPE  
+    :::column-end:::
+    :::column:::
+        SQL_ATTR_ROW_ARRAY_SIZE  
+        SQL_ATTR_ROW_BIND_OFFSET_PTR  
+        SQL_ATTR_ROW_BIND_TYPE  
+        SQL_ATTR_ROW_NUMBER  
+        SQL_ATTR_SIMULATE_CURSOR  
+    :::column-end:::
+:::row-end:::

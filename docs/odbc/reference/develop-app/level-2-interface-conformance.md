@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 2dc87840-f2fe-43dd-9d7b-bd95523081d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3ee57d716cbb93f855e1fd78d41bff62a681eb6c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3b8c18a77cfd843a6bb7b70494e62dcb9efc4582
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306159"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363388"
 ---
 # <a name="level-2-interface-conformance"></a>層級 2 介面一致性
 層級2介面一致性層級包含層級1介面一致性層級功能，以及下列功能：  
   
-|||  
+|功能編號|描述|  
 |-|-|  
 |201|使用資料庫資料表和 views 的三部分名稱。 （如需詳細資訊，請參閱[層級1介面一致性](../../../odbc/reference/develop-app/level-1-interface-conformance.md)中的兩部分命名支援功能101）。|  
 |202|藉由呼叫**SQLDescribeParam**來描述動態參數。|  

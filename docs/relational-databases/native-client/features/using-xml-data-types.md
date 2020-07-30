@@ -30,13 +30,14 @@ ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc526febaed2fd049fb8fa95fd0b0585933fff9b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6606da2bec127b6eb70eea0f5e676dd23a974e0d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009833"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248796"
 ---
-# <a name="using-xml-data-types"></a>使用 XML 資料類型
+# <a name="using-xml-data-types-in-sql-server-native-clients"></a>在 SQL Server 的原生用戶端中使用 XML 資料類型
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 推出的 **xml** 資料類型可讓您將 XML 文件和片段儲存在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中。 **xml** 資料類型是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的內建資料類型，而且在某些狀況下類似於其他內建類型，例如 **int** 和 **varchar**。 如果是其他內建類型，當您建立資料表作為變數類型、參數類型、函式傳回型別，或是在 CAST 和 CONVERT 函式中時，可以使用 **xml** 資料類型作為資料行類型。  
@@ -88,7 +89,7 @@ ms.locfileid: "86009833"
 |DBTYPE_BSTR|通過<sup>6,10</sup>|N/A <sup>2</sup>|沒有問題 <sup>3</sup>|N/A <sup>2</sup>|  
 |DBTYPE_STR|沒有問題<sup>6, 9, 10</sup>|N/A <sup>2</sup>|沒有問題<sup>5, 6, 12</sup>|N/A <sup>2</sup>|  
 |DBTYPE_IUNKNOWN|透過 **ISequentialStream** 的位元組資料流<sup>7</sup>|N/A <sup>2</sup>|透過 **ISequentialStream** 的位元組資料流<sup>11</sup>|N/A <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|通過<sup>6,7</sup>|N/A <sup>2</sup>|不適用|N/A <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|通過<sup>6,7</sup>|N/A <sup>2</sup>|N/A|N/A <sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|通過<sup>6,10</sup>|N/A <sup>2</sup>|沒有問題<sup>3</sup>|N/A <sup>2</sup>|  
   
  <sup>1</sup>如果使用**ICommandWithParameters：： SetParameterInfo**指定了 DBTYPE_XML 以外的伺服器類型，且存取子類型為 DBTYPE_XML，則在執行語句（DB_E_ERRORSOCCURRED，參數狀態為 DBSTATUS_E_BADACCESSOR）時，就會發生錯誤。否則，資料會傳送至伺服器，但是伺服器會傳回錯誤，指出沒有從 XML 到參數資料類型的隱含轉換。  

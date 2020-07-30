@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: dbf5182a41c9b5c52a73e9d005c768b48cc1fae4
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: cb52caebef0a9c042e3f7a077aa098cdc42b7ff4
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811829"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363151"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>建立日期屬性 (Master Data Services)
 
@@ -75,7 +75,7 @@ ms.locfileid: "85811829"
 ## <a name="to-display-the-time-portion-of-a-datetime-value"></a>若要顯示日期時間值的時間部分  
  若要讓使用者介面顯示日期時間值的時間部分，您必須選擇適用於屬性的輸入遮罩。 日期時間屬性的內建遮罩都無法執行這項處理，但是您可以加入可讓您顯示時間的新遮罩。 若要這樣做，請在儲存內建遮罩之 MDS 資料庫的 mdm.tblList 資料表中加入資料列。 此資料列應該有下列值：  
   
-|||  
+|資料行|值|  
 |-|-|  
 |ListCode|lstInputMask|  
 |ListName|[輸入遮罩]|  

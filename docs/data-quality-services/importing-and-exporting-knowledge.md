@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 638a5f791f7997cc96b22bde47f41198a9946133
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 517e672cdb5bb7a6991f83b72f25f937ecbb6359
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882778"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362818"
 ---
 # <a name="importing-and-exporting-knowledge"></a>匯入和匯出知識
 
@@ -28,7 +28,7 @@ ms.locfileid: "85882778"
 ## <a name="in-this-section"></a>本節內容  
  您可以執行下列匯入和匯出作業：  
   
-|||  
+|作業描述|主題|  
 |-|-|  
 |將知識庫中的定義域匯出至 .dqs 資料檔案|[將定義域匯出成 .dqs 檔案](../data-quality-services/export-a-domain-to-a-dqs-file.md)|  
 |將 .dqs 資料檔案中的定義域匯入現有的知識庫中|[從 .dqs 檔案匯入定義域](../data-quality-services/import-a-domain-from-a-dqs-file.md)|  

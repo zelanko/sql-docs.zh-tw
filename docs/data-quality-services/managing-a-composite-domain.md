@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 0f6c31e8e1cb40c5fbb00eaaf42c8734a8392f74
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2d463b65247dc5606605f1760ef6a259b5f534e9
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898084"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363050"
 ---
 # <a name="managing-a-composite-domain"></a>管理複合定義域
 
@@ -29,7 +29,7 @@ ms.locfileid: "85898084"
 ## <a name="in-this-section"></a>本節內容  
  使用複合定義域可讓您執行以下作業：  
   
-|||  
+|作業描述|主題|  
 |-|-|  
 |針對包含多個未剖析之相關詞彙的資料欄位建立語意表示法|[建立複合定義域](../data-quality-services/create-a-composite-domain.md)|  
 |當您將複雜資料對應至複合定義域時，除了針對分隔符號進行剖析之外，您也可以根據知識來剖析資料。 DQS 會先嘗試使用它對於單一定義域的知識，以判斷複雜字串的部分如何屬於單一定義域。|[建立複合定義域](../data-quality-services/create-a-composite-domain.md)|  

@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f137e8c377c94a60fdcfd8f1534069cef4b28f66
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1034d96ce0d683d38139636d53471d23581807a1
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68887440"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362798"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>MDX 資料定義 - CREATE SUBCUBE
 
@@ -89,9 +89,8 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  產生結果如下：  
   
-|||||  
+|商務類型 + 類別|All Products|Accessories|Clothing|  
 |-|-|-|-|  
-||All Products|Accessories|Clothing|  
 |All Resellers|$2031079.39|$506,172.45|$1,524,906.93|  
 |Value Added Reseller|$767388.52|$175,002.81|$592,385.71|  
 |Warehouse|$1263690.86|$331,169.64|$932,521.23|  
@@ -118,9 +117,8 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  產生下列不同結果：  
   
-|||||  
+|商務類型 + 類別|All Products|Accessories|Clothing|  
 |-|-|-|-|  
-||All Products|Accessories|Clothing|  
 |All Resellers|$80,450,596.98|$571,297.93|$1,777,840.84|  
 |Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  
 |Warehouse|$38,726,913.48|$331,169.64|$932,521.23|  

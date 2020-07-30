@@ -13,133 +13,260 @@ helpviewer_keywords:
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ed8056d6c9645a211f1413a1b280426925dd538e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3c83df20d95b9fe968b7c1c01cd8a9031043c8ad
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307989"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362983"
 ---
 # <a name="reserved-keywords"></a>保留關鍵字
 以下是 ODBC 函數呼叫所用的保留字。 這些單字不會限制最小的 SQL 文法;不過，為了確保與支援核心 SQL 文法的驅動程式相容，應用程式應該避免使用任何這些關鍵字。 #**Define**值 SQL_ODBC_KEYWORDS 包含這些關鍵字的逗號分隔清單。  
-  
-|||  
-|-|-|  
-|ABSOLUTE|IS|  
-|ACTION|ISOLATION|  
-|ADA|JOIN|  
-|ADD|KEY|  
-|ALL|LANGUAGE|  
-|ALLOCATE|LAST|  
-|ALTER|LEADING|  
-|AND|LEFT|  
-|ANY|LEVEL|  
-|ARE|LIKE|  
-|AS|LOCAL|  
-|ASC|LOWER|  
-|ASSERTION|MATCH|  
-|AT|最大值|  
-|AUTHORIZATION|最小值|  
-|平均|MINUTE|  
-|BEGIN|MODULE|  
-|BETWEEN|月|  
-|BIT|NAMES|  
-|BIT_LENGTH|NATIONAL|  
-|BOTH|NATURAL|  
-|BY|NCHAR|  
-|CASCADE|NEXT|  
-|CASCADED|否|  
-|CASE|無|  
-|CAST|NOT|  
-|CATALOG|NULL|  
-|CHAR|NULLIF|  
-|CHAR_LENGTH|NUMERIC|  
-|CHARACTER|OCTET_LENGTH|  
-|CHARACTER_LENGTH|OF|  
-|CHECK|開啟|  
-|CLOSE|ONLY|  
-|COALESCE|OPEN|  
-|COLLATE|OPTION|  
-|COLLATION|或者|  
-|COLUMN|ORDER|  
-|COMMIT|OUTER|  
-|CONNECT|OUTPUT|  
-|CONNECTION|OVERLAPS|  
-|CONSTRAINT|PAD|  
-|CONSTRAINTS|PARTIAL|  
-|CONTINUE|PASCAL|  
-|CONVERT|POSITION|  
-|CORRESPONDING|PRECISION|  
-|COUNT|PREPARE|  
-|CREATE|PRESERVE|  
-|CROSS|PRIMARY|  
-|CURRENT|PRIOR|  
-|CURRENT_DATE|PRIVILEGES|  
-|CURRENT_TIME|PROCEDURE|  
-|CURRENT_TIMESTAMP|PUBLIC|  
-|CURRENT_USER|READ|  
-|CURSOR|real|  
-|日期|REFERENCES|  
-|DAY|RELATIVE|  
-|DEALLOCATE|RESTRICT|  
-|DEC|REVOKE|  
-|DECIMAL|RIGHT|  
-|DECLARE|ROLLBACK|  
-|DEFAULT|ROWS|  
-|DEFERRABLE|SCHEMA|  
-|DEFERRED|SCROLL|  
-|刪除|SECOND|  
-|DESC|SECTION|  
-|DESCRIBE|SELECT|  
-|DESCRIPTOR|SESSION|  
-|DIAGNOSTICS|SESSION_USER|  
-|DISCONNECT|SET|  
-|DISTINCT|SIZE |  
-|DOMAIN|SMALLINT|  
-|DOUBLE|SOME|  
-|DROP|SPACE|  
-|ELSE|SQL|  
-|END|SQLCA|  
-|END-EXEC|SQLCODE|  
-|ESCAPE|SQLERROR|  
-|EXCEPT|SQLSTATE|  
-|EXCEPTION|SQLWARNING|  
-|EXEC|SUBSTRING|  
-|執行 CREATE 陳述式之前，請先執行|SUM|  
-|EXISTS|SYSTEM_USER|  
-|EXTERNAL|TABLE|  
-|EXTRACT|TEMPORARY|  
-|FALSE|THEN|  
-|FETCH|TIME|  
-|FIRST|timestamp|  
-|FLOAT|TIMEZONE_HOUR|  
-|FOR|TIMEZONE_MINUTE|  
-|FOREIGN|TO|  
-|FORTRAN|TRAILING|  
-|FOUND|TRANSACTION|  
-|FROM|TRANSLATE|  
-|FULL|TRANSLATION|  
-|GET|TRIM|  
-|GLOBAL|TRUE|  
-|GO|UNION|  
-|GOTO|UNIQUE|  
-|GRANT|UNKNOWN|  
-|GROUP|UPDATE|  
-|HAVING|UPPER|  
-|HOUR|USAGE|  
-|IDENTITY|USER|  
-|IMMEDIATE|USING|  
-|IN|值|  
-|INCLUDE|VALUES|  
-|INDEX|VARCHAR|  
-|INDICATOR|VARYING|  
-|INITIALLY|VIEW|  
-|INNER|WHEN|  
-|INPUT|WHENEVER|  
-|INSENSITIVE|WHERE|  
-|Insert|WITH|  
-|INT|WORK|  
-|INTEGER|WRITE|  
-|INTERSECT|年|  
-|INTERVAL|ZONE|  
-|INTO||
+
+:::row:::
+    :::column:::
+        ABSOLUTE  
+        ACTION  
+        ADA  
+        ADD  
+        ALL  
+        ALLOCATE  
+        ALTER  
+        AND  
+        ANY  
+        ARE  
+        AS  
+        ASC  
+        ASSERTION  
+        AT  
+        AUTHORIZATION  
+        平均  
+        BEGIN  
+        BETWEEN  
+        BIT  
+        BIT_LENGTH  
+        BOTH  
+        BY  
+        CASCADE  
+        CASCADED  
+        CASE  
+        CAST  
+        CATALOG  
+        CHAR  
+        CHAR_LENGTH  
+        CHARACTER  
+        CHARACTER_LENGTH  
+        CHECK  
+        CLOSE  
+        COALESCE  
+        COLLATE  
+        COLLATION  
+        COLUMN  
+        COMMIT  
+        CONNECT  
+        CONNECTION  
+        CONSTRAINT  
+        CONSTRAINTS  
+        CONTINUE  
+        CONVERT  
+        CORRESPONDING  
+        COUNT  
+        CREATE  
+    :::column-end:::
+    :::column:::
+        CROSS  
+        CURRENT  
+        CURRENT_DATE  
+        CURRENT_TIME  
+        CURRENT_TIMESTAMP  
+        CURRENT_USER  
+        CURSOR  
+        日期  
+        DAY  
+        DEALLOCATE  
+        DEC  
+        DECIMAL  
+        DECLARE  
+        DEFAULT  
+        DEFERRABLE  
+        DEFERRED  
+        刪除  
+        DESC  
+        DESCRIBE  
+        DESCRIPTOR  
+        DIAGNOSTICS  
+        DISCONNECT  
+        DISTINCT  
+        DOMAIN  
+        DOUBLE  
+        DROP  
+        ELSE  
+        END  
+        END-EXEC  
+        ESCAPE  
+        EXCEPT  
+        EXCEPTION  
+        EXEC  
+        執行 CREATE 陳述式之前，請先執行  
+        EXISTS  
+        EXTERNAL  
+        EXTRACT  
+        FALSE  
+        FETCH  
+        FIRST  
+        FLOAT  
+        FOR  
+        FOREIGN  
+        FORTRAN  
+        FOUND  
+        FROM  
+        FULL  
+    :::column-end:::
+    :::column:::
+        GET  
+        GLOBAL  
+        GO  
+        GOTO  
+        GRANT  
+        GROUP  
+        HAVING  
+        HOUR  
+        IDENTITY  
+        IMMEDIATE  
+        IN  
+        INCLUDE  
+        INDEX  
+        INDICATOR  
+        INITIALLY  
+        INNER  
+        INPUT  
+        INSENSITIVE  
+        Insert  
+        INT  
+        INTEGER  
+        INTERSECT  
+        INTERVAL  
+        INTO  
+        IS  
+        ISOLATION  
+        JOIN  
+        KEY  
+        LANGUAGE  
+        LAST  
+        LEADING  
+        LEFT  
+        LEVEL  
+        LIKE  
+        LOCAL  
+        LOWER  
+        MATCH  
+        最大值  
+        最小值  
+        MINUTE  
+        MODULE  
+        月  
+        NAMES  
+        NATIONAL  
+        NATURAL  
+        NCHAR  
+        NEXT  
+    :::column-end:::
+    :::column:::
+        否  
+        無  
+        NOT  
+        NULL  
+        NULLIF  
+        NUMERIC  
+        OCTET_LENGTH  
+        OF  
+        開啟  
+        ONLY  
+        OPEN  
+        OPTION  
+        OR  
+        ORDER  
+        OUTER  
+        OUTPUT  
+        OVERLAPS  
+        PAD  
+        PARTIAL  
+        PASCAL  
+        POSITION  
+        PRECISION  
+        PREPARE  
+        PRESERVE  
+        PRIMARY  
+        PRIOR  
+        PRIVILEGES  
+        PROCEDURE  
+        PUBLIC  
+        READ  
+        REAL  
+        REFERENCES  
+        RELATIVE  
+        RESTRICT  
+        REVOKE  
+        RIGHT  
+        ROLLBACK  
+        ROWS  
+        SCHEMA  
+        SCROLL  
+        SECOND  
+        SECTION  
+        SELECT  
+        SESSION  
+        SESSION_USER  
+        SET  
+        SIZE   
+    :::column-end:::
+    :::column:::
+        SMALLINT  
+        SOME  
+        SPACE  
+        SQL  
+        SQLCA  
+        SQLCODE  
+        SQLERROR  
+        SQLSTATE  
+        SQLWARNING  
+        SUBSTRING  
+        SUM  
+        SYSTEM_USER  
+        TABLE  
+        TEMPORARY  
+        THEN  
+        TIME  
+        timestamp  
+        TIMEZONE_HOUR  
+        TIMEZONE_MINUTE  
+        TO  
+        TRAILING  
+        TRANSACTION  
+        TRANSLATE  
+        TRANSLATION  
+        TRIM  
+        TRUE  
+        UNION  
+        UNIQUE  
+        UNKNOWN  
+        UPDATE  
+        UPPER  
+        USAGE  
+        USER  
+        USING  
+        值  
+        VALUES  
+        VARCHAR  
+        VARYING  
+        VIEW  
+        WHEN  
+        WHENEVER  
+        WHERE  
+        WITH  
+        WORK  
+        WRITE  
+        年  
+        ZONE  
+    :::column-end:::
+:::row-end:::

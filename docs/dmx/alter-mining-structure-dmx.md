@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ace89ae45aff0e740691025d2039213cfacebff9
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 8022ee6fd8cb9bf9de79a7a83d3ee0d6166606b5
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971830"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362218"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -108,9 +108,8 @@ USING <algorithm> [(<parameter list>)]
 > [!NOTE]  
 >  NOT_NULL 模型旗標適用於採礦結構資料行。 如需詳細資訊，請參閱 [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)。  
   
-|||  
-|-|-|  
 |詞彙|定義|  
+|-|-|  
 |**回歸輸入變數**|指示演算法可以在迴歸演算法的迴歸公式中使用指定的資料行。|  
 |**MODEL_EXISTENCE_ONLY**|指出屬性資料行的值是否比屬性的存在更重要。|  
   
@@ -119,7 +118,7 @@ USING <algorithm> [(<parameter list>)]
 ### <a name="prediction-clause"></a>預測子句  
  預測子句描述如何使用預測資料行。 下表列出可能的子句。  
   
-|||  
+|子句|描述|  
 |-|-|  
 |**預報**|這個資料行可以由模型預測，而其值可以用來當做輸入以預測其他可預測資料行的值。|  
 |**PREDICT_ONLY**|這個資料行可以依模型預測，但是其值不能用於輸入案例中以預測其他可預測資料行的值。|  

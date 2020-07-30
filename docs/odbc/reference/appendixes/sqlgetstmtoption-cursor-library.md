@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 986170b3-fba8-4323-9224-60b381c7effb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e34c07cdd248d5da4efd9f66d7292bd6ab443e92
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fa33df432463779f397fee2dcd50b06443082c52
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300608"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362935"
 ---
 # <a name="sqlgetstmtoption-cursor-library"></a>SQLGetStmtOption (資料指標程式庫)
 > [!IMPORTANT]  
@@ -26,10 +26,17 @@ ms.locfileid: "81300608"
  本主題討論如何在資料指標程式庫中使用**SQLGetStmtOption**函數。 如需有關**SQLGetStmtOption**的一般資訊，請參閱[SQLGetStmtOption 函數](../../../odbc/reference/syntax/sqlgetstmtoption-function.md)。  
   
  資料指標程式庫支援下列使用**SQLGetStmtOption**的語句選項：  
-  
-|||  
-|-|-|  
-|SQL_BIND_TYPE|SQL_ROW_NUMBER|  
-|SQL_CONCURRENCY|SQL_ROWSET_SIZE|  
-|SQL_CURSOR_TYPE|SQL_SIMULATE_CURSOR|  
-|SQL_GET_BOOKMARK||
+
+:::row:::
+    :::column:::
+        SQL_BIND_TYPE  
+        SQL_CONCURRENCY  
+        SQL_CURSOR_TYPE  
+        SQL_GET_BOOKMARK  
+    :::column-end:::
+    :::column:::
+        SQL_ROW_NUMBER  
+        SQL_ROWSET_SIZE  
+        SQL_SIMULATE_CURSOR  
+    :::column-end:::
+:::row-end:::

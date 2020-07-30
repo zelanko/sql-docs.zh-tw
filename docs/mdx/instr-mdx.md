@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 201580b71086dfe39e669966070dae2dca72e3eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d7da3f994ed0741ef7ca6bcbe4d6003eea981c7
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105305"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363408"
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
 
@@ -44,11 +44,11 @@ InStr([start, ]searched_string, search_string[, compare])
   
  此外， **InStr**函數會根據條件傳回下表所列的值：  
   
-|狀況|傳回值|  
+|條件|傳回值|  
 |---------------|------------------|  
 |String1 為零長度|零 (0)|  
 |String1 為 Null|未定義|  
-|String2 為零長度|start|  
+|String2 為零長度|開始|  
 |String2 為 Null|未定義|  
 |找不到 String2|零 (0)|  
 |start 大於 Len(String2)|零 (0)|  
@@ -95,9 +95,8 @@ from [Adventure Works]
   
  下表會顯示取得的結果。  
   
-|||  
+|量值中的欄位|結果|  
 |-|-|  
-||結果|  
 |小寫字串中找到小寫|16|  
 |小寫字串中找到大寫|16|  
 |搜尋的字串是空的|0|  

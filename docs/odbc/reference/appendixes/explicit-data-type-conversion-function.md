@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2de8a8cb6177e9210e8d48c0ce097d13c9a276fd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ed0a1e9155eeb3e2147bed3dd31e78176bdc38d2
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306989"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363318"
 ---
 # <a name="explicit-data-type-conversion-function"></a>明確資料類型轉換函式
 明確的資料類型轉換是根據 SQL 資料類型定義來指定。  
@@ -31,29 +31,52 @@ ms.locfileid: "81306989"
  **CONVERT （** _value_exp_， _data_type_**）**  
   
  函式會傳回*value_exp*轉換成指定*data_type*的指定值，其中*data_type*是下列其中一個關鍵字：  
-  
-|||  
-|-|-|  
-|SQL_BIGINT|SQL_INTERVAL_HOUR_TO_MINUTE|  
-|SQL_BINARY|SQL_INTERVAL_HOUR_TO_SECOND|  
-|SQL_BIT|SQL_INTERVAL_MINUTE_TO_SECOND|  
-|SQL_CHAR|SQL_LONGVARBINARY|  
-|SQL_DECIMAL|SQL_LONGVARCHAR|  
-|SQL_DOUBLE|SQL_NUMERIC|  
-|SQL_FLOAT|SQL_REAL|  
-|SQL_GUID|SQL_SMALLINT|  
-|SQL_INTEGER|SQL_DATE|  
-|SQL_INTERVAL_MONTH|SQL_TIME|  
-|SQL_INTERVAL_YEAR|SQL_TIMESTAMP|  
-|SQL_INTERVAL_YEAR_TO_MONTH|SQL_TINYINT|  
-|SQL_INTERVAL_DAY|SQL_VARBINARY|  
-|SQL_INTERVAL_HOUR|SQL_VARCHAR|  
-|SQL_INTERVAL_MINUTE|SQL_WCHAR|  
-|SQL_INTERVAL_SECOND|SQL_WLONGVARCHAR|  
-|SQL_INTERVAL_DAY_TO_HOUR|SQL_WVARCHAR|  
-|SQL_INTERVAL_DAY_TO_MINUTE||  
-|SQL_INTERVAL_DAY_TO_SECOND||  
-  
+
+:::row:::
+    :::column:::
+        SQL_BIGINT  
+        SQL_BINARY  
+        SQL_BIT  
+        SQL_CHAR  
+        SQL_DATE  
+        SQL_DECIMAL  
+        SQL_DOUBLE  
+        SQL_FLOAT  
+        SQL_GUID  
+        SQL_INTEGER  
+        SQL_INTERVAL_DAY  
+        SQL_INTERVAL_DAY_TO_HOUR  
+    :::column-end:::
+    :::column:::
+        SQL_INTERVAL_DAY_TO_MINUTE  
+        SQL_INTERVAL_DAY_TO_SECOND  
+        SQL_INTERVAL_HOUR  
+        SQL_INTERVAL_HOUR_TO_MINUTE  
+        SQL_INTERVAL_HOUR_TO_SECOND  
+        SQL_INTERVAL_MINUTE  
+        SQL_INTERVAL_MINUTE_TO_SECOND  
+        SQL_INTERVAL_MONTH  
+        SQL_INTERVAL_SECOND  
+        SQL_INTERVAL_YEAR  
+        SQL_INTERVAL_YEAR_TO_MONTH  
+        SQL_LONGVARBINARY  
+    :::column-end:::
+    :::column:::
+        SQL_LONGVARCHAR  
+        SQL_NUMERIC  
+        SQL_REAL  
+        SQL_SMALLINT  
+        SQL_TIME  
+        SQL_TIMESTAMP  
+        SQL_TINYINT  
+        SQL_VARBINARY  
+        SQL_VARCHAR  
+        SQL_WCHAR  
+        SQL_WLONGVARCHAR  
+        SQL_WVARCHAR  
+    :::column-end:::
+:::row-end:::
+
  明確資料類型轉換函數的 ODBC 語法不支援轉換格式的規格。 如果基礎資料來源支援明確格式的規格，則驅動程式必須指定預設值或執行格式規格。  
   
  *Value_exp*的引數可以是資料行名稱、另一個純量函數的結果，或數值或字串常值。 例如：  

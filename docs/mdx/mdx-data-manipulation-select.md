@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 97b9f5fd13a6cfb017f128564f0f0cf93c22ad58
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: f56d5cbbc8e6653b4844e1b5e48b08911307395a
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86967369"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362788"
 ---
 # <a name="mdx-data-manipulation---select"></a>MDX 資料操作 - SELECT
 
@@ -88,7 +88,7 @@ FROM
  *Set_Expression*  
  傳回集合的有效多維度運算式 (MDX) 運算式。  
   
- *介於*  
+ *整數*  
  介於 0 和 127 之間的整數。  
   
  *Cube_Name*  
@@ -159,9 +159,8 @@ FROM
   
  取得的結果集為：  
   
-|||||  
+|模型名稱 + 量值|Reseller Sales Amount|折扣量|PCT Discount|  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**折扣量**|**PCT Discount**|  
 |**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
 |**Road-250**|**$9,377,457.68**|**$4,032.47**|**0.04%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
@@ -211,9 +210,8 @@ FROM
   
  根據以下結果，兩個集合 (Top10SellingProducts、Preferred10Products) 相同  
   
-|||||  
+|模型名稱 + 量值|Reseller Sales Amount|折扣量|PCT Discount|  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**折扣量**|**PCT Discount**|  
 |**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
 |**Road-250**|**$9,377,457.68**|**$4,032.47**|**0.04%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
@@ -245,9 +243,8 @@ FROM
   
  產生下列結果集：  
   
-|||||  
+|模型名稱 + 量值|Reseller Sales Amount|折扣量|PCT Discount|  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**折扣量**|**PCT Discount**|  
 |**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
@@ -303,9 +300,8 @@ FROM
   
  產生下列結果集：  
   
-|||||  
+|模型名稱 + 量值|Reseller Sales Amount|折扣量|PCT Discount|  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**折扣量**|**PCT Discount**|  
 |**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
@@ -332,9 +328,8 @@ FROM
   
  下列結果集現在會顯示「自動存在」的淺層行為。  
   
-|||||  
+|模型名稱 + 量值|Reseller Sales Amount|折扣量|PCT Discount|  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**折扣量**|**PCT Discount**|  
 |**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
@@ -375,9 +370,8 @@ WHERE
   
  會產生下列結果：  
   
-|||||||  
+|商務類型 + 類別|All Products|Accessories|自行車|服飾|組件|  
 |-|-|-|-|-|-|  
-||**所有產品**|**Accessories**|**自行車**|**Clothing**|**元件**|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$66,302,381.56**|**$1,777,840.84**|**$11,799,076.66**|  
 |**Specialty Bike Shop**|**$6,756,166.18**|**$65,125.48**|**$6,080,117.73**|**$252,933.91**|**$357,989.07**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$30,892,354.33**|**$592,385.71**|**$3,307,774.48**|  
@@ -399,9 +393,8 @@ WHERE
   
  會產生下列結果：  
   
-|||||  
+|商務類型 + 類別|All Products|Accessories|Clothing|  
 |-|-|-|-|  
-||**所有產品**|**Accessories**|**Clothing**|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$1,777,840.84**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$592,385.71**|  
 |**倉儲**|**$38,726,913.48**|**$331,169.64**|**$932,521.23**|  
@@ -426,9 +419,8 @@ WHERE
   
  上述的查詢會產生下列結果：  
   
-|||||  
+|商務類型 + 類別|All Products|Accessories|Clothing|  
 |-|-|-|-|  
-||All Products|Accessories|Clothing|  
 |All Resellers|$73,694,430.80|$506,172.45|$1,524,906.93|  
 |Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  
 |Warehouse|$38,726,913.48|$331,169.64|$932,521.23|  
@@ -457,9 +449,8 @@ WHERE
   
  上述的查詢會產生下列結果：  
   
-|||||  
-|-|-|-|-|  
 |Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|Reseller Gross Profit Margin|  
+|-|-|-|-|  
 |$80,450,596.98|$79980114.38|$470482.60|0.58%|  
   
 ## <a name="see-also"></a>另請參閱  
