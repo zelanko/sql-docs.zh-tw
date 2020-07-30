@@ -9,20 +9,20 @@ ms.topic: reference
 ms.assetid: 66d92652-b46f-46d8-8093-fa9c6fc4e0d1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0f723c1721665cb1bd3277622fd15c5e55dd50d9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 54ec28bcebdbeed451f000e128958d4b04db9a2b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756949"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243669"
 ---
 # <a name="localdb_error_cannot_create_sql_process"></a>LOCALDB_ERROR_CANNOT_CREATE_SQL_PROCESS
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>詳細資料  
   
-|||  
-|-|-|  
+| 屬性 | 值 |
+| --------- | ----- |
 |產品名稱|SQL Server|  
 |事件識別碼|268|  
 |事件來源|SQL Server 本機資料庫執行階段 12.0|  

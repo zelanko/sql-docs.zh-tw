@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 46718126ede409caa749b3a49dfaaffe118afc77
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7bfa47120814058adbc5c2e5f3650a79b2202afb
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761826"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243179"
 ---
 # <a name="type-property-ado"></a>Type 屬性 (ADO)
 表示[參數](../../../ado/reference/ado-api/parameter-object.md)、[欄位](../../../ado/reference/ado-api/field-object.md)或[屬性](../../../ado/reference/ado-api/property-object-ado.md)物件的操作類型或資料類型。  
@@ -35,11 +35,19 @@ ms.locfileid: "82761826"
  對於其他所有物件，**類型**屬性是唯讀的。  
   
 ## <a name="applies-to"></a>套用至  
-  
-||||  
-|-|-|-|  
-|[Field 物件](../../../ado/reference/ado-api/field-object.md)|[Parameter 物件](../../../ado/reference/ado-api/parameter-object.md)|[Property 物件 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Field 物件](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [Parameter 物件](../../../ado/reference/ado-api/parameter-object.md)  
+    :::column-end:::
+    :::column:::
+        [Property 物件 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另請參閱  
  [Type 屬性範例（Field）（VB）](../../../ado/reference/ado-api/type-property-example-field-vb.md)   
  [Type 屬性範例（Property）（VC + +）](../../../ado/reference/ado-api/type-property-example-property-vc.md)   

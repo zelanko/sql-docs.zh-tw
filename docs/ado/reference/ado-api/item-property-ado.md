@@ -45,12 +45,12 @@ helpviewer_keywords:
 ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a5925bc0e2ab4991c1067c6d1c26cfff2c237b37
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2bc6cb28823a2b8faf79e4bf44fb405446e12514
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763429"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242658"
 ---
 # <a name="item-property-ado"></a>Item 屬性 (ADO)
 以名稱或序數表示集合的特定成員。  
@@ -65,7 +65,7 @@ Set object = collection.Item ( Index )
  傳回物件參考。  
   
 ## <a name="parameters"></a>參數  
- *索引*  
+ *Index*  
  會評估為名稱或集合中物件序號的**Variant**運算式。  
   
 ## <a name="remarks"></a>備註  
@@ -79,17 +79,35 @@ collection (Index)
 ```  
   
 ## <a name="applies-to"></a>套用至  
-  
-||||  
-|-|-|-|  
-|[Axes 集合 (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|[Columns 集合 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)|[CubeDefs 集合 (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)|  
-|[Dimensions 集合 (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)|[Errors 集合 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)|[Fields 集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|  
-|[Groups 集合 (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)|[Hierarchies 集合 (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)|[Indexes 集合 (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)|  
-|[Keys 集合 (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)|[Levels 集合 (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)|[Members 集合 (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|  
-|[Parameters 集合 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)|[Positions 集合 (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|[Procedures 集合 (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)|  
-|[Properties 集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)|[Tables 集合 (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|[Users 集合 (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|  
-|[Views 集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
-  
+
+:::row:::
+    :::column:::
+        [Axes 集合 (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)  
+        [Columns 集合 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)  
+        [CubeDefs 集合 (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)  
+        [Dimensions 集合 (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)  
+        [Errors 集合 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)  
+        [Fields 集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
+        [Groups 集合 (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)  
+    :::column-end:::
+    :::column:::
+        [Hierarchies 集合 (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)  
+        [Indexes 集合 (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
+        [Keys 集合 (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)  
+        [Levels 集合 (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)  
+        [Members 集合 (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)  
+        [Parameters 集合 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Positions 集合 (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)  
+        [Procedures 集合 (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)  
+        [Properties 集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)  
+        [Tables 集合 (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)  
+        [Users 集合 (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)  
+        [Views 集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另請參閱  
  [Item 屬性範例（VB）](../../../ado/reference/ado-api/item-property-example-vb.md)   
  [Item 屬性範例 (VC++)](../../../ado/reference/ado-api/item-property-example-vc.md)   

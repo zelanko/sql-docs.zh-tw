@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7a8c92a4b6a76cb9d15048d6f058038363970cb8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dcb01ae9771f748ad62faba37cea103f1c7acc8c
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036590"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362648"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
 
@@ -67,7 +67,7 @@ WHERE([Product].[Product Categories].[Bikes])
   
  上述運算式會產生下列結果：  
   
-||Reseller Sales Amount|  
+|城市|Reseller Sales Amount|  
 |-|---------------------------|  
 |Toronto|$3508904.84|  
 |London|$1521530.09|  
@@ -102,7 +102,7 @@ FROM [Adventure Works]
   
  上述查詢傳回下列結果；為提高可讀性，中間部分的資料列已移除。  
   
-||Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
+|旅行自行車|Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  
 |Touring-2000 Blue, 50|$157444.56|$163112.57|（$5668.01）|  
 |旅行-2000 Blue、46|$321027.03|$333021.50|（$11994.47）|  
@@ -122,7 +122,7 @@ FROM [Adventure Works]
   
  請注意，查詢要求百分百 (100%)，這表示應傳回所有資料列。 不過，因為*Numeric_Expression*中有負值，所以只會傳回一個資料列。  
   
-||Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
+|旅行自行車|Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  
 |Touring-2000 Blue, 50|$157444.56|$163112.57|（$5668.01）|  
   

@@ -1,6 +1,6 @@
 ---
-title: 將資料插入至資料表值參數 | Microsoft Docs
-description: 深入瞭解 SQL Server Native Client OLE DB 提供者支援的兩個模型，以指定資料表值參數資料列的資料。
+title: 將資料插入資料表值參數（Native Client OLE DB 提供者） |Microsoft Docs
+description: 瞭解 SQL Server Native Client OLE DB 提供者為取用者所支援的兩個模型，以指定資料表值參數資料列的資料。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,13 +14,14 @@ ms.assetid: 9c1a3234-4675-40d3-b473-8df06208f880
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 739f2e04b77197e0189f34651bcaac045d7a4c7e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 823ca21dd04fe89c3b1598fba068a0f58bcceaf3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86013066"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246758"
 ---
-# <a name="inserting-data-into-table-valued-parameters"></a>將資料插入至資料表值參數
+# <a name="inserting-data-into-table-valued-parameters-native-client-ole-db-provider"></a>將資料插入資料表值參數（Native Client OLE DB 提供者）
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者支援兩種模型，供取用者指定資料表值參數資料列的資料：推送模型和提取模型。 您可使用示範提取模型的範例，請參閱 [SQL Server 資料程式設計範例](https://msftdpprodsamples.codeplex.com/)。  
@@ -28,7 +29,7 @@ ms.locfileid: "86013066"
 > [!NOTE]  
 >  資料表值參數資料行在所有資料列中都必須有非預設值，或在所有資料列中都必須有預設值。 在某些資料列中有預設值，而在其他資料列中則沒有預設值是不可能的。 因此，在資料表值參數繫結中，資料表值參數資料列集資料行資料所允許的唯一狀態值為 DBSTATUS_S_ISNULL 和 DBSTATUS_S_OK。 DBSTATUS_S_DEFAULT 將會導致失敗，而繫結的狀態值將會設定為 DBSTATUS_E_BADSTATUS。  
   
-## <a name="push-model-loads-all-table-valued-paremeter-data-in-memory"></a>發送模型 (將所有資料表值參數資料載入到記憶體中)  
+## <a name="push-model-loads-all-table-valued-parameter-data-in-memory"></a>推送模型（在記憶體中載入所有資料表值參數資料）  
  發送模型類似於使用參數集 (也就是 ICommand::Execute 中的 DBPARAMS 參數)。 只有在沒有 IRowset 介面之自訂實作的情況下使用資料表值參數資料列集物件時，才會使用發送模型。 當資料表值參數資料列集中的資料列數目很小，而且不打算在將過量的記憶體壓力放在應用程式上時，建議使用發送模型。 這比提取模型簡單，因為比起目前在一般 OLE DB 應用程式中常用的功能，發送模型不需要使用來自取用者應用程式的其他任何功能。  
   
  取用者應該在執行命令前，提供所有資料表值參數資料給提供者。 若要提供資料，取用者要針對每個資料表值參數擴展資料表值參數資料列集物件。 資料表值參數資料列集物件會公開資料列集的 Insert、Set 和 Delete 作業，取用者會使用這些作業來操作資料表值參數資料。 提供者將會在執行時間，從此資料表值參數資料列集物件提取資料。  

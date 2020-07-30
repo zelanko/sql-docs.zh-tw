@@ -1,5 +1,6 @@
 ---
 title: srv_paramstatus (擴充預存程序 API) | Microsoft Docs
+description: 瞭解 srv_paramstatus 如何傳回特定遠端預存程序呼叫參數的狀態。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86cecd45-0b09-42e9-8152-32a12a1c2b7a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fcf1c5ea6db06072aff5075b42a1dde18ad00640
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e55986b0d781b311b050eb5695ca350f7331e25c
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755961"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248327"
 ---
 # <a name="srv_paramstatus-extended-stored-procedure-api"></a>srv_paramstatus (擴充預存程序 API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

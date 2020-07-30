@@ -1,5 +1,6 @@
 ---
 title: srv_sendrow (擴充預存程序 API) | Microsoft Docs
+description: 瞭解擴充預存程式 API 中的 srv_sendrow。 srv_sendrow 將資料列傳輸至用戶端。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a08f608a-10e6-4bff-9b48-0d02e8026cdb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0209cfb01c0fa76fdf66dfe806f9d528489cfb79
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1cbe5886d19ca1da9bdc2bdea09ce86d142b44d9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755837"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248205"
 ---
 # <a name="srv_sendrow-extended-stored-procedure-api"></a>srv_sendrow (擴充預存程序 API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

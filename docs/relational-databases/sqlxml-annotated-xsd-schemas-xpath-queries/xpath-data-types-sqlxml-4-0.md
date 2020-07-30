@@ -29,12 +29,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eade5e3328993176f8795d27e511902a42468192
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 724290f48b0f33d586a797629766b36bae49ddb6
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764864"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332635"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath 資料類型 (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "85764864"
   
  運算子的每個類別都會以不同的方式轉換其運算元。 如果必要，XPath 運算子會以隱含的方式轉換其運算元。 算術運算子會將其運算元轉換為**數位**，並產生數值。 布林運算子會將其運算元轉換為**boolean**，並產生布林值。 關係運算子和相等運算子會成為布林值。 不過，根據其運算元的原始資料類型，它們擁有不同的轉換規則，如下表所示。  
   
-|運算元|關聯式運算子|相等運算子|  
+|運算元|關聯式運算子|等號比較運算子|  
 |-------------|-------------------------|-----------------------|  
 |兩個運算元都是節點集。|只有當一個集合中有一個節點，而第二個集合中有一個節點，使其**字串**值的比較為 true 時，才為 true。|相同。|  
 |其中一個是節點集，另一個是**字串**。|只有在節點集中有節點時，才會傳回 TRUE，因此轉換成**數位**時，其與轉換成**數位**的**字串**比較是 true。|只有在節點集中有節點時，才會傳回 TRUE，因此轉換成**字串**時，其與**字串**的比較為 true。|  
@@ -74,7 +74,7 @@ ms.locfileid: "85764864"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會在節點集上執行位置選取：例如，XPath 查詢 `Customer[3]` 表示第三個客戶；在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不支援此種類型的位置選取。 因此，不會實作為 XPath 規格所描述的節點集對**字串**或節點集對**數位**的轉換。 在 XPath 規格指定 "first" 語意的每個地方，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都會使用 "any" 語意。 例如，根據 W3C XPath 規格，XPath 查詢 `Order[OrderDetail/@UnitPrice > 10.0]` 會選取具有大於10.0 之**單價**的第一個**OrderDetail**的訂單。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，此 XPath 查詢會選取具有大於10.0 之**單價**的任何**OrderDetail**訂單。  
   
- 轉換成**布林值**會產生存在測試;因此，XPath 查詢 `Products[@Discontinued=true()]` 相當於 sql 運算式「產品. 已中止不是 null」，而非 sql 運算式「產品. 已中止 = 1」。 若要讓查詢等同于後者 SQL 運算式，請先將節點集轉換為非**布林值**類型，例如**number**。 例如 `Products[number(@Discontinued) = true()]`。  
+ 轉換成**布林值**會產生存在測試;因此，XPath 查詢 `Products[@Discontinued=true()]` 相當於 sql 運算式「產品. 已中止不是 null」，而非 sql 運算式「產品. 已中止 = 1」。 若要讓查詢等同于後者 SQL 運算式，請先將節點集轉換為非**布林值**類型，例如**number**。 例如： `Products[number(@Discontinued) = true()]` 。  
   
  對於節點集中的任何一個節點或其中一個節點，如果運算子為 TRUE，則大部分會定義為 TRUE，所以如果節點集是空的，這些運算永遠會評估為 FALSE。 因此，如果 A 是空的，`A = B` 和 `A != B` 都為 FALSE，而 `not(A=B)` 和 `not(A!=B)` 都為 TRUE。  
   
@@ -90,9 +90,9 @@ ms.locfileid: "85764864"
   
 |XDR 資料類型|對等用法<br /><br /> XPath 資料類型|使用的 SQL Server 轉換|  
 |-------------------|------------------------------------|--------------------------------|  
-|Nonebin.base64bin.hex|N/A|NoneEmployeeID|  
+|Nonebin.base64bin.hex|不適用|NoneEmployeeID|  
 |boolean|boolean|CONVERT(bit, EmployeeID)|  
-|number、int、float、i1、i2、i4、i8、r4、r8ui1、ui2、ui4、ui8|number|CONVERT(float(53), EmployeeID)|  
+|number、int、float、i1、i2、i4、i8、r4、r8ui1、ui2、ui4、ui8|數字|CONVERT(float(53), EmployeeID)|  
 |id、idref、idrefsentity、entities、enumerationnotation、nmtoken、nmtokens、chardate、Timedate、Time.tz、string、uri、uuid|字串|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |fixed14.4|N/A (在 XPath 中沒有相當於 fixed14.4 XDR 資料類型的資料類型)|CONVERT(money, EmployeeID)|  
 |date|字串|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
@@ -126,12 +126,11 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
   
  這與其他 XPath 運算式 (例如常值或複合運算式) 所套用的轉換相同，如下表所示。  
   
-||||||  
-|-|-|-|-|-|  
-||X 不明|X 是**字串**|X 是**數位**|X 是**布林值**|  
-|string(X)|CONVERT (nvarchar(4000), X, 126)|-|CONVERT (nvarchar(4000), X, 126)|CASE WHEN X THEN N'true' ELSE N'false' END|  
-|number(X)|CONVERT (float(53), X)|CONVERT (float(53), X)|-|CASE WHEN X THEN 1 ELSE 0 END|  
-|boolean(X)|-|LEN （X） > 0|X。|-|  
+|   | X 不明 | X 是字串 | X 是數位 | X 是布林值 |
+| - | ------------ | ----------- | ----------- | ------------ |
+| **string(X)** |CONVERT (nvarchar(4000), X, 126)|-|CONVERT (nvarchar(4000), X, 126)|CASE WHEN X THEN N'true' ELSE N'false' END|  
+| **number(X)** |CONVERT (float(53), X)|CONVERT (float(53), X)|-|CASE WHEN X THEN 1 ELSE 0 END|  
+| **boolean(X)** |-|LEN （X） > 0|X。|-|  
   
 ## <a name="examples"></a>範例  
   

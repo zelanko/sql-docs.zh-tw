@@ -1,5 +1,5 @@
 ---
-title: 列舉 OLE DB 資料來源 (OLE DB) | Microsoft Docs
+title: 列舉 OLE DB 的資料來源（Native Client OLE DB 提供者） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,13 +13,14 @@ ms.assetid: ba240060-3237-4fb8-b2fb-b87fda2b1e7a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 39603f82baede88cda48a12094241883051ecffa
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c61674c160d4d0f9171b63d1d051f8d41230eccc
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004565"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247858"
 ---
-# <a name="enumerate-ole-db-data-sources-ole-db"></a>列舉 OLE DB 資料來源 (OLE DB)
+# <a name="enumerate-sql-server-native-client-ole-db-data-sources-ole-db"></a>列舉資料來源 SQL Server Native Client OLE DB （OLE DB）
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   此範例會示範如何使用列舉值物件來列出可用的資料來源。  
@@ -50,7 +51,7 @@ ms.locfileid: "86004565"
 6.  呼叫 **IRowset::GetData** 來從資料列集的資料列複本擷取資料，然後加以處理。  
   
 ## <a name="example"></a>範例  
- 使用 ole32.lib 編譯並執行下列 C++ 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連線到具名執行個體，請將連接字串從 L"(local)" 變更為 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
+ 使用 ole32.lib 編譯並執行下列 C++ 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連接到已命名的實例，請將連接字串從 L "（local）" 變更為 L "（local） \\ \name"，其中 name 是已命名的實例。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
   
 ```  
 // compile with: ole32.lib  

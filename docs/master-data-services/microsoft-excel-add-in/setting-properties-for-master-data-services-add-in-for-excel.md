@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 21166512c691f8d50d19816afc7a0247a6c09782
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c0a4778ae941b22bf362d926881b1cd3ba806059
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895268"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87361708"
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>設定適用於 Excel 之 Master Data Services 增益集的屬性
 
@@ -27,9 +27,8 @@ ms.locfileid: "85895268"
   
 ## <a name="excel-add-in-settings"></a>Excel 增益集設定  
   
-||||  
+|索引標籤和區段|設定|描述|  
 |-|-|-|  
-|索引標籤和區段|設定|說明|  
 |設定：發行|在發行時顯示 [發行並註解]**** 對話方塊|在您按一下 [發行]**** 之後，選取此選項可顯示 [發行並註解]**** 對話方塊，好讓您輸入所有變更的單一註解，或輸入每一項變更的註解。<br /><br /> 取消選取此選項可指定發行程序已起始，而不必顯示 [發行並註解]**** 對話方塊。 您將沒有機會輸入註解。|  
 |設定：版本|版本選取項目|選取將載入 Excel 增益集中之主要資料的版本。 可為以下項目：<br /><br /> [無]**** 表示具有未預設為任何版本的版本<br /><br /> [最舊]**** 表示預設為最舊的版本；[最新]**** 表示預設為最新的版本。|  
 |設定：記錄|開啟詳細記錄|啟用從 MDS 將主要資料載入 Excel 增益集之程序的記錄，好讓服務中每一個命令的結果都會記錄下來。|  

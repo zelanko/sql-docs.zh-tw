@@ -1,5 +1,5 @@
 ---
-title: 資料列集屬性和行為 | Microsoft Docs
+title: 資料列集屬性和行為（Native Client OLE DB 提供者）
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: 9baabcb6-0114-42f2-89f8-d8d66b3c8c14
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d66aa7280bb2ce7f92211054713469626b4f6a3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 15f9884944eb5d0298e5536fa5b2f43f3aa46c96
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86013134"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246847"
 ---
-# <a name="rowset-properties-and-behaviors"></a>資料列集屬性和行為
+# <a name="rowset-properties-and-behaviors-native-client-ole-db-provider"></a>資料列集屬性和行為（Native Client OLE DB 提供者）
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   這些是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者資料列集屬性。  
@@ -78,7 +79,7 @@ ms.locfileid: "86013134"
 |DBPROP_REPORTMULTIPLECHANGES|此資料列集屬性不是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者所執行。 嘗試讀取或寫入屬性值會產生錯誤。|  
 |DBPROP_RETURNPENDINGINSERTS|R/W：唯讀<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：呼叫提取資料列的方法時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者不會傳回暫止的插入資料列。|  
 |DBPROP_ROWRESTRICT|R/W：唯讀<br /><br /> 預設值：VARIANT_TRUE<br /><br /> 描述： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者資料列集不支援以資料列為基礎的存取權。 如果在資料列集上公開 **IRowsetChange** 介面，取用者可以呼叫 **SetData** 方法。|  
-|DBPROP_ROWSET_ASYNCH|R/W︰讀取/寫入<br /><br /> 預設值：0<br /><br /> 描述：針對非同步資料列集處理提供。 此屬性位於 Rowset 屬性群組以及 DBPROPSET_ROWSET 屬性集。 類型為 VT_14。<br /><br /> Native Client 所支援的位元遮罩中唯一的值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是**DBPROPVAL_ASYNCH_INITIALIZE**。|  
+|DBPROP_ROWSET_ASYNCH|R/W︰讀取/寫入<br /><br /> 預設值：0<br /><br /> 描述：提供非同步資料列集處理。 此屬性位於 Rowset 屬性群組以及 DBPROPSET_ROWSET 屬性集。 類型為 VT_14。<br /><br /> Native Client 所支援的位元遮罩中唯一的值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是**DBPROPVAL_ASYNCH_INITIALIZE**。|  
 |DBPROP_ROWTHREADMODEL|R/W：唯讀<br /><br /> 預設值：DBPROPVAL_RT_FREETHREAD<br /><br /> 描述： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援從單一取用者的多個執行執行緒存取其物件。|  
 |DBPROP_SERVERCURSOR|R/W︰讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：設定時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料指標用於支援資料列集。 如需詳細資訊，請參閱[資料列集和 SQL Server 資料指標](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md)。|  
 |DBPROP_SERVERDATAONINSERT|R/W︰讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：插入的伺服器資料<br /><br /> VARIANT_TRUE：將插入傳送到伺服器時，提供者會從伺服器擷取資料來更新本機資料列快取。<br /><br /> VARIANT_FALSE：提供者不會擷取新插入之資料列的伺服器值。|  

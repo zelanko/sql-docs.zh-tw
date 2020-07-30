@@ -14,13 +14,14 @@ ms.assetid: 1eb60087-da67-433f-9b45-4028595e68ab
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0bdf96d5f352f4b35f45112e86e16fa09a28a90a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: dd73e4da91d94a920ca8463e1d8df905be343c6f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006442"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247006"
 ---
-# <a name="execute-stored-procedure-with-rpc-and-process-output"></a>使用 RPC 及處理輸出執行預存程序
+# <a name="execute-sql-server-native-client-stored-procedure-with-rpc-and-process-output"></a>使用 RPC 和進程輸出執行 SQL Server Native Client 預存程式
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預存程序可以有整數傳回碼和輸出參數。 傳回碼和輸出參數會在來自伺服器的最後一個封包中傳送，因此要等到完全釋放資料列集之後才可供應用程式使用。 如果此命令傳回多個結果，則當 **IMultipleResults::GetResult** 傳回 DB_S_NORESULT 或是當 **IMultipleResults** 介面完全釋放時 (以先發生者為準)，便可使用輸出參數資料。  

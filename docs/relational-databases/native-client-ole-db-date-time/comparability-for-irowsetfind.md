@@ -13,13 +13,14 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61f75807d2d7c6497744e79dbb235e8c7cd396dd
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: de0859bb02f2b513fbfe5733846eabd30f2536b7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998225"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245880"
 ---
-# <a name="comparability-for-irowsetfind"></a>IRowsetFind 的相容性
+# <a name="sql-server-native-client-comparability-for-irowsetfind"></a>適用于 IRowsetFind 的 SQL Server Native Client 可比較性
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   IRowsetFind 僅針對日期/時間類型，支援下列比較：  

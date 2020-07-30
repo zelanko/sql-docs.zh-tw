@@ -1,5 +1,6 @@
 ---
 title: srv_paramtype (擴充預存程序 API) | Microsoft Docs
+description: 瞭解擴充預存程式 API 中的 srv_paramtype 如何傳回遠端預存程序呼叫參數的資料類型。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: badc6d36-8a87-42b5-b28c-9c4f5ded8552
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8fa7e689bea3f05b43e9867614912cb97bd58534
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7dc2200fc0cfb526e78d3544dc5bba7ad0f3e52e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755944"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248312"
 ---
 # <a name="srv_paramtype-extended-stored-procedure-api"></a>srv_paramtype (擴充預存程序 API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

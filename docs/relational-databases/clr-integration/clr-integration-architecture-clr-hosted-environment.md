@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 04e60b218439a67e0fd0d57f6c36cc725217931b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6730ee9db626356ceb8f569928717af851896b07
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727643"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246393"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR 整合架構 - CLR 主控環境
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -154,9 +154,8 @@ Thread.EndThreadAffinity();
 ###### <a name="security-permission-sets"></a>安全性：權限集合  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可讓使用者針對資料庫中部署的程式碼指定可靠性和安全性需求。 將元件上傳至資料庫時，元件的作者可以為該元件指定三個許可權集合的其中一個： SAFE、EXTERNAL_ACCESS 和 UNSAFE。  
   
-|||||  
+|功能|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |-|-|-|-|  
-|權限集合|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |程式碼存取安全性|僅限 Execute|對外部資源的 Execute + 存取權|不受限制|  
 |程式設計模型限制|是|是|沒有限制|  
 |可驗證性需求|是|是|否|  

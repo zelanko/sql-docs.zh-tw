@@ -1,5 +1,5 @@
 ---
-title: ICommand (OLE DB) | Microsoft Docs
+title: ICommand （Native Client OLE DB 提供者） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,13 +13,14 @@ ms.assetid: 5e24b3a0-0658-44fc-b653-f4c52f9eb328
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7c80508be28bd0f51c1e3941d78fe656a2883803
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 697931121d3f93e65d04ab253c90452d12cc4a34
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008398"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243975"
 ---
-# <a name="icommand-ole-db"></a>ICommand (OLE DB)
+# <a name="icommand-native-client-ole-db-provider"></a>ICommand （Native Client OLE DB 提供者）
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   本主題討論 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 特有的 OLE DB 行為。  

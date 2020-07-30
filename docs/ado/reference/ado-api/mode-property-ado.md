@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1bdd16d8e98bd1c038c5bc6c761305e87b65b765
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3487463bf4a13cc97cbc7cd031e18cef5dccb2a7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762509"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242638"
 ---
 # <a name="mode-property-ado"></a>Mode 屬性 (ADO)
 表示在[連接](../../../ado/reference/ado-api/connection-object-ado.md)、[記錄](../../../ado/reference/ado-api/record-object-ado.md)或[資料流程](../../../ado/reference/ado-api/stream-object-ado.md)物件中修改資料的可用許可權。  
@@ -41,11 +41,19 @@ ms.locfileid: "82762509"
 >  **遠端資料服務使用量**在用戶端**連接**物件上使用時， **Mode**屬性只能設定為**adModeUnknown**。  
   
 ## <a name="applies-to"></a>套用至  
-  
-||||  
-|-|-|-|  
-|[Connection 物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Record 物件 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|[Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Connection 物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Record 物件 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另請參閱  
  [IsolationLevel 和 Mode 屬性範例（VB）](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
  [IsolationLevel 和 Mode 屬性範例（VC + +）](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   

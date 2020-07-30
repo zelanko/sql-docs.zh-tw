@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cfa1b416-003a-436f-a21b-bd2397e54db3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 33cb0b24806b0b4568a1d7eabc5a55aab4a9872b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 92c599665548c36b8349290b02d197393f707fbf
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759604"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243189"
 ---
 # <a name="streamreadenum"></a>StreamReadEnum
 指定是否應從[資料流程](../../../ado/reference/ado-api/stream-object-ado.md)物件讀取整個資料流程或下一行。  
@@ -34,7 +34,12 @@ ms.locfileid: "82759604"
  這些常數沒有 ADO/WFC 對應項。  
   
 ## <a name="applies-to"></a>套用至  
-  
-|||  
-|-|-|  
-|[Read 方法](../../../ado/reference/ado-api/read-method.md)|[ReadText 方法](../../../ado/reference/ado-api/readtext-method.md)|
+
+:::row:::
+    :::column:::
+        [Read 方法](../../../ado/reference/ado-api/read-method.md)  
+    :::column-end:::
+    :::column:::
+        [ReadText 方法](../../../ado/reference/ado-api/readtext-method.md)  
+    :::column-end:::
+:::row-end:::

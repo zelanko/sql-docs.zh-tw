@@ -1,5 +1,5 @@
 ---
-title: OLE DB 操作說明主題 | Microsoft Docs
+title: 如何主題（Native Client OLE DB 提供者）
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,13 +13,14 @@ ms.assetid: fbfab1b0-433d-497e-ae07-9b21a5c6903c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 539ad29e5dd3be3ebc5bce165e7480cd2217bf5a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 12c76eaf2a48fcea81ecaf348e8907daecbeee08
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006477"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243994"
 ---
-# <a name="ole-db-how-to-topics"></a>OLE DB 的使用說明主題
+# <a name="ole-db-how-to-topics-native-client-ole-db-provider"></a>OLE DB how to 主題（Native Client OLE DB 提供者）
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者，您必須瞭解如何建立與伺服器的連接、執行命令，以及處理結果。  

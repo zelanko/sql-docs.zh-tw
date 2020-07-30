@@ -18,14 +18,14 @@ ms.assetid: a7b8d142-d76a-44d9-a583-86ac5109fbe8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9740c208db10484ee1e3c5ef807c5223fe6adfd6
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 9943b2c5e05d9cdc90efa8752aedf933ec624db9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977716"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87241488"
 ---
-# <a name="creating-sql-server-tables"></a>建立 SQL Server 資料表
+# <a name="creating-sql-server-native-client-tables"></a>建立 SQL Server Native Client 資料表
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者會公開**ITableDefinition：： CreateTable**函數，讓取用者建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。 取用者會使用**CreateTable**來建立取用者命名的永久資料表，以及包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者所產生之唯一名稱的永久或臨時表。  

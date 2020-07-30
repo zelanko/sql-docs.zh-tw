@@ -1,5 +1,6 @@
 ---
 title: srv_senddone (擴充預存程序 API) | Microsoft Docs
+description: 瞭解擴充預存程式 API 中的 srv_senddone 如何將結果完成訊息傳送至用戶端。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1fc4f1d5-56d4-43f6-b5e4-0c0cc295cba3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5b5f7722daf7ebbdda988cf3fb41ac1ab5b06049
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 424ef5a1050def714e7f42483cb2c8d16ecfb99b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755853"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248243"
 ---
 # <a name="srv_senddone-extended-stored-procedure-api"></a>srv_senddone (擴充預存程序 API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

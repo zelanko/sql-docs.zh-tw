@@ -1,5 +1,5 @@
 ---
-title: 檔案資料流及 OLE DB | Microsoft Docs
+title: Filestream 和 OLE DB （Native Client OLE DB 提供者） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,13 +11,14 @@ ms.assetid: 8801f091-2241-4085-87b7-33e031328c9c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 43f69fae38a08bfec0ca0a084ac2f4480fbe334e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8e44fee28c553e3e6096d98decf7d75557fd81b3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011180"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247845"
 ---
-# <a name="filestream-and-ole-db"></a>資料流及 OLE DB
+# <a name="filestream-and-ole-db-native-client-ole-db-provider"></a>Filestream 和 OLE DB （Native Client OLE DB 提供者）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   本節包含四個範例，這些範例會示範如何使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 搭配 Filestream 功能：  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4134e34cc494185ec384bd9900ba578e9fa3034d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: db4b5d86c59e35ac3a7aa66684115668d19ead42
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755864"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243199"
 ---
 # <a name="save-method"></a>Save 方法
 將[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)儲存在檔案或[資料流程](../../../ado/reference/ado-api/stream-object-ado.md)物件中。  
@@ -34,7 +34,7 @@ recordset.Save Destination, PersistFormat
 ```  
   
 #### <a name="parameters"></a>參數  
- *位置*  
+ *目的地*  
  選擇性。 **Variant** ，代表要儲存**記錄集**之檔案的完整路徑名稱，或**資料流程**物件的參考。  
   
  *PersistFormat*  
@@ -88,11 +88,16 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
  以 XML 格式儲存的**記錄集會**使用 utf-8 格式儲存。 將這類檔案載入 ADO 資料流程時，除非資料流程的 [字元集] 屬性設定為 UTF-8 格式的適當值，否則資料流程物件不會嘗試從資料流程開啟**記錄集**。  
   
 ## <a name="applies-to"></a>套用至  
-  
-|||  
-|-|-|  
-|[Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另請參閱  
  [Save 和 Open 方法範例（VB）](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
  [Save 和 Open 方法範例（VC + +）](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)   

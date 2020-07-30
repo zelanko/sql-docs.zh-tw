@@ -1,5 +1,5 @@
 ---
-title: 取得大型資料 | Microsoft Docs
+title: 取得大型資料（Native Client OLE DB 提供者） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e9ba0351a3ea398661642a2e737a58fb7adecf8d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 298a442dbb93ca2c0bb95d79e341d712cd3651ea
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005845"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243679"
 ---
-# <a name="getting-large-data"></a>取得大型資料
+# <a name="getting-large-data-from-a-sql-server-native-client-ole-db-provider"></a>從 SQL Server Native Client OLE DB 提供者取得大型資料
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   一般而言，取用者應該隔離的程式碼會 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 從處理不透過**ISequentialStream**介面指標參考之資料的其他程式碼，建立原生用戶端 OLE DB 提供者儲存物件。  

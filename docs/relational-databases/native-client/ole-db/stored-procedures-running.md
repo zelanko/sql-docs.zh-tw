@@ -15,13 +15,14 @@ ms.assetid: c77d9be9-2176-4438-8c7a-04b63ebece08
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c86490f0a33ba1582ebebb3a9c1da78553098ff
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ca0211f6cab19b09ac0be43ba32768511f0f6a4f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012010"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247114"
 ---
-# <a name="stored-procedures---running"></a>預存程序 - 執行
+# <a name="stored-procedures---running-in-sql-server-native-client"></a>預存程式-在 SQL Server Native Client 中執行
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   執行陳述式時，在資料來源上呼叫預存程序 (而非直接在用戶端應用程式中執行或準備陳述式) 可以提供：  

@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: be6d076ca121923a4b6769c7dad5269c3fd642ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c55668bb565bd383d170e7bf331630bf8b6adef1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301158"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246597"
 ---
 # <a name="sqldescribeparam-function"></a>SQLDescribeParam 函數
 **標準**  
  引進的版本： ODBC 1.0 標準合規性： ODBC  
   
- **摘要**  
+ **總結**  
  **SQLDescribeParam**會傳回與備妥的 SQL 語句相關聯之參數標記的描述。 IPD 的欄位也提供這項資訊。  
   
 ## <a name="syntax"></a>語法  
@@ -47,7 +47,7 @@ SQLRETURN SQLDescribeParam(
       SQLSMALLINT *   NullablePtr);  
 ```  
   
-## <a name="argument"></a>引數  
+## <a name="arguments"></a>引數  
  *StatementHandle*  
  源語句控制碼。  
   
@@ -57,9 +57,9 @@ SQLRETURN SQLDescribeParam(
  *DataTypePtr*  
  輸出要傳回參數的 SQL 資料類型之緩衝區的指標。 此值會從 IPD 的 [SQL_DESC_CONCISE_TYPE 記錄] 欄位讀取。 這會是附錄 D：資料類型或驅動程式特有的 SQL 資料類型之[SQL 資料類型](../../../odbc/reference/appendixes/sql-data-types.md)區段中的其中一個值。  
   
- 在 ODBC 3 中。*x*、SQL_TYPE_DATE、SQL_TYPE_TIME 或 SQL_TYPE_TIMESTAMP 會分別在* \*DataTypePtr*中傳回日期、時間或時間戳記資料。在 ODBC 2 中。將會傳回*x*、SQL_DATE、SQL_TIME 或 SQL_TIMESTAMP。 當 ODBC 2 時，驅動程式管理員會執行必要的對應。*x*應用程式正在使用 ODBC 3。*x*驅動程式或 ODBC 3。*x*應用程式正在使用 ODBC 2。*x*驅動程式。  
+ 在 ODBC 3 中。*x*、SQL_TYPE_DATE、SQL_TYPE_TIME 或 SQL_TYPE_TIMESTAMP 會分別在* \* DataTypePtr*中傳回日期、時間或時間戳記資料; 在 ODBC 2 中則為。*x*將會傳回 x、SQL_DATE、SQL_TIME 或 SQL_TIMESTAMP。 當 ODBC 2 時，驅動程式管理員會執行必要的對應。*x*應用程式正在使用 ODBC 3。*x*驅動程式或 ODBC 3。*x*應用程式正在使用 ODBC 2。*x*驅動程式。  
   
- 當*ColumnNumber*等於0（針對書簽資料行）時，會在* \*DataTypePtr*中傳回可變長度書簽的 SQL_BINARY。 （如果 ODBC 3 使用書簽，則會傳回 SQL_INTEGER。使用 ODBC 2 的*x*應用程式。*x*驅動程式或 ODBC 2。使用 ODBC 3 的*x*應用程式。*x*驅動程式）。  
+ 當*ColumnNumber*等於0（針對書簽資料行）時，會在* \* DataTypePtr*中傳回可變長度書簽的 SQL_BINARY。 （如果 ODBC 3 使用書簽，則會傳回 SQL_INTEGER。使用 ODBC 2 的*x*應用程式。*x*驅動程式或 ODBC 2。使用 ODBC 3 的*x*應用程式。*x*驅動程式）。  
   
  如需詳細資訊，請參閱附錄 D：資料類型中的[SQL 資料類型](../../../odbc/reference/appendixes/sql-data-types.md)。 如需有關驅動程式特定 SQL 資料類型的詳細資訊，請參閱驅動程式的檔。  
   
@@ -78,7 +78,7 @@ SQLRETURN SQLDescribeParam(
   
 -   SQL_NullABLE_UNKNOWN：驅動程式無法判斷參數是否允許 Null 值。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR 或 SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診斷  
@@ -90,7 +90,7 @@ SQLRETURN SQLDescribeParam(
 |07009|不正確描述項索引|（DM）為引數*ParameterNumber*指定的值小於1。<br /><br /> 為引數*ParameterNumber*指定的值大於相關聯 SQL 語句中的參數數目。<br /><br /> 參數標記是非 DML 語句的一部分。<br /><br /> 參數標記是**選取**清單的一部分。|  
 |08S01|通訊連結失敗|在函式完成處理之前，驅動程式連線到驅動程式的資料來源之間的通訊連結失敗。|  
 |21S01|插入值清單與資料行清單不相符|**INSERT**語句中的參數數目，與語句中名為的資料表中的資料行數目不符。|  
-|HY000|一般錯誤|發生錯誤，但沒有任何特定 SQLSTATE，且未定義任何執行特定的 SQLSTATE。 MessageText 緩衝區中的**SQLGetDiagRec**所傳回的錯誤訊息描述錯誤及其原因。 * \* *|  
+|HY000|一般錯誤|發生錯誤，但沒有任何特定 SQLSTATE，且未定義任何執行特定的 SQLSTATE。 * \* MessageText*緩衝區中的**SQLGetDiagRec**所傳回的錯誤訊息描述錯誤及其原因。|  
 |HY001|記憶體配置錯誤|驅動程式無法配置支援執行或完成函數所需的記憶體。|  
 |HY008|已取消作業|已啟用*StatementHandle*的非同步處理。 已呼叫函式，在完成執行之前，會在*StatementHandle*上呼叫**SQLCancel**或**SQLCancelHandle** 。 然後在*StatementHandle*上再次呼叫函式。<br /><br /> 已呼叫函式，並在完成執行之前，從多執行緒應用程式中的不同執行緒在*StatementHandle*上呼叫**SQLCancel**或**SQLCancelHandle** 。|  
 |HY010|函數順序錯誤|（DM）在呼叫*StatementHandle*的**SQLPrepare**或**SQLExecDirect**之前，已呼叫函式。<br /><br /> （DM）已針對與*StatementHandle*相關聯的連接控制碼呼叫以非同步方式執行的函式。 呼叫**SQLDescribeParam**函數時，這個非同步函式仍在執行中。<br /><br /> （DM）已針對*StatementHandle*呼叫非同步執行的函式（而非這個函式），而且在呼叫這個函數時仍在執行中。<br /><br /> （DM）已針對*StatementHandle*呼叫**SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**或**SQLSetPos** ，並傳回 SQL_NEED_DATA。 在傳送資料給所有資料執行中參數或資料行之前，已呼叫此函數。|  

@@ -16,13 +16,14 @@ ms.assetid: 4cd0281a-a2a0-43df-8e46-eb478b64cb4b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 078c72afc26a2639f849e22699bf934c84f77a70
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8de1c2991660e7908b6fd1df1132c62c74044944
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005353"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246863"
 ---
-# <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
+# <a name="isscommandwithparameterssetparameterproperties-in-sql-server-native-client-ole-db"></a>SQL Server Native Client 中的 ISSCommandWithParameters：： SetParameterProperties （OLE DB）
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   依照序數根據每個參數來設定參數的屬性，或指定 SSPARAMPROPS 結構的陣列來設定大量參數屬性。  

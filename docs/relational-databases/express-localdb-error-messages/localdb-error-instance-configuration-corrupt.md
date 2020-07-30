@@ -9,20 +9,20 @@ ms.topic: reference
 ms.assetid: fdf2b601-4d5d-4789-9bf8-93d884a16350
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ec0d01bac3107086a55bf09096d243b5a319b648
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 12edbd6ccbb50757fddc5bf56160a7a8c05f3545
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756882"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246075"
 ---
 # <a name="localdb_error_instance_configuration_corrupt"></a>LOCALDB_ERROR_INSTANCE_CONFIGURATION_CORRUPT
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>詳細資料  
   
-|||  
-|-|-|  
+| 屬性 | 值 |
+| --------- | ----- |
 |產品名稱|SQL Server|  
 |事件識別碼|267|  
 |事件來源|SQL Server 本機資料庫執行階段 12.0|  

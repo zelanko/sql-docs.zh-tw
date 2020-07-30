@@ -9,14 +9,14 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 3b754fb2de33a230bc7d27f239b2778d2849fd5a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 352f51e0d53c9dc145b1faf1832faf59587fef6f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401269"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243089"
 ---
-# <a name="what-is-polybase"></a>什麼是 PolyBase？
+# <a name="configure-polybase-connectivity"></a>設定 PolyBase 連線能力
 PolyBase 可讓您的分析平臺系統（AP）處理可讀取資料，並將資料寫入外部資料源的 Transact-SQL 查詢。 存取外部資料的相同查詢也可以包含您的 AP 中的關聯資料表。 這可讓您將來自外部來源的資料與您的 AP 資料庫中的高價值關聯式資料結合。
 
 ![PolyBase 邏輯](media/polybase/polybase-logical.png)

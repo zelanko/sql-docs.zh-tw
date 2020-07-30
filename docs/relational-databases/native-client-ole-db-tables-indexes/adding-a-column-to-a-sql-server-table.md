@@ -16,14 +16,14 @@ ms.assetid: 22bae18a-bc9d-4617-8660-ed8b17a468d4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9042b2fb6c7495974cc64b16186834ebb30ed08
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 2e2e63f8a82de0423a24fb7c3030065da5bce952
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942224"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87241866"
 ---
-# <a name="adding-a-column-to-a-sql-server-table"></a>將資料行加入至 SQL Server 資料表
+# <a name="adding-a-column-to-a-table-in-sql-server-native-client"></a>在 SQL Server Native Client 中將資料行加入至資料表
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者會公開**ITableDefinition：： AddColumn**函數。 如此可讓取用者將資料行加入至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。  

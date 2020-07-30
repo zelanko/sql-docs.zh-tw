@@ -15,13 +15,14 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82c2e5f35d7418f9c1c44a9a7711b7ef546eb3ac
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0dec84f95cf60818336956e2d6e86d871a3fdc00
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998184"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245873"
 ---
-# <a name="conversions-ole-db"></a>轉換 (OLE DB)
+# <a name="sql-server-native-client-conversions-ole-db"></a>SQL Server Native Client 轉換（OLE DB）
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   本節討論如何在 **datetime** 和 **datetimeoffset** 值之間進行轉換。 本節中所描述的轉換已由 OLE DB 提供，或是一致的 OLE DB 延伸模組。  

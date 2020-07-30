@@ -18,13 +18,14 @@ ms.assetid: 37769b1c-c480-419a-8c54-5cc420bf73db
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed9ce32d2ea7aa06468210277c7688c04fb55022
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 230ecf53d6260cb11411b2513e6b06a7fac883d1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86013092"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246798"
 ---
-# <a name="updating-data-in-rowsets"></a>更新資料列集中的資料
+# <a name="updating-data-in-rowsets-in-sql-server-native-client"></a>更新 SQL Server Native Client 中資料列集內的資料
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當取用者更新包含該資料的可修改資料列集時，Native Client OLE DB 提供者會更新資料。 當取用者要求 **IRowsetChange** 或 **IRowsetUpdate** 介面的支援時，就會建立可修改的資料列集。  

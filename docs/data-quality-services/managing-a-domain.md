@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 77e1dc6a2e0039c8ff9a2f66c6b3ed45a2176a17
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 32ecd829cbd3de8845f38a367e1e23d5af39ec48
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898108"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363004"
 ---
 # <a name="managing-a-domain"></a>管理定義域
 
@@ -44,7 +44,7 @@ ms.locfileid: "85898108"
 ## <a name="in-this-section"></a>本節內容  
  使用定義域可讓您執行以下作業：  
   
-|||  
+|作業描述|主題|  
 |-|-|  
 |針對具有特定資料類型的資料欄位建立語意表示法、指定如何擴展定義域，以及設定定義域輸出的格式|[建立定義域](../data-quality-services/create-a-domain.md)|  
 |將定義域連結到另一個定義域，讓它共用相同的設定與值|[建立連結的定義域](../data-quality-services/create-a-linked-domain.md)|  

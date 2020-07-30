@@ -1,5 +1,5 @@
 ---
-title: 使用 IRow::GetColumns 擷取資料行 (OLE DB) | Microsoft Docs
+title: 使用 IRow：： GetColumns 提取資料行（Native Client OLE DB 提供者） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,18 +13,19 @@ ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db4a869049b0092f314e2cb89035d4a5549c0760
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 645c627f70b3135792b882a1ae62504948f2839a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004556"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247862"
 ---
-# <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>使用 IRow::GetColumns 提取資料行 (OLE DB)
+# <a name="fetch-columns-in-sql-server-native-client-using-irowgetcolumns-ole-db"></a>使用 IRow：： GetColumns （OLE DB）在 SQL Server Native Client 中提取資料行
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   **IRow** 介面允許直接存取結果集中單一資料列的資料行。 因此，**IRow** 是從包含一個資料列之結果集擷取資料行的有效方式。  
   
- 系統會提供一個程式碼範例，顯示如何使用 **IRow** 擷取單一資料列。 在此範例中，系統會從資料列一次擷取一個資料行。 此範例會示範：  
+ 提供程式碼範例，說明如何使用**IRow**提取單一資料列。 在此範例中，系統會從資料列一次擷取一個資料行。 此範例會示範：  
   
 -   如何提取資料行的群組 (依序)。  
   
@@ -56,7 +57,7 @@ ms.locfileid: "86004556"
   
  第一個 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單會建立此範例所使用的資料表。  
   
- 使用 ole32.lib oleaut32.lib 編譯並執行第二個 (C++) 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連線到具名執行個體，請將連接字串從 L"(local)" 變更為 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
+ 使用 ole32.lib oleaut32.lib 編譯並執行第二個 (C++) 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連接到已命名的實例，請將連接字串從 L "（local）" 變更為 L "（local） \\ \name"，其中 name 是已命名的實例。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
   
  第三個 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單會刪除此範例所使用的資料表。  
   

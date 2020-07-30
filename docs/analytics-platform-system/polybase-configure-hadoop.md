@@ -9,14 +9,14 @@ ms.date: 12/13/2019
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019, seo-lt-2019
-ms.openlocfilehash: dc796ff58c5320e60011dc46dd45468177a98ed8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2989be74f4c180d07a6270a8ba5f685460780fbd
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245386"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243472"
 ---
-# <a name="configure-polybase-to-access-external-data-in-hadoop"></a>設定 PolyBase 存取 Hadoop 中的外部資料
+# <a name="configure-polybase-in-parallel-data-warehouse-to-access-external-data-in-hadoop"></a>在平行處理資料倉儲中設定 PolyBase 以存取 Hadoop 中的外部資料
 
 本文說明如何在 AP 設備上使用 PolyBase 來查詢 Hadoop 中的外部資料。
 
@@ -55,7 +55,7 @@ PolyBase 支援兩個 Hadoop 提供者，Hortonworks Data Platform (HDP) 和 Clo
   
 1. 開啟連接至 PDW 控制項節點的遠端桌面連線。
 
-2. 在控制節點上尋找**yarn-site.xml**檔案。 通常其路徑如下：  
+2. 在控制節點上尋找**yarn-site.xml**的檔案。 通常其路徑如下：  
 
    ```xml  
    C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf\  
@@ -63,7 +63,7 @@ PolyBase 支援兩個 Hadoop 提供者，Hortonworks Data Platform (HDP) 和 Clo
 
 3. 在 Hadoop 電腦上，尋找 Hadoop 組態目錄中的類比檔案。 在檔案中，尋找並複製組態機碼 yarn.application.classpath 的值。  
   
-4. 在 [控制] 節點的 [ **yarn** ] 檔案中，尋找 [ **yarn** ] 屬性。 將 Hadoop 電腦的值貼到 value 元素中。  
+4. 在 [控制] 節點的 [ **yarn.site.xml** ] 檔案中，尋找 [ **yarn** ] 屬性。 將 Hadoop 電腦的值貼到 value 元素中。  
   
 5. 針對所有 CDH 5.X 版本，您需要將 mapreduce.application.classpath 組態參數新增至 yarn.site.xml 檔案結尾或 mapred-site.xml 檔案。 HortonWorks 會將這些組態包含在 yarn.application.classpath 組態內。 如需範例，請參閱 [PolyBase 組態](../relational-databases/polybase/polybase-configuration.md)。
 
@@ -102,7 +102,7 @@ PolyBase 支援兩個 Hadoop 提供者，Hortonworks Data Platform (HDP) 和 Clo
 </configuration>
 ```
 
-如果您選擇將您的兩個設定分割成 mapred-site.xml 和 yarn-site.xml，則檔案如下所示：
+如果您選擇將兩個設定分割成 mapred-site.xml 和 yarn-site.xml，則檔案如下所示：
 
 **yarn-site.xml**
 
@@ -227,7 +227,7 @@ PolyBase 支援兩個 Hadoop 提供者，Hortonworks Data Platform (HDP) 和 Clo
    WITH IDENTITY = '<hadoop_user_name>', Secret = '<hadoop_password>';  
    ```
 
-3. 使用[建立外部資料源](../t-sql/statements/create-external-data-source-transact-sql.md)建立外部資料源。
+3. 使用 [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md) 建立外部資料來源。
 
    ```sql
    -- LOCATION (Required) : Hadoop Name Node IP address and port.  

@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e413913d3064b4302d4673098b82d220acc23aa1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ef825848ee0e2c43a1a70441009a590c41ce5526
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764559"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242838"
 ---
 # <a name="ado-properties"></a>ADO 屬性
 
-|||  
+|屬性|描述|  
 |-|-|  
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|指出目前記錄所在的頁面。|  
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|指出**記錄集**物件目前記錄的序數位置。|  
@@ -48,16 +48,16 @@ ms.locfileid: "82764559"
 |[源](../../../ado/reference/ado-api/datasource-property-ado.md)|表示物件，其中包含要表示為**記錄集**物件的資料。|  
 |[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)|表示**連接**物件的預設資料庫。|  
 |[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)|指出**欄位**物件的資料容量。|  
-|[描述](../../../ado/reference/ado-api/description-property.md)|描述**錯誤**物件。|  
+|[說明](../../../ado/reference/ado-api/description-property.md)|描述**錯誤**物件。|  
 |[專用](../../../ado/reference/ado-api/dialect-property.md)|指出提供者將用來剖析**CommandText**或**CommandStream**屬性的語法和一般規則。|  
 |[方向](../../../ado/reference/ado-api/direction-property.md)|指出**參數**是否代表輸入參數、輸出參數或兩者，如果參數是預存程式的傳回值，則為。|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|指出目前記錄的編輯狀態。|  
 |[EOS](../../../ado/reference/ado-api/eos-property.md)|指出目前的位置是否在資料流程的結尾。|  
 |[Filter](../../../ado/reference/ado-api/filter-property.md)|表示**記錄集中**資料的篩選。|  
 |[HelpCoNtext 和説明](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)|指出與**錯誤**物件相關聯的說明檔和主題。<br /><br /> **HelpContextID**比對會針對說明檔中的主題傳回內容識別碼，做為**完整**的值。<br /><br /> **HelpFile** [檔案保護] 會傳回評估為說明檔之完整解析路徑的**字串**值。|  
-|[索引](../../../ado/reference/ado-api/index-property.md)|指出目前對**記錄集**物件有效的索引名稱。|  
+|[Index](../../../ado/reference/ado-api/index-property.md)|指出目前對**記錄集**物件有效的索引名稱。|  
 |[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)|表示**連接**物件的隔離層級。|  
-|[項目](../../../ado/reference/ado-api/item-property-ado.md)|以名稱或序數表示集合的特定成員。|  
+|[Item](../../../ado/reference/ado-api/item-property-ado.md)|以名稱或序數表示集合的特定成員。|  
 |[LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md)|表示要在文字**資料流程**物件中當做行分隔符號使用的二進位字元。|  
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|表示在編輯期間放置在記錄上的鎖定類型。|  
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|指出哪些記錄要封送處理回伺服器。|  
@@ -65,7 +65,7 @@ ms.locfileid: "82764559"
 |[Mode](../../../ado/reference/ado-api/mode-property-ado.md)|表示在**連接**、**記錄**或**資料流程**物件中修改資料的可用許可權。|  
 |[名稱](../../../ado/reference/ado-api/name-property-ado.md)|指出物件的名稱。|  
 |[NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md)|指出特定**錯誤**物件的提供者特定錯誤碼。|  
-|[項數](../../../ado/reference/ado-api/number-property-ado.md)|指出唯一識別**錯誤**物件的數位。|  
+|[Number](../../../ado/reference/ado-api/number-property-ado.md)|指出唯一識別**錯誤**物件的數位。|  
 |[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)|表示**參數**或**欄位**物件中數值的小數位數。|  
 |[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)|表示在進行任何變更之前，存在於記錄中的**欄位**值。|  
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|指出**記錄集**物件包含多少頁的資料。|  
@@ -78,7 +78,7 @@ ms.locfileid: "82764559"
 |[提供者](../../../ado/reference/ado-api/provider-property-ado.md)|表示**連接**物件之提供者的名稱。|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|指出記錄**集**物件中的記錄數目。|  
 |[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)|表示**記錄**物件的類型。|  
-|[連續](../../../ado/reference/ado-api/row-property-ado.md)|取得或設定**ADORecordConstruction**物件上/的 OLE DB 資料**列**物件。|  
+|[資料列](../../../ado/reference/ado-api/row-property-ado.md)|取得或設定**ADORecordConstruction**物件上/的 OLE DB 資料**列**物件。|  
 |[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|取得或設定在**ADORecordsetConstruction**物件上/的 OLE DB **RowPosition**物件。|  
 |[資料列集](../../../ado/reference/ado-api/rowset-property-ado.md)|取得或設定**ADORecordsetConstruction**物件上/的 OLE DB 資料列**集**物件。|  
 |[來源（ADO 錯誤）](../../../ado/reference/ado-api/source-property-ado-error.md)|表示原本產生錯誤之物件或應用程式的名稱。|  
@@ -90,10 +90,10 @@ ms.locfileid: "82764559"
 |[狀態（ADO 記錄集）](../../../ado/reference/ado-api/status-property-ado-recordset.md)|指出有關批次更新或其他大量作業的目前記錄狀態。|  
 |[StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)|指出階層式**記錄集**物件中，當父資料列位置變更時，基礎子記錄（也就是*章節*）的參考是否會變更。|  
 |[Stream 屬性](../../../ado/reference/ado-api/stream-property.md)|取得或設定**ADOStreamConstruction**物件上/的 OLE DB**資料流程**物件。|  
-|[類型](../../../ado/reference/ado-api/type-property-ado.md)|表示**參數**、**欄位**或**屬性**物件的操作類型或資料類型。|  
+|[型別](../../../ado/reference/ado-api/type-property-ado.md)|表示**參數**、**欄位**或**屬性**物件的操作類型或資料類型。|  
 |[類型（ADO 資料流程）](../../../ado/reference/ado-api/type-property-ado-stream.md)|表示**資料流程**中包含的資料類型（二進位或文字）。|  
 |[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)|指出**欄位**物件在資料庫中的目前值。|  
-|[值](../../../ado/reference/ado-api/value-property-ado.md)|指出指派給**欄位**、**參數**或**屬性**物件的值。|  
+|[ReplTest1](../../../ado/reference/ado-api/value-property-ado.md)|指出指派給**欄位**、**參數**或**屬性**物件的值。|  
 |[版本](../../../ado/reference/ado-api/version-property-ado.md)|表示 ADO 版本號碼。|  
   
 ## <a name="see-also"></a>另請參閱  

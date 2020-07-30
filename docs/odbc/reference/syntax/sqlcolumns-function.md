@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: 4a3618b7-d2b8-43c6-a1fd-7a4e6fa8c7d0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 36293c1f2393e9a57351fc8cd19dcc6e3338f5cc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 26d71bbe370e41683da44aafecd32c9e3050a223
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301254"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362754"
 ---
 # <a name="sqlcolumns-function"></a>SQLColumns 函數
 **標準**  
  引進的版本： ODBC 1.0 標準合規性：開啟群組  
   
- **摘要**  
+ **總結**  
  **SQLColumns**會傳回指定資料表中的資料行名稱清單。 驅動程式會在指定的*StatementHandle*上，以結果集的形式傳回此資訊。  
   
 ## <a name="syntax"></a>語法  
@@ -89,7 +89,7 @@ SQLRETURN SQLColumns(
  *NameLength4*  
  源**ColumnName*的長度（以字元為單位）。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR 或 SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診斷  
@@ -102,7 +102,7 @@ SQLRETURN SQLColumns(
 |24000|指標狀態無效|已在*StatementHandle*上開啟資料指標，且已呼叫**SQLFetch**或**SQLFetchScroll** 。 如果**SQLFetch**或**SQLFetchScroll**未傳回 SQL_NO_DATA，驅動程式管理員會傳回此錯誤，如果**SQLFetch**或**SQLFetchScroll**已傳回 SQL_NO_DATA，驅動程式會傳回此錯誤。<br /><br /> 已在*StatementHandle*上開啟資料指標，但尚未呼叫**SQLFetch**或**SQLFetchScroll** 。|  
 |40001|序列化失敗|交易已回復，因為有另一個交易的資源鎖死。|  
 |40003|語句完成不明|此函式執行期間相關聯的連接失敗，無法判斷交易的狀態。|  
-|HY000|一般錯誤|發生錯誤，但沒有任何特定 SQLSTATE，且未定義任何執行特定的 SQLSTATE。 MessageText 緩衝區中的**SQLGetDiagRec**所傳回的錯誤訊息描述錯誤及其原因。 * \* *|  
+|HY000|一般錯誤|發生錯誤，但沒有任何特定 SQLSTATE，且未定義任何執行特定的 SQLSTATE。 * \* MessageText*緩衝區中的**SQLGetDiagRec**所傳回的錯誤訊息描述錯誤及其原因。|  
 |HY001|記憶體配置錯誤|驅動程式無法配置支援執行或完成函數所需的記憶體。|  
 |HY008|已取消作業|已啟用*StatementHandle*的非同步處理。 已呼叫函式，在完成執行之前，會在*StatementHandle*上呼叫**SQLCancel**或**SQLCancelHandle** 。 然後在*StatementHandle*上再次呼叫函式。<br /><br /> 已呼叫函式，並在完成執行之前，從多執行緒應用程式中的不同執行緒在*StatementHandle*上呼叫**SQLCancel**或**SQLCancelHandle** 。|  
 |HY009|Null 指標的使用不正確|SQL_ATTR_METADATA_ID 語句屬性已設定為 SQL_TRUE， *CatalogName*引數為 null 指標，而 SQL_CATALOG_NAME *InfoType*會傳回支援的目錄名稱。<br /><br /> （DM） SQL_ATTR_METADATA_ID 語句屬性已設定為 SQL_TRUE，而*SchemaName*、 *TableName*或*ColumnName*引數為 null 指標。|  
@@ -148,16 +148,25 @@ SQLRETURN SQLColumns(
 |RADIX|NUM_PREC_RADIX|  
   
  下列資料行已加入至**SQLColumns** for ODBC 3 所傳回的結果集。*x*：  
-  
-|||  
-|-|-|  
-|CHAR_OCTET_LENGTH|ORDINAL_POSITION|  
-|COLUMN_DEF|SQL_DATA_TYPE|  
-|IS_NULLABLE|SQL_DATETIME_SUB|  
-  
+
+:::row:::
+    :::column:::
+        CHAR_OCTET_LENGTH  
+        COLUMN_DEF  
+    :::column-end:::
+    :::column:::
+        IS_NULLABLE  
+        ORDINAL_POSITION  
+    :::column-end:::
+    :::column:::
+        SQL_DATA_TYPE  
+        SQL_DATETIME_SUB  
+    :::column-end:::
+:::row-end:::
+
  下表列出結果集中的資料行。 驅動程式可定義超出第18欄（IS_NullABLE）的其他資料行。 應用程式應該從結果集的結尾向下計算，而不是指定明確的序數位置，藉以取得驅動程式特定資料行的存取權。 如需詳細資訊，請參閱[目錄函數所傳回的資料](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)。  
   
-|資料行名稱|資料行<br /><br /> number|資料類型|評價|  
+|資料行名稱|資料行<br /><br /> 數字|資料類型|評價|  
 |-----------------|-----------------------|---------------|--------------|  
 |TABLE_CAT （ODBC 1.0）|1|Varchar|目錄名稱;如果不適用於資料來源，則為 Null。 如果驅動程式支援某些資料表的目錄，但不適用於其他資料表，例如當驅動程式從不同的 Dbms 抓取資料時，它會針對沒有目錄的那些資料表傳回空字串（""）。|  
 |TABLE_SCHEM （ODBC 1.0）|2|Varchar|架構名稱;如果不適用於資料來源，則為 Null。 如果驅動程式支援某些資料表的架構，但不適用於其他資料表，例如當驅動程式從不同的 Dbms 抓取資料時，它會針對沒有架構的資料表傳回空字串（""）。|  

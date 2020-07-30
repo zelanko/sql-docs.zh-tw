@@ -1,5 +1,5 @@
 ---
-title: 設定大型資料 | Microsoft Docs
+title: 設定大型資料（Native Client OLE DB 提供者）
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,14 @@ ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8de78c3d4218c3f5ef37e1e2d7a0e197f8c2d1c0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 01e0e20b410ddf2300779923ed317a897a74862d
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002857"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332173"
 ---
-# <a name="setting-large-data"></a>設定大型資料
+# <a name="setting-large-data-in-sql-server-native-client"></a>在 SQL Server Native Client 中設定大型資料
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者，您可以藉由傳遞取用者儲存物件的指標來設定 BLOB 資料。  

@@ -9,20 +9,20 @@ ms.topic: reference
 ms.assetid: e3e5e5dc-21dc-42fc-82a6-730fed46ef16
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d8b2a7c9134db93b9192fd9993f50042e4c4d144
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5787ae12a495288944cf1bd2edc82bef0668a9a3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85641485"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245968"
 ---
 # <a name="localdb_error_sql_server_startup_failed"></a>LOCALDB_ERROR_SQL_SERVER_STARTUP_FAILED
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>詳細資料  
   
-|||  
-|-|-|  
+| 屬性 | 值 |
+| --------- | ----- |
 |產品名稱|SQL Server|  
 |事件識別碼|266|  
 |事件來源|SQL Server 本機資料庫執行階段 12.0|  

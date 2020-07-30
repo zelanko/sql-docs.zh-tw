@@ -9,12 +9,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e609beb77b92a6dbaf95f39bf5a2a6971a7ae5c4
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 684979981878590c0fbd8d56c648525b25e7c8b6
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85039831"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243076"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System 的新功能，向外延展 MPP 資料倉儲
 請參閱 Microsoft Analytics Platform System （AP）最新設備更新的新功能。 「AP」是一種向外延展內部部署應用裝置，其裝載 MPP SQL Server 平行處理資料倉儲。 
@@ -65,6 +65,8 @@ PolyBase 現在支援讀取以 UTF16 （LE）編碼的分隔文字檔。 如需�
 
 ### <a name="aps-informatica-connector-for-informatica-1020-published"></a>已發佈適用于 Informatica 10.2.0 的 AP Informatica connector
 我們已發行新版本的 Informatica 連接器，適用于搭配 Informatica 版本10.2.0 和10.2.0 修補程式1的 AP。 您可以從[下載網站](https://www.microsoft.com/download/details.aspx?id=57472)下載新的連接器。
+> [!NOTE]
+> 適用于 Informatica 10.2.0 或10.2.0 的 AP Informatica 連接器1無法在嚴格的 TLS 1.2 上運作，而且需要 TLS 1.0 和1.1 才能完全正常運作。
 
 #### <a name="supported-versions"></a>支援的版本
 
@@ -138,7 +140,7 @@ AP 支援部分 T-sql [dbcc 命令](https://docs.microsoft.com/sql/t-sql/databas
 ### <a name="bug-fixes"></a>錯誤修正
 我們已使用 AP CU 7.1 升級至 SQL Server 2016 SP2 CU2。 升級會修正下面所述的一些問題。
 
-| Title | 描述 |
+| 標題 | 描述 |
 |:---|:---|
 | **潛在的元組移動器鎖死** |此升級會修正分散式交易和元組移動程式背景執行緒中長期鎖死的可能性。 安裝 CU 7.1 之後，使用 TF634 來停止「元組移動器」做為 SQL Server 啟動參數或全域追蹤旗標的客戶可以安全地移除它。 | 
 | **特定 lag/潛在客戶查詢失敗** |現在已透過這項升級修正了對 CCI 資料表的某些查詢，其中包含會發生錯誤的嵌套延遲/潛在客戶函數。 | 

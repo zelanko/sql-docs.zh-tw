@@ -9,20 +9,20 @@ ms.topic: reference
 ms.assetid: 626b73d3-a257-4b45-82fb-c6299faa0001
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 885d26fabd2a3012bdf250079254ae1b5faf9165
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a1f5da62f17daa11f29c7f54a4f75cf341a6f25b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756948"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243693"
 ---
 # <a name="localdb_error_cannot_create_instance_folder"></a>LOCALDB_ERROR_CANNOT_CREATE_INSTANCE_FOLDER
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>詳細資料  
   
-|||  
-|-|-|  
+| 屬性 | 值 |
+| --------- | ----- |
 |產品名稱|SQL Server|  
 |事件識別碼|256|  
 |事件來源|SQL Server 本機資料庫執行階段 12.0|  

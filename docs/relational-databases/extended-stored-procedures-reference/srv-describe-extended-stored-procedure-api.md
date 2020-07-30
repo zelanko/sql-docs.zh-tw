@@ -1,5 +1,6 @@
 ---
 title: srv_describe (擴充預存程序 API) | Microsoft Docs
+description: 瞭解擴充預存程式 API 中的 srv_describe 如何定義資料列中特定資料行的資料行名稱和來源與目的地資料類型。
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2115600e-5ce7-4be0-9cd3-a1dd1fab0729
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d6c181ad19d3027c5262b988a8c32fdcff52e901
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e2dc77e2ff3314664b28647980b62dabdde450fc
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85678595"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248466"
 ---
 # <a name="srv_describe-extended-stored-procedure-api"></a>srv_describe (擴充預存程序 API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

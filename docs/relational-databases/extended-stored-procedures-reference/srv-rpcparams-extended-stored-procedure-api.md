@@ -1,5 +1,6 @@
 ---
 title: srv_rpcparams (擴充預存程序 API) | Microsoft Docs
+description: 瞭解 srv_rpcparams，以及它如何傳回目前遠端預存程式的參數數目。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 96a5e6f6-d320-4623-b96e-0a856e3abebb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 328359e13594de8666fcdf031798dc59151ddd89
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 47fa4b7a539f1491d539b73fdcc50a9b298db910
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755863"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248257"
 ---
 # <a name="srv_rpcparams-extended-stored-procedure-api"></a>srv_rpcparams (擴充預存程序 API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

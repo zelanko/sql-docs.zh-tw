@@ -10,13 +10,14 @@ ms.assetid: 9b1d0d9d-1f6e-4399-8f61-e23f9a486a7a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed08d716dda8007fbd6ae7d7d39d7e20e60950b9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 47faf3970acd56bdc02c790c835837c1d2055dd5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009062"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245779"
 ---
-# <a name="date-and-time-improvements"></a>日期和時間改善
+# <a name="sql-server-native-client-date-and-time-improvements"></a>SQL Server Native Client 日期和時間改善
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   本主題描述 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 對 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 中所加入日期和時間資料類型的支援。  

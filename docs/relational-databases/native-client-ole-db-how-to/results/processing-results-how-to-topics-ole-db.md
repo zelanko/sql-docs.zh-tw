@@ -1,5 +1,5 @@
 ---
-title: 處理結果操作說明主題 (OLE DB) | Microsoft Docs
+title: 處理結果的使用說明主題（Native Client OLE DB 提供者）
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,13 +13,14 @@ ms.assetid: 23cc2688-6080-497e-8151-712d10da5fef
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72707085af2cdc39b2e2ef24804613af7a68f171
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 558ff0ae2d1ad83392a1b7b94a779c1a2b099636
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006416"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246982"
 ---
-# <a name="processing-results-how-to-topics-ole-db"></a>處理結果的使用說明主題 (OLE DB)
+# <a name="processing-results-how-to-topics-native-client-ole-db-provider"></a>處理結果的使用說明主題（Native Client OLE DB 提供者）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   在 OLE DB 應用程式中處理結果所牽涉到的步驟是先決定結果集的特性，然後將資料擷取到程式變數中。 如果命令執行預存程序，您也必須知道如何處理預存程序中的傳回碼和輸出參數。  
