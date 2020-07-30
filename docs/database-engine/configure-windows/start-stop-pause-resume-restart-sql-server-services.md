@@ -41,12 +41,12 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: ca8891058091bca9862fbdbf81bfa51cc17d250a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 385e0a0d6873f8480c3d99efe9700ef938fc3abf
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763983"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363028"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>啟動、停止、暫停、繼續、重新啟動 SQL Server 服務
 
@@ -114,7 +114,7 @@ Windows 服務，其會接聽傳入要求以找出 SQL Server 資源，並提供
 
 因為 SQL Server 組態管理員是 Microsoft 管理主控台程式的嵌入式管理單元，而不是獨立的程式，所以 SQL Server 組態管理員在較新版本的 Windows 中不會作為應用程式出現。 以下是 Windows 安裝在 C 磁碟機時，四個最新版本的路徑。  
 
-|||
+|版本|Path|
 |-|-|
 |SQL Server 2019|C:\Windows\SysWOW64\SQLServerManager15.msc|
 |SQL Server 2017|C:\Windows\SysWOW64\SQLServerManager14.msc|

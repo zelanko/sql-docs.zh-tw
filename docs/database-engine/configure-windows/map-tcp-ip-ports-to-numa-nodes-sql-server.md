@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 07727642-0266-4cbc-8c55-3c367e4458ca
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e6926fba5e248b51df28b342b5c7d49ecf497f89
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 055821c4d005c52ff20b79967fca35ac2994ff9f
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85680957"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362611"
 ---
 # <a name="map-tcp-ip-ports-to-numa-nodes-sql-server"></a>將 TCP/IP 連接埠對應到 NUMA 節點 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,10 +34,10 @@ ms.locfileid: "85680957"
   
  若要判斷您想要使用之節點的節點號碼，請從錯誤記錄檔或從 **sys.dm_os_schedulers** 檢視中讀取節點資訊。 若要將 TCP/IP 位址和通訊埠設為單一或多重節點，請在通訊埠編號後面用方括號附加節點識別點陣圖 (相似性遮罩)。 可以用十進位或十六進位格式指定節點。 若要建立點陣圖，請由零開始，將節點從右到左編號，例如 76543210。 建立節點清單的二進位表示法，以 1 代表您要使用的節點，以 0 代表您不要使用的節點。 例如，若要使用 NUMA 節點 0、2 和 5，請指定 00100101。  
   
-|||  
-|-|-|  
-|NUMA 節點號碼|76543210|  
-|從右算起，0、2 和 5 的遮罩|00100101|  
+```text
+NUMA node number                            76543210
+Mask for 0, 2, and 5 counting from right    00100101
+```
   
  將二進位表示法 (00100101) 轉換成十進位 `[37]`或十六進位 `[0x25]`。 若要接聽所有節點，則不要提供節點識別碼。  
   
