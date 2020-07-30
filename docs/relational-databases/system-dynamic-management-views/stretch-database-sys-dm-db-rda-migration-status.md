@@ -1,5 +1,6 @@
 ---
 title: sys.databases dm_db_rda_migration_status （Transact-sql） |Microsoft Docs
+description: 瞭解 sys. dm_db_rda_migration_status 針對每個從 SQL Server 本機實例上已啟用 Stretch 的資料表，各包含一個資料列。
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,11 +19,12 @@ helpviewer_keywords:
 ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 1e383b01ce40dbb03f5134bf5374b9b39bc2a99e
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 87e69284a4fdcac90420ec8a091fd1bd66933bb0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053484"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87238788"
 ---
 # <a name="stretch-database---sysdm_db_rda_migration_status"></a>Stretch Database-sys. dm_db_rda_migration_status
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

@@ -20,15 +20,15 @@ ms.assetid: 3c1887df-6bd8-491e-82fc-d25ad9589faf
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d39fe1b573e038459853857496c651e9ad2af83b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2413e629e969fb0aa7dff93dc2959f1b7a007b10
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831465"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394003"
 ---
 # <a name="sysquery_context_settings-transact-sql"></a>sys.databases query_coNtext_settings （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   包含影響與查詢相關聯之內容設定之語義的相關資訊。 有一些內容設定會 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 影響查詢的語義（定義正確的查詢結果）。 在不同設定下編譯的相同查詢文字，可能會產生不同的結果（視基礎資料而定）。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82831465"
 |-----------------|---------------|-----------------|  
 |**coNtext_settings_id**|**bigint**|主索引鍵。 這個值會在查詢的顯示計畫 XML 中公開。|  
 |**set_options**|**varbinary(8)**|用來反映數個 SET 選項之狀態的位元遮罩。 如需詳細資訊，請參閱[dm_exec_plan_attributes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)。|  
-|**language_id**|**smallint**|語言的識別碼。 如需詳細資訊，請參閱[sys.syslanguages &#40;transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)。|  
+|**language_id**|**smallint**|語言的識別碼。 如需詳細資訊，請參閱[sys.sys&#40;transact-sql&#41;的語言](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)。|  
 |**date_format**|**smallint**|日期格式。 如需詳細資訊，請參閱 [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md)。|  
 |**date_first**|**tinyint**|日期第一個值。 如需詳細資訊，請參閱 [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md)。|  
 |**status**|**Varbinary （2）**|位元遮罩欄位，表示執行查詢的查詢或內容類型。 <br />資料行值可以是多個旗標的組合（以十六進位表示）：<br /><br /> 0x0-一般查詢（無特定旗標）<br /><br /> 0x1-透過其中一個資料指標 Api 預存程式執行的查詢<br /><br /> 0x2-通知的查詢<br /><br /> 0x4-內部查詢<br /><br /> 0x8-不含通用參數化的自動參數化查詢<br /><br /> 0x10-資料指標提取重新整理查詢<br /><br /> 0x20-正用於資料指標更新要求中的查詢<br /><br /> 0x40-當資料指標開啟時，會傳回初始結果集（資料指標自動提取）<br /><br /> 0x80-加密查詢<br /><br /> 0x100-在資料列層級安全性述詞的內容中查詢|  
@@ -59,8 +59,8 @@ ms.locfileid: "82831465"
  [query_store_wait_stats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)   
  [query_store_runtime_stats_interval &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [相關檢視、函數與程序](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [查詢存放區預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
+ [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [查詢存放區預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
   
   

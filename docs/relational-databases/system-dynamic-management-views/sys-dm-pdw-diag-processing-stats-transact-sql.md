@@ -12,15 +12,15 @@ ms.assetid: df659c55-4f63-45f8-8afe-ce300031bc5b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: aac1c35f86b0d7f9d12405cb25136015afb5a52b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a765e591e3b55bb4be2e2b6d7431873702910f6f
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811298"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394350"
 ---
 # <a name="sysdm_pdw_diag_processing_stats-transact-sql"></a>sys.databases dm_pdw_diag_processing_stats （Transact-sql）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   顯示所有內部診斷事件的相關資訊，這些事件可以併入系統管理員定義的診斷會話中。 查詢此視圖，以瞭解診斷和事件子系統背後的統計資料，以驅動所有其他 Dmv 的人口。 每個節點上的每個處理常式都有一組佇列。  
   

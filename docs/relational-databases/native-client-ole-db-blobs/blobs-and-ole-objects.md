@@ -17,14 +17,14 @@ ms.assetid: 767fa2f6-9cd2-436f-add5-e760bed29a58
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 534daca6dfafc4db333bc9ad90c6a0b269fae637
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 3d8ca3c194be1b13bad029a45040daa2f7e61108
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943110"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242298"
 ---
-# <a name="blobs-and-ole-objects"></a>BLOB 與 OLE 物件
+# <a name="blobs-and-ole-objects-in-sql-server-native-client"></a>SQL Server Native Client 中的 Blob 和 OLE 物件
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者會公開**ISequentialStream**介面，以支援取用者存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Ntext**、 **text**、 **image**、 **Varchar （max）**、 **Nvarchar （max）**、 **Varbinary （max）** 和 xml 資料類型做為二進位大型物件（blob）。 **ISequentialStream** 上的 **Read** 方法可讓取用者在可管理的區塊中擷取更多資料。  

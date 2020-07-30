@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca14531410942a77add7c6c99756b64bf99e785c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 89de6b52bd7987a2bdd2b8bee8e5c58b38d6074f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764519"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242698"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 指定[欄位](../../../ado/reference/ado-api/field-object.md)物件的一或多個屬性。  
@@ -64,7 +64,12 @@ ms.locfileid: "82764519"
 |AdoEnums. FieldAttribute. 可更新|  
   
 ## <a name="applies-to"></a>套用至  
-  
-|||  
-|-|-|  
-|[Append 方法 (ADO)](../../../ado/reference/ado-api/append-method-ado.md)|[Attributes 屬性 (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)|
+
+:::row:::
+    :::column:::
+        [Append 方法 (ADO)](../../../ado/reference/ado-api/append-method-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Attributes 屬性 (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)  
+    :::column-end:::
+:::row-end:::

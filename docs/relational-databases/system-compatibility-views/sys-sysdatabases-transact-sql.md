@@ -1,5 +1,5 @@
 ---
-title: sysdatabases （Transact-sql） |Microsoft Docs
+title: sys.sys資料庫（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,17 +21,17 @@ ms.assetid: 60a93880-62f1-4eda-a886-f046706ba90c
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b0dab1ca5f21ced6a54192a4b0173ead68fd6f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c32503ffe44cf45dbff9608e0baa9127e39b1a4d
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68089157"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87393316"
 ---
 # <a name="syssysdatabases-transact-sql"></a>sys.sysdatabases (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
-  針對實例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的每個資料庫，各包含一個資料列。 第[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一次安裝時， **sysdatabases**會包含**master**、 **model**、 **msdb**和**tempdb**資料庫的專案。  
+  針對實例中的每個資料庫，各包含一個資料列 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]第一次安裝時， **sysdatabases**會包含**master**、 **model**、 **msdb**和**tempdb**資料庫的專案。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
@@ -48,7 +48,7 @@ ms.locfileid: "68089157"
 |**留**|**datetime**|保留供未來使用。|  
 |**類別**|**int**|包含複寫所用資訊的點陣圖：<br /><br /> 1 = 針對快照集或異動複寫而發行。<br /><br /> 2 = 訂閱快照式或交易式發行集。<br /><br /> 4 = 針對合併式複寫而發行。<br /><br /> 8 = 訂閱合併式發行集。<br /><br /> 16 = 散發資料庫。|  
 |**cmptlevel**|**tinyint**|資料庫的相容性層級。 如需詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。|  
-|**名稱**|**nvarchar(260)**|資料庫主要檔案的作業系統路徑和名稱。<br /><br /> **dbcreator**、**系統管理員（sysadmin**）、具有 CREATE ANY database 許可權的資料庫擁有者，或是具有下列任一許可權的授與，都可以看到**filename** ： ALTER ANY DATABASE、CREATE ANY database、VIEW ANY DEFINITION。 若要傳回路徑和檔案名，請查詢[sys.sysfiles](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md)相容性檢視，或 [ [sys.databases database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) ] 視圖。|  
+|**filename**|**nvarchar(260)**|資料庫主要檔案的作業系統路徑和名稱。<br /><br /> **dbcreator**、**系統管理員（sysadmin**）、具有 CREATE ANY database 許可權的資料庫擁有者，或是具有下列任一許可權的授與，都可以看到**filename** ： ALTER ANY DATABASE、CREATE ANY database、VIEW ANY DEFINITION。 若要傳回路徑和檔案名，請查詢 [ [sys.sys](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md)檔案相容性] 視圖，或 [ [sys.databases database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) ] 視圖。|  
 |**version**|**smallint**|建立資料庫所用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程式碼的內部版本號碼。 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 ## <a name="see-also"></a>另請參閱  

@@ -17,12 +17,12 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: markingmyname
 ms.author: maghan
 ms.custom: contperfq4
-ms.openlocfilehash: f1b4b8db6d5af2ff76b85933ab4fcdc3f67e4987
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 375d0b39fe0f898961d1386445b3b8e3f2945ee4
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159726"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363294"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>設定 max degree of parallelism 伺服器組態選項
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "86159726"
 
 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，請在您設定**最大平行處理程度**伺服器設定值時，使用下列方針：
 
-||||
+|伺服器組態|處理器數目|指引|
 |----------------|-----------------|-----------------|
 |具有單一 NUMA 節點的伺服器|小於或等於 8 個邏輯處理器|MAXDOP 保持在或低於 # 個邏輯處理器數目|
 |具有單一 NUMA 節點的伺服器|多於 8 個邏輯處理器|MAXDOP 保持在 8|
@@ -75,7 +75,7 @@ ms.locfileid: "86159726"
   
 從 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，請在您設定**最大平行處理程度**伺服器設定值時，使用下列方針：
 
-||||
+|伺服器組態|處理器數目|指引|
 |----------------|-----------------|-----------------|
 |具有單一 NUMA 節點的伺服器|小於或等於 8 個邏輯處理器|MAXDOP 保持在或低於 # 個邏輯處理器數目|
 |具有單一 NUMA 節點的伺服器|多於 8 個邏輯處理器|MAXDOP 保持在 8|

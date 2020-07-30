@@ -18,15 +18,15 @@ ms.assetid: 43661b89-8f13-4480-ad53-70306cbb14c5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 90476c163ba083ba4f20d55ad87b8fa374674e4c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fb8cb190804c3cfed2eca3906fcdb4b78c88853f
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86903584"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395116"
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中引發例外狀況，並將執行轉移至 TRY...CATCH 建構的 CATCH 區塊。  
   

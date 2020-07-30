@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 448510f237fc4ce56368d7f2d74b72f63de87c61
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 375f0a0b81f71294b67200f8137ee381a638b8ac
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764569"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242908"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection 屬性 (ADO)
 指出指定的[命令](../../../ado/reference/ado-api/command-object-ado.md)、[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)或[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件目前所屬的[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件。  
@@ -33,7 +33,7 @@ ms.locfileid: "82764569"
 ## <a name="remarks"></a>備註  
  使用**ActiveConnection**屬性來判斷指定的**命令**物件將會執行的**連接**物件，或指定的**記錄集**將會開啟。  
   
-## <a name="command"></a>命令  
+## <a name="command"></a>Command  
  對於**命令**物件， **ActiveConnection**屬性是可讀寫的。  
   
  如果您嘗試在**命令**物件上呼叫[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)方法，再將此屬性設定為開啟的**連接**物件或有效的連接字串，則會發生錯誤。  
@@ -59,7 +59,7 @@ ms.locfileid: "82764569"
 > [!NOTE]
 >  **遠端資料服務使用量**在用戶端**記錄集**物件上使用時，這個屬性只能設定為連接字串，或（在 Microsoft Visual Basic 或 Visual Basic，腳本版本）中的*任何*一個。  
   
-## <a name="record"></a>Record  
+## <a name="record"></a>記錄  
  當**記錄**物件關閉時，這個屬性是讀取/寫入，而且可能包含連接字串或開啟**連接**物件的參考。 當**記錄**物件開啟時，這個屬性是唯讀的，而且包含開啟**連接**物件的參考。  
   
  從 URL 開啟**記錄**物件時，會隱含建立**連接**物件。 將**連接**物件指派給這個屬性，或使用**連接**物件做為[open](../../../ado/reference/ado-api/open-method-ado-record.md)方法呼叫中的參數，以開啟具有現有開放式**連接**物件的**記錄**。 如果**記錄**是從現有的**記錄**或[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)開啟，則它會自動與該**記錄**或**記錄集**物件的**連接**物件產生關聯。  
@@ -68,11 +68,19 @@ ms.locfileid: "82764569"
 >  使用 HTTP 配置的 Url 會自動叫用[Microsoft OLE DB 提供者以進行網際網路發佈](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 如需詳細資訊，請參閱[絕對和相對 url](../../../ado/guide/data/absolute-and-relative-urls.md)。  
   
 ## <a name="applies-to"></a>套用至  
-  
-||||  
-|-|-|-|  
-|[Command 物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Record 物件 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|[Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Command 物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Record 物件 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另請參閱  
  [ActiveConnection、CommandText、CommandTimeout、CommandType、Size 和 Direction 屬性範例（VB）](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
  [ActiveConnection、CommandText、CommandTimeout、CommandType、Size 和 Direction 屬性範例（VC + +）](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   

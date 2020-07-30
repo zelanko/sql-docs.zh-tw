@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bcc1b02671d73e9056babb417ba2fa22a4d6cf0e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b69826fbbc45751247ce2eba6fe74ad251189dea
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762539"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242688"
 ---
 # <a name="filter-property"></a>Filter 屬性
 表示[記錄集中](../../../ado/reference/ado-api/recordset-object-ado.md)資料的篩選。  
@@ -43,7 +43,7 @@ ms.locfileid: "82762539"
 
 -   *FieldName*必須是**記錄集**的有效功能變數名稱。 如果功能變數名稱包含空格，您必須將名稱括在方括弧中。  
   
--   運算子必須是下列其中一項： \< 、>、 \< =、>=、 <>、= 或**LIKE**。  
+-   運算子必須是下列其中一項： \<, > 、 \<=, > =、 <>、= 或**LIKE**。  
   
 -   Value 是您將用來比較域值的值（例如，' Smith '、#8/24/95 #、12.345 或 $50.00）。 使用單引號搭配字串和井字型大小（#）來搭配日期。 若為數字，您可以使用小數點、貨幣符號和科學標記法。 如果運算子是**LIKE**，則值可以使用萬用字元。 只有星號（*）和百分比符號（%）允許使用萬用字元，而且必須是字串中的最後一個字元。 值不可以是 null。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "82762539"
 -   相反地，您會將此篩選器視為  
  `(LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')`  
   
--   在**LIKE**子句中，您可以在模式的開頭和結尾使用萬用字元。 例如，您可以使用 `LastName Like '*mit*'`。 或者，使用**LIKE**時，只能在模式的結尾使用萬用字元。 例如：`LastName Like 'Smit*'`。  
+-   在**LIKE**子句中，您可以在模式的開頭和結尾使用萬用字元。 例如，您可以使用 `LastName Like '*mit*'`。 或者，使用**LIKE**時，只能在模式的結尾使用萬用字元。 例如： `LastName Like 'Smit*'` 。  
   
  篩選常數可讓您只查看在最後一個[UpdateBatch 方法](../../../ado/reference/ado-api/updatebatch-method.md)方法呼叫期間受到影響的記錄，讓您更容易在批次更新模式中解決個別的記錄衝突。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "82762539"
   
 下表摘要說明**adFilterPendingRecords**在不同的篩選和修改組合中的效果。 左側資料行顯示可能的修改。 您可以在任何非索引鍵欄位、單一索引資料表的索引鍵欄位，或多索引資料表中的任何索引鍵欄位上進行修改。 頂端資料列會顯示篩選準則。 篩選可以根據任何停用字詞段、單一索引鍵資料表中的索引鍵欄位，或多索引資料表中的任何索引鍵欄位。 相交的資料格會顯示結果。 **+** 加號表示將**adFilterPendingRecords**結果套用至非空白的**記錄集**。 **-** 負號表示空的**記錄集**。  
   
-||非索引鍵|單一索引鍵|多個金鑰|
+|複合鍵|非索引鍵|單一索引鍵|多個金鑰|
 |-|--------------|----------------|-------------------|
 |**非索引鍵**|+|+|+|
 |**單一索引鍵**|+|-|N/A|

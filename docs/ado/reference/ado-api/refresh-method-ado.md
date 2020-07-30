@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 48fc3a1adf8dbeae010e4035ac4f2e390c015e54
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0688fc8b45f444ca8c711f3229623484fa2139a8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756539"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242578"
 ---
 # <a name="refresh-method-ado"></a>Refresh 方法 (ADO)
 更新集合中的物件，以反映提供者所提供的物件。  
@@ -54,17 +54,35 @@ collection.Refresh
  在某些物件的**屬性**集合上使用**Refresh**方法，會在集合中填入提供者所公開的動態屬性。 除了 ADO 支援的內建屬性以外，這些屬性會提供提供者特定功能的相關資訊。  
   
 ## <a name="applies-to"></a>套用至  
-  
-||||  
-|-|-|-|  
-|[軸集合](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|[Columns 集合](../../../ado/reference/adox-api/columns-collection-adox.md)|[CubeDefs 集合](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)|  
-|[維度集合](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)|[錯誤集合](../../../ado/reference/ado-api/errors-collection-ado.md)|[Fields 集合](../../../ado/reference/ado-api/fields-collection-ado.md)|  
-|[群組集合](../../../ado/reference/adox-api/groups-collection-adox.md)|[階層集合](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)|[索引集合](../../../ado/reference/adox-api/indexes-collection-adox.md)|  
-|[金鑰集合](../../../ado/reference/adox-api/keys-collection-adox.md)|[層級集合](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)|[Members 集合](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|  
-|[Parameters 集合](../../../ado/reference/ado-api/parameters-collection-ado.md)|[位置集合](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|[程式集合](../../../ado/reference/adox-api/procedures-collection-adox.md)|  
-|[屬性集合](../../../ado/reference/ado-api/properties-collection-ado.md)|[資料表集合](../../../ado/reference/adox-api/tables-collection-adox.md)|[Users 集合](../../../ado/reference/adox-api/users-collection-adox.md)|  
-|[Views 集合](../../../ado/reference/adox-api/views-collection-adox.md)|||  
-  
+
+:::row:::
+    :::column:::
+        [軸集合](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)  
+        [Columns 集合](../../../ado/reference/adox-api/columns-collection-adox.md)  
+        [CubeDefs 集合](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)  
+        [維度集合](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)  
+        [錯誤集合](../../../ado/reference/ado-api/errors-collection-ado.md)  
+        [Fields 集合](../../../ado/reference/ado-api/fields-collection-ado.md)  
+        [群組集合](../../../ado/reference/adox-api/groups-collection-adox.md)  
+    :::column-end:::
+    :::column:::
+        [階層集合](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)  
+        [索引集合](../../../ado/reference/adox-api/indexes-collection-adox.md)  
+        [金鑰集合](../../../ado/reference/adox-api/keys-collection-adox.md)  
+        [層級集合](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)  
+        [Members 集合](../../../ado/reference/ado-md-api/members-collection-ado-md.md)  
+        [Parameters 集合](../../../ado/reference/ado-api/parameters-collection-ado.md)  
+    :::column-end:::
+    :::column:::
+        [位置集合](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)  
+        [程式集合](../../../ado/reference/adox-api/procedures-collection-adox.md)  
+        [屬性集合](../../../ado/reference/ado-api/properties-collection-ado.md)  
+        [資料表集合](../../../ado/reference/adox-api/tables-collection-adox.md)  
+        [Users 集合](../../../ado/reference/adox-api/users-collection-adox.md)  
+        [Views 集合](../../../ado/reference/adox-api/views-collection-adox.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另請參閱  
  [Refresh 方法範例（VB）](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
  [Refresh 方法範例（VC + +）](../../../ado/reference/ado-api/refresh-method-example-vc.md)   

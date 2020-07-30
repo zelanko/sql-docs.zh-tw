@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b3f09bac-4f66-49f6-aa5a-6fbb4fb28338
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 605fb2e2afbd73a8a5509102ae98f348aad90bcb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7255b88c6c8ee7f6045c13ef3b7af926141a42a3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760064"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242678"
 ---
 # <a name="getchildren-method-ado"></a>GetChildren 方法 (ADO)
 傳回[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，其資料列代表集合[記錄](../../../ado/reference/ado-api/record-object-ado.md)的子系。  
@@ -40,7 +40,12 @@ Set recordset = record.GetChildren
  提供者會決定哪些資料行存在於傳回的**記錄集中**。 例如，檔來源提供者一律會傳回資源**記錄集**。  
   
 ## <a name="applies-to"></a>套用至  
-  
-|||  
-|-|-|  
-|[Record 物件 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|[Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|
+
+:::row:::
+    :::column:::
+        [Record 物件 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::

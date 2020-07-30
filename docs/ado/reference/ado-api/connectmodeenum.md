@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6e78ab5988d88447539da7c492f0b02943693844
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b9a25677f79ede93f8ea24e979d80dd13adff4fe
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762609"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242758"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 指定在[連接](../../../ado/reference/ado-api/connection-object-ado.md)中修改資料、開啟[記錄](../../../ado/reference/ado-api/record-object-ado.md)，或指定**記錄**和[資料流程](../../../ado/reference/ado-api/stream-object-ado.md)物件之[Mode](../../../ado/reference/ado-api/mode-property-ado.md)屬性值的可用許可權。  
   
-|持續性|值|說明|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
 |**adModeRead**|1|表示唯讀許可權。|  
 |**adModeReadWrite**|3|表示讀取/寫入權限。|  
@@ -53,8 +53,14 @@ ms.locfileid: "82762609"
 |AdoEnums. ConnectMode. WRITE|  
   
 ## <a name="applies-to"></a>套用至  
-  
-|||  
-|-|-|  
-|[Mode 屬性 (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)|[Open 方法 (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)|  
-|[Open 方法 (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)|[Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|
+
+:::row:::
+    :::column:::
+        [Mode 屬性 (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)  
+        [Open 方法 (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)  
+    :::column-end:::
+    :::column:::
+        [Open 方法 (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)  
+        [Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+    :::column-end:::
+:::row-end:::

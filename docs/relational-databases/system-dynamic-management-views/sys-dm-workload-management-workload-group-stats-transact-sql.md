@@ -11,15 +11,15 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: = azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 01d735e07a7c44c84c0087865e4f488318d65a75
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 38ed2b42a24dbaec27e3014bc0b1d783722fa91f
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85066168"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394524"
 ---
 # <a name="sysdm_workload_management_workload_groups_stats-transact-sql"></a>sys.databases dm_workload_management_workload_groups_stats （Transact-sql）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 傳回工作負載群組統計資料，以及中工作負載群組的有效值 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。  
   

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5ebf6f52e4c2ac9cc4875db26e633457915c0a5e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9e3d58ae93285accc9cf7a71e43579be4f54b21d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762937"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242458"
 ---
 # <a name="appendchunk-method-ado"></a>AppendChunk 方法 (ADO)
 將資料附加至大型文字或二進位資料[欄位](../../../ado/reference/ado-api/field-object.md)或[參數](../../../ado/reference/ado-api/parameter-object.md)物件。  
@@ -34,7 +34,7 @@ object.AppendChunk Data
 ```  
   
 #### <a name="parameters"></a>參數  
- *物件*  
+ *object*  
  **欄位**或**參數**物件。  
   
  *Data*  
@@ -59,11 +59,16 @@ object.AppendChunk Data
  **參數**物件上的第一個**AppendChunk**呼叫會將資料寫入至參數，並覆寫任何現有的資料。 後續在**參數**物件上呼叫的**AppendChunk**會新增至現有的參數資料。 傳遞 null 值的**AppendChunk**呼叫會捨棄所有參數資料。  
   
 ## <a name="applies-to"></a>套用至  
-  
-|||  
-|-|-|  
-|[Field 物件](../../../ado/reference/ado-api/field-object.md)|[Parameter 物件](../../../ado/reference/ado-api/parameter-object.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Field 物件](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [Parameter 物件](../../../ado/reference/ado-api/parameter-object.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另請參閱  
  [AppendChunk 和 GetChunk 方法範例（VB）](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)   
  [AppendChunk 和 GetChunk 方法範例（VC + +）](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)   

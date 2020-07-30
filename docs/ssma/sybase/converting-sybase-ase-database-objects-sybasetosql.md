@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 509cb65d-2f54-427a-83d7-37919cc4e3e3
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 507ac2a61043260435a18c90fb473130988e7f35
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0785c3ecc6335494ed4c34f8919e3ad766236631
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67948518"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394508"
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>轉換 SAP ASE 資料庫物件（SybaseToSQL）
-連線到 SAP 調適型伺服器企業版（ASE）並聯機至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 azure sql 並設定專案和資料對應選項之後，您可以將 SAP 調適型伺服器 ENTERPRISE （ase） [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫物件轉換成或 azure SQL database 物件。  
+連線到 SAP 調適型伺服器企業版（ASE）並聯機至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE sql 並設定專案和資料對應選項之後，您可以將 SAP 調適型伺服器 enterprise （ase）資料庫物件轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 azure SQL database 物件。  
   
 ## <a name="the-conversion-process"></a>轉換程式  
-轉換資料庫物件會從 ASE 取得物件定義、將其轉換成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]類似或 SQL Azure 物件，然後將此資訊載入至 SSMA 中繼資料。 它不會將資訊載入至的實例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL。 接著，您可以使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL 中繼資料瀏覽器來查看物件及其屬性。
+轉換資料庫物件會從 ASE 取得物件定義、將其轉換成類似 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 物件，然後將此資訊載入至 SSMA 中繼資料。 它不會將資訊載入至的實例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE SQL。 接著，您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE SQL 中繼資料瀏覽器來查看物件及其屬性。
   
 在轉換期間，SSMA 會將輸出訊息列印到 [輸出] 窗格，並在 [**錯誤清單**] 窗格中顯示錯誤訊息。 使用輸出和錯誤資訊來判斷您是否必須修改 ASE 資料庫或轉換程式，以取得所需的轉換結果。  
   
@@ -54,27 +54,57 @@ ms.locfileid: "67948518"
   
 > [!NOTE]  
 > 某些 SAP ASE 系統函數並不完全符合行為中的對等 SQL Server 系統函數。 為了模擬 SAP ASE 行為，SSMA 會在已轉換的 SQL Server 資料庫中，于名為2ss 的架構下產生使用者定義的函數。 根據專案設定，部分 SQL Server 系統函數會取代為這些模擬函數。 SSMA 會建立下列使用者定義函數：  
-  
-||||  
-|-|-|-|  
-|**char_length_Nvarchar**|**index_colorder**|**ssma_datepart**|  
-|**char_length_Varchar**|**inttohex**|**substring_Nvarchar**|  
-|**charindex_Nvarchar**|**ssma_datediff**|**substring_Varbinary**|  
-|**charindex_Varchar**|**hextoint**|**substring_Varchar**|  
-|**ulowsurr**|**to_unichar**|**ssma_current_time**|  
-|**uhighsurr**|||  
-  
+
+:::row:::
+    :::column:::
+        **char_length_Nvarchar**  
+        **char_length_Varchar**  
+        **charindex_Nvarchar**  
+        **charindex_Varchar**  
+        **hextoint**  
+        **index_colorder**  
+    :::column-end:::
+    :::column:::
+        **inttohex**  
+        **ssma_current_time**  
+        **ssma_datediff**  
+        **ssma_datepart**  
+        **substring_Nvarchar**  
+        **substring_Varbinary**  
+    :::column-end:::
+    :::column:::
+        **substring_Varchar**  
+        **to_unichar**  
+        **uhighsurr**  
+        **ulowsurr**  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="objects-not-supported-in-azure-sql"></a>Azure SQL 中不支援的物件  
 SSMA for SAP ASE 會在轉換至內部部署 SQL Server 時使用下列 T-sql 關鍵字，但 SQL Azure T-sql 語法不支援這些關鍵字：  
-  
-||||  
-|-|-|-|  
-|CHECKPOINT|CREATE/ALTER/DROP DEFAULT|CREATE/DROP RULE|  
-|DBCC TRACEOFF|DBCC TRACEON|GRANT/REVOKE/DENY ALL|  
-|KILL|READTEXT|SELECT INTO|  
-|SET OFFSETS|SETUSER|SHUTDOWN|  
-|WRITETEXT|||  
-  
+
+:::row:::
+    :::column:::
+        CHECKPOINT  
+        CREATE/ALTER/DROP DEFAULT  
+        CREATE/DROP RULE  
+        DBCC TRACEOFF  
+        DBCC TRACEON  
+    :::column-end:::
+    :::column:::
+        GRANT/REVOKE/DENY ALL  
+        KILL  
+        READTEXT  
+        SELECT INTO  
+        SET OFFSETS  
+    :::column-end:::
+    :::column:::
+        SETUSER  
+        SHUTDOWN  
+        WRITETEXT  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="viewing-conversion-problems"></a>流覽轉換問題  
 某些 SAP ASE 物件可能無法轉換。 您可以藉由查看摘要轉換報告來判斷轉換成功率。  
   
@@ -120,7 +150,7 @@ SSMA for SAP ASE 會在轉換至內部部署 SQL Server 時使用下列 T-sql �
   
 -   您可以變更 SAP ASE 物件，以移除或修改有問題的程式碼。 若要將更新的程式碼載入至 SSMA，您必須更新中繼資料。 如需詳細資訊，請參閱[連接到 SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md)。  
   
--   您可以從遷移中排除物件。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure Sql 中繼資料 Explorer 和 Sybase 中繼資料瀏覽器中，清除專案旁的核取方塊，然後再[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]將物件載入或 Azure SQL，並從 SAP ASE 遷移資料。  
+-   您可以從遷移中排除物件。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE Sql 中繼資料 explorer 和 Sybase 中繼資料瀏覽器中，清除專案旁的核取方塊，然後再將物件載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure SQL，並從 SAP ASE 遷移資料。  
   
 ## <a name="next-steps"></a>後續步驟  
 遷移程式的下一個步驟是將[轉換的資料庫物件載入 SQL Server/SQL Azure （SybaseToSQL）](https://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06)中。  

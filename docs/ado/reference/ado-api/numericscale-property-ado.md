@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 29a02992-64be-4fcd-be13-445cba205893
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3970ab8d8f446c4269e4b79c306d2dd9d2cf0426
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 38a44aeac4a2238e7d0087ec458df9f77086aa0c
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762327"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242628"
 ---
 # <a name="numericscale-property-ado"></a>NumericScale 屬性 (ADO)
 表示[參數](../../../ado/reference/ado-api/parameter-object.md)或[欄位](../../../ado/reference/ado-api/field-object.md)物件中數值的小數位數。  
@@ -37,11 +37,16 @@ ms.locfileid: "82762327"
  若是**Field**物件， **NumericScale**通常是唯讀的。 不過，對於已附加至[記錄](../../../ado/reference/ado-api/record-object-ado.md)之[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)集合的新**欄位**物件，只有在指定**欄位**的[Value](../../../ado/reference/ado-api/value-property-ado.md)屬性，且資料提供者已藉由呼叫[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)集合的[Update](../../../ado/reference/ado-api/update-method.md)方法來成功加入新**欄位**之後， **NumericScale**才會是讀取/寫入。  
   
 ## <a name="applies-to"></a>套用至  
-  
-|||  
-|-|-|  
-|[Parameter 物件](../../../ado/reference/ado-api/parameter-object.md)|[Field 物件](../../../ado/reference/ado-api/field-object.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Field 物件](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [Parameter 物件](../../../ado/reference/ado-api/parameter-object.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另請參閱  
  [NumericScale 和 Precision 屬性範例（VB）](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
  [NumericScale 和 Precision 屬性範例（VC + +）](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   

@@ -10,15 +10,15 @@ author: ronortloff
 ms.author: rortloff
 ms.reviewer: jrasnick
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ab42dfbed020840aeb90042b81266fc58cc74688
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 4547fe6ae7282aa95ed2b1e46c47a5a07aa20f11
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627413"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395243"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (平行處理資料倉儲)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   從[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]資料庫中選取資料，然後將該資料複製到遠端伺服器上 SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的新資料表。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]會使用具有所有 MPP 查詢處理優點的應用裝置，來選取要進行遠端複製的資料。 請將此用於需要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能的案例。  
   

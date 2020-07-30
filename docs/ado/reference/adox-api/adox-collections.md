@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: c0c90ba9-0471-4381-96f1-376de22fa2ee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f5c2792f9a5ef413f09793df8ff320d3826773f4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4e6b0846433b317bb1ced7de284113377e4b4528
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764149"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243109"
 ---
 # <a name="adox-collections"></a>ADOX 集合
 
-|||  
+|集合|描述|  
 |-|-|  
 |[資料行](../../../ado/reference/adox-api/columns-collection-adox.md)|包含資料表、索引或索引鍵的所有資料**行**物件。|  
 |[群組](../../../ado/reference/adox-api/groups-collection-adox.md)|包含目錄或使用者的所有儲存的**群組**物件。|  
-|[索引](../../../ado/reference/adox-api/indexes-collection-adox.md)|包含資料表的所有**索引**物件。|  
+|[索引數](../../../ado/reference/adox-api/indexes-collection-adox.md)|包含資料表的所有**索引**物件。|  
 |[[索引鍵]](../../../ado/reference/adox-api/keys-collection-adox.md)|包含資料表的所有索引**鍵**物件。|  
 |[程序](../../../ado/reference/adox-api/procedures-collection-adox.md)|包含目錄**的所有程式**物件。|  
 |[資料表](../../../ado/reference/adox-api/tables-collection-adox.md)|包含目錄的所有**資料表**物件。|  

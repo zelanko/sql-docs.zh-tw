@@ -12,16 +12,16 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 58b3f3315309a734a22e2732af5207b64e2f0a9d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3fbbc52f13bebbb46a3afc7d2dd450765d28a21a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73632921"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87393967"
 ---
 # <a name="sysworkload_management_workload_classifier_details-transact-sql"></a>sys.databases workload_management_workload_classifier_details （Transact-sql）
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
   傳回每個分類器的詳細資料。  
   

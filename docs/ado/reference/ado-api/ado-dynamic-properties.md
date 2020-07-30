@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 72fa5fd287b285ca7f917c5969b0e27e11837d25
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c727f73abed5fe9a30ebf191e2c6da60f8baa13a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749292"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242888"
 ---
 # <a name="ado-dynamic-properties"></a>ADO 動態屬性
 動態屬性可以加入至[Connection](../../../ado/reference/ado-api/connection-object-ado.md)、 [Command](../../../ado/reference/ado-api/command-object-ado.md)或[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)物件的[properties](../../../ado/reference/ado-api/properties-collection-ado.md)集合中。 這些屬性的來源是資料提供者，例如[SQL Server 的 OLE DB 提供者](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)，或是服務提供者（例如[OLE DB 的 Microsoft Cursor 服務](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)）。 如需特定動態屬性的詳細資訊，請參閱適當的資料提供者或服務提供者檔。  
@@ -26,7 +26,7 @@ ms.locfileid: "82749292"
   
  下列動態屬性特別有趣，而且也記載于先前所述的來源中。 使用 ADO 的特殊功能記載于下列清單中的 ADO 說明主題。  
   
-|||  
+|動態屬性|描述|  
 |-|-|  
 |[最佳化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|指定是否應該在此欄位上建立索引。|  
 |[提示](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|指定 OLE DB 提供者是否應該提示使用者提供初始化資訊。|  
