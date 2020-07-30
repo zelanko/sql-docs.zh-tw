@@ -20,15 +20,15 @@ ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32858f6e508ef0a7de2b981dc17379d7be7fa4c7
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: 1940c42143eb2a1b4112eb2dea789196938e18ed
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84941023"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397118"
 ---
 # <a name="sysdm_resource_governor_workload_groups-transact-sql"></a>sys.dm_resource_governor_workload_groups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   傳回工作負載群組統計資料以及工作負載群組的目前記憶體中組態。 這個檢視可以使用 sys.dm_resource_governor_resource_pools 加入，以取得資源集區名稱。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "84941023"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |group_id|**int**|工作負載群組的識別碼。 不可為 Null。|  
-|name|**sysname**|工作負載群組的名稱。 不可為 Null。|  
+|NAME|**sysname**|工作負載群組的名稱。 不可為 Null。|  
 |pool_id|**int**|資源集區的識別碼。 不可為 Null。|  
 |external_pool_id|**int**|**適用于**：從開始 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 。<br /><br /> 外部資源集區的識別碼。 不可為 Null。|  
 |statistics_start_time|**datetime**|針對工作負載群組重設之統計資料集合的時間。 不可為 Null。|  
@@ -77,7 +77,7 @@ ms.locfileid: "84941023"
  需要 `VIEW SERVER STATE` 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [dm_resource_governor_resource_pools &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   
  [resource_governor_workload_groups &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  

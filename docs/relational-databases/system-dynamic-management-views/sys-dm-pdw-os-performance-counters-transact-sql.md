@@ -12,15 +12,15 @@ ms.assetid: 0673a8f8-8bed-41eb-8959-a9e3e9e03a65
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3cdc9b13203527d3f5a3fe71d0a6b32baf0446ce
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 72164d23d8f2dbd27bb30f1341b288c96ab44cc0
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627299"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396607"
 ---
 # <a name="sysdm_pdw_os_performance_counters-transact-sql"></a>sys.databases dm_pdw_os_performance_counters （Transact-sql）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   包含中節點之 Windows 效能計數器的相關資訊 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 。  
   

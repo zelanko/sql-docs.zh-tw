@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1330b409b40bfeea9b265d93e6f6b55cc1b674da
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ec99528c375126e06bc48ac7b241df98f62952a4
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757497"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87331923"
 ---
 # <a name="selective-xml-indexes-sxi"></a>選擇性 XML 索引 (SXI)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -194,9 +194,8 @@ FOR
   
 ##  <a name="related-tasks"></a><a name="reltasks"></a> 相關工作  
   
-|||  
-|-|-|  
-|**Task**|**主題**|  
+| Task | 主題 |
+| ---- | ----- |
 |當您建立或修改選擇性 XML 索引時，指定您要建立索引的節點路徑，以及選用的最佳化提示。|[指定選擇性 XML 索引的路徑和最佳化提示](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)|  
 |建立、修改或卸除選擇性 XML 索引。|[建立、修改和卸除選擇性 XML 索引](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)|  
 |建立、修改或卸除次要選擇性 XML 索引。|[建立、修改和卸除次要選擇性 XML 索引](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)|  

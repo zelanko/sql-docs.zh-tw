@@ -18,15 +18,15 @@ ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02cff18af9c0824d7f28e5685f5fc63a0bf45128
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 25ec8e19343d707fefdda9049428280b1dfddb80
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821191"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396777"
 ---
 # <a name="sysdm_exec_function_stats-transact-sql"></a>sys.databases dm_exec_function_stats （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   傳回快取函數的匯總效能統計資料。 此視圖會針對每個快取函數計畫傳回一個資料列，而且資料列的存留期只要函式維持快取。 從快取中移除函式時，會從這個視圖中去除對應的資料列。 此時，就會引發效能統計資料 SQL 追蹤事件 (與 **sys.dm_exec_query_stats** 很相似)。 傳回純量函數的相關資訊，包括記憶體內建函式和 CLR 純量函數。 不會傳回資料表值函式的相關資訊。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "82821191"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|函數所在的資料庫識別碼。|  
-|**object_id**|**int**|函數的物件識別碼。|  
+|object_id|**int**|函數的物件識別碼。|  
 |**type**|**char(2)**|物件的類型： FN = 純量值函式|  
 |**type_desc**|**nvarchar(60)**|物件類型的描述： SQL_SCALAR_FUNCTION|  
 |**sql_handle**|**varbinary(64)**|這可以用來與從這個函式中執行的**dm_exec_query_stats**中的查詢相互關聯。|  
