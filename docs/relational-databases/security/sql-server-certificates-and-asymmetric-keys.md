@@ -14,12 +14,12 @@ ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f631e55edaacc56c5c8bae3aec3e374824857db4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0da744d41c2135038e14a8aef71e088df7ba851d
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001023"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332647"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server 憑證與非對稱金鑰
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,9 +68,8 @@ ms.locfileid: "86001023"
 ## <a name="tools"></a>工具  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 提供了將會產生憑證和強式名稱金鑰檔案的工具和公用程式。 這些工具在金鑰產生的程序中，提供了比 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 語法更豐富的彈性。 您可以使用這些工具來建立具有更複雜金鑰長度的 RSA 金鑰，並將其匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 下表會顯示可在哪裡找到這些工具。  
   
-|||  
-|-|-|  
-|工具|目的|  
+| 工具 | 目的 |
+| ---- | ------- |
 |[New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate)|建立自我簽署憑證。|  
 |[makecert](/windows/desktop/SecCrypto/makecert)|建立憑證。 已由 **New-SelfSignedCertificate** 取代。|  
 |[sn](/dotnet/framework/tools/sn-exe-strong-name-tool)|為對稱金鑰建立強式名稱。|  
