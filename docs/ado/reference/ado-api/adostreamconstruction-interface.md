@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c120667a0ce279ea03922adf487f58c1fdc92de
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 75af8d899c4fb0b97f4ee09795888ef773999b60
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747052"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242808"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction 介面
 **ADOStreamConstruction**介面是用來從 C/c + + 應用程式中的 OLE DB **IStream**物件，來建立 ADO**資料流程**物件。  
   
 ## <a name="properties"></a>屬性  
   
-|||  
+|屬性|描述|  
 |-|-|  
-|[Stream 屬性](../../../ado/reference/ado-api/stream-property.md)|讀取/寫入。 取得/設定 OLE DB**資料流程**物件。|  
+|[資料流](../../../ado/reference/ado-api/stream-property.md)|讀取/寫入。 取得/設定 OLE DB**資料流程**物件。|  
   
 ## <a name="methods"></a>方法  
  無。  

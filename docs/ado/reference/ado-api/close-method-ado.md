@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 44fb6e03fba467b9b7123111d1845d18e4144739
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 939bf1d65c73b2aa83c54c7a5b936e3228719ba5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748920"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242788"
 ---
 # <a name="close-method-ado"></a>Close 方法 (ADO)
 關閉開啟的物件和任何相依物件。  
@@ -54,12 +54,18 @@ object.Close
  如果您使用[Clone](../../../ado/reference/ado-api/clone-method-ado.md)方法來建立開啟**記錄集**物件的複本，關閉原始或複製不會影響任何其他複本。  
   
 ## <a name="applies-to"></a>套用至  
-  
-|||  
-|-|-|  
-|[Connection 物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Record 物件 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|  
-|[Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Connection 物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+        [Record 物件 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+        [Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另請參閱  
  [Open 和 Close 方法範例（VB）](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
  [Open 和 Close 方法範例（VBScript）](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   

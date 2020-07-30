@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a3cd283f09263d4f36f0f4e2cfd4a18767dd614e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bba5095587b8ddbb4c06d3334ad60e16cb2f5e35
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898362"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395730"
 ---
 # <a name="sysfn_cdc_map_time_to_lsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
 ```  
   
 ## <a name="arguments"></a>引數  
- **'**<relational_operator>**'** {最大小於 | 最大小於或等於 | 最小大於 | 最小大於或等於}  
+ **'**<relational_operator>**'** {大於最大小於或等於最小大於或等於} 的最 \| \| 小值 \|  
  在與*tracking_time*值相較之下，用來識別**cdc. lsn_time_mapping**資料表內的相異 LSN 值，其中包含符合關聯性的**tran_end_time** 。  
   
  *relational_operator*是**Nvarchar （30）**。  

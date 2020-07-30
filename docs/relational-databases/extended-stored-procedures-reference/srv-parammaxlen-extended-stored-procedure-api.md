@@ -1,5 +1,6 @@
 ---
 title: srv_parammaxlen (擴充預存程序 API) | Microsoft Docs
+description: 瞭解 srv_parammaxlen 如何傳回遠端預存程序呼叫參數的最大資料長度。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 49bfc29d-f76a-4963-b0e6-b8532dfda850
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 936dddfc9faecc48f61ac61e390aca7b82533314
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d0a89b5bf724bb3e1fc8afe335c5458a4ee09c4d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756702"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248404"
 ---
 # <a name="srv_parammaxlen-extended-stored-procedure-api"></a>srv_parammaxlen (擴充預存程序 API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

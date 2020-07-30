@@ -1,5 +1,6 @@
 ---
 title: srv_message_handler (擴充預存程序 API)
+description: 瞭解 srv_message_handler 以及它如何呼叫已安裝的擴充預存程式 API 訊息處理常式。
 ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 41bcd057-436f-4fa8-8293-fc8057a30877
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5841cdb3f57c0c4b6e33737d8c08b3ff0437e800
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2edc96558c00b43dfe9d9b346ad75c32b42af1cd
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756738"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332353"
 ---
 # <a name="srv_message_handler-extended-stored-procedure-api"></a>srv_message_handler (擴充預存程序 API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -82,7 +83,7 @@ oserrtextlen
  這是錯誤的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 狀態值。  
   
  *oserrnum*  
- 這是作業系統錯誤號碼。 會忽略這個引數。  
+ 這是作業系統錯誤號碼。 忽略這個引數。  
   
  *errtext*  
  這是擴充預存程序錯誤 *errornum* 的描述。  
@@ -91,7 +92,7 @@ oserrtextlen
  這是擴充預存程序錯誤字串 *errtext* 的長度。  
   
  *oserrtext*  
- 這是作業系統錯誤 *oserrnum* 的描述。 會忽略這個引數。  
+ 這是作業系統錯誤 *oserrnum* 的描述。 忽略這個引數。  
   
  *oserrtextlen*  
  這是作業系統錯誤字串 *oserrtext* 的長度。  

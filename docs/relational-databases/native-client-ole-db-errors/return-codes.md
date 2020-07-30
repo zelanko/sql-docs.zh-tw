@@ -1,5 +1,5 @@
 ---
-title: 傳回碼 | Microsoft Docs
+title: 傳回碼（Native Client OLE DB 提供者）
 description: 瞭解 SQL Server Native Client OLE DB 支援的傳回碼，包括經常發生 DB_S_ERRORSOCCURRED HRESULT 值。
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,13 +24,14 @@ ms.assetid: 7f7457e9-fce4-400c-82e5-ee02e9e811c6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 400c5b1016e7519813c41ec5627dd86f6652441b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: dff6003bf6671f4b3e7867daa4e6c444c6cd8854
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010521"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247923"
 ---
-# <a name="return-codes"></a>傳回碼
+# <a name="return-codes-native-client-ole-db-provider"></a>傳回碼（Native Client OLE DB 提供者）
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   在大部分的基本層級，成員函數不是成功就是失敗。 在更精確一點的層級，函數可能會成功，但是其成功可能不是應用程式開發人員所樂見的。  

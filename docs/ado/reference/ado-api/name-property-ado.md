@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38846bcb832df7cc535d35d8f07fb636f2db37f7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 368def89951e7d0eacca9b999b647abd949c3b10
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762419"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243229"
 ---
 # <a name="name-property-ado"></a>Name 屬性 (ADO)
 指出物件的名稱。  
@@ -41,12 +41,18 @@ ms.locfileid: "82762419"
  您可以使用序數參考抓取物件的**Name**屬性，之後您就可以直接依名稱參考該物件。 例如，如果 `rstMain.Properties(20).Name` 產生 `Updatability` ，您之後就可以將這個屬性稱為 `rstMain.Properties("Updatability")` 。  
   
 ## <a name="applies-to"></a>套用至  
-  
-|||  
-|-|-|  
-|[Command 物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Field 物件](../../../ado/reference/ado-api/field-object.md)|  
-|[Parameter 物件](../../../ado/reference/ado-api/parameter-object.md)|[Property 物件 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Command 物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
+        [Field 物件](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [Parameter 物件](../../../ado/reference/ado-api/parameter-object.md)  
+        [Property 物件 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另請參閱  
  [Attributes 和 Name 屬性範例（VB）](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
  [Attributes 和 Name 屬性範例（VC + +）](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   

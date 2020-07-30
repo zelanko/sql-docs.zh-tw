@@ -15,12 +15,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b08fdf07bf73b8d485ce9334d8998e055454dcb2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eeb6cde4e4b24d9ef7b5e67de8bfd155808fd649
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751148"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87331048"
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>使用 T-sql 建立圖形資料庫並執行一些模式比對查詢
 
@@ -39,11 +39,12 @@ ms.locfileid: "85751148"
 
 ```
 -- Create a graph demo database
-CREATE DATABASE graphdemo;
-go
+IF NOT EXISTS (SELECT * FROM sys.databases WHERE NAME = 'graphdemo')
+    CREATE DATABASE GraphDemo;
+GO
 
-USE  graphdemo;
-go
+USE GraphDemo;
+GO
 
 -- Create NODE tables
 CREATE TABLE Person (
@@ -70,57 +71,54 @@ CREATE TABLE livesIn AS EDGE;
 CREATE TABLE locatedIn AS EDGE;
 
 -- Insert data into node tables. Inserting into a node table is same as inserting into a regular table
-INSERT INTO Person VALUES (1,'John');
-INSERT INTO Person VALUES (2,'Mary');
-INSERT INTO Person VALUES (3,'Alice');
-INSERT INTO Person VALUES (4,'Jacob');
-INSERT INTO Person VALUES (5,'Julie');
+INSERT INTO Person (Id, name)
+    VALUES (1, 'John')
+         , (2, 'Mary')
+         , (3, 'Alice')
+         , (4, 'Jacob')
+         , (5, 'Julie');
 
-INSERT INTO Restaurant VALUES (1,'Taco Dell','Bellevue');
-INSERT INTO Restaurant VALUES (2,'Ginger and Spice','Seattle');
-INSERT INTO Restaurant VALUES (3,'Noodle Land', 'Redmond');
+INSERT INTO Restaurant (Id, name, city)
+    VALUES (1, 'Taco Dell','Bellevue')
+         , (2, 'Ginger and Spice','Seattle')
+         , (3, 'Noodle Land', 'Redmond');
 
-INSERT INTO City VALUES (1,'Bellevue','wa');
-INSERT INTO City VALUES (2,'Seattle','wa');
-INSERT INTO City VALUES (3,'Redmond','wa');
+INSERT INTO City (Id, name, stateName)
+    VALUES (1,'Bellevue','wa')
+         , (2,'Seattle','wa')
+         , (3,'Redmond','wa');
 
 -- Insert into edge table. While inserting into an edge table,
 -- you need to provide the $node_id from $from_id and $to_id columns.
-INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE ID = 1), 
-       (SELECT $node_id FROM Restaurant WHERE ID = 1),9);
-INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE ID = 2), 
-      (SELECT $node_id FROM Restaurant WHERE ID = 2),9);
-INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE ID = 3), 
-      (SELECT $node_id FROM Restaurant WHERE ID = 3),9);
-INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE ID = 4), 
-      (SELECT $node_id FROM Restaurant WHERE ID = 3),9);
-INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE ID = 5), 
-      (SELECT $node_id FROM Restaurant WHERE ID = 3),9);
+/* Insert which restaurants each person likes */
+INSERT INTO likes 
+    VALUES ((SELECT $node_id FROM Person WHERE ID = 1), (SELECT $node_id FROM Restaurant WHERE ID = 1), 9)
+         , ((SELECT $node_id FROM Person WHERE ID = 2), (SELECT $node_id FROM Restaurant WHERE ID = 2), 9)
+         , ((SELECT $node_id FROM Person WHERE ID = 3), (SELECT $node_id FROM Restaurant WHERE ID = 3), 9)
+         , ((SELECT $node_id FROM Person WHERE ID = 4), (SELECT $node_id FROM Restaurant WHERE ID = 3), 9)
+         , ((SELECT $node_id FROM Person WHERE ID = 5), (SELECT $node_id FROM Restaurant WHERE ID = 3), 9);
 
-INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE ID = 1),
-      (SELECT $node_id FROM City WHERE ID = 1));
-INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE ID = 2),
-      (SELECT $node_id FROM City WHERE ID = 2));
-INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE ID = 3),
-      (SELECT $node_id FROM City WHERE ID = 3));
-INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE ID = 4),
-      (SELECT $node_id FROM City WHERE ID = 3));
-INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE ID = 5),
-      (SELECT $node_id FROM City WHERE ID = 1));
+/* Associate in which city live each person*/
+INSERT INTO livesIn 
+    VALUES ((SELECT $node_id FROM Person WHERE ID = 1), (SELECT $node_id FROM City WHERE ID = 1))
+         , ((SELECT $node_id FROM Person WHERE ID = 2), (SELECT $node_id FROM City WHERE ID = 2))
+         , ((SELECT $node_id FROM Person WHERE ID = 3), (SELECT $node_id FROM City WHERE ID = 3))
+         , ((SELECT $node_id FROM Person WHERE ID = 4), (SELECT $node_id FROM City WHERE ID = 3))
+         , ((SELECT $node_id FROM Person WHERE ID = 5), (SELECT $node_id FROM City WHERE ID = 1));
 
-INSERT INTO locatedIn VALUES ((SELECT $node_id FROM Restaurant WHERE ID = 1),
-      (SELECT $node_id FROM City WHERE ID =1));
-INSERT INTO locatedIn VALUES ((SELECT $node_id FROM Restaurant WHERE ID = 2),
-      (SELECT $node_id FROM City WHERE ID =2));
-INSERT INTO locatedIn VALUES ((SELECT $node_id FROM Restaurant WHERE ID = 3),
-      (SELECT $node_id FROM City WHERE ID =3));
+/* Insert data where the restaurants are located */
+INSERT INTO locatedIn 
+    VALUES ((SELECT $node_id FROM Restaurant WHERE ID = 1), (SELECT $node_id FROM City WHERE ID =1))
+         , ((SELECT $node_id FROM Restaurant WHERE ID = 2), (SELECT $node_id FROM City WHERE ID =2))
+         , ((SELECT $node_id FROM Restaurant WHERE ID = 3), (SELECT $node_id FROM City WHERE ID =3));
 
--- Insert data into the friendOf edge.
-INSERT INTO friendOf VALUES ((SELECT $NODE_ID FROM Person WHERE ID = 1), (SELECT $NODE_ID FROM Person WHERE ID = 2));
-INSERT INTO friendOf VALUES ((SELECT $NODE_ID FROM Person WHERE ID = 2), (SELECT $NODE_ID FROM Person WHERE ID = 3));
-INSERT INTO friendOf VALUES ((SELECT $NODE_ID FROM Person WHERE ID = 3), (SELECT $NODE_ID FROM Person WHERE ID = 1));
-INSERT INTO friendOf VALUES ((SELECT $NODE_ID FROM Person WHERE ID = 4), (SELECT $NODE_ID FROM Person WHERE ID = 2));
-INSERT INTO friendOf VALUES ((SELECT $NODE_ID FROM Person WHERE ID = 5), (SELECT $NODE_ID FROM Person WHERE ID = 4));
+/* Insert data into the friendOf edge */
+INSERT INTO friendOf 
+    VALUES ((SELECT $NODE_ID FROM Person WHERE ID = 1), (SELECT $NODE_ID FROM Person WHERE ID = 2))
+         , ((SELECT $NODE_ID FROM Person WHERE ID = 2), (SELECT $NODE_ID FROM Person WHERE ID = 3))
+         , ((SELECT $NODE_ID FROM Person WHERE ID = 3), (SELECT $NODE_ID FROM Person WHERE ID = 1))
+         , ((SELECT $NODE_ID FROM Person WHERE ID = 4), (SELECT $NODE_ID FROM Person WHERE ID = 2))
+         , ((SELECT $NODE_ID FROM Person WHERE ID = 5), (SELECT $NODE_ID FROM Person WHERE ID = 4));
 
 
 -- Find Restaurants that John likes

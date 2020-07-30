@@ -13,26 +13,26 @@ helpviewer_keywords:
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fe57e31792755aca1dc51b0af50805e853a5bab4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6deb8166c775fcdcfe8fb0975662dda0be3b3581
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747232"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242848"
 ---
 # <a name="ado-objects-and-interfaces"></a>ADO 物件和介面
 這些物件之間的關聯性會以[ADO 物件模型](../../../ado/reference/ado-api/ado-object-model.md)表示。  
   
  每個物件都可以包含在其對應的集合中。 例如，[錯誤](../../../ado/reference/ado-api/error-object.md)物件可以包含在[錯誤](../../../ado/reference/ado-api/errors-collection-ado.md)集合中。 如需詳細資訊，請參閱[ADO 集合](../../../ado/reference/ado-api/ado-collections.md)或特定集合主題。  
   
-|||  
+|物件或介面|描述|  
 |-|-|  
 |[IADOCommandConstruction](https://msdn.microsoft.com/library/windows/desktop/aa965677.aspx)|用來從 ADOCommand 物件中取出基礎 OLEDB 命令。|  
 |[ADORecordConstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md)|從 C/c + + 應用程式中的 OLE DB **Row**物件，建立 ADO**記錄**物件。|  
 |[ADORecordsetConstruction](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)|從 C/c + + 應用程式中的 OLE DB 資料列**集**物件，來建立 ADO**記錄集**物件。|  
 |[ADOStreamConstruction 介面](../../../ado/reference/ado-api/adostreamconstruction-interface.md)|從 C/c + + 應用程式中的 OLE DB **IStream**物件，來建立 ADO**資料流程**物件。|  
 |[命令](../../../ado/reference/ado-api/command-object-ado.md)|定義您想要針對資料來源執行的特定命令。<br /><br /> **命令**物件不安全，無法進行腳本處理。|  
-|[建立](../../../ado/reference/ado-api/connection-object-ado.md)|表示資料來源的開啟連接。<br /><br /> **連接**物件可安全地進行腳本處理。|  
+|[[連接]](../../../ado/reference/ado-api/connection-object-ado.md)|表示資料來源的開啟連接。<br /><br /> **連接**物件可安全地進行腳本處理。|  
 |[IDSOShapeExtensions 介面](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)|取得圖形提供者的基礎 OLEDB 資料來源物件。|  
 |[錯誤](../../../ado/reference/ado-api/error-object.md)|包含有關與提供者的單一作業相關之資料存取錯誤的詳細資訊。<br /><br /> **錯誤**物件對腳本而言是不安全的。|  
 |[欄位](../../../ado/reference/ado-api/field-object.md)|表示具有 common 資料類型的資料行。|  
@@ -40,7 +40,7 @@ ms.locfileid: "82747232"
 |[屬性](../../../ado/reference/ado-api/property-object-ado.md)|表示由提供者定義之 ADO 物件的動態特性。|  
 |[記錄](../../../ado/reference/ado-api/record-object-ado.md)|表示**記錄集**的資料列，或檔案系統中的目錄或檔案。 **記錄**物件可安全地進行腳本處理。|  
 |[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|表示基表中的記錄集或已執行命令的結果。 **記錄集**物件隨時只會參考集合中的單一記錄做為目前的記錄。<br /><br /> **記錄集**物件可安全地進行腳本處理。|  
-|[資料流程](../../../ado/reference/ado-api/stream-object-ado.md)|表示資料的二進位資料流程。<br /><br /> **資料流程**物件可安全地進行腳本處理。|  
+|[資料流](../../../ado/reference/ado-api/stream-object-ado.md)|表示資料的二進位資料流程。<br /><br /> **資料流程**物件可安全地進行腳本處理。|  
   
 ## <a name="see-also"></a>另請參閱  
  [ADO API 參考](../../../ado/reference/ado-api/ado-api-reference.md)   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 06d3234317e38177defeacdf6f258bc2301dde9e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8c75c83fea1e6c8f4916180889635ddebd9cd915
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747043"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242798"
 ---
 # <a name="affectenum"></a>AffectEnum
 指定哪些記錄會受到作業影響。  
@@ -43,8 +43,14 @@ ms.locfileid: "82747043"
 |AdoEnums。影響群組|  
   
 ## <a name="applies-to"></a>套用至  
-  
-|||  
-|-|-|  
-|[CancelBatch 方法 (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|[Delete 方法 (ADO Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|  
-|[Resync 方法](../../../ado/reference/ado-api/resync-method.md)|[UpdateBatch 方法](../../../ado/reference/ado-api/updatebatch-method.md)|
+
+:::row:::
+    :::column:::
+        [CancelBatch 方法 (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)  
+        [Delete 方法 (ADO Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)  
+    :::column-end:::
+    :::column:::
+        [Resync 方法](../../../ado/reference/ado-api/resync-method.md)  
+        [UpdateBatch 方法](../../../ado/reference/ado-api/updatebatch-method.md)  
+    :::column-end:::
+:::row-end:::

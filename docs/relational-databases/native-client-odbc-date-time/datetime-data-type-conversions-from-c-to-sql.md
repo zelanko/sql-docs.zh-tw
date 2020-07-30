@@ -13,11 +13,12 @@ ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02dacc3323d331c2442e12518146681bdc45cb23
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 298e16b814251cf0068436cb5c1a6331aef8c1b4
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004375"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332412"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>datetime 資料類型從 C 轉換成 SQL
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,23 +27,22 @@ ms.locfileid: "86004375"
   
  下表描述的轉換會套用到用戶端上進行的轉換。 如果用戶端指定的參數小數秒有效位數與伺服器上定義的不同，用戶端轉換可能會成功，但在呼叫**SQLExecute**或**SQLExecuteDirect**時，伺服器將會傳回錯誤。 特別是，ODBC 會將小數秒的任何截斷視為錯誤，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 行為則是舍入; 例如，當您從**datetime2 （6）** 移至**datetime2 （2）** 時，就會進行舍入。 Datetime 資料行值會捨去為一秒的 1/300，而 smalldatetime 資料行的秒數會由伺服器設定為零。  
   
-|||||||||  
-|-|-|-|-|-|-|-|-|  
-||SQL_TYPE_DATE|SQL_TYPE_TIME|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_SS_TIMSTAMPOFFSET|SQL_CHAR|SQL_WCHAR|  
-|SQL_C_DATE|1|-|-|1,6|1,5,6|1,13|1,13|  
-|SQL_C_TIME|-|1|1|1,7|1、5、7|1,13|1,13|  
-|SQL_C_SS_TIME2|-|1,3|1,10|1,7|1、5、7|1,13|1,13|  
-|SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|不適用|不適用|1,10,11|不適用|不適用|不適用|不適用|  
-|SQL_C_TYPE_TIMESTAMP|1,2|1,3,4|1,4,10|1,10|1,5,10|1,13|1,13|  
-|SQL_C_SS_TIMESTAMPOFFSET|1,2,8|1,3,4,8|1,4,8,10|1,8,10|1,10|1,13|1,13|  
-|SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)|不適用|不適用|不適用|不適用|1,10,11|不適用|不適用|  
-|SQL_C_CHAR/SQL_WCHAR (date)|9|9|9|9,6|9,5,6|不適用|不適用|  
-|SQL_C_CHAR/SQL_WCHAR (time2)|9|9，3|9,10|9,7,10|9,5,7,10|不適用|不適用|  
-|SQL_C_CHAR/SQL_WCHAR (datetime)|9,2|9，3，4|9,4,10|9,10|9,5,10|不適用|不適用|  
-|SQL_C_CHAR/SQL_WCHAR (datetimeoffset)|9,2,8|9，3，4，8|9,4,8,10|9,8,10|9,10|不適用|不適用|  
-|SQL_C_BINARY(SQL_DATE_STRUCT)|1,11|不適用|不適用|不適用|不適用|不適用|不適用|  
-|SQL_C_BINARY(SQL_TIME_STRUCT)|不適用|不適用|不適用|不適用|不適用|不適用|不適用|  
-|SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)|不適用|不適用|不適用|不適用|不適用|不適用|不適用|  
+|   | SQL_TYPE_DATE | SQL_TYPE_TIME | SQL_SS_TIME2 | SQL_TYPE_TIMESTAMP | SQL_SS_TIMSTAMPOFFSET | SQL_CHAR | SQL_WCHAR |
+| - | ------------- | ------------- | ------------ | ------------------ | --------------------- | -------- | --------- |
+| **SQL_C_DATE** |1|-|-|1,6|1,5,6|1,13|1,13|  
+| **SQL_C_TIME** |-|1|1|1,7|1、5、7|1,13|1,13|  
+| **SQL_C_SS_TIME2** |-|1,3|1,10|1,7|1、5、7|1,13|1,13|  
+| **SQL_C_BINARY(SQL_SS_TIME2_STRUCT)** |N/A|N/A|1,10,11|N/A|N/A|N/A|N/A|  
+| **SQL_C_TYPE_TIMESTAMP** |1,2|1,3,4|1,4,10|1,10|1,5,10|1,13|1,13|  
+| **SQL_C_SS_TIMESTAMPOFFSET** |1,2,8|1,3,4,8|1,4,8,10|1,8,10|1,10|1,13|1,13|  
+| **SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)** |N/A|N/A|N/A|N/A|1,10,11|N/A|N/A|  
+| **SQL_C_CHAR/SQL_WCHAR (date)** |9|9|9|9,6|9,5,6|N/A|N/A|  
+| **SQL_C_CHAR/SQL_WCHAR (time2)** |9|9，3|9,10|9,7,10|9,5,7,10|N/A|N/A|  
+| **SQL_C_CHAR/SQL_WCHAR (datetime)** |9,2|9，3，4|9,4,10|9,10|9,5,10|N/A|N/A|  
+| **SQL_C_CHAR/SQL_WCHAR (datetimeoffset)** |9,2,8|9，3，4，8|9,4,8,10|9,8,10|9,10|N/A|N/A|  
+| **SQL_C_BINARY(SQL_DATE_STRUCT)** |1,11|N/A|N/A|N/A|N/A|N/A|N/A|  
+| **SQL_C_BINARY(SQL_TIME_STRUCT)** |N/A|N/A|N/A|N/A|N/A|N/A|N/A|  
+| **SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)** |N/A|N/A|N/A|N/A|N/A|N/A|N/A|  
   
 ## <a name="key-to-symbols"></a>符號的索引鍵  
   
@@ -78,10 +78,10 @@ ms.locfileid: "86004375"
   
      小數秒位數（小數位數）的數目是根據下表，從目的地資料行的大小決定。  
   
-    ||||  
-    |-|-|-|  
-    |類型|隱含的小數位數<br /><br /> 0|隱含的小數位數<br /><br /> 1. 9|  
-    |SQL_C_TYPE_TIMESTAMP|19|21..29|  
+    |   | 隱含的小數位數 | 隱含的小數位數 |
+    | - | ------------- | ------------- |
+    | **型別** | 0 | 1. 9 |  
+    |**SQL_C_TYPE_TIMESTAMP** |19|21..29|  
   
      不過對於 SQL_C_TYPE_TIMESTAMP，如果可以用三位數代表小數秒而不會造成資料遺失，而且資料行大小為 23 以上，則會產生完整的三位數小數秒。 此行為可確保使用舊版 ODBC 驅動程式所開發之應用程式的回溯相容性。  
   

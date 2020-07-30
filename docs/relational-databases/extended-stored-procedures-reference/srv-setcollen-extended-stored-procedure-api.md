@@ -1,5 +1,6 @@
 ---
 title: srv_setcollen (擴充預存程序 API) | Microsoft Docs
+description: 瞭解 srv_setcollen 如何以位元組為單位，指定可變長度資料行的目前資料長度，或允許 Null 值的資料行。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3c60f1c3-4562-463a-a259-12df172788bd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5b1947a1fe9f08b8eb14a2285ee114b002f94260
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e87c0728bf68fb7cae076d25cbda0ac43a7ed3ef
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760863"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332457"
 ---
 # <a name="srv_setcollen-extended-stored-procedure-api"></a>srv_setcollen (擴充預存程序 API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

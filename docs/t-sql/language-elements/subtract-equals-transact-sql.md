@@ -22,15 +22,15 @@ ms.assetid: 2a2056b5-1dfa-4ea8-8cfc-6331a2f94da9
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4cec7e5a39ababa62825817658fab4c4d83ba533
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9eda430651a7894fe55e1ab626d579cd8a9d4a22
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921034"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395902"
 ---
 # <a name="--subtraction-assignment-transact-sql"></a>-= (減法指派) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   兩數相減，再將值設定為運算結果。 例如，如果變數 @x 等於 35，則 @x -= 2 會用 @x 的原始值減去 2，然後將 @x 設定為該新值 (33)。  
   

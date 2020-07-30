@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 65145ce8f77c352fb24a2a206d99828298b6a60c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a08f7c896b48f6cb76c9805d3bea9910a8f5bda8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747261"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242858"
 ---
 # <a name="ado-methods"></a>ADO 方法
 
-|||  
+|方法|描述|  
 |-|-|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|建立可更新之**記錄集**物件的新記錄。|  
-|[追加](../../../ado/reference/ado-api/append-method-ado.md)|將物件附加至集合。 如果集合是**欄位**，則可以在附加至集合之前，建立新的**Field**物件。|  
+|[Append](../../../ado/reference/ado-api/append-method-ado.md)|將物件附加至集合。 如果集合是**欄位**，則可以在附加至集合之前，建立新的**Field**物件。|  
 |[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)|將資料附加至大型文字或二進位資料**欄位**或**參數**物件。|  
 |[BeginTrans、CommitTrans 和 RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|管理**連接**物件內的交易處理，如下所示：<br /><br /> **BeginTrans** -開始新的交易。<br /><br /> **CommitTrans** -儲存任何變更，並結束目前的交易。 它也可能會開始新的交易。<br /><br /> **RollbackTrans** -取消任何變更，並結束目前的交易。 它也可能會開始新的交易。|  
 |[取消](../../../ado/reference/ado-api/cancel-method-ado.md)|取消執行暫止的非同步方法呼叫。|  
@@ -44,8 +44,8 @@ ms.locfileid: "82747261"
 |[DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)|刪除檔案或目錄及其所有子目錄。|  
 |[執行（ADO 命令）](../../../ado/reference/ado-api/execute-method-ado-command.md)|執行**CommandText**屬性中所指定的查詢、SQL 語句或預存程式。|  
 |[執行（ADO 連接）](../../../ado/reference/ado-api/execute-method-ado-connection.md)|執行指定的查詢、SQL 語句、預存程式或提供者特定的文字。|  
-|[尋找](../../../ado/reference/ado-api/find-method-ado.md)|搜尋**記錄集**，尋找符合指定準則的資料列。|  
-|[刷](../../../ado/reference/ado-api/flush-method-ado.md)|將 ADO 緩衝區中剩餘的**資料流程**內容強制寫入與**資料流程**相關聯的基礎物件。|  
+|[Find](../../../ado/reference/ado-api/find-method-ado.md)|搜尋**記錄集**，尋找符合指定準則的資料列。|  
+|[清除](../../../ado/reference/ado-api/flush-method-ado.md)|將 ADO 緩衝區中剩餘的**資料流程**內容強制寫入與**資料流程**相關聯的基礎物件。|  
 |[get_OLEDBCommand 方法](../../../ado/reference/ado-api/get-oledbcommand-method.md)|傳回基礎 OLEDB 命令，第一次將 ADO 命令上設定的任何參數資訊傳播至 OLEDB 命令。|  
 |[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)|傳回**記錄集**，其資料列代表此**記錄**所表示之目錄中的檔案和子目錄。|  
 |[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)|傳回大型文字或二進位資料**欄位**物件內容的全部或一部分。|  
@@ -65,7 +65,7 @@ ms.locfileid: "82747261"
 |[put_OLEDBCommand 方法](../../../ado/reference/ado-api/put-oledbcommand-method.md)|這個方法不會執行任何作業，它一律會傳回 S_OK。|  
 |[讀取](../../../ado/reference/ado-api/read-method.md)|從**資料流程**物件讀取指定的位元組數目。|  
 |[ReadText](../../../ado/reference/ado-api/readtext-method.md)|從文字**資料流程**物件讀取指定的字元數。|  
-|[重新整理](../../../ado/reference/ado-api/refresh-method-ado.md)|更新集合中的物件，以反映提供者所提供的物件。|  
+|[[重新整理]](../../../ado/reference/ado-api/refresh-method-ado.md)|更新集合中的物件，以反映提供者所提供的物件。|  
 |[再次](../../../ado/reference/ado-api/requery-method.md)|藉由重新執行物件所依據的查詢，更新**記錄集**物件中的資料。|  
 |[重新同步處理](../../../ado/reference/ado-api/resync-method.md)|從基礎資料庫重新整理目前**記錄集**物件中的資料，或**記錄**物件的**Fields**集合。|  
 |[儲存](../../../ado/reference/ado-api/save-method.md)|將**記錄集**儲存在檔案或**資料流程**物件中。|  
