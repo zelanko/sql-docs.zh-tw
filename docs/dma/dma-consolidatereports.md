@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e7a3c58612761e046b71cddf35c87680bb6e9528
-ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
+ms.openlocfilehash: fd6563881127b7a5c1cf134711a52fdedde629c4
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83868377"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435145"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>使用 DMA 評估企業及整合評估報告
 
@@ -36,8 +36,8 @@ ms.locfileid: "83868377"
   - [Power BI 桌面](/power-bi/fundamentals/desktop-get-the-desktop)]。
   - [Azure PowerShell 模組](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - 下載並解壓縮：
-  - [DMA 會報告 Power BI 範本](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/2/PowerBI-Reports.zip)。
-  - [LoadWarehouse 腳本](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/1/LoadWarehouse1.zip)。
+  - [DMA 會報告 Power BI 範本](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/2/PowerBI-Reports.zip)。
+  - [LoadWarehouse 腳本](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/3/LoadWarehouse1.zip)。
 
 ## <a name="loading-the-powershell-modules"></a>載入 PowerShell 模組
 
@@ -46,7 +46,7 @@ ms.locfileid: "83868377"
 若要載入模組，請執行下列步驟：
 
 1. 流覽至 C:\Program Files\WindowsPowerShell\Modules，然後建立名為**DataMigrationAssistant**的資料夾。
-2. 開啟[PowerShell 模組](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/4/PowerShell-Modules2.zip)，然後將它們儲存到您建立的資料夾中。
+2. 開啟[PowerShell 模組](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/1/PowerShell-Modules2.zip)，然後將它們儲存到您建立的資料夾中。
 
       ![PowerShell 模組](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 
@@ -80,7 +80,6 @@ ms.locfileid: "83868377"
 >
 > 若為預設實例，請將實例名稱設定為 MSSQLServer。
 
-
 當您使用 csv 檔案匯入資料時，請確定只有兩個數據行的資料**實例名稱**和**資料庫名稱**，而且資料行沒有標題列。
 
  ![csv 檔案內容](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
@@ -97,7 +96,7 @@ ms.locfileid: "83868377"
 - DatabaseName
 - AssessmentFlag
 
-![SQL Server 資料表內容](../dma/media//dma-consolidatereports/dma-sql-server-table-contents.png)
+![SQL Server 資料表內容](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-database-inventory.png)
 
 如果此資料庫不在工具電腦上，請確定工具電腦具有與此 SQL Server 實例的網路連線。
 
@@ -105,10 +104,21 @@ ms.locfileid: "83868377"
 
 請記住，視物件的數目及其複雜度而定，評估可能需要很長的時間（小時 +），因此請謹慎將評量分成可管理的區塊。
 
+### <a name="if-using-an-instance-inventory"></a>如果使用實例清查
+
+建立名為**EstateInventory**的資料庫和名為**InstanceInventory**的資料表。 包含此清查資料的資料表可以有任意數目的資料行，只要有下列四個數據行：
+
+- ServerName
+- InstanceName
+- Port
+- AssessmentFlag
+
+![SQL Server 資料表內容](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)
+
 ## <a name="running-a-scaled-assessment"></a>執行調整規模的評估
 
 將 PowerShell 模組載入至模組目錄並建立清查之後，您必須開啟 PowerShell 並執行 dmaDataCollector 函式，以執行調整的評估。
- 
+
   ![dmaDataCollector 函數清單](../dma/media//dma-consolidatereports/dma-dmaDataCollector-function-listing.png)
 
 下表說明與 dmaDataCollector 函數相關聯的參數。
@@ -119,19 +129,20 @@ ms.locfileid: "83868377"
 |**csvPath** | CSV 清查檔案的路徑。  只有在**getServerListFrom**設定為**CSV**時才會使用。 |
 |**serverName** | 在**getServerListFrom**參數中使用**SqlServer**時，清查的 SQL Server 實例名稱。 |
 |**名稱** | 主控清查資料表的資料庫。 |
+|**useInstancesOnly** | 位旗標，用來指定是否要使用實例的清單進行評估。  如果設定為0，則會使用 DatabaseInventory 資料表來建立評量目標清單。 |
 |**AssessmentName** | DMA 評估的名稱。 |
-|**TargetPlatform** | 您想要執行的評量目標型別。  可能的值為**AzureSQLDatabase**、 **q l 2012**、 **SQLServer2014**、 **SQLServer2016**、 **SQLServerLinux2017**、 **SQLServerWindows2017**和**ManagedSqlServer**。 |
+|**TargetPlatform** | 您想要執行的評量目標型別。  可能的值為**AzureSQLDatabase**、 **ManagedSqlServer**、 **q l 2012**、 **SQLServer2014**、 **SQLServer2016**、 **SQLServerLinux2017**、 **SQLServerWindows2017**、 **SqlServerWindows2019**和**SqlServerLinux2019**。  |
 |**AuthenticationMethod** | 用來連接到您想要評估之 SQL Server 目標的驗證方法。 可能的值為**SQLAuth**和**WindowsAuth**。 |
 |**OutputLocation** | 要在其中儲存 JSON 評估輸出檔案的目錄。 根據要評估的資料庫數目和資料庫內的物件數目而定，評量可能會花很長的時間。 檔案將會在所有評量完成後寫入。 |
 
 如果發生未預期的錯誤，則會終止由這個進程起始的命令視窗。  請檢查錯誤記錄檔，以判斷失敗的原因。
- 
+
   ![錯誤記錄檔位置](../dma/media//dma-consolidatereports/dma-error-log-file-location.png)
 
 ## <a name="consuming-the-assessment-json-file"></a>使用評估 JSON 檔案
 
 評估完成後，您就可以開始將資料匯入 SQL Server 以進行分析。 若要使用評估 JSON 檔案，請開啟 PowerShell 並執行 dmaProcessor 函式。
- 
+
   ![dmaProcessor 函式清單](../dma/media//dma-consolidatereports/dma-dmaProcessor-function-listing.png)
 
 下表說明與 dmaProcessor 函數相關聯的參數。
@@ -157,8 +168,8 @@ DmaProcessor 函數應該只需要幾秒鐘的時間來處理單一檔案。
     此腳本會從 DMAReporting 資料庫中的 ReportData 資料表取出資料，並將其載入倉儲中。  如果在此載入程式期間發生任何錯誤，可能是因為維度資料表中遺漏專案所造成。
 
 2. 載入資料倉儲。
- 
-      ![已載入 LoadWarehouse 內容](../dma/media//dma-consolidatereports/dma-LoadWarehouse-loaded.png)
+
+  ![已載入 LoadWarehouse 內容](../dma/media//dma-consolidatereports/dma-load-warehouse-loaded.png)
 
 ## <a name="set-your-database-owners"></a>設定您的資料庫擁有者
 
@@ -166,7 +177,7 @@ DmaProcessor 函數應該只需要幾秒鐘的時間來處理單一檔案。
 
 您也可以使用 LoadWarehouse 腳本來提供基本的 TSQL 語句，讓您設定資料庫擁有者。
 
-  ![LoadWarehouse 設定擁有者](../dma/media//dma-consolidatereports/dma-LoadWarehouse-set-owners.png)
+  ![LoadWarehouse 設定擁有者](../dma/media//dma-consolidatereports/dma-load-warehouse-set-owners.png)
 
 ## <a name="dma-reports"></a>DMA 報告
 
@@ -250,7 +261,7 @@ Power BI 報告中顯示的詳細資料會顯示在下列各節中。
 - 未就緒
 
 ### <a name="issues-word-cloud"></a>Word Cloud 的問題
- 
+
   ![DMA 問題 WordCloud](../dma/media//dma-consolidatereports/dma-issues-word-cloud.png)
 
 此視覺效果會顯示目前在選取內容中發生的問題（所有專案、實例、資料庫 [倍數/]）。 畫面上出現較大的文字，表示該類別中的問題數目愈大。 將滑鼠指標暫留在文字上會顯示該類別中發生的問題數目。
@@ -280,7 +291,7 @@ Power BI 報告中顯示的詳細資料會顯示在下列各節中。
   ![DMA 補救計畫報告](../dma/media//dma-consolidatereports/dma-remediation-plan-report.png)
 
 您也可以使用 [**視覺效果篩選**] 分頁中的篩選器，自行使用補救計畫報告來建立自訂的補救計畫。
- 
+
   ![DMA 補救計畫報告篩選選項](../dma/media//dma-consolidatereports/dma-remediation-plan-report-filter-options.png)
 
 ### <a name="script-disclaimer"></a>腳本免責聲明
