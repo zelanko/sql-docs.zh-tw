@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 32746558-097b-4749-989e-519aadf7e3f4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e0b69deb64cc4ea04c007fd3d3328cb4154cc3e8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b6b8c5c9a593177155f2f22d7dba4e38515e0dce
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242615"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472604"
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum
 指定物件為開啟或關閉、連接至資料來源、執行命令，或抓取資料。  
@@ -45,10 +45,6 @@ ms.locfileid: "87242615"
 |AdoEnums.ObjectState.FETCHING|  
   
 ## <a name="applies-to"></a>套用至  
-  
-|||  
-|-|-|  
-|||
 
 :::row:::
     :::column:::

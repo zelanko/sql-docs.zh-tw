@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: dda4879d-57ae-4267-b410-1ef5c37404c7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1053382a7236794cadd6637d6e19091cf7508496
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b99adfbd57d8062cec0b3cc493095312f06020f8
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86908554"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442439"
 ---
 # <a name="sysserver_event_session_targets-transact-sql"></a>sys.server_event_session_targets (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   傳回事件工作階段中每一個事件目標的資料列。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "86908554"
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|事件工作階段的識別碼。 不可為 Null。|  
 |target_id|**int**|目標的識別碼。 這個識別碼在事件工作階段物件中是唯一的。 不可為 Null。|  
-|名稱|**sysname**|事件目標的名稱。 不可為 Null。|  
+|NAME|**sysname**|事件目標的名稱。 不可為 Null。|  
 |套件|**sysname**|包含此事件目標之事件封裝的名稱。 不可為 Null。|  
 |name|**sysname**|包含此事件目標之模組的名稱。 不可為 Null。|  
   

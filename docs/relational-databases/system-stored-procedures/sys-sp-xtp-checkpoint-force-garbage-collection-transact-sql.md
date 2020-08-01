@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 82b35b2b-edbd-44ac-9fc8-80695f2fd1df
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 45eb999d6101902ebf9d079235f56d28e343f8e9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: df25b33677d4494d32bd60bb55b5c60791bcad30
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814479"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442408"
 ---
 # <a name="syssp_xtp_checkpoint_force_garbage_collection-transact-sql"></a>sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   以記錄序號 (LSN) 標記合併作業中使用的來源檔案，之後不需要用到這些來源檔案時，可進行記憶體回收。 另外也會將相關 LSN 小於記錄截斷點的檔案移至檔案資料流記憶體回收。  
   

@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: d52cc481-4d29-4f33-b63d-231ec35d092f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b8924d703085b3f93fe2ae36084025e945ff3fda
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0654796ace5d5026539fc50f514b0407362633fc
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820861"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442743"
 ---
 # <a name="sysdm_os_buffer_pool_extension_configuration-transact-sql"></a>sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   傳回有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中緩衝集區延伸模組的組態資訊。 針對每個緩衝集區延伸模組檔案，各傳回一個資料列。  
   
@@ -35,9 +35,9 @@ ms.locfileid: "82820861"
   
 | 資料行名稱 | 資料類型 | 描述 |
 | :---------- | :-------- | :---------- |
-|路徑|**Nvarchar**（256）|緩衝集區延伸模組快取的路徑和檔案名稱。 可為 Null。|  
+|path|**Nvarchar**（256）|緩衝集區延伸模組快取的路徑和檔案名稱。 可為 Null。|  
 |file_id|**int**|緩衝集區延伸模組檔案的識別碼。 不可為 Null。|  
-|State|**int**|緩衝集區延伸模組功能的狀態。 不可為 Null。<br /><br /> 0 - 緩衝集區延伸模組已停用<br /><br /> 1 - 緩衝集區延伸模組停用中<br /><br /> 2-保留供未來使用<br /><br /> 3 - 緩衝集區延伸模組啟用中<br /><br /> 4 - 保留供日後使用<br /><br /> 5 - 緩衝集區延伸模組已啟用|  
+|state|**int**|緩衝集區延伸模組功能的狀態。 不可為 Null。<br /><br /> 0 - 緩衝集區延伸模組已停用<br /><br /> 1 - 緩衝集區延伸模組停用中<br /><br /> 2-保留供未來使用<br /><br /> 3 - 緩衝集區延伸模組啟用中<br /><br /> 4 - 保留供日後使用<br /><br /> 5 - 緩衝集區延伸模組已啟用|  
 |state_description|**Nvarchar**（60）|描述緩衝集區延伸模組功能的狀態。 可為 Null。<br /><br /> 0 = BUFFER POOL EXTENSION DISABLED<br /><br /> 5 = 緩衝集區延伸模組已啟用|
 |current_size_in_kb|**bigint**|緩衝集區延伸模組檔案的目前大小。 不可為 Null。|
 | &nbsp; | &nbsp; | &nbsp; |

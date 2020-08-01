@@ -21,15 +21,15 @@ ms.assetid: ad0efc06-3d9c-4861-9dfa-a7a87822d0c8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6ea40fa0a40e90b0ab31912bcda185cc21258b0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0fcac0218e78887aecb4d2ce7e6bbba4ebe24d0a
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830752"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442887"
 ---
 # <a name="sysdm_db_xtp_table_memory_stats-transact-sql"></a>sys.dm_db_xtp_table_memory_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   傳回目前資料庫中每個 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 資料表 (使用者和系統) 的記憶體使用量統計資料。 系統資料表具有負數物件識別碼，並且用於儲存 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎的執行階段資訊。 與使用者物件不同的是，系統資料表為內部物件且只存在於記憶體中，因而無法透過目錄檢視查看。 系統資料表是用以儲存資訊，例如儲存體中所有資料/差異檔案的中繼資料、合併要求、差異檔案用於篩選資料列的標準、已卸除的資料表，以及復原與備份的相關資訊。 假設 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎最多可以有 8,192 個資料檔案和差異檔案組，若是大型的記憶體中資料庫，系統資料表佔用的記憶體可能只有數 MB 之多。  
   

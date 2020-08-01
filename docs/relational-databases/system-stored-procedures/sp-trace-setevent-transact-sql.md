@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7d1f047fed74a212358ef7c1af61034d021661ef
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f96efdec6878691c4c3b3a3efbeb1cd2d6324f3d
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892588"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472664"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,9 +51,9 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  這份資料表會列出能夠在追蹤中新增或移除的事件。  
   
-|事件編號|事件名稱|說明|  
+|事件編號|事件名稱|描述|  
 |------------------|----------------|-----------------|  
-|0-9|Reserved|Reserved|  
+|0-9|保留|保留|  
 |10|RPC:Completed|發生在遠端程序呼叫 (RPC) 已完成之時。|  
 |11|RPC:Starting|發生在 RPC 已啟動之時。|  
 |12|SQL:BatchCompleted|發生在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次已完成之時。|  
@@ -73,8 +73,8 @@ sp_trace_setevent [ @traceid = ] trace_id
 |26|Lock:Cancel|指出已取消資源鎖定之取得 (例如，由於死結之故)。|  
 |27|Lock:Timeout|指出對於所需資源 (如頁面) 的鎖定要求，因其他交易持有資源的封鎖鎖定而逾時。 超時時間是由 @ @LOCK_TIMEOUT 函數決定，而且可以使用 set LOCK_TIMEOUT 語句來設定。|  
 |28|Degree of Parallelism Event (7.0 Insert)|發生在執行 SELECT、INSERT 或 UPDATE 陳述式之前。|  
-|29-31|Reserved|改用事件 28。|  
-|32|Reserved|Reserved|  
+|29-31|保留|改用事件 28。|  
+|32|保留|保留|  
 |33|例外狀況|指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發生例外狀況。|  
 |34|SP:CacheMiss|指出在程序快取中找不到預存程序。|  
 |35|SP:CacheInsert|指出項目已插入程序快取中。|  
@@ -90,20 +90,20 @@ sp_trace_setevent [ @traceid = ] trace_id
 |45|SP:StmtCompleted|指出已經完成執行預存程序中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。|  
 |46|Object:Created|指出已建立物件，例如，CREATE INDEX、CREATE TABLE 和 CREATE DATABASE 等陳述式。|  
 |47|Object:Deleted|指出已刪除物件，例如，DROP INDEX 和 DROP TABLE 陳述式。|  
-|48|Reserved||  
-|49|Reserved||  
+|48|保留||  
+|49|保留||  
 |50|SQL Transaction|追蹤 [!INCLUDE[tsql](../../includes/tsql-md.md)] BEGIN、COMMIT、SAVE 和 ROLLBACK TRANSACTION 等陳述式。|  
 |51|Scan:Started|指出已啟動資料表或索引掃描。|  
 |52|Scan:Stopped|指出已停止資料表或索引掃描。|  
 |53|CursorOpen|指出 ODBC、OLE DB 或 DB-Library 已開啟 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的資料指標。|  
 |54|TransactionLog|追蹤交易寫入交易記錄中。|  
 |55|Hash Warning|指出未處理緩衝區資料分割的雜湊作業 (如雜湊聯結、雜湊彙總、雜湊聯集和雜湊相異)，已還原成替代計畫。 這可能是因為遞迴深度、資料偏斜、追蹤旗標或位元計數而發生。|  
-|56-57|Reserved||  
+|56-57|保留||  
 |58|Auto Stats|指出已自動更新索引統計資料。|  
 |59|Lock:Deadlock Chain|針對每個會導向死結的事件而產生。|  
 |60|Lock:Escalation|指出較細部鎖定已經轉換成較廣泛鎖定 (例如，頁面鎖定已擴大或轉換成 TABLE 或 HoBT 鎖定)。|  
 |61|OLE DB Errors|指出發生 OLE DB 錯誤。|  
-|62-66|Reserved||  
+|62-66|保留||  
 |67|Execution Warnings|指出在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式或預存程序期間所發生的任何警告。|  
 |68|Showplan Text (Unencoded)|顯示所執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式之計畫樹狀結構。|  
 |69|Sort Warnings|指出不適合在記憶體中的排序作業。 不包括包含建立索引的排序作業；只包括在查詢中的排序作業 (例如，在 SELECT 陳述式中所用的 ORDER BY 子句)。|  
@@ -127,9 +127,9 @@ sp_trace_setevent [ @traceid = ] trace_id
 |96|Showplan Text|顯示查詢最佳化工具的 SQL 陳述式查詢計畫樹狀目錄。 請注意， **TextData**資料行不包含此事件的執行程式表。|  
 |97|Showplan All|顯示含有所執行的 SQL 陳述式之完整編譯階段詳細資料的查詢計畫。 請注意， **TextData**資料行不包含此事件的執行程式表。|  
 |98|Showplan Statistics Profile|顯示含有所執行的 SQL 陳述式之完整執行階段詳細資料的查詢計畫。 請注意， **TextData**資料行不包含此事件的執行程式表。|  
-|99|Reserved||  
+|99|保留||  
 |100|RPC Output Parameter|產生每個 RPC 的參數輸出值。|  
-|101|Reserved||  
+|101|保留||  
 |102|Audit Database Scope GDR|發生在每次 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的任何使用者對僅限資料庫的動作 (例如授與資料庫的權限) 發出陳述式權限的 GRANT、DENY、REVOKE 之時。|  
 |103|Audit Object GDR Event|發生在每次 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的任何使用者發出物件權限的 GRANT、DENY、REVOKE 之時。|  
 |104|Audit AddLogin Event|當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 加入或移除登入時發生; 針對**sp_addlogin**和**sp_droplogin**。|  
@@ -172,15 +172,15 @@ sp_trace_setevent [ @traceid = ] trace_id
 |141|Broker:Message Classify|發生在 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 決定訊息路由之時。|  
 |142|Broker:Transmission|指出 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 傳輸層發生錯誤。 錯誤號碼和狀態值會指出錯誤來源。|  
 |143|Broker:Queue Disabled|指出偵測到有害訊息，因為 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 佇列有五個連續的交易回復。 事件包含有害訊息所在之佇列的資料庫識別碼和佇列識別碼。|  
-|144-145|Reserved||  
+|144-145|保留||  
 |146|Showplan XML Statistics Profile|發生在執行 SQL 陳述式之時。 它會識別顯示計畫操作員，且會顯示完整的編譯階段資料。 請注意，此事件的**Binary**資料行包含已編碼的執行程式表。 請使用 SQL Server Profiler 開啟追蹤並檢視執行程序表。|  
 |148|Deadlock Graph|發生在因獲得鎖定的嘗試是死結的一部分，且已被選為死結的犧牲者，因而取消嘗試之時。 提供死結的 XML 描述。|  
 |149|Broker:Remote Message Acknowledgement|發生在 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 傳送或接收訊息收條之時。|  
 |150|Trace File Close|發生在追蹤檔換用期間關閉追蹤檔之時。|  
-|151|Reserved||  
+|151|保留||  
 |152|Audit Change Database Owner|發生在利用 ALTER AUTHORIZATION 來變更資料庫擁有者，且檢查執行這項動作的權限之時。|  
 |153|Audit Schema Object Take Ownership Event|發生在利用 ALTER AUTHORIZATION 來將擁有者指派給物件，且檢查執行這項動作的權限之時。|  
-|154|Reserved||  
+|154|保留||  
 |155|FT:Crawl Started|發生在開始全文檢索搜耙 (擴展) 之時。 用來檢查工作者工作是否已取出搜耙要求。|  
 |156|FT:Crawl Stopped|發生在全文檢索搜耙 (擴展) 停止之時。 停止發生在搜耙已順利完成或發生嚴重錯誤之時。|  
 |157|FT:Crawl Aborted|發生在全文檢索搜耙期間發生例外狀況之時。 通常會造成停止全文檢索搜耙。|  
@@ -221,7 +221,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |194|OLEDB Provider Information|發生在執行分散式查詢及收集提供者連接的對應資訊之時。|  
 |195|Mount Tape|發生在收到磁帶掛載要求之時。|  
 |196|Assembly Load|發生在要求載入 CLR 組件之時。|  
-|197|Reserved||  
+|197|保留||  
 |198|XQuery Static Type|發生在執行 XQuery 運算式之時。 這個事件類別提供 XQuery 運算式的靜態類型。|  
 |199|QN: subscription|發生在無法訂閱查詢登錄之時。 **TextData**資料行包含事件的相關資訊。|  
 |200|QN: parameter table|使用中之訂閱的相關資訊儲存在內部參數資料表中。 當建立或刪除參數資料表時，便會發生這個事件。 這些資料表通常是在重新啟動資料庫時建立或刪除。 **TextData**資料行包含事件的相關資訊。|  
@@ -257,13 +257,13 @@ sp_trace_setevent [ @traceid = ] trace_id
 |13|**有效期間**|事件所經歷的時間 (以百萬分之一秒為單位)。 這個資料行不是由 Hash Warning 事件來擴展。|  
 |14|**StartTime**|事件的開始時間 (如果可以取得的話)。|  
 |15|**EndTime**|事件結束的時間。 啟動事件類別 (如 **SQL:BatchStarting** 或 **SP:Starting**) 不會擴展這個資料行。 **雜湊警告**事件也不會填入此專案。|  
-|16|**顯示**|伺服器代表事件執行的邏輯磁碟讀取數。 **Lock：已釋放**事件不會填入此資料行。|  
-|17|**寫入**|伺服器代表事件執行的實體磁碟寫入數。|  
+|16|**Reads**|伺服器代表事件執行的邏輯磁碟讀取數。 **Lock：已釋放**事件不會填入此資料行。|  
+|17|**Writes**|伺服器代表事件執行的實體磁碟寫入數。|  
 |18|**CPU**|事件所用的 CPU 時間 (以毫秒為單位)。|  
 |19|**權限**|代表權限的點陣圖；供安全性稽核使用。|  
 |20|**嚴重性**|例外狀況的嚴重性層級。|  
 |21|**EventSubClass**|事件子類別的類型。 所有事件類別的這個資料行都不會擴展。|  
-|22|**ObjectID**|系統指派給物件的識別碼。|  
+|22|**Exchange Spill**|系統指派給物件的識別碼。|  
 |23|「成功」|嘗試使用權限成功；用來進行稽核。<br /><br /> **1** = 成功**0** = 失敗|  
 |24|**IndexID**|事件所影響之物件的索引識別碼。 若要確定物件的索引識別碼，請使用 **sysindexes** 系統資料表的 **indid** 資料行。|  
 |25|**IntegerData**|這是一個整數值，會隨著追蹤所擷取的事件類別而不同。|  
@@ -302,7 +302,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |58|**OwnerID**|擁有鎖定的物件類型。 只適用於鎖定事件。|  
 |59|**ParentName**|物件所在結構描述的名稱。|  
 |60|**IsSystem**|指出事件是發生在系統處理序或使用者處理序。<br /><br /> **1** = 系統<br /><br /> **0** = 使用者。|  
-|61|**Offset**|預存程序或批次內之陳述式的起始位移。|  
+|61|**投影**|預存程序或批次內之陳述式的起始位移。|  
 |62|**SourceDatabaseID**|物件來源所在的資料庫識別碼。|  
 |63|**SqlHandle**|這是一個 64 位元雜湊，以隨選查詢的文字或 SQL 物件的資料庫和物件識別碼為基礎。 此值可以傳遞給**sys.databases dm_exec_sql_text （）** ，以取得相關聯的 sql 文字。|  
 |64|**SessionLoginName**|引發工作階段的使用者登入名稱。 例如，如果您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 **連接到** ，卻以 **Login2**執行陳述式，則 **SessionLoginName** 會顯示 **Login1**，而 **LoginName** 會顯示 **Login2**。 此資料行會同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|  
@@ -316,7 +316,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  下表說明** \@ on**和** \@ columnid**之間的互動。  
   
-|@on|@columnid|結果|  
+|\@的|\@columnid|結果|  
 |---------|---------------|------------|  
 |ON (**1**)|NULL|開啟事件 (ON)。<br /><br /> 清除所有資料行。|  
 ||NOT NULL|開啟指定事件的資料行 (ON)。|  

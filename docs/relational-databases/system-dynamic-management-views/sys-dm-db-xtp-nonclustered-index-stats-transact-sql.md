@@ -20,15 +20,15 @@ ms.assetid: d55ba31c-296c-419b-9c4b-c126e0a3d156
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c66bc0d20274819de2c9dc1b4a20e125e6e9044
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c7631a10e909eb0adae9d38b89c06632e2d013c2
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830778"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442458"
 ---
 # <a name="sysdm_db_xtp_nonclustered_index_stats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   sys.dm_db_xtp_nonclustered_index_stats 包含有關針對記憶體最佳化資料表中非叢集索引所執行之作業的統計資料。 sys.dm_db_xtp_nonclustered_index_stats 中的每一列分別代表目前資料庫中記憶體最佳化資料表的每一個非叢集索引。  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a8c2fb81-9644-4943-9391-fa62b37056de
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 43d1618b50e74cd6a7b0e24089ecbe145e4fce28
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 114958d9701b784ef3c8a4dd950e6cd62a0ca9ba
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920018"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442616"
 ---
 # <a name="extended-events-catalog-views-transact-sql"></a>擴充的事件目錄檢視 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   此章節包含 SQL Server 擴充的事件所適用的下列目錄檢視。  
 

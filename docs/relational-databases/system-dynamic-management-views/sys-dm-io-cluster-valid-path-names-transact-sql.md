@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 5bc8a0e5-6c72-425b-8c58-f276eb9add2c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7ba860f3d329341575c3f3f222b0fa7e1c86934e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a47313e1fb9a97207f02abcc89bdb66bb791f9ea
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827914"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442537"
 ---
 # <a name="sysdm_io_cluster_valid_path_names-transact-sql"></a>sys.dm_io_cluster_valid_path_names (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   傳回 SQL Server 容錯移轉叢集執行個體之所有有效共用磁碟的相關資訊，包括叢集共用磁碟區。 如果執行個體尚未叢集化，則會傳回空的資料列集。  
   

@@ -21,15 +21,15 @@ ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ddf365b81a6e973da8348ad011dea9e23aabba50
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a4c4579fa8c2b891644e462ffd896e67862be8ca
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85677519"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442588"
 ---
 # <a name="sysdm_db_xtp_checkpoint_files-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   顯示有關檢查點檔案的資訊，包括檔案大小、實體位置及交易識別碼。  
   
@@ -41,10 +41,10 @@ ms.locfileid: "85677519"
   
  如需詳細資訊，請參閱[建立和管理記憶體優化物件的儲存體](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)。  
   
-##  <a name="sssql15-and-later"></a><a name="bkmk_2016"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]和更新版本  
+##  <a name="sssql15-and-later"></a><a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版的   
  下表描述的資料行 `sys.dm_db_xtp_checkpoint_files` ，從開始 **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** 。  
   
-|資料行名稱|類型|描述|  
+|資料行名稱|類型|說明|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|資料或差異檔案所屬之容器的識別碼 (以 sys.database_files 中的 FILESTREAM 類型檔案來表示)。 與 sys.databases 中的 file_id 的聯結[database_files &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)。|  
 |container_guid|**uniqueidentifier**|容器的 GUID，根、資料或差異檔案是其中的一部分。 在 sys.databases database_files 資料表中與 file_guid 的聯結。|  
@@ -70,7 +70,7 @@ ms.locfileid: "85677519"
 ##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  下表描述的資料行 `sys.dm_db_xtp_checkpoint_files` ，適用于 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** 。  
   
-|資料行名稱|類型|描述|  
+|資料行名稱|類型|說明|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|資料或差異檔案所屬之容器的識別碼 (以 sys.database_files 中的 FILESTREAM 類型檔案來表示)。 與 sys.databases 中的 file_id 的聯結[database_files &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)。|  
 |container_guid|**uniqueidentifier**|資料或差異檔案所屬之容器的 GUID。|  

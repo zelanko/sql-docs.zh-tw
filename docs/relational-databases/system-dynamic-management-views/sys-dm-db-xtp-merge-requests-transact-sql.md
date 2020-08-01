@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: c1224e88-af74-4c99-ae32-d5d2c552a1f5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0abb6be6bc64ba0e55c3f7528d5b7996185f0f2d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f489b01655f3b6836c1360bc0e473747e62ca59e
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830771"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442674"
 ---
 # <a name="sysdm_db_xtp_merge_requests-transact-sql"></a>sys.dm_db_xtp_merge_requests (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 追蹤資料庫合併要求。 合併要求可能是由 SQL Server 所產生，或可能是使用者已使用[sp_xtp_merge_checkpoint_files （transact-sql）](../../relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql.md)提出要求。
 
@@ -43,6 +43,6 @@ ms.locfileid: "82830771"
 
 需要目前資料庫的 VIEW DATABASE STATE 權限。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [記憶體最佳化的資料表動態管理檢視 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)

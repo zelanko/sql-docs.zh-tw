@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 695a796d-087e-4bc8-99d0-ddc342604c75
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d7cfca8eea2051ab8c1f070e0da9603604c5296a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: de629f6ae966f8ea64dffa01676811650ac38b43
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829928"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442641"
 ---
 # <a name="syssp_xtp_unbind_db_resource_pool-transact-sql"></a>sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   這個系統程序會移除資料庫與資源集區之間的現有繫結，以便追蹤 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 記憶體使用量。  如果目前沒有任何集區繫結至指定的資料庫，就會傳回成功。 當資料庫解除繫結時，先前配置給記憶體最佳化物件的記憶體仍然會配置給先前的資源集區。 您必須重新啟動資料庫以釋出配置的記憶體。 一旦資料庫與資源集區解除繫結之後，繫結就會指向 DEFAULT 資源集區。  
   

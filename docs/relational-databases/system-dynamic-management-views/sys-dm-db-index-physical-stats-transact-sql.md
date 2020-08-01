@@ -21,12 +21,12 @@ ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e1ebbe98efecd97cb7ddda6284d4a28176e8ec1
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7bceaef8321248bc29be2faad3886319a9267391
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112764"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472198"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,33 +55,33 @@ sys.dm_db_index_physical_stats (
 ```  
   
 ## <a name="arguments"></a>引數  
- *database_id* |Null |0 |預設  
+ *database_id* \|Null \| 0 \| 預設值  
  資料庫的識別碼。 *database_id*為**Smallint**。 有效的輸入為資料庫的識別碼、NULL、0 或 DEFAULT。 預設值是 0。 NULL、0 和 DEFAULT 是這個內容中的對等值。  
   
  請指定 NULL 來傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中之所有資料庫的資訊。 如果您為*database_id*指定 null，則也必須為*object_id*、 *index_id*和*partition_number*指定 null。  
   
  可以指定內建函數 [DB_ID](../../t-sql/functions/db-id-transact-sql.md)。 在不指定資料庫名稱的情況下使用 DB_ID 時，目前資料庫的相容性層級必須是 90 或 90 以上。  
   
- *object_id* |Null |0 |預設  
+ *object_id* \|Null \| 0 \| 預設值  
  這是索引所在之資料表或檢視表的物件識別碼。 *@object_id* 是 **int**。  
   
  有效的輸入為資料表和檢視表的識別碼、NULL、0 或 DEFAULT。 預設值是 0。 NULL、0 和 DEFAULT 是這個內容中的對等值。 從到 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ，有效的輸入也包括 service broker 佇列名稱或佇列內部資料表名稱。 套用預設參數時（亦即所有物件、所有索引等等），所有佇列的片段資訊都會包含在結果集中。  
   
  請指定 NULL 來傳回指定之資料庫中所有資料表和檢視表的相關資訊。 如果您為*object_id*指定 null，也必須為*index_id*和*partition_number*指定 null。  
   
- *index_id* |0 |Null |-1 |預設  
+ *index_id* \|0 \| Null \| -1 \| 預設值  
  這是索引的識別碼。 *index_id*為**int**。有效的輸入為索引的識別碼、0（如果*object_id*是堆積）、Null、-1 或 DEFAULT。 預設值為 -1。 Null、-1 和 DEFAULT 在此內容中是對等的值。  
   
  請指定 NULL 來傳回基底資料表或檢視表的所有索引資訊。 如果您為*index_id*指定 null，則也必須為*partition_number*指定 null。  
   
- *partition_number* |Null |0 |預設  
+ *partition_number* \|Null \| 0 \| 預設值  
  這是物件的分割區編號。 *partition_number*為**int**。有效的輸入為索引或堆積的*partion_number* 、Null、0或 DEFAULT。 預設值是 0。 NULL、0 和 DEFAULT 是這個內容中的對等值。  
   
  請指定 NULL 來傳回主控物件之所有分割區的相關資訊。  
   
  *partition_number*是以1為基礎。 非資料分割索引或堆積*partition_number*設為1。  
   
- *模式*|Null |預設  
+ *模式* \|Null \| 預設值  
  這是模式的名稱。 *模式*指定用來取得統計資料的掃描層級。 *模式*為**sysname**。 有效輸入為 DEFAULT、NULL、LIMITED、SAMPLED 或 DETAILED。 預設值 (NULL) 是 LIMITED。  
   
 ## <a name="table-returned"></a>傳回的資料表  

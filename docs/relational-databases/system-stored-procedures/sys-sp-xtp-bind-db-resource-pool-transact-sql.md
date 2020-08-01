@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dfdfbe678e5b91d72e19a0300f9f1feec77c9d75
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b6f7e2f05d03c1bb43b184c259a5cef4b5d3b7e2
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814500"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442451"
 ---
 # <a name="syssp_xtp_bind_db_resource_pool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   將指定的 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 資料庫繫結至指定的資源集區。 資料庫和資源集區都必須在執行 `sys.sp_xtp_bind_db_resource_pool` 之前存在。  
   

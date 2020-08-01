@@ -1,6 +1,6 @@
 ---
 title: 資料移轉小幫手的最佳做法
-description: 瞭解使用 Data Migration Assistant 遷移 SQL Server 資料庫的最佳作法
+description: 瞭解使用 Data Migration Assistant 遷移 SQL Server 資料庫的最佳作法，包括安裝、評估和遷移的相關資訊。
 ms.custom: seo-lt-2019
 ms.date: 03/12/2019
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: fbfc995b3271c9618cd773d42d3e8154958d6af5
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 1d9dc4c4030330e7065d6f8531af967dcf88baa3
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886045"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472364"
 ---
-# <a name="best-practices-for-running-data-migration-assistant"></a>適用於執行 Data Migration Assistant 的最佳做法
+# <a name="best-practices-for-running-data-migration-assistant"></a>執行 Data Migration Assistant 的最佳做法 (機器翻譯)
 本文提供安裝、評估和遷移的一些最佳作法資訊。
 
 ## <a name="installation"></a>安裝
@@ -31,7 +31,7 @@ ms.locfileid: "82886045"
 - 在非尖峰時間執行生產資料庫的評量。
 - 分別執行**相容性問題**和**新的功能建議**評量，以減少評量的持續時間。
 
-## <a name="migration"></a>移轉
+## <a name="migration"></a>遷移
 - 在非尖峰時間遷移伺服器。
 
 - 在遷移資料庫時，請提供來源伺服器和目標伺服器可存取的單一共用位置，並盡可能避免複製作業。 複製作業可能會根據備份檔案的大小來引入延遲。 複製作業也會增加因額外步驟而導致遷移失敗的機率。 當提供單一位置時，Data Migration Assistant 會略過複製作業。

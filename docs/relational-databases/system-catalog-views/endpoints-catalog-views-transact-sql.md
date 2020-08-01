@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 557bc2f2-135c-4e96-be5a-dfbdfd2ec932
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b1c2dd3c546b3a87a661ada98f7cc0ec9225d99c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 505b5a4b6a5528015acc1592bb63c91e13557a4d
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86910939"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442625"
 ---
 # <a name="endpoints-catalog-views-transact-sql"></a>端點目錄檢視 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   此章節包含下列目錄檢視。  
 
