@@ -28,15 +28,15 @@ ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7b42f9f9db95954509c6e47c28b317eab0626c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cee1bcbb781319c4cabc2265962350d2480d9d97
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981905"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87392610"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL 語法慣例 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 下表列出和描述 [!INCLUDE[tsql](../../includes/tsql-md.md)] 參考中之語法圖所用的慣例。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "73981905"
 |[ **,** ..._n_]|指出先前項目可以重複 _n_ 次。 以逗號分隔項目。|  
 |[..._n_]|指出先前項目可以重複 _n_ 次。 以空白分開各次出現項目。|  
 |;|[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式結束字元。 雖然在這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中大多數陳述式都不需要使用分號，但在未來的版本中將會需要。|  
-|\<label> ::=|語法區塊的名稱。 針對冗長語法的區段，或可用於陳述式中多個位置的語法單位，請使用這個慣例進行分組與標示。 每個能夠使用語法區塊的位置，都會以括在＞形箭號內的標籤來指示：\<標籤>。<br /><br /> set 是運算式的集合，例如 \<grouping set>。而 list 則是 set 的集合，例如 \<composite element list>。|  
+|\<label> ::=|語法區塊的名稱。 針對冗長語法的區段，或可用於陳述式中多個位置的語法單位，請使用這個慣例進行分組與標示。 每個能夠使用語法區塊的位置，都會以括在＜＞內的標籤來指示：\<label>。<br /><br /> set 是運算式的集合，例如 \<grouping set>。而 list 則是 set 的集合，例如 \<composite element list>。|  
   
 ## <a name="multipart-names"></a>多部分名稱  
 除非另有指定，否則，所有指向資料庫物件名稱的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 參考都可以是四部分的名稱，格式如下：  

@@ -1,6 +1,6 @@
 ---
 title: 快速入門：連線及查詢 SQL Server
-description: 本快速入門說明如何使用 Azure Data Studio 連線到 SQL Server 並執行查詢
+description: 進行快速入門，使用 Azure Data Studio 連線到 SQL Server，然後使用 Transact-SQL (T-SQL) 陳述式建立資料庫。
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: quickstart
@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 08/02/2019
-ms.openlocfilehash: d5fc104e5c4a848c24c6bc45ab09419dc10d1818
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 532e210d239f8c55b99bd34828fafe160e1fb78b
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764104"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411284"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-sql-server"></a>快速入門：使用 Azure Data Studio 連線及查詢 SQL Server
 

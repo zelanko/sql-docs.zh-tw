@@ -19,15 +19,15 @@ ms.assetid: b545413d-c4f7-4c8e-8617-607599a26680
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 00ed86cdfd3002bc44c7a20c49c96663f6206417
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f1718a85927fa4b443576ab7835298db9f59178d
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82803889"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394227"
 ---
 # <a name="percentile_disc-transact-sql"></a>PERCENTILE_DISC (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中計算整個資料列集或資料列集特定資料分割的特定排序值百分位數。 針對指定的百分位數值 *P*，PERCENTILE_DISC 會在 ORDER BY 子句中排序運算式值。 接著傳回大於或等於*P* 所指定最小 CUME_DIST 值的值 (相對於相同的排序規格)。例如，PERCENTILE_DISC (0.5) 會計算運算式的第 50 個百分位數 (亦即中間值)。 PERCENTILE_DISC 會根據資料行值的離散分布計算百分位數。 結果等於某個特定的資料行值。  
   
@@ -40,7 +40,9 @@ PERCENTILE_DISC ( numeric_literal ) WITHIN GROUP ( ORDER BY order_by_expression 
     OVER ( [ <partition_by_clause> ] )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *literal*  
  要運算的百分位數。 值範圍必須介於 0.0 到 1.0 之間。  
   
@@ -48,7 +50,7 @@ PERCENTILE_DISC ( numeric_literal ) WITHIN GROUP ( ORDER BY order_by_expression 
  指定要用以排序及計算百分位數的值清單。 只允許一個 *order_by_expression*。 預設排序順序為遞增。 值的清單可以是任何能用於排序作業的有效資料類型。  
   
  OVER **(** \<partition_by_clause>)**  
- 將 FROM 子句的結果集分成幾個資料分割。 百分位數函式會套用到這些資料分割。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。 PERCENTILE_DISC 函式中不能指定 \<ORDER BY 子句> 和 \<資料列或範圍子句>。  
+ 將 FROM 子句的結果集分成幾個資料分割。 百分位數函式會套用到這些資料分割。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。 您無法在 PERCENTILE_DISC 函數中指定 \<ORDER BY clause> 和 \<rows or range clause>。  
   
 ## <a name="return-types"></a>傳回型別  
  傳回型別由 *order_by_expression* 類型決定。  

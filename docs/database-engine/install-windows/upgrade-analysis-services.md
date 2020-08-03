@@ -21,12 +21,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 72cba47c520749a2e78ae529d941b12ddcccf105
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 61b67a70b3193763a46a7aa99783397ee57d0e92
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900262"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362599"
 ---
 # <a name="upgrade-analysis-services"></a>升級 Analysis Services
 
@@ -77,7 +77,7 @@ ms.locfileid: "85900262"
   
  由於背景的不同，下表摘要說明相容性層級；請檢閱詳細文章以了解每個層級所提供的功能。  
   
-||||  
+|資料庫模型|相容性層級|相容版本|  
 |-|-|-|  
 |表格式|1400|SQL Server 2017|
 |表格式|1200|SQL Server 2016|  

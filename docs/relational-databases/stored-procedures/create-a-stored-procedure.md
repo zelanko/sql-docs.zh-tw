@@ -1,5 +1,6 @@
 ---
 title: 建立預存程序 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 以及使用 Transact-SQL CREATE PROCEDURE 陳述式，建立 Transact-SQL 預存程序。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a401e9120283f2235124c71653aa8418fe701afe
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: dde2beed868314f315bf51e9fa8174ba01b09e3e
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001013"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332657"
 ---
 # <a name="create-a-stored-procedure"></a>建立預存程序
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "86001013"
 ##  <a name="how-to-create-a-stored-procedure"></a><a name="Procedures"></a> 如何建立預存程序  
  您可以使用下列其中一項：  
   
--   [Transact-SQL](#SSMSProcedure)  
+-   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
@@ -49,7 +50,7 @@ ms.locfileid: "86001013"
   
 2.  依序展開 **[資料庫]** 、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫，以及 **[Programmability]** 。  
   
-3.  以滑鼠右鍵按一下 [預存程序]  ，然後按一下 [新增預存程序]  。  
+3.  以滑鼠右鍵按一下 [預存程序]，然後按一下 [新增預存程序]。  
   
 4.  在 **[查詢]** 功能表上，按一下 **[指定範本參數的值]** 。  
   
@@ -68,7 +69,7 @@ ms.locfileid: "86001013"
     |@Datatype_For_Param2|**nvarchar**(50)|  
     |Default_Value_For_Param2|NULL|  
   
-6.  按一下 [確定]  。  
+6.  按一下 [確定]。  
   
 7.  在 **[查詢編輯器]** 中，以下列陳述式取代 SELECT 陳述式：  
   
@@ -83,11 +84,11 @@ ms.locfileid: "86001013"
   
 9. 若要建立程序，請在 **[查詢]** 功能表中，按一下 **[執行]** 。 程序也可建立為資料庫中的物件。  
   
-10. 若要查看物件總管中所列的程序，請以滑鼠右鍵按一下 [預存程序]  ，然後選取 [重新整理]  。  
+10. 若要查看物件總管中所列的程序，請以滑鼠右鍵按一下 [預存程序]，然後選取 [重新整理]。  
   
-11. 若要執行程序，請在物件總管中，以滑鼠右鍵按一下預存程序名稱 **HumanResources.uspGetEmployeesTest**，然後選取 [執行預存程序]  。  
+11. 若要執行程序，請在物件總管中，以滑鼠右鍵按一下預存程序名稱 **HumanResources.uspGetEmployeesTest**，然後選取 [執行預存程序]。  
   
-12. 在 [執行程序]  視窗中，輸入 Margheim 以作為 @LastName 參數值，然後輸入 Diane 值以作為 @FirstName 參數值。  
+12. 在 [執行程序] 視窗中，輸入 Margheim 以作為 @LastName 參數值，然後輸入 Diane 值以作為 @FirstName 參數值。  
   
 > [!WARNING]  
 >  驗證所有使用者輸入。 在使用者輸入完成驗證前，請勿加以串連。 請勿執行由未經驗證之使用者輸入所建構的命令。  

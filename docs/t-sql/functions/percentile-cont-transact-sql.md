@@ -19,15 +19,15 @@ ms.assetid: d019419e-5297-4994-97d5-e9c8fc61bbf4
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dada9214720bbe30711dbc0d722ea2904e0bb491
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0841c29b0897ed739b33e8d7e2d09227b8b495f8
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832928"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395791"
 ---
 # <a name="percentile_cont-transact-sql"></a>PERCENTILE_CONT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   依據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的資料行值連續分佈計算百分位數。 其結果會以內插值取代，可能不會等於資料行中的任何特定值。  
   
@@ -41,7 +41,9 @@ PERCENTILE_CONT ( numeric_literal )
     OVER ( [ <partition_by_clause> ] )  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *numeric_literal*  
  要運算的百分位數。 值範圍必須介於 0.0 到 1.0 之間。  
   
@@ -49,7 +51,7 @@ PERCENTILE_CONT ( numeric_literal )
  指定要用以排序及計算百分位數的數值清單。 只允許一個 *order_by_expression*。 此運算式求得的解必須是精確數值類型或近似數值類型，不允許其他資料類型。 精確數值類型為 **int**、**bigint**、**smallint**、**tinyint**、**numeric**、**bit**、**decimal**、**smallmoney** 和 **money**。 近似數值類型為 **float** 和 **real**。 預設排序順序為遞增。  
   
  OVER **(** \<partition_by_clause> **)**  
- 將 FROM 子句所產生的結果集，分割成套用百分位數函數的分割區。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。 不可在 PERCENTILE_CONT 函式中指定 OVER 語法的 \<ORDER BY 子句> 及 \<資料列或範圍子句>。  
+ 將 FROM 子句所產生的結果集，分割成套用百分位數函數的分割區。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。 您無法在 PERCENTILE_CONT 函數中指定 OVER 語法的 \<ORDER BY clause> 和 \<rows or range clause>。  
   
 ## <a name="return-types"></a>傳回型別  
  **float(53)**  

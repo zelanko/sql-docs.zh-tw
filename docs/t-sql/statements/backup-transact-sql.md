@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 29a53d4ccb5958a191bf06f4565cc8f908376086
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e0dc290a3e514d8de7a63a6afb4a0ed6453b6107
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552773"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332507"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -65,10 +65,17 @@ ms.locfileid: "86552773"
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-||||
-|---|---|---|
-|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />受控執行個體](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
-||||
+:::row:::
+    :::column:::
+        **_\* SQL Server \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />受控執行個體](backup-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -234,9 +241,9 @@ TO \<backup_device> [ **,** ...*n* ] 指出隨附的[備份裝置](../../relatio
 
 指定備份作業要使用的邏輯或實體備份裝置。
 
-{ *logical_device_name* |  **@** _logical\_device\_name\_var_ } **適用於：** SQL Server 這是用來備份資料庫的備份裝置邏輯名稱。 邏輯名稱必須遵照識別碼的規則。 如果備份裝置名稱是以變數 (@*logical_device_name_var*) 提供，就可將它指定為字串常數 (@_logical\_device\_name\_var_ **=** 邏輯備份裝置名稱) 或任何字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。
+{ *logical_device_name* \| **@** _logical\_device\_name\_var_ } **適用對象：** SQL Server 這是用來備份資料庫的備份裝置邏輯名稱。 邏輯名稱必須遵照識別碼的規則。 如果備份裝置名稱是以變數 (@*logical_device_name_var*) 提供，就可將它指定為字串常數 (@_logical\_device\_name\_var_ **=** 邏輯備份裝置名稱) 或任何字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。
 
-{ DISK | TAPE | URL} **=** { **'** _physical\_device\_name_ **'**  |  **@** _physical\_device\_name\_var_ | 'NUL' } **用於：** DISK、TAPE 和 URL 適用於 SQL Server。
+{ DISK \| TAPE \| URL} **=** { **'** _physical\_device\_name_ **'** \| **@** _physical\_device\_name\_var_ \| 'NUL' } **適用對象：** DISK、TAPE 和 URL 適用於 SQL Server。
 指定磁碟檔案或磁帶裝置，或是 Microsoft Azure Blob 儲存體服務。 URL 格式可用來建立備份至 Microsoft Azure 儲存體服務。 如需詳細資訊和範例，請參閱[使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 如需教學課程，請參閱[教學課程：SQL Server 備份及還原至 Microsoft Azure Blob 儲存體服務](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)。
 
 > [!NOTE]
@@ -664,7 +671,7 @@ GO
 > [!NOTE]
 > 如果磁帶媒體是空的，或磁碟備份檔案不存在，所有這些互動都會寫入媒體標頭，並繼續作業。 如果媒體不是空的，但缺少有效媒體標頭，這些作業會回應指出這不是有效的 MTF 媒體，而且備份作業將會中止。
 
-||NOINIT|INIT|
+|跳過選項|NOINIT|INIT|
 |------|------------|----------|
 |NOSKIP|如果磁碟區包含有效的媒體標頭，確認媒體名稱符合指定的 `MEDIANAME` (如果有的話)。 如果相符，則附加備份組，保留所有現有的備份組。<br /> 如果磁碟區並未包含有效的媒體標頭，便會發生錯誤。|如果磁碟區包含有效的媒體標頭，則執行下列檢查：<br /><ul><li>如果指定了 `MEDIANAME`，確認指定的媒體名稱符合媒體標頭的媒體名稱。<sup>1</sup></li><li>確認媒體中沒有出現任何非預期的備份組。 如果有，則結束備份。</li></ul><br />如果通過這些檢查，則覆寫媒體中的任何備份組，只保留媒體標頭。<br /> 如果磁碟區未包含有效的媒體標頭，使用指定的 `MEDIANAME` 和 `MEDIADESCRIPTION` (如果有的話) 產生一個。|
 |SKIP|如果磁碟區包含有效的媒體標頭，則附加備份組，保留所有現有的備份組。|如果磁碟區包含有效<sup>2</sup>的媒體標頭，則覆寫媒體上的任何備份組，只保留媒體標頭。<br /> 若媒體是空的，就使用指定的 `MEDIANAME` 和 `MEDIADESCRIPTION` (如果有的話) 來產生媒體標頭。|
@@ -929,9 +936,17 @@ WHERE r.command LIKE 'BACKUP%'
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> ||||
-> |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />受控執行個體 \*_** &nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+:::row:::
+    :::column:::
+        [SQL Server](backup-transact-sql.md?view=sql-server-2016)
+    :::column-end:::
+    :::column:::
+        **_\* SQL Database<br />受控執行個體 \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -1111,9 +1126,17 @@ WITH STATS = 5, COPY_ONLY;
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-> ||||
-> |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL Database<br />受控執行個體](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* 分析<br />平台系統 (PDW) \*_** &nbsp;|
+:::row:::
+    :::column:::
+        [SQL Server](backup-transact-sql.md?view=sql-server-2016)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />受控執行個體](backup-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        **_\* 分析<br />平台系統 (PDW) \*_** &nbsp;
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 

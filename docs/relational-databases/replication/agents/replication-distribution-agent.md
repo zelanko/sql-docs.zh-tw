@@ -17,12 +17,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 51a34db68f77193c42662476656d46e5fa2f6092
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c9e762060e3afdc5df7802249e99075de66ef751
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87109399"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395020"
 ---
 # <a name="replication-distribution-agent"></a>複寫散發代理程式
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
@@ -133,10 +133,10 @@ distrib [-?]
  **-DistributorPassword** _distributor_password_  
  這是散發者密碼。  
   
- **-DistributorSecurityMode** [ **0**| **1**]  
+ **-DistributorSecurityMode** [ **0**\| **1**]  
  指定散發者的安全性模式。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 值為 0 表示  驗證模式，而值為 1 則表示 Windows 驗證模式 (預設值)。  
   
- **-EncryptionLevel** [ **0** | **1** | **2** ]  
+ **-EncryptionLevel** [ **0** \| **1** \| **2** ]  
  這是建立連線時，散發代理程式所使用的傳輸層安全性 (TLS) (先前稱為安全通訊端層 (SSL)) 加密層級。  
   
 |EncryptionLevel 值|描述|  
@@ -157,10 +157,10 @@ distrib [-?]
  指定擴充的事件 XML 組態檔的路徑和檔案名稱。 擴充的事件組態檔可讓您設定工作階段以及啟用事件追蹤。  
   
  **-FileTransferType** [ **0**| **1**]  
- 指定檔案傳輸類型。  值為 **0** 表示 UNC (通用命名慣例)，而值為 1 則表示 FTP (檔案傳輸通訊協定)。  
+ 指定檔案傳輸類型。 值為 **0** 表示 UNC (通用命名慣例)，而值為 1 則表示 FTP (檔案傳輸通訊協定)。  
   
  **-FtpAddress** _ftp_address_  
- 這是散發者之 FTP 服務的網路位址。  沒有指定這個參數時，系統就會使用 DistributorAddress。  如果沒有指定 **DistributorAddress** ，則會使用 Distributor。  
+ 這是散發者之 FTP 服務的網路位址。 沒有指定這個參數時，系統就會使用 DistributorAddress。 如果沒有指定 **DistributorAddress** ，則會使用 Distributor。  
   
  **-FtpPassword** _ftp_password_  
  這是用來連接到 FTP 服務的使用者密碼。  
@@ -169,9 +169,9 @@ distrib [-?]
  這是散發者的 FTP 服務通訊埠編號。 沒有指定這個參數時，系統就會使用 FTP 服務的預設通訊埠編號 (21)。  
   
  **-FtpUserName**  _ftp_user_name_  
- 這是用來連接到 FTP 服務的使用者名稱。  沒有指定這個參數時，系統就會使用 anonymous。  
+ 這是用來連接到 FTP 服務的使用者名稱。 沒有指定這個參數時，系統就會使用 anonymous。  
   
- **-HistoryVerboseLevel** [ **0** | **1** | **2** | **3** ]  
+ **-HistoryVerboseLevel** [ **0** \| **1** \| **2** \| **3** ]  
  指定在散發作業期間記錄的記錄量。 您可以透過選取 1，盡量減少記錄作業的效能影響。  
   
 |HistoryVerboseLevel 值|描述|  
@@ -191,10 +191,10 @@ distrib [-?]
  這是登入逾時之前的秒數。 預設值為 15 秒。  
   
  **-MaxBcpThreads** _number_of_threads_  
- 指定可用平行方式執行的大量複製作業數目。 同時存在之執行緒和 ODBC 連接的最大數目是 **MaxBcpThreads** 或散發資料庫之同步處理交易中顯示的大量複製要求數目的較小者。 **MaxBcpThreads** 必須具有大於 **0** 的值而且沒有硬式編碼的上限。  預設值為 **2**乘以處理器的數目，最大值是 8。 當使用並行快照集選項來套用在發行者端產生的快照集時，系統會使用單一執行緒，不論您針對 **MaxBcpThreads**指定的數目為何都一樣。  
+ 指定可用平行方式執行的大量複製作業數目。 同時存在之執行緒和 ODBC 連接的最大數目是 **MaxBcpThreads** 或散發資料庫之同步處理交易中顯示的大量複製要求數目的較小者。 **MaxBcpThreads** 必須具有大於 **0** 的值而且沒有硬式編碼的上限。 預設值為 **2**乘以處理器的數目，最大值是 8。 當使用並行快照集選項來套用在發行者端產生的快照集時，系統會使用單一執行緒，不論您針對 **MaxBcpThreads**指定的數目為何都一樣。  
   
  **-MaxDeliveredTransactions** _number_of_transactions_  
- 這是在單一同步處理作業中套用至訂閱者的最大發送或提取交易數目。  值為 0 表示最大值是無限個交易。 訂閱者可以使用其他值來縮短從發行者提取之同步處理作業的持續時間。  
+ 這是在單一同步處理作業中套用至訂閱者的最大發送或提取交易數目。 值為 0 表示最大值是無限個交易。 訂閱者可以使用其他值來縮短從發行者提取之同步處理作業的持續時間。  
   
 > [!NOTE]  
 >  如果 -MaxDeliveredTransactions 和 -Continuous 都已指定，「散發代理程式」會傳遞指定的交易數目，然後停止 (即使已指定 -Continuous)。 作業完成之後，您必須重新啟動「散發代理程式」。  
@@ -217,7 +217,7 @@ distrib [-?]
  這是代理程式輸出檔的路徑。 如果未提供檔案名稱，輸出將傳送至主控台。 如果指定的檔案名稱存在，輸出就會附加至該檔案。  
   
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
- 指定輸出是否應該詳細。 如果詳細資訊層級為 0，系統就只會列印錯誤訊息。 如果詳細資訊層級為 1，系統就會列印所有進度報表訊息。  如果詳細資訊層級為 2 (預設值)，系統就會列印所有錯誤訊息和進度報表訊息 (可用於偵錯)。  
+ 指定輸出是否應該詳細。 如果詳細資訊層級為 0，系統就只會列印錯誤訊息。 如果詳細資訊層級為 1，系統就會列印所有進度報表訊息。 如果詳細資訊層級為 2 (預設值)，系統就會列印所有錯誤訊息和進度報表訊息 (可用於偵錯)。  
   
  **-PacketSize** _packet_size_  
  這是封包大小 (以位元組為單位)。 預設值是 4096 (位元組)。  
@@ -250,7 +250,7 @@ distrib [-?]
  這是訂閱者密碼。 如果 **SubscriberSecurityMode** 是 **0** (代表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證)，您就必須指定這個參數。  
   
  **-SubscriberSecurityMode** [ **0**| **1**]  
- 指定訂閱者的安全性模式。  值為 0 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表示  驗證，而值為 1 則表示 Windows 驗證模式 (預設值)。  
+ 指定訂閱者的安全性模式。 值為 0 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表示  驗證，而值為 1 則表示 Windows 驗證模式 (預設值)。  
   
  **-SubscriberType** [ **0**| **1**| **3**]  
  指定由散發代理程式所使用的訂閱者連接類型。  
@@ -261,7 +261,7 @@ distrib [-?]
 |**1**|ODBC 資料來源|  
 |**3**|OLE DB 資料來源|  
   
- **-SubscriptionStreams** [**0**|**1**|**2**|...**64**]  
+ **-SubscriptionStreams** [**0**\|**1**\|**2**\|...**64**]  
  這是在維護許多使用單一執行緒時所提供的交易式特性時，每個散發代理程式可用來將變更批次並行套用在訂閱者上的連接數目。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 若為  發行者，就支援範圍在 1 至 64 之間的值。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 只有當發行者或散發者在  或更新版本上執行時，才支援這個參數。 這個參數不支援非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者或點對點訂閱，或其必須為 0。  
   
 > [!NOTE]  
@@ -277,7 +277,7 @@ distrib [-?]
  這是在給定訂閱者端產生或使用之訂閱資料表的名稱。 未指定時，會使用 [MSreplication_subscriptions &#40;Transact-SQL&#41;](../../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) 資料表。 您可以針對不支援長檔名的資料庫管理系統 (DBMS) 使用這個選項。  
   
  **-SubscriptionType** [ **0**| **1**| **2**]  
- 指定散發的訂閱類型。  值為 **0** 表示發送訂閱、值為 **1** 表示提取訂閱，而值為 2 則表示匿名訂閱。  
+ 指定散發的訂閱類型。 值為 **0** 表示發送訂閱、值為 **1** 表示提取訂閱，而值為 2 則表示匿名訂閱。  
   
  **-TransactionsPerHistory** [ **0**| **1**|...**10000**]  
  指定記錄作業的交易間隔。 如果上一個記錄執行個體之後認可的交易數目大於這個選項，系統就會記錄記錄訊息。 預設值為 100。 **0** 值表示無限 **TransactionsPerHistory**。 See the preceding **–MessageInterval**parameter.  
@@ -302,7 +302,7 @@ distrib [-?]
   
 |更新的內容|  
 |---------------------|  
-| 已加入 -ExtendedEventConfigFile 參數。|  
+|已加入 -ExtendedEventConfigFile 參數。|  
 |已新增 **-MultiSubnetFailover** 參數。|  
   
 ## <a name="see-also"></a>另請參閱  

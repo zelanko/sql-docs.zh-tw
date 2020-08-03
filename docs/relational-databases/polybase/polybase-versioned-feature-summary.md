@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b9da1c78f9f312574a0a914f0956357412a35d4e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1847c47622dc36bbdb92db675a90765ff6f197f6
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216027"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332147"
 ---
 # <a name="polybase-features-and-limitations"></a>PolyBase 功能和限制
 
@@ -26,28 +26,26 @@ ms.locfileid: "80216027"
 ## <a name="feature-summary-for-product-releases"></a>產品版本的功能摘要
 
 下表列出 PolyBase 的重要功能以及提供這些功能的產品。  
-  
-||||||
-|-|-|-|-|-|   
-|**功能**|**SQL Server 2016**|**Azure SQL Database**|**Azure SQL 資料倉儲**|**平行處理資料倉儲**| 
+
+|**功能** |**SQL Server 2016** |**Azure SQL Database** |**Azure Synapse Analytics** |**平行處理資料倉儲** |
+|---------|---------|---------|---------|---------|
 |使用下列項目查詢 Hadoop 資料： [!INCLUDE[tsql](../../includes/tsql-md.md)]|是|否|否|是|
 |從 Hadoop 匯入資料|是|否|否|是|
 |匯出資料至 Hadoop  |是|否|否| 是|
 |在 Azure HDInsight 中查詢、匯入、匯出 |否|否|否|否
 |將查詢計算下推到 Hadoop|是|否|否|是|  
-|從 Azure Blob 儲存體匯入資料|是|否|是|是| 
+|從 Azure Blob 儲存體匯入資料|是|否|是|是|
 |匯出資料至 Azure Blob 儲存體|是|否|是|是|  
-|從 Azure Data Lake Store 匯入資料|否|否|是|否|    
+|從 Azure Data Lake Store 匯入資料|否|否|是|否|
 |從 Azure Data Lake Store 匯出資料|否|否|是|否|
-|從 Microsoft BI 工具執行 PolyBase 查詢|是|否|是|是|   
+|從 Microsoft BI 工具執行 PolyBase 查詢|是|否|是|是|
 
 ## <a name="pushdown-computation-supported-by-t-sql-operators"></a>T-SQL 運算子支援下推計算
 
-在 SQL Server 和 APS 中，並非所有 T-SQL 運算子都可以下推到 Hadoop 叢集。 下表列出所有支援運算子和部分不受支援運算子。 
+在 SQL Server 和 APS 中，並非所有 T-SQL 運算子都可以下推到 Hadoop 叢集。 下表列出所有支援運算子和部分不受支援運算子。
 
-||||
-|-|-|-| 
-|**運算子類型**|**可推送到 Hadoop**|**可推送到 Blob 儲存體**|
+|**運算子類型** |**可推送到 Hadoop** |**可推送到 Blob 儲存體** |
+|---------|---------|---------|
 |資料行投影|是|否|
 |述詞|是|否|
 |彙總|部分|否|
@@ -63,9 +61,9 @@ PolyBase 具有下列限制：
 
 - 若要使用 PolyBase，您必須在資料庫上具有系統管理員或 CONTROL SERVER 層級權限。
 
-- 在 SQL Server 中最大資料列大小 (包括變數長度資料行的完整長度) 不能超過 32 KB，在 Azure SQL 資料倉儲中則不能超過 1 MB。
+- 在 SQL Server 中最大資料列大小 (包括可變長度資料行的完整長度) 不能超過 32 KB，在 Azure Synapse Analytics 中則不能超過 1 MB。
 
-- 將資料從 SQL Server 或 SQL 資料倉儲匯出為 ORC 檔案格式時，可以限制具有大量文字的資料行。 由於 Java 記憶體不足錯誤訊息，因此只能限制為最少 50 個資料行。 若要解決這個問題，只需要匯出資料行的子集。
+- 將資料從 SQL Server 或 Azure Synapse Analytics 匯出為 ORC 檔案格式時，可能會限制具有大量文字的資料行。 由於 Java 記憶體不足錯誤訊息，因此只能限制為最少 50 個資料行。 若要解決這個問題，只需要匯出資料行的子集。
 
 - 如果已啟用 Knox，PolyBase 就無法連線到 Hortonworks 執行個體。
 

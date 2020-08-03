@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2020
+ms.date: 07/29/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08056878aabb707433dc22ca891798feb96ef329
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 11f67835fe3cd74b63a9f2921850376ff4805881
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245227"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411040"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -51,10 +51,10 @@ CREATE LOGIN 會參與交易。 如果在交易內執行 CREATE LOGIN 並復原�
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />單一資料庫/彈性集區](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database<br /> 單一資料庫/彈性集區](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />受控執行個體](create-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Azure SQL<br /> 受控執行個體](create-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
@@ -284,10 +284,10 @@ CHECK_EXPIRATION = OFF ;
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />單一資料庫/彈性集區 \*_**
+        **_Azure SQL Database<br /> 單一資料庫/彈性集區_**\*\*
     :::column-end:::
     :::column:::
-        [SQL Database<br />受控執行個體](create-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Azure SQL<br /> 受控執行個體](create-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
@@ -402,10 +402,10 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />單一資料庫/彈性集區](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database<br /> 單一資料庫/彈性集區](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />受控執行個體 \*_**
+        **_Azure SQL<br /> 受控執行個體_**\*\*
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
@@ -495,7 +495,7 @@ SID **=** *sid* 用來重新建立登入。 僅適用於 SQL Server 驗證登入
 - 只有屬於 `sysadmin` 角色成員的 SQL Server 層級主體 (登入)，才能執行下列目標為 Azure AD 主體的作業：
   - EXECUTE AS USER
   - EXECUTE AS LOGIN
-- 從另一個 Azure AD 目錄匯入的外部 (來賓) 使用者，無法直接設定為受控執行個體的 Azure AD 系統管理員。 反之，請將外部使用者加入已啟用 Azure AD 安全性的群組，並將該群組設定為執行個體系統管理員。
+- 從另一個 Azure AD 目錄匯入的外部 (來賓) 使用者，無法直接使用 Azure 入口網站設為 SQL 受控執行個體的 Azure AD 系統管理員。 反之，請將外部使用者加入已啟用 Azure AD 安全性的群組，並將該群組設定為執行個體系統管理員。 您可以使用 PowerShell 或 Azure CLI，將個別來賓使用者設為執行個體系統管理員。
 - 登入不會複寫至容錯移轉群組中的次要執行個體。 登入會儲存在主要資料庫 (也就是系統資料庫) 中，因此不會進行異地複寫。 若要解決此問題，使用者必須在次要執行個體上使用相同的 SID 來建立登入。
 
 ```SQL
@@ -601,10 +601,10 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />單一資料庫/彈性集區](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database<br /> 單一資料庫/彈性集區](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />受控執行個體](create-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Azure SQL<br /> 受控執行個體](create-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -729,10 +729,10 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />單一資料庫/彈性集區](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database<br /> 單一資料庫/彈性集區](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />受控執行個體](create-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Azure SQL<br /> 受控執行個體](create-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)

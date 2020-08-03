@@ -1,6 +1,6 @@
 ---
 title: 快速入門：連線及查詢 PostgreSQL
-description: 本快速入門說明如何使用 Azure Data Studio 連線到 PostgreSQL 並執行查詢
+description: 進行快速入門，使用 Azure Data Studio 連線到 PostgreSQL，然後使用 SQL 陳述式建立和查詢資料庫。
 ms.custom: seodec18
 ms.date: 09/18/2019
 ms.prod: azure-data-studio
@@ -9,16 +9,16 @@ ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
-ms.openlocfilehash: f429848636de075e64ebaf6f74bc69f7faef5359
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e2ba0f0123faeacd0f431a72ef35add40ee48e19
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717151"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411304"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-postgresql"></a>快速入門：使用 Azure Data Studio 連線及查詢 PostgreSQL
 
-本快速入門說明如何使用 Azure Data Studio 連線至 Postgres，然後使用 SQL 陳述式建立並查詢資料庫 *tutorialdb*。
+本快速入門說明如何使用 Azure Data Studio 連線至 PostgreSQL，然後使用 SQL 陳述式建立並查詢資料庫 *tutorialdb*。
 
 ## <a name="prerequisites"></a>必要條件
 

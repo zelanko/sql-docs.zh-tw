@@ -1,6 +1,6 @@
 ---
 title: 版本資訊
-description: Azure Data Studio 版本資訊
+description: 本文包含 Azure Data Studio 從 2017 年 11 月至今版本的版本資訊。 針對許多摘要問題，請參閱其他詳細資料的連結。
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 07/17/2020
-ms.openlocfilehash: 5acbadb8d019b6d7d468f756bd25b70d890251c8
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: b064c24ff7717fc5a03ee1413b1e85fbb71530dc
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458883"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411259"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的版本資訊
 

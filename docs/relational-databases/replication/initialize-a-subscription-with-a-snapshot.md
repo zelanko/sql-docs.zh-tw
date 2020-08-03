@@ -1,5 +1,5 @@
 ---
-title: 使用快照集初始化訂閱 | Microsoft Docs
+title: 使用快照集初始化訂閱
 ms.custom: ''
 ms.date: 03/23/2020
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 44ccd31700ab6bb3bf3500e93febc0209d9fa9ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cb69f5c2033a515676587ddbef0cb3d14e3bc3d6
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716789"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396129"
 ---
-# <a name="initialize-a-subscription-with-a-snapshot"></a>使用快照集初始化訂閱
+# <a name="initialize-a-subscription-with-a-snapshot-for-a-new-publication"></a>使用新發行集的快照集初始化訂閱
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
@@ -60,7 +60,7 @@ ms.locfileid: "85716789"
 1. 建立結構描述快照集，其中包含下列項目：
    - 複寫指令碼。
    - 已發佈物件的結構描述。
-   - (但沒有資料。) 
+   - (但沒有資料。)
 
 2. 接著使用快照集來初始化每個訂閱。 快照集包含下列各項：
    - 指令碼和結構描述 (從結構描述快照集複製而來)。

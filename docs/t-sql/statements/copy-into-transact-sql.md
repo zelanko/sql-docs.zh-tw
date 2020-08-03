@@ -18,16 +18,16 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 5d2b3040c53c2bbffb6fd073fa9f385f78e28798
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 6d18996610899fd348b179495ab78af2e2717f83
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091672"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395995"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (預覽)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 本文說明如何在 Azure SQL 資料倉儲中使用 COPY 陳述式，從外部儲存體帳戶載入。 COPY 陳述式提供最大的彈性，可將高輸送量資料擷取到 SQL 資料倉儲中。 將 COPY 用於下列功能：
 
@@ -217,7 +217,7 @@ WITH
 *MAXERRORS = max_errors*</br>
 *MAXERRORS* 會指定取消 COPY 作業之前在負載中所允許的拒絕資料列數目上限。 COPY 作業無法匯入的每個資料列都會遭到忽略，且會當作一項錯誤來計算。 如果未指定 max_errors，則預設值為 0。
 
-*COMPRESSION = { 'DefaultCodec '| ’Snappy’ | ‘GZIP’ | ‘NONE’}*</br>
+*COMPRESSION = { 'DefaultCodec '\| ’Snappy’ \| ‘GZIP’ \| ‘NONE’}*</br>
 *COMPRESSION* 是選用的，而且會指定外部資料的資料壓縮方法。
 
 - CSV 支援 GZIP
@@ -250,7 +250,7 @@ ROW TERMINATOR 的 UTF-8 不支援擴充的 ASCII 字元和多位元組字元。
 *FIRSTROW  = First_row_int*</br>
 *FIRSTROW* 會套用至 CSV，並指定在 COPY 命令的所有檔案中第一次讀取的資料列編號。 值會從 1 開始，也就是預設值。 如果將值設定為二，則在載入資料時，會略過每個檔案中的第一個資料列 (標題列)。 如果資料列存在資料列結束字元，就會略過。
 
-*DATEFORMAT = { ‘mdy’ | ‘dmy’ | ‘ymd’ | ‘ydm’ | ‘myd’ | ‘dym’ }*</br>
+*DATEFORMAT = { ‘mdy’ \| ‘dmy’ \| ‘ymd’ \| ‘ydm’ \| ‘myd’ \| ‘dym’ }*</br>
 DATEFORMAT 僅適用於 CSV，而且會指定對應至 SQL Server 日期格式之日期的日期格式。 如需所有 Transact-SQL 日期和時間資料類型與函式的概觀，請參閱[日期和時間資料類型與函式 (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md?view=sql-server-ver15)。 COPY 命令內的 DATEFORMAT 優先於[在工作階段層級設定的 DATEFORMAT](set-dateformat-transact-sql.md?view=sql-server-ver15)。
 
 *ENCODING = ‘UTF8’ | ‘UTF16’*</br>

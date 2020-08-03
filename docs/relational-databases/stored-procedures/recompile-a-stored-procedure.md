@@ -1,5 +1,6 @@
 ---
 title: 重新編譯預存程序 | Microsoft Docs
+description: 了解如何使用 Transact-SQL 在 SQL Server 2019 (15.x) 中重新編譯預存程序的詳細資料。
 ms.custom: ''
 ms.date: 10/28/2019
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df92be946b13a4643f6ddca870ea98ff64b3d9d9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ec11628388263463bbb7ca3f00f8611768380fd3
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002741"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332550"
 ---
 # <a name="recompile-a-stored-procedure"></a>重新編譯預存程序
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -95,7 +96,7 @@ ms.locfileid: "86002741"
   
 ### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>若要使用 WITH RECOMPILE 選項重新編譯預存程序   
   
-選取 [新增查詢]  ，然後將下列程式碼範例複製並貼到查詢視窗中，並按一下 [執行]  。 這樣就會執行程序，並重新編譯程序的查詢計劃。  
+選取 [新增查詢]，然後將下列程式碼範例複製並貼到查詢視窗中，並按一下 [執行]。 這樣就會執行程序，並重新編譯程序的查詢計劃。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -106,7 +107,7 @@ GO
   
 ### <a name="to-recompile-a-stored-procedure-by-using-sp_recompile"></a>若要使用 sp_recompile 重新編譯預存程序  
 
-選取 [新增查詢]  ，然後將下列範例複製並貼到查詢視窗中，並按一下 [執行]  。 這樣並不會執行程序，但會標示要重新編譯的程序，以便在下一次執行程序時更新其查詢計畫。  
+選取 [新增查詢]，然後將下列範例複製並貼到查詢視窗中，並按一下 [執行]。 這樣並不會執行程序，但會標示要重新編譯的程序，以便在下一次執行程序時更新其查詢計畫。  
 
 ```sql  
 USE AdventureWorks2012;  

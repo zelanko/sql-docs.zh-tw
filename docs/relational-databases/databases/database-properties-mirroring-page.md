@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5324c46fb8a4eb67d2364ee3bcbd5e21674a5c7a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2be2bcf872af3be6caf8bb2b13af70347fcf1106
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85630988"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87361318"
 ---
 # <a name="database-properties-mirroring-page"></a>資料庫屬性 (鏡像頁面)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85630988"
   
  如果精靈成功完成，則會根據鏡像是否已開始來決定採取的動作，如下所示：  
   
-|||  
+|鏡像狀態|已採取的動作|  
 |-|-|  
 |如果鏡像尚未開始。|屬性頁面會快取該連接資訊，同時也會快取表示鏡像資料庫是否有夥伴屬性集的值。<br /><br /> 在精靈結束時，會提示您使用預設的伺服器網路位址和作業模式來啟動資料庫鏡像。 如果您需要變更網路位址或作業模式，請按一下 [不要啟動鏡像]。|  
 |如果鏡像已經開始。|如果在精靈中變更了見證伺服器，設定就會隨之變更。|  

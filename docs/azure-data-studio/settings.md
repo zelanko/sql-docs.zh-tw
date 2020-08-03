@@ -1,6 +1,6 @@
 ---
 title: 使用者與工作區設定
-description: 如何藉由修改使用者與工作區設定，自訂 Azure Data Studio。
+description: 了解如何使用設定來自訂 Azure Data Studio 的編輯器、使用者介面，以及功能行為，以符合您的喜好設定。
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: azure-data-studio
@@ -9,12 +9,12 @@ ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 00c7248050d3bf7e0d5d31df6a1e628dbcc03605
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 71f1f27bc58f64d3a1bcf8bcc3f8e96594e2e771
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758381"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411204"
 ---
 # <a name="modify-user-and-workspace-settings"></a>修改使用者與工作區設定
 

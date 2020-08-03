@@ -34,16 +34,16 @@ ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 246cf0c526e04c5f4df33067286b0cefaf9913cd
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e958aaf757ecc9e28c090d50a13ead57b2de90bb
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636196"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397073"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>FROM 子句與 JOIN、APPLY、PIVOT (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
 在 Transact-SQL 中，FROM 子句可用於下列陳述式：
 
@@ -383,20 +383,20 @@ ON (p.ProductID = v.ProductID);
 **適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
- 傳回含有每個資料列單一記錄的資料表，內含的值在過去的指定時間點為實際 (目前)。 就內部而言，會在時態表及其記錄資料表之間執行聯集運算，然後篩選結果，以根據 *\<date_time>* 參數所指定的時間點，傳回當時有效之資料列中的值。 如果 *system_start_time_column_name* 值小於或等於 *\<date_time>* 參數值，且 *system_end_time_column_name* 值大於 *\<date_time>* 參數值，資料列的值即視為有效。   
+ 傳回含有每個資料列單一記錄的資料表，內含的值在過去的指定時間點為實際 (目前)。 就內部而言，時態表和其歷程記錄資料表之間會執行聯集，且會將結果篩選為傳回資料列中的值，該資料列在 *\<date_time>* 參數所指定的時間點有效。 如果 *system_start_time_column_name* 值小於或等於 *\<date_time>* 參數值，且 *system_end_time_column_name* 值大於 *\<date_time>* 參數值，資料列的值即視為有效。   
   
  FROM \<start_date_time> TO \<end_date_time>
 
 **適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
 
   
- 傳回一個資料表，其中含有在指定時間範圍內處於作用中之所有記錄版本的值，不論它們是在 FROM 引數的 *\<start_date_time>* 參數值之前即開始處於作用中，還是在 TO 引數的 *\<end_date_time>* 參數值之後停止處於作用中。 就內部而言，時態表和其歷程記錄資料表之間會執行等位，且會將結果篩選為傳回所有資料列版本的值，該值在指定的時間範圍任何時間點內皆為作用中。 這包含正好在 FROM 端點所定義範圍下限變成作用中的資料列，但不包含正好在 TO 端點所定義範圍上限變成作用中的資料列。  
+ 傳回資料表，其中內含所有記錄版本的值，該值在所指定的時間範圍內有效，而不論其是否在 FROM 引數的 *\<start_date_time>* 的參數值之前為作用中，或是在 TO 引數的 *\<end_date_time>* 參數值之後就不在作用中。 就內部而言，時態表和其歷程記錄資料表之間會執行等位，且會將結果篩選為傳回所有資料列版本的值，該值在指定的時間範圍任何時間點內皆為作用中。 這包含正好在 FROM 端點所定義範圍下限變成作用中的資料列，但不包含正好在 TO 端點所定義範圍上限變成作用中的資料列。  
   
  BETWEEN \<start_date_time> AND \<end_date_time>  
 
 **適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
- 與上面的 **FROM \<start_date_time> TO \<end_date_time>** 描述相同，唯一差別在於它包含在 \<end_date_time> 端點所定義的範圍上限變成作用中的資料列。  
+ 與上面的 **FROM \<start_date_time> TO \<end_date_time>** 描述相同，唯一差別在於其包含在 \<end_date_time> 端點所定義的範圍上限變成作用中的資料列。  
   
  CONTAINED IN (\<start_date_time> , \<end_date_time>)  
 

@@ -16,12 +16,12 @@ ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 85c45ef2facc4a477c0851c2f2e89a7960eda001
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4d69fbd48f7d7f713d9a10806c65c144fff84d6d
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85630763"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87361424"
 ---
 # <a name="databases"></a>資料庫
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,28 +40,43 @@ ms.locfileid: "85630763"
  使用資料庫的大多數使用者都會使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 工具。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 工具具有用於建立資料庫和資料庫中物件的圖形化使用者介面。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 也具有查詢編輯器，可透過寫入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式與資料庫互動。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝磁碟進行安裝，或從 MSDN 進行下載。 如需有關 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 工具的詳細資訊，請參閱 [SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md)。
   
 ## <a name="in-this-section"></a>本節內容  
-  
-|||  
-|-|-|  
-|[系統資料庫](../../relational-databases/databases/system-databases.md)|[刪除資料庫的資料或記錄檔](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)|  
-|[自主資料庫](../../relational-databases/databases/contained-databases.md)|[顯示資料庫的資料和記錄空間資訊](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)|  
-|[Microsoft Azure 中的 SQL Server 資料檔案](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)|[增加資料庫的大小](../../relational-databases/databases/increase-the-size-of-a-database.md)|  
-|[資料庫檔案與檔案群組](../../relational-databases/databases/database-files-and-filegroups.md)|[重新命名資料庫](../../relational-databases/databases/rename-a-database.md)|  
-|[資料庫狀態](../../relational-databases/databases/database-states.md)|[將資料庫設定為單一使用者模式](../../relational-databases/databases/set-a-database-to-single-user-mode.md)|  
-|[檔案狀態](../../relational-databases/databases/file-states.md)|[壓縮資料庫](../../relational-databases/databases/shrink-a-database.md)|  
-|[估計資料庫的大小](../../relational-databases/databases/estimate-the-size-of-a-database.md)|[壓縮檔案](../../relational-databases/databases/shrink-a-file.md)|  
-|[複製資料庫至其他伺服器](../../relational-databases/databases/copy-databases-to-other-servers.md)|[檢視或變更資料庫的屬性](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)|  
-|[資料庫卸離與附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)|[檢視 SQL Server 執行個體上的資料庫清單](../../relational-databases/databases/view-a-list-of-databases-on-an-instance-of-sql-server.md)|  
-|[將資料或記錄檔加入資料庫](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)|[檢視或變更資料庫的相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)|  
-|[變更資料庫的組態設定](../../relational-databases/databases/change-the-configuration-settings-for-a-database.md)|[使用維護計畫精靈](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)|  
-|[建立資料庫](../../relational-databases/databases/create-a-database.md)|[建立使用者定義資料類型別名](../../relational-databases/databases/create-a-user-defined-data-type-alias.md)|  
-|[刪除資料庫](../../relational-databases/databases/delete-a-database.md)|[資料庫快照集 &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)|  
-  
+
+:::row:::
+    :::column:::
+        [系統資料庫](../../relational-databases/databases/system-databases.md)  
+        [自主資料庫](../../relational-databases/databases/contained-databases.md)  
+        [Microsoft Azure 中的 SQL Server 資料檔案](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
+        [資料庫檔案與檔案群組](../../relational-databases/databases/database-files-and-filegroups.md)  
+        [資料庫狀態](../../relational-databases/databases/database-states.md)  
+        [檔案狀態](../../relational-databases/databases/file-states.md)  
+        [估計資料庫的大小](../../relational-databases/databases/estimate-the-size-of-a-database.md)  
+        [將資料庫複製到其他伺服器](../../relational-databases/databases/copy-databases-to-other-servers.md)  
+        [資料庫中斷連結與附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
+        [將資料或記錄檔新增到資料庫](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
+        [變更資料庫的組態設定](../../relational-databases/databases/change-the-configuration-settings-for-a-database.md)  
+        [建立資料庫](../../relational-databases/databases/create-a-database.md)  
+        [刪除資料庫](../../relational-databases/databases/delete-a-database.md)  
+    :::column-end:::
+    :::column:::
+        [刪除資料庫的資料或記錄檔](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)  
+        [顯示資料庫的資料和記錄空間資訊](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)  
+        [增加資料庫的大小](../../relational-databases/databases/increase-the-size-of-a-database.md)  
+        [重新命名資料庫](../../relational-databases/databases/rename-a-database.md)  
+        [將資料庫設定為單一使用者模式](../../relational-databases/databases/set-a-database-to-single-user-mode.md)  
+        [壓縮資料庫](../../relational-databases/databases/shrink-a-database.md)  
+        [壓縮檔案](../../relational-databases/databases/shrink-a-file.md)  
+        [檢視或變更資料庫的屬性](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)  
+        [檢視 SQL Server 執行個體上的資料庫清單](../../relational-databases/databases/view-a-list-of-databases-on-an-instance-of-sql-server.md)  
+        [檢視或變更資料庫的相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)  
+        [使用維護計畫精靈](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)  
+        [建立使用者定義資料類型別名](../../relational-databases/databases/create-a-user-defined-data-type-alias.md)  
+        [資料庫快照集 &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="related-content"></a>相關內容  
  [索引數](../../relational-databases/indexes/indexes.md)  
   
  [檢視](../../relational-databases/views/views.md)  
   
  [預存程序 &#40;Database Engine&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)  
-  
-  

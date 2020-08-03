@@ -1,5 +1,6 @@
 ---
 title: 執行預存程序 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL，在 SQL Server 2019 (15.x) 中執行預存程序。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34ee89bdbd6e87aef9691795099cb61b17413a6a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0dc360ab3faf724830f61b4572cff93425203ec4
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000992"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332610"
 ---
 # <a name="execute-a-stored-procedure"></a>執行預存程序
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "86000992"
   
 -   **若要執行預存程序，使用：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -131,11 +132,11 @@ ms.locfileid: "86000992"
   
 #### <a name="to-execute-a-stored-procedure"></a>若要執行預存程序  
   
-1.  在 [物件總管]  中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，展開該執行個體，然後展開 [資料庫]  。  
+1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，展開該執行個體，然後展開 [資料庫] 。  
   
 2.  依序展開您要的資料庫、 **[可程式性]** 和 **[預存程序]** 。  
   
-3.  以滑鼠右鍵按一下您要的使用者定義預存程序，然後按一下 [執行預存程序]  。  
+3.  以滑鼠右鍵按一下您要的使用者定義預存程序，然後按一下 [執行預存程序]。  
   
 4.  在 **[執行程序]** 對話方塊中，指定每個參數的值，以及是否應傳遞 null 值。  
   

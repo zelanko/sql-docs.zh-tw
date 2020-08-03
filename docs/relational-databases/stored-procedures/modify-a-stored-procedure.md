@@ -1,5 +1,6 @@
 ---
 title: 修改預存程序 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL，在 SQL Server 2019 (15.x) 中修改預存程序。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 13396239-6100-48ce-aa34-461358d99c92
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40c56e38106212d4f1f7a7d099dfdbad48b322c6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f70272f01918af1d7cb91000e0ce15904b1e5518
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000974"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332609"
 ---
 # <a name="modify-a-stored-procedure"></a>修改預存程序
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "86000974"
 ##  <a name="how-to-modify-a-stored-procedure"></a><a name="Procedures"></a> 如何修改預存程序  
  您可以使用下列其中一項：  
   
--   [Transact-SQL](#SSMSProcedure)  
+-   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
@@ -56,7 +57,7 @@ ms.locfileid: "86000974"
   
 2.  依序展開 **[資料庫]** 、程序所屬的資料庫，以及 **[可程式性]** 。  
   
-3.  展開 [預存程序]  ，以滑鼠右鍵按一下要修改的程序，然後按一下 [修改]  。  
+3.  展開 [預存程序]，以滑鼠右鍵按一下要修改的程序，然後按一下 [修改]。  
   
 4.  修改預存程序的文字。  
   

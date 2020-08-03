@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 98681c7ba908a43f2f4cc3e792f7f62b8a8ba2b7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9aec87c4b57016f862b671734a871f77bd84da15
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897501"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395053"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>容錯移轉及容錯移轉模式 (AlwaysOn 可用性群組)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -79,8 +79,8 @@ ms.locfileid: "85897501"
 ##  <a name="overview-of-failover"></a><a name="Overview"></a> 容錯移轉的概觀  
  下表摘要說明不同可用性和容錯移轉模式下支援的容錯移轉形式。 對於每個配對，有效的可用性模式和容錯移轉模式是由主要複本模式與一個或多個次要複本模式的交集所決定。  
   
-||非同步認可模式|包含手動容錯移轉模式的同步認可模式|包含自動容錯移轉模式的同步認可模式|  
-|-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
+|容錯移轉形式|非同步認可模式|包含手動容錯移轉模式的同步認可模式|包含自動容錯移轉模式的同步認可模式|  
+|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
 |自動容錯移轉|否|否|是|  
 |已規劃的手動容錯移轉|否|是|是|  
 |強制容錯移轉|是|是|是 **&#42;**|  

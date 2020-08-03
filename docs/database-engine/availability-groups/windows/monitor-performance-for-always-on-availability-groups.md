@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 951a6967e51d877efdd68b4f4a6f118c5ec1e6e7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 08ef8be56e34d7f0e62a02c5a9819f0f5c41344b
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897346"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362670"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>監視 Always On 可用性群組的效能
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -26,14 +26,13 @@ ms.locfileid: "85897346"
   
  ![可用性群組資料同步](media/always-onag-datasynchronization.gif "可用性群組資料同步")  
   
-|||||  
+|順序|步驟描述|註解|實用的計量|  
 |-|-|-|-|  
-|**序列**|**步驟描述**|**註解**|**實用的計量**|  
 |1|記錄檔產生|記錄檔資料會排清至磁碟。 此記錄檔必須複寫到次要複本。 記錄檔記錄會進入傳送佇列。|[SQL Server:Database > Log bytes flushed\sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
 |2|擷取|這會擷取每個資料庫的記錄檔並傳送至對應的夥伴佇列 (每個資料庫複本組一個)。 只要已連接可用性複本且資料移動未因任何原因暫停，此擷取程序就會持續執行，且資料庫複本組會顯示為「同步處理中」或「已同步處理」兩者之一。 如果擷取程序掃描訊息並將它加入佇列的速度不夠快，則會建立記錄檔傳送佇列。|[SQL Server:Availability Replica > Bytes Sent to Replica\sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md)，這是針對該可用性複本排入佇列的所有資料庫訊息總和彙總。<br /><br /> 主要複本上為 [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) 和 [log_bytes_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB/秒)。|  
 |3|Send|這會清除每個資料庫複本佇列中的訊息佇列，並跨線路傳送到個別的次要複本。|[SQL Server：可用性複本 > 每秒傳送到傳輸的位元組](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |4|接收並快取|每個次要複本會接收並快取訊息。|效能計數器 [SQL Server:Availability Replica > Log Bytes Received/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
-|5|強行寫入|這會排清次要複本上的記錄檔，以進行強行寫入。 記錄檔排清之後，會將認可傳回到主要複本。<br /><br /> 一旦強行寫入記錄檔，可以避免資料遺失。|效能計數器 [SQL Server:Database > Log Bytes Flushed/sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)<br /><br /> 等候類型 [HADR_LOGCAPTURE_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
+|5|強行寫入|這會排清次要複本上的記錄檔，以進行強行寫入。 在記錄排清後，會將認知傳送回主要複本。<br /><br /> 一旦強行寫入記錄檔，可以避免資料遺失。|效能計數器 [SQL Server:Database > Log Bytes Flushed/sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)<br /><br /> 等候類型 [HADR_LOGCAPTURE_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
 |6|取消復原|在次要複本上重做排清的分頁。 頁面等候重做時會保留在重做佇列中。|[SQL Server:Database Replica > Redone Bytes/sec](~/relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) 和 [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)。<br /><br /> 等候類型 [REDO_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
   
 ##  <a name="flow-control-gates"></a>流程控制閘道  
@@ -41,13 +40,12 @@ ms.locfileid: "85897346"
   
  在主要複本上擷取記錄檔後，記錄檔會受限於兩個層級的流程控制，如下表所示。  
   
-|||||  
+|層級|閘道數目|訊息數目|實用的計量|  
 |-|-|-|-|  
-|**Level**|**閘道數目**|**訊息數目**|**實用的計量**|  
 |傳輸|每個可用性複本 1 個|8192|擴充事件 **database_transport_flow_control_action**|  
 |資料庫|每個可用性資料庫 1 個|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> 擴充事件 **hadron_database_flow_control_action**|  
   
- 一旦達到其中一個閘道的訊息閾值，記錄檔訊息便不會再傳送至特定複本，或是針對特定資料庫傳送。 一旦收到傳送訊息的訊息收條，就可以傳送訊息，讓傳送訊息數目低於閾值。  
+ 一旦達到其中一個閘道的訊息閾值，記錄檔訊息便不會再傳送至特定複本，或是針對特定資料庫傳送。 一旦收到傳送訊息的認知訊息，即可傳送訊息來讓傳送的訊息數目低於閾值。  
   
  除了流程控制閘道以外，還有另外一個防止傳送記錄檔訊息的因素。 複本的同步處理可確保訊息會以記錄序號 (LSN) 的順序傳送並套用。 在傳送記錄檔訊息之前，也會針對最低認可 LSN 編號檢查其 LSN，以確定它小於其中一個閾值 (根據訊息類型而定)。 如果兩個 LSN 編號之間的間距大於閾值，則不會傳送訊息。 一旦間距再次低於閾值，則會傳送訊息。  
   

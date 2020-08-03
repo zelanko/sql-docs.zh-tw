@@ -1,6 +1,6 @@
 ---
 title: 適用於 Azure Data Studio 的 SandDance
-description: 如何在 Azure Data Studio 中使用 SandDance
+description: 了解如何使用 Azure Data Studio 延伸模組快速建立您資料的視覺效果，即提供見解的視覺效果。
 ms.custom: seodec18
 ms.date: 07/03/2019
 ms.prod: azure-data-studio
@@ -9,12 +9,12 @@ ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 6574ab58edb7e4c874273ba2f5349be34ea3202b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b40ad2646f1eaa1534ab84cb0d638465588f2cd2
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758427"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411234"
 ---
 # <a name="sanddance-for-azure-data-studio-preview"></a>適用於 Azure Data Studio 的 SandDance (預覽)
 Azure Data Studio 現在可讓您為資料建立快速視覺效果。 當您嘗試查看資料並了解發生的情況時，此延伸模組會很有幫助。 我們使用 Microsoft 研究的 SandDance 技術，可就地產生資料的視覺效果。

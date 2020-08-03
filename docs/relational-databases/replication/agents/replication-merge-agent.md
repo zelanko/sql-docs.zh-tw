@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a4dff5292a3cd0bfcd46e2615bc755665ff3e49d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4f65282964494ba1fdb160b1e755922a60ad80d8
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897896"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394983"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -150,7 +150,7 @@ replmerg [-?]
  **-DistributorPassword** _distributor_password_  
  這是散發者密碼。  
   
- **-DistributorSecurityMode** [ **0**| **1**]  
+ **-DistributorSecurityMode** [ **0**\| **1**]  
  指定散發者的安全性模式。 值為 **0** 表示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證模式 (預設值)，而值為 **1** 則表示 Windows 驗證模式。  
   
  **-DownloadGenerationsPerBatch** _download_generations_per_batch_  
@@ -165,7 +165,7 @@ replmerg [-?]
  **-DynamicSnapshotLocation** _dynamic_snapshot_location_  
  這是當發行集使用數化資料列篩選器時，已篩選資料快照集檔案的位置。  
   
- **-EncryptionLevel** [ **0** | **1** | **2** ]  
+ **-EncryptionLevel** [ **0** \| **1** \| **2** ]  
  這是建立連線時，合併代理程式所使用的傳輸層安全性 (TLS) (先前稱為安全通訊端層 (SSL)) 加密層級。  
   
 |EncryptionLevel 值|描述|  
@@ -179,7 +179,7 @@ replmerg [-?]
 
  如需詳細資訊，請參閱[檢視及修改複寫安全性設定](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)。  
   
- **-ExchangeType** [ **1**| **2**| **3**]  
+ **-ExchangeType** [ **1**\| **2**\| **3**]  
 > [!WARNING]
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] 若要限制上傳，請改用 **sp_addmergearticle** 的 **\@subscriber_upload_options**。  
   
@@ -195,13 +195,13 @@ replmerg [-?]
   
  如果使用 **ExchangeType** 將合併式複寫的上傳和下載階段分成不同的工作階段，您必須先將 **ExchangeType** 設定為 1 來執行合併代理程式，然後將此值設定為 2 再次執行合併代理程式。 如果無法使用這兩個參數執行合併代理程式，將會導致中繼資料遭到刪除，而且您將必須重新初始化訂閱 (沒有上傳)。  
   
- **-FastRowCount** [**0**|**1**]  
+ **-FastRowCount** [**0**\|**1**]  
  指定應該針對資料列計數驗證使用哪一種資料列計數計算方法。 值為 **1** (預設值) 表示快速方法。 值為 **0** 則表示完整資料列計數方法。  
   
- **-FileTransferType** [**0**|**1**]  
- 指定檔案傳輸類型。  值為 **0** 表示 UNC (通用命名慣例)，而值為 1 則表示 FTP (檔案傳輸通訊協定)。  
+ **-FileTransferType** [**0**\|**1**]  
+ 指定檔案傳輸類型。 值為 **0** 表示 UNC (通用命名慣例)，而值為 1 則表示 FTP (檔案傳輸通訊協定)。  
   
- **-ForceConvergenceLevel** [**0**|**1**|**2** ( **Publisher**| **Subscriber**| **Both**)]  
+ **-ForceConvergenceLevel** [**0**\|**1**\|**2** ( **Publisher**\| **Subscriber**\| **Both**)]  
  指定合併代理程式應該使用的聚合層級，而且可以是下列其中一個值。  
   
 |ForceConvergenceLevel 值|描述|  
@@ -222,7 +222,7 @@ replmerg [-?]
  **-FtpUserName** _ftp_user_name_  
  這是用來連接到 FTP 服務的使用者名稱。 沒有指定這個參數時，系統就會使用 anonymous。  
   
- **-HistoryVerboseLevel** [**1**|**2**|**3**]  
+ **-HistoryVerboseLevel** [**1**\|**2**\|**3**]  
  指定在合併作業期間記錄的記錄量。 您可以透過選取 **1**，盡量減少記錄作業對效能造成的影響。  
   
 |HistoryVerboseLevel 值|描述|  
@@ -235,7 +235,7 @@ replmerg [-?]
  **-Hostname** _host_name_  
  這是本機電腦的網路名稱。 預設值為本機電腦名稱。  
   
- **-InteractiveResolution** [**0**|**1**]  
+ **-InteractiveResolution** [**0**\|**1**]  
  指定在同步處理期間發生衝突時，是否要使用互動式衝突解決方案。 預設值為 **0**，表示不使用互動式衝突解決方案。  
   
  **-InternetLogin** _internet_login_  
@@ -253,7 +253,7 @@ replmerg [-?]
  **-InternetProxyServer**  *internet_proxy_server*  
  指定要在存取 *internet_url*中指定之 HTTP 資源時使用的 Proxy 伺服器。  
   
- **-InternetSecurityMode** [**0**|**1**]  
+ **-InternetSecurityMode** [**0**\|**1**]  
  指定在 Web 同步處理期間，連接至 Web 伺服器時使用的 IIS 安全性模式。 值為 **0** 表示基本驗證，而值為 **1** 則表示 Windows 整合式驗證 (預設值)。  
   
  **-InternetTimeout** _internet_timeout_  
@@ -282,16 +282,16 @@ replmerg [-?]
  **-MaxUploadChanges** _number_of_upload_changes_  
  指定應該從訂閱者上傳至發行者的最大變更資料列數目。 所上傳的資料列數目可能會高於指定的最大值，因為：系統會處理完整的層代，而且平行目的地執行緒可能會執行，其中每個執行緒在第一次傳遞時至少會處理 100 項變更。 根據預設，系統會傳送準備上傳的所有變更。  
   
- **-MetadataRetentionCleanup** [**0**|**1**]  
+ **-MetadataRetentionCleanup** [**0**\|**1**]  
  指定是否應該根據發行集保留週期，從 [MSmerge_genhistory](../../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)、 [MSmerge_contents](../../../relational-databases/system-tables/msmerge-contents-transact-sql.md)、 [MSmerge_tombstone](../../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)、 [MSmerge_past_partition_mappings](../../../relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql.md)和 [MSmerge_current_partition_mappings](../../../relational-databases/system-tables/msmerge-current-partition-mappings.md) 中移除中繼資料。 預設值為 **1**，表示應該進行清除。 值為 **0** 則表示不應該自動進行清除。  
   
  **-Output** _output_path_and_file_name_  
  這是代理程式輸出檔的路徑。 如果未提供檔案名稱，輸出將傳送至主控台。 如果指定的檔案名稱存在，輸出就會附加至該檔案。  
   
- **-OutputVerboseLevel** [**0**|**1**|**2**]  
- 指定輸出是否應該詳細。 如果詳細資訊層級為 0，系統就只會列印錯誤訊息。 如果詳細資訊層級為 **1**，系統就會列印所有進度報表訊息。  如果詳細資訊層級為 2 (預設值)，系統就會列印所有錯誤訊息和進度報表訊息 (可用於偵錯)。  
+ **-OutputVerboseLevel** [**0**\|**1**\|**2**]  
+ 指定輸出是否應該詳細。 如果詳細資訊層級為 0，系統就只會列印錯誤訊息。 如果詳細資訊層級為 **1**，系統就會列印所有進度報表訊息。 如果詳細資訊層級為 2 (預設值)，系統就會列印所有錯誤訊息和進度報表訊息 (可用於偵錯)。  
   
- **-ParallelUploadDownload** [**0**|**1**]  
+ **-ParallelUploadDownload** [**0**\|**1**]  
  指定合併代理程式是否應該以平行方式處理上傳至發行者的變更以及下載至訂閱者的變更，而且這個參數在具有高網路頻寬的高容量環境中很有用。 如果 **ParallelUploadDownload** 是 **1**，就會啟用平行處理。  
   
  **-PacketSize**  
@@ -312,7 +312,7 @@ replmerg [-?]
  **-PublisherPassword** _publisher_password_  
  這是發行者密碼。 如果 **PublisherSecurityMode** 是 **0** (代表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證)，您就必須指定這個參數。  
   
- **-PublisherSecurityMode** [**0**|**1**]  
+ **-PublisherSecurityMode** [**0**\|**1**]  
  指定發行者的安全性模式。 值為 **0** 表示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證 (預設值)，而值為 **1** 則表示 Windows 驗證模式。  
   
  **-QueryTimeOut** _query_time_out_seconds_  
@@ -327,7 +327,7 @@ replmerg [-?]
  **-SubscriberDatabasePath** _subscriber_database_path_  
  如果 **SubscriberType** 是 **2** (允許連接至沒有 ODBC 資料來源名稱 (DSN) 的 Jet 資料庫)，這就是 Jet 資料庫 (.mdb 檔) 的名稱。  
   
- **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
+ **-SubscriberDBAddOption** [**0**\| **1**\| **2**\| **3**]  
  指定現有的訂閱者資料庫是否存在。  
   
 |SubscriberDBAddOption 值|描述|  
@@ -346,22 +346,22 @@ replmerg [-?]
  **-SubscriberPassword** _subscriber_password_  
  這是訂閱者密碼。 如果 **SubscriberSecurityMode** 是 **0** (代表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證)，您就必須指定這個參數。  
   
- **-SubscriberSecurityMode** [ **0**| **1**]  
+ **-SubscriberSecurityMode** [ **0**\| **1**]  
  指定訂閱者的安全性模式。 值為 **0** 表示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證 (預設值)，而值為 **1** 則表示 Windows 驗證模式。  
   
- **-SubscriberConflictClean** [ **0**| **1**]  
+ **-SubscriberConflictClean** [ **0**\| **1**]  
  是否要在同步處理過程中清除訂閱者端的衝突資料表。值為 **1** 表示要清除訂閱者端的衝突資料表。 這個參數只能用於具有分散式衝突記錄之發行集的訂閱。  
   
- **-SubscriberType** [ **0**| **1**| **3**| **4**| **5**| **6**| **7**| **8**]  
+ **-SubscriberType** [ **0**\| **1**\| **3**\| **4**\| **5**\| **6**\| **7**\| **8**]  
  指定由合併代理程式所使用的訂閱者連接類型。 只有預設值 **0** 支援這個參數。  
   
- **-SubscriptionType**[ **0**| **1**| **2**]  
+ **-SubscriptionType**[ **0**\| **1**\| **2**]  
  指定散發的訂閱類型。 值為 **0** 表示發送訂閱 (預設值)、值為 **1** 表示提取訂閱，而值為 **2** 則表示匿名訂閱。  
   
- **-SyncToAlternate** [ **0|1**]  
+ **-SyncToAlternate** [ **0\|1**]  
  指定合併代理程式是否會在訂閱者與替代發行者之間進行同步處理。 值為 **1** 表示它是替代發行者。 預設為 **0**。  
  
- **-T** [**101|102**]  
+ **-T** [**101\|102**]  
  為合併代理程式啟用額外功能的追蹤旗標。 值 **101** 會啟用額外的詳細資訊記錄資訊，以協助判斷合併式複寫同步處理程序的每個步驟所花費時間。 值 **102** 會寫入與追蹤旗標 **101** 相同的統計資料，但改為寫入到 <Distribution server>..msmerge_history 資料表。 當您使用追蹤旗標 101 時，請使用 `-output` 和 `-outputverboselevel` 參數來啟用合併代理程式記錄。  例如，將下列參數新增至合併代理程式，然後重新啟動代理程式：`-T 101, -output, -outputverboselevel`。 
  
  **-UploadGenerationsPerBatch** _upload_generations_per_batch_  
@@ -376,7 +376,7 @@ replmerg [-?]
  **-UseInprocLoader**  
  將快照集檔案套用至訂閱者時，讓合併代理程式使用 BULK INSERT 命令，藉以改善初始快照集的效能。 這個參數已被取代，因為它與 XML 資料類型不相容。 如果您不複寫 XML 資料，則可使用這個參數。 這個參數無法搭配字元模式快照集使用。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 如果您使用這個參數，位於訂閱者端的  服務帳戶就必須擁有快照集 .bcp 資料檔案所在目錄的讀取權限。 沒有使用這個參數時，代理程式所載入的 ODBC 驅動程式就會從這些檔案中讀取，因此不會使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶的安全性內容。  
   
- **-Validate** [**0**|**1**|**2**|**3**]  
+ **-Validate** [**0**\|**1**\|**2**\|**3**]  
  指定是否應該在合併工作階段結束時完成驗證，而且如果是的話，應該完成哪一種驗證。 值 **3** 是建議值。  
   
 |Validate 值|描述|  

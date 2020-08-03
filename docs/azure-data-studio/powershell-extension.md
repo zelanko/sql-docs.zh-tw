@@ -1,6 +1,6 @@
 ---
 title: PowerShell 延伸模組
-description: 安裝和使用適用於 Azure Data Studio 的 PowerShell
+description: 了解如何安裝和使用 Azure Data Studio PowerShell 延伸模組，該延伸模組提供了豐富的 PowerShell 編輯器支援，可讓您撰寫和偵錯指令碼。
 ms.custom: seodec18
 ms.date: 04/19/2019
 ms.reviewer: alayu, maghan, sstein
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 manager: matthend
-ms.openlocfilehash: 5f30d6078b28026dec2c6a4eef22eb1f3279755d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a0c6a37af62422f65329ef1bbe2e66efbdc5eeb0
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85637741"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411314"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>Azure Data Studio 的 PowerShell 編輯器支援
 

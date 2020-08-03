@@ -20,15 +20,15 @@ ms.assetid: b026035b-f3d2-4d70-989d-3884b4ca0233
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5471791b3f75130bc2fb262a05683aa953f7f3a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1f7233d92e3b6a568d64f0b23817838d65dcbc74
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000444"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396273"
 ---
 # <a name="uniqueidentifier-transact-sql"></a>uniqueidentifier (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 這是 16 位元組的 GUID。
   
@@ -37,7 +37,7 @@ ms.locfileid: "68000444"
 -   使用 [NEWID](../../t-sql/functions/newid-transact-sql.md) 或 [NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md) 函式。    
 -   從 *xxxxxxxx*-*xxxx*-*xxxx*-*xxxx*-*xxxxxxxxxxxx* 格式的字串常數轉換，其中每一個 *x* 是範圍 0-9 或 a-f 的十六進位數字。 例如，6F9619FF-8B86-D011-B42D-00C04FC964FF 是有效的 **uniqueidentifier** 值。  
   
-比較運算子可以搭配使用 **uniqueidentifier** 值。 不過排序並不是比較兩值的位元模式加以實作的。 唯一可以對 **uniqueidentifier** 值執行的作業，是比較 (=, <>, \<, >, \<=, >=) 以及檢查 NULL (IS NULL 和 IS NOT NULL)。 其他算術運算子一律不能使用。 除了 IDENTITY 之外，所有的資料行條件約束和屬性，都可以用於 **uniqueidentifier** 資料類型。
+比較運算子可以搭配使用 **uniqueidentifier** 值。 不過排序並不是比較兩值的位元模式加以實作的。 您可以針對 **uniqueidentifier** 值執行的唯一作業是比較 (=、<>、\<, >、\<=, >=) 和檢查其是否為 NULL (IS NULL 和 IS NOT NULL)。 其他算術運算子一律不能使用。 除了 IDENTITY 之外，所有的資料行條件約束和屬性，都可以用於 **uniqueidentifier** 資料類型。
   
 具有更新訂閱的合併式複寫和異動複寫，都使用 **uniqueidentifier** 資料行，以確保資料列可以在多份資料表唯一識別。
   

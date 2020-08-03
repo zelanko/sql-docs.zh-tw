@@ -16,15 +16,15 @@ ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f543848759b737892998d913fa87ea6de7c6735
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: dd39db91c0ee2e6e71ed351fa39dae66921e0207
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858580"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394634"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>檢視資料表的相依性
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中檢視資料表的相依性。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "83858580"
   
 2.  以滑鼠右鍵按一下資料表，然後按一下 [檢視相依性]。  
   
-3.  在 [物件相依性 \<物件名稱\>] 對話方塊中，選取 [相依於 \<物件名稱\> 的物件] 或 [\<物件名稱\> 所相依的物件]。  
+3.  在 [物件相依性] _\<object name\>_ 對話方塊中，選取 [相依於] _\<object name\>_ ，或 [所相依的物件] _\<object name\>_ 。  
   
 4.  選取 **[相依性]** 方格中的物件。 物件類型 (如「觸發程序」或「預存程序」) 會出現在 [類型] 方塊中。  
   

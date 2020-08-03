@@ -2,19 +2,19 @@
 title: 設定多重子網路可用性群組與 FCI (Linux)
 description: 了解如何在 Linux 上，針對 SQL Server 設定多個子網路 Always On 可用性群組和容錯移轉叢集執行個體 (FCI)。
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: vanto
-ms.date: 12/01/2017
+author: liweiSecurity
+ms.author: liweiyin
+ms.reviewer: VanMSFT
+ms.date: 07/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 3a18e668d1a62a74396530e37243d75a5a86aee2
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 5abe1d99f753e0f41ca74a0864079293800dc1df
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196964"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362965"
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>設定多個子網路 Always On 可用性群組和容錯移轉叢集執行個體
 
@@ -57,28 +57,42 @@ ms.locfileid: "86196964"
 2. 編輯已產生的檔案。 尋找 `<resources>` 區段。 您會看到針對 AG 或 FCI 所建立的各種資源。 尋找與 IP 位址建立關聯的資源。 新增 `<instance attributes>` 區段，其中包含第二個 IP 位址的資訊，該位址位於現有的 IP 位置之上或之下，但在 `<operations>` 之前。 其類似於下列語法：
 
     ```xml
-    <instance attributes id="<NameForAttribute>" score="<Score>">
-        <rule id="<RuleName>" score="INFINITY">
-            <expression id="<ExpressionName>" attribute="\#uname" operation="eq" value="<NodeNameInSubnet2>" />
-        </rule>
-        <nvpair id="<NameForSecondIP>" name="ip" value="<IPAddress>"/>
-        <nvpair id="<NameForSecondIPNetmask>" name="cidr\_netmask" value="<Netmask>"/>
+    <instance attributes id="<NameForAttribute>">
+        <nvpair id="<NameForIP>" name="ip" value="<IPAddress>"/>
     </instance attributes>
     ```
     
-    其中 *NameForAttribute* 是此屬性的唯一名稱，*Score* 是指派給屬性的數字 (必須高於主要子網路)，*RuleName* 是規則的名稱，*ExpressionName* 是運算式的名稱，*NodeNameInSubnet2* 是另一個子網路中的節點名稱，*NameForSecondIP* 是與第二個 IP 位址建立關聯的名稱，*IPAddress* 是第二個子網路的 IP 位址，*NameForSecondIPNetmask* 是與網路遮罩建立關聯的名稱，*Netmask* 是第二個子網路的網路遮罩。
+    其中，*NameForAttribute* 是此屬性的唯一名稱，*NameForIP* 則是與 IP 位址相關聯的名稱，*IPAddress* 則是第二個子網路的 IP 位址。
     
     下列為範例。
     
     ```xml
-    <instance attributes id="Node3-2nd-IP" score="2">
-        <rule id="Subnet2-IP" score="INFINITY">
-            <expression id="Subnet2-Node" attribute="\#uname" operation="eq" value="Node3" />
-        </rule>
-        <nvpair id="IP-In-Subnet-2" name="ip" value="192.168.2.102"/>
-        <nvpair id="Netmask-For-IP2" name="cidr\_netmask" value="24" />
+    <instance attributes id="virtualip-instance_attributes">
+        <nvpair id="virtualip-instance_attributes-ip" name="ip" value="192.168.1.102"/>
     </instance attributes>
     ```
+    
+    根據預設，匯出的 CIB XML 檔案中只有一個 <instance/>。 讓我們假設有兩個子網路，您便需要擁有兩個 <instance/> 項目。
+    以下是兩個子網路項目的範例
+    
+    ```xml
+    <instance attributes id="virtualip-instance_attributes1">
+        <rule id="Subnet1-IP" score="INFINITY" boolean-op="or">
+            <expression id="Subnet1-Node1" attribute="#uname" operation="eq" value="Node1" />
+            <expression id="Subnet1-Node2" attribute="#uname" operation="eq" value="Node2" />
+        </rule>
+        <nvpair id="IP-In-Subnet1" name="ip" value="192.168.1.102"/>
+    </instance attributes>
+    <instance attributes id="virtualip-instance_attributes2">
+        <rule id="Subnet2-IP" score="INFINITY">
+            <expression id="Subnet2-Node1" attribute="#uname" operation="eq" value="Node3" />
+        </rule>
+        <nvpair id="IP-In-Subnet2" name="ip" value="192.168.2.102"/>
+    </instance attributes>
+    ```
+   
+   子網路擁有超過一個伺服器時，會使用 'boolean-op="or"'。
+
 
 3. 匯入已修改的 CIB 並重新設定 Pacemaker。
 
@@ -99,6 +113,11 @@ ms.locfileid: "86196964"
 ### <a name="check-and-verify-failover"></a>檢查並驗證容錯移轉
 
 1. 成功套用已更新設定的 CIB 之後，請 Ping 與 Pacemaker 中 IP 位址資源建立關聯的 DNS 名稱。 其應該會反映與其目前裝載 AG 或 FCI 之子網路建立關聯的 IP 位址。
+
 2. 將 AG 或 FCI 容錯回復至另一個子網路。
+
 3. 在 AG 或 FCI 完全上線之後，請 Ping 與 IP 位址建立關聯的 DNS 名稱。 其應該會反映第二個子網路中的 IP 位址。
+
 4. 如有需要，將 AG 或 FCI 容錯回復至原始子網路。
+
+以下 CSS 貼文會示範如何為三個子網路設定 CIB，請檢閱詳細資料：[透過修改 CIB 設定多個子網路的 AlwaysOn 可用性群組](https://techcommunity.microsoft.com/t5/sql-server-support/configure-multiple-subnet-alwayson-availability-groups-by/ba-p/1544838)。

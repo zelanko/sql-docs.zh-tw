@@ -10,16 +10,16 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c4ebe0f59ede7d82ac15260eaa4f2265453fcc57
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: 7383e63ecb96a32c9b1f0087a138bc9f862eb722
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138236"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395153"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL) 
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
   傳回 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 陳述式的查口詢計劃，而不執行陳述式。 使用 EXPLAIN 預覽哪些作業需要移動資料，以及檢視查詢作業的估計成本。 `WITH RECOMMENDATIONS` 適用於 Azure SQL 資料倉儲 (預覽)。
   
@@ -73,7 +73,7 @@ EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement
 |\<params>|目前不使用此標記。|
 |\<materialized_view_candidates> (預覽)|包含建議具體化檢視的 CREATE 陳述式，可讓 SQL 陳述式有較好的效能。| 
 |\<dsql_operations>|摘要說明和包含查詢步驟，並包含查詢的成本資訊。 也包含所有 `<dsql_operation>` 區塊。 此標記包含整個查詢的計數資訊：<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost* 是查詢執行的預估時間總計，以毫秒為單位。<br /><br /> *total_number_operations* 是查詢的作業總數。 將平行處理並在多個節點上執行的作業都會計算為單一作業。|  
-|\<dsql_operation>|描述查詢計劃內的單一作業。 \<dsql_operation> 標記包含做為屬性的作業類型：<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* 為可在 [sys.dm_pdw_request_steps (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md) 中找到的其中一個值。<br /><br /> `\<dsql_operation>` 區塊中的內容取決於作業類型。<br /><br /> 請參閱下表。|  
+|\<dsql_operation>|描述查詢計劃內的單一作業。 \<dsql_operation> 標籤包含作為屬性的作業類型：<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* 為可在 [sys.dm_pdw_request_steps (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md) 中找到的其中一個值。<br /><br /> `\<dsql_operation>` 區塊中的內容取決於作業類型。<br /><br /> 請參閱下表。|  
   
 |作業類型|內容|範例|  
 |--------------------|-------------|-------------|  

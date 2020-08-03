@@ -1,5 +1,6 @@
 ---
 title: 預存程序 (Database Engine) | Microsoft Docs
+description: 了解 SQL Server 的預存程序是一或多個 Transact-SQL 陳述式的群組，或 .NET Framework 通用執行階段語言方法的參考。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 73243b7be6587b1e811ac040c5977207748b3889
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 68fbf67a8ff58c4f768c56a84e45c11fd4480c05
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003108"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332214"
 ---
 # <a name="stored-procedures-database-engine"></a>預存程序 (Database Engine)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -79,9 +80,8 @@ ms.locfileid: "86003108"
   
 ## <a name="related-tasks"></a>相關工作  
   
-|||  
-|-|-|  
-|**工作描述**|**主題**|  
+| 工作描述 | 主題 |
+| ---------------- | ----- |
 |描述如何建立預存程序。|[建立預存程序](../../relational-databases/stored-procedures/create-a-stored-procedure.md)|  
 |描述如何修改預存程序。|[修改預存程序](../../relational-databases/stored-procedures/modify-a-stored-procedure.md)|  
 |描述如何刪除預存程序。|[刪除預存程序](../../relational-databases/stored-procedures/delete-a-stored-procedure.md)|  

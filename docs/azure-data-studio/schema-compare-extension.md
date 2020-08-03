@@ -1,6 +1,6 @@
 ---
 title: 結構描述比較延伸模組
-description: 安裝和使用適用於 Azure Data Studio 的結構描述比較延伸模組
+description: 了解如何安裝和使用 Azure Data Studio 結構描述比較延伸模組，輕鬆比較兩個資料庫，並選擇性地變更其中一項以使其符合另外一項。
 ms.custom: seodec18
 ms.date: 11/04/2019
 ms.reviewer: alayu, maghan, sstein
@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 09602241d0fd30153ca462225b617fd1612a0045
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 80aa0be8ae70773fe0e1a0087e623f679504a983
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758404"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411224"
 ---
 # <a name="schema-compare-extension"></a>結構描述比較延伸模組
 結構描述比較延伸模組提供容易使用的體驗，比較兩項資料庫定義，並將來源的差異性套用至目標。

@@ -12,15 +12,16 @@ helpviewer_keywords:
 ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4b4786490fdf680125915fc69513290c3a8a4921
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: bc0c2453f8b9a2331a31ab917539bddeb1d31fa9
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914636"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411014"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>教學課程：使用憑證簽署預存程序
-[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database SQL Managed Instance](../includes/applies-to-version/sql-asdb-asdbmi.md)]
 這個教學課程說明如何使用由 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]產生的憑證來簽署預存程序。  
   
 > [!NOTE]  
@@ -154,7 +155,7 @@ EXECUTE TestCreditRatingSP;
 GO  
 ```  
   
-執行下列程式碼，使用 `EXECUTE AS` 陳述式改以 `TestCreditRatingUser` 帳戶身分來執行預存程序。 這回您會看到使用者內容已設定為 USER MAPPED TO CERTIFICATE 內容。  
+執行下列程式碼，使用 `EXECUTE AS` 陳述式改以 `TestCreditRatingUser` 帳戶身分來執行預存程序。 這回您會看到使用者內容已設定為 USER MAPPED TO CERTIFICATE 內容。 請注意，自主資料庫或 Azure SQL Database 或 Azure Synapse Analytics 不支援此選項。
   
 ```sql  
 EXECUTE AS LOGIN = 'TestCreditRatingUser';  

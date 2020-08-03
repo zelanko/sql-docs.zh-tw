@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b56afed2447f21f6595bec39873d4298b4762027
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4618c69eb24901580118a6fc6b4119689f1e9663
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85651749"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362658"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>註冊 Kerberos 連接的服務主體名稱
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -94,9 +94,9 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
     > [!NOTE]
     > 新的 SPN 格式不需要通訊埠編號。 這表示，不使用通訊埠編號的多重通訊埠伺服器或通訊協定可以使用 Kerberos 驗證。  
    
-|||  
+|SPN 格式|描述|  
 |-|-|  
-|MSSQLSvc/\<FQDN>:<port>|使用 TCP 時，此為提供者產生的預設 SPN。 \<port> 是 TCP 連接埠號碼。|  
+|MSSQLSvc/\<FQDN>:\<port>|使用 TCP 時，此為提供者產生的預設 SPN。 \<port> 是 TCP 連接埠號碼。|  
 |MSSQLSvc/\<FQDN>|使用 TCP 以外的通訊協定時，此為提供者針對預設執行個體所產生的預設 SPN。 \<FQDN> 是完整網域名稱。|  
 |MSSQLSvc/\<FQDN>:\<instancename>|使用 TCP 以外的通訊協定時，此為提供者針對具名執行個體所產生的預設 SPN。 \<instancename> 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。|  
 

@@ -1,6 +1,6 @@
 ---
 title: 新增延伸模組
-description: 將延伸模組市集中的延伸模組新增至 Azure Data Studio
+description: 了解如何從 Microsoft 和協力廠商所提供的項目中選取和安裝延伸模組，將功能新增到 Azure Data Studio。
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 10/03/2019
-ms.openlocfilehash: d049b80197fdd50e3f7da5a449c35e092366fa51
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: eb6578f69ab9c0ded637ef9762ea50cfd18a25bb
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483656"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411114"
 ---
 # <a name="extend-the-functionality-of-azure-data-studio"></a>擴充 Azure Data Studio 的功能
 

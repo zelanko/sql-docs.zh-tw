@@ -20,12 +20,12 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 129ac690a0615062bb620c8b81dfbdb16a41659e
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 9a3d2bd6b1d69b04bb67879572d37a16f35d48c8
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942670"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332267"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -116,7 +116,7 @@ WITH (
 *file_format_name*  
 指定外部檔案格式的名稱。
   
-FORMAT_TYPE = [ PARQUET | ORC | RCFILE | DELIMITEDTEXT] 指定外部資料的格式。
+FORMAT_TYPE = [ PARQUET \| ORC \| RCFILE \| DELIMITEDTEXT] 指定外部資料的格式。
   
 - PARQUET 指定 Parquet 格式。
   

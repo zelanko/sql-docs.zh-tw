@@ -1,6 +1,6 @@
 ---
 title: 擴充性 API
-description: 了解適用於 Azure Data Studio 的擴充性 API
+description: 了解 Azure Data Studio 擴充性 API，啟用延伸模組來和 Azure Data Studio 的其他部分 (例如物件總管) 互動。
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: c94935e7d8b1a72b6a99f83618fb0e8855379ed8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0ef95d4b77e91bcd950b2d8aa5dddf5bb95b3841
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774645"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411134"
 ---
 # <a name="azure-data-studio-extensibility-apis"></a>Azure Data Studio 擴充性 API
 

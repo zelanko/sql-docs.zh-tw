@@ -1,5 +1,6 @@
 ---
 title: 重新命名預存程序 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL，在 SQL Server 2019 (15.x) 中重新命名預存程序。
 ms.custom: ''
 ms.date: 07/06/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 5d2e4c68-7e0b-4405-8919-f5b203e46770
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 71d0fefec2a0b0ba867b7c96a0d8b852884e08d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ddf1685f89d24c5b1b6dec4956c3e0c7542ac236
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767497"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332527"
 ---
 # <a name="rename-a-stored-procedure"></a>重新命名預存程序
 
@@ -36,7 +37,7 @@ ms.locfileid: "85767497"
   
 -   **若要重新命名預存程序，使用：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -56,7 +57,7 @@ ms.locfileid: "85767497"
   
 ####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  CREATE PROCEDURE  
- 需要資料庫的 CREATE PROCEDURE 權限，以及將在其中建立程序之結構描述的 ALTER 權限，或者需要 **db_ddladmin** 固定資料庫角色的成員資格。  
+ 需要資料庫的 CREATE PROCEDURE 權限，以及要在其中建立程序之結構描述的 ALTER 權限，或者需要 **db_ddladmin** 固定資料庫角色的成員資格。  
   
  ALTER PROCEDURE  
  需要程序的 ALTER 權限，或 **db_ddladmin** 固定資料庫角色的成員資格。  
@@ -68,7 +69,7 @@ ms.locfileid: "85767497"
 1.  在物件總管中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
 2.  依序展開 **[資料庫]** 、程序所屬的資料庫，以及 **[可程式性]** 。  
 3.  [判斷預存程序的相依性](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md)。  
-4.  展開 [預存程序]  ，以滑鼠右鍵按一下要重新命名的程序，然後按一下 [重新命名]  。  
+4.  展開 [預存程序]，以滑鼠右鍵按一下要重新命名的程序，然後按一下 [重新命名]。  
 5.  修改程序名稱。  
 6.  修改在任何相依物件或指令碼中參考的程序名稱。  
   

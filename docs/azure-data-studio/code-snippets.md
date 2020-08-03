@@ -1,6 +1,6 @@
 ---
 title: 建立可重複使用的程式碼片段
-description: 了解如何在 Azure Data Studio 中建立和使用 SQL 程式碼片段
+description: 了解如何建立及使用 Azure Data Studio SQL 程式碼片段，讓您輕鬆建立資料庫和資料庫物件。
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 8e2c6883840513fb9f09f8dc58080d36402bdf9f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a8ef725a83a0800dbe5027e4d76bc8f7f51f7f3b
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774696"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411164"
 ---
 # <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-azure-data-studio"></a>建立和使用程式碼片段，以在 Azure Data Studio 中快速建立 Transact-SQL (T-SQL) 指令碼
 

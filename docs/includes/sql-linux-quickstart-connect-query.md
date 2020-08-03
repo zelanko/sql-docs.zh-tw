@@ -106,8 +106,8 @@ QUIT
 
 除了 **sqlcmd** 以外，您也可以使用下列跨平台工具來管理 SQL Server：
 
-|||
-|---|---|
+| 工具 | 說明 |
+| ---- | ----------- |
 | [Azure Data Studio](../azure-data-studio/index.yml) | 跨平台 GUI 資料庫管理公用程式。 |
 | [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | 跨平台 GUI 程式碼編輯器，可執行具有 mssql 延伸模組的 Transact-SQL 陳述式。 |
 | [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | 以 Cmdlet 為基礎的跨平台自動化和設定工具。 |
@@ -129,12 +129,10 @@ Windows 上 SQL Server 工具連線到 Linux 上 SQL Server 執行個體的方�
 
 如需其他安裝案例，請參閱下列資源：
 
-|||
-|---|---|
-| [升級](../linux/sql-server-linux-setup.md#upgrade) | 了解如何升級 Linux 上 SQL Server 的現有安裝 |
-| [解除安裝](../linux/sql-server-linux-setup.md#uninstall) | 解除安裝 Linux 上的 SQL Server |
-| [自動安裝](../linux/sql-server-linux-setup.md#unattended) | 了解如何撰寫指令碼，以進行沒有提示的安裝 |
-| [離線安裝](../linux/sql-server-linux-setup.md#offline) | 了解如何手動下載離線安裝的套件 |
+* [升級](../linux/sql-server-linux-setup.md#upgrade)：了解如何升級 Linux 上 SQL Server 的現有安裝
+* [Uninstall](../linux/sql-server-linux-setup.md#uninstall)：解除安裝 Linux 上的 SQL Server
+* [自動安裝](../linux/sql-server-linux-setup.md#unattended)：了解如何撰寫指令碼，以進行沒有提示的安裝
+* [離線安裝](../linux/sql-server-linux-setup.md#offline)：了解如何手動下載離線安裝的套件
 
 > [!TIP]
 > 如需常見問題的解答，請參閱 [Linux 上的 SQL Server 常見問題集](../linux/sql-server-linux-faq.md)。

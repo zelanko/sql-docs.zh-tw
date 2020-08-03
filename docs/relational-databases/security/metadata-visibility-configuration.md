@@ -21,12 +21,12 @@ ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63c00456e36742d62074a65eb291dc19e23a2863
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 80b0606f38f50b067f706bc5dad4d094ea49a4b2
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85979418"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332037"
 ---
 # <a name="metadata-visibility-configuration"></a>中繼資料可見性組態
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,21 +43,43 @@ GO
   
 ## <a name="scope-and-impact-of-metadata-visibility-configuration"></a>中繼資料可見性組態的範圍和影響  
  中繼資料可見性組態僅適用於下列安全性實體。  
-  
-|||  
-|-|-|  
-|目錄檢視|[!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** 預存程序|  
-|公開內建函數的中繼資料|資訊結構描述檢視|  
-|相容性檢視|擴充屬性|  
+
+:::row:::
+    :::column:::
+        目錄檢視
+
+        公開內建函數的中繼資料
+
+        相容性檢視
+    :::column-end:::
+    :::column:::
+         [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** 預存程序
+
+        資訊結構描述檢視
+
+        擴充屬性
+    :::column-end:::
+:::row-end:::
   
  中繼資料可見性組態不適用於下列安全性實體。  
-  
-|||  
-|-|-|  
-|「記錄傳送」系統資料表|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 系統資料表|  
-|資料庫維護計畫系統資料表|「備份」系統資料表|  
-|「複寫」系統資料表|複寫和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent **sp_help** 預存程序|  
-  
+
+:::row:::
+    :::column:::
+        「記錄傳送」系統資料表
+
+        資料庫維護計畫系統資料表
+
+        「複寫」系統資料表
+    :::column-end:::
+    :::column:::
+         [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 系統資料表
+
+        「備份」系統資料表
+
+        複寫和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent **sp_help** 預存程序
+    :::column-end:::
+:::row-end:::
+
  中繼資料存取範圍有限制的意義如下：  
   
 -   假設以 **public** 來存取中繼資料的應用程式會中斷。  
@@ -118,26 +140,28 @@ GO
     -   使用者對該物件的 VIEW DEFINITION 權限尚未被拒絕，且使用者具有該物件的 CONTROL、ALTER 或 TAKE OWNERSHIP 權限。 其他所有使用者都只會看到 NULL。  
   
 -   下列目錄檢視中的定義資料行：  
-  
-    |||  
-    |-|-|  
-    |**sys.all_sql_modules**|**sys.sql_modules**|  
-    |**sys.server_sql_modules**|**sys.check_constraints**|  
-    |**sys.default_constraints**|**sys.computed_columns**|  
-    |**sys.numbered_procedures**||  
-  
+
+    - **sys.all_sql_modules**  
+    - **sys.server_sql_modules**  
+    - **sys.default_constraints**
+    - **sys.numbered_procedures**
+    - **sys.sql_modules**
+    - **sys.check_constraints**
+    - **sys.computed_columns**
+
 -   **syscomments** 相容性檢視中的 **ctext** 資料行。  
   
 -   **sp_helptext** 程序的輸出。  
   
--   資訊結構描述檢視中的下列資料行：  
-  
-    |||  
-    |-|-|  
-    |INFORMATION_SCHEMA.CHECK_CONSTRAINTS.CHECK_CLAUSE|INFORMATION_SCHEMA.COLUMNS.COLUMN_DEFAULT|  
-    |INFORMATION_SCHEMA.DOMAINS.DOMAIN_DEFAULT|INFORMATION_SCHEMA.ROUTINE_COLUMNS.COLUMN_DEFAULT|  
-    |INFORMATION_SCHEMA.ROUTINES.ROUTINE_DEFINITION|INFORMATION_SCHEMA.VIEWS.VIEW_DEFINITION|  
-  
+-   資訊結構描述檢視中的下列資料行：
+
+    - INFORMATION_SCHEMA.CHECK_CONSTRAINTS.CHECK_CLAUSE
+    - INFORMATION_SCHEMA.DOMAINS.DOMAIN_DEFAULT
+    - INFORMATION_SCHEMA.ROUTINES.ROUTINE_DEFINITION
+    - INFORMATION_SCHEMA.COLUMNS.COLUMN_DEFAULT
+    - INFORMATION_SCHEMA.ROUTINE_COLUMNS.COLUMN_DEFAULT
+    - INFORMATION_SCHEMA.VIEWS.VIEW_DEFINITION
+
 -   OBJECT_DEFINITION() 函數  
   
 -   **sys.sql_logins**的 password_hash 資料行中儲存的值。  沒有 CONTROL SERVER 權限的使用者將在此資料行中看到 NULL 值。  
@@ -177,19 +201,45 @@ GO
   
  DB_ID() 和 DB_NAME() 函數傳回的中繼資料，所有使用者都可以看到。  
   
- 下表列出 **public** 角色可以看見的目錄檢視。  
-  
-|||  
-|-|-|  
-|**sys.partition_functions**|**sys.partition_range_values**|  
-|**sys.partition_schemes**|**sys.data_spaces**|  
-|**sys.filegroups**|**sys.destination_data_spaces**|  
-|**sys.database_files**|**sys.allocation_units**|  
-|**sys.partitions**|**sys.messages**|  
-|**sys.schemas**|**sys.configurations**|  
-|**sys.sql_dependencies**|**sys.type_assembly_usages**|  
-|**sys.parameter_type_usages**|**sys.column_type_usages**|  
-  
+ 以下是 **public** 角色可見的目錄檢視清單。  
+
+:::row:::
+    :::column:::
+        **sys.partition_functions**
+
+        **sys.partition_schemes**
+
+        **sys.filegroups**
+
+        **sys.database_files**
+
+        **sys.partitions**
+
+        **sys.schemas**
+
+        **sys.sql_dependencies**
+
+        **sys.parameter_type_usages**
+    :::column-end:::
+    :::column:::
+        **sys.partition_range_values**
+
+        **sys.data_spaces**
+
+        **sys.destination_data_spaces**
+
+        **sys.allocation_units**
+
+        **sys.messages**
+
+        **sys.configurations**
+
+        **sys.type_assembly_usages**
+
+        **sys.column_type_usages**
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另請參閱  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 624b42ae39cddd56c2401db346c497e6914fe7a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3aefc181c1dc42e939579dcdce274a27086dd1ed
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735156"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362228"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>資料庫鏡像工作階段期間的角色切換 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "85735156"
   
  下表將摘要列出每種作業模式下支援的容錯移轉形式。  
   
-||高效能|不含見證的高安全性模式|含有見證的高安全性模式|  
+|容錯移轉的形式|高效能|不含見證的高安全性模式|含有見證的高安全性模式|  
 |-|----------------------|-----------------------------------------|--------------------------------------|  
 |自動容錯移轉|否|否|是|  
 |手動容錯移轉|否|是|是|  

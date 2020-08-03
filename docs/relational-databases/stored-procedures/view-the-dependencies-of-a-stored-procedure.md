@@ -1,5 +1,6 @@
 ---
 title: 檢視預存程序的相依性 | Microsoft 文件
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL，在 SQL Server 2019 (15.x) 中檢視預存程序的相依性。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 6ae0a369-1bc7-4ae4-be89-2b483697cd1f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aea9d3e1e073bfb4e34b1cc4250f2af64921d65f
-ms.sourcegitcommit: 3ea90a17a04827d573a281a4d62e72dba974504f
+ms.openlocfilehash: 7b59fe000bb72cdfb7286c5efba0de009439c555
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84332574"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332197"
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>檢視預存程序的相依性
 [!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "84332574"
 ##  <a name="how-to-view-the-dependencies-of-a-stored-procedure"></a><a name="Procedures"></a> 如何檢視預存程序的相依性  
  您可以使用下列其中一項：  
   
--   [Transact-SQL](#SSMSProcedure)  
+-   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
@@ -60,13 +61,13 @@ ms.locfileid: "84332574"
   
 2.  依序展開 **[資料庫]** 、程序所屬的資料庫，以及 **[可程式性]** 。  
   
-3.  展開 [預存程序]  ，以滑鼠右鍵按一下程序，然後按一下 [檢視相依性]  。  
+3.  展開 [預存程序]，以滑鼠右鍵按一下程序，然後按一下 [檢視相依性]。  
   
 4.  檢視相依於程序的物件清單。  
   
 5.  檢視程序所相依的物件清單。  
   
-6.  按一下 [確定]  。  
+6.  按一下 [確定]。  
   
 ###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **在查詢編輯器中檢視程序的相依性**  

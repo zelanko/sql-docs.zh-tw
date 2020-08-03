@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 13dd1cb62f139a672e53b0945e94fc3ba25abc63
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 10eb6fdf211b15cdc5b9f11d7f85cb45c050019a
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883139"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332247"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Service Broker 與 AlwaysOn 可用性群組 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "85883139"
      如需詳細資訊，請參閱 [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md)的相關資訊。  
 
     > [!NOTE]  
-    SQL Server Broker 不是多重子網路感知。 請務必使用設定為 0 的 "registerallprovidersip"，並確定您未在提供 DNS 上叢集之必要權限的 DNS 上使用靜態 IP，如 https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server 上所定義。 Broker 可能會延遲狀態為 "CONVERSING" 的訊息，並嘗試使用已停用的 IP。
+    SQL Server Service Broker 不是多重子網路感知。 將 `RegisterAllProvidersIP` 設為 0，並驗證叢集在 DNS 中具備使用靜態 IP 位址的必要權限。 請參閱[設定可用性群組接聽程式](create-or-configure-an-availability-group-listener-sql-server.md)深入了解。 Service Broker 可能會延遲訊息，在顯示 "CONVERSING" 的狀態下，嘗試使用已停用的 IP 位址。
 
 3.  **授與端點的 CONNECT 權限。**  
   

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 846589ee-5fe5-4ab3-b335-0c253e569f99
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8e8b0ce1e5924a2186529fb7f7b301b85d0d547c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4354def42884887539693073bf3108d7227170de
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726491"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363564"
 ---
 # <a name="database-mail-log-and-audits"></a>Database Mail 記錄與稽核
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -34,9 +34,8 @@ ms.locfileid: "85726491"
   
 ## <a name="database-mail-auditing-tasks"></a>Database Mail 稽核工作  
   
-|||  
+|檢閱和管理 Database Mail 記錄檔|主題連結|  
 |-|-|  
-|**檢閱和管理 Database Mail 記錄檔**|**主題連結**|  
 |檢查個別訊息的傳遞狀態|[檢查使用 Database Mail 傳送之電子郵件訊息的狀態](../../relational-databases/database-mail/check-the-status-of-e-mail-messages-sent-with-database-mail.md)|  
 |清除 Database Mail 訊息、附件和記錄項目|[sysmail_delete_mailitems_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)<br /><br /> [sysmail_delete_log_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md)|  
 |封存資料庫電子郵件訊息和記錄檔|[建立 SQL Server Agent 作業以封存 Database Mail 訊息及事件記錄檔](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)|  

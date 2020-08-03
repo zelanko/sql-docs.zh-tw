@@ -29,15 +29,15 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2fa18ece825ba55479eac3d5c421c6d5acba363c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7125460527a0ca6aa231d771cff8714db7891b09
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633266"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396252"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 將資料列存放區資料表轉換為叢集資料行存放區索引或建立一個非叢集資料行存放區索引。 有效率地對 OLTP 工作負載執行即時作業分析，或是改善資料倉儲工作負載的資料壓縮和查詢效能，請使用資料行存放區索引。  
   
@@ -516,7 +516,7 @@ GO
     -   只有在您將索引轉換成叢集資料行存放區索引的過程中，想要為索引指定新名稱時才這樣做。 如果您未卸除叢集索引，新的叢集資料行存放區索引就會有相同的名稱。  
   
         > [!NOTE]  
-        > 如果您使用自己的索引名稱，可能較容易記住。 所有資料列存放區叢集索引都會使用預設名稱，也就是 'ClusteredIndex_\<GUID>'。  
+        > 如果您使用自己的索引名稱，可能較容易記住。 所有資料列存放區叢集索引都會使用預設名稱，即 'ClusteredIndex_\<GUID>'。  
   
     ```sql  
     --Process for dropping a clustered index.  

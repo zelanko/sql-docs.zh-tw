@@ -1,6 +1,6 @@
 ---
 title: 建立和自訂鍵盤快速鍵
-description: 了解如何在 Azure Data Studio 中建立和自訂鍵盤快速鍵
+description: 了解如何使用以 Visual Studio Code 中鍵盤快速鍵的功能，在 Azure Data Studio 中檢視、編輯和建立鍵盤快速鍵。
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: da7ca6132a8727d4ea77b3549f1e4d6199741b3a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 008c44e8e0ca61d4b2e84ba9e25863d4ffa78fa7
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774574"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411069"
 ---
 # <a name="keyboard-shortcuts-in-azure-data-studio"></a>Azure Data Studio 的鍵盤快速鍵
 

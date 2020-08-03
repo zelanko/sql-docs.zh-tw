@@ -18,12 +18,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 08e432e0470074a5861c070d26110478353817b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 03cff187ee251278274af6f7c97e4598235fde38
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727071"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363431"
 ---
 # <a name="create-indexed-views"></a>建立索引檢視表
 
@@ -107,10 +107,14 @@ ms.locfileid: "85727071"
 
 - 檢視表必須使用 `WITH SCHEMABINDING` 選項來建立。
 - 檢視必須只參考與檢視位於相同資料庫中的基底資料表。 檢視不可參考其他檢視。
+
+- 如果有 `GROUP BY`，VIEW 定義必須包含 `COUNT_BIG(*)`，且不能包含 `HAVING`。 `GROUP BY` 限制只適用於索引檢視表定義。 即使索引檢視表不符合這些 `GROUP BY` 限制，查詢還是可以在它的執行計畫中使用索引檢視表。
+- 如果檢視表定義包含`GROUP BY` 子句，唯一叢集索引的索引鍵則只能參考 `GROUP BY` 子句中指定的資料行。
+
 - 檢視定義中的 SELECT 陳述式不得包含下列 Transact-SQL 元素：
 
-   ||||
-   |-|-|-|
+   | Transact-SQL 元素 | (繼續) | (繼續) |
+   | --------------------- | ----------- | ----------- |
    |`COUNT`|ROWSET 函式 (`OPENDATASOURCE`、`OPENQUERY`、`OPENROWSET` 和 `OPENXML`)|`OUTER` 聯結 (`LEFT`、`RIGHT` 或 `FULL`)|
    |衍生資料表 (藉由在 `FROM` 子句中指定 `SELECT` 陳述式所定義)|自我聯結|使用 `SELECT *` 或 `SELECT <table_name>.*` 指定資料行|
    |`DISTINCT`|`STDEV`、`STDEVP`、`VAR`、`VARP` 或 `AVG`|通用資料表運算式 (CTE)|
@@ -121,15 +125,11 @@ ms.locfileid: "85727071"
    |資料表變數|`OUTER APPLY` 或 `CROSS APPLY`|`PIVOT`, `UNPIVOT`|
    |疏鬆資料行集合|內嵌 (TVF) 或多重陳述式資料表值函式 (MSTVF)|`OFFSET`|
    |`CHECKSUM_AGG`|||
-   |&nbsp;|&nbsp;|&nbsp;|
-  
-    <sup>1</sup> 索引檢視表可以包含 **float** 資料行；不過，這類資料行不能併入叢集索引鍵中。
 
-- 如果有 `GROUP BY`，VIEW 定義必須包含 `COUNT_BIG(*)`，且不能包含 `HAVING`。 `GROUP BY` 限制只適用於索引檢視表定義。 即使索引檢視表不符合這些 `GROUP BY` 限制，查詢還是可以在它的執行計畫中使用索引檢視表。
-- 如果檢視表定義包含`GROUP BY` 子句，唯一叢集索引的索引鍵則只能參考 `GROUP BY` 子句中指定的資料行。
+   <sup>1</sup> 索引檢視表可以包含 **float** 資料行；不過，這類資料行不能併入叢集索引鍵中。
 
-> [!IMPORTANT]
-> 時態查詢 (使用 `FOR SYSTEM_TIME` 子句的查詢) 不支援索引檢視表。
+   > [!IMPORTANT]
+   > 時態查詢 (使用 `FOR SYSTEM_TIME` 子句的查詢) 不支援索引檢視表。
 
 ### <a name="recommendations"></a><a name="Recommendations"></a> 建議
 
