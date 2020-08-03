@@ -4,21 +4,31 @@ description: 瞭解每個版本的 SQL Server 移轉小幫手（SSMA） for Acce
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/2/2020
+ms.date: 7/31/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: alexiva
-ms.openlocfilehash: 7e898fa94dda37342765001ba87283b986ac9eb1
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 06fd04921d217bf81861c76a5b09769039be5ee7
+ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091762"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87477370"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access 的新功能（AccessToSQL）
 
 本文列出每個版本中的存取變更 SQL Server 移轉小幫手（SSMA）。
+
+## <a name="ssma-v812"></a>SSMA v 8.12
+
+SSMA for Access 的 v 8.12 版本包含下列變更：
+
+* 支援 `BigInt` （ `Large Number` ）資料類型
+* 改良的資料行類型解析
+* 改善資料行驗證規則的轉換
+* 使用最新可用的 ACE OLE DB 提供者進行資料移轉
 
 ## <a name="ssma-v811"></a>SSMA v 8.11
 

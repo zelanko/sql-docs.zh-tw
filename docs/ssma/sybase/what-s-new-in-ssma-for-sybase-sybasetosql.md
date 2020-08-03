@@ -4,21 +4,26 @@ description: 瞭解每個版本之 Sybase （SybaseToSQL）的 SQL Server 移轉
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/2/2020
+ms.date: 7/31/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: alexiva
-ms.openlocfilehash: 10ac2af79db21b9320c3ef180a64de8c2a13b29f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 53ae61f78bed3ee262844f5242f3499d8981501b
+ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007854"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87477320"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SSMA for SAP ASE 的新功能（SybaseToSQL）
 
 本文列出每個版本中 SAP ASE （先前稱為 SSMA for Sybase）變更的 SQL Server 移轉小幫手（SSMA）。
+
+## <a name="ssma-v812"></a>SSMA v 8.12
+
+SSMA for SAP ASE 的8.12 版本包含次要效能改進和 bug 修正。
 
 ## <a name="ssma-v811"></a>SSMA v 8.11
 

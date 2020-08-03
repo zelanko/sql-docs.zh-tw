@@ -4,21 +4,31 @@ description: 瞭解每個版本的 SQL Server 移轉小幫手（SSMA） for Orac
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/2/2020
+ms.date: 7/31/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: alexiva
-ms.openlocfilehash: c0465466a00eb9e7c1eb3b75035d136687672fef
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1601ae2430ced8a30a04d8ab52d97dbb9bbb095a
+ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011289"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87477450"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>SSMA for Oracle 的新功能（OracleToSQL）
 
 這篇文章列出每個版本中 Oracle 變更的 SQL Server 移轉小幫手（SSMA）。
+
+## <a name="ssma-v812"></a>SSMA v 8.12
+
+SSMA for Oracle 的 v 8.12 版本包含下列變更：
+
+* `INSERT` / `UPDATE` / `MERGE` / `DELETE` 語句內的子查詢分解子句支援
+* `ON DELETE SET NULL`在多重路徑或迴圈參考的情況下，子句的轉換訊息
+* 改善從動態 SQL 字串建立之資料指標的轉換
+* 將 ODP.NET 更新為 v 19。8
 
 ## <a name="ssma-v811"></a>SSMA v 8.11
 
@@ -286,7 +296,7 @@ SSMA for Oracle 的2016年5月版本包含下列變更：
   > SQL Server 2016 不支援數個 Oracle 閃回功能，包括：
   >
   >   * Oracle 閃回交易查詢
-  >   * `DBMS_FLASHBACK`包裹
+  >   * `DBMS_FLASHBACK` 封裝
   >   * 閃回交易
   >   * 閃資料封存
   >   * 閃回資料表
