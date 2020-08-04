@@ -1,5 +1,5 @@
 ---
-title: 高可用性和災害復原
+title: 高可用性與災害復原
 description: 在 Always On 可用性群組上安裝並設定 SQL Master Data Services，以改善後端資料的高可用性和嚴重損壞修復。
 ms.custom: seo-lt-2019
 ms.date: 07/28/2017
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f17290773a3becf0b33b28eb5e95bf914d53af06
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ceea117b0b266fdc7649e8e786b034039fae3507
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901719"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522002"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Master Data Services 的高可用性和災害復原
 
@@ -91,7 +91,7 @@ ms.locfileid: "85901719"
 
 WSFC 是一種功能，可改善應用程式和服務的高可用性。 它包含一組獨立的 Windows Server 執行個體，而且這些執行個體上執行 Microsoft 容錯移轉叢集服務。 Windows Server 執行個體 (或偶而呼叫的節點) 會連接以彼此通訊，而且可以進行失敗偵測。 WSFC 提供失敗偵測和容錯移轉功能。 如果叢集中的節點或服務失敗，則會偵測到失敗，而且另一個節點自動或手動開始提供失敗節點上所裝載的服務。 因此，使用者只會發生最少的服務中斷，進而改善服務可用性。  
 
-### <a name="prerequisites"></a>必要條件
+### <a name="prerequisites"></a>先決條件
 
 Windows Server 作業系統安裝於所有執行個體上，並修補所有更新。
 
@@ -208,7 +208,7 @@ AG 提供資料庫層級的可用性。 AG (一組使用者資料庫) 和其虛�
 
 Fci 提供實例層級的高可用性。 SQL Server 服務及其相關服務會註冊為 WSFC 中的資源。 此外，FCI 解決方案需要對稱共用磁碟儲存體 (例如 SAN 或 SMB 檔案共用)，而且 WFC 叢集中的所有節點都必須使用這些磁碟儲存體。
    
-### <a name="prerequisites"></a>必要條件
+### <a name="prerequisites"></a>先決條件
 
 - 在所有節點上安裝 SQL Server。 如需詳細資訊，請參閱[安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)。
 
@@ -324,7 +324,7 @@ AG 只能建立於現有資料庫上。 因此，您可以在一個節點上建�
 
    圖 18
 
-9. 在 [選取資料同步處理]**** 頁面上，按一下 [完整]****，然後指定每個節點可存取的網路共用。 按一下 [下一步] 以繼續。 請參閱圖 19。
+9. 在 [選取資料同步處理]**** 頁面上，按一下 [完整]****，然後指定每個節點可存取的網路共用。 選取 [下一步] 以繼續操作。 請參閱圖 19。
 
    此網路共用將用來儲存資料庫備份，以建立次要複本。 如果這不適用於您的組織，請選擇另一個資料同步處理喜好設定。 請參閱[SQL Server 2016 Always On 可用性群組](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)，以瞭解如何使用其他選項來建立次要複本。 圖 17 也會列出其他選項。
 
@@ -332,7 +332,7 @@ AG 只能建立於現有資料庫上。 因此，您可以在一個節點上建�
 
    圖 19 
 
-10. 在 [驗證]**** 頁面上，確定所有驗證都成功通過，並更正任何錯誤。 按一下 [下一步] 以繼續。
+10. 在 [驗證]**** 頁面上，確定所有驗證都成功通過，並更正任何錯誤。 選取 [下一步] 以繼續操作。
 
 11. 在 [摘要]**** 頁面上，檢閱所有組態設定，然後按一下 [完成]****。 這將建立並設定可用性群組。
 
@@ -390,7 +390,7 @@ AG 只能建立於現有資料庫上。 因此，您可以在一個節點上建�
 
 在此白皮書中，我們已瞭解如何在 AG 中安裝和設定 Master Data Services 後端資料庫。 此組態提供 Master Data Services 後端資料庫的高可用性和災害復原。 若要執行此設定，您需要安裝和設定 Windows Server 容錯移轉叢集、AG 和 Master Data Services。
 
-## <a name="feedback"></a>意見反應
+## <a name="feedback-comments"></a>意見反應批註
 
 這份技術白皮書對您是否有幫助？ 請按一下文章頂端的 [意見]**** 提供您的意見反應。 
 

@@ -18,15 +18,15 @@ ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: a3745f00e8e2e6d7ed0386a128ee6bcec2adebea
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2c40ef34ffcde3f7a1d02f6ba45963bd83df841a
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831165"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522542"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)] 
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)] 
 
   傳回結果集，其中包含批次中未宣告之參數的中繼資料 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 會考慮** \@ tsql**批次中使用的每個參數，但不會在** \@ params**中宣告。 傳回的結果集中，針對每一個這類參數包含一個資料列，內含該參數的推算類型資訊。 如果** \@ tsql**輸入批次除了在** \@ params**中宣告的參數以外，則會傳回空的結果集。  
   
@@ -177,7 +177,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      \@P1、 \@ p2 和 p3 的資料類型 \@ 會分別是 c1 的資料類型、dbo.tbl 的傳回資料類型，以及 dbo.tbl 的參數資料類型。  
   
-     在特殊情況下，如果 \@ p 是 \< 、>、 \< = 或 >= 運算子的引數，則不適用簡單的推算規則。 類型推算演算法會使用下一節所述的一般推算規則。 例如，如果 c1 是資料類型 char(30) 的資料行，請考慮下列兩個查詢：  
+     在特殊情況下，如果 \@ p 是 a 的引數 \<, > ， \<=, or > = 運算子，則不適用簡單的推算規則。 類型推算演算法會使用下一節所述的一般推算規則。 例如，如果 c1 是資料類型 char(30) 的資料行，請考慮下列兩個查詢：  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p  
@@ -225,7 +225,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      在此情況下，E （ \@ p）是 Col_Int + \@ p，TT （ \@ p）是**Int**。已為 p 選擇**int** ， \@ 因為它不會產生隱含轉換。 任何其他資料類型選擇會產生至少一個隱含轉換。  
   
-2.  如果多個資料類型有相同的最小轉換數目，則會使用具有較高優先順序的資料類型。 例如  
+2.  如果多個資料類型有相同的最小轉換數目，則會使用具有較高優先順序的資料類型。 例如：  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  
