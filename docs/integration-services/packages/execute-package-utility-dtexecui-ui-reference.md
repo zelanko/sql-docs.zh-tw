@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5e41b5ffc1ff1cbd524298a17e32f5f677954f24
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 26e976ee2a62d29f8f14584159888de428431101
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919203"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472492"
 ---
 # <a name="execute-package-utility-dtexecui"></a>執行套件公用程式 (dtexecui)
 
@@ -68,9 +68,8 @@ ms.locfileid: "86919203"
  **封裝來源**  
  使用下列選項，指定要執行之封裝的位置：  
   
-|||  
-|-|-|  
 |值|描述|  
+|-|-|  
 |**SQL Server**|當套件位於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，請選取此選項。 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，並提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的使用者名稱和密碼。 每個使用者名稱和密碼都會將 **/USER** _username_ 和 **/PASSWORD** _password_ 選項新增至命令提示字元。|  
 |**檔案系統**|當封裝位於檔案系統時，請選取此選項。|  
 |**SSIS 封裝存放區**|當封裝位於 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區時，請選取此選項。|  

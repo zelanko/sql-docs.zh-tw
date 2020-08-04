@@ -19,15 +19,15 @@ ms.assetid: fd833e34-8092-42b7-80fc-95ca6b0eab6b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ecf16149651ddd288c9f4c8fb62209a9e2be10de
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 8bf0c5880131805f3bdf7d654730ac48ea0bdb04
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110923"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87523140"
 ---
 # <a name="last_value-transact-sql"></a>LAST_VALUE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   傳回排序值集的最後一個值。  
   

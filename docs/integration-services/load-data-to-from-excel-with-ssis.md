@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 78bc5fe4d059a644c3490c94b02b5880c5d488d0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c75779e244087072d36c041edd22d4a6fb3109b2
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922731"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435437"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 從 Excel 匯入資料，或將資料匯出至 Excel
 
@@ -253,8 +253,6 @@ Excel 驅動程式會在指定來源中讀取特定資料列數目 (依預設為
 在 Excel 資料行中成功儲存長於 255 個字元的字串之前，驅動程式必須能將目的地資料行的資料類型辨識為 **備忘** ，而不是 **字串**。
 
 -   如果現有目的地資料表已包含資料列，則驅動程式所取樣的前幾個資料列必須在備忘資料行中至少包含一個值長於 255 個字元的執行個體。
-
--   如果在套件設計期間或在執行階段或由 [匯入和匯出精靈] 建立新的目的地資料表，則 `CREATE TABLE` 陳述式必須使用 LONGTEXT (或其同義字之一) 作為目的地備忘資料行的資料類型。 在精靈中，按一下 [資料行對應] 頁面的 [建立目的地資料表] 選項旁邊的 [編輯 SQL]，檢查 `CREATE TABLE` 陳述式並做必要的修訂。
 
 ## <a name="related-content"></a>相關內容
 

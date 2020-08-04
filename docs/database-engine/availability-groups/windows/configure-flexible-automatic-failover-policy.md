@@ -15,16 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 39e6e14700fe7ad9d9c1c3ba71eca82b3855beb2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a273b97e5c8ce50cb82991491bbea0b5366d5665
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056678"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522372"
 ---
 # <a name="configure-a-flexible-automatic-failover-policy-for-an-always-on-availability-group"></a>為 Always On 可用性群組設定彈性的自動容錯移轉原則
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
 
   本主題描述如何在 SQL Server 中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 來設定 Always On 可用性群組的彈性容錯移轉原則。 彈性容錯移轉原則可讓您更精確地控制造成可用性群組之 [自動容錯移轉](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) 的狀況。 透過變更觸發自動容錯移轉的失敗狀況和健全狀況檢查的頻率，您可以提高或降低自動容錯移轉的可能性，以便支援高可用性的 SLA。  
 
@@ -54,7 +54,7 @@ ms.locfileid: "74056678"
 |若要修改現有可用性群組的原則|需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
 
 ##  <a name="health-check-timeout-threshold"></a><a name="HCtimeout"></a> 健全狀況檢查逾時臨界值  
- 可用性群組的 WSFC 資源 DLL 會在裝載主要複本的 SQL Server 執行個體上呼叫 [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 預存程序，藉以執行主要複本的「健全狀況檢查」。 **sp_server_diagnostics** 會以等於可用性群組之健全狀況檢查逾時臨界值 1/3 的間隔傳回結果。 預設的健全狀況檢查逾時臨界值為 30 秒，因此 **sp_server_diagnostics** 會以 10 秒的間隔傳回結果。 如果 **sp_server_diagnostics** 變慢或未傳回資訊，資源 DLL 會先等候健全狀況檢查逾時臨界值的完整間隔，然後再判斷主要複本是否沒有回應。 如果主要複本沒有回應，就會起始自動容錯移轉 (如果目前支援的話)。  
+ 可用性群組的 WSFC 資源 DLL 會在裝載主要複本的 SQL Server 執行個體上呼叫 [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 預存程序，藉以執行主要複本的「健全狀況檢查」  。 **sp_server_diagnostics** 會以等於可用性群組之健全狀況檢查逾時臨界值 1/3 的間隔傳回結果。 預設的健全狀況檢查逾時臨界值為 30 秒，因此 **sp_server_diagnostics** 會以 10 秒的間隔傳回結果。 如果 **sp_server_diagnostics** 變慢或未傳回資訊，資源 DLL 會先等候健全狀況檢查逾時臨界值的完整間隔，然後再判斷主要複本是否沒有回應。 如果主要複本沒有回應，就會起始自動容錯移轉 (如果目前支援的話)。  
   
 > [!IMPORTANT]  
 >  **sp_server_diagnostics** 不會在資料庫層級執行健全狀況檢查。  
@@ -69,7 +69,7 @@ ms.locfileid: "74056678"
   
 |層級|失敗狀況|[!INCLUDE[tsql](../../../includes/tsql-md.md)] 值|PowerShell 值|  
 |-----------|-----------------------|------------------------------|----------------------|  
-|一個|伺服器關閉時。 指定在發生下列任何狀況時起始自動容錯移轉：<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務關閉。<br /><br /> 由於未從伺服器執行個體收到 ACK，所以用於連接到 WSFC 叢集的可用性群組租用已到期。 如需詳細資訊，請參閱 [How It Works:SQL Server Always On Lease Timeout](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx) (運作方式：SQL Server Always On 租用逾時)。<br /><br /> <br /><br /> 這是最低限制層級。|1|**OnServerDown**|  
+|一個|伺服器關閉時。 指定在發生下列任何狀況時起始自動容錯移轉：<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務關閉。<br /><br /> 由於未從伺服器執行個體收到 ACK，所以用於連接到 WSFC 叢集的可用性群組租用已到期。 如需詳細資訊，請參閱 [How It Works:SQL Server Always On Lease Timeout](https://techcommunity.microsoft.com/t5/sql-server-support/how-it-works-sql-server-alwayson-lease-timeout/ba-p/317268) (運作方式：SQL Server Always On 租用逾時)。<br /><br /> <br /><br /> 這是最低限制層級。|1|**OnServerDown**|  
 |兩個|伺服器沒有回應時。 指定在發生下列任何狀況時起始自動容錯移轉：<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的執行個體未連接到叢集，而且已超出使用者指定之可用性群組的健全狀況檢查逾時臨界值。<br /><br /> 可用性複本處於失敗狀態。|2|**OnServerUnresponsive**|  
 |三|發生嚴重伺服器錯誤時。 指定在發生嚴重 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 內部錯誤時起始自動容錯移轉，例如執行緒同步鎖定遭到遺棄、嚴重的寫入存取違規或是傾印過多。<br /><br /> 這是預設層級。|3|**OnCriticalServerError**|  
 |四|發生一般伺服器錯誤時。 指定在發生一般 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 內部錯誤時起始自動容錯移轉，例如 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 內部資源集區持續發生記憶體不足的狀況。|4|**OnModerateServerError**|  
@@ -172,7 +172,7 @@ ms.locfileid: "74056678"
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   
--   [How It Works:SQL Server Always On Lease Timeout](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx) (運作方式：SQL Server Always On 租用逾時)  
+-   [How It Works:SQL Server Always On Lease Timeout](https://techcommunity.microsoft.com/t5/sql-server-support/how-it-works-sql-server-alwayson-lease-timeout/ba-p/317268) (運作方式：SQL Server Always On 租用逾時)  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

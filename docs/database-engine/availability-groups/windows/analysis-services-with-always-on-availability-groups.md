@@ -12,16 +12,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 293df346a7eac72f23fa3b3bdd7bbe7994fdc54c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6e520363adc8fb8bff12688aa8c99b879bb510dd
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68892890"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522432"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services 與 AlwaysOn 可用性群組
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
 
   AlwaysOn 可用性群組是預先定義的 SQL Server 關聯式資料庫集合，會在條件觸發任何一個資料庫的容錯移轉時一起容錯移轉，將要求重新導向至相同可用性群組中其他執行個體上的鏡像資料庫。 如果使用可用性群組做為高可用性解決方案，則可以使用該群組中的資料庫做為 Analysis Services 表格式或多維度解決方案的資料來源。 使用可用性資料庫時，下列所有 Analysis Services 作業都會如預期般運作：處理或匯入資料、直接查詢關聯式資料 (使用 ROLAP 儲存或 DirectQuery 模式)，以及回寫。  
   

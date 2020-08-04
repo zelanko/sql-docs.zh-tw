@@ -19,15 +19,15 @@ ms.assetid: 491b07f3-9ffd-4cdd-93e5-5abb636fc5ef
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 26527260cfcb3f557239f6ca83b60e3f269be9ac
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 101372817c6948a3ebf614774710fdde051212ed
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112515"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522522"
 ---
 # <a name="cume_dist-transact-sql"></a>CUME_DIST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此函數會計算值群組中，某值的累加分配。 換言之，`CUME_DIST` 會計算值群組中，某一指定值的相對位置。 假設採取遞增排序，則資料列 _r_ 中，某值的 `CUME_DIST` 是定義為有多少個資料列的值是小於或等於資料列 _r_ 中的值，除以資料分割或查詢結果集中計算得出的資料列數。 `CUME_DIST` 類似於 `PERCENT_RANK` 函數。
   

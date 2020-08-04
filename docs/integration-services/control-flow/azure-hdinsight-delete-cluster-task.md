@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: e298776e-d18a-4393-a8e6-65ee3d555749
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 52147ff689b88876512afd6cb428e78c6c00d621
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 87bbb8455169ae0c50475781b3b9e25e9967fd93
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913854"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472538"
 ---
 # <a name="azure-hdinsight-delete-cluster-task"></a>Azure HDInsight 刪除叢集工作
 
@@ -36,9 +36,8 @@ ms.locfileid: "86913854"
   
 下表提供此對話方塊中欄位的描述。  
   
-|||  
+|欄位|描述|  
 |-|-|  
-|**欄位**|**說明**|  
 |AzureResourceManagerConnection|選取現有的 Azure Resource Manager 連線管理員或建立新的連線管理員，以用來刪除 HDInsight 叢集。|
 |SubscriptionId|指定 HDInsight 叢集所在的訂用帳戶 ID。|
 |ResourceGroup|指定 HDInsight 叢集所在的 Azure 資源群組。|

@@ -15,16 +15,16 @@ ms.assetid: d502548d-ece6-4a42-9ded-2157d33e3d21
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8a5b8b3d7c512ca57cf2bd154f1db6a5d3cc4979
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: 56c325b124c3957e4e47952d1021a2954e05c7b4
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85439945"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522362"
 ---
 # <a name="wsfc-cluster-service-is-offline"></a>WSFC 叢集服務離線
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
     
 ## <a name="introduction"></a>簡介  
   

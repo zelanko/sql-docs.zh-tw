@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a63b7d9565f93a770061fc39a9aac7eb4e496366
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 922e42698f3b911912ffc1f745d171498c37151f
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554773"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435553"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 子句 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,7 +60,6 @@ ms.locfileid: "86554773"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 <OUTPUT_CLAUSE> ::=  
 {  
     [ OUTPUT <dml_select_list> INTO { @table_variable | output_table } [ ( column_list ) ] ]  
@@ -72,8 +71,8 @@ ms.locfileid: "86554773"
   
 <column_name> ::=  
 { DELETED | INSERTED | from_table_name } . { * | column_name }  
-    | $action  
-```  
+    | $action
+```
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -129,10 +128,10 @@ ms.locfileid: "86554773"
   
  例如，下列 DELETE 陳述式中的 `OUTPUT DELETED.*` 會傳回從 `ShoppingCartItem` 資料表中刪除的所有資料行：  
   
-```  
-DELETE Sales.ShoppingCartItem  
-    OUTPUT DELETED.*;  
-```  
+```sql
+DELETE Sales.ShoppingCartItem
+    OUTPUT DELETED.*;
+```
   
  *column_name*  
  這是一個明確的資料行參考。 指向正經修改之資料表的任何參考，都必須由 INSERTED 或 DELETED 前置詞來適當地加以限定，例如：INSERTED **.** _column\_name_。  
@@ -233,21 +232,22 @@ DELETE Sales.ShoppingCartItem
 ## <a name="queues"></a>佇列  
  您可以在利用資料表做為佇列的應用程式中使用 OUTPUT，也可以利用它來存放中繼結果集。 也就是說，應用程式會不斷新增或移除資料表的資料列。 下列範例會利用 DELETE 陳述式中的 OUTPUT 子句，將刪除的資料列傳回發出呼叫的應用程式。  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 DELETE TOP(1) dbo.DatabaseLog WITH (READPAST)  
 OUTPUT deleted.*  
 WHERE DatabaseLogID = 7;  
-GO  
-  
-```  
+GO
+```
   
  這個範例會以單一動作從用作佇列的資料表中移除資料列，再將刪除的值傳回負責處理的應用程式。 另外，也可能實作其他語意，如利用資料表來實作堆疊。 不過，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並無法保證使用 OUTPUT 子句的 DML 陳述式處理和傳回資料列的順序。 應用程式負責決定是否併入適當的 WHERE 子句來保證所需要的語意，或了解當多個資料列可能符合 DML 作業的資格時，並無法保證順序。 下列範例會使用子查詢，且假設唯一性是 `DatabaseLogID` 資料行的特性，以便實作所需要的排序語意。  
   
-```  
-USE tempdb;  
-GO  
+```sql
+USE tempdb;
+GO
+
 CREATE TABLE dbo.table1  
 (  
     id INT,  
@@ -301,9 +301,8 @@ DROP TABLE dbo.table1;
 --id          employee  
 ------------- ------------------------------  
 --2           Tom  
---4           Alice  
-  
-```  
+--4           Alice
+```
   
 > [!NOTE]  
 >  如果您的狀況允許多個應用程式執行單一資料表的破壞性讀取，請在 UPDATE 和 DELETE 陳述式中使用 READPAST 資料表提示。 這可以防止當另一個應用程式已在讀取資料表中第一個符合的記錄時，所可能出現的鎖定問題。  
@@ -318,9 +317,10 @@ DROP TABLE dbo.table1;
 ### <a name="a-using-output-into-with-a-simple-insert-statement"></a>A. 使用 OUTPUT INTO 搭配簡單的 INSERT 陳述式  
  下列範例會將資料列插入至 `ScrapReason` 資料表中，然後使用 `OUTPUT` 子句將陳述式的結果傳回給 `@MyTableVar``table` 變數。 由於 `ScrapReasonID` 資料行定義了 IDENTITY 屬性，因此，`INSERT` 陳述式並未指定這個資料行的值。 不過請注意，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 針對這個資料行所產生的值，會在 `OUTPUT` 資料行之 `inserted.ScrapReasonID` 子句中傳回。  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 DECLARE @MyTableVar table( NewScrapReasonID smallint,  
                            Name varchar(50),  
                            ModifiedDate datetime);  
@@ -334,34 +334,33 @@ SELECT NewScrapReasonID, Name, ModifiedDate FROM @MyTableVar;
 --Display the result set of the table.  
 SELECT ScrapReasonID, Name, ModifiedDate   
 FROM Production.ScrapReason;  
-GO  
-  
-```  
+GO
+```
   
 ### <a name="b-using-output-with-a-delete-statement"></a>B. 使用 OUTPUT 搭配 DELETE 陳述式  
  下列範例會刪除 `ShoppingCartItem` 資料表中的所有資料列。 `OUTPUT deleted.*` 子句指定將 `DELETE` 陳述式的結果，也就是已刪除之資料列中的所有資料行，傳回給發出呼叫的應用程式。 後面的 `SELECT` 陳述式會驗證 `ShoppingCartItem` 資料表刪除作業的結果。  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 DELETE Sales.ShoppingCartItem  
 OUTPUT DELETED.*   
 WHERE ShoppingCartID = 20621;  
   
 --Verify the rows in the table matching the WHERE clause have been deleted.  
 SELECT COUNT(*) AS [Rows in Table] FROM Sales.ShoppingCartItem WHERE ShoppingCartID = 20621;  
-GO  
-  
-```  
+GO
+```
   
 ### <a name="c-using-output-into-with-an-update-statement"></a>C. 使用 OUTPUT INTO 搭配 UPDATE 陳述式  
  下列範例會將 `VacationHours` 資料表前 10 個資料列的 `Employee` 資料行更新 25%。 `OUTPUT` 子句會將在 `deleted.VacationHours` 資料行中套用 `UPDATE` 陳述式之前便已存在的 `VacationHours` 值，以及 `inserted.VacationHours` 資料行中更新的值傳回給 `@MyTableVar` 資料表變數。  
   
  之後的兩個 `SELECT` 陳述式會傳回 `@MyTableVar` 中的值，以及 `Employee` 資料表中更新作業的結果。  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
   
 DECLARE @MyTableVar table(  
     EmpID int NOT NULL,  
@@ -386,15 +385,15 @@ GO
 SELECT TOP (10) BusinessEntityID, VacationHours, ModifiedDate  
 FROM HumanResources.Employee;  
 GO  
-  
-```  
-  
+```
+
 ### <a name="d-using-output-into-to-return-an-expression"></a>D. 使用 OUTPUT INTO 來傳回運算式  
  下列範例是以範例 C 為基礎所建立，它在 `OUTPUT` 子句中定義一個運算式，當做更新的 `VacationHours` 值和套用更新之前的 `VacationHours` 值之間的差異。 此運算式的值會傳回給 `VacationHoursDifference` 資料行中的 `@MyTableVar``table` 變數。  
   
-```  
+```sql
 USE AdventureWorks2012;  
-GO  
+GO
+
 DECLARE @MyTableVar table(  
     EmpID int NOT NULL,  
     OldVacationHours int,  
@@ -419,16 +418,16 @@ FROM @MyTableVar;
 GO  
 SELECT TOP (10) BusinessEntityID, VacationHours, ModifiedDate  
 FROM HumanResources.Employee;  
-GO  
-  
-```  
-  
+GO
+```
+
 ### <a name="e-using-output-into-with-from_table_name-in-an-update-statement"></a>E. 在 UPDATE 陳述式中，使用 OUTPUT INTO 搭配 from_table_name  
  下列範例會針對具有指定 `ProductID` 和 `ScrapReasonID` 的所有工單，更新 `WorkOrder` 資料表中的 `ScrapReasonID` 資料行。 `OUTPUT INTO` 子句會從更新的資料表 (`WorkOrder`) 傳回值，也會從 `Product` 傳回值。 `Product` 子句利用 `FROM` 資料表來指定要更新的資料列。 由於 `WorkOrder` 資料表定義了 `AFTER UPDATE` 觸發程序，因此，需要 `INTO` 關鍵字。  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 DECLARE @MyTestVar table (  
     OldScrapReasonID int NOT NULL,   
     NewScrapReasonID int NOT NULL,   
@@ -453,16 +452,16 @@ FROM Production.WorkOrder AS wo
 SELECT OldScrapReasonID, NewScrapReasonID, WorkOrderID,   
     ProductID, ProductName   
 FROM @MyTestVar;  
-GO  
-  
-```  
-  
+GO
+```
+
 ### <a name="f-using-output-into-with-from_table_name-in-a-delete-statement"></a>F. 在 DELETE 陳述式中，使用 OUTPUT INTO 搭配 from_table_name  
  下列範例根據 `ProductProductPhoto` 陳述式的 `FROM` 子句所定義的搜尋準則，來刪除 `DELETE` 資料表中的資料列。 `OUTPUT` 子句會傳回所刪除的資料表資料行 (`deleted.ProductID`、`deleted.ProductPhotoID`) 及 `Product` 資料表中的資料行。 `FROM` 子句利用這份資料表來指定要刪除的資料列。  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 DECLARE @MyTableVar table (  
     ProductID int NOT NULL,   
     ProductName nvarchar(50)NOT NULL,  
@@ -484,16 +483,16 @@ JOIN Production.Product as p
 SELECT ProductID, ProductName, ProductModelID, PhotoID   
 FROM @MyTableVar  
 ORDER BY ProductModelID;  
-GO  
-  
-```  
+GO
+```
   
 ### <a name="g-using-output-into-with-a-large-object-data-type"></a>G. 使用 OUTPUT INTO 搭配大型物件資料類型  
  下列範例會利用 `DocumentSummary` 子句，來更新 `nvarchar(max)` (`Production.Document` 資料表中的 `.WRITE` 資料行) 中的部分值。 `components` 一字藉由指定用來取代的文字、現有資料中要被取代之文字的起始位置 (位移)，以及要取代的字元數 (長度) 來取代為 `features` 一字。 此範例會使用 `OUTPUT` 子句，將 `DocumentSummary` 資料行的先後影像傳回給 `@MyTableVar``table` 變數。 請注意，它會傳回 `DocumentSummary` 資料行之完整的先後影像。  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 DECLARE @MyTableVar table (  
     SummaryBefore nvarchar(max),  
     SummaryAfter nvarchar(max));  
@@ -507,16 +506,16 @@ WHERE Title = N'Front Reflector Bracket Installation';
   
 SELECT SummaryBefore, SummaryAfter   
 FROM @MyTableVar;  
-GO  
-  
-```  
+GO
+```
   
 ### <a name="h-using-output-in-an-instead-of-trigger"></a>H. 在 INSTEAD OF 觸發程序中使用 OUTPUT  
  下列範例會利用觸發程序中的 `OUTPUT` 子句來傳回觸發程序作業的結果。 首先在 `ScrapReason` 資料表上建立檢視，然後在此檢視上定義 `INSTEAD OF INSERT` 觸發程序，只讓使用者修改基底資料表的 `Name` 資料行。 由於 `ScrapReasonID` 資料行是基底資料表中的 `IDENTITY` 資料行，觸發程序會忽略使用者提供的值。 這使 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 能夠自動產生正確的值。 另外，使用者提供的 `ModifiedDate` 值會被忽略，且會設為目前的日期。 `OUTPUT` 子句會傳回實際插入 `ScrapReason` 資料表的值。  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 IF OBJECT_ID('dbo.vw_ScrapReason','V') IS NOT NULL  
     DROP VIEW dbo.vw_ScrapReason;  
 GO  
@@ -540,9 +539,8 @@ END
 GO  
 INSERT vw_ScrapReason (ScrapReasonID, Name, ModifiedDate)  
 VALUES (99, N'My scrap reason','20030404');  
-GO  
-  
-```  
+GO
+```
   
  以下是 2004 年 4 月 12 日 ('`2004-04-12'`) 所產生的結果集。 請注意，`ScrapReasonIDActual` 和 `ModifiedDate` 資料行反映了觸發程序作業所產生的值，而不是 `INSERT` 陳述式所提供的值。  
   
@@ -555,9 +553,10 @@ GO
 ### <a name="i-using-output-into-with-identity-and-computed-columns"></a>I. 使用 OUTPUT INTO 搭配識別和計算資料行  
  下列範例會建立 `EmployeeSales` 資料表，之後再利用含有 `INSERT` 陳述式的 `SELECT` 陳述式來擷取來源資料表中的資料，以插入幾個資料列。 `EmployeeSales` 資料表包含一個識別欄位 (`EmployeeID`) 和一個計算資料行 (`ProjectedSales`)。  
   
-```  
-USE AdventureWorks2012 ;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 IF OBJECT_ID ('dbo.EmployeeSales', 'U') IS NOT NULL  
     DROP TABLE dbo.EmployeeSales;  
 GO  
@@ -596,16 +595,16 @@ FROM @MyTableVar;
 GO  
 SELECT EmployeeID, LastName, FirstName, CurrentSales, ProjectedSales  
 FROM dbo.EmployeeSales;  
-GO  
-  
-```  
+GO
+```
   
 ### <a name="j-using-output-and-output-into-in-a-single-statement"></a>J. 在單一陳述式中使用 OUTPUT 和 OUTPUT INTO  
  下列範例根據 `ProductProductPhoto` 陳述式的 `FROM` 子句所定義的搜尋準則，來刪除 `DELETE` 資料表中的資料列。 `OUTPUT INTO` 子句會將所要刪除之資料表中的資料行 (`deleted.ProductID`、`deleted.ProductPhotoID`) 及 `Product` 資料表中的資料行傳回給 `@MyTableVar``table` 變數。 `Product` 子句利用 `FROM` 資料表來指定要刪除的資料列。 `OUTPUT` 子句會將 `deleted.ProductID`、`deleted.ProductPhotoID` 資料行及從 `ProductProductPhoto` 資料表中刪除資料列的日期和時間，傳回給發出呼叫的應用程式。  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 DECLARE @MyTableVar table (  
     ProductID int NOT NULL,   
     ProductName nvarchar(50)NOT NULL,  
@@ -627,16 +626,16 @@ WHERE p.ProductID BETWEEN 800 and 810;
 --Display the results of the table variable.  
 SELECT ProductID, ProductName, PhotoID, ProductModelID   
 FROM @MyTableVar;  
-GO  
-  
-```  
+GO
+```
   
 ### <a name="k-inserting-data-returned-from-an-output-clause"></a>K. 插入從 OUTPUT 子句傳回的資料  
  下列範例將擷取從 `OUTPUT` 陳述式的 `MERGE` 子句中傳回的資料，並將該資料插入另一個資料表中。 `MERGE` 陳述式會根據在 `Quantity` 資料表中處理的順序，每天更新 `ProductInventory` 資料表的 `SalesOrderDetail` 資料行。 它也會刪除產品存貨降到 `0` 或以下的資料列。 此範例會擷取已刪除的資料列，並將其插入另一個資料表 `ZeroInventory`，該資料表會追蹤沒有存貨的產品。  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 IF OBJECT_ID(N'Production.ZeroInventory', N'U') IS NOT NULL  
     DROP TABLE Production.ZeroInventory;  
 GO  
@@ -663,9 +662,10 @@ WHERE Action = 'DELETE';
 IF @@ROWCOUNT = 0  
 PRINT 'Warning: No rows were inserted';  
 GO  
-SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;  
-  
-```  
+SELECT DeletedProductID, RemovedOnDate
+FROM Production.ZeroInventory;
+GO
+```
   
 ## <a name="see-also"></a>另請參閱  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
@@ -673,6 +673,4 @@ SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
-  
-  
+ [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 5d3ee42f28fed73a4dd513b10d01948552fdd6d5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fe93023bfbcd285d8d50a90bb11ea532eb066f2c
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901545"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472184"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具在 Linux 上設定 SQL Server
 
@@ -24,7 +24,7 @@ ms.locfileid: "85901545"
 
 **mssql-conf** 是一個設定指令碼，會使用適用於 Red Hat Enterprise Linux、SUSE Linux Enterprise Server 和 Ubuntu 的 SQL Server 2017 進行安裝。 其會修改儲存設定值的 [**mssql.conf 檔案**](#mssql-conf-format)。 您可以使用 **mssql-conf** 公用程式來設定下列參數：
 
-|||
+|參數|描述|
 |---|---|
 | [代理程式](#agent) | 啟用 SQL Server Agent。 |
 | [定序](#collation) | 為 Linux 上的 SQL Server 設定新的定序。 |
@@ -52,7 +52,7 @@ ms.locfileid: "85901545"
 
 **mssql-conf** 是一個設定指令碼，會使用適用於 Red Hat Enterprise Linux、SUSE Linux Enterprise Server 和 Ubuntu 的 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 進行安裝。 您可以使用此公用程式來設定下列參數：
 
-|||
+|參數|描述|
 |---|---|
 | [代理程式](#agent) | 啟用 SQL Server Agent |
 | [定序](#collation) | 為 Linux 上的 SQL Server 設定新的定序。 |
@@ -393,7 +393,7 @@ ms.locfileid: "85901545"
 
     下表列出可能的 **coredump.coredumptype** 值。
 
-    | 類型 | 描述 |
+    | 類型 | 說明 |
     |-----|-----|
     | **mini** | Mini 是最小的傾印檔案類型。 它會使用 Linux 系統資訊來判斷程序中的執行緒和模組。 傾印僅包含主機環境執行緒堆疊和模組。 它不包含間接記憶體參考或 Globals。 |
     | **miniplus** | MiniPlus 類似於 mini，但它包含額外的記憶體。 它瞭解 SQLPAL 和主機環境的內部，並將下列記憶體區域新增至傾印：</br></br> - 各種 Globals</br> - 所有高於 64TB 的記憶體</br> - 在 **/proc/$pid/maps** 中找到的所有具名區域</br> - 來自執行緒和堆疊的間接記憶體</br> - 執行緒資訊</br> - 相關聯的 Teb 和 Peb</br> - 模組資訊</br> - VMM 和 VAD 樹狀 |

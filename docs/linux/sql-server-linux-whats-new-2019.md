@@ -7,12 +7,12 @@ ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 6c2280bacb7947b202d9291637ef294ba391e947
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9610ca6f434f78d332eb85fbf4ed71a4d477946a
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897195"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442900"
 ---
 # <a name="whats-new-for-sql-server-2019-on-linux"></a>Linux 上的 SQL Server 2019 新功能
 
@@ -41,7 +41,7 @@ ms.locfileid: "85897195"
 |`tempdb` 改進功能 | 根據預設，在 Linux 上進行新的 SQL Server 安裝，會依據邏輯核心的數目建立多個 `tempdb` 資料檔 (最多 8 個資料檔案)。 此情況不適用於就地次要或主要版本升級。 每個 `tempdb` 檔都為 8 MB，且可自動成長到 64 MB。 此行為類似於 Windows 上的預設 SQL Server 安裝。 |
 | Linux 上的 PolyBase | 在 Linux 上為非 Hadoop 連接器[安裝 PolyBase](../relational-databases/polybase/polybase-linux-setup.md)。<br/><br/>[PolyBase 類型對應](../relational-databases/polybase/polybase-type-mapping.md)。 |
 | 異動資料擷取 (CDC) 支援 | 在 Linux 上現在已針對 SQL Server 2019 支援異動資料擷取 (CDC)。 |
-| Microsoft 容器登錄 | [Microsoft 容器登錄](https://www.ntweekly.com/2019/09/23/microsoft-container-registry-to-replace-docker-hub-for-new-images/)現在已取代適用於新官方 Microsoft 容器映像的 Docker Hub，包括 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]。 |
+| Microsoft 容器登錄 | [Microsoft 容器登錄](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/)現在已取代適用於新官方 Microsoft 容器映像的 Docker Hub，包括 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]。 |
 | 非根容器 | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引進以非根使用者身分啟動 [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] 程序來建立更安全容器的功能。 請參閱[以非根使用者的身分建置並執行 SQL Server 容器](sql-server-linux-configure-docker.md#buildnonrootcontainer)以取得詳細資料。 |
 
 ## <a name="next-steps"></a>後續步驟

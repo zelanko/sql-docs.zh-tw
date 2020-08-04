@@ -10,12 +10,12 @@ ms.topic: language-reference
 ms.assetid: 273a54f8-b107-4f36-9461-2b475644760d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0a4e6139842c3e1e12a7cb56a076361b556f318e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: efba3eecba580293397848a52bce40980f42987f
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912646"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472196"
 ---
 # <a name="catalogevent_message_context"></a>catalog.event_message_context 
 
@@ -41,9 +41,8 @@ ms.locfileid: "86912646"
 ## <a name="remarks"></a>備註  
  下表列出這些內容類型。  
   
-||||  
-|-|-|-|  
 |內容類型值|類型名稱|描述|  
+|-|-|-|  
 |10|Task|發生錯誤時的工作狀態。|  
 |20|管線|錯誤來自管線元件：來源、目的地或轉換元件。|  
 |30|順序|數列的狀態。|  

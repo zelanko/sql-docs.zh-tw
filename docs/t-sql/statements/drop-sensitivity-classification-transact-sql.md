@@ -24,15 +24,15 @@ helpviewer_keywords:
 - information types
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 3751c7876af92ac32fc7836583cbf9e06bcf414c
-ms.sourcegitcommit: da836a2e23bd2ed56d2a72983f7b5b18c6f13342
+ms.openlocfilehash: d70e4a10601ab7c9171ddccf41a9ab9e5b2395c7
+ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85088343"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87544313"
 ---
 # <a name="drop-sensitivity-classification-transact-sql"></a>DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
 
 卸除來自至一或多個資料庫資料行的敏感度分類中繼資料。
 

@@ -41,12 +41,12 @@ helpviewer_keywords:
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e4baea69adce173ee5421605825008f7721b92bd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fb2e93d5266b28ad7be189cd14034aca49abc3a1
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916670"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472502"
 ---
 # <a name="transformation-custom-properties"></a>轉換自訂屬性
 
@@ -60,19 +60,42 @@ ms.locfileid: "86916670"
  您可以使用屬性運算式來設定轉換的某些屬性。 如需詳細資訊，請參閱 [可以使用運算式設定的資料流程屬性](https://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)。  
   
 ## <a name="transformations-with-custom-properties"></a>含有自訂屬性的轉換  
-  
-||||  
-|-|-|-|  
-|[彙總](#aggregate)|[匯出資料行](#extract)|[資料列計數](#rowcount)|  
-|[稽核](#audit)|[模糊群組 (Fuzzy Grouping)](#fgroup)|[資料列取樣](#rowsamp)|  
-|[快取轉換](#cachetransform)|[模糊查閱](#flookup)|[指令碼元件](#script)|  
-|[字元對應](#charmap)|[匯入資料行](#insert)|[緩時變維度](#scd)|  
-|[條件式分割](#condsplit)|[查閱](#lookup)|[排序](#sort)|  
-|[複製資料行](#copymap)|[合併聯結](#mjoin)|[詞彙擷取](#textract)|  
-|[資料轉換](#dataconv)|[OLE DB 命令](#oledbcmd)|[詞彙查閱](#tlookup)|  
-|[資料採礦查詢](#dmquery)|[百分比取樣](#percent)|[取消樞紐](#unpivot)|  
-|[衍生的資料行](#derived)|[樞紐](#pivot)||  
-  
+
+:::row:::
+    :::column:::
+        [彙總](#aggregate)  
+        [稽核](#audit)  
+        [快取轉換](#cachetransform)  
+        [字元對應](#charmap)  
+        [條件式分割](#condsplit)  
+        [複製資料行](#copymap)  
+        [資料轉換](#dataconv)  
+        [資料採礦查詢](#dmquery)  
+        [衍生的資料行](#derived)  
+    :::column-end:::
+    :::column:::
+        [匯出資料行](#extract)  
+        [模糊群組 (Fuzzy Grouping)](#fgroup)  
+        [模糊查閱](#flookup)  
+        [匯入資料行](#insert)  
+        [查閱](#lookup)  
+        [合併聯結](#mjoin)  
+        [OLE DB 命令](#oledbcmd)  
+        [百分比取樣](#percent)  
+        [樞紐](#pivot)  
+    :::column-end:::
+    :::column:::
+        [資料列計數](#rowcount)  
+        [資料列取樣](#rowsamp)  
+        [指令碼元件](#script)  
+        [緩時變維度](#scd)  
+        [排序](#sort)  
+        [詞彙擷取](#textract)  
+        [詞彙查閱](#tlookup)  
+        [取消樞紐](#unpivot)  
+    :::column-end:::
+:::row-end:::
+
 ### <a name="transformations-without-custom-properties"></a>不含自訂屬性的轉換  
  下列轉換在元件、輸入或輸出層級沒有自訂屬性︰[合併轉換](../../../integration-services/data-flow/transformations/merge-transformation.md)、[多點傳送轉換](../../../integration-services/data-flow/transformations/multicast-transformation.md)和[全部聯集轉換](../../../integration-services/data-flow/transformations/union-all-transformation.md)。 它們只會使用所有資料流程元件通用的屬性。  
   

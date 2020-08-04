@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 19d5c9abe85d308f93f0aa085ff813ab7a3ca8f7
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 806a687037d2b23a2800552a6f4467ce02b7ccc0
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111183"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472624"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
@@ -142,7 +142,7 @@ WITH
 *REQUEST_MAX_RESOURCE_GRANT_PERCENT* = 值</br>         
 設定每個要求配置的資源數量上限。 *value* 為選擇性參數，預設值等於 request_min_resource_grant_percent。 *value* 必須大於或等於 request_min_resource_grant_percent。 當 equest_max_resource_grant_percent 的值大於 request_min_resource_grant_percent 而且有可用的系統資源時，會將其他資源配置給要求。
 
-*IMPORTANCE* = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }</br>        
+*IMPORTANCE* = { LOW \| BELOW_NORMAL \| NORMAL \| ABOVE_NORMAL \| HIGH }</br>        
 指定要求在工作負載群組中的相對重要性。 下列任一個為其重要性，其中 NORMAL 為預設值：
 
 - LOW

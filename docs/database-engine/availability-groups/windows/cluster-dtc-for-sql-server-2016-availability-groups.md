@@ -11,16 +11,16 @@ ms.assetid: a47c5005-20e3-4880-945c-9f78d311af7a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 51c42730e083990b3df7987645239dea9830090c
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 0266fc9922a8dbbf932be8521f2a63b186c6500f
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362609"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522382"
 ---
 # <a name="how-to-cluster-the-dtc-service-for-an-always-on-availability-group"></a>如何叢集化 Always On 可用性群組的 DTC 服務
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
 
 本主題描述針對 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]叢集化 Microsoft Distributed Transaction Coordinator (DTC) 服務的需求和步驟。 如需有關分散式交易和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的其他資訊，請參閱 [AlwaysOn 可用性群組和資料庫鏡像的跨資料庫交易和分散式交易 (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)。
 

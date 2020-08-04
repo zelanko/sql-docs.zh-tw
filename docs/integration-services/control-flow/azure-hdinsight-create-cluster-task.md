@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c6b44b5d7e8c83f1ee47462e8cfd297a77e836cf
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3fff08c4259424319621127d3e91762beaa46885
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918904"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472405"
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Azure HDInsight 建立叢集工作
 
@@ -37,9 +37,8 @@ ms.locfileid: "86918904"
   
 下表提供此對話方塊的欄位描述。  
   
-|||  
+|欄位|描述|  
 |-|-|  
-|**欄位**|**說明**|  
 |AzureResourceManagerConnection|選取現有的 Azure Resource Manager 連線管理員或建立新的連線管理員，用以建立 HDInsight 叢集。|  
 |AzureStorageConnection|選取現有的 Azure 儲存體連線管理員，或建立參考 Azure 儲存體帳戶的新連線管理員，該連線管理員會與 HDInsight 叢集建立關聯。|
 |SubscriptionId|指定 HDInsight 叢集日後建立所在的訂用帳戶識別碼。|

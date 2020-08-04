@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6f51c7dc5dcde2535e822a8f1d832e3747bdfd35
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7a4a969e44fde0abaf221592ed32a48cd233fc9e
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919534"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472526"
 ---
 # <a name="pivot-transformation"></a>樞紐轉換
 
@@ -106,29 +106,29 @@ ms.locfileid: "86919534"
   
  下表顯示資料在 **Year** 資料行上進行樞紐之後的資料集。  
   
-||2002|2003|2004|  
+|產品名稱|2002|2003|2004|  
 |-|----------|----------|----------|  
 |HL Mountain Tire|141164.10|446297.775|1504884.15|  
 |Road Tire Tube|3592.05|35920.50|89801.25|  
 |Water Bottle - 30 oz.|*NULL*|*NULL*|2805.00|  
 |Touring Tire|62364.225|375051.60|1041810.00|  
   
- 若要在 **Year** 資料行上樞紐資料 (如上所示)，則會在 [樞紐]  對話方塊中設定下列選項。  
+ 若要在 **Year** 資料行上樞紐資料 (如上所示)，則會在 [樞紐] 對話方塊中設定下列選項。  
   
--   年在 [樞紐索引鍵]  清單方塊中呈選取狀態。  
+-   年在 [樞紐索引鍵] 清單方塊中呈選取狀態。  
   
--   產品名稱在[設定索引鍵]  清單方塊中呈選取狀態。  
+-   產品名稱在[設定索引鍵] 清單方塊中呈選取狀態。  
   
--   總計在 [樞紐值]  清單方塊中呈選取狀態。  
+-   總計在 [樞紐值] 清單方塊中呈選取狀態。  
   
--   在 [根據值產生樞紐輸出資料行]  方塊中會輸入下列值。  
+-   在 [根據值產生樞紐輸出資料行] 方塊中會輸入下列值。  
   
      [2002],[2003],[2004]  
   
 ## <a name="configuration-of-the-pivot-transformation"></a>設定樞紐轉換  
  您可以透過 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
- 如需有關 [進階編輯器]  對話方塊中可設定屬性的詳細資訊，請按一下下列其中一個主題：  
+ 如需有關 [進階編輯器] 對話方塊中可設定屬性的詳細資訊，請按一下下列其中一個主題：  
   
 -   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   

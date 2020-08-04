@@ -18,16 +18,16 @@ ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 62b5f1d23608ce6337befa1e4888ad2cda543dc9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9f53ae6f4a35cb539da1d5689ad2ba1086dd4c1b
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822249"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522930"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>容錯移轉叢集和 AlwaysOn 可用性群組 (SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
 
    [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (也就是 [!INCLUDE[sssql11](../../../includes/sssql11-md.md)] 中所引進的高可用性和災害復原解決方案) 需要 Windows Server 容錯移轉叢集 (WSFC)。 此外，雖然 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 不依賴 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集，但是您可以使用容錯移轉叢集執行個體 (FCI) 來裝載可用性群組的可用性複本。 請務必了解每個叢集技術的角色，也要知道設計您的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 環境時所必須考量的事項。  
   
