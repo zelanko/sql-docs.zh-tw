@@ -10,16 +10,16 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ab28a6bbe7bbf108305f065dcdf7b870c0f76602
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: f44b423ae369ee9210710702ca57340a79e62cf3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606620"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728854"
 ---
 # <a name="how-to-deploy-an-app-on-big-data-clusters-2019"></a>如何：在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上部署應用程式
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 本文描述如何將 R 和 Python 指令碼，作為 SQL Server 2019 巨量資料叢集內的應用程式來部署和管理。
 

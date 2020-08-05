@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ff9734eea7e81d9c5e2ad8acbecf1fc9a60f09de
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: aaa935a955610ce5acb75a4b70141f8252cb3092
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151588"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918345"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint 公用程式
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
   如果**sqlmaint** 公用程式會在一或多個資料庫上，執行一組指定的維護作業。 利用 **sqlmaint** 來執行 DBCC 檢查、備份資料庫及其交易記錄、更新統計資料，以及重建索引。 所有資料庫維護活動都會產生一份可傳給指定文字檔、HTML 檔或電子郵件帳戶的報表。 **sqlmaint** 會執行舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]所建立的資料庫維護計畫。 若要從命令提示字元執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 維護計畫，請使用 [dtexec 公用程式](../integration-services/packages/dtexec-utility.md)。  
   
 > [!IMPORTANT]  
@@ -131,7 +131,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  當 *sqlmaint* 存取遠端伺服器時，需要 **html_file** 的完整 UNC 檔案名稱。  
   
  **-DelHtmlRpt** \<*time_period*>  
- 指定如果建立報表檔之後的時間間隔超出 \<*time_period*>，便刪除報表目錄中的任何 HTML 報表。 **-DelHtmlRpt** 會尋找名稱符合 *html_file* 參數所產生之模式的檔案。 如果 *html_file* 是 c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm，則 **-DelHtmlRpt** 會導致 **sqlmaint** 刪除名稱符合 C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm 模式，以及比指定的 \<*time_period*> 還舊的所有檔案。  
+ 指定如果建立報表檔之後的時間間隔超出 \<*time_period*>，便刪除報表目錄中的任何 HTML 報表。 **-DelHtmlRpt** 會尋找名稱符合 *html_file* 參數所產生之模式的檔案。 如果 *html_file* 是 c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm，則 **-DelHtmlRpt** 會導致 **sqlmaint** 刪除名稱符合 C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm 模式，而且比指定的 \<*time_period*> 還舊的所有檔案。  
   
  **-RmUnusedSpace** _threshold_percent free_percent_  
  指定從 **-D**指定的資料庫中移除未使用的空間。 這個選項只適用於定義成自動成長的資料庫。 *Threshold_percent* 會以 MB 為單位來指定大小，一旦資料庫到達此大小之後， **sqlmaint** 便會嘗試移除未使用的資料空間。 在資料庫大小小於 *threshold_percent*時，則不會採取任何動作。 *Free_percent* 會指定必須保留在資料庫中的未使用空間大小，指定的方式是資料庫最終大小的百分比。 例如，如果 200 MB 資料庫包含 100 MB 的資料， *free_percent* 指定 10 會使最終資料庫大小成為 110 MB。 請注意，如果資料庫小於 *free_percent* 加上資料庫中的資料量，就不會擴充資料庫。 例如，如果 108 MB 的資料庫包含 100 MB 的資料， *free_percent* 指定 10 並不會將資料庫擴充成 110 MB；它會保持 108 MB。  
@@ -201,7 +201,7 @@ dbname_log_yyyymmddhhmm.BAK
  指定備份媒體是磁碟。  
   
  **-DelBkUps**< *time_period* >  
- 對於磁碟備份，指定如果建立備份之後的時間間隔超出 \<*time_period*>，便會刪除備份目錄中的任何備份檔案。  
+ 針對磁碟備份，指定如果建立備份之後的時間間隔超出 \<*time_period*>，便會刪除備份目錄中的任何備份檔案。  
   
  **-CrBkSubDir**  
  對於磁碟備份，指定如果也指定了 *-UseDefDir*，便會在 [ **backup_path** ] 目錄或預設備份目錄中建立一個子目錄。 子目錄的名稱是從 **-D**指定的資料庫名稱所產生。 **-CrBkSubDir** 提供一種簡單的方式，讓您不需要變更 *backup_path* 參數，就能將不同資料庫的所有備份放在個別子目錄中。  

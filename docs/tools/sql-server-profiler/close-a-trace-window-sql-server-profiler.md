@@ -12,16 +12,16 @@ ms.author: maghan
 ms.topic: conceptual
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 92bf90cf51bc380a1c1cd61d72fb5ebcca68dbd1
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: d12347b8645932a04b6949c84eaeeaafdc3348f7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151926"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774925"
 ---
 # <a name="close-a-trace-window-sql-server-profiler"></a>關閉追蹤視窗 (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主題說明如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，為正在執行的追蹤，或為正在檢視的已儲存追蹤，關閉追蹤視窗。  
   
 ## <a name="to-close-a-trace-window"></a>若要關閉追蹤視窗

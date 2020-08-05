@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b171f587e54948b2a8d70c804d47362e97b61bb9
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: c0fdaa59f094a44b90affc3fa256275fffdfc69a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151607"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920594"
 ---
 # <a name="sqllocaldb-utility"></a>SqlLocalDB 公用程式
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
   使用 **SqlLocalDB** 公用程式建立 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **LocalDB** 的執行個體。 **SqlLocalDB** 公用程式 (SqlLocalDB.exe) 是一個簡單的命令列工具，可讓使用者和開發人員建立及管理 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** 的執行個體。 如需如何使用 **LocalDB**的詳細資訊，請參閱 [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)。  
   
 ## <a name="syntax"></a>語法  
@@ -45,8 +45,8 @@ SqlLocalDB.exe
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **create** | **c** ] \<執行個體名稱> \<執行個體版本> [ **-s** ]  
- 建立 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** 的新執行個體。 **SqlLocalDB** 會使用 *\<執行個體版本>* 引數所指定之 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 二進位檔的版本。 使用至少一個十進位數的數字格式指定版本號碼。 次要版本號碼 (Service Pack) 為選擇性。 例如，下列兩個版本號碼都可接受：11.0 或 11.0.1186。 電腦上必須安裝指定的版本。 如果未指定，版本號碼會預設為 **SqlLocalDB** 公用程式的版本。 加入 **-s** 會啟動新的 **LocalDB** 執行個體。  
+ [ **create** | **c** ] *\<instance-name>* *\<instance-version>* [ **-s** ]  
+ 建立 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** 的新執行個體。 **SqlLocalDB** 會使用 *\<instance-version>* 引數所指定之 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 二進位檔案的版本。 使用至少一個十進位數的數字格式指定版本號碼。 次要版本號碼 (Service Pack) 為選擇性。 例如，下列兩個版本號碼都可接受：11.0 或 11.0.1186。 電腦上必須安裝指定的版本。 如果未指定，版本號碼會預設為 **SqlLocalDB** 公用程式的版本。 加入 **-s** 會啟動新的 **LocalDB** 執行個體。  
   
  [ **share** | **h** ]  
  使用指定的共用名稱來共用指定的 **LocalDB** 私用執行個體。 如果省略使用者 SID 或帳戶名稱，會預設為目前的使用者。  
@@ -54,19 +54,19 @@ SqlLocalDB.exe
  [ **unshared** | **u** ]  
  停止共用指定的 **LocalDB**共用執行個體。  
   
- [ **delete** | **d** ] *\<執行個體名稱>*  
+ [ **delete** | **d** ] *\<instance-name>*  
  刪除指定的 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** 執行個體。  
   
- [ **start** | **s** ] " *\<執行個體名稱>* "  
+ [ **start** | **s** ] " *\<instance-name>* "  
  啟動指定的 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** 執行個體。 當成功的陳述式傳回 **LocalDB**的具名管道位址時。  
   
- [ **stop** | **p** ] *\<執行個體名稱>* [ **-i** ] [ **-k** ]  
+ [ **stop** | **p** ] *\<instance-name>* [ **-i** ] [ **-k** ]  
  停止指定的 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** 執行個體。 加入 **-i** 會要求使用 **NOWAIT** 選項關閉此執行個體。 加入 **-k** 會在未經連絡的情況下終止執行個體處理序。  
   
- [ **info** | **i** ] [ *\<執行個體名稱>* ]  
+ [ **info** | **i** ] [ *\<instance-name>* ]  
  列出目前使用者擁有的所有 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** 執行個體。  
   
- *\<執行個體名稱>* 會傳回名稱、版本、狀態 (執行中或已停止)、指定之 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** 執行個體的上次啟動時間，以及 **LocalDB** 的本機管道名稱。  
+ *\<instance-name>* 會傳回指定之 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** 執行個體的名稱、版本、狀態 (執行中或已停止)、上次啟動時間，以及 **LocalDB** 的本機管道名稱。  
   
  [ **trace** | **t** ] **on** | **off**  
  **trace on** 會針對目前使用者啟用 **SqlLocalDB** API 呼叫的追蹤。 **trace off** 停用追蹤。  
