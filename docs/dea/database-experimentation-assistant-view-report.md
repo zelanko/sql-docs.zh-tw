@@ -1,6 +1,6 @@
 ---
 title: 查看 SQL Server 升級的分析報表
-description: 查看資料庫測試助理中的分析報表
+description: 瞭解如何在資料庫測試助理 (DEA) 中查看及瞭解效能深入解析的分析報表。
 ms.custom: seo-lt-2019
 ms.date: 02/04/2020
 ms.prod: sql
@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: 2a6d027c1fb1834e4033a11a498bfc8cdad4561f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5850f3f78590b5ceccea49033b401055180d715e
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76977569"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565487"
 ---
 # <a name="view-analysis-reports-in-database-experimentation-assistant"></a>查看資料庫測試助理中的分析報表
 
-使用資料庫測試助理（DEA）[建立分析報表](database-experimentation-assistant-create-report.md)之後，您可以根據您執行的 A/B 測試來檢查效能深入解析的報表。
+當您使用資料庫測試助理 (DEA) [建立分析報表](database-experimentation-assistant-create-report.md)之後，就可以根據您執行的 A/B 測試來檢查效能深入解析的報表。
 
 ## <a name="open-an-existing-analysis-report"></a>開啟現有的分析報表
 
@@ -81,7 +81,7 @@ ms.locfileid: "76977569"
    您可以尋找該查詢的摘要統計資料，例如執行次數、平均持續時間、平均 CPU、平均讀取/寫入和錯誤計數。  如果查詢是錯誤查詢，[**錯誤資訊**] 索引標籤會顯示有關錯誤的詳細資料。  在 [**查詢計劃資訊**] 索引標籤上，您可以找到用於 [目標 1] 和 [目標 2] 查詢之查詢計劃的相關資訊。
 
    > [!NOTE]
-   > 如果您要分析擴充事件（。.XEL）檔案，不會收集查詢計劃資訊來限制使用者電腦上的記憶體壓力。
+   > 如果您要分析擴充事件 (。.XEL) 檔案，不會收集查詢計劃資訊來限制使用者電腦上的記憶體壓力。
 
 ## <a name="see-also"></a>另請參閱
 

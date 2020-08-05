@@ -1,5 +1,5 @@
 ---
-title: sys. dm_operation_status （Azure SQL Database） |Microsoft Docs
+title: sys. dm_operation_status |Microsoft Docs
 ms.custom: ''
 ms.date: 06/05/2017
 ms.service: sql-database
@@ -19,16 +19,16 @@ ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 6b0894c29e1c3cb525cd9378c0a95e56299e8a1e
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: 080d12cdcf945fe34a2c8f1ab9ea7414e714da8c
+ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85440705"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87544381"
 ---
-# <a name="sysdm_operation_status-azure-sql-database"></a>sys.dm_operation_status (Azure SQL Database)
+# <a name="sysdm_operation_status"></a>sys.dm_operation_status
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
 
   傳回 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 伺服器中的資料庫上所執行之作業的相關資訊。  
   

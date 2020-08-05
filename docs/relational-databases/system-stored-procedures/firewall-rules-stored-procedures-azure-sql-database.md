@@ -17,15 +17,15 @@ author: VanMSFT
 ms.author: vanto
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: d06646127c59dca8e72f061b049cabb42f8073ab
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: bace837ef11fc106632b84fe01ed5c8bc1448ffa
+ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246687"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87544344"
 ---
-# <a name="firewall-rules-stored-procedures-azure-sql-database"></a>防火牆規則預存程式（Azure SQL Database）
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+# <a name="firewall-rules-stored-procedures-azure-sql-database"></a>防火牆規則預存程式 (Azure SQL Database) 
+[!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]
 
   此節包含下列設定或刪除防火牆規則的預存程序。 [!INCLUDE[tsql_md](../../includes/tsql-md.md)]防火牆規則可以與和搭配 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 使用 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 。 如需詳細資訊，請參閱[設定 Azure SQL Database 防火牆規則-總覽](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)。
 

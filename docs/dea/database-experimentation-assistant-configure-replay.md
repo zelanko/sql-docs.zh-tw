@@ -1,6 +1,6 @@
 ---
 title: 設定 SQL Server 升級的重新執行
-description: 設定資料庫測試助理的 Distributed Replay
+description: 使用資料庫測試助理 (DEA) 存取 Distributed Replay 工具。 使用工具，針對已升級的測試環境重新執行已捕獲的追蹤。
 ms.custom: seo-lt-2019
 ms.date: 01/24/2020
 ms.prod: sql
@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: ae7c3c2a987d9fb048c1c3fa494978626abce06a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e2715667fc474335ffec54259ebb821fe2e5904a
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76761532"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565516"
 ---
 # <a name="configure-distributed-replay-for-database-experimentation-assistant"></a>設定資料庫測試助理的 Distributed Replay
 
-資料庫測試助理（DEA）會使用 SQL Server 安裝的 Distributed Replay 工具，針對已升級的測試環境重新執行已捕獲的追蹤。 我們建議您先使用小型的追蹤檔案執行測試回合，再進行完整重新執行，以確保能正確地重新執行查詢。
+資料庫測試助理 (DEA) 會使用 SQL Server 安裝中的 Distributed Replay 工具，針對已升級的測試環境重新執行已捕獲的追蹤。 我們建議您先使用小型的追蹤檔案執行測試回合，再進行完整重新執行，以確保能正確地重新執行查詢。
 
 ## <a name="distributed-replay-requirements"></a>Distributed Replay 需求
 
@@ -43,8 +43,8 @@ Distributed Replay 要求您在電腦之間使用共同的帳戶。 基於這項
 
 若要設定控制器服務：
 
-1. 使用 SQL Server 安裝程式安裝 Distributed Replay 控制器。 如果您略過設定 Distributed Replay 控制器的 [SQL Server 安裝程式嚮導] 步驟，您可以透過設定檔設置控制器。 在一般安裝中，設定檔位於 C:\Program Files （x86） \Microsoft SQL Server\<版本 \Tools\DReplayController\DReplayController.config.\>
-2. Distributed Replay 控制器記錄檔位於 C:\Program Files （x86） \Microsoft SQL Server\<版本 \Tools\DReplayController\Log.\>
+1. 使用 SQL Server 安裝程式安裝 Distributed Replay 控制器。 如果您略過設定 Distributed Replay 控制器的 [SQL Server 安裝程式嚮導] 步驟，您可以透過設定檔設置控制器。 在一般安裝中，設定檔位於 C:\Program Files (x86) \Microsoft SQL Server \<version\>\Tools\DReplayController\DReplayController.config。
+2. Distributed Replay 控制器記錄檔位於 C:\Program Files (x86) \Microsoft SQL Server \<version\> \Tools\DReplayController\Log。
 3. 開啟 services.msc，並移至**SQL Server Distributed Replay 控制器**服務。
 4. 以滑鼠右鍵按一下服務，然後選取 [**屬性**]。 將服務帳戶設定為在網路中控制器和用戶端電腦通用的帳戶。
 5. 選取 **[確定]** 以關閉 [**屬性**] 視窗。
@@ -60,7 +60,7 @@ Distributed Replay 要求您在電腦之間使用共同的帳戶。 基於這項
 只有在控制器電腦上才需要此設定。
 
 1. 開啟 dcomcnfg.exe。
-2. 展開 [**元件服務** > ] [**電腦** > ]**我的電腦** > **DCOM Config**]。
+2. 展開 [**元件服務**] [  >  **電腦**]  >  **我的電腦**  >  **DCOM Config**]。
 3. 在 [ **DCOM Config**] 底下，以滑鼠右鍵按一下 [ **DReplayController**]，然後選取 [**屬性**]。
 4. 選取 [安全性]**** 索引標籤。
 5. 在 [**啟動和啟用許可權**] 底下，選取 [**自訂**]，然後選取 [**編輯**]。
@@ -82,27 +82,27 @@ Distributed Replay 要求您在電腦之間使用共同的帳戶。 基於這項
 1. 使用 SQL Server 安裝程式安裝 Distributed Replay 用戶端。
 2. 開啟 services.msc，並移至 SQL Server Distributed Replay 用戶端服務。
 3. 以滑鼠右鍵按一下服務，然後選取 [**屬性**]。 將服務帳戶設定為網路中控制器和用戶端電腦通用的帳戶。
-4. 選取 **[確定]** 以關閉 [**屬性**] 視窗。 如果您略過 [SQL Server 安裝程式] 步驟來設定 Distributed Replay 用戶端，您可以透過設定檔進行設定。 在一般安裝中，設定檔位於 C:\Program Files （x86） \Microsoft SQL Server\<版本 \Tools\DReplayClient\DReplayClient.config.\>
-5. 請確定 Dreplayclient.exe 檔案包含控制器電腦的名稱，做為註冊的控制器。
+4. 選取 **[確定]** 以關閉 [**屬性**] 視窗。 如果您略過 [SQL Server 安裝程式] 步驟來設定 Distributed Replay 用戶端，您可以透過設定檔進行設定。 在一般安裝中，設定檔位於 C:\Program Files (x86) \Microsoft SQL Server \<version\>\Tools\DReplayClient\DReplayClient.config。
+5. 請確定 DReplayClient.config 檔案包含控制器電腦的名稱，做為註冊的控制器。
 6. 從 services.msc 重新開機 SQL Server Distributed Replay 用戶端服務。 您也可以從命令列執行下列命令，以重新開機服務：
 
     `NET STOP "SQL Server Distributed Replay Client"`</br>
     `NET START "SQL Server Distributed Replay Client"`
 
-    Distributed Replay 控制器記錄檔位於 C:\Program Files （x86） \Microsoft SQL Server\<版本 \Tools\DReplayClient\Log.\> 這些記錄會指出用戶端是否可以向控制器註冊其本身。
+    Distributed Replay 控制器記錄檔位於 C:\Program Files (x86) \Microsoft SQL Server \<version\> \Tools\DReplayClient\Log。 這些記錄會指出用戶端是否可以向控制器註冊其本身。
 
-    如果設定成功，記錄檔會顯示**已向控制器註冊的訊息 <控制器名稱\>**。
+    如果設定成功，記錄檔會顯示**已向控制器註冊的訊息 <控制器名稱 \> **。
 
 如需更多設定選項，請參閱[Configure Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay)。
 
 ## <a name="set-up-distributed-replay-administration-tools"></a>設定 Distributed Replay 管理工具
 
-您可以使用 Distributed Replay 管理工具，快速測試 Distributed Replay 是否在環境中正常運作。 在有多個用戶端機器向控制器註冊的環境中，測試設定會特別有用。 您可能需要安裝 SQL Server Management Studio （SSMS）才能取得管理工具。
+您可以使用 Distributed Replay 管理工具，快速測試 Distributed Replay 是否在環境中正常運作。 在有多個用戶端機器向控制器註冊的環境中，測試設定會特別有用。 您可能需要安裝 SQL Server Management Studio (SSMS) ，才能取得管理工具。
 
-1. 移至 SSMS 安裝位置，並尋找 Distributed Replay 管理工具 dreplay 和其相依元件。
-2. 在命令提示字元中， `dreplay.exe status -f 1`執行。
+1. 移至 SSMS 安裝位置，並尋找 Distributed Replay 管理工具 dreplay.exe 及其相依元件。
+2. 在命令提示字元中，執行 `dreplay.exe status -f 1` 。
 
-如果上述步驟成功，主控台輸出會指出控制器可以看到其用戶端處於`READY`狀態。
+如果上述步驟成功，主控台輸出會指出控制器可以看到其用戶端處於 `READY` 狀態。
 
 ## <a name="configure-the-firewall-for-remote-distributed-replay-access"></a>設定遠端 Distributed Replay 存取的防火牆
 
@@ -110,8 +110,8 @@ Distributed Replay 要求您在電腦之間使用共同的帳戶。 基於這項
 
 1. 開啟 [具有**Advanced Security**的**Windows 防火牆**]。
 2. 移至 [**輸入規則**]。
-3. 為 program C:\Program Files （x86） \Microsoft 建立新的輸入防火牆規則 SQL Server\<版本\>\Tools\DReplayController\DReplayController.exe。
-4. 允許 DReplayController 的所有埠的網域層級存取，以便能夠從遠端與控制器服務進行通訊。
+3. 為程式 C:\Program 檔建立新的輸入防火牆規則， (x86) \Microsoft SQL Server \<version\>\Tools\DReplayController\DReplayController.exe。
+4. 允許所有埠的網域層級存取，以便 DReplayController.exe 能夠從遠端與控制器服務通訊。
 5. 儲存規則。
 
 ## <a name="set-up-target-computers"></a>設定目的電腦

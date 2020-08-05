@@ -1,6 +1,6 @@
 ---
 title: 在命令提示字元中執行資料庫測試助理
-description: 在命令提示字元中執行資料庫測試助理
+description: 瞭解如何在資料庫測試助理 (DEA) 中捕捉追蹤，然後從命令提示字元分析結果。
 ms.custom: seo-lt-2019
 ms.date: 02/25/2020
 ms.prod: sql
@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: 674f40b16437547956178293c5b491b11c8b2f89
-ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
+ms.openlocfilehash: 161258d8359ce46b9ff2afb2a878c008059772db
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85215485"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565527"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>在命令提示字元中執行資料庫測試助理
 
-本文說明如何在資料庫測試助理（DEA）中捕捉追蹤，然後從命令提示字元分析結果。
+本文說明如何在資料庫測試助理 (DEA) 中捕捉追蹤，然後從命令提示字元分析結果。
 
    > [!NOTE]
    > 若要深入瞭解每個 DEA 作業，請嘗試執行下列命令：
@@ -47,15 +47,15 @@ ms.locfileid: "85215485"
 | 選項| 描述 |  
 | --- | --- |
 | -n, --name | 具備追蹤檔案名 |
-| -x，--format | 具備追蹤的格式（Trace = 0，XEvents = 1） |
+| -x，--format | 具備追蹤的格式 (Trace = 0，XEvents = 1)  |
 | -d，--duration | 具備捕捉的最大持續時間（以分鐘為單位） |
 | -l, --location | 具備在主機電腦上儲存追蹤/xevent 檔案的輸出檔案夾位置 |
-| -t，--類型 | （預設值：0） Sql Server 的類型/版本（SqlServer = 0，AzureSQLDB = 1，Azure SQL 受控執行個體 = 2） |
+| -t，--類型 |  (預設值： 0) 類型/版本的 Sql Server (SqlServer = 0，AzureSQLDB = 1，Azure SQL 受控執行個體 = 2)  |
 | -h, --host | 具備SQL Server 主機名稱和/或實例名稱，以開始捕獲 |
-| -e、--encrypt | （預設值： True）SQL Server 實例的加密連接。 預設值為 true。 |
-| --信任 | （預設值： False）連接到 SQL Server 實例時，信任伺服器憑證。 預設值為 false。 |
-| -f、--databasename | （預設值：）要篩選追蹤的資料庫名稱，如果未指定，則會在所有資料庫上啟動 capture |
-| -m、--authmode | （預設值：0）驗證模式（Windows = 0，Sql 驗證 = 1） |
+| -e、--encrypt |  (預設值： True) 加密 SQL Server 實例的連接。 預設值為 true。 |
+| --信任 |  (預設值： False) 信任伺服器憑證，同時連接到 SQL Server 實例。 預設值為 false。 |
+| -f、--databasename |  (預設值：要篩選追蹤的資料庫 ) 名稱，如果未指定，則會在所有資料庫上啟動 capture |
+| -m、--authmode |  (預設值： 0) 驗證模式 (Windows = 0，Sql 驗證 = 1)  |
 | -u、--username | 用來連接到 SQL Server 的使用者名稱 |
 | -p、--password | 用來連接到 SQL Server 的密碼 |
 
@@ -72,11 +72,11 @@ ms.locfileid: "85215485"
 
 3. 使用 StartReplayCaptureTrace 在執行 SQL Server 的目的電腦上啟動追蹤捕捉。
 
-    a.  在 SQL Server Management Studio （SSMS）中，開啟 <Dea_InstallPath \> \Scripts\StartReplayCaptureTrace.sql。
+    a.  在 SQL Server Management Studio (SSMS) 中，開啟 <Dea_InstallPath \> \Scripts\StartReplayCaptureTrace.sql。
 
     b.  執行， `Set @durationInMins=0` 讓追蹤捕捉不會在指定的時間後自動停止。
 
-    c.  若要設定每個追蹤檔案的檔案大小上限，請執行 `Set @maxfilesize` 。 建議的大小為200（以 MB 為單位）。
+    c.  若要設定每個追蹤檔案的檔案大小上限，請執行 `Set @maxfilesize` 。 建議的大小為 200 (MB) 。
 
     d.  編輯 `@Tracefile` ，為您的追蹤檔案設定唯一的名稱。
 
@@ -120,15 +120,15 @@ ms.locfileid: "85215485"
 | -a、--traceA | 具備實例之事件檔案的檔案路徑。 範例 C:\traces\Sql2008trace.trc。  如果有一批次檔，請選取第一個檔案，DEA 會自動檢查換用檔案。 如果檔案是在 blob 中，請提供您想要在本機儲存事件檔案的資料夾路徑。  範例 C:\traces\ |
 | -b，--traceB | 具備B 實例之事件檔案的檔案路徑。 範例 C:\traces\Sql2014trace.trc。 如果有一批次檔，請選取第一個檔案，DEA 會自動檢查換用檔案。 如果檔案是在 blob 中，請提供您想要在本機儲存事件檔案的資料夾路徑。  範例 C:\traces\ |
 | -r、--ReportName | 具備目前分析的名稱。 產生的分析報表將會以這個名稱來識別。 |
-| -t，--類型 | （預設值：0） Sql Server 的類型/版本（SqlServer = 0，AzureSQLDB = 1，Azure SQL 受控執行個體 = 2） |
+| -t，--類型 |  (預設值： 0) 類型/版本的 Sql Server (SqlServer = 0，AzureSQLDB = 1，Azure SQL 受控執行個體 = 2)  |
 | -h, --host | 具備SQL Server 主機名稱和（或）實例名稱 |
-| -e、--encrypt | （預設值： True）SQL Server 實例的加密連接。 預設值為 true。 |
-| --信任 | （預設值： False）連接到 SQL Server 實例時，信任伺服器憑證。 預設值為 false。 |
-| -m、--authmode | （預設值：0）驗證模式（Windows = 0，Sql 驗證 = 1） |
+| -e、--encrypt |  (預設值： True) 加密 SQL Server 實例的連接。 預設值為 true。 |
+| --信任 |  (預設值： False) 信任伺服器憑證，同時連接到 SQL Server 實例。 預設值為 false。 |
+| -m、--authmode |  (預設值： 0) 驗證模式 (Windows = 0，Sql 驗證 = 1)  |
 | -u、--username | 用來連接到 SQL Server 的使用者名稱 |
 | --p | 用來連接到 SQL Server 的密碼 |
-| --ab | （預設值： False）追蹤 A 的儲存位置是在 blob 中。 若已使用，也必須指定--阿布達比（追蹤 Blob Url） |
-| --bb | （預設值： False）追蹤 B 的儲存位置在 blob 中。 若使用，則必須同時指定--bbu （追蹤 B Blob Url） |
+| --ab |  (預設值： False) 追蹤 A 的儲存位置在 blob 中。 如果使用，則也必須指定--阿布達比 (追蹤 Blob Url)  |
+| --bb |  (預設值： False) 追蹤 B 的儲存位置在 blob 中。 如果使用，也必須指定--bbu (追蹤 B Blob Url)  |
 | --阿布達比 | 具有 SAS 金鑰之實例的 Blob URL |
 | --bbu | 具有 SAS 金鑰的 B 實例 Blob URL |
 
