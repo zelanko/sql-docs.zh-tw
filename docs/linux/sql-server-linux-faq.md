@@ -7,12 +7,12 @@ ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: bd1c4ad80abb5e6df26ea09fc19e83b457fee87c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a41223036980a77a45094f2a64c22b898902548c
+ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895341"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87477350"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux 上的 SQL Server 常見問題集 (FAQ)
 
@@ -163,5 +163,9 @@ ms.locfileid: "85895341"
 1. **我可以從安裝的 mssql 帳戶和群組變更 SQL Server 檔案和目錄的擁有權嗎？**
 
    我們不支援從預設安裝變更 SQL Server 目錄和檔案的擁有權。 mssql 帳戶和群組專門用於 SQL Server，無法進行互動式登入存取。
-
+   
+ 1. **SQL Server 資料和記錄檔目錄是否支援符號連結？** 
+    
+    否，SQL Server 資料和記錄檔目錄不支援符號連結。 若要變更預設資料和記錄檔目錄，請參閱[變更預設資料或記錄檔目錄位置](sql-server-linux-configure-mssql-conf.md#datadir)。
+    
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

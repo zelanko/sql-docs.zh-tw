@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 57f48ff329b819ea8677c4da6690e8fc97ea39e4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 54374ae5337abcd49cc2d2eefedc25d36ceee697
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010137"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442780"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>使用原生格式匯入或匯出資料 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,16 +37,8 @@ ms.locfileid: "86010137"
 
 在相同資料表之間使用原生格式，可避免資料類型與字元格式間進行不需要的來回轉換，因而可節省時間及空間。 不過，若要取得最佳的傳輸率，必須針對資料格式化做一些檢查。 若要防止所載入的資料發生問題，請參閱下列限制清單。  
 
-|本主題內容：|
-|---|
-|[限制](#restrictions)|
-|[bcp 如何處理原生格式的資料](#considerations)|
-|[原生格式的命令選項](#command_options)|
-|[範例測試條件](#etc)<br /><br />&emsp;&#9679;&emsp;[範例資料表](#sample_table)<br />&emsp;&#9679;&emsp;[範例非 XML 格式檔案](#nonxml_format_file)|
-|[範例](#examples)<br />&emsp;&#9679;&emsp;[使用 BCP 與原生格式匯出資料](#bcp_native_export)<br />&emsp;&#9679;&emsp;[不使用格式檔案而使用 BCP 與原生格式匯入資料](#bcp_native_import)<br />&emsp;&#9679;&emsp;[使用 BCP 與原生格式匯入非 XML 格式檔案的資料](#bcp_native_import_fmt)<br />&emsp;&#9679;&emsp;[不使用格式檔案而使用 BULK INSERT 與原生格式](#bulk_native)<br />&emsp;&#9679;&emsp;[對非 XML 格式檔案使用 BULK INSERT 與原生格式](#bulk_native_fmt)<br />&emsp;&#9679;&emsp;[對非 XML 格式檔案使用 OPENROWSET 與原生格式](#openrowset_native_fmt)|
-|[相關工作](#RelatedTasks)<p>                                                                                                                                                                                                                  </p>|
 
-## <a name="restrictions"></a>限制<a name="restrictions"></a>  
+## <a name="restrictions"></a>限制
 若要以原生格式成功匯入資料，請確定：  
   
 -   資料檔具有原生格式。  
@@ -60,7 +52,7 @@ ms.locfileid: "86010137"
   
  成功的匯入作業不會損毀目標資料表。  
   
-## <a name="how-bcp-handles-data-in-native-format"></a>bcp 如何處理原生格式的資料<a name="considerations"></a>
+## <a name="how-bcp-handles-data-in-native-format"></a>bcp 如何處理原生格式的資料
  本節討論 **bcp** 公用程式如何匯出及匯入原生格式資料的特殊考量。  
   
 -   非字元資料  
@@ -82,7 +74,7 @@ ms.locfileid: "86010137"
   
      如需資料轉換的詳細資訊，請參閱[資料類型轉換 &#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)。  
   
-## <a name="command-options-for-native-format"></a>原生格式的命令選項<a name="command_options"></a>  
+## <a name="command-options-for-native-format"></a>原生格式的命令選項
 您可以將原生格式資料匯入資料表，方法是使用 [bcp](../../tools/bcp-utility.md)、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 或 [INSERT ...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)。對於 [bcp](../../tools/bcp-utility.md) 命令或 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 陳述式，您可以在陳述式中指定資料格式。  對於 [INSERT...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 陳述式，您必須在格式檔案中指定資料格式。  
 
 下列命令選項支援原生格式：  
@@ -100,10 +92,10 @@ ms.locfileid: "86010137"
 >  或者，您可以在格式檔案中按照每個欄位指定格式。 如需詳細資訊，請參閱 [匯入或匯出資料的格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)＞。
   
 
-## <a name="example-test-conditions"></a>範例測試條件<a name="etc"></a>  
+## <a name="example-test-conditions"></a>範例測試條件
 本主題中的範例採用下列定義的資料表、資料檔案與格式檔案。
 
-### <a name="sample-table"></a>**範例資料表**<a name="sample_table"></a>
+### <a name="sample-table"></a>範例資料表
 下列指令碼會建立測試資料庫、名為 `myNative` 的資料表，以及在資料表中填入一些初始值。  請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 
 ```sql
@@ -130,11 +122,11 @@ VALUES
 SELECT * FROM TestDatabase.dbo.myNative;
 ```
 
-### <a name="sample-non-xml-format-file"></a>**範例非 XML 格式檔案**<a name="nonxml_format_file"></a>
+### <a name="sample-non-xml-format-file"></a>非 XML 格式檔案範例
 SQL Server 支援兩種類型的格式檔案：非 XML 格式和 XML 格式。  非 XML 格式是舊版 SQL Server 所支援的原始格式。  如需詳細資訊，請參閱 [非 XML 格式檔案 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 。  下列命令將使用 [bcp 公用程式](../../tools/bcp-utility.md) ，根據 `myNative.fmt`的結構描述產生非 XML 格式檔案 `myNative`。  使用 [bcp](../../tools/bcp-utility.md) 命令建立格式檔案時，請指定 **format** 引數並使用 **nul** 取代資料檔案路徑。  format 選項也需要 **-f** 選項。  此外，以此範例為例，限定詞 **c** 會用於指定字元資料， **T** 會用於指定使用整合式安全性的信任連線。  請在命令提示字元之下，輸入下列命令：
 
 ```cmd
-bcp TestDatabase.dbo.myNative format nul -f D:\BCP\myNative.fmt -T -n 
+bcp TestDatabase.dbo.myNative format nul -f D:\BCP\myNative.fmt -T 
 
 REM Review file
 Notepad D:\BCP\myNative.fmt
@@ -146,10 +138,10 @@ Notepad D:\BCP\myNative.fmt
 > `SQLState = S1000, NativeError = 0`  
 > `Error = [Microsoft][ODBC Driver 13 for SQL Server]I/O error while reading BCP format file`
 
-## <a name="examples"></a>範例<a name="examples"></a>
+## <a name="examples"></a>範例
 下列範例使用以上所建立的資料庫、資料檔案與格式檔案。
 
-### <a name="using-bcp-and-native-format-to-export-data"></a>**使用 bcp 與原生格式匯出資料**<a name="bcp_native_export"></a>
+### <a name="using-bcp-and-native-format-to-export-data"></a>使用 bcp 與原生格式匯出資料
 **-n** 參數與 **OUT** 命令。  注意︰後續所有範例皆會使用此範例中所建立的資料檔案。  請在命令提示字元之下，輸入下列命令：
 
 ```cmd
@@ -159,7 +151,7 @@ REM Review results
 NOTEPAD D:\BCP\myNative.bcp
 ```
 
-### <a name="using-bcp-and-native-format-to-import-data-without-a-format-file"></a>**使用 bcp 與原生格式匯入資料**<a name="bcp_native_import"></a>
+### <a name="using-bcp-and-native-format-to-import-data-without-a-format-file"></a>不搭配格式檔案使用 bcp 與原生格式匯入資料
 **-n** 參數與 **IN** 命令。  請在命令提示字元之下，輸入下列命令：
 
 ```cmd
@@ -173,7 +165,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNative;"
 ```
 
-### <a name="using-bcp-and-native-format-to-import-data-with-a-non-xml-format-file"></a>**使用 bcp 與原生格式匯入非 XML 格式檔案的資料**<a name="bcp_native_import_fmt"></a>
+### <a name="using-bcp-and-native-format-to-import-data-with-a-non-xml-format-file"></a>搭配非 XML 格式檔案使用 bcp 與原生格式來匯入資料
 **-n** 與 **-f** 參數與 **IN** 命令。  請在命令提示字元之下，輸入下列命令：
 
 ```cmd
@@ -187,7 +179,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNative;"
 ```
 
-### <a name="using-bulk-insert-and-native-format-without-a-format-file"></a>**不使用格式檔案而使用 BULK INSERT 與原生格式**<a name="bulk_native"></a>
+### <a name="using-bulk-insert-and-native-format-without-a-format-file"></a>不搭配格式檔案使用 BULK INSERT 與原生格式
 **DATAFILETYPE** 引數。  請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 
 ```sql
@@ -202,7 +194,7 @@ BULK INSERT TestDatabase.dbo.myNative
 SELECT * FROM TestDatabase.dbo.myNative;
 ```
 
-### <a name="using-bulk-insert-and-native-format-with-a-non-xml-format-file"></a>**對非 XML 格式檔案使用 BULK INSERT 與原生格式**<a name="bulk_native_fmt"></a>
+### <a name="using-bulk-insert-and-native-format-with-a-non-xml-format-file"></a>對非 XML 格式檔案使用 BULK INSERT 與原生格式
 **FORMATFILE** 引數。  請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 
 ```sql
@@ -217,7 +209,7 @@ BULK INSERT TestDatabase.dbo.myNative
 SELECT * FROM TestDatabase.dbo.myNative;
 ```
 
-### <a name="using-openrowset-and-native-format-with-a-non-xml-format-file"></a>**對非 XML 格式檔案使用 OPENROWSET 與原生格式**<a name="openrowset_native_fmt"></a>
+### <a name="using-openrowset-and-native-format-with-a-non-xml-format-file"></a>搭配非 XML 格式檔案使用 OPENROWSET 與原生格式
 **FORMATFILE** 引數。  請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 
 ```sql
@@ -233,7 +225,7 @@ INSERT INTO TestDatabase.dbo.myNative
 SELECT * FROM TestDatabase.dbo.myNative;
 ```
   
-## <a name="related-tasks"></a>相關工作<a name="RelatedTasks"></a>
+## <a name="related-tasks"></a>相關工作
 若要使用大量匯入或大量匯出的資料格式 
   
 -   [從舊版 SQL Server 匯入原生與字元格式資料](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  

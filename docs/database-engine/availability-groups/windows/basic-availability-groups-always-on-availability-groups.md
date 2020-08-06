@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cee7b5274347e26b595f81d78b51946c7d5ce39b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 851d6a801a83f8e66bbab3da2f1836a0bbdccf21
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896172"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435222"
 ---
 # <a name="basic-always-on-availability-groups-for-a-single-database"></a>單一資料庫的基本 Always On 可用性群組
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -45,6 +45,9 @@ ms.locfileid: "85896172"
 - 只有 Standard Edition 伺服器才支援基本可用性群組。 
 
 - 基本可用性群組不能是分散式可用性群組的一部分。 
+
+- 您可能會有多個基本可用性群組連線到 SQL Server 的單一執行個體。
+
   
 ## <a name="configuration"></a>組態  
  AlwaysOn 基本可用性群組可在任兩部 SQL Server 2016 Standard Edition 伺服器上建立。 當您建立基本可用性群組時，您必須在建立期間指定兩個複本。  

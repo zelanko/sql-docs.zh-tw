@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6f899ec9c1e006212483a49133ad343e93f20173
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4506f95337319d0b4a8fa4f63c99a182360cfa2b
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918315"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472487"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>監視執行封裝和其他作業
 
@@ -73,7 +73,7 @@ ms.locfileid: "86918315"
  **型別**  
  指定作業的類型。 下列是 **[類型]** 欄位的可能值，以及 Transact-SQL **catalog.operations** 檢視的 operations_type 資料行中的對應值。  
   
-|||  
+|輸入欄位描述|operations_type 值|  
 |-|-|  
 |初始化 Integration Services|1|  
 |作業清除 (SQL 代理程式作業)|2|  

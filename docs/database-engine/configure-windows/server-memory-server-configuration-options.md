@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 27e39532a3b6198fd6d54c7b58407e76c487325a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8620da6349efe012e9e0d75d6ddf5efada437832
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751907"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442820"
 ---
 # <a name="server-memory-configuration-options"></a>伺服器記憶體組態選項
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,9 +77,14 @@ ms.locfileid: "85751907"
   
 2.  按一下 **[記憶體]** 節點。  
   
-3.  在 [伺服器記憶體選項] 下，為 [最小伺服器記憶體] 與 [最大伺服器記憶體] 輸入希望的相同數量。  
+3.  在 [伺服器記憶體選項] 底下，輸入 [最小伺服器記憶體] 和 [最大伺服器記憶體] 所要的數量。  
   
      使用預設值可允許 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 根據可用的系統資源來動態變更它的記憶體需求。 建議[如上詳述](#max_server_memory)，設定 [最大伺服器記憶體]。 
+
+下列螢幕擷取畫面示範所有三個步驟： 
+
+:::image type="content" source="media/server-memory-server-configuration-options/configure-memory-in-ssms.png" alt-text="設定 SSMS 中的記憶體":::
+
   
 ## <a name="lock-pages-in-memory-lpim"></a>鎖定記憶體中的分頁 (LPIM) 
 此 Windows 原則決定哪些帳戶可以使用處理序將資料保留在實體記憶體中，以防止系統將資料傳送到磁碟上的虛擬記憶體。 將記憶體分頁到磁碟時，鎖定記憶體分頁可能會讓伺服器保持回應狀態。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard 版本或更新版本的執行個體中，當具有 sqlservr.exe 執行權限的帳戶取得 Windows「鎖定記憶體中的分頁」 (LPIM) 使用者權利時，[鎖定記憶體中的分頁] 選項會設定為 [開啟]。  

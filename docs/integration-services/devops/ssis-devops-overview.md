@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6c5634130e2a9a4e6f2a394d067f0e679ab02827
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: c89ff705077782d0cf8287f0d1bc010ce609cc72
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196070"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472474"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools"></a>SQL Server Integration Services (SSIS) DevOps 工具
 
@@ -117,7 +117,7 @@ SSIS 部署工作將會建立資料夾與子資料夾 (如果不存在)。
 
 但是，是否支援特定驗證類型取決於目的地伺服器類型和代理程式類型。 詳細資料支援矩陣會列在下表中。
 
-| |Microsoft 裝載的代理程式|自我裝載的代理程式|
+|目的地伺服器類型|Microsoft 裝載的代理程式|自我裝載的代理程式|
 |---------|---------|---------|
 |SQL Server 內部部署或 VM |N/A|Windows 驗證|
 |Azure SQL|SQL Server 驗證 <br> Active Directory - 密碼|SQL Server 驗證 <br> Active Directory - 密碼 <br> Active Directory - 整合式|
@@ -143,7 +143,7 @@ SSIS 部署工作將會建立資料夾與子資料夾 (如果不存在)。
 
 #### <a name="continue-deployment-when-error-occurs"></a>發生錯誤時繼續部署
 
-指定在發生錯誤時，tp 是否繼續部署剩餘的專案或檔案。 如果為 [否]，則會在發生錯誤時立即停止 SSIS 部署工作。
+指定在發生錯誤時，是否繼續部署剩餘的專案或檔案。 如果為 [否]，則會在發生錯誤時立即停止 SSIS 部署工作。
 
 ### <a name="limitations-and-known-issues"></a>限制與已知問題
 
@@ -197,7 +197,7 @@ SSIS 目錄組態的內嵌 JSON。 只有當選取 [內嵌] 作為組態檔來�
 
 但是，是否支援特定驗證類型取決於目的地伺服器類型和代理程式類型。 詳細資料支援矩陣會列在下表中。
 
-| |Microsoft 裝載的代理程式|自我裝載的代理程式|
+|目的地伺服器類型|Microsoft 裝載的代理程式|自我裝載的代理程式|
 |---------|---------|---------|
 |SQL Server 內部部署或 VM |N/A|Windows 驗證|
 |Azure SQL|SQL Server 驗證 <br> Active Directory - 密碼|SQL Server 驗證 <br> Active Directory - 密碼 <br> Active Directory - 整合式|

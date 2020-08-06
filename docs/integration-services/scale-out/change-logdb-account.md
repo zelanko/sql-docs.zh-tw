@@ -1,6 +1,6 @@
 ---
 title: 變更 SSIS Scale Out 記錄的帳戶 | Microsoft Docs
-description: 本文描述如何變更 SSIS Scale Out 記錄的使用者帳戶
+description: 了解如何變更您用於 SQL Server Integration Services (SSIS) Scale Out 記錄的帳戶。
 ms.custom: performance
 ms.date: 06/29/2020
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.reviewer: maghan
-ms.openlocfilehash: 0478b685adffa36b4ec344f4f13c52da6436300c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c53a389541408080f1de43da409b4b61ca85a0ec
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919034"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522332"
 ---
 # <a name="change-the-account-for-scale-out-logging"></a>變更 Scale Out 記錄的帳戶
 

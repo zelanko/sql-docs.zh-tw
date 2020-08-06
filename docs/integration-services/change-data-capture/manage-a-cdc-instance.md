@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a275dbc088774355c3546b7234174e5b7b585e43
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 929e6730ade53eeff07552652ff2905665fc4a49
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922524"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472544"
 ---
 # <a name="manage-a-cdc-instance"></a>管理 CDC 執行個體
 
@@ -71,7 +71,7 @@ ms.locfileid: "86922524"
   
 -   **狀態**：指示 CDC 執行個體之目前狀態的圖示。 下面會描述這些狀態。  
   
-    |||  
+    |圖示|狀態和描述|  
     |-|-|  
     |![錯誤](../../integration-services/change-data-capture/media/error.gif "錯誤")|**Error**。 Oracle CDC 執行個體未在執行中，因為發生無法重試的錯誤。 以下是可用的子狀態：<br /><br /> **設定錯誤**：發生了需要手動介入的設定錯誤。<br /><br /> **需要密碼**：未針對 Oracle CDC 執行個體設定任何密碼，或是密碼無效。<br /><br /> **非預期**： 所有其他無法復原的錯誤。|  
     |![確定](../../integration-services/change-data-capture/media/okay.gif "確定")|**執行中**：CDC 執行個體正在執行及處理變更記錄。 以下是可用的子狀態：<br /><br /> **閒置**：所有變更記錄都已經處理並儲存在目標變更資料表中。 沒有其他使用中交易。<br /><br /> **正在處理**：有正在處理但是尚未寫入變更資料表的變更記錄。|  

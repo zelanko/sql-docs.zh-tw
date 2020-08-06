@@ -14,23 +14,23 @@ ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 881385dbd03af3a2425a4b853ce4b194d474bb4d
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 04bdf5678284b07ecf74799e4e6caaf55af1086b
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196887"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522950"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>設定 Always On 可用性群組的複寫
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
 
   設定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫和 AlwaysOn 可用性群組包含七個步驟。 下列各節將詳細說明每個步驟。  
   
 ##  <a name="1-configure-the-database-publications-and-subscriptions"></a><a name="step1"></a> 1.設定資料庫發行集和訂閱  
  **設定散發者**  
   
- 散發資料庫不能搭配 SQL Server 2012 和 SQL Server 2014 置於可用性群組中。 SQL 2016 和更新版本支援將散發資料庫放置到可用性群組內。 如需詳細資訊，請參閱[在可用性群組中設定散發資料庫](../../../relational-databases/replication/configure-distribution-availability-group.md)。
+ 散發資料庫不能搭配 SQL Server 2012 和 SQL Server 2014 置於可用性群組中。 SQL 2016 和更新版本支援將散發資料庫放置到可用性群組內，但用於合併、雙向或點對點複寫拓撲的分散式資料庫除外。 如需詳細資訊，請參閱[在可用性群組中設定散發資料庫](../../../relational-databases/replication/configure-distribution-availability-group.md)。
   
 1.  在散發者端設定散發。 如果預存程序正用於組態，請執行 **sp_adddistributor**。 您可以使用 *\@password* 參數來識別遠端發行者連接到散發者時使用的密碼。 設定遠端散發者時，每個遠端發行者也需要此密碼。  
   

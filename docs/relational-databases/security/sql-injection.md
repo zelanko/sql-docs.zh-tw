@@ -14,12 +14,12 @@ ms.assetid: eb507065-ac58-4f18-8601-e5b7f44213ab
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e1cffa7f2d8c388b391a3bcb8cbe51ebd6ff1c2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ad927941169f7f93f43a534535f80449682c9d60
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001035"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472514"
 ---
 # <a name="sql-injection"></a>SQL 插入
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -171,7 +171,7 @@ OR UPPER(text) LIKE '%SP_EXECUTESQL%';
 ### <a name="wrapping-parameters-with-quotename-and-replace"></a>用 QUOTENAME() 和 REPLACE() 包裝參數  
  在每一個選取的預存程序中，驗證動態 Transact-SQL 使用的所有變數都已正確處理。 來自預存程序的輸入參數或從資料表中讀取的資料應該用 QUOTENAME() 或 REPLACE() 包裝。 請記住，傳遞到 QUOTENAME() 的 @variable 值屬於 sysname，其最大長度為 128 個字元。  
   
-|@variable|建議的包裝函數|  
+|\@variable|建議的包裝函數|  
 |---------------|-------------------------|  
 |安全性實體的名稱|`QUOTENAME(@variable)`|  
 |小於等於 128 個字元的字串|`QUOTENAME(@variable, '''')`|  

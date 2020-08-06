@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4ab6bc0a45ec2ac3b72fb029e6ef3ec74601c183
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1ce860d112f171e4cc341c2b2e2b03149720e6b9
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919195"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472489"
 ---
 # <a name="legacy-package-deployment-ssis"></a>舊版封裝部署 (SSIS)
 
@@ -47,7 +47,7 @@ ms.locfileid: "86919195"
   
  封裝部署處理有四個步驟：  
   
-1.  第一個選擇性的步驟是選擇性的，包含建立可在執行階段更新封裝元素屬性的封裝組態。 部署封裝時，會自動包含這些組態。  
+1.  第一個選擇性步驟是選擇性的，包含建立可在執行階段更新套件元素屬性的套件設定。 部署封裝時，會自動包含這些組態。  
   
 2.  第二步是建立 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案，以建立封裝部署公用程式。 專案的部署公用程式包含您要部署的封裝  
   

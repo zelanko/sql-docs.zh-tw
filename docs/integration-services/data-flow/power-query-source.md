@@ -1,6 +1,6 @@
 ---
 title: Power Query 來源 | Microsoft Docs
-description: 了解如何在 SQL Server Integration Services 資料流程中設定 Power Query 來源
+description: 了解如何在 SQL Server Integration Services (SSIS) 資料流程中設定 Power Query 來源。
 ms.date: 12/27/2019
 ms.prod: sql
 ms.prod_service: integration-services
@@ -16,12 +16,12 @@ f1_keywords:
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 1adc541d08e5ce74e6130d6994bd583ae58030d1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 966371e30811f82f9be25711f9bf600bbddbcc8d
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916069"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522900"
 ---
 # <a name="power-query-source-preview"></a>Power Query 來源 (預覽)
 

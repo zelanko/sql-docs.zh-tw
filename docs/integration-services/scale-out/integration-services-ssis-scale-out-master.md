@@ -1,6 +1,6 @@
 ---
 title: Scale Out Master | Microsoft Docs
-description: 本文描述 SSIS Scale Out 的 Scale Out Master 元件
+description: 了解 SQL Server Integration Services (SSIS) Scale Out Master Service 的 Scale Out 主機元件。
 ms.custom: performance
 ms.date: 01/19/2019
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: e7d9bc5b6d84a0108fd68a77a06bcbda5bf47d44
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6d130bc0d6754a182f7768e4d2e7d8588dc337fc
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918994"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522312"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Integration Services (SSIS) 擴增主機
 

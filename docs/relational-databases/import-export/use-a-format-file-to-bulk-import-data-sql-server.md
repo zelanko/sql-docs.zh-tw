@@ -15,23 +15,19 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 61a611bfde0e9d3a96f6ca3ef4c037e8cf4829b8
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 83a024997910e16b67e66244edcd9cc34c6751a7
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003135"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442531"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>使用格式檔案大量匯入資料 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 此主題說明格式檔案在大量匯入作業中的用法。  格式檔案會將資料檔案的欄位對應到資料表的資料行。  如需其他資訊，請參閱 [建立格式檔案 (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) 。
-
-|外框|
-|---|
-|[開始之前](#begin)<br />[範例測試條件](#etc)<br />&emsp;&#9679;&emsp;[範例資料表](#sample_table)<br />&emsp;&#9679;&emsp;[範例資料檔案](#sample_data_file)<br />[建立格式檔案](#create_format_file)<br />&emsp;&#9679;&emsp;[建立非 XML 格式檔案](#nonxml_format_file)<br />&emsp;&#9679;&emsp;[建立 XML 格式檔案](#xml_format_file)<br />[使用格式檔案大量匯入資料](#import_data)<br />&emsp;&#9679;&emsp;[使用 BCP 和非 XML 格式檔案](#bcp_nonxml)<br />&emsp;&#9679;&emsp;[使用 BCP 和 XML 格式檔案](#bcp_xml)<br />&emsp;&#9679;&emsp;[使用 BULK INSERT 和非 XML 格式檔案](#bulk_nonxml)<br />&emsp;&#9679;&emsp;[使用 BULK INSERT 和 XML 格式檔案](#bulk_xml)<br />&emsp;&#9679;&emsp;[使用 OPENROWSET(BULK...) 和非 XML 格式檔案](#openrowset_nonxml)<br />&emsp;&#9679;&emsp;[使用 OPENROWSET(BULK...) 和 XML 格式檔案](#openrowset_xml)<p>                                                                                                                                                                                                                  </p>|
   
-## <a name="before-you-begin"></a>開始之前<a name="begin"></a>
+## <a name="before-you-begin"></a>開始之前
 * 如果格式檔案要與 Unicode 字元資料檔案搭配使用，則所有的輸入欄位都必須是 Unicode 文字字串 (也就是固定大小或以字元結束的 Unicode 字串)。
 * 若要大量匯出或匯入 [SQLXML](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md) 資料，請在格式檔案中使用下列其中一種資料類型：
   * SQLCHAR 或 SQLVARYCHAR (資料是使用用戶端字碼頁或定序所隱含的字碼頁所傳送)
@@ -42,10 +38,10 @@ ms.locfileid: "86003135"
   * [將資料從 SQL Server 載入 Azure SQL 資料倉儲 (一般檔案)](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-from-sql-server-with-bcp/)
   * [移轉資料](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-migrate-data/)
 
-## <a name="example-test-conditions"></a>範例測試條件<a name="etc"></a>  
+## <a name="example-test-conditions"></a>範例測試條件
 本主題中的格式檔案範例是以下面定義的資料表和資料檔案為基礎。
 
-### <a name="sample-table"></a>**範例資料表**<a name="sample_table"></a>
+### <a name="sample-table"></a>範例資料表
 下列指令碼會建立測試資料庫和名為 `myFirstImport`的資料表。  請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 ```sql
 CREATE DATABASE TestDatabase;
@@ -60,7 +56,7 @@ CREATE TABLE dbo.MyFirstImport (
    );
 ```
 
-### <a name="sample-data-file"></a>**範例資料檔案**<a name="sample_data_file"></a>
+### <a name="sample-data-file"></a>範例資料檔案
 使用 [記事本] 建立空白檔案 `D:\BCP\myFirstImport.bcp` ，並插入下列資料：
 ```
 1,Anthony,Grosse,1980-02-23
@@ -96,10 +92,10 @@ Get-Content -Path $bcpFile;
 Notepad.exe $bcpfile;
 ```
 
-## <a name="creating-the-format-files"></a>建立格式檔案<a name="create_format_file"></a>
+## <a name="creating-the-format-files"></a>建立格式檔案
 SQL Server 支援兩種類型的格式檔案：非 XML 格式和 XML 格式。  非 XML 格式是舊版 SQL Server 所支援的原始格式。
 
-### <a name="creating-a-non-xml-format-file"></a>**建立非 XML 格式檔案**<a name="nonxml_format_file"></a>
+### <a name="creating-a-non-xml-format-file"></a>建立非 XML 格式檔案
 如需詳細資訊，請參閱 [非 XML 格式檔案 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 。  下列命令將使用 [bcp 公用程式](../../tools/bcp-utility.md) ，根據 `myFirstImport.fmt`的結構描述產生非 XML 格式檔案 `myFirstImport`。  使用 bcp 命令建立格式檔案時，請指定 **format** 引數並使用 **nul** 取代資料檔案路徑。  format 選項也需要 **-f** 選項。  在這個範例中，另外還會使用限定詞 **c** 來指定字元資料，使用 **t,** 來指定逗號作為 [欄位結束字元](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)，並使用 **T** 來指定使用整合式安全性的信任連接。  請在命令提示字元之下，輸入下列命令：
 
 ```cmd
@@ -125,7 +121,7 @@ Notepad D:\BCP\myFirstImport.fmt
 > `SQLState = S1000, NativeError = 0`  
 > `Error = [Microsoft][ODBC Driver 13 for SQL Server]I/O error while reading BCP format file`
 
-### <a name="creating-an-xml-format-file"></a>**建立 XML 格式檔案**<a name="xml_format_file"></a>  
+### <a name="creating-an-xml-format-file"></a>建立 XML 格式檔案
 如需詳細資訊，請參閱 [XML 格式檔案 (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md) 。  下列命令將使用 [bcp 公用程式](../../tools/bcp-utility.md) ，根據 `myFirstImport.xml`的結構描述建立 XML 格式檔案 `myFirstImport`。 使用 bcp 命令建立格式檔案時，請指定 **format** 引數並使用 **nul** 取代資料檔案路徑。  format 選項一律需要 **-f** 選項，您也必須指定 **-x** 選項才能建立 XML 格式檔案。  在這個範例中，另外還會使用限定詞 **c** 來指定字元資料，使用 **t,** 來指定逗號作為 [欄位結束字元](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)，並使用 **T** 來指定使用整合式安全性的信任連接。  請在命令提示字元之下，輸入下列命令：
 ```cmd
 bcp TestDatabase.dbo.myFirstImport format nul -c -x -f D:\BCP\myFirstImport.xml -t, -T
@@ -137,7 +133,7 @@ Notepad D:\BCP\myFirstImport.xml
 您的 XML 格式檔案 `D:\BCP\myFirstImport.xml` 應該看起來像這樣︰
 ```xml
 <?xml version="1.0"?>
-<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  <RECORD>
   <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>
   <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
@@ -153,10 +149,10 @@ Notepad D:\BCP\myFirstImport.xml
 </BCPFORMAT>
 ```
 
-## <a name="using-a-format-file-to-bulk-import-data"></a>使用格式檔案大量匯入資料<a name="import_data"></a>
+## <a name="using-a-format-file-to-bulk-import-data"></a>使用格式檔案大量匯入資料
 下列範例會使用上面建立的資料庫、資料檔案和格式檔案。
 
-### <a name="using-bcp-and-non-xml-format-file"></a>**使用 [bcp](../../tools/bcp-utility.md) 和 [非 XML 格式檔案](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bcp_nonxml"></a>
+### <a name="using-bcp-and-non-xml-format-file"></a>使用 [bcp](../../tools/bcp-utility.md) 和[非 XML 格式檔案](../../relational-databases/import-export/non-xml-format-files-sql-server.md)
 請在命令提示字元之下，輸入下列命令：
 ```cmd
 REM Truncate table (for testing)
@@ -170,7 +166,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.MyFirstImport"
 ```
 
 
-### <a name="using-bcp-and-xml-format-file"></a>**使用 [bcp](../../tools/bcp-utility.md) 和 [XML 格式檔案](../../relational-databases/import-export/xml-format-files-sql-server.md)** <a name="bcp_xml"></a>
+### <a name="using-bcp-and-xml-format-file"></a>使用 [bcp](../../tools/bcp-utility.md) 和 [XML 格式檔案](../../relational-databases/import-export/xml-format-files-sql-server.md)
 請在命令提示字元之下，輸入下列命令：
 ```cmd
 REM Truncate table (for testing)
@@ -184,7 +180,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.MyFirstImport;"
 ```
 
 
-### <a name="using-bulk-insert-and-non-xml-format-file"></a>**使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和 [非 XML 格式檔案](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bulk_nonxml"></a>
+### <a name="using-bulk-insert-and-non-xml-format-file"></a>使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和[非 XML 格式檔案](../../relational-databases/import-export/non-xml-format-files-sql-server.md)
 請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 ```sql
 USE TestDatabase;  
@@ -200,7 +196,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myFirstImport;
 ```
 
-### <a name="using-bulk-insert-and-xml-format-file"></a>**使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和 [XML 格式檔案](../../relational-databases/import-export/xml-format-files-sql-server.md)** <a name="bulk_xml"></a>
+### <a name="using-bulk-insert-and-xml-format-file"></a>使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和 [XML 格式檔案](../../relational-databases/import-export/xml-format-files-sql-server.md)
 請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 ```sql
 USE TestDatabase;  
@@ -216,7 +212,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myFirstImport;
 ```
 
-### <a name="using-openrowsetbulk-and-non-xml-format-file"></a>**使用 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 和 [非 XML 格式檔案](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset_nonxml"></a>    
+### <a name="using-openrowsetbulk-and-non-xml-format-file"></a>使用 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 和[非 XML 格式檔案](../../relational-databases/import-export/non-xml-format-files-sql-server.md)    
 請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 ```sql
 USE TestDatabase;
@@ -235,7 +231,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myFirstImport;
 ```
 
-### <a name="using-openrowsetbulk-and-xml-format-file"></a>**使用 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 和 [XML 格式檔案](../../relational-databases/import-export/xml-format-files-sql-server.md)** <a name="openrowset_xml"></a>
+### <a name="using-openrowsetbulk-and-xml-format-file"></a>使用 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 和 [XML 格式檔案](../../relational-databases/import-export/xml-format-files-sql-server.md)
 請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 ```sql
 USE TestDatabase;  
@@ -254,7 +250,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myFirstImport;
 ```
   
-## <a name="more-examples"></a>更多範例！  
+## <a name="more-examples"></a>更多範例
  [建立格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)  
  [使用格式檔案略過資料表資料行 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)  
  [使用格式檔案略過資料欄位 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  

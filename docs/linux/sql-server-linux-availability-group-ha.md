@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 28a9541c1369202b8bd322cc23201e8d531f913e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a7a6ce8832db85d54ad9513d8258af2863dab2e5
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892248"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472406"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性群組設定的高可用性和資料保護
 
@@ -59,7 +59,7 @@ SQL Server 2017 引進 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 叢集資�
 
 具有三個同步複本的可用性群組可提供讀取級別、高可用性和資料保護。 下表描述可用性行為。 
 
-| |讀取級別|高可用性與 </br> 資料保護 | 資料保護|
+|可用性行為 |讀取級別|高可用性與 </br> 資料保護 | 資料保護|
 |:---|---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
 |主要複本中斷 |自動容錯移轉。 新的主要複本是 R/W。 |自動容錯移轉。 新的主要複本是 R/W。 |自動容錯移轉。 在先前的主要複本復原並聯結可用性群組作為次要複本之前，新的主要複本無法供使用者交易使用。 |
@@ -77,7 +77,7 @@ SQL Server 2017 引進 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 叢集資�
 
 具有兩個同步複本的可用性群組提供讀取級別和資料保護。 下表描述可用性行為。 
 
-| |讀取級別 |資料保護|
+|可用性行為 |讀取級別 |資料保護|
 |:---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
 |主要複本中斷 | 手動容錯移轉。 可能會遺失資料。 新的主要複本是 R/W。| 自動容錯移轉。 在先前的主要複本復原並聯結可用性群組作為次要複本之前，新的主要複本無法供使用者交易使用。|
@@ -103,7 +103,7 @@ SQL Server 2017 引進 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 叢集資�
 
 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 的預設值為 0。 下表描述可用性行為。 
 
-| |高可用性與 </br> 資料保護 | 資料保護|
+|可用性行為 |高可用性與 </br> 資料保護 | 資料保護|
 |:---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
 |主要複本中斷 | 自動容錯移轉。 新的主要複本是 R/W。 | 自動容錯移轉。 新的主要複本無法供使用者交易使用。 |
@@ -138,7 +138,7 @@ SQL Server 2017 引進 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 叢集資�
 
 SQL Server 2017 CTP 1.4 已將 `sequence_number` 新增至 `sys.availability_groups`，以允許 Pacemaker 識別次要複本與主要複本保持同步的方式。 `sequence_number` 是依序遞增的 BIGINT，表示本機可用性群組複本的最新狀態。 Pacemaker 會以每個可用性群組的設定變更來更新 `sequence_number`。 設定變更的範例包括容錯移轉、新增或移除複本。 這個數字會在主要複本上更新，然後複寫到次要複本。 因此，具有最新設定的次要複本與主要複本序號相同。 
 
-當 Pacemaker 決定要將複本升級為主要複本時，它會先傳送「預先升級」  通知到所有複本。 這些複本會傳回序號。 接下來，當 Pacemaker 實際嘗試將複本升級為主要複本時，如果該複本的序號為所有序號中最高者，則只會升級複本本身。 如果它自己的序號不符合最高序號，則複本會拒絕升級作業。 如此一來，只有序號最高的複本可以升級為主要複本，確保不會遺失資料。 
+當 Pacemaker 決定要將複本升級為主要複本時，它會先傳送「預先升級」通知到所有複本。 這些複本會傳回序號。 接下來，當 Pacemaker 實際嘗試將複本升級為主要複本時，如果該複本的序號為所有序號中最高者，則只會升級複本本身。 如果它自己的序號不符合最高序號，則複本會拒絕升級作業。 如此一來，只有序號最高的複本可以升級為主要複本，確保不會遺失資料。 
 
 此處理序至少需要一個可供升級且其序號與前一個主要複本相同的複本。 Pacemaker 資源代理程式會設定 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`，以便至少有一個同步次要複本是最新狀態，且預設可作為自動容錯移轉的目標。 透過每個監視動作，會計算 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 的值 (並在必要時更新)。 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 值是「同步複本的數目」除以 2。 在容錯移轉時，資源代理程式需要 (`total number of replicas` - `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 個複本) 來回應預先升級通知。 具有最高 `sequence_number` 的複本會升級為主要複本。 
 
