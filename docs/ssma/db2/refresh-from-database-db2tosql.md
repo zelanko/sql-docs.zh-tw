@@ -1,5 +1,5 @@
 ---
-title: 從資料庫重新整理（DB2ToSQL） |Microsoft Docs
+title: 從資料庫 (DB2ToSQL) 重新整理 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 613a8368-b372-443f-8252-fb6dc31a003d
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: a53c3005aca2e599d8ceb0b973a58bcf2ca5e14c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 2efc0667bd69e43cfe3d3246c0622fad18ff21e3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060133"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933359"
 ---
-# <a name="refresh-from-database-db2tosql"></a>從資料庫重新整理（DB2ToSQL）
+# <a name="refresh-from-database-db2tosql"></a>從資料庫重新整理 (DB2ToSQL) 
 [**從資料庫**重新整理] 對話方塊可讓您選取要從 DB2 資料庫重新整理的物件。 對話方塊中的資料列會根據中繼資料的狀態，以色彩標示：  
   
 -   如果物件中繼資料在本機和 DB2 資料庫中已變更，則資料列會是藍色。  
@@ -31,20 +31,20 @@ ms.locfileid: "68060133"
   
 若要存取 [**從資料庫**重新整理] 對話方塊，請以滑鼠右鍵按一下 DB2 Metadata Explorer 中的物件，然後按一下 [**從資料庫**重新整理]。  
   
-## <a name="options"></a>選項  
-**Collapse （-）**  
+## <a name="options"></a>選項。  
+**折迭 (-) **  
 折迭所有物件群組以隱藏個別物件。  
   
-**展開（+）**  
+**展開 (+) **  
 展開 [所有物件群組] 以顯示個別物件。  
   
 **隱藏/顯示相等的物件**  
 如果 DB2 資料庫和 SSMA 中的物件中繼資料相同，則會隱藏清單中的物件。  
   
-**從資料庫重新整理（箭號按鈕）**  
+**從資料庫重新整理 (箭號按鈕) **  
 使用箭號按鈕來指定要在 SSMA 中更新所選物件的中繼資料。  
   
-**不要從資料庫重新整理（X 按鈕）**  
+**[不要從資料庫重新整理] (X 按鈕) **  
 使用 [X] 按鈕，指定不應在 SSMA 中更新所選物件的中繼資料。  
   
 **圖例**  

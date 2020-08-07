@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Schema Mapping
 ms.assetid: 2c927003-c49d-4fe1-8e3e-5b2899166268
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 212b5719c1ef8bac3e44ec33b786a032acef1d9f
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: acd4b7c13b2f8674f120c7f5b49f503a7f8fb5bc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865326"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931223"
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>將 Sybase ASE 結構描述對應到 SQL Server 結構描述 (SybaseToSQL)
-在 Sybase 彈性伺服器企業 (ASE) 中，每個資料庫都有一或多個架構。 根據預設，SSMA 會將資料庫和架構中的所有物件遷移至或 SQL Azure 中的相同資料庫和架構 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 不過，您可以自訂 ASE 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 資料庫和架構之間的對應。  
+在 Sybase 彈性伺服器企業 (ASE) 中，每個資料庫都有一或多個架構。 根據預設，SSMA 會將資料庫和架構中的所有物件遷移至或 SQL Azure 中的相同資料庫和架構 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 不過，您可以自訂 ASE 與或 Azure SQL Database 之間的對應 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="ase-and-sql-server-or-sql-azure-schemas"></a>ASE 和 SQL Server 或 SQL Azure 架構  
 ASE 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 都使用兩個部分標記法當做*資料庫*，來指定資料庫和其架構。 例如，在 ASE**示範**資料庫中，可能會有**dbo**架構。 該資料庫和架構配對會指定為**demo. dbo**。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 具有相同的資料庫和架構，則該配對也會指定為**demo. dbo**。  
@@ -51,7 +51,7 @@ ASE 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 
   
 -   對應至 SQL Azure  
   
-您可以將源資料庫對應至已連線的目標 SQL Azure 資料庫或連接的目標 SQL Azure 資料庫中的任何架構。 如果您將來源架構對應至 [已連接的目標資料庫] 底下的任何非現有架構，則系統會提示您輸入「**架構不存在於目標中繼資料中」的訊息。它會在同步處理期間建立。您要繼續嗎？按一下 [是]。**  
+您可以將源資料庫對應至連接的目標 Azure SQL Database 或連接的目標 Azure SQL Database 中的任何架構。 如果您將來源架構對應至 [已連接的目標資料庫] 底下的任何非現有架構，則系統會提示您輸入「**架構不存在於目標中繼資料中」的訊息。它會在同步處理期間建立。您要繼續嗎？按一下 [是]。**  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>還原為預設資料庫和架構  
 如果您自訂 ASE 架構和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 架構之間的對應，您可以將對應還原回預設值。  

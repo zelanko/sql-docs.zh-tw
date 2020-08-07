@@ -1,5 +1,5 @@
 ---
-title: 管理密碼（AccessToSQL） |Microsoft Docs
+title: " (AccessToSQL) 管理密碼 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 07/01/2020
@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: df94b295e7695dc79c78876b5d42f8a0ece7dce6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 0023e6d04b2f339fbd67337b7b241da2df275a79
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897585"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938042"
 ---
-# <a name="managing-passwords-accesstosql"></a>管理密碼（AccessToSQL）
+# <a name="managing-passwords-accesstosql"></a> (AccessToSQL) 管理密碼
 本節說明如何保護資料庫密碼，以及在伺服器之間匯入或匯出程式的程式：  
   
 1.  保護密碼  
@@ -131,5 +131,5 @@ SSMA 主控台應用程式可讓您將本機電腦上檔案中的加密資料庫
 7. 請確認密碼： xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  
 
 ## <a name="see-also"></a>另請參閱  
-[執行 SSMA 主控台（存取）](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
+[ (存取) 執行 SSMA 主控台](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

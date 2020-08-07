@@ -1,5 +1,5 @@
 ---
-title: 測試遷移的資料庫物件（SybaseToSQL） |Microsoft Docs
+title: 測試遷移的資料庫物件 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 4937f6b4-86bd-4070-88df-3d216306c33a
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 6fb469dfcaaec33a03681bfb64f411851df0400e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 360325063258b2bc208115f91357f341c68b7150
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020910"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934597"
 ---
 # <a name="testing-migrated-database-objects-sybasetosql"></a>測試移轉的資料庫物件 (SybaseToSQL)
-Sybase 測試器（SSMA 測試器）的 Microsoft SQL Server 移轉小幫手會自動測試資料庫物件轉換和 SSMA 所進行的資料移轉。 完成所有 SSMA 的遷移步驟之後，請使用 SSMA 測試人員來驗證轉換的物件是否以相同的方式運作，以及是否已正確傳輸所有資料。  
+Microsoft SQL Server 移轉小幫手 (SSMA 測試器的 Sybase 測試器) 會自動測試資料庫物件轉換和 SSMA 所進行的資料移轉。 完成所有 SSMA 的遷移步驟之後，請使用 SSMA 測試人員來驗證轉換的物件是否以相同的方式運作，以及是否已正確傳輸所有資料。  
   
 > [!NOTE]  
 > 在 Azure 連線的情況下，會停用測試人員元件。  
@@ -43,16 +43,16 @@ SSMA 測試器會執行選取要在 Sybase 上測試的物件，以及其在 SQL
 -   結果集是否相同？  
   
 > [!NOTE]  
-> 加! 絕對不要在生產系統上使用 SSMA 測試器。 在測試器執行期間，會修改來源架構和資料。 同時，針對某些類型的已測試程式碼，完全還原原始狀態是不可能的。  
+> 注意！ 絕對不要在生產系統上使用 SSMA 測試器。 在測試器執行期間，會修改來源架構和資料。 同時，針對某些類型的已測試程式碼，完全還原原始狀態是不可能的。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
 如果您想要使用 SSMA 測試器，請在開啟 [**安裝測試器資料庫**] 選項的情況下安裝 SSMA Sybase 延伸模組套件。  
   
 此外，請確認下列事項：  
   
--   Sybase OLE DB 提供者安裝在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行的電腦上。  
+-   Sybase OLE DB 提供者安裝在執行的電腦上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
--   已在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫引擎上啟用 Common Language RUNTIME （CLR）整合。  
+-   已在資料庫引擎上啟用 Common Language Runtime (CLR) 整合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 請注意，目前版本的 SSMA 測試器不支援由相同來源或目標伺服器上的不同使用者進行平行執行。  
   

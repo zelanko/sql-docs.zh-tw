@@ -8,17 +8,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Connect to SQL Azure dialog box
 ms.assetid: bf44b236-d9be-41ae-a5fd-bd73038e505f
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 34e25824ee95745bd5069a6ed601318d47a96e81
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: f67bb072ce30117ebab93c3165545b13b6513df9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865246"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938867"
 ---
 # <a name="connect-to-azure-sql-database-accesstosql"></a>連接到 Azure SQL Database (AccessToSQL) 
-使用 [連接到 SQL Azure] 對話方塊來連接到您想要遷移的 SQL Azure 資料庫。  
+使用 [連接到 SQL Azure] 對話方塊，即可連接至您想要遷移 Azure SQL Database 中的資料庫。  
   
 若要存取此對話方塊，請在 [檔案]**功能表上，選取 [連線****到 SQL Azure]**。 如果您先前已連線，此命令會**重新連接到 SQL Azure。**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "87865246"
   
 **使用者名稱**  
   
-輸入 SSMA 將用來連接到 SQL Azure 資料庫的使用者名稱  
+輸入 SSMA 將用來連接 Azure SQL Database 的使用者名稱  
   
 **密碼**  
   

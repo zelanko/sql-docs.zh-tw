@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7be9e644-36a2-48fc-9206-faf59fdff4d7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2982f3c078e23529eff2c8cb050ea66628d49da
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 57f889fdbf7e52b470c1ceb8b4015cad78e4cad9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864519"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934357"
 ---
 # <a name="common-language-runtime-integration"></a>Common Language Runtime 整合
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,13 +41,13 @@ ms.locfileid: "87864519"
 
 ## <a name="when-to-use-clr-modules"></a>何時使用 CLR 模組？
 
-CLR 整合可讓您執行 .Net Framework 中可用的複雜功能，例如正則運算式、用於存取外部資源的程式碼 (伺服器、web 服務、資料庫) 、自訂加密等等。伺服器端 CLR 整合的一些優點如下：
+CLR 整合可讓您執行 .NET Framework 所提供的複雜功能，例如正則運算式、用於存取外部資源的程式碼 (伺服器、web 服務、資料庫) 、自訂加密等等。伺服器端 CLR 整合的一些優點如下：
   
 -   **程式設計模型更好。** .NET Framework 語言在許多方面比 Transact-SQL 豐富，可提供先前未提供給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開發人員的建構與功能。 開發人員也可以運用提供一組廣大類別的 .NET Framework 程式庫功能，可用於快速而有效率地解決程式設計問題。  
   
 -   **可增進安全和安全性。** Managed 程式碼會在 Database Engine 主控的 Common Language Run-time 環境下執行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會運用此環境提供更安全的替代方式給舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所提供的擴充預存程序。  
   
--   **能夠定義資料類型和彙總函式。** 使用者定義型別和使用者定義彙總是兩個新的 Managed 資料庫物件，它們可以擴充 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的儲存和查詢功能。  
+-   **能夠定義資料類型和彙總函式。** 使用者定義型別和使用者定義匯總是兩個新的 managed 資料庫物件，可擴充的儲存和查詢功能 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 -   **透過標準化環境簡化的開發。** 資料庫開發會整合到後續版本的  Visual Studio .NET 開發環境中。 開發人員用來開發與偵錯資料庫物件和指令碼的工具，與他們用來撰寫中介層或用戶層的 .NET Framework 元件和服務的工具是一樣的。  
   

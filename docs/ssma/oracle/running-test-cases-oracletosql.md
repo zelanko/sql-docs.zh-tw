@@ -1,5 +1,5 @@
 ---
-title: 正在執行測試案例（OracleToSQL） |Microsoft Docs
+title: " (OracleToSQL) 執行測試案例 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 7905c76803bf637e581af934f473b070d44a6b09
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 429ad47c63393696492d8eb22919749ed03cd71b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394859"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933049"
 ---
 # <a name="running-test-cases-oracletosql"></a>執行測試案例 (OracleToSQL)
 當 SSMA 測試人員執行測試案例時，它會執行選取進行測試的物件，並建立有關驗證結果的報表。 如果兩個平臺上的結果都相同，測試就會成功。 Oracle 與之間物件的對應 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是根據目前 SSMA 專案的架構對應設定來決定。  
@@ -29,15 +29,15 @@ ms.locfileid: "87394859"
   
 2.  在 [**連接到 Oracle** ] 對話方塊中，輸入連接資訊，然後按一下 **[連接]**。  
   
-測試完成時，就會建立測試案例報表。 按一下 [**報表**] 按鈕，以查看[測試案例報表](viewing-test-case-reports-oracletosql.md)。 測試（測試案例報告）的結果會自動儲存在[測試結果儲存](using-test-repositories-oracletosql.md)機制中，供日後使用。  
+測試完成時，就會建立測試案例報表。 按一下 [**報表**] 按鈕，以查看[測試案例報表](viewing-test-case-reports-oracletosql.md)。 測試 (測試案例報表) 的結果會自動儲存在[測試結果存放庫](using-test-repositories-oracletosql.md)中，以供稍後使用。  
   
 ## <a name="test-case-execution-steps"></a>測試案例執行步驟  
   
-### <a name="prerequisites"></a>先決條件  
+### <a name="prerequisites"></a>必要條件  
 SSMA 測試器會在測試開始之前，檢查是否符合測試執行的所有必要條件。 如果未滿足某些條件，則會出現錯誤訊息。  
   
 ### <a name="initialization"></a>初始化  
-在此步驟中，SSMA 測試人員會在 Oracle 伺服器的 SSMATESTER_ORACLE 架構中建立輔助物件（資料表、觸發程式和 views）。 它們允許在選擇進行驗證的受影響物件中進行追蹤變更。  
+在此步驟中，SSMA 測試人員會在 Oracle 伺服器的 SSMATESTER_ORACLE 架構中，建立 (資料表、觸發程式和 views) 的輔助物件。 它們允許在選擇進行驗證的受影響物件中進行追蹤變更。  
   
 假設已驗證的資料表已命名為 USER_TABLE。 針對這類資料表，會在 Oracle 中建立下列輔助物件。  
   

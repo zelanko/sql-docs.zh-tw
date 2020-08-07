@@ -9,15 +9,15 @@ ms.suite: sql
 ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-author: HJToland3
-ms.author: jtoland
+author: pochiraju
+ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 161258d8359ce46b9ff2afb2a878c008059772db
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: c7443ed363a4968415b651e460bbc4f69cb7415b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565527"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87951103"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>在命令提示字元中執行資料庫測試助理
 

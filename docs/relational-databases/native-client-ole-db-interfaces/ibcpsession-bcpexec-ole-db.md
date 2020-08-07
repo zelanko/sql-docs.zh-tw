@@ -1,5 +1,5 @@
 ---
-title: IBCPSession：： BCPExec （Native Client OLE DB 提供者） |Microsoft Docs
+title: IBCPSession：： BCPExec (Native Client OLE DB 提供者) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: 0f4ebb63-cf03-4e53-846e-6c3021cde007
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab4bcd943b88585b34f8e2c78e414b73a65b0e72
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 93dfd105156ea600c483873facf0714365af841c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247756"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87940839"
 ---
-# <a name="ibcpsessionbcpexec-native-client-ole-db-provider"></a>IBCPSession：： BCPExec （Native Client OLE DB 提供者）
+# <a name="ibcpsessionbcpexec-native-client-ole-db-provider"></a>IBCPSession：： BCPExec (Native Client OLE DB 提供者) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   執行大量複製作業。  
@@ -52,7 +52,7 @@ HRESULT BCPExec(
  此方法已成功。  
   
  E_FAIL  
- 發生提供者特定的錯誤;如需詳細資訊，請使用[ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)介面。  
+ 發生提供者特定的錯誤;如需詳細資訊，請使用[ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15)介面。  
   
  E_UNEXPECTED  
  此方法的呼叫是非預期的。 例如，在呼叫這個方法之前，不會呼叫 **BCPInit** 方法。 此外，如果已經透過使用 BCP_OPTION_ABORT 選項來中止此作業，之後再呼叫 **BCPExec** 方法，也會發生這種情況。  

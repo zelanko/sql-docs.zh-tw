@@ -1,5 +1,5 @@
 ---
-title: 專案設定（GUI）（MySQLToSQL） |Microsoft Docs
+title: 專案設定 (GUI)  (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: fd92aa77-21e3-41ac-8f3e-08608a734b7f
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 10d45c885570d048aea33480990161fb0413ca4c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8da37a73c0a251b5ae11b59b12c688e061e3a0cd
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67908787"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935207"
 ---
 # <a name="project-settings-gui--mysqltosql"></a>專案設定 (GUI) (MySQLToSQL)
 GUI 專案設定可讓您設定資料在 [**資料**] 索引標籤上的顯示方式，以及是否要將資料包表包含在評量報表中。  

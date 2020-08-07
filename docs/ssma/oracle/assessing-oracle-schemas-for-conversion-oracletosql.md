@@ -1,5 +1,5 @@
 ---
-title: 評估 Oracle 架構的轉換（OracleToSQL） |Microsoft Docs
+title: 評估 Oracle 架構以進行轉換 (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,21 +9,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Analyzing Conversion Problems
 ms.assetid: 4de9bcf6-1346-4740-87f9-7f24a8226357
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 0ff56be1b7da0376250c7ed021ae78d7144a7645
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: f8aaa58da9e9ace704d6214dcc56cab997fe082e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264548"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935061"
 ---
 # <a name="assessing-oracle-schemas-for-conversion-oracletosql"></a>評定 Oracle 結構描述的轉換 (OracleToSQL)
-在您載入物件並將資料移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]至之前，您應該決定遷移的複雜程度，以及遷移所需的時間。 SSMA 可以建立評量報告，以顯示將成功轉換的物件百分比。 SSMA 也可讓您查看導致轉換失敗的特定問題。  
+在您載入物件並將資料移轉至之前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，您應該決定遷移的複雜程度，以及遷移所需的時間。 SSMA 可以建立評量報告，以顯示將成功轉換的物件百分比。 SSMA 也可讓您查看導致轉換失敗的特定問題。  
   
 ## <a name="creating-assessment-reports"></a>建立評量報告  
-當它建立此評量報告時，SSMA 會將選取的 Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫物件轉換成語法，然後顯示結果。  
+當它建立此評量報告時，SSMA 會將選取的 Oracle 資料庫物件轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 語法，然後顯示結果。  
   
 **若要建立評量報告**  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68264548"
   
     SSMA 會在視窗底部的狀態列中顯示進度。 如果顯示 [輸出] 窗格，您也會在 [輸出] 窗格中看到訊息。  
   
-    當評估完成時，將會[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]顯示 [Oracle：評估報告] 視窗的 [移轉小幫手]。  
+    當評估完成時，將會 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 顯示 [Oracle：評估報告] 視窗的 [移轉小幫手]。  
   
 ## <a name="using-assessment-reports"></a>使用評量報告  
 [評量報告] 視窗包含三個窗格：  
@@ -77,7 +77,7 @@ ms.locfileid: "68264548"
   
     -   在 Oracle 中，您可以修改 Oracle 物件，以移除或修改有問題的程式碼。 若要將更新的程式碼載入至 SSMA，您必須更新中繼資料。 如需詳細資訊，請參閱[連接到 Oracle Database &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)。  
   
-    -   您可以從遷移中排除物件。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [中繼資料瀏覽器] 和 [Oracle 中繼資料 explorer] 中，清除專案旁的核取方塊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，然後再將物件載入並從 Oracle 遷移資料。  
+    -   您可以從遷移中排除物件。 在 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中繼資料瀏覽器] 和 [Oracle 中繼資料 explorer] 中，清除專案旁的核取方塊，然後再將物件載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並從 Oracle 遷移資料。  
   
 ## <a name="next-step"></a>後續步驟  
 [將 Oracle 架構轉換 &#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)  

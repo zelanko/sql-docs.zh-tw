@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Mapping, customize data type mapping
 - Mapping, Type mapping
 ms.assetid: 14f98054-13b4-4231-a6b0-2452f3b9941d
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d0b29deae2e0bdba81318130df46e30683717c86
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 604f9ce8e26e3d2221cd9a4bf7732c56ba3296c0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823463"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935352"
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>對應 MySQL 和 SQL Server 資料類型 (MySQLToSQL)
-MySQL 資料庫類型與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 資料庫類型不同。 當您將 MySQL 資料庫物件轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Sql azure 物件時，您必須指定如何將 mysql 中的資料類型對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 sql azure。 您可以接受預設資料類型對應，也可以自訂對應，如下列程式所示。  
+MySQL 資料庫類型與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure SQL Database 類型不同。 當您將 MySQL 資料庫物件轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Sql azure 物件時，您必須指定如何將 mysql 中的資料類型對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 sql azure。 您可以接受預設資料類型對應，也可以自訂對應，如下列程式所示。  
   
 ## <a name="default-mappings"></a>預設對應  
 SSMA 有一組預設的資料類型對應。 如需預設對應的清單，請參閱[專案設定 &#40;類型對應&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)。  
@@ -68,9 +68,9 @@ SSMA 有一組預設的資料類型對應。 如需預設對應的清單，請�
   
     這可讓您針對相同資料類型的較小且較大的值，自訂資料對應。 在 [**目標型別**] 底下，選取目標 SQL SERVER 或 SQL Azure 資料類型。  
   
-    1.  某些類型需要目標資料類型長度。 如有需要，請在 [**取代為**] 方塊中輸入新的資料長度，然後按一下 **[確定]**。  
+    -  某些類型需要目標資料類型長度。 如有需要，請在 [**取代為**] 方塊中輸入新的資料長度，然後按一下 **[確定]**。  
   
-    2.  某些類型需要目標資料類型的**精確度**和**小**數位數。 如有需要，請在 [**取代為**] 方塊中輸入新的精確度和小數位數，然後按一下 **[確定]** 。  
+    -  某些類型需要目標資料類型的**精確度**和**小**數位數。 如有需要，請在 [**取代為**] 方塊中輸入新的精確度和小數位數，然後按一下 **[確定]**。  
   
 -   **若要移除資料類型對應，請執行下列動作：**  
   

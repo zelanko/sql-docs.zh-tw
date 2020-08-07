@@ -1,5 +1,5 @@
 ---
-title: SSMA for Access 主控台的消費者入門（AccessToSQL） |Microsoft Docs
+title: 消費者入門使用適用于 Access 主控台的 SSMA (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 8585ec16-7e0a-483a-b250-adab9b9232a3
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 899070b1405b031e919f50a6d16bc5d6df3adf3e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: e9ca0ef87aac60849d114d0e43dd349e063e8c83
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68222227"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938508"
 ---
-# <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>SSMA for Access 主控台的消費者入門（AccessToSQL）
+# <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>消費者入門使用適用于 Access 主控台的 SSMA (AccessToSQL) 
 本節說明啟動和開始使用存取主控台應用程式的程式。 這裡也列出了一般 SSMA 主控台輸出視窗中所使用的慣例。  
   
 ## <a name="launching-ssma-console"></a>啟動 SSMA 主控台  
@@ -26,7 +26,7 @@ ms.locfileid: "68222227"
   
 2.  按一下 [**存取命令提示**字元] 快捷方式的 [SQL Server 移轉小幫手]。  
   
-    它會顯示 SSMA 主控台的 [使用`(/? Help)`方式] 功能表，並協助您開始使用主控台應用程式。  
+    它會顯示 SSMA 主控台的 [使用方式] 功能表 `(/? Help)` ，並協助您開始使用主控台應用程式。  
   
 ## <a name="procedure-for-using-the-ssma-console"></a>使用 SSMA 主控台的程式  
 在 Windows 系統上成功啟動主控台之後，您可以使用下列步驟來處理它：  
@@ -46,7 +46,7 @@ ms.locfileid: "68222227"
 2.  [產生報告](generating-reports-accesstosql.md)以查看詳細的 xml 輸出報告，以進行評估/conversion 和資料移轉。 也可以針對重新整理和同步處理命令產生詳細的錯誤報表。  
   
 ## <a name="ssma-console-output-conventions"></a>SSMA 主控台輸出慣例  
-執行 SSMA 指令碼命令和選項時，主控台程式會在主控台上顯示使用者的結果和訊息（資訊、錯誤等），或視需要將其重新導向至 xml 輸出檔。 輸出中的每個訊息類型都是以唯一的色彩表示。 例如，以白色顯示的文字訊息代表腳本檔案命令;綠色色彩中的一個代表使用者輸入的提示，依此類推。  
+執行 SSMA 指令碼命令和選項時，主控台程式會在主控台上顯示結果和訊息 (資訊、) 錯誤等等，或在必要時，將會重新導向至 xml 輸出檔。 輸出中的每個訊息類型都是以唯一的色彩表示。 例如，以白色顯示的文字訊息代表腳本檔案命令;綠色色彩中的一個代表使用者輸入的提示，依此類推。  
   
 ![SSMA 控制台輸出](../../ssma/access/media/ssmaconsoleoutput.jpg "SSMA 控制台輸出")  
   

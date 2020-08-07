@@ -1,5 +1,5 @@
 ---
-title: 使用 SSMA for MySQL 主控台（MySQLToSQL）的消費者入門 |Microsoft Docs
+title: SSMA for MySQL 主控台的消費者入門 (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - MySQL Console, launching console
 - MySQL Console, output conventions
 ms.assetid: 218d502c-059f-4d48-9aea-61e553d74303
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 88cf4716ea02b8c5dbcbd73e9839c6bacfbed10b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: a5ade295e64415f50e4887fa971f20d8fe5b7f6a
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68075420"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935517"
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>開始使用 SSMA for MySQL 主控台 (MySQLToSQL)
 本節說明啟動和開始使用 MySQL 主控台應用程式的程式。 這裡也列出了一般 SSMA 主控台輸出視窗中所使用的慣例。  
@@ -29,7 +29,7 @@ ms.locfileid: "68075420"
   
 2.  按一下 [**適用于 MySQL 的 SQL Server 移轉小幫手命令提示**字元] 快捷方式。  
   
-    它會顯示 SSMA 主控台的 [使用`(/? Help)`方式] 功能表，並協助您開始使用主控台應用程式。  
+    它會顯示 SSMA 主控台的 [使用方式] 功能表 `(/? Help)` ，並協助您開始使用主控台應用程式。  
   
 ## <a name="procedure-for-using-the-ssma-console"></a>使用 SSMA 主控台的程式  
 在 Windows 系統上成功啟動主控台之後，您可以使用下列步驟來處理它：  
@@ -49,7 +49,7 @@ ms.locfileid: "68075420"
 2.  [產生報告](generating-reports-mysqltosql.md)以查看詳細的 xml 輸出報告，以進行評估/conversion 和資料移轉。 也可以針對重新整理和同步處理命令產生詳細的錯誤報表。  
   
 ## <a name="ssma-console-output-conventions"></a>SSMA 主控台輸出慣例  
-執行 SSMA 指令碼命令和選項時，主控台程式會在主控台上顯示使用者的結果和訊息（資訊、錯誤等），或視需要將其重新導向至 xml 輸出檔。 輸出中的每個訊息類型都是以唯一的色彩表示。 例如，以白色顯示的文字訊息代表腳本檔案命令;綠色色彩中的一個代表使用者輸入的提示，依此類推。  
+執行 SSMA 指令碼命令和選項時，主控台程式會在主控台上顯示結果和訊息 (資訊、) 錯誤等等，或在必要時，將會重新導向至 xml 輸出檔。 輸出中的每個訊息類型都是以唯一的色彩表示。 例如，以白色顯示的文字訊息代表腳本檔案命令;綠色色彩中的一個代表使用者輸入的提示，依此類推。  
   
 ![SSMAConsoleOutput_MySQL](../../ssma/mysql/media/ssmaconsoleoutput_mysql.jpg "SSMAConsoleOutput_MySQL")  
   

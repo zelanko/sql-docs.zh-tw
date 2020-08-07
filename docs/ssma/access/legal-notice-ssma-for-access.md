@@ -1,5 +1,5 @@
 ---
-title: 法律注意事項（SSMA for Access） |Microsoft Docs
+title: ) 存取權 (SSMA 的法律注意事項 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - disclaimer
 - legal notice
 ms.assetid: d614b508-48ad-459e-ae86-79ee9d027a73
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d22a41b67d4b33d573a1c3ecc5f2235560cceea3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 5c15aa77726228d4bb7e55cd450affdfe5e4da42
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67947518"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938221"
 ---
-# <a name="legal-notice-ssma-for-access"></a>法律注意事項（SSMA for Access）
+# <a name="legal-notice-ssma-for-access"></a>適用于 Access) 的 (SSMA 法律注意事項
 本文件集 (包括其中所用的範例應用程式) 僅為資訊用途而提供，本文件集亦不提供任何明示或默示之擔保。 本文件集中的資訊，包括 URL 及其他網際網路網站參考資料，如有變更恕不另行通知。 本文件集之使用或因使用本文件集所衍生之一切後果，概由使用者自行承擔所有風險。  
   
 本文件內所含範例的主要目的在於闡釋某個概念，或說明特定陳述式或子句的合理使用。 多數範例並不包含通常可在完整生產系統中找到的所有程式碼，因為已將某些一般資料驗證及錯誤處理部分移除，以將焦點放在範例中的特定概念或陳述上。 這些範例或其中包含的任何原始程式碼並不包含於技術支援的服務範圍之內。  

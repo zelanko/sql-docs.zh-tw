@@ -1,5 +1,5 @@
 ---
-title: 準備 Access 資料庫以進行遷移（AccessToSQL） |Microsoft Docs
+title: 準備 Access 資料庫以進行遷移 (AccessToSQL) |Microsoft Docs
 description: 瞭解如何判斷要遷移哪些 Access 資料庫來 SQL Server 或 Azure SQL Database，並確定這些資料庫已準備好進行遷移。
 ms.prod: sql
 ms.custom: ''
@@ -19,17 +19,17 @@ helpviewer_keywords:
 - versions of Access
 - workgroup security
 ms.assetid: 9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: 1b0fe1ef2f51da9e64954040e58440a9e7eee58e
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 038ffa60562a443c916d0143fa432d3e5da87bc4
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293719"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937793"
 ---
-# <a name="preparing-access-databases-for-migration-accesstosql"></a>準備 Access 資料庫以進行遷移（AccessToSQL）
+# <a name="preparing-access-databases-for-migration-accesstosql"></a>準備 Access 資料庫以進行遷移 (AccessToSQL) 
 將 Access 資料庫移轉至之前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，您必須先決定要遷移的資料庫，並確保這些資料庫已準備好進行遷移。  
   
 ## <a name="determining-when-to-migrate-to-sql-server"></a>判斷遷移至 SQL Server 的時機  
@@ -38,7 +38,7 @@ Jet 資料庫引擎是用來做為 Access 的資料庫引擎，它是一種彈�
 在您將資料庫移轉到之後 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，您可以繼續使用連結資料表的存取權，也可以手動將應用程式遷移至 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 直接與互動的 .NET Framework 型程式 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代碼。  
   
 ## <a name="determining-which-databases-to-migrate"></a>判斷要遷移的資料庫  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移轉小幫手（SSMA）以取得存取權，可以為您找到 Access 資料庫。 接著，您可以將這些資料庫的相關中繼資料匯出至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如需如何匯出和查詢中繼資料的詳細資訊，請參閱[匯出存取清查](exporting-an-access-inventory-accesstosql.md)。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移轉小幫手 (SSMA) 以取得存取權，可以為您找到 Access 資料庫。 接著，您可以將這些資料庫的相關中繼資料匯出至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如需如何匯出和查詢中繼資料的詳細資訊，請參閱[匯出存取清查](exporting-an-access-inventory-accesstosql.md)。  
 
    > [!NOTE]
    > 並非所有存取功能和設定都受到的支援，或者可以輕鬆地轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 在您開始遷移資料庫之前，請參閱[不相容的存取功能](incompatible-access-features-accesstosql.md)。

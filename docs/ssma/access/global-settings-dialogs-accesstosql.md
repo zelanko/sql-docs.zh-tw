@@ -1,5 +1,5 @@
 ---
-title: 全域設定（對話方塊）（AccessToSQL） |Microsoft Docs
+title: 全域設定 (對話方塊)  (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,21 +7,21 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 6c2204f2-d49e-49ba-9c0f-f14cf07fa561
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 5b8ef85b9d0d997ed8aae05fc53aa685a2dcacfa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 5424bb29fa88b36e1cd12dd915586080d99d2e47
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67986413"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938438"
 ---
-# <a name="global-settings-dialogs-accesstosql"></a>全域設定（對話方塊）（AccessToSQL）
+# <a name="global-settings-dialogs-accesstosql"></a> (對話方塊的全域設定)  (AccessToSQL) 
 使用 [**通用設定**] 對話方塊的 [對話方塊] 頁面，即可指定 SSMA 的預設使用者動作和警告設定。  
   
 若要存取 [**工具**] 功能表上的對話方塊設定，請選取 [**全域設定**]，按一下左窗格底部的 [ **GUI** ]，然後選取 [**對話方塊**]。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **啟動時顯示遷移嚮導**  
 在 [存取的 SSMA] 中，您可以選擇在啟動 SSMA 應用程式時啟用或停用 [**遷移嚮導]** 。 根據預設，此選項為**True**。  
   

@@ -1,5 +1,5 @@
 ---
-title: 將 Oracle 架構對應至 SQL Server 架構（OracleToSQL） |Microsoft Docs
+title: 將 Oracle 架構對應至 SQL Server 架構 (OracleToSQL) |Microsoft Docs
 description: 瞭解如何自訂 Oracle 架構與 SQL Server 之間 Oracle 對應的 SSMA，或接受預設值。
 ms.prod: sql
 ms.custom: ''
@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 0edeaa08-9c5d-4e3a-bc15-b9a1f0c8a9dc
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 5639687a22749ccb8315262347807bb44ac79210
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 8d9511ae5c6d5a937e3686d0db45c578aec151c3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293825"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934727"
 ---
 # <a name="mapping-oracle-schemas-to-sql-server-schemas-oracletosql"></a>將 Oracle 結構描述對應到 SQL Server 結構描述 (OracleToSQL)
 在 Oracle 中，每個資料庫都有一或多個架構。 根據預設，SSMA 會將 Oracle 架構中的所有物件遷移至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 架構名稱為的資料庫。 不過，您可以自訂 Oracle 架構與資料庫之間的對應 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -24,7 +24,7 @@ ms.locfileid: "84293825"
 ## <a name="oracle-and-sql-server-schemas"></a>Oracle 和 SQL Server 架構  
 Oracle 資料庫包含架構。 的實例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含多個資料庫，其中每一個都可以有多個架構。  
   
-架構的 Oracle 概念會對應到資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 概念，以及它的其中一個架構。 例如，Oracle 可能會有一個名為**HR**的架構。 的實例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能具有名為**HR**的資料庫，而且在該資料庫內為架構。 其中一個架構是**dbo** （或資料庫擁有者）架構。 根據預設，Oracle 架構**hr**會對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫和架構**hr. dbo**。 SSMA 是指將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫和架構結合為架構。  
+架構的 Oracle 概念會對應到資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 概念，以及它的其中一個架構。 例如，Oracle 可能會有一個名為**HR**的架構。 的實例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能具有名為**HR**的資料庫，而且在該資料庫內為架構。 其中一個架構是**dbo** (或資料庫擁有者) 架構。 根據預設，Oracle 架構**hr**會對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫和架構**hr. dbo**。 SSMA 是指將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫和架構結合為架構。  
   
 您可以修改 Oracle 和架構之間的對應 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
@@ -39,11 +39,11 @@ Oracle 資料庫包含架構。 的實例 [!INCLUDE[ssNoVersion](../../includes/
   
 2.  在右窗格中，按一下 [**架構對應**] 索引標籤。  
   
-    您會看到所有 Oracle 架構的清單，後面接著目標值。 此目標會以兩個部分標記法（*database. schema*）表示， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 其中您的物件和資料將會遷移到其中。  
+    您會看到所有 Oracle 架構的清單，後面接著目標值。 此目標會以兩個部分標記法表示， (*資料庫。架構*) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，其中會將您的物件和資料移轉至其中。  
   
 3.  選取包含您要變更之對應的資料列，然後按一下 [**修改**]。  
   
-    在 [**選擇目標架構**] 對話方塊中，您可以流覽可用的目標資料庫和架構，或是在兩個部分標記法（Schema）的文字方塊中輸入資料庫和架構名稱，然後按一下 **[確定]**。  
+    在 [**選擇目標架構**] 對話方塊中，您可以流覽可用的目標資料庫和架構，或是在兩個部分的標記法中輸入資料庫和架構名稱 (database. 架構) 然後按一下 **[確定]**。  
   
 4.  [**架構對應**] 索引標籤上的目標變更。  
   

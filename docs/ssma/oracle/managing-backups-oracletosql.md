@@ -1,5 +1,5 @@
 ---
-title: 管理備份（OracleToSQL） |Microsoft Docs
+title: 管理 (OracleToSQL) 的備份 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Oracle Backup Management
 - SQL Server Backup Management
 ms.assetid: a1a03ef9-b6e8-4127-bad0-eae261251472
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: a11948b901e0f687b1daf537faa7b836c4618206
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: b9e091db3e04eb0b82458e60f860dfb829076863
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262974"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934719"
 ---
 # <a name="managing-backups-oracletosql"></a>管理備份 (OracleToSQL)
 Oracle 備份管理可讓您在執行測試之前或之後備份和還原資料表資料。 您也可以使用 [管理備份內容] 對話方塊來管理 [備份內容]。  

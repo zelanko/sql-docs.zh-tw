@@ -1,5 +1,5 @@
 ---
-title: SSMA for Sybase 主控台（SybaseToSQL）的消費者入門 |Microsoft Docs
+title: 消費者入門與 Sybase 主控台的 SSMA (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/30/2017
 ms.prod: sql
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Sybase Console,Output Conventions
 - Sybase Console,Procedure for Using Console
 ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: bad08c06028a64a0423135b15641ebf6fa4e895e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: a577a2b187112dd0b80cedf50d42d13112208970
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029116"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931551"
 ---
-# <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>使用 SSMA for Sybase 主控台（SybaseToSQL）消費者入門
+# <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>消費者入門與 Sybase 主控台的 SSMA (SybaseToSQL) 
 本節說明啟動和開始使用 SSMA for Sybase 主控台應用程式的程式。 這裡也列出一般 SSMA 主控台輸出視窗中使用的慣例。  
   
 ## <a name="launching-the-ssma-console"></a>啟動 SSMA 主控台  
@@ -30,7 +30,7 @@ ms.locfileid: "68029116"
   
 2.  按一下 [ **Sybase 命令提示**字元] 快捷方式的 [SQL Server 移轉小幫手]。  
   
-    它會顯示 SSMA 主控台的 [使用`(/? Help)`方式] 功能表，並協助您開始使用主控台應用程式。  
+    它會顯示 SSMA 主控台的 [使用方式] 功能表 `(/? Help)` ，並協助您開始使用主控台應用程式。  
   
 ## <a name="using-the-ssma-console"></a>使用 SSMA 主控台  
 在 Windows 系統上成功啟動主控台之後，您可以使用下列步驟來處理它：  
@@ -50,7 +50,7 @@ ms.locfileid: "68029116"
 2.  [產生報告](generating-reports-sybasetosql.md)以查看詳細的 xml 輸出報告，以進行評量/轉換和資料移轉。 您也可以針對 refresh 和同步處理命令產生詳細的錯誤報表。  
   
 ## <a name="ssma-console-output-conventions"></a>SSMA 主控台輸出慣例  
-執行 SSMA 指令碼命令和選項時，主控台程式會在主控台上顯示使用者的結果和訊息（資訊、錯誤等），或視需要將其重新導向至 xml 輸出檔。 輸出中的每個訊息類型都是以唯一的色彩表示。 例如，以白色顯示的文字訊息代表腳本檔案命令;綠色色彩中的一個代表使用者輸入的提示，依此類推。  
+在執行 SSMA 指令碼命令和選項時，主控台程式會在主控台上顯示結果和訊息 (資訊、) 錯誤等，或在必要時，將會重新導向至 xml 輸出檔。 輸出中的每個訊息類型都是以唯一的色彩表示。 例如，以白色顯示的文字訊息代表腳本檔案命令;綠色色彩中的一個代表使用者輸入的提示，依此類推。  
   
 ![SSMAConsoleOutput_Sybase](../../ssma/sybase/media/ssmaconsoleoutput_sybase.JPG "SSMAConsoleOutput_Sybase")  
   

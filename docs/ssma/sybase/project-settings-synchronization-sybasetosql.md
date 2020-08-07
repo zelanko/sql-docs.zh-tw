@@ -1,5 +1,5 @@
 ---
-title: 專案設定（同步處理）（SybaseToSQL） |Microsoft Docs
+title: " (同步處理的專案設定)  (SybaseToSQL) |Microsoft Docs"
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2cd6bc01-b8e5-4312-83a4-eac66dc1d460
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 663a4b1e49d1f81ce040254a2c8f39a1a1f84b38
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: b2237d2226644799b7360c53948ae2ecd9445cfa
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028681"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930737"
 ---
 # <a name="project-settings-synchronization-sybasetosql"></a>專案設定 (同步處理) (SybaseToSQL)
-[**專案設定**] 對話方塊的 [同步處理] 頁面包含自訂 SSMA 如何將資料庫物件（例如資料表和預存程式） [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]載入或 SQL Azure 的設定。  
+[**專案設定**] 對話方塊的 [同步處理] 頁面包含自訂 SSMA 如何將資料庫物件（例如資料表和預存程式）載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 的設定。  
   
 您可以存取兩個包含相同設定的不同同步處理頁面：  
   
@@ -25,9 +25,9 @@ ms.locfileid: "68028681"
   
 -   若要指定目前專案的設定，請在 [**工具**] 功能表上，選取 [**專案設定**]，然後選取左窗格底部的 **[同步**處理]。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **機會**  
-指定在將物件載入至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，SSMA 應該進行的嘗試次數。 目前嘗試[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中未載入的物件將會再次嘗試，直到 SSMA 達到目前同步處理常式的最大嘗試次數為止。  
+指定在將物件載入至時，SSMA 應該進行的嘗試次數 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 目前嘗試中未載入的物件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會再次嘗試，直到 SSMA 達到目前同步處理常式的最大嘗試次數為止。  
   
 ## <a name="synchronization-for-sql-server"></a>SQL Server 的同步處理  
 **重新整理本機和遠端物件變更上的本機物件**  

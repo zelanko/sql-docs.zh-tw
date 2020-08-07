@@ -1,5 +1,5 @@
 ---
-title: 功能表命令和其他快速鍵（DB2ToSQL） |Microsoft Docs
+title: 功能表命令和其他快速鍵 (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 13189359-73ff-45cf-8225-2a8f7194accc
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 8937eb796d75afdc404ef4815918245cda7f13a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 3622c9928946e8708097f535b311a70b2a996bf3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68074154"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933719"
 ---
-# <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>功能表命令和其他快速鍵（DB2ToSQL）
+# <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>功能表命令和其他快速鍵 (DB2ToSQL) 
 下列各節說明用來存取功能表命令的鍵盤快速鍵，以及 SSMA for DB2 應用程式的各種對話方塊中所使用的其他快速鍵。  
   
 ## <a name="file-menu-commands"></a>檔案功能表命令  
@@ -79,7 +79,7 @@ ms.locfileid: "68074154"
 |建立報表。|ALT + T + C|  
 |轉換架構。|ALT + T + N 或 CTRL + R|  
 |從 DB2 資料庫重新整理。|ALT + T + R|  
-|與 SQL Server 或 SQL Azure 資料庫同步處理。|ALT + T + S|  
+|與 SQL Server 或 Azure SQL Database 同步處理。|ALT + T + S|  
 |[另存新檔] 腳本。|ALT + T + A|  
 |遷移資料。|ALT + T + M|  
 |停止目前的作業。|ALT + T + O|  

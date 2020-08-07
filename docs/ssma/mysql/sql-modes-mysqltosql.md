@@ -1,5 +1,5 @@
 ---
-title: SQL 模式（MySQLToSQL） |Microsoft Docs
+title: SQL 模式 (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 2c9dbd2b42ebde4cdfea602c3ad50c4b7d100bb2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 4bc4b59984cc9e2e1f7a6c358f24e3fc0d2e86be
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67944650"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935097"
 ---
 # <a name="sql-modes-mysqltosql"></a>SQL 模式 (MySQLToSQL)
 適用于 MySQL 的 SSMA 可以在不同的 SQL 模式下運作，而且可以針對不同的用戶端以不同的方式套用這些模式。  
@@ -38,7 +38,7 @@ ms.locfileid: "67944650"
 ## <a name="inherited-sql-modes"></a>繼承的 SQL 模式  
 這些是 SQL 模式，繼承自對應的父節點。  
   
-除了函式類別、程式分類、事件類別目錄和觸發程式以外，這些 SQL 模式會出現在所有層級（資料庫、資料表類別、語句類別、Views 分類、資料表、視圖、函數、程式、UDF 和事件物件）。  
+除了函式類別、程式分類、事件類別目錄和觸發程式以外，這些 SQL 模式都會出現在所有層級 (資料庫、資料表類別、語句類別、Views 分類、資料表、視圖、函數、程式、UDF 和事件物件) 。  
   
 > [!NOTE]  
 > 藉由選取 [**繼承自父系**] 核取方塊，繼承的 SQL 模式可以繼承自父節點。 根據預設，此核取方塊會保持選取狀態。  

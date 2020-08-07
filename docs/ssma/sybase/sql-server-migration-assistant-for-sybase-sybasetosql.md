@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 59e63eac-8a7e-4d54-be1c-0633a9bf510d
-author: Jtoland
-ms.author: Jtoland
-manager: murato
-ms.openlocfilehash: c0f30c7ae5ab048c05431fa88f9122ca53e0a0ce
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 455f7b31ca4b64b92751551849fa22091c331892
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864735"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934607"
 ---
 # <a name="sql-server-migration-assistant-for-sybase-sybasetosql"></a>適用于 Sybase (SybaseToSQL 的 SQL Server 移轉小幫手) 
 

@@ -1,5 +1,5 @@
 ---
-title: 執行 SSMA 主控台（MySQLToSQL） |Microsoft Docs
+title: 執行 SSMA 主控台 (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Script file commands, Report commands
 - Script file commands, Script generation commands
 ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 239ba5021363be583572d5d24887233261e359cc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8cf2ded8823c03c5f002087277604ac65985aabc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76909688"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935593"
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>執行 SSMA 主控台 (MySQLToSQL)
 Microsoft 為您提供了一組健全的腳本檔案命令，以執行和控制 SSMA 活動。  
@@ -145,7 +145,7 @@ open-project：
   
 連接-來源-資料庫  
   
--   執行源資料庫的連接，並載入源資料庫的高層級中繼資料，但不是所有中繼資料。  
+-   執行源資料庫的連接，並載入源資料庫的高階中繼資料，但不是所有中繼資料。  
   
 -   如果無法建立與來源的連接，則會產生錯誤，而且主控台應用程式會停止執行。  
   
@@ -187,7 +187,7 @@ open-project：
   
 1.  重新連接至源資料庫，但不會載入任何中繼資料，而不像連接-來源資料庫命令。  
   
-2.  如果無法建立與來源的（re）連線，就會產生錯誤，而且主控台應用程式會停止執行。  
+2.  如果無法建立與來源的 (重新) 連接，就會產生錯誤，而且主控台應用程式會停止執行。  
   
 **指令碼**  
   
@@ -200,7 +200,7 @@ open-project：
   
 連接-目標-資料庫  
   
-1.  連接到目標 SQL Server 或 SQL Azure 資料庫，並載入目標資料庫的高階中繼資料，而不是整個中繼資料。  
+1.  連接到目標 SQL Server 或 Azure SQL Database，並載入目標資料庫的高階中繼資料，而不是整個中繼資料。  
   
 2.  如果無法建立與目標的連接，則會產生錯誤，而且主控台應用程式會停止執行。  
   
@@ -219,7 +219,7 @@ open-project：
   
 1.  會重新連接至目標資料庫，但不會載入任何中繼資料，不同于連接目標資料庫命令。  
   
-2.  如果無法建立（re）與目標的連接，則會產生錯誤，而且主控台應用程式會停止執行。  
+2.  如果無法建立 (重新) 與目標的連接，就會產生錯誤，而且主控台應用程式會停止執行。  
   
 **指令碼**  
   
@@ -244,25 +244,25 @@ open-project：
   
 **指令碼**  
   
-1.  `assessment-report-folder:`指定可儲存評量報告的資料夾。（選擇性屬性）  
+1.  `assessment-report-folder:`指定儲存評量報告的資料夾。 (選用屬性)   
   
-2.  `object-name:`指定針對評估報告產生所考慮的物件（可以有個別的物件名稱或群組物件名稱）。  
+2.  `object-name:`指定) 用於評估報告產生的物件 (s (它可以有個別的物件名稱或群組物件名稱) 。  
   
-3.  `object-type:`指定物件名稱屬性中指定之物件的類型（如果指定了物件類別，則物件類型將會是 "category"）。  
+3.  `object-type:`指定物件名稱屬性中指定的物件類型 (如果指定了物件類別，則物件類型將會是 "category" ) 。  
   
 4.  `assessment-report-overwrite:`指定是否要覆寫評估報告資料夾（如果已經存在）。  
   
-    **預設值：** false。 （選擇性屬性）  
+    **預設值：** false。  (選擇性屬性)   
   
 5.  `write-summary-report-to:`指定將產生摘要報告的路徑。  
   
-    如果只提及資料夾路徑，則依名稱**&lt;AssessmentReport n&gt;。** 已建立 XML。 （選擇性屬性）  
+    如果只提及資料夾路徑，則依名稱**AssessmentReport &lt; n &gt; 。** 已建立 XML。  (選擇性屬性)   
   
     報表建立有兩個進一步的子類別：  
   
-    -   `report-errors`（= "true/false"，預設值為 "false" （選擇性屬性））  
+    -   `report-errors` (= "true/false"，預設值為 "false" (選擇性屬性) # A3  
   
-    -   `verbose`（= "true/false"，預設值為 "false" （選擇性屬性））  
+    -   `verbose` (= "true/false"，預設值為 "false" (選擇性屬性) # A3  
   
 **語法範例：**  
   
@@ -318,25 +318,25 @@ open-project：
   
 **指令碼**  
   
-1.  `conversion-report-folder:`指定可儲存評量報告的資料夾。（選擇性屬性）  
+1.  `conversion-report-folder:`指定儲存評量報告的資料夾。 (選用屬性)   
   
-2.  `object-name:`指定轉換架構時所考慮的物件（它可以有個別物件名稱或群組物件名稱）。  
+2.  `object-name:`指定) 用於轉換架構的物件 (， (它可以有個別物件名稱或) 的群組物件名稱。  
   
-3.  `object-type:`指定物件名稱屬性中指定之物件的類型（如果指定了物件類別，則物件類型將會是 "category"）。  
+3.  `object-type:`指定物件名稱屬性中指定的物件類型 (如果指定了物件類別，則物件類型將會是 "category" ) 。  
   
 4.  `conversion-report-overwrite:`指定是否要覆寫評估報告資料夾（如果已經存在）。  
   
-    **預設值：** false。 （選擇性屬性）  
+    **預設值：** false。  (選擇性屬性)   
   
 5.  `write-summary-report-to:`指定將產生摘要報告的路徑。  
   
-    如果只提及資料夾路徑，則依名稱**&lt;SchemaConversionReport n&gt;。** 已建立 XML。 （選擇性屬性）  
+    如果只提及資料夾路徑，則依名稱**SchemaConversionReport &lt; n &gt; 。** 已建立 XML。  (選擇性屬性)   
   
     建立摘要報表有兩個額外的子類別：  
   
-    -   `report-errors`（= "true/false"，預設值為 "false" （選擇性屬性））  
+    -   `report-errors` (= "true/false"，預設值為 "false" (選擇性屬性) # A3  
   
-    -   `verbose`（= "true/false"，預設值為 "false" （選擇性屬性））  
+    -   `verbose` (= "true/false"，預設值為 "false" (選擇性屬性) # A3  
   
 **語法範例：**  
   
@@ -382,19 +382,19 @@ open-project：
   
 **指令碼**  
   
-1.  `object-name:`指定要用來遷移資料的來源物件（它可以有個別物件名稱或群組物件名稱）。  
+1.  `object-name:`指定 (s 的來源物件) 考慮遷移資料 (它可以有個別的物件名稱或群組物件名稱) 。  
   
-2.  `object-type:`指定物件名稱屬性中指定之物件的類型（如果指定了物件類別，則物件類型將會是 "category"）。  
+2.  `object-type:`指定物件名稱屬性中指定的物件類型 (如果指定了物件類別，則物件類型將會是 "category" ) 。  
   
 3.  `write-summary-report-to:`指定將產生摘要報告的路徑。  
   
-    如果只提及資料夾路徑，則依名稱**&lt;DataMigrationReport n&gt;。** 已建立 XML。 （選擇性屬性）  
+    如果只提及資料夾路徑，則依名稱**DataMigrationReport &lt; n &gt; 。** 已建立 XML。  (選擇性屬性)   
   
     報表建立有兩個進一步的子類別：  
   
-    -   `report-errors`（= "true/false"，預設值為 "false" （選擇性屬性））  
+    -   `report-errors` (= "true/false"，預設值為 "false" (選擇性屬性) # A3  
   
-    -   `verbose`（= "true/false"，預設值為 "false" （選擇性屬性））  
+    -   `verbose` (= "true/false"，預設值為 "false" (選擇性屬性) # A3  
   
 **語法範例：**  
   
@@ -476,9 +476,9 @@ open-project：
   
 **指令碼**  
   
-1.  `object-name:`指定與目標資料庫進行同步處理時所考慮的物件（可以有個別物件名稱或群組物件名稱）。  
+1.  `object-name:`指定 (s 的物件) 視為與目標資料庫同步處理 (它可以有個別物件名稱或) 的群組物件名稱。  
   
-2.  `object-type:`指定物件名稱屬性中指定之物件的類型（如果指定了物件類別，則物件類型將會是 "category"）。  
+2.  `object-type:`指定物件名稱屬性中指定的物件類型 (如果指定了物件類別，則物件類型將會是 "category" ) 。  
   
 3.  `on-error:`指定是否要將同步處理錯誤指定為警告或錯誤。 發生錯誤的可用選項：  
   
@@ -488,7 +488,7 @@ open-project：
   
     -   fail-腳本  
   
-4.  `report-errors-to:`指定同步處理作業的錯誤報表位置（選擇性屬性）。如果只指定資料夾路徑，則會建立依名稱**TargetSynchronizationReport**的檔案。  
+4.  `report-errors-to:`指定同步處理作業的錯誤報表位置 (選擇性屬性) 如果只指定資料夾路徑，則會建立依名稱**TargetSynchronizationReport.XML**的檔案。  
   
 **語法範例：**  
   
@@ -539,9 +539,9 @@ open-project：
   
 **指令碼**  
   
-1.  `object-name:`指定從源資料庫重新整理時所考慮的來源物件（可以有個別物件名稱或群組物件名稱）。  
+1.  `object-name:`指定來源物件 (s) 考慮從源資料庫重新整理， (它可以有個別的物件名稱或群組物件名稱) 。  
   
-2.  `object-type:`指定物件名稱屬性中指定之物件的類型（如果指定了物件類別，則物件類型將會是 "category"）。  
+2.  `object-type:`指定物件名稱屬性中指定的物件類型 (如果指定了物件類別，則物件類型將會是 "category" ) 。  
   
 3.  `on-error:`指定是否要將同步處理錯誤指定為警告或錯誤。 發生錯誤的可用選項：  
   
@@ -551,7 +551,7 @@ open-project：
   
     -   fail-腳本  
   
-4.  `report-errors-to:`指定同步處理作業的錯誤報表位置（選擇性屬性）。如果只指定資料夾路徑，則會建立依名稱**SourceDBRefreshReport**的檔案。  
+4.  `report-errors-to:`指定同步處理作業的錯誤報表位置 (選擇性屬性) 如果只指定資料夾路徑，則會建立依名稱**SourceDBRefreshReport.XML**的檔案。  
   
 需要一個或數個資料庫節點做為命令列參數。  
   
@@ -604,15 +604,15 @@ open-project：
   
 需要一個或數個資料庫節點做為命令列參數。  
   
-1.  `object-name:`指定要儲存其腳本的物件。 （它可以有個別物件名稱或群組物件名稱）  
+1.  `object-name:`指定要儲存腳本 (s) 的物件。  (可以有個別的物件名稱或群組物件名稱)   
   
-2.  `object-type:`指定物件名稱屬性中指定之物件的類型（如果指定了物件類別，則物件類型將會是 "category"）。  
+2.  `object-type:`指定物件名稱屬性中指定的物件類型 (如果指定了物件類別，則物件類型將會是 "category" ) 。  
   
 3.  `metabase:`指定它是否為來源或目標元資料庫。  
   
-4.  `destination:`指定要儲存腳本的路徑或資料夾，如果未指定檔案名，則為格式的檔案名（object_name 屬性值）。  
+4.  `destination:`指定要儲存腳本的路徑或資料夾，如果未指定檔案名，則格式為 (object_name 屬性值) 的檔案名。  
   
-5.  `overwrite:`如果為 true，則會覆寫是否有相同的檔案名。 它可以有值（true/false）。  
+5.  `overwrite:`如果為 true，則會覆寫是否有相同的檔案名。 它可以有 (true/false) 的值。  
   
 **語法範例：**  
   
@@ -654,27 +654,27 @@ convert-sql 語句
   
 2.  `destination`指定是否應該將輸出儲存在檔案中。  
   
-    如果未指定這個屬性，則會在主控台上顯示轉換的 T-sql 語句。 （選擇性屬性）  
+    如果未指定這個屬性，則會在主控台上顯示轉換的 T-sql 語句。  (選擇性屬性)   
   
-3.  `conversion-report-folder`指定可儲存評量報告的資料夾。（選擇性屬性）  
+3.  `conversion-report-folder`指定儲存評量報告的資料夾。 (選用屬性)   
   
 4.  `conversion-report-overwrite`指定是否要覆寫評估報告資料夾（如果已經存在）。  
   
-    **預設值：** false。 （選擇性屬性）  
+    **預設值：** false。  (選擇性屬性)   
   
-5.  `write-converted-sql-to`指定要儲存已轉換之 T-sql 的檔案（或）資料夾路徑。 當資料夾路徑與`sql-files`屬性一起指定時，每個來源檔案都會在指定的資料夾下建立對應的目標 t-sql 檔案。 當資料夾路徑與`sql`屬性一併指定時，已轉換的 t-sql 會寫入名為 Result 的檔案中指定的資料夾底下。  
+5.  `write-converted-sql-to`指定要儲存已轉換之 T-sql 的檔案 (或) 資料夾路徑。 當資料夾路徑與屬性一起指定時 `sql-files` ，每個來源檔案都會在指定的資料夾下建立對應的目標 t-sql 檔案。 當資料夾路徑與屬性一併指定時 `sql` ，已轉換的 t-sql 會寫入名為 Result 的檔案中指定的資料夾底下。  
   
 6.  `sql`指定要轉換的 MySQL sql 語句，可以使用 ";" 分隔一或多個語句  
   
 7.  `sql-files`指定必須轉換成 T-sql 程式碼之 sql 檔案的路徑。  
   
-8.  `write-summary-report-to`指定將產生摘要報告的路徑。 如果只提及資料夾路徑，則會建立依名稱**ConvertSQLReport**的檔案。 （選擇性屬性）  
+8.  `write-summary-report-to`指定將產生摘要報告的路徑。 如果只提及資料夾路徑，則會建立依名稱**ConvertSQLReport.XML**檔案。  (選擇性屬性)   
   
     報表建立還有2個進一步的子類別，視覺效果 ...：  
   
-    -   報告-錯誤（= "true/false"，預設值為 "false" （選擇性屬性））。  
+    -   報告-錯誤 (= "true/false"，預設值為 "false" (選擇性屬性) # A3。  
   
-    -   verbose （= "true/false"，預設值為 "false" （選擇性屬性））。  
+    -   verbose (= "true/false"，預設值為 "false" (選擇性屬性) # A3。  
   
 **指令碼**  
   

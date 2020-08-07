@@ -1,5 +1,5 @@
 ---
-title: SSMA 主控台中的命令列選項（SybaseToSQL） |Microsoft Docs
+title: SSMA 主控台中的命令列選項 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Sybase Console,Command Line Options
 ms.assetid: 337cbd26-67b7-4c88-9deb-d0a69a3d7714
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 285f5c58c94db0f5506f84d19c992dfcdbbd00d3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 5aef07e7b7d1d96d93fba34a376e5374b1754fce
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083479"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932129"
 ---
 # <a name="command-line-options-in-ssma-console-sybasetosql"></a>SSMA 主控台中的命令列選項 (SybaseToSQL)
 Microsoft 提供您一組健全的命令列選項，來執行和控制 SSMA 活動。 後續章節會詳細說明相同的情況。  
@@ -26,7 +26,7 @@ Microsoft 提供您一組健全的命令列選項，來執行和控制 SSMA 活�
   
 基於此章節的目的，「選項」一詞也稱為「參數」。  
   
--   選項不區分大小寫，而且開頭可能是 '**-**' 或 '**/**' 字元。  
+-   選項不區分大小寫，而且開頭可能是 ' **-** ' 或 ' **/** ' 字元。  
   
 -   如果指定了選項，就會強制指定對應的選項參數。  
   
@@ -123,7 +123,7 @@ Microsoft 提供您一組健全的命令列選項，來執行和控制 SSMA 活�
   
 您不能輸入任何其他選項或密碼做為命令列參數。 否則，它會導致錯誤。 如需詳細資訊，請參閱[管理密碼](managing-passwords-sybasetosql.md)一節。  
   
-以下是支援的子選項`-p/securepassword`：  
+以下是支援的子選項 `-p/securepassword` ：  
   
 -   針對指定的伺服器識別碼或伺服器連接檔案中定義的所有伺服器識別碼，將密碼新增至受保護的存放裝置。 下面的-overwrite 選項會更新密碼（如果已存在）：  
   

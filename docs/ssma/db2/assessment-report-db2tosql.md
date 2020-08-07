@@ -1,5 +1,5 @@
 ---
-title: 評量報告（DB2ToSQL） |Microsoft Docs
+title: 評量報告 (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 9e13eba0-e3cf-4205-974f-c00f982061de
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 7b95d5861b0041055b2936a5b1e601b60081124d
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 711c2437ba26e99050b281fec957198586c1284c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394688"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937127"
 ---
-# <a name="assessment-report-db2tosql"></a>評量報告（DB2ToSQL）
+# <a name="assessment-report-db2tosql"></a>評量報告 (DB2ToSQL) 
 [評估報告] 視窗會顯示資料庫物件轉換成語法的結果 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，也可以協助您估計遷移專案的複雜性和成本。  
   
 若要存取評量報告，請選取要在來源中繼資料瀏覽器中轉換的物件、以滑鼠右鍵按一下 [**架構**] 或 [**同義字**]，然後選取 [**建立報表**]。  

@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: ac993a6d-0283-4823-8793-6b217677dfa3
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: fb68a40da645046d94dcd5e8b14ac90f0c53d8bc
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 57a6f527da05c4f62d9055b70193af6ce74275f7
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87822600"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935490"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-mysqltosql"></a>將轉換的資料庫物件載入 SQL Server (MySQLToSQL)
-將 MySQL 資料庫轉換為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Sql azure 之後，您可以將產生的資料庫物件載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 sql azure 中。 您可以讓 SSMA 建立物件，也可以自行編寫物件的腳本並執行腳本。 此外，SSMA 也可讓您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 資料庫的實際內容來更新目標中繼資料。  
+將 MySQL 資料庫轉換為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Sql azure 之後，您可以將產生的資料庫物件載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 sql azure 中。 您可以讓 SSMA 建立物件，也可以自行編寫物件的腳本並執行腳本。 此外，SSMA 也可讓您使用或 Azure SQL Database 的實際內容來更新目標中繼資料 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="choosing-between-synchronization-and-scripts"></a>選擇同步處理和腳本  
 如果您想要將已轉換的資料庫物件載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 而不進行修改，您可以讓 SSMA 直接建立或重新建立資料庫物件。 該方法既快速又簡單，但不允許自訂定義 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 物件的 transact-sql 程式碼。  
@@ -25,10 +25,10 @@ ms.locfileid: "87822600"
 如果您想要修改用來建立物件的 Transact-sql，或如果您想要更充分掌控物件的建立，請使用 SSMA 來建立腳本。 接著，您可以修改這些腳本、個別建立每個物件，甚至使用 SQL Server Agent 來排程建立這些物件。  
   
 ## <a name="using-ssma-to-synchronize-objects-with-sql-server"></a>使用 SSMA 與 SQL Server 同步處理物件  
-若要使用 SSMA 來建立 SQL Server 或 SQL Azure 資料庫物件，請在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Sql Azure 中繼資料 Explorer 中選取物件，然後同步處理物件與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 sql Azure，如下列程式所示。 根據預設，如果物件已存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL azure 中，而且 SSMA 中繼資料有一些本機變更或這些物件定義的更新，則 SSMA 將會改變 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 sql Azure 中的物件定義。 您可以藉由編輯**專案設定**來變更預設行為。  
+若要使用 SSMA 來建立 SQL Server 或 Azure SQL Database 物件，請在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Sql Azure 中繼資料 Explorer 中選取物件，然後將物件與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 sql azure 同步處理，如下列程式所示。 根據預設，如果物件已存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL azure 中，而且 SSMA 中繼資料有一些本機變更或這些物件定義的更新，則 SSMA 將會改變 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 sql Azure 中的物件定義。 您可以藉由編輯**專案設定**來變更預設行為。  
   
 > [!NOTE]  
-> 您可以選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未從 MySQL 資料庫轉換的現有或 SQL Azure 資料庫物件。 不過，SSMA 不會重新建立或改變這些物件。  
+> 您可以選取現有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure SQL Database 不是從 MySQL 資料庫轉換的物件。 不過，SSMA 不會重新建立或改變這些物件。  
   
 ##### <a name="to-synchronize-objects-with-sql-server-or-sql-azure"></a>若要與 SQL Server 或 SQL Azure 同步處理物件  
   

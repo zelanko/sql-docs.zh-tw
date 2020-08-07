@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Getting started, SQL Server or SQL Azure metadata explorer
 - Getting started,Installing and licensing
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c1cc8f5ddbe1efc1a1038bf2e9d6595e31ff3102
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 1dee948ce6b0cd36191fc13421fcfdfaa07138ac
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823648"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935494"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>開始使用 SSMA for MySQL (MySQLToSQL)
 適用于 MySQL 的 SQL Server 移轉小幫手 (SSMA) 可讓您快速將 MySQL 資料庫架構轉換成 SQL Server 或 Azure SQL Database 架構、將產生的架構上傳至 SQL Server 或 Azure SQL Database，以及將資料從 MySQL 遷移至 SQL Server 或 Azure SQL Database。  
@@ -108,7 +108,7 @@ SSMA 有兩個工具列： [專案] 工具列和 [遷移] 工具列。
   
 |||  
 |-|-|  
-|**功能表**|**描述**|  
+|**功能表**|**說明**|  
 |**檔案**|包含用來處理專案、連接到 MySQL，以及連接到 SQL Server 或 Azure SQL Database 的命令。|  
 |**編輯**|包含在 [詳細資料] 頁面中尋找和使用文字的命令。 若要開啟 [**管理書簽**] 對話方塊，請按一下 [編輯] 功能表上的 [管理書簽]。 在對話方塊中，您會看到現有書簽的清單。 您可以使用對話方塊右側的按鈕來管理書簽。|  
 |**檢視**|包含**同步處理中繼資料**的流覽命令。 這會同步處理 MySQL Metadata Explorer 和 SQL Server 之間的物件，或 Azure SQL Database 的中繼資料 Explorer。 也包含用來顯示和隱藏 [**輸出**] 和 [**錯誤清單**] 窗格的命令，以及用來管理版面配置的選項**版面**配置。|  

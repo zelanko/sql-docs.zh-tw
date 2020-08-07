@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Mapping Sybase ASE Schemas to SQL Server Schemas
 - Type Mapping Settings
 ms.assetid: 784365d3-df4e-47ab-8ee0-d8392b52f510
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 11d17d35dd8118c2afb9310ffcc45dcbea021f6c
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 174f16b2b5a901b06f292f5bf53391fb7685eef1
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865356"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931119"
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>對應 Sybase ASE 和 SQL Server 資料類型 (SybaseToSQL)
-Sybase 彈性伺服器企業 (ASE) 資料庫類型與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 資料庫類型不同。 當您將 ASE 資料庫物件轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Sql azure 物件時，您必須指定如何將 ase 中的資料類型對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 sql azure。 您可以接受預設資料類型對應，也可以自訂對應，如下列各節所示。  
+Sybase 彈性伺服器企業 (ASE) 資料庫類型與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure SQL Database 類型不同。 當您將 ASE 資料庫物件轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Sql azure 物件時，您必須指定如何將 ase 中的資料類型對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 sql azure。 您可以接受預設資料類型對應，也可以自訂對應，如下列各節所示。  
   
 ## <a name="default-mappings"></a>預設對應  
 SSMA 有一組預設的資料類型對應。 如需預設對應的清單，請參閱[專案設定 &#40;類型對應&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md)。  

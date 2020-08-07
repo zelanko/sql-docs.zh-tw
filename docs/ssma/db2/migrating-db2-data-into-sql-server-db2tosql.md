@@ -1,5 +1,5 @@
 ---
-title: 將 DB2 資料移轉至 SQL Server （DB2ToSQL） |Microsoft Docs
+title: 將 DB2 資料移轉至 SQL Server (DB2ToSQL) |Microsoft Docs
 description: 瞭解如何在同步處理已轉換的物件之後，將資料從 DB2 資料庫移轉至 SQL Server 或 Azure SQL Database。
 ms.prod: sql
 ms.custom: ''
@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 86cbd39f-6dac-409a-9ce1-7dd54403f84b
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 408bf80b8c8a6f70488333f476422dedb9db1887
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c4d2511774944e7115172dda7832b10ed967cf1f
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293965"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933785"
 ---
-# <a name="migrating-db2-data-into-sql-server-db2tosql"></a>將 DB2 資料移轉至 SQL Server （DB2ToSQL）
+# <a name="migrating-db2-data-into-sql-server-db2tosql"></a>將 DB2 資料移轉至 SQL Server (DB2ToSQL) 
 當您成功地同步處理已轉換的物件之後 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，您可以將資料從 DB2 遷移至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 > [!IMPORTANT]  
@@ -26,7 +26,7 @@ ms.locfileid: "84293965"
 ## <a name="setting-migration-options"></a>設定遷移選項  
 將資料移轉至之前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請在 [**專案設定**] 對話方塊中，檢查項目遷移選項。  
   
--   藉由使用此對話方塊，您可以設定選項，例如遷移批次大小、資料表鎖定、條件約束檢查、null 值處理和識別值處理。 如需專案遷移設定的詳細資訊，請參閱[專案設定（遷移）](https://msdn.microsoft.com/48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae)。  
+-   藉由使用此對話方塊，您可以設定選項，例如遷移批次大小、資料表鎖定、條件約束檢查、null 值處理和識別值處理。 如需專案遷移設定的詳細資訊，請參閱[ (遷移) 的專案設定](https://msdn.microsoft.com/48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae)。  
   
 -   [**專案設定**] 對話方塊中的 [**遷移引擎**] 可讓使用者使用兩種類型的資料移轉引擎來執行遷移程式：  
   
@@ -93,7 +93,7 @@ ms.locfileid: "84293965"
   
     若要連接到目標資料庫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請在 [**連接到 SQL Server** ] 對話方塊中輸入連接認證，然後按一下 [**連接]**。 如需有關連接到的詳細資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱[連接到 SQL Server](https://msdn.microsoft.com/b59803cb-3cc6-41cc-8553-faf90851410e)  
   
-    訊息將會出現在 [**輸出**] 窗格中。 當遷移完成時，就會顯示**資料移轉報表**。 如果有任何資料未遷移，請按一下包含錯誤的資料列，然後按一下 [**詳細**資料]。 當您完成報表時，請按一下 [**關閉**]。 如需資料移轉報告的詳細資訊，請參閱[資料移轉報告（SSMA 一般）](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
+    訊息將會出現在 [**輸出**] 窗格中。 當遷移完成時，就會顯示**資料移轉報表**。 如果有任何資料未遷移，請按一下包含錯誤的資料列，然後按一下 [**詳細**資料]。 當您完成報表時，請按一下 [**關閉**]。 如需資料移轉報告的詳細資訊，請參閱[資料移轉報告 (SSMA 常見) ](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
   
 > [!NOTE]  
 > 當 SQL Express edition 做為目標資料庫使用時，只允許用戶端資料移轉，而且不支援伺服器端資料移轉。  

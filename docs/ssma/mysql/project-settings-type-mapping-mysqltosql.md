@@ -1,5 +1,5 @@
 ---
-title: 專案設定（類型對應）（MySQLToSQL） |Microsoft Docs
+title: 專案設定 (類型對應)  (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 7add1259778bf189c981d5b302e989bf7bc233c3
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 79c86ee63638dcc520aa9bb590b8a616172cb1e4
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396558"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935173"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>專案設定 (類型對應) (MySQLToSQL)
 [類型對應專案] 設定可讓您設定 SSMA 專案的預設類型對應。  
@@ -100,7 +100,7 @@ ms.locfileid: "87396558"
 |float [*.。53]|float [53]|  
 |int|int|  
 |int [*.。255]|int|  
-|integer|int|  
+|整數|int|  
 |整數 [*.。255]|int|  
 |longblob|varbinary(max)|  
 |longtext|nvarchar(max)|  

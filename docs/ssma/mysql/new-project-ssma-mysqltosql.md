@@ -1,5 +1,5 @@
 ---
-title: 新增專案（SSMA）（MySQLToSQL） |Microsoft Docs
+title: 新專案 (SSMA)  (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 7a3846ee-b221-47a5-ac8c-d08a962931af
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 4ef40fbc5acafeaaba76953940f763c663cb121c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 1d1e6b634fbb5c131e7f9e7ffdce1c374ca40162
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67908849"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935297"
 ---
 # <a name="new-project-ssma-mysqltosql"></a>新增專案 (SSMA) (MySQLToSQL)
 使用 [**新增專案**] 對話方塊來建立新的 SSMA 專案。 若要存取 [**新增專案**] 對話方塊，請**在 [檔案] 功能表上**，按一下 [**新增專案**]。  

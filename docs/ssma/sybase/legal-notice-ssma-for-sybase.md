@@ -1,5 +1,5 @@
 ---
-title: 法律注意事項（適用于 Sybase 的 SSMA） |Microsoft Docs
+title: Sybase)  (SSMA 的法律聲明 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: fe086e53-e2a9-4bb8-9534-94369d32ab41
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c65cc8fa51061ba9f8886bf81e0fa80d53781f91
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 6d768560eed48d70bf8d0d9ef7339fed9a231844
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028956"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931213"
 ---
 # <a name="legal-notice-ssma-for-sybase"></a>法律注意事項 (SSMA for Sybase)
 本文件集 (包括其中所用的範例應用程式) 僅為資訊用途而提供，本文件集亦不提供任何明示或默示之擔保。 本文件集中的資訊，包括 URL 及其他網際網路網站參考資料，如有變更恕不另行通知。 本文件集之使用或因使用本文件集所衍生之一切後果，概由使用者自行承擔所有風險。  

@@ -18,12 +18,12 @@ ms.assetid: 4620f03f-1193-43e7-ba19-ad022737d300
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c0ef8694db1d2f5feb4a994fa2fb557a9a7b187
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 7a0d18e8adff256ab9bc29e4c763989e008adeec
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247947"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87941549"
 ---
 # <a name="information-in-ole-db-defined-error-interfaces"></a>OLE DB 定義的錯誤介面中的資訊
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "87247947"
 |成員函數|描述|  
 |---------------------|-----------------|  
 |**GetBasicErrorInfo**|以有關錯誤的基本資訊填入 ERRORINFO 結構。 ERRORINFO 結構所包含的成員會識別錯誤的 HRESULT 傳回值，以及該錯誤適用的提供者和介面。|  
-|**GetCustomErrorObject**|在 **ISQLErrorInfo** 和 [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 介面上傳回參考。|  
+|**GetCustomErrorObject**|在 **ISQLErrorInfo** 和 [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) 介面上傳回參考。|  
 |**GetErrorInfo**|在 **IErrorInfo** 介面上傳回參考。|  
 |**GetErrorParameters**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者不會透過**GetErrorParameters**將參數傳回給取用者。|  
 |**GetRecordCount**|可用錯誤記錄的計數。|  

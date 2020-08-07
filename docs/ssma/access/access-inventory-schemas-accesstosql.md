@@ -1,5 +1,5 @@
 ---
-title: 存取清查架構（AccessToSQL） |Microsoft Docs
+title: 存取清查架構 (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -34,17 +34,17 @@ helpviewer_keywords:
 - SSMA_Access_InventoryTables
 - tables, inventory
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c140489877be5f34bc6d7a5b20a4ce36fdb3820f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: caf6c1045b02a84cf2dec0aba56c5c1c050277c1
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68068949"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934149"
 ---
-# <a name="access-inventory-schemas-accesstosql"></a>存取清查架構（AccessToSQL）
-下列各節說明當您將存取架構匯出至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，SSMA 所建立的資料表。  
+# <a name="access-inventory-schemas-accesstosql"></a>存取清查架構 (AccessToSQL) 
+下列各節說明當您將存取架構匯出至時，SSMA 所建立的資料表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="databases"></a>資料庫  
 資料庫中繼資料會匯出至**SSMA_Access_InventoryDatabases**資料表。 此資料表包含下列資料行：  
@@ -79,7 +79,7 @@ ms.locfileid: "68068949"
 |**DatabaseId**|**uniqueidentifier**|識別包含此資料表的資料庫。|  
 |**TableId**|**uniqueidentifier**|可唯一識別資料表的 GUID。 此資料行也是資料表的主要索引鍵。|  
 |**TableName**|**nvarchar(4000)**|資料表的名稱。|  
-|**RowsCount**|**int**|資料表中的資料列數。|  
+|**RowsCount**|**int**|表格中的列數。|  
 |**有效性**|**nvarchar(4000)**|定義資料表有效輸入的規則。 如果沒有驗證規則存在，此欄位將會包含空字串。|  
 |**LinkedTable**|**nvarchar(4000)**|與資料表連結的另一個資料表（如果有的話）。 連結資料表可讓您使用此資料表來新增、刪除和更新其他資料表。|  
 |**ExternalSource**|**nvarchar(4000)**|與資料表相關聯的資料來源（如果有的話）。 如果資料表已連結，它會在此欄位中指定外部資料源。|  
@@ -92,11 +92,11 @@ ms.locfileid: "68068949"
 |**DatabaseId**|**uniqueidentifier**|識別包含此資料行的資料庫。|  
 |**TableId**|**uniqueidentifier**|識別包含此資料行的資料表。|  
 |**ColumnId**|**int**|用來識別資料行的遞增整數。 **ColumnId**是資料表的主要索引鍵。|  
-|**ColumnName**|**nvarchar(4000)**|資料行的名稱。|  
+|**ColumnName**|**nvarchar(4000)**|資料行名稱。|  
 |**IsNullable**|**bit**|指定資料行是否可以包含 null 值。 如果值為1，則資料行可以包含 null 值。 如果值為0，則資料行不能包含 null 值。 請注意，驗證規則也可以用來防止 null 值。|  
 |**DataType**|**nvarchar(4000)**|資料行的存取資料類型，例如**Text**或**Long**。|  
 |**IsAutoIncrement**|**bit**|指定資料行是否自動遞增整數值。 如果值為1，則整數會自動遞增。|  
-|**序數**|**smallint**|資料表中的資料行順序，從零開始。|  
+|**序列**|**smallint**|資料表中的資料行順序，從零開始。|  
 |**DefaultValue**|**nvarchar(4000)**|資料行的預設值。|  
 |**有效性**|**nvarchar(4000)**|用來驗證資料行中加入或更新之資料的規則。|  
   

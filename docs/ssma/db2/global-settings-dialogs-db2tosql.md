@@ -1,5 +1,5 @@
 ---
-title: 全域設定（對話方塊）（DB2ToSQL） |Microsoft Docs
+title: 全域設定 (對話方塊)  (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,21 +7,21 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 360e01bb-6347-4e2b-acda-0daa161ed33b
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: de6df03f894d43819cf9d27be3fd35a977631f29
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 10039fcd13a50a85b92b83598e17f1a821a14672
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67989636"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933759"
 ---
-# <a name="global-settings-dialogs-db2tosql"></a>全域設定（對話方塊）（DB2ToSQL）
+# <a name="global-settings-dialogs-db2tosql"></a> (對話方塊的全域設定)  (DB2ToSQL) 
 使用 [**通用設定**] 對話方塊的 [對話方塊] 頁面，即可指定 SSMA 的預設使用者動作和警告設定。  
   
 若要存取 [**工具**] 功能表上的對話方塊設定，請選取 [**全域設定**]，按一下左窗格底部的 [ **GUI** ]，然後選取 [**對話方塊**]。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **在覆寫物件之前發出警告**  
 當 SSMA 將物件轉換成 SQL Server 時，某些物件可能已經存在於專案的 SQL Server 中繼資料中。 這些物件可能已經轉換，或物件在目標架構中的名稱可能與您要轉換的物件相同。  
   

@@ -1,5 +1,5 @@
 ---
-title: 儲存中繼資料（OracleToSQL） |Microsoft Docs
+title: 將中繼資料儲存 (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 9e49c25f-9216-43f4-8e99-2eaab298e215
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 7e45f85a26d2beaaba552707681e574bae4795cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: d7287c5ed79834629c5cded6e29b87cf46d0e9ef
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266512"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932849"
 ---
 # <a name="save-metadata--oracletosql"></a>儲存中繼資料 (OracleToSQL)
 [**儲存中繼資料**] 對話方塊會提示您將中繼資料載入至 SSMA 專案，然後再加以儲存。 這可讓您擁有可離線使用並傳送給其他人（例如技術支援人員）的完整專案檔案。  
@@ -34,7 +34,7 @@ SSMA 會視需要將中繼資料載入專案。 當您流覽中繼資料和轉�
 **全選**  
 選取所有列出的資料庫。  
   
-**明確**  
+**清除**  
 清除所有遺失中繼資料之資料庫的核取方塊。 如果已載入中繼資料，則無法清除此核取方塊。  
   
 **儲存**  

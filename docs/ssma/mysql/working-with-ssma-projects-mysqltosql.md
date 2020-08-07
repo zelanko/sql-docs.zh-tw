@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Working with SSMA projects, Open project
 - Working with SSMA projects, Save project
 ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 2d9bec916103214169f549a0b555a46fd0d65fdb
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 98315541dc7eb2df1e77e32bcd34744b98708557
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87862439"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935117"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>使用 SSMA 專案 (MySQLToSQL)
 若要將 MySQL 資料庫遷移至 SQL Server 或 SQL Azure，您必須先建立 SSMA 專案。 專案是包含下列資訊的檔案：  
@@ -105,7 +105,7 @@ SSMA 會建立專案檔。
   
 1.  針對顯示 [**中繼資料遺失**] 狀態的每個資料庫，選取資料庫名稱旁邊的核取方塊。 儲存中繼資料可能需要幾分鐘的時間。 如果您不想在此時儲存中繼資料，請不要選取任何核取方塊。  
   
-2.  按一下 [儲存]。  
+2.  按一下 **[儲存]** 。  
   
 SSMA 將會剖析 MySQL 架構，並將中繼資料儲存至專案檔。  
   

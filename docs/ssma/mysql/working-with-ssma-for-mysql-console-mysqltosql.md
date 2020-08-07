@@ -1,5 +1,5 @@
 ---
-title: 使用 SSMA for MySQL 主控台（MySQLToSQL） |Microsoft Docs
+title: 使用 SSMA for MySQL 主控台 (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/15/2017
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 240aaad1-d65d-4dea-b60b-315cb1ac733d
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: dbff8b99dffebdc32e3d4d7e681eccc451899016
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 757bcd943b1af7c428d666fecacdaf6db7afcae3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394949"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935137"
 ---
 # <a name="working-with-ssma-for-mysql-console-mysqltosql"></a>使用 SSMA for MySQL 主控台 (MySQLToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]適用于 MySQL 的移轉小幫手（SSMA）現在可透過主控台應用程式在命令列中進行存取。 腳本檔案會形成應用程式用來執行命令的輸入。 做為主控台應用程式，SSMA 可啟用腳本層級的互動、減少遷移週期，並調整遷移工作。  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]適用于 MySQL 的移轉小幫手 (SSMA) 現在可透過主控台應用程式在命令列中進行存取。 腳本檔案會形成應用程式用來執行命令的輸入。 做為主控台應用程式，SSMA 可啟用腳本層級的互動、減少遷移週期，並調整遷移工作。  
   
 本節說明使用 SSMA 主控台應用程式來遷移 MySQL 資料庫的程式。  
   
