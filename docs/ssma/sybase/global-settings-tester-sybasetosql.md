@@ -1,5 +1,5 @@
 ---
-title: 全域設定（測試器）（SybaseToSQL） |Microsoft Docs
+title: " (測試人員的全域設定)  (SybaseToSQL) |Microsoft Docs"
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -7,21 +7,21 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 6f0b9cea-5a24-4e42-8bbf-c4516b00da23
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 0070dbed0b683b37c0280b9948ff4b592fea9084
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: f1ebf6d1122db6b28b13c33320dabef520a40f5a
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028989"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931285"
 ---
 # <a name="global-settings-tester-sybasetosql"></a>全域設定 (測試器) (SybaseToSQL)
 使用 [**通用設定**] 對話方塊的 [測試人員] 頁面，即可指定 SSMA 測試人員的設定。  
   
 若要存取測試人員設定，請在 [**工具**] 功能表上選取 [**通用設定**]，然後按一下左窗格底部的 [**測試人員**]。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **可測試的物件分析**  
 此設定指定是否要執行可測試物件的分析。 如果您想要讓 SSMA 測試人員分析並自動檢查相依物件，請選取 **[是]** 。 預設選項群組為 **[是]**。  
   

@@ -8,16 +8,16 @@ ms.suite: sql
 ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-author: HJToland3
-ms.author: jtoland
+author: pochiraju
+ms.author: rajpo
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 09f8ab0b3f4950e06c96b67c74f9cdcbc09269d5
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: 7a50504923a825a437ea4456a1bb9394cd0635db
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565565"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87951323"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant-sql-server"></a>在資料庫測試助理 (SQL Server 中建立分析報表) 
 

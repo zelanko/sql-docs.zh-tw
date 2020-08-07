@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Project Settings dialog box, SQL Azure
 - SQL Azure settings
 ms.assetid: bbb8a204-d0e4-4f0b-9709-271feb1f136e
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 67d80ae6457a4b02e4520d634acfb5f06aa747ec
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 3dd47039f6bbfaa15eb16776487191a66a17db59
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823927"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937577"
 ---
 # <a name="project-settings-azure-sql-database-accesstosql"></a>專案設定 (Azure SQL Database)  (AccessToSQL) 
-SQL Azure 專案設定可讓您設定要在連接對話方塊中新增的 SQL Azure 資料庫尾碼，同時也允許在 SQL Azure 連線中執行「心跳」機制。  
+[SQL Azure 專案設定] 可讓您設定要在連接對話方塊中加入的 Azure SQL Database 尾碼，同時也允許在 SQL Azure 連線中執行「心跳」機制。  
   
 [SQL Azure] 窗格可在 [**專案設定**] 和 [**預設專案設定**] 對話方塊中取得。  
   
@@ -30,7 +30,7 @@ SQL Azure 專案設定可讓您設定要在連接對話方塊中新增的 SQL Az
   
 ## <a name="options"></a>選項。  
   
-## <a name="connectivity"></a>連接性  
+## <a name="connectivity"></a>連線能力  
 **心跳間隔**  
   
 指定時間間隔，以用於讓 SQL Azure 連線以「分鐘：秒」格式保持運作的狀態。  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 0b589d9f5bf90b78d6689ff3b37f09f15fe344b8
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: a4fdc0343d1346833fd58c4e2fa0240e1a2af668
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864915"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87950973"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>從命令列執行 Data Migration Assistant
 
@@ -106,7 +106,7 @@ Catalog=DatabaseName;Integrated Security=true"
 /AssessmentResultCsv="C:\\temp\\Results\\AssessmentReport.csv"
 ```
 
-**目標平臺 SQL Azure 資料庫的單一資料庫評估，將結果儲存至 json 和 .csv 檔案**
+**目標平臺的單一資料庫評估 Azure SQL Database，將結果儲存至 json 和 .csv 檔案**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment" 
@@ -155,7 +155,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 
 ```
 
-**目標平臺 SQL Azure 資料庫的單一資料庫評估，將結果儲存至 json 和 .csv 檔案**
+**目標平臺的單一資料庫評估 Azure SQL Database，將結果儲存至 json 和 .csv 檔案**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment" 
@@ -304,7 +304,7 @@ DmaCmd.exe
 |`/SkuRecommendationSubscriptionId` | 訂閱識別碼。 | Y <br> 最新價格的 () 
 |`/SkuRecommendationDatabasesToRecommend` |  (的以空格分隔的資料庫清單，例如 "Database1" "Database2" "Database3" ) 。 名稱區分大小寫，且必須以雙引號括住。 如果省略，則會為所有資料庫提供建議。 | N
 |`/AzureAuthenticationTenantId` | 驗證租使用者。 | Y <br> 最新價格的 () 
-|`/AzureAuthenticationClientId` | 用於驗證之 AAD 應用程式的用戶端識別碼。 | Y <br> 最新價格的 () 
+|`/AzureAuthenticationClientId` | 用於驗證之 Azure AD 應用程式的用戶端識別碼。 | Y <br> 最新價格的 () 
 |`/AzureAuthenticationInteractiveAuthentication` | 設定為 true 會快顯視窗。 | Y <br> 最新價格的 ()  <br> (挑選3個驗證選項之一-選項 1) 
 |`/AzureAuthenticationCertificateStoreLocation` | 將設定為憑證存放區位置 (例如 "CurrentUser" ) 。 | Y <br>最新價格的 ()  <br>  (挑選3個驗證選項之一-選項 2) 
 |`/AzureAuthenticationCertificateThumbprint` | 設定為憑證指紋。 | Y <br> 最新價格的 ()  <br> (挑選3個驗證選項之一-選項 2) 

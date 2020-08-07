@@ -1,5 +1,5 @@
 ---
-title: 選取並設定受影響的物件（SybaseToSQL） |Microsoft Docs
+title: 選取並設定受影響的物件 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Tester Component,Affected Objects
 ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3aa7ccc8d559f7017fd2a9bf0bc20bc7ae191c46
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c9efc329f80e880a58ec9926db677c4a71604e2c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020995"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930420"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>選取並設定受影響的物件 (SybaseToSQL)
 在此頁面中，您可以選取資料表和外鍵，當 SSMA 驗證在上一個步驟中所選物件的執行結果時，應該比較的變更。 此外，您也可以自訂驗證參數。  
@@ -26,20 +26,20 @@ ms.locfileid: "68020995"
   
 如果 SSMA 測試人員無法驗證任何這些物件，您會在 [物件] 樹狀目錄底下看到標示為 [**某些選取的物件**] 的連結包含錯誤。 按一下此連結可查看無法比較這些物件的原因，以及清除錯誤物件的選取專案。  
   
-## <a name="table"></a>Table  
+## <a name="table"></a>資料表  
 [資料表] 索引標籤包含所選資料表的方格視圖。 方格包含下列有關所選資料表的資訊：  
   
 -   資料行名稱  
   
 -   資料類型  
   
--   Precision  
+-   精確度  
   
 -   調整  
   
 -   規則  
   
--   預設  
+-   預設值  
   
 -   身分識別  
   
@@ -110,9 +110,9 @@ ms.locfileid: "68020995"
 -   如果您選擇 [ **False**]，則比較將會考慮字母大小寫。  
   
 ## <a name="comparing-sql"></a>比較 SQL  
-您可以在 [**比較 SQL** ] 頁面上，查看 SSMA 測試人員所產生的 SELECT 語句。 測試人員會以逐列方式比較這些語句的結果集。 Sybase 結果集的每個下一個資料列都應該等於中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所產生之結果集的下一個資料列。  
+您可以在 [**比較 SQL** ] 頁面上，查看 SSMA 測試人員所產生的 SELECT 語句。 測試人員會以逐列方式比較這些語句的結果集。 Sybase 結果集的每個下一個資料列都應該等於中所產生之結果集的下一個資料列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-您可以編輯這些 SELECT 語句來提供自訂驗證。 若要在 Sybase 和語句中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]儲存變更，請相對地使用來源和目標 SQL 底下的 [套用] 按鈕。 **Apply**  
+您可以編輯這些 SELECT 語句來提供自訂驗證。 若要在 Sybase 和語句中儲存變更，請相對地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用來源和目標 SQL 底下的 [套用] 按鈕。 **Apply**  
   
 ## <a name="next-step"></a>後續步驟  
 [自訂呼叫順序 &#40;SybaseToSQL&#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)  

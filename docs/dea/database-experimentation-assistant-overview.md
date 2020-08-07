@@ -7,16 +7,16 @@ ms.suite: sql
 ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-author: HJToland3
-ms.author: rajsell
+author: pochiraju
+ms.author: rajpo
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 94bfd77da2658a4cb6b0e5e07868605f1c12140c
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: 7362bc8069291d2e7d99399180cc147a38217d93
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565548"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87951243"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>資料庫測試助理總覽
 

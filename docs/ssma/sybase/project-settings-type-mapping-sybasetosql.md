@@ -1,5 +1,5 @@
 ---
-title: 專案設定（類型對應）（SybaseToSQL） |Microsoft Docs
+title: 專案設定 (類型對應)  (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d7b16bdf3717fa14f91af41663cbd65365eac52a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 12002496f30d836f01d0b11f4007f63f018266e9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028657"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930726"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>專案設定 (類型對應) (SybaseToSQL)
-[**專案設定**] 對話方塊的 [類型對應] 頁面包含自訂 SSMA 如何將 Sybase 調適型伺服器 ENTERPRISE （ASE）資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]類型轉換成資料類型的設定。  
+[**專案設定**] 對話方塊的 [類型對應] 頁面包含自訂 SSMA 如何將 Sybase 自動調整伺服器 ENTERPRISE (ASE) 資料類型轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型的設定。  
   
 [類型對應] 頁面可在 [**專案設定**] 和 [**預設專案設定**] 對話方塊中取得。  
   
@@ -25,12 +25,12 @@ ms.locfileid: "68028657"
   
 -   若要指定目前專案的設定，請在 [**工具**] 功能表上，選取 [**專案設定**]，然後選取左窗格底部的 [**類型對應**]。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **來源類型**  
 對應的 ASE 資料類型。  
   
 **目標型別**  
-指定 ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型的目標資料類型。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定 ASE 資料類型的目標資料類型。  
   
 如需 Sybase 類型對應的預設 SSMA，請參閱下一節中的表格。  
   
@@ -47,99 +47,99 @@ ms.locfileid: "68028657"
 按一下即可將 [類型對應] 清單重設為 SSMA 預設值。  
   
 ## <a name="default-type-mapping"></a>預設型別對應  
-下表包含 ASE 與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型之間的預設型別對應。  
+下表包含 ASE 與資料類型之間的預設型別對應 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 |ASE 資料類型|SQL Server 資料類型|  
 |-----------------|------------------------|  
 |**bigint**|**bigint**|  
 |**binary**|**binary**|  
-|**binary [\*.。8000]**|**binary [\*]**|  
-|**binary [8001 ...\*]**|**varbinary(max)**|  
+|**binary [ \* .。8000]**|**binary [ \* ]**|  
+|**binary [8001 ... \* ]**|**varbinary(max)**|  
 |**bit**|**bit**|  
 |**char**|**char**|  
 |**char varying**|**varchar**|  
-|**char 改變 [\*.。8000]**|**Varchar [\*]**|  
-|**char 改變 [8001 ...\*]**|**varchar(max)**|  
-|**char [\*.。8000]**|**char [\*]**|  
-|**char [8001 ...\*]**|**varchar(max)**|  
+|**char 改變 [ \* .。8000]**|**Varchar [ \* ]**|  
+|**char 改變 [8001 ... \* ]**|**varchar(max)**|  
+|**char [ \* .。8000]**|**char [ \* ]**|  
+|**char [8001 ... \* ]**|**varchar(max)**|  
 |**字母**|**char**|  
 |**character varying**|**varchar**|  
-|**字元變動 [\*.。8000]**|**Varchar [\*]**|  
-|**字元變動 [8001 ...\*]**|**varchar(max)**|  
-|**字元 [\*.。8000]**|**char [\*]**|  
-|**字元 [8001 ...\*]**|**varchar(max)**|  
+|**字元變動 [ \* .。8000]**|**Varchar [ \* ]**|  
+|**字元變動 [8001 ... \* ]**|**varchar(max)**|  
+|**字元 [ \* .。8000]**|**char [ \* ]**|  
+|**字元 [8001 ... \* ]**|**varchar(max)**|  
 |**date**|**date**|  
 |**datetime**|**datetime2 [3]**|  
 |**十進位**|**decimal**|  
-|**dec [\*.。\*]**|**decimal [\*]**|  
-|**dec [\*.。\*][\*..\*]**|**decimal [\*] [\*]**|  
+|**dec [ \* ... \* ]**|**decimal [ \* ]**|  
+|**dec [ \* ... \* ][\*..\*]**|**decimal [ \* ] [ \* ]**|  
 |**decimal**|**decimal**|  
-|**decimal [\*.。\*]**|**decimal [\*]**|  
-|**decimal [\*.。\*][\*..\*]**|**decimal [\*] [\*]**|  
+|**decimal [ \* ... \* ]**|**decimal [ \* ]**|  
+|**decimal [ \* ... \* ][\*..\*]**|**decimal [ \* ] [ \* ]**|  
 |**雙精確度**|**float [53]**|  
 |**float**|**float [53]**|  
-|**float [\*.。次**|**float [24]**|  
-|**float [16 ...\*]**|**float [53]**|  
+|**float [ \* .。次**|**float [24]**|  
+|**float [16 ... \* ]**|**float [53]**|  
 |**image**|**image**|  
 |**int**|**int**|  
 |**integer**|**int**|  
 |**longsysname**|**Nvarchar [255]**|  
 |**money**|**money**|  
 |**國家/地區**|**nchar**|  
-|**國家 char [\*.。4000]**|**Nchar [\*]**|  
+|**國家 char [ \* .。4000]**|**Nchar [ \* ]**|  
 |**國家/地區 char 改變**|**nvarchar**|  
-|**國家 char 改變 [\*.。4000]**|**Nvarchar [\*]**|  
-|**國家/地區不同 [4001\*]**|**nvarchar(max)**|  
-|**國家字元 [4001 ...\*]**|**nvarchar(max)**|  
+|**國家 char 改變 [ \* .。4000]**|**Nvarchar [ \* ]**|  
+|**國家/地區不同 [4001 \* ]**|**nvarchar(max)**|  
+|**國家字元 [4001 ... \* ]**|**nvarchar(max)**|  
 |**國家字元**|**nchar**|  
-|**國家字元 [\*.。4000]**|**Nchar [\*]**|  
-|**國家字元 [4001 ...\*]**|**nvarchar(max)**|  
+|**國家字元 [ \* .。4000]**|**Nchar [ \* ]**|  
+|**國家字元 [4001 ... \* ]**|**nvarchar(max)**|  
 |**國家字元變動**|**nvarchar**|  
-|**國家字元變動 [\*.。4000]**|**Nvarchar [\*]**|  
-|**國家字元變動 [4001 ...\*]**|**nvarchar(max)**|  
+|**國家字元變動 [ \* .。4000]**|**Nvarchar [ \* ]**|  
+|**國家字元變動 [4001 ... \* ]**|**nvarchar(max)**|  
 |**全國 Varchar**|**nvarchar**|  
-|**國家 Varchar [\*.。4000]**|**Nvarchar [\*]**|  
-|**全國 Varchar [4001 ...\*]**|**nvarchar(max)**|  
+|**國家 Varchar [ \* .。4000]**|**Nvarchar [ \* ]**|  
+|**全國 Varchar [4001 ... \* ]**|**nvarchar(max)**|  
 |**nchar**|**nchar**|  
 |**Nchar 改變**|**nvarchar**|  
-|**Nchar 改變 [\*.。4000]**|**Nvarchar [\*]**|  
-|**Nchar 改變 [4001 ...\*]**|**nvarchar(max)**|  
-|**Nchar [\*.。4000]**|**Nchar [\*]**|  
-|**Nchar [4001 ...\*]**|**nvarchar(max)**|  
+|**Nchar 改變 [ \* .。4000]**|**Nvarchar [ \* ]**|  
+|**Nchar 改變 [4001 ... \* ]**|**nvarchar(max)**|  
+|**Nchar [ \* .。4000]**|**Nchar [ \* ]**|  
+|**Nchar [4001 ... \* ]**|**nvarchar(max)**|  
 |**numeric**|**numeric**|  
-|**數值 [\*.。\*]**|**數值 [\*]**|  
-|**數值 [\*.。\*][\*..\*]**|**數值 [\*] [\*]**|  
+|**數值 [ \* ... \* ]**|**數值 [ \* ]**|  
+|**數值 [ \* ... \* ][\*..\*]**|**數值 [ \* ] [ \* ]**|  
 |**nvarchar**|**nvarchar**|  
-|**Nvarchar [\*.。4000]**|**Nvarchar [\*]**|  
-|**Nvarchar [4001 ...\*]**|**nvarchar(max)**|  
+|**Nvarchar [ \* .。4000]**|**Nvarchar [ \* ]**|  
+|**Nvarchar [4001 ... \* ]**|**nvarchar(max)**|  
 |**real**|**float [24]**|  
 |**smalldatetime**|**smalldatetime**|  
 |**smallint**|**smallint**|  
 |**smallmoney**|**smallmoney**|  
 |**sysname**|**Nvarchar [128]**|  
-|**sysname [\*.。。\*]**|**Nvarchar [255]**|  
+|**sysname [ \* ... \* ]**|**Nvarchar [255]**|  
 |**text**|**text**|  
 |**time**|**時間 [3]**|  
 |**timestamp**|**rowversion**|  
 |**tinyint**|**tinyint**|  
 |**unichar**|**nchar**|  
 |**unichar 改變**|**nvarchar**|  
-|**unichar 改變 [\*.。4000]**|**Nvarchar [\*]**|  
-|**unichar 改變 [4001 ...\*]**|**nvarchar(max)**|  
-|**unichar [\*.。。4000]**|**Nchar [\*]**|  
-|**unichar [4001 ...\*]**|**nvarchar(max)**|  
+|**unichar 改變 [ \* .。4000]**|**Nvarchar [ \* ]**|  
+|**unichar 改變 [4001 ... \* ]**|**nvarchar(max)**|  
+|**unichar [ \* .。。4000]**|**Nchar [ \* ]**|  
+|**unichar [4001 ... \* ]**|**nvarchar(max)**|  
 |**unitext**|**nvarchar(max)**|  
 |**uniVarchar**|**nvarchar**|  
-|**uniVarchar [\*.。。4000]**|**Nvarchar [\*]**|  
-|**uniVarchar [4001 ...\*]**|**nvarchar(max)**|  
+|**uniVarchar [ \* .。。4000]**|**Nvarchar [ \* ]**|  
+|**uniVarchar [4001 ... \* ]**|**nvarchar(max)**|  
 |**不帶正負號的 Bigint**|**數值 [20] [0]**|  
 |**不帶正負號的整數**|**bigint**|  
 |**不帶正負號的 Smallint**|**int**|  
 |**不帶正負號的 Tinyint**|**tinyint**|  
 |**varbinary**|**varbinary**|  
-|**Varbinary [\*.。8000]**|**Varbinary [\*]**|  
-|**Varbinary [8001 ...\*]**|**varbinary(max)**|  
+|**Varbinary [ \* .。8000]**|**Varbinary [ \* ]**|  
+|**Varbinary [8001 ... \* ]**|**varbinary(max)**|  
 |**varchar**|**varchar**|  
-|**Varchar [\*.。8000]**|**Varchar [\*]**|  
-|**Varchar [8001 ...\*]**|**varchar(max)**|  
+|**Varchar [ \* .。8000]**|**Varchar [ \* ]**|  
+|**Varchar [8001 ... \* ]**|**varchar(max)**|  
   

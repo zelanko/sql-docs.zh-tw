@@ -1,5 +1,5 @@
 ---
-title: ISQLServerErrorInfo：： GetErrorInfo （Native Client OLE DB 提供者） |Microsoft Docs
+title: ISQLServerErrorInfo：： GetErrorInfo (Native Client OLE DB 提供者) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: 83265c9c-eaf9-41f0-9f73-b0ae0972f0d5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0305e9755f6ccd671d0f3e9fbeb852f2d4393c70
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f9ce6ced9e5de3f7474d8dd16797213042ad4705
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243909"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87947605"
 ---
-# <a name="isqlservererrorinfogeterrorinfo-native-client-ole-db-provider"></a>ISQLServerErrorInfo：： GetErrorInfo （Native Client OLE DB 提供者）
+# <a name="isqlservererrorinfogeterrorinfo-native-client-ole-db-provider"></a>ISQLServerErrorInfo：： GetErrorInfo (Native Client OLE DB 提供者) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤詳細資料之 Native Client OLE DB 提供者 SSERRORINFO 結構的指標。  
@@ -89,7 +89,7 @@ SSERRORINFO;
  結構中的指標會參考 *ppErrorStrings* 引數所傳回之字串中的地址。  
   
 ## <a name="see-also"></a>另請參閱  
- [ISQLServerErrorInfo &#40;OLE DB&#41;](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
+ [ISQLServerErrorInfo &#40;OLE DB&#41;](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

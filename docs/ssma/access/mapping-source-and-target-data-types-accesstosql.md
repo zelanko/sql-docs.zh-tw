@@ -1,5 +1,5 @@
 ---
-title: 對應來源和目標資料類型（AccessToSQL） |Microsoft Docs
+title: 對應來源和目標資料類型 (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,20 +13,20 @@ helpviewer_keywords:
 - source data types
 - target data types
 ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: e0600778b938a7736ab1112f31bbe4828605cdaf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c67cb826d5a5dce7c142cba3ded468b851cef337
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67907165"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938217"
 ---
-# <a name="mapping-source-and-target-data-types-accesstosql"></a>對應來源和目標資料類型（AccessToSQL）
-Access 資料庫類型與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫類型不同。 當您將 Access 資料庫物件轉換[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]成物件時，您必須指定如何將資料類型從存取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]權對應到。 您可以接受預設資料類型對應，也可以自訂對應，如下列程式所示。  
+# <a name="mapping-source-and-target-data-types-accesstosql"></a>對應來源和目標資料類型 (AccessToSQL) 
+Access 資料庫類型與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫類型不同。 當您將 Access 資料庫物件轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件時，您必須指定如何將資料類型從存取權對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 您可以接受預設資料類型對應，也可以自訂對應，如下列程式所示。  
   
 ## <a name="default-mappings"></a>預設對應  
-SSMA 有一組預設的資料類型對應。 如需預設對應的清單，請參閱[專案設定（類型對應）](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)。  
+SSMA 有一組預設的資料類型對應。 如需預設對應的清單，請參閱[專案設定 (類型對應) ](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)。  
   
 ## <a name="customizing-data-type-mappings"></a>自訂資料類型對應  
 藉由使用 [**專案設定**] 對話方塊，您可以自訂專案中所有資料庫和資料庫物件的類型對應方式。 專案的類型對應會套用至沒有自訂類型對應的所有資料庫和資料庫物件。  
@@ -63,7 +63,7 @@ SSMA 有一組預設的資料類型對應。 如需預設對應的清單，請�
   
         這可讓您針對相同資料類型的較小且較大的值，自訂資料對應。  
   
-    4.  在 [**目標型別**] 底下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]選取 [目標資料類型]。  
+    4.  在 [**目標型別**] 底下，選取 [目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型]。  
   
         某些類型需要目標資料類型長度。 如有需要，請在 [**取代為**] 方塊中輸入新的資料長度，然後按一下 **[確定]**。  
   
@@ -77,7 +77,7 @@ SSMA 有一組預設的資料類型對應。 如需預設對應的清單，請�
   
         這可讓您針對相同資料類型的較小且較大的值，自訂資料對應。  
   
-    4.  在 [**目標型別**] 底下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]選取 [目標資料類型]。  
+    4.  在 [**目標型別**] 底下，選取 [目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型]。  
   
         某些類型需要目標資料類型長度。 如有需要，請在 [**取代為**] 方塊中輸入新的資料長度，然後按一下 **[確定]**。  
   
@@ -85,7 +85,7 @@ SSMA 有一組預設的資料類型對應。 如需預設對應的清單，請�
   
     1.  在 [類型對應] 窗格中，選取 [類型對應] 清單中的資料列，其中包含您想要移除的資料類型對應。  
   
-    2.  按一下 [移除]****。  
+    2.  按一下 **[移除]** 。  
   
 ## <a name="next-steps"></a>後續步驟  
 遷移程式的下一個步驟是[將 access 資料庫物件轉換成 SQL Server 物件](converting-access-database-objects-accesstosql.md)  

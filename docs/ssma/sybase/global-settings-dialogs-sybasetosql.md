@@ -1,5 +1,5 @@
 ---
-title: 全域設定（對話方塊）（SybaseToSQL） |Microsoft Docs
+title: 全域設定 (對話方塊)  (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -7,21 +7,21 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: e11452b7-ba94-4367-a745-5ccf1764acec
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 484460c56ae043561f8f19313e6f09743ba2caed
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 4dc7bf9bf6b8f2e20fb8254a3a27ca2e293a0174
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029085"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931459"
 ---
-# <a name="global-settings-dialogs--sybasetosql"></a>全域設定（對話方塊）（SybaseToSQL）
+# <a name="global-settings-dialogs--sybasetosql"></a> (對話方塊的全域設定)  (SybaseToSQL) 
 使用 [**通用設定**] 對話方塊的 [對話方塊] 頁面，即可指定 SSMA 的預設使用者動作和警告設定。  
   
 若要存取 [**工具**] 功能表上的對話方塊設定，請選取 [**全域設定**]，按一下左窗格底部的 [ **GUI** ]，然後選取 [**對話方塊**]。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **在覆寫物件之前發出警告**  
 當 SSMA 將物件轉換成 SQL Server 時，某些物件可能已經存在於專案的 SQL Server 中繼資料中。 這些物件可能已經轉換，或物件在目標架構中的名稱可能與您要轉換的物件相同。  
   

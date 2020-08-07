@@ -1,5 +1,5 @@
 ---
-title: 新增專案（SSMA）（AccessToSQL） |Microsoft Docs
+title: 新專案 (SSMA)  (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,16 +9,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - New Project dialog box
 ms.assetid: ca294f6d-eeb5-42ca-9306-156281a3f0f3
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: db042e18beb0b33f50639b63f76dde21863c19a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 61c14895f2e464713661f74890b2eb1d5ccc79f5
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112292"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937794"
 ---
-# <a name="new-project-ssma-accesstosql"></a>新增專案（SSMA）（AccessToSQL）
+# <a name="new-project-ssma-accesstosql"></a>新專案 (SSMA)  (AccessToSQL) 
 使用 [**新增專案**] 對話方塊來建立新的 SSMA 專案。 若要存取 [**新增專案**] 對話方塊，請**在 [檔案] 功能表上**，按一下 [**新增專案**]。  
   
 ## <a name="options"></a>選項。  
@@ -47,6 +47,6 @@ ms.locfileid: "79112292"
 -   SQL Azure  
   
 > [!IMPORTANT]  
-> ' SQL Azure ' 類型的新專案需要 SQL Server Native Client （SNAC）10.5 版或更新版本，才能將 Access 資料表連結至 SQL Azure 資料庫。   
+> 「SQL Azure」類型的新專案需要 SQL Server Native Client (SNAC) 10.5 版或更新版本，才能將存取資料表連結到 Azure SQL Database。   
 > 您可以從[Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272)取得最新版本的 SNAC。  
   

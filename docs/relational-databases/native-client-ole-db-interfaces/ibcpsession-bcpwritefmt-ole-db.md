@@ -1,5 +1,5 @@
 ---
-title: IBCPSession：： BCPWriteFmt （Native Client OLE DB 提供者） |Microsoft Docs
+title: IBCPSession：： BCPWriteFmt (Native Client OLE DB 提供者) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: add50425-2ed6-411a-a391-4ce63c364892
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3650544f0c6ce69489590918dd97fcf4d4d81c58
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 6653e1cf209e398548aa0274ec6f4802ebfffde3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247720"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87941017"
 ---
-# <a name="ibcpsessionbcpwritefmt-native-client-ole-db-provider"></a>IBCPSession：： BCPWriteFmt （Native Client OLE DB 提供者）
+# <a name="ibcpsessionbcpwritefmt-native-client-ole-db-provider"></a>IBCPSession：： BCPWriteFmt (Native Client OLE DB 提供者) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   將每個資料行的格式資訊寫入格式檔案。  
@@ -52,7 +52,7 @@ HRESULT BCPWriteFmt(
  此方法已成功。  
   
  E_FAIL  
- 發生提供者特定的錯誤;如需詳細資訊，請使用[ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)介面。  
+ 發生提供者特定的錯誤;如需詳細資訊，請使用[ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15)介面。  
   
  E_OUTOFMEMORY  
  記憶體不足錯誤  

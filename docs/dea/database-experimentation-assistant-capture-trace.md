@@ -9,15 +9,15 @@ ms.suite: sql
 ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-author: HJToland3
-ms.author: rajsell
+author: pochiraju
+ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: c560aa2c5ba4b5113ce711601a4e85aab2788240
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: 4caf97a9afb4a40ba82e2fe6730d46dbdcbea7f6
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565590"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87951533"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>在資料庫測試助理中捕捉追蹤
 

@@ -1,5 +1,5 @@
 ---
-title: IBCPSession：： BCPControl （Native Client OLE DB 提供者） |Microsoft Docs
+title: IBCPSession：： BCPControl (Native Client OLE DB 提供者) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: d58f3fe1-45e3-4e46-8e9c-000971829d99
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 98d21ab0c4bb17ca9e701a17b5abd8d3da2438dc
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 42f50ec668d61d9244f6f2ba413095fb1642a964
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247774"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87942063"
 ---
-# <a name="ibcpsessionbcpcontrol-native-client-ole-db-provider"></a>IBCPSession：： BCPControl （Native Client OLE DB 提供者）
+# <a name="ibcpsessionbcpcontrol-native-client-ole-db-provider"></a>IBCPSession：： BCPControl (Native Client OLE DB 提供者) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   設定大量複製作業的選項。  
@@ -76,7 +76,7 @@ HRESULT BCPControl(
  此方法已成功。  
   
  E_FAIL  
- 發生提供者特定的錯誤;如需詳細資訊，請使用[ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)介面。  
+ 發生提供者特定的錯誤;如需詳細資訊，請使用[ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15)介面。  
   
  E_UNEXPECTED  
  此方法的呼叫是非預期的。 例如，在呼叫這個函數之前，不會呼叫 [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 方法。  

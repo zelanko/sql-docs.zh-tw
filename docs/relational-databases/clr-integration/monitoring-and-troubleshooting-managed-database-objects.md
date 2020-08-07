@@ -1,6 +1,6 @@
 ---
 title: 監視和疑難排解 Managed 資料庫物件
-description: 可用於監視和疑難排解 managed 資料庫物件和元件（CLR）的工具相關資訊。
+description: 可用於監視和疑難排解 managed 資料庫物件和元件 (CLR) 的工具相關資訊。
 ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9b05b11fcf3110b9f51d1f9cb44fdabb4a3ba36
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 760fcc2212991f0841f4ded3dd2932e551c26060
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728450"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87947941"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>監視與疑難排解 Managed 資料庫物件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "85728450"
   
 |事件|描述|  
 |-----------|-----------------|  
-|[Assembly Load 事件類別](/sql/database-engine/assembly-load-event-class)|用於監視組件載入要求 (成功或失敗)。|  
+|[Assembly Load 事件類別](https://docs.microsoft.com/sql/relational-databases/event-classes/sql-server-event-class-reference)|用於監視組件載入要求 (成功或失敗)。|  
 |[Sql： BatchStarting 事件類別](../../relational-databases/event-classes/sql-batchstarting-event-class.md)， [Sql： BatchCompleted 事件類別](../../relational-databases/event-classes/sql-batchcompleted-event-class.md)|提供已啟動或已完成之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次的相關資訊。|  
 |[Sp：啟動事件類別](../../relational-databases/event-classes/sp-starting-event-class.md)， [SP： Completed 事件類別](../../relational-databases/event-classes/sp-completed-event-class.md)|用於監視 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序的執行。|  
 |[Sql： StmtStarting 事件類別](../../relational-databases/event-classes/sql-stmtstarting-event-class.md)， [Sql： StmtCompleted 事件類別](../../relational-databases/event-classes/sql-stmtcompleted-event-class.md)|用於監視 CLR 和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 常式的執行。|  

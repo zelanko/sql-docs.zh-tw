@@ -21,18 +21,18 @@ helpviewer_keywords:
 - slow performance
 - unlinking tables
 ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: aadb041b3b9005d0e593e97974090250129ed33d
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: d19ed1ddfa2c64b653c02d887b9605ea132ae1bc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823843"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938389"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-database-accesstosql"></a>將存取應用程式連結至 SQL Server Azure SQL Database (AccessToSQL) 
-如果您想要搭配使用現有的 Access 應用程式與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，可以將原始的 access 資料表連結到遷移 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 資料表。 連結會修改您的 Access 資料庫，讓您的查詢、表單、報表和資料存取頁面使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 資料庫中的資料，而非 Access 資料庫中的資料。  
+如果您想要搭配使用現有的 Access 應用程式與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，可以將原始的 access 資料表連結到遷移 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 資料表。 連結會修改您的 Access 資料庫，讓您的查詢、表單、報表和資料存取頁面使用或 Azure SQL Database 中的資料， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 而非 Access 資料庫中的資料。  
   
 > [!NOTE]  
 > 您的存取資料表仍可繼續存取，但不會隨 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 更新一起更新。 連結資料表並確認功能之後，您可能會想要刪除存取資料表。  

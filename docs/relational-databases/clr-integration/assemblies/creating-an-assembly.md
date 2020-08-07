@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 724f0fc6a38388d9366f3c46090ddaf22cd64a34
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 40ad7c3d165b0869f3cba9e6f703cd9e33ef199f
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887812"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87948207"
 ---
 # <a name="creating-an-assembly"></a>建立組件
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -77,13 +77,13 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
  若要在中建立**EXTERNAL_ACCESS**或**UNSAFE**元件 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，必須符合下列兩個條件之一：  
   
-1.  組件是用強式名稱簽署，或用包含憑證的 Authenticode 簽署。 這個強式名稱（或憑證）會在內建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 為非對稱金鑰（或憑證），並具有對應的登入，具有**外部存取元件**許可權（適用于外部存取元件）或**unsafe 元件**許可權（適用于 UNSAFE 元件）。  
+1.  組件是用強式名稱簽署，或用包含憑證的 Authenticode 簽署。 這個強式名稱 (或憑證) 會在內建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 為非對稱金鑰 (或憑證) ，而且具有對應的登入，其中包含外部存取元件的**外部存取元件**許可權 () 或**unsafe 元件**許可權 () 不安全性群組件。  
   
-2.  資料庫擁有者（DBO）具有**外部存取元件**（適用**于外部存取**元件）或**Unsafe 元件**（適用于**unsafe**元件）許可權，而且資料庫的 [可信任的[資料庫] 屬性](../../../relational-databases/security/trustworthy-database-property.md)設為 [**開啟**]。  
+2.  資料庫擁有者 (DBO) 具有**外部存取**元件的**外部存取元件** () 或**unsafe 元件** (**不安全**元件) 許可權，而且資料庫的 [可[信任的資料庫] 屬性](../../../relational-databases/security/trustworthy-database-property.md)設為 [**開啟**]。  
 
  以上列出的兩個條件也會在組件載入時間 (包括執行) 進行檢查。 若要載入組件，至少必須符合其中一個條件。  
   
- 建議您不要將資料庫上的 [可[信任的資料庫] 屬性](../../../relational-databases/security/trustworthy-database-property.md)設為 [**開啟**]，以便在伺服器進程中執行 COMMON language runtime （CLR）程式碼。 但是，建議從 master 資料庫的組件檔中建立非對稱金鑰。 接著，必須建立對應到此非對稱金鑰的登入，而且必須將該登入授與**EXTERNAL ACCESS ASSEMBLY**或**UNSAFE ASSEMBLY**許可權。  
+ 我們建議您不要將資料庫上的 [可[信任的資料庫] 屬性](../../../relational-databases/security/trustworthy-database-property.md)設定為 [**開啟**]，以便在伺服器進程中 (CLR) 程式碼執行 common language runtime。 但是，建議從 master 資料庫的組件檔中建立非對稱金鑰。 接著，必須建立對應到此非對稱金鑰的登入，而且必須將該登入授與**EXTERNAL ACCESS ASSEMBLY**或**UNSAFE ASSEMBLY**許可權。  
   
  下列 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 語句會執行建立非對稱金鑰所需的步驟、將登入對應到此金鑰，然後將**EXTERNAL_ACCESS**許可權授與登入。 您必須先執行下列 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式，然後再執行 CREATE ASSEMBLY 陳述式。  
   
@@ -135,7 +135,4 @@ WITH PERMISSION_SET = UNSAFE;
  [改變元件](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
  [卸載元件](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
  [CLR 整合代碼啟用安全性](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
- [TRUSTWORTHY 資料庫屬性](../../../relational-databases/security/trustworthy-database-property.md)   
- [允許部分信任的呼叫端](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
-  
-  
+ [TRUSTWORTHY 資料庫屬性](../../../relational-databases/security/trustworthy-database-property.md)

@@ -1,5 +1,5 @@
 ---
-title: IBCPSession：： BCPColFmt （Native Client OLE DB 提供者） |Microsoft Docs
+title: IBCPSession：： BCPColFmt (Native Client OLE DB 提供者) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2899c671b312edff56c11568a74a67d3f961d9e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b9d686223d5b5261426195b3ca659cf7909b9e38
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247798"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87941303"
 ---
-# <a name="ibcpsessionbcpcolfmt-native-client-ole-db-provider"></a>IBCPSession：： BCPColFmt （Native Client OLE DB 提供者）
+# <a name="ibcpsessionbcpcolfmt-native-client-ole-db-provider"></a>IBCPSession：： BCPColFmt (Native Client OLE DB 提供者) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   在程式變數與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料行之間建立繫結。  
@@ -77,7 +77,7 @@ HRESULT BCPColFmt(
  使用者的資料檔案中的欄位索引。  
   
  *eUserDataType*[in]  
- 使用者的資料檔案中欄位的資料類型。 可用的資料類型會列在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 具有 BCP_TYPE_XXX 格式的 Native Client 標頭檔（sqlncli）中，例如 BCP_TYPE_SQLINT4。 如果指定了 BCP_TYPE_DEFAULT 值，提供者會嘗試使用與資料表或檢視表資料行類型相同的類型。 當 **eUserDataType** 引數為 BCP_TYPE_SQLDECIMAL 或 BCP_TYPE_SQLNUMERIC 時，要從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 進行大量複製作業，並複製到檔案中：  
+ 使用者的資料檔案中欄位的資料類型。 可用的資料類型會列在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 標頭檔中 (sqlncli，) BCP_TYPE_XXX 格式，例如 BCP_TYPE_SQLINT4。 如果指定了 BCP_TYPE_DEFAULT 值，提供者會嘗試使用與資料表或檢視表資料行類型相同的類型。 當 **eUserDataType** 引數為 BCP_TYPE_SQLDECIMAL 或 BCP_TYPE_SQLNUMERIC 時，要從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 進行大量複製作業，並複製到檔案中：  
   
 -   如果來源資料行不是小數或數值，便會使用預設的有效位數和小數位數。  
   
@@ -117,7 +117,7 @@ HRESULT BCPColFmt(
  此方法已成功。  
   
  E_FAIL  
- 發生提供者特定的錯誤，如需詳細資訊，請使用[ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)介面。  
+ 發生提供者特定的錯誤，如需詳細資訊，請使用[ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15)介面。  
   
  E_UNEXPECTED  
  此方法的呼叫是非預期的。 例如，在呼叫這個方法之前，不會呼叫 [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 方法。  

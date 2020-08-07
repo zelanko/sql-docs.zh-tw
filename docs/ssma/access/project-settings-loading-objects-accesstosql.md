@@ -1,5 +1,5 @@
 ---
-title: 專案設定（載入物件）（AccessToSQL） |Microsoft Docs
+title: 專案設定 (載入物件)  (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 9ec1c1e8-a3e1-4e81-bf49-631f87daa209
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c8aebc643d3d313dcf97bbe69044ee795649ba46
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8786ecd3affd1b67bb0e036bf01317942b6ec05b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929420"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937537"
 ---
-# <a name="project-settings-loading-objects-accesstosql"></a>專案設定（載入物件）（AccessToSQL）
+# <a name="project-settings-loading-objects-accesstosql"></a>專案設定 ()  (AccessToSQL 載入物件) 
 [載入物件] 專案設定可讓您設定 Access 資料庫物件如何與 SQL Server 資料庫物件同步處理。  
   
 預設動作會指定從 Access 資料庫重新整理物件，以及與 SQL Server 資料庫同步處理物件的預設設定。 如需詳細資訊，請參閱[從資料庫重新整理 &#40;AccessToSQL&#41;](../../ssma/access/refresh-from-database-accesstosql.md)  
@@ -27,7 +27,7 @@ ms.locfileid: "67929420"
   
 -   若要指定目前專案的設定，請在 [**工具**] 功能表上，按一下 [**專案設定**]，然後按一下左窗格底部的 [**載入物件**]。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
   
 ##### <a name="misc"></a>其他  
   

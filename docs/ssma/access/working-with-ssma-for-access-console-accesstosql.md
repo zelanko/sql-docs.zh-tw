@@ -1,5 +1,5 @@
 ---
-title: 使用 SSMA for Access 主控台（AccessToSQL） |Microsoft Docs
+title: 使用 SSMA for Access 主控台 (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/17/2017
@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: ef94e843-9f88-45a2-86c4-a0af268738c4
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: c470cf8ea61851b80f04bce716bc7c83c54929b0
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: d46435bcf975036fc92926f50651dd5eff7c8080
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396897"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937300"
 ---
-# <a name="working-with-ssma-for-access-console-accesstosql"></a>使用 SSMA for Access 主控台（AccessToSQL）
-您現在可以透過主控台應用程式，在命令列中存取 Microsoft SQL Server 移轉小幫手（SSMA）以進行存取。 腳本檔案會形成應用程式用來執行命令的輸入。 做為主控台應用程式，SSMA 可啟用腳本層級的互動、減少遷移週期，並調整遷移工作。  
+# <a name="working-with-ssma-for-access-console-accesstosql"></a>使用 SSMA for Access 主控台 (AccessToSQL) 
+Microsoft SQL Server 移轉小幫手 (SSMA) 以取得存取權，現在可以透過主控台應用程式在命令列存取。 腳本檔案會形成應用程式用來執行命令的輸入。 做為主控台應用程式，SSMA 可啟用腳本層級的互動、減少遷移週期，並調整遷移工作。  
   
 本節說明使用 SSMA 主控台應用程式來遷移 Access 資料庫的程式。  
   

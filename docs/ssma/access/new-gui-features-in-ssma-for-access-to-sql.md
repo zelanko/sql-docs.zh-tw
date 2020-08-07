@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 95b95de2-db05-4422-825d-43968ecfd01c
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: e68a58135e28989c2661ee531e2b4bf3c86a0104
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 89c22a7151a7c7aa94c76d5278edd5911b9f2b6d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76910221"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937711"
 ---
 # <a name="new-gui-features-in-ssma-for-access-to-sql"></a>SSMA 中用來存取 SQL 的新 GUI 功能
 本章說明 SSMA 使用者介面的新功能  
@@ -54,14 +54,14 @@ ms.locfileid: "76910221"
   
 -   按一下 [SQL] 視窗左側的灰色區域  
   
--   使用 Ctrl + Shift +&lt;0. 9&gt;設定編號的書簽  
+-   使用 Ctrl + Shift + &lt; 0. 9 &gt; 設定編號的書簽  
   
 ### <a name="bookmark-navigation"></a>書簽流覽  
 您可以透過下列方式逐步完成書簽：  
   
 -   在 SQL 視窗頂端使用 [下一個書簽] 和 [上一個書簽] 按鈕  
   
--   使用 Ctrl +&lt;0. 9&gt;來尋找編號的書簽  
+-   使用 Ctrl + &lt; 0. 9 &gt; 來尋找編號的書簽  
   
 -   使用按鈕移至或流覽 [管理書簽] 對話方塊中的來源  
   

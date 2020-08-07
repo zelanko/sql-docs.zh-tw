@@ -1,5 +1,5 @@
 ---
-title: SSMA 主控台中的命令列選項（DB2ToSQL） |Microsoft Docs
+title: SSMA 主控台中的命令列選項 (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 51c0253dce8e95a5a25110b47b348397c967af94
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 32167639a12d86a7bf3cf84b3895537af551d8d5
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938266"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937038"
 ---
-# <a name="command-line-options-in-ssma-console-db2tosql"></a>SSMA 主控台中的命令列選項（DB2ToSQL）
+# <a name="command-line-options-in-ssma-console-db2tosql"></a>SSMA 主控台中的命令列選項 (DB2ToSQL) 
 Microsoft 為您提供了健全的設定命令列選項，以執行和控制 SSMA 活動。 後續章節會詳細說明相同的情況。  
   
 ## <a name="command-line-options-in-ssma-console"></a>SSMA 主控台中的命令列選項  
@@ -24,7 +24,7 @@ Microsoft 為您提供了健全的設定命令列選項，以執行和控制 SSM
   
 基於此章節的目的，「選項」一詞也稱為「參數」。  
   
-選項不區分大小寫，而且開頭可能是 '**-**' 或 '**/**' 字元。  
+選項不區分大小寫，而且開頭可能是 ' **-** ' 或 ' **/** ' 字元。  
   
 如果指定了選項，就會強制指定對應的選項參數。  
   
@@ -121,7 +121,7 @@ Microsoft 為您提供了健全的設定命令列選項，以執行和控制 SSM
   
 您不能輸入任何其他選項或密碼做為命令列參數。 否則，它會導致錯誤。 如需詳細資訊，請參閱[管理密碼](https://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94)一節。  
   
-以下是支援的子選項`-p/securepassword`：  
+以下是支援的子選項 `-p/securepassword` ：  
   
 -   針對指定的伺服器識別碼或伺服器連接檔案中定義的所有伺服器識別碼，將密碼新增至受保護的存放裝置。 下面的-overwrite 選項會更新密碼（如果已存在）：  
   

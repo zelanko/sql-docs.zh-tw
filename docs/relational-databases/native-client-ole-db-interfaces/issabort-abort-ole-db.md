@@ -1,5 +1,5 @@
 ---
-title: ISSAbort：： Abort （Native Client OLE DB 提供者） |Microsoft Docs
+title: ISSAbort：： Abort (Native Client OLE DB 提供者) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: a5bca169-694b-4895-84ac-e8fba491e479
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 03a6e0119db3cabce4184af5ea387522bd3602c0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d0da4aced1b1c5eaba473e88d4d2938c9f4f42d2
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246937"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87947553"
 ---
-# <a name="issabortabort-native-client-ole-db-provider"></a>ISSAbort：： Abort （Native Client OLE DB 提供者）
+# <a name="issabortabort-native-client-ole-db-provider"></a>ISSAbort：： Abort (Native Client OLE DB 提供者) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   取消目前的資料列集加上與目前命令相關聯之任何批次處理的命令。  
@@ -40,7 +40,7 @@ HRESULT Abort(void);
 ```  
   
 ## <a name="remarks"></a>備註  
- 如果要中止的命令是在預存程式中，則預存程式的執行（以及任何已呼叫該程式的程式）將會終止，以及包含預存程序呼叫的命令批次。 如果伺服器正在將結果集傳送到用戶端，將會停止這個動作。 如果用戶端不想要取用結果集，在釋放資料列集前呼叫 **ISSAbort::Abort** 將會加速資料列集的釋放，但是如果有開啟的交易，而且 XACT_ABORT 為 ON，呼叫 **ISSAbort::Abort** 時，將會回復交易  
+ 如果要中止的命令位於預存程式中， (預存程式的執行，以及任何已呼叫該進程) 的程式將會終止，以及包含預存程序呼叫的命令批次。 如果伺服器正在將結果集傳送到用戶端，將會停止這個動作。 如果用戶端不想要取用結果集，在釋放資料列集前呼叫 **ISSAbort::Abort** 將會加速資料列集的釋放，但是如果有開啟的交易，而且 XACT_ABORT 為 ON，呼叫 **ISSAbort::Abort** 時，將會回復交易  
   
  **ISSAbort::Abort** 傳回 S_OK 之後，相關聯的 **IMultipleResults** 介面會進入無法使用狀態，並將 DB_E_CANCELED 傳回到所有方法呼叫 (除了 **IUnknown** 介面所定義的方法之外)，直到釋放它為止。 如果在呼叫 **Abort** 前已經從 **IMultipleResults** 取得 **IRowset**，它也會進入無法使用狀態，並將 DB_E_CANCELED 傳回到所有方法呼叫 (除了 **IUnknown** 介面和 **IRowset::ReleaseRows** 所定義的方法以外)，直到成功呼叫 **ISSAbort::Abort** 後釋放它為止。  
   
@@ -61,7 +61,7 @@ HRESULT Abort(void);
  批次未取消。  
   
  E_FAIL  
- 發生提供者特定的錯誤;如需詳細資訊，請使用[ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)介面。  
+ 發生提供者特定的錯誤;如需詳細資訊，請使用[ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15)介面。  
   
  E_UNEXPECTED  
  此方法的呼叫是非預期的。 例如，物件會因為已經呼叫 **ISSAbort::Abort** 而處於廢止狀態。  

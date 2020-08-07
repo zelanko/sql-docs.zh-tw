@@ -1,5 +1,5 @@
 ---
-title: 功能表命令和其他快速鍵（AccessToSQL） |Microsoft Docs
+title: 功能表命令和其他快速鍵 (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 04bba43a-7bed-4d3c-bb62-8e9ab2adf9e3
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: cbfb9aa200560cf8d2b4ae42486f8a39b179e88b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: f7e5aa6a3b6d663c21ff57abda09ee9308a0a2af
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67907134"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937783"
 ---
-# <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>功能表命令和其他快速鍵（AccessToSQL）
+# <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>功能表命令和其他快速鍵 (AccessToSQL) 
 下列各節說明鍵盤快速鍵，可存取功能表命令和 SSMA for Access 應用程式之各種對話方塊中所使用的其他快速鍵。  
   
 ## <a name="file-menu-commands"></a>檔案功能表命令  
@@ -82,7 +82,7 @@ ms.locfileid: "67907134"
 |建立報表。|ALT + T + C|  
 |轉換架構。|ALT + T + N 或 CTRL + R|  
 |從 access 資料庫重新整理。|ALT + T + R|  
-|與 SQL Server 或 SQL Azure 資料庫同步處理。|ALT + T + S|  
+|與 SQL Server 或 Azure SQL Database 同步處理。|ALT + T + S|  
 |[另存新檔] 腳本。|ALT + T + A|  
 |遷移資料。|ALT + T + M|  
 |停止目前的作業。|ALT + T + O|  

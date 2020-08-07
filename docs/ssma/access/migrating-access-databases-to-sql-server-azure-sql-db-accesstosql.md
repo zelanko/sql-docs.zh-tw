@@ -14,18 +14,18 @@ helpviewer_keywords:
 - procedure, migration
 - recommended migration process
 ms.assetid: 76a3abcf-2998-4712-9490-fe8d872c89ca
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: d35f359186fca7d862ee8da8f4c4932d849c421b
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: c8c0fbd289aea92c78d97a4d41a93255c9e196bf
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823545"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938027"
 ---
 # <a name="migrating-access-databases-to-sql-server---azure-sql-database-accesstosql"></a>將 Access 資料庫移轉至 SQL Server Azure SQL Database (AccessToSQL) 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移轉小幫手 (SSMA) 是一種工具，可提供全方位的環境，協助您快速地將 Access 資料庫移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure。 藉由使用 SSMA，您可以查看存取和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 資料庫物件、評估 access 資料庫的遷移、轉換 access 資料庫物件、將其載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure，然後再遷移資料。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移轉小幫手 (SSMA) 是一種工具，可提供全方位的環境，協助您快速地將 Access 資料庫移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure。 藉由使用 SSMA，您可以查看存取權和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure SQL Database 物件、評估要遷移的 access 資料庫、轉換 access 資料庫物件、將其載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure，然後再遷移資料。  
   
 ## <a name="recommended-migration-process"></a>建議的移轉程序  
 若要成功地將物件和資料從存取權遷移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure，請使用下列程式：  

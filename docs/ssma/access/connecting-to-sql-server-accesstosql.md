@@ -1,5 +1,5 @@
 ---
-title: 連接到 SQL Server （AccessToSQL） |Microsoft Docs
+title: 連接到 SQL Server (AccessToSQL) |Microsoft Docs
 description: 瞭解如何連接到 SQL Database 的目標實例，以遷移 Access 資料庫。 SSMA 會取得 SQL Database 中資料庫的相關中繼資料。
 ms.prod: sql
 ms.custom: ''
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - SQL Server, connecting to
 - SQL Server, reconnecting
 ms.assetid: f84cf007-ddf1-4396-a07c-3e0729abc769
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 757c0e040a047f96a6dcf364638f76593904adf1
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 612921c1640b97135c96a5f81c3099722bf5bb4c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395857"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939110"
 ---
-# <a name="connecting-to-sql-server-accesstosql"></a>連接到 SQL Server （AccessToSQL）
+# <a name="connecting-to-sql-server-accesstosql"></a>連接到 SQL Server (AccessToSQL) 
 若要將 Access 資料庫移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，您必須連接到的目標實例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 當您連接時，SSMA 會取得實例中資料庫的相關中繼資料 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並在 [中繼資料] Explorer 中顯示資料庫中繼資料 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 SSMA 會儲存您所連接之實例的相關資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，但不會儲存密碼。  
   
 您的 SQL Server 連接會保持作用中狀態，直到您關閉專案為止。 當您重新開啟專案時，如果您想要使用伺服器的作用中連接，就必須重新連接到 SQL Server。 在您將資料庫物件載入 SQL Server 並遷移資料之前，您可以離線工作。  
@@ -59,7 +59,7 @@ ms.locfileid: "87395857"
   
 2.  在 [**伺服器名稱**] 方塊中，輸入或選取實例的名稱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-    -   如果您要連接到本機電腦上的預設實例，您可以輸入**localhost**或句點（**.**）。  
+    -   如果您要連接到本機電腦上的預設實例，您可以輸入**localhost**或點 (**.**) 。  
   
     -   如果您要連接到另一部電腦上的預設實例，請輸入電腦的名稱。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "87395857"
   
 5.  在 [**驗證**] 下拉式功能表中，選取要用於連接的驗證類型。 若要使用目前的 Windows 帳戶，請選取 [ **Windows 驗證**]。 若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，請選取 [ **SQL Server Authentication**]，然後提供 [使用者名稱] 和 [密碼]。  
   
-6.  針對安全連線，會新增兩個控制項，[**加密連接**] 核取方塊和 [ **TrustServerCertificate** ] 核取方塊。 只有當 [**加密連接**] 核取方塊已核取時，才會顯示**TrustServerCertificate**核取方塊。 若已核取 [**加密**連線] （true），而且未選取 [ **TrustServerCertificate** （false）]，則會驗證 SQL Server SSL 憑證。 驗證伺服器憑證是 SSL 交握的一部分，而且這麼做可以確保伺服器是所要連接的正確伺服器。 若要確保這一點，憑證必須安裝在用戶端以及伺服器端。  
+6.  針對安全連線，會新增兩個控制項，[**加密連接**] 核取方塊和 [ **TrustServerCertificate** ] 核取方塊。 只有當 [**加密連接**] 核取方塊已核取時，才會顯示**TrustServerCertificate**核取方塊。 若已核取 [**加密**連線] (true) 而且未選取 [ **TrustServerCertificate** ] (false) ，將會驗證 SQL Server SSL 憑證。 驗證伺服器憑證是 SSL 交握的一部分，而且這麼做可以確保伺服器是所要連接的正確伺服器。 若要確保這一點，憑證必須安裝在用戶端以及伺服器端。  
   
 7.  按一下 [ **連接**]。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "87395857"
   
 4.  較高版本的相容性對 SQL Azure 而言無效。  
   
-|專案類型與目標伺服器版本的比較|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005（版本： 9. x）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008（版本： 10. x）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012（版本： 11. x）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014（版本： 12. x）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016（版本： 13. x）|SQL Azure|  
+|專案類型與目標伺服器版本的比較|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005 (版本： 9. x) |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008 (版本： 10. x) |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012 (版本： 11. x) |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 (版本： 12. x) |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016 (版本： 13. x) |SQL Azure|  
 |-|-|-|-|-|-|-|
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|是|是|是|是|是||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||是|是|是|是||
@@ -105,7 +105,7 @@ ms.locfileid: "87395857"
 |SQL Azure||||||是|
   
 > [!IMPORTANT]  
-> 資料庫物件的轉換是根據專案類型執行，而不是根據連接的 SQL Server 版本。 在 SQL Server 2005 專案的情況下，即使您已連接到較高版本的 SQL Server （SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016），還是會根據 SQL Server 2005 來執行轉換。  
+> 資料庫物件的轉換是根據專案類型執行，而不是根據連接的 SQL Server 版本。 在 SQL Server 2005 專案的情況下，即使您已連接到更高版本的 SQL Server (SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016) ，還是會根據 SQL Server 2005 來執行轉換。  
   
 ## <a name="synchronizing-sql-server-metadata"></a>同步處理 SQL Server 中繼資料  
 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 架構在您連接之後變更，您可以同步處理中繼資料與伺服器。  

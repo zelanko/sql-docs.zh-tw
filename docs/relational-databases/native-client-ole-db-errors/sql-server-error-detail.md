@@ -1,5 +1,5 @@
 ---
-title: SQL Server 錯誤詳細資料（Native Client OLE DB 提供者）
+title: 'SQL Server 錯誤詳細資料 (Native Client OLE DB 提供者) '
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,17 +18,17 @@ ms.assetid: 51500ee3-3d78-47ec-b90f-ebfc55642e06
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b491e14b7109af533eb2e7cfa3bc05658436e31
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 3cc3f7ff6550361baf616d26edf19aad3d6640d7
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87331873"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87941665"
 ---
 # <a name="sql-server-native-client-error-detail"></a>SQL Server Native Client 錯誤詳細資料
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者會定義提供者特定的錯誤介面[ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)。 此介面會傳回有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤的詳細資料，在命令執行或資料列集作業失敗時非常有用。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者會定義提供者特定的錯誤介面[ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15)。 此介面會傳回有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤的詳細資料，在命令執行或資料列集作業失敗時非常有用。  
   
  取得 **ISQLServerErrorInfo** 介面存取權的方法有兩種。  
   

@@ -1,5 +1,5 @@
 ---
-title: 專案設定（轉換）（AccessToSQL） |Microsoft Docs
+title: 專案設定 (轉換)  (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - conversion, options described
 - Project Settings dialog box, Conversion
 ms.assetid: bcebc635-c638-4ddb-924c-b9ccfef86388
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: ff44d34e6c701c8d43260982d3117def4cb9530d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8889e0d869960f8300194afe31fe87b7f0cf2346
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929451"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937777"
 ---
-# <a name="project-settings-conversion-accesstosql"></a>專案設定（轉換）（AccessToSQL）
-轉換專案設定可讓您設定物件從 Access 資料庫物件轉換成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料庫物件的方式。  
+# <a name="project-settings-conversion-accesstosql"></a>專案設定 (轉換)  (AccessToSQL) 
+轉換專案設定可讓您設定物件從 Access 資料庫物件轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure SQL Database 物件的方式。  
   
 [轉換] 窗格可在 [**專案設定**] 和 [**預設專案設定**] 對話方塊中取得。  
   
@@ -28,9 +28,9 @@ ms.locfileid: "67929451"
   
 -   使用 [**預設專案設定**] 對話方塊，即可設定所有專案的設定選項。 若要存取轉換設定，請在 [**工具**] 功能表上，選取 [**預設專案設定**]，從 [**遷移目標版本**] 下拉式/changed 選取 [需要查看設定] 的 [遷移專案類型]，按一下左窗格底部的 **[一般**]，然後選取 [**轉換**]。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **新增主要金鑰**  
-如果 Access 資料表沒有主鍵或唯一[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]索引，則在或 SQL Azure 資料表中建立新的主要金鑰。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]如果 Access 資料表沒有主鍵或唯一索引，則在或 SQL Azure 資料表中建立新的主要金鑰。  
   
 -   **預設模式**： False  
   
@@ -57,7 +57,7 @@ ms.locfileid: "67929451"
 -   **完整模式**： True  
   
 **當主鍵包含可為 null 的資料行時的訊息類型**  
-指定當發現具有可為 null 之資料行的主鍵時，SSMA 顯示在 [輸出] 窗格中的訊息類型（警告、錯誤或任何內容）。  
+指定訊息的類型 (警告、錯誤，或在找到可為 null 之資料行的主鍵時，) SSMA 顯示在輸出窗格中的任何內容。  
   
 -   **預設模式**：警告  
   
@@ -66,7 +66,7 @@ ms.locfileid: "67929451"
 -   **完整模式**：錯誤  
   
 **當外鍵資料行的大小不同時的訊息類型**  
-指定當發現不正確的文字外鍵時，SSMA 顯示在 [輸出] 窗格中的訊息類型（警告、錯誤或任何內容）。  
+當 SSMA 找到不正確的文字外鍵時，指定 [輸出] 窗格中顯示的訊息類型 (警告]、[錯誤] 或 [沒有任何內容]) 。  
   
 -   **預設模式**：警告  
   
@@ -75,7 +75,7 @@ ms.locfileid: "67929451"
 -   **完整模式**：錯誤  
   
 **索引備忘資料行時的訊息類型**  
-指定在找到包含**備忘**資料行的索引時，SSMA 顯示在 [輸出] 窗格中的訊息類型（警告、錯誤或任何內容）。  
+指定當 SSMA 找到包含**備忘**資料行的索引時，[輸出] 窗格中顯示的訊息類型 (警告]、[錯誤] 或 [沒有任何內容]) 。  
   
 -   **預設模式**：警告  
   
@@ -83,8 +83,8 @@ ms.locfileid: "67929451"
   
 -   **完整模式**：錯誤  
   
-**當複雜查詢使用萬用字元時發出警告（\&#42;)**  
-當 SELECT 語句中的資料行名稱為萬用字元（*）時，會在 [輸出] 窗格中顯示警告，並錯誤清單。  
+**當複雜查詢使用萬用字元 (#42 時發出警告 \& ) **  
+當 SELECT 語句中的資料行名稱是萬用字元 ( * ) 時，會在 [輸出] 窗格中顯示警告，並錯誤清單。  
   
 -   **預設模式**： True  
   
@@ -111,5 +111,5 @@ ms.locfileid: "67929451"
 -   **完整模式**： True  
   
 ## <a name="see-also"></a>另請參閱  
-[使用者介面參考（存取）](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[ (存取) 的使用者介面參考](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

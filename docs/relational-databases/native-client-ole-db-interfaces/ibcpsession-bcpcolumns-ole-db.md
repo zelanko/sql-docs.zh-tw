@@ -1,5 +1,5 @@
 ---
-title: IBCPSession：： BCPColumns （Native Client OLE DB 提供者） |Microsoft Docs
+title: IBCPSession：： BCPColumns (Native Client OLE DB 提供者) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: c338abe8-9e30-4853-a7c6-b1a6c00095e1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fd0a9a2121a3a2b1c2046d52a45778eceb03e540
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: e2dab7a561c9b3b087075cc04962ec26039ce086
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247779"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87947647"
 ---
-# <a name="ibcpsessionbcpcolumns-native-client-ole-db-provider"></a>IBCPSession：： BCPColumns （Native Client OLE DB 提供者）
+# <a name="ibcpsessionbcpcolumns-native-client-ole-db-provider"></a>IBCPSession：： BCPColumns (Native Client OLE DB 提供者) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   設定要繫結至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中之資料行的欄位數目。  
@@ -55,7 +55,7 @@ HRESULT BCPColumns(
  此方法已成功。  
   
  E_FAIL  
- 發生提供者特定的錯誤;如需詳細資訊，請使用[ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)介面。  
+ 發生提供者特定的錯誤;如需詳細資訊，請使用[ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15)介面。  
   
  E_UNEXPECTED  
  此方法的呼叫是非預期的。 例如，在呼叫這個方法之前，不會呼叫 **BCPInit** 方法。 針對大量複製作業呼叫此方法超過一次時，也會發生這個狀況。  

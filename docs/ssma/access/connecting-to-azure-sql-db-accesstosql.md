@@ -17,14 +17,14 @@ helpviewer_keywords:
 - SQL Azure, reconnecting
 - SQL Azure, synchronizing metadata
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 529962cbc303a66102f833374e42c6cfb8981b87
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 3bb372b329ce516cae2ab26ece02721d7934b228
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87822515"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938907"
 ---
 # <a name="connecting-to-azure-sql-database-accesstosql"></a>連接到 Azure SQL Database (AccessToSQL) 
 若要將 Access 資料庫移轉至 SQL Azure，您必須連接到 SQL Azure 的目標實例。 當您連接時，SSMA 會取得 SQL Azure 實例中所有資料庫的相關中繼資料，並在 SQL Azure 中繼資料 Explorer 中顯示資料庫中繼資料。 SSMA 會儲存您所連接之 SQL Azure 實例的相關資訊，但不會儲存密碼。  
@@ -72,7 +72,7 @@ ms.locfileid: "87822515"
 如果 SQL Azure 帳戶中沒有任何資料庫，您可以使用 [按一下**流覽]** 按鈕上顯示的 [**建立 Azure 資料庫**] 選項來建立第一個資料庫。  
   
 ## <a name="synchronizing-sql-azure-metadata"></a>同步處理 SQL Azure 中繼資料  
-SQL Azure 資料庫的相關中繼資料不會自動更新。 當您第一次連線到 SQL Azure 時，或上次手動更新中繼資料時，SQL Azure 中繼資料 Explorer 中的中繼資料就是中繼資料的快照集。 您可以手動更新所有資料庫或任何單一資料庫或資料庫物件的中繼資料。  
+Azure SQL Database 中的資料庫相關中繼資料不會自動更新。 當您第一次連線到 SQL Azure 時，或上次手動更新中繼資料時，SQL Azure 中繼資料 Explorer 中的中繼資料就是中繼資料的快照集。 您可以手動更新所有資料庫或任何單一資料庫或資料庫物件的中繼資料。  
   
 **同步處理中繼資料**  
   
@@ -96,10 +96,10 @@ SQL Azure 資料庫的相關中繼資料不會自動更新。 當您第一次連
   
 重新連接到 SQL Azure 的程式與建立連線的程式相同。  
   
-## <a name="next-step"></a>後續步驟  
+## <a name="next-steps"></a>後續步驟  
 遷移的下一個步驟取決於您的專案需求：  
   
--   若要自訂存取架構與 SQL Azure 資料庫和架構之間的對應，請參閱將[Access 資料庫對應至 SQL Server 架構](mapping-source-and-target-databases-accesstosql.md)。  
+-   若要自訂存取架構和 Azure SQL Database 之間的對應，請參閱[將 Access 資料庫對應至 SQL Server 架構](mapping-source-and-target-databases-accesstosql.md)。  
   
 -   若要自訂專案的設定選項，請參閱[設定專案選項](setting-conversion-and-migration-options-accesstosql.md)。  
   
