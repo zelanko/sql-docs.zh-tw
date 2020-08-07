@@ -10,20 +10,20 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: d49a56c7d545a69729f222daad1e9504802e7bcc
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: c9757642736362745bd37607cacf74eeee962125
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942370"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87824063"
 ---
 # <a name="installation-and-configuration"></a>安裝和組態
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 Wide World 匯入 OLTP 資料庫安裝和設定指示。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
-- [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) （或更新版本）或[Azure SQL Database](https://azure.microsoft.com/services/sql-database/)。 如需完整版本的範例，請使用 SQL Server Evaluation/Developer/Enterprise Edition。
+- [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (或更高版本) 或[Azure SQL Database](https://azure.microsoft.com/services/sql-database/)。 如需完整版本的範例，請使用 SQL Server Evaluation/Developer/Enterprise Edition。
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。 若要獲得最佳結果，請使用2016年6月版本或更新版本。
 
 ## <a name="download"></a>下載
@@ -56,7 +56,7 @@ Wide World 匯入 OLTP 資料庫安裝和設定指示。
 
 若要將 bacpac 匯入新的 SQL Database，您可以使用 Management Studio。
 
-1. 選擇性如果您在 Azure 中還沒有 SQL Server，請流覽至 [ [Azure 入口網站](https://portal.azure.com/)]，然後建立新的 SQL Database。 在建立資料庫的過程中，您將會建立伺服器。 請記下伺服器。
+1.  (選擇性) 如果您在 Azure 中還沒有 SQL Server，請流覽至[Azure 入口網站](https://portal.azure.com/)，並建立新的 SQL Database。 在建立資料庫的過程中，您將會建立伺服器。 請記下伺服器。
    - 請參閱[此教學](https://azure.microsoft.com/documentation/articles/sql-database-get-started/)課程，以在短短幾分鐘內建立資料庫
 2. 開啟 SQL Server Management Studio 並聯機到您在 Azure 中的伺服器。
 3. 以滑鼠右鍵按一下 [**資料庫**] 節點，然後選取 [匯**入資料層應用程式**]。
@@ -68,7 +68,7 @@ Wide World 匯入 OLTP 資料庫安裝和設定指示。
 
 ### <a name="full-text-indexing"></a>全文檢索索引
 
-範例資料庫可以利用全文檢索索引。 不過，預設不會隨 SQL Server 安裝該功能，您必須在 SQL Server 安裝期間選取它（在 Azure SQL DB 中預設為啟用）。 因此，需要進行後續安裝步驟。
+範例資料庫可以利用全文檢索索引。 不過，此功能預設不會隨 SQL Server 安裝-您必須在 SQL Server 安裝期間加以選取， (預設會在 Azure SQL Database) 中啟用。 因此，需要進行後續安裝步驟。
 
 1. 在 SQL Server Management Studio 中，連接到 WideWorldImporters 資料庫，然後開啟新的查詢視窗。
 2. 執行下列 T-sql 命令，以啟用在資料庫中使用全文檢索索引：`EXECUTE Application.Configuration_ApplyFullTextIndexing`

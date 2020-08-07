@@ -1,5 +1,5 @@
 ---
-title: sp_add_job （Transact-sql） |Microsoft Docs
+title: sp_add_job (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6a2cc2c6dcb1eb1d9068a5107f504683eb516bf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bf9351455ffa21978821590e06edaa93e7f70405
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879982"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865346"
 ---
 # <a name="sp_add_job-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85879982"
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
  > [!IMPORTANT]  
- > [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+ > 在[AZURE SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)上，目前不支援大部分的 SQL Server Agent 功能。 如需詳細資訊，請參閱[AZURE SQL 受控執行個體與 SQL Server 的 t-sql 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
  
 ## <a name="syntax"></a>語法  
   
@@ -57,11 +57,11 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @job_name = ] 'job_name'`作業的名稱。 名稱必須是唯一的，而且不能包含百分比（ **%** ）字元。 *job_name*是**Nvarchar （128）**，沒有預設值。  
+`[ @job_name = ] 'job_name'`作業的名稱。 名稱必須是唯一的，而且不能包含 (**%**) 字元的百分比。 *job_name*是**Nvarchar (128) **，沒有預設值。  
   
-`[ @enabled = ] enabled`表示已加入作業的狀態。 [*已啟用*] 是**Tinyint**，預設值是1（已啟用）。 如果為**0**，則不會啟用作業，且不會根據其排程執行。不過，它可以手動執行。  
+`[ @enabled = ] enabled`表示已加入作業的狀態。 [*已啟用*] 為**Tinyint**，預設值為 1 (啟用) 。 如果為**0**，則不會啟用作業，且不會根據其排程執行。不過，它可以手動執行。  
   
-`[ @description = ] 'description'`作業的描述。 *description*是**Nvarchar （512）**，預設值是 Null。 如果省略*description* ，則會使用「沒有可用的描述」。  
+`[ @description = ] 'description'`作業的描述。 *描述*是**Nvarchar (512) **，預設值是 Null。 如果省略*description* ，則會使用「沒有可用的描述」。  
   
 `[ @start_step_id = ] step_id`要針對作業執行之第一個步驟的識別碼。 *step_id*是**int**，預設值是1。  
   
@@ -78,7 +78,7 @@ sp_add_job [ @job_name = ] 'job_name'
 |**0**|永不|  
 |**1**|成功時|  
 |**2** (預設值)|失敗時|  
-|**3**|永遠|  
+|**3**|一律|  
   
 `[ @notify_level_email = ] email_level`值，指出在此作業完成時，何時傳送電子郵件。 *email_level*是**int**，預設值是**0**，表示 never。 *email_level*使用與*eventlog_level*相同的值。  
   
@@ -100,7 +100,7 @@ sp_add_job [ @job_name = ] 'job_name'
 `[ @job_id = ] _job_idOUTPUT`成功建立時指派給作業的作業識別碼。 *job_id*是**uniqueidentifier**類型的輸出變數，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或**1** (失敗)   
   
 ## <a name="result-sets"></a>結果集  
  None  

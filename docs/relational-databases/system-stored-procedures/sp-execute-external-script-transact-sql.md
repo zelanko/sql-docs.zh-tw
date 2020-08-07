@@ -1,7 +1,7 @@
 ---
-title: sp_execute_external_script （Transact-sql） |Microsoft Docs
+title: sp_execute_external_script (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 05/28/2020
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 10c29ab8faed05c2fb2750e1e4de17b2fc1fb2b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a1ef1dc0f4b59b5eaf8f0ea4978a4eacde023e31
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790401"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87877956"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 
@@ -36,7 +36,7 @@ ms.locfileid: "85790401"
 
 針對 Machine Learning 服務， [Python](../../machine-learning/concepts/extension-python.md)和[R](../../machine-learning/concepts/extension-r.md)是支援的語言。 針對語言擴充功能，支援 JAVA，但必須使用[CREATE EXTERNAL Language](../../t-sql/statements/create-external-language-transact-sql.md)加以定義。
 
-若要執行**sp_execute_external_script**，您必須先安裝 Machine Learning 服務或語言延伸模組。 如需詳細資訊，請參閱在 Windows 和[linux](../../linux/sql-server-linux-setup-machine-learning.md)[上安裝 SQL Server Machine Learning Services （Python 和 R）](../../machine-learning/install/sql-machine-learning-services-windows-install.md) ，或在 Windows 和[Linux](../../linux/sql-server-linux-setup-language-extensions.md)[上安裝 SQL Server 語言擴充](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md)功能。
+若要執行**sp_execute_external_script**，您必須先安裝 Machine Learning 服務或語言延伸模組。 如需詳細資訊，請參閱在 Windows 和[linux](../../linux/sql-server-linux-setup-machine-learning.md)[上安裝 SQL Server Machine Learning Services (Python 和 R) ](../../machine-learning/install/sql-machine-learning-services-windows-install.md) ，或在 Windows 和[Linux](../../linux/sql-server-linux-setup-language-extensions.md)上[安裝 SQL Server 語言擴充](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md)功能。
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
@@ -44,7 +44,7 @@ ms.locfileid: "85790401"
 
 針對 Machine Learning 服務， [Python](../../machine-learning/concepts/extension-python.md)和[R](../../machine-learning/concepts/extension-r.md)是支援的語言。
 
-若要執行**sp_execute_external_script**，您必須先安裝 Machine Learning 服務。 如需詳細資訊，請參閱[在 Windows 上安裝 SQL Server Machine Learning Services （Python 和 R）](../../machine-learning/install/sql-machine-learning-services-windows-install.md)。
+若要執行**sp_execute_external_script**，您必須先安裝 Machine Learning 服務。 如需詳細資訊，請參閱[在 Windows 上安裝 SQL Server Machine Learning Services (Python 和 R) ](../../machine-learning/install/sql-machine-learning-services-windows-install.md)。
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
@@ -52,7 +52,7 @@ ms.locfileid: "85790401"
 
 針對 R 服務， [r](../../machine-learning/concepts/extension-r.md)是支援的語言。
 
-若要執行**sp_execute_external_script**，您必須先安裝 R Services。 如需詳細資訊，請參閱[在 Windows 上安裝 SQL Server Machine Learning Services （Python 和 R）](../../machine-learning/install/sql-r-services-windows-install.md)。
+若要執行**sp_execute_external_script**，您必須先安裝 R Services。 如需詳細資訊，請參閱[在 Windows 上安裝 SQL Server Machine Learning Services (Python 和 R) ](../../machine-learning/install/sql-r-services-windows-install.md)。
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
@@ -101,7 +101,7 @@ sp_execute_external_script
 ## <a name="arguments"></a>引數
  ** \@ language** = N 「*language*」  
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
- 表示指令碼語言。 *language*為**sysname**。 有效值為**R**、 **Python**，以及任何使用[建立外部語言](../../t-sql/statements/create-external-language-transact-sql.md)（例如 JAVA）所定義的語言。
+ 表示指令碼語言。 *language*為**sysname**。 有效值為**R**、 **Python**，以及使用 [[建立外部語言](../../t-sql/statements/create-external-language-transact-sql.md)] (定義的任何語言，例如 JAVA) 。
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
  表示指令碼語言。 *language*為**sysname**。 在 SQL Server 2017 中，有效的值為**R**和**Python**。
@@ -113,9 +113,9 @@ sp_execute_external_script
  表示指令碼語言。 *language*為**sysname**。 在 Azure SQL 受控執行個體中，有效的值為**R**和**Python**。
 ::: moniker-end
 
- ** \@ script** = n. 指定為常值或變數輸入的「*腳本*」外部語言腳本。 *script*為**Nvarchar （max）**。  
+ ** \@ script** = n. 指定為常值或變數輸入的「*腳本*」外部語言腳本。 *腳本*是**Nvarchar (max) **。  
 
-`[ @input_data_1 =  N'input_data_1' ]`以查詢的形式，指定外部腳本所使用的輸入資料 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 *Input_data_1*的資料類型為**Nvarchar （max）**。
+`[ @input_data_1 =  N'input_data_1' ]`以查詢的形式，指定外部腳本所使用的輸入資料 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 *Input_data_1*的資料類型是**Nvarchar (max) **。
 
 `[ @input_data_1_name = N'input_data_1_name' ]`指定用來表示所定義之查詢的變數名稱 @input_data_1 。 外部腳本中變數的資料類型取決於語言。 如果是 R，則輸入變數是資料框架。 在 Python 的案例中，輸入必須是表格式。 *input_data_1_name*是**sysname**。  預設值為*InputDataSet*。  
 
@@ -127,7 +127,7 @@ sp_execute_external_script
 
 `[ @output_data_1_name =  N'output_data_1_name' ]`指定外部腳本中的變數名稱，其中包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預存程序呼叫完成時要傳回的資料。 外部腳本中變數的資料類型取決於語言。 針對 R，輸出必須是資料框架。 針對 Python，輸出必須是 pandas 的資料框架。 *output_data_1_name*是**sysname**。  預設值為*OutputDataSet*。  
 
-`[ @parallel = 0 | 1 ]`藉由將參數設定為1，以啟用 R 腳本的平行執行 `@parallel` 。 這個參數的預設值為0（沒有平行處理原則）。 如果 `@parallel = 1` 和輸出是直接串流處理到用戶端電腦，則 `WITH RESULT SETS` 需要子句，而且必須指定輸出架構。  
+`[ @parallel = 0 | 1 ]`藉由將參數設定為1，以啟用 R 腳本的平行執行 `@parallel` 。 此參數的預設值為 0 (沒有任何平行處理原則) 。 如果 `@parallel = 1` 和輸出是直接串流處理到用戶端電腦，則 `WITH RESULT SETS` 需要子句，而且必須指定輸出架構。  
 
  + 針對不使用 RevoScaleR 函數的 R 腳本，使用 `@parallel` 參數對於處理大型資料集很有説明，假設腳本可以完整平行化。 例如，搭配模型使用 R `predict` 函數來產生新的預測時，請將設定 `@parallel = 1` 為查詢引擎的提示。 如果可以平行處理查詢，則會根據**MAXDOP**設定來散發資料列。  
   
@@ -143,7 +143,7 @@ sp_execute_external_script
 > 查詢樹狀結構是由 SQL 機器學習所控制，使用者無法在查詢上執行任意作業。
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-使用**sp_execute_external_script**執行以支援的語言撰寫的腳本。 支援的語言為搭配 Machine Learning 服務使用的**Python**和**R** ，以及使用[建立外部語言](../../t-sql/statements/create-external-language-transact-sql.md)（例如 JAVA）所定義的任何語言搭配語言擴充功能使用。
+使用**sp_execute_external_script**執行以支援的語言撰寫的腳本。 支援的語言為搭配 Machine Learning 服務使用的**Python**和**R** ，以及使用[CREATE EXTERNAL language](../../t-sql/statements/create-external-language-transact-sql.md) (所定義的任何語言，例如 JAVA) 與語言延伸模組搭配使用。
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 使用**sp_execute_external_script**執行以支援的語言撰寫的腳本。 支援的語言為 SQL Server 2017 Machine Learning 服務中的**Python**和**R** 。
@@ -177,7 +177,7 @@ sp_execute_external_script
 您可以藉由指定，以平行方式執行腳本 `@parallel=1` 。 如果可以平行處理輸入查詢，您應該將設定 `@parallel=1` 為引數的一部分 `sp_execute_external_script` 。 根據預設，查詢最佳化工具會在 `@parallel=1` 具有超過256個數據列的資料表上運作，但如果您想要明確處理這個問題，此腳本會將參數納入做為示範。
 
 > [!Tip]
-> 針對定型工作負載，您可以使用 `@parallel` 搭配任何任意的定型指令碼，甚至是使用非 Microsoft-rx 演算法的指令碼。 一般來說，只有 RevoScaleR 演算法 (具有 rx 前置詞) 在 SQL Server 的定型案例中提供平行處理原則。 但是使用 SQL Server vNext 中的新參數，您可以平行處理呼叫未特別以該功能設計的函式的腳本。
+> 針對定型工作負載，您可以使用 `@parallel` 搭配任何任意的定型指令碼，甚至是使用非 Microsoft-rx 演算法的指令碼。 一般來說，只有 RevoScaleR 演算法 (具有 rx 前置詞) 在 SQL Server 的定型案例中提供平行處理原則。 但是使用 SQL Server 2019 和更新版本中的新參數，您可以平行處理呼叫未特別以該功能設計的函式的腳本。
 ::: moniker-end
 
 ### <a name="streaming-execution-for-python-and-r-scripts"></a>Python 和 R 腳本的串流執行  
@@ -219,7 +219,7 @@ sp_execute_external_script
 
 如果輸入包含不符合 R 中所允許之值範圍的**datetime**值，則會將值轉換為**NA**。 這是必要的，因為 SQL 機器學習服務允許的值範圍比 R 語言所支援的更大。
 
-雖然 `+Inf` `-Inf` `NaN` 這兩種語言都使用 IEEE 754，但 SQL 機器學習不支援 Float 值（例如，、、）。 目前的行為只會直接將值傳送至 SQL;因此，SQL 用戶端會擲回錯誤。 因此，這些值會轉換成**Null**。
+雖然 `+Inf` `-Inf` `NaN` 這兩種語言都使用 IEEE 754，但在 SQL machine learning 中不支援浮點值 (例如、、) 。 目前的行為只會直接將值傳送至 SQL;因此，SQL 用戶端會擲回錯誤。 因此，這些值會轉換成**Null**。
 
 ## <a name="permissions"></a>權限
 
@@ -332,6 +332,6 @@ GO
 + [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
 + [外部指令碼已啟用伺服器組態選項](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   
 + [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   
-+ [SQL Server 的 External Scripts 物件](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)  
++ [SQL Server, 外部指令碼物件](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)  
 + [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)  
 + [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) 

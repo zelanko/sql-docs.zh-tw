@@ -1,5 +1,5 @@
 ---
-title: sp_changelogreader_agent （Transact-sql） |Microsoft Docs
+title: sp_changelogreader_agent (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/15/2018
 ms.prod: sql
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c776d68cb997f5f360e7b79180a8dfaea86fd6e4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5a46432317ebf320af3e3860c1c1973fc04119b5
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771497"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864965"
 ---
 # <a name="sp_changelogreader_agent-transact-sql"></a>sp_changelogreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,7 +43,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @job_login = ] 'job_login'`這是用來執行代理程式之帳戶的登入。 *job_login*是**Nvarchar （257）**，預設值是 Null。 在 Azure SQL Database 受控執行個體上，使用 SQL Server 帳戶。 *這不能變更為非* [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*發行者。*  
+`[ @job_login = ] 'job_login'`這是用來執行代理程式之帳戶的登入。 *job_login*是**Nvarchar (257) **，預設值是 Null。 在 Azure SQL 受控執行個體上，使用 SQL Server 帳戶。 *這不能變更為非* [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*發行者。*  
   
 `[ @job_password = ] 'job_password'`這是用來執行代理程式之帳戶的密碼。 *job_password*是**sysname**，預設值是 Null。  
   
@@ -65,7 +65,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 `[ @publisher = ] 'publisher'`這是發行者的名稱。 *publisher*是**sysname**，預設值是 Null。 只支援非 SQL Server 發行者使用這個參數。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或**1** (失敗)   
   
 ## <a name="remarks"></a>備註  
  **sp_changelogreader_agent**用於異動複寫中。  
@@ -78,7 +78,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
  只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_changelogreader_agent**。  
   
 ## <a name="see-also"></a>另請參閱  
- [查看及修改複寫安全性設定](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
+ [檢視及修改複寫安全性設定](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [sp_helplogreader_agent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)   
  [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)  
   

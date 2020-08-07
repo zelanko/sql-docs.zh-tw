@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 85143440cc92cdc427be673667e22be6957cbe50
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: ae88f4473414e83a2ffbddee5c47fa40c552115a
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565497"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823363"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>在資料庫測試助理中重新執行追蹤
 
@@ -48,7 +48,7 @@ ms.locfileid: "87565497"
     - 重新執行**追蹤位置**：指定路徑來儲存與追蹤重新執行相關聯的追蹤檔案/XEvents。
 
         > [!NOTE]
-        > 針對 Azure SQL Database 或 Azure SQL Database 受控實例，您必須提供 Azure blob 儲存體帳戶的 SAS URI。
+        > 針對 Azure SQL Database 或 Azure SQL 受控執行個體，您必須提供 Azure blob 儲存體帳戶的 SAS URI。
 
 3. 選取 [**是，我已手動還原資料庫 () ]** 核取方塊，確認您已 (s) 還原資料庫。
 

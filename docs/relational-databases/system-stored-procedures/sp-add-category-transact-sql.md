@@ -1,5 +1,5 @@
 ---
-title: sp_add_category （Transact-sql） |Microsoft Docs
+title: sp_add_category (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 251c9992285084123df7afb3c27678c2886b531c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 323a86b4efbaa63d8858341c68908e30258d4889
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879997"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865286"
 ---
 # <a name="sp_add_category-transact-sql"></a>sp_add_category (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85879997"
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
  > [!IMPORTANT]  
- > [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+ > 在[AZURE SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)上，目前不支援大部分的 SQL Server Agent 功能。 如需詳細資訊，請參閱[AZURE SQL 受控執行個體與 SQL Server 的 t-sql 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
   
 ## <a name="syntax"></a>語法  
   
@@ -45,26 +45,26 @@ sp_add_category
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @class = ] 'class'`要加入之類別目錄的類別。 *class*為**Varchar （8）** ，預設值為 JOB，而且可以是下列其中一個值。  
+`[ @class = ] 'class'`要加入之類別目錄的類別。 *類別*是**Varchar (8) ** ，預設值為 JOB，而且可以是下列其中一個值。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |JOB|加入作業類別目錄。|  
 |ALERT|加入警示類別目錄。|  
 |OPERATOR|加入操作員類別目錄。|  
   
-`[ @type = ] 'type'`要加入之類別目錄的類型。 *類型*為**Varchar （12）**，預設值為**LOCAL**，而且可以是下列其中一個值。  
+`[ @type = ] 'type'`要加入之類別目錄的類型。 *類型*是**Varchar (12) **，預設值為**LOCAL**，而且可以是下列其中一個值。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |LOCAL|本機作業類別目錄。|  
 |多伺服器|多伺服器作業類別目錄。|  
-|NONE|作業以外之類別的分類 **。**|  
+|無|作業以外之類別的分類 **。**|  
   
 `[ @name = ] 'name'`要加入之類別目錄的名稱。 在指定的類別內，這個名稱必須是唯一的。 *名稱*是**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或**1** (失敗)   
   
 ## <a name="result-sets"></a>結果集  
  None  

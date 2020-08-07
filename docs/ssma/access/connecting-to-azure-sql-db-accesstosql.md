@@ -1,5 +1,5 @@
 ---
-title: 連接到 Azure SQL DB （AccessToSQL） |Microsoft Docs
+title: 連接到 Azure SQL Database (AccessToSQL) |Microsoft Docs
 description: 瞭解如何連接到 Azure SQL Database 的目標實例，以遷移 Access 資料庫。 SSMA 會取得 Azure SQL Database 中資料庫的相關中繼資料。
 ms.prod: sql
 ms.custom: ''
@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: f07d63387a6abd55aa2a130f2809681b00a71b19
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 529962cbc303a66102f833374e42c6cfb8981b87
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293125"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822515"
 ---
-# <a name="connecting-to-azure-sql-db-accesstosql"></a>連接到 Azure SQL DB （AccessToSQL）
+# <a name="connecting-to-azure-sql-database-accesstosql"></a>連接到 Azure SQL Database (AccessToSQL) 
 若要將 Access 資料庫移轉至 SQL Azure，您必須連接到 SQL Azure 的目標實例。 當您連接時，SSMA 會取得 SQL Azure 實例中所有資料庫的相關中繼資料，並在 SQL Azure 中繼資料 Explorer 中顯示資料庫中繼資料。 SSMA 會儲存您所連接之 SQL Azure 實例的相關資訊，但不會儲存密碼。  
   
 您的 SQL Azure 連線會保持作用中狀態，直到您關閉專案為止。 當您重新開啟專案時，如果您想要使用伺服器的作用中連接，就必須重新連接到 SQL Azure。 在您將資料庫物件載入 SQL Azure 並遷移資料之前，您可以離線工作。  
@@ -50,7 +50,7 @@ ms.locfileid: "84293125"
   
 **連接到 SQL Azure**  
   
-1.  在 [檔案]**功能表上，選取 [連線****到 SQL Azure]** （這個選項會在建立專案之後啟用）。  
+1.  在 [檔案]**功能表上，選取 [連線****到 SQL Azure]** (此選項會在建立專案) 之後啟用。  
   
     如果您先前已連線到 SQL Azure，命令名稱會**重新連接到 Sql azure**。  
   

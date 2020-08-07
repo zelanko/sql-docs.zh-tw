@@ -1,5 +1,5 @@
 ---
-title: sys.databases dm_exec_query_stats （Transact-sql） |Microsoft Docs
+title: dm_exec_query_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/30/2019
 ms.prod: sql
@@ -20,12 +20,12 @@ ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2df86c9850dddb7532602476d2ce9ffcaebad62
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f73452beb45c9f5df4b806d937043f22c5c0dbe1
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734702"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865316"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "85734702"
 |**last_logical_reads**|**bigint**|計畫上次執行所執行的邏輯讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
 |**min_logical_reads**|**bigint**|這個計畫在單次執行期間曾執行的最小邏輯讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
 |**max_logical_reads**|**bigint**|這個計畫在單次執行期間曾經執行的最大邏輯讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
-|**total_clr_time**|**bigint**|在 common language runtime （CLR）物件中的時間（以毫秒為單位來報告，但是精確度只到毫秒），這是在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 編譯後執行此計畫的方式。 CLR 物件可以是預存程序、函數、觸發程序、類型和彙總。|  
+|**total_clr_time**|**bigint**|在 common language runtime 中所耗用的時間（以微秒為單位） (，但只有精確度) （以毫秒為單位）， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 因為這個計畫在編譯之後，會透過執行此方案 (CLR) 物件。 CLR 物件可以是預存程序、函數、觸發程序、類型和彙總。|  
 |**last_clr_time**|**bigint**|這個計畫上一次執行期間，在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR 物件內部執行所耗用的時間 (以毫秒為單位來報告，但是精確度只到毫秒)。 CLR 物件可以是預存程序、函數、觸發程序、類型和彙總。|  
 |**min_clr_time**|**bigint**|這個計畫在單次執行期間於 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR 物件內部曾經耗用的最少時間 (以毫秒為單位來報告，但是精確度只到毫秒)。 CLR 物件可以是預存程序、函數、觸發程序、類型和彙總。|  
 |**max_clr_time**|**bigint**|這個計畫在單次執行期間於 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR 物件內部曾經耗用的最多時間 (以毫秒為單位來報告，但是精確度只到毫秒)。 CLR 物件可以是預存程序、函數、觸發程序、類型和彙總。|  
@@ -71,8 +71,8 @@ ms.locfileid: "85734702"
 |**last_elapsed_time**|**bigint**|這個計畫最近完成所經歷的時間 (以毫秒為單位來報告，但是精確度只到毫秒)。|  
 |**min_elapsed_time**|**bigint**|這個計畫的任何一次完成執行所經歷的最少時間 (以毫秒為單位來報告，但是精確度只到毫秒)。|  
 |**max_elapsed_time**|**bigint**|這個計畫的任何一次完成執行所經歷的最多時間 (以毫秒為單位來報告，但是精確度只到毫秒)。|  
-|**query_hash**|**Binary （8）**|針對查詢所計算的二進位雜湊值，可用來識別含有類似邏輯的查詢。 您可以使用查詢雜湊判別只有常值不同之查詢的彙總資源使用狀況。|  
-|**query_plan_hash**|**binary （8）**|從查詢執行計畫計算所得的二進位雜湊值將用於識別類似的查詢執行計畫。 您可以使用查詢計劃雜湊尋找具有類似執行計畫之查詢的累計成本。<br /><br /> 當原生編譯的預存程序查詢記憶體最佳化的資料表時，一律為 0x000。|  
+|**query_hash**|**Binary (8) **|針對查詢所計算的二進位雜湊值，可用來識別含有類似邏輯的查詢。 您可以使用查詢雜湊判別只有常值不同之查詢的彙總資源使用狀況。|  
+|**query_plan_hash**|**binary (8) **|從查詢執行計畫計算所得的二進位雜湊值將用於識別類似的查詢執行計畫。 您可以使用查詢計劃雜湊尋找具有類似執行計畫之查詢的累計成本。<br /><br /> 當原生編譯的預存程序查詢記憶體最佳化的資料表時，一律為 0x000。|  
 |**total_rows**|**bigint**|查詢傳回的資料列總數。 不可為 null。<br /><br /> 當原生編譯的預存程序查詢記憶體最佳化的資料表時，一律為 0。|  
 |**last_rows**|**bigint**|上次執行查詢時所傳回的資料列數目。 不可為 null。<br /><br /> 當原生編譯的預存程序查詢記憶體最佳化的資料表時，一律為 0。|  
 |**min_rows**|**bigint**|在一次執行期間，查詢所傳回的最小資料列數目。 不可為 null。<br /><br /> 當原生編譯的預存程序查詢記憶體最佳化的資料表時，一律為 0。|  
@@ -116,10 +116,10 @@ ms.locfileid: "85734702"
 |**min_spills**|**bigint**|在單次執行期間，此查詢已溢出的最小頁面數目。<br /><br /> **適用于**：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
 |**max_spills**|**bigint**|在單次執行期間，此查詢已溢出的最大頁面數目。<br /><br /> **適用于**：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
 |**pdw_node_id**|**int**|此散發所在節點的識別碼。<br /><br /> **適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
-|**total_page_server_reads**|**bigint**|這個計畫在編譯以來執行所執行的遠端頁面伺服器讀取總數。<br /><br /> **適用物件：** Azure SQL DB 超大規模資料庫 |  
-|**last_page_server_reads**|**bigint**|上次執行計畫時所執行的遠端頁面伺服器讀取數目。<br /><br /> **適用物件：** Azure SQL DB 超大規模資料庫 |  
-|**min_page_server_reads**|**bigint**|這個計畫在單次執行期間曾執行的最小遠端頁面伺服器讀取數。<br /><br /> **適用物件：** Azure SQL DB 超大規模資料庫 |  
-|**max_page_server_reads**|**bigint**|這個計畫在單次執行期間曾執行的最大遠端頁面伺服器讀取數。<br /><br /> **適用物件：** Azure SQL DB 超大規模資料庫 |  
+|**total_page_server_reads**|**bigint**|這個計畫在編譯以來執行所執行的遠端頁面伺服器讀取總數。<br /><br /> **適用物件：** Azure SQL Database 超大規模資料庫 |  
+|**last_page_server_reads**|**bigint**|上次執行計畫時所執行的遠端頁面伺服器讀取數目。<br /><br /> **適用物件：** Azure SQL Database 超大規模資料庫 |  
+|**min_page_server_reads**|**bigint**|這個計畫在單次執行期間曾執行的最小遠端頁面伺服器讀取數。<br /><br /> **適用物件：** Azure SQL Database 超大規模資料庫 |  
+|**max_page_server_reads**|**bigint**|這個計畫在單次執行期間曾執行的最大遠端頁面伺服器讀取數。<br /><br /> **適用物件：** Azure SQL Database 超大規模資料庫 |  
 > [!NOTE]
 > <sup>1</sup>在啟用統計資料收集時，原生編譯預存程式會收集工作者時間（以毫秒為單位）。 如果查詢在不到一毫秒的時間內執行，此值會是0。  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.databases （Transact-sql） |Microsoft Docs
+title: " (Transact-sql) 的路由 |Microsoft Docs"
 ms.custom: ''
 ms.date: 09/07/2018
 ms.prod: sql
@@ -20,12 +20,12 @@ ms.assetid: 8fc65915-8bd6-425b-95d9-6a8468cb1e48
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 831447faa71c3386f394e456f3cbf1243f222083
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b15dc8ebf9bbe9616ada47627a638b7d34d7c278
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901679"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862854"
 ---
 # <a name="sysroutes-transact-sql"></a>sys.routes (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "85901679"
 |**remote_service_name**|**nvarchar(256)**|遠端服務的名稱。 NULLABLE。|  
 |**broker_instance**|**nvarchar(128)**|主控遠端服務的 Broker 識別碼。 NULLABLE。|  
 |**期**|**datetime**|路由到期的日期和時間。 請注意，此值不使用當地的時區。 此值會顯示 UTC 格式的到期時間。 NULLABLE。|  
-|**address**|**nvarchar(256)**|Service Broker 傳送遠端服務訊息至的網路位址。 NULLABLE。 針對 SQL Database 受控執行個體，位址必須是 local。|  
+|**address**|**nvarchar(256)**|Service Broker 傳送遠端服務訊息至的網路位址。 NULLABLE。 若為 SQL 受控執行個體，位址必須是 local。|  
 |**mirror_address**|**nvarchar(256)**|位址中所指定的伺服器之鏡像夥伴網路位址。 NULLABLE。|  
   
 ## <a name="permissions"></a>權限  

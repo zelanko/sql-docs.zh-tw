@@ -1,5 +1,5 @@
 ---
-title: 使用 SSMA 專案（MySQLToSQL） |Microsoft Docs
+title: 使用 SSMA Projects (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 37a763c0acca891d8bbbc1a310edcb6f8b987436
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d9bec916103214169f549a0b555a46fd0d65fdb
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67904907"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862439"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>使用 SSMA 專案 (MySQLToSQL)
 若要將 MySQL 資料庫遷移至 SQL Server 或 SQL Azure，您必須先建立 SSMA 專案。 專案是包含下列資訊的檔案：  
@@ -53,11 +53,11 @@ SSMA 包含數個設定，用於轉換和載入資料庫、遷移資料，以及
   
 -   如需同步處理至 SQL Server 之設定的詳細資訊，請參閱[&#40;同步處理&#41; &#40;MySQLToSQL&#41;的專案設定](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)。  
   
--   如需 GUI 設定的相關資訊，請參閱[專案設定（GUI）（SSMA 一般）](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)。  
+-   如需 GUI 設定的相關資訊，請參閱[ (gui)  (SSMA 常見) 的專案設定](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)。  
   
 -   如需資料類型對應設定的詳細資訊，請參閱[專案設定 &#40;類型對應&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)。  
   
--   如需有關 SQL Azure 設定的詳細資訊，請參閱[AZURE SQL DB 的專案設定 &#40;&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)。  
+-   如需有關 SQL Azure 設定的詳細資訊，請參閱[專案設定 &#40;Azure SQL Database&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)。  
   
 > [!NOTE]  
 > 只有當您在建立專案時選取 [**遷移至 SQL azure** ] 時，才會顯示 SQL azure 設定。  
@@ -73,7 +73,7 @@ SSMA 包含數個設定，用於轉換和載入資料庫、遷移資料，以及
   
 3.  在 [**位置**] 方塊中，輸入或選取專案的資料夾。  
   
-4.  在 [**遷移至**] 下拉式選，選取用於遷移的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目標版本。 可用的選項如下︰  
+4.  在 [**遷移至**] 下拉式選，選取用於遷移的目標版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 可用的選項如下︰  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
@@ -83,7 +83,7 @@ SSMA 包含數個設定，用於轉換和載入資料庫、遷移資料，以及
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
-    -   Azure SQL DB  
+    -   Azure SQL Database  
   
 然後按一下 **[確定]**  
   
@@ -105,7 +105,7 @@ SSMA 會建立專案檔。
   
 1.  針對顯示 [**中繼資料遺失**] 狀態的每個資料庫，選取資料庫名稱旁邊的核取方塊。 儲存中繼資料可能需要幾分鐘的時間。 如果您不想在此時儲存中繼資料，請不要選取任何核取方塊。  
   
-2.  按一下 **[儲存]** 。  
+2.  按一下 [儲存]。  
   
 SSMA 將會剖析 MySQL 架構，並將中繼資料儲存至專案檔。  
   
@@ -133,7 +133,7 @@ SSMA 將會剖析 MySQL 架構，並將中繼資料儲存至專案檔。
   
 ## <a name="see-also"></a>另請參閱  
 [連接到 MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
-[將 MySQL 資料庫遷移至 SQL Server-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[將 MySQL 資料庫遷移至 SQL Server Azure SQL Database &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
 [連接到 SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
-[連接到 Azure SQL DB &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
+[連接到 Azure SQL Database &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
   

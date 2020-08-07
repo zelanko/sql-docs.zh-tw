@@ -1,5 +1,5 @@
 ---
-title: sp_add_jobschedule （Transact-sql） |Microsoft Docs
+title: sp_add_jobschedule (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/28/2016
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7c7f644b94c405fa4072ecd7d7c448f6ea865404
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f69b827981a53024dbf22d4b3e3d2f64fd4b720f
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879974"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865117"
 ---
 # <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85879974"
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+  > 在[AZURE SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)上，目前不支援大部分的 SQL Server Agent 功能。 如需詳細資訊，請參閱[AZURE SQL 受控執行個體與 SQL Server 的 t-sql 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 ## <a name="syntax"></a>語法  
   
@@ -57,14 +57,14 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 ## <a name="arguments"></a>引數  
 `[ @job_id = ] job_id`要加入排程之作業的作業識別碼。 *job_id*是**uniqueidentifier**，沒有預設值。  
   
-`[ @job_name = ] 'job_name'`要加入排程的作業名稱。 *job_name*是**Nvarchar （128）**，沒有預設值。  
+`[ @job_name = ] 'job_name'`要加入排程的作業名稱。 *job_name*是**Nvarchar (128) **，沒有預設值。  
   
 > [!NOTE]  
 >  必須指定*job_id*或*job_name* ，但不能同時指定兩者。  
   
-`[ @name = ] 'name'`排程的名稱。 *名稱*為**Nvarchar （128）**，沒有預設值。  
+`[ @name = ] 'name'`排程的名稱。 *名稱*是**Nvarchar (128) **，沒有預設值。  
   
-`[ @enabled = ] enabled_flag`指出排程的目前狀態。 *enabled_flag*是**Tinyint**，預設值是**1** （已啟用）。 如果為**0**，則不會啟用排程。 停用排程時，就不會執行作業。  
+`[ @enabled = ] enabled_flag`指出排程的目前狀態。 *enabled_flag*為**Tinyint**，預設值為**1** (啟用) 。 如果為**0**，則不會啟用排程。 停用排程時，就不會執行作業。  
   
 `[ @freq_type = ] frequency_type`指出作業執行時間的值。 *frequency_type*是**int**，預設值是**0**，它可以是下列其中一個值：  
   
@@ -82,12 +82,12 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 |值|效果|  
 |-----------|------------|  
-|**1** （一次）|未使用*frequency_interval* 。|  
-|**4** （每日）|每*frequency_interval*天。|  
-|**8** （每週）|*frequency_interval*是下列一或多個（與 or 邏輯運算子結合）：<br /><br /> 1 = 星期日<br /><br /> 2 = 星期一<br /><br /> 4 = 星期二<br /><br /> 8 = 星期三<br /><br /> 16 = 星期四<br /><br /> 32 = 星期五<br /><br /> 64 = 星期六|  
-|**16** （每月）|在當月的*frequency_interval*天。|  
-|**32** （每月相對）|*frequency_interval*為下列其中一項：<br /><br /> 1 = 星期日<br /><br /> 2 = 星期一<br /><br /> 3 = 星期二<br /><br /> 4 = 星期三<br /><br /> 5 = 星期四<br /><br /> 6 = 星期五<br /><br /> 7 = 星期六<br /><br /> 8 = 日<br /><br /> 9 = 工作日<br /><br /> 10 = 週末|  
-|**64** （當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務啟動時）|未使用*frequency_interval* 。|  
+|**1** (一次) |未使用*frequency_interval* 。|  
+|**4** (每日) |每*frequency_interval*天。|  
+|每週**8** () |*frequency_interval*是下列一或多個與 or 邏輯運算子結合) 的 (：<br /><br /> 1 = 星期日<br /><br /> 2 = 星期一<br /><br /> 4 = 星期二<br /><br /> 8 = 星期三<br /><br /> 16 = 星期四<br /><br /> 32 = 星期五<br /><br /> 64 = 星期六|  
+|每月**16** () |在當月的*frequency_interval*天。|  
+|**32** (每月相對) |*frequency_interval*為下列其中一項：<br /><br /> 1 = 星期日<br /><br /> 2 = 星期一<br /><br /> 3 = 星期二<br /><br /> 4 = 星期三<br /><br /> 5 = 星期四<br /><br /> 6 = 星期五<br /><br /> 7 = 星期六<br /><br /> 8 = 日<br /><br /> 9 = 工作日<br /><br /> 10 = 週末|  
+|**64** ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式服務啟動時) |未使用*frequency_interval* 。|  
 |**128**|未使用*frequency_interval* 。|  
   
 `[ @freq_subday_type = ] frequency_subday_type`指定*frequency_subday_interval*的單位。 *frequency_subday_type*是**int**，沒有預設值，而且可以是下列其中一個值：  
@@ -100,7 +100,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @freq_subday_interval = ] frequency_subday_interval`每次執行作業之間所發生的*frequency_subday_type*週期數。 *frequency_subday_interval*是**int**，預設值是0。  
   
-`[ @freq_relative_interval = ] frequency_relative_interval`當*frequency_type*設定為**32** （每月相對）時，進一步定義*frequency_interval* 。  
+`[ @freq_relative_interval = ] frequency_relative_interval`當*frequency_type*設定為**32** (每月相對) 時，會進一步定義*frequency_interval* 。  
   
  *frequency_relative_interval*是**int**，沒有預設值，而且可以是下列其中一個值：  
   
@@ -108,7 +108,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |-----------|--------------------------|  
 |**1**|First|  
 |**2**|Second|  
-|**4**|第三個|  
+|**4**|Third|  
 |**8**|第四個|  
 |**16**|Last|  
   

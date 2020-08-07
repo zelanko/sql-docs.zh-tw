@@ -1,5 +1,5 @@
 ---
-title: 連接到 Azure SQL DB （MySQLToSQL） |Microsoft Docs
+title: 連接到 Azure SQL Database (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: d0b6f16a-1880-459d-a0c7-28b7ef15c56a
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 7fb6740681c08cb915755b3362352f139e078c4c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da3e0d05abf24bdd7100769ecfbb597e2953a9d5
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103187"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822557"
 ---
-# <a name="connecting-to-azure-sql-db-mysqltosql"></a>連線到 Azure SQL DB (MySQLToSQL)
+# <a name="connecting-to-azure-sql-database-mysqltosql"></a>連接到 Azure SQL Database (MySQLToSQL) 
 若要將 MySQL 資料庫遷移至 SQL Azure，您必須連接到 SQL Azure 的目標實例。 當您連接時，SSMA 會取得 SQL Azure 實例中所有資料庫的相關中繼資料，並在 SQL Azure 中繼資料 Explorer 中顯示資料庫中繼資料。 SSMA 會儲存您所連接之 SQL Azure 實例的資訊，但不會儲存密碼。  
   
 您的 SQL Azure 連線會保持作用中狀態，直到您關閉專案為止。 當您重新開啟專案時，如果您想要使用伺服器的作用中連接，就必須重新連接到 SQL Azure。 在您將資料庫物件載入 SQL Azure 並遷移資料之前，您可以離線工作。  
@@ -29,7 +29,7 @@ ms.locfileid: "68103187"
 ## <a name="required-sql-azure-permissions"></a>必要的 SQL Azure 許可權  
 用來連接到 SQL Azure 的帳戶需要不同的許可權，視帳戶執行的動作而定：  
   
--   若要將 MySQL 物件[!INCLUDE[tsql](../../includes/tsql-md.md)]轉換成語法、更新 SQL azure 的中繼資料，或將已轉換的語法儲存至腳本，此帳戶必須具有登入 sql azure 實例的許可權。  
+-   若要將 MySQL 物件轉換成 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法、更新 SQL azure 的中繼資料，或將已轉換的語法儲存至腳本，此帳戶必須具有登入 Sql azure 實例的許可權。  
   
 -   若要將資料庫物件載入至 SQL Azure，最低許可權需求是目標資料庫中**db_owner**資料庫角色的成員資格。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68103187"
   
 **連接到 SQL Azure**  
   
-1.  在 [檔案]**功能表上，選取 [連線****到 SQL Azure]** （這個選項會在建立專案之後啟用）。  
+1.  在 [檔案]**功能表上，選取 [連線****到 SQL Azure]** (此選項會在建立專案) 之後啟用。  
   
     如果您先前已連線到 SQL Azure，命令名稱會**重新連接到 Sql azure**。  
   
@@ -87,5 +87,5 @@ SQL Azure 資料庫的相關中繼資料不會自動更新。 當您第一次連
 -   如果您不需要執行上述任何一項工作，您可以將 MySQL 資料庫物件定義轉換成 SQL Azure 物件定義。 如需詳細資訊，請參閱將[MySQL 資料庫轉換 &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[將 MySQL 資料庫遷移至 SQL Server-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[將 MySQL 資料庫遷移至 SQL Server Azure SQL Database &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

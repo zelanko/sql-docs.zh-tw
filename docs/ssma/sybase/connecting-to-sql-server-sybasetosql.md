@@ -1,5 +1,5 @@
 ---
-title: 連接到 SQL Server （SybaseToSQL） |Microsoft Docs
+title: 連接到 SQL Server (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: dd368a1a-45b0-40e9-b4d3-5cdb48c26606
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 216e972fb817fec3a0446d42941b9915b73fa29a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 318de1e7a463892dbb40639bccacb89f6907b8bf
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394537"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864765"
 ---
 # <a name="connecting-to-sql-server-sybasetosql"></a>連線到 SQL Server (SybaseToSQL)
-若要將 Sybase 自我調整伺服器企業（ASE）資料庫移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，您必須連接到的任何目標實例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 當您連接時，SSMA 會取得實例中所有資料庫的相關中繼資料 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並在 [中繼資料] Explorer 中顯示資料庫中繼資料 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 SSMA 會儲存您所連接之實例的相關資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，但不會儲存密碼。  
+若要將 Sybase 自我調整伺服器企業 (ASE) 資料庫移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，您必須連接到的任何目標實例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 當您連接時，SSMA 會取得實例中所有資料庫的相關中繼資料 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並在 [中繼資料] Explorer 中顯示資料庫中繼資料 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 SSMA 會儲存您所連接之實例的相關資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，但不會儲存密碼。  
   
 您的連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會保持作用中狀態，直到您關閉專案為止。 當您重新開啟專案時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果您想要使用伺服器的作用中連接，就必須重新連接到。 在您將資料庫物件載入並遷移資料之前，您可以離線工作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "87394537"
   
 2.  在 [連接] 對話方塊中，輸入或選取實例的名稱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-    -   如果您要連接到本機電腦上的預設實例，您可以輸入**localhost**或句點（**.**）。  
+    -   如果您要連接到本機電腦上的預設實例，您可以輸入**localhost**或點 (**.**) 。  
   
     -   如果您要連接到另一部電腦上的預設實例，請輸入電腦的名稱。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "87394537"
   
 5.  在 [**驗證**] 方塊中，選取要用於連接的驗證類型。 若要使用目前的 Windows 帳戶，請選取 [ **Windows 驗證**]。 若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，請選取 [ **SQL Server Authentication** ]，然後提供 [登入名稱] 和 [密碼]。  
   
-6.  針對安全連線，會加入兩個控制項： [**加密連接**] 和 [ **TrustServerCertificate** ] 核取方塊。 只有在核取 [**加密連接**] 時，才會顯示 [ **TrustServerCertificate** ] 核取方塊。 若已核取 [**加密**連線] （true），而且未選取 [ **TrustServerCertificate** （false）]，則會驗證 SQL Server SSL 憑證。 驗證伺服器憑證是 SSL 交握的一部分，而且這麼做可以確保伺服器是所要連接的正確伺服器。 若要確保這一點，憑證必須安裝在用戶端以及伺服器端。  
+6.  針對安全連線，會加入兩個控制項： [**加密連接**] 和 [ **TrustServerCertificate** ] 核取方塊。 只有在核取 [**加密連接**] 時，才會顯示 [ **TrustServerCertificate** ] 核取方塊。 若已核取 [**加密**連線] (true) 而且未選取 [ **TrustServerCertificate** ] (false) ，它會驗證 SQL Server SSL 憑證。 驗證伺服器憑證是 SSL 交握的一部分，而且這麼做可以確保伺服器是所要連接的正確伺服器。 若要確保這一點，憑證必須安裝在用戶端以及伺服器端。  
   
 7.  按一下 [ **連接**]。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "87394537"
   
 -   較高版本的相容性對 SQL Azure 而言無效。  
   
-|專案類型與目標伺服器版本的比較|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br /> （版本： 9. x）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br /> （版本： 10. x）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />（版本： 11. x）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 <br />（版本： 12. x）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />（版本： 13. x）|SQL Azure|
+|專案類型與目標伺服器版本的比較|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br />  (版本： 9. x) |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br />  (版本： 10. x) |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br /> (版本： 11. x) |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 <br /> (版本： 12. x) |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br /> (版本： 13. x) |SQL Azure|
 |-|-|-|-|-|-|-|
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|是|是|是|是|是||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||是|是|是|是||
@@ -92,7 +92,7 @@ ms.locfileid: "87394537"
 |SQL Azure||||||是|  
   
 > [!IMPORTANT]
-> 資料庫物件的轉換是根據專案類型執行，而不是依據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 您所連接之的版本。 若是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 專案， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 即使您連接至較高版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016），還是會以每個2005執行轉換。  
+> 資料庫物件的轉換是根據專案類型執行，而不是依據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 您所連接之的版本。 若是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 專案， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 即使您連接到較高版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016，還是會依照每個2005執行轉換)   
   
 ## <a name="reconnecting-to-sql-server"></a>重新連接到 SQL Server  
 您的連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會保持作用中狀態，直到您關閉專案為止。 當您重新開啟專案時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果您想要使用伺服器的作用中連接，就必須重新連接到。 您可以在更新中繼資料、將資料庫物件載入及遷移資料之前，離線工作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -124,5 +124,5 @@ ms.locfileid: "87394537"
 -   如果您不需要執行任何動作，您可以將 Sybase ASE 資料庫物件定義轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件定義。 如需詳細資訊，請參閱將[SYBASE ASE 資料庫物件轉換 &#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)。  
   
 ## <a name="see-also"></a>另請參閱  
-[將 Sybase ASE 資料庫移轉至 SQL Server-Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[將 Sybase ASE 資料庫移轉至 SQL Server Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

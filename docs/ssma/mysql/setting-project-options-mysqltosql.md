@@ -1,5 +1,5 @@
 ---
-title: 設定專案選項（MySQLToSQL） |Microsoft Docs
+title: " (MySQLToSQL) 設定專案選項 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 346fcd2ea7f83abcb9a5c23a22cb0eded76acc0e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d5c85c551ba70d28b4af7eb87126c51ef5a4ff75
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67944683"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863519"
 ---
 # <a name="setting-project-options-mysqltosql"></a>設定專案選項 (MySQLToSQL)
 針對每個 SSMA 專案，您可以設定專案層級選項。 這些選項會指定物件的轉換方式、遷移資料的方式，以及源資料類型如何對應至目標資料類型。  將物件轉換成 SQL Server 或 SQL Azure，或將資料移轉至 SQL Server 或 SQL Azure 之前，請確認設定選項適用于專案。  
@@ -28,7 +28,7 @@ SSMA 有五組專案設定：
   
 -   專案資訊  
   
--   一般（轉換、遷移和 SQL Azure）  
+-   一般 (轉換、遷移和 SQL Azure)   
   
 -   Synchronization  
   
@@ -44,7 +44,7 @@ SSMA 有五組專案設定：
   
 -   完整  
   
--   自訂  
+-   Custom  
   
 建議大多數使用者使用預設模式。 開放式模式會保留更多目前的 MySQL 語法，而且較容易閱讀。 不過，保留目前的語法可能會不正確。 如果 MySQL 語法必須轉換成對等的 SQL Server 或 SQL Azure 語法，則完整模式會執行最完整的轉換。 不過，產生的程式碼可能會更容易閱讀。 在 [自訂] 模式中，您可以設定選項。  
   
@@ -54,13 +54,13 @@ SSMA 有五組專案設定：
   
 -   [&#40;遷移&#41; &#40;MySQLToSQL 的專案設定&#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md)  
   
--   [專案設定（GUI）（SSMA 一般）](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)  
+-   [ (GUI)  (SSMA 通用) 的專案設定](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)  
   
 -   [專案設定 &#40;類型對應&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)  
   
 -   [&#40;同步處理的專案設定&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
   
--   [&#40;Azure SQL DB&#41; &#40;MySQLToSQL 的專案設定&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)  
+-   [專案設定 &#40;Azure SQL Database&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)  
   
 ## <a name="setting-project-options"></a>設定專案選項  
 在 SSMA 中，您可以設定所有專案的預設設定。 這些設定會儲存到 SSMA 設定檔，並套用至您所建立的任何新專案。  

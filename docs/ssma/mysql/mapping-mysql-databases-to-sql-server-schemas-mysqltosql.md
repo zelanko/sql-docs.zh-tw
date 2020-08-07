@@ -1,5 +1,5 @@
 ---
-title: 將 MySQL 資料庫對應至 SQL Server 架構（MySQLToSQL） |Microsoft Docs
+title: 將 MySQL 資料庫對應至 SQL Server 架構 (MySQLToSQL) |Microsoft Docs
 description: 瞭解如何自訂 MySQL 架構與 SQL Server 或 Azure SQL Database 之間的 MySQL 對應 SSMA，或接受預設值。
 ms.prod: sql
 ms.custom: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5c6fb445-92ae-4933-b77d-80230931c024
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: f70cf22db8d4a9c957465ea86f286c41098538c5
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 5fa0585a82a7c96fac8992b82f631364c27d3b87
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293706"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823631"
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>將 MySQL 資料庫對應到 SQL Server 結構描述 (MySQLToSQL)
 根據預設，適用于 MySQL 的 SSMA 會將 MySQL 架構中的所有物件遷移至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 名為的或 SQL Azure 資料庫，做為架構。 不過，您可以自訂 MySQL 架構和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 資料庫之間的對應。  
@@ -26,7 +26,7 @@ ms.locfileid: "84293706"
 ## <a name="mysql-and-sql-server-or-sql-azure-schemas"></a>MySQL 和 SQL Server 或 SQL Azure 架構  
 架構的 MySQL 概念會對應到資料庫的 SQL Server 概念及其其中一個架構。 SSMA 指的是資料庫和架構的 SQL Server 組合，做為架構。  
   
-架構的 MySQL 概念會對應到資料庫的 SQL Server 概念及其其中一個架構。 例如，MySQL 可能會有一個名為**HR**的架構。 SQL Server 的實例可能會有一個名為**HR**的資料庫，而該資料庫內則為架構。 其中一個架構是**dbo** （或資料庫擁有者）架構。 根據預設，MySQL 架構**hr**會對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫和架構**hr. dbo**。 SSMA 是指將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫和架構結合為架構。  
+架構的 MySQL 概念會對應到資料庫的 SQL Server 概念及其其中一個架構。 例如，MySQL 可能會有一個名為**HR**的架構。 SQL Server 的實例可能會有一個名為**HR**的資料庫，而該資料庫內則為架構。 其中一個架構是**dbo** (或資料庫擁有者) 架構。 根據預設，MySQL 架構**hr**會對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫和架構**hr. dbo**。 SSMA 是指將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫和架構結合為架構。  
   
 您可以修改 MySQL 與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure 架構之間的對應。  
   
@@ -41,11 +41,11 @@ ms.locfileid: "84293706"
   
 2.  在右窗格中，按一下 [**架構對應**] 索引標籤。  
   
-    您會看到所有 MySQL 架構的清單，後面接著目標值。 此目標是以或 SQL Azure 中的兩個部分標記法（*schema*）表示， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 而您的物件和資料將會在其中進行遷移。  
+    您會看到所有 MySQL 架構的清單，後面接著目標值。 在或 SQL Azure 中，此目標會以兩個部分的 *)  (表示*法表示， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 而您的物件和資料將會在其中遷移。  
   
 3.  選取包含您要變更之對應的資料列，然後按一下 [**修改**]。  
   
-    在 [**選擇目標架構**] 對話方塊中，您可以流覽可用的目標資料庫和架構，或是在兩個部分標記法（Schema）的文字方塊中輸入資料庫和架構名稱，然後按一下 **[確定]**。  
+    在 [**選擇目標架構**] 對話方塊中，您可以流覽可用的目標資料庫和架構，或是在兩個部分的標記法中輸入資料庫和架構名稱 (database. 架構) 然後按一下 **[確定]**。  
   
 4.  [**架構對應**] 索引標籤上的目標變更。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "84293706"
   
 ## <a name="see-also"></a>另請參閱  
 [專案設定 &#40;轉換&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
-[連接到 Azure SQL DB &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
-[將 MySQL 資料庫遷移至 SQL Server-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[連接到 Azure SQL Database &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
+[將 MySQL 資料庫遷移至 SQL Server Azure SQL Database &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
 [連接到 SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
   

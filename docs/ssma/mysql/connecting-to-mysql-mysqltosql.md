@@ -1,5 +1,5 @@
 ---
-title: 連接到 MySQL （MySQLToSQL） |Microsoft Docs
+title: 連接到 MySQL (MySQLToSQL) |Microsoft Docs
 description: 瞭解如何連接到目標 iMySQL 資料庫，以遷移 MySQL 資料庫。 SSMA 會取得 Azure SQL Database 中資料庫的相關中繼資料。
 ms.prod: sql
 ms.custom: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: d82a23735cde22773c693dce5f6e8dc86b9654b4
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: ff5d88c5269fc1b6e03029004d92a5360b82b65b
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293655"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822494"
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>連線到 MySQL (MySQLToSQL)
 若要將 MySQL 資料庫遷移至 SQL Server 或 SQL Azure，您必須連線到您想要遷移的 MySQL 資料庫。 當您連線時，SSMA 會取得所有 MySQL 架構的相關中繼資料，然後在 [MySQL 中繼資料瀏覽器] 窗格中顯示。 SSMA 會儲存資料庫伺服器的相關資訊，但不會儲存密碼。  
@@ -34,7 +34,7 @@ MySQL 資料庫的相關中繼資料不會自動更新。 相反地，如果您�
   
 -   ' Information_schema ' 上的 ' SELECT ' 許可權  
   
--   Mysql 上的「選取」許可權（適用于 Udf）  
+-   適用于 Udf 的 mysql (上的「選取」許可權)   
   
 ## <a name="establishing-a-connection-to-mysql"></a>建立 MySQL 的連線  
 當您連接到資料庫時，SSMA 會讀取資料庫中繼資料，然後將此中繼資料加入至專案檔。 當 SSMA 將物件轉換成 SQL Server 或 SQL Azure 語法，以及當它將資料移轉至 SQL Server 或 SQL Azure 時，會使用此中繼資料。 您可以在 [MySQL 中繼資料瀏覽器] 窗格中流覽此中繼資料，並查看個別資料庫物件的屬性。  
@@ -44,11 +44,11 @@ MySQL 資料庫的相關中繼資料不會自動更新。 相反地，如果您�
   
 **若要連接到 MySQL**  
   
-1.  在 [檔案]**功能表上，選取 [連線****到 MySQL]** （在建立專案之後，將會啟用此選項）。  
+1.  在 [檔案]**功能表上，選取 [連線****到 MySQL]** (這個選項將會在建立專案) 之後啟用。  
   
     如果您先前已連線到 MySQL，命令名稱會**重新連接到 mysql**。  
   
-2.  在 [**提供者**] 方塊中，選取 [MySQL ODBC 5.1 驅動程式（信任）]。 這是標準模式中的預設提供者。  
+2.  在 [**提供者**] 方塊中，選取 [MySQL ODBC 5.1 驅動程式 (信任的) ]。 這是標準模式中的預設提供者。  
   
 3.  在 [**模式]** 方塊中，選取 [**標準模式]**。 也是預設模式。  
   
@@ -62,14 +62,14 @@ MySQL 資料庫的相關中繼資料不會自動更新。 相反地，如果您�
   
     3.  在 [**密碼**] 方塊中，輸入指定之使用者名稱的密碼。  
   
-5.  **SSL：** 如果您想要安全地連線到 MySQL，請核取 [ **SSL** ] 核取方塊，以使用安全通訊端層（ssl）。  
+5.  **SSL：** 如果您想要安全地連線到 MySQL，請核取 [ **ssl** ] 核取方塊，以使用安全通訊端層 (SSL) 。  
   
-6.  **設定：** 它提供選項來設定透過安全通訊端層（SSL）的 MySQL 連線。  
+6.  **設定：** 它提供的選項可透過安全通訊端層 (SSL) 設定 MySQL 的連線。  
   
     > [!NOTE]  
     > 若要**啟用 [設定]**，SSL 必須設定為 [ **True**]。  
   
-    當您按一下 [設定] 按鈕時，就會出現對話方塊。 若要在連接到 MySQL 資料庫時使用加密，必須定義對話方塊中的下列三個憑證檔案的路徑 [隱私權增強郵件憑證（PEM）]：  
+    當您按一下 [設定] 按鈕時，就會出現對話方塊。 若要在連線到 MySQL 資料庫時使用加密，必須定義對話方塊中的下列三個憑證檔案的路徑 [隱私權增強郵件憑證 (PEM) ]：  
   
     -   **SSL 憑證頒發機構單位：** 指定具有信任 SSL Ca 清單之檔案的路徑。  
   
@@ -109,11 +109,11 @@ MySQL 資料庫的相關中繼資料不會自動重新整理。 當您第一次�
   
     -   若要查看色彩編碼的定義，請按一下 [**圖例**] 按鈕。  
   
-5.  按一下 [確定]。  
+5.  按一下 [確定]  。  
   
 ## <a name="next-step"></a>後續步驟  
 遷移程式的下一個步驟是[連接到 SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[將 MySQL 資料庫遷移至 SQL Server-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[將 MySQL 資料庫遷移至 SQL Server Azure SQL Database &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

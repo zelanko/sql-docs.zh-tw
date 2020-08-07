@@ -1,5 +1,5 @@
 ---
-title: sys.databases dm_exec_query_profiles （Transact-sql） |Microsoft Docs
+title: dm_exec_query_profiles (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/25/2019
 ms.prod: sql
@@ -20,12 +20,12 @@ ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8efc79ed772d92986af87a707cf64f4c0f9cbdcf
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 51dd6f1d831931fcd8e14e38a3ca94ae440dae1a
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442551"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865366"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -56,8 +56,8 @@ ms.locfileid: "87442551"
 |first_row_time|**bigint**|開啟第一個資料列的時間戳記 (以毫秒為單位)。|  
 |last_row_time|**bigint**|開啟最後一個資料列的時間戳記 (以毫秒為單位)。|  
 |close_time|**bigint**|關閉的時間戳記 (以毫秒為單位)。|  
-|elapsed_time_ms|**bigint**|目前為止，目標節點的作業所用的總時間（以毫秒為單位）。|  
-|cpu_time_ms|**bigint**|目前為止目標節點的作業所使用的總 CPU 時間（以毫秒為單位）。|  
+|elapsed_time_ms|**bigint**|目前為止目標節點的作業所使用的已耗用時間總計 (（以毫秒為單位）) 。|  
+|cpu_time_ms|**bigint**|目前為止，目標節點的作業使用的總 CPU 時間 (（以毫秒為單位）) 。|  
 |database_id|**smallint**|包含在上面執行讀取和寫入之物件的資料庫識別碼。|  
 |object_id|**int**|正在上面執行讀取和寫入之物件的識別碼。 參考 sys.objects.object_id。|  
 |index_id|**int**|資料列集開啟所依據的索引 (如果有的話)。|  
@@ -89,7 +89,7 @@ ms.locfileid: "87442551"
 > 調查中的查詢必須在啟用查詢分析基礎結構**之後**啟動，在查詢開始之後啟用它將不會產生結果 `sys.dm_exec_query_profiles` 。 如需如何啟用查詢分析基礎結構的詳細資訊，請參閱[查詢分析基礎結構](../../relational-databases/performance/query-profiling-infrastructure.md)。
 
 ## <a name="permissions"></a>權限  
-在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 受控實例上，需要 `VIEW DATABASE STATE` 資料庫角色的許可權和成員資格 `db_owner` 。   
+在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 和 AZURE SQL 受控執行個體上，需要 `VIEW DATABASE STATE` 資料庫角色的許可權和成員資格 `db_owner` 。   
 在高階 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 層級上，需要 `VIEW DATABASE STATE` 資料庫的許可權。 在 [ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
    
 ## <a name="examples"></a>範例  

@@ -1,5 +1,5 @@
 ---
-title: 對應 MySQL 和 SQL Server 資料類型（MySQLToSQL） |Microsoft Docs
+title: 將 MySQL 和 SQL Server 資料類型對應 (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 14f98054-13b4-4231-a6b0-2452f3b9941d
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 99e86d99a4214b1ccdf317e75218fe22bb2c7af7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d0b29deae2e0bdba81318130df46e30683717c86
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67908994"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823463"
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>對應 MySQL 和 SQL Server 資料類型 (MySQLToSQL)
-MySQL 資料庫類型與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料庫類型不同。 當您將 MySQL 資料庫物件轉換[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]成或 sql azure 物件時，您必須指定如何將 mysql 中的資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]類型對應到或 sql azure。 您可以接受預設資料類型對應，也可以自訂對應，如下列程式所示。  
+MySQL 資料庫類型與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 資料庫類型不同。 當您將 MySQL 資料庫物件轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Sql azure 物件時，您必須指定如何將 mysql 中的資料類型對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 sql azure。 您可以接受預設資料類型對應，也可以自訂對應，如下列程式所示。  
   
 ## <a name="default-mappings"></a>預設對應  
 SSMA 有一組預設的資料類型對應。 如需預設對應的清單，請參閱[專案設定 &#40;類型對應&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)。  
   
 ## <a name="type-mapping-inheritance"></a>類型對應繼承  
-您可以在專案層級、物件類別目錄層級（例如所有預存程式）或物件層級自訂類型對應。 設定會繼承自較高的層級，除非它們在較低層級遭到覆寫。 例如，如果您在專案層級將**Smallint**對應至**int** ，除非您在物件或類別層級自訂對應，否則專案中的所有物件都會使用此對應。  
+您可以在專案層級、物件類別層級（例如，所有預存程式) 或物件層級）自訂類型對應 (。 設定會繼承自較高的層級，除非它們在較低層級遭到覆寫。 例如，如果您在專案層級將**Smallint**對應至**int** ，除非您在物件或類別層級自訂對應，否則專案中的所有物件都會使用此對應。  
   
 當您在 SSMA 中看到 [**型別對應**] 索引標籤時，背景會以色彩標示，以顯示要繼承的型別對應。 任何繼承的型別對應，型別對應的背景都是黃色，而在目前層級指定的任何對應則為白色。  
   
@@ -76,11 +76,11 @@ SSMA 有一組預設的資料類型對應。 如需預設對應的清單，請�
   
     1.  在 [類型對應] 窗格中，選取 [類型對應] 清單中的資料列，其中包含您想要移除的資料類型對應。  
   
-    2.  按一下 [移除]****。  
+    2.  按一下 **[移除]** 。  
   
 ## <a name="next-step"></a>後續步驟  
 遷移程式的下一個步驟是[建立評量報告](assessing-mysql-databases-for-conversion-mysqltosql.md)，或[將 MySQL 資料庫物件轉換成 SQL Server 或 SQL Azure 語法](converting-mysql-databases-mysqltosql.md)。 如果您建立報告，MySQL 物件會在評估期間自動轉換。  
   
 ## <a name="see-also"></a>另請參閱  
-[將 MySQL 資料庫遷移至 SQL Server-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[將 MySQL 資料庫遷移至 SQL Server Azure SQL Database &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

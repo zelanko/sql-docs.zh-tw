@@ -15,23 +15,23 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 03/15/2017
-ms.openlocfilehash: 292e2e14f8837aefb076256ec9d61ab7e2cf4032
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 97954598f44b5fa66a6558aae4964cc1651f6f70
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879952"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865064"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-將步驟（作業）新增至 SQL 代理程式作業。
+將步驟 (作業) 新增至 SQL 代理程式作業。
 
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 > [!IMPORTANT]
-> 在[Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)上，大部分（但不是全部） SQL Server Agent 作業類型都受到支援。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> 在[AZURE SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)上，大部分（但不是全部） SQL Server Agent 作業類型都受到支援。 如需詳細資訊，請參閱[AZURE SQL 受控執行個體與 SQL Server 的 t-sql 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 ## <a name="syntax"></a>語法
 
@@ -72,11 +72,11 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 
 `[ @step_name = ] 'step_name'`步驟的名稱。 *step_name*是**sysname**，沒有預設值。
 
-`[ @subsystem = ] 'subsystem'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent 服務用來執行*命令*的子系統。 *子系統*是**Nvarchar （40）**，而且可以是下列其中一個值。
+`[ @subsystem = ] 'subsystem'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent 服務用來執行*命令*的子系統。 *子系統*是**Nvarchar (40) **，而且可以是下列其中一個值。
 
-|值|說明|
+|值|描述|
 |-----------|-----------------|
-|'**ActiveScripting**'|Active Script<br /><br /> ** \* \* 重要 \* 事項 \* **[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|
+|'**ActiveScripting**'|Active Script<br /><br /> **\*\* 重要事項 \*\*** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|
 |'**CmdExec**'|作業系統命令或可執行的程式|
 |'**散發**'|複寫散發代理程式作業|
 |「**快照**集」|複寫快照集代理程式作業|
@@ -87,9 +87,9 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |'**ANALYSISCOMMAND**'|Analysis Services 命令 (XMLA)。|
 |'**SSIS**'|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝執行|  
 |'**PowerShell**'|PowerShell 指令碼|  
-|'**TSQL**' （預設值）|[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式|
+|'**TSQL**' (預設) |[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式|
 
-`[ @command = ] 'command'`由**SQLServerAgent**服務透過*子系統*執行的命令。 *command*是**Nvarchar （max）**，預設值是 Null。 SQL Server Agent 所提供的 Token 替代可在您撰寫軟體程式時，提供變數所提供的同等彈性。
+`[ @command = ] 'command'`由**SQLServerAgent**服務透過*子系統*執行的命令。 *命令*是**Nvarchar (max) **，預設值是 Null。 SQL Server Agent 所提供的 Token 替代可在您撰寫軟體程式時，提供變數所提供的同等彈性。
 
 > [!IMPORTANT]
 > 逸出巨集現在必須伴隨著作業步驟中使用的所有 Token 一起執行，否則這些作業步驟將會失敗。 此外，您現在必須用括號括住 Token 名稱，並且在 Token 語法的開頭加上貨幣符號 (`$`)。 例如：
@@ -99,7 +99,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 如需這些權杖的詳細資訊，以及如何將作業步驟更新為使用新的權杖語法，請參閱[在作業步驟中使用權杖](../../ssms/agent/use-tokens-in-job-steps.md)。
 
 > [!IMPORTANT]
-> 對 Windows 事件記錄檔具有寫入權限的任何 Windows 使用者，都可以存取由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示或 WMI 警示啟動的作業步驟。 為了避免此安全性風險，依預設會停用在警示啟動的作業中可以使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Token。 這些權杖包括： **DBN**、 **SVR**、 **a-ERR**、**嚴重性**、 **a-MSG**和**WMI （**_屬性_**）**。 請注意在此版本中，Token 的使用擴充到所有警示。
+> 對 Windows 事件記錄檔具有寫入權限的任何 Windows 使用者，都可以存取由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示或 WMI 警示啟動的作業步驟。 為了避免此安全性風險，依預設會停用在警示啟動的作業中可以使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Token。 這些權杖包括： **DBN**、 **SVR**、 **a-ERR**、**嚴重性**、 **a-MSG**和**WMI (**_屬性_**) **。 請注意在此版本中，Token 的使用擴充到所有警示。
 >
 > 如果需要使用這些 Token，請先確定只有受信任的 Windows 安全性群組的成員 (例如 Administrators 群組) 才對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所在電腦的事件記錄檔具有寫入權限。 然後以滑鼠右鍵按一下物件總管中的 [SQL Server Agent]****、選取 [屬性]****，然後在 [警示系統]**** 頁面上選取 [取代回應警示之所有作業的 Token]****，以啟用這些 Token。
 
@@ -129,7 +129,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 
 `[ @on_fail_step_id = ] fail_step_id`如果步驟失敗且*fail_action*為**4**時，此作業中要執行之步驟的識別碼。 *fail_step_id*是**int**，預設值是**0**。  
 
-`[ @server = ] 'server'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]*伺服器*是**Nvarchar （30）**，預設值是 Null。  
+`[ @server = ] 'server'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]*伺服器*是**Nvarchar (30) **，預設值是 Null。  
 
 `[ @database_name = ] 'database'`要在其中執行步驟的資料庫名稱 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 *資料庫*是**sysname**，預設值是 Null，在此情況下會使用**master**資料庫。 不允許以括號 ([ ]) 括住的名稱。 若為 ActiveX 作業步驟，*資料庫*就是步驟所使用的指令碼語言名稱。  
 
@@ -141,7 +141,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 
 `[ @os_run_priority = ] run_priority`留.
 
-`[ @output_file_name = ] 'file_name'`儲存此步驟之輸出的檔案名。 *file_name*是**Nvarchar （200）**，預設值是 Null。 *file_name*可以包含 [*命令*] 底下所列的一或多個權杖。 此參數只適用于在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 、 **CmdExec**、 **PowerShell**、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或子系統上執行的命令 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。  
+`[ @output_file_name = ] 'file_name'`儲存此步驟之輸出的檔案名。 *file_name*是**Nvarchar (200) **，預設值是 Null。 *file_name*可以包含 [*命令*] 底下所列的一或多個權杖。 此參數只適用于在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 、 **CmdExec**、 **PowerShell**、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或子系統上執行的命令 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。  
 
 `[ @flags = ] flags`是控制行為的選項。 *旗標*是**int**，而且可以是下列其中一個值。  
 
@@ -161,7 +161,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 
 ## <a name="return-code-values"></a>傳回碼值
 
-**0** （成功）或**1** （失敗）
+**0** (成功) 或**1** (失敗) 
 
 ## <a name="result-sets"></a>結果集
 
@@ -211,7 +211,7 @@ EXEC sp_add_jobstep
 GO
 ```
 
-## <a name="next-steps"></a>接下來的步驟
+## <a name="next-steps"></a>後續步驟
 
 - [檢視或修改作業](../../ssms/agent/view-or-modify-jobs.md)
 - [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)

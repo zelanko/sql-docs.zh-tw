@@ -1,5 +1,5 @@
 ---
-title: sys. dm_resource_governor_workload_groups_history_ex （Azure SQL Database） |Microsoft Docs
+title: dm_resource_governor_workload_groups_history_ex (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -18,17 +18,17 @@ helpviewer_keywords:
 - sys.dm_resource_governor_workload_groups_history_ex dynamic management view
 author: joesackmsft
 ms.author: josack
-ms.openlocfilehash: 41378ba13c6c85059313595161aeeb4226c6731e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0b112762df3ca05411594b1e1c03a04817c094d9
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718740"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823313"
 ---
 # <a name="sysdm_resource_governor_workload_groups_history_ex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-針對 Azure SQL Database 的資源集區統計資料，以20秒的 128 32 間隔傳回快照集。
+針對 Azure SQL Database 的資源集區統計資料總) ，以20秒的間隔傳回快照集，最後32分鐘 (128 秒。
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -51,13 +51,13 @@ ms.locfileid: "85718740"
 |**delta_reads_issued**| int |自上一個快照集以來發出的讀取 Io 總數。 可為 Null。 如果資源群組不受 IO 管制，則為 Null。|
 |**delta_reads_completed**| int |自上一個快照集以來完成的讀取 Io 總數。 不可為 Null。|
 |**delta_read_bytes**| BIGINT |自上一個快照集以來讀取的總位元組數。 不可為 Null。|
-|**delta_read_stall_ms**| int |自上一個快照以來，讀取 IO 抵達和完成的總時間（以毫秒為單位）。 不可為 Null。|
-|**delta_read_stall_queued_ms**| int |讀取 IO 抵達和上次快照集後發生問題的總時間（以毫秒為單位）。 可為 Null。 如果資源群組不受 IO 管制，則為 Null。 非零的 delta_read_stall_queued_ms 表示 IO 受到 RG 的影響。|
+|**delta_read_stall_ms**| int |讀取 IO 抵達和完成後的總時間 (（以毫秒為單位）) 自上一個快照集。 不可為 Null。|
+|**delta_read_stall_queued_ms**| int |讀取 IO 抵達和上次快照以來的問題的總時間 (（以毫秒) 為單位）。 可為 Null。 如果資源群組不受 IO 管制，則為 Null。 非零的 delta_read_stall_queued_ms 表示 IO 受到 RG 的影響。|
 |**delta_writes_queued**| int |自上一個快照集以來，排入佇列的總 Io。 可為 Null。 如果資源群組不受 IO 管制，則為 Null。|
 |**delta_writes_issued**| int |自上一個快照集以來發行的寫入 Io 總數。 可為 Null。 如果資源群組不受 IO 管制，則為 Null。|
 |**delta_writes_completed**| int |自上一個快照集以來完成的總寫入 Io。 不可為 Null。|
 |**delta_writes_bytes**| BIGINT |自上一個快照集以來寫入的總位元組數。 不可為 Null。|
-|**delta_write_stall_ms**| int |自上一個快照集起，寫入 IO 抵達與完成的總時間（以毫秒為單位）。 不可為 Null。|
+|**delta_write_stall_ms**| int |寫入 IO 抵達和完成後的總時間 (（以毫秒為單位）) 上一個快照集。 不可為 Null。|
 |**delta_background_writes**| int |自上一個快照以來，背景工作所執行的寫入總數。|
 |**delta_background_write_bytes**| BIGINT |自上一個快照以來，背景工作所執行的寫入大小總計（以位元組為單位）。|
 |**delta_log_bytes_used**| BIGINT |自上次快照集以來使用的記錄檔，以位元組為單位。|
@@ -70,7 +70,7 @@ ms.locfileid: "85718740"
 |**max_io**| int |群組的最大 IO 限制。|
 |**max_global_io**| int |僅供參考之用。 不支援。 我們無法保證未來的相容性。
 |**max_queued_io**| int |僅供參考之用。 不支援。 我們無法保證未來的相容性。|
-|**max_log_rate_kb**| BIGINT |資源群組層級的最大記錄速率（每秒千位元組）。|
+|**max_log_rate_kb**| BIGINT |資源群組層級的最大記錄速率 (每秒 kb 數) 。|
 |**max_session**| int |群組的會話限制。|
 |**max_worker**| int |群組的背景工作限制。|
 |||

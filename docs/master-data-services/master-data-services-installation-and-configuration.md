@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 777d0b497bae5e52c49fb95e1e7ff3e7387ea676
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
+ms.openlocfilehash: d636d13512993d64a9abd88e61412f76790c7590
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834769"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823749"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 安裝和組態
 
@@ -130,16 +130,16 @@ ms.locfileid: "85834769"
   
 3.  在 [**資料庫伺服器**] 頁面上，指定 SQL Server 實例。 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]新增 SQL Server 受控執行個體的支援。 將**SQL Server 實例**的值設定為 Azure SQL Database 受控實例的主機。 例如 `xxxxxx.xxxxxx.database.windows.net`。
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]新增 SQL Server 受控執行個體的支援。 將**SQL Server 實例**的值設定為受控實例的主機。 例如： `xxxxxx.xxxxxx.database.windows.net` 。
 
 4. 選取**驗證類型**，然後按一下 [**測試連接**]，確認您可以使用所選驗證類型的認證連接到資料庫。 按 [下一步] 。
 
-    >[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]若要連接到 Azure SQL Database 受控實例，請使用下列其中一種驗證類型：
+    >[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]若要連接到受控實例，請使用下列其中一種驗證類型：
     >
     >- Azure Active Directory 整合式驗證：**目前的使用者-Active Directory 整合**
     >- SQL Server 驗證： **SQL Server 帳戶**。
     >
-    >在 Azure SQL Database 受控實例中，使用者必須是 `sysadmin` 固定伺服器角色的成員。
+    >在 SQL 受控執行個體中，使用者必須是 `sysadmin` 固定伺服器角色的成員。
 
     > [!NOTE]  
     >  若您選取 [目前使用者 - 整合式安全性]**** 作為驗證類型，[使用者名稱]**** 方塊會是唯讀的，並顯示登入電腦的 Windows 使用者帳戶名稱。 如果您要在 Azure 虛擬機器 (VM) 上執行 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]，則 [使用者名稱]**** 方塊會顯示 VM 名稱以及 VM 上本機系統管理員帳戶的使用者名稱。 
@@ -204,7 +204,7 @@ ms.locfileid: "85834769"
      ![mds_2016ConfigManager_WebConfig_Completed](../master-data-services/media/mds-2016configmanager-webconfig-completed.png)  
  
      
-15. 按一下 [套用] 。 [組態完成]**** 訊息方塊隨即顯示。 按一下訊息方塊中的 [確定]****，以啟動 Web 應用程式。 網站位址為 [HTTPs://*server name* / *web application*/]。 
+15. 按一下 [套用]。 [組態完成]**** 訊息方塊隨即顯示。 按一下訊息方塊中的 [確定]****，以啟動 Web 應用程式。 網站位址為 [HTTPs://*server name* / *web application*/]。 
 
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 

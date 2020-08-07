@@ -1,6 +1,6 @@
 ---
 title: 在受控實例上裝載資料庫
-description: 本文說明如何在受控實例上設定 Master Data Service （MDS）資料庫。
+description: 瞭解如何建立和設定 Master Data Services (MDS) 資料庫，並將其裝載在 Azure SQL 受控執行個體上。
 ms.custom: ''
 ms.date: 07/01/2019
 ms.prod: sql
@@ -12,34 +12,34 @@ ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: v-redu
 ms.author: lle
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a6c318a1fca182e60a5df7fb5d1569433f65d25d
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 616fa3791b0dbc154282f5273cd7fb4e1eb3c1f5
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812914"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87878944"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>在受控實例上裝載 MDS 資料庫
 
 [!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  本文涵蓋如何在受控實例上設定 Master Data Services （MDS）資料庫。
+  本文說明如何在受控實例上設定 Master Data Services (MDS) 資料庫。
   
 ## <a name="preparation"></a>準備
 
-若要準備，您必須建立並設定 Azure SQL Database 受控實例，並設定您的 web 應用程式電腦。
+若要準備，您必須建立並設定 Azure SQL 受控執行個體並設定 web 應用程式電腦。
 
 ### <a name="create-and-configure-the-database"></a>建立和設定資料庫
 
-1. 建立具有虛擬網路的 Azure SQL Database 受控實例。 如需詳細資訊，請參閱[快速入門：建立 Azure SQL Database 受控實例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started)。
+1. 建立具有虛擬網路的受控實例。 如需詳細資訊，請參閱[快速入門：建立 SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started)。
 
 1. 設定點對站連線。 如需指示，請參閱[使用原生 Azure 憑證驗證設定 VNet 的點對站連線： Azure 入口網站](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal)。
 
-1. 使用 SQL Database 受控實例來設定 Azure Active Directory 驗證。 如需詳細資訊，請參閱[使用 SQL 設定及管理 Azure Active Directory 驗證](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure)。
+1. 使用 SQL 受控執行個體設定 Azure Active Directory 驗證。 如需詳細資訊，請參閱[使用 SQL 設定及管理 Azure Active Directory 驗證](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure)。
 
 ### <a name="configure-web-application-machine"></a>設定 web 應用程式電腦
 
-1. 安裝點對站連線憑證和 VPN，以確保電腦可以存取 SQL Database 受控實例。 如需指示，請參閱[使用原生 Azure 憑證驗證設定 VNet 的點對站連線： Azure 入口網站](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal)。
+1. 安裝點對站連線憑證和 VPN，以確保電腦可以存取受控實例。 如需指示，請參閱[使用原生 Azure 憑證驗證設定 VNet 的點對站連線： Azure 入口網站](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal)。
 
 1. 安裝下列角色和功能：
    - 角色：
@@ -70,12 +70,12 @@ ms.locfileid: "85812914"
        > [!NOTE]
        > 不要安裝 WebDAV 發行
 
-   - 特色：
+   - 功能：
      - .NET Framework 3.5 (包括 .NET 2.0 和 3.0)
      - .NET Framework 4.5 進階服務
      - ASP.NET 4.5
      - WCF Services
-     - HTTP 啟用（必要）
+     - 需要 HTTP 啟用 () 
      - TCP 連接埠共用
      - Windows 處理序啟用服務
      - 處理序模型
@@ -110,20 +110,20 @@ ms.locfileid: "85812914"
 
 1. 開啟 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ，然後在左窗格中選取 [**資料庫**設定]。
 
-1. 選取 [**建立資料庫**] 以開啟 [**建立資料庫]**。 選取 [下一步]。
+1. 選取 [**建立資料庫**] 以開啟 [**建立資料庫]**。 選取 [下一步]  。
 
-1. 在 [**資料庫伺服器**] 頁面上，完成 [ **SQL Server 實例**] 欄位，然後選擇 [**驗證類型**]。 選取 [**測試連接**]，確認您可以透過所選的驗證類型，使用您的認證來連線到資料庫。 選取 [下一步]。
+1. 在 [**資料庫伺服器**] 頁面上，完成 [ **SQL Server 實例**] 欄位，然後選擇 [**驗證類型**]。 選取 [**測試連接**]，確認您可以透過所選的驗證類型，使用您的認證來連線到資料庫。 選取 [下一步]  。
 
    > [!NOTE]
    > - SQL Server 實例看起來像 `xxxxxxx.xxxxxxx.database.windows.net` 。
    > - 針對受控實例，請選擇 [ **SQL Server 帳戶]** 和 **[目前使用者-Active Directory 整合式]** 驗證類型。
-   > - 如果您選取 [**目前使用者-Active Directory 整合**] 作為 [驗證類型]，[**使用者名稱**] 欄位會是唯讀的，並顯示目前登入的 Windows 使用者帳戶。 如果您在 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Azure 虛擬機器（VM）上執行 SQL Server 2019，[**使用者名稱**] 欄位會顯示 vm 的 vm 名稱和本機系統管理員帳戶的使用者名稱。
+   > - 如果您選取 [**目前使用者-Active Directory 整合**] 作為 [驗證類型]，[**使用者名稱**] 欄位會是唯讀的，並顯示目前登入的 Windows 使用者帳戶。 如果您在 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Azure 虛擬機器上執行 SQL Server 2019 (vm) ，[**使用者名稱**] 欄位會顯示 vm 的 vm 名稱和本機系統管理員帳戶的使用者名稱。
 
    您的驗證必須包含受控實例的「 **sysadmin** 」規則。
 
    ![mds-SQLServer2019-Config-MI-CreateDBConnect](../master-data-services/media/mds-sqlserver2019-config-mi-createdbconnect.png "mds-SQLServer2019-Config-MI_CreateDBConnect")  
 
-1. 在 [資料庫名稱]**** 欄位中輸入名稱。 （選擇性）若要選取 Windows 定序，請清除 [ **SQL Server 預設定序]** 核取方塊，然後選取一個或多個可用的選項。 例如，區分**大小寫**。 選取 [下一步]。
+1. 在 [資料庫名稱]**** 欄位中輸入名稱。 （選擇性）若要選取 Windows 定序，請清除 [ **SQL Server 預設定序]** 核取方塊，然後選取一個或多個可用的選項。 例如，區分**大小寫**。 選取 [下一步]  。
 
    ![mds-SQLServer2019-Config-MI-CreatedDBName](../master-data-services/media/mds-sqlserver2019-config-mi-createddbname.png "mds-SQLServer2019-Config-MI_CreatedDBName")
 
@@ -163,7 +163,7 @@ ms.locfileid: "85812914"
 
 1. 在 [ **web 設定] 窗格的**[web**應用**程式] 視窗中，選取您已建立的應用程式，然後在 [**將應用程式與資料庫建立關聯**] 區段中選擇 [**選取**]。
 
-1. 選取 [連線 **]** ，然後選擇 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 您想要與 web 應用程式產生關聯的資料庫。 選取 [確定]。
+1. 選取 [連線 **]** ，然後選擇 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 您想要與 web 應用程式產生關聯的資料庫。 選取 [確定]  。
 
    您已完成網站的設定。 [ **Web**設定] 頁面現在會顯示您選取的網站、您建立的 Web 應用程式，以及 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 與應用程式相關聯的資料庫。
 

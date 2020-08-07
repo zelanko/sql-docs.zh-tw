@@ -1,5 +1,5 @@
 ---
-title: 將存取應用程式連結至 SQL Server-Azure SQL DB |Microsoft Docs
+title: 將存取應用程式連結至 SQL Server Azure SQL Database |Microsoft Docs
 description: 瞭解如何將您的 Access 資料表連結到遷移的資料表，讓您可以使用現有的 Access 應用程式搭配 SQL Server 或 Azure SQL Database。
 ms.prod: sql
 ms.custom: ''
@@ -24,14 +24,14 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 382a1d94b46eeef39ca90103691afe45389002e3
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: aadb041b3b9005d0e593e97974090250129ed33d
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293765"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823843"
 ---
-# <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>將存取應用程式連結至 SQL Server-Azure SQL DB （AccessToSQL）
+# <a name="linking-access-applications-to-sql-server---azure-sql-database-accesstosql"></a>將存取應用程式連結至 SQL Server Azure SQL Database (AccessToSQL) 
 如果您想要搭配使用現有的 Access 應用程式與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，可以將原始的 access 資料表連結到遷移 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 資料表。 連結會修改您的 Access 資料庫，讓您的查詢、表單、報表和資料存取頁面使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 資料庫中的資料，而非 Access 資料庫中的資料。  
   
 > [!NOTE]  
@@ -49,14 +49,14 @@ ms.locfileid: "84293765"
   
 2.  以滑鼠右鍵按一下 [**資料表]**，然後選取 [**連結**]。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移轉小幫手（SSMA） for Access 會備份原始存取資料表，並建立連結資料表。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移轉小幫手 (SSMA) Access 會備份原始存取資料表並建立連結資料表。  
   
 連結資料表之後，SSMA 中的資料表會顯示一個小的連結圖示。 在 [存取] 中，資料表會顯示「已連結」圖示，這是一個有箭號的地球。  
   
 當您在 Access 中開啟資料表時，會使用索引鍵集資料指標來抓取資料。 因此，對於大型資料表，所有資料都不會一次抓取。 不過，當您流覽資料表時，Access 會視需要抓取其他資料。  
   
 > [!IMPORTANT]  
-> 若要連結具有 Azure 資料庫的存取資料表，您需要 SQL Server Native Client （SNAC）10.5 版或更新版本。   
+> 若要連結 Azure 資料庫的存取資料表，您需要 SQL Server Native Client (SNAC) 10.5 版或更新版本。   
 > 您可以從[Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272)取得最新版本的 SNAC。  
   
 ## <a name="unlinking-access-tables"></a>取消連結 Access 資料表  
@@ -112,12 +112,12 @@ ms.locfileid: "84293765"
   
 -   無法修改傳遞查詢。 修改查詢結果或加入新記錄必須以替代方式完成，例如，在表單上擁有明確的 [**修改**] 或 **[新增] 按鈕，** 並系結至查詢。  
   
--   有些查詢需要使用者輸入，但傳遞查詢不支援使用者輸入。 使用者輸入可以由提示輸入參數的 Visual Basic for Applications （VBA）程式碼，或以當做輸入控制項使用的表單來取得。 在這兩種情況下，VBA 程式碼都會以使用者的輸入將查詢提交至伺服器。  
+-   有些查詢需要使用者輸入，但傳遞查詢不支援使用者輸入。 使用者輸入可以藉由 Visual Basic for Applications (VBA) 程式碼來取得，以提示輸入參數，或使用當做輸入控制項的表單。 在這兩種情況下，VBA 程式碼都會以使用者的輸入將查詢提交至伺服器。  
   
 ### <a name="auto-increment-columns-are-not-updated-until-the-record-is-updated"></a>自動遞增資料行在記錄更新之前不會更新  
 **原因：** 通話記錄集之後，在 Jet 中進行 AddNew，在更新記錄之前，可以使用 [自動遞增] 資料行。 在或 SQL Azure 中，這不是 true [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 只有在儲存新記錄之後，才可以使用 [識別資料行] 新值的新值。  
   
-**解決方式：** 請先執行下列 Visual Basic for Applications （VBA）程式碼，然後再存取 [識別] 欄位：  
+**解決方式：** 在存取識別欄位之前，請先執行下列 Visual Basic for Applications (VBA) 程式碼：  
   
 ```  
 Recordset.Update  
@@ -145,7 +145,7 @@ Recordset.LastModified
 **解決方式：** 使用修改資料表架構 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，然後更新 [存取] 中的連結。  
   
 ### <a name="hyperlink-functionality-is-lost-after-migrating-data"></a>在遷移資料之後遺失超連結功能  
-**原因：** 在遷移資料之後，資料行中的超連結會失去其功能並變成簡單的**Nvarchar （max）** 資料行。  
+**原因：** 在遷移資料之後，資料行中的超連結會失去其功能，並成為簡單的**Nvarchar (最大) **資料行。  
   
 **解決方式︰** 無。  
   

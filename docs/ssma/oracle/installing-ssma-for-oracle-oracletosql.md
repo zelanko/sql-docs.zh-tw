@@ -1,6 +1,6 @@
 ---
-title: 安裝 SSMA for Oracle （OracleToSQL） |Microsoft Docs
-description: 請使用下列文章來安裝、升級和卸載 Oracle 的 SQL Server 移轉小幫手（SSMA），其中包括用戶端應用程式和延伸模組套件。
+title: 安裝 SSMA for Oracle (OracleToSQL) |Microsoft Docs
+description: 使用這些文章來安裝、升級和卸載 SQL Server 移轉小幫手 (SSMA) for Oracle，其中包括用戶端應用程式和延伸模組套件。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,15 +11,15 @@ ms.assetid: 9211013a-ab24-4c52-9b26-87994b35e502
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: b97da15fb97c348afa694eb399d2a0c9a2f08928
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 3938d01e98bfb2a57057d9573ee7199f0b12fc14
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292897"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864845"
 ---
 # <a name="installing-ssma--for-oracle-oracletosql"></a>安裝 SSMA for Oracle (OracleToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]適用于 Oracle 的移轉小幫手（SSMA）包含您用來執行從 Oracle 遷移至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 AZURE SQL DB 的用戶端應用程式。 它也包含支援資料移轉的延伸模組套件，以及在您遷移的資料庫中使用 Oracle 系統函數的功能。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Oracle 的移轉小幫手 (SSMA) 包含一個用戶端應用程式，可讓您用來執行從 Oracle 到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Azure SQL Database 的遷移。 它也包含支援資料移轉的延伸模組套件，以及在您遷移的資料庫中使用 Oracle 系統函數的功能。  
   
 您會將用戶端應用程式安裝在您要執行遷移步驟的電腦上。 您必須在將裝載已遷移之資料庫的電腦上安裝擴充功能套件檔案。 該電腦必須正在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   

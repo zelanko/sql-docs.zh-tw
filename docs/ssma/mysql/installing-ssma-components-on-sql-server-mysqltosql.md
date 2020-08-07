@@ -1,5 +1,5 @@
 ---
-title: 在 SQL Server 上安裝 SSMA 元件（MySQLToSql） |Microsoft Docs
+title: 在 SQL Server (MySQLToSql) 上安裝 SSMA 元件 |Microsoft Docs
 description: 在執行 SQL Server 的伺服器上安裝元件，以支援使用 SSMA 的 MySQL 資料庫轉換，包括 SSMA 延伸模組套件和 MySQL 提供者。
 ms.prod: sql
 ms.custom: ''
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 6772d0c5-258f-4d7b-afb0-b5f810e71af1
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9b598915222610470bc9cf2e618cea65d725c5fb
-ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
+ms.openlocfilehash: a38808c64209edb094c986e63305707a0a834edb
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411273"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823664"
 ---
-# <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>在 SQL Server 上安裝 SSMA 元件（MySQLToSql）
+# <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>在 SQL Server (MySQLToSql 上安裝 SSMA 元件) 
 
 除了安裝 SSMA 以外，您也必須在執行的電腦上安裝元件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 這些元件包括支援資料移轉的 SSMA 延伸模組套件，以及可啟用伺服器對伺服器連線能力的 MySQL 提供者。
 
@@ -72,11 +72,11 @@ SSMA 延伸模組套件會將資料庫**sysdb**加入至指定的實例 [!INCLUD
 
 11. 在下一個對話方塊中，選取 [**安裝公用*n*程式資料庫] 並安裝延伸模組套件程式庫**（其中*n*是版本號碼），然後按 **[下一步]**。
 
-    系統會使用在此資料庫中建立資料移轉所需的資料表和預存程式（使用伺服器端資料移轉引擎）來建立**sysdb**資料庫。
+    **Sysdb**資料庫是以資料移轉所需的資料表和預存程式來建立， (使用伺服器端資料移轉引擎) 會在此資料庫中建立。
 
 12. 若要將公用程式安裝到另一個實例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請選取 **[是]**，然後按 **[下一步]**。 或者，若要結束嚮導，請按一下 [**否**]。
 
 ## <a name="see-also"></a>另請參閱
 
 - [安裝 SSMA for MySQL 用戶端](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)
-- [將 MySQL 資料庫遷移至 SQL Server-Azure SQL DB](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)
+- [將 MySQL 資料庫遷移至 SQL Server Azure SQL Database](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)

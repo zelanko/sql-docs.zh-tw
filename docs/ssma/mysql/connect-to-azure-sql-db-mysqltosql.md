@@ -1,5 +1,5 @@
 ---
-title: 連接到 Azure SQL DB （MySQLToSQL） |Microsoft Docs
+title: 連接到 Azure SQL Database (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 12da1aa42f468b92e1833410e635183aabf3a384
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6cf82511b7819b6c7b0451facc85ef35dc8cf9fc
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103238"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823791"
 ---
-# <a name="connect-to-azure-sql-db-mysqltosql"></a>連線到 Azure SQL DB (MySQLToSQL)
+# <a name="connect-to-azure-sql-database-mysqltosql"></a>連接到 Azure SQL Database (MySQLToSQL) 
 使用 [連接到 SQL Azure] 對話方塊來連接到您想要遷移的 SQL Azure 資料庫。  
   
 若要存取此對話方塊，請在 [檔案]**功能表上，選取 [連線****到 SQL Azure]**。 如果您先前已連線，此命令會**重新連接到 SQL Azure。**  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **伺服器名稱**  
   
 選取或輸入用來連接到 SQL Azure 的伺服器名稱。  
@@ -54,7 +54,7 @@ SSMA 建議 SQL Azure 的加密連接。
   
 2.  如果沒有資料庫，則會出現下列兩個功能表項目。  
   
-    1.  **（找不到任何資料庫）** 已停用，且所有時間皆為灰色  
+    1.  ** (找不到任何資料庫) **已停用且所有時間皆為灰色  
   
     2.  **建立新的資料庫**，只有在 SQL Azure 帳戶上沒有資料庫時才會啟用。 按一下此功能表項目時，會出現 [建立 Azure 資料庫] 對話方塊，其中包含資料庫名稱和大小。  
   

@@ -1,5 +1,5 @@
 ---
-title: 設定專案選項（SybaseToSQL） |Microsoft Docs
+title: " (SybaseToSQL) 設定專案選項 |Microsoft Docs"
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 97b70fc8-1f68-4f15-8e22-db5b784ea4ec
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 2c8d074db2fc1e8a9d29ecf5fdc0405524e9bb1a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b2b16054a0a866d7772243a04cb8f5955931cfc4
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020926"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864745"
 ---
 # <a name="setting-project-options-sybasetosql"></a>設定專案選項 (SybaseToSQL)
-針對每個 SSMA 專案，您可以設定專案層級選項。 這些選項會指定物件轉換、物件載入、SQL azure、使用者介面和資料移轉設定。 在您將物件轉換[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]為或 sql azure 或將資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]遷移至或 sql azure 之前，請先確認設定選項適用于專案。  
+針對每個 SSMA 專案，您可以設定專案層級選項。 這些選項會指定物件轉換、物件載入、SQL azure、使用者介面和資料移轉設定。 在您將物件轉換為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Sql azure 或將資料移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 sql azure 之前，請先確認設定選項適用于專案。  
   
 SSMA 可讓您設定所有專案的預設選項。 這些選項會套用至您所建立的任何新專案。 接著，您可以自訂每個專案的選項。  
   
@@ -28,7 +28,7 @@ SSMA 有五組專案設定：
   
 1.  專案資訊  
   
-2.  一般（轉換、遷移和收集資料）  
+2.  一般 (轉換、遷移和收集資料)   
   
 3.  Synchronization  
   
@@ -44,9 +44,9 @@ SSMA 有五組專案設定：
   
 3.  完整  
   
-4.  自訂  
+4.  Custom  
   
-建議大多數使用者使用預設模式。 開放式模式會保留更多最新的 Sybase 調適型伺服器 Enterprise （ASE）語法，而且較容易閱讀。 不過，保留目前的語法可能會不正確。 如果 ASE 語法必須轉換成對等[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 語法，則完整模式會執行完整的轉換，但產生的程式碼可能較不容易閱讀。 在自訂模式中，您可以設定選項。  
+建議大多數使用者使用預設模式。 開放式模式會保留更多最新的 Sybase 彈性伺服器企業 (ASE) 語法，而且較容易閱讀。 不過，保留目前的語法可能會不正確。 如果 ASE 語法必須轉換成對等 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 語法，則完整模式會執行完整的轉換，但產生的程式碼可能較不容易閱讀。 在自訂模式中，您可以設定選項。  
   
 這些設定會在本檔的使用者介面參考一節中說明。 如需有關設定以及如何在每個模式中套用設定的詳細資訊，請參閱下列主題：  
   
@@ -60,7 +60,7 @@ SSMA 有五組專案設定：
   
 -   [專案設定 &#40;類型對應&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md)  
   
--   [&#40;Azure SQL DB &#41; &#40;SybaseToSQL 的專案設定&#41;](../../ssma/sybase/project-settings-azure-sql-db-sybasetosql.md)  
+-   [專案設定 &#40;Azure SQL Database &#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-azure-sql-db-sybasetosql.md)  
   
 ## <a name="setting-project-options"></a>設定專案選項  
 在 SSMA 中，您可以設定所有專案的預設設定。 這些設定會儲存到 SSMA 設定檔，並套用至您所建立的任何新專案。  
@@ -98,8 +98,8 @@ SSMA 有五組專案設定：
   
 -   如果您想要自訂來源和目標資料類型的對應，請參閱將[SYBASE ASE 和 SQL Server 資料類型對應 &#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md)。  
   
--   否則，您可以將 Sybase 資料庫物件定義轉換成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 物件定義。 如需詳細資訊，請參閱將[SYBASE ASE 資料庫物件轉換 &#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)。  
+-   否則，您可以將 Sybase 資料庫物件定義轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 物件定義。 如需詳細資訊，請參閱將[SYBASE ASE 資料庫物件轉換 &#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)。  
   
 ## <a name="see-also"></a>另請參閱  
-[將 Sybase ASE 資料庫移轉至 SQL Server-Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[將 Sybase ASE 資料庫移轉至 SQL Server Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

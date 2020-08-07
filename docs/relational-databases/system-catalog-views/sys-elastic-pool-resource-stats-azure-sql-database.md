@@ -18,12 +18,12 @@ author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 34f524eb8e6c7a64a53f64eda67a370aace745c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4c6d2e7cccc7e1aa07327480415c0acd2a3db192
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85648901"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822842"
 ---
 # <a name="syselastic_pool_resource_stats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -39,15 +39,15 @@ ms.locfileid: "85648901"
 |**start_time**|**datetime2**|表示15秒報告間隔開始的 UTC 時間。|  
 |**end_time**|**datetime2**|指出15秒報告間隔結束的 UTC 時間。|  
 |**elastic_pool_name**|**nvarchar(128)**|彈性資料庫集區的名稱。|  
-|**avg_cpu_percent**|**decimal （5，2）**|集區限制的平均計算使用量百分比。|  
-|**avg_data_io_percent**|**decimal （5，2）**|集區限制的平均 I/O 使用量百分比。|  
-|**avg_log_write_percent**|**decimal （5，2）**|集區限制的平均寫入資源使用量百分比。|  
-|**avg_storage_percent**|**decimal （5，2）**|集區儲存體限制的平均儲存體使用量百分比。|  
-|**max_worker_percent**|**decimal （5，2）**|集區限制的並行背景工作角色 (要求) 百分比。|  
-|**max_session_percent**|**decimal （5，2）**|集區限制的並行工作階段百分比。|  
+|**avg_cpu_percent**|**decimal (5，2) **|集區限制的平均計算使用量百分比。|  
+|**avg_data_io_percent**|**decimal (5，2) **|集區限制的平均 I/O 使用量百分比。|  
+|**avg_log_write_percent**|**decimal (5，2) **|集區限制的平均寫入資源使用量百分比。|  
+|**avg_storage_percent**|**decimal (5，2) **|集區儲存體限制的平均儲存體使用量百分比。|  
+|**max_worker_percent**|**decimal (5，2) **|集區限制的並行背景工作角色 (要求) 百分比。|  
+|**max_session_percent**|**decimal (5，2) **|集區限制的並行工作階段百分比。|  
 |**elastic_pool_dtu_limit**|**int**|間隔期間此彈性集區目前最大的彈性集區 DTU 設定。|  
 |**elastic_pool_storage_limit_mb**|**bigint**|間隔期間此彈性集區目前最大的彈性集區儲存體限制設定 (MB)。|
-|**avg_allocated_storage_percent**|**decimal （5，2）**|彈性集區中所有資料庫所配置的資料空間百分比。  這是配置給彈性集區之資料大小上限的資料空間比例。  如需詳細資訊，請參閱： [SQL DB 中的檔案空間管理](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
+|**avg_allocated_storage_percent**|**decimal (5，2) **|彈性集區中所有資料庫所配置的資料空間百分比。  這是配置給彈性集區之資料大小上限的資料空間比例。  如需詳細資訊，請參閱： [SQL Database 中的檔案空間管理](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
   
 ## <a name="remarks"></a>備註
 
@@ -80,7 +80,7 @@ ORDER BY end_time DESC;
 ## <a name="see-also"></a>另請參閱
 
  [透過彈性資料庫進行爆炸性成長](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)   
- [建立和管理 SQL Database 彈性資料庫集區（預覽）](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
+ [建立和管理 SQL Database 彈性資料庫集區 (預覽) ](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
  [resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
  [dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
   

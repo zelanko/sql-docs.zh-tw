@@ -1,6 +1,6 @@
 ---
-title: 將 MySQL 資料庫遷移至 SQL Server-Azure SQL DB |Microsoft Docs
-description: 使用此建議的程式，將 MySQL 資料庫遷移至使用 SQL Server 移轉小幫手（SSMA） SQL Server 或 Azure SQL Database。
+title: 將 MySQL 資料庫遷移至 SQL Server Azure SQL Database |Microsoft Docs
+description: 使用此建議的程式，將 MySQL 資料庫遷移至使用 SQL Server 移轉小幫手 (SSMA) 的 SQL Server 或 Azure SQL Database。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 8006f9a0-394d-4238-8dc5-44255134628b
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 0daee899775b5a8bb3a0e4b6ee0eef4a93eca00b
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: c6f360e67621288e6c04381931a7c0df0de3e256
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293587"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862354"
 ---
-# <a name="migrating-mysql-databases-to-sql-server---azure-sql-db-mysqltosql"></a>將 MySQL 資料庫遷移至 SQL Server-Azure SQL DB （MySQLToSql）
-適用于 MySQL 的 SQL Server 移轉小幫手（SSMA）是一種完整的環境，可協助您快速將 MySQL 資料庫遷移至 SQL Server 或 SQL Azure。 藉由使用 SSMA for MySQL，您可以查看資料庫物件和資料、評估要遷移的資料庫、將資料庫物件遷移至 SQL Server 或 SQL Azure，然後將資料移轉至 SQL Server 或 SQL Azure。  
+# <a name="migrating-mysql-databases-to-sql-server---azure-sql-database-mysqltosql"></a>將 MySQL 資料庫遷移至 SQL Server Azure SQL Database (MySQLToSql) 
+適用于 MySQL 的 SQL Server 移轉小幫手 (SSMA) 是一個完整的環境，可協助您快速將 MySQL 資料庫遷移至 SQL Server 或 SQL Azure。 藉由使用 SSMA for MySQL，您可以查看資料庫物件和資料、評估要遷移的資料庫、將資料庫物件遷移至 SQL Server 或 SQL Azure，然後將資料移轉至 SQL Server 或 SQL Azure。  
   
 ## <a name="recommended-migration-process"></a>建議的遷移程式  
 若要成功地將物件和資料從 MySQL 資料庫遷移至 SQL Server 或 SQL Azure，請使用下列程式：  
@@ -33,7 +33,7 @@ ms.locfileid: "84293587"
   
 4.  [將 MySQL 資料庫對應至 SQL Server 架構 &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
   
-5.  [連接到 Azure SQL DB &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
+5.  [連接到 Azure SQL Database &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
   
 6.  （選擇性）[評估要轉換的 MySQL 資料庫 &#40;MySQLToSQL&#41;](../../ssma/mysql/assessing-mysql-databases-for-conversion-mysqltosql.md)評估要轉換的資料庫物件，並估計轉換時間。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "84293587"
   
     -   同步處理資料庫物件。  
   
-10. [將 MySQL 資料移轉至 SQL Server-Azure SQL DB &#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
+10. [將 MySQL 資料移轉至 SQL Server Azure SQL Database &#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
   
 11. 如有必要，請更新資料庫應用程式。  
   

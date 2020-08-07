@@ -1,5 +1,5 @@
 ---
-title: 專案設定（Azure SQL DB）（SybaseToSQL） |Microsoft Docs
+title: 專案設定 (Azure SQL Database )  (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -9,34 +9,34 @@ ms.topic: conceptual
 ms.assetid: 57002374-0d4d-43c1-b4e9-cbec02355a9c
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 829e7b0c51cd341193944fb2f28241f48618c407
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0348d548d21ea9b593aa7fe4aa14986607ba76fb
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70176230"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863440"
 ---
-# <a name="project-settings-azure-sql-db--sybasetosql"></a>專案設定 (Azure SQL DB) (SybaseToSQL)
-Azure SQL DB 專案設定可讓您設定要在連接對話方塊中新增的 Azure SQL DB 資料庫尾碼，同時也允許在 Azure SQL DB 連線中執行「檢測」機制。  
+# <a name="project-settings-azure-sql-database--sybasetosql"></a>專案設定 (Azure SQL Database )  (SybaseToSQL) 
+[Azure SQL Database 專案設定] 可讓您設定要在連接對話方塊中加入 Azure SQL Database 資料庫尾碼，同時也允許在 Azure SQL Database 連接中執行「心跳」機制。  
   
-[**專案設定**] 和 [**預設專案設定**] 對話方塊中提供 [Azure SQL DB] 窗格。  
+[Azure SQL Database] 窗格可在 [**專案設定**] 和 [**預設專案設定**] 對話方塊中取得。  
   
--   使用 [專案設定] 對話方塊，即可設定目前專案的配置選項。 若要存取 Azure SQL DB 設定，請在 [**工具**] 功能表上選取 [**專案設定**]，按一下左窗格底部的 **[一般**]，然後選取 [ **Azure SQL DB**]。  
+-   使用 [專案設定] 對話方塊，即可設定目前專案的配置選項。 若要存取 Azure SQL Database 設定，請在 [**工具**] 功能表上選取 [**專案設定**]，按一下左窗格底部的 **[一般**]，然後選取 [ **Azure SQL Database**]。  
   
--   使用 [預設專案設定] 對話方塊，即可設定所有專案的設定選項。 若要存取 Azure SQL DB 設定，請在 [**工具**] 功能表上，選取 [ **DefaultProject 設定**]，按一下左窗格底部的 **[一般**]，然後選取 [ **Azure SQL DB**]。  
+-   使用 [預設專案設定] 對話方塊，即可設定所有專案的設定選項。 若要存取 Azure SQL Database 設定，請在 [**工具**] 功能表上，選取 [ **DefaultProject 設定**]，按一下左窗格底部的 **[一般**]，然後選取 [ **Azure SQL Database**]。  
   
-## <a name="connectivity"></a>連線能力  
+## <a name="connectivity"></a>連接性  
 **心跳間隔**  
   
-指定時間間隔，以用於讓 Azure SQL DB 連線以「分鐘：秒」格式保持運作的心跳機制。  
+指定時間間隔，以用於讓 Azure SQL Database 的連線以「分鐘：秒」格式保持運作的狀態。  
   
 **預設值**： ' 4:45 '  
   
-此值應以 ' m:ss ' 格式指定（例如 ' 4:45 ' 或 ' 0:50 '）。  
+值應該以 ' m:ss ' 格式指定 (例如 ' 4:45 ' 或 ' 0:50 ' ) 。  
   
-**Azure SQL DB 伺服器尾碼**  
+**Azure SQL Database 伺服器尾碼**  
   
-指定 Azure SQL DB 伺服器尾碼  
+指定 Azure SQL Database 伺服器尾碼  
   
 **預設值**： ' database.windows.net '。  
   

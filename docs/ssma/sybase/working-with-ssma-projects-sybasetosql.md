@@ -1,5 +1,5 @@
 ---
-title: 使用 SSMA 專案（SybaseToSQL） |Microsoft Docs
+title: 使用 SSMA Projects (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -9,20 +9,20 @@ ms.topic: conceptual
 ms.assetid: 11091d95-c488-48c3-891a-743cac94ac93
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: eb6f035b4d597e2b648134c195b698554dc78e12
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 74096d97d01e9a700c10c9e4721c1dfca4d54f9b
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68072471"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864685"
 ---
 # <a name="working-with-ssma-projects-sybasetosql"></a>使用 SSMA 專案 (SybaseToSQL)
-若要將 Sybase 自我調整伺服器企業（ASE） [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫移轉至或 SQL Azure，您必須先建立 SSMA 專案。 專案是一個檔案，其中包含您想要遷移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 sql AZURE 之 ASE 資料庫的相關中繼資料，以及將接收已遷移[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]物件和資料之目標實例或 sql azure 的相關元[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料，或 sql azure 連接資訊和專案設定。  
+若要將 Sybase 彈性伺服器企業 (ASE) 資料庫移轉到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure，您必須先建立 SSMA 專案。 專案是一個檔案，其中包含您想要遷移到或 SQL Azure 之 ASE 資料庫的相關中繼資料 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將接收已遷移物件和資料之目標實例或 sql azure 的相關中繼資料， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 sql azure 連接資訊和專案設定。  
   
-當您開啟專案時，它會從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 中斷連接。 這可讓您離線工作。 您可以重新連線[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到或 SQL Azure。 如需詳細資訊，請參閱連接到[SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md)  / [連接到 Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)。  
+當您開啟專案時，它會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 中斷連接。 這可讓您離線工作。 您可以重新連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure。 如需詳細資訊，請參閱[連接到 SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md)  /  [連接到 Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)。  
   
 ## <a name="reviewing-default-project-settings"></a>查看預設專案設定  
-SSMA 包含數個選項，可用於轉換和載入資料庫物件、遷移資料，以及使用 ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和或 SQL Azure 同步處理 SSMA。 這些選項的預設設定適用于許多使用者。 不過，在建立新的 SSMA 專案之前，您應該先檢查選項，並視需要變更將用於所有新專案的預設值。  
+SSMA 包含數個選項，可用於轉換和載入資料庫物件、遷移資料，以及使用 ASE 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 同步處理 SSMA。 這些選項的預設設定適用于許多使用者。 不過，在建立新的 SSMA 專案之前，您應該先檢查選項，並視需要變更將用於所有新專案的預設值。  
   
 **若要查看預設專案設定**  
   
@@ -38,19 +38,19 @@ SSMA 包含數個選項，可用於轉換和載入資料庫物件、遷移資料
   
     -   如需有關遷移選項的詳細資訊，請參閱[&#40;遷移&#41; &#40;SybaseToSQL&#41;的專案設定](../../ssma/sybase/project-settings-migration-sybasetosql.md)。  
   
-    -   如需將物件載入至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之選項的詳細資訊，請參閱[&#40;同步處理&#41; &#40;SybaseToSQL&#41;的專案設定](../../ssma/sybase/project-settings-synchronization-sybasetosql.md)。  
+    -   如需將物件載入至之選項的詳細資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱[&#40;同步處理&#41; &#40;SybaseToSQL&#41;的專案設定](../../ssma/sybase/project-settings-synchronization-sybasetosql.md)。  
   
     -   如需 GUI 選項的詳細資訊，請參閱[&#40;gui&#41; &#40;SybaseToSQL&#41;的專案設定](../../ssma/sybase/project-settings-gui-sybasetosql.md)。  
   
     -   如需資料類型對應設定的詳細資訊，請按一下 [[專案設定] &#40;類型對應&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md)。  
   
-    -   如需 SQL Azure 選項的詳細資訊，請參閱[AZURE SQL DB 的專案設定 &#40;&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-azure-sql-db-sybasetosql.md)。  
+    -   如需 SQL Azure 選項的詳細資訊，請參閱[專案設定 &#40;Azure SQL Database &#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-azure-sql-db-sybasetosql.md)。  
   
     > [!NOTE]  
     > 只有當您在建立專案時選取 [**遷移至 SQL azure** ] 時，才會顯示 SQL azure 設定。  
   
 ## <a name="creating-new-projects"></a>建立新專案  
-若要將資料從 ASE 資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]遷移到或 SQL Azure，您必須先建立專案。  
+若要將資料從 ASE 資料庫移轉到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure，您必須先建立專案。  
   
 **若要建立專案**  
   
@@ -62,7 +62,7 @@ SSMA 包含數個選項，可用於轉換和載入資料庫物件、遷移資料
   
 3.  在 [**位置**] 方塊中，輸入或選取專案的資料夾。  
   
-4.  在 [**遷移至**] 下拉式選，選取用於遷移的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目標版本。 可用的選項如下︰  
+4.  在 [**遷移至**] 下拉式選，選取用於遷移的目標版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 可用的選項如下︰  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
@@ -74,7 +74,7 @@ SSMA 包含數個選項，可用於轉換和載入資料庫物件、遷移資料
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
-    -   Azure SQL DB  
+    -   Azure SQL Database  
   
 然後按一下 **[確定]**。  
   
@@ -101,7 +101,7 @@ SSMA 包含數個選項，可用於轉換和載入資料庫物件、遷移資料
         SSMA 會剖析 Sybase ASE 架構，並將中繼資料儲存至專案檔。  
   
 ## <a name="opening-projects"></a>開啟專案  
-當您開啟專案時，它會從 ASE 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 中斷連接。 這可讓您離線工作。 若要更新中繼資料，請將[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫物件載入或 SQL Azure。 若要遷移資料，您必須重新連線到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ASE 和或 SQL Azure。  
+當您開啟專案時，它會從 ASE 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 中斷連接。 這可讓您離線工作。 若要更新中繼資料，請將資料庫物件載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure。 若要遷移資料，您必須重新連線到 ASE 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure。  
   
 **開啟專案**  
   
@@ -113,14 +113,14 @@ SSMA 包含數個選項，可用於轉換和載入資料庫物件、遷移資料
   
 2.  若要重新連線到 ASE，請**在 [檔案**] 功能表上，選取 [重新連線**到 Sybase**]。  
   
-3.  若要重新[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]連線到或 SQL Azure，請**在 [檔案**] 功能表上選取 [重新連線]， **SQL Server** / **重新連接到 SQL Azure**。  
+3.  若要重新連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure， **File**請在 [檔案] 功能表上選取 [重新連線]， **SQL Server**  /  **重新連接到 SQL Azure**。  
   
 ## <a name="next-step"></a>後續步驟  
 遷移程式的下一個步驟是[連接到 SYBASE ASE](connecting-to-sybase-ase-sybasetosql.md)。  
   
 ## <a name="see-also"></a>另請參閱  
-[將 Sybase ASE 資料庫移轉至 SQL Server-Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[將 Sybase ASE 資料庫移轉至 SQL Server Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
 [連接到 Sybase ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md)  
 [連接到 SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md)  
-[連接到 Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)  
+[連接到 Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)  
   

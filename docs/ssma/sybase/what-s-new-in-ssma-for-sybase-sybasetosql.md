@@ -1,6 +1,6 @@
 ---
-title: SSMA for SAP ASE 的新功能（SybaseToSQL） |Microsoft Docs
-description: 瞭解每個版本之 Sybase （SybaseToSQL）的 SQL Server 移轉小幫手（SSMA）變更。
+title: SSMA for SAP ASE 的新功能 (SybaseToSQL) |Microsoft Docs
+description: 瞭解每個版本的 Sybase (SybaseToSQL) SQL Server 移轉小幫手 (SSMA) 變更。
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
@@ -10,16 +10,16 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: alexiva
-ms.openlocfilehash: 53ae61f78bed3ee262844f5242f3499d8981501b
-ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.openlocfilehash: 8391c9642bb7ee0849ea4627b42ac580c4d44d20
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87477320"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864705"
 ---
-# <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SSMA for SAP ASE 的新功能（SybaseToSQL）
+# <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SSMA for SAP ASE 的新功能 (SybaseToSQL) 
 
-本文列出每個版本中 SAP ASE （先前稱為 SSMA for Sybase）變更的 SQL Server 移轉小幫手（SSMA）。
+本文列出 SAP (ASE 的 SQL Server 移轉小幫手 (SSMA) ，先前針對 Sybase 的 SSMA) 每個版本中的變更。
 
 ## <a name="ssma-v812"></a>SSMA v 8.12
 
@@ -73,14 +73,14 @@ SSMA for SAP ASE 的 v1.0 版本具有圖形化使用者介面中的次要修正
 
 SSMA for SAP ASE 的第8.5 版已增強，並支援 SQL server 中的 Azure Active Directory 驗證和 JSON 功能的基本支援，以及一組專為改善可用性和效能而設計的目標修正程式。
 
-此外，SSMA for SAP ASE 現在可讓您隱藏系統資料表和視圖（將其排除在轉換之外）。
+此外，SSMA for SAP ASE 現在可讓您隱藏系統資料表和視圖， (將它們從轉換) 排除。
 
 > [!IMPORTANT]
 > 使用 SSMA v 8.5 時，.NET 4.7.2 是必要的安裝。 如果您需要安裝此版本，您可以從[這裡](https://dotnet.microsoft.com/download/dotnet-framework/net472)下載執行時間檔案。
 
 ## <a name="ssma-v84"></a>SSMA v 8。4
 
-SSMA for SAP ASE 的 v2.0 版本已透過專為處理協助工具問題而設計的目標修正來增強，並修正適用于 SQL Server 2016 和更新版本的最大索引資料行（允許32，而不是16）的相關錯誤。
+SSMA for SAP ASE 的 v2.0 版本已透過專為處理協助工具問題而設計的目標修正來增強，並修正與最大索引資料行相關的錯誤 (允許32，而不是 SQL Server 2016 和更新版本的 16) 。
 
 > [!IMPORTANT]
 > 在 SSMA 版本7.4 到8.4 的情況下，.NET 4.5.2 是必要的安裝。
@@ -114,9 +114,9 @@ SSMA for SAP ASE 的8.1 版已透過專為改善品質和轉換計量而設計�
 
 SSMA for SAP ASE 的8.0 版已透過專為改善品質和轉換計量而設計的目標修正來增強。 此外，此版本還提供下列新功能：
 
-* 支援做為目標**Azure SQL Database 受控執行個體**。 您現在可以建立以 Azure SQL Database 受控執行個體為目標的新專案：
+* 支援以**AZURE SQL 受控執行個體**做為目標。 您現在可以建立以 Azure SQL 受控執行個體為目標的新專案：
 
-  ![SQL DB MI 專案](../media/ssma-newproject-sqldbmi.png)
+  ![SQL Database MI 專案](../media/ssma-newproject-sqldbmi.png)
 
 * 轉換後的**修正建議程式**。 [在這裡](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)深入瞭解。
 
@@ -136,7 +136,7 @@ SSMA for SAP ASE 的 v 7.9 版本包含下列變更：
 
 * 改善品質和轉換計量的目標修正程式。
 * 支援 SSMA 命令列來改變資料類型對應和專案喜好設定。
-* 支援使用 SQL Server Integration Services （SSIS）來遷移資料。 轉換架構之後，您可以使用滑鼠右鍵內容功能表選項來建立 SSIS 封裝。
+* 支援使用 SQL Server Integration Services (SSIS) 來遷移資料。 轉換架構之後，您可以使用滑鼠右鍵內容功能表選項來建立 SSIS 封裝。
 * SSMA 中的 [Azure SQL Database 連接] 對話方塊也已更改為指定完整的伺服器名稱。 在舊版的 SSMA 中，必須在專案設定中明確提及 Azure SQL Database 前置詞。
 
 ## <a name="ssma-v78"></a>SSMA 7.8 版
@@ -151,18 +151,18 @@ SSMA for SAP ASE 的7.8 版包含下列變更：
 SSMA for SAP ASE 的7.7 版包含下列變更：
 
 * SSMA for SAP ASE 已透過改善品質和轉換計量的目標修正來加強。
-* 根據熱門需求，適用于 SAP ASE 的32位版本 SSMA 已恢復。 相較于先前的執行（在 v4.0 之前），有兩個安裝程式套件，但無法並存安裝。 因此，您必須根據您擁有的連線元件來選擇最適當的版本。 最好是盡可能使用64位版本。
+* 根據熱門需求，適用于 SAP ASE 的32位版本 SSMA 已恢復。 相較于前一個執行 (之前的) ，有兩個安裝程式套件，但無法並存安裝。 因此，您必須根據您擁有的連線元件來選擇最適當的版本。 最好是盡可能使用64位版本。
 
 ## <a name="ssma-v76"></a>SSMA v 7。6
 
 SSMA for SAP ASE 的7.6 版包含下列變更：
 
-* 改善品質和轉換計量的目標修正，並支援 SQL Server 2017 （公開預覽）。 Windows 和 Linux 上的 SQL Server 2017 支援處於公開預覽狀態，不應用於生產環境遷移。
+* 改善品質和轉換計量，以及支援 SQL Server 2017 (公開預覽) 的目標修正。 Windows 和 Linux 上的 SQL Server 2017 支援處於公開預覽狀態，不應用於生產環境遷移。
 * 支援轉換 Sybase 函數。
 
 ## <a name="ssma-v75"></a>SSMA v 7。5
 
-SSMA for SAP ASE 的7.5 版（先前稱為 Sybase 的 SSMA）包含下列變更：
+SSMA for SAP ASE 的 v1.0 版本 (先前針對 Sybase) 的 SSMA 包含下列變更：
 
 * 有數項改良功能可確保更方便殘障人士使用。
 * 語法的支援 `CREATE OR REPLACE` 。
@@ -185,7 +185,7 @@ SSMA for Sybase 的7.3 版包含下列變更：
 
 * 改善品質和轉換計量，並根據客戶的意見反應進行目標修正。
 * 透過下列專案公開的 SSMA 擴充性架構：
-  * 將功能匯出至 SQL Server Data Tools （SSDT）專案。
+  * 將功能匯出至 SQL Server Data Tools (SSDT) 專案。
     * 您現在可以將架構腳本從 SSMA 匯出至 SSDT 專案。 您可以使用架構腳本來進行其他架構變更，並部署您的資料庫。
 
         ![另存為 SSDT 專案命令](../media/export-schema-scripts_red.png)
@@ -207,7 +207,7 @@ SSMA for Sybase 的7.1 版包含下列變更：
 
 * Windows 和 Linux CTP1 上的 SQL Server 2017 現在是支援的目標平臺，可進行遷移。 這項功能在 technical preview 中，支援以 SQL server 為目標的架構和資料移動。
 * 支援自動更新，以在最新版本的 SSMA 可用時立即下載。
-* SSMA 可安裝的二進位檔現在會透過 Windows Installer 套件檔案（.msi）傳遞。
+* SSMA 可安裝的二進位檔現在會透過 Windows Installer 封裝檔案傳遞 ( .msi) 。
 
 ## <a name="may-2016"></a>2016 年 5 月
 
@@ -229,18 +229,18 @@ SSMA for Sybase 的2016年3月預覽版本新增了遷移至 SQL Server 2016 的
 
 SSMA for Sybase 的2016年1月維護版本包含下列變更：
 
-* 已將 [查看記錄] 功能表項目新增至 SSMA （RFC 5706203）。
+* 已將 [查看記錄] 功能表項目新增至 SSMA (RFC 5706203) 。
 * 已新增遙測。
 
 ## <a name="july-2014"></a>2014 年 7 月
 
 2014年7月版的 SSMA for Sybase 包含下列變更：
 
-* 改良的 Azure SQL DB 程式碼轉換。
-* 已將延伸模組套件功能移至架構，以支援 Azure SQL DB。
+* 改良的 Azure SQL Database 程式碼轉換。
+* 已將延伸模組套件功能移至架構，以支援 Azure SQL Database。
 * 已針對具有超過10k 物件的資料庫測試過的效能改進。
 * 新增了處理大量物件的 UI 改良功能。
-* 新增了反白顯示知名 LOB 架構的功能（因此可以在轉換時予以忽略）。
+* 新增了反白顯示知名 LOB 架構的功能 (因此可以在轉換) 中忽略它們。
 * 已新增轉換速度改進。
 * 已新增在 UI 中顯示物件計數的功能。
 * 減少超過25% 的報表大小。
@@ -277,10 +277,10 @@ SSMA for Sybase 的2016年1月維護版本包含下列變更：
 * 新增了將區分大小寫的 Sybase 資料庫適當轉換和遷移至區分大小寫 SQL Server 的功能。
 * 已將 Sybase ASE 非 ANSI 聯結語句轉換的支援新增至 SQL Server ANSI 聯結語句，並已擴充至 DELETE 和 UPDATE 語句。
 * 針對使用 Sybase ASE ODBC 提供者和 Sybase ASE ADO.NET 提供者連接到 Sybase ASE 伺服器，提供其他連線選項。
-* 已移除名為的個別資料庫上的相依性 `SysDB` ，其中包含 Sybase 模擬函式（安裝為延伸模組套件的一部分）。
+* 已移除名為的個別資料庫上的相依性 `SysDB` ，其中包含 Sybase 模擬函數 (安裝為擴充套件) 的一部分。
 * 已新增在叢集上安裝 SSMA for Sybase 延伸模組套件的能力 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] 。
-* 已新增舊版 SSMA （v4.0 和4.2 版）所建立之專案的回溯相容性。
-* 已新增安裝 SSMA for Sybase v 5.0 產品（SxS）與舊版 SSMA （v4.0 和4.2 版）的功能。
+* 已新增舊版 SSMA 所建立之專案的回溯相容性 (v4.0 和4.2 版) 。
+* 已新增在舊版 SSMA (v4.0 和4.2 版) 上安裝 SSMA for Sybase v 5.0 產品的功能， (SxS) 。
 
 ## <a name="july-2010"></a>2010 年 7 月
 
@@ -297,7 +297,7 @@ SSMA for Sybase 的2016年1月維護版本包含下列變更：
 2008年6月版的 SSMA for Sybase 包含下列變更：
 
 * 已新增 SSMA 測試器，其會自動測試資料庫物件轉換和 SSMA 所進行的資料移轉。 完成所有 SSMA 的遷移步驟之後，請使用 SSMA 測試人員來驗證轉換的物件是否以相同的方式運作，以及是否已正確傳輸所有資料。
-* 已新增 SQL 前轉換。 使用者現在可以針對要用於轉換的每個來來源程式，指定臨時表（和其他物件）宣告。
+* 已新增 SQL 前轉換。 使用者現在可以針對要用於轉換的每個來來源程式，指定臨時表 (和其他物件) 宣告。
 * 已在物件轉換中新增改良功能：
   * 已修訂聯結轉換。
   * 不含/group by 子句的匯總和非匯總。

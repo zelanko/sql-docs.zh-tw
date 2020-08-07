@@ -1,5 +1,5 @@
 ---
-title: 在 SQL Server 上安裝 SSMA 元件（SybaseToSQL） |Microsoft Docs
+title: 在 SQL Server (SybaseToSQL) 上安裝 SSMA 元件 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/14/2020
 ms.prod: sql
@@ -9,20 +9,20 @@ ms.topic: conceptual
 ms.assetid: 5ad9e12c-2cdb-4dd2-8703-05a23242d19d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 06bddd3929efa4477039300f38fbdcf301680085
-ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
+ms.openlocfilehash: 1c66255f57a69db0807ab1620cafd60444f296c8
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411596"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865386"
 ---
-# <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>在 SQL Server 上安裝 SSMA 元件（SybaseToSQL）
+# <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>在 SQL Server (SybaseToSQL 上安裝 SSMA 元件) 
 
 除了安裝 SSMA 之外，若要使用伺服器端資料移轉，您也必須在執行的電腦上安裝元件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 這些元件包括支援資料移轉的 SSMA 延伸模組套件，以及可啟用伺服器對伺服器連線能力的 Sybase 提供者。
 
 ## <a name="ssma-for-sybase-extension-pack"></a>Sybase 延伸模組套件的 SSMA
 
-SSMA 延伸模組套件會將資料庫**sysdb**和**ssmatesterdb_syb**加入至指定的實例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **Sysdb**資料庫包含遷移資料所需的資料表和預存程式。 **Ssmatester_syb**資料庫包含架構**ssma_sybase_utilities**，其中會建立 ssma 測試器元件所使用的物件（資料表、觸發程式、Views）。
+SSMA 延伸模組套件會將資料庫**sysdb**和**ssmatesterdb_syb**加入至指定的實例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **Sysdb**資料庫包含遷移資料所需的資料表和預存程式。 **Ssmatester_syb**資料庫包含架構**ssma_sybase_utilities**，其中會建立 ssma 測試器元件所使用的物件 (資料表、觸發程式、) 。
 
 此外，當您將資料移轉至時 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在伺服器端資料移轉引擎用於遷移資料時，建立 Agent 作業。
 
@@ -70,7 +70,7 @@ SSMA 延伸模組套件會將資料庫**sysdb**和**ssmatesterdb_syb**加入至�
 
 11. 在下一個頁面上，選取 [**安裝公用程式資料庫*n*並安裝延伸模組套件程式庫**]，其中*n*是版本號碼。 如果您計畫使用測試器功能，請選取 [**安裝測試人員資料庫**] 核取方塊，然後選取 **[下一步]**。
 
-    系統會使用在此資料庫中建立資料移轉所需的資料表和預存程式（使用伺服器端資料移轉引擎）來建立**sysdb**資料庫。
+    **Sysdb**資料庫是以資料移轉所需的資料表和預存程式來建立， (使用伺服器端資料移轉引擎) 會在此資料庫中建立。
 
     如果核取 [**安裝測試器資料庫**] 選項，將會建立**ssmatesterdb_syb**資料庫。
 
@@ -112,4 +112,4 @@ SSMA 延伸模組套件會將資料庫**sysdb**和**ssmatesterdb_syb**加入至�
 ## <a name="see-also"></a>另請參閱
 
 - [安裝適用于 Sybase 用戶端的 SSMA](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)
-- [將 Sybase ASE 資料庫移轉至 SQL Server-Azure SQL DB](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)
+- [將 Sybase ASE 資料庫移轉至 SQL Server Azure SQL Database](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)

@@ -1,5 +1,5 @@
 ---
-title: 連接到 SQL Server （MySQLToSQL） |Microsoft Docs
+title: 連接到 SQL Server (MySQLToSQL) |Microsoft Docs
 description: 瞭解如何連接到 SQL Server 的目標實例，以遷移 MySQL 資料庫。 SSMA 會取得 SQL Server 中資料庫的相關中繼資料。
 ms.prod: sql
 ms.custom: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 462b209d73f48217cf9941adf2e3af45d62371cd
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: f79784b6498f080b15f1ef370e8a3f31be81a871
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394283"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823291"
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>連線到 SQL Server (MySQLToSQL)
 若要將 MySQL 資料庫遷移至 SQL Server，您必須連接到 SQL Server 的目標實例。 當您連接時，SSMA 會取得 SQL Server 實例中所有資料庫的相關中繼資料，並在 SQL Server 中繼資料瀏覽器中顯示資料庫中繼資料。 SSMA 會儲存您所連接 SQL Server 實例的資訊，但不會儲存密碼。  
@@ -44,13 +44,13 @@ ms.locfileid: "87394283"
   
 **若要連接到 SQL Server**  
   
-1.  在 [檔案]**功能表上，選取 [連線****至 SQL Server]** （在建立專案之後，就會啟用此選項）。  
+1.  在 [檔案]**功能表上，選取 [** **連接到 SQL Server]** ， (在建立專案) 之後，就會啟用此選項。  
   
     如果您先前已連接到 SQL Server，命令名稱會**重新連接到 SQL Server**。  
   
 2.  在 [連接] 對話方塊中，輸入或選取 SQL Server 實例的名稱。  
   
-    -   如果您要連接到本機電腦上的預設實例，您可以輸入**localhost**或句點（**.**）。  
+    -   如果您要連接到本機電腦上的預設實例，您可以輸入**localhost**或點 (**.**) 。  
   
     -   如果您要連接到另一部電腦上的預設實例，請輸入電腦的名稱。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "87394283"
   
 4.  在 [**驗證**] 方塊中，選取要用於連接的驗證類型。 若要使用目前的 Windows 帳戶，請選取 [ **Windows 驗證**]。 若要使用 SQL Server 登入，請選取 [SQL Server Authentication]，然後提供 [登入名稱] 和 [密碼]。  
   
-5.  針對安全連線，會加入兩個控制項： [**加密連接**] 和 [ **TrustServerCertificate** ] 核取方塊。 只有在核取 [**加密連接**] 時，才會顯示 [ **TrustServerCertificate** ] 核取方塊。 若已核取 [**加密**連線] （true），而且未選取 [ **TrustServerCertificate** （false）]，則會驗證 SQL Server SSL 憑證。 驗證伺服器憑證是 SSL 交握的一部分，而且這麼做可以確保伺服器是所要連接的正確伺服器。 若要確保這一點，憑證必須安裝在用戶端以及伺服器端。  
+5.  針對安全連線，會加入兩個控制項： [**加密連接**] 和 [ **TrustServerCertificate** ] 核取方塊。 只有在核取 [**加密連接**] 時，才會顯示 [ **TrustServerCertificate** ] 核取方塊。 若已核取 [**加密**連線] (true) 而且未選取 [ **TrustServerCertificate** ] (false) ，它會驗證 SQL Server SSL 憑證。 驗證伺服器憑證是 SSL 交握的一部分，而且這麼做可以確保伺服器是所要連接的正確伺服器。 若要確保這一點，憑證必須安裝在用戶端以及伺服器端。  
   
 6.  按一下 [連線]。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "87394283"
   
 5.  較高的版本相容性對「SQL Azure」無效。  
   
-|專案類型與目標伺服器版本的比較|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br /> （版本： 9. x）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br /> （版本： 10. x）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012<br />（版本： 11. x）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014<br />（版本： 12. x）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016<br />（版本： 13. x）|SQL Azure|  
+|專案類型與目標伺服器版本的比較|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br />  (版本： 9. x) |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br />  (版本： 10. x) |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012<br /> (版本： 11. x) |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014<br /> (版本： 12. x) |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016<br /> (版本： 13. x) |SQL Azure|  
 |-|-|-|-|-|-|-|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|是|是|是|是|是||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||是|是|是|是||  
@@ -88,7 +88,7 @@ ms.locfileid: "87394283"
 |SQL Azure||||||是|  
   
 > [!IMPORTANT]  
-> 資料庫物件的轉換是根據專案類型執行，而不是根據所 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接之的版本。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 專案中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 即使您連接至較高版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016），還是會以每個2005執行轉換。  
+> 資料庫物件的轉換是根據專案類型執行，而不是根據所 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接之的版本。 在2005專案的情況下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 即使您連線至較高版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016) ，還是會以每個2005執行轉換。  
   
 ## <a name="synchronizing-sql-server-metadata"></a>同步處理 SQL Server 中繼資料  
 SQL Server 資料庫的相關中繼資料不會自動更新。 當您第一次連接到 SQL Server 時，或上次手動更新中繼資料時，SQL Server 中繼資料 Explorer 中的中繼資料就是中繼資料的快照集。 您可以手動更新所有資料庫或任何單一資料庫或資料庫物件的中繼資料。  
@@ -115,5 +115,5 @@ SQL Server 資料庫的相關中繼資料不會自動更新。 當您第一次�
 -   如果您不需要執行上述任何一項工作，您可以將 MySQL 資料庫物件定義轉換成 SQL Server 的物件定義。 如需詳細資訊，請參閱將[MySQL 資料庫轉換 &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[將 MySQL 資料庫遷移至 SQL Server-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[將 MySQL 資料庫遷移至 SQL Server Azure SQL Database &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

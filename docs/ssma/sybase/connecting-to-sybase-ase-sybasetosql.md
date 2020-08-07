@@ -1,6 +1,6 @@
 ---
-title: 連接到 SAP ASE （SybaseToSQL） |Microsoft Docs
-description: 瞭解如何連接到調適型伺服器，將 SAP 調適型伺服器企業（ASE）資料庫移轉至 SQL Server 或 Azure SQL Database。
+title: 連接到 SAP ASE (SybaseToSQL) |Microsoft Docs
+description: 瞭解如何連接到調適型伺服器，以將 SAP 調適型伺服器企業 (ASE) 資料庫移轉至 SQL Server 或 Azure SQL Database。
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: a45a2330-9175-4c9e-af38-ef920e350614
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 0558e86380c6cec822103a22b746b5af05437cae
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: ff1a2144dd9a8f18e71a5e9fa54343bd414f070a
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84306087"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864805"
 ---
-# <a name="connecting-to-sap-ase-sybasetosql"></a>連接到 SAP ASE （SybaseToSQL）
+# <a name="connecting-to-sap-ase-sybasetosql"></a>連接到 SAP ASE (SybaseToSQL) 
 
-若要將 SAP 調適型伺服器 Enterprise （ASE）資料庫移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure，您必須連接到包含您要遷移之資料庫的調適型伺服器。 當您連接時，SSMA 會取得調適型伺服器上所有資料庫的相關中繼資料，並在 [Sybase 中繼資料 Explorer] 窗格中顯示資料庫中繼資料。 SSMA 會儲存資料庫伺服器的相關資訊，但不會儲存密碼。  
+若要將 SAP 調適型伺服器企業 (ASE) 資料庫移轉到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure，您必須連接到包含您要遷移之資料庫的調適型伺服器。 當您連接時，SSMA 會取得調適型伺服器上所有資料庫的相關中繼資料，並在 [Sybase 中繼資料 Explorer] 窗格中顯示資料庫中繼資料。 SSMA 會儲存資料庫伺服器的相關資訊，但不會儲存密碼。  
   
 您的 ASE 連接會保持作用中狀態，直到您關閉專案為止。 當您重新開啟專案時，如果您想要使用伺服器的作用中連接，就必須重新連接到 ASE。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "84306087"
 4. 如果您選取 [**標準模式]**，請提供下列值：  
   
     1. 在 [**伺服器名稱**] 方塊中，輸入或選取資料庫伺服器的名稱或 IP 位址。  
-    2. 如果資料庫伺服器未設定為接受預設通訊埠（5000）上的連接，請在 [**伺服器埠**] 方塊中輸入用於 Sybase 連接的通訊埠編號。  
+    2. 如果資料庫伺服器未設定為接受預設通訊埠上的連接 (5000) ，請在 [**伺服器埠**] 方塊中輸入用於 Sybase 連接的通訊埠編號。  
     3. 在 [**使用者名稱**] 方塊中，輸入具有必要許可權的 Sybase 帳戶。  
     4. 在 [**密碼**] 方塊中，輸入指定之使用者名稱的密碼。  
   
@@ -115,4 +115,4 @@ ASE 資料庫的相關中繼資料不會自動重新整理。 當您第一次連
   
 ## <a name="see-also"></a>另請參閱
 
-[將 Sybase ASE 資料庫移轉至 SQL Server-Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[將 Sybase ASE 資料庫移轉至 SQL Server Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

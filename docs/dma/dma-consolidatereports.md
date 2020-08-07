@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: fd6563881127b7a5c1cf134711a52fdedde629c4
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: dd3b2d26b79cf612c18a201a2b077323b1b68420
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435145"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823240"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>使用 DMA 評估企業及整合評估報告
 
@@ -76,7 +76,7 @@ ms.locfileid: "87435145"
 ### <a name="if-using-a-csv-file"></a>如果使用 CSV 檔案
 
 > [!IMPORTANT]
-> 確定清查檔案儲存為逗號分隔（CSV）檔。
+> 請確定清查檔案儲存為逗號分隔 (CSV) 檔。
 >
 > 若為預設實例，請將實例名稱設定為 MSSQLServer。
 
@@ -100,9 +100,9 @@ ms.locfileid: "87435145"
 
 如果此資料庫不在工具電腦上，請確定工具電腦具有與此 SQL Server 實例的網路連線。
 
-在 CSV 檔案上使用 SQL Server 資料表的優點是，您可以使用 [評估旗標] 資料行來控制所收取的實例/資料庫，以供評估之用，讓您更輕鬆地將評量分成較小的區塊。  然後您可以跨越多個評量（請參閱本文稍後的執行評估的一節），這比維護多個 CSV 檔案更容易。
+在 CSV 檔案上使用 SQL Server 資料表的優點是，您可以使用 [評估旗標] 資料行來控制所收取的實例/資料庫，以供評估之用，讓您更輕鬆地將評量分成較小的區塊。  接著，您可以跨越多個評量 (參閱本文稍後的執行評估一節) ，這比維護多個 CSV 檔案更容易。
 
-請記住，視物件的數目及其複雜度而定，評估可能需要很長的時間（小時 +），因此請謹慎將評量分成可管理的區塊。
+請記住，視物件的數目及其複雜度而定，評估可能會花很長的時間 (時數 +) ，因此將評量分成可管理的區塊是謹慎的。
 
 ### <a name="if-using-an-instance-inventory"></a>如果使用實例清查
 
@@ -110,7 +110,7 @@ ms.locfileid: "87435145"
 
 - ServerName
 - InstanceName
-- Port
+- 連接埠
 - AssessmentFlag
 
 ![SQL Server 資料表內容](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)
@@ -150,7 +150,7 @@ ms.locfileid: "87435145"
 |參數  |描述 |
 |---------|---------|
 |**processTo** | 將處理 JSON 檔案的位置。 可能的值為**SQLServer**和**AzureSQLDatabase**。 |
-|**serverName** | 將處理資料的 SQL Server 實例。  如果您針對**processTo**參數指定**AzureSQLDatabase** ，則只會包含 SQL Server 名稱（不包括 database.windows.net）。 當您以 Azure SQL Database 為目標時，系統會提示您輸入兩次登入;第一個是您的 Azure 租使用者認證，而第二個則是 Azure SQL Server 的系統管理員登入。 |
+|**serverName** | 將處理資料的 SQL Server 實例。  如果您針對**processTo**參數指定**AzureSQLDatabase** ，則只包含 SQL Server 名稱 (不包含 database.windows.net) 。 當您以 Azure SQL Database 為目標時，系統會提示您輸入兩次登入;第一個是您的 Azure 租使用者認證，而第二個則是 Azure SQL Server 的系統管理員登入。 |
 |**CreateDMAReporting** | 要建立以處理 JSON 檔案的臨時資料庫。  如果您指定的資料庫已存在，而且您將此參數設定為其中一個，則不會建立物件。  這個參數對於重新建立已卸載的單一物件很有用。 |
 |**CreateDataWarehouse** | 建立 Power BI 報表將使用的資料倉儲。 |
 |**名稱** | DMAReporting 資料庫的名稱。 |
@@ -197,7 +197,7 @@ DmaProcessor 函數應該只需要幾秒鐘的時間來處理單一檔案。
 
 若要使用 DMA 報表，請使用書簽和交叉分析篩選器來篩選：
 
-- 評量類型（Azure SQL DB、Azure SQL MI、SQL 內部部署） 
+- 評量類型 (Azure SQL Database、Azure SQL 受控執行個體、SQL Server)  
 - 執行個體名稱
 - 資料庫名稱
 - 小組名稱
@@ -212,8 +212,8 @@ DmaProcessor 函數應該只需要幾秒鐘的時間來處理單一檔案。
 
 您可以使用書簽來切換中的報告內容：
 
-- Azure SQL DB 雲端評量
-- Azure SQL MI 雲端評量
+- Azure SQL Database 雲端評量
+- Azure SQL 受控執行個體雲端評量
 - 內部部署評量
 
 ![DMA 報表查看書簽](../dma/media//dma-consolidatereports/dma-report-bookmarks1.png)
@@ -241,7 +241,7 @@ Power BI 報告中顯示的詳細資料會顯示在下列各節中。
 
   ![DMA 就緒百分比](../dma/media//dma-consolidatereports/dma-readiness-percentage.png)
 
-此視覺效果會根據選取內容（所有專案、實例、資料庫 [倍數/]）來更新。
+此視覺效果會根據選取內容進行更新， (所有專案、實例、資料庫 [倍數] ) 。
 
 ### <a name="readiness-count"></a>就緒計數
 
@@ -264,7 +264,7 @@ Power BI 報告中顯示的詳細資料會顯示在下列各節中。
 
   ![DMA 問題 WordCloud](../dma/media//dma-consolidatereports/dma-issues-word-cloud.png)
 
-此視覺效果會顯示目前在選取內容中發生的問題（所有專案、實例、資料庫 [倍數/]）。 畫面上出現較大的文字，表示該類別中的問題數目愈大。 將滑鼠指標暫留在文字上會顯示該類別中發生的問題數目。
+此視覺效果會顯示目前在選取範圍內容中發生的問題 (所有專案、實例、資料庫 [倍數] ) 。 畫面上出現較大的文字，表示該類別中的問題數目愈大。 將滑鼠指標暫留在文字上會顯示該類別中發生的問題數目。
 
 ### <a name="database-readiness"></a>資料庫準備就緒
 
@@ -274,7 +274,7 @@ Power BI 報告中顯示的詳細資料會顯示在下列各節中。
 
 - InstanceDatabase
 - ChangeCategory
-- 標題
+- Title
 - ObjectType
 - ImpactedObjectName
 
@@ -296,4 +296,4 @@ Power BI 報告中顯示的詳細資料會顯示在下列各節中。
 
 ### <a name="script-disclaimer"></a>腳本免責聲明
 
-*在任何 Microsoft 標準支援計畫或服務下，都不支援本文中所提供的範例腳本。所有的腳本都是依原樣提供，不含任何種類的擔保。Microsoft 將不會有任何默示擔保，包括（但不限於）適售性或符合特定目的之適用性的任何默示擔保。在使用或執行範例腳本和檔的效能時，所產生的全部風險都會隨您一起進行。Microsoft、其作者、或者，在建立、生產或交付腳本時所牽涉到的任何人，都必須承擔因使用或無法使用範例腳本或檔而造成的任何損害（包括不受限制、業務中斷、遺失商務資訊或其他 pecuniary 遺失）的責任，即使 Microsoft 已建議此類損害的可能性。 在其他網站/存放庫/blog 上 reposting 這些腳本之前，搜尋許可權。*
+*在任何 Microsoft 標準支援計畫或服務下，都不支援本文中所提供的範例腳本。所有的腳本都是依原樣提供，不含任何種類的擔保。Microsoft 將不會有任何默示擔保，包括（但不限於）適售性或符合特定目的之適用性的任何默示擔保。在使用或執行範例腳本和檔的效能時，所產生的全部風險都會隨您一起進行。Microsoft、其作者、或者，在建立、生產或交付腳本時所牽涉到的任何人，都必須負責因應任何損害 (包括不受影響、失去商業利潤損失、業務中斷、公司資訊遺失或其他 pecuniary 遺失) 因使用或無法使用範例腳本或檔而引發，即使 Microsoft 已建議這類損害的可能性。 在其他網站/存放庫/blog 上 reposting 這些腳本之前，搜尋許可權。*

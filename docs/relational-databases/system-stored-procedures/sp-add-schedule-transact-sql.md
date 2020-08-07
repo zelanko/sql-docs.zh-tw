@@ -1,5 +1,5 @@
 ---
-title: sp_add_schedule （Transact-sql） |Microsoft Docs
+title: sp_add_schedule (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 88dafeff6621a181b3720917235705d4e0b12e2d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d4ee3f039613865aab68860f93ab74279068a7da
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85878286"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865306"
 ---
 # <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -56,7 +56,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 ## <a name="arguments"></a>引數  
 `[ @schedule_name = ] 'schedule_name'`排程的名稱。 *schedule_name*是**sysname**，沒有預設值。  
   
-`[ @enabled = ] enabled`指出排程的目前狀態。 [*已啟用*] 是**Tinyint**，預設值是**1** （已啟用）。 如果為**0**，則不會啟用排程。 當未啟用排程時，不會依據這份排程來執行任何作業。  
+`[ @enabled = ] enabled`指出排程的目前狀態。 [*已啟用*] 為**Tinyint**，預設值為**1** (啟用) 。 如果為**0**，則不會啟用排程。 當未啟用排程時，不會依據這份排程來執行任何作業。  
   
 `[ @freq_type = ] freq_type`值，表示要執行作業的時間。 *freq_type*是**int**，預設值是**0**，它可以是下列值之一。  
   
@@ -68,18 +68,18 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**16**|每月|  
 |**32**|每月，相對於*freq_interval*|  
 |**64**|當 SQL 代理程式服務啟動時執行|  
-|**128**|在電腦閒置時執行（ [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)不支援） |  
+|**128**|在電腦閒置時執行 (不支援[AZURE SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent))  |  
   
 `[ @freq_interval = ] freq_interval`執行作業的天數。 *freq_interval*是**int**，預設值是**1**，且取決於*freq_type*的值。  
   
 |*Freq_type*的值|對*freq_interval*的影響|  
 |---------------------------|--------------------------------|  
-|**1** （一次）|未使用*freq_interval* 。|  
-|**4** （每日）|每*freq_interval*天。|  
-|**8** （每週）|*freq_interval*是下列一或多個（與 or 邏輯運算子結合）：<br /><br /> **1** = 星期日<br /><br /> **2** = 星期一<br /><br /> **4** = 星期二<br /><br /> **8** = 星期三<br /><br /> **16** = 星期四<br /><br /> **32** = 星期五<br /><br /> **64** = 星期六|  
-|**16** （每月）|在當月的*freq_interval*天。|  
-|**32** （每月相對）|*freq_interval*為下列其中一項：<br /><br /> **1** = 星期日<br /><br /> **2** = 星期一<br /><br /> **3** = 星期二<br /><br /> **4** = 星期三<br /><br /> **5** = 星期四<br /><br /> **6** = 星期五<br /><br /> **7** = 星期六<br /><br /> **8** = 日<br /><br /> **9** = 工作日<br /><br /> **10** = 週末|  
-|**64** （當 SQLServerAgent 服務啟動時）|未使用*freq_interval* 。|  
+|**1** (一次) |未使用*freq_interval* 。|  
+|**4** (每日) |每*freq_interval*天。|  
+|每週**8** () |*freq_interval*是下列一或多個與 or 邏輯運算子結合) 的 (：<br /><br /> **1** = 星期日<br /><br /> **2** = 星期一<br /><br /> **4** = 星期二<br /><br /> **8** = 星期三<br /><br /> **16** = 星期四<br /><br /> **32** = 星期五<br /><br /> **64** = 星期六|  
+|每月**16** () |在當月的*freq_interval*天。|  
+|**32** (每月相對) |*freq_interval*為下列其中一項：<br /><br /> **1** = 星期日<br /><br /> **2** = 星期一<br /><br /> **3** = 星期二<br /><br /> **4** = 星期三<br /><br /> **5** = 星期四<br /><br /> **6** = 星期五<br /><br /> **7** = 星期六<br /><br /> **8** = 日<br /><br /> **9** = 工作日<br /><br /> **10** = 週末|  
+|**64**當 SQLServerAgent 服務啟動時 () |未使用*freq_interval* 。|  
 |**128**|未使用*freq_interval* 。|  
   
 `[ @freq_subday_type = ] freq_subday_type`指定*freq_subday_interval*的單位。 *freq_subday_type*是**int**，預設值是**0**，它可以是下列值之一。  
@@ -93,13 +93,13 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_subday_interval = ] freq_subday_interval`每次執行作業之間所發生的*freq_subday_type*週期數。 *freq_subday_interval*是**int**，預設值是**0**。 附註：間隔長度不應大於 10 秒。 在*freq_subday_type*等於**1**的情況下，會忽略*freq_subday_interval* 。  
   
-`[ @freq_relative_interval = ] freq_relative_interval`如果*freq_interval*為32（每月相對），則會在每個月的*freq_interval*作業發生。 *freq_relative_interval*是**int**，預設值是**0**，它可以是下列值之一。 在*freq_type*不等於32的情況下，會忽略*freq_relative_interval* 。  
+`[ @freq_relative_interval = ] freq_relative_interval`如果*freq_interval*為 32 (每月相對) ，則作業在每個月會發生*freq_interval* 。 *freq_relative_interval*是**int**，預設值是**0**，它可以是下列值之一。 在*freq_type*不等於32的情況下，會忽略*freq_relative_interval* 。  
   
 |值|描述 (單位)|  
 |-----------|--------------------------|  
 |**1**|First|  
 |**2**|Second|  
-|**4**|第三個|  
+|**4**|Third|  
 |**8**|第四個|  
 |**16**|Last|  
   
@@ -126,7 +126,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 `[ @originating_server = ] server_name` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或**1** (失敗)   
   
 ## <a name="result-sets"></a>結果集  
  None  

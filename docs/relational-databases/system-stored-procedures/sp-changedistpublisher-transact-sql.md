@@ -1,5 +1,5 @@
 ---
-title: sp_changedistpublisher （Transact-sql） |Microsoft Docs
+title: sp_changedistpublisher (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8aec9e25008c8dfe3b14bbe838f8122bb93fb756
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ed3ae93d1b2bd87decb43050e03624bb9a7ed62c
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717410"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864995"
 ---
 # <a name="sp_changedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,9 +44,9 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 `[ @property = ] 'property'`這是要針對給定發行者變更的屬性。 *屬性*是**sysname** ，而且可以是下列其中一個值。  
   
-`[ @value = ] 'value'`這是指定之屬性的值。 *value*是**Nvarchar （255）**，預設值是 Null。  
+`[ @value = ] 'value'`這是指定之屬性的值。 *value*是**Nvarchar (255) **，預設值是 Null。  
   
-`[ @storage_connection_string = ] 'storage_connection_string'`SQL Database 受控實例必須符合 Azure SQL Database 存放磁片區的存取金鑰。 
+`[ @storage_connection_string = ] 'storage_connection_string'`SQL 受控執行個體的必要項，應符合 Azure SQL Database 存放磁片區的存取金鑰。 
 
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
@@ -64,10 +64,10 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ||**0**|當連接到發行者時，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 *這不能變更為非* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*發行者。*|  
 |**working_directory**||用來儲存發行集資料和結構描述檔案的工作目錄。|  
 |NULL (預設值)||所有可用的*屬性*選項都會列印出來。| 
-|**storage_connection_string**| 存取金鑰 | 當資料庫 Azure SQL Database 受控執行個體時，工作目錄的存取金鑰。 
+|**storage_connection_string**| 存取金鑰 | 當資料庫為 Azure SQL 受控執行個體時，工作目錄的存取金鑰。 
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或**1** (失敗)   
   
 ## <a name="remarks"></a>備註  
  **sp_changedistpublisher**用於所有類型的複寫中。  
@@ -76,10 +76,10 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
  只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_changedistpublisher**。  
   
 ## <a name="see-also"></a>另請參閱  
- [查看和修改散發者和發行者屬性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [檢視及修改散發者和發行者屬性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_dropdistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
- [sp_helpdistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
+ [sp_helpdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

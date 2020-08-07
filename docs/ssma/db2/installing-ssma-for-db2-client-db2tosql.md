@@ -1,6 +1,6 @@
 ---
-title: 安裝 SSMA for DB2 用戶端（DB2ToSQL） |Microsoft Docs
-description: 瞭解適用于 DB2 用戶端的 SQL Server 移轉小幫手（SSMA）安裝必要條件，以及如何安裝。
+title: 安裝 SSMA for DB2 client (DB2ToSQL) |Microsoft Docs
+description: 瞭解 DB2 用戶端 SQL Server 移轉小幫手 (SSMA) 的安裝必要條件，以及如何安裝。
 ms.prod: sql
 ms.custom: ''
 ms.date: 07/14/2020
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 3ae2a470-6afd-4512-b6d1-fcbe6afe88ad
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 4d069d7b34b590f8d2681a136f91ed327755d5a3
-ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
+ms.openlocfilehash: 5b9679451c1052423cb412b85bf8dde25c4a8351
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411616"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823713"
 ---
-# <a name="installing-ssma-for-db2-client-db2tosql"></a>安裝 SSMA for DB2 用戶端（DB2ToSQL）
+# <a name="installing-ssma-for-db2-client-db2tosql"></a>安裝 SSMA for DB2 client (DB2ToSQL) 
 
 SSMA 用戶端是由執行下列工作的程式檔案所組成：
 
@@ -39,7 +39,7 @@ SSMA 是設計用來搭配 DB2 on z/OS 版本9.0 和10.0、DB2 on LUW 版本9.8 
 - [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3.1 或更新版本。
 - [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] 版本4.7.2 或更新版本。 您可以從[.NET Framework 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=48882)取得此檔案。
 - Microsoft OLE DB Provider for DB2 版本5或更新版本，以及您要遷移之 DB2 資料庫的連線能力。
-- 在裝載目標實例或 Azure SQL DB 的電腦上存取和足夠的許可權， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 您將在其中遷移資料庫物件和資料。 如需詳細資訊，請參閱[連接到 SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)。
+- 在裝載目標實例的電腦上，以及在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 您要遷移資料庫物件和資料的 Azure SQL Database，存取和足夠的許可權。 如需詳細資訊，請參閱[連接到 SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)。
 - 建議使用 4 GB 的 RAM。
 
 ## <a name="microsoft-ole-db-provider-for-db2"></a>Microsoft OLE DB Provider for DB2
