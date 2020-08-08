@@ -1,5 +1,5 @@
 ---
-title: 查看測試案例報表（OracleToSQL） |Microsoft Docs
+title: " (OracleToSQL) 中查看測試案例報表 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 8da14323-9dd6-4019-bf79-3e8b972a9bc0
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 75ce91d7948b53522f6ac861a078f8f902b23ab7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 38097cda1a014c173f96657f5758a95b9d266f6a
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68086794"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932529"
 ---
 # <a name="viewing-test-case-reports-oracletosql"></a>檢視測試案例報表 (OracleToSQL)
 測試案例報表會顯示測試驗證結果和一般測試資訊。 在測試失敗的情況下，也會顯示已驗證物件中任何不相符資料的相關資訊。  
@@ -33,11 +33,11 @@ ms.locfileid: "68086794"
 **必要條件錯誤**  
 顯示**必要條件步驟**中發生的任何錯誤。 通常會略過。  
   
-**初始化**  
+**初始**  
 將執行狀態顯示為**成功**或**失敗**。  
   
 **測試物件結果**  
-比較結果（成功或失敗），以及 SSMA 測試器在失敗時所偵測到的不相符。  
+結果的比較 (成功或失敗) ，以及 SSMA 測試器在失敗時所偵測到的不符。  
   
 **完成**  
 將執行狀態顯示為**成功**或**失敗**。  

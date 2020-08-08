@@ -1,5 +1,5 @@
 ---
-title: 評估 Access 資料庫物件的轉換（AccessToSQL） |Microsoft Docs
+title: 評估 Access 資料庫物件的轉換 (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - SQL, assessing
 - syntax, assessing
 ms.assetid: 8b9e23d6-da62-437a-8c05-8ad2628b9441
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 4c2f5bc6953ab0e96397ca728391cbe22a73dd50
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: d45df17f82bf52d6d059b2efbf69a39cedb949f0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910695"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934079"
 ---
-# <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>評估 Access 資料庫物件的轉換（AccessToSQL）
-在您載入物件並將資料移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]至或 SQL Azure 之前，您應該先判斷遷移成功的程度，以及轉換可能需要多久的時間。 SSMA 可以建立評量報告，顯示已成功轉換成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的物件百分比，或 SQL Azure 語法和時間估計以執行遷移。 SSMA 也可讓您查看導致轉換失敗的特定問題。  
+# <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>評估 Access 資料庫物件的轉換 (AccessToSQL) 
+在您載入物件並將資料移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 之前，您應該先判斷遷移成功的程度，以及轉換可能需要多久的時間。 SSMA 可以建立評量報告，顯示已成功轉換成的物件百分比， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 語法和時間估計以執行遷移。 SSMA 也可讓您查看導致轉換失敗的特定問題。  
   
 ## <a name="creating-assessment-reports"></a>建立評量報告  
-當它建立評量報告時，SSMA 會將選取的 Access 資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]物件轉換成或 SQL Azure 語法，然後顯示結果。  
+當它建立評量報告時，SSMA 會將選取的 Access 資料庫物件轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 語法，然後顯示結果。  
   
 **若要建立評量報告**  
   
@@ -43,7 +43,7 @@ ms.locfileid: "67910695"
   
     SSMA 會在視窗底部的狀態列中顯示進度。 如果顯示 [輸出] 窗格，您也會在 [輸出] 窗格中看到訊息。  
   
-當評估完成時，[存取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的移轉小幫手：評估報告] 視窗隨即出現。  
+當評估完成時，[ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存取的移轉小幫手：評估報告] 視窗隨即出現。  
   
 ## <a name="using-assessment-reports"></a>使用評量報告  
 [評估報告] 視窗包含三個窗格： [explorer]、[詳細資料] 窗格和 [訊息] 窗格。  

@@ -1,5 +1,5 @@
 ---
-title: 功能表命令和其他快速鍵（Sybase 到 SQL） |Microsoft Docs
+title: 功能表命令和其他快速鍵 (Sybase 至 SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1ca622b2-55d8-4666-b80a-8d9791cd3d3b
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: ea6081cb68d084bf51132824a143fc6fdd544399
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8f6ea6e9b9e0971967b58b005e4fe554b397edb0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028880"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934669"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-sybase-to-sql"></a>功能表命令和其他快速鍵 (Sybase 到 SQL)
 下列各節說明用來存取功能表命令的鍵盤快速鍵，以及 SSMA for Sybase 應用程式的各種對話方塊中所使用的其他快速鍵。  
@@ -79,7 +79,7 @@ ms.locfileid: "68028880"
 |建立報表。|ALT + T + C|  
 |轉換架構。|ALT + T + N 或 CTRL + R|  
 |從 Sybase 資料庫重新整理。|ALT + T + R|  
-|與 SQL Server 或 SQL Azure 資料庫同步處理。|ALT + T + S|  
+|與 SQL Server 或 Azure SQL Database 同步處理。|ALT + T + S|  
 |[另存新檔] 腳本。|ALT + T + A|  
 |遷移資料。|ALT + T + M|  
 |停止目前的作業。|ALT + T + O|  

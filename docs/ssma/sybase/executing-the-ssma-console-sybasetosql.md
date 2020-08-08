@@ -1,5 +1,5 @@
 ---
-title: 執行 SSMA 主控台（SybaseToSQL） |Microsoft Docs
+title: 執行 SSMA 主控台 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Sybase Console,Script File Commands
 - Sybase Console,Script Generation Commands
 ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 602bc0ac1584f9ff369efa8a2484a16a97a92285
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: ee279098aa195cdc8cb1f5b7d50cf5ba7a8a73c5
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029150"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931674"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>執行 SSMA 主控台 (SybaseToSQL)
 Microsoft 為您提供了一組健全的腳本檔案命令，以執行和控制 SSMA 活動。 後續章節會詳細說明相同的情況。  
@@ -145,7 +145,7 @@ Microsoft 為您提供了一組健全的腳本檔案命令，以執行和控制 
 ### <a name="reconnect-source-database"></a>重新連接-來源-資料庫  
 此命令會重新連接至源資料庫，但不會載入任何中繼資料，就像 [連接-來源-資料庫] 命令一樣。  
   
-如果無法建立與來源的（re）連線，就會產生錯誤，而且主控台應用程式會停止執行。  
+如果無法建立與來源的 (重新) 連接，就會產生錯誤，而且主控台應用程式會停止執行。  
   
 **語法範例：**  
   
@@ -170,7 +170,7 @@ Microsoft 為您提供了一組健全的腳本檔案命令，以執行和控制 
   
 此命令會重新連接至目標資料庫，但不會載入任何中繼資料，不同于連接目標資料庫命令。  
   
-如果無法建立（re）與目標的連接，則會產生錯誤，而且主控台應用程式會停止執行。  
+如果無法建立 (重新) 與目標的連接，就會產生錯誤，而且主控台應用程式會停止執行。  
   
 **語法範例：**  
   
@@ -189,25 +189,25 @@ Microsoft 為您提供了一組健全的腳本檔案命令，以執行和控制 
   
 在命令執行期間無法連接到源資料庫伺服器，也會導致終止主控台應用程式。  
   
--   `conversion-report-folder:`指定可儲存評量報告的資料夾。 （選擇性屬性）  
+-   `conversion-report-folder:`指定可儲存評量報告的資料夾。  (選擇性屬性)   
   
--   `object-name:`指定針對評估報告產生所考慮的物件（支援個別物件名稱或群組物件名稱）。  
+-   `object-name:`指定 (s) 考慮用於評估報告產生的物件 (支援個別物件名稱或) 的群組物件名稱。  
   
--   `object-type:`指定物件名稱屬性中所呼叫物件的類型（如果指定了物件類別，則物件類型將會是 "category"）。  
+-   `object-type:`指定物件名稱屬性中呼叫的物件類型 (如果指定了物件類別，則物件類型將會是 "category" ) 。  
   
 -   `conversion-report-overwrite:`指定是否要覆寫評估報告資料夾（如果已經存在）。  
   
-    **預設值：** false。 （選擇性屬性）  
+    **預設值：** false。  (選擇性屬性)   
   
 -   `write-summary-report-to:`指定將產生報表的路徑。  
   
-    如果只提及資料夾路徑，則依名稱**&lt;AssessmentReport n&gt;。** 已建立 XML。 （選擇性屬性）  
+    如果只提及資料夾路徑，則依名稱**AssessmentReport &lt; n &gt; 。** 已建立 XML。  (選擇性屬性)   
   
     報表建立有兩個進一步的子類別：  
   
-    -   `report-errors`（= "true/false"，預設值為 "false" （選擇性屬性））  
+    -   `report-errors` (= "true/false"，預設值為 "false" (選擇性屬性) # A3  
   
-    -   `verbose`（= "true/false"，預設值為 "false" （選擇性屬性））  
+    -   `verbose` (= "true/false"，預設值為 "false" (選擇性屬性) # A3  
   
 **語法範例：**  
   
@@ -255,25 +255,25 @@ Microsoft 為您提供了一組健全的腳本檔案命令，以執行和控制 
   
 如果在執行此命令之前未執行來源或目標資料庫連接，或來源或目標資料庫伺服器的連接在命令執行期間失敗，則會產生錯誤並結束主控台應用程式。  
   
--   `conversion-report-folder:`指定可儲存評量報告的資料夾。 （選擇性屬性）  
+-   `conversion-report-folder:`指定可儲存評量報告的資料夾。  (選擇性屬性)   
   
--   `object-name:`指定轉換架構時所考慮的來源物件（支援個別物件名稱或群組物件名稱）。  
+-   `object-name:`指定 (s 的來源物件) 考慮轉換架構 (支援個別物件名稱或) 的群組物件名稱。  
   
--   `object-type:`指定物件名稱屬性中所呼叫物件的類型（如果指定了物件類別，則物件類型將會是 "category"）。  
+-   `object-type:`指定物件名稱屬性中呼叫的物件類型 (如果指定了物件類別，則物件類型將會是 "category" ) 。  
   
 -   `conversion-report-overwrite:`指定是否要覆寫評估報告資料夾（如果已經存在）。  
   
-    **預設值：** false。 （選擇性屬性）  
+    **預設值：** false。  (選擇性屬性)   
   
 -   `write-summary-report-to:`指定將產生摘要報告的路徑。  
   
-    如果只提及資料夾路徑，則依名稱**&lt;SchemaConversionReport n&gt;。** 已建立 XML。 （選擇性屬性）  
+    如果只提及資料夾路徑，則依名稱**SchemaConversionReport &lt; n &gt; 。** 已建立 XML。  (選擇性屬性)   
   
     報表建立有兩個進一步的子類別：  
   
-    -   `report-errors`（= "true/false"，預設值為 "false" （選擇性屬性））  
+    -   `report-errors` (= "true/false"，預設值為 "false" (選擇性屬性) # A3  
   
-    -   `verbose`（= "true/false"，預設值為 "false" （選擇性屬性））  
+    -   `verbose` (= "true/false"，預設值為 "false" (選擇性屬性) # A3  
   
 **語法範例：**  
   
@@ -314,19 +314,19 @@ Microsoft 為您提供了一組健全的腳本檔案命令，以執行和控制 
 ### <a name="migrate-data"></a>遷移-資料  
 此命令會將源資料移轉至目標。  
   
--   `object-name:`指定針對遷移資料所考慮的來源物件（支援個別物件名稱或群組物件名稱）。  
+-   `object-name:`指定 (s 的來源物件) 考慮遷移資料 (支援個別物件名稱或) 的群組物件名稱。  
   
--   `object-type:`指定物件名稱屬性中所呼叫物件的類型（如果指定了物件類別，則物件類型將會是 "category"）。  
+-   `object-type:`指定物件名稱屬性中呼叫的物件類型 (如果指定了物件類別，則物件類型將會是 "category" ) 。  
   
 -   `write-summary-report-to:`指定將產生報表的路徑。  
   
-    如果只提及資料夾路徑，則依名稱**&lt;DataMigrationReport n&gt;。** 已建立 XML。 （選擇性屬性）  
+    如果只提及資料夾路徑，則依名稱**DataMigrationReport &lt; n &gt; 。** 已建立 XML。  (選擇性屬性)   
   
     報表建立有兩個進一步的子類別：  
   
-    -   `report-errors`（= "true/false"，預設值為 "false" （選擇性屬性））  
+    -   `report-errors` (= "true/false"，預設值為 "false" (選擇性屬性) # A3  
   
-    -   `verbose`（= "true/false"，預設值為 "false" （選擇性屬性））  
+    -   `verbose` (= "true/false"，預設值為 "false" (選擇性屬性) # A3  
   
 **語法範例：**  
   
@@ -399,9 +399,9 @@ sql-server-schema="<target-schema>"/>
   
 如果在執行此命令之前未執行目標資料庫連接，或與目標資料庫伺服器的連接在命令執行期間失敗，則會產生錯誤並結束主控台應用程式。  
   
--   `object-name:`指定與目標資料庫進行同步處理時所考慮的目標物件（支援個別物件名稱或群組物件名稱）。  
+-   `object-name:`指定 (s 的目標物件) 視為與目標資料庫同步處理 (支援個別物件名稱或) 的群組物件名稱。  
   
--   `object-type:`指定物件名稱屬性中所呼叫物件的類型（如果指定了物件類別，則物件類型將會是 "category"）。  
+-   `object-type:`指定物件名稱屬性中呼叫的物件類型 (如果指定了物件類別，則物件類型將會是 "category" ) 。  
   
 -   `on-error:`指定是否要將同步處理錯誤指定為警告或錯誤。 發生錯誤的可用選項：  
   
@@ -411,7 +411,7 @@ sql-server-schema="<target-schema>"/>
   
     -   fail-腳本  
   
--   `report-errors-to:`指定同步處理作業的錯誤報表位置（選擇性屬性）。 如果只指定資料夾路徑，則會建立依名稱**TargetSynchronizationReport**的檔案。  
+-   `report-errors-to:`指定同步處理作業的錯誤報表位置 (選擇性屬性) 。 如果只指定資料夾路徑，則會建立依名稱**TargetSynchronizationReport.XML**檔案。  
   
 **語法範例：**  
   
@@ -460,9 +460,9 @@ fail-script>" (optional)
   
 此命令需要一個或數個資料庫節點做為命令列參數。  
   
--   `object-name:`指定從源資料庫重新整理所考慮的來源物件（支援個別物件名稱或群組物件名稱）。  
+-   `object-name:`指定從源資料庫重新整理的來源物件 () 考慮 (支援個別物件名稱或) 的群組物件名稱。  
   
--   `object-type:`指定物件名稱屬性中指定之物件的類型（如果指定了物件類別，則物件類型將會是 "category"）。  
+-   `object-type:`指定物件名稱屬性中指定的物件類型 (如果指定了物件類別，則物件類型將會是 "category" ) 。  
   
 -   `on-error:`指定是否要將重新整理錯誤當做警告或錯誤來呼叫。 發生錯誤的可用選項：  
   
@@ -472,7 +472,7 @@ fail-script>" (optional)
   
     -   fail-腳本  
   
--   `report-errors-to:`指定重新整理作業的錯誤報表位置（選擇性屬性）。 如果只指定資料夾路徑，則會建立依名稱**SourceDBRefreshReport**的檔案。  
+-   `report-errors-to:`指定重新整理作業的錯誤報表位置 (選擇性屬性) 。 如果只指定資料夾路徑，則會建立依名稱**SourceDBRefreshReport.XML**檔案。  
   
 **語法範例：**  
   
@@ -518,15 +518,15 @@ fail-script>" (optional)
   
 此命令需要一個或數個資料庫節點做為命令列參數。  
   
--   `object-name:`指定要儲存其腳本的物件（支援個別物件名稱或群組物件名稱）。  
+-   `object-name:`指定要儲存腳本 (s) 的物件， (支援個別物件名稱或) 的群組物件名稱。  
   
--   `object-type:`指定物件名稱屬性中所呼叫物件的類型（如果指定了物件類別，則物件類型將會是 "category"）。  
+-   `object-type:`指定物件名稱屬性中呼叫的物件類型 (如果指定了物件類別，則物件類型將會是 "category" ) 。  
   
 -   `metabase:`指定它是否為來源或目標元資料庫。  
   
--   `destination:`指定必須儲存腳本的路徑或資料夾。 如果未提供檔案名，則會提供格式（object_name 屬性值）的檔案名。將會提供 out。
+-   `destination:`指定必須儲存腳本的路徑或資料夾。 如果未提供檔案名，則會提供格式 (object_name 屬性值的檔案名) . out。
   
--   `overwrite:`若為 true，則會覆寫相同的檔案名（如果存在的話）。 它可以有值（true/false）。  
+-   `overwrite:`若為 true，則會覆寫相同的檔案名（如果存在的話）。 它可以有 (true/false) 的值。  
   
 **語法範例：**  
   
@@ -568,27 +568,27 @@ fail-script>" (optional)
   
 -   `destination`指定是否應該將輸出儲存在檔案中。  
   
-    如果未指定這個屬性，則會在主控台上顯示轉換的 T-sql 語句。 （選擇性屬性）  
+    如果未指定這個屬性，則會在主控台上顯示轉換的 T-sql 語句。  (選擇性屬性)   
   
--   `conversion-report-folder`指定可儲存評量報告的資料夾。 （選擇性屬性）  
+-   `conversion-report-folder`指定可儲存評量報告的資料夾。  (選擇性屬性)   
   
 -   `conversion-report-overwrite`指定是否要覆寫評估報告資料夾（如果已經存在）。  
   
-    **預設值：** false。 （選擇性屬性）  
+    **預設值：** false。  (選擇性屬性)   
   
--   `write-converted-sql-to`指定要儲存已轉換之 T-sql 的檔案（或）資料夾路徑。 當資料夾路徑與`sql-files`屬性一起指定時，每個原始程式檔都會在指定的資料夾下建立對應的目標 t-sql 檔案。 當資料夾路徑與`sql`屬性一併指定時，已轉換的 t-sql 會寫入名為 Result 的檔案中指定的資料夾底下。  
+-   `write-converted-sql-to`指定要儲存已轉換之 T-sql 的檔案 (或) 資料夾路徑。 當資料夾路徑與屬性一起指定時 `sql-files` ，每個原始程式檔都會在指定的資料夾下建立對應的目標 t-sql 檔案。 當資料夾路徑與屬性一併指定時 `sql` ，已轉換的 t-sql 會寫入名為 Result 的檔案中指定的資料夾底下。  
   
 -   `sql`指定要轉換的 Sybase sql 語句，可以使用 ";" 分隔一或多個語句  
   
 -   `sql-files`指定必須轉換成 T-sql 程式碼之 sql 檔案的路徑。  
   
--   `write-summary-report-to`指定將產生摘要報告的路徑。 如果只提及資料夾路徑，則會建立依名稱**ConvertSQLReport**的檔案。 （選擇性屬性）  
+-   `write-summary-report-to`指定將產生摘要報告的路徑。 如果只提及資料夾路徑，則會建立依名稱**ConvertSQLReport.XML**檔案。  (選擇性屬性)   
   
     建立摘要報表有兩個進一步的子類別，亦即：  
   
-    -   報告-錯誤（= "true/false"，預設值為 "false" （選擇性屬性））。  
+    -   報告-錯誤 (= "true/false"，預設值為 "false" (選擇性屬性) # A3。  
   
-    -   verbose （= "true/false"，預設值為 "false" （選擇性屬性））。  
+    -   verbose (= "true/false"，預設值為 "false" (選擇性屬性) # A3。  
   
 此命令需要一個或數個資料庫節點做為命令列參數。  
   
@@ -661,7 +661,7 @@ fail-script>" (optional)
 ```  
   
 ## <a name="next-steps"></a>後續步驟  
-如需命令列選項的詳細資訊，請參閱[SSMA 主控台中的命令列選項（AccessToSQL）](../access/command-line-options-in-ssma-console-accesstosql.md)。  
+如需命令列選項的詳細資訊，請參閱[SSMA 主控台中的命令列選項 (AccessToSQL) ](../access/command-line-options-in-ssma-console-accesstosql.md)。  
   
 如需範例主控台腳本檔案的詳細資訊，請參閱[使用範例主控台腳本檔案 &#40;SybaseToSQL&#41;](../../ssma/sybase/working-with-the-sample-console-script-files-sybasetosql.md)  
   

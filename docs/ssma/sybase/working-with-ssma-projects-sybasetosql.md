@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 11091d95-c488-48c3-891a-743cac94ac93
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 74096d97d01e9a700c10c9e4721c1dfca4d54f9b
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c9bc3f8f81d8701a584a1f4d6caee1b442746b76
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864685"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934488"
 ---
 # <a name="working-with-ssma-projects-sybasetosql"></a>使用 SSMA 專案 (SybaseToSQL)
 若要將 Sybase 彈性伺服器企業 (ASE) 資料庫移轉到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure，您必須先建立 SSMA 專案。 專案是一個檔案，其中包含您想要遷移到或 SQL Azure 之 ASE 資料庫的相關中繼資料 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將接收已遷移物件和資料之目標實例或 sql azure 的相關中繼資料， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 sql azure 連接資訊和專案設定。  

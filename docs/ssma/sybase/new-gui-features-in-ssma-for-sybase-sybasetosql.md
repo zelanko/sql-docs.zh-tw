@@ -1,5 +1,5 @@
 ---
-title: SSMA For Sybase 的新 GUI 功能（SybaseToSQL） |Microsoft Docs
+title: SSMA For Sybase 的新 GUI 功能 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: d3c60e8c-f0a7-4590-8ece-c68ceaeaea4a
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3d6176934e5a31cc245354db70c5295afc70d2d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 70074acc0f3d3d1a586303cc6f9fd39afb2a7ef0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76909981"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934620"
 ---
-# <a name="new-gui-features-in-ssma-for-sybase-sybasetosql"></a>SSMA For Sybase 的新 GUI 功能（SybaseToSQL）
+# <a name="new-gui-features-in-ssma-for-sybase-sybasetosql"></a>SSMA For Sybase 的新 GUI 功能 (SybaseToSQL) 
 本章說明 SSMA 使用者介面的新功能。  
   
 ## <a name="layouts"></a>版面配置  
@@ -54,14 +54,14 @@ ms.locfileid: "76909981"
   
 -   按一下 [SQL] 視窗左側的灰色區域  
   
--   使用 Ctrl + Shift +&lt;0. 9&gt;設定編號的書簽  
+-   使用 Ctrl + Shift + &lt; 0. 9 &gt; 設定編號的書簽  
   
 ### <a name="bookmark-navigation"></a>書簽流覽  
 您可以透過下列方式逐步完成書簽：  
   
 -   在 SQL 視窗頂端使用 [下一個書簽] 和 [上一個書簽] 按鈕  
   
--   使用 Ctrl +&lt;0. 9&gt;來尋找編號的書簽  
+-   使用 Ctrl + &lt; 0. 9 &gt; 來尋找編號的書簽  
   
 -   使用按鈕移至或流覽 [管理書簽] 對話方塊中的來源  
   

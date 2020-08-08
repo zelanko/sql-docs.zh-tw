@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Setting project options,configuration options
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d5c85c551ba70d28b4af7eb87126c51ef5a4ff75
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: cf8ac834b014fe49a851d3887fb36e29f59e069e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863519"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935126"
 ---
 # <a name="setting-project-options-mysqltosql"></a>設定專案選項 (MySQLToSQL)
 針對每個 SSMA 專案，您可以設定專案層級選項。 這些選項會指定物件的轉換方式、遷移資料的方式，以及源資料類型如何對應至目標資料類型。  將物件轉換成 SQL Server 或 SQL Azure，或將資料移轉至 SQL Server 或 SQL Azure 之前，請確認設定選項適用于專案。  
@@ -38,13 +38,13 @@ SSMA 有五組專案設定：
   
 您可以透過四種方式來設定專案設定：  
   
--   預設  
+-   預設值  
   
 -   開放式  
   
 -   完整  
   
--   Custom  
+-   自訂  
   
 建議大多數使用者使用預設模式。 開放式模式會保留更多目前的 MySQL 語法，而且較容易閱讀。 不過，保留目前的語法可能會不正確。 如果 MySQL 語法必須轉換成對等的 SQL Server 或 SQL Azure 語法，則完整模式會執行最完整的轉換。 不過，產生的程式碼可能會更容易閱讀。 在 [自訂] 模式中，您可以設定選項。  
   

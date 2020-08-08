@@ -1,5 +1,5 @@
 ---
-title: 使用測試存放庫（SybaseToSQL） |Microsoft Docs
+title: 使用測試存放庫 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Tester Component,Test Repositories
 ms.assetid: c359c25c-db2a-4a20-afa9-62d87a62df72
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: a94bd053dac04c4d595e4f2077c02d1d79858e56
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: ba0879ca35e40d7ea2d1466db97cabd3cb6abd18
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020842"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934549"
 ---
 # <a name="using-test-repositories-sybasetosql"></a>使用測試存放庫 (SybaseToSQL)
 SSMA 測試存放庫會儲存 SSMA 測試人員測試案例和測試結果，以供稍後使用。 存放庫資料會儲存在**ssmatesterdb_syb**資料庫架構**ssma_sybase_utilities**的 SQL Server 資料表**TestCaseRepository**和**RunTestCaseResultRepository**中。  
@@ -65,7 +65,7 @@ SSMA 測試存放庫會儲存 SSMA 測試人員測試案例和測試結果，以
   
 -   已啟動：執行的測試案例日期。  
   
--   結果：測試執行的簡短摘要（此儲存格的工具提示會顯示測試執行的完整摘要）。  
+-   結果：測試執行的簡短摘要 (此儲存格的工具提示會顯示測試執行) 的完整摘要。  
   
 [測試結果] 頁面上提供下列按鈕：  
   

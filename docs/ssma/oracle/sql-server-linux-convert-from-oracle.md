@@ -1,24 +1,24 @@
 ---
 title: 將 Oracle HR 架構遷移至 Linux 上的 SQL Server |Microsoft Docs
 description: 將範例 Oracle 架構轉換成 Linux 上的 SQL Server
-author: shamikg
-ms.author: shamikg
-manager: shamikg
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: ssma
-ms.openlocfilehash: 1926c13b739de8294966fd6ce84df3d1e02a676e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1d28458896d4ae4806db1b0f705c5e33badddfb7
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266522"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932749"
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>使用 SQL Server 移轉小幫手將 Oracle 架構遷移至 Linux 上的 SQL Server 2017
 
-本教學課程使用 Windows 上的 Oracle SQL Server 移轉小幫手（SSMA），將 Oracle 範例**HR**架構轉換成[Linux 上的 SQL Server 2017](../../linux/sql-server-linux-overview.md)。
+本教學課程使用 SQL Server 移轉小幫手 (SSMA) for Oracle on Windows，將 Oracle 範例**HR**架構轉換成[Linux 上的 SQL Server 2017](../../linux/sql-server-linux-overview.md)。
 
 > [!div class="checklist"]
 > * 在 Windows 上下載並安裝 SSMA
@@ -28,9 +28,9 @@ ms.locfileid: "68266522"
 > * 轉換範例 HR 架構
 > * 移轉資料
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
-- 已安裝**HR**架構的 Oracle 12c （12.2.0.1.0）實例
+- 已安裝**HR**架構的 Oracle 12c (12.2.0.1.0) 實例
 - Linux 上的 SQL Server 的工作實例
 
 > [!NOTE]
@@ -51,7 +51,7 @@ ms.locfileid: "68266522"
 
 1. 將專案命名。
 
-1. 在 [**遷移至**] 欄位中選擇 [SQL Server 2017 （Linux）-預覽]。
+1. 在 [**遷移至**] 欄位中選擇 [SQL Server 2017 (Linux) -預覽]。
 
 SSMA for Oracle 預設不會使用 Oracle 範例架構。 若要啟用 HR 架構，請使用下列步驟：
 

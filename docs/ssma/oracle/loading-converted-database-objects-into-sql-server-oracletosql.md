@@ -1,5 +1,5 @@
 ---
-title: 將已轉換的資料庫物件載入 SQL Server （OracleToSQL） |Microsoft Docs
+title: 將已轉換的資料庫物件載入 SQL Server (OracleToSQL) |Microsoft Docs
 description: 瞭解如何使用 SSMA for Oracle，將您從 Oracle 轉換的資料庫物件載入至 SQL Server 實例。
 ms.prod: sql
 ms.custom: ''
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Synchronization, Securing Objects in SQL Server
 - Synchronization,Scripting Objects
 ms.assetid: a8ae33b2-1883-4785-922b-ea0e31c0b37a
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 69c4d30b3a803cfd5eb8e196f540c33952de3bf5
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 37d75a6454388c19caaa483d83cc5f6a230dab30
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293845"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934758"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>將轉換的資料庫物件載入 SQL Server (OracleToSQL)
 將 Oracle 架構轉換成 SQL Server 之後，您就可以將產生的資料庫物件載入 SQL Server。 您可以讓 SSMA 建立物件，也可以自行編寫物件的腳本並執行腳本。 此外，SSMA 也可讓您使用 SQL Server 資料庫的實際內容來更新目標中繼資料。  
@@ -53,7 +53,7 @@ ms.locfileid: "84293845"
   
     動作正負號可以有三種狀態：  
   
-    -   向左箭號表示中繼資料的內容將會儲存在資料庫中（預設值）。  
+    -   向左箭號表示中繼資料的內容將會儲存在資料庫中， (預設) 。  
   
     -   向右箭號表示資料庫內容將會覆寫 SSMA 中繼資料。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "84293845"
   
 如需如何使用查詢編輯器來執行腳本的詳細資訊，請參閱 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] SQL Server 線上叢書中的「查詢」。  
   
-您也可以從命令列使用**sqlcmd**公用程式和 SQL Server Agent 來執行腳本。 如需**sqlcmd**的詳細資訊，請參閱 SQL Server 線上叢書中的「Sqlcmd 公用程式」。 如需 SQL Server Agent 的詳細資訊，請參閱 SQL Server 線上叢書中的「自動化管理工作（SQL Server Agent）」。  
+您也可以從命令列使用**sqlcmd**公用程式和 SQL Server Agent 來執行腳本。 如需**sqlcmd**的詳細資訊，請參閱 SQL Server 線上叢書中的「Sqlcmd 公用程式」。 如需 SQL Server Agent 的詳細資訊，請參閱 SQL Server 線上叢書中的 < 自動化系統管理工作 (SQL Server Agent) 」。  
   
 ## <a name="securing-objects-in-sql-server"></a>保護 SQL Server 中的物件  
 將已轉換的資料庫物件載入 SQL Server 之後，您就可以授與和拒絕那些物件的許可權。 在將資料移轉至 SQL Server 之前，最好先執行此動作。 如需如何在 SQL Server 中協助保護物件的詳細資訊，請參閱 SQL Server 線上叢書中的「資料庫和資料庫應用程式的安全性考慮」。  

@@ -1,5 +1,5 @@
 ---
-title: 正在初始化測試案例（OracleToSQL） |Microsoft Docs
+title: 將測試案例初始化 (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 45897363-cfc2-44bb-817b-7561e60b7410
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: ae6a7bbeb70ae53280877a1f88a006743eea0655
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 63439231e63170f94e9a1f56662b2d75d8db0816
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264366"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934747"
 ---
 # <a name="initializing-test-cases-oracletosql"></a>將測試案例初始化 (OracleToSQL)
 在此步驟中，您會指定新測試案例的初始資訊。  

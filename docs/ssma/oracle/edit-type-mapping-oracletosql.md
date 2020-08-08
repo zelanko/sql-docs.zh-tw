@@ -1,5 +1,5 @@
 ---
-title: 編輯類型對應（OracleToSQL） |Microsoft Docs
+title: 編輯類型對應 (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 7078b4ed-c779-4bf3-8db8-f9dcb3edd50f
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: b3857d2acda8f5c8b16f416987651db2b6b991b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 1df40b843064513f6b2c135355b26f745c336011
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264227"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934910"
 ---
 # <a name="edit-type-mapping-oracletosql"></a>編輯類型對應 (OracleToSQL)
 [**編輯類型對應**] 對話方塊可讓您指定如何在來源與目的地資料庫物件之間對應類型。  
@@ -28,23 +28,23 @@ ms.locfileid: "68264227"
   
 資料表特定類型對應會覆寫資料庫和專案類型對應。 資料庫特定對應會覆寫專案對應。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **來源類型**  
-選取要對應至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型的源資料類型。  
+選取要對應至資料類型的源資料類型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 如果資料類型的長度可變，下欄欄位會出現在 [**來源類型**] 底下：  
   
 **From**  
-指定此對應的最小長度。 例如，針對**Nchar**資料類型，您可以輸入10來指定此對應是針對從**Nchar （10）** 開始的範圍。  
+指定此對應的最小長度。 例如，針對**Nchar**資料類型，您可以輸入10來指定此對應適用于從**Nchar (10) **開始的範圍。  
   
-**自**  
-指定此對應的最大長度。 例如，針對**Nchar**資料類型，您可以輸入20來指定此對應是針對結束于**Nchar （20）** 的範圍。  
+**若要**  
+指定此對應的最大長度。 例如，針對**Nchar**資料類型，您可以輸入20來指定此對應是針對以**Nchar (20) **的範圍結束。  
   
 **目標型別**  
-選取源[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型對應的資料類型。 當 SSMA 在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]建立資料表或預存程式時，源資料類型將會變更為此資料類型。  
+選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 源資料類型對應的資料類型。 當 SSMA 在中建立資料表或預存程式時 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，源資料類型將會變更為此資料類型。  
   
 如果資料類型是可變長度，下欄欄位會出現在 [**目標型別**] 底下：  
   
 **取代為**  
-指定此對應的目標長度。 例如，針對**Nvarchar**資料類型，您可以輸入20，指定指定的源資料類型應對應至**Nvarchar （20）**。  
+指定此對應的目標長度。 例如，針對**Nvarchar**資料類型，您可以輸入20，指定指定的源資料類型應對應至**Nvarchar (20) **。  
   

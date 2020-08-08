@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Connecting to Sybase
 ms.assetid: a45a2330-9175-4c9e-af38-ef920e350614
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: ff1a2144dd9a8f18e71a5e9fa54343bd414f070a
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 2583ef86a84158e0398265799f90633de8c76d7f
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864805"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932359"
 ---
 # <a name="connecting-to-sap-ase-sybasetosql"></a>連接到 SAP ASE (SybaseToSQL) 
 

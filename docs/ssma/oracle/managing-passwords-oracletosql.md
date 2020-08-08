@@ -1,5 +1,5 @@
 ---
-title: 管理密碼（OracleToSQL） |Microsoft Docs
+title: " (OracleToSQL) 管理密碼 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 07/07/2020
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Managing Passwords in Oracle, Exporting or Importing Encrypted Password
 - Managing passwords in Oracle, Securing Password
 ms.assetid: 8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: a3fe98b4a0b552d8c26d64eed777d5bcadc42cd7
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: b96c7cff343c1c0f00c0e324961d633c4255f2a9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159996"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934707"
 ---
 # <a name="managing-passwords-oracletosql"></a>管理密碼 (OracleToSQL)
 本節說明如何保護資料庫密碼，以及在伺服器之間匯入或匯出的程式。
@@ -131,5 +131,5 @@ SSMA 主控台應用程式可讓您將本機電腦上檔案中的加密資料庫
 8. 請確認密碼： xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  
 
 ## <a name="see-also"></a>另請參閱  
-[執行 SSMA 主控台（Oracle）](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
+[ (Oracle) 執行 SSMA 主控台](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
   

@@ -1,5 +1,5 @@
 ---
-title: 從資料庫重新整理（OracleToSQL） |Microsoft Docs
+title: 從資料庫 (OracleToSQL) 重新整理 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 84492f44-c368-4c75-954d-7307a2d2bbc0
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: ba9a56c5fb47be4db081aebb3753db2c3e9ed6ad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 694953d914b9811208f2ea143f93e2c91878f07b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266538"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933009"
 ---
 # <a name="refresh-from-database-oracletosql"></a>從資料庫重新整理 (OracleToSQL)
 [**從資料庫**重新整理] 對話方塊可讓您選取要從 Oracle 資料庫中重新整理的物件。 對話方塊中的資料列會根據中繼資料的狀態，以色彩標示：  
@@ -32,20 +32,20 @@ ms.locfileid: "68266538"
   
 若要存取 [**從資料庫**重新整理] 對話方塊，請以滑鼠右鍵按一下 [Oracle Metadata Explorer] 中的物件，然後按一下 [**從資料庫**重新整理]。  
   
-## <a name="options"></a>選項  
-**Collapse （-）**  
+## <a name="options"></a>選項。  
+**折迭 (-) **  
 折迭所有物件群組以隱藏個別物件。  
   
-**展開（+）**  
+**展開 (+) **  
 展開 [所有物件群組] 以顯示個別物件。  
   
 **隱藏/顯示相等的物件**  
 如果 Oracle 資料庫和 SSMA 中的物件中繼資料相同，就隱藏清單中的物件。  
   
-**從資料庫重新整理（箭號按鈕）**  
+**從資料庫重新整理 (箭號按鈕) **  
 使用箭號按鈕來指定要在 SSMA 中更新所選物件的中繼資料。  
   
-**不要從資料庫重新整理（X 按鈕）**  
+**[不要從資料庫重新整理] (X 按鈕) **  
 使用 [X] 按鈕，指定不應在 SSMA 中更新所選物件的中繼資料。  
   
 **圖例**  

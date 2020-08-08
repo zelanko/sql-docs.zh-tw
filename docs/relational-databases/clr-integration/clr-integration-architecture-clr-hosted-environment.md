@@ -27,20 +27,20 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6730ee9db626356ceb8f569928717af851896b07
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8824e427b71c26a8b6145db7cf60bbfc110e9ed5
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246393"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934372"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR 整合架構 - CLR 主控環境
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與 .NET Framework Common Language Runtime (CLR) 整合可讓資料庫程式設計人員使用 Visual C#、Visual Basic .NET 和 Visual C++ 等語言。 程式設計人員可以使用這些語言所撰寫的商務邏輯種類包括函數、預存程序、觸發程序、資料類型和彙總。  
   
-  CLR 會功能垃圾收集的記憶體、先占式執行緒、中繼資料服務（型別反映）、程式碼可驗證性和代碼啟用安全性。 CLR 會使用中繼資料來找出並載入類別、配置記憶體中的執行個體、解析方法引動過程、產生機器碼、強制使用安全性，和設定執行階段內容界限。  
+  CLR 會功能垃圾收集的記憶體、先占式執行緒、中繼資料服務 (類型反映) 、程式碼可驗證性和代碼啟用安全性。 CLR 會使用中繼資料來找出並載入類別、配置記憶體中的執行個體、解析方法引動過程、產生機器碼、強制使用安全性，和設定執行階段內容界限。  
   
- CLR 與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行階段環境不同之處在於處理記憶體、執行緒與同步的方式。 本文描述這兩個執行時間的整合方式，以便一致地管理所有系統資源。 本文也涵蓋了 CLR 代碼啟用安全性（CAS）與安全性的整合方式， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以提供可靠且安全的使用者程式碼執行環境。  
+ CLR 與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行階段環境不同之處在於處理記憶體、執行緒與同步的方式。 本文描述這兩個執行時間的整合方式，以便一致地管理所有系統資源。 本文也涵蓋了 CLR 代碼啟用安全性 (CAS) 和安全性的整合方式， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可為使用者程式碼提供可靠且安全的執行環境。  
   
 ## <a name="basic-concepts-of-clr-architecture"></a>CLR 架構的基本概念  
  在 .NET Framework 中，程式設計人員會以高階語言撰寫，實作定義其結構 (例如，類別的欄位或屬性) 和方法的類別。 這些方法中有部分可以是靜態函數。 編譯程式會產生一個稱為組件的檔案，其中包含利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 中繼語言 (MSIL) 編譯的程式碼，以及包含相依組件所有參考的資訊清單。  
@@ -66,7 +66,7 @@ ms.locfileid: "87246393"
  用於執行緒、排序和記憶體管理的不同模型對於調整為支援數千個並行使用者工作階段的關聯式資料庫管理系統 (RDBMS) 會呈現整合性問題。 此架構應該確認針對執行緒、記憶體和同步處理原始物件直接呼叫應用程式開發介面 (API) 的使用者程式碼不會危害系統的延展性。  
   
 ###### <a name="security"></a>安全性  
- 存取資料表或資料行之類的資料庫物件時，在資料庫中執行的使用者程式碼必須遵循 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證和授權規則。 此外，資料庫管理員應該能夠從資料庫中執行的使用者程式碼控制作業系統資源的存取權，例如檔案和網路存取權。 這種作法很重要，因為 managed 程式設計語言（不同于 Transact-sql 之類的非受控語言）會提供 Api 來存取這類資源。 系統必須為使用者程式碼提供一個安全的方式來存取 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理序外部的電腦資源。 如需相關資訊，請參閱 [CLR Integration Security](../../relational-databases/clr-integration/security/clr-integration-security.md)。  
+ 存取資料表或資料行之類的資料庫物件時，在資料庫中執行的使用者程式碼必須遵循 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證和授權規則。 此外，資料庫管理員應該能夠從資料庫中執行的使用者程式碼控制作業系統資源的存取權，例如檔案和網路存取權。 這種作法很重要，因為 managed 程式設計語言 (不同于非受控語言（例如 Transact-sql）) 會提供 Api 來存取這類資源。 系統必須為使用者程式碼提供一個安全的方式來存取 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理序外部的電腦資源。 如需相關資訊，請參閱 [CLR Integration Security](../../relational-databases/clr-integration/security/clr-integration-security.md)。  
   
 ###### <a name="performance"></a>效能  
  在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中執行的 Managed 使用者程式碼應該擁有可與在伺服器外部執行之相同程式碼相比的計算效能。 從 Managed 使用者程式碼進行資料庫存取的速度不如原生 [!INCLUDE[tsql](../../includes/tsql-md.md)] 快。 如需詳細資訊，請參閱[CLR 整合的效能](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)。  
@@ -78,7 +78,7 @@ ms.locfileid: "87246393"
  類型安全程式碼是只以妥善定義的方式存取記憶體結構的程式碼。 例如，在有一個有效的物件參考上，類型安全程式碼可以存取和實際欄位成員對應的固定位移上的記憶體。 然而，如果程式碼存取的記憶體，是位於該物件所屬記憶體範圍以內或以外的任意位移時，即不是類型安全。 當組件載入 CLR 時，在要使用 Just-In-Time (JIT) 編譯來編譯的 MSIL 前，執行階段會執行一個檢查程式碼來判斷其類型安全性的驗證階段。 成功通過此驗證的程式碼稱為可驗證類型安全 (verifiably type-safe) 的程式碼。  
   
 ###### <a name="application-domains"></a>應用程式網域  
- CLR 支援應用程式網域的概念，做為主機處理序內的執行區域，其中可以載入與執行 Managed 程式碼組件。 應用程式網域界限提供組件間的隔離。 組件會透過靜態變數與資料成員的可見性，以及動態呼叫程式碼的能力隔離。 應用程式網域也是載入和卸載程式碼的機制。 程式碼只能透過卸載應用程式網域來從記憶體卸載。 如需詳細資訊，請參閱[應用程式域和 CLR 整合安全性](https://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473)。  
+ CLR 支援應用程式網域的概念，做為主機處理序內的執行區域，其中可以載入與執行 Managed 程式碼組件。 應用程式網域界限提供組件間的隔離。 組件會透過靜態變數與資料成員的可見性，以及動態呼叫程式碼的能力隔離。 應用程式網域也是載入和卸載程式碼的機制。 程式碼只能透過卸載應用程式網域來從記憶體卸載。 如需詳細資訊，請參閱[應用程式域和 CLR 整合安全性](https://docs.microsoft.com/previous-versions/sql/2014/database-engine/dev-guide/application-domains-and-clr-integration-security?view=sql-server-2014)。  
   
 ###### <a name="code-access-security-cas"></a>程式碼存取安全性 (CAS)  
  CLR 安全性系統提供一種方式來控制 Managed 程式碼可以透過指派權限給程式碼來執行的作業種類。 程式碼存取權限是根據程式碼識別指派的 (例如，組件的簽章或程式碼的來源)。  
@@ -110,11 +110,11 @@ ms.locfileid: "87246393"
   
  在某些情況下，長時間執行的 managed 程式碼會自動產生，而某些情況下則不會。 在下列情況下，長時間執行的 managed 程式碼將會自動產生：
  
- - 如果程式碼呼叫 SQL OS （例如查詢資料）
+ - 如果程式碼呼叫 SQL OS (來查詢資料，例如) 
  - 如果配置足夠的記憶體來觸發垃圾收集
  - 如果程式碼藉由呼叫 OS 函式進入搶先模式
 
- 未執行上述任何作業的程式碼（例如僅包含計算的密封迴圈）不會自動產生排程器，這可能會導致系統中的其他工作負載等候時間過長。 在這些情況下，開發人員必須藉由呼叫 .NET Framework 的 system.string （）函式，或在預期長期執行的任何程式碼區段中，使用 BeginThreadAffinity （）明確輸入 preemtive 模式，以明確地產生。 下列程式碼範例示範如何使用這些方法來手動產生。
+ 未執行上述任何作業的程式碼（例如僅包含計算的密封迴圈）不會自動產生排程器，這可能會導致系統中的其他工作負載等候時間過長。 在這些情況下，開發人員必須藉由呼叫 .NET Framework 的 Thread ( # A1 函式，或在預期長期執行的任何程式碼區段中，明確地進入 preemtive ( 模式，藉此明確地產生。 下列程式碼範例示範如何使用這些方法來手動產生。
 
  ```c#
 // Example 1: Manually yield to SOS scheduler.

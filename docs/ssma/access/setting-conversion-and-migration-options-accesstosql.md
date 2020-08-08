@@ -1,5 +1,5 @@
 ---
-title: 設定轉換和遷移選項（AccessToSQL） |Microsoft Docs
+title: " (AccessToSQL) 設定轉換和遷移選項 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,17 +14,17 @@ helpviewer_keywords:
 - project settings
 - schemas
 ms.assetid: 0a7304df-2f35-4453-96ef-7ac83dea1167
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3e89cfd6768aeedd970889cbaea46bb3e1ceae4f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: e074f603586afa0322d62872c49abb52fe47f047
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68051504"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933959"
 ---
-# <a name="setting-conversion-and-migration-options-accesstosql"></a>設定轉換和遷移選項（AccessToSQL）
-針對每個 SSMA 專案，您可以設定專案層級選項。 這些選項會指定物件的轉換方式、遷移資料的方式，以及源資料類型如何對應至目標資料類型。 在您將物件轉換[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]為或 sql azure 或將資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]遷移至或 sql azure 之前，請先確認設定選項適用于專案。  
+# <a name="setting-conversion-and-migration-options-accesstosql"></a> (AccessToSQL) 設定轉換和遷移選項
+針對每個 SSMA 專案，您可以設定專案層級選項。 這些選項會指定物件的轉換方式、遷移資料的方式，以及源資料類型如何對應至目標資料類型。 在您將物件轉換為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Sql azure 或將資料移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 sql azure 之前，請先確認設定選項適用于專案。  
   
 ## <a name="configuration-options-and-modes"></a>設定選項和模式  
 SSMA 有四組設定設定和四種模式來進行這些設定：預設值、開放式、完整和自訂。 建議大多數使用者使用預設模式。 使用開放式模式進行簡單轉換。 如果您想要查看所有訊息，請使用完整模式。 在自訂模式中，您可以設定選項。  
@@ -39,7 +39,7 @@ SSMA 有四組設定設定和四種模式來進行這些設定：預設值、開
   
 -   [專案設定 (類型對應)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)  
   
--   [專案設定（SQL Azure）](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)  
+-   [ (SQL Azure) 的專案設定](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)  
   
 ## <a name="setting-project-options"></a>設定專案選項  
 在 SSMA 中，您可以設定所有專案的預設設定。 這些設定會儲存到 SSMA 設定檔，並套用至您所建立的任何新專案。  
@@ -82,7 +82,7 @@ SSMA 有四組設定設定和四種模式來進行這些設定：預設值、開
   
 -   若要自訂來源和目標資料庫的對應，請參閱[對應來源和目標資料庫](mapping-source-and-target-databases-accesstosql.md)  
   
--   否則，您可以將 Access 資料庫物件定義轉換成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 物件定義。 如需詳細資訊，請參閱[轉換 Access 資料庫物件](converting-access-database-objects-accesstosql.md)  
+-   否則，您可以將 Access 資料庫物件定義轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 物件定義。 如需詳細資訊，請參閱[轉換 Access 資料庫物件](converting-access-database-objects-accesstosql.md)  
   
 ## <a name="see-also"></a>另請參閱  
 [將 Access 資料庫移轉至 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  

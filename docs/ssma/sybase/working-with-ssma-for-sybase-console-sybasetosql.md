@@ -1,5 +1,5 @@
 ---
-title: 使用 SSMA for Sybase 主控台（SybaseToSQL） |Microsoft Docs
+title: 使用 SSMA for Sybase 主控台 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: c465e477-c479-4aa8-918d-58bf30884789
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: df1539bde5064dc9ae9211029631bb233be0f469
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8a5921282769cb4c8a696a4718ad07bb3f8d7622
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396784"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934513"
 ---
 # <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>使用 SSMA for Oracle 主控台 (OracleToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移轉小幫手（SSMA），可以在命令列透過主控台應用程式來存取 Sybase 調適型伺服器企業版（ASE）。 腳本檔案會形成應用程式用來執行命令的輸入。 做為主控台應用程式，SSMA 可啟用腳本層級的互動、減少遷移週期，並調整遷移工作。  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移轉小幫手 (SSMA) ，Sybase 自動調整伺服器企業 (ASE) 的發行，現在可在命令列透過主控台應用程式來存取。 腳本檔案會形成應用程式用來執行命令的輸入。 做為主控台應用程式，SSMA 可啟用腳本層級的互動、減少遷移週期，並調整遷移工作。  
   
 本節說明使用 SSMA 主控台應用程式遷移 ASE 資料庫的程式。  
   
@@ -37,5 +37,5 @@ ms.locfileid: "87396784"
 |[&#40;SybaseToSQL&#41;疑難排解](../../ssma/sybase/troubleshooting-sybasetosql.md)|提供有關修正遷移問題的簡短資訊。|  
   
 ## <a name="see-also"></a>另請參閱  
-[SSMA for Sybase 主控台（SybaseToSQL）的消費者入門](https://msdn.microsoft.com/43219dbe-bcfa-427d-9242-f07b1455f15f)  
+[SSMA for Sybase 主控台的消費者入門 (SybaseToSQL) ](https://msdn.microsoft.com/43219dbe-bcfa-427d-9242-f07b1455f15f)  
   

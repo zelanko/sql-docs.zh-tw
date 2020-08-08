@@ -1,6 +1,6 @@
 ---
-title: SSMA for Oracle （OracleToSQL）的消費者入門 |Microsoft Docs
-description: 瞭解 Oracle 安裝程式的 SQL Server 移轉小幫手（SSMA），並熟悉 SSMA 使用者介面。
+title: SSMA for Oracle (OracleToSQL) 的消費者入門 |Microsoft Docs
+description: 瞭解 Oracle 安裝程式的 SQL Server 移轉小幫手 (SSMA) ，並熟悉 SSMA 使用者介面。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,23 +11,23 @@ helpviewer_keywords:
 - SSMA for Oracle, Metadata Explorers
 - SSMA for Oracle, Toolbars
 ms.assetid: df79664c-972e-4bef-865a-ce609789fee7
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 985d6e58d00dee705a684b7ef2f6516a5459f0df
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 7ee753bd032cb8ad69f472888a99cc53cc5760d9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293865"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934896"
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>開始使用 SSMA for Oracle (OracleToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]適用于 Oracle 的移轉小幫手（SSMA）可讓您快速地將 Oracle 資料庫架構轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 架構、將產生的架構上傳至， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並將資料從 Oracle 遷移至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]適用于 Oracle 的移轉小幫手 (SSMA) 可讓您快速地將 Oracle 資料庫架構轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 架構，將產生的架構上傳至， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並將資料從 Oracle 遷移至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 本主題將介紹安裝過程，並協助您熟悉 SSMA 使用者介面。  
   
 ## <a name="installing-ssma"></a>安裝 SSMA  
-若要使用 SSMA，您必須先在可存取來源 Oracle 資料庫和目標實例的電腦上安裝 SSMA 用戶端程式 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 接著，您必須在執行的電腦上安裝擴充功能套件和至少一個 Oracle 提供者（OLE DB 或 [!INCLUDE[vstecado](../../includes/vstecado_md.md)] ） [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 這些元件支援資料移轉和 Oracle 系統函數的模擬。 如需安裝指示，請參閱[安裝 SSMA For Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)。  
+若要使用 SSMA，您必須先在可存取來源 Oracle 資料庫和目標實例的電腦上安裝 SSMA 用戶端程式 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 接著，您必須在執行的電腦上安裝延伸模組套件，而且至少有一個 Oracle 提供者 (OLE DB 或 [!INCLUDE[vstecado](../../includes/vstecado_md.md)]) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 這些元件支援資料移轉和 Oracle 系統函數的模擬。 如需安裝指示，請參閱[安裝 SSMA For Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)。  
   
 若要開始 SSMA，請按一下 [**開始**]，指向 [**所有程式**]，指向 [ ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 針對 oracle 移轉小幫手**]，然後按一下 [ ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 針對 oracle 移轉小幫手**]。  
   

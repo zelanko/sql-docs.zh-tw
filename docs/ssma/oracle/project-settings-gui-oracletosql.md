@@ -1,5 +1,5 @@
 ---
-title: 專案設定（GUI）（OracleToSQL） |Microsoft Docs
+title: 專案設定 (GUI)  (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 9727df6d-b0f5-464b-a349-d32b626cedef
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: b1b77b5ac7562ffcf39e065fb99df9da5b1f6ca6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: b1a55f836879c351378b7605126d41e7dc74d85e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266568"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933109"
 ---
 # <a name="project-settings-gui-oracletosql"></a>專案設定 (GUI) (OracleToSQL)
 GUI 專案設定可讓您設定資料在 [**資料**] 索引標籤上的顯示方式，以及是否要在轉換後顯示評量報告。  
@@ -26,7 +26,7 @@ GUI 專案設定可讓您設定資料在 [**資料**] 索引標籤上的顯示�
   
 -   使用 [**預設專案設定**] 對話方塊，即可設定所有專案的使用者介面選項。 若要存取 GUI 設定，請在 [**工具**] 功能表上，選取 [**預設專案設定**]，從 [**遷移目標版本**] 下拉式下選取 [需要查看或變更設定] 的 [遷移專案類型]，然後按一下左窗格底部的 [ **GUI** ]。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **來源的最大資料列數目**  
 設定所選來源資料表的 [**資料**] 索引標籤上顯示的資料列數目。  
   

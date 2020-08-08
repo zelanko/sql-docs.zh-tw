@@ -1,5 +1,5 @@
 ---
-title: Advanced 物件選取範圍（OracleToSQL） |Microsoft Docs
+title: " (OracleToSQL) 的 Advanced 物件選取專案 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: c978fba4-c953-4ed0-a21d-1b38e7225552
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 36bf17e1667596582ed60fd6c35d6f74fc81a231
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 0dd1d8f5f5006760145d132a11db1df60dedddd7
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264545"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935020"
 ---
 # <a name="advanced-object-selection--oracletosql"></a>進階物件選取 (OracleToSQL)
 [**高級物件區段**] 對話方塊可讓您使用物件名稱中的字串和子字串來篩選資料庫物件，然後選取或取消選取那些物件。 SSMA 會對選取的物件執行轉換和遷移作業。  
@@ -26,7 +26,7 @@ ms.locfileid: "68264545"
   
 使用此對話方塊之前，您可能會想要強制 SSMA 藉由轉換架構或儲存專案來載入所有中繼資料。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **檢查所有專案**  
 在 [所有專案] 旁邊加入核取記號。 這些專案會立即在 [中繼資料瀏覽器] 中選取。  
   

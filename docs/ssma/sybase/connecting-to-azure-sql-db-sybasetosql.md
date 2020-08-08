@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 9e77e4b0-40c0-455c-8431-ca5d43849aa7
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: a16ade8d212d3d197b858488dde05b439d8e989f
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 12e090ef0b2c97fe57d27a61842dd7fe2cb99866
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864755"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932100"
 ---
 # <a name="connecting-to-azure-sql-database-sybasetosql"></a>連接到 Azure SQL Database (SybaseToSQL) 
 若要將 Sybase 資料庫移轉至 Azure SQL Database，您必須連接到 Azure SQL Database 的目標實例。 當您連接時，SSMA 會取得 Azure SQL Database 實例中所有資料庫的相關中繼資料，並在 Azure SQL Database 中繼資料瀏覽器中顯示資料庫中繼資料。 SSMA 會儲存您所連接 Azure SQL Database 實例的資訊，但不會儲存密碼。  

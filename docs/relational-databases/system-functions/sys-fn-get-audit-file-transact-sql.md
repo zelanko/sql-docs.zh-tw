@@ -21,12 +21,12 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 9d61fbe341ee7b3a1890b3f6a6e4aa042c1449d3
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 4d280a00eb9d972cea510ae650c4598561b77fef
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823259"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988779"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
@@ -93,19 +93,19 @@ fn_get_audit_file ( file_pattern,
 | audit_schema_version | **int** | 一律為1 |  
 | class_type | **varchar(2)** | 稽核發生所在之可稽核的實體類型。 不可為 Null。 |  
 | client_ip | **nvarchar(128)** | **適用于**：從2017開始的 Azure SQL Database + SQL Server () <br /><br />  用戶端應用程式的來源 IP |  
-| connection_id | GUID | **適用**于： AZURE SQL DATABASE 和 SQL 受控實例<br /><br /> 伺服器中的連接識別碼 |
+| connection_id | GUID | **適用**于： AZURE SQL DATABASE 和 SQL 受控執行個體<br /><br /> 伺服器中的連接識別碼 |
 | data_sensitivity_information | nvarchar(4000) | **適用于**：僅 Azure SQL Database<br /><br /> 由經過審核的查詢所傳回的資訊類型和敏感度標籤，是根據資料庫中的分類資料行。 深入瞭解[Azure SQL Database 資料探索與分類](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification) |
 | database_name | **sysname** | 動作發生所在的資料庫環境。 可為 Null。 針對在伺服器層級發生的審核傳回 Null。 |  
 | database_principal_id | **int** |動作執行所在之資料庫使用者環境的識別碼。 不可為 Null。 如果不適用則傳回 0。 例如，伺服器作業。|
 | database_principal_name | **sysname** | 目前的使用者。 可為 Null。 如果無法使用則傳回 NULL。 |  
-| duration_milliseconds | **bigint** | **適用**于： AZURE SQL DATABASE 和 SQL 受控實例<br /><br /> 查詢執行持續時間（毫秒） |
+| duration_milliseconds | **bigint** | **適用**于： AZURE SQL DATABASE 和 SQL 受控執行個體<br /><br /> 查詢執行持續時間（毫秒） |
 | event_time | **datetime2** | 可稽核的動作引發時的日期和時間。 不可為 Null。 |  
 | file_name | **varchar(260)** | 記錄來自之稽核記錄檔的路徑和名稱。 不可為 Null。 |
 | is_column_permission | **bit** | 指出這是否為資料行層級權限的旗標。 不可為 Null。 當 permission_bitmask = 0 時會傳回 0。<br /> 1 = true<br /> 0 = false |
 | object_id | **int** | 稽核發生所在之實體的識別碼。 這包括下列項目：<br /> 伺服器物件<br /> 資料庫<br /> 資料庫物件<br /> 結構描述物件<br /> 不可為 Null。 如果此實體為伺服器本身或是稽核並未在物件層級上執行，則會傳回 0。 例如驗證。 |  
 | object_name | **sysname** | 稽核發生所在之實體的名稱。 這包括下列項目：<br /> 伺服器物件<br /> 資料庫<br /> 資料庫物件<br /> 結構描述物件<br /> 可為 Null。 如果此實體為伺服器本身或是稽核並未在物件層級上執行，則會傳回 NULL。 例如驗證。 |
 | permission_bitmask | **varbinary(16)** | 在某些動作中，這就是已授與、拒絕或撤銷的權限。 |
-| response_rows | **bigint** | **適用**于： AZURE SQL DATABASE 和 SQL 受控實例<br /><br /> 結果集中傳回的資料列數目。 |  
+| response_rows | **bigint** | **適用**于： AZURE SQL DATABASE 和 SQL 受控執行個體<br /><br /> 結果集中傳回的資料列數目。 |  
 | schema_name | **sysname** | 動作發生所在的結構描述環境。 可為 Null。 針對在架構外發生的審核傳回 Null。 |  
 | sequence_group_id | **varbinary** | **適用于**：僅 SQL Server 從2016開始 () <br /><br />  唯一識別碼 |  
 | sequence_number | **int** | 追蹤單一稽核記錄中太長而無法納入稽核寫入緩衝區內的記錄順序。 不可為 Null。 |  
@@ -123,8 +123,8 @@ fn_get_audit_file ( file_pattern,
 | target_server_principal_name | **sysname** | 動作的目標登入。 可為 Null。 如果不適用則傳回 NULL。 |  
 | target_server_principal_sid | **varbinary** | 目標登入的 SID。 可為 Null。 如果不適用則傳回 NULL。 |  
 | transaction_id | **bigint** | **適用于**：僅 SQL Server 從2016開始 () <br /><br /> 識別單一交易中多個 audit 事件的唯一識別碼 |  
-| user_defined_event_id | **smallint** | **適用于**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本、Azure SQL Database 和 SQL 受控實例<br /><br /> 使用者定義的事件識別碼，做為引數傳遞至**sp_audit_write**。 系統事件的**Null** (預設) ，而使用者定義的事件則為非零。 如需詳細資訊，請參閱[sp_audit_write &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md)。 |  
-| user_defined_information | **nvarchar(4000)** | **適用于**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本、Azure SQL Database 和 SQL 受控實例<br /><br /> 用來記錄使用者想要使用**sp_audit_write**預存程式記錄在 audit 記錄檔中的任何額外資訊。 |  
+| user_defined_event_id | **smallint** | **適用于**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本、Azure SQL Database 和 SQL 受控執行個體<br /><br /> 使用者定義的事件識別碼，做為引數傳遞至**sp_audit_write**。 系統事件的**Null** (預設) ，而使用者定義的事件則為非零。 如需詳細資訊，請參閱[sp_audit_write &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md)。 |  
+| user_defined_information | **nvarchar(4000)** | **適用于**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本、Azure SQL Database 和 SQL 受控執行個體<br /><br /> 用來記錄使用者想要使用**sp_audit_write**預存程式記錄在 audit 記錄檔中的任何額外資訊。 |  
 
   
 ## <a name="remarks"></a>備註  

@@ -1,5 +1,5 @@
 ---
-title: 功能表命令和其他快速鍵（Oracle 到 SQL） |Microsoft Docs
+title: " (Oracle 至 SQL) 的功能表命令和其他快速鍵 |Microsoft Docs"
 description: 瞭解 SSMA for Oracle 應用程式的各種對話方塊中，用來存取功能表命令和其他快速鍵的鍵盤快速鍵。
 ms.prod: sql
 ms.custom: ''
@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: fc00e683-189e-4765-b280-84927d635126
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: b9534020525ace1df2976ee732d9016c02d5ed2e
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 76f088100ecdf0172cfb7403bffa4a1546113b6b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293925"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933269"
 ---
 # <a name="menu-commands-and-other-shortcut-keysoracle-to-sql"></a>功能表命令和其他快速鍵 (Oracle 到 SQL)
 下列各節說明在 SSMA for Oracle 應用程式的各種對話方塊中，用來存取功能表命令和其他快速鍵的鍵盤快速鍵。  
@@ -81,7 +81,7 @@ ms.locfileid: "84293925"
 |建立報表。|ALT + T + C|  
 |轉換架構。|ALT + T + N 或 CTRL + R|  
 |從 Oracle 資料庫重新整理。|ALT + T + R|  
-|與 SQL Server 或 SQL Azure 資料庫同步處理。|ALT + T + S|  
+|與 SQL Server 或 Azure SQL Database 同步處理。|ALT + T + S|  
 |[另存新檔] 腳本。|ALT + T + A|  
 |遷移資料。|ALT + T + M|  
 |停止目前的作業。|ALT + T + O|  

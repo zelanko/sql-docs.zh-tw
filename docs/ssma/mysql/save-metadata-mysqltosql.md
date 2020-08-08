@@ -1,5 +1,5 @@
 ---
-title: 儲存中繼資料（MySQLToSQL） |Microsoft Docs
+title: 將中繼資料儲存 (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 9bc6273f-e8b1-430b-81a5-14330a783562
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 549c4b88e7ca75ce86c8a4e2ddd3eba25f138583
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c032cfd8707524e64b68f6fcb7cd0223342602bb
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929364"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935145"
 ---
 # <a name="save-metadata--mysqltosql"></a>儲存中繼資料 (MySQLToSQL)
 [**儲存中繼資料**] 對話方塊會提示您將中繼資料載入至 SSMA 專案，然後再加以儲存。 這可讓您擁有可離線使用並傳送給其他人（例如技術支援人員）的完整專案檔案。  
@@ -33,7 +33,7 @@ SSMA 會視需要將中繼資料載入專案。 當您流覽中繼資料和轉�
 **全選**  
 選取所有列出的資料庫。  
   
-**明確**  
+**清除**  
 清除所有遺失中繼資料之資料庫的核取方塊。 如果已載入中繼資料，則無法清除此核取方塊。  
   
 **儲存**  

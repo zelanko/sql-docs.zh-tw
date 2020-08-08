@@ -1,5 +1,5 @@
 ---
-title: 建立伺服器連接檔案（AccessToSQL） |Microsoft Docs
+title: " (AccessToSQL) 建立伺服器連接檔案 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/17/2017
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 03d622c50a8760bbf1767bc8a4f79e215773695f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: b74cf86e6a68653a2047aebefc7ca86ab6868475
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006611"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933979"
 ---
-# <a name="creating-the-server-connection-files-accesstosql"></a>建立伺服器連接檔案（AccessToSQL）
-伺服器資訊可以在腳本檔案的 [伺服器] 區段中指定。 伺服器資訊也可以在個別的伺服器連接檔案中指定。 伺服器連接檔案的命令列參數是`-c <serverconnectionfile>`。 如果腳本和伺服器連接檔案中同時出現相同的伺服器識別碼，則會考慮腳本檔案中的伺服器定義。  
+# <a name="creating-the-server-connection-files-accesstosql"></a> (AccessToSQL 建立伺服器連接檔案) 
+伺服器資訊可以在腳本檔案的 [伺服器] 區段中指定。 伺服器資訊也可以在個別的伺服器連接檔案中指定。 伺服器連接檔案的命令列參數是 `-c <serverconnectionfile>` 。 如果腳本和伺服器連接檔案中同時出現相同的伺服器識別碼，則會考慮腳本檔案中的伺服器定義。  
   
 ```xml  
 <!--Sample of server connection file commands -->  
@@ -67,5 +67,5 @@ ms.locfileid: "68006611"
 操作主控台的下一個步驟是[執行 SSMA 主控台，&#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[執行 SSMA 主控台（存取）](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
+[ (存取) 執行 SSMA 主控台](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

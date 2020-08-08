@@ -1,5 +1,5 @@
 ---
-title: 建立變數值檔案（DB2ToSQL） |Microsoft Docs
+title: 建立變數值檔案 (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,22 +7,22 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 122f3fbe-46a0-40df-ac3b-d43bf33d96ba
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 945b7e86641c796e79bfb87b8b7b5de25949e4c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: f5a1b2fe01fd9800ee9d56e3a01f9861bfb3a046
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67989775"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933853"
 ---
-# <a name="creating-variable-value-files-db2tosql"></a>建立變數值檔案（DB2ToSQL）
+# <a name="creating-variable-value-files-db2tosql"></a>建立變數值檔案 (DB2ToSQL) 
 變數值檔案是一種 XML 檔案，其中包含命令的參數值，例如來源或目的地伺服器名稱，通常會從一部伺服器遷移到另一個伺服器。 當發生大量的資料庫移轉時，將會在命令列上使用 **-v**參數來建立及參考用於儲存每個來源伺服器值的多個變數檔案。 這有助於使用多個變數檔案中的變數值來維護一些腳本檔案中的靜態值。  
   
 > [!NOTE]  
-> 1.  變數名稱前面會加上 $ （美元）符號的前置詞和尾碼。 如果變數不是指派給變數值檔案中的值，您在剖析腳本檔案期間會發生錯誤，而導致停止主控台執行程式。  
-> 2.  的逸出字元**$** 為**$$**。 如果參數的變數或靜態值值包含**$** （美元）符號，則**$$** 必須指定，以將它視為字元，而不是變數。  
-> 3.  基於可維護性的考慮，變數可以`'variable-group'`在專案內宣告，以進行使用者定義變數的邏輯分隔。  此元素的使用不是強制的。  
+> 1.  變數名稱前面會加上 $ (貨幣) 符號的前置詞和尾碼。 如果變數不是指派給變數值檔案中的值，您在剖析腳本檔案期間會發生錯誤，而導致停止主控台執行程式。  
+> 2.  的逸出字元為 **$** **$$** 。 如果參數的變數或靜態值值包含 **$** (貨幣) 符號，則 **$$** 必須指定為將它視為字元，而不是變數。  
+> 3.  基於可維護性的考慮，變數可以在專案內宣告， `'variable-group'` 以進行使用者定義變數的邏輯分隔。  此元素的使用不是強制的。  
   
 **範例：**  
   
@@ -47,7 +47,7 @@ ms.locfileid: "67989775"
   
 </variables>  
 ```  
-**範例2：**  
+**範例 2：**  
   
 ```  
 <!--Sample of variable value file commands-->  

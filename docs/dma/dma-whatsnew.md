@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 2becdd3e5ab0c6980ffbb4b4f4a5d50584f6fd35
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 19753cddaba236d0de75e492962bd6c8ad2675e2
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864895"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988503"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>資料移轉小幫手的新功能
 
@@ -154,8 +154,8 @@ Data Migration Assistant 的3.2 版包含下列新增專案：
 
 Data Migration Assistant 的3.1 版包含下列新增專案：
 
-- 已改善 Azure SQL database 的評估建議（根據資料庫定序）、使用不支援的系統預存程式和 CLR 物件。
-- 遷移至 Azure SQL 資料庫時，相容性層級130、120、110和100的評估指南。
+- 針對資料庫定序、使用不支援的系統預存程式和 CLR 物件，改善 Azure SQL Database 的評估建議。
+- 遷移至 Azure SQL Database 時，相容性層級130、120、110和100的評估指南。
 
 ## <a name="data-migration-assistant-v30"></a>Data Migration Assistant v3。0
 

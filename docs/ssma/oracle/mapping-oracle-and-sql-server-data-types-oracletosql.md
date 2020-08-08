@@ -1,5 +1,5 @@
 ---
-title: 對應 Oracle 和 SQL Server 資料類型（OracleToSQL） |Microsoft Docs
+title: 將 Oracle 和 SQL Server 資料類型對應 (OracleToSQL) |Microsoft Docs
 description: 瞭解如何自訂 Oracle 資料類型與 SQL Server 之間 Oracle 對應的 SSMA，或接受預設值。
 ms.prod: sql
 ms.custom: ''
@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Type Mapping Inheritance
 ms.assetid: 05da1495-63b9-47b7-86e2-6746394a2d8a
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 8a9cb39213ed2809b7074a474edf5e4e20bd9122
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 656132dafce39e6007601b75956fd73714638716
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293831"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934779"
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>對應 Oracle 和 SQL Server 資料類型 (OracleToSQL)
 Oracle 資料庫類型與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫類型不同。 當您將 Oracle 資料庫物件轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件時，您必須指定如何將資料類型從 Oracle 對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 您可以接受預設資料類型對應，也可以自訂對應，如下列各節所示。  
@@ -27,7 +27,7 @@ Oracle 資料庫類型與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.m
 SSMA 有一組預設的資料類型對應。 如需預設對應的清單，請參閱[專案設定 &#40;類型對應&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md)。  
   
 ## <a name="type-mapping-inheritance"></a>類型對應繼承  
-您可以在專案層級、物件類別目錄層級（例如所有預存程式）或物件層級自訂類型對應。 設定會繼承自較高的層級，除非它們在較低層級遭到覆寫。 例如，如果您在專案層級將**smallmoney**對應至**money** ，則專案中的所有物件都會使用此對應，除非您在物件或類別層級自訂對應。  
+您可以在專案層級、物件類別層級（例如，所有預存程式) 或物件層級）自訂類型對應 (。 設定會繼承自較高的層級，除非它們在較低層級遭到覆寫。 例如，如果您在專案層級將**smallmoney**對應至**money** ，則專案中的所有物件都會使用此對應，除非您在物件或類別層級自訂對應。  
   
 當您在 SSMA 中看到 [**型別對應**] 索引標籤時，背景會以色彩標示，以顯示要繼承的型別對應。 任何繼承的型別對應，型別對應的背景都是黃色，而在目前層級指定的任何對應則為白色。  
   

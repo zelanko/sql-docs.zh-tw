@@ -1,5 +1,5 @@
 ---
-title: 正在移除 SSMA for Oracle 元件（OracleToSQL） |Microsoft Docs
+title: 移除 SSMA for Oracle Components (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,18 +9,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Uninstalling the Extension Pack
 ms.assetid: 8b527a56-4e52-487a-9ac9-2320388e6d7d
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 0434f88c46d14672c84f5f7939488a827b229e27
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 4fbac66cfd7cf549a6321534901ca8a33900f986
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266557"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933149"
 ---
 # <a name="removing-ssma--for-oracle-components-oracletosql"></a>移除 SSMA for Oracle 元件 (OracleToSQL)
-當您完成將資料庫從 Oracle 遷移至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，您可能會想要卸載 SSMA 元件。 您可以隨時卸載用戶端元件。 不過，除非您已遷移的資料庫不再使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysdb**資料庫的**ssma_oracle**架構中的函式，否則您不應該從卸載擴充功能套件。  
+當您完成將資料庫從 Oracle 遷移至時 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，您可能會想要卸載 SSMA 元件。 您可以隨時卸載用戶端元件。 不過， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 除非您已遷移的資料庫不再使用**sysdb**資料庫的**ssma_oracle**架構中的函式，否則您不應該從卸載擴充功能套件。  
   
 ## <a name="uninstalling-the-ssma-for-oracle-client"></a>卸載 SSMA for Oracle 用戶端  
 您可以使用 [**新增或移除程式**] 來卸載 SSMA。  
@@ -29,7 +29,7 @@ ms.locfileid: "68266557"
   
 1.  在 [控制台] 中，開啟 [新增或移除程式]。  
   
-2.  ** [!INCLUDE[msCoName](../../includes/msconame_md.md)]選取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [移轉小幫手**] 做為 [Oracle]，然後按一下 [**移除**]。  
+2.  選取 [移轉小幫手] 做** [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為 [Oracle**]，然後按一下 [**移除**]。  
   
 3.  若要確認您想要卸載 SSMA，請按一下 **[是]**。  
   
@@ -48,13 +48,13 @@ ms.locfileid: "68266557"
   
 5.  在 [連接參數] 頁面上，選取驗證方法，然後按 **[下一步]**。  
   
-    Windows 驗證會使用您的 Windows 認證來嘗試登入的實例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果您選取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [驗證]，則必須輸入登入名稱和密碼。  
+    Windows 驗證會使用您的 Windows 認證來嘗試登入的實例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果您選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [驗證]，則必須輸入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱和密碼。  
   
 6.  在 [操作已完成] 頁面上，按一下 **[確定]**。  
   
 7.  在 [完成] 頁面上 **，按一下 [** 結束]。  
   
-卸載之後，您可以使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來確認**ssma_oracle sysdb**架構中的物件（可能是整個**sysdb**資料庫）已被移除。 不過，如果您使用其他 SSMA 產品，它們也會使用**sysdb**資料庫。 如果資料庫存在，而且您確定沒有其他資料庫參考此資料庫中的物件，您可以卸離資料庫。  
+卸載之後，您可以使用來確認**ssma_oracle sysdb**架構中的物件（可能是整個**sysdb**資料庫）已被移除 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。 不過，如果您使用其他 SSMA 產品，它們也會使用**sysdb**資料庫。 如果資料庫存在，而且您確定沒有其他資料庫參考此資料庫中的物件，您可以卸離資料庫。  
   
 ## <a name="see-also"></a>另請參閱  
 [安裝 SSMA for Oracle Client &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  

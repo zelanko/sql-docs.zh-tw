@@ -1,5 +1,5 @@
 ---
-title: 專案設定（同步處理）（DB2ToSQL） |Microsoft Docs
+title: " (同步處理的專案設定)  (DB2ToSQL) |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a5629a72-8c17-46a4-bb4d-19d51a0b98a2
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 38b3da74ce30799a01f28f3961a4fa0461d7543f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c66b7e9ad09c61b1ecfaddb21a9253ae6a6237c9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060167"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933599"
 ---
-# <a name="project-settingssynchronization-db2tosql"></a>專案設定（同步處理）（DB2ToSQL）
-[**專案設定**] 對話方塊的 [同步處理] 頁面包含的設定，可自訂 SSMA 載入和重新整理資料庫物件（例如資料表和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]預存程式）到中的方式。  
+# <a name="project-settingssynchronization-db2tosql"></a> (同步處理)  (DB2ToSQL 的專案設定) 
+[**專案設定**] 對話方塊的 [同步處理] 頁面包含的設定，可自訂 SSMA 載入和重新整理資料庫物件（例如資料表和預存程式）到中的方式 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 預設動作選項會指定從 DB2 資料庫重新整理物件以及與 SQL Server 資料庫同步處理物件的預設設定。 如需詳細資訊，請參閱[從資料庫重新整理 &#40;DB2ToSQL&#41;](../../ssma/db2/refresh-from-database-db2tosql.md)。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "68060167"
   
 ## <a name="miscellaneous-options"></a>其他選項  
 **機會**  
-指定在將物件載入至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，SSMA 應該進行的嘗試次數。 目前嘗試[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中未載入的物件將會再次嘗試，直到 SSMA 達到目前同步處理常式的最大嘗試次數為止。 預設值設定為**2**  
+指定在將物件載入至時，SSMA 應該進行的嘗試次數 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 目前嘗試中未載入的物件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會再次嘗試，直到 SSMA 達到目前同步處理常式的最大嘗試次數為止。 預設值設定為**2**  
   
 ## <a name="synchronization-for-db2-options"></a>DB2 選項的同步處理  
 **本機和遠端物件變更的動作**  

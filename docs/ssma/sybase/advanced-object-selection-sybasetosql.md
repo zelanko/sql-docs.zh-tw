@@ -1,5 +1,5 @@
 ---
-title: Advanced 物件選取範圍（SybaseToSQL） |Microsoft Docs
+title: " (SybaseToSQL) 的 Advanced 物件選取專案 |Microsoft Docs"
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -7,14 +7,14 @@ ms.prod: sql
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: d2baa90f-1b77-47ce-988d-1910c7c74103
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3745a7599f986073d1b759b46fe33dd741d62b09
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 13c76ce76b5096d136df0b38b5526e80093f76cd
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083547"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932369"
 ---
 # <a name="advanced-object-selection-sybasetosql"></a>進階物件選取項目 (SybaseToSQL)
 [**高級物件區段**] 對話方塊可讓您使用物件名稱中的字串和子字串來篩選資料庫物件，然後選取或取消選取那些物件。 SSMA 會對選取的物件執行轉換和遷移作業。  
@@ -25,7 +25,7 @@ ms.locfileid: "68083547"
   
 使用此對話方塊之前，您可能會想要強制 SSMA 藉由轉換架構或儲存專案來載入所有中繼資料。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **檢查所有專案**  
 在 [所有專案] 旁邊加入核取記號。 這些專案會立即在 [中繼資料瀏覽器] 中選取。  
   

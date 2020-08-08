@@ -1,5 +1,5 @@
 ---
-title: 選取並設定要測試的物件（OracleToSQL） |Microsoft Docs
+title: 選取並設定要測試的物件 (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Selection of Objects to Test,Parameter Comparison Settings
 ms.assetid: 29fb6542-5c1f-4b14-a822-87700beb7623
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: e0a8e7650534d50c5e5d7c3b02f2857764d9c2ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: fd5a65e50889d461b0922fa255680a76863ca0a4
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264645"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932759"
 ---
 # <a name="selecting-and-configuring-objects-to-test-oracletosql"></a>選取及設定要測試的受影響物件 (OracleToSQL)
 在此步驟中，您會選取要測試的物件，並設定比較程式的輸出參數和函數傳回值的設定。  
@@ -76,7 +76,7 @@ ms.locfileid: "68264645"
   
 -   如果您選擇 [ **False**]，則比較的字串會保留尾端空白字元。  
   
-## <a name="specify-input-values-for-procedures-and-functions-call-values"></a>指定程式和函式的輸入值（呼叫值）  
+## <a name="specify-input-values-for-procedures-and-functions-call-values"></a>指定程式和函式的輸入值 (呼叫值)   
 您可以在 [**呼叫值**] 頁面上指定輸入參數值。 [**新增呼叫**] 按鈕會新增具有空白參數值的呼叫。 [**移除呼叫**] 按鈕會移除目前的呼叫。  
   
 ## <a name="next-step"></a>後續步驟  

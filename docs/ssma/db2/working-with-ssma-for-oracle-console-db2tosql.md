@@ -1,5 +1,5 @@
 ---
-title: 使用 SSMA for Oracle 主控台（DB2ToSQL） |Microsoft Docs
+title: 使用 SSMA for Oracle 主控台 (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 29d8787c-632e-4ff7-9ccc-3f7ad40480ec
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 62136073116141c206c36d5fcca8dd5b417de0e4
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: acf7affd211dc95d05f8fe6ce8b29f05292ad46c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396417"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933549"
 ---
-# <a name="working-with-ssma-for-oracle-console-db2tosql"></a>使用 SSMA for Oracle 主控台（DB2ToSQL）
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移轉小幫手（SSMA）版本的 DB2 現在可透過主控台應用程式在命令列中進行存取。 腳本檔案會形成應用程式用來執行命令的輸入。 做為主控台應用程式，SSMA 可啟用腳本層級的互動、減少遷移週期，並調整遷移工作。  
+# <a name="working-with-ssma-for-oracle-console-db2tosql"></a>使用 SSMA for Oracle 主控台 (DB2ToSQL) 
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移轉小幫手 (SSMA) release for DB2 現在可透過主控台應用程式，在命令列中進行存取。 腳本檔案會形成應用程式用來執行命令的輸入。 做為主控台應用程式，SSMA 可啟用腳本層級的互動、減少遷移週期，並調整遷移工作。  
   
 本節說明使用 SSMA 主控台應用程式遷移 DB2 資料庫的程式。  
   

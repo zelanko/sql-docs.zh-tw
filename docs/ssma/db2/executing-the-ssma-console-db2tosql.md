@@ -1,5 +1,5 @@
 ---
-title: 執行 SSMA 主控台（DB2ToSQL） |Microsoft Docs
+title: 執行 SSMA 主控台 (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: ce63f633-067d-4f04-b8e9-e1abd7ec740b
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 64348e33502e8407e567b8901890246344765f4f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 7b3f7e776268eed28beed4e4349c1ae8909789d5
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67989678"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933809"
 ---
-# <a name="executing-the-ssma-console-db2tosql"></a>執行 SSMA 主控台（DB2ToSQL）
+# <a name="executing-the-ssma-console-db2tosql"></a>執行 SSMA 主控台 (DB2ToSQL) 
 Microsoft 為您提供了一組健全的腳本檔案命令，以執行和控制 SSMA 活動。 後續章節會詳細說明相同的情況。 主控台應用程式會使用本節中所列舉的特定標準腳本檔案命令。  
   
 ## <a name="project-script-file-commands"></a>專案指令檔命令  
@@ -38,7 +38,7 @@ create-new-project
   
 -   `project-type:`選擇性屬性。 表示專案類型，例如 "sql-server-2005" 專案或 "sql-伺服器-2008" 專案或 "sql-伺服器-2012 2014" 專案或 "sql-azure"。 預設值為 "sql-server-2014"。  
   
-**範例：**  
+**範例︰**  
   
 ```xml  
 <create-new-project  
@@ -173,7 +173,7 @@ save-project
   
 -   重新連接至源資料庫，但不會載入任何中繼資料，而不像連接-來源資料庫命令。  
   
--   如果無法建立與來源的（re）連線，就會產生錯誤，而且主控台應用程式會停止執行。  
+-   如果無法建立與來源的 (重新) 連接，就會產生錯誤，而且主控台應用程式會停止執行。  
   
 **指令碼**  
   
@@ -205,7 +205,7 @@ save-project
   
 -   會重新連接至目標資料庫，但不會載入任何中繼資料，不同于連接目標資料庫命令。  
   
--   如果無法建立（re）與目標的連接，則會產生錯誤，而且主控台應用程式會停止執行。  
+-   如果無法建立 (重新) 與目標的連接，就會產生錯誤，而且主控台應用程式會停止執行。  
   
 **指令碼**  
   
@@ -230,25 +230,25 @@ save-project
   
 **指令碼**  
   
--   `conversion-report-folder:`指定可儲存評量報告的資料夾。（選擇性屬性）  
+-   `conversion-report-folder:`指定可儲存評量報告的資料夾。 (選用屬性)   
   
--   `object-name:`指定針對評估報告產生所考慮的物件（它可以有個別物件名稱或群組物件名稱）。  
+-   `object-name:`指定 (s) 考慮用於評估報告產生的物件 (它可以有個別物件名稱或群組物件名稱) 。  
   
--   `object-type:`指定物件名稱屬性中指定之物件的類型（如果指定了物件類別，則物件類型將會是 "category"）。  
+-   `object-type:`指定物件名稱屬性中指定的物件類型 (如果指定了物件類別，則物件類型將會是 "category" ) 。  
   
 -   `conversion-report-overwrite:`指定是否要覆寫評估報告資料夾（如果已經存在）。  
   
-    **預設值：** false。 （選擇性屬性）  
+    **預設值：** false。  (選擇性屬性)   
   
 -   `write-summary-report-to:`指定將產生摘要報告的路徑。  
   
-    如果只提及資料夾路徑，則依名稱**&lt;AssessmentReport n&gt;。** 已建立 XML。 （選擇性屬性）  
+    如果只提及資料夾路徑，則依名稱**AssessmentReport &lt; n &gt; 。** 已建立 XML。  (選擇性屬性)   
   
     報表建立有兩個進一步的子類別：  
   
-    -   `report-errors`（= "true/false"，預設值為 "false" （選擇性屬性））  
+    -   `report-errors` (= "true/false"，預設值為 "false" (選擇性屬性) # A3  
   
-    -   `verbose`（= "true/false"，預設值為 "false" （選擇性屬性））  
+    -   `verbose` (= "true/false"，預設值為 "false" (選擇性屬性) # A3  
   
 **語法範例：**  
   
@@ -302,25 +302,25 @@ save-project
   
 **指令碼**  
   
--   `conversion-report-folder:`指定可儲存評量報告的資料夾。（選擇性屬性）  
+-   `conversion-report-folder:`指定可儲存評量報告的資料夾。 (選用屬性)   
   
--   `object-name:`指定轉換架構時所考慮的來源物件（它可以有個別物件名稱或群組物件名稱）。  
+-   `object-name:`指定 (s 的來源物件) 考慮轉換架構 (它可以有個別物件名稱或群組物件名稱) 。  
   
--   `object-type:`指定物件名稱屬性中指定之物件的類型（如果指定了物件類別，則物件類型將會是 "category"）。  
+-   `object-type:`指定物件名稱屬性中指定的物件類型 (如果指定了物件類別，則物件類型將會是 "category" ) 。  
   
 -   `conversion-report-overwrite:`指定是否要覆寫評估報告資料夾（如果已經存在）。  
   
-    **預設值：** false。 （選擇性屬性）  
+    **預設值：** false。  (選擇性屬性)   
   
 -   `write-summary-report-to:`指定將產生摘要報告的路徑。  
   
-    如果只提及資料夾路徑，則依名稱**&lt;SchemaConversionReport n&gt;。** 已建立 XML。 （選擇性屬性）  
+    如果只提及資料夾路徑，則依名稱**SchemaConversionReport &lt; n &gt; 。** 已建立 XML。  (選擇性屬性)   
   
     報表建立有兩個進一步的子類別：  
   
-    -   `report-errors`（= "true/false"，預設值為 "false" （選擇性屬性））  
+    -   `report-errors` (= "true/false"，預設值為 "false" (選擇性屬性) # A3  
   
-    -   `verbose`（= "true/false"，預設值為 "false" （選擇性屬性））  
+    -   `verbose` (= "true/false"，預設值為 "false" (選擇性屬性) # A3  
   
 **語法範例：**  
   
@@ -364,25 +364,25 @@ save-project
   
 **指令碼**  
   
--   `conversion-report-folder:`指定可儲存評量報告的資料夾。（選擇性屬性）  
+-   `conversion-report-folder:`指定可儲存評量報告的資料夾。 (選用屬性)   
   
--   `object-name:`指定要用來遷移資料的來源物件（它可以有個別物件名稱或群組物件名稱）。  
+-   `object-name:`指定 (s 的來源物件) 考慮遷移資料 (它可以有個別物件名稱或群組物件名稱) 。  
   
--   `object-type:`指定物件名稱屬性中指定之物件的類型（如果指定了物件類別，則物件類型將會是 "category"）。  
+-   `object-type:`指定物件名稱屬性中指定的物件類型 (如果指定了物件類別，則物件類型將會是 "category" ) 。  
   
 -   `conversion-report-overwrite:`指定是否要覆寫評估報告資料夾（如果已經存在）。  
   
-    **預設值：** false。 （選擇性屬性）  
+    **預設值：** false。  (選擇性屬性)   
   
 -   `write-summary-report-to:`指定將產生摘要報告的路徑。  
   
-    如果只提及資料夾路徑，則依名稱**&lt;DataMigrationReport n&gt;。** 已建立 XML。 （選擇性屬性）  
+    如果只提及資料夾路徑，則依名稱**DataMigrationReport &lt; n &gt; 。** 已建立 XML。  (選擇性屬性)   
   
     報表建立有兩個進一步的子類別：  
   
-    -   `report-errors`（= "true/false"，預設值為 "false" （選擇性屬性））  
+    -   `report-errors` (= "true/false"，預設值為 "false" (選擇性屬性) # A3  
   
-    -   `verbose`（= "true/false"，預設值為 "false" （選擇性屬性））  
+    -   `verbose` (= "true/false"，預設值為 "false" (選擇性屬性) # A3  
   
 **語法範例：**  
   
@@ -488,9 +488,9 @@ save-project
   
 **指令碼**  
   
--   `object-name:`指定與目標資料庫進行同步處理時所考慮的目標物件（可以有個別物件名稱或群組物件名稱）。  
+-   `object-name:`指定 (s 的目標物件) 視為與目標資料庫同步處理 (它可以有個別物件名稱或群組物件名稱) 。  
   
--   `object-type:`指定物件名稱屬性中指定之物件的類型（如果指定了物件類別，則物件類型將會是 "category"）。  
+-   `object-type:`指定物件名稱屬性中指定的物件類型 (如果指定了物件類別，則物件類型將會是 "category" ) 。  
   
 -   `on-error:`指定是否要將同步處理錯誤指定為警告或錯誤。 發生錯誤的可用選項：  
   
@@ -500,7 +500,7 @@ save-project
   
     -   fail-腳本  
   
--   `report-errors-to:`指定同步處理作業的錯誤報表位置（選擇性屬性）。如果只指定資料夾路徑，則會建立依名稱**TargetSynchronizationReport**的檔案。  
+-   `report-errors-to:`指定同步處理作業的錯誤報表位置 (選擇性屬性) 如果只指定資料夾路徑，則會建立依名稱**TargetSynchronizationReport.XML**的檔案。  
   
 **語法範例：**  
   
@@ -553,9 +553,9 @@ save-project
   
 需要一個或數個資料庫節點做為命令列參數。  
   
--   `object-name:`指定從源資料庫重新整理時所考慮的來源物件（可以有個別物件名稱或群組物件名稱）。  
+-   `object-name:`指定來源物件 (s) 考慮從源資料庫重新整理， (它可以有個別物件名稱或群組物件名稱) 。  
   
--   `object-type:`指定物件名稱屬性中指定之物件的類型（如果指定了物件類別，則物件類型將會是 "category"）。  
+-   `object-type:`指定物件名稱屬性中指定的物件類型 (如果指定了物件類別，則物件類型將會是 "category" ) 。  
   
 -   `on-error:`指定是否將重新整理錯誤指定為警告或錯誤。 發生錯誤的可用選項：  
   
@@ -565,7 +565,7 @@ save-project
   
     -   fail-腳本  
   
--   `report-errors-to:`指定重新整理作業的錯誤報表位置（選擇性屬性）。如果只指定資料夾路徑，則會建立依名稱**SourceDBRefreshReport**的檔案。  
+-   `report-errors-to:`指定將重新整理作業的錯誤報表位置 (選擇性屬性) 如果只指定資料夾路徑，則會建立依名稱**SourceDBRefreshReport.XML**的檔案。  
   
 **語法範例：**  
   
@@ -616,15 +616,15 @@ save-project
   
 需要一個或數個資料庫節點做為命令列參數。  
   
--   `object-name:`指定要儲存其腳本的物件。 （它可以有個別的物件名稱或群組物件名稱）  
+-   `object-name:`指定要儲存腳本 (s) 的物件。  (可以有個別的物件名稱或群組物件名稱)   
   
--   `object-type:`指定物件名稱屬性中指定之物件的類型（如果指定了物件類別，則物件類型將會是 "category"）。  
+-   `object-type:`指定物件名稱屬性中指定的物件類型 (如果指定了物件類別，則物件類型將會是 "category" ) 。  
   
 -   `metabase:`指定它是否為來源或目標元資料庫。  
   
--   `destination:`指定要儲存腳本的路徑或資料夾，如果未指定檔案名，則為格式的檔案名（object_name 屬性值）。  
+-   `destination:`指定要儲存腳本的路徑或資料夾，如果未指定檔案名，則格式為 (object_name 屬性值) 的檔案名。  
   
--   `overwrite:`如果為 true，則會覆寫是否有相同的檔案名。 它可以有值（true/false）。  
+-   `overwrite:`如果為 true，則會覆寫是否有相同的檔案名。 它可以有 (true/false) 的值。  
   
 **語法範例：**  
   
@@ -666,27 +666,27 @@ convert-sql 語句
   
 -   `destination`指定是否應該將輸出儲存在檔案中。  
   
-    如果未指定這個屬性，則會在主控台上顯示轉換的 T-sql 語句。 （選擇性屬性）  
+    如果未指定這個屬性，則會在主控台上顯示轉換的 T-sql 語句。  (選擇性屬性)   
   
--   `conversion-report-folder`指定可儲存評量報告的資料夾。（選擇性屬性）  
+-   `conversion-report-folder`指定可儲存評量報告的資料夾。 (選用屬性)   
   
 -   `conversion-report-overwrite`指定是否要覆寫評估報告資料夾（如果已經存在）。  
   
-    **預設值：** false。 （選擇性屬性）  
+    **預設值：** false。  (選擇性屬性)   
   
--   `write-converted-sql-to`指定要儲存已轉換之 T-sql 的檔案（或）資料夾路徑。 當資料夾路徑與`sql-files`屬性一起指定時，每個來源檔案都會在指定的資料夾下建立對應的目標 t-sql 檔案。 當資料夾路徑與`sql`屬性一併指定時，已轉換的 t-sql 會寫入名為**Result**的檔案中指定的資料夾底下。  
+-   `write-converted-sql-to`指定要儲存已轉換之 T-sql 的檔案 (或) 資料夾路徑。 當資料夾路徑與屬性一起指定時 `sql-files` ，每個來源檔案都會在指定的資料夾下建立對應的目標 t-sql 檔案。 當資料夾路徑與屬性一併指定時 `sql` ，已轉換的 t-sql 會寫入名為**Result**的檔案中指定的資料夾底下。  
   
 -   `sql`指定要轉換的 DB2 sql 語句，可以使用 ";" 分隔一或多個語句  
   
 -   `sql-files`指定必須轉換成 T-sql 程式碼之 sql 檔案的路徑。  
   
--   `write-summary-report-to`指定將產生報告的路徑。 如果只提及資料夾路徑，則會建立依名稱**ConvertSQLReport**的檔案。 （選擇性屬性）  
+-   `write-summary-report-to`指定將產生報告的路徑。 如果只提及資料夾路徑，則會建立依名稱**ConvertSQLReport.XML**檔案。  (選擇性屬性)   
   
     報表建立還有2個進一步的子類別，視覺效果 ...：  
   
-    -   報告-錯誤（= "true/false"，預設值為 "false" （選擇性屬性））。  
+    -   報告-錯誤 (= "true/false"，預設值為 "false" (選擇性屬性) # A3。  
   
-    -   verbose （= "true/false"，預設值為 "false" （選擇性屬性））。  
+    -   verbose (= "true/false"，預設值為 "false" (選擇性屬性) # A3。  
   
 **指令碼**  
   

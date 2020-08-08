@@ -1,5 +1,5 @@
 ---
-title: 轉換 DB2 架構（DB2ToSQL） |Microsoft Docs
+title: 將 DB2 架構轉換 (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,20 +7,20 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 7a16a28a163acece321cc2229e9988cf7ab01f9e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 13afcabf85515b211d8493990a59950dc97d72f5
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67989872"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933909"
 ---
-# <a name="converting-db2-schemas-db2tosql"></a>轉換 DB2 架構（DB2ToSQL）
-連接到 DB2、連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並設定專案和資料對應選項之後，您可以將 DB2 資料庫物件轉換成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫物件。  
+# <a name="converting-db2-schemas-db2tosql"></a>將 DB2 架構轉換 (DB2ToSQL) 
+連接到 DB2、連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並設定專案和資料對應選項之後，您可以將 DB2 資料庫物件轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫物件。  
   
 ## <a name="the-conversion-process"></a>轉換程式  
-轉換資料庫物件會從 DB2 取得物件定義，將它們轉換成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]類似的物件，然後將此資訊載入至 SSMA 中繼資料。 它不會將資訊載入的實例中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 接著，您可以使用 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料瀏覽器] 來查看物件及其屬性。  
+轉換資料庫物件會從 DB2 取得物件定義，將它們轉換成類似 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的物件，然後將此資訊載入至 SSMA 中繼資料。 它不會將資訊載入的實例中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 接著，您可以使用 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中繼資料瀏覽器] 來查看物件及其屬性。  
   
 在轉換期間，SSMA 會將輸出訊息列印到 [輸出] 窗格，並在 [錯誤清單] 窗格中顯示錯誤訊息。 使用輸出和錯誤資訊來判斷您是否必須修改您的 DB2 資料庫或轉換程式，以取得所需的轉換結果。  
   
@@ -28,14 +28,14 @@ ms.locfileid: "67989872"
 在轉換物件之前，請先查看 [**專案設定**] 對話方塊中的 [專案轉換] 選項。 藉由使用此對話方塊，您可以設定 SSMA 如何轉換函式和全域變數。 如需詳細資訊，請參閱[&#40;轉換&#41; &#40;DB2ToSQL&#41;的專案設定](../../ssma/db2/project-settings-conversion-db2tosql.md)。  
   
 ## <a name="conversion-results"></a>轉換結果  
-下表顯示轉換的 DB2 物件，以及產生[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的物件：  
+下表顯示轉換的 DB2 物件，以及產生的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件：  
   
 |DB2 物件|產生 SQL Server 物件|  
 |-----------|----------------------------|  
-|資料類型|**SSMA 會對應每種類型，但以下所列內容除外：**<br /><br />CLOB：不支援使用此類型的某些原生函式（例如 CLOB_EMPTY （））<br /><br />BLOB：不支援使用此類型的某些原生函式（例如 BLOB_EMPTY （））<br /><br />DBLOB：不支援使用此類型的某些原生函式（例如 DBLOB_EMPTY （））|  
+|資料類型|**SSMA 會對應每種類型，但以下所列內容除外：**<br /><br />CLOB：不支援使用此類型的某些原生函式 (例如 CLOB_EMPTY ( # A2 # A3<br /><br />BLOB：不支援使用此類型的某些原生函式 (例如 BLOB_EMPTY ( # A2 # A3<br /><br />DBLOB：不支援使用此類型的某些原生函式 (例如 DBLOB_EMPTY ( # A2 # A3|  
 |使用者定義類型|**SSMA 對應下列使用者定義的：**<br /><br />相異類型<br /><br />結構化類型<br /><br />SQL PL 資料類型-注意：不支援弱式資料指標類型。|  
 |特殊暫存器|**SSMA 只會對應下面列出的暫存器：**<br /><br />目前時間戳記<br /><br />目前日期<br /><br />目前時間<br /><br />目前的時區<br /><br />目前使用者<br /><br />SESSION_USER 和使用者<br /><br />SYSTEM_USER<br /><br />目前的 CLIENT_APPLNAME<br /><br />目前的 CLIENT_WRKSTNNAME<br /><br />目前的鎖定超時<br /><br />目前的架構<br /><br />目前的伺服器<br /><br />目前的隔離<br /><br />其他特殊暫存器未對應至 SQL server 語義。|  
-|CREATE TABLE|**SSMA 對應 CREATE TABLE，但有下列例外狀況：**<br /><br />多維度叢集（MDC）資料表<br /><br />範圍-叢集資料表（.RCT）<br /><br />資料分割資料表<br /><br />卸離資料表<br /><br />資料捕獲子句<br /><br />隱含隱藏的選項<br /><br />VOLATILE 選項|  
+|CREATE TABLE|**SSMA 對應 CREATE TABLE，但有下列例外狀況：**<br /><br />多維度叢集 (MDC) 資料表<br /><br />範圍叢集資料表 (.RCT) <br /><br />資料分割資料表<br /><br />卸離資料表<br /><br />資料捕獲子句<br /><br />隱含隱藏的選項<br /><br />VOLATILE 選項|  
 |CREATE VIEW|SSMA map CREATE VIEW with [WITH LOCAL CHECK OPTION]，但其他選項未對應至 SQL server 語義|  
 |CREATE INDEX|**SSMA 對應建立索引，但有下列例外狀況：**<br /><br />XML 索引<br /><br />不含重迭選項的 BUSINESS_TIME<br /><br />資料分割子句<br /><br />僅限規格選項<br /><br />擴充使用選項<br /><br />MINPCTUSED 選項<br /><br />分頁分割選項|  
 |觸發程序|**SSMA 會對應下列觸發程式的語義：**<br /><br />每個資料列觸發程式之後/<br /><br />/FOR 每個語句觸發程式之後<br /><br />每個資料列之前/之前，而不是每個資料列觸發程式|  
@@ -47,9 +47,9 @@ ms.locfileid: "67989872"
 |MERGE 陳述式|**SSMA maps MERGE 具有下列例外狀況：**<br /><br />單一與多次出現的每個子句-會對應至每個子句的有限出現次數的 SQL server 語義<br /><br />信號子句-未對應至 SQL Server 的語義<br /><br />混合的 UPDATE 和 DELETE 子句-不會對應到 SQL Server 的語義<br /><br />Period-子句-不會對應至 SQL Server 的語義|  
 |DELETE 子句|**SSMA 對應刪除，但有下列例外狀況：**<br /><br />僅限資料表參考子句-資料表參考未對應至 SQL server 語義<br /><br />Period 子句-未對應至 SQL Server 的語義|  
 |隔離等級和鎖定類型|已對應。|  
-|程式（SQL）|已對應。|  
-|程式（外部）|需要手動更新。|  
-|程式（來源）|請勿對應至 SQL Server 的語義。|  
+| (SQL) 的程式|已對應。|  
+| (外部) 的程式|需要手動更新。|  
+| (來源的程式) |請勿對應至 SQL Server 的語義。|  
 |指派語句|已對應。|  
 |程式的 CALL 語句|已對應。|  
 |CASE 陳述式|已對應。|  
@@ -143,7 +143,7 @@ ms.locfileid: "67989872"
   
 -   您可以修改 DB2 資料庫中的物件，以移除或修改有問題的程式碼。 若要將更新的程式碼載入至 SSMA，您必須更新中繼資料。 如需詳細資訊，請參閱[連接到 DB2 資料庫 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)。  
   
--   您可以從遷移中排除物件。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [中繼資料瀏覽器] 和 [Db2 中繼資料 explorer] 中，清除專案旁的複選[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]框，然後再將物件載入和從 DB2 遷移資料。  
+-   您可以從遷移中排除物件。 在 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中繼資料瀏覽器] 和 [Db2 中繼資料 explorer] 中，清除專案旁的核取方塊，然後再將物件載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和從 DB2 遷移資料。  
   
 ## <a name="next-step"></a>後續步驟  
 遷移程式的下一個步驟是將已[轉換的物件載入 SQL Server](https://msdn.microsoft.com/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3)。  

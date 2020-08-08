@@ -1,5 +1,5 @@
 ---
-title: 執行 SSMA 主控台（AccessToSQL） |Microsoft Docs
+title: 執行 SSMA 主控台 (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: aa1bf665-8dc0-4259-b36f-46ae67197a43
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 97425a6795889f72b329280ff70f9638378e7799
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c10360a252847aec9f65b9e6e1709b9fbffecce4
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006566"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933949"
 ---
-# <a name="executing-the-ssma-console-accesstosql"></a>執行 SSMA 主控台（AccessToSQL）
+# <a name="executing-the-ssma-console-accesstosql"></a>執行 SSMA 主控台 (AccessToSQL) 
 Microsoft 為您提供了一組健全的腳本檔案命令和命令列選項，以執行和控制 SSMA 活動。 後續章節會詳細說明相同的情況。  
   
 ## <a name="project--script-file-commands"></a>專案指令檔命令  
@@ -50,7 +50,7 @@ Microsoft 為您提供了一組健全的腳本檔案命令和命令列選項，�
   
     預設值為 "sql-server-2008"。  
   
-**範例：**  
+**範例︰**  
   
 ```xml  
 <create-new-project  
@@ -90,7 +90,7 @@ open-project：開啟現有的專案。
   
 />  
 ```  
-**注意：** 適用于 Access 主控台應用程式的 SSMA 支援回溯相容性。 您將能夠開啟先前版本 SSMA 所建立的專案。  
+**注意：** 適用于 Access 主控台應用程式的 SSMA 支援回溯相容性。 您可以開啟先前版本的 SSMA 所建立的專案。  
   
 **命令**  
   
@@ -129,15 +129,15 @@ open-project：開啟現有的專案。
   
 如需「建立腳本檔」的詳細資訊，請參閱[&#40;AccessToSQL&#41;建立腳本](../../ssma/access/creating-script-files-accesstosql.md)檔。  
   
-**命令**  
+**命令**
   
 連接-來源-資料庫  
   
--   執行源資料庫的連接，並載入源資料庫的高層級中繼資料，但不是所有中繼資料。  
+- 執行源資料庫的連接，並載入源資料庫的高階中繼資料，但不是所有中繼資料。  
   
--   如果無法建立與來源的連接，則會產生錯誤，而且主控台應用程式會停止執行。  
+- 如果無法建立與來源的連接，則會產生錯誤，而且主控台應用程式會停止執行。  
   
-**指令碼**  
+**指令碼**
   
 伺服器定義是從伺服器連接檔案或腳本檔案之伺服器區段中的每個連接所定義的名稱屬性來抓取。  
   
@@ -204,26 +204,27 @@ open-project：開啟現有的專案。
   
 重新連接-來源-資料庫  
   
--   重新連接至源資料庫，但不會載入任何中繼資料，而不像連接-來源資料庫命令。  
+- 重新連接至源資料庫，但不會載入任何中繼資料，與連接來源資料庫命令不同。  
   
--   如果無法建立與來源的（re）連線，就會產生錯誤，而且主控台應用程式會停止執行。  
+- 如果無法建立與來源的 (重新) 連接，就會產生錯誤，而且主控台應用程式會停止執行。  
   
-**指令碼**  
+**指令碼**
   
 **語法範例：**  
   
 ```xml  
 <reconnect-source-database  server="<server-unique-name>"/>  
-```  
-**命令**  
+```
+
+**命令**
   
 連接-目標-資料庫  
   
--   連接到目標 SQL Server 或 SQL Azure 資料庫，並載入目標資料庫的高階中繼資料，而不是整個中繼資料。  
+- 連接到目標 SQL Server 或 SQL Azure 資料庫，並載入目標資料庫的高階中繼資料，而不是完全的中繼資料。  
   
--   如果無法建立與目標的連接，則會產生錯誤，而且主控台應用程式會停止執行。  
+- 如果無法建立與目標的連接，則會產生錯誤，而且主控台應用程式會停止執行。  
   
-**指令碼**  
+**指令碼**
   
 伺服器定義是從伺服器連接檔案或腳本檔案之伺服器區段中的每個連接所定義的名稱屬性來抓取。  
   
@@ -232,56 +233,58 @@ open-project：開啟現有的專案。
 ```xml  
 <connect-target-database  server="<server-unique-name>"/>  
 ```  
-**命令**  
+
+**命令**
   
 重新連接-目標-資料庫  
   
--   會重新連接至目標資料庫，但不會載入任何中繼資料，不同于連接目標資料庫命令。  
+- 會重新連接至目標資料庫，但不會載入任何中繼資料，不同于連接目標資料庫命令。  
   
--   如果無法建立（re）與目標的連接，則會產生錯誤，而且主控台應用程式會停止執行。  
+- 如果無法建立 (重新) 與目標的連接，就會產生錯誤，而且主控台應用程式會停止執行。  
   
-**指令碼**  
+**指令碼**
   
 **語法範例：**  
   
 ```xml  
 <reconnect-target-database  server="<server-unique-name>"/>  
 ```  
-  
-## <a name="report-script-file-commands"></a>報表指令檔命令  
-報告命令會針對各種 SSMA 主控台活動的效能產生報告。  
-  
-**命令**  
+
+## <a name="report-script-file-commands"></a>報表指令檔命令
+
+報告命令會產生各種 SSMA 主控台活動的效能報告
+
+**命令**
   
 產生-評量-報告  
   
--   在源資料庫上產生評量報告。  
+- 在源資料庫上產生評量報告。  
   
--   如果在執行此命令之前未執行源資料庫連接，則會產生錯誤並結束主控台應用程式。  
+- 如果在執行此命令之前未執行源資料庫連接，則會產生錯誤並結束主控台應用程式。  
   
--   在命令執行期間無法連接到源資料庫伺服器，也會導致終止主控台應用程式。  
+- 在命令執行期間無法連接到源資料庫伺服器，也會導致結束主控台應用程式。  
   
-**指令碼**  
+**指令碼**
+
+- `assessment-report-folder:`指定可儲存評量報告的資料夾。 (選用屬性)   
   
--   `assessment-report-folder:`指定可儲存評量報告的資料夾。（選擇性屬性）  
+- `object-name:`指定) 用於評估報告產生的物件 (s (它可以有個別的物件名稱或群組物件名稱) 。  
   
--   `object-name:`指定針對評估報告產生所考慮的物件（它可以有個別物件名稱或群組物件名稱）。  
+- `object-type:`指定物件名稱屬性中指定的物件類型 (如果指定了物件類別，則物件類型將會是 "category" ) 。  
   
--   `object-type:`指定物件名稱屬性中指定之物件的類型（如果指定了物件類別，則物件類型將會是 "category"）。  
+- `assessment-report-overwrite:`指定是否要覆寫評估報告資料夾（如果已經存在）。  
   
--   `assessment-report-overwrite:`指定是否要覆寫評估報告資料夾（如果已經存在）。  
+    **預設值：** false。  (選擇性屬性)   
   
-    **預設值：** false。 （選擇性屬性）  
+- `write-summary-report-to:`指定將產生報告的路徑。  
   
--   `write-summary-report-to:`指定將產生報告的路徑。  
-  
-    如果只提及資料夾路徑，則依名稱**&lt;AssessmentReport n&gt;。** 已建立 XML。 （選擇性屬性）  
+    如果只提及資料夾路徑，則依名稱**AssessmentReport &lt; n &gt; 。** 已建立 XML。  (選擇性屬性)   
   
     報表建立有兩個進一步的子類別：  
   
-    -   `report-errors`（= "true/false"，預設值為 "false" （選擇性屬性））  
+    - `report-errors` (= "true/false"，預設值為 "false" (選擇性屬性) # A3  
   
-    -   `verbose`（= "true/false"，預設值為 "false" （選擇性屬性））  
+    - `verbose` (= "true/false"，預設值為 "false" (選擇性屬性) # A3  
   
 **語法範例：**  
   
@@ -303,8 +306,9 @@ open-project：開啟現有的專案。
   conversion-report-overwrite="<true/false>"   (optional)  
   
 />  
-```  
-或  
+```
+
+或
   
 ```xml  
 <generate-assessment-report  
@@ -321,40 +325,41 @@ open-project：開啟現有的專案。
 </generate-assessment-report>  
 ```  
   
-## <a name="migration-script-file-commands"></a>遷移腳本檔案命令  
+## <a name="migration-script-file-commands"></a>遷移腳本檔案命令
+
 遷移命令會將目標資料庫架構轉換成來源架構，並將資料移轉至目標伺服器。  
   
 遷移命令的預設主控台輸出設定是「完整」輸出報告，沒有詳細的錯誤報表： [僅限來源物件樹狀結構根節點的摘要]。  
   
-**命令**  
-  
+**命令**
+
 轉換-架構  
   
--   執行從來源到目標架構的架構轉換。  
+- 執行從來源到目標架構的架構轉換。  
   
--   如果在執行此命令之前未執行來源或目標資料庫連接，或來源或目標資料庫伺服器的連接在命令執行期間失敗，則會產生錯誤並結束主控台應用程式。  
+- 如果在執行此命令之前未執行來源或目標資料庫連接，或來源或目標資料庫伺服器的連接在命令執行期間失敗，則會產生錯誤並結束主控台應用程式。  
   
-**指令碼**  
+**指令碼**
+
+- `conversion-report-folder:`指定可儲存評量報告的資料夾。 (選用屬性)   
   
--   `conversion-report-folder:`指定可儲存評量報告的資料夾。（選擇性屬性）  
+- `object-name:`指定 (s 的來源物件) 考慮轉換架構 (它可以有個別物件名稱或) 的群組物件名稱。  
   
--   `object-name:`指定轉換架構時所考慮的來源物件（它可以有個別物件名稱或群組物件名稱）。  
+- `object-type:`指定物件名稱屬性中指定的物件類型 (如果指定了物件類別，則物件類型將會是 "category" ) 。  
   
--   `object-type:`指定物件名稱屬性中指定之物件的類型（如果指定了物件類別，則物件類型將會是 "category"）。  
+- `conversion-report-overwrite:`指定是否要覆寫評估報告資料夾（如果已經存在）。  
   
--   `conversion-report-overwrite:`指定是否要覆寫評估報告資料夾（如果已經存在）。  
+    **預設值：** false。  (選擇性屬性)   
   
-    **預設值：** false。 （選擇性屬性）  
+- `write-summary-report-to:`指定將產生報告的路徑。  
   
--   `write-summary-report-to:`指定將產生報告的路徑。  
-  
-    如果只提及資料夾路徑，則依名稱**&lt;SchemaConversionReport n&gt;。** 已建立 XML。 （選擇性屬性）  
+    如果只提及資料夾路徑，則依名稱**SchemaConversionReport &lt; n &gt; 。** 已建立 XML。  (選擇性屬性)   
   
     報表建立有兩個進一步的子類別：  
   
-    -   `report-errors`（= "true/false"，預設值為 "false" （選擇性屬性））  
+    - `report-errors` (= "true/false"，預設值為 "false" (選擇性屬性) # A3  
   
-    -   `verbose`（= "true/false"，預設值為 "false" （選擇性屬性））  
+    - `verbose` (= "true/false"，預設值為 "false" (選擇性屬性) # A3  
   
 **語法範例：**  
   
@@ -375,7 +380,8 @@ open-project：開啟現有的專案。
   conversion-report-overwrite="<true/false>"      (optional)  
   
 />  
-```  
+```
+
 或  
   
 ```xml  
@@ -390,28 +396,29 @@ open-project：開啟現有的專案。
     object-type="category"/>  
   
 </convert-schema>  
-```  
-**命令**  
+```
+
+**命令**
   
 遷移-資料  
   
-1.  將源資料移轉至目標。  
+- 將源資料移轉至目標。  
   
-**指令碼**  
+**指令碼**
   
--   `object-name:`指定要用來遷移資料的來源物件（它可以有個別物件名稱或群組物件名稱）。  
+- `object-name:`指定 (s 的來源物件) 考慮遷移資料 (它可以有個別的物件名稱或群組物件名稱) 。  
   
--   `object-type:`指定物件名稱屬性中指定之物件的類型（如果指定了物件類別，則物件類型將會是 "category"）。  
+- `object-type:`指定物件名稱屬性中指定的物件類型 (如果指定了物件類別，則物件類型將會是 "category" ) 。  
   
--   `write-summary-report-to:`指定將產生報告的路徑。  
+- `write-summary-report-to:`指定將產生報告的路徑。  
   
-    如果只提及資料夾路徑，則依名稱**&lt;DataMigrationReport n&gt;。** 已建立 XML。 （選擇性屬性）  
+    如果只提及資料夾路徑，則依名稱**DataMigrationReport &lt; n &gt; 。** 已建立 XML。  (選擇性屬性)   
   
     報表建立有兩個進一步的子類別：  
   
-    -   `report-errors`（= "true/false"，預設值為 "false" （選擇性屬性））  
+    - `report-errors` (= "true/false"，預設值為 "false" (選擇性屬性) # A3  
   
-    -   `verbose`（= "true/false"，預設值為 "false" （選擇性屬性））  
+    - `verbose` (= "true/false"，預設值為 "false" (選擇性屬性) # A3  
   
 **語法範例：**  
   
@@ -435,7 +442,8 @@ open-project：開啟現有的專案。
       target-use-last-used="true"/target-server="<server-unique-name>"/>  
   
 </migrate-data>  
-```  
+```
+
 或  
   
 ```xml  
@@ -448,13 +456,14 @@ open-project：開啟現有的專案。
   write-summary-report-to="<filepath/folder>"  
   
   report-errors="true" verbose="true"/>  
-```  
-**命令**  
+```
+
+**命令**
   
-連結資料表：這個命令會將來源（存取）資料表連結到目標資料表。  
+連結資料表：這個命令會將來源 (存取) 資料表連結到目標資料表。  
   
-**指令碼**  
-  
+**指令碼**
+
 **語法範例：**  
   
 ```xml  
@@ -465,7 +474,8 @@ open-project：開啟現有的專案。
   <metabase-object object-name="AccessDatabase.table2" object-type="Tables"/>  
   
 </link-tables>  
-```  
+```
+
 或  
   
 ```xml  
@@ -474,12 +484,13 @@ open-project：開啟現有的專案。
   <metabase-object object-name="AccessDatabase.Tables" object-type="category"/>  
   
 </link-tables>  
-```  
-**命令**  
+```
+
+**命令**
   
-取消連結-資料表：這個命令會將來源（存取）資料表與目標資料表取消連結。  
+取消連結-資料表：這個命令會將來源 (存取與目標資料表中) 資料表。  
   
-**指令碼**  
+**指令碼**
   
 **語法範例：**  
   
@@ -491,7 +502,8 @@ open-project：開啟現有的專案。
   <metabase-object object-name="AccessDatabase.table2" object-type="Tables"/>  
   
 </unlink-tables>  
-```  
+```
+
 或  
   
 ```xml  
@@ -502,18 +514,19 @@ open-project：開啟現有的專案。
 </unlink-tables>  
 ```  
   
-## <a name="migration-preparation-script-file-commands"></a>遷移準備腳本檔案命令  
-[遷移準備] 命令會起始來源與目標資料庫之間的架構對應。  
+## <a name="migration-preparation-script-file-commands"></a>遷移準備腳本檔案命令
+
+[遷移準備] 命令會啟動來源與目標資料庫之間的架構對應。  
   
-**命令**  
+**命令**
   
 對應架構：源資料庫與目標架構的架構對應。  
   
-**指令碼**  
+**指令碼**
   
--   `source-schema`指定我們想要遷移的來源架構。  
+- `source-schema`指定我們想要遷移的來源架構。  
   
--   `sql-server-schema`指定要在其中遷移的目標架構。  
+- `sql-server-schema`指定要在其中遷移的目標架構。  
   
 **語法範例：**  
   
@@ -523,36 +536,37 @@ open-project：開啟現有的專案。
             sql-server-schema="target-schema"/>  
 ```  
   
-## <a name="manageability-commands"></a>管理性命令  
+## <a name="manageability-commands"></a>管理性命令
+
 管理性命令有助於同步處理目標資料庫物件與源資料庫。  
   
 遷移命令的預設主控台輸出設定是「完整」輸出報告，沒有詳細的錯誤報表： [僅限來源物件樹狀結構根節點的摘要]。  
   
-**命令**  
-  
+**命令**
+
 同步處理-目標  
   
-1.  同步處理目標物件與目標資料庫。  
+- 同步處理目標物件與目標資料庫。  
   
-2.  如果此命令是針對源資料庫執行，就會發生錯誤。  
+- 如果此命令是針對源資料庫執行，您會收到錯誤。  
   
-3.  如果在執行此命令之前未執行目標資料庫連接，或與目標資料庫伺服器的連接在命令執行期間失敗，則會產生錯誤並結束主控台應用程式。  
+- 如果在執行此命令之前未執行目標資料庫連接，或與目標資料庫伺服器的連接在命令執行期間失敗，則會產生錯誤並結束主控台應用程式。  
   
-**指令碼**  
+**指令碼**
   
-1.  `object-name:`指定與目標資料庫進行同步處理時所考慮的目標物件（可以有個別物件名稱或群組物件名稱）。  
+- `object-name:`指定 (s 的目標物件) 視為與目標資料庫同步處理 (它可以有個別物件名稱或) 的群組物件名稱。  
   
-2.  `object-type:`指定物件名稱屬性中指定之物件的類型（如果指定了物件類別，則物件類型將會是 "category"）。  
+- `object-type:`指定物件名稱屬性中指定的物件類型 (如果指定了物件類別，則物件類型將會是 "category" ) 。  
   
-3.  `on-error:`指定是否要將同步處理錯誤指定為警告或錯誤。 發生錯誤的可用選項：  
+- `on-error:`指定是否要將同步處理錯誤指定為警告或錯誤。 發生錯誤的可用選項：  
   
-    -   報告--as 警告  
+    - 報告--as 警告  
   
-    -   報告-每個警告  
+    - 報告-每個警告  
   
-    -   fail-腳本  
+    - fail-腳本  
   
-4.  `report-errors-to:`指定同步處理作業的錯誤報表位置（選擇性屬性）。如果只指定資料夾路徑，則會建立依名稱**TargetSynchronizationReport**的檔案。  
+- `report-errors-to:`指定同步處理作業的錯誤報表位置 (選擇性屬性) 如果只指定資料夾路徑，則會建立依名稱**TargetSynchronizationReport.XML**的檔案。  
   
 **語法範例：**  
   
@@ -570,7 +584,8 @@ open-project：開啟現有的專案。
   report-errors-to="<file-name>"        (optional)  
   
 />  
-```  
+```
+
 或  
   
 ```xml  
@@ -579,7 +594,8 @@ open-project：開啟現有的專案。
   object-name="ssma.dbo.Procedures"  
   
   object-type="category"/>  
-```  
+```
+
 或  
   
 ```xml  
@@ -592,32 +608,33 @@ open-project：開啟現有的專案。
   <metabase-object object-name="ssma.dbo.TT3"/>  
   
 </synchronize-target>  
-```  
-**命令**  
+```
+
+**命令**
   
 從資料庫重新整理  
   
--   從資料庫重新整理來源物件。  
+- 從資料庫重新整理來源物件。  
   
--   如果此命令是針對目標資料庫執行，則會產生錯誤。  
+- 如果此命令是針對目標資料庫執行，則會產生錯誤。  
   
-**指令碼**  
+**指令碼**
   
 需要一個或數個資料庫節點做為命令列參數。  
   
-1.  `object-name:`指定從源資料庫重新整理時所考慮的來源物件（可以有個別物件名稱或群組物件名稱）。  
+- `object-name:`指定來源物件 (s) 考慮從源資料庫重新整理， (它可以有個別的物件名稱或群組物件名稱) 。  
   
-2.  `object-type:`指定物件名稱屬性中指定之物件的類型（如果指定了物件類別，則物件類型將會是 "category"）。  
+- `object-type:`指定物件名稱屬性中指定的物件類型 (如果指定了物件類別，則物件類型將會是 "category" ) 。  
   
-3.  `on-error:`指定是否將重新整理錯誤指定為警告或錯誤。 發生錯誤的可用選項：  
+- `on-error:`指定是否將重新整理錯誤指定為警告或錯誤。 發生錯誤的可用選項：  
   
-    -   報告--as 警告  
+    - 報告--as 警告  
   
-    -   報告-每個警告  
+    - 報告-每個警告  
   
-    -   fail-腳本  
+    - fail-腳本  
   
-4.  `report-errors-to:`指定重新整理作業的錯誤報表位置（選擇性屬性）。如果只指定資料夾路徑，則會建立依名稱**SourceDBRefreshReport**的檔案。  
+- `report-errors-to:`指定將重新整理作業的錯誤報表位置 (選擇性屬性) 如果只指定資料夾路徑，則會建立依名稱**SourceDBRefreshReport.XML**的檔案。  
   
 **語法範例：**  
   
@@ -635,7 +652,8 @@ open-project：開啟現有的專案。
   report-errors-to="<file-name>"        (optional)  
   
 />  
-```  
+```
+
 或  
   
 ```xml  
@@ -644,7 +662,8 @@ open-project：開啟現有的專案。
   object-name="ssma.Procedures"  
   
   object-type="category"/>  
-```  
+```
+
 或  
   
 ```xml  
@@ -655,28 +674,29 @@ open-project：開啟現有的專案。
 </refresh-from-database>  
 ```  
   
-## <a name="script-generation-script-file-commands"></a>腳本產生腳本檔案命令  
+## <a name="script-generation-script-file-commands"></a>腳本產生腳本檔案命令
+
 腳本產生命令有助於將主控台輸出儲存在腳本檔案中。  
   
-**命令**  
+**命令**
   
 另存新檔-腳本  
   
 用來將物件的腳本儲存到當 [中繼資料 = 目標] 時所提到的檔案，這是同步處理命令的替代方法，其中，我們會取得腳本，並在目標資料庫上執行相同的作業。  
   
-**指令碼**  
+**指令碼**
   
 需要一個或數個資料庫節點做為命令列參數。  
   
--   `object-name:`指定要儲存其腳本的物件。 （它可以有個別的物件名稱或群組物件名稱）  
+- `object-name:`指定要儲存腳本 (s) 的物件。  (可以有個別的物件名稱或群組物件名稱)   
   
--   `object-type:`指定物件名稱屬性中指定之物件的類型（如果指定了物件類別，則物件類型將會是 "category"）。  
+- `object-type:`指定物件名稱屬性中指定的物件類型 (如果指定了物件類別，則物件類型將會是 "category" ) 。  
   
--   `metabase:`指定它是否為來源或目標元資料庫。  
+- `metabase:`指定它是否為來源或目標元資料庫。  
   
--   `destination:`指定要儲存腳本的路徑或資料夾，如果未指定檔案名，則為格式的檔案名（object_name 屬性值）。  
+- `destination:`指定要儲存腳本的路徑或資料夾;如果未指定檔案名，則格式 (object_name 屬性值的檔案名) 。  
   
--   `overwrite:`如果為 true，則會覆寫是否有相同的檔案名。 它可以有值（true/false）。  
+- `overwrite:`如果為 true，則會覆寫相同的檔案名是否存在。 它可以有 (true/false) 的值。  
   
 **語法範例：**  
   
@@ -694,7 +714,8 @@ open-project：開啟現有的專案。
   overwrite="<true/false>"             (optional)  
   
 />  
-```  
+```
+
 或  
   
 ```xml  
@@ -711,16 +732,16 @@ open-project：開啟現有的專案。
 </save-as-script>  
 ```  
   
-## <a name="next-step"></a>後續步驟  
+## <a name="next-steps"></a>後續步驟
+
 如需命令列選項的詳細資訊，請參閱[SSMA 主控台中的命令列選項 &#40;AccessToSQL&#41;](../../ssma/access/command-line-options-in-ssma-console-accesstosql.md) 。  
   
 如需範例主控台腳本檔案的詳細資訊，請參閱[使用範例主控台腳本 FILESEXECUTING SSMA 主控台 &#40;AccessToSQL&#41;](../../ssma/access/working-sample-console-script-filesexecuting-ssma-console-accesstosql.md)  
   
 下一步取決於您的專案需求：  
   
--   如需指定密碼或匯出/匯入密碼，請參閱[&#40;AccessToSQL&#41;管理密碼](../../ssma/access/managing-passwords-accesstosql.md)。  
+- 如需指定密碼或匯出/匯入密碼，請參閱[&#40;AccessToSQL&#41;管理密碼](../../ssma/access/managing-passwords-accesstosql.md)。  
   
--   如需產生報表，請參閱[&#40;AccessToSQL&#41;產生報表](../../ssma/access/generating-reports-accesstosql.md)。  
+- 如需產生報表，請參閱[&#40;AccessToSQL&#41;產生報表](../../ssma/access/generating-reports-accesstosql.md)。  
   
--   如需主控台的疑難排解問題，請參閱[&#40;AccessToSQL&#41;的疑難排解](../../ssma/access/troubleshooting-accesstosql.md)。  
-  
+- 如需主控台的疑難排解問題，請參閱[&#40;AccessToSQL&#41;的疑難排解](../../ssma/access/troubleshooting-accesstosql.md)。  

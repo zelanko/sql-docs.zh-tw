@@ -1,5 +1,5 @@
 ---
-title: Advanced 物件選取範圍（AccessToSQL） |Microsoft Docs
+title: " (AccessToSQL) 的 Advanced 物件選取專案 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 4d2b367f-8ac7-4534-b66f-10300ef64ebc
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d65cac7c857e8b6357dc31ca130dcdbdaa43b58f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 42042451cb0b2197dd54270d4eca1bb990eb233d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910707"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934049"
 ---
-# <a name="advanced-object-selection--accesstosql"></a>Advanced 物件選取專案（AccessToSQL）
+# <a name="advanced-object-selection--accesstosql"></a> (AccessToSQL) 的 Advanced 物件選取範圍
 [**高級物件區段**] 對話方塊可讓您使用物件名稱中的字串和子字串來篩選資料庫物件，然後選取或取消選取那些物件。 SSMA 會對選取的物件執行轉換和遷移作業。  
   
 若要存取此對話方塊，請以滑鼠右鍵按一下 [中繼資料瀏覽器]，然後選取 [**先進物件選取專案**]。  

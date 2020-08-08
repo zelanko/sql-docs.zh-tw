@@ -1,5 +1,5 @@
 ---
-title: 正在初始化測試案例（SybaseToSQL） |Microsoft Docs
+title: 將測試案例初始化 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Tester Component,InitializingTest Cases
 ms.assetid: fa0e0797-d1fb-4e56-a5da-8458cc2d2401
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 56d5426b0b05793106724b576f9f012938393d58
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 29e9394e6c88aa671bf32811ccf8ea16b6f5f491
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028994"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934683"
 ---
 # <a name="initializing-test-cases-sybasetosql"></a>將測試案例初始化 (SybaseToSQL)
 在此步驟中，您會指定新測試案例的初始資訊。  

@@ -1,5 +1,5 @@
 ---
-title: 選取並設定受影響的物件（OracleToSQL） |Microsoft Docs
+title: 選取並設定受影響的物件 (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Columns Comparison Settings
 - Selection of Affected Objects
 ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: c06fb621cab581e934ba4655ed6507149d109c60
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 619da90c19cf918b3f53ac6cd213b27e718b6a10
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266498"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932909"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>選取及設定受影響的物件 (OracleToSQL)
 在此頁面中，您可以選取資料表和外鍵，當 SSMA 驗證在上一個步驟中所選物件的執行結果時，應該比較的變更。 此外，您也可以自訂驗證參數。  
@@ -28,20 +28,20 @@ ms.locfileid: "68266498"
   
 如果 SSMA 測試人員無法驗證任何這些物件，您會在 [物件] 樹狀目錄底下看到標示為 [**某些選取的物件**] 的連結包含錯誤。 按一下此連結可查看無法比較這些物件的原因，以及清除錯誤物件的選取專案。  
   
-## <a name="table"></a>Table  
+## <a name="table"></a>資料表  
 [資料表] 索引標籤包含所選資料表的方格視圖。 方格包含下列有關所選資料表的資訊：  
   
 -   資料行名稱  
   
 -   資料類型  
   
--   Precision  
+-   精確度  
   
 -   調整  
   
 -   規則  
   
--   預設  
+-   預設值  
   
 -   身分識別  
   

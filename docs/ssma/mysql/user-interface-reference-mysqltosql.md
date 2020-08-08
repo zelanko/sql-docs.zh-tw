@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2fad3fa2-5729-4b96-99d4-2c6edfab0a54
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 8cbc8606354f6f5ebdcb19c3f14f1717d29ff878
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 2f1b7a495f9962c35f805eec7518c25c50709b68
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863474"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935075"
 ---
 # <a name="user-interface-reference-mysqltosql"></a>使用者介面參考 (MySQLToSQL)
 本節包含適用于 MySQL 之 SQL Server 移轉小幫手 (SSMA) 的說明主題。  

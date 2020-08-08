@@ -1,5 +1,5 @@
 ---
-title: 快速鍵（Sybase 到 SQL） |Microsoft Docs
+title: " (Sybase 至 SQL) 的快速鍵 |Microsoft Docs"
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2dd0d404-383d-4e7e-a492-3eab5ab501d6
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 933563a35d86e51afc34ae19bdd356e43b472227
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: e908db2b229dc35d636ef0f61974d7088d0ec971
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67944614"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934589"
 ---
 # <a name="shortcut-keyssybase-to-sql"></a>快速鍵 (Sybase 到 SQL)
 您可以使用鍵盤快速鍵來流覽 SSMA 應用程式。 如需詳細資訊，請參閱下列主題。  

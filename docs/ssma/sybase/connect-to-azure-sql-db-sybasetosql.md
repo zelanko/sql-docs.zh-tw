@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 96538007-1099-40c8-9902-edd07c5620ee
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 02db151ff7adbc2d2595ed0eeda385c5a0367126
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 50f130969949abd6f863c1a7d63c4a4e2d27decc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864775"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932119"
 ---
 # <a name="connect-to-azure-sql-database--sybasetosql"></a>連接到 Azure SQL Database (SybaseToSQL) 
 使用 [連接到 Azure SQL Database] 對話方塊，即可連接到您要遷移的 Azure SQL Database 資料庫。  
