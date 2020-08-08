@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Installing SSMA 2008, Upgrading
 ms.assetid: e89b45bd-59c1-4d23-8bd7-3dafc1947448
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 236edb86bf1b66393ba441daf06993baea7012a6
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8ac4c45e91ea92d77462227422d649aab1ea789b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87824013"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935489"
 ---
 # <a name="installing-ssma-for-mysql-mysqltosql"></a>安裝 SSMA for MySQL (MySqlToSql)
 適用于 MySQL 的 SQL Server 移轉小幫手 (SSMA) 包含一個用戶端應用程式，可讓您用來執行從 MySQL 到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 的遷移。 它也包含支援資料移轉的延伸模組套件，以及在您遷移的資料庫中使用 MySQL 系統函數的功能。  

@@ -1,5 +1,5 @@
 ---
-title: 使用者介面參考（DB2ToSQL） |Microsoft Docs
+title: 使用者介面參考 (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 29b7aa1a0e7aca34bee82180854a3b2ca63cafb4
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c01e871490f5362e610339c6626252c700eea3f6
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394539"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936515"
 ---
-# <a name="user-interface-reference-db2tosql"></a>使用者介面參考（DB2ToSQL）
-本節包含適用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB2 移轉小幫手（SSMA）的說明主題。  
+# <a name="user-interface-reference-db2tosql"></a> (DB2ToSQL) 的使用者介面參考
+本節包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉小幫手 (SSMA) FOR DB2 的說明主題。  
   
 ## <a name="in-this-section"></a>本節內容  
 下表列出 [SSMA] 對話方塊：  

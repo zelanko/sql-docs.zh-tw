@@ -1,5 +1,5 @@
 ---
-title: SSMA for MySQL 中的新 GUI 功能（MySQLToSQL） |Microsoft Docs
+title: SSMA for MySQL 中的新 GUI 功能 (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 0e59e2dc-1e4a-47c0-a5c3-ae7b5f5e469c
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 4fd1316850a064a8d1aed3d2994642d44111f421
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: b54d407ed77d15e4b79e94b94a24b8021cb7902a
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76909678"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935247"
 ---
 # <a name="new-gui-features-in-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL 中的新 GUI 功能 (MySQLToSQL)
 本章說明 SSMA 使用者介面的新功能  
@@ -54,14 +54,14 @@ ms.locfileid: "76909678"
   
 -   按一下 [SQL] 視窗左側的灰色區域  
   
--   使用 Ctrl + Shift +&lt;0. 9&gt;設定編號的書簽  
+-   使用 Ctrl + Shift + &lt; 0. 9 &gt; 設定編號的書簽  
   
 ### <a name="bookmark-navigation"></a>書簽流覽  
 您可以透過下列方式逐步完成書簽：  
   
 -   在 SQL 視窗頂端使用 [下一個書簽] 和 [上一個書簽] 按鈕  
   
--   使用 Ctrl +&lt;0. 9&gt;來尋找編號的書簽  
+-   使用 Ctrl + &lt; 0. 9 &gt; 來尋找編號的書簽  
   
 -   使用按鈕移至或流覽 [管理書簽] 對話方塊中的來源  
   

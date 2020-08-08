@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 6cf82511b7819b6c7b0451facc85ef35dc8cf9fc
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 7180e123572016661fa4de4a2b38a12f8480d89c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823791"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935987"
 ---
 # <a name="connect-to-azure-sql-database-mysqltosql"></a>連接到 Azure SQL Database (MySQLToSQL) 
-使用 [連接到 SQL Azure] 對話方塊來連接到您想要遷移的 SQL Azure 資料庫。  
+使用 [連接到 SQL Azure] 對話方塊，即可連接至您想要遷移 Azure SQL Database 中的資料庫。  
   
 若要存取此對話方塊，請在 [檔案]**功能表上，選取 [連線****到 SQL Azure]**。 如果您先前已連線，此命令會**重新連接到 SQL Azure。**  
   
@@ -35,7 +35,7 @@ ms.locfileid: "87823791"
   
 **使用者名稱**  
   
-輸入 SSMA 將用來連接到 SQL Azure 資料庫的使用者名稱  
+輸入 SSMA 將用來連接 Azure SQL Database 的使用者名稱  
   
 **密碼**  
   

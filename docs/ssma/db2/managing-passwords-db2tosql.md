@@ -1,5 +1,5 @@
 ---
-title: 管理密碼（DB2ToSQL） |Microsoft Docs
+title: " (DB2ToSQL) 管理密碼 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 07/05/2020
@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 56d546e3-8747-4169-aace-693302667e94
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d872066a2143c0fbe3a6b8a710023d91558422a0
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: af41c1a9eed355d75d5bd3e48886845b9a3069d1
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943150"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936676"
 ---
-# <a name="managing-passwords-db2tosql"></a>管理密碼（DB2ToSQL）
+# <a name="managing-passwords-db2tosql"></a> (DB2ToSQL) 管理密碼
 本節說明如何保護資料庫密碼，以及在伺服器之間匯入或匯出程式的程式：  
   
 1.  保護密碼  

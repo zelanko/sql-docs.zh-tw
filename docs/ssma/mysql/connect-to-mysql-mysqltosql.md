@@ -1,5 +1,5 @@
 ---
-title: 連接到 MySQL （MySQLToSQL） |Microsoft Docs
+title: 連接到 MySQL (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,24 +7,24 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3fe4b59a5131838357d7f58e5333e0ba6b9c80f2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 66ec484ca6bd442f936eb852db48f34c89099d11
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103236"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935977"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>連線到 MySQL (MySQLToSQL)
 使用 [**連接到 mysql** ] 對話方塊，即可連線到您想要遷移的 MySQL 資料庫。  
   
 若要存取此對話方塊，請在 [檔案]**功能表上，選取 [連線****到 MySQL]**。 如果您先前已連線，此命令會**重新連接到 MySQL**。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **提供者**  
   
-可用的 MySQL 提供者為 MySQL ODBC 5.1 驅動程式（受信任）。  
+可用的 MySQL 提供者為 MySQL ODBC 5.1 驅動程式 (信任的) 。  
   
 **Mode**  
   
@@ -34,7 +34,7 @@ ms.locfileid: "68103236"
   
 輸入 MySQL 伺服器名稱。 這是標準模式選項。  
   
-**伺服器通訊埠**  
+**伺服器埠**  
   
 輸入伺服器埠。 預設的伺服器埠是3306。 這是標準模式選項。  
   
@@ -48,16 +48,16 @@ ms.locfileid: "68103236"
   
 **SSL**  
   
-如果您想要安全地連線到 MySQL，請核取 [ **SSL** ] 核取方塊，以使用安全通訊端層（ssl）。  
+如果您想要安全地連線到 MySQL，請核取 [ **ssl** ] 核取方塊，以使用安全通訊端層 (SSL) 。  
   
-**設定**  
+**設定 [報告]**  
   
-它提供選項來設定透過安全通訊端層（SSL）的 MySQL 連線。  
+它提供的選項可透過安全通訊端層 (SSL) 設定 MySQL 的連線。  
   
 > [!NOTE]  
 > 若要**啟用 [設定]**，SSL 必須設定為 [ **True**]。  
   
-當您按一下 [設定] 按鈕時，就會出現對話方塊。 若要在連接到 MySQL 資料庫時使用加密，必須定義對話方塊中的下列三個憑證檔案的路徑 [隱私權增強郵件憑證（PEM）]：  
+當您按一下 [設定] 按鈕時，就會出現對話方塊。 若要在連線到 MySQL 資料庫時使用加密，必須定義對話方塊中的下列三個憑證檔案的路徑 [隱私權增強郵件憑證 (PEM) ]：  
   
 -   **SSL 憑證頒發機構單位：** 指定具有信任 SSL Ca 清單之檔案的路徑。  
   

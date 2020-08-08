@@ -1,5 +1,5 @@
 ---
-title: 轉換設定（MySQLToSQL） |Microsoft Docs
+title: " (MySQLToSQL) 的轉換設定 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: debdd549dc010f7be6b9d9b37a4caf649d4e106a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c34a379f2bd4fd47c31a4b664e8f56cc1ffba2be
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103117"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935822"
 ---
 # <a name="conversion-settings-mysqltosql"></a>轉換設定 (MySQLToSQL)
 [**設定**] 索引標籤可讓使用者設定節點層級設定。 索引標籤會在下列的 [元資料庫] 節點中提供：  
@@ -75,5 +75,5 @@ ms.locfileid: "68103117"
     3.  使用者所做的設定會**在按一下 [** 套用] 按鈕時，儲存在級聯的喜好設定檔案中。  
   
 ## <a name="see-also"></a>另請參閱  
-[專案設定（轉換）（MySQL 到 SQL）](https://msdn.microsoft.com/7ad5fe44-6445-4ba8-a457-5af792631f11)  
+[專案設定 ()  (MySQL 轉換為 SQL) ](https://msdn.microsoft.com/7ad5fe44-6445-4ba8-a457-5af792631f11)  
   

@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Assessment reports
 ms.assetid: 2a56a003-3b0f-453a-963c-00c9e40933ec
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 85923b0252eb24012c12e0c19937e076806b78bd
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: ebfe3523c155d0e1b58281e987341b6f83fcf9ae
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823803"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936275"
 ---
 # <a name="assessing-mysql-databases-for-conversion-mysqltosql"></a>評定 MySQL 資料庫的轉換 (MySQLToSQL)
 在您載入物件並將資料移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 之前，您應該決定遷移的複雜度，以及遷移將會花費多少時間。 SSMA 可以建立評量報告，以顯示將成功轉換的物件百分比。 SSMA 也可讓您查看導致轉換失敗的特定問題。  

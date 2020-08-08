@@ -1,5 +1,5 @@
 ---
-title: 專案設定（遷移）（MySQLToSQL） |Microsoft Docs
+title: " (遷移的專案設定)  (MySQLToSQL) |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 2f3c989626f36c003937723869b5e17d1a405ea9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: fe0c1ac52a72a627cf6b266fdb9636878be85c1a
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67908860"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935197"
 ---
 # <a name="project-settings-migration-mysqltosql"></a>專案設定 (移轉) (MySQLToSQL)
 [**專案設定**] 對話方塊的 [遷移] 頁面包含的設定，可自訂 SSMA 將資料從 MySQL 遷移至 SQL Server 的方式。  
@@ -36,7 +36,7 @@ ms.locfileid: "67908860"
 |**引發觸發程序**|指定 SSMA 是否應該在將資料加入 SQL Server 資料表時，引發插入觸發程式。<br /><br />**預設模式**： False<br /><br />**開放式模式**： False<br /><br />**完整模式**： False|  
 |**保留識別**|指定 SSMA 將資料新增至 SQL Server 時，是否保留 MySQL 身分識別值。 值為 False 會導致目的地指派識別值。<br /><br />**預設模式**： True<br /><br />**開放式模式**： True<br /><br />**完整模式**： True|  
 |**保留 Null**|指定 SSMA 將資料新增至 SQL Server 時，是否在來源資料中保留 null 值，而不論 SQL Server 中指定的預設值為何。<br /><br />**預設模式**： True<br /><br />**開放式模式**： True<br /><br />**完整模式**： True|  
-|**表鎖**|指定 SSMA 是否會在資料移轉期間將資料加入資料表時，鎖定資料表。 取得大量複製作業期間的大量更新鎖定。 如果值為 False，就會在資料列層級設定鎖定。<br /><br />**預設模式**： False<br /><br />**開放式模式**： False<br /><br />**完整模式**： False|  
+|**資料表鎖定**|指定 SSMA 是否會在資料移轉期間將資料加入資料表時，鎖定資料表。 取得大量複製作業期間的大量更新鎖定。 如果值為 False，就會在資料列層級設定鎖定。<br /><br />**預設模式**： False<br /><br />**開放式模式**： False<br /><br />**完整模式**： False|  
   
 ### <a name="data-modification"></a>資料修改  
   
@@ -54,10 +54,10 @@ ms.locfileid: "67908860"
   
 |詞彙|定義|  
 |--------|--------------|  
-|**遷移引擎**|指定資料移轉期間所使用的資料庫引擎。 用戶端資料移轉指的是 SSMA 用戶端從來源抓取資料，並將該資料大量插入 SQL Server。 伺服器端資料移轉指的是在 SQL Server box 上執行的 SSMA 資料移轉引擎（大量複製程式），作為 SQL 代理程式作業，從來源抓取資料並直接插入 SQL Server，因此可避免額外的用戶端躍點（較佳的效能）。<br /><br />**預設模式**：用戶端資料移轉引擎<br /><br />**開放式模式**：用戶端資料移轉引擎<br /><br />**完整模式**：用戶端資料移轉引擎|  
+|**遷移引擎**|指定資料移轉期間所使用的資料庫引擎。 用戶端資料移轉指的是 SSMA 用戶端從來源抓取資料，並將該資料大量插入 SQL Server。 伺服器端資料移轉指的是 SSMA 資料移轉引擎 (大量複製程式) 在 SQL Server box 上執行，作為 SQL 代理程式作業，從來源抓取資料並直接插入 SQL Server，因此可避免額外的用戶端躍點 (較佳的效能) 。<br /><br />**預設模式**：用戶端資料移轉引擎<br /><br />**開放式模式**：用戶端資料移轉引擎<br /><br />**完整模式**：用戶端資料移轉引擎|  
   
 > [!IMPORTANT]  
-> 當 [**遷移引擎**] 選項設定為 [**伺服器端資料移轉引擎**] 時，會顯示新的專案設定選項 [**使用32位伺服器端資料移轉引擎**]。 它會指定是否使用32位或64位大量複製程式（BCP）公用程式來遷移資料。  
+> 當 [**遷移引擎**] 選項設定為 [**伺服器端資料移轉引擎**] 時，會顯示新的專案設定選項 [**使用32位伺服器端資料移轉引擎**]。 它會指定是否使用32位或64位大量複製程式 (BCP) 公用程式來遷移資料。  
   
 ### <a name="misc"></a>其他  
   
@@ -70,7 +70,7 @@ ms.locfileid: "67908860"
   
 |詞彙|定義|  
 |--------|--------------|  
-|**平行資料移轉模式**|指定用來分叉執行緒以啟用平行資料移轉的模式。 在 Auto 模式中，SSMA 會選擇分叉的執行緒數目（預設為10），以遷移資料。 在自訂模式中，使用者可以指定分叉到遷移資料的執行緒數目（最小值為1，最大值為100）。 目前，只有用戶端資料移轉引擎支援平行資料移轉。<br /><br />**預設模式**：自動<br /><br />**開放式模式**：自動<br /><br />**完整模式**：自動|  
+|**平行資料移轉模式**|指定用來分叉執行緒以啟用平行資料移轉的模式。 在 Auto 模式中，SSMA 預設會選擇 (10 的執行緒數目，) 分叉來遷移資料。 在自訂模式中，使用者可以指定分叉到遷移資料的執行緒數目 (最小值為1，而最大值為 100) 。 目前，只有用戶端資料移轉引擎支援平行資料移轉。<br /><br />**預設模式**：自動<br /><br />**開放式模式**：自動<br /><br />**完整模式**：自動|  
   
 > [!IMPORTANT]  
 > 當 [**平行資料移轉模式]** 選項設定為 [**自訂**] 時，會顯示新的專案設定選項 [**執行緒計數**]。 它會指定用於資料移轉的執行緒數目。  

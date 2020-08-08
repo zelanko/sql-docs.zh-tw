@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2793bc33-38d3-46ed-8277-b8580cf78ced
-author: Jtoland
-ms.author: Jtoland
-manager: murato
-ms.openlocfilehash: de1adf21d1a4706fb8e15b3d8ae93ab1f5a95426
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 294c91e0d1fa62c548bc88c834e292ab34ec0015
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863536"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935157"
 ---
 # <a name="sql-server-migration-assistant-for-mysql-mysqltosql"></a>適用于 MySQL 的 SQL Server 移轉小幫手 (MySQLToSQL) 
 

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Connecting to MySQL, MySQL permission
 - Connecting to MySQL,reconnecting
 ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: ff5d88c5269fc1b6e03029004d92a5360b82b65b
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 0246bd83bb7ca75d464452b5b430fbef1bbf128b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87822494"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935834"
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>連線到 MySQL (MySQLToSQL)
 若要將 MySQL 資料庫遷移至 SQL Server 或 SQL Azure，您必須連線到您想要遷移的 MySQL 資料庫。 當您連線時，SSMA 會取得所有 MySQL 架構的相關中繼資料，然後在 [MySQL 中繼資料瀏覽器] 窗格中顯示。 SSMA 會儲存資料庫伺服器的相關資訊，但不會儲存密碼。  

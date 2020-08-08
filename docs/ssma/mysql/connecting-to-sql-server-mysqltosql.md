@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connecting to SQL Server 2008, SQL Server permission
 - connecting to SQL Server 2008, synchronization
 ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: f79784b6498f080b15f1ef370e8a3f31be81a871
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 548433b02590ccacf164e9479690f1adadbbc3c4
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823291"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936210"
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>連線到 SQL Server (MySQLToSQL)
 若要將 MySQL 資料庫遷移至 SQL Server，您必須連接到 SQL Server 的目標實例。 當您連接時，SSMA 會取得 SQL Server 實例中所有資料庫的相關中繼資料，並在 SQL Server 中繼資料瀏覽器中顯示資料庫中繼資料。 SSMA 會儲存您所連接 SQL Server 實例的資訊，但不會儲存密碼。  

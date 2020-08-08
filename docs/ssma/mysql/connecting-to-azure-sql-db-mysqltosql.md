@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Connecting to SQL Azure, SQL Azure permissions
 - Connecting to SQL Azure, synchronization
 ms.assetid: d0b6f16a-1880-459d-a0c7-28b7ef15c56a
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: da3e0d05abf24bdd7100769ecfbb597e2953a9d5
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8e288b91c92d8d086d5b066f95868fa0fa733bb9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87822557"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935929"
 ---
 # <a name="connecting-to-azure-sql-database-mysqltosql"></a>連接到 Azure SQL Database (MySQLToSQL) 
 若要將 MySQL 資料庫遷移至 SQL Azure，您必須連接到 SQL Azure 的目標實例。 當您連接時，SSMA 會取得 SQL Azure 實例中所有資料庫的相關中繼資料，並在 SQL Azure 中繼資料 Explorer 中顯示資料庫中繼資料。 SSMA 會儲存您所連接之 SQL Azure 實例的資訊，但不會儲存密碼。  
@@ -63,7 +63,7 @@ ms.locfileid: "87822557"
 > 適用于 MySQL 的 SSMA 不支援連接到 SQL Azure 中的**master**資料庫。  
   
 ## <a name="synchronizing-sql-azure-metadata"></a>同步處理 SQL Azure 中繼資料  
-SQL Azure 資料庫的相關中繼資料不會自動更新。 當您第一次連線到 SQL Azure 時，或上次手動更新中繼資料時，SQL Azure 中繼資料 Explorer 中的中繼資料就是中繼資料的快照集。 您可以手動更新所有資料庫或任何單一資料庫或資料庫物件的中繼資料。  
+Azure SQL Database 中的資料庫相關中繼資料不會自動更新。 當您第一次連線到 SQL Azure 時，或上次手動更新中繼資料時，SQL Azure 中繼資料 Explorer 中的中繼資料就是中繼資料的快照集。 您可以手動更新所有資料庫或任何單一資料庫或資料庫物件的中繼資料。  
   
 **同步處理中繼資料**  
   
@@ -78,7 +78,7 @@ SQL Azure 資料庫的相關中繼資料不會自動更新。 當您第一次連
 ## <a name="next-step"></a>後續步驟  
 遷移的下一個步驟取決於您的專案需求：  
   
--   若要自訂 MySQL 架構與 SQL Azure 資料庫和架構之間的對應，請參閱[將 Mysql 資料庫對應至 SQL Server 架構 &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
+-   若要自訂 MySQL 架構與 Azure SQL Database 之間的對應，請參閱[將 Mysql 資料庫對應至 SQL Server 架構 &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
   
 -   若要自訂專案的設定選項，請參閱[設定專案選項 &#40;MySQLToSQL&#41;](../../ssma/mysql/setting-project-options-mysqltosql.md)  
   

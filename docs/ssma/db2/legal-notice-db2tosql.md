@@ -1,5 +1,5 @@
 ---
-title: 法律注意事項（DB2toSQL） |Microsoft Docs
+title: " (DB2toSQL) 的法律注意事項 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: d2e558b8-7208-44b4-82b3-4b411a34a8c9
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 2a99cc9b4eaa1ca45d1d72d3cf3fbab6e6b3571e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: bb579ff317bdf829ee39e227cee9bf082451a43d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68141043"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936825"
 ---
-# <a name="legal-notice-db2tosql"></a>法律注意事項（DB2toSQL）
+# <a name="legal-notice-db2tosql"></a>法律注意事項 (DB2toSQL) 
 本文件集 (包括其中所用的範例應用程式) 僅為資訊用途而提供，本文件集亦不提供任何明示或默示之擔保。 本文件集中的資訊，包括 URL 及其他網際網路網站參考資料，如有變更恕不另行通知。 本文件集之使用或因使用本文件集所衍生之一切後果，概由使用者自行承擔所有風險。  
   
 本文件內所含範例的主要目的在於闡釋某個概念，或說明特定陳述式或子句的合理使用。 多數範例並不包含通常可在完整生產系統中找到的所有程式碼，因為已將某些一般資料驗證及錯誤處理部分移除，以將焦點放在範例中的特定概念或陳述上。 這些範例或其中包含的任何原始程式碼並不包含於技術支援的服務範圍之內。  
