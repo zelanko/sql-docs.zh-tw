@@ -20,16 +20,16 @@ ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9346aa6dbf98bbc827b90423f02b5027481f956
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 35f9272b3b11e5c29fe0e2f9068ad458bd5becfa
+ms.sourcegitcommit: 95be98587f6a3730ca75a77676dd952c45e4f53a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196399"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88046876"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 傳回目前資料庫中 (資料表或索引視圖) 之指定資料庫物件的統計資料長條圖 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 類似於 `DBCC SHOW_STATISTICS WITH HISTOGRAM`。
 
@@ -84,7 +84,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 -   *range_high_key* 左邊的實線區域代表資料行值範圍，以及每一個資料行值發生的平均次數 (*average_range_rows*)。 第一個長條圖步驟的 *average_range_rows* 一定是 0。  
   
--   虛線代表用來預估範圍內相異值總數的取樣值 (*distinct_range_rows*) 以及範圍 (*range_rows*) 中的總值數目。 查詢最佳化工具會使用 *range_rows* 和 *distinct_range_rows* 來計算 *average_range_rows*，而且不會儲存取樣值。  
+-   虛線代表用來預估範圍內相異值總數的取樣值 (*distinct_range_rows*) 以及範圍內的值總數 (*range_rows*)。 查詢最佳化工具會使用 *range_rows* 和 *distinct_range_rows* 來計算 *average_range_rows*，而且不會儲存取樣值。  
   
  查詢最佳化工具會根據長條圖步驟的統計重要性來定義長條圖步驟。 它會使用最大值差異演算法，讓長條圖中的步驟數減至最少，同時讓界限值之間的差異最大化。 步驟數的最大值為 200。 長條圖步驟的數目可以少於相異值數目，即使包含了少於 200 個界限點的資料行也是如此。 例如，包含 100 個相異值的資料行可以擁有少於 100 個界限點的長條圖。  
   
