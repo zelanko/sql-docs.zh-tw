@@ -85,12 +85,12 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 78d413af670dd62d3eb761babf1e0df846117c14
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 190f757b7c9849866788646fe3288086d73f8811
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892343"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934374"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>從命令提示字元安裝 SQL Server
 
@@ -883,7 +883,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |/FEATURES=SQLEngine,PolyBase|安裝 PolyBase 引擎。|  
   
 ##  <a name="role-parameters"></a><a name="RoleParameters"></a> 角色參數  
- 安裝程式角色或 /Role 參數是用來安裝預先設定的功能選項。 SSAS 角色會在現有 SharePoint 伺服器陣列或未設定的新伺服器陣列中安裝 SSAS 執行個體。 為支援每個狀況，提供兩個安裝程式角色。 您一次只能選擇一個要安裝的安裝程式角色。 如果您選擇安裝程式角色，安裝程式會安裝屬於該角色的功能與元件。 您無法改變為該角色所指定的功能與元件。 如需有關如何使用功能角色參數的詳細資訊，請參閱 [從命令提示字元安裝 Power Pivot](https://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)。 
+ 安裝程式角色或 /Role 參數是用來安裝預先設定的功能選項。 SSAS 角色會在現有 SharePoint 伺服器陣列或未設定的新伺服器陣列中安裝 SSAS 執行個體。 為支援每個狀況，提供兩個安裝程式角色。 您一次只能選擇一個要安裝的安裝程式角色。 如果您選擇安裝程式角色，安裝程式會安裝屬於該角色的功能與元件。 您無法改變為該角色所指定的功能與元件。 如需有關如何使用功能角色參數的詳細資訊，請參閱 [從命令提示字元安裝 Power Pivot](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)。 
   
  AllFeatures_WithDefaults 角色是 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 版本的預設行為，而且會減少向使用者顯示的對話方塊數目。 安裝非 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]的 SQL Server 版本時，可以從命令列指定該角色。 
   

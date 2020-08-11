@@ -13,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6999d409c81f19e0a8ae3903fe220e0c75235c8d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9b391b06d12908023375fbbf40005d1d04af60a5
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85678681"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934304"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>建立及管理全文檢索目錄
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,7 @@ GO
   
 3.  選取 [新增全文檢索目錄]  。  
   
-4.  在 [新增全文檢索目錄]  對話方塊中，為您要重新建立的目錄指定資訊。 如需詳細資訊，請參閱[全文檢索搜尋](/sql/database-engine/new-full-text-catalog-general-page)。  
+4.  在 [新增全文檢索目錄]  對話方塊中，為您要重新建立的目錄指定資訊。 如需詳細資訊，請參閱[全文檢索搜尋](https://docs.microsoft.com/sql/t-sql/statements/create-fulltext-catalog-transact-sql)。  
   
     > [!NOTE]  
     >  全文檢索目錄識別碼從 00005 開始，每次新增一個目錄時識別碼便增加一號。  

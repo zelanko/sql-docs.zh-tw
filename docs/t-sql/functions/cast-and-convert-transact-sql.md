@@ -12,6 +12,9 @@ f1_keywords:
 - CONVERT_TSQL
 - CAST
 - CONVERT
+- CONVERT()_TSQL
+- sql13.swb.tsqlresults.f1
+- sql13.swb.tsqlquery.f1
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -35,12 +38,12 @@ ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9c590ca13b08b732d0caf00b2b409f250025ea92
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 0d97f6e94ce7a9eb80656aa03a42b3479506ea5f
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111701"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565632"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 和 CONVERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

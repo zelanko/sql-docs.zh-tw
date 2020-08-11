@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: ff4ab76193c13b03fbd4d7fab05cbf212d1aae4b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b6964ee33ecbd52f538a60446c72d66bcde9927d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247607"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934369"
 ---
 # <a name="query-processing-architecture-guide"></a>查詢處理架構指南
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -147,7 +147,7 @@ GO
 - 只包含常數的算術運算式，例如 1+1, 5/3*2。
 - 只包含常數的邏輯運算式，例如 1=1 和 1>2 AND 3>4。
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 視為可摺疊的內建函式，包括 `CAST` 和 `CONVERT`。 如果內建函數只包含其輸入，並且不含其他內容資訊 (例如 SET 選項、語言設定、資料庫選項和加密金鑰) 時，此內建函數通常是可摺疊。 非決定性函數不可摺疊。 決定性內建函數可摺疊，但有一些例外。
-- 由 CLR 使用者定義之類型的決定性方法，以及由 CLR 使用者定義，具決定性純量值 CLR 的函式 (自 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 起)。 如需詳細資訊，請參閱 [CLR 使用者定義之函式與方法的常數摺疊](https://docs.microsoft.com/sql/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods)。
+- 由 CLR 使用者定義之類型的決定性方法，以及由 CLR 使用者定義，具決定性純量值 CLR 的函式 (自 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 起)。 如需詳細資訊，請參閱 [CLR 使用者定義之函式與方法的常數摺疊](https://docs.microsoft.com/sql/database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15?view=sql-server-ver15)。
 
 > [!NOTE] 
 > 例外之一是大型物件類型。 若摺疊處理序的輸出類型為大型物件類型 (text、ntext、image、nvarchar(max)、varchar(max)、varbinary(max)，或 XML)，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不會摺疊此運算式。

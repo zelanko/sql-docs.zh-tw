@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: b4c7a5eb3f76cfa3366c7cc961ba6c5e36961f95
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f6aef5ff65ee10c01cecd012eb1f35d5b2aab136
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915273"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823773"
 ---
 # <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>排程部署於 Azure 中的 SQL Server Integration Services (SSIS) 套件執行
 
@@ -113,7 +113,7 @@ EXECÂ jobs.sp_update_jobÂ @job_name='ExecutePackageJob',Â @enabled=1,Â 
 2.  **設定連結的伺服器認證**
 
     ```sql
-    -- Add your Azure SQL DB server admin credentials
+    -- Add your Azure SQL Database server admin credentials
     EXEC sp_addlinkedsrvlogin
         @rmtsrvname = 'myLinkedServer',
         @useself = 'false',

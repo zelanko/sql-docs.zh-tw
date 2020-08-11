@@ -11,12 +11,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: ed9b17969e54f620ee22c237526f59e2f49700b5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 69c4ab82bf6fc29464bf689c53358d11e9b0a428
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900242"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87952533"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>升級 Power Pivot for SharePoint
 
@@ -351,7 +351,7 @@ Get-PowerPivotSystemService
 |確認伺服器在執行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的所有電腦上執行。|[啟動或停止 Power Pivot for SharePoint Server](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server)|  
 |確認網站集合層級的功能啟用。|[在管理中心為網站集合啟用 Power Pivot 功能整合](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca)|  
 |確認個別的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿會透過開啟活頁簿，並按一下篩選與交叉分析篩選器起始查詢來正確載入。|檢查快取的檔案是否存在硬碟上。 快取的檔案可確認資料檔案已在實體伺服器上載入。 尋找 c:\Program Files\Microsoft SQL Server\MSAS13.POWERPIVOT\OLAP\Backup 資料夾中的快取檔案。|  
-|在設定為資料重新整理的所選活頁簿上測試資料重新整理。|測試資料重新整理最簡單的方式就是修改資料重新整理排程，也就是選擇 **[並且盡快重新整理]** 核取方塊，讓資料重新整理立即執行。 此步驟將判斷目前活頁簿的資料重新整理是否成功。 針對其他常用的活頁簿重複這些步驟以確保資料重新整理運作正常。 如需排程資料重新整理的詳細資訊，請參閱 [排程資料重新整理 (Power Pivot for SharePoint)](https://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b)。|  
+|在設定為資料重新整理的所選活頁簿上測試資料重新整理。|測試資料重新整理最簡單的方式就是修改資料重新整理排程，也就是選擇 **[並且盡快重新整理]** 核取方塊，讓資料重新整理立即執行。 此步驟將判斷目前活頁簿的資料重新整理是否成功。 針對其他常用的活頁簿重複這些步驟以確保資料重新整理運作正常。 如需排程資料重新整理的詳細資訊，請參閱 [排程資料重新整理 (Power Pivot for SharePoint)](https://docs.microsoft.com/sharepoint/administration/data-refresh-using-the-unattended-data-refresh-account)。|  
 |一段時間之後，監視 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理儀表板中的資料重新整理報表，以確認沒有資料重新整理錯誤。|[Power Pivot 管理儀表板和使用量資料](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data)|  
   
  如需如何設定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 設定和功能的詳細資訊，請參閱 [管理中心的 PowerPivot 伺服器管理和組態](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)。  
@@ -360,6 +360,6 @@ Get-PowerPivotSystemService
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 2016 的版本及支援功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)   
- [PowerPivot for SharePoint 2010 安裝](https://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)  
+ [PowerPivot for SharePoint 2010 安裝](https://sharepointgeorge.com/2012/installing-sql-server-powerpivot-sharepointstep-step-guide/)  
   
   

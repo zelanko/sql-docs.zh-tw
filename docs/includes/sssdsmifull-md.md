@@ -1,1 +1,1 @@
-Azure SQL Database 受控執行個體
+Azure SQL 受控執行個體

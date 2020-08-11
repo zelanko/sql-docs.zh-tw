@@ -17,12 +17,12 @@ ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7c566b77fcc7c8c9854900f448a9b32a61948172
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 2e476076084e23d3381f08a2e10dc130bee25b93
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395719"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87928669"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "87395719"
  指出物件是否使用設定為 ON 的引號識別碼選項建立。 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
  **鎖定擴大**  
- 表示資料表的鎖定擴大資料粒度。 如需有關 Database Engine 中鎖定的詳細資訊，請參閱 [SQL Server 交易鎖定與資料列版本設定指南](https://msdn.microsoft.com/library/jj856598.aspx)。 可能的值包括：  
+ 表示資料表的鎖定擴大資料粒度。 如需有關 Database Engine 中鎖定的詳細資訊，請參閱 [SQL Server 交易鎖定與資料列版本設定指南](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide?view=sql-server-ver15)。 可能的值包括：  
   
  AUTO  
  此選項允許 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 選取適用於資料表結構描述的鎖定擴大資料粒度。  

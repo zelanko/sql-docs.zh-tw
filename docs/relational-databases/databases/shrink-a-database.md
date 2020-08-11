@@ -20,12 +20,12 @@ ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5cacfade7921a099d618704b3145f5de2acd2b73
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5761ee136c23cd82296f154e7e87d4756410c55a
+ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715506"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87807511"
 ---
 # <a name="shrink-a-database"></a>壓縮資料庫
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,9 +57,7 @@ ms.locfileid: "85715506"
   
 -   資料庫的大小不得小於資料庫的大小下限。 大小下限是最初建立資料庫時所指定的大小，或利用檔案大小變更作業 (如 DBCC SHRINKFILE) 來設定的最後一個明確大小。 例如，如果資料庫最初建立時為 10 MB 的大小，而後擴充到 100 MB，則該資料庫最多只能縮小到 10 MB，即使該資料庫中的所有資料都已刪除，也是如此。  
   
--   資料庫在備份時不能進行壓縮。 相反地，當資料庫上正在進行壓縮作業時，也不能對其進行備份。  
-  
--   遇到 xVelocity 記憶體最佳化的資料行存放區索引時，DBCC SHRINKDATABASE 將會失敗。 遇到資料行存放區索引之前完成的工作將會成功，因此資料庫可能會較小。 若要完成 DBCC SHRINKDATABASE，請在執行 DBCC SHRINKDATABASE 前停用所有資料行存放區索引，然後重建資料行存放區索引。  
+-   資料庫在備份時不能進行壓縮。 相反地，當資料庫上正在進行壓縮作業時，也不能對其進行備份。
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   

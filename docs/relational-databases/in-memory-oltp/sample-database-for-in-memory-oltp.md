@@ -12,12 +12,12 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4eaa35280b4f469f6fcf49fe9d73f4b33bfda672
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2cc94e5f36b6c36ed44185c47356f67efb8729fe
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245196"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87947237"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>記憶體內部 OLTP 的範例資料庫
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "87245196"
  此範例示範了記憶體內部 OLTP 功能。 其顯示經記憶體最佳化的資料表和原生編譯的預存程序，並可用來示範記憶體內部 OLTP 的效能優勢。  
   
 > [!NOTE]  
->  若要檢視 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]的這項主題，請參閱 [Extensions to AdventureWorks to Demonstrate In-Memory OLTP](https://msdn.microsoft.com/library/dn511655\(v=sql.120\).aspx)(示範記憶體內部 OLTP 的 AdventureWorks 延伸模組)。  
+>  若要檢視 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]的這項主題，請參閱 [Extensions to AdventureWorks to Demonstrate In-Memory OLTP](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/overview-and-usage-scenarios?view=sql-server-ver15#in-memory-oltp-overview)(示範記憶體內部 OLTP 的 AdventureWorks 延伸模組)。  
   
  此範例會將 AdventureWorks 資料庫中的五個資料表移轉至經記憶體最佳化的資料表，並包含銷售訂單處理的工作負載示範。 您可以利用此工作負載示範，查看在伺服器上使用記憶體內部 OLTP 的效能優勢。  
   
@@ -183,12 +183,11 @@ ms.locfileid: "87245196"
   
  HASH 索引可用來進一步最佳化工作負載。 特別是最佳化點查閱和資料列插入。 不過請注意，這些索引不支援範圍掃描、依序掃描，或搜尋前置索引鍵資料行。 因此，您需要謹慎地使用這些索引。 此外，您必須在建立時指定 bucket_count。 此計數通常應該設定為索引鍵數值到兩倍索引鍵數值之間的值，不過高估通常不會造成問題。  
   
-如需詳細資訊，請參閱《線上叢書》以取得有關[索引指導方針](https://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx)與[選擇正確的 bucket_count](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx) 之指導方針的詳細資料。  
+如需詳細資訊，請參閱《線上叢書》以取得有關[索引指導方針](https://docs.microsoft.com/sql/relational-databases/indexes/guidelines-for-online-index-operations)與[選擇正確的 bucket_count](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx) 之指導方針的詳細資料。  
 
 
 《線上叢書》提供有關下列主題的詳細資訊：
-- [索引指導方針](https://docs.microsoft.com/sql/database-engine/guidelines-for-using-indexes-on-memory-optimized-tables) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn133166 -->
-- [選擇正確的 bucket_count](https://docs.microsoft.com/sql/database-engine/determining-the-correct-bucket-count-for-hash-indexes) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn494956 -->
+- [索引指導方針](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn133166 -->
 
  移轉之資料表上的索引已調整為適用於銷售訂單處理工作負載示範。 此工作負載需要在 Sales.SalesOrderHeader_inmem 和 Sales.SalesOrderDetail_inmem 資料表中進行插入和點查閱，也需要對 Production.Product_inmem 和 Sales.SpecialOffer_inmem 資料表中的主索引鍵資料行進行點查閱。  
   
@@ -276,7 +275,7 @@ ms.locfileid: "87245196"
   
     -   更新給定銷售訂單的出貨資訊。 這也會更新銷售訂單之所有明細項目的出貨資訊。  
   
-    -   這是原生編譯預存程序 Sales.usp_UpdateSalesOrderShipInfo_native 的包裝函式程序，其重試邏輯可處理更新相同訂單之並行交易所時產生的 (非預期) 潛在衝突。 如需有關重試邏輯的詳細資訊，請參閱 [這裡](https://technet.microsoft.com/library/dn169141\(v=sql.120\).aspx)的《線上叢書》主題。  
+    -   這是原生編譯預存程序 Sales.usp_UpdateSalesOrderShipInfo_native 的包裝函式程序，其重試邏輯可處理更新相同訂單之並行交易所時產生的 (非預期) 潛在衝突。 如需有關重試邏輯的詳細資訊，請參閱 [這裡](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables)的《線上叢書》主題。  
   
 -   Sales.usp_UpdateSalesOrderShipInfo_native  
   

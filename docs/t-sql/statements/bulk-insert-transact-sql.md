@@ -9,9 +9,9 @@ ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
 - BULK_TSQL
-- BULK INSERT
+- BULK_INSERT
 - BULK_INSERT_TSQL
-- BULK
+- BULK INSERT
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ebdcdb325ba39d163ef63c04008d86a46cb6bec4
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 8c76d2efccf6f9031d21b85b3bfd3aabed47708c
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380861"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988377"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 

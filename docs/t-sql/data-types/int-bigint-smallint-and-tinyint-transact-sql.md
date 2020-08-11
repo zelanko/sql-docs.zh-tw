@@ -8,14 +8,9 @@ ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
-- bigint_TSQL
-- smallint
-- bigint
-- smallint_TSQL
-- tinyint_TSQL
-- int_TSQL
-- int
-- tinyint
+- Int()_TSQL
+- sql13.swb.tsqlresults.f1
+- sql13.swb.tsqlquery.f1
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -28,12 +23,12 @@ ms.assetid: 9bda5b0b-2380-4931-a1c8-f362fdefa99b
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 93043aae421bd36186558d8902403fdf72697e9f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0fab6f77202c4a0fc136d760730c03d24e583870
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008019"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565616"
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int、bigint、smallint 和 tinyint (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

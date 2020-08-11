@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ac342c20eb38411c4b0d1d689c34a70cda04b873
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c1ee7e4446b67c60a8bb0b7a3d43453a5e7498d6
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752572"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87940319"
 ---
 # <a name="create-instances-of-xml-data"></a>建立 XML 資料的執行個體
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,7 +62,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在內部以 UTF-16 編碼之有效率的二進位表示法來表示 XML。 不會保留使用者提供的編碼，但是會在剖析過程中考慮該編碼。  
   
 ### <a name="type-casting-clr-user-defined-types"></a>類型轉換 CLR 使用者定義型別  
- 如果 CLR 使用者定義型別具有 XML 序列化，即可將該類型的執行個體明確轉換成 XML 資料類型。 如需有關 CLR 使用者定義型別之 XML 序列化的詳細資料，請參閱 [從 CLR 資料庫物件進行 XML 序列化](https://msdn.microsoft.com/library/ac84339b-9384-4710-bebc-01607864a344)。  
+ 如果 CLR 使用者定義型別具有 XML 序列化，即可將該類型的執行個體明確轉換成 XML 資料類型。 如需有關 CLR 使用者定義型別之 XML 序列化的詳細資料，請參閱 [從 CLR 資料庫物件進行 XML 序列化](https://docs.microsoft.com/dotnet/standard/serialization/introducing-xml-serialization)。  
   
 ### <a name="white-space-handling-in-typed-xml"></a>以具類型的 XML 處理空白  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，元素內容中的空白如果發生在以標記 (如開始或結束標記) 所分隔的僅空白字元資料序列內且未實體化，則會將它視為無意義。 (將會忽略 CDATA 區段。)空白處理的方式與 XML 1.0 規格 (由全球資訊網協會 (W3C) 所發佈) 所述的空白處理方式不同。 這是因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 XML 剖析器，只能辨識有限的 DTD 子集數目，如 XML 1.0 中所定義。 如需有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中所支援之有限 DTD 子集的詳細資訊，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。  

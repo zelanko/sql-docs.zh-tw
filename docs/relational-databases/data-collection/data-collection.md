@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1cba83176d921846f1eac55ef84a70eebd5af42a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 829d60517864d9df7f8019a92e00664c1a1337ea
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733841"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87943475"
 ---
 # <a name="data-collection"></a>資料收集
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "85733841"
   
  資料收集器可讓您調整資料收集的範圍，以適合測試與實際環境的需要。 資料收集器也會使用資料倉儲，這是藉由設定不同的資料保留期間而讓您管理所收集之資料的關聯式資料庫。  
   
- 資料收集器支援動態微調資料收集，而且可透過它的 API 加以擴充。 如需詳細資訊，請參閱 [Data Collector Programming](https://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101)。  
+ 資料收集器支援動態微調資料收集，而且可透過它的 API 加以擴充。 如需詳細資訊，請參閱 [Data Collector Programming](https://docs.microsoft.com/sql/relational-databases/system-functions/data-collector-functions-transact-sql)。  
   
  下圖顯示資料收集器如何納入 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]資料收集和資料管理的整體策略中。  
   

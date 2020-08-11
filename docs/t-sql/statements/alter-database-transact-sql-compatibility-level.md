@@ -24,12 +24,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b17da534ff8b1f5864589882ca924ebd0379bc71
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 785f6c281f98cc66f001cdc3a0a55eb7a725ff6e
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332008"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864509"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 相容性層級
 
@@ -60,7 +60,7 @@ COMPATIBILITY_LEVEL { 150 \| 140 \| 130 \| 120 \| 110 \| 100 \| 90 \| 80 } 是�
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|
 |[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|15|150|150, 140, 130, 120, 110, 100|
 |[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|14|140|140、130、120、110、100|
-|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 單一資料庫/彈性集區|12|150|150, 140, 130, 120, 110, 100|
+|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|12|150|150, 140, 130, 120, 110, 100|
 |[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 受控執行個體|12|150|150, 140, 130, 120, 110, 100|
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|13|130|130、120、110、100|
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|12|120|120、110、100|
@@ -320,7 +320,7 @@ SQL Server 2017 之前的 SQL Server 較早版本中，追蹤旗標 4199 之下�
 |130|有待決定。|
 |120|無。|
 |110|`WITHIN GROUP`, `TRY_CONVERT`, `SEMANTICKEYPHRASETABLE`, `SEMANTICSIMILARITYDETAILSTABLE`, `SEMANTICSIMILARITYTABLE`|
-|100|`CUBE`、`MERGE`、`ROLLUP`|
+|100|`CUBE`, `MERGE`, `ROLLUP`|
 |90|`EXTERNAL`, `PIVOT`, `UNPIVOT`, `REVERT`, `TABLESAMPLE`|
 
 在給定的相容性層級中，保留關鍵字包含這個層級或這個層級以下所導入的所有關鍵字。 例如，對於層級 110 的應用程式而言，上表所列出的所有關鍵字都會保留下來。 在較低的相容性層級中，層級 100 的關鍵字仍是有效的物件名稱，但對應於這些關鍵字的層級 110 語言功能則無法使用。

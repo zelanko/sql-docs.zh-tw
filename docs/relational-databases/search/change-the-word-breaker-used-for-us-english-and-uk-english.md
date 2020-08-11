@@ -10,16 +10,16 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f7c80f8cfd68d8389baf80998be37ec4d8119d0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7bb7151b0a36267fa1cd9cad24432f5d72f96b11
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725999"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934337"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Change the Word Breaker Used for US English and UK English
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 會安裝適用於英文的新版 (14.0.4999.1038 版) 斷詞工具和字幹分析器，並取代這些舊版元件 (12.0.6828.0 版)。 如需新元件行為變更的詳細資訊，請參閱 [全文檢索搜尋的行為變更](/sql/database-engine/behavior-changes-to-full-text-search)。 本主題描述的是如何從新版元件切換成舊版，或從舊版切換回新版。 若為叢集安裝，就應該在所有主要和被動節點上進行這些變更。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 會安裝適用於英文的新版 (14.0.4999.1038 版) 斷詞工具和字幹分析器，並取代這些舊版元件 (12.0.6828.0 版)。 如需新元件行為變更的詳細資訊，請參閱 [全文檢索搜尋的行為變更](https://docs.microsoft.com/sql/relational-databases/search/full-text-search?view=sql-server-ver15)。 本主題描述的是如何從新版元件切換成舊版，或從舊版切換回新版。 若為叢集安裝，就應該在所有主要和被動節點上進行這些變更。  
   
  舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用了由美式英文 (LCID 1033) 和英式英文 (LCID 2057) 之不同 CLSID 所代表的不同斷詞工具。 在這個版本中，這兩個 LCID 都使用具有相同 CLSID 的相同元件，如下表所示：  
   
@@ -126,6 +126,6 @@ ms.locfileid: "85725999"
   
 ## <a name="see-also"></a>另請參閱  
  [將搜索所使用的斷詞工具還原為舊版](../../relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md)   
- [全文檢索搜尋的行為變更](/sql/database-engine/behavior-changes-to-full-text-search)  
+ [全文檢索搜尋的行為變更](https://docs.microsoft.com/sql/relational-databases/search/full-text-search?view=sql-server-ver15)  
   
   

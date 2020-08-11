@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 6d578ee456d2ddd9531af307e2106f4a12dbbece
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 81d876df75fd096b897f13322bb76f90fffa5cad
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411344"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87947367"
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server Database Engine 和 Azure SQL Database 的效能中心
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "87411344"
  [分頁與範圍架構指南](../../relational-databases/pages-and-extents-architecture-guide.md)  
  [移轉後驗證和最佳化指南](../../relational-databases/post-migration-validation-and-optimization-guide.md)  
  [查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md)  
- [SQL Server 交易鎖定與資料列版本設定指南](https://msdn.microsoft.com/library/jj856598)  
+ [SQL Server 交易鎖定與資料列版本設定指南](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)  
  [SQL Server 交易記錄架構與管理指南](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)  
  [執行緒和工作架構指南](../../relational-databases/thread-and-task-architecture-guide.md) 
   

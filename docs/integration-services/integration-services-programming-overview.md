@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bfef4a0f2bf65166193e28610d5869e65c1023cb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ab3c2cdbb0e7c4628b757ab25f75d848e0a62887
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917560"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87952435"
 ---
 # <a name="integration-services-programming-overview"></a>Integration Services 程式設計概觀
 
@@ -54,7 +54,7 @@ ms.locfileid: "86917560"
  您可以在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] 或是其他程式碼或文字編輯器中設計 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 套件、自訂工作和元件的程式。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 提供開發人員許多工具與功能，使之可以簡化及加快反覆執行程式碼撰寫、偵錯與測試週期的速度。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 也可簡化部署工作。 但是，您不需要 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 編譯及建立 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 程式碼專案。 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK 包含 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 和 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 編譯器與相關工具。  
   
 > [!IMPORTANT]  
->  依預設，[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 會隨 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 一起安裝，但是不會安裝 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK。 除非已在電腦上安裝 SDK，而且 SDK 文件集是包含在線上叢書集合中，否則本節中的 SDK 內容連結將不會有任何作用。 在安裝 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK 之後，您可以遵循[新增或移除 SQL Server 的產品文件集](https://msdn.microsoft.com/library/ef798cc8-87cf-4d60-a7bf-9e061bdd0052)中的指示，將 SDK 文件集新增至線上叢書集合和目錄。  
+>  依預設，[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 會隨 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 一起安裝，但是不會安裝 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK。 除非已在電腦上安裝 SDK，而且 SDK 文件集是包含在線上叢書集合中，否則本節中的 SDK 內容連結將不會有任何作用。 在安裝 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK 之後，您可以遵循[新增或移除 SQL Server 的產品文件集](https://www.microsoft.com/download/details.aspx?id=42557)中的指示，將 SDK 文件集新增至線上叢書集合和目錄。  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 指令碼工作和指令碼元件會將 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA) 作為內嵌指令碼環境使用。 VSTA 支援 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Basic 和 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual C#。  
   
