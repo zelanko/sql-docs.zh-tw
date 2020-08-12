@@ -1,5 +1,6 @@
 ---
 title: SQL Server 屬性 (啟動參數索引標籤)
+description: 使用 SQL Server [屬性] 對話方塊的 [啟動參數] 索引標籤，以新增或移除啟動參數，這會影響資料庫引擎的效能。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,25 +12,25 @@ ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2d5a4c5cb279cb4cfd4bbe1baa63f89dc1289436
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f13952b4c01bbbb65e3afc9909482a53ce327f32
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306777"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894515"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>SQL Server 屬性 (啟動參數索引標籤)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   您可以使用這個對話方塊來加入或移除 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的啟動參數。 啟動參數可能會對 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 效能產生很大的影響。 加入或變更啟動參數之前，請先參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務啟動選項＞主題。  
   
 ## <a name="options"></a>選項。  
  **指定啟動參數**  
- 若要加入參數，請輸入參數，然後按一下 [加入]  。  
+ 若要加入參數，請輸入參數，然後按一下 [加入]。  
   
- 若要修改其中一個必要參數，請在 **[現有參數]** 方塊中選取參數、在 **[指定啟動參數]** 方塊中變更其值，然後按一下 **[更新]** 。  
+ 若要修改其中一個必要參數，請在 **[現有參數]** 方塊中選取參數、在 **[指定啟動參數]** 方塊中變更其值，然後按一下 **[更新]**。  
   
  **[現有參數]**  
- 若要移除參數，請選取參數，然後按一下 [移除]  。  
+ 若要移除參數，請選取參數，然後按一下 [移除]。  
   
 ## <a name="parameter-format"></a>參數格式  
  請勿在參數之間輸入分隔符號。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員會自動加入分隔符號。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員會強制執行下列參數需求。  

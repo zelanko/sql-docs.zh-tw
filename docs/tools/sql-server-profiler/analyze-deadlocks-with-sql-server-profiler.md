@@ -1,6 +1,7 @@
 ---
 title: 分析死結
 titleSuffix: SQL Server Profiler
+description: 透過重新執行和顯示 SQL Server Profiler 中分析的死結事件以及產生等待圖形，以識別造成死結的原因。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,26 +12,26 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
-ms.openlocfilehash: 15d41ae2517a3eadb8305a359f4576fb4407020b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8adc8e6839b6af9765139d0fe26b38cb1d1253c8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307372"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774944"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>使用 SQL Server Profiler 分析死結
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可識別死結的原因。 SQL Server 中有兩個或兩個以上的執行緒 (或處理序)，因為某些資源集而產生循環相依性時，就會發生死結。 利用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，您可以建立一個用來記錄、重新執行和顯示死結事件的追蹤，以便進行分析。  
   
  若要追蹤死結事件，請將 **Deadlock graph** 事件類別加入追蹤。 此事件類別會用死結相關處理序和物件的 XML 資料來擴展追蹤中的 **TextData** 資料行。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可將 XML 文件擷取至死結 XML (.xdl) 檔案，您稍後可在 SQL Server Management Studio 中檢視該檔案。 您可以設定 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ，將 **Deadlock graph** 事件擷取到單一檔案 (其中包含所有的 **Deadlock graph** 事件)，或將各個事件擷取到不同的檔案。 這種擷取可以利用下列任一方法來完成：  
   
--   在追蹤組態時，使用 [事件擷取設定]  索引標籤。請注意，您需在 [事件選取範圍]  索引標籤上選取 **Deadlock graph** 事件，這個索引標籤才會出現。  
+-   在追蹤組態時，使用 [事件擷取設定] 索引標籤。請注意，您需在 [事件選取範圍] 索引標籤上選取 **Deadlock graph** 事件，這個索引標籤才會出現。  
   
--   使用 [檔案]  功能表上的 [擷取 SQL Server 事件]  選項。  
+-   使用 [檔案] 功能表上的 [擷取 SQL Server 事件] 選項。  
   
--   您也可以用滑鼠右鍵按一下特定事件，然後選擇 [擷取事件資料]  ，以擷取並儲存個別事件。  
+-   您也可以用滑鼠右鍵按一下特定事件，然後選擇 [擷取事件資料]，以擷取並儲存個別事件。  
   
 ## <a name="deadlock-graphs"></a>死結圖形  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 使用死結等待圖形 (deadlock wait-for graph) 來描述死結。 死結等待圖形包含處理序節點、資源節點，以及代表處理序與資源之間關聯性的邊緣。 等待圖形的元件定義如下表所示：  

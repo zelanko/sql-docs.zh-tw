@@ -1,5 +1,6 @@
 ---
 title: 執行 SQL Server 單元測試
+description: 了解 SQL Server 單元測試。 檢視有關建立測試、建立自訂測試條件、執行測試，以及解讀結果的資源。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,16 +9,15 @@ f1_keywords:
 ms.assetid: febcc87f-eb18-4c12-ba30-82ef0d49aaa3
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 93dfaf8cf202b0b9447574ecfc58cc13f151381b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d27d25d374d737cc51f7e0a5149556a4d5a92260
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256985"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883462"
 ---
 # <a name="running-sql-server-unit-tests"></a>執行 SQL Server 單元測試
 
@@ -26,31 +26,31 @@ ms.locfileid: "75256985"
 ## <a name="ways-to-run-sql-server-unit-tests"></a>執行 SQL Server 單元測試的方式  
 您可以根據已安裝的軟體，透過幾種不同的方法執行 SQL Server 單元測試，如下所示：  
   
--   使用 Visual Studio 2010 中的 [測試檢視]  視窗執行測試。 如需詳細資訊，請參閱[如何：執行 SQL Server 單元測試](../ssdt/how-to-run-sql-server-unit-tests.md)和[如何：從 Microsoft Visual Studio 2010 執行自動化測試](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)。 至於 Visual Studio 2012，請參閱[如何：從 Microsoft Visual Studio 2012 執行自動化測試](https://msdn.microsoft.com/library/ms182470.aspx)。  
+-   使用 Visual Studio 2010 中的 [測試檢視] 視窗執行測試。 如需詳細資訊，請參閱[如何：執行 SQL Server 單元測試](../ssdt/how-to-run-sql-server-unit-tests.md)及[如何：從 Microsoft Visual Studio 2010 執行自動化的測試](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)。 針對 Visual Studio 2012，請參閱[如何：從 Microsoft Visual Studio 2012 執行自動化的測試](https://msdn.microsoft.com/library/ms182470.aspx)。  
   
 -   在命令提示字元上使用 MSTest.exe 命令以執行測試。 如需詳細資訊，請參閱[如何：使用 MSTest 從命令列執行自動化測試 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182487(VS.100).aspx) 或[如何：使用 MSTest 從命令列執行自動化測試 (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182487.aspx)。  
   
--   執行測試專案，從 [方案總管]  執行測試。 如需詳細資訊，請參閱[如何：從 Microsoft Visual Studio 2010 執行自動化測試](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)或[如何：從 Microsoft Visual Studio 2012 執行自動化測試](https://msdn.microsoft.com/library/ms182470.aspx)。  
+-   執行測試專案，從 [方案總管] 執行測試。 如需詳細資訊，請參閱[如何：從 Microsoft Visual Studio 2010 執行自動化測試](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)或[如何：從 Microsoft Visual Studio 2012 執行自動化測試](https://msdn.microsoft.com/library/ms182470.aspx)。  
   
--   從 [測試結果]  視窗重新執行測試。 如需詳細資訊，請參閱[如何：重新執行測試 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182472(VS.100).aspx)。  
+-   從 [測試結果] 視窗重新執行測試。 如需詳細資訊，請參閱[如何：重新執行測試 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182472(VS.100).aspx)。  
   
--   從 [測試清單編輯器]  視窗執行個別測試或測試清單 (Visual Studio 2010)。 如需詳細資訊，請參閱[如何：從 Microsoft Visual Studio 2010 執行自動化測試](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)或[如何：從 Microsoft Visual Studio 2012 執行自動化測試](https://msdn.microsoft.com/library/ms182470.aspx)。  
+-   從 [測試清單編輯器] 視窗執行個別測試或測試清單 (Visual Studio 2010)。 如需詳細資訊，請參閱[如何：從 Microsoft Visual Studio 2010 執行自動化測試](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)或[如何：從 Microsoft Visual Studio 2012 執行自動化測試](https://msdn.microsoft.com/library/ms182470.aspx)。  
   
 -   在 Team Foundation Build 中建置專案時，執行測試。 如需詳細資訊，請參閱[如何：在建置應用程式之後設定和執行已排程的測試 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182465(VS.100).aspx) 或[如何：在建置應用程式之後設定和執行已排程的測試 (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182465.aspx)。  
   
 您可以使用已排序的測試，按照特定的順序執行 SQL Server 單元測試。 如需詳細資訊，請參閱[如何：建立已排序的測試 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182631(VS.100).aspx) 或[如何：建立已排序的測試 (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182631.aspx)。  
   
 ## <a name="interpreting-tests-results"></a>解譯測試結果  
-執行測試後，[測試結果]  視窗中會顯示哪些測試成功，哪些失敗。 如需詳細資訊，請參閱[解譯 SQL Server 單元測試結果](../ssdt/interpreting-sql-server-unit-test-results.md)。 如需有關如何診斷非預期失敗的詳細資訊，請參閱[如何：偵錯資料庫物件](../ssdt/how-to-debug-database-objects.md)。  
+執行測試後，[測試結果] 視窗中會顯示哪些測試成功，哪些失敗。 如需詳細資訊，請參閱[解譯 SQL Server 單元測試結果](../ssdt/interpreting-sql-server-unit-test-results.md)。 如需如何診斷未預期失敗的詳細資訊，請參閱[如何：針對資料庫物件進行偵錯](../ssdt/how-to-debug-database-objects.md)。  
   
 ## <a name="topics-in-this-section"></a>本節主題  
 本節包含下列主題：  
   
--   [如何：偵錯資料庫物件](../ssdt/how-to-debug-database-objects.md)  
+-   [操作說明：針對資料庫物件進行偵錯](../ssdt/how-to-debug-database-objects.md)  
   
--   [如何：從 Team Foundation Build 執行 SQL Server 單元測試](../ssdt/how-to-run-sql-server-unit-tests-from-team-foundation-build.md)  
+-   [操作說明：從 Team Foundation Build 執行 SQL Server 單元測試](../ssdt/how-to-run-sql-server-unit-tests-from-team-foundation-build.md)  
   
--   [如何：執行 SQL Server 單元測試](../ssdt/how-to-run-sql-server-unit-tests.md)  
+-   [操作說明：執行 SQL Server 單元測試](../ssdt/how-to-run-sql-server-unit-tests.md)  
   
 -   [解譯 SQL Server 單元測試結果](../ssdt/interpreting-sql-server-unit-test-results.md)  
   

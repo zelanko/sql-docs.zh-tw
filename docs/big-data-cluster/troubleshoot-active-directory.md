@@ -5,20 +5,20 @@ description: 對 Active Directory 網域中的 SQL Server 巨量資料叢集部�
 author: rl-msft
 ms.author: rafidl
 ms.reviewer: mikeray
-ms.date: 03/12/2020
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 69762b5474f72256975af06e6c79d664de283809
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 302731f3f0c37f60c4944b7df44d02b2cfc64a8b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153255"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772883"
 ---
 # <a name="troubleshoot-sql-server-big-data-cluster-active-directory-integration"></a>對 SQL Server 巨量資料叢集 Active Directory 整合進行疑難排解
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 本文說明如何對 Active Directory 模式中的 SQL Server 巨量資料叢集部署進行疑難排解。
 
@@ -123,9 +123,9 @@ zookeeper-2       2/2     Running   0          32m
 
 ## <a name="cause"></a>原因
 
-在上述範例中，因為網域群組的範圍是網域本機，所以部署無法為網域使用者建立登入。 請使用網域全域或網域通用範圍群組。 [在 Active Directory 模式中部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-active-directory.md) 說明 AD 群組範圍需求。
+在上述範例中，因為網域群組的範圍是網域本機，所以部署無法為網域使用者建立登入。 使用全域或通用範圍群組。 [在 Active Directory 模式中部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-active-directory.md) 說明 AD 群組範圍需求。
 
-## <a name="resolution"></a>解決方案
+## <a name="verify"></a>Verify
 
 檢查網域群組 (<`domain-group`>) 的範圍。 使用 [get-adgroup](/powershell/module/addsadministration/get-adgroup/)。
 

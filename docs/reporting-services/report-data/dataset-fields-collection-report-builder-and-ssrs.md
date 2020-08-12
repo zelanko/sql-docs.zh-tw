@@ -1,5 +1,6 @@
 ---
 title: 資料集欄位集合 (報表產生器) | Microsoft Docs
+description: 了解資料集欄位集合。 資料集欄位代表資料連接中的資料。 欄位可以代表數值或非數值資料。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b33041f7debc2ad75268973867c72e073459f1de
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7d19ea6df08431db42e700cabccd7a05167dd89c
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077784"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808568"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>資料集欄位集合 (報表產生器及 SSRS)
   資料集欄位代表資料連接中的資料。 欄位可以代表數值或非數值資料。 範例包括銷售量、總銷售額、客戶名稱、資料庫識別碼、URL、影像、空間資料及電子郵件地址。 在設計介面上，欄位會以報表項目 (如文字方塊、資料表和圖表) 中的運算式形式出現。  
@@ -91,7 +92,7 @@ ms.locfileid: "77077784"
   
     |SQL 資料類型|CLR 資料類型|描述|  
     |-------------------|-------------------|-----------------|  
-    |**日期**|**DateTime**|僅限日期|  
+    |**Date**|**DateTime**|僅限日期|  
     |**Time**|**TimeSpan**|只有時間|  
     |**DateTimeTZ**|**DateTimeOffset**|包含時區時差的日期和時間|  
     |**DateTime2**|**DateTime**|包含毫秒的日期和時間|  

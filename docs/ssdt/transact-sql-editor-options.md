@@ -1,5 +1,6 @@
 ---
 title: Transact-SQL 編輯器選項
+description: 熟悉 Transact-SQL 編輯器選項。 了解查詢執行屬性及查詢結果屬性，並了解如何調整其值。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -23,16 +24,15 @@ f1_keywords:
 ms.assetid: fa9a250f-7feb-433e-91bd-a09779d74c8b
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 0b91be419419d7dab1904068b1600def88106023
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0edf0ee20ce44abadb7783baa6e99cba88ddff7b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256325"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883417"
 ---
 # <a name="transact-sql-editor-options"></a>Transact-SQL 編輯器選項
 
@@ -44,7 +44,7 @@ ms.locfileid: "75256325"
   
 ## <a name="query-execution"></a><a name="QueryExecution"></a>查詢執行  
   
-|屬性|描述|  
+|屬性|說明|  
 |------------|---------------|  
 |**SET ROWCOUNT**|預設值 0 表示 SQL Server 將等候結果，直到所有結果都收到為止。 如果您要 SQL Server 在取得指定的資料列數後停止查詢，請提供大於 0 的值。 若要關閉此選項 (以便傳回所有資料列)，請指定 SET ROWCOUNT 0。|  
 |**SET TEXTSIZE**|2,147,483,647 個位元組的預設值表示 SQL Server 將提供完整的資料欄位，直到 text、ntext、nvarchar(max) 及 varchar(max) 資料欄位的上限。 這不會影響 XML 資料類型。 提供較小的數值，即可在有大量數值時，限制傳回的結果數量。 資料行若大於提供的數值，就會被截斷。|  
@@ -72,14 +72,14 @@ ms.locfileid: "75256325"
   
 ## <a name="query-results"></a><a name="QueryResults"></a>查詢結果  
   
-|屬性|描述|  
+|屬性|說明|  
 |------------|---------------|  
 |**在結果集裡包含查詢**|將查詢的文字當成結果集的一部分傳回。|  
 |**複製或儲存結果時包含資料行標頭**|將結果複製到剪貼簿或儲存在檔案中時，請包含資料行標頭 (標題)。 如果您不想將結果資料儲存或複製為只有資料而沒有資料行標題，請清除此核取方塊。|  
 |**執行之後捨棄結果**|在螢幕顯示已收到查詢結果後，將查詢結果捨棄以釋放記憶體。|  
 |**在其他索引標籤中顯示結果**|在新的文件視窗中顯示結果集，而非在查詢文件視窗的下方顯示。|  
 |**執行查詢後，切換至結果索引標籤**|自動將螢幕焦點設定為結果集。|  
-|**已擷取的最大字元數**|非 XML 資料：<br /><br />輸入從 1 到 65535 的數字，來指定每個資料格中會顯示的最大字元數。 **注意：** 指定大量字元可能造成結果集內顯示的資料遭截斷。 每個資料格中所顯示的最大字元數，會視字型大小而定。 若傳回了大量的結果集，且此方塊中所設定的值較大，就可能會造成 SQL Server Management Studio 的可用記憶體不足而降低系統的效能。<br /><br />XML 資料：<br /><br />選取 1 MB、2 MB 或 5 MB。 選取 [無限制] 以擷取所有字元。|  
+|**已擷取的最大字元數**|非 XML 資料：<br /><br />輸入從 1 到 65535 的數字，來指定每個資料格中會顯示的最大字元數。 **注意：** 指定大量字元可能造成結果集內顯示的資料截斷。 每個資料格中所顯示的最大字元數，會視字型大小而定。 若傳回了大量的結果集，且此方塊中所設定的值較大，就可能會造成 SQL Server Management Studio 的可用記憶體不足而降低系統的效能。<br /><br />XML 資料：<br /><br />選取 1 MB、2 MB 或 5 MB。 選取 [無限制] 以擷取所有字元。|  
 |**輸出格式**|根據預設，輸出會顯示在以空格填補結果所建立的資料行中。 其他選項包括使用逗號、索引標籤，或空格來分隔資料行。 選取 **[自訂分隔符號]** 核取方塊，即可在 **[自訂分隔符號]** 方塊中指定不同的分隔字元。|  
 |**自訂分隔符號**|指定您要用來分隔資料行的字元。 只有當您在 [ **輸出格式** ] 方塊中選取了 [ **自訂分隔符號** ] 核取方塊時，才能使用此選項。|  
 |**在結果集內包含資料行標頭**|如果您不希望每個資料行均標示資料行標題，請清除此核取方塊。|  

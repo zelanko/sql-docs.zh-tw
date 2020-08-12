@@ -8,19 +8,18 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8dc0267821ff4833bd33a1431f004336668063d0
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 5d83270e473f3135cfcdc3676d97675d7f658bb9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607081"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772328"
 ---
 # <a name="tutorial-build-a-clustering-model-in-r-with-sql-machine-learning"></a>教學課程：使用 SQL 機器學習在 R 中建置群集模型
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 在這個教學課程系列的第三部分 (總共四個部分) 中，您將在 R 中建立一個 K-Means 模型以執行群集。 在本系列的下一部分中，您將使用 SQL Server 機器學習服務在資料庫中部署此模型，或在巨量資料叢集上進行此部署。
@@ -30,6 +29,9 @@ ms.locfileid: "83607081"
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 在這個教學課程系列的第三部分 (總共四個部分) 中，您將在 R 中建立一個 K-Means 模型以執行群集。 在本系列的下一部分中，您將使用 SQL Server R Services 在資料庫中部署此模型。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+在這個教學課程系列的第三部分 (總共四個部分) 中，您將在 R 中建立一個 K-Means 模型以執行群集。 在本系列的下一部分中，您將使用 Azure SQL 受控執行個體機器學習服務，在資料庫中部署此模型。
 ::: moniker-end
 
 在本文中，您將學會如何：
@@ -78,9 +80,8 @@ plot(1:20, wss, type = "b", xlab = "Number of Clusters", ylab = "Within groups s
 
 ```r
 # Output table to hold the customer group mappings.
-# Generate clusters using Kmeans and output key / cluster to a table in SQL database
+# Generate clusters using Kmeans and output key / cluster to a table
 # called return_cluster
-sqlDrop(ch, "return_cluster")
 
 ## create clustering model
 clust <- kmeans(customer_data[,2:5],4)

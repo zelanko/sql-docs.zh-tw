@@ -1,24 +1,25 @@
 ---
 title: 快速入門：Python 資料結構
-description: 在此快速入門中，了解如何使用 Python 與 SQL Server 機器學習服務中的資料結構與資料物件。
+titleSuffix: SQL machine learning
+description: 在此快速入門中，了解如何使用 SQL 機器學習以處理 Python 中的資料結構與資料物件。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2020
+ms.date: 05/21/2020
 ms.topic: quickstart
 author: cawrites
 ms.author: chadam
-ms.reviewer: garye
+ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3023287504cbb7b25e194b53d0957e82405d1ea8
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: ed35820d38ea31ea0b7f8bae9b0a440398d55674
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606690"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784094"
 ---
-# <a name="quickstart-data-structures-and-objects-using-python-in-sql-server-machine-learning-services"></a>快速入門：在 SQL Server 機器學習服務中使用 Python 的資料結構與物件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="quickstart-data-structures-and-objects-using-python-with-sql-machine-learning"></a>快速入門：使用 Python 搭配 SQL 機器學習的資料結構與物件
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 在此快速入門中，您將會了解當您在 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)中或在[巨量資料叢集](../../big-data-cluster/machine-learning-services.md)上使用 Python 時，如何使用資料結構與資料類型。 在此快速入門中，您將會了解如何在 Python 與 SQL Server 之間移動資料，以及可能發生的常見問題。
@@ -26,8 +27,11 @@ ms.locfileid: "83606690"
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 在此快速入門中，您將會了解當您在 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)中使用 Python 時，如何使用資料結構與資料類型。 在此快速入門中，您將會了解如何在 Python 與 SQL Server 之間移動資料，以及可能發生的常見問題。
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+在此快速入門中，您將了解在 [Azure SQL 受控執行個體機器學習服務](/azure/azure-sql/managed-instance/machine-learning-services-overview)中使用 Python 時，如何使用資料結構與資料類型。 您將了解如何在 Python 與 Azure SQL 受控執行個體之間移動資料，以及可能發生的常見問題。
+::: moniker-end
 
-SQL Server 依賴 Python **pandas** 套件，這非常適合用來處理表格式資料。 不過，您無法將純量從 Python 傳遞至 SQL Server，並預期它「能正常工作」。 在此快速入門中，您將會複習一些基本資料結構定義，讓您能夠針對在 Python 與 SQL Server 之間傳遞表格式資料時可能會遇到的其他問題做好準備。
+SQL 機器學習依賴 Python **Pandas** 套件，這非常適合用以處理表格式資料。 不過，您無法將純量從 Python 傳遞至您的資料庫，並預期這樣「就能作用」。 在此快速入門中，您將複習部分的基本資料結構定義，以在 Python 與資料庫之間傳遞表格式資料時，為您可能遇到的額外問題做好準備。
 
 首先要了解的概念包括：
 
@@ -35,10 +39,10 @@ SQL Server 依賴 Python **pandas** 套件，這非常適合用來處理表格�
 - 資料框架的單一資料行是一種類似清單的物件，稱為「序列」。
 - 資料框架的單一值稱為儲存格，並依索引存取。
 
-如果 data.frame 需要表格式結構，您該如何將計算的單一結果公開為資料框架？ 答案是以序列形式來表示單一純量值，便可以輕鬆地轉換成資料框架。 
+如果 data.frame 需要表格式結構，您該如何將計算的單一結果公開為資料框架？ 答案是以序列形式來表示單一純量值，便可以輕鬆地轉換成資料框架。
 
 > [!NOTE]
-> 傳回日期時，SQL 中的 Python 會使用 DATETIME，其日期範圍限制在 1753-01-01 (-53690) 到 9999-12-31 (2958463) 之間。 
+> 傳回日期時，SQL 中的 Python 會使用 DATETIME，其日期範圍限制在 1753-01-01 (-53690) 到 9999-12-31 (2958463) 之間。
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -50,7 +54,11 @@ SQL Server 依賴 Python **pandas** 套件，這非常適合用來處理表格�
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 - SQL Server 機器學習服務。 如需如何安裝機器學習服務的相關資訊，請參閱 [Windows 安裝指南](../install/sql-machine-learning-services-windows-install.md)。 
 ::: moniker-end
-- 您也需要工具來執行包含 Python 指令碼的 SQL 查詢。 您可以使用任何資料庫管理或查詢工具來執行這些指令碼，只要該工具可以連線到 SQL Server 執行個體，並執行 T-SQL 查詢或預存程序即可。 本快速入門使用 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)。
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Azure SQL 受控執行個體機器學習服務。 如需註冊說明，請參閱 [Azure SQL 受控執行個體機器學習服務概觀](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
+::: moniker-end
+
+- 執行包含 Python 指令碼之 SQL 查詢的工具。 本快速入門使用 [Azure Data Studio](../../azure-data-studio/what-is.md)。
 
 ## <a name="scalar-value-as-a-series"></a>以純量值作為序列
 
@@ -81,7 +89,7 @@ SQL Server 依賴 Python **pandas** 套件，這非常適合用來處理表格�
    dtype: float64
    ```
 
-1. 若要增加序列的長度，您可以使用陣列來加入新的值。 
+1. 若要增加序列的長度，您可以使用陣列來加入新的值。
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'Python'
@@ -100,7 +108,7 @@ SQL Server 依賴 Python **pandas** 套件，這非常適合用來處理表格�
    **結果**
 
    ```text
-   STDOUT message(s) from external script: 
+   STDOUT message(s) from external script:
    0    0.5
    1    2.0
    dtype: float64
@@ -122,7 +130,7 @@ SQL Server 依賴 Python **pandas** 套件，這非常適合用來處理表格�
    **結果**
 
    ```text
-   STDOUT message(s) from external script: 
+   STDOUT message(s) from external script:
    0.5
    simple math example 1    0.5
    simple math example 2    0.5
@@ -131,7 +139,7 @@ SQL Server 依賴 Python **pandas** 套件，這非常適合用來處理表格�
 
 ## <a name="convert-series-to-data-frame"></a>將序列轉換成資料框架
 
-將純量數學運算結果轉換成表格式結構之後，您仍必須將它們轉換成 SQL Server 可以處理的格式。
+將純量數學結果轉換為表格式結構之後，您仍然需要將其轉換為 SQL 機器學習可以處理的格式。
 
 1. 若要將數列轉換成 data.frame，請呼叫 pandas [DataFrame](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe) \(英文\) 方法。
 
@@ -217,12 +225,7 @@ SQL Server 依賴 Python **pandas** 套件，這非常適合用來處理表格�
 
 ## <a name="next-steps"></a>後續步驟
 
-若要了解如何在 SQL Server 中撰寫進階 Python 函式，請遵循此快速入門：
+若要了解如何使用 SQL 機器學習編寫進階 Python 函數，請遵循此快速入門：
 
 > [!div class="nextstepaction"]
-> [使用 SQL Server 機器學習服務撰寫進階 Python 函數](quickstart-python-functions.md)
-
-如需在 SQL Server 機器學習服務中使用 Python 的詳細資訊，請參閱下列文章：
-
-- [在 Python 中建立預測模型並為其評分](quickstart-python-train-score-model.md)
-- [什麼是 SQL Server 機器學習服務 (Python 和 R)？](../sql-server-machine-learning-services.md)
+> [編寫進階的 Python 函數](quickstart-python-functions.md)

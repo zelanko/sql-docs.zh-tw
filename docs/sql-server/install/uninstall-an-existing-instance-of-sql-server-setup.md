@@ -1,5 +1,6 @@
 ---
 title: 解除安裝現有的執行個體
+description: 本文描述如何解除安裝 SQL Server 的獨立執行個體，這也會準備系統，以便您隨時重新安裝 SQL Server。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - instances of SQL Server, uninstalling
 - uninstalling SQL Server
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 61647a4e0a654d478050268587b2b47fd79fc686
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fd4e3ee094bca1d27543a92a357f705b0e3d82fe
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78335752"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883733"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>解除安裝現有的 SQL Server 執行個體 (安裝程式)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   本文描述如何解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的獨立執行個體。 遵循本文中的步驟時，您也可以讓系統做好重新安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的準備。  
   
@@ -33,7 +34,7 @@ ms.locfileid: "78335752"
 ## <a name="considerations"></a>考量
 
 - 若要解除安裝 SQL Server，您必須是具備以服務登入權限的本機管理員。 
-- 若您的電腦有「最低」  實體記憶體需求，請將分頁檔增加至實體記憶體的兩倍。 虛擬記憶體不足可能會造成 SQL Server 移除不完全。 
+- 若您的電腦有「最低」** 實體記憶體需求，請將分頁檔增加至實體記憶體的兩倍。 虛擬記憶體不足可能會造成 SQL Server 移除不完全。 
 - 在具備多個 SQL Server 執行個體的系統上，SQL Server 瀏覽器服務只會在移除最後一個 SQL Server 執行個體時解除安裝一次。 SQL Server 瀏覽器服務可以在 [控制台] 中的 [程式和功能] 中手動移除。 
 - 解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會刪除在安裝程序期間所新增的 tempdb 資料檔案。 如果系統資料庫目錄中有名稱模式為 tempdb_mssql_*.ndf 的檔案，則會刪除這些檔案。 
   
@@ -65,45 +66,45 @@ ms.locfileid: "78335752"
 
 若要從 Windows 10、Windows Server 2016、Windows Server 2019 及更新版本中解除安裝 SQL Server，請遵循下列步驟： 
 
-1. 若要開始移除流程，請從 [開始] 功能表巡覽至 [設定]  ，然後選擇 [應用程式]  。 
+1. 若要開始移除流程，請從 [開始] 功能表巡覽至 [設定]，然後選擇 [應用程式]。 
 1. 在搜尋方塊中搜尋 `sql`。 
 1. 選取 **Microsoft SQL Server (版本) (位元)** 。 例如： `Microsoft SQL Server 2017 (64-bit)` 。
-1. 選取 [解除安裝]  。
+1. 選取 [解除安裝]。
  
     ![解除安裝 SQL Server](media/uninstall-an-existing-instance-of-sql-server-setup/uninstall-sql-server-windows-10.png)
 
-1. 在 SQL Server 對話方塊快顯中選取 [移除]  來啟動 Microsoft SQL Server 安裝精靈。 
+1. 在 SQL Server 對話方塊快顯中選取 [移除] 來啟動 Microsoft SQL Server 安裝精靈。 
 
     ![移除 SQL Server](media/uninstall-an-existing-instance-of-sql-server-setup/remove-sql-2017.png)
   
-1.  在 [選取執行個體]  頁面上，使用下拉式方塊來指定要移除的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，或指定僅移除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共用功能和管理工具的選項。 若要繼續，請選取 [下一步]  。  
+1.  在 [選取執行個體] 頁面上，使用下拉式方塊來指定要移除的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，或指定僅移除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共用功能和管理工具的選項。 若要繼續，請選取 [下一步]。  
   
-1.  在 [選取功能]  頁面上，指定要從指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中移除的功能。  
+1.  在 [選取功能] 頁面上，指定要從指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中移除的功能。  
   
 1.  在 **[準備移除]** 頁面上，檢閱即將解除安裝之元件和功能的清單。 按一下 **[移除]** 開始解除安裝  
  
-1. 重新整理 [應用程式與功能]  視窗來驗證已成功移除 SQL Server 執行個體，並判斷哪些 SQL Server 元件仍存在 (若有的話)。 若您有進行選擇的話，請也從此視窗移除這些元件。 
+1. 重新整理 [應用程式與功能]**** 視窗來驗證已成功移除 SQL Server 執行個體，並判斷哪些 SQL Server 元件仍存在 (若有的話)。 若您有進行選擇的話，請也從此視窗移除這些元件。 
 
 # <a name="windows-2008---2012-r2"></a>[Windows 2008 - 2012 R2](#tab/windows2012)
 
 若要從 Windows Server 2008、Windows Server 2012 及 Windows 2012 R2 中解除安裝 SQL Server，請遵循下列步驟： 
 
-1. 若要開始移除流程，請巡覽至 [控制台]  ，然後選取 [程式和功能]  。
-1. 以滑鼠右鍵按一下 [Microsoft SQL Server (版本) (位元)]  ，然後選取 [解除安裝]  。 例如： `Microsoft SQL Server 2012 (64-bit)` 。  
+1. 若要開始移除流程，請巡覽至 [控制台]，然後選取 [程式和功能]。
+1. 以滑鼠右鍵按一下 [Microsoft SQL Server (版本) (位元)]，然後選取 [解除安裝]。 例如： `Microsoft SQL Server 2012 (64-bit)` 。  
   
     ![解除安裝 SQL Server](media/uninstall-an-existing-instance-of-sql-server-setup/uninstall-sql-server-windows-2012.png)
 
-1. 在 SQL Server 對話方塊快顯中選取 [移除]  來啟動 Microsoft SQL Server 安裝精靈。 
+1. 在 SQL Server 對話方塊快顯中選取 [移除] 來啟動 Microsoft SQL Server 安裝精靈。 
 
     ![移除 SQL Server](media/uninstall-an-existing-instance-of-sql-server-setup/remove-sql-2012.png)
   
-1.  在 [選取執行個體]  頁面上，使用下拉式方塊來指定要移除的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，或指定僅移除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共用功能和管理工具的選項。 若要繼續，請選取 [下一步]  。  
+1.  在 [選取執行個體] 頁面上，使用下拉式方塊來指定要移除的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，或指定僅移除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共用功能和管理工具的選項。 若要繼續，請選取 [下一步]。  
   
-1.  在 [選取功能]  頁面上，指定要從指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中移除的功能。  
+1.  在 [選取功能] 頁面上，指定要從指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中移除的功能。  
   
 1.  在 **[準備移除]** 頁面上，檢閱即將解除安裝之元件和功能的清單。 按一下 **[移除]** 開始解除安裝  
  
-1. 重新整理 [程式和功能]  視窗來驗證已成功移除 SQL Server 執行個體，並判斷哪些 SQL Server 元件仍存在 (若有的話)。 若您有進行選擇的話，請也從此視窗移除這些元件。 
+1. 重新整理 [程式和功能]**** 視窗來驗證已成功移除 SQL Server 執行個體，並判斷哪些 SQL Server 元件仍存在 (若有的話)。 若您有進行選擇的話，請也從此視窗移除這些元件。 
 
 ---
 

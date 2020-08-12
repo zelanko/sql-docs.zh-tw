@@ -1,21 +1,21 @@
 ---
 title: 擴充資料庫專案組建，以產生模型統計資料
+description: 了解如何建立、安裝及測試建置參與者，以在建置資料庫專案時，從 SQL 資料庫模型輸出統計資料。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: fbbedff0adbe0302465344d437f9646bf68d997f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9365c90104fb7291a130f338e88907dce932dd7a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242694"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894023"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>逐步解說：擴充資料庫專案組建，以產生模型統計資料
 
@@ -29,7 +29,7 @@ ms.locfileid: "75242694"
   
 -   [測試您的組建參與者](#TestBuildContributor)  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
 您需要下列元件才能完成這個逐步解說：  
   
 -   您必須已安裝包含 SQL Server Data Tools (SSDT) 和支援 C# 或 VB 開發的 Visual Studio 版本。  
@@ -89,11 +89,11 @@ ms.locfileid: "75242694"
   
 2.  將 "Class1.cs" 檔案重新命名為 "ModelStatistics.cs"。  
   
-3.  在 [方案總管] 中，以滑鼠右鍵按一下專案節點，然後按一下 [新增參考]  。  
+3.  在 [方案總管] 中，以滑鼠右鍵按一下專案節點，然後按一下 [新增參考]。  
   
 4.  選取 **System.ComponentModel.Composition** 項目，然後按一下 [ **確定**]。  
   
-5.  加入必要的 SQL 參考：以滑鼠右鍵按一下專案節點，然後按一下 [加入參考]  。 按一下 [ **瀏覽** ] 按鈕。 巡覽至 **C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin** 資料夾。 選擇 **Microsoft.SqlServer.Dac.dll**、 **Microsoft.SqlServer.Dac.Extensions.dll**和 **Microsoft.Data.Tools.Schema.Sql.dll** 項目，然後按一下 [ **確定**]。  
+5.  加入必要的 SQL 參考：以滑鼠右鍵按一下專案節點，然後按一下 [加入參考]。 按一下 [ **瀏覽** ] 按鈕。 巡覽至 **C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin** 資料夾。 選擇 **Microsoft.SqlServer.Dac.dll**、 **Microsoft.SqlServer.Dac.Extensions.dll**和 **Microsoft.Data.Tools.Schema.Sql.dll** 項目，然後按一下 [ **確定**]。  
   
     下一步，開始將程式碼加入至類別。  
   
@@ -438,17 +438,17 @@ ms.locfileid: "75242694"
   
 3.  按一下 [ **簽署組件**]。  
   
-4.  在 [選擇強式名稱金鑰檔案]  中，按一下 **<New>** 。  
+4.  在 [選擇強式名稱金鑰檔案] 中，按一下 **<New>** 。  
   
 5.  在 [ **建立強式名稱金鑰** ] 對話方塊中的 [ **金鑰檔名稱**]，輸入 **MyRefKey**。  
   
 6.  (選擇性) 您可以為強式名稱金鑰檔指定密碼。  
   
-7.  按一下 [確定]  。  
+7.  按一下 [確定]。  
   
 8.  按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
-9. 在 [建置]  功能表上，按一下 [建置方案]  。  
+9. 在 [建置] 功能表上，按一下 [建置方案]。  
   
     下一步，您必須安裝組件，以便在建置 SQL 專案時將其載入。  
   
@@ -508,7 +508,7 @@ ms.locfileid: "75242694"
         </Project>  
         ```  
   
-    4.  針對要執行參與者的任何專案，在 .sqlproj 檔案內部匯入目標檔案，方法是將下列陳述式加入至 .sqlproj 檔案，在檔案的 \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> 節點後面：  
+    4.  在所要執行參與者其任何專案的 .sqlproj 檔案中，將下列陳述式新增到檔案中 \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> 節點之後的 .sqlproj 檔案，以匯入目標檔案：  
   
         ```  
         <Import Project="$(MSBuildExtensionsPath)\MyContributors\MyContributors.targets " />  
@@ -525,7 +525,7 @@ ms.locfileid: "75242694"
   
 1.  在 Visual Studio 中，以滑鼠右鍵按一下專案並選取 [重建]。 這會重建專案，而且您應該會看見產生的模型統計資料，其輸出包含在建置輸出中並儲存至 ModelStatistics.xml。 請注意，您可能需要在方案總管中選取 [顯示所有檔案] 才能看得到 xml 檔案。  
   
-2.  開啟 Visual Studio 命令提示字元：在 [開始] 功能表上，依序按一下 [所有程式]、[Microsoft Visual Studio <Visual Studio Version>]、[Visual Studio Tools]，然後按一下 [Visual Studio 命令提示字元 (<Visual Studio Version>)]。  
+2.  開啟 Visual Studio 命令提示字元：在 [開始]**** 功能表上，依序按一下 [所有程式]****、[Microsoft Visual Studio <Visual Studio Version>]****、[Visual Studio Tools]****，然後按一下 [Visual Studio 命令提示字元 (<Visual Studio Version>)]****。  
   
 3.  在命令提示字元中，巡覽至包含 SQL 專案的資料夾。  
   
@@ -593,5 +593,5 @@ Relationships
   
 ## <a name="see-also"></a>另請參閱  
 [使用組建和部署參與者自訂資料庫建置和部署](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
-[逐步解說：擴充資料庫專案部署以分析部署計畫](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
+[逐步解說：延伸資料庫專案部署以分析部署計畫](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
   

@@ -1,5 +1,6 @@
 ---
 title: 匯入資料庫專案中
+description: 了解如何從即時資料庫、資料層應用程式和指令碼，將物件匯入資料庫專案中。 了解如何匯入加密的物件。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -10,16 +11,15 @@ f1_keywords:
 ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 0cfdbb9cb094188e372424257656953b62635996
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9cbe1d734238728b87f6931fdee49654155e82e6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246445"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893866"
 ---
 # <a name="import-into-a-database-project"></a>匯入資料庫專案中
 
@@ -42,14 +42,14 @@ ms.locfileid: "75246445"
   
 匯入時，系統會針對新物件使用 SSDT 的組織預設，將物件定義編碼成專案檔：新檔案代表最上層物件、階層子系與父系定義於相同的檔案中，並且盡可能以內嵌方式定義資料表/資料行條件約束。 如需提高每個物件的目標可見性和控制能力，請使用 [結構描述比較] 而非 [匯入]。  
   
-如果匯入來源包含預先部署和部署後指令碼、RefactorLog 或 SQLCMD 變數定義，它們將匯入專案中。 如果專案已經包含上述任何一種成品，匯入的檔案將加入至專案中的 [匯入時忽略]  資料夾。  
+如果匯入來源包含預先部署和部署後指令碼、RefactorLog 或 SQLCMD 變數定義，它們將匯入專案中。 如果專案已經包含上述任何一種成品，匯入的檔案將加入至專案中的 [匯入時忽略]**** 資料夾。  
   
 **匯入時忽略資料夾**  
   
 ![SSDT 匯入時忽略資料夾](../ssdt/media/ssdt-ignoredonimport.gif "SSDT 匯入時忽略資料夾")  
   
 ## <a name="import-source-script-sql"></a><a name="bkmk_import_source_script"></a>匯入來源：指令碼 (*.sql)  
-系統會加入來自匯入來源但原本「不」  存在專案中的所有物件，而位於匯入來源且「已經」  存在專案中的所有物件都將覆寫專案中的物件定義。  
+系統會加入來自匯入來源但原本「不」** 存在專案中的所有物件，而位於匯入來源且「已經」** 存在專案中的所有物件都將覆寫專案中的物件定義。  
   
 > [!NOTE]  
 > 這種路徑存在兩個已知錯誤，將於未來的版本修正：  
@@ -57,7 +57,7 @@ ms.locfileid: "75246445"
 > -   如果資料表/資料行條件約束定義於專案資料表定義中的 CREATE TABLE 陳述式外部，匯入作業將會覆寫資料表定義，讓條件約束成為內嵌條件約束。 不過，它將保留外部條件約束，因此會在專案中產生重複的條件約束。  
 > -   來自來源指令碼且已經存在專案中的任何主要金鑰或資料庫加密金鑰將在匯入時進行複製。 請移除重複項目以便建置專案。  
   
-「從指令碼匯入」程序不包含預先部署/部署後指令碼、SQLCMD 變數或 RefactorLog 檔案。 如果系統在匯入時偵測到上述和任何其他不支援的建構，就會將它們放入專案之 [指令碼] 資料夾中的 **ScriptsIgnoredOnImport.sql** 檔案。  
+「從指令碼匯入」程序不包含預先部署/部署後指令碼、SQLCMD 變數或 RefactorLog 檔案。 如果系統在匯入時偵測到上述和任何其他不支援的建構，就會將它們放入專案之 [指令碼]**** 資料夾中的 **ScriptsIgnoredOnImport.sql** 檔案。  
   
  
 ## <a name="import-encrypted-objects"></a><a name="bkmk_import_encrypted"></a>匯入加密的物件  

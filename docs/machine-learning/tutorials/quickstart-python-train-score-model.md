@@ -1,30 +1,34 @@
 ---
 title: 快速入門：在 Python 中將模型定型
-description: 在此快速入門中，您將會使用 Python 來建立及定型預測模型。 您會將模型儲存至 SQL Server 執行個體中的資料表，然後使用模型預測以 SQL Server 機器學習服務所產生新資料的值。
+titleSuffix: SQL machine learning
+description: 在此快速入門中，您將會使用 Python 來建立及定型預測模型。 您會將模型儲存在您資料庫中的資料表，然後以 SQL 機器學習使用模型從新資料預測值。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/28/2020
+ms.date: 05/21/2020
 ms.topic: quickstart
 author: cawrites
 ms.author: chadam
-ms.reviewer: garye
+ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 929491de1eb99835133d04d396023b84680af9f4
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 7fe03849217dfe6e8ad7acedc39d891c5168f9c8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606860"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772375"
 ---
-# <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>快速入門：使用 SQL Server 機器學習服務在 Python 中建立預測模型並計算其分數
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-machine-learning"></a>快速入門：透過 SQL 機器學習，建立 Python 的預測模型並為其評分
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 在此快速入門中，您將會使用 Python 來建立及定型預測模型。 您會將模型儲存至 SQL Server 執行個體中的資料表，然後使用模型，利用 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)或在[巨量資料叢集](../../big-data-cluster/machine-learning-services.md)上預測新資料中的值。
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 在此快速入門中，您將會使用 Python 來建立及定型預測模型。 您會將模型儲存至 SQL Server 執行個體中的資料表，然後使用模型預測以 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)所產生新資料的值。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+在此快速入門中，您將會使用 Python 來建立及定型預測模型。 您會將模型儲存在您資料庫中的資料表，然後使用 [Azure SQL 受控執行個體機器學習服務](/azure/azure-sql/managed-instance/machine-learning-services-overview)，利用模型從新的資料預測值。
 ::: moniker-end
 
 您將建立並執行在 SQL 中執行的兩個預存程序。 第一個預存程序使用傳統的鳶尾花資料集，並產生貝氏機率分類模型，以根據花卉特徵來預測鳶尾花的品種。 第二個程序為評分用，會呼叫在第一個程式中產生的模型，並根據新資料輸出一組預測。 將 Python 程式碼放入 SQL 預存程序後，作業會包含在 SQL 中、可重複使用，而且可由其他預存程序和用戶端應用程式呼叫。
@@ -38,15 +42,19 @@ ms.locfileid: "83606860"
 
 ## <a name="prerequisites"></a>Prerequisites
 
+您需要符合下列必要條件，才能執行此快速入門。
+
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 - SQL Server 機器學習服務。 如需如何安裝機器學習服務的相關資訊，請參閱 [Windows 安裝指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安裝指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)。 您也可以[啟用 SQL Server 巨量資料叢集上的機器學習服務](../../big-data-cluster/machine-learning-services.md)。
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 - SQL Server 機器學習服務。 如需如何安裝機器學習服務的相關資訊，請參閱 [Windows 安裝指南](../install/sql-machine-learning-services-windows-install.md)。 
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Azure SQL 受控執行個體機器學習服務。 如需註冊說明，請參閱 [Azure SQL 受控執行個體機器學習服務概觀](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
+::: moniker-end
 
-- 執行 SQL 查詢的工具，這些查詢包含 R 指令碼。 本快速入門使用 [Azure Data Studio](../../azure-data-studio/what-is.md)。
-
+- 執行包含 Python 指令碼之 SQL 查詢的工具。 本快速入門使用 [Azure Data Studio](../../azure-data-studio/what-is.md)。
 
 - 本練習使用的範例資料是鳶尾花範例資料。 依照[鳶尾花示範資料](demo-data-iris-in-sql.md)中的指示，建立範例資料庫 **irissql**。
 
@@ -54,7 +62,7 @@ ms.locfileid: "83606860"
 
 在此步驟中，您將建立一個預存程序，該程序會產生預測結果的模型。
 
-1. 開啟 Azure Data Studio、連接至您 SQL Server 執行個體，然後開啟新的查詢視窗。
+1. 開啟 Azure Data Studio、連線至您的 SQL 執行個體，並開啟新的查詢視窗。
 
 1. 連線至 irissql 資料庫。
 
@@ -66,11 +74,11 @@ ms.locfileid: "83606860"
 1. 複製下列程式碼，以建立新的預存程序。
 
    執行時，此程序會呼叫 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 來啟動 Python 工作階段。 
-   
-   Python 程式碼所需的輸入會當做此預存程序中的輸入參數來傳遞。 輸出將會是已定型的模型，並以機器學習演算法的 Python **scikit-learn** 程式庫為基礎。 
+
+   Python 程式碼所需的輸入會當做此預存程序中的輸入參數來傳遞。 輸出將會是已定型的模型，並以機器學習演算法的 Python **scikit-learn** 程式庫為基礎。
 
    此程式碼會使用 [**pickle**](https://docs.python.org/2/library/pickle.html) 來序列化模型。 此模型將使用 **iris_data** 資料表中資料行 0 到 4 的資料定型。 
-   
+
    您在此程序第二部分中看到的參數會明白指出資料輸入和模型輸出。 我們建議您在預存程序中執行的 Python 程式碼中，盡量清楚地定義輸入和輸出，進而對應至在執行時間傳遞的預存程序輸入和輸出。
 
     ```sql
@@ -100,7 +108,7 @@ ms.locfileid: "83606860"
 
 在此步驟中，您需執行程序來執行內嵌程式碼，並建立定型和序列化模型做為輸出。 
 
-儲存在 SQL Server 中以便重複使用的模型會序列化為位元組資料流，並儲存在資料庫資料表的 VARBINARY(MAX) 資料行中。 模型在建立、定型、序列化並儲存到資料庫之後，就可以由其他程式或評分工作負載中的 [PREDICT T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) 函數來呼叫。
+儲存在您資料庫中以便重複使用的模型，皆序列化為位元組資料流，並儲存在資料庫資料表中的 VARBINARY(MAX) 資料行。 模型在建立、定型、序列化並儲存到資料庫之後，就可以由其他程式或評分工作負載中的 [PREDICT T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) 函數來呼叫。
 
 1. 執行下列指令碼以執行程序。 執行預存程序的特定陳述式是第四行的 `EXECUTE`。
 
@@ -183,13 +191,11 @@ ms.locfileid: "83606860"
 
 ## <a name="conclusion"></a>結論
 
-您在本練習中已了解如何建立不同工作專用的預存程序，其中每個預存程序都使用系統預存程序 `sp_execute_external_script` 來啟動 Python 流程。 Python 流程的輸入會傳遞至 `sp_execute_external` 做為參數。 Python 指令碼本身和 SQL Server 資料庫中的資料變數都會當做輸入進行傳遞。
+您在本練習中已了解如何建立不同工作專用的預存程序，其中每個預存程序都使用系統預存程序 `sp_execute_external_script` 來啟動 Python 流程。 Python 流程的輸入會傳遞至 `sp_execute_external` 做為參數。 Python 指令碼本身與資料庫中的資料變數皆以輸入形式傳遞。
 
 一般來說，您應該只打算使用 Python 程式碼已經完善的 Azure Data Studio，或是傳回資料列輸出的簡易 Python 程式碼。 Azure Data Studio 這項工具可支援 T-SQL 等查詢語言，並傳回扁平化資料列集。 如果您的程式碼會產生散佈圖或長條圖等視覺效果輸出，則需要可在預存程序之外轉譯影像的個別工具或終端使用者應用程式。
 
 對於習慣撰寫全功能指令碼來處理各種作業的 Python 開發人員而言，可能不需要將工作整理成不同的程序。 但定型和評分有不同的使用案例。 區隔這兩者後，您可以將每個工作放在不同的排程裡，並設定每個作業的權限範圍。
-
-同樣地，您也可以利用 SQL Server 的資源分配功能，例如平行處理、資源管理，或是撰寫指令碼並且在支援資料流和平行執行的 [microsoftml](../python/ref-py-microsoftml.md) 中使用演算法。 區隔定型和評分後，您可以針對特定工作負載進行最佳化。
 
 最後一項優勢是可以使用參數來修改流程。 在本練習中，已將建立模型 (在此範例中名為「貝氏機率分類」) 的 Python 程式碼當做輸入傳遞至第二個預存程序，以便在評分流程中呼叫此模型。 本練習只會使用一個模型，但您可以想像在評分工作中將模型參數化後，該指令碼將會變得更加實用。
 

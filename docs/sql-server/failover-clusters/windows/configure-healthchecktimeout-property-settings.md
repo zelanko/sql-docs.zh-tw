@@ -1,6 +1,6 @@
 ---
 title: 設定可用性群組的 HealthCheckTimeout
-description: 設定 Always On 可用性群組的 HealthCheckTimeout，這可用來指定 SQL Server 資源 DLL 在報告無回應之前應等待的時間。
+description: 設定 Always On 可用性群組的 HealthCheckTimeout，這可指定 SQL Server 資源 DLL 在報告無回應之前等待的時間長度。
 ms.custom: seo-lt-2019
 ms.date: 03/09/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e3baf48a747db8dfdc9fb18387ac92dd0c53b4c8
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 83c59052646a870b513ebe79835d4c5a9345a5d9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925111"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882946"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>設定 HealthCheckTimeout 屬性設定
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   HealthCheckTimeout 設定會用來指定將 AlwaysOn 容錯移轉叢集執行個體 (FCI) 回報為沒有回應之前，SQL Server 資源 DLL 應該等候 [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 預存程序傳回資訊的時間長度 (以毫秒為單位)。 針對逾時設定值所做的變更會立即生效，且不需要重新啟動 SQL Server 資源。  
   
 -   **開始之前：** [限制事項](#Limits)、[安全性](#Security)  

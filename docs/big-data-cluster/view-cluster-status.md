@@ -5,20 +5,20 @@ description: 本文說明如何使用 Azure Data Studio、Notebook 和 azdata �
 author: yualan
 ms.author: alayu
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 45cf5461b9154d397ee5365fd275d2545a3cc376
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5e3c7f2f34f949f16821ad7c1dd6a3c3b0d4681e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73531596"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772823"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>如何檢視巨量資料叢集的狀態 
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 本文描述如何存取服務端點，並檢視 SQL Server 巨量資料叢集元件的狀態。 您可以同時使用 Azure Data Studio 和 **azdata**，本文同時涵蓋這兩種技術。
 
@@ -53,7 +53,9 @@ ms.locfileid: "73531596"
 - Spark 作業監視
 - Spark 資源管理
 
-您可以直接按一下這些連結。 存取下列儀表板時，您必須進行驗證。 針對計量和記錄儀表板，請提供您在部署時使用 **AZDATA_USERNAME** 和 **AZDATA_PASSWORD** 環境變數所設定的控制器系統管理員認證。 Spark 儀表板會使用閘道 (Knox) 認證：可為叢集中與 AD 整合的 AD 身分識別，或 **root** 使用者與 **AZDATA_PASSWORD** (若您的叢集使用基本驗證)。 
+您可以直接按一下這些連結。 存取下列儀表板時，您必須進行驗證。 針對計量和記錄儀表板，請提供您在部署時使用 **AZDATA_USERNAME** 和 **AZDATA_PASSWORD** 環境變數所設定的控制器系統管理員認證。 Spark 儀表板將使用閘道 (Knox) 認證：可為叢集中與 AD 整合的 AD 身分識別，或 **AZDATA_USERNAME** 與 **AZDATA_PASSWORD** (若叢集中使用基本驗證)。
+
+[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 ### <a name="cluster-status-notebook"></a><a id="notebook"></a> 叢集狀態筆記本
 

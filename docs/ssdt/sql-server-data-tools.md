@@ -1,5 +1,6 @@
 ---
 title: SQL Server Data Tools
+description: 請檢視您可使用 SQL Server Data Tools 完成之資料庫部署工作的資源，例如設計資料表與建立功能延伸模組。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,16 +9,15 @@ f1_keywords:
 ms.assetid: 5f08f15a-851d-4026-a557-28b3c6492efe
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 2049550374569d10631239419cd380c115022ff2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2fa96a9175124e3aa1bc5f0e7008422fafe85aab
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256336"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883445"
 ---
 # <a name="sql-server-data-tools"></a>SQL Server Data Tools
 

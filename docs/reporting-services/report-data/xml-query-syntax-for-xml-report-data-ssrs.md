@@ -1,5 +1,6 @@
 ---
 title: XML 報表資料的 XML 查詢語法 | Microsoft Docs
+description: 了解如何在 Reporting Services 中透過包含 XML 查詢或元素路徑來建立資料集查詢。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dd1bccb6bff8f19e9abb779310033f4685b31f67
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0ee76c36c70c201de03700b8838e5f21a8589448
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081355"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812190"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>XML 報表資料的 XML 查詢語法 (SSRS)
-  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，可以建立 XML 資料來源的資料集。 當您定義資料來源之後，要建立此資料集的查詢。 根據資料來源所指向的 XML 資料類型而定，您可藉由加入 XML **查詢** 或元素路徑來建立資料集查詢。 XML **查詢** 會以 **\<Query>** 標記作為開頭，而且會包含因資料來源而異的命名空間和 XML 項目。 元素路徑與命名空間無關，而且會指定當搭配類似 XPath 語法使用基礎 XML 資料時，要使用哪些節點和節點屬性。 如需項目路徑的詳細資訊，請參閱 [XML 報表資料的項目路徑語法 &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md)。  
+  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，可以建立 XML 資料來源的資料集。 當您定義資料來源之後，要建立此資料集的查詢。 根據資料來源所指向的 XML 資料類型而定，您可藉由加入 XML **查詢** 或元素路徑來建立資料集查詢。 XML **查詢** 會以 **\<Query>** 標記作為開頭，且會包含因資料來源而異的命名空間和 XML 元素。 元素路徑與命名空間無關，而且會指定當搭配類似 XPath 語法使用基礎 XML 資料時，要使用哪些節點和節點屬性。 如需項目路徑的詳細資訊，請參閱 [XML 報表資料的項目路徑語法 &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md)。  
   
  您可以針對下列 XML 資料類型建立 XML 資料來源：  
   
@@ -61,7 +62,7 @@ ms.locfileid: "77081355"
 |使用預設值的 XML 文件。|*沒有查詢*。<br /><br /> 元素路徑衍生自 XML 文件本身，而且與命名空間無關。|  
   
 > [!NOTE]  
->  第一個 Web 服務範例會使用 <xref:ReportService2006.ReportingService2006.ListChildren%2A> 方法中的 Web 服務 XML 資料。 若要執行這個查詢，您必須建立新的資料來源，然後設定 `https://localhost/reportserver/reportservice2006.asmx` 的連接字串。 <xref:ReportService2006.ReportingService2006.ListChildren%2A> 方法會採用兩個參數︰**Item** 和 **Recursive**。 將 **Item** 的預設值設定為 **/** ，而 **Recursive** 的預設值設定為 **1**。  
+>  第一個 Web 服務範例會使用 <xref:ReportService2006.ReportingService2006.ListChildren%2A> 方法中的 Web 服務 XML 資料。 若要執行這個查詢，您必須建立新的資料來源，然後設定 `https://localhost/reportserver/reportservice2006.asmx` 的連接字串。 <xref:ReportService2006.ReportingService2006.ListChildren%2A> 方法接受兩個參數：**Item** 和 **Recursive**。 將 **Item** 的預設值設定為 **/** ，而 **Recursive** 的預設值設定為 **1**。  
   
 ## <a name="specifying-namespaces"></a>指定命名空間  
  使用 XML **查詢** 元素可指定用於資料來源中 XML 資料的命名空間。 下列 XML 查詢會使用命名空間 **sales**。 **和** 的 XML `sales:LineItems` ElementPath `sales:LineItem` 節點會使用命名空間 **sales**。  

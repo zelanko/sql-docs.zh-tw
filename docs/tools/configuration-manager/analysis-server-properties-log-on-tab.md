@@ -1,5 +1,6 @@
 ---
 title: Analysis Server 屬性 (登入索引標籤)
+description: 了解 [Analysis Server 屬性] 對話方塊的 [登入] 索引標籤。 了解如何使用該索引標籤來指定 SSAS 服務帳戶，以及啟動或停止服務。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: a82e0c98-efaa-4b0b-9582-3c879ee42444
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1b324124e50e02a1acaac17ed188000687b93665
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6c0559cb8e32bc273887ec4f5874b6e7bd1ced06
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306568"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895083"
 ---
 # <a name="analysis-server-properties-log-on-tab"></a>Analysis Server 屬性 (登入索引標籤)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   您可以使用 **[Analysis Server 屬性]** 對話方塊的 **[登入]** 索引標籤，來指定要供 [!INCLUDE[ssAS](../../includes/ssas-md.md)] 服務使用的帳戶，以及啟動和停止該服務。  
   
 > [!NOTE]  

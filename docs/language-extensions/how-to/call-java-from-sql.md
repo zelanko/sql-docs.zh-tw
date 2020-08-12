@@ -4,20 +4,20 @@ titleSuffix: SQL Server Language Extensions
 description: 了解如何使用「SQL Server 語言延伸模組」，從 SQL Server 預存程序呼叫 Java 類別。
 author: dphansen
 ms.author: davidph
-ms.date: 11/05/2019
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bdff924b63b11eda850378987498e8601367d3fe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5aa8659b57349efb7378209006bbada148206bcb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73658889"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735116"
 ---
 # <a name="how-to-call-the-java-runtime-in-sql-server-language-extensions"></a>如何在 SQL Server 語言延伸模組中呼叫 Java 執行階段
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [SQL Server 語言延伸模組](../language-extensions-overview.md)會使用 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 系統預存程序，作為呼叫 Java Runtime 的介面。 
 
@@ -114,6 +114,20 @@ with result sets ((column1 int))
 ```
 
 如需詳細資訊，請參閱 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)。
+
+## <a name="loopback-connection-to-sql-server"></a>SQL Server 的回送連線
+
+使用回送連線透過 JDBC 連線回 SQL Server，以從透過 `sp_execute_external_script` 執行的 Java 讀取和寫入資料。 當您使用 `sp_execute_external_script` 的 **InputDataSet** 與 **OutputDataSet** 引數時，無法這樣做。
+若要在 Windows 內進行回送連線，請使用下列範例：
+
+```
+jdbc:sqlserver://localhost:1433;databaseName=Adventureworks;integratedSecurity=true;
+``` 
+
+若要在 Linux 內進行回送連線，JDBC 驅動程式要求在下列憑證中定義三個連線屬性：
+
+[Client-Certificate-Authenication](https://github.com/microsoft/mssql-jdbc/wiki/Client-Certificate-Authentication-for-Loopback-Scenarios)
+
 
 ## <a name="next-steps"></a>後續步驟
 

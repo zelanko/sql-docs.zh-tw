@@ -1,6 +1,7 @@
 ---
 title: 重新執行至游標
 titleSuffix: SQL Server Profiler
+description: 探索如何在 SQL Server Profiler 中使用資料指標，以在特定點暫停追蹤重新執行。 藉由重新執行至資料指標，讓偵錯作業更容易進行。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 9df4fe8bf442fae11aefeb2b3d4e3c95aa13037e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 075458bd919ebf5ba52d121276e5363b204c0e15
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74957782"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789921"
 ---
 # <a name="replay-to-a-cursor-sql-server-profiler"></a>重新執行至資料指標處 (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 此主題描述如何利用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，來重新執行已在到達資料指標時暫停的追蹤檔或資料表。 在資料指標暫停追蹤可以支援偵錯，因為您可以將較長追蹤指令碼的重新執行過程分解為可累加分析的較短片段。  
   
@@ -32,7 +33,7 @@ ms.locfileid: "74957782"
   
 2.  在追蹤視窗中按一下事件。  
   
-3.  在 [重新執行]  功能表上，按一下 [執行至資料指標處]  ，然後連接您要重新執行追蹤的伺服器。  
+3.  在 [重新執行] 功能表上，按一下 [執行至資料指標處]，然後連接您要重新執行追蹤的伺服器。  
   
 4.  在 **[重新執行組態]** 對話方塊中確認設定，然後按一下 **[確定]** 。  
   

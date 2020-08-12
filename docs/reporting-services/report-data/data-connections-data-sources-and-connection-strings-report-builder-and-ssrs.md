@@ -1,18 +1,19 @@
 ---
 title: 建立資料連接字串 - 報表產生器 & SSRS | Microsoft Docs
-ms.date: 11/18/2019
+description: 了解如何建立資料連接字串，並了解與資料來源認證相關的重要資訊。
+ms.date: 05/21/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 73bf9e24ffb42ef93547097c53b5838a22292fda
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: accb94c4fbfe0c7e10b6fdfcaa749e8059b8e498
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190917"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812293"
 ---
 # <a name="create-data-connection-strings---report-builder--ssrs"></a>建立資料連接字串 - 報表產生器 & SSRS
 
@@ -41,12 +42,12 @@ ms.locfileid: "74190917"
 |SAP NetWeaver BI 資料來源|`DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|將資料來源類型設為 **SAP NetWeaver BI**。 如需詳細資訊，請參閱 [SAP NetWeaver BI 連接類型 &#40;SSRS&#41;](../../reporting-services/report-data/sap-netweaver-bi-connection-type-ssrs.md)。|  
 |Hyperion Essbase 資料來源|`Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample`|將資料來源類型設為 **Hyperion Essbase**。 如需詳細資訊，請參閱 [Hyperion Essbase 連接類型 &#40;SSRS&#41;](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md)。|  
 |Teradata 資料來源|`data source=`\<NNN>.\<NNN>.\<NNN>.\<NNN>`;`|將資料來源類型設為 **Teradata**。 連接字串是四個欄位形式的網際網路通訊協定 (IP) 位址，其中每個欄位都可以是 1 到 3 位數。 如需詳細資訊，請參閱 [Teradata 連線類型 &#40;SSRS&#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md)。|  
-|Teradata 資料來源|`Database=` *資料庫名稱>\<* `; data source=` *\<NN*N *>.\<NNN>.\<NNN>.\<N*NN *>* `;Use X Views=False;Restrict to Default Database=True`|與前述範例類似，將資料來源類型設為 **Teradata**。 請只使用在 Database 標記中指定的預設資料庫，而不要自動探索資料關聯性。|  
+|Teradata 資料來源|`Database=` *\<database name>* `; data source=` *\<NN*N*>.\<NNN>.\<NNN>.\<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|與前述範例類似，將資料來源類型設為 **Teradata**。 請只使用在 Database 標記中指定的預設資料庫，而不要自動探索資料關聯性。|  
 |XML 資料來源, Web 服務|`data source=https://adventure-works.com/results.aspx`|將資料來源類型設為 **XML**。 連接字串是支援 Web 服務定義語言 (WSDL) 之 Web 服務的 URL。 如需詳細資訊，請參閱 [XML 連線類型 &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)。|  
 |XML 資料來源、XML 文件|`https://localhost/XML/Customers.xml`|將資料來源類型設為 **XML**。 連接字串是 XML 文件的 URL。 
 |XML 資料來源, 內嵌 XML 文件|*Empty*|將資料來源類型設為 **XML**。 XML 資料內嵌在報表定義中。|  
 |SharePoint 清單|`data source=https://MySharePointWeb/MySharePointSite/`|將資料來源類型設為 **SharePoint 清單**。|  
-| Power BI Premium 資料集 (從 Reporting Services 2019 開始) | Server=powerbi://api.powerbi.com/v1.0/myorg/<workspacename>;initial catalog = <YourDatasetName> | 將資料來源類型設為 **Microsoft SQL Server Analysis Services**。 |
+| Power BI Premium 資料集 (從 Reporting Services 2019 以及 Power BI 報表伺服器 2020 年 1 月開始) | `Data Source=powerbi://api.powerbi.com/v1.0/myorg/<workspacename>;Initial Catalog=<datasetname>` | 將資料來源類型設為 **Microsoft SQL Server Analysis Services**。 |
 
   
  如果無法使用 **localhost**連接到報表伺服器，請檢查 TCP/IP 通訊協定的網路通訊協定是否已啟用。 如需詳細資訊，請參閱 [Configure Client Protocols](../../database-engine/configure-windows/configure-client-protocols.md)。  

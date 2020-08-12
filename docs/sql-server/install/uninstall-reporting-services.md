@@ -1,5 +1,6 @@
 ---
 title: 解除安裝 Reporting Services | Microsoft Docs
+description: 本文描述如何解除安裝 Reporting Services，這不會移除您所建立內容或修改的組態。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.assetid: 5c764a00-d4bc-465d-b32e-e4efce052ce4
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 16466f509383ec407dafcd5a9cf61b324a7c4b52
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 40bc0ef1014268a2d6b7d50d29589b1db3aaf093
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "71951571"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883701"
 ---
 # <a name="uninstall-reporting-services"></a>解除安裝 Reporting Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   解除安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不會移除您已建立的內容或是您已修改的組態。 不過，如果有解除安裝完成之後需要的內容，建議您先建立內容的複本，然後再開始進行解除安裝程序。  
   
@@ -51,7 +52,7 @@ ms.locfileid: "71951571"
   
 1.  在 Windows [控制台] 中，按一下 **[程式和功能]** 。  
   
-2.  在 [程式和功能]  中，選取 [Microsoft SQL Server 2016]  。  
+2.  在 [程式和功能] 中，選取 [Microsoft SQL Server 2016]。  
   
 3.  在解除安裝精靈中，選取包含 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體功能 **RS**的執行個體。  
   

@@ -2,22 +2,22 @@
 title: 教學課程的紐約市計程車示範資料
 description: 建立包含紐約市計程車範例資料的資料庫。 此資料集會用於 SQL Server 機器學習服務的 R 和 Python 教學課程。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 10/31/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e55076a539cb2a932c2f1e0c432daf774899518f
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 46ad967b9ecd40b84cf7871e7b9ef113fe686953
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116661"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814056"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>SQL Server Python 和 R 教學課程的紐約市計程車示範資料
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本文說明如何設定由[紐約市計程車和禮車委員會](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)公用資料所組成的範例資料庫。 此資料用於適用於 SQL Server 上資料庫內分析的數個 R 和 Python 教學課程。 為了更快速執行範例程式碼，我們建立了代表性的 1% 取樣資料。 在您的系統上，資料庫備份檔案會稍微超過 90MB，在主要資料表中提供一百七十萬個資料列。
 
@@ -34,17 +34,22 @@ ms.locfileid: "81116661"
 
 檔案大小約為 90 MB。
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+>[!NOTE]
+>若要在 [SQL Server 巨量資料叢集](../../big-data-cluster/big-data-cluster-overview.md)上還原範例資料庫，請下載 [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak)，並遵循[將資料庫還原至 SQL Server 巨量資料叢集主要執行個體](../../big-data-cluster/data-ingestion-restore-database.md)中的指引。
+::: moniker-end
+
 1. 按一下 [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak) 下載資料庫備份檔案。
 
 2. 將檔案複製到 C:\Program files\Microsoft SQL Server\MSSQL-instance-name\MSSQL\Backup 資料夾。
 
-3. 在 Management Studio 中，以滑鼠右鍵按一下 [資料庫]  ，然後選取 [還原檔案和檔案群組]  。
+3. 在 Management Studio 中，以滑鼠右鍵按一下 [資料庫]，然後選取 [還原檔案和檔案群組]。
 
-4. 輸入 NYCTaxi_Sample  作為資料庫名稱。
+4. 輸入 NYCTaxi_Sample 作為資料庫名稱。
 
-5. 按一下 [從裝置]  ，然後開啟檔案選取頁面來選取備份檔案。 按一下 [新增]  以選取 [NYCTaxi_Sample.bak]。
+5. 按一下 [從裝置]，然後開啟檔案選取頁面來選取備份檔案。 按一下 [新增] 以選取 [NYCTaxi_Sample.bak]。
 
-6. 選取 [還原]  核取方塊，然後按一下 [確定]  以還原資料庫。
+6. 選取 [還原] 核取方塊，然後按一下 [確定] 以還原資料庫。
 
 ## <a name="review-database-objects"></a>檢閱資料庫物件
    
@@ -77,7 +82,7 @@ ms.locfileid: "81116661"
 
 執行查詢以確認資料已上傳，作為驗證步驟。
 
-1. 在 [物件總管] 的 [資料庫] 下，以滑鼠右鍵按一下 [NYCTaxi_Sample]  資料庫，然後開始新的查詢。
+1. 在 [物件總管] 的 [資料庫] 下，以滑鼠右鍵按一下 [NYCTaxi_Sample] 資料庫，然後開始新的查詢。
 
 2. 執行一些簡單的查詢：
 

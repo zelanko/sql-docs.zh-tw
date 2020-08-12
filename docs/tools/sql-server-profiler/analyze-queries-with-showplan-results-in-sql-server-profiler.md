@@ -1,6 +1,7 @@
 ---
 title: 使用執行程序表結果分析查詢
 titleSuffix: SQL Server Profiler
+description: 了解如何從追蹤擷取執行程序表事件，讓 SQL Server Profiler 顯示查詢計劃資訊。 檢視執行程序表追蹤事件的資料表。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,25 +12,25 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: e0936a3931b574c08e5a58f396d7917eae569078
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b833f87e092260d38649c464fd4b09c6e43899d0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307380"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774955"
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>在 SQL Server Profiler 中使用 SHOWPLAN 結果分析查詢
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   您可以將 Showplan 事件類別加入至追蹤定義中，讓 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 蒐集查詢計畫資訊並顯示在追蹤中。 您也可以從追蹤所收集的其他事件中擷取顯示計畫事件，並將這些顯示計畫事件儲存在個別的 XML 檔案中。  
   
  若要從追蹤中擷取顯示計畫事件，可以使用下列其中一個方式來進行：  
   
--   在追蹤組態時，使用 [事件擷取設定]  索引標籤。請注意，必須先選取 [事件選取範圍]  索引標籤上的其中一個 Showplan 事件，此索引標籤才會顯示。  
+-   在追蹤組態時，使用 [事件擷取設定] 索引標籤。請注意，必須先選取 [事件選取範圍] 索引標籤上的其中一個 Showplan 事件，此索引標籤才會顯示。  
   
--   使用 [檔案]  功能表上的 [擷取 SQL Server 事件]  選項。  
+-   使用 [檔案] 功能表上的 [擷取 SQL Server 事件] 選項。  
   
--   您可以用滑鼠右鍵按一下個別事件，然後選擇 [擷取事件資料]  ，以擷取並儲存個別事件。  
+-   您可以用滑鼠右鍵按一下個別事件，然後選擇 [擷取事件資料]，以擷取並儲存個別事件。  
   
 ## <a name="showplan-events"></a>顯示計畫事件  
  下表列出並說明顯示計畫追蹤事件。  

@@ -1,5 +1,6 @@
 ---
 title: 解除安裝及移除 Master Data Services | Microsoft Docs
+description: 此解除安裝流程會移除 Master Data Services 資料夾和檔案，並會從本機電腦解除安裝 Master Data Services 組態管理員。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -7,23 +8,23 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: efc2431c-588b-42e7-b23b-c875145a33f6
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: a0ed3134e26bc2ed0f581a722de50526a49fb9e3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ec6345d4470c95669b13a08bde103057409bde67
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68126041"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883724"
 ---
 # <a name="uninstall-and-remove-master-data-services"></a>解除安裝及移除 Master Data Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體解除安裝 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 功能時，請依照[解除安裝現有的 SQL Server 執行個體 &#40;安裝程式&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) 的步驟，並於 [選取功能] 頁面指定 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 為應移除的功能。 解除安裝程序會從本機電腦移除 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料夾和檔案，以及解除安裝 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 。  
+   從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體解除安裝 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 功能時，請遵循[解除安裝現有的 SQL Server 執行個體 &#40;安裝程式&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) 的步驟，並於 [選取功能]**** 頁面指定 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 為應移除的功能。 解除安裝程序會從本機電腦移除 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料夾和檔案，以及解除安裝 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 。  
   
  為避免資料遺失且避免影響系統中的其他電腦，解除安裝程序不會移除或變更某些項目。 請檢閱下表，判斷要保留或移除項目。  
   
-|Item|描述|  
+|項目|說明|  
 |----------|-----------------|  
 |資料夾和檔案|解除安裝程序會從安裝路徑移除大部分資料夾和檔案。<br /><br /> 解除安裝程序不會從安裝位置移除 Master Data Services 和 MDSTempDir 資料夾。 解除安裝程序完成之後，您可以從檔案系統手動刪除這些資料夾。 如需詳細資訊，請參閱[資料夾和檔案的權限 &#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md)。|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 組件|解除安裝程序會從全域組件快取 (GAC) 移除 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 組件。|  

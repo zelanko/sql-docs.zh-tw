@@ -1,5 +1,6 @@
 ---
 title: 未知的服務 (登入索引標籤)
+description: 了解 SQL Server 中 [未知的服務屬性] 對話方塊的 [登入] 索引標籤。 了解如何使用該索引標籤來指定帳戶，以及啟動或停止服務。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: e9b35cb5-d8ae-42ea-b59e-deedc99c4823
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8fae62bb72e41cd9f87200a6bcfd2f17eb780697
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 423b2610627e4c6447dbaa1db8ac4624044a31ea
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307597"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880284"
 ---
 # <a name="unknown-service-log-on-tab"></a>未知的服務 (登入索引標籤)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員無法識別此服務。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員」從執行該服務之電腦的 WMI 提供者取得服務資訊。 讀取服務屬性時發生錯誤，或服務屬性不完整。 若要解決此問題，請嘗試關閉並重新開啟「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員」，或檢查執行該服務之電腦的 WMI 提供者。  

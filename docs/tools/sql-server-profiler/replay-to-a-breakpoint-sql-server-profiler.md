@@ -1,6 +1,7 @@
 ---
 title: 重新執行至中斷點
 titleSuffix: SQL Server Profiler
+description: 透過設定中斷點，讓重新執行因特定事件而暫停，使偵錯作業更輕鬆。 使用 SQL Server Profiler 在追蹤檔案或資料表中設定中斷點。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 046f916a5aba5add44c32cb9e761dd1858b86783
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5c8be9d32a60d44007d3e7c20b0b7da8fdb087c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307445"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789905"
 ---
 # <a name="replay-to-a-breakpoint-sql-server-profiler"></a>重新執行至中斷點 (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，在您要重新執行的追蹤檔案或資料表中設定中斷點。 開始重新執行追蹤之前，在追蹤檔案或資料表中設定中斷點，可以讓您在特定事件上暫停重新執行追蹤。 在重新執行追蹤時使用中斷點可以支援偵錯，因為您可以將很長的追蹤指令碼的重新執行過程，分解為可累加分析的短片段。  
   
@@ -36,7 +37,7 @@ ms.locfileid: "75307445"
   
     -   在 **[重新執行]** 功能表上，按一下 **[切換中斷點]** 。  
   
-    -   以滑鼠右鍵按一下事件，然後按一下 [切換中斷點]  。  
+    -   以滑鼠右鍵按一下事件，然後按一下 [切換中斷點]。  
   
      選取的追蹤事件旁邊會出現紅色項目符號，表示此為追蹤中斷點。  
   

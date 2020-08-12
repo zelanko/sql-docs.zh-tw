@@ -1,48 +1,48 @@
 ---
 title: 開啟要編輯的 SQL Server 單元測試
+description: 了解如何編輯 SQL Server 單元測試，以供新增功能或自訂條件。 了解開啟測試原始程式碼檔案的不同方式。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: c6af1b12-54cd-42f9-b2ef-7164f8078323
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: b745cd57d589ecc08217d05edf51577f9d68e7cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: aef5ceb3446f11f320ed4f8205e07bacc3556d4c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241367"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880445"
 ---
-# <a name="how-to-open-a-sql-server-unit-test-to-edit"></a>HOW TO：開啟要編輯的 SQL Server 單元測試
+# <a name="how-to-open-a-sql-server-unit-test-to-edit"></a>如何：開啟要編輯的 SQL Server 單元測試
 
-在建立 SQL Server 單元測試之後，您可以使用 [SQL Server 單元測試設計工具]  加入 Transact\-SQL 陳述式和測試條件。 使用設計工具所建立的測試會產生 Visual C# 或 Visual Basic 程式碼。 此程式碼是測試執行時所執行的程式碼。  
+在建立 SQL Server 單元測試之後，您可以使用 [SQL Server 單元測試設計工具] 加入 Transact\-SQL 陳述式和測試條件。 使用設計工具所建立的測試會產生 Visual C# 或 Visual Basic 程式碼。 此程式碼是測試執行時所執行的程式碼。  
   
-如果您對測試感到滿意，可以直接執行測試。 如果要在此單元測試中加入更多功能，可以編輯其程式碼。 此程式碼位於測試專案中的 .cs 或 .vb 檔案。 如需詳細資訊，請參閱 [SQL Server 單元測試檔案](../ssdt/sql-server-unit-test-files.md)。 您也可以建立新的測試條件來自訂測試。 如需詳細資訊，請參閱[如何：建立資料庫單元測試設計工具的測試條件 (Visual Studio 2010)](https://msdn.microsoft.com/library/aa833409(VS.100).aspx)。  
+如果您對測試感到滿意，可以直接執行測試。 如果要在此單元測試中加入更多功能，可以編輯其程式碼。 此程式碼位於測試專案中的 .cs 或 .vb 檔案。 如需詳細資訊，請參閱 [SQL Server 單元測試檔案](../ssdt/sql-server-unit-test-files.md)。 您也可以建立新的測試條件來自訂測試。 如需詳細資訊，請參閱[如何：為資料庫單元測試設計工具建立測試條件 (Visual Studio 2010)](https://msdn.microsoft.com/library/aa833409(VS.100).aspx)。  
   
 > [!NOTE]  
-> 如果以編輯 .cs 或 .vb 檔案的方式刪除測試方法，該測試方法仍會出現在 [SQL Server 單元測試設計工具]  中。 這是因為測試類別的 InitializeComponent 方法仍會包含該測試的成員變數。 雖然測試會出現在設計工具中，但您無法執行測試，因為其程式碼已不存在。 若要重新產生這個測試的測試方法，請在編輯器中編輯 Transact\-SQL，然後儲存 .cs 或 .vb 測試檔案，或重建測試專案。  
+> 如果以編輯 .cs 或 .vb 檔案的方式刪除測試方法，該測試方法仍會出現在 [SQL Server 單元測試設計工具]**** 中。 這是因為測試類別的 InitializeComponent 方法仍會包含該測試的成員變數。 雖然測試會出現在設計工具中，但您無法執行測試，因為其程式碼已不存在。 若要重新產生這個測試的測試方法，請在編輯器中編輯 Transact\-SQL，然後儲存 .cs 或 .vb 測試檔案，或重建測試專案。  
   
 ### <a name="to-open-the-source-code-file-of-a-sql-server-unit-test-from-solution-explorer"></a>若要從 [方案總管] 開啟 SQL Server 單元測試的原始程式碼檔  
   
--   在 [方案總管]  中，以滑鼠右鍵按一下包含 SQL Server 單元測試的原始程式碼檔，然後按一下 [檢視程式碼]  。  
+-   在 [方案總管] 中，以滑鼠右鍵按一下包含 SQL Server 單元測試的原始程式碼檔，然後按一下 [檢視程式碼]。  
   
     在檔案開啟時，單元測試的測試方法會出現在 Visual Studio 的主要編輯視窗中。  
   
 ### <a name="to-open-the-source-code-file-of-a-sql-server-unit-test-from-the-test-view-window-visual-studio-2010"></a>若要從 [測試檢視] 視窗開啟 SQL Server 單元測試的原始程式碼檔 (Visual Studio 2010)  
   
-1.  執行單元測試。 如需詳細資訊，請參閱[逐步解說：建立及執行 SQL Server 單元測試](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md)中的＜執行 SQL Server 單元測試＞一節。  
+1.  執行單元測試。 如需詳細資訊，請參閱以下內容中的「執行 SQL Server 單元測試」一節：[逐步解說：建立及執行 SQL Server 單元測試](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md)。  
   
-2.  在 [測試檢視] 視窗中，以滑鼠右鍵按一下測試，然後按一下 [開啟測試]  。  
+2.  在 [測試檢視] 視窗中，以滑鼠右鍵按一下測試，然後按一下 [開啟測試]。  
   
     在檔案開啟時，單元測試的測試方法會出現在 Visual Studio 的主要編輯視窗中。  
   
 ### <a name="to-open-the-source-code-file-of-a-sql-server-unit-test-from-the-test-view-window-visual-studio-2012"></a>若要從 [測試檢視] 視窗開啟 SQL Server 單元測試的原始程式碼檔 (Visual Studio 2012)  
   
-1.  執行單元測試。 如需詳細資訊，請參閱[逐步解說：建立及執行 SQL Server 單元測試](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md)中的＜執行 SQL Server 單元測試＞一節。  
+1.  執行單元測試。 如需詳細資訊，請參閱以下內容中的「執行 SQL Server 單元測試」一節：[逐步解說：建立及執行 SQL Server 單元測試](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md)。  
   
 2.  在 [測試總管] 視窗中，按一下單元測試原始程式碼檔的名稱。  
   

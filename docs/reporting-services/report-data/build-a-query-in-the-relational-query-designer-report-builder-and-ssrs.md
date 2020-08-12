@@ -1,5 +1,6 @@
 ---
 title: 在關聯式查詢設計工具中建立查詢 (報表產生器及 SSRS)
+description: 了解如何在關聯式查詢設計工具中建立查詢，以針對報表資料集，指定要從外部資料來源擷取的資料。
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/25/2019
-ms.openlocfilehash: 9895582db682497dd272010466d05f0bebd93b1a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5ead07a1cf2afa13189b76c0c6eb75a472699543
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190910"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808478"
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>在關聯式查詢設計工具中建立查詢 (報表產生器及 SSRS)
 
@@ -45,7 +46,7 @@ ms.locfileid: "74190910"
   
 ### <a name="to-build-a-query-for-an-embedded-dataset-in-report-design-view"></a>若要在報表設計檢視中建立內嵌資料集的查詢  
   
-1.  開啟查詢設計工具。 在 [報表資料] 窗格中，以滑鼠右鍵按一下資料集，然後按一下 [查詢]  。  
+1.  開啟查詢設計工具。 在 [報表資料] 窗格中，以滑鼠右鍵按一下資料集，然後按一下 [查詢]。  
   
      隨即開啟與資料來源相關聯的查詢設計工具。  
   
@@ -67,9 +68,9 @@ ms.locfileid: "74190910"
   
 2.  在 [套用的篩選器] 窗格工具列中，按一下 **[加入篩選]** 。 新的篩選資料列隨即顯示。  
   
-3.  在 [欄位名稱]  中，按一下以顯示欄位的下拉式清單，然後按一下要作為篩選依據的欄位名稱。 例如，若要依數量篩選，請按一下包含項目數的欄位。  
+3.  在 [欄位名稱]**** 中，按一下以顯示欄位的下拉式清單，然後按一下要作為篩選依據的欄位名稱。 例如，若要依數量篩選，請按一下包含項目數的欄位。  
   
-4.  在 [運算子]  中，按一下以顯示運算子的下拉式清單，然後選取要用於篩選的比較運算子。  
+4.  在 [運算子] 中，按一下以顯示運算子的下拉式清單，然後選取要用於篩選的比較運算子。  
   
 5.  在 **[值]** 中，輸入篩選所要依據的值。 例如，若要篩選出超過 100 的數量，請輸入 100。  
   
@@ -83,7 +84,7 @@ ms.locfileid: "74190910"
   
 ### <a name="to-view-a-query-result-set"></a>若要檢視查詢結果集  
   
-1.  在查詢設計工具工具列上，按一下 [執行查詢 (!)]  。  
+1.  在查詢設計工具工具列上，按一下 [執行查詢 (!)]。  
   
     > [!NOTE]  
     >  查詢設計工具會使用設計階段認證執行查詢和擷取結果集。 如需詳細資訊，請參閱 [指定報表資料來源的認證及連接資訊](specify-credential-and-connection-information-for-report-data-sources.md)。  

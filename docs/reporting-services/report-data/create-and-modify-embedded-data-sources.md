@@ -1,5 +1,6 @@
 ---
 title: 建立和修改內嵌資料來源 | Microsoft Docs
+description: 了解如何建立和修改內嵌資料來源，這些資料來源是定義在報表定義中，且只能供該報表使用。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1c38c2e8-7a29-4f79-a4a3-85ed2b13723b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f2ce2535a28661e40e845aa87936f3c23353e544
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0e5f9aed11beacf056916e44e6f2df391444eae0
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190842"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808448"
 ---
 # <a name="create-and-modify-embedded-data-sources"></a>建立和修改內嵌資料來源
   內嵌資料來源是定義在報表定義中，而且只能供該報表使用。  
@@ -29,7 +30,7 @@ ms.locfileid: "74190842"
   
 3.  確認 [內嵌連接]  已選取，然後執行下列動作。  
   
-    1.  從 [類型]  下拉式清單中，選取資料來源類型，例如 [Microsoft SQL Server]  或 [OLE DB]  。  
+    1.  從 [類型] 下拉式清單中，選取資料來源類型，例如 [Microsoft SQL Server] 或 [OLE DB]。  
   
     2.  使用以下其中一個替代方式指定連接字串：  
   
@@ -55,7 +56,7 @@ ms.locfileid: "74190842"
   
 3.  確認已選取 **[使用內嵌於我的報表的連接]** 。  
   
-    1.  從 [選取連線類型]  下拉式清單中，選取資料來源類型，例如 [Microsoft SQL Server]  或 [OLE DB]  。  
+    1.  從 [選取連線類型] 下拉式清單中，選取資料來源類型，例如 [Microsoft SQL Server] 或 [OLE DB]。  
   
     2.  使用以下其中一個替代方式來指定連接字串：  
   

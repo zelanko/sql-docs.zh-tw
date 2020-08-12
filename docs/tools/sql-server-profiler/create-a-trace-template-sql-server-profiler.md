@@ -1,6 +1,7 @@
 ---
 title: 建立追蹤範本
 titleSuffix: SQL Server Profiler
+description: 探索如何在 SQL Server Profiler 中建立新的追蹤範本。 了解如何將篩選新增至範本，以及如何新增或移除事件和資料行。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,23 +12,23 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 2944e21afee17f66eef51723f4e552c947f43db8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: af272f50f281a8c3a564913cfb91be8abcab2898
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307313"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774874"
 ---
 # <a name="create-a-trace-template-sql-server-profiler"></a>建立追蹤範本 (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]來建立新追蹤範本。  
   
 ### <a name="to-create-a-trace-template"></a>若要建立追蹤範本  
   
 1.  在 **[檔案]** 功能表上，指向 **[範本]** ，然後按一下 **[新增範本]** 。  
   
-2.  在 [追蹤範本屬性]  對話方塊中，從 [選取伺服器類型]  清單中選取伺服器類型。  
+2.  在 [追蹤範本屬性] 對話方塊中，從 [選取伺服器類型] 清單中選取伺服器類型。  
   
 3.  在 **[新範本名稱]** 方塊中，輸入範本名稱。  
   
@@ -45,9 +46,9 @@ ms.locfileid: "75307313"
   
     -   當您加入事件時，依預設將包含所有有關的資料行。 若要從追蹤中移除某個事件的資料行，請清除該事件在資料行中的核取方塊。  
   
-    -   若要加入篩選，在 **[編輯篩選]** 對話方塊中按一下資料行名稱，然後指定篩選準則。 您也可以用滑鼠右鍵按一下資料行名稱，然後按一下 [編輯資料行篩選]  以啟動 [編輯篩選]  對話方塊。 按一下 **[確定]** 以加入篩選。  
+    -   若要加入篩選，在 **[編輯篩選]** 對話方塊中按一下資料行名稱，然後指定篩選準則。 您也可以用滑鼠右鍵按一下資料行名稱，然後按一下 [編輯資料行篩選] 以啟動 [編輯篩選] 對話方塊。 按一下 **[確定]** 以加入篩選。  
   
-8.  按一下 [儲存]  。  
+8.  按一下 [儲存]。  
   
 ## <a name="see-also"></a>另請參閱  
  [指定追蹤檔案的事件及資料行 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   

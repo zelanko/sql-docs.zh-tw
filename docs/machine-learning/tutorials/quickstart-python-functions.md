@@ -1,26 +1,25 @@
 ---
 title: 快速入門：Python 函式
-description: 在此快速入門中，您將會了解如何搭配 SQL Server 機器學習服務使用 Python 數學與公用程式函式。
+titleSuffix: SQL machine learning
+description: 在此快速入門中，您將會了解如何搭配 SQL 機器學習使用 Python 數學與公用程式函式。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/28/2020
+ms.date: 05/21/2020
 ms.topic: quickstart
 author: cawrites
 ms.author: chadam
-ms.reviewer: garye
+ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6afe1685956c43e30ace59f3e5cc794a2abbd88f
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 5aef8010c48e08931998f1bd7e49c3797ef4e81a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606701"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784085"
 ---
-# <a name="quickstart-python-functions-with-sql-server-machine-learning-services"></a>快速入門：Python 函式搭配 SQL Server 機器學習服務
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="quickstart-python-functions-with-sql-machine-learning"></a>快速入門：Python 函式搭配 SQL 機器學習
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 在此快速入門中，您將會了解如何搭配 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)或[巨量資料叢集](../../big-data-cluster/machine-learning-services.md)使用 Python 數學與公用程式函式。 使用 T-SQL 實作統計函數通常會很複雜，但若使用 Python，只需要幾行程式碼就可以完成。
@@ -28,18 +27,29 @@ ms.locfileid: "83606701"
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 在此快速入門中，您將會了解如何搭配 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)使用 Python 數學與公用程式函式。 使用 T-SQL 實作統計函數通常會很複雜，但若使用 Python，只需要幾行程式碼就可以完成。
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+在此快速入門中，您將會了解如何搭配 [Azure SQL 受控執行個體機器學習服務](/azure/azure-sql/managed-instance/machine-learning-services-overview)來使用 Python 數學與公用程式函式。 使用 T-SQL 實作統計函數通常會很複雜，但若使用 Python，只需要幾行程式碼就可以完成。
+::: moniker-end
 
 ## <a name="prerequisites"></a>Prerequisites
 
-- 本快速入門需使用已安裝 Python 語言的 [SQL Server 機器學習服務](../install/sql-machine-learning-services-windows-install.md)來存取 SQL Server 的執行個體。
+您需要符合下列必要條件，才能執行此快速入門。
 
-  您的 SQL Server 執行個體可以位於 Azure 虛擬機器或內部部署中。 請注意，外部指令碼功能預設為停用，因此可能需要[啟用外部指令碼](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)，並在開始之前確認 **SQL Server Launchpad 服務**正在執行。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- SQL Server 機器學習服務。 如需如何安裝機器學習服務的相關資訊，請參閱 [Windows 安裝指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安裝指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)。 您也可以[啟用 SQL Server 巨量資料叢集上的機器學習服務](../../big-data-cluster/machine-learning-services.md)。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- SQL Server 機器學習服務。 如需如何安裝機器學習服務的相關資訊，請參閱 [Windows 安裝指南](../install/sql-machine-learning-services-windows-install.md)。 
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Azure SQL 受控執行個體機器學習服務。 如需了解如何註冊，請參閱 [Azure SQL 受控執行個體機器學習服務概觀](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
+::: moniker-end
 
-- 您也需要工具來執行包含 Python 指令碼的 SQL 查詢。 您可以使用任何資料庫管理或查詢工具來執行這些指令碼，只要該工具可以連線到 SQL Server 執行個體，並執行 T-SQL 查詢或預存程序即可。 本快速入門使用 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)。
+- 一項用來執行 SQL 查詢 (包含 Python 指令碼) 的工具。 本快速入門使用 [Azure Data Studio](../../azure-data-studio/what-is.md)。
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>建立預存程序來產生亂數
 
-為了方便作業，讓我們使用 Python `numpy` 套件；此套件會預設安裝及載入到已安裝 Python 的 SQL Server 機器學習服務。 該套件包含數百個用來進行一般統計工作的函式，其中 `random.normal` 函式會在指定標準差和平均值的情況下，使用常態分佈產生指定數目的亂數。
+為了簡單起見，讓我們使用預設會安裝並載入的 Python `numpy` 套件。 該套件包含數百個用來進行一般統計工作的函式，其中 `random.normal` 函式會在指定標準差和平均值的情況下，使用常態分佈產生指定數目的亂數。
 
 例如，下列 Python 程式碼會在指定標準差為 3 的情況下，傳回平均值為 50 的 100 個數字。
 
@@ -60,9 +70,7 @@ OutputDataSet = pandas.DataFrame(numpy.random.normal(size=100, loc=50, scale=3))
 WITH RESULT SETS(([Density] FLOAT NOT NULL));
 ```
 
-想要更輕鬆地產生一組不同的亂數？
-
-與 SQL Server 合併時很容易做到。 您可以定義一個預存程序來取得使用者的引數，然後將這些引數當做變數傳遞至 Python 指令碼。
+想要更輕鬆地產生一組不同的亂數？ 您可以定義一個預存程序來取得使用者的引數，然後將這些引數當做變數傳遞至 Python 指令碼。
 
 ```sql
 CREATE PROCEDURE MyPyNorm (
@@ -119,11 +127,7 @@ elapsed_time = time.time() - start_time
 
 ## <a name="next-steps"></a>後續步驟
 
-若要在 SQL Server 中使用 Python 建立機器學習模型，請依照下列快速入門進行：
+若要搭配 SQL 機器學習使用 Python 來建立機器學習模型，請遵循此快速入門：
 
 > [!div class="nextstepaction"]
-> [快速入門：使用 SQL Server 機器學習服務在 Python 中建立預測模型並計算其分數](quickstart-python-train-score-model.md)
-
-如需 SQL Server 機器學習服務的詳細資訊，請參閱：
-
-- [什麼是 SQL Server 機器學習服務 (Python 和 R)？](../sql-server-machine-learning-services.md)
+> [快速入門：在 Python 中建立預測模型並為其評分](quickstart-python-train-score-model.md)

@@ -1,23 +1,23 @@
 ---
 title: 在 Transact-SQL 指令碼中設定大綱及新增程式碼片段
+description: 了解 SSDT 提供的程式碼片段。 了解如何將程式碼片段插入應用程式中，並了解如何在 Transact-SQL 編輯器中隱藏和展開程式碼。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ac322bd8bd53297c4322607819a2ed2ab042a4e1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 655dc1271fa928558974bf6ebc36b8d551207ea2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241364"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880434"
 ---
-# <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>如何：在 Transact-SQL 指令碼中設定大綱及加入程式碼片段
+# <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>如何：在 Transact-SQL 指令碼中設定大綱及新增程式碼片段
 
 SQL Server Data Tools 包含由程式碼片段組成的程式碼程式庫，這些程式碼片段已準備就緒可供您插入應用程式中。 每個程式碼片段都執行複雜的指令碼工作，例如建立函式、資料表、觸發程序、索引、檢視表、使用者定義資料類型等等。您只需要按幾下滑鼠，便能將程式碼片段插入原始程式碼。 這些程式碼片段因減少打字的時間而提升產能。  
   
@@ -30,11 +30,11 @@ SQL Server Data Tools 包含由程式碼片段組成的程式碼程式庫，這�
   
 ### <a name="to-insert-snippets"></a>若要插入程式碼片段  
   
-1.  以滑鼠右鍵按一下 [方案總管] 中的 [TradeDev] 專案，再依序選取 [加入] 和 [指令碼]。 按一下 [加入新項目]  對話方塊中的 [加入]  。  
+1.  以滑鼠右鍵按一下 [方案總管] 中的 [TradeDev] 專案，再依序選取 [加入] 和 [指令碼]。 按一下 [加入新項目] 對話方塊中的 [加入]。  
   
-2.  以滑鼠右鍵按一下 Transact\-SQL 編輯器，再選取 [插入程式碼片段]  。 程式碼片段選擇器隨即出現。  
+2.  以滑鼠右鍵按一下 Transact\-SQL 編輯器，再選取 [插入程式碼片段]。 程式碼片段選擇器隨即出現。  
   
-3.  按兩下程式碼片段選擇器中的 [資料表]  ，再按兩下 [建立資料表]  。  
+3.  按兩下程式碼片段選擇器中的 [資料表]，再按兩下 [建立資料表]。  
   
 4.  請注意，取代點以黃色反白顯示。 將滑鼠停留在 `Sample_Table` 上，資訊提示隨即顯示取代的說明。 按兩下 `Sample_Table`，並將它變更為 `Shipper2`。  
   
@@ -44,7 +44,7 @@ SQL Server Data Tools 包含由程式碼片段組成的程式碼程式庫，這�
   
 1.  請注意 CREATE TABLE 陳述式旁邊的 **-** 號。 在指令碼中按一下區段旁邊的 **-** 號加以隱藏。  
   
-2.  以滑鼠右鍵按一下 Transact\-SQL 編輯器，再依序選取 [大綱]  和 [取消大綱]  移除大綱資訊，而不會影響編輯器中的基礎程式碼。  
+2.  以滑鼠右鍵按一下 Transact\-SQL 編輯器，再依序選取 [大綱] 和 [取消大綱] 移除大綱資訊，而不會影響編輯器中的基礎程式碼。  
   
-3.  若要再次啟動設定程式碼的大綱，以滑鼠右鍵按一下 Transact\-SQL 編輯器，再依序選取 [大綱]  和 [啟動自動大綱]  。 您還可以選取 [切換所有大綱]  切換展開/隱藏區段。  
+3.  若要再次啟動設定程式碼的大綱，以滑鼠右鍵按一下 Transact\-SQL 編輯器，再依序選取 [大綱] 和 [啟動自動大綱]。 您還可以選取 [切換所有大綱] 切換展開/隱藏區段。  
   

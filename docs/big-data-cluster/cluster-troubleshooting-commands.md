@@ -5,20 +5,20 @@ description: 此文章提供用來監視和針對 SQL Server 2019 巨量資料�
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/28/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 49ed75b4986a45dfec25547317e3fe0789671fe4
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 4d384a1835d902e56030b62897d657c81c0ec3b7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606400"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773669"
 ---
 # <a name="troubleshoot-big-data-clusters-2019-kubernetes"></a>針對 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Kubernetes 進行疑難排解
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 本文說明數個實用的 Kubernetes 命令，可讓您用來監視 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]及針對其進行疑難排解。 它會示範如何檢視位於巨量資料叢集中的 Pod 或其他 Kubernetes 成品的深入詳細資料。 此文章也涵蓋一般工作，例如，將檔案複製到執行其中一項 SQL Server 巨量資料叢集服務的容器，或從其中複製檔案。
 
@@ -118,8 +118,10 @@ kubectl get svc -n mssql-cluster
 |---|---|
 | **master-svc-external** | 提供主要執行個體的存取權。<br/>(**EXTERNAL-IP,31433** 和 **SA** 使用者) |
 | **controller-svc-external** | 支援管理叢集的工具和用戶端。 |
-| **gateway-svc-external** | 提供 HDFS/Spark 閘道的存取權。<br/>(**EXTERNAL-IP** 和 **root** 使用者) |
+| **gateway-svc-external** | 提供 HDFS/Spark 閘道的存取權。<br/>(**EXTERNAL-IP** 和 `<AZDATA_USERNAME>` 使用者)<sup>1</sup>|
 | **appproxy-svc-external** | 支援應用程式部署情節。 |
+
+<sup>1</sup> [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 > [!TIP]
 > 這是使用 **kubectl** 來檢視服務的方法，但也可以使用 `azdata bdc endpoint list` 命令來檢視這些端點。 如需詳細資訊，請參閱[取得巨量資料叢集端點](deployment-guidance.md#endpoints)。

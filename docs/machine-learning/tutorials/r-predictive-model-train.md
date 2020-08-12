@@ -8,19 +8,18 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4d168b32b85e4d0bbf42e166e175d9951de4dd31
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 2b57a54c66259fe16c3143e0328476279a1aea01
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607001"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748504"
 ---
 # <a name="tutorial-create-a-predictive-model-in-r-with-sql-machine-learning"></a>教學課程：使用 SQL 機器學習在 R 中建立預測模型
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 在這四部分教學課程系列的第三部分中，您將在 R 中定型預測模型。在此系列的下一個部分中，您會使用機器學習服務在 SQL Server 資料庫中部署此模型，或在巨量資料叢集上進行此部署。
@@ -29,7 +28,10 @@ ms.locfileid: "83607001"
 在這四部分教學課程系列的第三部分中，您將在 R 中定型預測模型。在此系列的下一個部分中，您會使用機器學習服務在 SQL Server 資料庫中部署此模型。
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-在這四部分教學課程系列的第三部分中，您將在 R 中定型預測模型。在此系列的下一個部分中，您會使用 SQL Server R Services 在 SQL Server 資料庫中部署此模型。
+在這四部分教學課程系列的第三部分中，您將在 R 中定型預測模型。在此系列的下一個部分中，您會使用 SQL Server R Services 在資料庫中部署此模型。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+在這四部分教學課程系列的第三部分中，您將在 R 中定型預測模型。在此系列的下一個部分中，您會使用機器學習服務在 Azure SQL 受控執行個體資料庫中部署此模型。
 ::: moniker-end
 
 在本文中，您將學會如何：
@@ -67,6 +69,7 @@ actual_counts <- test_data$RentalCount;
 model_lm <- lm(RentalCount ~  Month + Day + WeekDay + Snow + Holiday, data = train_data);
 
 #Model 2: Use rpart to create a decision tree model, trained with the training data set
+library(rpart);
 model_rpart  <- rpart(RentalCount ~ Month + Day + WeekDay + Snow + Holiday, data = train_data);
 ```
 

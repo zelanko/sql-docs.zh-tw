@@ -1,21 +1,21 @@
 ---
 title: 建立及執行 SQL Server 單元測試
+description: 了解如何建立 SQL Server 單元測試。 逐步解說設定測試來偵測預存程序中錯誤的步驟。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: cb284457b86d6dd1e2284d6815a1b175640fa0c2
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: edc5f591746673f55dfc7ea10c99822ee0c13098
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087505"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882922"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>逐步解說：建立及執行 SQL Server 單元測試
 
@@ -39,7 +39,7 @@ ms.locfileid: "82087505"
   
 在其中一個單元測試偵測到預存程序錯誤之後，您更正該錯誤並重新執行測試。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
 若要完成此逐步解說，您必須能夠連接到您有權建立及部署資料庫的資料庫伺服器 (或 LocalDB 資料庫)。 如需詳細資訊，請參閱 [Visual Studio 資料庫功能的必要權限](https://msdn.microsoft.com/library/aa833413(VS.100).aspx)。  
   
 ## <a name="create-a-script-that-contains-a-database-schema"></a><a name="CreateScript"></a>建立包含資料庫結構描述的指令碼  
@@ -181,7 +181,7 @@ ms.locfileid: "82087505"
     AS  
     BEGIN  
     INSERT INTO [Sales].[Customer] (CustomerName) VALUES (@CustomerName);  
-    SELECT SCOPE_IDENTITY()  
+    RETURN SCOPE_IDENTITY()  
     END  
     GO  
     PRINT N'Creating Sales.uspPlaceNewOrder...';  
@@ -230,7 +230,7 @@ ms.locfileid: "82087505"
   
     [新增專案]  對話方塊隨即出現。  
   
-2.  在 [已安裝的範本]  底下，選取 [SQL Server]  節點，然後選取 [SQL Server 資料庫專案]  。  
+2.  在 [已安裝的範本] 底下，選取 [SQL Server] 節點，然後選取 [SQL Server 資料庫專案]。  
   
 3.  在 [ **名稱**] 中輸入 **SimpleUnitTestDB**。  
   
@@ -242,13 +242,13 @@ ms.locfileid: "82087505"
   
 #### <a name="to-import-a-database-schema-from-a-script"></a>若要從指令碼匯入資料庫結構描述  
   
-1.  在 [專案]  功能表上，按一下 [匯入]  ，然後按一下 [指令碼 (\*.sql)]  。  
+1.  在 [專案] 功能表上，按一下 [匯入]，然後按一下 [指令碼 (\*.sql)]。  
   
 2.  在閱讀過歡迎頁面之後，按 [ **下一步** ]。  
   
 3.  按一下 [ **瀏覽**]，然後移至您儲存 .sql 檔案的目錄。  
   
-4.  按兩下 .sql 檔案，然後按一下 [完成]  。  
+4.  按兩下 .sql 檔案，然後按一下 [完成]。  
   
     指令碼會匯入，而且該指令碼中定義的物件會加入至資料庫專案。  
   
@@ -261,7 +261,7 @@ ms.locfileid: "82087505"
   
 1.  在 [ **方案總管**] 中，檢查匯入至專案的指令碼檔案。  
   
-2.  在 [SQL Server 物件總管]  中，查看 [專案] 節點中的資料庫。  
+2.  在 [SQL Server 物件總管] 中，查看 [專案] 節點中的資料庫。  
   
 ## <a name="deploying-to-localdb"></a><a name="DeployDBProj"></a>部署至 LocalDB  
 根據預設，當您按 F5 時，會將資料庫部署 (發行) 至 LocalDB 資料庫。 您可以移至專案屬性頁的 [偵錯] 索引標籤，然後變更連接字串，來變更資料庫位置。  
@@ -270,17 +270,17 @@ ms.locfileid: "82087505"
   
 #### <a name="to-create-a-sql-server-unit-test-for-the-stored-procedures"></a>建立預存程序的 SQL Server 單元測試  
   
-1.  在 [SQL Server 物件總管]  中，展開 **SimpleUnitTestDB** 的專案節點，然後依序展開 [可程式性]  和 [預存程序]  節點。  
+1.  在 [SQL Server 物件總管] 中，展開 **SimpleUnitTestDB** 的專案節點，然後依序展開 [可程式性] 和 [預存程序] 節點。  
   
-2.  以滑鼠右鍵按一下其中一個預存程序，然後按一下 [建立單元測試]  以顯示 [建立單元測試]  對話方塊。  
+2.  以滑鼠右鍵按一下其中一個預存程序，然後按一下 [建立單元測試] 以顯示 [建立單元測試] 對話方塊。  
   
-3.  選取所有五個預存程序的核取方塊：**Sales.uspCancelOrder**、**Sales.uspFillOrder**、**Sales.uspNewCustomer**、**Sales.uspPlaceNewOrder** 及 **Sales.uspShowOrderDetails**。  
+3.  選取所有五個預存程序的核取方塊： **Sales.uspCancelOrder**、 **Sales.uspFillOrder**、 **Sales.uspNewCustomer**、 **Sales.uspPlaceNewOrder**及 **Sales.uspShowOrderDetails**。  
   
-4.  在 [專案]  下拉式清單中，選取 [建立新的 Visual C# 測試專案]  。  
+4.  在 [專案] 下拉式清單中，選取 [建立新的 Visual C# 測試專案]。  
   
 5.  接受專案名稱和類別名稱的預設名稱，然後按一下 [ **確定**]。  
   
-6.  在測試組態對話方塊中的 [ **使用下列資料連接來執行單元測試**]，指定連接到您稍早在此逐步解說部署的資料庫。 例如，如果使用預設部署位置 (即 LocalDB)，則按一下 [新增連接]  以指定 **(LocalDB)\Projects**。 然後，選擇資料庫的名稱。 再按一下 [確定] 關閉 [ **連接屬性** ] 對話方塊。  
+6.  在測試組態對話方塊中的 [ **使用下列資料連接來執行單元測試**]，指定連接到您稍早在此逐步解說部署的資料庫。 例如，如果使用預設部署位置 (即 LocalDB)，則按一下 [新增連接] 以指定 **(LocalDB)\Projects**。 然後，選擇資料庫的名稱。 再按一下 [確定] 關閉 [ **連接屬性** ] 對話方塊。  
   
     > [!NOTE]  
     > 如果您必須測試權限受限制的檢視表或預存程序，通常會在這個步驟中指定該連接。 然後您會指定具有更廣泛之權限的次要連接，驗證此測試。 如果您有次要連接，您應該將該使用者加入至資料庫專案，並在預先部署指令碼中建立該使用者的登入。  
@@ -293,7 +293,7 @@ ms.locfileid: "82087505"
   
     您也可以產生測試資料，作為 SQL Server 單元測試的一部分。 針對這個逐步解說，因為測試會建立自己的資料，您會略過該步驟。  
   
-10. 按一下 [確定]  。  
+10. 按一下 [確定]。  
   
     測試專案就會建置而且 SQL Server 單元測試設計工具隨即出現。 接下來，您將更新單元測試 Transact\-SQL 指令碼中的測試邏輯。  
   
@@ -328,7 +328,7 @@ ms.locfileid: "82087505"
   
 #### <a name="to-write-the-sql-server-unit-test-for-uspnewcustomer"></a>撰寫 uspNewCustomer 的 SQL Server 單元測試  
   
-1.  在 SQL Server 單元測試設計工具的巡覽列中，按一下 **Sales_uspNewCustomerTest**，並確定在相鄰清單中的 [測試]  已反白顯示。  
+1.  在 SQL Server 單元測試設計工具的巡覽列中，按一下 **Sales_uspNewCustomerTest**，並確定在相鄰清單中的 [測試]**** 已反白顯示。  
   
     在您執行上述步驟之後，您可以在單元測試中建立測試動作的測試指令碼。  
   
@@ -346,11 +346,11 @@ ms.locfileid: "82087505"
     SELECT * FROM [Sales].[Customer];  
     ```  
   
-3.  在 [測試條件]  窗格中，按一下 [結果不明] 測試條件，然後按一下 [刪除測試條件]  圖示 (紅色 X)。  
+3.  在 [測試條件] 窗格中，按一下 [結果不明] 測試條件，然後按一下 [刪除測試條件] 圖示 (紅色 X)。  
   
-4.  在 [測試條件]  窗格中，按一下清單中的 [資料列計數]  ，然後按一下 [加入測試條件]  圖示 (綠色 +)。  
+4.  在 [測試條件] 窗格中，按一下清單中的 [資料列計數]，然後按一下 [加入測試條件] 圖示 (綠色 +)。  
   
-5.  開啟 [屬性]  視窗 (選取測試條件並按 F4)，然後將 [資料列計數]  屬性設定為 1。  
+5.  開啟 [屬性] 視窗 (選取測試條件並按 F4)，然後將 [資料列計數] 屬性設定為 1。  
   
 6.  按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
@@ -358,7 +358,7 @@ ms.locfileid: "82087505"
   
 #### <a name="to-write-the-sql-server-unit-test-for-uspplaceneworder"></a>撰寫 uspPlaceNewOrder 的 SQL Server 單元測試  
   
-1.  在 SQL Server 單元測試設計工具的巡覽列中，按一下 **Sales_uspPlaceNewOrderTest**，並確定在相鄰清單中的 [測試]  已反白顯示。  
+1.  在 SQL Server 單元測試設計工具的巡覽列中，按一下 **Sales_uspPlaceNewOrderTest**，並確定在相鄰清單中的 [測試]**** 已反白顯示。  
   
     在您執行這個步驟之後，您可以在單元測試中建立測試動作的測試指令碼。  
   
@@ -394,11 +394,11 @@ ms.locfileid: "82087505"
   
 5.  在 [ **屬性** ] 視窗中，將 [ **需要的值** ] 屬性設為 100。  
   
-6.  在 SQL Server 單元測試設計工具的巡覽列中，按一下 **Sales_uspPlaceNewOrderTest**，並確定在相鄰清單中的 [測試前]  已反白顯示。  
+6.  在 SQL Server 單元測試設計工具的巡覽列中，按一下 **Sales_uspPlaceNewOrderTest**，並確定在相鄰清單中的 [測試前]**** 已反白顯示。  
   
     執行此步驟之後，您可以指定陳述式，讓資料處於執行測試所需的狀態。 在此範例中，您必須先建立 Customer 記錄才能下訂單。  
   
-7.  按一下 [按一下此處以建立]  ，建立測試前指令碼。  
+7.  按一下 [按一下此處以建立]，建立測試前指令碼。  
   
 8.  在 Transact\-SQL 編輯器中更新 Transact\-SQL 陳述式，以符合下列陳述式：  
   
@@ -434,7 +434,7 @@ ms.locfileid: "82087505"
   
 #### <a name="to-write-the-sql-server-unit-test-for-uspfillorder"></a>撰寫 uspFillOrder 的 SQL Server 單元測試  
   
-1.  在 SQL Server 單元測試設計工具的巡覽列中，按一下 **Sales_uspFillOrderTest**，並確定在相鄰清單中的 [測試]  已反白顯示。  
+1.  在 SQL Server 單元測試設計工具的巡覽列中，按一下 **Sales_uspFillOrderTest**，並確定在相鄰清單中的 [測試]**** 已反白顯示。  
   
     在您執行這個步驟之後，您可以在單元測試中建立測試動作的測試指令碼。  
   
@@ -473,9 +473,9 @@ ms.locfileid: "82087505"
   
 5.  在 [ **屬性** ] 視窗中，將 [ **需要的值** ] 屬性設為 100。  
   
-6.  在 SQL Server 單元測試設計工具的巡覽列中，按一下 **Sales_uspFillOrderTest**，並確定在相鄰清單中的 [測試前]  已反白顯示。 執行此步驟之後，您可以指定陳述式，讓資料處於執行測試所需的狀態。 在此範例中，您必須先建立 Customer 記錄才能下訂單。  
+6.  在 SQL Server 單元測試設計工具的巡覽列中，按一下 **Sales_uspFillOrderTest**，並確定在相鄰清單中的 [測試前]**** 已反白顯示。 執行此步驟之後，您可以指定陳述式，讓資料處於執行測試所需的狀態。 在此範例中，您必須先建立 Customer 記錄才能下訂單。  
   
-7.  按一下 [按一下此處以建立]  ，建立測試前指令碼。  
+7.  按一下 [按一下此處以建立]，建立測試前指令碼。  
   
 8.  在 Transact\-SQL 編輯器中更新 Transact\-SQL 陳述式，以符合下列陳述式：  
   
@@ -524,7 +524,7 @@ ms.locfileid: "82087505"
   
 #### <a name="to-write-the-sql-server-unit-test-for-uspshoworderdetails"></a>撰寫 uspShowOrderDetails 的 SQL Server 單元測試  
   
-1.  在 SQL Server 單元測試設計工具的巡覽列中，按一下 **Sales_uspShowOrderDetailsTest**，並確定在相鄰清單中的 [測試]  已反白顯示。  
+1.  在 SQL Server 單元測試設計工具的巡覽列中，按一下 **Sales_uspShowOrderDetailsTest**，並確定在相鄰清單中的 [測試]**** 已反白顯示。  
   
     在您執行這個步驟之後，您可以在單元測試中建立測試動作的測試指令碼。  
   
@@ -556,21 +556,21 @@ ms.locfileid: "82087505"
   
 4.  在 [ **測試條件** ] 窗格，按一下清單中的 [ **預期的結構描述** ]，然後按一下 [ **加入測試條件**]。  
   
-5.  在 [屬性]  視窗中，按一下 [組態]  屬性中的瀏覽按鈕 ([...]  )。  
+5.  在 [屬性] 視窗中，按一下 [組態] 屬性中的瀏覽按鈕 ([...])。  
   
-6.  在 [ **expectedSchemaCondition1 的組態** ] 對話方塊中，指定資料庫連接。 例如，如果使用預設部署位置 (即 LocalDB)，則按一下 [新增連接]  以指定 **(LocalDB)\Projects**。 然後，選擇資料庫的名稱。  
+6.  在 [ **expectedSchemaCondition1 的組態** ] 對話方塊中，指定資料庫連接。 例如，如果使用預設部署位置 (即 LocalDB)，則按一下 [新增連接] 以指定 **(LocalDB)\Projects**。 然後，選擇資料庫的名稱。  
   
-7.  按一下 [ **擷取**]。 (如有需要，重複按一下 [擷取]  ，直到看見資料為止)。  
+7.  按一下 [ **擷取**]。 (如有需要，重複按一下 [擷取]，直到看見資料為止)。  
   
     單元測試的 Transact\-SQL 主體就會執行，而且產生的結構描述會出現在對話方塊中。 由於沒有執行測試前程式碼，所以不會傳回資料。 因為您只確認結構描述而非資料，這是正常的。  
   
-8.  按一下 [確定]  。  
+8.  按一下 [確定]。  
   
     預期的結構描述與測試條件一起儲存。  
   
-9. 在 SQL Server 單元測試設計工具的巡覽列中，按一下 **Sales_uspShowOrderDetailsTest**，並確定在相鄰清單中的 [測試前]  已反白顯示。 執行此步驟之後，您可以指定陳述式，讓資料處於執行測試所需的狀態。 在此範例中，您必須先建立 Customer 記錄才能下訂單。  
+9. 在 SQL Server 單元測試設計工具的巡覽列中，按一下 **Sales_uspShowOrderDetailsTest**，並確定在相鄰清單中的 [測試前]**** 已反白顯示。 執行此步驟之後，您可以指定陳述式，讓資料處於執行測試所需的狀態。 在此範例中，您必須先建立 Customer 記錄才能下訂單。  
   
-10. 按一下 [按一下此處以建立]  ，建立測試前指令碼。  
+10. 按一下 [按一下此處以建立]，建立測試前指令碼。  
   
 11. 在 Transact\-SQL 編輯器中更新 Transact\-SQL 陳述式，以符合下列陳述式：  
   
@@ -615,17 +615,17 @@ ms.locfileid: "82087505"
     COMMIT TRANSACTION  
     ```  
   
-12. 在 SQL Server 單元測試設計工具的巡覽列中，按一下 **Sales_uspShowOrderDetailsTest**，然後按一下相鄰清單中的 [測試]  。  
+12. 在 SQL Server 單元測試設計工具的巡覽列中，按一下 **Sales_uspShowOrderDetailsTest**，然後按一下相鄰清單中的 [測試]。  
   
     您必須這樣做，因為您要將總和檢查碼條件套用至測試，而不套用至測試前指令碼。  
   
 13. 在 [ **測試條件** ] 窗格，按一下清單中的 [ **資料總和檢查碼** ]，然後按一下 [ **加入測試條件**]。  
   
-14. 在 [屬性]  視窗中，按一下 [組態]  屬性中的瀏覽按鈕 ([...]  )。  
+14. 在 [屬性] 視窗中，按一下 [組態] 屬性中的瀏覽按鈕 ([...])。  
   
 15. 在 [ **checksumCondition1 的組態** ] 對話方塊中，指定資料庫連接。  
   
-16. 以下列程式碼取代對話方塊中的 Transact\-SQL (位於 [編輯連接]  按鈕底下)：  
+16. 以下列程式碼取代對話方塊中的 Transact\-SQL (位於 [編輯連接] 按鈕底下)：  
   
     ```  
     BEGIN TRANSACTION  
@@ -687,11 +687,11 @@ ms.locfileid: "82087505"
   
     此程式碼會將測試前指令碼的 Transact\-SQL 程式碼與測試本身的 Transact\-SQL 程式碼結合。 您需要這兩個程式碼，以在執行測試時傳回相同的結果。  
   
-17. 按一下 [ **擷取**]。 (如有需要，重複按一下 [擷取]  ，直到看見資料為止)。  
+17. 按一下 [ **擷取**]。 (如有需要，重複按一下 [擷取]，直到看見資料為止)。  
   
     您指定的 Transact\-SQL 就會執行，而且會計算所傳回資料的總和檢查碼。  
   
-18. 按一下 [確定]  。  
+18. 按一下 [確定]。  
   
     計算的總和檢查碼與測試條件一起儲存。 預期的總和檢查碼會出現在資料總和檢查碼測試條件的 [值] 資料行。  
   
@@ -703,15 +703,15 @@ ms.locfileid: "82087505"
   
 #### <a name="to-run-the-sql-server-unit-tests"></a>執行 SQL Server 單元測試  
   
-1.  在 [測試]  功能表上，指向 [Windows]  ，然後按一下 [測試檢視]  (Visual Studio 2010) 或 [測試總管]  (Visual Studio 2012)。  
+1.  在 [測試] 功能表上，指向 [Windows]，然後按一下 [測試檢視] (Visual Studio 2010) 或 [測試總管] (Visual Studio 2012)。  
   
-2.  在 [測試檢視]  視窗 (Visual Studio 2010) 中，按一下工具列上的 [重新整理]  以更新測試清單。 若要查看 [測試總管]  (Visual Studio 2012) 中的測試清單，請建置方案。  
+2.  在 [測試檢視] 視窗 (Visual Studio 2010) 中，按一下工具列上的 [重新整理] 以更新測試清單。 若要查看 [測試總管] (Visual Studio 2012) 中的測試清單，請建置方案。  
   
-    [測試檢視]  或 [測試總管]  視窗會列出您稍早在此逐步解說中建立並已加入 Transact\-SQL 陳述式和測試條件的測試。 名為 TestMethod1 的測試為空白，而且不用於這個逐步解說。  
+    [測試檢視]**** 或 [測試總管]**** 視窗會列出您稍早在此逐步解說中建立並已加入 Transact\-SQL 陳述式和測試條件的測試。 名為 TestMethod1 的測試為空白，而且不用於這個逐步解說。  
   
-3.  以滑鼠右鍵按一下 **Sales_uspNewCustomerTest**，然後按一下 [執行選取範圍]  。  
+3.  以滑鼠右鍵按一下 **Sales_uspNewCustomerTest**，然後按一下 [執行選取範圍]。  
   
-    Visual Studio 會使用您所指定的有權限的內容來連線到資料庫並套用資料產生計劃。 接著，Visual Studio 會切換至執行內容，然後在測試中執行 Transact\-SQL 指令碼。 最後，Visual Studio 會針對您在測試條件中指定的內容來評估 Transact\-SQL 指令碼的結果，而且成功或失敗結果會出現在 [測試結果]  視窗中。  
+    Visual Studio 會使用您所指定的有權限的內容來連線到資料庫並套用資料產生計劃。 接著，Visual Studio 會切換至執行內容，然後在測試中執行 Transact\-SQL 指令碼。 最後，Visual Studio 會針對您在測試條件中指定的內容來評估 Transact\-SQL 指令碼的結果，而且成功或失敗結果會出現在 [測試結果]**** 視窗中。  
   
 4.  檢視 [ **測試結果** ] 視窗中的結果。  
   
@@ -729,7 +729,7 @@ ms.locfileid: "82087505"
   
 #### <a name="to-correct-the-error-in-salesuspfillorder"></a>若要更正 Sales.uspFillOrder 的錯誤  
   
-1.  在 [SQL Server 物件總管]  中，展開資料庫的 [專案] 節點，按兩下 **uspFillOrder** 預存程序，以便在 Transact\-SQL 編輯器中開啟其定義。  
+1.  在 [SQL Server 物件總管]**** 中，展開資料庫的 [專案] 節點，按兩下 **uspFillOrder** 預存程序，以便在 Transact\-SQL 編輯器中開啟其定義。  
   
 2.  在定義中，尋找下列 Transact\-SQL 陳述式：  
   
@@ -751,7 +751,7 @@ ms.locfileid: "82087505"
   
 4.  按一下 [ **檔案** ] 功能表上的 [ **儲存 uspFillOrder.sql**]。  
   
-5.  在 [測試檢視]  中，以滑鼠右鍵按一下 **Sales_uspFillOrderTest**，然後按一下 [執行選取範圍]  。  
+5.  在 [測試檢視] 中，以滑鼠右鍵按一下 **Sales_uspFillOrderTest**，然後按一下 [執行選取範圍]。  
   
     測試會成功。  
   
@@ -770,7 +770,7 @@ ms.locfileid: "82087505"
   
 #### <a name="to-update-the-stored-procedure"></a>若要更新預存程序  
   
-1.  在 [SQL Server 物件總管]  中，展開 SimpleUnitTestDB 資料庫的 [專案] 節點，依序展開 [可程式性] 節點、[預存程序] 節點，然後按兩下 [uspCancelOrder]。  
+1.  在 [SQL Server 物件總管]**** 中，展開 SimpleUnitTestDB 資料庫的 [專案] 節點，依序展開 [可程式性] 節點、[預存程序] 節點，然後按兩下 [uspCancelOrder]。  
   
 2.  在 Transact\-SQL 編輯器中，更新程序定義以符合下列程式碼：  
   
@@ -851,7 +851,7 @@ ms.locfileid: "82087505"
   
 #### <a name="to-write-the-sql-server-unit-test-for-uspcancelorder"></a>撰寫 uspCancelOrder 的 SQL Server 單元測試  
   
-1.  在 SQL Server 單元測試設計工具的巡覽列中，按一下 **Sales_uspCancelOrderTest**，並確定在相鄰清單中的 [測試]  反白顯示。  
+1.  在 SQL Server 單元測試設計工具的巡覽列中，按一下 **Sales_uspCancelOrderTest**，並確定在相鄰清單中的 [測試]**** 反白顯示。  
   
     在您執行這個步驟之後，您可以在單元測試中建立測試動作的測試指令碼。  
   
@@ -887,9 +887,9 @@ ms.locfileid: "82087505"
   
 5.  在 [ **屬性** ] 視窗中，將 [ **需要的值** ] 屬性設為 0。  
   
-6.  在 SQL Server 單元測試設計工具的巡覽列中，按一下 **Sales_uspCancelOrderTest**，並確定在相鄰清單中的 [測試前]  已反白顯示。 執行此步驟之後，您可以指定陳述式，讓資料處於執行測試所需的狀態。 在此範例中，您必須先建立 Customer 記錄才能下訂單。  
+6.  在 SQL Server 單元測試設計工具的巡覽列中，按一下 **Sales_uspCancelOrderTest**，並確定在相鄰清單中的 [測試前]**** 已反白顯示。 執行此步驟之後，您可以指定陳述式，讓資料處於執行測試所需的狀態。 在此範例中，您必須先建立 Customer 記錄才能下訂單。  
   
-7.  按一下 [按一下此處以建立]  ，建立測試前指令碼。  
+7.  按一下 [按一下此處以建立]，建立測試前指令碼。  
   
 8.  在 Transact\-SQL 編輯器中更新 Transact\-SQL 陳述式，以符合下列陳述式：  
   
@@ -944,7 +944,7 @@ ms.locfileid: "82087505"
   
 #### <a name="to-run-the-sql-server-unit-tests"></a>執行 SQL Server 單元測試  
   
-1.  在 [測試檢視]  中，以滑鼠右鍵按一下 [Sales_uspCancelOrderTest]  ，然後按一下 [執行選取範圍]  。  
+1.  在 [測試檢視] 中，以滑鼠右鍵按一下 [Sales_uspCancelOrderTest]，然後按一下 [執行選取範圍]。  
   
 2.  檢視 [ **測試結果** ] 視窗中的結果。  
   
@@ -956,7 +956,7 @@ ms.locfileid: "82087505"
   
 #### <a name="to-modify-the-code-for-the-unit-test"></a>若要修改單元測試的程式碼  
   
-1.  在 [方案總管]  中，展開 [TestProject1]  ，以滑鼠右鍵按一下 [SqlServerUnitTests1.cs]  ，然後按一下 [檢視程式碼]  。  
+1.  在 [方案總管] 中，展開 [TestProject1]，以滑鼠右鍵按一下 [SqlServerUnitTests1.cs]，然後按一下 [檢視程式碼]。  
   
 2.  在程式碼編輯器，巡覽至 Sales_uspCancelOrderTest 方法。 修改方法的屬性以符合下列程式碼：  
   
@@ -976,7 +976,7 @@ ms.locfileid: "82087505"
   
 #### <a name="to-re-run-the-sql-server-unit-tests"></a>重新執行 SQL Server 單元測試  
   
-1.  在 [測試檢視]  中，以滑鼠右鍵按一下 [Sales_uspCancelOrderTest]  ，然後按一下 [執行選取範圍]  。  
+1.  在 [測試檢視] 中，以滑鼠右鍵按一下 [Sales_uspCancelOrderTest]，然後按一下 [執行選取範圍]。  
   
 2.  檢視 [ **測試結果** ] 視窗中的結果。  
   

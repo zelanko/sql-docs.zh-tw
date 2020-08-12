@@ -1,5 +1,6 @@
 ---
 title: 解除安裝 SQL Server 2016 | Microsoft Docs
+description: 使用資源以完全解除安裝 SQL Server 2019 的執行個體並準備系統，以便您解除安裝 SQL Server。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -7,17 +8,17 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: e6255f8e-a25e-4b3d-9310-c5da2f9c9333
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: a47a4d6efa06e94f62c572eed562f96ba1f2102a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 956efd3ff115383da4b719bac85fb7da03aac079
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68045764"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883690"
 ---
 # <a name="uninstall-sql-server"></a>解除安裝 SQL Server 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   請遵循下列文章，完整解除安裝現有的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體，並將系統準備好以便重新安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   

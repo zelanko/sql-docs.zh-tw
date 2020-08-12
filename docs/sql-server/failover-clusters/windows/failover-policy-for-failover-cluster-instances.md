@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 153de78e01099cf1079c6fe0ad34c15c6d7afc44
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 70f02555b6993a8edd3b226352480dc5be8951c7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258159"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894892"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Failover Policy for Failover Cluster Instances
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體 (FCI) 中，一個給定時間只能有一個節點可以擁有 Windows Server 容錯移轉叢集 (WSFC) 叢集資源群組。 用戶端要求都是透過 FCI 中的此節點提供服務。 萬一發生失敗而且重新啟動不成功，群組擁有權會移至 FCI 中的另一個 WSFC 節點。 這項程序就稱為容錯移轉。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 提高失敗偵測的可靠性，並提供靈活的容錯移轉原則。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 仰賴基礎 WSFC 服務進行容錯移轉偵測。 因此，兩個機制決定 FCI 的容錯移轉行為：一是原生 WSFC 功能，二是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式所加入的功能。  
@@ -105,7 +105,7 @@ ms.locfileid: "75258159"
  *預設值  
   
 ####  <a name="responding-to-failures"></a><a name="respond"></a> 回應失敗  
- 在偵測到一個或多個失敗狀況後，WSFC 服務回應失敗的方式取決於 WSFC 仲裁狀態以及 FCI 資源群組的重新啟動和容錯移轉設定。 如果 FCI 已經失去其 WSFC 仲裁，整個 FCI 就會離線，而且 FCI 已經失去其高可用性。 如果 FCI 仍然保留其 WSFC 仲裁，WSFC 服務的回應方式可能會先嘗試重新啟動失敗的節點，如果重新啟動嘗試不成功則容錯移轉。 重新啟動和容錯移轉設定是在容錯移轉叢集管理員嵌入式管理單元中進行設定。 如需有關這些設定的詳細資訊，請參閱 [\<Resource> 內容：原則索引標籤](https://technet.microsoft.com/library/cc725685.aspx)。  
+ 在偵測到一個或多個失敗狀況後，WSFC 服務回應失敗的方式取決於 WSFC 仲裁狀態以及 FCI 資源群組的重新啟動和容錯移轉設定。 如果 FCI 已經失去其 WSFC 仲裁，整個 FCI 就會離線，而且 FCI 已經失去其高可用性。 如果 FCI 仍然保留其 WSFC 仲裁，WSFC 服務的回應方式可能會先嘗試重新啟動失敗的節點，如果重新啟動嘗試不成功則容錯移轉。 重新啟動和容錯移轉設定是在容錯移轉叢集管理員嵌入式管理單元中進行設定。 如需這些設定的詳細資訊，請參閱 [\<Resource> 屬性：原則索引標籤](https://technet.microsoft.com/library/cc725685.aspx)。  
   
  如需維護仲裁健全狀況的詳細資訊，請參閱 [WSFC 仲裁模式和投票組態 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)。  
   

@@ -8,28 +8,30 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d9640ee6040e6906f888486f6b0a1f99bb1d071f
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: a949fc5f17d2e6875eeef7f62ecef065283e3a92
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607111"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772314"
 ---
 # <a name="tutorial-deploy-a-clustering-model-in-r-with-sql-machine-learning"></a>教學課程：使用 SQL 機器學習在 R 中部署群集模型
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-在這個四部分教學課程系列的第四部分中，您將使用 SQL Server 機器學習服務或在巨量資料叢集上，將以 R 開發的群集模型部署到 SQL 資料庫。
+在這個四部分教學課程系列的第四部分中，您將使用 SQL Server 機器學習服務或在巨量資料叢集上，將以 R 開發的群集模型部署到資料庫。
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-在這個四部分教學課程系列的第四部分中，您將使用 SQL Server 機器學習服務，將以 R 開發的群集模型部署到 SQL 資料庫。
+在這個四部分教學課程系列的第四部分中，您將使用 SQL Server 機器學習服務，將以 R 開發的群集模型部署到資料庫。
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-在這個四部分教學課程系列的第四部分中，您將使用 SQL Server R Services，將以 R 開發的群集模型部署到 SQL 資料庫。
+在這個四部分教學課程系列的第四部分中，您將使用 SQL Server R Services，將以 R 開發的群集模型部署到資料庫。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+在這個四部分教學課程系列的第四部分中，您將使用 Azure SQL 受控執行個體機器學習服務，將以 R 開發的群集模型部署到資料庫。
 ::: moniker-end
 
 為了定期執行群集，當新客戶註冊時，您必須能夠從任何應用程式呼叫 R 指令碼。 若要這麼做，您可以將 R 指令碼放在 SQL 預存程序內，以在資料庫中部署 R 指令碼。 因為您的模型是在資料庫中執行，所以可以輕鬆地針對儲存在資料庫中的資料進行定型。
@@ -38,7 +40,7 @@ ms.locfileid: "83607111"
 
 > [!div class="checklist"]
 > * 建立一個會產生模型的預存程序
-> * 在 SQL Database 中執行群集
+> * 執行叢集
 > * 使用群集資訊
 
 在[第一部分](r-clustering-model-introduction.md)中，您已安裝必要條件並還原範例資料庫。
@@ -139,10 +141,11 @@ EXECUTE sp_execute_external_script
       @language = N'R'
     , @script = N'
 # Define the connection string
+
 connStr <- paste("Driver=SQL Server; Server=", instance_name,
-               "; Database=", database_name,
-               "; Trusted_Connection=true; ",
-                  sep="" );
+                 "; Database=", database_name,
+                 "; uid=Username;pwd=Password; ",
+                 sep="" )
 
 # Input customer data that needs to be classified.
 # This is the result we get from the query.
@@ -178,7 +181,7 @@ END;
 GO
 ```
 
-## <a name="perform-clustering-in-sql-database"></a>在 SQL 資庫中執行群集
+## <a name="perform-clustering"></a>執行叢集
 
 現在您已建立預存程序，接下來請執行下列程式碼以執行群集。
 
@@ -237,7 +240,7 @@ SELECT customer.[c_email_address], customer.c_customer_sk
 在本教學課程系列的第四部分中，您學到了如何：
 
 * 建立一個會產生模型的預存程序
-* 在 SQL Server 中執行群集
+* 使用 SQL 機器學習執行群集
 * 使用群集資訊
 
 若要深入了解如何在機器學習服務中使用 R，請參閱：

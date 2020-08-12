@@ -1,5 +1,6 @@
 ---
 title: 移除 Data Quality Server 物件 | Microsoft Docs
+description: 如果從 SQL Server 的執行個體解除安裝 Data Quality Server，則必須手動刪除某些 Data Quality Server 物件，包括 DQS 資料庫。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -7,17 +8,17 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 1b7c6dbb-b40e-4822-9caa-608e1056af8e
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 531e7f600c1523a565890d1ba1ab781d3b8a9deb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4f19dc1e34ea35509a8894400ca298909e3b1f96
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68019820"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883745"
 ---
 # <a name="remove-data-quality-server-objects"></a>移除 Data Quality Server 物件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   從 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 執行個體解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，或完整移除內含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 執行個體時，不會刪除某些 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 物件，包括 DQS 資料庫。 這意味著如果您使用 SQL Server 安裝程式解除安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，就不會失去 DQS 資料。 您必須在完成解除安裝程序之後，手動刪除這些 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 物件。  
   
@@ -34,7 +35,7 @@ ms.locfileid: "68019820"
   
 -   master 資料庫中的 DQInitDQS_MAIN 預存程序。  
   
- 您可以滑鼠右鍵按一下物件，然後按一下快速鍵功能表中的 [刪除]  來刪除 SQL Server Management Studio 中的這些物件。  
+ 您可以滑鼠右鍵按一下物件，然後按一下快速鍵功能表中的 [刪除] 來刪除 SQL Server Management Studio 中的這些物件。  
   
 > [!IMPORTANT]  
 >  如果您只要使用 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 命令列參數解除安裝 SQL Server 執行個體中的 `-uninstall` ，則在解除安裝過程中將刪除所有 DQS 物件。 您不必在解除安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]之後手動刪除這些物件。 若要從命令提示字元解除安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，請在命令提示字元中輸入下列命令，然後按 ENTER：   

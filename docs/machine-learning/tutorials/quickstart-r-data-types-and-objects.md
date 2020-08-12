@@ -4,22 +4,22 @@ titleSuffix: SQL machine learning
 description: 在此快速入門中，您將會了解如何在搭配 SQL 機器學習使用 R 時使用資料結構、資料類型與物件。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/23/2020
+ms.date: 05/21/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e5b5f4e90b680f5ae06944eedc997a43b8a40024
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: b4e2fe7a7f8f5009f289a3db78b58f629e819ff2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606570"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772348"
 ---
 # <a name="quickstart-data-structures-data-types-and-objects-using-r-with-sql-machine-learning"></a>快速入門：搭配 SQL 機器學習使用 R 的資料類型和物件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 在此快速入門中，您將會了解當您在 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)中或在[巨量資料叢集](../../big-data-cluster/machine-learning-services.md)上使用 R 時，如何使用資料結構與資料類型。 在此快速入門中，您將會了解如何在 R 與 SQL Server 之間移動資料，以及可能發生的常見問題。
@@ -29,6 +29,9 @@ ms.locfileid: "83606570"
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 在此快速入門中，您將會了解當您在 [SQL Server R Services](../r/sql-server-r-services.md) 中使用 R 時，如何使用資料結構與資料類型。 在此快速入門中，您將會了解如何在 R 與 SQL Server 之間移動資料，以及可能發生的常見問題。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+在此快速入門中，您將了解在 [Azure SQL 受控執行個體機器學習服務](/azure/azure-sql/managed-instance/machine-learning-services-overview)中使用 R 時，如何使用資料結構與資料類型。 您將了解在 R 與 SQL 受控執行個體之間移動資料，以及可能發生的常見問題。
 ::: moniker-end
 
 首先要瞭解的常見問題包括：
@@ -50,6 +53,9 @@ ms.locfileid: "83606570"
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 - SQL Server 2016 R Services。 如需如何安裝 R Services 的相關資訊，請參閱 [Windows 安裝指南](../install/sql-r-services-windows-install.md)。 
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Azure SQL 受控執行個體機器學習服務。 如需了解如何註冊，請參閱 [Azure SQL 受控執行個體機器學習服務概觀](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
 ::: moniker-end
 
 - 執行 SQL 查詢的工具，這些查詢包含 R 指令碼。 本快速入門使用 [Azure Data Studio](../../azure-data-studio/what-is.md)。
@@ -205,7 +211,7 @@ R 現在會傳回單一值做為結果。
 原因為何？ 在此案例中，因為這兩個引數可以當做長度相同的向量來處理，所以 R 會傳回內積做為矩陣。  根據線性代數的規則，這是預期的行為；不過，如果下游應用程式預期輸出結構描述永遠不會變更，則它可能會造成問題！
 
 > [!TIP]
-> 
+>
 > 收到錯誤？ 請確定您是在包含資料表的資料庫內容中執行預存程序，而不是在 **master** 或其他資料庫中執行。
 >
 > 此外，建議您避免在這些範例中使用暫存資料表。 有些 R 用戶端會終止批次之間的連線，並刪除暫存資料表。
@@ -292,7 +298,7 @@ WITH RESULT SETS undefined;
 
 **結果**
 
-```sql
+```text
 STDOUT message(s) from external script: 'data.frame':    37 obs. of  3 variables:
 STDOUT message(s) from external script: $ ReportingDate: POSIXct, format: "2010-12-24 23:00:00" "2010-12-24 23:00:00"
 STDOUT message(s) from external script: $ ProductSeries: Factor w/ 1 levels "M200 Europe",..: 1 1 1 1 1 1 1 1 1 1

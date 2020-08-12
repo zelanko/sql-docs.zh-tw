@@ -1,21 +1,21 @@
 ---
 title: SQL Server 單元測試中的指令碼
+description: 熟悉 SQL Server 單元測試指令碼。 了解測試前、測試和測試後指令碼，以及常見的指令碼 TestInitialize 和 TestCleanup。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 80c5cf62-a9c9-4e9d-8c6f-8eed50a595a7
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: c5ff8457d5e2122f3e5bc455c204a5185cc30aec
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1cc9bde70e716ba19f17f8d146719ccb191580b7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256974"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883452"
 ---
 # <a name="scripts-in-sql-server-unit-tests"></a>SQL Server 單元測試中的指令碼
 
@@ -54,7 +54,7 @@ ms.locfileid: "75256974"
 ## <a name="initialization-and-cleanup-scripts"></a>初始化和清除指令碼  
 在 SQL Server 單元測試設計工具中，TestInitialize 和 TestCleanup 指令碼稱為通用指令碼。 先前的範例是假設兩個單元測試都屬於相同測試類別的一部分。 因此，它們會共用相同的 TestInitialize 和 TestCleanup 指令碼。 對於單一測試類別內的所有單元測試而言，一律是如此。 不過，如果您的測試回合包含不同測試類別的單元測試，相關聯測試類別的通用指令碼將會在單元測試執行前後執行。  
   
-如果您只有使用 SQL Server 單元測試設計工具撰寫單元測試，可能會不熟悉測試類別的概念。 每當您透過開啟 [測試]  功能表並按一下 [新增測試]  來建立單元測試時，SQL Server Data Tools 都會產生測試類別。 出現在 [方案總管]  中的測試類別會使用您所指定的測試名稱，後面接著 .cs 或 .vb 副檔名。 在每個測試類別中，個別的單元測試會儲存成測試方法。 不過，不論測試方法 (即單元測試) 的數目為何，每個測試類別都可以有零或一個 TestInitialize 和 TestCleanup 指令碼。  
+如果您只有使用 SQL Server 單元測試設計工具撰寫單元測試，可能會不熟悉測試類別的概念。 每當您透過開啟 [測試]**** 功能表並按一下 [新增測試]**** 來建立單元測試時，SQL Server Data Tools 都會產生測試類別。 出現在 [方案總管] 中的測試類別會使用您所指定的測試名稱，後面接著 .cs 或 .vb 副檔名。 在每個測試類別中，個別的單元測試會儲存成測試方法。 不過，不論測試方法 (即單元測試) 的數目為何，每個測試類別都可以有零或一個 TestInitialize 和 TestCleanup 指令碼。  
   
 您可以使用 TestInitialize 指令碼來準備測試資料庫，而且可以使用 TestCleanup 指令碼，讓測試資料庫返回已知狀態。 例如，您可以先使用 TestInitialize 來建立協助程式預存程序，之後在測試指令碼中執行該預存程序以測試不同的預存程序。  
   

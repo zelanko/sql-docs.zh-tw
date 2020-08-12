@@ -1,5 +1,6 @@
 ---
 title: 將篩選新增至資料集 (報表產生器) | Microsoft Docs
+description: 了解如何將篩選新增到資料集，在從外部資料來源擷取資料後限制報表中的資料。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eed37e74-6a43-4d7c-9959-2d5fa6a6aba9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67fb8bd61f337c4de0476c8a3fdb8265202b0161
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 797d8911fbb1d8b9a99abbf70bff5dde60415f6d
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081664"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811357"
 ---
 # <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>將篩選加入至資料集 (報表產生器及 SSRS)
   從外部資料來源擷取資料後，將篩選加入至資料集來限制報表中的資料。 當您將篩選加入至資料集時，所有報表組件或資料區都只會使用符合篩選條件的資料。  
@@ -33,7 +34,7 @@ ms.locfileid: "77081664"
   
 3.  按一下 **[篩選]** 。 這樣就會顯示目前的篩選方程式清單。 根據預設，此清單是空的。  
   
-4.  按一下 [新增]  。 新的空白篩選方程式隨即顯示。  
+4.  按一下 [新增] 。 新的空白篩選方程式隨即顯示。  
   
 5.  在 **[運算式]** 中，針對要篩選的欄位輸入或選取運算式。 若要編輯運算式，請按一下運算式 (*fx*) 按鈕。  
   
@@ -51,11 +52,11 @@ ms.locfileid: "77081664"
   
 1.  在報表設計模式下，開啟報表。  
   
-2.  以滑鼠右鍵按一下 [報表資料]  窗格中的資料集，然後按一下 [資料集屬性]  。 **[資料集屬性]** 對話方塊隨即開啟。  
+2.  以滑鼠右鍵按一下 [報表資料] 窗格中的資料集，然後按一下 [資料集屬性]。 **[資料集屬性]** 對話方塊隨即開啟。  
   
 3.  按一下 **[篩選]** 。 這樣就會顯示目前的篩選方程式清單。 根據預設，此清單是空的。  
   
-4.  按一下 [新增]  。 新的空白篩選方程式隨即顯示。  
+4.  按一下 [新增] 。 新的空白篩選方程式隨即顯示。  
   
 5.  在 **[運算式]** 中，針對要篩選的欄位輸入或選取運算式。 若要編輯運算式，請按一下運算式 (*fx*) 按鈕。  
   

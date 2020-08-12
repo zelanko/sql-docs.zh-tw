@@ -8,16 +8,16 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0c5ba08a492be621e4b1f8871bdfcb49983af26d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7b6f4b11848cd0108dec5f3a4e5de0c089a89b41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79285982"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784353"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>使用 Azure Data Studio 連線到 SQL Server 巨量資料叢集
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 本文描述如何從 Azure Data Studio 連線到 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]。
 
@@ -47,7 +47,7 @@ ms.locfileid: "79285982"
 
 1. 在 [連線類型]  中，選取 [Microsoft SQL Server]  。
 
-1. 在 [伺服器名稱]  文字方塊中，鍵入您在 SQL Server 主要執行個體找到的端點名稱 (例如： **\<IP_Address\>,31433**)。 
+1. 在 [伺服器名稱] 文字方塊中，鍵入在 SQL Server 主要執行個體找到的端點名稱 (例如： **\<IP_Address\>,31433**)。 
 
 1. 選擇您的驗證類型。 針對在大型資料叢集中執行的 SQL Server 主要執行個體，僅支援 **Windows 驗證** 和 **SQL 登入**。 
 

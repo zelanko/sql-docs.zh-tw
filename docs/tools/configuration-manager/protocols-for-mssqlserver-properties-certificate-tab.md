@@ -1,5 +1,6 @@
 ---
 title: MSSQLSERVER 的通訊協定內容 (憑證索引標籤)
+description: 使用 [MSSQLSEREVER 通訊協定] 屬性對話方塊上的 [憑證] 索引標籤，選取 SQL Server 憑證，或檢視憑證屬性。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,16 +16,16 @@ ms.assetid: 776addd6-25f3-4875-9a71-064035787090
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b19b12a55f1afee35ed351ab6033179c17be89a8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 71740e97a0518e34ffa410a62efe14f96cfaccfc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306375"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881900"
 ---
 # <a name="protocols-for-mssqlserver-properties-certificate-tab"></a>MSSQLSERVER 的通訊協定內容 (憑證索引標籤)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  您可以使用 [MSSQLSERVER 屬性的通訊協定]  對話方塊的 [憑證]  索引標籤，以選取 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的憑證或檢視憑證內容。 選取憑證之前所有欄位都會是空白。  
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+  您可以使用 [MSSQLSERVER 屬性的通訊協定]**** 對話方塊的 [憑證]**** 索引標籤，以選取 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的憑證或檢視憑證內容。 選取憑證之前所有欄位都會是空白。  
   
  電腦上之使用者的憑證會儲存在本機中。 若要載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所使用的憑證，您必須使用和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務相同的使用者帳戶來執行「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員」。  
   
@@ -33,7 +34,7 @@ ms.locfileid: "75306375"
  可存取憑證上其他的詳細資料。 在 **[憑證]** 方塊中選取憑證之前，此按鈕無法使用。 如需憑證詳細資料的詳細資訊，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 文件集。  
   
  **Clear**  
- 從 [憑證]  方塊中移除選取的項目。  
+ 從 [憑證] 方塊中移除選取的項目。  
   
  **[MSSQLSERVER 的通訊協定內容]**  
  憑證名稱，此名稱是由安全性提供者所決定。 選取憑證，以便在內容方格中檢視其詳細資料。  

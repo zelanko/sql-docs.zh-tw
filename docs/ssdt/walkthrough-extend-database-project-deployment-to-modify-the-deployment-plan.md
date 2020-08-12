@@ -1,23 +1,23 @@
 ---
 title: 擴充資料庫專案部署以修改部署計劃
+description: 建立 DeploymentPlanModifier 類型的部署參與者，撰寫部署指令碼批次的程式，以在執行期間發生錯誤時重新執行。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 22b077b1-fa25-49ff-94f6-6d0d196d870a
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 1f4c73d02d131a0399fd8dde7698592629ef2726
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3fa3d424d3c6d46ba129c96d935612ce687b3ba0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242670"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882906"
 ---
-# <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>逐步解說：擴充資料庫專案部署以修改部署計畫
+# <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>逐步解說：擴充資料庫專案部署以修改部署計劃
 
 您可以建立部署參與者，以便在部署 SQL 專案時執行自訂動作。 您可以建立 [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) 或 [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx)。 使用 [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx)，在計畫執行前變更計畫；使用 [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx)，在計畫執行時執行作業。 在這個逐步解說中，您將建立 [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx)，名稱為 SqlRestartableScriptContributor，這個部署參與者會將 IF 陳述式加入至部署指令碼中的批次，以在執行期間發生錯誤時，讓指令碼重新執行直到完成為止。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "75242670"
   
 -   [執行或測試您的部署參與者](#TestDeploymentContributor)  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
 您需要下列元件才能完成這個逐步解說：  
   
 -   您必須已安裝包含 SQL Server Data Tools 和支援 C# 或 VB 開發的 Visual Studio 版本。  
@@ -60,13 +60,13 @@ ms.locfileid: "75242670"
   
 2.  將 "Class1.cs" 檔案重新命名為 "SqlRestartableScriptContributor.cs"。  
   
-3.  在 [方案總管] 中，以滑鼠右鍵按一下專案節點，然後按一下 [新增參考]  。  
+3.  在 [方案總管] 中，以滑鼠右鍵按一下專案節點，然後按一下 [新增參考]。  
   
-4.  選取 [Framework] 索引標籤上的 [System.ComponentModel.Composition]  。  
+4.  選取 [Framework] 索引標籤上的 [System.ComponentModel.Composition]。  
   
-5.  按一下 [瀏覽]  並巡覽至 **C:\Program Files (x86)\Microsoft SQL Server\110\SDK\Assemblies** 目錄，選取 [Microsoft.SqlServer.TransactSql.ScriptDom.dll]  ，然後按一下 [確定]  。  
+5.  按一下 [瀏覽]**** 並巡覽至 **C:\Program Files (x86)\Microsoft SQL Server\110\SDK\Assemblies** 目錄，選取 [Microsoft.SqlServer.TransactSql.ScriptDom.dll]****，然後按一下 [確定]****。  
   
-6.  加入必要的 SQL 參考：以滑鼠右鍵按一下專案節點，然後按一下 [加入參考]  。 按一下 [瀏覽]  並巡覽至 **C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin** 資料夾。 選擇 **Microsoft.SqlServer.Dac.dll**、**Microsoft.SqlServer.Dac.Extensions.dll** 和 **Microsoft.Data.Tools.Schema.Sql.dll** 項目，按一下 [加入]  ，然後按一下 [確定]  。  
+6.  加入必要的 SQL 參考：以滑鼠右鍵按一下專案節點，然後按一下 [加入參考]。 按一下 [瀏覽] 並巡覽至 **C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin** 資料夾。 選擇 **Microsoft.SqlServer.Dac.dll**、**Microsoft.SqlServer.Dac.Extensions.dll** 和 **Microsoft.Data.Tools.Schema.Sql.dll** 項目，按一下 [加入]，然後按一下 [確定]。  
   
 下一步，開始將程式碼加入至類別。  
   
@@ -181,7 +181,7 @@ ms.locfileid: "75242670"
   
     ```  
   
-    在這個程式碼，我們定義一些區域變數，而且設定會處理部署計畫中所有步驟的迴圈。 在迴圈完成後，我們必須進行一些後置處理，然後卸除部署期間建立用來追蹤計畫執行進度的暫存資料表。 這裡的重要型別為：[DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx) 和 [DeploymentScriptStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptstep.aspx)。 重要的方法是 AddAfter。  
+    在這個程式碼，我們定義一些區域變數，而且設定會處理部署計畫中所有步驟的迴圈。 在迴圈完成後，我們必須進行一些後置處理，然後卸除部署期間建立用來追蹤計畫執行進度的暫存資料表。 此處的重要類型為：[DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx) 和 [DeploymentScriptStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptstep.aspx)。 重要的方法是 AddAfter。  
   
 3.  現在加入額外的步驟處理，以取代註解 "Add additional step processing here"：  
   
@@ -366,7 +366,7 @@ ms.locfileid: "75242670"
     |CreateExecuteSQL|定義 CreateExecuteSQL 方法，以便用 EXEC sp_executesql 陳述式圍繞提供的陳述式。 重要型別、方法和屬性包含：[ExecuteStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executestatement.aspx)、[ExecutableProcedureReference](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executableprocedurereference.aspx)、[SchemaObjectName](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname.aspx)、[ProcedureReference](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.procedurereference.aspx) 和 [ExecuteParameter](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executeparameter.aspx)。|  
     |CreateCompletedBatchesName|定義 CreateCompletedBatchesName 方法。 這個方法會建立插入批次暫存資料表的名稱。重要型別、方法和屬性包含：[SchemaObjectName](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname.aspx)。|  
     |IsStatementEscaped|定義 IsStatementEscaped 方法。 這個方法會判斷模型項目型別是否要求陳述式先包裝在 EXEC sp_executesql 陳述式中，然後才可以使用 IF 陳述式括住。 重要類型、方法和屬性包含：TSqlObject.ObjectType、ModelTypeClass 和 TypeClass 屬性，適用於下列模型類型：Schema、Procedure、View、TableValuedFunction、ScalarFunction、DatabaseDdlTrigger、DmlTrigger、ServerDdlTrigger。|  
-    |CreateBatchCompleteInsert|定義 CreateBatchCompleteInsert 方法。 這個方法會建立將加入至部署指令碼以追蹤指令碼執行進度的 INSERT 陳述式。 重要類型、方法和屬性包含：InsertStatement、NamedTableReference、ColumnReferenceExpression、ValuesInsertSource 和 RowValue。|  
+    |CreateBatchCompleteInsert|定義 CreateBatchCompleteInsert 方法。 這個方法會建立將加入至部署指令碼以追蹤指令碼執行進度的 INSERT 陳述式。 金鑰類型、方法和屬性包含下列項目：InsertStatement、NamedTableReference、ColumnReferenceExpression、ValuesInsertSource 和 RowValue。|  
     |CreateIfNotExecutedStatement|定義 CreateIfNotExecutedStatement 方法。 這個方法會產生 IF 陳述式，檢查暫存批次執行資料表是否指出此批次已經執行。 重要類型、方法和屬性包含：IfStatement、ExistsPredicate、ScalarSubquery、NamedTableReference、WhereClause、ColumnReferenceExpression、IntegerLiteral、BooleanComparisonExpression 和 BooleanNotExpression。|  
     |GetStepInfo|定義 GetStepInfo 方法。 除了步驟名稱之外，這個方法還會擷取用來建立步驟指令碼的模型項目資訊。 相關型別和方法包含：[DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx)、[DeploymentScriptDomStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep.aspx)、[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)、[CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx)、[AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx) 和 [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx)。|  
     |GetElementName|建立 TSqlObject 的格式化名稱。|  
@@ -619,23 +619,23 @@ ms.locfileid: "75242670"
   
 #### <a name="to-sign-and-build-the-assembly"></a>若要簽署和建置組件  
   
-1.  按一下 [專案]  功能表上的 [MyOtherDeploymentContributor 屬性]  。  
+1.  按一下 [專案] 功能表上的 [MyOtherDeploymentContributor 屬性]。  
   
 2.  按一下 [ **簽署** ] 索引標籤。  
   
 3.  按一下 [ **簽署組件**]。  
   
-4.  在 [選擇強式名稱金鑰檔案]  中，按一下 **<New>** 。  
+4.  在 [選擇強式名稱金鑰檔案] 中，按一下 **<New>** 。  
   
 5.  在 [ **建立強式名稱金鑰** ] 對話方塊中的 [ **金鑰檔名稱**]，輸入 **MyRefKey**。  
   
 6.  (選擇性) 您可以為強式名稱金鑰檔指定密碼。  
   
-7.  按一下 [確定]  。  
+7.  按一下 [確定]。  
   
 8.  按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
-9. 在 [建置]  功能表上，按一下 [建置方案]  。  
+9. 在 [建置] 功能表上，按一下 [建置方案]。  
   
     下一步，您必須安裝組件，以便在部署 SQL 專案時將其載入。  
   
@@ -687,7 +687,7 @@ ms.locfileid: "75242670"
   
         ```  
   
-    4.  針對要執行參與者的任何專案，在 .sqlproj 檔案內部匯入目標檔案，方法是將下列陳述式新增至 .sqlproj 檔案，在檔案的 \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> 節點後面：  
+    4.  在想要執行參與者的任何專案 .sqlproj 檔案中，透過將下列陳述式新增到 .sqlproj 檔案中的 \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> 節點後面，以匯入目標檔案：  
   
         ```  
         <Import Project="$(MSBuildExtensionsPath)\MyContributors\MyContributors.targets " />  
@@ -707,11 +707,11 @@ ms.locfileid: "75242670"
   
     1.  開啟 Visual Studio，並開啟包含 SQL 專案的方案。  
   
-    2.  在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選擇 [發行...]  選項。  
+    2.  在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選擇 [發行...] 選項。  
   
     3.  設定發行目標伺服器名稱和資料庫名稱。  
   
-    4.  從對話方塊的底部選項中選擇 [產生指令碼]  。 這會建立可用於部署的指令碼。 我們會檢查這個指令碼，確認 IF 陳述式已加入，以便讓指令碼可重新啟動。  
+    4.  從對話方塊的底部選項中選擇 [產生指令碼]。 這會建立可用於部署的指令碼。 我們會檢查這個指令碼，確認 IF 陳述式已加入，以便讓指令碼可重新啟動。  
   
     5.  檢查產生的部署指令碼。 在標示 "Pre-Deployment Script Template" 的區段之前，您應該會看到類似下列 Transact-SQL 語法的程式碼：  
   
@@ -791,6 +791,6 @@ ms.locfileid: "75242670"
   
 ## <a name="see-also"></a>另請參閱  
 [使用組建和部署參與者自訂資料庫建置和部署](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
-[逐步解說：擴充資料庫專案組建，以產生模型統計資料](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md) \(機器翻譯\)  
-[逐步解說：擴充資料庫專案部署以分析部署計畫](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
+[逐步解說：延伸資料庫專案組建，以產生模型統計資料](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)  
+[逐步解說：延伸資料庫專案部署以分析部署計畫](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
   

@@ -1,5 +1,6 @@
 ---
 title: SQL Server 服務
+description: 熟悉 Microsoft SQL Server 組態管理員中的 [SQL Server 服務] 對話方塊。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 97193ac4-aa97-489c-9e81-6fcbdf88aebf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d37291b7626e3a8f3fb47555d66af2e5e21feea2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6c55b0872adbd8d1225a4a8391acac65b11a75f1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306753"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880308"
 ---
 # <a name="sql-server-services"></a>SQL Server 服務
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  本區段包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 組態管理員中 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務] 對話方塊的 F1 說明主題。  
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+  本區段包含 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務] 對話方塊的 F1 說明主題。  
   
 > [!NOTE]  
 >  如果您在未主控資源之叢集的節點上開啟 **[SQL Server 組態管理員]** ，服務將呈現停止狀態。  

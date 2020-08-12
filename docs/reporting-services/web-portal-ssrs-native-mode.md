@@ -4,17 +4,17 @@ ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.description: The web portal of a Reporting Services report server is a web-based experience for viewing reports, mobile reports, KPIs, and navigating through the elements in your report server instance.
+description: Reporting Services 入口網站是頁面體驗，可供檢視報表、行動報表、KPI，以及巡覽整個報表伺服器執行個體中的項目。
 ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 24afa6ec8daa26730ad202d1aad612ba01213bb4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 29181b0830ad767c71e73c709aa7f3eee5a49190
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082514"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759795"
 ---
 # <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>報表伺服器的入口網站 (SSRS 原生模式)
 
@@ -67,9 +67,9 @@ Reporting Services 報表伺服器的入口網站是一種 Web 體驗。 在入�
 
 2. 在網頁瀏覽器的網址列中，輸入入口網站 URL。
 
-    根據預設，URL 為 https://[電腦名稱]/reports  。
+    根據預設，URL 為 https://[電腦名稱]/reports。
 
-    報表伺服器可能會設定為使用特定的通訊埠。 例如， https://[電腦名稱]:80/reports  或 https://[電腦名稱]:8080/reports  。
+    報表伺服器可能會設定為使用特定的通訊埠。 例如， https://[電腦名稱]:80/reports 或 https://[電腦名稱]:8080/reports。
 
 ## <a name="grouping-by-categories"></a>依類別分組
 
@@ -84,7 +84,7 @@ Reporting Services 報表伺服器的入口網站是一種 Web 體驗。 在入�
 - 資料來源
 - 資源
 
-您可以藉由選取右上角的 [檢視]  ，來控制要顯示的內容。 如果您選取 [顯示隱藏項]，則這些項目將以較淡的色彩來顯示。
+您可以藉由選取右上角的 [檢視]，來控制要顯示的內容。 如果您選取 [顯示隱藏項]，則這些項目將以較淡的色彩來顯示。
 
 ![ssRSWebPortal-view](../reporting-services/media/ssrswebportal-view.png)
 

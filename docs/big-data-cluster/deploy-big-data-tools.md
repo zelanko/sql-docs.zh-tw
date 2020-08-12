@@ -5,20 +5,20 @@ description: 了解如何安裝搭配 SQL Server 2019 巨量資料叢集來使�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/07/2020
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cafec0d1542cd2ec6a02557b400a17b6d0d0ddad
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 3fe867d6f075067d949becdbcae4630f1ad019d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606663"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784305"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>安裝 SQL Server 2019 巨量資料工具
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 本文描述您應該安裝來建立、管理和使用 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 的用戶端工具。 下列小節提供工具和安裝指示連結的清單。 在部署巨量資料叢集之前，請先設定標示為在 Windows 或 Linux 上是必要的工具。
 
@@ -37,6 +37,7 @@ ms.locfileid: "83606663"
 | **mssql-cli** | 選用 | 用於查詢 SQL Server 的新式命令列介面 ([詳細資訊](../tools/mssql-cli.md) \(英文\))。 | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \(英文\) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) \(英文\) |
 | **sqlcmd** | 對於某些指令碼 | 用於查詢 SQL Server 的舊版命令列工具 ([詳細資訊](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15) \(部分機器翻譯\))。 您可能需要先安裝 Microsoft ODBC Driver 11 for SQL Server，才能安裝 SQLCMD 套件。 | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \(英文\) \| [Linux](../linux/sql-server-linux-setup-tools.md) \(英文\) |
 | `curl` <sup>3</sup> | 對於某些指令碼 | 使用 URL 傳送資料的命令列工具。 | [Windows](https://curl.haxx.se/windows/) \(英文\) \| Linux：安裝 curl 套件 |
+| `oc` | 必須具備才能進行 Red Hat OpenShift 和 Azure Redhat OpenShift 部署。 |`oc` 是 Open Shift 命令列介面 (CLI)。 | [Installing the CLI](https://docs.openshift.com/container-platform/4.4/cli_reference/openshift_cli/getting-started-cli.html#installing-the-cli) (安裝 CLI)
 
 <sup>1</sup> 您必須使用 `kubectl` 1.13 版或更新版本。 此外，`kubectl` 的版本應該是 Kubernetes 叢集的次要版本加上或減去一。 如果您想要在 `kubectl` 用戶端上安裝特定版本，請參閱[透過 curl 安裝 `kubectl` 二進位檔](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl) (在 Windows 10 上，請使用 cmd.exe 執行 curl，而不是使用 Windows PowerShell)。
 

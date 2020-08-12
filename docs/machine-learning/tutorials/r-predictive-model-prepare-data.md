@@ -8,19 +8,18 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1ae2931ca07cdcd6e3f1216ce7adb2551a6e23ae
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: e0c679ce4a146065223123e41cb2935e7d33ad71
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607031"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784081"
 ---
 # <a name="tutorial-prepare-data-to-train-a-predictive-model-in-r-with-sql-machine-learning"></a>教學課程：準備資料以使用 SQL 機器學習在 R 中定型預測模型
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 在這個四部分教學課程系列的第二部分中，您會使用 R 準備來自資料庫中的資料。在本系列稍後的內容中，您則會使用此資料透過 SQL Server 機器學習服務在 R 中定型和部署預測模型，或在巨量資料叢集上進行此定型和部署。
@@ -31,12 +30,15 @@ ms.locfileid: "83607031"
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 在這個四部分教學課程系列的第二部分中，您會使用 R 準備來自資料庫中的資料。在本系列稍後的內容中，您則會使用此資料透過 SQL Server R Services 在 R 中定型和部署預測模型。
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+在這個四部分教學課程系列的第二部分中，您會使用 R 來準備資料庫中的資料。在本系列稍後的內容中，您將透過 Azure SQL 受控執行個體機器學習服務，以使用此資料定型及部署 R 中的預測性模型。
+::: moniker-end
 
 在本文中，您將學會如何：
 
 > [!div class="checklist"]
 > * 將範例資料庫還原至資料庫
-> * 將 SQL 資料庫中的資料載入到 R 資料框架中
+> * 將資料庫中的資料載入到 R 資料框架中
 > * 藉由依某些資料行分類來以 R 準備資料
 
 在[第一部分](r-predictive-model-introduction.md)，您已了解如何還原範例資料庫。
@@ -51,22 +53,19 @@ ms.locfileid: "83607031"
 
 ## <a name="load-the-data-into-a-data-frame"></a>將資料載入資料框架
 
-若要在 R 中使用資料，請將 SQL 資料庫中的資料載入資料框架 (`rentaldata`) 中。
+若要在 R 中使用資料，請將資料庫中的資料載入資料框架 (`rentaldata`) 中。
 
 在 RStudio 中建立新的 RScript 檔案，並執行下列指令碼。 將 **ServerName** 取代為您自己的連線資訊。
 
 ```r
 #Define the connection string to connect to the TutorialDB database
-connStr <- "Driver=SQL Server;Server=ServerName;Database=TutorialDB;Trusted_Connection=TRUE"
+connStr <- "Driver=SQL Server;Server=ServerName;Database=TutorialDB;uid=Username;pwd=Password"
+
 
 #Get the data from the table
 library(RODBC)
 
 ch <- odbcDriverConnect(connStr)
-
-#Take a look at the structure of the data and the top rows
-head(rentaldata)
-str(rentaldata)
 
 #Import the data from the table
 rentaldata <- sqlFetch(ch, "dbo.rental_data")
@@ -138,7 +137,7 @@ $ Snow       : Factor w/ 2 levels "0","1": 1 1 1 1 1 1 1 1 1 1 ...
 
 在本教學課程系列的第二部分中，您學到了如何：
 
-* 將範例資料從 SQL Server 載入至 R 資料框架
+* 將範例資料載入 R 資料框架
 * 藉由依某些資料行分類來以 R 準備資料
 
 若要建立一個機器學習模型，使用 TutorialDB 資料庫中的資料，請遵循本教學課程系列的第三部分：

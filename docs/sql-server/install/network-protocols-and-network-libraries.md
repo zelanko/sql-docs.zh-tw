@@ -1,5 +1,6 @@
 ---
 title: 網路通訊協定和網路程式庫 | Microsoft Docs
+description: 伺服器可設定為監視多個網路通訊協定。 您可使用 SQL Server 組態管理員來變更組態。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,17 +19,17 @@ helpviewer_keywords:
 - network protocols [SQL Server], about network protocols
 - configuration options [SQL Server], libraries
 ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: abdd5e7af707bd566288bd1048eda4874d82311c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bc3f56fe60fdab32a41e61c878b1a3988e265a28
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68126067"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880451"
 ---
 # <a name="network-protocols-and-network-libraries"></a>網路通訊協定和網路程式庫
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   伺服器可以一次接聽或監視多個網路通訊協定。 然而，必須設定每個通訊協定。 如果未設定特定的通訊協定，則伺服器將無法接聽該通訊協定。 安裝之後，您可以利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員來變更通訊協定組態。  
   
@@ -51,9 +52,9 @@ ms.locfileid: "68126067"
   
 #### <a name="to-disable-smb"></a>若要停用 SMB  
   
-1.  在 [開始]  功能表上，指向 [設定]  ，然後按一下 [網路和撥號連線]  。  
+1.  在 [開始] 功能表上，指向 [設定]，然後按一下 [網路和撥號連線]。  
   
-     以滑鼠右鍵按一下[網際網路方向連線]，然後按一下 [內容]  。  
+     以滑鼠右鍵按一下[網際網路方向連線]，然後按一下 [內容]。  
   
 2.  選取 **[Client for Microsoft Networks]** 核取方塊，再按一下 **[解除安裝]** 。  
   
@@ -65,7 +66,7 @@ ms.locfileid: "68126067"
   
 #### <a name="to-disable-smb-on-servers-accessible-from-the-internet"></a>若要在可從網際網路存取的伺服器上停用 SMB  
   
--   在 [本機區域連線內容] 中，使用 [傳輸控制通訊協定/網際網路通訊協定 (TCP/IP)]  內容對話方塊來移除 [File and Printer Sharing for Microsoft Networks]  和 [Client for Microsoft Networks]  。  
+-   在 [本機區域連線內容] 中，使用 [傳輸控制通訊協定/網際網路通訊協定 (TCP/IP)]**** 內容對話方塊來移除 [File and Printer Sharing for Microsoft Networks]**** 和 [Client for Microsoft Networks]****。  
   
 ## <a name="endpoints"></a>端點  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 導入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接的新概念；伺服器端的連接是以 [!INCLUDE[tsql](../../includes/tsql-md.md)] *「端點」* (endpoint) 的概念來表示。 可對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 端點授與、撤銷和拒絕權限。 依預設，所有使用者對端點都有存取權限，除非權限遭到系統管理員 (sysadmin) 群組的成員或端點擁有者拒絕或撤銷。 GRANT、REVOKE 和 DENY ENDPOINT 語法使用的是系統管理員必須從端點之目錄檢視中取得的端點識別碼。  

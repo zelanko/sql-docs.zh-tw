@@ -1,5 +1,6 @@
 ---
 title: 管理共用資料集 | Microsoft Docs
+description: 了解如何管理 Reporting Services 中的共用資料集，以便您可以共用查詢，以利為多份報表提供一致的資料集。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 332103dd9f100a2477b9ae7392bd6d24088261f6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: df22dbab5cf450981f53976fb2a09e6ff08797c8
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67220590"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808438"
 ---
 # <a name="manage-shared-datasets"></a>管理共用資料集
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，共用資料集是從連接至外部資料來源的共用資料來源擷取資料。 共用資料集提供方法以共用查詢，可協助您為多個報表提供一致的資料集。 資料集查詢可以包含資料集參數。 您可以在第一次使用時或指定排程，設定共用資料集以快取特定參數組合的查詢結果。 您可以使用共用資料集快取，配合報表快取及報表資料摘要，協助管理資料來源的存取。  
@@ -41,8 +42,8 @@ ms.locfileid: "67220590"
 ### <a name="manage-shared-dataset-item-properties"></a>管理共用資料集項目屬性  
  下表列出您可以為共用資料集項目變更的項目屬性。  
   
-|||  
-|-|-|  
+|屬性|說明|  
+|--------|-----------|  
 |編輯名稱|變更共用資料集的名稱。 相依項目的所有參考都將繼續運作。|  
 |編輯描述|變更共用資料集的描述。|  
 |編輯查詢執行逾時|設定查詢執行逾時，以秒為單位。 零 (0) 秒表示無逾時。決定資料集查詢逾時之前的秒數。若要指定無逾時值，請使用 0。 如需詳細資訊，請參閱[設定報表和共用資料集處理的逾時值 &#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)。|  
@@ -50,7 +51,7 @@ ms.locfileid: "67220590"
   
  下列的其他共用資料集屬性會自動進行設定：  
   
-|屬性|描述|  
+|屬性|說明|  
 |--------------|-----------------|  
 |HasDataSourceCredentials|關聯的共用資料來源是否有認證儲存在報表伺服器上。|  
 |HasUserProfileDependencies|報表在其查詢或篩選運算式中是否具有使用者全域集合參考。|  

@@ -1,6 +1,7 @@
 ---
 title: 重新執行追蹤資料表
 titleSuffix: SQL Server Profiler
+description: 透過在 SQL Server Profiler 中重新執行追蹤資料表來協助針對問題進行疑難排解。 了解重新執行功能和選項。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 405f8b71730e2758b45c7ddeddf888498d701d20
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 85add6ac34c090c55ccd5207854131dfc2b23fc0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307504"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774744"
 ---
 # <a name="replay-a-trace-table-sql-server-profiler"></a>重新執行追蹤資料表 (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 重新執行是開啟儲存的追蹤並重新執行該追蹤的能力。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 具有多執行緒播放引擎的功能，可以模擬使用者連線及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 重新執行在排解應用程式或處理序的疑難問題時很有用。 您識別問題並實作更正時，針對更正的應用程式或處理序執行發現可能問題的追蹤。 然後，重新執行原始追蹤並比較結果。  
   
@@ -30,34 +31,34 @@ ms.locfileid: "75307504"
   
 1.  開啟內含重新執行時所需事件類別的追蹤資料表。  
   
-2.  在 [重新執行]  功能表上按一下 [開始]  ，然後連接到您要重新執行追蹤的伺服器執行個體。  
+2.  在 [重新執行] 功能表上按一下 [開始]，然後連接到您要重新執行追蹤的伺服器執行個體。  
   
-3.  在 [重新執行組態]  對話方塊的 [基本重新執行選項]  索引標籤上，指定 [重新執行伺服器]  。 按一下 [變更]  ，以變更 [重新執行伺服器]  方塊中所顯示的伺服器。  
+3.  在 [重新執行組態] 對話方塊的 [基本重新執行選項] 索引標籤上，指定 [重新執行伺服器]。 按一下 [變更]，以變更 [重新執行伺服器] 方塊中所顯示的伺服器。  
   
 4.  選擇性，選取下列要儲存重新執行之目的地的其中之一：  
   
-    -   [儲存至檔案]  ，指定用來儲存重新執行的檔案。  
+    -   [儲存至檔案]，指定用來儲存重新執行的檔案。  
   
-    -   [儲存至資料表]  ，指定用來儲存重新執行的資料庫資料表。  
+    -   [儲存至資料表]，指定用來儲存重新執行的資料庫資料表。  
   
-5.  選擇 [以追蹤事件的順序重新執行事件]  或 [使用多執行緒重新執行事件]  。 下列資料表說明這些設定之間的差異。  
+5.  選擇 [以追蹤事件的順序重新執行事件] 或 [使用多執行緒重新執行事件]。 下列資料表說明這些設定之間的差異。  
   
-    |選項|描述|  
+    |選項|說明|  
     |------------|-----------------|  
     |**依照追蹤的順序重新執行事件**|以記錄事件的順序重新執行事件。 此選項會啟動偵錯。|  
     |**使用多執行緒重新執行事件**|這個選項使用多個執行緒重新執行每個事件，不受順序的限制。 這個選項會將效能最佳化。|  
   
-6.  選取 [顯示重新執行結果]  ，在重新執行時檢視其過程。  
+6.  選取 [顯示重新執行結果]，在重新執行時檢視其過程。  
   
-7.  或者按一下 [進階重新執行選項]  索引標籤，指定下列選項：  
+7.  或者按一下 [進階重新執行選項] 索引標籤，指定下列選項：  
   
-    -   若要重新執行所有伺服器處理序識別碼 (SPID)，請選取 [重新執行系統 SPID]  。  
+    -   若要重新執行所有伺服器處理序識別碼 (SPID)，請選取 [重新執行系統 SPID]。  
   
-    -   若要限制只重新執行屬於特定 SPID 的處理序，請選取 [只重新執行一個 SPID]  。 在 [要重新執行的 SPID]  方塊中，輸入 SPID。  
+    -   若要限制只重新執行屬於特定 SPID 的處理序，請選取 [只重新執行一個 SPID]。 在 [要重新執行的 SPID] 方塊中，輸入 SPID。  
   
-    -   若要重新執行在特定時間週期內產生的事件，請選取 [依日期和時間限制重新執行]  。 選取 [開始時間]  與 [結束時間]  的日期和時間，指定重新執行中包含的時間週期。  
+    -   若要重新執行在特定時間週期內產生的事件，請選取 [依日期和時間限制重新執行]。 選取 [開始時間] 與 [結束時間] 的日期和時間，指定重新執行中包含的時間週期。  
   
-    -   若要控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在重新執行期間管理處理序的方式，請設定 [健全狀況監視器選項]  。  
+    -   若要控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在重新執行期間管理處理序的方式，請設定 [健全狀況監視器選項]。  
   
 ## <a name="see-also"></a>另請參閱  
  [執行 SQL Server Profiler 所需的權限](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)   

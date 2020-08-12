@@ -2,22 +2,22 @@
 title: 啟用或停用遠端 R 套件管理
 description: 在 SQL Server 2016 R Services 或 SQL Server Machine Learning Services 上啟用遠端 R 套件管理 (資料庫內)
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 06/13/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 250be5c8a4207a43d2e4194c78377bd87880a99c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1a18d56d1dcf0733f080da7cf8247421c669a4aa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117981"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757146"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>啟用或停用 SQL Server 的遠端套件管理
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 此文章說明如何從用戶端工作站或不同的 Machine Learning Server 啟用 R 套件的遠端管理。 在 SQL Server 上啟用套件管理功能之後，就可以在用戶端上使用 RevoScaleR 命令將套件安裝在 SQL Server 上。
 
@@ -41,7 +41,7 @@ SQL Server 的外部套件管理功能預設為停用。 您必須執行個別�
 
     此命令會在 SQL Server 電腦上建立套件管理所需的執行個體層級物件， 此命令也會重新啟動執行個體的 Launchpad。
 
-    如果您未指定執行個體，系統會使用預設的執行個體。 如果您未指定使用者，系統會使用目前的資訊安全內容。 例如，下列命令會使用開啟命令提示字元之使用者的認證，在 RegisterRExt.exe 的路徑中啟用執行個體中的套件管理：
+    如果您未指定執行個體，系統會使用預設的執行個體。 如果您未指定使用者，系統會使用目前的資訊安全內容。 例如，下列命令會使用開啟命令提示字元的使用者認證，對預設的執行個體啟用套件管理：
 
     `REgisterRExt.exe /install pkgmgmt`
 
@@ -51,7 +51,7 @@ SQL Server 的外部套件管理功能預設為停用。 您必須執行個別�
    
     此命令會建立一些資料庫成品，包括下列用來控制使用者權限的資料庫角色：`rpkgs-users`、`rpkgs-private` 與 `rpkgs-shared`。
 
-    例如，下列命令會在執行 RegisterRExt 的執行個體上啟用資料庫上的套件管理。 如果您未指定使用者，系統會使用目前的資訊安全內容。
+    例如，下列命令會對預設執行個體的資料庫啟用套件管理。 如果您未指定使用者，系統會使用目前的資訊安全內容。
 
     `RegisterRExt.exe /install pkgmgmt /database:TestDB`
 

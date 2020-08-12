@@ -1,23 +1,23 @@
 ---
 title: 撰寫在單一交易範圍內執行的 SQL Server 單元測試
+description: 了解如何啟動分散式交易協調器服務、撰寫單一交易 SQL Server 單元測試，以及復原測試變更。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: cb241e94-d81c-40e9-a7ae-127762a6b855
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 36bc1ac2a4a20dd0d05d90b8d12ff63b0a7a6b3e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 13df7080dc1c313279a65eb3457128e43927c9e0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246492"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893021"
 ---
-# <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>HOW TO：撰寫在單一交易範圍內執行的 SQL Server 單元測試
+# <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>如何：撰寫在單一交易範圍內執行的 SQL Server 單元測試
 
 您可以修改單元測試，使其在單一交易範圍中執行。 如果採用這種方法，在測試結束之後，可以復原此測試所進行的任何變更。 下列程序說明其做法：  
   
@@ -27,7 +27,7 @@ ms.locfileid: "75246492"
   
 -   在指定的測試類別中建立所有測試方法的交易。  
   
-**必要條件**  
+**先決條件**  
   
 對於本主題中的部分程序而言，必須在執行單元測試的電腦上執行分散式交易協調器服務。 如需詳細資訊，請參閱本主題結尾的程序。  
   
@@ -61,13 +61,13 @@ ms.locfileid: "75246492"
   
 #### <a name="to-create-a-transaction-for-a-single-test-method"></a>若要建立單一測試方法的交易  
   
-1.  在 [方案總管]  中，以滑鼠右鍵按一下測試專案中的 [參考]  節點，然後按一下 [加入參考]  。  
+1.  在 [方案總管] 中，以滑鼠右鍵按一下測試專案中的 [參考] 節點，然後按一下 [加入參考]。  
   
-    [新增參考]  對話方塊隨即出現。  
+    [新增參考] 對話方塊隨即出現。  
   
-2.  按一下 [.NET]  索引標籤。  
+2.  按一下 [.NET] 索引標籤。  
   
-3.  在組件清單中，按一下 **System.Transactions**，然後按一下 [確定]  。  
+3.  在組件清單中，按一下 **System.Transactions**，然後按一下 [確定]。  
   
 4.  開啟單元測試的 Visual Basic 或 C# 檔案。  
   
@@ -162,13 +162,13 @@ ms.locfileid: "75246492"
   
 1.  開啟 [ **控制台**]。  
   
-2.  在 [控制台]  中，開啟 [系統管理工具]  。  
+2.  在 [控制台] 中，開啟 [系統管理工具]。  
   
-3.  在 [系統管理工具]  中，開啟 [服務]  。  
+3.  在 [系統管理工具] 中，開啟 [服務]。  
   
-4.  在 [服務]  窗格中，以滑鼠右鍵按一下 [分散式交易控制器]  服務，然後按一下 [啟動]  。  
+4.  在 [服務] 窗格中，以滑鼠右鍵按一下 [分散式交易控制器] 服務，然後按一下 [啟動]。  
   
-    服務的狀態應該會更新為 [已啟動]  。 現在應該就能夠執行使用 System.Transactions 的單元測試。  
+    服務的狀態應該會更新為 [已啟動]。 現在應該就能夠執行使用 System.Transactions 的單元測試。  
   
 > [!IMPORTANT]  
 > 即使您已啟動分散式交易控制器服務，仍有可能發生下列錯誤：`System.Transactions.TransactionManagerCommunicationException: Network access for Distributed Transaction Manager (MSDTC) has been disabled. Please enable DTC for network access in the security configuration for MSDTC using the Component Services Administrative tool. ---> System.Runtime.InteropServices.COMException: The transaction manager has disabled its support for remote/network transactions. (Exception from HRESULT: 0x8004D024)`。 如果發生這個錯誤，您必須針對網路存取設定分散式交易控制器。 如需詳細資訊，請參閱[啟用網路 DTC 存取](https://go.microsoft.com/fwlink/?LinkId=193916)。  

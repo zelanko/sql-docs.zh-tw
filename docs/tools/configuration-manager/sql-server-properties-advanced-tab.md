@@ -1,5 +1,6 @@
 ---
 title: SQL Server 屬性 (進階索引標籤)
+description: 了解 [SQL Server 屬性] 對話方塊中 [進階] 索引標籤上的選項，例如資料路徑、執行個體識別碼，以及自訂屬性。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a21d6eb31b0edb5ab0cfa56f388b2cf3e3065627
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cabf817c5b2a1be512b93235e274d76abba7f69b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306829"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893347"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>SQL Server 屬性 (進階索引標籤)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   下列屬性預設會出現在 **[進階]** 索引標籤。 如果定義了自訂屬性，這些屬性與其值也會在這個索引標籤上顯示。  
   
 ## <a name="options"></a>選項。  
@@ -36,7 +37,7 @@ ms.locfileid: "75306829"
  顯示在發生錯誤時放置記憶體傾印的位置。  
   
  **錯誤報告**  
- 若設定為 [是]  ，一旦發生嚴重錯誤，Dr. Watson 程式會將資訊轉送至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 或您的錯誤伺服器。 如需錯誤報表的詳細資訊，請搜尋《線上叢書》的＜錯誤報告和使用方式報告設定＞主題。 若要變更此值，請在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 物件總管中，在伺服器上按一下滑鼠右鍵，然後依序按一下 [屬性]  **和 [其他伺服器設定]** 頁面。 這個選項會出現在 **[資訊報告]** 區域中。  
+ 若設定為 [是]，一旦發生嚴重錯誤，Dr. Watson 程式會將資訊轉送至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 或您的錯誤伺服器。 如需錯誤報表的詳細資訊，請搜尋《線上叢書》的＜錯誤報告和使用方式報告設定＞主題。 若要變更此值，請在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 物件總管中，在伺服器上按一下滑鼠右鍵，然後依序按一下 [屬性] **和 [其他伺服器設定]** 頁面。 這個選項會出現在 **[資訊報告]** 區域中。  
   
  **檔案版本**  
  顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可執行檔的版本。  

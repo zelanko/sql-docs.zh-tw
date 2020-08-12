@@ -1,6 +1,6 @@
 ---
 title: WSFC 仲裁模式和投票組態
-descriptoin: 'A description of the quroum modes and voting configuration used by the Windows Server Failover Cluster with a SQL Server failover cluster instance, or an Always On availability group. '
+description: 了解具備 SQL Server 容錯移轉叢集執行個體或 Always On 可用性群組的 Windows Server 容錯移轉叢集使用仲裁模式和投票的方式。
 ms.custom: seo-lt-2019
 ms.date: 10/03/2016
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 448d3679530c689befa59e2b8a70d409d93f6dd4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3144f53bed98c5f5ec92d26a1e72254b6adda25e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74822172"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895146"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC 仲裁模式和投票組態 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 AlwaysOn 容錯移轉叢集執行個體 (FCI) 都會利用 Windows Server 容錯移轉叢集 (WSFC) 作為平台技術。  WSFC 使用以仲裁為基礎的方法，監視整體叢集健全狀況並最大化節點層級容錯能力。 WSFC 仲裁模式和節點投票組態的基礎了解，對於 AlwaysOn 高可用性和災害復原方案的設計、操作和疑難排解非常重要。  
   
   
@@ -36,7 +36,7 @@ ms.locfileid: "74822172"
 > [!IMPORTANT]  
 >  如果 WSFC 叢集因為仲裁失敗而設為離線，則需要手動操作，將其恢復上線。  
 >   
->  如需詳細資訊，請參閱： [透過強制仲裁執行 WSFC 災害復原 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)(Quorum Vote) 所決定。  
+>  如需詳細資訊，請參閱[透過強制仲裁執行 WSFC 災害復原 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)。  
   
 ##  <a name="quorum-modes"></a><a name="QuorumModes"></a> 仲裁模式  
  *「仲裁模式」* (Quorum Mode) 是在 WSFC 叢集層級設定，指出仲裁投票所使用的方法。  容錯移轉叢集管理員公用程式會根據叢集中的節點數來建議仲裁模式。  
@@ -57,7 +57,7 @@ ms.locfileid: "74822172"
 >  使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]非對稱儲存組態時，如果投票節點為奇數，通常應該使用節點多數仲裁模式，如果投票節點為偶數，則使用節點與檔案共用多數仲裁模式。  
   
 ##  <a name="voting-and-non-voting-nodes"></a><a name="VotingandNonVotingNodes"></a> 投票和非投票節點  
- 根據預設，WSFC 叢集中的每個節點都是叢集仲裁成員，每個節點都有一票決定整體叢集健全狀況，而且每個節點都會持續嘗試建立仲裁。  仲裁討論至此，針對投票決定叢集健全狀況的 WSFC 叢集節點集仔細限定為「投票節點」  。  
+ 根據預設，WSFC 叢集中的每個節點都是叢集仲裁成員，每個節點都有一票決定整體叢集健全狀況，而且每個節點都會持續嘗試建立仲裁。  仲裁討論至此，針對投票決定叢集健全狀況的 WSFC 叢集節點集仔細限定為「投票節點」。  
   
  WSFC 叢集中沒有個別節點可針對叢集整體狀況良好或狀況不良做最後決定。  在任何給定時刻，從每個節點的觀點來看，某些其他節點可能看起來離線、看起來正在進行容錯移轉，或因為網路通訊失敗而看起來沒有回應。  仲裁投票的關鍵功能是決定 WSFC 叢集中每個節點的表面狀態是否確實為這些節點的實際狀態。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "74822172"
   
  不過，如果另一個子網路上的節點在仲裁投票中是視為無回應，但它實際上已上線，另一方面也是狀況良好，最可能的原因是子網路之間的網路通訊失敗。  根據叢集拓撲、仲裁模式和容錯移轉原則組態，該網路通訊失敗實際上可能會建立多組投票節點 (或子網路)。  
   
- 當多個投票節點的子網路能夠獨立建立仲裁時，這稱為「裂腦案例」  。  在這種情況下，在個別仲裁中的節點可能有不同的表現方式，並且互相衝突。  
+ 當多個投票節點的子網路能夠獨立建立仲裁時，這稱為「裂腦案例」**。  在這種情況下，在個別仲裁中的節點可能有不同的表現方式，並且互相衝突。  
   
 > [!NOTE]  
 >  只在系統管理員手動執行強制仲裁作業時，或在極罕見狀況下手動執行強制容錯移轉，而明確細分仲裁節點集，裂腦案例才是可能的。  
@@ -75,7 +75,7 @@ ms.locfileid: "74822172"
 > [!IMPORTANT]  
 >  為了能夠使用 NodeWeight 設定，必須將以下 Hotfix 套用至 WSFC 叢集中的所有伺服器：  
 >   
->  [KB2494036](https://support.microsoft.com/kb/2494036)：提供 Hotfix 讓您設定叢集節點，該節點在 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 和 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036)：提供 Hotfix 讓您設定叢集節點，該節點在 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 和 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] 中沒有仲裁投票  
   
 ##  <a name="recommended-adjustments-to-quorum-voting"></a><a name="RecommendedAdjustmentstoQuorumVoting"></a> 建議的仲裁投票調整  
  在啟用或停用指定 WSFC 節點的投票時，請遵循下列方針：  
@@ -116,9 +116,9 @@ ms.locfileid: "74822172"
   
 -   [AlwaysOn 可用性群組精靈中的仲裁投票組態檢查](https://blogs.msdn.microsoft.com/sqlalwayson/2012/03/13/quorum-vote-configuration-check-in-alwayson-availability-group-wizards-andy-jing/)  
   
--   [Windows Server 技術：容錯移轉叢集](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
+-   [Windows Server Technologies:Failover Clusters](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx) (Windows Server 技術：容錯移轉叢集)  
   
--   [容錯移轉叢集逐步指南：在容錯移轉叢集中設定仲裁](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
+-   [Failover Cluster Step-by-Step Guide:Configuring the Quorum in a Failover Cluster](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx) (容錯移轉叢集逐步指南：在容錯移轉叢集中設定仲裁)  
   
 ## <a name="see-also"></a>另請參閱  
  [透過強制仲裁執行 WSFC 災害復原 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   

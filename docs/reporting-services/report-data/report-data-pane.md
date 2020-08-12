@@ -1,5 +1,6 @@
 ---
 title: 報表資料窗格
+description: 了解如何使用 [報表資料] 窗格，以檢視報表中目前定義的參數、資料來源、資料集、欄位集合和影像。
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
@@ -9,16 +10,16 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 24c11796a758d4cbf3b1da35af16565e0e607535
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c7afab0edc7afd86b16103e5364d17a93579d096
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190747"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812613"
 ---
 # <a name="report-data-pane-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的報表資料窗格
 
-  [報表資料]  窗格可用於檢視報表中目前定義的參數、資料來源、資料集、欄位集合和影像。 [報表資料] 窗格會以階層檢視來顯示表示報表中資料的項目。 最上層節點代表內建欄位、參數、影像和資料來源參考。 請展開每個節點以檢視資料項目。 例如，當您展開資料來源節點時，為該資料來源所定義的資料集就會顯示。 在展開資料集時，其欄位集合就會顯示。 將項目拖曳到報表設計介面，以將資料連結到報表頁面的報表項目。  
+  [報表資料] 窗格可用於檢視報表中目前定義的參數、資料來源、資料集、欄位集合和影像。 [報表資料] 窗格會以階層檢視來顯示表示報表中資料的項目。 最上層節點代表內建欄位、參數、影像和資料來源參考。 請展開每個節點以檢視資料項目。 例如，當您展開資料來源節點時，為該資料來源所定義的資料集就會顯示。 在展開資料集時，其欄位集合就會顯示。 將項目拖曳到報表設計介面，以將資料連結到報表頁面的報表項目。  
   
 ## <a name="options"></a>選項。
 

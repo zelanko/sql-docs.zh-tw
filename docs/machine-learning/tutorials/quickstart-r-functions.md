@@ -4,22 +4,22 @@ titleSuffix: SQL machine learning
 description: 在此快速入門中，您將會了解如何搭配 SQL 機器學習使用 R 數學與公用程式函式。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/23/2020
+ms.date: 05/21/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c769862ab2ab1b06169ae5191217945cf8220c9b
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: a056d73ae28d822c12752ac60f31df5022acf28b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606653"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772371"
 ---
 # <a name="quickstart-r-functions-with-sql-machine-learning"></a>快速入門：R 函式搭配 SQL 機器學習
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 在此快速入門中，您將會了解如何搭配 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)或[巨量資料叢集](../../big-data-cluster/machine-learning-services.md)使用 R 數學與公用程式函式。 以 T-SQL 實作統計函數通常會很複雜，但若使用 R，只需要幾行程式碼就可以完成。
@@ -29,6 +29,9 @@ ms.locfileid: "83606653"
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 在此快速入門中，您將會了解如何搭配 [SQL Server R Services](../r/sql-server-r-services.md) 使用 R 數學與公用程式函式。 以 T-SQL 實作統計函數通常會很複雜，但若使用 R，只需要幾行程式碼就可以完成。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+在此快速入門中，您將了解在 [Azure SQL 受控執行個體機器學習服務](/azure/azure-sql/managed-instance/machine-learning-services-overview)中使用 R 時，如何使用資料結構與資料類型。 您將了解如何在 R 與 SQL 受控執行個體之間移動資料，以及可能發生的常見問題。
 ::: moniker-end
 
 ## <a name="prerequisites"></a>Prerequisites
@@ -43,6 +46,9 @@ ms.locfileid: "83606653"
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 - SQL Server 2016 R Services。 如需如何安裝 R Services 的相關資訊，請參閱 [Windows 安裝指南](../install/sql-r-services-windows-install.md)。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Azure SQL 受控執行個體機器學習服務。 如需註冊說明，請參閱 [Azure SQL 受控執行個體機器學習服務概觀](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
 ::: moniker-end
 
 - 執行 SQL 查詢的工具，這些查詢包含 R 指令碼。 本快速入門使用 [Azure Data Studio](../../azure-data-studio/what-is.md)。
@@ -106,21 +112,19 @@ EXECUTE MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
 
 預設安裝的 **utils** 套件可提供用來調查目前 R 環境的各種公用程式函數。 如果您發現您的 R 程式碼在 SQL Server 和外部環境中的執行方式不一致，這些函數會非常有用。
 
-例如，您可以使用 R `memory.limit()` 函式來取得目前 R 環境的記憶體。 由於 `utils` 套件預設會安裝但不會載入，您必須使用 `library()` 函式先載入它。
+例如，您可能會在 R 中使用系統計時函數，例如 `system.time` 與 `proc.time`，以擷取 R 程序使用的時間，並分析效能問題。 如需範例，請參閱[建立資料特徵](../tutorials/walkthrough-create-data-features.md)教學課程，其中 R 時間函數會內嵌在解決方案中。
 
 ```sql
 EXECUTE sp_execute_external_script
       @language = N'R'
     , @script = N'
         library(utils);
-        mymemory <- memory.limit();
-        OutputDataSet <- as.data.frame(mymemory);'
-    , @input_data_1 = N' ;'
-WITH RESULT SETS (([Col1] int not null));
+        start.time <- proc.time();
+        
+        # Run R processes
+        
+        elapsed_time <- proc.time() - start.time;'
 ```
-
-> [!TIP]
-> 許多使用者喜歡使用 R 中的系統時間函數 (例如 `system.time` 和 `proc.time`) 來擷取 R 處理序所使用的時間，並分析效能問題。 如需範例，請參閱[建立資料特徵](../tutorials/walkthrough-create-data-features.md)教學課程，其中 R 時間函數會內嵌在解決方案中。
 
 ## <a name="next-steps"></a>後續步驟
 
