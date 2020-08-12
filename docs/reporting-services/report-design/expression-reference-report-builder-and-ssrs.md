@@ -1,5 +1,6 @@
 ---
 title: 運算式參考 (報表產生器) | Microsoft Docs
+description: 了解在處理或發佈之前，運算式支援報表產生器中內建函式與集合參考所需的語法。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: bb16e4ab-b13f-48f2-8cfe-1851656875ef
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1e7f44eef3fe86685bee473a5e985aad36d21c6d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9e201b6688d2c8868a666ef8d294cea7d27c9929
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080235"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681317"
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>運算式參考 (報表產生器及 SSRS)
   報表運算式支援各種內建函數與內建集合的參考。 運算式必須具有有效的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 語法，然後系統才能發行或處理報表。  

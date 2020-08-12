@@ -1,5 +1,6 @@
 ---
 title: 資料集 Fields 集合參考 (報表產生器) | Microsoft Docs
+description: 在報表產生器的 [報表資料] 窗格中，為個別或摘要顯示的值建立資料集。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 83b041ebde43c0208c3606fff6b0dcc33d7680c3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3b2466036918d6c66db980a7a66259cef63fe20d
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081905"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83688861"
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>內建集合 - 資料集 Fields 集合參考 (報表產生器)
   報表中的每一個資料集都包含一個 Fields 集合。 Fields 集合是資料集查詢所指定的欄位加上您建立之任何其他導出欄位的集合。 當您建立資料集之後，欄位集合會出現在 **[報表資料]** 窗格中。  
@@ -30,7 +31,7 @@ ms.locfileid: "77081905"
   
  若要將欄位集合的摘要值直接顯示在設計介面上的文字方塊中 (不屬於資料區的一部分)，您必須將資料集名稱指定為彙總函式的範圍。 例如，如果是名為 `SalesData`的資料集，下列運算式會針對 `Sales`: `=Sum(Fields!Sales,"SalesData")`欄位指定所有值的總計。  
   
- 當您使用 [運算式]  對話方塊來定義簡單欄位參考時，可以在 [類別目錄] 窗格中選取 Fields 集合，並在 [欄位]  窗格中查看可用欄位的清單。 每個欄位都有數個屬性，包括 Value 和 IsMissing。 其餘的屬性會預先定義在擴充欄位屬性上，這些屬性可能可以提供給資料集使用 (視資料來源類型而定)。  
+ 當您使用 [運算式]**** 對話方塊來定義簡單欄位參考時，可以在 [類別目錄] 窗格中選取 Fields 集合，並在 [欄位]**** 窗格中查看可用欄位的清單。 每個欄位都有數個屬性，包括 Value 和 IsMissing。 其餘的屬性會預先定義在擴充欄位屬性上，這些屬性可能可以提供給資料集使用 (視資料來源類型而定)。  
   
 ### <a name="detecting-nulls-for-a-dataset-field"></a>偵測資料集欄位的 Null  
  若要偵測 Null 的欄位值 (在**中為** Nothing [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])，您可以使用 **IsNothing**函數。 當下列運算式放置於資料表詳細資料列的文字方塊內時，運算式會測試 `MiddleName` 欄位，並在該值為 Null 時以 "No Middle Name" 文字替代，而當該值不是 Null 時則為欄位值本身：  

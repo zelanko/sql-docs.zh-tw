@@ -1,5 +1,6 @@
 ---
 title: 使用規則與分析資料更改多邊形、線條與點顯示 | Microsoft Docs
+description: 設定選項和規則來控制多邊形、線條和點的顯示，或透過覆寫報表產生器中內嵌對應元素的選項來進行控制。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -18,12 +19,12 @@ f1_keywords:
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4c323a03752ea7b9e0c7450dc53446191f3c3315
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b251d3483d999ee2e4923502608bb9254e44776a
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578450"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012216"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>使用規則與分析資料更改多邊形、線條與點顯示
   地圖圖層上多邊形、線條與點的顯示選項是透過設定圖層的選項、設定圖層上地圖元素的規則，或是覆寫圖層上特定內嵌地圖元素的選項來控制。  
@@ -106,7 +107,7 @@ ms.locfileid: "65578450"
   
 -   **最佳：** 建立會自動調整分佈的範圍來建立對稱的子範圍。 子範圍的數目取決於演算法。  
   
--   **自訂：** 指定您自己的範圍數目來控制值的分佈。 對於這些範例資料，您可以指定範圍 3 的範圍：1-2、3-8、9。  
+-   **自訂：** 指定您自己的範圍數目來控制值的分佈。 針對範例資料，您可指定範圍 3 的範圍：1-2、3-8、9。  
   
  規則會使用分佈值來更改地圖元素顯示值。  
   

@@ -1,6 +1,6 @@
 ---
 title: 使用 SSMS 的祕訣和訣竅
-description: 了解如何使用 SQL Server Management Studio 對程式碼進行註解和取消註解、對文字進行縮排、在物件總管中篩選物件、存取 SQL Server 錯誤記錄檔，以及尋找 SQL Server 執行個體名稱。
+description: 了解如何對程式註解與取消註解碼、縮排文字、篩選物件、存取錯誤記錄，以及使用 SQL Server Management Studio 來尋找 SQL Server 執行個體名稱。
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 7a07e4cd77d02e4c62c34e55eedbd3dbf01c8322
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2147baf038b99140bf21ab72695f779c0fe69faf
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245514"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462342"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 的提示和訣竅
 

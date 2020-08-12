@@ -1,5 +1,6 @@
 ---
 title: 設定同步處理範圍 (報表產生器) | Microsoft Docs
+description: 在編頁報表中，使用指標設定同步處理範圍，在報表產生器的跨指標值範圍中進行同步處理，以傳達資料值。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6f4a11e6-6151-47be-a43f-e3dbf6c0e737
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b5c844bf2ad09ee29dbcda1773e20d93eeb069d1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1ff29909da8662d39cadb064bab66eb14df9d013
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081014"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012591"
 ---
 # <a name="set-synchronization-scope-report-builder-and-ssrs"></a>設定同步處理範圍 (報表產生器及 SSRS)
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，指標會在指定的範圍內，跨指標值的範圍進行同步處理，藉以傳達資料值。   
@@ -26,15 +27,15 @@ ms.locfileid: "77081014"
   
 ## <a name="to-change-the-synchronization-scope-of-an-indicator"></a>若要變更指標的同步處理範圍  
   
-1.  以滑鼠右鍵按一下您要變更的指標，然後按一下 [指標屬性]  。  
+1.  以滑鼠右鍵按一下您要變更的指標，然後按一下 [指標屬性]。  
   
 2.  按一下左窗格中的 **[值和狀態]** 。  
   
 3.  在 **[同步處理範圍]** 清單中，按一下您要套用的範圍。  
   
-     [(無)]  選項 (會從指標移除同步處理範圍) 永遠可以使用。 其他選項則取決於您報表的版面配置。  
+     [(無)] 選項 (會從指標移除同步處理範圍) 永遠可以使用。 其他選項則取決於您報表的版面配置。  
   
-     或者，按一下 [運算式]  \(*fx*) 按鈕來編輯設定範圍的運算式。  
+     或者，按一下 [運算式]\(*fx*) 按鈕來編輯設定範圍的運算式。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

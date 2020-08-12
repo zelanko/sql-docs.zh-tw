@@ -1,5 +1,6 @@
 ---
 title: 快取共用資料集 | Microsoft Docs
+description: 了解如何針對報表管理員中快取共用資料集的到期日進行排程。 快取共用資料集可改善效能。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c2d8c81a-da1e-4a8a-9845-fff9a0903d24
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7e98e5ffd8970806e2ed92e53c8e82da21387938
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 13b2f1d7af594346a6c9f0ce46a0c412541fcc65
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574762"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547910"
 ---
 # <a name="cache-a-shared-dataset"></a>快取共用資料集
   改善效能的其中一種方式就是設定共用資料集的快取屬性。 快取共用資料集時，系統會在一段指定的時間內儲存查詢結果的副本。 要求使用共用資料集之報表的第一位使用者必須等候查詢結果以及所有處理都完成，然後才能檢視該報表。 在快取期間內要求該報表的後續使用者將會立即體驗到增進的效能，因為查詢和處理都已經進行了。 您也可以指定執行查詢的快取重新整理計劃，並在指定的快取逾期前快取結果。  
@@ -39,7 +40,7 @@ ms.locfileid: "65574762"
   
 6.  選取快取於 30 分鐘後過期的選項。 您也可以選擇讓快取在指定的排程時間過期。  
   
-7.  按一下 [套用]  。  
+7.  按一下 [套用]。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理共用資料集](../../reporting-services/report-data/manage-shared-datasets.md)  

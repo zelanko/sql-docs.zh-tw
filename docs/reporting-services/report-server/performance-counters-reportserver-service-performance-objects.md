@@ -1,5 +1,6 @@
 ---
 title: 效能計數器 - ReportServer Service 效能物件 | Microsoft Docs
+description: 了解 ReportServer:Service 與 ReportServerSharePoint:Service 效能物件的效能計數器，其為 SQL Server 2012 部署的一部分。
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f86af60001deb0991983fe17c3cf1cf9ba3f2552
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b7afe684cb88327fd7b8bb22ae2637ad4064cb25
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68893444"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545520"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>效能計數器 - ReportServer Service 效能物件
   本主題說明 **ReportServer:Service** 和 **ReportServerSharePoint:Service** 效能物件的效能計數器，這些效能物件是 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 部署的一部分。  
@@ -34,12 +35,12 @@ ms.locfileid: "68893444"
   
 -   [使用 PowerShell 指令程式傳回清單](#bkmk_powershell)  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
+ [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
 ##  <a name="reportserverservice-performance-counters-native-mode-report-server"></a><a name="bkmk_ReportServer"></a> ReportServer:Service 效能計數器 (原生模式報表伺服器)  
  **ReportServer:Service** 效能物件包含一組計數器集合，用來追蹤報表伺服器執行個體的 HTTP 相關事件和記憶體相關事件。 這個效能物件會針對電腦上的每個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體顯示一次，而且您可以在每個執行個體的效能物件中加入或移除計數器。 預設執行個體的計數器會以 **ReportServer:Service**格式顯示。 具名執行個體的計數器會以 **ReportServer$\<***instance_name***>:Service** 格式顯示。  
   
- **ReportServer:Service** 效能物件是 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的新增物件，且它會提供舊版 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 中 Internet Information Services (IIS) 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 隨附的計數器子集。 這些新的計數器是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]特有的，而且它們會追蹤報表伺服器的 HTTP 相關事件，例如要求、連接和登入嘗試。 此外，這個效能物件包含可追蹤記憶體管理事件的計數器。  
+ **ReportServer:Service** 效能物件是 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的新增物件，且它會提供舊版 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中 Internet Information Services (IIS) 和 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 隨附的計數器子集。 這些新的計數器是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]特有的，而且它們會追蹤報表伺服器的 HTTP 相關事件，例如要求、連接和登入嘗試。 此外，這個效能物件包含可追蹤記憶體管理事件的計數器。  
   
  下表將列出 **ReportServer:Service** 效能物件所包含的計數器。  
   
@@ -49,7 +50,7 @@ ms.locfileid: "68893444"
 (get-counter -listset "ReportServer:Service").paths  
 ```  
   
-|計數器|描述|  
+|計數器|說明|  
 |-------------|-----------------|  
 |**Active connections**|目前在伺服器上作用中的連接數目。|  
 |**Bytes Received Total**|伺服器所接收的位元組數目。 這個計數器會計算報表管理員和報表伺服器所接收的原始位元組總計。|  
@@ -74,7 +75,7 @@ ms.locfileid: "68893444"
 |**Tasks Queued**|等候執行緒成為可用於處理的工作數目。 對報表伺服器提出的每一要求會對應到一個或多個工作。 這個計數器只表示準備進行處理的工作數目，並不包括目前執行中的工作數目。|  
   
 ##  <a name="reportserversharepointservice-sharepoint-mode-report-server"></a><a name="bkmk_ReportServerSharePoint"></a> ReportServerSharePoint:Service (SharePoint 模式報表伺服器)  
-   中已新增 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ReportServerSharePoint:Service[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 效能物件。  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中已新增 **ReportServerSharePoint:Service** 效能物件。  
   
  ![PowerShell 相關內容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容") 下列 Windows PowerShell 指令碼將會傳回 CounterSetName 的效能計數器清單  
   
@@ -82,7 +83,7 @@ ms.locfileid: "68893444"
 (get-counter -listset "ReportServerSharePoint:Service").paths  
 ```  
   
-|計數器|描述|  
+|計數器|說明|  
 |-------------|-----------------|  
 |**Memory Pressure State**||  
 |**Memory Shrink Amount**||  
@@ -98,6 +99,6 @@ ms.locfileid: "68893444"
 ## <a name="see-also"></a>另請參閱  
  [監視報表伺服器效能](../../reporting-services/report-server/monitoring-report-server-performance.md)   
  [MSRS 2011 Web Service 和 MSRS 2011 Windows 服務效能物件的效能計數器 &#40;原生模式&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
- [MSRS 2011 Web 服務 SharePoint 模式和 MSRS 2011 Windows 服務 SharePoint 模式效能物件的效能計數器 &#40;SharePoint 模式&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
+ [MSRS 2011 Web Service SharePoint 模式和 MSRS 2011 Windows 服務 SharePoint 模式效能物件的效能計數器 &#40;SharePoint 模式&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
   
   

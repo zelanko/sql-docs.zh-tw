@@ -1,5 +1,6 @@
 ---
 title: 在報表上新增鑽研動作 (報表產生器) | Microsoft Docs
+description: 在文字方塊、影像或圖表上的資料點中新增鑽研動作連結，以改善查詢效能。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 153729c4-d01e-4629-b78f-0cfd5a7f83da
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8f2737d0d67851fdcce06a926d8ceb71849aea2c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8540ade9e1c13dac159c20ffade0d5b0c1652071
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080739"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689516"
 ---
 # <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>在報表上加入鑽研動作 (報表產生器及 SSRS)
   當您按一下主報表中的連結所開啟的報表稱為 *「鑽研報表」* (Drillthrough Report)。 此鑽研連結會啟用一個鑽研動作。  
@@ -27,7 +28,7 @@ ms.locfileid: "77080739"
   
 ### <a name="to-add-a-drillthrough-action"></a>若要加入鑽研動作  
   
-1.  在 [設計] 檢視中，以滑鼠右鍵按一下要新增連結的文字方塊、影像或圖表，然後按一下 [屬性]  。  
+1.  在 [設計] 檢視中，以滑鼠右鍵按一下要新增連結的文字方塊、影像或圖表，然後按一下 [屬性]。  
   
 2.  在項目的 **[屬性]** 對話方塊中，按一下 **[動作]** 。  
   
@@ -41,7 +42,7 @@ ms.locfileid: "77080739"
   
 5.  在 **[使用這些參數執行報表]** 中，按一下 **[加入]** 。 新的資料列就會加入至參數方格。  
   
-    -   在 [名稱]  文字方塊中，按一下下拉式清單或鍵入鑽研報表內的報表參數名稱。  
+    -   在 [名稱] 文字方塊中，按一下下拉式清單或鍵入鑽研報表內的報表參數名稱。  
   
         > [!NOTE]  
         >  參數清單中的名稱必須與目標報表中預期的參數完全相符。 例如，參數名稱的大小寫必須相符。 如果名稱不相符，或是未列出預期的參數，鑽研報表就會失敗。  
@@ -53,7 +54,7 @@ ms.locfileid: "77080739"
   
      如需如何隱藏報表中參數的資訊，請參閱[新增、變更或刪除報表參數 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)。  
   
-6.  (選擇性) 如果是文字方塊，在 [功能區] 的 [主資料夾]  索引標籤上變更文字的色彩和效果，向使用者指示該文字為連結，將會很有協助。  
+6.  (選擇性) 如果是文字方塊，在 [功能區] 的 [主資料夾]**** 索引標籤上變更文字的色彩和效果，向使用者指示該文字為連結，將會很有協助。  
   
 7.  若要測試連結，請執行報表，然後按一下這個連結設定所在的報表項目。  
   

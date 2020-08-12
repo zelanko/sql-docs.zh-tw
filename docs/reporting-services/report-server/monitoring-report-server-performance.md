@@ -1,5 +1,6 @@
 ---
 title: 監視報表伺服器效能 | Microsoft Docs
+description: 了解如何監視報表伺服器效能，以評估伺服器活動、監看趨勢、診斷瓶頸，以及收集系統組態的相關資料。
 ms.date: 06/20/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d277089fded73524e55d05bbc21078d5df426e3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 67d9f59f1561ce844c3e6a1b6f3e20770e12db6b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67412659"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547940"
 ---
 # <a name="monitoring-report-server-performance"></a>監視報表伺服器效能
   使用效能監視工具來監視報表伺服器的效能，以評估伺服器活動、觀察趨勢、診斷系統瓶頸，以及收集可協助您判斷目前系統組態是否適當的資料。 若要微調伺服器效能，您可以指定回收報表伺服器應用程式定義域的頻率。 如需詳細資訊，請參閱 [設定報表伺服器應用程式的可用記憶體](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)。  
@@ -73,7 +74,7 @@ SQL Server 2016 Reporting Services 或更新版本 (SSRS) 包含下列效能物�
 |效能物件|注意|  
 |------------------------|-----------|  
 |**.NET CLR 資料** 和 **.NET CLR 記憶體**|入口網站會使用 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 效能計數器。 如需詳細資訊，請參閱 MSDN 上的「Improving .NET Application Performance and Scalability」。|  
-|**處理**|針對 ReportingServicesService 執行個體加入 [已耗用時間]  和 [處理序識別碼]  效能計數器，以便依據處理序識別碼追蹤處理序執行時間。|  
+|**處理**|針對 ReportingServicesService 執行個體加入 [已耗用時間] 和 [處理序識別碼] 效能計數器，以便依據處理序識別碼追蹤處理序執行時間。|  
   
 ## <a name="sharepoint-events"></a>SharePoint 事件  
  除了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 效能物件以外，如果您是以 SharePoint 整合模式執行報表伺服器，而且已經將報表環境設定成使用 SharePoint 產品，則可能也要設定 SharePoint 事件。 在本節中，如果您的報表環境已經與 SharePoint 整合，請使用「SharePoint 整合模式中報表伺服器的事件」來檢閱可能會提供有用資訊的診斷事件。  
@@ -82,7 +83,7 @@ SQL Server 2016 Reporting Services 或更新版本 (SSRS) 包含下列效能物�
  [MSRS 2011 Web 服務和 MSRS 2011 Windows 服務效能物件的效能計數器 &#40;原生模式&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  
  描述報表伺服器 Web 服務所使用的效能計數器。  
   
- [MSRS 2011 Web 服務 SharePoint 模式和 MSRS 2011 Windows 服務 SharePoint 模式效能物件的效能計數器 &#40;SharePoint 模式&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
+ [MSRS 2011 Web Service SharePoint 模式和 MSRS 2011 Windows 服務 SharePoint 模式效能物件的效能計數器 &#40;SharePoint 模式&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
  描述報表伺服器 Windows 服務所使用的效能計數器。  
   
  [ReportServer:Service 和 ReportServerSharePoint:Service 效能物件的效能計數器](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  

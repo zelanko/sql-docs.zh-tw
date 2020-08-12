@@ -1,5 +1,6 @@
 ---
 title: 管理報表組件 | Microsoft Docs
+description: 為多個使用者和報表管理報表組件，並提供發佈、權限和安全性的各種彈性選項。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 241d74d615f9aac2cbe48d084fd2d8e91ea9abbf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 233aa6a48937d26b9e9f9c486f4cda7238245a47
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580111"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689681"
 ---
 # <a name="managing-report-parts"></a>管理報表組件
   報表組件可以由多個使用者在分頁報表中重複使用，也可以在多個報表中重複使用。 使用者可以搜尋伺服器上的報表組件，並將其加入至報表中。  使用者也可以收到伺服器上報表組件更新的通知，然後重新發行新版本的報表組件。 這些報表撰寫動作可能會受報表服務安全性權限影響及控制。  本主題會檢閱報表組件位於伺服器上之後的屬性和行為。  
@@ -47,7 +48,7 @@ ms.locfileid: "65580111"
   
  (*) 表示是此版本的新功能。  
   
-|屬性|描述|報表組件<br /><br /> 組件庫搜尋準則|  
+|屬性|說明|報表組件<br /><br /> 組件庫搜尋準則|  
 |--------------|-----------------|---------------------------------------------|  
 |名稱|這是使用者可以在報表組件庫中搜尋的其中一個準則。|是|  
 |描述|您可能會想要使用某種方式來組織報表組件名稱，讓使用者更容易在組件庫中找到組件。 例如，您可以搜尋以「銷售>>」開頭的描述，以尋找與銷售相關資料和簡報有關的所有報表組件。|是|  

@@ -1,6 +1,6 @@
 ---
 title: 控制資料列和資料行標題 (報表產生器及 SSRS) | Microsoft Docs
-description: 分頁報表中的資料表、矩陣或清單資料區可以垂直或水平跨越多個頁面。 您可以指定是否要在每一頁重複資料列標題或資料行標題。
+description: 了解如何使用分頁報表中的資料表、矩陣或清單資料區，其可在報表產生器中水平或垂直跨越多個頁面。
 ms.date: 12/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4be6e836-158e-4bc9-8870-7f394d7c7e11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ce25cfe5d8d84926cb9bc993d075372e3a81d336
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 654ec769905d17534a3896465909a14c41d60b54
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245356"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255341"
 ---
 # <a name="control-row--column-headings-report-builder--ssrs"></a>控制資料列和資料行標題 (報表產生器及 SSRS)
   分頁報表中的資料表、矩陣或清單資料區可以垂直或水平跨越多個頁面。 您可以指定是否要在每一頁重複資料列標題或資料行標題。 在 Web 入口網站或報表預覽等互動式轉譯器中，您也可以指定是否要凍結資料列或資料行標題，以便在橫向捲動或向下捲動報表時讓它們保持可見狀態。 在資料表或矩陣中，第一個資料列通常包含標示每個資料行中之資料的資料行標題；第一個資料行通常包含標示每個資料列中之資料的資料列標題。 對於巢狀群組，您可能會想要重複包含群組標籤的初始資料列和資料行標題集合。 根據預設，清單資料區域並不包含標題。  
@@ -61,11 +61,11 @@ ms.locfileid: "75245356"
 ###  <a name="matrix"></a><a name="Matrix"></a> 矩陣  
  根據預設，一個簡單的矩陣有一個資料列群組和一個資料行群組。 下圖顯示包含以 Category 為基礎之資料列群組，以及以 Geography 為基礎之資料行群組的矩陣：  
   
- ![矩陣，目錄資料列和地理位置資料行群組](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "矩陣，目錄資料列和地理位置資料行群組")  
+ ![含目錄資料列和地理位置資料行群組的矩陣](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "含目錄資料列和地理位置資料行群組的矩陣")  
   
  虛線表示四個 Tablix 區域。 資料列群組區域所擁有的資料列群組標頭可控制第一個資料行中的類別標籤。 同樣地，資料行群組區域所擁有的資料行群組標頭可控制第一個資料列中的地理位置標籤。 在預覽中，由於矩陣會橫跨頁面展開，第一個資料列會顯示資料行標題，如下圖所示：  
   
- ![具有展開群組的轉譯矩陣預覽](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "具有展開群組的轉譯矩陣預覽")  
+ ![將群組展開的轉譯矩陣預覽](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "將群組展開的轉譯矩陣預覽")  
   
  若要在第一個資料列中重複或凍結資料行標題，請在 Tablix 資料區上設定資料行標頭的屬性。 巢狀資料行群組的資料行標頭會自動加入。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "75245356"
   
  ![資料列群組；靜態成員的進階模式](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "資料列群組；靜態成員的進階模式")  
   
- 列出的 Tablix 成員： **Static**、(**Static**)、Category 和 (**Details**)。 包含括號 () 的 Tablix 成員表示沒有對應的群組標頭。 若要重複或凍結資料行標題，請選取最上方的 Static Tablix 成員，然後在 [屬性] 窗格中設定屬性。  
+ 列出的 Tablix 成員：**Static**、(**Static**)、Category 和 (**Details**)。 包含括號 () 的 Tablix 成員表示沒有對應的群組標頭。 若要重複或凍結資料行標題，請選取最上方的 Static Tablix 成員，然後在 [屬性] 窗格中設定屬性。  
   
  [回頁首](#Top)  
   
@@ -138,7 +138,7 @@ ms.locfileid: "75245356"
   
  ![資料列群組；進階；無群組標頭。](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "資料列群組；進階；無群組標頭。")  
   
- 在 [資料列群組] 窗格中，會列出下列 Tablix 成員： (**Static**)、(Category)、(**Static**) 和 (**Details**)。 若要重複或凍結資料行標題，請選取最上方的 (**Static**) Tablix 成員，然後在 [屬性] 窗格中設定屬性。  
+ 在 [資料列群組] 窗格中，會列出下列 Tablix 成員：(**Static**)、(Category)、(**Static**) 和 (**Details**)。 若要重複或凍結資料行標題，請選取最上方的 (**Static**) Tablix 成員，然後在 [屬性] 窗格中設定屬性。  
   
  [回頁首](#Top)  
   

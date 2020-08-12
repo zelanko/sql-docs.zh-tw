@@ -1,5 +1,6 @@
 ---
 title: 使用調色盤定義圖表的色彩 (報表產生器) | Microsoft Docs
+description: 透過選取預先定義的調色盤，或定義自訂調色盤來變更圖表的調色盤。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d95efc22-5a32-43d4-9bd2-12753e7fd395
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0c20b5893adba8968373656b0358b89deb2dc0e9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 09d5239056225e010431947e99dd508b1c6f01ac
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080515"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689270"
 ---
 # <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>使用調色盤定義圖表的色彩 (報表產生器及 SSRS)
   您可以選取預先定義的調色盤，或定義自訂調色盤來變更圖表的色彩調色盤。 自訂調色盤專供圖表使用。  
@@ -29,7 +30,7 @@ ms.locfileid: "77080515"
   
      物件名稱 (預設為**Chart1** ) 就會出現在 [屬性] 窗格頂端的下拉式清單中。  
   
-3.  在 [圖表]  區段中，從下拉式清單為 Palette 屬性選取新的調色盤。  
+3.  在 [圖表] 區段中，從下拉式清單為 Palette 屬性選取新的調色盤。  
   
     > [!NOTE]  
     >  您無法在預先定義的調色盤中變更色彩或順序。  

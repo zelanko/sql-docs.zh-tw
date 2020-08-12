@@ -1,5 +1,6 @@
 ---
 title: 為報表參數新增、變更或刪除可用的值 | Microsoft Docs
+description: 透過指定要向使用者顯示的可用值清單，自訂報表產生器中可供使用者選擇的參數清單。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 0e03264c-523f-4c59-b71b-ceef600f75f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0d6f5a74365565e5da3be99408f53bc086b0b689
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b9d826682f2bcb742ab4ba7ae9e2b6fba33600c0
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65582051"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681327"
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter"></a>為報表參數加入、變更或刪除可用的值
   當您建立報表參數之後，可以指定要對使用者顯示的可用值清單。 可用值清單會將使用者可以做的選擇限制為參數的有效值。  
@@ -33,14 +34,14 @@ ms.locfileid: "65582051"
   
 ### <a name="to-add-or-change-the-available-values-for-a-report-parameter"></a>為報表參數加入或變更可用的值  
   
-1.  在 [報表資料] 窗格中，展開 [參數] 節點。 以滑鼠右鍵按一下參數，然後按一下 [參數屬性]  。 **[報表參數屬性]** 對話方塊隨即開啟。  
+1.  在 [報表資料] 窗格中，展開 [參數] 節點。 以滑鼠右鍵按一下參數，然後按一下 [參數屬性]。 **[報表參數屬性]** 對話方塊隨即開啟。  
   
     > [!NOTE]  
-    >  如果看不到 [報表資料] 窗格，請按一下 [檢視]  ，然後按一下 [報表資料]  。  
+    >  如果看不到 [報表資料] 窗格，請按一下 [檢視]，然後按一下 [報表資料]。  
   
 2.  按一下 **[可用的值]** 。 選取可用的值選項：  
   
-    -   按一下 [指定值]  ，以手動方式提供值的清單，並可選擇提供值的易記名稱 (標籤)。  
+    -   按一下 [指定值]，以手動方式提供值的清單，並可選擇提供值的易記名稱 (標籤)。  
   
          按一下 **[加入]** ，然後在 **[值]** 文字方塊中輸入值，並選擇在 **[標籤]** 文字方塊內輸入標籤。 若未提供標籤，就會使用這個值。 您可以撰寫值的運算式。 資料類型必須符合參數的資料類型。 欄位名稱不能用於參數的運算式。 如需範例，請參閱[常用的篩選 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)。  
   
@@ -63,7 +64,7 @@ ms.locfileid: "65582051"
   
 ### <a name="to-remove-the-available-values-for-a-report-parameter"></a>移除報表參數的可用值  
   
-1.  在 [報表資料] 窗格中，展開 [參數] 節點。 以滑鼠右鍵按一下參數，然後按一下 [參數屬性]  。 **[報表參數]** 對話方塊隨即開啟。  
+1.  在 [報表資料] 窗格中，展開 [參數] 節點。 以滑鼠右鍵按一下參數，然後按一下 [參數屬性]。 **[報表參數]** 對話方塊隨即開啟。  
   
 2.  按一下 **[可用的值]** 。  
   

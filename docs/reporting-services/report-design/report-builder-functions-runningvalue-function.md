@@ -1,5 +1,6 @@
 ---
 title: RunningValue 函式 (報表產生器) | Microsoft Docs
+description: 熟悉 RunningValue 函式，其可傳回報表產生器中運算式所指定所有非 Null 數值的執行彙總。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f90054a62168032ca29d99819061537e6a0b179a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 053efc8ddd1f9f00c528c626aa204d612cb82369
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081165"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681277"
 ---
 # <a name="report-builder-functions---runningvalue-function"></a>報表產生器函式 - RunningValue 函式
   傳回運算式指定的所有非 Null 數值的執行彙總 (在給定範圍中評估)。  

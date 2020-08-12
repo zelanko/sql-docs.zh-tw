@@ -1,6 +1,6 @@
 ---
 title: 在多個頁面上顯示資料列和資料行標頭 (報表產生器) | Microsoft Docs
-description: 您可以控制是否要針對跨多個頁面的 Tablix 資料區 (資料表、矩陣或清單)，在 Reporting Services 分頁報表的每個頁面上重複資料列和資料行標頭。
+description: 了解如何針對報表產生器中跨多個頁面的 Tablix 資料區，控制分頁報表每個頁面上的重複資料列和資料行標頭。
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.date: 12/09/2019
-ms.openlocfilehash: ca1b00d98c71808cd42acb220e7fbf5d1c382555
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a0ece423e7396e2c3aab07cc1882cf1e7f5b09ad
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254586"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84778640"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>在多個頁面上顯示資料列和資料行標頭 (報表產生器及 SSRS)
 

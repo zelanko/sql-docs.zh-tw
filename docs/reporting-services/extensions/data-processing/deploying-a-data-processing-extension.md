@@ -1,5 +1,6 @@
 ---
 title: 部署資料處理延伸模組 | Microsoft Docs
+description: 了解如何讓 Reporting Services 資料處理延伸模組可由報表伺服器和報表設計師進行搜尋。
 ms.date: 03/18/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e5c0b5a9-1386-47cb-aade-96653ecfaa54
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3e8c86c1ba590ab574e7afe351b3e29c2c918b7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 073ff624016cc671883fea551ad4ebd392b54ea6
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63194067"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529644"
 ---
 # <a name="deploying-a-data-processing-extension"></a>部署資料處理延伸模組
   一旦您撰寫 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料處理延伸模組並將其編譯成 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 程式庫之後，需要使該程式庫可供報表伺服器和報表設計師探索。 完成此項動作很簡單，只要將伸模組複製到適當的目錄，並將項目加入適當的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 組態檔即可。  
@@ -39,8 +40,8 @@ ms.locfileid: "63194067"
   
 |主題|描述|  
 |-----------|-----------------|  
-|[如何：將資料處理延伸模組部署到報表伺服器](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-a-report-server.md)|描述如何將資料處理延伸模組部署到報表伺服器。|  
-|[如何：將資料處理延伸模組部署到報表設計師](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-report-designer.md)|描述如何將資料處理延伸模組部署到報表設計師。|  
+|[操作說明：將資料處理延伸模組部署到報表伺服器](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-a-report-server.md)|描述如何將資料處理延伸模組部署到報表伺服器。|  
+|[操作說明：將資料處理延伸模組部署到報表設計師](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-report-designer.md)|描述如何將資料處理延伸模組部署到報表設計師。|  
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 延伸模組](../../../reporting-services/extensions/reporting-services-extensions.md)   

@@ -1,5 +1,6 @@
 ---
 title: 常用的篩選 (報表產生器) | Microsoft Docs
+description: 請考慮這些篩選的範例，以及您在報表產生器中，指定用來建立篩選的篩選方程式。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cb70d0cd-707b-4de5-b39f-e4eb57d316aa
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d0a096fd9dcb292f1a71b74aaf853abcbd7c02ae
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d091d4b8d49bd1f7a6d0cac04a874bccfba6c2fc
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082315"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779120"
 ---
 # <a name="commonly-used-filters-report-builder-and-ssrs"></a>常用的篩選 (報表產生器及 SSRS)
   若要建立篩選，您必須指定一個或多個篩選方程式。 篩選方程式包含運算式、資料類型、運算子和值。 本主題提供常用的篩選範例。  
@@ -29,7 +30,7 @@ ms.locfileid: "77082315"
 ## <a name="filter-examples"></a>篩選範例  
  下表說明使用不同資料類型和不同運算子的篩選方程式範例。 比較的範圍是由定義篩選的報表項目所決定。 例如，如果是資料集上所定義的篩選， **TOP % 10** 就是資料集中前百分之 10 的值；如果是群組上所定義的篩選， **TOP % 10** 就是群組中前百分之 10 的值。  
   
-|簡單運算式|資料類型|運算子|值|描述|  
+|簡單運算式|資料類型|運算子|值|說明|  
 |-----------------------|---------------|--------------|-----------|-----------------|  
 |`[SUM(Quantity)]`|**整數**|**>**|`7`|包含大於 7 的資料值。|  
 |`[SUM(Quantity)]`|**整數**|**TOP N**|`10`|包含前 10 大資料值。|  

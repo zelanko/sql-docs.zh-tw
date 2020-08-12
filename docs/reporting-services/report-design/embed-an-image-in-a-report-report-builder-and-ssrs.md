@@ -1,5 +1,6 @@
 ---
 title: 在報表中內嵌影像 (報表產生器) | Microsoft Docs
+description: 將映像準備好提供給報表。 使用內嵌在報表中的映像，並列在報表產生器的 [報表資料] 窗格中。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: aed77345-5eeb-41f0-96c9-db6b4a11ec6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: acdbae6c6654494abe5cb498211cfb77cf0ad891
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4a4fe4e15d2d35f55aa6af846492ac81b08394f7
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080439"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255623"
 ---
 # <a name="embed-an-image-in-a-report-report-builder-and-ssrs"></a>在報表中內嵌影像 (報表產生器及 SSRS)
   報表可以包含內嵌影像。 內嵌影像可確保影像隨時可供報表使用，但是可能會影響報表定義 (定義報表的檔案) 的大小。 內嵌在報表中的影像會列在 [報表資料] 窗格中。  
@@ -34,7 +35,7 @@ ms.locfileid: "77080439"
   
 3.  在 **[影像屬性]** 對話方塊的 **[一般]** 頁面上，於 **[名稱]** 文字方塊內輸入名稱，或是接受預設值。  
   
-4.  (選擇性) 在 [工具提示]  文字方塊中，鍵入您希望使用者將滑鼠停留在轉譯報表內的影像上方時，所要出現的文字。  
+4.  (選擇性) 在 [工具提示]**** 文字方塊中，鍵入您希望使用者將滑鼠停留在轉譯報表內的影像上方時，所要出現的文字。  
   
 5.  在 **[選取影像來源]** 中，選取 **[內嵌]** 。  
   
@@ -56,9 +57,9 @@ ms.locfileid: "77080439"
 2.  在設計介面上選取影像。 **[屬性]** 窗格會顯示影像屬性。  
   
     > [!NOTE]  
-    >  如果看不到 [屬性] 窗格，請按一下 [檢視]  索引標籤上的 [屬性]  。  
+    >  如果看不到 [屬性] 窗格，請按一下 [檢視] 索引標籤上的 [屬性]。  
   
-3.  在 [MIMEType]  屬性旁邊的文字方塊內按一下，然後從下拉式清單中選取新的 MIME 類型。  
+3.  在 [MIMEType] 屬性旁邊的文字方塊內按一下，然後從下拉式清單中選取新的 MIME 類型。  
   
 ## <a name="see-also"></a>另請參閱  
  [影像 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   

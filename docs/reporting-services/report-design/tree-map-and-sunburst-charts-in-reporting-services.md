@@ -1,5 +1,6 @@
 ---
 title: SQL Server Reporting Services 中的樹狀圖與放射環狀圖 | Microsoft Docs
+description: 探索如何在報表產生器中使用樹狀圖或放射環狀圖，以視覺化方式呈現階層式資料。
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
-ms.openlocfilehash: fd9ac9ccd0906ee34a66b7144fdd964d05e5f050
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: af294ac47e7523f0b0dba5a57bbf2318bbe8c149
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68259358"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255431"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Reporting Services 中的樹狀圖與放射環狀圖 
 
@@ -33,7 +34,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 樹狀�
 > [!NOTE]
 > 在您新增圖表到報表前，請先建立資料來源和資料集。  如需範例資料和範例查詢，請參閱[範例 AdventureWorks 資料](#bkmk_sample_data)。  
   
-1. 以滑鼠右鍵按一下設計介面，然後選取 插入   > 圖表  。 選取**樹狀圖**圖示。
+1. 以滑鼠右鍵按一下設計介面，然後選取 插入 > 圖表。 選取**樹狀圖**圖示。
 
     ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon")  
 
@@ -45,13 +46,13 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 樹狀�
     * **類別目錄群組** (依下列順序)：
         1. CategoryName
         2. SubcategoryName
-    * **數列群組**：TerritoryName  
+    * **序列群組**：TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
 4. 若要對樹狀圖的一般形狀最佳化頁面大小，請將圖例位置設定為底部。  
   
-5. 若要新增顯示子類別和總金額的工具提示，以滑鼠右鍵按一下 [LineTotal]  然後選取 [數列屬性]  。  
+5. 若要新增顯示子類別和總金額的工具提示，以滑鼠右鍵按一下 [LineTotal] 然後選取 [數列屬性]。  
   
      ![ssrs_visualization_seriesproperties](../../reporting-services/report-design/media/ssrs-visualization-seriesproperties.png "ssrs_visualization_seriesproperties")  
   
@@ -63,7 +64,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 樹狀�
   
     如需詳細資訊，請參閱[在數列上顯示工具提示 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)。  
   
-6. 將預設圖表標題變更為「按領域分類的銷售量」  。  
+6. 將預設圖表標題變更為「按領域分類的銷售量」。  
   
 7. 顯示的標籤值數目會受字型大小、整體圖表區域大小，和特定矩形的大小影響。 若要看到更多標籤，將 **LineTotal** 的 **Label Font** 屬性從預設的 **8pt** 變更為 **10pt**。  
 
@@ -78,7 +79,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 樹狀�
 > [!NOTE]
 > 在您新增圖表到報表前，請先建立資料來源和資料集。 如需範例資料和範例查詢，請參閱[範例 AdventureWorks 資料](#bkmk_sample_data)。  
   
-1. 以滑鼠右鍵按一下設計介面，然後選取 [插入]   > [圖表]  。 選取 [放射環狀圖]  圖示。
+1. 以滑鼠右鍵按一下設計介面，然後選取 [插入] > [圖表]。 選取 [放射環狀圖] 圖示。
 
      ![ssrs_sunburst_icon](../../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon")  
   
@@ -91,13 +92,13 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 樹狀�
         1. CategoryName
         2. SubcategoryName
         3. SalesReasonName
-    * **數列群組**：TerritoryName  
+    * **序列群組**：TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
 4. 若要對放射環狀圖表的一般形狀最佳化頁面大小，請將圖例位置設定為底部。  
   
-5. 將預設圖表標題變更為「按領域分類的銷售量 (包含銷售原因)」  。  
+5. 將預設圖表標題變更為「按領域分類的銷售量 (包含銷售原因)」。  
   
 6. 若要新增類別群組的值到放射環狀圖作為標籤，請設定標籤屬性 **Visible=true** 和 **UseValueAsLabel=false**。<br /><br /> 顯示的標籤值會受字型大小、整體圖表區域大小，和特定矩形的大小影響。  若要看到更多標籤，將 **LineTotal** 的 **Label Font** 屬性從預設的 **8pt** 變更為 **10pt**。
 
@@ -115,15 +116,15 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 樹狀�
   
 1. **取得資料**。  
   
-     本節中的查詢是以 AdventureWorks 資料庫為基礎，該資料庫可從 GitHub：[AdventureWorks 2016 完整資料庫備份](https://github.com/Microsoft/sql-server-samples/releases)下載取得。  
+     本節中的查詢是以 AdventureWorks 資料庫為基礎，此資料庫可從 GitHub 下載：[AdventureWorks 2016 完整資料庫備份](https://github.com/Microsoft/sql-server-samples/releases)。  
 
 2. **建立資料來源**。  
   
-    1. 在 [報表資料]  下，以右鍵按一下 [資料來源]  然後選取 [新增資料來源]  。  
+    1. 在 [報表資料] 下，以右鍵按一下 [資料來源] 然後選取 [新增資料來源]。  
   
-    2. 選取 [使用內嵌於報表中的連接]  。  
+    2. 選取 [使用內嵌於報表中的連接] 。  
   
-    3. 針對連線類型，選取 [Microsoft SQL Server]  。  
+    3. 針對連線類型，選取 [Microsoft SQL Server]。  
   
     4. 輸入您的伺服器和資料庫的連接字串。 例如：  
   
@@ -131,19 +132,19 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 樹狀�
         Data Source=[server name];Initial Catalog=AdventureWorks2016  
         ```  
   
-    5. 若要確認連線，請選取 [測試連線]  按鈕，然後選取 [確定]  。  
+    5. 若要確認連線，請選取 [測試連線] 按鈕，然後選取 [確定]。  
   
      如需建立資料來源的詳細資訊，請參閱[新增及驗證資料連線 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
   
 3. **建立資料集**。  
   
-    1. 在 [報表資料]  下，以右鍵按一下 [資料集]  然後選取 [新增資料集]  。  
+    1. 在 [報表資料] 下，以右鍵按一下 [資料集] 然後選取 [新增資料集]。  
   
-    2. 選取 [使用內嵌在我的報表中的資料集]  。  
+    2. 選取 [使用內嵌在我的報表中的資料集] 。  
   
     3. 選取您建立的資料來源。  
   
-    4. 選取 [文字]  查詢類型，然後將下列查詢複製並貼上到 [查詢]  文字方塊；  
+    4. 選取 [文字] 查詢類型，然後將下列查詢複製並貼上到 [查詢] 文字方塊；  
   
         ```sql
         SELECT    Sales.SalesOrderHeader.SalesOrderID, Sales.SalesOrderHeader.OrderDate, Sales.SalesOrderDetail.SalesOrderDetailID, Sales.SalesOrderDetail.ProductID, Sales.SalesOrderDetail.LineTotal,   
@@ -168,7 +169,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 樹狀�
                                  Sales.SalesOrderHeaderSalesReason.SalesReasonID = Sales.SalesReason.SalesReasonID  
         ```  
   
-    5. 選取 [確定]  。  
+    5. 選取 [確定]。  
   
      如需建立資料集的詳細資訊，請參閱[建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)。  
   
@@ -180,4 +181,4 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 樹狀�
 
 * [教學課程：Power BI 中的樹狀圖](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
 
-* [樹狀圖：適用於 Office 的 Microsoft 研究資料視覺效果應用程式](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)
+* [Treemap:Microsoft Research Data Visualization Apps for Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx) (樹狀圖：適用於 Office 之 Microsoft 研究的資料視覺效果應用程式)

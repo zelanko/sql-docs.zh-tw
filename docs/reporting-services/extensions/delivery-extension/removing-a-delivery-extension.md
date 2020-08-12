@@ -1,5 +1,6 @@
 ---
 title: 移除傳遞延伸模組 | Microsoft Docs
+description: 了解如何從 Reporting Services 移除傳遞延伸模組，讓報表伺服器不會將其列為可用，並停用使用該項目的訂閱。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: dcb7caf2-d19a-4bc5-afb3-2b61ad11cac5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 49b36598d643bd88496117655f23f642e663d04c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6f4f23d58836dbadb9393be49dd34425c89a15c3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193730"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529484"
 ---
 # <a name="removing-a-delivery-extension"></a>移除傳遞延伸模組
   若要移除 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 傳遞延伸模組，請從設定檔直接移除傳遞延伸模組的 **Extension** 項目。 移除組態資訊之後，傳遞延伸模組就無法再用於報表伺服器。  

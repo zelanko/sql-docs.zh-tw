@@ -1,5 +1,6 @@
 ---
 title: 將刻度斷層新增至圖表 (報表產生器) | Microsoft Docs
+description: 了解如何在報表產生器的相同圖表區域中，使用刻度分欄以顯示兩個相異的範圍。
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 84d66436-ed62-4967-bbbd-b457593ee787
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 131381ac7e807dbb17493d56f5ee5bb1a70af8b0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5bf77e72c4b8ac84d57668ebcf960ed8b926ba6e
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081555"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462332"
 ---
 # <a name="add-scale-breaks-to-a-chart-report-builder-and-ssrs"></a>將刻度斷層加入至圖表 (報表產生器及 SSRS)
 
@@ -31,9 +32,9 @@ ms.locfileid: "77081555"
   
 ### <a name="to-enable-scale-breaks-on-the-chart"></a>若要在圖表上啟用刻度斷層  
   
-1.  以滑鼠右鍵按一下垂直軸，然後按一下 [軸屬性]  。 [垂直軸屬性]  對話方塊隨即開啟。  
+1.  以滑鼠右鍵按一下垂直軸，然後按一下 [軸屬性]。 [垂直軸屬性] 對話方塊隨即開啟。  
   
-2.  選取 [啟用刻度斷層]  核取方塊。  
+2.  選取 [啟用刻度斷層] 核取方塊。  
   
 ### <a name="to-change-the-style-of-the-scale-break"></a>變更刻度斷層的樣式  
   
@@ -41,7 +42,7 @@ ms.locfileid: "77081555"
   
 2.  以滑鼠右鍵在設計介面上按一下圖表的 Y 軸。 Y 軸物件的屬性 (依預設名為「圖表軸」) 會顯示在 [屬性] 窗格中。  
   
-3.  在 [刻度]  區段中，展開 ScaleBreakStyle 屬性。  
+3.  在 [刻度] 區段中，展開 ScaleBreakStyle 屬性。  
   
 4.  變更 ScaleBreakStyle 屬性的值，例如 BreakLineType 和 Spacing。 如需刻度中斷線屬性的詳細資訊，請參閱[將包含多個資料範圍的數列顯示在圖表上 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/displaying-a-series-with-multiple-data-ranges-on-a-chart.md)。  
 

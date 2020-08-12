@@ -1,5 +1,6 @@
 ---
 title: 插入或刪除資料列 (報表產生器) | Microsoft Docs
+description: 了解如何使用報表產生器，以在分頁報表中的 Tablix 資料區新增或刪除資料列。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b9642af3-b3ae-4f78-b0be-8f96b79fc313
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6bdec71e808d577a764d2b0cc3fa99fc9cd522fd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ff37c91140ed4da0706c0eaf35ed258267e6e189
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082025"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681287"
 ---
 # <a name="insert-or-delete-a-row-report-builder-and-ssrs"></a>插入或刪除資料列 (報表產生器及 SSRS)
 您可以在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表中的 Tablix 資料區加入或刪除資料列。 Tablix 資料區可以是資料表、矩陣或清單。 下列程序不適用於圖表和量測計資料區域。  
@@ -31,29 +32,29 @@ ms.locfileid: "77082025"
   
 ## <a name="to-insert-a-row-in-a-selected-data-region"></a>在選取的資料區中插入資料列  
   
--   以滑鼠右鍵按一下您想要插入資料列的資料列控制代碼，按一下 [插入資料列]  ，然後按一下 [上方]  或 [下方]  。  
+-   以滑鼠右鍵按一下您想要插入資料列的資料列控制代碼，按一下 [插入資料列]，然後按一下 [上方] 或 [下方]。  
   
      \- 或 -  
   
--   在您想要插入資料列的資料區中，以滑鼠右鍵按一下資料格，按一下 [插入資料列]  ，然後按一下 [上方]  或 [下方]  。  
+-   在您想要插入資料列的資料區中，以滑鼠右鍵按一下資料格，按一下 [插入資料列]，然後按一下 [上方] 或 [下方]。  
   
 ## <a name="to-delete-a-row-from-a-selected-data-region"></a>從選取的資料區中刪除資料列  
   
--   選取要刪除的一個或多個資料列，以滑鼠右鍵按一下所選資料列之任一資料列的控制代碼，然後按一下 [刪除資料列]  。  
+-   選取要刪除的一個或多個資料列，以滑鼠右鍵按一下所選資料列之任一資料列的控制代碼，然後按一下 [刪除資料列]****。  
   
      \- 或 -  
   
--   在您想要刪除資料列的資料區中，以滑鼠右鍵按一下資料格，然後按一下 [刪除資料列]  。  
+-   在您想要刪除資料列的資料區中，以滑鼠右鍵按一下資料格，然後按一下 [刪除資料列]。  
   
 ## <a name="to-insert-a-row-in-a-group-in-a-selected-data-region"></a>在選取之資料區的群組中插入資料列  
   
--   在您想要插入資料列之 Tablix 資料區的資料列群組區域中，以滑鼠右鍵按一下資料列群組資料格，按一下 [插入資料列]  ，然後按一下 [上方 - 群組外]  、[上方 - 群組內]  、[下方 - 群組內]  或 [下方 - 群組外]  。  
+-   在您想要插入資料列之 Tablix 資料區的資料列群組區域中，以滑鼠右鍵按一下資料列群組資料格，按一下 [插入資料列]****，然後按一下 [上方 - 群組外]****、[上方 - 群組內]****、[下方 - 群組內]**** 或 [下方 - 群組外]****。  
   
      如此就會在您按一下之資料列群組資料格所表示的群組內部或外部加入資料列。  
   
 ## <a name="to-delete-a-row-from-a-group-in-a-selected-data-region"></a>從選取之資料區的群組中刪除資料列  
   
--   在您想要刪除資料列之 Tablix 資料區的資料列群組區域中，以滑鼠右鍵按一下資料列群組資料格，然後按一下 [刪除資料列]  。  
+-   在您想要刪除資料列之 Tablix 資料區的資料列群組區域中，以滑鼠右鍵按一下資料列群組資料格，然後按一下 [刪除資料列]****。  
   
 ## <a name="see-also"></a>另請參閱  
  [Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   

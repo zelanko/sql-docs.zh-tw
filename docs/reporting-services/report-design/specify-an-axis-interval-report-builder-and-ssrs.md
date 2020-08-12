@@ -1,5 +1,6 @@
 ---
 title: 指定軸間隔 (報表產生器) | Microsoft Docs
+description: 了解如何藉由設定報表產生器的軸間隔，在圖表中變更類別 (x) 軸中標籤及刻度的數目。
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7467cc02ec7351edb879da18c20e0cf2af4bb099
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 2b5b3ed27226eda1c2db837df0c16079aeef3262
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487704"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881149"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>指定軸間隔 (報表產生器及 SSRS)
 了解如何藉由設定 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表的軸間隔，在圖表中變更類別 (x) 軸中標籤及刻度的數目。
@@ -37,11 +38,11 @@ ms.locfileid: "81487704"
 
 ![report-builder-column-chart-preview-x-axis-interval-auto](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-auto.png)
   
-1.  以滑鼠右鍵按一下類別軸，然後按一下 [水平軸屬性]  。   
+1.  以滑鼠右鍵按一下類別軸，然後按一下 [水平軸屬性]。   
 
     ![report-builder-column-chart-x-axis-labels](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
   
-2.  在 [水平軸屬性]  對話方塊 > [軸選項]  索引標籤上，將 [間隔]  設為 **1** 以顯示每個類別群組標籤。 若要在 X 軸上每隔一個類別目錄群組標籤進行顯示，請輸入 **2**。 
+2.  在 [水平軸屬性] 對話方塊 > [軸選項] 索引標籤上，將 [間隔] 設為 **1** 以顯示每個類別群組標籤。 若要在 X 軸上每隔一個類別目錄群組標籤進行顯示，請輸入 **2**。 
 
      ![report-builder-column-chart-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
   
@@ -78,7 +79,7 @@ ms.locfileid: "81487704"
   
 1.  以滑鼠右鍵按一下要變更的圖表軸，然後按一下 **[軸屬性]** 。 
   
-2.  在 [水平軸屬性]  對話方塊 > [軸選項]  索引標籤上，將 [間隔]  設為 [自動]  。圖表將顯示可納入軸的最佳類別目錄標籤數目。  
+2.  在 [水平軸屬性] 對話方塊 > [軸選項] 索引標籤上，將 [間隔] 設為 [自動]。圖表將顯示可納入軸的最佳類別目錄標籤數目。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

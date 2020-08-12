@@ -1,5 +1,6 @@
 ---
 title: 設定量測計上標尺的格式 (報表產生器)| Microsoft Docs
+description: 了解在報表產生器的編頁報表中，受限於最小值與最大值的量測計標尺數字範圍。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 546af7322a8aeced15c0593fa2c1fdde5af632cc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 235406dc1a6ed138c5d40ef7364bb07b3e4e6ecf
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079628"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84778890"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>格式化量測計上的標尺 (報表產生器及 SSRS)
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，量測計標尺是顯示在量測計上，受限於最小值與最大值的數字範圍。 量測計標尺通常包含量測計標籤與刻度，以便正確讀取量測計指標所顯示的數目。 量測計標尺通常與一或多個量測計指標相關聯。 在相同的量測計上可以有一個以上的標尺。  
@@ -24,7 +25,7 @@ ms.locfileid: "77079628"
   
  當您在已經包含一個標尺的量測計上加入另一個標尺時，第一個標尺的外觀屬性會被複製到第二個標尺上。  
   
- 您可以用滑鼠右鍵按一下標尺標籤或刻度，然後選取 [星形標尺屬性]  或 [線性標尺屬性]  ，以便在標尺上設定屬性。 每個量測計類型至少都包含一個具有相同屬性集的標尺。 每個量測計類型也都有唯一的屬性：  
+ 您可以用滑鼠右鍵按一下標尺標籤或刻度，然後選取 [星形標尺屬性]**** 或 [線性標尺屬性]****，以便在標尺上設定屬性。 每個量測計類型至少都包含一個具有相同屬性集的標尺。 每個量測計類型也都有唯一的屬性：  
   
 -   在星形量測計上，您可以指定星形標尺的半徑、開始角度與掃掠角度。  
   

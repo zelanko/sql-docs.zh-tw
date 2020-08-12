@@ -1,5 +1,6 @@
 ---
 title: 報表設計師中運算式的自訂程式碼及組件參考 | Microsoft Docs
+description: 了解如何新增報表中內嵌自訂程式碼的參考。 在報表產生器中建置並儲存至電腦，以及部署至報表伺服器。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ab5e36ce6e76cf0017e7306802544f1b2764af73
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 603207390785ff684167b3b553b31c3b956842c6
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080569"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880759"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>報表產生器中運算式的自訂程式碼及組件參考 (SSRS)
   您可以加入內嵌於報表之自訂程式碼的參考，或是建置並儲存至電腦以及部署至報表伺服器之自訂組件的參考。 請將內嵌程式碼用在自訂常數、複雜函數或在單一報表內重複使用的函數上。 請使用自訂程式碼組件，將程式碼維護在單一位置並共用程式碼，讓多份報表使用。 自訂程式碼可能會包含新的自訂常數、變數、函數或副程式。 您可以包含內建集合 (例如 Parameters 集合) 的唯讀參考， 但是不能將報表資料值集傳遞至自訂函數 (尤其是不支援自訂彙總)。  
@@ -180,11 +181,11 @@ End Function
 ##  <a name="passing-built-in-collections-into-custom-assemblies"></a><a name="collections"></a> 將內建集合傳給自訂組件  
  若要將內建集合 (例如 *Globals* 或 *Parameters* 集合) 傳給自訂組件處理，必須將程式碼專案中的組件參考加入定義內建集合的組件，並且存取正確的命名空間。 根據您是針對在報表伺服器上執行的報表 (伺服器報表) 還是以本機方式在 .NET 應用程式中執行的報表 (本機報表) 開發自訂組件，您需要參考的組件會有所不同。 如需詳細資料，請參閱下文。  
   
--   **命名空間** ：Microsoft.ReportingServices.ReportProcessing.ReportObjectModel  
+-   **命名空間：** Microsoft.ReportingServices.ReportProcessing.ReportObjectModel  
   
--   **組件 (本機報表)** ：Microsoft.ReportingServices.ProcessingObjectModel.dll  
+-   **組件 (本機報表)：** Microsoft.ReportingServices.ProcessingObjectModel.dll  
   
--   **組件 (伺服器報表)** ：Microsoft.ReportViewer.ProcessingObjectModel.dll  
+-   **組件 (伺服器報表)：** Microsoft.ReportViewer.ProcessingObjectModel.dll  
   
  由於 *Fields* 和 *ReportItems* 集合的內容可能會在執行階段動態變更，因此您不應將這些不同的呼叫內容保留在自訂組件之中 (例如保留在成員變數中)。 此項建議適用於所有的內建集合。  
   

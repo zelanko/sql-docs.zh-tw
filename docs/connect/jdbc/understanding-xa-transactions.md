@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9bcf55fd300c977105229473228955581da7cdd3
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: ff48d23727c8dd48048293dd34127b6acbb3f005
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528732"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293995"
 ---
 # <a name="understanding-xa-transactions"></a>了解 XA 交易
 
@@ -60,7 +60,7 @@ ms.locfileid: "81528732"
 如果要將 XA 資料來源與 Microsoft 分散式交易協調器 (MS DTC) 搭配使用，來處理分散式交易，則需要下列步驟。  
 
 > [!NOTE]  
-> JDBC 分散式交易元件會包含在 JDBC 驅動程式安裝的 xa 目錄中。 這些元件包括 xa_install.sql 及 sqljdbc_xa.dll 檔案。  
+> JDBC 分散式交易元件會包含在 JDBC 驅動程式安裝的 xa 目錄中。 這些元件包括 xa_install.sql 及 sqljdbc_xa.dll 檔案。 如果不同用戶端上使用不同版本的 JDBC 驅動程式，則建議在伺服器上使用最新的 sqljdbc_xa.dll。  
 
 > [!NOTE]  
 > 從 SQL Server 2019 公開預覽 CTP 2.0 開始，JDBC XA 分散式交易元件會包含在 SQL Server 引擎中，並且可以使用系統預存程序來啟用或停用。

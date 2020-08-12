@@ -1,5 +1,6 @@
 ---
 title: 設定處理選項 (SharePoint 整合模式的 Reporting Services) | Microsoft Docs
+description: 在 SharePoint 整合模式下的 SQL Server Reporting Services 中，指定進生資料處理的時間、逾時值，以及其他選項。
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 986ae6e89727b0cef59e4d6b3bf7e5d92bd5342b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7b698f7e3d566cd49a0106c0cdf834be894cb92f
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580542"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764793"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>設定處理選項 (SharePoint 整合模式的 Reporting Services)
 
@@ -46,7 +47,7 @@ ms.locfileid: "65580542"
   
 4.  在 **[資料快照集選項]** 中，選取 **[排程資料處理]** 。  
   
-5.  如果要使用現有的共用排程，請選取 **[在共用排程上]** ，否則，請按一下 **[在自訂排程上]** ，然後按一下 **[設定]** 。  
+5.  如果要使用現有的共用排程，請選取 **[在共用排程上]** ，否則，請按一下 **[在自訂排程上]**，然後按一下 **[設定]**。  
   
 6.  選取頻率、排程，以及開始和結束日期，然後按一下 **[確定]** 。  
   
@@ -74,7 +75,7 @@ ms.locfileid: "65580542"
   
 2.  按一下向下箭頭，然後選取 **[管理處理選項]** 。  
   
-3.  如果您要使用在報表伺服器層級指定的值，請在 [處理逾時]  中選取 [使用網站預設值]  。 否則，請選取 [報表處理不會逾時]  或 [限制報表處理的秒數]  ，使用無逾時或其他逾時值覆寫該值。  
+3.  如果您要使用在報表伺服器層級指定的值，請在 [處理逾時] 中選取 [使用網站預設值]。 否則，請選取 [報表處理不會逾時]**** 或 [限制報表處理的秒數]****，使用無逾時或其他逾時值覆寫該值。  
   
 ## <a name="set-report-history-options-and-limits"></a>設定報表記錄選項和限制
   

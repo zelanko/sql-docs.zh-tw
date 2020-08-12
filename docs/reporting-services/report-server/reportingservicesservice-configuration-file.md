@@ -1,5 +1,6 @@
 ---
 title: ReportingServicesService 設定檔 | Microsoft Docs
+description: 了解在 Reporting Services 中用於追蹤的 ReportingServicesService.exe.config 其檔案位置、編輯方針和組態設定。
 ms.date: 05/30/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dfb0f48bb35e6341e2b2a9a72007ef4eb09c2b9b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bb3b4d6c7591385f332daab9102613f05f0e5dfc
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66506626"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535350"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService 組態檔
 
@@ -77,7 +78,7 @@ ReportingServicesService.exe.config 檔包括設定追蹤的設定。
 ## <a name="configuration-settings"></a>組態設定  
  下表提供有關特定設定的資訊。 設定會依其出現在組態檔的順序顯示。  
   
-|設定|描述|  
+|設定|說明|  
 |-------------|-----------------|  
 |**RStrace**|指定用於錯誤和追蹤的命名空間。|  
 |**DefaultTraceSwitch**|指定報告到 ReportServerService 追蹤記錄的資訊層級。 每一個層級包括所有較低層級所報告的資訊。 不建議停用追蹤。 有效值包括：<br /><br /> 0= 停用追蹤<br /><br /> 1= 例外狀況和重新啟動<br /><br /> 2= 例外、重新啟動和警告<br /><br /> 3= 例外、重新啟動、警告和狀態訊息 (預設值)<br /><br /> 4= 詳細資訊模式|  

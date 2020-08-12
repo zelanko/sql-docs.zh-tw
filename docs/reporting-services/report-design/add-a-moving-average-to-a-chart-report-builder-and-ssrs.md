@@ -1,5 +1,6 @@
 ---
 title: 將移動平均新增至圖表 (報表產生器) | Microsoft Docs
+description: 了解如何在圖表上顯示移動平均公式價格指標，進而識別報表產生器中的趨勢。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 166cf9c1-0750-4866-8381-542e4fbfe65a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2cffa994cadf61b9d1d78c2cbe138c736e34b626
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: b2c72f3720b397e20df7daa794e08ef7ca241abf
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488320"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255697"
 ---
 # <a name="add-a-moving-average-to-a-chart-report-builder-and-ssrs"></a>將移動平均加入至圖表 (報表產生器及 SSRS)
 移動平均是數列中資料的平均，是根據定義的一段時間而計算。 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表中，您可以在圖表上顯示移動平均以識別明顯的趨勢。  
@@ -43,7 +44,7 @@ ms.locfileid: "81488320"
     >  週期是用來計算移動平均的天數。 如果沒有在 X 軸上指定日期/時間值，則週期會由用來計算移動平均的資料點數目代表。 如果只有一個資料點，則移動平均公式不會進行計算。 移動平均會從第二個點開始計算。 如果指定 **[從第一個點開始]** 選項，則移動平均會從圖表的第一個點開始。 如果只有一個資料點，則導出的移動平均中的點會與原始數列中的第一個點相同。  
   
 ## <a name="see-also"></a>另請參閱  
-* [教學課程：將直條圖加入至報表 (報表產生器)](../tutorial-add-a-column-chart-to-your-report-report-builder.md)
+* [教學課程：將直條圖新增至報表 (報表產生器)](../tutorial-add-a-column-chart-to-your-report-report-builder.md)
 *  [格式化圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
 *  [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
 *  [將空點加入至圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md)  

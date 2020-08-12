@@ -1,5 +1,6 @@
 ---
 title: 指標 (報表產生器) | Microsoft Docs
+description: 了解指標，這是一種小型量測計，其可傳達報表產生器中編頁報表內單一資料值的狀態。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,15 +16,15 @@ f1_keywords:
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c2e62ec26c0019e82b3f0e37dbdd9c1539332212
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2b440f82dc7d758e7f6eb17bdf0f13e818348423
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082074"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779510"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>指標 (報表產生器及 SSRS)
-  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，指標是小型量測計，看一眼就可傳達單一資料值的狀態。 圖示即使很小，但在視覺上也能有效代表指標及其狀態。  
+  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 編頁報表中，指標是小型的量測計，僅一眼就可傳達單一資料值的狀態。 圖示即使很小，但在視覺上也能有效代表指標及其狀態。  
   
  您可以在報表中使用狀態指標以顯示下列項目：  
   
@@ -41,7 +42,7 @@ ms.locfileid: "77082074"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供以原狀使用的內建指標集合與指標圖示，您也可以自訂個別的指標圖示與指標集合以符合您的需求。  
   
- 如需使用指標作為 KPI 的詳細資訊，請參閱[教學課程：將 KPI 加入至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)。  
+ 如需使用指標作為 KPI 的詳細資訊，請參閱[教學課程：將 KPI 新增至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)。  
   
 > [!NOTE]  
 >  您可以將指標當做報表組件，與報表分開發行。 深入了解 [報表組件](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
@@ -87,7 +88,7 @@ ms.locfileid: "77082074"
 ##  <a name="using-indicators-in-tables-and-matrices"></a><a name="UsingIndicatorsInTablesMatrices"></a> 在資料表和矩陣中使用指標  
  簡單的指標形狀使其適合在資料表和矩陣中使用。 指標即使很小，都仍然有效。 這讓它們在報表的詳細資料或群組資料列中都相當實用。  
   
- 下圖顯示包含使用方向性指標集合 ([四箭號 (彩色)]  ) 之資料表的報表來表示標尺。 報表中的指標圖示設定為使用藍色陰影來代替預設色彩：紅色、黃色和綠色。  
+ 下圖顯示包含使用方向性指標集合 ([四箭號 (彩色)]) 之資料表的報表來表示標尺。 報表中的指標圖示設定為使用藍色陰影來代替預設色彩：紅色、黃色和綠色。  
   
  ![rs_IndicatorReportBlueArrows](../../reporting-services/report-design/media/rs-indicatorreportbluearrows.gif "rs_IndicatorReportBlueArrows")  
   
@@ -126,7 +127,7 @@ ms.locfileid: "77082074"
   
  無論使用百分比或數值狀態度量單位，都可能會發生這種狀況。 它比較可能發生於使用數值度量單位時，因為您為此度量提供特定值。 也比較可能發生於捨入報表資料值時，因為這傾向於使值較不離散。  
   
- 下列案例描述在 [三箭號 (彩色)]  方向指標中變更三個狀態的順序時，資料視覺效果如何受到影響。 依預設，此順序為：  
+ 下列案例描述在 [三箭號 (彩色)]**** 方向指標中變更三個狀態的順序時，資料視覺效果如何受到影響。 依預設，此順序為：  
   
 1.  紅色向下箭頭  
   
@@ -136,7 +137,7 @@ ms.locfileid: "77082074"
   
  下列案例顯示四個不同的狀態順序及其值範圍，以及順序如何影響資料視覺效果。  
   
- 在這些案例中，[三箭號 (彩色)]  指標使用數值狀態度量。  
+ 在這些案例中，[三箭號 (彩色)] 指標使用數值狀態度量。  
   
 |狀態順序|開始值|結束值|  
 |--------------------|-----------------|---------------|  

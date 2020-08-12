@@ -1,5 +1,6 @@
 ---
 title: 內建的全域和使用者參考 (報表產生器) | Microsoft Docs
+description: 了解可在報表產生器報表內用來篩選結果其運算式中使用的值。
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8dfd41dfbcbd35712fb2e13925b047e4ed2db962
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 23c0167fddf6887d0ff4e25dcfcd9242434b4f66
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082215"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462192"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>內建集合 - 內建的全域和使用者參考 (報表產生器)
   內建欄位集合包含 **Globals** 和 **User** 集合，代表在處理報表時 Reporting Services 所提供的全域值。 **Globals** 集合提供的值包括報表名稱、開始處理報表的時間，以及報表頁首及頁尾的目前頁碼。 **User** 集合則提供使用者識別碼和語言設定。 您可以在運算式中使用這些值以在報表中篩選結果。  
@@ -42,7 +43,7 @@ ms.locfileid: "77082215"
 ### <a name="renderformat"></a>RenderFormat  
  下表描述 **RenderFormat**的成員。  
   
-|member|類型|描述|  
+|member|類型|說明|  
 |------------|----------|-----------------|  
 |名稱|**String**|在 RSReportServer 組態檔中註冊之轉譯器的名稱。<br /><br /> 可在報表處理/呈現週期的特定部分使用。|  
 |IsInteractive|**布林值**|目前的轉譯要求是否使用互動式轉譯格式。|  

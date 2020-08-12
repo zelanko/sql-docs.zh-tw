@@ -1,5 +1,6 @@
 ---
 title: 地圖 (報表產生器) | Microsoft Docs
+description: 熟悉如何在報表產生器中將地圖新增至分頁報表，以根據地理背景顯示分頁報表中的商務資料。
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ f1_keywords:
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b59d2545358c2536bcbd0dc6d4e5e211e0c76caa
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8b3c37e642ba5c9d570fc754f5eca3ab0b57d24a
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082615"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881911"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>地圖 (報表產生器及 SSRS)
   若要針對地理背景將商務資料視覺化，您可以將地圖加入 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表。 您選取的地圖類型取決於您想要在報表中傳達的資訊而定。 您可以加入只顯示位置的地圖，或是根據某區域住家數而變動泡泡大小的泡泡地圖，或者是根據每一家商店最有利潤的產品而變動標記樣式的標記地圖，或者是顯示商店之間之路線的線路地圖。  
@@ -57,7 +58,7 @@ ms.locfileid: "77082615"
  若要視覺化地圖上的資料，分析資料和空間資料必須擁有關聯性。 當空間資料與分析資料來自相同的來源時，關聯性是已知的。 當空間資料和分析資料來自不同的來源，您必須指定要將兩者產生關聯的符合欄位。  
   
 ### <a name="spatial-data"></a>空間資料  
- 空間資料由多組座標所組成。 資料來源中的空間資料可以是單一點、多個點、單一線條、多個線條，或一組多邊形。 每組座標都會定義一個 *「地圖元素」* (Map Element)，例如，表示某個縣市外框的多邊形、表示路段圖的線條，或是表示城市位置的點。  
+ 空間資料由多組座標所組成。 資料來源中的空間資料可以是單一點、多個點、單一線條、多個線條，或一組多邊形。 每組座標都會定義一個 *「地圖元素」*(Map Element)，例如，表示某個縣市外框的多邊形、表示路段圖的線條，或是表示城市位置的點。  
   
  空間資料以下列其中一個座標系統為基礎：  
   
@@ -70,7 +71,7 @@ ms.locfileid: "77082615"
 #### <a name="sources-of-spatial-data"></a>空間資料的來源  
  系統支援下列空間資料來源：  
   
--   **地圖庫報表：** 空間資料會內嵌在位於地圖庫中的報表內。 根據預設，地圖庫安裝在 \<磁碟機>  :\Program Files\Microsoft SQL Server\Report Builder \MapGallery 中。  
+-   **地圖庫報表：** 空間資料會內嵌在位於地圖庫中的報表內。 根據預設，地圖庫安裝在 *\<drive>* :\Program Files\Microsoft SQL Server\Report Builder \MapGallery 中。  
   
     > [!NOTE]  
     >  這個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 地圖功能會使用美國人口普查局 ([https://www.census.gov/](https://www.census.gov/)) 提供的 TIGER/Line Shapefiles 資料。 TIGER/Line 形狀檔是 Census MAF/TIGER 資料庫中選定地理和製圖資訊的擷取內容。 TIGER/Line 形狀檔是由美國人口普查局免費提供。 若要取得 TIGER/Line 形狀檔的詳細資料，請移至 [TIGER/Line 形狀檔和 TIGER/Line 檔案技術文件](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html) \(英文\)。 TIGER/Line 形狀檔中的界限資訊只能當做統計資料收集和表格製作的用途，其統計用途的描述和指定並不構成司法權或擁有權利的判定，也不屬於法律上的土地描述。 Census TIGER 與 TIGER/Line 是美國人口普查局的註冊商標。  

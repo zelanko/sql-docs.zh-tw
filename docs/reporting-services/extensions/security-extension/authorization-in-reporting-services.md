@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 中的授權 | Microsoft Docs
+description: 了解 Reporting Services 中的授權程序。 了解如何使用 IAuthorizationExtension2 介面，以開發安全性延伸模組。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 15fc1c7b-560c-4737-b126-e0d428a1b530
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2210d5eb5997ec66e707a90cdc52dc24328e6f6f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f5895064b0e6191c3ecbdcbd5405b1fd1bd50237
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193346"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529054"
 ---
 # <a name="authorization-in-reporting-services"></a>Reporting Services 中的授權
   授權這項程序可決定是否應該將要求的存取權類型授與某個識別，允許其對於報表伺服器資料庫中特定資源進行存取。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用以角色為基礎的授權架構，會根據應用程式的使用者角色指派，將使用者存取權授與指定的資源。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的安全性延伸模組包含授權元件的實作，是用以在使用者通過報表伺服器上的驗證之後，授與存取權給他們。 當使用者透過 SOAP API 與透過 URL 存取，嘗試在系統上或是報表伺服器項目執行作業時，就會叫用授權。 這是透過安全性延伸模組介面 **IAuthorizationExtension2** 來達成的。 如前所述，您所部署的任何延伸模組都會自 **IExtension** 繼承基底介面。 **IExtension** 與 **IAuthorizationExtension2** 是 **Microsoft.ReportingServices.Interfaces** 命名空間的成員。  

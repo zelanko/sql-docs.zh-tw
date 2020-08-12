@@ -1,5 +1,6 @@
 ---
 title: 了解群組 (報表產生器) | Microsoft Docs
+description: 了解群組如何在報表產生器的分頁報表中，組織報表資料集的檢視。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8a24833de353f4a524dd12f3a37a343fdc1a9151
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 498604b377638981d767e353518b70fe3398c597
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080849"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880299"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>了解群組 (報表產生器及 SSRS)
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，群組是一組來自繫結至資料區域之報表資料集的具名資料。 基本上，一個群組會組織一個報表資料集的檢視。 資料區域中的所有群組會指定相同報表資料集的不同檢視。  
@@ -61,7 +62,7 @@ ms.locfileid: "77080849"
 > [!NOTE]  
 >  雖然群組在不同的資料區域中有不同的名稱，但是建立與使用群組之方式背後的原則是相同的。 當您針對資料區域建立群組時，會指定一種方式，從連結到資料區域的資料集組織詳細資料。 每個資料區域都支援一個用於顯示群組資料的群組結構。  
   
-### <a name="groups-in-a-tablix-data-region-details-row-and-column-groups"></a>Tablix 資料區域中的群組：詳細資料、資料列與資料行群組  
+### <a name="groups-in-a-tablix-data-region-details-row-and-column-groups"></a>Tablix 資料區中的群組：詳細資料、資料列和資料行群組  
  如本主題稍早所述，Tablix 資料區域可讓您依資料列或資料行，將資料組織到群組中。 不過，資料列和資料行群組不是 Tablix 資料區域中提供的唯一群組。 此資料區域可能有下列類型的群組：  
   
 -   **詳細資料群組** ：[詳細資料] 群組包含報表產生器或報表設計師套用資料集與資料區域篩選後，來自報表資料集的所有資料。 因此，詳細資料群組是唯一沒有群組運算式的群組。  

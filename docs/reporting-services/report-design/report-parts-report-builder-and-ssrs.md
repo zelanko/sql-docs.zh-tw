@@ -1,5 +1,6 @@
 ---
 title: 報表組件 (報表產生器) | Microsoft Docs
+description: 建立資料表、矩陣、圖表與影像，將其發佈為個別的報表元件，以供在報表產生器的其他分頁報表中加以重複使用。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0bd0dd7c77e7ebc2501b507324b02ba1bb364190
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6eaa6caa15f7cef82ca7d18caa8429b9df9978d8
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081115"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255253"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>報表組件 (報表產生器及 SSRS)
   資料表、矩陣、圖表和影像等報表項目都可以當做 *「報表組件」* (Report Part) 發行。 報表組件是指已經個別發行至報表伺服器，而且可以在其他分頁報表中重複使用的分頁報表項目。 報表組件的副檔名為 .rsc。  
@@ -90,7 +91,7 @@ ms.locfileid: "77081115"
  您可以以縮圖或清單方式檢視搜尋結果，並依名稱、建立和修改日期，以及建立者來排序搜尋結果。 如需詳細資訊，請參閱 [瀏覽報表組件及設定預設資料夾 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)(Report Part) 發行。  
   
 ### <a name="what-comes-with-a-report-part"></a>報表組件隨附的內容  
- 當您將報表組件加入到報表時，您也會加入此組件運作所必須擁有的所有項目。 例如，顯示資料的任何物件都取決於資料集，也就是資料來源的查詢和連接。 它也有一個或多個參數。 相依的所有項目都是它的 *「相依性」* (Dependency)，而且當您將報表組件加入至報表時，所有相依性或其指標都隨附在報表組件中。 資料集和參數會列在您報表的 [報表資料] 窗格中。  
+ 當您將報表組件加入到報表時，您也會加入此組件運作所必須擁有的所有項目。 例如，顯示資料的任何物件都取決於資料集，也就是資料來源的查詢和連接。 它也有一個或多個參數。 相依的所有項目都是它的 *「相依性」*(Dependency)，而且當您將報表組件加入至報表時，所有相依性或其指標都隨附在報表組件中。 資料集和參數會列在您報表的 [報表資料] 窗格中。  
   
  報表組件的資料集可能會內嵌在報表組件中，或者，它可能是報表組件所指向的個別、共用資料集。 如果資料集內嵌在報表組件中，您可以修改它。 如果是共用資料集，則它是您需要權限的個別物件。 如需共用和內嵌資料集的詳細資訊，請參閱[報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)。  
   

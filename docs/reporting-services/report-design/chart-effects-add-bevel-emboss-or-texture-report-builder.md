@@ -1,5 +1,6 @@
 ---
 title: 將斜面、浮凸與紋理樣式新增至圖表 (報表產生器) | Microsoft Docs
+description: 了解如何指定繪製效果 (例如，斜面、浮凸或紋理) 來增加圖表在報表產生器中的視覺影響。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 737cfc80-b39e-497c-817b-b46693deb58f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9bbb097362d2569bcea8a16d451d33d931b82b35
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dc70f46d093336157fbc474abfa63460c42deb41
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078754"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462312"
 ---
 # <a name="chart-effects---add-bevel-emboss-or-texture-report-builder"></a>圖表效果 - 新增斜面、浮凸或紋理 (報表產生器)
   使用某些圖表類型時，您可以指定繪製效果來增加圖表的視覺效果。 這些繪製效果僅適用於圖表的數列。 它們對於其他任何圖表元素沒有影響。  

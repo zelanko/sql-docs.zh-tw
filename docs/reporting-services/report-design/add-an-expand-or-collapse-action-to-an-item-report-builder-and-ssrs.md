@@ -1,6 +1,6 @@
 ---
 title: 新增展開或摺疊動作 (報表產生器及 SSRS) | Microsoft Docs
-description: 您可以讓使用者以互動方式展開或摺疊分頁報表中的項目；或者，展開或摺疊與資料表或矩陣中群組建立關聯的資料列和資料行。
+description: 讓使用者在報表產生器中展開或摺疊與報表內資料表或矩陣群組關聯的項目、資料列和資料行。
 ms.date: 12/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 776326093518aa33f8f031e4c4d6675791acf82d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 78d67f7d34bd2e146f7f625c1fd8ddb538b3b3eb
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242553"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681297"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder--ssrs"></a>將展開或摺疊動作新增至項目 (報表產生器及 SSRS)
   您可以讓使用者以互動方式展開或摺疊分頁報表中的項目；或者，展開或摺疊與資料表或矩陣中群組建立關聯的資料列和資料行。 若要讓使用者展開或摺疊項目，您可以設定該項目的可見性屬性。 設定可見性適用於 HTML 報表檢視器，有時稱為 *「向下鑽研」* (Drilldown) 動作。  
@@ -49,7 +49,7 @@ ms.locfileid: "75242553"
   
     -   選取 **[True]** 來隱藏報表項目。  
   
-    -   選取 [\<運算式>] 開啟 [運算式] 對話方塊，即可建立在執行階段評估的運算式來決定可見度。  
+    -   選取 [\<Expression>] 開啟 [運算式] 對話方塊，即可建立在執行階段評估的運算式來決定可見度。  
   
 5.  在 **ToggleItem**中，從下拉式方塊選取要加入切換影像之目標文字方塊的名稱。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "75242553"
   
 ### <a name="to-add-expand-and-collapse-action-to-a-report-item"></a>若要將展開和摺疊動作加入至報表項目中  
   
-1.  在報表設計檢視中，以滑鼠右鍵按一下要顯示或隱藏的報表項目，然後按一下 [*報表項目>\<* 屬性]  。 該報表項目的 [*報表項目>\<* 屬性]  對話方塊隨即開啟。  
+1.  在報表設計檢視中，以滑鼠右鍵按一下要顯示或隱藏的報表項目，然後按一下 [ *\<report item>* 屬性]。 該報表項目的 [ *\<report item>* 屬性] 對話方塊隨即開啟。  
   
 2.  按一下 **[可見性]** 。  
   

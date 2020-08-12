@@ -1,5 +1,6 @@
 ---
 title: 在資料區中合併資料格 (報表產生器) | Microsoft Docs
+description: 探索如何合併資料區域中的資料格以結合資料格、改善資料區域外觀，或為報表產生器中的資料行與資料列群組提供跨越標籤。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 43551300-89b2-4f4e-af09-69084324afaf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 07a72f62848d3d762dfdf7ac9bb7b250fca97c00
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: efadb95c2849c34cd8f32df34fe0b63f82440388
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078689"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681437"
 ---
 # <a name="merge-cells-in-a-data-region-report-builder-and-ssrs"></a>在資料區中合併資料格 (報表產生器及 SSRS)
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表中，您可以在資料區域中合併資料格來結合資料格、增進資料區域外觀，或為資料行群組與資料列群組提供橫跨的標籤。  
@@ -27,7 +28,7 @@ ms.locfileid: "77078689"
   
 1.  在報表設計介面的資料區中，按一下要合併的第一個資料格。 按住滑鼠左鍵，以垂直或水平方向拖曳來選取相鄰的資料格。 選取的資料格就會反白顯示。  
   
-2.  以滑鼠右鍵按一下選取的資料格，然後選取 [合併資料格]  。 選取的資料格就會結合到單一的資料格中。  
+2.  以滑鼠右鍵按一下選取的資料格，然後選取 [合併資料格]。 選取的資料格就會結合到單一的資料格中。  
   
 3.  重複步驟 1 和 2，在資料區域中合併其他相鄰的資料格。  
   

@@ -1,5 +1,6 @@
 ---
 title: 部署轉譯延伸模組 | Microsoft Docs
+description: 了解如何部署報表轉譯延伸模組。 查看要新增哪些組態檔項目，讓報表伺服器和報表設計師找到延伸模組。
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 10c822b8cd292c975309443f9196fb7ceb66cbc5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a13d9eb18fae38ef85c182576fe50ed3be6f4d38
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193695"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529464"
 ---
 # <a name="deploying-a-rendering-extension"></a>部署轉譯延伸模組
   在您撰寫 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 報表轉譯延伸模組並將其編譯成 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 程式庫之後，需要使其可供報表伺服器和報表設計師探索。 若要這樣做，請將延伸模組複製到適當的目錄，並將項目加入適當的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 組態檔。  
   
 ## <a name="configuration-file-rendering-extension-element"></a>組態檔轉譯延伸模組元素  
- 在將轉譯延伸模組編譯成 .DLL 之後，您就可以將項目加入至 rsreportserver.config 檔案。 預設位置為 %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<執行個體名稱>\Reporting Services\ReportServer。 父項目是 \<Render>。 Render 元素之下是代表每個轉譯延伸模組的 Extension 元素。 **Extension** 元素包含兩個屬性：Name 與 Type。  
+ 在將轉譯延伸模組編譯成 .DLL 之後，您就可以將項目加入至 rsreportserver.config 檔案。 預設位置為 %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer。 父元素是 \<Render>。 Render 元素之下是代表每個轉譯延伸模組的 Extension 元素。 **Extension** 元素包含兩個屬性：Name 與 Type。  
   
  下表描述轉譯延伸模組之 **Extension** 元素的屬性：  
   
@@ -40,7 +41,7 @@ ms.locfileid: "63193695"
   
 ### <a name="to-deploy-the-assembly"></a>若要部署組件  
   
-1.  將組件從執行位置複製到您要在其上使用轉譯延伸模組之報表伺服器的 bin 目錄。 報表伺服器 Bin 目錄的預設位置是 %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<執行個體名稱>\Reporting Services\ReportServer\Bin。  
+1.  將組件從執行位置複製到您要在其上使用轉譯延伸模組之報表伺服器的 bin 目錄。 報表伺服器 Bin 目錄的預設位置是 %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer\Bin。  
   
 2.  在複製組件檔之後，開啟 rsreportserver.config 檔。 rsreportserver.config 檔也位於報表伺服器的 bin 目錄中。 您需要在延伸模組組件檔的組態檔中建立項目。 您可以利用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 或簡單的文字編輯器開啟此檔案。  
   

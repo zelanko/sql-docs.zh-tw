@@ -1,5 +1,6 @@
 ---
 title: 新增、變更或刪除地圖或地圖圖層 (報表產生器) | Microsoft Docs
+description: 了解如何以手動方式或在報表產生器中使用地圖圖層精靈，新增、移除或變更對應選項。
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -25,12 +26,12 @@ f1_keywords:
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9e2330442d2e50b5f62328d831e582a03e1ac202
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 347a55c139a35c7edf0a5fc37e21a2de0736c401
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488245"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681457"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>加入、變更或刪除地圖或地圖圖層 (報表產生器及 SSRS)
   地圖是圖層的集合。 將地圖加入至 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表時，您會定義第一個圖層。 您可以使用地圖圖層精靈建立其他圖層。  
@@ -80,7 +81,7 @@ ms.locfileid: "81488245"
     > [!NOTE]  
     >  雖然您可以手動加入地圖圖層並加以設定，我們建議您最好使用地圖圖層精靈來新增圖層。 若要在 [地圖] 窗格工具列啟動精露，請按一下圖層精靈按鈕 (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))。  
   
-3.  以滑鼠右鍵按一下圖層，然後按一下 [圖層資料]  。  
+3.  以滑鼠右鍵按一下圖層，然後按一下 [圖層資料]。  
   
 4.  在 [使用以下來源的空間資料]  中，選取空間資料的來源。 這些選項會隨著您選取的項目而不同。  
   

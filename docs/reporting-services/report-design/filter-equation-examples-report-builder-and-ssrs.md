@@ -1,5 +1,6 @@
 ---
 title: 篩選方程式範例 (報表產生器) | Microsoft Docs
+description: 了解如何建立報表篩選。 請考慮這些經常使用的篩選範例來建立自有篩選。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 66bec93d-7c3b-4d4a-8cb6-7a7bb2f34ec6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 23a76863222fdd58d769031020ac888966596146
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 074a7d7b300d9ae55776199479b229407b2ba3a1
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080129"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689735"
 ---
 # <a name="filter-equation-examples-report-builder-and-ssrs"></a>篩選方程式範例 (報表產生器及 SSRS)
   若要建立篩選，您必須指定一個或多個篩選方程式。 篩選方程式包含運算式、資料類型、運算子和值。 本主題提供常用的篩選範例。  
@@ -26,7 +27,7 @@ ms.locfileid: "77080129"
 ## <a name="filter-examples"></a>篩選範例  
  下表說明使用不同資料類型和不同運算子的篩選方程式範例。 比較的範圍是由定義篩選的報表項目所決定。 例如，如果是資料集上所定義的篩選， **TOP % 10** 就是資料集中前百分之 10 的值；如果是群組上所定義的篩選， **TOP % 10** 就是群組中前百分之 10 的值。  
   
-|簡單運算式|資料類型|運算子|值|描述|  
+|簡單運算式|資料類型|運算子|值|說明|  
 |-----------------------|---------------|--------------|-----------|-----------------|  
 |`[SUM(Quantity)]`|**整數**|**>**|`7`|包含大於 7 的資料值。|  
 |`[SUM(Quantity)]`|**整數**|**TOP N**|`10`|包含前 10 大資料值。|  

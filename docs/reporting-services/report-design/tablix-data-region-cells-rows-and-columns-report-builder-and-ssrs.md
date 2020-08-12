@@ -1,6 +1,6 @@
 ---
 title: Tablix 中的資料格、資料列及資料行 | Microsoft Docs
-description: 若要控制 Tablix 資料區的資料列和資料行如何在 SQL Server Reporting Services 分頁報表中顯示資料，您必須了解如何指定詳細資料、群組資料以及標籤和總計的資料列與資料行。
+description: 了解如何指定資料、標籤和總計的資料列和資料行，以供控制 SQL Server 報表中的顯示。
 ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a1630b872e3a445b082c6ceca98d45cf225cdaf7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 26567c364e734824964e19ee6a639f2500ee2b4b
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252402"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689446"
 ---
 # <a name="cells-rows--columns-in-a-tablix-data-region-report-builder-and-ssrs"></a>Tablix 資料區資料格、資料列及資料行 (報表產生器) 及 SSRS
 

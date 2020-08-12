@@ -1,5 +1,6 @@
 ---
 title: 設定報表伺服器來進行遠端管理 | Microsoft Docs
+description: 了解如何使用組態工具或編寫自訂程式碼，為本機或遠端組態設定 Reporting Services 報表伺服器執行個體。
 ms.date: 09/14/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 48e8662f3547e9e483d67cc4af83e67d355ba664
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4edd8925bffec751d00379c9a9e78cc6d06a62c8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580419"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545586"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>設定報表伺服器來進行遠端管理
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，您可以在本機或遠端設定報表伺服器執行個體。 若要設定遠端報表伺服器執行個體，您可以使用 Reporting Services 組態工具，或是撰寫使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows Management Instrumentation (WMI) 提供者的自訂程式碼。 Reporting Services 組態工具提供了 WMI 提供者的圖形介面，好讓您不需要撰寫程式碼就可以設定報表伺服器。 當您啟動這個工具時，可以指定要連接的遠端伺服器。  
@@ -32,7 +33,7 @@ ms.locfileid: "65580419"
   
  `"The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)".`  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
  若要修改防火牆設定，您必須在本機登入，而且必須是本機管理員群組的成員； 您不能透過遠端連接修改遠端電腦的 Windows 防火牆設定。  
   
  如果您想要針對非管理員的使用者啟用遠端管理，必須將遠端啟動權限授與給「分散式元件物件模型」(DCOM) 帳戶。 本主題有提供針對非管理員存取權設定伺服器的指示。  
@@ -108,7 +109,7 @@ ms.locfileid: "65580419"
   
 9. 輸入您的使用者帳戶名稱，然後按一下 **[確定]** 。  
   
-10. 在 [\<使用者或群組> 的權限] 的 [允許] 欄中，選取 [遠端啟動] 和 [遠端啟用]，然後按一下 [確定]。  
+10. 在 [\<User or Group> 的權限] 的 [允許] 資料行中，選取 [遠端啟動] 與 [遠端啟用]，然後按一下 [確定]。  
   
 ### <a name="to-set-permissions-on-the-report-server-wmi-namespace-for-non-administrators"></a>針對非管理員設定報表伺服器 WMI 命名空間的權限  
   
@@ -116,7 +117,7 @@ ms.locfileid: "65580419"
   
 2.  開啟 [服務及應用程式] 資料夾。  
   
-3.  以滑鼠右鍵按一下 [WMI 控制]  ，然後選取 [內容]  。  
+3.  以滑鼠右鍵按一下 [WMI 控制]，然後選取 [內容]。  
   
 4.  按一下 **[安全性]** 。  
   

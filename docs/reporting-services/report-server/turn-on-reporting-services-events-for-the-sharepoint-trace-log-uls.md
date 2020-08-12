@@ -1,5 +1,6 @@
 ---
 title: 開啟 SharePoint 追蹤記錄檔的 Reporting Services 事件 (ULS) | Microsoft Docs
+description: 了解如何開啟將 Reporting Services 事件寫入 SharePoint 模式中 Reporting Services 伺服器的 SharePoint ULS 追蹤記錄。
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 07f8cd00781717511bbcaba6e76553cc17d0c5bf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ef8729d35598b59c33a827d77e5e7c5473ead049
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68893247"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547860"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Turn on Reporting Services events for the SharePoint trace log (ULS)
 
@@ -85,9 +86,9 @@ Get-SPDiagnosticConfig
   
 1.  **產品：SQL Server Reporting Services**  
   
-2.  **類別目錄：** 與伺服器相關的事件其名稱開頭會有 "Report Server" 字元。 例如 "Report Server Alerting Runtime"，這些事件會記錄到報表伺服器記錄檔。  
+2.  **類別：** 與伺服器相關的事件，其名稱開頭會有 "Report Server" 字元。 例如 "Report Server Alerting Runtime"，這些事件會記錄到報表伺服器記錄檔。  
   
-3.  **類別目錄：** 與 Web 前端元件相關或從中進行通訊的事件不會包含 "Report Server"。 例如 "Service Application Proxy"、"Report Server Alerting Runtime"。 WFE 項目會包含 CorrelationID，但伺服器項目不會包含。  
+3.  **類別：** 與 Web 前端元件相關或從中進行通訊的事件不會包含 "Report Server"。 例如 "Service Application Proxy"、"Report Server Alerting Runtime"。 WFE 項目會包含 CorrelationID，但伺服器項目不會包含。  
   
 ##  <a name="list-of-sql-server-reporting-services-events"></a><a name="bkmk_list"></a> SQL Server Reporting Services 事件清單  
  下表為 SQL Server Reporting Services 類別目錄中事件的清單：  
@@ -100,7 +101,7 @@ Get-SPDiagnosticConfig
 |本機模式轉譯||  
 |SOAP 用戶端 Proxy||  
 |UI 頁面||  
-|Power View|已寫入 **LogClientTraceEvents** API 中的記錄項目。 這些項目來自於用戶端應用程式，包括 SQL Server Reporting Services 增益集的功能 Power View。<br /><br /> 所有來自於 LogClientTraceEvents API 的記錄項目都會記錄在 "SQL Server Reporting Services" [類別目錄]  和 "Power View" [區域]  之下。<br /><br /> 使用 "Power View" 區域所記錄的項目內容是由用戶端應用程式所決定。|  
+|Power View|已寫入 **LogClientTraceEvents** API 中的記錄項目。 這些項目來自於用戶端應用程式，包括 SQL Server Reporting Services 增益集的功能 Power View。<br /><br /> 所有來自於 LogClientTraceEvents API 的記錄項目都會記錄在 "SQL Server Reporting Services" [類別目錄]**** 和 "Power View" [區域]**** 之下。<br /><br /> 使用 "Power View" 區域所記錄的項目內容是由用戶端應用程式所決定。|  
 |報表伺服器警示執行階段||  
 |報表伺服器應用程式定義域管理員||  
 |報表伺服器緩衝回應||  
@@ -124,7 +125,7 @@ Get-SPDiagnosticConfig
 |報表伺服器提供者||  
 |報表伺服器轉譯||  
 |報表伺服器報表預覽||  
-|報表伺服器資源公用程式|範例項目：<br /><br /> MediumReporting Services 啟動 SKU：評估版<br /><br /> MediumEvaluation 複本：剩下 180 天|  
+|報表伺服器資源公用程式|範例項目：<br /><br /> MediumReporting Services 啟動 SKU：評估<br /><br /> MediumEvaluation 複本：剩下 180 天|  
 |報表伺服器執行工作||  
 |報表伺服器執行要求||  
 |報表伺服器排程||  

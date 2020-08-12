@@ -1,5 +1,6 @@
 ---
 title: 隱藏圖表上的圖例項目 (報表產生器) | Microsoft Docs
+description: 探索如何選擇出現在圖例上的項目，以在報表產生器中顯示重要的資料。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 92256240-0cd5-4be4-8904-d1e3b93cb6b3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 784258433329832bbff3f8737086ef906eecfd64
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5f745b3eb2c862f4105bcdd872a8915845341942
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081334"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681417"
 ---
 # <a name="chart-legend---hide-items-report-builder"></a>圖表圖例 - 隱藏項目 (報表產生器)
 根據預設，加入到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表中非形狀圖的任何數列都會當做圖例中的項目加入。 至於圓形圖、環圈圖、漏斗圖與金字塔圖，加入到圖表中的任何數列則會在圖例中加入個別的資料點。  
@@ -25,7 +26,7 @@ ms.locfileid: "77081334"
   
 ## <a name="to-hide-an-item-from-display-in-the-legend"></a>隱藏圖例中顯示的項目  
   
-1.  以滑鼠右鍵按一下您要隱藏的數列，然後選取 [數列屬性]  。  
+1.  以滑鼠右鍵按一下您要隱藏的數列，然後選取 [數列屬性]。  
   
 2.  按一下 **[圖例]** 。 選取 **[不要在圖例中顯示此數列]** 選項。  
   

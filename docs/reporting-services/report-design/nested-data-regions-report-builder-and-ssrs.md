@@ -1,5 +1,6 @@
 ---
 title: 巢狀資料區 (報表產生器) | Microsoft Docs
+description: 探索如何使用報表產生器在一個資料區內巢狀另一個資料區。 以精確的資料表或矩陣顯示資料摘要。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 15c2bc9b-428a-47ac-9630-8dde925d0595
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d58cdcf55429a76766e3e1810c1d6599aa360e6d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4822f668b78332a7a62aeab7ca4959eb328fcc0d
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082597"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84885081"
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>巢狀資料區 (報表產生器及 SSRS)
   您可以在一個資料區域 (例如矩陣) 內巢狀另一個資料區域 (例如圖表)，這樣通常可以透過精確的方式顯示資料摘要，或提供視覺化顯示以及資料表或矩陣顯示。  
@@ -68,7 +69,7 @@ ms.locfileid: "77082597"
   
  您必須設定將會顯示在量測計標尺上的最小值與最大值。 若要指定量測計的最大值，您可以使用運算式，例如 `=Max!MyField.Value`。 不過，因為此運算式僅會在資料格中資料的範圍內進行評估，對於 Tablix 中的所有資料列而言，每個量測計的最大值都不會相同。 這在 Tablix 中的量測計間進行比較時，可能會更難以了解。 或者，您可以為最大值指定一個靜態值。 Tablix 內部的所有資料列都會顯示包含此最大值的量測計。 如需詳細資訊，請參閱[設定量測計的最小值或最大值 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)。  
   
- 如果量測計上的資料變得太大，請考慮使用標尺乘數減少所顯示的位數。 若要指定乘數，您可以用滑鼠右鍵按一下標尺，然後選取 [標尺屬性]  。 當 **[標尺屬性]** 對話方塊開啟時，針對 **[乘數]** 指定一個值。  
+ 如果量測計上的資料變得太大，請考慮使用標尺乘數減少所顯示的位數。 若要指定乘數，您可以用滑鼠右鍵按一下標尺，然後選取 [標尺屬性]。 當 **[標尺屬性]** 對話方塊開啟時，針對 **[乘數]** 指定一個值。  
   
 ## <a name="nesting-a-table-or-matrix-and-a-chart-in-a-list"></a>在清單中巢狀資料表或矩陣與圖表  
  若要在清單中巢狀多個資料區域，請先加入矩形，然後將資料區域加入到該矩形中。  

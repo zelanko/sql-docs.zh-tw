@@ -1,5 +1,6 @@
 ---
 title: Lookup 函式 (報表產生器) | Microsoft Docs
+description: 使用 Lookup 函式，從包含名稱或值組的資料集，傳回第一個符合指定名稱的值。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8ca2ef5b2c605d2eb1ca73d05e897919869a435f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f2a3016bc45537aed393124b6d20f8d4a1656759
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081229"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255721"
 ---
 # <a name="report-builder-functions---lookup-function"></a>報表產生器函式 - Lookup 函式
   從包含名稱/值組的資料集傳回第一個符合指定之名稱的值。  

@@ -1,5 +1,6 @@
 ---
 title: 彙總函式參考 (報表產生器) | Microsoft Docs
+description: 使用報表產生器中運算式的內建彙總函數，在您的報表中包含彙總值。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5ef615a05648e2a5873e48371b1f1edaf754664
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0c767c4e4feced7f5979cf6b22e90cceef311ca5
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081325"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255731"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>報表產生器函式 - 彙總函式參考
   若要在報表中加入彙總值，您可以在運算式中使用內建彙總函式。 數值欄位的預設彙總函式是 SUM。 您可以編輯運算式，並使用不同的內建彙總函式或指定不同的範圍。 範圍會識別用於計算的資料集。  
@@ -173,7 +174,7 @@ ms.locfileid: "77081325"
 ##  <a name="testing-for-scope"></a><a name="TestingforScope"></a> 測試範圍  
  下列的內建函數會測試報表項目目前的內容，查看是否為特定範圍的成員。  
   
-|函式|描述|  
+|函式|說明|  
 |--------------|-----------------|  
 |[InScope](../../reporting-services/report-design/report-builder-functions-inscope-function.md)|指出目前項目的執行個體是否在指定的範圍內。|  
   
@@ -182,7 +183,7 @@ ms.locfileid: "77081325"
 ##  <a name="retrieving-recursive-level"></a><a name="RetrievingRecursiveLevel"></a> 擷取遞迴層級  
  下列的內建函數會在系統處理遞迴階層時，擷取目前的層級。 在文字方塊中以 **Padding** 屬性使用此函數的結果，即可控制遞迴群組視覺階層的縮排層級。 如需詳細資訊，請參閱[建立遞迴階層群組 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)。  
   
-|函式|描述|  
+|函式|說明|  
 |--------------|-----------------|  
 |[Level](../../reporting-services/report-design/report-builder-functions-level-function.md)|傳回遞迴階層中之目前所在的層級。|  
   

@@ -1,5 +1,6 @@
 ---
 title: Min 函式 (報表產生器) | Microsoft Docs
+description: 了解 Min 函式，其可傳回報表產生器中運算式所指定所有非 Null 數值的最小值。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: aa1ee96f-9fc4-4775-b9d4-c6187dc37e27
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f1cff64290206526103c848de693c2a95735d72
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4ea5098d06e66813fb91d27ca9d56c31732080a2
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081199"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255571"
 ---
 # <a name="report-builder-functions---min-function"></a>報表產生器函式 - Min 函式
   傳回運算式指定的所有非 Null 數值的最小值 (在給定範圍的內容中)。  

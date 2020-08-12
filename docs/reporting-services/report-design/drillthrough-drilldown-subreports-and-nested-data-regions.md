@@ -1,5 +1,6 @@
 ---
 title: 鑽研、向下鑽研、子報表和巢狀資料區域 | Microsoft Docs
+description: 組織資料以顯示「一般資料」與「詳細資料」的關聯性，然後將資料顯示在子報表或個別的鑽取報表中。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 23a1561104273203a01c99a08e86ed301e55bbf3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 55dd847b01d6870712c226fa9aec0d49de2c4efb
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578780"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689388"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions"></a>鑽研、向下鑽研、子報表和巢狀資料區
   您可以利用各種不同的方式來組織資料，以顯示總結資料與詳細資料之間的關聯性。  您可以將所有資料放入報表但設為隱藏，直到使用者按一下來顯示詳細資料；這是 *「向下鑽研」* (Drilldown) 動作。 您可以在資料區域 (例如資料表或圖表) 中顯示資料，再將這個資料區域放到另一個資料區域 (例如資料表或矩陣) 內，成為 *「巢狀」* (Nested) 結構。 您可以在 *「子報表」* (Subreport) 中顯示資料，此報表完全包含在主報表內。 或者，您可以將詳細資料放到 *「鑽研」* (Drillthrough) 報表，這是當使用者按一下連結時另外顯示的報表。  

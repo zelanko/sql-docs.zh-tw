@@ -1,5 +1,6 @@
 ---
 title: 報表伺服器 HTTP 記錄 | Microsoft Docs
+description: 了解如何在安裝 Reporting Services 之後啟用報表伺服器 HTTP 記錄。 此功能會記錄報表伺服器處理的每個 HTTP 要求與回應。
 ms.date: 06/12/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7fb733325b09c189221729a3edc0dd12cf33b283
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f640506f2f247c31c74d111d30b64f4fa0016dae
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67140458"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548000"
 ---
 # <a name="report-server-http-log"></a>報表伺服器 HTTP 記錄
   報表伺服器 HTTP 記錄檔會保留報表伺服器所處理之每個 HTTP 要求與回應的記錄。 由於要求溢位和逾時錯誤不會送達報表伺服器，因此它們不會記錄在記錄檔中。  
@@ -27,8 +28,8 @@ ms.locfileid: "67140458"
   
 |||  
 |-|-|  
-|檔案名稱|根據預設，其檔案名稱為 ReportServerService_HTTP_\<時間戳記>.log。 您可以透過在 ReportingServicesService.exe.config 檔中修改 HttpTraceFileName 屬性，自訂檔案名稱的前置詞。 此時間戳記是以國際標準時間 (UTC) 為基礎。|  
-|檔案位置|這個檔案位於 \Microsoft SQL Server\\\<SQL Server 執行個體>\Reporting Services\LogFiles。|  
+|檔案名稱|根據預設，其檔案名稱為 ReportServerService_HTTP_\<timestamp>.log。 您可以透過在 ReportingServicesService.exe.config 檔中修改 HttpTraceFileName 屬性，自訂檔案名稱的前置詞。 此時間戳記是以國際標準時間 (UTC) 為基礎。|  
+|檔案位置|此檔案位於 \Microsoft SQL Server\\ *\<SQL Server Instance>* \Reporting Services\LogFiles。|  
 |檔案格式|此檔案採用 EN-US 格式。 它是 ASCII 文字檔。|  
 |檔案建立和保留|當您在組態檔中啟用 HTTP 記錄、重新啟動此服務，然後報表伺服器處理 HTTP 要求之後，系統就會建立 HTTP 記錄。 如果您設定了這些設定，但卻沒有看見記錄檔，請開啟報表或啟動報表伺服器應用程式 (例如，入口網站) 來產生 HTTP 要求，以建立此檔案。<br /><br /> 記錄檔的新執行個體會在報表伺服器的每個服務重新啟動和後續 HTTP 要求之後建立。<br /><br /> 根據預設，追蹤記錄的上限為 32 MB，並且會在 14 天之後遭到刪除。|  
   
@@ -58,7 +59,7 @@ ms.locfileid: "67140458"
 |-----------|-----------------|-------------|  
 |HttpTraceFileName|此為選用值。 預設值為 ReportServerServiceHTTP_。 如果您想要使用不同的檔案命名慣例 (例如，當您要將記錄檔儲存至集中位置時，若要包含伺服器名稱)，可以指定不同的值。|是|  
 |HTTPTraceSwitches|此為選用值。 如果您指定了此欄位，就可以使用逗號分隔的格式來設定記錄檔中使用的欄位。|否|  
-|Date|活動發生的日期。|否|  
+|日期|活動發生的日期。|否|  
 |Time|活動發生的時間。|否|  
 |ClientIp|存取報表伺服器之用戶端的 IP 位址。|是|  
 |UserName|存取報表伺服器之使用者的名稱。|否|  

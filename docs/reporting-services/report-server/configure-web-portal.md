@@ -1,5 +1,6 @@
 ---
 title: 設定入口網站 | Microsoft Docs
+description: 了解如何設定入口網站應用程式，其可用來檢視報表、管理報表伺服器內容，以及將原生模式報表伺服器的存取權授與使用者。
 ms.date: 05/10/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 962ab17170c69b6225f852f0b625a6cd50fa20d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 52a6055a3b3c79c08622d89b2931a48eedd14d76
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63308395"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548050"
 ---
 # <a name="configure-the-web-portal"></a>設定入口網站
 
-入口網站是一個 Web 前端應用程式，可用來檢視報表、管理報表伺服器內容，以及將原生模式報表伺服器的存取權授與使用者。 如果您在安裝程式中選取 [Install in the default native mode configuration]\(以預設原生模式設定安裝)  選項，入口網站就會與報表伺服器 Web 服務一起安裝在相同的報表伺服器執行個體中，而且進行選擇性設定。 您也可以將入口網站設定為後續安裝工作。 本主題會提供有關下列入口網站設定狀況的資訊：
+入口網站是一個 Web 前端應用程式，可用來檢視報表、管理報表伺服器內容，以及將原生模式報表伺服器的存取權授與使用者。 如果您在安裝程式中選取 [Install in the default native mode configuration]\(以預設原生模式設定安裝)**** 選項，入口網站就會與報表伺服器 Web 服務一起安裝在相同的報表伺服器執行個體中，而且進行選擇性設定。 您也可以將入口網站設定為後續安裝工作。 本主題會提供有關下列入口網站設定狀況的資訊：
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 若要使用入口網站，您必須滿足下列必要條件：
 
@@ -44,11 +45,11 @@ ms.locfileid: "63308395"
 
 1. 啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具，並連接到報表伺服器執行個體。
 
-2. 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 設定工具中，按一下 [入口網站 URL]  開啟設定 URL 的頁面。
+2. 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 設定工具中，按一下 [入口網站 URL] 開啟設定 URL 的頁面。
 
 3. 針對入口網站輸入唯一的虛擬目錄名稱。
 
-4. 按一下 [套用]  。
+4. 按一下 [套用]。
 
 5. 如果您正在使用 [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] 或 Windows Server 2008，可能需要進行其他步驟，才能使用入口網站。 如需詳細資訊，請參閱 [設定原生模式報表伺服器進行本機管理 &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。
 
@@ -76,17 +77,17 @@ ms.locfileid: "63308395"
 
 #### <a name="to-modify-application-title"></a>修改應用程式標題
 
-1. 使用被指派報表伺服器之 [系統管理員]  權限的帳戶來登入。
+1. 使用被指派報表伺服器之 [系統管理員] 權限的帳戶來登入。
 
 2. 開啟 Internet Explorer。
 
-3. 輸入入口網站 URL。 根據預設，它是 https://\<**您的伺服器名稱**>/reports，但如果您將 Reporting Services 安裝成具名執行個體，預設 URL 將為 https://\<**您的伺服器名稱**>/reports\< **_執行個體名稱**>。
+3. 輸入入口網站 URL。 其預設為 https://\<**your-server-name**>/reports，但如已將 Reporting Services 安裝成具名執行個體，則預設的 URL 會是 https://\<**your-server-name**>/reports\<**_instancename**>。
 
-4. 選取 [站台設定]  。
+4. 選取 [站台設定] 。
 
-5. 在 [一般]  索引標籤的 [名稱]  中，將 **SQL Server Reporting Services** 取代成不同的名稱。
+5. 在 [一般] 索引標籤的 [名稱] 中，將 **SQL Server Reporting Services** 取代成不同的名稱。
 
-6. 選取 [套用]  。
+6. 選取 [套用]。
 
 ## <a name="next-steps"></a>後續步驟
 

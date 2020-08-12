@@ -1,5 +1,6 @@
 ---
 title: 以 SharePoint 整合模式啟用和停用 Reporting Services 的 RDL 沙箱功能 | Microsoft Docs
+description: 透過 RDL 沙箱功能，您可偵測及限制租用戶的資源類型使用方式，其中多位租用戶使用報表伺服器的單一 Web 伺服陣列。
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cc2f32dd81e8dd505b6eaa79359ce10c757ea744
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1d86cf9bbf284ad76c7423900c10a74f7ca26faa
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65577764"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767013"
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>以 SharePoint 整合模式啟用和停用 Reporting Services 的 RDL 沙箱功能
 
@@ -65,7 +66,7 @@ RDL (報表定義語言) 沙箱功能可在多個租用戶使用報表伺服器�
 
  下表提供有關組態設定的資訊。 設定會依其出現在組態檔的順序顯示。  
   
-|設定|描述|  
+|設定|說明|  
 |-------------|-----------------|  
 |**MaxExpressionLength**|RDL 運算式中允許的最大字元數。<br /><br /> 預設值：1000|  
 |**MaxResourceSize**|外部資源允許的最大 KB 數。<br /><br /> 預設值：100|  
@@ -158,7 +159,7 @@ RDL (報表定義語言) 沙箱功能可在多個租用戶使用報表伺服器�
   
 ### <a name="working-with-operators-and-new"></a>使用運算子及 New
 
- 依預設，一定會允許 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework 語言運算子，但是 **New**除外。 **New** 運算子是由 **\<Allow>** 項目上的 **AllowNew** 屬性所控制。 其他語言運算子，例如預設集合存取子運算子 **!** 以及像是 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] CInt  .NET Framework 轉換巨集，都一律允許。  
+ 依預設，一定會允許 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework 語言運算子，但是 **New**除外。 **New** 運算子是由 **\<Allow>** 項目上的 **AllowNew** 屬性所控制。 其他語言運算子，例如預設集合存取子運算子 **!** 以及像是 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] CInt .NET Framework 轉換巨集，都一律允許。  
   
  不支援將運算子加入至封鎖清單中，包括自訂運算子。 若要排除某個類型的運算子，您必須執行下列動作：  
   

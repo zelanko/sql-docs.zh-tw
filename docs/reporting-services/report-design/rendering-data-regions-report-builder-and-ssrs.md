@@ -1,5 +1,6 @@
 ---
 title: 轉譯資料區 (報表產生器) | Microsoft Docs
+description: 了解報表產生器中資料區各部分的分頁與轉譯行為。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4f3b2c7d-3669-457f-899b-b758d1db3426
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 06eb5ee05e045a2cb6e902030714ebb2f824becc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9db14d568b96599a114616b011383b6aaf14ea7e
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077010"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462292"
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>轉譯資料區 (報表產生器及 SSRS)
   除了適用於所有報表項目的一般轉譯行為之外，資料區也擁有所遵循的其他分頁與轉譯行為。 資料區域特定的轉譯規則包括如何擴展資料區域；如何轉譯特殊資料格，例如，邊角資料格或標頭資料格；以及如何轉譯由右至左讀取的資料區域。 本主題討論如何轉譯資料區的各個部分。  
@@ -33,7 +34,7 @@ ms.locfileid: "77077010"
  群組的邏輯分頁符號則不會使外部群組標頭分頁。 例如，假設您的報表有一個國家 (地區) 的外部群組，以及一個國家地區的內部群組。 如果在國家地區群組的執行個體之間有邏輯分頁符號，則外部群組 (也就是國家 (地區)) 將會同時出現在報表的兩個頁面上。  
   
 #### <a name="repeated-tablix-headers"></a>重複的 Tablix 標頭  
- 在 [屬性]  窗格中設定 RepeatWith 屬性時，在資料區中沒有變更的項目 (例如資料行標頭) 在轉譯部分資料區的每個頁面上會重複。 例如，如果資料的資料列出現在下一個頁面上，而且有設定 [重複] 屬性，資料行標頭就也會出現在轉譯的頁面上。  
+ 在 [屬性]**** 窗格中設定 RepeatWith 屬性時，在資料區中沒有變更的項目 (例如資料行標頭) 在轉譯部分資料區的每個頁面上會重複。 例如，如果資料的資料列出現在下一個頁面上，而且有設定 [重複] 屬性，資料行標頭就也會出現在轉譯的頁面上。  
   
 ### <a name="tablix-corner"></a>Tablix 邊角  
  左上角稱為 Tablix 邊角。 Tablix 邊角可以包含其中的其他報表項目，但是，如果有將邏輯分頁符號插入到邊角中，系統在轉譯 Tablix 資料區時，則會忽略這些項目。  

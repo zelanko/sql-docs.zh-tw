@@ -1,7 +1,7 @@
 ---
 title: Windows 版 Microsoft ODBC Driver for SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 02/14/2018
+ms.date: 06/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: b10cfc22-6a2c-4707-a456-0dcec317982b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f3aa47d41f347867a0db98b59e0cf5ab9b47c2da
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: bb53e8e44d0f6b9e9f293f6afa5a470e91103a0c
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886315"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681187"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Windows 上適用於 SQL Server 的 Microsoft ODBC 驅動程式
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 是獨立的 ODBC 驅動程式，可提供應用程式開發介面 (API) 以實作 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的標準 ODBC 介面。
 
-Microsoft ODBC Driver for SQL Server 可用來建立新的應用程式。 您也可以升級目前使用較舊 ODBC 驅動程式的舊版應用程式。 ODBC Driver for SQL Server 支援連線至 Azure SQL Database、Azure SQL 資料倉儲、SQL Server 2017、SQL Server 2016、SQL Server 2014、SQL Server 2012、SQL Server 2008 R2、SQL Server 2008 和 SQL Server 2005。  
+Microsoft ODBC Driver for SQL Server 可用來建立新的應用程式。 您也可以升級目前使用較舊 ODBC 驅動程式的舊版應用程式。 ODBC Driver for SQL Server 支援連線到 Azure SQL Database、Azure SQL 資料倉儲和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
 
 ## <a name="summary"></a>摘要
 

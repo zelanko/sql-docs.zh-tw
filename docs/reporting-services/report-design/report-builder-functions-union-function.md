@@ -1,5 +1,6 @@
 ---
 title: Union 函式 (報表產生器) | Microsoft Docs
+description: 了解此函式，其會傳回運算式所指定所有非 Null 值的等位。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e760971e012e5144176484d921570bdee8097497
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a2c53ba51ebce8d0e3cbb78d7a7e8905cb5537bb
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081122"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689493"
 ---
 # <a name="report-builder-functions---union-function"></a>報表產生器函式 - Union 函式
   傳回運算式所指定之所有非 Null 數值的聯集 (在給定範圍中評估)。  

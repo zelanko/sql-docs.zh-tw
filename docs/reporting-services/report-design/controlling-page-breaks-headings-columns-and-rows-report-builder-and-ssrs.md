@@ -1,5 +1,6 @@
 ---
 title: 控制分頁符號、標題、資料行和資料列 (報表產生器) | Microsoft Docs
+description: 在報表產生器中利用頁面長度、資料行、標題和資料列的選項，將資料表、清單或影像的檢視和列印最佳化。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: 4b8fa41f-a727-4f23-8efb-fd9bb0d4cd1d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2199d84efbf16b2f9a21ca48b523215749ffc488
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d3bcce26870ffea199d83f542a5d31bed1452cd1
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082304"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012636"
 ---
 # <a name="controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs"></a>控制分頁符號、標題、資料行和資料列 (報表產生器及 SSRS)
   分頁符號可以將報表分割成不同的頁面進行檢視和列印。 當您預覽報表或將它匯出成不同的檔案格式時，分頁符號會決定內容如何納入報表頁面，以便進行最佳檢視。  
   
- 加入分頁符號也會提升處理大型報表的效能。 已轉譯的頁面會顯示，而其餘頁面則在背景中轉譯。 這可讓您在等待其他頁面可用時，先檢視報表的初始頁面。  
+ 新增分頁符號也會提升處理大型報表的效能。 已轉譯的頁面會顯示，而其餘頁面則在背景中轉譯。 這可讓您在等待其他頁面可用時，先檢視報表的初始頁面。  
   
  分頁符號可以加入至資料表、矩陣、清單、圖表、量測計或影像等報表項目。 您也可以將分頁符號加入至資料表、矩陣或清單中的群組。 分頁符號可以加入至群組之前、之後或之間。 依預設，群組之間的分頁符號不會加入至報表。  
   

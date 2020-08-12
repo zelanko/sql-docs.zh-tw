@@ -1,5 +1,6 @@
 ---
 title: 報表檢視器網頁組件的 SharePoint 網站設定 - SSRS | Microsoft Docs
+description: 了解如何在 SQL Server Reporting Server 的 Report Viewer Web 元件中設定 SharePoint 網站設定。
 ms.date: 11/15/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: jt000
 ms.author: jasontre
-ms.openlocfilehash: 8eadb83c35f69dc2a1dba108e83df93bf614be3e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8673f824762a9c7f6a28cd1232e742aac4428b23
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256804"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764904"
 ---
 # <a name="sharepoint-site-settings-for-the-report-viewer-web-part---reporting-services"></a>報表檢視器網頁組件的 SharePoint 網站設定 - Reporting Services
 
@@ -24,11 +25,11 @@ ms.locfileid: "77256804"
 
 若要存取網站設定：
 
-1. 在 SharePoint 網站中，選取左上方的**齒輪**圖示，然後選取 [網站設定]  。
+1. 在 SharePoint 網站中，選取左上方的**齒輪**圖示，然後選取 [網站設定]。
 
     ![從齒輪圖示開啟網站設定。](media/sharepoint-site-settings.png)
 
-2. 在 [Reporting Services]  網站設定群組中，按一下 [Report Viewer Web Part Settings] \(報表檢視器網頁組件設定)  。
+2. 在 [Reporting Services] 網站設定群組中，按一下 [Report Viewer Web Part Settings] \(報表檢視器網頁組件設定)。
 
     > [!NOTE]
     > 您也可以直接巡覽至 `<site>/_layouts/15/ReportViewerWebPart/ReportViewerWebPartSettings.aspx` 來到達網站設定

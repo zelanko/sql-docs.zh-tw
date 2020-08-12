@@ -1,5 +1,6 @@
 ---
 title: 上傳檔案到資料夾 | Microsoft Docs
+description: 了解當從檔案系統上傳不同的檔案類型，並將其當成受控項目儲存在 Reporting Services 報表伺服器資料庫時，會發生什麼事。
 ms.date: 06/17/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d93840b2b1b7354238ccae12ba3a540889038fb2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 94de4754811e1cb35c819b9cf8f4398b9e8c8634
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67228679"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547850"
 ---
 # <a name="upload-files-to-a-folder"></a>上傳檔案到資料夾
   您可以從檔案系統上傳檔案，並將其當成 Managed 項目儲存在報表伺服器資料庫中。 上傳檔案會有何狀況取決於檔案類型。  

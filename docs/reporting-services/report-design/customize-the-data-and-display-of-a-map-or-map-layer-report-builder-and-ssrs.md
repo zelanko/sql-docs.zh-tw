@@ -1,5 +1,6 @@
 ---
 title: 自訂地圖或地圖圖層的資料和顯示 (報表產生器) | Microsoft Docs
+description: 改善資料的使用者體驗，並在報表產生器中顯示圖例、色彩、標籤與解析度的變更。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -21,12 +22,12 @@ f1_keywords:
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 53b1495299dd3a71843ceaa1ad3a43464c374210
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 671ea97546b8b2184ee6d105da2990d9f736d9e1
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080525"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462252"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>自訂地圖或地圖圖層的資料和顯示 (報表產生器及 SSRS)
   使用精靈將地圖或地圖圖層加入至 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表之後，您可能會想要變更地圖在報表中的外觀。 您可以考慮下列構想來進行改善：  
@@ -67,7 +68,7 @@ ms.locfileid: "77080525"
   
 -   指定陰影以提供深度的幻影。  
   
- 若要變更這些選項，以滑鼠右鍵按一下地圖、按一下 [地圖]  ，然後變更這些選項。  
+ 若要變更這些選項，以滑鼠右鍵按一下地圖、按一下 [地圖]，然後變更這些選項。  
   
 ##  <a name="change-options-for-the-viewport"></a><a name="Viewport"></a> 變更檢視區的選項  
  使用檢視區選項來變更出現在報表中之地圖的檢視。  
@@ -110,18 +111,18 @@ ms.locfileid: "77080525"
   
 -   圖層繪製順序。 您看到圖層在 [地圖] 窗格中列出的順序，就是圖層的反向繪製順序。 系統會先繪製清單中的最後一個圖層。 例如，如果您希望點圖層上的點出現在多邊形圖層中的多邊形上方，點圖層應該是第一個，而多邊形圖層則是第二個。  
   
--   圖層可見性，包括透明度。 若要讓某個圖層透過另一個圖層顯示，請將透明度設定為高於 0 的值。 值為 100% 時，表示看不到圖層。 若要處理個別的圖層，您可以使用 [地圖] 窗格中的 [可見度]  圖示，輕鬆地個別顯示或隱藏每個圖層。 您也可以設定縮放層級選項來指定根據縮放層級顯示或隱藏圖層上之地圖元素的時機。  
+-   圖層可見性，包括透明度。 若要讓某個圖層透過另一個圖層顯示，請將透明度設定為高於 0 的值。 值為 100% 時，表示看不到圖層。 若要處理個別的圖層，您可以使用 [地圖] 窗格中的 [可見度]**** 圖示，輕鬆地個別顯示或隱藏每個圖層。 您也可以設定縮放層級選項來指定根據縮放層級顯示或隱藏圖層上之地圖元素的時機。  
   
 -   針對目前的檢視區置中與縮放層級加入 Bing 地圖底圖圖層。 您不需要為圖格圖層指定地理座標。 當座標系統為 [地理]、投射為 [Mercator]、Bing Map 伺服器可以使用，而且已經將報表伺服器設定為支援此功能時，系統會自動載入圖格以符合檢視區。 您可以針對每個報告指定是否要使用安全連線來擷取圖格。  
   
  如需圖層的詳細資訊，請參閱[加入、變更或刪除地圖或地圖圖層 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
 ##  <a name="change-data-grouping-for-the-layer"></a><a name="DataGrouping"></a> 變更圖層的資料群組  
- 您可以自訂形狀空間資料的彙總方式。 若要設定圖層的群組屬性，請選取 [地圖] 窗格中的圖層，在圖層的 [屬性] 窗格中按一下 [群組]  ，然後按一下省略符號 (...) 開啟 [群組屬性]。 在這個對話方塊中，您可以指定群組運算式、建立群組變數，以及篩選用於群組的資料。  
+ 您可以自訂形狀空間資料的彙總方式。 若要設定圖層的群組屬性，請選取 [地圖] 窗格中的圖層，在圖層的 [屬性] 窗格中按一下 [群組]，然後按一下省略符號 (...) 開啟 [群組屬性]。 在這個對話方塊中，您可以指定群組運算式、建立群組變數，以及篩選用於群組的資料。  
   
  群組運算式會指定與空間資料具有關聯性的分析資料如何針對圖層上的每個地圖元素進行彙總。 根據預設，群組運算式是針對空間資料與分析資料之間的關聯性指定的一組符合欄位組。 例如，對於顯示國家或地區之城市位置和人口數多寡的泡泡地圖，符合欄位包含城市名稱 [City] 和地區名稱 [Region]，因為可能會有多個城市擁有相同的名稱。 對應的群組運算式包含兩個欄位：[City] 和 [Region]。  
   
- 如需詳細資訊，請參閱 [Map Tips: How To Import Shapefiles Into SQL Server and Aggregate Spatial Data](https://go.microsoft.com/fwlink/?LinkID=214991)(地圖提示：如何將形狀檔匯入 SQL Server 及彙總空間資料中)。  
+ 如需詳細資訊，請參閱 [Map Tips:How To Import Shapefiles Into SQL Server and Aggregate Spatial Data](https://go.microsoft.com/fwlink/?LinkID=214991) (地圖提示：如何將形狀檔匯入 SQL Server 及彙總空間資料中)。  
   
 ##  <a name="change-options-for-the-map-elements-on-the-layer"></a><a name="MapElements"></a> 變更圖層上地圖元素的選項  
  在以空間資料為基礎的圖層上，地圖元素為點、線條或多邊形。 您可以為地圖元素設定下列選項。 不會是否內嵌地圖元素，這些選項都會套用到圖層上的所有地圖元素：  

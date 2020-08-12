@@ -1,5 +1,6 @@
 ---
 title: 將 HTML 新增至報表 (報表產生器) | Microsoft Docs
+description: 了解如何在報表產生器中使用預留位置，從資料集的欄位匯入 HTML，以用於報表中。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 30bd631a-f774-48e7-a13a-b6c2eb54d9bb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e18753c105eb63343bf57977f8ced3a0cf0fe9e6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7b07521bb6a3cf293761342af6d7bdcbec728959
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081629"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255645"
 ---
 # <a name="add-html-into-a-report-report-builder-and-ssrs"></a>將 HTML 加入至報表 (報表產生器及 SSRS)
   您可以使用預留位置，從資料集的欄位匯入 HTML，以便用於報表中。 根據預設，預留位置代表純文字，所以您必須將預留位置標記類型變更為 HTML。 如需詳細資訊，請參閱[將 HTML 匯入至報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md)。  
@@ -31,11 +32,11 @@ ms.locfileid: "77081629"
   
 3.  將 HTML 欄位從資料集拖曳至文字方塊中。 如此就會針對您的欄位建立預留位置。  
   
-4.  以滑鼠右鍵按一下預留位置，然後按一下 [預留位置屬性]  。  
+4.  以滑鼠右鍵按一下預留位置，然後按一下 [預留位置屬性]。  
   
 5.  在 **[一般]** 索引標籤上，確認 **[值]** 方塊包含評估成您在步驟 3 中放置之欄位的運算式。  
   
-6.  按一下 [HTML - 將 HTML 標記解譯為樣式]  。 這樣就會讓欄位評估成 HTML。  
+6.  按一下 [HTML - 將 HTML 標記解譯為樣式]。 這樣就會讓欄位評估成 HTML。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

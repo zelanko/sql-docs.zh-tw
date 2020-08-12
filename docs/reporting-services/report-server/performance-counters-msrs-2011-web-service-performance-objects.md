@@ -1,5 +1,6 @@
 ---
 title: 效能計數器 MSRS 2011 Web Service、效能物件 | Microsoft Docs
+description: 了解 MSRS 2011 Web 服務和 MSRS 2011 Windows 服務效能物件的效能計數器。
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f8dbafaede198c82b3e41625d3e670afd980c57a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 21975c380bc948c9f8a514da40a42fd1f422c125
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68893456"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545530"
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>效能計數器 MSRS 2011 Web Service、效能物件
   本主題描述 **MSRS 2011 Web Service** 和 **MSRS 2011 Windows Service** 效能物件的效能計數器。 這些物件是 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 原生模式部署的一部分。  
@@ -46,7 +47,7 @@ ms.locfileid: "68893456"
   
  下表將列出 **MSRS 2011 Web Service** 效能物件所包含的計數器。  
   
-|計數器|描述|  
+|計數器|說明|  
 |-------------|-----------------|  
 |**Active Sessions**|使用中的工作階段數目。 此計數器提供從報表執行產生之所有瀏覽器工作階段的累積計數，不管這些工作階段是否仍然使用中。<br /><br /> 隨著工作階段記錄移除，此計數器會遞減。 根據預設，工作階段會在沒有活動的十分鐘後移除。|  
 |**Cache Hits/Sec**|快取報表每秒的要求數目。 這些要求是針對重新轉譯的報表，而不是針對直接從快取處理的報表 (請參閱本主題稍後的 **Total Cache Hits** )。|  
@@ -76,7 +77,7 @@ ms.locfileid: "68893456"
   
  下表將列出 **MSRS 2011 Windows Service** 效能物件所包含的計數器。  
   
-|計數器|描述|  
+|計數器|說明|  
 |-------------|-----------------|  
 |**Active Sessions**|儲存在報表伺服器資料庫中之使用中工作階段的數目。 此計數器提供從報表訂閱產生之所有可使用瀏覽器工作階段的累積計數，不管這些工作階段是否仍然使用中。|  
 |**Cache Flushes/Sec**|每秒快取排清的數目。|  

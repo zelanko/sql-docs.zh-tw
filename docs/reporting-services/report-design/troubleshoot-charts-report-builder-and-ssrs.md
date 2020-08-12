@@ -1,5 +1,6 @@
 ---
 title: 針對圖表進行疑難排解 (報表產生器) | Microsoft Docs
+description: 沿著值軸使用具有數值資料類型的欄位，而不是格式化數值，進而顯示數值。
 ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3a327ffa-3b69-40d6-8015-cc01cfae9161
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 96579c7dadc33c9d8dd74e823cee9cc5ef8e3367
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 45894eca20fa5762eb4f2e02496e79bd327c8fb3
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078452"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689463"
 ---
 # <a name="troubleshoot-charts-report-builder-and-ssrs"></a>疑難排解圖表 (報表產生器及 SSRS)
   使用圖表時，這些問題很有協助。  

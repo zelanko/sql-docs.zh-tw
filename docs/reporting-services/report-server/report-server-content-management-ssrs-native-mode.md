@@ -1,5 +1,6 @@
 ---
 title: 報表伺服器內容管理 (原生模式) | Microsoft Docs
+description: 了解 Reporting Services 內容管理的入口網站和新入口網站體驗。 透過屬性和安全性設定來管理項目。
 ms.date: 06/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 78fb75acfefce3a1f0c8cb28ea286a028463a56b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 12832f724da36f6359f34fd2fd950ba804619c45
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286382"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547244"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>報表伺服器內容管理 (SSRS 原生模式)
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，內容管理是指管理報表伺服器項目。 所有項目都可以透過屬性和安全性設定單獨進行管理， 而任何一個項目都可以移至報表伺服器資料夾命名空間內的不同位置。 若要有效管理項目，您必須了解內容管理員所執行的工作。 從 SQL Server 2016 Reporting Services 或更新版本 (SSRS) CTP 3.2 開始，[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 入口網站可供使用。 本文會探討入口網站和新的入口網站體驗。  
@@ -42,7 +43,7 @@ ms.locfileid: "79286382"
   
 -   藉由建立報表處理排程，並指定何者可依需求執行以及何者要從快取載入，即可平衡伺服器的報表處理負荷。  
   
--   使用兩個預先定義的角色提供執行管理工作的權限： **系統管理員** 和 **內容管理員**。 您必須被指派至這兩種角色，才能有效管理報表伺服器內容。  
+-   使用預先定義的角色提供權限以執行管理工作：**系統管理員**和**內容管理員**。 您必須被指派至這兩種角色，才能有效管理報表伺服器內容。  
   
 用於管理報表伺服器內容的工具包括 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 與入口網站。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 可讓您設定預設值和啟用功能。 入口網站是用來將報表伺服器項目與作業的存取權授與使用者、檢視和使用報表與其他內容類型，以及檢視和使用所有共用項目與報表散發功能。 入口網站是更新的網站，允許使用大多數已過時的報表管理員功能。 如需詳細資訊，請參閱 [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)。  
   

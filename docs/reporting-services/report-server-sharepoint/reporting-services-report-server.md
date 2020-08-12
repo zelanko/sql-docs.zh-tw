@@ -1,5 +1,6 @@
 ---
 title: 比較原生報表伺服器和 SharePoint Reporting Services 報表伺服器 | Microsoft Docs
+description: 了解 SQL Server Reporting Services 安裝的中央部分，其由處理引擎與延伸模組所組成，以新增功能。
 ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f7a75f578c025386966fc4fc7a15c41e7e44e0a7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b884782c7ae1ad7898a2d2ef04de7de18b7c73df
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67038020"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764795"
 ---
 # <a name="comparing-native-and-sharepoint-reporting-services-report-servers"></a>比較原生報表伺服器和 SharePoint Reporting Services 報表伺服器
 

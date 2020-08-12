@@ -1,5 +1,6 @@
 ---
 title: 格式化數字和日期 (報表產生器) | Microsoft Docs
+description: 了解如何從報表產生器資料區 [屬性] 對話方塊的 [數字] 頁面選取一種格式，藉以設定資料區中的數字和日期格式。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,17 +18,17 @@ f1_keywords:
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: db780abef8f2d0078ce398e2ab0d30f29ac82a6b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 81a6c4e397ffba96af45a59a3ab26edaafeb05f4
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079816"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255481"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>格式化數字和日期 (報表產生器及 SSRS)
   您可以從對應資料區之 **[屬性]** 對話方塊的 **[數字]** 頁面選取一種格式，藉以格式化資料區中的數字和日期。  
   
- 若要在文字方塊報表項目中指定格式字串，您需要選取要格式化的項目，按一下滑鼠右鍵，選取 **[文字方塊屬性]** ，然後按一下 **[數字]** 。 您可以使用相同的方式格式化資料表或矩陣資料區中的個別資料格，因為資料表或矩陣資料區中的資料格為個別的文字方塊。  
+ 若要在文字方塊報表項目中指定格式字串，您需要選取要格式化的項目，按一下滑鼠右鍵，選取 **[文字方塊屬性]**，然後按一下 **[數字]**。 您可以使用相同的方式格式化資料表或矩陣資料區中的個別資料格，因為資料表或矩陣資料區中的資料格為個別的文字方塊。  
   
  圖表資料區通常會顯示類別目錄 (x) 軸上的日期，以及值 (y) 軸上的值。 若要指定圖表中的格式，請以滑鼠右鍵按一下軸，然後選取 **[軸屬性]** 。 在值軸上，您僅能指定數字的格式。 如需詳細資訊，請參閱[格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)。  
   
@@ -52,7 +53,7 @@ ms.locfileid: "77079816"
   
 -   如果您要在相同的文字方塊中格式化數字和字串的混合時，請考慮使用預留位置來分別格式化數字與其餘文字。 如需詳細資訊，請參閱 [格式化文字和預留位置 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)(建立發票和表單的清單)。 如果在文字方塊上針對 Format 屬性指定的格式字串無效，則會略過該格式字串。 如果在圖表或量測計上針對 Format 屬性指定的格式字串無效，您所指定的格式字串會解譯為字串，而且不會套用該格式。  
   
--   如果您選取 **[類別目錄]** 底下的 **[貨幣]** ，並核取 **[值的顯示單位]** ，您可以選取 **[千]** 、 **[百萬]** 或 **[十億]** 來使用財務格式顯示數值。 例如，如果欄位值為 1,789,905,394，而且您選取 **[十億]** 並指定 2 位小數位數，顯示在報表中的值為 1.78。  
+-   如果您選取 **[類別目錄]** 底下的 **[貨幣]** ，並核取 **[值的顯示單位]**，您可以選取 **[千]**、 **[百萬]** 或 **[十億]** 來使用財務格式顯示數值。 例如，如果欄位值為 1,789,905,394，而且您選取 **[十億]** 並指定 2 位小數位數，顯示在報表中的值為 1.78。  
   
 ## <a name="see-also"></a>另請參閱  
  [格式化文字和預留位置 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   

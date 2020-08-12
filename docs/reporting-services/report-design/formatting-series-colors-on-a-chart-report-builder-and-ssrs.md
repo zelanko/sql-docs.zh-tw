@@ -1,5 +1,6 @@
 ---
 title: 設定圖表上數列色彩的格式 (報表產生器) | Microsoft Docs
+description: 了解如何為圖表使用多種內建調色盤，或在報表產生器中定義您自己設計的自訂調色盤。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: fe541501-cac5-47b1-b95f-c410db789190
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f1d56ecf79c427c885814e87437264ca23c13e18
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a8e099cb6660665ef36e287797e46c432615f1bf
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079515"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880275"
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>設定圖表上數列色彩的格式 (報表產生器及 SSRS)
   Reporting Services 為圖表提供數個內建的調色盤，或者您也可以定義自訂的調色盤。 依預設，圖表會使用內建的 **Pacific** 調色盤來填滿每個數列。 這些色彩也會出現在圖例中。 在圖表中加入多個序列時，圖表會以調色盤定義色彩的順序為序列指派色彩。  
@@ -33,7 +34,7 @@ ms.locfileid: "77079515"
 ## <a name="using-built-in-palettes"></a>使用內建調色盤  
  Reporting Services 提供預先定義的內建調色盤清單，可用來為圖表上的序列定義色彩集。 所有內建調色盤都包含 10 到 16 個色彩值。 您不能擴充內建調色盤來加入其他色彩，所以如果需要超過 16 種色彩，就必須定義自訂的調色盤。  
   
- 如果您要列印報表，請考慮使用 [灰階]  調色盤。 這個調色盤會使用黑白色彩來表示圖表中的每個序列。  
+ 如果您要列印報表，請考慮使用 [灰階] 調色盤。 這個調色盤會使用黑白色彩來表示圖表中的每個序列。  
   
  在舊版的 Reporting Services 中是使用名為「預設」的調色盤做為預設的圖表調色盤。 這個調色盤仍維持相同名稱以求一致性。 圖表將使用 [預設] 調色盤進行無接縫的升級，但在升級之後，您可以考慮加以變更。  
   

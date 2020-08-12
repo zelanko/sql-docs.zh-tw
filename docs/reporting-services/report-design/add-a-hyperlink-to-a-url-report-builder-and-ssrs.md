@@ -1,5 +1,6 @@
 ---
 title: 將超連結新增至 URL (報表產生器) | Microsoft Docs
+description: 探索如何將文字方塊、影像、圖表和量測計其超連結動作新增至報表產生器中的編頁報表。
 ms.date: 09/07/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 85f3b3cabf180d85da9c348a7ec2cf9062b3a4c6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2ba42d27d3aaf798779b8cb9ce6b55b0a5a017d7
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080724"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255711"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>將超連結加入到 URL (報表產生器及 SSRS)
 了解如何將文字方塊、影像、圖表和量測計的超連結動作加入 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  分頁報表。 這些連結可以移至其他報表、移至報表中的書籤，或是移至靜態或動態 URL。 
@@ -35,19 +36,19 @@ ms.locfileid: "77080724"
   
 1.  在報表設計檢視中，以滑鼠右鍵按一下要加入連結的文字方塊、影像或圖表，然後按一下 **[屬性]** 。  
   
-2.  在 [屬性] 對話方塊中，按一下 [動作]  索引標籤。請繼續閱讀以了解可用選項的相關資訊。  
+2.  在 [屬性] 對話方塊中，按一下 [動作] 索引標籤。請繼續閱讀以了解可用選項的相關資訊。  
 
 ## <a name="-add-drillthrough-to-another-report"></a>... 加入其他報表的鑽研
 
-1. 在 [動作]  索引標籤上，選取 [移至報表]  。 
+1. 在 [動作] 索引標籤上，選取 [移至報表]。 
 
 2. 指定您要使用的目標報表和參數。 參數名稱必須符合針對目標報表定義的參數。 
 
-3. 使用 [新增]  和 [刪除]  按鈕來新增和移除參數，並使用向上和向下箭號來排列參數清單的順序。
+3. 使用 [新增] 和 [刪除] 按鈕來新增和移除參數，並使用向上和向下箭號來排列參數清單的順序。
 
 4.  在鑽研報表中，為具名參數輸入或選取要傳遞的 **值** 。 請按一下 [運算式]\(fx) 按鈕來編輯運算式。
 
-5. 選取 [省略]  可防止參數執行。 根據預設，不會勾選也不會啟用此核取方塊。 若要選取此核取方塊，請按一下 [運算式]\(fx) 按鈕，然後輸入 True 或建立一個運算式。 當您按一下 [運算式] 對話方塊中的 [確定]  時，就會選取此核取方塊。
+5. 選取 [省略] 可防止參數執行。 根據預設，不會勾選也不會啟用此核取方塊。 若要選取此核取方塊，請按一下 [運算式]\(fx) 按鈕，然後輸入 True 或建立一個運算式。 當您按一下 [運算式] 對話方塊中的 [確定] 時，就會選取此核取方塊。
   
    如需詳細資訊，請參閱 [在報表上加入鑽研動作](../../reporting-services/report-design/add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md) 。 
    
@@ -57,7 +58,7 @@ ms.locfileid: "77080724"
 
 您可以連結到指向目前報表中某個位置的書籤。 若要連結到書籤，您必須先設定報表項目的 **Bookmark** 屬性。 若要設定 **Bookmark** 屬性，請選取報表項目，然後在 [屬性] 窗格中鍵入書籤識別碼的值或運算式，例如 SalesChart 或 5TopSales。
 
-1. 在 [動作]  索引標籤上，選取 [移至書籤]  。 
+1. 在 [動作] 索引標籤上，選取 [移至書籤]。 
 
 2. 輸入或選取報表要跳至的目的地書籤識別碼。 按一下 [運算式]\(fx) 按鈕來變更運算式。 
 
@@ -69,7 +70,7 @@ ms.locfileid: "77080724"
 
 ## <a name="-add-a-hyperlink"></a>... 加入超連結 
   
-1. 在 [動作]  索引標籤上，選取 [移至 URL]  。 此對話方塊中會出現這個選項的其他區段。  
+1. 在 [動作] 索引標籤上，選取 [移至 URL]。 此對話方塊中會出現這個選項的其他區段。  
   
 4.  在 **[選取 URL]** 中，輸入或選取 URL 或是評估為 URL 的運算式，或者按下拉式箭號，再按一下含有 URL 之欄位的名稱。 
 

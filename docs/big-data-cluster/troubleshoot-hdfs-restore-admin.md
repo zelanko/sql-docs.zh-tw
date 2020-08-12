@@ -1,5 +1,5 @@
 ---
-title: 還原 HDFS 管理員權限
+title: 還原 HDFS 權限
 titleSuffix: SQL Server Big Data Cluster
 description: 還原 HDFS 管理員權限。
 author: MikeRayMSFT
@@ -9,14 +9,14 @@ ms.date: 04/21/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6fb8c7c53c6edf4a02649f256ac6aa6d7080fdf5
-ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
+ms.openlocfilehash: c6d09921074ca2f2e386535baff5060620a7a3c8
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82108692"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669380"
 ---
-# <a name="restore-hdfs-admin-rights"></a>還原 HDFS 管理員權限
+# <a name="restore-hdfs-permissions"></a>還原 HDFS 權限
 
 HDFS 存取控制清單 (ACL) 修改可能已影響 HDFS 中的 `/system` 和 `/tmp` 資料夾。 最有可能的 ACL 修改原因是使用者手動操作資料夾 ACL。 系統不支援直接修改 /system 資料夾與 /tmp/logs 資料夾中的權限。
 

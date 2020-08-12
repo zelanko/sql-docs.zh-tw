@@ -1,5 +1,6 @@
 ---
 title: RowNumber 函式 (報表產生器) | Microsoft Docs
+description: 在報表產生器中使用 RowNumber 函數，以傳回指定範圍中資料列數目的執行計數。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9d718ba8-d323-49fb-aac8-e7013a117b75
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7af8523acb3bf531589a04268de1139d8bcefd35
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 379cdfb60be4eb36fb819693ae0c5f04f4adf6ae
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081166"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255561"
 ---
 # <a name="report-builder-functions---rownumber-function"></a>報表產生器函式 - RowNumber 函式
   傳回指定範圍中資料列數的執行計數。  

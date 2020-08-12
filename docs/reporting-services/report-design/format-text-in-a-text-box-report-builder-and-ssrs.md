@@ -1,5 +1,6 @@
 ---
 title: 設定文字方塊中文字的格式 (報表產生器) | Microsoft Docs
+description: 探索如何格式化文字方塊內的文字，以及如何混合預留位置文字與靜態文字，以在報表產生器中建立合併列印或文字範本。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: df0794b5-96b0-4034-bd17-1be7f31e29db
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f7448ee783e1e4a747942ef774a9106de09487fe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5c1ea82680da039b9f38c7a3c308fd07bfa1cd89
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079965"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84778900"
 ---
 # <a name="format-text-in-a-text-box-report-builder-and-ssrs"></a>格式化文字方塊中的文字 (報表產生器及 SSRS)
   您可以在文件方塊中，單獨地對文字任何一部分進行格式化，並且在同一個文字方塊中，混合使用預留文字與靜態文字。 混合格式與加入預留位置文字的功能可以讓您針對報表中的文字建立合併列印或範本。 您可以使用預留位置來個別定義和格式化任何運算式。  
@@ -27,9 +28,9 @@ ms.locfileid: "77079965"
   
 2.  在文字方塊內部，選取您想要格式化的文字。  
   
-3.  以滑鼠右鍵按一下選取的文字，然後按一下 [文字屬性]  。  
+3.  以滑鼠右鍵按一下選取的文字，然後按一下 [文字屬性]。  
   
-4.  設定格式選項。 例如，在 [一般]  索引標籤上：  
+4.  設定格式選項。 例如，在 [一般] 索引標籤上：  
   
     -   **工具提示** ：輸入文字或評估為工具提示的運算式。 當使用者將滑鼠指標停留在報表的項目上方時，便會出現工具提示。  
   
@@ -39,7 +40,7 @@ ms.locfileid: "77079965"
   
          **HTML**  將選取的文字顯示為 HTML。 如果預留位置的運算式值包含有效的 HTML 標記，這些標記將會轉譯為 HTML。 如需詳細資訊，請參閱[將 HTML 匯入至報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md)。  
   
-5.  按一下 [確定]  。  
+5.  按一下 [確定]。  
   
 6.  針對您想要格式化的其餘文字，重複步驟 2 至 5。  
   
@@ -53,11 +54,11 @@ ms.locfileid: "77079965"
   
 4.  將欄位從資料集拖曳至文字方塊中。 如此就會針對您的欄位建立預留位置。  
   
-5.  從基本格式中選取預留位置文字，然後在 [主資料夾]  索引標籤的 [字型]  群組中按一下其中一個格式選項。例如，按一下 [粗體]  按鈕。  
+5.  從基本格式中選取預留位置文字，然後在 [主資料夾] 索引標籤的 [字型] 群組中按一下其中一個格式選項。例如，按一下 [粗體] 按鈕。  
   
-     如需其他格式選項，以滑鼠右鍵按一下預留位置文字，然後按一下 [預留位置屬性]  。  
+     如需其他格式選項，以滑鼠右鍵按一下預留位置文字，然後按一下 [預留位置屬性]。  
   
-6.  按一下 [確定]  。 在 [報表設計] 檢視中，文字方塊中應該包含 "**My Field**: [*FieldName*]"，其中 *FieldName* 是您欄位的名稱。  
+6.  按一下 [確定]。 在 [報表設計] 檢視中，文字方塊中應該包含 "**My Field**: [*FieldName*]"，其中 *FieldName* 是您欄位的名稱。  
   
 7.  按一下 **[執行]** 。  
   

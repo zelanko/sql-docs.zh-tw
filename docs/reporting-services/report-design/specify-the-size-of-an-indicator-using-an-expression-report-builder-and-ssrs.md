@@ -1,5 +1,6 @@
 ---
 title: 使用運算式指定指標的大小 (報表產生器) | Microsoft Docs
+description: 探索在報表產生器中除了色彩、方向和形狀之外，如何使用大小來取得最佳的指標視覺效果。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ab0b86f1-4882-4258-a2b6-c612faecfa4b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ceaff572ac7641de9b7f184fa58baf8d74790677
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b699e22bfe392ae04cbfb504f09e3faba48b08b9
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080919"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681587"
 ---
 # <a name="specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs"></a>使用運算式指定指標的大小 (報表產生器及 SSRS)
   除了色彩、方向和形狀之外，您還可以使用大小，將指標的視覺影像最大化。  
@@ -25,7 +26,7 @@ ms.locfileid: "77080919"
 > [!NOTE]  
 >  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，您可以使用 **[屬性]** 視窗來設定成員屬性。 如果 **[屬性]** 視窗未開啟，請按下 F4 鍵。  
   
- [屬性]  窗格可存取指標之 IndicatorStates 集合的屬性。 您可以使用運算式設定 IndicatorStates 集合成員的 ScaleFactor 屬性，以便將圖示設定為不同的大小。 如需詳細資訊，請參閱[運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)。  
+ [屬性] 窗格可存取指標之 IndicatorStates 集合的屬性。 您可以使用運算式設定 IndicatorStates 集合成員的 ScaleFactor 屬性，以便將圖示設定為不同的大小。 如需詳細資訊，請參閱[運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)。  
   
  此程序中所使用的運算式也用來產生不同指標大小的報表，如 [指標 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)。  
   
@@ -38,13 +39,13 @@ ms.locfileid: "77080919"
   
 2.  在 [屬性] 窗格中，找出 IndicatorStates 屬性。  
   
-     如果 [屬性] 窗格是依類別目錄排列，您將會在 [狀態]  類別目錄中找到 IndicatorStates。  
+     如果 [屬性] 窗格是依類別目錄排列，您將會在 [狀態] 類別目錄中找到 IndicatorStates。  
   
 3.  按一下 IndicatorStates 旁的省略符號 **(...)** 按鈕。 **[IndicatorState 集合編輯器]** 對話方塊隨即開啟。  
   
      選取集合的所有成員。  
   
-4.  在 [複選屬性]  清單中，按一下 ScaleFactor 旁的向下箭頭，然後按一下 [運算式]  。  
+4.  在 [複選屬性] 清單中，按一下 ScaleFactor 旁的向下箭頭，然後按一下 [運算式]。  
   
 5.  在 **[運算式]** 對話方塊中，撰寫運算式。  
   

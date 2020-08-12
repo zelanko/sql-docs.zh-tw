@@ -1,5 +1,6 @@
 ---
 title: 頁面配置和轉譯 (報表產生器) | Microsoft Docs
+description: 在報表產生器中，使用頁面配置、分頁符號及紙張大小的轉譯延伸模組來設計或改善分頁報表。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ee04e2cef1f4f4681b42ff8ffb4ce549aeae624d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ef2d28282a1fd787585f401e3b532f104cba5e2c
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082454"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012696"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>頁面配置和轉譯 (報表產生器及 SSRS)
 請閱讀分頁報表的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 轉譯延伸模組，確定報表就是您要的外觀 (包括頁面配置、分頁符號和頁面大小)。 
 
  當您在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表管理員或是報表產生器或報表設計師的預覽窗格中檢視報表時，報表會先透過 HTML 轉譯器進行轉譯。 接著，您可以將報表匯出為不同的格式，例如 Excel 或逗點分隔檔 (CSV)。 然後，匯出的報表可以在 Excel 中進行進一步分析，或是當成可以匯入與使用 CSV 檔案之應用程式的資料來源使用。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含一組轉譯器，可將報表輸出成不同的格式。 轉譯報表時，每個轉譯器都有套用規則。 當您將報表匯出為不同的檔案格式 (特別是針對轉譯器，例如，根據實際頁面大小使用分頁的 Adobe Acrobat (PDF) 轉譯器) 時，您可能需要變更報表的配置，讓匯出的報表在套用轉譯規則之後的外觀和列印都正確無誤。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含一組轉譯器，可將報表輸出成不同的格式。 轉譯報表時，每個轉譯器都會套用規則。 當您將報表匯出為不同的檔案格式 (特別是針對轉譯器，例如，根據實際頁面大小使用分頁的 Adobe Acrobat (PDF) 轉譯器) 時，您可能需要變更報表的配置，讓匯出的報表在套用轉譯規則之後的外觀和列印都正確無誤。  
   
  讓匯出的報表得到最佳效果通常是一個反覆的程序。您會在報表產生器或報表設計師中撰寫並預覽報表、將報表匯出至慣用的格式、檢閱匯出的報表，然後針對報表進行變更。  
     
@@ -45,7 +46,7 @@ ms.locfileid: "77082454"
  報表可以合併多個頁面，每一個頁面上都有重複的頁首和頁尾。 報表可以包含類似影像和線條的圖形元素，也可以有多種字型、色彩和樣式 (可以根據運算式)。  
   
 ##  <a name="report-sections"></a><a name="ReportSections"></a> 報表區段  
- 報表是由三個主要區段所組成：選擇性頁首  、選擇性頁尾  和報表主體。 報表  頁首和頁尾不是報表的個別區段，而是由放置於報表主體頂端和底部的報表項目所組成。 頁首和頁尾會在每個報表頁面的上方和底部重複相同的內容。 您可以將影像、文字方塊和線條放在頁首和頁尾中。 您也可以將所有類型的報表項目都放在報表主體中。  
+ 報表是由三個主要區段所組成：選擇性頁首、選擇性頁尾和報表主體。 報表** 頁首和頁尾不是報表的個別區段，而是由放置於報表主體頂端和底部的報表項目所組成。 頁首和頁尾會在每個報表頁面的上方和底部重複相同的內容。 您可以將影像、文字方塊和線條放在頁首和頁尾中。 您也可以將所有類型的報表項目都放在報表主體中。  
   
  您可以在報表項目上設定屬性，即可一開始在頁面上隱藏或顯示這些項目。 您可以在資料列或資料行或是資料區的群組上設定可見性屬性，並提供切換按鈕讓使用者以互動方式顯示或隱藏報表資料。 您可以使用運算式 (包括了根據報表參數的運算式) 來設定可見性或初始可見性。  
   

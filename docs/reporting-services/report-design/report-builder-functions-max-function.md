@@ -1,5 +1,6 @@
 ---
 title: Max 函式 (報表產生器) | Microsoft Docs
+description: 了解 Max 函式，其可傳回報表產生器中運算式所指定所有非 Null 數值的最大值。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 61c4d6ff-6435-456a-9cbd-5113d2113e8a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5546cf4759f6e7cc6f1c659425ff783901ca9ffd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b5e94652a48eace778636335b3270046db4f1237
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081206"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681227"
 ---
 # <a name="report-builder-functions---max-function"></a>報表產生器函式 - Max 函式
   傳回運算式指定的所有非 Null 數值的最大值 (在給定範圍的內容中)。  

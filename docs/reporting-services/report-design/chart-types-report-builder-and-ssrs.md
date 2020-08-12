@@ -1,5 +1,6 @@
 ---
 title: 圖表類型 (報表產生器) | Microsoft Docs
+description: 從唯一的圖表特性中選擇，以協助將資料集視覺化，並協助在報表產生器中選擇適當的圖表類型。
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b2d1d58a5a37078021e8ef6c30ed387fe1f2c406
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8f19176d540a547ec4617244835f87b9994d368e
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081733"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681407"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>圖表類型 (報表產生器及 SSRS)
 

@@ -1,7 +1,7 @@
 ---
 title: URL 存取參數參考 | Microsoft Docs
 description: 您可以在 URL 中使用本文的參數，以設定 Reporting Services 報表的外觀與風格。
-ms.date: 01/31/2020
+ms.date: 05/22/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0ac67de4831d1785f17029bc6c68fa6f7d8aeb16
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5c975f457238912c16e33a13f1f2ba598c82cac3
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77147378"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859022"
 ---
 # <a name="url-access-parameter-reference"></a>URL 存取參數參考
 
@@ -79,18 +79,21 @@ ms.locfileid: "77147378"
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Section=2  
     ```  
   
--   **FindString**：在報表中搜尋特定文字集。
+-   **FindString**：在報表中搜尋一組特定的文字，並醒目提示該文字。
+    
+    > [!IMPORTANT]  
+    >  *rc:FindString* 無法使用，除非您將 *rc:Toolbar*=**false** 包含至 URL 存取字串。
   
      例如，在原生模式中：
   
     ```  
-    https://myrshost/reportserver?/Sales&rc:FindString=Mountain-400  
+    https://myrshost/reportserver?/Sales&rc:Toolbar=false&rc:FindString=Mountain-400  
     ```  
   
      例如，在 SharePoint 模式中：
   
     ```  
-    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:FindString=Mountain-400  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Toolbar=false&rc:FindString=Mountain-400  
     ```  
   
 -   **StartFind**：指定要搜尋的最後一部分。 此參數的預設值是報表的最後一頁。  
@@ -260,7 +263,7 @@ ms.locfileid: "77147378"
   
 -   **ClearSession**：**true** 的值會指示報表伺服器從報表工作階段移除報表。 所有和已驗證的使用者相關聯的報表執行個體，都會從報表工作階段移除。 (報表執行個體的定義：使用不同報表參數值執行多次的相同一份報表)。預設值為 **false**。
   
--   **ResetSession**：**true** 的值會指示報表伺服器透過移除與所有報表快照集的報表工作階段關聯，重設報表工作階段。 預設值為 **false**。
+-   **ResetSession**： **true** 的值會指示報表伺服器透過移除與所有報表快照集的報表工作階段關聯，重設報表工作階段。 預設值為 **false**。
   
 -   **ShowHideToggle**：切換該報表區段的顯示和隱藏狀態。 指定正整數以表示要切換的區段。
   
@@ -329,31 +332,31 @@ ms.locfileid: "77147378"
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom  
     ```  
   
--   **ToolBarItemsDisplayMode**：控制要顯示的工具列項目。 這是位元列舉值。 若要包含工具列項目，請將項目的值新增總值。 例如，若無 [動作]  功能表，請使用 *rv:ToolBarItemsDisplayMode=63* (或 0x3F)，即 1+2+4+8+16+32。 僅限 [動作]  功能表項目，請使用 *rv:ToolBarItemsDisplayMode=960* (或 0x3C0)。 預設值是 **-1**，其中包含所有的工具列項目。 有效值為：
+-   **ToolBarItemsDisplayMode**：控制要顯示的工具列項目。 這是位元列舉值。 若要包含工具列項目，請將項目的值新增總值。 例如，若無 [動作] 功能表，請使用 *rv:ToolBarItemsDisplayMode=63* (或 0x3F)，即 1+2+4+8+16+32。 僅限 [動作] 功能表項目，請使用 *rv:ToolBarItemsDisplayMode=960* (或 0x3C0)。 預設值是 **-1**，其中包含所有的工具列項目。 有效值為：
   
-    -   **1 (0x1)** ：[上一步]  按鈕  
+    -   **1 (0x1)** ：[上一步] 按鈕  
   
     -   **2 (0x2)** ：文字搜尋控制項  
   
     -   **4 (0x4)** ：頁面導覽控制項  
   
-    -   **8 (0x8)** ：[重新整理]  按鈕  
+    -   **8 (0x8)** ：[重新整理] 按鈕  
   
-    -   **16 (0x10)** ：[縮放]  清單方塊  
+    -   **16 (0x10)** ：[縮放] 清單方塊  
   
-    -   **32 (0x20)** ：[Atom 摘要]  按鈕  
+    -   **32 (0x20)** ：[Atom 摘要] 按鈕  
   
-    -   **64 (0x40)** ：[動作]  中的 [列印]  功能表選項  
+    -   **64 (0x40)** ：[動作] 中的 [列印] 功能表選項  
   
-    -   **128 (0x80)** ：[動作]  中的 [匯出]  子功能表  
+    -   **128 (0x80)** ：[動作] 中的 [匯出] 子功能表  
   
-    -   **256 (0x100)** ：[動作]  中的 [用報表產生器開啟]  功能表選項  
+    -   **256 (0x100)** ：[動作] 中的 [用報表產生器開啟] 功能表選項  
   
-    -   **512 (0x200)** ：[動作]  中的 [訂閱]  功能表選項  
+    -   **512 (0x200)** ：[動作] 中的 [訂閱] 功能表選項  
   
-    -   **1024 (0x400)** ：[動作]  中的 [新資料警示]  功能表選項  
+    -   **1024 (0x400)** ：[動作] 中的 [新資料警示] 功能表選項  
   
-     例如，在 SharePoint 模式中，只顯示 [上一步]  按鈕、文字搜尋控制項、頁面導覽控制項和 [重新整理]  按鈕：
+     例如，在 SharePoint 模式中，只顯示 [上一步] 按鈕、文字搜尋控制項、頁面導覽控制項和 [重新整理] 按鈕：
   
     ```  
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15  

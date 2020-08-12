@@ -1,5 +1,6 @@
 ---
 title: 偵錯傳遞延伸模組程式碼 | Microsoft Docs
+description: 探索如何使用 Microsoft .NET Framework 偵錯工具，以分析傳遞延伸模組程式碼並尋找其中的錯誤。
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a7d959da-5005-4a50-aca7-2cef36aa9947
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1abe30a462e8bf303b0171dbeeb82c407c80ca2a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2e28243c1cb41a8c7a85ddbe381302a18d161f2e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193749"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529124"
 ---
 # <a name="debugging-delivery-extension-code"></a>偵錯傳遞延伸模組程式碼
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供數個偵錯工具，可協助您分析傳遞延伸模組程式碼並尋找其中的錯誤。 效果最好的工具將視您嘗試要完成的項目而定。 此範例會使用 [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)]。  
@@ -34,9 +35,9 @@ ms.locfileid: "63193749"
   
 5.  當傳遞延伸模組專案仍為使用中視窗時，按一下 [偵錯] 功能表的 [附加至處理序]。  
   
-     [附加至處理序]  對話方塊隨即開啟。  
+     [附加至處理序] 對話方塊隨即開啟。  
   
-6.  從處理序清單中，選取 aspnet_wp.exe 處理序 (或者，如果在 IIS 6.0 上部署應用程式則選取 w3wp.exe)，然後按一下 [附加]  。  
+6.  從處理序清單中，選取 aspnet_wp.exe 處理序 (或者，如果在 IIS 6.0 上部署應用程式則選取 w3wp.exe)，然後按一下 [附加]。  
   
 7.  使用您的傳遞延伸模組定義新的訂閱。 您很可能會使用報表管理員或是 SOAP API。 這應該會叫用偵錯工具並執行對應至中斷點的程式碼。  
   

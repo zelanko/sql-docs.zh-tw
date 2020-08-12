@@ -1,5 +1,6 @@
 ---
 title: 設定供報表伺服器存取的防火牆 | Microsoft Docs
+description: 了解如何設定 Windows 防火牆，以允許存取透過 URL 存取之報表伺服器應用程式與發佈的報表。
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bbcd96e24d0819cc8403a669c7333bb92d396e05
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 08a80c8307d551813a30becbed6d12507e6b2947
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73593742"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545581"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configure a Firewall for Report Server Access
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器應用程式和發行的報表是透過指定 IP 位址、通訊埠和虛擬目錄的 URL 來加以存取。 如果開啟了 Windows 防火牆，則設定報表伺服器使用的通訊埠很可能已關閉。 當您嘗試從遠端用戶端電腦開啟 Web 入口網站時出現空白網頁，或要求報表之後出現空白網頁，即表示某個連接埠可能已關閉。  
@@ -27,7 +28,7 @@ ms.locfileid: "73593742"
   
  如果您要存取外部電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫，或者報表伺服器資料庫位於外部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上，您就必須開啟外部電腦上的通訊埠 1433 和 1434。 如需詳細資訊，請參閱 [設定用於 Database Engine 存取的 Windows 防火牆](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)。 如需預設 Windows 防火牆設定的詳細資訊以及影響 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]之 TCP 通訊埠的描述，請參閱 [設定 Windows 防火牆以允許 SQL Server 存取](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
  這些指示假設您已經為報表伺服器 Web 服務和 Web 入口網站設定服務帳戶、建立報表伺服器資料庫及設定 URL。 如需詳細資訊，請參閱 [管理 Reporting Services 原生模式報表伺服器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)。  
   
  您也應該已經確認，報表伺服器可透過本機報表伺服器執行個體的本機網頁瀏覽器連接來加以存取。 此步驟會確認您有使用中的安裝。 在您開始開啟通訊埠之前，應該先確認安裝已正確設定。 若要在 Windows Server 上完成這個步驟，您也必須已經將報表伺服器網站加入至 [信任的網站]。 如需詳細資訊，請參閱 [設定原生模式報表伺服器進行本機管理 &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
@@ -38,33 +39,33 @@ ms.locfileid: "73593742"
   
 1.  在 **[開始]** 功能表中，按一下 **[控制台]** 、按一下 **[系統及安全性]** ，然後按一下 **[Windows 防火牆]** 。 如果 [控制台] 沒有設定為「類別目錄」檢視，您只需要選取 **[Windows 防火牆]** 。  
   
-2.  按一下 [進階設定]  。  
+2.  按一下 [進階設定]。  
   
 3.  按一下 **[輸入規則]** 。  
   
-4.  在 [動作]  視窗中，按一下 [新增規則]  。  
+4.  在 [動作] 視窗中，按一下 [新增規則]。  
   
 5.  按一下 **[連接埠]** 的 **[規則類型]** 。  
   
-6.  按 [下一步]  。  
+6.  按 [下一步] 。  
   
 7.  在 **[通訊協定及連接埠]** 頁面上，按一下 **[TCP]** 。  
   
 8.  選取 **[特定本機連接埠]** ，然後輸入值： **80**。  
   
-9. 按 [下一步]  。  
+9. 按 [下一步] 。  
   
 10. 在 **[動作]** 頁面上，按一下 **[允許該連線]** 。  
   
-11. 按 [下一步]  。  
+11. 按 [下一步] 。  
   
 12. 在 **[設定檔]** 頁面上，按一下適用於您環境的選項。  
   
-13. 按 [下一步]  。  
+13. 按 [下一步] 。  
   
-14. 在 [名稱]  頁面上，輸入名稱：**ReportServer (TCP 在連接埠 80 上)**  
+14. 在 [名稱] 頁面上，輸入名稱：**ReportServer (TCP 在連接埠 80 上)**  
   
-15. 按一下 [完成]  。  
+15. 按一下 [完成] 。  
   
 16. 重新啟動電腦。  
   

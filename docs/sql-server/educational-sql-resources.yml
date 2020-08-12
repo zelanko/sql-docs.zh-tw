@@ -9,12 +9,12 @@ metadata:
   author: MashaMSFT
   ms.author: mathoma
   ms.date: 01/07/2020
-  ms.openlocfilehash: 6ff11b20d71d7af251c1d28d57bd86aef278c330
-  ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+  ms.openlocfilehash: a200d33dc0c8a17ce93139b9c7ccd60cdf3c4f01
+  ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 03/29/2020
-  ms.locfileid: "76832209"
+  ms.lasthandoff: 06/04/2020
+  ms.locfileid: "84423172"
 landingContent:
 - title: SQL Server
   linkLists:
@@ -92,7 +92,7 @@ landingContent:
       url: /azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-create-failover-cluster-premium-file-share
     - text: 使用 Azure 儲存體來進行備份與還原
       url: /azure/virtual-machines/windows/sql/virtual-machines-windows-use-storage-sql-server-backup-restore
-- title: Azure SQL Database 單一資料庫
+- title: Azure SQL Database (PaaS)
   linkLists:
   - linkListType: learn
     links:
@@ -129,15 +129,13 @@ landingContent:
   - linkListType: reference
     links:
     - text: Microsoft Learn
-      url: /azure/sql-database/sql-database-single-database
+      url: https://docs.microsoft.com/learn/
     - text: LinkedIn Learning
-      url: /azure/sql-database/sql-database-managed-instance
-    - text: Microsoft Virtual Academy
-      url: /azure/sql-database/sql-database-single-database
+      url: https://www.linkedin.com/learning/topics/sql-server
     - text: Pluralsight
-      url: /azure/sql-database/sql-database-managed-instance
+      url: https://www.pluralsight.com/browse/data-professional/sql-server
     - text: Channel 9
-      url: /azure/sql-database/sql-database-managed-instance
+      url: https://channel9.msdn.com/Tags/sql+server
 - title: Linux 上的 SQL Server
   linkLists:
   - linkListType: learn
@@ -182,7 +180,7 @@ landingContent:
       url: ../linux/tutorial-sql-server-containers-kubernetes.md
     - text: 設定複寫
       url: ../linux/sql-server-linux-replication-tutorial-tsql.md
-- title: Azure SQL Database 受控執行個體
+- title: Azure SQL 受控執行個體 (PaaS)
   linkLists:
   - linkListType: quickstart
     links:

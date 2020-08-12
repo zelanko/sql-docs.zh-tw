@@ -1,5 +1,6 @@
 ---
 title: Avg 函式 (報表產生器) | Microsoft Docs
+description: 了解編頁報表中的 Avg 函數，其可傳回報表產生器中運算式所指定之所有非 Null 數值的平均值。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f1276c4c-bb44-44c0-a1bf-386a0c340003
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c29c03ea3942f9fd89fd7e148d65a3fe4c8b9f33
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 983d0158582b7ead50ece81eb7f3d67bbe5777ad
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081306"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462392"
 ---
 # <a name="report-builder-functions---avg-function"></a>報表產生器函式 - Avg 函式
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表中，傳回運算式指定的所有非 Null 數值的平均值 (在給定範圍中評估)。  

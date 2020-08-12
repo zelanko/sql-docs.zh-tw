@@ -1,5 +1,6 @@
 ---
 title: 設定報表項目的格式 (報表產生器) | Microsoft Docs
+description: 探索格式化如何增強可讀性，並讓報表產生器中報表更具吸引力的方式。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d0433667ba85af242374933a028974d1960416c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 156745486165bd4348e70a81c910aa49fd55a0e1
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079644"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779420"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>設定報表項目的格式 (報表產生器及 SSRS)
   對報表中的項目進行格式化，使報表更具吸引力並增強其可讀性。 當您在報表設計模式時，可以將文字方塊及文字方塊中的個別項目、影像、運算式和資料格式化。  
@@ -28,9 +29,9 @@ ms.locfileid: "77079644"
   
  C. 文字方塊具有文字標籤和預留位置。  
   
- 您可以變更格式化選項，其方法是選取要格式化的項目，然後開啟此項目的 [屬性] 對話方塊。 例如，如果您想要格式化整個文字方塊的內容或是文字方塊內選取的字，請以滑鼠右鍵按一下此項目，然後選取 [文字方塊屬性]  。 然後，您可以套用您想要的格式化樣式。  
+ 您可以變更格式化選項，其方法是選取要格式化的項目，然後開啟此項目的 [屬性] 對話方塊。 例如，如果您想要格式化整個文字方塊的內容或是文字方塊內選取的字，請以滑鼠右鍵按一下此項目，然後選取 [文字方塊屬性]****。 然後，您可以套用您想要的格式化樣式。  
   
- 若要快速開始使用，請參閱[教學課程：格式化文字 &#40;報表產生器&#41;](../../reporting-services/tutorial-format-text-report-builder.md)。  
+ 若要快速開始作業，請參閱[教學課程：格式化文字 &#40;報表產生器&#41;](../../reporting-services/tutorial-format-text-report-builder.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

@@ -1,5 +1,6 @@
 ---
 title: 快取報表 (報表管理員) | Microsoft Docs
+description: 了解如何針對報表管理員中快取報表的到期日進行排程。 快取報表時，由於報表保持在快取狀態，因此可加快檢視速度。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 723d1cb0-c2e7-4763-8690-a6a7a8bbbb90
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2b82d064b379f7c8a43f854204b9fce7337262e4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 67a423a34d0b641e15daf5828748d572e504e329
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574845"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547898"
 ---
 # <a name="cache-a-report-report-manager"></a>快取報表 (報表管理員)
   改善效能的其中一種方式就是設定報表的快取屬性。 快取報表時，系統就會在一段短時間內儲存已轉譯報表的副本。 要求報表的第一位使用者必須等候所有處理都完成，然後才能檢視該報表。 在快取期間內要求該報表的後續使用者可以立即檢視報表，因為處理已經進行了。  
@@ -34,17 +35,17 @@ ms.locfileid: "65574845"
   
 3.  在下拉式功能表中，按一下 **[管理]** 。  
   
-4.  在左框架內，按一下 [處理選項]  。  
+4.  在左框架內，按一下 [處理選項]。  
   
-5.  在頁面上，選取 [永遠以最新的資料執行此報表]  。  
+5.  在頁面上，選取 [永遠以最新的資料執行此報表]。  
   
 6.  選取下列兩個快取選項的其中之一，並設定逾期如下：  
   
-    -   若要設定快取副本在特定時間週期之後過期，請按一下 **[快取報表的暫存副本。報表副本會在下列分鐘數後過期]** 。 輸入報表過期的分鐘數。  
+    -   若要設定快取副本在特定時間週期之後過期，請按一下 **[快取報表的暫存副本。報表副本會在下列分鐘數後過期]**。 輸入報表過期的分鐘數。  
   
-    -   若要設定快取副本依據排程過期，請按一下 **[快取報表的暫存副本。報表副本會在下列排程過期]** 。 按一下 [設定]  ，或選取共用排程來控制報表逾期  
+    -   若要設定快取副本依據排程過期，請按一下 **[快取報表的暫存副本。報表副本會在下列排程過期]**。 按一下 [設定]，或選取共用排程來控制報表逾期  
   
-7.  按一下 [套用]  。  
+7.  按一下 [套用]。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定報表處理屬性](../../reporting-services/report-server/set-report-processing-properties.md)   

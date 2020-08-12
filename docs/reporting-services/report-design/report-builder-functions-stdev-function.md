@@ -1,5 +1,6 @@
 ---
 title: StDev 函式 (報表產生器) | Microsoft Docs
+description: 報表產生器的 StDev 函數會傳回運算式指定之所有非 Null 數值的標準差。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: cb51e96e-a828-42f0-b67c-cee3f4d221e7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bbf17d4c642d3ccdb14f6a6f1f42212d6e9152a7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: aabefbf7eab7393702ccc99d9a62fdd9032540ab
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081148"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462272"
 ---
 # <a name="report-builder-functions---stdev-function"></a>報表產生器函式 - StDev 函式
   傳回運算式指定的所有非 Null 數值的標準差 (在給定範圍中評估)。  

@@ -1,5 +1,6 @@
 ---
 title: 設定報表處理屬性 | Microsoft Docs
+description: 了解報表伺服器中控制報表處理方式的報表執行屬性，以及如何使用入口網站為每個報表設定該屬性。
 ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4a7729e8880e811494e6e1016b827831674cd812
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 62c38e222ede1678d7fd06089897b3a8435aa687
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67140402"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547880"
 ---
 # <a name="set-report-processing-properties"></a>設定報表處理屬性
   報表執行屬性控制處理報表的方式。 您必須針對每個報表個別設定執行屬性。  
   
- 若要設定報表執行屬性，請在入口網站中巡覽至報表，以滑鼠右鍵按一下該報表，然後從下拉式功能表中選取 [管理]  。
+ 若要設定報表執行屬性，請在入口網站中巡覽至報表，以滑鼠右鍵按一下該報表，然後從下拉式功能表中選取 [管理]****。
   
 ## <a name="report-execution-modes"></a>報表執行模式  
  您可以視需要或以快照集的形式執行報表。 下一節描述每一種方法。  

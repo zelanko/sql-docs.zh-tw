@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 網站設定和網站功能 (SharePoint 模式) | Microsoft Docs
+description: 有幾個可在 Reporting Services SharePoint 模式下從 SharePoint [網站設定] 頁面管理的網站層級自訂功能和網站功能。
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 73d357b6a601265df5e579f1b6acaff6ce8d648d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 558a741feb0e55646b4c45901965a0fb434f665f
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580461"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767361"
 ---
 # <a name="reporting-services-site-settings-and-site-features-sharepoint-mode"></a>Reporting Services 網站設定和網站功能 (SharePoint 模式)
 
@@ -34,13 +35,13 @@ Reporting Services SharePoint 模式有幾個網站層級自訂功能和網站�
   
 ## <a name="open-the-reporting-services-site-settings-page"></a>開啟 Reporting Services 網站設定頁面
   
-1.  在 SharePoint 網站的 [網站動作]  功能表中，選取 [網站設定]  。  
+1.  在 SharePoint 網站的 [網站動作] 功能表中，選取 [網站設定]。  
   
-2.  在 [Reporting Services]  區段中，選取 [Reporting Services 網站設定]  。  
+2.  在 [Reporting Services] 區段中，選取 [Reporting Services 網站設定]。  
   
 ## <a name="options-for-reporting-services-site-settings"></a>Reporting Services 網站設定的選項
   
-|選項|描述|  
+|選項|說明|  
 |------------|-----------------|  
 |**啟用 RSClientPrint ActiveX 控制項下載**|控制項會顯示自訂列印對話方塊，其中支援與其他列印對話方塊一樣的一般功能，包括預覽列印、可指定要列印的特定頁面及範圍、頁面邊界和列印方向等選擇。 如需控制項的詳細資訊，請參閱 [在自訂應用程式中使用 RSClientPrint 控制項](../../reporting-services/report-server-web-service/net-framework/using-the-rsclientprint-control-in-custom-applications.md)|  
 |**在本機模式中啟用遠端錯誤**|顯示或隱藏當遠端電腦在本機模式執行時的詳細錯誤訊息。 如果您看到類似以下的錯誤訊息，則啟用遠端錯誤可能會很實用：<br /><br /> `For more information about this error navigate to the report server on the local server machine or enable remote errors`|  

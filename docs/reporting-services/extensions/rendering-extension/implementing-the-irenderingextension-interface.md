@@ -1,5 +1,6 @@
 ---
 title: 實作 IRenderingExtension 介面 | Microsoft Docs
+description: 了解如何實作 IRenderingExtension 介面，其會將報表資料轉換為檢視器、印表機及其他目標所使用的輸出格式。
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 74b2f2b7-6796-42da-ab7d-b05891ad4001
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e19691222fd55350bb3f0da7aaf94a983ec620cd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8e53f229aff5a0093a38d4d785994514aeb1e971
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193582"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529444"
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>實作 IRenderingExtension 介面
   轉譯延伸模組會從與實際資料結合的報表定義取得結果，並將產生的資料轉譯成可用的格式。 結合的資料與格式之轉換是利用實作 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension> 的 Common Language Runtime (CLR) 類別來完成。 這可將物件模型轉換為檢視器、印表機或是其他輸出目標可取用的輸出格式。  
@@ -34,7 +35,7 @@ ms.locfileid: "63193582"
 ## <a name="render-method"></a>Render 方法  
  <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.Render%2A> 方法包含代表下列物件的引數：  
   
--   您要轉譯的「報表」  。 這個物件包含報表的屬性、資料與配置資訊。 報表是報表物件模型樹狀結構的根目錄。  
+-   您要轉譯的「報表」。 這個物件包含報表的屬性、資料與配置資訊。 報表是報表物件模型樹狀結構的根目錄。  
   
 -   包含字串字典物件的 *ServerParameters*，含報表伺服器的參數 (如果有的話)。  
   
@@ -47,7 +48,7 @@ ms.locfileid: "63193582"
 -   *createAndRegisterStream* 是要呼叫的委派函式，以取得要轉譯成的資料流。  
   
 ### <a name="deviceinfo-parameter"></a>deviceInfo 參數  
- *deviceInfo* 參數包含轉譯參數，而不是報表參數。 這些轉譯參數會傳遞給轉譯延伸模組。 報表伺服器會將 *deviceInfo* 值轉換為 <xref:System.Collections.Specialized.NameValueCollection> 物件。 在 *deviceInfo* 參數中的項目會視為不區分大小寫的值。 如果轉譯要求是以 URL 存取的結果呈現，則 `rc:key=value` 格式的 URL 參數會轉換成 *deviceInfo* 字典物件中的索引鍵/值組。 瀏覽器偵測程式碼也在 *clientCapabilities* 字典中提供下列項目：EcmaScriptVersion、JavaScript、MajorVersion、MinorVersion、Win32、Type 及 AcceptLanguage。 會忽略在 *deviceInfo* 參數中轉譯延伸模組不了解的任何名稱/值組。 下列程式碼範例顯示用來擷取圖示的範例 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> 方法：  
+ *deviceInfo* 參數包含轉譯參數，而不是報表參數。 這些轉譯參數會傳遞給轉譯延伸模組。 報表伺服器會將 *deviceInfo* 值轉換為 <xref:System.Collections.Specialized.NameValueCollection> 物件。 在 *deviceInfo* 參數中的項目會視為不區分大小寫的值。 如果轉譯要求是以 URL 存取的結果呈現，則 `rc:key=value` 格式的 URL 參數會轉換成 *deviceInfo* 字典物件中的索引鍵/值組。 瀏覽器偵測程式碼也會在 *clientCapabilities* 字典中提供下列項目：EcmaScriptVersion、JavaScript、MajorVersion、MinorVersion、Win32、Type 和 AcceptLanguage。 會忽略在 *deviceInfo* 參數中轉譯延伸模組不了解的任何名稱/值組。 下列程式碼範例顯示用來擷取圖示的範例 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> 方法：  
   
 ```csharp  
 public void GetRenderingResource (CreateStream createStreamCallback, NameValueCollection deviceInfo)  
@@ -70,7 +71,7 @@ public void GetRenderingResource (CreateStream createStreamCallback, NameValueCo
  <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.RenderStream%2A> 方法會從報表轉譯特定的資料流。 在初始 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.Render%2A> 呼叫期間會建立所有的資料流，但是一開始不會將資料流傳回給用戶端。 這個方法是用於第二個資料流 (例如 HTML 轉譯中的影像) 或是多頁面轉譯延伸模組的其他頁面 (例如影像/EMF)。  
   
 ## <a name="getrenderingresource-method"></a>GetRenderingResource 方法  
- <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> 方法會擷取資訊，而不需執行報表的完整轉譯。 有時報表需要的資訊，並不需要轉譯報表本身。 例如，如果您需要與轉譯延伸模組建立關聯的圖示，請使用包含單一標記 **\<Icon>** 的 *deviceInfo* 參數。 在這些情況下，您可以使用 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> 方法。  
+ <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> 方法會擷取資訊，而不需執行報表的完整轉譯。 有時報表需要的資訊，並不需要轉譯報表本身。 例如，如果需要與轉譯延伸模組建立關聯的圖示，請使用包含單一標籤 **\<Icon>** 的 *deviceInfo* 參數。 在這些情況下，您可以使用 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> 方法。  
   
 ## <a name="see-also"></a>另請參閱  
  [實作轉譯延伸模組](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   

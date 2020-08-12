@@ -1,5 +1,6 @@
 ---
 title: 走勢圖和資料橫條 (報表產生器) | Microsoft Docs
+description: 探索在報表產生器中使用走勢圖及資料橫條的優點。 這些精簡圖表會以極少的空間來表達許多資訊。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d65843f0f1104947532bf71f97e5b4c34d2bb291
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6c7721b8b5002c104ff5076b3b0d1c9bc8219fba
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080958"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880719"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>走勢圖和資料橫條 (報表產生器和 SSRS)
   走勢圖和資料橫條是簡單的小圖表，在極小空間中傳達大量資訊，通常內嵌於文字。   
@@ -33,7 +34,7 @@ ms.locfileid: "77080958"
 ##  <a name="types-of-sparklines"></a><a name="KindsofSparklines"></a> 走勢圖的類型  
  您幾乎可以建立與一般圖表一樣多的走勢圖類型。 一般而言，您無法建立 3D 走勢圖。 您可以建立這些完整圖表的走勢圖版本：  
   
--   [直條圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)︰基本、堆疊與 100% 堆疊直條圖。  
+-   [直條圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)：基本、堆疊與 100% 堆疊的直條圖。  
   
 -   [折線圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)：3D 折線圖以外的所有圖表。  
   
@@ -41,7 +42,7 @@ ms.locfileid: "77080958"
   
 -   [圓形圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)：以及環圈圖 (平面和立體)，但不是漏斗圖和金字塔圖之類的其他形狀。  
   
--   [範圍圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)︰股票圖、K 線圖、誤差長條圖與盒狀圖。  
+-   [範圍圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)：股票圖、K 線圖、誤差線與盒狀圖。  
   
 ##  <a name="data-bars"></a><a name="DataBars"></a> 資料橫條  
  資料橫條通常代表單一資料點，不過也可以代表多個資料點，就像一般的橫條圖一樣。 資料橫條通常都包含多個沒有類別的數列或數列群組。  
@@ -52,9 +53,9 @@ ms.locfileid: "77080958"
   
  您可以建立這些完整圖表的資料橫條版本：  
   
--   [橫條圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)︰基本、堆疊與 100% 堆疊橫條圖。  
+-   [橫條圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)：基本、堆疊與 100% 堆疊的橫條圖。  
   
--   [直條圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)︰基本、堆疊與 100% 堆疊直條圖。 直條圖可以是走勢圖或資料橫條。  
+-   [直條圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)：基本、堆疊與 100% 堆疊的直條圖。 直條圖可以是走勢圖或資料橫條。  
   
 ##  <a name="aligning-sparkline-data-in-a-table-or-matrix"></a><a name="AlignDatainTableMatrix"></a> 在資料表或矩陣中對齊走勢圖資料  
  當您將走勢圖插入資料表或矩陣時，每個走勢圖中的資料點通常最好對齊該直條圖中其他走勢圖的資料點。 否則，很難比較不同資料列中的資料。 例如，當您依月份比較公司中不同銷售人員的銷售資料時，您會希望月份能夠對齊。 如果員工四月份外出，該員工就沒有該月份的資料。 您希望看到該月份的間距，並且看到後續月份的資料對齊其他員工的資料。 您可以對齊水平軸達到這個目的。 如需詳細資訊，請參閱[總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) 中關於走勢圖的章節，並參閱[在資料表或矩陣的圖表上對齊資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)。  
@@ -69,7 +70,7 @@ ms.locfileid: "77080958"
  當您將走勢圖或資料橫條加入至資料表或矩陣時，這表示將一個資料區放到另一個資料區內，成為 *「巢狀結構」* (Nesting)。 巢狀結構指的是提供給走勢圖或資料橫條的資料受到資料表或矩陣所依據的資料集，以及您將其放在資料表或矩陣中的位置所控制。 如需詳細資訊，請參閱 [巢狀資料區 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)。  
   
 ##  <a name="converting-a-sparkline-or-data-bar-to-a-full-chart"></a><a name="ConvertSparklinetoChart"></a> 將走勢圖或資料橫條轉換為完整的圖表  
- 由於走勢圖和資料橫條只是一種圖表，因此，如果您決定要擁有完整的圖表功能，您可以以滑鼠右鍵按一下某個圖表，然後按一下 **[轉換成完整圖表]** ，將該圖表轉換成完整的圖表。 當您這麼做時，便會自動加入軸線、標籤、刻度標記與圖例。  
+ 由於走勢圖和資料橫條只是一種圖表，因此，如果您決定要擁有完整的圖表功能，您可以以滑鼠右鍵按一下某個圖表，然後按一下 **[轉換成完整圖表]**，將該圖表轉換成完整的圖表。 當您這麼做時，便會自動加入軸線、標籤、刻度標記與圖例。  
   
 > [!NOTE]  
 >  您無法按一下滑鼠，就將完整的圖表轉換成走勢圖或資料橫條。 不過，您只要刪除不在走勢圖和資料橫條中的所有圖表元素，就可以從完整的圖表建立走勢圖或資料橫條。  

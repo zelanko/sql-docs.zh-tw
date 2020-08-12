@@ -1,5 +1,6 @@
 ---
 title: 部署傳遞延伸模組 | Microsoft Docs
+description: 了解如何將傳遞延伸模組部署到報表伺服器。 查看要將哪些項目新增至哪些組態檔，才可讓報表伺服器找到延伸模組。
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4436ce48-397d-42c7-9b5d-2a267e2a1b2c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 06cffe614eaa55713fed862dc03f7c81da7bc287
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6f358ebb3cc58a9f10c117d24bce8c04d849fd2f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193768"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529114"
 ---
 # <a name="deploying-a-delivery-extension"></a>部署傳遞延伸模組
   傳遞延伸模組以 XML 組態檔的形式提供其組態資訊。 XML 檔案符合為傳遞延伸模組定義的 XML 結構描述。 傳遞延伸模組提供設定和修改組態檔的基礎結構。  
@@ -44,12 +45,12 @@ ms.locfileid: "63193768"
   
 #### <a name="to-deploy-a-deliver-extension-assembly-to-a-report-server"></a>將傳遞延伸模組組件部署到報表伺服器  
   
-1.  將組件從執行位置複製到您要在其上使用傳遞延伸模組之報表伺服器的 bin 目錄。 報表伺服器 Bin 目錄的預設位置是 %ProgramFiles%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer\bin。  
+1.  將組件從執行位置複製到您要在其上使用傳遞延伸模組之報表伺服器的 bin 目錄。 報表伺服器 bin 目錄的預設位置是 %ProgramFiles%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer\bin。  
   
     > [!IMPORTANT]  
     >  如果您嘗試覆寫現有的傳遞延伸模組件，必須先停止報表伺服器服務，再複製更新的組件。 在組件完成複製之後，重新啟動服務。  
   
-2.  在複製組件檔之後，開啟 RSReportServer.config 檔。 RSReportServer.config 檔案位於 %ProgramFiles%\Microsoft SQL Server\MSRS13.\<執行個體名稱>\Reporting Services\ReportServer 目錄。 您需要在傳遞延伸模組組件檔的組態檔中建立項目。 您可以利用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 或簡單的文字編輯器 (例如 [記事本]) 開啟設定檔。  
+2.  在複製組件檔之後，開啟 RSReportServer.config 檔。 RSReportServer.config 檔案位於 %ProgramFiles%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer 目錄。 您需要在傳遞延伸模組組件檔的組態檔中建立項目。 您可以利用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 或簡單的文字編輯器 (例如 [記事本]) 開啟設定檔。  
   
 3.  在 RSReportServer.config 檔中，找出 **Delivery** 項目。 應該針對您新建立的傳遞延伸模組，在下列位置建立項目：  
   
@@ -69,7 +70,7 @@ ms.locfileid: "63193768"
   
      **Name** 的值是傳遞延伸模組的唯一名稱。 **Type** 的值是以逗號分隔的清單，包括實作 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> 介面之類別的完整命名空間項目，後面接著組件的名稱 (不包含 .dll 副檔名)。 依預設，傳遞延伸模組是可見的。 若要在使用者介面中隱藏延伸模組 (例如入口網站)，請將 **Visible** 屬性新增到 **Extension** 項目，並將其設定為 **false**。  
   
-5.  最後，針對為傳遞延伸模組授與 **FullTrust** 權限的自訂組件，新增程式碼群組。 這項作業的進行方式是將程式碼群組新增至 rssrvpolicy.config 檔案，這個檔案預設位於 %ProgramFiles%\Microsoft SQL Server\MSRS13.\<執行個體名稱>\Reporting Services\ReportServer。 您的程式碼群組可能如下所示：  
+5.  最後，針對為傳遞延伸模組授與 **FullTrust** 權限的自訂組件，新增程式碼群組。 這項作業的進行方式是將程式碼群組新增至 rssrvpolicy.config 檔案，此檔案預設位於 %ProgramFiles%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer。 您的程式碼群組可能如下所示：  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  

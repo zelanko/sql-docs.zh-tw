@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 記錄檔和來源 | Microsoft Docs
+description: 了解報表伺服器與報表伺服器環境在 Reporting Services 中使用的記錄，以記錄執行與追蹤資訊。
 ms.date: 05/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 80ef0acc-cbef-49d0-87e7-844e3ce19604
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5a0f6270fc40d4a22db2d8b03deba8a53e57fbf6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1e9fad0dad3b5a5d90339403d2d596bb95bf0759
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65620307"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541440"
 ---
 # <a name="reporting-services-log-files-and-sources"></a>Reporting Services 記錄檔和來源
   報表伺服器和報表伺服器環境會使用各種記錄目的地，以記錄有關伺服器作業與狀態的資訊。 記錄有兩個基本的類別目錄，也就是執行記錄和追蹤記錄。 執行記錄包含有關報表執行統計資料、稽核、效能診斷與最佳化的資訊。 追蹤記錄是有關錯誤訊息與一般診斷的資訊。  
@@ -29,11 +30,11 @@ ms.locfileid: "65620307"
   
  下表提供有關每一個記錄檔之其他資訊的連結，包括記錄檔位置以及如何檢視記錄檔內容。  
   
-|Log|描述|  
+|Log|說明|  
 |---------|-----------------|  
 |[報表伺服器 ExecutionLog 和 ExecutionLog3 檢視](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)|執行記錄檔是儲存在報表伺服器資料庫中的 SQL Server 檢視。<br /><br /> 報表伺服器執行記錄包含有關特定報表的資料，包括何時執行報表、誰執行、傳遞到何處及使用何種轉譯格式。|  
 |SharePoint 追蹤記錄|如果是在 SharePoint 中執行的報表伺服器，SharePoint 追蹤記錄會包含 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資訊。 您也可以針對 SharePoint 統一記錄服務，設定 [!INCLUDE[ssRS](../../includes/ssrs.md)] 的特定資訊。 如需詳細資訊，請參閱 [開啟 SharePoint 追蹤記錄的 Reporting Services 事件 &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)|  
-|[報表伺服器服務追蹤記錄](../../reporting-services/report-server/report-server-service-trace-log.md)|服務追蹤記錄包含非常詳細的資訊，在您偵錯應用程式或調查問題或事件時很有用。 追蹤記錄檔為 ReportServerService_\<時間戳記>.log，位於下列資料夾：<br /><br /> 在 SQL Server Reporting Services 2016 或更早的版本中：`C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\LogFiles`<br /><br /> 在 SQL Server Reporting Services 2017 中：`C:\Program Files\Microsoft SQL Server Reporting Services\SSRS\LogFiles`|  
+|[報表伺服器服務追蹤記錄](../../reporting-services/report-server/report-server-service-trace-log.md)|服務追蹤記錄包含非常詳細的資訊，在您偵錯應用程式或調查問題或事件時很有用。 追蹤記錄檔為 ReportServerService_\<timestamp>.log，位於下列資料夾：<br /><br /> 在 SQL Server Reporting Services 2016 或更早的版本中：`C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\LogFiles`<br /><br /> 在 SQL Server Reporting Services 2017 中：`C:\Program Files\Microsoft SQL Server Reporting Services\SSRS\LogFiles`|  
 |[報表伺服器 HTTP 記錄](../../reporting-services/report-server/report-server-http-log.md)|HTTP 記錄檔包含報表伺服器 Web 服務處理之所有 HTTP 要求與回應的記錄。|  
 |[Windows 應用程式記錄檔](../../reporting-services/report-server/windows-application-log.md)|Microsoft Windows 應用程式記錄包含有關報表伺服器事件的資訊。|  
 |Windows 效能記錄|Windows 效能記錄包含報表伺服器的效能資料。 您可以建立效能記錄，然後選擇計數器來決定要收集的資料。 如需詳細資訊，請參閱 [監視報表伺服器效能](../../reporting-services/report-server/monitoring-report-server-performance.md)。|  

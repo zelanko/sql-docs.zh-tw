@@ -1,5 +1,6 @@
 ---
 title: 新增、移動或刪除文字方塊 (報表產生器) | Microsoft Docs
+description: 將文字方塊新增至報表主體，以在報表產生器中顯示標題、參數選擇、內建欄位與日期等資訊。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f042cf81-d933-4ac7-9287-c074a46bde98
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9bf0a50378979312991cf7cd149d838f4cbe2a3b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ef2bb2436b448dc06fa68d4df98dfbc4e4ffd200
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081604"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462220"
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>加入、移動或刪除文字方塊 (報表產生器及 SSRS)
   文字方塊是 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中最常使用的報表項目。 您可以將文字方塊加入至報表主體，以便顯示標題、參數選擇、內建欄位和日期等資訊。  
@@ -63,7 +64,7 @@ ms.locfileid: "77081604"
   
 ## <a name="to-delete-a-text-box"></a>若要刪除文字方塊  
   
-1.  在 [報表設計] 檢視中，以滑鼠右鍵按一下文字方塊內的任何空白處來選取它，然後按一下 [刪除]  。 或者，按一下文字方塊內的任何空白處，然後按 DELETE 鍵。  
+1.  在 [報表設計] 檢視中，以滑鼠右鍵按一下文字方塊內的任何空白處來選取它，然後按一下 [刪除]。 或者，按一下文字方塊內的任何空白處，然後按 DELETE 鍵。  
   
     > [!NOTE]  
     >  如果您在文字方塊中按一下並且處於編輯模式，請按下 ESC 來選取文字方塊。  

@@ -1,5 +1,6 @@
 ---
 title: 啟用遠端錯誤 (Reporting Services) | Microsoft Docs
+description: 了解如何在 Reporting Services 報表伺服器上設定伺服器屬性，以傳回有關遠端伺服器上所發生錯誤狀況的其他資訊。
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3b26db3656ee548e08f9e5d4737033bb3393a969
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 359d3705acbb3a7be762341008f32a6b473bdb55
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73593876"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547970"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>啟用遠端錯誤 (Reporting Services)
   您可以在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器上設定伺服器屬性，以便傳回有關遠端伺服器上發生之錯誤狀況的其他資訊。 如果錯誤訊息包含「如需有關此錯誤的詳細資料，請導覽至本機伺服器電腦上的報表伺服器，或啟用遠端錯誤」這段文字，您可以設定 **EnableRemoteErrors** 屬性來存取可幫助您排解疑難問題的其他資訊。 如需詳細資訊，請參閱[報表伺服器系統屬性](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)。  
@@ -46,7 +47,7 @@ ms.locfileid: "73593876"
   
 5.  按一下 **[安全性]** 區段中的 **[啟用遠端錯誤]** 。  
   
-6.  按一下 [確定]  。  
+6.  按一下 [確定]。  
   
 #### <a name="enable-remote-errors-for-a-sharepoint-site"></a>啟用 SharePoint 網站的遠端錯誤  
   
@@ -64,11 +65,11 @@ ms.locfileid: "73593876"
   
 1.  啟動 Management Studio，然後連接到報表伺服器執行個體。 如需詳細資訊，請參閱 [Connect to a Report Server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md) (連線至 Management Studio 中的報表伺服器)。  
   
-2.  以滑鼠右鍵按一下報表伺服器節點，然後選取 [屬性]  。  
+2.  以滑鼠右鍵按一下報表伺服器節點，然後選取 [屬性]。  
   
 3.  按一下 **[進階]** ，即可開啟屬性頁面。 如需詳細資訊，請參閱 [Server Properties &#40;Advanced Page&#41; - Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md) (伺服器屬性 &#40;進階頁面&#41; - Reporting Services)。  
   
-4.  在 [安全性]  區段的 **EnableRemoteErrors** 中，選取 **True**。  
+4.  在 [安全性] 區段的 **EnableRemoteErrors** 中，選取 **True**。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

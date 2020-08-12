@@ -1,5 +1,6 @@
 ---
 title: 報表伺服器服務追蹤記錄
+description: 了解 Reporting Services 中的報表伺服器追蹤記錄，其中包含報表伺服器服務作業的詳細資訊。
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/23/2019
-ms.openlocfilehash: 667f18f449a1f2564c04a03ca593c917a7b46005
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 294639b3fed68acf0bb8b07ea0430a890e97910e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68254860"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541500"
 ---
 # <a name="report-server-service-trace-log"></a>報表伺服器服務追蹤記錄
 
@@ -32,7 +33,7 @@ ms.locfileid: "68254860"
 
 追蹤記錄檔的行為在設定檔 **ReportingServicesService.exe.config** 中管理。下列資料夾路徑中可找到組態檔：  
   
- 第 1 課：建立 Windows Azure 儲存體物件`\Program Files\Microsoft SQL Server\MSRS13.<instance name>\Reporting Services\ReportServer\bin`。  
+ `\Program Files\Microsoft SQL Server\MSRS13.<instance name>\Reporting Services\ReportServer\bin`.  
   
  下列範例說明 **RStrace** 設定的 XML 結構。 **DefaultTraceSwitch** 的值會決定要將哪種資訊新增到記錄。 除了 **Components** 屬性外， **RStrace** 的值在所有組態檔中都相同。  
   
@@ -55,7 +56,7 @@ ms.locfileid: "68254860"
   
  下表提供有關各項設定的資訊。  
   
-|設定|描述|值|  
+|設定|說明|值|  
 |-------------|-----------------|------------|  
 |**RStrace**|指定用於錯誤和追蹤的命名空間。||  
 |**DefaultTraceSwitch**|指定報告到 ReportServerService 追蹤記錄的資訊層級。 每一個層級包括所有較低層級所報告的資訊。 不建議停用追蹤。|有效值為：<br /><br /> <br /><br /> 0= 停用追蹤。 ReportServerService 記錄檔是預設為啟用。 若要關閉，請將追蹤層級設定為 0。<br /><br /> 1= 例外狀況和重新啟動<br /><br /> 2= 例外、重新啟動和警告<br /><br /> 3= 例外、重新啟動、警告和狀態訊息 (預設值)<br /><br /> 4= 詳細資訊模式|  
@@ -65,8 +66,8 @@ ms.locfileid: "68254860"
 |**Prefix**|指定所產生可區分不同記錄檔執行個體的值。|依預設，會將時間戳記附加至追蹤記錄檔名稱。 此值設定為 "appdomain, tid, time"。 請勿修改此設定。|  
 |**TraceListeners**|指定輸出追蹤記錄內容的目標。 您可以指定多重目標，每個目標之間請以逗號隔開。|有效值為：<br /><br /> <br /><br /> DebugWindow<br /><br /> File (預設值)<br /><br /> StdOut|  
 |**TraceFileMode**|指定追蹤記錄中是否要包含 24 小時內的資料。 每個元件每一天只能有一份追蹤記錄。|此值設定為「Unique (預設值)」。 請勿修改此值。|  
-|**元件類別**|使用下列格式來指定要產生追蹤記錄資訊的元件以及追蹤層級：<br /><br /> \<元件類別>:\<追蹤層級><br /><br /> 您可以指定全部或部分元件 (**all**、 **RunningJobs**、 **SemanticQueryEngine**、 **SemanticModelGenerator**)。 如果不要產生特定元件的資訊，可以停用該元件的追蹤 (例如 "SemanticModelGenerator:0")。 請不要停用 **all**的追蹤。<br /><br /> 如果要檢視為每個語意查詢產生的 Transact-SQL 陳述式，您可以設定 "SemanticQueryEngine:4"。 Transact-SQL 陳述式就會記錄在追蹤記錄中。 下列範例說明將 Transact-SQL 陳述式加入記錄的組態設定：<br /><br /> \<add name="元件" value="all,SemanticQueryEngine:4" />|元件類別可設定為：<br /><br /> <br /><br /> **All** 用於針對所有不屬於特定類別的程序，追蹤其一般報表伺服器活動。<br /><br /> **RunningJobs** 用於追蹤進行中報表或訂閱作業。<br /><br /> **SemanticQueryEngine** 用於追蹤語意查詢，語意查詢會在使用者對以模型為基礎的報表執行隨選資料瀏覽時處理。<br /><br /> **SemanticModelGenerator** 用於追蹤模型產生。<br /><br /> **http** 是用於啟用報表伺服器 HTTP 記錄檔。 如需詳細資訊，請參閱＜ [Report Server HTTP Log](../../reporting-services/report-server/report-server-http-log.md)＞。|  
-|元件類別的 **tracelevel** 值|\<元件類別>:\<追蹤層級><br /><br /> <br /><br /> 如果您沒有將追蹤層級附加至元件，就會使用針對 **DefaultTraceSwitch** 所指定的值。 例如，如果指定 "all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator"，所有元件都會使用預設追蹤層級。|追蹤層級的有效值包括：<br /><br /> <br /><br /> 0= 停用追蹤<br /><br /> 1= 例外狀況和重新啟動<br /><br /> 2= 例外、重新啟動和警告<br /><br /> 3= 例外、重新啟動、警告和狀態訊息 (預設值)<br /><br /> 4= 詳細資訊模式<br /><br /> 報表伺服器的預設值是："all:3"。|  
+|**元件類別**|使用下列格式來指定要產生追蹤記錄資訊的元件以及追蹤層級：<br /><br /> \<component category>:\<tracelevel><br /><br /> 您可以指定全部或部分元件 (**all**、 **RunningJobs**、 **SemanticQueryEngine**、 **SemanticModelGenerator**)。 如果不要產生特定元件的資訊，可以停用該元件的追蹤 (例如 "SemanticModelGenerator:0")。 請不要停用 **all**的追蹤。<br /><br /> 如果要檢視為每個語意查詢產生的 Transact-SQL 陳述式，您可以設定 "SemanticQueryEngine:4"。 Transact-SQL 陳述式就會記錄在追蹤記錄中。 下列範例說明將 Transact-SQL 陳述式加入記錄的組態設定：<br /><br /> \<add name="Components" value="all,SemanticQueryEngine:4" />|元件類別可設定為：<br /><br /> <br /><br /> **All** 用於針對所有不屬於特定類別的程序，追蹤其一般報表伺服器活動。<br /><br /> **RunningJobs** 用於追蹤進行中報表或訂閱作業。<br /><br /> **SemanticQueryEngine** 用於追蹤語意查詢，語意查詢會在使用者對以模型為基礎的報表執行隨選資料瀏覽時處理。<br /><br /> **SemanticModelGenerator** 用於追蹤模型產生。<br /><br /> **http** 是用於啟用報表伺服器 HTTP 記錄檔。 如需詳細資訊，請參閱＜ [Report Server HTTP Log](../../reporting-services/report-server/report-server-http-log.md)＞。|  
+|元件類別的 **tracelevel** 值|\<component category>:\<tracelevel><br /><br /> <br /><br /> 如果您沒有將追蹤層級附加至元件，就會使用針對 **DefaultTraceSwitch** 所指定的值。 例如，如果指定 "all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator"，所有元件都會使用預設追蹤層級。|追蹤層級的有效值包括：<br /><br /> <br /><br /> 0= 停用追蹤<br /><br /> 1= 例外狀況和重新啟動<br /><br /> 2= 例外、重新啟動和警告<br /><br /> 3= 例外、重新啟動、警告和狀態訊息 (預設值)<br /><br /> 4= 詳細資訊模式<br /><br /> 報表伺服器的預設值是："all:3"。|  
   
 ## <a name="adding-custom-configuration-setting-to-specify-a-dump-file-location"></a><a name="bkmk_add_custom"></a> 新增自訂組態設定來指定傾印檔位置  
 您可以新增自訂設定，來設定 Windows 的 Dr. Watson for Windows 工具用於儲存傾印檔案。 自訂設定為 **Directory**。 下列範例說明如何在 **RStrace** 區段中指定這個組態設定：  
@@ -100,9 +101,9 @@ ms.locfileid: "68254860"
 ## <a name="previous-versions"></a>舊版
 
 在舊版的 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]中，系統提供了多個追蹤記錄檔 (每個應用程式都有一個檔案)。 下列檔案已過時，在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和之後的版本中不會再建立：
-+ ReportServerWebApp_\<時間戳記>  .log
-+ ReportServer_\<時間戳記>  .log
-+ ReportServerService_main_\<時間戳記>  .log
++ ReportServerWebApp_ *\<timestamp>* .log
++ ReportServer_ *\<timestamp>* .log
++ ReportServerService_main_ *\<timestamp>* .log
   
 ## <a name="see-also"></a>另請參閱
 

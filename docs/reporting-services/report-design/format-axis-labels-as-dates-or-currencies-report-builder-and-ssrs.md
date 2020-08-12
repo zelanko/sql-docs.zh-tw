@@ -1,5 +1,6 @@
 ---
 title: 將軸標籤格式化成日期或貨幣 (報表產生器) | Microsoft Docs
+description: 將軸標籤格式化，並將軸間隔類型設定為有效的間隔，以指定 X 軸的日期或時間間隔。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e9a01a74-2f51-4b35-be3a-a6138568f6cf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f93ab65674436fc0225ba8f8c66b98d12f9b7694
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b65c752c479c86f88679cb01bd328dc2d22cf3be
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080019"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689432"
 ---
 # <a name="format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs"></a>將軸標籤格式化成日期或貨幣 (報表產生器及 SSRS)
 當您在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表的座標軸上顯示適當格式化的日期時間值時，圖表會自動將這些值顯示為天。 若要為 X 軸指定日期/時間間隔 (例如月份或小時的間隔)，您必須格式化軸標籤，並將軸間隔的類型設定為有效的日期或時間間隔。  
@@ -30,15 +31,15 @@ ms.locfileid: "77080019"
   
 ## <a name="to-format-x-axis-labels-as-monthly-intervals"></a>將 X 軸標籤格式化成月份間隔  
   
-1.  以滑鼠右鍵按一下圖表的水平軸 ( X 軸)，然後選取 [水平軸屬性]  。  
+1.  以滑鼠右鍵按一下圖表的水平軸 ( X 軸)，然後選取 [水平軸屬性]。  
   
-2.  在 [水平軸屬性]  對話方塊中，選取 [數字]  。  
+2.  在 [水平軸屬性] 對話方塊中，選取 [數字]。  
   
-3.  從 [類別目錄]  清單中，選取 [日期]  。 從 [類型]  清單中，選取要套用到 X 軸標籤的日期格式。  
+3.  從 [類別目錄] 清單中，選取 [日期]。 從 [類型] 清單中，選取要套用到 X 軸標籤的日期格式。  
   
-4.  選取 [軸選項]  。  
+4.  選取 [軸選項]。  
   
-5.  在 [間隔]  中，鍵入 **1**。 在 [間隔類型]  屬性中，選取 [月]  。  
+5.  在 [間隔] 中，鍵入 **1**。 在 [間隔類型] 屬性中，選取 [月]。  
   
     > [!NOTE]  
     >  如果您未指定間隔類型，圖表將會以日來計算間隔。  
@@ -47,11 +48,11 @@ ms.locfileid: "77080019"
   
 ## <a name="to-format-y-axis-labels-using-a-currency-format"></a>使用貨幣格式格式化 Y 軸標籤  
   
-1.  以滑鼠右鍵按一下圖表的垂直軸 (Y 軸)，然後選取 [垂直軸屬性]  。  
+1.  以滑鼠右鍵按一下圖表的垂直軸 (Y 軸)，然後選取 [垂直軸屬性]。  
   
-2.  在 [垂直軸屬性]  對話方塊中，選取 [數字]  。  
+2.  在 [垂直軸屬性] 對話方塊中，選取 [數字]。  
   
-3.  從 [類別目錄]  清單中，選取 [貨幣]  。 從 [符號]  清單中，選取要套用到 Y 軸標籤的貨幣格式。  
+3.  從 [類別目錄] 清單中，選取 [貨幣]。 從 [符號] 清單中，選取要套用到 Y 軸標籤的貨幣格式。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

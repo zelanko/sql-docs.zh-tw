@@ -1,5 +1,6 @@
 ---
 title: 與群組一起顯示頁首和頁尾 (報表產生器) | Microsoft Docs
+description: 了解如何設定屬性，使用與 Tablix 資料區域中群組建立關聯的動態資料列來轉譯標頭和頁尾。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8eb7d648-4df2-491a-96cb-99e55629d617
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ecc2cb9b0b2e425627f73ae87aa3a9e8f5a289b1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 54afbcc4f95fdd0c626b6559437e08c454cd2dd4
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080482"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689261"
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>與群組一起顯示頁首和頁尾 (報表產生器及 SSRS)
   您可以協助控制靜態資料列 (例如群組頁首或頁尾) 是否會與動態資料列 (與 Tablix 資料區中的群組有關聯) 一起轉譯。  
@@ -25,7 +26,7 @@ ms.locfileid: "77080482"
  您可以在 [群組] 窗格中選取 Tablix 成員，然後在 [屬性] 窗格中設定 **[KeepWithGroup]** 、 **[KeepTogether]** 和 **[RepeatOnNewPage]** 屬性。 使用 **[KeepWithGroup]** 可在與群組相同的頁面上顯示群組頁首和頁尾。 使用 **[KeepTogether]** 可以與某個群組的資料列或資料行一併顯示靜態成員。 使用 **[RepeatOnNewPage]** 可在至少顯示一個 **[KeepWithGroup]** 值所指定的完整資料列群組成員執行個體的每一頁上，重複群組頁首或頁尾。 資料行群組成員不支援 **[RepeatOnNewPage]** 。  
   
 > [!NOTE]  
->  **KeepWithGroup**、**KeepTogether** 和 **RepeatOnNewPage** 是群組成員屬性，可以使用 [群組] 窗格的 [進階模式]  設定。 如需詳細資訊，請參閱[群組窗格 &#40;報表產生器&#41;](../../reporting-services/report-design/grouping-pane-report-builder.md)。  
+>  **KeepWithGroup**、**KeepTogether** 和 **RepeatOnNewPage** 是群組成員屬性，可以使用 [群組] 窗格的 [進階模式] 設定。 如需詳細資訊，請參閱[群組窗格 &#40;報表產生器&#41;](../../reporting-services/report-design/grouping-pane-report-builder.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -38,7 +39,7 @@ ms.locfileid: "77080482"
   
 3.  按一下對應至要與群組資料列保持在一起的資料列標頭或頁尾的靜態成員。 [屬性] 窗格會顯示 **[Tablix 成員]** 屬性。  
   
-4.  在 [屬性] 窗格中，按一下 [KeepWithGroup]  ，然後從下拉式清單選擇下列其中一個值：  
+4.  在 [屬性] 窗格中，按一下 [KeepWithGroup]，然後從下拉式清單選擇下列其中一個值：  
   
     -   **無** ：選取這個選項可指出沒有將此成員與所選取資料列群組的成員保持在一起的喜好設定。  
   
@@ -56,7 +57,7 @@ ms.locfileid: "77080482"
   
 3.  按一下對應至要與群組資料行保持在一起的靜態資料行的靜態成員。 [屬性] 窗格會顯示 **[Tablix 成員]** 屬性。  
   
-4.  在 [屬性] 窗格中，按一下 [KeepWithGroup]  ，然後從下拉式清單選擇下列其中一個值：  
+4.  在 [屬性] 窗格中，按一下 [KeepWithGroup]，然後從下拉式清單選擇下列其中一個值：  
   
     -   **無** ：選取這個選項可指出沒有將此成員與所選取資料行群組的成員保持在一起的喜好設定。  
   

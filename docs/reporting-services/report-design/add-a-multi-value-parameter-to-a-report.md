@@ -1,5 +1,6 @@
 ---
 title: 將多值參數新增至報表 | Microsoft Docs
+description: 了解如何在報表中新增參數，其可供使用者在報表產生器中針對參數選取多個值。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ac257b63b3cd36cc789a842c87aff9d5186f1206
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fc464c7ffeb6f166a8c4c39c70dc4001468f3568
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65575412"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779424"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>將多值參數加入至報表
   您可以在報表中新增參數，好讓使用者可以為參數選取多個值。  
@@ -26,7 +27,7 @@ ms.locfileid: "65575412"
   
 1.  在「報表產生器」中，開啟您要加入多值參數的報表。  
   
-2.  以滑鼠右鍵按一下報表資料集，然後按一下 [資料集屬性]   
+2.  以滑鼠右鍵按一下報表資料集，然後按一下 [資料集屬性]  
   
 3.  將變數加入至資料集查詢，其方式是在 **[查詢]** 方塊中編輯查詢文字或是使用查詢設計工具來加入篩選。 如需詳細資訊，請參閱[在關聯式查詢設計工具中建立查詢 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)。  
   
@@ -42,11 +43,11 @@ ms.locfileid: "65575412"
   
     系統會針對查詢變數自動建立內嵌資料集或共用資料集的資料集參數。 系統會自動針對資料集參數建立報表參數。  
   
-4.  在 [報表資料]  窗格中展開 [參數]  節點，並以滑鼠右鍵按一下為資料集參數自動建立的報表參數，然後按一下 [參數屬性]  。  
+4.  在 [報表資料]**** 窗格中展開 [參數]**** 節點，並以滑鼠右鍵按一下為資料集參數自動建立的報表參數，然後按一下 [參數屬性]****。  
   
 5.  在 **[一般]** 索引標籤上選取 **[允許多個值]** ，允許使用者針對參數選取多個值。  
   
-6.  (選擇性) 在 [可用的值]  索引標籤中，指定要對使用者顯示的可用值清單。  
+6.  (選擇性) 在 [可用的值] 索引標籤中，指定要對使用者顯示的可用值清單。  
   
      可用值清單會將使用者可以做的選擇限制為參數的有效值。 如果是多個值，清單的最開頭是 **[全選]** 功能，好讓使用者只需按一下就可以選取或清除所有值。 如果您選擇從資料集查詢取得報表參數的可用值，請確定選取的資料集不能包含與相同報表參數有關聯的查詢變數。  
   
