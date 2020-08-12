@@ -3,28 +3,33 @@ title: 安裝新的 R 套件
 description: 了解如何使用 sqlmlutils，在 SQL Server 機器學習服務執行個體上安裝新的 R 套件。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/11/2020
-ms.topic: conceptual
+ms.date: 06/04/2020
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: efea0d4306c71607de93652e08f347586a17450e
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 23a3e746996615cac0fa902e21733f9ce3ea4f45
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606867"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723970"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>使用 sqlmlutils 安裝新的 R 套件
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-本文說明如何使用 [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) 套件中的函數，將新的 R 套件安裝到 SQL Server 機器學習服務的執行個體上。 您安裝的套件可用於使用 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) T-SQL 陳述式在資料庫中執行的 R 指令碼。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+本文描述如何使用 [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) 套件中的函式，將新的 R 套件安裝到 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)和[巨量資料叢集](../../big-data-cluster/machine-learning-services.md)上。 您安裝的套件可用於使用 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) T-SQL 陳述式在資料庫中執行的 R 指令碼。
 
 > [!NOTE]
-> 本文所述的 **sqlmlutils** 套件是用來將 R 套件新增至 SQL Server 2019 或更新版本。 SQL Server 2017 及舊版請參閱[使用 R 工具安裝套件](https://docs.microsoft.com/sql/machine-learning/package-management/install-r-packages-standard-tools?view=sql-server-2017&viewFallbackFrom=sql-server-ver15)。
+> 本文所述的 **sqlmlutils** 套件是用來將 R 套件新增至 SQL Server 2019 或更新版本。 SQL Server 2017 及舊版請參閱[使用 R 工具安裝套件](https://docs.microsoft.com/sql/machine-learning/package-management/install-r-packages-standard-tools?view=sql-server-2017)。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+本文描述如何使用 [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) 套件中的函式，將新的 R 套件安裝到 [Azure SQL 受控執行個體機器學習服務](/azure/azure-sql/managed-instance/machine-learning-services-overview)其執行個體上。 您安裝的套件可用於使用 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) T-SQL 陳述式在資料庫中執行的 R 指令碼。
+::: moniker-end
 
 ## <a name="prerequisites"></a>Prerequisites
 

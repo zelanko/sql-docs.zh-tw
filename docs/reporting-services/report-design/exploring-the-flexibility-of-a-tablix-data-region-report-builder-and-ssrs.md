@@ -1,5 +1,6 @@
 ---
 title: 探索 Tablix 資料區的彈性(報表產生器) | Microsoft Docs
+description: 探索當新增資料表、矩陣或清單資料區時，報表產生器中分頁報表的彈性。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fef19359-a618-4d21-a7e4-e391cdefd4eb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: aaddc6f5671ceb2727ca950459e60dc24402bb9e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1f87c4ddc6b678675d5bcad06d06a3c466ecd929
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082108"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999551"
 ---
 # <a name="exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs"></a>探索 Tablix 資料區的彈性(報表產生器及 SSRS)
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表中，當您從功能區上的 [插入] 索引標籤加入資料表、矩陣或清單資料區時，您會從 Tablix 資料區的初始範本開始。 但是您不會受到該範本的限制。 您可以加入或移除任何 Tablix 資料區域功能 (例如，群組、資料列和資料行)，藉以繼續開發資料顯示的方式。  

@@ -1,5 +1,6 @@
 ---
 title: 新增或移除頁首或頁尾 (報表產生器) | Microsoft Docs
+description: 了解如何將靜態文字、影像、線條、矩形和框線新增至報表產生器的頁首或頁尾。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: adb2d9d24bc353c7d1c64c328b342b24022faef8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ab6d1585b254e8c03d9e471b32d3429cc489f8a7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081556"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056535"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>加入或移除頁首或頁尾 (報表產生器及 SSRS)
   您可以將靜態文字、影像、線條、矩形和框線加入至頁首或頁尾。 如果您想要在頁首或頁尾放入變數或計算的資料，可以在文字方塊中放置運算式和資料繫結影像。  
@@ -28,16 +29,16 @@ ms.locfileid: "77081556"
   
 1.  開啟報表。  
   
-2.  在設計介面上以滑鼠右鍵按一下報表，指向 [插入]  ，然後按一下 [頁首]  或 [頁尾]  。  
+2.  在設計介面上以滑鼠右鍵按一下報表，指向 [插入]，然後按一下 [頁首] 或 [頁尾]。  
   
 > [!NOTE]  
->  只有在頁首或頁尾尚未成為報表一部分時，才會顯示 [頁首]  和 [頁尾]  選項。  
+>  只有在頁首或頁尾尚未成為報表一部分時，才會顯示 [頁首] 和 [頁尾] 選項。  
   
 ### <a name="to-configure-a-page-header-or-footer"></a>設定頁首或頁尾  
   
 1.  在設計介面上以滑鼠右鍵按一下頁首或頁尾。  
   
-2.  指向 [插入]  ，然後按一下下列其中一個項目，將其加入至頁首或頁尾區域：  
+2.  指向 [插入]，然後按一下下列其中一個項目，將其加入至頁首或頁尾區域：  
   
     -   **文字方塊**  
   
@@ -47,15 +48,15 @@ ms.locfileid: "77081556"
   
     -   **映像**  
   
-3.  以滑鼠右鍵按一下頁首，然後按一下 [頁首屬性]  來加入框線、背景影像、色彩，或調整頁首的寬度。 然後按一下 [確定]  。  
+3.  以滑鼠右鍵按一下頁首，然後按一下 [頁首屬性]**** 來加入框線、背景影像、色彩，或調整頁首的寬度。 然後按一下 [確定] 。  
   
-4.  以滑鼠右鍵按一下頁尾，然後按一下 [頁尾屬性]  來新增框線、背景影像、色彩，或調整頁尾的寬度。 然後按一下 [確定]  。  
+4.  以滑鼠右鍵按一下頁尾，然後按一下 [頁尾屬性]**** 來新增框線、背景影像、色彩，或調整頁尾的寬度。 然後按一下 [確定] 。  
   
 ### <a name="to-remove-a-page-header-or-footer"></a>若要移除頁首或頁尾  
   
 1.  開啟報表。  
   
-2.  在設計介面上以滑鼠右鍵按一下頁首或頁尾，然後按一下 [刪除]  。  
+2.  在設計介面上以滑鼠右鍵按一下頁首或頁尾，然後按一下 [刪除]。  
   
 > [!NOTE]  
 >  您移除頁首或頁尾時，會將其從報表刪除。 如果您後來又重新加入頁首或頁尾，則先前您加入頁首或頁尾的項目並不會重新出現。  

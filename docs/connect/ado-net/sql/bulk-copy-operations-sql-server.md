@@ -1,21 +1,21 @@
 ---
 title: SQL Server 中的大量複製作業
 description: 說明 .NET Data Provider for SQL Server 的大量複製功能。
-ms.date: 09/30/2019
+ms.date: 06/15/2020
 ms.assetid: 83a7a0d2-8018-4354-97b9-0b1d99f8342b
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: c827ae70d9aa344f52de1d76c482beaef90c09aa
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4896bfdb419cfbd8e2cf6302a0a818407d6a596c
+ms.sourcegitcommit: 6b3569977b034554883a94d73d1c4df6e2f74fe2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78897029"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107015"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>SQL Server 中的大量複製作業
 
@@ -32,7 +32,7 @@ Microsoft SQL Server 包含名為 **bcp** 的常用命令列公用程式，用�
 - 交易內的大量複製作業  
   
 > [!NOTE]
->  當使用 .NET Framework 1.1 版或更早版本 (不支援 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 類別) 時，您可使用 <xref:Microsoft.Data.SqlClient.SqlCommand> 物件執行 SQL Server Transact-SQL **BULK INSERT** 陳述式。  
+>  當使用 .NET Framework 1.1 版或更早版本 (不支援 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 類別) 時，您可使用 **物件執行 SQL Server Transact-SQL**BULK INSERT<xref:Microsoft.Data.SqlClient.SqlCommand> 陳述式。  
   
 ## <a name="in-this-section"></a>本節內容  
 [大量複製範例設定](bulk-copy-example-setup.md)  
@@ -46,6 +46,9 @@ Microsoft SQL Server 包含名為 **bcp** 的常用命令列公用程式，用�
   
 [交易和大量複製作業](transaction-bulk-copy-operations.md)  
 描述如何在交易內執行大量複製作業，包括如何認可或復原交易。  
+
+[大量複製作業的順序提示](bulk-copy-order-hints.md)  
+描述如何使用順序提示來改善大量複製的效能。
   
 ## <a name="next-steps"></a>後續步驟
 - [SQL Server and ADO.NET](index.md) (SQL Server 和 ADO.NET)

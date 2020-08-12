@@ -1,6 +1,7 @@
 ---
 title: 設定追蹤資料表的資料表大小上限
 titleSuffix: SQL Server Profiler
+description: 了解如何限制追蹤資料表的大小。 使用 SQL Server Profiler 來指定資料表可擁有的最大資料列數目。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 21d68638d85acd48f8f1c552319b0ea4784dec68
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d867d1dca6ab5f17f45c89aa6bbd99394e72bcef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307609"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726885"
 ---
 # <a name="set-a-maximum-table-size-for-a-trace-table-sql-server-profiler"></a>設定追蹤資料表的資料表大小上限 (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本主題說明如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]來設定追蹤資料表的資料表大小上限。  
   
@@ -31,23 +32,23 @@ ms.locfileid: "75307609"
      會出現 [追蹤屬性] **[追蹤屬性]** 對話方塊。  
   
     > [!NOTE]  
-    >  如果選取 [進行連接後立即啟動追蹤]  ，將不會顯示 [追蹤屬性]  對話方塊，而是開始追蹤。 於 [工具]  功能表，按一下 [選項]  ，並清除 [連接後立即啟動追蹤]  核取方塊，以關閉這項設定。  
+    >  如果選取 [進行連接後立即啟動追蹤]，將不會顯示 [追蹤屬性] 對話方塊，而是開始追蹤。 於 [工具] 功能表，按一下 [選項]，並清除 [連接後立即啟動追蹤] 核取方塊，以關閉這項設定。  
   
 2.  在 **[追蹤名稱]** 方塊中，輸入追蹤的名稱。  
   
-3.  在 [範本名稱]  清單中，選取追蹤範本。  
+3.  在 [範本名稱] 清單中，選取追蹤範本。  
   
-4.  選取 [儲存至資料表]  核取方塊。  
+4.  選取 [儲存至資料表] 核取方塊。  
   
 5.  連接到您要儲存追蹤的伺服器。  
   
-     畫面上出現 [目的地資料表]  對話方塊。  
+     畫面上出現 [目的地資料表] 對話方塊。  
   
-6.  從 [資料庫]  清單中選取追蹤的資料庫。  
+6.  從 [資料庫] 清單中選取追蹤的資料庫。  
   
-7.  在 [資料表]  方塊中，輸入或選取資料表名稱。  
+7.  在 [資料表] 方塊中，輸入或選取資料表名稱。  
   
-8.  選取 [設定最大資料列數]  核取方塊，並指定追蹤資料表的最大資料列數。  
+8.  選取 [設定最大資料列數] 核取方塊，並指定追蹤資料表的最大資料列數。  
   
     > [!NOTE]  
     >  當資料表的資料列數超過您所指定的最大值時，就不會再記錄追蹤事件。 不過，仍會繼續追蹤。  

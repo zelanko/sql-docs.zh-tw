@@ -1,5 +1,6 @@
 ---
 title: 報表設計提示 (報表產生器) | Microsoft Docs
+description: 找出視覺化設計方法，以在報表產生器中顯示更好的資料。 使用圖表、資料橫條、指標、走勢圖、資料表與地圖來自訂報表。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e527b4059e225b012a2fa39cf21033b8af5ab9e2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1dcd59cb3b101007143fe212f1dd988b556ed770
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081095"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034960"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>報表設計提示 (報表產生器及 SSRS)
   請採用下列秘訣協助設計您的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表。  

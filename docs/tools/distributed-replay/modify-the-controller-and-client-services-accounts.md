@@ -4,23 +4,23 @@ titleSuffix: SQL Server Distributed Replay
 description: 了解如何修改 Distributed Replay Controller 和 Distributed Replay Client 服務帳戶，然後重新套用存取控制清單 (ACL)。
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 44a73ddb-18ad-415c-bfbe-126ab2e3290b
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 7abe40c16dc49e948fbca68486f96db221e1aae8
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 4c8a0f29addf80905ef6edaf5920e479fbaa48e2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000442"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85681160"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>修改控制器與用戶端服務帳戶
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 在本主題中，您將了解如何修改 Distributed Replay Controller 和用戶端服務帳戶，然後重新套用存取控制清單 (ACL)。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "83000442"
   
 1.  在已安裝 Distributed Replay 服務的電腦上，從命令提示字元，輸入 **dcomcnfg**。  
   
-2.  按兩下 [服務]  ，向下捲動並以滑鼠右鍵按一下 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay \<服務名稱>]  ，然後按一下 [啟動]  或 [停止]  。  
+2.  按兩下 [服務]，向下捲動並以滑鼠右鍵按一下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay \<service name>，然後按一下 [啟動] 或 [停止]。  
   
 ### <a name="to-modify-the-distributed-replay-controller-service"></a>若要修改 Distributed Replay Controller 服務  
   

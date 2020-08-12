@@ -1,5 +1,6 @@
 ---
 title: 形狀圖 (報表產生器) | Microsoft Docs
+description: 了解圖形圖表如何在報表產生器中以整體百分比來顯示值資料。 圖形圖表通常用於顯示集合中不同值之間成比例的比較。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4e1d8d10837708b7cde4f83056a23a0e143662ab
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5cf834c986827fa83617f8eafc30e8798314e40b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080990"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006073"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>形狀圖 (報表產生器及 SSRS)
   形狀圖會將值資料顯示為整體所佔的百分比。 形狀圖通常用於顯示集合中不同值之間成比例的比較。 類別目錄是以個別的形狀區段表示。 區段的大小取決於值。 形狀圖在用途上類似於圓形圖，差別在於後者排序類別目錄時是從最大到最小。  

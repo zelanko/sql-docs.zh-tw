@@ -2,22 +2,22 @@
 title: 轉換 Python 與 SQL 資料類型
 description: 檢閱資料科學與機器學習解決方案中 Python 與 SQL Server 之間的隱含與明確資料類型轉換。
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 12/10/2018
+ms.technology: machine-learning-services
+ms.date: 06/30/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f22f838bc78d4791e73a1d107cd253aae314d205
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2efa4bc739dcf39cd10672d81ebf66eceb6ecbb8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117881"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85671117"
 ---
 # <a name="data-type-mappings-between-python-and-sql-server"></a>Python 與 SQL Server 之間的資料類型對應
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 針對在 SQL Server 機器學習服務中 Python 整合功能上執行的 Python 解決方案，請檢閱不支援的資料類型清單，以及在 Python 與 SQL Server 之間傳遞資料時，可能隱含執行的資料類型轉換。
 
@@ -33,20 +33,24 @@ RevoScaleR 功能的子集 (rxLinMod、rxLogit、rxPredict、rxDTrees、rxBTrees
 
 下表列出所提供的隱含轉換。 不支援其他資料類型。
 
-|SQLtype|Python 類型|
-|-------|-----------|
-|**bigint**|`numeric`|
-|**binary**|`raw`|
+|SQLtype|Python 類型|描述
+|-------|-----------|---------------------------------------------------------------------------------------------|
+|**bigint**|`float64`|
+|**binary**|`bytes`|
 |**bit**|`bool`|
 |**char**|`str`|
+|**date**|`datetime`|
+|**datetime**|`datetime`|支援 SQL Server 2017 CU6 和更新版本 (具有 `datetime.datetime` 或 **Pandas** `pandas.Timestamp` 類型的**NumPy** 陣列)。 `sp_execute_external_script` 現在支援使用小數秒數的 `datetime` 類型。|
 |**float**|`float64`|
 |**int**|`int32`|
 |**nchar**|`str`|
 |**nvarchar**|`str`|
 |**nvarchar(max)**|`str`|
-|**real**|`float32`|
-|**smallint**|`int16`|
-|**tinyint**|`uint8`|
+|**real**|`float64`|
+|**smalldatetime**|`datetime`|
+|**smallint**|`int32`|
+|**tinyint**|`int32`|
+|**uniqueidentifier**|`str`|
 |**varbinary**|`bytes`|
 |**varbinary(max)**|`bytes`|
 |**varchar(n)**|`str`|

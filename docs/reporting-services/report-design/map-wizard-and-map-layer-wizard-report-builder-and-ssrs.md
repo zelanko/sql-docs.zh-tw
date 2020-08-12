@@ -1,5 +1,6 @@
 ---
 title: 地圖精靈與地圖圖層精靈 (報表產生器) | Microsoft Docs
+description: 了解如何使用報表產生器中的 [地圖精靈] 或 [地圖圖層精靈]，將建立地圖、新增地圖圖層或變更地圖圖層選項的作業自動化。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 02be70284a4a32c69618659f1271165677628845
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b139dc1b0aaa0b2d1477d182cf128d0f93795ca3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078574"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048333"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>地圖精靈與地圖圖層精靈 (報表產生器及 SSRS)
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，[地圖精靈] 與 [地圖圖層精靈] 會將建立地圖、加入地圖圖層，或變更現有圖層上之地圖圖層選項的程序自動化。  
@@ -44,7 +45,7 @@ ms.locfileid: "77078574"
   
  針對對應的說明內容，按一下精靈頁面的標題。 您看到的頁面會根據您選擇的地圖類型、空間資料來源及分析資料來源而有所不同。  
   
-1.  [選擇空間資料的來源](#SpatialDataSource)。 空間資料可以來自地圖庫，即環境系統研究協會 (Environmental Systems Research Institute, Inc.，ESRI) 形狀檔。或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫中的空間資料。  
+1.  [選擇空間資料的來源](#SpatialDataSource)。 空間資料可能來自地圖庫、環境系統研究協會 (Environmental Systems Research Institute, Inc.，ESRI) 形狀檔，或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫中的空間資料。  
   
     -   [何謂空間資料？](#SpatialData)  
   
@@ -106,7 +107,7 @@ ms.locfileid: "77078574"
  您可以在每個圖層上使用空間資料的相同來源或不同來源，但是您必須指定每次您加入圖層時的來源。 當空間資料來自地圖庫或 ESRI 形狀檔時，空間資料來源不是個別的報表項目， 因此不會出現在 [報表資料] 窗格中。  
   
 ###  <a name="what-is-spatial-data"></a><a name="SpatialData"></a> 何謂空間資料？  
- 空間資料包含可定義地理或幾何元素的座標軸。 在地圖中，空間資料會定義 *「地圖元素」* (Map Element)：定義區域或形狀的多邊形、定義路線或路徑的線條，以及定義標記或圖釘的點。 空間資料會以二進位格式儲存在資料來源中，並指定為座標位置組。 例如，點是 X 和 Y 座標 (X Y)、線條是兩組座標位置 ((X1 Y1), (X2 Y2))、多邊形是四組以上的座標位置，其中第一組和最後一組座標位置相同 ((X1 Y1), (X2 Y2), (X3 Y3), (X1 Y1))。  
+ 空間資料包含可定義地理或幾何元素的座標軸。 在地圖中，空間資料會定義 *「地圖元素」*(Map Element)：定義區域或形狀的多邊形、定義路線或路徑的線條，以及定義標記或圖釘的點。 空間資料會以二進位格式儲存在資料來源中，並指定為座標位置組。 例如，點是 X 和 Y 座標 (X Y)、線條是兩組座標位置 ((X1 Y1), (X2 Y2))、多邊形是四組以上的座標位置，其中第一組和最後一組座標位置相同 ((X1 Y1), (X2 Y2), (X3 Y3), (X1 Y1))。  
   
  如需詳細資訊，請參閱您使用之空間資料類型的文件集。  
   
@@ -119,7 +120,7 @@ ms.locfileid: "77078574"
  若要擴充地圖庫，您可以從地圖庫目錄加入或移除報表，也可以加入資料夾來組織地圖。 如需詳細資訊，請參閱[地圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)。  
   
 ###  <a name="what-is-an-esri-shapefile"></a><a name="Shapefile"></a> What is an ESRI shapefile?  
- ESRI 形狀檔是一組檔案，其中包含符合 Environmental Systems Research Institute, Inc. (ESRI) 形狀檔空間資料格式的資料。 這組檔案通常包括內含空間資料的 \<檔名>  .shp 檔案以及支援檔案 \<檔名>  。  
+ ESRI 形狀檔是一組檔案，其中包含符合 Environmental Systems Research Institute, Inc. (ESRI) 形狀檔空間資料格式的資料。 這組檔案通常包括內含空間資料的 *\<filename>* .shp 檔案以及支援檔案 *\<filename>* .dbf。  
   
  當您將形狀檔指定為您本機電腦上的空間資料來源時，會將空間資料自動內嵌至報表中。 若要以動態方式使用 ESRI 檔案中的空間資料，您必須執行下列操作：  
   

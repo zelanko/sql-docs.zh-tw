@@ -1,6 +1,6 @@
 ---
 title: 設定報表伺服器上的 Windows 驗證 | Microsoft Docs
-ms.date: 08/26/2016
+ms.date: 06/22/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: security
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 47cba9b26c56a41b6741211f1f9d228884b32b5b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c3320851b253b8ca509b564405db4b873e5dea0b
+ms.sourcegitcommit: 4fe7b0d5e8ef1bc076caa3819f7a7b058635a486
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66499939"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85263832"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>設定報表伺服器上的 Windows 驗證
   依預設， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會接受可指定交涉驗證或 NTLM 驗證的要求。 如果您的部署包括了使用這些安全性提供者的用戶端應用程式和瀏覽器，您可以使用預設值，而不需要進行額外的組態設定。 如果您想要針對 Windows 整合式安全性使用不同的安全性提供者 (例如，如果您想要直接使用 Kerberos)，或是您修改了預設值而且想要還原原始設定，您可以使用本主題的資訊來指定報表伺服器上的驗證設定。  
@@ -30,7 +30,7 @@ ms.locfileid: "66499939"
     > [!IMPORTANT]  
     >  如果您設定報表伺服器服務使用網域使用者帳戶執行，而且您並未針對此帳戶註冊服務主體名稱 (SPN)，則使用 **RSWindowsNegotiate** 將會產生 Kerberos 驗證錯誤。 如需詳細資訊，請參閱本主題的 [在連接報表伺服器時解決 Kerberos 驗證錯誤](#proxyfirewallRSWindowsNegotiate) 。  
   
--   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 必須設定 Windows 驗證。 報表伺服器 Web 服務的 Web.config 檔案預設會包含 \<authentication mode="Windows"> 設定。 如果您將它變更為 \<authentication mode="Forms">，[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 Windows 驗證將會失敗。  
+-   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 必須設定 Windows 驗證。 報表伺服器 Web 服務的 Web.config 檔案預設會包含 \<authentication mode="Windows"> 設定。 如果將其變更為 \<authentication mode="Forms">，則 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 Windows 驗證將會失敗。  
   
 -   報表伺服器 Web 服務的 Web.config 檔案必須有 \<identity impersonate= "true" />。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66499939"
   
 1.  在文字編輯器中開啟 RSReportServer.config。  
   
-2.  尋找 \<**驗證**>。  
+2.  尋找 \<**Authentication**>。  
   
 3.  複製下列其中一個最符合您需要的 XML 結構。 您可以依照任何順序來指定 **RSWindowsNegotiate**、 **RSWindowsNTLM**和 **RSWindowsKerberos** 。 如果您想要驗證連接而不是每一個個別要求，則應該啟用驗證持續性。 在驗證持續性之下，將會在連接的持續時間內允許要求驗證的所有要求。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66499939"
           <EnableAuthPersistence>true</EnableAuthPersistence>  
     ```  
   
-     \</驗證>  
+     \</Authentication>  
   
      第三個 XML 結構會指定用於 Windows 整合式安全性的所有安全性封裝：  
   
@@ -96,7 +96,7 @@ ms.locfileid: "66499939"
           </AuthenticationTypes>  
     ```  
   
-4.  將它貼到 \<**驗證**> 的現有項目上。  
+4.  將其貼到 \<**Authentication**> 的現有項目上。  
   
      請注意，您不能搭配 **RSWindows** 類型使用 **Custom** 。  
   
@@ -160,15 +160,9 @@ ms.locfileid: "66499939"
     <RSWindowsExtendedProtectionScenario>Any</RSWindowsExtendedProtectionScenario>  
     ```  
   
--   重新啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務，並在追蹤記錄檔中尋找類似以下的項目：  
-  
-    ```  
-    rshost!rshost!e44!01/14/2010-14:43:51:: i INFO: Registered valid SPNs list for endpoint 2: rshost!rshost!e44!01/14/2010-14:43:52:: i INFO: SPN Whitelist Added <Explicit> - \<HTTP/sqlpod064-13.w2k3.net>.  
-    ```  
-  
--   \<明確> 底下的值將會包含 Active Directory 中針對 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務帳戶設定的 SPN。  
-  
- 如果您不想要繼續使用擴充保護，請將組態值設回預設值，並重新啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務帳戶。  
+-   重新啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務。
+
+ 如果不想要繼續使用擴充保護，請將組態值設回預設值，並重新啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務帳戶。  
   
 ```  
 <RSWindowsExtendedProtectionLevel>Off</RSWindowsExtendedProtectionLevel>  
@@ -198,7 +192,7 @@ ms.locfileid: "66499939"
 ###### <a name="lan-and-proxy-settings-on-the-client"></a>用戶端上的 LAN 和 Proxy 設定  
  您在 Internet Explorer 中設定的 LAN 和 Proxy 設定可以決定是否優先選擇 NTLM (勝於 Kerberos)。 但是，由於組織之間的 LAN 和 Proxy 設定會有所差異，所以無法精確判斷造成 Kerberos 驗證錯誤的確切設定為何。 例如，您的組織可能會強制 Proxy 設定，這些設定會將 URL 從內部網路 URL 轉換成完整網域名稱 URL (透過網際網路連接來解析)。 如果將不同的驗證提供者用於不同類型的 URL，您可能會發現當您預期某些連接應該會失敗時，這些連接卻成功了。  
   
- 如果您遇到連接錯誤，而您認為這些錯誤是因為驗證失敗而發生，您可以嘗試 LAN 和 Proxy 設定的不同組合來隔離問題。 在 Internet Explorer 中，LAN 和 Proxy 設定位於 [區域網路 (LAN) 設定] 對話方塊上，您可以在 [網際網路選項] 的 [連線] 索引標籤上按一下 [區域網路設定] 來開啟此對話方塊。  
+ 如果您遇到連接錯誤，而您認為這些錯誤是因為驗證失敗而發生，您可以嘗試 LAN 和 Proxy 設定的不同組合來隔離問題。 在 Internet Explorer 中，LAN 和 Proxy 設定位於 [區域網路 (LAN) 設定]**** 對話方塊上，您可以在 [網際網路選項]**** 的 [連線]**** 索引標籤上按一下 [區域網路設定]**** 來開啟此對話方塊。  
   
 ## <a name="external-resources"></a>外部資源  
   

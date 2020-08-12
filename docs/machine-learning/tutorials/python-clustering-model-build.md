@@ -5,29 +5,31 @@ description: 在這個教學課程系列的第三部分 (總共四個部分) 中
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 05/14/2020
+ms.date: 05/21/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6e0aa1bcbf1bc79b6f77fc0b564d840194ffa8ec
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 2e88f0a826915a1250d3d6a83cf9789bf9bf4e02
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606434"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730528"
 ---
 # <a name="python-tutorial-build-a-model-to-categorize-customers-with-sql-machine-learning"></a>Python 教學課程：使用 SQL 機器學習來建置模型以分類客戶
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 在這個教學課程系列的第三部分 (總共四個部分) 中，您將在 Python 中建立一個 K-Means 模型以執行叢集。 在本系列的下一部分中，您將使用 SQL Server 機器學習服務在資料庫中部署此模型，或在巨量資料叢集上進行此部署。
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 在這個教學課程系列的第三部分 (總共四個部分) 中，您將在 Python 中建立一個 K-Means 模型以執行叢集。 在本系列的下一部分中，您將使用 SQL Server 機器學習服務在資料庫中部署此模型。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+在這個教學課程系列的第三部分 (總共四個部分) 中，您將在 Python 中建立一個 K-Means 模型以執行叢集。 在本系列的下一部分中，您將使用 Azure SQL 受控執行個體機器學習服務在資料庫中部署此模型。
 ::: moniker-end
 
 在本文中，您將學會如何：

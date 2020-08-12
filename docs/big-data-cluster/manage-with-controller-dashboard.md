@@ -9,16 +9,16 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a78074b7e32df18de1308d2354d98079d074f9bf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c051a634199bf6a8adc9a0b52a73196f68901893
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73531936"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730598"
 ---
 # <a name="manage-big-data-clusters-for-sql-server-controller-dashboard"></a>管理 SQL Server 控制器儀表板的巨量資料叢集
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 除了 **azdata** 與叢集狀態筆記本之外，另有一種方式可檢視 SQL Server 巨量資料叢集的狀態。 您現在可以透過 [連線]  呈現程式碼 (viewlet) 來新增 SQL Server 巨量資料叢集控制器。 這可讓您使用儀表板來檢視叢集的健康狀態。
 
@@ -27,8 +27,8 @@ ms.locfileid: "73531936"
 
 您必須滿足下列必要條件，才能啟動筆記本：
 
-* 最新版的 [Azure Data Studio Insiders 組建](https://docs.microsoft.com/sql/big-data-cluster/deploy-big-data-tools?view=sqlallproducts-download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc) \(英文\)
-* 在 Azure Data Studio 中安裝 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 延伸模組
+* 最新版的 [Azure Data Studio](https://aka.ms/getazuredatastudio)
+* [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 延伸模組](../azure-data-studio/data-virtualization-extension.md)安裝在 Azure Data Studio 中
 
 除了上述條件外，SQL Server 2019 巨量資料叢集也需要：
 

@@ -1,5 +1,6 @@
 ---
 title: 轉譯行為 (報表產生器及 SSRS) | Microsoft Docs
+description: 了解在報表產生器中轉譯報表時，適用於報表主體及其內容的規則。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 24b196927e582d1b21bf9f11bd7ea824ecf8ba7b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0214df6c7299f0a3240b904bbd00e965988d95dd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65576460"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048253"
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>轉譯行為 (報表產生器及 SSRS)
   根據所選取的轉譯器，當轉譯報表時，系統會將某些規則套用到報表主體及其內容。 將報表項目全部容納在一頁的方式，取決於下列因素的組合：  
@@ -45,7 +46,7 @@ ms.locfileid: "65576460"
   
 -   系統會使用報表項目上顯示的頁面高度與次數來建立約略的版面配置。 例如，如果文字方塊的高度為 .5 英吋，而且會在報表中重複 5 次，就會保留 2.5 英吋。  
   
--   系統會根據互動式高度設定，插入多個軟分頁符號。 若要在 HTML 和 ReportViewer 控制項中隱藏分頁符號，而且僅控制具有明確分頁符號的分頁，請將 [互動高度]  值設定為 0 或非常大的數字。  
+-   系統會根據互動式高度設定，插入多個軟分頁符號。 若要在 HTML 和 ReportViewer 控制項中隱藏分頁符號，而且僅控制具有明確分頁符號的分頁，請將 [互動高度]**** 值設定為 0 或非常大的數字。  
   
     > [!NOTE]  
     >  在軟分頁符號轉譯器中不會使用互動式寬度設定。  

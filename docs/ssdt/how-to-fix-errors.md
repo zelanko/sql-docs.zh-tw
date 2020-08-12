@@ -1,21 +1,21 @@
 ---
 title: 修正錯誤
+description: 熟悉 [錯誤清單] 窗格及其顯示的錯誤類型。 請參閱如何排序與篩選錯誤清單訊息，並識別錯誤來源。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 0d504e00-4ff0-4fdf-b874-85280bbd8668
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: e7cc581bc721f3174b5526ecf44941ee2d455634
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d9b10f9ae7cca4a486c277f953e1881a6d645587
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241386"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518788"
 ---
 # <a name="how-to-fix-errors"></a>如何：修正錯誤
 
@@ -26,15 +26,15 @@ ms.locfileid: "75241386"
   
 ### <a name="to-fix-errors"></a>若要修正錯誤  
   
-1.  以滑鼠右鍵按一下 [方案總管]  中的 [Product]  資料表 (Product.sql)，再選取 [檢視表設計工具]  。  
+1.  以滑鼠右鍵按一下 [方案總管] 中的 [Product] 資料表 (Product.sql)，再選取 [檢視表設計工具]。  
   
-2.  在設計工具的資料行格線中，以滑鼠右鍵按一下 [ShelflLife]  資料行，再選取 [刪除]  從資料表刪除這個資料行。  
+2.  在設計工具的資料行格線中，以滑鼠右鍵按一下 [ShelflLife] 資料行，再選取 [刪除] 從資料表刪除這個資料行。  
   
-3.  請注意，與下列訊息類似的警告與錯誤會立即顯示在畫面底部的 [錯誤清單]  中。  
+3.  請注意，與下列訊息類似的警告與錯誤會立即顯示在畫面底部的 [錯誤清單]**** 中。  
   
 **警告 SQL71502：函式：[dbo].[GetProductsBySupplier] 包含物件無法解析的參考。物件不存在或參考不明確，因為它可以參考下列任一個物件：[dbo].[Product].[p]::[ShelfLife] 或 [dbo].[Product].[ShelfLife]。錯誤 SQL71501：檢查限制：[dbo].[CK_Product_ShelfLife] 具有物件 [dbo].[Product].[ShelfLife] 無法解析的參考。**  
   
-4.  您可以用滑鼠右鍵按一下 [錯誤清單]  ，然後使用關聯式功能表排序結果，篩選要顯示的項目和每個項目要顯示的資訊欄。  
+4.  您可以用滑鼠右鍵按一下 [錯誤清單]****，然後使用關聯式功能表排序結果，篩選要顯示的項目和每個項目要顯示的資訊欄。  
   
     按兩下第一個識別的警告，並跟著它找出產生警告的指令碼。 有問題的代碼區段會以反白顯示。 以我們所舉的例子來說，這是因為先前建立的資料表值函式中 `RETURN` 和 `SELECT` 陳述式都使用了 `ShelfLife` 資料行。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "75241386"
   
 6.  移除檢查條件約束，以類似的方式修正第二個錯誤。  
   
-7.  請注意，在問題修正後，警告與錯誤隨即從 [錯誤清單]  中消失。  
+7.  請注意，在問題修正後，警告與錯誤隨即從 [錯誤清單] 中消失。  
   
 ## <a name="see-also"></a>另請參閱  
 [使用 Transact-SQL 編輯器，編輯及執行指令碼](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md)  

@@ -1,5 +1,6 @@
 ---
 title: Count 函式 (報表產生器) | Microsoft Docs
+description: 了解 Count 函式，此函式會傳回運算式所指定非 Null 值的計數，這會在指定範圍的內容中進行評估。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c37b4999f0fb2dd7cbf14322348e5836e8b38e32
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3e0213d580935112e48df2f8a774ac49202ee7af
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081296"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044085"
 ---
 # <a name="report-builder-functions---count-function"></a>報表產生器函式 - Count 函式
   傳回運算式指定的非 Null 值的計數 (在給定範圍的內容中評估)。  

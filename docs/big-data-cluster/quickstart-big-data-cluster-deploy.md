@@ -5,20 +5,20 @@ description: 了解如何使用部署指令碼在 Azure Kubernetes Service (AKS)
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: eea087ed3a4859e179f7bb0d1e77140bb8229a17
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 052e3794fa058ec988160855123c5b0993f3fbd4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77608390"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85699825"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>使用 Python 指令碼在 Azure Kubernetes Service (AKS) 上部署 SQL Server 巨量資料叢集
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 在本教學課程中，您將使用範例 Python 部署指令碼，將 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 部署至 Azure Kubernetes Service (AKS)。
 
@@ -85,7 +85,8 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    > 預設的 **Standard_L8s** 機器大小可能無法在每個 Azure 區域中使用。 如果您選擇不同的機器大小，請確定可在叢集中節點之間連結的磁碟總數大於或等於 24。 叢集中的每個持續性磁碟區宣告，都需要連結的磁碟。 目前，巨量資料叢集需要 24 個持續性磁碟區宣告。 例如，[Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/lsv2-series) 機器大小支援 32 個連結的磁碟，因此您可以使用此機器大小的單一節點來評估巨量資料叢集。
 
    > [!NOTE]
-   > 部署巨量資料叢集期間無法使用 SQL Server `sa` 帳戶。 新系統管理員登入會佈建於 SQL Server 的主要執行個體中，而其名稱即是為**使用者名稱**輸入所指定的名稱，密碼則會對應到**密碼**輸入。 佈建控制器管理使用者時，會使用相同的**使用者名稱**與**密碼**值。 閘道 (Knox) 僅支援**根使用者**，密碼與上述相同。
+   > 部署巨量資料叢集期間無法使用 SQL Server `sa` 帳戶。 新系統管理員登入會佈建於 SQL Server 的主要執行個體中，而其名稱即是為**使用者名稱**輸入所指定的名稱，密碼則會對應到**密碼**輸入。 佈建控制器管理使用者時，會使用相同的**使用者名稱**與**密碼**值。 在 SQL Server 2019 CU5 之前部署的叢集上，閘道 (Knox) 僅支援**根**使用者，且密碼與上述相同。
+   >[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 1. 指令碼會使用您指定的參數來開始建立 AKS 叢集。 此步驟需要幾分鐘的時間。
 

@@ -1,5 +1,6 @@
 ---
 title: 將串聯參數新增至報表 (報表產生器) | Microsoft Docs
+description: 了解如何在報表產生器的報表中使用串聯參數，以管理大量的報表資料。
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 55cba07f738c9a7a6b87f656687f545b64fd14cf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3335665e1e7e7212c6521e6c6c654a1eb5ee04ba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080623"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035039"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>將串聯參數加入至報表 (報表產生器及 SSRS)
   串聯參數會提供管理大量報表資料的方法。 您可以定義一組相關的參數，讓某一個參數的值清單會視另一個參數所選擇的值而定。 例如，第一個參數是獨立的，而且可能代表一個產品類別目錄的清單。 使用者選取類別目錄時，第二個參數會相依於第一個參數的值。 其值會隨著所選類別目錄內的子類別目錄清單更新。 當使用者檢視報表時，類別目錄與子類別目錄參數的值都用於篩選報表資料。  
@@ -113,7 +114,7 @@ ms.locfileid: "77080623"
     WHERE (Category = @Category)  
     ```  
   
-     在 WHERE 子句中，[類別目錄] 是 \<資料表> 的欄位名稱，而 @Category 則是查詢參數。 此陳述式會針對在 @Category 中指定的類別目錄，產生子類別目錄的清單。 在執行階段，系統會利用使用者針對報表參數選擇的同名值填入此值。  
+     在 WHERE 子句中，Category 是 \<table> 的欄位名稱，而 @Category 則是查詢參數。 此陳述式會針對在 @Category 中指定的類別目錄，產生子類別目錄的清單。 在執行階段，系統會利用使用者針對報表參數選擇的同名值填入此值。  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

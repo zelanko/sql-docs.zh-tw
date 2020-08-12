@@ -1,21 +1,21 @@
 ---
 title: 針對資料庫物件進行偵錯
+description: 了解如何偵錯預存程序、函數與觸發程序。 了解如何在偵錯模式中開啟偵錯、設定中斷點，以及執行 SQL Server 單元測試。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: f5d4584f-e85f-4558-b056-83681c365978
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ba04eba5107968f1be11c62fbac0f57ca5733b3f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9a9e1b3b6dd7e46872c6196ef3257805c1f5a72f
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241457"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518758"
 ---
 # <a name="how-to--debug-database-objects"></a>如何：針對資料庫物件進行偵錯
 
@@ -23,7 +23,7 @@ SQL Server 單元測試是由以下項目組成：
   
 -   以 Visual C\# 或 Visual Basic 撰寫的單元測試程式碼。 此程式碼是由 SQL Server 單元測試設計工具產生，負責提交構成測試本文的 Transact\-SQL 指令碼。  
   
--   以 Visual C \#或 Visual Basic 撰寫的一或多個測試條件。 若要對測試條件進行偵錯，請遵循對單元測試進行偵錯的程序來進行，如[如何：在執行測試時偵錯 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182484(VS.100).aspx) 或[如何：在執行測試時偵錯 (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182484.aspx) 中所述。  
+-   以 Visual C \#或 Visual Basic 撰寫的一或多個測試條件。 若要對測試條件進行偵錯，請遵循對單元測試進行偵錯的程序來進行，如[如何：在執行測試時偵錯 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182484(VS.100).aspx) \(機器翻譯\) 或[如何：在執行測試時偵錯 (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182484.aspx) \(機器翻譯\) 中所述。  
   
 -   一個或多個 Transact\-SQL 指令碼 (這些指令碼會在您要測試之資料庫的物件上執行)。 您無法對這些 Transact\-SQL 指令碼進行偵錯。  
   
@@ -39,21 +39,21 @@ SQL Server 單元測試是由以下項目組成：
   
 ### <a name="to-enable-sql-debugging-on-your-test-project"></a>若要在測試專案上啟用 SQL 偵錯  
   
-1.  開啟 [方案總管]  。  
+1.  開啟 [方案總管]。  
   
-2.  在 [方案總管]  中，以滑鼠右鍵按一下測試專案，然後按一下 [屬性]  。  
+2.  在 [方案總管] 中，以滑鼠右鍵按一下測試專案，然後按一下 [屬性]。  
   
     與測試專案同名的屬性頁面隨即開啟。  
   
-3.  在屬性頁面上，按一下 [偵錯]  。  
+3.  在屬性頁面上，按一下 [偵錯]。  
   
-4.  在 [啟用偵錯工具]  下，按一下 [啟用 SQL Server 偵錯]  。  
+4.  在 [啟用偵錯工具] 下，按一下 [啟用 SQL Server 偵錯]。  
   
 5.  儲存您的變更。  
   
 ### <a name="to-set-an-increased-execution-context-timeout-to-enable-debugging-for-your-test-project"></a>若要設定延長執行內容逾時來啟用測試專案的偵錯  
   
-1.  在 [檔案]  功能表上，指向 [開啟]  ，然後按一下 [檔案]  。  
+1.  在 [檔案] 功能表上，指向 [開啟]，然後按一下 [檔案]。  
   
 2.  瀏覽至包含測試專案的資料夾，然後按兩下 app.config 檔案。  
   
@@ -74,13 +74,13 @@ SQL Server 單元測試是由以下項目組成：
   
 ### <a name="to-add-breakpoints-to-your-transact-sql-script"></a>將中斷點新增至您的 Transact\-SQL 指令碼  
   
-1.  在 [檢視]  功能表上，開啟 [SQL Server 物件總管]  。  
+1.  在 [檢視] 功能表上，開啟 [SQL Server 物件總管]。  
   
-2.  在 [資料連接]  底下，展開您要測試之資料庫的節點。  
+2.  在 [資料連接] 底下，展開您要測試之資料庫的節點。  
   
-3.  如果資料庫的圖示旁邊有出現一個小型的紅色 'x'，則表示該資料庫的連接已關閉。 在此情況下，請以滑鼠右鍵按一下該資料庫，然後按一下 [重新整理]  。 您可能必須提供認證，才能開啟此資料庫的連接。  
+3.  如果資料庫的圖示旁邊有出現一個小型的紅色 'x'，則表示該資料庫的連接已關閉。 在此情況下，請以滑鼠右鍵按一下該資料庫，然後按一下 [重新整理]。 您可能必須提供認證，才能開啟此資料庫的連接。  
   
-4.  展開 [檢視表]  、[預存程序]  或 [函式]  節點，以尋找您要偵錯的物件。  
+4.  展開 [檢視表]、[預存程序] 或 [函式] 節點，以尋找您要偵錯的物件。  
   
 5.  按兩下您要偵錯的物件。  
   
@@ -88,13 +88,13 @@ SQL Server 單元測試是由以下項目組成：
   
 ### <a name="to-debug-your-sql-server-unit-test"></a>對您的 SQL Server 單元測試進行偵錯  
   
-1.  在 Visual Studio 2010 中，開啟 ([測試] -> [視窗]) [測試檢視]  視窗。 在 Visual Studio 2012 中，開啟 [測試總管]  視窗。  
+1.  在 Visual Studio 2010 中，開啟 ([測試] -> [視窗]) [測試檢視] 視窗。 在 Visual Studio 2012 中，開啟 [測試總管] 視窗。  
   
-2.  以滑鼠右鍵按一下測試 (其 Transact\-SQL 指令碼運用您已設定中斷點的資料庫物件)，然後選取 [偵錯選取範圍]  。  
+2.  以滑鼠右鍵按一下測試 (其 Transact\-SQL 指令碼運用您已設定中斷點的資料庫物件)，然後選取 [偵錯選取範圍]。  
   
     這項測試會在偵錯模式中執行，直到遇到資料庫物件內的中斷點為止。  
   
-3.  (選擇性) 若要開啟另一個偵錯視窗，請開啟 [偵錯]  功能表，指向 [視窗]  ，然後按一下 [中斷點]  、[輸出]  或 [即時運算]  。  
+3.  (選擇性) 若要開啟另一個偵錯視窗，請開啟 [偵錯] 功能表，指向 [視窗]，然後按一下 [中斷點]、[輸出] 或 [即時運算]。  
   
 ## <a name="see-also"></a>另請參閱  
 [執行 SQL Server 單元測試](../ssdt/running-sql-server-unit-tests.md)  

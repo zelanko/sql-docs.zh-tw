@@ -5,20 +5,20 @@ description: 了解如何搭配設定檔自訂巨量資料叢集部署。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bd9624ed1b3d6b164168d162ee68f1773b7a55ac
-ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
+ms.openlocfilehash: ad43f370db096450a88bf1ffe3dd742c86be3206
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80550200"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728021"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>設定叢集資源和服務的部署設定
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 從 `azdata` 管理工具內建的預先定義組態設定檔集合開始，您可以輕鬆地修改預設設定，使其更符合 BDC 工作負載需求。 設定檔結構可讓您針對資源的每項服務進行細微設定更新。
 
@@ -665,6 +665,16 @@ azdata bdc config patch --config-file custom-bdc/control.json --patch-file elast
 
 > [!IMPORTANT]
 > 建議的最佳做法是依照[本文](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html)中的指示，在 Kubernetes 叢集中每個主機上手動更新 `max_map_count` 設定。
+
+## <a name="turn-pods-and-nodes-metrics-colelction-onoff"></a>開啟/關閉 Pod 與節點計量集合
+
+SQL Server 2019 CU5 已啟用兩個功能參數，以控制 Pod 與節點計量的集合。 如果監視 Kubernetes 基礎結構使用了不同的解決方案，您可將 *control.json* 部署組態檔中的 *allowNodeMetricsCollection* 和 *allowPodMetricsCollection* 設為 *false*，以關閉 Pod 與主機節點的內建計量集合。 在 OpenShift 環境中，因為收集 Pod 與節點計量需要特殊權限的功能，所以這些設定在內建部署設定檔中預設為 *false*。
+請執行此命令，以使用 *azdata* CLI 更新您自訂組態檔中的這些設定值：
+
+```bash
+ azdata bdc config replace -c custom-bdc/control.json -j "$.security.allowNodeMetricsCollection=false"
+ azdata bdc config replace -c custom-bdc/control.json -j "$.security.allowPodMetricsCollection=false"
+ ```
 
 ## <a name="next-steps"></a>後續步驟
 

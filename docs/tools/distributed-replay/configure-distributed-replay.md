@@ -12,15 +12,15 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: b1385a3bcc755844f5af803f16d247f0692d9fbb
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 5ec828e6aa1df2ad38c7a3f831d9f8432dc681b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999378"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85681862"
 ---
 # <a name="configure-distributed-replay"></a>設定 Distributed Replay
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 組態詳細資料指定於 Distributed Replay Controller、用戶端，以及安裝了管理工具的 XML 檔案中。 這些檔案包括下列各項：  
   
 -   [控制器組態檔](#DReplayController)  
@@ -34,7 +34,7 @@ ms.locfileid: "82999378"
 ##  <a name="controller-configuration-file-dreplaycontrollerconfig"></a><a name="DReplayController"></a> 控制器設定檔：DReplayController.config  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller 服務啟動時，會從控制器組態檔 `DReplayController.config`載入記錄層次。 這個檔案位於您安裝 Distributed Replay Controller 服務的資料夾中：  
   
- **\<控制器安裝路徑>\DReplayController.config**  
+ **\<controller installation path>\DReplayController.config**  
   
  控制器組態檔所指定的記錄層次包括：  
   
@@ -55,7 +55,7 @@ ms.locfileid: "82999378"
 ##  <a name="client-configuration-file-dreplayclientconfig"></a><a name="DReplayClient"></a> 用戶端設定檔：DReplayClient.config  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 服務啟動時，會從用戶端組態檔 ( `DReplayClient.config`) 載入組態設定。 這個檔案位於每個用戶端上您安裝 Distributed Replay Client 服務的資料夾中：  
   
- **\<用戶端安裝路徑>\DReplayClient.config**  
+ **\<client installation path>\DReplayClient.config**  
   
  用戶端組態檔所指定的設定包括：  
   
@@ -86,7 +86,7 @@ ms.locfileid: "82999378"
   
  預設前置處理組態檔位於您安裝管理工具的資料夾中：  
   
- **\<系統管理工具安裝路徑>\DReplayAdmin\DReplay.exe.preprocess.config**  
+ **\<administration tool installation path>\DReplayAdmin\DReplay.exe.preprocess.config**  
   
  前置處理組態設定指定於前置處理組態檔中屬於 `<PreprocessModifiers>` 元素子系的 XML 元素中。 這些設定包括：  
   
@@ -115,11 +115,11 @@ ms.locfileid: "82999378"
   
  預設重新執行組態檔位於您安裝管理工具的資料夾中：  
   
- **\<系統管理工具安裝路徑>\DReplayAdmin\DReplay.exe.replay.config**  
+ **\<administration tool installation path>\DReplayAdmin\DReplay.exe.replay.config**  
   
  重新執行組態設定指定於重新執行組態檔中屬於 `<ReplayOptions>` 和 `<OutputOptions>` 元素子系的 XML 元素中。  
   
-### <a name="replayoptions-element"></a>\<ReplayOptions > 元素  
+### <a name="replayoptions-element"></a>\<ReplayOptions> 元素  
  重新執行組態檔在 `<ReplayOptions>` 元素中指定的設定如下：  
   
 |設定|XML 元素|描述|允許的值|必要|  
@@ -134,7 +134,7 @@ ms.locfileid: "82999378"
 |查詢逾時|`<QueryTimeout>`|指定查詢逾時值 (以秒為單位)。 此值只在傳回第一個資料列之前有效。|>= 1 的整數<br /><br /> (`-1` 表示停用)|否。 根據預設，此值是 `3600`。|  
 |每個用戶端的執行緒|`<ThreadsPerClient>`|指定要用於每個重新執行用戶端的重新執行執行緒數目。|介於 `1` 與 `512`之間的整數。|否。 如果未指定，則 Distributed Replay 會使用值 `255`。|  
   
-### <a name="outputoptions-element"></a>\<OutputOptions > 元素  
+### <a name="outputoptions-element"></a>\<OutputOptions> 元素  
  重新執行組態檔在 `<OutputOptions>` 元素中指定的設定如下：  
   
 |設定|XML 元素|描述|允許的值|必要|  

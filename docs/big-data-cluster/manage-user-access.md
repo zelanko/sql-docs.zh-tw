@@ -8,16 +8,16 @@ ms.date: 12/06/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9f9cca7e761b8f8ec3f5b87e9a195a0eb8b5da6d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 94719ef65023b1afd4edcf7770887323d0267127
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76259456"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730616"
 ---
 # <a name="manage-big-data-cluster-access-in-active-directory-mode"></a>以 Active Directory 模式管理巨量資料叢集存取
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 此文章說明如何更新 clusterAdmins 與 clusterUsers 部署期間所提供的 Active Directory 群組。
 
@@ -25,7 +25,7 @@ ms.locfileid: "76259456"
 
 您可以在部署設定檔的 [安全性] 區段中提供 Active Directory 群組，作為巨量資料叢集中兩個主要授權角色的一部分：
 
-* `clusterAdmins`:此參數接受一個 Active Directory 群組。 此群組的成員會取得整個叢集的系統管理員權限。 這些成員在 SQL Server 中具有「系統管理員」(sysadmin)  權限、在 Hadoop 分散式檔案系統 (HDFS) 與 Spark 中具有「超級使用者」  權限，而在控制器中具有「系統管理員」(administrator)  權限。
+* `clusterAdmins`:此參數接受一個 Active Directory 群組。 此群組的成員會取得整個叢集的系統管理員權限。 這些成員在 SQL Server 中具有「系統管理員」(sysadmin) 權限、在 Hadoop 分散式檔案系統 (HDFS) 與 Spark 中具有「超級使用者」權限，而在控制器中具有「系統管理員」(administrator) 權限。
 
 * `clusterUsers`:這些 Active Directory 群組是一般使用者，在叢集中沒有系統管理員權限。 他們具有登入 SQL Server 主要執行個體的權限，但根據預設，他們沒有物件或資料的權限。
 
@@ -81,7 +81,7 @@ ms.locfileid: "76259456"
 
 1. 使用上述連線，在角色資料表中插入資料列。 以大寫字母輸入 *REALM* 值。
 
-   如果您要授與系統管理員權限，請使用 *\<角色名稱>* 中的 *bdcAdmin* 角色。 針對非系統管理員使用者，請使用 *bdcUser* 角色。
+   若正要授與系統管理員權限，請使用 *\<role name>* 中的 *bdcAdmin* 角色。 針對非系統管理員使用者，請使用 *bdcUser* 角色。
 
    ```sql
    USE controller;

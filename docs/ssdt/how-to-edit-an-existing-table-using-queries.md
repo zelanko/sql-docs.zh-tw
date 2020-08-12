@@ -1,21 +1,21 @@
 ---
 title: 使用查詢編輯現有的資料表
+description: 了解如何使用 Transact-SQL 查詢來編輯資料表的定義或資料。 檢視編輯資料表定義的範例，以及將資料列插入資料表的範例。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 58f4de8e-97b4-4bcb-953f-f3d428432491
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 56411bfffbaebeb07adf23b456a20523342db21d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e1ebdca633ff866d51fcc20aa05993bb5969e4b2
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241408"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518808"
 ---
 # <a name="how-to-edit-an-existing-table-using-queries"></a>如何：使用查詢編輯現有的資料表
 
@@ -28,15 +28,15 @@ ms.locfileid: "75241408"
   
 1.  在 [SQL Server 物件總管] 中，展開 [Trade] 資料庫的 [資料表] 節點，然後以滑鼠右鍵按一下 [dbo.Suppliers]。  
   
-2.  選取 [檢視設計工具]  在資料表設計工具中檢視資料表結構描述。  
+2.  選取 [檢視設計工具] 在資料表設計工具中檢視資料表結構描述。  
   
 3.  選取 [Address] 資料行的 [允許 Null] 方塊。 請注意，指令碼窗格中對應的程式碼會立即變更為 `NULL`。  
   
-4.  遵循[如何：使用 Power Buffer 更新連接的資料庫](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)主題中的步驟更新資料庫。  
+4.  遵循[如何：使用 Power Buffer 更新連線的資料庫](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)主題中的步驟更新資料庫。  
   
 ### <a name="to-populate-data-in-new-tables-using-a-transact-sql-query"></a>使用 Transact\-SQL 查詢在新資料表中填入資料  
   
-1.  以滑鼠右鍵按一下 [Trade]  資料庫節點，再選取 [新增查詢]  。  
+1.  以滑鼠右鍵按一下 [Trade] 資料庫節點，再選取 [新增查詢]。  
   
 2.  在指令碼窗格中，貼入下列程式碼。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "75241408"
     GO  
     ```  
   
-3.  按一下 [執行查詢]  按鈕執行這個查詢。 [訊息]  窗格中的下列訊息指出資料列已成功加入至資料表。  
+3.  按一下 [執行查詢] 按鈕執行這個查詢。 [訊息] 窗格中的下列訊息指出資料列已成功加入至資料表。  
   
 **(2 個資料列受影響)(1 個資料列受影響)(2 個資料列受影響)**  
   
@@ -68,7 +68,7 @@ ms.locfileid: "75241408"
     GO  
     ```  
   
-5.  [訊息]  窗格指出 `INSERT` 陳述式與現有的檢查條件約束 (將 `ShelfLife` 的值限制為低於 5) 相衝突。 沒有更新 Products 資料表，因為陳述式使現有的條件約束無效。  
+5.  [訊息] 窗格指出 `INSERT` 陳述式與現有的檢查條件約束 (將 `ShelfLife` 的值限制為低於 5) 相衝突。 沒有更新 Products 資料表，因為陳述式使現有的條件約束無效。  
   
 6.  將程式碼變更為下列內容，並再次執行查詢。 請注意，這次的資料列更新成功。  
   

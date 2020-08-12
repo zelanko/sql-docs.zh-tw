@@ -1,5 +1,6 @@
 ---
 title: 建立專案的快照集
+description: 熟悉資料層應用程式檔案或快照集，並了解其使用方式。 了解如何建立或匯入快照集，以及如何進行比較。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -9,16 +10,15 @@ f1_keywords:
 ms.assetid: bed670a3-13bd-4d88-91a1-58d5b9524a97
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 40111c8807c0a0aa6162e8ad6a03d796406d5c1d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c381b920a527ab2320f6e83d6dbc057b675a4754
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241526"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518838"
 ---
 # <a name="how-to-create-a-snapshot-of-a-project"></a>如何：建立專案的快照集
 
@@ -33,9 +33,9 @@ ms.locfileid: "75241526"
   
 1.  以滑鼠右鍵按一下 [方案總管] 中的 [TradeDev] 專案，再選取 [資料層應用程式 (\*.dacpac)...]。  
   
-2.  SSDT 將先嘗試建置專案。 如果沒有發生建置錯誤，[Snapshot]  資料夾會建立在 [方案總管]  中。 在這個資料夾內，SSDT 會以「<Project Name>_YYYYMMDD_HH-MM-SS.dacpac」名稱格式建立 .dacpac 檔案。  
+2.  SSDT 將先嘗試建置專案。 如果沒有發生建置錯誤，[Snapshot] 資料夾會建立在 [方案總管] 中。 在這個資料夾內，SSDT 會以「<Project Name>_YYYYMMDD_HH-MM-SS.dacpac」名稱格式建立 .dacpac 檔案。  
   
-3.  以滑鼠右鍵按一下 .dacpac 檔案，再選取 [重新命名]  。 將預設檔名變更為 "TradeDev1.dacpac"。  
+3.  以滑鼠右鍵按一下 .dacpac 檔案，再選取 [重新命名]。 將預設檔名變更為 "TradeDev1.dacpac"。  
   
 4.  以滑鼠右鍵按一下 [方案總管] 中的 [GetProductsBySupplier] 函式，再選取 [刪除] 將它從專案中移除。  
   
@@ -45,25 +45,25 @@ ms.locfileid: "75241526"
   
 1.  以滑鼠右鍵按一下 [方案總管] 中的 [TradeDev] 專案，再從關連式功能表依序選取 [匯入] 和 [資料層應用 (\*.dacpac)...]。  
   
-2.  在 [匯入資料層應用程式]  對話方塊中，按一下 [瀏覽]  選取 **TradeDev1.dacpac** 做為匯入的來源。  
+2.  在 [匯入資料層應用程式] 對話方塊中，按一下 [瀏覽] 選取 **TradeDev1.dacpac** 做為匯入的來源。  
   
-    請注意，[目標專案]  區段已停用，因為目前專案是預設目標。 按一下 [開始]  開始進行匯入。  
+    請注意，[目標專案] 區段已停用，因為目前專案是預設目標。 按一下 [開始] 開始進行匯入。  
   
-3.  按一下 [摘要] 頁面中的 [完成]。 請注意，在 [方案總管]  中，被刪除的資料表已經還原至專案。  
+3.  按一下 [摘要] 頁面中的 [完成]。 請注意，在 [方案總管] 中，被刪除的資料表已經還原至專案。  
   
     > [!WARNING]  
-    > 匯入快照集會將快照集結構描述中的所有資料庫實體都匯入至專案， 因此可能會建立重複的實體。 例如，每個資料表和檢視現在都包含本身的額外複本，它的名稱為 <ObjectName_1>。 在 [方案總管]  中，以滑鼠右鍵按一下每一個重複的物件，再選取 [刪除]  將它從專案中移除。  
+    > 匯入快照集會將快照集結構描述中的所有資料庫實體都匯入至專案， 因此可能會建立重複的實體。 例如，每個資料表和檢視現在都包含本身的額外複本，它的名稱為 <ObjectName_1>。 在 [方案總管] 中，以滑鼠右鍵按一下每一個重複的物件，再選取 [刪除] 將它從專案中移除。  
   
 ### <a name="to-compare-snapshots"></a>若要比較快照集  
   
-1.  以滑鼠右鍵按一下 [方案總管] 中的 [TradeDev1.dacpac]  ，再選取 [結構描述比較]  。 [結構描述比較]  視窗隨即開啟。  
+1.  以滑鼠右鍵按一下 [方案總管] 中的 [TradeDev1.dacpac]，再選取 [結構描述比較]。 [結構描述比較] 視窗隨即開啟。  
   
-2.  使用 [資料層應用程式檔案]  選項設定來源與目標結構描述。 請確認在 [資料層應用程式檔案] 中，[來源結構描述] 設定為 [TradeDev1.dacpac]，[目標結構描述] 設定為 [TradeDev2.dacpac]。  
+2.  使用 [資料層應用程式檔案] 選項設定來源與目標結構描述。 請確認在 [資料層應用程式檔案] 中，[來源結構描述] 設定為 [TradeDev1.dacpac]，[目標結構描述] 設定為 [TradeDev2.dacpac]。  
   
-3.  按一下 [確定]  開始進行比較。 請注意，被刪除的函式在新舊快照集之間會以反白顯示為差異。  
+3.  按一下 [確定] 開始進行比較。 請注意，被刪除的函式在新舊快照集之間會以反白顯示為差異。  
   
     使用 [結構描述比較]，您可以輕鬆地尋找不同快照集的差異。 在這種情況下，您可以找出專案在開發過程中的成長方式。  
   
 ## <a name="see-also"></a>另請參閱  
-[如何：使用結構描述比較，比較不同的資料庫定義](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[操作說明：使用結構描述比較以比較不同的資料庫定義](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

@@ -1,5 +1,6 @@
 ---
 title: 為數列指定圖表區域 (報表產生器) | Microsoft Docs
+description: 了解報表產生器中作為最上層容器的圖表區域，其中包含外框、圖表標題和圖例。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,15 +12,15 @@ f1_keywords:
 ms.assetid: dc3c365b-c263-402a-bf6f-c2a7081db073
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 32f16dd226167c180de81a456a6493f1c717b481
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4a537d0319bb3cb035a8bff5891c24449de77777
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080952"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057564"
 ---
 # <a name="specify-a-chart-area-for-a-series-report-builder-and-ssrs"></a>為數列指定圖表區域 (報表產生器及 SSRS)
-  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，圖表  是最上層的容器，其中包含外框、圖表標題和圖例。 根據預設，圖表包含一個「圖表區域」  。 在圖表介面上看不到圖表區域，但是您可以將圖表區域視為僅包含軸標籤、軸標題，以及一或多個數列之繪圖區的容器。 下圖顯示單一圖表內多個圖表區域的概念。  
+  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，圖表是最上層的容器，其中包含外框、圖表標題和圖例。 根據預設，圖表包含一個「圖表區域」。 在圖表介面上看不到圖表區域，但是您可以將圖表區域視為僅包含軸標籤、軸標題，以及一或多個數列之繪圖區的容器。 下圖顯示單一圖表內多個圖表區域的概念。  
   
  ![顯示圖表區域的圖表](../../reporting-services/report-design/media/chartareasdiagram.gif "顯示圖表區域的圖表")  
   
@@ -32,13 +33,13 @@ ms.locfileid: "77080952"
   
 ## <a name="to-associate-a-series-with-a-new-chart-area"></a>讓數列與新圖表區域產生關聯  
   
-1.  以滑鼠右鍵按一下圖表的任何位置，然後選取 [新增新的圖表區域]  。 新的空白圖表區域就會出現在圖表上。  
+1.  以滑鼠右鍵按一下圖表的任何位置，然後選取 [新增新的圖表區域]。 新的空白圖表區域就會出現在圖表上。  
   
-2.  以滑鼠右鍵按一下圖表上的數列，或者在 [圖表資料] 窗格以滑鼠右鍵按一下適當區域中的資料欄位，然後按一下 [數列屬性]  。  
+2.  以滑鼠右鍵按一下圖表上的數列，或者在 [圖表資料] 窗格以滑鼠右鍵按一下適當區域中的資料欄位，然後按一下 [數列屬性]****。  
   
 3.  在 **[軸和圖表區域]** 中，選取您要數列顯示在其中的圖表區域。  
   
-4.  (選擇性) 垂直對齊圖表區域。 若要這樣做，以滑鼠右鍵按一下圖表，然後選取 [圖表區域屬性]  。 在 **[對齊]** 中，選取您要與所選圖表區域對齊的另一個圖表區域。  
+4.  (選擇性) 垂直對齊圖表區域。 若要這樣做，以滑鼠右鍵按一下圖表，然後選取 [圖表區域屬性]。 在 **[對齊]** 中，選取您要與所選圖表區域對齊的另一個圖表區域。  
   
 ## <a name="see-also"></a>另請參閱  
  [圖表上的多個數列 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)   

@@ -1,21 +1,21 @@
 ---
 title: 使用參考資料庫中資料來比較和同步處理資料表中的資料
+description: 了解如何比較兩個不同資料庫的資料。 了解如何同步資料，以及如何檢視用於同步處理序的指令碼。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 96d743b0-b69a-45bb-ae0e-62103dca76e2
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/27/2020
-ms.openlocfilehash: 097a024622dd7550ec3dabac1c1fac2a35dfe4b3
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: eb0ca79c68227bbc52b69da71eba191ec795ca2f
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402619"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85519078"
 ---
 # <a name="compare-and-synchronize-data-in-one-or-more-tables-with-data-in-a-reference-database"></a>使用參考資料庫中的資料比較和同步處理一個或多個資料表中的資料
 

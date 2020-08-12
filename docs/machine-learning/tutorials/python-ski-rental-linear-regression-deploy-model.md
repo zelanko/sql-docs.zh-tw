@@ -4,27 +4,30 @@ titleSuffix: SQL machine learning
 description: 在本教學課程系列的第四部分 (總共四個部分) 中，您會使用 SQL 機器學習服務，將預測雪橇租賃的 Python 模型部署到資料庫。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2020
+ms.date: 05/21/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1771cc70a2e5b36109ba028c86939ce66fa00993
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 030a172d35800becce17f804f67973368581fc05
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606730"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730490"
 ---
 # <a name="python-tutorial-deploy-a-linear-regression-model-with-sql-machine-learning"></a>Python 教學課程：使用 SQL 機器學習部署線性迴歸模型
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 在本教學課程系列的第四部分 (總共四個部分) 中，您將使用機器學習服務或巨量資料叢集，將以 Python 開發的線性迴歸模型部署到 SQL Server 資料庫。
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 在本教學課程系列的第四部分 (總共四個部分) 中，您將使用機器學習服務，將以 Python 開發的線性迴歸模型部署到 SQL Server 資料庫。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+在此四部分教學課程的第四部份中，您會使用機器學習服務，將以 Python 開發的線性迴歸模型部署到 Azure SQL 受控執行個體資料庫。
 ::: moniker-end
 
 在本文中，您將學會如何：

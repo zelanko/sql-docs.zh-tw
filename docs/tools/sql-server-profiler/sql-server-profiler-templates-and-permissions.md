@@ -1,6 +1,7 @@
 ---
 title: SQL Server Profiler 範本和權限
 titleSuffix: SQL Server Profiler
+description: 了解 SQL Server Profiler 的運作方式、如何用其追蹤事件，以及其功能詳細資訊的所在位置。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 9a5bb7c38fe1a9984c66dd83414aed9d3b853aa6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 96c78bc0fee624170b94b3360f75e00d876dc218
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307837"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729558"
 ---
 # <a name="sql-server-profiler-templates-and-permissions"></a>SQL Server Profiler 範本和權限
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何在內部解析查詢。 這可讓系統管理員確切地查看哪些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或「多維度運算式」已提交給伺服器，以及伺服器如何存取資料庫或 Cube，以傳回結果集。  
   
@@ -43,7 +44,7 @@ ms.locfileid: "75307837"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|描述|  
+|主題|說明|  
 |-----------|-----------------|  
 |[SQL Server Profiler 範本](../../tools/sql-server-profiler/sql-server-profiler-templates.md)|包含 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]隨附之預先定義追蹤範本的相關資訊。|  
 |[執行 SQL Server Profiler 所需的權限](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)|包含執行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]所需權限的相關資訊。|  

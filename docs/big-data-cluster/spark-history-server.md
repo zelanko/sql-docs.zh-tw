@@ -6,20 +6,20 @@ author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
 ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a2e1297ee6d32adc59810f3a4f9379e600f1464f
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 7139b427e58e1aabc516c562def45f986ece1c9d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606500"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728032"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-big-data-clusters-2019-in-spark-history-server"></a>在 Spark 歷程記錄伺服器中偵測並診斷 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上的 Spark 應用程式
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 本文提供指引，說明如何使用延伸的 Spark 歷程記錄伺服器來偵測並診斷 SQL Server 巨量資料叢集中的 Spark 應用程式。 這些偵錯和診斷功能內建於 Spark 歷程記錄伺服器中，並由 Microsoft 提供技術支援。 延伸模組包含 [資料] 索引標籤、[圖表] 索引標籤和 [診斷] 索引標籤。在 [資料] 索引標籤中，使用者可以檢查 Spark 作業的輸入和輸出資料。 在 [圖表] 索引標籤中，使用者可以檢查資料流程，並重新執行作業圖表。 在 [診斷] 索引標籤中，使用者可以參考資料扭曲、時間扭曲和執行程式使用狀況分析。
 
@@ -28,7 +28,7 @@ ms.locfileid: "83606500"
 來自開放原始碼的 Spark 歷程記錄伺服器使用者體驗已透過資訊加以增強，其中包括作業特定資料以及作業圖表的互動式視覺效果，以及適用於巨量資料叢集的資料流程。 
 
 ### <a name="open-the-spark-history-server-web-ui-by-url"></a>依 URL 開啟 Spark 歷程記錄伺服器 Web UI
-藉由瀏覽至下列 URL 來開啟 Spark 歷程記錄伺服器，並將 `<Ipaddress>` 和 `<Port>` 取代為巨量資料叢集特定資訊。 請注意，在基本驗證 (使用者名稱/密碼) 巨量資料叢集中，當提示您登入閘道 (Knox) 端點時，您必須提供使用者 **root**。 如需詳細資訊，可以參考：[部署 SQL Server 巨量資料叢集](quickstart-big-data-cluster-deploy.md)
+藉由瀏覽至下列 URL 來開啟 Spark 歷程記錄伺服器，並將 `<Ipaddress>` 和 `<Port>` 取代為巨量資料叢集特定資訊。 在 SQL Server 2019 CU 5 之前所部署的叢集上，具有基本驗證 (使用者名稱/密碼) 巨量資料叢集安裝程式，當提示登入閘道 (Knox) 端點時，您必須提供使用者**根**。 請參閱[部署 SQL Server 巨量資料叢集](quickstart-big-data-cluster-deploy.md)。 [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory
@@ -193,7 +193,13 @@ Spark 歷程記錄伺服器 Web UI 如下所示：
 + 按一下色彩圖示，以選取或取消選取所有草稿中的對應內容。
 
     ![選取圖表](./media/apache-azure-spark-history-server/sparkui-diagnosis-select-chart.png)
+    
+## <a name="spark--yarn-logs"></a>Spark/Yarn 記錄
+除了 Spark 記錄伺服器之外，您還可以分別在這裡找到 Spark 與 Yarn 的記錄：
+* Spark 事件記錄檔：hdfs:///system/spark-events
+* Yarn 記錄：hdfs:///tmp/logs/root/logs-tfile
 
+注意:這兩個記錄都有 7 天的預設保留期限。 若想要變更保留期限，請參閱[設定 Apache Spark 與 Apache Hadoop](configure-spark-hdfs.md) 頁面。 **無法**變更位置。
 
 ## <a name="known-issues"></a>已知問題
 Spark 歷程記錄伺服器具有下列已知問題：

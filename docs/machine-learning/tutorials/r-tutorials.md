@@ -8,19 +8,18 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 63c271c4e1d59c9446495607b42b0b5ad13ea246
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: ac7bbbb10d736b68d3e9930fafd7ae6e50f739f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606915"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85671023"
 ---
 # <a name="r-tutorials-for-sql-machine-learning"></a>SQL 機器學習的 R 教學課程
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 本文說明 [SQL Server](../sql-server-machine-learning-services.md) 和[巨量資料叢集](../../big-data-cluster/machine-learning-services.md)上機器學習服務的 R 教學課程和快速入門。
@@ -31,17 +30,28 @@ ms.locfileid: "83606915"
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 此文說明 [SQL Server 2016 R Services](../r/sql-server-r-services.md) 的 R 教學課程和快速入門。
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+本文描述 [Azure SQL 受控執行個體機器學習服務](/azure/azure-sql/managed-instance/machine-learning-services-overview)的 Python 教學課程和快速入門。
+::: moniker-end
 
 <a name="bkmk_sqltutorials"></a>
 
 ## <a name="r-tutorials"></a>R 教學課程
 
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 | 教學課程 | 描述 |
 |------|-------------|
 | [使用決策樹預測滑雪工具租用](r-predictive-model-introduction.md) | 使用 R 和決策樹模型來預測未來的滑雪工具租用數。 在 Azure Data Studio 中使用筆記本來準備資料及訓練模型，並使用 T-SQL 進行模型部署。 |
 | [使用 k-means 叢集將客戶分類](r-clustering-model-introduction.md) | 使用 R 來開發及部署 K-Means 群集模型，以將客戶分類。 在 Azure Data Studio 中使用筆記本來準備資料及訓練模型，並使用 T-SQL 進行模型部署。 |
-| [適用於資料科學家的資料庫內 R 分析](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | 本教學課程為剛接觸 SQL Server 的 R 開發人員說明如何在 SQL Server 中執行常見的資料科學工作。 載入資料並將其視覺化、將模型定型並儲存至 SQL Server，並使用模型進行預測性分析。 |
-| [適用於 SQL 開發人員的資料庫內 R 分析](../tutorials/sqldev-in-database-r-for-sql-developers.md) | 僅使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 工具來建置和部署完整的 R 解決方案。 著重於將解決方案移至生產環境。 您將了解如何將 R 程式碼包裝在預存程序中、將 R 模型儲存至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，以及對 R 模型進行參數化呼叫來進行預測。 |
+| [適用於資料科學家的資料庫內 R 分析](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | 本教學課程為剛接觸 SQL 機器學習的 R 開發人員說明如何在 SQL 中執行常見資料科學工作。 載入資料並將其視覺化、將模型定型並儲存在資料庫中，以及使用模型進行預測性分析。 |
+| [適用於 SQL 開發人員的資料庫內 R 分析](../tutorials/sqldev-in-database-r-for-sql-developers.md) | 僅使用 SQL 工具來建置和部署完整的 R 解決方案。 著重於將解決方案移至生產環境。 您將了解如何將 R 程式碼包裝在預存程序中、將 R 模型儲存在資料庫中，以及對 R 模型進行參數化呼叫來進行預測。 |
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current"
+| 教學課程 | 描述 |
+|------|-------------|
+| [使用決策樹預測滑雪工具租用](r-predictive-model-introduction.md) | 使用 R 和決策樹模型來預測未來的滑雪工具租用數。 在 Azure Data Studio 中使用筆記本來準備資料及訓練模型，並使用 T-SQL 進行模型部署。 |
+| [使用 k-means 叢集將客戶分類](r-clustering-model-introduction.md) | 使用 R 來開發及部署 K-Means 群集模型，以將客戶分類。 在 Azure Data Studio 中使用筆記本來準備資料及訓練模型，並使用 T-SQL 進行模型部署。 |
+::: moniker-end
 
 ## <a name="r-quickstarts"></a>R 快速入門
 
@@ -55,4 +65,4 @@ ms.locfileid: "83606915"
 
 ## <a name="next-steps"></a>後續步驟
 
-如需有關 SQL Server 中 R 的其他技術詳細資料，請參閱 [SQL Server中的 R 語言延伸模組](../concepts/extension-r.md)。
++ [SQL Server 中的 Python 延伸模組](../concepts/extension-r.md)

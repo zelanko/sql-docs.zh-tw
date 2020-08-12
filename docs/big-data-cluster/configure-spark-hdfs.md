@@ -9,35 +9,35 @@ ms.date: 02/21/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8d4325bcdbfe26d68b32fe4767a710b26f52f712
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 34e7ae0ab570ea7a9480b2051aadb6140bb1c2ea
+ms.sourcegitcommit: 22f687e9e8b4f37b877b2d19c5090dade8fa26d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220143"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334576"
 ---
 # <a name="configure-apache-spark-and-apache-hadoop-in-big-data-clusters"></a>在巨量資料叢集中設定 Apache Spark 和 Apache Hadoop
 
 為了在巨量資料叢集中設定 Apache Spark 和 Apache Hadoop，您必須在部署階段修改叢集設定檔。
 
-## <a name="supported-configurations"></a>支援的組態
+巨量資料叢集有四個組態類別： 
 
-目前有四個組態類別： 
 - `sql` 
 - `hdfs` 
 - `spark` 
 - `gateway` 
 
-在巨量資料叢集中，我們定義 3 項服務：`hdfs`、`spark`、`sql`。 每項服務都剛好對應到同命的組態類別。 所有閘道組態都會分在 `gateway` 類別。 
+`sql`、`hdfs`、`spark`、`sql` 為服務。 每項服務都會對應到同名的組態類別。 所有閘道組態都會分在 `gateway` 類別。 
 
-例如，服務 `hdfs` 中的所有組態都屬於 `hdfs` 類別。 請注意，所有 Hadoop (核心網站)、HDFS 和 Zookeeper 組態都屬於 `hdfs` 類別，而所有 Livy/Spark/Yarn/Hive 中繼存放區組態都屬於 "spark" 類別。 
+例如，服務 `hdfs` 中的所有組態都屬於 `hdfs` 類別。 請注意，所有 Hadoop (核心網站)、HDFS 和 Zookeeper 組態都屬於 `hdfs` 類別，而所有 Livy、Spark、Yarn、Hive 中繼存放區組態都屬於 `spark` 類別。 
 
 您可以在相關聯的 Apache 文件網站中找到其各自的所有可能組態：
+
 - Apache Spark： https://spark.apache.org/docs/latest/configuration.html
 - Apache Hadoop：
-   * HDFS HDFS 網站： https://hadoop.apache.org/docs/r2.7.1/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml
-   * HDFS 核心網站： https://hadoop.apache.org/docs/r2.8.0/hadoop-project-dist/hadoop-common/core-default.xml  
-   * Yarn： https://hadoop.apache.org/docs/r3.1.1/hadoop-yarn/hadoop-yarn-site/ResourceModel.html
+  - HDFS HDFS 網站： https://hadoop.apache.org/docs/r2.7.1/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml
+  - HDFS 核心網站： https://hadoop.apache.org/docs/r2.8.0/hadoop-project-dist/hadoop-common/core-default.xml  
+  - Yarn： https://hadoop.apache.org/docs/r3.1.1/hadoop-yarn/hadoop-yarn-site/ResourceModel.html
 - Hive： https://cwiki.apache.org/confluence/display/Hive/Configuration+Properties#ConfigurationProperties-MetaStore
 - Livy： https://github.com/cloudera/livy/blob/master/conf/livy.conf.template
 - Apache Knox 閘道： https://knox.apache.org/books/knox-0-14-0/user-guide.html#Gateway+Details
@@ -46,13 +46,119 @@ ms.locfileid: "82220143"
 
 `includeSpark` 這個布林值位於 `spec.resources.storage-0.spec.settings.spark` 的 `bdc.json` 組態檔中。
 
-## <a name="unsupported-configurations"></a>不支援的組態
+## <a name="supported-configurations"></a>支援的設定
 
-不支援下列組態，且無法在巨量資料叢集的內容中變更。
+下列範例會列出所支援可設定項目的所有預設設定。
+
+```json
+{
+  "hdfs": {
+    "hdfs-site.dfs.replication": "2",
+    "hdfs-site.dfs.ls.limit": "500",
+    "hdfs-site.dfs.namenode.provided.enabled": "true",
+    "hdfs-site.dfs.datanode.provided.enabled": "true",
+    "hdfs-site.dfs.datanode.provided.volume.lazy.load": "true",
+    "hdfs-site.dfs.provided.aliasmap.inmemory.enabled": "true",
+    "hdfs-site.dfs.provided.aliasmap.class": "org.apache.hadoop.hdfs.server.common.blockaliasmap.impl.InMemoryLevelDBAliasMapClient",
+    "hdfs-site.dfs.namenode.provided.aliasmap.class": "org.apache.hadoop.hdfs.server.common.blockaliasmap.impl.NamenodeInMemoryAliasMapClient",
+    "hdfs-site.dfs.provided.aliasmap.load.retries": "10",
+    "hdfs-site.dfs.provided.aliasmap.inmemory.batch-size": "1000",
+    "hdfs-site.dfs.datanode.provided.volume.readthrough": "true",
+    "hdfs-site.dfs.provided.overreplication.factor": "1",
+    "hdfs-site.dfs.provided.cache.capacity.fraction": "0.01",
+    "hdfs-site.dfs.provided.cache.capacity.mount": "true",
+
+    "hdfs-env.HDFS_NAMENODE_OPTS": "-Dhadoop.security.logger=INFO,RFAS -Xmx2g",
+    "hdfs-env.HDFS_DATANODE_OPTS": "-Dhadoop.security.logger=ERROR,RFAS -Xmx2g",
+    "hdfs-env.HDFS_ZKFC_OPTS": "-Xmx1g",
+    "hdfs-env.HDFS_JOURNALNODE_OPTS": "-Xmx2g",
+    "hdfs-env.HDFS_AUDIT_LOGGER": "INFO,RFAAUDIT",
+
+    "core-site.hadoop.security.group.mapping.ldap.search.group.hierarchy.levels": "10",
+    "core-site.fs.permissions.umask-mode": "077",
+    "core-site.hadoop.security.kms.client.failover.max.retries": "20",
+
+    "kms-site.hadoop.security.kms.encrypted.key.cache.size": "500",
+
+    "zoo-cfg.tickTime": "2000",
+    "zoo-cfg.initLimit": "10",
+    "zoo-cfg.syncLimit": "5",
+    "zoo-cfg.maxClientCnxns": "60",
+    "zoo-cfg.minSessionTimeout": "4000",
+    "zoo-cfg.maxSessionTimeout": "40000",
+    "zoo-cfg.autopurge.snapRetainCount": "3",
+    "zoo-cfg.autopurge.purgeInterval": "0",
+
+    "zookeeper-java-env.JVMFLAGS": "-Xmx1G -Xms1G",
+    
+    "zookeeper-log4j-properties.zookeeper.console.threshold": "INFO"
+  },
+  "spark": {
+    "capacity-scheduler.yarn.scheduler.capacity.maximum-applications": "10000",
+    "capacity-scheduler.yarn.scheduler.capacity.resource-calculator": "org.apache.hadoop.yarn.util.resource.DominantResourceCalculator",
+    "capacity-scheduler.yarn.scheduler.capacity.root.queues": "default",
+    "capacity-scheduler.yarn.scheduler.capacity.root.default.capacity": "100",
+    "capacity-scheduler.yarn.scheduler.capacity.root.default.user-limit-factor": "1",
+    "capacity-scheduler.yarn.scheduler.capacity.root.default.maximum-capacity": "100",
+    "capacity-scheduler.yarn.scheduler.capacity.root.default.state": "RUNNING",
+    "capacity-scheduler.yarn.scheduler.capacity.root.default.maximum-application-lifetime": "-1",
+    "capacity-scheduler.yarn.scheduler.capacity.root.default.default-application-lifetime": "-1",
+    "capacity-scheduler.yarn.scheduler.capacity.node-locality-delay": "40",
+    "capacity-scheduler.yarn.scheduler.capacity.rack-locality-additional-delay": "-1",
+
+    "hadoop-env.HADOOP_HEAPSIZE_MAX": "2048",
+
+    "yarn-env.YARN_RESOURCEMANAGER_HEAPSIZE": "2048",
+    "yarn-env.YARN_NODEMANAGER_HEAPSIZE": "2048",
+
+    "mapred-env.HADOOP_JOB_HISTORYSERVER_HEAPSIZE": "2048",
+
+    "hive-env.HADOOP_HEAPSIZE": "2048",
+
+    "livy-conf.livy.server.session.timeout-check": "true",
+    "livy-conf.livy.server.session.timeout-check.skip-busy": "true",
+    "livy-conf.livy.server.session.timeout": "2h",
+    "livy-conf.livy.server.yarn.poll-interval": "500ms",
+    "livy-conf.livy.rsc.jars": "local:/opt/livy/rsc-jars/livy-api.jar,local:/opt/livy/rsc-jars/livy-rsc.jar,local:/opt/livy/rsc-jars/netty-all.jar",
+    "livy-conf.livy.repl.jars": "local:/opt/livy/repl_2.11-jars/livy-core.jar,local:/opt/livy/repl_2.11-jars/livy-repl.jar,local:/opt/livy/repl_2.11-jars/commons-codec.jar",
+    "livy-conf.livy.rsc.sparkr.package": "hdfs:///system/livy/sparkr.zip",
+
+    "livy-env.LIVY_SERVER_JAVA_OPTS": "-Xmx2g",
+
+    "spark-defaults-conf.spark.r.backendConnectionTimeout": "86400",
+    "spark-defaults-conf.spark.pyspark.python": "python3",
+    "spark-defaults-conf.spark.yarn.jars": "local:/opt/spark/jars/*",
+
+    "spark-history-server-conf.spark.history.fs.cleaner.maxAge": "7d",
+    "spark-history-server-conf.spark.history.fs.cleaner.interval": "12h",
+
+    "spark-env.SPARK_DAEMON_MEMORY": "2g",
+    "spark-env.PYSPARK_ARCHIVES_PATH": "local:/opt/spark/python/lib/pyspark.zip,local:/opt/spark/python/lib/py4j-0.10.7-src.zip",
+
+    "yarn-site.yarn.log-aggregation.retain-seconds": "604800",
+    "yarn-site.yarn.nodemanager.log-aggregation.compression-type": "gz",
+    "yarn-site.yarn.nodemanager.log-aggregation.roll-monitoring-interval-seconds": "3600",
+    "yarn-site.yarn.scheduler.minimum-allocation-mb": "512",
+    "yarn-site.yarn.scheduler.minimum-allocation-vcores": "1",
+    "yarn-site.yarn.nm.liveness-monitor.expiry-interval-ms": "180000",
+    "yarn-site.yarn.nodemanager.container-executor.class": "org.apache.hadoop.yarn.server.nodemanager.LinuxContainerExecutor"
+  },
+  "gateway": {
+    "gateway-site.gateway.httpclient.socketTimeout": "90s",
+    "gateway-site.sun.security.krb5.debug": "false",
+    "knox-env.KNOX_GATEWAY_MEM_OPTS": "-Xmx2g"
+  }
+}
+```
+
+下列各節會列出不支援的組態。
+
+## <a name="unsupported-spark-configurations"></a>不支援的 `spark` 組態
+
+不支援下列 `spark` 組態，且無法在巨量資料叢集的內容中變更。
 
 | 類別  | 子類別               | 檔案                       | 不支援的組態                                              |
 |-----------|----------------------------|----------------------------|-------------------------------------------------------------------------|
-| Spark     |                            |                            |                                                                         |
 |           | yarn-site                  | yarn-site.xml              | yarn.log-aggregation-enable                                             |
 |           |                            |                            | yarn.log.server.url                                                     |
 |           |                            |                            | yarn.nodemanager.pmem-check-enabled                                     |
@@ -82,11 +188,9 @@ ms.locfileid: "82220143"
 |           |                            |                            | yarn.resourcemanager.zk-address                                         |
 |           |                            |                            | yarn.resourcemanager.ha.rm-ids                                          |
 |           |                            |                            | yarn.resourcemanager.hostname.*                                         |
-|           |                            |                            | |
 |           | capacity-scheduler         | capacity-scheduler.xml     | yarn.scheduler.capacity.root.acl_submit_applications                    |
 |           |                            |                            | yarn.scheduler.capacity.root.acl_administer_queue                       |
 |           |                            |                            | yarn.scheduler.capacity.root.default.acl_application_max_priority       |
-|           |                            |                            | |
 |           | yarn-env                   | yarn-env.sh                |                                                                         |
 |           | spark-defaults-conf        | spark-defaults.conf        | spark.yarn.archive                                                      |
 |           |                            |                            | spark.yarn.historyServer.address                                        |
@@ -102,11 +206,9 @@ ms.locfileid: "82220143"
 |           |                            |                            | spark.network.crypto.enabled                                            |
 |           |                            |                            | spark.ssl.keyStore                                                      |
 |           |                            |                            | spark.ssl.keyStorePassword  
-|           |                            |                            | |                                            |
 |           |                            |                            | spark.ui.enabled                                                        |
 |           | spark-env                  | spark-env.sh               | SPARK_NO_DAEMONIZE                                                      |
 |           |                            |                            | SPARK_DIST_CLASSPATH                                                    |
-|           |                            |                            | |
 |           | spark-history-server-conf  | spark-history-server.conf  | spark.history.fs.logDirectory                                           |
 |           |                            |                            | spark.ui.proxyBase                                                      |
 |           |                            |                            | spark.history.fs.cleaner.enabled                                        |
@@ -123,7 +225,6 @@ ms.locfileid: "82220143"
 |           |                            |                            | spark.history.ui.acls.enable                                            |
 |           |                            |                            | spark.history.ui.admin.acls                                             |
 |           |                            |                            | spark.history.ui.admin.acls.groups                                      |
-|           |                            |                            | |
 |           | livy-conf                  | livy.conf                  | livy.keystore                                                           |
 |           |                            |                            | livy.keystore.password                                                  |
 |           |                            |                            | livy.spark.master                                                       |
@@ -142,7 +243,6 @@ ms.locfileid: "82220143"
 |           |                            |                            | livy.impersonation.enabled                                              |
 |           |                            |                            | livy.server.access-control.enabled                                      |
 |           |                            |                            | livy.server.access-control.*                                            |
-|           |                            |                            | |
 |           | livy-env                   | livy-env.sh                | LIVY_SERVER_JAVA_OPTS                                                   |
 |           | hive-site                  | hive-site.xml              | javax.jdo.option.ConnectionURL                                          |
 |           |                            |                            | javax.jdo.option.ConnectionDriverName                                   |
@@ -163,10 +263,14 @@ ms.locfileid: "82220143"
 |           |                            |                            | hive.metastore.sasl.enabled                                             |
 |           |                            |                            | hive.metastore.execute.setugi                                           |
 |           |                            |                            | hive.cluster.delegation.token.store.class                               |
-|           |                            |                            | |
-|           | hive-env                   | hive-env.sh                |                                                                         |
-|          |                             |                               |                                                       |
-| hdfs     |                             |                               |                                                       |
+|           | hive-env                   | hive-env.sh                
+
+## <a name="unsupported-hdfs-configurations"></a>不支援的 `hdfs` 組態
+
+不支援下列 `hdfs` 組態，且無法在巨量資料叢集的內容中變更。
+
+| 類別  | 子類別               | 檔案                       | 不支援的組態                                              |
+|-----------|----------------------------|----------------------------|-------------------------------------------------------------------------|
 |          | core-site                   | core-site.xml                 | fs.defaultFS                                          |
 |          |                             |                               | ha.zookeeper.quorum                                   |
 |          |                             |                               | hadoop.tmp.dir                                        |
@@ -180,10 +284,8 @@ ms.locfileid: "82220143"
 |          |                             |                               | hadoop.http.authentication.kerberos.keytab            |
 |          |                             |                               | hadoop.http.filter.initializers                       |
 |          |                             |                               | hadoop.security.group.mapping.*                       |
-|           |                            |                            | |
 |          | hadoop-env                  | hadoop-env.sh                 | JAVA_HOME                                             |
 |          |                             |                               | HADOOP_CLASSPATH                                      |
-|           |                            |                            | |
 |          | mapred-env                  | mapred-env.sh                 |                                                       |
 |          | hdfs-site                   | hdfs-site.xml                 | dfs.namenode.name.dir                                 |
 |          |                             |                               | dfs.datanode.data.dir                                 |
@@ -224,22 +326,23 @@ ms.locfileid: "82220143"
 |          |                             |                               | dfs.web.authentication.kerberos.principal             |
 |          |                             |                               | dfs.webhdfs.enabled                                   |
 |          |                             |                               | dfs.permissions.superusergroup                        |
-|          |                             |                               |                                                       |
 |          | hdfs-env                    | hdfs-env.sh                   | HADOOP_HEAPSIZE_MAX                                   |
-|           |                            |                            | |
 |          | zoo-cfg                     | zoo.cfg                       | secureClientPort                                      |
 |          |                             |                               | clientPort                                            |
 |          |                             |                               | dataDir                                               |
 |          |                             |                               | dataLogDir                                            |
 |          |                             |                               | 4lw.commands.whitelist                                |
-|           |                            |                            | |
 |          | zookeeper-java-env          | java.env                      | ZK_LOG_DIR                                            |
 |          |                             |                               | SERVER_JVMFLAGS                                       |
-|           |                            |                            | |
 |          | zookeeper-log4j-properties  | log4j.properties (zookeeper)  | log4j.rootLogger                                      |
 |          |                             |                               | log4j.appender.CONSOLE.*                              |
-|          |                             |                               |                                                       |
-| gateway  |                             |                               |                                                       |
+
+## <a name="unsupported-gateway-configurations"></a>不支援的 `gateway` 組態
+
+不支援下列 `gateway` 組態，且無法在巨量資料叢集的內容中變更。
+
+| 類別  | 子類別               | 檔案                       | 不支援的組態                                              |
+|-----------|----------------------------|----------------------------|-------------------------------------------------------------------------|
 |          | gateway-site                | gateway-site.xml              | gateway.port                                          |
 |          |                             |                               | gateway.path                                          |
 |          |                             |                               | gateway.gateway.conf.dir                              |
@@ -250,9 +353,8 @@ ms.locfileid: "82220143"
 |          |                             |                               | gateway.scope.cookies.feature.enabled                 |
 |          |                             |                               | ssl.exclude.protocols                                 |
 |          |                             |                               | ssl.include.ciphers                                   |
-|          |                             |                               |                                                       |
 
-## <a name="configurations-via-cluster-profile"></a>Configurations via Cluster Profile
+## <a name="configurations-via-cluster-profile"></a>透過叢集設定檔進行設定
 
 在叢集設定檔中有資源和服務。 在部署階段，我們可以使用下列兩種方式之一來指定組態： 
 

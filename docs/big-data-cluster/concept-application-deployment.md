@@ -2,24 +2,24 @@
 title: 什麼是應用程式部署？
 titleSuffix: SQL Server Big Data Clusters
 description: 本文說明 SQL Server 2019 巨量資料叢集上的應用程式部署。
-author: jeroenterheerdt
-ms.author: jterh
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
 ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4b647ab4d03d110ce303388a8b62461f28033b6c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4423e6fe624c27c0b9c06d3ff59c56648762af99
+ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76831573"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85215447"
 ---
 # <a name="what-is-application-deployment-on-a-big-data-cluster"></a>什麼巨量資料叢集上的應用程式部署？
 
-應用程式部署藉由提供介面來建立、管理和執行應用程式，讓您能在巨量資料叢集上部署應用程式。 部署在巨量資料叢集上的應用程式可受益於叢集的計算能力，且可以存取叢集上可用的資料。 這會增加應用程式的延展性和效能，同時管理資料所在的應用程式。 SQL Server Big Data 叢集上支援的應用程式執行階段為 R、Python、SSIS、MLeap。
+應用程式部署藉由提供介面來建立、管理和執行應用程式，以供在巨量資料叢集上部署應用程式。 部署在巨量資料叢集上的應用程式可受益於叢集的計算能力，且可以存取叢集上可用的資料。 這會增加應用程式的延展性和效能，同時管理資料所在的應用程式。 SQL Server Big Data 叢集上支援的應用程式執行階段為 R、Python、SSIS、MLeap。
 
 下列各節描述應用程式部署的架構和功能。
 
@@ -52,6 +52,28 @@ output: #output parameter the app expects and the type
 建立複本集並啟動 Pod 之後，即會建立 cron 作業 (如果已在 `spec.yaml` 檔案中設定 `schedule` )。 最後，會建立可用於管理與執行應用程式的 Kubernetes 服務 (請參閱下方)。
 
 執行應用程式時，應用程式的 Kubernetes 服務會將要求傳送給複本並傳回結果。
+
+## <a name="security-considerations-for-applications-deployments-on-openshift"></a><a id="app-deploy-security"></a> OpenShift 上應用程式部署的安全性考量
+
+SQL Server 2019 CU5 可支援 Red Hat OpenShift 上的巨量資料叢集部署，以及 BDC 的已更新安全性模型，因此不再需要特殊權限容器。 針對所有使用 SQL Server 2019 CU5 的新部署，除了沒有特殊權限以外，容器還預設會以非根使用者的身分執行。
+
+在 CU5 版本中，使用[應用程式部署](concept-application-deployment.md)介面部署的應用程式安裝步驟，執行身分仍然必須是「根」使用者。 這是必要項目，因為在安裝期間，系統會安裝應用程式將使用的其他套件。 部署為應用程式一部分的其他使用者程式碼，將會以低權限使用者的身分執行。 
+
+此外，**CAP_AUDIT_WRITE** 功能是允許使用 Cron 作業為 SSIS 應用程式排程所需的選擇性功能。 當應用程式的 YAML 規格檔案指定排程時，應用程式會透過 Cron 作業觸發，這需要額外的功能。  或者，可視需要透過 Web 服務呼叫來使用 *azdata app run* 以觸發應用程式，這不需要 CAP_AUDIT_WRITE 功能。 
+
+> [!NOTE]
+> [OpenShift 部署一文](deploy-openshift.md)中的自訂 SCC 不包含這項功能，因為巨量資料叢集的預設部署不需要該功能。 若要啟用這項功能，必須先更新自訂 SCC YAML 檔案，以將 CAP_AUDIT_WRITE 包含在 
+
+```yml
+...
+allowedCapabilities:
+- SETUID
+- SETGID
+- CHOWN
+- SYS_PTRACE
+- AUDIT_WRITE
+...
+```
 
 ## <a name="how-to-work-with-application-deployment"></a>如何使用應用程式部署
 

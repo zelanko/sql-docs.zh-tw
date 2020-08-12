@@ -1,5 +1,6 @@
 ---
 title: 變更資料列高度或資料行寬度 (報表產生器) | Microsoft Docs
+description: 了解如何在報表產生器中，使用文字方塊屬性為轉譯的報表設定資料行寬度或固定的資料列高度。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f061c204-5cd5-4467-9a9c-8a12803d93ba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5396ca15db85405053f8c003fb643e26b13f46fe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 485dc6918cad6fef9c55256f07de299af377b2d4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078922"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044040"
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>變更資料列高度或資料行寬度 (報表產生器及 SSRS)
   當您設定資料列高度時，就是針對轉譯報表中的資料列指定最大高度。 不過，根據預設，資料列中的文字方塊會設定為垂直成長，以便在執行階段容納其資料，而且這可能會導致資料列擴展超過您所指定的高度。 若要設定固定的資料列高度，您必須變更文字方塊屬性，讓它們不會自動擴展。  
@@ -49,7 +50,7 @@ ms.locfileid: "77078922"
   
 2.  按一下資料列控制代碼，即可選取此資料列。  
   
-3.  在 [屬性] 窗格中，將 CanGrow 設為 [False]  。  
+3.  在 [屬性] 窗格中，將 CanGrow 設為 [False]。  
   
     > [!NOTE]  
     >  如果您看不到 [屬性] 窗格，請按一下 **[檢視]** 功能表上的 **[屬性]** 。  

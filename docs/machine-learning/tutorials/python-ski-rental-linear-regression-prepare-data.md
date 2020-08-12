@@ -4,21 +4,21 @@ titleSuffix: SQL machine learning
 description: 在本教學課程系列的第二部分 (總共四個部分) 中，您將會使用 Python 搭配 SQL 機器學習服務，來準備資料以預測雪橇租賃。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2020
+ms.date: 05/26/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 75f475f8a2b4b0d23d95498a69f5e5d745f7510d
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 424d61e24e9cd1163854d86961a34770eee36260
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606720"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730476"
 ---
 # <a name="python-tutorial-prepare-data-to-train-a-linear-regression-model-with-sql-machine-learning"></a>Python 教學課程：準備資料以使用 SQL 機器學習來定型線性迴歸模型
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 在本教學課程系列的第二部分 (總共四個部分) 中，您將使用 Python 準備資料庫中的資料。 在本系列稍後，您將使用此資料搭配 SQL Server 機器學習服務，在 Python 中定型和部署線性迴歸模型，或在巨量資料叢集上進行此定型和部署。
@@ -26,11 +26,14 @@ ms.locfileid: "83606720"
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 在本教學課程系列的第二部分 (總共四個部分) 中，您將使用 Python 準備資料庫中的資料。 在本系列稍後，您將使用 SQL Server 機器學習服務，在 Python 中定型和部署線性迴歸模型。
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+在本教學課程系列的第二部分 (總共四個部分) 中，您將使用 Python 準備資料庫中的資料。 在本系列稍後，您將使用 Azure SQL 受控執行個體機器學習服務，在 Python 中以本資料定型和部署線性迴歸模型。
+::: moniker-end
 
 在本文中，您將學會如何：
 
 > [!div class="checklist"]
-> * 將 SQL Server 資料庫的資料載入到 **pandas** 資料框架
+> * 將資料庫中的資料載入至 **pandas** 資料框架
 > * 透過移除一些資料行來準備 Python 中的資料
 
 在[第一部分](python-ski-rental-linear-regression.md)，您已了解如何還原範例資料庫。
@@ -47,7 +50,7 @@ ms.locfileid: "83606720"
 
 為了使用 Python 中的資料，請將資料庫中的資料載入到 pandas 資料框架。
 
-在 Azure Data Studio 中建立新的 Python 筆記本，並執行以下指令碼。 以您自己的 SQL Server 名稱取代 `<SQL Server>`。
+在 Azure Data Studio 中建立新的 Python 筆記本，並執行以下指令碼。 
 
 下列 Python 指令碼會將資料集從資料庫中的 **dbo. rental_data** 資料表，匯入到 pandas 資料框架 **df**。
 
@@ -60,7 +63,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 
 # Connection string to your SQL Server instance
-conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=<SQL Server>; DATABASE=TutorialDB; Trusted_Connection=yes')
+conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=<server>; DATABASE=TutorialDB;UID=<username>;PWD=<password>)
 
 query_str = 'SELECT Year, Month, Day, Rentalcount, Weekday, Holiday, Snow FROM dbo.rental_data'
 

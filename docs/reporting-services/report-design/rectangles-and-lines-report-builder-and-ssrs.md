@@ -1,5 +1,6 @@
 ---
 title: 矩形和線條 (報表產生器) | Microsoft Docs
+description: 探索如何在報表產生器的編頁報表內建立視覺效果。 新增色彩或影像、工具提示或書籤等功能。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d6226b0c-0398-4185-8565-96099876fc21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8d4448fba4e9faf1c3d51bb6233723385d111230
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c33ff26c9cf77e95e5f17b8bb2e31bc73b794d97
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082345"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057559"
 ---
 # <a name="rectangles-and-lines-report-builder-and-ssrs"></a>矩形和線條 (報表產生器及 SSRS)
   矩形和線條可在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 編頁報表內建立視覺效果。 您可以從 [主資料夾] 索引標籤的 [框線] 區段設定這些報表項目的顯示屬性，而且可以在 [屬性] 窗格內設定其他屬性。 您可以將背景色彩或影像、工具提示或書籤等功能加入至矩形。  

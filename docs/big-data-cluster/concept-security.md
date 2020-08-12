@@ -5,20 +5,20 @@ description: 本文描述 SQL Server 巨量資料叢集的安全性概念。 此
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 10/23/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0fc816325d4008d1913f0e07e3032677a0eddb4d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f0d19589c057df0af9ffea711edd8963bc381e2d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77074419"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730683"
 ---
 # <a name="security-concepts-for-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的安全性概念
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 本文將涵蓋巨量資料叢集中與安全性相關的重要概念
 
@@ -83,17 +83,21 @@ Hadoop 元件不支援混合模式驗證，這表示基本系統管理員登入�
 這些是您需要在部署期間定義的登入認證。
 
 叢集管理使用者名稱：
+
  + `AZDATA_USERNAME=<username>`
 
 叢集管理密碼：  
  + `AZDATA_PASSWORD=<password>`
 
 > [!NOTE]
-> 請注意，在非 AD 模式中，使用者名稱 "root" 必須搭配上述密碼使用，以針對閘道 (Knox) 進行驗證來存取 HDFS/Spark。
+> 請注意，在非 AD 模式中，使用者名稱必須搭配上述密碼使用，以針對閘道 (Knox) 進行驗證來存取 HDFS/Spark。 在 SQL Server 2019 CU5 之前，使用者名稱為 `root`。
+> 
+> [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 ## <a name="next-steps"></a>後續步驟
 
-若要深入了解 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]，請參閱下列資源：
+[什麼是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)
 
-- [什麼是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)
-- [工作坊：Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]架構](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters) \(英文\)
+[工作坊：Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]架構](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters) \(英文\)
+
+[Kubernetes RBAC](kubernetes-rbac.md)

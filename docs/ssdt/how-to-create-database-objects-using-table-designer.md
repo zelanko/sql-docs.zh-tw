@@ -1,5 +1,6 @@
 ---
 title: 使用資料表設計工具建立資料庫物件
+description: 了解如何在 SQL Server [物件總管] 中建立新的資料庫。 了解如何在資料表設計工具中建立新的資料表、條件約束和外部索引鍵參考。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -9,34 +10,33 @@ f1_keywords:
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ef475a7a0f5e2e8fdea510a0ee743f0d74d19dd2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3364df5dd6336023af7316be12150b878f2c9eb9
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241497"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518778"
 ---
 # <a name="how-to-create-database-objects-using-table-designer"></a>如何：使用資料表設計工具建立資料庫物件
 
-[SQL Server 物件總管] 中新的 [SQL Server] 節點不僅看上去非常類似於 SSMS，還能讓您透過作用有如 SSMS 對應介面的關聯式功能表建立新物件。  
+[SQL Server 物件總管]**** 中新的 [SQL Server]**** 節點不僅看上去非常類似於 SSMS，還能讓您透過作用有如 SSMS 對應介面的關聯式功能表建立新物件。  
   
-例如，您可以在 [資料庫]  節點底下建立新的資料庫。 您也可以選取特定的資料庫，然後使用新的資料表設計工具，快速建立或編輯資料表定義及其相關的程式設計物件。 從資料表設計工具中，您可以切換到指令碼窗格，讓您能夠直接編輯定義這個資料表的指令碼。  
+例如，您可以在 [資料庫] 節點底下建立新的資料庫。 您也可以選取特定的資料庫，然後使用新的資料表設計工具，快速建立或編輯資料表定義及其相關的程式設計物件。 從資料表設計工具中，您可以切換到指令碼窗格，讓您能夠直接編輯定義這個資料表的指令碼。  
   
 ### <a name="to-create-a-new-database"></a>若要建立新的資料庫  
   
-1.  在 [SQL Server 物件總管]  中，展開 [SQL Server]  節點底下連接的伺服器執行個體。  
+1.  在 [SQL Server 物件總管] 中，展開 [SQL Server] 節點底下連接的伺服器執行個體。  
   
-2.  以滑鼠右鍵按一下 [資料庫]  節點，再選取 [加入新的資料庫]  。  
+2.  以滑鼠右鍵按一下 [資料庫] 節點，再選取 [加入新的資料庫]。  
   
 3.  將新的資料庫重新命名為 **Trade**。  
   
 ### <a name="to-create-new-tables-using-the-table-designer"></a>若要使用資料表設計工具建立新的資料表  
   
-1.  展開新建的 [Trade]  節點。 以滑鼠右鍵按一下 [資料表]  節點，再選取 [加入新的資料表]  。  
+1.  展開新建的 [Trade] 節點。 以滑鼠右鍵按一下 [資料表] 節點，再選取 [加入新的資料表]。  
   
 2.  資料表設計工具隨即在新視窗中開啟。 這個設計工具由資料行格線、指令碼窗格和內容窗格組成。 資料行格線會列出資料表中的所有資料行。 我們將在後面的程序再次討論這個設計工具的其他元件。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "75241497"
   
 1.  資料表設計工具的內容窗格提供資料表定義 (索引鍵、索引、條件約束、觸發程序等等) 的邏輯檢視，並讓您選取要反白顯示與個別資料行關聯性的物件。  
   
-    針對 Products 資料表，在資料表設計工具的內容窗格中，以滑鼠右鍵按一下 [檢查條件約束]  節點，再選取 [加入新的檢查條件約束]  。  
+    針對 Products 資料表，在資料表設計工具的內容窗格中，以滑鼠右鍵按一下 [檢查條件約束] 節點，再選取 [加入新的檢查條件約束]。  
   
 2.  請注意，節點計數會自動遞增 1。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "75241497"
   
 ### <a name="to-create-new-foreign-key-references-using-the-table-designer"></a>若要使用資料表設計工具建立新的外部索引鍵參考  
   
-1.  針對 Products 資料表，以滑鼠右鍵按一下內容窗格中的 [外部索引鍵]  ，再選取 [加入新的外部索引鍵]  。  
+1.  針對 Products 資料表，以滑鼠右鍵按一下內容窗格中的 [外部索引鍵]，再選取 [加入新的外部索引鍵]。  
   
 2.  請注意，節點計數會自動遞增 1。  
   

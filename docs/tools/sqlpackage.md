@@ -1,5 +1,6 @@
 ---
 title: SqlPackage.exe
+description: 了解如何使用 SqlPackage.exe 將資料庫開發工作自動化。 檢視範例及可用的參數、屬性和 SQLCMD 變數。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -9,12 +10,12 @@ author: pensivebrian
 ms.author: broneill
 ms.reviewer: alayu; sstein
 ms.date: 03/17/2020
-ms.openlocfilehash: 1ee42c97fe4e032835ccb2f8a07ea51fe70114ac
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 1209945c167f26dd7011cc4ce210e61ac24f7134
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81303139"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441255"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -121,7 +122,7 @@ SqlPackage.exe 發行作業會累加更新目標資料庫的結構描述，使�
 
 ### <a name="help-for-publish-action"></a>Publish 動作的說明
 
-|參數|簡短形式|值|描述|
+|參數|簡短形式|值|說明|
 |---|---|---|---|
 |**/Action:**|**/a**|發佈|指定要執行的動作。 |
 |**/AccessToken:**|**/at**|{string}| 根據要在連線到目標資料庫時使用的驗證存取權杖，來指定權杖。 |
@@ -269,7 +270,7 @@ SqlPackage.exe 的 Export 動作會將即時資料庫從 SQL Server 或 Azure SQ
   
 ### <a name="help-for-export-action"></a>Export 動作的說明
 
-|參數|簡短形式|值|描述|
+|參數|簡短形式|值|說明|
 |---|---|---|---|
 |**/Action:**|**/a**|匯出|指定要執行的動作。 |
 |**/AccessToken:**|**/at**|{string}| 根據要在連線到目標資料庫時使用的驗證存取權杖，來指定權杖。 |
@@ -352,7 +353,7 @@ Import 動作的特定屬性：
   
 ### <a name="help-for-deployreport-action"></a>DeployReport 動作的說明
 
-|參數|簡短形式|值|描述|
+|參數|簡短形式|值|說明|
 |---|---|---|---|
 |**/Action:**|**/a**|DeployReport|指定要執行的動作。 |
 |**/AccessToken:**|**/at**|{string}| 根據要在連線到目標資料庫時使用的驗證存取權杖，來指定權杖。 |

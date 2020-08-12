@@ -1,5 +1,6 @@
 ---
 title: 報表、報表組件和報表定義 (報表產生器) | Microsoft Docs
+description: 探索在報表產生器中用來描述不同狀態報表的字詞。 這些狀態包括初始定義及已發佈的報表。
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 11236a29e22877e1d785d7ac2325898cc11bac7e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 53e8c7fcd6765742af0056fb44659386cf652561
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081054"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039724"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>報表、報表組件和報表定義 (報表產生器及 SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用各種詞彙來描述不同狀態的分頁報表，這些狀態包括初始定義、已發行的報表以及使用者檢視的報表。  

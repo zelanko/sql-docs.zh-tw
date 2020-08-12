@@ -1,6 +1,7 @@
 ---
 title: 檢視和分析追蹤
 titleSuffix: SQL Server Profiler
+description: 了解如何使用 SQL Server Profiler 來檢視追蹤資料、尋找特定事件、顯示物件名稱和針對問題進行疑難排解。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: bd9c65d104e6b397ea3483cd3873f4014d7798b3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c806d55867c63c273bd528ecafc4419d31fde7e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307786"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722634"
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>使用 SQL Server Profiler 檢視和分析追蹤
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來檢視追蹤中擷取的事件資料。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 會根據定義的追蹤屬性來顯示資料。 分析 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料的方法之一，是將資料複製到另一個程式，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 如果追蹤內包含 **Text** 資料行，則 Tuning Advisor 可以使用包含了 SQL 批次和遠端程序呼叫 (RPC) 事件的追蹤檔案。 為了確保能擷取正確的事件和資料行，以便用於 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor，請使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]隨附的預先定義「微調」範本。  
   
@@ -66,13 +67,13 @@ AND     CPU < (Duration * 1000)
   
     -   開啟追蹤檔案或資料表，然後展開想要的事件類別節點；例如， **Deadlock Chain**。 如需詳細資訊，請參閱 [開啟追蹤檔案 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md) 或 [開啟追蹤資料表 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)隨附的預先定義「微調」範本。  
   
-    -   搜尋整個追蹤資料直到您找到要查看的事件為止 (請使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 之 [編輯] 功能表上的 [尋找] 命令來協助您在追蹤中尋找值)。 請注意位於追蹤事件之 **ClientProcessID** 與 **Start Time** 資料行的值。  
+    -   搜尋整個追蹤資料直到您找到要查看的事件為止 (請使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 之 [編輯]**** 功能表上的 [尋找]**** 命令來協助您在追蹤中尋找值)。 請注意位於追蹤事件之 **ClientProcessID** 與 **Start Time** 資料行的值。  
   
 3.  在內容中顯示事件。  
   
     -   顯示追蹤屬性，並以 **ClientProcessID**資料行分組，而非以 **Event Class** 資料行。  
   
-    -   將您要檢視的每一個用戶端處理序識別碼節點展開。 手動搜尋整個追蹤，或使用 [尋找]  直到您找出先前標註為目標事件之 [開始時間]  的值為止。 這些事件與屬於每一個選取之用戶端程序識別碼的其他事件，會依時間先後順序顯示出來。 例如，在追蹤內擷取的 **Deadlock** 和 **Deadlock Chain**事件，會緊接在所展開之用戶端處理序識別碼內的 **SQL:BatchStarting**事件後面出現。  
+    -   將您要檢視的每一個用戶端處理序識別碼節點展開。 手動搜尋整個追蹤，或使用 [尋找] 直到您找出先前標註為目標事件之 [開始時間] 的值為止。 這些事件與屬於每一個選取之用戶端程序識別碼的其他事件，會依時間先後順序顯示出來。 例如，在追蹤內擷取的 **Deadlock** 和 **Deadlock Chain**事件，會緊接在所展開之用戶端處理序識別碼內的 **SQL:BatchStarting**事件後面出現。  
   
  要尋找任何已分組的事件可以使用相同的技術。 您找到要搜尋的事件之後，請依 **ClientProcessID**、 **ApplicationName**或是另一個事件類別來分組，以便按照事件的發生先後順序來檢視相關的活動。  
   

@@ -1,21 +1,21 @@
 ---
 title: SQL Server 單元測試的自訂測試條件
+description: 了解如何為 SQL Server 單元測試安裝自訂的測試條件。 檢視安裝非您建立之測試條件所涉及的風險。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 32a15d61-e908-4ae1-a238-4fd0f988d8c8
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 2852d075b6d5b1f55b76fea6b32443ea14e74384
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 829132cdd70afb725720ba629ae556ea07f09a56
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245525"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518738"
 ---
 # <a name="custom-test-conditions-for-sql-server-unit-tests"></a>SQL Server 單元測試的自訂測試條件
 
@@ -39,9 +39,9 @@ ms.locfileid: "75245525"
   
 如需 SQL Server 單元測試之自訂測試條件的詳細資訊，請參閱：  
   
--   [如何：建立 SQL Server 單元測試設計工具的測試條件](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md)  
+-   [操作說明：為 SQL Server 單元測試設計工具建立測試條件](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md)  
   
--   [如何：將 Visual Studio 2010 自訂測試條件從舊版升級至 SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)  
+-   [操作說明：將 Visual Studio 2010 自訂測試條件從舊版升級至 SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)  
   
 -   [逐步解說：使用自訂測試條件來驗證預存程序的結果](../ssdt/walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md)  
   

@@ -9,16 +9,16 @@ ms.date: 03/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0cf0d79e08025d52b248175485ba2e3272e18dcb
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: ad3cc263ea81b9e3bda5cb34ea27cfabba1ae716
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665459"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730711"
 ---
 # <a name="resources-deployed-with-big-data-cluster"></a>以巨量資料叢集部署的資源
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 本文描述 SQL Server 巨量資料叢集所部署的資源。
 
@@ -30,7 +30,7 @@ ms.locfileid: "80665459"
 kubectl get pods -n <namespace>
 ```
 
-請以巨量資料叢集的 Kubernetes 命名空間取代 `<namespace>`。 
+將 `<namespace>` 替換為您的巨量資料叢集名稱。 
 
 如需詳細資訊，請參閱[如何在 Kubernetes 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-guidance.md#configfile)。
 

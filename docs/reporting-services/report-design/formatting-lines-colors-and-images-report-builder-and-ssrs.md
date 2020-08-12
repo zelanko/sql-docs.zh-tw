@@ -1,5 +1,6 @@
 ---
 title: 設定線條、色彩和影像的格式 (報表產生器) | Microsoft Docs
+description: 探索在報表產生器中使用線條、色彩、資料區域和影像的方式。 以視覺化方式將項目繫結在一起，以改善報表產生器中的可讀性。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -21,12 +22,12 @@ f1_keywords:
 ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8567c1f331c17cd0875c2d4f1b94423b3c3ce347
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cc3cacd9321b65dc652fa7323553b445949501fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079865"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048257"
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>格式化線條、色彩和影像 (報表產生器及 SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 讓您能夠格式化線條、色彩、資料區、影像和其他報表項目。  
@@ -37,7 +38,7 @@ ms.locfileid: "77079865"
 ## <a name="borders-lines-and-gridlines"></a>框線、線條和格線  
  框線、線條和格線可透過視覺方式將項目一起繫結在頁面上，並協助您的報表讀者輕鬆地閱讀報表的內容。 使用預先定義的框線樣式，可以快速地在一個文字方塊、一組文字方塊或影像的周圍加入框線。 此外，您也可以變更框線、線條和格線的樣式、寬度和色彩。 整個選取的項目周圍或是此項目邊緣框線的周圍會加入框線，例如，文字方塊底部的框線。  
   
- 若要格式化文字方塊中、報表配置中或影像周圍的框線和格線，請使用報表項目之 **[屬性]** 對話方塊的 **[框線]** 索引標籤。 例如，如果您想在影像周圍加上框線，請以滑鼠右鍵按一下影像，然後在 **[影像屬性]** 對話方塊中，按一下 **[框線]** 。  
+ 若要格式化文字方塊中、報表配置中或影像周圍的框線和格線，請使用報表項目之 **[屬性]** 對話方塊的 **[框線]** 索引標籤。 例如，如果您想在影像周圍加上框線，請以滑鼠右鍵按一下影像，然後在 **[影像屬性]** 對話方塊中，按一下 **[框線]**。  
   
  除了標準邊框以外，還可以將其他邊框套用到圖表。 如需詳細資訊，請參閱[將邊框新增至圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-border-frame-to-a-chart-report-builder-and-ssrs.md)。  
   

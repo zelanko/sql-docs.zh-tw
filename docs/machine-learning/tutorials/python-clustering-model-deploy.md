@@ -1,32 +1,35 @@
 ---
 title: Python 教學課程：部署叢集模型
+titleSuffix: SQL machine learning
 description: 在這個四部分教學課程系列的第四部分中，您將使用 SQL 機器學習，在 Python 中部署群集模型。
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 08/27/2019
+ms.date: 05/21/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0343c3c410c8cf7b76b391fecd6ff57bff5e80d3
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 93b01f213ccac6d6ede0965cc55f3e11a12623ed
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606432"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730520"
 ---
 # <a name="python-tutorial-deploy-a-model-to-categorize-customers-with-sql-machine-learning"></a>Python 教學課程：使用 SQL 機器學習來部署模型以分類客戶
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-在這個四部分教學課程系列的第四部分中，您將使用 SQL Server 機器學習服務或在巨量資料叢集上，將以 Python 開發的群集模型部署到 SQL 資料庫。
+在這個四部分教學課程系列的第四部分中，您要使用 SQL Server 機器學習服務或在巨量資料叢集中，將以 Python 開發的群集模型部署到資料庫。
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-在這個四部分教學課程系列的第四部分中，您將使用 SQL Server Machine Learning 服務，將以 Python 開發的群集模型部署到 SQL 資料庫。
+在這個四部分教學課程系列的第四部分中，您要使用 SQL Server 機器學習服務，將以 Python 開發的群集模型部署到資料庫。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+在這個四部分教學課程系列的第四部分中，您要使用 Azure SQL 受控執行個體機器學習服務，將以 Python 開發的群集模型部署到資料庫。
 ::: moniker-end
 
 為了定期執行群集，當新客戶註冊時，您必須能夠從任何應用程式呼叫 Python 指令碼。 若要這麼做，您可以將 Python 指令碼放在 SQL 預存程序內，以在資料庫中部署 Python 指令碼。 因為您的模型是在資料庫中執行，所以可以輕鬆地針對儲存在資料庫中的資料進行定型。
@@ -42,7 +45,7 @@ ms.locfileid: "83606432"
 
 在[第一部分](python-clustering-model.md)中，您已安裝必要條件並還原範例資料庫。
 
-在[第二部分](python-clustering-model-prepare-data.md)，您已了解如何準備 SQL 資料庫中的資料，以執行叢集。
+在[第二部分](python-clustering-model-prepare-data.md)，您已了解如何準備資料庫中的資料，以執行叢集。
 
 在[第三部分](python-clustering-model-build.md)中，您已了解如何在 Python 中建立和定型 K-Means 群集模型。
 
@@ -130,7 +133,7 @@ END;
 GO
 ```
 
-## <a name="perform-clustering-in-sql-database"></a>在 SQL Database 中執行群集
+## <a name="perform-clustering"></a>執行叢集
 
 現在您已建立預存程序，請執行下列指令碼，以使用程序執行群集。
 

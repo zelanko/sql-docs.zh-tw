@@ -1,6 +1,7 @@
 ---
 title: 設定全域追蹤選項
 titleSuffix: SQL Server Profiler
+description: 了解如何設定全域追蹤選項，並閱讀 SQL Server Profiler 之特定執行個體可以套用至所有追蹤的選項。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: c66bb6a8a2f894cb80fd17c9fce24a0d98d027f2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 65f9f3c32da239c7ae6f41dfbe74b7ee8bb9ce41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307945"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726856"
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>設定全域追蹤選項 (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 此主題描述如何設定適用於利用特定 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]執行個體而建立之所有追蹤的選項。  
   
@@ -28,7 +29,7 @@ ms.locfileid: "75307945"
   
 1.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
   
-2.  在 [一般選項]  對話方塊中，按一下 [選擇字型]  修改顯示選項，然後按一下 [確定]  。  
+2.  在 [一般選項] 對話方塊中，按一下 [選擇字型] 修改顯示選項，然後按一下 [確定]。  
   
 3.  (選擇性) 選取 **[進行連接後立即啟動追蹤]** 。  
   
@@ -44,23 +45,23 @@ ms.locfileid: "75307945"
   
 6.  (選擇性) 設定重新執行選項：  
   
-    -   [預設重新執行執行緒數目]  控制重新執行期間要使用的處理器執行緒數目。 執行緒數目較多可使重新執行更快速完成，但會導致重新執行期間的伺服器效能降低。 建議設定是 **4**。 下表列出可用選項：  
+    -   [預設重新執行執行緒數目] 控制重新執行期間要使用的處理器執行緒數目。 執行緒數目較多可使重新執行更快速完成，但會導致重新執行期間的伺服器效能降低。 建議設定是 **4**。 下表列出可用選項：  
   
-        |值|描述|  
+        |值|說明|  
         |-----------|-----------------|  
         |**2**|最小值。 使用兩個執行緒重新執行。|  
         |**4**|預設值。|  
         |**255**|最大值。 設為最大值會影響其他處理緒的效能。|  
   
-    -   [預設健全狀況監視器等候間隔 (秒)]  設定重新執行的執行緒可封鎖其他處理序的最長時間量 (以秒為單位)。 下表會說明這些值。  
+    -   [預設健全狀況監視器等候間隔 (秒)] 設定重新執行的執行緒可封鎖其他處理序的最長時間量 (以秒為單位)。 下表會說明這些值。  
   
-        |值|描述|  
+        |值|說明|  
         |-----------|-----------------|  
         |**0**|最小值。 設為 **0** 代表 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 永遠不會停止封鎖處理序。|  
         |**3600**|預設值。 允許封鎖處理序，封鎖時間不超過 **3600** 秒或一小時。|  
         |**86400**|最大值。 允許封鎖處理序，封鎖時間不超過 **86400** 秒或一天。|  
   
-    -   [預設健全狀況監視器輪詢間隔 (秒)]  設定輪詢重新執行的執行緒是否有封鎖處理序的頻率。 下表會說明這些值。  
+    -   [預設健全狀況監視器輪詢間隔 (秒)] 設定輪詢重新執行的執行緒是否有封鎖處理序的頻率。 下表會說明這些值。  
   
         |值|描述|  
         |-----------|-----------------|  

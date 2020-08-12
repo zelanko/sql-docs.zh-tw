@@ -1,5 +1,6 @@
 ---
-title: 資料表 (報表產生器及 SSRS) | Microsoft Docs
+title: 資料表 (報表產生器與 SSRS) | Microsoft Docs
+description: 使用單一欄位或多個欄位，或在報表產生器的編頁報表上寫入您自己的運算式，以顯示詳細資料或分組的資料。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 319f221116d49cab52b0c01a273db565a9049669
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cac6edf23b15cbb6dc100c84a7035b425798d9d4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574727"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067108"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>資料表 (報表產生器及 SSRS)
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]分頁報表中，您可以使用資料表顯示詳細資料、群組資料，或兩者的組合。   

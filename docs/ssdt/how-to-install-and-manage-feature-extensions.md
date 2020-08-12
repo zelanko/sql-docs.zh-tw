@@ -1,23 +1,23 @@
 ---
 title: 安裝及管理延伸模組
+description: 了解如何安裝功能延伸模組，以供提高 SQL Server Data Tools 的功能。 查看安裝不同類型延伸模組的位置。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 9cdc8cd5-c36f-4bee-a191-87ed457803e7
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: 7ef7a61b87c11c63070d1e7713d2aae0ad87f547
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fd971797825b0af5b98ab498ce96549aad468e0c
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241395"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518978"
 ---
-# <a name="how-to-install-and-manage-feature-extensions"></a>如何：安裝和管理擴充功能
+# <a name="how-to-install-and-manage-feature-extensions"></a>如何：安裝及管理延伸模組
 
 您可以新增規則，以分析資料庫程式碼、資料庫單元測試的條件，以及建置/部署參與者，來增加 Visual Studio 版本 (包括 SQL Server Data Tools) 提供的功能。 不過，無論您已建立擴充功能或已安裝其他人建立的擴充功能，都必須先安裝擴充功能，才能使用它。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "75241395"
 |擴充功能類型|命令列服務|安裝資料夾|  
 |------------------|------------------------|------------------|  
 |SQL Server 單元測試的自訂測試條件|MSBuild / MSTest 可以用來從 Visual Studio 2013 開發人員命令提示字元和類似命令列工具執行單元測試。|與在 Visual Studio 內執行時相同。|  
-|建置參與者<br /><br />部署參與者|[SqlPackage.exe](../tools/sqlpackage.md)，或在建置資料庫專案時使用 MSBuild 部署或發行目標。|MSBuild：與在 Visual Studio 內執行時相同。<br /><br />[SqlPackage.exe](../tools/sqlpackage.md)：如果位於 Visual Studio 目錄中，則與先前相同。<br /><br />如果 SqlPackage.exe 和其他 DacFx DLL 位於該目錄外，則擴充功能應該放置在相同目錄，或放置在 C:\Program Files (x86)\\MicrosoftSQL Server\120\DAC\bin\Extensions 中。|  
+|建置參與者<br /><br />部署參與者|[SqlPackage.exe](../tools/sqlpackage.md)，或在建置資料庫專案時使用 MSBuild 部署或發行目標。|MSBuild：與在 Visual Studio 內執行時相同。<br /><br />[SqlPackage.exe](../tools/sqlpackage.md)：若位於 Visual Studio 目錄中，則與先前相同。<br /><br />如果 SqlPackage.exe 和其他 DacFx DLL 位於該目錄外，則擴充功能應該放置在相同目錄，或放置在 C:\Program Files (x86)\\MicrosoftSQL Server\120\DAC\bin\Extensions 中。|  
 |靜態程式碼分析規則|MSBuild 可以用來建置專案，並執行靜態程式碼分析。<br /><br />此外，您也可以從自己的應用程式使用 CodeAnalysisService API 來執行程式碼分析。 在此情況下，擴充功能查閱規則的運作方式與使用 SqlPackage.exe 的方式相同。|對建置參與者和部署參與者皆相同|  
   
 > [!NOTE]  

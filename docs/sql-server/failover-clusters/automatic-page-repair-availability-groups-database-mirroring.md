@@ -1,6 +1,6 @@
 ---
 title: 可用性群組和資料庫鏡像的自動修復頁面
-description: '當資料庫參與 Always On 可用性群組或資料庫鏡像關聯性時，會自動修復某些類型的頁面損毀。 本主題提供錯誤類型的相關資訊，以及其可能的解決方法。 '
+description: 了解如何在資料庫參與 Always On 可用性群組或資料庫鏡像時自動修復某些類型的頁面損毀。
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7c8d58b7bdc836f44871560c0d1e9908d1f72f23
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 861ffae3a6bb9451ca9dc9d5c8684e5b211a3b93
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74822639"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729131"
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>自動修復頁面 (可用性群組：資料庫鏡像)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   資料庫鏡像與 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]都支援自動修復頁面。 在頁面因為某些錯誤類型而損毀、無法讀取之後，資料庫鏡像夥伴 (主體或鏡像) 或可用性複本 (主要或次要) 會嘗試自動復原頁面。 無法讀取頁面的夥伴/複本會向其夥伴或另一個複本要求一個全新頁面副本。 如果這個要求成功，無法讀取的頁面就會被可讀取的副本取代，而這通常會解決錯誤。  
   
  一般來說，資料庫鏡像和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 會以相等方式處理 I/O 錯誤。 幾個差異會在這裡明確標註。  
@@ -63,7 +63,7 @@ ms.locfileid: "74822639"
   
 -   第 9 頁 (資料庫啟動頁面)。  
   
--   配置頁面—全域配置對應 (Global Allocation Map，GAM) 頁面、共用全域配置對應 (Shared Global Allocation Map，SGAM) 頁面，以及頁面可用空間 (Page Free Space，PFS) 頁面。  
+-   配置頁面：全域配置對應 (Global Allocation Map，GAM) 頁面、共用全域配置對應 (Shared Global Allocation Map，SGAM) 頁面，以及頁面可用空間 (Page Free Space，PFS) 頁面。  
   
  
 ##  <a name="handling-io-errors-on-the-principalprimary-database"></a><a name="PrimaryIOErrors"></a> 處理主體/主要資料庫的 I/O 錯誤  

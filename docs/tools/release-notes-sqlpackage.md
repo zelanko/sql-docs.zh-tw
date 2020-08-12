@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 0b034a0c0d449bd85afbfd46fa407e34921b8cf2
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: 84a7a8261e2fc3d2031b1b38b8ee7709ad015e39
+ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262134"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353095"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>SqlPackage.exe 的版本資訊
 
@@ -34,6 +34,21 @@ Or, if there is no relationship, remove 'DacFx' from the metadata 'title:'.
 I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
+
+## <a name="1851-sqlpackage"></a>18.5.1 sqlpackage
+
+|平台|下載|發行日期|版本|Build
+|:---|:---|:---|:---|:---|
+|Windows|[MSI 安裝程式](https://go.microsoft.com/fwlink/?linkid=2134206)|2020 年 6 月 24 日|18.5.1|15.0.4826.1|
+|macOS .NET Core |[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2134312)|2020 年 6 月 24 日| 18.5.1|15.0.4826.1|
+|Linux .NET Core |[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2134311)|2020 年 6 月 24 日| 18.5.1|15.0.4826.1|
+|Windows .NET Core |[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2134310)|2020 年 6 月 24 日| 18.5.1|15.0.4826.1|
+
+### <a name="fixes"></a>修正
+| 功能 | 詳細資料 |
+| :------ | :------ |
+| 部署 | 已修正 18.5 中引入的迴歸問題：透過外部登入使用者在內部部署中部署 dacpac 或匯入 bacpac 時，會出現「'type' 附近的語法不正確」的錯誤 | 
+
 ## <a name="185-sqlpackage"></a>18.5 sqlpackage
 
 |平台|下載|發行日期|版本|Build
@@ -51,7 +66,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | 部署 | 新增已排序叢集資料行存放區索引的 Azure SQL 資料倉儲支援 |
 | 部署 | 新增外部資料來源 (適用於 Oracle、Teradata、MongoDB/CosmosDB、ODBC、巨量資料叢集) 的支援，以及 SQL Server 2019 巨量資料叢集的外部資料表 |
 | 部署 | 新增 SQL Database Edge 執行個體作為支援的版本 |
-| 部署 | 支援格式為 '\<伺服器>.\<DNS 區域>.database.windows.net' 的受控執行個體 |
+| 部署 | 支援格式為 '\<server>.\<dnszone>.database.windows.net' 的受控執行個體伺服器名稱 |
 | 部署 | 新增 Azure SQL 資料倉儲中複製命令的支援 |
 | 部署 | 新增發佈期間的部署選項 'IgnoreTablePartitionOptions'，以避免當 Azure SQL 資料倉儲資料表上的資料分割函數變更時重新建立資料表 |
 | .NET Core | 新增 .NET Core 版本 sqlpackage 中 Microsoft.Data.SqlClient 的支援 |
@@ -60,7 +75,6 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 ### <a name="fixes"></a>修正
 | 修正 | 詳細資料 |
 | :-- | :------ |
-| 部署 | 修正資料庫的發佈 dacpac，其中包含曾擲回「物件參考未設定為物件執行個體」錯誤的外部使用者。 |
 | 部署 | 修正將 JSON 路徑剖析為運算式 |
 | 部署 | 修正產生 AlterAnyDatabaseScopedConfiguration 和 AlterAnySensitivityClassification 權限的 GRANT 陳述式 |
 | 部署 | 修正無法辨識的外部指令碼權限 |
@@ -71,6 +85,13 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | ScriptDom | 修正 ScriptDom Bug，此 Bug 導致其無法辨識在內嵌索引後面定義的內嵌條件約束 |
 | ScriptDom | 修正 ScriptDom SYSTEM_TIME 在批次陳述式中遺漏右括弧 |
 | Always Encrypted | 修正 sqlpackage 重新連線且暫存資料表已消失時無法卸除 #tmpErrors 資料表，因為暫存資料表會在連線停止時消失 |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>已知問題
+| 功能 | 詳細資料 |
+| :------ | :------ |
+| 部署 |  18.5 中引入的迴歸，在透過外部登入使用者在內部部署中部署 dacpac 或匯入 bacpac 時，會導致「'type' 附近的語法不正確」的錯誤。 因應措施是使用 sqlpackage 18.4，這將在下一版 sqlpackage 中修正。 | 
+| .NET Core | 因為 Microsoft.Data.SqlClient 的此一[已知問題](https://github.com/dotnet/SqlClient/issues/559)，匯入包含敏感度分類的 bacpacs 時，會因「內部連接發生嚴重錯誤」而失敗。 這將在下一版 sqlpackage 中修正。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="1841-sqlpackage"></a>18.4.1 sqlpackage

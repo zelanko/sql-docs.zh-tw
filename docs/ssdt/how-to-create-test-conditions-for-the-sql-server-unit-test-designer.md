@@ -1,23 +1,23 @@
 ---
 title: 建立 SQL Server 單元測試設計工具的測試條件
+description: 了解如何擴充 TestCondition 類別，以建立 SQL Server 單元測試設計工具的自訂測試條件。 檢視自訂測試條件範例。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 75d65bb7b30a8a48a35ada0c929ddf4698ad8408
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e34ca98e6a6a9423bd0237c980e15b91fcdd9aa6
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241484"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518888"
 ---
-# <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>HOW TO：建立 SQL Server 單元測試設計工具的測試條件
+# <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>如何：建立 SQL Server 單元測試設計工具的測試條件
 
 您可以使用可延伸的 [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) 類別，建立新的測試條件。 例如，您可以建立新的測試條件，驗證結果集中的資料行數目或值。  
   
@@ -26,15 +26,15 @@ ms.locfileid: "75241484"
   
 1.  在 Visual Studio 中，建立類別庫專案。  
   
-2.  在 [專案]  功能表上，按一下 [加入參考]  。  
+2.  在 [專案] 功能表上，按一下 [加入參考]。  
   
-3.  按一下 [.NET]  索引標籤。  
+3.  按一下 [.NET] 索引標籤。  
   
-4.  在 [元件名稱]  清單中，選取 [System.ComponentModel.Composition]  ，然後按一下 [確定]  。  
+4.  在 [元件名稱] 清單中，選取 [System.ComponentModel.Composition]，然後按一下 [確定]。  
   
-5.  加入必要的組件參考。 以滑鼠右鍵按一下專案節點，然後按一下 [加入參考]  。 按一下 [瀏覽]  並巡覽至 C:\Program Files (x86)\\MicrosoftSQL Server\110\DAC\Bin 資料夾。 選擇 Microsoft.Data.Tools.Schema.Sql.dll，並按一下 [加入]，然後按一下 [確定]。  
+5.  加入必要的組件參考。 以滑鼠右鍵按一下專案節點，然後按一下 [加入參考]。 按一下 [瀏覽] 並巡覽至 C:\Program Files (x86)\\MicrosoftSQL Server\110\DAC\Bin 資料夾。 選擇 Microsoft.Data.Tools.Schema.Sql.dll，並按一下 [加入]，然後按一下 [確定]。  
   
-6.  按一下 [專案]  功能表上的 [卸載專案]  。  
+6.  按一下 [專案] 功能表上的 [卸載專案]。  
   
 7.  在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選擇 [編輯 <project name>.csproj]。  
   
@@ -45,11 +45,11 @@ ms.locfileid: "75241484"
     <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="'$(VisualStudioVersion)' != ''" />  
     ```  
   
-9. 儲存並關閉檔案。 在 [方案總管]  中，以滑鼠右鍵按一下專案，然後選擇 [重新載入專案]  。  
+9. 儲存並關閉檔案。 在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選擇 [重新載入專案]。  
   
 10. 從 [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) 類別衍生您的類別。  
   
-11. 使用強式名稱簽署組件。 如需詳細資訊，請參閱[如何：使用強式名稱簽章組件](https://msdn.microsoft.com/library/xc31ft41.aspx)。  
+11. 使用強式名稱簽署組件。 如需詳細資訊，請參閱[如何：使用強式名稱簽署組件](https://msdn.microsoft.com/library/xc31ft41.aspx)。  
   
 12. 建置類別庫。  
   

@@ -1,5 +1,6 @@
 ---
 title: 群組窗格 (報表產生器) | Microsoft Docs
+description: 顯示目前所選 Tablix 資料區的資料列群組和資料行群組。 了解報表產生器中的 [群組] 窗格。
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 983ee5a4-944c-491e-8720-7cd9f3881961
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: aad20a916864bb8ed0d281af768989a0a7d9e85a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4a2746590db0978738220dcf76f6eda54bd2f990
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65572194"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039754"
 ---
 # <a name="grouping-pane-report-builder"></a>群組窗格 (報表產生器)
   [群組] 窗格會顯示目前所選 Tablix 資料區的資料列群組和資料行群組。 [群組] 窗格不適用於 [圖表] 或 [量測計] 資料區。 [群組] 窗格包含 [資料列群組] 窗格和 [資料行群組] 窗格。 [群組] 窗格有兩種模式：預設和進階。 預設模式會針對資料列和資料行群組，顯示動態成員的階層式檢視。 進階模式則會針對資料列和資料行群組，同時顯示動態和靜態成員。 群組是來自顯示於資料區域上之報表資料集的命名集資料。 群組會組織成包含靜態和動態成員的階層。 如需詳細資訊，請參閱[了解群組 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
->  如果看不到 [群組] 窗格，請在 [檢視]  索引標籤的 [顯示/隱藏]  群組中，按一下 [群組]  。  
+>  如果看不到 [群組] 窗格，請在 [檢視] 索引標籤的 [顯示/隱藏] 群組中，按一下 [群組]。  
   
  資料列和資料行群組區域中的資料格可以是 Tablix 資料列或資料行群組的靜態或動態成員。 每個群組的靜態成員都會重複一次，而且通常包含標籤或總計。 每個群組執行個體的動態成員都會重複一次，而且通常包含群組運算式的唯一值。 當您在資料列群組區域或資料行群組區域中選取 Tablix 資料格時，就會在 [資料列群組] 或 [資料行群組] 窗格中選取對應的群組成員。 相反地，如果您在 [群組] 窗格中選取群組，就會在設計介面上選取與群組成員相關聯的對應資料格。 如需 Tablix 資料列和資料行群組區域的詳細資訊，請參閱 [Tablix 資料區的區域 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)。  
   
@@ -36,11 +37,11 @@ ms.locfileid: "65572194"
 ## <a name="default-mode"></a>預設模式  
  在預設模式下，[資料列群組] 窗格和 [資料行群組] 窗格會顯示所有父群組、子群組和相鄰群組的階層式檢視。 子群組會以縮排顯示在其父群組下。 相鄰群組會與其同層級群組顯示在相同的縮排層級上。 下圖顯示 Tablix 資料區與巢狀資料列群組，以及巢狀資料行和相鄰資料行群組。  
   
- ![Tablix、巢狀和相鄰的資料列及資料行群組](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpane.gif "Tablix、巢狀和相鄰的資料列及資料行群組")  
+ ![Tablix，巢狀和相鄰的資料列及資料行群組](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpane.gif "Tablix，巢狀和相鄰的資料列及資料行群組")  
   
  [群組] 窗格會顯示對應的資料列和資料行群組。 在下圖中，以子類別目錄為基礎的群組已在 [資料列群組] 窗格中選取，而 [Subcat] 群組資料格則已在 Tablix 資料區中選取：  
   
- ![巢狀資料列和資料行群組的分組窗格](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "巢狀資料列和資料行群組的 [群組] 窗格")  
+ ![巢狀資料列和資料行群組的 [群組] 窗格](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "巢狀資料列和資料行群組的 [群組] 窗格")  
   
  在 [資料列群組] 窗格中，以子類別目錄為基礎之群組是以類別目錄為基礎之群組的子系。 在 [資料行群組] 窗格中，國家/地區群組是地理位置群組的子系。 年份群組和國家/地區群組則是相鄰的群組。  
   
@@ -50,7 +51,7 @@ ms.locfileid: "65572194"
  在進階模式下，[資料列群組] 窗格和 [資料行群組] 窗格會顯示所有群組的階層式檢視，包括靜態和動態成員。 當您選取成員時，[屬性] 窗格會顯示目前選取之 Tablix 成員的屬性。  
   
 > [!NOTE]  
->  若要切換 [進階模式]  ，請以滑鼠右鍵按一下 [資料行群組] 窗格旁邊的向下箭頭，然後按一下 [進階模式]  。  
+>  若要切換 [進階模式]，請以滑鼠右鍵按一下 [資料行群組] 窗格旁邊的向下箭頭，然後按一下 [進階模式]。  
   
  在大部分的情況下，控制靜態與動態群組資料列和群組資料行之顯示的屬性會在建立群組或加入總計時自動設定。 若要編輯預設值，您必須在 [資料列群組] 或 [資料行群組] 窗格中選取群組成員，然後在 [屬性] 視窗中變更屬性值。 同時會提供下列屬性：  
   
