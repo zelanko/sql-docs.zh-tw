@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CURRENT_TIMEZONE_ID function [SQL Server]
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ff2d43a3df9b287a73c20c3e4d2038889302bad2
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: beaa58fddd6889b4ebbbce620d98277468dd67a2
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977795"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988844"
 ---
 # <a name="current_timezone_id-transact-sql"></a>CURRENT_TIMEZONE_ID (Transact-SQL)
 
@@ -38,7 +38,7 @@ ms.locfileid: "86977795"
 此函式會傳回伺服器或執行個體所觀察到時區的識別碼。 針對 Azure SQL 受控執行個體，傳回的值是以執行個體本身在執行個體建立期間受指派時區為基礎，而不是以基礎作業系統的時區為基礎。
   
 > [!NOTE]  
-> 針對單一和集區 SQL Database，時區一律會設為 UTC，且 `CURRENT_TIMEZONE_ID` 會傳回 UTC 時區的識別碼。
+> 對於 SQL 資料庫，時區一律設為 UTC，而且 `CURRENT_TIMEZONE_ID` 會傳回 UTC 時間的識別碼。
   
 ## <a name="syntax"></a>語法  
   
@@ -71,6 +71,6 @@ W. Europe Standard Time
   
 ## <a name="see-also"></a>另請參閱
 
-[SQL Database 受控執行個體時區](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone) \(機器翻譯\)
+[SQL 受控執行個體的時區](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone)
 
 [CURRENT_TIMEZONE()](https://docs.microsoft.com/sql/t-sql/functions/current-timezone-transact-sql)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 248377fa1c4d498d6ffeb5b72518b2baf322362a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 67dc81b5a0a3c8c5e7dabdd1013f5927ceedff0b
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248518"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87877805"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 追蹤旗標 (Transact-SQL)
 
@@ -54,7 +54,7 @@ ms.locfileid: "87248518"
 下表列出並描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用的追蹤旗標。 
 
 > [!NOTE]
-> Azure SQL Database 受控執行個體支援下列全域追蹤旗標：460、2301、2389、2390、2453、2467、7471、8207、9389、10316 及 11024。 受控執行個體中尚未支援工作階段追蹤旗標。
+> Azure SQL 受控執行個體支援下列全域追蹤旗標：460、2301、2389、2390、2453、2467、7471、8207、9389、10316 及 11024。 受控執行個體中尚未支援工作階段追蹤旗標。
  
 > [!NOTE]
 > 某些追蹤旗標已導入特定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 如需適當版本的詳細資訊，請參閱與特定追蹤旗標相關聯的 Microsoft 支援服務文章。
