@@ -1,7 +1,7 @@
 ---
 title: 搭配使用 Always Encrypted 與 SqlClient
 description: 了解如何使用 Microsoft.Data.SqlClient 和 Always Encrypted 開發應用程式，以確保資料安全。
-ms.date: 05/06/2020
+ms.date: 07/09/2020
 ms.assetid: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: cheenamalhotra
 ms.author: v-chmalh
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 5b4634d1d9bed66aed6d7871d1e2c14813e5ec34
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 1bdb50bccf859bdd640e1da1650dc160d1d79c1e
+ms.sourcegitcommit: 7ce4a81c1b91239c8871c50f97ecaf387f439f6c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886465"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86217766"
 ---
 # <a name="using-always-encrypted-with-the-microsoft-net-data-provider-for-sql-server"></a>搭配 Microsoft .NET Data Provider for SQL Server 使用 Always Encrypted
 
@@ -74,6 +74,9 @@ connection.Open();
 3. 藉由在連接字串中設定 `Attestation Protocol` 關鍵字，來提供要使用的證明通訊協定。 此關鍵字的值應設定為 "HGS"。
 
 如需逐步教學課程，請參閱[教學課程：使用具有安全記憶體保護區的 Always Encrypted 開發 .NET 應用程式](tutorial-always-encrypted-enclaves-develop-net-apps.md)。
+
+> [!NOTE]
+> 只有 Windows 支援具有安全記憶體保護區的 Always Encrypted。
 
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>擷取和修改加密資料行中的資料
 
@@ -288,13 +291,13 @@ using (SqlCommand cmd = connection.CreateCommand())
 
 ### <a name="using-built-in-column-master-key-store-providers"></a>使用內建資料行主要金鑰存放區提供者
 
-**Microsoft .NET Data Provider for SQL Server** 隨附於下列內建資料行主要金鑰存放區提供者，它們都會以特定提供者名稱 (用以查閱提供者) 預先註冊。
+**Microsoft .NET Data Provider for SQL Server** 隨附於下列內建資料行主要金鑰存放區提供者，它們都會以特定提供者名稱 (用以查閱提供者) 預先註冊。 只有 Windows 支援這些內建的金鑰存放區提供者。
 
-| 類別 | 描述 | 提供者 (查閱) 名稱 |
-|:---|:---|:---|
-|[SqlColumnEncryptionCertificateStoreProvider 類別](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider) | Windows 憑證存放區的提供者。 | MSSQL_CERTIFICATE_STORE |
-|[SqlColumnEncryptionCngProvider 類別](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncngprovider) | 支援以下功能的金鑰存放區提供者：[Microsoft Cryptography API：新一代 (CNG) API](https://docs.microsoft.com/windows/win32/seccng/cng-portal)。 一般而言，這類型的存放區是硬體安全性模組，可保護和管理數位金鑰，並提供密碼編譯處理的實體裝置。 | MSSQL_CNG_STORE |
-| [SqlColumnEncryptionCspProvider 類別](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncspprovider) | 支援 [Microsoft Cryptography API (CAPI)](https://docs.microsoft.com/windows/win32/seccrypto/cryptographic-service-providers)的金鑰存放區提供者。 一般而言，這類型的存放區是硬體安全性模組，可保護和管理數位金鑰，並提供密碼編譯處理的實體裝置。 | MSSQL_CSP_PROVIDER |
+| 類別 | 描述 | 提供者 (查閱) 名稱 | 平台 |
+|:---|:---|:---|:---|
+|[SqlColumnEncryptionCertificateStoreProvider 類別](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider) | Windows 憑證存放區的提供者。 | MSSQL_CERTIFICATE_STORE | Windows |
+|[SqlColumnEncryptionCngProvider 類別](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncngprovider) | 支援以下功能的金鑰存放區提供者：[Microsoft Cryptography API：新一代 (CNG) API](https://docs.microsoft.com/windows/win32/seccng/cng-portal)。 一般而言，這類型的存放區是硬體安全性模組，可保護和管理數位金鑰，並提供密碼編譯處理的實體裝置。 | MSSQL_CNG_STORE | Windows |
+| [SqlColumnEncryptionCspProvider 類別](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncspprovider) | 支援 [Microsoft Cryptography API (CAPI)](https://docs.microsoft.com/windows/win32/seccrypto/cryptographic-service-providers)的金鑰存放區提供者。 一般而言，這類型的存放區是硬體安全性模組，可保護和管理數位金鑰，並提供密碼編譯處理的實體裝置。 | MSSQL_CSP_PROVIDER | Windows |
 
 您不需進行任何應用程式程式碼變更，即可使用這些提供者，但請注意下列事項：
 
@@ -303,7 +306,11 @@ using (SqlCommand cmd = connection.CreateCommand())
 
 ### <a name="using-the-azure-key-vault-provider"></a>使用 Azure Key Vault 提供者
 
-Azure 金鑰保存庫是存放和管理永遠加密資料行主要金鑰的方便選項 (尤其是當應用程式裝載在 Azure 時)。 **Microsoft .NET Data Provider for SQL Server** 未包含適用於 Azure Key Vault 的內建資料行主要金鑰存放區提供者，但可以 NuGet 套件形式提供，讓您能夠輕鬆地與應用程式整合。 如需詳細資訊，請參閱 [一律加密 - 透過資料加密並將您的加密金鑰儲存在 Azure 金鑰保存庫，來保護 SQL Database 中的機密資料](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/)。
+Azure 金鑰保存庫是存放和管理永遠加密資料行主要金鑰的方便選項 (尤其是當應用程式裝載在 Azure 時)。 **Microsoft .NET Data Provider for SQL Server** 不包含適用於 Azure Key Vault 的內建資料行主要金鑰存放區提供者，但可以 NuGet 套件形式提供 ([Microsoft.Data.SqLClient.AlwaysEncrypted.AzureKeyVaultProvider](https://www.nuget.org/packages/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider))，讓您輕鬆整合應用程式。 如需詳細資訊，請參閱 [一律加密 - 透過資料加密並將您的加密金鑰儲存在 Azure 金鑰保存庫，來保護 SQL Database 中的機密資料](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/)。
+
+| 類別 | 描述 | 提供者 (查閱) 名稱 | 平台 |
+|:---|:---|:---|:---|
+|[SqlColumnEncryptionAzureKeyVaultProvider 類別](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.alwaysencrypted.azurekeyvaultprovider.sqlcolumnencryptionazurekeyvaultprovider) (英文) | Azure Key Vault 的提供者。 | AZURE_KEY_VAULT | Windows、Linux、macOS |
 
 如需示範如何使用 Azure Key Vault 執行加密/解密的範例，請參閱[使用 Always Encrypted 的 Azure Key Vault](azure-key-vault-example.md) 和[使用具有安全記憶體保護區的 Always Encrypted 的 Azure Key Vault](azure-key-vault-enclave-example.md)。
 
@@ -508,7 +515,8 @@ SqlConnection.ColumnEncryptionTrustedMasterKeyPaths.Add(serverName, trustedKeyPa
 - 設定這兩個資料庫對來源資料表和目標資料表的連線，但不啟用 Always Encrypted。
 - 設定 `AllowEncryptedValueModifications` 選項 (請參閱 [SqlBulkCopyOptions](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlbulkcopyoptions) \(英文\))。
 
-注意:指定 `AllowEncryptedValueModifications` 時請小心，這可能會導致資料庫損毀，因為 **Microsoft .NET Data Provider for SQL Server** 不會檢查資料是否確實加密，或者是否使用與目標資料行相同的加密類型、演算法和金鑰正確加密。
+> [!NOTE]
+> 指定 `AllowEncryptedValueModifications` 時請小心，這可能會導致資料庫損毀，因為 **Microsoft .NET Data Provider for SQL Server** 不會檢查資料是否確實加密，或者是否使用與目標資料行相同的加密類型、演算法和金鑰正確加密。
 
 以下是將資料從某份資料表複製到另一份資料表的範例。 請注意，SSN 和 BirthDate 資料行預設均已加密。
 

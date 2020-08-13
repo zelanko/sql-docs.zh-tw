@@ -1,6 +1,6 @@
 ---
-title: 步驟 4：使用 ADO.NET 復原連線到 SQL | Microsoft Docs
-description: 描述如何復原連線到 SQL
+title: 步驟 4：使用 ADO.NET 彈性地連線到 SQL
+description: 了解如何利用重試邏輯，以改善使用 ADO.NET 連線到 SQL 資料庫的連線恢復功能。
 ms.custom: ''
 ms.date: 08/15/2019
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 23b87d6774fb4020b5c7eca3d3f776bbb95fc7fe
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a70b5449d1af02c3b367a204e2e32dfb32281d72
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80918038"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391763"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>步驟 4：使用 ADO.NET 彈性地連線到 SQL
 

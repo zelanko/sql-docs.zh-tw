@@ -1,5 +1,6 @@
 ---
 title: 使用資料表設計工具管理資料表和關聯性
+description: 熟悉資料表設計工具。 了解如何使用此工具來建立和編輯資料庫資料表結構，並檢視資料庫物件之間的關聯性。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -10,16 +11,15 @@ f1_keywords:
 ms.assetid: 322a2903-d7a6-4f52-9048-1bd413b4c799
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 924a48ffe75c043385043f02125c8e07cfe3fbbc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4262242a0ac9822bed793e1bd78a4ce51294d485
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75226831"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895800"
 ---
 # <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>如何：使用資料表設計工具管理資料表和關聯性
 
@@ -34,17 +34,17 @@ ms.locfileid: "75226831"
   
 1.  開啟先前的程序中使用的 TradeDev 專案。  
   
-2.  在 [方案總管]  中展開 [dbo]  資料夾，以滑鼠右鍵按一下 [資料表]  資料夾，再依序選取 [加入]  和 [資料表]  。  
+2.  在 [方案總管] 中展開 [dbo] 資料夾，以滑鼠右鍵按一下 [資料表] 資料夾，再依序選取 [加入] 和 [資料表]。  
   
-3.  將新資料表命名為 **Shipper**，然後按一下 [加入]  。  
+3.  將新資料表命名為 **Shipper**，然後按一下 [加入]。  
   
 4.  資料表設計工具隨即開啟。 在資料行格線中，使用名稱 **ShipperName** 和資料類型 **int** 將新資料行加入至資料表。  
   
-5.  請注意，您還可以在 [屬性]  視窗中編輯資料行的屬性。 按一下 [ShipperName]  資料行，然後在 [屬性]  視窗中將這個資料行的 [DataType]  變更為 **nvarchar**，並將 [length]  變更為 **128**。 請注意，將焦點從欄位移開時，這個設計工具的指令碼窗格和資料行格線會自動更新以反映變更。  
+5.  請注意，您還可以在 [屬性] 視窗中編輯資料行的屬性。 按一下 [ShipperName] 資料行，然後在 [屬性] 視窗中將這個資料行的 [DataType] 變更為 **nvarchar**，並將 [length] 變更為 **128**。 請注意，將焦點從欄位移開時，這個設計工具的指令碼窗格和資料行格線會自動更新以反映變更。  
   
 ### <a name="to-create-a-new-foreign-key-constraint"></a>若要建立新的外部索引鍵條件約束  
   
-1.  在這個設計工具的內容窗格中，以滑鼠右鍵按一下 [外部索引鍵]  ，再選取 [加入新的外部索引鍵]  。  
+1.  在這個設計工具的內容窗格中，以滑鼠右鍵按一下 [外部索引鍵]，再選取 [加入新的外部索引鍵]。  
   
 2.  請注意，節點計數會自動遞增 1。 按 ENTER 接受條件約束的預設名稱。  
   
@@ -57,5 +57,5 @@ ms.locfileid: "75226831"
     請注意，為離線專案建立及編輯資料庫實體的效果與執行連接的資料庫工作完全一樣。  
   
 ## <a name="see-also"></a>另請參閱  
-[如何：使用資料表設計工具建立資料庫物件](../ssdt/how-to-create-database-objects-using-table-designer.md)  
+[操作說明：使用資料表設計工具建立資料庫物件](../ssdt/how-to-create-database-objects-using-table-designer.md)  
   

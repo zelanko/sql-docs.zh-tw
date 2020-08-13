@@ -7,17 +7,17 @@ ms.author: davidph
 ms.date: 04/30/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: machine-learning
-ms.openlocfilehash: d105db3da8a6732c2884af7e42a71441eef6f077
-ms.sourcegitcommit: ed5f063d02a019becf866c4cb4900e5f39b8db18
+ms.technology: machine-learning-bdc
+ms.openlocfilehash: a14258c15ac1af1445b201f7b999dbec1682555d
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643333"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196913"
 ---
 # <a name="run-python-and-r-scripts-with-machine-learning-services-on-sql-server-big-data-clusters"></a>對安裝有機器學習服務的 SQL Server 巨量資料叢集執行 Python 與 R 指令碼
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 您可以對安裝有[機器學習服務](../machine-learning/index.yml)的 [SQL Server 巨量資料叢集](big-data-cluster-overview.md)主要執行個體，執行 Python 與 R 指令碼。
 
@@ -119,7 +119,7 @@ service/mymaster-2 exposed
 
 下圖示範這項程序。
 
-[![](media/machine-learning-services/example-kube-enable-scripts.png "Demonstrate enable feature on Kubernetes")](media/machine-learning-services/example-kube-enable-scripts.png#lightbox)
+[![示範](media/machine-learning-services/example-kube-enable-scripts.png "示範如何在 Kubernetes 上啟用功能")](media/machine-learning-services/example-kube-enable-scripts.png#lightbox)
 
 您現在已可對巨量資料叢集的主要執行個體執行 Python 與 R 指令碼。 請參閱[後續步驟](#next-steps)下的快速入門來執行第一個指令碼。
 
@@ -141,7 +141,7 @@ kubectl delete svc mymaster-2 -n mssql-cluster
 
 ## <a name="next-steps"></a>後續步驟
 
-+ [快速入門：使用 SQL Server 機器學習服務，建立及執行簡單的 Python 指令碼](../machine-learning/tutorials/quickstart-python-create-script.md)
-+ [快速入門：使用 SQL Server 機器學習服務在 Python 中建立預測模型並計算其分數](../machine-learning/tutorials/quickstart-python-train-score-model.md)
-+ [快速入門：使用 SQL Server 機器學習服務建立及執行簡單的 R 指令碼](../machine-learning/tutorials/quickstart-r-create-script.md)
-+ [快速入門：使用 SQL Server 機器學習服務在 R 中建立預測模型並計算其分數](../machine-learning/tutorials/quickstart-r-train-score-model.md)
++ [執行簡單的 Python 指令碼](../machine-learning/tutorials/quickstart-python-create-script.md?toc=/sql/toc.json)
++ [在 Python 中定型預測模型並為其評分](../machine-learning/tutorials/quickstart-python-train-score-model.md?toc=/sql/toc.json)
++ [執行簡單的 R 指令碼](../machine-learning/tutorials/quickstart-r-create-script.md?toc=/sql/toc.json)
++ [在 R 中定型預測模型並為其評分](../machine-learning/tutorials/quickstart-r-train-score-model.md?toc=/sql/toc.json)

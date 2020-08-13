@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SSVARIANT struct
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 0583e1cdbf7f1e336698a794bef29f804a053318
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: 0d11a6f839fba1905055aefafa65353008530f8d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219247"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004519"
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT 結構
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -74,13 +74,83 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |Time2Val|DBTYPE_DBTIME2|**DBTIME2**|**VT_SS_TIME2**|支援 **time**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型。<br /><br /> 包括下列成員：<br /><br /> *tTime2Val* (**DBTIME2**)<br /><br /> *bScale* (**BYTE**) 指定 *tTime2Val* 值的範圍。|  
 |DateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_DATETIME2**|支援 **datetime2**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型。<br /><br /> 包括下列成員：<br /><br /> *tsDataTimeVal* (DBTIMESTAMP)<br /><br /> *bScale* (**BYTE**) 指定 *tsDataTimeVal* 值的範圍。|  
 |DateTimeOffsetVal|DBTYPE_DBTIMESTAMPOFSET|**DBTIMESTAMPOFFSET**|**VT_SS_DATETIMEOFFSET**|支援 **datetimeoffset**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型。<br /><br /> 包括下列成員：<br /><br /> *tsoDateTimeOffsetVal* (**DBTIMESTAMPOFFSET**)<br /><br /> *bScale* (**BYTE**) 指定 *tsoDateTimeOffsetVal* 值的範圍。|  
-|NCharVal|沒有對應的 OLE DB 類型指標。|**struct _NCharVal**|**VT_SS_WVARSTRING,**<br /><br /> **VT_SS_WSTRING**|支援 **nchar** 和 **nvarchar**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型。<br /><br /> 包括下列成員：<br /><br /> *sActualLength* (**SHORT**) 指定 *pwchNCharVal* 指向之字串的實際長度。 不包括結尾的零。<br /><br /> *sMaxLength* (**SHORT**) 指定 *pwchNCharVal* 指向之字串的最大長度。<br /><br /> *pwchNCharVal* (**WCHAR** \*) 指向字串的指標。<br /><br /> 未使用的成員：*rgbReserved*、*dwReserved* 及 *pwchReserved*。|  
-|CharVal|沒有對應的 OLE DB 類型指標。|**struct _CharVal**|**VT_SS_STRING,**<br /><br /> **VT_SS_VARSTRING**|支援 **char** 和 **varchar**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型。<br /><br /> 包括下列成員：<br /><br /> *sActualLength* (**SHORT**) 指定 *pchCharVal* 指向之字串的實際長度。 不包括結尾的零。<br /><br /> *sMaxLength* (**SHORT**) 指定 *pchCharVal* 指向之字串的最大長度。<br /><br /> *pchCharVal* (**CHAR** \*) 指向字串的指標。<br /><br /> 未使用的成員：<br /><br /> *rgbReserved*、*dwReserved* 及 *pwchReserved*。|  
+|NCharVal|沒有對應的 OLE DB 類型指標。|**struct _NCharVal**|**VT_SS_WVARSTRING,**<br /><br /> **VT_SS_WSTRING**|支援 **nchar** 和 **nvarchar**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型。<br /><br /> 包括下列成員：<br /><br /> *sActualLength* (**SHORT**) 指定 *pwchNCharVal* 指向之字串的實際長度。 不包括結尾的零。<br /><br /> *sMaxLength* (**SHORT**) 指定 *pwchNCharVal* 指向之字串的最大長度。<br /><br /> *pwchNCharVal* (**WCHAR** \*) 指向字串的指標。<br /><br /> *rgbReserved* (**BYTE[5]** ) 指定定序資訊。<br /><br /> 未使用的成員：*dwReserved* 及 *pwchReserved*。|  
+|CharVal|沒有對應的 OLE DB 類型指標。|**struct _CharVal**|**VT_SS_STRING,**<br /><br /> **VT_SS_VARSTRING**|支援 **char** 和 **varchar**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型。<br /><br /> 包括下列成員：<br /><br /> *sActualLength* (**SHORT**) 指定 *pchCharVal* 指向之字串的實際長度。 不包括結尾的零。<br /><br /> *sMaxLength* (**SHORT**) 指定 *pchCharVal* 指向之字串的最大長度。<br /><br /> *pchCharVal* (**CHAR** \*) 指向字串的指標。<br /><br /> *rgbReserved* (**BYTE[5]** ) 指定定序資訊。<br /><br /> 未使用的成員：<br /><br /> *dwReserved* 及 *pwchReserved*。|  
 |BinaryVal|沒有對應的 OLE DB 類型指標。|**struct _BinaryVal**|**VT_SS_VARBINARY,**<br /><br /> **VT_SS_BINARY**|支援 **binary** 和 **varbinary**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型。<br /><br /> 包括下列成員：<br /><br /> *sActualLength* (**SHORT**) 指定 *prgbBinaryVal* 指向之資料的實際長度。<br /><br /> *sMaxLength* (**SHORT**) 指定 *prgbBinaryVal* 指向之資料的最大長度。<br /><br /> *prgbBinaryVal* (**BYTE** \*) 指向二進位資料的指標。<br /><br /> 未使用的成員：*dwReserved*。|  
 |UnknownType|未使用|未使用|未使用|未使用|  
 |BLOBType|未使用|未使用|未使用|未使用|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
+## <a name="known-issues"></a>已知問題
+### <a name="possible-narrow-string-data-corruption"></a>可能的窄字串資料損毀
+在 OLE DB 驅動程式 18.4 版之前，若下列所有條件都成立，則 `sql_variant` 資料行中的插入可能會導致伺服器上的資料損毀：
+- 用戶端電腦字碼頁不符合資料庫定序字碼頁。
+- 要插入的用戶端緩衝區，包含以用戶端字碼頁編碼的非 ASCII 窄字串字元。
+- 若下列其中一項條件成立：
+  - `DBPARAMBINDINFO` 結構中的 `pwszDataSourceType` 欄位，其描述對應至 `sql_variant` 資料行的參數已設定為 `L"DBTYPE_SQLVARIANT"`、`L"DBTYPE_VARIANT"` 或 `L"sql_variant"`。 如需詳細資料，請參閱：[ICommandWithParameters::SetParameterInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms725393(v=vs.85))。
+
+    *or*
+  - 用於插入的參數化 SQL 查詢已準備妥當。
+
+更明確的說，OLE DB 驅動程式不會在插入資料之前，將其翻譯成資料庫定序字碼頁。 然而，此驅動程式錯誤地向伺服器指出，資料庫定序字碼頁中的資料已編碼。 此行為導致資料與其儲存在 `sql_variant` 欄中的對應字碼頁不相符。
+
+同樣地，在擷取相同的值時，OLE DB 驅動程式不會將字串翻譯成用戶端字碼頁。 然而，由於插入的資料已經在用戶端字碼頁中 (請參閱上面的段落)，因此用戶端應用程式可正確地解譯資料。 就算如此，使用其他驅動程式的應用程式，也會以損毀的格式擷取這些值。 會發生損毀是因為其他驅動程式在資料庫定序字碼頁中解譯了字串，並嘗試將其翻譯成用戶端字碼頁。
+
+自 18.4 版起，OLE DB Driver 會在插入之前，將窄字串翻譯成資料庫定序字碼頁。 同樣地，驅動程式也會在擷取時，將資料翻譯回用戶端字碼頁。 因此，依賴上述 Bug 的用戶端應用程式，可能會在擷取使用舊版 OLE DB Driver 插入的資料時遇到問題。 下方[復原程序](#recovery-procedure)旨在提供解決這些問題的指引。
+
+### <a name="recovery-procedure"></a>復原程序
+> [!IMPORTANT]  
+> 執行下列復原步驟之前，請務必備份現有的資料。
+
+若應用程式在切換至 OLE DB 驅動程式 18.4 版之後，在從 `sql_variant` 資料行擷取資料時遇到問題，則必須修改損毀的資料，使其定序與儲存資料的資料庫相同。 下列指令碼可用來從 `sql_variant` 資料行復原單一值。 指令碼是範本，必須加以調整以符合情況。
+
+> [!IMPORTANT]  
+> 由於不會儲存資料的原始字碼頁，因此必須告知伺服器初始如何編碼資料。 若要執行這項操作，請在資料庫的內容中執行指令碼，其字碼頁與初始插入資料的用戶端其字碼頁相同。 例如，若從使用字碼頁 `932` 所設定用戶端插入損毀的資料，則必須在具有日文定序的資料庫內容 (例如 `Japanese_XJIS_100_CS_AI`) 中執行下列指令碼。
+
+```sql
+/*
+    Description:
+        Template that can be used to recover the corrupted value inserted into the sql_variant column.
+
+    Scenario:
+        The database is named [YourDatabase] and it contains a table named [YourTable], which contains the corrupted value.
+        Schema is named [dbo].
+        The corrupted value is stored in a column of type sql_variant named [YourColumn].
+        The corrupted value is sql_variant of BaseType char. For details on sql_variant properties, see:
+            https://docs.microsoft.com/sql/t-sql/functions/sql-variant-property-transact-sql
+*/
+
+-- Base type in sql_variant can hold a maximum of 8000 bytes
+-- For details see: 
+--  https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql#remarks
+DECLARE @bin VARBINARY(8000)
+
+-- In the following lines we convert the sql_variant base type to binary.
+-- <FilterExpression>
+--      Is a placeholder and must be replaced with an expression that filters a single corrupted value to be recovered.
+--      Therefore, the expression must result in a single value being returned only.
+SET @bin = (SELECT CAST([YourColumn] AS VARBINARY(8000)) FROM [YourDatabase].[dbo].[YourTable] WHERE <FilterExpression>)
+
+-- In the following lines we store the binary value in char(59) (a fixed-size character data type).
+-- IMPORTANT NOTE: 
+--      This example assumes the corrupted sql_variant's base type is char(59).
+--      You MUST adjust the type (that is, char/varchar) and size to match your scenario exactly.
+DECLARE @char CHAR(59)
+SET @char = CAST((@bin) AS CHAR(59))
+DECLARE @sqlvariant sql_variant
+
+-- The following lines recover the corrupted value by translating the value to the collation of the database.
+-- <DBCollation>
+--      Must be replaced with the collation (for example, Latin1_General_100_CI_AS_SC_UTF8) of the database holding the data.
+SET @sqlvariant = @char collate <DBCollation>
+
+-- Finally, we update the corrupted value with the recovered value.
+-- "<FilterExpression>"
+--      Is a placeholder and must be replaced with an expression that filters a single corrupted value to be recovered.
+--      Therefore, the expression must result in a single value being returned only.
+UPDATE [YourDatabase].[dbo].[YourTable] SET [YourColumn] = @sqlvariant WHERE <FilterExpression>
+```
+
 ## <a name="see-also"></a>另請參閱  
  [資料類型 &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   

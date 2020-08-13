@@ -1,5 +1,6 @@
 ---
 title: 在指令碼之間巡覽
+description: 了解如何在 Transact-SQL 編輯器中的指令碼之間巡覽。 檢視顯示如何使用 [移至定義] 與 [尋找所有參考] 等工具的範例。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,16 +9,15 @@ f1_keywords:
 ms.assetid: 8664bde5-86ff-4e8b-b5a6-af003316f6ad
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 910011609e928efe9180a3aa4f041aa063adbab4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f0b21634e2655d67812d9c6096c9d63633130c7a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241376"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896618"
 ---
 # <a name="how-to-navigate-between-scripts"></a>如何：在指令碼之間巡覽
 
@@ -30,7 +30,7 @@ ms.locfileid: "75241376"
   
 1.  展開 [方案總管] 中的 [函數] 資料夾，然後按兩下 [GetProductsBySupplier.sql]。  
   
-2.  以滑鼠右鍵按一下這行程式碼中的 `Products`，然後選取 [移至定義]   
+2.  以滑鼠右鍵按一下這行程式碼中的 `Products`，然後選取 [移至定義]  
   
     ```  
     SELECT * from Products p  
@@ -38,5 +38,5 @@ ms.locfileid: "75241376"
   
 3.  Products.sql 隨即自動開啟，顯示 `Products` 類型定義的位置。  
   
-4.  回到 GetProductsBySupplier.sql。 這次為 `Products` 選取關聯式功能表中的 [尋找所有參考]。 在 [尋找符號結果]  窗格中，您會看到 `Products` 資料表參考的位置清單。 按兩下任何的搜尋結果，會將您帶到參考的位置。  
+4.  回到 GetProductsBySupplier.sql。 這次為 `Products` 選取關聯式功能表中的 [尋找所有參考]。 在 [尋找符號結果] 窗格中，您會看到 `Products` 資料表參考的位置清單。 按兩下任何的搜尋結果，會將您帶到參考的位置。  
   

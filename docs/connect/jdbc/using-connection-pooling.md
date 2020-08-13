@@ -1,5 +1,6 @@
 ---
-title: 使用連線共用 | Microsoft Docs
+title: 使用連接共用
+description: 了解 JDBC Driver for SQL Server 如何提供 JDBC 的合規介面，以支援 JAVA 中的連接共用。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 699d4e8a-34bf-4c60-b0d5-4a10dad6084a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4551e5a058e03d7a45d2dd21d91821a628e1da3a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c3bcacec5f85150f7de437d936463a3b3807f9ef
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924025"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391745"
 ---
 # <a name="using-connection-pooling"></a>使用連接共用
 

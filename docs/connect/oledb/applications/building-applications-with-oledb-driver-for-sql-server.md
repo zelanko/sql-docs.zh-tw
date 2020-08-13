@@ -1,6 +1,6 @@
 ---
-title: 使用 OLE DB Driver for SQL Server 建置應用程式 | Microsoft Docs
-description: 使用 OLE DB Driver for SQL Server 建置應用程式
+title: 使用 OLE DB Driver for SQL Server 建置應用程式
+description: 了解使用 OLE DB Driver for SQL Server 建置應用程式時的常見問題，以及從舊版 OLE DB Driver 升級時所預期的問題。
 ms.custom: ''
 ms.date: 02/12/2019
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: c0f168ee99ebaedebf2102363694b5ae6b33687f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c1004ef0005c841ad09818252ec82f82f1fcc6de
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67989337"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393026"
 ---
 # <a name="building-applications-with-ole-db-driver-for-sql-server"></a>使用 OLE DB Driver for SQL Server 建置應用程式
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

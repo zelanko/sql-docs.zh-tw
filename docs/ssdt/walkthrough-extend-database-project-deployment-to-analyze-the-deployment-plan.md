@@ -1,23 +1,23 @@
 ---
 title: 擴充資料庫專案部署以分析部署計劃
+description: 建立 DeploymentPlanExecutor 部署參與者。 設定在部署資料庫專案時，可記錄發生事件的參與者。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 5e51dddb7635ba0f50dfdd7566722b170be9f48a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 797289f29c9c0eff6a7b9d876d21f7573a546c84
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242678"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897468"
 ---
-# <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>逐步解說：擴充資料庫專案部署以分析部署計畫
+# <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>逐步解說：擴充資料庫專案部署以分析部署計劃
 
 您可以建立部署參與者，以便在部署 SQL 專案時執行自訂動作。 您可以建立 DeploymentPlanModifier 或 DeploymentPlanExecutor。 使用 DeploymentPlanModifier，在計畫執行前變更計畫；使用 DeploymentPlanExecutor，在計畫執行時執行作業。 在這個逐步解說中，您會建立名稱為 DeploymentUpdateReportContributor 的 DeploymentPlanExecutor，以產生有關部署資料庫專案時執行之動作的報表。 因為這個組建參與者接受參數來控制是否產生報表，您必須執行其他必要步驟。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "75242678"
   
 -   [測試您的部署參與者](#TestDeploymentContributor)  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
 您需要下列元件才能完成這個逐步解說：  
   
 -   您必須已安裝包含 SQL Server Data Tools (SSDT) 和支援 C# 或 VB 開發的 Visual Studio 版本。  
@@ -60,11 +60,11 @@ ms.locfileid: "75242678"
   
 2.  將 "Class1.cs" 檔案重新命名為 "DeploymentUpdateReportContributor.cs"。  
   
-3.  在 [方案總管] 中，以滑鼠右鍵按一下專案節點，然後按一下 [新增參考]  。  
+3.  在 [方案總管] 中，以滑鼠右鍵按一下專案節點，然後按一下 [新增參考]。  
   
-4.  選取 [Framework] 索引標籤上的 [System.ComponentModel.Composition]  。  
+4.  選取 [Framework] 索引標籤上的 [System.ComponentModel.Composition]。  
   
-5.  加入必要的 SQL 參考：以滑鼠右鍵按一下專案節點，然後按一下 [加入參考]  。 按一下 [瀏覽]  並巡覽至 **C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin** 資料夾。 選擇 **Microsoft.SqlServer.Dac.dll**、**Microsoft.SqlServer.Dac.Extensions.dll** 和 **Microsoft.Data.Tools.Schema.Sql.dll** 項目，按一下 [加入]  ，然後按一下 [確定]  。  
+5.  加入必要的 SQL 參考：以滑鼠右鍵按一下專案節點，然後按一下 [加入參考]。 按一下 [瀏覽] 並巡覽至 **C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin** 資料夾。 選擇 **Microsoft.SqlServer.Dac.dll**、**Microsoft.SqlServer.Dac.Extensions.dll** 和 **Microsoft.Data.Tools.Schema.Sql.dll** 項目，按一下 [加入]****，然後按一下 [確定]****。  
   
     下一步，開始將程式碼加入至類別。  
   
@@ -251,7 +251,7 @@ ms.locfileid: "75242678"
   
     將 [DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx) 物件傳遞給 OnExecute 方法，以存取任何指定的引數、來源和目標資料庫模型、組建屬性和擴充檔。 在這個範例中，我們會取得模型，然後呼叫 Helper 函數以輸出模型資訊。 我們使用基底類別的 PublishMessage Helper 方法，回報所發生的任何錯誤。  
   
-    其他相關型別和方法包含：[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)、[ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx)、[DeploymentPlanHandle](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanhandle.aspx) 和 [SqlDeploymentOptions](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqldeploymentoptions.aspx)。  
+    其他相關類型和方法包括：[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)、[ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx)、[DeploymentPlanHandle](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanhandle.aspx) 和 [SqlDeploymentOptions](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqldeploymentoptions.aspx)。  
   
     下一步，您會定義挖掘部署計畫詳細資料的協助程式類別。  
   
@@ -534,23 +534,23 @@ ms.locfileid: "75242678"
   
 #### <a name="to-sign-and-build-the-assembly"></a>若要簽署和建置組件  
   
-1.  按一下 [專案]  功能表上的 [MyDeploymentContributor 屬性]  。  
+1.  按一下 [專案] 功能表上的 [MyDeploymentContributor 屬性]。  
   
 2.  按一下 [ **簽署** ] 索引標籤。  
   
 3.  按一下 [ **簽署組件**]。  
   
-4.  在 [選擇強式名稱金鑰檔案]  中，按一下 **<New>** 。  
+4.  在 [選擇強式名稱金鑰檔案] 中，按一下 **<New>** 。  
   
 5.  在 [ **建立強式名稱金鑰** ] 對話方塊中的 [ **金鑰檔名稱**]，輸入 **MyRefKey**。  
   
 6.  (選擇性) 您可以為強式名稱金鑰檔指定密碼。  
   
-7.  按一下 [確定]  。  
+7.  按一下 [確定]。  
   
 8.  按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
-9. 在 [建置]  功能表上，按一下 [建置方案]  。  
+9. 在 [建置] 功能表上，按一下 [建置方案]。  
   
 下一步，您必須安裝組件，以便在建置及部署 SQL 專案時將其載入。  
   
@@ -601,7 +601,7 @@ ms.locfileid: "75242678"
     </Project>  
     ```  
   
-4.  針對要執行參與者的任何專案，在 .sqlproj 檔案內部匯入目標檔案，方法是將下列陳述式新增至 .sqlproj 檔案，在檔案的 \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> 節點後面：  
+4.  在任何您想要執行參與者的專案 .sqlproj 檔案中，將下列陳述式新增到檔案中 \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> 節點後的 .sqlproj 檔案，以匯入目標檔案：  
   
     ```  
     <Import Project="$(MSBuildExtensionsPath)\MyContributors\MyContributors.targets " />  
@@ -741,7 +741,7 @@ ms.locfileid: "75242678"
 您可以建立其他工具，執行 XML 輸出檔案的處理。 這只是 [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) 的一個例子。 您也可以建立 [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) 以在計畫執行前變更部署計畫。  
   
 ## <a name="see-also"></a>另請參閱  
-[逐步解說：擴充資料庫專案組建，以產生模型統計資料](https://msdn.microsoft.com/library/ee461508(v=vs.100).aspx) \(機器翻譯\)  
-[逐步解說：擴充資料庫專案部署以修改部署計畫](https://msdn.microsoft.com/library/ee461507(v=vs.100).aspx) \(機器翻譯\)  
+[逐步解說：延伸資料庫專案組建，以產生模型統計資料](https://msdn.microsoft.com/library/ee461508(v=vs.100).aspx)  
+[逐步解說：延伸資料庫專案部署以修改部署計畫](https://msdn.microsoft.com/library/ee461507(v=vs.100).aspx)  
 [使用組建和部署參與者自訂資料庫建置和部署](https://msdn.microsoft.com/library/ee461505(v=vs.100).aspx)  
   

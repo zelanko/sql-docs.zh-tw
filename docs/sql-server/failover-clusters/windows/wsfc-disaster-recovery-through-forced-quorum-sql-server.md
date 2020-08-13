@@ -1,6 +1,6 @@
 ---
 title: 透過強制仲裁執行災害復原
-description: 需要手動介入才能從仲裁失敗中復原。 本文描述如何在 SQL Server 容錯移轉叢集執行個體 (FCI) 發生災害時以強制仲裁處理問題。
+description: 需要手動介入才能從仲裁失敗中復原。 了解如何在 SQL Server 容錯移轉叢集執行個體發生災害時強制仲裁。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 36eebd77371cf2cede1e36ab68873c080a752128
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 20beee1d78975cdb4da4338ca85eff14a32b8153
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74821988"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896689"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>透過強制仲裁執行 WSFC 災害復原 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   仲裁失敗的原因通常是涉及 WSFC 叢集中許多節點的系統損毀、持續性通訊失敗或設定錯誤。  若要從仲裁失敗中復原，您必須進行手動介入。  
   
 -   **開始之前：** [必要條件](#Prerequisites)、[安全性](#Security)  

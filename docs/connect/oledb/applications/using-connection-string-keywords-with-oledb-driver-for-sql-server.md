@@ -17,15 +17,15 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, connection string keywords
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: c1e7a40207665515e164ba4449715f8443616c17
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 9883323fd6474c05a2bf3a830206c01f52274272
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633898"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006999"
 ---
 # <a name="using-connection-string-keywords-with-ole-db-driver-for-sql-server"></a>利用 OLE DB Driver for SQL Server 使用連接字串關鍵字
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -98,12 +98,13 @@ ms.locfileid: "81633898"
 |**Net**|SSPROP_INIT_NETWORKLIBRARY|**Network** 的同義字。|  
 |**Network**|SSPROP_INIT_NETWORKLIBRARY|用來建立組織中 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體之連接的網路程式庫。|  
 |**Network Library**|SSPROP_INIT_NETWORKLIBRARY|**Network** 的同義字。|  
-|**PacketSize**|SSPROP_INIT_PACKETSIZE|網路封包大小。 預設值是 4096。|  
+|**PacketSize**|SSPROP_INIT_PACKETSIZE|表格式資料流 (TDS) 封包大小。 預設值為 0 (實際值將由伺服器決定)。|  
 |**PersistSensitive**|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|接受以 `yes` 和 `no` 作為值的字串。 使用 `no` 時，不允許使用資料來源物件來保存敏感性驗證資訊|  
 |**PWD**|DBPROP_AUTH_PASSWORD|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入密碼。|  
 |**Server**|DBPROP_INIT_DATASOURCE|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 此值必須是網路上的伺服器名稱、IP 位址，或是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員別名的名稱。<br /><br /> 如果沒有指定，就會連接至本機電腦上的預設執行個體。<br /><br /> **Address** 關鍵字會覆寫 **Server** 關鍵字。<br /><br /> 您可藉由指定下列其中一個項目，連接到本機伺服器上的預設執行個體：<br /><br /> **伺服器=;**<br /><br /> **伺服器=.;**<br /><br /> **伺服器=(local);**<br /><br /> **伺服器=(local);**<br /><br /> **伺服器=(localhost);**<br /><br /> **Server=(localdb)\\** *instancename* **;**<br /><br /> 如需有關 LocalDB 支援的詳細資訊，請參閱 [OLE DB Driver for SQL Server 的 LocalDB 支援](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)。<br /><br /> 若要指定的具名執行個體[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，附加 **\\** _InstanceName_。<br /><br /> 如果未指定伺服器，就會連接到本機電腦上的預設執行個體。<br /><br /> 若您指定 IP 位址，請確定在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員中已啟用 TCP/IP 或具名管道通訊協定。<br /><br /> **Server** 關鍵字的完整語法如下：<br /><br /> **伺服器=** [_通訊協定_ **:** ]*伺服器*[ **,** _連接埠_]<br /><br /> _protocol_ 可以是 **tcp** (TCP/IP)、 **lpc** (共用記憶體) 或 **np** (具名管道)。<br /><br /> 下列是指定具名管道的範例：<br /><br /> `np:\\.\pipe\MSSQL$MYINST01\sql\query`<br /><br /> 上述程式碼行指定具名管道通訊協定 (`np`)、本機電腦上的具名管道 (`\\.\pipe`)、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱 (`MSSQL$MYINST01`)，以及具名管道的預設名稱 (`sql/query`)。<br /><br /> 如果未指定 *protocol* 也未指定 **Network** 關鍵字，OLE DB Driver for SQL Server 將會使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager 中指定的通訊協定順序。<br /><br /> *port* 是在指定伺服器上所要連接的通訊埠。 根據預設，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用通訊埠 1433。<br /><br /> 使用 OLE DB Driver for SQL Server 時，會忽略在連接字串中傳遞給**伺服器**的值開頭的空格。|   
 |**ServerSPN**|SSPROP_INIT_SERVERSPN|伺服器的 SPN。 預設值為空字串。 空字串會讓 OLE DB Driver for SQL Server 使用提供者產生的預設 SPN。|  
 |**逾時**|DBPROP_INIT_TIMEOUT|等候資料來源初始化完成的時間量 (以秒為單位)。|  
+|**TransparentNetworkIPResolution**|SSPROP_INIT_TNIR|在第一個解析的主機名稱 IP 沒有回應，且該主機名稱有多個相關聯的 IP 時影響連線順序。 TNIR 會與 MultiSubnetFailover 互動，以提供不同的連線順序。 可能的值是 `Yes` 和 `No`。 預設值是 `Yes`。 如需詳細資訊，請參閱[使用透明網路 IP 解析](../../oledb/features/using-transparent-network-ip-resolution.md)。|  
 |**Trusted_Connection**|DBPROP_AUTH_INTEGRATED|當為 `yes` 時，會指示 OLE DB Driver for SQL Server 使用 Windows 驗證進行登入驗證。 否則，OLE DB Driver for SQL Server 將會使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用者名稱和密碼進行登入驗證，且必須指定 UID 和 PWD 關鍵字。|  
 |**TrustServerCertificate**<a href="#table1_1"><sup>**1**</sup></a>|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|接受以 `yes` 和 `no` 作為值的字串。 預設為 `no`，這表示將會驗證伺服器憑證。|  
 |**UID**|DBPROP_AUTH_USERID|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入名稱。|  
@@ -160,11 +161,12 @@ ms.locfileid: "81633898"
 |**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|在連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可用性群組的可用性群組接聽程式或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體時，一律指定 **MultiSubnetFailover=True**。 **MultiSubnetFailover=True** 會設定 OLE DB Driver for SQL Server ，以提供對 (目前) 使用中伺服器更快速的偵測與連線。 可能的值是 `True` 和 `False`。 預設值為 `False`。 例如：<br /><br /> `MultiSubnetFailover=True`<br /><br /> 如需有關 OLE DB Driver for SQL Server 對於 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的支援的詳細資訊，請參閱 [OLE DB Driver for SQL Server 高可用性和災害復原支援](../features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|  
 |**Network Address**|SSPROP_INIT_NETWORKADDRESS|組織中 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的網路位址。<br /><br /> 如需有關有效位址語法的詳細資訊，請參閱本主題中對於 **Address** 關鍵字的說明。|  
 |**Network Library**|SSPROP_INIT_NETWORKLIBRARY|用來建立組織中 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體之連接的網路程式庫。|  
-|**封包大小**|SSPROP_INIT_PACKETSIZE|網路封包大小。 預設值是 4096。|  
+|**封包大小**|SSPROP_INIT_PACKETSIZE|表格式資料流 (TDS) 封包大小。 預設值為 0 (實際值將由伺服器決定)。|  
 |**密碼**|DBPROP_AUTH_PASSWORD|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入密碼。|  
 |**保存安全性資訊**|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|接受以 `true` 和 `false` 作為值的字串。 當為 `false` 時，不允許使用資料來源物件來保存敏感性驗證資訊|  
 |**提供者**||對於 OLE DB Driver for SQL Server，這應該是 "MSOLEDBSQL"。|  
 |**Server SPN**|SSPROP_INIT_SERVERSPN|伺服器的 SPN。 預設值為空字串。 空字串會讓 OLE DB Driver for SQL Server 使用提供者產生的預設 SPN。|  
+|**TransparentNetworkIPResolution**|SSPROP_INIT_TNIR|在第一個解析的主機名稱 IP 沒有回應，且該主機名稱有多個相關聯的 IP 時影響連線順序。 TNIR 會與 MultiSubnetFailover 互動，以提供不同的連線順序。 可能的值是 `True` 和 `False`。 預設值是 `True`。 如需詳細資訊，請參閱[使用透明網路 IP 解析](../../oledb/features/using-transparent-network-ip-resolution.md)。|  
 |**信任伺服器憑證**<a href="#table2_1"><sup>**1**</sup></a>|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|接受以 `true` 和 `false` 作為值的字串。 預設為 `false`，這表示將會驗證伺服器憑證。|  
 |**為資料使用加密**<a href="#table2_1"><sup>**1**</sup></a>|SSPROP_INIT_ENCRYPT|指定當透過網路傳送資料以前，是否應該先加密資料。 可能的值是 `true` 和 `false`。 預設值是 `false`。|  
 |**Use FMTONLY**|SSPROP_INIT_USEFMTONLY|控制連線到 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 及更新版本時，如何擷取中繼資料。 可能的值是 `true` 和 `false`。 預設值是 `false`。<br /><br />根據預設，OLE DB Driver for SQL Server 會使用 [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) 和 [sp_describe_undeclared_parameters](../../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md) 預存程序擷取中繼資料。 這些預存程序有一些限制 (例如，在暫存資料表上操作時，這些預存程序會失敗)。 將 **Use FMTONLY** 設定為 `true`，會指示驅動程式改為使用 [SET FMTONLY](../../../t-sql/statements/set-fmtonly-transact-sql.md) 進行中繼資料擷取。|  
@@ -219,11 +221,12 @@ ms.locfileid: "81633898"
 |**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|在連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可用性群組的可用性群組接聽程式或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體時，一律指定 **MultiSubnetFailover=True**。 **MultiSubnetFailover=True** 會設定 OLE DB Driver for SQL Server ，以提供對 (目前) 使用中伺服器更快速的偵測與連線。 可能的值是 `True` 和 `False`。 預設值為 `False`。 例如：<br /><br /> `MultiSubnetFailover=True`<br /><br /> 如需有關 OLE DB Driver for SQL Server 對於 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的支援的詳細資訊，請參閱 [OLE DB Driver for SQL Server 高可用性和災害復原支援](../features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|  
 |**Network Address**|SSPROP_INIT_NETWORKADDRESS|組織中 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的網路位址。<br /><br /> 如需有關有效位址語法的詳細資訊，請參閱本主題中對於 **Address** 關鍵字的說明。|  
 |**Network Library**|SSPROP_INIT_NETWORKLIBRARY|用來建立組織中 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體之連接的網路程式庫。|  
-|**封包大小**|SSPROP_INIT_PACKETSIZE|網路封包大小。 預設值是 4096。|  
+|**封包大小**|SSPROP_INIT_PACKETSIZE|表格式資料流 (TDS) 封包大小。 預設值為 0 (實際值將由伺服器決定)。|  
 |**密碼**|DBPROP_AUTH_PASSWORD|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入密碼。|  
 |**保存安全性資訊**|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|接受以 `true` 和 `false` 作為值的字串。 當為 `false` 時，不允許使用資料來源物件來保存敏感性驗證資訊。|  
 |**提供者**||針對 OLE DB Driver for SQL Server，此值為 `MSOLEDBSQL`。|  
 |**Server SPN**|SSPROP_INIT_SERVERSPN|伺服器的 SPN。 預設值為空字串。 空字串會讓 OLE DB Driver for SQL Server 使用提供者產生的預設 SPN。|  
+|**TransparentNetworkIPResolution**|SSPROP_INIT_TNIR|在第一個解析的主機名稱 IP 沒有回應，且該主機名稱有多個相關聯的 IP 時影響連線順序。 TNIR 會與 MultiSubnetFailover 互動，以提供不同的連線順序。 可能的值是 `True` 和 `False`。 預設值是 `True`。 如需詳細資訊，請參閱[使用透明網路 IP 解析](../../oledb/features/using-transparent-network-ip-resolution.md)。|  
 |**信任伺服器憑證**<a href="#table3_1"><sup>**1**</sup></a>|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|接受以 `true` 和 `false` 作為值的字串。 預設為 `false`，這表示將會驗證伺服器憑證。|  
 |**為資料使用加密**<a href="#table3_1"><sup>**1**</sup></a>|SSPROP_INIT_ENCRYPT|指定當透過網路傳送資料以前，是否應該先加密資料。 可能的值是 `true` 和 `false`。 預設值是 `false`。|  
 |**Use FMTONLY**|SSPROP_INIT_USEFMTONLY|控制連線到 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 及更新版本時，如何擷取中繼資料。 可能的值是 `true` 和 `false`。 預設值是 `false`。<br /><br />根據預設，OLE DB Driver for SQL Server 會使用 [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) 和 [sp_describe_undeclared_parameters](../../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md) 預存程序擷取中繼資料。 這些預存程序有一些限制 (例如，在暫存資料表上操作時，這些預存程序會失敗)。 將 **Use FMTONLY** 設定為 `true`，會指示驅動程式改為使用 [SET FMTONLY](../../../t-sql/statements/set-fmtonly-transact-sql.md) 進行中繼資料擷取。|  

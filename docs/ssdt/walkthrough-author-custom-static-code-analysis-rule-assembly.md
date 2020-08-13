@@ -1,21 +1,21 @@
 ---
 title: 針對 SQL Server 撰寫自訂靜態程式碼分析規則組件
+description: 了解如何建立 SQL Server 程式碼分析規則。 設定規則以避免在預存程序、觸發程序與函式中，使用 WAITFOR DELAY 陳述式。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: f7b6ed8c-a4e0-4e33-9858-a8aa40aef309
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: d11446e3ef8fade0c4cfe6ec885c40754861fc26
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 31d183a212ea18f681724d06834041b0a50f752c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257033"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896244"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>為 SQL Server 編寫自訂靜態程式碼分析規則組件的逐步解說
 
@@ -532,7 +532,7 @@ ms.locfileid: "75257033"
   
 2. 按一下 [檔案] > [新增] > [專案]。  
   
-3. 在 [新增專案] 對話方塊的 [已安裝的範本] 清單中，展開 **SQL Server** 節點，然後按一下 [SQL Server 資料庫專案]。  
+3. 在 [新增專案]**** 對話方塊的 [已安裝的範本]**** 清單中，展開 **SQL Server** 節點，然後按一下 [SQL Server 資料庫專案]****。  
   
 4. 在 [名稱] 文字方塊中鍵入 SampleRulesDB，然後按一下 [確定]。  
   

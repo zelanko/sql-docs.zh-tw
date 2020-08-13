@@ -5,53 +5,51 @@ description: 了解如何在 Kubernetes 上部署 SQL Server 巨量資料叢集�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 828ad42bd6ecdc31d6e1c99a489fb4cbe8548d0e
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: 4bca65dbae188c02ddc85bc385f6ada912111efb
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531080"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159366"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>如何在 Kubernetes 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 SQL Server 巨量資料叢集會部署為 Kubernetes 叢集上的 Docker 容器。 這是安裝和設定步驟的概觀：
 
-- 在單一 VM、VM 叢集或 Azure Kubernetes Service (AKS) 中設定 Kubernetes 叢集。
+- 在單一 VM、VM 叢集、Azure Kubernetes Service (AKS)、Red Hat OpenShift 或 Azure Red Hat OpenShift (ARO) 中設定 Kubernetes 叢集。
 - 在您的用戶端電腦上安裝叢集設定工具 `azdata`。
 - 在 Kubernetes 叢集中部署 SQL Server 巨量資料叢集。
 
-## <a name="install-sql-server-2019-big-data-tools"></a>安裝 SQL Server 2019 巨量資料工具
+## <a name="supported-platforms"></a>支援的平台
 
-部署 SQL Server 2019 巨量資料叢集之前，請先[安裝巨量資料工具](deploy-big-data-tools.md)：
+如需經驗證可部署 SQL Server 巨量資料叢集其各種 Kubernetes 平台的完整清單，請參閱[支援的平台](release-notes-big-data-cluster.md#supported-platforms)。
 
-- `azdata`
-- `kubectl`
-- Azure Data Studio
-- 適用於 Azure Data Studio 的[資料虛擬化延伸模組](../azure-data-studio/data-virtualization-extension.md)
+### <a name="sql-server-editions"></a>SQL Server 版本
 
-## <a name="kubernetes-prerequisites"></a><a id="prereqs"></a> Kubernetes 先決條件
+|版本|注意|
+|---------|---------|
+|Enterprise<br/>標準<br/>開發人員| 巨量資料叢集版本是由 SQL Server 主要執行個體版本所決定。 在部署時，預設會部署 Developer Edition。 在部署後可以變更此版本。 請參閱[設定 SQL Server 主要執行個體](../big-data-cluster/configure-sql-server-master-instance.md)。 |
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 針對伺服器和用戶端 (kubectl) 至少需要 v1.13 的 Kubernetes 版本。
-
-> [!NOTE]
-> 請注意，用戶端和伺服器 Kubernetes 版本應該在 +1 或 -1 次要版本內。 如需詳細資訊，請參閱 [Kubernetes 版本資訊和版本誤差 SKU 原則](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew) \(英文\)。
+## <a name="kubernetes"></a><a id="prereqs"></a> Kubernetes
 
 ### <a name="kubernetes-cluster-setup"></a><a id="kubernetes"></a> Kubernetes 叢集設定
 
 如果您已經有滿足上述先決條件的 Kubernetes 叢集，則可直接跳到[部署步驟](#deploy)。 本節假設您對 Kubernetes 概念有基本瞭解。  如需 Kubernetes 的詳細資訊，請參閱 [Kubernetes 文件](https://kubernetes.io/docs/home) \(英文\)。
 
-您可以選擇以下列三種方式中的任一種來部署 Kubernetes：
+您可選擇使用下列方式來部署 Kubernetes：
 
 | 在下列項目上部署 Kubernetes： | 描述 | 連結 |
 |---|---|---|
 | **Azure Kubernetes Service (AKS)** | Azure 中的受控 Kubernetes 容器服務。 | [指示](deploy-on-aks.md) |
 | **單一或多部電腦 (`kubeadm`)** | 使用 `kubeadm`，在實體或虛擬機器上部署 Kubernetes 叢集 | [指示](deploy-with-kubeadm.md) |
+|**Azure Red Hat OpenShift** | 在 Azure 中執行的受控 OpenShift 供應項目。 | [指示](deploy-openshift.md)|
+|**Red Hat OpenShift**|混合式雲端的企業 Kubernetes 應用程式平台。| [指示](deploy-openshift.md)|
 
 > [!TIP]
 > 您也可以透過單一步驟編寫部署 AKS 和巨量資料叢集的指令碼。 如需詳細資訊，請參閱如何在 [Python 指令碼](quickstart-big-data-cluster-deploy.md)或 Azure Data Studio [筆記本](notebooks-deploy.md)中執行此動作。
@@ -75,6 +73,16 @@ kubectl config view
 
 若您在 AKS 中進行部署，則不需要任何儲存體設定。 AKS 提供具備動態佈建的內建儲存類別。 您可以在部署設定檔中自訂儲存類別 (`default` 或 `managed-premium`)。 內建設定檔會使用 `default` 儲存類別。 若正在以使用 `kubeadm` 所部署的 Kubernetes 叢集上進行部署，則您將需要確定針對所需規模的叢集具備了足夠儲存體，且該儲存體已經設定且可供使用。 若要自訂儲存體的使用方式，建議在繼續前先執行此操作。 請參閱[在 Kubernetes 上使用 SQL Server 巨量資料叢集的資料持續性](concept-data-persistence.md)。
 
+## <a name="install-sql-server-2019-big-data-tools"></a>安裝 SQL Server 2019 巨量資料工具
+
+部署 SQL Server 2019 巨量資料叢集之前，請先[安裝巨量資料工具](deploy-big-data-tools.md)：
+
+- `azdata`
+- `kubectl`
+- Azure Data Studio
+- 適用於 Azure Data Studio 的[資料虛擬化延伸模組](../azure-data-studio/data-virtualization-extension.md)
+
+
 ## <a name="deployment-overview"></a><a id="deploy"></a> 部署概觀
 
 大部分的巨量資料叢集設定都定義於 JSON 部署組態檔中。 您可以針對 AKS 和透過 `kubeadm` 所建立的 Kubernetes 叢集使用預設部署設定檔，或自訂自己的部署設定檔以在設定期間使用。 基於安全因素，驗證設定會透過環境變數來傳遞。
@@ -94,23 +102,18 @@ kubectl config view
 azdata bdc config list -o table 
 ```
 
-例如，針對 SQL Server 2019 RTM 服務更新 (GDR1) 版本，上述命令會傳回：
-
-```
-Result
-----------------
-aks-dev-test
-aks-dev-test-ha
-kubeadm-dev-test
-kubeadm-prod
-```
+SQL Server 2019 CU5 提供下列範本： 
 
 | 部署設定檔 | Kubernetes 環境 |
 |---|---|
 | `aks-dev-test` | 在 Azure Kubernetes Service (AKS) 上部署 SQL Server 巨量資料叢集|
 | `aks-dev-test-ha` | 在 Azure Kubernetes Service (AKS) 上部署 SQL Server 巨量資料叢集。 這會設定任務關鍵性服務 (例如 SQL Server 主要和 HDFS 名稱節點) 以取得高可用性。|
+| `aro-dev-test`|在 Azure Red Hat OpenShift 上部署 SQL Server 巨量資料叢集，以進行開發和測試。 <br/><br/>在 SQL Server 2019 CU5 中引進。|
+| `aro-dev-test-ha`|在 Red Hat OpenShift 叢集上部署具有高可用性的 SQL Server 巨量資料叢集，以進行開發和測試。 <br/><br/>在 SQL Server 2019 CU5 中引進。|
 | `kubeadm-dev-test` | 在使用單一或多部實體或虛擬機器來透過 kubeadm 建立的 Kubernetes 叢集上部署 SQL Server 巨量資料叢集。|
 | `kubeadm-prod`| 在使用單一或多部實體或虛擬機器來透過 kubeadm 建立的 Kubernetes 叢集上部署 SQL Server 巨量資料叢集。 使用此範本可讓巨量資料叢集服務與 Active Directory 整合。 這會在高可用性設定中部署任務關鍵性服務 (例如 SQL Server 主要執行個體和 HDFS 名稱節點)。  |
+| `openshift-dev-test`|在 Red Hat OpenShift 叢集上部署 SQL Server 巨量資料叢集，以進行開發和測試。 <br/><br/>在 SQL Server 2019 CU5 中引進。|
+| `openshift-prod`|在 Red Hat OpenShift 叢集上部署具有高可用性的 SQL Server 巨量資料叢集。 <br/><br/>在 SQL Server 2019 CU5 中引進。|
 
 您可以執行 `azdata bdc create` 來部署巨量資料叢集。 這會提示您選擇其中一個預設組態，然後引導您完成部署。
 
@@ -127,7 +130,7 @@ azdata bdc create --accept-eula=yes
 
 ## <a name="custom-configurations"></a><a id="customconfig"></a> 自訂組態
 
-您也可以自訂部署來容納正在規劃執行的工作負載。 請注意，您無法在巨量資料叢集服務部署後變更規模 (複本數目) 或儲存體設定，因此請務必謹慎規劃您的部署設定，以避免發生容量問題。 若要自訂部署，請遵循下列步驟：
+您也可以自訂部署來容納正在規劃執行的工作負載。 您無法在巨量資料叢集服務部署後變更規模 (複本數目) 或儲存體設定，因此請務必謹慎規劃部署設定，以避免發生容量問題。 若要自訂部署，請遵循下列步驟：
 
 1. 從符合您 Kubernetes 環境的其中一個標準部署設定檔開始。 您可以使用 `azdata bdc config list` 命令來列出這些設定檔：
 
@@ -169,10 +172,10 @@ azdata bdc create --accept-eula=yes
 
 下列環境變數用於不會儲存於部署組態檔中的安全性設定。 請注意，您可以在組態檔中設定認證以外的 Docker 設定。
 
-| 環境變數 | 需求 |描述 |
+| 環境變數 | 需求 |說明 |
 |---|---|---|
-| `AZDATA_USERNAME` | 必要 |SQL Server 巨量資料叢集管理員的使用者名稱。 SQL Server 主要執行個體中會建立具有相同名稱的系統管理員登入。 基於安全性最佳做法，`sa` 帳戶已停用。 |
-| `AZDATA_PASSWORD` | 必要 |以上所建立使用者帳戶的密碼。 `root` 使用者會使用相同的密碼來保護 Knox 閘道和 HDFS。 |
+| `AZDATA_USERNAME` | 必要 |SQL Server 巨量資料叢集管理員的使用者名稱。 SQL Server 主要執行個體中會建立具有相同名稱的系統管理員登入。 基於安全性最佳做法，`sa` 帳戶已停用。 <br/><br/>[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]|
+| `AZDATA_PASSWORD` | 必要 |以上所建立使用者帳戶的密碼。 在 SQL Server 2019 CU5 之前部署的叢集上，`root` 使用者會使用相同的密碼來保護 Knox 閘道和 HDFS。 |
 | `ACCEPT_EULA`| 第一次使用 `azdata` 時的必要項| 設定為 [是]。 設定為環境變數時，會將 EULA 套用至 SQL Server 和 `azdata`。 如果未設定為環境變數，您可以在第一次使用 `azdata` 命令時包含 `--accept-eula=yes`。|
 | `DOCKER_USERNAME` | 選用 | 用來存取容器映像的使用者名稱，以防它們儲存於私人存放庫中。 如需如何使用私人 Docker 存放庫來進行巨量資料叢集部署的詳細資訊，請參閱[離線部署](deploy-offline.md)主題。|
 | `DOCKER_PASSWORD` | 選用 |用來存取上述私人存放庫的密碼。 |
@@ -193,9 +196,9 @@ SET AZDATA_PASSWORD=<password>
 ```
 
 > [!NOTE]
-> 您必須針對 Knox 閘道使用 `root` 使用者來搭配上述密碼。 `root` 是此基本驗證 (使用者名稱/密碼) 中唯一支援的使用者。
+> 在 SQL Server 2019 CU5 之前部署的叢集上，您必須針對 Knox 閘道使用 `root` 使用者搭配上述密碼。 `root` 是此基本驗證 (使用者名稱/密碼) 中唯一支援的使用者。
+> [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 > 若要使用基本驗證連線到 SQL Server，請使用與 AZDATA_USERNAME 和 AZDATA_PASSWORD [環境變數](#env)相同的值。 
-
 
 設定環境變數之後，您必須執行 `azdata bdc create` 來觸發部署。 此範例會使用上方所建立的叢集組態設定檔：
 

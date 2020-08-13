@@ -2,7 +2,7 @@
 title: 搭配使用 Always Encrypted 與 JDBC 驅動程式
 description: 了解如何在您的 Java 應用程式中搭配使用 Always Encrypted 和 JDBC Driver for SQL Server 來加密伺服器上的敏感性資料。
 ms.custom: ''
-ms.date: 05/06/2020
+ms.date: 07/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c63c15ad0a435235f246945d25c732798fb758df
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: b2005416234f517a8414f3d9405968659f7e553a
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886351"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279615"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>搭配使用 Always Encrypted 與 JDBC 驅動程式
 
@@ -44,11 +44,11 @@ Microsoft JDBC Driver for SQL Server 會使用資料行主要金鑰存放區提�
 ### <a name="using-built-in-column-master-key-store-providers"></a>使用內建資料行主要金鑰存放區提供者
 Microsoft JDBC Driver for SQL Server 隨附下列內建的資料行主要金鑰存放區提供者。 某些提供者已預先註冊特定的提供者名稱 (用來查詢該提供者)，而有些則需要額外的認證或明確的註冊。
 
-| 類別                                                 | 描述                                        | 提供者 (查閱) 名稱  | 是否已預先註冊？ |
-| :---------------------------------------------------- | :------------------------------------------------- | :---------------------- | :----------------- |
-| **SQLServerColumnEncryptionAzureKeyVaultProvider**    | Azure Key Vault 金鑰儲存區的提供者。 | AZURE_KEY_VAULT         | 在 JDBC 驅動程式 7.4.1 版之前為「否」  ，但從 JDBC 驅動程式 7.4.1 版開始則為「是」  。 |
-| **SQLServerColumnEncryptionCertificateStoreProvider** | Windows 憑證存放區的提供者。      | MSSQL_CERTIFICATE_STORE | _是_                |
-| **SQLServerColumnEncryptionJavaKeyStoreProvider**     | Java 金鑰儲存區的提供者。                  | MSSQL_JAVA_KEYSTORE     | _是_                |
+| 類別                                                 | 描述                                        | 提供者 (查閱) 名稱  | 是否已預先註冊？ | 平台 |
+| :---------------------------------------------------- | :------------------------------------------------- | :---------------------- | :----------------- | :------- |
+| **SQLServerColumnEncryptionAzureKeyVaultProvider**    | Azure Key Vault 金鑰儲存區的提供者。 | AZURE_KEY_VAULT         | 在 JDBC 驅動程式 7.4.1 版之前為「否」  ，但從 JDBC 驅動程式 7.4.1 版開始則為「是」  。 | Windows、Linux、macOS |
+| **SQLServerColumnEncryptionCertificateStoreProvider** | Windows 憑證存放區的提供者。      | MSSQL_CERTIFICATE_STORE | _是_                | Windows |
+| **SQLServerColumnEncryptionJavaKeyStoreProvider**     | Java 金鑰儲存區的提供者。                  | MSSQL_JAVA_KEYSTORE     | _是_                | Windows、Linux、macOS |
 |||||
 
 針對預先註冊的金鑰儲存區提供者，您不需要做出任何應用程式程式碼變更即可使用這些提供者，但請注意下列項目︰
@@ -152,7 +152,7 @@ WITH VALUES
 ```
 
 > [!IMPORTANT]
-> 雖然此文章中的其他金鑰儲存區提供者皆可在驅動程式所支援的所有平台上使用，JDBC 驅動程式的 SQLServerColumnEncryptionCertificateStoreProvider 實作僅適用於 Windows 作業系統。 其具有針對 mssql-jdbc_auth-\<版本>-\<架構>.dll 的相依性，該檔案於驅動程式套件中提供。 若要使用此提供者，請將 mssql-jdbc_auth-\<版本>-\<>.dll 檔案複製到 JDBC 驅動程式安裝電腦上 Windows 系統路徑中的目錄。 或者，您也可以設定 java.library.path 系統屬性來指定 mssql-jdbc_auth-\<版本>-\<架構>.dll 的目錄。 如果您正在執行 32 位元的 Java 虛擬機器 (JVM)，則即使作業系統為 x64 版，也請使用 x86 資料夾中的 mssql-jdbc_auth-\<版本>-x86.dll 檔案。 如果您是在 x64 處理器上執行 64 位元的 JVM，請使用 x64 資料夾中的 mssql-jdbc_auth-\<版本>-x64.dll 檔案。 例如，如果您要使用 32 位元 JVM，且 JDBC 驅動程式安裝在預設目錄中，您就可以在 Java 應用程式啟動時，使用下列虛擬機器 (VM) 引數來指定 DLL 的位置：`-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
+> 雖然此文章中的其他金鑰儲存區提供者皆可在驅動程式所支援的所有平台上使用，JDBC 驅動程式的 SQLServerColumnEncryptionCertificateStoreProvider 實作僅適用於 Windows 作業系統。 其相依於驅動程式套件提供的 mssql-jdbc_auth-\<version>-\<arch>.dll。 若要使用此提供者，請將 mssql-jdbc_auth-\<version>-\<arch>.dll 檔案複製到安裝 JDBC Driver 之電腦的 Windows 系統路徑目錄。 或者，您可以設定 java.library.path 系統屬性，以指定 mssql-jdbc_auth-\<version>-\<arch>.dll 的目錄。 如果您執行的是 32 位元 Java 虛擬機器 (JVM)，即使作業系統為 x64 版本，也請使用 x86 資料夾中的 mssql-jdbc_auth-\<version>-x86.dll 檔案。 如果您是在 x64 處理器上執行 64 位元的 JVM，請使用 x64 資料夾中的 mssql-jdbc_auth-\<version>-x64.dll 檔案。 例如，如果您要使用 32 位元 JVM，且 JDBC 驅動程式安裝在預設目錄中，您就可以在 Java 應用程式啟動時，使用下列虛擬機器 (VM) 引數來指定 DLL 的位置：`-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
 
 ### <a name="using-java-key-store-provider"></a>使用 Java Key Store 提供者
 JDBC 驅動程式隨附於 Java 金鑰存放區的內建金鑰存放區提供者實作。 如果 **keyStoreAuthentication** 連接字串屬性存在於連接字串中，且已設定為 "JavaKeyStorePassword"，驅動程式會自動具現化並註冊 Java Key Store 的提供者。 Java Key Store 提供者的名稱是 MSSQL_JAVA_KEYSTORE。 此名稱也可使用 SQLServerColumnEncryptionJavaKeyStoreProvider.getName() API 來查詢。 

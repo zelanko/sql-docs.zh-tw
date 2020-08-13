@@ -1,7 +1,7 @@
 ---
 title: 示範如何搭配透過安全記憶體保護區啟用的 Always Encrypted 使用 Azure Key Vault 提供者的範例 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/18/2019
+ms.date: 07/09/2020
 ms.reviewer: v-kaywon
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: karinazhou
 ms.author: v-jizho2
-ms.openlocfilehash: a4ba44733d2a14323f128f1ab105e79169b90cce
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d97d32ba50255181ae21cf0a1ac1cd079092b122
+ms.sourcegitcommit: 7ce4a81c1b91239c8871c50f97ecaf387f439f6c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75250938"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86217756"
 ---
 # <a name="example-demonstrating-use-of-azure-key-vault-provider-with-always-encrypted-enabled-with-secure-enclaves"></a>示範如何搭配透過安全記憶體保護區啟用的 Always Encrypted 使用 Azure Key Vault 提供者的範例
 
@@ -26,6 +26,9 @@ ms.locfileid: "75250938"
 此範例示範如何在存取加密資料行時使用 Azure Key Vault 提供者。
 
 [!code-csharp [Azure Key Vault Provider with Enclave Example#1](~/../sqlclient/doc/samples/AzureKeyVaultProviderWithEnclaveProviderExample.cs#1)]
+
+> [!NOTE]
+> 只有 Windows 支援具有安全記憶體保護區的 Always Encrypted。
 
 ## <a name="see-also"></a>另請參閱
 

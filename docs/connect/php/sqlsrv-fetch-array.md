@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_fetch_array | Microsoft Docs
+title: sqlsrv_fetch_array
+description: PHP Driver for SQL Server 中 sqlsrv_fetch_array 函式的 API 參考。
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - retrieving data, as an array
 - API Reference, sqlsrv_fetch_array
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 02b4311348ebbd52e5e8382048449072c84d2e46
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3b3c3f296d0fd2ae05c3b88a08428c3ddb8a5f2c
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015030"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391803"
 ---
 # <a name="sqlsrv_fetch_array"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,15 +40,15 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
 #### <a name="parameters"></a>參數  
 *$stmt*：對應至執行之陳述式的陳述式資源。  
   
-*$fetchType* [選擇性]：預先定義的常數。 此參數可以採用下表所列的其中一個值：  
+*$fetchType* [選用]：預先定義的常數。 此參數可以採用下表所列的其中一個值：  
   
-|值|描述|  
+|值|說明|  
 |---------|---------------|  
 |SQLSRV_FETCH_NUMERIC|下一個資料列會以數值陣列的形式傳回。|  
 |SQLSRV_FETCH_ASSOC|下一個資料列會以關聯陣列的形式傳回。 陣列索引鍵是結果集內的資料行名稱。|  
 |SQLSRV_FETCH_BOTH|下一個資料列會同時以數值陣列和關聯陣列的形式傳回。 這是預設值。|  
   
-*row* [選擇性]：在 1.1 版中新增。 下列其中一個值，指定要在使用可捲動資料指標的結果集內存取的資料列。 (如果指定 *row*，則必須明確指定 *fetchtype*，即使您指定預設值亦然。)  
+*row* [選用]：已在 1.1 版中新增。 下列其中一個值，指定要在使用可捲動資料指標的結果集內存取的資料列。 (如果指定 *row*，則必須明確指定 *fetchtype*，即使您指定預設值亦然。)  
   
 -   SQLSRV_SCROLL_NEXT  
 -   SQLSRV_SCROLL_PRIOR  
@@ -58,7 +59,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 如需這些值的詳細資訊，請參閱 [指定資料指標類型及選取資料列](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)。 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]1.1 版已加入可捲動的資料指標支援。  
   
-*offset* [選擇性]：與 SQLSRV_SCROLL_ABSOLUTE 和 SQLSRV_SCROLL_RELATIVE 搭配使用，以指定要擷取的資料列。 結果集內的第一個記錄為 0。  
+*offset* [選用]：與 SQLSRV_SCROLL_ABSOLUTE 和 SQLSRV_SCROLL_RELATIVE 搭配使用，以指定要擷取的資料列。 結果集內的第一個記錄為 0。  
   
 ## <a name="return-value"></a>傳回值  
 如果擷取資料列，則會傳回 **陣列** 。 如果沒有更多資料列可擷取，則會傳回 **null** 。 若發生錯誤，將會傳回 **false** 。  
@@ -73,7 +74,7 @@ INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);
 SELECT SCOPE_IDENTITY()
 ```
   
-如果以關聯陣列的形式擷取此陳述式之 `SELECT SCOPE_IDENTITY()` 部分所傳回的結果集，傳回值的索引鍵將會是空字串 ("")，因為傳回的資料行沒有名稱。 若要避免此狀況，您可以用數值陣列的形式擷取結果，或是在 Transact-SQL 陳述式中為傳回的資料行指定名稱。 以下是在 Transact-SQL 中指定資料行名稱的方式之一：  
+如果以關聯陣列的形式擷取此陳述式之 `SELECT SCOPE_IDENTITY()` 部分所傳回的結果集，傳回值的索引鍵將會是空字串 ("")，因為傳回的資料行沒有名稱。 若要避免此狀況，您可以用數值陣列的形式擷取結果，或是在 Transact-SQL 陳述式中為傳回的資料行指定名稱。 下列陳述式是在 Transact-SQL 中指定資料行名稱的其中一種方式：  
   
 ```
 SELECT SCOPE_IDENTITY() AS PictureID
@@ -176,7 +177,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-**sqlsrv_fetch_array** 函式一律會根據[預設 PHP 資料類型](../../connect/php/default-php-data-types.md)傳回資料。 如需如何指定 PHP 資料類型的相關資訊，請參閱 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)。  
+**sqlsrv_fetch_array** 函式一律會根據[預設 PHP 資料類型](../../connect/php/default-php-data-types.md)傳回資料。 如需如何指定 PHP 資料類型的相關資訊，請參閱[如何：指定 PHP 資料類型](../../connect/php/how-to-specify-php-data-types.md)。  
   
 如果擷取沒有名稱的欄位，則陣列元素的關聯索引鍵會是空字串 ("")。 如需詳細資訊，請參閱 [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md)。  
   

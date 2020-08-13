@@ -1,10 +1,11 @@
 ---
 title: 安全性考量
+description: 本文討論在安裝 SQL Server 前後應該考慮的一些安全性最佳做法。
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - firewall systems [SQL Server]
@@ -23,17 +24,17 @@ helpviewer_keywords:
 - file system security [SQL Server]
 - installing SQL Server, security
 ms.assetid: cf96155f-30a8-48b7-8d6b-24ce90dafdc7
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: c11b2a788561af2281a7f0967972e63358c4ab82
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 1038bdac62902f406a3af510f52bb98728720ab6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258958"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899652"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>SQL Server 安裝的安全性考量
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
  安全性對於每一個產品和每一項業務都很重要。 只要遵循簡單的最佳做法，就可以避免許多安全性漏洞。 本文討論您在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前及安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之後應該考慮的一些安全性最佳做法。 特定功能的參考文章皆會涵蓋這些功能的安全性指南。  
   

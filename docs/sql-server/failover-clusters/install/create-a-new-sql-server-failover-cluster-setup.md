@@ -1,10 +1,11 @@
 ---
 title: 建立新的容錯移轉叢集
+description: 本文描述如何使用安裝程式來安裝或升級 SQL Server 容錯移轉叢集，或將節點新增至現有叢集。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.reviewer: ''
 ms.prod: sql
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
 - adding nodes
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7d66a12e545374196a2fa6a8833bcbf159c1c9c6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8425df35905f08b49750a2d265a260438bbbf2ef
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230481"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897726"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>建立新的 SQL Server 容錯移轉叢集 (安裝程式)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   若要安裝或升級 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集，您必須在容錯移轉叢集的每個節點上執行安裝程式。 若要將節點加入至現有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集，您必須在要加入至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體的節點上執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式。 請勿在使用中節點上執行安裝程式來管理其他節點。  
   
  視節點叢集的方式而定， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集會以下列方式設定：  
@@ -68,7 +69,7 @@ ms.locfileid: "75230481"
   
  如需有關在 Windows 容錯移轉叢集中安裝 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的詳細資訊，請參閱＜ [如何將 SQL Server Analysis Services 叢集化](https://go.microsoft.com/fwlink/p/?LinkId=396548)＞。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
  開始之前，請先檢視下列《 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 線上叢書》主題：  
   
 -   [規劃 SQL Server 安裝](../../../sql-server/install/planning-a-sql-server-installation.md)  
@@ -194,7 +195,7 @@ ms.locfileid: "75230481"
     >  如果您要指定非預設的安裝目錄，請確定安裝資料夾對於此 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體是唯一的。 此對話方塊上的任何目錄都不應該與其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體中的目錄共用。 資料目錄應該位於容錯移轉叢集的共用叢集磁碟上。  
   
     > [!NOTE]  
-    >  若要指定伺服器訊息區塊 (SMB) 檔案伺服器作為資料目錄，請將 [預設資料根目錄] 設為 \\\伺服器名稱\共用名稱\\... 格式的檔案共用  
+    >  若要指定伺服器訊息區塊 (SMB) 檔案伺服器作為資料目錄，請將 [預設資料根目錄]**** 設為 \\\伺服器名稱\共用名稱\\... 格式的檔案共用  
    
 21. 使用 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] [組態 - FILESTREAM] 頁面來針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體啟用 FILESTREAM。 選取 [下一步] 以繼續操作。  
   

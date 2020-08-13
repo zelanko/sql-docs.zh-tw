@@ -1,21 +1,21 @@
 ---
 title: 在 SQL Server 單元測試中使用 Transact-SQL 判斷提示
+description: 了解 Transact-SQL 判斷提示。 查看何時要在 SQL Server 單元測試中使用判斷提示，以及何時使用測試條件，並查看判斷提示使用方法的範例。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: b8feb69dc25d55b279d65904126afd2733160d6f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8ef278073056bbe6958ed61ce415aa2130156edb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243504"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898987"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>在 SQL Server 單元測試中使用 Transact-SQL 判斷提示
 
@@ -85,5 +85,5 @@ ms.locfileid: "75243504"
 [建立和定義 SQL Server 單元測試](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [在 SQL Server 單元測試中使用測試條件](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)  
 [使用 SQL Server 單元測試驗證資料庫程式碼](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-[如何：開啟要編輯的 SQL Server 單元測試](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)  
+[操作說明：開啟要編輯的 SQL Server 單元測試](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)  
   

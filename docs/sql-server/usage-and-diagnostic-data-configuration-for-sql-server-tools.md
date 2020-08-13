@@ -1,5 +1,6 @@
 ---
 title: 設定 SQL Server 工具的使用方式和診斷資料收集 (CEIP) | Microsoft Docs
+description: 了解 CEIP 向使用者收集以改善產品的資訊。 了解如何加入或退出 SQL Server Data Tools (SSDT) 中的計畫。
 ms.custom: ''
 ms.date: 10/21/2016
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: baf3a205-a6bb-4564-8b64-3a0475bb9273
 author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 556d60a4c7f2cc8003f6b9a29fa20dad8c5b72ef
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c93a4023ebcdb9716d7e7790ea97c8df186081f9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68091807"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000427"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools-ceip"></a>設定 SQL Server 工具的使用方式和診斷資料收集 (CEIP)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 了解客戶經驗改進計畫 (CEIP) 如何協助 Microsoft 找出可讓我們的軟體變得更好的方法。  您隨時都能設定工具來選擇加入或退出。  
   
@@ -42,11 +43,11 @@ ms.locfileid: "68091807"
   
 1.  啟動 Visual Studio。  
   
-2.  從 [說明] 功能表中，選取 [傳送意見反應]   >  [設定]  。  
+2.  從 [說明] 功能表中，選取 [傳送意見反應] >  [設定]。  
   
-3.  若要關閉 CEIP，請按一下 [否，我不願意參加]  ，然後按一下 [確定]  。  
+3.  若要關閉 CEIP，請按一下 [否，我不願意參加]，然後按一下 [確定]。  
   
-     若要開啟 CEIP，請按一下 [是，我願意參加]  ，然後按一下 [確定]  。  
+     若要開啟 CEIP，請按一下 [是，我願意參加]，然後按一下 [確定]。  
   
 
   
@@ -71,7 +72,7 @@ Value = (DWORD)
 
   
 > [!CAUTION]  
->  不當編輯登錄可能會造成系統嚴重受損。 在變更登錄之前，應備份電腦上的所有重要資料。 如果　貴用戶在套用手動變更之後遇到問題，也可以使用 [上次的正確設定] 啟動選項。  
+>  不正確地編輯登錄可能會對系統造成嚴重的損害。 變更登錄之前，您應該先備份電腦所有的重要資料。 如果　貴用戶在套用手動變更之後遇到問題，也可以使用 [上次的正確設定] 啟動選項。  
   
  如需 CEIP 所收集、處理或傳輸之資訊的詳細資訊，請參閱[隱私權聲明](https://go.microsoft.com/fwlink/?LinkID=868444)。  
  
@@ -86,11 +87,11 @@ Value = (DWORD)
   
 1.  啟動 Visual Studio。  
   
-2.  從 [說明] 功能表中，選取 [傳送意見反應]   >  [設定]  。  
+2.  從 [說明] 功能表中，選取 [傳送意見反應] >  [設定]。  
   
-3.  若要關閉 CEIP，請按一下 [否，我不願意參加]  ，然後按一下 [確定]  。  
+3.  若要關閉 CEIP，請按一下 [否，我不願意參加]，然後按一下 [確定]。  
   
-     若要開啟 CEIP，請按一下 [是，我願意參加]  ，然後按一下 [確定]  。  
+     若要開啟 CEIP，請按一下 [是，我願意參加]，然後按一下 [確定]。  
   
 
   
@@ -113,7 +114,7 @@ Value = (DWORD)
 -   1 為開啟  
   
 > [!CAUTION]  
->  不當編輯登錄可能會造成系統嚴重受損。 在變更登錄之前，應備份電腦上的所有重要資料。 如果　貴用戶在套用手動變更之後遇到問題，也可以使用 [上次的正確設定] 啟動選項。  
+>  不正確地編輯登錄可能會對系統造成嚴重的損害。 變更登錄之前，您應該先備份電腦所有的重要資料。 如果　貴用戶在套用手動變更之後遇到問題，也可以使用 [上次的正確設定] 啟動選項。  
   
  如需 CEIP 所收集、處理或傳輸之資訊的詳細資訊，請參閱[隱私權聲明](https://go.microsoft.com/fwlink/?LinkID=868444)。  
   
@@ -124,13 +125,13 @@ Value = (DWORD)
   
 1.  啟動工具，並為 Analysis Services 或 Integration Services 中開啟新的或現有的專案。  
   
-2.  從 [說明] 功能表中，選取 [Microsoft SQL Server 客戶回函選項]  。  
+2.  從 [說明] 功能表中，選取 [Microsoft SQL Server 客戶回函選項] 。  
   
-3.  若要關閉 CEIP，請按一下 [不，我不想參加]  。  
+3.  若要關閉 CEIP，請按一下 [不，我不想參加] 。  
   
-     若要開啟 CEIP，請按一下 [是，我願意參加]  。  
+     若要開啟 CEIP，請按一下 [是，我願意參加] 。  
   
-4.  按一下 [確定]  。  
+4.  按一下 [確定]。  
   
  **使用以登錄為基礎的原則或群組原則**  
   

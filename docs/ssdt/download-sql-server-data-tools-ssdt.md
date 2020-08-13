@@ -1,24 +1,24 @@
 ---
 title: 下載 SQL Server Data Tools (SSDT)
+description: 了解 SQL Server Data Tools (SSDT)。 了解如何搭配 Visual Studio 2019 和 Visual Studio 2017 安裝這項資料庫開發工具組。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssdt
 ms.topic: conceptual
 keywords: 安裝 SSDT, 下載 SSDT, 最新的 SSDT
 ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
-author: markingmyname
-ms.author: maghan
-manager: jroth
-ms.reviewer: ''
+author: dzsquared
+ms.author: drskwier
+ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: ca30249097fa9ad4eec386ca0fc0698976e5362a
-ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
+ms.openlocfilehash: dbaaa71b61129d0bb1917644c017122e6ed88bf4
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80809592"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86278998"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>下載適用於 Visual Studio 的 SQL Server Data Tools (SSDT)
 
@@ -39,19 +39,19 @@ ms.locfileid: "80809592"
 
 ### <a name="install-ssdt-with-visual-studio-2019"></a>使用 Visual Studio 2019 安裝 SSDT
 
-如果已安裝 [Visual Studio 2019](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019)，則可編輯工作負載清單以包含 SSDT。
+如果已安裝 [Visual Studio 2019](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019)，則可編輯工作負載清單以包含 SSDT。 如果您尚未安裝 Visual Studio 2019，則可下載並安裝 [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/)。
 
-* 對於 SQL Database 專案，請選取 [資料儲存和處理] 的 [SQL Server Data Tools]。
+* 針對 SQL Database 專案，在工作負載清單中選取位於 [資料儲存和處理] 下方的 [SQL Server Data Tools]。
 
    ![資料儲存和處理工作負載](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2019.png)
 
 * 針對 Analysis Services、Integration Services 或 Reporting Services 專案，請從 [Marketplace](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance) 或 [工具] > [延伸模組與更新] 安裝適當的[延伸模組](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions)。
 
-如果您尚未安裝 Visual Studio 2019，則可下載並安裝 [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/)。 
+* [Analysis Services (英文)](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects)
 
-* 對於 SQL Database 專案，請在安裝時，從工作負載清單中，選取 [資料儲存和處理] 下的 [SQL Server Data Tools]。
+* [Integration Services](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects)
 
-* 針對 Analysis Services、Integration Services 或 Reporting Services 專案，請從 [Marketplace](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance) 或 [工具] > [延伸模組與更新] 安裝適當的[延伸模組](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions)。
+* [Reporting Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)
 
 ## <a name="ssdt-for-visual-studio-2017"></a>適用於 Visual Studio 2017 的 SSDT
 
@@ -79,10 +79,10 @@ ms.locfileid: "80809592"
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT for VS 2017 (獨立安裝程式)
 
-[![下載](../ssdt/media/download.png) 下載 SSDT for Visual Studio 2017 (15.9.4)](https://go.microsoft.com/fwlink/?linkid=2124518 )
+:::image type="icon" source="media/download.png" border="false"::: **[下載適用於 Visual Studio 2017 (15.9.5) 的 SSDT](https://go.microsoft.com/fwlink/?linkid=2131035)**
 
 > [!IMPORTANT]
-> * 如果已安裝「Analysis Services 專案」與「Reporting Services 專案」延伸模組，請先解除安裝並關閉所有 VS 執行個體，再安裝 SSDT for Visual Studio 2017 (15.9.4)。
+> * 如果已安裝「Analysis Services 專案」與「Reporting Services 專案」延伸模組，請先解除安裝並關閉所有 VS 執行個體，再安裝 SSDT for Visual Studio 2017 (15.9.5)。 
 > * 已移除 Power Query Source for SQL Server 2017 的收件匣元件。 我們現在宣告 Power Query Source for SQL Server 2017 與 2019 為 OOB 元件，您可以在[這裡](https://www.microsoft.com/download/details.aspx?id=100619)下載。
 > * 若要使用 Oracle 和 Teradata 連接器設計套件，並將目標設為 SQL 2019 之前的舊版 SQL Server，除了 [Microsoft Oracle Connector for SQL 2019](https://www.microsoft.com/download/details.aspx?id=58228) \(英文\) 和 [Microsoft Teradata Connector for SQL 2019](https://www.microsoft.com/download/details.aspx?id=100599) \(英文\) 以外，您還需要安裝由 Attunity 提供適用於 Oracle 和 Teradata 的 Microsoft 連接器相應版本。
 >    * [目標為 SQL Server 2017 由 Attunity 提供適用於 Oracle 和 Teradata 的 Microsoft 連接器 5.0 版](https://www.microsoft.com/download/details.aspx?id=55179) \(英文\)
@@ -102,17 +102,17 @@ SSDT for Visual Studio 2017 與 Visual Studio 具有相同的[系統需求](http
 
 這版**適用於 VS 2017 的 SSDT** 提供下列語言版本：
 
-* [簡體中文]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x804)
-* [繁體中文]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x404)
-* [英文 (美國)]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x409)
-* [法文]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x40c)
-* [德文]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x407)
-* [義大利文]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x410)
-* [日文]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x411)
-* [韓文]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x412)
-* [葡萄牙文 (巴西)]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x416)
-* [俄文]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x419)
-* [西班牙文]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x40a)
+* [簡體中文](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x804)
+* [繁體中文](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x404)
+* [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x409)
+* [法文](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x40c)
+* [德文](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x407)
+* [義大利文](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x410)
+* [日文](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x411)
+* [韓文](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x412)
+* [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x416)
+* [俄文](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x419)
+* [西班牙文](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x40a)
 
 ### <a name="considerations-and-limitations"></a>考量與限制
 
@@ -139,7 +139,7 @@ SSDT for Visual Studio 2017 與 Visual Studio 具有相同的[系統需求](http
 1. 執行 `vs_setup.exe --NoWeb`，以安裝 VS2017 Shell 及 SQL Server 資料專案。
 
 2. 從配置資料夾執行 `SSDT-Setup-ENU.exe /install`，並選取 SSIS/SSRS/SSAS。
-   * 若要自動安裝，請執行 `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive`。
+   a. 若要自動安裝，請執行 `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive`。
 
 若要查看可用的選項，請執行 `SSDT-Setup-ENU.exe /help`
 
@@ -162,6 +162,16 @@ Visual Studio 2015 與 2017 的 SSDT 都使用 DacFx 17.4.1：[下載資料層�
 
 若要下載及安裝 SSDT for Visual Studio 2015 或更舊版的 SSDT，請參閱[舊版 SQL Server Data Tools (SSDT 及 SSDT-BI)](previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)。
 
+## <a name="see-also"></a>另請參閱
+
+* [SSDT MSDN 論壇](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt) 
+
+* [SSDT 團隊部落格](https://blogs.msdn.com/b/ssdt/)
+
+* [DACFx API 參考](https://msdn.microsoft.com/library/dn645454.aspx)
+
+* [下載 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
+
 ## <a name="next-steps"></a>後續步驟
 
 安裝 SSDT 後，請逐步完成這些教學課程，以了解如何使用 SSDT 來建立資料庫、套件、資料模型及報表。
@@ -175,13 +185,3 @@ Visual Studio 2015 與 2017 的 SSDT 都使用 DacFx 17.4.1：[下載資料層�
 * [建立基本資料表報表 (SSRS 教學課程)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-
-## <a name="see-also"></a>另請參閱
-
-* [SSDT MSDN 論壇](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt) 
-
-* [SSDT 團隊部落格](https://blogs.msdn.com/b/ssdt/)
-
-* [DACFx API 參考](https://msdn.microsoft.com/library/dn645454.aspx)
-
-* [下載 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)

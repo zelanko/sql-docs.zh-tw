@@ -1,23 +1,24 @@
 ---
 title: 安裝容錯移轉叢體執行個體
+description: 了解如何安裝 SQL Server 容錯移轉叢集。 透過執行 SQL Server 安裝程式來建立及設定容錯移轉叢集執行個體。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c3de22853ccef8bd38c338b05043da7061ffeed0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 574f8f557eab10fa43be721f9b73bfc446b04687
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230616"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897666"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server 容錯移轉叢集安裝
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   若要安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集，您必須執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式來建立及設定容錯移轉叢集執行個體。  
   
 ## <a name="installing-a-failover-cluster"></a>安裝容錯移轉叢集  
@@ -39,7 +40,7 @@ ms.locfileid: "75230616"
   
     -   容錯移轉叢集中的所有節點必須為相同平台 (即 32 位元或 64 位元)，而且必須在相同的作業系統版本上執行。 此外，您必須將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 64 位元版本安裝在執行 Windows 64 位元版本作業系統的 64 位元硬體上。 這一版沒有容錯移轉叢集的 WOW64 支援。  
   
-3.  為每個容錯移轉叢集執行個體指定多個 IP 位址。 您可以為每個子網路指定多個 IP 位址。 若在相同的子網路上有多重 IP 位址， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式會將相依性設定為 AND。 若正跨多重子網路進行節點的叢集作業， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式會將相依性設定為 OR。  
+3.  為每個容錯移轉叢集執行個體指定多個 IP 位址。 您可為每個子網路指定多個 IP 位址。 若在相同的子網路上有多個 IP 位址， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式會將相依性設定為 AND。 若正跨多重子網路進行節點的叢集作業， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式會將相依性設定為 OR。  
 
 4.  SQL Server 容錯移轉叢集執行個體 (FCI) 需要已加入網域的叢集節點。 **不支援**下列設定：
     - 工作群組叢集上的 SQL FCI。 

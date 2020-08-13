@@ -1,6 +1,6 @@
 ---
 title: 在無仲裁情況下強制啟動 WSFC 叢集
-description: 描述如何在無仲裁情況下強制啟動 Windows Server 容錯移轉叢集。
+description: 在沒有仲裁的情況下強制啟動 Windows Server 容錯移轉叢集的叢集節點，可能必須復原資料並重新建立高可用性。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 078b7087669547b183f8bd34daa6c6fe0cf98cc4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4f7838537d93ce6ef60afc0ac971bbc47d358f79
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258146"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899008"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>在無仲裁情況下強制啟動 WSFC 叢集
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   本主題描述如何在沒有仲裁的情況下強制啟動 Windows Server 容錯移轉叢集 (WSFC) 叢集節點。  在災害復原和多重子網路案例中，可能需要這個方式才能針對 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體來復原資料及完整重新建立高可用性。  
   
 -   **開始之前：** [建議](#Recommendations)、[安全性](#Security)  

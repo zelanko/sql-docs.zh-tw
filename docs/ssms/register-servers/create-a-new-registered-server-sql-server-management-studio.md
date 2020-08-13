@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 716ea070-a3b5-4514-9de2-82ce8a96514b
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: a62555b9cb6f94b4fd51e304537551d857d2c525
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 836775e914023e4f68c7a4a1225c843c639825d1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246566"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001755"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>建立新的已註冊伺服器 (SQL Server Management Studio)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 本主題描述如何藉由在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的「已註冊的伺服器」元件中註冊伺服器，來儲存您經常存取之伺服器的連接資訊。 您可以在連接之前或在連接時從 [物件總管] 註冊伺服器。 有一個特定的功能表選項，可用來註冊本機電腦上的伺服器執行個體。  
   
@@ -56,7 +55,7 @@ ms.locfileid: "75246566"
      從 [已註冊的伺服器] 註冊伺服器時，[伺服器類型]  方塊是唯讀的，且會與 [已註冊的伺服器] 窗格中所顯示的伺服器類型相符。 若要註冊不同類型的伺服器，請在 **[已註冊的伺服器]** 工具列上按一下 **[Database Engine]** 、 **[Analysis Server]** 、 **[Reporting Services]** 或 **[Integration Services]** ，然後再開始註冊新的伺服器。  
   
      **伺服器名稱**  
-     選取要以下列格式註冊的伺服器執行個體：\<伺服器名稱>[\\\<執行個體名稱>]。  
+     選取要以下列格式註冊的伺服器執行個體： *\<servername>* [\\ *\<instancename>* ]。  
   
      **驗證**  
      當連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體時，有兩種可用的驗證模式。  

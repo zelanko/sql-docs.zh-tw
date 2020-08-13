@@ -11,17 +11,16 @@ f1_keywords:
 ms.assetid: 1811cb9e-3791-414d-b8c9-1d61657707f8
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 8c1eb1ef3959052fb285c713bf172521b74bc46b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 992ff4f61358f46035f4cbc817491d5968aa6ea1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255346"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004222"
 ---
 # <a name="print-dialog-box"></a>列印對話方塊
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 您可以選取 [列印]  對話方塊中的選項，藉以指定您要列印文件的方式。  
   
 ## <a name="printer"></a>印表機  
@@ -41,7 +40,7 @@ ms.locfileid: "75255346"
 包含關於所選印表機的其他資訊。  
   
 **屬性**  
-按一下以開啟 [\<印表機名稱屬性  >] 對話方塊。  
+按一下以開啟 [\<*printer name properties*>] 對話方塊。  
   
 **列印至檔案**  
 將文件列印到檔案而非印表機。  

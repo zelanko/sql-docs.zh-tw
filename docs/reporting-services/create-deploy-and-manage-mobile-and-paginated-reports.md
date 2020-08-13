@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2654fba3904788e1eefa2aaa17d4defbad4039a8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e75947d7ea4b47c7c2fef3e37cfd6b5b73b48533
+ms.sourcegitcommit: 4231364ab5bc15b74952ca5d20508b7ba9ca347e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082632"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86291145"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>什麼是 SQL Server Reporting Services (SSRS)？
 

@@ -2,7 +2,7 @@
 title: 使用 IROWSETFASTLOAD 和 ISEQUENTIALSTREAM 將 BLOB 資料傳送到 SQL Server | Microsoft Docs
 description: 使用 IROWSETFASTLOAD 和 ISEQUENTIALSTREAM 將 BLOB 資料傳送到 SQL Server
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 05/25/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,48 +10,50 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 18dc87158bc1a6086cf8406423c123b0789b0f08
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2add5bbc762709122a6cf7c7292fd139c42cd39f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015545"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001485"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>使用 IROWSETFASTLOAD 和 ISEQUENTIALSTREAM 將 BLOB 資料傳送到 SQL SERVER (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   此範例會示範如何使用 IRowsetFastLoad 來串流處理每個資料列中不同長度的 BLOB 資料。  
   
- 根據預設，這個範例會示範如何使用 IRowsetFastLoad，透過正規繫結傳送每個資料列中不同長度的 BLOB 資料。 內嵌 BLOB 資料必須配合可用的記憶體。 這個方法在 BLOB 資料的大小為數 MB 時效果最好，因為沒有額外的資料流負荷。 如果資料的大小多於數 MB，尤其是當資料無法以區塊的方式使用時，則資料流的效果較佳。  
+ 根據預設，這個範例會示範如何使用 IRowsetFastLoad，透過正規繫結傳送每個資料列中不同長度的 BLOB 資料。 內嵌 BLOB 資料必須配合可用的記憶體。 此方法在 BLOB 資料小於數 MB 時執行效能最佳，因為不會有任何額外的資料流負荷。 如果資料的大小多於數 MB，尤其是當資料無法以區塊的方式使用時，則資料流的效果較佳。  
   
- 在原始程式碼中，當您取消註解 #define USE_ISEQSTREAM 時，此範例會使用 ISequentialStream。 範例中定義了資料流實作，而且只要變更 MAX_BLOB，即可傳送任何大小的 BLOB 資料。 資料流資料並不需要配合記憶體或以單一區塊使用。 您可以使用 IRowsetFastLoad::InsertRow 來呼叫此提供者。 請使用 IRowsetFastLoad::InsertRow，將指標和可從資料流讀取的資料量傳送至資料緩衝區中的資料流實作 (rgBinding.obValue 位移)。 在繫結進行時，某些提供者可能不需要知道資料的長度。 在此例中，繫結中可以省略長度。  
+ 在原始程式碼中，當取消註解 `#define USE_ISEQSTREAM` 時，範例便會使用 ISequentialStream。 範例中定義了資料流實作，且只要變更 MAX_BLOB，即可傳送任何大小的 BLOB 資料。 資料流資料並不需要配合記憶體或以單一區塊使用。 您可以使用 IRowsetFastLoad::InsertRow 來呼叫此提供者。 請使用 IRowsetFastLoad::InsertRow，將指標和可從資料流讀取的資料量傳送至資料緩衝區中的資料流實作 (rgBinding.obValue 位移)。 在繫結進行時，某些提供者可能不需要知道資料的長度。 在此例中，繫結中可以省略長度。  
   
- 此範例不會使用提供者的資料流介面來將資料寫入提供者， 而會將指標傳送給資料流物件，提供者會取用該指標來讀取資料。 一般而言，Microsoft 提供者 (SQLOLEDB、SQLNCLI 和 MSOLEDBSQL) 會以 1024 位元組的區塊從物件讀取資料，直到所有資料都經過處理。 SQLOLEDB、SQLNCLI 和 MSOLEDBSQL 都沒有完整的實作，無法讓取用者將資料寫入至提供者的資料流物件。 只有零長度的資料可以透過提供者的資料流物件傳送。  
+ 範例不會使用提供者的資料列介面來將資料寫入提供者。 而會將指標傳送給資料流物件，提供者會取用該指標來讀取資料。 一般而言，Microsoft 提供者 (SQLOLEDB、SQLNCLI 和 MSOLEDBSQL) 會以 1024 位元組的區塊讀取資料。 提供者會從物件讀取資料，直至所有資料都經過處理。 SQLOLEDB、SQLNCLI 和 MSOLEDBSQL 都沒有完整的實作，無法讓取用者將資料寫入提供者的資料流物件。 只有零長度的資料可以透過提供者的資料流物件傳送。  
   
- 取用者實作的 ISequentialStream 物件可和資料列集資料 (IRowsetChange::InsertRow、IRowsetChange::SetData) 搭配使用，也可以透過將參數繫結為 DBTYPE_IUNKNOWN 的方式，與參數搭配使用。  
+ 取用者實作的 ISequentialStream 物件可和資料列集資料 (IRowsetChange::InsertRow、IRowsetChange::SetData) 搭配使用。 此外，其也可以透過將參數繫結為 DBTYPE_IUNKNOWN 的方式，與參數搭配使用。  
   
- 因為 DBTYPE_IUNKNOWN 會在繫結中指定為資料類型，所以必須符合資料行或目標參數的類型。 從資料列介面透過 ISequentialStream 傳送資料時，不能進行轉換。 對於參數，您應該避免使用 ICommandWithParameters::SetParameterInfo，並指定不同的類別來強制執行轉換；這項作業需要提供者在本機快取所有的 BLOB 資料，以便在傳送到 SQL Server 之前加以轉換。 快取大量的 BLOB 並在本機進行轉換無法提供良好的效能。  
-  
- 如需詳細資訊，請參閱 [BLOB 與 OLE 物件](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)。  
+ 因為 DBTYPE_IUNKNOWN 會在繫結中指定為資料類型，所以必須符合資料行或目標參數的類型。 從資料列集介面透過 ISequentialStream 傳送資料時，不能進行轉換 <a href="#conversion_note"><sup>**1**</sup></a>。 針對參數，建議避免使用 ICommandWithParameters::SetParameterInfo，並指定不同的類型來強制轉換。 這麼做會要求提供者在本機快取所有 BLOB 資料，以在傳送至 SQL Server 之前進行轉換。 快取大量的 BLOB 並在本機進行轉換無法提供良好的效能。  
+
+ 如需詳細資訊，請參閱 [BLOB 與 OLE 物件](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)。
+
+ <b id="conversion_note">[1]：</b>雖然無法進行轉換，但如果伺服器不支援 UTF-8，則仍然可能發生 UTF-8 和資料庫定序字碼頁間的翻譯。 如需詳細資訊，請參閱 [OLE DB Driver for SQL Server 中的 UTF-8 支援](../features/utf-8-support-in-oledb-driver-for-sql-server.md)。
   
 > [!IMPORTANT]  
 >  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
   
 ## <a name="example"></a>範例  
- 執行第一個 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 程式碼清單，以建立應用程式所使用的資料表。  
+ 執行第一個 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 程式碼清單，以便建立應用程式所使用的資料表。  
   
  使用 ole32.lib oleaut32.lib 編譯並執行下列 C++ 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連線到具名執行個體，請將連接字串從 L"(local)" 變更為 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 msoledbsql.h。  
   
- 執行第三個 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 程式碼清單，以刪除應用程式所使用的資料表。  
+ 執行第三個 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 程式碼清單，以便刪除應用程式所使用的資料表。  
   
-```  
+```sql
 use master  
 create table fltest(col1 int, col2 int, col3 image)  
 ```  
   
-```  
+```cpp
 // compile with: ole32.lib oleaut32.lib  
 #include <windows.h>  
   
@@ -479,7 +481,7 @@ void wmain() {
 }  
 ```  
   
-```  
+```sql
 use master  
 drop table fltest  
 ```  

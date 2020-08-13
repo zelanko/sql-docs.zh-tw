@@ -1,31 +1,31 @@
 ---
-title: 針對 SSMS 的當機或損毀問題進行疑難排解
+title: 針對 SSMS 沒有回應的系統或損毀進行疑難排解
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: dnethi
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
+ms.reviewer: dnethi
 ms.custom: seo-lt-2019
 ms.date: 09/18/2019
-ms.openlocfilehash: f994a44d6fe0f458ae8f8d8be0351421322e7967
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 98ed3868008808ff18a9847a009108ee41205d12
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243875"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091261"
 ---
 # <a name="get-diagnostic-data-after-a-sql-server-management-studio-ssms-crash"></a>在 SQL Server Management Studio (SSMS) 損毀之後取得診斷資料
 
 [!INCLUDE[Applies to](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-## <a name="get-full-memory-dump-after-a-hang-or-crash"></a>在當機或損毀之後取得完整記憶體傾印
+## <a name="get-full-memory-dump-after-an-unresponsive-system-or-crash"></a>在系統沒有回應或損毀之後，取得完整的記憶體傾印
 
-在 SQL Server Management Studio (SSMS) 當機或損毀時取得完整記憶體傾印。
+在 SQL Server Management Studio (SSMS) 停止回應或損毀時，取得完整記憶體傾印。
 
-若要擷取診斷資訊以針對 SSMS 損毀或當機進行疑難排解，請遵循下列步驟。
+若要擷取診斷資訊以針對 SSMS 損毀或停止回應進行疑難排解，請遵循下列步驟。
 
 1. 下載 [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx)。
 

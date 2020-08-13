@@ -1,5 +1,6 @@
 ---
-title: 診斷 JDBC 驅動程式的問題 | Microsoft Docs
+title: 診斷 JDBC 驅動程式的問題
+description: 了解如何診斷錯誤處理、檢查驅動程式版本和追蹤等問題並對其進行疑難排解。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 723e2680-a0c5-4a7d-a319-1e49e41078cf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3728ac03477099b81ee51e8cbb779d9773984dbb
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f51f21c3ede1a3bd11cb73e5b9b2fbecfdd851d9
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922423"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381028"
 ---
 # <a name="diagnosing-problems-with-the-jdbc-driver"></a>診斷 JDBC 驅動程式的問題
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "80922423"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|描述|  
+|主題|說明|  
 |-----------|-----------------|  
 |[處理錯誤](../../connect/jdbc/handling-errors.md)|描述如何處理從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回的錯誤。|  
 |[取得驅動程式版本](../../connect/jdbc/getting-the-driver-version.md)|描述如何判斷所安裝的 JDBC Driver 版本。|  

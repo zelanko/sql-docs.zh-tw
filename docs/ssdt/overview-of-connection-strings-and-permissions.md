@@ -1,28 +1,28 @@
 ---
 title: 連接字串和權限
+description: 了解執行 SQL Server 單元測試所需的連接字串、帳戶和權限。 查看如何設定連接字串。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: ceff114e-a738-46ad-9785-b6647a2247f9
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 37e1b0c050da78722422d9bf20e4eae310565ec1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 292901b39a4c4f6732290ba7425f26f0bc1e6c48
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243764"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901099"
 ---
 # <a name="overview-of-connection-strings-and-permissions"></a>連接字串和權限概觀
 
-若要執行 SQL Server 單元測試，您必須使用一個或兩個特定連接字串來連接到資料庫伺服器。 每一個連接字串都代表具有特定權限的帳戶 (如果您要在測試中的特定指令碼執行某個工作或一組工作，必須擁有該帳戶)。 您可以在 [SQL Server 測試組態]  對話方塊中指定這些字串，或是手動為測試專案編輯 app.config 檔案來加以指定。  
+若要執行 SQL Server 單元測試，您必須使用一個或兩個特定連接字串來連接到資料庫伺服器。 每一個連接字串都代表具有特定權限的帳戶 (如果您要在測試中的特定指令碼執行某個工作或一組工作，必須擁有該帳戶)。 您可以在 [SQL Server 測試組態]**** 對話方塊中指定這些字串，或是手動為測試專案編輯 app.config 檔案來加以指定。  
   
 ## <a name="connection-strings"></a>連接字串  
-您可以在 [SQL Server 測試組態]  對話方塊中，為以下的每一個帳戶指定連接字串。  
+您可以在 [SQL Server 測試組態] 對話方塊中，為以下的每一個帳戶指定連接字串。  
   
 > [!NOTE]  
 > 只有當您使用 SQL Server 驗證時，執行內容和授權的內容才會不同。 如果您是使用 Windows 驗證，兩個連接字串會使用相同的認證。  

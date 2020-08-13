@@ -14,12 +14,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: d839caa5bd89e2ae4db4ab797ab4d5ca1967c13a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf563e5d074f9e4629eb3b9f63304104167394a4
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153227"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091802"
 ---
 # <a name="list-of-bugs-fixed"></a>已修正的錯誤 (Bug) 清單
 
@@ -51,8 +51,8 @@ ms.locfileid: "82153227"
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-174-for-ssnoversion"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.4 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的錯誤 (Bug) 修正
 
-- 修正啟用 Multiple Active Results Sets (MARS) 時的間歇性停止回應
-- 修正啟用非同步通知時的連線恢復功能停止回應
+- 修正啟用 Multiple Active Result Set (MARS) 時驅動程式會停止回應的間歇性問題
+- 修正啟用非同步通知時，驅動程式停止回應的連線復原問題
 - 修正針對多執行緒連接嘗試取得診斷記錄時的損毀
 - 修正使用 SQL_USER_NAME 和 SQL_DATA_SOURCE_READ_ONLY 呼叫 SQLGetInfo() 之後重新連線時的「不支援加密」
 - 修正 Azure Active Directory 互動式驗證期間的 COM 初始化錯誤
@@ -94,7 +94,7 @@ ms.locfileid: "82153227"
 
 - 已修正使用 Kerberos 驗證時，大量插入可能會失敗並出現「存取遭拒」錯誤的錯誤 (Bug)
 - 已移除 2.3.1 以下版本中存在之 unixODBC 錯誤 (Bug) 的因應措施 (驅動程式會將傳遞至 unixODBC 的特定緩衝區大小加倍)
-- 已修正使用 ColumnEncryption=enabled 時的連線恢復功能 (重新連線) 停止回應
+- 修正使用 ColumnEncryption=enabled 時的連線復原 (重新連線) 停止回應
 - 已修正 DSN 建立錯誤 (Bug)，其中使用「Active Directory 互動式驗證」選項時，[Azure 驗證] 視窗可能會變成沒有回應 (Windows)
 - 已修正在 ODBC 關閉期間啟用非同步執行 (清除連接控制代碼時發生) 時的罕見損毀
 - 已修正 SQL 驅動程式在執行長時間的預存程序時造成高 CPU 耗用量的問題

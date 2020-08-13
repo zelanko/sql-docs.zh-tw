@@ -1,6 +1,6 @@
 ---
 title: 從容錯移轉叢集執行個體失敗的狀況中復原
-description: 描述如何從 SQL Server 容錯移轉叢集實例的容錯移轉中復原。
+description: 了解如何在 SQL Server 中使用容錯移轉叢集管理員嵌入式管理單元，從容錯移轉叢集執行個體的容錯移轉中復原。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1670638b32f2f5bd32a9ee7b12e28e7a468b75da
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 44f178d5433a1d3de1670b762b6e1d7e60bad033
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74821998"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901204"
 ---
 # <a name="recover-from-failover-cluster-instance-failure"></a>從容錯移轉叢集執行個體失敗的狀況中復原
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   此主題描述在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]發生容錯移轉之後，如何使用容錯移轉叢集管理員嵌入式管理單元，從叢集失敗中復原。 容錯移轉叢集管理員嵌入式管理單元是 Windows Server 容錯移轉叢集 (WSFC) 服務的叢集管理應用程式。  
   
 -   [從無法修復的失敗中復原](#Scenario1)  

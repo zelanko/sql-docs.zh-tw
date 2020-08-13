@@ -1,10 +1,11 @@
 ---
 title: 重新命名容錯移轉叢體執行個體
+description: 本文描述如何重新命名作為容錯移轉叢集一部分的 SQL Server 執行個體，其與重新命名獨立執行個體不同。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], virtual servers
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: af1ec295ef8567496da84819532342164cb269cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ca8faa59c304f145eb2ac1dc46bab46d368d163b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230724"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897651"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>重新命名 SQL Server 容錯移轉叢集執行個體
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體是容錯移轉叢集的一部份時，重新命名虛擬伺服器的程序會不同於重新命名獨立執行個體的程序。 如需詳細資訊，請參閱 [重新命名主控 SQL Server 獨立執行個體的電腦](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)。  
   
  虛擬伺服器的名稱一定跟「SQL 網路名稱」(SQL 虛擬伺服器網路名稱) 的名稱相同。 雖然您可以變更虛擬伺服器的名稱，但無法變更執行個體名稱。 例如，您可以將名稱為 VS1\instance1 的虛擬伺服器變更為其他的名稱，例如 SQL35\instance1，但名稱的執行個體部份 instance1 會維持不變。  

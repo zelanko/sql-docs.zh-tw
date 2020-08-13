@@ -1,5 +1,6 @@
 ---
 title: SQL Server Agent 屬性 (登入索引標籤)
+description: 了解 [SQL Server Agent 屬性] 對話方塊的 [登入] 索引標籤。 了解如何使用此索引標籤來指定帳戶，以及啟動或停止服務。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 01fc6329-5d6b-4186-9565-395f375477bb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1b9ec7ce2d0280f551953bf14f8494b7bd80becb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8b20e60e719cf988ae4fb8821870f2c2b3333c76
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307151"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900743"
 ---
 # <a name="sql-server-agent-properties-log-on-tab"></a>SQL Server Agent 屬性 (登入索引標籤)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   您可以使用 **[SQL Server Agent 屬性]** 對話方塊的 **[登入]** 索引標籤指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務所使用的帳戶，以及啟動和停止該服務。 帳戶密碼的變更會立即生效，不需要重新啟動服務。  
   
 > [!NOTE]  

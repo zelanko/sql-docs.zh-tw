@@ -1,5 +1,6 @@
 ---
 title: SQL Server 屬性 (登入索引標籤)
+description: 了解 SQL Server [屬性] 對話方塊的 [登入] 索引標籤。 請使用此索引標籤來指定 SQL Server 使用的帳戶，並啟動或停止服務。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 405073fc-eaa3-43c6-bf82-2cd58cacc1c3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 042a0bcf0b0a078b87219a4371d7cb890b4abab6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ac7122b1ec746fa3f73dab8fc104d91851b7569a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306810"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898936"
 ---
 # <a name="sql-server-properties-log-on-tab"></a>SQL Server 屬性 (登入索引標籤)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   您可以使用 **[SQL Server 屬性]** 對話方塊的 **[登入]** 索引標籤，來指定要供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務使用的帳戶、變更帳戶的密碼，以及啟動和停止該服務。 帳戶密碼的變更會立即生效。  
   
 > [!NOTE]  

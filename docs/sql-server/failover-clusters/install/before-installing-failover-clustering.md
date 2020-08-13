@@ -1,10 +1,11 @@
 ---
 title: 安裝容錯移轉叢集之前 | Microsoft Docs
+description: 本文描述準備安裝 SQL Server 容錯移轉叢集的硬體、作業系統及組態規劃考量。
 ms.custom: ''
 ms.date: 08/24/2016
 ms.reviewer: ''
 ms.prod: sql
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], preinstallation checklist
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5d2fe2d80b0f9d54e877d6bc1be9a05c8c34c584
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f13de472628de7f0bfea12cdac2c001682678a66
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72517937"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900513"
 ---
 # <a name="before-installing-failover-clustering"></a>安裝容錯移轉叢集之前
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   安裝 SQL Server 容錯移轉叢集之前，您必須先選取硬體以及要執行 SQL Server 的作業系統。 您也必須設定 Windows Server 容錯移轉叢集 (WSFC)，並檢閱要在容錯移轉叢集上執行之其他軟體的網路、安全性及考量。  
   
  如果 Windows 叢集有本機磁碟機，而且同一個磁碟機代號在一個或多個叢集節點上也做為共用磁碟機使用時，您無法將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝在該磁碟機上。 這項限制適用屬於 Windows 容錯移轉叢集執行個體的伺服器上 SQL Server 容錯移轉叢集執行個體和獨立執行個體。
@@ -47,7 +48,7 @@ ms.locfileid: "72517937"
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式不再安裝 .NET Framework 3.5 SP1，但是在較舊的 Windows 作業系統上安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，可能需要 .NET Framework 3.5 SP1。 如需詳細資訊，請參閱 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][版本資訊](https://go.microsoft.com/fwlink/?LinkId=296445)。  
   
-    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新套件：** 為避免在安裝程期間電腦因安裝 .NET Framework 4 而重新啟動， [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 安裝程式會要求在電腦上安裝 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新。  如果您是在 Windows 7 SP1 或 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] SP2 上安裝 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] ，則會包含這項更新。 如果您是在較舊的 Windows 作業系統上安裝，請從 [Windows Vista 和 Windows Server 2008 上之 .NET Framework 4.0 適用的 Microsoft Update](https://go.microsoft.com/fwlink/?LinkId=198093)下載此更新。  
+    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新封裝：** 為避免在安裝程期間電腦因安裝 .NET Framework 4 而重新啟動，[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 安裝程式要求電腦上必須已安裝 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新。  如果您是在 Windows 7 SP1 或 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] SP2 上安裝 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] ，則會包含這項更新。 如果您是在較舊的 Windows 作業系統上安裝，請從 [Windows Vista 和 Windows Server 2008 上之 .NET Framework 4.0 適用的 Microsoft Update](https://go.microsoft.com/fwlink/?LinkId=198093)下載此更新。  
   
     -   .NET Framework 4：安裝程式會在叢集作業系統上安裝 .NET Framework 4。 若要縮短安裝時間，您可以考慮在執行安裝程式前先安裝 .NET Framework 4。  
   
@@ -216,7 +217,7 @@ ms.locfileid: "72517937"
   
 1.  在一個多重子網路設定中，IP 位址資源相依性乃設為 OR。 如需詳細資訊，請參閱[建立新的 SQL Server 容錯移轉叢集 &#40;安裝程式&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
   
-2.  不支援混合的 AND-OR IP 位址相依性。 例如，不支援 \<IP1> AND \<IP2> OR \<IP3>。  
+2.  不支援混合的 AND-OR IP 位址相依性。 例如，不支援 \<IP1> 及 \<IP2> 或 \<IP3>。  
   
 3.  不支援每個子網路有多個 IP 位址。  
   

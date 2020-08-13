@@ -1,6 +1,6 @@
 ---
 title: 取得完整的記憶體傾印以針對 SSMS 進行疑難排解
-Description: 透過收集完整記憶體傾印，針對 SSMS 停止回應或當機進行疑難排解
+Description: 透過收集完整記憶體傾印來針對 SSMS 無回應或當機進行疑難排解
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -11,18 +11,18 @@ ms.author: maghan
 ms.reviewer: dineth, sstein
 ms.custom: seo-lt-2019
 ms.date: 05/17/2019
-ms.openlocfilehash: 95e88b8bbf61e04251ce17ad0a4fcd5aff91cc9e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7b55e8e68076ad14f874306ffdb578f619af1cf0
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247165"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091234"
 ---
 # <a name="get-full-memory-dump"></a>取得完整記憶體傾印
 
 [!INCLUDE[Applies to](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-在本文中，您會學習如何擷取診斷資訊，針對使用 SQL Server Management Studio (SSMS) 時發生的當機或停止回應進行疑難排解。
+在本文中，您將學習如何擷取診斷資訊，以針對使用 SQL Server Management Studio (SSMS) 時發生的當機或無回應系統進行疑難排解。
 
 若要擷取診斷資訊以進行疑難排解，請遵循下列步驟。
 

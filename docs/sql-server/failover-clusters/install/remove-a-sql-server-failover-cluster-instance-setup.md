@@ -1,10 +1,11 @@
 ---
 title: 移除容錯移轉叢體執行個體
+description: 使用這項程序來解除安裝 SQL Server 容錯移轉叢集執行個體。 在繼續前，本文包含重要的考量事項。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], removing failover clustered instance
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: bf63353b-69cf-4c5c-98ea-7b151e36537f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 97573a3a8a7d08f9eb615443dd7b0d42d6fd1b23
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dba18abbd7eb5938b7f2fa4d0c3caff8d5d6f567
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230727"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897668"
 ---
 # <a name="remove-a-sql-server-failover-cluster-instance-setup"></a>移除 SQL Server 容錯移轉叢集執行個體 (安裝程式)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   您可以使用這個程序來解除安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體。  
   
 > [!IMPORTANT]  

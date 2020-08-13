@@ -1,7 +1,7 @@
 ---
 title: 教學課程：使用具有安全記憶體保護區的 Always Encrypted 開發 .NET 應用程式 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/18/2019
+ms.date: 07/09/2020
 ms.reviewer: v-kaywon
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: karinazhou
 ms.author: v-jizho2
-ms.openlocfilehash: 82ecd3fa04bbab0a1512ede08ebbc8bfaa3011f9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4af6f82c310393871434010480f0bb57bfca670f
+ms.sourcegitcommit: 7ce4a81c1b91239c8871c50f97ecaf387f439f6c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244045"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86217746"
 ---
 # <a name="tutorial-develop-a-net-application-using-always-encrypted-with-secure-enclaves"></a>教學課程：使用具有安全記憶體保護區的 Always Encrypted 開發 .NET 應用程式
 
@@ -25,7 +25,10 @@ ms.locfileid: "75244045"
 
 本教學課程會教您如何開發簡單的應用程式來發出資料庫查詢，其使用[具有安全記憶體保護區 Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-enclaves.md) 的伺服器端安全記憶體保護區。
 
-## <a name="prerequisites"></a>Prerequisites
+> [!NOTE]
+> 只有 Windows 支援具有安全記憶體保護區的 Always Encrypted。
+
+## <a name="prerequisites"></a>必要條件
 
 本教學課程是[教學課程：使用 SSMS，開始使用具有安全記憶體保護區的 Always Encrypted](../../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md)。 請確定您已完成之後，再繼續進行下列步驟。
 
@@ -43,13 +46,13 @@ ms.locfileid: "75244045"
 
 3. 確定您的專案目標至少為 .NET Framework 4.6 或 .NET Core 2.1。 以滑鼠右鍵按一下 [方案總管] 中的專案、選取 [屬性]，然後設定目標 Framework。
 
-4. 移至 [工具]  \(主功能表) > [NuGet 套件管理員]   > [套件管理員主控台]  ，以安裝下列 NuGet 套件。 在 [套件管理員主控台] 中，執行下列程式碼。
+4. 移至 [工具]\(主功能表) > [NuGet 套件管理員] > [套件管理員主控台]，以安裝下列 NuGet 套件。 在 [套件管理員主控台] 中，執行下列程式碼。
 
    ```powershell
    Install-Package Microsoft.Data.SqlClient -Version 1.1.0
    ```
 
-5. 如果您使用 Azure Key Vault 來儲存資料行主要金鑰，請移至 [工具]  \(主功能表) > [NuGet 套件管理員]   > [套件管理員主控台]  ，以安裝下列 NuGet 套件。 在 [套件管理員主控台] 中，執行下列程式碼。
+5. 如果您使用 Azure Key Vault 來儲存資料行主要金鑰，請移至 [工具]\(主功能表) > [NuGet 套件管理員] > [套件管理員主控台]，以安裝下列 NuGet 套件。 在 [套件管理員主控台] 中，執行下列程式碼。
 
    ```powershell
    Install-Package Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider -Version 1.0.0

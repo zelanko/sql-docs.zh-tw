@@ -1,5 +1,6 @@
 ---
 title: Alias 屬性 ([別名] 索引標籤)
+description: 使用 [屬性] 對話方塊的 [別名] 索引標籤來設定別名，以供在連線到 SQL Server 的執行個體時使用替代名稱。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,18 +12,18 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 53bb19934209ee501c76317e102e5b1fcae28c4d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 098da595a57c82e4d0ff68713880f38fe6acb6d2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306601"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902196"
 ---
 # <a name="ltaliasgt-properties-alias-tab"></a>&lt;Alias&gt; 屬性 ([別名] 索引標籤)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-別名是可用於進行連接的替代名稱。 別名會封裝連接字串的必要元素，並以使用者選擇的名稱來公開這些元素。 使用 [\<Alias name> Properties (<別名名稱> 內容)] 對話方塊的 [別名] 頁面來指定別名的連接字串元素。
+別名是可用於進行連接的替代名稱。 別名會封裝連接字串的必要元素，並以使用者選擇的名稱來公開這些元素。 您可使用 [\<**Alias name**> 屬性] 對話方塊的 [別名] 頁面來檢視或指定別名的連接字串元素。
 
 ## <a name="options"></a>選項。
 
@@ -40,7 +41,7 @@ ms.locfileid: "75306601"
 
 **Server**
 
-要連接的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。  
+所要連線目標 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。  
 
 ## <a name="see-also"></a>另請參閱
 

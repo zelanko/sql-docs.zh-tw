@@ -1,5 +1,6 @@
 ---
-title: 系統需求 (ODBC Driver for SQL Server) | Microsoft Docs
+title: 系統需求 (ODBC Driver for SQL Server)
+description: 此清單會列出 Linux 和 macOS 作業系統上 ODBC Driver for SQL Server 的系統需求。
 ms.custom: ''
 ms.date: 03/18/2020
 ms.prod: sql
@@ -14,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2459a9f57f3591db1107994d0b18770690f22724
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 01a5dd44d111fd72d76db244c8135d3bdde00ec8
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921172"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391748"
 ---
-# <a name="system-requirements"></a>系統需求
+# <a name="system-requirements-linux-and-macos"></a>系統需求 (Linux 和 macOS)
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
@@ -33,7 +34,7 @@ Linux 和 macOS 驅動程式的 SQL 版本相容性，與 [Windows 驅動程式 
 
 ## <a name="operating-system-support"></a>作業系統支援
 
-下列作業系統的 64 位元版本支援 Linux 和 macOS 驅動程式 17 版、13.1 版和 13 版︰
+下列作業系統的 x64 結構上支援 Linux 和 macOS 驅動程式版本 17、13.1 和 13：
 
 |支援的作業系統     |17.5|17.4|17.3|17.2|17.1|17.0|13.1|13|
 |-------------------------------|----|----|----|----|----|----|----|--|
@@ -82,7 +83,7 @@ Linux 和 macOS 驅動程式的 SQL 版本相容性，與 [Windows 驅動程式 
   * `krb5-libs`  
   * `openssl`  
   
-* **SUSE Linux Enterprise 11 Service Pack 2 (64 位元)** 的 ODBC 驅動程式需要下列套件，而且可以在這裡下載：[Microsoft ODBC Driver 11 Preview for SQL Server - SUSE Linux](https://go.microsoft.com/fwlink/?LinkId=264916)  
+* **SUSE Linux Enterprise 11 Service Pack 2 (64 位元)** 的 ODBC 驅動程式需要下列套件，而且可以在這裡下載：[Microsoft ODBC Driver 11 (預覽) for SQL Server - SUSE Linux](https://go.microsoft.com/fwlink/?LinkId=264916)  
   * `glibc`  
   * `libstdc++46`  
   * `libgcc46`  

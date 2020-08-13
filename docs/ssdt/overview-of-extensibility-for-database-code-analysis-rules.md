@@ -1,21 +1,21 @@
 ---
 title: 資料庫程式碼分析規則的擴充性
+description: 熟悉資料庫程式碼分析規則的各種元件，及其在 SQL Server Data Tools 中的互動方式。 了解如何建立自訂的規則。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 62f5c980-18d5-43fe-b443-c9e149d01fc7
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ef4ab84a123252dd35da85213110b8b4abb616ad
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e67b6dabc0d8db2b3644a6183b4a6855738e54ba
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251971"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897627"
 ---
 # <a name="overview-of-extensibility-for-database-code-analysis-rules"></a>資料庫程式碼分析規則的擴充性概觀
 
@@ -30,7 +30,7 @@ ms.locfileid: "75251971"
   
 ![資料庫程式碼分析規則元件](../ssdt/media/ssdt-database-code-analysis-rules-components.jpg "資料庫程式碼分析規則元件")  
   
-當您使用資料庫程式碼分析規則功能時，無論是直接執行靜態程式碼分析 (如需詳細資訊，請參閱[如何：分析 Transact-SQL 程式碼以找出錯誤](https://msdn.microsoft.com/library/dd172119(v=vs.100).aspx) \(機器翻譯\))，或透過執行建置，都會根據您在專案中設定所有規則的方式來載入並使用它們。 如需詳細資訊，請參閱[如何：啟用和停用資料庫程式碼靜態分析的特定規則](https://msdn.microsoft.com/library/dd172131(v=vs.100).aspx) \(機器翻譯\)。 擴充管理員也將載入您已建立並登錄的任何自訂規則組件。 如需詳細資訊，請參閱[如何：安裝和管理擴充功能](../ssdt/how-to-install-and-manage-feature-extensions.md)。  
+當您使用資料庫程式碼分析規則功能時，無論是直接執行靜態程式碼分析 (如需詳細資訊，請參閱[如何：分析 Transact-SQL 程式碼以找出錯誤](https://msdn.microsoft.com/library/dd172119(v=vs.100).aspx) \(機器翻譯\))，或透過執行建置，都會根據您在專案中設定所有規則的方式來載入並使用它們。 如需詳細資訊，請參閱[如何：啟用和停用資料庫程式碼靜態分析的特定規則](https://msdn.microsoft.com/library/dd172131(v=vs.100).aspx)。 擴充管理員也將載入您已建立並登錄的任何自訂規則組件。 如需詳細資訊，請參閱[如何：安裝及管理功能延伸模組](../ssdt/how-to-install-and-manage-feature-extensions.md)。  
   
 自訂程式碼分析規則類別繼承自 [SqlCodeAnalysisRule](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.codeanalysis.sqlcodeanalysisrule.aspx)。 自訂規則類別可以透過其規則執行內容來存取許多有用物件。 其中包括：  
   

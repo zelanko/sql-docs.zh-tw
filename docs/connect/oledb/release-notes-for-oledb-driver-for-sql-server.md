@@ -1,23 +1,23 @@
 ---
 title: OLE DB Driver 的版本資訊
 description: 此版本資訊文章描述每個 Microsoft OLE DB Driver for SQL Server 版本中的變更。
-ms.date: 02/27/2020
+ms.date: 05/25/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 70f3239f1e644850bc391a0be5ef8918e1e9e617
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 296efcdd888e2424cfb80f40221f7d8f65acab89
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81727969"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011915"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Microsoft OLE DB Driver for SQL Server 的版本資訊
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 此頁面討論每版 Microsoft OLE DB Driver for SQL Server 的新功能。
 
@@ -27,6 +27,37 @@ Hello, from now on, please use the table-based format standard for all new Relea
 See section "## 18.2.1" for a live example in this article.
 Thank you. For questions, contact GeneMi. (2019/03/16)
 -->
+
+## <a name="1840"></a>18.4.0
+![下載](../../ssms/media/download-icon.png) [下載 x64 安裝程式](https://go.microsoft.com/fwlink/?linkid=2129954)  
+![下載](../../ssms/media/download-icon.png) [下載 x86 安裝程式](https://go.microsoft.com/fwlink/?linkid=2131003)  
+
+發行日期：2020 年 5 月
+
+如果您需要下載非所偵測語言的安裝程式，則可以使用下列直接連結。  
+若為 x64 驅動程式：[簡體中文](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x40a)  
+若為 x86 驅動程式：[簡體中文](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x40a)  
+
+### <a name="features-added"></a>新增的功能
+
+| 新增功能 | 詳細資料 |
+| :------------ | :------ |
+| 透明網路 IP 解析 (TNIR) 的支援 |[透明網路 IP 解析 (TNIR)](features/using-transparent-network-ip-resolution.md)|
+| UTF-8 用戶端編碼的支援 | [OLE DB Driver for SQL Server 中的 UTF-8 支援](features/utf-8-support-in-oledb-driver-for-sql-server.md) |
+
+### <a name="bugs-fixed"></a>修正的 Bug
+
+| 已修正的錯誤 (Bug) | 詳細資料 |
+| :-------- | :------ |
+| 已修正 [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85)) 介面中的各種 Bug | 一些影響多位元組字碼頁的 Bug 會導致此介面在讀取作業期間提前報告到達資料流結尾。|
+| 已修正 [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) 介面中的記憶體流失問題 | 已修正啟用 `SSPROP_IRowsetFastLoad` 屬性時，[IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) 介面中發生記憶體流失的問題。 |
+| 已修正涉及 `sql_variant` 資料類型和非 ASCII 字串的案例中 Bug。 | 執行涉及 `sql_variant` 資料類型和非 ASCII 字串的特定案例可能會導致資料損毀。 如需詳細資料，請參閱：[已知問題](ole-db-data-types/ssvariant-structure.md#known-issues)。 |
+| 已修正 [UDL 設定對話方塊](help-topics/data-link-pages.md)中 [測試連線] 按鈕的問題 | [UDL 設定對話方塊](help-topics/data-link-pages.md)中 [測試連線] 按鈕現在會接受 [全部] 索引標籤中設定的初始化屬性。 |
+| 已修正 `SSPROP_INIT_PACKETSIZE` 屬性預設值的處理方式 | 已修正當 `SSPROP_INIT_PACKETSIZE` 屬性設定為其預設值 `0` 時所發生的未預期錯誤。 如需此屬性的詳細資料，請參閱[初始化和授權屬性](ole-db-data-source-objects/initialization-and-authorization-properties.md)。 |
+| 已修正 [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md) 中的緩衝區溢位問題 | 已修正使用格式錯誤資料檔案時的緩衝區溢位問題。 |
+| 已修正協助工具問題 | 已修正安裝程式 UI 及 [SQL Server 登入對話方塊](help-topics/sql-server-login-dialog.md)中的協助工具問題 (讀取內容、定位停駐點)。 |
+
+## <a name="previous-releases"></a>舊版
 
 ## <a name="1830"></a>18.3.0
 
@@ -53,8 +84,6 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 | :-------- | :------ |
 | 已修正 [IIndexDefinition::DropIndex](https://go.microsoft.com/fwlink/?linkid=2106448) \(英文\) 中的卸除索引邏輯。 | 舊版的 OLE DB 驅動程式無法在索引擁有者的結構描述識別碼和使用者識別碼不相等時卸除主索引鍵索引。 |
 | &nbsp; | &nbsp; |
-
-## <a name="previous-releases"></a>舊版
 
 按一下下列各節中的下載連結，以下載舊版的 OLE DB 驅動程式：
 

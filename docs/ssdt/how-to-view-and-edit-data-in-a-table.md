@@ -1,5 +1,6 @@
 ---
 title: 檢視及編輯資料表中的資料
+description: 了解如何使用資料編輯器來檢視、編輯及刪除現有資料表的資料。 查看如何檢視指令碼表單中的變更，並將其儲存到指令碼檔案。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -9,16 +10,15 @@ f1_keywords:
 ms.assetid: bb67ce83-a87a-4e14-84cd-9a5930fe74c8
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 557b5d5c5986b47eab22bb9d70bd8103c5032eeb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7c8321f4f1264b8bf0352f459bde02a07e439dd3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75226764"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895796"
 ---
 # <a name="how-to-view-and-edit-data-in-a-table"></a>如何：檢視及編輯資料表中的資料
 
@@ -33,15 +33,15 @@ ms.locfileid: "75226764"
   
 2.  資料編輯器隨即啟動。 請注意，我們在先前的程序加入資料表中的資料列。  
   
-3.  以滑鼠右鍵按一下 [SQL Server 物件總管] 中的 [Fruits]  資料表，再選取 [檢視資料]  。  
+3.  以滑鼠右鍵按一下 [SQL Server 物件總管] 中的 [Fruits] 資料表，再選取 [檢視資料]。  
   
-4.  在資料編輯器中，分別為 [Id] 和 [Perishable] 輸入 **1** 和 **True**，然後按 ENTER 或 TAB 將焦點移離新資料列，以便加以認可到資料庫。  
+4.  在資料編輯器中，分別為 [Id]**** 和 [Perishable]**** 輸入 **1** 和 **True**，然後按 ENTER 或 TAB 將焦點移離新資料列，以便加以認可到資料庫。  
   
 5.  重複前面的步驟，將 **2**、**False** 和 **3**、**False** 輸入到資料表。  
   
     請注意，編輯資料列時按 ESC 即可將資料格的變更還原。  
   
-6.  您可以按一下工具列上的 [指令碼]  按鈕，檢視編輯內容。 或者，您也可以使用 [編寫指令碼至檔案]  按鈕將編輯內容儲存到 .sql 指令碼檔案，等以後再執行。  
+6.  您可以按一下工具列上的 [指令碼] 按鈕，檢視編輯內容。 或者，您也可以使用 [編寫指令碼至檔案] 按鈕將編輯內容儲存到 .sql 指令碼檔案，等以後再執行。  
   
-7.  以滑鼠右鍵按一下 [SQL Server 物件總管] 中的 [Trade] 資料庫，再選取 [新增查詢]。 在編輯器中，輸入 `select * from dbo.PerishableFruits`，然後按 [執行查詢]  按鈕傳回 `PerishableFruits` 檢視表所呈現的資料。  
+7.  以滑鼠右鍵按一下 [SQL Server 物件總管] 中的 [Trade] 資料庫，再選取 [新增查詢]。 在編輯器中，輸入 `select * from dbo.PerishableFruits`，然後按 [執行查詢] 按鈕傳回 `PerishableFruits` 檢視表所呈現的資料。  
   

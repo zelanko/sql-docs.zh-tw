@@ -1,10 +1,11 @@
 ---
 title: 新增、移除節點容錯移轉叢集
+description: 本文說明如何在現有的 SQL Server 容錯移轉叢集執行個體中新增或移除節點。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.reviewer: ''
 ms.prod: sql
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
 - adding nodes
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cba52dccb916e7dc1400d36b17eb3fd884c9faee
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9ae9ae1f58bf615362e16ebffef8926437c99a9f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230893"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900502"
 ---
 # <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>在 SQL Server 容錯移轉叢集中加入或移除節點 (安裝程式)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   您可以使用此程序來管理現有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體的節點。  
   
  若要更新或移除 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集，您必須是本機管理員，而且擁有在容錯移轉叢集之所有節點上登入成為服務的權限。 如果是本機安裝，您必須以管理員身分執行安裝程式。 如果您是從遠端共用位置安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，則必須使用對遠端共用位置具有讀取和執行權限的網域帳戶。  
@@ -49,7 +50,7 @@ ms.locfileid: "75230893"
   
 1.  插入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝媒體，然後在根資料夾中，按兩下 Setup.exe。 若要從網路共用進行安裝，請導覽至共用上的根資料夾，然後按兩下 Setup.exe。  
   
-2.  安裝精靈將會啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝中心。 若要將節點加入至現有的容錯移轉叢集執行個體，請在左側窗格中按一下 [安裝]  。 然後，請選取 [將節點加入到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集]。  
+2.  安裝精靈將會啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝中心。 若要將節點加入至現有的容錯移轉叢集執行個體，請在左側窗格中按一下 [安裝]。 然後，請選取 [將節點加入到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集]。  
   
 3.  系統組態檢查將會在電腦上執行探索作業。 若要繼續，請[!INCLUDE[clickOK](../../../includes/clickok-md.md)]。  
   
@@ -89,7 +90,7 @@ ms.locfileid: "75230893"
   
 1.  插入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝媒體。 在根資料夾中，按兩下 setup.exe。 若要從網路共用進行安裝，請導覽至共用上的根資料夾，然後按兩下 Setup.exe。  
   
-2.  安裝精靈會啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝中心。 若要從現有的容錯移轉叢集執行個體中移除節點，請在左側窗格中按一下 [維護]，然後選取 [從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集移除節點]。  
+2.  安裝精靈會啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝中心。 若要從現有的容錯移轉叢集執行個體中移除節點，請在左側窗格中按一下 [維護]****，然後選取 [從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集移除節點]****。  
   
 3.  系統組態檢查將會在電腦上執行探索作業。 若要繼續，請[!INCLUDE[clickOK](../../../includes/clickok-md.md)]。  
   

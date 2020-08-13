@@ -1,21 +1,21 @@
 ---
 title: 搭配 dbSqlPackage 提供者使用 MSDeploy
+description: 了解淘汰的 Msdeploy 提供者 DbSqlPackage。 查看參數、範例與替代的 SQL Server 及 SQL Azure 資料庫發佈工具。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: f4c45335bae79a0307be27efb88cb0858bd6439f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5a0bda3b935a7123de3c8766a40e7d7f8df5a0d0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243556"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899739"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>搭配 dbSqlPackage 提供者使用 MSDeploy
 
@@ -23,11 +23,11 @@ ms.locfileid: "75243556"
   
 -   **Extract**：從即時 SQL Server 或 SQL Azure 資料庫建立資料庫快照集 (.dacpac) 檔案。  
   
--   **Publish**：累加更新資料庫結構描述以符合來源 .dacpac 檔案的結構描述。  
+-   **Publish**：以累加方式更新資料庫結構描述，以符合來源 .dacpac 檔案的結構描述。  
   
 -   **DeployReport**：建立發行動作所做變更的 XML 報表。  
   
--   **Script**：建立 Transact\-SQL 指令碼 (相當於發行動作所執行的指令碼)。  
+-   **Script**：建立相當於「發行動作」所執行指令碼的 Transact\-SQL 指令碼。  
   
 如需有關 DACFx 的詳細資訊，請參閱 DACFx Managed API 文件，網址為：[https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx) \(機器翻譯\) 或 [SqlPackage.exe](../tools/sqlpackage.md) (DACFx 命令列工具)。  
   

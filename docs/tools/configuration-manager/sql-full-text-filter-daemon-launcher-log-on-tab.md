@@ -1,5 +1,6 @@
 ---
 title: SQL 全文檢索篩選背景程式啟動器 (登入索引標籤)
+description: 了解 SQL Server 全文檢索搜尋所使用的 SQL 全文檢索篩選精靈啟動器。 了解其 [屬性] 對話方塊的 [登入] 索引標籤。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 13e260f9-a75f-430b-88a3-959ddcead8fe
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 81cca06132cd63bf344d54004895f1bd9a0ab2e7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d8521433726969b3b3c3ac565e9c50b663a92990
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306748"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896564"
 ---
 # <a name="sql-full-text-filter-daemon-launcher-log-on-tab"></a>SQL 全文檢索篩選背景程式啟動器 (登入索引標籤)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]開始， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文檢索搜尋就會使用 SQL 全文檢索篩選背景程式啟動器 (FDHOST 啟動器) 服務。 如果您使用全文檢索搜尋，這個服務就必須執行。 如需有關篩選背景程式主機處理序的詳細資訊，請參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜全文檢索搜尋架構＞。  
   
  您可以使用 **[SQL 全文檢索篩選背景程式啟動器屬性]** 對話方塊的 **[登入]** 索引標籤來指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文檢索服務所使用的帳戶、變更帳戶的密碼，以及啟動和停止服務。 帳戶密碼的變更會在重新啟動服務之後生效。  

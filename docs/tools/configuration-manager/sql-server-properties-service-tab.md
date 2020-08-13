@@ -1,5 +1,6 @@
 ---
 title: SQL Server 屬性 (服務索引標籤)
+description: 了解 [MSSQLSERVER屬性] 對話方塊中 [服務] 索引標籤上的選項，例如二進位路徑、主機名稱與啟動模式。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: e4ae0c6b-6fd8-4325-b54e-1758fc659958
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b87f54bcfc50249cef1810a728eaa796e7ee3b38
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7fb389b6fd903393539bdffffc3bf0bad3cd27d0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306789"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898968"
 ---
 # <a name="sql-server-properties-service-tab"></a>SQL Server 屬性 (服務索引標籤)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   您可以使用 [MSSQLSERVER 屬性] 對話方塊的 [服務] 索引標籤來檢視或指定下列選項。  
   
 ## <a name="options"></a>選項。  
@@ -47,11 +48,11 @@ ms.locfileid: "75306789"
  **啟動模式**  
  將這個服務設定為下列選擇：  
   
--   手動：電腦啟動時，這項服務不會自動啟動。 您必須使用「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員」或其他工具來啟動服務。  
+-   手動：當電腦啟動時，這項服務不會自動啟動。 您必須使用「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員」或其他工具來啟動服務。  
   
--   自動：這部電腦啟動時，這項服務會嘗試啟動。  
+-   自動：當這部電腦啟動時，這項服務會嘗試啟動。  
   
--   停用：這項服務無法啟動。  
+-   已停用：這項服務無法啟動。  
   
  **State**  
  表示這項服務為執行中、已停止或已停用。 " **...** " 表示狀態變更已暫止。  

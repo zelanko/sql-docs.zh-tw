@@ -1,6 +1,6 @@
 ---
 title: 檢視及讀取容錯移轉叢集執行個體診斷記錄
-description: 了解如何檢視及讀取 SQL Server 容錯移轉叢集執行個體所產生的診斷記錄。
+description: 了解如何檢視及讀取 SQL Server 容錯移轉叢集執行個體所產生正在執行的診斷記錄。
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 44b631bb1c453ebc09e8a38a57b1a3160084b09d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e2f84b38751b57e1fe9ebba525e636da45a59954
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242875"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896668"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>檢視及閱讀容錯移轉叢集執行個體診斷記錄檔
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   SQL Server 資源 DLL 的所有重大錯誤和警告事件都會寫入 Windows 事件記錄檔。 SQL Server 的特定診斷資訊執行記錄檔是由 [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 系統預存程序所擷取，並且會寫入 SQL Server 容錯移轉叢集診斷 (也稱為 *SQLDIAG* 記錄) 記錄檔。  
   
 -   **開始之前：** [建議](#Recommendations)、[安全性](#Security)  
@@ -30,7 +30,7 @@ ms.locfileid: "75242875"
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
- 依預設，SQLDIAG 會儲存在 SQL Server 執行個體目錄的本機 LOG 資料夾下方，例如，AlwaysOn 容錯移轉叢集執行個體 (FCI) 主控節點的 'C\Program Files\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\LOG'。 每個 SQLDIAG 記錄檔的大小會固定為 100 MB。 電腦上會儲存十個此類型的記錄檔，再將它們回收以用於新的記錄檔。  
+ 根據預設，SQLDIAG 會儲存在 SQL Server 執行個體目錄的本機 LOG 資料夾下方，例如，AlwaysOn 容錯移轉叢集執行個體 (FCI) 主控節點的 'C\Program Files\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\LOG'。 每個 SQLDIAG 記錄檔的大小會固定為 100 MB。 電腦上會儲存十個此類型的記錄檔，再將它們回收以用於新的記錄檔。  
   
  記錄檔會使用擴充的事件檔案格式。 **sys.fn_xe_file_target_read_file** 系統函數可用來讀取擴充事件所建立的檔案。 系統會以 XML 格式針對每個資料列傳回一個事件。 查詢系統檢視，即可將 XML 資料剖析為結果集。 如需詳細資訊，請參閱 [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](../../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md)。  
   

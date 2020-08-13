@@ -2,21 +2,21 @@
 title: 升級 Python 與 R 元件
 description: 使用 sqlbindr.exe 升級 SQL Server 機器學習服務或 SQL Server R Services 中的 Python 和 R 以繫結至機器學習服務。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/03/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: cawrites
 ms.author: chadam
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 4aebb9e64c73762166aa81aebd1bfbab22191bfc
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 918ab8c2b1e643196e99cd11ff92c07c3978e078
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487364"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900074"
 ---
 # <a name="upgrade-machine-learning-python-and-r-components-in-sql-server-instances"></a>升級 SQL Server 執行個體中的機器學習 (Python 和 R) 元件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 SQL Server 中的 Python 和 R 整合包含開放原始碼和 Microsoft 專屬的套件。
                                                                                
@@ -263,9 +263,9 @@ Anaconda 4.2 (Python 3.5)  | 4.2/3.5.2 | 4.2/3.5.2 | | | |
 
 |名稱|描述|
 |------|------|
-|list| 顯示目前電腦上所有 SQL 資料庫執行個體識別碼的清單|
-|*bind*| 將指定的 SQL 資料庫執行個體升級到最新版 R Server，並確保執行個體自動取得 R Server 的未來升級|
-|*unbind*|將最新版 R Server 從指定的 SQL 資料庫執行個體解除安裝，並防止未來的 R Server 升級影響執行個體|
+|list| 顯示目前電腦上所有 SQL Server 執行個體識別碼的清單|
+|*bind*| 將指定的 SQL Server 執行個體升級到最新版 R Server，並確保執行個體自動取得 R Server 的未來升級|
+|*unbind*|將最新版 R Server 從指定的 SQL Server 執行個體解除安裝，並防止未來的 R Server 升級影響執行個體|
 
 <a name="sqlbindr-error-codes"><a/>
 

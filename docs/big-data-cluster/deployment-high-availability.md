@@ -9,18 +9,18 @@ ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b614373ee8517c0b0aa369c9793dec323a137044
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 08574ef070803a8612d12e595169bbc00b99b139
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286042"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279457"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>部署高可用性 SQL Server 巨量資料叢集
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-由於 SQL Server 巨量資料叢集在 Kubernetes 上是容器化應用程式，並使用具狀態集合和永續性儲存體等功能，因此這個基礎結構具有內建的狀況監控、失敗偵測和容錯移轉機制，可供叢集元件用來維護服務健全狀態。 為了提高可靠性，您也可以設定 SQL Server 主要執行個體或 HDFS 名稱節點和 Spark 共用服務，在高可用性設定中部署額外的複本。 監控、失敗偵測和自動容錯移轉是由巨量資料叢集管理服務 (即控制服務) 所管理。 此服務不需要使用者介入，其涵蓋範圍從可用性群組設定、設定資料庫鏡像端點，到新增資料庫至可用性群組，或容錯移轉和升級協調。 
+由於 SQL Server 巨量資料叢集在 Kubernetes 上是容器化應用程式，並使用具狀態集合和永續性儲存體等功能，因此這個基礎結構具有內建的狀況監控、失敗偵測和容錯移轉機制，可供叢集元件用來維護服務健全狀態。 為了提高可靠性，您也可以設定 SQL Server 主要執行個體或 HDFS 名稱節點和 Spark 共用服務，在高可用性設定中部署額外的複本。 監控、失敗偵測和自動容錯移轉是由巨量資料叢集管理服務 (即控制服務) 所管理。 此服務不需要使用者介入，其涵蓋範圍從可用性群組設定、設定資料庫鏡像端點，到將資料庫新增至可用性群組，或容錯移轉及升級協調。 
 
 下圖表示如何在 SQL Server 巨量資料叢集中部署可用性群組：
 

@@ -2,7 +2,7 @@
 title: OLE DB Driver for SQL Server 中的 UTF-8 支援| Microsoft Docs
 description: OLE DB Driver for SQL Server 中的 UTF-8 支援
 ms.custom: ''
-ms.date: 12/12/2019
+ms.date: 05/25/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,24 +10,28 @@ ms.topic: reference
 ms.reviewer: v-kaywon
 ms.author: v-daenge
 author: David-Engel
-ms.openlocfilehash: c18870d1d252ba849e11ce0bd040bbce89bd5855
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d2074ea992872da02a781ef48f633cd8539c931f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928280"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85986496"
 ---
 # <a name="utf-8-support-in-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server 中的 UTF-8 支援
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
 Microsoft OLE DB Driver for SQL Server (18.2.1 版) 新增 UTF-8 伺服器編碼的支援。 如需有關 SQL Server UTF-8 支援的相關資訊，請參閱：
 - [定序與 Unicode 支援](../../../relational-databases/collations/collation-and-unicode-support.md)
-- [UTF-8 支援](#ctp23)
+- [UTF-8 支援](../../../relational-databases/collations/collation-and-unicode-support.md#utf8)
 
-> [!IMPORTANT]
-> Microsoft OLE DB Driver for SQL Server 使用 [GetACP](https://docs.microsoft.com/windows/win32/api/winnls/nf-winnls-getacp) 函式來判斷 DBTYPE_STR 輸入緩衝區的編碼方式。 不支援 GetACP 傳回 UTF-8 編碼的情況。 如果緩衝區需要儲存 Unicode 資料，緩衝區資料類型應該設定為 DBTYPE_WSTR (UTF-16 編碼)。
+驅動程式的 18.4.0 版新增 UTF-8 用戶端編碼的支援 (以 Windows 10 其 [區域設定] 下 [使用全球語言支援的 Unicode UTF-8] 核取方塊來啟用)。
+
+> [!NOTE]  
+> Microsoft OLE DB Driver for SQL Server 使用 [GetACP](https://docs.microsoft.com/windows/win32/api/winnls/nf-winnls-getacp) 函式來判斷 DBTYPE_STR 輸入緩衝區的編碼方式。
+>
+> 自 18.4 版起，支援 GetACP 傳回 UTF-8 編碼的案例 (以 Windows 10 其 [區域設定] 下 [使用全球語言支援的 Unicode UTF-8] 核取方塊來啟用)。 在舊版中，若緩衝區需要儲存 Unicode 資料，則緩衝區資料類型應設定為 *DBTYPE_WSTR* (UTF-16 編碼)。
 
 ## <a name="data-insertion-into-a-utf-8-encoded-char-or-varchar-column"></a>將資料插入至 UTF-8 編碼的 CHAR 或 VARCHAR 資料行
 建立輸入參數緩衝區以用於插入時，會使用 [DBBINDING 結構](https://go.microsoft.com/fwlink/?linkid=2071182) \(英文\) 的陣列來描述緩衝區。 每個 DBBINDING 結構都會將單一參數關聯至取用者的緩衝區，並包含資料值的類型與長度等資訊。 針對類型 CHAR 的輸入參數緩衝區，應該將 DBBINDING 結構的 *wType* 設定為 DBTYPE_STR。 針對類型 WCHAR 的輸入參數緩衝區，應該將 DBBINDING 結構的 *wType* 設定為 DBTYPE_WSTR。
@@ -50,23 +54,11 @@ Microsoft OLE DB Driver for SQL Server (18.2.1 版) 新增 UTF-8 伺服器編碼
 
 針對結果緩衝區類型指示器 DBTYPE_WSTR，驅動程式會將啟用 UTF-8 編碼的資料轉換為 UTF-16 編碼。
 
-<a name="ctp23"></a>
+## <a name="communication-with-servers-that-dont-support-utf-8"></a>與不支援 UTF-8 的伺服器進行通訊
+Microsoft OLE DB Driver for SQL Server 確定資料以伺服器能夠了解的方式公開至伺服器。 當從已啟用 UTF-8 的用戶端插入資料時，驅動程式會在將 UTF-8 編碼字串傳送至伺服器之前，將其先翻譯為資料庫定序字碼頁。
 
-### <a name="utf-8-support-sql-server-2019-ctp-23"></a>UTF-8 支援 (SQL Server 2019 CTP 2.3)
-
-[!INCLUDE[ss2019](../../../includes/sssqlv15-md.md)] 開始完整支援廣泛使用 UTF-8 字元編碼作為匯入或匯出編碼，或作為文字資料的資料庫層級或資料行層級定序。 UTF-8 允許用於 `CHAR` 和 `VARCHAR` 資料類型，並且在建立物件定序或將其變更為具有 `UTF8` 尾碼的定序時啟用。
-
-例如，`LATIN1_GENERAL_100_CI_AS_SC` 至 `LATIN1_GENERAL_100_CI_AS_SC_UTF8`。 UTF-8 僅適用於支援增補字元的 Windows 定序，已於 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中推出。 `NCHAR` 和 `NVARCHAR` 只允許 UTF-16 編碼，並維持不變。
-
-此功能可能會節省大量儲存空間 (視使用的字元集而定)。 例如，使用啟用 UTF-8 的定序，將具有 ASCII (拉丁文) 字串的現有資料行資料類型從 `NCHAR(10)` 變更為 `CHAR(10)`，會使儲存體需求減少 50%。 這項減少的原因是 `NCHAR(10)` 需要 20 個位元組作為儲存空間，而 `CHAR(10)` 針對相同的 Unicode 字串需要 10 個位元組。
-
-如需詳細資訊，請參閱 [Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md)。
-
-**CTP 2.1** 新增在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 安裝期間選取 UTF-8 定序作為預設的支援。
-
-**CTP 2.2** 新增在 SQL Server 複寫中使用 UTF-8 字元編碼的支援。
-
-**CTP 2.3** 新增在 BIN2 定序 (UTF8_BIN2) 中使用 UTF-8 字元編碼的支援。
+> [!NOTE]  
+> 使用 [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85)) (英文) 介面將 UTF-8 編碼資料插入舊版文字資料行，僅限於支援 UTF-8 的伺服器。 如需詳細資訊，請參閱 [Blob 與 OLE 物件](../ole-db-blobs/blobs-and-ole-objects.md)。
 
 ## <a name="see-also"></a>另請參閱  
 [OLE DB Driver for SQL Server 功能](../../oledb/features/oledb-driver-for-sql-server-features.md) 

@@ -1,5 +1,6 @@
 ---
 title: SQL Server 安裝的新增功能 | Microsoft Docs
+description: 本文摘要說明 SQL Server 安裝程序的一些變更，包括 SysPrep 支援和從 SQL Server 2005 升級。
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -7,17 +8,17 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 9b136b27-4779-4284-904f-b5a1c12bdcc0
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: c42d536f427bba1e0b1642bcc5068bf3cd2d04f0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dcadc3152a98ad1477d702bef8989d9a5e33543f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68045648"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899614"
 ---
 # <a name="what39s-new-in-sql-server-installation"></a>SQL Server 安裝的新增功能
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
  只支援安裝 x64 處理器。 如需詳細資訊，請參閱[安裝 SQL Server 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。
   

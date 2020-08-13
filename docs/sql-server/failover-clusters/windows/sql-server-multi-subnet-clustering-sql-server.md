@@ -1,6 +1,6 @@
 ---
 title: SQL Server 多重子網路叢集
-description: 了解如何在多重子網路環境中設定 SQL Server 容錯移轉叢集執行個體。
+description: 了解在多個子網路環境中設定 SQL Server 容錯移轉叢集執行個體，其提供高可用性及災害復原。
 ms.custom: seo-lt-2019
 ms.date: 09/01/2016
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e257ead5f858e80095c077643b283645917271be
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 50562836f848834744ceb24365461bc43e8fe949
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258156"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901151"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server 多重子網路叢集 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多重子網路容錯移轉叢集是一個組態，當中每個容錯移轉叢集節點都會連接到不同的子網路或不同的子網路集。 這些子網路可以位於相同位置，或位於散佈於不同地理區域的站台。 跨越散佈於不同地理區域之站台的叢集有時候又稱為「延展叢集」。 由於沒有可供所有節點存取的共用儲存體，資料應該在多重子網路上的資料儲存體之間複寫。 透過資料複寫，可用資料就可以擁有多份複本。 因此，除了具有高可用性之外，多重子網路容錯移轉叢集也提供了災害復原方案。  
   
    

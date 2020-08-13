@@ -1,5 +1,6 @@
 ---
 title: 檢視叢集仲裁 NodeWeight 設定 | Microsoft Docs
+description: 了解如何檢視「Windows Server 容錯移轉叢集」叢集中每個成員節點的 NodeWeight 設定。 在仲裁投票期間，會使用這些設定。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: b845e73a-bb01-4de2-aac2-8ac12abebc95
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6d3b98adece53952f72afc999f950c0388b65c96
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e75a83bd94e84058cb497885a448c15f37d6f4ee
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67904920"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896711"
 ---
 # <a name="view-cluster-quorum-nodeweight-settings"></a>檢視叢集仲裁 NodeWeight 設定
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   本主題說明如何檢視 Windows Server 容錯移轉叢集 (WSFC) 叢集中每個成員節點的 NodeWeight 設定。 在仲裁投票期間，使用 NodeWeight 設定來支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體的災害復原和多重子網路案例。  
   
 -   **開始之前：** [必要條件](#Prerequisites)、[安全性](#Security)  

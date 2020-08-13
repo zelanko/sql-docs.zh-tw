@@ -13,22 +13,21 @@ helpviewer_keywords:
 ms.assetid: 747357f2-007c-4586-a371-c7fbe6a2c288
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 5b94759131082e2ce60e8a09dde728cadb4a94cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 50f3bc0bdfaf804acc563bd6450541f0e364e825
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255136"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010664"
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>儲存資料庫圖表 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 藉由儲存資料庫圖表，您可以儲存針對資料庫圖表所進行的所有變更，包括對於資料表、資料行及其他資料庫物件所進行的何變更。  
   
 ### <a name="to-save-the-database-diagram"></a>儲存資料庫圖表  
   
-1.  從 [檔案]  功能表中，選擇 **[儲存 \<** _tablename_ **>]** 。  
+1.  從 [檔案] 功能表，選擇 [儲存 \<**_tablename_**>]。  
   
 2.  如果這是從未儲存過的新圖表，[另存新檔]  對話方塊便會出現。 輸入圖表的名稱。  
   

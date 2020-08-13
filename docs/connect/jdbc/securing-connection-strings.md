@@ -1,5 +1,6 @@
 ---
-title: 保護連接字串 | Microsoft Docs
+title: 保護連接字串
+description: 了解如何在使用適用於 SQL Server 的 JDBC 驅動程式時，保護連接字串資訊的安全。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 69ce8557-5260-4ea4-81b8-d0c5481f0868
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8f783db5fef7c0da10fb0ec856f3766388be49f5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b8fc42c778e0a8971ea36b8c0588765e82ee8fd2
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928425"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391143"
 ---
 # <a name="securing-connection-strings"></a>保護連接字串
 
