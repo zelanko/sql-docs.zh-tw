@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: v-daveng
 ms.author: v-daenge
-ms.openlocfilehash: c3f2b6db58879a8d0fd3ce82a89511275fe9d3bb
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 19dafa831f6763c5c2da5b54f14326db38372be4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529042"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243410"
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Microsoft SQL Server 用戶端程式設計的首頁
 
@@ -51,13 +51,27 @@ ms.locfileid: "81529042"
 
 在下表中，每個語言的影像，都是使用該語言搭配 SQL Server 的詳細資料連結。 每個連結都會跳到本文中的後續章節。
 
-| &nbsp; | &nbsp; | &nbsp; |
-| :-- | :-- | :-- |
-| &nbsp; [![C# 標誌][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp; [![.NET Framework 的 ORM Entity Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp; [![Java 標誌][image-ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp; [![Node.js 標誌][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [ **`ODBC for C++`** ](#an-160-odbc-cpp-docu)<br/>[![cpp-big-plus][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![PHP 標誌][image-ref-360-php]](#an-170-php-docu) |
-| &nbsp; [![Python 標誌][image-ref-370-python]](#an-180-python-docu) | &nbsp; [![Ruby 標誌][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
-| &nbsp; | &nbsp; | <br />|
+:::row:::
+    :::column:::
+        [![C# 標誌][image-ref-320-csharp]](#an-110-ado-net-docu)  
 
+        [![Node.js 標誌][image-ref-340-node]](#an-140-node-js-docu)  
+
+        [![Python 標誌][image-ref-370-python]](#an-180-python-docu)  
+    :::column-end:::
+    :::column:::
+        [![.NET Framework 的 ORM Entity Framework][image-ref-333-ef]](#an-116-csharp-ef-orm)  
+
+        [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![cpp-big-plus][image-ref-322-cpp]](#an-160-odbc-cpp-docu)  
+
+        [![Ruby 標誌][image-ref-380-ruby]](#an-190-ruby-docu)  
+    :::column-end:::
+    :::column:::
+        [![Java 標誌][image-ref-330-java]](#an-130-jdbc-docu)  
+
+        [![PHP 標誌][image-ref-360-php]](#an-170-php-docu)  
+    :::column-end:::
+:::row-end:::
 
 #### <a name="downloads-and-installs"></a>下載並安裝
 
@@ -75,7 +89,7 @@ ms.locfileid: "81529042"
 
 #### <a name="code-examples"></a>程式碼範例
 
-|||
+| 範例 | 描述 |
 | :-- | :-- |
 | [使用 ADO.NET 連接到 SQL 的概念證明](./ado-net/step-3-connect-sql-ado-net.md) | 著重在連線和查詢 SQL Server 的一小段程式碼範例。 |
 | [使用 ADO.NET 彈性地連接到 SQL](./ado-net/step-4-connect-resiliently-sql-ado-net.md) | 重試程式碼範例中的邏輯，因為連線偶爾會發生失去連線能力。<br /><br />重試邏輯很適合用於透過網際網路維持連線到雲端資料庫的連線，例如連線到 Azure SQL Database。 |
@@ -85,7 +99,7 @@ ms.locfileid: "81529042"
 
 #### <a name="documentation"></a>文件
 
-|||
+| 區域 | 說明 |
 | :-- | :-- |
 | [使用 ADO.NET 的 C#](./ado-net/index.md)| 我們文件的根頁面。 |
 | [命名空間：System.Data](https://docs.microsoft.com/dotnet/api/system.data) \(部分機器翻譯\) | 用於 ADO.NET 的一組類別。 |
@@ -116,7 +130,7 @@ EF 與下列技術有直接或間接關聯性：
 
 *Entity Framework* 是兩個不同原始程式碼分支共用的名稱。 一個 EF 分支較舊，而且其原始程式碼現在可以由大眾維護。 另一個 EF 是新的。 接下來會說明這兩個 EF：
 
-|     |     |
+| 版本 | 描述 |
 | :-- | :-- |
 | [EF 6.x](https://docs.microsoft.com/ef/ef6/) | Microsoft 在 2008 年 8 月首次發行 EF。 在 2015 年 3 月，Microsoft 宣佈 EF 6.x 是 Microsoft 開發的最終版本。 Microsoft 已將原始程式碼發行公眾領域。<br /><br />EF 起初是 .NET Framework 的一部分。 但 EF 6.x 已從 .NET Framework 中移除。<br /><br />[GitHub 上的 EF 6.x 原始程式碼，位於 *aspnet/EntityFramework6* 存放庫](https://github.com/aspnet/EntityFramework6) |
 | [EF Core](https://docs.microsoft.com/ef/core/) | Microsoft 在 2016 年 6 月發行新開發的 EF Core。 EF Core 是針對更佳的彈性和可攜性而設計的。 EF Core 能在 Microsoft Windows 以外的作業系統上執行。 而且 EF Core 可以互動的資料庫，不僅限於 Microsoft SQL Server 和其他關聯式資料庫。<br /><br />**C&#x23; 程式碼範例：**<br />[Entity Framework Core 使用者入門](https://docs.microsoft.com/ef/core/get-started/index)<br />[以現有資料庫在 .NET Framework 上開始使用 EF Core](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
@@ -136,7 +150,7 @@ Microsoft 提供 Java 資料庫連線 (JDBC) 驅動程式來搭配 SQL Server (�
 
 #### <a name="code-examples"></a>程式碼範例
 
-|||
+| 範例 | 描述 |
 | :-- | :-- |
 | [程式碼範例](./jdbc/code-samples/index.md) | 教資料類型、結果集和大型資料的程式碼範例。 |
 | [連接 URL 範例](./jdbc/connection-url-sample.md) | 描述如何使用連線 URL 來連線至 SQL Server。 然後用以使用 SQL 陳述式擷取資料。 |
@@ -149,7 +163,7 @@ Microsoft 提供 Java 資料庫連線 (JDBC) 驅動程式來搭配 SQL Server (�
 
 JDBC 文件包含下列主要區域：
 
-|||
+| 區域 | 說明 |
 | :-- | :-- |
 | [Java 資料庫連線 (JDBC)](./jdbc/index.md) | JDBC 文件的根頁面。 |
 | [參考](./jdbc/reference/index.md) | 介面、類別和成員。 |
@@ -168,7 +182,7 @@ JDBC 文件包含下列主要區域：
 
 #### <a name="code-examples"></a>程式碼範例
 
-|||
+| 範例 | 描述 |
 | :-- | :-- |
 | [使用 Node.js 連接到 SQL 的概念證明](./node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md) | 用來連接到 SQL Server 及執行查詢的準系統原始程式碼。 |
 | [Azure SQL 資料庫：使用 Node.js 查詢](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-nodejs) | 雲端 Azure SQL Database 的範例。 |
@@ -223,7 +237,7 @@ JDBC 文件包含下列主要區域：
 
 #### <a name="code-examples"></a>程式碼範例
 
-|||
+| 範例 | 描述 |
 | :-- | :-- |
 | [使用 PHP 連接到 SQL 的概念證明](./php/step-3-proof-of-concept-connecting-to-sql-using-php.md) | 著重在連線和查詢 SQL Server 的一小段程式碼範例。 |
 | [使用 PHP 彈性地連接到 SQL](./php/step-4-connect-resiliently-to-sql-with-php.md) | 重試程式碼範例中的邏輯，因為透過網際網路和雲端的連線偶爾會發生失去連線能力。 |
@@ -242,7 +256,7 @@ JDBC 文件包含下列主要區域：
 
 #### <a name="code-examples"></a>程式碼範例
 
-|||
+| 範例 | 描述 |
 | :-- | :-- |
 | [以 Python 使用 pyodbc 連線到 SQL 的概念證明](./python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md) | 著重在連線和查詢 SQL Server 的一小段程式碼範例。 |
 | [Azure SQL 資料庫：使用 Python 查詢](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python) | Azure SQL Database 範例。 |
@@ -267,7 +281,7 @@ JDBC 文件包含下列主要區域：
 
 #### <a name="code-examples"></a>程式碼範例
 
-|||
+| 範例 | 描述 |
 | :-- | :-- |
 | [使用 Ruby 連接到 SQL 的概念證明](./ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md) | 著重在連線和查詢 SQL Server 的一小段程式碼範例。 |
 | [Azure SQL 資料庫：使用 Ruby 查詢](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-ruby) | Azure SQL Database 範例。 |

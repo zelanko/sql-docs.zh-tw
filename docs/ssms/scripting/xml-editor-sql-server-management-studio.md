@@ -1,5 +1,6 @@
 ---
 title: XML 編輯器 (SQL Server Management Studio)
+description: 了解如何使用 SQL Server Management Studio XML 編輯器的視覺化工具，以處理 XML 結構描述 (XSD)、ADO.NET 資料集和 XML 文件。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d9b62b35ee3819edcbfcc0fc41f8fa22747d966b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 528293a500c391fa2d7efbcd9fe8a35f6a797f23
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252935"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87236914"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML 編輯器 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   提供一組視覺化工具，以搭配 XML 結構描述、ADO.NET 資料集以及 XML 文件使用。 XML 設計工具支援全球資訊網協會 (WC3) 定義的 XML 結構描述定義 (XSD) 語言。 設計師不支援 DTD (文件類型定義) 或其他 XML 結構描述語言，例如 XDR (XML-Data Reduced)。  
   
  若要顯示設計師，請在專案中加入資料集、XML 結構描述或 XML 檔案，或開啟下面資料表中所列出的任何檔案類型。  
@@ -35,7 +36,7 @@ ms.locfileid: "75252935"
   
  設計師提供下列三種檢視 (或模式) 來處理 XML 檔案、XML 結構描述和資料集：  
   
-|檢視|描述|支援的檔案類型|  
+|檢視|說明|支援的檔案類型|  
 |----------|-----------------|--------------------------|  
 |**結構描述**|以視覺化的方式建立和修改 XML 結構描述與 ADO.NET 資料集。|.xsd|  
 |**Data**|在結構化資料方格中，以視覺化的方式修改 XML 資料檔案。|.xml|  
@@ -82,7 +83,7 @@ ms.locfileid: "75252935"
 ## <a name="data-view"></a>資料檢視  
  資料檢視提供資料方格，可以用來修改 .xml 檔案。 只有 XML 檔案中的內容 (但不包含標記和結構) 可以在資料檢視中編輯。  
   
- 資料檢視中有兩個不同的區域： **[資料表]** 與 **[資料]** 。 [資料表]  區域是 XML 檔案中定義的關聯清單，以巢狀結構為順序 (從最外層到最內層)。 **[資料]** 區域是資料方格，會根據資料表區域的選擇顯示資料。  
+ 資料檢視中有兩個不同的區域：[資料表] 與 [資料]。 [資料表]**** 區域是 XML 檔案中定義的關聯清單，以巢狀結構為順序 (從最外層到最內層)。 **[資料]** 區域是資料方格，會根據資料表區域的選擇顯示資料。  
   
 > [!NOTE]  
 >  新建立的 XML 檔案中不包含資料，因此無法在資料檢視中顯示。 此外還有部份 XML文件的執行個體，其資料檢視完全無法叫用。 即使 XML 格式正確，但如果不是結構化資料卻嘗試切換到資料檢視，則會產生下列訊息：「雖然這份文件格式正確，但其中包含資料檢視無法顯示的結構。」  

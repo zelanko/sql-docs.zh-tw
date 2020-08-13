@@ -1,5 +1,6 @@
 ---
 title: 第 8 課：建立資料篩選 | Microsoft Docs
+description: 了解針對為子報表定義的資料表建立資料篩選。 為鑽研報表建立以資料表為基礎的篩選，或查詢篩選。
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 991610dacf7a13a467a3058f2bdbcfcc454ee71e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d64d2557945bc7fdd7b602652e23d52c0a052da7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62512390"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243239"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>第 8 課：建立資料篩選
 在父報表上加入鑽研動作後，下一步是要針對您為子報表定義的資料表建立資料篩選。  
@@ -33,15 +34,15 @@ ms.locfileid: "62512390"
   
 1.  開啟子報表。  
   
-2.  選取 Tablix 中的資料行標題，以滑鼠右鍵按一下資料行標題上方出現的灰色資料格，然後選取 [Tablix 屬性]  。  
+2.  選取 Tablix 中的資料行標題，以滑鼠右鍵按一下資料行標題上方出現的灰色資料格，然後選取 [Tablix 屬性]。  
   
-3.  依序選取 [篩選]  頁面和 [新增]  。  
+3.  依序選取 [篩選] 頁面和 [新增]。  
   
-4.  在 [運算式]  欄位的下拉式清單中，選取 [ProductID]  。 這是要套用篩選的資料行。  
+4.  在 [運算式] 欄位的下拉式清單中，選取 [ProductID]。 這是要套用篩選的資料行。  
   
-5.  選取 [運算子] 下拉式清單中的等於 (**=**) 運算子。  
+5.  選取 [運算子] 下拉式清單中的等於 ( **=** ) 運算子。  
   
-6.  依序選取 [值] 欄位旁的運算式按鈕和 [類別目錄] 區域中的 [參數]，然後按兩下 [值] 區域中的 [productid]。 [設定運算式對象: 值]  欄位現在應該包含類似 **=Parameters!productid.Value** 的運算式。  
+6.  依序選取 [值] 欄位旁的運算式按鈕和 [類別目錄] 區域中的 [參數]，然後按兩下 [值] 區域中的 [productid]。 [設定運算式對象：**值]** 欄位現在應該包含類似 **=Parameters!productid.Value** 的運算式。  
   
 7.  選取 [確定]，並再次選取 [Tablix 屬性] 對話方塊中的 [確定]。  
   
@@ -103,11 +104,11 @@ ms.locfileid: "62512390"
   
 1.  在設計師檢視中開啟 Default.aspx。  
   
-2.  以滑鼠右鍵按一下 [ReportViewer] 控制項，然後選取 [屬性]  。  
+2.  以滑鼠右鍵按一下 [ReportViewer] 控制項，然後選取 [屬性]。  
   
-3.  在 [屬性]  頁面上，選取**事件**圖示。  
+3.  在 [屬性] 頁面上，選取**事件**圖示。  
   
-4.  按兩下 [鑽研]  事件。  
+4.  按兩下 [鑽研] 事件。  
   
     這樣會在程式碼中加入事件處理常式區段，看起來類似下面區塊。  
   
@@ -165,7 +166,7 @@ ms.locfileid: "62512390"
   
     1.  建立資料集 **DataSet2**的執行個體，該資料集為 [第 4 課：定義子報表的資料連接和資料表](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)步驟 2 中所建立。  
   
-    2.  建立與 SqlServer 資料庫的連接，以執行 **第 4 課：定義子報表的資料連接和資料表**中定義的查詢。  
+    2.  建立與 SqlServer 資料庫的連線，以執行所定義的查詢，其位於**第 4 課：定義子報表的資料連線與 DataTable**。  
   
     3.  查詢將包含參數 **productid**，確保傳回的資料是根據父報表中選取的 **ProductID** 篩選。  
   
@@ -219,11 +220,11 @@ ms.locfileid: "62512390"
   
 1.  在設計師檢視中開啟 Default.aspx。  
   
-2.  以滑鼠右鍵按一下 [ReportViewer] 控制項，然後選取 [屬性]  。  
+2.  以滑鼠右鍵按一下 [ReportViewer] 控制項，然後選取 [屬性]。  
   
-3.  在 [屬性]  窗格上，選取**事件**圖示。  
+3.  在 [屬性] 窗格上，選取**事件**圖示。  
   
-4.  按兩下 [鑽研]  事件。  
+4.  按兩下 [鑽研] 事件。  
   
     這樣會在程式碼中加入事件處理常式區段，看起來類似下面所示。  
   
@@ -287,7 +288,7 @@ ms.locfileid: "62512390"
 6.  儲存檔案。  
   
 ## <a name="next-task"></a>下一項工作  
-您已成功針對您為子報表定義的資料表建立資料篩選。 接下來您將建立並執行網站應用程式。 請參閱 [第 9 課：建置並執行應用程式](../reporting-services/lesson-9-build-and-run-the-application.md)。  
+您已成功針對您為子報表定義的資料表建立資料篩選。 接下來您將建立並執行網站應用程式。 請參閱[第 9 課：建置及執行應用程式](../reporting-services/lesson-9-build-and-run-the-application.md)。  
   
   
   

@@ -1,7 +1,8 @@
 ---
 title: 設定 Windows 防火牆
+description: 了解如何設定 Windows 防火牆，以允許透過防火牆存取 SQL Server 的執行個體。
 ms.custom: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 07/22/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -20,17 +21,17 @@ helpviewer_keywords:
 - ports [SQL Server], TCP
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: f2e73d6acd17e3a77802ecde712a2e18c7d66846
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dce5cf7e83be47bda2bcfef17b4602eb5f2fb49e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528789"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87238376"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 防火牆系統有助於預防未經授權存取電腦資源。 如果防火牆已開啟，但是設定不正確，則嘗試連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的行為可能會被封鎖。  
   
@@ -131,12 +132,12 @@ ms.locfileid: "81528789"
 1. 從 [開始] 功能表，鍵入 *wf.msc*。 選取 [具有進階安全性的 Windows 防火牆]  。
 1. 在左窗格中，選取 [輸入規則]  。
 1. 在右窗格的 [動作]  下方，選取 [新增規則]  。[新增輸入規則精靈]  隨即開啟。
-1. 在 [規則類型]  上，選取 [程式]  。 選取 [下一步]  。
+1. 在 [規則類型]  上，選取 [程式]  。 選取 [下一步] 。
 1. 在 [程式]  上，選取 [這個程式路徑]  。 選取 [瀏覽]  以找出您的 SQL Server 執行個體。 此程式稱為 sqlservr.exe。 它通常位於：
 
    `C:\Program Files\Microsoft SQL Server\MSSQL13.<InstanceName>\MSSQL\Binn\sqlservr.exe`
 
-   選取 [下一步]  。
+   選取 [下一步] 。
 
 1. 在 [動作]  上，按一下 [允許連線]  。  
 1. 在 [設定檔] 中，加入所有三個設定檔。 選取 [下一步]  。
@@ -182,7 +183,7 @@ ms.locfileid: "81528789"
 |-------------|----------|--------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] 遠端程序呼叫 (MS RPC)<br /><br /> 由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行階段所使用。|TCP 通訊埠 135<br /><br /> 請參閱「 [通訊埠 135 的特殊考量](#BKMK_port_135)」|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務會在通訊埠 135 上使用 DCOM。 服務控制管理員會使用通訊埠 135 來執行一些工作，例如啟動和停止 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務，以及將控制要求傳送至執行中服務。 您無法變更此通訊埠編號。<br /><br /> 只有當您要從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或自訂應用程式連接至 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 服務的遠端執行個體時，才需要開啟這個通訊埠。|  
   
-如需針對 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 設定「Windows 防火牆」的逐步指示，請參閱 [Integration Services 服務 &#40;SSIS Service&#41;](../../integration-services/service/configure-a-windows-firewall-for-access-to-the-ssis-service.md?view=sql-server-2014)。  
+如需針對 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 設定「Windows 防火牆」的逐步指示，請參閱 [Integration Services 服務 &#40;SSIS Service&#41;](/previous-versions/sql/sql-server-2012/ms137861(v=sql.110))。  
   
 ###  <a name="additional-ports-and-services"></a><a name="BKMK_additional_ports"></a> 其他通訊埠和服務  
 下表將列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能會相依的通訊埠和服務。  

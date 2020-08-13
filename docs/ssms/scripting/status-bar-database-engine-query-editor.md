@@ -1,5 +1,6 @@
 ---
 title: 狀態列 (Database Engine 查詢編輯器)
+description: 了解如何對資料庫引擎查詢編輯器視窗的狀態列進行色彩編碼，以指出視窗要連接到資料庫引擎的哪個執行個體。
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -11,16 +12,16 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a579eeeb12795c76bbe585a982a159d6e069813d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 95cccb6c8f63e149de806c4c956e1371a83f3619
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243451"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243737"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>狀態列 (Database Engine 查詢編輯器)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器視窗的狀態列可能利用彩色編碼，以便表示每個視窗所連接的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體。
 
@@ -42,13 +43,13 @@ ms.locfileid: "75243451"
 
 **設定 [物件總管] 中的伺服器狀態色彩**  
   
-1.  在 [物件總管]  中，選取 [連接]  按鈕，然後選取 [資料庫引擎…]  。  
+1.  在 [物件總管] 中，選取 [連接] 按鈕，然後選取 [資料庫引擎…]。  
   
-2.  在 [連接到伺服器]  對話方塊中選取 [選項 >>]  。  
+2.  在 [連接到伺服器] 對話方塊中選取 [選項 >>]。  
   
 3.  選取 **[使用自訂色彩]** 核取方塊。  
   
-4.  選取 [選取...]  按鈕，可選取色彩。  
+4.  選取 [選取...] 按鈕，可選取色彩。  
   
 5.  選取基本色彩或自訂色彩，然後選取 [確定]。  
   
@@ -57,13 +58,13 @@ ms.locfileid: "75243451"
 ##  <a name="set-the-status-color-for-a-registered-server"></a><a name="SetRegServerColor"></a> 為已註冊的伺服器設定狀態色彩  
  **為已註冊的伺服器設定伺服器色彩**  
   
-1.  在 [已註冊的伺服器]  中，以滑鼠右鍵按一下伺服器節點，然後選取 [屬性…]  。  
+1.  在 [已註冊的伺服器] 中，以滑鼠右鍵按一下伺服器節點，然後選取 [屬性…]。  
   
 2.  在 **[編輯伺服器註冊屬性]** 對話方塊上，選取 **[連接屬性]** 索引標籤。  
   
 3.  選取 **[使用自訂色彩]** 核取方塊。  
   
-4.  選取 [選取...]  按鈕，可選取色彩。  
+4.  選取 [選取...] 按鈕，可選取色彩。  
   
 5.  選取基本色彩或自訂色彩，然後選取 [確定]。  
   
@@ -72,7 +73,7 @@ ms.locfileid: "75243451"
 ##  <a name="open-an-editor-using-a-server-color"></a><a name="OpenServerColor"></a> 使用伺服器色彩開啟編輯器  
  **使用伺服器色彩開啟編輯器視窗**  
   
--   在 [物件總管]  或 [已註冊的伺服器]  中，以滑鼠右鍵按一下伺服器節點，然後選取 [新增查詢]  。  
+-   在 [物件總管] 或 [已註冊的伺服器] 中，以滑鼠右鍵按一下伺服器節點，然後選取 [新增查詢]。  
   
 -   或者，反白顯示伺服器節點，然後選取 **[新增查詢]** 工具列按鈕。  
   
@@ -83,11 +84,11 @@ ms.locfileid: "75243451"
   
 -   在 **[檔案]** 功能表上，選取 **[開新檔案]** ，再選取 **[Database Engine 查詢]** 。  
   
--   在 [連接到伺服器]  對話方塊中選取 [選項 >>]  。  
+-   在 [連接到伺服器] 對話方塊中選取 [選項 >>]。  
   
 -   選取 **[使用自訂色彩]** 核取方塊。  
   
--   選取 [選取...]  按鈕，可選取色彩。  
+-   選取 [選取...] 按鈕，可選取色彩。  
   
 -   選取基本色彩或自訂色彩，然後選取 [確定]。  
   

@@ -1,5 +1,5 @@
 ---
-title: 卸除 SQL Server 資料表 | Microsoft Docs
+title: 卸除 SQL Server 資料表 (OLE DB Driver) | Microsoft Docs
 description: 使用 OLE DB Driver for SQL Server 卸載 SQL Server 資料表
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - dropping tables
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 5c5b241af215c04a72bf389079a4a0299d7496b7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6a913e3fa3d57c8f2e7a51f2b1d5b177361c43ff
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994001"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244125"
 ---
 # <a name="dropping-a-sql-server-table"></a>卸除 SQL Server 資料表
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

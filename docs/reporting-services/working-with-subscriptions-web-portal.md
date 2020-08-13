@@ -1,5 +1,6 @@
 ---
 title: 處理訂用帳戶 (Web 入口網站) | Microsoft Docs
+description: 了解如何使用 [訂閱] 頁面列出 Reporting Services 中目前報表的全部訂用帳戶。
 ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 046faa5ff137f62ac2554192012ff0917bfb17e2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d5d936933b96c8d7f5c4c2830707b4a6bb4d9fe2
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76971232"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243548"
 ---
 # <a name="working-with-subscriptions-web-portal"></a>處理訂閱 (Web 入口網站)
 
@@ -27,13 +28,13 @@ ms.locfileid: "76971232"
 > 需要啟動 SQL Server Agent 服務。   
   
 ![管理訂閱](../reporting-services/media/working-with-subscriptions-web-portal/ssrs-manage-subscriptions.png)  
-選取報表的**省略符號 (...)** ，並依序選取 [管理]  和 [訂閱]  ，即可到達 [訂閱] 頁面。  
+選取報表的**省略符號 (...)** ，並依序選取 [管理] 和 [訂閱]，即可到達 [訂閱] 頁面。  
   
-從 [訂閱] 頁面中，您可以選取 [+ 新增訂閱]  來建立新的訂閱。 您也可以編輯現有訂閱，或刪除所選取的訂閱。  
+從 [訂閱] 頁面中，您可以選取 [+ 新增訂閱] 來建立新的訂閱。 您也可以編輯現有訂閱，或刪除所選取的訂閱。  
   
-此頁面也會在 [結果]  資料行上提供訂用帳戶執行的結果狀態。 如果訂閱發生錯誤，請先檢查結果資料行，查看訊息為何。 
+此頁面也會在 [結果] 資料行上提供訂用帳戶執行的結果狀態。 如果訂閱發生錯誤，請先檢查結果資料行，查看訊息為何。 
 
-您也可以視需要選取 [訂閱] 頁面上的 [立即執行]  來執行訂閱。
+您也可以視需要選取 [訂閱] 頁面上的 [立即執行] 來執行訂閱。
   
 ## <a name="creating-or-editing-a-subscription"></a>建立或編輯訂閱  
 使用 [新增訂閱] 或 [編輯訂閱] 頁面，即可在報表中建立新的訂閱或修改現有的訂閱。 這個頁面的此選項隨著您的角色指派而改變。 具有進階權限的使用者可以使用額外的選項。  
@@ -41,7 +42,7 @@ ms.locfileid: "76971232"
 可自主式執行的報表支援訂閱。 報表至少必須使用預存認證或無認證。 如果報表使用參數，就必須指定預設值。 如果您變更報表執行設定或移除參數屬性的預設值，就可能會造成訂閱停用。 如需詳細資訊，請參閱[建立及管理原生模式報表伺服器的訂閱](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)。  
   
 ## <a name="type-of-subscription"></a>訂閱的類型  
-您可以選取 [標準訂用帳戶]  和 [資料驅動訂用帳戶]  。  
+您可以選取 [標準訂用帳戶] 和 [資料驅動訂用帳戶]。  
   
 ![ssRSWebPortal-subscriptions3](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions3.png)  
    
@@ -65,7 +66,7 @@ ms.locfileid: "76971232"
 -   檔案共用訂閱提供讓您指定目標位置的欄位。 您可以傳遞任何報表至檔案共用。 不過，支援互動式功能的報表 (包括支援針對資料列和資料行向下鑽研的矩陣報表) 將轉譯成靜態檔案。 您無法在靜態檔案中檢視向下鑽研資料列和資料行。 檔案共用的名稱必須以統一命名慣例 (UNC) 格式指定 (例如，\mycomputer\public\myreportfiles)。 在路徑名稱中不可包含反斜線。 報表檔案會使用以轉譯格式為基礎的檔案格式進行傳遞 (例如，如果您選擇 [Excel]，報表就會以 .xlsx 檔案來傳遞)。  如需詳細資料，請參閱[建立檔案共用訂閱](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md#bkmk_create_fileshare_subscription)。
   
 ## <a name="data-driven-subscription-dataset"></a>資料驅動訂閱資料集  
-針對資料驅動訂閱，您必須定義用於訂閱的資料集。 選取 [編輯資料集]  提供該資訊。  
+針對資料驅動訂閱，您必須定義用於訂閱的資料集。 選取 [編輯資料集] 提供該資訊。  
   
 ![ssRSWebPortal-subscriptions4](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions4.png)  
   

@@ -1,5 +1,5 @@
 ---
-title: 傳回碼 | Microsoft Docs
+title: 傳回碼 (OLE DB Driver)
 description: 傳回碼
 ms.custom: ''
 ms.date: 06/14/2018
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - errors [OLE DB], return codes
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: a1deedd8903f69268ebc5e7f5caafaa79a7f7b18
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2c87c3ebe7580fdde67417049c1b889dcd2bee42
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994932"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244783"
 ---
 # <a name="return-codes"></a>傳回碼
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

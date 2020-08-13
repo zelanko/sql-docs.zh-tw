@@ -1,5 +1,6 @@
 ---
 title: 教學課程：建立鑽研及主報表 (報表產生器) | Microsoft Docs
+description: 了解如何建立兩種 Reporting Services 分頁報表：鑽研報表和主報表。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 02defc00e1c65eff7eb624a8d3295082d8d6dc8c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ce825906ef6282cd722f91b1c0dbf76463a7c821
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73637988"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87238391"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>教學課程：建立鑽研及主報表 (報表產生器)
 本教學課程將教導您如何建立兩種 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表：鑽研報表和主報表。 這些報表中使用的範例銷售資料是從 Analysis Services Cube 擷取的。 
@@ -22,7 +23,7 @@ ms.locfileid: "73637988"
   
 ![rs_DrillthroughCubeTutorial](../reporting-services/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
    
-完成本教學課程的估計時間：30 分鐘。  
+完成此教學課程的估計時間：30 分鐘。  
   
 ## <a name="requirements"></a>需求  
 本教學課程需要存取鑽研報表和主報表的 Contoso Sales Cube。 這個資料集包含 ContosoDW 資料倉儲和 Contoso_Retail 線上分析處理 (OLAP) 資料庫。 您將在此教學課程中建立的報表會從 Contoso Sales Cube 擷取報表資料。 Contoso_Retail OLAP 資料庫可以從 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=18279)下載。 您只需要下載 ContosoBIdemoABF.exe 檔。 它包含 OLAP 資料庫。  
@@ -42,9 +43,9 @@ ms.locfileid: "73637988"
   
 1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
   
-    [新報表或資料集]  對話方塊隨即開啟。  
+    [新報表或資料集] 對話方塊隨即開啟。  
   
-    如果您看不到 [新增報表或資料集]  對話方塊，請按一下 [檔案]  功能表 > [新增]  。  
+    如果您看不到 [新增報表或資料集] 對話方塊，請按一下 [檔案] 功能表 > [新增]。  
   
 2.  在左窗格中，確認已選取 **[新增報表]** 。  
   
@@ -67,7 +68,7 @@ ms.locfileid: "73637988"
   
 6.  在 **[伺服器名稱]** 中，輸入安裝 Analysis Services 執行個體所在伺服器的名稱。  
   
-7.  在 [選取或輸入資料庫名稱]  中，選取 [Contoso] Cube。  
+7.  在 [選取或輸入資料庫名稱] 中，選取 [Contoso] Cube。  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -94,16 +95,16 @@ ms.locfileid: "73637988"
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-14. 按 [下一步]  。  
+14. 按 [下一步] 。  
   
 ## <a name="1b-create-an-mdx-query"></a><a name="DMDXQuery"></a>1b. 建立 MDX 查詢  
 在報表中，您可以使用擁有預先定義查詢的共用資料集，或是建立只在報表中使用的內嵌資料集。 在本教學課程中，您將建立內嵌資料集。  
   
 #### <a name="to-create-query-filters"></a>若要建立查詢篩選  
   
-1.  在 [設計查詢]  頁面的 [中繼資料] 窗格中，按一下 **(…)** 按鈕。  
+1.  在 [設計查詢] 頁面的 [中繼資料] 窗格中，按一下 **(…)** 按鈕。  
   
-2.  在 [選取 Cube]  對話方塊中，按一下 [Sales]，然後按一下 [確定]  。  
+2.  在 [選取 Cube] 對話方塊中，按一下 [Sales]，然後按一下 [確定]。  
   
     > [!TIP]  
     > 如果您不想要手動建置 MDX 查詢，請按一下![切換到設計模式](../reporting-services/media/rsqdicon-designmode.gif "切換到設計模式")圖示，將查詢設計工具切換到 [查詢] 模式，並將完成的 MDX 貼到查詢設計工具，然後繼續進行[建立資料集](#DSkip)中的步驟 6。  
@@ -112,9 +113,9 @@ ms.locfileid: "73637988"
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(\@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
     ```  
   
-3.  在 [量值群組] 窗格中，展開 Channel，然後將 Channel Name 拖曳到篩選窗格中的 [階層]  資料行。  
+3.  在 [量值群組] 窗格中，展開 Channel，然後將 Channel Name 拖曳到篩選窗格中的 [階層] 資料行。  
   
-    維度名稱 Channel 就會自動新增至 [維度]  資料行。 請勿變更 **[維度]** 或 **[運算子]** 資料行。  
+    維度名稱 Channel 就會自動新增至 [維度] 資料行。 請勿變更 **[維度]** 或 **[運算子]** 資料行。  
   
 4.  若要開啟 **[篩選運算式]** 清單，按一下 **[篩選運算式]** 資料行。  
   
@@ -122,15 +123,15 @@ ms.locfileid: "73637988"
   
     此查詢現在包含一個僅內含下列通道的篩選：線上和轉售商。  
   
-6.  展開 Sales Territory 維度，然後將 Sales Territory Group 拖曳至 [階層]  資料行 (在 **Channel Name** 底下)。  
+6.  展開 Sales Territory 維度，然後將 Sales Territory Group 拖曳至 [階層] 資料行 (在 **Channel Name** 底下)。  
   
 7.  開啟 **[篩選運算式]** 清單，展開 **[所有銷售領域]** ，按一下 **[北美洲]** ，然後按一下 **[確定]** 。  
   
     此查詢現在有一個僅包含 [北美洲] 銷售額的篩選。  
   
-8.  在 [量值群組] 窗格中，展開 Date，然後將 Calendar Year 拖曳至篩選窗格中的 [階層]  資料行。  
+8.  在 [量值群組] 窗格中，展開 Date，然後將 Calendar Year 拖曳至篩選窗格中的 [階層] 資料行。  
   
-    維度名稱 Date 就會自動新增至 [維度]  資料行。 請勿變更 **[維度]** 或 **[運算子]** 資料行。  
+    維度名稱 Date 就會自動新增至 [維度] 資料行。 請勿變更 **[維度]** 或 **[運算子]** 資料行。  
   
 9. 若要開啟 **[篩選運算式]** 清單，按一下 **[篩選運算式]** 資料行。  
   
@@ -140,7 +141,7 @@ ms.locfileid: "73637988"
   
 #### <a name="to-create-the-parameter"></a>若要建立參數  
   
-1.  展開 Product 維度，然後將 Product Category Name 成員拖曳至 [階層]  資料行 (在 **Calendar Year** 底下)。  
+1.  展開 Product 維度，然後將 Product Category Name 成員拖曳至 [階層] 資料行 (在 **Calendar Year** 底下)。  
   
 2.  開啟 **[篩選運算式]** 清單，按一下 **[所有產品]** ，然後按一下 **[確定]** 。  
   
@@ -157,13 +158,13 @@ ms.locfileid: "73637988"
   
 3.  從 Product 維度中，將 Product Subcategory Name 拖曳到資料窗格，然後將其放置在 Product Category Name 的右側。  
   
-4.  在 [中繼資料] 窗格中，展開 [量值]  ，然後展開 Sales。  
+4.  在 [中繼資料] 窗格中，展開 [量值]，然後展開 Sales。  
   
 5.  將 Sales Amount 量值拖曳到資料窗格中，然後將其放置到 Product Subcategory Name 的右側。  
   
 6.  在查詢設計工具工具列上，按一下 **[執行 (!)]** 。  
   
-7.  按 [下一步]  。  
+7.  按 [下一步] 。  
   
 ## <a name="1c-organize-data-into-groups"></a><a name="DLayout"></a>1c. 將資料組織為群組  
 當您選取將資料分組的欄位時，會設計包含資料列和資料行的矩陣，以顯示詳細資料和彙總資料。  
@@ -172,24 +173,24 @@ ms.locfileid: "73637988"
   
 1.  若要切換成 [設計] 檢視，按一下 **[設計]** 。  
   
-2.  在 [排列欄位]  頁面上，將 Product_Subcategory_Name 拖曳至 [資料列群組]  。  
+2.  在 [排列欄位] 頁面上，將 Product_Subcategory_Name 拖曳至 [資料列群組]。  
   
     > [!NOTE]  
     > 名稱中的空格會以底線 (_) 取代。 例如，Product Category Name 是 Product_Category_Name。  
   
-3.  將 Channel_Name 拖曳至 [資料行群組]  。  
+3.  將 Channel_Name 拖曳至 [資料行群組]。  
   
-4.  將 Sales_Amount 拖曳至 [值]  。  
+4.  將 Sales_Amount 拖曳至 [值]。  
   
     Sum 函數 (數值欄位的預設彙總) 會自動彙總 Sales_Amount。 值為 `[Sum(Sales_Amount)]`。  
   
     若要檢視其他可用的彙總函式，開啟下拉式清單 (不要變更彙總函式)。  
   
-5.  將 Sales_Return_Amount 拖曳至 [值]  ，並將其放置在 `[Sum(Sales_Amount)]` 之下。  
+5.  將 Sales_Return_Amount 拖曳至 [值]，並將其放置在 `[Sum(Sales_Amount)]` 之下。  
   
     步驟 4 和步驟 5 指定了矩陣中要顯示的資料。  
   
-6.  按 [下一步]  。  
+6.  按 [下一步] 。  
   
 ## <a name="1d-add-subtotals-and-totals"></a><a name="DTotals"></a>1d. 加入小計和總計  
 建立群組之後，您可以加入並格式化要顯示欄位彙總值的資料列。 您也可以選擇要顯示所有資料，或是讓使用者以互動方式展開和摺疊分組資料。  
@@ -200,9 +201,9 @@ ms.locfileid: "73637988"
   
     精靈的 [預覽] 窗格會顯示含有四個資料列的矩陣。  
   
-2.  按 [下一步]  。  
+2.  按 [下一步] 。  
   
-2.  按一下 [完成]  。  
+2.  按一下 [完成] 。  
   
     資料表會加入至設計介面。  
   
@@ -230,7 +231,7 @@ ms.locfileid: "73637988"
   
     空白資料行就會加入至 **[銷售量]** 的右方。  
   
-3.  在功能區上，按一下 [矩形]  ，然後按一下 [Product_Subcategory] 資料列群組中 `[Sum(Sales_Amount)]` 資料格右側的空資料格。  
+3.  在功能區上，按一下 [矩形]，然後按一下 [Product_Subcategory] 資料列群組中 `[Sum(Sales_Amount)]` 資料格右側的空資料格。  
   
 4.  在功能區上，按一下 **[走勢圖]** 圖示，然後按一下加入矩形的資料格。  
   
@@ -286,7 +287,7 @@ ms.locfileid: "73637988"
   
 1.  在 [報表資料] 窗格中，展開 **[參數]** 。  
   
-2.  以滑鼠右鍵按一下 \@ProductProductCategoryName，然後按一下 [參數屬性]  。  
+2.  以滑鼠右鍵按一下 \@ProductProductCategoryName，然後按一下 [參數屬性]。  
   
     > [!NOTE]  
     > 名稱旁邊的 \@ 字元表示這是一個參數。  
@@ -322,7 +323,7 @@ ms.locfileid: "73637988"
     Http://<ServerName>/<Sites>/  
     ```  
   
-4.  按一下 [檔案]  。  
+4.  按一下 [檔案] 。  
   
     **[最近使用的網站和伺服器]** 會列出 SharePoint 網站上的文件庫。  
   
@@ -333,7 +334,7 @@ ms.locfileid: "73637988"
     > [!NOTE]  
     > 您會將主報表儲存至相同的位置。 如果您想要將主報表和鑽研報表儲存到不同的網站或文件庫，必須在主報表中更新 **[移至報表]** 動作的路徑。  
   
-7.  按一下 [檔案]  。  
+7.  按一下 [檔案] 。  
   
 ## <a name="1-create-the-main-report-from-the-table-or-matrix-wizard"></a><a name="MMatrixAndDataset"></a>1.從資料表或矩陣精靈建立主報表  
 從 **[使用者入門]** 對話方塊中，使用 **[資料表或矩陣精靈]** 建立矩陣報表。  
@@ -342,9 +343,9 @@ ms.locfileid: "73637988"
   
 1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
   
-    [新報表或資料集]  對話方塊隨即開啟。  
+    [新報表或資料集] 對話方塊隨即開啟。  
   
-    如果您看不到 [新增報表或資料集]  對話方塊，請按一下 [檔案]  功能表 > [新增]  。  
+    如果您看不到 [新增報表或資料集] 對話方塊，請按一下 [檔案] 功能表 > [新增]。  
  
 2.  在 **[使用者入門]** 對話方塊中，確認已選取 **[新增報表]** ，然後按一下 **[資料表或矩陣精靈]** 。  
   
@@ -365,7 +366,7 @@ ms.locfileid: "73637988"
   
 6.  在 **[伺服器名稱]** 中，輸入安裝 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體所在伺服器的名稱。  
   
-7.  在 [選取或輸入資料庫名稱]  中，選取 [Contoso] Cube。  
+7.  在 [選取或輸入資料庫名稱] 中，選取 [Contoso] Cube。  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -385,16 +386,16 @@ ms.locfileid: "73637988"
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-14. 按 [下一步]  。  
+14. 按 [下一步] 。  
   
 ## <a name="1b-create-an-mdx-query"></a><a name="MMDXQuery"></a>1b. 建立 MDX 查詢  
 接著，建立內嵌的資料集。 若要這樣做，您將使用查詢設計工具建立篩選、參數、導出成員，以及資料集本身。  
   
 #### <a name="to-create-query-filters"></a>若要建立查詢篩選  
   
-1.  在 [設計查詢]  頁面的 [中繼資料] 窗格中，按一下 Cube 區段中的省略符號 **(...)** 。  
+1.  在 [設計查詢] 頁面的 [中繼資料] 窗格中，按一下 Cube 區段中的省略符號 **(...)** 。  
   
-2.  在 [選取 Cube]  對話方塊中，按一下 [Sales]，然後按一下 [確定]  。  
+2.  在 [選取 Cube] 對話方塊中，按一下 [Sales]，然後按一下 [確定]。  
   
     > [!TIP]  
     > 如果您不想要手動建置 MDX 查詢，請按一下![切換到設計模式](../reporting-services/media/rsqdicon-designmode.gif "切換到設計模式")圖示，將查詢設計工具切換到 [查詢] 模式，並將完成的 MDX 貼到查詢設計工具，然後繼續進行[建立資料集](#MSkip)中的步驟 5。  
@@ -403,9 +404,9 @@ ms.locfileid: "73637988"
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(\@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  
     ```  
   
-3.  在 [量值群組] 窗格中，展開 Channel，然後將 Channel Name 拖曳到篩選窗格中的 [階層]  資料行。  
+3.  在 [量值群組] 窗格中，展開 Channel，然後將 Channel Name 拖曳到篩選窗格中的 [階層] 資料行。  
   
-    維度名稱 Channel 就會自動新增至 [維度]  資料行。 請勿變更 **[維度]** 或 **[運算子]** 資料行。  
+    維度名稱 Channel 就會自動新增至 [維度] 資料行。 請勿變更 **[維度]** 或 **[運算子]** 資料行。  
   
 4.  若要開啟 **[篩選運算式]** 清單，按一下 **[篩選運算式]** 資料行。  
   
@@ -413,15 +414,15 @@ ms.locfileid: "73637988"
   
     此查詢現在包含一個僅內含下列通道的篩選：線上和轉售商。  
   
-6.  展開 Sales Territory 維度，然後將 Sales Territory Group 拖曳至 [階層]  資料行 (在 **Channel Name** 底下)。  
+6.  展開 Sales Territory 維度，然後將 Sales Territory Group 拖曳至 [階層] 資料行 (在 **Channel Name** 底下)。  
   
 7.  開啟 **[篩選運算式]** 清單，展開 **[所有銷售領域]** ，按一下 **[北美洲]** ，然後按一下 **[確定]** 。  
   
     此查詢現在有一個僅包含 [北美洲] 銷售額的篩選。  
   
-8.  在 [量值群組] 窗格中，展開 Date，然後將 Calendar Year 拖曳至篩選窗格中的 [階層]  資料行。  
+8.  在 [量值群組] 窗格中，展開 Date，然後將 Calendar Year 拖曳至篩選窗格中的 [階層] 資料行。  
   
-    維度名稱 Date 就會自動新增至 [維度]  資料行。 請勿變更 **[維度]** 或 **[運算子]** 資料行。  
+    維度名稱 Date 就會自動新增至 [維度] 資料行。 請勿變更 **[維度]** 或 **[運算子]** 資料行。  
   
 9. 若要開啟 **[篩選運算式]** 清單，按一下 **[篩選運算式]** 資料行。  
   
@@ -431,7 +432,7 @@ ms.locfileid: "73637988"
   
 #### <a name="to-create-the-parameter"></a>若要建立參數  
   
-1.  展開 Product 維度，然後將 Product Category Name 拖曳至 [階層]  資料行 (在 **Sales Territory Group** 底下)。  
+1.  展開 Product 維度，然後將 Product Category Name 拖曳至 [階層] 資料行 (在 **Sales Territory Group** 底下)。  
   
 2.  開啟 **[篩選運算式]** 清單，按一下 **[所有產品]** ，然後按一下 **[確定]** 。  
   
@@ -441,9 +442,9 @@ ms.locfileid: "73637988"
   
 1.  將游標放在 [導出成員] 窗格內部，按一下滑鼠右鍵，然後按一下 **[新增導出成員]** 。  
   
-2.  在 [中繼資料] 窗格中，展開 [量值]  ，然後展開 Sales。  
+2.  在 [中繼資料] 窗格中，展開 [量值]，然後展開 Sales。  
   
-3.  將 Sales Quantity 量值拖曳至 [運算式]  方塊，並鍵入減號字元 (-)，然後將 Sales Return Quantity 量值拖曳至 [運算式]  方塊，將其放置在減號字元後面。  
+3.  將 Sales Quantity 量值拖曳至 [運算式]**** 方塊，並鍵入減號字元 (-)，然後將 Sales Return Quantity 量值拖曳至 [運算式]**** 方塊，將其放置在減號字元後面。  
   
     下列程式碼顯示運算式：  
   
@@ -457,9 +458,9 @@ ms.locfileid: "73637988"
   
 5.  以滑鼠右鍵按一下 **[導出成員]** ，然後按一下 **[新增導出成員]** 。  
   
-6.  在 [中繼資料] 窗格中，展開 [量值]  ，然後展開 Sales。  
+6.  在 [中繼資料] 窗格中，展開 [量值]，然後展開 Sales。  
   
-7.  將 Sales Amount 量值拖曳至 [運算式]  方塊，並鍵入減號字元 (-)，然後將 Sales Return Amount 量值拖曳至 [運算式]  方塊，將其放置在減號字元後面。  
+7.  將 Sales Amount 量值拖曳至 [運算式]**** 方塊，並鍵入減號字元 (-)，然後將 Sales Return Amount 量值拖曳至 [運算式]**** 方塊，將其放置在減號字元後面。  
   
     下列程式碼顯示運算式：  
   
@@ -475,7 +476,7 @@ ms.locfileid: "73637988"
   
 2.  從 Product 維度中，將 Product Category Name 拖曳到資料窗格，然後將其放置在 Channel Name 的右側。  
   
-3.  從 [導出成員]  中，將 `Net QTY` 拖曳至資料窗格，然後將其放置在 Product Category Name 的右側。  
+3.  從 [導出成員] 中，將 `Net QTY` 拖曳至資料窗格，然後將其放置在 Product Category Name 的右側。  
   
 4.  從 [導出成員] 中，將 Net Sales 拖曳到資料窗格，然後將其放置在 `Net QTY`的右側。  
   
@@ -483,16 +484,16 @@ ms.locfileid: "73637988"
   
     檢閱查詢結果集。  
   
-6.  按 [下一步]  。  
+6.  按 [下一步] 。  
   
 ## <a name="1c-organize-data-into-groups"></a><a name="MLayout"></a>1c. 將資料組織為群組  
 當您選取將資料分組的欄位時，會設計包含資料列和資料行的矩陣，以顯示詳細資料和彙總資料。  
   
 #### <a name="to-organize-data-into-groups"></a>若要將資料組織為群組  
   
-1.  在 [排列欄位]  頁面上，將 Product_Category_Name 拖曳至 [資料列群組]  。  
+1.  在 [排列欄位] 頁面上，將 Product_Category_Name 拖曳至 [資料列群組]。  
   
-2.  將 Channel_Name 拖曳至 [資料行群組]  。  
+2.  將 Channel_Name 拖曳至 [資料行群組]。  
   
 3.  將 `Net_QTY` 拖曳至 **[值]** 。  
   
@@ -513,9 +514,9 @@ ms.locfileid: "73637988"
   
     精靈的 [預覽] 窗格會顯示含有四個資料列的矩陣。  當您執行報表時，每個資料列都會以下列方式顯示：第一個資料列是資料行群組、第二個資料列包含資料行標題、第三個資料列包含產品類別目錄資料 (`[Sum(Net_ QTY)]` 和 `[Sum(Net_Sales)]`，而第四個資料列包含總計。  
   
-2.  按 [下一步]  。  
+2.  按 [下一步] 。  
   
-3.  按一下 [完成]  。  
+3.  按一下 [完成] 。  
   
 3.  若要預覽報表，按一下 **[執行]** 。  
   
@@ -537,7 +538,7 @@ ms.locfileid: "73637988"
   
 1.  若要切換成 [設計] 檢視，按一下 **[設計]** 。  
   
-2.  以滑鼠右鍵按一下包含 Product_Category_Name 的資料格，然後按一下 [文字方塊屬性]  。  
+2.  以滑鼠右鍵按一下包含 Product_Category_Name 的資料格，然後按一下 [文字方塊屬性]。  
   
 3.  按一下 **[動作]** 索引標籤。  
   
@@ -547,7 +548,7 @@ ms.locfileid: "73637988"
   
 6.  若要加入參數以執行鑽研報表，按一下 **[加入]** 。  
   
-7.  在 [名稱]  清單中，選取 ProductProductCategoryName。  
+7.  在 [名稱] 清單中，選取 ProductProductCategoryName。  
   
 8.  在 **[值]** 中，輸入 `[Product_Category_Name.UniqueName]`。  
   
@@ -627,7 +628,7 @@ ms.locfileid: "73637988"
   
 1.  在設計介面上，按一下 **[按一下以加入標題]** 。  
   
-2.  類型 **2009 Product Category Sales:Online and Reseller Category:** 。  
+2.  鍵入 **2009 年產品類別銷售額：線上及轉銷商類別：** 。  
   
 3.  選取您輸入的文字。  
   
@@ -659,7 +660,7 @@ ms.locfileid: "73637988"
     > [!IMPORTANT]  
     > 將主報表儲存到儲存鑽研報表的相同位置。 若要將主報表和鑽研報表儲存到不同的網站或文件庫，請確認主報表中的 **[移至報表]** 動作指向鑽研報表的正確路徑。  
   
-7.  按一下 [檔案]  。  
+7.  按一下 [檔案] 。  
   
 ## <a name="8-run-the-main-and-drillthrough-reports"></a><a name="MRunReports"></a>8.執行主報表和鑽研報表  
 執行主報表，然後按一下產品類別目錄資料行中的值以執行鑽研報表。  

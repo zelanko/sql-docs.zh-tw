@@ -1,5 +1,5 @@
 ---
-title: IBCPSession2 (OLE DB) | Microsoft Docs
+title: IBCPSession2 (OLE DB Driver) | Microsoft Docs
 description: IBCPSession2 介面 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - IBCPSession2 interface
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 7fe71aa439b54785e30adf4c4192be0f924318e1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d9fff0ba91fb7930ed04b75625461c0c11417ce9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994515"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244515"
 ---
 # <a name="ibcpsession2-ole-db"></a>IBCPSession2 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

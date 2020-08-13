@@ -1,8 +1,8 @@
 ---
-title: IBCPSession::BCPColFmt (OLE DB) | Microsoft Docs
+title: IBCPSession::BCPColFmt (OLE DB 驅動程式) | Microsoft Docs
 description: IBCPSession::BCPColFmt (OLE DB)
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 05/25/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - BCPColFmt method
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 76dd26d42951a95c604b8d5b3bceaff21c355be2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4d4d55b6e950ccf7e1e9bfac54bf357d070ab09f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994573"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244653"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -60,10 +60,14 @@ HRESULT BCPColFmt(
   
 -   每個使用者檔案欄位的資料最大長度。  
   
--   每個欄位的選擇性結束位元組順序。  
+-   每個欄位的選擇性結束位元組順序 <a href="#terminator_note"><sup>**1**</sup></a>。  
   
--   選擇性結束位元組順序的長度。  
+-   選擇性結束位元組順序的長度 <a href="#terminator_note"><sup>**1**</sup></a>。  
   
+
+> [!IMPORTANT]
+> <b id="terminator_note">[1]：</b>不支援在將資料檔案字碼頁設定為 UTF-8 的情況下使用結束字元順序。 在此情況下，**pbUserDataTerm** 必須設定為 `nullptr`，而 **cbUserDataTerm** 必須設定為 `0`。
+
  **BCPColFmt** 的每個呼叫都會針對一個使用者檔案欄位指定格式。 例如，若要在五個欄位的使用者資料檔案中變更三個欄位的預設值，請先呼叫 `BCPColumns(5)`，然後呼叫 **BCPColFmt** 五次，其中三次呼叫會設定您的自訂格式。 在其餘兩個呼叫中，將 *eUserDataType* 設定為 BCP_TYPE_DEFAULT，並將 *cbIndicator*、*cbUserData* 和 *cbUserDataTerm* 分別設定為 0、BCP_VARIABLE_LENGTH 和 0。 此程序會複製全部五個資料行，其中三個為您自訂的格式，而另兩個為預設格式。  
   
 > [!NOTE]  
@@ -105,11 +109,11 @@ HRESULT BCPColFmt(
   
  如果使用多種指定使用者檔案資料行長度的方式 (例如結束字元和長度指標，或結束字元和資料行長度最大值)，大量複製會選擇導致複製最少量資料的方式。  
   
- 大量複製 API 會視需要執行 Unicode 到 MBCS 的字元轉換。 請務必確認結束字元位元組字串與位元組字串長度的設定正確。  
-  
+ 大量複製 API 會視需要執行 Unicode 到 MBCS 的字元轉換。 請務必確認結束字元位元組字串與位元組字串長度的設定正確。 如需 UTF-8 編碼限制，請參閱上述的[備註](#remarks)一節。
+
  *cbUserDataTerm*[in]  
- 要用於此資料行的結束字元順序長度 (以位元組為單位)。 如果資料中沒有或不需要結束字元，將此值設定為 0。  
-  
+ 要用於此資料行的結束字元順序長度 (以位元組為單位)。 如果資料中沒有或不需要結束字元，將此值設定為 0。 如需 UTF-8 編碼限制，請參閱上述的[備註](#remarks)一節。
+
  *idxServerCol*[in]  
  此資料行在資料庫資料表中的序數位置。 第一個資料行編號為 1。 資料行的序數位置是由 **IColumnsInfo::GetColumnInfo** 或類似的方法所報告。 如果此值為 0，大量複製會在資料檔案中忽略此欄位。  
   

@@ -1,41 +1,40 @@
 ---
 title: 建立 SQL Server 資料庫單元測試的測試專案
+description: 了解如何建立 SQL Server 資料庫單元測試的測試專案。 檢視將測試專案新增至方案 (其包含資料庫專案) 的不同方式。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 4b3e7ba8-b565-4689-af1a-34cc255b7c60
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: fe6b8e2e70a20041f394afa5cad1d800535559d1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4ff3cb815dcd27f72ea96296935484ec0cc15ea0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241521"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243529"
 ---
-# <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>HOW TO：建立 SQL Server 資料庫單元測試的測試專案
+# <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>如何：建立 SQL Server 資料庫單元測試的測試專案
 
 在您開始撰寫評估資料庫物件的單元測試之前，必須先建立測試專案。 這個專案會包含 SQL Server 單元測試，但是它可以包含其他類型的測試。  
   
 您可以將給定資料庫專案的所有 SQL Server 單元測試都放在單一測試專案內。 不過，您可能會想要根據下列問題的回答，建立其他測試專案：  
   
-|||  
-|-|-|  
-|**問題**|**決策**|  
+|問題|決策|  
+|-|-|   
 |不同的 SQL Server 單元測試是否需要針對測試執行或測試驗證存取不同的資料庫連接？|如果是，您就需要多個測試專案。 您無法針對測試執行指定多個資料庫連接。 不過，您可以針對測試驗證指定不同的資料庫連接。|  
 |您是否想要針對不同的單元測試部署不同的資料庫專案？|如果是，您就需要多個測試專案。 測試專案只能部署單一資料庫專案。|  
   
-如需其中一個問題的詳細資訊，請參閱[如何：設定 SQL Server 單元測試執行](../ssdt/how-to-configure-sql-server-unit-test-execution.md)。 您也可以提供自己的 [DatabaseTestService](https://msdn.microsoft.com/library/microsoft.data.schema.unittesting.databasetestservice.aspx) Microsoft.Data.Schema.UnitTesting.DatabaseTestService 實作，作為建立多個測試專案的替代方案。  
+如需上述每個問題的詳細資訊，請參閱[如何：設定 SQL Server 單元測試執行](../ssdt/how-to-configure-sql-server-unit-test-execution.md)。 您也可以提供自己的 [DatabaseTestService](https://msdn.microsoft.com/library/microsoft.data.schema.unittesting.databasetestservice.aspx) Microsoft.Data.Schema.UnitTesting.DatabaseTestService 實作，作為建立多個測試專案的替代方案。  
   
 您有三個選項可以將測試專案加入至包含資料庫專案的方案：  
   
 -   將測試專案加入至方案。 測試專案包含您可以刪除的標準單元測試。 這個專案不包含您必須加入的 SQL Server 單元測試類別。  
   
--   從 [測試]  功能表加入新的 SQL Server 單元測試。 當您加入單元測試時，SQL Server Data Tools 也會建立測試專案 (如果您要求的話)。 此專案包含 SQL Server 單元測試類別。 SQL Server 單元測試類別包含一或多個單元測試。  
+-   從 [測試] 功能表加入新的 SQL Server 單元測試。 當您加入單元測試時，SQL Server Data Tools 也會建立測試專案 (如果您要求的話)。 此專案包含 SQL Server 單元測試類別。 SQL Server 單元測試類別包含一或多個單元測試。  
   
 -   從 SQL Server [物件總管] 中開啟的專案中，從預存程序、函式或觸發程序建立單元測試。 當您建立單元測試時，SQL Server Data Tools 也會建立測試專案 (如果您要求的話)。 此專案包含 SQL Server 單元測試類別。 SQL Server 測試類別包含一個或多個單元測試。  
   
@@ -47,9 +46,9 @@ ms.locfileid: "75241521"
   
     [新增專案]  對話方塊隨即出現。  
   
-2.  在 [已安裝的範本]  底下，展開 [SQL Server]  節點，然後選取 [SQL Server 資料庫專案]  。  
+2.  在 [已安裝的範本] 底下，展開 [SQL Server] 節點，然後選取 [SQL Server 資料庫專案]。  
   
-3.  在 [名稱]  中，輸入專案名稱。  
+3.  在 [名稱] 中，輸入專案名稱。  
   
 ### <a name="to-create-a-test-project-with-a-sql-server-unit-test-class"></a>若要建立包含 SQL Server 單元測試類別的測試專案  
   

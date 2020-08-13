@@ -1,5 +1,5 @@
 ---
-title: 使用 IRow::GetColumns 擷取資料行 (OLE DB) | Microsoft Docs
+title: 使用 IRow::GetColumns 擷取資料行 (OLE DB 驅動程式) | Microsoft Docs
 description: 使用 IRow::GetColumns 擷取資料行 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - IRow interface
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 336b5b12eaf0744afd63510ce287edbb5439c3ca
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d2ca2ba9284c0e1fca7eef3f6b8911111c4559f6
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015578"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244775"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>使用 IRow::GetColumns 提取資料行 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   **IRow** 介面允許直接存取結果集中單一資料列的資料行。 因此，**IRow** 是從包含一個資料列之結果集擷取資料行的有效方式。  
   
- 系統會提供一個程式碼範例，顯示如何使用 **IRow** 擷取單一資料列。 在此範例中，系統會從資料列一次擷取一個資料行。 此範例會示範：  
+ 您可取得程式碼範例，該範例會示範如何使用 **IRow** 來擷取單一資料列。 在此範例中，系統會從資料列一次擷取一個資料行。 此範例會示範：  
   
 -   如何提取資料行的群組 (依序)。  
   

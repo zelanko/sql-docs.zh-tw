@@ -1,5 +1,5 @@
 ---
-title: 擷取資料列 |Microsoft Docs
+title: 擷取資料列 (OLE DB Driver) | Microsoft Docs
 description: 使用 IRowset 介面來擷取資料列
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, fetching
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: d47e94795f3bb81dd7a2d870190f081436c47e07
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2d803da7e8930eccb66843a025cb3426f5af62f5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015359"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244189"
 ---
 # <a name="fetching-rows"></a>提取資料列
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

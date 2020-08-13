@@ -1,5 +1,6 @@
 ---
 title: 第 1 課：建立範例訂閱者資料庫 | Microsoft Docs
+description: 了解如何建立小型「訂閱者」資料庫來儲存訂閱資料，以供資料驅動訂閱使用。
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2aa2fefb5df874b08a34c4a7091d450afdfd4828
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a62e0e1c47cd6df4d2d5e4f28b35294af694a824
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62513160"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243265"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>第 1 課：建立範例訂閱者資料庫
 
@@ -25,12 +26,12 @@ ms.locfileid: "62513160"
   
 1.  啟動 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，然後開啟 [!INCLUDE[ssDEnoversion_md](../includes/ssdenoversion-md.md)]執行個體的連接。  
   
-2.  以滑鼠右鍵按一下 [資料庫]，然後選取 [新增資料庫...]  。  
+2.  以滑鼠右鍵按一下 [資料庫]，然後選取 [新增資料庫...]。  
   
-3.  在 [新增資料庫] 對話方塊的 [資料庫名稱]  中，鍵入*訂閱者*。 
+3.  在 [新增資料庫] 對話方塊的 [資料庫名稱] 中，鍵入*訂閱者*。 
 4. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-5.  按一下工具列上的 [新增查詢]  按鈕。  
+5.  按一下工具列上的 [新增查詢] 按鈕。  
   
 6.  將下列 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式複製到空的查詢中：  
   

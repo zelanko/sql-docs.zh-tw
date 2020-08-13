@@ -1,5 +1,5 @@
 ---
-title: 檔案資料流及 OLE DB | Microsoft Docs
+title: FILESTREAM 與 OLE DB (OLE DB 驅動程式) | Microsoft Docs
 description: 資料流及 OLE DB
 ms.custom: ''
 ms.date: 06/14/2018
@@ -10,15 +10,15 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 8229c20a500680c1b83304bc2e443c20838b5a02
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b341202b0941fb718bb03eb43e082a3b5af7633e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015590"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244762"
 ---
 # <a name="filestream-and-ole-db"></a>資料流及 OLE DB
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 

@@ -1,5 +1,5 @@
 ---
-title: 整合式 Kerberos 驗證 (OLE DB) | Microsoft Docs
+title: 整合式 Kerberos 驗證 (OLE DB Driver) | Microsoft Docs
 description: 整合式 Kerberos 驗證 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -10,15 +10,15 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 9829c7857ec86c7a1f623691c04b0dd0ac62bafe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1fc52cf1cd0ca2b4e7b04e998f7e8f278cc522e3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994772"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244740"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>整合式 Kerberos 驗證 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

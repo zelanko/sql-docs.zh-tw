@@ -1,5 +1,5 @@
 ---
-title: 下一個擷取位置 | Microsoft Docs
+title: 下一個擷取位置 (OLE DB driver) | Microsoft Docs
 description: 擷取資料列 - 下一個擷取位置
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - rowsets [OLE DB], fetching
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 2ea743770323505c611210c0bb3acd0e93c719cd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d6fd65f54f0c6f6aa219595e1948ce758c50b4db
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994186"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244195"
 ---
-# <a name="fetching-rows---next-fetch-position"></a>擷取資料列 - 下一個擷取位置
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# <a name="fetching-rows---next-fetch-position-ole-db-driver"></a>擷取資料列 - 下一個擷取位置 (OLE DB Driver)
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

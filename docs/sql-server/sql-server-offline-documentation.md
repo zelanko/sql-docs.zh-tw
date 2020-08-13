@@ -8,17 +8,18 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: markingmyname
 ms.author: maghan
 ms.reviewer: carlrab
-ms.date: 05/08/2020
-ms.openlocfilehash: 5ca11e672e91b8d2b8801838c40057d6b2c8fbfd
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.date: 07/22/2020
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || sql-server-previousversions || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 0d4145832aee94a1786308e21ac425081d4d2a88
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151542"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87237859"
 ---
 # <a name="install-sql-server-documentation-to-view-offline-in-ssms"></a>安裝 SQL Server 文件以在 SSMS 中離線檢視
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 此文章說明如何在 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 中下載及檢視離線 SQL Server 內容。 離線內容可讓您在沒有網際網路連線的情況下存取文件 (但是一開始需要網際網路連線來下載文件)。
 
@@ -34,7 +35,7 @@ ms.locfileid: "83151542"
 
 1. 在 SSMS 中，選取 [說明] 功能表上的 [加入和移除說明內容]。
 
-   ![說明檢視器新增移除內容](../sql-server/media/sql-server-offline-documentation/add-remove-content.png)
+   ![新增和移除說明內容](../sql-server/media/sql-server-offline-documentation/add-remove-content.png)
 
    說明檢視器會開啟至 [管理內容] 索引標籤。
 
@@ -50,7 +51,7 @@ ms.locfileid: "83151542"
    ![SQL Server 線上叢書新增與更新](../sql-server/media/sql-server-offline-documentation/sql-add-update.png)
 
    > [!NOTE]
-   > 如果說明檢視器在新增內容時凍結 (擱置)，請將 %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings 或 HlpViewer_VisualStudiox_en-US.settings 檔案中的 Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" 行變更為未來的某個日期。 如需此問題的詳細資訊，請參閱 [Visual Studio 說明檢視器凍結在啟動顯示畫面上](/visualstudio/welcome-to-visual-studio)。
+   > 如果說明檢視器在新增內容時凍結 (停止回應)，請將 %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings or HlpViewer_VisualStudiox_en-US.settings 檔案中的 Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" 行變更為未來的某個日期。 如需此問題的詳細資訊，請參閱 [Visual Studio 說明檢視器凍結在啟動顯示畫面上](/visualstudio/welcome-to-visual-studio)。
 
 4. 您可在左側內容窗格底下搜尋 *SQL Server 2016*，以確認是否已載入 SQL Server 2016 及更新版本的內容。
 
@@ -58,11 +59,14 @@ ms.locfileid: "83151542"
 
 ## <a name="sql-server-2014-offline-content"></a>SQL Server 2014 離線內容
 
+> [!IMPORTANT]
+> SQL 2014 Transact-SQL 內容僅供離線使用。
+
 下列步驟說明如何載入 SQL Server 2014 的離線內容。
 
 1. 從下載中心下載 [Microsoft SQL Server 2014 的防火牆和 Proxy 受限環境產品文件](https://www.microsoft.com/download/details.aspx?id=42557) \(英文\) 內容，並將其儲存到資料夾。
 
-2. 將該檔案解壓縮以檢視 .msha 檔案。
+2. 將該檔案解壓縮以檢視 *.msha* 檔案。
 
    ![SQL Server 2014 說明文件安裝檔](../sql-server/media/sql-server-offline-documentation/sql-2014-help-content-setup-msha.png)
 
@@ -91,14 +95,11 @@ ms.locfileid: "83151542"
    ![[說明檢視器] 中的 SQL Server 2014 書籍新增與更新](../sql-server/media/sql-server-offline-documentation/sql-2014-add-update.png)
 
     > [!NOTE]
-    > 如果說明檢視器在新增內容時凍結 (擱置)，請將 %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings 或 HlpViewer_VisualStudiox_en-US.settings 檔案中的 Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" 行變更為未來的某個日期。 如需此問題的詳細資訊，請參閱 [Visual Studio 說明檢視器凍結在啟動顯示畫面上](/visualstudio/welcome-to-visual-studio)。
+    > 如果說明檢視器在新增內容時凍結 (停止回應)，請將 %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings or HlpViewer_VisualStudiox_en-US.settings 檔案中的 Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" 行變更為未來的某個日期。 如需此問題的詳細資訊，請參閱 [Visual Studio 說明檢視器凍結在啟動顯示畫面上](/visualstudio/welcome-to-visual-studio)。
 
 7. 您可以在左側內容窗格底下搜尋 *sql server 2014*，以確認是否已安裝 SQL Server 2014 內容。
 
    ![SQL Server 2014 書籍已自動更新](../sql-server/media/sql-server-offline-documentation/sql-2014-content.png)
-
-> [!Tip]
-> SQL 2014 Transact-SQL 內容僅供離線使用。
 
 ## <a name="sql-server-2012-offline-content"></a>SQL Server 2012 離線內容
 
@@ -106,7 +107,7 @@ ms.locfileid: "83151542"
 
 1. 從下載中心下載 [Microsoft SQL Server 2012 的防火牆和 Proxy 受限環境產品文件](https://www.microsoft.com/download/details.aspx?id=35750) \(英文\) 內容，並將其儲存到資料夾。
 
-2. 將該檔案解壓縮以檢視 .msha 檔案。
+2. 將該檔案解壓縮以檢視 *.msha* 檔案。
 
    ![SQL Server 2012 說明內容安裝程式檔案](../sql-server/media/sql-server-offline-documentation/sql-2012-help-content-setup-msha.png)
 
@@ -135,7 +136,7 @@ ms.locfileid: "83151542"
    ![[說明檢視器] 中的 SQL Server 2012 書籍新增與更新](../sql-server/media/sql-server-offline-documentation/sql-2012-add-update.png)
 
     > [!NOTE]
-    > 如果說明檢視器在新增內容時凍結 (擱置)，請將 %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings 或 HlpViewer_VisualStudiox_en-US.settings 檔案中的 Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" 行變更為未來的某個日期。 如需此問題的詳細資訊，請參閱 [Visual Studio 說明檢視器凍結在啟動顯示畫面上](/visualstudio/welcome-to-visual-studio)。
+    > 如果說明檢視器在新增內容時凍結 (停止回應)，請將 %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings or HlpViewer_VisualStudiox_en-US.settings 檔案中的 Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" 行變更為未來的某個日期。 如需此問題的詳細資訊，請參閱 [Visual Studio 說明檢視器凍結在啟動顯示畫面上](/visualstudio/welcome-to-visual-studio)。
 
 7. 您可以在左側內容窗格底下搜尋 *sql server 2012*，以確認是否已載入 SQL Server 2012 內容。
 
@@ -153,7 +154,7 @@ ms.locfileid: "83151542"
 
 [說明檢視器] 會開啟至 [管理內容] 索引標籤，並在左窗格中顯示已安裝的說明目錄。 選取目錄中的文章以在右方窗格中顯示該文章。
 
-> [!TIP]
+> [!Important]
 > 如果看不到內容窗格，請選取左邊界上的 [內容]。 選取圖釘圖示以將內容窗格保持開啟。  
 
    ![含內容的 [說明檢視器]](../sql-server/media/sql-server-offline-documentation/view-offline-all.png)
@@ -170,7 +171,7 @@ ms.locfileid: "83151542"
 
 若要深入了解封存的內容和 [說明檢視器]，請參考下方連結。
 
-- [SQL Server 文件](../sql-server/index.yml?view=sql-server-2016)
-- [SQL Server 2014 文件](../2014/database-engine/install-windows/installation-for-sql-server.md)
-- [SQL Server 舊版文件](https://docs.microsoft.com/previous-versions/sql/)
+- [SQL Server 線上文件](../sql-server/index.yml?view=sql-server-2016)
+- [SQL Server 2014 線上文件](/sql/2014-toc/)
+- [舊版的 SQL Server 線上文件](previous-versions-sql-server.md)
 - [SQL 文件的版本控制系統](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016)

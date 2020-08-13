@@ -1,5 +1,5 @@
 ---
-title: 資料列集和 SQL Server 資料指標 | Microsoft Docs
+title: 資料列集和 SQL Server 資料指標 (OLE DB 驅動程式)
 description: 資料列集和 SQL Server 資料指標
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - cursors [OLE DB]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 9ba062c9718203c52659dd0c35fa7bcb76b1a40c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4c87699f389d487354b562fafa8cfab378c2ff0d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994183"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244150"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>資料列集和 SQL Server 資料指標
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -77,7 +77,7 @@ ms.locfileid: "67994183"
 |DBPROP_IMMOBILEROWS|VARIANT_FALSE|無法透過資料列集來更新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料。 此資料列集只支援順向捲動。 支援相對資料列定位。 如果參考的資料行上有索引存在，命令文字可以包含 ORDER BY 子句。<br /><br /> 只有當資料列集可以顯示其他工作階段上的命令所插入或其他使用者所插入的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料列時，才能在資料列集中使用 DBPROP_IMMOBILEROWS。 嘗試在 DBPROP_OTHERINSERT 不能是 VARIANT_TRUE 的任何資料列集上開啟此屬性設定為 VARIANT_FALSE 的資料列集時，將會產生錯誤。|  
 |DBPROP_REMOVEDELETED|VARIANT_TRUE|無法透過資料列集來更新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料。 此資料列集只支援順向捲動。 支援相對資料列定位。 命令文字可以包含 ORDER BY 子句 (除非由另一個屬性所限制)。|  
   
- 可以使用 **IOpenRowset::OpenRowset** 方法，輕鬆地在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 基底資料表或檢視表上建立伺服器資料指標所支援的 OLE DB Driver for SQL Server 資料列集。 依據名稱指定資料表或檢視表，在 *rgPropertySets* 參數內傳遞必要的資料列集屬性集。  
+ 可使用 **IOpenRowset::OpenRowset** 方法，以輕鬆地在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 基底資料表或檢視表上建立伺服器資料指標所支援的 OLE DB Driver for SQL Server 資料列集。 依據名稱指定資料表或檢視表，在 *rgPropertySets* 參數內傳遞必要的資料列集屬性集。  
   
  當取用者要求伺服器資料指標支援資料列集時，建立此資料列集的命令文字會受到限制。 具體而言，命令文字會受限為傳回單一資料列集結果的單一 SELECT 陳述式，或是實作單一 SELECT 陳述式來傳回單一資料列集結果的預存程序。  
   
@@ -145,10 +145,10 @@ ms.locfileid: "67994183"
   
  如果是特定的一組資料列集屬性，將會依照以下方式決定所選取的資料指標模型。  
   
- 請從指定的資料列集屬性集合中，取得上述表格中所列之屬性的子集。 根據每一個資料列集屬性的旗標值，將這些屬性分成兩個子群組：必要 (T、F) 或選擇性 (-)。 對於每一個資料指標模型而言，請從第一個表開始，然後從左到右移動，並將這兩個子群組中的屬性值與該資料行內的對應屬性值相比較。 如果資料指標模型沒有任何項目符合必要屬性，而且不符合選擇性屬性的數目最少，則會選取該資料指標模型。 如果有一個以上的資料指標模型，則會選擇最左邊。  
+ 請從指定的資料列集屬性集合中，取得上述表格中所列之屬性的子集。 根據每一個資料列集屬性的旗標值，將這些屬性分成兩個子群組：必要 (T、F) 或選擇性 (-)。 針對每一個資料指標模型，請從第一個表開始，然後從左到右移動。 將這兩個子群組中的屬性值與該資料行內對應屬性值相比較。 如果資料指標模型沒有任何項目符合必要屬性，而且不符合選擇性屬性的數目最少，則會選取該資料指標模型。 如果有一個以上的資料指標模型，則會選擇最左邊。  
   
 ## <a name="sql-server-cursor-block-size"></a>SQL Server 資料指標區塊大小  
- 當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料指標支援 OLE DB Driver for SQL Server 資料列集時，**IRowset::GetNextRows** 或 **IRowsetLocate::GetRowsAt** 方法之資料列控制代碼陣列參數中的項目數目會定義資料指標區塊大小。 此陣列中控制代碼所指示的資料列為資料指標區塊的成員。  
+ 當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料指標支援 OLE DB Driver for SQL Server 資料列集時，**IRowset::GetNextRows** 或 **IRowsetLocate::GetRowsAt** 方法其資料列控制代碼陣列參數中的項目數會定義資料指標區塊大小。 此陣列中控制代碼所指示的資料列為資料指標區塊的成員。  
   
  如果是支援書籤的資料列集，使用 **IRowsetLocate::GetRowsByBookmark** 方法擷取的資料列控制代碼會定義資料指標區塊的成員。  
   

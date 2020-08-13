@@ -1,5 +1,5 @@
 ---
-title: 已淘汰的資料庫引擎功能 | Microsoft Docs
+title: SQL Server 2017 中已淘汰的資料庫引擎功能 | Microsoft Docs
 titleSuffix: SQL Server 2019
 description: 了解 SQL Server 2017 (14.x) 中仍然可以使用，但由於已淘汰，因此不應在新應用程式中使用的資料庫引擎功能。
 ms.custom: seo-lt-2019
@@ -17,12 +17,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 33b12c2b68c067db1a47159c201f5cd04a9b1c45
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7ff7a91230daff2aab0e031fa2b87803e379921b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759137"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244074"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017 中已取代的資料庫引擎功能
 
@@ -127,7 +127,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | **timestamp** 資料類型的 **rowversion** 語法 | **rowversion** 資料類型語法 | timestamp |
 | 能夠將 null 值插入 **timestamp** 資料行中。 | 請改用 DEFAULT。 | INSERT NULL 到 TIMESTAMP 資料行中 |
 | 'text in row' 資料表選項|使用 **varchar(max)** 、 **nvarchar(max)** 和 **varbinary(max)** 資料類型。 如需詳細資訊，請參閱 [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)。|Text in row 資料表選項 |
-| 資料類型：<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **image**|使用 **varchar(max)** 、 **nvarchar(max)** 和 **varbinary(max)** 資料類型。|資料類型： **text**、 **ntext** 或 **image** |
+| 資料類型：<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **image**|使用 **varchar(max)** 、 **nvarchar(max)** 和 **varbinary(max)** 資料類型。|資料類型：**text**、**ntext** 或 **image** |
 
 ### <a name="database-management"></a>資料庫管理
 

@@ -15,12 +15,12 @@ ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12dc8a03cbf65a0c07e9a5985f1ffade813a3e5f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4681cdb7dbca293501902caec456a3e08eac5ba7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012144"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243687"
 ---
 # <a name="memory-management-architecture-guide"></a>記憶體管理架構指南
 
@@ -55,7 +55,7 @@ ms.locfileid: "86012144"
 > [!NOTE]
 > 下表中的欄位包含已不再提供的 32 位元版本。
 
-| |32 位元 <sup>1</sup> |64 位元|
+|記憶體原則|32 位元 <sup>1</sup> |64 位元|
 |-------|-------|-------| 
 |傳統記憶體 |所有的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 處理序虛擬位址空間的最大限制： <br>- 2 GB<br>- 使用 /3gb 開機參數時為 3 GB <sup>2</sup> <br>- 在 WOW64 上為 4 GB <sup>3</sup> |所有的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 處理序虛擬位址空間的最大限制： <br>- 使用 IA64 架構時為 7 TB (IA64 不支援 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 和以上版本)<br>- 使用 x64 架構時為作業系統最大值 <sup>4</sup>
 |AWE 機制 (允許 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在 32 位元平台上超過處理虛擬位址空間的限制。) |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard、Enterprise 與 Developer 版本：緩衝集區最多可存取 64 GB 的記憶體。|不適用 <sup>5</sup> |
