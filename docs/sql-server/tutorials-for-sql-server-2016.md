@@ -1,23 +1,22 @@
 ---
 title: 適用於 SQL Server 的教學課程 | Microsoft Docs
-ms.custom: ''
+description: 使用這些 SQL Server 教學課程來了解新的技術和功能。 舊版 SQL Server 的教學課程通常可用於較新版本。
 ms.date: 11/01/2017
 ms.prod: sql
-ms.reviewer: ''
-ms.technology: performance
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 95cf7a3b2d7be413df8ddc0f84ff8d71cffffdd0
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 8d86c5a3662417c1af39f12fc3d32167a73912c3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000638"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913941"
 ---
 # <a name="tutorials-for-sql-server"></a>適用於 SQL Server 的教學課程
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 提供可協助您了解新技術和功能的教學課程。 舊版的教學課程通常可用於較新版本。 當教學課程提及較新的功能時，將指出完成該教學課程所需的最低版本。  
      
 -   如果教學課程使用其中一個 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 資料庫，那麼您應該從 CodePlex 下載最新版本並加以使用。 如需詳細資訊，請參閱 [AdventureWorks 資料庫與 SQL Server 2016 CTP3 的指令碼](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)。    

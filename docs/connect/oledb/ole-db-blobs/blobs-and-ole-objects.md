@@ -1,8 +1,8 @@
 ---
-title: BLOB 與 OLE 物件 | Microsoft Docs
+title: BLOB 與 OLE 物件 (OLE DB 驅動程式) | Microsoft Docs
 description: BLOB 與 OLE 物件
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 05/25/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,20 +16,22 @@ helpviewer_keywords:
 - large data, OLE objects
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 70d3ffccfc9613434b09335944e445a2705b95c3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 54f8b4c38c22bcb32b039d9f0f0887c298051302
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67988676"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942770"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 與 OLE 物件
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server 會公開 **ISequentialStream** 介面，以支援取用者存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**、**text**、**image**、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 及 xml 資料類型作為二進位大型物件 (BLOB)。 **ISequentialStream** 上的 **Read** 方法可讓取用者在可管理的區塊中擷取更多資料。  
-  
+  OLE DB Driver for SQL Server 會公開 **ISequentialStream** 介面，以支援取用者存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**、**text**<a href="#text_note"><sup>**1**</sup></a>、**image**、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 及 XML 資料類型作為二進位大型物件 (BLOB)。 **ISequentialStream** 上的 **Read** 方法可讓取用者在可管理的區塊中擷取更多資料。
+
+ <b id="text_note">[1]：</b>使用 ISequentialStream 介面將 UTF-8 編碼資料插入舊版文字資料行僅限於支援 UTF-8 的伺服器。 當以不支援 UTF-8 的伺服器為目標時，如果嘗試執行此案例，將會導致驅動程式張貼下列錯誤訊息：「選取的資料行型別不支援資料流」。
+
  如需示範此功能的範例，請參閱[設定大型資料 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)。  
   
  當取用者在針對資料修改所繫結的存取子中提供介面指標時，OLE DB Driver for SQL Server 可以使用取用者實作的 **IStorage** 介面。  

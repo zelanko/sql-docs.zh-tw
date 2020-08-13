@@ -1,39 +1,39 @@
 ---
-title: RevoScaleR R 函式程式庫
-description: SQL Server 2016 R Services 和 SQL Server 機器學習服務 (內含 R) 中的 RevoScaleR 函式程式庫簡介。
+title: RevoScaleR R 套件
+description: RevoScaleR 是來自 Microsoft 的 R 套件，其支援分散式計算、遠端計算內容，以及高效能資料科學演算法。 其也支援資料匯入、資料轉換、摘要、視覺效果和分析。 該套件包含在 SQL Server 機器學習服務與 SQL Server 2016 R Services 中。
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 11/06/2019
-ms.topic: conceptual
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7b24d5499e618a09c4d80e8614b08219e6c6f788
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2288c1898d9299fb346a80e2cd0a53104e308724
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117431"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406151"
 ---
-# <a name="revoscaler-r-library-in-sql-server"></a>RevoScaleR (SQL Server 中的 R 程式庫)
+# <a name="revoscaler-r-package-in-sql-server-machine-learning-services"></a>RevoScaleR (SQL Server 機器學習服務中的 R 套件)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-**RevoScaleR** 是 Microsoft 提供的一個高效能資料科學函式程式庫。 函式支援資料匯入、資料轉換、摘要、視覺化和分析。
+**RevoScaleR** 是來自 Microsoft 的 R 套件，其支援分散式計算、遠端計算內容，以及高效能資料科學演算法。 其也支援資料匯入、資料轉換、摘要、視覺效果和分析。 該套件包含在 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)與 [SQL Server 2016 R Services](sql-server-r-services.md) 中。
 
-相較於基底 R 函式，RevoScaleR 作業可以針對非常大型的資料集、平行處理，以及在分散式檔案系統上執行。 函式可以使用區塊化，以及在作業完成時重組結果，來處理無法放入記憶體中的資料集。
+相較於基底 R 函式，RevoScaleR 作業可針對大型的資料集、平行處理，以及在分散式檔案系統上執行。 函式可以使用區塊化，以及在作業完成時重組結果，來處理無法放入記憶體中的資料集。
 
-RevoScaleR 函式會以 **rx** 或 **Rx** 首碼表示，讓它們易於識別。
+RevoScaleR 函式會以 rx** 或 **Rx** 前置詞表示，使其易於識別。
 
 RevoScaleR 可作為分散式資料科學的平台。 例如，您可以在 [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-the-microsoftml-package) 中，使用 RevoScaleR 計算內容和轉換搭配最先進的演算法。 您也可以使用 [rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec) 平行執行基底 R 函式。
 
 ## <a name="full-reference-documentation"></a>完整參考文件
 
-**RevoScaleR** 程式庫散佈在多個 Microsoft 產品中，但不論您是在 SQL Server 還是在另一個產品中取得此程式庫，其使用方式都相同。 由於函式相同，因此[個別 RevoScaleR 函式的文件](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)只發佈至 Microsoft Machine Learning Server 之 [R 參考](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference)底下的一個位置。 若有任何產品特定行為存在，函式說明頁面中將會註明不一致之處。
+**RevoScaleR** 套件分散在多個 Microsoft 產品中，但不論是在 SQL Server 或其他產品中取得該套件，其使用方式都相同。 由於函式相同，因此[個別 RevoScaleR 函式的文件](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)只發佈至 Microsoft Machine Learning Server 之 [R 參考](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference)底下的一個位置。 若有任何產品特定行為存在，函式說明頁面中將會註明不一致之處。
 
 ## <a name="versions-and-platforms"></a>版本與平台
 
-**RevoScaleR** 程式庫以 R 3.4.3 為基礎，且只有當您安裝下列其中一個 Microsoft 產品或下載項目時才會提供：
+**RevoScaleR** 套件以 R 3.4.3 為基礎，且只有當安裝下列其中一個 Microsoft 產品或下載項目時才會提供：
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 + [SQL Server Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)
@@ -68,7 +68,7 @@ RevoScaleR 可作為分散式資料科學的平台。 例如，您可以在 [Mic
 
 您可以從 R 執行 DDL 陳述式，前提是您具有執行個體及資料庫的必要權限。 下列函式會使用 ODBC 呼叫來執行 DDL 陳述式或擷取資料庫結構描述。
 
-| 函式| 描述|
+| 函式| 說明|
 | ------- | ---------- |
 | [rxSqlServerTableExists 和 rxSqlServerDropTable](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable) | 置放 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 資料表，或檢查資料庫資料表或物件是否存在。 |
 | [rxExecuteSQLDDL](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexecutesqlddl) | 執行定義或操作資料庫物件的資料定義語言 (DDL) 命令。 此函式無法傳回資料，而且只會用來擷取或修改物件結構描述或中繼資料。|
@@ -77,7 +77,7 @@ RevoScaleR 可作為分散式資料科學的平台。 例如，您可以在 [Mic
 
 建立資料來源物件之後，您可以使用物件將資料載入其中、轉換資料，或將新的資料寫入至指定的目的地。 根據來源中的資料大小，您也可以定義資料來源中的批次大小，以及以區塊移動資料。
 
-| 函式 | 描述 |
+| 函式 | 說明 |
 |----------|-------------|
 | [rxOpen-methods](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxopen-methods) | 檢查資料來源是否可用、開啟或關閉資料來源、從來源讀取資料、將資料寫入至目標，以及關閉資料來源。|
 | [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) | 將資料從資料來源移到檔案儲存體或資料框架中。|

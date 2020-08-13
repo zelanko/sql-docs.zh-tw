@@ -5,20 +5,20 @@ description: 從 RStudio 使用 sparklyr 連接到巨量資料叢集。
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: big-data-cluster
-ms.openlocfilehash: 375993e4fd9506c129e4f98d9ad2193472e03edb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.technology: machine-learning-bdc
+ms.openlocfilehash: e6767d32ae1f6c5f397141d1eddb15a5ec3f94a6
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73531621"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970009"
 ---
 # <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>在 SQL Server 巨量資料叢集中使用 sparklyr
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 sparklyr 提供適用於 Apache Spark 的 R 介面。 sparklyr 是 R 開發人員使用 Spark 的一種常見方式。 本文描述如何使用 RStudio 在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 中使用 sparklyr。
 
@@ -49,7 +49,11 @@ sparklyr 提供適用於 Apache Spark 的 R 介面。 sparklyr 是 R 開發人�
 在 RStudio 中，建立 R 指令碼並連接至 Spark，如下列範例所示：
 
 > [!TIP]
-> 針對 `<AZDATA_USERNAME>` 和 `<AZDATA_PASSWORD>` 值，請使用您在巨量資料叢集部署期間所設定的使用者名稱 (例如 root) 和密碼。 針對 `<IP>` 和 `<PORT>` 值，請參閱[連接到巨量資料叢集](connect-to-big-data-cluster.md)的相關文件。
+> 針對 `<AZDATA_USERNAME>` 與 `<AZDATA_PASSWORD>` 值，請使用您在巨量資料叢集部署期間設定的使用者名稱與密碼。
+
+[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
+
+針對 `<IP>` 和 `<PORT>` 值，請參閱[連接到巨量資料叢集](connect-to-big-data-cluster.md)的相關文件。
 
 ```r
 library(sparklyr)
@@ -80,7 +84,7 @@ iris_count
 
 ## <a name="distributed-r-computations"></a>分散式 R 計算
 
-sparklyr 的其中一項功能，就是能夠使用 [spark_apply](https://spark.rstudio.com/reference/spark_apply/) 來[散發 R 計算](https://spark.rstudio.com/guides/distributed-r/)。
+sparklyr 的其中一項功能，就是能夠使用 [spark_apply](https://spark.rstudio.com/guides/distributed-r/#apply-an-r-function-to-a-spark-object) 來[散發 R 計算](https://spark.rstudio.com/guides/distributed-r/)。
 
 因為巨量資料叢集使用 Livy 連線，所以您必須將呼叫中的 `packages = FALSE` 設定為 **spark_apply**。 如需詳細資訊，請參閱分散式 R 計算相關 sparklyr 文件的 [Livy 一節](https://spark.rstudio.com/guides/distributed-r/#livy)。 使用此設定時，您只能在要傳遞給 **spark_apply** 的 R 程式碼中使用 Spark 叢集上所安裝 R 套件。 下列範例示範此功能：
 

@@ -1,5 +1,6 @@
 ---
 title: 作業屬性 (Management Studio) | Microsoft Docs
+description: 了解 SQL Server Management Studio 的 [作業屬性] 頁面，您會在此檢視報表伺服器的作業資訊。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,17 +11,17 @@ f1_keywords:
 ms.assetid: 807ffd0e-9363-4f8f-9c36-c5d746ad19fd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fb1a989876126a57553a1ae833bcf847f9c005bc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8aabf771f7bd87f138e188a41be4b46ed43d2045
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571122"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915564"
 ---
 # <a name="job-properties-management-studio"></a>作業屬性 (Management Studio)
-  您可以使用 [作業屬性]  頁面來檢視有關進行中報表或訂閱的資訊，然後再加以取消。  
+  您可以使用 [作業屬性] 頁面來檢視有關進行中報表或訂閱的資訊，然後再加以取消。  
   
- 若要開啟此頁面，請啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、連線至報表伺服器，然後開啟 [作業]  資料夾。 以滑鼠右鍵按一下執行中的作業，然後按一下 [屬性]  。  
+ 若要開啟此頁面，請啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、連線至報表伺服器，然後開啟 [作業] 資料夾。 以滑鼠右鍵按一下執行中的作業，然後按一下 [屬性]。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services 不支援這項功能。 因此，當您執行 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]時，不會出現此頁面。  
@@ -30,9 +31,9 @@ ms.locfileid: "65571122"
   
 1.  開啟報表伺服器資料夾。  
   
-2.  以滑鼠右鍵按一下 [作業]  ，然後按一下 [重新整理]  。  
+2.  以滑鼠右鍵按一下 [作業]，然後按一下 [重新整理]。  
   
-3.  如果已列出作業，請以滑鼠右鍵按一下該作業，然後按一下 [屬性]  。  
+3.  如果已列出作業，請以滑鼠右鍵按一下該作業，然後按一下 [屬性]。  
   
 ## <a name="options"></a>選項。  
  **作業識別碼**  
@@ -42,10 +43,10 @@ ms.locfileid: "65571122"
  有效值為 **[新增]** 和 **[正在執行]** 。 當作業啟動時，狀態永遠是 **[新增]** 。 60 秒之後，狀態會變更為 **[正在執行]** 。 您必須重新整理此頁面，才能收取變更。  
   
  **作業類型**  
- 有效值為 [使用者]  和 [系統]  。 使用者作業是由個別使用者起始的任何作業。 這種作業包括視需要執行報表、手動產生報表記錄快照集，或者手動建立報表執行快照集。 進行中標準訂閱也是使用者作業。 系統作業是由報表伺服器起始的作業。 系統作業包括由排程觸發的報表處理。  
+ 有效值為 [使用者] 和 [系統]。 使用者作業是由個別使用者起始的任何作業。 這種作業包括視需要執行報表、手動產生報表記錄快照集，或者手動建立報表執行快照集。 進行中標準訂閱也是使用者作業。 系統作業是由報表伺服器起始的作業。 系統作業包括由排程觸發的報表處理。  
   
  **作業動作**  
- 若為報表，此資料行會顯示執行中的報表執行處理序。 這個值永遠是 [轉譯]  。  
+ 若為報表，此資料行會顯示執行中的報表執行處理序。 這個值永遠是 [轉譯]。  
   
  **作業描述**  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 預設不會提供作業描述。  

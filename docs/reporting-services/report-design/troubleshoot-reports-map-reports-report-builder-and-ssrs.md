@@ -1,6 +1,7 @@
 ---
 title: 報表疑難排解：地圖報表 (報表產生器) | Microsoft Docs
-ms.date: 01/17/2018
+description: 探索當自訂、新增圖層，或在報表產生器中使用對應來發行報表時，可能產生情況的疑難排解構想。
+ms.date: 07/22/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 87c034202eb5a4c17fd73e75f881361c04b3b636
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a3dc21f30222704622f86732c11bd5f1db7b46d1
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080836"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112021"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>報表疑難排解：地圖報表 (報表產生器及 SSRS)
   當您將地圖或地圖圖層加入至報表時、自訂報表中現有的地圖或地圖圖層時、預覽報表中的地圖時，或發行包含地圖的報表時，在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中可能會發生與地圖相關的問題。 您可以使用本主題來協助疑難排解這些問題。  
@@ -43,7 +44,7 @@ ms.locfileid: "77080836"
   
 1.  將 ESRI .shp 和 .dbf 檔案上傳或發行至報表伺服器。  
   
-2.  在報表之 [設計] 檢視的 [地圖] 窗格中，選取包含內嵌資料的圖層，然後開啟 **[圖層資料]** 屬性。 在 **[使用以下來源的空間資料]** 中，選取 **[連結到 ESRI 形狀檔 (.shp)]** ，然後瀏覽到報表伺服器上包含 ESRI 形狀檔的資料夾來選取它，然後按一下 [確定]。  
+2.  在報表之 [設計] 檢視的 [地圖] 窗格中，選取包含內嵌資料的圖層，然後開啟 **[圖層資料]** 屬性。 在 **[使用以下來源的空間資料]** 中，選取 **[連結到 ESRI 形狀檔 (.shp)]**，然後瀏覽到報表伺服器上包含 ESRI 形狀檔的資料夾來選取它，然後按一下 [確定]。  
   
 3.  儲存報表。 您變更之圖層的內嵌資料已從報表定義中移除。  
   
@@ -136,7 +137,7 @@ ms.locfileid: "77080836"
   
 -   **透明度：** 您可以針對每個地圖圖層分別指定透明度。 透明度的預設值會根據您加入圖層的方式而有所不同。 透明度為 0% 時，表示圖層不透明，而且不會透過此圖層顯示其他任何圖層資料。 若要讓其他資料透過現有的圖層顯示，請將值調整為較高的百分比，就可以提供您想要的效果。  
   
--   **可見度。** 根據地圖檢視區的縮放層級，圖層的可見性為 [Visible]  、[Hidden]  或 [ZoomBased]  。 您也可以指定縮放層級的最大與最小範圍。 可見性可以根據評估為這些值之其中一個的運算式。  
+-   **可見度。** 根據地圖檢視區的縮放層級，圖層的可見性為 [Visible]、[Hidden] 或 [ZoomBased]。 您也可以指定縮放層級的最大與最小範圍。 可見性可以根據評估為這些值之其中一個的運算式。  
   
     > [!TIP]  
     >  您可以在 [地圖] 窗格中切換每個圖層的可見性。 當您要設計每個圖層時，關閉其他所有圖層，就可以判斷問題出在個別圖層還是出在圖層間的透明度問題。  
@@ -206,6 +207,6 @@ ms.locfileid: "77080836"
   
 ## <a name="see-also"></a>另請參閱  
  [地圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [針對報表產生器進行疑難排解](https://docs.microsoft.com/sql/reporting-services/troubleshoot-report-builder?view=sql-server-2014)  
+ [針對報表產生器進行疑難排解](/previous-versions/sql/2014/reporting-services/troubleshoot-report-builder?view=sql-server-2014)  
   
   

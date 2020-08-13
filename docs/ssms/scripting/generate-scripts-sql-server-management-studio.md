@@ -1,5 +1,6 @@
 ---
 title: 產生指令碼
+description: 了解如何使用 [產生與發佈指令碼精靈] 來為多個物件建立 Transact-SQL 指令碼，以及如何使用 [物件總管] 中的 [編寫組件的指令碼為] 功能表來為個別物件或多個物件產生指令碼。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: scripting
@@ -11,16 +12,16 @@ ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a25249c04d322e2faa4c876b1afd2822896038b6
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 534d4982f46d0d83cb25718646b018dfa662cc35
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151880"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87123123"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>產生指令碼 (SQL Server Management Studio)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供兩種產生 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼的機制。 您可以使用 [產生和發佈指令碼精靈] 來建立多個物件的指令碼。 您也可以使用**物件總管**中的 [編寫組件的指令碼為] 功能表，為個別物件或多個物件產生指令碼。
 
@@ -48,7 +49,7 @@ ms.locfileid: "83151880"
 
 3. 展開物件的類別目錄。 例如，展開 [資料表] 或 [檢視表] 節點。
 
-4. 以滑鼠右鍵按一下物件，然後指向 [產生 \<物件類型> 的指令碼為]，例如指向 [產生資料表的指令碼為]。
+4. 以滑鼠右鍵按一下物件，然後指向 [產生 \<object type> 的指令碼為]，例如指向 [產生資料表的指令碼為]。
 
 5. 指向指令碼類型，例如 [CREATE 至] 或 [ALTER 至]。
 
@@ -72,6 +73,6 @@ ms.locfileid: "83151880"
 
 6. Ctrl + 以滑鼠左鍵按一下您想要編寫指令碼的第二個物件。
 
-7. 以滑鼠右鍵按一下其中一個選取的物件，然後選取 [產生 \<物件類型> 的指令碼為]。
+7. 以滑鼠右鍵按一下其中一個選取的物件，然後選取 [產生 \<object type> 的指令碼為]。
 
     ![物件總管](media/generate-scripts-sql-server-management-studio/object-explorer-details.png)

@@ -1,5 +1,6 @@
 ---
 title: 尋找結果視窗
+description: 有兩個 [尋找結果] 視窗可保留 [檔案中尋找] 及 [檔案中取代] 作業所找到的相符項目。 了解如何顯示這些視窗，以及如何顯示對應於相符的程式碼檔案及行。
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,18 +16,18 @@ ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 463e2943fbad1b8ad03843d94267c2d0a009104b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ef2063c8d9c5d4645ad96826400e14e9d2eea870
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253836"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122909"
 ---
 # <a name="find-results-windows"></a>尋找結果視窗
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   兩個尋找結果視窗使用 **[尋找和取代]** 對話方塊的 **[檔案中尋找]** 或 **[檔案中取代]** 索引標籤，顯示找到的相符結果。 **[檔案中尋找]** 和 **[檔案中取代]** 的 **[結果選項]** 命令允許您選擇 [尋找結果] 視窗，其中會列出所有找到的相符結果。  
   
- 選取的 [尋找結果] 視窗只要找到相符結果就會自動開啟。 若要手動顯示 [尋找結果] 視窗，請在 **[檢視]** 功能表上按一下 **[其他視窗]** ，然後按一下 **[尋找結果 1]** 或 **[尋找結果 2]** 。  
+ 選取的 [尋找結果] 視窗只要找到相符結果就會自動開啟。 若要手動顯示 [尋找結果] 視窗，請在 **[檢視]** 功能表上按一下 **[其他視窗]** ，然後按一下 **[尋找結果 1]** 或 **[尋找結果 2]**。  
   
  若要顯示程式碼檔案並跳至出現相符結果的行位置，請按兩下結果清單中的任一行。 來源檔案顯示在程式碼編輯器中，且插入點置於符合文字開始處。 符號出現在編輯器的指標邊界，以標示包含相符項目的行，並於狀態列顯示全文。  
   
@@ -43,7 +44,7 @@ ms.locfileid: "75253836"
  移至下一個相符項目的行。  
   
  **全部清除**  
- 移除 [結果]  清單中的所有相符項目。  
+ 移除 [結果] 清單中的所有相符項目。  
   
 ## <a name="shortcut-keys"></a>快速鍵  
  下列快速鍵可用來協助您快速導覽所有找到的相符項目。  

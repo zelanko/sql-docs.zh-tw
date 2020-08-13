@@ -2,22 +2,22 @@
 title: 轉換 R 與 SQL 資料類型
 description: 檢閱資料科學與機器學習解決方案中 R 與 SQL Server 之間的隱含與明確資料類型轉換。
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 08/08/2019
-ms.topic: conceptual
+ms.technology: machine-learning-services
+ms.date: 07/15/2020
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f7a6a95033d16e7bc39f07d6b72324e3aea6634
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: bf08045adba7298d5a5b8e261c406915b44effe0
+ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486717"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86411636"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>R 與 SQL Server 之間的資料類型對應
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 針對在 SQL Server 機器學服服務 R 整合功能上執行的 R 解決方案，請檢閱不支援的資料類型清單，以及當資料在 R 程式庫與 SQL Server 之間傳遞時，可能會隱含執行的資料類型轉換。
 
@@ -41,17 +41,17 @@ SQL Server 2016 R Services 與具有 R 的 SQL Server 機器學習服務，與�
 
 |SQL 類型|R 類別|RESULT SET 類型|註解|
 |-|-|-|-|
-|**bigint**|`numeric`|**float**||
+|**bigint**|`numeric`|**float**|使用 `sp_execute_external_script` 執行 R 指令碼允許以 bigint 資料類型作為輸入資料。 不過，由於其會轉換成 R 的數值類型，因此極高值或具有小數點的值會出現精確度遺失情況。 R 最多只支援 53 位元整數，之後會開始出現精確度遺失的情況。|
 |**binary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|只允許作為輸入參數和輸出|
 |**bit**|`logical`|**bit**||
-|**char(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**||
+|**char(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**|由於在未明確設定 *stringsAsFactors* 參數的情況下建立輸入資料框架 (input_data_1)，因此資料行類型將取決於 R 中的 *default.stringsAsFactors()*|
 |**datetime**|`POSIXct`|**datetime**|以 GMT 來表示|
 |**date**|`POSIXct`|**datetime**|以 GMT 來表示|
-|**decimal(p,s)**|`numeric`|**float**||
+|**decimal(p,s)**|`numeric`|**float**|使用 `sp_execute_external_script` 來執行 R 指令碼，以允許將 decimal 資料類型作為輸入資料。 不過，由於其會轉換成 R 的數值類型，因此極高值或具有小數點的值會出現精確度遺失情況。 `sp_execute_external_script` 與 R 指令碼不支援資料類型的完整範圍，且會改變最後幾個小數位數，特別是分數的小數位數。|
 |**float**|`numeric`|**float**||
 |**int**|`integer`|**int**||
-|**money**|`numeric`|**float**||
-|**numeric(p,s)**|`numeric`|**float**||
+|**money**|`numeric`|**float**|使用 `sp_execute_external_script` 來執行 R 指令碼，以允許將 money 資料類型作為輸入資料。 不過，由於其會轉換成 R 的數值類型，因此極高值或具有小數點的值會出現精確度遺失情況。 有時候，美分值不精確，且會發出警告：警告：無法精確地表示美分值。  |
+|**numeric(p,s)**|`numeric`|**float**|使用 `sp_execute_external_script` 執行 R 指令碼，以允許將 numeric 資料類型作為輸入資料。 不過，由於其會轉換成 R 的數值類型，因此極高值或具有小數點的值會出現精確度遺失情況。 `sp_execute_external_script` 與 R 指令碼不支援資料類型的完整範圍，且會改變最後幾個小數位數，特別是分數的小數位數。|
 |**real**|`numeric`|**float**||
 |**smalldatetime**|`POSIXct`|**datetime**|以 GMT 來表示|
 |**smallint**|`integer`|**int**||
@@ -60,8 +60,7 @@ SQL Server 2016 R Services 與具有 R 的 SQL Server 機器學習服務，與�
 |**uniqueidentifier**|`character`|**varchar(max)**||
 |**varbinary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|只允許作為輸入參數和輸出|
 |**varbinary(max)**|`raw`|**varbinary(max)**|只允許作為輸入參數和輸出|
-|**varchar(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**||
-
+|**varchar(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**|由於在未明確設定 *stringsAsFactors* 參數的情況下建立輸入資料框架 (input_data_1)，因此資料行類型將取決於 R 中的 *default.stringsAsFactors()*|
 
 ## <a name="data-types-not-supported-by-r"></a>R 不支援的資料類型
 

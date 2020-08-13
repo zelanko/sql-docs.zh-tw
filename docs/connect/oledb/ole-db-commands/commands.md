@@ -1,5 +1,5 @@
 ---
-title: 命令 | Microsoft Docs
+title: Commands (OLE DB 驅動程式) | Microsoft Docs
 description: OLE DB Driver for SQL Server 中的命令
 ms.custom: ''
 ms.date: 06/14/2018
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - commands [OLE DB]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: f6919c8355660ee2c1e27f2c0896ca189497b50d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: da86675b244ac3424c6ffaf04df6c42bc133c4d7
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68016024"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943057"
 ---
 # <a name="commands"></a>命令
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

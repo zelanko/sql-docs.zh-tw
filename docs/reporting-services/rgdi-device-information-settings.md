@@ -1,5 +1,6 @@
 ---
 title: RGDI 裝置資訊設定 | Microsoft Docs
+description: 了解可以 RGDI 格式轉譯的 RGDI 裝置資訊設定。
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b11fd9cc-3b84-4038-9611-a43feb2f6fdd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a8f72dd611e9d0838001091b450ea88e61213a0f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6aee7fed866f15d842ac653fcca420d28fb7d3f5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65572325"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87235525"
 ---
 # <a name="rgdi-device-information-settings"></a>RGDI 裝置資訊設定
   下表列出以 RGDI 格式轉譯的裝置資訊設定。  

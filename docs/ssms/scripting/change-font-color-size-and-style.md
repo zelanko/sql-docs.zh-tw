@@ -1,5 +1,6 @@
 ---
 title: 變更字型色彩、大小與樣式
+description: 了解如何變更 SQL Server Management Studio 編輯器的字型色彩、大小與樣式。 不同文字類型的色彩可能不同 (例如註解與陳述式)。
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -18,27 +19,27 @@ ms.assetid: 5c3061db-23c5-4d9f-a6ab-6b53a1a83f88
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d479991bed66e04a7c42870f0f1ba0c61ca7101
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b131fef64ea7628b89a64c01be100b40a09af9e5
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246421"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920905"
 ---
 # <a name="change-font-color-size-and-style"></a>變更字型色彩、大小與樣式
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   您可以自訂文字在編輯器及 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的其他位置中之呈現方式。  
   
 ### <a name="to-change-font-color-size-and-style-in-the-editor"></a>變更編輯器中的字型色彩、大小和樣式  
   
-1.  在 **[工具]** 功能表上，按一下 **[選項]** 。 按一下 [環境]  ，然後按一下 [字型和色彩]  。  
+1.  在 **[工具]** 功能表上，按一下 **[選項]** 。 按一下 [環境]，然後按一下 [字型和色彩]。  
   
-2.  在 [顯示設定]  清單中，選取 [文字編輯器]  。  
+2.  在 [顯示設定] 清單中，選取 [文字編輯器]。  
   
 3.  變更字型、大小、顯示項目、前景和背景色彩。  
   
 > [!NOTE]  
->  按一下 [使用預設值]  來返回預設值。  
+>  按一下 [使用預設值] 來返回預設值。  
   
  編輯器只有一個字型設定，它會影響 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的所有編輯器。 您可以根據文字類型來變更色彩 (如註解和陳述式)。 在 [字型] 清單中，等寬字型會以粗體呈現，您可以根據個別文字類型套用粗體設定。 例如，您可以將註解和運算子的格式設為粗體，其他文字類型不會受到影響。  
   

@@ -1,5 +1,6 @@
 ---
 title: 顯示參數值的隱藏資料集 - 多維度資料 | Microsoft Docs
+description: 了解如何顯示參數值的隱藏資料集，以供顯示報表中的所有資料集。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eb01c4ca-4fd6-4629-b595-f0d2565915df
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3b7298d9d761342afbfee33c62f4eda3aa7f3b59
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 610ca1c3b7dbd5660a98dec4a91ce4f9988a5108
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66499910"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86455250"
 ---
 # <a name="show-hidden-datasets-for-parameter-values---multidimensional-data"></a>顯示參數值的隱藏資料集 - 多維度資料
   您的報表可能包含自動產生的資料集 (也稱為隱藏的資料集)，而這些資料集預設不會顯示在 [報表資料] 窗格中。 這些資料集是以下列方式建立的：  
@@ -31,7 +32,7 @@ ms.locfileid: "66499910"
   
 ### <a name="to-display-hidden-datasets"></a>顯示隱藏的資料集  
   
--   在 [報表資料] 窗格中，以滑鼠右鍵按一下 [資料集] 資料夾，然後按一下 [顯示隱藏資料集]  。  
+-   在 [報表資料] 窗格中，以滑鼠右鍵按一下 [資料集] 資料夾，然後按一下 [顯示隱藏資料集]。  
   
 ## <a name="see-also"></a>另請參閱  
  [查詢設計工具 &#40;SSRS&#41;](query-design-tools-ssrs.md)   

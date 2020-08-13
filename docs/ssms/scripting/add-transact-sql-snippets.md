@@ -1,5 +1,6 @@
 ---
 title: 新增 Transact-SQL 程式碼片段
+description: 了解如何將自己的 Transact-SQL 程式碼片段新增至 SQL Server 包含的預先定義程式碼片段集合。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,21 +12,21 @@ ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 52ce47c3402e75ae14fdd9c90abb83481c62e297
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 499cbf0dd9ea2f12e182f678bc61976e31df2504
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80243378"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921344"
 ---
 # <a name="add-transact-sql-snippets"></a>新增 Transact-SQL 程式碼片段
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   將您自己的 Transact-SQL 程式碼片段加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中包含的預先定義程式碼片段集合。  
   
 ## <a name="creating-a-transact-sql-snippet-file"></a>建立 Transact-SQL 程式碼片段檔案  
  建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼片段的第一部分是使用您自己的程式碼片段文字建立 XML 檔案。 此檔案必須有 .snippet 副檔名，且必須符合 [程式碼片段結構描述參考](https://go.microsoft.com/fwlink/?LinkId=207504)的需求。 將程式碼片段語言設定為 SQL。  
   
- 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所隨附的預先定義程式碼片段當做範例。 若要尋找預先定義的程式碼片段，請開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，選取 [工具]  功能表，然後按一下 [程式碼片段管理員]  。 在 **[語言]** 清單方塊中選取 **[SQL]** ， [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼片段的路徑就會顯示在 **[位置]** 方塊中。  
+ 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所隨附的預先定義程式碼片段當做範例。 若要尋找預先定義的程式碼片段，請開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，選取 [工具] 功能表，然後按一下 [程式碼片段管理員]。 在 **[語言]** 清單方塊中選取 **[SQL]** ， [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼片段的路徑就會顯示在 **[位置]** 方塊中。  
   
 ## <a name="registering-the-code-snippet"></a>註冊程式碼片段  
  在建立程式碼片段檔案之後，請使用程式碼片段管理員，向 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]註冊程式碼片段。 您可以加入包含多個程式碼片段的資料夾，或是將個別程式碼片段匯入到 **[My Code 程式碼片段]** 資料夾。  
@@ -48,7 +49,7 @@ ms.locfileid: "80243378"
   
 2.  選取 **[工具]** 功能表，然後按一下 **[程式碼片段管理員]** 。  
   
-3.  按一下 [匯入]  按鈕。  
+3.  按一下 [匯入] 按鈕。  
   
 4.  導覽至包含程式碼片段的資料夾，然後按一下 .snippet 檔案，再按一下 **[開啟]** 按鈕。  
   
@@ -108,7 +109,7 @@ ms.locfileid: "80243378"
   
 3.  選取 **[工具]** 功能表，然後按一下 **[程式碼片段管理員]** 。  
   
-4.  按一下 [匯入]  按鈕。  
+4.  按一下 [匯入] 按鈕。  
   
 5.  導覽至包含 TryCatch.snippet 的資料夾，然後按一下 TryCatch.snippet 檔案，再按一下 **[開啟]** 按鈕。 您應該會在 **My Code Snippets** 資料夾看到 TryCatch 程式碼片段。  
   

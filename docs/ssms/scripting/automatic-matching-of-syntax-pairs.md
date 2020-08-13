@@ -1,5 +1,6 @@
 ---
 title: 語法組的自動比對
+description: 了解如何自動比對查詢編輯器 (對稱的分隔符號)、XMLA 查詢編輯器 (對稱的括號)，以及 MDX 與 DMX (對稱的括弧) 中的語法組。
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -11,15 +12,15 @@ ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1251b6664266fdd1e4d91519186df95a52e52f35
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d23610ed602133b7c9c218a1da1a678c84954a93
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74834242"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920944"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>語法組的自動比對
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   語法組的自動比對會提供有關必須成對編碼的語法元素是否正確配對的立即回應給您。 這就是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中的分隔符號比對、Analysis Services XMLA 查詢編輯器中的大括號比對，以及 MDX 和 DMX 編輯器中的括號比對。  
   
 ## <a name="database-engine-query-editor-delimiter-matching"></a>Database Engine 查詢編輯器的分隔符號比對  
@@ -55,7 +56,7 @@ ms.locfileid: "74834242"
   
 -   對稱的開始與結束標記。  
   
--   任何一對 "\<" 和 ">" 角括弧。  
+-   任何一對 "\<" and ">" 角括號。  
   
 -   註解的開始與結束。  
   

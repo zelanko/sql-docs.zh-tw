@@ -1,5 +1,6 @@
 ---
 title: 建立共用資料集或內嵌資料集 (報表產生器) | Microsoft Docs
+description: 了解如何建立內嵌資料集和共用資料集，以在各種報表中使用。 若要建立資料集，您需要內嵌或共用的資料來源。
 ms.date: 10/17/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b19b5442731bf52e299450a32cb8536c0f95467f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 76e1482bf441401b02de984529d7fd178d88975c
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081407"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457800"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>建立共用資料集或內嵌資料集 (報表產生器及 SSRS)
 內嵌資料集適用於單一 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 報表。 報表伺服器上的共用資料集可供多份報表使用，行動和分頁報表皆可。 若要建立資料集，您需要內嵌或共用的資料來源。  
@@ -50,7 +51,7 @@ ms.locfileid: "77081407"
      ![rs_NewSharedDataset](../../reporting-services/report-data/media/rs-newshareddataset.gif "rs_NewSharedDataset")  
   
     > [!NOTE]  
-    >  如果 [New report or dataset pane (新增報表或資料集窗格)]  未出現，請從 [報表產生器] 按鈕按一下 [新增]  。  
+    >  如果 [New report or dataset pane (新增報表或資料集窗格)] 未出現，請從 [報表產生器] 按鈕按一下 [新增]。  
   
 2.  在左窗格的 **[建立資料集]** 底下，按一下 **[共用資料集]** 。  
   
@@ -78,7 +79,7 @@ ms.locfileid: "77081407"
   
 6.  在功能區上，按一下 **[資料集屬性]** 。  
   
-7.  按一下 **[參數]** 。 在這個頁面上，將預設值設定為常數或運算式，並將參數標示為唯讀、可為 Null 或 [從查詢中忽略]  。 如需詳細資訊，請參閱 [報表參數](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
+7.  按一下 **[參數]** 。 在這個頁面上，將預設值設定為常數或運算式，並將參數標示為唯讀、可為 Null 或 [從查詢中忽略]。 如需詳細資訊，請參閱 [報表參數](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 

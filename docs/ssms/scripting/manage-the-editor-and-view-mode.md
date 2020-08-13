@@ -1,5 +1,6 @@
 ---
 title: 管理編輯器和檢視模式
+description: 了解如何選取 SQL Server Management Studio 兩個檢視模式的其中一個：索引標籤式文件模式及多重文件介面模式。 並了解分割區視圖、自動換行、虛擬空間模式、顯示行號、全螢幕模式與自動全部隱藏等功能。
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -20,15 +21,15 @@ ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0bc702e9ada88099e0d13cd3fc9e3a955134532f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9b3017d75cd7222948c63b4883b7935c551f3144
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253805"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122581"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>管理編輯器和檢視模式
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   編輯器提供了許多用來控制程式碼檢視的方式。  
   
 ## <a name="changing-the-view-mode"></a>變更檢視模式  
@@ -67,7 +68,7 @@ ms.locfileid: "75253805"
   
 2.  按一下 **[文字編輯器]** 。  
   
-3.  開啟適當語言資料夾 (或 [所有語言]  ，這會影響所有語言)。  
+3.  開啟適當語言資料夾 (或 [所有語言]，這會影響所有語言)。  
   
 4.  選取 **[自動換行]** 。  
   
@@ -80,7 +81,7 @@ ms.locfileid: "75253805"
   
 2.  按一下 **[文字編輯器]** 。  
   
-3.  開啟適當語言資料夾 (或 [所有語言]  ，這會影響所有語言)。  
+3.  開啟適當語言資料夾 (或 [所有語言]，這會影響所有語言)。  
   
 4.  選取 **[啟用虛擬空間]** 。  
   

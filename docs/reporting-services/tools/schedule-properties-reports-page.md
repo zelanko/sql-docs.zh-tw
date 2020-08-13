@@ -1,5 +1,6 @@
 ---
 title: 排程屬性 (報表頁面) | Microsoft Docs
+description: 了解 SQL Server Management Studio 中，列出特定共用排程所有報表的 [Reporting Services 排程屬性] 頁面。
 ms.date: 06/30/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 7db728bd-4b08-43ef-a49a-e8dcdd37cf89
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0e8441dec655398ec530bc95049a339edd9e01ab
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 155df0fc52ffc390a0bf528fb2a907751dbbfe6b
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571408"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916894"
 ---
 # <a name="schedule-properties-reports-page"></a>排程屬性 (報表頁面)
   使用 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 中的 [ [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 排程屬性] 頁面來檢視使用特定共用排程的所有報表清單。 排程可用來重新整理報表快照集、產生報表記錄、觸發訂閱或使報表的快取副本過期。 若要了解如何使用排程，請檢視報表的屬性和訂閱資訊。  
@@ -25,9 +26,9 @@ ms.locfileid: "65571408"
  開啟 [排程屬性] 頁面：
  1. 啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。
  2. 連接到報表伺服器。
- 3. 開啟 [共用排程]  資料夾。
- 4. 以滑鼠右鍵按一下共用的排程，然後選取 [屬性]  。
- 5. 按一下 [報表]  。  
+ 3. 開啟 [共用排程] 資料夾。
+ 4. 以滑鼠右鍵按一下共用的排程，然後選取 [屬性]。
+ 5. 按一下 [報表]。  
   
   您也可以從 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 入口網站的 [網站設定] 管理共用的排程。
   

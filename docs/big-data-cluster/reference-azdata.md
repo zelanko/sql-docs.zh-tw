@@ -5,43 +5,47 @@ description: azdata 命令的參考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 94adabb2ace2f5619abd700b2652aa7d88f3e1aa
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7a3862dca974efc0ef035a0b52edfff39d2f5bcf
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74822339"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942970"
 ---
 # <a name="azdata"></a>azdata
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-此參考文章描述 `azdata` 命令。
+下文提供 `azdata` 工具中 `sql` 命令的參考。 如需其他 `azdata` 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)。
 
 ## <a name="commands"></a>命令
-|     |     |
+| 命令 | 說明 |
 | --- | --- |
-|[azdata bdc](reference-azdata-bdc.md) | 選取、管理和操作 SQL Server 巨量資料叢集。 |
 |[azdata app](reference-azdata-app.md) | 建立、刪除、執行和管理應用程式。 |
+|[azdata bdc](reference-azdata-bdc.md) | 選取、管理和操作 SQL Server 巨量資料叢集。 |
+|[azdata sql](reference-azdata-sql.md) | SQL DB CLI 可讓使用者透過 T-SQL 與 SQL Server 互動。 |
 [azdata login](#azdata-login) | 登入叢集的控制器端點，並將其命名空間設定為使用中內容。 若要在登入時使用密碼，您必須設定 AZDATA_PASSWORD 環境變數。
 [azdata logout](#azdata-logout) | 登出叢集。
 |[azdata context](reference-azdata-context.md) | 內容管理命令。 |
-|[azdata control](reference-azdata-control.md) | 建立、刪除及管理控制平面。 |
-|[azdata sql](reference-azdata-sql.md) | SQL DB CLI 可讓使用者透過 T-SQL 與 SQL Server 互動。 |
+|[azdata 延伸模組](reference-azdata-extension.md) | 管理及更新 CLI 延伸模組。 |
 |[azdata notebook](reference-azdata-notebook.md) | 用來從終端機查看、執行和管理筆記本的命令。 |
 ## <a name="azdata-login"></a>azdata login
 當叢集已部署時，它會在部署期間列出控制器端點，您應該使用此端點來登入。  如果您不知道控制器端點，您可以藉由將您叢集的 Kube 組態放在您系統的預設位置 <user home>/.kube/config 來登入，或使用 KUBECONFIG 環境變數，也就是 export KUBECONFIG=路徑/至/.kube/config。當您登入時，此叢集的命名空間將會設定為使用中內容。
 ```bash
 azdata login [--auth] 
              [--endpoint -e]  
-             [--accept-eula -a]  
-             [--namespace -n]  
-             [--username -u]  
-             [--principal -p]
+             
+[--accept-eula -a]  
+             
+[--namespace -n]  
+             
+[--username -u]  
+             
+[--principal -p]
 ```
 ### <a name="examples"></a>範例
 使用基本驗證登入。
@@ -89,7 +93,7 @@ azdata login -n ClusterName
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org)。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 ## <a name="azdata-logout"></a>azdata logout
@@ -110,7 +114,7 @@ azdata logout
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org)。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 

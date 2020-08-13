@@ -1,5 +1,6 @@
 ---
 title: 專案屬性頁對話方塊 | Microsoft Docs
+description: 了解專案屬性頁對話方塊中的選項，其可供設定報表伺服器專案的部署屬性。
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8800d8c8b88ef4aeb486513fdff590ddec221bd6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9a3be836ba4df9bcb4ef6f8b6ca24caa5c7a67bf
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578232"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86909998"
 ---
 # <a name="project-property-pages-dialog-box"></a>專案屬性頁對話方塊
 
-  使用專案屬性頁，即可設定報表伺服器專案的部署屬性。 若要開啟此對話方塊，請從 專案 功能表按一下 \<報表專案名稱>屬性。  
+  使用專案屬性頁，即可設定報表伺服器專案的部署屬性。 若要開啟此對話方塊，請從 [專案] 功能表按一下 [ _\<Report Project Name>_ 屬性]。  
   
  在您定義組態屬性之後，可以從工具列的 [方案組態] 下拉式清單中選取組態。  
 
@@ -54,7 +55,7 @@ ms.locfileid: "65578232"
  選取 **True** ，即可在發行報表時，以專案中的資料來源覆寫伺服器上的資料來源。 選取 **False** ，即可保留伺服器上現有的資料來源。  
   
  **TargetServerVersion**  
- 選取 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，或選取 [偵測版本] 自動判斷安裝在 **TargetServer URL** 屬性所識別之伺服器上的版本。 預設值是 **SQL Server 2017**。  
+ 選取 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，或選取 [偵測版本]**** 自動判斷安裝在 **TargetServer URL** 屬性所識別之伺服器上的版本。 預設值是 **SQL Server 2017**。  
   
  **TargetDataSourceFolder**  
  用來儲存已發行共用資料來源的資料夾名稱。 如果您未指定資料夾，資料來源就會發行到與報表相同的資料夾。 如果報表伺服器上沒有此資料夾，報表設計師會在發行報表時建立資料夾。  
@@ -78,7 +79,7 @@ ms.locfileid: "65578232"
  發行至以 SharePoint 整合模式執行的報表伺服器時，請使用 SharePoint 頂層網站或子網站的 URL。 若未指定網站，則會使用預設的最上層網站。 例如： 
 + `http:\\<servername>`, 
 + `http:\\<servername\<site>` 
-+ 第 1 課：建立 Windows Azure 儲存體物件`http:\\<servername>\<site>\<subsite>`。  
++ `http:\\<servername>\<site>\<subsite>`.  
 
 ## <a name="next-steps"></a>後續步驟
 

@@ -1,5 +1,6 @@
 ---
 title: Management Studio F1 說明中的報表伺服器 | Microsoft Docs
+description: 檢視用於在 SQL Server Management Studio 中管理報表伺服器的功能相關資訊。
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 982e8c03-7341-4895-8a95-a12d52c564ea
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 026583e0093812dbf683c93de9d11fd8ffabb7e4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8df79e7a132d699428860c076a19ea734f3ce48d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65576148"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916595"
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Management Studio F1 說明中的報表伺服器
   此章節包含有關 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，可用來管理報表伺服器之對話方塊的主題。  

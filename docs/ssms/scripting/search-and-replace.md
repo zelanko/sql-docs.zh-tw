@@ -1,5 +1,6 @@
 ---
 title: 搜尋和取代
+description: 了解尋找和取代文字的四種不同方式，其中每一種都會顯示自身版本的 [尋找] 和 [取代] 對話方塊。 [尋找和取代] 選項設定會影響所有搜尋方式。
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -28,20 +29,20 @@ ms.assetid: 3641c7b3-3e3e-4ddd-af82-c15b50004f94
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7fc7b5c7cb0fbd560dc2826af24029d2c7961d95
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1ff7b10b5c4613032049d71365b49b9b147ce90a
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253695"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122818"
 ---
 # <a name="search-and-replace"></a>搜尋和取代
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  您可以利用多種不同的方式來尋找和取代文字。 在 **[編輯]** 功能表上， **[尋找和取代]** 提供了四個選項： **[快速尋找]** 、 **[快速取代]** 、 **[檔案中尋找]** 和 **[檔案中取代]** 。 這些選項會開啟各個版本的 **[尋找和取代]** 對話方塊。 您也可以不用對話方塊，而利用累加搜尋鍵盤快速鍵來搜尋。 這些技術可讓您控制尋找和取代的範圍，以及選擇檢閱搜尋相符項目和取代項目的方法。  
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+  您可以利用多種不同的方式來尋找和取代文字。 在 [編輯] 功能表上，[尋找和取代] 提供四個選擇：[快速尋找]、[快速取代]、[在檔案中尋找] 或 [在檔案中取代]。 這些選項會開啟各個版本的 **[尋找和取代]** 對話方塊。 您也可以不用對話方塊，而利用累加搜尋鍵盤快速鍵來搜尋。 這些技術可讓您控制尋找和取代的範圍，以及選擇檢閱搜尋相符項目和取代項目的方法。  
   
  當您搜尋和取代文字時，您應該考慮下列各點：  
   
--   **[尋找和取代]** 對話方塊所設定的選項會影響所有搜尋。 這些選項包括 **[大小寫須相符]** 、 **[全字拼寫須相符]** 、 **[向上搜尋]** 、 **[搜尋隱藏文字]** 、 **[萬用字元]** 、 **[規則運算式]** 、 **[查詢所有開啟的文件]** 和 **[查詢目前專案]** 。 並非 **[尋找和取代]** 對話方塊的所有版本都提供了所有選項。  
+-   **[尋找和取代]** 對話方塊所設定的選項會影響所有搜尋。 這些選項包括 **[大小寫須相符]**、 **[全字拼寫須相符]**、 **[向上搜尋]**、 **[搜尋隱藏文字]**、 **[萬用字元]**、 **[規則運算式]**、 **[查詢所有開啟的文件]** 和 **[查詢目前專案]**。 並非 **[尋找和取代]** 對話方塊的所有版本都提供了所有選項。  
   
 -   只有在取代作業之後維持開啟狀態的文件，才能夠使用 **[恢復]** 。  
   

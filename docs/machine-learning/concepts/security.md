@@ -2,26 +2,26 @@
 title: 擴充性的安全性概觀
 description: SQL Server 機器學習服務中擴充性架構的安全性概觀。 登入與使用者帳戶、SQL Server Launchpad 服務、背景工作角色帳戶、執行多個指令碼及檔案權限的安全性。
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 03/11/2020
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 562cc28d09b7c1341b58c45bfcc517db553bff16
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 80f14fc69a6abf0720f3f9d9fb3c170f0ab1da0d
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118541"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406221"
 ---
 # <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>SQL Server 機器學習服務中擴充性架構的安全性概觀
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-本文描述用來將 SQL Server 資料庫引擎和相關元件與擴充性架構整合的整體安全性架構。 它會檢查安全性實體、服務、處理序身分識別及權限。 如需 SQL Server 中擴充性重要概念與元件的詳細資訊，請參閱 [SQL Server 機器學習服務的擴充性架構](extensibility-framework.md)。
+本文描述 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)中用來將 SQL Server 資料庫引擎和相關元件與擴充性架構整合的整體安全性架構。 它會檢查安全性實體、服務、處理序身分識別及權限。 如需 SQL Server 中擴充性重要概念與元件的詳細資訊，請參閱 [SQL Server 機器學習服務的擴充性架構](extensibility-framework.md)。
 
 ## <a name="securables-for-external-script"></a>外部指令碼的安全性實體
 
@@ -192,7 +192,7 @@ print(system("ls -al /var/opt/mssql-extensibility/data/*/*"))
 
 ## <a name="implied-authentication-loopback-requests"></a>隱含驗證 (回送要求)
 
-「隱含驗證」  描述連線要求行為，其中以低權限背景工作帳戶執行的外部處理序，在資料或作業的回送要求上會顯示為 SQL Server 的受信任使用者身分識別。 就概念而言，隱含驗證對於 Windows 驗證而言是唯一的 (在指定受信任連線的SQL Server 連接字串中，或在來自外部處理序 (例如 R 或 Python 指令碼) 的要求上)。 這有時候也稱為「回送」  。
+「隱含驗證」  描述連線要求行為，其中以低權限背景工作帳戶執行的外部處理序，在資料或作業的回送要求上會顯示為 SQL Server 的受信任使用者身分識別。 就概念而言，隱含驗證對於 Windows 驗證而言是唯一的 (在指定受信任連線的SQL Server 連接字串中，或在來自外部處理序 (例如 R 或 Python 指令碼) 的要求上)。 這有時候也稱為「回送」。
 
 受信任的連線可從外部指令碼運作，但只適用於額外的組態。 在擴充性架構中，外部處理序會在背景工作帳戶下執行，繼承父系 **SQLRUserGroup** 的權限。 當連接字串指定 `Trusted_Connection=True` 時，背景工作角色帳戶的身分識別會顯示在連線要求上，SQL Server 預設不會知道此資訊。
 

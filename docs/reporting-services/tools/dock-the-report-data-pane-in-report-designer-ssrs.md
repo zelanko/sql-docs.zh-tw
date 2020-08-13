@@ -1,5 +1,6 @@
 ---
 title: 停駐報表設計師中的報表資料窗格 | Microsoft Docs
+description: 了解如何檢視和固定 [報表資料] 窗格，該窗格會顯示 SQL Server Data Tools 中 Reporting Services 報表設計師內報表資料物件的階層檢視。
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e865cb5d12a66a1225a037fdc3a191333de7179c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9e1faf69fd193279e4f914651b483402ff993da3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080582"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914048"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>停駐報表設計師中的報表資料窗格 (SSRS)
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 的 [ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]報表設計師] 中，[報表資料] 窗格會顯示您可用於報表之資料物件的階層式檢視，包括資料來源、資料集、欄位、參數和影像。 此檢視中的資料來源可以內嵌，或參考 [方案總管] 內顯示的共用資料來源。  
   
 ### <a name="to-display-the-report-data-pane"></a>顯示報表資料窗格  
   
--   在 [設計] 檢視上，選取 [檢視]  功能表上的 [報表資料]  ，或使用 CTRL+ALT+D。
+-   在 [設計] 檢視上，選取 [檢視] 功能表上的 [報表資料]，或使用 CTRL+ALT+D。
   
 ### <a name="to-dock-the-report-data-pane"></a>停駐報表資料窗格  
   
@@ -32,11 +33,11 @@ ms.locfileid: "77080582"
   
 ### <a name="to-change-the-report-data-pane-from-a-docked-window-to-a-tabbed-window"></a>將報表資料窗格從停駐視窗變更為索引標籤式視窗  
   
--   以滑鼠右鍵按一下 [報表資料] 窗格的標題列，然後按一下 [停駐成為索引標籤式文件]  。  
+-   以滑鼠右鍵按一下 [報表資料] 窗格的標題列，然後按一下 [停駐成為索引標籤式文件]。  
   
 ### <a name="to-change-the-report-data-pane-from-a-tabbed-window-to-a-docked-window"></a>將報表資料窗格從索引標籤式視窗變更為停駐視窗  
   
--   以滑鼠右鍵按一下 [報表資料] 索引標籤，然後按一下 [停駐]  。  
+-   以滑鼠右鍵按一下 [報表資料] 索引標籤，然後按一下 [停駐]。  
   
      若要在最近的兩個顯示狀態之間切換，請按兩下 [報表資料] 窗格的標題列。  
   

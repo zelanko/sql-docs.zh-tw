@@ -1,5 +1,6 @@
 ---
 title: rskeymgmt 公用程式 | Microsoft Docs
+description: 了解 reskeymgmt 公用程式，其所管理的對稱金鑰可保護敏感性報表伺服器資料，以免遭到未獲授權的存取。
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5ebbda456c402372e7505968414bc044eec87ec4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c3acdc15b2d5eaf5e8e38e0929757fd44157a148
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082153"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916262"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 公用程式 (SSRS)
-  擷取、還原、建立和刪除「用來保護機密報表伺服器資料，以免遭到未獲授權的存取」之對稱金鑰。 另外，這個公用程式也用來將報表伺服器執行個體聯結在向外延展部署中。 「報表伺服器向外延展部署」  是指共用單一報表伺服器資料庫的多個報表伺服器執行個體。  
+  擷取、還原、建立和刪除「用來保護機密報表伺服器資料，以免遭到未獲授權的存取」之對稱金鑰。 另外，這個公用程式也用來將報表伺服器執行個體聯結在向外延展部署中。 「報表伺服器向外延展部署」是指共用單一報表伺服器資料庫的多個報表伺服器執行個體。  
   
 ## <a name="syntax"></a>語法  
   
@@ -74,7 +75,7 @@ rskeymgmt {-?}
  設定遠端報表伺服器執行個體來共用本機報表伺服器執行個體所用的報表伺服器資料庫。  
   
  **-r**  *installationID*  
- 移除特定報表伺服器執行個體的對稱金鑰資訊，因而從向外延展部署中移除報表伺服器。 <安裝識別碼>  是一個 GUID 值，可在 RSReportserver.config 檔中找到它。  
+ 移除特定報表伺服器執行個體的對稱金鑰資訊，因而從向外延展部署中移除報表伺服器。 <安裝識別碼> 是一個 GUID 值，可在 RSReportserver.config 檔中找到它。  
   
  **-f**  *file*  
  指定儲存了對稱金鑰備份副本之檔案的完整路徑。  
@@ -145,9 +146,9 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 >  報表伺服器向外延展部署是指多個報表伺服器執行個體共用相同報表伺服器資料庫的部署模型。 對稱金鑰儲存在報表伺服器資料庫中的任何報表伺服器執行個體，都可以使用報表伺服器資料庫。 例如，如果報表伺服器資料庫包含三個報表伺服器執行個體的金鑰資訊，這三個執行個體都會被視為相同向外延展部署的成員。  
   
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>在相同電腦上聯結報表伺服器執行個體  
- 您可以從安裝在相同電腦上的多個報表伺服器執行個體中建立向外延展部署。 如果您要聯結的報表伺服器執行個體是安裝在本機，請不要設定 **-u** 和 **-v** 引數。 只有當您從遠端電腦聯結執行個體時，才要使用 **-u** 和 **-v** 引數。 如果您指定這些引數，會出現下列錯誤：「使用者認證無法用於本機連接。」  
+ 您可以從安裝在相同電腦上的多個報表伺服器執行個體中建立向外延展部署。 如果您要聯結的報表伺服器執行個體是安裝在本機，請不要設定 **-u** 和 **-v** 引數。 只有當您從遠端電腦聯結執行個體時，才要使用 **-u** 和 **-v** 引數。 如果您指定這些引數，將會出現下列錯誤：「使用者認證無法用於本機連線。」  
   
- 下列範例說明使用多個本機執行個體建立向外延展部署的語法。 在這個範例中，\<**已初始化的執行個體**> 是已初始化為使用報表伺服器資料庫的執行個體名稱，\<**新的執行個體**> 是您要新增部署的執行個體名稱：  
+ 下列範例說明使用多個本機執行個體建立向外延展部署的語法。 在此範例中，\<**initializedinstance**> 是已初始化為使用報表伺服器資料庫的執行個體名稱，而 \<**newinstance**> 是所要新增至部署的執行個體名稱：  
   
 ```  
 rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>  
@@ -163,7 +164,7 @@ rskeymgmt -r <installationID>
 ```  
   
 ## <a name="file-location"></a>檔案位置  
- Rskeymgmt.exe 位於 **\<*磁碟機*>:\Program Files\Microsoft SQL Server\110\Tools\Binn** 或 **\<*磁碟機*>:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn**。 您可以從檔案系統上的任何資料夾執行此公用程式。  
+ Rskeymgmt.exe 位於 **\<*drive*>:\Program Files\Microsoft SQL Server\110\Tools\Binn** 或 **\<*drive*>:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn**。 您可以從檔案系統上的任何資料夾執行此公用程式。  
   
 ## <a name="remarks"></a>備註  
  報表伺服器會加密預存的認證和連接資訊。 資料的加密使用公開金鑰和對稱金鑰。 報表伺服器資料庫必須具備有效的金鑰，報表伺服器才能夠執行。 您可以使用 **rskeymgmt** 來備份、刪除或還原金鑰。 如果金鑰無法還原，這個工具可用來刪除已無法使用的加密內容。  

@@ -1,5 +1,6 @@
 ---
 title: 開啟編輯器 (SQL Server Management Studio)
+description: 了解如何在 SQL Server Management Studio 中開啟資料庫引擎查詢、MDX、DMX 和 XML/A 編輯器。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,22 +11,22 @@ ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 478f48cbea6bccb1cb66838a34d12689a94cf05a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ab96c21c9ac7d6e8b90564d6759c85744adc27f8
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253784"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122566"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>開啟編輯器 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   此主題描述如何在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]查詢、MDX、DMX 或 XML/A 編輯器。 開啟時，每個編輯器視窗都會顯示為 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]之中央面板中的索引標籤。  
   
 ## <a name="before-you-begin"></a>開始之前  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 支援四種編輯器： [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器 (用於編輯 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼)、DMX 及 MDX 編輯器 (以便使用這些語言來編輯指令碼)，以及 XML/A 編輯器 (用於編輯 XML/A 指令碼或 XML 檔案)。 任何編輯器都可以用來編輯文字檔。  
   
 ### <a name="limitations-and-restrictions"></a>限制事項  
- 如果您與使用不同字碼頁之其他網站的使用者共用檔案，您應該利用適當的 Unicode 字碼頁來儲存您的檔案，以防在讀取檔案時發生錯誤。 另外，當儲存 UNIX 或 Macintosh 的檔案時，請務必以適當的文件格式來儲存您的檔案。 請在 **[檔案]** 功能表上，按一下 **[另存新檔]** ，從 **[儲存]** 按鈕旁的向下箭頭按一下 **[使用編碼方式儲存]** ，然後在 **[行尾結束符號]** 之下，選擇 **[Unix]** 或 **[Macintosh]** 。  
+ 如果您與使用不同字碼頁之其他網站的使用者共用檔案，您應該利用適當的 Unicode 字碼頁來儲存您的檔案，以防在讀取檔案時發生錯誤。 另外，當儲存 UNIX 或 Macintosh 的檔案時，請務必以適當的文件格式來儲存您的檔案。 請在 **[檔案]** 功能表上，按一下 **[另存新檔]**，從 **[儲存]** 按鈕旁的向下箭頭按一下 **[使用編碼方式儲存]** ，然後在 **[行尾結束符號]** 之下，選擇 **[Unix]** 或 **[Macintosh]**。  
   
 ### <a name="permissions"></a>權限  
  在程式碼編輯器中執行的作業，需要有授與用來登入之驗證帳戶的權限。 例如，如果您使用 [Windows 驗證] 來開啟 [ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器] 視窗，則無法執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，而此陳述式參照您的 Windows 登入帳戶無權存取的物件。  
@@ -67,12 +68,12 @@ ms.locfileid: "75253784"
 ### <a name="using-object-explorer"></a>使用物件總管  
  從 **[物件總管]** ：  
   
--   以滑鼠右鍵按一下與 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體連接的伺服器節點，然後選取 [新增查詢]  。 這樣會開啟與相同 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體連接的 [ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器] 視窗，並將此視窗的資料庫內容設定為登入的預設資料庫。  
+-   以滑鼠右鍵按一下與 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體連接的伺服器節點，然後選取 [新增查詢]。 這樣會開啟與相同 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體連接的 [ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器] 視窗，並將此視窗的資料庫內容設定為登入的預設資料庫。  
   
--   以滑鼠右鍵按一下資料庫節點，然後選取 [新增查詢]  。 這樣會開啟與相同 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體連接的 [ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器] 視窗，並將此視窗的資料庫內容設定為相同資料庫。  
+-   以滑鼠右鍵按一下資料庫節點，然後選取 [新增查詢]。 這樣會開啟與相同 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體連接的 [ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器] 視窗，並將此視窗的資料庫內容設定為相同資料庫。  
   
 ### <a name="using-solution-explorer"></a>使用方案總管  
- 從方案總管  中，展開一個資料夾，然後以滑鼠右鍵按一下資料夾內的項目，再按一下 [開啟]  或按兩下項目或檔案。  
+ 從方案總管中，展開一個資料夾，然後以滑鼠右鍵按一下資料夾內的項目，再按一下 [開啟] 或按兩下項目或檔案。  
   
 ### <a name="using-template-browser-to-open-the-database-engine-query-editor"></a>使用範本瀏覽器來開啟 Database Engine 查詢編輯器  
   
@@ -80,6 +81,6 @@ ms.locfileid: "75253784"
   
 -   **[範本瀏覽器]** 視窗即會顯示在右窗格中。  
   
--   按兩下範本，即可開啟含有範本文字的 [Database Engine 查詢] 視窗。 例如，若要開啟 CREATE DATABASE 範本，請開啟 [SQL Server 範本]  資料夾、開啟 [資料庫]  資料夾，然後按兩下 [建立資料庫]  。  
+-   按兩下範本，即可開啟含有範本文字的 [Database Engine 查詢] 視窗。 例如，若要開啟 CREATE DATABASE 範本，請開啟 [SQL Server 範本] 資料夾、開啟 [資料庫] 資料夾，然後按兩下 [建立資料庫]。  
   
   

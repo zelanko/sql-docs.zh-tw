@@ -1,22 +1,22 @@
 ---
 title: 為 SQLRUserGroup 建立登入
-description: 針對使用隱含驗證的回送連線，請在 SQL Server 中建立 SQLRUserGroup 的登入，讓背景工作帳戶可以登入伺服器，以便將身分識別轉換回呼叫的使用者。
+description: 在 SQL Server 中建立 SQLRUserGroup 的登入，使用隱含驗證登入伺服器，以將身分識別轉換回發出呼叫的使用者。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 01/25/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c57a62e954ae8cb0fc52c9a5ead22d418243c0b8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f3d7bd23c2a6b218e56f4de57d5b281b34d0687d
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117121"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484627"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>為 SQLRUserGroup 建立登入
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 當指令碼中的[回送連線](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login)指定[信任連線](../concepts/security.md#sqlrusergroup)，而且用來執行包含程式碼之物件的身分識別是 Windows 使用者帳戶時，為 [SQLRUserGroup](../../machine-learning/concepts/security.md#implied-authentication) 建立 *SQL Server 中的登入*。
 

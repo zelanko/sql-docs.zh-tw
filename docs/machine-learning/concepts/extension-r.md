@@ -1,27 +1,32 @@
 ---
 title: R 語言延伸模組
-description: 了解 SQL Server R 服務或 SQL Server 機器學習服務中的 R 程式碼執行以及內建 R 程式庫。
+description: 了解使用 SQL Server 機器學習服務與 SQL Server R Services 執行外部 R 指令碼的 R 延伸模組。
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 11/04/2019
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c85839d89fbdb2d69752ac989abb40637f9d13ca
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: e51e4121a7e941512a84e3acf577af0ff687f4d7
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487557"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406271"
 ---
-# <a name="r-language-extension-in-sql-server"></a>SQL Server 中的 R 語言延伸模組
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="r-language-extension-in-sql-server-machine-learning-services"></a>SQL Server 機器學習服務中的 R 語言延伸模組
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-R 延伸模組是 SQL Server 機器學習服務對關聯式資料庫引擎的附加元件之一。 此延伸模組會新增 R 執行環境、基底 R 發行版本 (含標準程式庫和工具)，以及 Microsoft R 程式庫：適用於大規模分析的 [RevoScaleR](../r/ref-r-revoscaler.md)、適用於機器學習演算法的 [MicrosoftML](../r/ref-r-microsoftml.md)，以及用來在 SQL Server 中存取資料或 R 程式碼的其他程式庫。
+本文描述使用 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)和 [SQL Server 2016 R Services](../r/sql-server-r-services.md) 來執行外部 Python 指令碼的 R 延伸模組。 此延伸模組會新增：
 
-[SQL Server R 服務](../r/sql-server-r-services.md)和 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)均提供 R 整合。
+- R 執行環境
+- 包含標準程式庫與工具的基本 R 發行版本
+- Microsoft R 程式庫：
+  - 用於大規模分析的 [RevoScaleR](../r/ref-r-revoscaler.md)
+  - 用於機器學習演算法的 [MicrosoftML](../r/ref-r-microsoftml.md)
+  - 用來在 SQL Server 中存取資料或 R 程式碼的其他程式庫
 
 ## <a name="r-components"></a>R 元件
 

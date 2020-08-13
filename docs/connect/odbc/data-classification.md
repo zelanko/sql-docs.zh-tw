@@ -13,12 +13,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-makouz
 manager: kenvh
-ms.openlocfilehash: 8f0f821890cabe25a9abb572e453c9846c75ec94
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 63600f98fcf86fb9549c6da91224988ce7483eee
+ms.sourcegitcommit: 41ff0446bd8e4380aad40510ad579a3a4e096dfa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72041128"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86465315"
 ---
 # <a name="data-classification"></a>資料分類
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -244,7 +244,7 @@ int main(int argc, char **argv)
 ```
 
 ## <a name="supported-version"></a><a name="bkmk-version"></a>支援的版本
-如果將 `FieldIdentifier` 設定為 `SQL_CA_SS_DATA_CLASSIFICATION` (1237)，Microsoft ODBC Driver 17.2 就允許透過 `SQLGetDescField` 擷取資料分類資訊。 
+若將 `FieldIdentifier` 設定為 `SQL_CA_SS_DATA_CLASSIFICATION` (1237)，Microsoft ODBC Driver 17.2 即允許透過 `SQLGetDescField` 擷取資料分類資訊。 
 
 從 Microsoft ODBC Driver 17.4.1.1 開始，您可以使用 `SQL_CA_SS_DATA_CLASSIFICATION_VERSION` (1238) 欄位識別碼，透過 `SQLGetDescField` 來擷取伺服器所支援的資料分類版本。 在 17.4.1.1 中，會將支援的資料分類版本設定為 "2"。
 
@@ -259,7 +259,7 @@ int main(int argc, char **argv)
 ret = SQLSetConnectAttr(dbc, SQL_COPT_SS_DATACLASSIFICATION_VERSION, (SQLPOINTER)2, SQL_IS_INTEGER);
 ```
 
-目前支援的資料分類版本值可以透過 SQLGetConnectAttr 呼叫來擷取： 
+目前支援的資料分類版本值可透過 SQLGetConnectAttr 呼叫來擷取： 
 ```
 ret = SQLGetConnectAttr(dbc, SQL_COPT_SS_DATACLASSIFICATION_VERSION, (SQLPOINTER)&dataClassVersion, SQL_IS_INTEGER, 0);
 ```

@@ -1,5 +1,6 @@
 ---
 title: 取消報表伺服器作業 (Management Studio) |Microsoft 文件
+description: 了解如何使用 [取消報表伺服器作業] 對話方塊中的選項，以檢視或取消進行中的報表。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,15 +11,15 @@ f1_keywords:
 ms.assetid: 1c5b4975-49e9-4d0b-b298-2638e81edbfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8c433b8fcc0d768b3db48edf8bc56bed6440839a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2da03690f084dbc1ce4cd7c4faf1e1e6cf2cb6d7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574212"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917981"
 ---
 # <a name="cancel-report-server-jobs-management-studio"></a>取消報表伺服器作業 (Management Studio)
-  您可以使用 [取消報表伺服器作業]  對話方塊來檢視或取消進行中的報表。 這個對話方塊會顯示目前正在報表伺服器上執行的所有作業。 雖然您無法暫停或重新啟動目前正在處理中的作業，但是如果完成作業需要花太長的時間，您就可以取消所有作業或個別作業。  
+  您可以使用 [取消報表伺服器作業] 對話方塊來檢視或取消進行中的報表。 這個對話方塊會顯示目前正在報表伺服器上執行的所有作業。 雖然您無法暫停或重新啟動目前正在處理中的作業，但是如果完成作業需要花太長的時間，您就可以取消所有作業或個別作業。  
   
  您可以取消使用者作業和系統作業。  
   
@@ -26,7 +27,7 @@ ms.locfileid: "65574212"
   
 -   系統作業是由報表伺服器起始的作業。 系統作業包括排程的報表處理。  
   
- 若要開啟此頁面，請啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，連接至報表伺服器，以滑鼠右鍵按一下 [作業]  ，然後按一下 [取消所有作業]  。 您也可以開啟 [作業]  ，以滑鼠右鍵按一下正在報表伺服器上執行的作業，然後選取 [取消作業]  。  
+ 若要開啟此頁面，請啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，連接至報表伺服器，以滑鼠右鍵按一下 [作業]，然後按一下 [取消所有作業]。 您也可以開啟 [作業]，以滑鼠右鍵按一下正在報表伺服器上執行的作業，然後選取 [取消作業]。  
   
  取消作業之前，您可以檢視其屬性，以便判斷該作業的開始時間。 如需詳細資訊，請參閱[作業屬性 &#40;Management Studio&#41;](../../reporting-services/tools/job-properties-management-studio.md)。  
   
@@ -38,7 +39,7 @@ ms.locfileid: "65574212"
  顯示報表的名稱。 依據描述來識別訂閱。  
   
  **型別**  
- 有效值為 [使用者]  和 [系統]  。  
+ 有效值為 [使用者] 和 [系統]。  
   
  **Start Time**  
  顯示作業的開始時間。  

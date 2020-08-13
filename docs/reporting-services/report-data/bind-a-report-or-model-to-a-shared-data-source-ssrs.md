@@ -1,5 +1,6 @@
 ---
 title: 將報表繫結至共用資料來源 | Microsoft Docs
+description: 了解如何將報表繫結至正在原生模式或 SharePoint 整合模式中所執行報表伺服器上的共用資料來源。
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c5aa5e504c8434d3634b903c08b6a03c0e62345c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c35e3d48167ecba74f18fa0ed13461a5165cec42
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081416"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458920"
 ---
 # <a name="bind-a-report-to-a-shared-data-source-ssrs"></a>將報表繫結至共用資料來源 (SSRS)
   在某些情況下 (例如，將報表從測試伺服器移到生產環境伺服器時)，您可能想先將檔案儲存在本機電腦，然後再上傳到不同的報表伺服器。 當您將報表上傳到新伺服器時，您必須將它重新繫結至新報表伺服器上儲存的共用資料來源。 如果不重新繫結報表，從新報表伺服器存取該報表時將無法正常運作。  
@@ -26,15 +27,15 @@ ms.locfileid: "77081416"
   
 ## <a name="to-bind-a-report-to-a-shared-data-source-on-a-report-server-running-in-native-mode"></a>將報表繫結至以原生模式執行之報表伺服器上的共用資料來源  
   
-1.  在入口網站中，按一下報表磚右上角的省略符號 (...) > [管理]  。  
+1.  在入口網站中，按一下報表磚右上角的省略符號 (...) > [管理]。  
 
 2.  按一下 **[資料來源]** 。  
   
-3.  按一下 [共用資料來源]  ，然後巡覽至報表要繫結的資料來源。  
+3.  按一下 [共用資料來源]，然後巡覽至報表要繫結的資料來源。  
   
-4.  選取資料來源，然後按一下 [儲存]  。  
+4.  選取資料來源，然後按一下 [儲存]。  
   
-5.  按一下 [套用]  。  
+5.  按一下 [套用]。  
   
      現在報表已繫結至所選取的資料來源。  
   
@@ -50,7 +51,7 @@ ms.locfileid: "77081416"
   
 5.  在 **[連接類型]** 區域中，確認已選取 **[共用資料來源]** 。  
   
-6.  在 [資料來源連結]  區域中，按一下省略符號 (...) 按鈕。  
+6.  在 [資料來源連結] 區域中，按一下省略符號 (...) 按鈕。  
   
 7.  找到要使用的資料來源。  
   
@@ -58,7 +59,7 @@ ms.locfileid: "77081416"
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-10. 按一下 [關閉]  。  
+10. 按一下 [關閉] 。  
   
 ## <a name="see-also"></a>另請參閱  
  [將文件上傳到 SharePoint 文件庫 &#40;SharePoint 模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)   

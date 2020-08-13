@@ -1,5 +1,6 @@
 ---
 title: 設計檢視 | Microsoft Docs
+description: 了解如何使用 Reporting Services 報表設計師中的 [設計] 檢視來排列報表中的報表項目。
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e0e69efeb8f0b7bd0bdd4fbcb1bcb8a934ffdf6c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: db7b82684edf89ef66bd033ab7ca6c673a873d0f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65577874"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914064"
 ---
 # <a name="design-view"></a>設計檢視
 在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 報表設計師中，使用 [設計] 檢視，即可排列報表中的報表項目。 [設計] 檢視有時稱為設計介面或配置檢視。  
@@ -51,7 +52,7 @@ ms.locfileid: "65577874"
  頁首和頁尾可以分別沿著每個頁面的頂端和底部執行。 頁首和頁尾可以包含靜態文字、影像、線條、矩形、框線、背景色彩，以及背景影像。 若要將報表項目加入到頁首或頁尾，以滑鼠右鍵按一下設計介面，然後選取 [頁首] 或 [頁尾]。 頁首和頁尾區段就會出現在設計介面上。  
   
 ## <a name="properties-pane"></a>屬性窗格  
- 使用 [屬性] 窗格可檢視目前在設計介面上選取之報表項目的屬性，或是檢視目前在 [群組] 窗格中選取之群組的屬性。 或者，您也可以用滑鼠右鍵按一下選取的報表項目或群組，然後按一下 [屬性]  ，為此報表項目或群組開啟對應的 [屬性]  對話方塊。  
+ 使用 [屬性] 窗格可檢視目前在設計介面上選取之報表項目的屬性，或是檢視目前在 [群組] 窗格中選取之群組的屬性。 或者，您也可以用滑鼠右鍵按一下選取的報表項目或群組，然後按一下 [屬性]****，為此報表項目或群組開啟對應的 [屬性]**** 對話方塊。  
   
 ## <a name="see-also"></a>另請參閱  
  [頁首和頁尾 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   

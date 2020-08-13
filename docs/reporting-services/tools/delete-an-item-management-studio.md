@@ -1,5 +1,6 @@
 ---
 title: 刪除項目 (Management Studio) | Microsoft Docs
+description: 了解如何在 SQL Management Studio 中刪除角色定義並共用排程。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 57381914-3106-4dc4-acd4-7ed5b565cca6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8eaed89901b98cecb90e0c3a4ecae24714c7c180
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 840a61a34389c1013d26f2ef87791b376bfd19cf
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574322"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918389"
 ---
 # <a name="delete-an-item-management-studio"></a>刪除項目 (Management Studio)
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中連線至報表伺服器執行個體時，您可以刪除角色定義和共用排程。 但是，您無法刪除報表伺服器上的報表、模型或其他項目。 若要刪除報表伺服器內容，請改用報表管理員。 或者，如果報表伺服器是針對 SharePoint 整合模式所設定，請在包含內容的 SharePoint 文件庫中使用項目管理功能。  
@@ -28,7 +29,7 @@ ms.locfileid: "65574322"
   
 2.  展開資料夾。  
   
-3.  以滑鼠右鍵按一下項目，然後按一下 [刪除]  。  
+3.  以滑鼠右鍵按一下項目，然後按一下 [刪除]。  
   
 4.  出現提示時， [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

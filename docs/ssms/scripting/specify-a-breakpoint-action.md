@@ -1,5 +1,6 @@
 ---
 title: 指定中斷點動作
+description: 立即了解如何指定「叫用」動作，這是一個自訂工作，可在遇到中斷點時執行 Transact-SQL 偵錯工具，並滿足特定其他條件。
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -14,26 +15,26 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4bffc7742a9833d8715c9479e051cdd732d7596
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bbe5cd84c13c84f8902ac82bd8ef3ef54dc82bda
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253655"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122719"
 ---
 # <a name="specify-a-breakpoint-action"></a>指定中斷點動作
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-中斷點 [叫用時]  動作指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具針對中斷點所執行的自訂工作。 如果已到達指定的叫用計數而且滿足任何指定的中斷點條件時，偵錯工具就會執行為中斷點指定的動作。
+中斷點 [叫用時] 動作指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具針對中斷點所執行的自訂工作。 如果已到達指定的叫用計數而且滿足任何指定的中斷點條件時，偵錯工具就會執行為中斷點指定的動作。
 
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
   
 ##  <a name="action-considerations"></a><a name="BKMK_ActionConsiderations"></a> 動作考量因素
 
-中斷點的預設動作是在已滿足叫用計數和中斷點條件時中斷執行。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具中 [叫用時] 動作的主要用法是透過指定列印訊息，將資訊列印至偵錯工具 [輸出] 視窗。  
+中斷點的預設動作是在已滿足叫用計數和中斷點條件時中斷執行。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具中 [叫用時]**** 動作的主要用法是透過指定列印訊息，將資訊列印至偵錯工具 [輸出]**** 視窗。  
   
-列印訊息是在 [列印訊息]  選項中指定，並指定為文字字串，其中的運算式包含來自偵錯中 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的資訊。 運算式包含：  
+列印訊息是在 [列印訊息]**** 選項中指定，並指定為文字字串，其中的運算式包含來自偵錯中 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的資訊。 運算式包含：  
   
 -   以大括號 ({}) 括住的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 運算式。 運算式可以包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 變數、參數和內建函數。 範例包括 {@MyVariable}、{@NameParameter}、{@@SPID} 或 {SERVERPROPERTY('ProcessID')}。  
   
@@ -41,7 +42,7 @@ ms.locfileid: "75253655"
   
     1.  $ADDRESS 傳回設定中斷點之預存程序或使用者定義函數的名稱。 如果中斷點是在編輯器視窗中設定，$ADDRESS 會傳回編輯中指令碼檔案的名稱。 $ADDRESS 和 $FUNCTION 會在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具中傳回相同資訊。  
   
-    2.  $CALLER 傳回呼叫預存程序或函數之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼單元的名稱。 如果中斷點是在編輯器視窗中設定，$CALLER 會傳回 \<沒有可用的呼叫端>。 如果中斷點是在編輯器視窗中程式碼所呼叫的預存程序或使用者定義函數中，$CALLER 會傳回編輯中檔案的名稱。 如果中斷點是在另一個預存程序或函數所呼叫的預存程序或使用者定義函數中，$CALLER 會傳回呼叫程序或函數的名稱。  
+    2.  $CALLER 傳回呼叫預存程序或函數之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼單元的名稱。 如果中斷點是在編輯器視窗中，則 $CALLER 會傳回 \<No caller available>。 如果中斷點是在編輯器視窗中程式碼所呼叫的預存程序或使用者定義函數中，$CALLER 會傳回編輯中檔案的名稱。 如果中斷點是在另一個預存程序或函數所呼叫的預存程序或使用者定義函數中，$CALLER 會傳回呼叫程序或函數的名稱。  
   
     3.  $CALLSTACK 傳回鏈結中呼叫目前預存程序或使用者定義函數之函數的呼叫堆疊。 如果中斷點是在編輯器視窗中，$CALLSTACK 會傳回編輯中指令碼檔案的名稱。  
   
@@ -55,19 +56,19 @@ ms.locfileid: "75253655"
   
 #### <a name="to-specify-a-when-hit-action"></a>若要指定叫用時動作  
   
-1.  在編輯器視窗中，以滑鼠右鍵按一下中斷點字符，然後按一下捷徑功能表上的 [叫用時]  。  
+1.  在編輯器視窗中，以滑鼠右鍵按一下中斷點字符，然後按一下捷徑功能表上的 [叫用時]。  
   
      -或-  
   
-     在 [中斷點]  視窗中，以滑鼠右鍵按一下中斷點字符，然後按一下捷徑功能表上的 [叫用時]  。  
+     在 [中斷點] 視窗中，以滑鼠右鍵按一下中斷點字符，然後按一下捷徑功能表上的 [叫用時]。  
   
-2.  在 [叫用中斷點時]  對話方塊中，選取所要的行為：  
+2.  在 [叫用中斷點時] 對話方塊中，選取所要的行為：  
   
-    1.  選取 [列印訊息]  ，以便在叫用中斷點時，在偵錯工具的 [輸出] 視窗中列印訊息。  
+    1.  選取 [列印訊息]，以便在叫用中斷點時，在偵錯工具的 [輸出] 視窗中列印訊息。  
   
-    2.  [執行巨集]  選項無法在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具中使用，會呈現灰色。  
+    2.  [執行巨集] 選項無法在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具中使用，會呈現灰色。  
   
-    3.  如果不要讓中斷點暫停執行，請選取 [繼續執行]  。 只有當您選取了 [列印訊息]  選項時，才能使用這個選項。  
+    3.  如果不要讓中斷點暫停執行，請選取 [繼續執行]。 只有當您選取了 [列印訊息] 選項時，才能使用這個選項。  
   
 3.  按一下 **[確定]** 實作變更，或按一下 **[取消]** 結束而不套用變更。  
   

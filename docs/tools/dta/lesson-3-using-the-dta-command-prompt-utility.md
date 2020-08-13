@@ -1,5 +1,6 @@
 ---
 title: 使用 dta 命令提示字元公用程式
+description: 除 SQL Server Database Engine Tuning Advisor 提供的功能之外，亦請了解 dta 命令提示公用程式提供的功能。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 1c97122d6181470ded13a57c54b0c6d44f830ed6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7d0ffc5d1fa1ba7fa0fbf6b89ce5eea4c8d179c4
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306978"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457495"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>第 3 課：使用 dta 命令提示字元公用程式
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 除了 Database Engine Tuning Advisor 所提供的功能，**dta** 命令提示字元公用程式還提供額外的功能。  
   
 您可以利用您愛用的 XML 工具和 Database Engine Tuning Advisor XML 結構描述來建立這個公用程式的輸入檔。 這個結構描述會在您安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時一併安裝，並且位於：C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd。  
@@ -34,13 +34,13 @@ ms.locfileid: "75306978"
   
 如何使用 Database Engine Tuning Advisor 的 XML 輸入功能不在這個課程的範圍內。  
   
-這項工作會帶您逐步啟動 **dta** 公用程式、檢視它的說明，再從命令提示字元之下，利用它來微調工作負載。 它會使用您針對 Database Engine Tuning Advisor 圖形化使用者介面 (GUI) [微調工作負載](lesson-2-using-database-engine-tuning-advisor.md#tuning-a-workload)練習所建立的 MyScript.sql 工作負載  
+ 這項工作會帶您逐步啟動 **dta** 公用程式、檢視它的說明，再從命令提示字元之下，使用它來微調工作負載。 它會使用您針對 Database Engine Tuning Advisor 圖形化使用者介面 (GUI) [微調工作負載](lesson-2-using-database-engine-tuning-advisor.md#tuning-a-workload)練習所建立的 MyScript.sql 工作負載  
   
 本教學課程使用 AdventureWorks2017 範例資料庫。 基於安全性的考量，依預設，不會安裝範例資料庫。 若要安裝範例資料庫，請參閱＜ [安裝 SQL Server 範例和範例資料庫](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)＞。  
   
 下列工作將帶您逐步開啟命令提示字元、啟動 **dta** 命令提示字元公用程式、檢視其語法說明，以及微調您在 [微調工作負載](../../tools/dta/lesson-1-1-tuning-a-workload.md)中所建立的簡單工作負載 MyScript.sql。  
 
-## <a name="prerequisites"></a>Prerequisites 
+## <a name="prerequisites"></a>必要條件 
 
 若要完成本教學課程，您需要 SQL Server Management Studio、執行 SQL Server 伺服器的存取權，以及 AdventureWorks 資料庫。
 
@@ -48,7 +48,7 @@ ms.locfileid: "75306978"
 - 下載 [AdventureWorks2017 範例資料庫](https://docs.microsoft.com/sql/samples/adventureworks-install-configure) \(機器翻譯\)。
 
 
-如需在 SSMS 中還原資料庫的指示，請參閱：[還原資料庫](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)。
+如需在 SSMS 中還原資料庫的指示，請參閱：[還原資料庫。](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
 
   >[!NOTE]
   > 本教學課程適用於熟悉使用 SQL Server Management Studio 與基本資料庫管理工作的使用者。 
@@ -56,7 +56,7 @@ ms.locfileid: "75306978"
 ## <a name="access-dta-command-prompt-utility-help-menu"></a>存取 DTA 命令提示字元公用程式說明功能表
   
   
-1.  在 [開始]  功能表上，依序指向 [所有程式]  和 [附屬應用程式]  ，再按一下 [命令提示字元]  。  
+1.  在 [開始] 功能表上，依序指向 [所有程式] 和 [附屬應用程式]，再按一下 [命令提示字元]。  
   
 2.  在命令提示字元之下，輸入下列字串，再按 ENTER 鍵：  
   
@@ -93,7 +93,7 @@ ms.locfileid: "75306978"
 -   ＜[Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md) ＞提供如何利用這個工具來執行工作的描述。 
 -   ＜[dta Utility](../../tools/dta/dta-utility.md) ＞提供有關命令提示字元公用程式的參考資料，以及可用來控制公用程式作業的選擇性 XML 檔案。  
   
-若要返回教學課程的開頭，請參閱 [教學課程：Database Engine Tuning Advisor](../../tools/dta/tutorial-database-engine-tuning-advisor.md)。  
+若要返回教學課程的起始處，請參閱[教學課程：Database Engine Tuning Advisor](../../tools/dta/tutorial-database-engine-tuning-advisor.md)。  
   
 ## <a name="see-also"></a>另請參閱  
 [Database Engine 教學課程](../../relational-databases/database-engine-tutorials.md)  

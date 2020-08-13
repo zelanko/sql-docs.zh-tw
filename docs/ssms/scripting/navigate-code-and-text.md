@@ -1,5 +1,6 @@
 ---
 title: 導覽程式碼與文字
+description: 了解如何使用各種不同的技術來巡覽文件：為位置設定書籤，以更容易返回該位置；以累加方式搜尋；使用滑鼠和鍵盤；然後，使用 [移至] 命令，以藉由指定行號來移至某行。
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -21,15 +22,15 @@ ms.assetid: f63247ff-9751-4e99-8ee3-0772ad4009d0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c1a77dfbe88a3018d7ae170675b84461f69a12b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4ac0d91b3d6bc3dd6527063a176b0728f96f144e
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78261835"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122582"
 ---
 # <a name="navigate-code-and-text"></a>導覽程式碼與文字
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   您可以利用下列方式在文字間移動：  
   
 -   書籤。  
@@ -38,7 +39,7 @@ ms.locfileid: "78261835"
   
 -   滑鼠和導覽鍵。  
   
--   [移至]  命令。  
+-   [移至] 命令。  
   
 > [!NOTE]  
 >  如需完整的鍵盤快速鍵清單，請參閱 [SQL Server Management Studio 鍵盤快速鍵](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)。  
@@ -65,7 +66,7 @@ ms.locfileid: "78261835"
 -   利用 CTRL+向上鍵和 CTRL+向下鍵，在不移動插入點的情況下，捲動檢視。  
   
 ## <a name="go-to-command"></a>移至命令  
- 請使用 [移至]  命令移至特定行號。 若要顯示行號，請在 選項  對話方塊中，依序按一下 文字編輯器  所有語言  一般  ，然後選取 行號  。  
+ 請使用 [移至] 命令移至特定行號。 若要顯示行號，請在 選項 對話方塊中，依序按一下 文字編輯器所有語言一般，然後選取 行號。  
   
  **移至特定行號**  
   

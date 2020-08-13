@@ -1,5 +1,6 @@
 ---
-title: 追蹤驅動程式作業 | Microsoft Docs
+title: 追蹤驅動程式作業
+description: 了解如何使用追蹤來記錄詳細資料，並解決使用 JDBC Driver for SQL Server 時發生的問題。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 91f71543b9fecd994cc2b951758caacd23e8ae1f
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: b89be9709f04e995ed560e291a5199cebfd2bd75
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219357"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393126"
 ---
 # <a name="tracing-driver-operation"></a>追蹤驅動程式作業
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "81219357"
   
  下表將描述公用記錄類別目錄的每個可用記錄層級。  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |SEVERE|表示嚴重失敗，這是最高的記錄層級。 在 JDBC 驅動程式中，這個層次用於報告錯誤和例外狀況。|  
 |WARNING|表示潛在問題。|  
@@ -53,7 +54,7 @@ ms.locfileid: "81219357"
   
  下表將描述內部記錄類別目錄的每個可用記錄層級。  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |SEVERE|表示嚴重失敗，這是最高的記錄層級。 在 JDBC 驅動程式中，這個層次用於報告錯誤和例外狀況。|  
 |WARNING|表示潛在問題。|  
@@ -67,7 +68,7 @@ ms.locfileid: "81219357"
 ## <a name="logging-categories"></a>記錄類別目錄  
  建立 Logger 物件時，必須告知物件您有興趣從中取得記錄資訊的具名實體或類別目錄。 JDBC Driver 支援下列公用記錄類別目錄，而且它們定義於 com.microsoft.sqlserver.jdbc 驅動程式封裝中。  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |Connection|記錄 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別中的訊息。 應用程式可以將記錄層級設定為 FINER。|  
 |引數|記錄 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 類別中的訊息。 應用程式可以將記錄層級設定為 FINER。|  

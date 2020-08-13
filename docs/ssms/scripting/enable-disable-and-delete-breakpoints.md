@@ -1,5 +1,6 @@
 ---
 title: 啟用、停用以及刪除中斷點
+description: 了解如何使用 [中斷點] 視窗，以檢視、刪除、停用和啟用中斷點。
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,16 +13,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72acf04118e0b3b7f3f205a06d6e93e96bf13ecb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7ce9b445b5340680f53279a3c061f05c8999a5dd
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253918"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122917"
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>啟用、停用以及刪除中斷點
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 若要檢視和管理所有已開啟的中斷點，您可以使用 **[中斷點]** 視窗。 這個視窗可用以檢視中斷點資訊，以及採取刪除、停用或啟用中斷點的這類動作。
 
@@ -48,7 +49,7 @@ ms.locfileid: "75253918"
   
  您可以使用下列其中一種方式以停用單一中斷點：  
   
--   在 [查詢編輯器] 視窗中，以滑鼠右鍵按一下中斷點，然後按一下 [停用中斷點]  。  
+-   在 [查詢編輯器] 視窗中，以滑鼠右鍵按一下中斷點，然後按一下 [停用中斷點]。  
   
 -   在 [中斷點] 視窗中，清除中斷點左側的核取方塊。  
   
@@ -66,7 +67,7 @@ ms.locfileid: "75253918"
   
  您可以使用下列其中一種方式以啟用單一中斷點：  
   
--   在 [查詢編輯器] 視窗中，以滑鼠右鍵按一下中斷點，然後按一下 [啟用中斷點]  。  
+-   在 [查詢編輯器] 視窗中，以滑鼠右鍵按一下中斷點，然後按一下 [啟用中斷點]。  
   
 -   在 [中斷點] 視窗中，按一下中斷點左側的方塊。  
   
@@ -84,9 +85,9 @@ ms.locfileid: "75253918"
   
  您可以使用下列其中一種方式以刪除單一中斷點：  
   
--   在 [查詢編輯器] 視窗中，以滑鼠右鍵按一下中斷點，然後按一下 [刪除中斷點]  。  
+-   在 [查詢編輯器] 視窗中，以滑鼠右鍵按一下中斷點，然後按一下 [刪除中斷點]。  
   
--   在 [中斷點] 視窗中，以滑鼠右鍵按一下中斷點，然後按一下捷徑功能表上的 [刪除]  。  
+-   在 [中斷點] 視窗中，以滑鼠右鍵按一下中斷點，然後按一下捷徑功能表上的 [刪除]。  
   
 -   在 [中斷點] 視窗中，選取中斷點，然後按下 DELETE。  
   
@@ -95,7 +96,7 @@ ms.locfileid: "75253918"
   
  您可以使用下列其中一種方式以刪除所有中斷點：  
   
--   在 **[偵錯]** 功能表上，按一下 **[刪除所有中斷點]** 。  
+-   在 [偵錯] 功能表上，按一下 [刪除所有中斷點]。  
   
 -   在 **[中斷點]** 視窗的工具列上，按一下 **[刪除所有中斷點]** 按鈕。  
   

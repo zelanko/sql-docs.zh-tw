@@ -1,5 +1,6 @@
 ---
 title: SQL Server Data Tools (SSDT) 中的 Reporting Services | Microsoft Docs
+description: 了解如何在 Microsoft Visual Studio 中使用 SQL Server Data Tools 報表設計師來撰寫環境，以建立 Reporting Services 的解決方案。
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c1f327b42dd3cdc18be769ef4b4b6fac571578e0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 30e7824d1519fb09a7947dde1cfdc2b818ebc144
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68889835"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916584"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server 資料工具中的 Reporting Services (SSDT)
 
@@ -35,7 +36,7 @@ ms.locfileid: "68889835"
 ##  <a name="report-server-projects"></a><a name="bkmk_ReportServerProjects"></a> 報表伺服器專案  
  當您安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]時， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]提供了下列專案範本：  
   
--   **報表伺服器專案。** 當您選取報表伺服器專案時，就會開啟報表設計師。 報表伺服器專案是由 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 所安裝的商業智慧專案範本，而且可從 **[新增專案]** 對話方塊取得。 如需詳細資訊，請參閱[將新的或現有的報表新增至報表專案 &#40;SSRS&#41;](../../reporting-services/tools/add-a-new-or-existing-report-to-a-report-project-ssrs.md)。報表伺服器專案屬性會套用至 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 專案中的所有報表和所有共用資料來源。 這些屬性包括報表伺服器的 URL 以及報表和共用資料來源的資料夾名稱。 使用 **[專案屬性頁面]** 對話方塊可檢視目前的屬性值。 若要開啟此對話方塊，請從 [專案]  功能表按一下 [屬性]  。  
+-   **報表伺服器專案。** 當您選取報表伺服器專案時，就會開啟報表設計師。 報表伺服器專案是由 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 所安裝的商業智慧專案範本，而且可從 **[新增專案]** 對話方塊取得。 如需詳細資訊，請參閱[將新的或現有的報表新增至報表專案 &#40;SSRS&#41;](../../reporting-services/tools/add-a-new-or-existing-report-to-a-report-project-ssrs.md)。報表伺服器專案屬性會套用至 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 專案中的所有報表和所有共用資料來源。 這些屬性包括報表伺服器的 URL 以及報表和共用資料來源的資料夾名稱。 使用 **[專案屬性頁面]** 對話方塊可檢視目前的屬性值。 若要開啟此對話方塊，請從 [專案]  功能表按一下 [屬性] 。  
   
 -   **報表伺服器專案精靈。** 當您選取報表伺服器精靈專案時，就會自動建立報表伺服器專案，而且報表精靈會開啟。 在此精靈中，您可以遵循每一頁的指示來建立報表，以便建立與資料來源的連接字串、設定資料來源認證、設計查詢、加入資料表或矩陣資料區、指定報表資料和群組、挑選字型和色彩樣式、將報表發行到報表伺服器，以及在本機預覽報表。 當您使用精靈建立報表之後，您可以在報表伺服器專案中使用報表設計師來變更報表資料和報表設計師。  
   
@@ -43,7 +44,7 @@ ms.locfileid: "68889835"
   
   
 ##  <a name="report-designer-windows-and-panes"></a><a name="bkmk_ReportDesignerWindowsandPanes"></a> 報表設計師視窗和窗格  
- 報表設計師支援兩種檢視：[設計]  (可定義報表資料和報表配置) 和 [預覽]  (可顯示報表的轉譯檢視)。 在每個檢視中，您可以顯示多個視窗來協助設計或檢視轉譯的報表。  
+ 報表設計師支援兩種檢視：[設計]**** (可定義報表資料和報表配置) 和 [預覽]**** (可顯示報表的轉譯檢視)。 在每個檢視中，您可以顯示多個視窗來協助設計或檢視轉譯的報表。  
   
 ###  <a name="report-data-pane"></a><a name="bkmk_ReportDataPane"></a> 報表資料窗格  
  [報表資料] 窗格顯示內建欄位、資料來源、資料集、欄位集合、報表參數和影像。  
@@ -65,7 +66,7 @@ ms.locfileid: "68889835"
  [報表資料] 窗格中的資料來源和資料集代表報表定義中的元素。 [報表資料] 窗格是多個報表撰寫環境所支援的功能。 在 [報表產生器] 中，這是唯一可用於管理資料來源和資料集的窗格。 在 [報表設計師] 中，[報表資料] 窗格是與 [方案總管] 搭配使用，而後者會將共用資料來源和共用資料集列出為檔案。 [報表資料] 窗格中的共用資料來源和共用資料集，必須指向它們在 [方案總管] 中的對應「共用資料來源」和「共用資料集」。 之後，[報表資料] 窗格元素就會包含 [方案總管] 中資料檔案的參考。 專案屬性可決定是否將共用資料來源和共用資料集部署至報表伺服器或 SharePoint 網站。 如需詳細資訊，請參閱[轉換資料來源 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/convert-data-sources-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
->  如果您看不到 [報表資料] 窗格，請按一下 [設計] 區，然後再按一下 [檢視]  功能表上的 [報表資料]  。 如果 [報表資料] 窗格是浮動窗格，您可以錨定它。 如需詳細資訊，請參閱[停駐報表設計師中的報表資料窗格 &#40;SSRS&#41;](../../reporting-services/tools/dock-the-report-data-pane-in-report-designer-ssrs.md)。  
+>  如果您看不到 [報表資料] 窗格，請按一下 [設計] 區，然後再按一下 [檢視]  功能表上的 [報表資料] 。 如果 [報表資料] 窗格是浮動窗格，您可以錨定它。 如需詳細資訊，請參閱[停駐報表設計師中的報表資料窗格 &#40;SSRS&#41;](../../reporting-services/tools/dock-the-report-data-pane-in-report-designer-ssrs.md)。  
   
   
 ###  <a name="grouping-pane"></a><a name="bkmk_GroupingPane"></a> 群組窗格  
@@ -93,7 +94,7 @@ ms.locfileid: "68889835"
   
  您可以使用 [屬性] 窗格以：  
   
--   設定設計介面上目前所選取項目的屬性。 某些屬性會提供值的下拉式清單。 您也可以直接在資料格中輸入值。 某些屬性會包含值的集合，以 [(集合)]  值表示。 大部分屬性都可以接受運算式。複雜運算式會以 **\<運算式>** 值表示。 按一下 **\<運算式>** 開啟 [運算式]  對話方塊。 如需詳細資訊，請參閱＜ [Expression Dialog Box](https://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)＞。  
+-   設定設計介面上目前所選取項目的屬性。 某些屬性會提供值的下拉式清單。 您也可以直接在資料格中輸入值。 某些屬性會包含值的集合，以 [(集合)] 值表示。 大部分屬性都可接受運算式；複雜運算式會以 **\<Expression>** 值表示。 按一下 [\<Expression>] 以開啟 [運算式] 對話方塊。 如需詳細資訊，請參閱＜ [Expression Dialog Box](https://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)＞。  
   
 -   您可以使用 [屬性] 窗格工具列按鈕，將方格從類別目錄檢視變更為字母順序檢視。 在類別目錄檢視中，您可能必須展開類別目錄，才能看見底下的所有屬性。 若要開啟項目的 [屬性] 對話方塊，請按一下工具列上的 **[屬性頁]** 按鈕，或以滑鼠右鍵按一下項目，然後按一下 **[屬性]** 。  
   
@@ -135,7 +136,7 @@ ms.locfileid: "68889835"
   
  當您預覽報表時，報表設計師就會連接至報表資料來源、執行資料集查詢、在本機電腦上快取資料、處理報表以結合資料和配置，以及轉譯報表。 您可以在 [預覽] 索引標籤中檢視報表，也可以設定專案屬性，以便在偵錯模式中檢視報表，以及直接在瀏覽器中檢視報表。  
   
--   **預覽參數化報表。** 當您預覽報表時，如果所有報表參數都具有有效的預設值，系統就會自動處理報表。 如果一或多個報表參數沒有有效的預設值，您就必須針對每個未指派的參數選擇值，然後在報表工具列上，按一下 **[檢視報表]** 。  
+-   **預覽參數化報表。** 當您預覽報表時，如果所有報表參數都具有有效的預設值，系統就會自動處理報表。 如果一或多個報表參數沒有有效的預設值，您就必須針對每個未指派的參數選擇值，然後在報表工具列上，按一下 **[檢視報表]**。  
   
 -   **了解本機資料快取** ：當您預覽報表時，報表處理器就會使用目前的參數預設值以執行報表中資料集的所有查詢，然後將結果儲存為本機資料快取 (.rdl.data) 檔案。 如果您沒有對報表資料集查詢或報表參數進行任何變更，就可以繼續設計報表，而不會造成再次擷取這項資料的負擔。  
   

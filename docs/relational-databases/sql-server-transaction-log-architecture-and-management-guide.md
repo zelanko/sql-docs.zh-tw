@@ -21,12 +21,12 @@ ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 976fae5e1f906e80248ac11d1f89e889bcbb5e0e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1b41b9a68776a41b9b7aaab480ea749187becf5b
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000525"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122638"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server 交易記錄架構與管理指南
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -95,11 +95,11 @@ ms.locfileid: "86000525"
   
  交易記錄是循環使用的檔案。 例如，假設資料庫的一個實體記錄檔分成四個 VLF。 資料庫建立時，邏輯記錄檔從實體記錄檔的最前面開始。 新的記錄會加在邏輯記錄檔的最後，並朝向實體記錄檔的結尾處擴充。 記錄截斷會釋出記錄出現在最小復原記錄序號 (MinLSN) 前面的所有虛擬記錄。 *MinLSN* 是成功回復全資料庫所需之最舊記錄檔記錄的記錄序號。 範例資料庫中的交易記錄看起來如下圖所示。  
   
- ![tranlog3](../relational-databases/media/tranlog3.gif)  
+ ![說明實體記錄檔如何分割為虛擬記錄](../relational-databases/media/tranlog3.png)  
   
  當邏輯記錄檔的結尾到達實體記錄檔的結尾時，新的記錄資料將寫回實體記錄檔的開頭處。  
   
-![tranlog4](../relational-databases/media/tranlog4.gif)   
+![說明邏輯交易記錄檔在其實體記錄檔中的包裝方式](../relational-databases/media/tranlog4.png)   
   
  只要邏輯記錄檔的結尾永遠不碰到邏輯記錄檔的開頭，此週期就會不斷地重複。 如果經常截斷舊的記錄，以便讓目前到下個檢查點之間建立的所有新記錄一定會有足夠的空間可以使用，記錄檔就永遠不會填滿。 不過，如果邏輯記錄檔的結尾已到達邏輯記錄檔的開頭，會發生下列其中一種狀況：  
   
@@ -117,11 +117,11 @@ ms.locfileid: "86000525"
   
  下圖將顯示截斷前後的交易記錄。 第一張圖是顯示從未進行截斷的交易記錄。 目前，邏輯記錄正使用四個虛擬記錄檔。 邏輯記錄檔是從第一個虛擬記錄檔的前面開始，並於虛擬記錄檔 4 結束。 MinLSN 記錄位於虛擬記錄檔 3 中。 虛擬記錄檔 1 和虛擬記錄檔 2 僅包含非使用中的記錄檔記錄。 這些記錄都可以截斷。 虛擬記錄 5 仍未使用而且不屬於目前邏輯記錄的一部分。  
   
-![tranlog2](../relational-databases/media/tranlog2.gif)  
+![說明交易記錄在截斷之前的顯示方式](../relational-databases/media/tranlog2.png)  
   
  第二張圖是顯示記錄截斷之後的內容。 虛擬記錄 1 和虛擬記錄 2 已經釋出以便重複使用。 現在邏輯記錄檔是從虛擬記錄檔 3 的前面開始。 虛擬記錄檔 5 仍未使用，而且不屬於目前邏輯記錄檔的一部分。  
   
-![tranlog3](../relational-databases/media/tranlog3.gif)  
+![說明交易記錄在截斷之後的顯示方式](../relational-databases/media/tranlog3.png)  
   
  除了因為某種原因而延遲以外，記錄截斷會在發生下列事件之後自動進行：  
   
@@ -228,7 +228,7 @@ CHECKPOINT 陳述式現在提供一個選擇性的 checkpoint_duration 引數，
 
 下圖將顯示包含兩個使用中交易之交易記錄檔結尾的簡化版本。 檢查點記錄已被壓縮成一個記錄。
 
-![active_log](../relational-databases/media/active-log.gif) 
+![說明在記錄檔結尾處有兩筆使用中的交易及壓縮的檢查點記錄](../relational-databases/media/active-log.png) 
 
 LSN 148 是交易記錄中最後一個記錄。 當記錄於 LSN 147 的檢查點經過處理之後，將會認可 Tran 1，而 Tran 2 將成為唯一的使用中交易。 這會使得 Tran 2 的第一個記錄成為最後檢查點之使用中交易的最早記錄。 這可讓 LSN 142，也就是 Tran 2 的 Begin 交易記錄，成為 MinLSN。
 

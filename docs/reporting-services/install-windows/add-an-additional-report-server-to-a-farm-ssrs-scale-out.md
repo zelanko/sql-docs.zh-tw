@@ -8,12 +8,12 @@ ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 17cffe2f1eaf94174301212c6bb926528c56c7d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f7997b4e7bf9ccf51198e317c2e175f115fa6973
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63225683"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942980"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>將其他報表伺服器加入至伺服器陣列 (SSRS 向外延展)
 
@@ -66,13 +66,15 @@ ms.locfileid: "63225683"
 ##  <a name="additional-configuration"></a><a name="bkmk_additional"></a> 其他組態  
  您可以將向外延展部署中的個別 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器最佳化為僅執行背景處理，如此伺服器就不會與互動報表執行作業競用資源。 背景處理包括排程、訂閱和資料警示。  
   
- 若要變更個別報表伺服器的行為，請將 **RSreportServer.config** 設定檔中的 **\<IsWebServiceEnable>** 設定為 false。  
+ 若要變更個別報表伺服器的行為，請將 **RSreportServer.config** 組態檔中的 **\<IsWebServiceEnable>** 設為 false。  
   
- 根據預設，報表伺服器的 \<IsWebServiceEnable> 會設定為 TRUE。 當所有伺服器都設定為 TRUE 時，伺服器陣列中所有節點的互動和背景就能達到負載平衡。  
+ 根據預設，報表伺服器的 \<IsWebServiceEnable> 會設為 TRUE。 當所有伺服器都設定為 TRUE 時，伺服器陣列中所有節點的互動和背景就能達到負載平衡。  
   
- 如果您將所有報表伺服器的 \<IsWebServiceEnable> 設定為 False，當您嘗試使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能時，就會看見類似以下的錯誤訊息：  
+ 如果將所有報表伺服器的 \<IsWebServiceEnable> 設為 False，則在嘗試使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能時，會看見類似下列的錯誤訊息：  
   
-      The Reporting Services Web Service is not enabled. Configure at least one instance of the Reporting Services SharePoint Service to have <IsWebServiceEnable> set to true. 
+```output
+The Reporting Services Web Service is not enabled. Configure at least one instance of the Reporting Services SharePoint Service to have <IsWebServiceEnable> set to true.
+```
  
  如需詳細資訊，請參閱[修改 Reporting Services 組態檔 &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
 

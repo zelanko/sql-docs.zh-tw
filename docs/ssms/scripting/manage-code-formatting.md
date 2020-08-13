@@ -1,5 +1,6 @@
 ---
 title: 管理程式碼格式設定
+description: 了解三種文字縮排樣式、如何使用這些樣式，以及如何建立可按式 URL。
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -26,15 +27,15 @@ ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d1c9bd306cf30ee0974aff2396946c131bfb824
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 88d0d170172d215ae0bed9574005bc83bb42f026
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78261857"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87123099"
 ---
 # <a name="manage-code-formatting"></a>管理程式碼格式設定
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   當使用編輯器時，您可以利用縮排、隱藏文字、URL...等，來建立程式碼的格式。 您也可以利用智慧型縮排 (Smart Indenting) 功能，在輸入程式碼的同時，自動建立程式碼的格式。  
   
 ## <a name="indenting"></a>縮排  
@@ -46,9 +47,9 @@ ms.locfileid: "78261857"
   
 2.  按一下 **[文字編輯器]** 。  
   
-3.  按一下資料夾，選取 [所有語言]  來設定所有語言的縮排。  
+3.  按一下資料夾，選取 [所有語言] 來設定所有語言的縮排。  
   
-4.  按一下 [定位點]  。  
+4.  按一下 [定位點]。  
   
 5.  請按一下下列其中一個選項：  
   
@@ -56,7 +57,7 @@ ms.locfileid: "78261857"
   
     -   **封鎖**。 游標會對齊上下行。  
   
-    -   [智慧型]  \(預設)。 語言服務會決定要使用的適當縮排樣式。  
+    -   [智慧型] \(預設)。 語言服務會決定要使用的適當縮排樣式。  
   
     > [!NOTE]  
     >  有些語言並未完整提供這三個縮排選項。  
@@ -67,25 +68,25 @@ ms.locfileid: "78261857"
   
 2.  按一下 **[文字編輯器]** 。  
   
-3.  選取 [所有語言]  的資料夾來設定所有語言的縮排。  
+3.  選取 [所有語言] 的資料夾來設定所有語言的縮排。  
   
-4.  按一下 [定位點]  。  
+4.  按一下 [定位點]。  
   
-5.  若要指定縮排和定位作業的定位字元，請按一下 [保留定位點]  。 若要指定空格字元，請選取 [插入空格]  。  
+5.  若要指定縮排和定位作業的定位字元，請按一下 [保留定位點]。 若要指定空格字元，請選取 [插入空格]。  
   
-     如果您選取 [插入空格]  ，請在 [定位點大小]  或 [縮排大小]  之下，分別輸入每個定位點或縮排所代表的空格字元數。  
+     如果您選取 [插入空格]，請在 [定位點大小] 或 [縮排大小] 之下，分別輸入每個定位點或縮排所代表的空格字元數。  
   
 #### <a name="to-indent-code"></a>縮排程式碼  
   
 1.  選取您要縮排的文字。  
   
-2.  按 TAB 鍵，或按一下 [標準] 工具列上的 [縮排]  按鈕。  
+2.  按 TAB 鍵，或按一下 [標準] 工具列上的 [縮排] 按鈕。  
   
 #### <a name="to-unindent-code"></a>取消縮排程式碼  
   
 1.  選取您要取消縮排的文字。  
   
-2.  按 SHIFT+TAB 鍵，或按一下 [標準] 工具列上的 [取消縮排]  按鈕。  
+2.  按 SHIFT+TAB 鍵，或按一下 [標準] 工具列上的 [取消縮排] 按鈕。  
   
 #### <a name="to-automatically-indent-all-of-your-code"></a>自動縮排所有程式碼  
   
@@ -95,26 +96,26 @@ ms.locfileid: "78261857"
   
 3.  按一下 **[所有語言]** 。  
   
-4.  按一下 [定位點]  。  
+4.  按一下 [定位點]。  
   
-5.  按一下 [智慧型]  。  
+5.  按一下 [智慧型]。  
   
 > [!NOTE]  
->  有些語言無法使用 [智慧型]  選項。  
+>  有些語言無法使用 [智慧型] 選項。  
   
 #### <a name="to-convert-white-space-to-tabs"></a>將空格轉換成定位點  
   
 1.  選取空格要轉換成定位點的文字。  
   
-2.  在 [編輯]  功能表上，指向 [進階]  ，再按一下 [將選取範圍空白鍵轉定點]  。  
+2.  在 [編輯] 功能表上，指向 [進階]，再按一下 [將選取範圍空白鍵轉定點]。  
   
 #### <a name="to-convert-tabs-to-spaces"></a>將定位點轉換成空格  
   
 1.  選取您要將定位點轉換成空格的文字。  
   
-2.  在 [編輯]  功能表上，指向 [進階]  ，再按一下 [將選取範圍定位點轉空白]  。  
+2.  在 [編輯] 功能表上，指向 [進階]，再按一下 [將選取範圍定位點轉空白]。  
   
- 這些命令的行為會隨著 [選項]  對話方塊中的定位點設定而不同。 例如，如果定位點設定是 4，[將選取範圍空白鍵轉定點]  會每 4 個連續空格建立一個定位點，[選取範圍定位鍵轉空白鍵]  會每個定位點建立 4 個空格。  
+ 這些命令的行為會隨著 [選項] 對話方塊中的定位點設定而不同。 例如，如果定位點設定是 4，[將選取範圍空白鍵轉定點]**** 會每 4 個連續空格建立一個定位點，[選取範圍定位鍵轉空白鍵]**** 會每個定位點建立 4 個空格。  
   
 ## <a name="converting-text-to-upper-and-lower-case"></a>將文字轉換成大寫和小寫  
  您可以利用命令，將文字轉換成全為大寫或小寫。  
@@ -145,8 +146,8 @@ ms.locfileid: "78261857"
   
 2.  按一下 **[文字編輯器]** 。  
   
-3.  若要變更單一語言的選項，請按一下這個語言資料夾，再按一下 [一般]  。 若要變更所有語言的選項，請按一下 [所有語言]  ，再按一下 [一般]  。  
+3.  若要變更單一語言的選項，請按一下這個語言資料夾，再按一下 [一般]。 若要變更所有語言的選項，請按一下 [所有語言]，再按一下 [一般]。  
   
-4.  選取 [啟用按一下方式的 URL 導覽]  。  
+4.  選取 [啟用按一下方式的 URL 導覽]。  
   
   

@@ -1,5 +1,6 @@
 ---
 title: 自動完成文字 (IntelliSense)
+description: 當輸入足夠用以進行唯一識別的內容時，Microsoft IntelliSense 的自動完成文字功能可完成您正在鍵入的內容，或提供一份可供選擇的可能性清單。 了解叫用此功能的四種方式。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,24 +17,24 @@ ms.assetid: ee9c43a6-aae9-4cfa-b18e-1da9266fabcd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b516e75ce312dbc2970ccb31975d892f7ab98cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3fb33d179463383e41f73ddba30525ce908e2cb5
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253986"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122879"
 ---
 # <a name="complete-word-intellisense"></a>自動完成文字 (IntelliSense)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 的 [自動完成文字] 選項會在您輸入的字元足以找出單一的變數、命令或函數名稱之後，輸入該字詞的其餘部分。  
   
  您可以利用四種方式來叫用 [自動完成文字] 功能：  
   
--   在 [編輯]  功能表上，指向 [IntelliSense]  ，然後按一下 [自動完成文字]  。  
+-   在 [編輯] 功能表上，指向 [IntelliSense]，然後按一下 [自動完成文字]。  
   
 -   按 ALT+向右鍵。  
   
--   以滑鼠右鍵按一下文字編輯器，再按一下 [自動完成文字]  。  
+-   以滑鼠右鍵按一下文字編輯器，再按一下 [自動完成文字]。  
   
 -   在 [文字編輯器] 工具列上，按一下 [自動完成文字] 按鈕。  
   

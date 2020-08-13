@@ -1,5 +1,6 @@
 ---
 title: SQL Server Reporting Services 中的報表資料簡介 (SSRS)
+description: 了解 SQL Server Reporting Services (SSRS) 中報表資料的簡介資訊，例如如何建立資料來源。
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 11/18/2019
-ms.openlocfilehash: 6317e8161871d7094486ed8b6178847549d8ab96
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ba53401168c1b16bb4b61186c6883f0612b7ba60
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190725"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458900"
 ---
 # <a name="intro-to-report-data-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services 中的報表資料簡介 (SSRS)
 
@@ -65,7 +66,7 @@ ms.locfileid: "74190725"
   
 - **篩選資料** ：在查詢或在報表中，可以篩選報表資料。 您可以使用資料集和查詢變數來建立串聯參數。 使用串聯參數，使用者可將選擇範圍從數千縮減至更容易管理的數量。 您可以根據所指定的參數值或其他值，篩選資料表或圖表中的資料。  
   
-- **參數** ：包含查詢變數的資料集查詢命令會自動建立相符的報表參數。 您也可以手動建立參數。 檢視報表時，報表工具列會顯示參數。 使用者可以選取值，以控制報表資料或報告的外觀。 若要為特定對象自訂報表資料，您可以建立連結到相同報表定義，但具有不同預設值的多組報表參數。 您也可以使用內建的 [UserID]  欄位為不同的對象自訂資料。 如需詳細資訊，請參閱[報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md) 和[運算式中的內建集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)。  
+- **參數** ：包含查詢變數的資料集查詢命令會自動建立相符的報表參數。 您也可以手動建立參數。 檢視報表時，報表工具列會顯示參數。 使用者可以選取值，以控制報表資料或報告的外觀。 若要為特定對象自訂報表資料，您可以建立連結到相同報表定義，但具有不同預設值的多組報表參數。 您也可以使用內建的 [UserID] 欄位為不同的對象自訂資料。 如需詳細資訊，請參閱[報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md) 和[運算式中的內建集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)。  
   
 - **資料警示**：發佈報表之後，您可以根據報表資料建立警示。 然後，只要符合指定的規則，您就會收到電子郵件訊息。  
   

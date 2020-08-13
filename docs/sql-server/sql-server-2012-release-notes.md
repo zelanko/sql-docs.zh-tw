@@ -2,9 +2,9 @@
 title: SQL Server 2012 版本資訊 | Microsoft Docs
 description: 建議在安裝或對 Microsoft SQL Server 2012 進行疑難排解之前，先閱讀這份版本資訊文件所描述的已知問題。
 ms.prod: sql
-ms.technology: install
+ms.technology: release-landing
 ms.custom: ''
-ms.date: 02/01/2017
+ms.date: 07/22/2020
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: rothja
 ms.author: jroth
-monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: d60d53f11096343e96c0c309ba3aeb7bed419856
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+monikerRange: = sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f07d5ea10fbb762b46dcf47fb15e9acdfe8404a9
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999398"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111144"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 版本資訊
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
-這份版本資訊文件將描述有關您安裝或疑難排解 Microsoft SQL Server 2012 ([請按一下這裡下載](https://go.microsoft.com/fwlink/?LinkId=238647)) 之前應該閱讀的已知問題。 這份版本資訊文件僅於線上提供，安裝媒體中並不提供，而且會定期更新。  
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+建議在安裝或針對 [Microsoft SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=238647)) 進行疑難排解之前，先閱讀這份版本資訊文件所描述的已知問題。 這份版本資訊文件僅於線上提供，安裝媒體中並不提供，而且會定期更新。  
   
 如需有關如何開始使用和安裝 SQL Server 2012 的詳細資訊，請參閱 SQL Server 2012 讀我檔案。 您可以從安裝媒體與 [讀我檔案](https://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) 下載頁面，取得讀我檔案文件。 您也可以在 [SQL Server 線上叢書](https://go.microsoft.com/fwlink/?LinkId=190948) 和 [SQL Server 論壇](https://go.microsoft.com/fwlink/?LinkId=213599)中尋找更多資訊。  
   
@@ -62,13 +62,17 @@ ms.locfileid: "82999398"
 ### <a name="13-sql-server-setup-might-fail-while-trying-to-start-the-sql-server-browser-service"></a>1.3 SQL Server 安裝程式可能會在嘗試啟動 SQL Server Browser 服務時失敗  
 **問題：** SQL Server 安裝程式可能會在嘗試啟動 SQL Server Browser 服務時失敗，並出現類似以下的錯誤：  
   
-<pre>The following error has occurred:  
-Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed action, or click 'Cancel' to cancel this action and continue setup.</pre>  
+```
+The following error has occurred:  
+Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed action, or click 'Cancel' to cancel this action and continue setup.
+```
   
 或  
   
-<pre>The following error has occurred:  
-SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.</pre>  
+```
+The following error has occurred:  
+SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.
+```
   
 **因應措施：** SQL Server 引擎或 Analysis Services 無法安裝時，就可能發生這種情況。 若要修正此問題，請參閱 SQL Server 安裝程式記錄檔，然後疑難排解 SQL Server 引擎和 Analysis Services 失敗。 如需詳細資訊，請參閱＜檢視與讀取 SQL Server 安裝程式記錄檔＞。 如需詳細資訊，請參閱＜ [View and Read SQL Server Setup Log Files](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)＞。  
   
@@ -105,8 +109,10 @@ SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu3
   
 若未完成這些工作，則在您嘗試建立語意索引時，將會看到以下的錯誤訊息。  
   
-<pre>Msg 41209, Level 16, State 3, Line 1  
-A semantic language statistics database is not registered. Full-text indexes using 'STATISTICAL_SEMANTICS' cannot be created or populated.</pre>  
+```
+Msg 41209, Level 16, State 3, Line 1  
+A semantic language statistics database is not registered. Full-text indexes using 'STATISTICAL_SEMANTICS' cannot be created or populated.
+```
   
 ### <a name="17-installation-prerequisite-handling-during-sql-server-2012-setup"></a>1.7 在安裝 SQL Server 2012 期間處理安裝必要條件  
 下列項目描述在安裝 SQL Server 2012 期間必要的安裝行為：  
@@ -343,7 +349,7 @@ Analysis Services (AS) 的 SQL Server Integration Services (SSIS) 元件未以�
 ### <a name="45-controls-do-not-scale-properly-on-large-font-sizes"></a>4.5 控制項無法針對大字型適當縮放  
 **問題：** 如果您將文字大小變更為 [大 - 150%] (在 Windows Server 2008 或 Windows 7 中)，或將 [自訂 DPI 設定] 變更為 200% (在 Windows 7 中)，便無法存取 [新增知識庫]  頁面上的 [取消]  和 [建立]  按鈕。  
   
-**因應措施**：若要解決這個問題，請將字型設定為較小的大小。  
+**因應措施：** 若要解決這個問題，請將字型設定為較小的大小。  
   
 ### <a name="46-screen-resolution-of-800x600-is-not-supported"></a>4.6 不支援 800x600 螢幕解析度  
 **問題：** 如果螢幕解析度設定為 800x600，Data Quality Client 應用程式不會正確顯示。  
@@ -378,9 +384,9 @@ Analysis Services (AS) 的 SQL Server Integration Services (SSIS) 元件未以�
 ### <a name="414-issue-with-date-or-datetime-values-in-unmapped-source-fields-in-excel-during-cleansing-and-matching"></a>4.14 在清理和比對期間，Excel 中未對應之來源欄位的 Date 或 DateTime 值發生問題  
 **問題**：如果您的來源資料是 Excel，而且您尚未對應包含 **Date** 或 **DateTime** 資料類型值的來源欄位，則清理和比對活動期間會發生下列狀況：  
   
--   未對應的 **Date** 值會以 yyyymmdd 格式顯示並匯出。  
+-   未對應的 **Date** 值會以 yyyy-mm-dd 格式顯示並匯出。  
   
--   未對應之 **DateTime** 值的時間值會遺失，而且它們會以 yyyymmdd 格式顯示並匯出。  
+-   未對應 **DateTime** 值的時間值會遺失，且這些值會以yyyy-mm-dd 格式顯示並匯出。  
   
 **因應措施：** 您可以在清理活動的 [管理和檢視結果]  頁面以及比對活動的 [比對]  頁面上，於右下角的窗格中檢視未對應的欄位值。  
   
@@ -464,12 +470,12 @@ Analysis Services (AS) 的 SQL Server Integration Services (SSIS) 元件未以�
 ### <a name="54-an-error-might-occur-when-navigating-in-the-generate-script-wizard"></a>5.4 在產生指令碼精靈中導覽時可能會發生錯誤  
 **問題：** 在產生指令碼精靈中，按一下 [儲存或發佈指令碼]  產生指令碼，然後按一下 [選擇選項]  或 [設定指令碼編寫選項]  進行導覽之後，再次按一下 [儲存或發佈指令碼]  可能會產生下列錯誤：  
   
-<pre>
+```
 An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo)  
 ------------------------------  
 ADDITIONAL INFORMATION:  
 Invalid object name 'sys.federations'. (Microsoft SQL Server, Error: 208)
-</pre>  
+```
   
 **因應措施：** 關閉 [產生指令碼精靈]，並重新開啟。  
   
@@ -631,9 +637,8 @@ SQL Server 2012 包括 StreamInsight 2.0。 StreamInsight 2.0 需要 Microsoft S
 ## <a name="100-upgrade-advisor"></a><a name="UA"></a>10.0 Upgrade Advisor  
   
 ### <a name="101-link-to-install-upgrade-advisor-is-not-enabled-on-chinese-hk-operating-systems"></a>10.1 在中文 (HK) 作業系統上並未啟用安裝 Upgrade Advisor 的連結  
-問題：當您嘗試在任何支援的中文 (香港) 作業系統 (OS) Windows 版本上安裝升級建議程式時，可能會發現未啟用安裝升級建議程式的連結。  
+問題：當嘗試在任何支援的中文 (香港特別行政區) 作業系統 (OS) Windows 版本上安裝升級建議程式時，您可能會發現未啟用安裝升級建議程式的連結。  
   
 **因應措施**：在 SQL Server 2012 媒體中的 `\1028_CHT_LP\x64\redist\Upgrade Advisor` 或 `\1028_CHT_LP\x86\redist\Upgrade Advisor` 上找出 **SQLUA.msi** 檔案，視您的作業系統架構而定。  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
-  

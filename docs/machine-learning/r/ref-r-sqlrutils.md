@@ -1,47 +1,47 @@
 ---
 title: sqlrutils Helper 函式
-description: 使用 SQL Server 2016 R Services 和 SQL Server 機器學習服務 (使用 R) 中的 sqlrutils 函式程式庫來產生包含 R 指令碼的預存程序。
+description: sqlrutils 是來自 Microsoft 的 R 套件，其提供一種機制，讓 R 使用者將其 R 指令碼放入 T-SQL 預存程序、註冊具有資料庫的這個預存程序，以及從 R 開發環境執行預存程序。 該套件包含在 SQL Server 機器學習服務與 SQL Server 2016 R Services 中。
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 12/15/2018
-ms.topic: conceptual
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3de8d438691afb7ebf1aabe15265227b7876b837
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 7c989ad848324536122c042e2b5a823b16b72657
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117391"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406141"
 ---
-# <a name="sqlrutils-r-library-in-sql-server"></a>qlrutils (SQL Server 中的 R 程式庫)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="sqlrutils-r-package-in-sql-server-machine-learning-services"></a>sqlrutils (SQL Server 機器學習服務中的 R 套件)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-**sqlrutils** 套件提供一種機制，讓 R 使用者將其 R 指令碼放入 T-SQL 預存程序、註冊具有資料庫的這個預存程序，以及從 R 開發環境執行預存程序。 
+**sqlrutils** 是來自 Microsoft 的 R 套件，其提供一種機制，讓 R 使用者將其 R 指令碼放入 T-SQL 預存程序、註冊具有資料庫的這個預存程序，以及從 R 開發環境執行預存程序。 該套件包含在 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)與 [SQL Server 2016 R Services](sql-server-r-services.md) 中。
 
 轉換 R 程式碼以在單一預存程序內執行，即可更有效地使用 SQL Server R Services，而這需要將 R 指令碼內嵌為 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)的參數。 **sqlrutils** 套件可協助您建置此內嵌 R 指令碼，並適當地設定相關參數。
 
 **sqlrutils** 套件可執行這些工作︰
 
 - 將產生的 T-SQL 指令碼儲存為 R 資料結構內的字串
-- 選擇性地產生 T-SQL 指令碼的 .sql 檔案，您可以對其進行編輯或執行以建立預存程序
+- 選擇性地產生 T-SQL 指令碼的 .sql 檔案，可對其進行編輯或執行以建立預存程序
 - 從 R 開發環境中註冊具有 SQL Server 執行個體的新建立預存程序
 
 傳遞格式正確的參數，並處理結果，也可以從 R 環境執行預存程序。 或者，您可以使用來自 SQL Server 的預存程序支援一般資料庫整合案例 (例如 ETL、模型訓練和高容量評分)。
 
-  > [!NOTE]
-  > 如果您想要呼叫 *executeStoredProcedure* 函式以從 R 環境執行預存程序，則必須使用 ODBC 3.8 提供者 (例如適用於 SQL Server 的 ODBC Driver 13)。  
+> [!NOTE]
+> 如果您想要呼叫 *executeStoredProcedure* 函式以從 R 環境執行預存程序，則必須使用 ODBC 3.8 提供者 (例如適用於 SQL Server 的 ODBC Driver 13)。  
   
 ## <a name="full-reference-documentation"></a>完整參考文件
 
-**sqlrutils**程式庫散佈在多個 Microsoft 產品中，但不論您是在 SQL Server 還是在另一個產品中取得此程式庫，其使用方式都相同。 由於函式相同，因此[個別 sqlrutils 函式的文件](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)只會發佈至 Microsoft Machine Learning Server [R 參考](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference)底下的一個位置。 若有任何產品特定行為存在，函式說明頁面中將會註明不一致之處。
+**sqlrutils** 套件分散在多個 Microsoft 產品中，但不論是在 SQL Server 或其他產品中取得該套件，其使用方式都相同。 由於函式相同，因此[個別 sqlrutils 函式的文件](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)只會發佈至 Microsoft Machine Learning Server [R 參考](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference)底下的一個位置。 若有任何產品特定行為存在，函式說明頁面中將會註明不一致之處。
 
 ## <a name="functions-list"></a>函式清單
 
 下節概述您可從 **sqlrutils** 套件呼叫的函式，用以開發包含內嵌 R 程式碼的預存程序。 如需每個方法或函式的參數詳細資訊，請參閱套件的 R 說明：`help(package="sqlrutils")`
 
-|函式 | 描述 |
+|函式 | 說明 |
 |------|-------------|
 |[executeStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| 執行 SQL 預存程序。|
 |[getInputParameters](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/getinputparameters)| 取得預存程序的輸入參數清單。| 
@@ -57,21 +57,21 @@ ms.locfileid: "81117391"
 
 ## <a name="how-to-use-sqlrutils"></a>如何使用 sqlrutils
 
-**sqlrutils** 程式庫函式必須在 SQL Server 機器學習服務 (包含 R) 上執行。如果您是在用戶端工作站上工作，請設定遠端計算內容，將執行轉移至 SQL Server。 使用此套件的工作流程包含下列步驟：
+**sqlrutils** 套件函式必須在具有 SQL Server 機器學習服務 (包含 R) 的電腦上執行。如果您是在用戶端工作站上工作，請設定遠端計算內容，以將執行轉移至 SQL Server。 使用此套件的工作流程包含下列步驟：
 
 + 定義預存程序參數 (輸入、輸出或這兩者) 
 + 產生並註冊預存程序    
 + 執行預存程序  
 
-在 R 工作階段中，從命令列鍵入 **，以載入** sqlrutils`library(sqlrutils)`。
+在 R 工作階段中，從命令列鍵入 `library(sqlrutils)`，以載入 **sqlrutils**。
 
 > [!Note]
-> 如果您將計算內容變更為 SQL Server 並執行該計算內容中的程式碼，您可以在沒有 SQL Server 的電腦上載入此程式庫 (例如，在 R Client 執行個體上)。
+> 如果將計算內容變更為 SQL Server 並執行該計算內容中的程式碼，則可在沒有 SQL Server 的電腦上載入此套件 (例如，在 R Client 執行個體上)。
 
 
 ### <a name="define-stored-procedure-parameters-and-inputs"></a>定義預存程序參數和輸入
 
-`StoredProcedure` 是用來建置預存程序的主要建構函式。 這個建構函式會產生「SQL Server 預存程序」  物件，並選擇性地建立文字檔，其中包含可用來產生使用 T-SQL 命令之預存程序的查詢。 
+`StoredProcedure` 是用來建置預存程序的主要建構函式。 這個建構函式會產生「SQL Server 預存程序」 ** 物件，並選擇性地建立文字檔，其中包含可用來產生使用 T-SQL 命令之預存程序的查詢。 
 
 選擇性， *StoredProcedure* 函式也可以註冊具有所指定執行個體和資料庫的預存程序。
 

@@ -1,5 +1,6 @@
 ---
 title: 使用查詢編輯器編輯 SQLCMD 指令碼
+description: 當必須在相同指令碼中處理 Windows 系統命令和 Transact-SQL 陳述式時，即可使用 SQLCMD 指令碼。 了解如何使用資料庫引擎查詢編輯器來寫入和編輯 SQLCMD 指令碼。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 637de4e8168b97e27da707f3f189d3608786d973
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ed1171649c422ccb451fc7540cae8ca6629b65b1
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253907"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122959"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>使用查詢編輯器編輯 SQLCMD 指令碼
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   您可以使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢編輯器，以 SQLCMD 指令碼撰寫和編輯查詢。 當您必須在相同的指令碼中處理 Windows 系統命令和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式時，就可以使用 SQLCMD 指令碼。  
   
 ## <a name="sqlcmd-mode"></a>SQLCMD 模式  
@@ -51,13 +52,13 @@ ms.locfileid: "75253907"
   
 #### <a name="to-switch-a-database-engine-query-editor-window-to-sqlcmd-mode"></a>將 Database Engine 查詢編輯器視窗切換到 SQLCMD 模式  
   
-1.  在物件總管中，以滑鼠右鍵按一下伺服器，然後按一下 [新增查詢]  ，即可開啟新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器視窗。  
+1.  在物件總管中，以滑鼠右鍵按一下伺服器，然後按一下 [新增查詢]，即可開啟新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器視窗。  
   
-2.  在 [查詢]  功能表上，按一下 [SQLCMD 模式]  。  
+2.  在 [查詢] 功能表上，按一下 [SQLCMD 模式]。  
   
      查詢編輯器會在其本身的內容中執行 **sqlcmd** 陳述式。  
   
-3.  在 [SQL 編輯器]  工具列的 [可用資料庫]  清單中，選取 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]。  
+3.  在 [SQL 編輯器] 工具列的 [可用資料庫] 清單中，選取 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]。  
   
 4.  在查詢編輯器視窗中鍵入下列兩項 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式及 `!!DIR` **sqlcmd** 陳述式：  
   
@@ -74,21 +75,21 @@ ms.locfileid: "75253907"
   
      請注意第 1 個和第 3 個陳述式產生的兩個 SQL 結果窗格。  
   
-6.  在 [結果]  窗格中，按一下 [訊息]  索引標籤來查看這三個陳述式產生的訊息：  
+6.  在 [結果] 窗格中，按一下 [訊息] 索引標籤來查看這三個陳述式產生的訊息：  
   
     -   (6 個資料列受影響)  
   
-    -   \<目錄資訊>  
+    -   \<The directory information>  
   
     -   (4 個資料列受影響)  
   
 > [!IMPORTANT]  
->  從命令列執行時， **sqlcmd** 公用程式允許與作業系統進行完整互動。 當您在 [SQLCMD 模式]  中使用 [查詢編輯器] 時，您必須非常小心，不要執行互動式陳述式。 [查詢編輯器] 無法回應作業系統提示。  
+>  從命令列執行時， **sqlcmd** 公用程式允許與作業系統進行完整互動。 當您在 [SQLCMD 模式] 中使用 [查詢編輯器] 時，您必須非常小心，不要執行互動式陳述式。 [查詢編輯器] 無法回應作業系統提示。  
   
  如需有關如何執行 SQLCMD 的詳細資訊，請參閱 [sqlcmd 工用程式](../../tools/sqlcmd-utility.md)，或進入 SQLCMD 教學課程。  
   
 ## <a name="enable-sqlcmd-scripting-by-default"></a>依預設，會啟用 SQLCMD 指令碼  
- 若要依預設開啟 SQLCMD 指令碼，請在 [工具]  功能表中選取 [選項]  ，展開 [執行查詢]  和 **SQL Server**，按一下 [一般]  頁面，再核取 [預設會以 SQLCMD 模式開啟新查詢]  方塊。  
+ 若要依預設開啟 SQLCMD 指令碼，請在 [工具]**** 功能表中選取 [選項]****，展開 [執行查詢]**** 和 **SQL Server**，按一下 [一般]**** 頁面，再核取 [預設會以 SQLCMD 模式開啟新查詢]**** 方塊。  
   
 ## <a name="writing-and-editing-sqlcmd-scripts"></a>撰寫和編輯 SQLCMD 指令碼  
  在啟用指令碼模式之後，您便可以撰寫 SQLCMD 命令和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 適用的規則如下：  
@@ -140,7 +141,7 @@ ms.locfileid: "75253907"
 > [!NOTE]  
 >  對於 `:error` 和 `:out`而言， `stderr` 和 `stdout` 都會將輸出傳到訊息索引標籤。  
   
- 查詢編輯器不支援上面所未列出的 SQLCMD 命令。 當執行包含不支援的 SQLCMD 關鍵字之指令碼時，查詢編輯器會傳送一則「忽略命令 *\<忽略的命令*>」訊息給每個不支援之關鍵字的目的地。 指令碼將順利執行，但會忽略不支援的命令。  
+ 查詢編輯器不支援上面所未列出的 SQLCMD 命令。 執行包含所不支援 SQLCMD 關鍵字的指令碼時，查詢編輯器會傳送一則「忽略命令 *\<ignored command*>」訊息給每個所不支援關鍵字的目的地。 指令碼將順利執行，但會忽略不支援的命令。  
   
 > [!CAUTION]  
 >  由於您不是從命令列啟動 SQLCMD，因此，當執行查詢編輯器的 SQLCMD 模式時，會有若干限制。 您不能傳入變數之類的命令列參數，且因為查詢編輯器沒有回應作業系統提示的能力，您必須小心避免執行互動式的陳述式。  

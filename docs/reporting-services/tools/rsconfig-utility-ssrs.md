@@ -1,5 +1,6 @@
 ---
 title: rsconfig 公用程式 | Microsoft Docs
+description: 了解會加密並儲存報表伺服器資料庫連接以及 RSReportServer.config 檔案中帳戶值的 rsconfig.exe 公用程式。
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ad41870ac9bcb162e792dc6abd8ca21ceeeb3f2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8397412801d38107c3532bea377d7bd150561f17
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082183"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913634"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig 公用程式 (SSRS)
   **rsconfig.exe** 公用程式會加密連接和帳戶值，並會將它們儲存在 RSReportServer.config 檔中。 加密的值包括自動處理報表的程序所用的報表伺服器資料庫連接資訊和帳戶值。  
@@ -53,8 +54,8 @@ rsconfig {-?}
 |**-i**  *instancename*|如果您使用具名執行個體，這就是必要的。|如果您使用具名的 Reporting Services 執行個體，這個值會指定 Reporting Services 執行個體的名稱。|  
 |**-d**  *databasename*|必要。|指定報表伺服器資料庫的名稱。|  
 |**-a**  *authmethod*|必要。|指定報表伺服器用來連接到報表伺服器資料庫的驗證方法。 有效值如下： **Windows** 或 **SQL** (這個引數不區分大小寫)。<br /><br /> **Windows** 指定報表伺服器使用 Windows 驗證。<br /><br /> **SQL** 指定報表伺服器使用 SQL Server 驗證。|  
-|**-u**  *[domain\\]username*|對 **-e** 而言，這是必要的；對 **-c**而言，這是選擇性的。|指定報表伺服器資料庫連接或自動帳戶的使用者帳戶。<br /><br /> 若為 **rsconfig -e**，此引數是必要的。 它必須是網域使用者帳戶。<br /><br /> 若為 **rsconfig -c** 及 **-a SQL**，此引數必須指定一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。<br /><br /> 若為 **rsconfig -c** 及 **-a Windows**，此引數可能會指定網域使用者、內建帳戶或服務帳戶認證。 如果您指定網域帳戶，請以 <網域>\<使用者名稱>  的格式指定 <網域>  和 <使用者名稱>  。 如果您是使用內建帳戶，這個引數就是選擇性的。 如果您要使用服務帳戶認證，請省略這個引數。|  
-|**-p**  *password*|如果指定 **-u** ，則為必要。|指定要搭配 <使用者名稱>  引數使用的密碼。 如果帳戶不需要密碼，您可以將這個引數設為空白值。 網域帳戶的這個值會區分大小寫。|  
+|**-u**  *[domain\\]username*|對 **-e** 而言，這是必要的；對 **-c**而言，這是選擇性的。|指定報表伺服器資料庫連接或自動帳戶的使用者帳戶。<br /><br /> 若為 **rsconfig -e**，此引數是必要的。 它必須是網域使用者帳戶。<br /><br /> 若為 **rsconfig -c** 及 **-a SQL**，此引數必須指定一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。<br /><br /> 若為 **rsconfig -c** 及 **-a Windows**，此引數可能會指定網域使用者、內建帳戶或服務帳戶認證。 如果您指定網域帳戶，請以 <網域>\<使用者名稱> 的格式指定 <網域> 和 <使用者名稱>。 如果您是使用內建帳戶，這個引數就是選擇性的。 如果您要使用服務帳戶認證，請省略這個引數。|  
+|**-p**  *password*|如果指定 **-u** ，則為必要。|指定要搭配 <使用者名稱> 引數使用的密碼。 如果帳戶不需要密碼，您可以將這個引數設為空白值。 網域帳戶的這個值會區分大小寫。|  
 |**-t**|選擇性。|在追蹤記錄中，輸出錯誤訊息。 此引數沒有取得值。 如需詳細資訊，請參閱 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)。|  
   
 ## <a name="permissions"></a>權限  

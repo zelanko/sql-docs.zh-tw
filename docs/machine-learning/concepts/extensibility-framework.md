@@ -1,30 +1,30 @@
 ---
 title: 擴充性架構
-description: 此文章說明在 SQL 伺服器上執行外部指令碼 (例如 R 或 Python) 的擴充性架構的結構。
+description: 本文描述用來在 SQL 伺服器機器學習服務上執行外部 Python 或 R 指令碼的擴充性架構結構。 指令碼會在語言執行階段環境中執行，作為核心資料庫引擎的延伸模組。
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 11/04/2019
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 408125a3369d35a28893852a2f674e3e4562b063
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 14611369afe42da2e87aab87d675fd77e710c461
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118821"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406291"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>SQL Server 機器學習服務的擴充性結構 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-SQL Server 有執行外部指令碼 (例如 R 或 Python) 的擴充性架構。 指令碼會在語言執行階段環境中執行，作為核心資料庫引擎的延伸模組。
+本文描述用來在 SQL 伺服器機器學習服務上執行外部 Python 或 R 指令碼的擴充性架構結構。 指令碼會在語言執行階段環境中執行，作為核心資料庫引擎的延伸模組。
 
 ## <a name="background"></a>背景
 
-擴充性架構是在 SQL Server 2016 中引進，以支援 R 執行階段。 SQL Server 2017 和更新版本支援 Python。
+擴充性架構是在 SQL Server 2016 中引進，以透過 [R Services](../r/sql-server-r-services.md) 支援 R 執行階段。 SQL Server 2017 和更新版本則透過[機器學習服務](../sql-server-machine-learning-services.md)支援 Python。
 
 擴充性架構的目的是要在 SQL Server 和資料科學語言 (例如 R 和 Python) 之間提供介面。 目標是要減少將資料科學解決方案移到生產環境時的摩擦，並保護在開發程序中公開的資料。 藉由在受 SQL Server 管理的安全架構中執行信任的指令碼語言，資料庫管理員可以維護安全性，同時允許資料科學家存取企業資料。
 

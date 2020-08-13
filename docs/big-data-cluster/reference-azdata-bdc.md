@@ -5,26 +5,27 @@ description: azdata bdc 命令的參考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d5d5cb5256f4a1b8389d882300a89f0ee0012a99
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: eaecb3075b01817e7281b562834a23010d7653b9
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74820981"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942651"
 ---
 # <a name="azdata-bdc"></a>azdata bdc
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-下文提供 `azdata` 工具中 `bdc` 命令的參考。 如需其他 `azdata` 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)
+下文提供 `azdata` 工具中 `sql` 命令的參考。 如需其他 `azdata` 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)。
 
 ## <a name="commands"></a>命令
-|     |     |
+| 命令 | 說明 |
 | --- | --- |
+[azdata bdc spark](reference-azdata-bdc-spark.md) | Spark 命令可讓使用者透過建立和管理工作階段、陳述式和批次，與 Spark 系統進行互動。
 [azdata bdc create](#azdata-bdc-create) | 建立巨量資料叢集。
 [azdata bdc delete](#azdata-bdc-delete) | 刪除巨量資料叢集。
 [azdata bdc upgrade](#azdata-bdc-upgrade) | 更新 SQL Server 巨量資料叢集中每個容器所部署的映像。
@@ -38,29 +39,31 @@ ms.locfileid: "74820981"
 [azdata bdc spark](reference-azdata-bdc-spark.md) | Spark 服務命令。
 [azdata bdc gateway](reference-azdata-bdc-gateway.md) | 閘道服務命令。
 [azdata bdc app](reference-azdata-bdc-app.md) | 應用程式服務命令。
-[azdata bdc spark](reference-azdata-bdc-spark.md) | Spark 命令可讓使用者透過建立和管理工作階段、陳述式和批次，與 Spark 系統進行互動。
 [azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | HDFS 模組提供用來存取 HDFS 檔案系統的命令。
 ## <a name="azdata-bdc-create"></a>azdata bdc create
 建立 SQL Server 巨量資料叢集 - 系統上必須有 Kubernetes 設定，以及下列環境變數 ['AZDATA_USERNAME', 'AZDATA_PASSWORD']。
 ```bash
 azdata bdc create [--name -n] 
                   [--config-profile -c]  
-                  [--accept-eula -a]  
-                  [--node-label -l]  
-                  [--force -f]
+                  
+[--accept-eula -a]  
+                  
+[--node-label -l]  
+                  
+[--force -f]
 ```
 ### <a name="examples"></a>範例
 引導式 BDC 部署體驗；您將會接收到所需值的提示。
 ```bash
 azdata bdc create
 ```
-包含引數的 BDC 部署。
+透過 `azdata bdc config init` 初始化，包含引數的 BDC 部署和自訂組態設定檔。
 ```bash
-azdata bdc create --accept-eula yes --config-profile aks-dev-test
+azdata bdc create --accept-eula yes --config-profile ./path/to/config/profile
 ```
-設定檔中具有指定名稱 (而不是預設名稱) 的 BDC 部署。
+包含指定自訂叢集名稱，以及預設組態設定檔 aks-dev-test 的 BDC 部署。
 ```bash
-azdata bdc create --name <cluster_name> --accept-eula yes --config-profile aks-dev-test --force
+azdata bdc create --name <cluster_name> --accept-eula yes --config-profile aks-dev-test
 ```
 包含引數的 BDC 部署 - 使用 --force 旗標時，不會提供任何提示。
 ```bash
@@ -70,9 +73,9 @@ azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
 #### `--name -n`
 巨量資料叢集名稱，用於 kubernetes 命名空間。
 #### `--config-profile -c`
-巨量資料叢集組態設定檔，用於部署叢集：['kubeadm-dev-test', 'kubeadm-prod', 'aks-dev-test', 'aks-dev-test-ha']
+巨量資料叢集組態設定檔，用來部署叢集：['openshift-dev-test', 'aro-dev-test-ha', 'aks-dev-test', 'openshift-prod', 'aks-dev-test-ha', 'kubeadm-prod', 'aro-dev-test', 'kubeadm-dev-test']
 #### `--accept-eula -a`
-您接受授權條款嗎? [yes/no]。 如果您不想要使用此引數，可以將環境變數 ACCEPT_EULA 設定為 'yes'。 您可以在 https://aka.ms/eula-azdata-en 中查看 azdata 的授權條款，而巨量資料叢集的授權條款則位於下列位置 - Enterprise： https://go.microsoft.com/fwlink/?linkid=2104292 、Standard： https://go.microsoft.com/fwlink/?linkid=2104294 、Developer： https://go.microsoft.com/fwlink/?linkid=2104079 。
+您接受授權條款嗎? [yes/no]。 如果您不想要使用此引數，可以將環境變數 ACCEPT_EULA 設定為 'yes'。 您可在 https://aka.ms/eula-azdata-en 檢視 azdata 的授權條款。
 #### `--node-label -l`
 巨量資料叢集節點標籤，用來指定要部署至的目標節點。
 #### `--force -f`
@@ -85,7 +88,7 @@ azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org)。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 ## <a name="azdata-bdc-delete"></a>azdata bdc delete
@@ -113,7 +116,7 @@ azdata bdc delete --name <cluster_name>
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org)。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 ## <a name="azdata-bdc-upgrade"></a>azdata bdc upgrade
@@ -121,7 +124,14 @@ JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespat
 ```bash
 azdata bdc upgrade --name -n 
                    --tag -t  
-                   [--repository -r]
+                   
+[--repository -r]  
+                   
+[--controller-timeout -k]  
+                   
+[--stability-threshold -s]  
+                   
+[--component-timeout -p]
 ```
 ### <a name="examples"></a>範例
 BDC 會從相同存放庫升級至新的映像標籤 "cu2"。
@@ -132,6 +142,10 @@ BDC 會從新存放庫 "foo/bar/baz" 升級至標籤為 "cu2" 的新映像。
 ```bash
 azdata bdc upgrade -t cu2 -r foo/bar/baz
 ```
+BDC 會從相同的存放庫升級到包含標籤 "cu2" 的新映像。升級將會等待控制器升級 30 分鐘，並等待控制器資料庫升級 30 分鐘。 然後，其接著會等待控制器和控制器資料庫執行三分鐘，而不會損毀升級叢集的其餘部分。 每個後續的升級階段將需四十分鐘來完成。
+```bash
+azdata bdc upgrade -t cu2 --controller-timeout=30 --component-timeout=40 --stability-threshold=3
+```
 ### <a name="required-parameters"></a>必要參數
 #### `--name -n`
 巨量資料叢集名稱，用於 kubernetes 命名空間。
@@ -140,6 +154,12 @@ azdata bdc upgrade -t cu2 -r foo/bar/baz
 ### <a name="optional-parameters"></a>選擇性參數
 #### `--repository -r`
 要讓叢集中所有容器提取其映像的 Docker 存放庫。
+#### `--controller-timeout -k`
+在復原升級前等待控制器或控制器資料庫升級的分鐘數。
+#### `--stability-threshold -s`
+在將升級標記為穩定前，於升級後等待的分鐘數。
+#### `--component-timeout -p`
+在暫停升級前，於升級的每個階段 (控制器升級後) 等待升級完成的分鐘數。
 ### <a name="global-arguments"></a>全域引數
 #### `--debug`
 增加記錄詳細資訊，以顯示所有偵錯記錄。
@@ -148,7 +168,7 @@ azdata bdc upgrade -t cu2 -r foo/bar/baz
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org)。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 

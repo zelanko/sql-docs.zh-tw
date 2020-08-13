@@ -1,5 +1,6 @@
 ---
 title: 程式碼大綱
+description: 了解如何使用 SQL Server Management Studio 查詢編輯器中的程式碼大綱功能來選擇性隱藏程式碼。
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 366928df4dfe2b4b3c7c2749201d1d3980937f01
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b8ed89c3801cb4177e2f9114e1404154848478ad
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254028"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920909"
 ---
 # <a name="code-outlining"></a>程式碼大綱
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢編輯器中的大綱功能，在您編輯查詢時選擇性地隱藏程式碼。 這可讓您更輕易地檢視正在處理的程式碼，尤其是處理大型查詢檔案的情況。  
   
 ## <a name="outlining-overview"></a>大綱概觀  
@@ -38,7 +39,7 @@ ms.locfileid: "75254028"
   
  ![顯示大綱的 XML 程式碼](../../ssms/scripting/media/editoutlinexmlfull.gif "顯示大綱的 XML 程式碼")  
   
- 當您按一下 \<InnerTag> 行的減號時，只會摺疊 InnerTag，如下圖所示。  
+ 當按一下 \<InnerTag> 行上的減號時，只會摺疊 InnerTag，如下圖所示。  
   
  ![具有內部隱藏節點的 XML 程式碼](../../ssms/scripting/media/editoutlinexmlinnercol.gif "具有內部隱藏節點的 XML 程式碼")  
   
@@ -46,11 +47,11 @@ ms.locfileid: "75254028"
   
  ![顯示隱藏程式碼的 XML 程式碼工具提示](../../ssms/scripting/media/editoutlinexmlmouse.gif "顯示隱藏程式碼的 XML 程式碼工具提示")  
   
- 當您按一下 \<MiddleTag> 行的減號時，就會同時摺疊 MiddleTag 和 InnerTag，如下圖所示。  
+ 當按一下 \<MiddleTag> 行的減號時，就會同時摺疊 MiddleTag 和 InnerTag，如下圖所示。  
   
  ![隱藏內部和中間標籤的 XML 程式碼](../../ssms/scripting/media/editoutlinexmlmiddlecol.gif "具有內部及中間隱藏標籤的 XML 程式碼")  
   
- 當您按一下 \<OuterTag> 行的減號時，就會摺疊這三行，如下圖所示。  
+ 當按一下 \<OuterTag> 行的減號時，就會摺疊這三行，如下圖所示。  
   
  ![顯示所有三個隱藏標籤的 XML 程式碼](../../ssms/scripting/media/editoutlinexmloutercol.gif "顯示所有三個隱藏標籤的 XML 程式碼")  
   

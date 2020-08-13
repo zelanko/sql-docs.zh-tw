@@ -1,23 +1,24 @@
 ---
 title: 下載 SQL Server PowerShell 模組
+description: 了解如何安裝 SqlServer PowerShell 模組，該模組會提供支援最新 SQL 功能的 Cmdlet，且也包含 SQLPS 模組中 Cmdlet 的更新版本。
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: carlrab
+ms.reviewer: matteot, aanelson
 ms.custom: ''
-ms.date: 01/23/2020
-ms.openlocfilehash: 99976a12ae76254da5b50c5467df9d9e42fdbbce
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 06/11/2020
+ms.openlocfilehash: 63b91463a265585036416721d1794920e02b9d13
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76920351"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122999"
 ---
 # <a name="install-the-sql-server-powershell-module"></a>安裝 SQL Server PowerShell 模組
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 本文提供安裝 **SqlServer** PowerShell 模組的指示。
 
@@ -26,7 +27,8 @@ ms.locfileid: "76920351"
 有兩個 SQL Server PowerShell 模組：
 
 - **SqlServer**：SqlServer 模組包含可支援最新 SQL 功能的新 Cmdlet。 此模組也包含 **SQLPS** 中 Cmdlet 的更新版本。 若要下載 SqlServer 模組，請移至 [PowerShell 資源庫中的 SqlServer 模組](https://www.powershellgallery.com/packages/Sqlserver)。
-- **SQLPS**：SQLPS 模組隨附於 SQL Server 安裝 (基於回溯相容性)，但不再更新。 最新版 PowerShell 模組是 **SqlServer** 模組。
+
+- **SQLPS**：SQLPS 是 [SQL Agent](sql-server-powershell.md#sql-server-agent) 使用 PowerShell 子系統在代理程式作業步驟中執行代理程式作業的模組。
 
 > [!NOTE]
 > PowerShell 資源庫中的 **SqlServer** 模組版本支援版本設定，而且需要 PowerShell 5.0 版或更新版本。
@@ -38,20 +40,22 @@ ms.locfileid: "76920351"
 
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio
 
-SQL Server Management Studio (SSMS)，從 17.0 版開始，兩個 PowerShell 模組都不會安裝。 若要搭配 SSMS 使用 PowerShell，請從 [PowerShell 資源庫](https://www.powershellgallery.com/packages/Sqlserver) \(英文\) 安裝 **SqlServer** 模組。
+[SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 不會安裝兩個 PowerShell 模組的任何一個。 若要搭配 SSMS 使用 PowerShell，請從 [PowerShell 資源庫](https://www.powershellgallery.com/packages/Sqlserver) \(英文\) 安裝 **SqlServer** 模組。
 
 > [!NOTE]
-> 使用版本為 16.x 的 SSMS 時，舊版的 **SqlServer** 模組會隨附於 SQL Server Management Studio (SSMS)
+> 使用 SSMS 16.x 版時，舊版的 **SqlServer** 模組會隨附於 SQL Server Management Studio (SSMS)
 
 ## <a name="azure-data-studio"></a>Azure Data Studio
 
-Azure Data Studio 不會安裝兩個 PowerShell 模組的任何一個。 若要搭配 Azure Data Studio 使用 PowerShell，請從 [PowerShell 資源庫](https://www.powershellgallery.com/packages/Sqlserver) \(英文\) 安裝 **SqlServer** 模組。
+[Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) 不會安裝兩個 PowerShell 模組的任何一個。 若要搭配 Azure Data Studio 使用 PowerShell，請從 [PowerShell 資源庫](https://www.powershellgallery.com/packages/Sqlserver) \(英文\) 安裝 **SqlServer** 模組。
 
 您可以使用 [PowerShell 擴充功能](../azure-data-studio/powershell-extension.md)，在 Azure Data Studio 中提供豐富的 PowerShell 編輯器支援。
 
 ## <a name="installing-or-updating-the-sqlserver-module"></a>安裝或更新 SqlServer 模組
 
-若要從 PowerShell 資源庫安裝 **SqlServer** 模組，請以系統管理員身分啟動 [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting) 工作階段。 您也會以系統管理員身分啟動 Azure Data Studio，並在整合式終端機的 PowerShell 工作階段中執行這些命令。
+若要從 PowerShell 資源庫安裝 **SqlServer** 模組，請以系統管理員身分啟動 [PowerShell](/powershell/scripting/overview) 工作階段。 您也能以系統管理員身分啟動 Azure Data Studio，並在整合式終端的 PowerShell 工作階段中執行這些命令。
+
+您也可以使用 *Install-Module SQLServer -Scope CurrentUser* 來執行更高的權限。 此 Cmdlet 適用於不是其環境中系統管理員的使用者。 不過，因為範圍僅限於目前的使用者，所以同一部電腦上的其他使用者無法使用此模組。
 
 ### <a name="install-the-sqlserver-module"></a>安裝 SqlServer 模組
 
@@ -152,3 +156,13 @@ Install-Module SqlServer -RequiredVersion 21.1.18040-preview -AllowPrerelease
 ## <a name="sql-server-powershell-on-linux"></a>Linux 上的 SQL Server PowerShell
 
 如需了解如何在 Linux 上安裝 SQL Server PowerShell，請瀏覽[使用 PowerShell Core 管理 Linux 上的 SQL Server](../linux/sql-server-linux-manage-powershell-core.md)。
+
+## <a name="other-modules"></a>其他模組
+
+- [Az.Sql](https://www.powershellgallery.com/packages/Az.Sql/) - Windows PowerShell 和 PowerShell Core 中適用於 Azure Resource Manager 的 SQL 服務 Cmdlet。
+
+- [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc/) - 包含 DSC 資源的模組，用於 Microsoft SQL Server 的部署和組態。
+
+## <a name="next-steps"></a>後續步驟
+
+[SQL Server PowerShell](sql-server-powershell.md)

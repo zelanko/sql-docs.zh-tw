@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 07/22/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 keywords:
 - sql server 新功能
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0289967cfb3585f6fa7914262e8e280089d4b478
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: e7fa3484063a5d57de1540e54454b674d8d687c9
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886235"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86967489"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 中的新功能
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
+[!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]    
  使用 SQL Server 2016，您可以使用內建所有功能 (從記憶體內部效能和進階安全性到資料庫內分析) 的可調整混合式資料庫平台，建置智慧型的任務關鍵應用程式。 SQL Server 2016 版本新增了新的安全性功能、查詢能力、Hadoop 和雲端整合、R 分析等等，以及許多改進和增強功能。 
 
 此頁面會提供摘要資訊，以及能針對每個 SQL Server 元件提供詳細資料的 SQL Server 2016 新功能資訊連結。 
@@ -33,7 +33,7 @@ ms.locfileid: "82886235"
 ![SQL Server 2016](../sql-server/media/sql-server-2016.png)
 
  **立即試用 SQL Server！** 
-- 下載**免費的** [**SQL Server 2016 Developer Edition！** ](https://www.microsoft.com/cloud-platform/sql-server-editions-developers)。
+- 下載**免費的** [**SQL Server 最新版本！** ](https://www.microsoft.com/sql-server/sql-server-downloads)
 - 下載最新版的 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)。 
 - 有 Azure 帳戶嗎？ 啟動[已安裝 SQL Server 2016 的虛擬機器](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)。
 

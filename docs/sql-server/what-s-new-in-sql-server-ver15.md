@@ -9,16 +9,16 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: eb85d1867461ba25bb4fc572634fba443dd14282
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 299182ad45f8c96f4b2f07d38f1b3f366eea7b33
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665357"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923400"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能
 
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 以舊版為基礎，可使 SQL Server 發展為平台，讓您能夠選擇開發語言、資料類型、內部部署或雲端環境，以及作業系統。
 
@@ -39,7 +39,7 @@ ms.locfileid: "80665357"
 
 ## <a name="data-virtualization-and-big-data-clusters-2019"></a>資料虛擬化和 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]
 
-現今企業通常會管轄大量資料資產，這是由整個公司的分散資料來源所裝載大量資料集所組成。 使用 SQL Server 2019 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]從您所有資料取得近乎即時的見解，可提供完整的環境來處理大型資料集，包括機器學習和 AI 功能。
+現今企業通常會管轄大量資料資產，這是由整個公司的分散資料來源所裝載大量資料集所組成。 使用 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 從您所有資料取得近乎即時的見解，可提供完整的環境來處理大型資料集，包括機器學習和 AI 功能。
 
 | 新功能或更新 | 詳細資料 |
 |:---|:---|
@@ -160,7 +160,7 @@ ms.locfileid: "80665357"
 |具有安全記憶體保護區的 Always Encrypted|透過在伺服器端安全記憶體保護區中啟用純文字資料上的計算，在具備就地加密和豐富計算的 Always Encrypted 上進行擴充。 就地加密可改善密碼編譯作業 (加密資料行、輪換資料行、加密金鑰等) 的效能和可靠性，因為就地加密會避免將資料移出資料庫。<br><br> 支援豐富計算 (模式比對和比較作業) 可讓更多的範例適用 Always Encypted，以及要求敏感資料保護，但同時也需要在 Transact-SQL 查詢中擁有更豐富功能的應用程式。 請參閱[具有安全記憶體保護區的 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)。|
 |SQL Server 組態管理員中的憑證管理|您現在可以使用 SQL Server 組態管理員來進行憑證管理工作，例如檢視及部署憑證。 請參閱[憑證管理 (SQL Server 組態管理員)](../database-engine/configure-windows/manage-certificates.md)。|
 |資料探索與分類|資料探索與分類可提供在使用者資料表中分類及標記資料行的功能。 分類敏感資料 (商務、財務、醫療、PII 等) 可以扮演組織資訊保護成長的關鍵角色。 它可以作為下列的基礎結構：<ul><li>協助符合資料隱私權標準和法規合規性需求</li><li>各種安全性情節，例如監視 (稽核)，以及警示敏感性資料的異常存取</li><li>更輕鬆地識別敏感性資料在企業中的位置，讓系統管理員可以採取正確的步驟來保護資料庫</li></ul>|
-|SQL Server Audit|也已經增強稽核[稽核](../relational-databases/security/auditing/sql-server-audit-database-engine.md)，以在稽核記錄中包含新欄位 `data_sensitivity_information`，其中包含查詢所傳回的實際資料敏感度分類 (標籤)。 如需詳細資料和範例，請參閱 [`ADD SENSITIVITY CLASSIFICATION`](../t-sql/statements/add-sensitivity-classification-transact-sql.md)。|
+|SQL Server Audit|另已增強[稽核](../relational-databases/security/auditing/sql-server-audit-database-engine.md)，以在稽核記錄中包含新欄位 `data_sensitivity_information`，其中包含查詢所傳回的實際資料敏感度分類 (標籤)。 如需詳細資料和範例，請參閱 [`ADD SENSITIVITY CLASSIFICATION`](../t-sql/statements/add-sensitivity-classification-transact-sql.md)。|
 | &nbsp; | &nbsp; |
 
 ## <a name="high-availability"></a>高可用性
@@ -222,7 +222,7 @@ ms.locfileid: "80665357"
 
 |新功能或更新 | 詳細資料 |
 |:---|:---| 
-|新的記憶體設定選項 | 設定安裝期間的 [最小伺服器記憶體 (MB)]  與 [最大伺服器記憶體 (MB)]  伺服器設定。 請參閱[資料庫引擎設定 - 記憶體頁面](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)，以及[從命令提示字元安裝 SQL Server](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) 中的 `USESQLRECOMMENDEDMEMORYLIMITS`、`SQLMINMEMORY` 與 `SQLMAXMEMORY` 參數。 建議值會與[伺服器記憶體設定選項](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)中的記憶體設定指導方針一致。| 
+|新的記憶體設定選項 | 設定安裝期間的 [最小伺服器記憶體 (MB)]  與 [最大伺服器記憶體 (MB)]  伺服器設定。 請參閱[資料庫引擎設定 - 記憶體頁面](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)，以及[從命令提示字元安裝 SQL Server](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) 中的 `USESQLRECOMMENDEDMEMORYLIMITS`、`SQLMINMEMORY` 與 `SQLMAXMEMORY` 參數。 建議值會與[伺服器記憶體設定選項](../database-engine/configure-windows/server-memory-server-configuration-options.md#manually)中的記憶體設定指導方針一致。| 
 |新平行處理原則設定選項 | 在安裝期間設定 [平行處理原則的最大程度]  伺服器設定。 請參閱[資料庫引擎設定 - MaxDOP 頁面](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop)，以及[從命令提示字元安裝 SQL Server](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) 中的 `SQLMAXDOP` 參數。 預設值將會與[設定 max degree of parallelism 伺服器設定選項](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)中平行處理原則的最大程度指導方針一致。| 
 |伺服器/CAL 授權產品金鑰上的設定警告|如果輸入企業伺服器/CAL 授權產品金鑰，且電腦具有 20 個以上的實體核心，或在啟用超執行緒時有 40 個邏輯核心，則會在安裝期間顯示警告。 使用者仍然可以確認該限制並繼續設定，或輸入可支援作業系統最大處理器數量的授權金鑰。|
 | &nbsp; | &nbsp; |

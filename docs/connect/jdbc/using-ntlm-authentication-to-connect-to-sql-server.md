@@ -1,5 +1,6 @@
 ---
-title: 使用 NTLM 驗證連線到 SQL Server | Microsoft Docs
+title: 使用 NTLM 驗證連線到 SQL Server
+description: 了解如何搭配 JDBC 驅動程式使用 NTLM 驗證來建立 SQL 資料庫連線。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: ''
 author: lilgreenbird
 ms.author: v-susanh
 manager: kenvh
-ms.openlocfilehash: 2fab4794544ada07e0bf5e690da35b72ad6b7421
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 93b4956b70e6e81e215da4fcde61a3a3287b50ec
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69026106"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393146"
 ---
 # <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>使用 NTLM 驗證連線到 SQL Server
 
@@ -72,7 +73,7 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 
 服務主要名稱 (SPN) 是用戶端用以唯一識別服務執行個體的名稱。
 
-您可以使用 **serverSpn** 連線屬性指定 SPN，或直接讓驅動程式為您建置 (預設)。 這個屬性的形式如下："MSSQLSvc/fqdn:port\@REALM"，其中 fqdn 是完整網域名稱、port 是連接埠號碼，而 REALM 是以大寫字母表示之 SQL Server 的領域。 這個屬性的領域部分是選擇性的，因為預設領域與伺服器的領域相同。
+您可以使用 **serverSpn** 連線屬性指定 SPN，或直接讓驅動程式為您建置 (預設)。 此屬性的格式為："MSSQLSvc/fqdn:port\@REALM"，其中 fqdn 是完整網域名稱，port 是連接埠號碼，REALM 是以大寫字母表示的 SQL Server 領域。 這個屬性的領域部分是選擇性的，因為預設領域與伺服器的領域相同。
 
 例如，您的 SPN 可能看起來如下："MSSQLSvc/some-server.zzz.corp.contoso.com:1433"
 

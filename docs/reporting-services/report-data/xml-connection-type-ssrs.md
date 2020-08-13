@@ -1,5 +1,6 @@
 ---
 title: XML 連線類型 | Microsoft Docs
+description: 了解要連線的目標 XML 連線類型，並從 XML 文件、Web 服務或內嵌在查詢中的 XML 擷取資料。
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9355ac713c502acbbd319ec7bdc9cb035079ca34
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 120e99440b77a27be4f83f8e4355a4ec75cab7bb
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081677"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458495"
 ---
 # <a name="xml-connection-type-ssrs"></a>XML 連接類型 (SSRS)
   若要在報表中包含來自 XML 資料來源的資料，您必須具有以 XML 類型之報表資料來源為基礎的資料集。 此內建資料來源類型是以 XML 資料延伸模組為基礎。 請使用此資料來源類型連接至 XML 文件、Web 服務或內嵌在查詢中的 XML，並從中擷取資料。  
@@ -75,21 +76,21 @@ ms.locfileid: "77081677"
   
          必要的 XML 元素：  
   
-         `<Method Namespace=` "命名空間"  `Name="MethodName" />`  
+         `<Method Namespace=` "命名空間" `Name="MethodName" />`  
   
          `-- or --`  
   
-         `<SoapAction>` soap 動作  `</SoapAction>`  
+         `<SoapAction>` soap 動作 `</SoapAction>`  
   
          選擇性 XML 元素：  
   
-         `<ElementPath>` 元素路徑  `</ElementPath>`  
+         `<ElementPath>` 元素路徑 `</ElementPath>`  
   
-         `<Method Namespace=` "命名空間"  `Name="MethodName" />`  
+         `<Method Namespace=` "命名空間" `Name="MethodName" />`  
   
          `-- or --`  
   
-         `<SoapAction>` soap 動作  `</SoapAction>`  
+         `<SoapAction>` soap 動作 `</SoapAction>`  
   
     -   **XML 資料來源是 XML 文件**  
   
@@ -97,7 +98,7 @@ ms.locfileid: "77081677"
   
          選擇性 XML 元素：  
   
-         `<ElementPath>` 元素路徑  `</ElementPath>`  
+         `<ElementPath>` 元素路徑 `</ElementPath>`  
   
     -   **XML 資料來源是內嵌的 XML 文件**  
   
@@ -111,7 +112,7 @@ ms.locfileid: "77081677"
   
          `-- or --`  
   
-         `<ElementPath IgnoreNamespaces="true">` 元素路徑  `</ElementPath>`  
+         `<ElementPath IgnoreNamespaces="true">` 元素路徑 `</ElementPath>`  
   
  如需查詢語法的詳細資訊，請參閱 [XML 報表資料的 XML 查詢語法 &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md)。  
   
@@ -120,7 +121,7 @@ ms.locfileid: "77081677"
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>擷取 XML Web 服務資料的需求  
  XML 資料處理延伸模組不會為您偵測結構描述。 因此，您必須有某個方式可以探索哪些 SOAP 方法將擷取您想要的資料， 您也必須了解 Web 服務用於其資料的定址配置或命名空間。  
   
- 如果是 Web 服務，您可以提供會指定要呼叫之方法或 SOAP 動作的 \<**Query**> 項目。 如果 XML 資料來源有一個階層式結構會產生您想用於報表中的資料，可以將此查詢保留空白，並使用預設查詢。 此查詢執行時所擷取的 XML 元素節點值和屬性會對應到您用於報表中的資料集欄位。  
+ 針對 Web 服務，您可提供 \<**Query**> 元素，其指定要呼叫的方法或 SOAP 動作。 如果 XML 資料來源有一個階層式結構會產生您想用於報表中的資料，可以將此查詢保留空白，並使用預設查詢。 此查詢執行時所擷取的 XML 元素節點值和屬性會對應到您用於報表中的資料集欄位。  
   
 ### <a name="requirements-for-retrieving-xml-document-data"></a>擷取 XML 文件資料的需求  
  使用 http 通訊協定時，伺服器必須傳回 XML 資料，或是必須將 XML 資料內嵌在 XML **Query** 元素中。 如果您使用 http 通訊協定直接參考 XML 文件，其副檔名必須是 .xml。  

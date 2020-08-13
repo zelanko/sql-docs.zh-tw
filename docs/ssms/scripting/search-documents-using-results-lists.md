@@ -1,5 +1,6 @@
 ---
 title: 使用結果清單搜尋文件
+description: 了解如何搜尋和取代專案、解決方案或檔系統資料夾中所有內含檔案的文字。 相符項目會出現在 [尋找結果 1] 視窗中，您可按兩下相符項目來查看其所在字行。
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,16 +16,16 @@ ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b06660f3bc175e9869d669e7996f31d1a704f9b3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fa62cc76deab4f40f7db63ebd119fc9cd227c72e
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253674"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122803"
 ---
 # <a name="search-documents-using-results-lists"></a>使用結果清單搜尋文件
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  您可以利用 **[尋找和取代]** 對話方塊來搜尋和取代專案或方案或檔案系統資料夾中之所有檔案內的文字，即使尚未在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中開啟它們，也是如此。 **[尋找和取代]** 對話方塊所執行之搜尋的相符項目會出現在 [尋找結果 1] 和 [尋找結果 2] 視窗中，可讓您檢視相符項目所在字行中的確實文字。  
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+   您可以利用 [尋找和取代]**** 對話方塊來搜尋和取代專案或方案或檔案系統資料夾中之所有檔案內的文字，即使尚未在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中開啟它們，也是如此。 **[尋找和取代]** 對話方塊所執行之搜尋的相符項目會出現在 [尋找結果 1] 和 [尋找結果 2] 視窗中，可讓您檢視相符項目所在字行中的確實文字。  
   
 ### <a name="to-search-in-multiple-files"></a>在多個檔案中搜尋  
   
@@ -34,7 +35,7 @@ ms.locfileid: "75253674"
   
 3.  在 **[查詢]** 清單中，按一下 **[所有開啟的文件]** 、 **[目前的專案]** 或 **[整個方案]** ，或輸入目錄路徑。  
   
-4.  在 **[檔案類型]** 清單中，選取列出的各組副檔名之一，或用分號分隔來輸入要搜尋之檔案類型的副檔名。 請利用 \*.\* 來搜尋 [查詢]  下拉式清單列出之目錄中的所有檔案。  
+4.  在 **[檔案類型]** 清單中，選取列出的各組副檔名之一，或用分號分隔來輸入要搜尋之檔案類型的副檔名。 請利用 \*.\* 來搜尋 [查詢] 下拉式清單列出之目錄中的所有檔案。  
   
 5.  選取其餘搜尋選項來改進搜尋的精確度。  
   

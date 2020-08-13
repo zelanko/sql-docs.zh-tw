@@ -1,5 +1,6 @@
 ---
-title: 適用於 MSSQL JDBC 驅動程式的空間資料類型範例 | Microsoft Docs
+title: JDBC 驅動程式的空間資料類型範例
+description: 此 JDBC Driver for SQL Server 範例應用程式示範如何從資料庫建立、插入，以及擷取幾何與地理空間資料類型。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -9,32 +10,32 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 07f05ee878f1f818e7bf500d053ef5a306477d27
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a04840e69f5fd8557d3c6f42f9a339710c9ebe3a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909394"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921014"
 ---
 # <a name="spatial-data-types-sample"></a>空間資料類型範例
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 此 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 範例應用程式示範如何建立、插入和擷取空間資料類型 (Geometry 和 Geography)。
-  
-此範例的程式碼檔案名稱為 SpatialDataTypes.java，並位於下列位置：  
+
+此範例的程式碼檔案名稱為 SpatialDataTypes.java，並位於下列位置：
 
 ```bash
-\<installation directory>\sqljdbc_<version>\<language>\samples\datatypes  
+\<installation directory>\sqljdbc_<version>\<language>\samples\datatypes
 ```
 
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>需求
 
-若要執行此範例應用程式，您必須將 Classpath 設定為包含 mssql-jdbc jar 檔案。 如需如何設定 classpath 的詳細資訊，請參閱[使用 JDBC 驅動程式](../../connect/jdbc/using-the-jdbc-driver.md)。  
+若要執行此範例應用程式，您必須將 Classpath 設定為包含 mssql-jdbc jar 檔案。 如需如何設定 classpath 的詳細資訊，請參閱[使用 JDBC 驅動程式](using-the-jdbc-driver.md)。
 
-> [!NOTE]  
-> [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供 mssql-jdbc 類別庫檔案，可根據您慣用的 Java Runtime Environment (JRE) 設定來使用。 如需選擇哪個 JAR 檔案的詳細資訊，請參閱 [JDBC Driver 的系統需求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
-  
+> [!NOTE]
+> [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供 mssql-jdbc 類別庫檔案，可根據您慣用的 Java Runtime Environment (JRE) 設定來使用。 如需選擇哪個 JAR 檔案的詳細資訊，請參閱 [JDBC Driver 的系統需求](system-requirements-for-the-jdbc-driver.md)。
+
 ## <a name="example"></a>範例
 
 在下列範例中，範例程式碼會建立一個名為 SpatialDataTypesTable_JDBC_Sample 的資料表，其中包含 'Geometry' 和 'Geography' 資料行。
@@ -95,7 +96,6 @@ public class SpatialDataTypes {
 }
 ```
 
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另請參閱
 
-[使用 JDBC 資料類型](../../connect/jdbc/working-with-data-types-jdbc.md)  
-  
+[使用 JDBC 資料類型](working-with-data-types-jdbc.md)

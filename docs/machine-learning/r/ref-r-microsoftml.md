@@ -1,34 +1,32 @@
 ---
-title: MicrosoftML R 函式程式庫
-description: SQL Server 2016 R Services 與含 R 之 SQL Server 機器學習服務中的 MicrosoftML 函式程式庫簡介。
+title: MicrosoftML R 套件
+description: MicrosoftML 是來自 Microsoft 的 R 套件，可提供高效能的機器學習演算法。 它包含用於定型與轉換、評分、文字與影像分析的函式，以及用於從現有資料衍生值的特徵擷取。 此套件包含在 SQL Server Machine Learning 服務和 SQL Server 2016 R 服務中，並支援巨量資料的高效能、使用多核心處理，以及快速的資料串流。 MicrosoftML 也包含許多適用於文字與影像處理的轉換。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/06/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 450091bba39cf10e551b8da5e62993ca676c64af
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 28f043ea0005f1020581218c358aed559285a5a4
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117441"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406171"
 ---
-# <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML (SQL Server 中的 R 程式庫)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="microsoftml-r-package-in-sql-server-machine-learning-services"></a>MicrosoftML (SQL Server Machine Learning 服務中的 R 套件)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-**MicrosoftML** 是來自 Microsoft 的 R 函式程式庫，可提供高效能的機器學習演算法。 它包含用於定型與轉換、評分、文字與影像分析的函式，以及用於從現有資料衍生值的特徵擷取。
-
-機器學習 API 是 Microsoft 為內部機器學習應用程式開發的 API，並已使用多核心處理和快速資料串流，經過數年的去蕪存菁而得以在巨量資料方面支援高效能。 MicrosoftML 也包含許多適用於文字與影像處理的轉換。
+**MicrosoftML** 是來自 Microsoft 的 R 套件，其提供高效能的機器學習演算法。 它包含用於定型與轉換、評分、文字與影像分析的函式，以及用於從現有資料衍生值的特徵擷取。 此套件包含在 [SQL Server Machine Learning 服務](../sql-server-machine-learning-services.md)和 [SQL Server 2016 R 服務](sql-server-r-services.md)中，並支援巨量資料的高效能、使用多核心處理，以及快速的資料串流。 MicrosoftML 也包含許多適用於文字與影像處理的轉換。
 
 ## <a name="full-reference-documentation"></a>完整參考文件
 
-**MicrosoftML** 程式庫散佈在多個 Microsoft 產品中，但不論您是在 SQL Server 還是在另一個產品中取得此程式庫，其使用方式都相同。 由於函式相同，因此[個別 RevoScaleR 函式的文件](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)只發佈至 Microsoft Machine Learning Server 之 [R 參考](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference)底下的一個位置。 若有任何產品特定行為存在，函式說明頁面中將會註明不一致之處。
+**MicrosoftML** 套件會散佈在多個 Microsoft 產品中，但不論是在 SQL Server 或其他產品中取得此套件，使用方式都相同。 由於函式相同，因此[個別 RevoScaleR 函式的文件](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)只發佈至 Microsoft Machine Learning Server 之 [R 參考](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference)底下的一個位置。 若有任何產品特定行為存在，函式說明頁面中將會註明不一致之處。
 
 ## <a name="versions-and-platforms"></a>版本與平台
 
-**MicrosoftML** 程式庫以 R 3.4.3 為基礎，且只有當您安裝下列其中一個Microsoft 產品或下載項目時才會提供：
+**MicrosoftML** 套件以 R 3.4.3 為基礎，只有當安裝下列其中一項Microsoft 產品或下載項目時才可供使用：
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 + [SQL Server Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)
@@ -43,7 +41,7 @@ ms.locfileid: "81117441"
 **MicrosoftML** 中的演算法在下列方面倚賴 [RevoScaleR](ref-r-revoscaler.md)：
 
 + 資料來源物件。 **MicrosoftML** 函式所取用的資料是使用 **RevoScaleR** 函式來建立的資料。
-+ 遠端計算 (將函式執行切換至遠端 SQL Server 執行個體)。 **RevoScaleR** 程式庫提供為 SQL Server 建立和啟用遠端計算內容的函式。
++ 遠端計算 (將函式執行切換至遠端 SQL Server 執行個體)。 **RevoScaleR** 套件提供建立與啟用 SQL 伺服器遠端計算內容的函式。
 
 在大多數情況下，您會在每次使用 **MicrosoftML** 時一起載入套件。
 

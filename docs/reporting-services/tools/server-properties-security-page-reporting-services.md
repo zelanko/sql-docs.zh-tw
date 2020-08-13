@@ -1,5 +1,6 @@
 ---
 title: 伺服器屬性 (安全性頁面) - Reporting Services | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 中的 [Reporting Services] 頁面，以關閉可能會危害報表伺服器的功能。
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: tools
@@ -10,12 +11,12 @@ ms.assetid: f49aedc6-f145-4df1-8f69-d5d910f492c6
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/10/2016
-ms.openlocfilehash: 0e29dcf7681d105f92b3bf187c38ebe764d2449e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 617b64d6f57bb1d64098ebf8390309a714aa81c2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571317"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86912355"
 ---
 # <a name="server-properties-security-page---reporting-services"></a>伺服器屬性 (安全性頁面) - Reporting Services
 
@@ -24,8 +25,8 @@ ms.locfileid: "65571317"
  開啟此頁面：
  1) 啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。
  2) 連接到報表伺服器執行個體。
- 3) 以滑鼠右鍵按一下報表伺服器名稱，然後選取 [屬性]  。
- 4) 按一下 [安全性]  ，即可開啟此頁面。  
+ 3) 以滑鼠右鍵按一下報表伺服器名稱，然後選取 [屬性]。
+ 4) 按一下 [安全性]，即可開啟此頁面。  
   
 ## <a name="options"></a>選項。
 

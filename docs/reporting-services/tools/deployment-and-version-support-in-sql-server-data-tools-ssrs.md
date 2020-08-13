@@ -1,5 +1,6 @@
 ---
 title: SQL Server 資料工具中的部署和版本支援 (SSDT) | Microsoft Docs
+description: 針對以 SQL Server Data Tools 製作與發佈的報表，了解支援的版本，以及如何設定專案組態與部署屬性。
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f055219476507f52894fe7d5b246710e6054a20
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a33626c529d59d9ffa2b80e012dbb325c93b670a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571500"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917957"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>SQL Server 資料工具中的部署和版本支援 (SSDT) | Microsoft Docs
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 支援以下案例：  
@@ -33,7 +34,7 @@ ms.locfileid: "65571500"
   
  系統會先建立報表，然後才將報表轉譯為報表設計師中的預覽或部署到報表伺服器。  
   
- 您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] [專案屬性]  對話方塊中設定組態屬性。  
+ 您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] [專案屬性] 對話方塊中設定組態屬性。  
   
  建立與部署屬性包括：  
   
@@ -43,7 +44,7 @@ ms.locfileid: "65571500"
   
 -   TargetServerVersion 是部署屬性，可以識別 TargetServerURL 屬性中所指定目標報表伺服器上安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 預期版本。  
   
- 當您在 [專案屬性][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 對話方塊中指定舊版   時，系統不會自動將報表還原為舊版。 因此，報表伺服器專案可以包含來自兩個不同版本之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的報表。 部署報表伺服器專案時，專案中的所有報表會轉換為 TargetServerVersion 中指定的版本。  
+ 當您在 [專案屬性] 對話方塊中指定舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 時，系統不會自動將報表還原為舊版。 因此，報表伺服器專案可以包含來自兩個不同版本之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的報表。 部署報表伺服器專案時，專案中的所有報表會轉換為 TargetServerVersion 中指定的版本。  
   
  您可以在專案中加入一個以上的專案組態。而每一個專案組態都用於不同的狀況，例如，部署到不同版本的報表伺服器。 如需詳細資訊，請參閱[設定部署屬性 &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md) 和[專案屬性頁對話方塊](../../reporting-services/tools/project-property-pages-dialog-box.md)。  
   

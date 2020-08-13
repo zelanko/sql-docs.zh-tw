@@ -1,6 +1,6 @@
 ---
 title: 設定 SQL Server 的使用方式和診斷資料收集 (CEIP) | Microsoft Docs
-description: ''
+description: 了解 SQL Server 向使用者收集以改善產品的資訊。 請參閱如何將 SQL Server 設定為不要傳送這則資訊。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 03/27/2019
@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: d5248f97b044cb688174171fdb6ef79943851a92
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 76ffe524200c2f8df136074bc089b13e7404d6bd
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69028929"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86901974"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-ceip"></a>設定 SQL Server 的使用狀況和診斷資料收集 (CEIP)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 ## <a name="summary"></a>摘要
 
@@ -68,7 +68,7 @@ AND instance_name = '_Total'
 > [!NOTE]
 > [錯誤和使用方式報表] 應用程式會列出於 SQL Server 的 [組態工具] 底下。 您可以利用與 SQL Server 2017 中相同的方式，使用此工具管理您的「錯誤報告」和「使用方式和診斷資料」收集的喜好設定。 「錯誤報告」有別於「使用方式和診斷資料」收集，因此可以獨立於「使用方式和診斷資料」收集進行開啟或關閉。 「錯誤報告」會收集要傳送給 Microsoft 的損毀傾印，其中可能包含[隱私權聲明](https://go.microsoft.com/fwlink/?LinkID=868444)中所述的機密資訊。
 
-若要啟動 [SQL Server 錯誤和使用方式報表]，請按一下或點選 [開始]  ，然後在搜尋方塊中搜尋「錯誤」。 隨即顯示 [SQL Server 錯誤和使用方式報表] 項目。 啟動工具之後，您可以管理針對該電腦上所安裝之執行個體和元件所收集的使用方式和診斷資料及嚴重錯誤。
+若要啟動 [SQL Server 錯誤和使用方式報表]，請按一下或點選 [開始]，然後在搜尋方塊中搜尋「錯誤」。 隨即顯示 [SQL Server 錯誤和使用方式報表] 項目。 啟動工具之後，您可以管理針對該電腦上所安裝之執行個體和元件所收集的使用方式和診斷資料及嚴重錯誤。
 
 針對付費版本，請使用 [使用方式報表] 核取方塊來管理將使用方式和診斷資料傳送到 Microsoft 的功能。
 
@@ -84,7 +84,7 @@ AND instance_name = '_Total'
     
     登錄項目名稱 = CustomerFeedback
     
-    項目類型 DWORD：0 為選擇退出，1 為選擇加入
+    項目類型 DWORD：0 為退出；1 為加入
     
     {InstanceID} 是指執行個體類型和執行個體，如下列範例所示：
 
@@ -98,7 +98,7 @@ AND instance_name = '_Total'
     
     登錄項目名稱 = CustomerFeedback
     
-    項目類型 DWORD：0 為選擇退出，1 為選擇加入
+    項目類型 DWORD：0 為退出；1 為加入
 
 > [!NOTE]
 > {Major Version} 是指 SQL Server 版本。例如，140 指的是 SQL Server 2017

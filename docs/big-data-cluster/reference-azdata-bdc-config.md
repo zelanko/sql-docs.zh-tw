@@ -5,40 +5,44 @@ description: azdata bdc config 命令的參考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8a2c87a374be247e4b31f2e34736de95d9edc319
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 66886cc2fc691e27e93d4f8a4d8a2c0a65bd82c9
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74822361"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942914"
 ---
 # <a name="azdata-bdc-config"></a>azdata bdc config
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-下文提供 `azdata` 工具中 `bdc config` 命令的參考。 如需其他 `azdata` 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)
+下文提供 `azdata` 工具中 `sql` 命令的參考。 如需其他 `azdata` 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)。
 
 ## <a name="commands"></a>命令
-|     |     |
+| 命令 | 說明 |
 | --- | --- |
-[azdata bdc config init](#azdata-bdc-config-init) | 初始化可以搭配叢集建立使用的巨量資料叢集設定檔。
+[azdata bdc config init](#azdata-bdc-config-init) | 初始化可搭配 bdc create 使用的巨量資料叢集組態設定檔。
 [azdata bdc config list](#azdata-bdc-config-list) | 列出可用的設定檔選項。
 [azdata bdc config show](#azdata-bdc-config-show) | 顯示 BDC 目前的設定，或您指定的本機檔案設定，亦即 custom/bdc.json。
 [azdata bdc config add](#azdata-bdc-config-add) | 針對設定檔中的 json 路徑新增值。
 [azdata bdc config remove](#azdata-bdc-config-remove) | 針對設定檔中的 json 路徑移除值。
 [azdata bdc config replace](#azdata-bdc-config-replace) | 針對設定檔中的 json 路徑取代值。
 [azdata bdc config patch](#azdata-bdc-config-patch) | 以 json 修補檔為基礎修補設定檔。
+[azdata bdc config set](#azdata-bdc-config-set) | 這是進行中的工作，可設定巨量資料叢集的組態。
+[azdata bdc config upgrade](#azdata-bdc-config-upgrade) | 這是進行中的工作，可升級巨量資料叢集的組態。
 ## <a name="azdata-bdc-config-init"></a>azdata bdc config init
-初始化可以搭配叢集建立使用的巨量資料叢集設定檔。 設定檔的特定來源可以透過 3 個選項以引數來指定。
+初始化可搭配 bdc create 使用的巨量資料叢集組態設定檔。 您可在引數中指定組態設定檔的特定來源。
 ```bash
 azdata bdc config init [--target -t] 
                        [--source -s]  
-                       [--force -f]  
-                       [--accept-eula -a]
+                       
+[--force -f]  
+                       
+[--accept-eula -a]
 ```
 ### <a name="examples"></a>範例
 引導式 BDC 設定初始化體驗；您將會接收到所需值的提示。
@@ -53,7 +57,7 @@ azdata bdc config init --source aks-dev-test --target custom
 #### `--target -t`
 您要放置設定檔的檔案路徑，預設為 <cwd>/custom。
 #### `--source -s`
-設定檔來源：['kubeadm-dev-test', 'kubeadm-prod', 'aks-dev-test', 'aks-dev-test-ha']
+組態設定檔來源：['openshift-dev-test', 'aro-dev-test-ha', 'aks-dev-test', 'openshift-prod', 'aks-dev-test-ha', 'kubeadm-prod', 'aro-dev-test', 'kubeadm-dev-test']
 #### `--force -f`
 強制覆寫目標檔案。
 #### `--accept-eula -a`
@@ -66,7 +70,7 @@ azdata bdc config init --source aks-dev-test --target custom
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org)。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 ## <a name="azdata-bdc-config-list"></a>azdata bdc config list
@@ -74,7 +78,8 @@ JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespat
 ```bash
 azdata bdc config list [--config-profile -c] 
                        [--type -t]  
-                       [--accept-eula -a]
+                       
+[--accept-eula -a]
 ```
 ### <a name="examples"></a>範例
 顯示所有可用的設定檔名稱。
@@ -87,10 +92,9 @@ azdata bdc config list --config-profile aks-dev-test
 ```
 ### <a name="optional-parameters"></a>選擇性參數
 #### `--config-profile -c`
-預設設定檔：['kubeadm-dev-test', 'kubeadm-prod', 'aks-dev-test', 'aks-dev-test-ha']
+預設組態設定檔：['openshift-dev-test', 'aro-dev-test-ha', 'aks-dev-test', 'openshift-prod', 'aks-dev-test-ha', 'kubeadm-prod', 'aro-dev-test', 'kubeadm-dev-test']
 #### `--type -t`
 您想要的設定類型。
-`cluster`
 #### `--accept-eula -a`
 您接受授權條款嗎? [yes/no]。 如果您不想要使用此引數，可以將環境變數 ACCEPT_EULA 設定為 'yes'。 此產品的授權條款可在 https://aka.ms/eula-azdata-en 檢視。
 ### <a name="global-arguments"></a>全域引數
@@ -101,7 +105,7 @@ azdata bdc config list --config-profile aks-dev-test
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org)。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 ## <a name="azdata-bdc-config-show"></a>azdata bdc config show
@@ -109,8 +113,10 @@ JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespat
 ```bash
 azdata bdc config show [--config-file -c] 
                        [--target -t]  
-                       [--json-path -j]  
-                       [--force -f]
+                       
+[--json-path -j]  
+                       
+[--force -f]
 ```
 ### <a name="examples"></a>範例
 在主控台中顯示 BDC 設定
@@ -119,11 +125,11 @@ azdata bdc config show
 ```
 在本機設定檔中，在簡單 json 金鑰路徑的結尾取得值。
 ```bash
-azdata bdc config show --config-file custom-config/bdc.json --json-path 'metadata.name' --target section.json
+azdata bdc config show --config-file custom-config/bdc.json --json-path "metadata.name" --target section.json
 ```
 在本機設定檔中，取得服務中的資源
 ```bash
-azdata bdc config show --config-file custom-config/bdc.json --json-path '$.spec.services.sql.resources' --target section.json
+azdata bdc config show --config-file custom-config/bdc.json --json-path "$.spec.services.sql.resources" --target section.json
 ```
 ### <a name="optional-parameters"></a>選擇性參數
 #### `--config-file -c`
@@ -142,7 +148,7 @@ azdata bdc config show --config-file custom-config/bdc.json --json-path '$.spec.
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org)。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 ## <a name="azdata-bdc-config-add"></a>azdata bdc config add
@@ -154,7 +160,7 @@ azdata bdc config add --config-file -c
 ### <a name="examples"></a>範例
 範例 1 - 新增控制平面儲存體。
 ```bash
-azdata bdc config add --config-file custom/control.json --json-values 'spec.storage={"accessMode":"ReadWriteOnce","className":"managed-premium","size":"10Gi"}'
+azdata bdc config add --config-file custom/control.json --json-values "spec.storage={"accessMode":"ReadWriteOnce","className":"managed-premium","size":"10Gi"}"
 ```
 ### <a name="required-parameters"></a>必要參數
 #### `--config-file -c`
@@ -169,7 +175,7 @@ azdata bdc config add --config-file custom/control.json --json-values 'spec.stor
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org)。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 ## <a name="azdata-bdc-config-remove"></a>azdata bdc config remove
@@ -181,7 +187,7 @@ azdata bdc config remove --config-file -c
 ### <a name="examples"></a>範例
 範例 1 - 移除控制平面儲存體。
 ```bash
-azdata bdc config remove --config-file custom/control.json --json-path '.spec.storage'
+azdata bdc config remove --config-file custom/control.json --json-path ".spec.storage"
 ```
 ### <a name="required-parameters"></a>必要參數
 #### `--config-file -c`
@@ -196,7 +202,7 @@ azdata bdc config remove --config-file custom/control.json --json-path '.spec.st
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org)。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 ## <a name="azdata-bdc-config-replace"></a>azdata bdc config replace
@@ -208,15 +214,15 @@ azdata bdc config replace --config-file -c
 ### <a name="examples"></a>範例
 範例 1 - 取代單一端點 (控制器端點) 的連接埠。
 ```bash
-azdata bdc config replace --config-file custom/control.json --json-values '$.spec.endpoints[?(@.name=="Controller")].port=30080'
+azdata bdc config replace --config-file custom/control.json --json-values "$.spec.endpoints[?(@.name=="Controller")].port=30080"
 ```
 範例 2 - 取代控制平面儲存體。
 ```bash
-azdata bdc config replace --config-file custom/control.json --json-values 'spec.storage={"accessMode":"ReadWriteOnce","className":"managed-premium","size":"10Gi"}'
+azdata bdc config replace --config-file custom/control.json --json-values "spec.storage={"accessMode":"ReadWriteOnce","className":"managed-premium","size":"10Gi"}"
 ```
 範例 3 - 取代儲存體 - 0 資源規格，包括複本。
 ```bash
-azdata bdc config replace --config-file custom/bdc.json --json-values '$.spec.resources.storage-0.spec={"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}'
+azdata bdc config replace --config-file custom/bdc.json --json-values "$.spec.resources.storage-0.spec={"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}"
 ```
 ### <a name="required-parameters"></a>必要參數
 #### `--config-file -c`
@@ -231,7 +237,7 @@ azdata bdc config replace --config-file custom/bdc.json --json-values '$.spec.re
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org)。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 ## <a name="azdata-bdc-config-patch"></a>azdata bdc config patch
@@ -246,7 +252,7 @@ azdata bdc config patch --config-file -c
 azdata bdc config patch --config-file custom/control.json --patch ./patch.json
 
     Patch File Example (patch.json):
-        {"patch":[{"op":"replace","path":"$.spec.endpoints[?(@.name=='Controller')].port","value":30080}]}
+        {"patch":[{"op":"replace","path":"$.spec.endpoints[?(@.name=="Controller")].port","value":30080}]}
 ```
 範例 2 - 搭配修補檔案取代控制平面儲存體。
 ```bash
@@ -275,7 +281,57 @@ azdata bdc config patch --config-file custom/bdc.json --patch ./patch.json
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org)。
+#### `--verbose`
+增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
+## <a name="azdata-bdc-config-set"></a>azdata bdc config set
+這是進行中的工作，可設定巨量資料叢集的組態。
+```bash
+azdata bdc config set --name -n 
+                      
+```
+### <a name="examples"></a>範例
+設定巨量資料叢集的組態測試。
+```bash
+azdata config set --name test
+```
+### <a name="required-parameters"></a>必要參數
+#### `--name -n`
+巨量資料叢集名稱，用於 kubernetes 命名空間。
+### <a name="global-arguments"></a>全域引數
+#### `--debug`
+增加記錄詳細資訊，以顯示所有偵錯記錄。
+#### `--help -h`
+顯示此說明訊息並結束。
+#### `--output -o`
+輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
+#### `--query -q`
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org)。
+#### `--verbose`
+增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
+## <a name="azdata-bdc-config-upgrade"></a>azdata bdc config upgrade
+這是進行中的工作，可升級巨量資料叢集的組態。
+```bash
+azdata bdc config upgrade --name -n 
+                          
+```
+### <a name="examples"></a>範例
+巨量資料叢集的組態升級測試。
+```bash
+azdata config upgrade --name test
+```
+### <a name="required-parameters"></a>必要參數
+#### `--name -n`
+巨量資料叢集名稱，用於 kubernetes 命名空間。
+### <a name="global-arguments"></a>全域引數
+#### `--debug`
+增加記錄詳細資訊，以顯示所有偵錯記錄。
+#### `--help -h`
+顯示此說明訊息並結束。
+#### `--output -o`
+輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
+#### `--query -q`
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org)。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 

@@ -1,5 +1,6 @@
 ---
 title: 資料集屬性對話方塊、查詢 (報表產生器) | Microsoft Docs
+description: 了解如何使用報表產生器 [資料集屬性] 對話方塊上的 [查詢]，從報表伺服器中選擇共用資料集，或建立內嵌的資料集。
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 75432318-0b00-4797-917c-0a2e74f9d951
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e05ae59d963bd9b165d2f6f825955ee276683328
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 14380ba698101c76a84d0b9eef27a4ea31953f2d
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66500446"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458930"
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>資料集屬性對話方塊、查詢 (報表產生器)
  
@@ -46,7 +47,7 @@ ms.locfileid: "66500446"
 >  並非所有的查詢類型都受到所有資料來源的支援。 例如， **[資料表]** 只受到 **[OLE DB]** 和 **[ODBC]** 資料來源類型的支援。  
   
  **查詢**  
- 此選項會在選擇 [文字]  命令類型選項時出現。 鍵入查詢，或按一下 [匯入]  來匯入已存在的查詢。 請按一下 **運算式** (*fx*) 按鈕來編輯運算式。  
+ 此選項會在選擇 [文字] 命令類型選項時出現。 鍵入查詢，或按一下 [匯入] 來匯入已存在的查詢。 請按一下 **運算式** (*fx*) 按鈕來編輯運算式。  
   
 > [!NOTE]  
 >  如果您使用查詢設計工具來建置查詢，則查詢的文字會出現在此方塊中。  
@@ -61,7 +62,7 @@ ms.locfileid: "66500446"
  輸入查詢逾時之前的秒數。預設值為 30 秒。 **[逾時]** 的值必須是空白或大於零。 如果是空白，則查詢不會逾時。  
   
  **重新整理欄位**  
- 執行查詢命令，以更新 [資料集屬性] 對話方塊 [欄位]  頁面中的欄位清單。  
+ 執行查詢命令，以更新 [資料集屬性] 對話方塊 [欄位] 頁面中的欄位清單。  
   
 ## <a name="see-also"></a>另請參閱  
 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  

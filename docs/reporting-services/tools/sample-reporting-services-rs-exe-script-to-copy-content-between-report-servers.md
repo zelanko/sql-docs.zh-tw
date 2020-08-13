@@ -1,5 +1,6 @@
 ---
 title: 在報表伺服器之間複製內容的範例 Reporting Services rs.exe 指令碼 | Microsoft Docs
+description: 了解如何使用 RS.exe 公用程式執行 Reporting Services RSS 指令碼，將內容項目和設定從某部 SQL Server Reporting Services 報表伺服器複製到另一部。
 ms.date: 05/23/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 18d10f94696f901efd4f3938bf9b5e06d1c7078d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1f56cd8793d75776335769b22195abb27b1818dc
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "70176283"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916911"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>在報表伺服器之間複製內容的範例 Reporting Services rs.exe 指令碼
 
@@ -49,7 +50,7 @@ ms.locfileid: "70176283"
 |Item|已移轉|SharePoint|描述|  
 |----------|--------------|----------------|-----------------|  
 |密碼|**否**|**否**|密碼 **不會** 移轉。 內容項目移轉之後，請更新目的地伺服器上的認證資訊。 例如，具有預存認證的資料來源。|  
-|我的報表|**否**|**否**|原生模式「我的報表」功能是以個別使用者登入為基礎，因此除非使用者使用 **-u** 參數來執行 rss 指令碼，否則指令碼服務將無法存取 [我的報表] 資料夾中的內容。 此外，[我的報表] 不屬於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式的功能，所以資料夾中的項目無法複製到 SharePoint 環境中。 因此，指令碼不會複製來源原生模式報表伺服器上 [我的報表] 資料夾中的報表項目<br /><br /> 若要使用這個指令碼移轉 [我的報表] 資料夾中的內容，請完成下列步驟：<br /><br /> 1.在入口網站中建立新資料夾。 或者，您可以為每個使用者建立資料夾或子資料夾。<br />2.以其中一個具有「我的報表」內容的使用者身分登入。<br />3.在入口網站中，選取 [我的報表]  資料夾。<br />4.選取該資料夾的 [詳細資料]  檢視。<br />5.選取要複製的每一份報表。<br />6.選取入口網站工具列中的 [移動]  。<br />7.選取所需的目的地資料夾。<br />8.對每位使用者重複步驟 2-7。<br />9.執行指令碼。|  
+|我的報表|**否**|**否**|原生模式「我的報表」功能是以個別使用者登入為基礎，因此除非使用者使用 **-u** 參數來執行 rss 指令碼，否則指令碼服務將無法存取 [我的報表] 資料夾中的內容。 此外，[我的報表] 不屬於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式的功能，所以資料夾中的項目無法複製到 SharePoint 環境中。 因此，指令碼不會複製來源原生模式報表伺服器上 [我的報表] 資料夾中的報表項目<br /><br /> 若要使用這個指令碼移轉 [我的報表] 資料夾中的內容，請完成下列步驟：<br /><br /> 1.在入口網站中建立新資料夾。 或者，您可以為每個使用者建立資料夾或子資料夾。<br />2.以其中一個具有「我的報表」內容的使用者身分登入。<br />3.在入口網站中，選取 [我的報表] 資料夾。<br />4.選取該資料夾的 [詳細資料] 檢視。<br />5.選取要複製的每一份報表。<br />6.選取入口網站工具列中的 [移動]。<br />7.選取所需的目的地資料夾。<br />8.對每位使用者重複步驟 2-7。<br />9.執行指令碼。|  
 |記錄|**否**|**否**||  
 |記錄設定|是|是|雖然記錄設定會移轉，但是記錄詳細資料「不會」移轉。|  
 |排程|是|是|若要移轉排程，則必須在目標伺服器上執行 SQL Server Agent。 如果 SQL Server Agent 未在目標上執行，您將會看見類似這句的錯誤訊息：<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service isn't running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service isn't running. This operation requires the SQL Agent service.`|  
@@ -199,7 +200,7 @@ ms.locfileid: "70176283"
   
 ##  <a name="parameter-description"></a><a name="bkmk_parameter_description"></a> 參數描述  
   
-|參數|描述|必要|  
+|參數|說明|必要|  
 |---------------|-----------------|--------------|  
 |**-s** Source_URL|來源報表伺服器的 URL|是|  
 |**-u** Domain\password **-p** password|來源伺服器的認證。|(選擇性) 如果遺失則使用預設認證|  
@@ -288,9 +289,9 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://uetesta02/_vti_bin/reportser
   
 1.  在目的地伺服器上開啟入口網站。  
   
-2.  選取上層功能表上的 [網站設定]  。  
+2.  選取上層功能表上的 [網站設定]。  
   
-3.  選取左窗格中的 [排程]  。  
+3.  選取左窗格中的 [排程]。  
   
  **SharePoint 模式：**  
   
@@ -305,16 +306,16 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://uetesta02/_vti_bin/reportser
   
 2.  在 **[物件總管]** 中按一下 **[安全性]** 。  
   
-3.  按一下 [角色]  。  
+3.  按一下 [角色]。  
   
 ##  <a name="troubleshooting"></a><a name="bkmk_troubleshoot"></a> 疑難排解  
  使用追蹤旗標 **-t** 取得詳細資訊。 例如，如果您執行指令碼並且看到類似下面的訊息  
   
--   無法連線到伺服器: https://\<servername>/ReportServer/ReportService2010.asmx  
+-   無法連線到伺服器： https://\<servername>/ReportServer/ReportService2010.asmx  
   
  再次使用 **-t** 旗標執行指令碼，就會看見類似這句的訊息：  
   
--   System.Exception：無法連接到伺服器： https://\<伺服器名稱>/ReportServer/ReportService2010.asmx ---> System.Net.WebException：**要求失敗，HTTP 狀態為 401：未經授權**。   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)   at Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired()   at Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService(String url, String userName, String password, String domain, Int32 timeout)   at Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()   --- 內部例外狀況堆疊追蹤結束 ---  
+-   System.Exception：無法連線到伺服器： https://\<servername>/ReportServer/ReportService2010.asmx ---> System.Net.WebException：**要求失敗，HTTP 狀態為 401：未經授權**。   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)   at Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired()   at Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService(String url, String userName, String password, String domain, Int32 timeout)   at Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()   --- 內部例外狀況堆疊追蹤結束 ---  
   
 ## <a name="see-also"></a>另請參閱  
  [RS.exe 公用程式 &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)   

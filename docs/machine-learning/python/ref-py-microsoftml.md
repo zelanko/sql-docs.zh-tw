@@ -1,30 +1,28 @@
 ---
 title: microsoftml Python 套件
-description: 介紹與 SQL Server 機器學習工作負載相關之適用於 Python 的 Microsoft 機器學習演算法和模型。
+description: microsoftml 為 Microsoft 的 Python 套件，提供高效能的機器學習演算法。 它包含用於定型與轉換、評分、文字與影像分析的函式，以及用於從現有資料衍生值的特徵擷取。 該套件包含在 SQL Server 機器學習服務中。
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 11/06/2019
-ms.topic: conceptual
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 212f739d7786cd3bd080972ab4b61ebff8b32bd9
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: ae408162ada9b43a9601c4058b9850db5a4afec4
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117861"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406191"
 ---
-# <a name="microsoftml-python-module-in-sql-server"></a>microsoftml (SQL Server 中的 Python 模組)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="microsoftml-python-package-in-sql-server-machine-learning-services"></a>microsoftml (SQL Server 機器學習服務中的 Python 套件)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-**microsoftml**是來自 Microsoft 的 Python35 相容模組，可提供高效能的機器學習演算法。 它包含用於定型與轉換、評分、文字與影像分析的函式，以及用於從現有資料衍生值的特徵擷取。
-
-機器學習 API 是 Microsoft 為內部機器學習應用程式開發的 API，並已使用多核心處理和快速資料串流，經過數年的去蕪存菁而得以在巨量資料方面支援高效能。 此套件是以具有相似函式的 R 版本 ([MicrosoftML](../r/ref-r-microsoftml.md)) Python 對等項目形式產生。 
+**microsoftml** 為 Microsoft 的 Python 套件，提供高效能的機器學習演算法。 它包含用於定型與轉換、評分、文字與影像分析的函式，以及用於從現有資料衍生值的特徵擷取。 該套件包含在 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)中，並支援高效能巨量資料，同時使用多核心處理，以及快速的資料串流。
 
 ## <a name="full-reference-documentation"></a>完整參考文件
 
-**microsoftml** 程式庫散佈在多個 Microsoft 產品中，但不論您是在 SQL Server 還是在另一個產品中取得此程式庫，其使用方式都相同。 由於函式相同，因此[個別 microsoftml 函式的文件](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)只發佈至 Microsoft Machine Learning Server 之 [Python 參考](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference)底下的一個位置。 若有任何產品特定行為存在，函式說明頁面中將會註明不一致之處。
+**microsoftml** 套件分散在多個 Microsoft 產品中，但不論您是從 SQL Server 或其他產品中取得該套件，使用方式都相同。 由於函式相同，因此[個別 microsoftml 函式的文件](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)只發佈至 Microsoft Machine Learning Server 之 [Python 參考](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference)底下的一個位置。 若有任何產品特定行為存在，函式說明頁面中將會註明不一致之處。
 
 ## <a name="versions-and-platforms"></a>版本與平台
 
@@ -42,7 +40,7 @@ ms.locfileid: "81117861"
 **microsoftml** 中的演算法在下列方面倚賴 [revoscalepy](ref-py-revoscalepy.md)：
 
 + 資料來源物件。 **microsoftml** 函式所取用的資料是使用 **revoscalepy** 函式來建立的資料。
-+ 遠端計算 (將函式執行切換至遠端 SQL Server 執行個體)。 **revoscalepy** 程式庫提供為 SQL Server 建立和啟用遠端計算內容的函式。
++ 遠端計算 (將函式執行切換至遠端 SQL Server 執行個體)。 **revoscalepy** 套件提供建立與啟用 SQL Server 遠端計算內容的函數。
 
 在大多數情況下，您會在每次使用 **microsoftml** 時一起載入套件。
 
@@ -52,7 +50,7 @@ ms.locfileid: "81117861"
 
 ## <a name="1-training-functions"></a>1-定型函式
 
-| 函式 | 描述 |
+| 函式 | 說明 |
 |----------|-------------|
 |[microsoftml.rx_ensemble](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-ensemble) | 將一整團模型定型。 |
 |[microsoftml.rx_fast_forest](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-forest)  | 隨機樹系。 |
@@ -68,14 +66,14 @@ ms.locfileid: "81117861"
 
 ### <a name="categorical-variable-handling"></a>類別目錄變數處理
 
-| 函式 | 描述 |
+| 函式 | 說明 |
 |----------|-------------|
 |[microsoftml.categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical) | 將文字資料行轉換成類別。 |
 |[microsoftml.categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash) | 將文字資料行雜湊並轉換成類別。 |
 
 ### <a name="schema-manipulation"></a>結構描述操作
 
-| 函式 | 描述 |
+| 函式 | 說明 |
 |----------|-------------|
 |[microsoftml.concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat) | 將多個資料行串連成單一向量。 |
 |[microsoftml.drop_columns](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/drop-columns) | 置放來自資料集的資料行。 |
@@ -84,7 +82,7 @@ ms.locfileid: "81117861"
 
 ### <a name="variable-selection"></a>變數選取
 
-| 函式 | 描述 |
+| 函式 | 說明 |
 |----------|-------------|
 |[microsoftml.count_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/count-select) |以計數為基礎的特徵選取。 |
 |[microsoftml.mutualinformation_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/mutualinformation-select) | 以相互資訊為基礎的特徵選取。 |
@@ -92,7 +90,7 @@ ms.locfileid: "81117861"
 
 ### <a name="text-analytics"></a>文字分析
 
-| 函式 | 描述 |
+| 函式 | 說明 |
 |----------|-------------|
 |[microsoftml.featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-text) | 將文字資料行轉換成數值特徵。 |
 |[microsoftml.get_sentiment](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/get-sentiment) | 情感分析。 |
@@ -100,7 +98,7 @@ ms.locfileid: "81117861"
 
 ### <a name="image-analytics"></a>影像分析 
 
-| 函式 | 描述 |
+| 函式 | 說明 |
 |----------|-------------|
 |[microsoftml.load_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/load-image) | 載入影像。 |
 |[microsoftml.resize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/resize-image) | 調整影像的大小。 |
@@ -109,7 +107,7 @@ ms.locfileid: "81117861"
 
 ### <a name="featurization-functions"></a>特徵化函式
 
-| 函式 | 描述 |
+| 函式 | 說明 |
 |----------|-------------|
 |[microsoftml.rx_featurize](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-featurize) | 資料來源的資料轉換 |
 

@@ -1,5 +1,6 @@
 ---
 title: 管理報表資料來源 | Microsoft Docs
+description: 了解如何管理報表資料來源，包括如何連線至報表參考的外部資料來源。
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 68125acb2c810e7463c8612936e545026ea94d69
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2a433169d694f9f2d71a049c906267a64b6c0756
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190813"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458255"
 ---
 # <a name="manage-report-data-sources"></a>管理報表資料來源
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，報表、報表模型和資料驅動訂閱都會從外部資料來源擷取資料。 為了連接到外部資料來源，報表伺服器會使用在報表、模型或訂閱中定義，或者從其中參考的資料來源連接資訊。 資料來源連接屬性一定會在建立報表或模型時，使用報表或模型來定義，但是當報表或模型發行到報表伺服器之後，可以獨立管理這些屬性。  
@@ -37,10 +38,10 @@ ms.locfileid: "74190813"
   
  請注意，修改查詢不是資料來源連接管理的一部分。 若要針對報表或模型修改查詢，您必須使用撰寫工具，並在報表或模型定義內進行變更。  
   
-## <a name="managed-properties-data-source-type-connection-strings-and-credentials"></a>Managed 屬性：資料來源類型、連接字串和認證  
+## <a name="managed-properties-data-source-type-connection-strings-and-credentials"></a>受控屬性：資料來源類型、連接字串和認證  
  您可以在報表伺服器上管理的資料來源屬性如下：  
   
-|屬性|描述|如何管理|  
+|屬性|說明|如何管理|  
 |--------------|-----------------|----------------------|  
 |資料來源類型|決定外部資料上要使用哪一個報表伺服器資料處理延伸模組。 資料處理器的範例包括 SQL Server、Analysis Services 和 Oracle。|資料來源類型是一種 Managed 屬性，因為它可以設定。 但是，只有當您建立新的共用資料來源時，才應該設定資料來源類型。<br /><br /> 請勿在已發行之報表或模型的屬性頁中變更資料來源類型，因為這樣做幾乎會讓連接失效。 在不同資料平台上，報表或模型所需的資料結構不可能會相同。|  
 |連接字串|建立與外部資料來源的初始連接。 報表可以使用靜態或動態的連接設定。<br /><br /> *「靜態連接字串」* (Static Connection String) 是一組值，每當報表執行時，一定會使用這一組值來連接相同的資料來源。<br /><br /> *「動態連接字串」* (Dynamic Connection String) 是一個內建到報表中的運算式，可讓使用者選取執行階段所要使用的資料來源。 當您在報表設計師中建立報表時，您必須將此運算式和資料來源選擇清單內建到報表中。|如果您要將資料來源移到另一部電腦，或是您已經使用測試資料建立報表，但是想要使用實際資料庫來部署報表，則變更連接字串會很有幫助。<br /><br /> 若要管理靜態連接字串，可使用另一個連接字串取代原始的字串。<br /><br /> 若要在入口網站或 SharePoint 網站上管理動態連接字串，您受限於只能使用靜態連接字串取代這個字串。 您無法編輯運算式本身，也無法變更資料來源選擇清單。 若要變更運算式或有效的值清單，您必須編輯報表定義，然後將它重新發行到報表伺服器。 如需詳細資訊，請參閱[建立資料連接字串 - 報表產生器 & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。|  

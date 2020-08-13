@@ -2,21 +2,21 @@
 title: SQL Server 2014 版本資訊 | Microsoft Docs
 description: 建議在安裝或對 Microsoft SQL Server 2014 (12.x) 版本進行疑難排解之前，先閱讀這份版本資訊文件所描述的已知問題。
 ms.custom: ''
-ms.date: 03/15/2018
+ms.date: 07/22/2020
 ms.prod: sql
-ms.technology: install
+ms.technology: release-landing
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: rothja
 ms.author: jroth
-monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 6346b8e611fc70f07211abe3060781d548a6a929
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+monikerRange: = sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: aeeaf52d389da8bb58d4b76bfbe85957cbd832dd
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001138"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111119"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ SQL Server 2014 SP1 包含 SQL Server 2014 CU 1 到 (含) CU 5 中所提供的�
 **因應措施：** 沒有降級的因應措施。 建議您先備份資料庫，再升級至 SQL Server 2014 RTM。  
   
 #### <a name="incorrect-version-of-streaminsight-client-on-sql-server-2014-mediaisocab"></a>SQL Server 2014 媒體/ISO/CAB 上出現錯誤版本的 StreamInsight 用戶端  
-版本錯誤的 StreamInsight.msi 和 StreamInsightClient.msi 位於下列 SQL Server 媒體/ISO/CAB 的路徑中 (StreamInsight\\\<結構\>\\\<語言識別碼\>)。  
+錯誤版本的 StreamInsight.msi 和 StreamInsightClient.msi，位於下列 SQL Server 媒體/ISO/CAB 的路徑中 (StreamInsight\\\<Architecture\>\\\<Language ID\>)。  
   
 **因應措施：** 從 [SQL Server 2014 功能套件下載頁面](https://go.microsoft.com/fwlink/?LinkID=306709)下載並安裝正確的版本。  
   
@@ -287,7 +287,7 @@ DATEPART(weekday, @d)
 5.  識別應該對應至您要修正之執行個體的資料列。 
 6.  將 sysdac_history_internal.instance_id 值更新為您在步驟 3 記下的值 (來自 sysdac_instances_internal 資料表)：  
   
-    `update` sysdac_history_internal `set` instance_id = '\<步驟 3 的值\>' `where` \<符合您所想要更新資料列的運算式\>  
+    `update` sysdac_history_internal `set` instance_id = '\<value from step 3\>' `where` \<expression that matches the rows you want to update\>  
   
 ### <a name="reporting-services-rtm"></a><a name="SSRS"></a>Reporting Services (RTM)
   
