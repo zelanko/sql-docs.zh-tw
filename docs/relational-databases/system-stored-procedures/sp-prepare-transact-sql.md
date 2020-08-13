@@ -1,5 +1,5 @@
 ---
-title: sp_prepare （Transact-sql） |Microsoft Docs
+title: sp_prepare (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/28/2018
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: f328c9eb-8211-4863-bafa-347e1bf7bb3f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 695e879b4f6eb5ab54a0d83636bcbef5f9f3c65f
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: d9095536219fc0cdc419a0952217b0eeb2ef19f5
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396017"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173102"
 ---
 # <a name="sp_prepare-transact-sql"></a>sp_prepare (Transact SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "87396017"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 sp_prepare handle OUTPUT, params, stmt, options  
 ```  
   
@@ -59,9 +59,9 @@ sp_prepare handle OUTPUT, params, stmt, options
 A. 下列範例會準備及執行簡單陳述式。  
   
 ```sql  
-DECLARE @P1 int;  
-EXEC sp_prepare @P1 output,   
-    N'@P1 nvarchar(128), @P2 nvarchar(100)',  
+DECLARE @P1 INT;  
+EXEC sp_prepare @P1 OUTPUT,   
+    N'@P1 NVARCHAR(128), @P2 NVARCHAR(100)',  
     N'SELECT database_id, name FROM sys.databases WHERE name=@P1 AND state_desc = @P2';  
 EXEC sp_execute @P1, N'tempdb', N'ONLINE';  
 EXEC sp_unprepare @P1;  
@@ -71,9 +71,9 @@ B. 下列範例會準備 AdventureWorks2016 資料庫中的語句，並在稍後
 
 ```sql
 -- Prepare query
-DECLARE @P1 int;  
-EXEC sp_prepare @P1 output,   
-    N'@Param int',  
+DECLARE @P1 INT;  
+EXEC sp_prepare @P1 OUTPUT,   
+    N'@Param INT',  
     N'SELECT *
 FROM Sales.SalesOrderDetail AS sod
 INNER JOIN Production.Product AS p ON sod.ProductID = p.ProductID

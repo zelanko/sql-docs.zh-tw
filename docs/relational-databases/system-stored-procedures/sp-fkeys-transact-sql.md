@@ -1,5 +1,5 @@
 ---
-title: sp_fkeys （Transact-sql） |Microsoft Docs
+title: sp_fkeys (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/08/2017
 ms.prod: sql
@@ -18,11 +18,12 @@ ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c280be43be2ef4f14e57321cb96420e6cf51eb6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 18a4a5c25c791122191c07e5bb63a6fc6c32cba0
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012682"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180057"
 ---
 # <a name="sp_fkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "86012682"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 sp_fkeys [ @pktable_name = ] 'pktable_name'   
      [ , [ @pktable_owner = ] 'pktable_owner' ]   
      [ , [ @pktable_qualifier = ] 'pktable_qualifier' ]   
@@ -47,12 +48,12 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
  這是用來傳回目錄資訊的資料表名稱，含主索引鍵。 *pktable_name*是**sysname**，預設值是 Null。 不支援萬用字元的模式比對。 必須提供這個參數或*fktable_name*參數（或兩者）。  
   
  [ @pktable_owner =] '*pktable_owner*'  
- 這是用來傳回目錄資訊之資料表（含主鍵）的擁有者名稱。 *pktable_owner*是**sysname**，預設值是 Null。 不支援萬用字元的模式比對。 如果未指定*pktable_owner* ，就會套用基礎 DBMS 的預設資料表可見度規則。  
+ 這是資料表的擁有者名稱， (具有用來傳回目錄資訊的主要索引鍵) 。 *pktable_owner*是**sysname**，預設值是 Null。 不支援萬用字元的模式比對。 如果未指定*pktable_owner* ，就會套用基礎 DBMS 的預設資料表可見度規則。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果目前使用者擁有一份含指定名稱的資料表，就會傳回這份資料表的資料行。 如果未指定*pktable_owner* ，而且目前的使用者並未擁有具有指定*pktable_name*的資料表，則程式會尋找資料庫擁有者所擁有之指定*pktable_name*的資料表。 如果資料表存在，就會傳回它的資料行。  
   
  [ @pktable_qualifier =] '*pktable_qualifier*'  
- 這是資料表 (含主索引鍵) 限定詞的名稱。 *pktable_qualifier*是 sysname，預設值是 Null。 各種 DBMS 產品都支援三部分的資料表命名（*qualifier.owner.name*）。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個限定詞代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
+ 這是資料表 (含主索引鍵) 限定詞的名稱。 *pktable_qualifier*是 sysname，預設值是 Null。 各種 DBMS 產品都支援三部分的資料表命名， (*qualifier.owner.name*) 。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個限定詞代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
   
  [ @fktable_name =] '*fktable_name*'  
  這是用來傳回目錄資訊之資料表 (含外部索引鍵) 的名稱。 *fktable_name*是 sysname，預設值是 Null。 不支援萬用字元的模式比對。 必須提供這個參數或*pktable_name*參數（或兩者）。  

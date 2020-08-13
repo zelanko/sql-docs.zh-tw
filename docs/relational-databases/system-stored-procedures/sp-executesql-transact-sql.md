@@ -1,5 +1,5 @@
 ---
-title: sp_executesql （Transact-sql） |Microsoft Docs
+title: sp_executesql (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,11 +19,12 @@ ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fdd669732bb26fcf14bde80efeb51673aeb3ce3e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 61a93d541e34c152d7c0ab5191ffe577c782c6e2
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012692"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180230"
 ---
 # <a name="sp_executesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "86012692"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
   
 sp_executesql [ @stmt = ] statement  
@@ -49,7 +50,7 @@ sp_executesql [ @stmt = ] statement
   
 ## <a name="arguments"></a>引數  
  [ \@ stmt =]*語句*  
- 這是包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句或批次的 Unicode 字串。 \@stmt 必須是 Unicode 常數或 Unicode 變數。 不允許使用比較複雜的 Unicode 運算式，如用 + 運算子來串連兩個字串。 不允許使用字元常數。 如果指定了 Unicode 常數，它的前面必須加上**N**。例如，Unicode 常數**N ' sp_who '** 有效，但字元常數 **' sp_who '** 則不是。 字串大小只受到可用資料庫伺服器記憶體的限制。 在64位伺服器上，字串的大小限制為 2 GB，也就是**Nvarchar （max）** 的大小上限。  
+ 這是包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句或批次的 Unicode 字串。 \@stmt 必須是 Unicode 常數或 Unicode 變數。 不允許使用比較複雜的 Unicode 運算式，如用 + 運算子來串連兩個字串。 不允許使用字元常數。 如果指定了 Unicode 常數，它的前面必須加上**N**。例如，Unicode 常數**N ' sp_who '** 有效，但字元常數 **' sp_who '** 則不是。 字串大小只受到可用資料庫伺服器記憶體的限制。 在64位伺服器上，字串大小限制為 2 GB，Nvarchar 的大小上限** (最大) **。  
   
 > [!NOTE]  
 >  \@stmt 可以包含具有與變數名稱相同形式的參數，例如：`N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
@@ -63,7 +64,7 @@ sp_executesql [ @stmt = ] statement
  這是參數字串所定義的第一個參數的值。 這個值可以是 Unicode 常數或 Unicode 變數。 針對包含在 stmt 中的每個參數，都必須提供參數值 \@ 。當 [!INCLUDE[tsql](../../includes/tsql-md.md)] stmt 中的語句或批次沒有參數時，不需要這些值 \@ 。  
   
  [ OUT | OUTPUT ]  
- 指出這個參數是輸出參數。 **text**、 **Ntext**和**IMAGE**參數可以做為輸出參數使用，除非此程式是 common language runtime （CLR）程式。 除非此程序是一個 CLR 程序，否則使用 OUTPUT 關鍵字的輸出參數可以是資料指標預留位置。  
+ 指出這個參數是輸出參數。 **text**、 **Ntext**和**image**參數可用來做為輸出參數，除非程式是 common language runtime (CLR) 程式。 除非此程序是一個 CLR 程序，否則使用 OUTPUT 關鍵字的輸出參數可以是資料指標預留位置。  
   
  *n*  
  這是其他參數值的預留位置。 這些值只能是常數或變數。 這些值不能是比較複雜的運算式，如函數或利用運算子來建立的運算式。  
@@ -86,10 +87,10 @@ sp_executesql [ @stmt = ] statement
   
  如下列範例所示，sp_executesql 支援在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 字串之外個別設定參數值。  
   
-```  
-DECLARE @IntVariable int;  
-DECLARE @SQLString nvarchar(500);  
-DECLARE @ParmDefinition nvarchar(500);  
+```sql  
+DECLARE @IntVariable INT;  
+DECLARE @SQLString NVARCHAR(500);  
+DECLARE @ParmDefinition NVARCHAR(500);  
   
 /* Build the SQL string one time.*/  
 SET @SQLString =  
@@ -109,17 +110,17 @@ EXECUTE sp_executesql @SQLString, @ParmDefinition,
   
  輸出參數也可以搭配 sp_executesql 使用。 下列範例會從 `AdventureWorks2012.HumanResources.Employee` 資料表中擷取一個職稱，並在輸出參數 `@max_title` 中將它傳回。  
   
-```  
-DECLARE @IntVariable int;  
-DECLARE @SQLString nvarchar(500);  
-DECLARE @ParmDefinition nvarchar(500);  
-DECLARE @max_title varchar(30);  
+```sql  
+DECLARE @IntVariable INT;  
+DECLARE @SQLString NVARCHAR(500);  
+DECLARE @ParmDefinition NVARCHAR(500);  
+DECLARE @max_title VARCHAR(30);  
   
 SET @IntVariable = 197;  
 SET @SQLString = N'SELECT @max_titleOUT = max(JobTitle)   
    FROM AdventureWorks2012.HumanResources.Employee  
    WHERE BusinessEntityID = @level';  
-SET @ParmDefinition = N'@level tinyint, @max_titleOUT varchar(30) OUTPUT';  
+SET @ParmDefinition = N'@level TINYINT, @max_titleOUT VARCHAR(30) OUTPUT';  
   
 EXECUTE sp_executesql @SQLString, @ParmDefinition, @level = @IntVariable, @max_titleOUT=@max_title OUTPUT;  
 SELECT @max_title;  
@@ -141,26 +142,26 @@ SELECT @max_title;
 ### <a name="a-executing-a-simple-select-statement"></a>A. 執行簡單的 SELECT 陳述式  
  下列範例會建立和執行包含名稱為 `SELECT` 的內嵌參數之簡單 `@level` 陳述式。  
   
-```  
+```sql  
 EXECUTE sp_executesql   
           N'SELECT * FROM AdventureWorks2012.HumanResources.Employee   
           WHERE BusinessEntityID = @level',  
-          N'@level tinyint',  
+          N'@level TINYINT',  
           @level = 109;  
 ```  
   
 ### <a name="b-executing-a-dynamically-built-string"></a>B. 執行動態建立的字串  
  下列範例會示範如何利用 `sp_executesql` 來執行動態建立的字串。 這個範例預存程序會將資料插入一組用來分割年度銷售資料的資料表中。 年度每個月份都有一份資料表，格式如下：  
   
-```  
+```sql  
 CREATE TABLE May1998Sales  
-    (OrderID int PRIMARY KEY,  
-    CustomerID int NOT NULL,  
-    OrderDate  datetime NULL  
+    (OrderID INT PRIMARY KEY,  
+    CustomerID INT NOT NULL,  
+    OrderDate  DATETIME NULL  
         CHECK (DATEPART(yy, OrderDate) = 1998),  
-    OrderMonth int  
+    OrderMonth INT  
         CHECK (OrderMonth = 5),  
-    DeliveryDate datetime  NULL,  
+    DeliveryDate DATETIME NULL,  
         CHECK (DATEPART(mm, OrderDate) = OrderMonth)  
     )  
 ```  
@@ -170,7 +171,7 @@ CREATE TABLE May1998Sales
 > [!NOTE]  
 >  這是 sp_executesql 的簡單範例。 這個範例不包含錯誤檢查，也不包括商務規則的檢查，如保證訂單號碼在資料表之間不重複。  
   
-```  
+```sql  
 CREATE PROCEDURE InsertSales @PrmOrderID INT, @PrmCustomerID INT,  
                  @PrmOrderDate DATETIME, @PrmDeliveryDate DATETIME  
 AS  
@@ -206,18 +207,18 @@ GO
 ### <a name="c-using-the-output-parameter"></a>C. 使用 OUTPUT 參數  
  下列範例會使用 `OUTPUT` 參數來儲存參數中的語句所產生的結果集 `SELECT` `@SQLString` 。`SELECT`接著會執行使用參數值的兩個語句 `OUTPUT` 。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @SQLString nvarchar(500);  
-DECLARE @ParmDefinition nvarchar(500);  
-DECLARE @SalesOrderNumber nvarchar(25);  
-DECLARE @IntVariable int;  
+DECLARE @SQLString NVARCHAR(500);  
+DECLARE @ParmDefinition NVARCHAR(500);  
+DECLARE @SalesOrderNumber NVARCHAR(25);  
+DECLARE @IntVariable INT;  
 SET @SQLString = N'SELECT @SalesOrderOUT = MAX(SalesOrderNumber)  
     FROM Sales.SalesOrderHeader  
     WHERE CustomerID = @CustomerID';  
-SET @ParmDefinition = N'@CustomerID int,  
-    @SalesOrderOUT nvarchar(25) OUTPUT';  
+SET @ParmDefinition = N'@CustomerID INT,  
+    @SalesOrderOUT NVARCHAR(25) OUTPUT';  
 SET @IntVariable = 22276;  
 EXECUTE sp_executesql  
     @SQLString  
@@ -238,13 +239,13 @@ WHERE SalesOrderNumber = @SalesOrderNumber;
 ### <a name="d-executing-a-simple-select-statement"></a>D. 執行簡單的 SELECT 陳述式  
  下列範例會建立和執行包含名稱為 `SELECT` 的內嵌參數之簡單 `@level` 陳述式。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 EXECUTE sp_executesql   
           N'SELECT * FROM AdventureWorksPDW2012.dbo.DimEmployee   
           WHERE EmployeeKey = @level',  
-          N'@level tinyint',  
+          N'@level TINYINT',  
           @level = 109;  
 ```  
   

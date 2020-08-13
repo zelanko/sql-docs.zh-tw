@@ -1,5 +1,6 @@
 ---
 title: SQL Server 2016 中的 SQL Server Reporting Services 重大變更 | Microsoft Docs
+description: 了解可能會中斷應用程式、指令碼或功能 (以舊版 SQL Server 為基礎) 的 Reporting Services 變更。
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 39c7aafd-dcb9-4317-b8f7-d15828eb4f9a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 41aad02f9f5b65dd1cf1474abd0c152f3face8c0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 332e026d402e54fa56f14a0f5a48face05213eb1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65503951"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248606"
 ---
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2016"></a>SQL Server 2016 中 SQL Server Reporting Services 的重大變更
 

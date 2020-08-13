@@ -13,12 +13,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 864abdb32dceaaa18e221295eebebc4f8382d4bb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: af1f6698cc08064d5ff9a8e8c6da32574b01d732
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901567"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248644"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>快速入門：使用 Docker 執行 SQL Server 容器映像
 
@@ -177,6 +177,8 @@ SELECT @@SERVERNAME,
 
 建議您將 `-h` 與 `--name` 設為相同的值，這會讓識別目標容器更輕鬆。
 
+5. 因為 `SA_PASSWORD` 會顯示在 `ps -eax` 輸出，且儲存在相同名稱的環境變數中，所以最後一個步驟是變更您的 SA 密碼。 請參閱下方步驟。
+
 ::: moniker-end
 <!--End of 2017 "Pull and run" section-->
 
@@ -295,8 +297,14 @@ SELECT @@SERVERNAME,
 
 建議您將 `-h` 與 `--name` 設為相同的值，這會讓識別目標容器更輕鬆。
 
+
+5. 因為 `SA_PASSWORD` 會顯示在 `ps -eax` 輸出，且儲存在相同名稱的環境變數中，所以最後一個步驟是變更您的 SA 密碼。 請參閱下方步驟。
+
+
 ::: moniker-end
 <!--End of 2019 "Pull and run" section-->
+
+
 
 ## <a name="change-the-sa-password"></a><a id="sapassword"></a> 變更 SA 密碼
 

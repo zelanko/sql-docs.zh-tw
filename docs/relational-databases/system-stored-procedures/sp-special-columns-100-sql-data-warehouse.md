@@ -13,12 +13,12 @@ ms.assetid: 5774fadc-77cc-46f8-8f9f-a0f9efe95e21
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 848893f9e6c7aeb36299037404a88e9b069c012c
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 6fa35188d803d58717449c2d3bf3c6afd41c5fc3
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197031"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173061"
 ---
 # <a name="sp_special_columns_100-sql-data-warehouse"></a>sp_special_columns_100 (SQL 資料倉儲) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "86197031"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 sp_special_columns_100 [ @table_name = ] 'table_name'     
@@ -67,7 +67,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
  這是正在使用的 ODBC 版本。 *ODBCVer*是**int (** 4 **) **，預設值是2。 這表示 ODBC 2.0 版。 如需有關 ODBC 2.0 版和 ODBC 3.0 版之差異的詳細資訊，請參閱 ODBC 3.0 版的 ODBC SQLSpecialColumns 規格。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- 無  
+ None  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -91,7 +91,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下列範例會傳回用來唯一識別 `FactFinance` 資料表中資料列之資料行的相關資訊。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 EXEC sp_special_columns_100 @table_name = 'FactFinance';  

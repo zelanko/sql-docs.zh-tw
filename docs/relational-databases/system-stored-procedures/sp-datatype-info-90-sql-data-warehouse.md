@@ -11,12 +11,12 @@ ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 0d19a2ef405fef8b62de96f621ddc13a816b4fc5
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: aef742c3dd6993830e1402a041979ca73a2a4ea0
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196921"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180176"
 ---
 # <a name="sp_datatype_info_90-sql-data-warehouse"></a>sp_datatype_info_90 (SQL 資料倉儲) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "86196921"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 sp_datatype_info_90 [ [ @data_type = ] data_type ]   
@@ -40,7 +40,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 `[ @ODBCVer = ] odbc_version`這是所使用的 ODBC 版本。 *odbc_version*是**Tinyint**，預設值是2。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- 無  
+ None  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -76,7 +76,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下列範例會藉由指定的*data_type*值，來抓取**sysname**和**Nvarchar**資料類型的資訊 `-9` 。  
   
-```  
+```sql  
 USE master;  
 GO  
 EXEC sp_datatype_info_90 -9;  

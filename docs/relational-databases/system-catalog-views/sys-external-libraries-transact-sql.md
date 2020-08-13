@@ -1,5 +1,5 @@
 ---
-title: sys.databases external_libraries （Transact-sql） |Microsoft Docs
+title: external_libraries (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/25/2020
 ms.prod: sql
@@ -19,15 +19,15 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a825843a69d9ba2f65f272adba86e6d8656aedde
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b6a24a142deef2283c58e21941293f31479f997b
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750699"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180071"
 ---
 # <a name="sysexternal_libraries-transact-sql"></a>sys.external_libraries (Transact-SQL)  
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 支援管理與外部執行時間（例如 R、Python 和 JAVA）相關的套件程式庫。
 
@@ -45,9 +45,9 @@ ms.locfileid: "85750699"
 |principal_id |int |擁有此外部程式庫之主體的識別碼。 |
 |語言 | sysname | 支援外部程式庫的語言或執行時間名稱。 有效值為「R」、「Python」和「JAVA」。 未來可能會加入其他執行時間。|
 |scope |int |0代表公用範圍;1代表私用範圍 |  
-|scope_desc |Varchar （7） |指出封裝為公用或私用。|
+|scope_desc |Varchar (7)  |指出封裝為公用或私用。|
 
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 
 + [sys.external_library_files](sys-external-library-files-transact-sql.md)  
 + [建立外部程式庫](../../t-sql/statements/create-external-library-transact-sql.md)  

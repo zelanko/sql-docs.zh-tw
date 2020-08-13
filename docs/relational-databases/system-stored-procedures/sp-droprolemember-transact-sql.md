@@ -1,5 +1,5 @@
 ---
-title: sp_droprolemember （Transact-sql） |Microsoft Docs
+title: sp_droprolemember (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -18,11 +18,12 @@ ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
 ms.author: vanto
 author: VanMSFT
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8be7e84ccd80d80c1345adec3450e5bc8e0f4da6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1ffff6387f2129c2e3bdb2af726e6b87e665554e
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012700"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180069"
 ---
 # <a name="sp_droprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
 
@@ -31,7 +32,7 @@ ms.locfileid: "86012700"
   從目前資料庫中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 角色移除安全性帳戶。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]請改用[ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) 。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用 [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) 。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,22 +40,22 @@ ms.locfileid: "86012700"
 
 ### <a name="syntax-for-both-sql-server-and-azure-sql-database"></a>SQL Server 和 Azure SQL Database 的語法
 
-```  
+```syntaxsql  
 sp_droprolemember [ @rolename = ] 'role' ,   
      [ @membername = ] 'security_account'  
 ```  
 
 ### <a name="syntax-for-both-azure-sql-data-warehouse-and-parallel-data-warehouse"></a>Azure SQL 資料倉儲和平行處理資料倉儲的語法
 
-```  
+```syntaxsql  
 sp_droprolemember 'role' ,  
      'security_account'  
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @rolename = ] 'role'`這是要從中移除成員的角色名稱。 *role*是**sysname**，沒有預設值。 *角色*必須存在於目前的資料庫中。  
+`[ @rolename = ] 'role'` 這是要從中移除成員的角色名稱。 *role* 是 **sysname**，沒有預設值。 *角色* 必須存在於目前的資料庫中。  
   
-`[ @membername = ] 'security_account'`這是從角色移除的安全性帳戶名稱。 *security_account*是**sysname**，沒有預設值。 *security_account*可以是資料庫使用者、另一個資料庫角色、windows 登入或 windows 群組。 *security_account*必須存在於目前的資料庫中。  
+`[ @membername = ] 'security_account'` 這是從角色移除的安全性帳戶名稱。 *security_account* 是 **sysname**，沒有預設值。 *security_account* 可以是資料庫使用者、另一個資料庫角色、windows 登入或 windows 群組。 *security_account* 必須存在於目前的資料庫中。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -84,7 +85,7 @@ EXEC sp_droprolemember 'Sales', 'JonB'
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的安全性預存程式](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的安全性預存程式 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sp_droprole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)   
  [sp_dropsrvrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   

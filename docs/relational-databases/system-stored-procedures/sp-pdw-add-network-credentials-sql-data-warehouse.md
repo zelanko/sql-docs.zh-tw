@@ -12,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: c7be9d3eb55800c2fa5c4f155aff6fd81301490c
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 4a6f551012a744d8659e0f3a4cee83b1fd39fbdf
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197336"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173219"
 ---
 # <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (SQL 資料倉儲) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "86197336"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpasswordꞌ  
@@ -36,25 +36,25 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
   
 ## <a name="arguments"></a>引數  
  '*target_server_name*'  
- 指定目標伺服器主機名稱或 IP 位址。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]將使用傳遞給此預存程式的使用者名稱和密碼認證來存取此伺服器。  
+ 指定目標伺服器主機名稱或 IP 位址。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 將使用傳遞給此預存程式的使用者名稱和密碼認證來存取此伺服器。  
   
  若要透過不會連線的網路進行連線，請使用目標伺服器的不會的 IP 位址。  
   
- *target_server_name*定義為 Nvarchar (337) 。  
+ *target_server_name* 定義為 Nvarchar (337) 。  
   
  '*user_name*'  
  指定有權存取目標伺服器的 user_name。 如果目標伺服器已有認證，則會將它們更新為新的認證。  
   
- *user_name*定義為 Nvarchar (513) 。  
+ *user_name* 定義為 Nvarchar (513) 。  
   
  '*密碼*ꞌ  
- 指定*user_name*的密碼。  
+ 指定 *user_name*的密碼。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="permissions"></a>權限  
- 需要**ALTER SERVER STATE**許可權。  
+ 需要 **ALTER SERVER STATE** 許可權。  
   
 ## <a name="error-handling"></a>錯誤處理  
  如果在控制節點和所有計算節點上新增認證失敗，就會發生錯誤。  
@@ -65,9 +65,9 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-add-credentials-for-performing-a-database-backup"></a>A. 新增用於執行資料庫備份的認證  
- 下列範例會將網域使用者 seattle\david 的使用者名稱和密碼認證，與 IP 位址為10.172.63.255 的目標伺服器產生關聯。 使用者 seattle\david 具有目標伺服器的讀取/寫入權限。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]會儲存這些認證，並根據備份和還原作業的需要，使用它們在目標伺服器上進行讀取和寫入。  
+ 下列範例會將網域使用者 seattle\david 的使用者名稱和密碼認證，與 IP 位址為10.172.63.255 的目標伺服器產生關聯。 使用者 seattle\david 具有目標伺服器的讀取/寫入權限。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 會儲存這些認證，並根據備份和還原作業的需要，使用它們在目標伺服器上進行讀取和寫入。  
   
-```  
+```sql  
 EXEC sp_pdw_add_network_credentials '10.172.63.255', 'seattle\david', '********';  
 ```  
   

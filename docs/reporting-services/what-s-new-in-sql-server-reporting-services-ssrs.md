@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 中的新功能 | Microsoft Docs
+description: 了解不同版本 SQL Server Reporting Services 的新功能，包括對主要功能區域的變更。
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/05/2019
-ms.openlocfilehash: cb50ca237fb1b9fae87b73fd81a9e6f2426b4775
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 869c2be4422df2361a0522e5b2183e61e43ae797
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079614"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248548"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的新功能
 
@@ -34,23 +35,23 @@ ms.locfileid: "77079614"
 
 ### <a name="azure-sql-managed-instance-support"></a>Azure SQL 受控執行個體支援
 
-現在，可以在裝載於 VM 或您資料中心的 Azure SQL 受控執行個體 (MI) 中，裝載用於 SQL Server Reporting Services (SSRS) 的資料庫目錄。 支援僅限於使用資料庫認證來進行對 SQL MI 的連線。
+現在，可以在裝載於 VM 或您資料中心的 Azure SQL 受控執行個體 (MI) 中，裝載用於 SQL Server Reporting Services (SSRS) 的資料庫目錄。 僅支援使用資料庫認證來連線到 SQL MI。
 
 ### <a name="power-bi-premium-dataset-support"></a>Power BI Premium 資料集支援
 
-您可以使用 Microsoft 報表產生器或 SQL Server Data Tools (SSDT) 來連線至 Power BI 資料集。 接著，您就可以使用 SQL Server Analysis Services 連線能力，將這些報表發佈至 SSRS 2019。 使用者必須使用已儲存的 Windows 使用者名稱和密碼，才能啟用此案例。
+您可以使用 Microsoft 報表產生器或 SQL Server Data Tools (SSDT) 連線到 Power BI 資料集。 接著，您就可以使用 SQL Server Analysis Services 連線能力，將這些報表發佈至 SSRS 2019。 使用者必須使用預存 Windows 使用者名稱和密碼來啟用此情節。
 
-### <a name="alttext-alternative-text-support-for-report-elements"></a>報表項目的 AltText (替代文字) 支援
+### <a name="alttext-alternative-text-support-for-report-elements"></a>報表元素的 AltText (替代文字) 支援
 
-撰寫報表時，您可以使用工具提示來指定報表上每個項目的文字。 螢幕助讀程式技術會正確識別這些工具提示。
+撰寫報表時，您可以使用工具提示來指定報表上每個元素的文字。 螢幕助讀程式技術會正確識別這些工具提示。
 
 ### <a name="azure-active-directory-application-proxy-support"></a>Azure Active Directory 應用程式 Proxy 支援
 
-使用 Azure Active Directory 應用程式 Proxy，您就不再需要管理自己的 Web 應用程式 Proxy 來透過 Web 或行動裝置應用程式進行安全存取。
+若使用 Azure Active Directory 應用程式 Proxy，您就不再需要管理自己的 Web 應用程式 Proxy，以允許透過 Web 或行動裝置應用程式進行安全存取。
 
 ### <a name="custom-headers"></a>自訂標頭
 
-設定所有符合指定 regex 模式的 URL 標頭值。 使用者可以使用有效的 XML 來更新自訂標頭值，以設定所選要求 URL 的標頭值。 系統管理員可以在 XML 中新增任意數量的標頭。 請參閱＜伺服器屬性進階頁面＞一文中的[自訂標頭](tools/server-properties-advanced-page-reporting-services.md#customheaders)以取得詳細資料。
+針對符合所指定 RegEx 模式的 URL 設定標頭值。 使用者可以使用有效的 XML 來更新自訂標頭值，以設定所選要求 URL 的標頭值。 系統管理員可以在 XML 中新增任意數目的標頭。 請參閱＜伺服器屬性進階頁面＞一文中的[自訂標頭](tools/server-properties-advanced-page-reporting-services.md#customheaders)以取得詳細資料。
 
 ### <a name="transparent-database-encryption"></a>透明資料庫加密
 
@@ -58,7 +59,7 @@ ms.locfileid: "77079614"
 
 ### <a name="microsoft-report-builder-update"></a>Microsoft 報表產生器更新
 
-新發行的報表產生器版本與 Reporting Services 的 2016、2017 和 2019 版完全相容。 此版本也與所有已發行和支援的 Power BI 報表伺服器版本相容。
+新發行的報表產生器版本與 2016、2017 和 2019 版 Reporting Services 完全相容。 其也與所有已發行和支援的 Power BI 報表伺服器版本相容。
 
 ::: moniker-end
 
@@ -185,7 +186,7 @@ iPad 和 iPhone 上適用於 iOS 的 Power BI 行動裝置應用程式現在可�
 
 **報表內嵌：** 您現在可以使用 iframe 及 URL 參數，將行動和編頁報表內嵌到其他網頁和應用程式中。  
 
-**將報表項目釘選到 Power BI 儀表板：** 當您在 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]中檢視報表時，可以選取報表項目，並將其釘選到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 儀表板。   可釘選的項目包括圖表、量測計面板、地圖和影像。 您可以：
+**將報表項目釘選到 Power BI 儀表板** ：當您在 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]中檢視報表時，可以選取報表項目，並將其釘選到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 儀表板。   可釘選的項目包括圖表、量測計面板、地圖和影像。 您可以：
 
 1. 選取包含欲釘選之儀表板的群組。
 2. 選取要將項目釘選至的儀表板。
@@ -222,7 +223,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 |**啟用和停用訂閱**。 新的使用者介面選項可快速停用及啟用訂閱。 停用的訂閱會維持其中的其他組態屬性，例如排程，並且可以輕鬆啟用。<br /><br /> ![ssrs-enable-disable-subscriptions](../reporting-services/media/ssrs-enable-disable-subscriptions.png)<br /><br /> 如需詳細資訊，請參閱 [Disable or Pause Report and Subscription Processing](../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md)。|原生模式|  
 |**訂閱描述**。 您現在可以在建立新訂閱時，在訂閱屬性中加入報表的描述。 該描述會加到訂閱摘要頁面上。|SharePoint 與原生模式|  
 |**變更訂閱擁有者**。 加強的使用者介面可快速變更訂閱的擁有者。 舊版 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 可讓系統管理員使用指令碼變更訂閱擁有者。 從 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 版本開始，您可以使用使用者介面或指令碼來變更訂閱擁有者。 有使用者離開或在組織中變更角色時，便需要進行變更訂閱擁有者這項一般管理工作。|SharePoint 與原生模式|  
-|**檔案共用訂閱的共用認證**。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 檔案共用訂閱現在同時存有兩個工作流程：<br /><br /> 您的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 系統管理員可以設定單一檔案共用帳戶，可供多個訂用帳戶使用。 檔案共用帳戶是在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 原生模式設定管理員的 [指定檔案共用帳戶]  中設定。 使用者在訂用帳戶設定頁面上選取 [使用檔案共用帳戶]  。<br /><br /> 您針對目的檔案共用，使用特定認證設定個別訂閱。<br /><br /> 您也可以混用兩種方法，讓某些檔案共用訂閱使用中央檔案共用帳戶，而其他訂閱則使用特定認證。|原生模式|
+|**檔案共用訂閱的共用認證**。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 檔案共用訂閱現在同時存有兩個工作流程：<br /><br /> 您的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 系統管理員可以設定單一檔案共用帳戶，可供多個訂用帳戶使用。 檔案共用帳戶是在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 原生模式設定管理員的 [指定檔案共用帳戶] 中設定。 使用者在訂用帳戶設定頁面上選取 [使用檔案共用帳戶]。<br /><br /> 您針對目的檔案共用，使用特定認證設定個別訂閱。<br /><br /> 您也可以混用兩種方法，讓某些檔案共用訂閱使用中央檔案共用帳戶，而其他訂閱則使用特定認證。|原生模式|
 
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)
 

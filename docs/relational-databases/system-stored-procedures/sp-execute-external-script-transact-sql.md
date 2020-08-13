@@ -20,16 +20,15 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a1ef1dc0f4b59b5eaf8f0ea4978a4eacde023e31
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 074836973123ae4f0f49acf72cf7bf6f56b17cf5
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87877956"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180247"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
-
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **Sp_execute_external_script**預存程式會執行提供做為程式之輸入引數的腳本，並搭配[Machine Learning 服務](../../machine-learning/sql-server-machine-learning-services.md)和[語言延伸](../../language-extensions/language-extensions-overview.md)模組使用。 
@@ -322,7 +321,7 @@ GO
 
 若要計分，您也可以使用原生 [PREDICT](../../t-sql/queries/predict-transact-sql.md) 函式，其會避免呼叫 Python 或 R 執行階段，因此一般來說速度更快。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 + [SQL 機器學習服務](../../machine-learning/index.yml)
 + [SQL Server 語言延伸](../../language-extensions/language-extensions-overview.md)模組。 

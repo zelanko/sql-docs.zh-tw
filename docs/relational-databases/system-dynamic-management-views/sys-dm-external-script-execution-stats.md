@@ -20,20 +20,20 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 8267c35e2453873269ae94d1bff331d025a76fd8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4bdf4215b01df0f9011123eb42232bba594554ed
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734636"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180092"
 ---
 # <a name="sysdm_external_script_execution_stats"></a>sys.dm_external_script_execution_stats
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 逐資料列傳回各種類型的外部指令碼要求。 外部指令碼要求會依支援的外部指令碼語言分組。 針對每個註冊的外部指令碼函數，會產生一個資料列。 除非是由父處理序 (例如 `rxExec`) 送出，否則不會記錄任何外部指令碼函數。
   
 > [!NOTE]  
-> 只有當您已安裝並啟用支援外部腳本執行的功能時，才可以使用此動態管理檢視（DMV）。 如需詳細資訊，請參閱[SQL Server 2016 中的 R Services](../../machine-learning/r/sql-server-r-services.md)、 [SQL Server 2017 和更新版本中的 Machine Learning services （R、Python）](../../machine-learning/sql-server-machine-learning-services.md)和[Azure 受控執行個體 Machine Learning 服務](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
+> 只有當您已安裝並啟用支援外部腳本執行的功能時，才可以使用此動態管理檢視 (DMV) 。 如需詳細資訊，請參閱[SQL Server 2016 中的 R Services](../../machine-learning/r/sql-server-r-services.md)、 [Machine Learning Services (R、SQL Server 2017 和更新版本中的 Python) ](../../machine-learning/sql-server-machine-learning-services.md)和[Azure 受控執行個體 Machine Learning 服務](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -96,7 +96,7 @@ FROM sys.dm_external_script_execution_stats
 WHERE language = 'Python';
 ```  
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 + [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
 + [執行相關的動態管理檢視和函式 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)

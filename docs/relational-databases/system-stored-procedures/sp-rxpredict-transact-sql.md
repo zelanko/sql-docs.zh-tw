@@ -16,15 +16,15 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 13d5355bd1798af1514d16965059916e42e1ade0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: dd1359fa3430e45ae54cadacd75f9ee261021b8d
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243751"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173051"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly.md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server 2016 Windows only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 產生給定輸入的預測值，其中包含以二進位格式儲存在 SQL Server 資料庫中的機器學習模型。
 
@@ -64,7 +64,7 @@ sp_rxPredict  ( @model, @input )
 
 ### <a name="supported-algorithms"></a>支援的演算法
 
-若要建立和定型模型，請使用[SQL Server Machine Learning 服務（R 或 python）](https://docs.microsoft.com/sql/machine-learning/sql-server-machine-learning-services)、 [SQL Server 2016 R Services](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services)、 [SQL Server Machine Learning Server （獨立式）（r 或 Python）](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone)或[SQL Server 2016 R Server （獨立式）](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016)所提供的 R 或 python 支援的其中一種演算法。
+若要建立和定型模型，請使用適用于 R 或 Python 的其中一種支援的演算法， [SQL Server Machine Learning Services (R 或 python) ](https://docs.microsoft.com/sql/machine-learning/sql-server-machine-learning-services)、 [SQL Server 2016 R Services](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services)、 [SQL Server Machine Learning Server (獨立)  (R 或 Python) ](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone)，或 SQL Server [2016 r Server (獨立) ](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016)。
 
 #### <a name="r-revoscaler-models"></a>R： RevoScaleR 模型
 

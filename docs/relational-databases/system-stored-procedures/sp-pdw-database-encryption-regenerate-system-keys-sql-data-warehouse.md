@@ -12,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 ms.reviewer: ''
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 06ce871e8f67a9cf4fa57b81eb84f47161e8fd28
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: c3b0101630a45ee7d4084a1b61a3b20ee0b2779b
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197324"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173205"
 ---
 # <a name="sp_pdw_database_encryption_regenerate_system_keys-sql-data-warehouse"></a>sp_pdw_database_encryption_regenerate_system_keys (SQL 資料倉儲) 
 
@@ -27,7 +27,7 @@ ms.locfileid: "86197324"
   
 ## <a name="syntax"></a>語法  
   
-```sql  
+```syntaxsql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 sp_pdw_database_encryption_regenerate_system_keys  ;  

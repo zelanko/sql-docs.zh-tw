@@ -1,5 +1,5 @@
 ---
-title: sp_spaceused （Transact-sql） |Microsoft Docs
+title: sp_spaceused (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 65b65c0ff721742c1bccbd6998d358797bd6d10b
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 91b38115cfcd9f688187fc7663e3da8c90d3d457
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87393944"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173079"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "87393944"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 sp_spaceused [[ @objname = ] 'objname' ]   
 [, [ @updateusage = ] 'updateusage' ]  
 [, [ @mode = ] 'mode' ]  
@@ -44,33 +44,33 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 ## <a name="arguments"></a>引數  
 
-對於 [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] 和 [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] ， `sp_spaceused` 必須指定具名引數（例如， `sp_spaceused (@objname= N'Table1');` 而不是依賴參數的序數位置）。 
+針對 [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] 和 [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] ， `sp_spaceused` 必須指定具名引數 (例如， `sp_spaceused (@objname= N'Table1');` 而不是依賴參數的序數位置。 
 
 `[ @objname = ] 'objname'`
    
  這是要求的空間使用方式資訊所屬之資料表、索引檢視或佇列的完整或非完整名稱。 只有在指定完整物件名稱時，才會需要引號。 如果提供完整物件名稱 (包括資料庫名稱)，資料庫名稱就必須是目前資料庫的名稱。  
 如果未指定*objname* ，則會傳回整個資料庫的結果。  
-*objname*是**Nvarchar （776）**，預設值是 Null。  
+*objname*是**Nvarchar (776) **，預設值是 Null。  
 > [!NOTE]  
 > [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]和 [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] 只支援資料庫和資料表物件。
   
-`[ @updateusage = ] 'updateusage'`表示應執行 DBCC UPDATEUSAGE 以更新空間使用方式資訊。 未指定*objname*時，會在整個資料庫上執行語句;否則，語句會在*objname*上執行。 值可以是**true**或**false**。 *updateusage*是**Varchar （5）**，預設值是**false**。  
+`[ @updateusage = ] 'updateusage'`表示應執行 DBCC UPDATEUSAGE 以更新空間使用方式資訊。 未指定*objname*時，會在整個資料庫上執行語句;否則，語句會在*objname*上執行。 值可以是**true**或**false**。 *updateusage*是**Varchar (5) **，預設值是**false**。  
   
 `[ @mode = ] 'mode'`指出結果的範圍。 針對延展的資料表或資料庫， *mode*參數可讓您包含或排除物件的遠端部分。 如需詳細資訊，請參閱 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。  
   
  *Mode*引數可以有下列值：  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |ALL|傳回物件或資料庫的儲存體統計資料，包括本機部分和遠端部分。|  
 |LOCAL_ONLY|只傳回物件或資料庫的本機部分的儲存統計資料。 如果物件或資料庫未啟用 Stretch，會傳回與 when = ALL 相同的統計資料 @mode 。|  
 |REMOTE_ONLY|只傳回物件或資料庫之遠端部分的儲存統計資料。 當下列其中一個條件成立時，此選項會引發錯誤：<br /><br /> 資料表未啟用 Stretch。<br /><br /> 資料表已啟用延展功能，但您從未啟用過資料移轉。 在此情況下，遠端資料表還沒有架構。<br /><br /> 使用者已手動卸載遠端資料表。<br /><br /> 布建遠端資料封存會傳回「成功」狀態，但事實上卻失敗。|  
   
- *mode*是**Varchar （11）**，預設值是**N'ALL '**。  
+ *模式*是**Varchar (11) **，預設值是**N'ALL '**。  
   
 `[ @oneresultset = ] oneresultset`指出是否傳回單一結果集。 *Oneresultset*引數可以有下列值：  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |0|當* \@ objname*為 null 或未指定時，會傳回兩個結果集。 有兩個結果集是預設行為。|  
 |1|當* \@ objname* = null 或未指定時，會傳回單一結果集。|  
@@ -80,7 +80,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 `[ @include_total_xtp_storage] 'include_total_xtp_storage'`
 **適用于：** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] 、 [!INCLUDE[sssds-md](../../includes/sssds-md.md)] 。  
   
- 當 @oneresultset = 1 時，參數會 @include_total_xtp_storage 決定單一結果集是否包含 MEMORY_OPTIMIZED_DATA 儲存體的資料行。 預設值為0，也就是根據預設（如果省略參數），XTP 資料行不會包含在結果集中。  
+ 當 @oneresultset = 1 時，參數會 @include_total_xtp_storage 決定單一結果集是否包含 MEMORY_OPTIMIZED_DATA 儲存體的資料行。 預設值為0，也就是說，如果省略參數，則預設 (，) XTP 資料行不包含在結果集中。  
 
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -91,78 +91,78 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|目前資料庫的名稱。|  
-|**database_size**|**Varchar （18）**|目前資料庫的大小 (以 MB 為單位)。 **database_size**同時包含資料和記錄檔。|  
-|**未配置空間**|**Varchar （18）**|資料庫中尚未保留給資料庫物件的空間。|  
+|**database_size**|**Varchar (18) **|目前資料庫的大小 (以 MB 為單位)。 **database_size**同時包含資料和記錄檔。|  
+|**未配置空間**|**Varchar (18) **|資料庫中尚未保留給資料庫物件的空間。|  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**留**|**Varchar （18）**|資料庫中的物件所配置的空間總量。|  
-|**data**|**Varchar （18）**|資料所用的空間總量。|  
-|**index_size**|**Varchar （18）**|索引所用的空間總量。|  
-|**未使用**|**Varchar （18）**|保留給資料庫中之物件但尚未使用的空間總量。|  
+|**留**|**Varchar (18) **|資料庫中的物件所配置的空間總量。|  
+|**data**|**Varchar (18) **|資料所用的空間總量。|  
+|**index_size**|**Varchar (18) **|索引所用的空間總量。|  
+|**未使用**|**Varchar (18) **|保留給資料庫中之物件但尚未使用的空間總量。|  
   
  如果省略*objname* ，且*oneresultset*的值為1，則會傳回下列單一結果集，以提供目前的資料庫大小資訊。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|目前資料庫的名稱。|  
-|**database_size**|**Varchar （18）**|目前資料庫的大小 (以 MB 為單位)。 **database_size**同時包含資料和記錄檔。|  
-|**未配置空間**|**Varchar （18）**|資料庫中尚未保留給資料庫物件的空間。|  
-|**留**|**Varchar （18）**|資料庫中的物件所配置的空間總量。|  
-|**data**|**Varchar （18）**|資料所用的空間總量。|  
-|**index_size**|**Varchar （18）**|索引所用的空間總量。|  
-|**未使用**|**Varchar （18）**|保留給資料庫中之物件但尚未使用的空間總量。|  
+|**database_size**|**Varchar (18) **|目前資料庫的大小 (以 MB 為單位)。 **database_size**同時包含資料和記錄檔。|  
+|**未配置空間**|**Varchar (18) **|資料庫中尚未保留給資料庫物件的空間。|  
+|**留**|**Varchar (18) **|資料庫中的物件所配置的空間總量。|  
+|**data**|**Varchar (18) **|資料所用的空間總量。|  
+|**index_size**|**Varchar (18) **|索引所用的空間總量。|  
+|**未使用**|**Varchar (18) **|保留給資料庫中之物件但尚未使用的空間總量。|  
   
  如果指定*objname* ，則會針對指定的物件傳回下列結果集。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(128)**|要求的空間使用方式資訊所屬的物件名稱。<br /><br /> 不會傳回物件的結構描述名稱。 如果需要架構名稱，請使用[sys.databases dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)或[dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)動態管理檢視來取得對等的大小資訊。|  
-|**行間**|**char （20）**|資料表現有的資料列數。 如果指定的物件是一個 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 佇列，這個資料行會指出佇列中的訊息數目。|  
-|**留**|**Varchar （18）**|*Objname*保留空間的總數量。|  
-|**data**|**Varchar （18）**|*Objname*中的資料所使用的總空間量。|  
-|**index_size**|**Varchar （18）**|*Objname*中的索引所使用的空間總量。|  
-|**未使用**|**Varchar （18）**|保留給*objname*但尚未使用的總空間量。|  
+|**行間**|**char (20) **|資料表現有的資料列數。 如果指定的物件是一個 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 佇列，這個資料行會指出佇列中的訊息數目。|  
+|**留**|**Varchar (18) **|*Objname*保留空間的總數量。|  
+|**data**|**Varchar (18) **|*Objname*中的資料所使用的總空間量。|  
+|**index_size**|**Varchar (18) **|*Objname*中的索引所使用的空間總量。|  
+|**未使用**|**Varchar (18) **|保留給*objname*但尚未使用的總空間量。|  
  
 如果未指定任何參數，這就是預設模式。 系統會傳回下列結果集，詳述磁片上的資料庫大小資訊。 
 
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|目前資料庫的名稱。|  
-|**database_size**|**Varchar （18）**|目前資料庫的大小 (以 MB 為單位)。 **database_size**同時包含資料和記錄檔。 如果資料庫具有 MEMORY_OPTIMIZED_DATA 檔案群組，這會包含檔案群組中所有檢查點檔案的磁片大小總計。|  
-|**未配置空間**|**Varchar （18）**|資料庫中尚未保留給資料庫物件的空間。 如果資料庫具有 MEMORY_OPTIMIZED_DATA 檔案群組，這會包含在檔案群組中具有狀態預先建立之檢查點檔案的磁片大小總計。|  
+|**database_size**|**Varchar (18) **|目前資料庫的大小 (以 MB 為單位)。 **database_size**同時包含資料和記錄檔。 如果資料庫具有 MEMORY_OPTIMIZED_DATA 檔案群組，這會包含檔案群組中所有檢查點檔案的磁片大小總計。|  
+|**未配置空間**|**Varchar (18) **|資料庫中尚未保留給資料庫物件的空間。 如果資料庫具有 MEMORY_OPTIMIZED_DATA 檔案群組，這會包含在檔案群組中具有狀態預先建立之檢查點檔案的磁片大小總計。|  
 
-資料庫中的資料表所使用的空間：（這個結果集不會反映記憶體優化資料表，因為沒有每個資料表的磁片使用量計量） 
+資料庫中的資料表所使用的空間： (此結果集不會反映記憶體優化資料表，因為沒有每個資料表的磁片使用量計量)  
 
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**留**|**Varchar （18）**|資料庫中的物件所配置的空間總量。|  
-|**data**|**Varchar （18）**|資料所用的空間總量。|  
-|**index_size**|**Varchar （18）**|索引所用的空間總量。|  
-|**未使用**|**Varchar （18）**|保留給資料庫中之物件但尚未使用的空間總量。|
+|**留**|**Varchar (18) **|資料庫中的物件所配置的空間總量。|  
+|**data**|**Varchar (18) **|資料所用的空間總量。|  
+|**index_size**|**Varchar (18) **|索引所用的空間總量。|  
+|**未使用**|**Varchar (18) **|保留給資料庫中之物件但尚未使用的空間總量。|
 
 只有在資料庫具有具有至少一個容器的 MEMORY_OPTIMIZED_DATA 檔案群組時，**才**會傳回下列結果集： 
 
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**xtp_precreated**|**Varchar （18）**|具有狀態預先建立的檢查點檔案大小總計（以 KB 為單位）。 計算整體資料庫中未配置的空間。 [例如，如果有 600000 KB 的預先建立檢查點檔案，則此資料行包含 ' 600000 KB ']|  
-|**xtp_used**|**Varchar （18）**|在 [結構]、[作用中] 和 [合併目標] 底下狀態的檢查點檔案大小總計，以 KB 為單位。 這是記憶體優化資料表中的資料主動使用的磁碟空間。|  
-|**xtp_pending_truncation**|**Varchar （18）**|狀態 WAITING_FOR_LOG_TRUNCATION 的檢查點檔案大小總計（以 KB 為單位）。 這是在記錄截斷發生後，用於等待清除之檢查點檔案的磁碟空間。|
+|**xtp_precreated**|**Varchar (18) **|具有狀態預先建立的檢查點檔案大小總計（以 KB 為單位）。 計算整體資料庫中未配置的空間。 [例如，如果有 600000 KB 的預先建立檢查點檔案，則此資料行包含 ' 600000 KB ']|  
+|**xtp_used**|**Varchar (18) **|在 [結構]、[作用中] 和 [合併目標] 底下狀態的檢查點檔案大小總計，以 KB 為單位。 這是記憶體優化資料表中的資料主動使用的磁碟空間。|  
+|**xtp_pending_truncation**|**Varchar (18) **|狀態 WAITING_FOR_LOG_TRUNCATION 的檢查點檔案大小總計（以 KB 為單位）。 這是在記錄截斷發生後，用於等待清除之檢查點檔案的磁碟空間。|
 
-如果省略*objname* ，oneresultset 的值為1，而*include_total_xtp_storage*為1，則會傳回下列單一結果集，以提供目前的資料庫大小資訊。 如果 `include_total_xtp_storage` 為0（預設值），則會省略最後三個數據行。 
+如果省略*objname* ，oneresultset 的值為1，而*include_total_xtp_storage*為1，則會傳回下列單一結果集，以提供目前的資料庫大小資訊。 如果 `include_total_xtp_storage` 是 0 (預設) ，則會省略最後三個數據行。 
 
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|目前資料庫的名稱。|  
-|**database_size**|**Varchar （18）**|目前資料庫的大小 (以 MB 為單位)。 **database_size**同時包含資料和記錄檔。 如果資料庫具有 MEMORY_OPTIMIZED_DATA 檔案群組，這會包含檔案群組中所有檢查點檔案的磁片大小總計。|
-|**未配置空間**|**Varchar （18）**|資料庫中尚未保留給資料庫物件的空間。 如果資料庫具有 MEMORY_OPTIMIZED_DATA 檔案群組，這會包含在檔案群組中具有狀態預先建立之檢查點檔案的磁片大小總計。|  
-|**留**|**Varchar （18）**|資料庫中的物件所配置的空間總量。|  
-|**data**|**Varchar （18）**|資料所用的空間總量。|  
-|**index_size**|**Varchar （18）**|索引所用的空間總量。|  
-|**未使用**|**Varchar （18）**|保留給資料庫中之物件但尚未使用的空間總量。|
-|**xtp_precreated**|**Varchar （18）**|具有狀態預先建立的檢查點檔案大小總計（以 KB 為單位）。 這會計入整個資料庫中的未配置空間。 如果資料庫沒有至少包含一個容器的 memory_optimized_data 檔案群組，則會傳回 Null。 *只有當 @include_total_xtp_storage = 1 時，才會包含這個資料行*。| 
-|**xtp_used**|**Varchar （18）**|在 [結構]、[作用中] 和 [合併目標] 底下狀態的檢查點檔案大小總計，以 KB 為單位。 這是記憶體優化資料表中的資料主動使用的磁碟空間。 如果資料庫沒有至少包含一個容器的 memory_optimized_data 檔案群組，則會傳回 Null。 *只有當 @include_total_xtp_storage = 1 時，才會包含這個資料行*。| 
-|**xtp_pending_truncation**|**Varchar （18）**|狀態 WAITING_FOR_LOG_TRUNCATION 的檢查點檔案大小總計（以 KB 為單位）。 這是在記錄截斷發生後，用於等待清除之檢查點檔案的磁碟空間。 如果資料庫沒有至少包含一個容器的 memory_optimized_data 檔案群組，則會傳回 Null。 只有在時，才會包含這個資料行 `@include_total_xtp_storage=1` 。|
+|**database_size**|**Varchar (18) **|目前資料庫的大小 (以 MB 為單位)。 **database_size**同時包含資料和記錄檔。 如果資料庫具有 MEMORY_OPTIMIZED_DATA 檔案群組，這會包含檔案群組中所有檢查點檔案的磁片大小總計。|
+|**未配置空間**|**Varchar (18) **|資料庫中尚未保留給資料庫物件的空間。 如果資料庫具有 MEMORY_OPTIMIZED_DATA 檔案群組，這會包含在檔案群組中具有狀態預先建立之檢查點檔案的磁片大小總計。|  
+|**留**|**Varchar (18) **|資料庫中的物件所配置的空間總量。|  
+|**data**|**Varchar (18) **|資料所用的空間總量。|  
+|**index_size**|**Varchar (18) **|索引所用的空間總量。|  
+|**未使用**|**Varchar (18) **|保留給資料庫中之物件但尚未使用的空間總量。|
+|**xtp_precreated**|**Varchar (18) **|具有狀態預先建立的檢查點檔案大小總計（以 KB 為單位）。 這會計入整個資料庫中的未配置空間。 如果資料庫沒有至少包含一個容器的 memory_optimized_data 檔案群組，則會傳回 Null。 *只有當 @include_total_xtp_storage = 1 時，才會包含這個資料行*。| 
+|**xtp_used**|**Varchar (18) **|在 [結構]、[作用中] 和 [合併目標] 底下狀態的檢查點檔案大小總計，以 KB 為單位。 這是記憶體優化資料表中的資料主動使用的磁碟空間。 如果資料庫沒有至少包含一個容器的 memory_optimized_data 檔案群組，則會傳回 Null。 *只有當 @include_total_xtp_storage = 1 時，才會包含這個資料行*。| 
+|**xtp_pending_truncation**|**Varchar (18) **|狀態 WAITING_FOR_LOG_TRUNCATION 的檢查點檔案大小總計（以 KB 為單位）。 這是在記錄截斷發生後，用於等待清除之檢查點檔案的磁碟空間。 如果資料庫沒有至少包含一個容器的 memory_optimized_data 檔案群組，則會傳回 Null。 只有在時，才會包含這個資料行 `@include_total_xtp_storage=1` 。|
 
 ## <a name="remarks"></a>備註  
  **database_size**通常會大於**保留**  +  **未配置空間**的總和，因為它包含記錄檔的大小，但**保留**且**unallocated_space**只考慮資料頁。 在某些情況下，使用 Azure Synapse 分析時，此語句可能不成立。 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - ghost clean up process
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 557f76e3f54811581e41ad15a5270a0c1e6e4057
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 16c9aa51475b00998b3c7aa9e71529bbbc292464
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859090"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248157"
 ---
 # <a name="ghost-cleanup-process-guide"></a>準刪除清除程序指南
 
@@ -46,7 +46,7 @@ ms.locfileid: "83859090"
 
 ## <a name="disable-the-ghost-cleanup"></a>停用準刪除清除
 
-在具有多項刪除的高負載系統上，準刪除清除程序可能會在緩衝集區中保留頁面及產生 IO 時導致效能問題。 因此，您可以使用追蹤旗標 661 停用此程序。 如需詳細資訊，請參閱 [Tuning options for SQL Server when running high performance workloads](https://support.microsoft.com/help/920093/tuning-options-for-sql-server-when-running-in-high-performance-workloa) (執行高效能工作負載時，SQL Server 的微調選項)。 不過，停用此程序會對效能造成影響。
+在具有多項刪除的高負載系統上，準刪除清除程序可能會在緩衝集區中保留頁面及產生 IO 時導致效能問題。 因此，您可使用[追蹤旗標 661](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 來停用此處理序。 不過，停用此程序會對效能造成影響。
 
 停用準刪除清除程序可能會造成資料庫成長過大，而可能導致效能問題。 因為準刪除清除程序會移除標示為準刪除的記錄，所以停用此程序會將這些記錄保留在頁面上，使得 SQL Server 無法重複使用此空間。 這會強制 SQL Server 改為將資料新增至新頁面，而導致資料庫檔案膨脹，也可能會造成[頁面分割](indexes/specify-fill-factor-for-an-index.md)。 建立執行計畫及執行掃描作業時，頁面分割會導致效能問題。 
 
