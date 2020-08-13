@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2964e02ad49ef21b61949da7eec2f48ede553b02
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b5f8da43f32319c45c94a8a6f82b012c4460e8e1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728439"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246383"
 ---
 # <a name="master-database"></a>master 資料庫
 
@@ -87,6 +87,7 @@ ms.locfileid: "85728439"
 您不能在 **master** 資料庫上執行下列作業：  
   
 - 加入檔案或檔案群組。  
+- 備份，master 資料庫上只能執行完整資料庫備份。
 - 變更定序。 預設定序是伺服器定序。  
 - 變更資料庫擁有者。 **master** 是由 **sa**所擁有。  
 - 建立全文檢索目錄或全文檢索索引。  

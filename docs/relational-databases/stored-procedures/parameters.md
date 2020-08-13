@@ -1,5 +1,6 @@
 ---
 title: 參數 | Microsoft Docs
+description: 了解如何在預存程序與函數以及呼叫預存程序與函數的應用程式或工具之間，使用參數交換資料。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: c1f9bd93-3271-4098-a23b-7bd7a19ab65b
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 73f4eb1d138746687601b2a9e58849093a2b2aa3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6641172a4f38a445ce57cfd5b9b43f9b8758144f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000920"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246532"
 ---
 # <a name="parameters"></a>參數
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,5 +1,6 @@
 ---
 title: 將權限授與使用者及警示管理員 | Microsoft Docs
+description: 了解如何在 SQL Server Reporting Services (SSRS) 中將權限授與使用者及警示管理員。
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +10,12 @@ ms.assetid: 166808e1-ada7-48d2-bda8-8f7c017fb3aa
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: dd6a34e6dbf57eb5080525d7dd0f7d7067484ad9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cc9294e13539f78ac1d45781e9a51f3a8f944d3e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580483"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247221"
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>將權限授與使用者及警示管理員
 
@@ -39,13 +40,13 @@ ms.locfileid: "65580483"
   
      如果沒有看到此選項，表示您沒有足夠的權限以將權限授與給其他人。  
   
-3.  按一下 [授與權限]  。  
+3.  按一下 [授與權限]。  
   
-4.  在 [使用者/群組]  中，輸入要授與權限的使用者名稱、群組名稱或電子郵件地址。  
+4.  在 [使用者/群組] 中，輸入要授與權限的使用者名稱、群組名稱或電子郵件地址。  
   
 5.  選取 **[加入使用者至 SharePoint 群組]** 或 **[直接授與使用者權限]** 選項。 根據您選取的是 **[新增使用者至 SharePoint 群組]** 或是 **[直接授與使用者權限]** 而定，執行下列其中一項操作：  
   
-    -   如果您選取了 [新增使用者至 SharePoint 群組]  ，請選取下拉式清單中的權限等級。  
+    -   如果您選取了 [新增使用者至 SharePoint 群組]，請選取下拉式清單中的權限等級。  
   
     -   如果您選取了 **[直接授與使用者權限]** ，請選取權限等級。  
   

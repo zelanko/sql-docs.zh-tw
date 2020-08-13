@@ -1,5 +1,6 @@
 ---
 title: 規劃 Reporting Services | Microsoft Docs
+description: 了解如何安裝及設定 SQL Server Reporting Services (SSRS) 環境，使其最符合需要。
 ms.date: 09/12/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4dde9d4d-e4fa-4bbe-91b0-0bcb0dc7dde7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: aa89fdf4bce0f268d71ea8c93e60ec4fcee6237c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 569daf4b395e40d9bcaf444aace9565cd9fd3822
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68891767"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247517"
 ---
 # <a name="planning-for-reporting-services"></a>規劃 Reporting Services
   使用這些主題以更清楚了解 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。 了解如何安裝及設定 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 環境，使其最符合您的需要。  
@@ -28,7 +29,7 @@ ms.locfileid: "68891767"
  ![小型檔案資料夾圖示](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小型檔案資料夾圖示") **Reporting Services 安裝程式**  
  [Reporting Services Report Server](../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
   
- [部署檢查清單：將 Reporting Services 安裝至現有的 SharePoint 伺服器陣列](https://msdn.microsoft.com/library/436b4c3d-3f2f-464a-be7e-5c051d9ffb8f)  
+ [部署檢查清單：將 Reporting Services 安裝至現有的 SharePoint 伺服器陣列](https://msdn.microsoft.com/library/436b4c3d-3f2f-464a-be7e-5c051d9ffb8f) (機器翻譯)  
   
  [SharePoint 中 SQL Server BI 功能的部署拓撲](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26)  
   

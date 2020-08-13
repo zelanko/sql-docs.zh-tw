@@ -1,5 +1,6 @@
 ---
 title: 取得資料連線的替代方式 (報表產生器) | Microsoft Docs
+description: 了解下列詳細資料：連線到外部資料源 (例如 SQL Server 資料庫) 的替代方式。
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: aebc5f3d-97d5-4d54-b525-753fed073a9a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 887104ff6667844071e44e1933592e8238b124dc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dfa10030537ebd325dae78c61985e75d6d2a49ff
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62703884"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246350"
 ---
 # <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>取得資料連接的替代方式 (報表產生器)
 資料連接包含連接至外部資料來源的資訊，例如 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫。 通常您會向資料來源擁有者取得連接資訊以及要使用的認證類型。  
@@ -29,43 +30,43 @@ ms.locfileid: "62703884"
   
 ### <a name="to-specify-a-data-connection-from-a-list-of-shared-data-sources"></a>從共用資料來源清單指定資料連接  
   
-1.  在 [新增資料表或矩陣精靈] 或 [新增圖表精靈] 的 [選擇資料集]  頁面上，選取 [建立資料集]  ，然後按一下 [下一步]  。 **[選擇與資料來源的連接]** 頁面隨即開啟。  
+1.  在 [新增資料表或矩陣精靈] 或 [新增圖表精靈] 的 [選擇資料集]**** 頁面上，選取 [建立資料集]****，然後按一下 [下一步]****。 **[選擇與資料來源的連接]** 頁面隨即開啟。  
   
 2.  從資料來源清單中，選取您有權存取的資料來源。  
   
 3.  若要確認您能夠連接至資料來源，請按一下 **[測試連接]** 。 「成功建立連接」訊息就會出現。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-4.  按 [下一步]  。  
+4.  按 [下一步] 。  
   
-    如有需要，請輸入您的認證。 若要在本機儲存認證，請選取 [儲存連接的密碼]  。 如果您未選取此選項，則會在每次執行報表時提示您提供認證  
+    如有需要，請輸入您的認證。 若要在本機儲存認證，請選取 [儲存連接的密碼]。 如果您未選取此選項，則會在每次執行報表時提示您提供認證  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### <a name="to-specify-a-data-connection-by-browsing-to-a-shared-data-source-on-a-report-server"></a>透過瀏覽報表伺服器上共用資料來源的方式指定資料連接  
   
-1.  在 [新增資料表或矩陣精靈] 或 [新增圖表精靈] 的 [選擇資料集]  頁面上，選取 [建立資料集]  ，然後按一下 [下一步]  。 **[選擇與資料來源的連接]** 頁面隨即開啟。  
+1.  在 [新增資料表或矩陣精靈] 或 [新增圖表精靈] 的 [選擇資料集]**** 頁面上，選取 [建立資料集]****，然後按一下 [下一步]****。 **[選擇與資料來源的連接]** 頁面隨即開啟。  
   
-2.  按一下 **[瀏覽]** 。 [選取資料來源]  對話方塊隨即開啟。  
+2.  按一下 **[瀏覽]** 。 [選取資料來源] 對話方塊隨即開啟。  
   
-3.  從 [查詢]  下拉式清單中，選取 [最近使用的網站和伺服器]  。 在資料來源窗格中，按一下伺服器的 URL，然後按一下 [開啟]  。  
+3.  從 [查詢] 下拉式清單中，選取 [最近使用的網站和伺服器]。 在資料來源窗格中，按一下伺服器的 URL，然後按一下 [開啟]。  
   
     資料來源或模型的清單隨即出現。  
   
-4.  或者，在 [名稱]  中輸入報表伺服器的 URL。 按一下 **[開啟]** 。  
+4.  或者，在 [名稱] 中輸入報表伺服器的 URL。 按一下 **[開啟]** 。  
   
     報表產生器會連接到報表伺服器，並且在根資料夾中載入可用的資料來源。  
   
-5.  巡覽至包含您有足夠權限可連線之資料來源的資料夾，選取該資料來源，然後按一下 [開啟]  。  
+5.  巡覽至包含您有足夠權限可連線之資料來源的資料夾，選取該資料來源，然後按一下 [開啟]****。  
   
-    您會回到 [選擇與資料來源的連線]  頁面。  
+    您會回到 [選擇與資料來源的連線] 頁面。  
   
 6.  若要確認您能夠連接至資料來源，請按一下 **[測試連接]** 。  
   
     「成功建立連接」訊息就會出現。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  按 [下一步]  。  
+7.  按 [下一步] 。  
   
-8.  如果提示您提供使用者名稱和密碼，請輸入您的認證。 若要在本機儲存認證，請選取 [儲存連接的密碼]  。  
+8.  如果提示您提供使用者名稱和密碼，請輸入您的認證。 若要在本機儲存認證，請選取 [儲存連接的密碼]。  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

@@ -1,5 +1,6 @@
 ---
 title: HTML 裝置資訊設定 | Microsoft Docs
+description: 了解可用於以 HTML 格式轉譯使用的各種裝置資訊設定。
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7c0d477364c4920e8220aef96629b24e34650ebb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6d86394f22eabb73c055329b2ad583f589b45ea8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65503105"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247187"
 ---
 # <a name="html-device-information-settings"></a>HTML 裝置資訊設定
 下表列出以 HTML 格式轉譯的裝置資訊設定。  
@@ -44,7 +45,7 @@ ms.locfileid: "65503105"
 |**ReplacementRoot(\*)**|在 ReportViewer 控制項之外轉譯時，在報表中所有鑽研、切換和書籤連結之前附加的字串。 例如，這個字串可用來將使用者的按鍵動作重新導向至自訂網頁。|  
 |**ResourceStreamRoot(\*)**|所有影像資源 (例如切換或排序的影像) 的 URL 前面所要加上的字串。|  
 |**小節**|要轉譯之報表的頁碼。 **0** 的值表示轉譯報表的所有區段。 預設值是 **1**秒。|  
-|**StreamRoot (\*)**|這個路徑會加在報表伺服器傳回的 HTML 報表中的 IMG 元素之 **src** 屬性值前面。 依預設，報表伺服器會提供路徑。 您可以使用此設定為報表中的影像指定根路徑 (例如，**https://\<伺服器名稱>/resources/companyimages**)。|  
+|**StreamRoot (\*)**|這個路徑會加在報表伺服器傳回的 HTML 報表中的 IMG 元素之 **src** 屬性值前面。 依預設，報表伺服器會提供路徑。 您可使用此設定指定報表中影像的根路徑 (例如 **https://\<servername>/resources/companyimages**)。|  
 |**StyleStream**|指出是否將樣式和指令碼建立成不同的資料流，而不是在文件中。 預設值為 **false**。|  
 |**工具列**|指出是否要顯示或隱藏工具列。 這個參數的預設值為 **true**。 如果這個參數的值為 **false**，則會忽略所有剩餘的選項 (文件引導模式除外)。 如果您省略這個參數，工具列就會自動顯示以轉譯支援該參數的格式。<br /><br /> 當您使用 URL 存取來轉譯報表時，會轉譯報表檢視器工具列。 工具列不是透過 SOAP API 來轉譯。 不過， **Toolbar** 裝置資訊設定會影響使用 SOAP **Render** 方法時顯示報表的方式。 如果此參數值在使用 SOAP 轉譯為 HTML 時為 **true** ，則會轉譯報表的第一個區段。 如果值是 **false**，則會將整個 HTML 報表轉譯為單一 HTML 頁面。|  
 |**UserAgent**|提出要求之瀏覽器的 **user-agent** 字串，該字串可在 HTTP 要求中找到。|  

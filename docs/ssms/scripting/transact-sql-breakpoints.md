@@ -1,5 +1,6 @@
 ---
 title: Transact-SQL 中斷點
+description: 當進行偵錯時，可視需要使用中斷點來暫停執行。 在此處尋找中斷點工作的清單，其中包含描述這些工作的文章連結。
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -13,16 +14,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c31101eb201a55dffd100fb9365f7c29826fb5d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4013fea38f42ff997ebf07e74d3adee2c4896b45
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243397"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246174"
 ---
 # <a name="transact-sql-breakpoints"></a>Transact-SQL 中斷點
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 中斷點指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具要在特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式上暫停執行，然後您就可以在該點檢視程式碼元素的狀態。
 
@@ -32,7 +33,7 @@ ms.locfileid: "75243397"
 
 執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具時，您可以切換特定陳述式上的中斷點。 執行到具有中斷點的陳述式時，偵錯工具會暫停執行，讓您可以檢視偵錯資訊，例如變數和參數中的值。
 
-您可以在編輯器視窗中個別管理中斷點，或是使用 [中斷點]  視窗統一進行管理。 您可以編輯中斷點以指定項目，例如應該暫停執行的特定條件，或要在執行中斷點時採取的動作。
+您可以在編輯器視窗中個別管理中斷點，或是使用 [中斷點] 視窗統一進行管理。 您可以編輯中斷點以指定項目，例如應該暫停執行的特定條件，或要在執行中斷點時採取的動作。
 
 ## <a name="breakpoint-tasks"></a>中斷點工作  
   
@@ -43,7 +44,7 @@ ms.locfileid: "75243397"
 |描述如何指定條件，而條件定義是否依據所指定 Transact-SQL 運算式的評估結果來中斷中斷點。|[指定中斷點條件](../../relational-databases/scripting/specify-a-breakpoint-condition.md)|  
 |描述如何指定叫用計數，而叫用計數只有在包含中斷點的陳述式已經執行指定的次數時才會導致中斷點中斷。|[指定叫用計數](../../relational-databases/scripting/specify-a-hit-count.md)|  
 |描述如何指定篩選，而篩選只會中斷所指定處理序或執行緒的中斷點。|[指定中斷點篩選條件](../../relational-databases/scripting/specify-a-breakpoint-filter.md)|  
-|描述如何指定 [叫用時]  動作，而此動作是在執行中斷點陳述式時執行的自訂作業。 範例為列印訊息。|[指定中斷點動作](../../relational-databases/scripting/specify-a-breakpoint-action.md)|  
+|描述如何指定 [叫用時] 動作，而此動作是在執行中斷點陳述式時執行的自訂作業。 範例為列印訊息。|[指定中斷點動作](../../relational-databases/scripting/specify-a-breakpoint-action.md)|  
 |描述如何編輯中斷點的位置。|[編輯中斷點位置](../../relational-databases/scripting/edit-a-breakpoint-location.md)|  
   
 ## <a name="see-also"></a>另請參閱  

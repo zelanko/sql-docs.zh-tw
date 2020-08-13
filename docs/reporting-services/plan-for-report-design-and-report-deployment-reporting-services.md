@@ -1,5 +1,6 @@
 ---
 title: 規劃報表設計與報表部署 | Reporting Services | Microsoft Docs
+description: 了解如何使用 Reporting Services 以針對一起運作的報表撰寫和報表伺服器環境進行規劃。
 ms.date: 09/12/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bca1457eb9be7b686ccfe86a1f7e7bdcab15cc14
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8921fa3e19ca9de4184af907ee1aac59bd82f824
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581250"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247537"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>規劃報表設計與報表部署 | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供數種撰寫與部署分頁報表的方法。 了解如何針對一起運作的報表撰寫和報表伺服器環境進行規劃。
@@ -46,11 +47,11 @@ ms.locfileid: "65581250"
 ##  <a name="report-server-and-rdl-schema-support"></a><a name="bkmk_report_server_rdl_schema_support"></a> 報表伺服器與 RDL 結構描述支援  
  報表定義檔案可以透過下列方式部署至 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 報表伺服器：  
   
--   **報表設計師：** 從 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]中的報表設計師部署報表。  
+-   **報表設計師：** 從報表設計師將報表部署在 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] 中。  
   
 -   **報表產生器：** 從報表產生器將報表儲存至報表伺服器。  
   
--   **入口網站** ：從 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]將報表上傳至原生模式報表伺服器。  
+-   **入口網站：** 從 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 將報表上傳至原生模式報表伺服器。  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
@@ -58,7 +59,7 @@ ms.locfileid: "65581250"
 
 ::: moniker-end
   
--   **程式設計方式：** 使用 SOAP API 介面，以程式設計的方式將報表發行至報表伺服器。 如需詳細資訊，請參閱 [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md)。  
+-   **以程式設計方式：** 使用 SOAP API 介面，以程式設計方式將報表發佈至報表伺服器。 如需詳細資訊，請參閱 [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md)。  
   
  下表依照報表伺服器的版本列出支援的 rdl 結構描述版本。  
   
@@ -70,7 +71,7 @@ ms.locfileid: "65581250"
   
  當您將報表定義上傳至報表伺服器，或升級包含現有報表的報表伺服器時，報表伺服器會以原始格式保留報表定義。 **第一次使用時**，報表伺服器會將報表伺服器資料庫中的報表升級為二進位格式，而這個格式在後續檢視時都會保留著。 報表定義 (.rdl) 本身不會升級。  
   
- 您可以從報表伺服器擷取報表定義檔案 (.rdl) 的唯讀複本。 在原生模式報表伺服器上，瀏覽至[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]，然後選取報表並按一下 [下載]  。 
+ 您可以從報表伺服器擷取報表定義檔案 (.rdl) 的唯讀複本。 在原生模式報表伺服器上，瀏覽至[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]，然後選取報表並按一下 [下載]。 
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 

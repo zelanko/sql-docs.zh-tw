@@ -5,21 +5,21 @@ ms.custom: ''
 ms.date: 11/01/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 43e6451f54e55af8e9c782dbab8a23bc753a03bc
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 33d6fd836bd4676e9f178fb5a3c59cc9fba67f80
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001114"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245600"
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 版本資訊
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 本文說明 SQL Server 2017 的限制和問題。 如需相關資訊，請參閱：
 - [SQL Server 2017 的新功能](../sql-server/what-s-new-in-sql-server-2017.md)
 - [Linux 上的 SQL Server 版本資訊](../linux/sql-server-linux-release-notes.md)
@@ -74,7 +74,7 @@ ms.locfileid: "83001114"
 - **問題和對客戶的影響：** 為了一致性和可讀性，預存程序 **[catalog].[create_execution]** 的參數 *runincluster* 已重新命名為 *runinscaleout*。
 - **因應措施：** 如果您的現有指令碼可在擴增中執行套件，則必須將參數名稱從 *runincluster* 變更為 *runinscaleout*，以確保這些指令碼在 RC1 中正常運作。
 
-- **問題和對客戶的影響：** SQL Server Management Studio (SSMS) 17.1 和舊版本無法在 RC1 的擴增中觸發套件執行。 錯誤訊息為：「 *@runincluster* 不是程序 **create_execution** 的參數。」 SSMS 的下一個版本 17.2 版中將會修正此問題。 SSMS 17.2 版和更新版本支援 [擴增] 中的新參數名稱和套件執行。 
+- **問題和對客戶的影響：** SQL Server Management Studio (SSMS) 17.1 和舊版本無法在 RC1 的擴增中觸發套件執行。 錯誤訊息為：「 *\@runincluster* 不是程序 **create_execution** 的參數。」 SSMS 的下一個版本 17.2 版中將會修正此問題。 SSMS 17.2 版和更新版本支援 [擴增] 中的新參數名稱和套件執行。 
 - **因應措施：** 在 SSMS 17.2 版可用之前：
   1. 使用現有的 SSMS 版本來產生套件執行指令碼。
   2. 將指令碼中 *runincluster* 參數的名稱變更為 *runinscaleout*。
@@ -150,7 +150,7 @@ ms.locfileid: "83001114"
 
 ## <a name="more-information"></a>詳細資訊
 - [SQL Server Reporting Services 版本資訊](../reporting-services/release-notes-reporting-services.md)的限制及問題。
-- [機器學習服務的已知問題](../machine-learning/known-issues-for-sql-server-machine-learning-services.md)
+- [機器學習服務的已知問題](../machine-learning/troubleshooting/known-issues-for-sql-server-machine-learning-services.md)
 - [SQL Server 更新中心 - 所有已支援版本的連結和資訊](https://msdn.microsoft.com/library/ff803383.aspx)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

@@ -1,5 +1,6 @@
 ---
 title: 使用 sqlcmd 執行 Transact-SQL 指令碼檔案
+description: 了解如何使用 sqlcmd 來執行 Transact-SQL 指令碼檔案。 其可包含 Transact-SQL 陳述式、sqlcmd 命令與指令碼變數。
 ms.custom: seo-lt-2019
 ms.date: 07/15/2016
 ms.prod: sql
@@ -12,21 +13,21 @@ ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed85470d8e054ba60ae0b2525f773f83d70d0da3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 560eb5c224c700d5936c53c888af6af4eae08c6f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253215"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247378"
 ---
 # <a name="sqlcmd---run-transact-sql-script-files"></a>sqlcmd - 執行 Transact-SQL 指令碼檔案
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
  您可以使用 **sqlcmd** 來執行 Transact-SQL 指令碼檔案。 Transact-SQL 指令碼檔案是一個文字檔，可以包含 Transact-SQL 陳述式、 **sqlcmd** 命令和指令碼變數的組合。  
 
 ## <a name="create-a-script-file"></a>建立指令碼檔案  
  若要使用 [記事本] 建立簡單的 Transact-SQL 指令碼檔案，請遵循下列步驟：  
   
-1.  按一下 [開始]  ，依序指向 [所有程式]  和 [附屬應用程式]  ，然後按一下 [記事本]  。  
+1.  按一下 [開始]，依序指向 [所有程式] 和 [附屬應用程式]，然後按一下 [記事本]。  
   
 2.  將下列 Transact-SQL 程式碼複製並貼到 [記事本] 中：  
   

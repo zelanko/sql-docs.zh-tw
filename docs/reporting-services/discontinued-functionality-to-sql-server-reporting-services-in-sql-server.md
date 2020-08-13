@@ -1,5 +1,6 @@
 ---
 title: SQL Server 2016 Reporting Services (SSRS) 中已停止的功能
+description: 了解 SQL Server 2016 中無法再使用的 SQL Server Reporting Services 功能。
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: seodec18
 ms.date: 04/26/2019
-ms.openlocfilehash: a34b37a2e970c0f7a1a873947d9f8432c0b9733c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0dec5b4ab6d942b448e051c4db54c2e180e4b0ad
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74317849"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246319"
 ---
 # <a name="discontinued-functionality-in-sql-server-2016-reporting-services-ssrs"></a>SQL Server 2016 Reporting Services (SSRS) 中已停止的功能
 
@@ -24,7 +25,7 @@ ms.locfileid: "74317849"
 
 本文描述 SQL Server 2016 中無法再使用的 SQL Server Reporting Services 功能。 不包含有關停止支援特定作業系統或 Microsoft Internet Information Services (IIS) 版本的宣告。 如需系統必要條件的詳細資訊，請參閱 [安裝 SQL Server 2016 的硬體與軟體需求](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。
 
-「已停止的功能」  (Discontinued Feature) 是指不再支援的功能。 它可能也會從產品中實際移除。 以下是已停止的功能。
+「已停止的功能」(Discontinued Feature) 是指不再支援的功能。 它可能也會從產品中實際移除。 以下是已停止的功能。
 
 |功能|取代或解決方法|
 |-|-|

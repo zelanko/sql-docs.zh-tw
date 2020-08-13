@@ -1,6 +1,6 @@
 ---
 title: 不同版本支援的功能 - SQL Server Reporting Services | Microsoft Docs
-description: 本文說明 SQL Server 不同版本所支援的 SQL Server Reporting Services (SSRS) 功能。 SQL Server Evaluation Edition 提供了 180 天的試用期。
+description: 了解 SQL Server 不同版本所支援的 SQL Server Reporting Services (SSRS) 功能。
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 12/16/2019
-ms.openlocfilehash: 96fe1480deed7dad420687b5b3b08a3ea8da2ffd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bbb3196349c648b955e5d27bf1d5fcfdadb9085f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76516599"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246657"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-editions"></a>下列版本支援的 SQL Server Reporting Services 功能
 

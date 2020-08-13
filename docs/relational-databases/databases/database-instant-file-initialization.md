@@ -2,7 +2,7 @@
 title: 資料庫立即檔案初始化
 description: 了解檔案立即初始化，以及如何在您的 SQL Server 資料庫上加以啟用。
 ms.custom: contperfq4
-ms.date: 05/30/2020
+ms.date: 07/24/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a10e6f9cff886b18b8bc344270516aaf2b5577db
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 20b182186244221c0f8cea2dda86d8f6a269cd50
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756254"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246570"
 ---
 # <a name="database-instant-file-initialization"></a>資料庫立即檔案初始化
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,6 +37,7 @@ ms.locfileid: "85756254"
 - 還原資料庫或檔案群組。  
 
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，檔案立即初始化 (IFI) 可讓您更快速地執行先前提到的檔案作業，因為其會回收已使用的磁碟空間，而不需以零填滿該空間。 而是在新資料寫入檔案時將磁碟內容覆寫為新資料。 記錄檔無法立即初始化。
+
 
 ## <a name="enable-instant-file-initialization"></a>啟用檔案立即初始化
 
@@ -99,5 +100,29 @@ ms.locfileid: "85756254"
     > [!NOTE]
     > 停用將增加資料檔案的配置時間，並只會影響使用者權限撤銷後建立或大小增加的檔案。
   
+### <a name="se_manage_volume_name-user-right"></a>SE_MANAGE_VOLUME_NAME 使用者權限
+
+您可在 [Windows 系統管理工具]、[本機安全性原則] 小程式中，指派 *SE_MANAGE_VOLUME_NAME* 使用者權限。 在 [本機原則] 下，選取 [使用者權限指派] 並修改 [執行磁碟區維護工作] 屬性。
+
+## <a name="performance-considerations"></a>效能考量
+
+資料庫檔案初始化程序會將零寫入至檔案中要初始化的新區域。 此程序其時間長短取決於所初始化的檔案部分大小，以及儲存系統的回應時間和容量。 如果初始化需要很長的時間，則可能會在 SQL Server 錯誤記錄檔和應用程式記錄檔中看到記錄了下列訊息。
+
+```
+Msg 5144
+Autogrow of file '%.*ls' in database '%.*ls' was cancelled by user or timed out after %d milliseconds.  Use ALTER DATABASE to set a smaller FILEGROWTH value for this file or to explicitly set a new file size.
+```
+
+```
+Msg 5145
+Autogrow of file '%.*ls' in database '%.*ls' took %d milliseconds.  Consider using ALTER DATABASE to set a smaller FILEGROWTH for this file.
+```
+
+資料庫和/或交易記錄檔的長時間自動成長可能會導致查詢效能問題。 這是因為需要檔案自動成長的作業會在檔案成長作業期間保留鎖定或閂鎖等資源。 您可能會看到配置頁面的閂鎖等候時間很長。 需要長時間自動成長的作業會顯示 PREEMPTIVE_OS_WRITEFILEGATHER 其等候類型。
+
+
+
+
+
 ## <a name="see-also"></a>另請參閱  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)

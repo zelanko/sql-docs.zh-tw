@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: de9ceed1aa019b82bc943a1985f0f251ad82b1fa
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b32c0b24aea8e1a55060b501fd001c1ad7f90b36
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917525"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248027"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services (SSIS) 套件和專案參數
 
@@ -76,10 +76,10 @@ ms.locfileid: "86917525"
  下列 Transact-SQL 檢視和預存程序可用來顯示和設定參數值。  
   
  [catalog.execution_parameter_values &#40;SSISDB 資料庫&#41;](../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md) (檢視)  
- 顯示特定執行將會使用的實際參數值。  
+ 顯示特定執行中的實際參數值。
   
  [catalog.get_parameter_values &#40;SSISDB 資料庫&#41;](../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md) (預存程序)  
- 解析並顯示指定封裝和環境參考的實際值  
+ 解析並顯示指定套件和環境參考的實際值。
   
  [catalog.object_parameters &#40;SSISDB 資料庫&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) (檢視)  
  在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 目錄中顯示所有封裝及專案的參數和屬性，包括設計預設值和伺服器預設值。  

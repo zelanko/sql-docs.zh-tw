@@ -1,5 +1,6 @@
 ---
 title: 啟動 sqlcmd 公用程式
+description: 了解如何啟動 sqlcmd 公用程式，其可供在 SQLCMD 模式下，或在指令碼和作業中輸入 Transact-SQL 陳述式、系統程序，以及指令碼檔案。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 00d57437-7a29-4da1-b639-ee990db055fb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2571401f408babd0d3fe0ce114dbabbf3deeed26
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cbbf6064708f272eda5d646043ee7d43e766d104
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243465"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248097"
 ---
 # <a name="sqlcmd---start-the-utility"></a>sqlcmd - 啟動公用程式
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  您可利用 [sqlcmd 公用程式](../../tools/sqlcmd-utility.md) 在命令提示字元處、於 SQLCMD 模式的 [查詢編輯器] 中、在 Windows 指令碼檔案中，或是在 [!INCLUDE[tsql](../../includes/tsql-md.md)] Agent 作業的作業系統 (Cmd.exe) 作業步驟中，輸入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式、系統程序與指令碼檔案。
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+   您可利用 [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)在命令提示字元處、於 SQLCMD 模式的 [查詢編輯器] 中、在 Windows 指令檔中，或是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的作業系統 (Cmd.exe) 作業步驟中，輸入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、系統程序與指令檔。
 > [!NOTE]  
 >  **sqlcmd**的預設驗證模式為 Windows 驗證。 若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，必須使用 **-U** 和 **-P** 選項來指定使用者名稱及密碼。  
   
@@ -28,7 +29,7 @@ ms.locfileid: "75243465"
   
 ### <a name="start-the-sqlcmd-utility-and-connect-to-a-default-instance-of-sql-server"></a>啟動 sqlcmd 公用程式和連接 SQL Server 的預設執行個體  
   
-1.  在 [開始]  功能表上，按一下 [執行]  。 在 [開啟]  方塊中，輸入 **cmd**，然後按一下 [確定]  開啟 [命令提示字元] 視窗。 (如果您從未連接過此 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，可能必須設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以接受連接。)  
+1.  在 [開始] 功能表上，按一下 [執行]。 在 [開啟] 方塊中，輸入 **cmd**，然後按一下 [確定] 開啟 [命令提示字元] 視窗。 (如果您從未連接過此 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，可能必須設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以接受連接。)  
   
 2.  在命令提示字元下，輸入 **sqlcmd**。  
   

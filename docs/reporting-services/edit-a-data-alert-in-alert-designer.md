@@ -1,5 +1,6 @@
 ---
 title: 在警示設計工具中編輯資料警示 | Microsoft Docs
+description: 了解如何編輯資料警示。 您可透過從 [資料警示管理員] 存取資料警示來編輯資料警示。
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ ms.assetid: dde3664d-90b5-4b12-969e-39152c86e58a
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c3a2f7a889d856e589a3471eadc74f5bc9010c5d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 77ea4640834cff6b2ca28127aef55e14de94fe97
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571508"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245158"
 ---
 # <a name="edit-a-data-alert-in-alert-designer"></a>在警示設計工具中編輯資料警示
 
@@ -40,7 +41,7 @@ ms.locfileid: "65571508"
   
 ### <a name="to-edit-a-data-alert-definition-in-data-alert-designer"></a>在資料警示設計工具中編輯資料警示定義  
   
-1.  在 [資料警示管理員] 中，以滑鼠右鍵按一下您要編輯的資料警示定義，然後按一下 [編輯]  。  
+1.  在 [資料警示管理員] 中，以滑鼠右鍵按一下您要編輯的資料警示定義，然後按一下 [編輯]。  
   
      警示定義會在 [資料警示設計工具] 中開啟。  
   
@@ -49,7 +50,7 @@ ms.locfileid: "65571508"
     > [!NOTE]  
     >  您無法選擇不同的資料摘要。 若要使用不同的資料摘要，您必須建立新的資料警示定義。  
   
-3.  按一下 [檔案]  。  
+3.  按一下 [檔案] 。  
   
     > [!NOTE]  
     >  如果報表已變更，而且從報表產生的資料摘要也已變更，則警示定義可能已無效。 當警示定義參考其規則的資料行已從報表中刪除或變更資料類型，或是報表已刪除或移動時，就會發生這種情形。 您可以開啟無效的警示定義，但是無法重新儲存它，除非依據建立定義的目前版本報表資料摘要成為有效的警示定義。 若要深入了解如何從多個報表產生資料摘要，請參閱[從多個報表產生資料摘要 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)。  

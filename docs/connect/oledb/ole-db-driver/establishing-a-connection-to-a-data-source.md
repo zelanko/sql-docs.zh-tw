@@ -1,5 +1,5 @@
 ---
-title: 建立與資料來源的連線 | Microsoft Docs
+title: 建立資料來源的連線 (OLE DB 驅動程式) | Microsoft Docs
 description: 使用 OLE DB Driver for SQL Server 來建立與資料來源的連線
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - OLE DB data sources [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 268c81f98a46174aa09df80e8459529e0f854bfc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 79f0ba6da0416c269d4a23cf45862746462f38e4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67995001"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244835"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>建立資料來源的連接
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4ab8501b5b0753143ce5bfe2b289211729c35821
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 28c1d78a4def2b3549957715c754e55b0d91e743
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765466"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246327"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>使用 FileTables 中的目錄與路徑
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -93,9 +93,8 @@ GO
 ##  <a name="the-is_directory-column-in-the-filetable-schema"></a><a name="is_directory"></a> FileTable 結構描述中的 is_directory 資料行  
  下表描述 **is_directory** 資料行以及與將 FILESTREAM 資料包含於 FileTable 中的 **file_stream** 資料行之間的互動。  
   
-||||  
-|-|-|-|  
-|*is_directory* **value**|*file_stream* **value**|**行為**|  
+|is_directory 值|file_stream 值|行為|  
+|-|-|-|    
 |FALSE|NULL|此為無效的組合，將由系統定義的條件約束所攔截。|  
 |FALSE|\<value>|該項目代表檔案。|  
 |TRUE|NULL|該項目代表目錄。|  

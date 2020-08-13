@@ -1,8 +1,8 @@
 ---
-title: 初始化和授權屬性 | Microsoft Docs
+title: 初始化和授權屬性 (OLE DB Driver) | Microsoft Docs
 description: 初始化和授權屬性
 ms.custom: ''
-ms.date: 10/11/2019
+ms.date: 01/02/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - initialization properties [OLE DB]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 28923ccb78e3edfa4de7b7e780195a643ec9914e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1a133b8b259b7746ff6f5e8750f31c5288c88aa9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72381867"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244947"
 ---
 # <a name="initialization-and-authorization-properties"></a>初始化和授權屬性
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -69,16 +69,18 @@ ms.locfileid: "72381867"
 |SSPROP_INIT_FAILOVERPARTNER|輸入：VT_BSTR<br /><br /> R/W︰讀取/寫入<br /><br /> 描述：指定要進行資料庫鏡像之容錯移轉夥伴的名稱。 這是初始化屬性，而且僅能在初始化之前設定。 初始化之後，它會傳回容錯移轉夥伴，如果有的話，則會由主要伺服器傳回。<br /><br /> 這可讓智慧型應用程式快取最近決定的備份伺服器，但是此類應用程式應該會注意到此資訊只會在第一次建立 (如果緩衝，則重設) 連接時更新，而且在長期連接後會變成過期。<br /><br /> 建立連接後，應用程式可以查詢此屬性來判斷容錯移轉夥伴的識別。 如果主要伺服器沒有容錯移轉夥伴，此屬性將會傳回空字串。 如需詳細資訊，請參閱[使用資料庫鏡像](../../oledb/features/using-database-mirroring.md)。|  
 |SSPROP_INIT_FILENAME|輸入：VT_BSTR<br /><br /> R/W︰讀取/寫入<br /><br /> 描述：指定可附加資料庫的主要檔案名稱。 此資料庫會附加，而且變成連接的預設資料庫。 若要使用 SSPROP_INIT_FILENAME，您必須將資料庫的名稱指定為初始化屬性 DBPROP_INIT_CATALOG 的值。 如果資料庫名稱不存在，則會尋找在 SSPROP_INIT_FILENAME 中指定的主要檔案名稱，並以 DBPROP_INIT_CATALOG 中指定的名稱附加該資料庫。 如果該資料庫先前已附加，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不會重新附加它。|  
 |SSPROP_INIT_MARSCONNECTION|輸入：VT_BOOL<br /><br /> R/W︰讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：指定是否要針對連線啟用 Multiple Active Result Set (MARS)。 在連接到資料庫之前，必須將此選項設定為 True。 如需詳細資訊，請參閱[使用 Multiple Active Result Sets &#40;MARS&#41;](../../oledb/features/using-multiple-active-result-sets-mars.md)。|  
+|SSPROP_INIT_MULTISUBNETFAILOVER|輸入：VT_BOOL<br /><br /> R/W︰讀取/寫入<br /><br/>預設值：VARIANT_FALSE<br /><br />描述：MultiSubnetFailover 可讓所有 Always On 可用性群組和 SQL Server 中的容錯移轉叢集執行個體容錯移轉得更快，並大幅縮短單一和多重子網路 Always On 拓撲的容錯移轉時間。 在多重子網路容錯移轉期間，用戶端會平行嘗試連接。 如需詳細資訊，請參閱 [OLE DB Driver for SQL Server 對於高可用性、災害復原的支援](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|  
 |SSPROP_INIT_NETWORKADDRESS|輸入：VT_BSTR<br /><br /> R/W︰讀取/寫入<br /><br /> 描述：執行 DBPROP_INIT_DATASOURCE 屬性所指定之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的伺服器網路位址。|  
 |SSPROP_INIT_NETWORKLIBRARY|輸入：VT_BSTR<br /><br /> R/W︰讀取/寫入<br /><br /> 描述：用來與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體進行通訊的網路程式庫 (DLL) 名稱。 名稱不得包含路徑或 .dll 副檔名。<br /><br /> 預設值可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用戶端組態公用程式自訂。<br /><br /> 注意:此屬性僅支援 TCP 和具名管道。 如果您搭配前置詞使用此屬性，結尾有雙前置詞時，會導致錯誤，因為此屬性用來在內部產生前置詞。|  
-|SSPROP_INIT_PACKETSIZE|輸入：VT_I4<br /><br /> R/W︰讀取/寫入<br /><br /> 描述：網路封包大小 (以位元組為單位)。 封包大小屬性值必須介於 512 和 32,767 之間。 預設的 OLE DB Driver for SQL Server 網路封包大小為 4,096。|  
+|SSPROP_INIT_PACKETSIZE|輸入：VT_I4<br /><br /> R/W︰讀取/寫入<br /><br /> 描述：表格式資料流 (TDS) 封包大小 (位元組)。 封包大小屬性值必須為 0 或介於 512 和 32,767 之間。 預設值為 0，表示實際的封包大小將由伺服器決定。|  
 |SSPROP_INIT_TAGCOLUMNCOLLATION|輸入：BOOL<br /><br /> R/W︰寫入<br /><br /> 預設值：FALSE<br /><br /> 描述：使用伺服器端資料指標時，會在資料庫更新期間使用。 此屬性會使用從伺服器 (而非用戶端的字碼頁) 取得的定序資訊標記資料。 目前只有分散式查詢處理使用此屬性，因為它知道目的地資料的定序，而且會正確轉換該定序。|  
+|SSPROP_INIT_TNIR|輸入：VT_BOOL<br /><br /> R/W︰讀取/寫入<br /><br/>預設值：VARIANT_TRUE<br /><br />描述：當有多個與主機名稱建立關聯的 IP，且第一個解析的主機名稱 IP 沒有回應時，TNIR 會影響連線順序。 TNIR 會與 MultiSubnetFailover 互動，以提供不同的連線順序。 如需詳細資訊，請參閱[使用透明網路 IP 解析](../../oledb/features/using-transparent-network-ip-resolution.md)。|  
 |SSPROP_INIT_TRUST_SERVER_CERTIFICATE<a href="#table1_1"><sup>**1**</sup></a>|輸入：VT_BOOL<br /><br /> R/W︰讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：用於啟用或停用伺服器憑證驗證。 此屬性是讀取/寫入的，但是在建立連接後嘗試設定該屬性將會導致錯誤。<br /><br /> 如果將用戶端設定為需要憑證驗證，則會忽略此屬性。 不過，即使沒有將用戶端設定為需要加密，而且在用戶端上沒有提供任何憑證，應用程式還是可以將該屬性與 SSPROP_INIT_ENCRYPT 一起使用來確保伺服器的連接經過加密。<br /><br /> 用戶端應用程式可以在開啟連接之後查詢此屬性，以便判斷使用中的實際加密和驗證設定。<br /><br /> 注意:在沒有憑證驗證的情況下使用加密，會針對封包探查提供部分保護，但無法防止中間人攻擊。 它只會允許加密傳送到伺服器的登入和資料，而不會驗證伺服器憑證。<br /><br /> 如需詳細資訊，請參閱[使用加密而不需驗證](../../oledb/features/using-encryption-without-validation.md)。|  
 |SSPROP_INIT_USEPROCFORPREP|輸入：VT_I4<br /><br /> R/W︰讀取/寫入<br /><br /> 預設值：SSPROPVAL_USEPROCFORPREP_ON<br /><br /> 描述：[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預存程序使用。 定義 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 暫存預存程序的用途來支援 **ICommandPrepare** 介面。 只有在連接到 SQL Server 6.5 時，此屬性才有意義。 更新的版本會忽略此屬性。<br /><br /> SSPROPVAL_USEPROCFORPREP_OFF：準備命令時，不會建立暫存預存程序。<br /><br /> SSPROPVAL_USEPROCFORPREP_ON：準備命令時，會建立暫存預存程序。 釋出工作階段時，會卸除暫存預存程序。<br /><br /> SSPROPVAL_USEPROCFORPREP_ON_DROP：準備命令時，會建立暫存預存程序。 使用 **ICommandPrepare::Unprepare** 取消準備命令時、使用 **ICommandText::SetCommandText** 指定命令物件的新命令時，或是釋出命令的所有應用程式參考時，會卸除此程序。|  
 |SSPROP_INIT_WSID|輸入：VT_BSTR<br /><br /> R/W︰讀取/寫入<br /><br /> 描述：識別工作站的字串。|  
   
 
-<b id="table1_1">[1]：</b>若要提升安全性，使用驗證/存取權杖初始化屬性或其對應的連接字串關鍵字時，會修改加密和憑證驗證行為。 如需詳細資訊，請參閱[加密和憑證驗證](../features/using-azure-active-directory.md#encryption-and-certificate-validation)。
+<b id="table1_1">[1]:</b>若要提升安全性，使用驗證/存取權杖初始化屬性或其對應的連接字串關鍵字時，會修改加密和憑證驗證行為。 如需詳細資訊，請參閱[加密和憑證驗證](../features/using-azure-active-directory.md#encryption-and-certificate-validation)。
 
  在提供者特定的屬性集 DBPROPSET_SQLSERVERDATASOURCEINFO 中，OLE DB Driver for SQL Server 會定義其他屬性；如需詳細資訊，請參閱[資料來源資訊屬性](../../oledb/ole-db-data-source-objects/data-source-information-properties.md)。  
   

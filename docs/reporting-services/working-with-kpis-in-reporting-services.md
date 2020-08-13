@@ -1,5 +1,6 @@
 ---
 title: 使用 Reporting Services 中的 KPI | Microsoft Docs
+description: 了解如何透過使用 SQL Server Reporting Services 中的 KPI，輕鬆測量狀態和效能。
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -7,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.date: 07/02/2017
-ms.openlocfilehash: dd8dc50b9885bb33df66d152b432092b6ac9868d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b92f19c74e5b5e3215836e174bf895f7cb61c36b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68329358"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247437"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>使用 Reporting Services 中的 KPI
 
@@ -35,24 +36,24 @@ ms.locfileid: "68329358"
 
 KPI 只會使用共用資料集的第一列資料。 請確定您想要使用的資料位於第一列。 若要建立共用資料集，您可以使用報表產生器或 SQL Server Data Tools。  
   
-> **注意**︰資料集不需要位於與 KPI 相同的資料夾。  
+> **注意**：資料集不需要位於與 KPI 相同的資料夾。  
   
 ## <a name="placement-of-kpis"></a>KPI 的位置  
   
 您可以在報表伺服器的任何資料夾中建立 KPI。  建立 KPI 之前，您會想要考慮要將它放在哪裡才是正確的位置。 您可以將它放在使用者可以看見的資料夾中，同時也與其周圍的其他報告和 KPI 相關。  
 ## <a name="adding-a-kpi"></a>加入 KPI
   
-決定您 KPI 的位置之後，請移至該資料夾，然後從上方功能表選取 [新增]   > [KPI]  。  
+決定您 KPI 的位置之後，請移至該資料夾，然後從上方功能表選取 [新增] > [KPI]。  
   
 ![rsCreateKPI1](../reporting-services/media/rscreatekpi1.png)  
   
-這會為您顯示 [新增 KPI]  畫面。  
+這會為您顯示 [新增 KPI] 畫面。  
   
 ![rsCreateKPI2](../reporting-services/media/rscreatekpi2.png)  
   
 您可以指派靜態值，或使用共用資料集的資料。 當您建立新的 KPI 時，即會填入一組隨機的手動資料。  
   
-| 欄位 | 描述 |
+| 欄位 | 說明 |
 |-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
 | 值格式 | 用來變更顯示值的格式。 |
 | 值 | 針對 KPI 顯示的值。 |
@@ -61,37 +62,37 @@ KPI 只會使用共用資料集的第一列資料。 請確定您想要使用的
 | 趨勢集 | 用於圖表視覺效果且以逗點分隔的數值。 這也可以設定為資料集的資料行，其值代表趨勢。 |
 | 相關內容 | 能夠設定鑽研連結。 此連結可以是在入口網站上所發佈行動報表或自訂的 URL。 |
   
-> **警告**︰雖然您可以在設計階段使用 [狀態]  欄位的文字值，但如果會重新整理資料集，您就應該使用數值。 如果您使用文字值 (而非數字) 重新整理資料集，它可能會損毀您伺服器上的 KPI。  
+> **警告**︰雖然您可以在設計階段使用 [狀態]**** 欄位的文字值，但如果會重新整理資料集，您就應該使用數值。 如果您使用文字值 (而非數字) 重新整理資料集，它可能會損毀您伺服器上的 KPI。  
 >
-> **注意**：[值]  、[目標]  和 [狀態]  欄位只可以從資料集結果的第一列中選擇值。 不過，[趨勢集]  欄位可以選擇哪些資料行會反映趨勢。  
+> **注意**：[值]、[目標] 和 [狀態] 欄位只可以從資料集結果的第一列中選擇值。 不過，[趨勢集] 欄位可以選擇哪些資料行會反映趨勢。  
   
 您可以執行下列步驟來使用共用資料集的資料。
   
-1. 將欄位下拉式清單方塊從 [手動設定]  或 [未設定]  變更為 [資料集欄位]  。  
+1. 將欄位下拉式清單方塊從 [手動設定] 或 [未設定] 變更為 [資料集欄位]。  
   
     ![rsCreateKPI3](../reporting-services/media/rscreatekpi3.png)  
   
-2. 選取資料方塊中的**省略符號 (...)** 。 這將會顯示 [挑選資料集]  畫面。  
+2. 選取資料方塊中的**省略符號 (...)** 。 這將會顯示 [挑選資料集] 畫面。  
   
     ![rsCreateKPI4](../reporting-services/media/rscreatekpi4.png)  
   
 3. 選取包含您想要顯示之資料的資料集。  
   
-4. 選擇您想要使用的欄位。 選取 [確定]  。  
+4. 選擇您想要使用的欄位。 選取 [確定]。  
   
     ![rsCreateKPI5](../reporting-services/media/rscreatekpi5.png)  
   
-5. 變更 [值格式]  以符合您的值格式。 在此範例中，值是一種貨幣。  
+5. 變更 [值格式] 以符合您的值格式。 在此範例中，值是一種貨幣。  
   
     ![rsCreateKPI6](../reporting-services/media/rscreatekpi6.png)  
   
-6. 選取 [套用]  。  
+6. 選取 [套用]。  
   
     ![rsCreateKPI7](../reporting-services/media/rscreatekpi7.png)
 
 ## <a name="configuring-related-content"></a>設定相關內容
 
-當選擇 [行動報表]  時，您可以在對話方塊中選擇目的地。
+當選擇 [行動報表] 時，您可以在對話方塊中選擇目的地。
 
    ![行動報表](media/rscreatekpi-related-content-mobile-report.png)
 
@@ -109,11 +110,11 @@ KPI 只會使用共用資料集的第一列資料。 請確定您想要使用的
   
 若要移除 KPI，您可以執行下列步驟。
   
-1. 選取您想要移除之 KPI 的**省略符號 (...)** 。 選取 [管理]  。  
+1. 選取您想要移除之 KPI 的**省略符號 (...)** 。 選取 [管理]。  
   
     ![rsRemoveKPI1](../reporting-services/media/rsremovekpi1.png)  
   
-2. 選取 [刪除]  。 在確認對話方塊中，再次選取 [刪除]  。  
+2. 選取 [刪除] 。 在確認對話方塊中，再次選取 [刪除]。  
   
     ![rsRemoveKPI2](../reporting-services/media/rsremovekpi2.png)  
   

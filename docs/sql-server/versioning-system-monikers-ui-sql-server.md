@@ -1,20 +1,18 @@
 ---
 title: 版本設定系統 SQL 文件
-ms.date: 10/15/2019
+ms.date: 07/22/2020
 ms.prod: sql
-ms.technology: ''
-ms.custom: ''
+ms.technology: release-landing
 ms.topic: conceptual
-ms.reviewer: ''
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b343f34e0d7fdc30e2549095f5731d93e863414c
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 7ca82e29d32bfe2721baa619ec37d4c7576a0533
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150601"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247364"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>SQL 版本設定系統文件
 
@@ -136,7 +134,7 @@ ms.locfileid: "83150601"
 
 有些文章包含與多個 SQL Server 版本相關的資訊。 每個一般 moniker 都會隱藏已建立版本的區段；這些區段原先可能會顯示 moniker 版本的不正確、令人困惑或矛盾資訊。 特殊的**所有 SQL** moniker 會顯示所有版本區段，且顯示不正確的資訊時可能並不明顯。
 
-## <a name="message-the-requested-page-is-not-available-for-moniker"></a><a name="anchor-message-unavailable-for-moniker"></a> 訊息：要求的頁面無法提供 \<moniker\> 使用
+## <a name="message-the-requested-page-is-not-available-for-moniker"></a><a name="anchor-message-unavailable-for-moniker"></a> 訊息：所要求的頁面無法提供 \<moniker\> 使用
 
 下列案例會導致在 :::no-loc text="Docs"::: 網頁接近頂端的位置顯示資訊訊息：
 
@@ -163,10 +161,11 @@ ms.locfileid: "83150601"
     - [SQL Server 的先前版本，2012-2005](../toc/previous-versions-sql-server.md)
 
 - 2014：&nbsp; 版本設定系統已為 SQL Server 2014 實作一半。 您可以在版本設定控制項中選擇 SQL Server 2014，它會正常運作。 但是在內部，2014 的檔案仍僅專屬於 2014，也就是和 2008 的檔案僅專屬於 2008 相同。
-    - [SQL Server 2014 文件](/sql/2014-toc/books-online-for-sql-server-2014?view=sql-server-2014)
+    - [SQL Server 2014 離線文件](/sql/sql-server/sql-server-offline-documentation)
 
 - 2016 及更新版本：&nbsp; 版本設定系統已為 SQL Server 2016 及更新版本完全實作。
     - [歡迎使用 SQL Server 文件 2016 及更新版本](/sql/sql-server/?view=sql-server-2016)
+    - [SQL Server 2016 離線文件](sql-server-offline-documentation.md)
 
 ## <a name="see-also"></a>另請參閱
 

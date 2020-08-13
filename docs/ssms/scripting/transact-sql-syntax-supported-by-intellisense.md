@@ -1,5 +1,6 @@
 ---
 title: IntelliSense 所支援的 Transact-SQL 語法
+description: 了解 SQL Server 2019 (15.x) 中 SQL Server Management Studio IntelliSense 所支援的 Transact-SQL 陳述式和語法元素。
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -15,15 +16,15 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5acada236056a5691ceebe81d0372f1fa06543f1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 772574d5f50c9c3f9666c56abab80d3ce5181d82
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252982"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247347"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>IntelliSense 所支援的 Transact-SQL 語法
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   此主題描述 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中 IntelliSense 所支援的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]陳述式和語法。  
   
 ## <a name="statements-supported-by-intellisense"></a>IntelliSense 所支援的陳述式  
@@ -35,14 +36,47 @@ ms.locfileid: "75252982"
 ### <a name="select-statement"></a>SELECT 陳述式  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器會針對 SELECT 陳述式中的下列語法元素提供 IntelliSense 支援：  
   
-|||  
-|-|-|  
-|SELECT|WHERE|  
-|FROM|排序依據|  
-|HAVING|UNION|  
-|FOR|GROUP BY|  
-|頂端|OPTION (hint)|  
-  
+:::row:::
+    :::column:::
+        SELECT
+    :::column-end:::
+    :::column:::
+        WHERE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        FROM
+    :::column-end:::
+    :::column:::
+        排序依據
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        HAVING
+    :::column-end:::
+    :::column:::
+        UNION
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        FOR
+    :::column-end:::
+    :::column:::
+        GROUP BY
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        頂端
+    :::column-end:::
+    :::column:::
+        OPTION (hint)
+    :::column-end:::
+:::row-end:::
+
 ### <a name="additional-transact-sql-statements-that-are-supported"></a>其他支援的 Transact-SQL 陳述式  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器也會針對下表所顯示的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式提供 IntelliSense 支援。  
   
@@ -131,6 +165,6 @@ GO
 SELECT   
 ```  
   
- 在您輸入 `SELECT`之後，IntelliSense 就會列出 **[PrimaryKeyCol]** 、 **[FirstNameCol]** 和 **[LastNameCol]** 當做選取清單中的可能元素，即使該指令碼尚未執行而且 `MyTable` 尚未存在 `MyTestDB`中也一樣。  
+ 在您輸入 `SELECT`之後，IntelliSense 就會列出 **[PrimaryKeyCol]**、 **[FirstNameCol]** 和 **[LastNameCol]** 當做選取清單中的可能元素，即使該指令碼尚未執行而且 `MyTable` 尚未存在 `MyTestDB`中也一樣。  
   
   

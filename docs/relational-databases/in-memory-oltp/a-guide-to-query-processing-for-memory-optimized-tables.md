@@ -12,12 +12,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a6a13f70bfffbdbeba0ba08882c4dcc9b53aaa69
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0c62f1f2ef34bd5ba1a59a642ac8d07db2dbe259
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85668877"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247072"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>記憶體最佳化資料表的查詢處理指南
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -195,7 +195,7 @@ END
   
  原生編譯的預存程序會在建立時編譯，而解譯的預存程序則是在第一次執行時編譯 (編譯的一部分，尤其是指剖析和 Algebrization，會在建立時發生。 不過，對於解譯的預存程序，查詢計劃的最佳化是在第一次執行時進行)。重新編譯邏輯也很類似。 如果伺服器重新啟動，原生編譯的預存程序就會在第一次執行程序時重新編譯。 如果計畫已不在計畫快取中，解譯的預存程序就會重新編譯。 下表摘要說明原生編譯的預存程序及解譯的預存程序之編譯和重新編譯案例：  
   
-||原生編譯|對記憶體最佳化資料表進行解譯的|  
+|編譯類型|原生編譯|對記憶體最佳化資料表進行解譯的|  
 |-|-----------------------|-----------------|  
 |初始編譯|建立時。|第一次執行時。|  
 |自動重新編譯|在資料庫或伺服器重新啟動之後，第一次執行程序時。|伺服器重新啟動時。 或者，從計畫快取收回，通常是依據結構描述或統計資料變更，或是記憶體壓力。|  

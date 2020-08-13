@@ -1,5 +1,6 @@
 ---
 title: 建立基本資料表報表 (SSRS 教學課程) | Microsoft Docs
+description: 使用 Visual Studio 中的報表設計師工具/SQL Server Data Tools (SSDT)，然後建立 SQL Server Reporting Services (SSRS) 編頁報表。
 ms.date: 04/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: af41da75d553794019f1d01c8b8f5bb6aba80622
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f1549d3ba775d598902fd0fd4b5cc33bab2f54de
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65103308"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245137"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>建立基本資料表報表 (SSRS 教學課程)
 
-在本教學課程中，您可以使用 Visual Studio / SQL Server Data Tools (SSDT) 中的 [報表設計師]  工具。 您可以建立 SQL Server Reporting Services (SSRS) 編頁報表。 報表包含查詢資料表，該資料表是從 AdventureWorks2016 資料庫中的資料建立的。
+在本教學課程中，您可以使用 Visual Studio / SQL Server Data Tools (SSDT) 中的 [報表設計師] 工具。 您可以建立 SQL Server Reporting Services (SSRS) 編頁報表。 報表包含查詢資料表，該資料表是從 AdventureWorks2016 資料庫中的資料建立的。
 
 當您繼續本教學課程時，您將了解如何：
   
@@ -51,15 +52,15 @@ ms.locfileid: "65103308"
 
 [第 1 課：建立報表伺服器專案 &#40;Reporting Services&#41;](lesson-1-creating-a-report-server-project-reporting-services.md)
 
-[第 2 課：指定連接資訊 &#40;Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md)
+[第 2 課：指定連線資訊 &#40;Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md)
 
 [第 3 課：定義資料表報表的資料集 &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)
 
-[第 4 課：將資料表加入至報表 &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)
+[第 4 課：將資料表新增至報表 &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)
 
 [第 5 課：格式化報表 &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md)
 
-[課程 6：加入群組和總計 &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)
+[第 6 課：新增群組和總計 &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)
 
 ## <a name="see-also"></a>另請參閱
 

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 14b0ff1c40ae8e809f7ad5b39e482bd3f76774ec
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 89f68b19a47605e5f2ad9d02abffc6810d8df578
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899642"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245619"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>在 Docker 上設定 SQL Server 容器映像
 
@@ -640,6 +640,14 @@ chown -R 10001:0 <database file dir>
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_DIR=/my/file/path" -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
 
+## <a name="enable-sql-server-agent"></a><a id="enablesqlagent"></a> 啟用 SQL Server Agent
+
+啟用 SQL Server Agent，其將使用 SQL Server 自動啟動
+
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_AGENT_ENABLED=true" --name sql1 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+```
+
 ## <a name="troubleshooting"></a><a id="troubleshooting"></a> 疑難排解
 
 下列各節提供在容器中執行 SQL Server 的疑難排解建議。
@@ -736,9 +744,9 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "M
 
 如果您無法連線到在容器中執行的 SQL Server 執行個體，請嘗試下列測試：
 
-- 查看 `docker ps -a` 輸出的 [狀態]  欄，以確定您的 SQL Server 容器正在執行。 如果沒有，則使用 `docker start <Container ID>` 來啟動它。
+- 查看 `docker ps -a` 輸出的 [狀態] 欄，以確定您的 SQL Server 容器正在執行。 如果沒有，則使用 `docker start <Container ID>` 來啟動它。
 
-- 如果您已對應到非預設的主機連接埠 (不是 1433)，請確定您會在連接字串中指定該連接埠。 您可以在 `docker ps -a` 輸出的 [連接埠]  欄中看到連接埠對應。 例如，下列命令會將 sqlcmd 連線到在連接埠 1401 上接聽的容器：
+- 如果您已對應到非預設的主機連接埠 (不是 1433)，請確定您會在連接字串中指定該連接埠。 您可以在 `docker ps -a` 輸出的 [連接埠] 欄中看到連接埠對應。 例如，下列命令會將 sqlcmd 連線到在連接埠 1401 上接聽的容器：
 
     ```bash
     sqlcmd -S 10.3.2.4,1401 -U SA -P '<YourPassword>'

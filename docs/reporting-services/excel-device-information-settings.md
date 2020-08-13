@@ -1,5 +1,6 @@
 ---
 title: Excel 裝置資訊設定 | Microsoft Docs
+description: 了解能以 Microsoft Excel 格式呈現的各種裝置資訊設定其詳細資料。
 ms.date: 01/23/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: bb5f3566-f033-4470-be87-1f52fb7a4ab6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a83bcd79a50400888d5a973ad9a743db19b87b5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c4d84c98923a3cee94f64fed863e621821bd7a39
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76761822"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245127"
 ---
 # <a name="excel-device-information-settings"></a>Excel 裝置資訊設定
   下表列出以 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 格式轉譯的裝置資訊設定。  

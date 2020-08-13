@@ -1,5 +1,5 @@
 ---
-title: 參數和資料列集中繼資料 | Microsoft Docs
+title: 參數與資料列集中繼資料 (OLE DB Driver)
 description: 參數和資料列集的中繼資料
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - metadata [OLE DB]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 641859e134a5f3c3201f239023f911b79de1c11e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a3356134c542cf90c194924a8fbfc44b357c7123
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67995093"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244891"
 ---
 # <a name="metadata---parameter-and-rowset"></a>中繼資料 - 參數和資料列集
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

@@ -1,5 +1,6 @@
 ---
 title: 教學課程的必要條件 (報表產生器) | Microsoft Docs
+description: 了解所應具備才能完成報表產生器教學課程的必要條件。
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3f00a23d175ce798edc8c73fe0c1ec7e92053392
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 27fbd90962370cf3198c53b0c39c5d7886ed943a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81485180"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247487"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>教學課程的必要條件 (報表產生器)
 
@@ -27,15 +28,15 @@ ms.locfileid: "81485180"
   
 -   存取報表產生器。 您可以從 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 報表伺服器，或是 SharePoint 整合模式中的 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 報表伺服器上，執行報表產生器。 只有第一個步驟「如何開啟報表產生器」在不同伺服器上會不同。  
   
-    在報表伺服器上，選取 [新增]   > [分頁報表]  。
+    在報表伺服器上，選取 [新增] > [分頁報表]。
   
-    在 SharePoint 整合模式的報表伺服器中，於 [文件]  索引標籤上，選取 [新增文件]  ，然後從下拉式清單中選取 [報表產生器報表]  。 例如： `https://<servername>/sites/mySite/reports` 。 SharePoint 管理員必須啟用每一個文件庫的 [報表產生器報表] 功能。  
+    在 SharePoint 整合模式的報表伺服器中，於 [文件]**** 索引標籤上，選取 [新增文件]****，然後從下拉式清單中選取 [報表產生器報表]****。 例如： `https://<servername>/sites/mySite/reports` 。 SharePoint 管理員必須啟用每一個文件庫的 [報表產生器報表] 功能。  
   
 -   [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 報表伺服器或是與 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 報表伺服器整合之 SharePoint 網站的 URL。 您必須具有權限，才能儲存和檢視報表、共用資料來源、共用資料集、報表組件和模型。 根據預設，報表伺服器的 URL 是 `https://<servername>/reportserver`。 根據預設，SharePoint 網站的 URL 是 `https://<sitename>` 或 `https://<server>/site`。  
   
 -   SQL Server 執行個體的名稱，和能夠以唯讀方式存取任何資料庫的認證。 教學課程中的資料集查詢會使用常值資料，但是每一個查詢都必須經過 SQL Server 執行個體處理，才能傳回報表資料集所需的中繼資料。 例如，下列連接字串僅指定伺服器： `data source=<servername>`。 您必須由授與您存取此伺服器之權限的系統管理員，指派具有預設資料庫的讀取存取權。 您也可以指定資料庫，如下列連接字串所示： `data source=<servername>;initial catalog=<database>`。  
   
--   針對[教學課程：地圖報表 (報表產生器)](tutorial-map-report-report-builder.md)，報表伺服器必須設定為支援 Bing Maps 作為背景。 如需詳細資訊，請參閱 [對應報表支援規劃](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)。   
+-   針對[教學課程：地圖報表 (報表產生器)](tutorial-map-report-report-builder.md)，報表伺服器必須設定支援以 Bing 地圖服務作為背景。 如需詳細資訊，請參閱 [對應報表支援規劃](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)。   
 
 -   [教學課程：建立鑽研及主報表 (報表產生器)](tutorial-creating-drillthrough-and-main-reports-report-builder.md) 需要能夠存取 Contoso Sales Cube。 如需詳細資訊，請參閱教學課程。 
   

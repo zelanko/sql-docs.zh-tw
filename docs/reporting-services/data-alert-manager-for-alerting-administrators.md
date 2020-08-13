@@ -1,5 +1,6 @@
 ---
 title: 警示系統管理員的資料警示管理員 | Microsoft Docs
+description: 了解如何在 SQL Server Reporting Services 中透過適用於 SharePoint 的資料警示管理員來管理警示。
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ ms.assetid: 32fd968f-1c0c-4ba8-851c-8a3b5e1fbbf2
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a80b90f30ce2b304bd7bbb0229f172407589d3c9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5164302efa34bd74b76211c72617826478c4e515
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571546"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246340"
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>警示系統管理員的資料警示管理員
 
@@ -48,13 +49,13 @@ SQL Server Reporting Services 提供 [資料警示管理員] 讓 SharePoint 警�
   
  [資料警示管理員] 包含一個資料表，其中列出警示名稱、報表名稱、警示擁有者的名稱、傳送的警示訊息數目、上一次執行警示的時間、上一次修改警示定義的時間，以及警示訊息的狀態。 如果警示無法產生或是傳送，狀態資料行就會包含有關錯誤的資訊並協助您疑難排解警示。 如需詳細資訊，請參閱 [在資料警示管理員中管理 SharePoint 網站上的所有資料警示](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)。  
   
- 下表顯示 [資料警示管理員] 中資料表的範例資料。 當發生錯誤時，資料表的 [狀態]  欄位中會包含錯誤訊息和記錄中項目的識別碼 (GUID)。  
+ 下表顯示 [資料警示管理員] 中資料表的範例資料。 當發生錯誤時，資料表的 [狀態]**** 欄位中會包含錯誤訊息和記錄中項目的識別碼 (GUID)。  
   
 |警示名稱|報表名稱|建立者|傳送警示|最後執行|上次修改|狀態|  
 |----------------|-----------------|----------------|-----------------|--------------|-------------------|------------|  
 |SalesQTR|SalesByTerritoryAndQTR|Lauren Johnson|4|6/12/2011|6/1/2011|上次警示執行成功，並且已傳送警示。|  
 |UnitsSold|ProductsSalesByQTR|Michael Blythe|2|7/1/2011|6/28/2011|上次警示執行成功，但因為資料未變更所以未傳送警示。|  
-|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<錯誤訊息> 記錄檔包含有關錯誤的詳細資訊。 請參閱識別碼為 \<GUID> 的記錄項目。|  
+|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<error message> 記錄檔包含有關錯誤的詳細資訊。 請參閱識別碼為 \<GUID> 的記錄項目。|  
 |TopPromotion|PromotionTracking|Cristian Petculescu|0||5/23/2011|已建立警示。|  
   
  如需詳細資訊，請參閱 [在資料警示管理員中管理 SharePoint 網站上的所有資料警示](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)。  

@@ -1,5 +1,6 @@
 ---
 title: 逐步執行 Transact-SQL 程式碼
+description: 了解如何使用 Transact-SQL 偵錯工具來控制在資料庫引擎查詢編輯器視窗中執行的 Transact-SQL 陳述式。
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -15,16 +16,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1fbd6c6b01d5be8afb3e0e0c70c15363664263eb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d7317f783df8cd8810cb4d2371f8469697bb9a45
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243436"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246178"
 ---
 # <a name="step-through-transact-sql-code"></a>逐步執行 Transact-SQL 程式碼
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具可讓您控制哪些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式要在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器視窗中執行。 您可以在個別的陳述式上暫停偵錯工具，然後在該點檢視程式碼項目的狀態。  
 
@@ -62,7 +63,7 @@ ms.locfileid: "75243436"
 |逐步執行下一個陳述式或模組|在 [偵錯] 功能表上，按一下 [逐步執行]。<br /><br /> 在 [偵錯] 工具列上，按一下 [逐步執行] 按鈕。<br /><br /> 按下 F11。|  
 |不進入下一個陳述式或模組|在 [偵錯] 功能表上，按一下 [不進入函數]。<br /><br /> 在 [偵錯] 工具列上，按一下 [不進入函數] 按鈕。<br /><br /> 按下 F10。|  
 |跳離模組|在 [偵錯] 功能表上，按一下 [跳離函數]。<br /><br /> 在 [偵錯] 工具列上，按一下 [跳離函數] 按鈕。<br /><br /> 按下 SHIFT+F11。|  
-|執行至目前的資料指標位置|在 [查詢編輯器] 視窗中按一下滑鼠右鍵，然後按一下 [執行至資料指標處]  。<br /><br /> 按下 CTRL+F10。|  
+|執行至目前的資料指標位置|在 [查詢編輯器] 視窗中按一下滑鼠右鍵，然後按一下 [執行至資料指標處]。<br /><br /> 按下 CTRL+F10。|  
   
 ## <a name="see-also"></a>另請參閱
 

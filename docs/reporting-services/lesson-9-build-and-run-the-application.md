@@ -1,5 +1,6 @@
 ---
 title: 第 9 課：建置並執行應用程式 | Microsoft Docs
+description: 了解如何在建立資料表的資料篩選之後，建置和執行網站應用程式。
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: f52d3f3a-0b09-4b34-9112-0b3655271587
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 00f139a6b7b334e3a3e8254a742874cfc28145b4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6b72153a14a20509feeb71bfdec0f2eb08b18c96
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62651254"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245087"
 ---
-# <a name="lesson-9-build-and-run-the-application"></a>Lesson 9: Build and Run the Application
+# <a name="lesson-9-build-and-run-the-application"></a>第 9 課：建置及執行應用程式
 建立資料表的資料篩選後，下一步是要建置和執行網站應用程式。  
   
 ### <a name="to-build-and-run-the-application"></a>若要建置並執行應用程式  
@@ -28,7 +29,7 @@ ms.locfileid: "62651254"
   
 2.  將滑鼠停留在 **[名稱]** 資料行底下的任何資料列上方。 滑鼠游標會顯示手掌符號。  
   
-3.  按一下 [名稱]  資料行中的值。 子報表隨即顯示，並且包含對應的篩選資料。  
+3.  按一下 [名稱] 資料行中的值。 子報表隨即顯示，並且包含對應的篩選資料。  
   
 4.  選取 [ReportViewer] 工具列中的**返回父報表**圖示，向後巡覽回**父**報表。  
   

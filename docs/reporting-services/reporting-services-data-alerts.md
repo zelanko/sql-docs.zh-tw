@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 資料警示 | Microsoft Docs
+description: 了解 SQL Server Reporting Services 資料警示如何協助通知您感興趣或對您很重要的報告資料。
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +10,12 @@ ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b1cb553c263bc822d5139d50169241a0f19fdd79
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 7a3d3d4cc792afdef44a6c5ff6684e1e6aa4ff14
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487791"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246677"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services 資料警示
 
@@ -81,7 +82,7 @@ SQL Server Reporting Services 資料警示是資料驅動的警示解決方案�
 ### <a name="save-data-alert-definitions-and-alerting-metadata"></a>儲存資料警示定義和警示中繼資料  
  您以 SharePoint 模式安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 時，會自動建立 SQL Server 警示資料庫。  
   
- 資料警示定義和警示中繼資料會儲存到警示資料庫中。 根據預設，這個資料庫的名稱為 ReportingServices\<GUID>_Alerting。  
+ 資料警示定義和警示中繼資料會儲存到警示資料庫中。 根據預設，這個資料庫名為 ReportingServices\<GUID>_Alerting。  
   
  當您儲存資料警示定義時，警示會為該警示定義建立 SQL Server Agent 作業。 作業會包括作業排程。 排程是依據您在警示定義上定義的循環模式。 執行該作業會起始資料警示定義的處理。  
   
@@ -131,7 +132,7 @@ SQL Server Reporting Services 資料警示是資料驅動的警示解決方案�
   
  下表列出資料警示的組態項目、其預設值、描述和位置。  
   
-|設定|預設值|描述|Location|  
+|設定|預設值|說明|Location|  
 |-------------|-------------------|-----------------|--------------|  
 |AlertingCleanupCycleMinutes|20|兩次清除循環開始之間的分鐘數。|報表伺服器組態檔|  
 |AlertingExecutionLogCleanupMinutes|10080|保留執行記錄項目的分鐘數。|報表伺服器組態檔|  

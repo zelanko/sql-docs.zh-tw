@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 開發人員文件 | Microsoft Docs
+description: 使用文件以了解 Reporting Services 功能與能力，將自訂報表與管理工具建置到網站與 Windows 應用程式中。
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Reporting Services, programming
 - programming [Reporting Services]
 ms.date: 03/17/2017
-ms.openlocfilehash: e2db4a113ebdb53756200879e3797ccbbeec8a52
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2a60936a1a267ac93b181ff8c5b5913486ba9314
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68259610"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246667"
 ---
 # <a name="reporting-services-developer-documentation"></a>Reporting Services 開發人員文件
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供一些可在自有應用程式中利用的程式設計介面。 您可以使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的現有功能和能力，將自訂報表與管理工具建立到網站和 Windows 應用程式中，或是可以延伸 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 平台。  
@@ -24,7 +25,7 @@ ms.locfileid: "68259610"
  擴充 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 平台包括建立可用於資料存取、報表傳遞等的新元件與資源。 您可以將這些元件與資源行銷到在其組織中使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的公司。  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包括程式設計範例與教學課程以協助您開始。 如需詳細資訊，請參閱 [Reporting Services 範例](https://msdn.microsoft.com/library/ms160954\(v=sql.110\).aspx)和[開發人員手冊： 教學課程 (Reporting Services)](https://msdn.microsoft.com/library/aa337423\(v=sql.110\).aspx)。  
+>  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包括程式設計範例與教學課程以協助您開始。 如需詳細資訊，請參閱 [Reporting Services 範例](https://msdn.microsoft.com/library/ms160954\(v=sql.110\).aspx)和[開發人員手冊：教學課程 (Reporting Services)](https://msdn.microsoft.com/library/aa337423\(v=sql.110\).aspx)。  
   
 ## <a name="in-this-section"></a>本節內容  
  [將 Reporting Services 整合到應用程式](../reporting-services/application-integration/integrating-reporting-services-into-applications.md)  

@@ -10,14 +10,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: ab118c18b2656701470a22b6987a659b45f2fdc7
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: c8bf01e39fb68d2315df2a441f7b2b4fefa81872
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406111"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246514"
 ---
-# <a name="configure-polybase-to-access-external-data-in-sql-server"></a>設定 PolyBase 存取 SQL Server 中的外部資料
+# <a name="configure-polybase-to-access-external-data-with-odbc-generic-types"></a>設定 PolyBase 以存取具有 ODBC 泛型型別的外部資料
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 

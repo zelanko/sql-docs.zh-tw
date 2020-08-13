@@ -1,6 +1,7 @@
 ---
 title: Reporting Services 2017 和更新版本的版本資訊 | Microsoft Docs
-ms.date: 04/06/2020
+description: 了解 SQL Server Reporting Services (SSRS) 2017 版和更新版本中變更的詳細資料。
+ms.date: 04/28/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -9,12 +10,12 @@ ms.reviewer: maggies
 author: casualoak
 ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 9227aa7ad22b64da499020d0c4bc561de00c14f4
-ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
+ms.openlocfilehash: 4a97ab8d68a1b265a25eb3b97a5146a402aa9b3b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80809853"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247507"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>SQL Server Reporting Services (SSRS) 2017 與更新版本的版本資訊
 
@@ -50,6 +51,15 @@ We are "standardizing" all our 'Release Notes' style articles:
 
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
+## <a name="sql-server-2019-reporting-services"></a>SQL Server 2019 Reporting Services
+
+## <a name="150724337714-20191101"></a>15.0.7243.37714，2019/11/01
+
+初始版本。
+
+
+## <a name="sql-server-2017-reporting-services"></a>SQL Server 2017 Reporting Services
+
 ## <a name="1406001572-20200406"></a>14.0.600.1572，2020/04/06 
 
 | 已修正的問題 | 詳細資料 |

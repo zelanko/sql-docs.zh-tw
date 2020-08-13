@@ -2,23 +2,23 @@
 title: 下載離線安裝的更新
 description: 下載適用於 SQL Server 機器學習服務的 Python 與 R CAB 檔案。 這些 CAB 檔案包含機器學習服務 (Python 與 R) 功能的更新，當您在無法存取網際網路的伺服器上安裝 SQL Server 時就會使用這些檔案。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/24/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3682858eb76b78069497c23364e1f9db12ade9f4
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 21e95b5e3fa15a48e62974aa7f574a370b3aeba1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087378"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247983"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-machine-learning-services"></a>適用於 SQL Server 機器學習服務之累積更新的 CAB 下載
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 下載適用於 SQL Server 機器學習服務的 Python 與 R CAB 檔案。 這些 CAB 檔案包含機器學習服務 (Python 與 R) 功能的更新，當您在無法存取網際網路的伺服器上安裝 SQL Server 時就會使用這些檔案。
@@ -50,6 +50,11 @@ CAB 檔案會以反向時間順序列出。 當您下載 CAB 檔並將它們傳�
 
 |版本 | 元件 | 下載連結 | 解決的問題 |
 |------- | --------- | ------------- | ---------------- |
+|**[SQL Server 2019 CU5](https://support.microsoft.com/help/4552255)** |  |  |  |
+| | Microsoft R Open      | [SRO_3.5.2.293_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118178)  |  |
+| | R 伺服器              | [SRS_9.4.7.804_1033.cab](https://go.microsoft.com/fwlink/?linkid=2122004)  |  |
+| | Microsoft Python Open | [SPO_4.5.12.479_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118341) |  |
+| | Python Server         | [SPS_9.4.7.804_1033.cab](https://go.microsoft.com/fwlink/?linkid=2121809)  |  |
 |**[SQL Server 2019 CU3](https://support.microsoft.com/help/4538853)** |  |  |  |
 | | Microsoft R Open      | [SRO_3.5.2.293_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118178)  |  |
 | | R 伺服器              | [SRS_9.4.7.717_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118177)  |  |
@@ -125,7 +130,7 @@ CAB 檔案會以反向時間順序列出。 當您下載 CAB 檔並將它們傳�
 | | Microsoft R Open     |[SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
 | | R 伺服器      |[SRS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863893)|
 | | Microsoft Python Open     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 從舊版到現在都沒有變更。 |
-| | Python Server    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)| revoscalepy 中的 Python 模型序列化 (使用 [rx_serialize_model 函式](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model))。<br/>[原生評分](../sql-native-scoring.md)支援，加上[即時評分](../real-time-scoring.md)加強功能。 
+| | Python Server    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)| revoscalepy 中的 Python 模型序列化 (使用 [rx_serialize_model 函式](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model))。<br/>[原生評分](../predictions/native-scoring-predict-transact-sql.md)支援，加上[即時評分](../predictions/real-time-scoring.md)加強功能。 
 |**[SQL Server 2017 CU1](https://support.microsoft.com/help/4038634)-[CU2](https://support.microsoft.com/help/4052574)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)| 從舊版到現在都沒有變更。 |
 | | R 伺服器      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
@@ -149,7 +154,7 @@ CAB 檔案會以反向時間順序列出。 當您下載 CAB 檔並將它們傳�
 
 |版本  |下載連結  |
 |---------|---------------|
-|**SQL Server 2016 SP2 CU6**     |
+|**SQL Server 2016 SP2 CU6-CU13**     |
 |Microsoft R Open     |[SRO_3.2.2.20100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079936&clcid=1033)|
 |Microsoft R 伺服器    |[SRS_8.0.3.20100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079933&clcid=1033)|
 |**SQL Server 2016 SP2 CU1-CU5**     |

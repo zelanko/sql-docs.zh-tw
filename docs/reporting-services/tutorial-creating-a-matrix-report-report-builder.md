@@ -1,5 +1,6 @@
 ---
 title: 教學課程：建立矩陣報表 (報表產生器) | Microsoft Docs
+description: 了解如何建立 Reporting Services 編頁報表，其中具有巢狀資料列和資料行群組的範例銷售資料矩陣。
 ms.date: 06/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ed53800a1b45dd79548c59aaab57f71bd700d94d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4891a25815d1efb14f230cbab9bcaaa75cad0a16
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63294698"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247447"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>教學課程：建立矩陣報表 (報表產生器)
 本教學課程會引導您建立 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表，其中具有巢狀資料列和資料行群組的範例銷售資料矩陣。 
@@ -22,7 +23,7 @@ ms.locfileid: "63294698"
   
 ![report-builder-matrix-tutorial](../reporting-services/media/report-builder-matrix-tutorial.png)
    
-完成這個教學課程的估計時間：30 分鐘。  
+完成此教學課程的估計時間：20 分鐘。  
   
 ## <a name="requirements"></a>需求  
 如需需求的資訊，請參閱 [教學課程的必要條件](../reporting-services/prerequisites-for-tutorials-report-builder.md)。 
@@ -37,9 +38,9 @@ ms.locfileid: "63294698"
   
 1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
   
-    [新報表或資料集]  對話方塊隨即開啟。  
+    [新報表或資料集] 對話方塊隨即開啟。  
   
-    如果您看不到 [新增報表或資料集]  對話方塊，請按一下 [檔案]  功能表 > [新增]  。  
+    如果您看不到 [新增報表或資料集] 對話方塊，請按一下 [檔案] 功能表 > [新增]。  
   
 2.  在左窗格中，確認已選取 **[新增報表]** 。  
   
@@ -47,11 +48,11 @@ ms.locfileid: "63294698"
   
 4.  在 **[選擇資料集]** 頁面上，按一下 **[建立資料集]** 。  
   
-5.  按 [下一步]  。  
+5.  按 [下一步] 。  
   
-6.  在 [選擇與資料來源的連線]  頁面上，選取現有的資料來源，或瀏覽至報表伺服器並選取資料來源。 如果沒有資料來源可用，或無法存取報表伺服器，您可以改用內嵌資料來源。 如需建立內嵌資料來源的資訊，請參閱[教學課程︰建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+6.  在 [選擇與資料來源的連線]**** 頁面上，選取現有的資料來源，或瀏覽至報表伺服器並選取資料來源。 如果沒有資料來源可用，或無法存取報表伺服器，您可以改用內嵌資料來源。 如需建立內嵌資料來源的資訊，請參閱[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
-7.  按 [下一步]  。  
+7.  按 [下一步] 。  
   
 8.  在 **[設計查詢]** 頁面上，按一下 **[當成文字編輯]** 。  
   
@@ -92,28 +93,28 @@ ms.locfileid: "63294698"
   
 10. (選擇性) 按一下 [執行] 圖示 (!) 執行查詢並查看資料。
 
-11. 按 [下一步]  。  
+11. 按 [下一步] 。  
   
 ## <a name="2-organize-data-and-choose-layout-from-the-new-table-or-matrix-wizard"></a><a name="Groups"></a>2.從新增資料表或矩陣精靈組織資料、選擇配置  
 使用精靈提供起始設計來顯示資料。 精靈中的預覽窗格可協助您在完成矩陣設計之前，先視覺化群組資料的結果。  
   
-1.  在 [排列欄位]  頁面上，從 [可用的欄位]  將 [Territory] 拖曳至 [資料列群組]  。  
+1.  在 [排列欄位] 頁面上，從 [可用的欄位] 將 [Territory] 拖曳至 [資料列群組]。  
   
-2.  將 [SalesDate] 拖曳至 [資料列群組]  並放置在 [Territory] 之下。  
+2.  將 [SalesDate] 拖曳至 [資料列群組] 並放置在 [Territory] 之下。  
   
-    欄位列於 [資料列群組]  中的順序定義了群組階層。 步驟 1 和步驟 2 會先依領域再依銷售日期，組織欄位的值。  
+    欄位列於 [資料列群組] 中的順序定義了群組階層。 步驟 1 和步驟 2 會先依領域再依銷售日期，組織欄位的值。  
   
-3.  將 [Subcategory] 拖曳至 [資料行群組]  。  
+3.  將 [Subcategory] 拖曳至 [資料行群組]。  
   
-4.  將 [Product] 拖曳至 [資料行群組]  並放置在 [Subcategory] 之下。  
+4.  將 [Product] 拖曳至 [資料行群組] 並放置在 [Subcategory] 之下。  
   
-    同樣地，欄位列於 [資料行群組]  中的順序定義了群組階層。 步驟 3 和步驟 4 會先依子類別目錄再依產品，組織欄位的值。  
+    同樣地，欄位列於 [資料行群組] 中的順序定義了群組階層。 步驟 3 和步驟 4 會先依子類別目錄再依產品，組織欄位的值。  
   
-5.  將 [Sales] 拖曳至 [值]  。  
+5.  將 [Sales] 拖曳至 [值]。  
   
     [Sales] 是使用 Sum 函數進行摘要，此為摘要數值欄位的預設函數。  
   
-6.  將 [Quantity] 拖曳至 [值]  。  
+6.  將 [Quantity] 拖曳至 [值]。  
   
     [Quantity] 是使用 Sum 函數進行摘要。  
   
@@ -121,19 +122,19 @@ ms.locfileid: "63294698"
     
     ![report-builder-arrange-fields-report-wizard](../reporting-services/media/report-builder-arrange-fields-report-wizard.png)  
   
-7.  按 [下一步]  。  
+7.  按 [下一步] 。  
   
-8.  在 [選擇配置] 頁面的 [選項]  下方，確定已選取 [顯示小計和總計]  。  
+8.  在 [選擇配置] 頁面的 [選項] 下方，確定已選取 [顯示小計和總計]。  
   
-9. 驗證已選取 [區塊式，小計位於下方]  。  
+9. 驗證已選取 [區塊式，小計位於下方]。  
   
-10. 確定已選取 [展開/摺疊群組]  選項。  
+10. 確定已選取 [展開/摺疊群組] 選項。  
   
-11. 按 [下一步]  。  
+11. 按 [下一步] 。  
   
-13. 按一下 [完成]  。  
+13. 按一下 [完成] 。  
   
-    矩陣會加入至設計介面。 [資料列群組] 窗格將顯示兩個資料列群組：Territory 和 SalesDate。 [資料行群組] 窗格則顯示這兩個資料行群組：Subcategory 和 Product。 詳細資料是資料集查詢擷取的所有資料。  
+    矩陣會加入至設計介面。 [資料列群組] 窗格會顯示兩個資料列群組：Territory 和 SalesDate。 [資料行群組] 窗格會顯示兩個資料行群組：Subcategory 和 Product。 詳細資料是資料集查詢擷取的所有資料。  
     
     ![report-builder-row-and-column-groups](../reporting-services/media/report-builder-row-and-column-groups.png)
   
@@ -146,7 +147,7 @@ ms.locfileid: "63294698"
 ![report-builder-expand-matrix](../reporting-services/media/report-builder-expand-matrix.png)
   
 ## <a name="3-format-data"></a><a name="FormatData"></a>3.將資料格式化  
-根據預設，[Sales] 欄位的摘要資料會顯示一般數字，而 [SalesDate] 欄位會顯示日期加上時間資訊。 在本節中，您會格式化以使 [Sales] 欄位將數字顯示為貨幣，讓 [SalesDate] 欄位只顯示日期。 切換 [預留位置樣式]  ，將格式化的文字方塊和預留位置文字顯示為範例值。  
+根據預設，[Sales] 欄位的摘要資料會顯示一般數字，而 [SalesDate] 欄位會顯示日期加上時間資訊。 在本節中，您會格式化以使 [Sales] 欄位將數字顯示為貨幣，讓 [SalesDate] 欄位只顯示日期。 切換 [預留位置樣式]，將格式化的文字方塊和預留位置文字顯示為範例值。  
   
 ### <a name="to-format-fields"></a>格式化欄位  
   
@@ -154,19 +155,19 @@ ms.locfileid: "63294698"
   
 2.  按下 Ctrl 鍵，然後選取包含 `[Sum(Sales)]`的 9 個資料格。  
   
-3.  在 [主資料夾]  索引標籤 > [數字]   > [貨幣]  上。 這些資料格就會變更為顯示格式化貨幣。  
+3.  在 [主資料夾] 索引標籤 > [數字] > [貨幣] 上。 這些資料格就會變更為顯示格式化貨幣。  
   
-    如果您的地區設定為 [英文 (美國)]，則預設範例文字會是 [ **$12,345.00**]。 如果您看不到範例貨幣值，請按一下 [數字]  群組中的 [預留位置樣式]   > [範例值]  。  
+    如果您的地區設定為 [英文 (美國)]，則預設範例文字會是 [ **$12,345.00**]。 如果您看不到範例貨幣值，請按一下 [數字] 群組中的 [預留位置樣式] > [範例值]。  
     
     ![report-builder-placeholder-value](../reporting-services/media/report-builder-placeholder-value.png)
   
 4.  按一下包含 `[SalesDate]`的資料格。  
   
-5.  在 [數字]  群組 > [日期]  中。  
+5.  在 [數字] 群組 > [日期] 中。  
   
-    資料格就會顯示範例日期 **[1/31/2000]** 。 如果您看不到範例日期，請按一下 [數字]  群組中的 [預留位置樣式]  ，然後按一下 [範例值]  。  
+    資料格就會顯示範例日期 **[1/31/2000]** 。 如果您看不到範例日期，請按一下 [數字] 群組中的 [預留位置樣式]，然後按一下 [範例值]。  
   
-6.  按一下 [執行]  以預覽報表。  
+6.  按一下 [執行] 以預覽報表。  
   
 日期值如今只顯示日期，而銷售值顯示為貨幣。  
   
@@ -179,15 +180,15 @@ ms.locfileid: "63294698"
   
 1.  按一下 **[設計]** 返回 [設計] 檢視。  
   
-2.  以滑鼠右鍵按一下包含 `[Subcategory]` 的資料格，並指向 [新增群組]  ，然後按一下 [右方相鄰]  。  
+2.  以滑鼠右鍵按一下包含 `[Subcategory]` 的資料格，並指向 [新增群組]，然後按一下 [右方相鄰]。  
   
     **[Tablix 群組]** 對話方塊隨即開啟。  
   
-3.  在 [群組依據]  清單中選取 [SalesDate]，然後按一下 [確定]  。  
+3.  在 [群組依據] 清單中選取 [SalesDate]，然後按一下 [確定]。  
   
     新的資料行群組就會新增到 Subcategory 資料行群組的右邊。  
   
-4.  以滑鼠右鍵按一下新資料行群組中包含 `[SalesDate],` 的資料格，然後按一下 [運算式]  。  
+4.  以滑鼠右鍵按一下新資料行群組中包含 `[SalesDate],` 的資料格，然後按一下 [運算式]。  
   
 5.  將下列運算式複製到 [運算式] 方塊中。  
   
@@ -197,13 +198,13 @@ ms.locfileid: "63294698"
   
     此運算式會從銷售日期擷取星期幾。 如需詳細資訊，請參閱[運算式 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/expressions-report-builder-and-ssrs.md)。  
   
-6.  以滑鼠右鍵按一下 Subcategory 資料行群組中包含 [Total] 的資料格，然後按一下 [複製]  。  
+6.  以滑鼠右鍵按一下 Subcategory 資料行群組中包含 [Total] 的資料格，然後按一下 [複製]。  
   
-7.  以滑鼠右鍵按一下步驟 5 建立之運算式所在資料格正下方的資料格，然後按一下 [貼上]  。  
+7.  以滑鼠右鍵按一下步驟 5 建立之運算式所在資料格正下方的資料格，然後按一下 [貼上]。  
   
 8.  按下 Ctrl 鍵。  
   
-9. 在 Subcategory 群組中，按一下 [Sales] 資料行標頭及其下方的三個資料格，並按一下滑鼠右鍵，然後按一下 [複製]  。  
+9. 在 Subcategory 群組中，按一下 [Sales] 資料行標頭及其下方的三個資料格，並按一下滑鼠右鍵，然後按一下 [複製]。  
   
 10. 將這四個資料格貼至新資料行群組中的四個空白資料格。  
   
@@ -214,7 +215,7 @@ ms.locfileid: "63294698"
 ![report-builder-matrix-weekdays](../reporting-services/media/report-builder-matrix-weekdays.png)
   
 > [!NOTE]  
-> 如果資料中還有別的星期，報表也會納入其資料行。 每個資料行包含各領域的總銷售額，而資料行標頭是 [Sales]  。  
+> 如果資料中還有別的星期，報表也會納入其資料行。 每個資料行包含各領域的總銷售額，而資料行標頭是 [Sales]。  
   
 ## <a name="5-change-column-widths"></a><a name="Width"></a>5.變更資料行寬度  
 含有矩陣的報表在執行時，通常會水平且垂直地展開。 若您打算將報表匯出為印刷報表採用的格式，如 Microsoft Word 或 Adobe PDF，控制水平展開程度就特別重要。 如果報表水平地展開成跨多個頁面，將造成印刷報表難以判讀。 為了盡量減少水平展開程度，您可將資料行寬度調整成以不換行的方式顯示資料所需的量。 您也可以重新命名資料行，使顯示資料所需的寬度恰能容納其標題。  
@@ -241,7 +242,7 @@ ms.locfileid: "63294698"
   
 6.  針對名為 QTY 的其餘資料行重複步驟 5。  
   
-7.  按一下 [執行]  以預覽報表。  
+7.  按一下 [執行] 以預覽報表。  
   
 包含數量的資料行現在較窄，而且名為 QTY。  
   
@@ -256,15 +257,15 @@ ms.locfileid: "63294698"
   
 3.  按下 Ctrl 鍵，然後選取四個邊角資料格。  
   
-4.  以滑鼠右鍵按一下這些資料格，然後按一下 [合併資料格]  。  
+4.  以滑鼠右鍵按一下這些資料格，然後按一下 [合併資料格]。  
   
-5.  以滑鼠右鍵按一下新的合併資料格，然後按一下 [文字方塊屬性]  。  
+5.  以滑鼠右鍵按一下新的合併資料格，然後按一下 [文字方塊屬性]。  
   
-6.  在 [框線]  索引標籤 > [預設]   > [無]  。
+6.  在 [框線] 索引標籤 > [預設] > [無]。
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-10. 按一下 [執行]  以預覽報表。  
+10. 按一下 [執行] 以預覽報表。  
   
 不再顯示矩陣上方角落的資料格。 
   
@@ -275,17 +276,17 @@ ms.locfileid: "63294698"
   
 1.  按一下 **[設計]** 返回 [設計] 檢視。  
   
-2.  選取報表主體頂端包含 [按一下以新增標題]  的文字方塊，然後按 Delete 鍵。  
+2.  選取報表主體頂端包含 [按一下以新增標題] 的文字方塊，然後按 Delete 鍵。  
   
-3.  在 [插入]  索引標籤 > [標頭]   > [新增標頭]  上。  
+3.  在 [插入] 索引標籤 > [標頭] > [新增標頭] 上。  
   
     頁首就會加入至報表主體頂端。  
   
-4.  在 [插入]  索引標籤上，按一下 [文字方塊]  ，然後將文字方塊拖曳至報表標題。 將文字方塊調整成長約 6 英吋且高約 3/4 英吋，然後放到報表頁首的左側。  
+4.  在 [插入] 索引標籤上，按一下 [文字方塊]，然後將文字方塊拖曳至報表標題。 將文字方塊調整成長約 6 英吋且高約 3/4 英吋，然後放到報表頁首的左側。  
   
 5.  在文字方塊中，鍵入 **Sales by Territory, Subcategory, and Day**。  
   
-6.  選取您輸入的文字，在 [首頁]  索引標籤 > [字型]  ：
+6.  選取您輸入的文字，在 [首頁] 索引標籤 > [字型]：
     * **大小 24 pt**
     * **色彩 暗紅色**
  
@@ -308,9 +309,9 @@ ms.locfileid: "63294698"
   
     「正在連接到報表伺服器」訊息隨即顯示。 連接完成時，您將會看見報表伺服器管理員指定為預設報表位置之報表資料夾的內容。  
   
-4.  在 [名稱]  中，將預設名稱取代為 **SalesByTerritorySubcategory**。  
+4.  在 [名稱] 中，將預設名稱取代為 **SalesByTerritorySubcategory**。  
   
-5.  按一下 [檔案]  。  
+5.  按一下 [檔案] 。  
   
 報表就會儲存至報表伺服器。 您連接之報表伺服器的名稱會顯示在視窗底部的狀態列中。  
   
@@ -320,9 +321,9 @@ ms.locfileid: "63294698"
   
 2.  按一下 **[桌面]** 、 **[我的文件]** 或 **[我的電腦]** ，然後瀏覽到您要儲存報表的資料夾。  
   
-3.  在 [名稱]  中，將預設名稱取代為 **SalesByTerritorySubcategory**。  
+3.  在 [名稱] 中，將預設名稱取代為 **SalesByTerritorySubcategory**。  
   
-4.  按一下 [檔案]  。  
+4.  按一下 [檔案] 。  
   
 ## <a name="9-optional-rotate-text-box-270-degrees"></a><a name="RotateTextBox"></a>9.(選擇性) 將文字方塊旋轉 270 度  
 含有矩陣的報表在執行時，可能會水平且垂直地展開。 如果將文字方塊旋轉 270 度 (垂直旋轉)，就比較不佔水平空間。 這樣轉譯後的報表將會變窄，且若匯出為 Microsoft Word 等格式，則大概都能容納於單一列印頁面上。  
@@ -335,20 +336,20 @@ ms.locfileid: "63294698"
   
 2.  選取包含的資料格。 `[Territory].` 
 
-    >**注意**︰選取資料格，而不是文字。 WritingMode 屬性只適用於資料格。
+    >**注意**：請選取資料格，而非文字。 WritingMode 屬性只適用於資料格。
     
      ![report-builder-select-territory-cell](../reporting-services/media/report-builder-select-territory-cell.png)
   
-3.  在 [屬性] 窗格中，找出 WritingMode 屬性，並將其從 [預設]  變更為 [Rotate270]  。  
+3.  在 [屬性] 窗格中，找出 WritingMode 屬性，並將其從 [預設] 變更為 [Rotate270]。  
   
-    如果 [屬性] 窗格並未開啟，請按一下功能區的 [檢視]  索引標籤，然後選取 [屬性]  。  
+    如果 [屬性] 窗格並未開啟，請按一下功能區的 [檢視] 索引標籤，然後選取 [屬性]。  
   
 4.  確認 CanGrow 屬性已設定為 **True**。  
   
-5.  在 [主資料夾]  索引標籤 > [段落]  區段上，選取 [中間]  和 [置中]  ，將文字定位在儲存格的垂直及水平中心。  
+5.  在 [主資料夾]**** 索引標籤 > [段落]**** 區段上，選取 [中間]**** 和 [置中]****，將文字定位在儲存格的垂直及水平中心。  
  
 6. 將 [Territory] 資料行的寬度調整成 1/2 英吋，並刪除資料行標題。  
-6.  按一下 [執行]  以預覽報表。  
+6.  按一下 [執行] 以預覽報表。  
   
 領域名稱的寫法為由上而下的垂直方向。 Territory 資料列群組的高度會依領域名稱的長度而變化。  
   
