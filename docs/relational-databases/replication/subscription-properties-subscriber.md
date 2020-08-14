@@ -15,12 +15,12 @@ ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 718c095fb544c2c0b9436a3cfa70040fcf31d71c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7b1338f4e935a2c7e8662a09aacff1cc4b7df9d3
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111734"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988815"
 ---
 # <a name="sql-server-replication-subscription-properties-dialog-box"></a>SQL Server 複寫訂閱屬性對話方塊 
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "87111734"
   
 > [!NOTE]  
 >  - 如果尚未建立訂閱的散發代理程式或合併代理程式，則不會顯示許多訂閱屬性。 若要建立提取訂閱的代理程式作業，請執行 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) (適用於快照式或交易式發行集訂閱) 或 [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (適用於合併式發行集訂閱)。  
-> - Azure SQL Database 受控執行個體可以是快照式和異動複寫的發行者、散發者和訂閱者。 Azure SQL Database 單一和集區資料庫只能是快照式和異動複寫的發送訂閱者。 如需詳細資訊，請參閱[使用 Azure SQL Database 的異動複寫](/azure/sql-database/sql-database-managed-instance-transactional-replication)。 
+> - Azure SQL 受控執行個體資料庫可以是快照式與異動複寫的發行者、散發者與訂閱者。 Azure SQL Database 中的資料庫只能是快照式與異動複寫的發送訂閱者。 如需詳細資訊，請參閱[使用 Azure SQL Database 的異動複寫](/azure/sql-database/sql-database-managed-instance-transactional-replication)。 
   
 ## <a name="publisher-options-for-all-subscriptions"></a>所有訂閱的發行者選項  
  **安全性**  

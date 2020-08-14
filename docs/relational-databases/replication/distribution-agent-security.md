@@ -15,12 +15,12 @@ ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e664b1d96683d33ea9ffdc7cf38a5de0fe72a84e
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 3322ef185178ab2254066281d9f6f6a6c85611da
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111054"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862953"
 ---
 # <a name="distribution-agent-security"></a>散發代理程式安全性
 ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions" 
@@ -161,7 +161,7 @@ Persist Security Info=False;Connection Pooling=True;
  字串中的大多數選項是您設定之 DB2 伺服器的專用選項，但 **將二進位當作字元處理** 選項，應一律設定為 [False]  。 需要為 **初始目錄** 選項指定值，以便識別訂閱資料庫。 如需相關資訊，請參閱 [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 Azure SQL Database 的異動複寫](/azure/sql-database/sql-database-managed-instance-transactional-replication) [針對受控執行個體設定複寫](/azure/sql-database/replication-with-sql-database-managed-instance)
+ [使用 Azure SQL Database 的異動複寫](/azure/sql-database/sql-database-managed-instance-transactional-replication) [針對 Azure SQL 受控執行個體設定複寫](/azure/sql-database/replication-with-sql-database-managed-instance)
 ::: moniker-end
 
 

@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: e06355d91e73430c203711515fb9501caebfd291
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: ea604f3144f371047c00171947c0b7ceaeaa602f
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87331988"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988395"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL)
 
@@ -56,7 +56,7 @@ ms.locfileid: "87331988"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+        [SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [SQL Database<br />受控執行個體](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
@@ -1465,7 +1465,7 @@ SET QUERY_STORE = ON
         [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />單一資料庫/彈性集區 \*_** &nbsp;
+        **_\* SQL Database \*_** &nbsp;
     :::column-end:::
     :::column:::
         [SQL Database<br />受控執行個體](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
@@ -1477,7 +1477,7 @@ SET QUERY_STORE = ON
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL Database 單一資料庫/彈性集區
+## <a name="sql-database"></a>SQL Database
 
 相容性層級為 `SET` 選項，但在 [ALTER DATABASE 相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)中描述。
 
@@ -1831,7 +1831,7 @@ READ_WRITE
 控制使用者對資料庫的存取權。
 
 RESTRICTED_USER     
-只允許 `db_owner` 固定資料庫角色與 `dbcreator` 及 `sysadmin` 固定伺服器角色的成員連線到資料庫，但不限制其數目。 在 ALTER DATABASE 陳述式的 termination 子句所指定的時間範圍中，會中斷資料庫的所有連接。 在資料庫進入 RESTRICTED_USER 狀態之後，不合格使用者的連接嘗試都會遭到拒絕。 **RESTRICTED_USER** 無法使用 SQL Database 受控執行個體來修改。
+只允許 `db_owner` 固定資料庫角色與 `dbcreator` 及 `sysadmin` 固定伺服器角色的成員連線到資料庫，但不限制其數目。 在 ALTER DATABASE 陳述式的 termination 子句所指定的時間範圍中，會中斷資料庫的所有連接。 在資料庫進入 RESTRICTED_USER 狀態之後，不合格使用者的連接嘗試都會遭到拒絕。 **RESTRICTED_USER** 無法使用 SQL 受控執行個體來修改。
 
 MULTI_USER     
 允許所有具備適當權限來連接資料庫的使用者。
@@ -2357,7 +2357,7 @@ SET QUERY_STORE = ON
         [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+        [SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         **_\* SQL Database<br />受控執行個體 \*_** &nbsp;
@@ -2369,7 +2369,7 @@ SET QUERY_STORE = ON
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 受控執行個體
+## <a name="azure-sql-managed-instance"></a>Azure SQL 受控執行個體
 
 相容性層級為 `SET` 選項，但在 [ALTER DATABASE 相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)中描述。
 
@@ -2660,7 +2660,7 @@ READ_WRITE
 控制使用者對資料庫的存取權。
 
 RESTRICTED_USER     
-只允許 `db_owner` 固定資料庫角色與 `dbcreator` 及 `sysadmin` 固定伺服器角色的成員連線到資料庫，但不限制其數目。 在 ALTER DATABASE 陳述式的 termination 子句所指定的時間範圍中，會中斷資料庫的所有連接。 在資料庫進入 RESTRICTED_USER 狀態之後，不合格使用者的連接嘗試都會遭到拒絕。 **RESTRICTED_USER** 無法使用 SQL Database 受控執行個體來修改。
+只允許 `db_owner` 固定資料庫角色與 `dbcreator` 及 `sysadmin` 固定伺服器角色的成員連線到資料庫，但不限制其數目。 在 ALTER DATABASE 陳述式的 termination 子句所指定的時間範圍中，會中斷資料庫的所有連接。 在資料庫進入 RESTRICTED_USER 狀態之後，不合格使用者的連接嘗試都會遭到拒絕。 **RESTRICTED_USER** 無法使用 SQL 受控執行個體來修改。
 
 MULTI_USER     
 允許所有具備適當權限來連接資料庫的使用者。
@@ -3151,7 +3151,7 @@ SET QUERY_STORE = ON
         [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+        [SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [SQL Database<br />受控執行個體](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)

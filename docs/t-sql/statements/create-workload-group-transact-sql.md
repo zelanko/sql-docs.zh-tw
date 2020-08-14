@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 806a687037d2b23a2800552a6f4467ce02b7ccc0
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 5c6d645a07e98563d7014ca1aed0658696b54b54
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472624"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864362"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
@@ -46,7 +46,7 @@ ms.locfileid: "87472624"
 
 &nbsp;
 
-## <a name="sql-server-and-sql-database-managed-instance"></a>SQL Server 和 SQL Database 受控執行個體
+## <a name="sql-server-and-sql-managed-instance"></a>SQL Server 與 SQL 受控執行個體
 
 [!INCLUDE [CREATE WORKLOAD GROUP](../../includes/create-workload-group.md)]
   
@@ -67,7 +67,7 @@ ms.locfileid: "87472624"
 
 &nbsp;
 
-## <a name="sql-server-and-sql-database-managed-instance"></a>SQL Server 和 SQL Database 受控執行個體
+## <a name="sql-server-and-sql-managed-instance"></a>SQL Server 與 SQL 受控執行個體
 
 [!INCLUDE [CREATE WORKLOAD GROUP](../../includes/create-workload-group.md)]
 

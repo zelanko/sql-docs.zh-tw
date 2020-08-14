@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cf911fae5cc8df106cc2a4be9556cf873dd49eaa
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: d4b7c4f52c5d0e70ac6c7f59eebf5fd8a5e47e29
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332477"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864875"
 ---
 # <a name="tempdb-database"></a>tempdb 資料庫
 
@@ -39,8 +39,8 @@ ms.locfileid: "87332477"
   > [!NOTE]
   > 每個內部物件至少使用 9 頁、一個 IAM 頁面和一個八頁的範圍。 如需分頁與範圍的詳細資訊，請參閱[分頁與範圍](../../relational-databases/pages-and-extents-architecture-guide.md#pages-and-extents)。
   > [!IMPORTANT]
-  > Azure SQL Database 單一資料庫和彈性集區支援儲存在 `tempdb` 中，只限於資料庫層級的全域暫存資料表和全域暫存預存程序。 在同一 Azure SQL 資料庫中的所有使用者工作階段，會共用全域暫存資料表和全域暫存預存程序。 其他 Azure SQL 資料庫的使用者工作階段無法存取全域暫存資料表。 如需詳細資訊，請參閱[限定資料庫範圍的全域暫存資料表 (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database)。 [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) 與 SQL Server 支援相同的暫存物件。
-  > 針對 Azure SQL Database 單一資料庫和彈性集區，只適用 master 資料庫和 `tempdb` 資料庫。 如需詳細資訊，請參閱[什麼是 Azure SQL Database 伺服器](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server)。 如需 Azure SQL Database 單一資料庫和彈性集區內容中 `tempdb` 的討論，請參閱 [Azure SQL Database 單一資料庫和彈性集區中的 tempdb 資料庫](#tempdb-database-in-sql-database)。 針對 Azure SQL Database 受控執行個體，則會套用所有系統資料庫。
+  > Azure SQL Database 單一資料庫和彈性集區支援儲存在 `tempdb` 中，只限於資料庫層級的全域暫存資料表和全域暫存預存程序。 在同一 Azure SQL 資料庫中的所有使用者工作階段，會共用全域暫存資料表和全域暫存預存程序。 其他 Azure SQL 資料庫的使用者工作階段無法存取全域暫存資料表。 如需詳細資訊，請參閱[限定資料庫範圍的全域暫存資料表 (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database)。 [Azure SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)與 SQL Server 支援相同的暫存物件。
+  > 針對 Azure SQL Database 單一資料庫和彈性集區，只適用 master 資料庫和 `tempdb` 資料庫。 如需詳細資訊，請參閱[什麼是 Azure SQL Database 伺服器](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server)。 如需 Azure SQL Database 單一資料庫和彈性集區內容中 `tempdb` 的討論，請參閱 [Azure SQL Database 單一資料庫和彈性集區中的 tempdb 資料庫](#tempdb-database-in-sql-database)。 針對 Azure SQL 受控執行個體，則會套用所有系統資料庫。
 
 - 「版本存放區」  是保存資料列的資料頁集合；這些資料列是支援使用資料列版本設定功能的必要項目。 版本存放區有兩個：一個是一般版本存放區，一個是線上索引建立版本存放區。 版本存放區包含：
   - 由資料庫中的資料修改交易所產生的資料列版本，該資料庫採用使用資料列版本設定隔離的讀取認可或快照集隔離交易。  

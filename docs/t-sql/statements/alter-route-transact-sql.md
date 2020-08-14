@@ -22,12 +22,12 @@ ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f7e5bfe755ab485b1470f2dfe066165c577de2d1
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 67428f9b61dbca0798ee868b9e89a4bf8fe25332
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381122"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823691"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -86,7 +86,7 @@ WHERE database_id = DB_ID();
   
  ADDRESS **='** _next\_hop\_address_'  
 
- 針對 Azure SQL Database 受控執行個體，`ADDRESS` 必須為本機。
+ 針對 Azure SQL 受控執行個體，`ADDRESS` 必須為本機。
 
  指定這個路由的網路位址。 *next_hop_address* 以下列格式指定 TCP/IP 位址：  
   

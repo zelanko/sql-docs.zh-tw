@@ -21,12 +21,12 @@ ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 00132b65b2dc5e21fbc57c376ac005d968871f62
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f7f5c8f910d4fd9d5af81789a62eea86d609ec7a
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85743332"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864499"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>估計非叢集索引的大小
 
@@ -176,13 +176,13 @@ ms.locfileid: "85743332"
   
 4.  計算可變長度的資料大小：  
   
-     如果在索引鍵中有可變長度的資料行，包含先前步驟 2.2 中所描述的任何所需叢集索引鍵資料行，請決定在索引資料列中儲存資料行所需的空間。  
+     如果有可變長度的資料行 (索引鍵資料行或已包含)，包含先前步驟 2.2 中所描述的任何所需叢集索引鍵資料行，請決定在索引資料列中儲存資料行所需的空間：  
   
      ***Variable_Leaf_Size***  = 2 + (***Num_Variable_Leaf_Cols*** x 2) + ***Max_Var_Leaf_Size***  
   
      加入 ***Max_Var_Key_Size*** 的位元組是用於追蹤每個變數資料行。這個公式假設所有可變長度的資料行是 100% 填滿的。 如果您預期可變長度資料行所使用的儲存空間百分比會比較小，您可以經由調整百分比所得的 ***Max_Var_Leaf_Size*** 值，產生更精確的整體資料表大小之估計。  
   
-     如果沒有可變長度的資料行，請將 ***Variable_Leaf_Size*** 設成 0。  
+     如果沒有可變長度的資料行 (索引鍵資料行或已包含)，請將 ***Variable_Leaf_Size*** 設成 0。  
   
 5.  計算索引資料列的大小：  
   

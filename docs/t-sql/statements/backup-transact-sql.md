@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e0dc290a3e514d8de7a63a6afb4a0ed6453b6107
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 568a3824405798cf7fc23f9dc0b28f6b43d0fff9
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332507"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864409"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -950,9 +950,9 @@ WHERE r.command LIKE 'BACKUP%'
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 受控執行個體
+## <a name="azure-sql-managed-instance"></a>Azure SQL 受控執行個體
 
-備份置於/裝載於 Azure SQL Databae 受控執行個體的 SQL 資料庫。 SQL Database [受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)具有自動備份，可讓使用者建立完整的資料庫 `COPY_ONLY` 備份。 不支援差異、記錄和檔案快照備份。
+備份放置於/裝載於 Azure SQL 受控執行個體的 SQL 資料庫。 SQL [受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)有自動備份，而且可讓使用者建立完整資料庫的 `COPY_ONLY` 備份。 不支援差異、記錄和檔案快照備份。
 
 ## <a name="syntax"></a>語法
 
@@ -990,12 +990,12 @@ BACKUP DATABASE { database_name | @database_name_var }
 
 ## <a name="arguments"></a>引數
 
-DATABASE 指定完整的資料庫備份。 在資料庫備份期間，受控執行個體會備份足夠的交易記錄，以便在還原備份時，產生一致的資料庫。
+DATABASE 指定完整的資料庫備份。 在資料庫備份期間，Azure SQL 受控執行個體會備份足夠的交易記錄，以便在還原備份時，產生一致的資料庫。
 
 > [!IMPORTANT]
-> 在受控執行個體上建立的資料庫備份，只能在其他受控執行個體上還原。 它無法還原至 SQL Server 內部部署執行個體 (如同 SQL Server 2016 資料庫的備份無法還原至 SQL Server 2012 執行個體)。
+> 在受控執行個體上建立的資料庫備份，只能在其他 Azure SQL 受控執行個體上還原。 它無法還原至 SQL Server 內部部署執行個體 (如同 SQL Server 2016 資料庫的備份無法還原至 SQL Server 2012 執行個體)。
 
-當您還原 BACKUP DATABASE 所建立的備份 (「資料備份」) 時，就會還原整個備份。 若要從 Azure SQL Database 受控執行個體自動備份進行還原，請參閱[將資料庫還原到受控執行個體](/azure/sql-database/sql-database-managed-instance-get-started-restore)。
+當您還原 BACKUP DATABASE 所建立的備份 (「資料備份」) 時，就會還原整個備份。 若要從 SQL 受控執行個體自動備份進行還原，請參閱[將資料庫還原到受控執行個體](/azure/sql-database/sql-database-managed-instance-get-started-restore)。
 
 { *database_name* |  **@** _database\_name\_var_ } 這是要備份完整資料庫的來源資料庫。 如果這個名稱是以變數 ( **@** _database\_name\_var_) 的形式提供，您還可以將這個名稱指定為字串常數 ( **@** _database\_name\_var_ **=** _database name_)，或指定為字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。
 
@@ -1097,7 +1097,7 @@ STATS [ **=** _percentage_ ] 每次另一個 *percentage* 完成時就會顯示�
 
 STATS 選項報告到達下一個間隔之報告臨界值的完成百分比。 大約會以指定的百分比為間隔；例如，當 STATS=10，如果完成的量是 40%，這個選項可能顯示 43%。 對大型備份組而言，這不成問題，因為在已完成的 I/O 呼叫之間，百分比完成的移動非常緩慢。
 
-## <a name="limitations-for-sql-database-managed-instance"></a>SQL Database 受控執行個體的限制
+## <a name="limitations-for-sql-managed-instance"></a>SQL 受控執行個體的限制
 
 備份等量磁碟區大小上限為 195 GB (最大 Blob 大小)。 在備份命令中增加等量磁碟區的數目，以減少個別的等量磁碟區大小並維持在這項限制內。
 

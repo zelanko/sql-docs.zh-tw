@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4ba782e0a2eee78e6f308ffee0d493fbac2032ce
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 089265151307a72e2f029d016df216e077c2dd88
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113222"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864331"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 陳述式 (Transact-SQL)
 
@@ -748,7 +748,7 @@ RESTORE DATABASE Sales
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 受控執行個體
+## <a name="azure-sql-managed-instance"></a>Azure SQL 受控執行個體
 
 此命令可讓您使用 Azure Blob 儲存體帳戶從完整資料庫備份還原整個資料庫 (完整還原)。
 
@@ -760,7 +760,7 @@ RESTORE DATABASE Sales
 - [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)
 
 > [!IMPORTANT]
-> 若要從 Azure SQL Database 受控執行個體自動備份進行還原，請參閱 [SQL Database 還原](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups)。
+> 若要從 SQL 受控執行個體自動備份進行還原，請參閱 [SQL Database 還原](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups) \(部分機器翻譯\)。
 
 ## <a name="syntax"></a>語法
 
@@ -802,17 +802,17 @@ FROM URL
 - 新增記憶體最佳化檔案群組，並呼叫 XTP，如果它不在原始 .bak 檔案中的話。 任何現有的記憶體最佳化檔案群組都已重新命名為 XTP
 - SINGLE_USER 和 RESTRICTED_USER 選項轉換為 MULTI_USER
 
-## <a name="limitations---sql-database-managed-instance"></a>限制 - SQL Database 受控執行個體
+## <a name="limitations---sql-managed-instance"></a>限制 - SQL 受控執行個體
 
 以下是適用的限制：
 
 - 無法還原包含多個備份組的 .BAK 檔案。
 - 無法還原包含多個記錄檔的 .BAK 檔案。
 - 如果 .bak 包含 FILESTREAM 資料，則還原將會失敗。
-- 無法將包含具有使用中記憶體內部物件之資料庫的備份還原至一般目的受控執行個體。
+- 若備份中包含的資料庫具有使用中記憶體內部物件，則該備份將無法還原至一般用途效能層級。
 - 目前無法還原唯讀模式之資料庫的備份。 即將移除這項限制。
 
-如需詳細資訊，請參閱[受控執行個體](/azure/sql-database/sql-database-managed-instance)
+如需詳細資訊，請參閱 [Azure SQL 受控執行個體](/azure/sql-database/sql-database-managed-instance)。
 
 ## <a name="restoring-an-encrypted-database"></a>還原加密資料庫
 若要還原加密的資料庫，您必須能夠存取之前用來加密資料庫的憑證或非對稱金鑰。 如果沒有該憑證或非對稱金鑰，就無法還原資料庫。 因此，只要需要備份，就必須保留用來加密資料庫加密金鑰的憑證。 如需詳細資訊，請參閱 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)。

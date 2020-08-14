@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ad86aa823fc10827e8f0d11aaf36ae10fc0622bf
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: aee1c65fb03dcbf192c3f33fc4750bf496b05c77
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112557"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988213"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -61,7 +61,7 @@ ms.locfileid: "87112557"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />單一資料庫/彈性集區](create-database-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current)
@@ -867,7 +867,7 @@ GO
         [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />單一資料庫/彈性集區 \*_**
+        **_\* SQL Database \*_**
     :::column-end:::
     :::column:::
         [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current)
@@ -882,11 +882,11 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL Database 單一資料庫/彈性集區
+## <a name="sql-database"></a>SQL Database
 
 ## <a name="overview"></a>概觀
 
-在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 單一資料庫/彈性集區中，此陳述式可與 Azure SQL Server 搭配使用，以建立單一資料庫或彈性集區中的資料庫。 使用此陳述式，您可以指定資料庫名稱、定序、大小上限、版本、服務目標，以及 (如果適用的話) 新資料庫的彈性集區。 它也可以用來在彈性集區中建立資料庫。 此外，它可以用來在其他 SQL Database 伺服器上建立資料庫複本。
+在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，此陳述式可與 Azure SQL Server 搭配使用，以建立單一資料庫或彈性集區中的資料庫。 使用此陳述式，您可以指定資料庫名稱、定序、大小上限、版本、服務目標，以及 (如果適用的話) 新資料庫的彈性集區。 它也可以用來在彈性集區中建立資料庫。 此外，它可以用來在其他 SQL Database 伺服器上建立資料庫複本。
 
 ## <a name="syntax"></a>語法
 
@@ -973,7 +973,7 @@ CATALOG_COLLATION 指定中繼資料目錄的預設定序。 *DATABASE_DEFAULT* 
 
 EDITION 指定資料庫的服務層級。
 
-單一資料庫/彈性集區上的單一和集區資料庫。 可用的值為：'Basic'、'Standard'、'Premium'、'GeneralPurpose'、'BusinessCritical' 和 'Hyperscale'。
+單一資料庫與集區資料庫。 可用的值為：'Basic'、'Standard'、'Premium'、'GeneralPurpose'、'BusinessCritical' 和 'Hyperscale'。
 
 MAXSIZE 指定資料庫的大小上限。 MAXSIZE 對於指定的 EDITION (服務層) 而言必須有效。下表列出服務層支援的 MAXSIZE 值與預設值 (D)：
 
@@ -1273,7 +1273,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
         [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />單一資料庫/彈性集區](create-database-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         **_\* SQL Database<br />受控執行個體 \*_**
@@ -1288,11 +1288,11 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 受控執行個體
+## <a name="azure-sql-managed-instance"></a>Azure SQL 受控執行個體
 
 ## <a name="overview"></a>概觀
 
-在 Azure SQL Database 受控執行個體中，此陳述式可用來建立資料庫。 在受控執行個體上建立資料庫時，您會指定資料庫名稱和定序。
+在 Azure SQL 受控執行個體中，此陳述式可用來建立資料庫。 在受控執行個體上建立資料庫時，您會指定資料庫名稱和定序。
 
 ## <a name="syntax"></a>語法
 
@@ -1357,7 +1357,7 @@ CREATE DATABASE TestDB1;
         [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />單一資料庫/彈性集區](create-database-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current)
@@ -1482,7 +1482,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
         [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />單一資料庫/彈性集區](create-database-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current)

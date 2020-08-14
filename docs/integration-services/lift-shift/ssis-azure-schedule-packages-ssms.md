@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 194ad3581252d5baaca6d5bfaf4c8c2272efc610
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9a69ebabab91a9c257e96afb312e5498217bb967
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915297"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864605"
 ---
 # <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 排程 Azure 中部署的 SSIS 套件執行
 
@@ -23,7 +23,7 @@ ms.locfileid: "86915297"
 
 
 
-您可以使用 SQL Server Management Studio (SSMS) 對部署到 Azure SQL Database 的 SSIS 套件進行排程。 內部部署 SQL Server 和 SQL Database 受控執行個體分別有作為首要 SSIS 工作排程器的 SQL Server Agent 和受控執行個體代理程式。 相反地，SQL Database 未內建首要 SSIS 工作排程器。 本文所述的 SSMS 功能提供類似於 SQL Server Agent 的熟悉使用者介面，來排程部署到 SQL Database 的套件。
+您可以使用 SQL Server Management Studio (SSMS) 對部署到 Azure SQL Database 的 SSIS 套件進行排程。 內部部署 SQL Server 與 SQL 受控執行個體分別有作為首要 SSIS 工作排程器的 SQL Server Agent 與受控執行個體代理程式。 相反地，SQL Database 未內建首要 SSIS 工作排程器。 本文所述的 SSMS 功能提供類似於 SQL Server Agent 的熟悉使用者介面，來排程部署到 SQL Database 的套件。
 
 如果您使用 SQL Database 裝載 SSIS 目錄 `SSISDB`，您可以使用此 SSMS 功能，產生排程 SSIS 套件所需的 Data Factory 管線、活動和觸發程序。 稍後，您可以選擇性地編輯並擴充 Data Factory 中的這些物件。
 

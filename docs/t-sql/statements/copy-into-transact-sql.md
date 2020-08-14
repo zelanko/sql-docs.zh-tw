@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 6d18996610899fd348b179495ab78af2e2717f83
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 9bbc4017411c457638ac93aac147ab63b44dbcab
+ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395995"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87807496"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (預覽)
 
@@ -428,9 +428,9 @@ COPY 命令是否會有更好的效能，需取決於您的工作負載。 為�
 ### <a name="when-will-the-copy-command-be-generally-available"></a>COPY 命令何時會公開推出？
 COPY 命令將會在此日曆年度 (2020) 結束前正式推出。 
 
-### <a name="are-there-any-known-issues-with-the-copy-command"></a>COPY 命令是否有任何已知問題？
+### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>檔案的數目或大小是否有任何限制？
+檔案大小至少必須為 4MB。
 
-- 在 COPY 陳述式中無法使用 LOB 支援，例如 (n)varchar(max)。 這將在明年年初推出。
 
 請將任何意見反應或問題傳送至下列通訊群組清單： sqldwcopypreview@service.microsoft.com
 

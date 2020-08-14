@@ -1,6 +1,6 @@
 ---
 title: 搭配使用自主資料庫與可用性群組
-description: 如何搭配使用自主資料庫與 Always On 可用性群組
+description: 了解如何在 SQL Server 2019 (15.x) 中使用具有 Always On 可用性群組的自主資料庫。
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cacce3ae-e940-4566-8298-6607c4268e74
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 58bbe0be8b2e139327605e674c580b7520b32af9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 26518e529c02018c43a08d4e0597aa7fe7507359
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893194"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565263"
 ---
 # <a name="use-contained-databases-with-always-on-availability-groups"></a>搭配使用自主資料庫與 AlwaysOn 可用性群組 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

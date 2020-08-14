@@ -29,12 +29,12 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5873b926d56c07523d759e1383fbb101a1cfa6e1
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: ed4f20d64aff96e367c0f3aeb5e56746826615f5
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485039"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862771"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 
@@ -74,7 +74,7 @@ ms.locfileid: "86485039"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
--- Syntax for SQL Server, Azure SQL Database, and Azure SQL Database managed instance
+-- Syntax for SQL Server, Azure SQL Database, and Azure SQL Managed Instance
   
 -- Syntax Users based on logins in master  
 CREATE USER user_name   
@@ -127,7 +127,7 @@ CREATE USER user_name
 CREATE USER user_name  
 [;]
 
--- Syntax for users based on Azure AD logins for Azure SQL Database managed instance
+-- Syntax for users based on Azure AD logins for Azure SQL Managed Instance
 CREATE USER user_name   
     [   { FOR | FROM } LOGIN login_name  ]  
     | FROM EXTERNAL PROVIDER
@@ -141,7 +141,7 @@ CREATE USER user_name
 ```
 
 > [!NOTE]
-> 建立完成後的受控執行個體 Azure AD 管理員已變更。 如需詳細資訊，請參閱 [MI 的新 Azure AD 管理員功能](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)。
+> 建立完成後的 Azure SQL 受控執行個體 Azure AD 管理員功能已變更。 如需詳細資訊，請參閱 [MI 的新 Azure AD 管理員功能](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)。
 
 ```syntaxsql
 -- Syntax for Azure SQL Data Warehouse  
@@ -272,11 +272,11 @@ GO
   
  您可以在 [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 目錄檢視中，看到資料庫使用者的資訊。
 
-新的語法延伸模組 **FROM EXTERNAL PROVIDER** 可用於在 SQL Database 受控執行個體中建立伺服器層級的 Azure AD 登入。 Azure AD 登入可以讓資料庫層級的 Azure AD 主體對應到伺服器層級的 Azure AD 登入。 若要從 Azure AD 登入建立 Azure AD 使用者，請使用下列語法：
+新的語法延伸模組 **FROM EXTERNAL PROVIDER** 可用於在 SQL 受控執行個體中建立伺服器層級的 Azure AD 登入。 Azure AD 登入可以讓資料庫層級的 Azure AD 主體對應到伺服器層級的 Azure AD 登入。 若要從 Azure AD 登入建立 Azure AD 使用者，請使用下列語法：
 
 `CREATE USER [AAD_principal] FROM LOGIN [Azure AD login]`
 
-在 Azure SQL Database 受控執行個體中建立使用者時，login_name 必須對應到現有的 Azure AD 登入，否則使用 **FROM EXTERNAL PROVIDER** 子句只會建立 Azure AD 使用者，而不會在 master 資料庫中建立登入。 例如，此命令會建立包含的使用者：
+在 SQL 受控執行個體中建立使用者時，login_name 必須對應到現有的 Azure AD 登入，否則使用 **FROM EXTERNAL PROVIDER** 子句只會建立 Azure AD 使用者，而不會在 master 資料庫中建立登入。 例如，此命令會建立包含的使用者：
 
 `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER`
   
@@ -467,7 +467,7 @@ WITH
     , ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = ON ;  
 ```
 
-### <a name="i-create-an-azure-ad-user-from-an-azure-ad-login-in-sql-database-managed-instance"></a>I. 在 SQL Database 受控執行個體中從 Azure AD 登入建立 Azure AD 使用者
+### <a name="i-create-an-azure-ad-user-from-an-azure-ad-login-in-sql-managed-instance"></a>I. 在 SQL 受控執行個體中從 Azure AD 登入建立 Azure AD 使用者
 
  若要從 Azure AD 登入來建立 Azure AD 使用者，請使用下列語法。
 
@@ -497,7 +497,7 @@ GO
 
 ### <a name="j-create-an-azure-ad-user-without-an-aad-login-for-the-database"></a>J. 建立不具資料庫之 AAD 登入的 Azure AD 使用者
 
-下列語法可用來在 SQL Database 受控執行個體資料庫 (包含的使用者) 中建立 Azure AD 使用者 bob@contoso.com：
+下列語法可用來在 SQL 受控執行個體資料庫 (包含的使用者) 中建立 Azure AD 使用者 bob@contoso.com：
 
 ```sql
 CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;

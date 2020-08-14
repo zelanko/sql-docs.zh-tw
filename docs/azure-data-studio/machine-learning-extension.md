@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: e6b38724e2cb8fde7fe38a544c3f87fba3cebd45
-ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
+ms.openlocfilehash: 8a415678b777ba6142bab01bced7d7da908b2204
+ms.sourcegitcommit: 68c1dbc465898e20ec95f98cc2f14a8c9cd166a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85352415"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051107"
 ---
 # <a name="machine-learning-extension-preview-for-azure-data-studio"></a>適用於 Azure Data Studio 的機器學習延伸模組 (預覽)
 
@@ -23,13 +23,30 @@ ms.locfileid: "85352415"
 
 ## <a name="prerequisites"></a>必要條件
 
-下列先決條件必須安裝於您執行 Azure Data Studio 的電腦上。
+您必須在執行 Azure Data Studio 的電腦上安裝下列先決條件。
 
 - [Python 3](https://www.python.org/downloads/)。 安裝 Python 之後，您必須在 [[延伸模組設定](#settings)] 底下，指定 Python 安裝的本機路徑。 如果您已在 Azure Data Studio 中使用 [Python 核心筆記本](notebooks-tutorial-python-kernel.md)，根據預設，此延伸模組將使用來自筆記本的路徑。
 
 - 適用於 Windows、macOS 或 Linux 的 [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md)。
 
 - [R 3.5](https://www.r-project.org/) (選擇性)。 目前不支援 3.5 以外的其他版本。 安裝 R 3.5 之後，您必須啟用 R，並在 [[延伸模組設定](#settings)] 底下，指定 R 安裝的本機路徑。 只有當您想要管理資料庫中的 R 套件時，才需要執行此動作。
+
+### <a name="trouble-installing-python-3-from-within-ads"></a>無法從 ADS 內安裝 Python 3 嗎？
+如果您嘗試安裝 Python 3，但收到關於 TLS/SSL 的錯誤，請新增這兩個選擇性元件：
+
+_範例錯誤：_
+```
+$: ~/0.0.1/bin/python3 -m pip install --user "jupyter>=1.0.0" --extra-index-url https://prose-python-packages.azurewebsites.net
+WARNING: pip is configured with locations that require TLS/SSL, however the ssl module in Python is not available.
+Looking in indexes: https://pypi.org/simple, https://prose-python-packages.azurewebsites.net
+Requirement already satisfied: jupyter
+```
+
+_安裝這些元件：_
+
+- [Homebrew](https://brew.sh) (選擇性)。 安裝 homebrew，然後從命令列執行 `brew update`。
+
+- *openssl* (選擇性)。 接著，執行 `brew install openssl`。
 
 ## <a name="install-the-extension"></a>安裝延伸模組
 

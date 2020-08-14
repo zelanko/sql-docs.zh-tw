@@ -1,6 +1,6 @@
 ---
 title: 在可用性群組使用讀取級別
-description: '如何使用 Always On 可用性群組時以達到讀取級別的描述。 '
+description: 了解使用 Always On 可用性群組時如何達到讀取級別，以及如何使用分散式可用性群組達到異地讀取級別的詳細資料。
 ms.custom: seodec18
 ms.date: 10/24/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 28d9540c331ac5a250acc24abbd173f7ddf87e5f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 540f02a2b58fff4c2800dfcf16908d53935ed82c
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882571"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565538"
 ---
 # <a name="use-read-scale-with-always-on-availability-groups"></a>在 Always On 可用性群組使用讀取級別
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

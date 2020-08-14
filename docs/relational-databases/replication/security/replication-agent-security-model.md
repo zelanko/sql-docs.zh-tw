@@ -21,18 +21,18 @@ helpviewer_keywords:
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 59657ae7be557bfd2c9036f2cba84f3019d4cf0a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 41d77ae1b9c0763fedf2e53610bb3a0be5cd185c
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882066"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823923"
 ---
 # <a name="replication-agent-security-model"></a>複寫代理程式安全性模型
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   複寫代理程式安全性模型可允許針對複寫代理程式執行和建立連線時所使用的帳戶，進行更細微的控制：針對每個代理程式，可以指定不同的帳戶。 如需有關如何指定帳戶的詳細資訊，請參閱[用於複寫的身分識別和存取控制](../../../relational-databases/replication/security/identity-and-access-control-replication.md)。  
 
-複寫代理程式安全性模型與 Azure SQL Database 受控執行個體略為不同，因為沒有任何 Windows 帳戶可供代理程式執行。 而是必須透過 SQL Server 驗證來完成所有作業。 
+複寫代理程式安全性模型與 Azure SQL 受控執行個體略為不同，因為沒有任何 Windows 帳戶可供代理程式執行。 而是必須透過 SQL Server 驗證來完成所有作業。 
   
 > [!IMPORTANT]  
 >  當 **系統管理員 (sysadmin)** 固定伺服器角色的成員設定複寫時，複寫代理程式可以設定為模擬 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 帳戶。 完成這項作業的方法，就是不指定複寫代理程式的登入和密碼；不過，我們不建議此方式。 反之，就安全性最佳做法而言，我們建議您為每個具有最小權限的代理程式指定帳戶；本主題稍後的＜代理程式所需的權限＞一節會描述最小權限。  

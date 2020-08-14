@@ -11,24 +11,24 @@ ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59968cad65f3a80c2d511dad3dc804d151d33095
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 332fde643d285b20c0bd772918f8c9cf1bf578f2
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458040"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864955"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>快速入門：SQL 備份及還原至 Azure Blob 儲存體服務
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 本快速入門可協助您了解如何將備份寫入至 Azure Blob 儲存體服務以及從中還原。  此文章說明如何建立 Azure Blob 容器、將備份寫入到 Blob 服務，然後執行還原。
   
 ## <a name="prerequisites"></a>必要條件  
-若要完成本快速入門，您必須熟悉 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 備份與還原概念以及 T-SQL 語法。  您需要 Azure 儲存體帳戶、SQL Server Management Studio (SSMS)，以及對執行 SQL Server 伺服器之伺服器或 Azure SQL Database 受控執行個體的存取權。 此外，用來發出 BACKUP 或 RESTORE 命令的帳戶，應該位於擁有 **ALTER ANY CREDENTIAL** 權限的 **db_backupoperator** 資料庫角色中。 
+若要完成本快速入門，您必須熟悉 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 備份與還原概念以及 T-SQL 語法。  您需要 Azure 儲存體帳戶、SQL Server Management Studio (SSMS)，以及執行 SQL Server 伺服器或 Azure SQL 受控執行個體之伺服器的存取權。 此外，用來發出 BACKUP 或 RESTORE 命令的帳戶，應該位於擁有 **ALTER ANY CREDENTIAL** 權限的 **db_backupoperator** 資料庫角色中。 
 
 - 取得免費 [Azure 帳戶](https://azure.microsoft.com/offers/ms-azr-0044p/)。
 - 建立 [Azure 儲存體帳戶](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal)。
 - 安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
-- 安裝 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) 或使用透過 [Azure SQL 虛擬機器](/azure/sql-database/sql-database-managed-instance-configure-vm)或[點對站](/azure/sql-database/sql-database-managed-instance-configure-p2s)建立的連線來部署[受控執行個體](/azure/sql-database/sql-database-managed-instance-get-started)。
+- 安裝 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)，或使用透過 [Azure SQL 虛擬機器](/azure/sql-database/sql-database-managed-instance-configure-vm)或[點對站](/azure/sql-database/sql-database-managed-instance-configure-p2s)建立的連線來部署 [Azure SQL 受控執行個體](/azure/sql-database/sql-database-managed-instance-get-started)。
 - 將使用者帳戶指派給 [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) 的角色，並授與 [ALTER ANY CREDENTIAL](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql) 權限。 
 
 ## <a name="create-azure-blob-container"></a>建立 Azure Blob 容器
@@ -53,7 +53,7 @@ ms.locfileid: "86458040"
 
 1. 啟動 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 並連線至 SQL Server 執行個體。
 1. 開啟 [新增查詢] 視窗。 
-1. 執行下列 Transact-SQL (T-SQL) 程式碼以建立測試資料庫。 重新整理 [物件總管] 中的 [資料庫] 節點以查看新的資料庫。 在 Azure SQL Database 受控執行個體上建立的新資料庫會自動啟用 TDE，因此您必須將它停用以繼續。 
+1. 執行下列 Transact-SQL (T-SQL) 程式碼以建立測試資料庫。 重新整理 [物件總管] 中的 [資料庫] 節點以查看新的資料庫。 在 SQL 受控執行個體上建立的新資料庫會自動啟用 TDE，因此您將必須加以停用以繼續。 
 
 ```sql
 USE [master]
@@ -87,7 +87,7 @@ GO
 SELECT * FROM SQLTest
 GO
 
--- Disable TDE for newly-created databases on a managed instance 
+-- Disable TDE for newly-created databases on SQL Managed Instance 
 USE [SQLTestDB];
 GO
 ALTER DATABASE [SQLTestDB] SET ENCRYPTION OFF;

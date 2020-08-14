@@ -41,7 +41,7 @@ IMPORTANCE 的資源集區範圍為本機；相同資源集區內部不同重要
 REQUEST_MAX_MEMORY_GRANT_PERCENT = *value*</br>
 指定單一要求可由集區中獲取的記憶體最大數量。 *value* 是相對於 MAX_MEMORY_PERCENT 所指定的資源集區大小的百分比。
 
-*value* 在 [!INCLUDE[ssSQL17](sssql17-md.md)] 之前是整數，從 [!INCLUDE[sql-server-2019](sssqlv15-md.md)] 開始以及在 [!INCLUDE[ssSDSfull](sssdsfull-md.md)] 受控執行個體中則為浮點數。 預設值為 25。 允許的 *value* 範圍為 1 至 100。
+*value* 在 [!INCLUDE[ssSQL17](sssql17-md.md)] 之前是整數，而從 [!INCLUDE[sql-server-2019](sssqlv15-md.md)] 開始以及在 Azure SQL 受控執行個體中則為浮點數。 預設值為 25。 允許的 *value* 範圍為 1 至 100。
 
 > [!IMPORTANT]  
 > 指定的數量僅參考查詢執行授與記憶體。

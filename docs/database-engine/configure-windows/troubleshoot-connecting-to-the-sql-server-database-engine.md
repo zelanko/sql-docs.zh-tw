@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: afe2679e29f92d4b222067b6ab3b5220078744e1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dbd46a6a2de2e46841eb8cc7b40542d8073e82c6
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763962"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988645"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>對 SQL Server 資料庫引擎的連線進行疑難排解
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "85763962"
 
 - 本主題不包含 SSPI 錯誤的相關資訊。 如需 SSPI 錯誤，請參閱 [如何疑難排解「無法產生 SSPI 內容」錯誤訊息](https://support.microsoft.com/kb/811889)。
 - 本主題不包含 Kerberos 錯誤的相關資訊。 如需說明，請參閱 [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046)。
-- 本主題不包含 SQL Azure 連線能力的相關資訊。 如需協助，請參閱 [Troubleshooting connectivity issues with Microsoft Azure SQL Database](/azure/sql-database/troubleshoot-connectivity-issues-microsoft-azure-sql-database) (針對 Microsoft Azure SQL Database 連線問題進行疑難排解)。
+- 此主題不包含 Azure SQL Database 連線能力的相關資訊。 如需協助，請參閱 [Troubleshooting connectivity issues with Microsoft Azure SQL Database](/azure/sql-database/troubleshoot-connectivity-issues-microsoft-azure-sql-database) (針對 Microsoft Azure SQL Database 連線問題進行疑難排解)。
 
 ## <a name="get-instance-name-from-configuration-manger"></a>從組態管理員取得執行個體名稱
 

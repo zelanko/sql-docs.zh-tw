@@ -15,12 +15,12 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e297be837d954217aa9197494d6734f53d5a6aa0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a76bc720df1808290a09e2cec5fad1c0667ae389
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005599"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988790"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>自主的資料庫使用者 - 使資料庫可攜
 
@@ -77,7 +77,7 @@ ms.locfileid: "86005599"
 
 ### <a name="managed-instance"></a>受控執行個體
 
-Azure SQL Database 受控執行個體的運作方式，類似於自主資料庫內容中的內部部署 SQL Server。 建立包含的使用者時，請務必將資料庫的內容從 master 資料庫變更為使用者資料庫。 此外，設定內含項目選項時，使用者資料庫不應有使用中的連線。 
+Azure SQL 受控執行個體的運作方式，類似於自主資料庫內容中的內部部署 SQL Server。 建立包含的使用者時，請務必將資料庫的內容從 master 資料庫變更為使用者資料庫。 此外，設定內含項目選項時，使用者資料庫不應有使用中的連線。 
 
 例如： 
 

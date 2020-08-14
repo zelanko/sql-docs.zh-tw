@@ -18,12 +18,12 @@ ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 51c6e9f7278025614c314ae873e6a484be4f7c4b
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 3909a970b37b23a1767d45bdae14e29441822acb
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332237"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864459"
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 
@@ -45,7 +45,7 @@ ms.locfileid: "87332237"
 
 &nbsp;
 
-## <a name="sql-server-and-sql-database-managed-instance"></a>SQL Server 和 SQL Database 受控執行個體
+## <a name="sql-server-and-sql-managed-instance"></a>SQL Server 與 SQL 受控執行個體
 
 [!INCLUDE [ALTER WORKLOAD GROUP](../../includes/alter-workload-group.md)]
   
@@ -66,7 +66,7 @@ ms.locfileid: "87332237"
 
 &nbsp;
 
-## <a name="sql-server-and-sql-database-managed-instance"></a>SQL Server 和 SQL Database 受控執行個體
+## <a name="sql-server-and-sql-managed-instance"></a>SQL Server 與 SQL 受控執行個體
 
 [!INCLUDE [ALTER WORKLOAD GROUP](../../includes/alter-workload-group.md)]
 

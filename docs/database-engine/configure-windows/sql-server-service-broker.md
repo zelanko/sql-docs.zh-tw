@@ -1,6 +1,6 @@
 ---
 title: SQL Server Service Broker | Microsoft Docs
-description: 了解 Service Broker。 查看其如何提供在 SQL Server 資料庫引擎和 Azure SQL Database 受控執行個體中進行傳訊的原生支援。
+description: 了解 Service Broker。 查看其如何提供在 SQL Server 資料庫引擎與 Azure SQL 受控執行個體中進行傳訊的原生支援。
 ms.custom: ''
 ms.date: 09/07/2018
 ms.prod: sql
@@ -24,17 +24,17 @@ ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3e915b46eb89c29d260dc66ad7b73bc0cbc73ebc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2841f36d3f9e4498763f6b0862e2fa0cfaa2e4a9
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764049"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863395"
 ---
 # <a name="service-broker"></a>Service Broker
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] 提供在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)中進行傳訊和佇列的原生支援。 開發人員能夠輕易地建立使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 元件的複雜應用程式，以便在不同資料庫間進行通訊，並建置可靠的分散式應用程式。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] 提供在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 與 [Azure SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)中進行傳訊及佇列處理的原生支援。 開發人員能夠輕易地建立使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 元件的複雜應用程式，以便在不同資料庫間進行通訊，並建置可靠的分散式應用程式。  
   
 ## <a name="when-to-use-service-broker"></a>使用 Service Broker 的時機
 
@@ -103,7 +103,7 @@ FROM ExpenseQueue;
 ## <a name="whats-new-in-service-broker"></a>Service Broker 的新功能  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]並無導入重大變更。  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中導入了下列變更。  
 
-### <a name="service-broker-and-azure-sql-database-managed-instance"></a>服務代理程式與 Azure SQL Database 受控執行個體
+### <a name="service-broker-and-azure-sql-managed-instance"></a>Service Broker 與 Azure SQL 受控執行個體
 
 - 不支援跨執行個體服務代理程式 
  - `sys.routes` - 必要條件：從 sys.routes 選取位址。 位址在每個路由上都必須是 LOCAL。 請參閱 [sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md)。

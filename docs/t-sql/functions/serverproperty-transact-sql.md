@@ -1,7 +1,7 @@
 ---
 title: SERVERPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/08/2020
+ms.date: 07/28/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba9181d1b34bf39711dac702a11687b3ca38f604
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e797b97fec0fb2263780cb1623882d16a717b196
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113358"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823596"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 
@@ -64,32 +64,37 @@ SERVERPROPERTY ( 'propertyname' )
 |版本|已安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體產品版本。 使用這個屬性值決定功能和限制，例如[根據 SQL Server 版本計算容量限制](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。 64 位元版的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將 (64 位元) 附加至版本中。<br /><br /> 傳回：<br /><br /> 'Enterprise Edition'<br /><br /> 「Enterprise 版:核心授權」<br /><br /> 'Enterprise Evaluation Edition'<br /><br /> 'Business Intelligence Edition'<br /><br /> 'Developer Edition'<br /><br /> 'Express Edition'<br /><br /> 'Express Edition with Advanced Services'<br /><br /> 'Standard Edition'<br /><br /> 'Web Edition'<br /><br /> 'SQL Azure' 表示 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 或 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> 'Azure SQL Edge Developer' 表示 Azure SQL Edge' 的僅限開發版本 <br /><br /> 'Azure SQL Edge' 表示 Azure SQL Edge' 的付費版本 <br /><br /> 基底資料型別：**nvarchar(128)**|  
 |EditionID|EditionID 表示安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體產品版本。 使用這個屬性值決定功能和限制，例如[根據 SQL Server 版本計算容量限制](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。<br /><br /> 1804890536 = Enterprise<br /><br /> 1872460670 = Enterprise Edition：核心授權<br /><br /> 610778273= Enterprise Evaluation<br /><br /> 284895786 = Business Intelligence<br /><br /> -2117995310 = Developer<br /><br /> -1592396055 = Express<br /><br /> -133711905 = Express with Advanced Services<br /><br /> -1534726760 = Standard<br /><br /> 1293598313 = Web<br /><br /> 1674378470 = SQL Database 或 Microsoft Azure Synapse Analytics (前稱為 SQL 資料倉儲)<br /><br /> -1461570097 = Azure SQL Edge 開發人員 <br /><br /> 1994083197 = Azure SQL Edge <br /><br />基底資料型別：**bigint**|  
 |EngineEdition|安裝在伺服器上之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。<br /><br /> 1 = Personal 或 Desktop Engine (不適用於 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本中)。<br /><br /> 2 = Standard (Standard、Web 和 Business Intelligence 都會傳回這個值)。<br /><br /> 3 = Enterprise (Evaluation、Developer 和 Enterprise 版本都會傳回這個項目。)<br /><br /> 4 = Express (Express、Express with Tools 和 Express with Advanced Services 都會傳回這個項目)<br /><br /> 5 = [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<br /><br /> 6 = [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> 8 = 受控執行個體<br /><br /> 9 = Azure SQL Edge (這會針對 Azure SQL Edge 的兩個版本傳回<br /><br /> 基底資料類型：**int**|  
-|HadrManagerStatus|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 指出 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 管理員是否已經啟動。<br /><br /> 0 = 未啟動，暫止通訊。<br /><br /> 1 = 已啟動且在執行中。<br /><br /> 2 = 未啟動且失敗。<br /><br /> NULL = 輸入無效、發生錯誤或不適用。|  
-|InstanceDefaultDataPath|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至目前版本 (從 2015 晚期開始的更新)。<br /><br /> 執行個體資料檔案的預設路徑名稱。|  
-|InstanceDefaultLogPath|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至目前版本 (從 2015 晚期開始的更新)。<br /><br /> 執行個體記錄檔的預設路徑名稱。|  
+|FilestreamConfiguredLevel|已設定的 FILESTREAM 存取層級。 如需詳細資訊，請參閱[檔案資料流存取層級](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)。<br /><br /> 基底資料類型：**int**|  
+|FilestreamEffectiveLevel|有效的 FILESTREAM 存取層級。 如果此層級已變更而且執行個體重新啟動或電腦重新啟動已暫止，這個值就可能會與 FilestreamConfiguredLevel 不同。 如需詳細資訊，請參閱[檔案資料流存取層級](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)。<br /><br /> 基底資料類型：**int**|  
+|FilestreamShareName|FILESTREAM 所使用之共用的名稱。<br /><br /> NULL = 輸入無效、發生錯誤或不適用。<br /><br /> 基底資料型別：**nvarchar(128)**| 
+|HadrManagerStatus|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 指出 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 管理員是否已經啟動。<br /><br /> 0 = 未啟動，暫止通訊。<br /><br /> 1 = 已啟動且在執行中。<br /><br /> 2 = 未啟動且失敗。<br /><br /> NULL = 輸入無效、發生錯誤或不適用。<br /><br /> 基底資料類型：**int**|  
+|InstanceDefaultBackupPath|**適用於**：[!INCLUDE[ssSQL2019](../../includes/sssqlv15-md.md)] 與更新版本。<br /><br /> 執行個體備份檔案的預設路徑名稱。|  
+|InstanceDefaultDataPath|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至目前版本 (從 2015 晚期開始的更新)。<br /><br /> 執行個體資料檔案的預設路徑名稱。<br /><br /> 基底資料型別：**nvarchar(128)**|  
+|InstanceDefaultLogPath|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至目前版本 (從 2015 晚期開始的更新)。<br /><br /> 執行個體記錄檔的預設路徑名稱。<br /><br /> 基底資料型別：**nvarchar(128)**|  
 |InstanceName|使用者所連接之執行個體的名稱。<br /><br /> 如果執行個體名稱是預設執行個體、輸入無效，或發生錯誤，便傳回 NULL。<br /><br /> NULL = 輸入無效、發生錯誤或不適用。<br /><br /> 基底資料型別：**nvarchar(128)**|  
-|IsAdvancedAnalyticsInstalled|若在設定時已安裝 [進階分析] 功能，則會傳回 1；否則會傳回 0。|  
-|IsBigDataCluster| 從 CU4 開始在 [!INCLUDE[ssSQL2019](../../includes/sssqlv15-md.md)] 中引進。<br /><br />如果執行個體是 SQL Server 巨量資料叢集，則傳回 1；否則傳回 0。|  
+|IsAdvancedAnalyticsInstalled|若在設定時已安裝 [進階分析] 功能，則會傳回 1；否則會傳回 0。<br /><br /> 基底資料類型：**int**|  
+|IsBigDataCluster| 從 CU4 開始在 [!INCLUDE[ssSQL2019](../../includes/sssqlv15-md.md)] 中引進。<br /><br />如果執行個體是 SQL Server 巨量資料叢集，則傳回 1；否則傳回 0。<br /><br /> 基底資料類型：**int**|  
 |IsClustered|伺服器執行個體設定在容錯移轉叢集中。<br /><br /> 1 = 叢集。<br /><br /> 0 = 非叢集。<br /><br /> NULL = 輸入無效、發生錯誤或不適用。<br /><br /> 基底資料類型：**int**|  
 |IsFullTextInstalled|全文檢索和語意索引元件安裝在目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上。<br /><br /> 1 = 已安裝全文檢索和語意索引元件。<br /><br /> 0 = 未安裝全文檢索和語意索引元件。<br /><br /> NULL = 輸入無效、發生錯誤或不適用。<br /><br /> 基底資料類型：**int**|  
 |IsHadrEnabled|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 在這個伺服器執行個體上已啟用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。<br /><br /> 0 = [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 功能已停用。<br /><br /> 1 = [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 功能已啟用。<br /><br /> NULL = 輸入無效、發生錯誤或不適用。<br /><br /> 基底資料類型：**int**<br /><br /> 若要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體上建立及執行可用性複本，必須在此伺服器執行個體上啟用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。 如需詳細資訊，請參閱[啟用和停用 AlwaysOn 可用性群組 (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)。<br /><br /> **注意：** IsHadrEnabled 屬性只與 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 相關。 此伺服器屬性不影響其他高可用性或災害復原功能，例如資料庫鏡像或記錄傳送。|  
 |IsIntegratedSecurityOnly|伺服器處於整合式安全性模式。<br /><br /> 1 = 整合式安全性 (Windows 驗證)<br /><br /> 0 = 非整合式安全性。 (Windows 驗證及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證)。<br /><br /> NULL = 輸入無效、發生錯誤或不適用。<br /><br /> 基底資料類型：**int**|  
-|IsLocalDB|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 伺服器是 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB 的執行個體。<br /><br /> NULL = 輸入無效、發生錯誤或不適用。|  
+|IsLocalDB|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 伺服器是 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB 的執行個體。<br /><br /> NULL = 輸入無效、發生錯誤或不適用。<br /><br /> 基底資料類型：**int**|  
 |IsPolyBaseInstalled|**適用於**： [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 傳回伺服器執行個體是否已安裝 PolyBase 功能。<br /><br /> 0 = 未安裝 PolyBase。<br /><br /> 1 = 已安裝 PolyBase。<br /><br /> 基底資料類型：**int**|  
 |IsSingleUser|伺服器處於單一使用者模式。<br /><br /> 1 = 單一使用者。<br /><br /> 0 = 非單一使用者<br /><br /> NULL = 輸入無效、發生錯誤或不適用。<br /><br /> 基底資料類型：**int**|  
+|IsTempDbMetadataMemoryOptimized|**適用對象**：[!INCLUDE[ssSQL2019](../../includes/sssqlv15-md.md)] 及更新版本。<br /><br />如果已啟用 tempdb 以為中繼資料使用經記憶體最佳化的資料表，則傳回 1；如果 tempdb 為中繼資料使用標準的磁碟型資料表，則傳回 0。 如需詳細資訊，請參閱 [tempdb Database](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)。<br /><br /> 基底資料類型：**int**|  
 |IsXTPSupported|**適用於**：SQL Server ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本)、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。<br /><br /> 伺服器支援 In-Memory OLTP。<br /><br /> 1= 伺服器支援 In-Memory OLTP。<br /><br /> 0= 伺服器不支援 In-Memory OLTP。<br /><br /> NULL = 輸入無效、發生錯誤或不適用。<br /><br /> 基底資料類型：**int**|  
 |LCID|Windows 的定序地區設定識別碼 (LCID)。<br /><br /> 基底資料類型：**int**|  
 |LicenseType|未使用的。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品未保留或維護的授權資訊。 一律傳回 DISABLED。<br /><br /> 基底資料型別：**nvarchar(128)**|  
 |MachineName|執行伺服器執行個體的 Windows 電腦名稱。<br /><br /> 如果是叢集執行個體，也就是在 Microsoft Cluster Service 虛擬伺服器上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，便會傳回虛擬伺服器名稱。<br /><br /> NULL = 輸入無效、發生錯誤或不適用。<br /><br /> 基底資料型別：**nvarchar(128)**|  
 |NumLicenses|未使用的。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品未保留或維護的授權資訊。 一律傳回 NULL。<br /><br /> 基底資料類型：**int**|  
 |ProcessID|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的處理序識別碼。 在識別哪個 Sqlservr.exe 屬於這個執行個體時，ProcessID 非常有用。<br /><br /> NULL = 輸入無效、發生錯誤或不適用。<br /><br /> 基底資料類型：**int**|  
-|ProductBuild|**適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (自 2015 年 10 月開始)。<br /><br /> 組建編號。|  
-|ProductBuildType|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至目前版本 (從 2015 晚期開始的更新)。<br /><br /> 目前組建的組建類型。<br /><br /> 傳回下列項目之一：<br /><br /> OD = 特定客戶的隨選版本。<br /><br /> GDR = 透過 Windows Update 發行的一般發行版本。<br /><br /> NULL<br />= 不適用。|  
+|ProductBuild|**適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (自 2015 年 10 月開始)。<br /><br /> 組建編號。<br /><br /> 基底資料型別：**nvarchar(128)**|  
+|ProductBuildType|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至目前版本 (從 2015 晚期開始的更新)。<br /><br /> 目前組建的組建類型。<br /><br /> 傳回下列項目之一：<br /><br /> OD = 特定客戶的隨選版本。<br /><br /> GDR = 透過 Windows Update 發行的一般發行版本。<br /><br /> NULL = 不適用。<br /><br /> 基底資料型別：**nvarchar(128)**|  
 |ProductLevel|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的版本層級。<br /><br /> 傳回下列項目之一：<br /><br /> 'RTM' = 原始發行版本<br /><br /> 'SP*n*' = Service Pack 版本<br /><br /> 'CTP*n*', = Community Technical Preview 版本<br /><br /> 基底資料型別：**nvarchar(128)**|  
-|ProductMajorVersion|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至目前版本 (從 2015 晚期開始的更新)。<br /><br /> 主要版本。|  
-|ProductMinorVersion|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至目前版本 (從 2015 晚期開始的更新)。<br /><br /> 次要版本。|  
-|ProductUpdateLevel|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至目前版本 (從 2015 晚期開始的更新)。<br /><br /> 目前組建的更新層級。 CU 表示累積更新。<br /><br /> 傳回下列項目之一：<br /><br /> CU*n* = 累積更新<br /><br /> NULL<br />= 不適用。|  
-|ProductUpdateReference|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至目前版本 (從 2015 晚期開始的更新)。<br /><br /> 該版本的知識庫文章。|  
+|ProductMajorVersion|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至目前版本 (從 2015 晚期開始的更新)。<br /><br /> 主要版本。<br /><br /> 基底資料型別：**nvarchar(128)**|  
+|ProductMinorVersion|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至目前版本 (從 2015 晚期開始的更新)。<br /><br /> 次要版本。<br /><br /> 基底資料型別：**nvarchar(128)**|  
+|ProductUpdateLevel|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至目前版本 (從 2015 晚期開始的更新)。<br /><br /> 目前組建的更新層級。 CU 表示累積更新。<br /><br /> 傳回下列項目之一：<br /><br /> CU*n* = 累積更新<br /><br /> NULL = 不適用。<br /><br /> 基底資料型別：**nvarchar(128)**|  
+|ProductUpdateReference|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至目前版本 (從 2015 晚期開始的更新)。<br /><br /> 該版本的知識庫文章。<br /><br /> 基底資料型別：**nvarchar(128)**|  
 |ProductVersion|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的版本，格式為 '*major.minor.build.revision*'。<br /><br /> 基底資料型別：**nvarchar(128)**|  
 |ResourceLastUpdateDateTime|傳回資源資料庫上次更新的日期和時間。<br /><br /> 基底資料型別：**datetime**|  
 |ResourceVersion|傳回版本資源資料庫。<br /><br /> 基底資料型別：**nvarchar(128)**|  
@@ -98,9 +103,7 @@ SERVERPROPERTY ( 'propertyname' )
 |SqlCharSetName|定序中的 SQL 字元集名稱。<br /><br /> 基底資料型別：**nvarchar(128)**|  
 |SqlSortOrder|定序中的 SQL 排序順序識別碼<br /><br /> 基底資料型別：**tinyint**|  
 |SqlSortOrderName|定序中的 SQL 排序次序名稱。<br /><br /> 基底資料型別：**nvarchar(128)**|  
-|FilestreamShareName|FILESTREAM 所使用之共用的名稱。<br /><br /> NULL = 輸入無效、發生錯誤或不適用。|  
-|FilestreamConfiguredLevel|已設定的 FILESTREAM 存取層級。 如需詳細資訊，請參閱[檔案資料流存取層級](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)。|  
-|FilestreamEffectiveLevel|有效的 FILESTREAM 存取層級。 如果此層級已變更而且執行個體重新啟動或電腦重新啟動已暫止，這個值就可能會與 FilestreamConfiguredLevel 不同。 如需詳細資訊，請參閱[檔案資料流存取層級](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)。|  
+ 
   
 ## <a name="return-types"></a>傳回型別  
 

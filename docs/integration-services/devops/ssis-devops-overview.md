@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c89ff705077782d0cf8287f0d1bc010ce609cc72
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 29cef6bf700c6d837c77f02e16debe50e1f1a267
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472474"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823480"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools"></a>SQL Server Integration Services (SSIS) DevOps 工具
 
@@ -95,7 +95,7 @@ cat log.txt
 
 #### <a name="destination-server"></a>目的地伺服器
 
-目的地 SQL Server 的名稱。 它可以是內部部署 SQL Server、Azure SQL Database 或 Azure SQL Database 受控執行個體的名稱。 只有當目的地類型為 SSISDB 時，才會顯示此屬性。
+目的地 SQL Server 的名稱。 其可以是內部部署 SQL Server、Azure SQL Database 或 Azure SQL 受控執行個體的名稱。 只有當目的地類型為 SSISDB 時，才會顯示此屬性。
 
 #### <a name="destination-path"></a>目的地路徑
 
@@ -184,7 +184,7 @@ SSIS 目錄組態的內嵌 JSON。 只有當選取 [內嵌] 作為組態檔來�
 
 #### <a name="target-server"></a>目標伺服器
 
-目標 SQL Server 的名稱。 它可以是內部部署 SQL Server、Azure SQL Database 或 Azure SQL Database 受控執行個體的名稱。
+目標 SQL Server 的名稱。 其可以是內部部署 SQL Server、Azure SQL Database 或 Azure SQL 受控執行個體的名稱。
 
 #### <a name="authentication-type"></a>驗證類型
 

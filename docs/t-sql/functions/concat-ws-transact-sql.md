@@ -18,12 +18,12 @@ ms.assetid: f1375fd7-a2fd-48bf-922a-4f778f0deb1f
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 28e5524c0d2359f3edcbe003be366618df00217b
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7b952b51c6171bf22590403452e7b17899459de0
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112084"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87564927"
 ---
 # <a name="concat_ws-transact-sql"></a>CONCAT_WS (Transact-SQL)
 [!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]
@@ -38,11 +38,9 @@ CONCAT_WS ( separator, argument1, argument2 [, argumentN]... )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引數
-separator  
-任何字元類型 (`char`、`nchar`、`nvarchar` 或 `varchar`) 的運算式。
+*separator* 屬於任何字元型別的運算式 (`char`、`nchar`、`nvarchar` 或 `varchar`)。
 
-引數1、引數2、引數*N*  
-任意類型的運算式。
+*argument1、argument2、argumentN* 屬於任何型別的運算式。 `CONCAT_WS` 函式需要至少兩個引數，而且不能超過 254 個引數。
 
 ## <a name="return-types"></a>傳回類型
 長度和類型取決於輸入的字串值。

@@ -1,6 +1,6 @@
 ---
 title: 開始使用可用性群組
-description: 設定 Always On 可用性群組時所需步驟的檢查清單。
+description: 了解設定 SQL Server 執行個體以支援 Always On 可用性群組，以及建立、管理和監視可用性群組的步驟。
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2d5232cbf132e8fe84865dea9e64092692757c14
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 8391f41c1024d8bf747aace5acd5571aad4284b2
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362667"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565006"
 ---
 # <a name="getting-started-with-always-on-availability-groups"></a>開始使用 Always On 可用性群組
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

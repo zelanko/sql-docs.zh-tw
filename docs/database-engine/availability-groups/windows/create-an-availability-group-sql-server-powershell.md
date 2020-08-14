@@ -1,6 +1,6 @@
 ---
 title: 使用 PowerShell 建立可用性群組
-description: 使用 PowerShell 建立 Always On 可用性群組的步驟。
+description: 了解如何使用 PowerShell，在 SQL Server 2019 (15.x) 中透過 PowerShell Cmdlet 建立及設定 Always On 可用性群組。
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0c95d637be4cca7bb43059871e4fab8ac33b3244
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5fa87f11c5a36b3d130709ac5a95c5dba5ba0ee9
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883574"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565264"
 ---
 # <a name="create-an-always-on-availability-group-using-powershell"></a>使用 PowerShell 建立 Always On 可用性群組
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -16,12 +16,12 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0e39946071c85dff0c1e29f6f36e6bafe910f77d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0fba95ecd1553bcd090cbf7ef987728bd17b712d
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774001"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863346"
 ---
 # <a name="configure-publishing-and-distribution"></a>設定發行和散發
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "85774001"
 
 2. 在散發者 (同時也是發行者) 上執行 [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)，指定將作為 `@working_directory` 預設快照集資料夾使用的 UNC 共用。
 
-   若是 SQL Database 受控執行個體上的散發者，請為 `@working_directory` 使用 Azure 儲存體帳戶，並為 `@storage_connection_string` 使用儲存體存取金鑰。 
+   針對 SQL 受控執行個體上的散發者，請為 `@working_directory` 使用 Azure 儲存體帳戶，並為 `@storage_connection_string` 使用儲存體存取金鑰。 
 
 3. 在發行者上，執行 [sp_replicationdboption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)。 針對 `@dbname` 指定發行的資料庫、針對 `@optname` 指定複寫的類型，並針對 `@value` 指定 `true` 的值。
 
@@ -80,7 +80,7 @@ ms.locfileid: "85774001"
 
 2. 在散發者上執行 [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)，指定將作為 `@working_directory` 預設快照集資料夾使用的 UNC 共用。 如果散發者將在與發行者連線時使用「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證」，則也必須針對 `@security_mode` 指定 `0` 的值，並針對 `@login` 和 `@password` 指定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入資訊。
 
-   若是 SQL Database 受控執行個體上的散發者，請為 `@working_directory` 使用 Azure 儲存體帳戶，並為 `@storage_connection_string` 使用儲存體存取金鑰。 
+   針對 SQL 受控執行個體上的散發者，請為 `@working_directory` 使用 Azure 儲存體帳戶，並為 `@storage_connection_string` 使用儲存體存取金鑰。 
 
 3. 在 master 資料庫的發行者上，執行 [sp_adddistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)。 針對 `@password` 指定步驟 1 中使用的強式密碼。 這個密碼將會由發行者連接到散發者時使用。
 

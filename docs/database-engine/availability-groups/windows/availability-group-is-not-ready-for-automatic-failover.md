@@ -1,6 +1,6 @@
 ---
 title: 可用性群組尚未就緒，無法自動容錯
-description: 找出 Always On 可用性群組尚未準備進行容錯移轉的可能原因。
+description: 了解如何找出 Always On 可用性群組尚未準備進行容錯移轉的可能原因。
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d23e33effa5913689e4886c7a8fac6bf42cd9b7b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 79992ce77b803858c86d4bace6b9f6b128688447
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900879"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565578"
 ---
 # <a name="always-on-availability-group-is-not-ready-for-automatic-failover"></a>Always On 可用性群組尚未準備進行自動容錯移轉
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

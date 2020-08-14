@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 07/17/2020
-ms.openlocfilehash: b064c24ff7717fc5a03ee1413b1e85fbb71530dc
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 4a8f50b7a6558974c79f01f3d157715890beeb82
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411259"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988562"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的版本資訊
 
@@ -47,7 +47,7 @@ ms.locfileid: "87411259"
 | 新增功能導覽 | 在歡迎頁面與命令選擇區中，使用者現在可以啟動功能導覽，以取得常用功能的逐步解說，包括連線 Viewlet、Notebooks Viewlet，以及延伸模組 Marketplace |
 | 新增 Notebook 功能 | &bull; &nbsp; Markdown 工具列中的標頭支援<br/> &bull; &nbsp; 文字資料格中的並排 Markdown 預覽
 | 在查詢編輯器中拖放資料行與資料表 | 使用者現在可以將資料行與資料表直接從連線 viewlet 拖放到查詢編輯器 |
-| Azure 帳戶圖示已新增至活動列) | 更容易探索以登入 Azure |
+| 已新增 Azure 帳戶圖示至活動列 | 使用者現在可以輕鬆地查看要從哪裡登入 Azure |
 | 已解決的 Bug 和問題 | 如需完整的修正清單，請參閱 [GitHub 上的 Bug 和問題](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22July+2020+Release%22+is%3Aclosed) \(英文\)。 |
 | &nbsp; | &nbsp; |
 
@@ -60,7 +60,7 @@ ms.locfileid: "87411259"
 
 | 變更 | 詳細資料 |
 | :----- | :------ |
-| 已將 Azure Data Studio 新增至 Azure 入口網站整合 | 使用者現在可直接從 Azure SQL DB 連線、Azure Postgres 等啟動 Azure 入口網站。 |
+| 已將 Azure Data Studio 新增至 Azure 入口網站整合 | 使用者現在可直接從 Azure SQL Database 連線、Azure Postgres 等啟動至 Azure 入口網站。 |
 | 新增 Notebook 功能 | &bull; &nbsp; 新增筆記本工具列 <br/> &bull; &nbsp; 新增編輯儲存格工具列 <br/> &bull; &nbsp; Python 相依性精靈 UX 更新 <br/> &bull; &nbsp; 筆記本之間改善的間距 |
 | 宣告 SQL 評定 API 延伸模組 | 此延伸模組會在 ADS 中新增 SQL Server 最佳做法評定。 其會公開先前僅適用於 PowerShell SqlServer 課程模組與 SMO 的 SQL 評定 API，以供評估 SQL Server 執行個體，以及透過 SQL Server 小組接收建議。 了解有關 SQL 評定 API，以及其在[本文](https://docs.microsoft.com/sql/sql-assessment-api/sql-assessment-api-overview?view=sql-server-ver15)中的功能。 |
 | [機器學習延伸模組的改善](https://go.microsoft.com/fwlink/?linkid=2129918) | 現在支援 Azure SQL 受控執行個體。 |
@@ -489,7 +489,7 @@ ms.locfileid: "87411259"
 
 ### <a name="bug-fixes-november-2018"></a>Bug 修正，2018 年 11 月
 
-- 修正[問題 #2933](https://github.com/Microsoft/azuredatastudio/issues/2933) \(英文\)：與 Azure SQL DB 的連線中斷
+- 修正[問題 #2933](https://github.com/Microsoft/azuredatastudio/issues/2933) \(英文\)：與 Azure SQL Database 的連線中斷
 - 修正[問題 #2914](https://github.com/Microsoft/azuredatastudio/issues/2914) \(英文\)：擴充 OE 資料庫節點時發生「無效引數」例外狀況
 - 修正[問題 #2935](https://github.com/Microsoft/azuredatastudio/pull/2935) \(英文\)：在查詢結果中正確顯示多行訊息
 - 修正[問題 #2906](https://github.com/Microsoft/azuredatastudio/pull/2906) \(英文\)：修正在資料表名稱包含特殊字元時編輯資料檔案名稱
@@ -546,7 +546,7 @@ Azure Data Studio 的正式發行版本 (先前稱為 SQL Operations Studio)。
 | :----- | :------ |
 | 支援 SQL Server 2019 預覽功能，包括[巨量資料叢集](../big-data-cluster/big-data-cluster-overview.md)支援。 | 連線到 SQL Server 2019 Preview 隨附的 HDFS/Spark 閘道。<br/><br/>瀏覽 HDFS、上傳檔案、儲存檔案，以及啟動實用的動作，例如，在 Notebook 中分析 CSV 檔案。<br/><br/>從儀表板提交 Spark 作業，或以滑鼠右鍵按一下 [物件總管] 中的 HDFS/Spark 連線。 |
 | Azure Data Studio Notebooks。 | 使用整合式 Notebook 檢視器建立或開啟 Notebook。 在此版本中，Notebook 檢視器僅支援連線到本機核心與 SQL Server 2019 巨量資料叢集。<br/><br/>在您的 Notebook 中使用 PROSE 程式碼加速器程式庫來了解檔案格式和資料類型，以便快速進行資料準備。 |
-| Azure 資源總管。 | [Azure 資源總管] 檢視可讓您瀏覽 Azure 帳戶的資料相關端點，並在 [物件總管] 中建立與它們的連線。 此版本支援 Azure SQL Database 與伺服器。 |
+| Azure 資源總管。 | [Azure 資源總管] 檢視可讓您瀏覽 Azure 帳戶的資料相關端點，並在 [物件總管] 中建立與它們的連線。 在此版本中，支援 Azure SQL Database。 |
 | SQL Server PolyBase 的建立外部資料表精靈。 | 使用簡單易用的精靈，來建立外部資料表及其支援的中繼資料結構。 在此版本中，支援遠端 SQL Server 和 Oracle 伺服器。 |
 | &nbsp; | &nbsp; |
 

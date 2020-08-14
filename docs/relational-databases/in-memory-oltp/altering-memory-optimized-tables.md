@@ -12,12 +12,12 @@ ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db339d9063378b29f6902f7e52e3006ac57295b7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 60acfdfb738542c39c5974691811c482e36b9f9e
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85776077"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863332"
 ---
 # <a name="altering-memory-optimized-tables"></a>改變記憶體最佳化資料表
 
@@ -26,7 +26,7 @@ ms.locfileid: "85776077"
 使用 ALTER TABLE 陳述式，可以在記憶體最佳化資料表上執行結構描述與索引變更。 在 SQL Server 2016 和 Azure SQL Database 中，記憶體最佳化資料表的 ALTER TABLE 作業是「離線」，表示當作業正在進行時，資料表不提供查詢。 資料庫應用程式可以繼續執行，但會封鎖任何存取資料表的作業，直到改變程序完成。 單一的 ALTER TABLE 陳述式中可以合併多個 ADD、DROP 或 ALTER 作業。
 
 > [!IMPORTANT]
-> Azure SQL Database 受控執行個體不支援一般用途服務層級中的記憶體最佳化資料表。
+> Azure SQL 受控執行個體不支援一般用途服務層級中經記憶體最佳化的資料表。
   
 ## <a name="alter-table"></a>ALTER TABLE  
 

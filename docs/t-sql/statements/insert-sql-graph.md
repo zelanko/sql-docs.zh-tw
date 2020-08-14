@@ -1,6 +1,6 @@
 ---
 title: INSERT (SQL Graph) | Microsoft Docs
-description: SQL Graph 節點或邊緣資料表的 INSERT 語法。
+description: 了解在 SQL Server 中，將一或多個資料列新增至 SQL Graph 節點或邊緣資料表的 INSERT 陳述式語法、權限與引數。
 ms.date: 05/12/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +17,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f772d95923a7fcfe3dce8bafaf4382be71ccce54
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 7ffd99a9291e35024d1c8a209569e399b71b53de
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484504"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87899803"
 ---
 # <a name="insert-sql-graph"></a>INSERT (SQL Graph)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]

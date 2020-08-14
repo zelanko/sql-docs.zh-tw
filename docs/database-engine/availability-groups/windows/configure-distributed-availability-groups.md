@@ -1,6 +1,6 @@
 ---
 title: 設定分散式可用性群組
-description: '描述如何建立和設定 Always On 分散式可用性群組。 '
+description: 了解如何使用 Transact-SQL 範例來設定分散式可用性群組。 一併了解可在哪裡找到分散式可用性群組的相關資訊。
 ms.custom: seodec18
 ms.date: 01/28/2020
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d5bd6d960b30d6c6b261de96ba93ae558e71e866
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 629aceee12a89498d763fde2d3510f69e0cde452
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896134"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565265"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>設定 Always On 分散式可用性群組  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ GO
 ## <a name="create-first-availability-group"></a>建立第一個可用性群組
 
 ### <a name="create-the-primary-availability-group-on-the-first-cluster"></a>在第一個叢集上建立主要可用性群組  
-在第一個 Windows Server 容錯移轉叢集 (WSFC) 上建立可用性群組。   在此範例中，會針對資料庫 `ag1` 將可用性群組命名為 `db1`。 主要可用性群組的主要複本在分散式可用性群組中稱為「全域主要」  。 Server1 在此範例中是全域主要。        
+在第一個 Windows Server 容錯移轉叢集 (WSFC) 上建立可用性群組。   在此範例中，會針對資料庫 `ag1` 將可用性群組命名為 `db1`。 主要可用性群組的主要複本在分散式可用性群組中稱為「全域主要」****。 Server1 在此範例中是全域主要。        
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag1]   
@@ -111,7 +111,7 @@ GO
   
 
 ## <a name="create-second-availability-group"></a>建立第二個可用性群組  
- 接著在第二個 WSFC 上，建立第二個可用性群組 `ag2`。 在此案例中未指定資料庫，因為其會從主要可用性群組自動植入。  次要可用性群組的主要複本在分散式可用性群組中稱為「轉寄站」  。 在此範例中，server3 是轉寄站。 
+ 接著在第二個 WSFC 上，建立第二個可用性群組 `ag2`。 在此案例中未指定資料庫，因為其會從主要可用性群組自動植入。  次要可用性群組的主要複本在分散式可用性群組中稱為「轉寄站」****。 在此範例中，server3 是轉寄站。 
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag2]   
@@ -181,7 +181,7 @@ GO
 
 ### <a name="cancel-automatic-seeding-to-forwarder"></a>取消自動植入轉寄站
 
-無論出於什麼原因，若在同步兩個可用性群組「之前」  必須取消轉寄站的初始化，請透過將轉寄站的 SEEDING_MODE 參數設為 MANUAL 並立即取消植入來 ALTER 分散式可用性群組。 在全域主要上執行命令： 
+無論出於什麼原因，若在同步兩個可用性群組「之前」__ 必須取消轉寄站的初始化，請透過將轉寄站的 SEEDING_MODE 參數設為 MANUAL 並立即取消植入來 ALTER 分散式可用性群組。 在全域主要上執行命令： 
 
 ```sql
 -- Cancel automatic seeding.  Connect to global primary but specify DAG AG2
@@ -236,7 +236,7 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 
 下列 Transact-SQL 範例說明對名為 `distributedag` 的分散式可用性群組進行容錯移轉的詳細步驟：
 
-1. 若要確保不會遺失任何資料，請停止全域主要資料庫 (也就是主要可用性群組的資料庫) 上的所有交易。 然後透過「同時」  在全域主要與轉寄站上執行下列程式碼，以將分散式可用性群組設定為同步認可。   
+1. 若要確保不會遺失任何資料，請停止全域主要資料庫 (也就是主要可用性群組的資料庫) 上的所有交易。 然後透過「同時」在全域主要與轉寄站上執行下列程式碼，以將分散式可用性群組設定為同步認可。   
     
       ```sql  
       -- sets the distributed availability group to synchronous commit 

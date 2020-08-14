@@ -27,12 +27,12 @@ ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23d39a7b7149f6ac75873389c1ac90c6daca8a90
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 73b805149ca1061c73572d742875fa11d9d81b23
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483919"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931692"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -86,7 +86,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 -   如果 READ_COMMITTED_SNAPSHOT 設為 OFF (SQL Server 上的預設)，當目前交易正在執行讀取作業時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會利用共用鎖定來防止其他交易修改資料列。 共用鎖定也會封鎖陳述式，使它們在其他交易完成之前，無法讀取其他交易所修改的資料列。 共用鎖定類型會決定釋放的時機。 資料列鎖定會在處理下一個資料列之前釋放。 頁面鎖定會在讀取下一個頁面時釋放，而資料表鎖定會在陳述式完成時釋放。  
   
--   如果 READ_COMMITTED_SNAPSHOT 設為 ON (SQL Azure Database 上的預設)，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會利用資料列版本設定，依照資料在陳述式開始時就存在的狀態，向每個陳述式提供具有交易一致性的資料快照集。 鎖定的使用目的不是為了防止其他交易更新資料。
+-   如果 READ_COMMITTED_SNAPSHOT 設定為 ON (Azure SQL Database 上的預設值)，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會利用資料列版本設定，依照資料在陳述式開始時就存在的狀態，向每個陳述式提供具有交易一致性的資料快照集。 鎖定的使用目的不是為了防止其他交易更新資料。
 
 > [!IMPORTANT]  
 > 選擇交易隔離等級並不會影響為保護資料修改所取得的鎖定。 交易永遠都會取得它所修改之資料的獨佔鎖定，並保留該鎖定直到交易完成為止，不論為該交易所設定的隔離等級為何皆同。 此外，在 READ_COMMITTED 隔離等級所做的更新會於選取的資料列上使用更新鎖定，而在 SNAPSHOT 隔離等級所做的更新使用資料列版本來選取要更新的資料列。 對於讀取作業，交易隔離等級主要是定義對於其他交易所做修改之影響的保謢等級。 如需詳細資訊，請參閱[交易鎖定與資料列版本設定指南](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)。

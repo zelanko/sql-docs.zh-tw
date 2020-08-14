@@ -24,12 +24,12 @@ ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 4690f82c1ae731a25edce6dbe0b36d7b31d448f2
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 0f87466ebfccaaf69b970386865af68275e83e10
+ms.sourcegitcommit: 95be98587f6a3730ca75a77676dd952c45e4f53a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392826"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88046593"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 
@@ -89,7 +89,7 @@ FOR CRYPTOGRAPHIC PROVIDER *cryptographic_provider_name* 指定*企業金鑰管�
 
 ## <a name="examples"></a>範例
 
-### <a name="a-basic-example"></a>A. 基本範例
+### <a name="a-creating-a-credential-for-windows-identity"></a>A. 建立 Windows 身分識別的認證
 
 下列範例會建立一個稱為 `AlterEgo` 的認證。 這個認證包含 Windows 使用者 `Mary5` 和密碼。
 
@@ -145,7 +145,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 
 ### <a name="d-creating-a-credential-using-a-sas-token"></a>D. 使用 SAS 權杖建立認證
 
-**適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到[目前的版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)以及 Azure SQL Database 中的受控執行個體。
+**適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)與 Azure SQL 受控執行個體。
 
 下列範例會使用 SAS 權杖來建立共用存取簽章憑證。 如需在 Azure 容器上建立預存存取原則和共用存取簽章，再使用共用存取簽章來建立認證的教學課程，請參閱[教學課程：搭配 SQL Server 2016 資料庫使用 Microsoft Azure Blob 儲存體服務](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。
 
@@ -159,6 +159,15 @@ USE master
 CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] -- this name must match the container path, start with https and must not contain a trailing forward slash.
     WITH IDENTITY='SHARED ACCESS SIGNATURE' -- this is a mandatory string and do not change it.
     , SECRET = 'sharedaccesssignature' -- this is the shared access signature token
+GO
+```
+
+### <a name="e-creating-a-credential-for-managed-identity"></a>E. 建立受控識別的認證
+
+下列範例會建立代表 Azure SQL 受控識別或 Azure Synapse 服務的認證。 在此情況下，密碼與祕密並不適用。
+
+```sql
+CREATE CREDENTIAL ServiceIdentity WITH IDENTITY = 'Managed Identity';
 GO
 ```
 

@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 11994d1dc3ec931f729c2739a107848464ed7f8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e93398b38e2fff73e63013fd0bfc1c4bedc31a43
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781690"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988762"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>使用 DAC 來部署資料庫
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  使用 [將資料庫部署到 SQL Azure]  精靈，在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體與 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 伺服器之間部署資料庫，或在兩個 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]伺服器之間部署資料庫。  
+  使用 [將資料庫部署到 Microsoft Azure SQL Database] 精靈在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 與 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 伺服器的執行個體之間，或在兩部 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 伺服器之間部署資料庫。  
   
 ##  <a name="before-you-begin"></a><a name="BeforeBegin"></a> 開始之前  
  精靈會使用資料層應用程式 (DAC) BACPAC 封存檔案，來部署資料和資料庫物件的定義。 它會從來源資料庫執行 DAC 匯出作業並對目的地資料庫執行 DAC 匯入。  
@@ -68,7 +68,7 @@ ms.locfileid: "85781690"
   
 3.  展開 **[資料庫]** 節點。  
   
-4.  以滑鼠右鍵按一下您要部署的資料庫，選取 [工作]  ，然後選取 [將資料庫部署到 SQL Azure...]   
+4.  以滑鼠右鍵按一下您要部署的資料庫、選取 [工作]，然後選取 [將資料庫部署到 Microsoft Azure SQL Database]。  
   
 5.  完成精靈對話方塊：  
   

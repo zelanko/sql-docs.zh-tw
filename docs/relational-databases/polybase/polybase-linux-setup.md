@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 117620c170b183b12d06eb717cfc1bb4b2dc559c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f72635a68b0b47a29151d45d2bf1e32e85c1f1bc
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77173563"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823573"
 ---
 # <a name="install-polybase-on-linux"></a>在 Linux 上安裝 PolyBase
 
@@ -157,7 +157,7 @@ sudo systemctl restart mssql-server
 
 Linux 上的 PolyBase 可以存取下列資料來源。 如需如何從這些 PolyBase 啟用來源建立外部資料表的詳細資訊，請遵循所提供的連結。 
 
-- [SQL Server (與 SQL DB、Azure SQL DW)](../../relational-databases/polybase/polybase-configure-sql-server.md)
+- [SQL Server ( 與 SQL Database、Azure SQL 資料倉儲)](../../relational-databases/polybase/polybase-configure-sql-server.md)
 - [Oracle](../../relational-databases/polybase/polybase-configure-oracle.md)
 - [Teradata](../../relational-databases/polybase/polybase-configure-teradata.md)
 - [MongoDB (與 Cosmos DB)](../../relational-databases/polybase/polybase-configure-mongodb.md)

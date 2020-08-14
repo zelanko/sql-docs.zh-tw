@@ -2,7 +2,7 @@
 title: Microsoft SQL Server 中的純量 UDF 內嵌 | Microsoft Docs
 description: 純量 UDF 內嵌功能可針對在 SQL Server (從 SQL Server 2019 開始) 中叫用純量 UDF 的查詢來改善其效能。
 ms.custom: ''
-ms.date: 06/23/2020
+ms.date: 08/04/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: b1a8d91cc9da7cb0707211464e53b2cccaf0a111
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: 0d9a618e8170d08250c15c75e83d5d2dbc627447
+ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435585"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87790301"
 ---
 # <a name="scalar-udf-inlining"></a>純量 UDF 內嵌
 
@@ -164,6 +164,9 @@ SELECT C_NAME, dbo.customer_category(C_CUSTKEY) FROM CUSTOMER;
 - UDF 不包含多個 RETURN 陳述式 <sup>6</sup>。
 - 不會從 RETURN 陳述式呼叫 UDF <sup>6</sup>。
 - UDF 不會參考 `STRING_AGG` 函式 <sup>6</sup>。 
+- UDF 不會參考遠端資料表 <sup>7</sup>。
+- UDF 呼叫查詢不會使用 `GROUPING SETS`、`CUBE` 或 `ROLLUP` <sup>7</sup>。
+- UDF 呼叫查詢並未包含作為指派之 UDF 參數使用的變數 (例如，`SELECT @y = 2`、`@x = UDF(@y)`)<sup>7</sup>。
 
 <sup>1</sup> 內嵌不支援具有變數累積/彙總的 `SELECT` (例如 `SELECT @val += col1 FROM table1`)。
 
@@ -176,6 +179,8 @@ SELECT C_NAME, dbo.customer_category(C_CUSTKEY) FROM CUSTOMER;
 <sup>5</sup> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU4 中新增的限制
 
 <sup>6</sup> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 中新增的限制
+
+<sup>7</sup> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 中新增的限制
 
 > [!NOTE]
 > 如需最新的 T-SQL 純量 UDF 內嵌修正和內嵌資格案例變更的資訊，請參閱知識庫文章：[修正：SQL Server 2019 中的純量 UDF 內嵌問題](https://support.microsoft.com/help/4538581) \(機器翻譯\)。

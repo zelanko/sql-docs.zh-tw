@@ -25,12 +25,12 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6e25763f585f063eeb25fd512b65a3e51c070e5
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 5626b98f81bcca2a21902cf0d38f44a256fa73e0
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394663"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988453"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 
@@ -47,7 +47,7 @@ ms.locfileid: "87394663"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />單一資料庫/彈性集區](alter-user-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [SQL Database<br />受控執行個體](alter-user-transact-sql.md?view=azuresqldb-mi-current)
@@ -222,7 +222,7 @@ GO
         [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />單一資料庫/彈性集區 \*_**
+        **_\* SQL Database \*_**
     :::column-end:::
     :::column:::
         [SQL Database<br />受控執行個體](alter-user-transact-sql.md?view=azuresqldb-mi-current)
@@ -237,7 +237,7 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL Database 單一資料庫/彈性集區
+## <a name="sql-database"></a>SQL Database
 
 ## <a name="syntax"></a>語法
 
@@ -407,7 +407,7 @@ GO
         [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />單一資料庫/彈性集區](alter-user-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         **_\* SQL Database<br />受控執行個體 \*_**
@@ -422,16 +422,16 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 受控執行個體
+## <a name="azure-sql-managed-instance"></a>Azure SQL 受控執行個體
 
 ## <a name="syntax"></a>語法
 
 > [!IMPORTANT]
-> 套用至使用 Azure AD 登入的使用者時，Azure SQL Database 受控執行個體只支援下列選項：`DEFAULT_SCHEMA = { schemaName | NULL }` 和 `DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }`
-> </br> </br> 已新增新的語法延伸模組，可協助重新對應已移轉至受控執行個體資料庫中的使用者。 ALTER USER 語法可協助將具有 Azure AD 同盟及同步網域中的資料庫使用者對應到 Azure AD 登入。
+> 套用至使用 Azure AD 登入的使用者時，Azure SQL 受控執行個體只支援下列選項：`DEFAULT_SCHEMA = { schemaName | NULL }` 與 `DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }`
+> </br> </br> 已新增新的語法延伸模組，可協助重新對應已移轉至 Azure SQL 受控執行個體資料庫中的使用者。 ALTER USER 語法可協助將具有 Azure AD 同盟及同步網域中的資料庫使用者對應到 Azure AD 登入。
 
 ```syntaxsql
--- Syntax for Azure SQL Database managed instance
+-- Syntax for SQL Managed Instance
 ALTER USER userName
  { WITH <set_item> [ ,...n ] | FROM EXTERNAL PROVIDER }
 [;]
@@ -521,7 +521,7 @@ ALTER USER userName
  WITH LOGIN 子句可讓使用者重新對應到另一個登入。 沒有登入的使用者、對應至憑證或對應至非對稱金鑰的使用者，都無法使用這個子句來重新對應。 只有 SQL 使用者和 Windows 使用者 (或群組) 才能重新對應。 WITH LOGIN 子句無法用來變更使用者的類型，例如將 Windows 帳戶變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 唯一的例外是將 Windows 使用者變更為 Azure AD 使用者時。
 
 > [!NOTE]
-> 下列規則不適用於受控執行個體上的 Windows 使用者，因為不支援在受控執行個體上建立 Windows 登入。 只有 Azure AD 登入存在時，才能使用 WITH LOGIN 選項。
+> 下列規則不適用於 Azure SQL 受控執行個體上的 Windows 使用者，因為不支援在 Azure SQL 受控執行個體上建立 Windows 登入。 只有 Azure AD 登入存在時，才能使用 WITH LOGIN 選項。
 
  如果下列條件成立，使用者的名稱將會自動重新命名為登入名稱。
 
@@ -540,21 +540,21 @@ ALTER USER userName
 > [!CAUTION]
 > [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]
 
-### <a name="remarks-for-windows-users-in-sql-on-premises-migrated-to-managed-instance"></a>將 SQL 內部部署中 Windows 使用者移轉到受控執行個體的備註
+### <a name="remarks-for-windows-users-in-sql-on-premises-migrated-to-azure-sql-managed-instance"></a>將 SQL 內部部署中的 Windows 使用者移轉到 Azure SQL 受控執行個體的備註
 
 這些備註適用於透過已使用 Azure AD 同盟及同步的 Windows 使用者進行驗證。
 
 > [!NOTE]
-> 建立完成後的受控執行個體 Azure AD 管理員已變更。 如需詳細資訊，請參閱 [MI 的新 Azure AD 管理員功能](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)。
+> 建立完成後的 Azure SQL 受控執行個體 Azure AD 管理員功能已變更。 如需詳細資訊，請參閱 [MI 的新 Azure AD 管理員功能](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)。
 
 - 在用於移轉用途的 ALTER USER 語法所有版本中，根據預設，對應至 Azure AD 的 Windows 使用者或群組驗證是透過圖形 API 執行。
 - 已建立別名 (使用與原始 Windows 帳戶不同的名稱) 的內部部署使用者會保留其別名。
-- 針對 Azure AD 驗證，LOGIN 參數僅適用於受控執行個體，無法與 SQL 資料庫搭配使用。
+- 針對 Azure AD 驗證，LOGIN 參數僅適用於 Azure SQL 受控執行個體，無法與 SQL Database 搭配使用。
 - 若要檢視 Azure AD 主體的登入，請使用下列命令：`select * from sys.server_principals`。
 - 檢查登入的指定類型為 `E` 或 `X`。
 - PASSWORD 選項無法用於 Azure AD 使用者。
 - 在所有移轉案例中，Windows 使用者或群組的角色和權限將會自動傳輸到新 Azure AD 使用者或群組。
-- 新語法延伸模組 **FROM EXTERNAL PROVIDER** 可用來將 SQL 內部部署的 Windows 使用者和群組更改成 Azure AD 使用者和群組。 Windows 網域必須與 Azure AD 同盟，且在使用此延伸模組時，所有 Windows 網域成員都必須存在於 Azure AD 中。 **FROM EXTERNAL PROVIDER** 語法適用於受控執行個體，且應在 Windows 使用者於原始 SQL 執行個體上不具有登入，且需要對應到獨立 Azure AD 資料庫使用者時使用。
+- 新語法延伸模組 **FROM EXTERNAL PROVIDER** 可用來將 SQL 內部部署的 Windows 使用者和群組更改成 Azure AD 使用者和群組。 Windows 網域必須與 Azure AD 同盟，且在使用此延伸模組時，所有 Windows 網域成員都必須存在於 Azure AD 中。 **FROM EXTERNAL PROVIDER** 語法適用於 Azure SQL 受控執行個體，且應在 Windows 使用者於原始 SQL 執行個體上不具有登入，且需要對應到獨立 Azure AD 資料庫使用者時使用。
 - 在此情況下，允許的 userName 可以是：
 - Windows 使用者 (_domain\user_)。
 - Windows 群組 (_MyWindowsGroup_)。
@@ -628,13 +628,13 @@ GO
 
 ### <a name="d-map-the-user-in-the-database-to-an-azure-ad-login-after-migration"></a>D. 在移轉後將資料庫中的使用者對應到 Azure AD 登入
 
-下列範例會將使用者 `westus/joe` 重新對應到 Azure AD 使用者 `joe@westus.com`。 此範例適用於已存在於受控執行個體中的登入。 在您完成資料庫移轉至受控執行個體，且想要使用 Azure AD 登入進行驗證時，便需要執行此動作。
+下列範例會將使用者 `westus/joe` 重新對應到 Azure AD 使用者 `joe@westus.com`。 此範例適用於已存在於受控執行個體中的登入。 在您完成資料庫移轉至 Azure SQL 受控執行個體，且想要使用 Azure AD 登入進行驗證時，便需要執行此動作。
 
 ```sql
 ALTER USER [westus/joe] WITH LOGIN = joe@westus.com
 ```
 
-### <a name="e-map-an-old-windows-user-in-the-database-without-a-login-in-managed-instance-to-an-azure-ad-user"></a>E. 將資料庫中於受控執行個體上不具有登入的舊 Windows 使用者對應到 Azure AD 使用者
+### <a name="e-map-an-old-windows-user-in-the-database-without-a-login-in-azure-sql-managed-instance-to-an-azure-ad-user"></a>E. 將資料庫中於 Azure SQL 受控執行個體上不具有登入的舊 Windows 使用者對應到 Azure AD 使用者
 
 下列範例會將不具有登入的使用者 `westus/joe` 重新對應到 Azure AD 使用者 `joe@westus.com`。 Azure AD 中必須存在該同盟使用者。
 
@@ -650,7 +650,7 @@ ALTER USER [westus/joe] FROM EXTERNAL PROVIDER
 ALTER USER [westus/joe] WITH LOGIN = joe@westus.com, name= joe_alias
 ```
 
-### <a name="g-map-a-windows-group-that-was-migrated-in-managed-instance-to-an-azure-ad-group"></a>G. 將受控執行個體中已移轉的 Windows 群組對應到 Azure AD 群組
+### <a name="g-map-a-windows-group-that-was-migrated-in-azure-sql-managed-instance-to-an-azure-ad-group"></a>G. 將 Azure SQL 受控執行個體中已移轉的 Windows 群組對應到 Azure AD 群組
 
 下列範例會將舊內部部署群組 `westus\mygroup` 重新對應到受控執行個體中的 Azure AD 群組 `mygroup`。 Azure AD 中必須存在該群組。
 
@@ -665,7 +665,7 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
 - [自主資料庫](../../relational-databases/databases/contained-databases.md)
 - [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)
 - [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
-- [教學課程：使用 T-SQL DDL 語法將 SQL Server 內部部署 Windows 使用者和群組移轉至 Azure SQL Database 受控執行個體](/azure/sql-database/tutorial-managed-instance-azure-active-directory-migration)
+- [教學課程：使用 T-SQL DDL 語法將 SQL Server 內部部署 Windows 使用者與群組移轉至 SQL 受控執行個體](/azure/sql-database/tutorial-managed-instance-azure-active-directory-migration)
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
@@ -675,7 +675,7 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
         [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />單一資料庫/彈性集區](alter-user-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [SQL Database<br />受控執行個體](alter-user-transact-sql.md?view=azuresqldb-mi-current)
@@ -800,7 +800,7 @@ GO
         [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />單一資料庫/彈性集區](alter-user-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [SQL Database<br />受控執行個體](alter-user-transact-sql.md?view=azuresqldb-mi-current)

@@ -16,12 +16,12 @@ ms.assetid: 30468a7c-4225-4d35-aa4a-ffa7da4f1282
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 877dc8524c1d87cb83dfa194020454f2d0841d76
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 66f58a7526684384e4533290ee42c4cc75dea1a2
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756120"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864885"
 ---
 # <a name="system-databases"></a>系統資料庫
 
@@ -37,7 +37,7 @@ ms.locfileid: "85756120"
 |[tempdb 資料庫](../../relational-databases/databases/tempdb-database.md)|是保存暫存物件或中繼結果集的工作空間。|  
 
 > [!IMPORTANT]
-> 針對 Azure SQL Database 單一資料庫和彈性集區，只會套用 master 資料庫和 tempdb 資料庫。 如需詳細資訊，請參閱[什麼是 Azure SQL Database 伺服器](https://docs.microsoft.com/azure/sql-database/sql-database-servers#what-is-an-azure-sql-database-server)。 如需 Azure SQL Database 內容中 tempdb 的討論，請參閱 [Azure SQL Database 中的 tempdb 資料庫](tempdb-database.md#tempdb-database-in-sql-database)。 針對 Azure SQL Database 受控執行個體，則會套用所有系統資料庫。 如需有關 Azure SQL Database 中受控執行個體的詳細資訊，請參閱[什麼是受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)
+> 針對 Azure SQL Database 單一資料庫和彈性集區，只會套用 master 資料庫和 tempdb 資料庫。 如需詳細資訊，請參閱[什麼是 Azure SQL Database 伺服器](https://docs.microsoft.com/azure/sql-database/sql-database-servers#what-is-an-azure-sql-database-server)。 如需 Azure SQL Database 內容中 tempdb 的討論，請參閱 [Azure SQL Database 中的 tempdb 資料庫](tempdb-database.md#tempdb-database-in-sql-database)。 針對 Azure SQL 受控執行個體，則會套用所有系統資料庫。 如需有關 Azure SQL Database 中受控執行個體的詳細資訊，請參閱[什麼是受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)
   
 ## <a name="modifying-system-data"></a>修改系統資料  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援使用者直接更新系統物件中的資訊，例如系統資料表、系統預存程序和目錄檢視。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 另外提供了一組完整的管理工具，讓使用者可以完全管理他們的系統，並管理資料庫中所有的使用者與物件。 這些選項包括：  

@@ -1,6 +1,6 @@
 ---
 title: 設定可用性群組的讀取級別
-description: 設定 Always On 可用性群組，供 Windows 上的讀取級別工作負載使用。
+description: 了解如何為 Windows 上的讀取級別工作負載設定您的 SQL Server Always On 可用性群組。
 ms.custom: seodec18
 author: MashaMSFT
 ms.author: mathoma
@@ -9,12 +9,12 @@ ms.date: 05/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: high-availability
-ms.openlocfilehash: ba7827a637c1317500894fcfda85cd1d5122cce7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 89dee4f1fbce612ec3200bf700302f98bd4f9f36
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888108"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565301"
 ---
 # <a name="configure-read-scale-for-an-always-on-availability-group"></a>設定 Always On 可用性群組的讀取級別
 

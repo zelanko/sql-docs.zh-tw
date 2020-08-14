@@ -24,12 +24,12 @@ ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 65f6869d0f4b4dec46d6b27e0f7ef856e4ae20b1
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ef071062597fee3bb8a25b7cf6a866fa0ab393d1
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243519"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988422"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 
@@ -46,7 +46,7 @@ ms.locfileid: "87243519"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />單一資料庫/彈性集區](alter-login-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [SQL Database<br />受控執行個體](alter-login-transact-sql.md?view=azuresqldb-mi-current)
@@ -280,7 +280,7 @@ GO
         [SQL Server](alter-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />單一資料庫/彈性集區 \*_**
+        **_\* SQL Database \*_**
     :::column-end:::
     :::column:::
         [SQL Database<br />受控執行個體](alter-login-transact-sql.md?view=azuresqldb-mi-current)
@@ -295,7 +295,7 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL Database 單一資料庫/彈性集區
+## <a name="sql-database"></a>SQL Database
 
 ## <a name="sql-server"></a>SQL Server
 
@@ -452,7 +452,7 @@ GO
         [SQL Server](alter-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />單一資料庫/彈性集區](alter-login-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         **_\* SQL Database<br />受控執行個體 \*_**
@@ -467,12 +467,12 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 受控執行個體
+## <a name="azure-sql-managed-instance"></a>Azure SQL 受控執行個體
 
 ## <a name="syntax"></a>語法
 
 ```syntaxsql
--- Syntax for SQL Server and Azure SQL Database managed instance
+-- Syntax for SQL Server and Azure SQL Managed Instance
 
 ALTER LOGIN login_name
     {
@@ -511,7 +511,7 @@ ALTER LOGIN login_name
 > 建立完成後的受控執行個體 Azure AD 管理員已變更。 如需詳細資訊，請參閱 [MI 的新 Azure AD 管理員功能](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)。
 
 ```syntaxsql
--- Syntax for Azure SQL Database managed instance using Azure AD logins
+-- Syntax for Azure SQL Managed Instance using Azure AD logins
 
 ALTER LOGIN login_name
   {
@@ -654,7 +654,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 下列範例會將登入 `Mary5` 對應到 EKM 認證 `EKMProvider1`。
 
-**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本，以及 Azure SQL Database 受控執行個體。
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 與更新版本，以及 Azure SQL 受控執行個體。
 
 ```sql
 ALTER LOGIN Mary5
@@ -684,7 +684,7 @@ GO
 
 下列範例會將 `TestUser` 登入密碼變更為已雜湊的值。
 
-**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本，以及 Azure SQL Database 受控執行個體。
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 與更新版本，以及 Azure SQL 受控執行個體。
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -717,7 +717,7 @@ ALTER LOGIN [joe@contoso.com] DISABLE
         [SQL Server](alter-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />單一資料庫/彈性集區](alter-login-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [SQL Database<br />受控執行個體](alter-login-transact-sql.md?view=azuresqldb-mi-current)
@@ -886,7 +886,7 @@ GO
         [SQL Server](alter-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />單一資料庫/彈性集區](alter-login-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [SQL Database<br />受控執行個體](alter-login-transact-sql.md?view=azuresqldb-mi-current)

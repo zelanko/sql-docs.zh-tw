@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1e3f26672d208d848a2cf76707fb92d7b72d5e11
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 211b16d4b03439295c4970449ef61855c09addc4
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775999"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988548"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>註冊 SQL Server 的執行個體 (SQL Server 公用程式)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "85775999"
   
 -   UCP 上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶及 SQL Server 的所有受管理的執行個體都必須具有 Active Directory 使用者的讀取權限。  
   
--   要註冊的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體不可以是 SQL Azure。  
+-   要註冊的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體不可以是 Azure SQL Database。  
   
  在此版本中，UCP 必須滿足下列需求：  
   

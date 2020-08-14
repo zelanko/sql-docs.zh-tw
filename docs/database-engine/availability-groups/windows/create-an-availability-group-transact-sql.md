@@ -1,6 +1,6 @@
 ---
 title: 搭配 Transact-SQL (T-SQL) 建立可用性群組
-description: '使用 Transact-SQL (T-SQL) 建立 Always On 可用性群組的步驟。 '
+description: 使用 Transact-SQL 在已啟用 Always On 可用性群組功能的 SQL Server 2019 (15.x) 執行個體上建立及設定可用性群組。
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 99e3ea99dc2cd41e6bd818a50c32944b07bc4996
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b6ca67706406b74d9579dd234cee6df15959d5b8
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901027"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565262"
 ---
 # <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>使用 Transact-SQL (T-SQL) 建立 Always On 可用性群組
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

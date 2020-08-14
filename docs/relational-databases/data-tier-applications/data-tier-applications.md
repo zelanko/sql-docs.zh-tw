@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f8d91ef65f8beb5194bbb8cbe3b1618d7666e106
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7e7f5fb29c15fbd8532a6852477ed9376df92f72
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781732"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988769"
 ---
 # <a name="data-tier-applications"></a>資料層應用程式
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "85781732"
   
     -   可以使用 SQL Server Management Studio 從現有的資料庫中擷取 DACPAC，也可以執行其他 DAC 作業。  
   
-    -   此外，[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的 DBA 可以使用 SQL Azure 管理入口網站執行 DAC 作業。  
+    -   此外，[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的 DBA 可以使用 Azure 入口網站來執行 DAC 作業。  
   
 -   獨立軟體廠商：  
   
@@ -87,7 +87,7 @@ ms.locfileid: "85781732"
   
 -   **EXTRACT** - 使用者可將資料庫擷取到 DACPAC。  
   
--   **DEPLOY** - 使用者可將 DACPAC 部署到主機伺服器。 從管理功能工具 (如 SQL Server Management Studio 或 SQL Azure 管理入口網站) 完成部署後，主機伺服器上所產生的資料庫會隱含註冊為資料層應用程式。  
+-   **DEPLOY** - 使用者可將 DACPAC 部署到主機伺服器。 從管理功能工具 (如 SQL Server Management Studio 或 Azure 入口網站) 完成部署後，主機伺服器上所產生的資料庫會隱含註冊為資料層應用程式。  
   
 -   **REGISTER** - 使用者可將資料庫註冊為資料層應用程式。  
   

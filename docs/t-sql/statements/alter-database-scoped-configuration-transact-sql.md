@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
-ms.openlocfilehash: 3812f2f7e2f41259416147e969ceb90e395b5bbb
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 698048be11f3514762f27c23ec16bf4ef18041a5
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279494"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864479"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -350,7 +350,7 @@ GLOBAL_TEMPORARY_TABLE_AUTO_DROP **=** { **ON** | OFF }
 允許設定[全域暫存資料表](../../t-sql/statements/create-table-transact-sql.md#temporary-tables)的自動卸除功能。 預設值為 [ON]，表示全域暫存資料表會在沒有任何工作階段使用時自動卸除。 當設為 [OFF] 時，將需要使用 DROP TABLE 陳述式，才能明確卸除全域暫存資料表，或是等到伺服器重新啟動時再自動卸除。
 
 - 使用 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 單一資料庫和彈性集區，此選項可以在 SQL Database 伺服器的個別使用者資料庫中進行設定。
-- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 受控執行個體中，此選項會在 `TempDB` 中設定，且個別使用者資料庫的設定不會有任何效果。
+- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與 Azure SQL 受控執行個體中，此選項會在 `TempDB` 中設定，而且個別使用者資料庫的設定不會有任何效果。
 
 <a name="lqp"></a>
 

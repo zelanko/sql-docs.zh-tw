@@ -1,5 +1,5 @@
 ---
-title: Azure SQL Database 受控執行個體延伸模組
+title: Azure SQL 受控執行個體延伸模組
 description: 搭配 Azure SQL 受控執行個體使用 Azure Data Studio
 ms.custom: seodec18
 ms.date: 10/07/2019
@@ -10,18 +10,18 @@ ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: alanyu
-ms.openlocfilehash: 6a406efdd7c07d2740ebf33b6e84cd7d7175fde2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 58c79a367782f040739b23f52e01bec5cb0ed917
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774704"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988603"
 ---
-# <a name="azure-sql-database-managed-instance-dashboard-for-azure-data-studio-preview"></a>適用於 Azure Data Studio 的 Azure SQL Database 受控執行個體儀表板 (預覽)
+# <a name="azure-sql-managed-instance-dashboard-for-azure-data-studio-preview"></a>適用於 Azure Data Studio 的 Azure SQL 受控執行個體儀表板 (預覽)
 
-Azure SQL Database 受控執行個體延伸模組會提供一個儀表板，以便在 [Azure Data Studio](https://github.com/Microsoft/azuredatastudio) 中使用 [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)。 此延伸模組提供下列功能：
+Azure SQL 受控執行個體延伸模組提供一個儀表板，以便在 [Azure Data Studio](https://github.com/Microsoft/azuredatastudio) 中使用 [Azure SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)。 此延伸模組提供下列功能：
 
-- 顯示受控執行個體屬性，包括虛擬核心和使用的儲存體
+- 顯示 SQL 受控執行個體屬性，包括虛擬核心與已使用的儲存體
 - 監視過去兩小時內的 CPU 和儲存體使用量
 - 顯示設定警告與調整建議
 - 顯示資料庫複本的狀態
@@ -30,7 +30,7 @@ Azure SQL Database 受控執行個體延伸模組會提供一個儀表板，以�
 ## <a name="install"></a>安裝
 
 您可以安裝此延伸模組的正式發行版本。 依照 [Azure Data Studio 文件](https://docs.microsoft.com/sql/azure-data-studio/extensions)中的步驟進行。
-在 [延伸模組]  窗格中搜尋「受控執行個體」，然後在該處進行安裝。 安裝完成之後，您會自動收到任何延伸模組未來更新的相關通知。
+在 [延伸模組] 窗格中，搜尋「受控執行個體」，然後在該處進行安裝。 安裝完成之後，您會自動收到任何延伸模組未來更新的相關通知。
 
 安裝延伸模組之後，您會在 Azure Data Studio 中看到 [受控執行個體]  索引標籤。 您可以在這裡找到受控執行個體的特定資訊。
 
@@ -62,7 +62,7 @@ Azure SQL Database 受控執行個體延伸模組會提供一個儀表板，以�
 - **資料檔限制**。 若您的資料檔達到[一般用途服務層級的檔案 IO 限制](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier)，您可能必須增加檔案大小以取得更好的效能。 此問題可能會導致記憶體壓力並導致備份效能降低。
 - **可用性問題**。 大量的虛擬記錄檔可能會影響效能。 如果發生程序失敗，這類問題可能會導致一般用途服務層級的資料庫復原時間變長。
 
-請定期檢閱這些建議、調查根本原因，並採取矯正問題的措施。 Azure SQL Database 受控執行個體延伸模組提供指令碼讓您執行，以減輕一些回報的問題。
+請定期檢閱這些建議、調查根本原因，並採取矯正問題的措施。 SQL 受控執行個體延伸模組提供指令碼讓您執行，以減輕一些回報的問題。
 
 ## <a name="replicas"></a>複本數
 
@@ -80,11 +80,11 @@ Azure SQL Database 受控執行個體延伸模組會提供一個儀表板，以�
 
 雖然您的受控執行個體會發出大量記錄項目，但它們大部分都是內部/系統資訊。 此外，某些記錄項目會顯示實體資料庫名稱 (`GUID` 值)，而非實際邏輯資料庫名稱。
 
-Azure SQL Database 受控執行個體延伸模組會根據 [Dimitri Furman 方法](https://techcommunity.microsoft.com/t5/DataCAT/Azure-SQL-DB-Managed-Instance-sp-readmierrorlog/ba-p/305506)篩選掉不必要的記錄檔項目。 延伸模組也會顯示實際的邏輯檔案名稱，而不是實體名稱。
+SQL 受控執行個體延伸模組會根據 [Dimitri Furman 方法](https://techcommunity.microsoft.com/t5/DataCAT/Azure-SQL-DB-Managed-Instance-sp-readmierrorlog/ba-p/305506)篩選掉不必要的記錄項目。 延伸模組也會顯示實際的邏輯檔案名稱，而不是實體名稱。
 
 ## <a name="reporting-problems"></a>回報問題
 
-若您遇到 Azure SQL Database 受控執行個體延伸模組的任何問題，請移至[延伸模組 GitHub 專案](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/issues) \(英文\) 並回報您的問題。
+若您遇到 SQL 受控執行個體延伸模組的任何問題，請移至[延伸模組 GitHub 專案](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/issues) \(英文\) 並回報您的問題。
 
 ## <a name="code-of-conduct"></a>管理辦法
 
