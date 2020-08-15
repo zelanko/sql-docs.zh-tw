@@ -1,7 +1,7 @@
 ---
 title: dm_resource_governor_external_resource_pools (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2019
+ms.date: 08/06/2020
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.reviewer: ''
@@ -19,13 +19,13 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ee42a9a7b4fe026df8e9a424ed25224e7a7edb7b
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: bfc975662e2efef22957bb78b03125d67d2188d5
+ms.sourcegitcommit: cd1a5d152d05aeee3252ce313e63d396734f85bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88170977"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88239206"
 ---
 # <a name="sysdm_resource_governor_external_resource_pools-transact-sql"></a>dm_resource_governor_external_resource_pools (Transact-sql) 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -44,16 +44,19 @@ ms.locfileid: "88170977"
 | max_memory_percent|**int**|在此資源集區中，可供要求所用之伺服器記憶體總量百分比的目前組態。 不可為 Null。 |
 | statistics_start_time|**datetime**|重設此集區統計資料時的時間。 不可為 Null。 
 | peak_memory_kb|**bigint**|資源集區使用的記憶體數量上限（以 kb 為單位）。 不可為 Null。 |
-| write_io_count|**int**|重設資源管理員統計資料之後發出的寫入 IO 總數。 不可為 Null。 |
-| read_io_count|**int**|重設資源管理員統計資料之後發出的讀取 IO 總數。 不可為 Null。 |
-| total_cpu_kernel_ms|**bigint**|重設資源管理員之後統計資料後的累計 CPU 使用者核心時間（以毫秒為單位）。 不可為 Null。 |
-| total_cpu_user_ms|**bigint**|已重設資源管理員之後統計資料後的累計 CPU 使用者時間（以毫秒為單位）。 不可為 Null。 |
+| write_io_count|**int**|重設 Resource Governor 統計資料之後發出的寫入 IO 總數。 不可為 Null。 |
+| read_io_count|**int**|重設 Resource Governor 統計資料之後發出的讀取 IO 總數。 不可為 Null。 |
+| total_cpu_kernel_ms|**bigint**|重設 Resource Governor 統計資料之後的累計 CPU 使用者核心時間 (以毫秒為單位)。 不可為 Null。 |
+| total_cpu_user_ms|**bigint**|重設 Resource Governor 統計資料之後的累計 CPU 使用者時間 (以毫秒為單位)。 不可為 Null。 |
 | active_processes_count|**int**|在要求當時正在執行的外部處理序數目。 不可為 Null。 |
 
  
 ## <a name="permissions"></a>權限
 
 需要 `VIEW SERVER STATE` 權限。
+
+> [!NOTE]
+> 適用于 Linux 的 SQL Machine Learning Services 2019 不支援設定 CPU 親和性的能力。
 
 ## <a name="see-also"></a>另請參閱  
  [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  
