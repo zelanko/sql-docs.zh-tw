@@ -1,5 +1,6 @@
 ---
-title: 聯集（MDX） |Microsoft Docs
+description: 'Union (MDX) '
+title: Union (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,14 +9,14 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 170e3764795e1bb6db3fc9589ecf1fe486078633
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b0b4240d6c646761c5d962e4b9fa1ca54e0dcc0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097306"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341204"
 ---
-# <a name="union--mdx"></a>聯集（MDX）
+# <a name="union--mdx"></a>Union (MDX) 
 
 
   傳回兩個集合的聯集而產生的集合，可選擇性地保留重複的成員。  
@@ -38,14 +39,14 @@ Alternate syntax 2
  *設定運算式1*  
  傳回集合的有效多維度運算式 (MDX) 運算式。  
   
- *設定運算式2*  
+ *集合運算式2*  
  傳回集合的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- 此函數會傳回兩個或多個指定集合的聯集。 使用標準語法和替代語法1時，預設會刪除重複專案。 透過標準語法，使用**ALL**旗標會在聯結的集合中保留重複的專案。 從集合結尾刪除重複項。 使用替代語法 2 時，一律會保留重複項。  
+ 此函數會傳回兩個或多個指定集合的聯集。 使用標準語法和替代語法1時，預設會刪除重複項。 使用標準語法時，使用 **ALL** 旗標會在聯結的集合中保留重複專案。 從集合結尾刪除重複項。 使用替代語法 2 時，一律會保留重複項。  
   
 ## <a name="examples"></a>範例  
- 下列範例會使用每個語法來示範**Union**函數的行為。  
+ 下列範例示範如何使用每個語法來執行 **Union** 函數的行為。  
   
 ### <a name="standard-syntax-duplicates-eliminated"></a>標準語法，刪除重複項  
   

@@ -1,4 +1,5 @@
 ---
+description: 其他 dBASE 驅動程式的程式設計詳細資料
 title: 其他 dBASE 驅動程式設計詳細資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 1bb9b727-66e8-49e8-9a6b-587ad6217031
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d47915f9a8b38e450fb8ca9bc9797b748400d82c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 619db7446df56b31504378c0b092be7ff263b483
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81291018"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340484"
 ---
 # <a name="other-dbase-driver-programming-details"></a>其他 dBASE 驅動程式的程式設計詳細資料
 > [!NOTE]  
->  本節提供有關 ODBC 函數和其他程式設計詳細資料的 dBASE 驅動程式特定資訊。 如需函式的一般資訊，請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)底下的適當主題。  
+>  本節提供有關 ODBC 函數和其他程式設計詳細資料的 dBASE 驅動程式特定資訊。 如需有關函數的一般資訊，請參閱 [ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)下的適當主題。  
   
  本節包含下列主題：  
   
@@ -47,4 +48,4 @@ ms.locfileid: "81291018"
   
 -   [SQLTransact (dBASE 驅動程式)](../../odbc/microsoft/sqltransact-dbase-driver.md)  
   
--   [dBASE 索引（dBASE 驅動程式）](../../odbc/microsoft/dbase-indexes.md)
+-   [dbase 驅動程式 (dbase 索引) ](../../odbc/microsoft/dbase-indexes.md)

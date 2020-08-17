@@ -1,5 +1,6 @@
 ---
-title: sys.databases fn_cdc_is_bit_set （Transact-sql） |Microsoft Docs
+description: sys.fn_cdc_is_bit_set (Transact-SQL)
+title: sys. fn_cdc_is_bit_set (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 792fe7cf-b3b8-4f25-8329-78d63f0e6921
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b099f578ebe60a7caaf1f0179af549cd42679c11
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ab93830bd9e2b164f5b76412b2b412dc095c6c9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898374"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321614"
 ---
 # <a name="sysfn_cdc_is_bit_set-transact-sql"></a>sys.fn_cdc_is_bit_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,19 +43,19 @@ sys.fn_cdc_is_bit_set ( position , update_mask )
 ```  
   
 ## <a name="arguments"></a>引數  
- *position*  
- 這是遮罩中要檢查的序數位置。 *position*為**int**。  
+ *位置*  
+ 這是遮罩中要檢查的序數位置。 *位置* 是 **int**。  
   
  *update_mask*  
- 這是識別更新資料行的遮罩。 *update_mask*是**Varbinary （128）**。  
+ 這是識別更新資料行的遮罩。 *update_mask* 是 **Varbinary (128) **。  
   
 ## <a name="return-type"></a>傳回類型  
  **bit**  
   
 ## <a name="remarks"></a>備註  
- 這個函數通常會當做變更資料查詢的一部分使用，以便指出資料行是否已經變更。 在此案例中，會在查詢之前使用[fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md)函數來取得必要的資料行序數。 然後**fn_cdc_is_bit_set**會套用至傳回的每個變更資料列，並提供資料行特定資訊做為傳回結果集的一部分。  
+ 這個函數通常會當做變更資料查詢的一部分使用，以便指出資料行是否已經變更。 在此案例中，函數 [sys. fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md) 會在查詢之前用來取得所需的資料行序數。 接著會將**sys. fn_cdc_is_bit_set**套用至傳回之變更資料的每個資料列，並在傳回的結果集中提供資料行特定資訊。  
   
- 在判斷傳回結果集的所有資料列是否已變更資料行時，我們建議使用此函式，而不是 function [sys. fn_cdc_has_column_changed](../../relational-databases/system-functions/sys-fn-cdc-has-column-changed-transact-sql.md) 。  
+ 當您判斷所傳回結果集的所有資料列是否有變更資料行時，建議使用這個函數，而不是函數 [sys. fn_cdc_has_column_changed](../../relational-databases/system-functions/sys-fn-cdc-has-column-changed-transact-sql.md) 。  
   
 ## <a name="permissions"></a>權限  
  需要 **public** 角色的成員資格。  
@@ -77,9 +78,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;變更資料捕獲函數](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
- [fn_cdc_get_column_ordinal &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md)   
- [fn_cdc_has_column_changed &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-has-column-changed-transact-sql.md)   
+ [異動資料擷取函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
+ [sys. fn_cdc_get_column_ordinal &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md)   
+ [sys. fn_cdc_has_column_changed &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-has-column-changed-transact-sql.md)   
  [cdc. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
  [cdc. fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
  [關於異動資料擷取 &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  

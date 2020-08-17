@@ -1,5 +1,6 @@
 ---
-title: 異地複寫動態管理的查看和功能（Azure SQL Database） |Microsoft Docs
+description: '異地複寫動態管理檢視和函式 (Azure SQL Database) '
+title: 異地複寫動態管理檢視和函式 (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/24/2015
 ms.prod: sql
@@ -16,27 +17,27 @@ ms.assetid: c98a06f6-c205-42f0-9f2a-4668c6103bc8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6dc7aeb2490c016274350afb86a251e3c2466ad5
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 783eeeb91274e80b49f075e7dbf169c41247b2a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942525"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88374894"
 ---
-# <a name="geo-replication-dynamic-management-views-and-functions-azure-sql-database"></a>異地複寫動態管理的查看和功能（Azure SQL Database）
+# <a name="geo-replication-dynamic-management-views-and-functions-azure-sql-database"></a>異地複寫動態管理檢視和函式 (Azure SQL Database) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-  此章節包含下列目錄檢視，可顯示地理複寫的相關資訊。  
+  本章節包含下列目錄檢視，可顯示地理複寫的相關資訊。  
 
 :::row:::
     :::column:::
-        [geo_replication_links &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)
+        [sys. geo_replication_links &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)
 
-        [dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)
+        [sys. dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)
     :::column-end:::
     :::column:::
-        [dm_geo_replication_link_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)
+        [sys. dm_geo_replication_link_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)
 
-        [dm_continuous_copy_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)
+        [sys. dm_continuous_copy_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)
     :::column-end:::
 :::row-end:::

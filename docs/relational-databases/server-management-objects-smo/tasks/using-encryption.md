@@ -1,4 +1,5 @@
 ---
+description: 使用加密
 title: 使用加密 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
@@ -20,11 +21,12 @@ ms.assetid: 405e0ed7-50a9-430e-a343-471f54b4af76
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9981601da461fb126024863fc0e794d04195c103
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d3b777922998a4ef8159f0b2e61a2748d0185a53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008368"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88325366"
 ---
 # <a name="using-encryption"></a>使用加密
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -42,7 +44,7 @@ ms.locfileid: "86008368"
  在 SMO 中，憑證是由 <xref:Microsoft.SqlServer.Management.Smo.Certificate> 物件所表示。 <xref:Microsoft.SqlServer.Management.Smo.Certificate> 物件的屬性可指定公開金鑰、主旨的名稱、有效期間和簽發者的相關資訊。 存取此憑證的權限是藉由使用 **Grant**、 **Revoke** 和 **Deny** 方法來控制。  
   
 ## <a name="example"></a>範例  
- 在下列的程式碼範例中，您必須選取用於建立應用程式的程式設計環境、程式設計範本和程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 在下列的程式碼範例中，您必須選取用於建立應用程式的程式設計環境、程式設計範本和程式設計語言。 如需詳細資訊，請參閱 [Visual Studio .NET 中的建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="adding-a-certificate-in-visual-c"></a>在 Visual C# 中加入憑證  
  此程式碼範例會使用加密密碼來建立簡單的憑證。 不同於其他物件，<xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> 方法有數個多載。 範例中使用的多載會利用加密密碼來建立新的憑證。  

@@ -1,5 +1,6 @@
 ---
-title: sys.databases fn_cdc_decrement_lsn （Transact-sql） |Microsoft Docs
+description: sys.fn_cdc_decrement_lsn (Transact-SQL)
+title: sys. fn_cdc_decrement_lsn (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 83c182ad-4713-439b-8769-9b7408aec8b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d3650074475fef2ed74dd589a53c78ce7090676
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6402fabc4904ca8d9c9953d8dddc6f4626d949dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898431"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321754"
 ---
 # <a name="sysfn_cdc_decrement_lsn-transact-sql"></a>sys.fn_cdc_decrement_lsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +44,7 @@ sys.fn_cdc_decrement_lsn ( lsn_value )
   
 ## <a name="arguments"></a>引數  
  *lsn_value*  
- LSN 值。 *lsn_value*為**binary （10）**。  
+ LSN 值。 *lsn_value* 是 **二進位 (10) **。  
   
 ## <a name="return-type"></a>傳回類型  
  **binary(10)**  
@@ -52,7 +53,7 @@ sys.fn_cdc_decrement_lsn ( lsn_value )
  此函數傳回的 LSN 永遠小於指定的值，而且這兩個值之間不得存在任何 LSN 值。  
   
 ## <a name="permissions"></a>權限  
- 需要**public**資料庫角色中的成員資格。  
+ 需要 **public** 資料庫角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
  下列範例會使用 `sys.fn_cdc_decrement_lsn` 來設定查詢中的 LSN 上限，以便傳回 LSN 值小於最大 LSN 值的變更資料列。  
@@ -68,9 +69,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [fn_cdc_increment_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md)   
- [fn_cdc_get_min_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
- [fn_cdc_get_max_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
+ [sys. fn_cdc_increment_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md)   
+ [sys. fn_cdc_get_min_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
+ [sys. fn_cdc_get_max_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
  [交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
  [關於異動資料擷取 &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   

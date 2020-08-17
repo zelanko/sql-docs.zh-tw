@@ -1,5 +1,6 @@
 ---
-title: 成員（Set）（MDX） |Microsoft Docs
+description: Members (集合) (MDX)
+title: 成員 (設定)  (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d3e5bb14455d2d2ea67c4187e8e1a2a420031944
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0358f20d0aeba0e4d455fabadb6dc1e4361081e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68138259"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341394"
 ---
 # <a name="members-set-mdx"></a>Members (集合) (MDX)
 
@@ -39,9 +40,9 @@ Level_Expression.Members
  傳回層級的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- 如果指定了階層運算式，**成員（Set）** 函數會傳回指定之階層內所有成員的集合，而不包含匯出成員。 若要取得階層中的所有成員集合，請使用[AllMembers &#40;MDX&#41;](../mdx/allmembers-mdx.md)函數  
+ 如果指定了階層運算式， ** (設定) ** 函數的成員會傳回指定階層內所有成員的集合，而不包含匯出成員。 若要取得階層中所有成員的集合（已計算或其他），請使用 [AllMembers &#40;MDX&#41;](../mdx/allmembers-mdx.md) 函數  
   
- 如果指定了層級運算式，**成員（Set）** 函數會傳回指定層級內所有成員的集合。  
+ 如果指定了層級運算式， ** (設定) ** 函數的成員會傳回指定層級內所有成員的集合。  
   
 > [!IMPORTANT]  
 >  當維度只包含單一可見的階層，該階層可由維度名稱或階層名稱參考，因為此狀況下維度名稱會解析成其唯一可見的階層。 例如，Measures.Members 是有效 MDX 運算式，因為它會解析成 Measures 維度中的唯一階層。  

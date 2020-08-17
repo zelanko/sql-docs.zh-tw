@@ -1,4 +1,5 @@
 ---
+description: SQL Server 範例：模型部署套件 (MDS)
 title: 模型部署封裝範例
 ms.custom: ''
 ms.date: 07/28/2017
@@ -13,18 +14,18 @@ keywords:
 ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 76ef4f409fd5a4072d27cdfa3e4180896534eaa0
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 70375fd359e56081267f2478a582281d96c253eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811377"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88342374"
 ---
 # <a name="sql-server-examples-model-deployment-packages-mds"></a>SQL Server 範例：模型部署套件 (MDS)
 
 [!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  當您安裝 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]時，可取得包含資料的範例模型套件。 這些套件檔案的預設位置是 \<drive> \Program FILES\MICROSOFT SQL Server\130\Master Data services\samples\packages。  
+  當您安裝 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]時，可取得包含資料的範例模型套件。 這些套件檔案的預設位置為 \<drive> \Program FILES\MICROSOFT SQL Server\130\Master Data services\samples\packages。  
   
  如需如何部署範例模型套件的指示，請參閱 [部署範例模型和資料](../master-data-services/master-data-services-installation-and-configuration.md#deploySample)。 您可以使用 [MDSModelDeploy 工具](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)來部署範例模型套件。  
   
@@ -42,7 +43,7 @@ ms.locfileid: "85811377"
 >      如需詳細資訊，請參閱[建立網域屬性 &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)。  
 > -   需要核准實體變更。  
 > 
->      如需詳細資訊，請參閱[&#40;Master Data Services&#41;的核准](../master-data-services/approval-required-master-data-services.md)。  
+>      如需詳細資訊，請參閱 [&#40;Master Data Services&#41;的核准 ](../master-data-services/approval-required-master-data-services.md)。  
 > -   在商務規則中使用 Not 和 Else 運算子  
 > 
 >      如需詳細資訊，請參閱 [商務規則範例](../master-data-services/business-rule-examples-master-data-services.md)。  

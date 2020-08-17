@@ -1,5 +1,6 @@
 ---
-title: 使用 Cube 和子集運算式 |Microsoft Docs
+description: 使用 Cube 及 Subcube 運算式
+title: 使用 Cube 和子 Cube 運算式 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7c656bdaa0de108ade568a22bbcc734f38d43bfd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b431d82f24e5bf531dfa407d459ff9f36b543160
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893533"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341124"
 ---
 # <a name="using-cube-and-subcube-expressions"></a>使用 Cube 及 Subcube 運算式
 
@@ -23,7 +24,7 @@ ms.locfileid: "68893533"
 ## <a name="cube-expressions"></a>Cube 運算式  
  Cube 運算式不是包含 Cube 識別碼就是包含 CURRENTCUBE 關鍵字，因此只能是簡單運算式。 許多 MDX 陳述式會使用 CURRENTCUBE 關鍵字，以識別目前的 Cube 內容，而不是要求 Cube 識別碼。  
   
- 在 MDX 語句的 BNF 標記法描述中，cube 識別碼會顯示為*Cube_Name* 。  
+ Cube 識別碼在 MDX 語句的 BNF 標記法描述中會顯示為 *Cube_Name* 。  
   
  Cube 運算式可能會出現在幾個地方。 在 MDX SELECT 陳述式中，它們會指定擷取資料的目標 cube。 在下列範例查詢中，運算式 [Adventure Works] 會參考該名稱的 cube：  
   
@@ -66,13 +67,13 @@ ms.locfileid: "68893533"
   
  `END SCOPE;`  
   
- 子工作多維識別碼會顯示為*Subcube_Name*。 的形式出現在 MDX 陳述式的標記法描述內。  
+ 子工作的子工作識別碼會顯示為 *Subcube_Name*。 的形式出現在 MDX 陳述式的標記法描述內。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;MDX 的基本 MDX 查詢&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query)   
+ [基本 MDX 查詢 &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query)   
  [在 MDX 中建立 Subcube &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)   
- [建立 &#40;MDX&#41;的子集語句](../mdx/mdx-data-definition-create-subcube.md)   
- [MDX&#41;&#40;的運算式](../mdx/expressions-mdx.md)   
+ [&#40;MDX&#41;建立子多維資料語句 ](../mdx/mdx-data-definition-create-subcube.md)   
+ [MDX &#40;運算式&#41;](../mdx/expressions-mdx.md)   
  [SCOPE 陳述式 &#40;MDX&#41;](../mdx/mdx-scripting-scope.md)  
   
   

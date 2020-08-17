@@ -1,5 +1,6 @@
 ---
-title: sys.databases fn_cdc_get_min_lsn （Transact-sql） |Microsoft Docs
+description: sys.fn_cdc_get_min_lsn (Transact-SQL)
+title: sys. fn_cdc_get_min_lsn (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,17 +21,17 @@ helpviewer_keywords:
 ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c6a777b64fbebc9a97762949ccbd895d052c6260
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 642a4e846e6da836ff296f8d271d21603ff84865
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898401"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321684"
 ---
 # <a name="sysfn_cdc_get_min_lsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  從[cdc. change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)系統資料表中，傳回指定之 capture 實例的 start_lsn 資料行值。 這個值代表擷取執行個體的有效性間隔低端點。  
+  從 [cdc. change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md) 系統資料表傳回指定之 capture 實例的 start_lsn 資料行值。 這個值代表擷取執行個體的有效性間隔低端點。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +44,7 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
   
 ## <a name="arguments"></a>引數  
  **'** *capture_instance_name* **'**  
- 這是擷取執行個體的名稱。 *capture_instance_name*是**sysname**。  
+ 這是擷取執行個體的名稱。 *capture_instance_name* 為 **sysname**。  
   
 ## <a name="return-types"></a>傳回型別  
  **binary(10)**  
@@ -95,7 +96,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [fn_cdc_get_max_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
+ [sys. fn_cdc_get_max_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
  [交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 在衍生階層 (Master Data Services) 中顯示多對多關聯性
 title: 在衍生階層中顯示多對多關聯性
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c8f0a7536605af05457de13ebcd2011083386010
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 9a6c606cf05189d7845db6615add2365efb90c5c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811390"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88342424"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>在衍生階層 (Master Data Services) 中顯示多對多關聯性
 

@@ -1,5 +1,6 @@
 ---
-title: ODBC 函式和 Visual FoxPro ODBC Driver |Microsoft Docs
+description: ODBC 函式和 Visual FoxPro ODBC Driver
+title: ODBC 函數和 Visual FoxPro ODBC 驅動程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,23 +21,23 @@ helpviewer_keywords:
 ms.assetid: 512f9cee-ffad-439b-b612-b49c34c32658
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 260630321825a695b4f1d701f18fff08551ff673
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 017e66c137f6c0921f3a382c0832598c9415c9e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363528"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340734"
 ---
 # <a name="odbc-functions-and-the-visual-foxpro-odbc-driver"></a>ODBC 函式和 Visual FoxPro ODBC Driver
 本節中的主題提供 ODBC API 函式及任何 Visual FoxPro 特定詳細資料的簡短摘要。  
   
 > [!NOTE]  
->  如需 ODBC 函式的一般資訊，請參閱《 ODBC 程式設計人員指南》中的[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)。  
+>  如需 ODBC 函數的一般資訊，請參閱《 ODBC 程式設計人員指南》中的 [ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md) 。  
   
- ODBC API 函式已分成三個主要類別：核心層級 API 函式、層級 1 API 函式和層級 2 API 函式。  
+ ODBC API 函式已分為三個主要類別：核心層級 API 函式、層級 1 API 函式和層級 2 API 函式。  
   
 > [!NOTE]  
->  有幾個函式的行為不同，端視資料來源是否定義為[可用資料表](../../odbc/microsoft/visual-foxpro-terminology.md)（.dbf 檔案）目錄的連接，或與 Visual FoxPro[資料庫](../../odbc/microsoft/visual-foxpro-terminology.md)（dbc 檔案）的關係而定。 只有資料庫連接支援某些作業。  
+>  有幾個函式的行為不同，取決於資料來源是否定義為 [可用資料表](../../odbc/microsoft/visual-foxpro-terminology.md) 的目錄連接 ( .dbf 檔) 或) 的 Visual FoxPro [資料庫](../../odbc/microsoft/visual-foxpro-terminology.md) (. dbc 檔。 只有資料庫連接支援某些作業。  
   
 ## <a name="core-level-api-support"></a>核心層級 API 支援  
  下表列出 ODBC 核心層級 API 函數。 Visual FoxPro ODBC 驅動程式支援所有這些功能。  
@@ -71,7 +72,7 @@ ms.locfileid: "87363528"
 :::row-end:::
 
 ## <a name="level-1-api-support"></a>層級 1 API 支援  
- 下表列出 ODBC 層級 1 API 函數。 所有這些函式都是 Visual FoxPro ODBC 驅動程式的完整或部分支援的功能。  
+ 下表列出 ODBC 層級 1 API 函數。 Visual FoxPro ODBC 驅動程式完全或部分支援這些函式。  
 
 :::row:::
     :::column:::
@@ -115,7 +116,7 @@ ms.locfileid: "87363528"
   
 -   [SQLSetPos](../../odbc/microsoft/sqlsetpos-visual-foxpro-odbc-driver.md)  
   
--   [SQLSetScrollOptions](../../odbc/microsoft/sqlsetscrolloptions-visual-foxpro-odbc-driver.md) （部分支援）  
+-   [SQLSetScrollOptions](../../odbc/microsoft/sqlsetscrolloptions-visual-foxpro-odbc-driver.md) (部分支援)   
   
  不支援下列層級 2 API 函式：  
   

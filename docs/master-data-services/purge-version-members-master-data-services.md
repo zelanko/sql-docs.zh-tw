@@ -1,4 +1,5 @@
 ---
+description: 清除版本成員 [Master Data Services]
 title: 清除版本成員
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: adecce2d-46bb-49ff-8be9-0b31b8dd3cb6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0dc8e60b6cfe7d729aca36cc5e4a2203cf281129
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 490841c151fc4636e2a5ed8a252de0fb3385c042
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811707"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88342794"
 ---
 # <a name="purge-version-members-master-data-services"></a>清除版本成員 [Master Data Services]
 
@@ -23,12 +24,12 @@ ms.locfileid: "85811707"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，刪除成員只會停用或虛刪除該名成員。 資料仍然位於資料庫中。 本主題說明如何清除 (永久刪除) 模型版本中所有已虛刪除的成員。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序。  
   
 -   您必須擁有存取 [版本管理] 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ## <a name="to-purge-soft-deleted-members"></a>清除虛刪除的成員  
   

@@ -1,4 +1,5 @@
 ---
+description: 階層成員權限 (Master Data Services)
 title: 階層成員權限
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 39470b09370db89cdba3e8c8f26e8b08376c1c07
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 3911b44ee31c0bb4cd4e8b829bf3d8e2c70e9913
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813306"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88344094"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>階層成員權限 (Master Data Services)
 
@@ -26,7 +27,7 @@ ms.locfileid: "85813306"
 
   階層成員權限為選擇性，而且只有當您希望使用者擁有特定成員的受限存取權時，才應該使用。 如果您未在 [階層成員]**** 索引標籤上指派權限，則使用者的權限完全是根據 [模型]**** 索引標籤上指派的權限。  
   
- 階層成員許可權會在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 使用者介面（UI）中，于 [階層**成員**] 索引標籤上的 [**使用者和群組的許可權**] 功能區域中指派。這些許可權會決定使用者可以在 UI 的 [ **Explorer** ] 功能區域中存取哪些成員。  
+ 階層成員許可權是在 [階層 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **成員**] 索引標籤上的 [**使用者和群組許可權**] 功能區域中， (UI) 的使用者介面中指派的。這些許可權會決定使用者可以在 UI 的 [ **Explorer** ] 功能區域中存取哪些成員。  
   
  在 [階層成員]**** 索引標籤上，每一個階層會表示為一個樹狀結構。 當您將權限指派給樹狀結構中的節點時，所有子項都會繼承該權限，除非在較低層級明確指派權限。  
   
@@ -60,14 +61,14 @@ ms.locfileid: "85813306"
   
 -   如果一個階層節點被指派 [更新]**** 和 [建立]**** 權限，另一個節點被指派 [更新]**** 和 [刪除]**** 權限，則該節點中的成員為可以更新。  
   
--   如果一個階層節點被指派 [**建立** / **讀取**更新刪除] 許可權的任何組合， / **Update** / **Delete**而且另一個節點被指派 [**拒絕**] 許可權，則會拒絕存取節點中的成員。  
+-   如果有一個階層節點被指派 [**建立** / **讀取** / **更新** / **刪除**] 許可權的任何組合，而另一個節點被指派 [**拒絕**] 許可權，則會拒絕存取節點中的成員。  
   
 ## <a name="external-resources"></a>外部資源  
  請參考 msdn.com 上的 [Security Improvements](https://go.microsoft.com/fwlink/p/?LinkId=615376)(安全性改進) 部落格文章。  
   
 ## <a name="see-also"></a>另請參閱  
  [指派階層成員許可權 &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
- [如何判斷許可權 &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
+ [如何決定許可權 &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
  [成員 &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
  [階層 &#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md)   
  [立即套用成員權限 &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)  

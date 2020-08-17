@@ -1,5 +1,6 @@
 ---
-title: sys. dm_xe_database_sessions （Azure SQL Database） |Microsoft Docs
+description: sys.dm_xe_database_sessions (Azure SQL Database)
+title: sys. dm_xe_database_sessions (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.service: sql-database
@@ -9,12 +10,12 @@ ms.assetid: 33ea5179-16bb-4abd-96cc-9bc696e80987
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: ccb292c21cda8a335f1630b08d462f183a1f25e1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d49c252a60cdf08c7ac55c287333de9805d5ff26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85675767"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88322714"
 ---
 # <a name="sysdm_xe_database_sessions-azure-sql-database"></a>sys.dm_xe_database_sessions (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -23,7 +24,7 @@ ms.locfileid: "85675767"
   
 ||  
 |-|  
-|**適用**于： [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 和任何更新版本。|  
+|**適用于**： [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 和任何較新版本。|  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -36,12 +37,12 @@ ms.locfileid: "85675767"
  需要 VIEW DATABASE STATE 權限。  
   
 ### <a name="relationship-cardinalities"></a>關聯性基數  
-從2015-07-13，' sys. dm_xe_objects ' 是其中一個在其名稱中未包含 ' _database ' 的 XEvents Dmv。 在下表的右側資料行中，不是錯誤或錯誤。 Microsoft SQL Server 和 Azure SQL Database 中的名稱相同。  
+從2015-07-13，' sys. dm_xe_objects ' 是在其名稱中未包含 ' _database ' 的其中一個 XEvents Dmv。 下表右邊的資料行不是錯誤或錯誤。 Microsoft SQL Server 和 Azure SQL Database 中的名稱相同。  
   
-|從|至|關聯性|  
+|寄件者|收件者|關聯性|  
 |--------|------|----------------|  
-|dm_xe_database_session_events. event_session_address|dm_xe_database_sessions 位址|多對一|  
-|dm_xe_database_session_events. event_package_guid、sys.databases dm_xe_database_session_events。 event_name|sys.dm_xe_objects.name, sys.dm_xe_objects.package_guid|多對一|  
+|sys. dm_xe_database_session_events. event_session_address|sys. dm_xe_database_sessions 位址|多對一|  
+|sys. dm_xe_database_session_events. event_package_guid、sys. dm_xe_database_session_events. event_name|sys.dm_xe_objects.name, sys.dm_xe_objects.package_guid|多對一|  
   
 ## <a name="see-also"></a>另請參閱  
 [Azure SQL Database 中的擴充事件](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  

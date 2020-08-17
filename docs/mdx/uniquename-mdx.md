@@ -1,5 +1,6 @@
 ---
-title: UniqueName （MDX） |Microsoft Docs
+description: UniqueName (MDX)
+title: UniqueName (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 69144341bd9cff344d4514f076517afac52e2a4b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3108cf8fdfbd0bc6864438be9ac95ff909308bc6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097288"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341164"
 ---
 # <a name="uniquename-mdx"></a>UniqueName (MDX)
 
@@ -51,7 +52,7 @@ Member_Expression.UniqueName
  傳回成員的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- **UniqueName**函數會傳回物件的唯一名稱，而不是[名稱](../mdx/name-mdx.md)函式所傳回的名稱。 所傳回的名稱不包含 Cube 的名稱。 所傳回的結果相依於伺服器端設定或 MDX 唯一名稱樣式的連接字串屬性。  
+ **UniqueName**函式會傳回物件的唯一名稱，而不是[name](../mdx/name-mdx.md)函數所傳回的名稱。 所傳回的名稱不包含 Cube 的名稱。 所傳回的結果相依於伺服器端設定或 MDX 唯一名稱樣式的連接字串屬性。  
   
 ## <a name="example"></a>範例  
  下列範例會傳回 Adventure Works Cube 中 Product 維度、Product Categories 階層、Subcategory 層級及 Bike Racks 成員的唯一名稱值。  

@@ -1,5 +1,6 @@
 ---
-title: cdc. captured_columns （Transact-sql） |Microsoft Docs
+description: cdc.captured_columns (Transact-SQL)
+title: cdc. captured_columns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 7bb4d408-d764-4ef6-802c-f271c8d39c2a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 42a87821f13ecbfd08f12257a2c2145423eb4a65
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1f97c0f9f8836a1ef0115a93d9cfae882cbaac05
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890645"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88374120"
 ---
 # <a name="cdccaptured_columns-transact-sql"></a>cdc.captured_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  針對在擷取執行個體中追蹤的每個資料行，各傳回一個資料列。 根據預設，系統會擷取來源資料表的所有資料行。 不過，當來源資料表啟用異動資料擷取時，您可以透過指定資料行清單，加入或排除資料行。 如需詳細資訊，請參閱[sp_cdc_enable_table &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)。  
+  針對在擷取執行個體中追蹤的每個資料行，各傳回一個資料列。 根據預設，系統會擷取來源資料表的所有資料行。 不過，當來源資料表啟用異動資料擷取時，您可以透過指定資料行清單，加入或排除資料行。 如需詳細資訊，請參閱 [sys. sp_cdc_enable_table &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)。  
   
- 我們建議您不要**直接查詢系統資料表**。 請改為執行[sys.databases sp_cdc_get_source_columns](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)預存程式。  
+ 我們建議您不要 **直接查詢系統資料表**。 請改為執行 [sys. sp_cdc_get_source_columns](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md) 預存程式。  
    
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -41,6 +42,6 @@ ms.locfileid: "85890645"
 |**is_computed**|**bit**|指出擷取資料行是來源資料表中的計算資料行。|  
   
 ## <a name="see-also"></a>另請參閱  
- [change_tables &#40;Transact-sql&#41;](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)  
+ [cdc. change_tables &#40;Transact-sql&#41;](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)  
   
   

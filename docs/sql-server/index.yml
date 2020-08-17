@@ -9,12 +9,12 @@ metadata:
   author: MashaMSFT
   ms.author: mathoma
   ms.date: 10/14/2019
-  ms.openlocfilehash: 33578111d1a0ce28dee7fa423d3ee3fdd934f885
-  ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+  ms.openlocfilehash: b65a616e3a4ab3911f746347a1ae5e6f74490b49
+  ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 04/04/2020
-  ms.locfileid: "80662761"
+  ms.lasthandoff: 08/07/2020
+  ms.locfileid: "87934134"
 landingContent:
 - title: Azure 上的 SQL
   linkLists:
@@ -22,7 +22,7 @@ landingContent:
     links:
     - text: Azure SQL Database 單一資料庫
       url: /azure/sql-database/sql-database-single-database
-    - text: Azure SQL Database 受控執行個體
+    - text: Azure SQL 受控執行個體
       url: /azure/sql-database/sql-database-managed-instance
     - text: Azure Synapse Analytics (SQL DW)
       url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
@@ -77,7 +77,7 @@ landingContent:
     - text: Transact-SQL (T-SQL)
       url: ../t-sql/language-reference.md
     - text: SQL Server 2014 文件
-      url: https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014
+      url: https://docs.microsoft.com/sql/sql-server/sql-server-2014-release-notes
     - text: 教育性 SQL 資源
       url: ../sql-server/educational-sql-resources.yml
     - text: 範例資料庫

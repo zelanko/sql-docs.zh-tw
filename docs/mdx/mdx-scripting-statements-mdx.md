@@ -1,5 +1,6 @@
 ---
-title: MDX 腳本語句（MDX） |Microsoft Docs
+description: MDX 指令碼陳述式 (MDX)
+title: Mdx 腳本語句 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5564c73ec8d10b37285c1d3e7e7f65fd295894a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 633a44f28852898e2638438a5e8395d8d865fca3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893331"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341465"
 ---
 # <a name="mdx-scripting-statements-mdx"></a>MDX 指令碼陳述式 (MDX)
 
@@ -34,7 +35,7 @@ ms.locfileid: "68893331"
 ## <a name="see-also"></a>另請參閱  
  [Mdx 語句參考 &#40;MDX&#41;](../mdx/mdx-statement-reference-mdx.md)   
  [Mdx 資料定義語句 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [Mdx&#41;&#40;mdx 資料動作陳述式](../mdx/mdx-data-manipulation-statements-mdx.md)   
+ [Mdx 資料動作陳述式 &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
  [MDX 指令碼基礎觀念 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 資料庫物件安全性 (Master Data Services)
 title: 資料庫物件安全性
 ms.custom: ''
 ms.date: 03/04/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 656b36f796d05d6ea7533c8c35e4b6ffe9572f99
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: f9b2089b72f11872df0dc0c0b2758fb8272a4c06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811577"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88344904"
 ---
 # <a name="database-object-security-master-data-services"></a>資料庫物件安全性 (Master Data Services)
 
@@ -55,9 +56,9 @@ ms.locfileid: "85811577"
 |將資料從 [關聯性] 暫存資料表載入至適當的 MDS 資料表。|stg.udp_name_Relationship|執行 CREATE 陳述式之前，請先執行|  
 |檢視將資料從暫存資料表插入至 MDS 資料庫資料表時發生的錯誤。|stg.udp_name_Relationship|SELECT|  
   
- 如需詳細資訊，請參閱[總覽：從資料表匯入資料 &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)。  
+ 如需詳細資訊，請參閱 [總覽：從資料表匯入資料 &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)。  
   
-##  <a name="validating-data-against-business-rules"></a><a name="rules"></a>根據商務規則驗證資料  
+##  <a name="validating-data-against-business-rules"></a><a name="rules"></a> 根據商務規則驗證資料  
   
 |動作|安全性實體|權限|  
 |------------|---------------|-----------------|  
@@ -65,7 +66,7 @@ ms.locfileid: "85811577"
   
  如需詳細資訊，請參閱 [驗證預存程序 &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md)。  
   
-##  <a name="deleting-versions"></a><a name="Versions"></a>刪除版本  
+##  <a name="deleting-versions"></a><a name="Versions"></a> 刪除版本  
   
 |動作|安全性實體|權限|  
 |------------|----------------|-----------------|  
@@ -74,7 +75,7 @@ ms.locfileid: "85811577"
   
  如需詳細資訊，請參閱[刪除版本 &#40;Master Data Services&#41;](../master-data-services/delete-a-version-master-data-services.md)。  
   
-##  <a name="immediately-applying-hierarchy-member-permissions"></a><a name="Hierarchy"></a>立即套用階層成員許可權  
+##  <a name="immediately-applying-hierarchy-member-permissions"></a><a name="Hierarchy"></a> 立即套用階層成員許可權  
   
 |動作|安全性實體|權限|  
 |------------|----------------|-----------------|  
@@ -82,7 +83,7 @@ ms.locfileid: "85811577"
   
  如需詳細資訊，請參閱[立即套用成員權限 &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)。  
   
-##  <a name="configuring-system-settings"></a><a name="SysSettings"></a>正在進行系統設定  
+##  <a name="configuring-system-settings"></a><a name="SysSettings"></a> 設定系統設定  
  有些系統設定可設定控制 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]的行為。 您可以在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中調整這些設定；如果您有 UPDATE 存取權，也可以直接在 mdm.tblSystemSetting 資料庫資料表中調整這些設定。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  

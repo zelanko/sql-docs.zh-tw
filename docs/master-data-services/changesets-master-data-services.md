@@ -1,4 +1,5 @@
 ---
+description: 變更集 (Master Data Services)
 title: 變更集
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f227c49a-ed46-4e0f-8992-83093456cf94
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c6b91f1d0b4fbfff3294502b0953462f97efc707
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 7171e28103ebf0c18657a62a954faa1ca64cdf5a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811618"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88345014"
 ---
 # <a name="changesets-master-data-services"></a>變更集 (Master Data Services)
 
@@ -23,7 +24,7 @@ ms.locfileid: "85811618"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 現可支援將任何暫止的實體變更儲存為變更集的功能。 這項功能有下列兩個使用案例：  
   
--   **實體管理員開啟「需要核准」時的變更**  
+-   **實體系統管理員開啟「需要核准」時的變更**  
   
      如果實體管理員指定特定實體所做的變更需經核准後才能獲得認可，則實體的任何變更均需先儲存到新的或現有的變更集才能提交核准。  如需詳細資訊，請參閱[需要核准 &#40;Master Data Services&#41;](../master-data-services/approval-required-master-data-services.md)。  
   

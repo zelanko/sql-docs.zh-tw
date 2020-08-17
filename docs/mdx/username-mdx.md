@@ -1,5 +1,6 @@
 ---
-title: 使用者名稱（MDX） |Microsoft Docs
+description: UserName (MDX)
+title: " (MDX) 的使用者名稱 |Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f1ebb5dc504b799575b2ccf9e47368e4e6511dac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6fbcc17cc34c6f4353698b918d0ab5ee3dc55701
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097267"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341134"
 ---
 # <a name="username-mdx"></a>UserName (MDX)
 

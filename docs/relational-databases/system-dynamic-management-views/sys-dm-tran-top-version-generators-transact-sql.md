@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_tran_top_version_generators （Transact-sql） |Microsoft Docs
+description: sys.dm_tran_top_version_generators (Transact-SQL)
+title: sys. dm_tran_top_version_generators (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,21 +21,22 @@ ms.assetid: cec7809b-ba8a-4df9-b5bb-d4f651ff1a86
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 416e527ad37ae34fcd3484a80cf774b054649548
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3d946cd1abb09defc9072da893979bb2e6c32508
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000233"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88323604"
 ---
 # <a name="sysdm_tran_top_version_generators-transact-sql"></a>sys.dm_tran_top_version_generators (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  針對產生版本存放區中大部分版本的物件，傳回一份虛擬資料表。 **dm_tran_top_version_generators**會傳回依**database_id**和**rowset_id**分組的前256匯總記錄長度。 **dm_tran_top_version_generators**藉由查詢**dm_tran_version_store**虛擬資料表來抓取資料。 **dm_tran_top_version_generators**是執行效率不佳的視圖，因為此視圖會查詢版本存放區，而版本存放區可能非常大。 建議您使用這個函數，尋找版本存放區的最大取用者。  
+  針對產生版本存放區中大部分版本的物件，傳回一份虛擬資料表。 **sys. dm_tran_top_version_generators** 會傳回依 **database_id** 和 **rowset_id**分組的前256匯總記錄長度。 **sys. dm_tran_top_version_generators** 藉由查詢 **dm_tran_version_store** 虛擬資料表來抓取資料。 **sys. dm_tran_top_version_generators** 是執行效率不佳的情況，因為此視圖會查詢版本存放區，而版本存放區可能非常大。 建議您使用這個函數，尋找版本存放區的最大取用者。  
   
 > [!NOTE]  
->  若要從或呼叫此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用**dm_pdw_nodes_tran_top_version_generators**的名稱。  
+>  若要從或呼叫這個 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用名稱 **sys. dm_pdw_nodes_tran_top_version_generators**。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -47,16 +49,16 @@ sys.dm_tran_top_version_generators
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|資料庫識別碼。|  
 |**rowset_id**|**bigint**|資料列集識別碼。|  
-|**aggregated_record_length_in_bytes**|**int**|版本存放區中每個**database_id**和**rowset_id 配對**的記錄長度總和。|  
-|**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
+|**aggregated_record_length_in_bytes**|**int**|版本存放區中每個 **database_id** 和 **rowset_id 配對** 的記錄長度總和。|  
+|**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在之節點的識別碼。|  
   
 ## <a name="permissions"></a>權限
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 許可權。   
-在高階 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 層級上，需要 `VIEW DATABASE STATE` 資料庫的許可權。 在 [ [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
+在進階層中 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ，需要 `VIEW DATABASE STATE` 資料庫中的許可權。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準和基本層中，需要  **伺服器管理員** 或 **Azure Active Directory 系統管理員** 帳戶。   
 
 ## <a name="remarks"></a>備註  
- 因為**dm_tran_top_version_generators**可能必須在掃描整個版本存放區時讀取許多頁面，而執行**sys. dm_tran_top_version_generators**可能會干擾系統效能。  
+ 因為 **sys. dm_tran_top_version_generators** 可能必須讀取許多頁面，因為它會掃描整個版本存放區，而執行 **sys. dm_tran_top_version_generators** 可能會干擾系統效能。  
   
 ## <a name="examples"></a>範例  
  下列範例使用的測試案例中有四筆並行交易正在 ALLOW_SNAPSHOT_ISOLATION 和 READ_COMMITTED_SNAPSHOT 選項都設為 ON 的資料庫中執行，而每一筆交易都由一個交易序號 (XSN) 識別。 正在執行的交易包括：  
@@ -88,10 +90,10 @@ database_id rowset_id            aggregated_record_length_in_bytes
 9           72057594038386688    33  
 ```  
   
- 輸出顯示所有版本都是由建立 `database_id``9` ，而且版本是從兩個數據表產生。  
+ 輸出顯示所有版本都是由建立 `database_id``9` ，而且版本會從兩個數據表產生。  
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [交易相關的動態管理檢視和函數 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

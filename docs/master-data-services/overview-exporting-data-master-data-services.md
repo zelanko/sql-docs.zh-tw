@@ -1,4 +1,5 @@
 ---
+description: 概觀：匯出資料 (Master Data Services)
 title: 匯出資料
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0b58dca3531ba535c48c6dc6134c660ca4fed7be
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: f477249f9f65b85598a11e40da268aa3a15b35a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812877"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88342934"
 ---
 # <a name="overview-exporting-data-master-data-services"></a>概觀：匯出資料 (Master Data Services)
 

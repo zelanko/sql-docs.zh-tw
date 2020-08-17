@@ -1,5 +1,6 @@
 ---
-title: 設定大型資料（Native Client OLE DB 提供者）
+description: 在 SQL Server Native Client 中設定大型資料
+title: '設定大型資料 (Native Client OLE DB 提供者) '
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01e0e20b410ddf2300779923ed317a897a74862d
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: ab0fb692b2d50dc99276a55ab4773962d757b2c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332173"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88328324"
 ---
 # <a name="setting-large-data-in-sql-server-native-client"></a>在 SQL Server Native Client 中設定大型資料
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者，您可以藉由傳遞取用者儲存物件的指標來設定 BLOB 資料。  
+  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者時，您可以藉由傳遞取用者儲存物件的指標來設定 BLOB 資料。  
   
  取用者會建立包含資料的儲存物件，並將此儲存物件的指標傳遞給提供者。 接著，提供者會從取用者儲存物件讀取資料，並將其寫入到 BLOB 資料行。  
   
@@ -44,7 +45,7 @@ ms.locfileid: "87332173"
 ## <a name="how-to-set-large-data"></a>如何設定大型資料  
  若要傳遞自己的儲存物件指標，取用者會建立一個繫結 BLOB 資料行值的存取子，然後呼叫 **IRowsetChange::SetData** 或 **IRowsetChange::InsertRow** 方法。 設定 BLOB 資料：  
   
-1.  建立一個 DBOBJECT 結構，描述如何存取 BLOB 資料行。 將 DBOBJECT 結構的*dwFlag*元素設定為 STGM_READ，並將*iid*元素設定為 IID_ISequentialStream （要公開的介面）。  
+1.  建立一個 DBOBJECT 結構，描述如何存取 BLOB 資料行。 將 DBOBJECT 結構的 *dwFlag* 元素設定為 STGM_READ，並將 *iid* 元素設定為 IID_ISequentialStream (要公開的介面)。  
   
 2.  在 DBPROPSET_ROWSET 屬性群組中設定屬性，讓資料列集可以更新。  
   
@@ -721,7 +722,7 @@ Exit:
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Blob 和 OLE 物件](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
- [使用大數值類型](../../relational-databases/native-client/features/using-large-value-types.md)  
+ [BLOB 與 OLE 物件](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
+ [使用大型實值型別](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

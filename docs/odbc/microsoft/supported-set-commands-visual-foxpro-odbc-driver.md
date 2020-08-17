@@ -1,5 +1,6 @@
 ---
-title: 支援的 SET 命令（Visual FoxPro ODBC Driver） |Microsoft Docs
+description: 支援的 SET 命令 (Visual FoxPro ODBC Driver)
+title: " (Visual FoxPro ODBC Driver) 支援的 SET 命令 |Microsoft Docs"
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 43a821fb-97fd-4316-aafe-4ef2de783188
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e4139751de61738903e4e152535fb75bf30a97a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7e12155377159acbc1816db503d846272afb58b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303129"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88339504"
 ---
 # <a name="supported-set-commands-visual-foxpro-odbc-driver"></a>支援的 SET 命令 (Visual FoxPro ODBC Driver)
-您的應用程式可以將下列 Visual FoxPro **SET**命令傳送至資料來源：  
+您的應用程式可以將下列 Visual FoxPro **SET** 命令傳送到資料來源：  
   
  [設定 ANSI](../../odbc/microsoft/set-ansi-command.md)  
   
- [設定區塊](../../odbc/microsoft/set-blocksize-command.md)  
+ [設定區塊集](../../odbc/microsoft/set-blocksize-command.md)  
   
  [設定 COLLATE](../../odbc/microsoft/set-collate-command.md)  
   
@@ -38,7 +39,7 @@ ms.locfileid: "81303129"
   
  [設定精確](../../odbc/microsoft/set-exact-command.md)  
   
- [設定獨佔](../../odbc/microsoft/set-exclusive-command.md)  
+ [設定專屬](../../odbc/microsoft/set-exclusive-command.md)  
   
  [SET NULL](../../odbc/microsoft/set-null-command.md)  
   
@@ -46,4 +47,4 @@ ms.locfileid: "81303129"
   
  [設定重新處理](../../odbc/microsoft/set-reprocess-command.md)  
   
- [設定唯一](../../odbc/microsoft/set-unique-command.md)
+ [設定為唯一](../../odbc/microsoft/set-unique-command.md)

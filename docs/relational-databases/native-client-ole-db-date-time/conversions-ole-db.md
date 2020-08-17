@@ -1,4 +1,5 @@
 ---
+description: 'SQL Server Native Client 轉換 (OLE DB) '
 title: 繫結和轉換 (OLE DB)
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,14 +16,14 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0dec84f95cf60818336956e2d6e86d871a3fdc00
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a513ca320f072dc74b525ae4511973fa438a7624
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245873"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88328034"
 ---
-# <a name="sql-server-native-client-conversions-ole-db"></a>SQL Server Native Client 轉換（OLE DB）
+# <a name="sql-server-native-client-conversions-ole-db"></a>SQL Server Native Client 轉換 (OLE DB) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   本節討論如何在 **datetime** 和 **datetimeoffset** 值之間進行轉換。 本節中所描述的轉換已由 OLE DB 提供，或是一致的 OLE DB 延伸模組。  
@@ -31,7 +32,7 @@ ms.locfileid: "87245873"
   
 -   **datetime** 和 **datetimeoffset** 字串的格式為：  
   
-     *yyyy* -*mm* -*dd*[ *hh*：*mm*：*ss*[]。*9999999*] [± *hh*：*mm*]]  
+     *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[.*9999999*][ ± *hh*:*mm*]]  
   
 -   **time** 字串的格式為：  
   
@@ -39,12 +40,12 @@ ms.locfileid: "87245873"
   
 -   **date** 字串的格式為：  
   
-     *yyyy* -*mm* -*dd*  
+     *yyyy*-*mm*-*dd*  
   
 > [!NOTE]  
 >  如果標準轉換失敗，舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 和 SQLOLEDB 會實作 OLE 轉換。 因此，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 和更新版本所執行的某些轉換與 OLE DB 規格不同。  
   
- 字串的轉換在空白和欄位寬度上允許彈性。 如需詳細資訊，請參閱資料類型支援中的「資料格式：字串和常值」一節，[以瞭解 OLE DB 日期和時間改善](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)。  
+ 字串的轉換在空白和欄位寬度上允許彈性。 如需詳細資訊，請參閱資料類型支援中的「資料格式：字串和常值」一節，以 [取得 OLE DB 日期和時間改善](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)。  
   
  下面是一般轉換規則：  
   

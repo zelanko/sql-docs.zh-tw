@@ -1,4 +1,5 @@
 ---
+description: 傳送資料
 title: 傳送資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
@@ -14,11 +15,12 @@ ms.assetid: eea255c3-8251-40f0-973b-fe4ef6cb5261
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8a2028817a760201a5f7d1556b38d9f257c0de04
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9ebd1aec656b0ba13e8c2ba31a7c03d77f1f8d89
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010960"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88325563"
 ---
 # <a name="transferring-data"></a>傳送資料
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -32,7 +34,7 @@ ms.locfileid: "86010960"
   物件不支援將資料傳送到  小於  執行個體版本的目標資料庫。  
   
 ## <a name="example"></a>範例  
-如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱 [Visual Studio .NET 中的建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
  
   
 ## <a name="transferring-schema-and-data-from-one-database-to-another-in-visual-basic"></a>在 Visual Basic 中將結構描述和資料從某個資料庫傳送到另一個資料庫  

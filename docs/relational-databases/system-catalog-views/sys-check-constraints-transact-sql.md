@@ -1,5 +1,6 @@
 ---
-title: sys.databases check_constraints （Transact-sql） |Microsoft Docs
+description: sys.check_constraints (Transact-SQL)
+title: sys. check_constraints (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2017
 ms.prod: sql
@@ -20,21 +21,21 @@ ms.assetid: 940ebc5e-44ba-4dae-8b29-da94f2d1d6c4
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af931a3ac76186b0ac583155b0d45e4dbe7ed055
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 767714d75fcb885a23899161714695237fcb8149
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718879"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88323854"
 ---
 # <a name="syscheck_constraints-transact-sql"></a>sys.check_constraints (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  針對每個屬於 CHECK 條件約束的物件，各包含一個資料列，其為**sys.databases。類型**= ' C '。  
+  針對屬於 CHECK 條件約束的每個物件，各包含一個資料列，其為 **sys. objects。 type** = ' C '。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**\<Columns inherited from sys.objects>**||如需此視圖所繼承之資料行的清單，請參閱[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
+|**\<Columns inherited from sys.objects>**||如需此視圖所繼承之資料行的清單，請參閱 [sys. objects &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
 |**is_disabled**|**bit**|CHECK 條件約束已停用。|  
 |**is_not_for_replication**|**bit**|CHECK 條件約束是利用 NOT FOR REPLICATION 選項來建立的。|  
 |**is_not_trusted**|**bit**|不是所有資料列的 CHECK 條件約束都經過系統驗證過了。|  
@@ -47,7 +48,7 @@ ms.locfileid: "85718879"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的物件目錄檢視](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [物件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

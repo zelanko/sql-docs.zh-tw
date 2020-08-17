@@ -9,13 +9,13 @@ metadata:
   author: MashaMSFT
   ms.author: mathoma
   ms.date: 12/09/2019
-  ms.reviewer: jtoland
-  ms.openlocfilehash: 4ca06be03cadd08c7f49561f7b8066c7883f33f3
-  ms.sourcegitcommit: 700c07312d1ffc034e7a684cbf4265afc7c84993
+  ms.reviewer: rajpo
+  ms.openlocfilehash: 6c4efc78db4f7966053c3314a17777d22d6e40cd
+  ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 03/27/2020
-  ms.locfileid: "75322361"
+  ms.lasthandoff: 08/07/2020
+  ms.locfileid: "87934119"
 landingContent:
 - title: SQL 至 SQL Server
   linkLists:

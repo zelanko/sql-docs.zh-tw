@@ -1,5 +1,6 @@
 ---
-title: sys.databases function_order_columns （Transact-sql） |Microsoft Docs
+description: sys.function_order_columns (Transact-SQL)
+title: sys. function_order_columns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,31 +20,31 @@ helpviewer_keywords:
 ms.assetid: 29287973-3125-4d35-8ca9-92cb45828854
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 040ed7a26a96e22fe2959159b8d7495c49fc0f63
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 77617e5be43286218fce0b40dbd35825fa8d105a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893768"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88324004"
 ---
 # <a name="sysfunction_order_columns-transact-sql"></a>sys.function_order_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  針對屬於 common language runtime （CLR）資料表值函數之**ORDER**運算式一部分的每個資料行，各傳回一個資料列。  
+  每個資料行各傳回一個資料列，該資料行是 common 語言執行時間的 **ORDER** 運算式的一部分， (CLR) 資料表值函數。  
 
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|定義順序所在之物件的識別碼 (CLR 資料表值函式)。|  
-|**order_column_id**|**int**|排序資料行的識別碼。 **order_column_id**只有在**object_id**內才是唯一的。<br /><br /> **order_column_id**表示此資料行在排序中的位置。|  
-|**column_id**|**int**|**Object_id**中的資料行識別碼。<br /><br /> **column_id**只有在**object_id**內才是唯一的。|  
+|**order_column_id**|**int**|排序資料行的識別碼。 **order_column_id** 只有在 **object_id**內才是唯一的。<br /><br /> **order_column_id** 表示這個資料行在排序中的位置。|  
+|**column_id**|**int**|**Object_id**中的資料行識別碼。<br /><br /> **column_id** 只有在 **object_id**內才是唯一的。|  
 |**is_descending**|**bit**|1 = 排序資料行是以遞減方式排序。<br /><br /> 0 = 排序資料行是以遞增方式排序。|  
   
 ## <a name="permissions"></a>權限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的物件目錄檢視](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [物件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

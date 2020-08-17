@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_db_index_usage_stats （Transact-sql） |Microsoft Docs
+description: sys.dm_db_index_usage_stats (Transact-SQL)
+title: sys. dm_db_index_usage_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -20,24 +21,25 @@ ms.assetid: d06a001f-0f72-4679-bc2f-66fff7958b86
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b759d19e5c0440a55d6267b820f83354652efd63
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8e5f1f9d5c4e313e81392d83b6d9ffdf98013880
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004243"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88374634"
 ---
 # <a name="sysdm_db_index_usage_stats-transact-sql"></a>sys.dm_db_index_usage_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   傳回不同類型索引作業的計數，以及每種類型作業上次執行的時間。  
   
- 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，動態管理檢視不可以公開可能會影響資料庫內含項目的資訊或公開有關使用者可存取之其他資料庫的資訊。 為避免公開此資訊，包含不屬於連接租使用者之資料的每個資料列都會被篩選掉。  
+ 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，動態管理檢視不可以公開可能會影響資料庫內含項目的資訊或公開有關使用者可存取之其他資料庫的資訊。 為了避免公開此資訊，每個包含不屬於已連線租使用者之資料的資料列都會被篩選掉。  
   
 > [!NOTE]  
->  **dm_db_index_usage_stats**不會傳回記憶體優化索引的相關資訊。 如需記憶體優化索引使用的詳細資訊，請參閱[sys.databases &#40;transact-sql&#41;dm_db_xtp_index_stats ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)。  
+>  **sys. dm_db_index_usage_stats** 不會傳回記憶體優化索引的相關資訊。 如需記憶體優化索引使用的詳細資訊，請參閱 [sys. dm_db_xtp_index_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)。  
   
 > [!NOTE]  
->  若要從或呼叫此視圖 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用**sys.databases dm_pdw_nodes_db_index_usage_stats**。  
+>  若要從或呼叫此視圖 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用 **sys. dm_pdw_nodes_db_index_usage_stats**。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -45,9 +47,9 @@ ms.locfileid: "86004243"
 |object_id|**int**|定義索引之資料表或檢視的識別碼。|  
 |**index_id**|**int**|索引的識別碼。|  
 |**user_seeks**|**bigint**|由使用者查詢所進行的搜尋數。|  
-|**user_scans**|**bigint**|未使用 ' seek ' 述詞的使用者查詢所進行的掃描數目。|  
+|**user_scans**|**bigint**|使用者查詢未使用「搜尋」述詞的掃描次數。|  
 |**user_lookups**|**bigint**|由使用者查詢所進行的書籤查閱數。|  
-|**user_updates**|**bigint**|由使用者查詢所進行的更新數。 這包括插入、刪除和更新，代表不受影響的實際資料列所完成的作業數。 例如，如果您在一個語句中刪除1000個數據列，此計數會遞增1|  
+|**user_updates**|**bigint**|由使用者查詢所進行的更新數。 這包括插入、刪除和更新，代表未受影響的實際資料列所執行的作業數目。 例如，如果您在一個語句中刪除1000個數據列，此計數會遞增1|  
 |**last_user_seek**|**datetime**|上次使用者搜尋的時間|  
 |**last_user_scan**|**datetime**|上次使用者掃描的時間。|  
 |**last_user_lookup**|**datetime**|上次使用者查閱的時間。|  
@@ -60,7 +62,7 @@ ms.locfileid: "86004243"
 |**last_system_scan**|**datetime**|上次系統掃描的時間。|  
 |**last_system_lookup**|**datetime**|上次系統查閱的時間。|  
 |**last_system_update**|**datetime**|上次系統更新的時間。|  
-|pdw_node_id|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
+|pdw_node_id|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在之節點的識別碼。|  
   
 ## <a name="remarks"></a>備註  
  在指定索引上由一項查詢執行所進行的每個個別搜尋、掃描、查閱或更新，在這份檢視都被當作使用一次該索引，並且累加對應的計數器。 它會針對由使用者提交之查詢所導致的作業，以及由內部產生之查詢所導致的作業 (例如，掃描以收集統計資料)，來報告資訊。  
@@ -71,19 +73,19 @@ ms.locfileid: "86004243"
   
  使用索引時，如果索引的資料列不存在，則會將資料列加入 **sys.dm_db_index_usage_stats** 中。 加入資料列後，其計數器的初始設定為零。  
   
- 在升級至 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或時 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ，會移除 sys.databases 中的專案 dm_db_index_usage_stats。 從開始 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ，會依照之前的方式保留專案 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 。  
+ 在升級至 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或時 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ，會移除 sys. dm_db_index_usage_stats 中的專案。 從開始 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ，專案會保留在之前 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 。  
   
 ## <a name="permissions"></a>權限  
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 許可權。   
-在高階 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 層級上，需要 `VIEW DATABASE STATE` 資料庫的許可權。 在 [ [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。  
+在進階層中 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ，需要 `VIEW DATABASE STATE` 資料庫中的許可權。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準和基本層中，需要  **伺服器管理員** 或 **Azure Active Directory 系統管理員** 帳戶。  
   
 ## <a name="see-also"></a>另請參閱  
 
  [索引相關的動態管理檢視和函式 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
- [dm_db_index_operational_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
- [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys. dm_db_index_operational_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
+ [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
+ [sys. objects &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [效能的監視與微調](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
   
   
