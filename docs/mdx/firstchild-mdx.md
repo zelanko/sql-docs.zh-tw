@@ -1,5 +1,6 @@
 ---
-title: FirstChild （MDX） |Microsoft Docs
+description: FirstChild (MDX)
+title: FirstChild (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c1bd2f37304131b881d49aaa874eaed13530fc0e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 60194581eb5bd2bb7f0a6252ca33062b60809706
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032070"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387484"
 ---
 # <a name="firstchild-mdx"></a>FirstChild (MDX)
 

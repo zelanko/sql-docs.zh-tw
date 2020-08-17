@@ -1,5 +1,6 @@
 ---
-title: 參數和資料列集中繼資料（Native Client OLE DB 提供者）
+description: 中繼資料-SQL Server Native Client 中的參數和資料列集
+title: '參數和資料列集中繼資料 (Native Client OLE DB 提供者) '
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,14 +14,14 @@ ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1fb12ebfb1e158ae71c2e8bbc72a7159a10a91e5
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f45147881ec8cc2c62f8d023a1fe443164682678
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245802"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88381744"
 ---
-# <a name="metadata---parameter-and-rowset-in-sql-server-native-client"></a>SQL Server Native Client 中的中繼資料參數和資料列集
+# <a name="metadata---parameter-and-rowset-in-sql-server-native-client"></a>中繼資料-SQL Server Native Client 中的參數和資料列集
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   本主題提供有關下列與 OLE DB 日期和時間增強功能相關之類型和類型成員的資訊。  
@@ -40,12 +41,12 @@ ms.locfileid: "87245802"
   
 |參數類型|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|清除|  
-|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|設定|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|清除|  
-|Datetime|DBTYPE_DBTIMESTAMP|16|23|3|清除|  
-|datetime2|DBTYPE_DBTIMESTAMP|16|19，21. 27|0..7|設定|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26，28. 34|0..7|設定|  
+|date|DBTYPE_DBDATE|6|10|0|Clear|  
+|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
+|Datetime|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19，21. 27|0..7|Set|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26，28. 34|0..7|Set|  
   
  請注意，在某些情況下值的範圍並不是連續的。 這是當小數有效位數大於零時增加的小數點所導致。  
   
@@ -67,9 +68,9 @@ ms.locfileid: "87245802"
   
  已忽略 *bPrecision* 參數。  
   
- 當傳送資料到伺服器時，"DBPARAMFLAGS_SS_ISVARIABLESCALE" 會被忽略。 應用程式可以使用提供者特定的類型名稱 "**datetime**" 和 "**smalldatetime**" 來強制使用舊版的表格式資料流 (TDS) 類型。 當連接到 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (或更新版本) 伺服器時，會使用 "**datetime2**" 格式，而且當類型名稱為 "**datetime2**" 或 "DBTYPE_DBTIMESTAMP" 時，會發生隱含的伺服器轉換 (如有必要)。 如果使用了提供者特定的類型名稱 "**datetime**" 或 "**smalldatetime**"，就會忽略 *bScale*。 否則，html5 應用程式必須確定已正確設定*bScale* 。 從 MDAC 升級的應用程式以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 使用 "DBTYPE_DBTIMESTAMP" 的 Native Client，如果未正確設定*bScale* ，將會失敗。 連接到 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前版本的伺服器執行個體時，*bScale* 值如果不是 0 或 3 且具有 "DBTYPE_DBTIMESTAMP"，便是錯誤且會傳回 E_FAIL。  
+ 當傳送資料到伺服器時，"DBPARAMFLAGS_SS_ISVARIABLESCALE" 會被忽略。 應用程式可以使用提供者特定的類型名稱 "**datetime**" 和 "**smalldatetime**" 來強制使用舊版的表格式資料流 (TDS) 類型。 當連接到 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (或更新版本) 伺服器時，會使用 "**datetime2**" 格式，而且當類型名稱為 "**datetime2**" 或 "DBTYPE_DBTIMESTAMP" 時，會發生隱含的伺服器轉換 (如有必要)。 如果使用了提供者特定的類型名稱 "**datetime**" 或 "**smalldatetime**"，就會忽略 *bScale*。 否則，html5 應用程式必須確定已正確設定 *bScale* 。 從 MDAC 升級的應用程式和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 使用 "DBTYPE_DBTIMESTAMP" 的 Native Client，如果未正確設定 *bScale* ，則會失敗。 連接到 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前版本的伺服器執行個體時，*bScale* 值如果不是 0 或 3 且具有 "DBTYPE_DBTIMESTAMP"，便是錯誤且會傳回 E_FAIL。  
   
- 未呼叫 ICommandWithParameters：： SetParameterInfo 時，提供者會依照 IAccessor：： CreateAccessor 中的指定，從系結類型推斷伺服器類型，如下所示：  
+ 未呼叫 ICommandWithParameters：： SetParameterInfo 時，提供者會依照 IAccessor：： CreateAccessor 中指定的系結類型來推斷伺服器類型，如下所示：  
   
 |繫結類型|*pwszDataSourceType*<br /><br /> (提供者特定)|  
 |------------------|----------------------------------------------------|  
@@ -85,12 +86,12 @@ ms.locfileid: "87245802"
   
 |資料行類型|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE、DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|清除|  
-|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|設定|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|清除|  
-|Datetime|DBTYPE_DBTIMESTAMP|16|23|3|清除|  
-|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|設定|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|設定|  
+|date|DBTYPE_DBDATE|6|10|0|Clear|  
+|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
+|Datetime|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Set|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Set|  
   
  在 DBCOLUMN_FLAGS 中，DBCOLUMNFLAGS_ISFIXEDLENGTH 對 date/time 類型永遠為 true，而且下列旗標永遠為 false：  
   
@@ -119,12 +120,12 @@ ms.locfileid: "87245802"
   
 |參數類型|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|清除|  
-|time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|設定|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|清除|  
-|Datetime|DBTYPE_DBTIMESTAMP|16|23|3|清除|  
-|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|設定|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|設定|  
+|date|DBTYPE_DBDATE|6|10|0|Clear|  
+|time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
+|Datetime|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Set|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Set|  
   
  在 *dwFlags* 中，DBCOLUMNFLAGS_ISFIXEDLENGTH 對 date/time 類型永遠為 true，而且下列旗標永遠為 false：  
   

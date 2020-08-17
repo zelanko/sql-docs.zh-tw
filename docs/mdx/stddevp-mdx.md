@@ -1,5 +1,6 @@
 ---
-title: StddevP （MDX） |Microsoft Docs
+description: StddevP (MDX)
+title: StddevP (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8ceb37a1802fc39c6d99a1e12cbbe51f299374d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 89c800ffec9e4409abdf50ea2a37c5abdf373ee7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036916"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386954"
 ---
 # <a name="stddevp-mdx"></a>StddevP (MDX)
 

@@ -1,5 +1,6 @@
 ---
-title: Instr （MDX） |Microsoft Docs
+description: Instr (MDX)
+title: " (MDX) 的 Instr |Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7d7da3f994ed0741ef7ca6bcbe4d6003eea981c7
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 877fc4658081108e810e404dfc8d4a368c6964ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363408"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387354"
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
 
@@ -37,18 +38,18 @@ InStr([start, ]searched_string, search_string[, compare])
  搜尋目標的字串運算式。  
   
  *比較*  
- (選擇性) 整數值。 一律會忽略這個引數。 其定義是為了與其他語言中的其他**Instr**函數相容。  
+ (選擇性) 整數值。 一律會忽略這個引數。 它是為了與其他語言中的其他 **Instr** 函數相容而定義的。  
   
 ## <a name="return-value"></a>傳回值  
- 在*String1*中開始位置為*string2*的整數值。  
+ 以*string1*開始位置為*string2*的整數值。  
   
- 此外， **InStr**函數會根據條件傳回下表所列的值：  
+ 此外， **InStr** 函數會根據條件傳回下表所列的值：  
   
 |條件|傳回值|  
 |---------------|------------------|  
 |String1 為零長度|零 (0)|  
 |String1 為 Null|未定義|  
-|String2 為零長度|開始|  
+|String2 為零長度|start|  
 |String2 為 Null|未定義|  
 |找不到 String2|零 (0)|  
 |start 大於 Len(String2)|零 (0)|  
@@ -56,10 +57,10 @@ InStr([start, ]searched_string, search_string[, compare])
 ## <a name="remarks"></a>備註  
   
 > [!WARNING]  
->  **Instr**一律會執行不區分大小寫的比較。  
+>  **Instr** 一律會執行不區分大小寫的比較。  
   
 ## <a name="example"></a>範例  
- 下列範例顯示**Instr**函數的用法，並顯示不同的結果案例。  
+ 下列範例顯示 **Instr** 函數的用法，並顯示不同的結果案例。  
   
 ```  
 with   

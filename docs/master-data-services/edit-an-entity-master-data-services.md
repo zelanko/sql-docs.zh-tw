@@ -1,4 +1,5 @@
 ---
+description: 編輯實體 (Master Data Services)
 title: 編輯實體
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 484fdb93ac51f353de97333d115aed4591715e9a
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: a95b2515fd8840f3a5dc04b4276bfb0316535619
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813319"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88389544"
 ---
 # <a name="edit-an-entity-master-data-services"></a>編輯實體 (Master Data Services)
 
@@ -25,18 +26,18 @@ ms.locfileid: "85813319"
 
   您可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中編輯實體。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-edit-an-entity"></a>編輯實體  
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
   
-2.  在 [**管理模型**] 頁面上，從方格中選取模型，然後按一下 [**實體**]。  
+2.  在 [ **管理模型** ] 頁面上，從方格中選取模型，然後按一下 [ **實體**]。  
   
 3.  在 [管理實體]**** 頁面的方格中，選取您要變更的實體資料列，然後按一下 [編輯]****。  
   
@@ -56,7 +57,7 @@ ms.locfileid: "85813319"
   
 9. 選取或取消選取 [啟用資料壓縮]**** 核取方塊。 依預設會開啟資料列壓縮。  
   
-     如需詳細資訊，請參閱[資料壓縮](../relational-databases/data-compression/data-compression.md)  
+     如需詳細資訊，請參閱 [資料壓縮](../relational-databases/data-compression/data-compression.md)  
   
 ## <a name="status"></a>狀態  
  方格中的狀態資料行會顯示實體的作業狀態。 當您按一下 [儲存實體]**** 時，下列影像隨即顯示，指出正在更新實體。  

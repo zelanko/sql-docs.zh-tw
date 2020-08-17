@@ -1,5 +1,6 @@
 ---
-title: 建立大量複製格式檔案（ODBC） |Microsoft Docs
+description: 建立大量複製格式檔案 (ODBC)
+title: " (ODBC) 建立大量複製格式檔案 |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,11 +15,12 @@ ms.assetid: 0572fef3-daf5-409e-b557-c2a632f9a06d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2aa21196deb2927fccfb9e623d68a583736947e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 32bb2fe91788d20bef8906d74d26c17cdd7d1f3a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009561"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88383024"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>建立大量複製格式檔案 (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,7 +28,7 @@ ms.locfileid: "86009561"
   此範例將示範如何使用大量複製函數來建立資料檔案和格式檔案。 此範例是針對 ODBC 3.0 版或更新版本所開發。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，您應該使用[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)將它們加密。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
   
 ### <a name="to-create-a-bulk-copy-format-file"></a>建立大量複製格式檔案  
   
@@ -36,7 +38,7 @@ ms.locfileid: "86009561"
   
 3.  連接到 SQL Server。  
   
-4.  呼叫[bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)以設定下列資訊：  
+4.  呼叫 [bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) 以設定下列資訊：  
   
     -   要進行大量複製之來源或目標資料表或檢視表的名稱。  
   
@@ -46,26 +48,26 @@ ms.locfileid: "86009561"
   
     -   複製的方向：DB_OUT 到資料表或檢視表的檔案。  
   
-5.  呼叫[bcp_columns](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)來設定資料行數目。  
+5.  呼叫 [bcp_columns](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) 設定資料行數目。  
   
-6.  針對每個資料行呼叫[bcp_colfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) ，以定義其在資料檔案中的特性。  
+6.  針對每個資料行呼叫 [bcp_colfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) ，以在資料檔案中定義其特性。  
   
-7.  呼叫[bcp_writefmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)來建立格式檔案，以描述大量複製作業所要建立的資料檔案。  
+7.  呼叫 [bcp_writefmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) 來建立格式檔案，以描述大量複製作業所要建立的資料檔案。  
   
-8.  呼叫[bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)以執行大量複製作業。  
+8.  呼叫 [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) ，以執行大量複製作業。  
   
  以這種方式執行的大量複製作業會建立包含大量複製資料的資料檔案，以及描述資料檔案配置的格式檔案。  
   
 ## <a name="example"></a>範例  
- 您需要名為 AdventureWorks 的 ODBC 資料來源，其預設資料庫為 AdventureWorks 範例資料庫  （您可以從[Microsoft SQL Server 範例和 [社區專案](https://go.microsoft.com/fwlink/?LinkID=85384)] 首頁下載 AdventureWorks 範例資料庫）。此資料來源必須以作業系統所提供的 ODBC 驅動程式為基礎（驅動程式名稱為 "SQL Server"）。 如果您要建立並執行此範例，當做 64 位元作業系統上的 32 位元應用程式，您必須利用 %windir%\SysWOW64\odbcad32.exe，以 ODBC 管理員身分建立 ODBC 資料來源。  
+ 您需要名為 AdventureWorks 的 ODBC 資料來源，其預設資料庫為 AdventureWorks 範例資料庫   (您可以從 [Microsoft SQL Server 範例和群組專案](https://go.microsoft.com/fwlink/?LinkID=85384) 首頁下載 AdventureWorks 範例資料庫。 ) 這個資料來源必須以作業系統所提供的 ODBC 驅動程式為基礎， (驅動程式名稱是 "SQL Server" ) 。 如果您要建立並執行此範例，當做 64 位元作業系統上的 32 位元應用程式，您必須利用 %windir%\SysWOW64\odbcad32.exe，以 ODBC 管理員身分建立 ODBC 資料來源。  
   
  這個範例會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 若要連接到具名執行個體，請變更 ODBC 資料來源的定義，以便使用下列格式指定執行個體：server\namedinstance。 根據預設，[!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] 會安裝至具名執行個體。  
   
- 執行第一個（ [!INCLUDE[tsql](../../../includes/tsql-md.md)] ）程式代碼清單，以建立範例將使用的資料表。  
+ 執行第一個 ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) 程式代碼清單，以建立範例將使用的資料表。  
   
  使用 odbc32.lib 和 odbcbcp.lib 編譯第二個 (C++) 程式碼清單。  
   
- 執行第三個（ [!INCLUDE[tsql](../../../includes/tsql-md.md)] ）程式代碼清單，以刪除此範例所使用的資料表。  
+ 執行第三個 ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) 程式代碼清單，以刪除範例所使用的資料表。  
   
 ```  
 use AdventureWorks  
@@ -214,7 +216,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 SQL Server ODBC 驅動程式的大量複製如何 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+ [使用 ODBC 驅動程式的 SQL Server 的 how to 主題大量複製 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [使用資料檔案與格式檔案](../../../relational-databases/native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
   

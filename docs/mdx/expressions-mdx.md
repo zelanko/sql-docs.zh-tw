@@ -1,5 +1,6 @@
 ---
-title: 運算式（MDX） |Microsoft Docs
+description: 運算式 (MDX)
+title: " (MDX) 的運算式 |Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,31 +9,31 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a1dfcdc52bb52652c204e31c28ccf5ec48ca7a00
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 78e1bc6056906130422db0aa69aff60977af1d0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893591"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387524"
 ---
 # <a name="expressions-mdx"></a>運算式 (MDX)
 
 
-  運算式是可評估以取得結果的識別碼、值和運算子的組合。 在存取或變更資料時，資料可以用在許多不同的地方。 例如，您可以使用運算式做為查詢所要擷取之資料的一部份、或是做為搜尋條件來尋找符合一組條件的資料。  
+  運算式是可評估來取得結果的識別碼、值和運算子的組合。 在存取或變更資料時，資料可以用在許多不同的地方。 例如，您可以使用運算式做為查詢所要擷取之資料的一部份、或是做為搜尋條件來尋找符合一組條件的資料。  
   
 ## <a name="simple-and-complex-expressions"></a>簡單及複雜運算式  
  MDX 中的運算式可能很簡單或很複雜：  
   
  簡單運算式可以是下列運算式之一：  
   
- 持續性  
+ 常數  
  常數在 MDX 中是代表單一特定值的符號。 字串、數值及日期值可以轉譯成常數。 和數值常數不同，字串及日期常數必須以單引號 (') 字元分隔。  
   
  純量函數  
  在 MDX 中，純量函數會傳回評估內容內的單一值。 因為不只會在單一資料元素上，也會反覆在一群資料元素 (例如，資料格或成員) 上評估大部份的 MDX 運算式、陳述式及指令碼，所以此特性對了解 MDX 如何解析純量函數很重要。 但是，在評估純量函數時，此函數一般會檢閱單一資料元素。  
   
  物件識別碼  
- 因為多維度資料的本質，所以 MDX 是物件導向的。 物件識別碼在 MDX 中視為簡單運算式。 如需識別碼的詳細資訊，請參閱[MDX&#41;&#40;的識別碼](../mdx/identifiers-mdx.md)。  
+ 因為多維度資料的本質，所以 MDX 是物件導向的。 物件識別碼在 MDX 中視為簡單運算式。 如需識別碼的詳細資訊，請參閱 [&#40;MDX&#41;的識別碼 ](../mdx/identifiers-mdx.md)。  
   
  複雜運算式可以從上述項目利用運算子聯結的組合來建立。  
   

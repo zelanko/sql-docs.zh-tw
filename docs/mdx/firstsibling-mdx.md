@@ -1,5 +1,6 @@
 ---
-title: FirstSibling （MDX） |Microsoft Docs
+description: FirstSibling (MDX)
+title: FirstSibling (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 671dd0b2b400362fe3a2274c4687f93192f04da4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 265c3bce4ad873ec3c5d8ae0760455f87b1855f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105453"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387474"
 ---
 # <a name="firstsibling-mdx"></a>FirstSibling (MDX)
 

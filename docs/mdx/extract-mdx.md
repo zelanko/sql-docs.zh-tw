@@ -1,5 +1,6 @@
 ---
-title: 解壓縮（MDX） |Microsoft Docs
+description: Extract (MDX)
+title: 解壓縮 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 26edefab1a81aebaa9bf63e69e24067428266de1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b168794a38a515d4ace97d576710041eac86195
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67906045"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387514"
 ---
 # <a name="extract-mdx"></a>Extract (MDX)
 
@@ -38,12 +39,12 @@ Extract(Set_Expression, Hierarchy_Expression1 [,Hierarchy_Expression2, ...n] )
  傳回階層的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- **解壓縮**函式會傳回集合，其中包含已解壓縮之階層元素的元組。 對於指定集合中的每個 Tuple，指定的階層成員會擷取至結果集中的新 Tuple。 此函數永遠會移除重複的 Tuple。  
+ **解壓縮**函式會傳回集合，其中包含來自已解壓縮之階層元素的元組。 對於指定集合中的每個 Tuple，指定的階層成員會擷取至結果集中的新 Tuple。 此函數永遠會移除重複的 Tuple。  
   
- **解壓縮**函數會執行[交叉](../mdx/crossjoin-mdx.md)聯結函式的相反動作。  
+ **解壓縮**函式會執行[交叉](../mdx/crossjoin-mdx.md)聯結函數的相反動作。  
   
 ## <a name="examples"></a>範例  
- 下列查詢會顯示如何在非空白函**式所傳回**的一組元組上使用**解壓縮**函數：  
+ 下列查詢示範如何在非**空白函數所傳回的一**組元組上使用**解壓縮**函式：  
   
  `SELECT [Measures].[Internet Sales Amount] ON 0,`  
   

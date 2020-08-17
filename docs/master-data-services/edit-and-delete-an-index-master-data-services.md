@@ -1,4 +1,5 @@
 ---
+description: 編輯和刪除索引 (Master Data Services)
 title: 編輯和刪除索引
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f8fb2a63-f9ae-4b9d-b26f-2024d9af15c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0a543cc6c153af6cd40617d4fe7699ccabad8f9a
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: bd01942fd0545b338c43b1711b4d58be9a5052ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812363"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88389474"
 ---
 # <a name="edit-and-delete-an-index-master-data-services"></a>編輯和刪除索引 (Master Data Services)
 
@@ -23,18 +24,18 @@ ms.locfileid: "85812363"
 
   您可以編輯和刪除已在屬性上建立的索引。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取系統管理功能區域的權限。 如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
  **編輯警示**  
   
 1.  在主資料管理員中，按一下 [系統管理] ****。  
   
-2.  在 [**管理模型**] 頁面上，從方格中選取模型，然後按一下 [**實體**]。  
+2.  在 [ **管理模型** ] 頁面上，從方格中選取模型，然後按一下 [ **實體**]。  
   
 3.  在 [管理實體]**** 頁面上，從方格中選取含有您想要編輯之索引的實體。  
   
@@ -52,7 +53,7 @@ ms.locfileid: "85812363"
   
  **若要刪除索引**  
   
-1.  在 [**管理模型**] 頁面上，從方格中選取模型，然後按一下 [**實體**]。  
+1.  在 [ **管理模型** ] 頁面上，從方格中選取模型，然後按一下 [ **實體**]。  
   
 2.  在 [管理實體]**** 頁面上，從方格中選取含有您想要刪除之索引的實體。  
   
@@ -63,7 +64,7 @@ ms.locfileid: "85812363"
 5.  在確認訊息方塊中按一下 [確定]****。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立 &#40;Master Data Services 的索引&#41;](../master-data-services/create-an-index-master-data-services.md)   
+ [建立索引 &#40;Master Data Services&#41;](../master-data-services/create-an-index-master-data-services.md)   
  [自訂索引 &#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md)  
   
   

@@ -1,5 +1,6 @@
 ---
-title: sys.databases （Transact-sql） |Microsoft Docs
+description: sys.endpoints (Transact-SQL)
+title: sys. 端點 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e6dafa4e-e47e-43ec-acfc-88c0af53c1a1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 297142bceb77c9f90f7496b00c0e9549a5f39a3e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 58199515a947ccc741314e962e457c14c7ca61f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893231"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88377814"
 ---
 # <a name="sysendpoints-transact-sql"></a>sys.endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,9 +38,9 @@ ms.locfileid: "85893231"
 |**endpoint_id**|**int**|端點的識別碼。 在伺服器中，這是唯一的。 識別碼小於 65536 的端點是系統端點。 不可為 Null。|  
 |**principal_id**|**int**|建立和擁有這個端點的伺服器主體識別碼。 可為 Null。|  
 |**protocol**|**tinyint**|端點通訊協定。<br /><br /> 1 = HTTP<br /><br /> 2 = TCP<br /><br /> 3 = 具名管道<br /><br /> 4 = 共用記憶體<br /><br /> 5 = 虛擬介面配接器 (VIA)<br /><br /> 不可為 Null。|  
-|**protocol_desc**|**nvarchar(60)**|端點通訊協定的描述。 NULLABLE。 下列其中一個值：<br /><br /> **HTTP**<br /><br /> **TCP**<br /><br /> **NAMED_PIPES**<br /><br /> **SHARED_MEMORY**<br /><br /> **VIA**注意： VIA 通訊協定已被取代。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
+|**protocol_desc**|**nvarchar(60)**|端點通訊協定的描述。 NULLABLE。 下列其中一個值：<br /><br /> **HTTP**<br /><br /> **TCP**<br /><br /> **NAMED_PIPES**<br /><br /> **SHARED_MEMORY**<br /><br /> **VIA** 注意： VIA 通訊協定已被取代。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |**type**|**tinyint**|端點裝載類型。<br /><br /> 1 = SOAP<br /><br /> 2 = TSQL<br /><br /> 3 = SERVICE_BROKER<br /><br /> 4 = DATABASE_MIRRORING<br /><br /> 不可為 Null。|  
-|**type_desc**|**nvarchar(60)**|端點裝載類型的描述。 可為 Null。 下列其中一個值：<br /><br /> **SOAP**<br /><br /> **T Q**<br /><br /> **SERVICE_BROKER**<br /><br /> **DATABASE_MIRRORING**|  
+|**type_desc**|**nvarchar(60)**|端點裝載類型的描述。 可為 Null。 下列其中一個值：<br /><br /> **肥皂**<br /><br /> **TSQL**<br /><br /> **SERVICE_BROKER**<br /><br /> **DATABASE_MIRRORING**|  
 |**state**|**tinyint**|端點狀態。<br /><br /> 0 = STARTED，接聽和處理要求。<br /><br /> 1 = STOPPED，接聽但不處理要求。<br /><br /> 2 = DISABLED，不接聽<br /><br /> 預設狀態為 1。 可為 Null。|  
 |**state_desc**|**nvarchar(60)**|端點狀態的描述。<br /><br /> STARTED = 接聽和處理要求。<br /><br /> STOPPED = 接聽但不處理要求。<br /><br /> DISABLED = 不接聽。<br /><br /> 預設狀態是 STOPPED。<br /><br /> 可為 Null。|  
 |**is_admin_endpoint**|**bit**|指出端點是否作為管理使用。<br /><br /> 0 = 非管理端點。<br /><br /> 1 = 端點是管理端點。<br /><br /> 不可為 Null。|  
@@ -48,7 +49,7 @@ ms.locfileid: "85893231"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [端點目錄檢視 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
+ [端點目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

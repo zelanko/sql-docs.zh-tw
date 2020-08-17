@@ -1,4 +1,5 @@
 ---
+description: 使用 ADO 物件的 ADO 程式設計人員指南
 title: ADO 程式設計人員指南 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: e3c50eee-964a-4abd-810d-1bd51978e814
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 399dd83a531267ada3456ccbe9c71308a7c99b92
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0e2e3777ac272980c453bbb850e117a1739b0de9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761686"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355414"
 ---
 # <a name="ado-programmers-guide-for-using-ado-objects"></a>使用 ADO 物件的 ADO 程式設計人員指南
-本檔提供如何使用 ADO 物件來處理來自各種資料來源之資料的總覽。 首先，簡介會摘要說明新功能，以及安裝、使用和轉散發 ADO 元件的需求。 下一節將討論各種類型的 ADO 物件的用法。 最後，附錄會討論各種 Microsoft 提供的資料和服務提供者、錯誤訊息，以及有關如何在數種程式設計語言中使用 ADO 的秘訣，以及範例和詞彙。
+本檔概述如何使用 ADO 物件來處理來自各種資料來源的資料。 首先，簡介會摘要說明安裝、使用和轉散發 ADO 元件的新功能和需求。 下一節將討論各種類型 ADO 物件的使用。 最後，附錄會討論各種 Microsoft 提供的資料和服務提供者、錯誤訊息，以及有關如何在多個程式設計語言中使用 ADO 的秘訣，以及範例和詞彙。
 
  此章節包含下列主題。
 
@@ -28,7 +29,7 @@ ms.locfileid: "82761686"
 
 -   [ActiveX Data Objects (ADO)](../../ado/guide/data/activex-data-objects-ado.md)
 
--   [遠端資料服務（RDS）](../../ado/guide/remote-data-service/remote-data-service-rds.md)
+-   [ (RDS) 的遠端資料服務 ](../../ado/guide/remote-data-service/remote-data-service-rds.md)
 
 -   [ADO (多維度) (ADO MD)](../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)
 

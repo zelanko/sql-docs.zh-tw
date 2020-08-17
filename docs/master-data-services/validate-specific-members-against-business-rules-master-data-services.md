@@ -1,4 +1,5 @@
 ---
+description: 根據商務規則驗證特定成員 (Master Data Services)
 title: 根據商務規則驗證特定成員
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2288ef43-5392-47ea-b651-ec25e5692a14
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ae7e5a0419e57d24a2f2d16b6b3407f2fb75bc77
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 1ef5dca9c03c3e0299169f1262163d27055802a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812854"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88388693"
 ---
 # <a name="validate-specific-members-against-business-rules-master-data-services"></a>根據商務規則驗證特定成員 (Master Data Services)
 
@@ -29,7 +30,7 @@ ms.locfileid: "85812854"
 > [!NOTE]  
 >  如果您想要將商務規則套用至某版本模型中的所有成員，請參閱 [根據商務規則驗證版本 &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 [ **Explorer** ] 功能區域的許可權。  

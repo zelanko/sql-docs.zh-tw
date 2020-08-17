@@ -1,4 +1,5 @@
 ---
+description: 資料庫存取架構
 title: 資料庫存取架構 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3811599f-48cb-4205-9fe5-5ab4b240047d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b0993dc9891d6ed74f6d149692dac2555346d3d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3ce5761951c2a42d2521852a06bb77eab1130157
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306499"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88385814"
 ---
 # <a name="database-access-architecture"></a>資料庫存取架構
-ODBC 開發的其中一個問題，就是資料庫存取架構的一部分要標準化。 上一節中所述的 SQL 程式設計介面（內嵌 SQL、SQL 模組和 Cli）只是此架構的其中一個部分。 事實上，由於 ODBC 主要是用來將個人電腦型應用程式連接到 minicomputer 和大型主機 Dbms，因此也有許多網路元件，其中有些可能會進行標準化。  
+在開發 ODBC 時，其中一個問題就是資料庫存取架構中要標準化的部分。 上一節中所述的 SQL 程式設計介面（內嵌 SQL、SQL 模組和 Cli）只是此架構的一部分。 事實上，由於 ODBC 主要是用來將個人電腦應用程式連接至 minicomputer 和大型主機 Dbms，因此也有許多網路元件，其中有些可能是標準化的。  
   
  此章節包含下列主題。  
   

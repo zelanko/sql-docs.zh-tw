@@ -1,4 +1,5 @@
 ---
+description: 變更明確階層名稱 (Master Data Services)
 title: 變更明確階層名稱
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 12991603-474e-4042-b160-b1f7979694b1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 31f93bbb8aa214a1353fce1a571f555c94055ccd
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: af898be32f3c3713bbf73a34bec2d9a4f67368be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812033"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88390254"
 ---
 # <a name="change-an-explicit-hierarchy-name-master-data-services"></a>變更明確階層名稱 (Master Data Services)
 
@@ -25,12 +26,12 @@ ms.locfileid: "85812033"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以變更明確階層的名稱。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-change-the-name-of-an-explicit-hierarchy"></a>若要變更明確階層的名稱  
   

@@ -1,5 +1,6 @@
 ---
-title: CALL 語句（MDX） |Microsoft Docs
+description: MDX 資料操作 - CALL
+title: " (MDX) 的 CALL 語句 |Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: de74590ac4c43a9141c0ab2092babf41ffd23ba5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3a8f3b550e3fed3fe28e74896c3c4ff764db8810
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68106306"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387035"
 ---
 # <a name="mdx-data-manipulation---call"></a>MDX 資料操作 - CALL
 
@@ -47,10 +48,10 @@ CALL SP_Name
  如果沒有指定 Cube，陳述式會在目前 Cube 上執行預存程序。  
   
 > [!NOTE]  
->  如果預存程式未在用戶端上註冊，則**call**語句會嘗試從的實例呼叫預存程式[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
+>  如果預存程式未在用戶端上註冊，則 **call** 語句會嘗試從的實例呼叫預存程式 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。  
   
 ## <a name="see-also"></a>另請參閱  
- [Mdx&#41;&#40;mdx 資料動作陳述式](../mdx/mdx-data-manipulation-statements-mdx.md)   
+ [Mdx 資料動作陳述式 &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
  [使用預存程序 &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)  
   
   

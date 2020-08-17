@@ -1,5 +1,6 @@
 ---
-title: sys.databases server_triggers （Transact-sql） |Microsoft Docs
+description: sys.server_triggers (Transact-SQL)
+title: sys. server_triggers (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: 25926ff4-9271-45bf-bc32-d5d3344bd47a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7ce21b1c997a1530212f9a0317632f665c9ef503
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7a054f0ebd5c7e80b615ad47c6c6fc0ec271e215
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884466"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88376274"
 ---
 # <a name="sysserver_triggers-transact-sql"></a>sys.server_triggers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  包含所有 object_type 為 TR 或 TA 的伺服器層級 DDL 觸發程序組。 在 CLR 觸發程式的情況下，必須將元件載入到**master**資料庫中。 所有的伺服器層級 DDL 觸發程序名稱，都在一個全域範圍內。  
+  包含所有 object_type 為 TR 或 TA 的伺服器層級 DDL 觸發程序組。 在 CLR 觸發程式的情況下，元件必須載入到 **master** 資料庫中。 所有的伺服器層級 DDL 觸發程序名稱，都在一個全域範圍內。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  

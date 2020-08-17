@@ -1,5 +1,6 @@
 ---
-title: dbo.sysproxysubsystem （Transact-sql） |Microsoft Docs
+description: dbo.sysproxysubsystem (Transact-SQL)
+title: dbo.sysproxysubsystem (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: 6d7713f5-1253-4a19-b1fb-635c377c95c1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 287cd7113fe416f59bfe4351cebd2aee59b17832
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8f11103d163fab6209ef8ae65b48aae83ef9ee1a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890405"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373784"
 ---
 # <a name="dbosysproxysubsystem-transact-sql"></a>dbo.sysproxysubsystem (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  記錄每個 Proxy 帳戶使用哪個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 子系統。 此資料表會儲存在**msdb**資料庫中。  
+  記錄每個 Proxy 帳戶使用哪個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 子系統。 此資料表儲存在 **msdb** 資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -37,10 +38,10 @@ ms.locfileid: "85890405"
 |**proxy_id**|**int**|Proxy 帳戶的識別碼。 這個值會對應至**sysproxies**資料表中的**proxy_id**資料行。|  
   
 ## <a name="remarks"></a>備註  
- 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠存取此資料表。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠存取此資料表。  
   
 ## <a name="see-also"></a>另請參閱  
  [dbo.sys子系統 &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-syssubsystems-transact-sql.md)   
- [dbo.sysproxy &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)  
+ [dbo.sys&#40;Transact-sql&#41;的 proxy ](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)  
   
   

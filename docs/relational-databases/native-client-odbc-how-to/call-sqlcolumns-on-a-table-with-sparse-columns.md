@@ -1,4 +1,5 @@
 ---
+description: 在具有疏鬆資料行的資料表上呼叫 SQLColumns
 title: 在具有稀疏資料行的資料表上呼叫 SQLColumns |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -12,11 +13,12 @@ ms.assetid: afd35e13-2370-43c2-9cbc-f8da6248c39c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1a8cf47763d1705821cfc70708595185c21cf23c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0bdcb60ed1ca0b4c2d0cf3d5294b583a4914dff4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009554"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88382284"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>在具有疏鬆資料行的資料表上呼叫 SQLColumns
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -25,7 +27,7 @@ ms.locfileid: "86009554"
   
  此範例不適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的任何 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本。  
   
- 如需有關「稀疏資料行」功能的詳細資訊，請參閱[SQL Server Native Client 中的稀疏資料行支援](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)。  
+ 如需有關「稀疏資料行」功能的詳細資訊，請參閱 [SQL Server Native Client 中的稀疏資料行支援](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)。  
   
 ## <a name="example"></a>範例  
  第一個清單是 C++ 原始程式碼。 請將 "MyServer" 變更為有效的伺服器名稱。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。 如果您要建立並執行此範例，當做 64 位元作業系統上的 32 位元應用程式，您必須利用 %windir%\SysWOW64\odbcad32.exe，以 ODBC 管理員身分建立 ODBC 資料來源。  
@@ -34,7 +36,7 @@ ms.locfileid: "86009554"
   
  使用 /EHsc /D、"UNICODE" 和 odbc32.lib 編譯。  
   
- 第二個（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）程式代碼清單會刪除此範例所建立的資料表。  
+ 第二個 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式代碼清單會刪除此範例所建立的資料表。  
   
 ```  
 // compile with: /EHsc /D "UNICODE" odbc32.lib  

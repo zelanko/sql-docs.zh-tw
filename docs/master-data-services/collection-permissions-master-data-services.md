@@ -1,4 +1,5 @@
 ---
+description: 集合權限 (Master Data Services)
 title: 集合權限
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 703e1bf5-4b4b-4830-8a5b-f979b09f677d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: efeb7025d9b0e959aba43cb172cdcb9d36d6c4c9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 04ffb34b92aa43c521a9a454a8068e74cf4fd615
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811611"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88390284"
 ---
 # <a name="collection-permissions-master-data-services"></a>集合權限 (Master Data Services)
 
@@ -41,7 +42,7 @@ ms.locfileid: "85811611"
   
 ## <a name="see-also"></a>另請參閱  
  [指派模型物件使用權限 &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [&#40;Master Data Services 的集合&#41;](../master-data-services/collections-master-data-services.md)   
+ [集合 &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)   
  [模型物件權限 &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)  
   
   

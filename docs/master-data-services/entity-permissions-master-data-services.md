@@ -1,4 +1,5 @@
 ---
+description: 實體權限 (Master Data Services)
 title: 實體權限
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3a0ca2773d513137adeb9e803b66930536e3a28a
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: b71ffdf22c3a6758ee81d92f5f25300784d73fff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811943"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88389184"
 ---
 # <a name="entity-permissions-master-data-services"></a>實體權限 (Master Data Services)
 

@@ -1,5 +1,6 @@
 ---
-title: sys.databases server_trigger_events （Transact-sql） |Microsoft Docs
+description: sys.server_trigger_events (Transact-SQL)
+title: sys. server_trigger_events (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: be7d8a59-3c00-4f1b-b4b0-3dcd5572e002
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b967469b2a8b9738007636937ed94dcd1bf1c507
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 048dbd6270b65744bf44bdca5bdf60762a242275
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887902"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88376264"
 ---
 # <a name="sysserver_trigger_events-transact-sql"></a>sys.server_trigger_events (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85887902"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**繼承的資料行**||從 sys.databases 繼承所有資料行[server_events](../../relational-databases/system-catalog-views/sys-server-events-transact-sql.md)。|  
+|**繼承的資料行**||從 [sys. server_events](../../relational-databases/system-catalog-views/sys-server-events-transact-sql.md)繼承所有資料行。|  
 |**is_first**|**bit**|觸發程序被標示為這個事件要引發的第一個觸發程序。|  
 |**is_last**|**bit**|觸發程序被標示為這個事件要引發的最後一個觸發程序。|  
   
@@ -41,7 +42,7 @@ ms.locfileid: "85887902"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的物件目錄檢視](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [物件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

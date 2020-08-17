@@ -1,5 +1,6 @@
 ---
-title: sys.databases sql_dependencies （Transact-sql） |Microsoft Docs
+description: sys.sql_dependencies (Transact-SQL)
+title: sys. sql_dependencies (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1779aa87-a0b8-470a-a286-d7cc0b93ad2e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4b246947ce4657dc97b4f9a3dc6356ef4a150da8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1662f79b4c30a4503a580b562f3d264cd8d05719
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897734"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88376084"
 ---
 # <a name="syssql_dependencies-transact-sql"></a>sys.sql_dependencies (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85897734"
   依照定義某些其他參考物件的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 運算式或陳述式所參考，針對受參考之實體的每個相依性，各包含一個資料列。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]請改用[sys. sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) 。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用 [sys. sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) 。  
 
   
 |資料行名稱|資料類型|描述|  
@@ -42,7 +43,7 @@ ms.locfileid: "85897734"
 |object_id|**int**|參考物件的識別碼。|  
 |**column_id**|**int**|如果參考識別碼是資料行，便是參考資料行的識別碼，否則為 0。|  
 |**referenced_major_id**|**int**|受參考實體的識別碼，由類別值來解譯，依據如下：<br /><br /> 0、1 = 物件或資料行的物件識別碼。<br /><br /> 2 = 類型識別碼。<br /><br /> 3 = XML 結構描述集合識別碼。|  
-|**referenced_minor_id**|**int**|受參考實體的次要識別碼，由類別值來解譯，顯示如下。<br /><br /> 當類別 =：<br /><br /> 0， **referenced_minor_id**是資料行識別碼;或者，如果不是資料行，則為0。<br /><br /> 1， **referenced_minor_id**是資料行識別碼;或者，如果不是資料行，則為0。<br /><br /> 否則， **referenced_minor_id** = 0。|  
+|**referenced_minor_id**|**int**|受參考實體的次要識別碼，由類別值來解譯，顯示如下。<br /><br /> 當類別 =：<br /><br /> 0， **referenced_minor_id** 是資料行識別碼;或者，如果不是資料行，則為0。<br /><br /> 1， **referenced_minor_id** 是資料行識別碼;或者，如果不是資料行，則為0。<br /><br /> 否則， **referenced_minor_id** = 0。|  
 |**is_selected**|**bit**|選取物件或資料行。|  
 |**is_updated**|**bit**|更新物件或資料行。|  
 |**is_select_all**|**bit**|在 SELECT * 子句中使用物件 (只限物件層級)。|  
@@ -51,8 +52,8 @@ ms.locfileid: "85897734"
  需要 **public** 角色的成員資格。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [&#40;Transact-sql&#41;的物件目錄檢視](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [物件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [查詢 SQL Server 系統目錄 FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

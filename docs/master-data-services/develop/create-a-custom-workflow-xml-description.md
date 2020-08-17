@@ -1,4 +1,5 @@
 ---
+description: 建立自訂工作流程 - XML 描述
 title: 自訂工作流程 XML 描述
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,18 +11,18 @@ ms.topic: reference
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f7c49f9b2831942552844e6bb479d139988d84c7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c12348fc830a187a8d88841c15e25ba726bef968
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897423"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88389784"
 ---
 # <a name="create-a-custom-workflow---xml-description"></a>建立自訂工作流程 - XML 描述
 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  在中 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] ，當工作流程啟動時，SQL SERVER MDS 工作流程整合服務會呼叫[MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))方法。 此方法會收到有關觸發工作流程商務規則之項目的中繼資料和資料，做為 XML 的區塊。 如需實作工作流程處理常式的範例程式碼，請參閱[自訂工作流程範例 &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)。  
+  在中 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] ，當工作流程啟動時，SQL SERVER MDS 工作流程整合服務會呼叫 [MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) 方法。 此方法會收到有關觸發工作流程商務規則之項目的中繼資料和資料，做為 XML 的區塊。 如需實作工作流程處理常式的範例程式碼，請參閱[自訂工作流程範例 &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)。  
   
  以下範例顯示傳送至工作流程處理常式之 XML 的可能外觀：  
   
@@ -65,13 +66,13 @@ ms.locfileid: "85897423"
   
  下表描述此 XML 中包含的某些標記：  
   
-|Tag|說明|  
+|Tag|描述|  
 |---------|-----------------|  
 |\<Type>|您在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 之 [工作流程類型]**** 文字方塊中輸入的文字，用以識別要載入的自訂工作流程組件。|  
-|\<SendData>|在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中，由 [訊息中包含成員資料]**** 核取方塊所控制的布林值。 值為1表示 \<MemberData> 會傳送區段，否則 \<MemberData> 不會傳送區段。|  
+|\<SendData>|在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中，由 [訊息中包含成員資料]**** 核取方塊所控制的布林值。 值為1表示 \<MemberData> 區段已傳送，否則 \<MemberData> 不會傳送區段。|  
 |<Server_URL>|您在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 之 [工作流程網站]**** 文字方塊中輸入的文字。|  
 |<Action_ID>|您在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 之 [工作流程名稱]**** 文字方塊中輸入的文字。|  
-|\<MemberData>|包含觸發工作流程動作之成員的資料。 只有在的值為1時，才會包含此項 \<SendData> 。|  
+|\<MemberData>|包含觸發工作流程動作之成員的資料。 只有當的值為1時，才會包含此值 \<SendData> 。|  
 |\<Enter*xxx*>|這組標記包含有關建立成員的中繼資料，例如建立成員的時間以及建立成員者。|  
 |\<LastChg*xxx*>|這組標記包含有關上次對成員所進行之變更的中繼資料，例如進行變更的時間以及進行變更者。|  
 |\<Name>|已變更之成員的第一個屬性。 此範例成員僅包含 Name 和 Code 屬性。|  

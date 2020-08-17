@@ -1,4 +1,5 @@
 ---
+description: 功能區域權限 (Master Data Services)
 title: 功能區域權限
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a80b87b3-b904-4cda-8582-0761c2617c57
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d4a76feabce6834ba260980044772e2ee53b953d
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 0f3f863a6c08de5a4194c9fd6a08e4ee3e207e50
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811748"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88388324"
 ---
 # <a name="functional-area-permissions-master-data-services"></a>功能區域權限 (Master Data Services)
 
@@ -27,7 +28,7 @@ ms.locfileid: "85811748"
 
   您可以將權限指派給 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 使用者介面 (UI) 的每個功能區域。 下列是功能區域：  
   
--   **管理**  
+-   **總管**  
   
 -   **版本管理**  
   
@@ -41,7 +42,7 @@ ms.locfileid: "85811748"
   
  當您將權限指派給功能區域時，您會讓使用者或群組看到 UI 的區域。  
   
- 在總管**** 功能區域中，指派給模型物件和階層成員的其他權限會決定使用者可以存取的資料。 在所有其他功能區域中，使用者必須是模型管理員，才能檢視及操作模型。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+ 在總管**** 功能區域中，指派給模型物件和階層成員的其他權限會決定使用者可以存取的資料。 在所有其他功能區域中，使用者必須是模型管理員，才能檢視及操作模型。 如需詳細資訊，請參閱系統 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 > [!IMPORTANT]  
 >  具有進階使用者權限的使用者實際上具有所有模型的系統管理員權限，而且具有所有其他功能權限。  

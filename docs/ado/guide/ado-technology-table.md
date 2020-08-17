@@ -1,5 +1,6 @@
 ---
-title: ADO 技術資料表 |Microsoft Docs
+description: 產品和技術資料表
+title: ADO 技術表 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -12,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e0fb8e559dcf98f39b5f3783e3e43d5d10671cb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a524139113cffeaf437b91a41b4f10b4468d5fe4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761656"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355244"
 ---
 # <a name="products-and-technologies-table"></a>產品和技術資料表
-下表列出 ADO 程式設計人員指南中所討論的 Microsoft 產品、工具和技術。 它會盡可能提供連結至指南中的相關主題。
+下表列出 ADO 程式設計人員指南中所討論的 Microsoft 產品、工具和技術。 它會盡可能提供連結到指南中的相關主題。
 
-|Microsoft 產品或技術|參考資料|
+|Microsoft 產品或技術|參考|
 |-------------------------------------|----------------|
-|Access/Jet|[使用資料錄集](../../ado/guide/data/working-with-recordsets.md)<br /><br /> [ADOX 基礎](../../ado/guide/extensions/adox-fundamentals.md)<br /><br /> [適用于 Microsoft Jet 的 microsoft OLE DB 提供者](../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)|
-|Active Directory 服務介面 (ADSI)|[Microsoft OLE DB Provider for Microsoft Active Directory 服務](../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|
+|Access/Jet|[使用資料錄集](../../ado/guide/data/working-with-recordsets.md)<br /><br /> [ADOX 基礎](../../ado/guide/extensions/adox-fundamentals.md)<br /><br /> [Microsoft OLE DB Provider for Microsoft Jet](../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)|
+|Active Directory 服務介面 (ADSI)|[Microsoft OLE DB Provider for Microsoft Active Directory Service](../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|
 |COM/DCOM|[使用 ADO 文件的必要條件](../../ado/guide/prerequisites-for-using-the-ado-documentation.md)<br /><br /> [將商務物件標示為可安全編寫指令碼](../../ado/guide/remote-data-service/marking-business-objects-as-safe-for-scripting.md)<br /><br /> [在用戶端上註冊商務物件以用於 DOM](../../ado/guide/remote-data-service/registering-business-objects-on-the-client-for-use-with-dcom.md)<br /><br /> [設定 DCOM 資料流封送處理格式](../../ado/guide/remote-data-service/setting-dcom-stream-marshaling-format.md)<br /><br /> [啟用 DLL 以在 DCOM 上執行](../../ado/guide/remote-data-service/enabling-a-dll-to-run-on-dcom.md)<br /><br /> [在元件服務中執行商務物件](../../ado/guide/remote-data-service/running-business-objects-in-component-services.md)|
 |FrontPage|[適用于網際網路發佈的 Microsoft OLE DB 提供者](../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)|
 |索引服務|[Microsoft OLE DB Provider for Microsoft Indexing Service](../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md)|
@@ -38,8 +39,8 @@ ms.locfileid: "82761656"
 |SQL Server|[控制交易](../../ado/guide/data/controlling-transactions-ado.md)<br /><br /> [使用命令呼叫預存程序](../../ado/guide/data/calling-a-stored-procedure-with-a-command.md)<br /><br /> [目前的記錄和資料錄集的大小](../../ado/guide/data/current-record-and-size-of-recordset.md)<br /><br /> [順向資料指標](../../ado/guide/data/forward-only-cursors.md)<br /><br /> [命令資料流](../../ado/guide/data/command-streams.md)<br /><br /> [將結果集擷取為資料流](../../ado/guide/data/retrieving-resultsets-into-streams.md)<br /><br /> [執行通訊錄 SQL 指令碼](../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)<br /><br /> [確認 TempDB 有足夠空間](../../ado/guide/remote-data-service/ensuring-sufficient-tempdb-space.md)<br /><br /> [將記錄檔空間使用量降到最低](../../ado/guide/remote-data-service/minimizing-log-file-space-usage.md)<br /><br /> [Microsoft OLE DB Provider for SQL Server](../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)|
 |交易伺服器|[在元件服務中執行商務物件](../../ado/guide/remote-data-service/running-business-objects-in-component-services.md)|
 |VBScript|[處理其他語言的錯誤](../../ado/guide/data/handling-errors-in-other-languages.md)<br /><br /> [Visual Basic for Applications 函式](../../ado/guide/data/visual-basic-for-applications-functions.md)<br /><br /> [命令資料流](../../ado/guide/data/command-streams.md)<br /><br /> [遠端資料存取的解決方案](../../ado/guide/remote-data-service/solutions-for-remote-data-access.md)<br /><br /> [RDS 案例](../../ado/guide/remote-data-service/rds-scenario.md)<br /><br /> [RDS 教學課程 (VBScript)](../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)<br /><br /> [VBScript ADO 程式設計](../../ado/guide/appendixes/vbscript-ado-programming.md)<br /><br /> [Microsoft Visual Basic Scripting Edition 中的 ADO 程式碼範例](../../ado/reference/ado-api/ado-code-examples-vbscript.md)|
-|Visual Basic|[錯誤](../../ado/guide/data/errors-ado.md)<br /><br /> [ADO 錯誤](../../ado/guide/data/ado-errors.md)<br /><br /> [依語言的 ADO 事件具現化](../../ado/guide/data/ado-event-instantiation-by-language.md)<br /><br /> [Visual Basic for Applications 函式](../../ado/guide/data/visual-basic-for-applications-functions.md)<br /><br /> [RDS 教學課程](../../ado/guide/remote-data-service/rds-tutorial.md)<br /><br /> [搭配使用 ADO 與 Microsoft Visual Basic](../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)<br /><br /> [Microsoft Visual Basic 中的 ADO 程式碼範例](../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)|
-|Visual C++|[處理其他語言的錯誤](../../ado/guide/data/handling-errors-in-other-languages.md)<br /><br /> [依語言的 ADO 事件具現化](../../ado/guide/data/ado-event-instantiation-by-language.md)<br /><br /> [搭配使用 ADO 與 Microsoft Visual C++](../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)<br /><br /> [Microsoft Visual C++ 中的 ADO 程式碼範例](../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)|
+|Visual Basic|[錯誤](../../ado/guide/data/errors-ado.md)<br /><br /> [ADO 錯誤](../../ado/guide/data/ado-errors.md)<br /><br /> [ADO 事件具現化（依語言）](../../ado/guide/data/ado-event-instantiation-by-language.md)<br /><br /> [Visual Basic for Applications 函式](../../ado/guide/data/visual-basic-for-applications-functions.md)<br /><br /> [RDS 教學課程](../../ado/guide/remote-data-service/rds-tutorial.md)<br /><br /> [搭配使用 ADO 與 Microsoft Visual Basic](../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)<br /><br /> [Microsoft Visual Basic 中的 ADO 程式碼範例](../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)|
+|Visual C++|[處理其他語言的錯誤](../../ado/guide/data/handling-errors-in-other-languages.md)<br /><br /> [ADO 事件具現化（依語言）](../../ado/guide/data/ado-event-instantiation-by-language.md)<br /><br /> [搭配使用 ADO 與 Microsoft Visual C++](../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)<br /><br /> [Microsoft Visual C++ 中的 ADO 程式碼範例](../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)|
 |Visual Studio|[附錄 D：ADO 範例](../../ado/guide/appendixes/appendix-d-ado-samples.md)|
 |Windows 2000|[通訊錄應用程式的系統需求](../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)<br /><br /> [將來賓權限授與網頁伺服器電腦](../../ado/guide/remote-data-service/granting-guest-privileges-to-a-web-server-computer.md)<br /><br /> [註冊自訂商務物件](../../ado/guide/remote-data-service/registering-a-custom-business-object.md)<br /><br /> [保護 RDS 應用程式](../../ado/guide/remote-data-service/securing-rds-applications.md)<br /><br /> [在 Windows 2000 上設定 RDS](../../ado/guide/remote-data-service/configuring-rds-on-windows-2000.md)|
 |XML|[以 XML 格式保存記錄](../../ado/guide/data/persisting-records-in-xml-format.md)<br /><br /> [記錄和資料流](../../ado/guide/data/records-and-streams.md)<br /><br /> [命令資料流](../../ado/guide/data/command-streams.md)<br /><br /> [將結果集擷取為資料流](../../ado/guide/data/retrieving-resultsets-into-streams.md)|

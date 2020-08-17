@@ -1,5 +1,6 @@
 ---
-title: 匯出（DMX） |Microsoft Docs
+description: EXPORT (DMX)
+title: 匯出 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 620bb13d50461e850cc08de1e1b1b71709d78c7c
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 689ab632604d26a349dbb3f2a40d5f1b7cf8d702
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971726"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88353224"
 ---
 # <a name="export-dmx"></a>EXPORT (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -29,7 +30,7 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
   
 ## <a name="arguments"></a>引數  
  *物件類型*  
- 選擇項。要匯出之物件的類型（不論是 [採礦模型] 或 [採礦結構]）。  
+ 選擇項。要匯出的物件類型 () 的採礦模型或採礦結構。  
   
  *物件名稱*  
  選擇性。 要匯出的物件名稱。  
@@ -38,19 +39,19 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
  要當成字串匯出之檔案的名稱和位置。  
   
 ## <a name="remarks"></a>備註  
- 如果陳述式指定採礦模型，產生的檔案也會包含相關聯的採礦結構。 如果語句指定**WITH**相依性，則處理物件所需的所有物件（例如，資料來源和資料來源 view）都會包含在 .abf 檔案中。  
+ 如果陳述式指定採礦模型，產生的檔案也會包含相關聯的採礦結構。 如果語句 **以**相依性指定，則處理物件所需的所有物件 (例如，資料來源和資料來源 view) 都會包含在 .abf 檔案中。  
   
  您必須是資料庫或伺服器管理員，才能從資料庫匯出或匯入物件 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。  
   
 ## <a name="export-mining-structure-example"></a>匯出採礦結構範例  
- 下列範例會將 Targeted Mailing 與 Forecasting 採礦結構，以及 Association 採礦模型匯出到特定的檔案位置。 因為 Association 模型是 Market Basket 採礦結構的一部份，所以範例也會匯出 Market Basket 結構。 因為關聯模型是使用「**採礦模型**」（而非「**採礦結構**」）匯出，所以不會匯出任何可能當做購物籃採礦結構一部分存在的任何其他採礦模型。  
+ 下列範例會將 Targeted Mailing 與 Forecasting 採礦結構，以及 Association 採礦模型匯出到特定的檔案位置。 因為 Association 模型是 Market Basket 採礦結構的一部份，所以範例也會匯出 Market Basket 結構。 任何其他可能存在為購物籃採礦結構一部分的採礦模型都不會匯出，因為該關聯模型是使用「 **採礦模型**」（而非「 **採礦結構**」）匯出的。  
   
 ```  
 EXPORT MINING STRUCTURE [Targeted Mailing], [Forecasting] MINING MODEL Association TO 'C:\TM_NEW.abf'  
 ```  
   
 ## <a name="export-mining-model-example"></a>匯出採礦模型範例  
- 下列範例會將 Association 採礦模型匯出至指定的檔案位置。 由於語句會指定**WITH**相依性，因此資料來源和資料來源 view 物件也會包含在 .abf 檔案中。  
+ 下列範例會將 Association 採礦模型匯出至指定的檔案位置。 因為語句會指定 **WITH**相依性，所以資料來源和資料來源 view 物件也會包含在 .abf 檔案中。  
   
 ```  
 EXPORT MINING MODEL [Association] TO 'C:\Association_NEW.abf' WITH DEPENDENCIES  

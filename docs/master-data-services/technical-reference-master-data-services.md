@@ -1,4 +1,5 @@
 ---
+description: 技術參考 (Master Data Services)
 title: 技術參考
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 54865b00-563a-4932-ad4d-cbfd36b1e6c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3bc96e3289c7e1c0013e08531b77994a76650907
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 8d09b2daeb609058e19b4ca714380994665e6d8e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812699"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88388704"
 ---
 # <a name="technical-reference-master-data-services"></a>技術參考 (Master Data Services)
 

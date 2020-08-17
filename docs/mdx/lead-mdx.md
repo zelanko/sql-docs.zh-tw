@@ -1,5 +1,6 @@
 ---
-title: 潛在客戶（MDX） |Microsoft Docs
+description: Lead (MDX)
+title: 潛在客戶 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cc4d362fbc7656e9427548a352b32d5d8297071e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ca78bdeca6103758d5d102ed8b85eb00b3138e18
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905746"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387324"
 ---
 # <a name="lead-mdx"></a>Lead (MDX)
 
@@ -31,19 +32,19 @@ Member_Expression.Lead( Index )
  *Member_Expression*  
  傳回成員的有效多維度運算式 (MDX) 運算式。  
   
- *索引*  
+ *Index*  
  指定成員位置數目的有效數值運算式。  
   
 ## <a name="remarks"></a>備註  
  層級內的成員位置是由屬性階層的自然順序決定。 位置的編號是以零為基底。  
   
- 如果指定的潛在客戶為零（0），則**lead**函數會傳回指定的成員。  
+ 如果指定的 lead 是零 (0) ，則 **潛在客戶** 函數會傳回指定的成員。  
   
- 如果指定的潛在客戶為負數，則**lead**函數會傳回先前的成員。  
+ 如果指定的潛在客戶為負數，則 **潛在客戶** 函數會傳回先前的成員。  
   
- `Lead(1)`相當於[NextMember](../mdx/nextmember-mdx.md)函數。 `Lead(-1)`相當於[PrevMember](../mdx/prevmember-mdx.md)函數。  
+ `Lead(1)` 相當於 [NextMember](../mdx/nextmember-mdx.md) 函數。 `Lead(-1)` 相當於 [PrevMember](../mdx/prevmember-mdx.md) 函數。  
   
- **Lead**函數與[lag](../mdx/lag-mdx.md)函數相似，不同之處在于**Lag**函數會以與**Lead**函式相反的方向來尋找。 也就是說，`Lead(n)` 相當於 `Lag(-n)`。  
+ **Lead**函數與[lag](../mdx/lag-mdx.md)函數類似，但**lag**函式與**Lead**函數的方向相反。 也就是說，`Lead(n)` 相當於 `Lag(-n)`。  
   
 ## <a name="example"></a>範例  
  下列範例會傳回 2001 年 12 月的值：  

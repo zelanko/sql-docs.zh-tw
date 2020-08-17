@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_db_mirroring_connections （Transact-sql） |Microsoft Docs
+description: 資料庫鏡像-sys. dm_db_mirroring_connections
+title: sys. dm_db_mirroring_connections (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e4df91b6-0240-45d0-ae22-cb2c0d52e0b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 223b940f9568c764885ab214278fc97928cc1b7f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b10aa1339769b49a6bd05fbc96a102583960cd99
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894716"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88374674"
 ---
 # <a name="database-mirroring---sysdm_db_mirroring_connections"></a>資料庫鏡像-sys. dm_db_mirroring_connections
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85894716"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**connection_id**|**uniqueidentifier**|連接的識別碼。|  
-|**transport_stream_id**|**uniqueidentifier**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]此連接用於 tcp/ip 通訊的網路介面（SNI）連接識別碼。|  
+|**transport_stream_id**|**uniqueidentifier**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]此連線用來進行 tcp/ip 通訊的網路介面 (SNI) 連接的識別碼。|  
 |**state**|**smallint**|連接的目前狀態。 可能的值：<br /><br /> 1 = NEW<br /><br /> 2 = CONNECTING<br /><br /> 3 = CONNECTED<br /><br /> 4 = LOGGED_IN<br /><br /> 5 = 已關閉|  
 |**state_desc**|**nvarchar(60)**|連接的目前狀態。 可能的值：<br /><br /> NEW<br /><br /> CONNECTING<br /><br /> CONNECTED<br /><br /> LOGGED_IN<br /><br /> CLOSED|  
 |**connect_time**|**datetime**|開啟連接的日期與時間。|  
@@ -46,8 +47,8 @@ ms.locfileid: "85894716"
 |**login_state**|**smallint**|這個連接的登入處理序狀態。 可能的值：<br /><br /> 0 = INITIAL<br /><br /> 1 = WAIT LOGIN NEGOTIATE<br /><br /> 2 = ONE ISC<br /><br /> 3 = ONE ASC<br /><br /> 4 = TWO ISC<br /><br /> 5 = TWO ASC<br /><br /> 6 = WAIT ISC Confirm<br /><br /> 7 = WAIT ASC Confirm<br /><br /> 8 = WAIT REJECT<br /><br /> 9 = WAIT PRE-MASTER SECRET<br /><br /> 10 = WAIT VALIDATION<br /><br /> 11 = WAIT ARBITRATION<br /><br /> 12 = 線上<br /><br /> 13 = ERROR|  
 |**login_state_desc**|**nvarchar(60)**|遠端電腦登入的目前狀態。 可能的值：<br /><br /> 正在初始化連接交握。<br /><br /> 連接交握正在等候登入交涉訊息。<br /><br /> 連接交握已初始化並傳送用於驗證的安全性內容。<br /><br /> 連接交握已收到並接受用於驗證的安全性內容。<br /><br /> 連接交握已初始化並傳送用於驗證的安全性內容。 沒有可用來驗證對等的選擇性機制。<br /><br /> 連接交握已收到並傳送用於驗證的已接受安全性內容。 沒有可用來驗證對等的選擇性機制。<br /><br /> 連接交握正在等候初始化安全性內容確認訊息。<br /><br /> 連接交握正在等候接受安全性內容確認訊息。<br /><br /> 連接交握正在等待驗證失敗的 SSPI 拒絕訊息。<br /><br /> 連接交握正在等候預備主密碼訊息。<br /><br /> 連接交握正在等候驗證訊息。<br /><br /> 連接交握正在等候仲裁訊息。<br /><br /> 連接交握已完成並上線 (就緒)，可進行訊息交換。<br /><br /> 連線發生錯誤。|  
 |**peer_certificate_id**|**int**|驗證遠端執行個體所用憑證的本機物件識別碼。 這個憑證的擁有者，必須對資料庫鏡像端點具備 CONNECT 權限。|  
-|**encryption_algorithm**|**smallint**|這個連接所用的加密演算法。 NULLABLE。 可能的值：<br /><br /> **值：** 0<br /><br /> **描述：** 無<br /><br /> **DDL 選項：** 禁止<br /><br /> **值：** 1<br /><br /> **描述：** RC4<br /><br /> **DDL 選項：** {必要的 &#124; 需要的演算法 RC4}<br /><br /> **值：** 2<br /><br /> **描述：** AES<br /><br /> **DDL 選項：** 必要的演算法 AES<br /><br /> **值：** 3<br /><br /> **描述：** 無、RC4<br /><br /> **DDL 選項：** {支援的 &#124; 支援的演算法 RC4}<br /><br /> **值：** 4<br /><br /> **描述：** NONE、AES<br /><br /> **DDL 選項：** 支援的演算法 RC4<br /><br /> **值：** 5<br /><br /> **描述：** RC4、AES<br /><br /> **DDL 選項：** 必要的演算法 RC4 AES<br /><br /> **值：** 6<br /><br /> **描述：** AES、RC4<br /><br /> **DDL 選項：** 必要的演算法 AES RC4<br /><br /> **值：** 7<br /><br /> **描述：** 無、RC4、AES<br /><br /> **DDL 選項：** 支援的演算法 RC4 AES<br /><br /> **值：** 8<br /><br /> **描述：** NONE、AES、RC4<br /><br /> **DDL 選項：** 支援的演算法 AES RC4<br /><br /> **注意：** RC4 演算法僅支援回溯相容性。 只有在資料庫相容性層級為 90 或 100 時，才能使用 RC4 或 RC4_128 加密新資料  (不建議使用)。請改用較新的演算法，例如其中一個 AES 演算法。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本中使用 RC4 或 RC4_128 加密的資料，可以在任何相容性層級進行解密。|  
-|**encryption_algorithm_desc**|**nvarchar(60)**|加密演算法的文字表示法。 NULLABLE。 可能的值如下：<br /><br /> **描述：** 無<br /><br /> **DDL 選項：** 禁止<br /><br /> **描述：** RC4<br /><br /> **DDL 選項：** {必要的 &#124; 需要的演算法 RC4}<br /><br /> **描述：** AES<br /><br /> **DDL 選項：** 必要的演算法 AES<br /><br /> **描述：** 無、RC4<br /><br /> **DDL 選項：** {支援的 &#124; 支援的演算法 RC4}<br /><br /> **描述：** NONE、AES<br /><br /> **DDL 選項：** 支援的演算法 RC4<br /><br /> **描述：** RC4、AES<br /><br /> **DDL 選項：** 必要的演算法 RC4 AES<br /><br /> **描述：** AES、RC4<br /><br /> **DDL 選項：** 必要的演算法 AES RC4<br /><br /> **描述：** 無、RC4、AES<br /><br /> **DDL 選項：** 支援的演算法 RC4 AES<br /><br /> **描述：** NONE、AES、RC4<br /><br /> **DDL 選項：** 支援的演算法 AES RC4|  
+|**encryption_algorithm**|**smallint**|這個連接所用的加密演算法。 NULLABLE。 可能的值：<br /><br /> **值：** 0<br /><br /> **描述：** 沒有<br /><br /> **DDL 選項：** 禁用<br /><br /> **值：** 1<br /><br /> **描述：** RC4<br /><br /> **DDL 選項：** {必要的 &#124; 必要的演算法 RC4}<br /><br /> **值：** 2<br /><br /> **描述：** Aes<br /><br /> **DDL 選項：** 必要的演算法 AES<br /><br /> **值：** 3<br /><br /> **描述：** 無，RC4<br /><br /> **DDL 選項：** {支援的 &#124; 支援的演算法 RC4}<br /><br /> **值：** 4<br /><br /> **描述：** 無、AES<br /><br /> **DDL 選項：** 支援的演算法 RC4<br /><br /> **值：** 5<br /><br /> **描述：** RC4、AES<br /><br /> **DDL 選項：** 必要的演算法 RC4 AES<br /><br /> **值：** 6<br /><br /> **描述：** AES、RC4<br /><br /> **DDL 選項：** 必要的演算法 AES RC4<br /><br /> **值：** 7<br /><br /> **描述：** NONE、RC4、AES<br /><br /> **DDL 選項：** 支援的演算法 RC4 AES<br /><br /> **值：** 8<br /><br /> **描述：** 無、AES、RC4<br /><br /> **DDL 選項：** 支援的演算法 AES RC4<br /><br /> **注意：** RC4 演算法僅支援回溯相容性。 只有在資料庫相容性層級為 90 或 100 時，才能使用 RC4 或 RC4_128 加密新資料 (不建議使用)。請改用較新的演算法，例如其中一個 AES 演算法。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本中使用 RC4 或 RC4_128 加密的資料，可以在任何相容性層級進行解密。|  
+|**encryption_algorithm_desc**|**nvarchar(60)**|加密演算法的文字表示法。 NULLABLE。 可能的值如下：<br /><br /> **描述：** 沒有<br /><br /> **DDL 選項：** 禁用<br /><br /> **描述：** RC4<br /><br /> **DDL 選項：** {必要的 &#124; 必要的演算法 RC4}<br /><br /> **描述：** Aes<br /><br /> **DDL 選項：** 必要的演算法 AES<br /><br /> **描述：** 無，RC4<br /><br /> **DDL 選項：** {支援的 &#124; 支援的演算法 RC4}<br /><br /> **描述：** 無、AES<br /><br /> **DDL 選項：** 支援的演算法 RC4<br /><br /> **描述：** RC4、AES<br /><br /> **DDL 選項：** 必要的演算法 RC4 AES<br /><br /> **描述：** AES、RC4<br /><br /> **DDL 選項：** 必要的演算法 AES RC4<br /><br /> **描述：** NONE、RC4、AES<br /><br /> **DDL 選項：** 支援的演算法 RC4 AES<br /><br /> **描述：** 無、AES、RC4<br /><br /> **DDL 選項：** 支援的演算法 AES RC4|  
 |**receives_posted**|**smallint**|這個連接尚未完成的非同步網路接收數目。|  
 |**is_receive_flow_controlled**|**bit**|是否已因流程控制的緣故 (因為網路忙碌) 而延後網路接收。<br /><br /> 1 = True|  
 |**sends_posted**|**smallint**|這個連接尚未完成的非同步網路傳送數目。|  
@@ -68,12 +69,12 @@ ms.locfileid: "85894716"
   
 ## <a name="relationship-cardinalities"></a>關聯性基數  
   
-|從|至|關聯性|  
+|寄件者|收件者|關聯性|  
 |----------|--------|------------------|  
 |**dm_db_mirroring_connections.connection_id**|**dm_exec_connections.connection_id**|一對一|  
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [監視資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)  
   
   

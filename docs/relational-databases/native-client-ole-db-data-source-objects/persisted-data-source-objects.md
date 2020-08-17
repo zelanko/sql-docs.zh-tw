@@ -1,5 +1,6 @@
 ---
-title: 保存的資料來源物件（Native Client OLE DB 提供者）
+description: SQL Server Native Client 中保存的資料來源物件
+title: '保存的資料來源物件 (Native Client OLE DB 提供者) '
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,20 +17,20 @@ ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a28fd6b4f3c7fc46223a75fdf96881a73739b8d7
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 482762127b8daa9d3fad3e4a3fd79a6ad9d179ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242068"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88381474"
 ---
 # <a name="persisted-data-source-objects-in-sql-server-native-client"></a>SQL Server Native Client 中保存的資料來源物件 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者支援使用**IPersistFile**介面保存的資料來源物件。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端 OLE DB 提供者會使用**IPersistFile**介面來支援保存的資料來源物件。  
   
 ## <a name="examples"></a>範例  
- **A. 保存資料來源初始化：**  
+ **A.保存資料來源初始化：**  
   
  這個範例會示範一個函數，此函數會保存定義伺服器和資料庫的資料來源初始化屬性，以及使用 Windows 驗證模式來進行連接。 伺服器名稱和資料庫名稱會在此函式的 *pLocation* 和 *pDatasource* 參數中接收。  
   
@@ -140,7 +141,7 @@ HRESULT SetAndSaveInitProps
     }  
 ```  
   
- **B. 使用保存的資料來源初始化：**  
+ **B.使用保存的資料來源初始化：**  
   
  此範例會搭配其他初始化屬性來使用保存的資料來源物件，這些屬性會提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入和密碼。  
   

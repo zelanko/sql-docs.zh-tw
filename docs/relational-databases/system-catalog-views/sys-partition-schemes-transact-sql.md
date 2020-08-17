@@ -1,5 +1,6 @@
 ---
-title: sys.databases partition_schemes （Transact-sql） |Microsoft Docs
+description: sys.partition_schemes (Transact-SQL)
+title: sys. partition_schemes (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,24 +21,24 @@ ms.assetid: ed557fd5-12b0-4cef-9e4f-440b02e99d1f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0eeeed94af7f14d35807fbb81b93bea4e12593d5
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 799146d13d81f593234200831bd52da1d36ecf65
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397158"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88377674"
 ---
 # <a name="syspartition_schemes-transact-sql"></a>sys.partition_schemes (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
-  針對屬於分割區配置的每個資料空間，各包含一個資料列，**類型**= PS。  
+  針對屬於分割區配置的每個資料空間，各包含一個資料列，其 **type** = PS。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**\<inherited columns>**||從[sys.databases data_spaces &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)繼承資料行。|  
+|**\<inherited columns>**||從 [sys. data_spaces 繼承 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)的資料行。|  
 |**function_id**|**int**|配置所用資料分割函數的識別碼。|  
   
- 如需此視圖所繼承之資料行的清單，請參閱[data_spaces &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
+ 如需此視圖所繼承之資料行的清單，請參閱 [sys. data_spaces &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
   
 ## <a name="permissions"></a>權限  
  需要 **public** 角色的成員資格。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

@@ -1,5 +1,6 @@
 ---
-title: 識別碼（DMX） |Microsoft Docs
+description: 識別碼 (DMX)
+title: DMX)  (識別碼 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 980a13c88abc8d6cbe0fcb71f22f4c0a9f564094
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 3a779e16b06b00cb925f28e8da34ce3959d7dc7e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969801"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88352884"
 ---
 # <a name="identifiers-dmx"></a>識別碼 (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "86969801"
   
  物件識別碼是在您定義物件時建立的。 然後您使用識別碼參考物件。 識別碼必須小於或等於 100 個字元。  
   
-##  <a name="regular-identifiers"></a><a name="RegularIdentifiers"></a>一般識別碼  
+##  <a name="regular-identifiers"></a><a name="RegularIdentifiers"></a> 一般識別碼  
  DMX 中的一般識別碼符合 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的識別碼格式規則。 DMX 中的一般識別碼不需要分隔符號。 下列是使用一般、非分隔識別碼之 DMX 陳述式的範例：  
   
 ```  
@@ -52,13 +53,13 @@ SELECT * FROM Clustering.CONTENT;
   
     -   底線 (_)。  
   
-3.  識別碼不可以是 DMX 保留字。 DMX 中的保留字不區分大小寫。 如需詳細資訊，請參閱[&#40;DMX&#41;的保留關鍵字](../dmx/reserved-keywords-dmx.md)。  
+3.  識別碼不可以是 DMX 保留字。 DMX 中的保留字不區分大小寫。 如需詳細資訊，請參閱 [&#40;DMX&#41;的保留關鍵字 ](../dmx/reserved-keywords-dmx.md)。  
   
 4.  識別碼不能包含內嵌空格或特殊字元。  
   
  在 DMX 陳述式中使用不符合這些規則的任何識別碼時，必須以方括號分隔這些識別碼。  
   
-##  <a name="delimited-identifiers"></a><a name="DelimitedIdentifiers"></a>分隔識別碼  
+##  <a name="delimited-identifiers"></a><a name="DelimitedIdentifiers"></a> 分隔識別碼  
  分隔識別碼以方括號 ([ ]) 括住。  下列是包含符合這些規則之分隔識別碼的 DMX 陳述式範例。  
   
 ```  
@@ -75,7 +76,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
   
 -   您使用保留字作為物件名稱或部份的物件名稱時。  
   
-     建議您不要使用保留的關鍵字作為物件名稱。 您從舊版升級的資料庫 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可能包含識別碼，其中包含在舊版中不是保留的文字， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 但這是的保留字 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 您可以使用分隔識別碼參考這類物件，直到您能夠變更物件的名稱為止。  
+     建議您不要使用保留的關鍵字作為物件名稱。 您從舊版升級的資料庫 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可能包含的識別碼包含不是舊版中所保留的文字， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 而是的保留字 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 您可以使用分隔識別碼參考這類物件，直到您能夠變更物件的名稱為止。  
   
 -   您使用未列為合格識別碼的字元時。  
   
@@ -96,13 +97,13 @@ SELECT * FROM [Targeted Mailing].CONTENT;
  使用限定的物件名稱時，您可能必須分隔構成物件名稱的多個識別碼。 您必須個別分隔每個識別碼。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦延伸模組 &#40;DMX&#41; 參考](../dmx/data-mining-extensions-dmx-reference.md)   
- [&#40;DMX&#41; 語法元素的資料採礦延伸模組](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [&#40;DMX&#41; 參考的資料採礦延伸模組](../dmx/data-mining-extensions-dmx-reference.md)   
+ [資料採礦延伸模組 &#40;DMX&#41; 語法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [DMX&#41; Operator Reference &#40;的資料採礦延伸模組](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [資料採礦延伸模組 &#40;DMX&#41; 運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 語句參考](../dmx/data-mining-extensions-dmx-statements.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 語法慣例](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [&#40;DMX&#41;的一般預測函數](../dmx/general-prediction-functions-dmx.md)   
+ [&#40;DMX&#41;的一般預測函數 ](../dmx/general-prediction-functions-dmx.md)   
  [DMX 預測查詢的結構和使用方式](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [了解 DMX Select 陳述式](../dmx/understanding-the-dmx-select-statement.md)  
   

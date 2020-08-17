@@ -1,4 +1,5 @@
 ---
+description: Entity Dependencies (實體相依性) 總管
 title: Entity Dependencies (實體相依性) 總管
 ms.custom: ''
 ms.date: 04/06/2016
@@ -12,12 +13,12 @@ keywords:
 ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9444eff3f471074c08a62c5aafa36a919f81c5ca
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 8a0fcbcee1d17a98025a1c8adbc02c3409b1db06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813974"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88389294"
 ---
 # <a name="entity-dependencies-explorer"></a>Entity Dependencies (實體相依性) 總管
 

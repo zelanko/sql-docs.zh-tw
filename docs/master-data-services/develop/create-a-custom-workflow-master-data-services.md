@@ -1,4 +1,5 @@
 ---
+description: 建立自訂工作流程 (Master Data Services)
 title: 建立自訂工作流程
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b30b9a9c8adf7386e0a645b082466dec5afe9220
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7328d550697e1c6e0edd076d748a594946372915
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897447"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88389854"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>建立自訂工作流程 (Master Data Services)
 
@@ -42,7 +43,7 @@ ms.locfileid: "85897447"
 ## <a name="configure-master-data-services-for-custom-workflows"></a>設定自訂工作流程的 Master Data Services  
  建立自訂工作流程需要撰寫特定的自訂程式碼，並設定 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 將工作流程資料傳遞至您的工作流程處理常式。 遵循以下步驟啟用自訂工作流程處理：  
   
-1.  建立 .NET 元件，其會執行 [MasterDataServices WorkflowTypeExtender. IWorkflowTypeExtender] （/previous-versions/sql/sql-server-2016/hh758785 （v = sql 130）。  
+1.  建立實 [MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender] (/previous-versions/sql/sql-server-2016/hh758785 (v = sql 130) 的 .NET 元件。  
   
 2.  設定 SQL Server MDS 工作流程整合服務連線至您的 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫，並讓某個標記與您的工作流程處理常式產生關聯。  
   
@@ -53,21 +54,21 @@ ms.locfileid: "85897447"
 5.  將商務規則套用至觸發您自訂工作流程的成員。  
   
 ### <a name="create-the-workflow-handler-assembly"></a>建立工作流程處理常式組件  
- 自訂工作流程是一個 .NET 類別庫元件，它會實[MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130))介面。 SQL Server MDS 工作流程整合服務會呼叫[MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))方法來執行您的程式碼。 如需執行[IWorkflowTypeExtender StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))的範例程式碼，請參閱[自訂工作流程範例 &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)。  
+ 自訂工作流程是 .NET 類別庫元件，可實 [MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) 介面。 SQL Server MDS 工作流程整合服務會呼叫 [MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))  方法來執行您的程式碼。 如需 [MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) 的範例程式碼，請參閱 [自訂工作流程範例 &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)。  
   
  請遵循以下步驟，使用 Visual Studio 2010 建立 SQL Server MDS 工作流程整合服務可以呼叫的組件，以處理自訂工作流程：  
   
 1.  在 Visual Studio 2010 中，建立一個使用所選語言的新 [類別庫]**** 專案。 若要建立 C# 類別庫，請選取 [Visual C#\Windows]**** 專案類型，然後選取 [類別庫]**** 範本。 輸入您專案的名稱 (例如 **MDSWorkflowTest**)，然後按一下 [確定]****。  
   
-2.  加入 Microsoft.MasterDataServices.WorkflowTypeExtender.dll 的參考。 此元件可以在 \<Your installation folder> \Master 資料 services\webapplication\bin 中找到。  
+2.  加入 Microsoft.MasterDataServices.WorkflowTypeExtender.dll 的參考。 您可以在 \<Your installation folder> \Master 資料 services\webapplication\bin 中找到此元件。  
   
 3.  將 'using Microsoft.MasterDataServices.Core.Workflow;' 新增至您的 C# 程式碼檔案。  
   
-4.  繼承自您的類別宣告中的[MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) 。 類別宣告應該類似：'public class WorkflowTester : IWorkflowTypeExtender'。  
+4.  繼承自您類別宣告中的 [MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) 。 類別宣告應該類似：'public class WorkflowTester : IWorkflowTypeExtender'。  
   
-5.  執行[MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130))介面。 SQL Server MDS 工作流程整合服務會呼叫[MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))方法來啟動您的工作流程。  
+5.  執行 [MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) 介面。 SQL Server MDS 工作流程整合服務會呼叫 [MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))  方法來啟動您的工作流程。  
   
-6.  將您的元件複製到 \<Your installation folder> \Master 資料 services\webapplication\bin 中名為 Microsoft.MasterDataServices.Workflow.exe 之 SQL SERVER MDS 工作流程整合服務可執行檔的位置  
+6.  將您的元件複製到 \<Your installation folder> \Master 資料 services\webapplication\bin 的 SQL SERVER MDS 工作流程整合服務可執行檔的位置，名為 Microsoft.MasterDataServices.Workflow.exe。  
   
 ### <a name="configure-sql-server-mds-workflow-integration-service"></a>設定 SQL Server MDS 工作流程整合服務  
  遵循以下步驟，編輯 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 組態檔，以包含您 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫的連線資訊，並讓某個標記與您的工作流程處理常式組件產生關聯：  
@@ -90,7 +91,7 @@ ms.locfileid: "85897447"
     </setting>  
     ```  
   
-     標記的內部文字的 \<value> 格式為 \<Workflow tag> = \<assembly-qualified workflow type name> 。 \<Workflow tag>這是當您在中建立商務規則時，用來識別工作流程處理常式元件的名稱 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 。 \<assembly-qualified workflow type name>是您工作流程類別的命名空間限定名稱，後面接著逗號，後面接著元件的顯示名稱。 如果您的組件具備強式名稱，也必須包含版本資訊及其 PublicKeyToken。 \<setting>如果您已針對不同種類的工作流程建立多個工作流程處理常式，則可以包含多個標記。  
+     標記的內部文字 \<value> 採用的形式 \<Workflow tag> = \<assembly-qualified workflow type name> 。 \<Workflow tag> 這是當您在中建立商務規則時，用來識別工作流程處理常式元件的名稱 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 。 \<assembly-qualified workflow type name> 這是您工作流程類別的命名空間限定名稱，後面接著逗號，再接著元件的顯示名稱。 如果您的組件具備強式名稱，也必須包含版本資訊及其 PublicKeyToken。 \<setting>如果您已針對不同種類的工作流程建立多個工作流程處理常式，則可以包含多個標記。  
   
 > [!NOTE]  
 >  根據您伺服器的設定，可以在嘗試儲存 Microsoft.MasterDataServices.Workflow.exe.config 檔案時，看到「存取遭拒」錯誤。 如果發生這個情形，請暫時停用伺服器上的 [使用者帳戶控制 (UAC)]。 若要這麼做，開啟 [控制台]，然後按一下 [系統及安全性]****。 在 [控制中心]**** 底下，按一下 [變更使用者帳戶控制設定]****。 在 [使用者帳戶控制設定]**** 對話方塊中，將長條滑動到底部，讓您絕不會收到通知。 重新啟動電腦，然後重複以上的步驟以編輯您的組態檔。 儲存此檔案之後，將您的 UAC 設定重設為預設層級。  
@@ -104,7 +105,7 @@ ms.locfileid: "85897447"
   
 3.  授與 mds_workflow_service 使用者權限以執行工作流程處理常式組件。 若要這麼做，請將 mds_workflow_service user 新增至工作流程處理常式組件之 [內容]**** 的 [安全性]**** 索引標籤，然後授與 mds_workflow_service user 的 READ 和 EXECUTE 權限。  
   
-4.  授與 mds_workflow_service 使用者權限以執行 SQL Server MDS 工作流程整合服務可執行檔。 若要這麼做，請在 \Master 資料 Services\webapplication\bin) 中，將 mds_workflow_service 使用者新增至 Microsoft.MasterDataServices.Workflow.exe**屬性**的 [**安全性**] 索引標籤，並將 [ \<Your installation folder> 讀取] 和 [執行] 許可權授與 mds_workflow_service 使用者。  
+4.  授與 mds_workflow_service 使用者權限以執行 SQL Server MDS 工作流程整合服務可執行檔。 若要這樣做，請在 [\Master 資料 Services\webapplication\bin) ] 的 [Microsoft.MasterDataServices.Workflow.exe**屬性**] 的 [**安全性**] 索引標籤中新增 mds_workflow_service 使用者， \<Your installation folder> 並授與 mds_workflow_service 使用者的 [讀取] 和 [執行] 許可權。  
   
 5.  使用名稱為 InstallUtil.exe 的 .NET 安裝公用程式，安裝 SQL Server MDS 工作流程整合服務。 InstallUtil.exe 可以在 .NET 安裝資料夾 (例如 C:\Windows\Microsoft.NET\Framework\v4.0.30319\\) 中找到。 在提升權限的命令提示字元下輸入以下內容，安裝 SQL Server MDS 工作流程整合服務：  
   

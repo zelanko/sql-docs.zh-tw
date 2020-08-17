@@ -1,5 +1,6 @@
 ---
-title: IsInNode （DMX） |Microsoft Docs
+description: IsInNode (DMX)
+title: IsInNode (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 063c436f2e0d76ca891f332f25be385c2f16fdfa
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 68f88915209a3a15cb7e8f1fd64e9d877655f3ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969577"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88352344"
 ---
 # <a name="isinnode-dmx"></a>IsInNode (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -28,10 +29,10 @@ IsInNode(<NodeID>)
 ```  
   
 ## <a name="return-type"></a>傳回類型  
- Boolean 類型。  
+ 布林型別。  
   
 ## <a name="remarks"></a>備註  
- **IsInNode**僅用於[SELECT FROM &#60;model&#62;。&#40;DMX&#41;的案例](../dmx/select-from-model-cases-dmx.md)，並[從 &#60;模型&#62; 中選取。SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)查詢。  
+ **IsInNode** 只會用於 [&#60;模型&#62; 的 SELECT 中。&#40;DMX&#41;的案例 ](../dmx/select-from-model-cases-dmx.md) ，並 [從 &#60;模型&#62; 進行選取。SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md) 查詢。  
   
 ## <a name="examples"></a>範例  
  下列範例根據 IsInNode 函數中指定的節點相關聯的模型，傳回建立此模型的案例。  
@@ -43,7 +44,7 @@ WHERE IsInNode('0')
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦延伸模組 &#40;DMX&#41; 函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [DMX&#41;的函數 &#40;](../dmx/functions-dmx.md)   
- [&#40;DMX&#41;的一般預測函數](../dmx/general-prediction-functions-dmx.md)  
+ [DMX&#41;函數 &#40;](../dmx/functions-dmx.md)   
+ [&#40;DMX&#41;的一般預測函數 ](../dmx/general-prediction-functions-dmx.md)  
   
   

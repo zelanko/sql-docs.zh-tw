@@ -1,5 +1,6 @@
 ---
-title: CLEAR 計算語句（MDX） |Microsoft Docs
+description: MDX 資料操作 - CLEAR CALCULATIONS
+title: 清除計算語句 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1b0766cb002960a96d702184ac9719abe7610afd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 06f3fc9d29630f3f69b994c2b4e7cf809b6b9efd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938026"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387002"
 ---
 # <a name="mdx-data-manipulation---clear-calculations"></a>MDX 資料操作 - CLEAR CALCULATIONS
 
@@ -32,12 +33,12 @@ CLEAR CALCULATIONS [FROMCube_Expression]
  有效的多維度運算式 (MDX) Cube 運算式。  
   
 ## <a name="remarks"></a>備註  
- 當已知 cube 的內容（例如 MDX 腳本中）時，可以省略**FROM**子句。  
+ 當已知 cube 的內容（例如在 MDX 腳本中）時，可以省略 **FROM** 子句。  
   
 > [!NOTE]  
 >  伺服器或資料庫管理員，或可存取 Cube 來源資料的角色成員 (即 ReadSourceData=true) 才能執行這個陳述式。  
   
 ## <a name="see-also"></a>另請參閱  
- [Mdx&#41;&#40;mdx 資料動作陳述式](../mdx/mdx-data-manipulation-statements-mdx.md)  
+ [Mdx 資料動作陳述式 &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   

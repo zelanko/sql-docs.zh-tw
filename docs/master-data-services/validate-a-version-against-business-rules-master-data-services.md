@@ -1,4 +1,5 @@
 ---
+description: 根據商務規則驗證版本 (Master Data Services)
 title: 根據商務規則驗證版本
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 66a934d1cddad1e7fdb2e36291611fa50e9c8ce5
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 676a6fff88de31480737f1bb82cc0466605b4699
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813196"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88388314"
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>根據商務規則驗證版本 (Master Data Services)
 
@@ -33,12 +34,12 @@ ms.locfileid: "85813196"
 > [!NOTE]  
 >  所有成員都必須通過驗證之後，才能認可版本。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[版本管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 -   版本的狀態必須是 [開啟]**** 或 [已鎖定]****。  
   
