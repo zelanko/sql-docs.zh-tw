@@ -1,4 +1,5 @@
 ---
+description: 在執行階段提供 OData 來源查詢
 title: 在執行階段提供 OData 來源查詢 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d98222a9f8663dfb2495220ee43af34c1f0c02d9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 48a868f3256b246b0653eb9b7904edec7b4e3937
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920784"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88349154"
 ---
 # <a name="provide-an-odata-source-query-at-runtime"></a>在執行階段提供 OData 來源查詢
 

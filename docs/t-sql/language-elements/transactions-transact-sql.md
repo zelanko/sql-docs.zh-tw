@@ -1,4 +1,5 @@
 ---
+description: 交易 (Transact-SQL)
 title: 交易 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/25/2017
@@ -21,12 +22,12 @@ ms.assetid: 1485c375-921a-42af-a871-bb333cc08d3e
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a0a517dbfd2e5ebda4d48e3b66f4a49a7ef9e9fa
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f19c8184168b2fd553062d1a888aa619ee164483
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248740"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88307228"
 ---
 # <a name="transactions-transact-sql"></a>交易 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

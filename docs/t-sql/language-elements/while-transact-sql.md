@@ -1,4 +1,5 @@
 ---
+description: WHILE (Transact-SQL)
 title: WHILE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -22,12 +23,12 @@ ms.assetid: 52dd29ab-25d7-4fd3-a960-ac55c30c9ea9
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f11e2a6261976b3e96533647d37fcad3a1eaa792
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 78b7ac5ab0a9b65e50059f45e5bdca5e4219bf11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915299"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88307322"
 ---
 # <a name="while-transact-sql"></a>WHILE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,7 +60,7 @@ WHILE Boolean_expression
 
 ## <a name="arguments"></a>引數
  *Boolean_expression*  
- 這是傳回 [TRUE](../../t-sql/language-elements/expressions-transact-sql.md) 或 **FALSE** 的**運算式**。 如果布林運算式包含 SELECT 陳述式，則這個 SELECT 陳述式必須括在括號中。  
+ 這是傳回 **TRUE** 或 **FALSE** 的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 如果布林運算式包含 SELECT 陳述式，則這個 SELECT 陳述式必須括在括號中。  
   
  {*sql_statement* | *statement_block*}  
  這是利用陳述式區塊來定義的任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或陳述式分組。 若要定義陳述式區塊，請使用流程控制關鍵字 BEGIN 和 END。  

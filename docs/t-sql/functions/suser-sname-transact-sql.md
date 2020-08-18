@@ -1,4 +1,5 @@
 ---
+description: SUSER_SNAME (Transact-SQL)
 title: SUSER_SNAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2017
@@ -26,12 +27,12 @@ ms.assetid: 11ec7d86-d429-4004-a436-da25df9f8761
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a8dc14225d150bb3a8783ffa01e53f95a45f3673
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 570372e0ca0f40284f89e862eee75e5a3d419440
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111837"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88308414"
 ---
 # <a name="suser_sname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +53,7 @@ SUSER_SNAME ( [ server_user_sid ] )
  *server_user_sid*  
 **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本
   
- 這是選擇性的登入安全性識別碼。 *server_user_sid* 為 **varbinary(85)** 。 *server_user_sid* 可以是任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者或群組的安全性識別碼。 如果未指定 *server_user_sid*，就會傳回目前使用者的相關資訊。 如果參數包含 NULL 一詞，就會傳回 NULL。  
+ 這是選擇性的登入安全性識別碼。 *server_user_sid* 為 **varbinary(85)**。 *server_user_sid* 可以是任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者或群組的安全性識別碼。 如果未指定 *server_user_sid*，就會傳回目前使用者的相關資訊。 如果參數包含 NULL 一詞，就會傳回 NULL。  
   
 ## <a name="return-types"></a>傳回型別  
  **nvarchar(128)**  
@@ -62,7 +63,7 @@ SUSER_SNAME ( [ server_user_sid ] )
   
  當呼叫 SUSER_SNAME 時，如果未設定引數，它會傳回目前安全性內容的名稱。 當利用 EXECUTE AS，在已切換內容的批次內，在未設定引數的情況下呼叫 SUSER_SNAME 時，它會傳回模擬內容的名稱。 當從模擬內容呼叫時，ORIGINAL_LOGIN 會傳回原始內容的名稱。  
   
-## <a name="sssdsfull-remarks"></a>[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]備註  
+## <a name="sssdsfull-remarks"></a>[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 備註  
  SUSER_NAME 一律會傳回目前安全性內容的登入名稱。  
   
  SUSER_SNAME 陳述式不支援透過 EXECUTE AS 使用模擬的安全性內容來執行。  

@@ -1,4 +1,5 @@
 ---
+description: AsBinaryZM (geography 資料類型)
 title: AsBinaryZM (geography 資料類型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 37246adb-814d-4113-9983-4d336de8182c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 105a1e97e919485ed239c9f74cd1d41a0a67c7ae
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: cb175163dccfd07c6c7941503401eddd77d4e4d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555523"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88306401"
 ---
 # <a name="asbinaryzm-geography-data-type"></a>AsBinaryZM (geography 資料類型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

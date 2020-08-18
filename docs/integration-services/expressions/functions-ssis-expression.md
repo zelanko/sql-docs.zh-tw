@@ -1,4 +1,5 @@
 ---
+description: 函數 (SSIS 運算式)
 title: 函式 (SSIS 運算式) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 72f03d8d53e9d85b9b274ad1ac821fdfc79a6f24
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e0d2644192f6c38b98aaeec134b540ac269560d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917007"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348135"
 ---
 # <a name="functions-ssis-expression"></a>函數 (SSIS 運算式)
 
@@ -51,7 +52,7 @@ ms.locfileid: "86917007"
 |[LN &#40;SSIS 運算式&#41;](../../integration-services/expressions/ln-ssis-expression.md)|傳回數值運算式的自然對數。|  
 |[LOG &#40;SSIS 運算式&#41;](../../integration-services/expressions/log-ssis-expression.md)|傳回數值運算式以 10 為底的對數。|  
 |[POWER &#40;SSIS 運算式&#41;](../../integration-services/expressions/power-ssis-expression.md)|傳回數值運算式的乘冪結果。|  
-|[ROUND &#40;SSIS 運算式&#41;](../../integration-services/expressions/round-ssis-expression.md)|傳回已經進位到指定長度或有效位數的數值運算式。 。|  
+|[ROUND &#40;SSIS 運算式&#41;](../../integration-services/expressions/round-ssis-expression.md)|傳回已經進位到指定長度或有效位數的數值運算式。 .|  
 |[SIGN &#40;SSIS 運算式&#41;](../../integration-services/expressions/sign-ssis-expression.md)|傳回數值運算式的正 (+)、負 (-) 或零 (0) 符號。|  
 |[SQUARE &#40;SSIS 運算式&#41;](../../integration-services/expressions/square-ssis-expression.md)|傳回數值運算式的平方。|  
 |[SQRT &#40;SSIS 運算式&#41;](../../integration-services/expressions/sqrt-ssis-expression.md)|傳回數值運算式的平方根。|  

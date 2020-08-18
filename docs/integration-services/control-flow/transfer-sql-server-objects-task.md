@@ -1,4 +1,5 @@
 ---
+description: 傳送 SQL Server 物件工作
 title: 傳送 SQL Server 物件工作 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3665ff6dd1b49eaafdf9ba91fd112c881cf4d339
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2cd15daac2c287c2dc750e1f79032f855d5640d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86905132"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88349164"
 ---
 # <a name="transfer-sql-server-objects-task"></a>傳送 SQL Server 物件工作
 

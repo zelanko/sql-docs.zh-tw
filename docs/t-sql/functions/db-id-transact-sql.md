@@ -1,4 +1,5 @@
 ---
+description: DB_ID (Transact-SQL)
 title: DB_ID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/13/2019
@@ -23,12 +24,12 @@ ms.assetid: 7b3aef89-a6fd-4144-b468-bf87ebf381b8
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35b2dd7756d50d2f69fece370330c35e614e33ef
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 6742ad9d5dae61ffcdbefe5d8f66bcbe8cd5078e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112485"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88310934"
 ---
 # <a name="db_id-transact-sql"></a>DB_ID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -121,7 +122,7 @@ SELECT DB_ID();
 SELECT DB_ID('AdventureWorksPDW2012');  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 [DB_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/db-name-transact-sql.md)  
 [中繼資料函式 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  

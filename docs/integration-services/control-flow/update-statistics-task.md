@@ -1,4 +1,5 @@
 ---
+description: 更新統計資料工作
 title: 更新統計資料工作 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0247483b-f092-4511-8fa8-3610108bd1bc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d367886273ade6efab0c5d26017ed3ae6f5cd35b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0ed05c62844c8531b119454d2465e8212e1ae270
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913833"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88349354"
 ---
 # <a name="update-statistics-task"></a>更新統計資料工作
 

@@ -1,4 +1,5 @@
 ---
+description: Source Assistant
 title: 來源小幫手 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 5ca9d821-7d61-4727-9133-5f9cb485c7f3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a445bafcb6182f4af0d6089085c5a579b9109d7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: eba1eb2f6e837daaeaabdd430094cab06621186b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917794"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348964"
 ---
 # <a name="source-assistant"></a>Source Assistant
 

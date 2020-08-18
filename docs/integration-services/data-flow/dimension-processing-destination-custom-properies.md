@@ -1,4 +1,5 @@
 ---
+description: 維度處理目的地自訂屬性
 title: 維度處理目的地自訂屬性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9700f663-53f2-49b6-b1ef-92c7b752d6a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 09b9d0512fb92bcc5564dd107d5c6d7a91b2dc4f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6cc1b502a64a30b5035b95b7d36207bc1cc281d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916704"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348994"
 ---
 # <a name="dimension-processing-destination-custom-properies"></a>維度處理目的地自訂屬性
 
@@ -38,7 +39,7 @@ ms.locfileid: "86916704"
 |NullKeyConvertedToUnknown|整數 (列舉)|當 UseDefaultConfiguration 為 **False**時，就是指出如何處理轉換成未知值之 Null 索引鍵的值。 可能的值為 **IgnoreError** (0)、 **ReportAndContinue** (1) 和 **ReportAndStop** (2)。 此屬性的預設值為 **IgnoreError** (0)。|  
 |NullKeyNotAllowed|整數 (列舉)|當 UseDefaultConfiguration 為 **False**時，就是指出如何處理不允許之 Null 的值。 可能的值為 **IgnoreError** (0)、 **ReportAndContinue** (1) 和 **ReportAndStop** (2)。 此屬性的預設值為 **IgnoreError** (0)。|  
 |ProcessType|整數 (列舉)|轉換所使用的維度處理類型。 這些值為 **ProcessAdd** (1) (累加)、 **ProcessFull** (0) 和 **ProcessUpdate** (2)。|  
-|UseDefaultConfiguration|Boolean|一個值，指定轉換是否要使用預設錯誤組態。 如果此屬性為 **False**，轉換就會包含有關錯誤處理的資訊。|  
+|UseDefaultConfiguration|布林值|一個值，指定轉換是否要使用預設錯誤組態。 如果此屬性為 **False**，轉換就會包含有關錯誤處理的資訊。|  
   
  維度處理目的地的輸入和輸入資料行沒有任何自訂屬性。  
   

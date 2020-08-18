@@ -1,4 +1,5 @@
 ---
+description: DEALLOCATE (Transact-SQL)
 title: DEALLOCATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c75cf73d-0268-4c57-973d-b8a84ff801fa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8470f4d370e3879f1bdaadee3b08b80f758ccadc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b29ee9539e8b6d4da64dfcc0da7c2ef9f4296a87
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914074"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88307745"
 ---
 # <a name="deallocate-transact-sql"></a>DEALLOCATE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }
 
 ## <a name="arguments"></a>引數
  *cursor_name*  
- 這是已宣告的資料指標名稱。 如果全域和本機資料指標同時存在且名稱是 *cursor_name*，若指定了 *，* cursor_name`GLOBAL` 就是全域資料指標，如果未指定 `GLOBAL`，則為區域資料指標。  
+ 這是已宣告的資料指標名稱。 如果全域和本機資料指標同時存在且名稱是 *cursor_name*，若指定了 `GLOBAL`，*cursor_name* 就是全域資料指標，如果未指定 `GLOBAL`，則為區域資料指標。  
   
  @*cursor_variable_name*  
  這是**資料指標**變數的名稱。 @*cursor_variable_name* 的類型必須是 **cursor**。  

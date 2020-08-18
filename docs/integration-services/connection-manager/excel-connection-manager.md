@@ -1,4 +1,5 @@
 ---
+description: Excel 連接管理員
 title: Excel 連線管理員 | Microsoft Docs
 ms.date: 04/02/2018
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 667419f2-74fb-4b50-b963-9197d1368cda
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fdac3f09fa3b92d7babd9c43f5a71adc4191ac7e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 53d3ab2b085058cb81ce679e5da5a44ea1deb293
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923714"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88351154"
 ---
 # <a name="excel-connection-manager"></a>Excel 連接管理員
 
@@ -36,7 +37,7 @@ ms.locfileid: "86923714"
 
  當您將 Excel 連線管理員加入封裝時， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立一個連線管理員 (該連線管理員在執行階段會被解析為 Excel 連接)、設定連線管理員屬性，並將該連線管理員加入封裝上的 **Connections** 集合。  
   
- 連線管理員的 **ConnectionManagerType** 屬性會設為 [EXCEL]  。  
+ 連線管理員的 **ConnectionManagerType** 屬性會設為 [EXCEL]****。  
   
 ## <a name="configure-the-excel-connection-manager"></a>設定 Excel 連線管理員  
  您可以利用下列方式設定 Excel 連接管理員：  
@@ -54,20 +55,20 @@ ms.locfileid: "86923714"
  如需以程式設計方式設定連線管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以程式設計方式加入連接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
   
 ## <a name="excel-connection-manager-editor"></a>Excel 連接管理員編輯器
-  使用 [Excel 連線管理員編輯器]  對話方塊，將連接加入現有或新的 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 活頁簿檔案。  
+  使用 [Excel 連線管理員編輯器]**** 對話方塊，將連接加入現有或新的 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 活頁簿檔案。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **Excel 檔案路徑**  
  輸入現有或新的 Excel 活頁簿檔案的路徑和檔案名稱。  
    
  **瀏覽**  
- 使用 [開啟]  對話方塊巡覽至 Excel 檔存在的資料夾，或您要建立新檔案之處。  
+ 使用 [開啟]**** 對話方塊巡覽至 Excel 檔存在的資料夾，或您要建立新檔案之處。  
   
  **Excel 版本**  
  指定用於建立檔案的 Microsoft Excel 版本。  
   
  **第一個資料列有資料行名稱**  
- 指定選取之工作表中資料的第一個資料列是否包含資料行名稱。 此選項的預設值是 **[True]** 。  
+ 指定選取之工作表中資料的第一個資料列是否包含資料行名稱。 此選項的預設值是 **[True]**。  
 
 ## <a name="solution-to-import-data-with-mixed-data-types-from-excel"></a>從 Excel 匯入包含混合資料類型資料的解決方案
 

@@ -1,4 +1,5 @@
 ---
+description: DBCC OUTPUTBUFFER (Transact-SQL)
 title: DBCC OUTPUTBUFFER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/16/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e912a06d-9fde-4e26-b057-801255d79504
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: d89ceb8e32310ab732c4dc87bebda9011593ab5d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 567f303b2ebd78fab3f6803ad2490ca1dc059e2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484822"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88311254"
 ---
 # <a name="dbcc-outputbuffer-transact-sql"></a>DBCC OUTPUTBUFFER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

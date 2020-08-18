@@ -1,4 +1,5 @@
 ---
+description: 訂閱，同步處理記錄
 title: 訂閱，同步處理記錄 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -14,18 +15,18 @@ ms.assetid: 85f666f6-14ee-4f19-b385-e5cc508aabe4
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b82300ff328470f0b195796385f29e651a1998b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: db40c8e3848ee5dac3d770e77629555ea87814b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729330"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88326019"
 ---
 # <a name="subscription-synchronization-history"></a>訂閱，同步處理記錄
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  **[同步處理記錄]** 索引標籤會顯示有關合併代理程式的詳細資訊，包括狀態、發行項統計資料、記錄、參考訊息和錯誤訊息等等。  
+   [同步處理記錄]**** 索引標籤會顯示合併代理程式的詳細資訊，包括狀態、發行項統計資料、記錄、資訊訊息及任何錯誤訊息。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  從 **[檢視]** 功能表中選取要檢視的合併代理程式工作階段，再於 **[合併代理程式工作階段]** 方格中選取特定的工作階段。 有關這個工作階段的詳細資訊，會顯示在標示為 **[在選取的工作階段中處理的發行項]** 的方格中。  
   
  **檢視**  
@@ -36,7 +37,7 @@ ms.locfileid: "85729330"
   
 -   錯誤  
   
--   Completed  
+-   已完成  
   
 -   正在重試  
   
@@ -60,7 +61,7 @@ ms.locfileid: "85729330"
  **錯誤訊息**  
  如果工作階段結束時發生錯誤，這個欄位會顯示合併代理程式記錄的最後一個錯誤訊息。 如果工作階段結束時沒有錯誤，這個欄位會是空白。  
   
- **文章**  
+ **發行項**  
  發行集內每個發行項的名稱，以及整個發行集的下列處理階段：  
   
 -   **初始化**。 這是指合併代理程式的啟動；而不是涉及套用快照集的訂閱之初始化。  

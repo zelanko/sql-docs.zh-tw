@@ -1,4 +1,5 @@
 ---
+description: Integration Services 回溯相容性
 title: Integration Services 回溯相容性 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 983e78ef4eedaa8aee55bb3d4c6575519a7d6b27
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4b7722cea77801e1292072bd948779a8e5688550
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919964"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88345654"
 ---
 # <a name="integration-services-backward-compatibility"></a>Integration Services 回溯相容性
 
@@ -33,13 +34,13 @@ ms.locfileid: "86919964"
   
 ## <a name="deprecated-integration-services-features-in-sql-server-2016"></a>SQL Server 2016 Integration Services 已被取代的功能
 
-本節描述目前 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本中已淘汱但仍可使用的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 功能。 這些功能將在未來的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本中移除。 請勿在新的應用程式中使用已被取代的功能。  
+本節描述目前 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 版本中已淘汱但仍可使用的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 功能。 這些功能將在未來的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本中移除。 請勿在新的應用程式中使用已被取代的功能。  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中沒有已被取代的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。  
 
 ## <a name="discontinued-integration-services-functionality-in-sql-server-2016"></a>SQL Server 2016 中已停止的 Integration Services 功能
 
-本節描述目前 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本已不再提供的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 功能。  
+本節描述目前 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 版本已不再提供的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 功能。  
   
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]中沒有已停止的 Integration Services 功能。  
 
@@ -51,6 +52,6 @@ ms.locfileid: "86919964"
 
 ## <a name="behavior-changes-to-integration-services-features-in-sql-server-2016"></a>SQL Server 2016 中 Integration Services 功能的行為變更
 
-本節描述 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中的行為變更。 相較於舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，這些行為變更會影響目前 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本中的功能運作或互動方式。  
+本節描述 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中的行為變更。 相較於舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，這些行為變更會影響目前 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 版本中的功能運作或互動方式。  
   
 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]中的 Integration Services 功能沒有行為變更。  

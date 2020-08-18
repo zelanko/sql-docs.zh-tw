@@ -1,4 +1,5 @@
 ---
+description: 比較運算子 (Transact-SQL)
 title: 比較運算子 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3fbe10ec2f0d36a94b2c00ad07d71a510c2975c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 940b0ab0250a626673c883542fc2e1f1700f0c52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706613"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88307398"
 ---
 # <a name="comparison-operators-transact-sql"></a>比較運算子 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,11 +41,11 @@ ms.locfileid: "85706613"
 |[>= (大於或等於)](../../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)|大於或等於|  
 |[<= (小於或等於)](../../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)|小於或等於|  
 |[<> (不等於)](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)|不等於|  
-|[\!= (不等於)](../../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)|不等於 (不是 ISO 標準)|  
+|[!= (不等於)](../../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)|不等於 (不是 ISO 標準)|  
 |[\!< (不小於)](../../t-sql/language-elements/not-less-than-transact-sql.md)|不小於 (不是 ISO 標準)|  
 |[\!> (不大於)](../../t-sql/language-elements/not-greater-than-transact-sql.md)|不大於 (不是 ISO 標準)|  
   
-## <a name="boolean-data-type"></a>布林資料類型  
+## <a name="boolean-data-type"></a>Boolean 資料類型  
  比較運算子的結果具有 **Boolean** 資料類型。 它有三個值：TRUE、FALSE 和 UNKNOWN。 傳回 **Boolean** 資料類型的運算式稱為布林運算式。  
   
  **Boolean** 資料類型和其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型不同，不能將它指定為資料表資料行或變數的資料類型，且無法在結果集中傳回。  

@@ -1,4 +1,5 @@
 ---
+description: 順序屬性 (一般頁面)
 title: 順序屬性 (一般頁面) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 0187f413-cdf0-48a2-b2e6-9b3578cd5811
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d5614e25efc21f4c3b4f4f54249bc26397acbfa3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c85265a8461fae5060ac7c8cdbffaf38ce8e9ee3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725897"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88325846"
 ---
 # <a name="sequence-properties-general-page"></a>順序屬性 (一般頁面)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -28,9 +29,9 @@ ms.locfileid: "85725897"
   
  如需使用 **CREATE SEQUENCE** 和 **NEXT VALUE FOR** 函數的相關資訊和案例，請參閱 [序號](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
   
- 此頁面可經由兩種方式存取：以滑鼠右鍵按一下 [物件總管] 中的 [順序]  ，然後按一下 [新增順序]  ，或者以滑鼠右鍵按一下現有的順序，然後按一下 [屬性]  。 以滑鼠右鍵按一下現有的順序，然後按一下 [屬性]  時，無法編輯選項。 若要變更順序選項，請使用 [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md) 陳述式或卸除然後重新建立順序物件。  
+ 此頁面可經由兩種方式存取：以滑鼠右鍵按一下 [物件總管] 中的 [順序]****，然後按一下 [新增順序]****，或者以滑鼠右鍵按一下現有的順序，然後按一下 [屬性]****。 以滑鼠右鍵按一下現有的順序，然後按一下 [屬性]**** 時，無法編輯選項。 若要變更順序選項，請使用 [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md) 陳述式或卸除然後重新建立順序物件。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **順序名稱**  
  在此處輸入順序名稱。  
   

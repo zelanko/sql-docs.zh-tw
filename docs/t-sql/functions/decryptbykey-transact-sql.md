@@ -1,4 +1,5 @@
 ---
+description: DECRYPTBYKEY (Transact-SQL)
 title: DECRYPTBYKEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6edf121f-ac62-4dae-90e6-6938f32603c9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 45808c6b9036c41c46cafedc286ec306b9a07e91
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 846a3d772c35d8d47aa0013b6d27b8c94f5cf6f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111074"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88310174"
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -61,7 +62,7 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
 含有驗證器從中產生之資料的變數。 必須符合提供給 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值。 *\@authenticator* 具有 **sysname** 資料類型。  
 
 ## <a name="return-types"></a>傳回型別  
-**varbinary**，大小上限為 8,000 個位元組。 如果未開啟用於資料加密的對稱金鑰，或「加密文字」`DECRYPTBYKEY`*為 NULL，則*  會傳回 NULL。  
+**varbinary**，大小上限為 8,000 個位元組。 如果未開啟用於資料加密的對稱金鑰，或「加密文字」** 為 NULL，則 `DECRYPTBYKEY` 會傳回 NULL。  
   
 ## <a name="remarks"></a>備註  
 `DECRYPTBYKEY` 使用對稱金鑰。 資料庫必須已開啟此對稱金鑰。 `DECRYPTBYKEY` 允許同時開啟多個金鑰。 加密文字解密之前，您不需要立即開啟金鑰。  

@@ -1,4 +1,5 @@
 ---
+description: 專案屬性對話方塊
 title: 專案屬性對話方塊 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3f8abf0faafe21b01c34875968cac43c501f951a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 25b6f01f5966f7d157fd76bd5082567a95854fbc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922604"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88351604"
 ---
 # <a name="project-properties-dialog-box"></a>專案屬性對話方塊
 
@@ -49,7 +50,7 @@ ms.locfileid: "86922604"
   
 4.  展開包含您要設定其屬性之專案的資料夾。  
   
-5.  以滑鼠右鍵按一下專案，然後再按一下 [屬性]  。  
+5.  以滑鼠右鍵按一下專案，然後再按一下 [屬性]****。  
   
 ##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> 設定 [一般] 頁面上的選項  
  使用 [一般] 頁面檢視專案屬性。  
@@ -73,7 +74,7 @@ ms.locfileid: "86922604"
  使用 **[權限]** 頁面檢視並設定專案的明確權限。  
   
  瀏覽  
- 按一下 [瀏覽]  ，使用 [瀏覽所有主體]  對話方塊選取您要設定其權限的使用者和角色。  
+ 按一下 [瀏覽]****，使用 [瀏覽所有主體]**** 對話方塊選取您要設定其權限的使用者和角色。  
   
  **名稱**  
  列出使用者或角色的名稱。  
@@ -88,9 +89,9 @@ ms.locfileid: "86922604"
  列出授與權限的使用者或角色。  
   
  **授與**  
- 選取 [授與]  時，會針對使用者會或角色授與權限。  
+ 選取 [授與]**** 時，會針對使用者會或角色授與權限。  
   
  **拒絕**  
- 選取 [拒絕]  時，會針對使用者會或角色拒絕權限。  
+ 選取 [拒絕]**** 時，會針對使用者會或角色拒絕權限。  
   
   

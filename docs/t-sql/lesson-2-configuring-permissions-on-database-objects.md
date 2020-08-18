@@ -1,4 +1,5 @@
 ---
+description: 第 2 課：設定資料庫物件的權限
 title: 教學課程：設定資料庫物件的權限
 ms.custom: seo-lt-2019
 ms.date: 07/31/2018
@@ -12,12 +13,12 @@ ms.assetid: f964b66a-ec32-44c2-a185-6a0f173bfa22
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 991bdef702b1ed298bb492172ef65c6d25d5d0ab
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 195390d76716bcad18df884491fa07335c70665b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75244751"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88306637"
 ---
 # <a name="lesson-2-configure-permissions-on-database-objects"></a>第 2 課：設定資料庫物件的權限
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -26,14 +27,14 @@ ms.locfileid: "75244751"
   >[!NOTE]
   > 本課程會用到在[課程 1 - 建立資料庫物件](lesson-1-creating-database-objects.md)中建立的物件。 在繼續課程 2 之前，請先完成課程 1。 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 若要完成本教學課程，您需要 SQL Server Management Studio 和 SQL Server 執行個體存取權。 
 
 - 安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
 若您沒有 SQL Server 執行個體存取權，請從下列連結選取您的平台。 若您選擇 SQL 驗證，請使用您的 SQL Server 登入認證。
-- **Windows**：[下載 SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
-- **macOS**：[下載 Docker 上的 SQL Server 2017](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)。
+- **Windows**: [下載 SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- **macOS**: [下載 Docker 上的 SQL Server 2017](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
 
 [!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
@@ -44,10 +45,10 @@ ms.locfileid: "75244751"
   
 ### <a name="create-a-new-windows-account"></a>建立新的 Windows 帳戶  
   
-1.  依序按一下 [開始]  和 [執行]  ，在 [開啟]  方塊中輸入 **%SystemRoot%\system32\compmgmt.msc /s**，然後按一下 [確定]  開啟 [電腦管理] 程式。 
-2.  在 [系統工具]  底下，展開 [本機使用者和群組]  ，以滑鼠右鍵按一下 [使用者]  ，然後按一下 [新增使用者]  。    
-3.  在 [使用者名稱]  方塊中輸入 **Mary**。    
-4.  在 [密碼]  和 [確認密碼]  方塊中輸入強式密碼，然後按一下 [建立]  ，建立新的本機 Windows 使用者。  
+1.  依序按一下 [開始]**** 和 [執行]****，在 [開啟]**** 方塊中輸入 **%SystemRoot%\system32\compmgmt.msc /s**，然後按一下 [確定]**** 開啟 [電腦管理] 程式。 
+2.  在 [系統工具]**** 底下，展開 [本機使用者和群組]****，以滑鼠右鍵按一下 [使用者]****，然後按一下 [新增使用者]****。    
+3.  在 [使用者名稱]**** 方塊中輸入 **Mary**。    
+4.  在 [密碼]**** 和 [確認密碼]**** 方塊中輸入強式密碼，然後按一下 [建立]****，建立新的本機 Windows 使用者。  
   
 ### <a name="create-a-sql-login"></a>建立 SQL 登入  
 
@@ -86,7 +87,7 @@ Mary 現在已具有此 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]�
 
 
 ## <a name="create-views-and-stored-procedures"></a>建立檢視和預存程序
-如果是管理員，可以從 **Products** 資料表和 **vw_Names** 檢視中執行 SELECT，也可以執行 **pr_Names** 程序，但是 Mary 則無權這麼做。 若要授與 Mary 必要的權限，請使用 GRANT 陳述式。  
+ 作為管理員，您可以從 **Products** 資料表和 **vw_Names** 檢視中執行 SELECT，也可以執行 **pr_Names** 預存程序；但 Mary 則無權這麼做。 若要授與 Mary 必要的權限，請使用 GRANT 陳述式。  
 
 ### <a name="grant-permission-to-stored-procedure"></a>將權限授與預存程序  
 執行下列陳述式，讓 `Mary` 具有 `EXECUTE` 預存程序的 `pr_Names` 權限。
@@ -104,7 +105,7 @@ Mary 現在已具有此 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]�
 ### <a name="about-grant"></a>關於 GRANT  
 您必須具有 EXECUTE 權限，才能執行預存程序。 若要存取和變更資料，則必須具有 SELECT、INSERT、UPDATE 和 DELETE 權限。 GRANT 陳述式也可以用來授與其他權限，例如建立資料表的權限。  
   
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>接下來的步驟
 下一篇文章會教您如何移除您在其他課程中建立的資料庫物件。 
 
 請前往下一篇文章以深入了解：

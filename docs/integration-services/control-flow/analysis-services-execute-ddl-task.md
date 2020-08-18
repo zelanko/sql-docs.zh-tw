@@ -1,4 +1,5 @@
 ---
+description: Analysis Services 執行 DDL 工作
 title: Analysis Services 執行 DDL 工作 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7884f54d3a33a0ba975f90a7660dd98489f88ace
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 2496345f217f61f3729a6bf657a882e045cc130b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971566"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88349994"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Analysis Services 執行 DDL 工作
 

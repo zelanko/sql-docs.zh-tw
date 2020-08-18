@@ -1,4 +1,5 @@
 ---
+description: 篩選追蹤
 title: 篩選追蹤 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6d5677de166b1bfff58c64665901ce814a7448fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d6ba791898d86f9e51baa9bd516e8a6752a94254
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751003"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88325097"
 ---
 # <a name="filter-a-trace"></a>篩選追蹤
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -61,7 +62,7 @@ ms.locfileid: "85751003"
   
  篩選的可用性視資料行而定。 部份資料行無法篩選。 可篩選的資料行只能由特定關聯式運算子進行篩選，如下表所示。  
   
-|關聯式運算子|運算子符號|描述|  
+|關聯式運算子|運算子符號|Description|  
 |-------------------------|---------------------|-----------------|  
 |相似|LIKE|指定追蹤事件資料必須和輸入的文字相似。 允許多值。|  
 |不相似|不相似|指定追蹤事件資料絕對必須和輸入的文字不相似。 允許多值。|  
@@ -103,7 +104,7 @@ ms.locfileid: "85751003"
 |**LoginName**|LIKE、NOT LIKE|  
 |**LoginSid**|使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 篩選這個資料行中的事件。 如需詳細資訊，請參閱 [使用 SQL Server Profiler 篩選追蹤](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)。|  
 |**MethodName**|LIKE、NOT LIKE|  
-|**模式**|=, <>, >=, <=|  
+|**Mode**|=, <>, >=, <=|  
 |**NestLevel**|=, <>, >=, <=|  
 |**NTDomainName**|LIKE、NOT LIKE|  
 |**NTUserName**|LIKE、NOT LIKE|  
@@ -122,13 +123,13 @@ ms.locfileid: "85751003"
 |**RoleName**|LIKE、NOT LIKE|  
 |**RowCounts**|=, <>, >=, <=|  
 |**SessionLoginName**|LIKE、NOT LIKE|  
-|**Severity**|=, <>, >=, <=|  
+|**嚴重性**|=, <>, >=, <=|  
 |**SourceDatabaseID**|=, <>, >=, <=|  
 |**SPID**|=, <>, >=, \<=|  
 |**SqlHandle**|使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 篩選這個資料行中的事件。 如需詳細資訊，請參閱 [使用 SQL Server Profiler 篩選追蹤](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)。|  
 |**StartTime**|>=, <=|  
 |**State**|=, <>, >=, <=|  
-|「成功」 |=, <>, >=, <=|  
+|「成功」|=, <>, >=, <=|  
 |**TargetLoginName**|LIKE、NOT LIKE|  
 |**TargetLoginSid**|使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 篩選這個資料行中的事件。 如需詳細資訊，請參閱 [使用 SQL Server Profiler 篩選追蹤](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)。|  
 |**TargetUserName**|LIKE、NOT LIKE|  

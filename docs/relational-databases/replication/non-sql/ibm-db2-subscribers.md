@@ -1,4 +1,5 @@
 ---
+description: IBM DB2 訂閱者
 title: IBM DB2 訂閱者 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4cc6f19d4b732344f42d27513e7f1a7730566780
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e044fa0e368893f0aaa1fe8175b306c2fc04c24b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893314"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88327064"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 訂閱者
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85893314"
   
 1.  在散發者上安裝 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB Provider for DB2 的最新版本：  
   
-    -   如果您使用的是 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] Enterprise Edition，請在 [SQL Server 下載](https://go.microsoft.com/fwlink/?LinkId=149256)網頁的 [Related Downloads] \(相關下載) 區段中，按一下最新版 Microsoft SQL Server 功能套件的連結。  在 **Microsoft SQL Server 功能套件**網頁上，搜尋 **Microsoft OLE DB Provider for DB2**。  
+    -   如果您使用的是 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] Enterprise Edition，請在 [SQL Server 下載](https://go.microsoft.com/fwlink/?LinkId=149256)網頁的 [Related Downloads] \(相關下載) 區段中，按一下最新版 Microsoft SQL Server 功能套件的連結。**** 在 **Microsoft SQL Server 功能套件**網頁上，搜尋 **Microsoft OLE DB Provider for DB2**。  
   
     -   如果您使用的是 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] Standard Edition，請安裝 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] (HIS) 伺服器的最新版本，其中就包含此提供者。  
   
@@ -41,11 +42,11 @@ ms.locfileid: "85893314"
   
 2.  為「訂閱者」建立連接字串。 在任何文字編輯器中都可建立連接字串，但建議您使用「資料存取工具」。 若要在「資料存取工具」中建立字串：  
   
-    1.  依序按一下 **[開始]** 、 **[程式集]** 和 **[DB2 的 Microsoft OLE DB 提供者]** ，然後再按 **[資料存取工具]** 。  
+    1.  依序按一下 **[開始]**、 **[程式集]** 和 **[DB2 的 Microsoft OLE DB 提供者]**，然後再按 **[資料存取工具]**。  
   
     2.  遵循 **[資料存取工具]** 中的步驟提供有關 DB2 伺服器的資訊。 完成工具後，將建立通用資料連結 (UDL) 和相關聯的連接字串 (複寫實際不會使用 UDL，但會用到連接字串)。  
   
-    3.  存取連接字串：以滑鼠右鍵按一下「資料存取工具」中的 UDL，然後選取 **[顯示連接字串]** 。  
+    3.  存取連接字串：以滑鼠右鍵按一下「資料存取工具」中的 UDL，然後選取 **[顯示連接字串]**。  
   
      連接字串類似於 (使用分行符號是為提高可讀性)：  
   
@@ -106,7 +107,7 @@ ms.locfileid: "85893314"
 |**binary(1-254)**|CHAR(1-254) FOR BIT DATA|  
 |**binary(255-8000)**|VARCHAR(255-8000) FOR BIT DATA|  
 |**bit**|SMALLINT|  
-|**char(1-254)**|CHAR(1-254)|  
+|**CHAR(1-254)**|CHAR(1-254)|  
 |**char(255-8000)**|VARCHAR(255-8000)|  
 |**date**|日期|  
 |**datetime**|timestamp|  
@@ -128,7 +129,7 @@ ms.locfileid: "85893314"
 |**numeric(32-38, 0-38)**|VARCHAR(41)|  
 |**nvarchar(1-4000)**|VARCHAR(1-4000)|  
 |**nvarchar(max)**|VARCHAR(0)*|  
-|**real**|real|  
+|**real**|REAL|  
 |**smalldatetime**|timestamp|  
 |**smallint**|SMALLINT|  
 |**smallmoney**|DECIMAL(10,4)|  
@@ -154,7 +155,7 @@ ms.locfileid: "85893314"
   
      這可使產生的資料表在「訂閱者」端成功建立，只要 DB2 頁面大小條件約束足以容納資料列的大小上限。 確定用於存取 DB2 資料庫的登入，有權限存取擁有足夠大小以容納正複寫至 DB2 之資料表的資料表空間。  
   
--   DB2 可以支援最大 32 千位元組 (KB) 的 VARCHAR 資料行，因此可以將某些 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大型物件資料行正確對應至 DB2 VARCHAR 資料行。 但是，複寫用於 DB2 的 OLE DB 提供者不支援將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大型物件對應至 DB2 大型物件。 因此，在產生的建立指令碼中，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **text**、**varchar(max)** 、**ntext** 和 **nvarchar(max)** 資料行將對應至 VARCHAR(0)。 長度值 0 必須在將指令碼套用至「訂閱者」之前變更為適當值。 如果資料類型長度未變更，則嘗試在「DB2 訂閱者」端建立資料表時，DB2 將產生錯誤 604 (表示資料類型的有效位數或長度屬性無效)。  
+-   DB2 可以支援最大 32 千位元組 (KB) 的 VARCHAR 資料行，因此可以將某些 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大型物件資料行正確對應至 DB2 VARCHAR 資料行。 但是，複寫用於 DB2 的 OLE DB 提供者不支援將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大型物件對應至 DB2 大型物件。 因此，在產生的建立指令碼中，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **text**、**varchar(max)**、**ntext** 和 **nvarchar(max)** 資料行將對應至 VARCHAR(0)。 長度值 0 必須在將指令碼套用至「訂閱者」之前變更為適當值。 如果資料類型長度未變更，則嘗試在「DB2 訂閱者」端建立資料表時，DB2 將產生錯誤 604 (表示資料類型的有效位數或長度屬性無效)。  
   
      根據您對要複寫之來源資料表的了解，判斷是否適合將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大型物件對應至可變長度的 DB2 項目，並在自訂建立指令碼中指定適當的最大長度。 如需有關指定自訂建立指令碼的資訊，請參閱本主題中＜設定 IBM DB2 訂閱者＞一節中的步驟 5。  
   

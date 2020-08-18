@@ -1,4 +1,5 @@
 ---
+description: ToString (geometry 資料類型)
 title: ToString (geometry 資料型別) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2e55fa98-aa22-4baa-a516-7c233a33e212
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 62d8f5a0348dd6104983daaf2592feda80514a4f
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: d5b8e9d4c027dd364c9aaf84b4b8e56680548d0c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554887"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88305536"
 ---
 # <a name="tostring-geometry-data-type"></a>ToString (geometry 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

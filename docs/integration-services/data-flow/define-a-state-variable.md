@@ -1,4 +1,5 @@
 ---
+description: 定義狀態變數
 title: 定義狀態變數 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cee61de08afac103f0280b905100683011460972
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f72f8f6aff6b5861a9bf4ba91ff77ef6e80719b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916730"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88349344"
 ---
 # <a name="define-a-state-variable"></a>定義狀態變數
 

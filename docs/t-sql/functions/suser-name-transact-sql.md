@@ -1,4 +1,5 @@
 ---
+description: SUSER_NAME (Transact-SQL)
 title: SUSER_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,12 +25,12 @@ ms.assetid: ae598d9f-9baa-49b8-b1c1-042854206de4
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3b62e29885c9e23ae7f391106ce83cdf77c1b8d3
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: b47d97f42c1da9420a79f3ed45bd4fb5d6071220
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110751"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88307974"
 ---
 # <a name="suser_name-transact-sql"></a>SUSER_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -62,7 +63,7 @@ SUSER_NAME 只會傳回在 **syslogins** 系統資料表中有項目之登入的
 SUSER_NAME 可用於選取清單、WHERE 子句及任何允許使用運算式的位置。 請在 SUSER_NAME 之後使用括弧，即使未指定任何參數也一樣。  
 
 > [!NOTE]
-> 雖然 Azure SQL Database 支援 SUSER_NAME 函式，但 Azure SQL Database 不支援使用 SUSER_NAME 的「執行身分」  。 
+> 雖然 Azure SQL Database 支援 SUSER_NAME 函式，但 Azure SQL Database 不支援使用 SUSER_NAME 的「執行身分」。 
   
 ## <a name="examples"></a>範例  
 下列範例會傳回登入識別碼是 `1` 之使用者的登入識別名稱。  

@@ -1,4 +1,5 @@
 ---
+description: SUM (Transact-SQL)
 title: SUM (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -25,12 +26,12 @@ ms.assetid: 9af94d0f-55d4-428f-a840-ec530160f379
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cde407d28782ff8fc81a10cf4bc564042cb04bf8
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: bc684b2a344594632fe02eb9e1ecfd6bcd45fa70
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110784"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88308854"
 ---
 # <a name="sum-transact-sql"></a>SUM (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -109,7 +110,7 @@ White           19.00                 6.7926
  ```  
   
 ### <a name="b-using-the-over-clause"></a>B. 使用 OVER 子句  
- 下列範例搭配 OVER 子句使用 SUM 函數，為 `Sales.SalesPerson` 資料庫之 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表中各領域的年度銷售提供累計總和。 `TerritoryID` 負責分割資料，而 `SalesYTD` 會進行邏輯性地排序。 這表示，將會根據銷售年度來針對每一個領域計算 SUM 函數。 請注意，在 `TerritoryID` 1 中，2005 銷售年度有兩個資料列，分別表示在該年度有銷售業績的兩個銷售人員。 計算這兩個資料列的總累計銷售額，然後將表示 2006 年度銷售額的第三個資料列納入計算。  
+ 下列範例搭配 OVER 子句使用 SUM 函數，為 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫之 `Sales.SalesPerson` 資料表中各領域的年度銷售提供累計總和。 `TerritoryID` 負責分割資料，而 `SalesYTD` 會進行邏輯性地排序。 這表示，將會根據銷售年度來針對每一個領域計算 SUM 函數。 請注意，在 `TerritoryID` 1 中，2005 銷售年度有兩個資料列，分別表示在該年度有銷售業績的兩個銷售人員。 計算這兩個資料列的總累計銷售額，然後將表示 2006 年度銷售額的第三個資料列納入計算。  
   
 ```  
 SELECT BusinessEntityID, TerritoryID   

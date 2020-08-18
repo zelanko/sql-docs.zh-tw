@@ -1,4 +1,5 @@
 ---
+description: SQL Server Compact Edition 目的地自訂屬性
 title: SQL Server Compact Edition 目的地自訂屬性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b66e93fe-ce62-401b-a31f-619c7b8b1f3e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d6dcf8eddf87df3c7b327d927b8dabd34ae24c3a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ba01a1c05c9ea83babc36e5c639a4a4fa20a70d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917784"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348594"
 ---
 # <a name="sql-server-compact-edition-destination-custom-properties"></a>SQL Server Compact Edition 目的地自訂屬性
 

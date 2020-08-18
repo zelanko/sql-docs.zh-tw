@@ -1,4 +1,5 @@
 ---
+description: Analysis Services 處理工作
 title: Analysis Services 處理工作 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9c39fdf1f63084d7f1340dae6b11f17124a52138
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2287bb2e429eba74f7ca98dcdf2b18b8d11cfda2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86908578"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88349984"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 處理工作
 
@@ -82,7 +83,7 @@ ms.locfileid: "86908578"
 -   <xref:Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.DTSProcessingTask>  
   
 ## <a name="analysis-services-processing-task-editor-general-page"></a>Analysis Services 處理工作編輯器 (一般頁面)
-  使用 [Analysis Services 處理工作編輯器]  對話方塊的 [一般]  頁面，即可命名和描述 Analysis Services 處理工作。  
+  使用 [Analysis Services 處理工作編輯器] 對話方塊的 [一般] 頁面，即可命名和描述 Analysis Services 處理工作。  
   
 ### <a name="options"></a>選項。  
  **名稱**  
@@ -95,7 +96,7 @@ ms.locfileid: "86908578"
  輸入 Analysis Services 處理工作的描述。  
   
 ## <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Analysis Services 處理工作編輯器 (Analysis Services 頁面)
-  使用 [Analysis Services 處理工作編輯器]  對話方塊的 [Analysis Services]  頁面，即可指定 Analysis Services 連接管理員、選取要處理的分析物件，以及設定處理與錯誤處理選項。  
+  使用 [Analysis Services 處理工作編輯器]**** 對話方塊的 [Analysis Services]**** 頁面，即可指定 Analysis Services 連接管理員、選取要處理的分析物件，以及設定處理與錯誤處理選項。  
   
  處理表格式模型時，請牢記以下事項：  
   
@@ -107,14 +108,14 @@ ms.locfileid: "86908578"
   
 4.  表格式模型會忽略批次處理設定。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **Analysis Services 連接管理員**  
- 在清單中選取現有的 Analysis Services 連接管理員，或按一下 [新增]  以建立新的連接管理員。  
+ 在清單中選取現有的 Analysis Services 連接管理員，或按一下 [新增]**** 以建立新的連接管理員。  
   
  **新增**  
  建立新的 Analysis Services 連接管理員。  
   
- **相關主題：** [Analysis Services 連線管理員](../../integration-services/connection-manager/analysis-services-connection-manager.md)、[加入 Analysis Services 連線管理員對話方塊 UI 參考](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **相關主題：** [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md)、 [加入 Analysis Services 連接管理員對話方塊 UI 參考](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **物件清單**  
  
@@ -122,14 +123,14 @@ ms.locfileid: "86908578"
 |--------------|-----------------|  
 |**Object Name**|列出指定的物件名稱。|  
 |**型別**|列出指定的物件類型。|  
-|**處理選項**|選取清單中的處理選項。<br /><br /> **相關主題**：[處理多維度模型 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
+|**處理選項**|選取清單中的處理選項。<br /><br /> **相關主題：**[處理多維度模型 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**設定**|列出指定物件的處理設定。|  
   
  **加入**  
  將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件加入清單中。  
   
  **移除**  
- 選取物件，然後按一下 [刪除]  。  
+ 選取物件，然後按一下 [刪除]****。  
   
  **影響分析**  
  執行選取之物件的影響分析。  

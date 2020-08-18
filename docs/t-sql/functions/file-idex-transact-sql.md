@@ -1,4 +1,5 @@
 ---
+description: FILE_IDEX (Transact-SQL)
 title: FILE_IDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 7532fea5-ee5e-4edd-b98b-111a7ba56c8e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 63bfdc72ea7a8a71c0f96292902356b3a07702ee
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 741244f7f2c7e1bc3f7bfe3d169d2efdbd3e11e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112460"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88310024"
 ---
 # <a name="file_idex-transact-sql"></a>FILE_IDEX (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +55,7 @@ FILE_IDEX ( file_name )
 發生錯誤時傳回 **NULL**  
   
 ## <a name="remarks"></a>備註  
-*file_name* 對應至 **sys.master_files** 或 [sys.database_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)目錄檢視 [name](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 資料行中所顯示的邏輯檔案名稱。  
+*file_name* 對應至 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) 或 [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)目錄檢視 **name** 資料行中所顯示的邏輯檔案名稱。  
   
 您可以在 SELECT 清單、WHERE 子句或支援使用運算式的任何位置使用 `FILE_IDEX`。 如需詳細資訊，請參閱[運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)。  
   

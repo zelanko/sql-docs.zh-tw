@@ -1,4 +1,5 @@
 ---
+description: Showplan XML 事件類別
 title: Showplan XML 事件類別 | Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 8e22de84-8890-414a-93e4-aebfaa057d7f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0744a0988ff3026d307e7606bb29b20b12460a2b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 00aaf0a6a479901c72da0e8142191d59abc6ecc4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726141"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88329974"
 ---
 # <a name="showplan-xml-event-class"></a>Showplan XML 事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85726141"
 |BinaryData|**image**|查詢的預估成本。|2|否|  
 |ClientProcessID|**int**|由主機電腦指派給處理序 (用戶端應用程式執行所在) 的識別碼。 如果用戶端提供處理序識別碼，這個資料行就會擴展。|9|是|  
 |DatabaseID|**int**|由 *database* 陳述式所指定的資料庫識別碼；如果沒有針對指定執行個體發出 USE *database*陳述式，則是預設的資料庫。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 如果在追蹤中擷取 ServerName 資料行，則會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
-|DatabaseName|**nvarchar**|資料庫的名稱。|35|否|  
+|DatabaseName|**nvarchar**|資料庫的名稱。|35|No|  
 |Event Class|**int**|事件類型 = 122。|27|否|  
 |EventSequence|**int**|要求中之給定事件的順序。|51|否|  
 |GroupID|**int**|SQL 追蹤事件引發所在之工作負載群組的識別碼。|66|是|  
@@ -44,7 +45,7 @@ ms.locfileid: "85726141"
 |IsSystem|**int**|指出事件是發生在系統處理序或使用者處理序。 1 = 系統，0 = 使用者。|60|是|  
 |LineNumber|**int**|顯示包含錯誤的行號。|5|是|  
 |LoginName|**nvarchar**|使用者登入的名稱 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性登入或 DOMAIN\username 格式的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登入認證)。|11|是|  
-|LoginSID|**image**|已登入之使用者的安全性識別碼 (SID)。 您可以在 sys.server_principals 目錄檢視中找到這項資訊。 伺服器上的每一個登入之 SID 是唯一的。|41|否|  
+|LoginSID|**image**|已登入之使用者的安全性識別碼 (SID)。 您可以在 sys.server_principals 目錄檢視中找到這項資訊。 伺服器上的每一個登入之 SID 是唯一的。|41|No|  
 |NestLevel|**int**|代表 @@NESTLEVEL 所傳回之資料的整數。|29|是|  
 |NTDomainName|**nvarchar**|使用者所隸屬的 Windows 網域。|7|是|  
 |ObjectID|**int**|系統指派給物件的識別碼。|22|是|  

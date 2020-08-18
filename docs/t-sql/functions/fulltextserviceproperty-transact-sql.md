@@ -1,4 +1,5 @@
 ---
+description: FULLTEXTSERVICEPROPERTY (Transact-SQL)
 title: FULLTEXTSERVICEPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b7dcacb0-af83-4807-9d1e-49148b56b59c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c660b9d2e88a6ef48a75f17dfe759df94fb53266
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 095ba81db2c432b33ceb1795582cff3b9ef559c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112700"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88309944"
 ---
 # <a name="fulltextserviceproperty-transact-sql"></a>FULLTEXTSERVICEPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

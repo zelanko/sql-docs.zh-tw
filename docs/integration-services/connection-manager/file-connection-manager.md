@@ -1,4 +1,5 @@
 ---
+description: 檔案連接管理員
 title: 檔案連線管理員 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 11c5a2404ec0c5dd8a51f09b1b96a4b5518231ae
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 982ff5a4a48c22de9521d2df5d56cd31919794f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920791"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88351434"
 ---
 # <a name="file-connection-manager"></a>檔案連接管理員
 
@@ -75,9 +76,9 @@ ms.locfileid: "86920791"
   
  若要深入了解檔案連接管理員，請參閱＜ [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)＞。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **使用類型**  
- 指定 [檔案連線管理員]  是否連接到現有的檔案或資料夾，或者建立新檔案或資料夾。  
+ 指定 [檔案連線管理員]**** 是否連接到現有的檔案或資料夾，或者建立新檔案或資料夾。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -87,11 +88,11 @@ ms.locfileid: "86920791"
 |現有的資料夾|使用現有的資料夾。|  
   
  **檔案 / 資料夾**  
- 若為 [檔案]  ，請指定要使用的檔案。  
+ 若為 [檔案]****，請指定要使用的檔案。  
   
- 若為 **[資料夾]** ，請指定要使用的資料夾。  
+ 若為 **[資料夾]**，請指定要使用的資料夾。  
   
  **瀏覽**  
- 使用 [選取檔案]  或 [瀏覽資料夾]  對話方塊，來選取檔案或資料夾。  
+ 使用 [選取檔案]**** 或 [瀏覽資料夾]**** 對話方塊，來選取檔案或資料夾。  
   
   

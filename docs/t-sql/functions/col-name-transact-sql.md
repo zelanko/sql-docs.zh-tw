@@ -1,4 +1,5 @@
 ---
+description: COL_NAME (Transact-SQL)
 title: COL_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -21,12 +22,12 @@ ms.assetid: 214144ab-f2bc-4052-83cf-caf0a85c4cc6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7299e1d02130bddac3bd50c7fd8deafd2bdeeb7
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5e84aa9dca9780bf5f5b10b8fb302ef91115fd91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112003"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88311174"
 ---
 # <a name="col_name-transact-sql"></a>COL_NAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

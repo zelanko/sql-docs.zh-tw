@@ -1,4 +1,5 @@
 ---
+description: 選取封裝
 title: 選取封裝 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1045623c5eabe80a66a9320cb8425b47788d950d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ce10dbf39c92754b2fbc2879041e98094dc06ceb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921144"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88349934"
 ---
 # <a name="select-a-package"></a>選取封裝
 
@@ -34,8 +35,8 @@ ms.locfileid: "86921144"
   
 |值|描述|  
 |-----------|-----------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的位置。 選取此值會顯示動態選項 **[伺服器]** 、 **[使用 Windows 驗證]** 、 **[使用 SQL Server 驗證]** 、 **[使用者名稱]** 和 **[密碼]** 。|  
-|DTSX 檔案|設定 DTSX 檔案的位置。 選取此值會顯示動態選項 **[檔案名稱]** 。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的位置。 選取此值會顯示動態選項 **[伺服器]**、 **[使用 Windows 驗證]**、 **[使用 SQL Server 驗證]**、 **[使用者名稱]** 和 **[密碼]**。|  
+|DTSX 檔案|設定 DTSX 檔案的位置。 選取此值會顯示動態選項 **[檔案名稱]**。|  
   
 ## <a name="location-dynamic-options"></a>位置動態選項  
   
@@ -60,7 +61,7 @@ ms.locfileid: "86921144"
   
 ### <a name="location--dtsx-file"></a>位置 = DTSX 檔案  
  **檔案名稱**  
- 提供封裝的路徑，或按一下瀏覽按鈕 ([...])  並尋找封裝。  
+ 提供封裝的路徑，或按一下瀏覽按鈕 ([...]) 並尋找封裝。  
   
 ## <a name="see-also"></a>另請參閱  
  [訊息佇列工作](../../integration-services/control-flow/message-queue-task.md)  

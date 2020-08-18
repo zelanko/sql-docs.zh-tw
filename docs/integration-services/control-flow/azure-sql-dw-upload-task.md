@@ -1,4 +1,5 @@
 ---
+description: Azure SQL DW 上傳工作
 title: Azure SQL DW 上傳工作 | Microsoft Docs
 ms.custom: ''
 ms.date: 12/16/2016
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
-ms.openlocfilehash: 52b4f561f29d78c170b334a4ea97486a30ba41c4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 643de07ff630c5f36147aac5c7721297236fc728
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918894"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88350014"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW 上傳工作
 

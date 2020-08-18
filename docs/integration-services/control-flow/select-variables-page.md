@@ -1,4 +1,5 @@
 ---
+description: 選取變數頁面
 title: 選取變數頁面 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,23 +16,23 @@ helpviewer_keywords:
 ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a9527c0d73ed47e893e51e8e192c170a310172e4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1eec7f57655dd86ef62ee8cef40f2c2a9454a8f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921119"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88349304"
 ---
 # <a name="select-variables-page"></a>選取變數頁面
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  使用 [選取變數]  對話方塊，可在您設定指令碼工作或指令碼元件時，為 **ReadOnlyVariables** 和 **ReadWriteVariables** 屬性選取一或多個變數。  
+  使用 [選取變數]**** 對話方塊，可在您設定指令碼工作或指令碼元件時，為 **ReadOnlyVariables** 和 **ReadWriteVariables** 屬性選取一或多個變數。  
   
- 若要開啟 [選取變數] 對話方塊，請在 [指令碼轉換編輯器] 對話方塊的 [指令碼] 頁面上，於 [自訂屬性] 底下尋找 [ReadOnlyVariables] 或 [ReadWriteVariables] 屬性，然後按一下與該屬性相關聯的省略符號 ([...]) 按鈕。  
+ 若要開啟 [選取變數]**** 對話方塊，請在 [指令碼轉換編輯器]**** 對話方塊的 [指令碼]**** 頁面上，於 [自訂屬性]**** 底下尋找 [ReadOnlyVariables]**** 或 [ReadWriteVariables]**** 屬性，然後按一下與該屬性相關聯的省略符號 ([...]) 按鈕。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  選取方塊  
  選取特定變數、選取所有變數，或是清除所有變數的選取。  
   

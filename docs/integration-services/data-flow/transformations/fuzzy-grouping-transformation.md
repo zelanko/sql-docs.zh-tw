@@ -1,4 +1,5 @@
 ---
+description: 模糊群組轉換
 title: 模糊群組轉換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -28,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c4e00be6f692bd3e4bec21acec6c2de6359622b7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e69c2b63e617e37fcd4dec1b7589e9b1808fefce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919324"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348442"
 ---
 # <a name="fuzzy-grouping-transformation"></a>模糊群組轉換
 
@@ -109,7 +110,7 @@ ms.locfileid: "86919324"
   
 ### <a name="options"></a>選項。  
  **[無快取]**  
- 使用清單方塊來選取現有的 OLE DB 連接管理員，或使用 [新增]  按鈕來建立新的連接。  
+ 使用清單方塊來選取現有的 OLE DB 連接管理員，或使用 [新增]**** 按鈕來建立新的連接。  
   
  **新增**  
  使用 [設定 OLE DB 連接管理員]  對話方塊來建立新的連接。  
@@ -128,7 +129,7 @@ ms.locfileid: "86919324"
  選取轉換的輸出是否包含輸入資料行。 用來分組的所有資料行，都會自動複製到輸出。 您可以核取此資料行來包含其他資料行。  
   
  **輸入資料行**  
- 選取先前在 [可用的輸入資料行]  清單中選取的其中一個輸入資料行。  
+ 選取先前在 [可用的輸入資料行]**** 清單中選取的其中一個輸入資料行。  
   
  **輸出別名**  
  輸入對應之輸出資料行的描述性名稱。 依預設，輸出資料行的名稱會與輸入資料行的名稱相同。  
@@ -164,7 +165,7 @@ ms.locfileid: "86919324"
 > [!NOTE]  
 >  在 **[模糊群組轉換編輯器]** 中無法使用模糊群組轉換的 **Exhaustive** 和 **MaxMemoryUsage**屬性，但可使用 **[進階編輯器]** 來設定這兩個屬性。 如需有關這些屬性的詳細資訊，請參閱＜ [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)＞的「模糊群組轉換」一節。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **輸入索引鍵資料行名稱**  
  針對每個輸入資料列，指定包含資料列之唯一識別碼的輸出資料行名稱。 **_key_in** 資料行具有能唯一識別每個資料列的值。  
   

@@ -1,4 +1,5 @@
 ---
+description: UPDATETEXT (Transact-SQL)
 title: UPDATETEXT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/23/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5da5354681ff38fbcf818294f85b9381db21659a
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: c78bf19d7264d0f1c7d073cbe0ce76e2e5b6f4e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554729"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88306562"
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "86554729"
   更新現有的 **text**、**ntext** 或 **image** 欄位。 請使用 UPDATETEXT 來適當地只變更 **text**、**ntext** 或 **image** 資料行中的一部分。 使用 WRITETEXT 來更新和取代整個 **text**、**ntext** 或 **image** 欄位。  
   
 > [!IMPORTANT]
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用大數值資料類型和 **UPDATE** 陳述式的 [.](../../t-sql/queries/update-transact-sql.md)WRITE 子句。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用大數值資料類型和 [UPDATE](../../t-sql/queries/update-transact-sql.md) 陳述式的 **.** WRITE 子句。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,7 +63,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
  這是要更新之資料表及 **text**、**ntext** 或 **image** 資料行的名稱。 資料表名稱和資料行名稱必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。 資料庫名稱和擁有者名稱的指定是選擇性的。  
   
  *dest_text_ptr*  
- 這是指向要更新之 **text**、**ntext** 或 **image** 資料的文字指標值 (TEXTPTR 函數所傳回)。 *dest_text_ptr* 必須是 **binary(** 16 **)** 。  
+ 這是指向要更新之 **text**、**ntext** 或 **image** 資料的文字指標值 (TEXTPTR 函數所傳回)。 *dest_text_ptr* 必須是 **binary(** 16 **)**。  
   
  *insert_offset*  
  這是以零為基底的更新起始位置。 就 **text** 或 **image** 資料行而言，*insert_offset* 是在插入新資料之前，要從現有資料行開頭略過的位元組數。 就 **ntext** 資料行而言，*insert_offset* 則是字元數目 (每個 **ntext** 字元會使用 2 個位元組)。 從這個以零為基底之起始位置開始的現有 **text**、**ntext** 或 **image** 資料，會向右移來騰出空間供新資料使用。 0 值會將新資料插入現有資料的起點。 NULL 值會將新資料附加至現有的資料值。  

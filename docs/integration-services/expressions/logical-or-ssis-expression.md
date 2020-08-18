@@ -1,4 +1,5 @@
 ---
+description: '|| (邏輯 OR) (SSIS 運算式)'
 title: '|| (邏輯 OR) (SSIS 運算式) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a3c07c09-f121-4187-9617-b01adcf843c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 72e8bb24671524b77585d4a3e151eab9bc225a85
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b613adbf102e1103506e6d86efb3bf87d81d72eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86908004"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88347544"
 ---
 # <a name="-logical-or-ssis-expression"></a>|| (邏輯 OR) (SSIS 運算式)
 
@@ -45,14 +46,14 @@ boolean_expression1 || boolean_expression2
 ## <a name="remarks"></a>備註  
  下表顯示 || 運算子的結果。  
   
-|結果|運算是|運算是|  
+|結果|運算是|運算式|  
 |------------|----------------|----------------|  
 |TRUE|TRUE|TRUE|  
-|TRUE|TRUE|FALSE|  
+|TRUE|true|FALSE|  
 |FALSE|FALSE|FALSE|  
 |NULL|NULL|NULL|  
 |TRUE|NULL|TRUE|  
-|NULL|NULL|FALSE|  
+|NULL|NULL|false|  
   
 ## <a name="ssis-expression-examples"></a>SSIS 運算式範例  
  此範例使用 **StandardCost** 和 **ListPrice** 資料行。 如果 **StandardCost** 資料行的值小於 300，或 **ListPrice** 資料行的值大於 500，則範例的評估結果為 TRUE。  

@@ -1,4 +1,5 @@
 ---
+description: 使用者角色
 title: 使用者角色 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8f9f27f5964f92e876822af83a091926d727f921
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1917a897c57214a27257f42ed2c1a7c2ae4bfa3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916694"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88351074"
 ---
 # <a name="user-roles"></a>使用者角色
 
