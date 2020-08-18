@@ -1,5 +1,6 @@
 ---
-title: SQLGetStmtAttr （資料指標程式庫） |Microsoft Docs
+description: SQLGetStmtAttr (資料指標程式庫)
+title: SQLGetStmtAttr (資料指標程式庫) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 6c34e1ef-4273-4afb-a7d3-f9017ab69c5e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a9b29d21c166751f5a57b7951cb6c028861cb501
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 1181347636bd687dcf9ac32d48e14134fef808d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362948"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411124"
 ---
 # <a name="sqlgetstmtattr-cursor-library"></a>SQLGetStmtAttr (資料指標程式庫)
 > [!IMPORTANT]  
->  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
+>  未來的 Windows 版本將會移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
   
- 本主題討論如何在資料指標程式庫中使用**SQLGetStmtAttr**函數。 如需有關**SQLGetStmtAttr**的一般資訊，請參閱[SQLGetStmtAttr 函數](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)。  
+ 本主題討論如何在資料指標程式庫中使用 **SQLGetStmtAttr** 函數。 如需 **SQLGetStmtAttr**的一般資訊，請參閱 [SQLGetStmtAttr 函數](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)。  
   
- 資料指標程式庫支援下列語句屬性搭配**SQLGetStmtAttr**：  
+ 資料指標程式庫支援下列使用 **SQLGetStmtAttr**的語句屬性：  
 
 :::row:::
     :::column:::

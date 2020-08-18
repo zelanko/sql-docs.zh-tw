@@ -1,5 +1,6 @@
 ---
-title: 使用增強的日期和時間功能（Native Client OLE DB 提供者）
+description: '使用 SQL Server Native Client (OLE DB 中的增強型日期和時間功能) '
+title: '使用 (Native Client OLE DB 提供者的增強型日期和時間功能) '
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,14 +12,14 @@ ms.assetid: 50f98cab-8c80-43c5-bc9a-5d2f95f67f17
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 950f4d25cfdcd4bb8aee320ebfec8b6fd1b9c82b
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 2df45f8cc716af1aaa8aafeccaafe95cda87eaa3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396507"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88407974"
 ---
-# <a name="use-enhanced-date-and-time-features-in-sql-server-native-client-ole-db"></a>在 SQL Server Native Client 中使用增強的日期和時間功能（OLE DB）
+# <a name="use-enhanced-date-and-time-features-in-sql-server-native-client-ole-db"></a>使用 SQL Server Native Client (OLE DB 中的增強型日期和時間功能) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   此範例會示範如何使用在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中導入的日期/時間功能。 此範例使用四個新的日期和時間類型 (**date**、**time**、**datetime2** 和 **datetimeoffset**) 執行包含參數的命令，並擷取資料列集結果。  
@@ -26,7 +27,7 @@ ms.locfileid: "87396507"
  此範例需要 AdventureWorks 範例資料庫，您可以從 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案首頁) 下載。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，您應該使用[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)將它們加密。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
   
 ## <a name="example"></a>範例  
  第一個 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單會建立此範例所使用的預存程序。  

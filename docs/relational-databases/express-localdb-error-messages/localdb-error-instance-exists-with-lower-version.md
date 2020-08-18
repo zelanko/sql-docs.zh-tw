@@ -1,4 +1,5 @@
 ---
+description: LOCALDB_ERROR_INSTANCE_EXISTS_WITH_LOWER_VERSION
 title: LOCALDB_ERROR_INSTANCE_EXISTS_WITH_LOWER_VERSION |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -9,12 +10,12 @@ ms.topic: reference
 ms.assetid: a7c5ce08-8841-49a3-b252-116807ba469a
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: b07c4eebc34872868da61d7af633d29f1758e313
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 5619878edb99204b3b55d99e2a538d662cfb1eb5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246065"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88409804"
 ---
 # <a name="localdb_error_instance_exists_with_lower_version"></a>LOCALDB_ERROR_INSTANCE_EXISTS_WITH_LOWER_VERSION
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

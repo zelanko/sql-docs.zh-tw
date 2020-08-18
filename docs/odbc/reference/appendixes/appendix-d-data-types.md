@@ -1,4 +1,5 @@
 ---
+description: 附錄 D：資料類型
 title: 附錄 D：資料類型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,24 +16,24 @@ helpviewer_keywords:
 ms.assetid: 981d49c3-3531-4543-aa75-5bd9e4f67000
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8c1abadb962e3a1ee9327bbb8d84e52d180b4a7e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 77ca1ac4b4628880e6f0a87237b347aadb66584d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292458"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411484"
 ---
 # <a name="appendix-d-data-types"></a>附錄 D：資料類型
-ODBC 會定義兩組資料類型： SQL 資料類型和 C 資料類型。 SQL 資料類型表示儲存在資料來源之資料的資料類型。 C 資料類型表示儲存在應用程式緩衝區中之資料的資料類型。  
+ODBC 會定義兩組資料類型： SQL 資料類型和 C 資料類型。 SQL 資料類型指出儲存在資料來源之資料的資料類型。 C 資料類型指出儲存在應用程式緩衝區中資料的資料類型。  
   
- SQL 資料類型是根據 SQL-92 標準定義的每個 DBMS。 針對 SQL-92 標準中所指定的每個 SQL 資料類型，ODBC 會定義類型識別碼，這是在 ODBC 函式中當做引數傳遞，或在結果集的中繼資料中傳回的 **#define**值。 ODBC 不支援的唯一 SQL-92 資料類型為 BIT （ODBC SQL_BIT 類型具有不同的特性）、BIT_VARYING、TIME_WITH_TIMEZONE、TIMESTAMP_WITH_TIMEZONE 和 NATIONAL_CHARACTER。 驅動程式會負責將資料來源特定的 SQL 資料類型對應至 ODBC SQL 資料類型識別碼和驅動程式特定的 SQL 資料類型識別碼。 SQL 資料類型是在執行描述項的 [SQL_DESC_CONCISE_TYPE] 欄位中指定。  
+ SQL 資料類型是根據 SQL-92 標準來定義每個 DBMS。 針對 SQL-92 標準中所指定的每個 SQL 資料類型，ODBC 會定義類型識別碼，這是一個 **#define** 值，這個值會以 ODBC 函數中的引數形式傳遞，或在結果集的中繼資料中傳回。 ODBC 所不支援的 SQL-92 資料類型是 BIT (ODBC SQL_BIT 類型有不同的特性) 、BIT_VARYING、TIME_WITH_TIMEZONE、TIMESTAMP_WITH_TIMEZONE 和 NATIONAL_CHARACTER。 驅動程式負責將資料來源特定的 SQL 資料類型對應至 ODBC SQL 資料類型識別碼和驅動程式特定的 SQL 資料類型識別碼。 SQL 資料類型是在執行描述項的 [SQL_DESC_CONCISE_TYPE] 欄位中指定。  
   
- ODBC 會定義 C 資料類型及其對應的 ODBC 類型識別碼。 應用程式會在呼叫**SQLBindCol**或**SQLGetData**時，藉由在*TargetType*引數中傳遞適當的 c 類型識別碼，來指定將接收結果集資料之緩衝區的 c 資料類型。 它會在呼叫**SQLBindParameter**的*ValueType*引數中傳遞適當的 c 類型識別碼，藉以指定包含語句參數之緩衝區的 c 類型。 C 資料類型是在應用程式描述項的 [SQL_DESC_CONCISE_TYPE] 欄位中指定。  
+ ODBC 會定義 C 資料類型及其對應的 ODBC 類型識別碼。 應用程式會在呼叫**SQLBindCol**或**SQLGetData**時，藉由在*TargetType*引數中傳遞適當的 C 類型識別碼，以指定接收結果集資料之緩衝區的 c 資料類型。 它會指定包含語句參數之緩衝區的 C 類型，方法是在**SQLBindParameter**呼叫中的*ValueType*引數中傳遞適當的 C 類型識別碼。 C 資料類型是在應用程式描述項的 [SQL_DESC_CONCISE_TYPE] 欄位中指定。  
   
 > [!NOTE]  
->  沒有驅動程式特定的 C 資料類型。  
+>  沒有任何驅動程式特定的 C 資料類型。  
   
- 每個 SQL 資料類型都會對應至 ODBC C 資料類型。 從資料來源傳回資料之前，驅動程式會將它轉換成指定的 C 資料類型。 將資料傳送至資料來源之前，驅動程式會將它轉換成指定的 C 資料類型。  
+ 每個 SQL 資料類型都會對應至 ODBC C 資料類型。 從資料來源傳回資料之前，驅動程式會將它轉換成指定的 C 資料類型。 將資料傳送到資料來源之前，驅動程式會從指定的 C 資料類型進行轉換。  
   
  本附錄包含下列主題。  
   
@@ -58,4 +59,4 @@ ODBC 會定義兩組資料類型： SQL 資料類型和 C 資料類型。 SQL �
   
 -   [將資料從 C 轉換成 SQL 資料類型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)  
   
- 如需 ODBC 資料類型的說明，請參閱[odbc 中的資料類型](../../../odbc/reference/develop-app/data-types-in-odbc.md)。 如需有關驅動程式特定 SQL 資料類型的詳細資訊，請參閱驅動程式的檔。
+ 如需 ODBC 資料類型的說明，請參閱 [odbc 中的資料類型](../../../odbc/reference/develop-app/data-types-in-odbc.md)。 如需有關驅動程式特定的 SQL 資料類型的詳細資訊，請參閱驅動程式的檔。

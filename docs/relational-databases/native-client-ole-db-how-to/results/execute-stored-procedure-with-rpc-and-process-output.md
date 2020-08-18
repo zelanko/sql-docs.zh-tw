@@ -1,5 +1,6 @@
 ---
-title: 預存程式，RPC，輸出
+description: 使用 RPC 和進程輸出執行 SQL Server Native Client 預存程式
+title: 預存程式、RPC、輸出
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 1eb60087-da67-433f-9b45-4028595e68ab
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dd73e4da91d94a920ca8463e1d8df905be343c6f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 950eedbbc453e0ce2df16bec101ab88840f403fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247006"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88407554"
 ---
 # <a name="execute-sql-server-native-client-stored-procedure-with-rpc-and-process-output"></a>使用 RPC 和進程輸出執行 SQL Server Native Client 預存程式
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
