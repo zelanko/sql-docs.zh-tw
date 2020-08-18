@@ -1,5 +1,6 @@
 ---
-title: 資料分割函數目錄檢視（Transact-sql） |Microsoft Docs
+description: 資料分割函數目錄檢視 (Transact-SQL)
+title: " (Transact-sql) 的資料分割函數類別目錄檢視 |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 12400676-7f6b-4437-8fcb-ba9a33f35469
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dc35d5cf881880a6fdee18b80c50ffa7b7ce6933
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 312f6bef7c6b8e4139d68f1564a3163cd8797f37
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442431"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88402344"
 ---
 # <a name="partition-function-catalog-views-transact-sql"></a>資料分割函數目錄檢視 (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -40,6 +41,6 @@ ms.locfileid: "87442431"
   
 ## <a name="see-also"></a>另請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [&#40;Transact-sql&#41;的系統檢視](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [&#40;Transact-sql&#41;的系統檢視 ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   
