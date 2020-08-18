@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_fts_semantic_similarity_population （Transact-sql） |Microsoft Docs
+description: sys.dm_fts_semantic_similarity_population (Transact-SQL)
+title: sys. dm_fts_semantic_similarity_population (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,19 +19,19 @@ ms.assetid: 33666f28-c370-47e2-a932-190316ed5f69
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: a148750db907ebf43d6976d4d574145516e13d65
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2857896ffefb5591482a44051081aa1034f3fee0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898827"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398484"
 ---
 # <a name="sysdm_fts_semantic_similarity_population-transact-sql"></a>sys.dm_fts_semantic_similarity_population (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   傳回一個資料列，其中包含每個有相關語意索引的資料表中每個相似度索引之文件相似度索引母體擴展的狀態資訊。  
   
- 母體擴展步驟在擷取步驟之後執行。 如需相似性解壓縮步驟的狀態資訊，請參閱[dm_fts_index_population &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)。  
+ 母體擴展步驟在擷取步驟之後執行。 如需相似性解壓縮步驟的相關狀態資訊，請參閱 [sys. dm_fts_index_population &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)。  
     
 ||||  
 |-|-|-|  
@@ -43,16 +44,16 @@ ms.locfileid: "85898827"
 |**completion_type**|**int**|這個母體擴展如何完成的狀態。|  
 |**completion_type_description**|**nvarchar(120)**|完成類型的描述。|  
 |**worker_count**|**int**|與相似度擷取相關聯的背景工作執行緒數目|  
-|**status**|**int**|這個母體擴展的狀態。 注意：有些狀態是暫時性。 發生下列情形之一：<br /><br /> 3 = 啟動中<br /><br /> 5 = 正常處理<br /><br /> 7 = 已停止處理<br /><br /> 11 = 母體擴展中止|  
+|**status**|**int**|這個母體擴展的狀態。 注意：有些狀態是暫時性。 下列其中之一：<br /><br /> 3 = 啟動中<br /><br /> 5 = 正常處理<br /><br /> 7 = 已停止處理<br /><br /> 11 = 母體擴展中止|  
 |**status_description**|**nvarchar(120)**|母體擴展狀態的描述。|  
 |**start_time**|**datetime**|啟動母體擴展的時間。|  
 |**incremental_timestamp**|**timestamp**|代表完整母體擴展的起始時間戳記。 如果是其他所有母體擴展類型，這個值是最後一個認可的檢查點，代表母體擴展的進度。|  
   
 ## <a name="general-remarks"></a>一般備註  
- 如需詳細資訊，請參閱[管理和監視語義搜尋](../../relational-databases/search/manage-and-monitor-semantic-search.md)。  
+ 如需詳細資訊，請參閱 [管理和監視語義搜尋](../../relational-databases/search/manage-and-monitor-semantic-search.md)。  
   
 ## <a name="metadata"></a>中繼資料  
- 如需有關語義索引狀態的詳細資訊，請查詢[sys.databases dm_fts_index_population &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)。  
+ 如需有關語義索引狀態的詳細資訊，請查詢 [sys. dm_fts_index_population &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)。  
   
 ## <a name="security"></a>安全性  
   

@@ -1,5 +1,6 @@
 ---
-title: semanticsimilaritytable （Transact-sql） |Microsoft Docs
+description: semanticsimilaritytable (Transact-SQL)
+title: semanticsimilaritytable (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 759ac2b464bbdee2a0199afe540f00c7695381a9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4866c5002fce3540014b9ad0c94ccd7b20a0e235
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764273"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88397274"
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ SEMANTICSIMILARITYTABLE
     )  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>參量  
+##  <a name="arguments"></a><a name="Arguments"></a> 引數  
  **table**  
  這是已啟用全文檢索和語意索引之資料表的名稱。  
   
@@ -74,13 +75,13 @@ SEMANTICSIMILARITYTABLE
 |**source_column_id**|**int**|用於尋找類似文件之來源文件的資料行識別碼。<br /><br /> 如需如何從 column_id 擷取資料行名稱 (反之亦然) 的詳細資料，請參閱 COL_NAME 及 COLUMNPROPERTY 函數。|  
 |**matched_column_id**|**int**|從中找到類似文件之資料行的識別碼。<br /><br /> 如需如何從 column_id 擷取資料行名稱 (反之亦然) 的詳細資料，請參閱 COL_NAME 及 COLUMNPROPERTY 函數。|  
 |**matched_document_key**|**\***<br /><br /> 此索引鍵與來源資料表中的唯一索引鍵類型相同。|文件或資料行的全文檢索和語意擷取唯一索引鍵值，在查詢中發現此文件或資料行與指定的文件類似。|  
-|**成績**|**即時**|此文件與所有其他類似文件之間關聯性的相似度相對值。<br /><br /> 值是 [0.0, 1.0] 範圍內的小數值，分數愈高代表愈符合的相似度，1.0 是滿分。|  
+|**得分**|**真正**|此文件與所有其他類似文件之間關聯性的相似度相對值。<br /><br /> 值是 [0.0, 1.0] 範圍內的小數值，分數愈高代表愈符合的相似度，1.0 是滿分。|  
   
 ## <a name="general-remarks"></a>一般備註  
- 如需詳細資訊，請參閱[使用語義搜尋尋找相似及相關的檔](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)。  
+ 如需詳細資訊，請參閱 [使用語義搜尋尋找相似及相關的檔](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)。  
   
 ## <a name="limitations-and-restrictions"></a>限制事項  
- 您不能跨資料行查詢類似文件。 **SEMANTICSIMILARITYTABLE**函數只會從與來源資料行相同的資料行中，抓取類似的檔，這是由**source_key**引數所識別。  
+ 您不能跨資料行查詢類似文件。 **SEMANTICSIMILARITYTABLE**函式只會從與來源資料行相同的資料行（由**source_key**引數識別）抓取類似的檔。  
   
 ## <a name="metadata"></a>中繼資料  
  如需有關語意相似度擷取和母體擴展的詳細資訊和狀態，請查詢下列動態管理檢視：  

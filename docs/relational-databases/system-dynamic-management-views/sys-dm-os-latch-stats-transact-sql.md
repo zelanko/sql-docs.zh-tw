@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_os_latch_stats （Transact-sql） |Microsoft Docs
+description: sys.dm_os_latch_stats (Transact-SQL)
+title: sys. dm_os_latch_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dc310a735c55bc2cdd248597a6cffe1d6f874d4f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 59624b04e417f2b1b7713adec784abca60303504
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754147"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398524"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,19 +32,19 @@ ms.locfileid: "85754147"
 傳回所有以類別組織之閂鎖等候的相關資訊。 
   
 > [!NOTE]  
-> 若要從或呼叫此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用**dm_pdw_nodes_os_latch_stats**的名稱。  
+> 若要從或呼叫這個 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用名稱 **sys. dm_pdw_nodes_os_latch_stats**。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |latch_class|**nvarchar(60)**|閂鎖類別的名稱。|  
 |waiting_requests_count|**bigint**|這個類別中的閂鎖等候數。 這個計數器是從開始閂鎖等候時逐量遞增計算。|  
-|wait_time_ms|**bigint**|這個類別的總閂鎖等候時間 (以毫秒為單位)。<br /><br /> **注意：** 此資料行會在閂鎖等候期間每五分鐘更新一次，並在閂鎖等候結束時更新。|  
+|wait_time_ms|**bigint**|這個類別的總閂鎖等候時間 (以毫秒為單位)。<br /><br /> **注意：** 在閂鎖等候和閂鎖等候結束時，會每隔五分鐘更新此資料行。|  
 |max_wait_time_ms|**bigint**|這是記憶體物件可以等候這個閂鎖的最長時間。 如果這個值超乎尋常地高，可能是發生內部死結。|  
-|pdw_node_id|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
+|pdw_node_id|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在之節點的識別碼。|  
   
 ## <a name="permissions"></a>權限  
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 許可權。   
-在高階 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 層級上，需要 `VIEW DATABASE STATE` 資料庫的許可權。 在 [ [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
+在進階層中 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ，需要 `VIEW DATABASE STATE` 資料庫中的許可權。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準和基本層中，需要  **伺服器管理員** 或 **Azure Active Directory 系統管理員** 帳戶。   
   
 ## <a name="remarks"></a>備註  
  sys.dm_os_latch_stats 可以檢查不同閂鎖類別的相對等候時間和等候次數，來識別閂鎖競爭的來源。 某些情況下，您或許可以解決或減少閂鎖競爭的狀況。 不過有些時候您可能還是必須連絡 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客戶支援服務部門。  
@@ -60,8 +61,8 @@ GO
 > [!NOTE]  
 >  如果重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，將無法保存這些統計資料。 所有的資料都是從上次重設統計資料之後，或是從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動之後開始累加計算。  
   
-## <a name="latches"></a><a name="latches"></a>銷  
- 閂鎖是一種內部輕量的同步處理物件，類似于各種元件所使用的鎖定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 閂鎖主要用來同步處理作業（例如緩衝區或檔案存取）中的資料庫頁面。 每一個閂鎖都與一個配置單位有關。 
+## <a name="latches"></a><a name="latches"></a> 鎖 存  
+ 閂鎖是內部輕量的同步處理物件，類似于各種元件所使用的鎖定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 閂鎖主要用來在諸如緩衝區或檔案存取等作業期間同步處理資料庫頁面。 每一個閂鎖都與一個配置單位有關。 
   
  如果無法立即授與閂鎖要求，就會發生閂鎖等候，因為閂鎖是由另一個處於衝突模式的執行緒所持有。 與鎖定不同的是，閂鎖會在作業之後立即釋出，即使是進行寫入作業也一樣。  
   
@@ -100,7 +101,7 @@ GO
 |BACKUP_MANAGER_DIFFERENTIAL|用來同步處理差異備份作業與 DBCC。|  
 |BACKUP_OPERATION|用來同步處理備份作業 (例如資料庫、記錄或檔案備份) 內的內部資料結構。|  
 |BACKUP_FILE_HANDLE|在還原作業期間，用來同步處理檔案開啟作業。|  
-|BUFFER|用來同步處理對資料庫頁面的短期存取作業。 在讀取或修改任何資料庫頁面之前，必須具備緩衝區閂鎖。 緩衝區閂鎖競爭會指出幾個問題，包括頁面使用頻繁和 I/O 速度緩慢。<br /><br /> 這個閂鎖類別涵蓋頁面閂鎖的所有可能用途。 dm_os_wait_stats 讓 i/o 作業和頁面上的讀取和寫入作業所造成的頁面閂鎖等候有所差異。|  
+|BUFFER|用來同步處理對資料庫頁面的短期存取作業。 在讀取或修改任何資料庫頁面之前，必須具備緩衝區閂鎖。 緩衝區閂鎖競爭會指出幾個問題，包括頁面使用頻繁和 I/O 速度緩慢。<br /><br /> 這個閂鎖類別涵蓋頁面閂鎖的所有可能用途。 sys. dm_os_wait_stats 會在頁面的 i/o 作業和讀取和寫入作業所造成的頁面閂鎖等候之間有所差異。|  
 |BUFFER_POOL_GROW|在緩衝集區成長作業期間，用來同步處理內部緩衝區管理員。|  
 |DATABASE_CHECKPOINT|用來序列化資料庫內的檢查點。|  
 |CLR_PROCEDURE_HASHTABLE|僅供內部使用。|  
@@ -121,7 +122,7 @@ GO
 |FCB|用來同步處理檔案控制區塊的存取作業。|  
 |FCB_REPLICA|僅供內部使用。|  
 |FGCB_ALLOC|用來同步處理對檔案群組中循環配置資訊的存取作業。|  
-|FGCB_ADD_REMOVE|用來同步處理檔案群組的存取權，以進行新增、卸載、成長和縮減檔案作業。|  
+|FGCB_ADD_REMOVE|用來同步處理檔案群組的存取，以進行新增、卸載、成長和壓縮檔案作業。|  
 |FILEGROUP_MANAGER|僅供內部使用。|  
 |FILE_MANAGER|僅供內部使用。|  
 |FILESTREAM_FCB|僅供內部使用。|  
@@ -164,7 +165,7 @@ GO
 |SERVICE_BROKER_MAP_MANAGER|僅供內部使用。|  
 |SERVICE_BROKER_HOST_NAME|僅供內部使用。|  
 |SERVICE_BROKER_READ_CACHE|僅供內部使用。|  
-|SERVICE_BROKER_WAITFOR_MANAGER| 用來同步處理等候者佇列的實例層級對應。 每個資料庫識別碼、資料庫版本和佇列識別碼元組都有一個佇列。 當許多連接都是：在 WAITFOR （RECEIVE）等候狀態時，就會發生此類別的閂鎖爭用;呼叫 WAITFOR （RECEIVE）;超過 WAITFOR timeout;接收訊息;認可或回復包含 WAITFOR （RECEIVE）的交易;您可以藉由減少 WAITFOR （RECEIVE）等候狀態中的執行緒數目，來減少爭用。 |  
+|SERVICE_BROKER_WAITFOR_MANAGER| 用來同步處理等候佇列的實例層級對應。 每個資料庫識別碼、資料庫版本和佇列識別碼元組都有一個佇列。 當有許多連線時，就會發生這個類別的閂鎖競爭情形：在 WAITFOR (接收) 等候狀態;呼叫 WAITFOR (接收) ;超過 WAITFOR timeout;接收訊息;認可或回復包含 WAITFOR (接收) 的交易;您可以減少 WAITFOR (接收) 等候狀態中的執行緒數目，以減少競爭情形。 |  
 |SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|僅供內部使用。|  
 |SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|僅供內部使用。|  
 |SERVICE_BROKER_TRANSPORT|僅供內部使用。|  
@@ -195,5 +196,5 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
 [DBCC SQLPERF &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)       
-[SQL Server 作業系統相關的動態管理 Views &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
+[SQL Server 作業系統相關的動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
 [SQL Server 的 Latches 物件](../../relational-databases/performance-monitor/sql-server-latches-object.md)      

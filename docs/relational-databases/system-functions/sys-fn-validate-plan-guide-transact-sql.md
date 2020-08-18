@@ -1,5 +1,6 @@
 ---
-title: sys.databases fn_validate_plan_guide （Transact-sql） |Microsoft Docs
+description: sys.fn_validate_plan_guide (Transact-SQL)
+title: sys. fn_validate_plan_guide (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8ddc9e534b5f0e434dd9c0ca980da82eddb8006a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b19a3cd2f2ee449780127682555f1ae77fabd5d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898276"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88396894"
 ---
 # <a name="sysfn_validate_plan_guide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
   
 ## <a name="arguments"></a>引數  
  *plan_guide_id*  
- 這是[plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)目錄檢視中所報告之計劃指南的識別碼。 *plan_guide_id*是**int** ，沒有預設值。  
+ 這是 [sys. plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md) 目錄檢視中所報告之計劃指南的識別碼。 *plan_guide_id* 是 **int** ，沒有預設值。  
   
 ## <a name="table-returned"></a>傳回的資料表  
   
@@ -52,8 +53,8 @@ sys.fn_validate_plan_guide ( plan_guide_id )
 |-----------------|---------------|-----------------|  
 |msgnum|**int**|錯誤訊息的識別碼。|  
 |severity|**tinyint**|訊息的嚴重性層級，介於 1 至 25 之間。|  
-|state|**smallint**|錯誤的狀態碼，可指出程式碼中的錯誤發生點。|  
-|message|**nvarchar(2048)**|錯誤的訊息文字。|  
+|狀態|**smallint**|錯誤的狀態碼，可指出程式碼中的錯誤發生點。|  
+|訊息|**nvarchar(2048)**|錯誤的訊息文字。|  
   
 ## <a name="permissions"></a>權限  
  OBJECT 範圍的計畫指南需要所參考物件的 VIEW DEFINITION 或 ALTER 權限，以及編譯計畫指南中所提供之查詢或批次的權限。 例如，如果批次包含 SELECT 陳述式，就會需要所參考物件的 SELECT 權限。  
@@ -75,7 +76,7 @@ GO
 ```  
   
 ### <a name="b-testing-plan-guide-validation-before-implementing-a-change-to-the-database"></a>B. 將變更實作至資料庫之前，先測試計畫指南驗證  
- 下列範例會使用明確的交易來卸除索引。 `sys.fn_validate_plan_guide`會執行函數來判斷此動作是否會使資料庫中的任何計劃指南失效。 根據函數的結果，會認可 `DROP INDEX` 陳述式或回復交易，而且索引不會遭到卸除。  
+ 下列範例會使用明確的交易來卸除索引。 `sys.fn_validate_plan_guide`系統會執行此函式，以判斷此動作是否會讓資料庫中的任何計劃指南失效。 根據函數的結果，會認可 `DROP INDEX` 陳述式或回復交易，而且索引不會遭到卸除。  
   
 ```sql  
 USE AdventureWorks2012;  

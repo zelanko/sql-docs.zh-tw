@@ -1,5 +1,6 @@
 ---
-title: core. sp_add_collector_type （Transact-sql） |Microsoft Docs
+description: core.sp_add_collector_type (Transact-SQL)
+title: core. sp_add_collector_type (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 1d981037-2147-464e-a456-7d8e479bce89
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 28353a7b2112be801f465b5a919b537f17a17f4d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fcaf70019a38a0306d56c94e86ec6376626a2991
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898220"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88397024"
 ---
 # <a name="coresp_add_collector_type-transact-sql"></a>core.sp_add_collector_type (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,13 +44,13 @@ core.sp_add_collector_type [ @collector_type_uid = ] 'collector_type_uid'
   
 ## <a name="arguments"></a>引數  
  [ @collector_type_uid =] '*collector_type_uid*'  
- 收集器類型的 GUID。 *collector_type_uid*是**uniqueidentifier**，沒有預設值。  
+ 收集器類型的 GUID。 *collector_type_uid* 是 **uniqueidentifier**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="permissions"></a>權限  
- 需要**mdw_admin** （具有 EXECUTE 許可權）固定資料庫角色中的成員資格。  
+ 需要 **mdw_admin** (中具有 EXECUTE 許可權) 固定資料庫角色的成員資格。  
   
 ## <a name="examples"></a>範例  
  下列範例會將一般 T-SQL 查詢收集器型別加入 core.supported_collector_types 檢視表中。 根據預設，一般 T-SQL 查詢收集器型別已經存在。 因此，如果您在預設安裝中執行此程式碼，您將會收到一則訊息，指出此收集器型別已經存在。  
@@ -66,8 +67,8 @@ EXECUTE @RC = core.sp_add_collector_type @collector_type_uid;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [&#40;Transact-sql&#41;的資料收集器預存程式](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [資料收集器預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [管理資料倉儲](../../relational-databases/data-collection/management-data-warehouse.md)  
   
   

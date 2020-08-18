@@ -1,5 +1,6 @@
 ---
-title: 'dm_pdw_nodes_database_encryption_keys (Transact-sql) '
+description: 'sys. dm_pdw_nodes_database_encryption_keys (Transact-sql) '
+title: 'sys. dm_pdw_nodes_database_encryption_keys (Transact-sql) '
 ms.custom: seo-dt-2019
 ms.date: 03/07/2017
 ms.prod: sql
@@ -12,22 +13,22 @@ ms.assetid: e7fd02b2-5d7e-4816-a0af-b58ae2ac3f7a
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 2d30ceadf292387900469fe99018ed7e2fdb361d
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: c4011dd07b6de3b89f6efb39a6f98e4577b88500
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196567"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88397604"
 ---
-# <a name="sysdm_pdw_nodes_database_encryption_keys-transact-sql"></a>dm_pdw_nodes_database_encryption_keys (Transact-sql) 
+# <a name="sysdm_pdw_nodes_database_encryption_keys-transact-sql"></a>sys. dm_pdw_nodes_database_encryption_keys (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  傳回關於資料庫加密狀態及其相關聯之資料庫加密金鑰的資訊。 **dm_pdw_nodes_database_encryption_keys**為每個節點提供這項資訊。 如需資料庫加密的詳細資訊，請參閱[透明資料加密 (SQL Server PDW) ](../../analytics-platform-system/transparent-data-encryption.md)。  
+  傳回關於資料庫加密狀態及其相關聯之資料庫加密金鑰的資訊。 **sys. dm_pdw_nodes_database_encryption_keys** 會提供每個節點的這項資訊。 如需有關資料庫加密的詳細資訊，請參閱 [透明資料加密 (SQL Server PDW) ](../../analytics-platform-system/transparent-data-encryption.md)。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|每個節點上實體資料庫的識別碼。|  
-|encryption_state|**int**|指出此節點上的資料庫是否已加密或未加密。<br /><br /> 0 = 沒有資料庫加密金鑰存在，未加密<br /><br /> 1 = 未加密<br /><br /> 2 = 加密進行中<br /><br /> 3 = 已加密<br /><br /> 4 = 金鑰變更進行中<br /><br /> 5 = 解密進行中<br /><br /> 6 = 正在變更加密資料庫加密金鑰的憑證 (進行中的保護變更。 ) |  
+|encryption_state|**int**|指出此節點上的資料庫是否已加密或未加密。<br /><br /> 0 = 沒有資料庫加密金鑰存在，未加密<br /><br /> 1 = 未加密<br /><br /> 2 = 加密進行中<br /><br /> 3 = 已加密<br /><br /> 4 = 金鑰變更進行中<br /><br /> 5 = 解密進行中<br /><br /> 6 = 正在變更正在加密資料庫加密金鑰的憑證 (進行中的保護變更。 ) |  
 |create_date|**datetime**|顯示建立加密金鑰的日期。|  
 |regenerate_date|**datetime**|顯示重新產生加密金鑰的日期。|  
 |modify_date|**datetime**|顯示修改加密金鑰的日期。|  
@@ -60,9 +61,9 @@ ORDER BY D.database_id, PD.pdw_node_ID;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL 資料倉儲和平行處理資料倉儲動態管理 Views &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
- [建立資料庫加密金鑰 &#40;Transact-sql&#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
- [ALTER DATABASE ENCRYPTION KEY &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
+ [SQL 資料倉儲和平行處理資料倉儲動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
+ [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
+ [ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
  [DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)  
   
   

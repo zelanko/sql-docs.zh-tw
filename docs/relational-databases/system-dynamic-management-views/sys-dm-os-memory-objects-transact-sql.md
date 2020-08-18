@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_os_memory_objects （Transact-sql） |Microsoft Docs
+description: sys.dm_os_memory_objects (Transact-SQL)
+title: sys. dm_os_memory_objects (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -20,16 +21,17 @@ ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 31af260a5290b899bb64fa3942d1e2aa0a076d31
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3378ee753ebc9205ac4607930801fdf3cc434b3a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999045"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398064"
 ---
 # <a name="sysdm_os_memory_objects-transact-sql"></a>sys.dm_os_memory_objects (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  傳回目前所配置的記憶體物件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 您可以使用**dm_os_memory_objects sys.databases**來分析記憶體使用量，並找出可能的記憶體流失。  
+  傳回目前由配置的記憶體物件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 您可以使用 **sys. dm_os_memory_objects** 來分析記憶體使用量，以及識別可能的記憶體遺漏。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -46,21 +48,21 @@ ms.locfileid: "85999045"
 |**max_pages_allocated_count**|**int**|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。<br /><br /> 這個記憶體物件所配置的最大頁數。 不可為 Null。|  
 |**page_size_in_bytes**|**int**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 這個物件所配置的頁面大小 (以位元組為單位)。 不可為 Null。|  
 |**max_pages_in_bytes**|**bigint**|這個記憶體物件所使用的最大記憶體數量。 不可為 Null。|  
-|**page_allocator_address**|**varbinary(8)**|頁面配置器的記憶體位址。 不可為 Null。 如需詳細資訊，請參閱[dm_os_memory_clerks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)。|  
+|**page_allocator_address**|**varbinary(8)**|頁面配置器的記憶體位址。 不可為 Null。 如需詳細資訊，請參閱 [sys. dm_os_memory_clerks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)。|  
 |**creation_stack_address**|**varbinary(8)**|僅供內部使用。 可為 Null。|  
 |**sequence_num**|**int**|僅供內部使用。 可為 Null。|  
-|**partition_type**|**int**|**適用對象**：[!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 及更新版本。<br /><br /> 資料分割的類型：<br /><br /> 0-非可分割記憶體物件<br /><br /> 1-可分割記憶體物件，目前未分割<br /><br /> 2-可分割 memory 物件，依 NUMA 節點進行分割。 在具有單一 NUMA 節點的環境中，這相當於1。<br /><br /> 3-可分割 memory 物件，依 CPU 分割。|  
-|**contention_factor**|**real**|**適用對象**：[!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 及更新版本。<br /><br /> 值，指定此記憶體物件上的爭用，0表示沒有爭用。 每當指定的記憶體配置數目反映該期間內的爭用時，就會更新此值。 僅適用于安全線程的記憶體物件。|  
-|**waiting_tasks_count**|**bigint**|**適用對象**：[!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 及更新版本。<br /><br /> 此記憶體物件的等候次數。 每當從這個記憶體物件配置記憶體時，這個計數器就會遞增。 增量是目前正在等待存取此記憶體物件的工作數目。 僅適用于安全線程的記憶體物件。 這是不具有正確性保證的最佳工作價值。|  
-|**exclusive_access_count**|**bigint**|**適用對象**：[!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 及更新版本。<br /><br /> 指定以獨佔方式存取此記憶體物件的頻率。 僅適用于安全線程的記憶體物件。  這是不具有正確性保證的最佳工作價值。|  
-|**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
+|**partition_type**|**int**|**適用對象**：[!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 及更新版本。<br /><br /> 磁碟分割的類型：<br /><br /> 0-非可分割記憶體物件<br /><br /> 1-可分割記憶體物件，目前未分割<br /><br /> 2可分割記憶體物件，依 NUMA 節點進行分割。 在具有單一 NUMA 節點的環境中，這相當於1。<br /><br /> 3可分割記憶體物件，依 CPU 進行分割。|  
+|**contention_factor**|**real**|**適用對象**：[!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 及更新版本。<br /><br /> 值，指定此記憶體物件的爭用，0表示無爭用。 每次在指定的記憶體配置數量反映該期間內的爭用時，就會更新此值。 只適用于安全線程的記憶體物件。|  
+|**waiting_tasks_count**|**bigint**|**適用對象**：[!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 及更新版本。<br /><br /> 這個記憶體物件的等候次數。 每當從這個記憶體物件配置記憶體時，這個計數器就會遞增。 遞增是目前正在等候存取這個記憶體物件的工作數目。 只適用于安全線程的記憶體物件。 這是不含正確性保證的最佳價值。|  
+|**exclusive_access_count**|**bigint**|**適用對象**：[!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 及更新版本。<br /><br /> 指定獨佔存取這個記憶體物件的頻率。 只適用于安全線程的記憶體物件。  這是不含正確性保證的最佳價值。|  
+|**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在之節點的識別碼。|  
   
- **partition_type**、 **contention_factor**、 **waiting_tasks_count**和**exclusive_access_count**尚未在中執行 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 。  
+ **partition_type**、 **contention_factor**、 **waiting_tasks_count**和 **exclusive_access_count** 尚未在中執行 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 。  
   
 ## <a name="permissions"></a>權限
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 許可權。   
-在高階 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 層級上，需要 `VIEW DATABASE STATE` 資料庫的許可權。 在 [ [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
+在進階層中 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ，需要 `VIEW DATABASE STATE` 資料庫中的許可權。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準和基本層中，需要  **伺服器管理員** 或 **Azure Active Directory 系統管理員** 帳戶。   
 
 ## <a name="remarks"></a>備註  
  記憶體物件是堆積。 它們提供的配置比記憶體 Clerk 所提供的配置資料粒度更細。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件會使用記憶體物件來取代記憶體 Clerk。 記憶體物件使用記憶體 Clerk 頁面配置器介面來配置頁面。 記憶體物件不使用虛擬或共用記憶體介面。 隨著配置模式的不同，元件可以建立不同類型的記憶體物件，來配置任意大小的頁面。  
@@ -82,8 +84,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
-  [SQL Server 作業系統相關的動態管理 Views &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [dm_os_memory_clerks &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)  
+  [SQL Server 作業系統相關的動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+ [sys. dm_os_memory_clerks &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)  
   
   
 

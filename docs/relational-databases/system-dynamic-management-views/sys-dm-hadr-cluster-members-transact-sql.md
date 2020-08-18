@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_hadr_cluster_members （Transact-sql） |Microsoft Docs
+description: sys.dm_hadr_cluster_members (Transact-SQL)
+title: sys. dm_hadr_cluster_members (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/31/2019
 ms.prod: sql
@@ -22,17 +23,17 @@ ms.assetid: feb20b3a-8835-41d3-9a1c-91d3117bc170
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ec0ed5aa4ddedd7e3fcfd544d53a270eb9e3372
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4257a29449dff7b55d0c9673368504b6e481b04a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790461"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398504"
 ---
 # <a name="sysdm_hadr_cluster_members-transact-sql"></a>sys.dm_hadr_cluster_members (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
-  如果裝載已啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 本機執行個體的 WSFC 節點有 WSFC 仲裁，則針對構成仲裁的每個成員及其狀態各傳回一個資料列。 這包括叢集中的所有節點（以**Clusterenum**函式所傳回的 CLUSTER_ENUM_NODE 類型）和磁片或檔案共用見證（如果有的話）。 針對給定成員傳回的資料列包含有關該成員之狀態的資訊。 例如，對於具有多數節點仲裁（其中一個節點已關閉）的五個節點叢集，當**sys. dm_hadr_cluster_members**是從已啟用的伺服器實例進行查詢，而該實例是 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 在具有仲裁的節點上，則**dm_hadr_cluster_members**會將下節點的狀態反映為 "NODE_DOWN"。  
+  如果裝載已啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 本機執行個體的 WSFC 節點有 WSFC 仲裁，則針對構成仲裁的每個成員及其狀態各傳回一個資料列。 這包括叢集中的所有節點， (**Clusterenum** 函式所傳回的 CLUSTER_ENUM_NODE 類型) 和磁片或檔案共用見證（如果有的話）。 針對給定成員傳回的資料列包含有關該成員之狀態的資訊。 例如，針對具有多數節點仲裁的五個節點叢集，其中一個節點已關閉，當 **sys. dm_hadr_cluster_members** 是從在具有仲裁之節點上啟用的伺服器實例進行查詢時， [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] **sys. dm_hadr_cluster_members** 會將關閉節點的狀態反映為 "NODE_DOWN"。  
   
  如果 WSFC 節點沒有仲裁，則不傳回任何資料列。  
   
@@ -61,8 +62,8 @@ ms.locfileid: "85790461"
   
 ## <a name="see-also"></a>另請參閱  
  [Always On 可用性群組動態管理檢視和函數 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
- [Always On 可用性群組目錄檢視 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [&#40;Transact-sql&#41;監視可用性群組](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [AlwaysOn 可用性群組目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
+ [監視可用性群組 &#40;Transact-sql&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   

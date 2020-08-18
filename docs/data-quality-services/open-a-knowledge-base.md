@@ -1,4 +1,5 @@
 ---
+description: 開啟知識庫
 title: 開啟知識庫
 ms.date: 06/04/2013
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 3eec1826d383f51933a9d47ae4acd932ebda7759
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5d93731b7e28aafbffdf659678c0017d37ce61db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882742"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395884"
 ---
 # <a name="open-a-knowledge-base"></a>開啟知識庫
 
@@ -34,7 +35,7 @@ ms.locfileid: "85882742"
 ####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能開啟知識庫。  
   
-##  <a name="open-a-knowledge-base"></a><a name="Open"></a>開啟知識庫  
+##  <a name="open-a-knowledge-base"></a><a name="Open"></a> 開啟知識庫  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -53,7 +54,7 @@ ms.locfileid: "85882742"
   
     -   選取 **[比對原則]** 建立比對原則，並將其加入至知識庫。  
   
-5.  按一下 [開啟] 。  
+5.  按一下 **[開啟]** 。  
   
     > [!NOTE]  
     >  若要開啟知識庫，您也可以在知識庫上按一下滑鼠右鍵，然後按一下 [開啟]。 內容功能表中的其他命令可讓您以另一個名稱儲存、解除鎖定、捨棄工作、重新命名或顯示其屬性。  
@@ -70,18 +71,18 @@ ms.locfileid: "85882742"
   
 -   若要在最近使用清單中開啟已由他人鎖定的知識庫，請連絡這個人，請他解除鎖定知識庫。  
   
-##  <a name="follow-up-after-opening-a-knowledge-base"></a><a name="FollowUp"></a>後續操作：開啟知識庫之後  
+##  <a name="follow-up-after-opening-a-knowledge-base"></a><a name="FollowUp"></a> 後續操作：開啟知識庫之後  
  在您開啟知識庫之後，此知識庫會處於 [知識庫] 資料表的 [狀態] 資料行所指示的狀態。 如果是知識探索和比對原則活動，將會在特定精靈頁面中開啟知識庫。 如果是定義域管理活動，將會在定義域管理頁面中開啟知識庫。 如需狀態的詳細資訊，請參閱[執行知識探索](../data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../data-quality-services/managing-a-domain.md)或[建立比對原則](../data-quality-services/create-a-matching-policy.md)。  
   
-##  <a name="if-the-knowledge-base-is-locked"></a><a name="Locked"></a>如果知識庫已鎖定  
+##  <a name="if-the-knowledge-base-is-locked"></a><a name="Locked"></a> 如果知識庫已鎖定  
  第一個資料行中的鎖定圖示顯示知識庫是否已鎖定。 已鎖定的知識庫名稱將會是紅色字型。 特定使用者透過知識庫活動正在修改的知識庫會標示為已鎖定。 鎖定的知識庫無法由另一個使用者操作。 正在處理知識庫的使用者若要將知識庫解除鎖定，可以在 [開啟知識庫] 頁面上資料表中的知識庫上按一下滑鼠右鍵，然後按一下 **[解除鎖定]**，或是發行知識庫。 當游標置於鎖定的知識庫上時，DQS 將會顯示一個提示，指示鎖定知識庫的人以及鎖定的時間。  
   
-##  <a name="state-of-a-knowledge-base"></a><a name="State"></a>知識庫的狀態  
+##  <a name="state-of-a-knowledge-base"></a><a name="State"></a> 知識庫的狀態  
  狀態欄位會指示知識庫位於活動的哪一個階段。 如果您開啟知識庫，它將會開啟到這個階段。  
   
--   **\<Empty>**：知識庫的 [狀態] 欄位是空的，如果已在 [定義域管理] 活動中按一下 [**發行**]，然後按一下 [**是-發行知識庫並結束]** 來發行知識庫。  
+-   **\<Empty>**：知識庫的 [狀態] 欄位是空白的，如果已在 [定義域管理] 活動中按一下 [ **發行** ] 來發行知識庫，然後按一下 **[是-發行知識庫並結束]**。  
   
--   **工作中**：已在 [定義域管理] 活動中按一下 [**發行**]，然後按一下 [**否-儲存知識庫工作並**結束] 來儲存知識庫工作。  
+-   **工作**：已儲存知識庫上的工作，方法是在 [定義域管理] 活動中按一下 [ **發行** ]，然後按一下 **[否-儲存知識庫工作並**結束]。  
   
 -   **定義域管理**：已輸入知識庫的定義域資料，但尚未發行知識庫，而且工作仍在 [定義域管理] 活動中。 知識探索活動無法使用。 當您在 **[定義域管理]** 畫面中按一下 **[關閉]** 時，就會發生這種狀況。  
   
@@ -89,7 +90,7 @@ ms.locfileid: "85882742"
   
 -   **探索 - 探索**：已在 **[知識庫管理: 分析]** 頁面上關閉知識庫。 知識庫已鎖定，[定義域管理] 活動無法使用。  
   
--   **探索-值管理**：已在 [**知識庫管理：管理定義域詞彙**] 頁面上關閉知識庫。 知識庫已鎖定，[定義域管理] 活動無法使用。  
+-   **探索-值管理**：已在 [ **知識庫管理：管理定義域詞彙** ] 頁面上關閉知識庫。 知識庫已鎖定，[定義域管理] 活動無法使用。  
   
 -   比對**原則-** 比對原則：已在 [比對**原則-** 比對原則] 頁面上關閉知識庫。 知識庫已鎖定，無法使用 [知識探索] 和 [定義域管理] 活動。  
   
