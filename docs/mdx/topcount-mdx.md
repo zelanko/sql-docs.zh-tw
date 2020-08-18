@@ -1,5 +1,6 @@
 ---
-title: TopCount （MDX） |Microsoft Docs
+description: TopCount (MDX)
+title: TopCount (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e0f607f3111c150bff3d5dc562c77901a381bedc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b7d917963d8500e06bf9d2adcd1057e72e50512a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036597"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412874"
 ---
 # <a name="topcount-mdx"></a>TopCount (MDX)
 
@@ -38,12 +39,12 @@ TopCount(Set_Expression,Count [ ,Numeric_Expression ] )
  有效的數值運算式，這通常是傳回數字之資料格座標的多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- 如果指定了數值運算式， **TopCount**函數會根據指定集合上評估的數值運算式所指定的值，以遞減的順序來排序指定集合所指定集合中的元組。 排序集合之後， **TopCount**函數會傳回指定數目的元組，其值為最高。  
+ 如果指定了數值運算式， **TopCount** 函式會根據指定的集合，以遞減的順序來排序指定集合中由指定集合指定的元組。 排序集合之後， **TopCount** 函式會傳回具有最高值的指定數量的元組。  
   
 > [!IMPORTANT]  
->  就像[BottomCount](../mdx/bottomcount-mdx.md)函數一樣， **TopCount**函數一律會中斷階層。  
+>  如同 [BottomCount](../mdx/bottomcount-mdx.md) 函式， **TopCount** 函數一律會中斷階層。  
   
- 如果未指定數值運算式，此函數會以自然順序傳回成員集合，而不會有任何排序，行為就像[Head （MDX）](../mdx/head-mdx.md)函數。  
+ 如果未指定數值運算式，則函式會以自然順序傳回成員的集合，不含任何排序，其行為就像 [Head (MDX) ](../mdx/head-mdx.md) 函數一樣。  
   
 ## <a name="examples"></a>範例  
  下列範例會依 Internet Sales Amount 傳回前 10 天：  

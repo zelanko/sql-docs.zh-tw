@@ -1,5 +1,6 @@
 ---
-title: syspolicy_policy_execution_history_details （Transact-sql） |Microsoft Docs
+description: syspolicy_policy_execution_history_details (Transact-SQL)
+title: syspolicy_policy_execution_history_details (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 97ef6573-5e8b-4ba5-8ae0-7901e79a9683
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b761d0e056037c134a3be837be04cba9395d9273
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ecb084ff03931bc82a7a07e19f66949d8a834343
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900033"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423392"
 ---
 # <a name="syspolicy_policy_execution_history_details-transact-sql"></a>syspolicy_policy_execution_history_details (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85900033"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |detail_id|**bigint**|這筆記錄的識別碼。 每一筆記錄都表示嘗試評估或強制施行原則中的某一個條件運算式。 如果套用到多個目標，每一個條件都將會有每一個目標的詳細記錄。|  
-|history_id|**bigint**|記錄事件的識別碼。 每一個記錄事件都表示執行原則的某個嘗試。 由於一個條件可以有數個條件運算式及數個目標，所以 history_id 可以建立幾筆詳細記錄。 使用 [history_id] 資料行將此視圖加入[syspolicy_policy_execution_history](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-transact-sql.md)視圖。|  
+|history_id|**bigint**|記錄事件的識別碼。 每一個記錄事件都表示執行原則的某個嘗試。 由於一個條件可以有數個條件運算式及數個目標，所以 history_id 可以建立幾筆詳細記錄。 使用 [history_id] 資料行，即可將此視圖加入 [syspolicy_policy_execution_history](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-transact-sql.md) 視圖中。|  
 |target_query_expression|**nvarchar(max)**|此原則和 syspolicy_policy_execution_history 檢視表的目標。|  
 |execution_date|**datetime**|建立這筆詳細記錄的日期和時間。|  
 |result|**bit**|這個目標和條件運算式評估為成功或失敗：<br /><br /> 0 (成功) 或 1 (失敗)。|  

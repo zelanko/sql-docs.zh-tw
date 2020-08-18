@@ -1,4 +1,5 @@
 ---
+description: 從 .dqs 檔案匯入定義域
 title: 從 .dqs 檔案匯入定義域
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 0ea84af0d6587399d1b5610a3b8cf6da31909cb4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c1d597c8ab750b5debe221d2cf68c231143736b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883164"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491513"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>從 .dqs 檔案匯入定義域
 
@@ -36,7 +37,7 @@ ms.locfileid: "85883164"
 ####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能從 .dqs 資料檔匯入定義域。  
   
-##  <a name="import-a-domain-from-a-dqs-file"></a><a name="Import"></a>從 dqs 檔案匯入定義域  
+##  <a name="import-a-domain-from-a-dqs-file"></a><a name="Import"></a> 從 dqs 檔案匯入網域  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   

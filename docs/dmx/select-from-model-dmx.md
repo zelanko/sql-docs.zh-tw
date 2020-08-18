@@ -1,5 +1,6 @@
 ---
-title: 從 &lt; 模型選取 &gt; （DMX） |Microsoft Docs
+description: 從 &lt; 模型 &gt; (DMX) 選取
+title: 從 &lt; 模型 &gt; (DMX) 選取 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,14 +9,14 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 43a7157c5ec7889b2f8cb7018423d909f3db3cb7
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 6244581b4d9a383c2d09af351c5fbe3149207ebd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970520"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471971"
 ---
-# <a name="select-from-ltmodelgt-dmx"></a>從 &lt; 模型選取 &gt; （DMX）
+# <a name="select-from-ltmodelgt-dmx"></a>從 &lt; 模型 &gt; (DMX) 選取
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   執行空白預測聯結，傳回指定資料行之最可能的一或多個值。 只會使用採礦模型中的內容建立預測。  
@@ -56,7 +57,7 @@ SELECT ([Bike Buyer]) FROM [TM_Naive_Bayes]
 ```  
   
 ## <a name="time-series-example"></a>時間序列範例  
- 下列範例會在 Forecasting 模型中的 Amount 資料行上執行預測，傳回後 4 期狀態。 Model Region 資料行將自行車車型與區域結合至單一識別碼。 查詢會使用[PredictTimeSeries &#40;DMX&#41;](../dmx/predicttimeseries-dmx.md)函數來執行預測。  
+ 下列範例會在 Forecasting 模型中的 Amount 資料行上執行預測，傳回後 4 期狀態。 Model Region 資料行將自行車車型與區域結合至單一識別碼。 此查詢會使用 [PredictTimeSeries &#40;DMX&#41;](../dmx/predicttimeseries-dmx.md) 函數來執行預測。  
   
 ```  
 SELECT [Model Region], PredictTimeSeries(Amount, 4)   

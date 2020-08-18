@@ -1,4 +1,5 @@
 ---
+description: 驗證狀態 (Master Data Services)
 title: 驗證狀態
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: fc829d25-b3e8-4801-8a94-4df19a7a5971
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1ceaf7e42b8d25873cc595e3e64b6949e25d52e3
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 7d0dd3f4589f18cd7eb94fab61937a7452a94f35
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812319"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491502"
 ---
 # <a name="validation-statuses-master-data-services"></a>驗證狀態 (Master Data Services)
 

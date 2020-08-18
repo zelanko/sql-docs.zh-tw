@@ -1,5 +1,6 @@
 ---
-title: 日期、時間和時間戳記逸出序列 |Microsoft Docs
+description: 日期、時間和時間戳記逸出序列
+title: 日期、時間和時間戳記 Escape 序列 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 67b7dee0-e5b1-4469-a626-0c7767852b80
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a2b9b62fae23932d1072ea319e1305a0853ca2d6
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 1bd70c005d2fa7ae4972605c45793f2a0836f849
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807541"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483301"
 ---
 # <a name="date-time-and-timestamp-escape-sequences"></a>日期、時間和時間戳記逸出序列
-ODBC 會定義日期、時間和時間戳記常值的逸出序列。 這些逸出序列的語法如下：  
+ODBC 會針對日期、時間和時間戳記常值定義 escape 序列。 這些 escape 順序的語法如下所示：  
   
 ```  
   
@@ -82,4 +83,4 @@ seconds-value ::= digit digit[.digit...]
 ```  
   
 ## <a name="remarks"></a>備註  
- 如果資料來源支援日期、時間和時間戳記資料類型，則支援日期、時間和時間戳記常值 escape 序列。 應用程式應該呼叫**SQLGetTypeInfo**來判斷是否支援這些資料類型。
+ 如果資料來源支援日期、時間和時間戳記資料類型，則支援日期、時間和時間戳記常值 escape 序列。 應用程式應該呼叫 **SQLGetTypeInfo** 來判斷是否支援這些資料類型。

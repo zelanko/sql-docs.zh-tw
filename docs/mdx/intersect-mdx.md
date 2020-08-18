@@ -1,5 +1,6 @@
 ---
-title: Intersect （MDX） |Microsoft Docs
+description: Intersect (MDX)
+title: Intersect (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f253dad526c509edff5c837b61ae2faae07d5758
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9216b334caf67191e231c3ec0389da3fb7493b24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105362"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471840"
 ---
 # <a name="intersect-mdx"></a>Intersect (MDX)
 
@@ -37,7 +38,7 @@ Intersect(Set_Expression1 , Set_Expression2 [ , ALL ] )
 ## <a name="remarks"></a>備註  
  **Intersect**函數會傳回兩個集合的交集。 根據預設，交叉兩個集合之前，此函數會將兩個集合內的重複項移除。 這兩個指定的集合必須具有相同的維度性。  
   
- 選擇性的**ALL**旗標會保留重複的專案。 如果指定**ALL** ， **Intersect**函式會如往常地與 nonduplicated 專案相交，同時也會交集第一個集合中的每個重複專案，後者在第二個集合中具有相符的重複專案。 這兩個指定的集合必須具有相同的維度性。  
+ 選擇性的 **ALL** 旗標會保留重複專案。 如果指定 **ALL** ， **Intersect** 函式會像往常一樣交集 nonduplicated 元素，而且也會與第一個集合中的每個重複專案交集，而第二個集合中有相符的重複專案。 這兩個指定的集合必須具有相同的維度性。  
   
 ## <a name="example"></a>範例  
  下列查詢會傳回同時出現在指定的兩個集合中的成員，即 2003 和 2004 年這兩項：  

@@ -1,5 +1,6 @@
 ---
-title: sys.syscacheobjects （Transact-sql） |Microsoft Docs
+description: sys.syscacheobjects (Transact-SQL)
+title: sys.syscacheobjects (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9b14f37c-b7f5-4f71-b070-cce89a83f69e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4d065ba57ab90e1bb035a6ef92100d351d93603
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 25160eb8e7a25e2a4ec6d2f8b318fc78e7af61ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899948"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88399674"
 ---
 # <a name="syssyscacheobjects-transact-sql"></a>sys.syscacheobjects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,11 +40,11 @@ ms.locfileid: "85899948"
 |-----------------|---------------|-----------------|  
 |**bucketid**|**int**|值區識別碼。 值表示 0 至 (目錄大小 - 1) 的範圍。 目錄大小是雜湊表的大小。|  
 |**cacheobjtype**|**nvarchar(17)**|快取中的物件類型：<br /><br /> 編譯的計畫<br /><br /> 可執行的計畫<br /><br /> 剖析樹狀結構<br /><br /> 資料指標<br /><br /> 擴充預存程序|  
-|**objtype**|**nvarchar(8)**|物件的類型：<br /><br /> 預存程序<br /><br /> 準備陳述式<br /><br /> 臨機操作查詢（ [!INCLUDE[tsql](../../includes/tsql-md.md)] 從**sqlcmd**或**osql**公用程式提交為語言事件，而不是遠端程序呼叫）<br /><br /> ReplProc (複寫程序)<br /><br /> 觸發程序<br /><br /> 檢視<br /><br /> 預設<br /><br /> 使用者資料表<br /><br /> 系統資料表<br /><br /> 勾選<br /><br /> 規則|  
-|**objid**|**int**|用來查閱快取中物件的主要索引鍵之一。 這是儲存在**sysobjects**中的物件識別碼，適用于資料庫物件（程式、視圖、觸發程式等等）。 對於像是臨機操作或備妥的 SQL 等快取物件， **objid**是內部產生的值。|  
+|**objtype**|**nvarchar(8)**|物件的類型：<br /><br /> 預存程序<br /><br /> 準備陳述式<br /><br /> 臨機操作查詢 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 以 **sqlcmd** 或 **osql** 公用程式的語言事件形式提交，而不是遠端程序呼叫) <br /><br /> ReplProc (複寫程序)<br /><br /> 觸發程序<br /><br /> 檢視<br /><br /> 預設<br /><br /> 使用者資料表<br /><br /> 系統資料表<br /><br /> 勾選<br /><br /> 規則|  
+|**objid**|**int**|用來查閱快取中物件的主要索引鍵之一。 這是儲存在資料庫物件 **sysobjects** 中的物件識別碼， (程式、視圖、觸發程式等) 。 針對臨機操作或備妥的 SQL 等快取物件， **objid** 是內部產生的值。|  
 |**dbid**|**smallint**|快取物件編譯所在的資料庫識別碼。|  
-|**dbidexec**|**smallint**|執行查詢時所在的資料庫識別碼。<br /><br /> 對於大部分的物件而言， **dbidexec**的值與**dbid**相同。<br /><br /> 針對系統檢視， **dbidexec**是執行查詢的資料庫識別碼。<br /><br /> 若為特定查詢， **dbidexec**為0。 這表示**dbidexec**的值與**dbid**相同。|  
-|**uid**|**smallint**|指出隨選查詢計畫和準備計畫的計畫建立者。<br /><br /> -2 = 提交的批次不會隨著隱含的名稱解析而不同，不同的使用者可以共用它們。 這是慣用的方法。 任何其他值都代表在資料庫中提交查詢之使用者的使用者識別碼。<br /><br /> 如果使用者和角色數目超過 32,767 個，則會造成溢位或傳回 NULL。|  
+|**dbidexec**|**smallint**|執行查詢時所在的資料庫識別碼。<br /><br /> 對於大部分的物件而言， **dbidexec** 的值與 **dbid**相同。<br /><br /> 針對系統檢視， **dbidexec** 是執行查詢的資料庫識別碼。<br /><br /> 若為特定查詢， **dbidexec** 為0。 這表示 **dbidexec** 的值與 **dbid**相同。|  
+|**Uid**|**smallint**|指出隨選查詢計畫和準備計畫的計畫建立者。<br /><br /> -2 = 提交的批次不會隨著隱含的名稱解析而不同，不同的使用者可以共用它們。 這是慣用的方法。 任何其他值都代表在資料庫中提交查詢之使用者的使用者識別碼。<br /><br /> 如果使用者和角色數目超過 32,767 個，則會造成溢位或傳回 NULL。|  
 |**refcounts**|**int**|參考這個快取物件的其他快取物件數目。 計數 1 是基底。|  
 |**usecounts**|**int**|自開始之後使用這個快取物件的次數。|  
 |**pagesused**|**int**|快取物件所耗用的分頁數目。|  
@@ -57,7 +58,7 @@ ms.locfileid: "85899948"
 |**lastreads**|**bigint**|只是為了與舊版相容。 永遠傳回 0。|  
 |**lastwrites**|**bigint**|只是為了與舊版相容。 永遠傳回 0。|  
 |**sqlbytes**|**int**|提交的程序定義或批次的長度 (以位元組為單位)。|  
-|**server**|**nvarchar(3900)**|模組定義或提交之批次的前 3900 個字元。|  
+|**Sql**|**nvarchar(3900)**|模組定義或提交之批次的前 3900 個字元。|  
   
 ## <a name="see-also"></a>另請參閱  
  [相容性檢視 &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  

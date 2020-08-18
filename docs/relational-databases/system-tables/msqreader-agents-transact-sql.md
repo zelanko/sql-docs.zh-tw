@@ -1,5 +1,6 @@
 ---
-title: MSqreader_agents （Transact-sql） |Microsoft Docs
+description: MSqreader_agents (Transact-SQL)
+title: MSqreader_agents (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,23 +18,23 @@ helpviewer_keywords:
 ms.assetid: dfa1f45e-c531-4385-a097-0a9edd1d7eab
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 19ed795647a89a3d9fbfb2082a28a50a5554938b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 10ed60edbbbe2e94e09a9205d34f856cee42c687
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889567"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492752"
 ---
 # <a name="msqreader_agents-transact-sql"></a>MSqreader_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSqreader_agents**資料表會針對在本機散發者上執行的每個佇列讀取器代理程式，各包含一個資料列。 這份資料表儲存在散發資料庫中。  
+  **MSqreader_agents**資料表會針對在本機散發者上執行的每個佇列讀取器代理程式各包含一個資料列。 這份資料表儲存在散發資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|佇列讀取器代理程式的識別碼。|  
-|**name**|**Nvarchar （100）**|佇列讀取器代理程式的名稱。|  
-|**job_id**|**binary(16)**|**Sysjobs**資料表中唯一的作業識別碼編號。|  
+|**name**|**Nvarchar (100) **|佇列讀取器代理程式的名稱。|  
+|**job_id**|**binary(16)**|**Sysjobs**資料表中的唯一作業識別碼。|  
 |**profile_id**|**int**|**MSagent_profiles**資料表中的設定檔識別碼。|  
 |**job_step_uid**|**uniqueidentifier**|用來啟動代理程式之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟的唯一識別碼。|  
   

@@ -37,6 +37,8 @@
       href: ../machine-learning/install/sql-pretrained-models-install.md
     - name: 升級 Python 與 R
       href: ../machine-learning/install/upgrade-r-and-python.md
+    - name: 變更預設語言版本
+      href: ../machine-learning/install/change-default-language-runtime-version.md
     - name: Azure Data Studio 筆記本
       href: ../machine-learning/install/sql-machine-learning-azure-data-studio.md
     - name: 設定 Python 用戶端
@@ -100,15 +102,15 @@
         - name: 適用於 SQL 的 Python 開發人員
           items:
             - name: 1 - 簡介
-              href: ../machine-learning/tutorials/sqldev-in-database-python-for-sql-developers.md
+              href: ../machine-learning/tutorials/python-taxi-classification-introduction.md
             - name: 2 - 資料探索
-              href: ../machine-learning/tutorials/sqldev-py3-explore-and-visualize-the-data.md
+              href: ../machine-learning/tutorials/python-taxi-classification-explore-data.md
             - name: 3 - 特徵工程
-              href: ../machine-learning/tutorials/sqldev-py4-create-data-features-using-t-sql.md
+              href: ../machine-learning/tutorials/python-taxi-classification-create-features.md
             - name: 4 - 定型及部署
-              href: ../machine-learning/tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
+              href: ../machine-learning/tutorials/python-taxi-classification-train-model.md
             - name: 5 - 預測
-              href: ../machine-learning/tutorials/sqldev-py6-operationalize-the-model.md
+              href: ../machine-learning/tutorials/python-taxi-classification-deploy-model.md
     - name: R
       items:
         - name: R 教學課程
@@ -135,18 +137,18 @@
               href: ../machine-learning/tutorials/r-clustering-model-deploy.md
         - name: 建立資料分割型模型
           href: ../machine-learning/tutorials/r-tutorial-create-models-per-partition.md
-        - name: 在 T-SQL 中使用 R
+        - name: 適用於 SQL 的 R 開發人員
           items:
             - name: 1. 簡介
-              href: ../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md
+              href: ../machine-learning/tutorials/r-taxi-classification-introduction.md
             - name: 2. 資料探索
-              href: ../machine-learning/tutorials/sqldev-explore-and-visualize-the-data.md
+              href: ../machine-learning/tutorials/r-taxi-classification-explore-data.md
             - name: 3. 特徵設計
-              href: ../machine-learning/tutorials/sqldev-create-data-features-using-t-sql.md
+              href: ../machine-learning/tutorials/r-taxi-classification-create-features.md
             - name: 4. 定型及部署
-              href: ../machine-learning/tutorials/sqldev-train-and-save-a-model-using-t-sql.md
+              href: ../machine-learning/tutorials/r-taxi-classification-train-model.md
             - name: 5. 預測
-              href: ../machine-learning/tutorials/sqldev-operationalize-the-model.md
+              href: ../machine-learning/tutorials/r-taxi-classification-deploy-model.md
         - name: 在 R 工具中使用 SQL ML
           items:
             - name: 1. 簡介
@@ -229,6 +231,14 @@
               href: ../machine-learning/r/how-to-create-mdx-queries-using-olapr.md
     - name: 資料探索及模型化
       items:
+        - name: Python
+          items:
+            - name: 以 Python 繪製長條圖
+              href: ../machine-learning/data-exploration/python-plot-histogram.md
+            - name: 將資料匯入 Pandas 資料框架
+              href: ../machine-learning/data-exploration/python-dataframe-pandas.md
+            - name: 將資料框架插入 SQL
+              href: ../machine-learning/data-exploration/python-dataframe-sql-server.md
         - name: R
           items:
             - name: 使用 ODBC 載入 R 物件
@@ -255,12 +265,10 @@
           href: ../machine-learning/r/how-to-create-a-stored-procedure-using-sqlrutils.md
     - name: 預測
       items:
-        - name: 如何產生預測
-          href: ../machine-learning/r/how-to-do-realtime-scoring.md
-        - name: 使用 sp_rxPredict 的即時評分
-          href: ../machine-learning/real-time-scoring.md
         - name: 使用 PREDICT T-SQL 的原生評分
-          href: ../machine-learning/sql-native-scoring.md
+          href: ../machine-learning/predictions/native-scoring-predict-transact-sql.md
+        - name: 使用 sp_rxPredict 的即時評分
+          href: ../machine-learning/predictions/real-time-scoring.md
     - name: 套件管理
       items:
         - name: 安裝新的 Python 套件
@@ -359,19 +367,23 @@
           href: ../machine-learning/r/ref-r-sqlrutils.md
 - name: 資源
   items:
-    - name: 版本資訊 >
+    - name: 版本資訊 2019 >
+      href: ../sql-server/sql-server-ver15-release-notes.md?toc=../toc.json
+    - name: 版本資訊 2017 >
       href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc.json
+    - name: 版本資訊 2016 >
+      href: ../sql-server/sql-server-2016-release-notes.md?toc=../toc.json
+    - name: 版本資訊 2014 >
+      href: ../sql-server/sql-server-2014-release-notes.md?toc=../toc.json
     - name: 疑難排解
       items:
         - name: 疑難排解概觀
-          href: ../machine-learning/machine-learning-troubleshooting-faq.md
+          href: ../machine-learning/troubleshooting/machine-learning-troubleshooting-overview.md
         - name: 已知問題
-          href: ../machine-learning/known-issues-for-sql-server-machine-learning-services.md
-        - name: 資料收集
-          href: ../machine-learning/data-collection-ml-troubleshooting-process.md
-        - name: 安裝和升級錯誤
-          href: ../machine-learning/r/upgrade-and-installation-faq-sql-server-r-services.md
-        - name: 啟動控制板和外部指令碼執行錯誤
-          href: ../machine-learning/common-issues-external-script-execution.md
-        - name: R 指令碼錯誤
-          href: ../machine-learning/r-script-execution-errors.md
+          href: ../machine-learning/troubleshooting/known-issues-for-sql-server-machine-learning-services.md
+        - name: 針對疑難排解收集資料
+          href: ../machine-learning/troubleshooting/data-collection-ml-troubleshooting-process.md
+        - name: 啟動控制板和外部指令碼問題
+          href: ../machine-learning/troubleshooting/common-issues-external-script-execution.md
+        - name: 常見的 R 指令碼錯誤
+          href: ../machine-learning/troubleshooting/r-script-execution-errors.md

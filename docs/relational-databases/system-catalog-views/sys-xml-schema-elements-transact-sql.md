@@ -1,5 +1,6 @@
 ---
-title: sys.xml_schema_elements （Transact-sql） |Microsoft Docs
+description: sys.xml_schema_elements (Transact-SQL)
+title: sys.xml_schema_elements (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,21 +20,21 @@ helpviewer_keywords:
 ms.assetid: 190ed0cd-0c5e-4607-9db4-9e77cacf17d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f8297053b429b1b8f8a28150d78dabd814a7b6d6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cd80e0c7a557c720b4bbe09850e77f3dff260725
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887892"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88399914"
 ---
 # <a name="sysxml_schema_elements-transact-sql"></a>sys.xml_schema_elements (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  傳回每個 XML 架構元件的資料列，這是一種類型， **symbol_space**為**E**。  
+  針對每個 XML 架構元件，各傳回一個資料列，該元件是型別， **symbol_space** 為 **E**。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**\<inherited columns>**|**--**|從[sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md)繼承資料行。|  
+|**\<inherited columns>**|**--**|從 [sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md)繼承資料行。|  
 |**is_default_fixed**|**bit**|1 = 預設值是固定值。 在 XML 執行個體中不能覆寫這個值。<br /><br /> 0 = 預設值不是元素的固定值。 (預設值)。|  
 |**is_abstract**|**bit**|1 = 元素是抽象的，無法使用於執行個體文件中。 元素的替代群組成員必須出現在執行個體文件中。<br /><br /> 0 = 元素不是抽象的。 (預設值)。|  
 |**is_nillable**|**bit**|1 = 元素為 Nillable。<br /><br /> 0 = 元素不是 Nillable。 (預設值)|  
@@ -49,7 +50,7 @@ ms.locfileid: "85887892"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [XML 架構 &#40;XML 類型系統&#41; 目錄檢視 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
   
   

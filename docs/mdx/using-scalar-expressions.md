@@ -1,4 +1,5 @@
 ---
+description: 使用純量運算式
 title: 使用純量運算式 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b87fad1b9c568f4ebd5f65ef3705001b12d26693
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc13d94aaf44e563a9519f797effee7cbeb74305
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038046"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491392"
 ---
 # <a name="using-scalar-expressions"></a>使用純量運算式
 
@@ -69,6 +70,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX&#41;&#40;的運算式](../mdx/expressions-mdx.md)  
+ [MDX &#40;運算式&#41;](../mdx/expressions-mdx.md)  
   
   

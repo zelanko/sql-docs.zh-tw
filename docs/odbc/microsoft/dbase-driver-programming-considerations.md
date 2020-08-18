@@ -1,4 +1,5 @@
 ---
+description: dBASE 驅動程式的程式設計考量
 title: dBASE 驅動程式設計考慮 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ce5e8efc-6a2d-40d5-a658-8dd35cd1dd09
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a79032afa689e39aa225e7cab9c131486ef02e77
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ec4b99d432c67db6b68b381cfb67ca9ce5e0fa00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307679"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412734"
 ---
 # <a name="dbase-driver-programming-considerations"></a>dBASE 驅動程式的程式設計考量
 此章節包含下列主題。  
@@ -34,4 +35,4 @@ ms.locfileid: "81307679"
 -   [其他 dBASE 驅動程式設計詳細資料](../../odbc/microsoft/other-dbase-driver-programming-details.md)  
   
 > [!NOTE]  
->  透過 ODBC 桌面資料庫驅動程式存取 dBASE ISAM 檔案需要安裝 Borland 資料庫引擎。
+>  透過 ODBC Desktop 資料庫驅動程式存取 dBASE ISAM 檔案需要安裝 Borland 資料庫引擎。
