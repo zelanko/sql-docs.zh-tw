@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_125
 title: MSSQLSERVER_125 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0f58338d-2ea0-48b8-8a20-c438b0940433
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cbd78c7d4c403618088a0093dac58d1921c1a2fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c6e97db4063a1876a53c307d8171118c9ce58ad5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781109"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88335034"
 ---
 # <a name="mssqlserver_125"></a>MSSQLSERVER_125
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

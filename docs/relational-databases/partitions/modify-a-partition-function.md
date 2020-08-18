@@ -1,4 +1,5 @@
 ---
+description: 修改資料分割函數
 title: 修改資料分割函式 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0124f027ce4b3293afe754acfd5ad19354372cb9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2717bf5791cd5f057a57da6693e05700c9045e3c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787541"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88326904"
 ---
 # <a name="modify-a-partition-function"></a>修改資料分割函數
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -81,9 +82,9 @@ ms.locfileid: "85787541"
   
 2.  展開 **[資料分割函數]** 資料夾。  
   
-3.  以滑鼠右鍵按一下您想要刪除的資料分割函數，然後選取 [刪除]  。  
+3.  以滑鼠右鍵按一下您想要刪除的資料分割函數，然後選取 [刪除]****。  
   
-4.  在 **[刪除物件]** 對話方塊中，確定已選取正確的資料分割函數，然後按一下 **[確定]** 。  
+4.  在 **[刪除物件]** 對話方塊中，確定已選取正確的資料分割函數，然後按一下 **[確定]**。  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

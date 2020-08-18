@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_8621
 title: MSSQLSERVER_8621 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 67f59865-becd-4999-8bb0-90aedd7effbf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 60e0dac3f266a3f2bdd2b7135f987619a7bc5ab7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5aa58480e63e15b418d3bc2f0ebe38330fe71be3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727492"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88331514"
 ---
 # <a name="mssqlserver_8621"></a>MSSQLSERVER_8621
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

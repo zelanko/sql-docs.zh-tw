@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_10794
 title: MSSQLSERVER_10794 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9a6864bc-d4ea-4582-a875-eed9424774b1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c3a22aef28381db536a5637d07b776b5c2fd1df2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b78246fbaeb936f42cf9527fb9710fd742e031a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781298"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88337254"
 ---
 # <a name="mssqlserver_10794"></a>MSSQLSERVER_10794
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

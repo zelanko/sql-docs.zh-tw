@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_3431
 title: MSSQLSERVER_3431 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9541217f-e5c6-4a12-a19a-006058f1d3f3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e154abe34543127427aaad0918649342dedd3fa1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bab0c05fdf2cdb030d2c0c5263dad09fb026657c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723504"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88332064"
 ---
 # <a name="mssqlserver_3431"></a>MSSQLSERVER_3431
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

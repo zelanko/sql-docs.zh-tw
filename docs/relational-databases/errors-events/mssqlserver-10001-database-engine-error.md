@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_10001
 title: MSSQLSERVER_10001 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f8fd2d8d-a4af-4b6a-ba51-9123b7e4c9bf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 30e93a4b5794aa8f14722f2e331331766b209590
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4aedbaa7b1d5224bb09b71ccdff4866e350ee691
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781572"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88339624"
 ---
 # <a name="mssqlserver_10001"></a>MSSQLSERVER_10001
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

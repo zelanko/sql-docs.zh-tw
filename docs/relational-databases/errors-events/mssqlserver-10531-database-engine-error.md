@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_10531
 title: MSSQLSERVER_10531 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: bb40e994-231c-44ce-933f-8d767fb2f450
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1706e67643b2f0c5360399b13a38b5dcec57d9ce
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c8e91f999a9a7526e0419f49e06cdc4710d8db92
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781460"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88338580"
 ---
 # <a name="mssqlserver_10531"></a>MSSQLSERVER_10531
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

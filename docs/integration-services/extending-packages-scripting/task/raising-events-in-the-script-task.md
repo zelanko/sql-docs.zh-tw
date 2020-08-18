@@ -1,4 +1,5 @@
 ---
+description: 在指令碼工作中引發事件
 title: 在指令碼工作中引發事件 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 21ea07d1-e267-4fb1-a6cc-82c95a39beae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fa645e56314e460a70e9ee5c95fb02cecb8cc1e3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 590691ef8e1a9791325a19cafdca378d3b95ee14
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913195"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88347504"
 ---
 # <a name="raising-events-in-the-script-task"></a>在指令碼工作中引發事件
 

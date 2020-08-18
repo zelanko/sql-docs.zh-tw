@@ -1,4 +1,5 @@
 ---
+description: Oracle Publishing Overview
 title: Oracle 發行概觀 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2e013259-0022-4897-a08d-5f8deb880fa8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3326dab096a1b275bc06bfb0949eeb88b2d4fe30
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: d46aafe977bccc84b497f620c6690763d8835fcd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397161"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88326664"
 ---
 # <a name="oracle-publishing-overview"></a>Oracle Publishing Overview  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

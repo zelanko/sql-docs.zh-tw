@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_8966
 title: MSSQLSERVER_8966 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6b1150fd-9dfd-4df9-8f08-8eca237667db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f973edb4af5d9a32d449ec98c411e883d090a253
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0359c734fae801d7f1c2dded751043f8d1ae5d1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85636956"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88331484"
 ---
 # <a name="mssqlserver_8966"></a>MSSQLSERVER_8966
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

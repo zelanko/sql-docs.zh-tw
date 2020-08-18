@@ -1,4 +1,5 @@
 ---
+description: RPC Output Parameter 事件類別
 title: RPC 輸出參數事件類別 | Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 8c830d11-7e88-4c3e-98e9-ba72c8c99b02
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7c520f268443d568e22a9e459b5dd1a14040d322
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c58e0a2ab7f8bb93992278580d57a529bfd45e7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85791024"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88330534"
 ---
 # <a name="rpc-output-parameter-event-class"></a>RPC Output Parameter 事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

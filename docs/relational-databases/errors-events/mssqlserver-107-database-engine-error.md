@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_107
 title: MSSQLSERVER_107 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f33f514c-56aa-42e2-841b-e91244da90e2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7fbc4ab72c9e65d9592a12b0e6b6d92ce4d55552
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9da64b573efcdce2adc52e0d7cd419d40ea8289e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781355"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88337654"
 ---
 # <a name="mssqlserver_107"></a>MSSQLSERVER_107
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

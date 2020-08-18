@@ -1,4 +1,5 @@
 ---
+description: 升級 Integration Services
 title: 升級 Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: 4f287a9853b27a58128176bfe740a3efc99a9258
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d2a2de2fd59222b174fe6b02fae12ff344a3de04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919984"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346224"
 ---
 # <a name="upgrade-integration-services"></a>升級 Integration Services
 

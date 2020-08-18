@@ -1,4 +1,5 @@
 ---
+description: Web 同步處理的安全性架構
 title: Web 同步處理的安全性架構 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5797dc0f216d0956619e2874676b917314162dd5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 59ad240e910a4188672b0d73abcd98f168603f94
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900000"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88326894"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Web 同步處理的安全性架構
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_17066
 title: MSSQLSERVER_17066 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7d650bbf-c583-4af8-9e22-993ee2880d95
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 270b183c01747c15bb26f3fb18fb6b87c39070fe
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5ef6410bd23168ef4dcaba1091de19cee55b85f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85780906"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88333064"
 ---
 # <a name="mssqlserver_17066"></a>MSSQLSERVER_17066
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

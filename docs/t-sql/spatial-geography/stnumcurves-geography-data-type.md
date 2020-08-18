@@ -1,4 +1,5 @@
 ---
+description: STNumCurves (geography 資料類型)
 title: STNumCurves (geography 資料類型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e98a56c2-8496-4dfd-9b37-7f3c4ca9b2b5
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 07626f3ded35ee9c4075e08765b76974d1c1b209
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 3f2d2eead1803745d58cc827b85acd612f925a0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556046"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88306036"
 ---
 # <a name="stnumcurves-geography-data-type"></a>STNumCurves (geography 資料類型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -72,6 +73,6 @@ ms.locfileid: "86556046"
   
 ## <a name="see-also"></a>另請參閱  
  [空間資料類型概觀](../../relational-databases/spatial/spatial-data-types-overview.md)   
- [地理例項上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [地理位置例項上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

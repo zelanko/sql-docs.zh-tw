@@ -1,5 +1,5 @@
 ---
-title: CASE (Transact-SQL) | Microsoft Docs
+title: CASE (Transact-SQL)
 description: CASE 運算式的 Transact-SQL 參考。 CASE 會評估要傳回特定結果的條件清單。
 ms.date: 06/28/2017
 ms.prod: sql
@@ -21,14 +21,15 @@ ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 04000e046e229c36c159d80e1541c69139ba41d4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c0091a060bc75b87ef40d03a48c25b5154c00ee4
+ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915656"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88200435"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 評估一份條件清單，並傳回多個可能的結果運算式之一。  
@@ -68,9 +69,11 @@ END
 CASE  
      WHEN when_expression THEN result_expression [ ...n ]   
      [ ELSE else_result_expression ]   
-END  
-```  
-  
+END
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>引數  
  *input_expression*  
  這是使用簡單的 CASE 格式時，所評估的運算式。 *input_expression* 是任何有效的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  

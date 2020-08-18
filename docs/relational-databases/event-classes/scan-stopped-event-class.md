@@ -1,4 +1,5 @@
 ---
+description: Scan:Stopped 事件類別
 title: Scan:Stopped 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: b6b20ae9-aebb-454a-b639-6b7bb2f9339b
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 169ac0c40eca0d4d436772e4281b210346b6288d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8704dafdf5586f41cb2ad7d3a3fbd9dc0f2565f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726210"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88330504"
 ---
 # <a name="scanstopped-event-class"></a>Scan:Stopped 事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

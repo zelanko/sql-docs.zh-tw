@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_14420
 title: MSSQLSERVER_14420 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4a1d72b1-ab1b-4119-a11b-a8a05c6fdb45
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 22a3ecec3855dd49bb42e121f9508d5578b96955
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 908c2726504def18fd2d737595a46d276eda1069
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781097"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88334664"
 ---
 # <a name="mssqlserver_14420"></a>MSSQLSERVER_14420
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: 資料表 (Transact-SQL)
 title: table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/27/2019
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8a03e05ac53db4d7391738bbc0eaabc835a7f2db
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: ad743fc9864207dedcad050428646abf80fa4f59
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554793"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88311444"
 ---
 # <a name="table-transact-sql"></a>資料表 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

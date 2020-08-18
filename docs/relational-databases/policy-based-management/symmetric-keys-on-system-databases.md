@@ -1,4 +1,5 @@
 ---
+description: 系統資料庫上的對稱金鑰
 title: 系統資料庫上的對稱金鑰 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 28e25ae3-d3dc-45ec-b316-f219512a1a47
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 890612fdf4502de67283e7b2bb55e75b372d5388
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a48f51d7d6797f3d2713b808b44b03ac1a5ad4ce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774126"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88326804"
 ---
 # <a name="symmetric-keys-on-system-databases"></a>系統資料庫上的對稱金鑰
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

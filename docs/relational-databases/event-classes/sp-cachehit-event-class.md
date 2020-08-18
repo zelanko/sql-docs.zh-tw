@@ -1,4 +1,5 @@
 ---
+description: SP:CacheHit 事件類別
 title: SP:CacheHit 事件類別 | Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 396aa22a-4723-47f5-ae72-7de99d92dd6f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6bf632b1b124a9e09fc61d1662b215f6bd3f7f37
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b1ffe7671c672d40e0dc3a6aa7d61cdb02251c85
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717743"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88329334"
 ---
 # <a name="spcachehit-event-class"></a>SP:CacheHit 事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

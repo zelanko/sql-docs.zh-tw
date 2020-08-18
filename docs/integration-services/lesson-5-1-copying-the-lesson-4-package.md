@@ -1,4 +1,5 @@
 ---
+description: 第 5-1 課：複製第 4 課套件
 title: 步驟 1:複製第 4 課套件 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/08/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 12fa0d5fc5c96a1ea51d0be762ecf2934ca26497
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 95eca1c1b598387d7ff2c9bab688c022f76e73c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916852"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88345604"
 ---
 # <a name="lesson-5-1-copy-the-lesson-4-package"></a>第 5-1 課：複製第 4 課套件
 

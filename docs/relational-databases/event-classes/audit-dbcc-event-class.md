@@ -1,4 +1,5 @@
 ---
+description: 稽核 DBCC 事件類別
 title: Audit DBCC 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: 73724190-d6b7-4f11-9446-78bcafa6c693
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a092a93ed66c7ef4953c4a378117094f70ea2da5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 27ff72cfdf599e0e67000db2a73956d6fffb0dd2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726360"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88330834"
 ---
 # <a name="audit-dbcc-event-class"></a>稽核 DBCC 事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  每次發出 DBCC 命令時，就會發生 **Audit DBCC** 事件類別。  
+   每次發出 DBCC 命令時，就會發生 **Audit DBCC** 事件類別。  
   
 ## <a name="audit-dbcc-event-class-data-columns"></a>Audit DBCC 事件類別資料行  
   
@@ -50,7 +51,7 @@ ms.locfileid: "85726360"
 |**SessionLoginName**|**Nvarchar**|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 執行陳述式，則 **SessionLoginName** 將顯示 Login1 而 **LoginName** 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |**SPID**|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
-|「成功」 |**int**|1 = 成功。 0 = 失敗。 例如，值為 1 指出權限檢查成功，而值為 0 指出該檢查失敗。|23|是|  
+|「成功」|**int**|1 = 成功。 0 = 失敗。 例如，值為 1 指出權限檢查成功，而值為 0 指出該檢查失敗。|23|是|  
 ||||||  
 ||||||  
 |**TextData**|**ntext**|DBCC 命令的 SQL 文字|1|是|  

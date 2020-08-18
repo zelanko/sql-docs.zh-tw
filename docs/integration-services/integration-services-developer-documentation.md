@@ -1,4 +1,5 @@
 ---
+description: Integration Services 開發人員文件
 title: Integration Services 開發人員文件 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 21cb77e73651347d0a06be5aba0675372984948a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d5202d583a6b4b5ba0b27d25aa7c0a3ed87c9e6b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919954"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346094"
 ---
 # <a name="integration-services-developer-documentation"></a>Integration Services 開發人員文件
 
@@ -61,7 +62,7 @@ ms.locfileid: "86919954"
  [了解同步和非同步轉換](../integration-services/understanding-synchronous-and-asynchronous-transformations.md)  
  說明同步與非同步輸出之間的重要差別，以及會在資料流程中使用這些輸出的元件。  
   
- [以程式設計方式使用連線管理員](../integration-services/working-with-connection-managers-programmatically.md)  
+ [以程式設計方式使用連接管理員](../integration-services/working-with-connection-managers-programmatically.md)  
  列出您可從受控碼中使用的連線管理員，以及當程式碼呼叫 **AcquireConnection** 方法時，連線管理員所傳回的值。  
   
  [使用指令碼擴充套件](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
@@ -73,7 +74,7 @@ ms.locfileid: "86919954"
  [以程式設計方式建置套件](../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
  描述如何以程式設計方式建立、設定和儲存 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。  
   
- [以程式設計方式執行及管理套件](../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)  
+ [以程式設計方式執行及管理封裝](../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)  
  描述如何以程式設計方式列舉、執行和管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。  
   
 ## <a name="reference"></a>參考  
