@@ -1,4 +1,5 @@
 ---
+description: 建立連線
 title: 建立連接 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,18 +21,18 @@ helpviewer_keywords:
 ms.assetid: 8e3c717e-35e3-47ef-b5d3-3a96eeb7b869
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6f71190a8a2ca1dd8af0d28adb5531540fb1b57e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4256f3f0fe3e082b789d3758ece9bf7c8919eacb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298698"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482931"
 ---
 # <a name="establishing-a-connection"></a>建立連線
-在配置環境和連接控制碼並設定任何連接屬性之後，應用程式就已準備好連接到資料來源或驅動程式。 應用程式可以使用三種不同的功能來執行這項操作： **SQLConnect** （核心介面一致性層級）、 **SQLDriverConnect** （核心）和**SQLBrowseConnect** （層級1）。 這三個都是設計成在不同的案例中使用。 連接之前，應用程式可以使用**SQLDrivers**所傳回的**ConnectFunctions**關鍵字來判斷支援哪些函式。  
+配置環境和連接控制碼並設定任何連接屬性之後，應用程式就可以連接到資料來源或驅動程式。 應用程式可以使用三個不同的函式來執行此作業： **SQLConnect** (核心介面一致性層級) 、 **SQLDriverConnect** (核心) 和 **SQLBrowseConnect** (層級 1) 。 這三個都是設計用於不同的案例。 在連接之前，應用程式可以使用**SQLDrivers**所傳回的**ConnectFunctions**關鍵字來判斷支援哪些函數。  
   
 > [!NOTE]  
->  某些驅動程式會限制其支援的作用中連線數目。 應用程式會使用 SQL_MAX_DRIVER_CONNECTIONS 選項呼叫**SQLGetInfo** ，以判斷特定驅動程式支援的作用中連接數目。  
+>  某些驅動程式會限制它們支援的作用中連線數目。 應用程式會使用 SQL_MAX_DRIVER_CONNECTIONS 選項來呼叫 **SQLGetInfo** ，以判斷特定驅動程式所支援的作用中連接數目。  
   
  此章節包含下列主題。  
   

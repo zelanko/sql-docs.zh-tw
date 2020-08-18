@@ -1,5 +1,6 @@
 ---
-title: 連接到 Azure SQL Database (SybaseToSQL) |Microsoft Docs
+description: '連接至 Azure SQL Database (SybaseToSQL) '
+title: 連接至 Azure SQL Database (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -9,26 +10,26 @@ ms.topic: conceptual
 ms.assetid: 96538007-1099-40c8-9902-edd07c5620ee
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 50f130969949abd6f863c1a7d63c4a4e2d27decc
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 3717cce895ca602a550d47ea5c569af4c80963a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932119"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492311"
 ---
-# <a name="connect-to-azure-sql-database--sybasetosql"></a>連接到 Azure SQL Database (SybaseToSQL) 
-使用 [連接到 Azure SQL Database] 對話方塊，即可連接到您要遷移的 Azure SQL Database 資料庫。  
+# <a name="connect-to-azure-sql-database--sybasetosql"></a>連接至 Azure SQL Database (SybaseToSQL) 
+使用 [連接到 Azure SQL Database] 對話方塊來連接到您想要遷移的 Azure SQL Database 資料庫。  
   
-若要存取此對話方塊，請在 **[檔案**] 功能表上，選取 [**連接到 Azure SQL Database]**。 如果您先前已連線，此命令會**重新連接到 Azure SQL Database。**  
+若要存取此對話方塊， **請在 [** 檔案] 功能表上選取 **[連接到 Azure SQL Database]**。 如果您先前已連線，命令會 **重新連接到 Azure SQL Database。**  
   
 ## <a name="options"></a>選項。  
 **伺服器名稱**  
   
-選取或輸入伺服器名稱，以連接到 Azure SQL Database。  
+選取或輸入要連接到 Azure SQL Database 的伺服器名稱。  
   
 **Database**  
   
-選取 []，輸入或**流覽**資料庫名稱。  
+選取，輸入或 **流覽** 資料庫名稱。  
   
 > [!IMPORTANT]  
 > SSMA for Sybase 不支援連接到 Azure SQL Database 中的 master 資料庫。  
@@ -54,11 +55,11 @@ SSMA 建議 Azure SQL Database 的加密連接。
   
 2.  如果沒有資料庫，則會出現下列兩個功能表項目。  
   
-    1.  ** (找不到任何資料庫) **已停用且所有時間皆為灰色  
+    1.  ** (找不到任何資料庫) ** 已停用，而且所有時間都變成灰色  
   
-    2.  **建立新的資料庫**，只有在 Azure SQL Database 帳戶上沒有資料庫時才會啟用。 按一下此功能表項目時，會出現 [建立 Azure 資料庫] 對話方塊，其中包含資料庫名稱和大小。  
+    2.  **建立新的資料庫** ，只有在 Azure SQL Database 帳戶上沒有任何資料庫時才會啟用。 當您按一下此功能表項目時，[建立 Azure 資料庫] 對話方塊會存在於資料庫名稱和大小。  
   
-3.  在建立資料庫時，會將下列兩個參數指定為輸入：  
+3.  建立資料庫時，會將下列兩個參數指定為輸入：  
   
     1.  **資料庫名稱：** 輸入資料庫名稱。  
   

@@ -1,5 +1,6 @@
 ---
-title: MultiIpConfigurationSupport 屬性（ServerNetworkProtocol）
+description: MultiIpConfigurationSupport 屬性 (ServerNetworkProtocol 類別)
+title: 'MultiIpConfigurationSupport 屬性 (ServerNetworkProtocol) '
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 442c6133-4038-42db-a67d-2631285ac76b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0ff19a1a89c301b018a9231ca8c98277d6a55e43
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: da02aefabf6096712b4d6ccb06622892a20dbbed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888735"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472834"
 ---
 # <a name="multiipconfigurationsupport-property-servernetworkprotocol-class"></a>MultiIpConfigurationSupport 屬性 (ServerNetworkProtocol 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,10 +38,10 @@ object.MultiIpConfigurationSupport [= value]
   
 ## <a name="parts"></a>組件  
  *object*  
- 代表實例所使用之網路通訊協定的[ProtocolName 屬性（ServerNetworkProtocol 類別）](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/protocolname-property-servernetworkprotocol-class.md)物件 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+ [ProtocolName 屬性 (ServerNetworkProtocol 類別) ](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/protocolname-property-servernetworkprotocol-class.md)物件，代表實例所使用的網路通訊協定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
- 指定伺服器網路通訊協定是否支援多個 IP 位址的布林值：如果伺服器網路通訊協定支援多個 IP 位址，**則為 true** ，如果伺服器網路通訊協定不支援多個 ip 位址，則為**false** 。  
+ 布林值，指定伺服器網路通訊協定是否支援多個 IP 位址：如果伺服器網路通訊協定支援多個 IP 位址， **則為 true** ; 如果伺服器網路通訊協定不支援多個 ip 位址，則為 **false** 。  
   
 ## <a name="remarks"></a>備註  
   

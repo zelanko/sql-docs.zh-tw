@@ -1,4 +1,5 @@
 ---
+description: 從 .dqs 檔案匯入知識庫
 title: 從 .dqs 檔案匯入知識庫
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9b9786fe-9e80-429a-afcb-dc3b3dd6f0b0
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: eb9487a3f633aa60dcfd66557d3fb9d33f62ad54
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c6be16bf484f3b5f6f55afaaacbeda8d2bb6d341
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895434"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491555"
 ---
 # <a name="import-a-knowledge-base-from-a-dqs-file"></a>從 .dqs 檔案匯入知識庫
 
@@ -38,7 +39,7 @@ ms.locfileid: "85895434"
 ####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能從 .dqs 資料檔匯入知識庫。  
   
-##  <a name="import-a-knowledge-base-from-a-dqs-file"></a><a name="Import"></a>從 dqs 檔案匯入知識庫  
+##  <a name="import-a-knowledge-base-from-a-dqs-file"></a><a name="Import"></a> 從 dqs 檔案匯入知識庫  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -50,13 +51,13 @@ ms.locfileid: "85895434"
   
 5.  針對 **[選取資料檔]** 按一下 **[瀏覽]**。  
   
-6.  在 **[從資料檔匯入]** 對話方塊中，移至包含您要匯入之 .dqs 檔案的資料夾，然後按一下檔案的名稱。 按一下 [開啟] 。  
+6.  在 **[從資料檔匯入]** 對話方塊中，移至包含您要匯入之 .dqs 檔案的資料夾，然後按一下檔案的名稱。 按一下 **[開啟]** 。  
   
 7.  確認 **[定義域]** 清單中是否顯示正確的知識庫和定義域。  
   
 8.  請選取您要執行的活動，然後按一下 **[建立]**。  
   
-9. 在 **[匯入知識庫]** 對話方塊中，確認狀態行指出已完成匯入。 按一下 [確定] 。  
+9. 在 **[匯入知識庫]** 對話方塊中，確認狀態行指出已完成匯入。 按一下 [確定]。  
   
 10. 完成您需要執行的知識探索、定義域管理或比對原則工作，然後按一下 **[完成]**。  
   

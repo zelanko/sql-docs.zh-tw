@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_db_uncontained_entities （Transact-sql） |Microsoft Docs
+description: sys.dm_db_uncontained_entities (Transact-SQL)
+title: sys. dm_db_uncontained_entities (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e62fbc7e23d20bd5e4256a69a1a088bdd10c79ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7b0b7486de9709b0cfb4fc9ab20b8c8dd2da0f58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738672"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88399174"
 ---
 # <a name="sysdm_db_uncontained_entities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,8 +37,8 @@ ms.locfileid: "85738672"
 |-|-|-|  
 |**資料行名稱**|**型別**|**說明**|  
 |*class*|**int**|1 = 物件或資料行 (包含模組、XPs、檢視、同義字及資料表)。<br /><br /> 4 = 資料庫主體<br /><br /> 5 = 組件<br /><br /> 6 = 類型<br /><br /> 7 = 索引 (全文檢索索引)<br /><br /> 12 = 資料庫 DDL 觸發程序<br /><br /> 19 = 路由<br /><br /> 30 = 稽核規格|  
-|*class_desc*|**nvarchar(120)**|實體類別的描述。 符合類別的下列其中一項：<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBLY**<br /><br /> **類型**<br /><br /> **指數**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **料**<br /><br /> **AUDIT_SPECIFICATION**|  
-|*major_id*|**int**|實體的識別碼。<br /><br /> 如果*class* = 1，則 object_id<br /><br /> 如果*class* = 4，則 database_principals. principal_id。<br /><br /> 如果*類別*= 5，則為 sys.databases，assembly_id。<br /><br /> 如果*類別*= 6，則為 sys.databases，user_type_id。<br /><br /> 如果是*class* = 7，則為 sys.databases，index_id。<br /><br /> 如果*class* = 12，則為 object_id。<br /><br /> 如果*class* = 19，則 route_id。<br /><br /> If*類別*= 30，則為 sys。 database_audit_specifications。 database_specification_id。|  
+|*class_desc*|**nvarchar(120)**|實體類別的描述。 符合類別的下列其中一項：<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **裝配**<br /><br /> **TYPE**<br /><br /> **指數**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **路線**<br /><br /> **AUDIT_SPECIFICATION**|  
+|*major_id*|**int**|實體的識別碼。<br /><br /> 如果 *class* = 1，則 object_id<br /><br /> 如果 *class* = 4，則 sys. database_principals. principal_id。<br /><br /> 如果 *class* = 5，則 sys. 元件. assembly_id。<br /><br /> 如果 *class* = 6，則 sys. types. user_type_id。<br /><br /> 如果 *class* = 7，則 sys. 索引. index_id。<br /><br /> 如果 *class* = 12，則 sys. trigger. object_id。<br /><br /> 如果 *class* = 19，則 sys. route. route_id。<br /><br /> 如果 *class* = 30，則 sys。 database_audit_specifications。 database_specification_id。|  
 |*statement_line_number*|**int**|如果類別為模組，將會傳回非內含使用所在的行號。  否則，此值為 Null。|  
 |*statement_ offset_begin*|**int**|如果類別為模組，會指出非內含使用的起始位置 (以位元組為單位，從 0 開始)。 否則傳回值為 Null。|  
 |*statement_ offset_end*|**int**|如果類別為模組，會指出非內含使用的結束位置 (以位元組為單位，從 0 開始)。 值 -1 代表模組的結尾。 否則傳回值為 Null。|  
@@ -46,7 +47,7 @@ ms.locfileid: "85738672"
 |*feature_type_name*|**nvarchar(256)**|傳回功能類型。|  
   
 ## <a name="remarks"></a>備註  
- dm_db_uncontained_entities 會顯示可能跨越資料庫界限的實體。 它將傳回可能使用資料庫外之物件的任何使用者實體。  
+ sys. dm_db_uncontained_entities 會顯示可能會跨越資料庫界限的實體。 它將傳回可能使用資料庫外之物件的任何使用者實體。  
   
  下列功能類型將會回報。  
   
@@ -65,7 +66,7 @@ ms.locfileid: "85738672"
 ## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>權限  
- sys.dm_db_uncontained_entities 只會傳回使用者具有某些權限類型的物件。 若要完整評估資料庫的內含專案，這項功能應該由高許可權使用者（例如**系統管理員（sysadmin** ）固定伺服器角色的成員或**db_owner**角色）使用。  
+ sys.dm_db_uncontained_entities 只會傳回使用者具有某些權限類型的物件。 若要完整評估資料庫的內含專案，這個函式應該由高許可權的使用者（例如 **系統管理員（sysadmin** ）固定伺服器角色的成員或 **db_owner** 角色）使用。  
   
 ## <a name="examples"></a>範例  
  下列範例會建立一個名為 P1 的程序，然後查詢 `sys.dm_db_uncontained_entities`。 查詢會回報 P1 使用位於資料庫外部的 **sys.endpoints** 。  

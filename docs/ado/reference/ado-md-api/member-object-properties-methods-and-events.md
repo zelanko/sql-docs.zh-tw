@@ -1,5 +1,6 @@
 ---
-title: Member 物件屬性、方法和事件 |Microsoft Docs
+description: Member 物件屬性、方法和事件
+title: 成員物件屬性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: dadd6e7e-b5b4-4ede-8747-ae67ec917d90
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7715566aec18b3ac9fdcc8a44c6dba12df9d27d7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: cb4b686c0fd2366b0bd229603414fb70c2d60ba1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765092"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440890"
 ---
 # <a name="member-object-properties-methods-and-events"></a>Member 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  

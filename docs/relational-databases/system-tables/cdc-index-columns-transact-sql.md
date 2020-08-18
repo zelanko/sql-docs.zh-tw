@@ -1,5 +1,6 @@
 ---
-title: cdc. index_columns （Transact-sql） |Microsoft Docs
+description: cdc.index_columns (Transact-SQL)
+title: cdc. index_columns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 256ec8a5-3031-40a8-9fdb-99db42ea453d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fcd54786ee9f1746429232619dd605a5587a60b8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0725f3eaa01da493681b2f45186c077a46d20e5e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890616"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460409"
 ---
 # <a name="cdcindex_columns-transact-sql"></a>cdc.index_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  針對每一個與變更資料表相關聯的索引資料行，各傳回一個資料列。 異動資料擷取會使用索引資料行來唯一識別來源資料表中的資料列。 根據預設，來源資料表之主索引鍵的資料行包含在內。 不過，在來源資料表上啟用異動資料擷取時，如果指定了來源資料表上的唯一索引，就會改用該索引中的資料行。 如果啟用淨變更追蹤，就需要使用來源資料表的主索引鍵或唯一索引。 如需詳細資訊，請參閱[sp_cdc_enable_table &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)。  
+  針對每一個與變更資料表相關聯的索引資料行，各傳回一個資料列。 異動資料擷取會使用索引資料行來唯一識別來源資料表中的資料列。 根據預設，來源資料表之主索引鍵的資料行包含在內。 不過，在來源資料表上啟用異動資料擷取時，如果指定了來源資料表上的唯一索引，就會改用該索引中的資料行。 如果啟用淨變更追蹤，就需要使用來源資料表的主索引鍵或唯一索引。 如需詳細資訊，請參閱 [sys. sp_cdc_enable_table &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)。  
   
- 我們建議您不要直接查詢系統資料表。 請改為執行[sys.databases sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)預存程式。  
+ 我們建議您不要直接查詢系統資料表。 請改為執行 [sys. sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) 預存程式。  
 
   
 |資料行名稱|資料類型|描述|  
@@ -40,6 +41,6 @@ ms.locfileid: "85890616"
 |**column_id**|**int**|來源資料表中資料行的識別碼。|  
   
 ## <a name="see-also"></a>另請參閱  
- [change_tables &#40;Transact-sql&#41;](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)  
+ [cdc. change_tables &#40;Transact-sql&#41;](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)  
   
   

@@ -1,5 +1,6 @@
 ---
-title: 資料庫相關的動態管理檢視（Transact-sql） |Microsoft Docs
+description: 資料庫相關的動態管理檢視 (Transact-SQL)
+title: 資料庫相關的動態管理檢視 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/18/2017
 ms.prod: sql
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 615e9440-32a3-4ec4-94c6-94547e10ebda
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 757e536bd5110b1a4a5abb70a0fc3d899d70f852
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 2de737113a6ec114e3a296e5d826ed4034b2307c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942270"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460460"
 ---
 # <a name="database-related-dynamic-management-views-transact-sql"></a>資料庫相關的動態管理檢視 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  本節說明中的下列動態管理物件 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，有時會在 SQL Database 中。  
+  本節將描述中的下列動態管理物件 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，有時也會在 SQL Database 中。  
 
 :::row:::
     :::column:::
@@ -53,20 +54,20 @@ ms.locfileid: "86942270"
     :::column-end:::
 :::row-end:::
 
-DMV 對 SQL Database 或 SQL 資料倉儲而言是唯一的。   
+DMV 的唯一 SQL Database 或 SQL 資料倉儲。   
 
 :::row:::
     :::column:::
-        [dm_db_wait_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)
+        [sys. dm_db_wait_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)
 
-        [dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)
+        [sys. dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)
 
-        [dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)
+        [sys. dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)
     :::column-end:::
     :::column:::
         [sys.dm_database_copies &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)
 
-        [dm_db_objects_impacted_on_version_change &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-objects-impacted-on-version-change-azure-sql-database.md)
+        [sys. dm_db_objects_impacted_on_version_change &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-objects-impacted-on-version-change-azure-sql-database.md)
     :::column-end:::
 :::row-end:::
   
