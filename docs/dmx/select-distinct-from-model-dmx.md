@@ -1,5 +1,6 @@
 ---
-title: 從模型選取 &lt; 相異 &gt; （DMX） |Microsoft Docs
+description: 從 &lt; 模型 &gt; (DMX) 選取相異
+title: 從 &lt; 模型 &gt; (DMX) 選取相異 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,14 +9,14 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3413ec29cb2f1f3e710a1d52037161094ab713ce
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 3a8c65f6d0321ae74d18d32bd3c5208bbc2df5b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970620"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413264"
 ---
-# <a name="select-distinct-from-ltmodel-gt-dmx"></a>從模型選取 &lt; 相異 &gt; （DMX）
+# <a name="select-distinct-from-ltmodel-gt-dmx"></a>從 &lt; 模型 &gt; (DMX) 選取相異
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   傳回模型中選取之資料行的所有可能狀態。 傳回的值會隨著指定的資料行包含離散值、離散化的數值，還是連續數值而有所不同。  
@@ -45,7 +46,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  選擇性。 傳回純量值的運算式。  
   
 ## <a name="remarks"></a>備註  
- **SELECT DISTINCT FROM**語句僅適用于單一資料行或一組相關的資料行。 這個子句不能配合一組未關聯的資料行使用。  
+ **SELECT DISTINCT FROM**語句只適用于單一資料行或一組相關的資料行。 這個子句不能配合一組未關聯的資料行使用。  
   
  **SELECT DISTINCT FROM**語句可讓您直接參考嵌套資料表內的資料行。 例如：  
   
@@ -53,7 +54,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 <model>.<table column reference>.<column reference>  
 ```  
   
- 視資料行類型而定， **SELECT DISTINCT FROM \<model> **語句的結果會有所不同。 下表說明支援的資料行類型與陳述式的輸出。  
+ **SELECT DISTINCT FROM \<model> **語句的結果會根據資料行類型而有所不同。 下表說明支援的資料行類型與陳述式的輸出。  
   
 |資料行類型|輸出|  
 |-----------------|------------|  
@@ -62,7 +63,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 |連續|資料行中之值的中點。|  
   
 ## <a name="discrete-column-example"></a>分隔資料行範例  
- 下列程式碼範例是 `[TM Decision Tree]` 以您在[基本資料採礦教學](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)課程中建立的模型為基礎。 此查詢會傳回離散資料行 `Gender` 中存在的唯一值。  
+ 下列程式碼範例是 `[TM Decision Tree]` 以您在「 [基本資料採礦」教學](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)課程中建立的模型為基礎。 此查詢會傳回離散資料行 `Gender` 中存在的唯一值。  
   
 ```  
 SELECT DISTINCT [Gender]  
@@ -99,10 +100,10 @@ FROM [TM Decision Tree]
  此查詢也會查詢 Null 值的單一資料列，來表示遺漏值。  
   
 ## <a name="discretized-column-example"></a>離散化資料行範例  
- 下列程式碼範例會針對演算法建立的每個值區，傳回 [`Yearly Income]` 資料行的中點、最大與最小值。 若要重新產生此範例的結果，您必須建立與 `[Targeted Mailing]` 相同的新採礦結構。 在嚮導中，將資料行的內容類型 `Yearly Income` 從 [**連續**] 變更為 [**離散**化]。  
+ 下列程式碼範例會針對演算法建立的每個值區，傳回 [`Yearly Income]` 資料行的中點、最大與最小值。 若要重新產生此範例的結果，您必須建立與 `[Targeted Mailing]` 相同的新採礦結構。 在嚮導中，將資料行的內容類型 `Yearly Income` 從 **連續** 變更為 **離散**化。  
   
 > [!NOTE]  
->  您也可以變更在＜基本採礦教學課程＞中建立的採礦模型，以便將採礦結構資料行 [`Yearly Income]` 離散化。 如需如何執行這項操作的詳細資訊，請參閱[變更資料行在採礦模型中的離散](https://docs.microsoft.com/analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model)化。 不過，當您變更資料行的離散化時，將會強制重新處理採礦結構，這樣會變更您使用該結構建立之其他模型的結果。  
+>  您也可以變更在＜基本採礦教學課程＞中建立的採礦模型，以便將採礦結構資料行 [`Yearly Income]` 離散化。 如需如何進行這項作業的詳細資訊，請參閱 [變更採礦模型中資料行的離散](https://docs.microsoft.com/analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model)化。 不過，當您變更資料行的離散化時，將會強制重新處理採礦結構，這樣會變更您使用該結構建立之其他模型的結果。  
   
 ```  
 SELECT DISTINCT [Yearly Income] AS [Bucket Average],   
@@ -128,7 +129,7 @@ FROM [TM Decision Tree]
   
  例如，如果您使用決策樹檢視器瀏覽模型，然後按一下包含以收入分組之客戶的節點，下列節點屬性就會顯示在工具提示中：  
   
- 年齡 >= 69 和年收入 < 39221.41  
+ Age >= 69 和每年收入 < 39221.41  
   
 > [!NOTE]  
 >  最小值區的最小值與最大值區的最大值剛好分別是最高與最低的觀察值。 系統會假設超出此觀察範圍的任何值都屬於最小和最大值區。  

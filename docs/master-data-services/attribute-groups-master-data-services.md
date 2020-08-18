@@ -1,4 +1,5 @@
 ---
+description: 屬性群組 (Master Data Services)
 title: 屬性群組
 ms.custom: ''
 ms.date: 03/15/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 648b3d0b-e15a-45f9-8292-3a54a072e62c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: dcdd46e56914d3189332a25f8bd747b37ebc4d28
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: e6ef092efb1133d5067f9f3959765017f695acc5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812047"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413434"
 ---
 # <a name="attribute-groups-master-data-services"></a>屬性群組 (Master Data Services)
 

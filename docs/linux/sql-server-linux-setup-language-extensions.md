@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 29c0d209ada9ea624c588b4510191b8ae8b7e91c
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 24a203a45fac725a95402010531185705b3af5cd
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522870"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178263"
 ---
 # <a name="install-sql-server-language-extensions-on-linux"></a>在 Linux 上安裝 SQL Server 語言延伸模組
 
-[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
+[!INCLUDE [SQL Server 2019 - Linux](../includes/applies-to-version/sqlserver2019-linux.md)]
 
 「語言延伸模組」是資料庫引擎的附加元件。 雖然您可以[同時安裝資料庫引擎和語言擴充功能](#install-all)，但最佳做法是先安裝和設定 SQL Server 資料庫引擎，以便在新增更多元件之前解決任何問題。 
 

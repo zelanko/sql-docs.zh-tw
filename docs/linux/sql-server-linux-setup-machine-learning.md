@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 34e33ea3fbb3ff0ef10e237bc7bdc0ad61c223db
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: ed29244d06e0fcf08c5f56af59c3e1f9feeb2883
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484620"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178253"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>在 Linux 上安裝 SQL Server 機器學習服務 (Python 和 R)
 
-[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
+[!INCLUDE [SQL Server 2019 - Linux](../includes/applies-to-version/sqlserver2019-linux.md)]
 
 本文會引導您在 Linux 上安裝 [SQL Server 機器學習服務](../machine-learning/index.yml)。 您可使用機器學習服務來在資料庫中執行 Python 和 R 指令碼。
 

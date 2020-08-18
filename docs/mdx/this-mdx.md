@@ -1,5 +1,6 @@
 ---
-title: This （MDX） |Microsoft Docs
+description: This (MDX)
+title: 這 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 12455c82fe7a885a3530b6c0db216b9996a5eda6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e00435741516fd1ed1942506084c26192b6d47da
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893564"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413094"
 ---
 # <a name="this-mdx"></a>This (MDX)
 
@@ -28,7 +29,7 @@ This
 ```  
   
 ## <a name="remarks"></a>備註  
- **此**函式可以用來取代任何子工作子運算式，以在 MDX 計算腳本中提供目前範圍內目前的子工作。 **此**函式必須用於指派的左邊。  
+ 您可以使用 **此** 函式來取代任何子工作空間運算式，以便在 MDX 計算腳本內的目前範圍內提供目前的子集。 **此**函數必須在指派的左邊使用。  
   
 ## <a name="examples"></a>範例  
  下列 MDX 指令碼片段會示範如何搭配 SCOPE 陳述式使用 This 關鍵字來對 Subcube 進行指派：  

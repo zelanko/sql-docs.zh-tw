@@ -1,5 +1,6 @@
 ---
-title: DMX 教學課程（Analysis Services 資料採礦） |Microsoft Docs
+description: DMX 教學課程 (Analysis Services - 資料採礦)
+title: DMX 教學課程 (Analysis Services 資料採礦) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4fcf803bb76bfb894faa75e6e51180cc25434abe
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 8974b18cf666382d5be395f5b52b87fccae29aff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969809"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413395"
 ---
 # <a name="dmx-tutorials-analysis-services---data-mining"></a>DMX 教學課程 (Analysis Services - 資料採礦)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "86969809"
  您將在此教學課程中學會如何建立預測哪些產品可能會同時被購買的採礦模型。 此教學課程也會示範巢狀資料表在資料採礦中的用法。  
   
 ## <a name="reference"></a>參考  
- [&#40;DMX&#41; 語法元素的資料採礦延伸模組](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
+ [資料採礦延伸模組 &#40;DMX&#41; 語法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
   
  [資料採礦延伸模組 &#40;DMX&#41; 資料定義陳述式](../dmx/dmx-statements-data-definition.md)  
   
@@ -39,7 +40,7 @@ ms.locfileid: "86969809"
  [了解 DMX Select 陳述式](../dmx/understanding-the-dmx-select-statement.md)  
   
 ## <a name="related-sections"></a>相關章節  
- [多維度模型資料存取 &#40;Analysis Services-多維度資料&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data)  
+ [多維度模型資料存取 &#40;Analysis Services 多維度資料&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data)  
   
 ## <a name="see-also"></a>另請參閱  
  [DMX 預測查詢的結構和使用方式](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   

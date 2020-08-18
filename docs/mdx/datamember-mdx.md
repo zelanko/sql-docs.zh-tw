@@ -1,5 +1,6 @@
 ---
-title: DataMember （MDX） |Microsoft Docs
+description: DataMember (MDX)
+title: DataMember (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4395f0ff113c8549ec2250d5fa87d37090627b3c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7291a8d2c57d4a996893146e8e855df234ed0139
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892909"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413134"
 ---
 # <a name="datamember-mdx"></a>DataMember (MDX)
 
@@ -32,13 +33,13 @@ Member_Expression.DataMember
  傳回成員的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- 此函式會在任何階層中的非分葉成員上運作，並可由[UPDATE CUBE 語句（MDX）](../mdx/mdx-data-manipulation-update-cube.md)命令用來直接將資料回寫到非分葉成員，而不是對分葉成員的下階。  
+ 此函式會在任何階層中的非分葉成員上運作，而且可供 [UPDATE CUBE 語句 (MDX) ](../mdx/mdx-data-manipulation-update-cube.md) 命令，直接將資料回寫至非分葉成員，而不是分葉成員的子系。  
   
 > [!NOTE]  
 >  如果指定的成員是分葉成員，或如果非分葉成員沒有相關聯的資料成員，就會傳回指定的成員。  
   
 ## <a name="example"></a>範例  
- 下列範例會在匯出量值中使用**DataMember**函數，以顯示每個個別員工的銷售配額：  
+ 下列範例會在匯出量值中使用 **DataMember** 函數，以顯示每個個別員工的銷售配額：  
   
 ```  
 WITH MEMBER measures.InvidualQuota AS   

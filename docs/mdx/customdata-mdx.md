@@ -1,5 +1,6 @@
 ---
-title: CustomData （MDX） |Microsoft Docs
+description: CustomData (MDX)
+title: CustomData (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d2884e23cbee78acacdb72e386f0e99610e9629f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ed7bfe2841caf9bd5b2c6e6caf102323db6d62ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68135831"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413164"
 ---
 # <a name="customdata-mdx"></a>CustomData (MDX)
 
 
-  傳回**CustomData**連接字串屬性的值（如果已定義）。否則**為 null**。  
+  傳回 **CustomData** 連接字串屬性的值（如果已定義）。否則 **為 null**。  
   
 ## <a name="syntax"></a>語法  
   
@@ -28,10 +29,10 @@ CustomData()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- **CustomData**函數可以抓取**CustomData**連接字串屬性，並傳遞要供多維度運算式（mdx）函數和語句使用的設定（例如[UserName （mdx）](../mdx/username-mdx.md)和[CALL 語句（mdx））](../mdx/mdx-data-manipulation-call.md)。 例如，這個函數可以在動態安全性運算式中用來選取**CustomData**連接字串屬性中字串值的允許/拒絕集合成員。  
+ **CustomData**函式可以取出**CustomData**連接字串屬性，並將多維度運算式所使用的設定設定 (mdx) 函數和語句，例如使用者[名稱 (MDX) ](../mdx/username-mdx.md) ，以及[ (mdx) 的呼叫語句](../mdx/mdx-data-manipulation-call.md)。 例如，您可以在動態安全性運算式中使用這個函數，在 **CustomData** 連接字串屬性中選取字串值的允許/拒絕的集合成員。  
   
 ## <a name="example"></a>範例  
- 下列查詢會顯示計算量值中**CustomData**函數所傳回的值：  
+ 下列查詢會顯示計算量值中 **CustomData** 函數所傳回的值：  
   
 ```  
 WITH MEMBER [Measures].CUSTOMDATADEMO AS CUSTOMDATA()  

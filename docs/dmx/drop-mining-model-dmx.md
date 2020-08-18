@@ -1,5 +1,6 @@
 ---
-title: 卸載採礦模型（DMX） |Microsoft Docs
+description: DROP MINING MODEL (DMX)
+title: 捨棄 (DMX) 的採礦模型 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e2a4a4a1905e3d3ac742b1985a762e08f27f6338
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: e95390c8014835862fa5ce9b65291bb4a7c1b107
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969772"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413375"
 ---
 # <a name="drop-mining-model-dmx"></a>DROP MINING MODEL (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

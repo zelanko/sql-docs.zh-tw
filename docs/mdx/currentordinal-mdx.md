@@ -1,5 +1,6 @@
 ---
-title: CurrentOrdinal （MDX） |Microsoft Docs
+description: CurrentOrdinal (MDX)
+title: CurrentOrdinal (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 38ac7a3f4c966f9496f5ff9a0855960da8a38fb6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 68119266fd9460a28e036914fce036ec165e553a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68135876"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413154"
 ---
 # <a name="currentordinal-mdx"></a>CurrentOrdinal (MDX)
 
@@ -32,10 +33,10 @@ Set_Expression.CurrentOrdinal
  傳回集合的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- 當逐一查看集合（例如使用[Filter （mdx）](../mdx/filter-mdx.md)或[產生（mdx）](../mdx/generate-mdx.md)函數）時， **CurrentOrdinal**函數會傳回反復專案編號。  
+ 逐一查看集合時，例如 [ (mdx) 的篩選準則 ](../mdx/filter-mdx.md) ，或 [產生 (mdx) ](../mdx/generate-mdx.md) 函數時， **CurrentOrdinal** 函式會傳回反復專案數目。  
   
 ## <a name="examples"></a>範例  
- 下列簡單範例示範如何搭配 [**產生**] 來使用**CurrentOrdinal** ，以傳回字串，其中包含集合中每個專案的名稱，以及其在集合中的位置：  
+ 下列簡單的範例示範如何搭配使用 **CurrentOrdinal** 與 [ **產生** ]，以傳回字串，其中包含集合中每個專案的名稱以及其在集合中的位置：  
   
  `WITH SET MySet AS [Customer].[Customer Geography].[Country].MEMBERS`  
   
@@ -47,7 +48,7 @@ Set_Expression.CurrentOrdinal
   
  `FROM [Adventure Works]`  
   
- CurrentOrdinal 的實際使用限制為非常複雜的計算。 下列範例會傳回唯一的集合中的產品數目，使用**order**函數來排序非空白的元組，然後再利用**篩選**函數。 **CurrentOrdinal**函數是用來比較和消除系結。  
+ CurrentOrdinal 的實際使用限制為非常複雜的計算。 下列範例會使用 **order** 函數來排序非空白的元組，然後再利用 **Filter** 函數，傳回集合中唯一的產品數目。 **CurrentOrdinal**函數是用來比較和消除系結。  
   
 ```  
 WITH MEMBER [Measures].[PrdTies] AS Count  
