@@ -1,4 +1,5 @@
 ---
+description: MERGE (Transact-SQL)
 title: MERGE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/20/2019
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 45401b7deb905931c6204ddd28f13c4212dc977b
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 67e1fe125172b6f273b27d6fcb2cac3d18d0bb2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485159"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88357804"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 

@@ -1,4 +1,5 @@
 ---
+description: REVOKE Service Broker 權限 (Transact-SQL)
 title: REVOKE Service Broker 權限 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 70f1d938-97e2-48a4-9bc0-8be9f2f2c36d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a3794c016c95be48cfe9e740ac22831641db0f3b
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 2d018e710bb272d9daa9eda7099d201b80ea3c1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483549"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88357114"
 ---
 # <a name="revoke-service-broker-permissions-transact-sql"></a>REVOKE Service Broker 權限 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,19 +65,19 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  指定可以在 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 上撤銷的安全性實體權限。 如需這些權限的清單，請參閱本主題稍後的「備註」一節。  
   
- CONTRACT **::** _contract_name_  
+ CONTRACT **::**_contract_name_  
  指定正在撤銷權限的合約。 範圍限定詞 **::** 為必要項目。  
   
- MESSAGE TYPE **::** _message_type_name_  
+ MESSAGE TYPE **::**_message_type_name_  
  指定正在撤銷權限的訊息類型。 範圍限定詞 **::** 為必要項目。  
   
- REMOTE SERVICE BINDING **::** _remote_binding_name_  
+ REMOTE SERVICE BINDING **::**_remote_binding_name_  
  指定正在撤銷權限的遠端服務繫結。 範圍限定詞 **::** 為必要項目。  
   
- ROUTE **::** _route_name_  
+ ROUTE **::**_route_name_  
  指定要撤銷其權限的路由。 範圍限定詞 **::** 為必要項目。  
   
- SERVICE **::** _message_type_name_  
+ SERVICE **::**_message_type_name_  
  指定要撤銷其權限的服務。 範圍限定詞 **::** 為必要項目。  
   
  *database_principal*  

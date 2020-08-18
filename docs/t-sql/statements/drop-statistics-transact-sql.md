@@ -1,4 +1,5 @@
 ---
+description: DROP STATISTICS (Transact-SQL)
 title: DROP STATISTICS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/22/2016
@@ -24,12 +25,12 @@ ms.assetid: 222806b7-4e45-445b-8cd0-bd5461f3ca4a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d10b55c020bcd037f82eb841fba549c17a707992
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 0da570526f14e6055883ce93838c2f2acfa68eac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483946"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88358854"
 ---
 # <a name="drop-statistics-transact-sql"></a>DROP STATISTICS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -77,7 +78,7 @@ DROP STATISTICS [ schema_name . ] table_name.statistics_name
 ### <a name="a-dropping-statistics-from-a-table"></a>A. 從資料表卸除統計資料  
  下列範例會卸除兩份資料表的統計資料群組 (集合)。 `VendorCredit` 資料表的 `Vendor` 統計資料群組 (集合) 和 `CustomerTotal` 資料表的 `SalesOrderHeader` 統計資料 (集合) 都會卸除。  
   
-```  
+```sql  
 -- Create the statistics groups.  
 USE AdventureWorks2012;  
 GO  
@@ -89,18 +90,16 @@ CREATE STATISTICS CustomerTotal
     WITH FULLSCAN;  
 GO  
 DROP STATISTICS Purchasing.Vendor.VendorCredit, Sales.SalesOrderHeader.CustomerTotal;  
-  
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-dropping-statistics-from-a-table"></a>B. 從資料表卸除統計資料  
- 下列範例會從資料表 `CustomerStats1` 卸除 `Customer` 統計資料。  
+ 下列範例會從資料表 `Customer` 卸除 `CustomerStats1` 統計資料。  
   
-```  
+```sql  
 DROP STATISTICS Customer.CustomerStats1;  
 DROP STATISTICS dbo.Customer.CustomerStats1;  
-  
 ```  
   
 ## <a name="see-also"></a>另請參閱  

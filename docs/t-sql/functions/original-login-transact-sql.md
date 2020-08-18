@@ -1,4 +1,5 @@
 ---
+description: ORIGINAL_LOGIN (Transact-SQL)
 title: ORIGINAL_LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: ddfb0991-cde3-4b97-a5b7-ee450133f160
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 04a86234b478ccc27011d7549f3610a031451cf9
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: f2df0bdf310b0096d1bad89d6815ed4dd1aa65bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110378"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88363814"
 ---
 # <a name="original_login-transact-sql"></a>ORIGINAL_LOGIN (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,10 +53,10 @@ ORIGINAL_LOGIN( )
  
   
 ## <a name="examples"></a>範例  
- 下列範例會將目前工作階段的執行內容從陳述式的呼叫端切換到 `login1`。 `SUSER_SNAME` 和 `ORIGINAL_LOGIN` 函數用來傳回目前工作階段使用者 (內容切換後的使用者)，以及原始登入帳戶。{3} 
+ 下列範例會將目前工作階段的執行內容從陳述式的呼叫端切換到 `login1`。  和  函數用來傳回目前工作階段使用者 (內容切換後的使用者)，以及原始登入帳戶。 
  
   >[!NOTE]
-  > 雖然 Azure SQL Database 支援 ORIGINAL_LOGIN 函式，但由於 Azure SQL Database 不支援「以登入身分執行」  ，因此下列指令碼會失敗。 
+  > 雖然 Azure SQL Database 支援 ORIGINAL_LOGIN 函式，但由於 Azure SQL Database 不支援「以登入身分執行」**，因此下列指令碼會失敗。 
   
 ```  
 USE AdventureWorks2012;  

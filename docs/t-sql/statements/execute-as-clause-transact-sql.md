@@ -1,4 +1,5 @@
 ---
+description: EXECUTE AS 子句 (Transact-SQL)
 title: EXECUTE AS 子句 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5ad156a9164d2b59833b3103a8f08b9cbe1ab284
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 999773d8e8406dac20f86e9f19a2b886a4988619
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483708"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88358404"
 ---
 # <a name="execute-as-clause-transact-sql"></a>EXECUTE AS 子句 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -103,7 +104,7 @@ DDL Triggers with Database Scope
  執行內容的使用者識別碼儲存在中繼資料中，可以在 **sys.sql_modules** 或 **sys.assembly_modules** 目錄檢視的 **execute_as_principal_id** 資料行中檢視。  
   
  **'** *login_name* **'**  
- 指定模組內的陳述式，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]login_name*所指定的* 登入內容中執行。 會針對 *login_name* 來驗證模組內任何物件的權限。 *login_name* 只能針對具有伺服器範圍的 DDL 觸發程序或登入觸發程序來指定。  
+ 指定模組內的陳述式，在 *login_name* 所指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入內容中執行。 會針對 *login_name* 來驗證模組內任何物件的權限。 *login_name* 只能針對具有伺服器範圍的 DDL 觸發程序或登入觸發程序來指定。  
   
  *login_name* 不可以是群組、角色、憑證、金鑰或內建帳戶，例如 NT AUTHORITY\LocalService、NT AUTHORITY\NetworkService 或 NT AUTHORITY\LocalSystem。  
   

@@ -1,4 +1,5 @@
 ---
+description: UPDATE STATISTICS (Transact-SQL)
 title: UPDATE STATISTICS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/04/2018
@@ -21,12 +22,12 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4aaa7f1a9c3be4eace2790433678e816c6cee9b1
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 76a5cb5e751249400529aeef059cbc504097f3bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484460"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88356714"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -214,23 +215,23 @@ EXEC sp_updatestats;
  PDW / SQL 資料倉儲不支援下列語法  
   
 ```syntaxsql
-update statistics t1 (a,b);   
+UPDATE STATISTICS t1 (a,b);   
 ```  
   
 ```sql  
-update statistics t1 (a) with sample 10 rows;  
+UPDATE STATISTICS t1 (a) WITH SAMPLE 10 ROWS;  
 ```  
   
 ```sql  
-update statistics t1 (a) with NORECOMPUTE;  
+UPDATE STATISTICS t1 (a) WITH NORECOMPUTE;  
 ```  
   
 ```sql  
-update statistics t1 (a) with INCREMENTAL=ON;  
+UPDATE STATISTICS t1 (a) WITH INCREMENTAL = ON;  
 ```  
   
 ```sql  
-update statistics t1 (a) with stats_stream = 0x01;  
+UPDATE STATISTICS t1 (a) WITH stats_stream = 0x01;  
 ```  
   
 ## <a name="permissions"></a>權限  

@@ -1,4 +1,5 @@
 ---
+description: RECEIVE (Transact-SQL)
 title: RECEIVE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 45ad55bdf67be6dae67a69994320f9cf282a7beb
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: ab5a7dc7dd87c518a070b123145acad020efeb89
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485414"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88357344"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -99,10 +100,10 @@ ms.locfileid: "86485414"
  指定所接收之訊息的交談或交談群組。 如果忽略這個值，便從下一個可用的交談群組傳回訊息。  
   
  conversation_handle = *conversation_handle*  
- 指定所接收之訊息的交談。 您提供的「交談控制代碼」  必須為 **uniqueidentifier**，或可轉換為 **uniqueidentifier** 的類型。  
+ 指定所接收之訊息的交談。 您提供的「交談控制代碼」** 必須為 **uniqueidentifier**，或可轉換為 **uniqueidentifier** 的類型。  
   
  conversation_group_id = *conversation_group_id*  
- 指定接收的訊息之交談群組。 您提供的「交談群組識別碼」  必須為 **uniqueidentifier**，或可轉換為 **uniqueidentifier** 的類型。  
+ 指定接收的訊息之交談群組。 您提供的「交談群組識別碼」** 必須為 **uniqueidentifier**，或可轉換為 **uniqueidentifier** 的類型。  
   
  TIMEOUT *timeout*  
  指定陳述式等候訊息的時間 (以毫秒為單位)。 這個子句只適用於 WAITFOR 子句。 如果未指定這個子句，或逾時為 -**1**，等候時間便沒有限制。 如果等候時間逾時，RECEIVE 會傳回空的結果集。  

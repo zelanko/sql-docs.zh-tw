@@ -1,4 +1,5 @@
 ---
+description: STRING_AGG (Transact-SQL)
 title: STRING_AGG (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/19/2017
@@ -16,12 +17,12 @@ ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f7b87c06324bf168c9dce7441f14c78d89833f24
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 3b8a92c7776251547934799b68f3dc6cf7ada2b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111315"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88362494"
 ---
 # <a name="string_agg-transact-sql"></a>STRING_AGG (Transact-SQL)
 
@@ -50,7 +51,7 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
 這是任何類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 在串連期間，運算式會轉換成 `NVARCHAR` 或 `VARCHAR` 類型。 非字串類型會轉換成 `NVARCHAR` 類型。
 
 *separator*  
-這是 [ 或 ](../../t-sql/language-elements/expressions-transact-sql.md) 類型的`NVARCHAR`運算式`VARCHAR`，用來作為串連字串的分隔符號。 這可以是常值或變數。 
+這是 `NVARCHAR` 或 `VARCHAR` 類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，用來作為串連字串的分隔符號。 這可以是常值或變數。 
 
 <order_clause>   
 選擇性地使用 `WITHIN GROUP` 子句指定串連結果的順序：
@@ -101,11 +102,11 @@ FROM Person.Person;
 |--- |
 |Syed <br />Catherine <br />Kim <br />Kim <br />Kim <br />Hazem <br />... | 
 
-在 `NULL` 資料格中找到的 `name` 值不會在結果中傳回。   
+在 `name` 資料格中找到的 `NULL` 值不會在結果中傳回。   
 
 > [!NOTE]  
-> 如果使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢編輯器，[以方格顯示結果]  選項將無法實作歸位字元。 請切換至 [以文字顯示結果]  以正確地查看結果集。       
-> 根據預設，[以文字顯示結果] 會截斷為 256 個字元。 若要增加此限制，請變更 [每個資料行中顯示的最大字元數]  選項。
+> 如果使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢編輯器，[以方格顯示結果] 選項將無法實作歸位字元。 請切換至 [以文字顯示結果]**** 以正確地查看結果集。       
+> 根據預設，[以文字顯示結果] 會截斷為 256 個字元。 若要增加此限制，請變更 [每個資料行中顯示的最大字元數] 選項。
 
 ### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>B. 產生以逗號分隔且不含 NULL 值的名稱清單
 
@@ -144,7 +145,7 @@ FROM Person.Person;
 |Ken Sánchez (Feb  8 2003 12:00AM) <br />Terri Duffy (Feb 24 2002 12:00AM) <br />Roberto Tamburello (Dec  5 2001 12:00AM) <br />Rob Walters (Dec 29 2001 12:00AM) <br />... |
 
 > [!NOTE]  
-> 如果使用 Management Studio 查詢編輯器，[以方格顯示結果]  選項將無法實作歸位字元。 請切換至 [以文字顯示結果]  以正確地查看結果集。
+> 如果使用 Management Studio 查詢編輯器，[以方格顯示結果]**** 選項將無法實作歸位字元。 請切換至 [以文字顯示結果]**** 以正確地查看結果集。
 
 ### <a name="d-return-news-articles-with-related-tags"></a>D. 傳回具有相關標籤的新聞文章
 
@@ -167,7 +168,7 @@ GROUP BY a.articleId, title;
 |177 |Dogs continue to be more popular than cats |polls,animals|
 
 > [!NOTE]
-> 若 `GROUP BY` 函式不是 `STRING_AGG` 清單中的唯一項目，則 `SELECT` 子句為必要項目。
+> 若 `STRING_AGG` 函式不是 `SELECT` 清單中的唯一項目，則 `GROUP BY` 子句為必要項目。
 
 ### <a name="e-generate-list-of-emails-per-towns"></a>E. 產生每個鄉鎮的電子郵件清單
 
@@ -189,7 +190,7 @@ GROUP BY City;
 > [!NOTE]
 > 會顯示修剪過的結果。
 
-|City |電子郵件 |
+|城市 |電子郵件 |
 |--- |--- |
 |Ballard|paige28@adventure-works.com;joshua24@adventure-works.com;javier12@adventure-works.com;...|
 |Baltimore|gilbert9@adventure-works.com|
@@ -223,7 +224,7 @@ GROUP BY City;
 > [!NOTE]
 > 會顯示修剪過的結果。
 
-|City |電子郵件 |
+|城市 |電子郵件 |
 |--- |--- |
 |Barstow|kristen4@adventure-works.com
 |Basingstoke Hants|dale10@adventure-works.com;heidi9@adventure-works.com
@@ -247,6 +248,6 @@ GROUP BY City;
  [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
  [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
- [彙總函式 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+ [彙總函數 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
  [字串函數 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
 

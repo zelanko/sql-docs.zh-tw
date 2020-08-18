@@ -1,4 +1,5 @@
 ---
+description: 運算子 (Transact-SQL)
 title: 運算子 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1fc2de8b-e7e0-4c61-9a02-4776a7d93ab7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 11b59274b87802929d51c1adb9352358b9fbf413
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 198d6b6e12bc48420da80cde62492dad27e708cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395868"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88360834"
 ---
 # <a name="operators-transact-sql"></a>運算子 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

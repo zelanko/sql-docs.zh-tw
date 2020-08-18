@@ -1,4 +1,5 @@
 ---
+description: 以程式設計方式儲存封裝
 title: 以程式設計方式儲存套件 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4204f817-d5df-475a-9338-d7f01305d566
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3630bbebf5c86b0e839fe51735cba4fb71763b8a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4ce0606f8d63015be37b5230a47cb66c82cf1a20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922698"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88352104"
 ---
 # <a name="saving-a-package-programmatically"></a>以程式設計方式儲存封裝
 
@@ -42,6 +43,6 @@ ms.locfileid: "86922698"
 >  用以搭配 SSIS 封裝存放區使用的 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 類別之方法，僅支援 "." 或是本機伺服器的伺服器名稱。 您無法使用 "(本機)" 或者"localhost"。  
   
 ## <a name="see-also"></a>另請參閱  
- [儲存套件](../../integration-services/save-packages.md)  
+ [儲存封裝](../../integration-services/save-packages.md)  
   
   

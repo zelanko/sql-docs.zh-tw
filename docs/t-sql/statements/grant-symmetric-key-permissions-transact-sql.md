@@ -1,4 +1,5 @@
 ---
+description: GRANT 對稱金鑰權限 (Transact-SQL)
 title: GRANT 對稱金鑰權限 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5c61557f-67ae-4e55-b86d-713575b27cea
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1c8c5bdcd35de844bce5cb93647452b92621d9e2
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: e9a9656d9e9b353bb66b93d58e226c052123c4b7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485429"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88358184"
 ---
 # <a name="grant-symmetric-key-permissions-transact-sql"></a>GRANT 對稱金鑰權限 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -68,7 +69,7 @@ GRANT permission [ ,...n ]
  WITH GRANT OPTION  
  指出主體也有權授與指定權限給其他主體。  
   
- AS \<database_principal> 指定主體，執行此查詢其主體會從這個主體衍生權限來授與權限的權。  
+ AS \<database_principal> 指定主體，執行這項查詢的主體就是從這個主體衍生權利來授與權限。  
   
  *Database_user*  
  指定資料庫使用者。  

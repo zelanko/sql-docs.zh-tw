@@ -1,4 +1,5 @@
 ---
+description: JSON 函式 (Transact-SQL)
 title: JSON 函式 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2020
@@ -12,12 +13,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: c857d57f26c22e0f4eb9346e2925d493ec5e4541
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 06bf0965714c893d5b7684335edbb191e86ee77a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394199"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88364324"
 ---
 # <a name="json-functions-transact-sql"></a>JSON 函式 (Transact-SQL)
 

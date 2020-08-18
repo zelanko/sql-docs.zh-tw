@@ -1,4 +1,5 @@
 ---
+description: 擴充的靜態地理方法
 title: 擴充的靜態地理方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a665a137-197c-4201-a2fb-ba639b5f3ca3
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: de86e2b2b2bb958fcd57999bf8f7984078c3a48a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 227af5db894525c1fe99b2020efa27ed6c2f8ec9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731176"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88360114"
 ---
 # <a name="extended-static-geography-methods"></a>擴充的靜態地理方法
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

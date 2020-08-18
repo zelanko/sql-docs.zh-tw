@@ -1,4 +1,5 @@
 ---
+description: 提示 (Transact-SQL) - Join
 title: 聯結提示 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d809d1ffc7a3408d825589b3d69df12dba81f18e
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 728805a8e4d8bfdbee198f30e26a9228b62b894c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552550"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88360944"
 ---
 # <a name="hints-transact-sql---join"></a>提示 (Transact-SQL) - Join
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

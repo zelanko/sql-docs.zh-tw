@@ -1,4 +1,5 @@
 ---
+description: PATINDEX (Transact-SQL)
 title: PATINDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/19/2016
@@ -22,12 +23,12 @@ ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12f1f710a78c6dcd059fbae5078b0b643296700e
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c4d2ee21a4b2c2975fcead1e883cb28459c608dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111420"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88363374"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +46,7 @@ PATINDEX ( '%pattern%' , expression )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引數
- *pattern*  
+ *模式*  
  這是字元運算式，其中包含要尋找的順序。 此處可以使用萬用字元，但是 *pattern* 前後都必須加上 % 字元 (除非要搜尋第一個或最後一個字元)。 *pattern* 是字元字串資料類型類別目錄的運算式。 *pattern* 限制為 8000 個字元。
 
  > [!NOTE]
@@ -55,7 +56,7 @@ PATINDEX ( '%pattern%' , expression )
  這是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，通常是搜尋指定之模式的資料行。 *expression* 屬於字元字串資料類型類別目錄。  
   
 ## <a name="return-types"></a>傳回型別  
-若 **expression** 的資料類型為 *varchar(max)* 或 **nvarchar(max)** ，則為 **bigint**，否則為 **int**。  
+若 *expression* 的資料類型為 **varchar(max)** 或 **nvarchar(max)**，則為 **bigint**，否則為 **int**。  
   
 ## <a name="remarks"></a>備註  
 如果 *pattern* 或 *expression* 為 NULL，則 PATINDEX 會傳回 NULL。  
@@ -67,12 +68,12 @@ PATINDEX 會以輸入的定序為基礎來執行比較。 若要執行指定定�
 ## <a name="supplementary-characters-surrogate-pairs"></a>補充字元 (Surrogate 字組)  
 使用 SC 定序時，傳回值會將 *expression* 參數中的任何 UTF-16 代理字組計算為單一字元。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
-0x0000 (**char(0)** ) 是 Windows 定序中未定義的字元，而且不得包含在 PATINDEX 中。  
+0x0000 (**char(0)**) 是 Windows 定序中未定義的字元，而且不得包含在 PATINDEX 中。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-simple-patindex-example"></a>A. 簡單的 PATINDEX 範例  
- 下例範例會檢查 `interesting data`字元開頭位置的短字元字串 (`ter`)。  
+ 下例範例會檢查 `ter`字元開頭位置的短字元字串 (`interesting data`)。  
   
 ```sql  
 SELECT position = PATINDEX('%ter%', 'interesting data');  
@@ -87,7 +88,7 @@ position
 ```
   
 ### <a name="b-using-a-pattern-with-patindex"></a>B. 搭配 PATINDEX 使用模式  
-下列範例會尋找 `ensure` 模式在 `DocumentSummary` 資料庫之 `Document` 資料表中 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料行之特定資料列中的起始位置。  
+下列範例會尋找 `ensure` 模式在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫之 `DocumentSummary` 資料表中 `Document` 資料行之特定資料列中的起始位置。  
   
 ```sql  
 SELECT position = PATINDEX('%ensure%',DocumentSummary)  

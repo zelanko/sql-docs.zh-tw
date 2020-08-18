@@ -1,4 +1,5 @@
 ---
+description: PERCENT_RANK (Transact-SQL)
 title: PERCENT_RANK (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2015
@@ -19,12 +20,12 @@ ms.assetid: e361c2d4-c01f-4da4-8e89-1ddc724a2629
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2a8e5ef888ef0fc8adbbef961321083b9f6ac33
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 36f8d4e87ad6e3b92f71ae45dab6e7020c9d8c72
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522970"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88363044"
 ---
 # <a name="percent_rank-transact-sql"></a>PERCENT_RANK (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

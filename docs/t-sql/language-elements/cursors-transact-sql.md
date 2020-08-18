@@ -1,4 +1,5 @@
 ---
+description: 資料指標 (Transact-SQL)
 title: 資料指標 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 63000023-54fc-4efc-a30f-fb4d4db73aae
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25ed0a2ce97310389f53238e81f16ab8b1482b3a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: edfa870dd6f2f21f6d2bfdd122365c9913dc342a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706540"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88361054"
 ---
 # <a name="cursors-transact-sql"></a>資料指標 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -67,6 +68,6 @@ ms.locfileid: "85706540"
  [sp_describe_cursor_tables](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [資料指標](../../relational-databases/cursors.md)  
+ [游標](../../relational-databases/cursors.md)  
   
   

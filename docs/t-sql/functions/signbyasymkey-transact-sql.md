@@ -1,4 +1,5 @@
 ---
+description: SIGNBYASYMKEY (Transact-SQL)
 title: SIGNBYASYMKEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: b1c46159-cc76-4205-a841-8f4a71742f80
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 44bdf92723ed68b4b79e5b6dd5825d9b9e3a7907
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e39fe276442feec54f7dc87bba65fde0381c82b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111358"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88362604"
 ---
 # <a name="signbyasymkey-transact-sql"></a>SIGNBYASYMKEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +55,7 @@ SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )
  為 **nvarchar**、**char**、**varchar** 或 **nchar** 類型的變數，其中包含要以非對稱金鑰簽署的資料。  
   
  *password*  
- 為用來保護私密金鑰的密碼。 *password* 為 **nvarchar(128)** 。  
+ 為用來保護私密金鑰的密碼。 *password* 為 **nvarchar(128)**。  
   
 ## <a name="return-types"></a>傳回型別  
  **varbinary**，大小上限為 8,000 位元組。  

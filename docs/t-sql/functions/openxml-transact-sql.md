@@ -1,4 +1,5 @@
 ---
+description: OPENXML (Transact-SQL)
 title: OPENXML (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2018
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: ca8ececca1e40762aa386ba05a53bdf8a1932090
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: f081b224d80537943946b5d4e31eff43bbf88de1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112398"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88363634"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -61,7 +62,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**8**|可以和 XML_ATTRIBUTES 或 XML_ELEMENTS 合併使用 (邏輯 OR)。 在擷取的內容中，此標幟會指出所取用的資料不應複製到溢位屬性 **\@mp:xmltext**。|  
   
  _SchemaDeclaration_  
- 這是表單的結構描述定義：_ColName_*ColType* [_ColPattern_ | _MetaProperty_] [ **,** _ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
+ 這是表單的結構描述定義：_ColName_*ColType* [_ColPattern_ | _MetaProperty_] [**,**_ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
   
  _ColName_  
  這是資料列集中的資料行名稱。  
@@ -70,7 +71,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  這是資料列集中資料行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。 如果資料行類型與屬性的基礎 **xml** 資料類型不同，則會發生強制型轉。  
   
  *ColPattern*  
- 這是描述 XML 節點應該如何對應到資料行的選擇性、一般 XPath 模式。 若未指定 *ColPattern*，則會發生預設對應 (**flags** 指定的**屬性中心**或*項目中心*對應)。  
+ 這是描述 XML 節點應該如何對應到資料行的選擇性、一般 XPath 模式。 若未指定 *ColPattern*，則會發生預設對應 (*flags* 指定的**屬性中心**或**項目中心**對應)。  
   
  作為指定為 *ColPattern* 之 XPath 模式會用於指定對應的特殊性質 (針對**屬性中心**和**項目中心**對應)，覆寫或增強 *flags* 指出的預設對應。  
   
@@ -104,7 +105,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 ### <a name="a-using-a-simple-select-statement-with-openxml"></a>A. 以 OPENXML 使用簡單的 SELECT 陳述式  
  下列範例會使用 `sp_xml_preparedocument` 來建立 XML 影像的內部表示法。 然後對 XML 文件的內部表示法執行使用 `SELECT` 資料列集提供者的 `OPENXML` 陳述式。  
   
- *flag* 值是設為 `1`。 此值指出**屬性中心**對應。 因此 XML 屬性是對應到資料列集中的資料行。 指定為 *的*rowpattern`/ROOT/Customer` 會識別要處理的 `<Customers>` 節點。  
+ *flag* 值是設為 `1`。 此值指出**屬性中心**對應。 因此 XML 屬性是對應到資料列集中的資料行。 指定為 `/ROOT/Customer` 的 *rowpattern* 會識別要處理的 `<Customers>` 節點。  
   
  此處並未指定選擇性的 *ColPattern* (資料行模式) 參數，因為資料行名稱與 XML 屬性名稱相符。  
   
@@ -145,7 +146,7 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- 如果相同的 `SELECT` 陳述式是以 「旗標」  設為 `2` 的方式 (表示**項目中心**對應) 來執行，則 XML 文件中兩個客戶的 `CustomerID` 及 `ContactName` 值都會以 NULL 傳回，因為 XML 文件中沒有任何名為 `CustomerID` 或 `ContactName` 的項目。  
+ 如果相同的 `SELECT` 陳述式是以 「旗標」** 設為 `2` 的方式 (表示**項目中心**對應) 來執行，則 XML 文件中兩個客戶的 `CustomerID` 及 `ContactName` 值都會以 NULL 傳回，因為 XML 文件中沒有任何名為 `CustomerID` 或 `ContactName` 的項目。  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
@@ -163,7 +164,7 @@ NULL       NULL
   
 -   資料列集中的 `OrderID`、`CustomerID` 和 `OrderDate` 會對應到由 XML 文件中 *rowpattern* 所識別節點之父系的屬性。  
   
--   資料列集中的 `ProdID` 資料行會對應到 `ProductID` 屬性，而資料列集中的 `Qty` 資料行則會對應到 `Quantity`rowpattern*中所識別之節點的* 屬性。  
+-   資料列集中的 `ProdID` 資料行會對應到 `ProductID` 屬性，而資料列集中的 `Qty` 資料行則會對應到 *rowpattern* 中所識別之節點的 `Quantity` 屬性。  
   
  雖然**以元素為主**的對應是由 *flags* 參數所指定，但是在 *ColPattern* 中指定的對應會覆寫這個對應。  
   

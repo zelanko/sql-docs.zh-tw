@@ -1,4 +1,5 @@
 ---
+description: JSON_VALUE (Transact-SQL)
 title: JSON_VALUE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2020
@@ -17,12 +18,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 066ad2fde09d0e3f108c88cbe4fa6fe74882da03
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: f22175349162bac226d41f63ca66743de0668b6e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395674"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88364414"
 ---
 # <a name="json_value-transact-sql"></a>JSON_VALUE (Transact-SQL)
 
@@ -40,8 +41,6 @@ ms.locfileid: "87395674"
 JSON_VALUE ( expression , path )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## <a name="arguments"></a>引數
 
  *expression*  
@@ -107,7 +106,7 @@ SET @jsonInfo=N'{
 ## <a name="examples"></a>範例  
   
 ### <a name="example-1"></a>範例 1
- 下列範例會使用查詢結果中 `town` 和 `state` 的 JSON 屬性值。 由於 **JSON_VALUE** 會保留來源的定序，因此結果的排序次序取決於 `jsonInfo` 資料行定序而定 
+ 下列範例會使用查詢結果中 `town` 和 `state` 的 JSON 屬性值。 由於 **JSON_VALUE** 會保留來源的定序，因此結果的排序次序取決於 `jsonInfo` 資料行定序而定  
 
 > [!NOTE]
 > (這個範例假設一個名為 `Person.Person` 的資料表，其中包含 JSON 文字的 `jsonInfo` 資料行，且該資料行的結構如先前 lax 模式和 strict 模式的說明中所示。 在 AdventureWorks 範例資料庫中，`Person` 資料表實際上不包含 `jsonInfo` 資料行)。
@@ -147,7 +146,7 @@ CREATE TABLE dbo.Store
  )
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
  [JSON 路徑運算式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [JSON 資料 &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
   

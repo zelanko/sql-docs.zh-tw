@@ -1,4 +1,5 @@
 ---
+description: Version - Transact SQL 中繼資料函式
 title: VERSION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -13,12 +14,12 @@ ms.assetid: 95a79b33-98f2-4929-a1a5-93b522a9e152
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 360ac0905f452bedd5eeaf4691ccbbf3baedb89e
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 82ae0f0b2ef46cf1082d5d0fe7fc064e3c538ee8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197003"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88361584"
 ---
 # <a name="version---transact-sql-metadata-functions"></a>Version - Transact SQL 中繼資料函式
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: Integration Services (SSIS) 伺服器與目錄
 title: Integration Services (SSIS) 伺服器與目錄 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 37acf59a44c561e43f6c1dc6dbcb4f26cd06918e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 99ea39318e06ba7fbaa6cf3e1147382bb1184a83
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922614"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88351844"
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Integration Services (SSIS) 伺服器與目錄
 
@@ -53,7 +54,7 @@ ms.locfileid: "86922614"
   
 ## <a name="related-tasks"></a>相關工作  
   
--   [檢視 Integration Services 伺服器上的套件清單](../../integration-services/catalog/view-the-list-of-packages-on-the-integration-services-server.md)  
+-   [檢視 Integration Services 伺服器上的封裝清單](../../integration-services/catalog/view-the-list-of-packages-on-the-integration-services-server.md)  
   
 -   [部署 Integration Services (SSIS) 專案和套件](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)  
   
