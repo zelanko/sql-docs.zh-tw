@@ -1,5 +1,6 @@
 ---
-title: StrToValue （MDX） |Microsoft Docs
+description: StrToValue (MDX)
+title: StrToValue (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cad8fec605a56a60cfcc7024739225e474fd42f8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 200de3b42f522b77bae0b5037761a00da977176e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036695"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386744"
 ---
 # <a name="strtovalue-mdx"></a>StrToValue (MDX)
 
 
-  傳回由多維度運算式（MDX）格式化字串所指定的數值。  
+  傳回多維度運算式指定的數值， (MDX) 格式的字串。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,7 +33,7 @@ StrToValue(MDX_Expression [,CONSTRAINED] )
  直接或間接解析成單一資料格的有效字串運算式。  
   
 ## <a name="remarks"></a>備註  
- **StrToValue**函數會傳回 MDX 運算式所指定的數值。 **StrToValue**函數通常會搭配使用者自訂函數使用，將來自外部函數的 mdx 運算式傳回給可以解析成單一資料格的 mdx 語句。  
+ **StrToValue**函數會傳回 MDX 運算式所指定的數值。 **StrToValue**函數通常會搭配使用者自訂函數使用，將來自外部函數的 mdx 運算式傳回給可解析成單一資料格的 mdx 語句。  
   
 -   使用 CONSTRAINED 旗標時，MDX 運算式只能包含純量值。 CONSTRAINED 旗標是用來降低由指定字串發動資料隱碼攻擊的風險。 如果所提供的 MDX 運算式不能直接解析成純量值，會出現下列錯誤：「違反了 STRTOVALUE 函數中 CONSTRAINED 旗標所加諸的限制。」  
   
@@ -42,7 +43,7 @@ StrToValue(MDX_Expression [,CONSTRAINED] )
 >  如果值是儲存成文字，並且您要在傳回值上執行算術運算時，傳回 MDX 運算式的結果做為數值會很有用。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用**StrToValue**函數，將每個自行車的權數當做值傳回。  
+ 下列範例會使用 **StrToValue** 函式來傳回每個自行車的加權作為值。  
   
 ```  
 WITH MEMBER Measures.x AS   
