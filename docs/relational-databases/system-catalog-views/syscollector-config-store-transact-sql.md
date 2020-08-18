@@ -1,5 +1,6 @@
 ---
-title: syscollector_config_store （Transact-sql） |Microsoft Docs
+description: syscollector_config_store (Transact-SQL)
+title: syscollector_config_store (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ccdb22362e8e52fe58aca8b7430d5329400a4908
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 339bbba2335512c582251f960224baae15513618
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896742"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88399784"
 ---
 # <a name="syscollector_config_store-transact-sql"></a>syscollector_config_store (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   傳回套用至整個資料收集器 (而非收集集合執行個體) 的屬性。 這個檢視中的每個資料列都會描述特定資料收集器屬性，例如管理資料倉儲的名稱，以及管理資料倉儲所在的執行個體名稱。  
   
-|資料行名稱|資料類型|說明|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |parameter_name|**nvarchar(128)**|屬性的名稱。 不可為 Null。|  
 |parameter_value|**sql_variant**|屬性的實際值。 可為 Null。|  
@@ -44,7 +45,7 @@ ms.locfileid: "85896742"
 |屬性名稱|描述|  
 |-------------------|-----------------|  
 |CacheDirectory|收集器類型封裝在檔案系統中儲存暫存資訊的目錄名稱。<br /><br /> NULL = 使用預設的暫存 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目錄。|  
-|CacheWindow|指出失敗的資料上傳的快取目錄資料保留原則。<br /><br /> -1 = 保留所有上傳失敗的資料。<br /><br /> 0 = 不要保留任何上傳失敗的資料。<br /><br /> *n* = 保留*n*先前上一次上傳失敗的資料，其中*n* >= 1。<br /><br /> 您可以使用 sp_syscollector_set_cache_window 預存程序來變更此值。|  
+|CacheWindow|指出失敗的資料上傳的快取目錄資料保留原則。<br /><br /> -1 = 保留所有上傳失敗的資料。<br /><br /> 0 = 不要保留任何上傳失敗的資料。<br /><br /> *n* = 保留前 *n* 次上傳失敗的資料，其中 *n* >= 1。<br /><br /> 您可以使用 sp_syscollector_set_cache_window 預存程序來變更此值。|  
 |CollectorEnabled|指出資料收集器的狀態。<br /><br /> 0 = 已停用<br /><br /> 1 = 已啟用<br /><br /> 您可以使用 sp_syscollector_enable_collector 或 sp_syscollector_disable_collector 預存程序來變更此值。|  
 |MDWDatabase|管理資料倉儲的名稱。 您可以使用 sp_syscollector_set_warehouse_database_name 預存程序來變更此值。|  
 |MDWInstance|管理資料倉儲之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 您可以使用 sp_syscollector_set_warehouse_instance_name 預存程序來變更此值。|  
@@ -58,11 +59,11 @@ FROM msdb.dbo.syscollector_config_store;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的資料收集器預存程式](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [&#40;Transact-sql&#41;的資料收集器視圖](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
+ [資料收集器預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的資料收集器視圖 ](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [資料收集](../../relational-databases/data-collection/data-collection.md)   
- [sp_syscollector_enable_collector &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)   
- [sp_syscollector_disable_collector &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
+ [sp_syscollector_enable_collector &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)   
+ [sp_syscollector_disable_collector &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
  [sp_syscollector_set_warehouse_database_name &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-database-name-transact-sql.md)   
  [sp_syscollector_set_warehouse_instance_name &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-instance-name-transact-sql.md)   
  [sp_syscollector_set_cache_window &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)  

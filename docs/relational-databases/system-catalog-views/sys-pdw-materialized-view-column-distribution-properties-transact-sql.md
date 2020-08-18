@@ -1,5 +1,6 @@
 ---
-title: sys.databases pdw_materialized_view_column_distribution_properties （Transact-sql）
+description: 'sys. pdw_materialized_view_column_distribution_properties (Transact-sql) '
+title: 'sys. pdw_materialized_view_column_distribution_properties (Transact-sql) '
 ms.custom: seo-dt-2019
 ms.date: 07/03/2019
 ms.prod: sql
@@ -12,24 +13,24 @@ ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 5d5bc07ec3d00ec486d219aaab8980647c6ebfa7
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 2e881f982f3fba0e2af1ea977c2b18531fbad88f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394113"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88400284"
 ---
-# <a name="syspdw_materialized_view_column_distribution_properties-transact-sql"></a>sys.databases pdw_materialized_view_column_distribution_properties （Transact-sql） 
+# <a name="syspdw_materialized_view_column_distribution_properties-transact-sql"></a>sys. pdw_materialized_view_column_distribution_properties (Transact-sql)  
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-在具體化視圖中顯示資料行的散發資訊。  
+顯示具體化視圖中資料行的散發資訊。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|資料行所屬物件的識別碼。 |  
 |column_id|**int**|資料行的識別碼。|  
-|distribution_ordinal|**tinyint**|0 = 不是散發資料行。</br> 1 = SQL 資料倉儲使用這個資料行來散發具體化視圖。|
+|distribution_ordinal|**tinyint**|0 = 不是散發資料行。</br> 1 = SQL 資料倉儲會使用此資料行來散發具體化視圖。|
  
 ## <a name="permissions"></a>權限 
 
@@ -37,7 +38,7 @@ ms.locfileid: "87394113"
 
 ## <a name="see-also"></a>另請參閱
 
-[使用具體化視圖進行效能微調](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
+[使用具體化 View 進行效能微調](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
 [CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   
 [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   
 [說明 &#40;Transact-sql&#41;](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   

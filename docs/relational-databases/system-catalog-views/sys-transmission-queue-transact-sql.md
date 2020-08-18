@@ -1,5 +1,6 @@
 ---
-title: sys.databases transmission_queue （Transact-sql） |Microsoft Docs
+description: sys.transmission_queue (Transact-SQL)
+title: sys. transmission_queue (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f3515d1a-be8f-4a27-8058-8865f0919838
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 775dde0940802962cfdae09c55749fec751d5b6c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9e3fbd63f399b54af919fd791f33e5d6f7b75a93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897713"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88400294"
 ---
 # <a name="systransmission_queue-transact-sql"></a>sys.transmission_queue (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,5 +1,6 @@
 ---
-title: sys.sys語言（Transact-sql） |Microsoft Docs
+description: sys.syslanguages (Transact-SQL)
+title: sys.sys語言 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,11 +22,12 @@ ms.assetid: f216d1cd-997c-42f0-a737-abbdfcd88383
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62491475c51fcfc879415bb53f3d5cb08447a427
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e5a5cde7f76b77c0c6f06da61227350b7649373e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012199"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88399764"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -85,7 +87,7 @@ ms.locfileid: "86012199"
 |泰文|1054|1054|  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的相容性檢視](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
- [將系統資料表對應至系統檢視 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
+ [&#40;Transact-sql&#41;的相容性檢視 ](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;將系統資料表對應至系統檢視 ](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

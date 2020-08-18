@@ -1,5 +1,6 @@
 ---
-title: sys.xml_indexes （Transact-sql） |Microsoft Docs
+description: sys.xml_indexes (Transact-SQL)
+title: sys.xml_indexes (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3408de72-b067-4fda-b5d5-8e856dfd9db3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d4d0b42472bdaf8d634dd75d9bb8ca8bcd5a1847
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2dcbefc1a9ea50841a7807002e31d236130eb038
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896776"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88400404"
 ---
 # <a name="sysxml_indexes-transact-sql"></a>sys.xml_indexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,9 +34,9 @@ ms.locfileid: "85896776"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**\<inherited columns>**||從[sys.databases](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)繼承資料行。|  
+|**\<inherited columns>**||從 [sys. 索引](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)繼承資料行。|  
 |**using_xml_index_id**|**int**|NULL = 主要 XML 索引。<br /><br /> 非 Null = 次要 XML 索引。<br /><br /> 非 Null 是主要 XML 索引的自我聯結參考。|  
-|**secondary_type**|**char （1）**|輸入次要索引的描述：<br /><br /> P = PATH 次要 XML 索引<br /><br /> V = VALUE 次要 XML 索引<br /><br /> R = PROPERTY 次要 XML 索引<br /><br /> NULL = 主要 XML 索引|  
+|**secondary_type**|**char (1) **|輸入次要索引的描述：<br /><br /> P = PATH 次要 XML 索引<br /><br /> V = VALUE 次要 XML 索引<br /><br /> R = PROPERTY 次要 XML 索引<br /><br /> NULL = 主要 XML 索引|  
 |**secondary_type_desc**|**nvarchar(60)**|輸入次要索引的描述：<br /><br /> PATH = PATH 次要 XML 索引<br /><br /> VALUE = VALUE 次要 XML 索引<br /><br /> PROPERTY = PROPERTY 次要 XML 索引。<br /><br /> NULL = 主要 XML 索引|  
 |**xml_index_type**|**tinyint**|索引類型：<br /><br /> 0 = 主要 XML 索引<br /><br /> 1 = 次要 XML 索引<br /><br /> 2 = 選擇性 XML 索引<br /><br /> 3 = 次要選擇性 XML 索引|  
 |**xml_index_type_description**|**nvarchar(60)**|索引類型的描述：<br /><br /> PRIMARY_XML<br /><br /> 次要 XML 索引<br /><br /> 選擇性 XML 索引<br /><br /> 次要選擇性 XML 索引|  
@@ -45,7 +46,7 @@ ms.locfileid: "85896776"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [物件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
   
   
