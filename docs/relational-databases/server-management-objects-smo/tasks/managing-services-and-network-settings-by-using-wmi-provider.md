@@ -1,4 +1,5 @@
 ---
+description: 使用 WMI 提供者管理服務和網路設定
 title: 使用 WMI 提供者管理服務和網路設定
 ms.custom: seo-dt-2019
 ms.date: 08/06/2017
@@ -16,11 +17,12 @@ ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83c0d3894958af7e199632903c93af11e9ddd8ea
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9c6021e6867272d865f0b1c5b95852c55929880e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998028"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88403704"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>使用 WMI 提供者管理服務和網路設定
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -30,7 +32,7 @@ ms.locfileid: "85998028"
  <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 物件可獨立操作，不受使用 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體所建立連接的影響，並會使用 Windows 認證連接到 WMI 服務。  
   
 ## <a name="example"></a>範例  
-如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱 [Visual Studio .NET 中的建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
 
   
  如果程式使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] WMI 提供者，則您必須包含 **Imports** 陳述式來限定 WMI 命名空間。 將陳述式插入至其他 **Imports** 陳述式之後、在應用程式中的任何宣告之前，例如：  

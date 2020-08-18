@@ -1,4 +1,5 @@
 ---
+description: 建立、改變和移除外部索引鍵
 title: 建立、改變和移除外部索引鍵
 ms.custom: seo-dt-2019
 ms.date: 08/06/2017
@@ -13,23 +14,24 @@ ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 04d0980f880ecca7ec21c3c8d41f009972df2798
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d0bb2d2e7ae8b5c36cf8535cd27e5164dc2113ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001327"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88404024"
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>建立、改變和移除外部索引鍵
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理物件 (SMO) 中，外部索引鍵是由 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> 物件表示。  
   
- 若要在 SMO 中建立外部索引鍵，您必須在 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> 物件的建構函式中，指定會在其上定義外部索引鍵的資料表。 您必須從該資料表至少選取一個資料行做為外部索引鍵。 若要進行這項作業，請建立 <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> 物件變數，並指定做為外部索引鍵之資料行的名稱。 然後，指定參考的資料表和參考的資料行。 使用 <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A> 方法，即可將資料行加入至**Columns**物件屬性。  
+ 若要在 SMO 中建立外部索引鍵，您必須在 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> 物件的建構函式中，指定會在其上定義外部索引鍵的資料表。 您必須從該資料表至少選取一個資料行做為外部索引鍵。 若要進行這項作業，請建立 <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> 物件變數，並指定做為外部索引鍵之資料行的名稱。 然後，指定參考的資料表和參考的資料行。 您 <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A> 可以使用方法，將資料行加入至 [資料 **行** ] 物件屬性。  
   
- 代表外鍵的資料行會列在物件的**columns**物件屬性中 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> 。 外部索引鍵所參考的主要金鑰是由 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> 屬性表示，該屬性位於 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A> 屬性所指定的資料表。  
+ 表示外鍵的資料行會列在物件的 [資料 **行** ] 物件屬性中 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> 。 外部索引鍵所參考的主要金鑰是由 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> 屬性表示，該屬性位於 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A> 屬性所指定的資料表。  
   
 ## <a name="example"></a>範例  
- 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱 [Visual Studio .NET 中的建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-altering-and-removing-a-foreign-key-in-visual-basic"></a>在 Visual Basic 中建立、改變和移除外部索引鍵  
  此程式碼範例示範如何在某個資料表的一個或多個資料行以及另一個資料表的主要索引鍵資料行之間，建立外部索引鍵關聯性。  

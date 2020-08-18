@@ -1,4 +1,5 @@
 ---
+description: 管理使用者、角色和登入
 title: 管理使用者、角色和登入
 ms.custom: seo-dt-2019
 ms.date: 08/06/2017
@@ -15,11 +16,12 @@ ms.assetid: 74e411fa-74ed-49ec-ab58-68c250f2280e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7326e0379fe0a62f2f6369e87d9e28f1d90ced2a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ca50fbcdaa1f94fbe91210db69613335257986f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005986"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88403384"
 ---
 # <a name="managing-users-roles-and-logins"></a>管理使用者、角色和登入
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -33,7 +35,7 @@ ms.locfileid: "86005986"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫也具有指定資料庫層級權限集的角色，這些權限可以讓使用者執行特定的工作。 與伺服器角色不同的是，資料庫角色不是固定的。 這些角色可以建立、修改和移除。 若要進行大量管理，可以為資料庫角色指派權限和使用者。  
   
 ## <a name="example"></a>範例  
- 在下列的程式碼範例中，您必須選取用於建立應用程式的程式設計環境、程式設計範本和程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 在下列的程式碼範例中，您必須選取用於建立應用程式的程式設計環境、程式設計範本和程式設計語言。 如需詳細資訊，請參閱 [Visual Studio .NET 中的建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="enumerating-logins-and-associated-users-in-visual-c"></a>在 Visual C# 中列舉登入和關聯的使用者  
  資料庫中的每個使用者都與一個登入相關聯。 此登入可以與一個以上資料庫中的使用者產生關聯。 此程式碼範例示範如何呼叫 <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> 物件的 <xref:Microsoft.SqlServer.Management.Smo.Login> 方法來列出與登入相關聯的所有資料庫使用者。 此範例會在 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 資料庫中建立登入和使用者，以確保有可以列舉的對應資訊。  
@@ -89,7 +91,7 @@ foreach ($db in Get-ChildItem)
 ```  
   
 ## <a name="managing-roles-and-users"></a>管理角色和使用者  
- 此範例示範如何管理角色和使用者。 若要執行這個範例，您將需要參考下列元件：  
+ 此範例示範如何管理角色和使用者。 若要執行此範例，您將需要參考下列元件：  
   
 -   Microsoft.SqlServer.Smo.dll  
   

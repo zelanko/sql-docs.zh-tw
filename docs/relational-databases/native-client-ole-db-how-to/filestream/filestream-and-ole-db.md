@@ -1,5 +1,6 @@
 ---
-title: Filestream 和 OLE DB （Native Client OLE DB 提供者） |Microsoft Docs
+description: 'Filestream 和 OLE DB (Native Client OLE DB 提供者) '
+title: Filestream 和 OLE DB (Native Client OLE DB 提供者) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,14 +12,14 @@ ms.assetid: 8801f091-2241-4085-87b7-33e031328c9c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8e44fee28c553e3e6096d98decf7d75557fd81b3
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b15cc00d5fc594d9e038f0db5b2862ea11673187
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247845"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88407314"
 ---
-# <a name="filestream-and-ole-db-native-client-ole-db-provider"></a>Filestream 和 OLE DB （Native Client OLE DB 提供者）
+# <a name="filestream-and-ole-db-native-client-ole-db-provider"></a>Filestream 和 OLE DB (Native Client OLE DB 提供者) 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   本節包含四個範例，這些範例會示範如何使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 搭配 Filestream 功能：  

@@ -1,5 +1,6 @@
 ---
-title: FILESTREAM 到 File、IBCPSession （OLE DB）
+description: '在 SQL Server Native Client (OLE DB 中使用 IBCPSession 將 FILESTREAM 資料行讀取到檔案中) '
+title: 'FILESTREAM 至 File、IBCPSession (OLE DB) '
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -11,19 +12,19 @@ ms.assetid: ab3ce02a-549d-4e01-87b9-d15281fba349
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61136e639b154492e883f145cde8c235551cecb0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 5db0799e5f5b2ed6e708b38969f80f1678eb12c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247817"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88407264"
 ---
-# <a name="read-a-filestream-column-to-file-using-ibcpsession-in-sql-server-native-client-ole-db"></a>在 SQL Server Native Client 中使用 IBCPSession，將 FILESTREAM 資料行讀取到檔案（OLE DB）
+# <a name="read-a-filestream-column-to-file-using-ibcpsession-in-sql-server-native-client-ole-db"></a>在 SQL Server Native Client (OLE DB 中使用 IBCPSession 將 FILESTREAM 資料行讀取到檔案中) 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   此範例會使用 IBCPSession 介面將 Filestream 資料行讀到檔案中，並寫入格式檔案。  
   
- 如需有關 filestream 功能的詳細資訊，請參閱[&#40;OLE DB&#41;的 Filestream 支援](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)。  
+ 如需 filestream 功能的詳細資訊，請參閱 [&#40;OLE DB&#41;的 Filestream 支援 ](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)。  
   
 ## <a name="example"></a>範例  
  請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
