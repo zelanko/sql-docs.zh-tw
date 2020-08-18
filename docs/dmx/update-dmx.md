@@ -1,5 +1,6 @@
 ---
-title: 更新（DMX） |Microsoft Docs
+description: UPDATE (DMX)
+title: 更新 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f77d71eab284b695171e923cfe53b53575d45d94
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: d74a59aaea079a5d3c1945b92813f6d276591b78
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971536"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394874"
 ---
 # <a name="update-dmx"></a>UPDATE (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  變更資料採礦模型中的**NODE_CAPTION**資料行。  
+  變更資料採礦模型中的 **NODE_CAPTION** 資料行。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,13 +35,13 @@ SET NODE_CAPTION='new caption'
  模型識別碼。  
   
  *新標題*  
- 字串，其中包含**NODE_CAPTION**資料行的新名稱。  
+ 字串，其中包含 **NODE_CAPTION** 資料行的新名稱。  
   
  *條件運算式*  
  選擇性。 限制從資料行清單傳回之值的條件。  
   
 ## <a name="examples"></a>範例  
- 在下列範例中， **UPDATE**語句會將叢集的預設名稱變更為 `Cluster 1` `001` 更具描述性的名稱 `Likely Customers` 。  
+ 在下列範例中， **UPDATE** 語句會將 cluster 的預設名稱變更 `Cluster 1` `001` 為更具描述性的名稱 `Likely Customers` 。  
   
 ```  
 UPDATE [TM Clustering].CONTENT  
