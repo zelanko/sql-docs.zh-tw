@@ -1,4 +1,5 @@
 ---
+description: exist() 方法 (xml 資料類型)
 title: exist() 方法 (xml 資料類型)
 ms.custom: ''
 ms.date: 07/26/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e2f8643b9c76f2abf8a6ffb49620b85f9b150891
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: f79e3aed7926b8cd3d123139d317735bc6d94abe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392706"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88356384"
 ---
 # <a name="exist-method-xml-data-type"></a>exist() 方法 (xml 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

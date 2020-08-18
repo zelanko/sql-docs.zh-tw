@@ -1,4 +1,5 @@
 ---
+description: delete (XML DML)
 title: delete (XML DML)
 ms.custom: ''
 ms.date: 07/26/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b22c93a4-b84d-4356-af4c-6013322a4b71
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 340ad7968aeb31449f4b5200944ab591e08ae08b
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: b17467db1b0ceb7865be082c3c68a60bd352d082
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393096"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88356314"
 ---
 # <a name="delete-xml-dml"></a>delete (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

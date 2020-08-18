@@ -1,4 +1,5 @@
 ---
+description: CREATE SERVER AUDIT (Transact-SQL)
 title: CREATE SERVER AUDIT (Transact-SQL)
 ms.custom: ''
 ms.date: 01/07/2019
@@ -22,12 +23,12 @@ ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 7147c54dc8641697baf7ee519950ec959bf09b19
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 91a5db47e45b1776aabec9bdb59e3eb50644bca8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87822523"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88359414"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 

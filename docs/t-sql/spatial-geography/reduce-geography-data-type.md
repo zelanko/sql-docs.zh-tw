@@ -1,4 +1,5 @@
 ---
+description: Reduce (geography 資料類型)
 title: Reduce (geography 資料類型)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c5dfa8c1-6764-41d8-9150-f3cb30633d3e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: e0745bbe895fcc26aceb197c9779f44249825083
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: ab2f24276cb3f151adf4e1418fd141180171a633
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556143"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88359874"
 ---
 # <a name="reduce-geography-data-type-"></a>Reduce (geography 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
