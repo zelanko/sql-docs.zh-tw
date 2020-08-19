@@ -1,4 +1,5 @@
 ---
+description: 第 2 課：在 SSIS 中建立部署配套
 title: 第 2 課：在 SSIS 中建立部署配套 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: ab17289d-c3d4-4a5e-b7f5-4fea8ae21707
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c0ad24013ea2662898857cef3b1359e284e5244b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3f2117822d951d2a01ace369c61b32c630d74363
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916865"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88390391"
 ---
 # <a name="lesson-2-create-the-deployment-bundle-in-ssis"></a>第 2 課：在 SSIS 中建立部署配套
 
@@ -28,17 +29,17 @@ ms.locfileid: "86916865"
   
 此外，您還會確認部署配套中的檔案清單，並檢查資訊清單的內容。  
   
-**完成本課程的估計時間** ：30 分鐘  
+**完成本課程的估計時間：** 30 分鐘  
   
 ## <a name="lesson-tasks"></a>課程工作  
 這一課包含下列工作：  
   
--   [步驟 1：建置部署公用程式](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
+-   [步驟 1:建置部署公用程式](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
   
--   [步驟 2：確認部署配套](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
+-   [步驟 2:確認部署套件組合](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
 ## <a name="start-the-lesson"></a>開始課程  
-[步驟 1：建置部署公用程式](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
+[步驟 1:建置部署公用程式](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
   
   
   

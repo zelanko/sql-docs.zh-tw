@@ -1,4 +1,5 @@
 ---
+description: 第 2 課：使用 SSIS 來新增迴圈
 title: 第 2 課：使用 SSIS 來新增迴圈 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f8a7cb05ea7768877ad15ba0d71c5f7636ac8d58
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0805b8709e2a0a689538f558672694c96ddff39b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920384"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88390664"
 ---
 # <a name="lesson-2-add-looping-with-ssis"></a>第 2 課：使用 SSIS 來新增迴圈
 
@@ -68,7 +69,7 @@ Foreach 迴圈容器可讓封裝對指定列舉值的每一位成員重複控制
 ## <a name="start-the-lesson"></a>開始課程  
 [步驟 1：複製第 1 課套件](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [For 迴圈容器](../integration-services/control-flow/for-loop-container.md)  
   
   
