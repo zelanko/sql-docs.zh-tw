@@ -1,4 +1,5 @@
 ---
+description: SQL:FullTextQuery 事件類別
 title: SQL:FullTextQuery 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 654fb295-f0a5-4d66-93e0-5d43e4d7d535
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6737979fc99057e2a85ee6a5494f1c65a5ee7e19
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9251d9e080e68678d20d2d97b3171f06a3386464
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85778764"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88383434"
 ---
 # <a name="sqlfulltextquery-event-class"></a>SQL:FullTextQuery 事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

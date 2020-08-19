@@ -1,4 +1,5 @@
 ---
+description: 使用者可設定的事件類別
 title: User-Configurable 事件類別 | Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 06fe5f07-a0dd-4968-b123-56b124a86020
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a84c7f73458264789d7d5043ebaae109a3c03207
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 53447f1c9fb617ba1f54f12770a61ddd962f4dfe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728309"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88383464"
 ---
 # <a name="user-configurable-event-class"></a>使用者可設定的事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,4 +1,5 @@
 ---
+description: Attention 事件類別
 title: Attention 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: da996305-181b-4cec-8388-c3b66677ed27
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d7d4d938bb2f214b540c4795b4318693a1cfdb1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1836698d7ecf718a3866175f21309daf3dcc8153
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85635873"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88385404"
 ---
 # <a name="attention-event-class"></a>Attention 事件類別
 

@@ -1,4 +1,5 @@
 ---
+description: 使用者資料庫上的對稱金鑰
 title: 使用者資料庫上的對稱金鑰 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3333ab5b-2518-4753-a0a8-57df5e5af74f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: dd650742e2781388d0d0941b80c6c9a9d60a801c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c7882b4f3f425b600e3ef57fa836ffffd6756289
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727308"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88380964"
 ---
 # <a name="symmetric-keys-on-user-databases"></a>使用者資料庫上的對稱金鑰
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

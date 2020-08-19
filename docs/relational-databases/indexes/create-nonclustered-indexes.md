@@ -1,4 +1,5 @@
 ---
+description: 建立非叢集索引
 title: 建立非叢集索引 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -17,12 +18,12 @@ ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 038976b84b19db44f8eec771ddd3ea6341d59d57
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 04c45acc426cdeb187fd673756da388f971fe24e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753102"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88382614"
 ---
 # <a name="create-nonclustered-indexes"></a>建立非叢集索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,19 +60,19 @@ ms.locfileid: "85753102"
   
 2.  展開 **[資料表]** 資料夾。  
   
-3.  以滑鼠右鍵按一下要建立非叢集索引的資料表，然後選取 [設計]  。  
+3.  以滑鼠右鍵按一下要建立非叢集索引的資料表，然後選取 [設計]****。  
   
-4.  在 [資料表設計工具]  功能表上，按一下 [索引/索引鍵]  。  
+4.  在 [資料表設計工具] 功能表上，按一下 [索引/索引鍵]。  
   
-5.  在 [索引/索引鍵]  對話方塊中，按一下 [加入]  。  
+5.  在 [索引/索引鍵]**** 對話方塊中，按一下 [加入]****。  
   
-6.  從 [選取的主索引鍵/唯一索引鍵或索引]  文字方塊中選取新索引。  
+6.  從 [選取的主索引鍵/唯一索引鍵或索引]**** 文字方塊中選取新索引。  
   
-7.  在方格中，選取 [建立成 CLUSTERED]  ，然後從屬性右邊的下拉式清單中選擇 [否]  。  
+7.  在方格中，選取 [建立成 CLUSTERED]****，然後從屬性右邊的下拉式清單中選擇 [否]****。  
   
-8.  按一下 [關閉]  。  
+8.  按一下 [關閉] 。  
   
-9. 在 [檔案] 功能表上，按一下 [儲存 _資料表名稱_]。  
+9. 在 [檔案]**** 功能表上，按一下 [儲存 _資料表名稱_]****。  
 
 #### <a name="to-create-a-nonclustered-index-by-using-object-explorer"></a>若要使用物件總管建立非叢集索引  
   
@@ -81,15 +82,15 @@ ms.locfileid: "85753102"
   
 3.  展開您要建立非叢集索引的資料表。  
   
-4.  以滑鼠右鍵按一下 [索引]  資料夾，指向 [新增索引]  ，然後選取 [非叢集索引…]  。  
+4.  以滑鼠右鍵按一下 [索引] 資料夾，指向 [新增索引]，然後選取 [非叢集索引…]。  
   
 5.  在 **[新增索引]** 對話方塊，於 **[一般]** 頁面上的 **[索引名稱]** 方塊中輸入新索引的名稱。  
   
-6.  按一下 [索引鍵資料行]  下的 [新增...]  。  
+6.  按一下 [索引鍵資料行] 下的 [新增...]。  
   
-7.  在 [從 _資料表名稱_ 選取資料行] 對話方塊中，選取要加入非叢集索引之一或多個資料表資料行的核取方塊。  
+7.  在 [從 _資料表名稱_ 選取資料行]**** 對話方塊中，選取要加入非叢集索引之一或多個資料表資料行的核取方塊。  
   
-8.  按一下 [確定]  。  
+8.  按一下 [確定]。  
   
 9. 在 **[新增索引]** 對話方塊中，按一下 **[確定]** 。  
   

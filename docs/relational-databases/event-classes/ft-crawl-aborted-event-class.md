@@ -1,4 +1,5 @@
 ---
+description: FT:Crawl Aborted 事件類別
 title: FT:Crawl Aborted 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: eead8ea6-5051-4689-ab30-4dfbfda01fb9
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 45b8532a83614fa8b45ccff4af8452c3ff36cf79
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7b1e35188537099313ed22c79f4ef5fd13c19124
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85642202"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88383984"
 ---
 # <a name="ftcrawl-aborted-event-class"></a>FT:Crawl Aborted 事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

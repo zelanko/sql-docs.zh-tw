@@ -1,4 +1,5 @@
 ---
+description: Audit Addlogin 事件類別
 title: Audit Addlogin 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: 6e0633dc-889e-49ef-bace-3c50958db2dd
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bad68dc1125b50d956b1580751d5911d031a37bf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3d203dc1924706732bfc8c672308123ce662d879
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85693793"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88384864"
 ---
 # <a name="audit-addlogin-event-class"></a>Audit Addlogin 事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  當新增或移除   登入時，就會發生 [!INCLUDE[msCoName](../../includes/msconame-md.md)]Audit Addlogin[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件類別。  
+  當新增或移除 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入時，就會發生 **Audit Addlogin** 事件類別。  
   
  在新增登入時如果還有設定其他屬性，例如預設資料庫，您可在這個事件的 **TextData** 資料行中找到這些屬性的相關資訊。 如果在新增登入時設定了這些屬性，就不會發生 **Audit Login Change Property** 事件。  
   
@@ -51,8 +52,8 @@ ms.locfileid: "85693793"
 |**SessionLoginName**|**Nvarchar**|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 執行陳述式，則 **SessionLoginName** 將顯示 Login1 而 **LoginName** 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |**SPID**|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
-|「成功」 |**int**|1 = 成功。 0 = 失敗。 例如，值為 1 表示權限檢查成功，值為 0 表示該檢查失敗。|23|是|  
-|**TargetLoginName**|**nvarchar**|要加入或卸除的登入名稱。|42|是|  
+|「成功」|**int**|1 = 成功。 0 = 失敗。 例如，值為 1 表示權限檢查成功，值為 0 表示該檢查失敗。|23|是|  
+|**TargetLoginName**|**nvarchar**|要加入或卸除的登入名稱。|42|Yes|  
 |**TargetLoginSid**|**image**|目標登入的安全性識別碼 (SID) (若以參數傳遞的話)。|43|是|  
 |**TransactionID**|**bigint**|由系統指派給交易的識別碼。|4|是|  
 |**XactSequence**|**bigint**|用來描述目前交易的 Token。|50|是|  

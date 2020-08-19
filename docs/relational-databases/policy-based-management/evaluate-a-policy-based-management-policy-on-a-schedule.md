@@ -1,4 +1,5 @@
 ---
+description: 依照排程評估原則式管理原則
 title: 依照排程評估原則式管理原則 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bea09522-ff47-4037-ab55-a98ea7c10099
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5ef43c8e973d9d3695d900d40e3ed92c1e5ec27c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 79e16f9a39e235f7ceed5a77e55d03f4c5efed72
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749442"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88381184"
 ---
 # <a name="evaluate-a-policy-based-management-policy-on-a-schedule"></a>依照排程評估原則式管理原則
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85749442"
   
 -   **若要使用下列項目來依照排程評估原則：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
@@ -48,11 +49,11 @@ ms.locfileid: "85749442"
   
 2.  按一下加號展開 **[管理]** 資料夾。  
   
-3.  按一下加號展開 **[原則管理]** 。  
+3.  按一下加號展開 **[原則管理]**。  
   
 4.  按一下加號展開 **[原則]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您想要評估其排程的原則，然後選取 [屬性]  。  
+5.  以滑鼠右鍵按一下您想要評估其排程的原則，然後選取 [屬性]****。  
   
 6.  在 [開啟原則 -_policy_name_] 對話方塊的 [評估模式] 清單中，選取 [按排程時間]。  
   

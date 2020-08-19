@@ -1,4 +1,5 @@
 ---
+description: 啟用索引與條件約束
 title: 啟用索引和條件約束 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -18,12 +19,12 @@ ms.assetid: c55c8865-322e-4ab0-ba04-ea1f56735353
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32d0516d8f3227a3fbf18d8649b0a79bdd60c790
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4b0bdb3d9edca685e3b939c5f9a3ab1a0ec68846
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629631"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88382484"
 ---
 # <a name="enable-indexes-and-constraints"></a>啟用索引與條件約束
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -90,7 +91,7 @@ ms.locfileid: "85629631"
   
 4.  按一下加號展開 **[索引]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您要啟用的索引，然後選取 [重建]  。  
+5.  以滑鼠右鍵按一下您要啟用的索引，然後選取 [重建]****。  
   
 6.  在 **[重建索引]** 對話方塊中，確認 **[要重建的索引]** 方格中有正確索引，然後按一下 **[確定]** 。  
   
@@ -102,9 +103,9 @@ ms.locfileid: "85629631"
   
 3.  按一下加號展開要啟用索引的資料表。  
   
-4.  以滑鼠右鍵按一下 [索引]  資料夾，並選取 [全部重建]  。  
+4.  以滑鼠右鍵按一下 [索引]**** 資料夾，並選取 [全部重建]****。  
   
-5.  在 **[重建索引]** 對話方塊中，確認 **[要重建的索引]** 方格中有正確索引，然後按一下 **[確定]** 。 若要從 **[要重建的索引]** 方格中移除索引，請選取索引，然後按下 DELETE 鍵。  
+5.  在 **[重建索引]** 對話方塊中，確認 **[要重建的索引]** 方格中有正確索引，然後按一下 **[確定]**。 若要從 **[要重建的索引]** 方格中移除索引，請選取索引，然後按下 DELETE 鍵。  
   
  **[重建索引]** 對話方塊中提供下列資訊：  
   

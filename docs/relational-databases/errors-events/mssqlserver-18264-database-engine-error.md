@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_18264
 title: MSSQLSERVER_18264 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3050fc56-2be5-43cf-916b-50a3ac5f89aa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3c37ae932acd8a1a2571d97a0564ffbfbe7037d9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7ce3007856d44fa513c7397cc37af880f6a21c5a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85780643"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88385750"
 ---
 # <a name="mssqlserver_18264"></a>MSSQLSERVER_18264
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

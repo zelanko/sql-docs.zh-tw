@@ -1,4 +1,5 @@
 ---
+description: SQL:BatchStarting 事件類別
 title: SQL:BatchStarting 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: b99c2b73-5f77-45c1-a0f4-cfef7921dc84
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df7f0ec2b9856e9f0ce867d29a788ba641784a74
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cf151741da6e1fb4805bc6089d2c25b5a290e931
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85779491"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88383604"
 ---
 # <a name="sqlbatchstarting-event-class"></a>SQL:BatchStarting 事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

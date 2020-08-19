@@ -1,4 +1,5 @@
 ---
+description: Audit Backup 和 Restore 事件類別
 title: Audit Backup 和 Restore 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 08b0b5fe-298a-483f-b50a-73919a2513ce
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 07e448a8d63b7047ecafe19aa6f7adfbb535338d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cd3b8ca71c9a251343d001ca269e730acf71a217
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85693814"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88384854"
 ---
 # <a name="audit-backup-and-restore-event-class"></a>Audit Backup 和 Restore 事件類別
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  每當發出備份或還原命令時，會發生 **Audit Backup/Restore** 事件類別。  
+   每當發出備份或還原命令時，會發生 **Audit Backup/Restore** 事件類別。  
   
 ## <a name="audit-backuprestore-event-class-data-columns"></a>Audit Backup/Restore 事件類別資料行  
   
@@ -45,7 +46,7 @@ ms.locfileid: "85693814"
 |**SessionLoginName**|**Nvarchar**|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 執行陳述式，則 **SessionLoginName** 將顯示 Login1 而 **LoginName** 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |**SPID**|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
-|「成功」 |**int**|1 = 成功。 0 = 失敗。 例如，值為 1 指出權限檢查成功，而值為 0 指出該檢查失敗。|23|是|  
+|「成功」|**int**|1 = 成功。 0 = 失敗。 例如，值為 1 指出權限檢查成功，而值為 0 指出該檢查失敗。|23|是|  
 |**TextData**|**ntext**|備份或還原陳述式的 SQL 文字。|1|是|  
 |**TransactionID**|**bigint**|由系統指派給交易的識別碼。|4|是|  
 |**XactSequence**|**bigint**|用來描述目前交易的 Token。|50|是|  

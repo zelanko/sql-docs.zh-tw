@@ -1,4 +1,5 @@
 ---
+description: 階層式資料 (SQL Server)
 title: 階層式資料 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/04/2019
@@ -18,12 +19,12 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 137557b633b80067205be1cdea9f0b7c6cfd82bb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1638e581a384f79842109c83352fc7292fa15de7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640765"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88382524"
 ---
 # <a name="hierarchical-data-sql-server"></a>階層式資料 (SQL Server)
 
@@ -540,7 +541,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [Hierarchyid 資料類型方法參考](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
- [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [教學課程：使用 hierarchyid 資料類型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 結果詳細檢視對話方塊
 title: 結果詳細檢視對話方塊 | Microsoft 文件
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,18 +14,18 @@ f1_keywords:
 ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5b9681bc22ea07ed3bed1d218ba752c2d4d6a666
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 38102297ee7ac0a29bbe37e83d1bfe834d9faaa4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716846"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88380734"
 ---
 # <a name="results-detailed-view-dialog-box"></a>結果詳細檢視對話方塊
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   當您使用 **[評估原則]** 對話方塊來執行原則並按一下 **[評估]** 之後，此對話方塊會顯示原則評估的結果。 此對話方塊是唯讀的，而且可幫助您了解哪一個部分的屬性運算式可能失敗。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **AndOr**  
  當有一個以上的屬性運算式存在時，指出屬性運算式為累積或替代式。  
   
