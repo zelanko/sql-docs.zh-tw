@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_2576
 title: MSSQLSERVER_2576 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b727cc2f-c76c-46f8-bbbe-5e7a05a6eabf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9b3d3904f5a79192bee31d8f8d3aef5a32291097
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7a3884da163f982260da46d76fb2abda8c8c80be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723866"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88410864"
 ---
 # <a name="mssqlserver_2576"></a>MSSQLSERVER_2576
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

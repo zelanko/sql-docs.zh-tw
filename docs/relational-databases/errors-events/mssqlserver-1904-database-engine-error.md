@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_1904
 title: MSSQLSERVER_1904 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2a35d57d-74e2-45a2-8f67-3f2e51d69712
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0d3c5b8fec68bc015be27568dcde25b174881471
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 668264ef4242367de10762a1261b7673a4a05924
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85780650"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88410884"
 ---
 # <a name="mssqlserver_1904"></a>MSSQLSERVER_1904
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

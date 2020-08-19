@@ -1,4 +1,5 @@
 ---
+description: Auto Stats 事件類別
 title: Auto Stats 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ba537e2dd0d188eb95e9194bb33c654c66dfcb9b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f9e20179799dbc61dae0a1e02247fe5eb0df2628
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763077"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88410544"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats 事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "85763077"
 |**SessionLoginName**|**nvarchar**|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 執行陳述式，則 **SessionLoginName** 將顯示 Login1 而 **LoginName** 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |**SPID**|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
-|「成功」 |**int**|0 = 錯誤。<br /><br /> 1 = 成功。<br /><br /> 2 = 因伺服器調整流速而略過 (MSDE)。|23|是|  
+|「成功」|**int**|0 = 錯誤。<br /><br /> 1 = 成功。<br /><br /> 2 = 因伺服器調整流速而略過 (MSDE)。|23|是|  
 |**TextData**|**ntext**|此資料行的內容需視統計資料是採同步更新 (**EventSubClass** 1) 或非同步更新 (**EventSubClass** 2、3 或 4) 而定：<br /><br /> 1：列出已更新/建立的統計資料<br /><br /> 2、3 或 4：NULL； **IndexID** 資料行中會填入已更新之統計資料的索引/統計資料識別碼。|1|是|  
 |**TransactionID**|**bigint**|由系統指派給交易的識別碼。|4|是|  
 |**型別**|**int**|作業類型。|57|是|  

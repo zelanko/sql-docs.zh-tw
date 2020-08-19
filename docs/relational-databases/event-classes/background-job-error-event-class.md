@@ -1,4 +1,5 @@
 ---
+description: Background Job Error 事件類別
 title: Background Job Error 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: 9e6d2a0e-919d-4fe2-a306-b20b8d41c197
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5524bd8ed316780a9b0b8babd66e2c2582fb0585
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 532a24d0cb2b3e30a5e513b4feab522ef45e34d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763093"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88410424"
 ---
 # <a name="background-job-error-event-class"></a>Background Job Error 事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  當背景作業異常中止時，就會發生 **Background Job Error** 事件類別。 這種狀況可能需要系統管理員注意。  
+   當背景作業異常中止時，就會發生 **Background Job Error** 事件類別。 這種狀況可能需要系統管理員注意。  
   
 ## <a name="background-job-error-event-class-data-columns"></a>Background Job Error 事件類別資料行  
   
@@ -38,7 +39,7 @@ ms.locfileid: "85763093"
 |**IntegerData2**|**int**|作業序號。|55|是|  
 |**Exchange Spill**|**int**|系統指派給物件的識別碼。|22|是|  
 |**SessionLoginName**|**nvarchar**|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 執行陳述式，則 **SessionLoginName** 將顯示 Login1 而 **LoginName** 則顯示 Login2。 這個資料行會同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登入。|64|是|  
-|**Severity**|**int**|上次嘗試時所發生錯誤的嚴重性層級 (只限**EventSubClass** 1)。|20|是|  
+|**嚴重性**|**int**|上次嘗試時所發生錯誤的嚴重性層級 (只限**EventSubClass** 1)。|20|是|  
 |**StartTime**|**datetime**|建立作業的時間。|14|是|  
 |**State**|**int**|上次嘗試時的錯誤狀態 (只限**EventSubClass** 1)。|30|是|  
 |**TextData**|**ntext**|事件子類別值的文字描述。|1|是|  
