@@ -1,5 +1,6 @@
 ---
-title: Catalog ActiveConnection 屬性範例（VB） |Microsoft Docs
+description: Catalog ActiveConnection 屬性範例 (VB)
+title: 目錄 ActiveConnection 屬性範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: bb3274b1-764d-43a7-a49f-ef55680ecd26
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dc83a171b9ed2632900c8f31a4ea4d059493b19a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4895f1ec08a0f10c93335fc36954f3a9098ffce4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763959"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440410"
 ---
 # <a name="catalog-activeconnection-property-example-vb"></a>Catalog ActiveConnection 屬性範例 (VB)
-將 [ [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) ] 屬性設為有效的 [開啟連接]，就會「開啟」目錄。 從開啟的目錄中，您可以存取包含在該目錄內的架構物件。  
+將 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) 屬性設定為有效的開啟連接會「開啟」目錄。 從開啟的目錄，您可以存取包含在該目錄內的架構物件。  
   
 ```  
 ' BeginOpenConnectionVB  
@@ -59,15 +60,15 @@ End Sub
 ' EndOpenConnectionVB  
 ```  
   
- 將**ActiveConnection**屬性設定為有效的連接字串也會「開啟」目錄。  
+ 將 **ActiveConnection** 屬性設定為有效的連接字串也會「開啟」目錄。  
   
 ```  
 Attribute VB_Name = "Catalog"  
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ActiveConnection 屬性（ADOX）](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Catalog 物件（ADOX）](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Table 物件（ADOX）](../../../ado/reference/adox-api/table-object-adox.md)   
- [Tables 集合（ADOX）](../../../ado/reference/adox-api/tables-collection-adox.md)   
+ [ActiveConnection 屬性 (ADOX) ](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
+ [ (ADOX) 的目錄物件 ](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [資料表物件 (ADOX) ](../../../ado/reference/adox-api/table-object-adox.md)   
+ [資料表集合 (ADOX) ](../../../ado/reference/adox-api/tables-collection-adox.md)   
  [Type 屬性 (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)

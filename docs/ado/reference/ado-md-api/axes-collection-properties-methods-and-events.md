@@ -1,4 +1,5 @@
 ---
+description: Axes 集合屬性、方法和事件
 title: 軸集合屬性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: be459530-6f28-458f-ad70-759eae3ae08c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3667da715155f9c94689d10877524833fe8092a7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5e5fdda44ced1510b4a9ca6179cad9a5224dc705
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765199"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441338"
 ---
 # <a name="axes-collection-properties-methods-and-events"></a>Axes 集合屬性、方法和事件
 ## <a name="properties"></a>屬性  

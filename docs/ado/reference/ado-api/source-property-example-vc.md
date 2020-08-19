@@ -1,5 +1,6 @@
 ---
-title: Source 屬性範例（VC + +） |Microsoft Docs
+description: Source 屬性範例 (VC++)
+title: Source 屬性範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e10d33da-ea30-4138-ae40-e9f6aa9d17d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d7d5fb516e1ec8ed5eb68f3fccdc834e0a06259
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8b92cb5f1d2ba02b58237f9c7776a4bf243d73a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759784"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442030"
 ---
 # <a name="source-property-example-vc"></a>Source 屬性範例 (VC++)
-這個範例會根據不同的資料來源開啟三個[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件，以示範[Source](../../../ado/reference/ado-api/source-property-ado-recordset.md)屬性。  
+此範例會根據不同的資料來源開啟三個[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件，以示範[來源](../../../ado/reference/ado-api/source-property-ado-recordset.md)屬性。  
   
 ```  
 // Source_Property_Sample.cpp  
@@ -157,5 +158,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Recordset 物件（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [ (ADO) 的記錄集物件 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Source 屬性 (ADO Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

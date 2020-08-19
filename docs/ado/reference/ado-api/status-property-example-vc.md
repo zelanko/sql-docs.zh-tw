@@ -1,5 +1,6 @@
 ---
-title: Status 屬性範例（VC + +） |Microsoft Docs
+description: Status 屬性範例 (VC++)
+title: Status 屬性範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 194ce221-49bd-4474-ba34-91453d329381
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d477b23b384bcc8e059afb94e72a3f6fc12fa724
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ad20679059706d9349fd6e4fd37dd6c6b5a8ea2d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759684"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441900"
 ---
 # <a name="status-property-example-vc"></a>Status 屬性範例 (VC++)
-這個範例會使用[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)屬性，在批次更新發生之前，顯示批次作業中已修改的記錄。  
+此範例會使用 [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) 屬性來顯示批次更新發生之前已在批次作業中修改哪些記錄。  
   
 ```  
 // BeginStatusCpp.cpp  

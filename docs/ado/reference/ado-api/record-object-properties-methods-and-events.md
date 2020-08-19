@@ -1,4 +1,5 @@
 ---
+description: Record 物件屬性、方法和事件
 title: Record 物件屬性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: dadde268-bd0f-4ba0-8775-83a5cd3e258a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 156861996bc62e968c192fdd8687c7654e0d2b60
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a354504bcc81d73f3856c8265da908f84e1b019e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754035"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442500"
 ---
 # <a name="record-object-properties-methods-and-events"></a>Record 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  

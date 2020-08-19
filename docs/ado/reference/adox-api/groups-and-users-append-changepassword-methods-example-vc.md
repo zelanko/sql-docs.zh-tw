@@ -1,5 +1,6 @@
 ---
-title: 群組和使用者附加、ChangePassword 方法範例（VC + +） |Microsoft Docs
+description: Groups 和 Users Append、ChangePassword 方法範例 (VC++)
+title: 群組和使用者附加、ChangePassword 方法範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 7e7067d0-6405-4c09-bff3-b1c2f2d783e0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3e11cb872d01182f037dd84ab3dd676e4f35e508
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 51601cc45aa0c595b3df617848ce66f114e1df63
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764881"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439970"
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vc"></a>Groups 和 Users Append、ChangePassword 方法範例 (VC++)
-這個範例會示範[群組](../../../ado/reference/adox-api/groups-collection-adox.md)的[append](../../../ado/reference/adox-api/append-method-adox-groups.md)方法，以及[使用者](../../../ado/reference/adox-api/users-collection-adox.md)的[append](../../../ado/reference/adox-api/append-method-adox-users.md)方法，其方式是將新的[群組](../../../ado/reference/adox-api/group-object-adox.md)和新的[使用者](../../../ado/reference/adox-api/user-object-adox.md)新增至系統。 新**群組**會附加至新**使用者**的 [**群組**] 集合。 因此，新的**使用者**會新增至**群組**。 此外， [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)方法是用來指定**使用者**密碼。  
+此範例示範[群組](../../../ado/reference/adox-api/groups-collection-adox.md)的[附加](../../../ado/reference/adox-api/append-method-adox-groups.md)方法，以及[使用者](../../../ado/reference/adox-api/users-collection-adox.md)的[附加](../../../ado/reference/adox-api/append-method-adox-users.md)方法，方法是將新的[群組](../../../ado/reference/adox-api/group-object-adox.md)和新的[使用者](../../../ado/reference/adox-api/user-object-adox.md)加入系統中。 新**群組**會附加至新**使用者**的**群組**集合。 因此，新的 **使用者** 會加入至 **群組**。 此外， [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) 方法是用來指定 **使用者** 密碼。  
   
 > [!NOTE]
->  如果您要連接到支援 Windows 驗證的資料來源提供者，您應該在連接字串中指定**Trusted_Connection = yes**或**整合式安全性 = SSPI** ，而不是使用者識別碼和密碼資訊。  
+>  如果您要連接到支援 Windows 驗證的資料來源提供者，您應該在連接字串中指定 **Trusted_Connection = yes** 或 **整合式安全性 = SSPI** ，而不是使用者識別碼和密碼資訊。  
   
 ```  
 // BeginGroupCpp.cpp  

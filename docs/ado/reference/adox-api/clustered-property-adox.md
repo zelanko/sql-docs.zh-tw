@@ -1,5 +1,6 @@
 ---
-title: 叢集屬性（ADOX） |Microsoft Docs
+description: Clustered 屬性 (ADOX)
+title: 叢集屬性 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -19,23 +20,23 @@ helpviewer_keywords:
 ms.assetid: 9b62fb35-de43-425a-83ca-77af4e33fea9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0f4cbd0a305d7e2eae29884223ec6a67aed5fb4f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b3c915fcaf1a3661e606f5e1c2cf9a04bafd91fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759414"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440360"
 ---
 # <a name="clustered-property-adox"></a>Clustered 屬性 (ADOX)
 指出索引是否已叢集化。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定並傳回**布林**值。  
+ 設定並傳回 **布林** 值。  
   
 ## <a name="remarks"></a>備註  
- 預設值是 **False**。  
+ 預設值為 **[False]** 。  
   
- 這個屬性在已附加至集合的[索引](../../../ado/reference/adox-api/index-object-adox.md)物件上是唯讀的。  
+ 在已附加至集合的 [索引](../../../ado/reference/adox-api/index-object-adox.md) 物件上，這個屬性是唯讀的。  
   
 ## <a name="applies-to"></a>套用至  
  [Index 物件 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  

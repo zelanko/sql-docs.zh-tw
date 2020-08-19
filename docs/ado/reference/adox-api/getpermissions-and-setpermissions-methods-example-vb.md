@@ -1,5 +1,6 @@
 ---
-title: GetPermissions 和 SetPermissions 方法範例（VB） |Microsoft Docs
+description: GetPermissions 和 SetPermissions 方法範例 (VB)
+title: GetPermissions 和 SetPermissions 方法範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: aa366d98-8c7a-4189-bdd8-1d663b243d33
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f87e7f9b32c123cae2918f89b92ac2928bb65c65
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 59984877f4c8d86b9adc18b841b17c92740e8602
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764892"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440050"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vb"></a>GetPermissions 和 SetPermissions 方法範例 (VB)
-這個範例示範[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)和[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)方法。 下列程式碼會將 Orders 資料表的完整存取權提供給系統管理員使用者。  
+此範例示範 [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) 和 [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) 方法。 下列程式碼會為系統管理員使用者提供 Orders 資料表的完整存取權。  
   
 ```  
 ' BeginGrantPermissionsVB  
@@ -95,8 +96,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Catalog 物件（ADOX）](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [GetPermissions 方法（ADOX）](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
- [SetPermissions 方法（ADOX）](../../../ado/reference/adox-api/setpermissions-method-adox.md)   
- [User 物件（ADOX）](../../../ado/reference/adox-api/user-object-adox.md)   
+ [ (ADOX) 的目錄物件 ](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [GetPermissions 方法 (ADOX) ](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
+ [SetPermissions 方法 (ADOX) ](../../../ado/reference/adox-api/setpermissions-method-adox.md)   
+ [使用者物件 (ADOX) ](../../../ado/reference/adox-api/user-object-adox.md)   
  [Users 集合 (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

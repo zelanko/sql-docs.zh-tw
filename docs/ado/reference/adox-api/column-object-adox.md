@@ -1,5 +1,6 @@
 ---
-title: Column 物件（ADOX） |Microsoft Docs
+description: Column 物件 (ADOX)
+title: 資料行物件 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,58 +16,58 @@ helpviewer_keywords:
 ms.assetid: 6e772783-1bc8-4ea7-94b2-7d7a52ea5c47
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 80e462e3bc7a8f5d4833c78bcaf6b4a45705c083
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 582014342380ed5ec77c8a6f0e2adacba52bbdcc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759394"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440340"
 ---
 # <a name="column-object-adox"></a>Column 物件 (ADOX)
-表示資料表、索引或索引鍵中的資料行。  
+表示來自資料表、索引或索引鍵的資料行。  
   
 ## <a name="remarks"></a>備註  
- 下列程式碼會建立新的資料**行**：  
+ 下列程式碼會建立新的資料 **行**：  
   
  `Dim obj As New Column`  
   
- 使用資料**行**物件的屬性和集合，您可以：  
+ 使用資料 **行** 物件的屬性和集合，您可以：  
   
--   識別具有[Name 屬性（ADOX）](../../../ado/reference/adox-api/name-property-adox.md)屬性的資料行。  
+-   使用 [Name 屬性 (ADOX) ](../../../ado/reference/adox-api/name-property-adox.md) 屬性來識別資料行。  
   
--   使用[Type 屬性（Key）（ADOX）](../../../ado/reference/adox-api/type-property-key-adox.md)屬性指定資料行的資料類型。  
+-   使用 [Type 屬性 (索引鍵)  (ADOX) ](../../../ado/reference/adox-api/type-property-key-adox.md) 屬性來指定資料行的資料類型。  
   
--   判斷資料行是否為固定長度，或是否可以包含具有[Attributes 屬性（ADOX）](../../../ado/reference/adox-api/attributes-property-adox.md)屬性的 null 值。  
+-   判斷資料行是否為固定長度，或是否可包含 [屬性屬性 (ADOX) ](../../../ado/reference/adox-api/attributes-property-adox.md) 屬性的 null 值。  
   
--   使用[DefinedSize 屬性（ADOX）](../../../ado/reference/adox-api/definedsize-property-adox.md)屬性指定資料行的大小上限。  
+-   使用 [DefinedSize 屬性 (ADOX) ](../../../ado/reference/adox-api/definedsize-property-adox.md) 屬性來指定資料行的大小上限。  
   
--   若為數值資料值，請使用[NumericScale 屬性（ADOX）](../../../ado/reference/adox-api/numericscale-property-adox.md)屬性指定小數位數值。  
+-   若為數值資料值，請使用 NumericScale 屬性指定小數位數 [ (ADOX) ](../../../ado/reference/adox-api/numericscale-property-adox.md) 屬性。  
   
--   針對數值資料值，使用[Precision 屬性（ADOX）](../../../ado/reference/adox-api/precision-property-adox.md)屬性指定最大有效位數。  
+-   若為數值資料值，請使用 [Precision 屬性 (ADOX) ](../../../ado/reference/adox-api/precision-property-adox.md) 屬性來指定最大有效位數。  
   
--   指定擁有具有[ParentCatalog 屬性（adox）](../../../ado/reference/adox-api/parentcatalog-property-adox.md)屬性之資料行的[目錄物件（adox）](../../../ado/reference/adox-api/catalog-object-adox.md) 。  
+-   指定 [ (adox) 的目錄物件 ](../../../ado/reference/adox-api/catalog-object-adox.md) ，其擁有具有 [PARENTCATALOG 屬性 (ADOX) ](../../../ado/reference/adox-api/parentcatalog-property-adox.md) 屬性的資料行。  
   
--   針對 [索引鍵資料行]，使用[RelatedColumn 屬性（ADOX）](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)屬性指定相關資料表中相關資料行的名稱。  
+-   針對索引鍵資料行，請使用 RelatedColumn 屬性，在相關資料表中指定相關資料行的名稱 [ (ADOX) ](../../../ado/reference/adox-api/relatedcolumn-property-adox.md) 屬性。  
   
--   針對 [索引資料行]，使用 [ [SortOrder 屬性（ADOX）](../../../ado/reference/adox-api/sortorder-property-adox.md) ] 屬性指定排序次序為 [遞增] 或 [遞減]。  
+-   針對 [索引資料行]，指定排序次序是以 [SortOrder] 屬性為 [遞增] 或 [遞減] [ (ADOX) ](../../../ado/reference/adox-api/sortorder-property-adox.md) 屬性。  
   
--   使用[屬性集合（ADO）](../../../ado/reference/ado-api/properties-collection-ado.md)集合存取提供者特定的屬性。  
+-   使用 [ (ADO) 集合的屬性集合 ](../../../ado/reference/ado-api/properties-collection-ado.md) 來存取提供者特有的屬性。  
   
 > [!NOTE]
->  並非資料**行**物件的所有屬性都可由您的資料提供者支援。 如果您已設定提供者不支援之屬性的值，就會發生錯誤。 針對新的資料**行**物件，當物件附加至集合時，就會發生此錯誤。 針對現有的物件，設定屬性時將會發生此錯誤。  
+>  您的資料提供者可能不支援資料 **行** 物件的所有屬性。 如果您已針對提供者不支援的屬性設定值，就會發生錯誤。 若為新的資料 **行** 物件，當物件附加至集合時，就會發生此錯誤。 針對現有的物件，設定屬性時將會發生錯誤。  
 >   
->  建立資料**行**物件時，選擇性屬性的適當預設值是否存在，並不保證您的提供者支援屬性。 如需提供者所支援之屬性的詳細資訊，請參閱您的提供者檔。  
+>  建立資料 **行** 物件時，選擇性屬性的適當預設值是否存在，並不保證您的提供者支援此屬性。 如需提供者所支援之屬性的詳細資訊，請參閱您的提供者檔。  
   
- 本章節包含下列主題。  
+ 本節包含下列主題。  
   
 -   [Column 物件屬性、方法和事件](../../../ado/reference/adox-api/column-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Columns 和 Tables Append 方法、Name 屬性範例（VB）](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [Connection Close 方法、Table Type 屬性範例（VB）](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
- [Keys Append 方法、Key Type、RelatedColumn、RelatedTable 和 UpdateRule 屬性範例（VB）](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [ADOX 程式碼範例： NumericScale 和 Precision 屬性範例（VB）](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
- [ParentCatalog 屬性範例（VB）](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
- [SortOrder 屬性範例（VB）](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
- [Columns 集合（ADOX）](../../../ado/reference/adox-api/columns-collection-adox.md)   
+ [Columns 和 Tables Append 方法、Name 屬性範例 (VB) ](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Connection Close 方法、Table Type 屬性範例 (VB) ](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
+ [Keys 附加方法、Key Type、RelatedColumn、RelatedTable 和 UpdateRule 屬性範例 (VB) ](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [ADOX 程式碼範例： NumericScale 和 Precision 屬性範例 (VB) ](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
+ [ (VB) 的 ParentCatalog 屬性範例 ](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
+ [ (VB) 的 SortOrder 屬性範例 ](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
+ [資料行集合 (ADOX) ](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Properties 集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

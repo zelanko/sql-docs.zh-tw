@@ -1,5 +1,6 @@
 ---
-title: Update 和 CancelUpdate 方法範例（VB） |Microsoft Docs
+description: Update 和 CancelUpdate 方法範例 (VB)
+title: Update 和 CancelUpdate 方法範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 55bedd08-7440-4da4-b854-4ac9ef2fdedb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 92c65ce30010c4e1bc6943ba60dd1eee84478aa9
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 973a5f715f0a3d544e268f00f78143aab1395543
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759534"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441660"
 ---
 # <a name="update-and-cancelupdate-methods-example-vb"></a>Update 和 CancelUpdate 方法範例 (VB)
-這個範例會示範如何搭配使用[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)方法的[Update](../../../ado/reference/ado-api/update-method.md)方法。  
+此範例示範如何搭配[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)方法使用[Update](../../../ado/reference/ado-api/update-method.md)方法。  
   
 ```  
 'BeginUpdateVB  
@@ -114,13 +115,13 @@ End Sub
 ' EndUpdateVB  
 ```  
   
- 這個範例會示範如何搭配[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)方法使用**Update**方法。  
+ 此範例示範如何搭配[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)方法使用**Update**方法。  
   
 ```  
 Attribute VB_Name = "Update"  
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [CancelUpdate 方法（ADO）](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
- [Recordset 物件（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [ (ADO) 的 CancelUpdate 方法 ](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
+ [ (ADO) 的記錄集物件 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Update 方法](../../../ado/reference/ado-api/update-method.md)

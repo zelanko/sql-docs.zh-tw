@@ -1,4 +1,5 @@
 ---
+description: Dimension 物件屬性、方法和事件
 title: Dimension 物件屬性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e491439f-8eff-4bf6-a808-8dba243af8c3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 29f5b7e001fe764c026841da11895a5bc1881b0d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3e09213153aeef76d8c64213506faa657dc4e0eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764289"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441090"
 ---
 # <a name="dimension-object-properties-methods-and-events"></a>Dimension 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  

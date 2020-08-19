@@ -1,5 +1,6 @@
 ---
-title: UpdateBatch 和 CancelBatch 方法範例（VB） |Microsoft Docs
+description: " (VB) 的 UpdateBatch 和 CancelBatch 方法範例"
+title: " (VB) 的 UpdateBatch 和 CancelBatch 方法範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 41625f6f-e12d-4d8d-9f60-0729ce64c31e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3145309ec2fadab882d62e8c044a3ceb5a962ab8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 25551017d68c1056a496cbd0a96032191756abdb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759474"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441610"
 ---
-# <a name="updatebatch-and-cancelbatch-methods-example-vb"></a>UpdateBatch 和 CancelBatch 方法範例（VB）
-這個範例會將[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法與[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)方法一起示範。  
+# <a name="updatebatch-and-cancelbatch-methods-example-vb"></a> (VB) 的 UpdateBatch 和 CancelBatch 方法範例
+這個範例會示範 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) 方法與 [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) 方法搭配使用。  
   
 ```  
 'BeginUpdateBatchVB  
@@ -124,5 +125,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [CancelBatch 方法（ADO）](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
+ [ (ADO) 的 CancelBatch 方法 ](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
  [UpdateBatch 方法](../../../ado/reference/ado-api/updatebatch-method.md)

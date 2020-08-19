@@ -1,5 +1,6 @@
 ---
-title: Seek 方法和 Index 屬性範例（VC + +） |Microsoft Docs
+description: Seek 方法和 Index 屬性範例 (VC++)
+title: Seek 方法和 Index 屬性範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 57bda520-e98b-443c-a8bc-d8430e89a383
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6176f607ea338f4686e0a5c23a824d916f501b14
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 93e4a003e2234c0ee8eb537bc8ee09cdef1869d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765409"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442260"
 ---
 # <a name="seek-method-and-index-property-example-vc"></a>Seek 方法和 Index 屬性範例 (VC++)
-這個範例會使用[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件的[Seek](../../../ado/reference/ado-api/seek-method.md)方法和[Index](../../../ado/reference/ado-api/index-property.md)屬性搭配指定的***員工識別碼***，以在 Nwind 的***Employees***資料表中找出員工的名稱。  
+此範例會使用 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 物件的 [Seek](../../../ado/reference/ado-api/seek-method.md) 方法和 [Index](../../../ado/reference/ado-api/index-property.md) 屬性搭配指定的 ***員工識別碼***，以在 Nwind .mdb 資料庫的 ***Employees*** 資料表中找出員工的名稱。  
   
 ```  
 // BeginSeekCpp.cpp  
@@ -227,5 +228,5 @@ void PrintComError(_com_error &e) {
   
 ## <a name="see-also"></a>另請參閱  
  [Index 屬性](../../../ado/reference/ado-api/index-property.md)   
- [Recordset 物件（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [ (ADO) 的記錄集物件 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Seek 方法](../../../ado/reference/ado-api/seek-method.md)

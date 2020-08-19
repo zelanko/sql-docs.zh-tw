@@ -1,5 +1,6 @@
 ---
-title: Type 屬性範例（Field）（VC + +） |Microsoft Docs
+description: Type 屬性範例 (Field) (VC++)
+title: Type 屬性範例 (欄位)  (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b3f957e4ed81eeb1853689162f61b1945d26730b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: eb2ad6e448f215c29c278ba3f767ad995e713d26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765329"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441710"
 ---
 # <a name="type-property-example-field-vc"></a>Type 屬性範例 (Field) (VC++)
-這個範例會示範[type](../../../ado/reference/ado-api/type-property-ado.md)屬性，方法是顯示常數的名稱，其對應至***Employees***資料表中所有[Field](../../../ado/reference/ado-api/field-object.md)物件的**Type**屬性值。 需要 FieldType 函數才能執行此程式。  
+這個範例會顯示[類型](../../../ado/reference/ado-api/type-property-ado.md)屬性，其方式是顯示常數的名稱，該常數對應到***Employees***資料表中所有[欄位](../../../ado/reference/ado-api/field-object.md)物件的**Type**屬性值。 此程式必須有 FieldType 函數才能執行。  
   
 ## <a name="example"></a>範例  
   
@@ -153,7 +154,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Employee 資料表中的欄位：**  
+ **員工資料表中的欄位：**  
  **名稱： emp_id**  
  **類型： adChar**  
  **名稱： fname**  

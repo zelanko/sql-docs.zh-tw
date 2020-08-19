@@ -1,5 +1,6 @@
 ---
-title: 支援方法範例（VC + +） |Microsoft Docs
+description: Supports 方法範例 (VC++)
+title: 支援 (VC + +) 的方法範例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6e174179-9d95-41b9-b72b-6cdbdca6e255
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 242b9888239ee2261014e47a13a347cb3bfcd421
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 03f01a5b8e9779687effd7fad1f3f96cd6cdcfd4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765369"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441760"
 ---
 # <a name="supports-method-example-vc"></a>Supports 方法範例 (VC++)
-這個範例會使用[支援](../../../ado/reference/ado-api/supports-method.md)方法，顯示以不同資料指標類型開啟的記錄集所支援的選項。 此範例需要 DisplaySupport 函數才能執行。  
+這個範例會使用 [支援](../../../ado/reference/ado-api/supports-method.md) 方法來顯示以不同資料指標類型開啟的記錄集所支援的選項。 需要有 DisplaySupport 函式，此範例才能執行。  
   
 ```  
 // SupportsMethodExample.cpp  
@@ -226,5 +227,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Recordset 物件（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [ (ADO) 的記錄集物件 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Supports 方法](../../../ado/reference/ado-api/supports-method.md)

@@ -1,5 +1,6 @@
 ---
-title: Version 屬性範例（VB） |Microsoft Docs
+description: Version 屬性範例 (VB)
+title: Version 屬性範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 708efd50-2905-4168-b7e4-91b2e9b23539
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7392a6cf04ee2951cb0d9064d9321f75bb2db395
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 839137cb2787ec35f8a49d6f66a8577e4d9d959a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758614"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441550"
 ---
 # <a name="version-property-example-vb"></a>Version 屬性範例 (VB)
-這個範例會使用[Connection](../../../ado/reference/ado-api/connection-object-ado.md)物件的[Version](../../../ado/reference/ado-api/version-property-ado.md)屬性來顯示目前的 ADO 版本。 它也會使用數個動態屬性來顯示：  
+這個範例會使用[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件的[Version](../../../ado/reference/ado-api/version-property-ado.md)屬性來顯示目前的 ADO 版本。 它也會使用數個動態屬性來顯示：  
   
 -   目前的 DBMS 名稱和版本。  
   
@@ -78,5 +79,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Connection 物件（ADO）](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [ (ADO) 的 Connection 物件 ](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Version 屬性 (ADO)](../../../ado/reference/ado-api/version-property-ado.md)

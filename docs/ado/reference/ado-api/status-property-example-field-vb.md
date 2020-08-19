@@ -1,5 +1,6 @@
 ---
-title: Status 屬性範例（Field）（VB） |Microsoft Docs
+description: Status 屬性範例 (Field) (VB)
+title: Status 屬性範例 (欄位)  (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2263f72311111ef7f63d006e085165ec2ab492c3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 66fab5cee49adf89bffee79f5b51b13780d5d982
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759704"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441940"
 ---
 # <a name="status-property-example-field-vb"></a>Status 屬性範例 (Field) (VB)
-下列範例會使用[網際網路發行提供者](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)，從讀取/寫入資料夾中開啟檔。 [記錄](../../../ado/reference/ado-api/record-object-ado.md)之[欄位](../../../ado/reference/ado-api/field-object.md)物件的[Status](../../../ado/reference/ado-api/status-property-ado-field.md)屬性會先設定為**adFieldPendingInsert**，然後更新為**adFieldOk**。  
+下列範例會使用 [網際網路發佈提供者](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)，從讀取/寫入資料夾開啟檔。 [記錄](../../../ado/reference/ado-api/record-object-ado.md)[欄位](../../../ado/reference/ado-api/field-object.md)物件的[Status](../../../ado/reference/ado-api/status-property-ado-field.md)屬性會先設定為**adFieldPendingInsert**，然後再更新為**adFieldOk**。  
   
 ```  
 'BeginStatusFieldVB  
@@ -79,13 +80,13 @@ End Sub
 'EndStatusFieldVB  
 ```  
   
- 下列範例會從檔中開啟的**記錄**，刪除已知的**欄位**。 **Status**屬性會先設定為**AdFieldOK**，然後**adFieldPendingUnknown**。  
+ 下列範例會從檔中開啟的**記錄**中，刪除已知的**欄位**。 **Status**屬性會先設定為**AdFieldOK**，然後**adFieldPendingUnknown**。  
   
 ```  
 Attribute VB_Name = "StatusField"  
 ```  
   
- 下列程式碼會從唯讀檔案上開啟的**記錄**中刪除**欄位**。 **狀態**會設定為**adFieldPendingDelete**。 在[更新](../../../ado/reference/ado-api/update-method.md)時，刪除將會失敗，且**狀態**會是**adFieldPendingDelete**加上**adFieldPermissionDenied**。 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)會清除擱置**狀態**設定。  
+ 下列程式碼會從唯讀檔案上開啟的**記錄**中刪除**欄位**。 **狀態** 會設為 **adFieldPendingDelete**。 在 [更新](../../../ado/reference/ado-api/update-method.md)時，刪除將會失敗，且 **狀態** 將會是 **adFieldPendingDelete** 加上 **adFieldPermissionDenied**。 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) 會清除擱置 **狀態** 設定。  
   
 ```  
 Attribute VB_Name = "StatusField"  
@@ -93,5 +94,5 @@ Attribute VB_Name = "StatusField"
   
 ## <a name="see-also"></a>另請參閱  
  [Field 物件](../../../ado/reference/ado-api/field-object.md)   
- [Record 物件（ADO）](../../../ado/reference/ado-api/record-object-ado.md)   
+ [ (ADO) 的記錄物件 ](../../../ado/reference/ado-api/record-object-ado.md)   
  [Status 屬性 (ADO Field)](../../../ado/reference/ado-api/status-property-ado-field.md)

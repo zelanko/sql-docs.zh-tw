@@ -1,5 +1,6 @@
 ---
-title: State 屬性（ADO） |Microsoft Docs
+description: State 屬性 (ADO)
+title: State 屬性 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,23 +16,23 @@ helpviewer_keywords:
 ms.assetid: 0b993bac-2653-40b1-bcbb-5b57b6aae2bf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f4fa19bf21764437d3713c434e288b3bb3a3d25d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ca8a2421f15e5999347b0b7879f3faf707598ba2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242568"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441980"
 ---
 # <a name="state-property-ado"></a>State 屬性 (ADO)
-指出物件的狀態為開啟或關閉時，所有適用的物件。 如果物件正在執行非同步方法，則會指出物件的目前狀態為 [正在連接]、[執行中] 或 [正在抓取]。  
+指出物件的狀態為開啟或關閉時，所有適用的物件。 如果物件正在執行非同步方法，則表示物件的目前狀態是連接、執行或正在抓取。  
   
 ## <a name="return-value"></a>傳回值  
- 傳回可以是[ObjectStateEnum](../../../ado/reference/ado-api/objectstateenum.md)值的**Long**值。 預設值為**adStateClosed**。  
+ 傳回可以是[ObjectStateEnum](../../../ado/reference/ado-api/objectstateenum.md)值的**Long**值。 預設值為 **adStateClosed**。  
   
 ## <a name="remarks"></a>備註  
- 您可以隨時使用**State**屬性來判斷指定物件的目前狀態。  
+ 您可以使用 **State** 屬性來判斷指定物件的目前狀態。  
   
- 物件的**State**屬性可以有值的組合。 例如，如果語句正在執行，此屬性會有**adStateOpen**和**adStateExecuting**的組合值。  
+ 物件的 **State** 屬性可以有值的組合。 例如，如果執行語句，這個屬性將會有 **adStateOpen** 和 **adStateExecuting**的組合值。  
   
  **State**屬性是唯讀的。  
   
@@ -52,5 +53,5 @@ ms.locfileid: "87242568"
 :::row-end:::
 
 ## <a name="see-also"></a>另請參閱  
- [ConnectionString、ConnectionTimeout 和 State 屬性範例（VB）](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
- [ConnectionString、ConnectionTimeout 和 State 屬性範例（VC + +）](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
+ [ConnectionString、ConnectionTimeout 和 State 屬性範例 (VB) ](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
+ [ConnectionString、ConnectionTimeout 和 State 屬性範例 (VC + +) ](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   

@@ -1,4 +1,5 @@
 ---
+description: ADOX 集合
 title: ADOX 集合 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: c0c90ba9-0471-4381-96f1-376de22fa2ee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4e6b0846433b317bb1ced7de284113377e4b4528
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: e5616b0855aa05bf8e3899df9b411f02eb7bb4a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243109"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440600"
 ---
 # <a name="adox-collections"></a>ADOX 集合
 
-|集合|描述|  
+|集合|說明|  
 |-|-|  
-|[資料行](../../../ado/reference/adox-api/columns-collection-adox.md)|包含資料表、索引或索引鍵的所有資料**行**物件。|  
-|[群組](../../../ado/reference/adox-api/groups-collection-adox.md)|包含目錄或使用者的所有儲存的**群組**物件。|  
-|[索引數](../../../ado/reference/adox-api/indexes-collection-adox.md)|包含資料表的所有**索引**物件。|  
-|[[索引鍵]](../../../ado/reference/adox-api/keys-collection-adox.md)|包含資料表的所有索引**鍵**物件。|  
-|[程序](../../../ado/reference/adox-api/procedures-collection-adox.md)|包含目錄**的所有程式**物件。|  
-|[資料表](../../../ado/reference/adox-api/tables-collection-adox.md)|包含目錄的所有**資料表**物件。|  
-|[使用者](../../../ado/reference/adox-api/users-collection-adox.md)|包含目錄或群組的所有預存**使用者**物件。|  
-|[檢視](../../../ado/reference/adox-api/views-collection-adox.md)|包含目錄的所有**View**物件。|  
+|[資料行](../../../ado/reference/adox-api/columns-collection-adox.md)|包含資料表、索引或索引鍵的所有資料 **行** 物件。|  
+|[群組](../../../ado/reference/adox-api/groups-collection-adox.md)|包含目錄或使用者的所有儲存的 **群組** 物件。|  
+|[索引數](../../../ado/reference/adox-api/indexes-collection-adox.md)|包含資料表的所有 **索引** 物件。|  
+|[[索引鍵]](../../../ado/reference/adox-api/keys-collection-adox.md)|包含資料表的所有索引 **鍵** 物件。|  
+|[程序](../../../ado/reference/adox-api/procedures-collection-adox.md)|包含目錄 **的所有程式** 物件。|  
+|[資料表](../../../ado/reference/adox-api/tables-collection-adox.md)|包含目錄的所有 **資料表** 物件。|  
+|[使用者](../../../ado/reference/adox-api/users-collection-adox.md)|包含目錄或群組的所有儲存的 **使用者** 物件。|  
+|[檢視](../../../ado/reference/adox-api/views-collection-adox.md)|包含目錄的所有 **View** 物件。|  
   
 ## <a name="see-also"></a>另請參閱  
  [ADOX API 參考](../../../ado/reference/adox-api/adox-api-reference.md)   

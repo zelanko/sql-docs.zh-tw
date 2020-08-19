@@ -1,4 +1,5 @@
 ---
+description: RecordStatusEnum
 title: RecordStatusEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,57 +16,57 @@ helpviewer_keywords:
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f84f43a90479064c2a95d407b7f816fd48c1c679
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0d48e9538fb8ec4f0dac8c3a17457b04b0ace963
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756758"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442383"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
-指定有關批次更新和其他大量作業的記錄[狀態](../../../ado/reference/ado-api/status-property-ado-recordset.md)。  
+指定與批次更新和其他大量作業有關的記錄 [狀態](../../../ado/reference/ado-api/status-property-ado-recordset.md) 。  
   
-|持續性|值|說明|  
+|常數|值|描述|  
 |--------------|-----------|-----------------|  
-|**adRecCanceled**|0x100|表示未儲存記錄，因為作業已取消。|  
-|**adRecCantRelease**|0x400|表示未儲存新的記錄，因為現有的記錄已鎖定。|  
-|**adRecConcurrencyViolation**|0x800|表示記錄未儲存，因為開放式平行存取已在使用中。|  
-|**adRecDBDeleted**|0x40000|表示已從資料來源中刪除記錄。|  
-|**adRecDeleted**|0x4|表示已刪除記錄。|  
-|**adRecIntegrityViolation**|0x1000|表示記錄未儲存，因為使用者違反完整性條件約束。|  
-|**adRecInvalid**|0x10|表示記錄未儲存，因為它的書簽無效。|  
-|**adRecMaxChangesExceeded**|0x2000|表示記錄未儲存，因為有太多暫止的變更。|  
+|**adRecCanceled**|0x100|指出因為作業已取消，所以未儲存記錄。|  
+|**adRecCantRelease**|0x400|指出因為現有的記錄已鎖定，所以不會儲存新的記錄。|  
+|**adRecConcurrencyViolation**|0x800|指出未儲存記錄，因為正在使用開放式平行存取。|  
+|**adRecDBDeleted**|0x40000|指出已經從資料來源中刪除記錄。|  
+|**adRecDeleted**|0x4|指出已刪除記錄。|  
+|**adRecIntegrityViolation**|0x1000|指出未儲存記錄，因為使用者違反了完整性條件約束。|  
+|**adRecInvalid**|0x10|指出未儲存記錄，因為它的書簽無效。|  
+|**adRecMaxChangesExceeded**|0x2000|指出未儲存記錄，因為有太多暫止的變更。|  
 |**adRecModified**|0x2|表示已修改記錄。|  
-|**adRecMultipleChanges**|0x40|表示記錄未儲存，因為它會影響多筆記錄。|  
+|**adRecMultipleChanges**|0x40|指出記錄未儲存，因為它會影響多筆記錄。|  
 |**adRecNew**|0x1|表示記錄是新的。|  
-|**adRecObjectOpen**|0x4000|表示記錄未儲存，因為與開啟的儲存物件發生衝突。|  
+|**adRecObjectOpen**|0x4000|指出因為與開啟的儲存物件發生衝突，所以不會儲存記錄。|  
 |**adRecOK**|0|表示已成功更新記錄。|  
-|**adRecOutOfMemory**|0x8000|表示記錄未儲存，因為電腦的記憶體用盡。|  
-|**adRecPendingChanges**|0x80|表示記錄未儲存，因為它參考了暫止的插入。|  
-|**adRecPermissionDenied**|0x10000|表示記錄未儲存，因為使用者沒有足夠的許可權。|  
-|**adRecSchemaViolation**|0x20000|表示記錄未儲存，因為它違反基礎資料庫的結構。|  
-|**adRecUnmodified**|0x8|表示未修改記錄。|  
+|**adRecOutOfMemory**|0x8000|指出未儲存記錄，因為電腦已用盡記憶體。|  
+|**adRecPendingChanges**|0x80|指出記錄未儲存，因為它參考暫止的插入。|  
+|**adRecPermissionDenied**|0x10000|指出未儲存記錄，因為使用者的許可權不足。|  
+|**adRecSchemaViolation**|0x20000|指出未儲存記錄，因為它違反基礎資料庫的結構。|  
+|**adRecUnmodified**|0x8|指出未修改記錄。|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC 對等  
+## <a name="adowfc-equivalent"></a>ADO/WFC 相等  
  AdoEnums.RecordStatus.  
   
- Package： **.com. wfc. 資料**  
+ 封裝： **.com. 資料**  
   
-|持續性|  
+|常數|  
 |--------------|  
-|AdoEnums. RecordStatus. 已取消|  
+|AdoEnums. RecordStatus。已取消|  
 |AdoEnums.RecordStatus.CANTRELEASE|  
 |AdoEnums. RecordStatus. CONCURRENCYVIOLATION|  
 |AdoEnums.RecordStatus.DBDELETED|  
-|AdoEnums. RecordStatus. 已刪除|  
+|AdoEnums. RecordStatus 刪除|  
 |AdoEnums.RecordStatus.INTEGRITYVIOLATION|  
 |AdoEnums. RecordStatus 無效|  
 |AdoEnums.RecordStatus.MAXCHANGESEXCEEDED|  
-|AdoEnums. RecordStatus. 已修改|  
+|AdoEnums. RecordStatus 修改|  
 |AdoEnums.RecordStatus.MULTIPLECHANGES|  
 |AdoEnums. RecordStatus. NEW|  
 |AdoEnums.RecordStatus.OBJECTOPEN|  
-|AdoEnums. RecordStatus. OK|  
+|AdoEnums. RecordStatus. 確定|  
 |AdoEnums. RecordStatus. OUTOFMEMORY|  
 |AdoEnums. RecordStatus. PENDINGCHANGES|  
 |AdoEnums.RecordStatus.PERMISSIONDENIED|  

@@ -1,5 +1,6 @@
 ---
-title: CubeDef 物件（ADO MD） |Microsoft Docs
+description: CubeDef 物件 (ADO MD)
+title: CubeDef 物件 (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,32 +16,32 @@ helpviewer_keywords:
 ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25dd4d6a9c8a5518c8c2b637af63b39e7b992557
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: cf8de68674ee1cc33f0ba16c9a0b3604418d0332
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764349"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441150"
 ---
 # <a name="cubedef-object-ado-md"></a>CubeDef 物件 (ADO MD)
-代表多維架構中的 cube，其中包含一組相關維度。  
+表示多維架構中的 cube，其中包含一組相關的維度。  
   
 ## <a name="remarks"></a>備註  
- 使用**CubeDef**物件的集合和屬性，您可以執行下列動作：  
+ 使用 **CubeDef** 物件的集合和屬性，您可以執行下列動作：  
   
--   識別具有[Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)屬性的**CubeDef** 。  
+-   使用[Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)屬性來識別**CubeDef** 。  
   
--   傳回描述具有[Description](../../../ado/reference/ado-md-api/description-property-ado-md.md)屬性之 cube 的字串。  
+-   傳回字串，這個字串描述具有 [Description](../../../ado/reference/ado-md-api/description-property-ado-md.md) 屬性的 cube。  
   
--   傳回使用[維度](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)集合組成 cube 的維度。  
+-   傳回組成 cube 和 [維度](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md) 集合的維度。  
   
--   使用標準的 ADO[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)集合，取得**CubeDef**的其他相關資訊。  
+-   使用標準的 ADO[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)集合取得**CubeDef**的其他資訊。  
   
- **Properties**集合包含提供者提供的屬性。 下表列出可能可用的屬性。 實際的屬性清單可能會根據提供者的執行而有所不同。 如需可用屬性的完整清單，請參閱提供者的檔。  
+ **Properties**集合包含提供者提供的屬性。 下表列出可能可用的屬性。 實際的屬性清單可能會因提供者的執行而有所不同。 如需可用屬性的完整清單，請參閱提供者的檔。  
   
-|Name|描述|  
+|名稱|描述|  
 |----------|-----------------|  
-|CatalogName|這個 cube 所屬的目錄名稱。|  
+|CatalogName|此 cube 所屬之目錄的名稱。|  
 |CreatedOn|建立 cube 的日期和時間。|  
 |CubeGUID|Cube GUID。|  
 |CubeName|Cube 的名稱。|  
@@ -48,16 +49,16 @@ ms.locfileid: "82764349"
 |DataUpdatedBy|執行上次資料更新之人員的使用者識別碼。|  
 |描述|Cube 的有意義描述。|  
 |LastSchemaUpdate|上次架構更新的日期和時間。|  
-|SchemaName|這個 cube 所屬的架構名稱。|  
-|SchemaUpdatedBy|執行上次架構更新之人員的使用者識別碼。|  
+|SchemaName|此 cube 所屬的架構名稱。|  
+|SchemaUpdatedBy|執行最後一個架構更新之人員的使用者識別碼。|  
   
- 本章節包含下列主題。  
+ 本節包含下列主題。  
   
 -   [屬性、方法和事件](../../../ado/reference/ado-md-api/cubedef-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [CubeDef 範例（VBScript）](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
- [Catalog 物件（ADO MD）](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)   
- [CubeDefs 集合（ADO MD）](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)   
- [維度集合（ADO MD）](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   
+ [CubeDef 範例 (VBScript) ](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
+ [類別目錄物件 (ADO MD) ](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)   
+ [CubeDefs 集合 (ADO MD) ](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)   
+ [維度集合 (ADO MD) ](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   
  [Properties 集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

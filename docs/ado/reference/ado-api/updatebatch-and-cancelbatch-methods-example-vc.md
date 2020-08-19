@@ -1,5 +1,6 @@
 ---
-title: UpdateBatch 和 CancelBatch 方法範例（VC + +） |Microsoft Docs
+description: UpdateBatch 和 CancelBatch 方法範例 (VC++)
+title: UpdateBatch 和 CancelBatch 方法範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: bcb1468e-18bb-41b8-8902-6ee05b786eec
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e467e41d77012d3366ded54c7e20b01121bec8d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 848c798a92c2075cdfff04551b17a46d2d90fc76
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759464"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441620"
 ---
 # <a name="updatebatch-and-cancelbatch-methods-example-vc"></a>UpdateBatch 和 CancelBatch 方法範例 (VC++)
-這個範例會將[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法與[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)方法一起示範。  
+這個範例會示範 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) 方法與 [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) 方法搭配使用。  
   
 ```  
 // BeginUpdateBatchCpp.cpp  
@@ -211,5 +212,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [CancelBatch 方法（ADO）](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
+ [ (ADO) 的 CancelBatch 方法 ](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
  [UpdateBatch 方法](../../../ado/reference/ado-api/updatebatch-method.md)

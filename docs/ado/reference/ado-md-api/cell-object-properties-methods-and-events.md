@@ -1,4 +1,5 @@
 ---
+description: Cell 物件屬性、方法和事件
 title: Cell 物件屬性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: c45d795b-3272-4df4-a54c-7cd4fcb187fd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 60424bed2d6496ce23f7bf9ed28d4c49a222e3f2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bb2a3fd6f848b43de981d1239657ebc5097202fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761786"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441230"
 ---
 # <a name="cell-object-properties-methods-and-events"></a>Cell 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  
  [FormattedValue 屬性](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md)  
   
- [Ordinal 屬性（Cell）](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)  
+ [序數屬性 (儲存格) ](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)  
   
  [位置集合](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)  
   

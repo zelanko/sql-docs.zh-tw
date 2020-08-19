@@ -1,5 +1,6 @@
 ---
-title: 'Stream （Visual C++ #import 的語法索引） |Microsoft Docs'
+description: '使用 #import) 串流 (Visual C++ 語法索引'
+title: '使用 #import)  (Visual C++ 語法索引的資料流程Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: e59d0687-1f5a-45c5-9d0a-c1f27079495d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a38140e32f594e78e047c83eb1b4d6a495483e21
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 38d48a4a6563d84c3223a599c3b6c40e30641b96
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759614"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441830"
 ---
-# <a name="stream-visual-c-syntax-index-with-import"></a>Stream （使用 #import Visual C++ 語法索引）
+# <a name="stream-visual-c-syntax-index-with-import"></a>使用 #import) 串流 (Visual C++ 語法索引
 ## <a name="methods"></a>方法  
   
 ```  

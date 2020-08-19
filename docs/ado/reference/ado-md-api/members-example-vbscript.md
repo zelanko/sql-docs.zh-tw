@@ -1,5 +1,6 @@
 ---
-title: Members 範例（VBScript） |Microsoft Docs
+description: Members 範例 (VBScript)
+title: " (VBScript) 的成員範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87bbd4ad-bb1a-4123-93ef-99ef47fd970b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3064c920c8d18e702541138de9f2151f5d8fbb03
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e1da649b752739f9e36fe22ac2c3e61d8b4fba14
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765096"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440850"
 ---
 # <a name="members-example-vbscript"></a>Members 範例 (VBScript)
 這個範例會使用 MDX 查詢字串來取出 OLAP 資料，並使用多維度資料格集的資料行跨越功能，將產生的資料格集寫入 HTML 資料表結構。  

@@ -1,5 +1,6 @@
 ---
-title: 叢集屬性範例（VB） |Microsoft Docs
+description: Clustered 屬性範例 (VB)
+title: " (VB) 的叢集屬性範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1cd30769-c8af-43e7-be27-12ed0434daa1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 91f2f3bc8793a82cd7fd7eee16e259868bdad915
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 647fe236ad7a616cbce54986f6a3ce3aba0db163
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759404"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440350"
 ---
 # <a name="clustered-property-example-vb"></a>Clustered 屬性範例 (VB)
-這個範例會示範[索引](../../../ado/reference/adox-api/index-object-adox.md)[的叢集屬性。](../../../ado/reference/adox-api/clustered-property-adox.md) 請注意，Microsoft Jet 資料庫不支援叢集索引，因此這個範例會針對**Northwind**資料庫中所有**索引的叢集屬性傳回** **False** 。  
+此範例示範索引[的叢集屬性](../../../ado/reference/adox-api/clustered-property-adox.md)。 [Index](../../../ado/reference/adox-api/index-object-adox.md) 請注意，Microsoft Jet 資料庫不支援叢集索引，因此此範例會針對**Northwind**資料庫中所有**索引的叢集屬性傳回** **False** 。  
   
 ```  
 ' BeginClusteredVB  
@@ -73,7 +74,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Catalog 物件（ADOX）](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [叢集屬性（ADOX）](../../../ado/reference/adox-api/clustered-property-adox.md)   
- [Index 物件（ADOX）](../../../ado/reference/adox-api/index-object-adox.md)   
+ [ (ADOX) 的目錄物件 ](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [叢集屬性 (ADOX) ](../../../ado/reference/adox-api/clustered-property-adox.md)   
+ [ (ADOX) 的索引物件 ](../../../ado/reference/adox-api/index-object-adox.md)   
  [Table 物件 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)

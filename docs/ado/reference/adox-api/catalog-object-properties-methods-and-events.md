@@ -1,4 +1,5 @@
 ---
+description: Catalog 物件屬性、方法和事件
 title: Catalog 物件屬性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 90a05168-87d0-45e8-8b32-0b64fec74ad2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aedafb6e8753838c9911c0ff961b0c9181fd181c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3b1496230281d7199774475437c0d12be67e7cfe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763929"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440400"
 ---
 # <a name="catalog-object-properties-methods-and-events"></a>Catalog 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  
@@ -29,12 +30,12 @@ ms.locfileid: "82763929"
   
  [資料表集合](../../../ado/reference/adox-api/tables-collection-adox.md)  
   
- [Users 集合](../../../ado/reference/adox-api/users-collection-adox.md)  
+ [使用者集合](../../../ado/reference/adox-api/users-collection-adox.md)  
   
  [Views 集合](../../../ado/reference/adox-api/views-collection-adox.md)  
   
 ## <a name="methods"></a>方法  
- [建立方法](../../../ado/reference/adox-api/create-method-adox.md)  
+ [Create 方法](../../../ado/reference/adox-api/create-method-adox.md)  
   
  [GetObjectOwner 方法](../../../ado/reference/adox-api/getobjectowner-method-adox.md)  
   

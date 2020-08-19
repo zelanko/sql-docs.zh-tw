@@ -1,4 +1,5 @@
 ---
+description: ColumnAttributesEnum
 title: ColumnAttributesEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: cd0db27a-1080-40af-a491-3893e7bef9cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c590e0f5dd94713c84a858063a81c680e4a0029
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7f9ab23767ccac617694468f5ff1502b8c60f14e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759364"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440310"
 ---
 # <a name="columnattributesenum"></a>ColumnAttributesEnum
-指定資料[行](../../../ado/reference/adox-api/column-object-adox.md)的特性。  
+指定資料 [行](../../../ado/reference/adox-api/column-object-adox.md)的特性。  
   
-|持續性|值|描述|  
+|常數|值|描述|  
 |--------------|-----------|-----------------|  
-|**adColFixed**|1|資料行是固定長度。|  
-|**adColNullable**|2|此資料行可能包含 null 值。|  
+|**adColFixed**|1|此資料行是固定長度。|  
+|**adColNullable**|2|資料行可能包含 null 值。|  
   
 ## <a name="applies-to"></a>套用至  
  [Attributes 屬性 (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)

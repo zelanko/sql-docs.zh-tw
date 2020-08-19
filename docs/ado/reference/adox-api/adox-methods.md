@@ -1,4 +1,5 @@
 ---
+description: ADOX 方法
 title: ADOX 方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8b2af54e33aeaa42cab3de76f1ffc6bf5fd758dd
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 9d8a2c7e02b4b7efeb17166e1fcab8ee2c457b6b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243099"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440580"
 ---
 # <a name="adox-methods"></a>ADOX 方法
 
 |方法|描述|  
 |-|-|  
-|[附加（資料行）](../../../ado/reference/adox-api/append-method-adox-columns.md)|將新的資料**行**物件加入至資料**行**集合。|  
-|[附加（群組）](../../../ado/reference/adox-api/append-method-adox-groups.md)|將新的**群組**物件加入至**群組**集合。|  
-|[附加（索引）](../../../ado/reference/adox-api/append-method-adox-indexes.md)|將新的**索引**物件加入至**索引**集合。|  
-|[附加（索引鍵）](../../../ado/reference/adox-api/append-method-adox-keys.md)|將新的索引**鍵**物件加入至索引**鍵**集合。|  
-|[附加（程式）](../../../ado/reference/adox-api/append-method-adox-procedures.md)|將新的**Procedure**物件加入至**程式**集合。|  
-|[附加（資料表）](../../../ado/reference/adox-api/append-method-adox-tables.md)|將新的**資料表**物件加入至**Tables**集合。|  
-|[附加（使用者）](../../../ado/reference/adox-api/append-method-adox-users.md)|將新的**使用者**物件加入至**使用者**集合。|  
-|[附加（Views）](../../../ado/reference/adox-api/append-method-adox-views.md)|將新的**View**物件加入**Views**集合。|  
+|[附加 (資料行) ](../../../ado/reference/adox-api/append-method-adox-columns.md)|將新的資料 **行** 物件加入至資料 **行** 集合。|  
+|[將 (群組附加) ](../../../ado/reference/adox-api/append-method-adox-groups.md)|將新的 **群組** 物件加入至 **群組** 集合。|  
+|[附加 (索引) ](../../../ado/reference/adox-api/append-method-adox-indexes.md)|將新的 **索引** 物件加入至 **索引** 集合。|  
+|[附加 (金鑰) ](../../../ado/reference/adox-api/append-method-adox-keys.md)|將新的索引 **鍵** 物件加入至索引 **鍵** 集合。|  
+|[附加 (程式) ](../../../ado/reference/adox-api/append-method-adox-procedures.md)|將新的**程式**物件加入至**Procedure**集合。|  
+|[附加 (資料表) ](../../../ado/reference/adox-api/append-method-adox-tables.md)|將新的 **資料表** 物件加入至 **資料表** 集合。|  
+|[附加 (使用者) ](../../../ado/reference/adox-api/append-method-adox-users.md)|將新的 **使用者** 物件加入至 **Users** 集合。|  
+|[附加 (Views) ](../../../ado/reference/adox-api/append-method-adox-views.md)|將新的 **View** 物件加入至 **Views** 集合。|  
 |[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)|變更使用者帳戶的密碼。|  
 |[建立](../../../ado/reference/adox-api/create-method-adox.md)|建立新的目錄。|  
 |[刪除](../../../ado/reference/adox-api/delete-method-adox-collections.md)|從集合中移除物件。|  

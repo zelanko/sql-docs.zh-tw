@@ -1,5 +1,6 @@
 ---
-title: Source 屬性範例（VB） |Microsoft Docs
+description: Source 屬性範例 (VB)
+title: Source 屬性範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7c83eb01-71c7-4c5d-9778-6270471c8164
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f652b23e65b4f5669c6d369595933df4c5c6b9a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 635f091b668c8b0a0a8d654a65055e72c835d987
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759794"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442020"
 ---
 # <a name="source-property-example-vb"></a>Source 屬性範例 (VB)
-這個範例會根據不同的資料來源開啟三個[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件，以示範[Source](../../../ado/reference/ado-api/source-property-ado-recordset.md)屬性。  
+此範例會根據不同的資料來源開啟三個[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件，以示範[來源](../../../ado/reference/ado-api/source-property-ado-recordset.md)屬性。  
   
 ```  
 'BeginSourceVB  
@@ -127,5 +128,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Recordset 物件（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [ (ADO) 的記錄集物件 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Source 屬性 (ADO Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

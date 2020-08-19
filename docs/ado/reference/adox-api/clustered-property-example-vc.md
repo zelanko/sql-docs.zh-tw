@@ -1,5 +1,6 @@
 ---
-title: 叢集屬性範例（VC + +） |Microsoft Docs
+description: Clustered 屬性範例 (VC++)
+title: 叢集屬性範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b993e357-3e2e-48a7-a627-76909160c97f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8039f07bfdb750a5ed3632d2f7c28b51a02b8ec9
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 765137d5b04c2077e113cb5eb1f515b569311161
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759384"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440320"
 ---
 # <a name="clustered-property-example-vc"></a>Clustered 屬性範例 (VC++)
-這個範例會示範[索引](../../../ado/reference/adox-api/index-object-adox.md)[的叢集屬性。](../../../ado/reference/adox-api/clustered-property-adox.md) 請注意，Microsoft Jet 資料庫不支援叢集索引，因此這個範例會針對*Northwind*資料庫中所有**索引的叢集屬性傳回** **False** 。  
+此範例示範索引[的叢集屬性](../../../ado/reference/adox-api/clustered-property-adox.md)。 [Index](../../../ado/reference/adox-api/index-object-adox.md) 請注意，Microsoft Jet 資料庫不支援叢集索引，因此此範例會針對*Northwind*資料庫中所有**索引的叢集屬性傳回** **False** 。  
   
 ```  
 // BeginClusteredCpp.cpp  
@@ -88,5 +89,5 @@ void ClusteredX() {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [叢集屬性（ADOX）](../../../ado/reference/adox-api/clustered-property-adox.md)   
+ [叢集屬性 (ADOX) ](../../../ado/reference/adox-api/clustered-property-adox.md)   
  [Index 物件 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

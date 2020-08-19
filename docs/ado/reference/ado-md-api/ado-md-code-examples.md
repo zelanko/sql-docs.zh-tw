@@ -1,4 +1,5 @@
 ---
+description: ADO MD 程式碼範例
 title: ADO MD 程式碼範例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 72cf9eb3-31f6-441c-aede-5383fdfb81af
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1d6c4a4c21bd3dcb9a0d84d8bf081c57c12b2352
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2b8d0e0d5c5f0b53699f314292941dac618e5da3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765279"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441400"
 ---
 # <a name="ado-md-code-examples"></a>ADO MD 程式碼範例
-使用下列程式碼範例，瞭解如何使用 ADO MD 的物件、方法和屬性。 這些範例是與 Microsoft SQL Server OLAP 服務一起安裝的範例應用程式子集，適用于 SQL Server 7.0。  
+使用下列程式碼範例，瞭解如何使用 ADO MD 物件、方法和屬性。 這些範例是隨 SQL Server 7.0 Microsoft SQL Server OLAP 服務一起安裝之範例應用程式的子集。  
   
- 這些範例會使用 MSOLAP OLE DB 提供者，並針對 Microsoft SQL Server OLAP 服務本機主機執行。 不過，這些範例的目的是要顯示基本的 ADO MD 程式設計技術，而且應該輕鬆地適應其他資料來源或提供者。  
+ 這些範例會使用 MSOLAP OLE DB 提供者，並針對 Microsoft SQL Server OLAP 服務本機主機執行。 不過，這些範例的目的是要示範 ADO MD 程式設計技術的基礎，而且應該可以輕鬆地調整為其他資料來源或提供者。  
   
 -   [Visual Basic 中的 ADO MD 程式碼範例](../../../ado/reference/ado-md-api/ado-md-code-examples-in-visual-basic.md)  
   

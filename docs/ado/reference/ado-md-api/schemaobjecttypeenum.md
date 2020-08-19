@@ -1,4 +1,5 @@
 ---
+description: SchemaObjectTypeEnum
 title: SchemaObjectTypeEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: bf53939f-5543-40ac-a707-aa35e9bde1dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6d7f908c6d74d71c5d4aece216e825ac23487f26
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bdb460dc2aa2e6fe9c24c79fa994b3d76de0c8c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764999"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440750"
 ---
 # <a name="schemaobjecttypeenum"></a>SchemaObjectTypeEnum
-指定[GetSchemaObject](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)方法所要抓取的物件類型。  
+指定 [GetSchemaObject](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md) 方法要抓取的物件類型。  
   
-|持續性|值|描述|  
+|常數|值|描述|  
 |--------------|-----------|-----------------|  
 |**adObjectTypeDimension**|1|[維度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)物件。|  
 |**adObjectTypeHierarchy**|2|階層[物件。](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|  

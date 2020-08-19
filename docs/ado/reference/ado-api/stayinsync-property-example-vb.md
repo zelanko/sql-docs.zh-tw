@@ -1,5 +1,6 @@
 ---
-title: StayInSync 屬性範例（VB） |Microsoft Docs
+description: StayInSync 屬性範例 (VB)
+title: " (VB) 的 StayInSync 屬性範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b682bcc3-04b3-42b0-86f4-c17e0cd29baf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5fa4c09a56f164ca8c0d2b6d6222b9d827c1ee45
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 13e1026b95386cb051aba0468d371937c4ed52d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759674"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441910"
 ---
 # <a name="stayinsync-property-example-vb"></a>StayInSync 屬性範例 (VB)
-這個範例會示範[StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)屬性如何協助存取階層式[記錄集中](../../../ado/reference/ado-api/recordset-object-ado.md)的資料列。  
+此範例示範 [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) 屬性如何加速存取階層式 [記錄集中](../../../ado/reference/ado-api/recordset-object-ado.md)的資料列。  
   
- 外部迴圈會顯示每位作者的名字和姓氏、狀態和識別。 每個資料列的附加**記錄集會**從[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)集合中抓取，每當父**記錄集**移至新的資料列時， **StayInSync**屬性就會自動指派給**rstTitleAuthor** 。 內部迴圈會顯示附加之記錄集中每個資料列的四個欄位。  
+ 外部迴圈會顯示每個作者的名字、姓氏、狀態和識別。 每當父**記錄集**移至新的資料列時，就會從[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)集合中取出每個資料列的附加**記錄集**，並自動指派給**rstTitleAuthor** by **StayInSync**屬性。 內部迴圈會在附加的記錄集中顯示每個資料列的四個欄位。  
   
 ```  
 'BeginStayInSyncVB  
@@ -90,6 +91,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Fields 集合（ADO）](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Recordset 物件（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [ (ADO) 的欄位集合 ](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [ (ADO) 的記錄集物件 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [StayInSync 屬性](../../../ado/reference/ado-api/stayinsync-property.md)

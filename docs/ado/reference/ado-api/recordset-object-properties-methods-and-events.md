@@ -1,4 +1,5 @@
 ---
+description: Recordset 物件屬性、方法和事件
 title: Recordset 物件屬性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b89d125cd100d380f7d20c64ed23a2087cf4e949
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 35eba7d8e34c6803f997f052c1798f825aae1ff0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761856"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442410"
 ---
 # <a name="recordset-object-properties-methods-and-events"></a>Recordset 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  

@@ -1,5 +1,6 @@
 ---
-title: UniqueName 屬性（ADO MD） |Microsoft Docs
+description: UniqueName 屬性 (ADO MD)
+title: UniqueName 屬性 (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 5b977956-e252-4861-8425-f1aaf6b80130
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e5960495a9c5069aa9145d5aee47365b84b7175c
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d2059538f43f4cc124f0841bd1d228019fa0a08e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243119"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440720"
 ---
 # <a name="uniquename-property-ado-md"></a>UniqueName 屬性 (ADO MD)
 表示目前物件的明確名稱。  
   
 ## <a name="return-values"></a>傳回值  
- 傳回**字串**，而且是唯讀的。  
+ 傳回 **字串** ，而且是唯讀的。  
   
 ## <a name="applies-to"></a>套用至  
   

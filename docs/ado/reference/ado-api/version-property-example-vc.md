@@ -1,5 +1,6 @@
 ---
-title: Version 屬性範例（VC + +） |Microsoft Docs
+description: Version 屬性範例 (VC++)
+title: Version 屬性範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2440b6ff-2536-497c-a5f4-41db0cf1945e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5b2ed55f02e3cbabfa1e14aadf7c53d923d85523
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7ddac29da277027f1cc89a8c078ac4d072c369b6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758594"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441540"
 ---
 # <a name="version-property-example-vc"></a>Version 屬性範例 (VC++)
-這個範例會使用[Connection](../../../ado/reference/ado-api/connection-object-ado.md)物件的[Version](../../../ado/reference/ado-api/version-property-ado.md)屬性來顯示目前的 ADO 版本。 它也會使用數個動態屬性來顯示：  
+這個範例會使用[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件的[Version](../../../ado/reference/ado-api/version-property-ado.md)屬性來顯示目前的 ADO 版本。 它也會使用數個動態屬性來顯示：  
   
 -   目前的 DBMS 名稱和版本。  
   
@@ -35,7 +36,7 @@ ms.locfileid: "82758594"
 -   ODBC 驅動程式名稱和版本。  
   
 > [!NOTE]
->  如果您要連接到支援 Windows 驗證的資料來源提供者，您應該在連接字串中指定**Trusted_Connection = yes**或**整合式安全性 = SSPI** ，而不是使用者識別碼和密碼資訊。  
+>  如果您要連接到支援 Windows 驗證的資料來源提供者，您應該在連接字串中指定 **Trusted_Connection = yes** 或 **整合式安全性 = SSPI** ，而不是使用者識別碼和密碼資訊。  
   
 ```  
 // BeginVersionCpp.cpp  
@@ -135,5 +136,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Connection 物件（ADO）](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [ (ADO) 的 Connection 物件 ](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Version 屬性 (ADO)](../../../ado/reference/ado-api/version-property-ado.md)

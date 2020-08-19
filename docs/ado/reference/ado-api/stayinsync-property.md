@@ -1,4 +1,5 @@
 ---
+description: StayInSync 屬性
 title: StayInSync 屬性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,25 +20,25 @@ helpviewer_keywords:
 ms.assetid: 502d69b5-dc9a-455d-b115-a03bd39a552b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f36eace18280cd810341c5eeeec1fb294999e6ec
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7bd35cbd24dadef9d6a9468f65bc85f95169d0cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759634"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441880"
 ---
 # <a name="stayinsync-property"></a>StayInSync 屬性
-指出階層式[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件中，當父資料列位置變更時，基礎子記錄（也就是*章節*）的參考是否會變更。  
+指出階層式 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 物件中的基礎子記錄參考是否 (也就是，在父資料列位置變更時 *，) 變更* 。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定或傳回**布林**值。 預設值是 **True**。 若**為 True**，則當父**記錄集**物件變更資料列位置時，將會更新該章節;若**為 False**，即使父**記錄集**物件已變更資料列位置，本章仍會繼續參考上一章中的資料。  
+ 設定或傳回 **布林** 值。 預設值是 **True**。 若 **為 True**，則會在父 **記錄集** 物件變更資料列位置時更新章節;如果 **為 False**，則表示章節將繼續參考上一章中的資料，即使父 **記錄集** 物件已變更資料列位置也一樣。  
   
 ## <a name="remarks"></a>備註  
- 這個屬性會套用至階層式記錄集，例如適用[于 OLE DB 的 Microsoft 資料成形服務](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)所支援，而且必須在取得子**記錄集**之前于父**記錄集**上設定。 此屬性可簡化階層式記錄集的導覽。  
+ 這個屬性會套用至階層式記錄集（例如 [Microsoft 資料成形服務針對 OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)所支援的記錄集），而且必須先在父 **記錄** 集上設定，才能抓取子 **記錄集** 。 這個屬性可簡化流覽階層式記錄集的流程。  
   
 ## <a name="applies-to"></a>套用至  
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [StayInSync 屬性範例（VB）](../../../ado/reference/ado-api/stayinsync-property-example-vb.md)   
- [適用于 OLE DB 的 Microsoft 資料成形服務（ADO 服務提供者）](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)
+ [ (VB) 的 StayInSync 屬性範例 ](../../../ado/reference/ado-api/stayinsync-property-example-vb.md)   
+ [適用于 OLE DB (ADO 服務提供者的 Microsoft 資料成形服務) ](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)

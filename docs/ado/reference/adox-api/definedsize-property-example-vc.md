@@ -1,5 +1,6 @@
 ---
-title: DefinedSize 屬性範例（VC + +） |Microsoft Docs
+description: DefinedSize 屬性範例 (VC++)
+title: DefinedSize 屬性範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9cafc18fb00a0adeb6d219d901ea40ca79510be5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f4d2f7ef20e5fb67450dccee7e7fb29b32d46286
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759174"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440120"
 ---
 # <a name="definedsize-property-example-vc"></a>DefinedSize 屬性範例 (VC++)
-這個範例會示範資料[行](../../../ado/reference/adox-api/column-object-adox.md)的[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)屬性。 此程式碼會重新定義*Northwind*資料庫之**Employee 資料表中**FirstName 資料行的大小。 然後會顯示以 [ **Employees** ] 資料表為基礎之[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)的 FirstName[欄位](../../../ado/reference/ado-api/field-object.md)值變更。 請注意，根據預設，在您重新定義**DefinedSize**屬性之後，FirstName 欄位會以空格填補。  
+此範例示範資料[行](../../../ado/reference/adox-api/column-object-adox.md)的[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)屬性。 此程式碼將會重新定義*Northwind*資料庫的**Employees**資料表中 FirstName 資料行的大小。 然後，會顯示以**Employees**資料表為基礎之[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)的 FirstName[欄位](../../../ado/reference/ado-api/field-object.md)值變更。 請注意，在您重新定義 **DefinedSize** 屬性之後，FirstName 欄位預設會以空格填補。  
   
 ```  
 // BeginDefinedSizeCpp.cpp  
@@ -163,5 +164,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Column 物件（ADOX）](../../../ado/reference/adox-api/column-object-adox.md)   
+ [資料行物件 (ADOX) ](../../../ado/reference/adox-api/column-object-adox.md)   
  [DefinedSize 屬性 (ADOX)](../../../ado/reference/adox-api/definedsize-property-adox.md)

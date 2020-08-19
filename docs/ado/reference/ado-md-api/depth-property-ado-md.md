@@ -1,5 +1,6 @@
 ---
-title: Depth 屬性（ADO MD） |Microsoft Docs
+description: Depth 屬性 (ADO MD)
+title: 深度屬性 (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: e41f2644-617d-4c09-80a4-feb5cf736186
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 146e845e7f0867f19ccd90e4260dd3abf01ba3ac
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5633df4158aeafc2e650d5c89aa5d83b02fe8a11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764319"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441130"
 ---
 # <a name="depth-property-ado-md"></a>Depth 屬性 (ADO MD)
-指出層級和階層根之間的層[級](../../../ado/reference/ado-md-api/level-object-ado-md.md)數目。  
+指出階層的 [層級](../../../ado/reference/ado-md-api/level-object-ado-md.md) 和根目錄之間的層級數目。  
   
 ## <a name="return-values"></a>傳回值  
- 會傳回整數，而且是唯讀的。  
+ 傳回整數，而且是唯讀的。  
   
 ## <a name="remarks"></a>備註  
- 階層根**層級**的**深度**值為零（0）。  
+ 階層根目錄的 **層級** 具有 0 (0) 的 **深度** 值。  
   
 ## <a name="applies-to"></a>套用至  
  [Level 物件 (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)  
