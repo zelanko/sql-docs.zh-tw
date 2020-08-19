@@ -1,4 +1,5 @@
 ---
+description: 指令碼元件的程式碼撰寫和偵錯
 title: 指令碼元件的程式碼撰寫和偵錯 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c7273296d1c316cb16ae40b5e7194d6b6d8846e0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ef340421dc6d4075a40f78f782cda3273a05900b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913437"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430330"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>指令碼元件的程式碼撰寫和偵錯
 

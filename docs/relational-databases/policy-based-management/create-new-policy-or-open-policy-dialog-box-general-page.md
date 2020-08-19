@@ -1,4 +1,5 @@
 ---
+description: 建立新原則或開啟原則對話方塊，一般頁面
 title: '[建立新原則] 或 [開啟原則] 對話方塊，一般頁面'
 descripton: Describes the 'General Page' of the 'Create New Policy' and 'Open Policy' dialog boxes for Policy-Based Management in SQL Server Management Studio (SSMS).
 ms.custom: seo-lt-2019
@@ -15,12 +16,12 @@ f1_keywords:
 ms.assetid: c00bebd0-d04b-4c64-840e-8b7a2c603436
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 110cdd1ac1a74986178b6d96803d20a1fc6284a1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 24d6ed05b1419c399f0a11d7de590a25f3d77077
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749474"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475636"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>建立新原則或開啟原則對話方塊，一般頁面
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85749474"
  如果是新的原則，請輸入新原則的名稱。 如果是現有的原則，則會顯示名稱。  
   
  **已啟用**  
- 選取 [已啟用]  核取方塊可啟用此原則。 清除 **[已啟用]** 核取方塊可停用此原則。 **[已啟用]** 方塊適用於原則 Automation， 它會建立或移除原則的 Automation 系統。 Automation 使用下列機制：  
+ 選取 [已啟用]**** 核取方塊可啟用此原則。 清除 **[已啟用]** 核取方塊可停用此原則。 **[已啟用]** 方塊適用於原則 Automation， 它會建立或移除原則的 Automation 系統。 Automation 使用下列機制：  
   
  **變更時 - 避免**  
  資料庫觸發程序會強制執行相容性。  
@@ -45,7 +46,7 @@ ms.locfileid: "85749474"
  使用 **[視需要]** 評估模式執行的原則不會使用這個核取方塊。  
   
  **檢查條件**  
- 選取這個原則使用之以原則為基礎的管理條件。 伺服器上關聯之以原則為基礎之管理 Facet 的條件都會列出來。 按一下 **[新增條件]** 即可建立新條件。 按一下省略符號 ( **...** ) 按鈕即可修改條件。  
+ 選取這個原則使用之以原則為基礎的管理條件。 伺服器上關聯之以原則為基礎之管理 Facet 的條件都會列出來。 按一下 **[新增條件]** 即可建立新條件。 按一下省略符號 (**...**) 按鈕即可修改條件。  
   
  **[針對目標]**  
  選取可供這個 Facet 使用的目標類型，以完成篩選運算式。  
@@ -54,7 +55,7 @@ ms.locfileid: "85749474"
  選取此原則的評估模式。 某些原則可加以檢查，但不會強制執行。 評估模式如下所示：  
   
  **[視需要]**  
- 只有當您從 [評估]  對話方塊執行原則時，才可以執行。  
+ 只有當您從 [評估]**** 對話方塊執行原則時，才可以執行。  
   
  **按排程時間**  
  定期評估原則、針對具有不相容的原則記下記錄項目，並建立報表。 啟用 **[排程]** 方塊。  
@@ -66,7 +67,7 @@ ms.locfileid: "85749474"
  當嘗試變更時，這個選項會阻止將違反原則的變更。  
   
  **[排程]**  
- 當選取 [按排程時間]  評估模式時會出現這個選項。 輸入排程的名稱、按一下 **[挑選]** 從清單中選取排程，或是按一下 **[新增]** 建立新的排程。 若要啟用排程區域，必須選取 **[按排程時間]** 。  
+ 當選取 [按排程時間]**** 評估模式時會出現這個選項。 輸入排程的名稱、按一下 **[挑選]** 從清單中選取排程，或是按一下 **[新增]** 建立新的排程。 若要啟用排程區域，必須選取 **[按排程時間]** 。  
   
  **[伺服器限制]**  
  選取適合此原則的伺服器類型。 選項為 **[無]** 或是選取用來篩選可能之伺服器的條件。  

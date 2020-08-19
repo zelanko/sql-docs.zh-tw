@@ -1,4 +1,5 @@
 ---
+description: 撰寫自訂工作的程式碼
 title: 撰寫自訂工作的程式碼 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: dc224f4f-b339-4eb6-a008-1b4fe0ea4fd2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 153dd1c18e5c46a72f610b2d0b04b999b59006ad
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cb19c86987b9a9477df0462c5e3223da537e676f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916359"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430500"
 ---
 # <a name="coding-a-custom-task"></a>撰寫自訂工作的程式碼
 

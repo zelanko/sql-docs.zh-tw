@@ -1,5 +1,6 @@
 ---
-title: sp_syspolicy_add_policy_category （Transact-sql） |Microsoft Docs
+description: sp_syspolicy_add_policy_category (Transact-SQL)
+title: sp_syspolicy_add_policy_category (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b682fac4-23c6-4662-8d05-c38f3b45507e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ca8eca5643fb0021111c00abdce45e6de2c09878
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2722671523f14177a92084a4d896eec3ccdd6e2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892765"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469148"
 ---
 # <a name="sp_syspolicy_add_policy_category-transact-sql"></a>sp_syspolicy_add_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,14 +42,14 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @name = ] 'name'`這是原則類別目錄的名稱。 *名稱*是**sysname**，而且是必要的。 *名稱*不可以是 Null 或空字串。  
+`[ @name = ] 'name'` 這是原則類別目錄的名稱。 *名稱* 是 **sysname**，而且是必要的。 *名稱* 不可以是 Null 或空字串。  
   
-`[ @mandate_database_subscriptions = ] mandate_database_subscriptions`決定是否針對原則類別目錄強制資料庫訂閱。 *mandate_database_subscriptions*是**位**值，預設值是1（已啟用）。  
+`[ @mandate_database_subscriptions = ] mandate_database_subscriptions` 判斷是否針對原則類別目錄規定資料庫訂閱。 *mandate_database_subscriptions* 是 **位** 值，預設值為 1 (啟用) 。  
   
-`[ @policy_category_id = ] policy_category_id`這是原則類別目錄的識別碼。 *policy_category_id*是**int**，且會當做 OUTPUT 傳回。  
+`[ @policy_category_id = ] policy_category_id` 這是原則類別目錄的識別碼。 *policy_category_id* 是 **int**，而且會傳回做為 OUTPUT。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
  您必須在 msdb 系統資料庫的內容中執行 sp_syspolicy_add_policy_category。  

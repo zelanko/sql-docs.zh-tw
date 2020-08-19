@@ -1,4 +1,5 @@
 ---
+description: 選擇建立全文檢索索引時的語言
 title: 選擇建立全文檢索索引時的語言 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 882a7e1acfa8baf49b90e0ebda8d3cef212d511a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9f8c0860bb5ef874a6095b993478fa9cbc117fc4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726022"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475530"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>選擇建立全文檢索索引時的語言
 
@@ -46,7 +47,7 @@ ms.locfileid: "85726022"
   
  新的斷詞工具提供下列優勢：  
   
--   健全性  
+-   加強性  
   
      經測試顯示，新的斷詞工具在高度壓力的查詢環境中仍然保持健全狀態。  
   
@@ -100,7 +101,7 @@ ms.locfileid: "85726022"
   
   
 ##  <a name="stemming"></a><a name="stemming"></a> 詞幹分析  
- 選擇資料行層級語言時的其他考量是詞幹分析。 在全文檢索查詢中，「詞幹分析」  是指搜尋某特定語言之所有字根 (字形變化) 的過程。 當您使用一般斷詞工具來處理許多語言時，詞幹分析程序只會針對指定給資料行的語言運作，而不會針對資料行中的其他語言運作。 例如，德文字幹分析器不會針對英文或西班牙文 (等語言) 運作。 這可能會影響重新叫用，端視您在查詢時選擇的語言而定。  
+ 選擇資料行層級語言時的其他考量是詞幹分析。 在全文檢索查詢中，「詞幹分析」** 是指搜尋某特定語言之所有字根 (字形變化) 的過程。 當您使用一般斷詞工具來處理許多語言時，詞幹分析程序只會針對指定給資料行的語言運作，而不會針對資料行中的其他語言運作。 例如，德文字幹分析器不會針對英文或西班牙文 (等語言) 運作。 這可能會影響重新叫用，端視您在查詢時選擇的語言而定。  
   
   
 ##  <a name="effect-of-column-type-on-full-text-search"></a><a name="type"></a> 資料行類型對全文檢索搜尋的影響  

@@ -1,4 +1,5 @@
 ---
+description: PERCENTILE_CONT (Transact-SQL)
 title: PERCENTILE_CONT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2015
@@ -19,12 +20,12 @@ ms.assetid: d019419e-5297-4994-97d5-e9c8fc61bbf4
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0841c29b0897ed739b33e8d7e2d09227b8b495f8
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 9ce8fc1fd71a6ba64e9c289c9a5af4dec4585cb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395791"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459595"
 ---
 # <a name="percentile_cont-transact-sql"></a>PERCENTILE_CONT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

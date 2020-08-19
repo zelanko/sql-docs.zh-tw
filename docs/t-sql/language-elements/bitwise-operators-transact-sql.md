@@ -1,4 +1,5 @@
 ---
+description: 位元運算子 (Transact-SQL)
 title: 位元運算子 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/04/2019
@@ -17,12 +18,12 @@ ms.assetid: 2b994cf5-2daa-438a-b8c7-4bd8d451ac8d
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d96dbfc519a831508b7e56fad1b6909a37f672d3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 15649f0ff6a9695b17af629f28156ea4860e4aa6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003999"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459431"
 ---
 # <a name="bitwise-operators-transact-sql"></a>位元運算子 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "86003999"
 |! 運算子之後|位元數學|
 |---- |---- |
 |AND <br> 如果在任何位置的位元皆為 1，則結果為 1。 |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 0000 1010 =  10 |
-|OR <br> 如果在任何位置的其中一個位元為 1，則結果為 1。 |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 1110 1011 = 235|
+|或者 <br> 如果在任何位置的其中一個位元為 1，則結果為 1。 |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 1110 1011 = 235|
 |NOT  <br> 反轉每個位元位置的位元值。 |1010 1010 = 170 <br>----------------- <br>  0101 0101 =   85 |
   
 請參閱下列主題：   

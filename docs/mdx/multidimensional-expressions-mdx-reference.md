@@ -1,5 +1,6 @@
 ---
-title: 多維度運算式（MDX）參考 |Microsoft Docs
+description: 多維度運算式 (MDX) 參考
+title: 多維度運算式 (MDX) 參考 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 65164f9560cb87e0bda1018469412bb4b793e3b7
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: e988f6864404cb7f1af4be77acc8ad0ab8e50562
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970029"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483781"
 ---
 # <a name="multidimensional-expressions-mdx-reference"></a>多維度運算式 (MDX) 參考
 
@@ -28,8 +29,8 @@ ms.locfileid: "86970029"
   
 ## <a name="see-also"></a>另請參閱  
  [使用 MDX 查詢多維度資料](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx)   
- [適用于 XMLA 的 Analysis Services 指令碼語言 &#40;ASSL&#41;](https://docs.microsoft.com/analysis-services/assl/analysis-services-scripting-language-assl-for-xmla)   
- [從分析資料源中抓取資料](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source?view=asallproducts-allversions)   
+ [XMLA&#41;的 Analysis Services 指令碼語言 &#40;ASSL ](https://docs.microsoft.com/analysis-services/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [從分析資料源中取出資料](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source?view=asallproducts-allversions)   
  [定義指派和其他指令碼命令](https://docs.microsoft.com/analysis-services/multidimensional-models/define-assignments-and-other-script-commands)  
   
   

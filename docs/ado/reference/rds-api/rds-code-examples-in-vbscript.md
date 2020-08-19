@@ -1,4 +1,5 @@
 ---
+description: VBScript 中的 RDS 程式碼範例
 title: VBScript 中的 RDS 程式碼範例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 22f23c30-7c21-4fe3-8e76-36cea6448819
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 29ec0c1f409e0e92cb7d7afed66aa01dfb5a4f74
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 49c6ae45be2f1d0979f8af827a85080edd919400
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751411"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438840"
 ---
 # <a name="rds-code-examples-in-vbscript"></a>VBScript 中的 RDS 程式碼範例
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統不再包含 RDS 伺服器元件（如需詳細資訊，請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)）。 RDS 用戶端元件將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 使用下列程式碼範例，瞭解如何在以 Microsoft Visual Basic Scripting Edition （VBScript）撰寫時使用 RDS 物件、方法和屬性。  
+ 使用下列程式碼範例，瞭解如何在 Microsoft Visual Basic Scripting Edition (VBScript) 中撰寫時使用 RDS 物件、方法和屬性。  
   
 > [!NOTE]
->  將整個程式碼範例貼到您的程式碼編輯器中。 如果使用部分範例或遺失段落格式，則此範例可能無法正確執行。  
+>  將整個程式碼範例貼入您的程式碼編輯器中。 如果使用部分範例或遺失段落格式，此範例可能無法正確執行。  
   
 ## <a name="objects"></a>物件  
   
@@ -71,7 +72,7 @@ ms.locfileid: "82751411"
   
 -   [Recordset 和 SourceRecordset 屬性範例](../../../ado/reference/rds-api/recordset-and-sourcerecordset-properties-example-vbscript.md)  
   
--   [Server 屬性範例](../../../ado/reference/rds-api/server-property-example-vbscript.md)  
+-   [伺服器屬性範例](../../../ado/reference/rds-api/server-property-example-vbscript.md)  
   
 -   [SQL 屬性範例](../../../ado/reference/rds-api/sql-property-example-vbscript.md)  
   

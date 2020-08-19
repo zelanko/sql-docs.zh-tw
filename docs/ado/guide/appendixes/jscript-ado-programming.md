@@ -1,4 +1,5 @@
 ---
+description: JScript ADO 程式設計
 title: JScript ADO 程式設計 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,31 +16,31 @@ helpviewer_keywords:
 ms.assetid: 62273658-0fe7-4aac-b4d8-f725e6baf043
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7b9fe403c0d51d53e79d978ff573556b73f5aec7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2f1cad0a2717bb652759a7c8b0d60efc4b3f4541
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760494"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444560"
 ---
 # <a name="jscript-ado-programming"></a>JScript ADO 程式設計
 ## <a name="creating-an-ado-project"></a>建立 ADO 專案  
- Microsoft JScript 不支援類型程式庫，因此您不需要在專案中參考 ADO。 因此，不支援任何相關聯的功能，例如命令列完成。 此外，根據預設，ADO 列舉的常數不會定義于 JScript 中。  
+ Microsoft JScript 不支援類型程式庫，因此您不需要在專案中參考 ADO。 因此，不支援任何相關聯的功能，例如命令列完成。 此外，根據預設，ADO.NET 列舉的常數不會定義在 JScript 中。  
   
- 不過，ADO 會提供包含下列定義的兩個包含檔案，以用於 JScript：  
+ 不過，ADO 提供您兩個包含下列定義的 include 檔案，以搭配 JScript 使用：  
   
--   若為伺服器端腳本，請使用 Adojavas，它會安裝在 ADO 程式庫資料夾中。  
+-   如果是伺服器端腳本，請使用 Adojavas，它會安裝在 ADO 程式庫資料夾中。  
   
--   若為用戶端腳本，請使用安裝在 ADO 程式庫資料夾中的 Adcjavas。  
+-   若為用戶端腳本，請使用 Adcjavas，它會安裝在 ADO 程式庫資料夾中。  
   
- 您可以將這些檔案中的常數定義複製並貼到您的 ASP 頁面中，或者，如果您要執行伺服器端腳本處理，請將 Adojavas 複製到網站上的資料夾，並從您的 ASP 網頁參照它，如下所示：  
+ 您可以從這些檔案複製並貼上常數定義至 ASP 頁面，或者，如果您正在進行伺服器端腳本處理，請將 Adojavas 檔案複製到網站上的資料夾，然後從 ASP 頁面參考它，如下所示：  
   
 ```javascript
 <!--#include File="adojavas.inc"-->  
 ```  
   
 ## <a name="creating-ado-objects-in-jscript"></a>在 JScript 中建立 ADO 物件  
- 您必須改為使用**CreateObject**函式呼叫：  
+ 您必須改為使用 **CreateObject** 函式呼叫：  
   
 ```javascript
 var Rs1;  
@@ -47,7 +48,7 @@ Rs1 = Server.CreateObject("ADODB.Recordset");
 ```  
   
 ## <a name="jscript-example"></a>JScript 範例  
- 下列程式碼是在開啟**記錄集**物件的 Active server PAGE （ASP）檔案中，JScript 伺服器端程式設計的一般範例：  
+ 下列程式碼是在 Active Server Page (ASP) 檔案開啟 **記錄集** 物件的一般 JScript 伺服器端程式設計範例：  
   
 ```javascript
 <%  @LANGUAGE="JScript" %>  

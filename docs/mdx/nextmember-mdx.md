@@ -1,5 +1,6 @@
 ---
-title: NextMember （MDX） |Microsoft Docs
+description: NextMember (MDX)
+title: NextMember (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b852564510c6b5918c781e0c75e84e3b30aecd44
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 33824ba605fc3acd0a994d0e0a6b411afdda2306
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68088357"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483738"
 ---
 # <a name="nextmember-mdx"></a>NextMember (MDX)
 
@@ -32,7 +33,7 @@ Member_Expression.NextMember
  傳回成員的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- **NextMember**函數會傳回相同層級中包含指定成員的下一個成員。  
+ **NextMember**函式會傳回包含指定成員之相同層級中的下一個成員。  
   
 ## <a name="example"></a>範例  
  下列範例會傳回 August 2001 成員，做為 July 2001 成員的下一個成員。  

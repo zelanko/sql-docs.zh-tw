@@ -1,4 +1,5 @@
 ---
+description: DROP INDEX (選擇性 XML 索引)
 title: DROP INDEX (選擇性 XML 索引) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
@@ -14,12 +15,12 @@ dev_langs:
 ms.assetid: 4779ae84-e5f4-4d04-8fc1-e24a6631b428
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6fb75992f2bcd229217c40582cd8087c6099d34f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8e1fef3ee6a379501f45d825b90fc232aa4c718e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766319"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444581"
 ---
 # <a name="drop-index-selective-xml-indexes"></a>DROP INDEX (選擇性 XML 索引)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

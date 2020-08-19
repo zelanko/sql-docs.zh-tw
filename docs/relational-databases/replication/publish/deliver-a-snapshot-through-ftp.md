@@ -1,4 +1,5 @@
 ---
+description: 透過 FTP 傳遞快照集
 title: 透過 FTP 傳遞快照集 | Microsoft 文件
 ms.custom: ''
 ms.date: 11/20/2018
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c2ff609e78a0076cd3d6c0ff15348869cc717cfe
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8d912f3fd344c535d6101a0598750e61763f6ccf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893286"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475542"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>透過 FTP 傳遞快照集
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

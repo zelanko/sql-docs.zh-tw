@@ -1,4 +1,5 @@
 ---
+description: EVENTDATA (Transact-SQL)
 title: EVENTDATA (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 95996934e6d8334376533b4abf04e2cc7607fd78
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 32cfa9a876d13a1c8827649c3fe8ad145b4cb8da
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784575"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459766"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,11 +41,12 @@ ms.locfileid: "85784575"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
-EVENTDATA( )  
-```  
-  
+```syntaxsql
+EVENTDATA( )
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="remarks"></a>備註  
 只有在 DDL 或登入觸發程序內直接參考時，`EVENTDATA` 才會傳回資料。 如果 `EVENTDATA` 是由其他常式所呼叫，它便會傳回 NULL，即使那些常式是由 DDL 或登入觸發程序所呼叫亦然。
   
@@ -85,7 +87,7 @@ EVENTDATA 會傳回 **xml** 資料類型的值。 根據預設，所有事件的
 此範例會建立可防止建立新資料庫資料表的 DDL 觸發程序。 針對 `EVENTDATA` 所產生的 XML 資料使用 XQuery ，可擷取引發觸發程序的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 如需詳細資訊，請參閱 [XQuery 語言參考 &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)。  
   
 > [!NOTE]  
->  當您使用  **中的 [以方格顯示結果]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來查詢 `<TSQLCommand>` 元素時，命令文字中不會出現分行符號。 請改用 [Results to Text] (以文字顯示結果)  。  
+>  當您使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [以方格顯示結果]**** 來查詢 `<TSQLCommand>` 元素時，命令文字中不會出現分行符號。 請改用 [Results to Text] (以文字顯示結果)****。  
   
 ```  
 USE AdventureWorks2012;  

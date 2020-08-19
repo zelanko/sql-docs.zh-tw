@@ -1,5 +1,6 @@
 ---
-title: sysmail_help_status_sp （Transact-sql） |Microsoft Docs
+description: sysmail_help_status_sp (Transact-SQL)
+title: sysmail_help_status_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: b44277c6-81e8-4b4d-85b3-a2f04d602e7a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 036fcaabc96f8f8c4688ff5643d2d9e1febff050
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 53f0512a2d6d57606a146c39325692b9c3d351e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890852"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469163"
 ---
 # <a name="sysmail_help_status_sp-transact-sql"></a>sysmail_help_status_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  顯示 Database Mail 佇列的狀態。 使用**sysmail_start_sp**啟動 Database Mail 佇列，並**sysmail_stop_sp**停止 Database Mail 佇列。  
+  顯示 Database Mail 佇列的狀態。 使用 **sysmail_start_sp** 啟動 Database Mail 佇列和 **sysmail_stop_sp** 以停止 Database Mail 佇列。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,16 +40,16 @@ sysmail_help_status_sp
 ```  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="result-set"></a>結果集  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**狀態**|**Nvarchar （7）**|Database Mail 的狀態。 可能的值為 [**已啟動**] 和 [**已停止**]。|  
+|**狀態**|**Nvarchar (7) **|Database Mail 的狀態。 可能的值為 [ **已啟動** ] 和 [ **已停止**]。|  
   
 ## <a name="permissions"></a>權限  
- 根據預設，只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠存取此程式。  
+ 依預設，只有 **系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠存取此程式。  
   
 ## <a name="examples"></a>範例  
  下列範例會顯示 Database Mail 的狀態。  

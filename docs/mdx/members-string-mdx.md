@@ -1,5 +1,6 @@
 ---
-title: 成員（字串）（MDX） |Microsoft Docs
+description: Members (字串) (MDX)
+title: 成員 (字串)  (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 05df2d0a846af30d46e702c1d5489945d57c9115
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 95e90f488f4b9182fc237045b570bc9da02f47e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001499"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483821"
 ---
 # <a name="members-string-mdx"></a>Members (字串) (MDX)
 
@@ -32,10 +33,10 @@ Members(Member_Name)
  指定成員名稱的有效字串運算式。  
   
 ## <a name="remarks"></a>備註  
- **Members （String）** 函數會傳回其名稱已指定的單一成員。 一般來說，您會使用**members （string）** 函數搭配外部函式，並提供**成員（字串）** 函式識別成員的字串，而**members （string）** 函數會傳回這個指定成員的值。  
+ **成員 (字串) **函數會傳回已指定名稱的單一成員。 一般而言，您會使用 ** (字串) ** 函式的成員搭配外部函式，為 **成員提供 (字串) ** 函式以識別成員的字串，而 **成員 (字串) ** 函數會傳回這個指定成員的值。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用**Members （String）** 函數，將指定的字串轉換成有效的成員，然後傳回字串中所指定之成員的預設量值。 指定的字串前後要加上單引號。 預設量值是「轉售商銷售數量」量值。  
+ 下列範例會使用 ** (String) ** 函數的成員將指定的字串轉換成有效的成員，然後傳回字串中所指定之成員的預設量值。 指定的字串前後要加上單引號。 預設量值是「轉售商銷售數量」量值。  
   
 ```  
 SELECT Members ('[Geography].[Geography].[Country].&[United States] ') ON 0  

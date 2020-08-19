@@ -1,4 +1,5 @@
 ---
+description: FILEGROUP_NAME (Transact-SQL)
 title: FILEGROUP_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 26add1c0-56e5-47a8-b489-ae56784a7ee9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5da7bd5ba3424699d2cf523a60a1cff855ccdd6e
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7d68d76993a04de667625bc60a3323cc8fadaeab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111557"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468013"
 ---
 # <a name="filegroup_name-transact-sql"></a>FILEGROUP_NAME (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +59,7 @@ FILEGROUP_NAME ( filegroup_id )
 *filegroup_id* 對應到 **sys.filegroups** 目錄檢視的 **data_space_id** 資料行。  
   
 ## <a name="examples"></a>範例  
-此範例會傳回 `1` 資料庫中檔案群組識別碼 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 的檔案群組名稱。  
+此範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中檔案群組識別碼 `1` 的檔案群組名稱。  
   
 ```  
 SELECT FILEGROUP_NAME(1) AS [Filegroup Name];  

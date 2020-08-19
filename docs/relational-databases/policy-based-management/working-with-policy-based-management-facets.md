@@ -1,4 +1,5 @@
 ---
+description: 使用原則式管理 Facet
 title: 使用原則式管理 Facets | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 88d025c4-07c2-4e4d-8634-204249a8c82c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f8853222158fd4a5397e60bdffe4171cd8d66694
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d785b99fd933cc0209df8ecb0674e65e0d340ea9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774084"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475590"
 ---
 # <a name="working-with-policy-based-management-facets"></a>使用原則式管理 Facet
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

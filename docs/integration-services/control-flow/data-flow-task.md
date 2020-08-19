@@ -1,4 +1,5 @@
 ---
+description: 資料流程工作
 title: 資料流程工作 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4bc62cfc37e6a69f34faabf8a9622f5c0d79d5f8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 21ef6f741ebfdd035630a40aba431c08a1ff9341
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919849"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431030"
 ---
 # <a name="data-flow-task"></a>資料流程工作
 
@@ -70,7 +71,7 @@ ms.locfileid: "86919849"
   
 -   [效能計數器](../../integration-services/performance/performance-counters.md)  
   
--   [資料流程效能功能](../../integration-services/data-flow/data-flow-performance-features.md)  
+-   [資料流程效能的功能](../../integration-services/data-flow/data-flow-performance-features.md)  
   
 ### <a name="sample-messages-from-a-data-flow-task"></a>來自資料流程工作的範例訊息  
  下表為非常簡單的封裝列出了記錄項目的範例訊息。 該封裝會使用 OLE DB 來源擷取資料表的資料、使用「排序」轉換來排序資料，以及使用 OLE DB 目的地將資料寫入不同的資料表。  
@@ -103,16 +104,16 @@ ms.locfileid: "86919849"
 |**RowsSent**|已傳送至「排序」轉換之輸入的資料列數目。|76|  
   
 ## <a name="configuration-of-the-data-flow-task"></a>資料流程工作的組態  
- 您可以在 [屬性]  視窗中或以程式設計方式設定屬性。  
+ 您可以在 [屬性]**** 視窗中或以程式設計方式設定屬性。  
   
- 如需如何在 [屬性]  視窗中設定這些屬性的詳細資訊，請按一下下列主題：  
+ 如需如何在 [屬性]**** 視窗中設定這些屬性的詳細資訊，請按一下下列主題：  
   
 -   [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-data-flow-task"></a>資料流程工作的程式設計組態  
  如需有關以程式設計方式將資料流程工作加入封裝，並設定資料流程屬性的詳細資訊，請按下列主題：  
   
--   [以程式設計方式新增資料流程工作](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
+-   [以程式設計方式加入資料流程工作](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
 ## <a name="related-tasks"></a>相關工作  
  [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  

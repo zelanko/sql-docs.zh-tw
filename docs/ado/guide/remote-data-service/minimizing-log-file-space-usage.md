@@ -1,4 +1,5 @@
 ---
+description: 將記錄檔空間使用量降到最低
 title: 最小化記錄檔空間使用量 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,38 +13,38 @@ helpviewer_keywords:
 ms.assetid: 669662a0-e20f-483e-ab28-53f66c524c98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1eca3db07301ca45c898f21f558339e5f2ab93e1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 986d527f0d4f59053a53a8b566d28d43151c0f99
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747873"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452160"
 ---
 # <a name="minimizing-log-file-space-usage"></a>將記錄檔空間使用量降到最低
-如果 SQL Server 資料庫上有大量的活動，記錄檔可能會快速填滿（因而導致伺服器停止）。 您可以將記錄檔設定為**在檢查點截斷**，以大幅擴充資料庫的記錄檔生命週期。  
+記錄檔可能會快速填滿 (因此當 SQL Server 資料庫上有大量的活動時，就會停止伺服器) 。 您可以將記錄檔設定為 **在檢查點截斷** ，以大幅延長資料庫記錄檔的存留期。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統不再包含 RDS 伺服器元件（如需詳細資訊，請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)）。 RDS 用戶端元件將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ### <a name="to-enable-truncate-on-checkpoint-in-microsoft-sql-server-65"></a>在 Microsoft SQL Server 6.5 中啟用檢查點的截斷  
   
-1.  啟動 Microsoft SQL Server Enterprise 管理員]，開啟伺服器的樹狀目錄，然後開啟 [資料庫裝置] 樹狀目錄。  
+1.  啟動 Microsoft SQL Server Enterprise 管理員]，開啟伺服器的樹狀結構，然後開啟 [資料庫裝置] 樹狀目錄。  
   
 2.  按兩下將啟用這項功能的資料庫名稱。  
   
-3.  從 [**資料庫**] 索引標籤中，選取 [**截斷**]。  
+3.  在 [ **資料庫** ] 索引標籤中，選取 [ **截斷**]。  
   
-4.  從 [**選項**] 索引標籤中，選取 [**截斷檢查點的記錄**]，然後按一下 **[確定]**。  
+4.  在 [ **選項** ] 索引標籤中，選取 [ **截斷檢查點上的記錄**]，然後按一下 **[確定]**。  
   
 ### <a name="to-enable-truncate-on-checkpoint-in-microsoft-sql-server-70"></a>在 Microsoft SQL Server 7.0 中啟用檢查點的截斷  
   
-1.  啟動 Microsoft SQL Server Enterprise 管理員]，開啟伺服器的樹狀目錄，然後開啟 [資料庫] 樹狀目錄。  
+1.  啟動 Microsoft SQL Server Enterprise 管理員]，開啟伺服器的樹狀結構，然後開啟 [資料庫] 樹狀目錄。  
   
-2.  以滑鼠右鍵按一下將啟用這項功能的資料庫名稱，然後選擇 [**屬性**]。  
+2.  以滑鼠右鍵按一下將啟用這項功能的資料庫名稱，然後選擇 [ **屬性**]。  
   
-3.  從 [**選項**] 索引標籤中，選取 [**截斷檢查點的記錄**]，然後按一下 **[確定]**。  
+3.  在 [ **選項** ] 索引標籤中，選取 [ **截斷檢查點上的記錄**]，然後按一下 **[確定]**。  
   
- 如需有關 [**截斷 On 檢查點**] 功能的詳細資訊，請參閱 Microsoft SQL Server 檔。  
+ 如需有關「 **截斷于檢查點** 」功能的詳細資訊，請參閱 Microsoft SQL Server 檔。  
   
 ## <a name="see-also"></a>另請參閱  
  [RDS 基本概念](../../../ado/guide/remote-data-service/rds-fundamentals.md)

@@ -1,5 +1,6 @@
 ---
-title: log_shipping_primary_secondaries （Transact-sql） |Microsoft Docs
+description: log_shipping_primary_secondaries (Transact-SQL)
+title: log_shipping_primary_secondaries (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,23 +18,23 @@ helpviewer_keywords:
 ms.assetid: 4b315c70-7265-4acd-b35b-a4dbb7881d98
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 57c7ec652ff3a4c2643aa1a6cdf1dba2b7845ad2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e731cf42d7ad0228d5746a315ffd70aa5862db85
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890144"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469060"
 ---
 # <a name="log_shipping_primary_secondaries-transact-sql"></a>log_shipping_primary_secondaries (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  將每個主要資料庫對應至它的次要資料庫。 此資料表會儲存在**msdb**資料庫中。  
+  將每個主要資料庫對應至它的次要資料庫。 此資料表儲存在 **msdb** 資料庫中。  
 
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**primary_id**|**uniqueidentifier**|記錄傳送組態之主要資料庫的識別碼。|  
-|**secondary_server**|**sysname**|記錄傳送設定中之次要實例的名稱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 。|  
+|**secondary_server**|**sysname**|記錄傳送設定中的次要實例名稱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 。|  
 |**secondary_database**|**sysname**|記錄傳送組態中之次要資料庫的名稱。|  
   
 ## <a name="see-also"></a>另請參閱  

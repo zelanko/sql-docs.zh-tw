@@ -1,4 +1,5 @@
 ---
+description: IN (Transact-SQL)
 title: IN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
@@ -23,12 +24,12 @@ ms.assetid: 4419de73-96b1-4dfe-8500-f4507915db04
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 207043037a5f75e71f4d385abec42dd296ea4528
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a642ad617c1c466306f5beb3f11d41f9181b8458
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920645"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459370"
 ---
 # <a name="in-transact-sql"></a>IN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +55,7 @@ test_expression [ NOT ] IN
  *subquery*  
  這是有單一資料行結果集的子查詢。 這個資料行必須具備與 *test_expression* 相同的資料類型。  
   
- *expression*[ **,** ... *n* ]  
+ *expression*[ **,**... *n* ]  
  這是要進行相符測試的運算式清單。 所有運算式的類型都必須與 *test_expression* 相同。  
   
 ## <a name="result-types"></a>結果類型  
@@ -176,7 +177,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-in-and-not-in"></a>D. 使用 IN 和 NOT IN  
- 下列範例會在 `FactInternetSales` 資料表中尋找符合 `SalesReasonKey` 資料表中 `DimSalesReason` 值的所有項目。  
+ 下列範例會在 `FactInternetSales` 資料表中尋找符合 `DimSalesReason` 資料表中 `SalesReasonKey` 值的所有項目。  
   
 ```  
 -- Uses AdventureWorks  
@@ -186,7 +187,7 @@ WHERE SalesReasonKey
 IN (SELECT SalesReasonKey FROM DimSalesReason);   
 ```  
   
- 下列範例會在 `FactInternetSalesReason` 資料表中尋找不符合 `SalesReasonKey` 資料表中 `DimSalesReason` 值的所有項目。  
+ 下列範例會在 `FactInternetSalesReason` 資料表中尋找不符合 `DimSalesReason` 資料表中 `SalesReasonKey` 值的所有項目。  
   
 ```  
 -- Uses AdventureWorks  

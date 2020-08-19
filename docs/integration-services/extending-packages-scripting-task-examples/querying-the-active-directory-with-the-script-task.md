@@ -1,4 +1,5 @@
 ---
+description: 以指令碼工作查詢 Active Directory
 title: 以指令碼工作查詢 Active Directory| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0d4e16509342b56d88d9347460a246718bc132db
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 98f71295a8df150b7430806c35aae47cca0bc613
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923777"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430390"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>以指令碼工作查詢 Active Directory
 
@@ -41,13 +42,13 @@ ms.locfileid: "86923777"
   
 1.  建立三個字串變數 `email`、`name` 和 `title`。 輸入有效的公司電子郵件地址做為 `email` 變數值。  
   
-2.  在 [指令碼工作編輯器] 的 [指令碼] 頁面上，將 `email` 變數加入 **ReadOnlyVariables** 屬性。  
+2.  在 [指令碼工作編輯器]**** 的 [指令碼]**** 頁面上，將 `email` 變數加入 **ReadOnlyVariables** 屬性。  
   
 3.  將 `name` 和 `title` 變數加入 **ReadWriteVariables** 屬性。  
   
 4.  在指令碼專案中，加入 **System.DirectoryServices** 命名空間的參考。  
   
-5.  。 在程式碼中，使用 **Imports** 陳述式匯入 **DirectoryServices** 命名空間。  
+5.  . 在程式碼中，使用 **Imports** 陳述式匯入 **DirectoryServices** 命名空間。  
   
 > [!NOTE]  
 >  若要順利執行這個指令碼，您的公司必須在其網路上使用 Active Directory，並儲存這個範例所使用的員工資訊。  

@@ -1,4 +1,5 @@
 ---
+description: 連接至指令碼工作中的資料來源
 title: 連接至指令碼工作中的資料來源 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 9c008380-715b-455b-9da7-22572d67c388
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f6820c80e8b497d24d7cbc9ff022fd772bd7f96e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9d54dc51681e96ba34ec33f1a899f61983145c4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915071"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430230"
 ---
 # <a name="connecting-to-data-sources-in-the-script-task"></a>連接至指令碼工作中的資料來源
 
@@ -49,7 +50,7 @@ ms.locfileid: "86915071"
 > [!IMPORTANT]  
 >  在指令碼工作的 Managed 程式碼中，無法呼叫傳回 Unmanaged 物件之連線管理員的 AcquireConnection 方法，例如 OLE DB 連線管理員與 Excel 連線管理員。 不過，您可以讀取這些連線管理員的 ConnectionString 屬性，而且可以透過使用來自 **System.Data.OleDb** 命名空間的 **OledbConnection** 之連接字串，直接在程式碼中連接至資料來源。  
 >   
->  如果您必須呼叫會傳回 Unmanaged 物件之連線管理員的 AcquireConnection 方法，請使用 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 連線管理員。 當您設定 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 連接管理員以使用 OLE DB 提供者時，它會透過使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB 來連接。 在這種情況下，AcquireConnection 方法會傳回 **System.Data.OleDb.OleDbConnection**，而不是 Unmanaged 物件。 若要將 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 連線管理員設定成與 Excel 資料來源搭配使用，請選取 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB Provider for Jet，指定 Excel 檔案，然後在 [連線管理員] 對話方塊的 [全部] 頁面上輸入 `Excel 8.0` (針對 Excel 97 和更新的版本)，作為 [擴充屬性] 的值。  
+>  如果您必須呼叫會傳回 Unmanaged 物件之連線管理員的 AcquireConnection 方法，請使用 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 連線管理員。 當您設定 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 連接管理員以使用 OLE DB 提供者時，它會透過使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB 來連接。 在這種情況下，AcquireConnection 方法會傳回 **System.Data.OleDb.OleDbConnection**，而不是 Unmanaged 物件。 若要將 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 連線管理員設定成與 Excel 資料來源搭配使用，請選取 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB Provider for Jet，指定 Excel 檔案，然後在 [連線管理員]**** 對話方塊的 [全部]**** 頁面上輸入 `Excel 8.0` (針對 Excel 97 和更新的版本)，作為 [擴充屬性]**** 的值。  
   
 ## <a name="connections-example"></a>連接範例  
  在下列程式碼範例中，示範如何從指令碼工作存取連接管理員。 範例假設您已建立和設定名為 **Test ADO.NET Connection** 的 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 連接管理員，以及名為 **Test Flat File Connection** 的一般檔案連線管理員。 請注意，[!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 連線管理員會傳回您可立即用以連接至資料來源的 **SqlConnection** 物件。 另一方面，一般檔案連接管理員只會傳回包含路徑與檔案名稱的字串。 您必須使用 **System.IO** 命名空間的方法，以開啟和處理一般檔案。  

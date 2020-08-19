@@ -1,4 +1,5 @@
 ---
+description: DataReader 目的地自訂屬性
 title: DataReader 目的地自訂屬性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f151c3e8-3811-457d-a3d3-6158ca65a646
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9394139b6085fc4f5d59a8202503f6c9e3d750f1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8efd821c41f7a0eaa9a19633c7719795eaa12665
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916744"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430870"
 ---
 # <a name="datareader-destination-custom-properties"></a>DataReader 目的地自訂屬性
 
@@ -29,7 +30,7 @@ ms.locfileid: "86916744"
 |屬性名稱|資料類型|描述|  
 |-------------------|---------------|-----------------|  
 |DataReader|String|DataReader 目的地的類別名稱。|  
-|FailOnTimeout|Boolean|指出發生 **ReadTimeout** 時是否會失敗。 此屬性的預設值為 **False**。|  
+|FailOnTimeout|布林值|指出發生 **ReadTimeout** 時是否會失敗。 此屬性的預設值為 **False**。|  
 |ReadTimeout|整數|發生逾時之前的毫秒數。 此屬性的預設值為 30000 (30 秒)。|  
   
  DataReader 目的地的輸入和輸入資料行沒有任何自訂屬性。  
