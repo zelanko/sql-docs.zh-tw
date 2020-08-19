@@ -1,5 +1,6 @@
 ---
-title: 移轉的 Oracle 資料庫到 SQL Server (OracleToSQL) |Microsoft Docs
+title: 將 Oracle 資料庫移轉至 SQL Server (OracleToSQL) |Microsoft Docs
+description: 使用這個建議的程式，將 Oracle 資料庫移轉至 SQL Server 或 Azure SQL Database 使用 SQL Server 移轉小幫手 (SSMA) 。
 ms.prod: sql
 ms.custom: ''
 ms.date: 04/22/2018
@@ -7,49 +8,49 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1d196dd6-4322-4c98-bb72-602c57d96134
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: e1021643d503e1ca77f120b81046b3773f8ff458
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 194d33d0b5318ca66494b838c7f59dfde5c72b88
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68259105"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933439"
 ---
 # <a name="migrating-oracle-databases-to-sql-server-oracletosql"></a>將 Oracle 資料庫移轉到 SQL Server (OracleToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉小幫手 (SSMA) for Oracle 是完整的環境，可協助您快速 Oracle 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，Azure SQL DB 或 Azure SQL 資料倉儲。 您可以藉由使用 SSMA for Oracle，檢閱資料庫物件和資料、 評估要移轉的資料庫，資料庫將物件移轉為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，Azure SQL DB 或 Azure SQL 資料倉儲，然後再移轉資料至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，Azure SQL DB 或 Azure SQL 資料倉儲。 請注意您無法將 SYS 和系統 Oracle 結構描述移轉。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 適用于 Oracle 的 Migration Assistant (SSMA) 是全方位的環境，可協助您快速將 Oracle 資料庫移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、Azure SQL Database 或 AZURE SQL 資料倉儲。 您可以使用 SSMA for Oracle 來查看資料庫物件和資料、評估要遷移的資料庫、將資料庫物件遷移至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、Azure SQL Database 或 AZURE Sql 資料倉儲，然後將資料移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、Azure SQL Database 或 Azure Sql 資料倉儲。 請注意，您無法遷移 SYS 和系統 Oracle 架構。
   
-## <a name="recommended-migration-process"></a>建議的移轉程序  
-若要成功移轉物件和資料，從 Oracle 資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，Azure SQL DB 或 Azure SQL 資料倉儲，請使用下列程序：
+## <a name="recommended-migration-process"></a>建議的遷移程式  
+若要成功將物件和資料從 Oracle 資料庫移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、Azure SQL Database 或 AZURE SQL 資料倉儲，請使用下列程式：
   
 1.  [建立新的 SSMA 專案](working-with-ssma-projects-oracletosql.md)。  
   
-    建立專案之後，您可以設定專案轉換、 移轉和型別對應的選項。 專案設定的相關資訊，請參閱[設定專案選項&#40;OracleToSQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md)。 如需如何自訂資料型別對應資訊，請參閱[對應 Oracle 和 SQL Server 資料類型&#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)。  
+    建立專案之後，您可以設定專案轉換、遷移和類型對應選項。 如需專案設定的詳細資訊，請參閱 [&#40;OracleToSQL&#41;設定專案選項 ](../../ssma/oracle/setting-project-options-oracletosql.md)。 如需有關如何自訂資料類型對應的詳細資訊，請參閱將 [Oracle 和 SQL Server 資料類型對應 &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)。  
   
 2.  [連接到 Oracle 資料庫伺服器](connecting-to-oracle-database-oracletosql.md)。  
   
-3.  [連接到 SQL server 執行個體](connecting-to-sql-server-oracletosql.md)。  
+3.  [連接到 SQL Server 的實例](connecting-to-sql-server-oracletosql.md)。  
   
-4.  [將 Oracle 資料庫結構描述對應至 SQL Server 資料庫結構描述](mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md)。  
+4.  [將 Oracle 資料庫架構對應至 SQL Server 資料庫架構](mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md)。  
   
-5.  （選擇性）[建立評定報表](assessing-oracle-schemas-for-conversion-oracletosql.md)評估進行轉換的資料庫物件，並且估計的轉換時間。  
+5.  （選擇性） [建立評量報告](assessing-oracle-schemas-for-conversion-oracletosql.md) 以評估資料庫物件的轉換，並估計轉換時間。  
   
-6.  [將 Oracle 資料庫結構描述轉換成 SQL Server 結構描述](converting-oracle-schemas-oracletosql.md)。  
+6.  [將 Oracle 資料庫架構轉換成 SQL Server 架構](converting-oracle-schemas-oracletosql.md)。  
   
-7.  [已轉換的資料庫物件載入 SQL Server](loading-converted-database-objects-into-sql-server-oracletosql.md)。  
+7.  [將轉換的資料庫物件載入 SQL Server 中](loading-converted-database-objects-into-sql-server-oracletosql.md)。  
   
-    您可以透過下列方式之一來這麼做：  
+    您可以透過下列其中一種方式來執行此動作：  
   
-    -   儲存指令碼，並在執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+    -   儲存並執行腳本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
     -   同步處理資料庫物件。  
   
 8.  [將資料移轉至 SQL Server](migrating-oracle-data-into-sql-server-oracletosql.md)。  
   
-9. 如有必要，更新資料庫的應用程式。  
+9. 如有必要，請更新資料庫應用程式。  
   
 ## <a name="see-also"></a>另請參閱  
 [安裝 SSMA for Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)  
-[開始使用 SSMA for Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
+[使用 SSMA for Oracle 進行消費者入門 &#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: 資料層應用程式
 title: 資料層應用程式 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2016
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7e7f5fb29c15fbd8532a6852477ed9376df92f72
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 8d4425da7d337a6628ae6197bedbe03d84897910
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988769"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386934"
 ---
 # <a name="data-tier-applications"></a>資料層應用程式
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
