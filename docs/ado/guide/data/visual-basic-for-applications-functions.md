@@ -1,4 +1,5 @@
 ---
+description: Visual Basic for Applications 函式
 title: Visual Basic for Applications 函式 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2d7493fbba302ce23279374177819bfa7ff9b2e5
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d680d8a0f0f7d34e9074b5e2e9e63aedd82a1217
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242918"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452550"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic for Applications 函式
-下列 Visual Basic for Applications 函數可以用於資料成形計算機運算式中：  
+下列 Visual Basic for Applications 函數可用於資料成形計算機運算式：  
 
 :::row:::
     :::column:::
@@ -149,15 +150,15 @@ ms.locfileid: "87242918"
         Val  
         VarType  
         Weekday  
-        年  
+        Year  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>另請參閱  
  [存取階層式記錄集中的資料列](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [資料成形總覽](../../../ado/guide/data/data-shaping-overview.md)   
- [正式圖形文法](../../../ado/guide/data/formal-shape-grammar.md)   
+ [正式式圖形文法](../../../ado/guide/data/formal-shape-grammar.md)   
  [資料成形所需的提供者](../../../ado/guide/data/required-providers-for-data-shaping.md)   
  [Shape APPEND 子句](../../../ado/guide/data/shape-append-clause.md)   
- [一般的圖形命令](../../../ado/guide/data/shape-commands-in-general.md)   
+ [一般圖形命令](../../../ado/guide/data/shape-commands-in-general.md)   
  [Shape COMPUTE 子句](../../../ado/guide/data/shape-compute-clause.md)

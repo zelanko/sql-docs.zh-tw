@@ -1,4 +1,5 @@
 ---
+description: 更新和保存資料
 title: 更新和保存資料 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,26 +15,26 @@ helpviewer_keywords:
 ms.assetid: 8dc27274-4f96-43d1-913c-4ff7d01b9a27
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a77bb6f8f26652a9f435683c56b14d0bc8eb4b65
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 19e281e6108005279cd807e5ee76d383437b8814
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750211"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452650"
 ---
 # <a name="updating-and-persisting-data"></a>更新和保存資料
-上述章節討論了如何使用 ADO 來取得資料來源中的資料、如何在資料中四處移動，甚至如何編輯資料。 當然，如果您的應用程式目標是允許使用者變更資料，您就必須瞭解如何儲存這些變更。 您可以使用**Save**方法將**記錄集**變更保存至檔案，也可以使用**Update**或**UpdateBatch**方法將變更傳送回資料來源以進行儲存。  
+上述章節已討論過如何使用 ADO 來取得資料來源中的資料、如何在資料中四處移動，甚至是如何編輯資料。 當然，如果您的應用程式目標是要讓使用者變更資料，您就必須瞭解如何儲存這些變更。 您可以使用**Save**方法將**記錄集**變更保存到檔案中，也可以使用**Update**或**UpdateBatch**方法將變更傳送回資料來源以進行儲存。  
   
- 在先前章節中，您已變更**記錄集**的數個數據列中的資料。 ADO 支援兩個與資料列的加入、刪除和修改相關的基本概念。  
+ 在上一章中，您已變更 **記錄集**的數個數據列中的資料。 ADO 支援兩種與資料列的新增、刪除和修改相關的基本概念。  
   
- 第一種概念是，變更不會立即對**記錄集**進行，相反地，它們是對內部*複製緩衝區*進行。 如果您決定不想要變更，則會捨棄複製緩衝區中的修改。 如果您決定要保留變更，複製緩衝區中的變更會套用到**記錄集**。  
+ 第一個概念是不會立即對 **記錄集**進行變更;相反地，它們會對內部 *複製緩衝區*進行。 如果您決定不想要變更，則會捨棄複製緩衝區中的修改。 如果您決定要保留變更，複製緩衝區中的變更會套用至 **記錄集**。  
   
- 第二個概念是，一旦您在完成資料列的工作（也就是*即時模式）* 時，就會立即將變更傳播至資料來源，或對一組資料列進行所有變更，直到您宣告設定完成（也就是*批次*模式）的工作為止。 **LockType**屬性會決定對基礎資料來源進行變更的時間。 **adLockOptimistic**或**adLockPessimistic**會指定立即模式，而**adLockBatchOptimistic**則指定批次模式。 **CursorLocation**屬性可能會影響哪些**LockType**設定可供使用。 例如，如果**CursorLocation**屬性設定為**adUseClient**，則不支援**adLockPessimistic**設定。  
+ 第二個概念是，當您在資料列上宣告工作時，變更會立即傳播至資料來源 (也就是 *立即* 模式) ，或收集一組資料列的所有變更，直到您宣告 set complete (（ *批次* 模式) ）的工作為止。 **LockType**屬性會決定何時變更基礎資料來源。 **adLockOptimistic** 或 **adLockPessimistic** 會指定立即模式，而 **adLockBatchOptimistic** 則會指定批次模式。 **CursorLocation**屬性可能會影響可用的**LockType**設定。 例如，如果**CursorLocation**屬性設定為**adUseClient**，則不支援**adLockPessimistic**設定。  
   
- 在立即模式中， **Update**方法的每個調用都會將變更傳播至資料來源。 在批次模式中，目前資料列位置的**更新**或移動的每個調用都會儲存複製緩衝區的變更，但只有**UpdateBatch**方法會將變更傳播至資料來源。  
+ 在「立即模式」中， **Update** 方法的每個調用都會將變更傳播至資料來源。 在批次模式中，目前資料列位置的 **Update** 或移動的每個調用都會將變更儲存至複製緩衝區，但是只有 **UpdateBatch** 方法會將變更傳播至資料來源。  
   
  此章節包含下列主題。  
   
--   [正在更新資料](../../../ado/guide/data/updating-data.md)  
+-   [更新資料](../../../ado/guide/data/updating-data.md)  
   
 -   [保存資料](../../../ado/guide/data/persisting-data.md)

@@ -1,5 +1,6 @@
 ---
-title: 名稱（MDX） |Microsoft Docs
+description: Name (MDX)
+title: MDX) 名稱 (|Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8fd8aa240a72dacc67e7cd09cb058192cddee282
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1f7598d8ee25b3ffa50d8b4ab7638640d0c5e4ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68088383"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483761"
 ---
 # <a name="name-mdx"></a>Name (MDX)
 
@@ -51,7 +52,7 @@ Member_Expression.Name
  傳回成員的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- **Name**函數會傳回物件的名稱，而不是唯一名稱。  
+ **Name**函數會傳回物件的名稱，而不是唯一的名稱。  
   
 ## <a name="examples"></a>範例  
   

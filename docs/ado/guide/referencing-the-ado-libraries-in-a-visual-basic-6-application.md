@@ -1,4 +1,5 @@
 ---
+description: 在 Visual Basic 6 應用程式中參考 ADO 程式庫
 title: 在 Visual Basic 6 應用程式中參考 ADO 程式庫 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,32 +17,32 @@ helpviewer_keywords:
 ms.assetid: cfd37a82-aad2-41cd-8d13-1566c43d95f0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 766707f8903f72da8b1735def4ed4433c4468d90
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5e3ed89e523a164f96c4f71595609658816f5864
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747882"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452370"
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-basic-6-application"></a>在 Visual Basic 6 應用程式中參考 ADO 程式庫
-若要將 ADO 程式庫匯入 Microsoft Visual Basic 6 應用程式，您必須在 Visual Basic 專案中設定參考。  
+若要將 ADO 程式庫匯入到 Microsoft Visual Basic 6 應用程式中，您必須在 Visual Basic 專案中設定參考。  
   
 ### <a name="to-set-a-reference-to-the-ado-libraries-in-a-visual-basic-project"></a>若要在 Visual Basic 專案中設定 ADO 程式庫的參考  
   
 1.  建立新的或開啟現有的 Visual Basic 專案。  
   
-2.  按一下 [**專案**] 功能表項目，然後從下拉式功能表面板中選取 [**參考 ...** ]。  
+2.  按一下 [ **專案** ] 功能表項目，然後從下拉式功能表面板中選取 [ **參考 ...** ]。  
   
-3.  從 [**可用的參考**] 中，核取 [ **Microsoft ActiveX Data Objects *n. n* **] 程式庫的方塊，其中***n. n***代表最新的版本號碼。 下方的 [**位置**] 欄位應該將您的選擇識別為 *$installDir \msado15.dll*，其中 *$installDir*代表已安裝 ADO 程式庫的目錄路徑。  
+3.  從 [ **可用的參考**] 中，核取 [ **Microsoft ActiveX Data Objects *n-1* **] 程式庫，其中 ***n. n*** 表示最新的版本號碼。 下列 **位置** 欄位應該將您的選擇識別為 *$installDir\msado15.dll*，其中 *$installDir* 代表已安裝 ADO 程式庫的目錄路徑。  
   
-4.  如果您想要使用 ADO MD，請重複步驟3以選取 **[Microsoft ActiveX Data Objects （多維度）] [ *n* **] 程式庫。 [**位置**] 欄位應該將此選擇識別為 *$installDir \msadomd.dll*。  
+4.  如果您想要使用 ADO MD，請重複步驟3以選取 [ **Microsoft ActiveX Data Objects (多維度) *n. n* 程式庫**]。 [ **位置** ] 欄位應該將此選項識別為 *$installDir\msadomd.dll*。  
   
-5.  如果您想要使用 ADOX，請重複步驟3，**針對 DDL 和安全性*n.n*選取 [Microsoft ADO Ext**]。 [**位置**] 欄位應該將此選擇識別為 *$installDir \msadox.dll*。  
+5.  如果您想要使用 ADOX，請重複步驟3，為**DDL 和安全性*n.n*選取 Microsoft ADO Ext.** n。 [ **位置** ] 欄位應該將此選項識別為 *$installDir\msadox.dll*。  
   
-6.  按一下 **[確定**] 以完成參考的設定。  
+6.  按一下 **[確定** ] 完成設定參考。  
   
 ## <a name="backward-compatibility"></a>回溯相容性  
- 安裝 ADO 也會複製舊版的下列類型程式庫：  
+ 安裝 ADO 也會複製下列舊版的類型程式庫：  
   
 -   *msado27 .tlb*、ADO 2.7 類型程式庫  
   
@@ -53,4 +54,4 @@ ms.locfileid: "82747882"
   
 -   *msado20 .tlb*、ADO 2.0 類型程式庫  
   
- 如果您的應用程式因為回溯相容性的緣故而必須使用上述任何 ADO 程式庫，您必須匯入適當版本的類型程式庫。 若要這麼做，請遵循上一節中的程式，將*msado15.dll*取代為*MsadoXX*，其中*XX*代表您需要匯入的版本號碼。
+ 如果您的應用程式必須基於回溯相容性的原因，使用上述任何 ADO 程式庫，您必須匯入適當版本的類型程式庫。 若要這樣做，請遵循上一節中的程式，以*msadoXX*取代*msado15.dll* ，其中*XX*代表您需要匯入的版本號碼。

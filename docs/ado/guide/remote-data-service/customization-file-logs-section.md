@@ -1,4 +1,5 @@
 ---
+description: 自訂檔案 Logs 區段
 title: 自訂檔案記錄區段 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3be02570fbff1efd9adb091c121d4eb1a8782817
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 365b57f174f289317a7e8b3e09fe0c29b051ef64
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749960"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452250"
 ---
 # <a name="customization-file-logs-section"></a>自訂檔案 Logs 區段
-**Logs**區段包含記錄檔專案，它會指定在**DataFactory**作業期間記錄錯誤的檔案名。  
+[ **記錄** 檔] 區段包含記錄檔專案，此專案會指定在 **DataFactory**作業期間記錄錯誤之檔案的名稱。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統不再包含 RDS 伺服器元件（如需詳細資訊，請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)）。 RDS 用戶端元件將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="syntax"></a>語法  
  記錄檔專案的格式如下：  
@@ -40,8 +41,8 @@ FileName
   
 |部分|描述|  
 |----------|-----------------|  
-|**err**|表示這是記錄檔專案的常值字串。|  
-|*FileName*|完整的路徑和檔案名。 一般檔案名是**c:\msdfmap.log**。|  
+|**犯 錯**|表示這是記錄檔專案的常值字串。|  
+|*FileName*|完整的路徑和檔案名。 一般的檔案名是 **c:\msdfmap.log**。|  
   
  記錄檔會包含每個錯誤的使用者名稱、HRESULT、日期和時間。  
   

@@ -1,4 +1,5 @@
 ---
+description: 步驟 3：填入 [欄位] 清單方塊
 title: 步驟3：填入 [欄位] 清單方塊 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 315c32dc-aeb1-4629-b30e-87b44e8f84d1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2ecedd516891e2f99a800da452573717f211ff60
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d3a7378cfdce29094f5ae4271b9fe7bff7516753
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760794"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452790"
 ---
 # <a name="step-3-populate-the-fields-list-box"></a>步驟 3：填入 [欄位] 清單方塊
-若要填入 [欄位] 清單方塊，請將下列程式碼插入到的 Click 事件處理常式中 `lstMain` ：  
+若要填入 [欄位] 清單方塊，請在的 Click 事件處理常式中插入下列程式碼 `lstMain` ：  
   
 ```  
 Private Sub lstMain_Click()  
@@ -46,11 +47,11 @@ Private Sub lstMain_Click()
 End Sub  
 ```  
   
- 此程式碼會分別宣告和具現化本機記錄和記錄集物件 `rec` `rs` 。  
+ 此程式碼會分別宣告和具現化本機記錄和記錄集物件，以及 `rec` `rs` 。  
   
- 對應到中所選資源的資料列 `lstMain` 會成為的目前資料列 `grs` 。 然後會清除 [詳細資料] 清單方塊，並以 `rec` 目前的資料列開啟 `grs` 做為來源。  
+ 對應到中所選取之資源的資料列 `lstMain` ，會成為目前的資料列 `grs` 。 接著會清除 [詳細資料] 清單方塊，並以目前的資料 `rec` 列 `grs` 做為來源來開啟。  
   
- 如果資源是[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)所指定的集合記錄，則會在 rec 的子系上開啟本機記錄集 `rs` 。然後 `lstDetails` 填入的資料列中的值 `rs` 。  
+ 如果資源是集合記錄，如 [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)所指定，本機記錄集會 `rs` 在 rec 的子系上開啟。然後 `lstDetails` ，會填入的資料列中的值 `rs` 。  
   
  如果資源是簡單的記錄， `recFields` 則會呼叫。 如需的詳細資訊 `recFields` ，請參閱下一個步驟。  
   

@@ -1,4 +1,5 @@
 ---
+description: 步驟 4：填入 [詳細資料] 文字方塊
 title: 步驟4：填入 [詳細資料] 文字方塊 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2110384afa66e74e17d4e3c9a8600b5825cc412e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 59b074b3e635457f8d96060575d941e26846281d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760784"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452780"
 ---
 # <a name="step-4-populate-the-details-text-box"></a>步驟 4：填入 [詳細資料] 文字方塊
-若要填入 [詳細資料] 文字方塊，請建立名為**recFields**的新副程式，並插入下列程式碼：  
+若要填入 [詳細資料] 文字方塊，請建立名為 **recFields** 的新副程式，然後插入下列程式碼：  
   
 ```  
 Sub recFields(r As Record, l As ListBox, t As TextBox)  
@@ -44,7 +45,7 @@ Sub recFields(r As Record, l As ListBox, t As TextBox)
 End Sub  
 ```  
   
- 此程式碼會填入 `lstDetails` 傳遞至之簡單記錄的欄位和值 `recFields` 。 如果資源是文字檔，則會從資源記錄開啟文字資料流程。 程式碼會判斷字元集是否為 ASCII，並將資料流程內容複寫到中 `txtDetails` 。  
+ 此程式碼會填入 `lstDetails` 傳遞給的簡單記錄的欄位和值 `recFields` 。 如果資源是文字檔，則會從資源記錄開啟文字串流。 程式碼會判斷字元集是否為 ASCII，並將資料流程內容複寫到 `txtDetails` 。  
   
 ## <a name="see-also"></a>另請參閱  
  [網際網路發佈案例](../../../ado/guide/data/internet-publishing-scenario.md)   

@@ -1,4 +1,5 @@
 ---
+description: 了解資料錄集的結構
 title: 瞭解記錄集結構 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 3ef36d24-f121-4a5f-84ad-5fc84992e81d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 963077a9dd5e7542fe8bc20d498019d07a1c15d7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 51775b83346f3a565d64502db20f21f22e77a31f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759004"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452660"
 ---
 # <a name="understanding-recordset-structure"></a>了解資料錄集的結構
-每個**記錄集**都有一個**Fields**集合，其中包含一個或多個**欄位**物件。 **Field**物件通常代表資料表資料行。 下列主題將說明如何流覽**Fields**集合，並取得每個欄位的相關資訊。 然後，他們會討論您可以透過**Field**物件取得的資訊種類，以及如何使用它。  
+每個 **記錄集** 都有一個 **欄位** 集合，其中包含一個或多個 **欄位** 物件。 **Field**物件通常代表資料表資料行。 下列主題將說明如何流覽 **Fields** 集合，以及取得每個欄位的相關資訊。 然後，他們會討論透過 **Field** 物件可供您使用的資訊類型，以及如何使用。  
   
 -   [Fields 集合](../../../ado/guide/data/the-fields-collection.md)  
   
