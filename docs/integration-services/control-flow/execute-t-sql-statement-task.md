@@ -1,4 +1,5 @@
 ---
+description: 執行 T-SQL 陳述式工作
 title: 執行 T-SQL 陳述式工作 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7e9086ca-d27e-46c0-bfad-d61333ebd55e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fcd3dabd40c77adde95234276cf4b6ddff46cb42
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bf6a495a3c481622fd5e01406e14172cea252e71
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917914"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88393934"
 ---
 # <a name="execute-t-sql-statement-task"></a>執行 T-SQL 陳述式工作
 

@@ -1,4 +1,5 @@
 ---
+description: Foreach 迴圈容器
 title: Foreach 迴圈容器 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
@@ -30,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 176e5f4d638f6093f7239c347cbc0d3e0e5b75bb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: df2b88cc69b8f77a43ad6d1a26bfa706fed12eaa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918229"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88393504"
 ---
 # <a name="foreach-loop-container"></a>Foreach 迴圈容器
 

@@ -1,4 +1,5 @@
 ---
+description: For 迴圈容器
 title: For 迴圈容器 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 52d44befbea9f6c45431d3412b62959a16bb0575
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2a8c0bb1cb003605ec863b41e2194bad4e3cf3e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917872"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88393564"
 ---
 # <a name="for-loop-container"></a>For 迴圈容器
 

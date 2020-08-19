@@ -1,4 +1,5 @@
 ---
+description: ODBC 來源
 title: ODBC 來源 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ f1_keywords:
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7382675ca38ecaabd685d68e0dc31f09e94be6ad
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 800c3e0b8af863cd7947e6847d3c8fe2e1ccab44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914976"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392114"
 ---
 # <a name="odbc-source"></a>ODBC 來源
 
@@ -56,7 +57,7 @@ ms.locfileid: "86914976"
  如需有關 ODBC 來源支援之資料類型的資訊，請參閱＜Connector for Open Database Connectivity (ODBC)＞。  
   
 ## <a name="extract-options"></a>擷取選項  
- ODBC 來源以 [批次]  或 [逐列]  模式操作。 所用的模式是由 **FetchMethod** 屬性所決定。 下列清單描述這些模式。  
+ ODBC 來源以 [批次]**** 或 [逐列]**** 模式操作。 所用的模式是由 **FetchMethod** 屬性所決定。 下列清單描述這些模式。  
   
 -   **批次**：元件會根據所見的 ODBC 提供者功能，嘗試使用最有效率的提取方法。 對於最新型的 ODBC 提供者，這是 SQLFetchScroll 與陣列繫結搭配使用 (陣列大小是由 **BatchSize** 屬性所決定)。 如果您選取 [批次]  ，而提供者不支援此方法，ODBC 目的地會自動切換為**逐列**模式。  
   
@@ -79,7 +80,7 @@ ms.locfileid: "86914976"
   
  若要開啟 **[進階編輯器]** 對話方塊：  
   
--   在 **專案的** [資料流程] [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 畫面中，以滑鼠右鍵按一下 ODBC 來源，然後選取 **[顯示進階編輯器]** 。  
+-   在 **專案的** [資料流程] [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 畫面中，以滑鼠右鍵按一下 ODBC 來源，然後選取 **[顯示進階編輯器]**。  
   
  如需有關可在 [進階編輯器] 對話方塊中設定之屬性的詳細資訊，請參閱＜ [ODBC Source Custom Properties](../../integration-services/data-flow/odbc-source-custom-properties.md)＞。  
   
@@ -87,7 +88,7 @@ ms.locfileid: "86914976"
   
 -   [使用 ODBC 來源來擷取資料](../../integration-services/data-flow/extract-data-by-using-the-odbc-source.md)  
   
--   [ODBC 來源自訂屬性](../../integration-services/data-flow/odbc-source-custom-properties.md)  
+-   [ODBC Source Custom Properties](../../integration-services/data-flow/odbc-source-custom-properties.md)  
   
 ## <a name="odbc-source-editor-connection-manager-page"></a>ODBC 來源編輯器 (連接管理員頁面)
   使用 **[ODBC 來源編輯器]** 對話方塊的 **[連接管理員]** 頁面，即可選取來源的 ODBC 連接管理員。 這個頁面也可以讓您從資料庫中選取資料表或檢視。  
@@ -97,7 +98,7 @@ ms.locfileid: "86914976"
   
 -   在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，開啟具有 ODBC 來源的 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 封裝。  
   
--   在 [資料流程]  索引標籤上，按兩下 ODBC 來源。  
+-   在 [資料流程]**** 索引標籤上，按兩下 ODBC 來源。  
   
 ### <a name="options"></a>選項。  
   
@@ -124,18 +125,18 @@ ms.locfileid: "86914976"
  按一下 **[預覽]** ，最多可檢視從所選取之資料表或檢視表中擷取的前 200 個資料列。  
   
 ## <a name="odbc-source-editor-columns-page"></a>ODBC 來源編輯器 (資料行頁面)
-  使用 [ODBC 來源編輯器]  對話方塊的 [資料行]  頁面，即可將輸出資料行對應至每個外部 (來源) 資料行。  
+  使用 [ODBC 來源編輯器]**** 對話方塊的 [資料行]**** 頁面，即可將輸出資料行對應至每個外部 (來源) 資料行。  
   
 ### <a name="task-list"></a>工作清單  
  **若要開啟 ODBC 來源編輯器的資料行頁面**  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，開啟具有 ODBC 來源的 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 封裝。  
   
-2.  在 [資料流程]  索引標籤上，按兩下 ODBC 來源。  
+2.  在 [資料流程]**** 索引標籤上，按兩下 ODBC 來源。  
   
-3.  在 **[ODBC 來源編輯器]** 中，按一下 **[資料行]** 。  
+3.  在 **[ODBC 來源編輯器]** 中，按一下 **[資料行]**。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
   
 #### <a name="available-external-columns"></a>可用的外部資料行  
  資料來源中可用的外部資料行清單。 您無法使用此資料表來加入或刪除資料行。 請從來源選取要使用的資料行。 選取的資料行就會依照選取的順序加入至 **[外部資料行]** 清單。  
@@ -156,9 +157,9 @@ ms.locfileid: "86914976"
   
 -   在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，開啟具有 ODBC 來源的 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 封裝。  
   
--   在 [資料流程]  索引標籤上，按兩下 ODBC 來源。  
+-   在 [資料流程]**** 索引標籤上，按兩下 ODBC 來源。  
   
--   在 **[ODBC 來源編輯器]** 中，按一下 **[錯誤輸出]** 。  
+-   在 **[ODBC 來源編輯器]** 中，按一下 **[錯誤輸出]**。  
   
 ### <a name="options"></a>選項。  
   
@@ -174,7 +175,7 @@ ms.locfileid: "86914976"
 #### <a name="truncation"></a>截斷  
  選取 ODBC 來源應該如何處理流程中的截斷：忽略失敗、重新導向資料列，或使元件失效。  
   
-#### <a name="description"></a>描述  
+#### <a name="description"></a>Description  
  未使用。  
   
 #### <a name="set-this-value-to-selected-cells"></a>將這個值設定到選取的資料格  

@@ -1,4 +1,5 @@
 ---
+description: 稽核轉換
 title: 稽核轉換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2e0f716564eee0d867081576a36eba81735966c5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e04af79dc2020a2273717785fca57aac5e4de451
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915739"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392274"
 ---
 # <a name="audit-transformation"></a>稽核轉換
 
@@ -33,7 +34,7 @@ ms.locfileid: "86915739"
 ## <a name="system-variables"></a>系統變數  
  下表描述「稽核」轉換可使用的系統變數。  
   
-|系統變數|索引|描述|  
+|系統變數|索引|Description|  
 |---------------------|-----------|-----------------|  
 |**ExecutionInstanceGUID**|0|識別封裝執行執行個體的 GUID。|  
 |**PackageID**|1|封裝的唯一識別碼。|  
@@ -41,7 +42,7 @@ ms.locfileid: "86915739"
 |**VersionID**|3|封裝的版本。|  
 |**ExecutionStartTime**|4|封裝開始執行的時間。|  
 |**MachineName**|5|電腦名稱。|  
-|**UserName**|6|啟動封裝之人員的登入名稱。|  
+|**使用者名稱**|6|啟動封裝之人員的登入名稱。|  
 |**TaskName**|7|與「稽核」轉換相關聯的「資料流程」工作名稱。|  
 |**TaskId**|8|「資料流程」工作的唯一識別碼。|  
   
@@ -63,7 +64,7 @@ ms.locfileid: "86915739"
 ## <a name="audit-transformation-editor"></a>稽核轉換編輯器
   稽核轉換可讓封裝中的資料流程包含有關封裝執行的環境資料。 例如，可以將封裝、電腦與操作員的名稱加入資料流程。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包括提供此資訊的系統變數。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **輸出資料行名稱**  
  提供包含稽核資訊之新輸出資料行的名稱。  
   

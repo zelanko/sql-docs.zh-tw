@@ -1,4 +1,5 @@
 ---
+description: 查閱轉換完整快取模式 - OLE DB 連線管理員
 title: 查閱轉換完整快取模式 - OLE DB 連線管理員 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c1b663d20972a8c4a788c9a12f6b9b5dcdf01307
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: df4cde828997d68b15869000f111a99479369e55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923117"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394204"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>查閱轉換完整快取模式 - OLE DB 連線管理員
 
@@ -43,29 +44,29 @@ ms.locfileid: "86923117"
   
 4.  按兩下來源或前一個轉換以設定元件。  
   
-5.  按兩下查閱轉換，然後在 [查閱轉換編輯器]  的 [一般]  頁面上，選取 [完整快取]  。  
+5.  按兩下查閱轉換，然後在 [查閱轉換編輯器]**** 的 [一般]**** 頁面上，選取 [完整快取]****。  
   
-6.  在 **[連接類型]** 區域中，選取 **[OLE DB 連接管理員]** 。  
+6.  在 **[連接類型]** 區域中，選取 **[OLE DB 連接管理員]**。  
   
 7.  在 **[指定如何處理無相符項目的資料列]** 清單中，針對沒有相符項目的資料列選取錯誤處理選項。  
   
-8.  在 [連接] 頁面上，從 **[OLE DB 連接管理員]** 清單中選取連接管理員，或按一下 **[新增]** 建立新的連接管理員。 如需相關資訊，請參閱 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
+8.  在 [連接] 頁面上，從 **[OLE DB 連接管理員]** 清單選取連接管理員，或按一下 **[新增]** 建立新的連接管理員。 如需相關資訊，請參閱 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
   
 9. 執行下列其中一項工作：  
   
-    -   按一下 **[使用資料表或檢視]** ，然後選取資料表或檢視，或按一下 **[新增]** 建立資料表或檢視。  
+    -   按一下 **[使用資料表或檢視]**，然後選取資料表或檢視，或按一下 **[新增]** 建立資料表或檢視。  
   
          -或-  
   
-    -   按一下 **[使用 SQL 查詢的結果]** ，然後在 **[SQL 命令]** 視窗中建立查詢，或是按一下 **[建立查詢]** ，使用 **[查詢產生器]** 提供的圖形工具來建立查詢。  
+    -   按一下 **[使用 SQL 查詢的結果]**，然後在 **[SQL 命令]** 視窗中建立查詢，或是按一下 **[建立查詢]** ，使用 **[查詢產生器]** 提供的圖形工具來建立查詢。  
   
          -或-  
   
     -   或者，按一下 **[瀏覽]** ，從檔案匯入 SQL 陳述式。  
   
-     若要驗證 SQL 查詢，請按一下 **[剖析查詢]** 。  
+     若要驗證 SQL 查詢，請按一下 **[剖析查詢]**。  
   
-     若要檢視資料範例，按一下 **[預覽]** 。  
+     若要檢視資料範例，按一下 **[預覽]**。  
   
 10. 按一下 **[資料行]** 頁面，然後從 **[可用的輸入資料行]** 清單，拖曳至少一個資料行至 **[可用的查閱資料行]** 清單中的資料行。  
   

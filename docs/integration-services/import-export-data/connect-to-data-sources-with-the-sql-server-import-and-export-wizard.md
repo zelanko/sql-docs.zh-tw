@@ -1,4 +1,5 @@
 ---
+description: 使用 SQL Server 的 [匯入及匯出精靈] 連線到資料來源
 title: 連線到資料來源 (SQL Server 的匯入及匯出精靈) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/15/2017
@@ -9,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 94c0c2d183943c4fbbc2cbf0170120c3f9d680e0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 17edb259e987dc7d6b3892171c62e79d91b2f5c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922424"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88391474"
 ---
 # <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>使用 SQL Server 的 [匯入及匯出精靈] 連線到資料來源
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-本節的這項主題會示範如何使用 SQL Server 的 [匯入及匯出精靈] 連線到許多常用的資料來源。 您必須在精靈的 [選擇資料來源]  與 [選擇目的地]  頁面提供資料來源連線資訊。
+本節的這項主題會示範如何使用 SQL Server 的 [匯入及匯出精靈] 連線到許多常用的資料來源。 您必須在精靈的 [選擇資料來源]**** 與 [選擇目的地]**** 頁面提供資料來源連線資訊。
 
-本節的這項主題僅說明如何使用精靈的 [選擇資料來源] 與 [選擇目的地] 頁面**連線到資料來源**。 如需其他資訊，請參閱[相關的工作及內容](#related)。
+本節的這項主題僅說明如何使用精靈的 [選擇資料來源]**** 與 [選擇目的地]**** 頁面**連線到資料來源**。 如需其他資訊，請參閱[相關的工作及內容](#related)。
 
 ## <a name="connect-to-a-commonly-used-data-source"></a>連線到常用的資料來源
 按一下連結深入了解如何連線到下列其中一項常用的資料來源。
@@ -31,7 +32,7 @@ ms.locfileid: "86922424"
 -   [Oracle](../../integration-services/import-export-data/connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)
 -   [一般檔案 (文字檔)](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)
 -   [Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)
--   [Access](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)
+-   [存取](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)
 -   [Azure Blob 儲存體](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)
 -   [ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)
 -   [PostgreSQL](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)
@@ -50,7 +51,7 @@ ms.locfileid: "86922424"
 
 -   **深入了解此精靈的運作方式。**
 
-    -   **深入了解此精靈。** 如果您要尋找精靈概觀，請參閱 [使用 SQL Server 匯入及匯出精靈匯入和匯出資料](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。
+    -   **深入了解精靈。** 如果您要尋找精靈概觀，請參閱 [使用 SQL Server 匯入及匯出精靈匯入和匯出資料](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。
 
     -   **了解此精靈的步驟。** 如需此精靈之各項步驟的資訊，請參閱 [SQL Server 匯入及匯出精靈的步驟](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md)。 文件中另有專頁會列出此精靈的每一個頁面。
 

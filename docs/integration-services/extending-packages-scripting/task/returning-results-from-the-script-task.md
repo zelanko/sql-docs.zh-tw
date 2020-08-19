@@ -1,4 +1,5 @@
 ---
+description: 從指令碼工作中傳回結果
 title: 從指令碼工作傳回結果 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ac06805b-c2db-44bd-af5c-5a0debe36dd7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 29698d7c7df768f2eb9f83bb33544fdaac75a2b4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d0cd2a7b3b8672e4e309c3293b8694f7968d5991
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86910446"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88391124"
 ---
 # <a name="returning-results-from-the-script-task"></a>從指令碼工作中傳回結果
 

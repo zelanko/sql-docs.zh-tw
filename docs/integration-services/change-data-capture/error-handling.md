@@ -1,4 +1,5 @@
 ---
+description: 錯誤處理
 title: 錯誤處理 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b9fc8c8f8b5072afff038c590c82898776534a3c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f00d762340c6583f6476510127af840ace0b8e75
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921614"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394834"
 ---
 # <a name="error-handling"></a>錯誤處理
 

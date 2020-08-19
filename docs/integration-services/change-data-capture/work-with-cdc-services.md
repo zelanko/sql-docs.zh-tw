@@ -1,4 +1,5 @@
 ---
+description: 使用 CDC 服務
 title: 使用 CDC 服務 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6885167d84654866dcb9c1f433f5f11aaee77031
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e591992c3e03162ecdbb928b7ce41ced3037f5ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921444"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394494"
 ---
 # <a name="work-with-cdc-services"></a>使用 CDC 服務
 
@@ -26,7 +27,7 @@ ms.locfileid: "86921444"
 
   您可以使用 CDC 服務組態主控台來建立新的 CDC 服務並為 CDC 準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **準備 SQL Server**  
  從 CDC 服務組態主控台右側的 **[動作]** 窗格中選取這個選項。  
   
@@ -39,7 +40,7 @@ ms.locfileid: "86921444"
  **建立新的 CDC 服務**  
  從 CDC 服務組態主控台右側的 **[動作]** 窗格中按一下 **[新增服務]** 。  
   
- 您也可以用滑鼠右鍵按一下 [Local CDC Services (本機 CDC 服務)]  ，然後選取 [新增服務]  。  
+ 您也可以用滑鼠右鍵按一下 [Local CDC Services (本機 CDC 服務)]****，然後選取 [新增服務]****。  
   
  隨即開啟 [新增 Oracle CDC 服務] 對話方塊。  
   

@@ -1,4 +1,5 @@
 ---
+description: Change Data Capture for Oracle by Attunity 的已知錯誤和解決方法
 title: Change Data Capture for Oracle by Attunity 的已知錯誤和解決方法 | Microsoft Docs
 ms.date: 07/23/2019
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.technology: ''
 ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ee1e8f3ae65b4a906d42a4b00644456d89f9b900
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c6841092edcb5eac4005d0a068f31c768aedf5bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71713423"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394384"
 ---
 # <a name="known-errors-and-resolutions-with-change-data-capture-for-oracle-by-attunity"></a>Change Data Capture for Oracle by Attunity 的已知錯誤和解決方法
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
@@ -96,7 +97,7 @@ ms.locfileid: "71713423"
 
 ### <a name="management-console"></a>管理主控台
 
-在左窗格中醒目提示 CDC 執行個體時，您可以在 Oracle Change Data Capture 設計工具的管理主控台中，看到 [狀態]  訊息欄位中的錯誤。 
+在左窗格中醒目提示 CDC 執行個體時，您可以在 Oracle Change Data Capture 設計工具的管理主控台中，看到 [狀態]**** 訊息欄位中的錯誤。 
 
 ### <a name="query-trace-table"></a>查詢追蹤資料表
 
@@ -104,27 +105,27 @@ ms.locfileid: "71713423"
 
 ### <a name="save-output-from-basic-logging"></a>儲存基本記錄的輸出 
 
-若要擷取診斷資訊，請在 Oracle Change Data Capture 管理主控台的 [狀態] 索引標籤上，選取 [收集診斷資訊]  。 
+若要擷取診斷資訊，請在 Oracle Change Data Capture 管理主控台的 [狀態] 索引標籤上，選取 [收集診斷資訊]****。 
 
 ![[收集診斷資訊] 連結](media/known-issues-resolutions-with-cdc-for-oracle-attunity/collect-diagnostics.png)
 
-選擇 [開始時間]，並選取記錄檔的位置。 然後選取 [建立]  來啟動診斷資訊收集。 
+選擇 [開始時間]，並選取記錄檔的位置。 然後選取 [建立]**** 來啟動診斷資訊收集。 
 
 ![[收集診斷資訊] 連結](media/known-issues-resolutions-with-cdc-for-oracle-attunity/start-diagnostics.png)
 
 ### <a name="detailed-errors"></a>詳細錯誤
 
-您可以增加執行個體所收集的追蹤層級，並重複執行此案例，以收集更詳細的記錄。 若要這麼做，請選取 [動作]  下的 [屬性]  ，然後在 [進階]  索引標籤上的 [進階設定]  方格中新增屬性。將屬性的名稱設定為 `trace`，然後將值設定為 `SOURCE`。 
+您可以增加執行個體所收集的追蹤層級，並重複執行此案例，以收集更詳細的記錄。 若要這麼做，請選取 [動作] 下的 [屬性]，然後在 [進階] 索引標籤上的 [進階設定] 方格中新增屬性。將屬性的名稱設定為 `trace`，然後將值設定為 `SOURCE`。 
 
 ![[收集診斷資訊] 連結](media/known-issues-resolutions-with-cdc-for-oracle-attunity/properties.png)
 
-重現錯誤，然後選取 [收集診斷資訊]  選項來收集記錄。 
+重現錯誤，然後選取 [收集診斷資訊]**** 選項來收集記錄。 
 
 ![[收集診斷資訊] 連結](media/known-issues-resolutions-with-cdc-for-oracle-attunity/collect-diagnostics.png)
 
 ## <a name="ora-00942-table-of-view-does-not-exist"></a>ORA-00942 視圖的資料表不存在 
 
-這是 CDC 執行個體的 [狀態]  訊息欄位中所顯示常見錯誤。 此執行個體會重試多次，因此狀態圖示會暫時變成綠色，但之後會失敗並出現紅色驚嘆號和 UNEXPECTED 狀態。 
+這是 CDC 執行個體的 [狀態]**** 訊息欄位中所顯示常見錯誤。 此執行個體會重試多次，因此狀態圖示會暫時變成綠色，但之後會失敗並出現紅色驚嘆號和 UNEXPECTED 狀態。 
 
 ![Oracle 錯誤](media/known-issues-resolutions-with-cdc-for-oracle-attunity/oracle-error.png)
 
@@ -150,13 +151,13 @@ ms.locfileid: "71713423"
 
 安裝程式檔案資料夾 `C:\Program Files\Change Data Capture for Oracle by Attunity\Attunity.SqlServer.XdbCdcDesigner.chm` 中所包含的說明檔中，會詳細說明所有必要權限的清單。  如需完整清單，請參閱 .chm 檔案中標題為＜連線到 Oracle 源資料庫＞的頁面。
 
-您可以從左窗格中選取 CDCInstance，然後在 [CDC 設計工具]  視窗內的 [動作] 最右側窗格中選取 [屬性] 按鈕，以設定使用者帳戶。 您可以從 [屬性] 對話方塊頁面變更 Oracle 記錄挖掘驗證帳戶。
+您可以從左窗格中選取 CDCInstance，然後在 [CDC 設計工具]**** 視窗內的 [動作] 最右側窗格中選取 [屬性] 按鈕，以設定使用者帳戶。 您可以從 [屬性] 對話方塊頁面變更 Oracle 記錄挖掘驗證帳戶。
 
 ![Oracle 錯誤](media/known-issues-resolutions-with-cdc-for-oracle-attunity/oracle-connection.png)
 
 
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [追蹤資料變更 &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [關於異動資料擷取 &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [使用變更資料 &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   

@@ -1,4 +1,5 @@
 ---
+description: 使用新增執行個體精靈
 title: 使用新增執行個體精靈 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: dfc09f71-7037-4cd5-a3cd-c79f8c714e22
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 37b453c91ce19289aa2f8b8684c163dc0fc638a0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 07b9d1037b11f92857700330c66b2fda4170058d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913967"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394474"
 ---
 # <a name="use-the-new-instance-wizard"></a>使用新增執行個體精靈
 

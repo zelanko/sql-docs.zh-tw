@@ -1,4 +1,5 @@
 ---
+description: FTP 工作
 title: FTP 工作 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1c33ec0b3d8b597e46403337a11b4f3d99bc3393
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9d17bad386cc020be1a61696aec96a81b6126d8e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918222"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88393547"
 ---
 # <a name="ftp-task"></a>FTP 工作
 

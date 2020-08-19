@@ -1,4 +1,5 @@
 ---
+description: Encrypt
 title: dtutil 公用程式 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d200856e098317f3158c2ace61c8e7cbb0001e88
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ae472556993fafc52719fcf929bf88c35098e196
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917104"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392154"
 ---
 # <a name="dtutil-utility"></a>Encrypt
 

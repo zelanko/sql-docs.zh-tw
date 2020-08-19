@@ -1,4 +1,5 @@
 ---
+description: 執行 SQL 工作
 title: 執行 SQL 工作
 ms.custom: ''
 ms.date: 03/13/2017
@@ -8,10 +9,10 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
-- sql14.dts.designer.executesqltask.f1
-- sql14.dts.designer.executesqltask.general.f1
-- sql14.dts.designer.executesqltask.parametermapping.f1
-- sql14.dts.designer.executesqltask.resultset.f1
+- sql13.dts.designer.executesqltask.f1
+- sql13.dts.designer.executesqltask.general.f1
+- sql13.dts.designer.executesqltask.parametermapping.f1
+- sql13.dts.designer.executesqltask.resultset.f1
 helpviewer_keywords:
 - Transact-SQL statements, SSIS
 - statements [Integration Services]
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 377506ca7b8fb9b9fb94b606852bb90ce4756172
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 6138e30bf4794fff847dd7a0750d59c8d8fb884a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988632"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394164"
 ---
 # <a name="execute-sql-task"></a>執行 SQL 工作
 

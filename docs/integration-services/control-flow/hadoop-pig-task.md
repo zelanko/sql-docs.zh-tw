@@ -1,4 +1,5 @@
 ---
+description: Hadoop Pig 工作
 title: Hadoop Pig 工作 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 90646316-9822-48aa-9900-295a33750780
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 375ae2fd7b0e2ba0d125fab597132f3978430346
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8bb1c648647ea2341e899989f6199cbacd583b1b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918184"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88393354"
 ---
 # <a name="hadoop-pig-task"></a>Hadoop Pig 工作
 
@@ -26,12 +27,12 @@ ms.locfileid: "86918184"
 
   使用 Hadoop Pig 工作在 Hadoop 叢集上執行 Pig 指令碼。  
   
- 若要加入 Hadoop Pig 工作，請將其拖放至設計工具。 然後按兩下工作，或按一下滑鼠右鍵並按一下 [編輯]  ，以查看 [Hadoop Pig 工作編輯器]  對話方塊。  
+ 若要加入 Hadoop Pig 工作，請將其拖放至設計工具。 然後按兩下工作，或按一下滑鼠右鍵並按一下 [編輯]****，以查看 [Hadoop Pig 工作編輯器]**** 對話方塊。  
   
  ![Hadoop Pig 工作編輯器](../../integration-services/control-flow/media/hadoop-pig-task.png "Hadoop Pig 工作編輯器")  
   
-## <a name="options"></a>選項。  
- 在 [Hadoop Pig 工作編輯器]  對話方塊中設定下列選項。  
+## <a name="options"></a>選項  
+ 在 [Hadoop Pig 工作編輯器]**** 對話方塊中設定下列選項。  
   
 |欄位|描述|  
 |-----------|-----------------|  

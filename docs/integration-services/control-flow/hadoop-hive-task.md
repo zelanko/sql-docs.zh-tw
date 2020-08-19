@@ -1,4 +1,5 @@
 ---
+description: Hadoop Hive 工作
 title: Hadoop Hive 工作 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 10ff37c0-9f3f-442a-889b-c351afbdc74c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9a6a0bcdfcaa6e1ac287ef22c8515eef92c123d1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e8b6d1e651d6854fba575460a141f9e325e7f12f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918192"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88393254"
 ---
 # <a name="hadoop-hive-task"></a>Hadoop Hive 工作
 
@@ -26,12 +27,12 @@ ms.locfileid: "86918192"
 
   使用 Hadoop Hive 工作在 Hadoop 叢集上執行 Hive 指令碼。  
   
- 若要加入 Hadoop Hive 工作，請將其拖放至設計工具。 然後在工作上按兩下，或按一下滑鼠右鍵並按一下 [編輯]  ，以開啟 [Hadoop Hive 工作編輯器]  對話方塊。  
+ 若要加入 Hadoop Hive 工作，請將其拖放至設計工具。 然後在工作上按兩下，或按一下滑鼠右鍵並按一下 [編輯]****，以開啟 [Hadoop Hive 工作編輯器]**** 對話方塊。  
   
  ![Hadoop Hive 工作編輯器](../../integration-services/control-flow/media/hadoop-hive-task.png "Hadoop Hive 工作編輯器")  
   
-## <a name="options"></a>選項。  
- 在 [Hadoop Hive 工作編輯器]  對話方塊中設定下列選項。  
+## <a name="options"></a>選項  
+ 在 [Hadoop Hive 工作編輯器]**** 對話方塊中設定下列選項。  
   
 |欄位|描述|  
 |-----------|-----------------|  

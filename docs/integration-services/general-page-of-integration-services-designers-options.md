@@ -1,4 +1,5 @@
 ---
+description: Integration Services 設計師選項的 [一般]頁面
 title: Integration Services 設計師選項的一般頁面 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,27 +13,27 @@ f1_keywords:
 ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 70f263d2df8e81f379857c88615b6056bc884b81
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9dfbe2a36695d3fcb776d9993243f9210df8082c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914714"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88391114"
 ---
 # <a name="general-page-of-integration-services-designers-options"></a>Integration Services 設計師選項的 [一般]頁面
 
 [!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  在 [選項] 對話方塊上使用 [Integration Services 設計師] 頁面上的 [一般] 頁面，指定用來載入、顯示及升級封裝的選項。  
+  在 [選項]**** 對話方塊上使用 [Integration Services 設計師]**** 頁面上的 [一般]**** 頁面，指定用來載入、顯示及升級封裝的選項。  
   
- 若要開啟 [一般]  頁面，請在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [工具]  功能表上按一下 [選項]  ，然後展開 [商業智慧設計師]  ，再選取 [Integration Services 設計師]  。  
+ 若要開啟 [一般]**** 頁面，請在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [工具]**** 功能表上按一下 [選項]****，然後展開 [商業智慧設計師]****，再選取 [Integration Services 設計師]****。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **載入封裝時檢查數位簽章**  
  選取即可讓 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 在載入封裝時檢查數位簽章。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 只會檢查數位簽章是否存在、是否有效，以及是否來自信任的來源。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 將不會檢查此封裝在簽署之後是否已經變更。  
   
- 如果您設定 **BlockedSignatureStates** 登錄值，此登錄值會覆寫 [載入封裝時檢查數位簽章]  選項。 如需詳細資訊，請參閱 [透過設定登錄值實作簽署原則](../integration-services/packages/implement-a-signing-policy-by-setting-a-registry-value.md)。  
+ 如果您設定 **BlockedSignatureStates** 登錄值，此登錄值會覆寫 [載入封裝時檢查數位簽章]**** 選項。 如需詳細資訊，請參閱 [透過設定登錄值實作簽署原則](../integration-services/packages/implement-a-signing-policy-by-setting-a-registry-value.md)。  
   
  如需詳細資訊，請參閱 [使用數位簽章來識別封裝的來源](../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)。  
   
@@ -50,7 +51,7 @@ ms.locfileid: "86914714"
   
 -   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] OLE DB 提供者  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client{2}  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client  
   
  [ [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝升級精靈] 只會更新儲存在連線管理員中的連接字串。 此精靈不會更新使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 運算式語言或使用指令碼工作中之程式碼以動態方式建構的連接字串。  
   

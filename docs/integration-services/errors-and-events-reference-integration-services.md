@@ -1,4 +1,5 @@
 ---
+description: 錯誤和事件參考 (Integration Services)
 title: 錯誤和事件參考 (Integration Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4a35fad106dfac49d0e2f227c506658d91c420b2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 814c5bb9915e448f97f0c769033d5fd695f76d95
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914394"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88391704"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>錯誤和事件參考 (Integration Services)
 
@@ -36,7 +37,7 @@ ms.locfileid: "86914394"
   
 ## <a name="error-messages"></a>錯誤訊息  
   
-|錯誤的符號名稱|描述|  
+|錯誤的符號名稱|Description|  
 |----------------------------|-----------------|  
 |DTS_E_CACHELOADEDFROMFILE|指出封裝無法執行，因為某個「快取轉換」轉換正嘗試將資料寫入記憶體中的快取。 不過，快取連線管理員已經將快取檔案載入記憶體中的快取。|  
 |DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER|指出封裝無法執行，因為指定的連接已失敗。|  

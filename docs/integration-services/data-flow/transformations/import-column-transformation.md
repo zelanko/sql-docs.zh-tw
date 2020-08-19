@@ -1,4 +1,5 @@
 ---
+description: 匯入資料行轉換
 title: 匯入資料行轉換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ac3b74c1-ef54-4297-8062-1734324fffcc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1db13057275f9a255ad247bd5f86ca35d7bd29d3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bce31855c0ddd8825401eefd2253172538159cdc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919257"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88391914"
 ---
 # <a name="import-column-transformation"></a>匯入資料行轉換
 

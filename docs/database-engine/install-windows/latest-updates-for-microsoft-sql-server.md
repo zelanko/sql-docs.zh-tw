@@ -1,4 +1,5 @@
 ---
+description: 適用於 Microsoft SQL Server 的最新更新
 title: 適用於 Microsoft SQL Server 的最新更新
 TOCTitle: Latest updates for Microsoft SQL Server
 ms:assetid: 0d1835fd-2b44-47cf-8f90-305ca14b7823
@@ -12,12 +13,12 @@ author: tmichael-ms
 ms.author: tmichael
 ms.reviewer: hristins
 mtps_version: v=MSDN.10
-ms.openlocfilehash: 86865b7ee037c379ea36b7d4cfddbdd0b4ce0e6e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8e9c58d01d646a8affe5047058ada6973393a2d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934319"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395464"
 ---
 # <a name="latest-updates-for-microsoft-sql-server"></a>適用於 Microsoft SQL Server 的最新更新
 

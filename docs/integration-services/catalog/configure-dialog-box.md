@@ -1,4 +1,5 @@
 ---
+description: 設定對話方塊
 title: 設定對話方塊 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ f1_keywords:
 ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 99a7166ecf231a49e566bbecb7390abe33e61853
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cdbcc9b0a03b0afefe56152dc6b29c7ae59ea4cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922659"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395004"
 ---
 # <a name="configure-dialog-box"></a>設定對話方塊
 
@@ -48,12 +49,12 @@ ms.locfileid: "86922659"
   
 4.  展開包含您要設定之封裝或專案的資料夾。  
   
-5.  以滑鼠右鍵按一下封裝或專案，然後按一下 [設定]  。  
+5.  以滑鼠右鍵按一下封裝或專案，然後按一下 [設定]****。  
   
 ##  <a name="set-the-options-on-the-parameters-page"></a><a name="parameter"></a> 在參數頁面上設定選項  
  使用 **[參數]** 頁面檢視參數名稱和值，並修改這些值。  
   
- 選取 [參數]  和 [連線管理員]  索引標籤的 [範圍]  下拉式清單中所顯示之參數的範圍。  
+ 選取 [參數]**** 和 [連線管理員]**** 索引標籤的 [範圍]**** 下拉式清單中所顯示之參數的範圍。  
   
  以下是 **[參數]** 索引標籤中的選項清單。  
   
@@ -63,7 +64,7 @@ ms.locfileid: "86922659"
  **名稱**  
  列出參數名稱。  
   
- **ReplTest1**  
+ **值**  
  列出參數值。 按一下省略符號按鈕，在 **[設定參數值]** 對話方塊中變更此值。  
   
  以下是 **[連接管理員]** 索引標籤中的選項清單。使用此索引標籤可變更連接管理員屬性的值。 SSIS 伺服器上會自動產生屬性的參數。  
@@ -77,7 +78,7 @@ ms.locfileid: "86922659"
  **屬性名稱**  
  列出連接管理員屬性的名稱。  
   
- **ReplTest1**  
+ **值**  
  列出指派給連接管理員屬性的值。 按一下省略符號按鈕，在 **[設定參數值]** 對話方塊中變更此值。 您可以輸入常值、對應包含您要使用之值的環境變數，或使用封裝中的預設值。  
   
 ##  <a name="set-the-options-on-the-references-page"></a><a name="references"></a> 在參考頁面上設定選項  
@@ -92,14 +93,14 @@ ms.locfileid: "86922659"
  列出包含環境的資料夾。  
   
  **開啟**  
- 按一下以開啟 [環境屬性]  對話方塊。  
+ 按一下以開啟 [環境屬性]**** 對話方塊。  
   
  **加入**  
- 按一下以加入環境的參考。 在 **[瀏覽環境]** 對話方塊中，按一下環境，然後按一下 **[確定]** 。  
+ 按一下以加入環境的參考。 在 **[瀏覽環境]** 對話方塊中，按一下環境，然後按一下 **[確定]**。  
   
  您可以選取 **[SSISDB]** 節點底下的任何專案資料夾中所包含的環境。  
   
  **移除**  
- 按一下 [參考]  區域中所列的環境，然後按一下 [移除]  。  
+ 按一下 [參考]**** 區域中所列的環境，然後按一下 [移除]****。  
   
   

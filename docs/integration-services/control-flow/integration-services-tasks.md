@@ -1,4 +1,5 @@
 ---
+description: Integration Services 工作
 title: Integration Services 工作 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b36f709ecde7aa2fb4d47b2b1f092bc92bde682c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d54d80276714bdc1427c2c01be0f9620acc32c8f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915439"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392644"
 ---
 # <a name="integration-services-tasks"></a>Integration Services 工作
 
@@ -86,6 +87,6 @@ ms.locfileid: "86915439"
  您可將多項工作設為群組，並做為單一工作單位執行，或於迴圈中重複。 如需詳細資訊，請參閱 [Foreach 迴圈容器](../../integration-services/control-flow/foreach-loop-container.md)、 [For 迴圈容器](../../integration-services/control-flow/for-loop-container.md)和 [時序容器](../../integration-services/control-flow/sequence-container.md)。  
   
 ## <a name="related-tasks"></a>相關工作  
- [在控制流程中新增或刪除工作或容器](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+ [在控制流程中加入或刪除工作或容器](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
   

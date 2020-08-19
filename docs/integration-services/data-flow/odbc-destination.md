@@ -1,4 +1,5 @@
 ---
+description: ODBC 目的地
 title: ODBC 目的地 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ f1_keywords:
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2ca597190bb5ace7a2f81532ae6482b3e423c81f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 80b988844668fbc5ea1e06af2852ffc9bc1a7785
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914761"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392104"
 ---
 # <a name="odbc-destination"></a>ODBC 目的地
 

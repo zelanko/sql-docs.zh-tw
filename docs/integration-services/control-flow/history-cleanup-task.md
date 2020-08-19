@@ -1,4 +1,5 @@
 ---
+description: 記錄清除工作
 title: 記錄清除工作 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5defc5b9-dfd3-4859-a7fe-ac8c2b5480f8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 498c5a94e92b595f84f128b6b469ba88464125bc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f9beaaa54cf6016c881903edd4fe141c37edaac8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918174"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392854"
 ---
 # <a name="history-cleanup-task"></a>記錄清除工作
 
