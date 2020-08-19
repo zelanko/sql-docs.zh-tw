@@ -1,4 +1,5 @@
 ---
+description: MSSQL_ENG021330
 title: MSSQL_ENG021330 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: e2bb2e21-62a7-4689-b68b-bdfba3fdd985
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 27cf4badc608f2a90454797bbfe1b7b1d95af7e7
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: ee76ab0ca14a3e2eb41a78d03ee560f0266b6528
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363212"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88379284"
 ---
 # <a name="mssql_eng021330"></a>MSSQL_ENG021330
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
