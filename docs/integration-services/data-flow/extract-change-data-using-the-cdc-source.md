@@ -1,4 +1,5 @@
 ---
+description: 使用 CDC 來源擷取變更資料
 title: 使用 CDC 來源擷取變更資料 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 56eda2d73e9d60367529e078829900433bd8617e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c6ae5739b4309c9f56d2f67a17573722f141ec5b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86906494"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430880"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>使用 CDC 來源擷取變更資料
 
@@ -50,7 +51,7 @@ ms.locfileid: "86906494"
   
     -   **全部**：傳回目前 CDC 範圍中的變更，不含 [更新之前]  值。  
   
-    -   **全部 (含舊值)** ：傳回目前 CDC 處理範圍中的變更，包括舊值 ([更新之前]  )。 每個更新作業都有兩個資料列：一個包含更新之前的值，另一個則包含更新之後的值。  
+    -   **全部 (含舊值)** ：傳回目前 CDC 處理範圍中的變更，包括舊值 ([更新前]  )。 每個更新作業都有兩個資料列：一個包含更新之前的值，另一個則包含更新之後的值。  
   
     -   **淨**：只針對目前 CDC 處理範圍中修改的每個來源資料列傳回一項變更。 如果來源資料列更新了許多次，就會產生結合的變更 (例如，插入+更新會產生為單一更新，而更新+刪除則產生為單一刪除)。 在淨變更處理模式中工作時，您可以將變更分割成刪除、插入和更新輸出，並且以平行方式處理它們，因為單一來源資料列會出現在多個輸出中。  
   

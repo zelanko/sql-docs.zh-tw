@@ -1,4 +1,5 @@
 ---
+description: Microsoft JScript 中的 ADO 程式碼範例
 title: Microsoft JScript 中的 ADO 程式碼範例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 228b978d-eef1-4e30-928a-005b2f77ef14
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db537a1d7fb8d5a440145c298a6ce524965a12b0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4bc7e233b109266a7918576dadb24631cbb210d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760584"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451520"
 ---
 # <a name="ado-code-examples-in-microsoft-jscript"></a>Microsoft JScript 中的 ADO 程式碼範例
 使用下列程式碼範例，瞭解如何在以 JScript 撰寫時使用 ADO 方法、屬性和事件。  
   
 > [!NOTE]
->  在程式碼編輯器中，將整個程式碼範例從開頭到結尾貼上。 如果使用部分範例或遺失段落格式，則此範例可能無法正確執行。  
+>  將完整的程式碼範例從開頭到結尾貼入您的程式碼編輯器。 如果使用部分範例或遺失段落格式，此範例可能無法正確執行。  
   
 ## <a name="methods"></a>方法  
   

@@ -1,5 +1,6 @@
 ---
-title: 連接屬性範例（VB） |Microsoft Docs
+description: 'ConnectionString、ConnectionTimeout 和 State 屬性範例 (VB) '
+title: " (VB) 的連接屬性範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 4de7336a-b5ea-43f1-b750-5fa302b5b756
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 861db15ef9e47bc814aff445b8b8887df5df7a7c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9d1da11bab0ba3858eac13f8a1e32259d376f672
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762649"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444480"
 ---
-# <a name="connectionstring-connectiontimeout-and-state-properties-example-vb"></a>ConnectionString、ConnectionTimeout 和 State 屬性範例（VB）
-這個範例示範使用[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)屬性來開啟[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件的不同方式。 它也會使用[ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)屬性來設定連接逾時時間，以及檢查連接狀態的[state](../../../ado/reference/ado-api/state-property-ado.md)屬性。 需要 GetState 函數才能執行此程式。  
+# <a name="connectionstring-connectiontimeout-and-state-properties-example-vb"></a>ConnectionString、ConnectionTimeout 和 State 屬性範例 (VB) 
+這個範例示範使用 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 屬性來開啟 [連接](../../../ado/reference/ado-api/connection-object-ado.md) 物件的不同方式。 它也會使用 [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) 屬性來設定連接逾時時間，並使用 [State](../../../ado/reference/ado-api/state-property-ado.md) 屬性來檢查連接的狀態。 此程式必須有 >getstate 函數才能執行。  
   
 > [!NOTE]
->  如果您要連接到支援 Windows 驗證的資料來源提供者，您應該在連接字串中指定**Trusted_Connection = yes**或**整合式安全性 = SSPI** ，而不是使用者識別碼和密碼資訊。  
+>  如果您要連接到支援 Windows 驗證的資料來源提供者，您應該在連接字串中指定 **Trusted_Connection = yes** 或 **整合式安全性 = SSPI** ，而不是使用者識別碼和密碼資訊。  
   
 ```  
 'BeginConnectionStringVB  
@@ -127,7 +128,7 @@ End Function
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Connection 物件（ADO）](../../../ado/reference/ado-api/connection-object-ado.md)   
- [ConnectionString 屬性（ADO）](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
- [ConnectionTimeout 屬性（ADO）](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)   
+ [ (ADO) 的 Connection 物件 ](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [ (ADO) 的 ConnectionString 屬性 ](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
+ [ (ADO) 的 ConnectionTimeout 屬性 ](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)   
  [State 屬性 (ADO)](../../../ado/reference/ado-api/state-property-ado.md)

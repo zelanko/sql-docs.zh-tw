@@ -1,4 +1,5 @@
 ---
+description: 使用全文檢索索引精靈
 title: 使用全文檢索索引精靈 | Microsoft 文件
 ms.date: 08/19/2016
 ms.prod: sql
@@ -23,12 +24,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2531d7f8034440b48a032ee1e9e74ae7fdb9df73
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 24903e075fc7ce38e79c0b99a559afac194638bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85628812"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490541"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>使用全文檢索索引精靈
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "85628812"
   
 ## <a name="create-a--full-text-index"></a>建立全文檢索索引 
 
-1. 在物件總管中，以滑鼠右鍵按一下您要建立全文檢索索引的資料表、指向 [全文檢索索引]  ，然後按一下 [Define Full-Text Index (定義全文檢索索引)]  。 這個動作會在另一個視窗中啟動精靈。
+1. 在物件總管中，以滑鼠右鍵按一下您要建立全文檢索索引的資料表、指向 [全文檢索索引]****，然後按一下 [Define Full-Text Index (定義全文檢索索引)]****。 這個動作會在另一個視窗中啟動精靈。
    按一下 [下一步] 
   
 2. **唯一索引。**  從下拉式清單中選取索引。 索引必須是單一索引鍵資料行、唯一的且不可以是 Null 的索引。 請選取最小的唯一索引鍵索引來當做全文檢索唯一索引鍵。 為求最佳效能，建議使用叢集索引。  
@@ -47,13 +48,13 @@ ms.locfileid: "85628812"
   
 5.  **類型資料行。** 選取資料行的名稱，其中包含要建立全文檢索索引之資料行的文件類型。  
 
-> **注意：** 只有在 [可用的資料行] 資料行中命名的資料行類型為 **varbinary(max)** 或 **image** 時，才會啟用 [類型資料行]。  
+> **注意：** 只有在 [可用的資料行]**** 資料行中命名的資料行類型為 **varbinary(max)** 或 **image** 時，才會啟用 [類型資料行]****。  
   
 6. **統計語意。** 選取是否要針對選取的資料行啟用語意索引。 如需詳細資訊，請參閱[語意搜尋 &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md)。  
   
->**注意** 
+>**注意：** 
 >
->如果您選取的語言沒有相關聯的語意語言模型，則不會啟用 [統計語意]  核取方塊。 如果您在選取 [語言] 之前選取 [統計語意]，則下拉式方塊中提供的語言將受限為有語意語言模型支援的語言。  
+>如果您選取的語言沒有相關聯的語意語言模型，則不會啟用 [統計語意]**** 核取方塊。 如果您在選取 [語言]**** 之前選取 [統計語意]****，則下拉式方塊中提供的語言將受限為有語意語言模型支援的語言。  
 >
 > **Azure SQL Database 無法使用**語意搜尋。 在 Azure SQL Database 上執行此精靈時，不會出現 [統計語意] 選項。
   
@@ -80,7 +81,7 @@ ms.locfileid: "85628812"
 
      **選取目錄：** 從清單中選取全文檢索目錄。 資料庫的預設目錄是清單中預設選取的項目。 如果沒有任何目錄可以使用，系統就會停用此清單，而且會核取及停用 **[建立新的目錄]** 核取方塊。  
   
-  OR
+  或者
   
  10. **[建立新的目錄]**
  - 選取全文檢索目錄。  
@@ -92,7 +93,7 @@ ms.locfileid: "85628812"
      選取即可讓此目錄成為這個資料庫的預設目錄。  
   
      c. **區分腔調字**  
-     指定新目錄是要區分腔調字或不區分腔調字。 如果資料庫區分腔調字，預設會選取 [區分]  。  
+     指定新目錄是要區分腔調字或不區分腔調字。 如果資料庫區分腔調字，預設會選取 [區分]****。  
   
      d. **選取索引檔案群組**  
      指定要在上面建立全文檢索索引的檔案群組。  
@@ -108,7 +109,7 @@ ms.locfileid: "85628812"
  11. **選取全文檢索停用字詞表**  
      指定要針對全文檢索索引使用的停用字詞表，或停用停用字詞表。  
   
-     資料庫中的停用字詞是使用稱為停用字詞表的物件來管理。 「停用字詞表」  是停用字詞的清單，與全文檢索索引相關聯時，會套用至該索引上的全文檢索查詢。 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的停用字詞與停用字詞表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
+     資料庫中的停用字詞是使用稱為停用字詞表的物件來管理。 「停用字詞表」是停用字詞的清單，與全文檢索索引相關聯時，會套用至該索引上的全文檢索查詢。 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的停用字詞與停用字詞表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
   
      選取下列其中一個值：  
   

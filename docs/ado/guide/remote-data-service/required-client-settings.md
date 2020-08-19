@@ -1,4 +1,5 @@
 ---
+description: 必要用戶端設定
 title: 必要的用戶端設定 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,30 +13,30 @@ helpviewer_keywords:
 ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9ec52c594cb058ef8359c39d696d47d4cd3dd127
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8d21cf3f08b284ed2642f9567ae86909fb35579b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749391"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452020"
 ---
 # <a name="required-client-settings"></a>必要用戶端設定
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統不再包含 RDS 伺服器元件（如需詳細資訊，請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)）。 RDS 用戶端元件將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 指定下列設定以使用自訂**DataFactory**處理常式。  
+ 指定下列設定，以使用自訂 **DataFactory** 處理常式。  
   
--   在[Connection 物件（ado）](../../../ado/reference/ado-api/connection-object-ado.md)物件[提供者屬性（ado）](../../../ado/reference/ado-api/provider-property-ado.md)屬性或**連接**物件連接字串 "**Provider**=" 關鍵字中，指定 "provider = MS Remote"。  
+-   在連線物件中指定 "Provider = MS Remote"， [ (ado) ](../../../ado/reference/ado-api/connection-object-ado.md) Object [PROVIDER 屬性 (ado) ](../../../ado/reference/ado-api/provider-property-ado.md) 屬性或 **連接** 物件連接字串 "**Provider**=" 關鍵字。  
   
--   將[CursorLocation 屬性（ADO）](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性設定為**adUseClient**。  
+-   將 [ [CursorLocation] 屬性 (ADO) ](../../../ado/reference/ado-api/cursorlocation-property-ado.md) ] 屬性設定為 [ **adUseClient**]。  
   
--   指定要在[DataControl 物件（RDS）](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件的**處理常式**屬性中使用的處理常式名稱，或是[記錄集物件（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)物件的連接字串 "**handler**=" 關鍵字。 （您無法在**連接**物件連接字串中設定處理常式）。  
+-   在 DataControl 物件中指定要用於物件的處理常式名稱[ (RDS) ](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件的**處理常式**屬性，或 (ADO) 物件的連接字串 "**handler**=" 關鍵字中的[記錄集物件](../../../ado/reference/ado-api/recordset-object-ado.md)。  (您無法在 **連接** 物件連接字串中設定處理常式。 )   
   
- RDS 會在伺服器上提供名為 MSDFMAP 的預設處理常式 **。處理常式**。 （預設的自訂檔案命名為 MSDFMAP。INI）。  
+ RDS 在名為 MSDFMAP 的伺服器上提供預設處理常式 **。處理常式**。  (預設自訂檔案的名稱為 MSDFMAP.INI。 )   
   
  **範例**  
   
- 假設 MSDFMAP 中的下列各節 **。** 先前已定義 INI 和資料來源名稱 advworks-srv01：  
+ 假設先前已定義 **MSDFMAP.INI** 中的下列區段和資料來源名稱 advworks-srv01：  
   
 ```console
 [connect CustomerDataBase]  
@@ -46,9 +47,9 @@ Connect="DSN=AdvWorks"
 SQL="SELECT * FROM Customers WHERE CustomerID = ?"  
 ```  
   
- 下列程式碼片段是以 Visual Basic 撰寫的：  
+ 下列程式碼片段會以 Visual Basic 撰寫：  
   
-## <a name="rdsdatacontrol-version"></a>句.DataControl 版本  
+## <a name="rdsdatacontrol-version"></a>Rds。DataControl 版本  
   
 ```vb
 Dim dc as New RDS.DataControl  
@@ -66,9 +67,9 @@ Dim rs as New ADODB.Recordset
 rs.CursorLocation = adUseClient  
 ```  
   
- 請指定[Handler 屬性（RDS）](../../../ado/reference/rds-api/handler-property-rds.md)屬性或關鍵字;[Provider 屬性（ADO）](../../../ado/reference/ado-api/provider-property-ado.md)屬性或關鍵字;和*CustomerById*和*CustomerDatabase*識別碼。 然後開啟**記錄集**物件  
+ 請指定 (RDS) 屬性或關鍵字的 [處理常式屬性 ](../../../ado/reference/rds-api/handler-property-rds.md) ; [Provider 屬性 (ADO) ](../../../ado/reference/ado-api/provider-property-ado.md) Property 或關鍵字;以及 *CustomerById* 和 *CustomerDatabase* 識別碼。 然後開啟 **記錄集** 物件  
   
- 車載.開啟 "CustomerById （4）"，"Handler = MSDFMAP。處理常式; "& _  
+ Rs。開啟 "CustomerById (4) "，"Handler = MSDFMAP。處理常式; "& _  
   
 ```vb
 "Provider=MS Remote;Data Source=CustomerDatabase;" & _  

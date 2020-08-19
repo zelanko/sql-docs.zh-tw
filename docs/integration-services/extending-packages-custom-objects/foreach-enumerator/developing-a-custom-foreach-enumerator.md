@@ -1,4 +1,5 @@
 ---
+description: 開發自訂 ForEach 列舉值
 title: 開發自訂 ForEach 列舉值 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bffe26e0-1b9a-47ad-bae6-6b708cb4cf4f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5ec0861b846f3f741bbdada7d8b07d94fae1d64a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a5a46ee0c16bba35c5153032784b6ce7ccde7721
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923954"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430560"
 ---
 # <a name="developing-a-custom-foreach-enumerator"></a>開發自訂 ForEach 列舉值
 
@@ -33,16 +34,16 @@ ms.locfileid: "86923954"
 ## <a name="in-this-section"></a>本節內容  
  本章節描述如何建立和設定自訂 Foreach 列舉值及其自訂使用者介面，以及如何撰寫它們的程式碼。  
   
- [建立自訂 Foreach 列舉程式](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/creating-a-custom-foreach-enumerator.md)  
+ [建立自訂 Foreach 列舉值](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/creating-a-custom-foreach-enumerator.md)  
  描述如何為自訂 Foreach 列舉值專案建立類別。  
   
- [撰寫自訂 Foreach 列舉程式的程式碼](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/coding-a-custom-foreach-enumerator.md)  
+ [撰寫自訂 Foreach 列舉值的程式碼](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/coding-a-custom-foreach-enumerator.md)  
  描述如何透過覆寫基底類別的方法與屬性，來實作自訂 Foreach 列舉值。  
   
- [開發自訂 Foreach 列舉程式的使用者介面](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
+ [開發自訂 ForEach 列舉值的使用者介面](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
  描述如何實作用以設定自訂 Foreach 列舉值的使用者介面類別與表單。  
   
-## <a name="related-topics"></a>相關主題  
+## <a name="related-topics"></a>[相關主題]  
   
 ### <a name="information-common-to-all-custom-objects"></a>自訂物件的共通資訊  
  如需有關 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中可以建立之所有類型自訂物件適用的共通資訊，請參閱下列主題：  

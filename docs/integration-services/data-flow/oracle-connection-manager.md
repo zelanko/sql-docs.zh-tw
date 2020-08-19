@@ -1,4 +1,5 @@
 ---
+description: Oracle 連線管理員
 title: Oracle 連線管理員 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2019
@@ -9,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0df21d12c9a7d29957d004517a3a6de3e93a8221
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 428ca450371e452081d548a64e26dba2bd29b3b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915638"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430740"
 ---
 # <a name="oracle-connection-manager"></a>Oracle 連線管理員
 
@@ -26,7 +27,7 @@ Oracle 連線管理員的 **ConnectionManagerType** 屬性會設定為 **ORACLE*
 
 ## <a name="configuring-the-oracle-connection-manager"></a>設定 Oracle 連線管理員
 
-Oracle 連線管理員設定變更將會在執行階段由 Integration Services 解析。 使用 [Oracle 連線管理員編輯器]  對話方塊，將連線加入 Oracle 資料來源。
+Oracle 連線管理員設定變更將會在執行階段由 Integration Services 解析。 使用 [Oracle 連線管理員編輯器]**** 對話方塊，將連線加入 Oracle 資料來源。
 
 ![連線管理員](media/oracle-connection-manager.png)
 
@@ -70,7 +71,7 @@ Oracle 連線管理員設定變更將會在執行階段由 Integration Services 
 
 **測試連接**
 
-按一下 [測試連線]  ，以確認提供的資訊是否正確。 如果輸入的資訊可以連線到 Oracle 資料庫，您就會收到「測試連接成功」  訊息。
+按一下 [測試連線]****，以確認提供的資訊是否正確。 如果輸入的資訊可以連線到 Oracle 資料庫，您就會收到「測試連接成功」**** 訊息。
 
 ### <a name="custom-properties"></a>自訂屬性
 
@@ -84,9 +85,9 @@ Oracle 連線管理員中有下列自訂連線管理員屬性：
 
 自訂屬性不會列在 [Oracle 連線管理員編輯器] 中。 若要設定 **OracleHome** 與 **OracleHome64** 屬性：
 
-1. 在 [連線管理員] 區域中，以滑鼠右鍵按一下您要使用的 Oracle 連線管理員，然後選取 [屬性]  。
+1. 在 [連線管理員] 區域中，以滑鼠右鍵按一下您要使用的 Oracle 連線管理員，然後選取 [屬性]****。
 
-2. 在 [屬性]  窗格中，將 **OracleHome** 或 **OracleHome64** 屬性設定為 Oracle 主目錄的完整路徑。
+2. 在 [屬性]**** 窗格中，將 **OracleHome** 或 **OracleHome64** 屬性設定為 Oracle 主目錄的完整路徑。
 
 ## <a name="next-steps"></a>後續步驟
 

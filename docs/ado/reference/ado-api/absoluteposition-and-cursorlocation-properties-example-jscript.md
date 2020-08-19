@@ -1,5 +1,6 @@
 ---
-title: AbsolutePosition 和 CursorLocation 屬性範例（JScript） |Microsoft Docs
+description: 'AbsolutePosition 和 CursorLocation 屬性範例 (JScript) '
+title: AbsolutePosition 和 CursorLocation 屬性範例 (JScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: bff98617-a6ba-4f41-9c5f-915161e3ea31
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1b946d98214047203147fb5c0bbba0e01ea09b7c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8e1840f567cf4d1285aa7257081f9dfc9d48a4bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747541"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451780"
 ---
-# <a name="absoluteposition-and-cursorlocation-properties-example-jscript"></a>AbsolutePosition 和 CursorLocation 屬性範例（JScript）
-這個範例會示範[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)屬性如何追蹤迴圈的進度，以列舉[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)的所有記錄。 它會使用[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性來啟用**AbsolutePosition**屬性，方法是將資料指標設定為用戶端資料指標。 將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器，然後將它儲存為**AbsolutePositionJS。**  
+# <a name="absoluteposition-and-cursorlocation-properties-example-jscript"></a>AbsolutePosition 和 CursorLocation 屬性範例 (JScript) 
+這個範例會示範 [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) 屬性如何追蹤列舉 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)之所有記錄的迴圈進度。 它會使用 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 屬性來啟用 **AbsolutePosition** 屬性，方法是將資料指標設定為用戶端資料指標。 將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器，然後將它儲存為**AbsolutePositionJS。**  
   
 ```  
 <!-- BeginAbsolutePositionJS -->  
@@ -128,6 +129,6 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [AbsolutePosition 屬性（ADO）](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
- [CursorLocation 屬性（ADO）](../../../ado/reference/ado-api/cursorlocation-property-ado.md)   
+ [ (ADO) 的 AbsolutePosition 屬性 ](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
+ [ (ADO) 的 CursorLocation 屬性 ](../../../ado/reference/ado-api/cursorlocation-property-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

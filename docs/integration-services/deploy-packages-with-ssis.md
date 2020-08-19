@@ -1,4 +1,5 @@
 ---
+description: 使用 SSIS 部署封裝
 title: 使用 SSIS 部署套件 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/20/2018
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9d6636cbd74f31448381b1f6cb2c3dd3826324a5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4ba92220b368e1ef7ee1218d972e6113e1378d27
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916637"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430650"
 ---
 # <a name="deploy-packages-with-ssis"></a>使用 SSIS 部署封裝
 
@@ -51,7 +52,7 @@ ms.locfileid: "86916637"
 ## <a name="what-you-learn"></a>學習內容    
 若要熟悉 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 所提供的新工具、控制項和功能，最好的方法就是使用它們。 這個教學課程會逐步解說各個步驟，教您建立 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，然後將封裝和其他必要檔案加入至專案中。 當專案完成之後，您還要建立部署配套、將部署配套複製到目的地電腦，然後將封裝安裝到目的地電腦上。    
     
-## <a name="prerequisites"></a>Prerequisites    
+## <a name="prerequisites"></a>必要條件    
 本教學課程的主要對象是已經熟悉基本檔案系統作業，但對於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 所提供新功能較為陌生的使用者。 為了進一步了解在這個教學課程中所要用到的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 基本概念，若能先完成下列 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 教學課程，將會很有幫助： [SSIS 如何建立 ETL 封裝](../integration-services/ssis-how-to-create-an-etl-package.md)。    
     
 ### <a name="on-the-source-computer"></a>在來源電腦上
@@ -66,7 +67,7 @@ ms.locfileid: "86916637"
 
 -   您必須具有在 AdventureWorks 資料庫中建立和卸除資料表的權限。
     
--   [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)。    
+-   [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) 。    
     
 ### <a name="on-the-destination-computer"></a>在目的電腦上
 
@@ -80,11 +81,11 @@ ms.locfileid: "86916637"
     
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。    
     
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。 若要安裝 SSIS，請參閱[安裝 Integration Services](install-windows/install-integration-services.md)。
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. 若要安裝 SSIS，請參閱[安裝 Integration Services](install-windows/install-integration-services.md)。
     
 -   您必須具有在 AdventureWorks 資料庫中建立和卸除資料表的權限，以及在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中執行 SSIS 套件的權限。    
     
--   您必須具有 `sysssispackages` `msdb` 系統資料庫中 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料表的讀取和寫入權限。    
+-   您必須具有 `msdb` [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 系統資料庫中 `sysssispackages` 資料表的讀取和寫入權限。    
     
 如果您計畫將封裝部署到建立部署配套時所使用的同一部電腦，則該部電腦必須同時符合來源電腦和目的地電腦的需求。    
         

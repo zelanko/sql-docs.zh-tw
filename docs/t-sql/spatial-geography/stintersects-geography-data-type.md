@@ -1,4 +1,5 @@
 ---
+description: STIntersects (geography 資料類型)
 title: STIntersects (geography 資料型別) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: c9db8b42-83c7-48c6-8963-fce54eb34c05
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d7987b23c1f941684b7ab8b169c397d51e53eab
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: ce978df17e7f0fd904e630fb3e8eaf84db375765
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87523210"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445230"
 ---
 # <a name="stintersects-geography-data-type"></a>STIntersects (geography 資料類型)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -32,17 +33,20 @@ ms.locfileid: "87523210"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql
 .STIntersects ( other_geography )  
 ```  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
   
-## <a name="arguments"></a>引數  
- *other_geography*  
- 這是要與 `STIntersects()` 叫用所在的執行個體相比較的另一個 **geography** 執行個體。  
+## <a name="arguments"></a>引數
+
+*other_geography*  
+這是要與 `STIntersects()` 叫用所在的執行個體相比較的另一個 **geography** 執行個體。  
   
-## <a name="return-types"></a>傳回型別  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
+## <a name="return-types"></a>傳回型別
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
   
  CLR 傳回類型：**SqlBoolean**  
   
@@ -67,6 +71,6 @@ ms.locfileid: "87523210"
  ```  
   
 ## <a name="see-also"></a>另請參閱  
- [地理例項上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [地理位置例項上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

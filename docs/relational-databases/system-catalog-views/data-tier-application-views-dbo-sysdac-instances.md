@@ -1,5 +1,6 @@
 ---
-title: dbo.sysdac_instances （Transact-sql） |Microsoft Docs
+description: 資料層應用程式視圖-dbo.sysdac_instances
+title: dbo.sysdac_instances (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,24 +21,24 @@ helpviewer_keywords:
 ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 18031fac584eea39e5901276b597fc556263b18e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 77aafe21c2aa67b55d7c2d9319ab2699585c697c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752970"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475505"
 ---
 # <a name="data-tier-application-views---dbosysdac_instances"></a>資料層應用程式視圖-dbo.sysdac_instances
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  針對部署至 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的每個資料層應用程式 (DAC) 執行階段，各顯示一個資料列。 sysdac_instances 屬於 msdb 資料庫中的 dbo 架構。 下表描述 [sysdac_instances] 視圖中的資料行。  
+  針對部署至 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的每個資料層應用程式 (DAC) 執行階段，各顯示一個資料列。 sysdac_instances 屬於 msdb 資料庫中的 dbo 架構。 下表描述 sysdac_instances view 中的資料行。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |instance_id|**uniqueidentifier**|DAC 執行個體的識別碼。|  
 |instance_name|**sysname**|部署 DAC 時指定之 DAC 執行個體的名稱。|  
 |type_name|**sysname**|建立 DAC 封裝時指定之 DAC 的名稱。|  
-|type_version|**Nvarchar （64）**|建立 DAC 封裝時指定之 DAC 的版本。|  
+|type_version|**Nvarchar (64) **|建立 DAC 封裝時指定之 DAC 的版本。|  
 |description|**nvarchar(4000)**|建立 DAC 封裝時寫入之 DAC 的描述。|  
 |type_stream|**varbinary(max)**|包含 DAC 中之邏輯物件編碼表示法的位元資料流，例如，資料表和檢視表。|  
 |date_created|**datetime**|建立 DAC 執行個體的日期和時間。|  
@@ -52,6 +53,6 @@ ms.locfileid: "85752970"
   
 ## <a name="see-also"></a>另請參閱  
  [資料層應用程式](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [&#40;Transact-sql&#41;的資料層應用程式視圖](https://msdn.microsoft.com/library/0de01328-d7a6-4677-b7a0-dcd3098c23d4)  
+ [資料層應用程式視圖 &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/0de01328-d7a6-4677-b7a0-dcd3098c23d4)  
   
   

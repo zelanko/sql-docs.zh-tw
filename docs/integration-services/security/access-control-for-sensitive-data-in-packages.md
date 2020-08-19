@@ -1,4 +1,5 @@
 ---
+description: 封裝中的敏感性資料存取控制
 title: 套件中敏感性資料的存取控制 | Microsoft Docs
 ms.custom: security
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6b5347b8b3d241bc7d65fb4d344b74822150185e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 01e2b133fcd1e4fbf008ae591c92cb549b22479a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922050"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430130"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>封裝中的敏感性資料存取控制
 
@@ -41,7 +42,7 @@ ms.locfileid: "86922050"
 >  除了本主題所描述的保護等級之外，您也可以使用固定的資料庫層級角色來保護儲存到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的封裝。  
   
 ## <a name="definition-of-sensitive-information"></a>機密資訊的定義  
- 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中，下列資訊定義為「機密」  ：  
+ 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中，下列資訊定義為「機密」**：  
   
 -   連接字串的密碼部份。 不過，如果您選取加密所有項目的選項，則會將整個連接字串視為機密資料。  
   
@@ -73,10 +74,10 @@ ms.locfileid: "86922050"
 ## <a name="protection-level-setting-and-the-ssisdb-catalog"></a>保護等級設定和 SSISDB 目錄  
  SSISDB 目錄會使用 **ServerStorage** 保護等級。 當您將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器時，目錄會自動將封裝資料與敏感值加密。 當您擷取時，目錄也會自動解密資料。  
   
- 如果您從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器將專案 (.ispac 檔) 匯出至檔案系統，系統會自動將保護等級變更為 **EncryptSensitiveWithUserKey**。 如果您使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的 [Integration Services 匯入專案精靈] 匯入專案，[屬性] 視窗中的 [ProtectionLevel] 屬性會顯示 [EncryptSensitiveWithUserKey] 這個值。  
+ 如果您從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器將專案 (.ispac 檔) 匯出至檔案系統，系統會自動將保護等級變更為 **EncryptSensitiveWithUserKey**。 如果您使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的 [Integration Services 匯入專案精靈]**** 匯入專案，[屬性]**** 視窗中的 [ProtectionLevel]**** 屬性會顯示 [EncryptSensitiveWithUserKey]**** 這個值。  
   
 ## <a name="protection-level-setting-based-on-package-life-cycle"></a>根據封裝生命週期設定保護等級  
- 您會在第一次於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中開發 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 套件時，設定該套件的保護等級。 稍後在部署封裝、從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]匯入或匯出封裝，或將封裝從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區」或檔案系統時，都可以更新封裝保護等級。 例如，如果您在電腦上建立和儲存封裝時，使用其中一個使用者金鑰保護等級選項，則當您將封裝提供給其他使用者時，必須變更保護等級，否則使用者無法開啟封裝。  
+ 您會在第一次於 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中開發 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件時，設定該套件的保護等級。 稍後在部署封裝、從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]匯入或匯出封裝，或將封裝從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區」或檔案系統時，都可以更新封裝保護等級。 例如，如果您在電腦上建立和儲存封裝時，使用其中一個使用者金鑰保護等級選項，則當您將封裝提供給其他使用者時，必須變更保護等級，否則使用者無法開啟封裝。  
   
  一般而言，您需要依照下列步驟變更保護等級：  
   
@@ -106,11 +107,11 @@ ms.locfileid: "86922050"
   
 4.  如果 [屬性] 視窗並未顯示封裝屬性，請按一下設計介面。  
   
-5.  在 [屬性] 視窗的 [安全性]  群組中，為 **ProtectionLevel** 屬性選取適當的值。  
+5.  在 [屬性] 視窗的 [安全性]**** 群組中，為 **ProtectionLevel** 屬性選取適當的值。  
   
      如果您選取了需要密碼的保護等級，請輸入密碼作為 **PackagePassword** 屬性的值。  
   
-6.  在 [檔案]  功能表上，選取 [儲存選取項目]  以儲存修改過的封裝。  
+6.  在 [檔案]**** 功能表上，選取 [儲存選取項目]**** 以儲存修改過的封裝。  
   
 ### <a name="to-set-or-change-the-protection-level-of-packages-at-the-command-prompt"></a>在命令提示字元設定或變更封裝的保護等級  
   
@@ -146,7 +147,7 @@ ms.locfileid: "86922050"
  從清單中選取保護等級。  
   
  **密碼**  
- 如果使用 [機密資料以密碼加密]  或 [所有資料以密碼加密]  保護層級，請輸入密碼。  
+ 如果使用 [機密資料以密碼加密]**** 或 [所有資料以密碼加密]**** 保護層級，請輸入密碼。  
   
  **再次輸入密碼**  
  再輸入密碼一次。  

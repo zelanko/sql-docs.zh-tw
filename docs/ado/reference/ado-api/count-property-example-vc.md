@@ -1,5 +1,6 @@
 ---
-title: Count 屬性範例（VC + +） |Microsoft Docs
+description: Count 屬性範例 (VC++)
+title: Count 屬性範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 54dfb1dd-636c-4560-8a3f-32b1f6aa07d7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d8d6f40ebbb7ba4c90ba6d00291f40dc38118a13
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9a285aec87cd2bbdf832d071c99be4a70c5d53a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760204"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444330"
 ---
 # <a name="count-property-example-vc"></a>Count 屬性範例 (VC++)
-這個範例會示範在***Employee***資料庫中具有兩個集合的[Count](../../../ado/reference/ado-api/count-property-ado.md)屬性。 屬性會取得每個集合中的物件數目，並設定列舉這些集合之迴圈的上限。  
+此範例示範在***Employee***資料庫中有兩個集合的[Count](../../../ado/reference/ado-api/count-property-ado.md)屬性。 屬性會取得每個集合中的物件數目，並設定列舉這些集合的迴圈上限。  
   
 ```  
 // BeginCountCpp.cpp  

@@ -1,4 +1,5 @@
 ---
+description: CollectionAggregate (geometry 資料類型)
 title: CollectionAggregate (geometry 資料類型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b7c85d59-c841-4b7f-9d46-8b4b7f2a3afe
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 255d1aa4a68aae877c6a32288758f68838eb44a4
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 1c51f5c7c038abf9d3ee6ed48549ffafffd6b1d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554696"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445105"
 ---
 # <a name="collectionaggregate-geometry-data-type"></a>CollectionAggregate (geometry 資料類型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

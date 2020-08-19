@@ -1,5 +1,6 @@
 ---
-title: Refresh 方法範例（VBScript） |Microsoft Docs
+description: Refresh 方法範例 (VBScript)
+title: " (VBScript) 的 Refresh 方法範例 |Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: f2926578-bc60-464b-916e-ddfdb8014253
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a93b769f364206bda80d347166cf77ed8edd18ac
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 823b25bb30d83ad96d6f963f6a7fb676ff81135e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751112"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438720"
 ---
 # <a name="refresh-method-example-vbscript"></a>Refresh 方法範例 (VBScript)
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統不再包含 RDS 伺服器元件（如需詳細資訊，請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)）。 RDS 用戶端元件將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 下列範例顯示如何設定 RDS 的必要參數[。](../../../ado/reference/rds-api/datacontrol-object-rds.md)在執行時間 DataControl。 使用[Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)方法抓取[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)的方式，是由[ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md)和[FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md)屬性的設定所決定。 若要測試此範例，請將下列程式碼剪下並貼入一般 ASP 檔中，並將它命名為**RefreshVBS。** 使用 [**尋找**] 找出 Adovbs 檔案，並將它放在您打算使用的目錄中。 ASP 腳本會識別您的伺服器。  
+ 下列範例顯示如何設定 RDS 的必要參數 [。](../../../ado/reference/rds-api/datacontrol-object-rds.md) 在執行時間 DataControl。 使用[Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)方法抓取[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)的方式是由[ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md)和[FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md)屬性的設定所決定。 若要測試此範例，請將下列程式碼剪下並貼入一般 ASP 檔中，並將它命名為**RefreshVBS。** 使用 [ **尋找** ] 找出檔案 Adovbs，並將它放在您打算使用的目錄中。 ASP 腳本會識別您的伺服器。  
   
 ```  
 <!-- BeginRefreshVBS -->  
@@ -175,10 +176,10 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [DataControl 物件（RDS）](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [ExecuteOptions 屬性（RDS）](../../../ado/reference/rds-api/executeoptions-property-rds.md)   
- [FetchOptions 屬性（RDS）](../../../ado/reference/rds-api/fetchoptions-property-rds.md)   
- [Recordset 物件（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [DataControl 物件 (RDS) ](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
+ [ExecuteOptions 屬性 (RDS) ](../../../ado/reference/rds-api/executeoptions-property-rds.md)   
+ [FetchOptions 屬性 (RDS) ](../../../ado/reference/rds-api/fetchoptions-property-rds.md)   
+ [ (ADO) 的記錄集物件 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Refresh 方法 (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)
 
 

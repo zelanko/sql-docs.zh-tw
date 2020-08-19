@@ -1,4 +1,5 @@
 ---
+description: 保留鎖定組態選項預設值
 title: 保留鎖定組態選項預設值 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f214f05b-5f0b-4786-b2ad-b8b4b6e58d72
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 07131fc6d0e3505b15d432f738597285fcbeb402
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 657700eeaf04ec49aec410fc5d183a828e514963
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760496"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490611"
 ---
 # <a name="keep-the-locks-configuration-option-default-value"></a>保留鎖定組態選項預設值
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

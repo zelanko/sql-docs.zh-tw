@@ -1,4 +1,5 @@
 ---
+description: 散發代理程式安全性
 title: 散發代理程式安全性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 3322ef185178ab2254066281d9f6f6a6c85611da
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: dfad45eb3d0fcbf67e88c6ffbf5a120e1d179c16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87862953"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498799"
 ---
 # <a name="distribution-agent-security"></a>散發代理程式安全性
 ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions" 

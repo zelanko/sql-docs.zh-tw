@@ -1,5 +1,6 @@
 ---
-title: CreateRecordset 方法範例（VB） |Microsoft Docs
+description: CreateRecordset 方法範例 (VB)
+title: " (VB) 的 CreateRecordset 方法範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2de8fd02-0f49-4d47-8bd3-397726d1c644
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7d520e58866e7092f6e11807bca8c9407c6b16ca
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e91e1c0801cb8062bca89968d0345f5bbcee1220
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760194"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444310"
 ---
 # <a name="createrecordset-method-example-vb"></a>CreateRecordset 方法範例 (VB)
-您可以建立[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件，並指定資料行資訊。 接著，您可以將資料插入**記錄集**物件中。基礎資料列集會緩衝插入。  
+您可以建立 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 物件，並指定資料行資訊。 然後，您可以將資料插入 **記錄集** 物件;基礎資料列集會緩衝插入。  
   
- 下列程式碼範例示範如何使用[RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)物件定義**記錄集**。 您也可以使用 RDS 來執行此動作[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件。  
+ 下列程式碼範例示範如何使用[RDSServer DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)物件來定義**記錄集**。 您也可以使用 RDS 進行此作業 [。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 物件。  
   
 ```  
 'BeginRsDefineShapeVB  

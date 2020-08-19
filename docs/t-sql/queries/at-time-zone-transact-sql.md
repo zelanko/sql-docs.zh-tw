@@ -1,4 +1,5 @@
 ---
+description: AT TIME ZONE (Transact-SQL)
 title: AT TIME ZONE (Transact-SQL)
 ms.date: 06/11/2019
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: e27399d2decb00317895017f8a375deb89581d05
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: c5298f612be4fc704e47112063abb6ad6a2ef53d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395073"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445340"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
 
@@ -38,8 +39,6 @@ ms.locfileid: "87395073"
 ```sql
 inputdate AT TIME ZONE timezone  
 ```
-
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引數
 

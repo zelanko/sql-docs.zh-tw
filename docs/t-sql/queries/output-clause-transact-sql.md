@@ -1,4 +1,5 @@
 ---
+description: OUTPUT 子句 (Transact-SQL)
 title: OUTPUT 子句 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/14/2020
@@ -30,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 922e42698f3b911912ffc1f745d171498c37151f
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: 6c361e0d6ff8ab00abdc70775e903d3fc5dcd602
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435553"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459155"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 子句 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

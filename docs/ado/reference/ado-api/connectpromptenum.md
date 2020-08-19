@@ -1,4 +1,5 @@
 ---
+description: ConnectPromptEnum
 title: ConnectPromptEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,32 +16,32 @@ helpviewer_keywords:
 ms.assetid: 21026e24-62b7-4cc9-8aef-62c1fc6cba75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 61a66866f8206f2df4cbdeb3f2144e0ac12ac695
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0ad8fe77bb3472931d3b16d5849b047001922c96
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762589"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444410"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
-指定在開啟資料來源的連接時，是否應該顯示對話方塊，以提示遺漏參數。  
+指定是否應顯示對話方塊，以在開啟與資料來源的連接時提示遺漏參數。  
   
-|持續性|值|說明|  
+|常數|值|描述|  
 |--------------|-----------|-----------------|  
-|**adPromptAlways**|1|一律會出現提示。|  
-|**adPromptComplete**|2|如果需要詳細資訊，則提示。|  
-|**adPromptCompleteRequired**|3|如果需要更多資訊，但不允許選擇性參數，則會提示。|  
+|**adPromptAlways**|1|一律提示。|  
+|**adPromptComplete**|2|提示是否需要更多資訊。|  
+|**adPromptCompleteRequired**|3|提示是否需要更多的資訊，但不允許選擇性參數。|  
 |**adPromptNever**|4|永遠不會提示。|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC 對等  
- Package： **.com. wfc. 資料**  
+## <a name="adowfc-equivalent"></a>ADO/WFC 相等  
+ 封裝： **.com. 資料**  
   
-|持續性|  
+|常數|  
 |--------------|  
-|AdoEnums. ConnectPrompt. ALWAYS|  
-|AdoEnums. ConnectPrompt. COMPLETE|  
+|AdoEnums. ConnectPrompt. 一律|  
+|AdoEnums. ConnectPrompt. 完成|  
 |AdoEnums.ConnectPrompt.COMPLETEREQUIRED|  
-|AdoEnums. ConnectPrompt. NEVER|  
+|AdoEnums. ConnectPrompt. 永不|  
   
 ## <a name="applies-to"></a>套用至  
  [Prompt 動態屬性 (ADO)](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)

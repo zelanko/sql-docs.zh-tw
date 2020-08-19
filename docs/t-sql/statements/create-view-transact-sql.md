@@ -1,4 +1,5 @@
 ---
+description: CREATE VIEW (Transact-SQL)
 title: CREATE VIEW (Transact-SQL)
 ms.custom: ''
 ms.date: 04/16/2020
@@ -37,12 +38,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b896f7614d5f44802e98b45abb1592d5ed35f1e6
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 23a71a0ffe8cfa34ee61b5396146d46f8f174bc6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485222"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444825"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 

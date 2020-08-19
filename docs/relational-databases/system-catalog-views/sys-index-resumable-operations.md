@@ -1,5 +1,6 @@
 ---
-title: sys.databases index_resumable_operations （Transact-sql） |Microsoft Docs
+description: 'sys. index_resumable_operations (Transact-sql) '
+title: sys. index_resumable_operations (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/12/2019
 ms.prod: sql
@@ -19,34 +20,34 @@ ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c57cc780bc3e05347daf8dd7778e7e5de274d303
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fa2ae5221dbd360c5bad7279d27dbaedc7ae7f16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790495"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490305"
 ---
-# <a name="sysindex_resumable_operations-transact-sql"></a>sys.databases index_resumable_operations （Transact-sql）
+# <a name="sysindex_resumable_operations-transact-sql"></a>sys. index_resumable_operations (Transact-sql) 
 
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
-**index_resumable_operations**是系統檢視，會監視並檢查目前的執行狀態，以取得可繼續的索引重建或建立。  
-**適用**于： SQL Server （2017和更新版本）和 Azure SQL Database
+**sys. index_resumable_operations** 是一種系統檢視，可監視和檢查目前的執行狀態，以取得可繼續的索引重建或建立。  
+**適用于**： SQL Server (2017 和更新版本的) ，以及 Azure SQL Database
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|object_id|**int**|此索引所屬物件的識別碼（不可為 null）。|  
-|**index_id**|**int**|索引的識別碼（不可為 null）。 **index_id**只有在物件內才是唯一的。|
-|**name**|**sysname**|索引的名稱。 **name**只有在物件內才是唯一的。|  
+|object_id|**int**|此索引所屬物件的識別碼 (不可為 null) 。|  
+|**index_id**|**int**|索引的識別碼 (不可為 null) 。 **index_id** 只有在物件內才是唯一的。|
+|**name**|**sysname**|索引的名稱。 **名稱** 只有在物件內才是唯一的。|  
 |**sql_text**|**nvarchar(max)**|DDL T-sql 語句文字|
-|**last_max_dop**|**smallint**|上次使用的 MAX_DOP （預設值 = 0）|
-|**partition_number**|**int**|擁有索引或堆積內的資料分割編號。 若為非資料分割資料表和索引，或在重建所有分割區時，此資料行的值為 Null。|
+|**last_max_dop**|**smallint**|上次使用的 MAX_DOP (預設值 = 0) |
+|**partition_number**|**int**|擁有索引或堆積內的資料分割編號。 若為非資料分割資料表和索引，或如果所有資料分割都重建，則此資料行的值為 Null。|
 |**state**|**tinyint**|可繼續索引的操作狀態：<br /><br />0 = 正在執行<br /><br />1 = 暫停|
-|**state_desc**|**nvarchar(60)**|可繼續索引的操作狀態原因（執行中或已暫停）|  
-|**start_time**|**datetime**|索引作業開始時間（不可為 null）|
-|**last_pause_time**|**datatime**| 索引作業上次暫停時間（可為 null）。 如果作業正在執行且永遠不會暫停，則為 Null。|
-|**total_execution_time**|**int**|從開始時間（以分鐘為單位）的總執行時間（不可為 null）|
-|**percent_complete**|**real**|% 中的索引作業進度完成（不可為 null）。|
-|**page_count**|**bigint**|索引建立作業為新的和對應索引所配置的索引頁面總數（不可為 null）。
+|**state_desc**|**nvarchar(60)**|可繼續索引 (執行中或已暫停的操作狀態原因) |  
+|**start_time**|**datetime**|索引作業開始時間 (不可為 null) |
+|**last_pause_time**|**datatime**| 索引作業上次暫停時間 (可為 null) 。 如果作業正在執行且永不暫停，則為 Null。|
+|**total_execution_time**|**int**|開始時間的總執行時間（以分鐘為單位） (不可為 null) |
+|**percent_complete**|**real**|% ( 中的索引作業進度完成，不可為 null) 。|
+|**page_count**|**bigint**|索引建立作業針對新的和對應索引所配置的索引頁面總數 ( 不可為 null ) 。
 
 ## <a name="permissions"></a>權限
 
@@ -54,7 +55,7 @@ ms.locfileid: "85790495"
 
 ## <a name="example"></a>範例
 
- 列出處於暫停狀態的所有可繼續的索引建立或重建作業。
+ 列出所有可繼續的索引建立或處於暫停狀態的重建作業。
 
 ```sql
 SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;  

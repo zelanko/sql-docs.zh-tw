@@ -1,4 +1,5 @@
 ---
+description: Internet Information Services 遠端資料服務的錯誤碼
 title: Internet Information Services 錯誤碼 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 3c9223de-d953-436a-bddc-dbdd9dc3e685
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a49e136f7d67c5d0713087aa225cee6e1aa3791e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b9c3a33c6b7d59fc77a64a74ada070e584bee887
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758514"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444570"
 ---
-# <a name="internet-information-services-error-codes-for-remote-data-service"></a>遠端資料服務的 Internet Information Services 錯誤碼
-下表列出與遠端資料服務使用方式相關的 Microsoft® Internet Information Services （IIS）錯誤碼。 低2個位元組的正十進位轉譯、完整錯誤碼的負十進位轉譯和十六進位值會顯示出來。
+# <a name="internet-information-services-error-codes-for-remote-data-service"></a>Internet Information Services 遠端資料服務的錯誤碼
+下表列出 Microsoft® Internet Information Services (與遠端資料服務使用相關的 IIS) 錯誤碼。 最少兩個位元組的正十進位轉譯、完整錯誤碼的負十進位轉譯，以及十六進位值。
 
-|Internet Information Services 錯誤|數字|描述|
+|Internet Information Services 錯誤|Number|描述|
 |------------------------------------------|------------|-----------------|
 |**IDS_IIS_AccessDenied**|8208-2146820080 0x800A2010|網際網路伺服器錯誤：拒絕存取。|
 |**IDS_IIS_ObjectNotFound**|8209-2146820079 0x800A2011|網際網路伺服器錯誤：找不到物件/模組。|

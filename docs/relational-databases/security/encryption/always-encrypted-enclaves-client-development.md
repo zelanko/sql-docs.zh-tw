@@ -1,4 +1,5 @@
 ---
+description: 使用具有安全記憶體保護區的 Always Encrypted 開發應用程式
 title: 使用具有安全記憶體保護區的 Always Encrypted 開發應用程式 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/15/2019
@@ -12,12 +13,12 @@ ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 971cce5ddf61f528e9e4ffdc0377603b6ce96946
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 45b78a18f2722a91aa409715e7eef64b03060252
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411374"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490485"
 ---
 # <a name="develop-applications-using-always-encrypted-with-secure-enclaves"></a>使用具有安全記憶體保護區的 Always Encrypted 開發應用程式
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]

@@ -1,4 +1,5 @@
 ---
+description: DELETE (Transact-SQL)
 title: DELETE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/19/2020
@@ -25,12 +26,12 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc22e2637cb0861c23a8e36bb80fac98ee09219c
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 1930de4c19334d3a19105cf5559e1ca352bbe679
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485019"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444735"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 

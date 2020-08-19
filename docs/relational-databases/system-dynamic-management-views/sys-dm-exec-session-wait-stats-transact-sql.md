@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_exec_session_wait_stats （Transact-sql） |Microsoft Docs
+description: 'sys. dm_exec_session_wait_stats (Transact-sql) '
+title: sys. dm_exec_session_wait_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -16,16 +17,17 @@ helpviewer_keywords:
 ms.assetid: df84842a-71eb-4fda-b448-5953cf9985dc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: abd99dce003ca1a61ce4b9373db719325c5f26e0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f759896a21b99d54efc41db9ea3aba22c8580dcb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999107"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489960"
 ---
-# <a name="sysdm_exec_session_wait_stats-transact-sql"></a>sys.databases dm_exec_session_wait_stats （Transact-sql）
+# <a name="sysdm_exec_session_wait_stats-transact-sql"></a>sys. dm_exec_session_wait_stats (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-  傳回針對每個會話執行之執行緒所遇到之所有等候的相關資訊。 您可以使用此視圖來診斷會話的效能問題 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，以及特定查詢和批次。  此視圖會傳回與針對 sys.databases 所匯總的相同資訊[dm_os_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)但也會提供**session_id**號碼。  
+  傳回針對每個會話執行的執行緒所遇到之所有等候的相關資訊。 您可以使用此視圖來診斷會話的效能問題 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，以及特定查詢和批次的效能問題。  此視圖會傳回會話相同的資訊，此資訊是針對 [sys. dm_os_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) 所匯總，但也提供 **session_id** 號碼。  
   
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本)。  
   
@@ -39,15 +41,15 @@ ms.locfileid: "85999107"
 |signal_wait_time_ms|**bigint**|從等候執行緒接獲訊號到開始執行的時間。|  
   
 ## <a name="remarks"></a>備註  
- 此 DMV 會在會話開啟或會話重設（如果連接共用）時重設會話的資訊，  
+ 此 DMV 會在會話開啟時重設會話的資訊; 如果連接共用) ，則會重設會話 (  
   
- 如需等候類型的詳細資訊，請參閱[dm_os_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。  
+ 如需等候類型的詳細資訊，請參閱 [sys. dm_os_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。  
   
 ## <a name="permissions"></a>權限  
- 如果使用者具有伺服器的**VIEW SERVER STATE**許可權，使用者會看到實例上所有執行中的會話 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; 否則，使用者只會看到目前的會話。  
+ 如果使用者具有伺服器的 **VIEW SERVER STATE** 許可權，使用者將會在實例上看到所有執行中的會話 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; 否則，使用者只會看到目前的會話。  
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [SQL Server 作業系統相關的動態管理 Views &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+ [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [SQL Server 作業系統相關的動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)  
  

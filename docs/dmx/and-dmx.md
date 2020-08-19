@@ -1,5 +1,6 @@
 ---
-title: 和（DMX） |Microsoft Docs
+description: AND (DMX)
+title: 和 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ea3cacd8fe2d80e6037cf83df9eea1fd112a4b05
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 17dabee823323c63a2d36a21cd79b81e9a323803
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971812"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431200"
 ---
 # <a name="and-dmx"></a>AND (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -43,13 +44,13 @@ Expression1 AND Expression2
 |如果 Expression1 為|如果 Expression2 為|傳回值為|  
 |-----------------------|-----------------------|---------------------|  
 |TRUE|TRUE|TRUE|  
-|TRUE|FALSE|FALSE|  
-|FALSE|TRUE|FALSE|  
-|FALSE|FALSE|FALSE|  
+|true|false|false|  
+|false|true|false|  
+|false|false|false|  
   
 ## <a name="see-also"></a>另請參閱  
- [DMX&#41; Operator Reference &#40;的資料採礦延伸模組](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [&#40;DMX&#41;的邏輯運算子](../dmx/operators-logical.md)   
- [DMX&#41;&#40;的運算子](../dmx/operators-dmx.md)  
+ [資料採礦延伸模組 &#40;DMX&#41; 運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [&#40;DMX&#41;的邏輯運算子 ](../dmx/operators-logical.md)   
+ [DMX &#40;的運算子&#41;](../dmx/operators-dmx.md)  
   
   

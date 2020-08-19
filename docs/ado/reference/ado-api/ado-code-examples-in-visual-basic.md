@@ -1,4 +1,5 @@
 ---
+description: Visual Basic 中的 ADO 程式碼範例
 title: Visual Basic 中的 ADO 程式碼範例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 1152893e-b617-40f1-88b6-81e82e2234f1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f09b1827ae26f5ba8b8168e9c53809120bce6133
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 105cc4eb8fe9584497c3029d5c5ddd81a49c6e82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760574"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451510"
 ---
 # <a name="ado-code-examples-in-visual-basic"></a>Visual Basic 中的 ADO 程式碼範例
-使用下列程式碼範例，瞭解如何在 Visual Basic 寫入時，使用 ADO 方法、屬性和事件。  
+使用下列程式碼範例，瞭解如何在 Visual Basic 中撰寫時使用 ADO 方法、屬性和事件。  
   
 > [!NOTE]
->  將完整的程式碼範例（從 Sub 到 End Sub）貼入程式碼編輯器中。 如果使用部分範例或遺失段落格式，則此範例可能無法正確執行。  
+>  將整個程式碼範例（從 Sub 到 End Sub）貼入您的程式碼編輯器中。 如果使用部分範例或遺失段落格式，此範例可能無法正確執行。  
   
 ## <a name="methods"></a>方法  
   
@@ -101,7 +102,7 @@ ms.locfileid: "82760574"
   
 -   [ActualSize 和 DefinedSize 屬性範例](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)  
   
--   [屬性和名稱屬性範例](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)  
+-   [Attributes 和 Name 屬性範例](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)  
   
 -   [BOF、EOF 和 Bookmark 屬性範例](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)  
   
@@ -113,7 +114,7 @@ ms.locfileid: "82760574"
   
 -   [CursorType、LockType 和 EditMode 屬性範例](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)  
   
--   [Description、HelpCoNtext、內容説明、NativeError、Number、Source 和 SQLState 屬性範例](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)  
+-   [Description、HelpCoNtext、説明、NativeError、Number、Source 和 SQLState 屬性範例](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)  
   
 -   [EOS 和 LineSeparator 屬性，SkipLine 方法範例](../../../ado/reference/ado-api/eos-and-lineseparator-properties-and-skipline-method-example-vb.md)  
   
@@ -133,7 +134,7 @@ ms.locfileid: "82760574"
   
 -   [OriginalValue 和 UnderlyingValue 屬性範例](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vb.md)  
   
--   [備妥的屬性範例](../../../ado/reference/ado-api/prepared-property-example-vb.md)  
+-   [備妥屬性範例](../../../ado/reference/ado-api/prepared-property-example-vb.md)  
   
 -   [Provider 和 DefaultDatabase 屬性範例](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)  
   
@@ -147,9 +148,9 @@ ms.locfileid: "82760574"
   
 -   [StayInSync 屬性範例](../../../ado/reference/ado-api/stayinsync-property-example-vb.md)  
   
--   [Type 屬性範例（Field）](../../../ado/reference/ado-api/type-property-example-field-vb.md)  
+-   [Type 屬性範例 (欄位) ](../../../ado/reference/ado-api/type-property-example-field-vb.md)  
   
--   [Type 屬性範例（Property）](../../../ado/reference/ado-api/type-property-example-property-vb.md)  
+-   [Type 屬性範例 (屬性) ](../../../ado/reference/ado-api/type-property-example-property-vb.md)  
   
 -   [Value 屬性範例](../../../ado/reference/ado-api/value-property-example-vb.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: CREATE XML INDEX (選擇性 XML 索引)
 title: CREATE XML INDEX (選擇性 XML 索引) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
@@ -12,12 +13,12 @@ dev_langs:
 ms.assetid: 1f510151-41d5-45c2-9cd0-b1ca0246fffe
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 902cebc510572b8900acf6f12666398ef9d147b1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e75a8511c8f706e8b92cbe2830b9f904f56c42b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766902"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444800"
 ---
 # <a name="create-xml-index-selective-xml-indexes"></a>CREATE XML INDEX (選擇性 XML 索引)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -87,7 +88,9 @@ xmlnamespace_uri AS xmlnamespace_prefix
   
  WITH \<index_options> 如需索引選項的資訊，請參閱 [CREATE XML INDEX](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)。  
   
-## <a name="remarks"></a>備註  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>備註
  基底資料表中的每個 XML 資料行可以擁有多個次要選擇性 XML 索引。  
   
 ## <a name="limitations-and-restrictions"></a>限制事項  

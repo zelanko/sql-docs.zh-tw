@@ -1,4 +1,5 @@
 ---
+description: 傳送作業工作
 title: 傳送作業工作 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e5747cc9fbac122e9bca7fa6a127fd74a4ec47ff
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5eaf7aca7e96aaf3aae3e095e92fecfa749cb1ee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916104"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430970"
 ---
 # <a name="transfer-jobs-task"></a>傳送作業工作
 

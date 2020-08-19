@@ -1,4 +1,5 @@
 ---
+description: LOG (Transact-SQL)
 title: LOG (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2017
@@ -20,17 +21,17 @@ ms.assetid: f7c39511-cd84-4362-93ba-0d93655217ee
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb06ff97c4972507e63b8990c9d70c8598e8e2c2
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4c962baabeaccdd2c2cbf517cab5894458046bb2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112429"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468002"
 ---
 # <a name="log-transact-sql"></a>LOG (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  傳回 **中指定之**float[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 運算式的自然對數。  
+  傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中指定之 **float** 運算式的自然對數。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +53,7 @@ LOG ( float_expression )
 
 ## <a name="arguments"></a>引數
  *float_expression*  
- 為 [float](../../t-sql/language-elements/expressions-transact-sql.md) 類型或能夠隱含轉換成 **float** 類型的**運算式**。  
+ 為 **float** 類型或能夠隱含轉換成 **float** 類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
  *base*  
  可設定對數基數的選擇性整數引數。  
@@ -65,14 +66,14 @@ LOG ( float_expression )
 ## <a name="remarks"></a>備註  
  根據預設，**LOG()** 會傳回自然對數。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，您可以使用選擇性的 *base* 參數，將對數的基數變更為其他值。  
   
- 自然對數是基數 **e** 的對數，其中 **e** 是大約等於 2.718281828 的無理常數。  
+ 自然對數是底數 **e** 的對數，其中 **e** 是大約等於 2.718281828 的無理常數。  
   
  數字之指數的自然對數就是該數字本身：LOG( EXP( *n* ) ) = *n*。 而數字之自然對數的指數就是該數字本身：EXP( LOG( *n* ) ) = *n*。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-calculating-the-logarithm-for-a-number"></a>A. 計算數值的對數。  
- 下列範例會計算指定 `LOG`float**運算式的**。  
+ 下列範例會計算指定 **float** 運算式的 `LOG`。  
   
 ```sql  
 DECLARE @var FLOAT = 10;  
@@ -108,7 +109,7 @@ SELECT LOG (EXP (10));
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-calculating-the-logarithm-for-a-number"></a>C. 計算數值的對數  
- 下列範例會計算指定 `LOG`float**運算式的**。  
+ 下列範例會計算指定 **float** 運算式的 `LOG`。  
   
 ```sql  
 SELECT LOG(10);  

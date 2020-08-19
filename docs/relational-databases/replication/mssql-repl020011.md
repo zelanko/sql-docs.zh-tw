@@ -1,4 +1,5 @@
 ---
+description: MSSQL_REPL020011
 title: MSSQL_REPL020011 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -13,12 +14,12 @@ ms.assetid: f72072d7-bbb6-48ad-ac88-afa74aeb4d58
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 81a4a8f36696b2ef97ac58818c45e877e4b81447
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 700ebd3dfdd9b6a7ae3acaec6600adb11cbf3309
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363077"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498674"
 ---
 # <a name="mssql_repl020011"></a>MSSQL_REPL020011
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

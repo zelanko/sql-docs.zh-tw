@@ -1,4 +1,5 @@
 ---
+description: 一般檔案目的地
 title: 一般檔案目的地 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bf49a6cd604350ca9b3e73ee96bb6c61b1977a60
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 747e9798918debf5a69c5013cec5fb7077b2da41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920865"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430790"
 ---
 # <a name="flat-file-destination"></a>一般檔案目的地
 

@@ -1,4 +1,5 @@
 ---
+description: 字元對應轉換
 title: 字元對應轉換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 46d4833b6879330e62b89470b8a542f8f6ed910e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 84e3e3593e2a3cbee72d6df5cc7565bb908a8b53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922446"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430710"
 ---
 # <a name="character-map-transformation"></a>字元對應轉換
 
@@ -88,7 +89,7 @@ ms.locfileid: "86922446"
 -   [排序合併和合併聯結轉換的資料](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="character-map-transformation-editor"></a>字元對應表轉換編輯器
-  使用 [字元對應表轉換編輯器]  對話方塊，來選取要套用至資料行資料的字串函數，以及指定對應是就地變更或加入為新資料行。  
+  使用 [字元對應表轉換編輯器]**** 對話方塊，來選取要套用至資料行資料的字串函數，以及指定對應是就地變更或加入為新資料行。  
   
 ### <a name="options"></a>選項。  
  **可用的輸入資料行**  

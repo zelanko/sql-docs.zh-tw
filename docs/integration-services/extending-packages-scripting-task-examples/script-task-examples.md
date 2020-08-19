@@ -1,4 +1,5 @@
 ---
+description: 指令碼工作範例
 title: 指令碼工作範例 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b0dd77ee-ee11-4cd9-87aa-61dd67f2fe1c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fa626ad14f1b7f467c84557ea22fcd12d95b3ca3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f001a8b784af159efff980a4fa1ca966af0892e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914113"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430380"
 ---
 # <a name="script-task-examples"></a>指令碼工作範例
 
@@ -41,7 +42,7 @@ ms.locfileid: "86914113"
  [以指令碼工作偵測空的一般檔案](../../integration-services/extending-packages-scripting-task-examples/detecting-an-empty-flat-file-with-the-script-task.md)  
  檢查一般檔案以判斷它是否包含資料列，並將結果儲存到變數中，以供在控制流程分支中使用。  
   
- [以指令碼工作收集 Foreach 迴圈的清單](../../integration-services/extending-packages-scripting-task-examples/gathering-a-list-for-the-foreach-loop-with-the-script-task.md)  
+ [以指令碼工作蒐集 ForEach 迴圈的清單](../../integration-services/extending-packages-scripting-task-examples/gathering-a-list-for-the-foreach-loop-with-the-script-task.md)  
  蒐集符合使用者指定的準則之檔案清單，並填入變數以供稍後由 Foreach From Variable 列舉值使用。  
   
  [以指令碼工作查詢 Active Directory](../../integration-services/extending-packages-scripting-task-examples/querying-the-active-directory-with-the-script-task.md)  
@@ -56,7 +57,7 @@ ms.locfileid: "86914113"
  [以指令碼工作尋找安裝的印表機](../../integration-services/extending-packages-scripting-task-examples/finding-installed-printers-with-the-script-task.md)  
  透過使用 System.Drawing.Printing 命名空間中的類別，尋找支援特定紙張大小的已安裝印表機。  
   
- [以指令碼工作傳送 HTML 郵件訊息](../../integration-services/extending-packages-scripting-task-examples/sending-an-html-mail-message-with-the-script-task.md)  
+ [使用指令碼工作傳送 HTML 郵件訊息](../../integration-services/extending-packages-scripting-task-examples/sending-an-html-mail-message-with-the-script-task.md)  
  以 HTML 格式，而不是純文字格式傳送郵件訊息。  
   
  [以指令碼工作處理 Excel 檔案](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
@@ -71,7 +72,7 @@ ms.locfileid: "86914113"
  [在指令碼工作中使用變數](../../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md)  
  根據可能超過另一個變數中所指定之上限的封裝變數值，詢問使用者是否確定封裝應該繼續執行。  
   
- [在指令碼工作中連線至資料來源](../../integration-services/extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)  
+ [連接至指令碼工作中的資料來源](../../integration-services/extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)  
  從定義在封裝中的連接管理員，擷取連接或是連接資訊。  
   
  [在指令碼工作中引發事件](../../integration-services/extending-packages-scripting/task/raising-events-in-the-script-task.md)  

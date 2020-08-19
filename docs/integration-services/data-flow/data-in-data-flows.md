@@ -1,4 +1,5 @@
 ---
+description: 資料流程中的資料
 title: 資料流程中的資料 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8a9d6186-eb52-48e3-997e-021f24d458a3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 95dbbad4faf5cd4470450d5756d2c56a1cf5c8ae
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a355ecf74d200a4a4437a03816995126ac191dd4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916804"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430920"
 ---
 # <a name="data-in-data-flows"></a>資料流程中的資料
 

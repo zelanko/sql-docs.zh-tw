@@ -1,4 +1,5 @@
 ---
+description: 自訂檔案 UserList 區段
 title: 自訂檔案 UserList 區段 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,31 +14,31 @@ helpviewer_keywords:
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 002bb8b92105547086ea8649a877b4a9d6f71d3b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: afdd3560de5ca7e64d8a378f1eca04f875903a06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749793"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452230"
 ---
 # <a name="customization-file-userlist-section"></a>自訂檔案 UserList 區段
 **Userlist**區段適用于具有相同區段*識別碼*參數的**connect**區段。  
   
- 此區段可以包含*使用者存取專案*，以指定指定使用者的存取權限，並覆寫 [比對**連接]** 區段中的*預設**存取專案*。  
+ 這個區段可以包含*使用者存取專案*，此專案會指定指定之使用者的存取權限，並覆寫 [相符的**連接]** 區段中的*預設**存取專案*。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統不再包含 RDS 伺服器元件（如需詳細資訊，請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)）。 RDS 用戶端元件將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="syntax"></a>語法  
- 使用者存取專案的格式如下：  
+ 使用者存取專案的形式如下：  
   
  使用者_名稱_**=**   
  **_accessRights_**  
   
 |部分|描述|  
 |----------|-----------------|  
-|*userName*|採用此連接之人員的*使用者名稱*。 系統會使用 [IIS **Service Manager** ] 對話方塊來建立有效的使用者名稱。|  
-|**_accessRights_**|下列其中一個存取權限：<br /><br /> -   **NoAccess** -使用者無法存取資料來源。<br />-   **ReadOnly** -使用者可以讀取資料來源。<br />-   **ReadWrite** -使用者可以讀取或寫入資料來源。|  
+|*userName*|採用此連接之人員的 *使用者名稱* 。 有效的使用者名稱會與 [IIS **Service Manager** ] 對話方塊建立。|  
+|**_accessRights_**|下列其中一個存取權限：<br /><br /> -   **NoAccess** -使用者無法存取資料來源。<br />-   **ReadOnly** 使用者可以讀取資料來源。<br />-   **ReadWrite** -使用者可以讀取或寫入資料來源。|  
   
 ## <a name="see-also"></a>另請參閱  
  [自訂檔案連接區段](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   

@@ -1,4 +1,5 @@
 ---
+description: 資料分析工作
 title: 資料分析工作 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e8076ccc258b7de7075bafc9f0a0f5c9bed6d6a0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 60e136951deb8701893ea3d611597e8388909816
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914824"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430990"
 ---
 # <a name="data-profiling-task"></a>資料分析工作
 
@@ -90,13 +91,13 @@ ms.locfileid: "86914824"
   
  整數類型包括 **bit**、 **tinyint**、 **smallint**、 **int**和 **bigint**。  
   
- 字元類型包括 **char**、 **nchar**、 **varchar**及 **nvarchar** ，但不包括 **varchar(max)** 和 **nvarchar(max)** 。  
+ 字元類型包括 **char**、 **nchar**、 **varchar**及 **nvarchar** ，但不包括 **varchar(max)** 和 **nvarchar(max)**。  
   
  日期和時間類型包括 **datetime**、 **smalldatetime**和 **timestamp**。  
   
  數值類型包括 **integer** 類型 ( **bit**除外)、 **money**、 **smallmoney**、 **decimal**、 **float**、 **real**與 **numeric**。  
   
- \*\* 針對資料行 Null 比例設定檔之外的設定檔，不支援 **image**、**text**、**XML**、**udt** 及 **variant** 類型。  
+ \* 針對資料行 Null 比例設定檔之外的設定檔，不支援 \* **image**、**text**、**XML**、**udt** 及 **variant** 類型。  
   
 ### <a name="valid-tables-and-columns"></a>有效的資料表和資料行  
  如果資料表或資料行為空白，資料分析會採取下列動作：  
@@ -137,10 +138,10 @@ ms.locfileid: "86914824"
  您可以使用 **[資料分析工作編輯器]** 來設定資料分析工作。 此編輯器有兩個頁面：  
   
  [一般頁面](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)  
- 在 [一般]  頁面上，您可以指定輸出檔案或變數。 您也可以選取 **[快速分析]** ，利用預設值快速設定工作以計算設定檔。 如需詳細資訊，請參閱 [單一資料表快速分析表單 &#40;資料分析工作&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)。  
+ 在 [一般]**** 頁面上，您可以指定輸出檔案或變數。 您也可以選取 **[快速分析]** ，利用預設值快速設定工作以計算設定檔。 如需詳細資訊，請參閱 [單一資料表快速分析表單 &#40;資料分析工作&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)。  
   
  [設定檔要求頁面](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
- 在 [設定檔要求]  頁面上，您可以指定資料來源，然後選取並設定您要計算的資料設定檔。 如需有關您可以設定之各種設定檔的詳細資訊，請參閱下列主題：  
+ 在 [設定檔要求]**** 頁面上，您可以指定資料來源，然後選取並設定您要計算的資料設定檔。 如需有關您可以設定之各種設定檔的詳細資訊，請參閱下列主題：  
   
 -   [候選索引鍵設定檔要求選項 &#40;資料分析工作&#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
   

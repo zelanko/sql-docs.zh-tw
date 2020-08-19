@@ -1,5 +1,6 @@
 ---
-title: CursorLocation 屬性（ADO） |Microsoft Docs
+description: CursorLocation 屬性 (ADO)
+title: " (ADO) 的 CursorLocation 屬性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 39c8d86e-7ee9-4182-be5e-aad5ce952f84
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9aa95b7633d5dfa3a484dd97289c15c5737af986
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 92567057acad1edb0a0571a0057a11a47a3c65d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242738"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444300"
 ---
 # <a name="cursorlocation-property-ado"></a>CursorLocation 屬性 (ADO)
 表示資料指標服務的位置。  
@@ -30,16 +31,16 @@ ms.locfileid: "87242738"
  設定或傳回可設定為其中一個[CursorLocationEnum](../../../ado/reference/ado-api/cursorlocationenum.md)值的**Long**值。  
   
 ## <a name="remarks"></a>備註  
- 這個屬性可讓您在提供者可存取的各種資料指標程式庫之間進行選擇。 通常，您可以選擇使用用戶端資料指標程式庫，或是位於伺服器上的其中一個。  
+ 這個屬性可讓您選擇可供提供者存取的各種資料指標程式庫。 通常，您可以選擇使用用戶端資料指標程式庫或位於伺服器上的資料指標程式庫。  
   
- 此屬性設定會影響只有在設定屬性之後才建立的連接。 變更**CursorLocation**屬性不會影響現有的連接。  
+ 此屬性設定只會影響在設定屬性之後所建立的連接。 變更 **CursorLocation** 屬性不會影響現有的連接。  
   
- [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)方法所傳回的資料指標會繼承此設定。 **記錄集**物件將會自動從其相關聯的連接繼承此設定。  
+ [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)方法所傳回的資料指標會繼承此設定。 **記錄集** 物件會自動從其相關聯的連接繼承此設定。  
   
- 這個屬性在[連接](../../../ado/reference/ado-api/connection-object-ado.md)或封閉式[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)上是讀取/寫入，而在開啟的**記錄集**上是唯讀的。  
+ 這個屬性是在 [連接](../../../ado/reference/ado-api/connection-object-ado.md) 或已關閉的 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)上的讀取/寫入，而且在開啟的 **記錄集**上是唯讀的。  
   
 > [!NOTE]
->  **遠端資料服務使用量**在用戶端**記錄集**或**連接**物件上使用時， **CursorLocation**屬性只能設定為**adUseClient**。  
+>  **遠端資料服務使用量** 當用於用戶端 **記錄集** 或 **連接** 物件時， **CursorLocation** 屬性只能設定為 **adUseClient**。  
   
 ## <a name="applies-to"></a>套用至  
 

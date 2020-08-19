@@ -1,4 +1,5 @@
 ---
+description: 設定 RDS
 title: 設定 RDS |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 5dd48483-858a-48c2-98ce-f2359abe1f59
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f916a78d9a61bcfa7b0896301a46eb3a52874043
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 223822bf6921ce63eb0893fe9db3024c46dfb628
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750038"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452280"
 ---
 # <a name="configuring-rds"></a>設定 RDS
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統不再包含 RDS 伺服器元件（如需詳細資訊，請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)）。 RDS 用戶端元件將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 若要有效率地執行 RDS，請確定您已熟悉各種可用的設定。 本節包含有關您的 RDS 執行安全性和擴充性的重要資訊。 如需設定電腦以使用 RDS 的相關資訊，請參閱下列主題。  
+ 若要有效率地執行 RDS，請務必熟悉您可使用的各種設定。 本章節包含 RDS 的執行安全性與擴充性的重要資訊。 請參閱下列主題，以取得設定您的電腦以使用 RDS 的相關資訊。  
   
 -   [將來賓權限授與網頁伺服器電腦](../../../ado/guide/remote-data-service/granting-guest-privileges-to-a-web-server-computer.md)  
   

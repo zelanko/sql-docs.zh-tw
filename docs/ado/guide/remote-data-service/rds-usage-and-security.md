@@ -1,4 +1,5 @@
 ---
+description: RDS 使用方式與安全性
 title: RDS 使用方式和安全性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: b8ac3739-05d3-4818-8201-a763795fb8b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 601dce83ad5dc71a015c2fa8a66c85f975521d96
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9bdcecf462476b7f2fecfea48f174e0b4b2c499e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764699"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452060"
 ---
 # <a name="rds-usage-and-security"></a>RDS 使用方式與安全性
-使用本節中的資訊來設定您的伺服器並快速使用 RDS。 本節包含在執行 RDS 時，您可能需要採取的特定設定步驟，說明 RDS 與其他技術之間的一些主要關聯性，並協助識別您在設定 RDS 解決方案時可能會遇到之問題的解決方案。  
+使用本節中的資訊來設定您的伺服器，並快速使用 RDS。 本節包含您在執行 RDS 時可能需要採取的特定設定步驟，說明 RDS 與其他技術之間的一些主要關聯性，並且有助於找出您在設定 RDS 解決方案時可能會遇到的問題的解決方案。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統不再包含 RDS 伺服器元件（如需詳細資訊，請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)）。 RDS 用戶端元件將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
  此章節包含下列主題。  
   
