@@ -1,5 +1,6 @@
 ---
-title: sp_syspolicy_rename_policy_category （Transact-sql） |Microsoft Docs
+description: sp_syspolicy_rename_policy_category (Transact-SQL)
+title: sp_syspolicy_rename_policy_category (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8a9c4a3a-91e8-435e-b721-e0293c92be3e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d1098b01a4be513d2f81d15a1cb11c370cfa7f00
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b350a19bb19defbd1510f7ce13a82729c2cbe779
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892701"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446740"
 ---
 # <a name="sp_syspolicy_rename_policy_category-transact-sql"></a>sp_syspolicy_rename_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,19 +41,19 @@ sp_syspolicy_rename_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @name = ] 'name'`這是您想要重新命名的原則類別目錄名稱。 *名稱*是**sysname**，而且如果*policy_category_id*是 Null，就必須指定。  
+`[ @name = ] 'name'` 這是您要重新命名的原則類別目錄名稱。 *名稱* 是 **sysname**，而且如果 *policy_category_id* 為 Null，則必須指定。  
   
-`[ @policy_category_id = ] policy_category_id`這是您想要重新命名之原則類別目錄的識別碼。 *policy_category_id*是**int**，而且如果*name*為 Null，就必須指定。  
+`[ @policy_category_id = ] policy_category_id` 這是您要重新命名之原則類別目錄的識別碼。 *policy_category_id* 為 **int**，而且如果 *name* 為 Null，則必須指定。  
   
-`[ @new_name = ] 'new_name'`這是原則類別目錄的新名稱。 *new_name*是**sysname**，而且是必要的。 不得為 NULL 或空字串。  
+`[ @new_name = ] 'new_name'` 這是原則類別目錄的新名稱。 *new_name* 為 **sysname**，而且是必要的。 不得為 NULL 或空字串。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
  您必須在 msdb 系統資料庫的內容中執行 sp_syspolicy_rename_policy_category。  
   
- 您必須為 [*名稱*] 或 [ *policy_category_id*] 指定一個值。 兩者不得同時為 NULL。 若要取得這些值，請查詢 msdb.dbo.syspolicy_policy_categories 系統檢視表。  
+ 您必須指定 *name* 或 *policy_category_id*的值。 兩者不得同時為 NULL。 若要取得這些值，請查詢 msdb.dbo.syspolicy_policy_categories 系統檢視表。  
   
 ## <a name="permissions"></a>權限  
  需要 PolicyAdministratorRole 固定資料庫角色中的成員資格。  

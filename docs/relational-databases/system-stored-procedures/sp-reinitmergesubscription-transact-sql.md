@@ -1,5 +1,6 @@
 ---
-title: sp_reinitmergesubscription （Transact-sql） |Microsoft Docs
+description: sp_reinitmergesubscription (Transact-SQL)
+title: sp_reinitmergesubscription (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fbdcd6435b9fab8e65c39b97a6aaa1ac69a1e9dc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8712640a1f5f1b2dd53e49d09610dd30b192b4cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901405"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446844"
 ---
 # <a name="sp_reinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,19 +41,19 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**，預設值是**all**。  
+`[ @publication = ] 'publication'` 這是發行集的名稱。 *發行* 集是 **sysname**，預設值是 **all**。  
   
-`[ @subscriber = ] 'subscriber'`這是訂閱者的名稱。 *訂閱者*是**sysname**，預設值是**all**。  
+`[ @subscriber = ] 'subscriber'` 這是訂閱者的名稱。 *訂閱者* 是 **sysname**，預設值是 **all**。  
   
-`[ @subscriber_db = ] 'subscriber_db'`這是訂閱者資料庫的名稱。 *subscriber_db*是**sysname**，預設值是**all**。  
+`[ @subscriber_db = ] 'subscriber_db'` 這是訂閱者資料庫的名稱。 *subscriber_db* 是 **sysname**，預設值是 **all**。  
   
-`[ @upload_first = ] 'upload_first'`這是指在訂閱重新初始化之前，是否上傳訂閱者端的變更。 *upload_first*是**Nvarchar （5）**，預設值是 FALSE。 若**為 true**，則會在重新初始化訂閱之前，先上傳變更。 若**為 false**，則不會上傳變更。  
+`[ @upload_first = ] 'upload_first'` 這是指在訂閱重新初始化之前，是否上傳在訂閱者端進行的變更。 *upload_first* 是 **Nvarchar (5) **，預設值是 FALSE。 若 **為 true**，則會在訂閱重新初始化之前上傳變更。 如果 **為 false**，則不會上傳變更。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_reinitmergesubscription**用於合併式複寫中。  
+ **sp_reinitmergesubscription** 用於合併式複寫中。  
   
  您可以從發行者呼叫**sp_reinitmergesubscription** ，以重新初始化合併訂閱。 我們建議您也要重新執行快照集代理程式。  
   
@@ -65,7 +66,7 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_reinitmergepushsubwithupload](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergesubscripti_2.sql)]  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_reinitmergesubscription**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色或 **db_owner** 固定資料庫角色的成員，才能夠執行 **sp_reinitmergesubscription**。  
   
 ## <a name="see-also"></a>另請參閱  
  [重新初始化訂閱](../../relational-databases/replication/reinitialize-subscriptions.md)   

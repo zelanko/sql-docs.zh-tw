@@ -1,5 +1,6 @@
 ---
-title: sp_query_store_flush_db （Transact-sql） |Microsoft Docs
+description: 'sp_query_store_flush_db (Transact-sql) '
+title: sp_query_store_flush_db (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/24/2017
 ms.prod: sql
@@ -21,16 +22,17 @@ ms.assetid: 580c03ae-57fc-4562-a6bb-5ec89521e38c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 229a954f4665550e30c017fed59d71ac1ff3a0b6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7263d8bc4a50af4e02709009340ca232c101857a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012649"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446878"
 ---
-# <a name="sp_query_store_flush_db-transact-sql"></a>sp_query_store_flush_db （Transact-sql）
+# <a name="sp_query_store_flush_db-transact-sql"></a>sp_query_store_flush_db (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-  將查詢存放區資料的記憶體中部分排清至磁片。  
+  將查詢存放區資料的記憶體內部部分排清至磁片。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,10 +49,10 @@ sp_query_store_flush_db [;]
 ## <a name="remarks"></a>備註  
   
 ## <a name="permissions"></a>權限  
- 需要資料庫的**ALTER**許可權。
+ 需要資料庫的 **ALTER** 許可權。
   
 ## <a name="examples"></a>範例  
- 下列範例會將查詢存放區資料的記憶體中部分排清到磁片。  
+ 下列範例會將查詢存放區資料的記憶體內部部分排清至磁片。  
   
 ```  
 EXEC sp_query_store_flush_db;  
@@ -63,7 +65,7 @@ EXEC sp_query_store_flush_db;
  [sp_query_store_reset_exec_stats &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
  [sp_query_store_remove_plan &#40;Transct-sql-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
  [sp_query_store_reset_exec_stats &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
- [查詢存放區目錄檢視 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
+ [查詢存放區 &#40;Transact-sql&#41;的目錄檢視 ](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [使用查詢存放區監視效能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
   
   

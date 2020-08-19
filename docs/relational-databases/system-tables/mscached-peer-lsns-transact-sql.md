@@ -1,5 +1,6 @@
 ---
-title: MScached_peer_lsns （Transact-sql） |Microsoft Docs
+description: MScached_peer_lsns (Transact-SQL)
+title: MScached_peer_lsns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,24 +18,24 @@ helpviewer_keywords:
 ms.assetid: f8b6089a-0230-45f9-8c34-9fe0d2a3a74e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1a4a6aa14106caf45aaac4e0432705d365022eec
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5c84f47e733937baa9ac01f99270a6759747d4c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890046"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446548"
 ---
 # <a name="mscached_peer_lsns-transact-sql"></a>MScached_peer_lsns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MScached_peer_lsns**資料表是用來追蹤交易記錄中的 LSN 值，用來判斷要在點對點複寫中傳回給指定訂閱者的命令。 這份資料表儲存在散發資料庫中。  
+  **MScached_peer_lsns**資料表是用來追蹤交易記錄中的 LSN 值，這些值可用來判斷哪些命令要在點對點複寫中傳回給指定的訂閱者。 這份資料表儲存在散發資料庫中。  
   
 ## <a name="definition"></a>定義  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|散發代理程式的識別碼。|  
-|**始發**|**sysname**|原始發行者名稱。|  
+|**鼻祖**|**sysname**|原始發行者名稱。|  
 |**originator_db**|**sysname**|原始發行集資料庫的名稱。|  
 |**originator_publication_id**|**int**|識別原始發行集。|  
 |**originator_db_version**|**int**|識別來源資料庫的版本號碼。|  

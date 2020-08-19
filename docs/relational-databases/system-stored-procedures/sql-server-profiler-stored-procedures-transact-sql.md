@@ -1,5 +1,6 @@
 ---
-title: SQL Server Profiler 預存程式（Transact-sql） |Microsoft Docs
+description: SQL Server Profiler 預存程序 (Transact-SQL)
+title: SQL Server Profiler 預存程式 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8c99c3db-0b04-46c3-aa59-d6f680522fdd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: df298c59e95a799a42bbad856612c6502912ffe6
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 67176aa5448e68ede24896fe06f448f1523fce34
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122509"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446703"
 ---
 # <a name="sql-server-profiler-stored-procedures-transact-sql"></a>SQL Server Profiler 預存程序 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,5 +1,6 @@
 ---
-title: sp_syspolicy_purge_health_state （Transact-sql） |Microsoft Docs
+description: sp_syspolicy_purge_health_state (Transact-SQL)
+title: sp_syspolicy_purge_health_state (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ba4aa91-4c19-41c7-b70d-5fd9d0e89a5e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6c07d71e2ab4c9fe39882476eef25674718a17c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a01ee9be75223a081d19a9b71eb4d69ec150235c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85639571"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446746"
 ---
 # <a name="sp_syspolicy_purge_health_state-transact-sql"></a>sp_syspolicy_purge_health_state (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,12 +40,12 @@ sp_syspolicy_purge_health_state [ @target_tree_root_with_id = ] 'target_tree_roo
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @target_tree_root_with_id = ] 'target_tree_root_with_id'`代表物件總管中要清除健全狀況狀態的節點。 *target_tree_root_with_id*是**Nvarchar （400）**，預設值是 Null。  
+`[ @target_tree_root_with_id = ] 'target_tree_root_with_id'` 代表物件總管中您要清除健全狀況狀態的節點。 *target_tree_root_with_id* 是 **Nvarchar (400) **，預設值是 Null。  
   
  您可以從 msdb.dbo.syspolicy_system_health_state 系統檢視表的 target_query_expression_with_id 資料行指定值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
  您必須在 msdb 系統資料庫的內容中執行 sp_syspolicy_purge_health_state。  

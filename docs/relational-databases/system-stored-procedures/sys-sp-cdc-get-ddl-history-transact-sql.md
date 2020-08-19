@@ -1,5 +1,6 @@
 ---
-title: sys.databases sp_cdc_get_ddl_history （Transact-sql） |Microsoft Docs
+description: sys.sp_cdc_get_ddl_history (Transact-SQL)
+title: sys. sp_cdc_get_ddl_history (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c72e4a325c8374c3d08ae00cc5af6898d5e206f2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f9835c61aeb1f11b57250465697187cfcc6501f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891098"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446644"
 ---
 # <a name="syssp_cdc_get_ddl_history-transact-sql"></a>sys.sp_cdc_get_ddl_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
   
 ## <a name="arguments"></a>引數  
  [ @capture_instance =] '*capture_instance*'  
- 這是與來源資料表相關聯之擷取執行個體的名稱。 *capture_instance*是**sysname** ，不能是 Null。  
+ 這是與來源資料表相關聯之擷取執行個體的名稱。 *capture_instance* 為 **sysname** ，而且不可以是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -62,7 +63,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 |ddl_time|**datetime**|與 DDL 變更相關聯的時間。|  
   
 ## <a name="remarks"></a>備註  
- 變更來源資料表資料行結構之來源資料表的 DDL 修改（例如，加入或卸載資料行，或變更現有資料行的資料類型）會在[cdc. ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md)資料表中進行維護。 您可以使用這個預存程序來報告這些變更。 cdc.ddl_history 中的項目是在擷取處理序讀取記錄中的 DDL 交易時完成的。  
+ 變更來源資料表資料行結構之來源資料表的 DDL 修改（例如，加入或卸載資料行，或變更現有資料行的資料類型）會保留在 [cdc. ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) 資料表中。 您可以使用這個預存程序來報告這些變更。 cdc.ddl_history 中的項目是在擷取處理序讀取記錄中的 DDL 交易時完成的。  
   
 ## <a name="permissions"></a>權限  
  需要 db_owner 固定資料庫角色中的成員資格，才能針對資料庫中的所有擷取執行個體傳回資料列。 若為所有其他使用者，則需要來源資料表中所有擷取資料行的 SELECT 權限，而且如果定義了擷取執行個體的控制角色，便需要該資料庫角色的成員資格。  
@@ -85,6 +86,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_cdc_help_change_data_capture &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
+ [sys. sp_cdc_help_change_data_capture &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
   
   

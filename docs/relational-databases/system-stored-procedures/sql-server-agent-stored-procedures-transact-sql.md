@@ -1,5 +1,6 @@
 ---
-title: SQL Server Agent 預存程式（Transact-sql） |Microsoft Docs
+description: SQL Server Agent 預存程序 (Transact-SQL)
+title: SQL Server Agent 預存程式 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9c8de925-928b-460c-9455-779c4c37b966
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 92da9ffca157511b3046d3f4bb25ca66662b16e5
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 954d468134c49d3b86fc39de9177afc164328400
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977678"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446668"
 ---
 # <a name="sql-server-agent-stored-procedures-transact-sql"></a>SQL Server Agent 預存程序 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

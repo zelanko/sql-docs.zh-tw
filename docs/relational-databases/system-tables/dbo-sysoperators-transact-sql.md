@@ -1,5 +1,6 @@
 ---
-title: dbo.sys運算子（Transact-sql） |Microsoft Docs
+description: dbo.sysoperators (Transact-SQL)
+title: dbo.sys運算子 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c2afa20c-b15f-46ca-ae74-2eb65909409e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b7581d1456524c8294e470a952fb55f6f052973b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3a16b2af8e9752b0df51a1cc60a227e0b055b798
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890472"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446630"
 ---
 # <a name="dbosysoperators-transact-sql"></a>dbo.sysoperators (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,11 +36,11 @@ ms.locfileid: "85890472"
 |-----------------|---------------|-----------------|  
 |**id**|**int**|操作員的識別碼。|  
 |**name**|**sysname**|操作員的名稱。|  
-|**後**|**tinyint**|警示通知的狀態 (布林)。 如果是**1**，此操作員可以在發生警示時收到通知。|  
-|**email_address**|**Nvarchar （100）**|這位操作員的電子郵件地址。|  
+|**啟用**|**tinyint**|警示通知的狀態 (布林)。 如果是 **1**，這個操作員可以在發生警示時收到通知。|  
+|**email_address**|**Nvarchar (100) **|這位操作員的電子郵件地址。|  
 |**last_email_date**|**int**|這位操作員前次收到電子郵件警示通知的日期。|  
 |**last_email_time**|**int**|這位操作員前次收到電子郵件警示通知的日期時間。|  
-|**pager_address**|**Nvarchar （100）**|這位操作員的呼叫器號碼。|  
+|**pager_address**|**Nvarchar (100) **|這位操作員的呼叫器號碼。|  
 |**last_pager_date**|**int**|這位操作員前次收到呼叫器警示通知的日期。|  
 |**last_pager_time**|**int**|這位操作員前次收到呼叫器警示通知的日期時間。|  
 |**weekday_pager_start_time**|**int**|這是一週工作日期 (週一至週五) 的時間，過了這個日期時間之後，這位操作員便能夠收到呼叫器警示通知。|  
@@ -49,7 +50,7 @@ ms.locfileid: "85890472"
 |**sunday_pager_start_time**|**int**|這是一個週日的時間，過了這個時間之後，這位操作員便能夠收到呼叫器警示通知。|  
 |**sunday_pager_end_time**|**int**|這是一個週日的時間，過了這個時間之後，這位操作員便無法收到呼叫器警示通知。|  
 |**pager_days**|**tinyint**|這是一個位元遮罩，代表這位操作員能夠收到呼叫器警示通知之每週的日期。|  
-|**netsend_address**|**Nvarchar （100）**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**netsend_address**|**Nvarchar (100) **|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**last_netsend_date**|**int**|這是最近的網路訊息前次傳給指定操作員識別碼的日期。|  
 |**last_netsend_time**|**int**|這是最近的網路訊息前次傳給指定操作員識別碼的時間。|  
 |**category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

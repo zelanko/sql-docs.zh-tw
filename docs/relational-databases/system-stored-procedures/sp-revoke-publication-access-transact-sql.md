@@ -1,5 +1,6 @@
 ---
-title: sp_revoke_publication_access （Transact-sql） |Microsoft Docs
+description: sp_revoke_publication_access (Transact-SQL)
+title: sp_revoke_publication_access (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 84ed9e77-991f-4fa5-a21f-7c6bfec1b3e3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cb9b695000cbeb359eb6b762c8d1800651aa963f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0be8037325faba0cecb0988903677c14260b8a47
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901369"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446776"
 ---
 # <a name="sp_revoke_publication_access-transact-sql"></a>sp_revoke_publication_access (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,20 +38,20 @@ sp_revoke_publication_access [ @publication = ] 'publication' , [ @login = ] 'lo
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'`這是要存取的發行集名稱。 *發行*集是**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 這是要存取的發行集名稱。 *發行* 集是 **sysname**，沒有預設值。  
   
-`[ @login = ] 'login'`這是登入識別碼。 *login*是**sysname**，沒有預設值。  
+`[ @login = ] 'login'` 這是登入識別碼。 *login* 是 **sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_revoke_publication_access**用於快照式、交易式和合併式複寫中。  
+ **sp_revoke_publication_access** 用於快照式、交易式和合併式複寫中。  
   
- **sp_revoke_publication_access**可以重複呼叫。  
+ **sp_revoke_publication_access** 可以重複呼叫。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_revoke_publication_access**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色或 **db_owner** 固定資料庫角色的成員，才能夠執行 **sp_revoke_publication_access**。  
   
 ## <a name="see-also"></a>另請參閱  
  [sp_grant_publication_access &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   

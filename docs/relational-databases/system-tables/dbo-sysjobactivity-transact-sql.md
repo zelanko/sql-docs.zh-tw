@@ -1,5 +1,6 @@
 ---
-title: dbo.sysjobactivity （Transact-sql） |Microsoft Docs
+description: dbo.sysjobactivity (Transact-SQL)
+title: dbo.sysjobactivity (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/05/2016
 ms.prod: sql
@@ -19,21 +20,21 @@ helpviewer_keywords:
 ms.assetid: fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: aee1a088e4b2c95b33f8bdb4002853877d8c1275
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 75a517f8a55eabbda1c9d50d37c6254079cc33b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890525"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446643"
 ---
 # <a name="dbosysjobactivity-transact-sql"></a>dbo.sysjobactivity (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  記錄目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的活動和狀態。  此資料表會儲存在**msdb**資料庫中。
+  記錄目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的活動和狀態。  此資料表儲存在 **msdb** 資料庫中。
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**int**|**Msdb**資料庫中**syssessions**資料表所儲存之會話的識別碼。|  
+|**session_id**|**int**|**Msdb**資料庫的**syssessions**資料表中所儲存之會話的識別碼。|  
 |**job_id**|**uniqueidentifier**|作業的識別碼。|  
 |**run_requested_date**|**datetime**|要求執行作業的日期和時間。|  
 |**run_requested_source**|**sysname(nvarchar(128))**|執行作業的要求者。<br /><br /> **1** = SOURCE_SCHEDULER<br /><br /> **2** = SOURCE_ALERTER<br /><br /> **3** = SOURCE_BOOT<br /><br /> **4** = SOURCE_USER<br /><br /> **6** = SOURCE_ON_IDLE_SCHEDULE|  
@@ -42,11 +43,11 @@ ms.locfileid: "85890525"
 |**last_executed_step_id**|**int**|先前執行的最後一個作業步驟的識別碼。|  
 |**last_executed_step_**<br /><br /> **date**|**datetime**|最後一個作業步驟開始執行的日期和時間。|  
 |**stop_execution_date**|**datetime**|作業執行完成的日期和時間。|  
-|**job_history_id**|**int**|用來識別**sysjobhistory**資料表中的資料列。|  
+|**job_history_id**|**int**|用來識別 **sysjobhistory** 資料表中的資料列。|  
 |**next_scheduled_run_date**|**datetime**|排程下一次執行作業的日期和時間。|  
 
 ## <a name="example"></a>範例
-這個範例會傳回所有 SQL Server Agent 作業的執行時間狀態。  在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中執行下列 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。
+此範例會傳回所有 SQL Server Agent 作業的執行時間狀態。  在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中執行下列 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。
 ```sql
 SELECT sj.Name, 
     CASE

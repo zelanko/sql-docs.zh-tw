@@ -1,4 +1,5 @@
 ---
+description: 刪除檢查條件約束
 title: 刪除檢查條件約束 | Microsoft 文件
 ms.custom: ''
 ms.date: 06/28/2017
@@ -17,12 +18,12 @@ ms.assetid: 5f86c1a6-f5fa-4e77-a892-f6ae96fc0ab3
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df79eff52be0377bf769f106c8a6753a054b786d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 557c791f0457ef31c1bf5aeca51787f2200a70ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768374"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446449"
 ---
 # <a name="delete-check-constraints"></a>刪除檢查條件約束
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,9 +55,9 @@ ms.locfileid: "85768374"
   
 1.  在 **[物件總管]** 中，展開含有檢查條件約束的資料表。  
   
-2.  展開  **[條件約束]** 。  
+2.  展開  **[條件約束]**。  
   
-3.  以滑鼠右鍵按一下條件約束，然後按一下 [刪除]  。  
+3.  以滑鼠右鍵按一下條件約束，然後按一下 [刪除]****。  
   
 4.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]** 。  
   

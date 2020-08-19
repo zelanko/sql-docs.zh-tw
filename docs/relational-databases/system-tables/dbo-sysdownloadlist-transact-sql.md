@@ -1,5 +1,6 @@
 ---
-title: dbo.sysdownloadlist （Transact-sql） |Microsoft Docs
+description: dbo.sysdownloadlist (Transact-SQL)
+title: dbo.sysdownloadlist (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 71087a4c-e829-488e-aa7d-a9476e2b4779
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ad996430a5286f95b83e18a5a6d4bd7efff18ec6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0240d13b1f787eb9b0356b1443f8401477176d0a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890509"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446649"
 ---
 # <a name="dbosysdownloadlist-transact-sql"></a>dbo.sysdownloadlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,16 +36,16 @@ ms.locfileid: "85890509"
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|提供資料列自然插入順序的識別欄位。|  
 |**source_server**|**sysname**|來源伺服器的名稱。|  
-|**operation_code**|**tinyint**|作業的作業碼：<br /><br /> **1** = INS （插入）<br /><br /> **2** = UPD （更新）<br /><br /> **3** = DEL （DELETE）<br /><br /> **4** = 啟動<br /><br /> **5** = 停止|  
+|**operation_code**|**tinyint**|作業的作業碼：<br /><br /> **1** = INS (插入) <br /><br /> **2** = UPD (更新) <br /><br /> **3** = DEL (刪除) <br /><br /> **4** = 啟動<br /><br /> **5** = 停止|  
 |**object_type**|**tinyint**|物件類型碼。|  
 |**object_id** <sup>1</sup>|**uniqueidentifier**|物件識別碼。|  
 |**target_server**|**sysname**|目標伺服器的名稱。|  
 |**error_message**|**nvarchar(1024)**|當目標伺服器處理特定資料列而發現錯誤時，所出現的錯誤訊息。|  
 |**date_posted**|**datetime**|作業公佈到目標伺服器的日期和時間。|  
 |**date_downloaded**|**datetime**|前次下載作業的日期和時間。|  
-|**status**|**tinyint**|作業的狀態：<br /><br /> **0** = 尚未下載<br /><br /> **1** = 已成功下載|  
+|**status**|**tinyint**|作業的狀態：<br /><br /> **0** = 尚未下載<br /><br /> **1** = 成功下載|  
 |**deleted_object_name**|**sysname**|已刪除的物件名稱。|  
   
- <sup>1</sup> **object_id**的資料行可以是 **-1**的值，如果**operation_code**資料行是 DELETE 的值，就會對應到 ALL 的值。  
+ <sup>1</sup> **object_id** 資料行可以是 **-1**的值，如果 **operation_code** 資料行是 [刪除] 的值，就會對應到 [全部] 的值。  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 刪除資料表 (Database Engine)
 title: 刪除資料表 (Database Engine) | Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: ca6aa3e9-9885-44c3-bafc-aec441fd97ec
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de4c69e4c84631df200dce00cd3f4e7a02b99971
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: ae9949c8a116d4e9a952b02f6f5ff17ef75fb599
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395351"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446454"
 ---
 # <a name="delete-tables-database-engine"></a>刪除資料表 (Database Engine)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -70,9 +71,9 @@ ms.locfileid: "87395351"
   
 1.  在 [物件總管] 中選取要刪除的資料表。  
   
-2.  在資料表上按一下滑鼠右鍵，再從快速鍵功能表中選擇 [刪除]  。  
+2.  在資料表上按一下滑鼠右鍵，再從快速鍵功能表中選擇 [刪除]****。  
   
-3.  訊息方塊會提示您確認是否刪除。 按一下 [是]  。  
+3.  訊息方塊會提示您確認是否刪除。 按一下 [是] 。  
 
     > [!NOTE]  
     >  刪除資料表會自動移除它的所有關聯性。  

@@ -1,5 +1,6 @@
 ---
-title: log_shipping_monitor_primary （Transact-sql） |Microsoft Docs
+description: log_shipping_monitor_primary (Transact-SQL)
+title: log_shipping_monitor_primary (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 5f629a29-1a62-40e6-ae33-6f6b7dd09a36
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f7b071535ced290b10c059f6b450895a71b0f7ca
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d74a594c4a8b9140f550fd02878cd4994779fe42
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890193"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446566"
 ---
 # <a name="log_shipping_monitor_primary-transact-sql"></a>log_shipping_monitor_primary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  在每個記錄傳送組態中，儲存每個主要資料庫各一項監視記錄。 此資料表會儲存在**msdb**資料庫中。  
+  在每個記錄傳送組態中，儲存每個主要資料庫各一項監視記錄。 此資料表儲存在 **msdb** 資料庫中。  
   
  主要伺服器和次要伺服器也會使用記錄和監視的相關資料表。   
   
@@ -39,13 +40,13 @@ ms.locfileid: "85890193"
 |**backup_threshold**|**int**|在產生警示之前，備份作業之間所能經歷的時間 (以分鐘為單位)。|  
 |**threshold_alert**|**int**|當超出備份臨界值時，所產生的警示。|  
 |**threshold_alert_enabled**|**bit**|決定是否啟用備份臨界值警示。 1 = 已啟用。<br /><br /> 0 = 已停用。|  
-|**last_backup_file**|**Nvarchar （500）**|最近之交易記錄備份的絕對路徑。|  
+|**last_backup_file**|**Nvarchar (500) **|最近之交易記錄備份的絕對路徑。|  
 |**last_backup_date**|**datetime**|在主要資料庫中，前一個交易記錄備份作業的日期和時間。|  
 |**last_backup_date_utc**|**datetime**|在主要資料庫中，前一個交易記錄備份作業的日期和時間 (以國際標準時間 (UTC) 為單位)。|  
 |**history_retention_period**|**int**|給定主要資料庫的記錄傳送記錄，在刪除之前所保留的時間 (以分鐘為單位)。|  
   
 ## <a name="remarks"></a>備註  
- 除了儲存在遠端監視伺服器之外，主伺服器的相關資訊也會儲存在主伺服器的**log_shipping_monitor_primary**資料表中。  
+ 除了儲存在遠端監視伺服器之外，主伺服器的相關資訊也會儲存在主伺服器的 **log_shipping_monitor_primary** 資料表中。  
   
 ## <a name="see-also"></a>另請參閱  
  [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

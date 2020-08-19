@@ -1,4 +1,5 @@
 ---
+description: 從資料表中刪除資料行
 title: 從資料表中刪除資料行 | Microsoft 文件
 ms.custom: ''
 ms.date: 04/11/2017
@@ -16,12 +17,12 @@ ms.assetid: 0d8f6e4f-bc71-4fa3-8615-74249c8e072d
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cdfb2aa26ccc46d7aca0b7b0a599552401f79741
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 2ad600234ac931f408cdf60ba5b2a855823f8151
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396547"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446437"
 ---
 # <a name="delete-columns-from-a-table"></a>從資料表中刪除資料行
 
@@ -65,17 +66,17 @@ ms.locfileid: "87396547"
 ### <a name="to-delete-columns-by-using-object-explorer"></a>若要使用物件總管來刪除資料行
 
 1. 在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。
-2. 在 [物件總管]  中，尋找您想要從中刪除資料行的資料表，然後展開以公開資料行名稱。
-3. 以滑鼠右鍵按一下您想要刪除的資料行，然後選擇 [刪除]  。
-4. 在 **[刪除物件]** 對話方塊中，按一下 **[確定]** 。
+2. 在 [物件總管]**** 中，尋找您想要從中刪除資料行的資料表，然後展開以公開資料行名稱。
+3. 以滑鼠右鍵按一下您想要刪除的資料行，然後選擇 [刪除]****。
+4. 在 **[刪除物件]** 對話方塊中，按一下 **[確定]**。
 
 如果資料行包含條件約束或其他相依性， **[刪除物件]** 對話方塊將會顯示錯誤訊息。 請刪除參考的條件約束，藉以解決此錯誤。
 
 ### <a name="to-delete-columns-by-using-table-designer"></a>若要使用資料表設計工具來刪除資料行
 
-1. 在**物件總管**中，以滑鼠右鍵按一下您想要從中刪除資料行的資料表，然後選擇 [設計]  。
-2. 以滑鼠右鍵按一下您想要刪除的資料行，然後從捷徑功能表中選擇 [刪除資料行]  。
-3. 如果資料行參與關聯性 (FOREIGN KEY 或 PRIMARY KEY)，則會有訊息提示您確認是否要刪除選取的資料行及其關聯性。 選擇 [是]  。
+1. 在**物件總管**中，以滑鼠右鍵按一下您想要從中刪除資料行的資料表，然後選擇 [設計]****。
+2. 以滑鼠右鍵按一下您想要刪除的資料行，然後從捷徑功能表中選擇 [刪除資料行]****。
+3. 如果資料行參與關聯性 (FOREIGN KEY 或 PRIMARY KEY)，則會有訊息提示您確認是否要刪除選取的資料行及其關聯性。 選擇 [ **是**]。
 
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL
 

@@ -1,5 +1,6 @@
 ---
-title: sp_update_agent_profile （Transact-sql） |Microsoft Docs
+description: sp_update_agent_profile (Transact-SQL)
+title: sp_update_agent_profile (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cc81f227-0df3-4151-bb4d-4f45ea997b71
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a529df241a5d827c277f3a39110ae04697a13e17
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4695c5fdf07748937fdd1380170626e21942fd11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891389"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446683"
 ---
 # <a name="sp_update_agent_profile-transact-sql"></a>sp_update_agent_profile (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @agent_type = ] 'agent_type'`這是代理程式的類型。 *agent_type*為**int**，沒有預設值，而且可以是下列其中一個值。  
+`[ @agent_type = ] 'agent_type'` 這是代理程式的類型。 *agent_type* 是 **int**，沒有預設值，它可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -47,18 +48,18 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 |**4**|合併代理程式。|  
 |**9**|佇列讀取器代理程式。|  
   
-`[ @agent_id = ] 'agent_id'`這是代理程式的識別碼。 *agent_id*是**int**，沒有預設值。  
+`[ @agent_id = ] 'agent_id'` 這是代理程式的識別碼。 *agent_id* 是 **int**，沒有預設值。  
   
-`[ @profile_id = ] 'profile_id'`這是代理程式應使用之設定檔的識別碼。 *profile_id*是**int**，沒有預設值。 若要查看為每個代理程式定義的配置檔案清單，請使用[sp_help_agent_profile &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)。 如需系統設定檔的詳細資訊，請參閱複寫[代理程式設定檔](../../relational-databases/replication/agents/replication-agent-profiles.md)。  
+`[ @profile_id = ] 'profile_id'` 這是代理程式應該使用的設定檔識別碼。 *profile_id* 是 **int**，沒有預設值。 若要查看為每個代理程式定義的配置檔案清單，請使用 [sp_help_agent_profile &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)。 如需系統設定檔的詳細資訊，請參閱複寫 [代理程式設定檔](../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_update_agent_profile**用於所有類型的複寫中。  
+ **sp_update_agent_profile** 用於所有類型的複寫中。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_update_agent_profile**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色的成員，才可以執行 **sp_update_agent_profile**。  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫代理程式設定檔](../../relational-databases/replication/agents/replication-agent-profiles.md)   
