@@ -1,4 +1,5 @@
 ---
+description: 快照集代理程式
 title: 快照集代理程式 | Microsoft 文件
 ms.custom: ''
 ms.date: 03/07/2017
@@ -15,18 +16,18 @@ ms.assetid: b715e621-2cd5-4a15-8f58-a341aa8ef5e4
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: bcd2ee4bc1f193716b084bf816d27a5107e27a84
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 532917bc211dcc281dd65ebb6229febc953d5805
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767636"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420382"
 ---
 # <a name="snapshot-agent"></a>快照集代理程式
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  **[快照集代理程式]** 對話方塊會顯示快照集代理程式的詳細資訊，包括狀態、記錄、參考用訊息以及任何錯誤訊息。  
+   [快照集代理程式]**** 對話方塊會顯示快照集代理程式的詳細資訊，包括狀態、記錄、資訊訊息以及任何錯誤訊息。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  從 **[檢視]** 功能表選取要檢視的快照集代理程式工作階段，然後在標示為 **[快照集代理程式的工作階段]** 的方格中選取特定工作階段。 有關這個工作階段的詳細資訊，會顯示在標示為 **[所選取工作階段中的動作]** 之方格中。 如果選取的工作階段結束時發生錯誤， **[所選取之工作階段的錯誤詳細資料或訊息]** 的文字區域也會顯示。  
   
  **檢視**  
@@ -41,7 +42,7 @@ ms.locfileid: "85767636"
   
 -   未執行  
   
--   Completed  
+-   已完成  
   
  **Start Time**  
  工作階段的開始時間。  

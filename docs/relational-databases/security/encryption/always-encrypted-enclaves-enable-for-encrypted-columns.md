@@ -1,4 +1,5 @@
 ---
+description: 為現有加密資料行啟用具有安全記憶體保護區的 Always Encrypted
 title: 為現有加密資料行啟用具有安全記憶體保護區的 Always Encrypted | Microsoft Docs
 ms.custom: ''
 ms.date: 10/30/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3d7028cc1d1789d65da424e985e191f9217b9328
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 4ef6fe83bd2d9671ccf43b4957497a8c1fc7a4cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411404"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420332"
 ---
 # <a name="enable-always-encrypted-with-secure-enclaves-for-existing-encrypted-columns"></a>為現有加密資料行啟用具有安全記憶體保護區的 Always Encrypted 
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -26,8 +27,8 @@ ms.locfileid: "87411404"
 
 您可以使用幾種不同的方式，為現有的加密資料行啟用記憶體保護區計算，視下列情況而定：
 
-- **範圍/細微性：** 您是要為一小部分資料行啟用記憶體保護區功能，還是為以指定資料行主要金鑰保護的所有資料行啟用記憶體保護區功能？
-- **資料大小：** 包含您要啟用記憶體保護區功能之資料行的資料表大小為何？
+- **範圍/細微性：** 您要啟用一小部分資料行的記憶體保護區功能，還是啟用使用指定資料行主要金鑰保護之所有資料行的記憶體保護區功能？
+- **資料大小：** 包含您要設為啟用記憶體保護區之資料行的資料表大小為何？
 - 您也要變更資料行的加密類型嗎？ 請記住，唯一的隨機化加密支援豐富計算 (模式比對、比較運算子)。 如果資料行是使用確定性加密來加密，則也需要使用隨機化加密來重新加密，以解除鎖定豐富計算。
 
 下列各節描述為現有資料行啟用記憶體保護區的三種方法。

@@ -1,4 +1,5 @@
 ---
+description: 全文檢索搜尋使用者入門
 title: 全文檢索搜尋使用者入門 | Microsoft Docs
 ms.date: 03/31/2020
 ms.prod: sql
@@ -15,12 +16,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e1df3f06d5973f5ec0002da4c67b82519435a61d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4166cdf974ed1f7b5b5d9033f4bc9bdb6e60ef52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767587"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420402"
 ---
 # <a name="get-started-with-full-text-search"></a>全文檢索搜尋使用者入門
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

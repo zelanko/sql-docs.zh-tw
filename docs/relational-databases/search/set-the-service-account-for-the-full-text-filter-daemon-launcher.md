@@ -1,4 +1,5 @@
 ---
+description: 設定全文檢索篩選背景程式啟動器的服務帳戶
 title: 設定全文檢索篩選精靈啟動器的服務帳戶
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4603d4a14461bb05576a6f6ffe34db4968223718
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: db5d05ce1b3712eebbd77d34e8ae0b380e18dcbf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85628939"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420372"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>設定全文檢索篩選背景程式啟動器的服務帳戶
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,13 +34,13 @@ SQL 全文檢索篩選背景程式啟動器服務是與特定 [!INCLUDE[ssNoVers
 
 ##  <a name="set-the-service-account"></a><a name="setting"></a> 設定服務帳戶  
   
-1.  在 [開始]  功能表上，指向 [所有程式]  ，展開 [[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]，然後按一下 [SQL Server 2016 組態管理員]  。  
+1.  在 [開始]**** 功能表上，指向 [所有程式]****，展開 [[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]，然後按一下 [SQL Server 2016 組態管理員]****。  
   
-2.  在 [SQL Server 組態管理員]  中，按一下 [SQL Server 服務]  ，以滑鼠右鍵按一下 **[SQL 全文檢索篩選背景程式啟動器 (** 執行個體名稱  **)]** ，然後按一下 [屬性]  。  
+2.  在 [SQL Server 組態管理員] 中，按一下 [SQL Server 服務]，以滑鼠右鍵按一下 **[SQL 全文檢索篩選背景程式啟動器 (** 執行個體名稱 **)]** ，然後按一下 [屬性]。  
   
-3.  按一下對話方塊的 [登入]  索引標籤，然後選取或輸入用以執行 SQL 全文檢索篩選背景程式啟動器服務所啟動之處理序的帳戶。  
+3.  按一下對話方塊的 [登入]**** 索引標籤，然後選取或輸入用以執行 SQL 全文檢索篩選背景程式啟動器服務所啟動之處理序的帳戶。  
   
-4.  在您關閉對話方塊之後，請按一下 [重新啟動]  重新啟動 SQL 全文檢索篩選背景程式啟動器服務。  
+4.  在您關閉對話方塊之後，請按一下 [重新啟動] **** 重新啟動 SQL 全文檢索篩選背景程式啟動器服務。  
   
 ![SQL 全文檢索篩選背景程式啟動器處理序屬性](../../relational-databases/search/media/sql-full-text-filter-daemon-launch-process-properties.png)
   

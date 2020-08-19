@@ -1,4 +1,5 @@
 ---
+description: 快照集代理程式 (新增發行集精靈)
 title: 快照集代理程式 (新增發行集精靈) | Microsoft 文件
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ ms.assetid: 0257d4ee-1f7b-49fd-b4ef-65bfc1ef6951
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 102eb733cf0b2ca55f52ec9751e67f51c3cae988
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 09ba1d7b01a7b162d68dfb55c03fe1fead25f941
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767631"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420392"
 ---
 # <a name="snapshot-agent-new-publication-wizard"></a>快照集代理程式 (新增發行集精靈)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "85767631"
   
  對於使用參數化篩選的合併式發行集，在完成發行集快照集之後，您必須為資料的每一個資料分割建立快照集。 如需詳細資訊，請參閱 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **[立即建立快照集]** (合併式複寫) 或 **[立即建立快照集，並保留快照集為可使用狀態，以初始化訂閱]** (異動複寫)  
  選取此核取方塊即可在完成新增發行集精靈之後立即建立快照集。 如果您想要在產生快照集之後變更 **[發行集屬性]** 對話方塊中的快照集屬性，或要初始化不具有快照集的訂閱者，請清除此核取方塊。 如需詳細資訊，請參閱 [不使用快照集初始化交易式訂閱](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手動初始化訂閱。  
   

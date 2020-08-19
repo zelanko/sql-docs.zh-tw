@@ -1,4 +1,5 @@
 ---
+description: 快照集資料夾
 title: 快照集資料夾 | Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 3eb1b73f-ddb3-4d09-be6e-811c414698e9
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 21fe129f15022532e9e7c8613159cfc7617fd6e4
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: c754399380dfac4b267e4ff9c816ef2dc4e9f81f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864865"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420362"
 ---
 # <a name="snapshot-folder"></a>快照集資料夾
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
