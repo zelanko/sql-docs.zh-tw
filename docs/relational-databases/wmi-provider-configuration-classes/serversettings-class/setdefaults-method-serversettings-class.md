@@ -1,5 +1,6 @@
 ---
-title: SetDefaults 方法（ServerSettings）
+description: SetDefaults 方法 (ServerSettings 類別)
+title: 'SetDefaults 方法 (ServerSettings) '
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 76e4cfab-4b15-4da4-bb2f-8aac6f927f79
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4c1f7670aa0e90f848c3f66e65df104181541dee
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3d3dcfae6dc8f4871ffc5b14ef47fb5508b7f01c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880730"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460080"
 ---
 # <a name="setdefaults-method-serversettings-class"></a>SetDefaults 方法 (ServerSettings 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,13 +38,13 @@ object.SetDefaults(OverwriteAll)
   
 ## <a name="parts"></a>組件  
  *object*  
- 代表用戶端實例的[ServerSettings 類別](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md)物件 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+ 代表用戶端實例的 [ServerSettings 類別](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md) 物件 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 #### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
-|*OverwriteAll*|布林值，指定是否要覆寫實例上現有的值 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ： **true**表示要覆寫現有的資料，如果不覆寫現有的資料，則為**false** 。|  
+|*OverwriteAll*|布林值，指定是否要覆寫實例上的現有值 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ： **true** 以覆寫現有的資料，如果不覆寫現有的資料，則為 **false** 。|  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  u**int32** 值，如果已成功修改此服務為 0，如果不支援要求則為 1，以及其他指示錯誤的任何數字。  

@@ -1,4 +1,5 @@
 ---
+description: 預存程式-在 SQL Server Native Client 中呼叫
 title: 呼叫預存程序 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -19,17 +20,17 @@ ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a08e03bf4fed86d7da0f341e6bf2b74d0ef84a9
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 3a2a97a7ac060e22ee352324a454f321e1c7d1f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243860"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498809"
 ---
 # <a name="stored-procedures---calling-in-sql-server-native-client"></a>預存程式-在 SQL Server Native Client 中呼叫
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  預存程序可以有零或多個參數。 它也可以傳回值。 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者時，可以藉由下列方式傳遞預存程式的參數：  
+  預存程序可以有零或多個參數。 它也可以傳回值。 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者時，預存程式的參數可以透過下列方式傳遞：  
   
 -   將資料值寫入程式碼。  
   
@@ -94,7 +95,7 @@ ms.locfileid: "87243860"
   
  使用 ODBC CALL 逸出序列呼叫程序的一般語法為：  
   
- {[**？ =**]**呼叫**_procedure_name_[**（**[*參數*] [**，**[*parameter*]] .。。**)**]}  
+ {[**？ =**]**呼叫**_procedure_name_[** (**[*參數*] [**，**[*參數*]] .。。**) **]}  
   
  例如：  
   
@@ -120,7 +121,7 @@ ms.locfileid: "87243860"
  如需示範 RPC 逸出序列的範例應用程式，請參閱[執行預存程序 &#40;使用 RPC 語法&#41; 與處理傳回碼和輸出參數 &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md)。  
   
 ### <a name="transact-sql-execute-statement"></a>Transact-SQL EXECUTE 陳述式  
- ODBC CALL 逸出序列和 RPC 逸出序列都是呼叫預存程序而非 [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md) 陳述式的慣用方法。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者會使用的 RPC 機制 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 來優化命令處理。 此 RPC 通訊協定會排除在伺服器上完成的許多參數處理與陳述式剖析，藉以增加效能。  
+ ODBC CALL 逸出序列和 RPC 逸出序列都是呼叫預存程序而非 [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md) 陳述式的慣用方法。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端 OLE DB 提供者會使用的 RPC 機制 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 來優化命令處理。 此 RPC 通訊協定會排除在伺服器上完成的許多參數處理與陳述式剖析，藉以增加效能。  
   
  這是 [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE** 陳述式的範例：  
   
@@ -129,6 +130,6 @@ EXECUTE SalesByCategory 'Produce', '1995'
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [預存程式](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
+ [預存程序](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
   
   

@@ -1,5 +1,6 @@
 ---
-title: sp_helpuser （Transact-sql） |Microsoft Docs
+description: sp_helpuser (Transact-SQL)
+title: sp_helpuser (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 049b1183ad21e481ca47368b3dfe916d0ee41185
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: da6af8493f8646f19436501ab750455ebbe98558
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899462"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469229"
 ---
 # <a name="sp_helpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85899462"
   報告目前資料庫中資料庫層級主體的相關資訊。  
   
 > [!IMPORTANT]  
->  **sp_helpuser**不會傳回中所引進之安全性實體的相關資訊 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。 請改用[sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 。  
+>  **sp_helpuser** 不會傳回中引進的安全性實體相關資訊 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。 請改用 [sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,22 +43,22 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @name_in_db = ] 'security_account'`這是目前資料庫中的資料庫使用者或資料庫角色的名稱。 *security_account*必須存在於目前的資料庫中。 *security_account*是**sysname**，預設值是 Null。 如果未指定*security_account* ， **sp_helpuser**會傳回所有資料庫主體的相關資訊。  
+`[ @name_in_db = ] 'security_account'` 這是目前資料庫中的資料庫使用者或資料庫角色的名稱。 *security_account* 必須存在於目前的資料庫中。 *security_account* 是 **sysname**，預設值是 Null。 如果未指定 *security_account* ， **sp_helpuser** 會傳回所有資料庫主體的相關資訊。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
- 下表顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未針對*security_account*指定使用者帳戶或或 Windows 使用者時的結果集。  
+ 當使用者帳戶和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Windows 使用者都未指定 *security_account*時，下表顯示結果集。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**UserName**|**sysname**|目前資料庫中的使用者。|  
-|**RoleName**|**sysname**|使用者**名稱**所屬的角色。|  
-|**LoginName**|**sysname**|使用者**名稱**的登入。|  
-|**DefDBName**|**sysname**|使用者**名稱**的預設資料庫。|  
+|**使用者名稱**|**sysname**|目前資料庫中的使用者。|  
+|**RoleName**|**sysname**|使用者 **名稱** 所屬的角色。|  
+|**LoginName**|**sysname**|使用者 **名稱**的登入。|  
+|**DefDBName**|**sysname**|**UserName**的預設資料庫。|  
 |**DefSchemaName**|**sysname**|資料庫使用者的預設結構描述。|  
-|**UserID**|**smallint**|目前資料庫中的使用者**名稱**識別碼。|  
+|**UserID**|**smallint**|目前資料庫中的使用者 **名稱** 識別碼。|  
 |**SID**|**smallint**|使用者安全性識別碼 (SID)。|  
   
  下表顯示未指定使用者帳戶且別名存在於目前資料庫中時的結果集。  
@@ -67,7 +68,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 |**LoginName**|**sysname**|作為目前資料庫中之使用者的別名之登入。|  
 |**UserNameAliasedTo**|**sysname**|目前資料庫中以該登入為別名的使用者名稱。|  
   
- 下表顯示為*security_account*指定角色時的結果集。  
+ 下表顯示為 *security_account*指定角色時的結果集。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -77,7 +78,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 |**Userid**|**smallint**|角色成員的使用者識別碼。|  
   
 ## <a name="remarks"></a>備註  
- 若要查看資料庫角色成員資格的相關資訊，請使用[sys.databases database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)。 若要查看伺服器角色成員的相關資訊，請使用[sys.databases server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)，若要查看伺服器層級主體的相關資訊，請使用[sys.databases。 server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)。  
+ 若要查看資料庫角色成員資格的相關資訊，請使用 [sys. database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)。 若要查看伺服器角色成員的相關資訊，請使用 [sys. server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)，若要查看伺服器層級主體的相關資訊，請使用 [sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)。  
   
 ## <a name="permissions"></a>權限  
  需要 **public** 角色的成員資格。  
@@ -108,12 +109,12 @@ EXEC sp_helpuser 'db_securityadmin';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的安全性預存程式](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的安全性預存程式 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [sys.database_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   
- [server_principals &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
+ [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sys.server_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  
   
   

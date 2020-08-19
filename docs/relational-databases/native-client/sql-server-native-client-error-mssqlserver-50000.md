@@ -1,4 +1,5 @@
 ---
+description: SQL Server Native Client 錯誤 MSSQLSERVER_50000
 title: MSSQLSERVER_50000 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 5426d87a-d5d9-4984-b211-b07d69e834a2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0338d8d2002d0512a3d242a0a2cb38c75a46d6e5
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: c0f5c601208aefcff17349a99318ce1160b7a108
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332047"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498835"
 ---
 # <a name="sql-server-native-client-error-mssqlserver_50000"></a>SQL Server Native Client 錯誤 MSSQLSERVER_50000
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,5 +1,6 @@
 ---
-title: pdw_nodes_columns (Transact-sql) |Microsoft Docs
+description: 'sys. pdw_nodes_columns (Transact-sql) '
+title: sys. pdw_nodes_columns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -12,26 +13,26 @@ ms.assetid: 268c77b7-1d71-4197-a2ed-5e2b2b8fc260
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1b5e9e05e65a7121f30bfc0fc296229e943a8cd9
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 32cd66ea386f2b07d910c9371c66036a4e162dfd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197390"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490229"
 ---
-# <a name="syspdw_nodes_columns-transact-sql"></a>pdw_nodes_columns (Transact-sql) 
+# <a name="syspdw_nodes_columns-transact-sql"></a>sys. pdw_nodes_columns (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  顯示使用者定義資料表和使用者定義之視圖的資料行。  
+  顯示使用者定義資料表和使用者定義視圖的資料行。  
   
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|這個資料行所屬的物件識別碼。||  
-|name|**sysname**|資料行的名稱。 物件中唯一的。||  
-|column_id|**int**|資料行的識別碼。 物件中唯一的。||  
+|NAME|**sysname**|資料行的名稱。 物件中的唯一。||  
+|column_id|**int**|資料行的識別碼。 物件中的唯一。||  
 |system_type_id|**tinyint**|資料行的系統類型識別碼。||  
 |user_type_id|**int**|使用者所定義的資料行類型識別碼。||  
-|max_length|**smallint**|資料行的最大長度 (以位元組為單位)。|針對不支援的資料行類型，包含-1 (無效) 。|  
+|max_length|**smallint**|資料行的最大長度 (以位元組為單位)。|針對不支援的資料行類型，包含-1 (不正確) 。|  
 |精確度|**tinyint**|如果是以數值為基礎，便是資料行的有效位數；否則，便是 0。||  
 |級別|**tinyint**|如果是以數值為基礎，便是資料行的小數位數；否則，便是 0。||  
 |collation_name|**sysname**|如果是以字元為基礎，便是資料行的定序名稱；否則，便是 NULL。||  
@@ -58,6 +59,6 @@ ms.locfileid: "86197390"
   
 ## <a name="see-also"></a>另請參閱  
  [SQL 資料倉儲與平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [all_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)  
+ [sys. all_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)  
   
   

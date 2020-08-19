@@ -1,4 +1,5 @@
 ---
+description: 第 2 課：在階層式資料表中建立與管理資料
 title: 第 2 課：在階層式資料表中建立與管理資料 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: b54f60e71344bc04271378fbd84214b31bd9503c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0a774ce3918388e8df23de43a01b8b0930f9336d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85692498"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460220"
 ---
 # <a name="lesson-2-create-and-manage-data-in-a-hierarchical-table"></a>第 2 課：在階層式資料表中建立與管理資料
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-在第 1 課中，您修改了現有的資料表以使用 **hierarchyid** 資料類型，並使用現有資料的表示法來擴展 **hierarchyid** 資料行。 在本課程中，您將從新資料表開始，然後使用階層式方法插入資料。 接著，您將使用階層式方法來查詢與操作資料。 
+ 在第 1 課中，您修改了現有的資料表以使用 **hierarchyid** 資料類型，並使用現有資料的表示法來擴展 **hierarchyid** 資料行。 在本課程中，您將從新資料表開始，然後使用階層式方法插入資料。 接著，您將使用階層式方法來查詢與操作資料。 
 
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
 若要完成本教學課程，您需要 SQL Server Management Studio、執行 SQL Server 伺服器的存取權，以及 AdventureWorks 資料庫。
 
 - 安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
@@ -292,7 +293,7 @@ AdventureWorks2017 行銷部門有 8 名員工。 員工層級如下：
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 重新組織階層是常見的維護工作。 在這項工作中，我們將會使用 UPDATE 陳述式搭配 [GetReparentedValue](../../t-sql/data-types/getreparentedvalue-database-engine.md) 方法，先將單一資料列移到階層中的新位置。 然後，我們會將整個子樹移到新位置。  
   
-`GetReparentedValue` 方法會使用兩個引數。 第一個引數描述要修改的階層部分。 例如，如果階層為 **/1/4/2/3/** 而您想要變更 **/1/4/** 區段，讓該階層變成 **/2/1/2/3/** ，留下最後兩個節點 (**2/3/** ) 不變，您必須提供變更的節點 ( **/1/4/** ) 作為第一個引數。 第二個引數會提供新的階層層級，在範例中為 **/2/1/** 。 兩個引數不必包含相同的層級數目。  
+`GetReparentedValue` 方法會使用兩個引數。 第一個引數描述要修改的階層部分。 例如，如果階層為 **/1/4/2/3/** 而您想要變更 **/1/4/** 區段，讓該階層變成 **/2/1/2/3/**，留下最後兩個節點 (**2/3/**) 不變，您必須提供變更的節點 (**/1/4/**) 作為第一個引數。 第二個引數會提供新的階層層級，在範例中為 **/2/1/**。 兩個引數不必包含相同的層級數目。  
   
 ### <a name="move-a-single-row-to-a-new-location-in-the-hierarchy"></a>將單一資料列移到階層中的新位置  
   
@@ -322,7 +323,7 @@ AdventureWorks2017 行銷部門有 8 名員工。 員工層級如下：
     GO  
     ```  
   
-    Wanida 現在是在節點 **/3/1/** 。  
+    Wanida 現在是在節點 **/3/1/**。  
   
 ### <a name="reorganize-a-section-of-a-hierarchy"></a>重新組織階層的區段  
   
@@ -333,7 +334,7 @@ AdventureWorks2017 行銷部門有 8 名員工。 員工層級如下：
     GO  
     ```  
   
-2.  現在，Kevin 回報給 Wanida，Wanida 回報給 Jill，而 Jill 回報給 David。 也就是說，Kevin 位於層級 **/3/1/1/** 。 若要將 Jill 的所有部屬移到新的主管之下，我們會將讓 **/3/** 當作其 **OrgNode** 的所有節點更新為新值。 執行下列程式碼，將 Wanida 更新為回報給 Sariya，但是讓 Kevin 回報給 Wanida：  
+2.  現在，Kevin 回報給 Wanida，Wanida 回報給 Jill，而 Jill 回報給 David。 也就是說，Kevin 位於層級 **/3/1/1/**。 若要將 Jill 的所有部屬移到新的主管之下，我們會將讓 **/3/** 當作其 **OrgNode** 的所有節點更新為新值。 執行下列程式碼，將 Wanida 更新為回報給 Sariya，但是讓 Kevin 回報給 Wanida：  
   
     ```sql  
     DECLARE @OldParent hierarchyid, @NewParent hierarchyid  

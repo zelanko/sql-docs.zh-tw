@@ -1,5 +1,6 @@
 ---
-title: FlagName 屬性（ServerSettingsGeneralFlag）
+description: FlagName 屬性 (ServerSettingsGeneralFlag 類別)
+title: 'FlagName 屬性 (ServerSettingsGeneralFlag) '
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 108c13aa-da9c-4908-b0a3-a9460806819c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 664fab52399faf7cedb70374a41527148b9b6175
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6d0e6bdbeea06834b0c129bafb8e5f1820987db3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880721"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460094"
 ---
 # <a name="flagname-property-serversettingsgeneralflag-class"></a>FlagName 屬性 (ServerSettingsGeneralFlag 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

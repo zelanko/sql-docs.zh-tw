@@ -1,4 +1,5 @@
 ---
+description: 修改資料行 (Database Engine)
 title: 修改資料行 (Database Engine) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ ms.assetid: b67b95c5-61ef-4bd8-9a3e-1640eb7583ac
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: baf0b580ab18334fcffbbe6b16ddd9e04cf42290
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 0f306dd339ed7e91a1d54195dc32346c9139c809
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394493"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460210"
 ---
 # <a name="modify-columns-database-engine"></a>修改資料行 (Database Engine)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -53,13 +54,13 @@ ms.locfileid: "87394493"
   
 #### <a name="to-modify-the-data-type-of-a-column"></a>若要修改資料行的資料類型  
   
-1.  在 [物件總管]  中，找到要變更小數位數的資料行，以滑鼠右鍵按一下包含該資料行的資料表，然後按一下 [設計]  。  
+1.  在 [物件總管]**** 中，找到要變更小數位數的資料行，以滑鼠右鍵按一下包含該資料行的資料表，然後按一下 [設計]****。  
   
 2.  選取要修改資料類型的資料行。  
   
-3.  在 [資料行屬性]  索引標籤中，按一下 [資料類型]  屬性的方格資料格，並且從下拉式清單中選擇新的資料類型。  
+3.  在 [資料行屬性]**** 索引標籤中，按一下 [資料類型]**** 屬性的方格資料格，並且從下拉式清單中選擇新的資料類型。  
   
-4.  在 [檔案]  功能表上，按一下 [儲存「資料表名稱」]。  
+4.  在 [檔案] **** 功能表上，按一下 [儲存「資料表名稱」__]****。  
   
 > [!NOTE]  
 >  在修改資料行的資料類型時，資料表設計工具會套用所選取資料類型的預設長度，即使您已經指定另一個資料類型也是如此。 一定要在指定資料類型之後，設定所需值的資料類型長度。  

@@ -1,5 +1,6 @@
 ---
-title: sp_resync_targetserver （Transact-sql） |Microsoft Docs
+description: sp_resync_targetserver (Transact-SQL)
+title: sp_resync_targetserver (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 868e203866890c1f13405ddc7ed3949487e821da
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 858c2ffe0740c43892ff2245047823c9cecbd12a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899242"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469202"
 ---
 # <a name="sp_resync_targetserver-transact-sql"></a>sp_resync_targetserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,19 +41,19 @@ sp_resync_targetserver
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @server_name = ] 'server'`要重新同步處理的伺服器名稱。 *server* 是 **sysname**，沒有預設值。 如果指定**all** ，則會重新同步處理所有目標伺服器。  
+`[ @server_name = ] 'server'` 要重新同步處理的伺服器名稱。 *server* 是 **sysname**，沒有預設值。 如果指定 **all** ，則會重新同步處理所有目標伺服器。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="result-sets"></a>結果集  
- 報告**sp_post_msx_operation**動作的結果。  
+ 報告 **sp_post_msx_operation** 動作的結果。  
   
 ## <a name="remarks"></a>備註  
- **sp_resync_targetserver**會刪除目標伺服器目前的指示集，並張貼新的集合供目標伺服器下載。 這組新的指示由刪除所有多伺服器作業的指示所組成，後面接著目前鎖定這部目標伺服器的每項作業的插入動作。  
+ **sp_resync_targetserver** 會刪除目標伺服器的目前指示集，並張貼新的集合供目標伺服器下載。 這組新的指示由刪除所有多伺服器作業的指示所組成，後面接著目前鎖定這部目標伺服器的每項作業的插入動作。  
   
 ## <a name="permissions"></a>權限  
- 執行此程式的許可權預設為**系統管理員（sysadmin** ）固定伺服器角色的成員。  
+ 執行此程式的許可權預設為 **系統管理員（sysadmin** ）固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  
  下列範例會重新同步處理 `SEATTLE1` 目標伺服器。  

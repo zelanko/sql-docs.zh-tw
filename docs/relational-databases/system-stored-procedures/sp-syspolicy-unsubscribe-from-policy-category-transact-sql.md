@@ -1,5 +1,6 @@
 ---
-title: sp_syspolicy_unsubscribe_from_policy_category （Transact-sql） |Microsoft Docs
+description: sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL)
+title: sp_syspolicy_unsubscribe_from_policy_category (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 47abab63-e605-40e8-a54e-2241e2e01afd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c1ec70cea37a8cfcb0b017a98989d00c445860d8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4591c3b20702923d7f9ea418951b8510977dc840
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891465"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469138"
 ---
 # <a name="sp_syspolicy_unsubscribe_from_policy_category-transact-sql"></a>sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,12 +40,12 @@ sp_syspolicy_unsubscribe_from_policy_category [ @policy_category = ] 'policy_cat
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @policy_category = ] 'policy_category'`這是您想要刪除之原則類別目錄訂用帳戶的名稱。 *policy_category*是**sysname**，而且是必要的。  
+`[ @policy_category = ] 'policy_category'` 這是您想要刪除之原則類別目錄訂閱的名稱。 *policy_category* 為 **sysname**，而且是必要的。  
   
- 若要取得*policy_category*的值，請查詢 msdb.dbo.syspolicy_policy_categories 系統檢視。  
+ 若要取得 *policy_category*的值，請查詢 msdb.dbo.syspolicy_policy_categories 系統檢視。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
  您必須在您想要移除原則類別目錄訂閱的資料庫內容中執行 sp_syspolicy_unsubscribe_from_policy_category。  

@@ -1,4 +1,5 @@
 ---
+description: 定義篩選
 title: 定義篩選 | Microsoft 文件
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 1fa71d22-ce5a-4aae-ba05-4d755842aeac
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7ef180ac401b540d1abe50688b98e691c819f55f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e4834e78ec82a681faba9f6c0fa780d78f890def
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85654053"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498781"
 ---
 # <a name="define-filters"></a>定義篩選
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  **[定義篩選]** 對話方塊可讓您定義篩選，然後套用至資料衝突，以在方格中檢視衝突的子集。 若要定義篩選，請從 **[運算子]** 下拉式清單方塊選擇運算子，然後輸入一個值。 例如，若只要顯示衝突失敗者為 **ReplTest1**伺服器的衝突，請從 **[運算子]** 下拉式清單方塊選取 **[等於]** ，然後在 **[值]** 資料行輸入 **ReplTest1** 。  
+   [定義篩選]**** 對話方塊可讓您定義篩選，然後套用至資料衝突，以在方格中檢視衝突的子集。 若要定義篩選，請從 **[運算子]** 下拉式清單方塊選擇運算子，然後輸入一個值。 例如，若只要顯示衝突失敗者為 **ReplTest1**伺服器的衝突，請從 **[運算子]** 下拉式清單方塊選取 **[等於]** ，然後在 **[值]** 資料行輸入 **ReplTest1** 。  
   
 ## <a name="options"></a>選項。  
  **運算子**  
- 選取篩選的運算子，例如 **[小於或等於]** 。
+ 選取篩選的運算子，例如 **[小於或等於]**。
   
  **ReplTest1**  
  輸入篩選的值。 大多數運算子只需要第一個 **[值]** 資料行的值，但 **[介於]** 和 **[不介於]** 運算子則需要兩個 **[值]** 資料行中都有值。  

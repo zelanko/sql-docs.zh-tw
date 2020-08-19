@@ -1,5 +1,6 @@
 ---
-title: pdw_nodes_indexes (Transact-sql) |Microsoft Docs
+description: 'sys. pdw_nodes_indexes (Transact-sql) '
+title: sys. pdw_nodes_indexes (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -12,14 +13,14 @@ ms.assetid: 261bcb7f-a906-4979-b274-bc5f1aa66426
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f3d749eb32c8e7369c10e904f9e13991aa85be20
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: f6c518d53122015af3e86350b0037e1b88604543
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197367"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490241"
 ---
-# <a name="syspdw_nodes_indexes-transact-sql"></a>pdw_nodes_indexes (Transact-sql) 
+# <a name="syspdw_nodes_indexes-transact-sql"></a>sys. pdw_nodes_indexes (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   傳回的索引 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。  
@@ -27,9 +28,9 @@ ms.locfileid: "86197367"
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|此索引所屬物件的識別碼。||  
-|name|**sysname**|索引的名稱。 Name 只有在物件內才是唯一的。 NULL = 堆積||  
+|NAME|**sysname**|索引的名稱。 名稱只有在物件內才是唯一的。 NULL = 堆積||  
 |index_id|**int**|索引的識別碼。 index_id 只在物件內才是唯一的<br /><br /> 0 = 堆積<br /><br /> 1 = 叢集索引<br /><br /> > 1 = 非叢集索引||  
-|類型|**tinyint**|索引的類型：<br /><br /> 0 = 堆積<br /><br /> 1 = 叢集<br /><br /> 2 = 非叢集<br /><br /> 5 = 叢集 xVelocity 記憶體優化的資料行存放區索引|  
+|type|**tinyint**|索引的類型：<br /><br /> 0 = 堆積<br /><br /> 1 = 叢集<br /><br /> 2 = 非叢集<br /><br /> 5 = 叢集 xVelocity 記憶體優化的資料行存放區索引|  
 |type_desc|**nvarchar(60)**|索引類型的描述：<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> 叢集資料行存放區||  
 |is_unique|**bit**|0 = 索引不是唯一的。|一律是 0。|  
 |data_space_id|**int**|此索引的資料空間識別碼。 資料空間是一個檔案群組或分割區結構描述。<br /><br /> 0 = object_id 是資料表值函式。||  

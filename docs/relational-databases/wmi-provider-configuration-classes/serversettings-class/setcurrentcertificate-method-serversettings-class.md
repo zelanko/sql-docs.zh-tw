@@ -1,5 +1,6 @@
 ---
-title: SetCurrentCertificate 方法（ServerSettings）
+description: SetCurrentCertificate 方法 (ServerSettings 類別)
+title: 'SetCurrentCertificate 方法 (ServerSettings) '
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f9c6e172-11be-42de-b19b-a5b3436e84da
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5ece4c477961e4e3add98d85c8d62aea3f74ea2e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 97c5e5e099a105e8d5a13e95aef5bc1878ba6b42
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880736"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460086"
 ---
 # <a name="setcurrentcertificate-method-serversettings-class"></a>SetCurrentCertificate 方法 (ServerSettings 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,11 +38,11 @@ object.SetCurrentCertificate(SHA)
   
 ## <a name="parts"></a>組件  
  *object*  
- 代表實例上之伺服器設定的[ServerSettings 類別](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md)物件 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+ 代表實例上之伺服器設定的 [ServerSettings 類別](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md) 物件 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 #### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |*SHA*|指定目前安全性憑證的字串值。|  
   

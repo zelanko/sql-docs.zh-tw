@@ -1,5 +1,6 @@
 ---
-title: CoNtext 屬性（SecurityCertificate）
+description: Context 屬性 (SecurityCertificate 類別)
+title: '內容屬性 (SecurityCertificate) '
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 65dd737f-81ce-479e-8219-7b1b4d8f57c7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 03950f740e8e8f22144ef9bd4adcd791ac6a084e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2a39850d2b4dfa2e298e48baf42db2cc60615c95
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880982"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460133"
 ---
 # <a name="context-property-securitycertificate-class"></a>Context 屬性 (SecurityCertificate 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ object.Context [= value]
  代表安全性憑證的 [SecurityCertificate 類別](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) 物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
- 指定安全性憑證內容的**sint32**陣列值。  
+ **Sint32**陣列值，指定安全性憑證的內容。  
   
 ## <a name="remarks"></a>備註  
   

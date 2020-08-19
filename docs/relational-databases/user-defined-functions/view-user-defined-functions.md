@@ -1,4 +1,5 @@
 ---
+description: 檢視使用者定義函數
 title: 檢視使用者定義函數 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -19,12 +20,12 @@ ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 081be4045a04ac665a83d8fabf8f12e6e0abc7c8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 70cb57fd62b62e10aeb1d68d708a7504265e4e97
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727056"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460190"
 ---
 # <a name="view-user-defined-functions"></a>檢視使用者定義函數
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85727056"
   
 -   **使用下列方法取得函數的相關資訊：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -68,9 +69,9 @@ ms.locfileid: "85727056"
   
     -   彙總函式  
   
-4.  以滑鼠右鍵按一下要查看其屬性的函數，然後選取 [屬性]  。  
+4.  以滑鼠右鍵按一下要查看其屬性的函數，然後選取 [屬性]****。  
 
-     下列屬性會出現在 [函式屬性 - **function_name**]  對話方塊中。  
+     下列屬性會出現在 [函式屬性 - _function_name_] 對話方塊中。  
   
      **Database**  
      包含此函數之資料庫的名稱。  

@@ -1,5 +1,6 @@
 ---
-title: ProtocolName 屬性（ClientNetworkProtocolProperty）
+description: ProtocolName 屬性 (ClientNetworkProtocolProperty 類別)
+title: 'ProtocolName 屬性 (ClientNetworkProtocolProperty) '
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 77c53201-4fab-481e-9b3b-57d0b8b83113
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3c6192ffbd1787bdd94e16e3c4a0e03b8e58808c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8c3d2a862204db74e4fbd381e8dcbd41345e2d0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888935"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460166"
 ---
 # <a name="protocolname-property-clientnetworkprotocolproperty-class"></a>ProtocolName 屬性 (ClientNetworkProtocolProperty 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  取得擁有[PropertyIdx 屬性（ClientNetworkProtocolProperty 類別）](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md)值所參考之目前屬性的通訊協定名稱。  
+  取得通訊協定的名稱，此通訊協定擁有 PropertyIdx 屬性所參考的目前屬性 [ (ClientNetworkProtocolProperty 類別) ](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md) 值。  
   
 ## <a name="syntax"></a>語法  
   
