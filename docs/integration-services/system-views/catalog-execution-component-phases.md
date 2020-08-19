@@ -1,4 +1,5 @@
 ---
+description: catalog.execution_component_phases
 title: catalog.execution_component_phases | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 07a9a163-4787-40f7-b371-ac5c6cb4b095
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9ec0b655aa3289ff23abd56d618f9ca0cc9be67d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e307babfd703b83758a6d1d3c7de3e6f62b00119
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912604"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495225"
 ---
 # <a name="catalogexecution_component_phases"></a>catalog.execution_component_phases 
 

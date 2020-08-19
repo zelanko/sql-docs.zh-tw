@@ -1,4 +1,5 @@
 ---
+description: 硬式編碼的 SQL 陳述式
 title: 硬式編碼的 SQL 語句 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: e355f5f1-4f1a-4933-8c74-ee73e90d2d19
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c7a092742e5f0151b7b08f434b453645cbd804a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 341dc642f0529fd779eccf9f2d1d1b50a4977479
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300198"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476660"
 ---
 # <a name="hard-coded-sql-statements"></a>硬式編碼的 SQL 陳述式
-執行固定工作的應用程式通常包含硬式編碼的 SQL 語句。 例如，訂單輸入系統可能會使用下列呼叫來列出開放式銷售訂單：  
+執行固定工作的應用程式通常包含硬式編碼的 SQL 語句。 例如，訂單輸入系統可能會使用下列呼叫來列出開啟的銷售訂單：  
   
 ```  
 SQLExecDirect(hstmt, "SELECT OrderID FROM Orders WHERE Status = 'OPEN'", SQL_NTS);  
 ```  
   
- 硬式編碼的 SQL 語句有幾個優點：它們可以在寫入應用程式時進行測試;它們比在執行時間所建立的語句更容易執行;而且它們會簡化應用程式。  
+ 硬式編碼的 SQL 語句有幾個優點：它們可以在寫入應用程式時進行測試;它們比在執行時間所建立的語句更容易執行;並簡化應用程式。  
   
- 使用語句參數和準備語句，可提供更好的方式來使用硬式編碼的 SQL 語句。 例如，假設 [元件] 資料表包含 [PartID]、[描述] 和 [價格] 資料行。 在此資料表中插入新資料列的其中一個方法是，建立並執行**insert**語句：  
+ 使用語句參數和準備語句，可提供更好的方式來使用硬式編碼的 SQL 語句。 例如，假設 [元件] 資料表包含 [PartID]、[描述] 和 [價格] 資料行。 在此資料表中插入新資料列的其中一個方法，就是建立並執行 **insert** 語句：  
   
 ```  
 #define DESC_LEN 51  
@@ -51,7 +52,7 @@ sprintf_s(Statement, 100, "INSERT INTO Parts (PartID, Description,  Price) "
 SQLExecDirect(hstmt, Statement, SQL_NTS);  
 ```  
   
- 更好的方法是使用硬式編碼的參數化語句。 這對於具有硬式編碼資料值的語句有兩個優點。 首先，您可以更輕鬆地建立參數化語句，因為資料值可在其原生類型（例如整數和浮點數）中傳送，而不是將它們轉換成字串。 第二，只要變更參數值並加以暫停，就可以使用一次以上的語句;不需要重建它。  
+ 更好的方法是使用硬式編碼的參數化語句。 這在具有硬式編碼資料值的語句上有兩個優點。 首先，比較簡單的方式是建立參數化語句，因為資料值可以在其原生類型（例如整數和浮點數）中傳送，而不是將它們轉換成字串。 其次，只要變更參數值並加以暫停，就可以使用一次以上的語句。不需要重建。  
   
 ```  
 #define DESC_LEN 51  
@@ -78,7 +79,7 @@ GetNewValues(&PartID, Desc, &Price);
 SQLExecDirect(hstmt, Statement, SQL_NTS);  
 ```  
   
- 假設此語句要執行一次以上，則可以為更高的效率做好準備：  
+ 假設此語句要執行一次以上，則可以為更有效率的效能做好準備：  
   
 ```  
 #define DESC_LEN 51  
@@ -106,7 +107,7 @@ while (GetNewValues(&PartID, Desc, &Price))
    SQLExecute(hstmt);  
 ```  
   
- 使用語句的最有效率方式可能是建立包含語句的程式，如下列程式碼範例所示。 因為程式是在開發階段所建立並儲存在資料來源上，所以不需要在執行時間進行準備。 這個方法的缺點是，建立程式的語法是 DBMS 專屬的，而且必須針對要在其上執行應用程式的每個 DBMS 個別地建造程式。  
+ 使用語句的最有效率方式可能是建立包含語句的程式，如下列程式碼範例所示。 由於程式是在開發階段建立並儲存在資料來源上，因此不需要在執行時間進行準備。 這種方法的缺點是建立程式的語法是 DBMS 特定的，而且必須針對要執行應用程式的每個 DBMS 個別建立程式。  
   
 ```  
 #define DESC_LEN 51  
@@ -129,4 +130,4 @@ while (GetNewValues(&PartID, Desc, &Price))
    SQLExecDirect(hstmt, "{call InsertPart(?, ?, ?)}", SQL_NTS);  
 ```  
   
- 如需參數、備妥的語句和程式的詳細資訊，請參閱[執行語句](../../../odbc/reference/develop-app/executing-a-statement.md)。
+ 如需參數、備妥的語句和程式的詳細資訊，請參閱 [執行語句](../../../odbc/reference/develop-app/executing-a-statement.md)。

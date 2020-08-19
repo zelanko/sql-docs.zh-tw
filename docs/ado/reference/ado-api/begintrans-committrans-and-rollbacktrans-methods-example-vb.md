@@ -1,5 +1,6 @@
 ---
-title: BeginTrans、CommitTrans 和 RollbackTrans 方法範例（VB） |Microsoft Docs
+description: 'BeginTrans、CommitTrans 和 RollbackTrans 方法範例 (VB) '
+title: " (VB) 的 BeginTrans、CommitTrans 和 RollbackTrans 方法範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: aa7de324-cd71-4bd0-8043-24229f4a785e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bd2166aa19e0938ce14254abcf94ac21e12b00c7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8cc23406c3c9ad7c2455d0efc7f11aeee107bb52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762881"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451180"
 ---
-# <a name="begintrans-committrans-and-rollbacktrans-methods-example-vb"></a>BeginTrans、CommitTrans 和 RollbackTrans 方法範例（VB）
-這個範例會變更資料庫之 [***標題***] 資料表中所有心理學書籍的書籍類型。 在[BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法啟動會隔離所有對***Titles***資料表所做之變更的交易之後， [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法會儲存變更。 您可以使用[RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法來復原使用[Update](../../../ado/reference/ado-api/update-method.md)方法儲存的變更。  
+# <a name="begintrans-committrans-and-rollbacktrans-methods-example-vb"></a>BeginTrans、CommitTrans 和 RollbackTrans 方法範例 (VB) 
+此範例會變更資料庫 ***標題*** 表中所有心理學書籍的書籍類型。 在 [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 方法啟動將所有變更全部隔離到 ***標題*** 資料表的交易之後， [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 方法會儲存變更。 您可以使用 [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 方法來復原使用 [Update](../../../ado/reference/ado-api/update-method.md) 方法儲存的變更。  
   
 ```  
 'BeginBeginTransVB  
@@ -132,5 +133,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [BeginTrans、CommitTrans 和 RollbackTrans 方法（ADO）](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
+ [ (ADO) 的 BeginTrans、CommitTrans 和 RollbackTrans 方法 ](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
  [Connection 物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

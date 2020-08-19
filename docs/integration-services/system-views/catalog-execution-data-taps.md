@@ -1,4 +1,5 @@
 ---
+description: catalog.execution_data_taps
 title: catalog.execution_data_taps | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 54226c01-5b8f-4730-8a5f-1da2613f9689
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4a94d4ab27e8e92e4ec35b899485bb33962c0fde
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d73abfb0ee03e645bcc8d69c3415b7c4d737f055
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912577"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495201"
 ---
 # <a name="catalogexecution_data_taps"></a>catalog.execution_data_taps 
 

@@ -1,4 +1,5 @@
 ---
+description: catalog.validate_project (SSISDB 資料庫)
 title: catalog.validate_project (SSISDB 資料庫) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 5270689a-46d4-4847-b41f-3bed1899e955
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8dfda68b04a898efc7aa87e5a821e79717113544
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c491a8914fb11da815d0887ae5b2248f1e2a7c19
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912724"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495351"
 ---
 # <a name="catalogvalidate_project-ssisdb-database"></a>catalog.validate_project (SSISDB 資料庫)
 
@@ -46,7 +47,7 @@ catalog.validate_project [ @folder_name = ] folder_name
  專案的名稱。 *project_name* 是 **nvarchar(128)** 。  
   
  [ @validate_type = ] *validate_type*  
- 指出執行的類型驗證。 使用字元 `F` 即可執行完整驗證。 這是選擇性參數，根據預設，將會使用字元 `F`。 *validate_type* 是 **char(1)** 。  
+ 指出執行的類型驗證。 使用字元 `F` 即可執行完整驗證。 這是選擇性參數，根據預設，將會使用字元 `F`。 *validate_type* 是 **char(1)**。  
   
  [ @validation_id = ] *validation_id*  
  傳回驗證的唯一識別碼 (ID)。 *validation_id* 是 **bigint**。  

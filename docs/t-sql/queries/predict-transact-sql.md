@@ -1,4 +1,5 @@
 ---
+description: PREDICT (Transact-SQL)
 title: PREDICT (Transact-SQL)
 titleSuffix: SQL machine learning
 ms.custom: ''
@@ -18,12 +19,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||>=azure-sqldw-latest||=sqlallproducts-allversions'
-ms.openlocfilehash: 039441b0029a5c2d92e16f7bc35bc496c6cd440c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: be453944791a479e12f6723c1ad6f5abded12204
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918599"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459092"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)
 

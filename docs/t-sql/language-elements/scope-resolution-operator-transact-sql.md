@@ -1,4 +1,5 @@
 ---
+description: ':: (範圍解析) (Transact-SQL)'
 title: ':: (範圍解析) (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,12 +13,12 @@ dev_langs:
 ms.assetid: 764d8f91-957b-4037-997b-a9b6b533c504
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ff16ec709e8ed3cf7e0d6a4b129641d1e553a11a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1372950c3262f86ca1b0d85ca7026d6560f4afb2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68072289"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459271"
 ---
 # <a name="-scope-resolution-transact-sql"></a>:: (範圍解析) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

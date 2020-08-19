@@ -1,4 +1,5 @@
 ---
+description: CHECKPOINT (Transact-SQL)
 title: CHECKPOINT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2017
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
 author: juliemsft
 ms.author: jrasnick
-ms.openlocfilehash: ec484e698234dc71282a11b07555be73cd2c694d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: da05183ae2b331f78f9692acc6aaff66a9455092
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923366"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459388"
 ---
 # <a name="checkpoint-transact-sql"></a>CHECKPOINT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -64,7 +65,7 @@ CHECKPOINT [ checkpoint_duration ]
 ##  <a name="security"></a><a name="Security"></a> Security  
   
 ### <a name="permissions"></a>權限  
- CHECKPOINT 權限預設會授與 **sysadmin** 固定伺服器角色及 **db_owner** 與 **db_backupoperator** 固定資料庫角色的成員，且無法轉讓。  
+ CHECKPOINT 權限是 **sysadmin** 固定伺服器角色成員及 **db_owner** 與 **db_backupoperator** 固定資料庫角色成員的預設權限，且不可轉移。  
   
 ## <a name="see-also"></a>另請參閱  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   

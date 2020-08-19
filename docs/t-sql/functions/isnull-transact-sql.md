@@ -1,4 +1,5 @@
 ---
+description: ISNULL (Transact-SQL)
 title: ISNULL (Transact-SQL)
 ms.custom: ''
 ms.date: 03/06/2017
@@ -22,12 +23,12 @@ ms.assetid: 6f3e5802-864b-4e77-9862-657bb5430b68
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 985b556fbfbbcb9722b93a950e4a8a75dc33c0c6
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 0bd4a53a70eced1c59c8b33d973fab451451d294
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111966"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422692"
 ---
 # <a name="isnull-transact-sql"></a>ISNULL (Transact-SQL) 
 

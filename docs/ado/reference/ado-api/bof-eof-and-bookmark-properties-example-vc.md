@@ -1,5 +1,6 @@
 ---
-title: BOF、EOF 和 Bookmark 屬性範例（VC + +） |Microsoft Docs
+description: " (VC + +) 的 BOF、EOF 和 Bookmark 屬性範例"
+title: BOF、EOF 和 Bookmark 屬性範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0654d6874c898102d6a85cadd70e821f8530a876
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 33bd0bf737b6c586c0cb97072b28650898e86696
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762659"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451140"
 ---
-# <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF、EOF 和 Bookmark 屬性範例（VC + +）
-此範例中的第一個函式會使用[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)和[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)屬性，在使用者嘗試移動超過[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)的第一個或最後一筆記錄時，顯示訊息。 它會使用 [[書簽](../../../ado/reference/ado-api/bookmark-property-ado.md)] 屬性，讓使用者在記錄**集**內將記錄加上旗標，並于稍後返回。  
+# <a name="bof-eof-and-bookmark-properties-example-vc"></a> (VC + +) 的 BOF、EOF 和 Bookmark 屬性範例
+此範例中的第一個函式會使用 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 和 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 屬性，以在使用者嘗試移動超過 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)的第一個或最後一個記錄時顯示訊息。 它會使用 [ [書簽](../../../ado/reference/ado-api/bookmark-property-ado.md) ] 屬性，讓使用者在記錄 **集中** 標示記錄，並在稍後返回該記錄。  
   
- 第二個函式會使用 [書簽] 屬性，將記錄**集**的每個其他記錄的**書簽**放入陣列中，然後使用陣列篩選記錄集。  
+ 第二個函式會使用 Bookmark 屬性將記錄**集**的每個其他記錄的**書簽**放入陣列中，然後使用陣列來篩選記錄集。  
   
 ## <a name="example"></a>範例  
   
@@ -206,6 +207,6 @@ Authors with 25 percent royalty
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [BOF、EOF 屬性（ADO）](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
- [Bookmark 屬性（ADO）](../../../ado/reference/ado-api/bookmark-property-ado.md)   
+ [BOF、EOF 屬性 (ADO) ](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
+ [ (ADO) 的書簽屬性 ](../../../ado/reference/ado-api/bookmark-property-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

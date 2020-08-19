@@ -1,4 +1,5 @@
 ---
+description: CRYPT_GEN_RANDOM (Transact-SQL)
 title: CRYPT_GEN_RANDOM (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b74bd9d4-758e-4b94-89a0-76dcda6d8c42
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 35fed704434a533f3c2aeddc8b2bcabcf9e6981f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: d0cdca25e14d58270185d4605287d22d1af5e0d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110494"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468168"
 ---
 # <a name="crypt_gen_random-transact-sql"></a>CRYPT_GEN_RANDOM (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +42,7 @@ CRYPT_GEN_RANDOM ( length [ , seed ] )
 
 ## <a name="arguments"></a>引數
 *length*  
-`CRYPT_GEN_RANDOM` 會建立的數字長度 (以位元組為單位)。 *length* 引數必須有一個 **int** 資料類型，以及一個介於 1 到 8000 之間的值。 `CRYPT_GEN_RANDOM`int**值若超出此範圍，則** 會傳回 NULL。 
+`CRYPT_GEN_RANDOM` 會建立的數字長度 (以位元組為單位)。 *length* 引數必須有一個 **int** 資料類型，以及一個介於 1 到 8000 之間的值。 **int** 值若超出此範圍，則 `CRYPT_GEN_RANDOM` 會傳回 NULL。 
   
 *seed*  
 選擇性十六進位數字，當作一個隨機種子值。 *seed* 的長度必須符合 *length* 引數的值。 *seed* 引數有一個 **varbinary(8000)** 資料類型。
@@ -67,7 +68,7 @@ SELECT CRYPT_GEN_RANDOM(50) ;
 SELECT CRYPT_GEN_RANDOM(4, 0x25F18060) ;  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 [RAND &#40;Transact-SQL&#41;](../../t-sql/functions/rand-transact-sql.md)
   
   

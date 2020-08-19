@@ -1,4 +1,5 @@
 ---
+description: Set 運算子 - UNION (Transact-SQL)
 title: UNION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/07/2017
@@ -20,12 +21,12 @@ ms.assetid: 607c296f-8a6a-49bc-975a-b8d0c0914df7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b3bbb0c09f819e686185f65dab28123b95f6e2f6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 40bf24d7e1a5bcbc32307b5d5731907fb5f8463d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915454"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459323"
 ---
 # <a name="set-operators---union-transact-sql"></a>Set 運算子 - UNION (Transact-SQL)
 

@@ -1,4 +1,5 @@
 ---
+description: STAsText (geography 資料類型)
 title: STAsText (geography y 資料型別) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d3d2635d-ca6c-4205-9d6c-eb939ee314fd
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 17a7d957b5c85ef21889af21de03f6cc2154ac62
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: f89f2c2889d880388f74b563abc9aefe1eb28c82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555167"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422312"
 ---
 # <a name="stastext-geography-data-type"></a>STAsText (geography 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,6 +61,6 @@ SELECT @g.STAsText();
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [地理例項上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [地理位置例項上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

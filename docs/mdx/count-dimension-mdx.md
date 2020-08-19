@@ -1,5 +1,6 @@
 ---
-title: Count （維度）（MDX） |Microsoft Docs
+description: Count (維度) (MDX)
+title: Count (Dimension)  (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b84c5a1902e80f8abe3828f4be1b5d570ec026ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: afa58c330210e4fdb34d13892101e210f54cd3bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68104816"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429960"
 ---
 # <a name="count-dimension-mdx"></a>Count (維度) (MDX)
 
@@ -42,8 +43,8 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>另請參閱  
  [計算 &#40;元組&#41; &#40;MDX&#41;](../mdx/count-tuple-mdx.md)   
- [&#40;&#41; &#40;MDX 的階層層級計數&#41;](../mdx/count-hierarchy-levels-mdx.md)   
- [&#40;&#41; &#40;MDX&#41;設定計數](../mdx/count-set-mdx.md)   
+ [&#40;階層層級的計數&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
+ [&#40;設定&#41; &#40;MDX&#41;的計數 ](../mdx/count-set-mdx.md)   
  [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

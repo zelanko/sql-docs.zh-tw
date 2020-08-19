@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;CURSOR_ROWS (Transact-SQL)'
 title: '@@CURSOR_ROWS (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/18/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 31bd7a97-7f28-42a8-ba24-24d16d22973d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a35f2e2e75b29a28ed56fc7c5cdaa3e9c2244d6d
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: ea10c7ada51794a26fd08cf265bfa78953856abc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112071"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422802"
 ---
 # <a name="x40x40cursor_rows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -93,7 +94,7 @@ Sanchez
 ```  
   
 ## <a name="see-also"></a>另請參閱
-[資料指標函式 &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-functions-transact-sql.md)  
+[資料指標函數 &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-functions-transact-sql.md)  
 [OPEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)
   
   

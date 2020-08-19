@@ -1,5 +1,6 @@
 ---
-title: DataSource 屬性（ADO） |Microsoft Docs
+description: DataSource 屬性 (ADO)
+title: DataSource 屬性 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,22 +16,22 @@ helpviewer_keywords:
 ms.assetid: 300a702a-3544-48c5-b759-83b511fe97e0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cbaff4a2bf03e524018c0c8d1b163925aa40b3ea
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8b85f163ddb3f1fc31116966127bc01efa17a262
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763469"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444220"
 ---
 # <a name="datasource-property-ado"></a>DataSource 屬性 (ADO)
-表示物件，其中包含要表示為[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件的資料。  
+表示物件，該物件包含要表示為 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 物件的資料。  
   
 ## <a name="remarks"></a>備註  
- 這個屬性是用來建立資料繫結控制項與資料環境。 資料環境會維護資料（資料來源）集合，其中包含將表示為**記錄集**物件的已命名物件（資料成員）。  
+ 這個屬性是用來建立資料繫結控制項與資料環境。 資料環境會維護資料 (資料來源的集合，) 包含命名物件 (資料成員) 將表示為 **記錄集** 物件。  
   
- [DataMember](../../../ado/reference/ado-api/datamember-property.md)和**DataSource**屬性必須搭配使用。  
+ [DataMember](../../../ado/reference/ado-api/datamember-property.md)和**DataSource**屬性必須一起使用。  
   
- 參考的物件必須執行**IDataSource**介面，而且必須包含**IRowset**介面。  
+ 參考的物件必須執行 **IDataSource** 介面，且必須包含 **IRowset** 介面。  
   
 ## <a name="usage"></a>使用量  
   

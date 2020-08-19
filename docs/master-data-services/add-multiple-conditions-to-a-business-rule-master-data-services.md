@@ -1,4 +1,5 @@
 ---
+description: 將多個條件加入至商務規則 (Master Data Services)
 title: 將條件新增至商務規則
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: dca2f4877a172b7fd75025e226459c699ea7d13b
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: a3ecfda6bd7b2bbd885cc8cc4b12917289dd3142
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812073"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495041"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>將多個條件加入至商務規則 (Master Data Services)
 
@@ -28,12 +29,12 @@ ms.locfileid: "85812073"
 > [!NOTE]  
 >  如果您建立使用 **OR** 運算子的商務規則，請考慮為每個可獨立評估的條件陳述式建立不同的規則。 然後您可以視需要排除規則，提供更多彈性和輕鬆疑難排解。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 -   商務規則必須存在。 如需詳細資訊，請參閱[建立及發行商務規則 &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)。  
   
@@ -55,7 +56,7 @@ ms.locfileid: "85812073"
   
 8.  在 [If]**** 區塊下，從左側的邏輯運算子下拉式清單中選取 [AND/OR/ NOT]****。  
   
-9. 按一下 **[新增]** 。 面板隨即顯示。  
+9. 按一下 [新增] 。 面板隨即顯示。  
   
 10. 從 [屬性] **** 下拉式清單中，選取屬性。  
   

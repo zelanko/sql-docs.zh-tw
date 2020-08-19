@@ -1,4 +1,5 @@
 ---
+description: 使用集合函數
 title: 使用 Set 函數 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 52e0c140acb944a774f5ab167bb81c662e3e32d7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1325055017eeee392cd098d9168dd247a2664aa4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038047"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476980"
 ---
 # <a name="using-set-functions"></a>使用集合函數
 
@@ -22,7 +23,7 @@ ms.locfileid: "68038047"
   
  集合函數跟成員函數與 tuple 函數一樣，對於交涉 Analysis Services 中找到的多維度結構而言不可或缺。 因為集合運算式會定義 MDX 查詢的座標軸，所以要取得多維度運算式 (MDX) 查詢的結果也必須要有集合函數。  
   
- 其中一個最常見的集合函數是[&#40;設定&#41; &#40;MDX&#41;](../mdx/members-set-mdx.md)函數的成員，它會抓取包含維度、階層或層級中所有成員的集合。 下列是它在查詢中的範例用法：  
+ 其中一個最常見的 set 函數是 [&#40;設定&#41; &#40;MDX&#41;](../mdx/members-set-mdx.md) 函式的成員，此函式會抓取包含維度、階層或層級中所有成員的集合。 下列是它在查詢中的範例用法：  
   
  `SELECT`  
   
@@ -42,7 +43,7 @@ ms.locfileid: "68038047"
   
  `FROM [Adventure Works]`  
   
- 另一個常用的函式是[&#40;MDX&#41;](../mdx/crossjoin-mdx.md)函數的交叉聯結。 它會傳回一組 tuple，代表當做參數傳給它的 cartesian 產品集合。 在實際用語中，這個函數會讓您在查詢中建立「巢狀」或 CROSSTAB 座標軸：  
+ 另一個常用的函式是 [&#40;MDX&#41;](../mdx/crossjoin-mdx.md) 函數的交叉聯結。 它會傳回一組 tuple，代表當做參數傳給它的 cartesian 產品集合。 在實際用語中，這個函數會讓您在查詢中建立「巢狀」或 CROSSTAB 座標軸：  
   
  `SELECT`  
   
@@ -70,7 +71,7 @@ ms.locfileid: "68038047"
   
  `FROM [Adventure Works]`  
   
- [子代 &#40;MDX&#41;](../mdx/descendants-mdx.md)函式與**子**函數類似，但功能更強大。 它會在階層中的一個或多個層級上傳回任何成員的下階：  
+ [子代 &#40;MDX&#41;](../mdx/descendants-mdx.md)函式與**子**系函數類似，但功能更強大。 它會在階層中的一個或多個層級上傳回任何成員的下階：  
   
  SELECT  
   
@@ -84,7 +85,7 @@ ms.locfileid: "68038047"
   
  DESCENDANTS(  
   
- [Date]。[行事曆]。[Calendar Year]. & [2004]  
+ [Date]。[行事曆]。[日曆年度]. & [2004]  
   
  , [Date].[Calendar].[Date])  
   
@@ -92,7 +93,7 @@ ms.locfileid: "68038047"
   
  FROM [Adventure Works]  
   
- [Order &#40;MDX&#41;](../mdx/order-mdx.md)函數可讓您根據特定數值運算式，以遞增或遞減的順序排序集合的內容。 下列查詢會傳回與前一查詢相同的資料列成員，但是現在會根據 Internet Sales Amount 量值加以排序：  
+ [Order &#40;MDX&#41;](../mdx/order-mdx.md)函數可讓您根據特定的數值運算式，以遞增或遞減的順序排序集合的內容。 下列查詢會傳回與前一查詢相同的資料列成員，但是現在會根據 Internet Sales Amount 量值加以排序：  
   
  `SELECT`  
   
@@ -122,7 +123,7 @@ ms.locfileid: "68038047"
   
  這個查詢也會說明從一個集合函數 Descendants 傳回的集合要如何當做參數傳遞給另一個集合函數 Order。  
   
- 根據特定準則篩選集合在撰寫查詢時非常有用，因此，您可以使用[篩選 &#40;MDX&#41;](../mdx/filter-mdx.md)函數，如下列範例所示：  
+ 在撰寫查詢時，根據特定準則篩選集合是非常有用的，因此您可以使用 [&#40;MDX&#41;](../mdx/filter-mdx.md) 函數的篩選準則，如下列範例所示：  
   
  `SELECT`  
   
@@ -150,7 +151,7 @@ ms.locfileid: "68038047"
   
  `FROM [Adventure Works]`  
   
- 也有其他更複雜的函數可讓您以其他方式篩選集合。 例如，下列查詢會顯示[TopCount &#40;MDX&#41;](../mdx/topcount-mdx.md)函數會傳回集合中的前 n 個專案：  
+ 也有其他更複雜的函數可讓您以其他方式篩選集合。 例如，下列查詢會顯示 [TopCount &#40;MDX&#41;](../mdx/topcount-mdx.md) 函數會傳回集合中的前 n 個專案：  
   
  `SELECT`  
   
@@ -176,7 +177,7 @@ ms.locfileid: "68038047"
   
  `FROM [Adventure Works]`  
   
- 最後，您可以使用像是[Intersect &#40;mdx&#41;](../mdx/intersect-mdx.md)、 [Union &#40;mdx&#41;](../mdx/union-mdx.md)和[&#40;MDX&#41;函數以外](../mdx/except-mdx-function.md)的函數來執行一些邏輯集合作業。 下列查詢顯示後兩個函數的範例：  
+ 最後，您可以使用 [Intersect &#40;mdx&#41;](../mdx/intersect-mdx.md)、 [Union &#40;mdx&#41;](../mdx/union-mdx.md) 和 [&#40;mdx&#41;函數以外 ](../mdx/except-mdx-function.md) 的函式來執行一些邏輯集合作業。 下列查詢顯示後兩個函數的範例：  
   
  `SELECT`  
   

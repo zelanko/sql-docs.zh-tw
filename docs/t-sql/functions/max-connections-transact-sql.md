@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;MAX_CONNECTIONS (Transact-SQL)'
 title: '@@MAX_CONNECTIONS (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 57eb9f4b-548f-4212-9684-a11d831c4732
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5aef95dbc330d59992513823abcb572ff3c98d8f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 061f293673e76fcf9d979d5bb63b21c7806dc632
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110385"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422682"
 ---
 # <a name="x40x40max_connections-transact-sql"></a>&#x40;&#x40;MAX_CONNECTIONS (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

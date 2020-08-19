@@ -1,4 +1,5 @@
 ---
+description: DROP SERVICE (Transact-SQL)
 title: DROP SERVICE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2351bba7-0f2a-4cda-b3b2-6a88b8747c53
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 47639c92df2144ec22ded9a15f42df876e8a0b67
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 0c44273578fff67bed075dea4f60fc6314902dcc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484903"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88415804"
 ---
 # <a name="drop-service-transact-sql"></a>DROP SERVICE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

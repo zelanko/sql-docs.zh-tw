@@ -1,4 +1,5 @@
 ---
+description: 提示 (Transact-SQL) - 查詢
 title: 查詢提示 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/02/2019
@@ -55,12 +56,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: 260babc5be248cc07b90001c2bb63fa7a6439a05
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: a28e03cd2fb0d5af501f386f9b3a39f7045fd2a9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552941"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459192"
 ---
 # <a name="hints-transact-sql---query"></a>提示 (Transact-SQL) - 查詢
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

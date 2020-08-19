@@ -1,5 +1,6 @@
 ---
-title: Append 和 CreateParameter 方法範例（JScript） |Microsoft Docs
+description: '附加和 CreateParameter 方法範例 (JScript) '
+title: 附加和 CreateParameter 方法範例 (JScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 048a54ab758304bbfef50ffb1eaa98254b4fd496
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c0701577bbd569e1b7c01239bd3613591864696d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747002"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451300"
 ---
-# <a name="append-and-createparameter-methods-example-jscript"></a>Append 和 CreateParameter 方法範例（JScript）
-這個範例會使用[Append](../../../ado/reference/ado-api/append-method-ado.md)和[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)方法來執行具有輸入參數的預存程式。 將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器，然後將它儲存為**AppendJS。**  
+# <a name="append-and-createparameter-methods-example-jscript"></a>附加和 CreateParameter 方法範例 (JScript) 
+這個範例會使用 [Append](../../../ado/reference/ado-api/append-method-ado.md) 和 [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) 方法，以輸入參數來執行預存程式。 將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器，然後將它儲存為**AppendJS。**  
   
 ```  
 <!-- BeginAppendJS -->  
@@ -142,8 +143,8 @@ body {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Append 方法（ADO）](../../../ado/reference/ado-api/append-method-ado.md)   
- [CreateParameter 方法（ADO）](../../../ado/reference/ado-api/createparameter-method-ado.md)   
+ [ (ADO) 的 Append 方法 ](../../../ado/reference/ado-api/append-method-ado.md)   
+ [ (ADO) 的 CreateParameter 方法 ](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Field 物件](../../../ado/reference/ado-api/field-object.md)   
- [Fields 集合（ADO）](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [ (ADO) 的欄位集合 ](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Parameter 物件](../../../ado/reference/ado-api/parameter-object.md)

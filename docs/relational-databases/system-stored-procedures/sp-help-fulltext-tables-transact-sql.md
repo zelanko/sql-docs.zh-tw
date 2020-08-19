@@ -1,5 +1,6 @@
 ---
-title: sp_help_fulltext_tables （Transact-sql） |Microsoft Docs
+description: sp_help_fulltext_tables (Transact-SQL)
+title: sp_help_fulltext_tables (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 86e24a5f-a869-43f6-b83e-c52b7b01b5ff
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 36f8a5d8fb38802f14ac61c18d382e6052241d8a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cf4b4130f02085dd077b877825856f9f22e2c1d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893719"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486013"
 ---
 # <a name="sp_help_fulltext_tables-transact-sql"></a>sp_help_fulltext_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85893719"
   傳回登錄了全文檢索索引的資料表清單。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]請改用**sys.databases fulltext_indexes**目錄檢視。 如需詳細資訊，請參閱[fulltext_indexes &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用 **sys. fulltext_indexes** 目錄 view。 如需詳細資訊，請參閱 [sys. fulltext_indexes &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,9 +44,9 @@ sp_help_fulltext_tables [ [ @fulltext_catalog_name = ] 'fulltext_catalog_name' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'`這是全文檢索目錄的名稱。 *fulltext_catalog_name*是**sysname**，預設值是 Null。 如果省略*fulltext_catalog_name*或為 Null，則會傳回與資料庫相關聯的所有全文檢索索引資料表。 如果指定了*fulltext_catalog_name* ，但*table_name*省略或為 Null，則會針對與此目錄相關聯的每個全文檢索索引資料表來抓取全文檢索索引資訊。 如果同時指定*fulltext_catalog_name*和*table_name* ， *table_name*與*fulltext_catalog_name*相關聯，就會傳回一個資料列。否則，會引發錯誤。  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` 這是全文檢索目錄的名稱。 *fulltext_catalog_name* 是 **sysname**，預設值是 Null。 如果省略 *fulltext_catalog_name* 或為 Null，則會傳回與資料庫相關聯的所有全文檢索索引資料表。 如果指定 *fulltext_catalog_name* ，但 *table_name* 省略或為 Null，則會針對與此目錄相關聯的每個全文檢索索引資料表抓取全文檢索索引資訊。 如果同時指定了 *fulltext_catalog_name* 和 *table_name* ，而且 *table_name* 與 *fulltext_catalog_name*相關聯，就會傳回一個資料列。否則，就會引發錯誤。  
   
-`[ @table_name = ] 'table_name'`這是所要求之全文檢索中繼資料的一或兩部分資料表名稱。 *table_name*是**Nvarchar （517）**，預設值是 Null。 如果只指定*table_name* ，則只會傳回與*table_name*相關的資料列。  
+`[ @table_name = ] 'table_name'` 這是所要求之全文檢索中繼資料的一或兩部分資料表名稱。 *table_name* 是 **Nvarchar (517) **，預設值是 Null。 如果只指定 *table_name* ，則只會傳回與 *table_name* 相關的資料列。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -62,7 +63,7 @@ sp_help_fulltext_tables [ [ @fulltext_catalog_name = ] 'fulltext_catalog_name' ]
 |**FULLTEXT_CATALOG_NAME**|**sysname**|全文檢索索引資料所在的全文檢索目錄。|  
   
 ## <a name="permissions"></a>權限  
- 執行許可權預設為**public**角色的成員。  
+ 執行許可權預設為 **public** 角色的成員。  
   
 ## <a name="examples"></a>範例  
  下列範例會傳回與 `Cat_Desc` 全文檢索目錄相關聯之全文檢索索引資料表的名稱。  
@@ -75,8 +76,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [INDEXPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
- [OBJECTPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
+ [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
+ [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
  [sp_fulltext_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-table-transact-sql.md)   
  [sp_help_fulltext_tables_cursor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

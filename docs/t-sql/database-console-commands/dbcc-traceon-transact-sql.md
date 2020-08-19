@@ -1,4 +1,5 @@
 ---
+description: DBCC TRACEON (Transact-SQL)
 title: DBCC TRACEON (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 93085324-ebaa-4e38-aac8-5e57b4b0d36d
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: e3058e60f1ff0ed5ab519cf1ef5873df27faa075
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: acba012532edba5f5a94fff5b92e5f46e8b29083
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87877858"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468200"
 ---
 # <a name="dbcc-traceon-transact-sql"></a>DBCC TRACEON (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

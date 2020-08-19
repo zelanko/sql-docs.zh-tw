@@ -1,4 +1,5 @@
 ---
+description: 描述項欄位一致性
 title: 描述項欄位一致性 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,27 +16,27 @@ helpviewer_keywords:
 ms.assetid: 6c29d93b-696c-4960-bff3-4d6bc41bc513
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cce33adfdbfceef56936b22c549b6762521b4798
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 36687cf456f4fcbbaa3f4b029e51098815dec3f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305929"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476740"
 ---
 # <a name="descriptor-field-conformance"></a>描述項欄位一致性
-下表指出每個 ODBC 描述元標頭欄位的一致性層級，這是妥善定義的。  
+下表指出每個 ODBC 描述項標頭欄位的一致性層級，這是妥善定義的。  
   
 |函式|一致性層級|  
 |--------------|-----------------------|  
 |SQL_DESC_ALLOC_TYPE|核心|  
 |SQL_DESC_ARRAY_SIZE|核心|  
-|SQL_DESC_ARRAY_STATUS_PTR|Core （適用于 APD、IPR 和 IRD）;層級1（適用于 ARD）|  
+|SQL_DESC_ARRAY_STATUS_PTR|適用于 APD、IPR 和 IRD 的核心 () ;ARD) 的層級 1 (|  
 |SQL_DESC_BIND_OFFSET_PTR|核心|  
 |SQL_DESC_BIND_TYPE|核心|  
 |SQL_DESC_COUNT|核心|  
 |SQL_DESC_ROWS_PROCESSED_PTR|核心|  
   
- 下表指出每個「ODBC 描述項記錄」欄位的一致性層級，這是妥善定義的。  
+ 下表指出每個 ODBC 描述項記錄欄位的一致性層級，這是妥善定義的。  
   
 |函式|一致性層級|  
 |--------------|-----------------------|  

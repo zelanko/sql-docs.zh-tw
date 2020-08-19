@@ -1,5 +1,6 @@
 ---
-title: GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL) | Microsoft Docs
+description: GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
+title: GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 459e6b79-4420-41e6-85bf-89d90f43b4f1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fcb526d6737624aee12e900f3b9b7db1f2e7f69e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 329fdde13e276726f616a7d7fe56893d28172b38
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898995"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422752"
 ---
 # <a name="get_filestream_transaction_context-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,11 +34,13 @@ ms.locfileid: "85898995"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
   
 GET_FILESTREAM_TRANSACTION_CONTEXT ()  
-```  
-  
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-type"></a>傳回類型  
  **varbinary(max)**  
   
@@ -50,7 +53,7 @@ GET_FILESTREAM_TRANSACTION_CONTEXT ()
  當您呼叫 GET_FILESTREAM_TRANSACTION_CONTEXT 時，呼叫端在交易期間會被授與此交易的檔案系統存取權。 若要允許另一個使用者透過檔案系統存取此交易，請使用 EXECUTE AS，以另一個使用者身分執行 GET_FILESTREAM_TRANSACTION_CONTEXT。  
   
 ## <a name="examples"></a>範例  
- 下列範例會在 `GET_FILESTREAM_TRANSACTION_CONTEXT` 交易中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 取得交易內容。  
+ 下列範例會在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 交易中使用 `GET_FILESTREAM_TRANSACTION_CONTEXT` 取得交易內容。  
   
 ```csharp  
 using System;  

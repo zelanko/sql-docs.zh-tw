@@ -1,5 +1,6 @@
 ---
-title: Delete 方法（ADO Recordset） |Microsoft Docs
+description: Delete 方法 (ADO Recordset)
+title: " (ADO 記錄集的 Delete 方法) |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1eb9209c-602c-4507-b0c2-6527a599b67d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c5747704601e5e325624c79ce853526e36f6cbe1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b494885b6dafc7b91b76c37ac1817ac198335360
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765599"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444150"
 ---
 # <a name="delete-method-ado-recordset"></a>Delete 方法 (ADO Recordset)
 刪除目前的記錄或一組記錄。  
@@ -35,31 +36,31 @@ recordset.Delete AffectRecords
   
 #### <a name="parameters"></a>參數  
  *AffectRecords*  
- [AffectEnum](../../../ado/reference/ado-api/affectenum.md)值，決定**Delete**方法會影響多少記錄。 預設值為**adAffectCurrent**。  
+ [AffectEnum](../../../ado/reference/ado-api/affectenum.md)值，決定**刪除**方法將會影響的記錄數目。 預設值為 **adAffectCurrent**。  
   
 > [!NOTE]
->  **adAffectAll**和**adAffectAllChapters**不是要**刪除**的有效引數。  
+>  **adAffectAll** 和 **adAffectAllChapters** 不是有效的引數，無法 **刪除**。  
   
 ## <a name="remarks"></a>備註  
- 使用**Delete**方法會將目前的記錄或記錄[集](../../../ado/reference/ado-api/recordset-object-ado.md)物件中的一組記錄標記為要刪除。 如果**記錄集**物件不允許刪除記錄，就會發生錯誤。 如果您處於立即更新模式，則會立即在資料庫中進行刪除。 如果無法成功刪除記錄（例如，由於資料庫完整性違規），記錄將會在呼叫[更新](../../../ado/reference/ado-api/update-method.md)之後維持在編輯模式。 這表示您必須先取消具有[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)的更新，再移出目前的記錄（例如，使用[Close](../../../ado/reference/ado-api/close-method-ado.md)、 [Move](../../../ado/reference/ado-api/move-method-ado.md)或[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)）。  
+ 使用 **Delete** 方法會將目前的記錄或記錄 [集](../../../ado/reference/ado-api/recordset-object-ado.md) 物件中的一組記錄標記為刪除。 如果 **記錄集** 物件不允許刪除記錄，則會發生錯誤。 如果您是在立即更新模式中，則會立即在資料庫中進行刪除。 如果無法成功刪除記錄 (由於資料庫完整性違規（例如) ），記錄在呼叫 [Update](../../../ado/reference/ado-api/update-method.md)之後仍會維持在編輯模式中。 這表示您必須先取消 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) 的更新，再將目前的記錄移出 (例如，使用 [Close](../../../ado/reference/ado-api/close-method-ado.md)、 [Move](../../../ado/reference/ado-api/move-method-ado.md)或 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)) 。  
   
- 如果您是在批次更新模式中，則會將記錄標示為從快取中刪除，而實際的刪除作業會在您呼叫[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法時進行。 使用 [[篩選](../../../ado/reference/ado-api/filter-property.md)] 屬性來查看已刪除的記錄。  
+ 如果您是在批次更新模式中，則會將記錄標示為從快取中刪除，而且當您呼叫 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) 方法時，就會實際刪除。 使用 [Filter](../../../ado/reference/ado-api/filter-property.md) 屬性來查看已刪除的記錄。  
   
- 從已刪除的記錄中抓取域值會產生錯誤。 刪除目前的記錄之後，已刪除的記錄會保持為最新狀態，直到您移至不同的記錄為止。 當您離開已刪除的記錄之後，就無法再存取它。  
+ 從已刪除的記錄中取出域值會產生錯誤。 刪除目前的記錄之後，已刪除的記錄會維持在最新狀態，直到您移至不同的記錄為止。 當您離開已刪除的記錄之後，就無法再存取。  
   
- 如果您在交易中嵌套刪除，您可以使用[RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法來復原已刪除的記錄。 如果您是在批次更新模式中，您可以使用[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)方法來取消暫止的刪除或暫止刪除群組。  
+ 如果您在交易中嵌套刪除，您可以使用 [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 方法來復原已刪除的記錄。 如果您是在批次更新模式中，可以使用 [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) 方法來取消暫止的刪除或暫止刪除群組。  
   
- 如果嘗試刪除記錄因為與基礎資料衝突而失敗（例如，另一位使用者已刪除記錄），則提供者會將警告傳回給[錯誤](../../../ado/reference/ado-api/errors-collection-ado.md)集合，但不會停止程式執行。 只有在所有要求的記錄有衝突時，才會發生執行階段錯誤。  
+ 如果嘗試刪除記錄失敗，因為與基礎資料發生衝突 (例如，其他使用者) 已刪除記錄，則提供者會將警告傳回至 [錯誤](../../../ado/reference/ado-api/errors-collection-ado.md) 集合，但不會停止程式執行。 只有在所有要求的記錄有衝突時，才會發生執行階段錯誤。  
   
- 如果已[設定唯一的資料表](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)動態屬性，而且**記錄集**是在多個資料表上執行聯結作業的結果，則**Delete**方法只會從[唯一資料表](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)屬性中名為的資料表中刪除資料列。  
+ 如果已設定 [Unique table](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) 動態屬性，而且 **記錄集** 是在多個資料表上執行聯結作業的結果，則 **Delete** 方法只會從 [Unique table](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) 屬性中所指定的資料表中刪除資料列。  
   
 ## <a name="applies-to"></a>套用至  
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Delete 方法範例（VB）](../../../ado/reference/ado-api/delete-method-example-vb.md)   
- [Delete 方法範例（VBScript）](../../../ado/reference/ado-api/delete-method-example-vbscript.md)   
- [Delete 方法範例（VC + +）](../../../ado/reference/ado-api/delete-method-example-vc.md)   
- [Delete 方法（ADO Fields 集合）](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
- [Delete 方法（ADO Parameters 集合）](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
+ [Delete 方法範例 (VB) ](../../../ado/reference/ado-api/delete-method-example-vb.md)   
+ [Delete 方法範例 (VBScript) ](../../../ado/reference/ado-api/delete-method-example-vbscript.md)   
+ [Delete 方法範例 (VC + +) ](../../../ado/reference/ado-api/delete-method-example-vc.md)   
+ [ (ADO Fields 集合) 的 Delete 方法 ](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
+ [Delete 方法 (ADO Parameters 集合) ](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
  [DeleteRecord 方法 (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)

@@ -1,4 +1,5 @@
 ---
+description: 設定電子郵件通知 (Master Data Services)
 title: 設定電子郵件通知
 ms.custom: ''
 ms.date: 03/07/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4241a6ab-7465-471b-9890-57c6b572037e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4e7c96e07ef421c4cc9a31efe359b963770e8886
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: e4368235b528b1537ebb8b4302c58769509cfebb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813134"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430010"
 ---
 # <a name="configure-email-notifications-master-data-services"></a>設定電子郵件通知 (Master Data Services)
 
@@ -34,7 +35,7 @@ ms.locfileid: "85813134"
   
 3.  完成所有必要的欄位。 如需詳細資訊，請參閱[建立 Database Mail 設定檔和帳戶對話方塊 &#40;Master Data Services 組態管理員&#41;](../master-data-services/create-database-mail-profile-and-account-dialog-box.md)。  
   
-4.  按一下 [確定] 。  
+4.  按一下 [確定]。  
   
     > [!NOTE]  
     >  當您設定通知之後，就無法使用 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 進行變更。 您必須直接在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中進行變更。 如需詳細資訊，請參閱 [Database Mail Configuration Objects](../relational-databases/database-mail/database-mail-configuration-objects.md)。  
@@ -45,7 +46,7 @@ ms.locfileid: "85813134"
   
 ## <a name="see-also"></a>另請參閱  
  [通知 &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)   
- [疑難排解電子郵件通知（Master Data Services）](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-email-notifications-master-data-services.aspx)   
+ [疑難排解電子郵件通知 (Master Data Services) ](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-email-notifications-master-data-services.aspx)   
  [設定商務規則來傳送通知 &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
   
   

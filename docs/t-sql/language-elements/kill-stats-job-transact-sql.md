@@ -1,4 +1,5 @@
 ---
+description: KILL STATS JOB (Transact-SQL)
 title: KILL STATS JOB (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 55a8f9f1-3259-45c0-8ab9-60b9c088b4b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 97992969506b030047089a973e412cdadc703416
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 439ca52d7678372ee6bf3adecccc99444631a311
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919594"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459324"
 ---
 # <a name="kill-stats-job-transact-sql"></a>KILL STATS JOB (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

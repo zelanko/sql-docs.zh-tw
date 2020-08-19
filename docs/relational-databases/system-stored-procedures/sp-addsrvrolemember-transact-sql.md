@@ -1,5 +1,6 @@
 ---
-title: sp_addsrvrolemember （Transact-sql） |Microsoft Docs
+description: sp_addsrvrolemember (Transact-SQL)
+title: sp_addsrvrolemember (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3077ba01cb982a5f4a3517f5d73b5d9e4436484b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d7a782c8a29758eb78547219d40b4fcdc99bfec8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85876443"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486253"
 ---
 # <a name="sp_addsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85876443"
   加入一個登入，做為固定伺服器角色的成員。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]請改用[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,11 +44,11 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @loginame **=** ] ** **[_登_**'** 入]  
- 這是加入至固定伺服器角色的登入名稱。 *login*是**sysname**，沒有預設值。 *登*入可以是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或 Windows 登入。 如果 Windows 登入尚未獲得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的存取權，會自動授與其存取權。  
+ [ @loginame **=** ] **'**_login_**'**  
+ 這是加入至固定伺服器角色的登入名稱。 *login* 是 **sysname**，沒有預設值。 *登* 入可以是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或 Windows 登入。 如果 Windows 登入尚未獲得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的存取權，會自動授與其存取權。  
   
- [ @rolename **=** ] **'**_角色_**'**  
- 這是要加入登入的固定伺服器角色名稱。 *role*是**sysname**，預設值是 Null，而且必須是下列其中一個值：  
+ [ @rolename **=** ] **'**_role_**'**  
+ 這是要加入登入的固定伺服器角色名稱。 *role* 是 **sysname**，預設值是 Null，而且必須是下列其中一個值：  
   
 -   系統管理員 (sysadmin)  
   
@@ -89,12 +90,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的安全性預存程式](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的安全性預存程式 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sp_dropsrvrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
- [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [&#40;Transact-sql&#41;的安全性函數](../../t-sql/functions/security-functions-transact-sql.md)   
- [建立伺服器角色 &#40;Transact-sql&#41;](../../t-sql/statements/create-server-role-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [安全性函數 &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
+ [&#40;Transact-sql&#41;建立伺服器角色 ](../../t-sql/statements/create-server-role-transact-sql.md)   
  [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)  
   
   

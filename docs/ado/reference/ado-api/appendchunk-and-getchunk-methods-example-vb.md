@@ -1,5 +1,6 @@
 ---
-title: AppendChunk 和 GetChunk 方法範例（VB） |Microsoft Docs
+description: 'AppendChunk 和 GetChunk 方法範例 (VB) '
+title: AppendChunk 和 GetChunk 方法範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c07862b5-e466-46bd-910b-59ac96709cb9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aa4c9e41da8d28a0171d0c7ddf3b53d2ee77c174
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2c37ac5209e7244a76f62a2d6979efb2df73a8e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746892"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451250"
 ---
-# <a name="appendchunk-and-getchunk-methods-example-vb"></a>AppendChunk 和 GetChunk 方法範例（VB）
-這個範例會使用[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)和[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)方法，將另一筆記錄中的資料填入影像欄位。  
+# <a name="appendchunk-and-getchunk-methods-example-vb"></a>AppendChunk 和 GetChunk 方法範例 (VB) 
+此範例會使用 [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) 和 [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) 方法，以另一筆記錄的資料來填滿影像欄位。  
   
 ```  
 'BeginAppendChunkVB  
@@ -148,7 +149,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [AppendChunk 方法（ADO）](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
+ [ (ADO) 的 AppendChunk 方法 ](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
  [Field 物件](../../../ado/reference/ado-api/field-object.md)   
- [GetChunk 方法（ADO）](../../../ado/reference/ado-api/getchunk-method-ado.md)   
+ [ (ADO) 的 GetChunk 方法 ](../../../ado/reference/ado-api/getchunk-method-ado.md)   
  [Parameter 物件](../../../ado/reference/ado-api/parameter-object.md)

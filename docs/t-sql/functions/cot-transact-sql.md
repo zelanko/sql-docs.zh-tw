@@ -1,4 +1,5 @@
 ---
+description: COT (Transact-SQL)
 title: COT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -19,12 +20,12 @@ ms.assetid: c87a9dac-e398-4125-80c3-7df3c2ce6b63
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 111ba6e1e80a455aa5081d16756f5b012657dfd9
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 3407f021d27365dcdee7c07b6ebea3a00b3d0845
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112758"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468181"
 ---
 # <a name="cot-transact-sql"></a>COT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +67,7 @@ The COT of the angle is: -0.040312
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 [數學函數 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   

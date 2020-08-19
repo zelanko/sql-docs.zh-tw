@@ -1,4 +1,5 @@
 ---
+description: DefinedSize 屬性
 title: DefinedSize 屬性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,36 +16,36 @@ helpviewer_keywords:
 ms.assetid: 3ee27314-a305-4fbc-8433-9ee9a909afd6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 08a7842a2fbfb2bd34f02ad2e45871132111a68f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fa6b01afc3a8643f7e4f28917ebaa8283bf1876e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757394"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444180"
 ---
 # <a name="definedsize-property"></a>DefinedSize 屬性
-指出[欄位](../../../ado/reference/ado-api/field-object.md)物件的資料容量。  
+表示 [Field](../../../ado/reference/ado-api/field-object.md) 物件的資料容量。  
   
 ## <a name="return-value"></a>傳回值  
- 傳回**Long**值，反映欄位的定義大小，這取決於 field 物件的資料類型。如需詳細資訊，請參閱[類型](../../../ado/reference/ado-api/type-property-ado.md)。 對於使用固定長度資料類型的欄位，傳回值是資料類型的大小（以位元組為單位）。 對於使用可變長度資料類型的欄位，這是下列其中一項：  
+ 傳回 **Long** 值，反映欄位所定義的大小，這取決於 field 物件的資料類型;如需詳細資訊，請參閱 [類型](../../../ado/reference/ado-api/type-property-ado.md) 。 如果欄位使用固定長度的資料類型，則傳回值為資料類型的大小（以位元組為單位）。 針對使用可變長度資料類型的欄位，這是下列其中一項：  
   
-1.  欄位的最大長度（ **adVarChar**和**adVarWChar**），如果欄位具有已定義的長度，則為以位元組為單位（適用于**adVarBinary**和**adVarNumeric**）。 例如， **adVarChar （5）** 欄位的最大長度為5。  
+1.  **AdVarChar**和) **adVarWChar**的字元 (的最大長度（以字元為單位）、 **adVarBinary**的位元組 (，以及如果欄位具有已定義的長度，則為**adVarNumeric**) 。 例如， **adVarChar (5) ** 欄位的最大長度為5。  
   
-2.  資料類型的最大長度，以字元為單位（ **adChar**和**adWChar**），如果欄位沒有定義的長度，則為位元組（若為**adBinary**和**adNumeric**）。  
+2.  **AdChar**和**adWChar**) 的資料類型最大長度（以字元為單位） (（如果欄位沒有定義的長度，則為**adBinary**和**adNumeric**) 的位元組 (）。  
   
-3.  ~ 0 （位，值不是 0; 如果欄位或資料類型都沒有定義的最大長度，則所有位都會設為1）。  
+3.  ~ 0 (位，值不是 0;如果欄位和資料類型都沒有定義的最大長度，則所有位都會設為 1) 。  
   
-4.  對於長度不是的資料類型，這會設定為 ~ 0 （位，值不是 0; 所有位都設為1）。  
+4.  針對沒有長度的資料類型，這會設定為 ~ 0 (位，該值不是 0;所有位都設定為 1) 。  
   
 ## <a name="remarks"></a>備註  
- 使用**DefinedSize**屬性來判斷**欄位**物件的資料容量。  
+ 您可以使用 **DefinedSize** 屬性來判斷 **Field** 物件的資料容量。  
   
- **DefinedSize**和[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)屬性不同。 例如，假設**欄位**物件的宣告類型為**AdVarChar** ，而**DefinedSize**屬性值為50，其中包含單一字元。 它所傳回的**ActualSize**屬性值是單一字元的長度（以位元組為單位）。  
+ **DefinedSize**和[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)屬性不同。 例如，假設有一個 **Field** 物件，其宣告的型別為 **AdVarChar** ，而 **DefinedSize** 屬性值為50，其中包含單一字元。 它所傳回的 **ActualSize** 屬性值是單一字元的長度（以位元組為單位）。  
   
 ## <a name="applies-to"></a>套用至  
  [Field 物件](../../../ado/reference/ado-api/field-object.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [ActualSize 和 DefinedSize 屬性範例（VB）](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)   
- [ActualSize 和 DefinedSize 屬性範例（VC + +）](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)   
+ [ActualSize 和 DefinedSize 屬性範例 (VB) ](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)   
+ [ActualSize 和 DefinedSize 屬性範例 (VC + +) ](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)   
  [ActualSize 屬性 (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)

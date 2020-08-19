@@ -1,5 +1,6 @@
 ---
-title: Append 和 CreateParameter 方法範例（VB） |Microsoft Docs
+description: Append 和 CreateParameter 方法範例 (VB)
+title: 附加和 CreateParameter 方法範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 46908cbd-434f-43e7-a794-ed0be0e0c0a7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 72964e1c3c44b389d8aabee9b794fb3dc5e1fd36
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bb26d148aff616f36f3244cbe65b315378573278
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746975"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451280"
 ---
 # <a name="append-and-createparameter-methods-example-vb"></a>Append 和 CreateParameter 方法範例 (VB)
-這個範例會使用[Append](../../../ado/reference/ado-api/append-method-ado.md)和[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)方法來執行具有輸入參數的預存程式。  
+這個範例會使用 [Append](../../../ado/reference/ado-api/append-method-ado.md) 和 [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) 方法，以輸入參數來執行預存程式。  
   
 ```  
 'BeginAppendVB  
@@ -120,8 +121,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Append 方法（ADO）](../../../ado/reference/ado-api/append-method-ado.md)   
- [CreateParameter 方法（ADO）](../../../ado/reference/ado-api/createparameter-method-ado.md)   
+ [ (ADO) 的 Append 方法 ](../../../ado/reference/ado-api/append-method-ado.md)   
+ [ (ADO) 的 CreateParameter 方法 ](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Field 物件](../../../ado/reference/ado-api/field-object.md)   
- [Fields 集合（ADO）](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [ (ADO) 的欄位集合 ](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Parameter 物件](../../../ado/reference/ado-api/parameter-object.md)

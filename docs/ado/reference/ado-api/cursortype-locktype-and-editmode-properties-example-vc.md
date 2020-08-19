@@ -1,5 +1,6 @@
 ---
-title: CursorType、LockType 和 EditMode 屬性範例（VC + +） |Microsoft Docs
+description: 'CursorType、LockType 和 EditMode 屬性範例 (VC + +) '
+title: CursorType、LockType 和 EditMode 屬性範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 26124aa4259ffa145cdbf0c42a559e89a5e2b766
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 081fafdbc0f12014daf21507184e04375ddd0b38
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763509"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444260"
 ---
-# <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>CursorType、LockType 和 EditMode 屬性範例（VC + +）
-這個範例示範如何在開啟[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)之前，先設定[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)和[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)屬性。 它也會在各種情況下顯示[EditMode](../../../ado/reference/ado-api/editmode-property.md)屬性的值。 需要 EditModeOutput 函數才能執行此程式。  
+# <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>CursorType、LockType 和 EditMode 屬性範例 (VC + +) 
+此範例示範如何在開啟[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)之前設定[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)和[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)屬性。 它也會在各種情況下顯示 [EditMode](../../../ado/reference/ado-api/editmode-property.md) 屬性的值。 此程式必須有 EditModeOutput 函數才能執行。  
   
 ## <a name="example"></a>範例  
   
@@ -155,14 +156,14 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-  **在 AddNew 之後：**   
+  **AddNew 之後：**   
  **EditMode = adEditAdd**  
 **更新之後：**   
  **EditMode = adEditNone**  
 **編輯之後：**   
  **EditMode = adEditInProgress**   
 ## <a name="see-also"></a>另請參閱  
- [CursorType 屬性（ADO）](../../../ado/reference/ado-api/cursortype-property-ado.md)   
+ [ (ADO) 的 CursorType 屬性 ](../../../ado/reference/ado-api/cursortype-property-ado.md)   
  [EditMode 屬性](../../../ado/reference/ado-api/editmode-property.md)   
- [LockType 屬性（ADO）](../../../ado/reference/ado-api/locktype-property-ado.md)   
+ [ (ADO) 的 LockType 屬性 ](../../../ado/reference/ado-api/locktype-property-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

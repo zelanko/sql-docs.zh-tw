@@ -1,4 +1,5 @@
 ---
+description: catalog.environments (SSISDB 資料庫)
 title: catalog.environments (SSISDB 資料庫) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 7014c0e3-65dc-4a46-842e-4decf3737748
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e7bc0ca536d0420b52439adceb0e01ff663e1ac2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 426199180acf6aafc609250638d00d1deb9231ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912647"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495271"
 ---
 # <a name="catalogenvironments-ssisdb-database"></a>catalog.environments (SSISDB 資料庫)
 

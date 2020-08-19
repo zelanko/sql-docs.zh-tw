@@ -1,5 +1,6 @@
 ---
-title: Hierarchize （MDX） |Microsoft Docs
+description: Hierarchize (MDX)
+title: Hierarchize (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8ab2c866f201c53684c316282a143b4f672cb8e9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3c1683819420d150e2f9b330ba94bc9e228d167f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105428"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429910"
 ---
 # <a name="hierarchize-mdx"></a>Hierarchize (MDX)
 
@@ -32,14 +33,14 @@ Hierarchize(Set_Expression [ , POST ] )
  傳回集合的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- **Hierarchize**函數會將指定集合的成員組織成階層式的順序。 此函數永遠會保留重複項。  
+ **Hierarchize**函式會將指定之集合的成員組織成階層式順序。 此函數永遠會保留重複項。  
   
--   如果未指定**POST** ，函式會依其自然順序來排序層級中的成員。 未指定其他排序條件時，它們的自然順序就是階層中成員的預設順序。 子成員會直接跟隨在父成員後面。  
+-   如果未指定 **POST** ，此函式會依自然順序來排序層級中的成員。 未指定其他排序條件時，它們的自然順序就是階層中成員的預設順序。 子成員會直接跟隨在父成員後面。  
   
--   如果指定了**post** ， **Hierarchize**函數會使用後置的順序來排序層級中的成員。 換言之，子成員會在其父系之前。  
+-   如果指定 **post** ， **Hierarchize** 函式會使用後置順序來排序層級中的成員。 換言之，子成員會在其父系之前。  
   
 ## <a name="example"></a>範例  
- 下列範例會在 Canada 成員向上鑽研。 **Hierarchize**函數是用來以階層順序組織指定的集合成員，這是**DrillUpMember**函數所需的。  
+ 下列範例會在 Canada 成員向上鑽研。 **Hierarchize**函數是用來依階層式順序組織指定的集合成員，這是**DrillUpMember**函數所需的成員。  
   
 ```  
 SELECT DrillUpMember   
@@ -58,7 +59,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
- 下列範例會從「**艾德公司**」 `Measures.[Order Quantity]` cube 傳回成員的總和（在`Date`維度中包含的前9個月2003匯總）。 **PeriodsToDate**函數會在集合中定義彙總函式操作所在的元組。 **Hierarchize**函數會以階層順序組織產品維度中指定成員集合的成員。  
+ 下列範例會傳回成員的總和，此成員是在 `Measures.[Order Quantity]` 維度所包含之2003的前九個月 `Date` （來自「 **艾德作品** 」 cube）所匯總。 **PeriodsToDate**函式會在集合中定義彙總函式運作的元組。 **Hierarchize**函式會依階層式順序，組織產品維度中指定之成員集合的成員。  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS Count  

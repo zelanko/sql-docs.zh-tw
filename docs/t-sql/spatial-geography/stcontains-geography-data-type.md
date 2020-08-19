@@ -1,4 +1,5 @@
 ---
+description: STContains (geography 資料類型)
 title: STContains (geography 資料類型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b10e8f0a-2926-449a-82ea-be42543420ca
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 0c1b1aa4526479675ec6153ad34b3a1e98671ade
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: d3e9b03eac0107792b9b0cdb59359f5ad70b5474
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554716"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459073"
 ---
 # <a name="stcontains--geography-data-type"></a>STContains (geography 資料類型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

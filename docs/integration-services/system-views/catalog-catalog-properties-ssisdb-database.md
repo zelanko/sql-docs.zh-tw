@@ -1,4 +1,5 @@
 ---
+description: catalog.catalog_properties (SSISDB 資料庫)
 title: catalog.catalog_properties (SSISDB 資料庫) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/11/2018
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f0932ef80cd6bfba4b752c130e4f69155dc316c9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7aa744bd7dd3d0330dc3e996b2af90d500be9d55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912687"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495298"
 ---
 # <a name="catalogcatalog_properties-ssisdb-database"></a>catalog.catalog_properties (SSISDB 資料庫)
 
@@ -41,13 +42,13 @@ ms.locfileid: "86912687"
 |**IS_SCALEOUT_ENABLED**|當值為 `True` 時，會啟用 SSIS Scale Out 功能。 如果您尚未啟用 Scale Out，則此屬性可能不會出現在檢視中。|
 |**MAX_PROJECT_VERSIONS**|單一專案會保留的新專案版本數目。 已啟用版本清除時，會刪除超過這個計數的較舊版本。|  
 |**OPERATION_CLEANUP_ENABLED**|當值為 `TRUE` 時，會從目錄中刪除早於 **RETENTION_WINDOW** (天) 的作業詳細資料和作業訊息。 當值為 `FALSE` 時，所有作業詳細資訊和作業訊息都會儲存在目錄中。 注意：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作會執行作業清除。|  
-|**RETENTION_WINDOW**|作業詳細資訊和作業訊息儲存在目錄中的天數。 當值為 `-1` 時，保留週期為無限。 注意：如果不想要使用清除，請將 **OPERATION_CLEANUP_ENABLED** 設定為 **FALSE**。|
+|**RETENTION_WINDOW**|作業詳細資訊和作業訊息儲存在目錄中的天數。 當值為 `-1` 時，保留週期為無限。 注意:如果不想要使用清除，請將 **OPERATION_CLEANUP_ENABLED** 設定為 **FALSE**。|
 |**SCHEMA_BUILD**|SSISDB 目錄資料庫結構描述的組建編號。 每當建立或升級 SSISDB 目錄時，就會變更此數字。|
 |**SCHEMA_VERSION**|SSISDB 目錄資料庫結構描述的主要版本號碼。 每當建立 SSISDB 目錄或升級主要版本時，就會變更此數字。|
 |**VALIDATION_TIMEOUT**|如果驗證沒有在這個屬性指定的秒數中完成，驗證會停止。|  
 |**SERVER_CUSTOMIZED_LOGGING_LEVEL**|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的預設自訂記錄層次。 如果您尚未建立任何自訂的記錄層次，則此屬性可能不會出現在檢視中。|
 |**SERVER_LOGGING_LEVEL**|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的預設記錄層級。|
-|**SERVER_OPERATION_ENCRYPTION_LEVEL**|當值為 1 (`PER_EXECUTION`) 時，會針對每次「執行」  建立用於保護機密執行參數和執行記錄的憑證和對稱金鍵。 當值為 2 (`PER_PROJECT`) 時，會為每個「專案」  建立憑證和對稱金鑰一次。 如需此屬性的詳細資訊，請參閱適用於 SSIS 預存程序 [catalog.cleanup_server_log](../system-stored-procedures/catalog-cleanup-server-log.md#remarks) 的＜備註＞。|
+|**SERVER_OPERATION_ENCRYPTION_LEVEL**|當值為 1 (`PER_EXECUTION`) 時，會針對每次「執行」** 建立用於保護機密執行參數和執行記錄的憑證和對稱金鍵。 當值為 2 (`PER_PROJECT`) 時，會為每個「專案」** 建立憑證和對稱金鑰一次。 如需此屬性的詳細資訊，請參閱適用於 SSIS 預存程序 [catalog.cleanup_server_log](../system-stored-procedures/catalog-cleanup-server-log.md#remarks) 的＜備註＞。|
 |**VERSION_CLEANUP_ENABLED**|當值為 `TRUE` 時，目錄中只會儲存 **MAX_PROJECT_VERSIONS** 數目的專案版本，並會刪除所有其他專案版本。 當值為 **FALSE** 時，所有專案版本都會儲存在目錄中。 注意：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作會執行作業清除。|
 |||
   

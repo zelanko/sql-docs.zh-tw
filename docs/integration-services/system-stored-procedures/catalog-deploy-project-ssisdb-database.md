@@ -1,4 +1,5 @@
 ---
+description: catalog.deploy_project (SSISDB 資料庫)
 title: catalog.deploy_project (SSISDB 資料庫) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 2e3439b4-7226-4b61-a993-7a1d161eac7e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b2578745d445c1f2ac91b037ac7ce8e694687a16
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6a8bb809f349ce68b12abaee171928805d1fe0df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913044"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430040"
 ---
 # <a name="catalogdeploy_project-ssisdb-database"></a>catalog.deploy_project (SSISDB 資料庫)
 

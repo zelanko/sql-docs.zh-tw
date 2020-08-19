@@ -1,5 +1,6 @@
 ---
-title: MDX 資料動作陳述式（MDX） |Microsoft Docs
+description: MDX 資料操作陳述式 (MDX)
+title: Mdx 資料動作陳述式 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f0aa7017cd82dce5da8d3424ed67565e9fda101c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b22bf9a923fad3e27330a86421258de29ea29a1a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68003518"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477000"
 ---
 # <a name="mdx-data-manipulation-statements-mdx"></a>MDX 資料操作陳述式 (MDX)
 
@@ -24,11 +25,11 @@ ms.locfileid: "68003518"
   
 |主題|描述|  
 |-----------|-----------------|  
-|[&#40;MDX&#41;的 CALL 語句](../mdx/mdx-data-manipulation-call.md)|在目前範圍中或選擇性在指定 Cube 上，執行會傳回空值的預存程序。|  
-|[&#40;MDX&#41;的 CLEAR 計算語句](../mdx/mdx-data-manipulation-clear-calculations.md)|移除 Cube 的所有計算，並使 Cube 回到計算行程 0。|  
-|[MDX&#41;&#40;的鑽取語句](../mdx/mdx-data-manipulation-drillthrough.md)|擷取用於在 Cube 建立指定資料格的資料列集。|  
+|[&#40;MDX&#41;的 CALL 語句 ](../mdx/mdx-data-manipulation-call.md)|在目前範圍中或選擇性在指定 Cube 上，執行會傳回空值的預存程序。|  
+|[清除計算語句 &#40;MDX&#41;](../mdx/mdx-data-manipulation-clear-calculations.md)|移除 Cube 的所有計算，並使 Cube 回到計算行程 0。|  
+|[MDX&#41;&#40;的鑽取語句 ](../mdx/mdx-data-manipulation-drillthrough.md)|擷取用於在 Cube 建立指定資料格的資料列集。|  
 |[SELECT 陳述式 &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)|擷取指定 Cube 的資料。|  
-|[&#40;MDX&#41;的 UPDATE CUBE 語句](../mdx/mdx-data-manipulation-update-cube.md)|更新 Cube 內指定的分葉或非分葉資料格的值，選擇性地跨相依分葉資料格，配置指定的非分葉頁資料格的值。|  
+|[UPDATE CUBE 語句 &#40;MDX&#41;](../mdx/mdx-data-manipulation-update-cube.md)|更新 Cube 內指定的分葉或非分葉資料格的值，選擇性地跨相依分葉資料格，配置指定的非分葉頁資料格的值。|  
   
 ## <a name="see-also"></a>另請參閱  
  [Mdx 語句參考 &#40;MDX&#41;](../mdx/mdx-statement-reference-mdx.md)   

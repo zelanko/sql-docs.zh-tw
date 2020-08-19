@@ -1,4 +1,5 @@
 ---
+description: 回溯相容性和標準合規性
 title: 回溯相容性和標準合規性 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b5eee7be-28ed-4467-8cf1-2205e2010a53
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b46b9f5b72117fd978a78b765d09aafd5dc84b8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bab7e7777cd5750c86ffbfc3cc87a97ea31ebca4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283678"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476860"
 ---
 # <a name="backward-compatibility-and-standards-compliance"></a>回溯相容性和標準合規性
-回溯相容性是指較新的 odbc 元件能夠使用舊版 ODBC 元件的能力。 下列各節將*討論 ODBC 3.x*中的變更如何影響這些元件。 其中包含的資訊主要是說明 ODBC 3.x 應用程式的撰寫，以及 ODBC*驅動程式如何*處理回溯相容性問題。 如需回溯相容性問題如何*影響 ODBC 3.x*驅動程式撰寫的特定指導方針，請參閱[附錄 G：與舊版相容的驅動程式方針](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)。  
+回溯相容性是較新 ODBC 元件使用舊的 ODBC 元件的能力。 下列各節將 *討論 ODBC 3.x*的變更如何影響這些元件。 其中所包含的資訊主要是針對 ODBC 3.x 應用程式的撰寫，以及 ODBC *驅動程式處理* 回溯相容性問題的方式。 如需回溯相容性問題如何 *影響 ODBC 3.x* 驅動程式寫入的特定指導方針，請參閱 [附錄 G：回溯相容性的驅動程式方針](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)。  
   
  此章節包含下列主題。  
   

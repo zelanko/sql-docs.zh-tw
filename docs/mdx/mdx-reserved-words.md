@@ -1,4 +1,5 @@
 ---
+description: MDX 保留字
 title: MDX 保留字 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d2b47a6860d73e72be54dbe9caa1f18ab95c6cff
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: b5405241a99c931c1f9e9354214f097645941efb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362778"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429750"
 ---
 # <a name="mdx-reserved-words"></a>MDX 保留字
 
@@ -100,7 +101,7 @@ ms.locfileid: "87362778"
         EXCEPT  
         EXCLUDEEMPTY  
         EXTRACT  
-        FALSE  
+        false  
         FILTER  
         FIRSTCHILD  
         FIRSTSIBLING  
@@ -144,13 +145,13 @@ ms.locfileid: "87362778"
         LINREGSLOPE  
         LINREGVARIANCE  
         LOOKUPCUBE  
-        最大值  
+        MAX  
         MEASURE  
         MEDIAN  
         MEMBER  
         MEMBERS  
         MEMBERTOSTR  
-        最小值  
+        MIN  
         MTD  
         NAME  
         NAMETOSET  
@@ -164,7 +165,7 @@ ms.locfileid: "87362778"
         NULL  
         開啟  
         OPENINGPERIOD  
-        OR  
+        或者  
         PAGES  
         PARALLELPERIOD  
         PARENT  
@@ -217,7 +218,7 @@ ms.locfileid: "87362778"
         TOPSUM  
         TOTALS  
         trEE  
-        TRUE  
+        true  
         TUPLETOSTR  
         TYPE  
         UNION  
@@ -246,5 +247,5 @@ ms.locfileid: "87362778"
 :::row-end:::
 
 ## <a name="see-also"></a>另請參閱  
- [&#40;MDX 語法的保留關鍵字&#41;](../mdx/reserved-keywords-mdx-syntax.md)   
+ [保留關鍵字 &#40;MDX 語法&#41;](../mdx/reserved-keywords-mdx-syntax.md)   
  [MDX 語言參考 &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  

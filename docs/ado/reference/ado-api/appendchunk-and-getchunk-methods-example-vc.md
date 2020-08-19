@@ -1,5 +1,6 @@
 ---
-title: AppendChunk 和 GetChunk 方法範例（VC + +） |Microsoft Docs
+description: AppendChunk 和 GetChunk 方法範例 (VC++)
+title: AppendChunk 和 GetChunk 方法範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 51aa99be-d5ca-46ac-8b3f-1b03ce4f0b2a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f74c65a2a732c6875cf71a69420616f0b619f1e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c6d8089bc7a3f0b59684a7dc1065c5b8c5dcc04c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762949"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451240"
 ---
 # <a name="appendchunk-and-getchunk-methods-example-vc"></a>AppendChunk 和 GetChunk 方法範例 (VC++)
-這個範例會使用[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)和[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)方法，將另一筆記錄中的資料填入影像欄位。  
+此範例會使用 [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) 和 [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) 方法，以另一筆記錄的資料來填滿影像欄位。  
   
 ```  
 // BeginAppendChunkCpp.cpp  
@@ -266,6 +267,6 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [AppendChunk 方法（ADO）](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
+ [ (ADO) 的 AppendChunk 方法 ](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
  [Field 物件](../../../ado/reference/ado-api/field-object.md)   
  [GetChunk 方法 (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)

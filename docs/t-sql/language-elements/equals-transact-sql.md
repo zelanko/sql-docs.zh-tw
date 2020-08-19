@@ -1,4 +1,5 @@
 ---
+description: = (等於) (Transact-SQL)
 title: = (等於) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/06/2016
@@ -21,12 +22,12 @@ ms.assetid: 18885245-5f55-4831-8f0b-7f2a3e82e246
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 140545235928e356d143aa2a5164c0b054adf0f9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6acac2a2a67974945c6e934994c7823fc3d75bde
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918962"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422512"
 ---
 # <a name="-equals-transact-sql"></a>= (等於) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +49,7 @@ expression = expression
  這是任何有效的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 如果運算式的資料類型不同，一個運算式的資料類型必須能夠隱含地轉換成另一運算式的資料類型。 轉換會以[資料類型優先順序](../../t-sql/data-types/data-type-precedence-transact-sql.md)的規則為基礎。  
   
 ## <a name="result-types"></a>結果類型  
- Boolean  
+ 布林值  
   
 ## <a name="remarks"></a>備註  
  當您使用 NULL 運算式進行比較時，結果會隨著 `ANSI_NULLS` 設定而不同：  
