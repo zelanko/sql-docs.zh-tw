@@ -1,4 +1,5 @@
 ---
+description: 開始使用系統建立版本的時態表
 title: 開始使用系統建立版本的時態表 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/28/2016
@@ -11,12 +12,12 @@ ms.assetid: d431f216-82cf-4d97-825e-bb35d3d53a45
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a87f79468344173034655a06ae87d33aa2931b9d
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e00e94dfb828894a7c4b8f0a30c4a333c71794b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552711"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427490"
 ---
 # <a name="getting-started-with-system-versioned-temporal-tables"></a>開始使用系統建立版本的時態表
 

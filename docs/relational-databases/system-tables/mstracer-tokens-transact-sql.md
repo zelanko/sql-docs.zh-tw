@@ -1,5 +1,6 @@
 ---
-title: MStracer_tokens （Transact-sql） |Microsoft Docs
+description: MStracer_tokens (Transact-SQL)
+title: MStracer_tokens (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: b273aa48-8188-4213-8e2c-311543c3236f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0822c2de02de9ef0a420f0066d058fad200b4a88
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4e3604e25213740d58a1d01b686d3d698bcc44a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881475"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427630"
 ---
 # <a name="mstracer_tokens-transact-sql"></a>MStracer_tokens (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MStracer_tokens**表會維護插入發行集之追蹤 token 記錄的記錄。 這份資料表儲存在散發資料庫中，並且由複寫用來監視效能之用。  
+  **MStracer_tokens**資料表會維護插入發行集中之追蹤 token 記錄的記錄。 這份資料表儲存在散發資料庫中，並且由複寫用來監視效能之用。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  

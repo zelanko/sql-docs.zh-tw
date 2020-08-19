@@ -1,4 +1,5 @@
 ---
+description: 啟用或停用資料收集
 title: 啟用或停用資料收集 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0137971b-fb48-4a3e-822a-3df2b9bb09d7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a2ec874b0a590530721fce37b12be8810a196f40
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c0ff43debf025f9c6494f9e1beeeae1cb5721037
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717888"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428839"
 ---
 # <a name="enable-or-disable-data-collection"></a>啟用或停用資料收集
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +55,7 @@ ms.locfileid: "85717888"
   
 1.  在 [物件總管] 中，展開 **[管理]** 節點。  
   
-2.  以滑鼠右鍵按一下 **[資料收集]** ，然後按一下 **[停用資料收集]** 。  
+2.  以滑鼠右鍵按一下 **[資料收集]**，然後按一下 **[停用資料收集]**。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

@@ -1,0 +1,140 @@
+- name: Azure Data Studio 文件
+  href: ../azure-data-studio/index.yml
+- name: 下載 Azure Data Studio
+  href: download-azure-data-studio.md
+- name: 版本資訊
+  href: release-notes-azure-data-studio.md
+- name: 概觀
+  items:
+    - name: Azure Data Studio
+      href: what-is.md
+- name: 快速入門
+  items:
+    - name: 連線與查詢 SQL Server
+      href: quickstart-sql-server.md
+    - name: 連線與查詢 Azure SQL Database
+      href: quickstart-sql-database.md
+    - name: 連線與查詢 Azure SQL 資料倉儲
+      href: quickstart-sql-dw.md
+    - name: 連線與查詢 PostgreSQL
+      href: quickstart-postgres.md
+- name: 教學課程
+  items:
+    - name: T-SQL 編輯器
+      href: tutorial-sql-editor.md
+    - name: 見解範例：慢速查詢
+      href: tutorial-qds-sql-server.md
+    - name: 見解範例：資料表空間使用量
+      href: tutorial-table-space-sql-server.md
+    - name: 建立自訂見解
+      href: tutorial-build-custom-insight-sql-server.md
+    - name: 備份與還原
+      href: tutorial-backup-restore-sql-server.md
+- name: 概念
+  items:
+    - name: 延伸模組
+      items:
+        - name: 延伸模組
+          href: extensions.md
+        - name: 機器學習延伸模組
+          items:
+            - name: 機器學習延伸模組概觀
+              href: machine-learning-extension.md
+            - name: 管理資料庫中的套件
+              href: machine-learning-extension-manage-packages.md
+            - name: 進行預測
+              href: machine-learning-extension-predictions.md
+            - name: 匯入和檢視模型
+              href: machine-learning-extension-import-view-models.md
+        - name: PostgreSQL 延伸模組
+          href: postgres-extension.md
+        - name: 資料虛擬化延伸模組
+          href: data-virtualization-extension.md
+        - name: SQL Database Projects 延伸模組
+          items:
+            - name: SQL Database 專案延伸模組概觀
+              href: sql-database-project-extension.md
+            - name: 開始使用 SQL Database 專案延伸模組
+              href: sql-database-project-extension-getting-started.md
+            - name: 建置和發佈專案
+              href: sql-database-project-extension-build.md
+            - name: 從命令列開始建立專案
+              href: sql-database-project-extension-build-from-command-line.md
+        - name: SQL Server Agent
+          href: sql-server-agent-extension.md
+        - name: SQL Server 中央管理伺服器延伸模組
+          href: sql-server-cms-extension.md
+        - name: SQL Server dacpac 延伸模組
+          href: sql-server-dacpac-extension.md
+        - name: SQL Server 匯入
+          href: sql-server-import-extension.md
+        - name: SQL Server Profiler
+          href: sql-server-profiler-extension.md
+        - name: 結構描述比較延伸模組
+          href: schema-compare-extension.md
+        - name: PowerShell 延伸模組
+          href: powershell-extension.md
+        - name: 受控執行個體延伸模組
+          href: azure-sql-managed-instance-extension.md
+        - name: SandDance 延伸模組
+          href: sanddance-extension.md
+    - name: 延伸模組製作
+      items:
+        - name: 擴充性概觀
+          href: extensibility.md
+        - name: 延伸模組製作
+          href: extension-authoring.md
+        - name: 建立延伸模組
+          href: tutorial-create-extension.md
+        - name: 擴充性 API
+          href: extensibility-apis.md
+    - name: 整合式終端機 (PowerShell、Bash)
+      href: integrated-terminal.md
+    - name: 鍵盤快速鍵
+      href: keyboard-shortcuts.md
+    - name: 伺服器群組
+      href: server-groups.md
+    - name: 原始檔控制
+      href: source-control.md
+- name: 操作指南
+  items:
+    - name: Notebooks
+      items:
+        - name: 筆記本概觀
+          href: notebooks-guidance.md
+        - name: 使用 SQL 核心
+          href: notebooks-tutorial-sql-kernel.md
+        - name: 使用 Python 核心
+          href: notebooks-tutorial-python-kernel.md
+        - name: Kqlmagic 延伸模組
+          href: notebooks-kqlmagic.md
+    - name: 儀表板與見解小工具
+      href: insight-widgets.md
+    - name: 程式碼片段
+      href: code-snippets.md
+    - name: 探索 Azure SQL 資源
+      href: azure-resource-explorer.md
+    - name: 使用量資料收集
+      href: usage-data-collection.md
+    - name: 工作區與使用者設定
+      href: settings.md
+    - name: Windows 驗證 (Kerberos)
+      href: enable-kerberos.md
+    - name: 使用量資料收集
+      href: usage-data-collection.md
+- name: 參考
+  items:
+    - name: SQL 工具
+      href: ../tools/overview-sql-tools.md
+    - name: Azure 開發人員工具
+      href: 'https://docs.microsoft.com/azure/?product=developer-tools'
+- name: 資源
+  items:
+    - name: 常見問題集
+      href: faq.md
+    - name: Azure Data Studio GitHub 存放庫 >
+      href: 'https://www.github.com/Microsoft/azuredatastudio'
+    - name: 回報問題與提出建議 >
+      href: 'https://github.com/microsoft/azuredatastudio/issues'
+    - name: SQL Server 文件 >
+      href: ../sql-server/index.yml

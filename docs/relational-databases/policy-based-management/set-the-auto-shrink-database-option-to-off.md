@@ -1,4 +1,5 @@
 ---
+description: 將 AUTO_SHRINK 資料庫選項設定為 OFF
 title: 將 AUTO_SHRINK 資料庫選項設定為 OFF | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 16403850-d745-4754-b84f-5f01aaecd24e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fac9ff925c5e24d21efe0dcb5b7776636cf78572
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bff50dd9a7ee85cf94f378f2967551b43ef108f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774189"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428100"
 ---
 # <a name="set-the-auto_shrink-database-option-to-off"></a>將 AUTO_SHRINK 資料庫選項設定為 OFF
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

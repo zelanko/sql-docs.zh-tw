@@ -1,5 +1,6 @@
 ---
-title: RemoveCertificate 方法（ServerSettings）
+description: RemoveCertificate 方法 (ServerSettings 類別)
+title: 'RemoveCertificate 方法 (ServerSettings) '
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9ffdbc39-93f5-48fb-859a-86a3ad545827
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0bdbdd4bde2436eb11962790e65bb65daa938500
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8de2c4e631ac0455fa16d2f4ce70f3e980c467df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880760"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427250"
 ---
 # <a name="removecertificate-method-serversettings-class"></a>RemoveCertificate 方法 (ServerSettings 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

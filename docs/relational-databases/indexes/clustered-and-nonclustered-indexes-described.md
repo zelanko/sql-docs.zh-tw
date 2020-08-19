@@ -1,4 +1,5 @@
 ---
+description: 叢集與非叢集索引說明
 title: 叢集與非叢集索引說明 | Microsoft 文件
 ms.custom: ''
 ms.date: 02/11/2019
@@ -14,12 +15,12 @@ ms.assetid: b7d6b323-728d-4763-a987-92e6292f6f7a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f7987fe81a4c55093dca6875074d752a72789a3b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d64eedf43ee8ef64a5a2e5e958df02ea8e20b2cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753153"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428420"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>叢集與非叢集索引說明
 

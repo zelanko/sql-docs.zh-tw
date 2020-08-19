@@ -1,5 +1,6 @@
 ---
-title: 一般擴充預存程式（Transact-sql） |Microsoft Docs
+description: 一般擴充預存程序 (Transact-SQL)
+title: " (Transact-sql) 的一般擴充預存程式 |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9129f571-d162-42e6-a66b-340fbbf0acd1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4aa34ee1f519e95e74fd5fddcb144ef0d978ac50
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 0b9f9ab9315eb04d21001a60c3c2b48d897f65a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977547"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427680"
 ---
 # <a name="general-extended-stored-procedures-transact-sql"></a>一般擴充預存程序 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

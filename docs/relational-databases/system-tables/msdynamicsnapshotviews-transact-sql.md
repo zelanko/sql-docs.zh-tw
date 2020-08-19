@@ -1,5 +1,6 @@
 ---
-title: MSdynamicsnapshotviews （Transact-sql） |Microsoft Docs
+description: MSdynamicsnapshotviews (Transact-SQL)
+title: MSdynamicsnapshotviews (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 4fc1822a-5d6e-4034-a2e2-363210232d3b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cc0668cb67308110cfde23390c809c8867fb959a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5d5648dc1798740429c8a2d50d3058117a1e1546
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889917"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427640"
 ---
 # <a name="msdynamicsnapshotviews-transact-sql"></a>MSdynamicsnapshotviews (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSdynamicsnapshotviews**資料表會追蹤快照集代理程式所建立的所有暫存的已篩選資料快照集，而且系統會在 SQL Server Agent 或快照集代理程式異常關閉的情況下，用它來清除 views。 這份資料表儲存在發行集和訂閱資料庫中。  
+  **MSdynamicsnapshotviews**資料表會追蹤快照集代理程式所建立的所有暫存篩選資料快照集，並在 SQL Server Agent 或快照集代理程式異常關機時，供系統用來清除視圖。 這份資料表儲存在發行集和訂閱資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  

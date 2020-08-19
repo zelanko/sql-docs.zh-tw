@@ -1,5 +1,6 @@
 ---
-title: sys.databases fn_hadr_distributed_ag_replica （Transact-sql） |Microsoft Docs
+description: 'sys. fn_hadr_distributed_ag_replica (Transact-sql) '
+title: sys. fn_hadr_distributed_ag_replica (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,13 +20,14 @@ helpviewer_keywords:
 ms.assetid: a1e5f9cb-c350-4bb4-a04f-7394f6f25d62
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 49eabca032ab109be1f0aecb1d830c83d9305a7f
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 6b7dc6aacf18415b11f5a32e464a57fbbadadc07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053608"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427770"
 ---
-# <a name="sysfn_hadr_distributed_ag_replica-transact-sql"></a>sys.databases fn_hadr_distributed_ag_replica （Transact-sql）
+# <a name="sysfn_hadr_distributed_ag_replica-transact-sql"></a>sys. fn_hadr_distributed_ag_replica (Transact-sql) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   用來將分散式可用性群組中的複本對應至本機可用性群組。  
@@ -41,22 +43,22 @@ sys.fn_hadr_distributed_ag_replica( lag_Id, replica_id )
   
 ## <a name="arguments"></a>引數  
  '*lag_Id*'  
- 這是分散式可用性群組的識別碼。 *lag_Id*的類型為**uniqueidentifier**。  
+ 這是分散式可用性群組的識別碼。 *lag_Id* 是 **uniqueidentifier**類型。  
   
  '*replica_id*'  
- 這是分散式可用性群組中複本的識別碼。 *replica_id*的類型為**uniqueidentifier**。  
+ 這是分散式可用性群組中複本的識別碼。 *replica_id* 是 **uniqueidentifier**類型。  
   
 ## <a name="tables-returned"></a>傳回的資料表  
  傳回下列資訊。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**group_id**|**uniqueidentifier**|本機可用性群組的唯一識別碼（GUID）。|  
+|**group_id**|**uniqueidentifier**|本機可用性群組 (GUID) 的唯一識別碼。|  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="using-sysfn_hadr_distributed_ag_replica"></a>使用 sys. fn_hadr_distributed_ag_replica  
- 下列範例會傳回一個資料表，其中包含與指定之分散式可用性群組和複本相關聯的本機可用性群組識別碼。  
+ 下列範例會傳回一個資料表，其中包含與指定的分散式可用性群組和複本相關聯的本機可用性群組識別碼。  
   
 ```  
 DECLARE @lagId uniqueidentifier = '4A03D1A8-4AE6-B153-E7E9-ED22A546008D'  

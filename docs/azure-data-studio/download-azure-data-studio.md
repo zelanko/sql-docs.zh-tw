@@ -8,13 +8,13 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 7/17/2020
-ms.openlocfilehash: c0b701bb23b5ada0f3a4a58d23064bd79acd80ad
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.date: 8/12/2020
+ms.openlocfilehash: 29f5f31d999e96a17cd1653323c75251c8873572
+ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442391"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147209"
 ---
 # <a name="download-and-install-azure-data-studio"></a>下載並安裝 Azure Data Studio
 
@@ -27,9 +27,9 @@ Azure Data Studio 在 Windows、macOS 和 Linux 上執行。
 
 |平台|下載|發行日期| 版本 |
 |:---|:---|:---|:---|
-| Windows | [使用者安裝程式 (建議)](https://go.microsoft.com/fwlink/?linkid=2135512)<br>[系統安裝程式](https://go.microsoft.com/fwlink/?linkid=2135513)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2135514) | 2020 年 7 月 17 日 | 1.20.1 |
-| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2135266) | 2020 年 7 月 17 日 | 1.20.1 |
-| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2135515)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2135268)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2135267) | 2020 年 7 月 17 日| 1.20.1 |
+| Windows | [使用者安裝程式 (建議)](https://go.microsoft.com/fwlink/?linkid=2138608)<br>[系統安裝程式](https://go.microsoft.com/fwlink/?linkid=2138704)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2138705) | 2020 年8 月 12 日 | 1.21.0 |
+| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2138609) | 2020 年8 月 12 日 | 1.21.0 |
+| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2138508)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2138507)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2138706) | 2020 年8 月 12 日| 1.21.0 |
 
 如需最新版本的詳細資訊，請參閱[版本資訊](release-notes.md)。
 
@@ -41,32 +41,32 @@ Azure Data Studio 在 Windows、macOS 和 Linux 上執行。
 
 **使用者安裝程式** (建議)
 
-1. 下載並執行[適用於 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]「使用者」安裝程式](https://go.microsoft.com/fwlink/?linkid=2135512) \(英文\)。
+1. 下載並執行[適用於 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]「使用者」安裝程式](https://go.microsoft.com/fwlink/?linkid=2138608) \(英文\)。
 2. 啟動 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 應用程式。
 
 **系統安裝程式**
 
-1. 下載並執行[適用於 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]「系統」安裝程式](https://go.microsoft.com/fwlink/?linkid=2135513) \(英文\)。
+1. 下載並執行[適用於 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]「系統」安裝程式](https://go.microsoft.com/fwlink/?linkid=2138704) \(英文\)。
 2. 啟動 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 應用程式。
 
 **壓縮檔**
 
-1. 下載[適用於 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip](https://go.microsoft.com/fwlink/?linkid=2135514)。
+1. 下載[適用於 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip](https://go.microsoft.com/fwlink/?linkid=2138705)。
 2. 瀏覽至下載的檔案並解壓縮。
 3. `\azuredatastudio-windows\azuredatastudio.exe`執行
 
 ## <a name="get-azure-data-studio-for-macos"></a>取得適用於 macOS 的 Azure Data Studio
 
-1. 下載[適用於 macOS 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](https://go.microsoft.com/fwlink/?linkid=2135266)。
+1. 下載[適用於 macOS 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](https://go.microsoft.com/fwlink/?linkid=2138609)。
 2. 若要展開壓縮檔的內容，請按兩下檔案。
 3. 若要在「啟動控制板」中提供 Azure Data Studio，請將 *Azure Data Studio.app* 拖曳至 [應用程式] 資料夾。
 
 ## <a name="get-azure-data-studio-for-linux"></a>取得適用於 Linux 的 Azure Data Studio
 
 1. 使用其中一種安裝程式或 tar.gz 封存，下載適用於 Linux 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]：
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2135515)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2135268)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2135267)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2138508)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2138507)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2138706)
 1. 若要將檔案解壓縮並啟動 [!INCLUDE[name-sos](../includes/name-sos-short.md)]，請開啟新的終端視窗並鍵入下列命令：
 
    **Debian 安裝：**

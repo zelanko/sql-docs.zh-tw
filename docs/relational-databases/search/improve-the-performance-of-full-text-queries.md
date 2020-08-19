@@ -1,4 +1,5 @@
 ---
+description: 改善全文檢索查詢的效能
 title: 改善全文檢索查詢的效能 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4fe209581f1ce57d40c7757333a6da8ea84898e3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 18cd0b40213fc14542c5ef58ee12f0ee011dd08a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629466"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427940"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>改善全文檢索查詢的效能
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85629466"
   
 -   如果您只需要全文檢索索引鍵或次序資訊，請分別使用 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 或 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) ，而不要使用 CONTAINS 或 FREETEXT。  
   
--   若要限制結果並提升效能，請使用 FREETEXTTABLE 和 CONTAINSTABLE 函數的 *top_n_by_rank* 參數。 *top_n_by_rank* 可讓您僅重新叫用最相關的叫用。 只有當您的商務狀況不需要重新叫用所有可能的叫用 (亦即，不需要「全部重新叫用」  ) 時，才應該使用這個參數。  
+-   若要限制結果並提升效能，請使用 FREETEXTTABLE 和 CONTAINSTABLE 函數的 *top_n_by_rank* 參數。 *top_n_by_rank* 可讓您僅重新叫用最相關的叫用。 只有當您的商務狀況不需要重新叫用所有可能的叫用 (亦即，不需要「全部重新叫用」**) 時，才應該使用這個參數。  
   
     > [!NOTE]  
     >  全部重新叫用通常是法律狀況的必要項目，但是其重要性可能低於商務狀況的效能，例如電子商務。  

@@ -1,4 +1,5 @@
 ---
+description: 使用目錄函數
 title: 使用目錄函數 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,11 +19,12 @@ ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9043aa7154b150dded97e439796d36bf570e4766
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a9bdc781aaef55a074083e111777b99c0b6ebd6e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003112"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428090"
 ---
 # <a name="using-catalog-functions"></a>使用目錄函數
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,9 +33,9 @@ ms.locfileid: "86003112"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式可讓應用程式透過呼叫 ODBC 目錄函數來判斷資料庫結構。 目錄函數會在結果集中傳回資訊，而且會使用目錄預存程序進行實作以便查詢目錄中的系統資料表。 例如，應用程式可能要求的結果集包含系統上所有資料表，或是特定資料表中所有資料行的相關資訊。 標準 ODBC 目錄函數用於取得應用程式所連接之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的目錄資訊。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援分散式查詢，其中來自多個異質 OLE DB 資料來源的資料會以單一查詢進行存取。 存取遠端 OLE DB 資料來源的其中一個方法是將資料來源定義為連結伺服器。 您可以使用[sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)來完成這項作業。 在定義連結伺服器之後，您可以在 Transact-SQL 陳述式中使用四部份名稱來參考該伺服器中的物件：  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援分散式查詢，其中來自多個異質 OLE DB 資料來源的資料會以單一查詢進行存取。 存取遠端 OLE DB 資料來源的其中一個方法是將資料來源定義為連結伺服器。 您可以使用 [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)來完成這項工作。 在定義連結伺服器之後，您可以在 Transact-SQL 陳述式中使用四部份名稱來參考該伺服器中的物件：  
   
- *linked_server_name. catalog. schema. object_name*。  
+ *linked_server_name 目錄. schema. object_name*。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援兩種驅動程式專用的函數，可協助取得連結伺服器的目錄資訊：  
   
@@ -45,7 +47,7 @@ ms.locfileid: "86003112"
   
      傳回連結伺服器中所包含的目錄清單。  
   
- 當您擁有連結的伺服器名稱和目錄名稱之後， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驅動程式支援使用兩部分名稱的_linked_server_name_從目錄中取得資訊 **。** 下列 ODBC 目錄函數的*CatalogName* _目錄_：  
+ 當您擁有連結的伺服器名稱和目錄名稱之後， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驅動程式就會使用 linked_server_name 的兩部分名稱，支援從目錄取得資訊_linked_server_name_**。** 下列 ODBC 目錄函數的*CatalogName* _目錄_：  
   
 -   **SQLColumnPrivileges**  
   
@@ -59,7 +61,7 @@ ms.locfileid: "86003112"
   
 -   **SQLTables**  
   
- 兩部分_linked_server_name_**。**[SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md)上的*FKCatalogName*和*sqlforeignkeys*也支援_目錄_。  
+ 兩部分的_linked_server_name_**。**[SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md)上的*FKCatalogName*和*sqlforeignkeys*也支援_目錄_。  
   
  使用 SQLLinkedServers 和 SQLLinkedCatalogs 需要下列檔案：  
   

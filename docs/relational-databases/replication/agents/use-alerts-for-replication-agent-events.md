@@ -1,4 +1,5 @@
 ---
+description: 使用複寫代理程式事件的警示
 title: 使用複寫代理程式事件的警示 | Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8a52154d55f1703cc2f7d1a9221021ab11d94177
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d0fbec0a8ff1bcd6416ab0c24166a5bf5559cb8f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919744"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428040"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>使用複寫代理程式事件的警示
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,9 +42,9 @@ ms.locfileid: "86919744"
 |14151|**複寫: 代理程式失敗**|代理程式關閉時發生錯誤。|是|  
 |14152|**複寫: 代理程式重試**|代理程式於重試動作不成功之後關閉 (代理程式遇到錯誤，例如伺服器無法使用、鎖死、連線失敗、或逾時失敗)。|是|  
 |14157|**複寫: 已卸除逾期的訂閱**|已卸除逾期的訂閱。|否|  
-|20572|**複寫: 驗證失敗後重新初始化訂閱**|回應作業「重新初始化資料驗證失敗的訂閱」成功重新初始化訂閱。|否|  
-|20574|**複寫: 訂閱者資料驗證失敗**|散發或合併代理程式的資料驗證失敗。|是|  
-|20575|**複寫: 訂閱者已經通過資料驗證**|散發或合併代理程式通過資料驗證。|是|  
+|20572|**複寫：驗證失敗後重新初始化訂閱**|回應作業「重新初始化資料驗證失敗的訂閱」成功重新初始化訂閱。|否|  
+|20574|**複寫：訂閱者資料驗證失敗**|散發或合併代理程式的資料驗證失敗。|是|  
+|20575|**複寫：訂閱者已經通過資料驗證**|散發或合併代理程式通過資料驗證。|是|  
 |20578|**複寫: 代理程式自訂關閉**|||  
 |22815|**點對點衝突偵測警示**|散發代理程式在嘗試將變更套用到對等節點上時偵測到衝突。|是|  
   

@@ -1,5 +1,6 @@
 ---
-title: dbo.sysjobservers （Transact-sql） |Microsoft Docs
+description: dbo.sysjobservers (Transact-SQL)
+title: dbo.sysjobservers (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/26/2019
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9abcc20f-a421-4591-affb-62674d04575e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3b02aa88951f7dd4e82ab26fcd54d715027b1ab7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b4df04c6a9564c2912f39173f71735162e7dc1cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890453"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427660"
 ---
 # <a name="dbosysjobservers-transact-sql"></a>dbo.sysjobservers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,16 +36,16 @@ ms.locfileid: "85890453"
 |-----------------|---------------|-----------------|  
 |job_id|**uniqueidentifier**|作業識別碼。|  
 |server_id|**int**|伺服器識別碼。|  
-|last_run_outcome|**tinyint**|作業上次執行的結果：<br /><br /> **0** = 失敗<br /><br /> **1** = 成功<br /><br /> **2** = 重試<br /><br /> **3** = 取消<br /><br /> **4** = 進行中<br /><br /> **5** = 未知（請參閱下列備註一節） |  
+|last_run_outcome|**tinyint**|作業上次執行的結果：<br /><br /> **0** = 失敗<br /><br /> **1** = 成功<br /><br /> **2** = 重試<br /><br /> **3** = 取消<br /><br /> **4** = 進行中<br /><br /> **5** = 未知 (請參閱下列備註區段)  |  
 |last_outcome_ message|**nvarchar(1024)**|關聯的訊息 (如果有的話)，包含 last_run_outcome 資料行。|  
 |last_run_date|**int**|上次執行作業的日期。|  
 |last_run_time|**int**|前次執行作業的時間。|  
-|last_run_duration|**int**|此作業執行的持續時間 (以時、分和秒為單位)。 使用公式來計算：（*小時* \* 10000） + （*分鐘* \* 100） +*秒*。|  
+|last_run_duration|**int**|此作業執行的持續時間 (以時、分和秒為單位)。 使用公式計算： (*小時* \* 10000) + (*分鐘* \* 100) +*秒*。|  
 
 
 ## <a name="remarks"></a>備註
 
-大於*4*的值表示 SQL 代理程式不知道該作業的狀態。 建立作業時， *last_run_outcome*一開始會設為*5* 。
+大於 *4* 的值表示 SQL Agent 不知道該作業的狀態。 建立作業時， *last_run_outcome* 一開始會設定為 *5* 。
 
 
 ## <a name="see-also"></a>另請參閱

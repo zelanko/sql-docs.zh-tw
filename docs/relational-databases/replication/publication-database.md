@@ -1,4 +1,5 @@
 ---
+description: 發行集資料庫
 title: 發行集資料庫 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -13,12 +14,12 @@ ms.assetid: a9fafc9b-9963-4b59-97a0-3472158fa665
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0aad24f326eb3c0dd61138408ceedf275cdd816b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b57b93d976f7b8e9d1a2e6e26bc19b9633afc4f6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85721008"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427970"
 ---
 # <a name="publication-database"></a>發行集資料庫
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "85721008"
   
 -   選取 **[發行者屬性]** 對話方塊中的資料庫。  
   
--   執行 **sp_replicationdboption** 並將 [發行]  選項 (適用於快照集或交易式發行集) 或 [合併發行]  選項 (適用於合併式發行集) 設定為 [True]  。  
+-   執行 **sp_replicationdboption** 並將 [發行] **** 選項 (適用於快照集或交易式發行集) 或 [合併發行] **** 選項 (適用於合併式發行集) 設定為 [True] ****。  
   
 ## <a name="options"></a>選項。  
  **資料庫**  

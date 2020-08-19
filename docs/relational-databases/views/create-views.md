@@ -1,4 +1,5 @@
 ---
+description: 建立檢視表
 title: 建立檢視 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 0b7bd2a1-544c-42ba-8e7b-4822f34d7b64
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d5251863e3b02f62cb1af6cec6da4166081239d1
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 1a4233f1b78960224ad8a36ec2e542d8713060a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395720"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427380"
 ---
 # <a name="create-views"></a>建立檢視表
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,19 +63,19 @@ ms.locfileid: "87395720"
   
 1.  在 **[物件總管]** 中，展開您要建立新檢視表的資料庫。  
   
-2.  以滑鼠右鍵按一下 [檢視]  資料夾，然後按一下 [新增檢視…]  。  
+2.  以滑鼠右鍵按一下 [檢視]**** 資料夾，然後按一下 [新增檢視…]****。  
   
 3.  在 **[加入資料表]** 對話方塊中，從下列索引標籤選取您要包含在新檢視中的元素：[資料表]、[檢視]、[函數] 和 [同義字]。  
   
-4.  按一下 **[加入]** ，然後按一下 **[關閉]** 。  
+4.  按一下 **[加入]**，然後按一下 **[關閉]**。  
   
 5.  在 **[圖表]** 窗格中，選取要包含在新檢視中的資料行或其他元素。  
   
 6.  在 **[準則]** 窗格中，選擇資料行的其他排序或篩選準則。  
   
-7.  在 [檔案]  功能表上，按一下 [儲存]  _view name_。  
+7.  在 [檔案]  功能表上，按一下 [儲存] _view name_。  
   
-8.  在 **[選擇名稱]** 對話方塊中，輸入新檢視的名稱，並按一下 **[確定]** 。  
+8.  在 **[選擇名稱]** 對話方塊中，輸入新檢視的名稱，並按一下 **[確定]**。  
 
      如需查詢和檢視表設計工具的詳細資訊，請參閱[查詢和檢視表設計工具 &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/12e4b5a5-b793-4b6c-a0e5-c450c49bf26f)。  
   

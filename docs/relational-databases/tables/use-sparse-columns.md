@@ -1,4 +1,5 @@
 ---
+description: 使用疏鬆資料行
 title: 使用疏鬆資料行 | Microsoft 文件
 ms.custom: ''
 ms.date: 03/22/2016
@@ -15,12 +16,12 @@ ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ee869a8bc2842bcc56fd0e8ab79c7668c28b50a1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e2b1acccba4fe2f9a9285160bfc25071d7399873
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999860"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427460"
 ---
 # <a name="use-sparse-columns"></a>使用疏鬆資料行
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -123,7 +124,7 @@ ms.locfileid: "85999860"
 ## <a name="restrictions-for-using-sparse-columns"></a>使用疏鬆資料行的限制  
  疏鬆資料行可具有任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型，而且其行為就像其他任何資料行一樣，但是有下列限制：  
   
--   疏鬆資料行必須可為 Null，而且不能有 ROWGUIDCOL 或 IDENTITY 屬性。 疏鬆資料行不能是以下資料類型：**text** **ntext** **image** **timestamp** **geometry** 或 **geography** FILESTREAM 屬性。  
+-   疏鬆資料行必須可為 Null，而且不能有 ROWGUIDCOL 或 IDENTITY 屬性。 疏鬆資料行不能是以下資料類型：**text****ntext****image****timestamp****geometry** 或 **geography** FILESTREAM 屬性。  
   
 -   疏鬆資料行不能有預設值。  
   
@@ -163,7 +164,7 @@ ms.locfileid: "85999860"
   
      異動複寫支援疏鬆資料行，但是不支援資料行集，資料行集可搭配疏鬆資料行使用。 如需資料行集的詳細資訊，請參閱 [使用資料行集](../../relational-databases/tables/use-column-sets.md)。  
   
-     SPARSE 屬性的複寫是由使用 [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 或使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中 [發行項屬性] 對話方塊所指定的結構描述選項所決定。 舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援疏鬆資料行。 如果您必須將資料複寫到舊版，請指定不應該複寫 SPARSE 屬性。  
+     SPARSE 屬性的複寫是由使用 [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 或使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中 [發行項屬性]**** 對話方塊所指定的結構描述選項所決定。 舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援疏鬆資料行。 如果您必須將資料複寫到舊版，請指定不應該複寫 SPARSE 屬性。  
   
      如果是發行的資料表，您不能將任何新的疏鬆資料行加入資料表，或是變更現有資料行的疏鬆屬性。 如果需要進行這類作業，請卸除發行集再重新建立。  
   

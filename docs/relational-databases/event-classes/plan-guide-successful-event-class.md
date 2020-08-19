@@ -1,4 +1,5 @@
 ---
+description: Plan Guide Successful 事件類別
 title: Plan Guide Successful 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: fecfbb6c-56c9-4db4-84d3-00d6e338355a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9b6cd4baff25a05aab8ac9dc655894ffc0815c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a029fc7b6622410e741940d7bce5c0ec6510e060
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753305"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428430"
 ---
 # <a name="plan-guide-successful-event-class"></a>Plan Guide Successful 事件類別
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

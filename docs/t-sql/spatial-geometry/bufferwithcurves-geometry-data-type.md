@@ -1,4 +1,5 @@
 ---
+description: BufferWithCurves (geometry 資料類型)
 title: BufferWithCurves (geometry 資料類型) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -15,12 +16,12 @@ ms.assetid: 8ffaba3f-d2dd-4e57-9f41-3ced9f14b600
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c49d71c0e7e149ed66d699e04126cdd1f6f9b726
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 9a3a8ff7006a2ac48f8b357cd820d0c47e162885
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442343"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427070"
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (geometry 資料類型)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -29,16 +30,17 @@ ms.locfileid: "87442343"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql
 .BufferWithCurves ( distance )  
-```  
-  
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>引數  
  *distance*  
  這是一個 **float**，指出形成緩衝的點與 **geometry** 執行個體相距的最大可能距離。  
   
-## <a name="return-types"></a>傳回型別  
+## <a name="return-types"></a>傳回型別
 SQL Server 傳回類型：**geometry**  
   
  CLR 傳回類型：**SqlGeometry**  
@@ -62,7 +64,7 @@ SQL Server 傳回類型：**geometry**
 |distance 值|維度類型|傳回的空間類型|  
 |--------------------|---------------------|---------------------------|  
 |distance < 0|零或一維|空的 **GeometryCollection** 執行個體|  
-|distance < 0|二維或以上|具有負數緩衝的 **CurvePolygon** 或 **GeometryCollection** 執行個體。 **注意：** 負數緩衝可能會建立空的 **GeometryCollection**|  
+|distance < 0|二維或以上|具有負數緩衝的 **CurvePolygon** 或 **GeometryCollection** 執行個體。 **注意：** 負數緩衝可能會建立空白 **GeometryCollection**|  
 |distance = 0|所有維度|叫用端 **geometry** 執行個體的複本|  
 |distance > 0|所有維度|**CurvePolygon** 或 **GeometryCollection** 執行個體|  
   

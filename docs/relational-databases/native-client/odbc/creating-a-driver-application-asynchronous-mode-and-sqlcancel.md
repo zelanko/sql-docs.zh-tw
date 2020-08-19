@@ -1,4 +1,5 @@
 ---
+description: 建立驅動程式應用程式 - 非同步模式和 SQLCancel
 title: 非同步模式和 SQLCancel |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,11 +20,12 @@ ms.assetid: f31702a2-df76-4589-ac3b-da5412c03dc2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a76901e1b3c5e4074e9c8257029f19ed156a3fd1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6b0e94854b13377b9d608c027992cdc48a396093
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009798"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428150"
 ---
 # <a name="creating-a-driver-application---asynchronous-mode-and-sqlcancel"></a>建立驅動程式應用程式 - 非同步模式和 SQLCancel
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +49,7 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ASYNC_ENABLE,
   
  當應用程式測試是否完成命令時，它會使用相同的驅動程式參數來進行相同的函數呼叫。 如果此驅動程式尚未收到伺服器的回應，它將會再次傳回 SQL_STILL_EXECUTING。 應用程式必須定期測試命令，直到程式碼為 SQL_STILL_EXECUTING 以外的項目為止。 當應用程式取得某個其他傳回碼 (甚至是 SQL_ERROR) 時，它可以判斷出命令已經完成。  
   
- 有時命令會持續一段很長的時間未處理。 如果應用程式需要取消命令而不等待回復，則可以使用與未處理的命令相同的語句控制碼呼叫**SQLCancel**來完成此動作。 這是唯一應該使用**SQLCancel**的時間。 有些程式設計人員會在透過結果集處理部分方式時使用**SQLCancel** ，並想要取消其餘的結果集。 [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md)或[SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md)應該用來取消未完成的結果集的其餘部分，而不是**SQLCancel**。  
+ 有時命令會持續一段很長的時間未處理。 如果應用程式需要取消命令而不等候回復，則可以使用與未處理的命令相同的語句控制碼來呼叫 **SQLCancel** ，以達到此目的。 這是唯一應該使用 **SQLCancel** 的時間。 某些程式設計人員會在透過結果集處理部分方式時使用 **SQLCancel** ，而且想要取消結果集的其餘部分。 [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md) 或 [SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md) 應該用來取消未完成之結果集的其餘部分，而不是 **SQLCancel**。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立 SQL Server Native Client ODBC 驅動程式應用程式](../../../relational-databases/native-client/odbc/creating-a-driver-application.md)  

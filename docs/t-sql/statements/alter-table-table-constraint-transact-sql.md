@@ -1,4 +1,5 @@
 ---
+description: ALTER TABLE table_constraint (Transact-SQL)
 title: table_constraint (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2019
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c0346aa532756905d04cdd1f7938962ac6be39cc
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 8e5da6272ce3bb60852e10f3bac9cd3fa9a1435f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381102"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426860"
 ---
 # <a name="alter-table-table_constraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,4 +1,5 @@
 ---
+description: 重新命名資料行 (Database Engine)
 title: 重新命名資料行 (Database Engine) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -15,12 +16,12 @@ ms.assetid: 7c71ec9f-0180-4398-b32a-4bfb7592e75d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a1d24cbf22eb8c188237931daa49e50cdc0648ee
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d2a3c92773a3dd2f36ce7591324dd8505d02abdd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011103"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427440"
 ---
 # <a name="rename-columns-database-engine"></a>重新命名資料行 (Database Engine)
 
@@ -59,14 +60,14 @@ ms.locfileid: "86011103"
 ### <a name="to-rename-a-column-using-object-explorer"></a>若要使用物件總管來重新命名資料行
 
 1. 在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。
-2. 在物件總管  中，以滑鼠右鍵按一下您想要重新命名資料行的資料表，然後選擇 [重新命名]  。
+2. 在物件總管**** 中，以滑鼠右鍵按一下您想要重新命名資料行的資料表，然後選擇 [重新命名]****。
 3. 輸入新的資料行名稱。
 
 ### <a name="to-rename-a-column-using-table-designer"></a>若要使用資料表設計工具來重新命名資料行
 
-1. 在物件總管  中，以滑鼠右鍵按一下您想要重新命名資料行的資料表，然後選擇 [設計]  。
+1. 在物件總管**** 中，以滑鼠右鍵按一下您想要重新命名資料行的資料表，然後選擇 [設計]****。
 2. 在 **[資料行名稱]** 下，選取您要變更的名稱，並輸入新名稱。
-3. 在 [檔案]  功能表上，按一下 [儲存「資料表名稱」  ]  。
+3. 在 [檔案]  功能表上，按一下 [儲存「資料表名稱」]。
 
 > [!NOTE]
 > 您也可以在 **[資料行屬性]** 索引標籤中變更資料行的名稱。請選取您要變更名稱的資料行，並輸入新的 **[名稱]** 值。

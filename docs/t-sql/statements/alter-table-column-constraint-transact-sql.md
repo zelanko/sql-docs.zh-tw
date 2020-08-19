@@ -1,4 +1,5 @@
 ---
+description: ALTER TABLE column_constraint (Transact-SQL)
 title: column_constraint (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/05/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 8119b7c7-e93b-4de5-8f71-c3b7c70b993c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a6e943dd07c7687d6ab56cc74ebde1cc2ed77214
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 754700611d15e7aa8a68fc45317bdccae83013a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381232"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426840"
 ---
 # <a name="alter-table-column_constraint-transact-sql"></a>ALTER TABLE column_constraint (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,4 +1,5 @@
 ---
+description: STAsBinary (geometry 資料類型)
 title: STAsBinary (geometry 資料類型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 65353777-e3e6-461c-9504-ea4d83312692
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 39899d68eab1909e161475f951f37846cf56436f
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 59416177b8b50855a0b6a0aa694f938f90479b6c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555995"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426900"
 ---
 # <a name="stasbinary-geometry-data-type"></a>STAsBinary (geometry 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

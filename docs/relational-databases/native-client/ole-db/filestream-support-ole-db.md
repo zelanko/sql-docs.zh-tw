@@ -1,5 +1,6 @@
 ---
-title: FILESTREAM 支援（OLE DB） |Microsoft Docs
+description: FILESTREAM 支援 (OLE DB)
+title: FILESTREAM 支援 (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: c2bd3dfd-6103-43d1-859e-8ed8d19c58d3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8fdc7912f08f7a2277fa5e5822420a0c8d0f287f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8dd62a70c60ff1242aa4ea8b81c85e9ae6046ea1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894114"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428070"
 ---
 # <a name="filestream-support-ole-db"></a>FILESTREAM 支援 (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  從 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 開始，OLE DB 支援增強型 FILESTREAM 功能。 如需這項功能的詳細資訊，請參閱[FILESTREAM 支援](../../../relational-databases/native-client/features/filestream-support.md)。 如需範例，請參閱 [Filestream 及 OLE DB](../../../relational-databases/native-client-ole-db-how-to/filestream/filestream-and-ole-db.md)。  
+  從 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 開始，OLE DB 支援增強型 FILESTREAM 功能。 如需這項功能的詳細資訊，請參閱 [FILESTREAM 支援](../../../relational-databases/native-client/features/filestream-support.md)。 如需範例，請參閱 [Filestream 及 OLE DB](../../../relational-databases/native-client-ole-db-how-to/filestream/filestream-and-ole-db.md)。  
   
  若要傳送與接收大於 2 GB 的 **varbinary(max)** 值，應用程式會在參數和結果繫結中使用 **DBTYPE_IUNKNOWN**。 若是參數，提供者必須針對 ISequentialStream 和傳回 ISequentialStream 的結果，呼叫 IUnknown::QueryInterface。  
   

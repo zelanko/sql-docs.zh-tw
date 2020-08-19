@@ -1,4 +1,5 @@
 ---
+description: 系統安全性函數
 title: 系統安全性功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ dev_langs:
 ms.assetid: fa2c95df-1211-4330-adc6-9657e1a113e8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a911b90617fdffca63711eb759eb088a5dd1645e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 812dd0fe08c4195571c827ec82d3e599732d0ff2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783064"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427740"
 ---
 # <a name="system-security-functions"></a>系統安全性函數
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

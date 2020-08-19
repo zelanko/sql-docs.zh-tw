@@ -8,7 +8,7 @@
   href: what-s-new-in-ssma-for-db2-db2tosql.md
 - name: 新的 GUI 功能
   href: new-gui-features-in-ssma-for-db2-db2tosql.md
-- name: 安裝 SSMA for DB2 用戶端
+- name: 為 DB2 用戶端安裝 SSMA
   href: installing-ssma-for-db2-client-db2tosql.md
 - name: 使用者介面參考
   href: user-interface-reference-db2tosql.md

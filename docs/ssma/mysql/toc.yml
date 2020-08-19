@@ -8,7 +8,7 @@
   href: legal-notice-mysqltosql.md
 - name: 轉換設定
   href: conversion-settings-mysqltosql.md
-- name: 安裝 SSMA for MySQL 用戶端
+- name: 為 MySQL 用戶端安裝 SSMA
   href: installing-ssma-for-mysql-client-mysqltosql.md
 - name: 執行 SSMA 主控台
   href: executing-the-ssma-console-mysqltosql.md
@@ -18,7 +18,7 @@
   href: sql-modes-mysqltosql.md
 - name: 連接至 SQL Server
   href: connect-to-sql-server-mysqltosql.md
-- name: 連線到 Azure SQL DB
+- name: 連線至 Azure SQL Database
   href: connecting-to-azure-sql-db-mysqltosql.md
 - name: 建立指令碼檔
   href: creating-script-files-mysqltosql.md
@@ -26,7 +26,7 @@
   href: loading-converted-database-objects-into-sql-server-mysqltosql.md
 - name: 轉換 MySQL 資料庫
   href: converting-mysql-databases-mysqltosql.md
-- name: 移轉到 SQL Server - Azure SQL DB
+- name: 移轉到 SQL Server - Azure SQL Database
   href: migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md
 - name: SSMA 主控台中的命令列選項
   href: command-line-options-in-ssma-console-mysqltosql.md
@@ -44,9 +44,9 @@
   href: connect-to-mysql-mysqltosql.md
 - name: 移除 SSMA for MySQL 元件
   href: removing-the-ssma-for-mysql-components-mysqltosql.md
-- name: 連線到 Azure SQL DB
+- name: 連線到 Azure SQL Database
   href: connect-to-azure-sql-db-mysqltosql.md
-- name: 將 MySQL 資料庫移轉到 Azure SQL DB
+- name: 將 MySQL 資料庫移轉到 Azure SQL Database
   href: migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md
 - name: 使用範例主控台指令碼檔
   href: working-with-the-sample-console-script-files-mysqltosql.md
@@ -102,11 +102,11 @@
   items:
     - name: GUI
       href: project-settings-gui-mysqltosql.md
-    - name: Azure SQL DB
+    - name: Azure SQL Database
       href: project-settings-azure-sql-db-mysqltosql.md
     - name: 類型對應
       href: project-settings-type-mapping-mysqltosql.md
-    - name: 移轉
+    - name: 遷移
       href: project-settings-migration-mysqltosql.md
     - name: Synchronization
       href: project-settings-synchronization-mysqltosql.md

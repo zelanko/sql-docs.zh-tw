@@ -1,4 +1,5 @@
 ---
+description: HOST_NAME 值
 title: HOST_NAME 值 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 21548f08-2910-4a55-baac-b911ba9afaf1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c29f51c8fd65eda73d2e54e321e3e476461d0c20
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 32926ab1c2e5dcd2c97d296d07c5fab725793f47
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85652879"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427950"
 ---
 # <a name="host_name-values"></a>HOST_NAME 值
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85652879"
 >  如果您覆寫 HOST_NAME()，則所有對 HOST_NAME() 函數的呼叫均會傳回您指定的值。 請確定其他應用程式不會相依於由 HOST_NAME() 傳回電腦名稱。  
   
 ## <a name="options"></a>選項。  
- **訂閱屬性**  
+ **訂用帳戶屬性**  
  在 **[HOST_NAME 值]** 資料行中，輸入每一個訂閱者的值，或接受預設值 (訂閱者電腦的名稱)。  
   
 ## <a name="see-also"></a>另請參閱  

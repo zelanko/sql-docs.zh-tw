@@ -1,17 +1,17 @@
 ### YamlMime:Hub
 title: Microsoft SQL 文件
-summary: 了解如何使用 Azure SQL Services 來完美管理內部部署與雲端中的資料庫需求。
+summary: 了解如何使用 SQL Server 及 Azure SQL，以管理內部部署與雲端中的資料庫需求。 (快速連結：https://aka.ms/sqldocs)
 brand: sql
 metadata:
   title: Microsoft SQL 文件 | Microsoft Docs
-  description: 了解如何使用 Azure SQL Services 來完美管理內部部署與雲端中的資料庫需求。
+  description: 了解如何使用 SQL Server 及 Azure SQL，以管理內部部署與雲端中的資料庫需求。 (快速連結：https://aka.ms/sqldocs)
   ms.topic: hub-page
-  ms.openlocfilehash: c593194a2c254baaec71cf7874e6ffd2d1883740
-  ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+  ms.openlocfilehash: 5d7a6ef891d85b55c75af35e26712765f662e9c2
+  ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 04/04/2020
-  ms.locfileid: "80664347"
+  ms.lasthandoff: 08/06/2020
+  ms.locfileid: "87864539"
 highlightedContent:
   items:
   - title: 試用 SQL Server 2019
@@ -28,28 +28,32 @@ highlightedContent:
     url: sql-server/educational-sql-resources.yml
 productDirectory:
   items:
-  - title: Azure 上的 SQL
-    imageSrc: media/index/azure.svg
-    links:
-    - url: https://docs.microsoft.com/azure/sql-database/
-      text: Azure SQL Database
-    - url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
-      text: Azure Synapse Analytics (SQL DW)
   - title: Windows 上的 SQL Server
     imageSrc: media/index/windows.svg
     links:
     - url: sql-server/index.yml
       text: 內部部署
-    - url: https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview/
+    - url: https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/
       text: 在 Azure VM 上
     - url: https://docs.microsoft.com/previous-versions/sql/
       text: 舊版 (SQL 2005-2012)
+  - title: Azure 上的 SQL
+    imageSrc: media/index/azure.svg
+    links:
+    - url: https://docs.microsoft.com/azure/azure-sql/database/
+      text: Azure SQL Database
+    - url: https://docs.microsoft.com/azure/azure-sql/managed-instance/
+      text: Azure SQL 受控執行個體
+    - url: https://docs.microsoft.com/azure/azure-sql-edge/overview
+      text: Azure SQL Edge (預覽)
+    - url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
+      text: Azure Synapse Analytics (SQL DW)
   - title: Linux 上的 SQL Server
     imageSrc: media/index/linux.svg
     links:
     - url: linux/sql-server-linux-overview.md
       text: 內部部署
-    - url: linux/quickstart-install-connect-clouds.md
+    - url: https://docs.microsoft.com/azure/azure-sql/virtual-machines/linux/
       text: 在 Azure VM 上
 conceptualContent:
   items:
@@ -141,9 +145,9 @@ additionalContent:
         url: connect/homepage-sql-connection-programming.md
       - text: 在 DevOps 上應用 SQL Server
         url: https://www.microsoft.com/sql-server/developer-get-started/sql-devops/
-      - text: Azure SQL DB 應用程式
+      - text: Azure SQL Database 應用程式
         url: https://docs.microsoft.com/azure/sql-database/sql-database-develop-overview
-      - text: Azure SQL DB 連線程式庫
+      - text: Azure SQL Database 連線程式庫
         url: https://docs.microsoft.com/azure/sql-database/sql-database-connect-query#libraries
       - text: Transact-SQL (T-SQL)
         url: t-sql/language-reference.md
@@ -175,5 +179,3 @@ additionalContent:
         url: analytics-platform-system/index.md
       - text: SQL Server 機器學習服務 (R 與 Python)
         url: machine-learning/index.yml
-      - text: Azure Machine Learning
-        url: https://docs.microsoft.com/azure/machine-learning/

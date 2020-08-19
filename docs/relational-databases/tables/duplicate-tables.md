@@ -1,4 +1,5 @@
 ---
+description: 複製資料表
 title: 複製資料表 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: c6b07423-d1e5-4e5e-8681-5088921f5df3
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8dfba52b3b2fcaece50b9d7feb14014aaff1f99
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 35601b570c7c369efb2a9249f78298345df12f5b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396907"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427520"
 ---
 # <a name="duplicate-tables"></a>複製資料表
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -56,19 +57,19 @@ ms.locfileid: "87396907"
   
 1.  請確定已連接至要建立資料表的資料庫，以及已在 [物件總管] 中選取資料庫。  
   
-2.  在 [物件總管] 中，以滑鼠右鍵按一下 [資料表]  ，再按一下 [新增資料表]  。  
+2.  在 [物件總管] 中，以滑鼠右鍵按一下 [資料表]****，再按一下 [新增資料表]****。  
   
-3.  在 [物件總管] 中，以滑鼠右鍵按一下您要複製的資料表，然後按一下 [設計]  。  
+3.  在 [物件總管] 中，以滑鼠右鍵按一下您要複製的資料表，然後按一下 [設計]****。  
   
-4.  選取現有資料表中的資料行，再從 **[編輯]** 功能表中按一下 **[複製]** 。  
+4.  選取現有資料表中的資料行，再從 **[編輯]** 功能表中按一下 **[複製]**。  
   
 5.  切換回新的資料表，並選取第一列。  
   
-6.  從 **[編輯]** 功能表中，按一下 **[貼上]** 。  
+6.  從 **[編輯]** 功能表中，按一下 **[貼上]**。  
   
-7.  從 [檔案]  功能表中，按一下 [儲存]  _table name_。  
+7.  從 [檔案] **** 功能表中，按一下 [儲存] ****_table name_。  
   
-8.  在 **[選擇名稱]** 對話方塊中，輸入新資料表的名稱，並按一下 **[確定]** 。  
+8.  在 **[選擇名稱]** 對話方塊中，輸入新資料表的名稱，並按一下 **[確定]**。  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -76,7 +77,7 @@ ms.locfileid: "87396907"
   
 1.  請確定已連接至要建立資料表的資料庫，以及已在 [物件總管] 中選取資料庫。  
   
-2.  以滑鼠右鍵按一下您想要複製的資料表，並依序指向 [編寫資料表的指令碼為]  和 [CREATE 至]  ，然後選取 [新增查詢編輯器視窗]  。  
+2.  以滑鼠右鍵按一下您想要複製的資料表，並依序指向 [編寫資料表的指令碼為]**** 和 [CREATE 至]****，然後選取 [新增查詢編輯器視窗]****。  
   
 3.  變更資料表的名稱。  
   

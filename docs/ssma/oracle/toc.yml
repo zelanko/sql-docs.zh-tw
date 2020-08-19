@@ -10,7 +10,7 @@
   href: sql-server-linux-convert-from-oracle.md
 - name: 法律注意事項
   href: legal-notice-ssma-for-oracle.md
-- name: 安裝 SSMA for Oracle 用戶端
+- name: 為 Oracle 用戶端安裝 SSMA
   href: installing-ssma-for-oracle-client-oracletosql.md
 - name: SSMA 中的新 GUI 功能
   href: new-gui-features-in-ssma-for-oracle-oracletosql.md
@@ -128,7 +128,7 @@
       href: project-settings-gui-oracletosql.md
     - name: 類型對應
       href: project-settings-type-mapping-oracletosql.md
-    - name: 移轉
+    - name: 遷移
       href: project-settings-migration-oracletosql.md
 - name: 全域設定
   items:

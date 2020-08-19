@@ -1,4 +1,4 @@
-- name: 存取
+- name: Access
   href: sql-server-migration-assistant-for-access-accesstosql.md
 - name: 安裝 SSMA
   href: installing-sql-server-migration-assistant-for-access-accesstosql.md
@@ -18,7 +18,7 @@
   href: save-metadata-accesstosql.md
 - name: 連線到 SQL Server
   href: connecting-to-sql-server-accesstosql.md
-- name: 將 Access 資料移轉到 Azure SQL DB
+- name: 將 Access 的資料移轉到 Azure SQL Database
   href: migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md
 - name: 建立與管理專案
   href: creating-and-managing-projects-accesstosql.md
@@ -38,7 +38,7 @@
   href: new-project-ssma-accesstosql.md
 - name: SSMA 主控台中的命令列選項
   href: command-line-options-in-ssma-console-accesstosql.md
-- name: 連線到 Azure SQL DB
+- name: 連線到 Azure SQL Database
   href: connect-to-azure-sql-db-accesstosql.md
 - name: 評定報告
   href: assessment-report-accesstosql.md
@@ -60,7 +60,7 @@
   href: assessing-access-database-objects-for-conversion-accesstosql.md
 - name: 建立伺服器連線檔案
   href: creating-the-server-connection-files-accesstosql.md
-- name: 將 Access 應用程式連結到 Azure SQL DB
+- name: 將 Access 的應用程式連結到 Azure SQL Database
   href: linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md
 - name: 建立變數值檔案
   href: creating-variable-value-files-accesstosql.md
@@ -68,7 +68,7 @@
   href: edit-type-mapping-accesstosql.md
 - name: 匯出 Access 清查
   href: exporting-an-access-inventory-accesstosql.md
-- name: 將 Access 資料庫移轉到 Azure SQL DB
+- name: 將 Access 的資料庫移轉到 Azure SQL Database
   href: migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md
 - name: 對應來源與目標資料庫
   href: mapping-source-and-target-databases-accesstosql.md
@@ -92,7 +92,7 @@
   href: find-databases-wizard-select-files-accesstosql.md
 - name: 快速鍵
   href: shortcut-keys-accesstosql.md
-- name: 連線到 Azure SQL DB
+- name: 連線至 Azure SQL Database
   href: connecting-to-azure-sql-db-accesstosql.md
 - name: 設定轉換與移轉選項
   href: setting-conversion-and-migration-options-accesstosql.md
@@ -106,13 +106,13 @@
   href: appendix-1-accesstosql.md
 - name: 專案設定
   items:
-    - name: 移轉
+    - name: 遷移
       href: project-settings-migration-accesstosql.md
     - name: GUI
       href: project-settings-gui-accesstosql.md
     - name: 轉換
       href: project-settings-conversion-accesstosql.md
-    - name: Azure SQL DB
+    - name: Azure SQL Database
       href: project-settings-azure-sql-db-accesstosql.md
     - name: 類型對應
       href: project-settings-type-mapping-accesstosql.md

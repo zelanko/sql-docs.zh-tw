@@ -1,5 +1,6 @@
 ---
-title: sys.databases fn_hadr_is_primary_replica （Transact-sql） |Microsoft Docs
+description: sys.fn_hadr_is_primary_replica (Transact-SQL)
+title: sys. fn_hadr_is_primary_replica (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c9b1969f-be1d-4dfb-a33d-551f380b9e27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1ed8bf04b624746d6a84efc6b515d0efa6c9d598
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 1c7bc3d91eafbfa72149c5c228afe409b044b089
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442860"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427840"
 ---
 # <a name="sysfn_hadr_is_primary_replica-transact-sql"></a>sys.fn_hadr_is_primary_replica (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -43,10 +44,10 @@ sys.fn_hadr_is_primary_replica ( 'dbname' )
   
 ## <a name="arguments"></a>引數  
  '*dbname*'  
- 這是資料庫的名稱。 *dbname*的類型為 sysname。  
+ 這是資料庫的名稱。 *dbname* 的類型為 sysname。  
   
 ## <a name="returns"></a>傳回  
- 傳回資料類型**bool**：如果目前實例上的資料庫為主要複本，則傳回1，否則傳回0。  
+ 如果目前實例上的資料庫是主要複本，則傳回 **bool**：1資料類型，否則為0。  
   
 ## <a name="remarks"></a>備註  
  使用這個函數可方便地判斷本機執行個體是否裝載指定可用性資料庫的主要複本。 範例程式碼可能如下所示。  
@@ -77,9 +78,9 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組函數 &#40;Transact-sql&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
- [dm_hadr_database_replica_states &#40;transact-sql&#41;](../..//relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) [AlwaysOn 可用性群組 &#40;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) SQL Server&#41;   
+ [sys. dm_hadr_database_replica_states &#40;transact-sql&#41;](../..//relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) [AlwaysOn 可用性群組 &#40;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) SQL Server&#41;   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [AlwaysOn 可用性群組目錄檢視 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)     
+ [AlwaysOn 可用性群組 &#40;Transact-sql&#41;的目錄檢視 ](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)     
   
   

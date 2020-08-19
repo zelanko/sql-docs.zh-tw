@@ -1,4 +1,5 @@
 ---
+description: 管理及監視語意搜尋
 title: 管理及監視語意搜尋 | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: eb5c3b29-da70-42aa-aa97-7d35a3f1eb98
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: a7cd3bb6fd625b588624d38b777788a2f84c814f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 41103a11df14c3db0fb4fe332633f20b984b97d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629261"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427870"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>管理及監視語意搜尋
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

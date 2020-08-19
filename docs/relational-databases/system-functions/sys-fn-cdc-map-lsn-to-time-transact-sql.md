@@ -1,5 +1,6 @@
 ---
-title: sys.databases fn_cdc_map_lsn_to_time （Transact-sql） |Microsoft Docs
+description: sys.fn_cdc_map_lsn_to_time (Transact-SQL)
+title: sys. fn_cdc_map_lsn_to_time (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,17 +21,17 @@ helpviewer_keywords:
 ms.assetid: 405aa29c-8bd8-42d3-9f39-7494b643fc6f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b89925b781d94d84a22e744955d335e163875d2f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a699f9706c8dafff6d2500a1e41c080f461df6ab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898354"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427860"
 ---
 # <a name="sysfn_cdc_map_lsn_to_time-transact-sql"></a>sys.fn_cdc_map_lsn_to_time (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  針對指定的記錄序號（LSN），從[cdc. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)系統資料表中的**tran_end_time**資料行傳回日期和時間值。 您可以使用這個函數，有系統地將 LSN 範圍對應至變更資料表中的日期範圍。  
+  傳回[cdc. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)系統資料表中**tran_end_time**資料行的日期和時間值， (lsn) 的指定記錄序號。 您可以使用這個函數，有系統地將 LSN 範圍對應至變更資料表中的日期範圍。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,13 +44,13 @@ sys.fn_cdc_map_lsn_to_time ( lsn_value )
   
 ## <a name="arguments"></a>引數  
  *lsn_value*  
- 這是要比對的 LSN 值。 *lsn_value*為**binary （10）**。  
+ 這是要比對的 LSN 值。 *lsn_value* 是 **二進位 (10) **。  
   
 ## <a name="return-type"></a>傳回類型  
  **datetime**  
   
 ## <a name="remarks"></a>備註  
- 這個函數可用來根據變更資料列中所傳回的 **__ $ start_lsn**值，來判斷認可變更的時間。  
+ 此函數可用來根據變更資料列中所傳回的 **__ $ start_lsn** 值，來判斷認可變更的時間。  
   
 ## <a name="permissions"></a>權限  
  需要 **public** 角色的成員資格。  
@@ -68,8 +69,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [lsn_time_mapping &#40;Transact-sql&#41;](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)   
- [fn_cdc_map_time_to_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
+ [cdc. lsn_time_mapping &#40;Transact-sql&#41;](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)   
+ [sys. fn_cdc_map_time_to_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
  [cdc. fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
  [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   

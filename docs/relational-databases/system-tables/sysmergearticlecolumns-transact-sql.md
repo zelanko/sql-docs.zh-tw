@@ -1,5 +1,6 @@
 ---
-title: sysmergearticlecolumns （Transact-sql） |Microsoft Docs
+description: sysmergearticlecolumns (Transact-SQL)
+title: sysmergearticlecolumns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,21 +18,21 @@ helpviewer_keywords:
 ms.assetid: 1ad8663f-a624-42a2-8641-fefac3433c97
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dad22f0e389b9ad7c0c770f5990482e128c02201
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8bae31473976690ea60575b7ab3ce902f46d3c32
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889275"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427620"
 ---
 # <a name="sysmergearticlecolumns-transact-sql"></a>sysmergearticlecolumns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **Sysmergearticlecolumns**資料表會針對合併式發行集中發行的每個資料表資料行，各包含一個資料列，並將每個資料行對應到其合併發行項。 這份資料表儲存在發行集資料庫中。  
+  **Sysmergearticlecolumns**資料表會針對合併式發行集中發行的每個資料表資料行，各包含一個資料列，並將每個資料行對應到它的合併發行項。 這份資料表儲存在發行集資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**artid**|**int**|識別發行項。|  
+|**>artid**|**int**|識別發行項。|  
 |**colid**|**smallint**|識別發行項中的資料行。|  
   
 ## <a name="see-also"></a>另請參閱  

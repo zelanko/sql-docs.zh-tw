@@ -1,4 +1,5 @@
 ---
+description: 使用 EVENTDATA 函數
 title: 使用 EVENTDATA 函式 | Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f49da6a68a3d0897dc545215c9260904cdb8bb11
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3f6ac5ff7b83d3fb119e55cb6b86e5ac0cb4c1ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727103"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427340"
 ---
 # <a name="use-the-eventdata-function"></a>使用 EVENTDATA 函數
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,5 +1,6 @@
 ---
-title: SetCurrentCertificate 方法（SecurityCertificate）
+description: SetCurrentCertificate 方法 (SecurityCertificate 類別)
+title: 'SetCurrentCertificate 方法 (SecurityCertificate) '
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 04b1a76a-932d-4824-8506-e346afe7554e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7997103a062ac796ead5694befd1d9cebb600c95
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 001d9ccdff7db054760f1c7ae10bbce19269f694
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888793"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427280"
 ---
 # <a name="setcurrentcertificate-method-securitycertificate-class"></a>SetCurrentCertificate 方法 (SecurityCertificate 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ object.SetCurrentCertificate(SHA , SQLInstance)
   
 #### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |*SHA*|針對必要安全性憑證指定安全雜湊演算法 (SHA) 指模的字串值。|  
 |*SQLInstance*|指定需要憑證之執行個體的字串值。|  

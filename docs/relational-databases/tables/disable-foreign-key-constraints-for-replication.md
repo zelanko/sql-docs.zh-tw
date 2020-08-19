@@ -1,4 +1,5 @@
 ---
+description: 停用複寫的外部索引鍵條件約束
 title: 停用複寫的外部索引鍵條件約束 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ ms.assetid: 4211f2fd-d16a-4081-995c-43f1f0827f0b
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 77041d98bd10532e4116acb56d125e924b2dcd69
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 8b2aacaf067d95a57320d019b02a90dbb69d4193
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394425"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427510"
 ---
 # <a name="disable-foreign-key-constraints-for-replication"></a>停用複寫的外部索引鍵條件約束
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -55,11 +56,11 @@ ms.locfileid: "87394425"
   
 1.  在 **[物件總管]** 中，展開您要修改其外部索引鍵條件約束的資料表，然後展開 **[索引鍵]** 資料夾。  
   
-2.  以滑鼠右鍵按一下外部索引鍵條件約束，然後按一下 [修改]  。  
+2.  以滑鼠右鍵按一下外部索引鍵條件約束，然後按一下 [修改]****。  
   
 3.  在 **[外部索引鍵關聯性]** 對話方塊中，針對 **[強制複寫]** 選取 **[否]** 值。  
   
-4.  按一下 [關閉]  。  
+4.  按一下 [關閉] 。  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

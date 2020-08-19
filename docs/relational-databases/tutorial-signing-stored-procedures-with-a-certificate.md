@@ -1,4 +1,5 @@
 ---
+description: 教學課程：使用憑證簽署預存程序
 title: 教學課程：使用憑證簽署預存程序
 ms.custom: seo-dt-2019
 ms.date: 08/23/2018
@@ -13,12 +14,12 @@ ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc0c2453f8b9a2331a31ab917539bddeb1d31fa9
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: b612f3718b35d94ec7e0a4ae60acd618faa9135e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411014"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427400"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>教學課程：使用憑證簽署預存程序
 [!INCLUDE [SQL Server Azure SQL Database SQL Managed Instance](../includes/applies-to-version/sql-asdb-asdbmi.md)]

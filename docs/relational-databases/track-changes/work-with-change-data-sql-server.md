@@ -1,4 +1,5 @@
 ---
+description: 使用變更資料 (SQL Server)
 title: 使用變更資料
 ms.custom: seo-dt-2019
 ms.date: 01/02/2019
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18002782d7d34b88706b227cf8ac828f9da4976a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 90513b794e7d7125e46aa5f1d6cdb2d85ad34880
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889088"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427370"
 ---
 # <a name="work-with-change-data-sql-server"></a>使用變更資料 (SQL Server)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,7 +62,7 @@ ms.locfileid: "85889088"
  如需如何攔截這些已知 TVF 錯誤的示範，並且傳回有關失敗的更有意義資訊，請參閱「使用 TRY CATCH 來列舉淨變更」範本。  
   
 > [!NOTE]  
->  若要在 SQL Server Management Studio 中找出異動資料擷取範本，請在 [檢視]  功能表上，按一下 [範本總管]  、展開 [SQL Server 範本]  ，然後展開 [異動資料擷取]  資料夾。  
+>  若要在 SQL Server Management Studio 中找出異動資料擷取範本，請在 [檢視]**** 功能表上，按一下 [範本總管]****、展開 [SQL Server 範本]****，然後展開 [異動資料擷取]**** 資料夾。  
   
 ##  <a name="query-functions"></a><a name="Functions"></a> 查詢函數  
  系統會根據所追蹤之來源資料表的特性以及其擷取執行個體的設定方式，產生一個或兩個 TVF 以便查詢變更資料。  

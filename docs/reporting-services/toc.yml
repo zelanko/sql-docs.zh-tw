@@ -40,29 +40,29 @@
           items:
             - name: 第 1 課：建立報表伺服器專案
               href: ../reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md
-            - name: 第 2 課：指定連接資訊
+            - name: 第 2 課：指定連線資訊
               href: ../reporting-services/lesson-2-specifying-connection-information-reporting-services.md
             - name: 第 3 課：定義資料表報表的資料集
               href: ../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
-            - name: 第 4 課：將資料表加入至報表
+            - name: 第 4 課：將資料表新增至報表
               href: ../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md
-            - name: 'Lesson 5: Formatting a Report'
+            - name: 第 5 課：將報表格式化
               href: ../reporting-services/lesson-5-formatting-a-report-reporting-services.md
-            - name: 'Lesson 6: Adding Grouping and Totals'
+            - name: 第 6 課：新增群組和總計
               href: ../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md
         - name: 建立資料驅動訂閱 (SSRS 教學課程)
           href: ../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md
           items:
             - name: 第 1 課：建立範例訂閱者資料庫
               href: ../reporting-services/lesson-1-creating-a-sample-subscriber-database.md
-            - name: 'Lesson 2: Modifying the Report Data Source Properties'
+            - name: 第 2 課：修改報表資料來源屬性
               href: ../reporting-services/lesson-2-modifying-the-report-data-source-properties.md
-            - name: 'Lesson 3: Defining a Data-Driven Subscription'
+            - name: 第 3 課：定義資料驅動訂閱
               href: ../reporting-services/lesson-3-defining-a-data-driven-subscription.md
         - name: 使用 ReportViewer 建立包含參數的鑽研 (RDLC) 報表 (SSRS 教學課程)
           href: ../reporting-services/create-drillthrough-rdlc-report-with-parameters-reportviewer.md
           items:
-            - name: 第 1 課：建立新的網站
+            - name: 第 1 課：建立新網站
               href: ../reporting-services/lesson-1-create-a-new-web-site.md
             - name: 第 2 課：定義父報表的資料連接和資料表
               href: ../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md
@@ -72,13 +72,13 @@
               href: ../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md
             - name: 第 5 課：使用報表精靈設計子報表
               href: ../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md
-            - name: 第 6 課：將 ReportViewer 控制項加入到應用程式
+            - name: 第 6 課：將 ReportViewer 控制項新增至應用程式
               href: ../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md
-            - name: 第 7 課：在父報表上加入鑽研動作
+            - name: 第 7 課：在父報表上新增鑽研動作
               href: ../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md
             - name: 第 8 課：建立資料篩選
               href: ../reporting-services/lesson-8-create-a-data-filter.md
-            - name: 'Lesson 9: Build and Run the Application'
+            - name: 第 9 課：建置及執行應用程式
               href: ../reporting-services/lesson-9-build-and-run-the-application.md
     - name: 報表產生器教學課程
       href: ../reporting-services/report-builder-tutorials.md
@@ -95,21 +95,21 @@
           href: ../reporting-services/tutorial-creating-a-matrix-report-report-builder.md
         - name: 教學課程：建立自由格式報表
           href: ../reporting-services/tutorial-creating-a-free-form-report-report-builder.md
-        - name: 教學課程：格式化文字 (報表產生器)
+        - name: 教學課程：將文字格式化 (報表產生器)
           href: ../reporting-services/tutorial-format-text-report-builder.md
-        - name: 教學課程：將直條圖加入至報表 (報表產生器)
+        - name: 教學課程：將直條圖新增至報表 (報表產生器)
           href: ../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md
-        - name: 教學課程：將圓形圖加入至報表 (報表產生器)
+        - name: 教學課程：將圓形圖新增至報表 (報表產生器)
           href: ../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md
-        - name: 教學課程：將橫條圖加入至報表 (報表產生器)
+        - name: 教學課程：將橫條圖新增至報表 (報表產生器)
           href: ../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md
-        - name: 教學課程：將走勢圖加入至報表 (報表產生器)
+        - name: 教學課程：將走勢圖新增至報表 (報表產生器)
           href: ../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md
-        - name: 教學課程：將 KPI 加入至報表
+        - name: 教學課程：將 KPI 新增至報表
           href: ../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md
         - name: 教學課程：地圖報表
           href: ../reporting-services/tutorial-map-report-report-builder.md
-        - name: 教學課程：將參數加入至報表 (報表產生器)
+        - name: 教學課程：將參數新增至報表 (報表產生器)
           href: ../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md
         - name: 教學課程：建立鑽研及主報表
           href: ../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md
@@ -1053,7 +1053,7 @@
           href: ../reporting-services/report-data/power-pivot-connection-type-ssrs.md
         - name: SharePoint 清單連接類型
           href: ../reporting-services/report-data/sharepoint-list-connection-type-ssrs.md
-        - name: SQL Azure 連接類型
+        - name: Azure SQL 連線類型
           href: ../reporting-services/report-data/sql-azure-connection-type-ssrs.md
         - name: OLE DB 連接類型
           href: ../reporting-services/report-data/ole-db-connection-type-ssrs.md
@@ -1912,7 +1912,7 @@
       href: ../reporting-services/custom-assemblies/asserting-permissions-in-custom-assemblies.md
     - name: 部署自訂組件
       href: ../reporting-services/custom-assemblies/deploying-a-custom-assembly.md
-    - name: 如何：偵錯自訂組件
+    - name: 如何：針對自訂組件進行偵錯
       href: ../reporting-services/custom-assemblies/how-to-debug-custom-assemblies.md
     - name: 初始化自訂組件物件
       href: ../reporting-services/custom-assemblies/initializing-custom-assembly-objects.md

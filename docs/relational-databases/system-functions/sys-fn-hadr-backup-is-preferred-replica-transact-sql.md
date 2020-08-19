@@ -1,5 +1,6 @@
 ---
-title: sys.databases fn_hadr_backup_is_preferred_replica （Transact-sql） |Microsoft Docs
+description: 'sys. fn_hadr_backup_is_preferred_replica (Transact-sql) '
+title: sys. fn_hadr_backup_is_preferred_replica (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -21,14 +22,14 @@ helpviewer_keywords:
 ms.assetid: 61b9be77-e2f6-4da1-b2ae-a62cbe226145
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: be33120bd19561055095fb81f4a4595edbcf394f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ce16f8300546c77114a27706a7b7ed32806f98ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734351"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427810"
 ---
-# <a name="sysfn_hadr_backup_is_preferred_replica--transact-sql"></a>sys.databases fn_hadr_backup_is_preferred_replica （Transact-sql）
+# <a name="sysfn_hadr_backup_is_preferred_replica--transact-sql"></a>sys. fn_hadr_backup_is_preferred_replica (Transact-sql) 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   用於判斷目前的複本是否為慣用的備份複本。  
@@ -44,10 +45,10 @@ sys.fn_hadr_backup_is_preferred_replica ( 'dbname' )
   
 ## <a name="arguments"></a>引數  
  '*dbname*'  
- 這是要備份的資料庫名稱。 *dbname*的類型為 sysname。  
+ 這是要備份的資料庫名稱。 *dbname* 的類型為 sysname。  
   
 ## <a name="returns"></a>傳回  
- 如果目前實例上的資料庫是在慣用複本上，則傳回資料類型**bool**：1，否則為0。  
+ 如果目前實例上的資料庫位於慣用複本，則傳回 **bool**：1資料類型，否則為0。  
   
 ## <a name="remarks"></a>備註  
  在備份指令碼中使用這個函數，以判斷目前的資料庫是否在備份所慣用的複本上。 您可以在每一個可用性複本上執行指令碼。 每一個作業都會查看相同的資料，以判斷應該執行哪一個作業，如此一來，只有其中一個排程作業會實際進行到備份階段。 範例程式碼可能如下所示。  
@@ -80,6 +81,6 @@ GO
  [AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- 使用[中次要：在次要複本上備份 &#40;Always On 可用性群組&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) [Always On 可用性群組目錄 Views &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)      
+ 使用[中次要：在次要複本上備份 &#40;Always On 可用性群組&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) [Always On 可用性群組的目錄檢視 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)      
   
   

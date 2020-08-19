@@ -1,4 +1,5 @@
 ---
+description: 資料庫鏡像連接事件類別
 title: Database Mirroring Connection 事件類別 | Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,16 +11,16 @@ ms.assetid: b59dccc9-f40d-4c82-aa35-ac40acea86ff
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 37f1658a49fa5bc6577e4b7668dc62914aab3aa7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5a600b4a319297be30e5f734bd5a272748f6e8c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765289"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428600"
 ---
 # <a name="database-mirroring-connection-event-class"></a>資料庫鏡像連接事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會產生 **資料庫鏡像連接** 事件，以報告資料庫鏡像所管理的傳輸連線狀態。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會產生 **Database Mirroring Connection** 事件，以報告資料庫鏡像所管理的傳輸連線狀態。  
   
 ## <a name="database-mirroringconnection-event-class-data-columns"></a>資料庫鏡像：連接事件類別資料行  
   

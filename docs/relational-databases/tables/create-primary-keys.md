@@ -1,4 +1,5 @@
 ---
+description: 建立主索引鍵
 title: 建立主索引鍵 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 85c623ca-4656-4d70-a9db-ee4d897cd214
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 24c45f661afff669e64dae6c800d19a57635aebe
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e02d35d518a71ac2381e7bfdce2006d261052dbe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002187"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427570"
 ---
 # <a name="create-primary-keys"></a>建立主索引鍵
 
@@ -46,9 +47,9 @@ ms.locfileid: "86002187"
 
 ### <a name="to-create-a-primary-key"></a>若要建立主索引鍵
 
-1. 在物件總管 中，以滑鼠右鍵按一下要加入唯一條件約束的資料表，然後按一下 [設計]  。
+1. 在物件總管 中，以滑鼠右鍵按一下要加入唯一條件約束的資料表，然後按一下 [設計]。
 2. 在 **[資料表設計工具]** 中，按一下要定義為主索引鍵的資料庫資料行的資料列選取器。 若要選取多個資料行，請按住 CTRL 鍵，同時按一下其他資料行的資料列選取器。
-3. 在資料行的資料列選取器中，按一下滑鼠右鍵，然後選取 [設定主索引鍵]  。
+3. 在資料行的資料列選取器中，按一下滑鼠右鍵，然後選取 [設定主索引鍵]****。
 
 > [!CAUTION]
 > 若要重新定義主索引鍵，必須在建立新的主索引鍵前，先刪除所有現有主索引鍵的關聯性。 出現訊息警告您，這個程序中會自動刪除現有的關聯性。

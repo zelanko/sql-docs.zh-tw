@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_41333
 title: MSSQLSERVER_41333 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c3c3ae9a-1e4c-4de6-ba72-2f393375b053
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a459a23e9f74f04baed73c24c25c1757fbcc047f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0e3d0cb81362aacc4e3c60e83b077cf77e919f37
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85694130"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428680"
 ---
 # <a name="mssqlserver_41333"></a>MSSQLSERVER_41333
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

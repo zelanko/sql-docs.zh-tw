@@ -1,4 +1,5 @@
 ---
+description: 建立驅動程式應用程式
 title: 建立應用程式
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,11 +25,12 @@ ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3bc45e8c1de97b5da2d393ceb3ef3794baf56595
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6bcb65baaf591267d1c40b254bb23fe19e383192
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009775"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428190"
 ---
 # <a name="creating-a-driver-application"></a>建立驅動程式應用程式
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +56,7 @@ ms.locfileid: "86009775"
   
 -   結束資料來源的連接  
   
- 針對 Native Client ODBC 驅動程式撰寫的更複雜應用程式 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可能也會執行下列工作：  
+ 針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 原生用戶端 ODBC 驅動程式撰寫的更複雜應用程式可能也會執行下列工作：  
   
 -   使用資料指標控制結果集中的位置  
   
@@ -68,7 +70,7 @@ ms.locfileid: "86009775"
   
 -   執行大量複製作業  
   
--   管理大型資料（**Varchar （max）**、 **Nvarchar （max）** 和**Varbinary （max）** 資料行）作業  
+-   管理大型資料 (**Varchar (max) **、 **Nvarchar (max) **和 **Varbinary (max **) columns) 作業  
   
 -   設定資料庫鏡像時，使用重新連接邏輯來簡化容錯移轉  
   
@@ -76,21 +78,21 @@ ms.locfileid: "86009775"
   
  若要進行 ODBC 函數呼叫，C 或 C++ 應用程式必須包含 sql.h、sqlext.h 和 sqltypes.h 標頭檔。 若要呼叫 ODBC 安裝程式 API 函數，應用程式必須包含 odbcinst.h 標頭檔。 Unicode ODBC 應用程式必須包含 sqlucode.h 標頭檔。 ODBC 應用程式必須與 odbc32.lib 檔連結。 呼叫 ODBC 安裝程式 API 函數的 ODBC 應用程式必須與 odbccp32.lib 檔連結。 這些檔案包含在 Windows Platform SDK 中。  
   
- 許多 ODBC 驅動程式（包括 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native CLIENT odbc 驅動程式）都會提供驅動程式專屬的 odbc 延伸模組。 若要利用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驅動程式特定的擴充功能，應用程式應該包含 sqlncli 標頭檔。 這個標頭檔包含：  
+ 許多 ODBC 驅動程式（包括 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native CLIENT odbc 驅動程式）都會提供驅動程式專屬的 odbc 擴充功能。 若要利用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驅動程式專屬的延伸模組，應用程式應該包含 sqlncli .h 標頭檔。 這個標頭檔包含：  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式特定的連接屬性。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式特定的連接屬性。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式特定的語句屬性。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式特定的語句屬性。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式特有的資料行屬性。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式特定的資料行屬性。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 專屬的資料類型。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 專屬的使用者定義資料類型。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式特定的[SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md)類型。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式特定的 [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) 類型。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式診斷欄位。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式診斷欄位。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 專屬的診斷動態函數程式碼。  
   
@@ -102,14 +104,14 @@ ms.locfileid: "86009775"
   
 -   針對連結之伺服器及其目錄的清單，呼叫分散式查詢中繼資料 API 函數。  
   
- 任何使用 Native Client ODBC 驅動程式之大量複製功能的 C 或 c + + ODBC 應用程式，都 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 必須與 sqlncli11 連結。 呼叫分散式查詢中繼資料 API 函數的應用程式也必須與 sqlncli11.lib 連結。 Sqlncli 和 sqlncli11 檔案會散發為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 開發人員工具的一部分。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 Include 和 Lib 目錄應該位於編譯器的 INCLUDE 和 LIB 路徑，如下所示：  
+ 使用 Native Client ODBC 驅動程式之大量複製功能的任何 C 或 c + + ODBC 應用程式，都 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 必須與 sqlncli11 .lib 檔案連結。 呼叫分散式查詢中繼資料 API 函數的應用程式也必須與 sqlncli11.lib 連結。 Sqlncli .h 和 sqlncli11 .lib 檔案是以 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 開發人員工具的一部分散發。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 Include 和 Lib 目錄應該位於編譯器的 INCLUDE 和 LIB 路徑，如下所示：  
   
 ```  
 LIB=c:\Program Files\Microsoft Data Access SDK 2.8\Libs\x86\lib;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Lib;  
 INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Include;  
 ```  
   
- 先前在建立應用程式的過程中所做的其中一個設計決策為：應用程式是否需要同時讓多個 ODBC 呼叫未完成。 有兩種方法可以支援同時呼叫多個 ODBC，本節其他主題將會有完整說明。 如需詳細資訊，請參閱 ODBC 程式設計[人員參考](https://go.microsoft.com/fwlink/?LinkId=45250)。  
+ 先前在建立應用程式的過程中所做的其中一個設計決策為：應用程式是否需要同時讓多個 ODBC 呼叫未完成。 有兩種方法可以支援同時呼叫多個 ODBC，本節其他主題將會有完整說明。 如需詳細資訊，請參閱《 ODBC 程式設計 [人員參考](https://go.microsoft.com/fwlink/?LinkId=45250)》。  
   
 ## <a name="in-this-section"></a>本節內容  
   

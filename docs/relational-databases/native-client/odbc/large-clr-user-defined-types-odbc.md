@@ -1,5 +1,6 @@
 ---
-title: 大型 CLR 使用者定義型別（ODBC） |Microsoft Docs
+description: 大型 CLR 使用者定義型別 (ODBC)
+title: " (ODBC) 的大型 CLR 使用者自訂類型 |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,20 +15,21 @@ ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec445a457f948c2fb75d26a6ad632633230f6fec
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3f1beb11da79f41349ef0f01bb203d969654db07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009757"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428160"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>大型 CLR 使用者定義型別 (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   本主題討論 SQL Server Native Client 中 ODBC 的變更，以支援大型 Common Language Runtime (CLR) 使用者定義型別 (UDT)。  
   
- 如需顯示大型 CLR Udt 之 ODBC 支援的範例，請參閱[對大型 udt 的支援](../../../relational-databases/native-client-odbc-how-to/support-for-large-udts.md)。  
+ 如需顯示 ODBC 支援大型 CLR Udt 的範例，請參閱 [大型 udt 的支援](../../../relational-databases/native-client-odbc-how-to/support-for-large-udts.md)。  
   
- 如需 SQL Server Native Client 中大型 CLR Udt 支援的詳細資訊，請參閱[大型 Clr 使用者定義類型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)。  
+ 如需在 SQL Server Native Client 中支援大型 CLR Udt 的詳細資訊，請參閱 [大型 Clr 使用者定義類型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)。  
   
 ## <a name="data-format"></a>資料格式  
  SQL Server Native Client 會使用 SQL_SS_LENGTH_UNLIMITED 來表示大型物件 (LOB) 類型的資料行大小大於 8,000 個位元組。 從 SQL Server 2008 開始，當 CLR UDT 的值大於 8,000 個位元組時，將會針對 CLR UDT 使用相同的值。  
@@ -40,11 +42,11 @@ ms.locfileid: "86009757"
 |--------------------------|-------------------|-----------|  
 |CLR UDT|SQL_SS_UDT|-151 (sqlncli.h)|  
   
- 下表討論對應的結構和 ODBC C 類型。 基本上，CLR UDT 是具有其他中繼資料的**Varbinary**類型。  
+ 下表討論對應的結構和 ODBC C 類型。 基本上，CLR UDT 是具有額外中繼資料的 **Varbinary** 型別。  
   
 |SQL 資料類型|記憶體配置|C 資料類型|值 (sqlext.h)|  
 |-------------------|-------------------|-----------------|------------------------|  
-|SQL_SS_UDT|SQLCHAR * （不帶正負號的字元 \* ）|SQL_C_BINARY|SQL_BINARY (-2)|  
+|SQL_SS_UDT|SQLCHAR * (不帶正負號的 char \*) |SQL_C_BINARY|SQL_BINARY (-2)|  
   
 ## <a name="descriptor-fields-for-parameters"></a>參數的描述項欄位  
  IPD 欄位中傳回的資訊如下所示：  
@@ -69,7 +71,7 @@ ms.locfileid: "86009757"
 |SQL_CA_SS_UDT_TYPE_NAME|UDT 的名稱。|UDT 的名稱。|  
 |SQL_CA_SS_UDT_ASSEMBLY_TYPE_NAME|UDT 的完整名稱。|UDT 的完整名稱。|  
   
- 若為 UDT 參數，必須一律透過**SQLSetDescField**設定 SQL_CA_SS_UDT_TYPE_NAME。 SQL_CA_SS_UDT_CATALOG_NAME 和 SQL_CA_SS_UDT_SCHEMA_NAME 是選擇性的。  
+ 針對 UDT 參數，必須一律透過 **SQLSetDescField**設定 SQL_CA_SS_UDT_TYPE_NAME。 SQL_CA_SS_UDT_CATALOG_NAME 和 SQL_CA_SS_UDT_SCHEMA_NAME 是選擇性的。  
   
  如果在相同的資料庫中使用與資料表不同的結構描述來定義 UDT，必須要設定 SQL_CA_SS_UDT_SCHEMA_NAME。  
   
@@ -122,9 +124,9 @@ ms.locfileid: "86009757"
 |SS_UDT_SCHEMA_NAME|包含 UDT 的結構描述名稱。|包含 UDT 的結構描述名稱。|  
 |SS_UDT_ASSEMBLY_TYPE_NAME|UDT 的完整名稱。|UDT 的完整名稱。|  
   
- 最後三個資料行是驅動程式特有的資料行。 它們會加入任何 ODBC 定義的資料行後面，但在 SQLColumns 或 SQLProcedureColumns 結果集的任何現有驅動程式特定資料行之前。  
+ 最後三個資料行是驅動程式特有的資料行。 它們會在任何 ODBC 定義的資料行之後，但在 SQLColumns 或 SQLProcedureColumns 結果集的任何現有驅動程式特定資料行之前加入。  
   
- SQLGetTypeInfo 不會針對個別的 Udt 或泛型型別 "udt" 傳回任何資料列。  
+ SQLGetTypeInfo 不會傳回任何資料列、個別 Udt 或泛型型別 "udt"。  
   
 ## <a name="bindings-and-conversions"></a>繫結和轉換  
  從 SQL 到 C 資料類型的支援轉換如下所示：  
@@ -135,7 +137,7 @@ ms.locfileid: "86009757"
 |SQL_C_BINARY|支援|  
 |SQL_C_CHAR|支援|  
   
- \*二進位資料會轉換成十六進位字串。  
+ \* 二進位資料會轉換成十六進位字串。  
   
  從 C 到 SQL 資料類型的支援轉換如下所示：  
   
@@ -145,7 +147,7 @@ ms.locfileid: "86009757"
 |SQL_C_BINARY|支援|  
 |SQL_C_CHAR|支援|  
   
- \*發生二進位資料轉換的十六進位字串。  
+ \* 進行二進位資料轉換的十六進位字串。  
   
 ## <a name="sql_variant-support-for-udts"></a>UDT 的 SQL_VARIANT 支援  
  SQL_VARIANT 資料行中不支援 UDT。  
@@ -165,7 +167,7 @@ ms.locfileid: "86009757"
  本章節討論 SQL Server Native Client ODBC 函數為了支援大型 CLR UDT 所做的變更。  
   
 ### <a name="sqlbindcol"></a>SQLBindCol  
- UDT 結果資料行值會從 SQL 轉換成 C 資料類型，如本主題稍早的「系結和轉換」一節所述。  
+ UDT 結果資料行值會從 SQL 轉換成 C 資料類型，如本主題稍早的「系結和轉換」一節中所述。  
   
 ### <a name="sqlbindparameter"></a>SQLBindParameter  
  UDT 所需的值如下所示：  
@@ -198,13 +200,13 @@ ms.locfileid: "86009757"
 |SQL_SS_UDT<br /><br /> (長度大於 8,000 個位元組)|SQL_SS_UDT|SQL_SS_LENGTH_UNLIMITED (0)|0|  
   
 ### <a name="sqlfetch"></a>SQLFetch  
- UDT 結果資料行值會從 SQL 轉換成 C 資料類型，如本主題稍早的「系結和轉換」一節所述。  
+ UDT 結果資料行值會從 SQL 轉換成 C 資料類型，如本主題稍早的「系結和轉換」一節中所述。  
   
 ### <a name="sqlfetchscroll"></a>SQLFetchScroll  
- UDT 結果資料行值會從 SQL 轉換成 C 資料類型，如本主題稍早的「系結和轉換」一節所述。  
+ UDT 結果資料行值會從 SQL 轉換成 C 資料類型，如本主題稍早的「系結和轉換」一節中所述。  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
- UDT 結果資料行值會從 SQL 轉換成 C 資料類型，如本主題稍早的「系結和轉換」一節所述。  
+ UDT 結果資料行值會從 SQL 轉換成 C 資料類型，如本主題稍早的「系結和轉換」一節中所述。  
   
 ### <a name="sqlgetdescfield"></a>SQLGetDescField  
  有提供新類型的描述項欄位在本主題稍早的「參數的描述項欄位」和「結果的描述項欄位」章節中有加以描述。  
@@ -212,7 +214,7 @@ ms.locfileid: "86009757"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  針對 UDT 傳回的值如下所示：  
   
-|SQL 資料類型|類型|子類型|長度|準確率|調整|  
+|SQL 資料類型|類型|子類型|長度|精確度|調整|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (長度小於或等於 8,000 個位元組)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (長度大於 8,000 個位元組)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -232,7 +234,7 @@ ms.locfileid: "86009757"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  UDT 允許的值如下所示：  
   
-|SQL 資料類型|類型|子類型|長度|準確率|調整|  
+|SQL 資料類型|類型|子類型|長度|精確度|調整|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (長度小於或等於 8,000 個位元組)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (長度大於 8,000 個位元組)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  

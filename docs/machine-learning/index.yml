@@ -9,13 +9,13 @@ metadata:
   ms.topic: landing-page
   author: dphansen
   ms.author: davidph
-  ms.date: 04/24/2020
-  ms.openlocfilehash: 41832dfd555df827e14182900a4faa07ad22ab1e
-  ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+  ms.date: 05/27/2020
+  ms.openlocfilehash: 72f9fc36ace86dda5c38b7713376d83dbe1e8230
+  ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/19/2020
-  ms.locfileid: "83606822"
+  ms.lasthandoff: 07/20/2020
+  ms.locfileid: "86485299"
 landingContent:
 - title: SQL Server 上的機器學習
   linkLists:
@@ -65,11 +65,47 @@ landingContent:
       url: tutorials/quickstart-r-train-score-model.md
   - linkListType: tutorial
     links:
-    - text: 在 T-SQL 中使用 R
-      url: tutorials/sqldev-in-database-r-for-sql-developers.md
-    - text: 在 R 工具中使用機器學習服務
-      url: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
-- title: 巨量資料叢集上的 ML
+    - text: 使用決策樹預測滑雪工具租用
+      url: tutorials/r-predictive-model-introduction.md
+    - text: 使用 K-means 叢集將客戶分類
+      url: tutorials/r-clustering-model-introduction.md
+- title: Azure SQL 受控執行個體
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Azure SQL 受控執行個體中的機器學習服務
+      url: /azure/azure-sql/managed-instance/machine-learning-services-overview
+    - text: Azure SQL 受控執行個體與 SQL Server 兩者的 ML 主要差異
+      url: /azure/azure-sql/managed-instance/machine-learning-services-differences
+  - linkListType: how-to-guide
+    links:
+    - text: 在 Azure SQL 受控執行個體中使用 ONNX 模型部署及建立預測
+      url: /azure/azure-sql-edge/deploy-onnx?context=/azure/azure-sql/managed-instance/context/ml-context
+- title: Azure SQL Database Edge
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: SQL Database Edge 中使用 ONNX 的機器學習和 AI
+      url: /azure/sql-database-edge/onnx-overview
+  - linkListType: how-to-guide
+    links:
+    - text: 在 SQL Database Edge 中使用 ONNX 模型進行部署和預測
+      url: /azure/sql-database-edge/deploy-onnx
+- title: Azure Data Studio ML 延伸模組
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 什麼是適用於 Azure Data Studio 的機器學習延伸模組？
+      url: ../azure-data-studio/machine-learning-extension.md
+  - linkListType: how-to-guide
+    links:
+    - text: 管理資料庫中的套件
+      url: ../azure-data-studio/machine-learning-extension-manage-packages.md
+    - text: 進行預測
+      url: ../azure-data-studio/machine-learning-extension-predictions.md
+    - text: 匯入或檢視模型
+      url: ../azure-data-studio/machine-learning-extension-import-view-models.md
+- title: SQL Server 巨量資料叢集
   linkLists:
   - linkListType: overview
     links:
@@ -87,7 +123,7 @@ landingContent:
       url: ../big-data-cluster/sparklyr-from-rstudio.md
     - text: 整合 Spark 與 SQL Server
       url: ../big-data-cluster/spark-mssql-connector.md
-- title: Azure Synapse Analytics 上的 ML
+- title: Azure Synapse Analytics
   linkLists:
   - linkListType: overview
     links:
@@ -101,13 +137,3 @@ landingContent:
     links:
     - text: 建立、開發及維護 Azure Synapse Studio 筆記本
       url: /azure/synapse-analytics/spark/apache-spark-development-using-notebooks
-- title: Azure SQL Database Edge 上的 ML
-  linkLists:
-  - linkListType: overview
-    links:
-    - text: SQL Database Edge 中使用 ONNX 的機器學習和 AI
-      url: /azure/sql-database-edge/onnx-overview
-  - linkListType: how-to-guide
-    links:
-    - text: 在 SQL Database Edge 中使用 ONNX 模型進行部署和預測
-      url: /azure/sql-database-edge/deploy-onnx

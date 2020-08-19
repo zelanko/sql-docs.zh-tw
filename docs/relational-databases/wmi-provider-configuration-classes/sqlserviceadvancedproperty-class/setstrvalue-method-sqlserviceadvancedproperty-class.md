@@ -1,5 +1,6 @@
 ---
-title: SetStrValue 方法（SqlServiceAdvancedProperty）
+description: SetStrValue 方法 (SqlServiceAdvancedProperty 類別)
+title: 'SetStrValue 方法 (SqlServiceAdvancedProperty) '
 ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1fededc3-81ba-4b08-83f9-189b96140799
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8b7e2ffa75190d8699e0110664dd179ab3f096ae
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 86a0a552b8d6544a5ea42c175e04396d3dcc48a9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888278"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427120"
 ---
 # <a name="setstrvalue-method-sqlserviceadvancedproperty-class"></a>SetStrValue 方法 (SqlServiceAdvancedProperty 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ object.SetStrValue(StrValue)
   
 #### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |*StrValue*|指定進階屬性值的字串值。|  
   

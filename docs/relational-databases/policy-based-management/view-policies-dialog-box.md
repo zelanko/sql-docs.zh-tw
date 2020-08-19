@@ -1,4 +1,5 @@
 ---
+description: 檢視原則對話方塊
 title: 檢視原則對話方塊 | Microsoft 文件
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 06b9b092-fceb-4be5-b712-5aff89b5ba92
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 93106e092c6f0b78f54a24af97ce5b0aa4101880
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 06ab429a5e3524485793bdf118f0c4039869f868
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774093"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428020"
 ---
 # <a name="view-policies-dialog-box"></a>檢視原則對話方塊
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85774093"
  **原則**  
  每一個適用的原則名稱。  
   
- **類別目錄**  
+ **類別**  
  選定原則所屬的原則類別目錄。  
   
  **評估模式**  
@@ -43,7 +44,7 @@ ms.locfileid: "85774093"
  按一下此超連結可顯示執行記錄報表。  
   
  **評估**  
- 按一下此超連結可開啟 [評估原則]  對話方塊來執行此原則。  
+ 按一下此超連結可開啟 [評估原則]**** 對話方塊來執行此原則。  
   
  **上次執行**  
  上次執行此原則的日期和時間。  

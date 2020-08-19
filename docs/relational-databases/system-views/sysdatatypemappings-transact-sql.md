@@ -1,5 +1,6 @@
 ---
-title: msdb.dbo.sysdatatypemappings 以（Transact-sql） |Microsoft Docs
+description: sysdatatypemappings (Transact-SQL)
+title: sysdatatypemappings (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 5dfafb70-3e3d-4465-b293-1acff1f855b6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ae1637f0019979d4f915ddb084c6e90fa4e8274e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ad4a6df1ae2dbdd418e133053330095a389bdf24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889133"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427530"
 ---
 # <a name="sysdatatypemappings-transact-sql"></a>sysdatatypemappings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **Msdb.dbo.sysdatatypemappings 以**view 是用來顯示非 SQL Server 資料庫管理系統（DBMS）的 SQL Server 資料類型與資料類型之間的對應。 這個視圖會儲存在**msdb**資料庫中。  
+  **Sysdatatypemappings** view 可用來顯示 SQL Server 資料類型，以及 (DBMS) 之非 SQL Server 資料庫管理系統的資料類型之間的對應。 這個視圖會儲存在 **msdb** 資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -57,7 +58,7 @@ ms.locfileid: "85889133"
 ## <a name="see-also"></a>另請參閱  
  [異質資料庫複寫](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [複寫資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [&#40;Transact-sql&#41;的複寫視圖](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的複寫視圖 ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_helpdatatypemap &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)  
   
   

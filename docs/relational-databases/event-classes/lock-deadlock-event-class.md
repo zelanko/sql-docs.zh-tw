@@ -1,4 +1,5 @@
 ---
+description: Lock:Deadlock 事件類別
 title: Lock:Deadlock 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 3e0394bc-6ea8-4533-845c-76782bec73c2
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2614d7805573b74485f3872dfa6d16a2ab961f74
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c9cb3512b81520337dcf072c5367110a8e655449
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717788"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428480"
 ---
 # <a name="lockdeadlock-event-class"></a>Lock:Deadlock 事件類別
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

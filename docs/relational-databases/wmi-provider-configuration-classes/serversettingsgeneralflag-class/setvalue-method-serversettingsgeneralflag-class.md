@@ -1,5 +1,6 @@
 ---
-title: SetValue 方法（ServerSettingsGeneralFlag）
+description: SetValue 方法 (ServerSettingsGeneralFlag 類別)
+title: ServerSettingsGeneralFlag) 的 SetValue 方法 (
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a889feac-c0e0-4635-b506-843863d86967
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b95664e8bb14ef5e66d76e7bb06140a0736a070b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e400d07a8e14bed9337cd0e889cb6ca13b44f674
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888564"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427270"
 ---
 # <a name="setvalue-method-serversettingsgeneralflag-class"></a>SetValue 方法 (ServerSettingsGeneralFlag 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ object.SetValue(Value)
   
 #### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
-|*ReplTest1*|指定旗標之值的布林值。|  
+|*值*|指定旗標之值的布林值。|  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  **Uint32**值，如果已成功修改服務，則為0，如果不支援要求則為1，以及其他指示錯誤的任何數位。  

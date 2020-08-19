@@ -1,4 +1,5 @@
 ---
+description: 'SQL Server Native Client (OLE DB 中的稀疏資料行支援) '
 title: 疏鬆資料行支援 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -11,17 +12,17 @@ ms.assetid: 918574b3-c62e-4937-9e5f-37310dedc8f9
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 19c005c2aa07048d95e52bf35c33d2aa1c1487bf
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f402e4a676ad87dd376901199fc4f7537d089b89
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243834"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428130"
 ---
-# <a name="sparse-columns-support-in-sql-server-native-client-ole-db"></a>SQL Server Native Client （OLE DB）中的稀疏資料行支援
+# <a name="sparse-columns-support-in-sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB 中的稀疏資料行支援) 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  本主題提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 對於疏鬆資料行支援的相關資訊。 如需稀疏資料行的詳細資訊，請參閱[SQL Server Native Client 中的稀疏資料行支援](../../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)。 如需範例，請參閱[顯示資料行與疏鬆資料行的目錄中繼資料 &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)。  
+  本主題提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 對於疏鬆資料行支援的相關資訊。 如需有關稀疏資料行的詳細資訊，請參閱 [SQL Server Native Client 中的稀疏資料行支援](../../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)。 如需範例，請參閱[顯示資料行與疏鬆資料行的目錄中繼資料 &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)。  
   
 ## <a name="ole-db-statement-metadata"></a>OLE DB 陳述式中繼資料  
  從 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 開始，提供新的 DBCOLUMNFLAGS 旗標值 DBCOLUMNFLAGS_SS_ISCOLUMNSET。 此值應該針對 **column_set** 值的資料行設定。 您可以透過 IColumnsInfo::GetColumnsInfo 的 *dwFlags* 參數和 IColumnsRowset::GetColumnsRowset 所傳回之資料列集的 DBCOLUMN_FLAGS 資料行，來擷取 DBCOLUMNFLAGS 旗標。  

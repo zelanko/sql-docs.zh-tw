@@ -4,6 +4,8 @@
   href: ../sql-server/index.yml
 - name: SQL Server 驅動程式
   href: ../connect/sql-connection-libraries.md
+- name: 驅動程式功能支援矩陣
+  href: ../connect/driver-feature-matrix.md
 - name: SQL Server 驅動程式歷程記錄
   href: ../connect/connect-history.md
 - name: SQL 資料開發人員
@@ -15,13 +17,13 @@
     - name: 開始使用 SqlClient 驅動程式
       href: ../connect/ado-net/get-started-sqlclient-driver.md
       items:
-        - name: 步驟 1︰設定 ADO.NET 開發的開發環境
+        - name: '步驟 1:設定 ADO.NET 開發的開發環境'
           href: ../connect/ado-net/step-1-configure-development-environment-ado-net-development.md
         - name: 步驟 2︰建立 ADO.NET 開發的 SQL 資料庫
           href: ../connect/ado-net/step-2-create-sql-database-ado-net-development.md
         - name: 步驟 3︰使用 ADO.NET 連線到 SQL 的概念證明
           href: ../connect/ado-net/step-3-connect-sql-ado-net.md
-        - name: 步驟 4︰使用 ADO.NET 彈性地連線到 SQL
+        - name: 步驟 4：使用 ADO.NET 彈性地連線到 SQL
           href: ../connect/ado-net/step-4-connect-resiliently-sql-ado-net.md
     - name: SqlClient 驅動程式概觀
       href: ../connect/ado-net/overview-sqlclient-driver.md
@@ -30,6 +32,10 @@
           href: ../connect/ado-net/introduction-microsoft-data-sqlclient-namespace.md
         - name: 下載適用於 SQL Server 的 Microsoft SqlClient Data Provider
           href: ../connect/ado-net/download-microsoft-sqlclient-data-provider.md
+        - name: 在 SqlClient 中啟用事件追蹤
+          href: ../connect/ado-net/enable-eventsource-tracing.md
+        - name: SqlClient 中的 AppContext 參數
+          href: ../connect/ado-net/appcontext-switches.md
         - name: SqlClient 驅動程式支援生命週期
           href: ../connect/ado-net/sqlclient-driver-support-lifecycle.md
         - name: 尋找其他 SqlClient 驅動程式資訊
@@ -92,10 +98,12 @@
                   href: ../connect/ado-net/sql/multiple-bulk-copy-operations.md
                 - name: 交易和大量複製作業
                   href: ../connect/ado-net/sql/transaction-bulk-copy-operations.md
-            - name: Multiple Active Result Set (MARS)
+                - name: 大量複製作業的順序提示
+                  href: ../connect/ado-net/sql/bulk-copy-order-hints.md
+            - name: Multiple Active Result Sets (MARS)
               href: ../connect/ado-net/sql/multiple-active-result-sets-mars.md
               items:
-                - name: 啟用 Multiple Active Result Set
+                - name: 啟用 Multiple Active Result Sets
                   href: ../connect/ado-net/sql/enable-multiple-active-result-sets.md
                 - name: 操作資料
                   href: ../connect/ado-net/sql/manipulate-data.md
@@ -142,6 +150,15 @@
               href: ../connect/ado-net/sql/sqlclient-support-localdb.md
             - name: Always Encrypted 的 SqlClient 支援
               href: ../connect/ado-net/sql/sqlclient-support-always-encrypted.md
+              items:
+                - name: 使用具有安全記憶體保護區的 Always Encrypted 開發 .NET 應用程式
+                  href: ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md
+                - name: 使用 Azure Key Vault 搭配 Always Encrypted
+                  href: ado-net/sql/azure-key-vault-example.md
+                - name: 使用具有安全記憶體保護區 Always Encrypted 的 Azure Key Vault
+                  href: ado-net/sql/azure-key-vault-enclave-example.md
+            - name: SqlClient 中的資料探索與分類
+              href: ../connect/ado-net/sql/data-classification.md
 - name: JDBC
   items:
     - name: Microsoft JDBC Driver for SQL Server
@@ -2484,11 +2501,11 @@
     - name: 開始使用 JDBC Driver
       href: ../connect/jdbc/getting-started-with-the-jdbc-driver.md
       items:
-        - name: 步驟 1︰設定 Java 開發的開發環境
+        - name: '步驟 1:設定開發環境以進行 Java 開發'
           href: ../connect/jdbc/step-1-configure-development-environment-for-java-development.md
-        - name: 步驟 2︰建立 Java 開發的 SQL 資料庫
+        - name: '步驟 2:建立 SQL 資料庫以進行 Java 開發'
           href: ../connect/jdbc/step-2-create-a-sql-database-for-java-development.md
-        - name: 步驟 3︰使用 Java 連線到 SQL 的概念證明
+        - name: 步驟 3：使用 Java 連線到 SQL 的概念證明
           href: ../connect/jdbc/step-3-proof-of-concept-connecting-to-sql-using-java.md
     - name: JDBC Driver 概觀
       href: ../connect/jdbc/overview-of-the-jdbc-driver.md
@@ -2631,8 +2648,8 @@
         - name: 搭配使用一律加密與 JDBC 驅動程式
           href: ../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md
           items:
-            - name: 具有安全記憶體保護區的 Always Encrypted
-              href: ../connect/jdbc/always-encrypted-with-secure-enclaves.md
+            - name: 使用具備安全記憶體保護區的 Always Encrypted 搭配 JDBC 驅動程式
+              href: ../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md
         - name: 指南文章
           items:
             - name: 使用 SQL 陳述式
@@ -2747,6 +2764,8 @@
               href: ../connect/jdbc/using-sql-escape-sequences.md
             - name: 搭配預存程序使用陳述式
               href: ../connect/jdbc/using-statements-with-stored-procedures.md
+            - name: Loopback 案例的用戶端憑證驗證
+              href: ../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md
             - name: Azure Key Vault 範例 (適用於 7.0 等)
               href: ../connect/jdbc/azure-key-vault-sample-version-7.0.md
               items:
@@ -2758,11 +2777,11 @@
   items:
     - name: Node.js Driver for SQL Server
       href: ../connect/node-js/node-js-driver-for-sql-server.md
-    - name: 步驟 1︰設定 Node.js 開發的開發環境
+    - name: '步驟 1:設定 Node.js 開發的開發環境'
       href: ../connect/node-js/step-1-configure-development-environment-for-node-js-development.md
-    - name: 步驟 2︰建立 Node.js 開發的 SQL 資料庫
+    - name: '步驟 2:建立 Node.js 開發的 SQL 資料庫'
       href: ../connect/node-js/step-2-create-a-sql-database-for-node-js-development.md
-    - name: 步驟 3︰使用 Node.js 連線到 SQL 的概念證明
+    - name: 步驟 3：使用 Node.js 連線到 SQL 的概念證明
       href: ../connect/node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md
 - name: ODBC
   items:
@@ -2790,14 +2809,16 @@
               href: ../connect/odbc/linux-mac/programming-guidelines.md
             - name: 工具
               items:
-                - name: 使用 bcp.exe 進行連線
+                - name: 連接 bcp
                   href: ../connect/odbc/linux-mac/connecting-with-bcp.md
-                - name: 使用 sqlcmd.exe 進行連線
+                - name: 使用 sqlcmd 連接
                   href: ../connect/odbc/linux-mac/connecting-with-sqlcmd.md
             - name: 使用整合式驗證
               href: ../connect/odbc/linux-mac/using-integrated-authentication.md
         - name: 版本資訊
           href: ../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md
+        - name: 版本資訊 (mssql-tools)
+          href: ../connect/odbc/linux-mac/release-notes-tools.md
         - name: 已知問題
           href: ../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md
         - name: ODBC Linux 和 macOS 的常見問題集 (FAQ)
@@ -2836,7 +2857,7 @@
       items:
         - name: 自訂金鑰儲存區提供者
           href: ../connect/odbc/custom-keystore-providers.md
-        - name: DSN 連線字串的關鍵字及屬性
+        - name: DSN 和連接字串關鍵字和屬性
           href: ../connect/odbc/dsn-connection-string-attribute.md
         - name: 使用 Always Encrypted
           href: ../connect/odbc/using-always-encrypted-with-the-odbc-driver.md
@@ -3421,7 +3442,7 @@
                         - name: ODBC 中的交易
                           href: ../odbc/reference/develop-app/transactions-in-odbc-odbc.md
                           items:
-                            - name: 交易支援
+                            - name: 異動支援
                               href: ../odbc/reference/develop-app/transaction-support.md
                             - name: 認可模式
                               href: ../odbc/reference/develop-app/commit-mode.md
@@ -3555,7 +3576,7 @@
                       items:
                         - name: 多執行緒
                           href: ../odbc/reference/develop-app/multithreading.md
-                        - name: Alignment
+                        - name: 對齊
                           href: ../odbc/reference/develop-app/alignment.md
                         - name: Unicode
                           href: ../odbc/reference/develop-app/unicode.md
@@ -3727,7 +3748,7 @@
                       items:
                         - name: SQLAsyncNotificationCallback 函式
                           href: ../odbc/reference/develop-driver/sqlasyncnotificationcallback-function.md
-                - name: API 參考
+                - name: 應用程式開發介面參考
                   href: ../odbc/reference/syntax/odbc-reference.md
                   items:
                     - name: 函式摘要
@@ -4171,7 +4192,7 @@
                           href: ../odbc/reference/appendixes/numeric-functions.md
                         - name: 時間、日期和間隔函數
                           href: ../odbc/reference/appendixes/time-date-and-interval-functions.md
-                        - name: 系統函數
+                        - name: 系統函式
                           href: ../odbc/reference/appendixes/system-functions.md
                         - name: 明確資料類型轉換函式
                           href: ../odbc/reference/appendixes/explicit-data-type-conversion-function.md
@@ -5111,6 +5132,8 @@
           href: ../connect/oledb/features/using-large-value-types.md
         - name: 使用 Multiple Active Result Sets (MARS)
           href: ../connect/oledb/features/using-multiple-active-result-sets-mars.md
+        - name: 使用透明網路 IP 解析
+          href: ../connect/oledb/features/using-transparent-network-ip-resolution.md
         - name: 使用使用者定義型別
           href: ../connect/oledb/features/using-user-defined-types.md
         - name: 使用 XML 資料類型
@@ -5457,7 +5480,7 @@
       items:
         - name: 步驟 1︰設定 PHP 開發的開發環境
           href: ../connect/php/step-1-configure-development-environment-for-php-development.md
-        - name: 步驟 2︰建立供 PHP 開發之用的 SQL 資料庫
+        - name: '步驟 2:建立 PHP 開發的 SQL 資料庫'
           href: ../connect/php/step-2-create-a-sql-database-for-php-development.md
         - name: 步驟 3︰使用 PHP 連線到 SQL Server 的概念證明
           href: ../connect/php/step-3-proof-of-concept-connecting-to-sql-using-php.md
@@ -5492,7 +5515,7 @@
           items:
             - name: 如何：使用 Windows 驗證進行連接
               href: ../connect/php/how-to-connect-using-windows-authentication.md
-            - name: 'How to: Connect Using SQL Server Authentication'
+            - name: 如何：使用 SQL Server 驗證進行連線
               href: ../connect/php/how-to-connect-using-sql-server-authentication.md
             - name: 如何：使用 Azure Active Directory 驗證進行連線
               href: ../connect/php/azure-active-directory.md
@@ -5500,7 +5523,7 @@
               href: ../connect/php/how-to-connect-on-a-specified-port.md
             - name: 連接共用
               href: ../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md
-            - name: 如何：停用 Multiple Active Resultsets (MARS)。
+            - name: 如何：停用 Multiple Active Result Sets (MARS)
               href: ../connect/php/how-to-disable-multiple-active-resultsets-mars.md
             - name: 連線選項
               href: ../connect/php/connection-options.md
@@ -5572,7 +5595,7 @@
               href: ../connect/php/how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md
             - name: 如何：指定 PHP 資料類型
               href: ../connect/php/how-to-specify-php-data-types.md
-            - name: 如何：使用內建的 UTF-8 支援傳送及接收 UTF-8 資料
+            - name: 如何：使用內建的 UTF-8 支援傳送及擷取 UTF-8 資料
               href: ../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md
             - name: 如何：傳送及擷取 Linux 與 macOS 中的 ASCII 資料
               href: ../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md
@@ -5739,26 +5762,26 @@
     - name: Python SQL 驅動程式 - pyodbc
       href: ../connect/python/pyodbc/python-sql-driver-pyodbc.md
       items:
-        - name: 步驟 1︰設定 pyodbc Python 開發的開發環境
+        - name: '步驟 1:設定 pyodbc Python 開發的開發環境'
           href: ../connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md
-        - name: 步驟 2︰建立用於 pyodbc Python 開發的 SQL 資料庫
+        - name: '步驟 2:建立 pyodbc Python 開發的 SQL 資料庫'
           href: ../connect/python/pyodbc/step-2-create-a-sql-database-for-pyodbc-python-development.md
-        - name: 步驟 3︰使用 pyodbc 連線到 SQL 的概念證明
+        - name: 步驟 3：使用 pyodbc 連線到 SQL 的概念證明
           href: ../connect/python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md
     - name: Python SQL 驅動程式 - pymssql
       href: ../connect/python/pymssql/python-sql-driver-pymssql.md
       items:
-        - name: 步驟 1︰設定 pymssql Python 開發的開發環境
+        - name: '步驟 1:設定 pymssql Python 開發的開發環境'
           href: ../connect/python/pymssql/step-1-configure-development-environment-for-pymssql-python-development.md
-        - name: 步驟 2︰建立 pymssql Python 開發的 SQL 資料庫
+        - name: '步驟 2:建立 pymssql Python 開發的 SQL 資料庫'
           href: ../connect/python/pymssql/step-2-create-a-sql-database-for-pymssql-python-development.md
-        - name: 步驟 3︰使用 pymssql 連線到 SQL 的概念證明
+        - name: 步驟 3：使用 pymssql 連線到 SQL 的概念證明
           href: ../connect/python/pymssql/step-3-proof-of-concept-connecting-to-sql-using-pymssql.md
 - name: Ruby
   items:
     - name: Ruby Driver for SQL Server
       href: ../connect/ruby/ruby-driver-for-sql-server.md
-    - name: 步驟 1︰設定 Ruby 開發的開發環境
+    - name: '步驟 1:設定 Ruby 開發的開發環境'
       href: ../connect/ruby/step-1-configure-development-environment-for-ruby-development.md
     - name: 步驟 2︰建立 Ruby 開發的 SQL 資料庫
       href: ../connect/ruby/step-2-create-a-sql-database-for-ruby-development.md

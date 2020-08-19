@@ -1,4 +1,5 @@
 ---
+description: SQL Server 複寫 [發行者設定] 對話方塊
 title: 發行者設定 (SSMS) | Microsoft Docs
 descripton: Describes the 'Publisher Settings' dialog box found in Replication Monitor within SQL Server Management Studio (SSMS).
 ms.custom: seo-lt-2019
@@ -16,16 +17,16 @@ ms.assetid: 4fb70427-082d-4179-82a1-34b235accc43
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: a6232fc78b4c9b1d68a9cc96e6fed69138e5075f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 92a2570f2d591f3eb2fb3c2c460c60809bc0f5fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85678487"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427920"
 ---
 # <a name="sql-server-replication-publisher-settings-dialog-box"></a>SQL Server 複寫 [發行者設定] 對話方塊
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  **[發行者設定]** 對話方塊，可讓您針對已加入至複寫監視器之左窗格的發行者變更設定。  
+   [發行者設定]**** 對話方塊，可讓您針對已新增至複寫監視器之左窗格的發行者變更設定。  
   
 ## <a name="options"></a>選項。  
  **發行者連接**  
@@ -35,7 +36,7 @@ ms.locfileid: "85678487"
  只有在發行者使用遠端散發者時才會顯示此選項。 按一下即可啟動 **[連接到伺服器]** 對話方塊，可讓您檢視和變更連接屬性以及複寫監視器用來連接到遠端散發者的認證。  
   
  **啟動複寫監視器時自動連接**  
- 選取即可讓複寫監視器自動連接到散發者，並擷取在對話方塊頂端方格中選取之發行者的狀態資訊。 如果清除此核取方塊，您必須在啟動複寫監視器後手動連接：以滑鼠右鍵按一下複寫監視器之左窗格中的發行者，然後按一下 **[連接]** 。  
+ 選取即可讓複寫監視器自動連接到散發者，並擷取在對話方塊頂端方格中選取之發行者的狀態資訊。 如果清除此核取方塊，您必須在啟動複寫監視器後手動連接：以滑鼠右鍵按一下複寫監視器之左窗格中的發行者，然後按一下 **[連接]**。  
   
  **自動重新整理此發行者和其發行集的狀態**  
  選取即可讓複寫監視器自動重新整理在對話方塊頂端方格中選取之發行者的狀態。 如果選取此選項，複寫監視器就會輪詢散發者，以取得發行者和其發行集的狀態資訊。 輪詢間隔會由 **[重新整理的頻率]** 選項設定。 如需複寫監視器中之重新整理的詳細資訊，請參閱[快取、重新整理和複寫監視器效能](../../relational-databases/replication/monitor/caching-refresh-and-replication-monitor-performance.md)。  

@@ -1,4 +1,5 @@
 ---
+description: 複寫代理程式設定檔
 title: 複寫代理程式設定檔 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -21,12 +22,12 @@ ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 95166948ff2d447eaac439442230af91d75c1bf3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 49fc84b9ac85d17d85f63372c8bdd57d0619413d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922837"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427980"
 ---
 # <a name="replication-agent-profiles"></a>複寫代理程式設定檔
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "86922837"
 ## <a name="snapshot-agent-profiles"></a>快照集代理程式設定檔  
  下表顯示於「快照集代理程式」的預設設定檔中定義的參數。 如需這些參數的詳細資訊，請參閱＜ [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)＞。  
   
-||預設|  
+||default|  
 |-|-------------|  
 |**-BcpBatchSize**|100000|  
 |**-HistoryVerboseLevel**|2|  
@@ -56,7 +57,7 @@ ms.locfileid: "86922837"
 ## <a name="log-reader-agent-profiles"></a>記錄讀取器代理程式設定檔  
  下表顯示於「記錄讀取器代理程式」的設定檔中定義的參數。 資料表中的每一個資料行代表一個具名設定檔。 如需這些參數的詳細資訊，請參閱＜ [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)＞。  
   
-||預設|詳細資訊記錄|  
+||default|詳細資訊記錄|  
 |-|-------------|---------------------|  
 |**-HistoryVerboseLevel**|1|2|  
 |**-LoginTimeout**|15|15|  
@@ -68,7 +69,7 @@ ms.locfileid: "86922837"
 ## <a name="distribution-agent-profiles"></a>散發代理程式設定檔  
  下表顯示於「散發代理程式」的設定檔中定義的參數。 資料表中的每一個資料行代表一個具名設定檔。 如需這些參數的詳細資訊，請參閱＜ [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)＞。  
   
-||預設|詳細資訊記錄|Windows Synchronization Manager|資料一致性錯誤時仍然繼續|OLEDB 資料流的散發設定檔|  
+||default|詳細資訊記錄|Windows Synchronization Manager|資料一致性錯誤時仍然繼續|OLEDB 資料流的散發設定檔|  
 |-|-------------|---------------------|-------------------------------------|-----------------------------------------|----------------------------------------------|  
 |**-BcpBatchSize**|100000|100000|1000|100000|2147473647|  
 |**-CommitBatchSize**|100|100|100|100|100|  
@@ -89,7 +90,7 @@ ms.locfileid: "86922837"
 ## <a name="merge-agent-profiles"></a>合併代理程式設定檔  
  下表顯示於「合併代理程式」的設定檔中定義的參數。 資料表中的每一個資料行代表一個具名設定檔。 如需這些參數的詳細資訊，請參閱＜ [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)＞。  
   
-||預設|詳細資訊記錄|Windows Synchronization Manager|資料列計數驗證|資料列計數與總和檢查碼驗證|慢速連結|高容量伺服器對伺服器|  
+||default|詳細資訊記錄|Windows Synchronization Manager|資料列計數驗證|資料列計數與總和檢查碼驗證|慢速連結|高容量伺服器對伺服器|  
 |-|-------------|---------------------|-------------------------------------|-------------------------|--------------------------------------|---------------|------------------------------------|  
 |**-BcpBatchSize**|100000|100000|1000|100000|100000|100000|100000|  
 |**-ChangesPerHistory**|100|50|50|100|100|100|1000|  
@@ -120,7 +121,7 @@ ms.locfileid: "86922837"
 ## <a name="queue-reader-agent-profiles"></a>佇列讀取器代理程式設定檔  
  下表顯示於「佇列讀取器代理程式」的預設設定檔中定義的參數。 如需這些參數的詳細資訊，請參閱＜ [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)＞。  
   
-||預設|  
+||default|  
 |-|-------------|  
 |**-HistoryVerboseLevel**|1|  
 |**-LoginTimeout**|15|  

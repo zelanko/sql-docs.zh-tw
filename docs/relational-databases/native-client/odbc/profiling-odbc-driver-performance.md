@@ -1,4 +1,5 @@
 ---
+description: 分析 ODBC 驅動程式效能
 title: 分析 ODBC 驅動程式效能 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -20,11 +21,12 @@ ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35d920f13329b336969dbfd91da2265917f2fbe4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 172557586f7198bcc6151fd58f12faa0683f4fc0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009720"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428120"
 ---
 # <a name="profiling-odbc-driver-performance"></a>分析 ODBC 驅動程式效能
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +45,7 @@ ms.locfileid: "86009720"
   
 -   連接至指定記錄的資料來源。  
   
--   呼叫[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)來設定控制分析的驅動程式特定屬性。  
+-   呼叫 [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 可設定控制分析的驅動程式特定屬性。  
   
  每個應用程式處理序都可以取得自己的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式複本，而且分析通用於驅動程式複本和應用程式處理序的組合。 當應用程式中的任何項目開啟分析時，分析會記錄來自該應用程式的驅動程式中，所有作用中連接的資訊。 甚至是沒有特別針對分析呼叫的連接也包含在內。  
   
@@ -51,7 +53,7 @@ ms.locfileid: "86009720"
   
  如果應用程式開始記錄檔的分析，而且有另一個應用程式嘗試開始相同記錄檔的分析，則第二個應用程式無法記錄任何分析資料。 如果第二個應用程式在第一個應用程式卸載其驅動程式後開始分析，第二個應用程式會覆寫來自第一個應用程式的記錄檔。  
   
- 如果應用程式連接到已啟用分析的資料來源，則如果應用程式呼叫**SQLSetConnectOption**來開始記錄，驅動程式會傳回 SQL_ERROR。 呼叫**SQLGetDiagRec**之後，會傳回下列內容：  
+ 如果應用程式連接到已啟用分析的資料來源，則驅動程式會在應用程式呼叫 **SQLSetConnectOption** 來開始記錄時，傳回 SQL_ERROR。 呼叫 **SQLGetDiagRec** ，然後傳回下列內容：  
   
 ```  
 SQLState: 01000, pfNative = 0  
@@ -68,9 +70,9 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   Connection  
   
--   網路  
+-   Network (網路)  
   
--   時間  
+-   Time  
   
  在下表中，SQLPERF 資料結構內的欄位描述也會套用到效能記錄檔中記錄的統計資料。  
   
@@ -84,9 +86,9 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLSelects|在 SQL_PERF_START 之後處理的 SELECT 陳述式數目。|  
 |SQLSelectRows|在 SQL_PERF_START 之後選取的資料列數目。|  
 |交易|SQL_PERF_START 之後的使用者交易數目，包括回復。 當 ODBC 應用程式使用 SQL_AUTOCOMMIT_ON 執行時，會將每個命令視為交易。|  
-|SQLPrepares|SQL_PERF_START 之後的[SQLPrepare 函數](https://go.microsoft.com/fwlink/?LinkId=59360)調用數目。|  
-|ExecDirects|SQL_PERF_START 之後的**SQLExecDirect**呼叫數目。|  
-|SQLExecutes|SQL_PERF_START 之後的**SQLExecute**呼叫數目。|  
+|SQLPrepares|SQL_PERF_START 後的 [SQLPrepare 函數](https://go.microsoft.com/fwlink/?LinkId=59360) 調用數目。|  
+|ExecDirects|SQL_PERF_START 之後的 **SQLExecDirect** 呼叫數目。|  
+|SQLExecutes|SQL_PERF_START 之後的 **SQLExecute** 呼叫數目。|  
 |CursorOpens|驅動程式在 SQL_PERF_START 之後已經開啟伺服器資料指標的次數。|  
 |CursorSize|在 SQL_PERF_START 之後，資料指標開啟之結果集中的資料列數目。|  
 |CursorUsed|在 SQL_PERF_START 之後，透過驅動程式從資料指標實際擷取的資料列數目。|  
@@ -121,6 +123,6 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [分析 ODBC 驅動程式效能的使用說明主題 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+ [&#40;ODBC&#41;分析 ODBC 驅動程式效能的使用說明主題 ](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

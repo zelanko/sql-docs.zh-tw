@@ -1,4 +1,5 @@
 ---
+description: 系統中繼資料函數
 title: 系統中繼資料函數 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ dev_langs:
 ms.assetid: a6fb85b2-b010-4ca9-b65f-4402917076ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 94161328366e96e051039824ca46ef20d7431825
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 999d82dfa2ce6cd4a91949ddd60c90cf306ab338
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738546"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427720"
 ---
 # <a name="system-metadata-functions"></a>系統中繼資料函數
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

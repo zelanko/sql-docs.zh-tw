@@ -1,4 +1,5 @@
 ---
+description: Log File Auto Shrink 事件類別
 title: Log File Auto Shrink 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 4bf82a13-9985-4f20-9ef8-0083f104d124
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af32d9a61ef21e6bc09e114c4b8d55e56b7f0d2d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2d6d626eac5b4a6277d9c9c527b8db22e10b567c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737189"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428500"
 ---
 # <a name="log-file-auto-shrink-event-class"></a>Log File Auto Shrink 事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85737189"
 |**EndTime**|**datetime**|記錄檔 **Auto Shrink** 結束的時間。|18|是|  
 |**EventClass**|**int**|事件類別 = 95。|27|否|  
 |**EventSequence**|**int**|批次中之 **CursorClose** 事件類別的順序。|51|否|  
-|**檔名**|**nvarchar**|所擴充之檔案的邏輯名稱。|36|是|  
+|**檔案名稱**|**nvarchar**|所擴充之檔案的邏輯名稱。|36|是|  
 |**HostName**|**nvarchar**|執行用戶端的電腦名稱。 如果用戶端提供主機名稱，這個資料行就會擴展。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  
 |**IntegerData**|**整數**|檔案增加 8 KB 分頁的數目。|25|是|  
 |**IsSystem**|**int**|指出事件是發生在系統處理序或使用者處理序。 1 = 系統，0 = 使用者。|60|是|  

@@ -1,4 +1,5 @@
 ---
+description: SQLGetData
 title: SQLGetData |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -14,33 +15,34 @@ ms.assetid: 204848be-8787-45b4-816f-a60ac9d56fcf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c4f27218494c88cef3aedd51267ee693b2f4e65
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: da7192553da45a8b8971203f4d76fa3bd869afc3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003473"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428250"
 ---
 # <a name="sqlgetdata"></a>SQLGetData
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  **SQLGetData**是用來在不系結資料行值的情況下，抓取結果集資料。 可以在相同資料行上連續呼叫**SQLGetData** ，以從具有**text**、 **Ntext**或**image**資料類型的資料行中取出大量資料。  
+  **SQLGetData** 用來取出結果集資料，而不會系結資料行值。 您可以在相同資料行上連續呼叫**SQLGetData** ，以從具有**text**、 **Ntext**或**image**資料類型的資料行取出大量的資料。  
   
- 不會要求應用程式繫結變數來擷取結果集資料。 您可以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用**SQLGetData**，從 Native Client ODBC 驅動程式中取出任何資料行的資料。  
+ 不會要求應用程式繫結變數來擷取結果集資料。 您可以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 **SQLGetData**，從 Native Client ODBC 驅動程式取出任何資料行的資料。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式不支援使用**SQLGetData**以隨機的資料行順序來取得資料。 所有使用**SQLGetData**處理的未系結資料行，都必須具有比結果集中系結資料行更高的資料行序數。 應用程式必須處理從最低未繫結序數資料行值到最高值的資料。 嘗試從編號序數較低的資料行擷取資料將會產生錯誤。 如果應用程式使用伺服器資料指標來報告結果集資料列，則應用程式可以提取目前的資料列，然後再提取資料行的值。 如果語句是在預設的唯讀、順向資料指標上執行，您必須重新執行語句來備份**SQLGetData**。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式不支援使用**SQLGetData**來取出亂數據行順序中的資料。 所有使用 **SQLGetData** 處理的未系結資料行，都必須具有比結果集中的系結資料行更高的資料行序數。 應用程式必須處理從最低未繫結序數資料行值到最高值的資料。 嘗試從編號序數較低的資料行擷取資料將會產生錯誤。 如果應用程式使用伺服器資料指標來報告結果集資料列，則應用程式可以提取目前的資料列，然後再提取資料行的值。 如果語句是在預設的唯讀、順向資料指標上執行，您就必須重新執行語句來備份 **SQLGetData**。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會使用**SQLGetData**，正確地報告**text**、 **Ntext**和**image**資料的長度。 應用程式可以充分利用*StrLen_or_IndPtr*參數 return 來快速取出長資料。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會精確地報告使用**SQLGetData**抓取的**text**、 **Ntext**和**image**資料的長度。 應用程式可以充分利用 *StrLen_or_IndPtr* 的參數傳回，以快速取得較長的資料。  
   
 > [!NOTE]  
->  對於大數數值型別， *StrLen_or_IndPtr*將會在資料截斷的情況下傳回 SQL_NO_TOTAL。  
+>  若為大數數值型別，在資料截斷的情況下， *StrLen_or_IndPtr* 將會傳回 SQL_NO_TOTAL。  
   
 ## <a name="sqlgetdata-support-for-enhanced-date-and-time-features"></a>增強型日期和時間功能的 SQLGetData 支援  
- 日期/時間類型的結果資料行值會轉換，如[從 SQL 轉換為 C](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)中所述。  
+ 日期/時間類型的結果資料行值會依照 [從 SQL 轉換成 C](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)的說明進行轉換。  
   
- 如需詳細資訊，請參閱[ODBC&#41;&#40;的日期和時間改善](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 如需詳細資訊，請參閱 [&#40;ODBC&#41;的日期和時間改進 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="sqlgetdata-support-for-large-clr-udts"></a>大型 CLR UDT 的 SQLGetData 支援  
- **SQLGetData**支援大型 CLR 使用者定義型別（udt）。 如需詳細資訊，請參閱[&#40;ODBC&#41;的大型 CLR 使用者定義類型](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ **SQLGetData** 支援)  (udt 的大型 CLR 使用者自訂類型。 如需詳細資訊，請參閱 [&#40;ODBC&#41;的大型 CLR 使用者自訂類型 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="example"></a>範例  
   

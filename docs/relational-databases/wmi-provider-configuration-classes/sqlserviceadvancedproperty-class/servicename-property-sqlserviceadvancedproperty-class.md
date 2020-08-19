@@ -1,5 +1,6 @@
 ---
-title: ServiceName 屬性（SqlServiceAdvancedProperty）
+description: ServiceName 屬性 (SqlServiceAdvancedProperty 類別)
+title: 'ServiceName 屬性 (SqlServiceAdvancedProperty) '
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6d857b8d-77ed-4014-b1b0-e0e3d5e943c8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 59a22566ab25d667652ae47b8e27dc170893a55e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 937171a5267ac2b8dc6bab4b019fcfa9189e3404
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880495"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427160"
 ---
 # <a name="servicename-property-sqlserviceadvancedproperty-class"></a>ServiceName 屬性 (SqlServiceAdvancedProperty 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

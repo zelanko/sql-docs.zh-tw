@@ -1,6 +1,6 @@
 ---
 title: SQL Server 和 ADO.NET
-description: 說明如何使用 SQL Server 專屬的特性和功能
+description: 提供 SQL Server 特有的 Microsoft.Data.SqlClient 功能概觀。
 ms.date: 10/15/2019
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: bacd59fc2fd6cd12476b02c6ea7cc52a9b289bb0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e06ea16a4a4cde039bbdc6cd978d4f404aea2eef
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924342"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435428"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server 和 ADO.NET
 

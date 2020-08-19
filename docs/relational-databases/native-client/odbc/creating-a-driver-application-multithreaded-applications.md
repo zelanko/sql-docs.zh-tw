@@ -1,4 +1,5 @@
 ---
+description: 建立驅動程式應用程式 - 多執行緒應用程式
 title: 多執行緒應用程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,11 +18,12 @@ ms.assetid: d352c91a-6e08-4e50-9f3e-a37892d9c2cc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9c64c45331ec5f8efe11ee75abb065201cda0714
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5040c044055a2a42cb0c071dd4ccdf8853efffc4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009783"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428170"
 ---
 # <a name="creating-a-driver-application---multithreaded-applications"></a>建立驅動程式應用程式 - 多執行緒應用程式
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

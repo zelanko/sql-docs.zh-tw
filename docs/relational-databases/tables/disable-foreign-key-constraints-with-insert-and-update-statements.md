@@ -1,4 +1,5 @@
 ---
+description: 停用 INSERT 和 UPDATE 陳述式的外部索引鍵條件約束
 title: 停用 INSERT 和 UPDATE 陳述式中的外部索引鍵條件約束
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ ms.assetid: 029168d7-085e-4b13-9b86-5644b67c6e24
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84d49673a2a3d3483dc80f5c19cd11188dce159e
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: d68a5689d31d5db0e4221e4fc58ec5d724ee4fdf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394413"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427560"
 ---
 # <a name="disable-foreign-key-constraints-with-insert-and-update-statements"></a>停用 INSERT 和 UPDATE 陳述式的外部索引鍵條件約束
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -59,11 +60,11 @@ ms.locfileid: "87394413"
   
 1.  在 **[物件總管]** 中，展開含有條件約束的資料表，然後展開 **[索引鍵]** 資料夾。  
   
-2.  以滑鼠右鍵按一下條件約束，然後選取 **[修改]** 。  
+2.  以滑鼠右鍵按一下條件約束，然後選取 **[修改]**。  
   
 3.  在 **[資料表設計工具]** 底下的方格中，按一下 **[強制使用外部索引鍵條件約束]** ，然後從下拉式功能表中選取 **[否]** 。  
   
-4.  按一下 [關閉]  。  
+4.  按一下 [關閉] 。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
