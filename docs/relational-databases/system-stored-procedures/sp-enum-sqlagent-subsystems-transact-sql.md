@@ -1,5 +1,6 @@
 ---
-title: sp_enum_sqlagent_subsystems （Transact-sql） |Microsoft Docs
+description: sp_enum_sqlagent_subsystems (Transact-SQL)
+title: sp_enum_sqlagent_subsystems (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 019a3c9d-bac3-495b-a70a-2c19f1d2e20e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 869071ff8e66b5e9d20269c91823f3019e2b03b6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: af59c399d1d87c75bd78dd16cc57e98f835982f0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891908"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447188"
 ---
 # <a name="sp_enum_sqlagent_subsystems-transact-sql"></a>sp_enum_sqlagent_subsystems (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ sp_enum_sqlagent_subsystems
  None  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="result-sets"></a>結果集  
   
@@ -50,8 +51,8 @@ sp_enum_sqlagent_subsystems
 |-----------------|---------------|-----------------|  
 |**子系統**|**nvarchar(40)**|子系統的名稱。|  
 |**description**|**nvarchar(512)**|子系統的描述。|  
-|**subsystem_dll**|**Nvarchar （510）**|子系統所在的 DLL 模組。|  
-|**agent_exe**|**Nvarchar （510）**|子系統所用的可執行模組。|  
+|**subsystem_dll**|**Nvarchar (510) **|子系統所在的 DLL 模組。|  
+|**agent_exe**|**Nvarchar (510) **|子系統所用的可執行模組。|  
 |**start_entry_point**|**nvarchar(30)**|在作業步驟執行期間，SQL Server Agent 所呼叫的程序。|  
 |**event_entry_point**|**nvarchar(30)**|在作業步驟執行期間，SQL Server Agent 所呼叫的程序。|  
 |**stop_entry_point**|**nvarchar(30)**|在作業步驟執行期間，SQL Server Agent 所呼叫的程序。|  
@@ -64,7 +65,7 @@ sp_enum_sqlagent_subsystems
 ## <a name="permissions"></a>權限  
  依預設，只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員，才能夠執行這個預存程序。 其他使用者必須被授與 **msdb** 資料庫的 **SQLAgentOperatorRole** 固定資料庫角色。  
   
- 如需**SQLAgentOperatorRole**的詳細資訊，請參閱[SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
+ 如需 **SQLAgentOperatorRole**的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [實行 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)   

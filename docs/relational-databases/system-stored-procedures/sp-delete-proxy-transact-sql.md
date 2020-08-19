@@ -1,5 +1,6 @@
 ---
-title: sp_delete_proxy （Transact-sql） |Microsoft Docs
+description: sp_delete_proxy (Transact-SQL)
+title: sp_delete_proxy (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 44a1db13-b7f2-4dab-a1b5-b8dafb41737c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d037718577e57887e8ba27787fade5b8d08abc28
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fe7fa16aa15e20be9419a3cb3705bc40d4bba9f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862533"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447283"
 ---
 # <a name="sp_delete_proxy-transact-sql"></a>sp_delete_proxy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,12 +41,12 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @proxy_id = ] id`要移除之 proxy 的 proxy 識別碼。 *Proxy_id*是**int**，預設值是 Null。  
+`[ @proxy_id = ] id` 要移除之 proxy 的 proxy 識別碼。 *Proxy_id*是**int**，預設值是 Null。  
   
-`[ @proxy_name = ] 'proxy_name'`要移除之 proxy 的名稱。 *Proxy_name*是**sysname**，預設值是 Null。  
+`[ @proxy_name = ] 'proxy_name'` 要移除之 proxy 的名稱。 *Proxy_name*是**sysname**，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="result-sets"></a>結果集  
  None  
@@ -56,7 +57,7 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
  如果作業步驟參考指定的 Proxy，就無法刪除這個 Proxy，預存程序會失敗。  
   
 ## <a name="permissions"></a>權限  
- 根據預設，只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_delete_proxy**。  
+ 依預設，只有 **系統管理員（sysadmin** ）固定伺服器角色的成員，才可以執行 **sp_delete_proxy**。  
   
 ## <a name="examples"></a>範例  
  下列範例會刪除 `Catalog application proxy` 這個 Proxy。  

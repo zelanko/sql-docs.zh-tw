@@ -1,5 +1,6 @@
 ---
-title: sp_get_query_template （Transact-sql） |Microsoft Docs
+description: sp_get_query_template (Transact-SQL)
+title: sp_get_query_template (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b277a07075f8584cdb6a52dd6c221931b1685b6a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b6bef227f94188afe6f1eade92c54ff119982902
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881654"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447090"
 ---
 # <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,20 +44,20 @@ sp_get_query_template
   
 ## <a name="arguments"></a>引數  
  '*query_text*'  
- 這是要產生參數化版本的查詢。 '*query_text*' 必須以單引號括住，且前面加上 N Unicode 規範。 N '*query_text*' 是指派給參數的值 @querytext 。 這是**Nvarchar （max）** 類型。  
+ 這是要產生參數化版本的查詢。 '*query_text*' 必須以單引號括住，而且前面會加上 N Unicode 規範。 N '*query_text*' 是指派給參數的值 @querytext 。 這是 **Nvarchar (max) **的類型。  
   
  @templatetext  
- 是**Nvarchar （max）** 類型的輸出參數，如所示，以字串常值的形式接收*query_text*的參數化格式。  
+ 這是 **Nvarchar (max) **的 output 參數，以指定的形式接收 *query_text* 的參數化形式，以做為字串常值。  
   
  @parameters  
- 是**Nvarchar （max）** 類型的輸出參數，如所示，用來接收已參數化之參數名稱和資料類型的字串常值 @templatetext 。  
+ 這是 **Nvarchar (max) **的輸出參數，如所述，可接收參數名稱的字串常值，以及已在中參數化的資料類型 @templatetext 。  
   
 ## <a name="remarks"></a>備註  
  當發生下列情況時，sp_get_query_template 會傳回錯誤：  
   
--   它不會將*query_text*中的任何常數常值參數化。  
+-   它不會將 *query_text*中的任何常數常值參數化。  
   
--   *query_text*為 Null，而不是 Unicode 字串、語法無效或無法編譯。  
+-   *query_text* 為 Null、不是 Unicode 字串、語法無效，或無法編譯。  
   
  如果 sp_get_query_template 傳回錯誤，則不會修改 @templatetext 和 @parameters 輸出參數的值。  
   
@@ -113,8 +114,8 @@ SELECT @my_parameters;
 >  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的快速修復工程、Service Pack 和版本升級之間，sp_get_query_template 輸出中的參數順序和命名可能會不同。 升級也可能造成針對相同查詢參數化不同組的常數常值，在兩個輸出參數的結果中，可能會套用不同的間距。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的資料庫引擎預存程式 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [使用計畫指南指定查詢參數化行為](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)  
   
   

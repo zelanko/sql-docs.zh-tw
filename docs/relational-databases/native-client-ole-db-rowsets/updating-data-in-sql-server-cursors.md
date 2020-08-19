@@ -1,5 +1,6 @@
 ---
-title: 更新資料指標中的資料（Native Client OLE DB 提供者）
+description: 更新 SQL Server Native Client SQL Server 資料指標中的資料
+title: '更新資料指標中的資料 (Native Client OLE DB 提供者) '
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,21 +19,21 @@ ms.assetid: 732dafee-f2d5-4aef-aad7-3a8bf3b1e876
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d5c51d8956f2eea8f6be955c9daf1e6ed323f7d
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 7e00bf48c991d496e4425e665206b22a0ac3d32a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395787"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448320"
 ---
-# <a name="updating-data-in-sql-server-cursors-in-sql-server-native-client"></a>更新 SQL Server Native Client 中 SQL Server 資料指標內的資料
+# <a name="updating-data-in-sql-server-cursors-in-sql-server-native-client"></a>更新 SQL Server Native Client SQL Server 資料指標中的資料
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  透過資料指標提取和更新資料時 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生用戶端 OLE DB 提供者消費者應用程式會受到適用于任何其他用戶端應用程式的相同考慮和條件約束所系結。  
+  透過資料指標提取和更新資料時 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生用戶端 OLE DB 提供者取用者應用程式會受到同樣適用于其他任何用戶端應用程式的考慮和條件約束所限制。  
   
  只有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料指標中的資料列會參與並行的資料存取控制。 取用者要求可修改的資料列集時，並行控制會由 DBPROP_LOCKMODE 所控制。 若要修改並行存取控制的層級，取用者會先設定 DBPROP_LOCKMODE 屬性，然後再開啟資料列集。  
   
- 如果用戶端應用程式設計讓交易長時間保持開啟狀態，交易隔離等級可能會對資料列定位造成重大落後。 根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會使用 DBPROPVAL_TI_READCOMMITTED 所指定的讀取認可隔離等級。 當資料列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 集並行為唯讀時，Native Client OLE DB 提供者支援中途讀取隔離。 因此，取用者可以在可修改的資料列集中要求較高的隔離等級，但是無法成功要求任何較低的等級。  
+ 如果用戶端應用程式設計讓交易長時間保持開啟狀態，交易隔離等級可能會對資料列定位造成重大落後。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端 OLE DB 提供者預設會使用 DBPROPVAL_TI_READCOMMITTED 所指定的讀取認可隔離等級。 當資料列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 集並行唯讀時，Native Client OLE DB 提供者支援中途讀取隔離。 因此，取用者可以在可修改的資料列集中要求較高的隔離等級，但是無法成功要求任何較低的等級。  
   
 ## <a name="immediate-and-delayed-update-modes"></a>立即和延遲更新模式  
  在立即更新模式下，**IRowsetChange::SetData** 的每個呼叫會造成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的往返。 如果取用者對單一資料列進行多個變更，利用單一 **SetData** 呼叫提交所有變更會更有效率。  
@@ -41,11 +42,11 @@ ms.locfileid: "87395787"
   
  在任一種模式下，當資料列集沒有開啟任何交易物件時，往返代表不同的交易。  
   
- 當您使用**IRowsetUpdate：： Update**時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會嘗試處理每一個指定的資料列。 因為任何資料列的資料、長度或狀態值無效，而發生錯誤，不會停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者處理。 參與更新的其他所有資料列或沒有任何資料列可能會遭到修改。 當*prgRowStatus* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者傳回 DB_S_ERRORSOCCURRED 時，取用者必須檢查傳回的 prgRowStatus 陣列，以判斷任何特定資料列的失敗。  
+ 當您使用 **IRowsetUpdate：： Update**時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會嘗試處理每個指定的資料列。 因為任何資料列的資料、長度或狀態值無效而發生錯誤，不會停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者處理。 參與更新的其他所有資料列或沒有任何資料列可能會遭到修改。 當*prgRowStatus* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider 傳回 DB_S_ERRORSOCCURRED 時，取用者必須檢查傳回的 prgRowStatus 陣列，以判斷任何特定資料列的失敗。  
   
  取用者不應該假設資料列會以任何特定順序處理。 如果取用者需要透過一個以上的單一資料列進行資料修改的排序處理，取用者應該以應用程式邏輯建立該順序，並開啟交易來包含程序。  
   
 ## <a name="see-also"></a>另請參閱  
- [更新資料列集內的資料](../../relational-databases/native-client-ole-db-rowsets/updating-data-in-rowsets.md)  
+ [更新資料列集中的資料](../../relational-databases/native-client-ole-db-rowsets/updating-data-in-rowsets.md)  
   
   

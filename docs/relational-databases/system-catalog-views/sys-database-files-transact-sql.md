@@ -1,5 +1,6 @@
 ---
-title: sys.databases database_files （Transact-sql） |Microsoft Docs
+description: sys.database_files (Transact-SQL)
+title: sys. database_files (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/19/2016
 ms.prod: sql
@@ -20,11 +21,12 @@ ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c12fdc6ebdd5932715de28083ff5bbb9169d930
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1c57ffe323ce471c8c5e524ff5b7ba7ee3a85adf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003032"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447977"
 ---
 # <a name="sysdatabase_files-transact-sql"></a>sys.database_files (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,17 +36,17 @@ ms.locfileid: "86003032"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**file_id**|**int**|資料庫內的檔案識別碼。|  
-|**file_guid**|**uniqueidentifier**|檔案的 GUID。<br /><br /> Null = 資料庫從舊版升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （適用于 SQL Server 2005 和更早版本）。|  
-|**type**|**tinyint**|檔案類型：<br/><br /> 0 = 資料列<br /><br/> 1 = 記錄<br/><br /> 2 = FILESTREAM<br /><br /> 3 =[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = 全文檢索|  
+|**file_guid**|**uniqueidentifier**|檔案的 GUID。<br /><br /> Null = 資料庫已從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (升級為 SQL Server 2005 及更早版本的) 有效。|  
+|**type**|**tinyint**|檔案類型：<br/><br /> 0 = 資料列<br /><br/> 1 = 記錄<br/><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = 全文檢索|  
 |**type_desc**|**nvarchar(60)**|檔案類型的描述：<br /><br /> ROWS <br /><br /> 記錄<br /><br /> FILESTREAM<br /><br /> FULLTEXT|  
 |**data_space_id**|**int**|此值可能是 0 或大於 0。 值為 0 代表資料庫記錄檔，而大於 0 的值則代表儲存這個資料檔之檔案群組的識別碼。|  
 |**name**|**sysname**|資料庫中之檔案的邏輯名稱。|  
-|**physical_name**|**nvarchar(260)**|作業系統檔案名稱。 如果資料庫是由 AlwaysOn[可讀取的次要複本](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)所主控， **physical_name**會指出主要複本資料庫的檔案位置。 如需可讀取次要資料庫的正確檔案位置，請查詢[sys.sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md)。|  
+|**physical_name**|**nvarchar(260)**|作業系統檔案名稱。 如果資料庫是由 AlwaysOn [可讀取的次要複本所裝載](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)， **physical_name** 會指出主要複本資料庫的檔案位置。 如需可讀取次要資料庫的正確檔案位置，請查詢 [sys.sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md)。|  
 |**state**|**tinyint**|檔案狀態：<br /><br /> 0 = ONLINE <br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
 |**state_desc**|**nvarchar(60)**|檔案狀態的描述：<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> 如需詳細資訊，請參閱[檔案狀態](../../relational-databases/databases/file-states.md)。|  
 |**size**|**int**|目前的檔案大小 (以 8 KB 頁數為單位)。<br /><br /> 0 = 不適用<br /><br /> 如果是資料庫快照集，size 會反映快照集可以使用的最大檔案空間。<br /><br /> 針對 FILESTREAM 檔案群組容器，大小會反映容器目前使用的大小。|  
-|**max_size**|**int**|最大檔案大小 (以 8 KB 頁面為單位)：<br /><br /> 0 = 不允許任何成長。<br /><br /> -1 = 檔案會成長到磁碟已滿。<br /><br /> 268435456 = 記錄檔可以成長到最大 2 TB 的大小。<br /><br /> 如果是 FILESTREAM 檔案群組容器，max_size 會反映容器的大小上限。<br /><br /> 請注意，使用無限制記錄檔大小進行升級的資料庫，會報告-1，表示記錄檔的大小上限。|  
-|**growth**|**int**|0 = 檔案是固定大小，不會成長。<br /><br /> >0 = 檔案會自動成長。<br /><br /> 如果 is_percent_growth = 0，成長遞增是以 8 KB 頁面來表示，會捨入到最接近的 64 KB。<br /><br /> 如果 is_percent_growth = 1，便會以整數百分比的方式來表現成長遞增。|  
+|**max_size**|**int**|最大檔案大小 (以 8 KB 頁面為單位)：<br /><br /> 0 = 不允許任何成長。<br /><br /> -1 = 檔案會成長到磁碟已滿。<br /><br /> 268435456 = 記錄檔可以成長到最大 2 TB 的大小。<br /><br /> 如果是 FILESTREAM 檔案群組容器，max_size 反映容器的大小上限。<br /><br /> 請注意，以無限制的記錄檔大小升級的資料庫，會報告記錄檔大小上限-1。|  
+|**增長**|**int**|0 = 檔案是固定大小，不會成長。<br /><br /> >0 = 檔案將會自動成長。<br /><br /> 如果 is_percent_growth = 0，成長遞增是以 8 KB 頁面來表示，會捨入到最接近的 64 KB。<br /><br /> 如果 is_percent_growth = 1，便會以整數百分比的方式來表現成長遞增。|  
 |**is_media_read_only**|**bit**|1 = 檔案在唯讀媒體中。<br /><br /> 0 = 檔案在讀寫媒體中。|  
 |**is_read_only**|**bit**|1 = 檔案標示為唯讀。<br /><br /> 0 = 檔案標示為可讀寫。|  
 |**is_sparse**|**bit**|1 = 檔案是疏鬆檔案。<br /><br /> 0 = 檔案不是疏鬆檔案。<br /><br /> 如需詳細資訊，請參閱[檢視資料庫快照集的疏鬆檔案大小 &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)。|  
@@ -70,7 +72,7 @@ ms.locfileid: "86003032"
  需要 **public** 角色的成員資格。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
 
 ## <a name="examples"></a>範例  
-下列語句會傳回每個資料庫檔案的名稱、檔案大小和空格數量。
+下列語句會傳回每個資料庫檔案的名稱、檔案大小和空白空間數量。
 
 ```
 SELECT name, size/128.0 FileSizeInMB,
@@ -78,14 +80,14 @@ size/128.0 - CAST(FILEPROPERTY(name, 'SpaceUsed') AS int)/128.0
    AS EmptySpaceInMB
 FROM sys.database_files;
 ```
-如需使用時的詳細資訊 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ，請參閱 SQL 客戶諮詢小組 blog[中的判斷 Azure SQL Database V12 中的資料庫大小](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/)。
+如需使用時的詳細資訊 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ，請參閱 SQL 客戶諮詢小組 blog 上的 [判斷 Azure SQL Database V12 的資料庫大小](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/) 。
   
 ## <a name="see-also"></a>另請參閱  
- [資料庫和檔案目錄檢視 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
+ [資料庫和檔案目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [檔案狀態](../../relational-databases/databases/file-states.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [master_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
- [資料庫檔案和檔案群組](../../relational-databases/databases/database-files-and-filegroups.md)   
+ [sys. master_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
  [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
   
   

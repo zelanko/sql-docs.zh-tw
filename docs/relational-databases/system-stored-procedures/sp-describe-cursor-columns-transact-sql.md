@@ -1,5 +1,6 @@
 ---
-title: sp_describe_cursor_columns （Transact-sql） |Microsoft Docs
+description: sp_describe_cursor_columns (Transact-SQL)
+title: sp_describe_cursor_columns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2fe6880bb3669639b92c8625b21f942f1b454bf9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3d16e5f12f10d744fa1faa6b7b7858f1363dca5f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85861436"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447246"
 ---
 # <a name="sp_describe_cursor_columns-transact-sql"></a>sp_describe_cursor_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,42 +48,42 @@ sp_describe_cursor_columns
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @cursor_return =] *output_cursor_variable*輸出  
- 這是用來接收資料指標輸出之宣告資料指標變數的名稱。 *output_cursor_variable*是**cursor**，沒有預設值，而且在呼叫 sp_describe_cursor_columns 時，不能與任何資料指標產生關聯。 傳回的資料指標是一個可捲動的動態唯讀資料指標。  
+ [ @cursor_return =] *output_cursor_variable* 輸出  
+ 這是用來接收資料指標輸出之宣告資料指標變數的名稱。 *output_cursor_variable* 是資料 **指標**，沒有預設值，而且在呼叫 sp_describe_cursor_columns 時，不能與任何資料指標產生關聯。 傳回的資料指標是一個可捲動的動態唯讀資料指標。  
   
  [ @cursor_source =] {N'local ' |N'global ' |N'variable' }  
- 指定報告的資料指標是利用本機資料指標、全域資料指標或資料指標變數的名稱來指定。 參數是**Nvarchar （30）**。  
+ 指定報告的資料指標是利用本機資料指標、全域資料指標或資料指標變數的名稱來指定。 參數為 **Nvarchar (30) **。  
   
  [ @cursor_identity =] N '*local_cursor_name*'  
- 這是具有 LOCAL 關鍵字或預設為 LOCAL 之 DECLARE CURSOR 陳述式所建立的資料指標名稱。 *local_cursor_name*為**Nvarchar （128）**。  
+ 這是具有 LOCAL 關鍵字或預設為 LOCAL 之 DECLARE CURSOR 陳述式所建立的資料指標名稱。 *local_cursor_name* 是 **Nvarchar (128) **。  
   
  [ @cursor_identity =] N '*global_cursor_name*'  
- 這是具有 GLOBAL 關鍵字或預設為 GLOBAL 的 DECLARE CURSOR 陳述式所建立之資料指標的名稱。 *global_cursor_name*為**Nvarchar （128）**。  
+ 這是具有 GLOBAL 關鍵字或預設為 GLOBAL 的 DECLARE CURSOR 陳述式所建立之資料指標的名稱。 *global_cursor_name* 是 **Nvarchar (128) **。  
   
- *global_cursor_name*也可以是 ODBC 應用程式所開啟，然後藉由呼叫 SQLSetCursorName 來命名之 API 伺服器資料指標的名稱。  
+ *global_cursor_name* 也可以是 ODBC 應用程式所開啟，然後藉由呼叫 SQLSetCursorName 來命名之 API 伺服器資料指標的名稱。  
   
  [ @cursor_identity =] N '*input_cursor_variable*'  
- 這是與開啟的資料指標相關聯的資料指標變數名稱。 *input_cursor_variable*為**Nvarchar （128）**。  
+ 這是與開啟的資料指標相關聯的資料指標變數名稱。 *input_cursor_variable* 是 **Nvarchar (128) **。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  None  
   
 ## <a name="cursors-returned"></a>傳回的資料指標  
- sp_describe_cursor_columns 會將其報表封裝為數據 [!INCLUDE[tsql](../../includes/tsql-md.md)] **指標**輸出參數。 這樣 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次、預存程序和觸發程序就能夠一次處理一個資料列的輸出。 另外，這也表示無法直接從資料庫 API 函數呼叫程序。 **Cursor** output 參數必須系結至程式變數，但資料庫 api 並不支援系結資料**指標**參數或變數。  
+ sp_describe_cursor_columns 將其報表封裝為數據 [!INCLUDE[tsql](../../includes/tsql-md.md)] **指標** 輸出參數。 這樣 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次、預存程序和觸發程序就能夠一次處理一個資料列的輸出。 另外，這也表示無法直接從資料庫 API 函數呼叫程序。 **Cursor** output 參數必須系結至程式變數，但資料庫 api 並不支援系結資料**指標**參數或變數。  
   
  下表顯示利用 sp_describe_cursor_columns 所傳回的資料指標格式。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|column_name|**sysname** （可為 null）|指派給結果集資料行的名稱。 如果指定這個資料行時未使用隨附的 AS 子句，這個資料行就是 NULL。|  
+|column_name|**sysname** (可為 null 的) |指派給結果集資料行的名稱。 如果指定這個資料行時未使用隨附的 AS 子句，這個資料行就是 NULL。|  
 |ordinal_position|**int**|從結果集最左側資料行開始的資料行相對位置。 第一個資料行在位置 0。|  
 |column_characteristics_flags|**int**|指示 OLE DB 的 DBCOLUMNFLAGS 中所儲存之資訊的位元遮罩。 它可以是下列中的任何項目或項目組合：<br /><br /> 1 = 書籤<br /><br /> 2 = 固定長度<br /><br /> 4 = 可為 Null<br /><br /> 8 = 資料列版本設定<br /><br /> 16 = 可更新資料行 (針對沒有 FOR UPDATE 子句的資料指標之預計資料行來設定，如果有這種資料行，每個資料指標只能有一個這種資料行)。<br /><br /> 當組合位元值時，適用組合之位元值的特性。 例如，如果位元值是 6，資料行便是固定長度 (2) 且可為 Null (4) 的資料行。|  
 |column_size|**int**|這個資料行中的值之最大可能大小。|  
 |data_type_sql|**smallint**|指出資料行之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型的號碼。|  
-|column_precision|**tinyint**|依據 OLE DB 中的*bPrecision*值，資料行的最大有效位數。|  
-|column_scale|**tinyint**|**數值**或**十進位**資料類型小數點右邊的位數，依據 OLE DB 中的*bScale*值。|  
+|column_precision|**tinyint**|依據 OLE DB 中的 *>bprecision* 值，資料行的最大有效位數。|  
+|column_scale|**tinyint**|依據 OLE DB 中的*bScale*值，**數值**或**十進位**資料類型小數點右邊的位數。|  
 |order_position|**int**|如果資料行參與結果集的排序，資料行在排序索引鍵中的位置是相對於最左側的資料行。|  
-|order_direction|**Varchar （1）**（nullable）|A = 資料行在排序索引鍵中，採遞增排序。<br /><br /> D = 資料行在排序索引鍵中，採遞減排序。<br /><br /> NULL = 資料行不參與排序。|  
+|order_direction|**Varchar (1) ** (nullable) |A = 資料行在排序索引鍵中，採遞增排序。<br /><br /> D = 資料行在排序索引鍵中，採遞減排序。<br /><br /> NULL = 資料行不參與排序。|  
 |hidden_column|**smallint**|0 = 這個資料行出現在選取清單中。<br /><br /> 1 = 保留供日後使用。|  
 |columnid|**int**|基底資料行的資料行識別碼。 如果結果集資料行是運算式所建立的，columnid 便是 -1。|  
 |objectid|**int**|提供資料行之物件或基底資料表的物件識別碼。 如果結果集資料行是運算式所建立的，objectid 便是 -1。|  
@@ -136,9 +137,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [連筆](../../relational-databases/cursors.md)   
+ [資料指標](../../relational-databases/cursors.md)   
  [CURSOR_STATUS &#40;Transact-sql&#41;](../../t-sql/functions/cursor-status-transact-sql.md)   
- [DECLARE CURSOR &#40;Transact-sql&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
+ [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
  [sp_describe_cursor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md)   
  [sp_cursor_list &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
  [sp_describe_cursor_tables &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)   

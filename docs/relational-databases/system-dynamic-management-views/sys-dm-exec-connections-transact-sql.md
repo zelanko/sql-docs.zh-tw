@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_exec_connections （Transact-sql） |Microsoft Docs
+description: sys.dm_exec_connections (Transact-SQL)
+title: sys. dm_exec_connections (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2017
 ms.prod: sql
@@ -20,35 +21,35 @@ ms.assetid: 6bd46fe1-417d-452d-a9e6-5375ee8690d8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d128ee81a4465bdb24b9e6fde48d5dbe8cc8b8cc
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: a2e283d084fc5b76340e3b37253e3506ecd5ce3e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942360"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447630"
 ---
 # <a name="sysdm_exec_connections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  傳回有關與這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體建立之連接及每一個連接之詳細資料的資訊。 傳回 SQL Server 的伺服器範圍連接資訊。 傳回 SQL Database 的目前資料庫連接資訊。  
+  傳回有關與這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體建立之連接及每一個連接之詳細資料的資訊。 傳回 SQL Server 的全伺服器連接資訊。 傳回 SQL Database 的目前資料庫連接資訊。  
   
 > [!NOTE]
-> 若要從或呼叫此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用[Sys.databases dm_pdw_exec_connections &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-connections-transact-sql.md)。  
+> 若要從或呼叫這個 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用 [sys. dm_pdw_exec_connections &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-connections-transact-sql.md)。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |session_id|**int**|識別這項連接的相關工作階段。 可為 Null。|  
-|most_recent_session_id|**int**|代表這項連接最近的相關要求的工作階段識別碼 （SOAP 連接可以由另一個會話重複使用）。可為 null。|  
+|most_recent_session_id|**int**|代表這項連接最近的相關要求的工作階段識別碼  (SOAP 連接可以由另一個會話重複使用。 ) 可為 null。|  
 |connect_time|**datetime**|建立連接的時間戳記。 不可為 Null。|  
-|net_transport|**nvarchar(40)**|當連接啟用 multiple active result sets （MARS）時，一律會傳回**Session** 。<br /><br /> **注意：** 描述此連接所使用的實體傳輸通訊協定。 不可為 Null。|  
+|net_transport|**nvarchar(40)**|當連接具有多個使用中結果集 (MARS) 啟用時，一律會傳回 **會話** 。<br /><br /> **注意：** 描述此連接所使用的實體傳輸通訊協定。 不可為 Null。|  
 |protocol_type|**nvarchar(40)**|指定裝載的通訊協定類型。 它目前會區分 TDS (TSQL) 和 SOAP。 可為 Null。|  
 |protocol_version|**int**|這項連接的相關資料存取通訊協定的版本。 可為 Null。|  
 |endpoint_id|**int**|描述其為何種連接類型的識別碼。 這個 endpoint_id 可用來查詢 sys.endpoints 檢視。 可為 Null。|  
 |encrypt_option|**nvarchar(40)**|描述這項連接是否啟用加密的布林值。 不可為 Null。|  
 |auth_scheme|**nvarchar(40)**|指定搭配這個連接使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Windows 驗證配置。 不可為 Null。|  
 |node_affinity|**smallint**|識別此連接具有相似性的記憶體節點。 不可為 Null。|  
-|num_reads|**int**|此連接上已發生的位元組讀取數。 可為 Null。|  
-|num_writes|**int**|此連接上已發生的位元組寫入數。 可為 Null。|  
+|num_reads|**int**|此連接所發生的位元組讀取數。 可為 Null。|  
+|num_writes|**int**|此連接所發生的位元組寫入數目。 可為 Null。|  
 |last_read|**datetime**|這項連接期間最後一次讀取的時間戳記。 可為 Null。|  
 |last_write|**datetime**|這項連接期間最後一次寫入的時間戳記。 不可設為 Null。|  
 |net_packet_size|**int**|用來傳送資訊和資料的網路封包大小。 可為 Null。|  
@@ -59,12 +60,12 @@ ms.locfileid: "86942360"
 |connection_id|**uniqueidentifier**|這用來唯一識別各項連接。 不可為 Null。|  
 |parent_connection_id|**uniqueidentifier**|這用來識別 MARS 工作階段在使用的主要連接。 可為 Null。|  
 |most_recent_sql_handle|**varbinary(64)**|這項連接所執行之前一項要求的 SQL 控制代碼。 most_recent_sql_handle 資料行一律與 most_recent_session_id 資料行同步。 可為 Null。|  
-|pdw_node_id|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
+|pdw_node_id|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在之節點的識別碼。|  
   
 ## <a name="permissions"></a>權限
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 許可權。   
-在高階 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 層級上，需要 `VIEW DATABASE STATE` 資料庫的許可權。 在 [ [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
+在進階層中 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ，需要 `VIEW DATABASE STATE` 資料庫中的許可權。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準和基本層中，需要  **伺服器管理員** 或 **Azure Active Directory 系統管理員** 帳戶。   
 
 ## <a name="physical-joins"></a>實體聯結  
  ![sys.dm_exec_connections 的聯結](../../relational-databases/system-dynamic-management-views/media/join-dm-exec-connections-1.gif "sys.dm_exec_connections 的聯結")  

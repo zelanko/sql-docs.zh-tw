@@ -1,5 +1,6 @@
 ---
-title: sp_get_redirected_publisher （Transact-sql） |Microsoft Docs
+description: sp_get_redirected_publisher (Transact-SQL)
+title: sp_get_redirected_publisher (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7ac8b37eb3c21a9dbe7fa69eb6805a502993b7b1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1019f42b7edb8a82a3f655632aee64a61fbbcb99
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757894"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447101"
 ---
 # <a name="sp_get_redirected_publisher-transact-sql"></a>sp_get_redirected_publisher (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,14 +39,14 @@ sp_get_redirected_publisher
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @original_publisher = ] 'original_publisher'`原先發行資料庫之 SQL Server 實例的名稱。 *original_publisher*是**sysname**，沒有預設值。
+`[ @original_publisher = ] 'original_publisher'` 原先發行資料庫之 SQL Server 的實例名稱。 *original_publisher* 是 **sysname**，沒有預設值。
   
-`[ @publisher_db = ] 'publisher_db'`要發行之資料庫的名稱。 *publisher_db*是**sysname**，沒有預設值。  
+`[ @publisher_db = ] 'publisher_db'` 要發行之資料庫的名稱。 *publisher_db* 是 **sysname**，沒有預設值。  
   
-`[ @bypass_publisher_validation = ] [0 | 1 ]`用來略過重新導向發行者的驗證。 如果是0，則會執行驗證。 如果為 1，則不會執行驗證。 *bypass_publisher_validation*是**bit**，預設值是0。  
+`[ @bypass_publisher_validation = ] [0 | 1 ]` 用來略過重新導向發行者的驗證。 如果為0，則會執行驗證。 如果為 1，則不會執行驗證。 *bypass_publisher_validation* 是 **bit**，預設值是0。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="result-sets"></a>結果集  
   
@@ -57,19 +58,19 @@ sp_get_redirected_publisher
 |**error_message**|**nvarchar(4000)**|驗證錯誤訊息的文字。|  
   
 ## <a name="remarks"></a>備註  
- *redirected_publisher*會傳回目前的發行者名稱。 如果尚未使用**sp_redirect_publisher**重新導向發行者和發行資料庫，則會傳回 null。  
+ *redirected_publisher* 傳回目前的發行者名稱。 如果尚未使用 **sp_redirect_publisher**重新導向發行者和發行資料庫，則會傳回 null。  
   
- 如果未要求驗證，或是發行者和發行資料庫沒有專案存在， *error_number*和*error_severity*就會傳回0，而*error_message*會傳回 null。  
+ 如果未要求驗證，或發行者和發行資料庫沒有專案存在， *error_number* 和 *error_severity* 會傳回0，而且 *error_message* 會傳回 null。  
   
- 如果要求驗證，則會呼叫驗證預存[程式 sp_validate_redirected_publisher &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md) ，以驗證重新導向的目標是否為發行資料庫的合適主控制項。 如果驗證成功， **sp_get_redirected_publisher**會傳回重新導向的發行者名稱、0（代表*error_number* ）和*error_severity*資料行，以及*error_message*資料行中的 null。  
+ 如果要求驗證，則會呼叫驗證預存 [程式 sp_validate_redirected_publisher &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md) 來確認重新導向的目標是適用于發行資料庫的主機。 如果驗證成功， **sp_get_redirected_publisher** 會傳回重新導向的發行者名稱、0代表 *error_number* 和 *error_severity* 資料行，以及 *error_message* 資料行中的 null。  
   
  如果要求驗證而且失敗，則會傳回重新導向的發行者名稱以及錯誤資訊。  
   
 ## <a name="permissions"></a>權限  
- 呼叫者必須是**系統管理員（sysadmin** ）固定伺服器角色的成員、散發資料庫的**db_owner**固定資料庫角色，或是與發行者資料庫相關聯之定義發行集的發行集存取清單的成員。  
+ 呼叫端必須是 **系統管理員（sysadmin** ）固定伺服器角色的成員、散發資料庫的 **db_owner** 固定資料庫角色，或是與發行者資料庫相關聯之定義發行集的發行集存取清單的成員。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的複寫預存程式](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的複寫預存程式 ](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sp_validate_redirected_publisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)   
  [sp_redirect_publisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
  [sp_validate_replica_hosts_as_publishers &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  

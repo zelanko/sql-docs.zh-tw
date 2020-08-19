@@ -1,5 +1,6 @@
 ---
-title: fn_syscollector_get_execution_stats （Transact-sql） |Microsoft Docs
+description: fn_syscollector_get_execution_stats (Transact-SQL)
+title: fn_syscollector_get_execution_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 793ad72c-a992-4a8d-8584-bcb6b3b476f1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dad75f84dd7696364528fe215bcf2665d78562c0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d9d6bb073cc237fff2a859c37316a981e4b5d88f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734391"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447510"
 ---
 # <a name="fn_syscollector_get_execution_stats-transact-sql"></a>fn_syscollector_get_execution_stats (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ fn_syscollector_get_execution_stats ( log_id )
   
 ## <a name="arguments"></a>引數  
  *log_id*  
- 執行記錄的本機唯一識別碼。 *log_id*為**int**。  
+ 執行記錄的本機唯一識別碼。 *log_id* 為 **int**。  
   
 ## <a name="table-returned"></a>傳回的資料表  
   
@@ -59,10 +60,10 @@ fn_syscollector_get_execution_stats ( log_id )
 |max_duration|**int**|在封裝之資料流程元件中花費的最多時間 (以毫秒為單位)。|  
   
 ## <a name="permissions"></a>權限  
- 需要**dc_operator**的 SELECT。  
+ 需要 **dc_operator**的 SELECT。  
   
 ## <a name="see-also"></a>另請參閱  
  [syscollector_execution_stats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/syscollector-execution-stats-transact-sql.md)   
- [資料收集](../../relational-databases/data-collection/data-collection.md)  
+ [[資料收集]](../../relational-databases/data-collection/data-collection.md)  
   
   

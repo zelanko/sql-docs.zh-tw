@@ -1,5 +1,6 @@
 ---
-title: 使用使用者定義資料表 |Microsoft Docs
+description: 使用使用者定義的資料表
+title: 使用使用者定義的資料表 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -13,18 +14,19 @@ ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: caf585eacb9fdb9cc93177220150144cbea00fd2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 58f244f5216a016633b2f186d04ef9789267b6e2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011852"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448015"
 ---
 # <a name="using-user-defined-tables"></a>使用使用者定義的資料表
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   使用者定義的資料表表示表格式資訊。 當您將表格式資料傳遞到預存程序或使用者定義函數時，這些資料表會當做參數。 使用者定義的資料表不能用於表示資料庫資料表中的資料行。  
   
-  物件具有  屬性，這個屬性會參考  物件。 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>該集合中的每個物件都有一個**Columns**屬性，它會參考 <xref:Microsoft.SqlServer.Management.Smo.Column> 列出使用者定義資料表中之資料行的物件集合。 請使用 Add 方法將資料行加入至使用者定義資料表。  
+  物件具有  屬性，這個屬性會參考  物件。 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>該集合中的每個物件都有一個資料**行**屬性，會參考 <xref:Microsoft.SqlServer.Management.Smo.Column> 列出使用者定義資料表中之資料行的物件集合。 請使用 Add 方法將資料行加入至使用者定義資料表。  
   
  當您使用 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> 物件定義新的使用者定義資料表時，需要根據其中一個資料行提供資料行和主要金鑰。  
   
@@ -33,11 +35,11 @@ ms.locfileid: "86011852"
  <xref:Microsoft.SqlServer.Management.Smo.DataType> 類別會用於指定與資料行和參數相關聯的資料類型。 請使用這個類型，將使用者定義資料表類型指定為使用者定義函數和預存程序的參數。  
   
 ## <a name="examples"></a>範例  
-如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱 [Visual Studio .NET 中的建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
 
   
 ## <a name="creating-a-user-defined-table-in-visual-basic"></a>在 Visual Basic 中建立使用者定義資料表  
- 在此範例中，您必須將包含**StringCollection**類型之類別庫的 imports 語句包含在內。  
+ 在此範例中，您必須針對包含 **StringCollection** 型別的類別庫包含 imports 語句。  
   
  `Imports System.Collections.Specialized`  
   
@@ -101,7 +103,7 @@ ms.locfileid: "86011852"
 ```  
   
 ## <a name="creating-a-user-defined-table-in-visual-c"></a>在 Visual C# 中建立使用者定義資料表  
- 在此範例中，您必須將包含**StringCollection**類型之類別庫的 imports 語句包含在內。  
+ 在此範例中，您必須針對包含 **StringCollection** 型別的類別庫包含 imports 語句。  
   
  `using System.Collections.Specialized;`  
   
@@ -171,7 +173,7 @@ ms.locfileid: "86011852"
 ```  
   
 ## <a name="creating-a-user-defined-table-in-powershell"></a>在 PowerShell 中建立使用者定義資料表  
- 在此範例中，您必須將包含**StringCollection**類型之類別庫的 imports 語句包含在內。  
+ 在此範例中，您必須針對包含 **StringCollection** 型別的類別庫包含 imports 語句。  
   
  `using System.Collections.Specialized;`  
   

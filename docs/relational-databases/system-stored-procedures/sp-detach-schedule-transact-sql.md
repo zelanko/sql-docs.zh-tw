@@ -1,5 +1,6 @@
 ---
-title: sp_detach_schedule （Transact-sql） |Microsoft Docs
+description: sp_detach_schedule (Transact-SQL)
+title: sp_detach_schedule (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 19988c59d020d0f77d1f23bf0a210f2ae1488933
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3f81a771e8dc40d6eb27cb68ea3a62e37c3b6b99
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85860819"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447251"
 ---
 # <a name="sp_detach_schedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,24 +43,24 @@ sp_detach_schedule
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @job_id = ] job_id`要從其中移除排程之作業的作業識別碼。 *job_id*是**uniqueidentifier**，預設值是 Null。  
+`[ @job_id = ] job_id` 要從中移除排程之作業的作業識別碼。 *job_id* 是 **uniqueidentifier**，預設值是 Null。  
   
-`[ @job_name = ] 'job_name'`要從其中移除排程的作業名稱。 *job_name*是**sysname**，預設值是 Null。  
-  
-> [!NOTE]  
->  必須指定*job_id*或*job_name* ，但不能同時指定兩者。  
-  
-`[ @schedule_id = ] schedule_id`要從作業中移除之排程的排程識別碼。 *schedule_id*是**int**，預設值是 Null。  
-  
-`[ @schedule_name = ] 'schedule_name'`要從作業中移除之排程的名稱。 *schedule_name*是**sysname**，預設值是 Null。  
+`[ @job_name = ] 'job_name'` 要從中移除排程的作業名稱。 *job_name* 是 **sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  必須指定*schedule_id*或*schedule_name* ，但不能同時指定兩者。  
+>  必須指定 *job_id* 或 *job_name* ，但不能同時指定兩者。  
   
-`[ @delete_unused_schedule = ] delete_unused_schedule`指定是否要刪除未使用的作業排程。 *delete_unused_schedule*是**bit**，預設值是**0**，這表示將會保留所有排程，即使沒有作業參考它們也是如此。 如果設定為**1**，如果沒有任何作業參考未使用的作業排程，則會予以刪除。  
+`[ @schedule_id = ] schedule_id` 要從作業中移除之排程的排程識別碼。 *schedule_id* 是 **int**，預設值是 Null。  
+  
+`[ @schedule_name = ] 'schedule_name'` 要從作業中移除之排程的名稱。 *schedule_name* 是 **sysname**，預設值是 Null。  
+  
+> [!NOTE]  
+>  必須指定 *schedule_id* 或 *schedule_name* ，但不能同時指定兩者。  
+  
+`[ @delete_unused_schedule = ] delete_unused_schedule` 指定是否要刪除未使用的作業排程。 *delete_unused_schedule* 是 **bit**，預設值是 **0**，表示將保留所有排程，即使沒有作業參考它們也是一樣。 如果設定為 **1**，如果沒有任何作業參考未使用的作業排程，則會加以刪除。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="result-sets"></a>結果集  
  None  
@@ -77,7 +78,7 @@ sp_detach_schedule
   
  如需這些角色權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會檢查以判斷使用者是否擁有這份排程。 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠從其他使用者擁有的作業中卸離排程。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會檢查以判斷使用者是否擁有這份排程。 只有 **系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠從其他使用者所擁有的作業中卸離排程。  
   
 ## <a name="examples"></a>範例  
  下列範例會移除 `'NightlyJobs'` 排程和 `'BackupDatabase'` 作業之間的關聯。  

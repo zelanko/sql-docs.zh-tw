@@ -1,5 +1,6 @@
 ---
-title: sp_help_spatial_geometry_index （Transact-sql） |Microsoft Docs
+description: sp_help_spatial_geometry_index (Transact-SQL)
+title: sp_help_spatial_geometry_index (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: f1bcefb1-09c8-4b49-8c51-5d471065849f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 56db1455b1b85ea50fc5bdea7f6f3d06778d329f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c69826d4d76ae518cc119cfc46418ade8407c7cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749347"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447050"
 ---
 # <a name="sp_help_spatial_geometry_index-transact-sql"></a>sp_help_spatial_geometry_index (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  傳回關於**geometry**空間索引之指定屬性集的名稱和值。 結果會以資料表格式傳回。 您可以選擇傳回核心屬性集或索引的所有屬性。  
+  傳回關於 **幾何** 空間索引的指定屬性集的名稱和值。 結果會以資料表格式傳回。 您可以選擇傳回核心屬性集或索引的所有屬性。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,10 +43,10 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>引數  
- 請參閱[空間索引預存程式的引數和屬性](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)。  
+ 請參閱 [空間索引預存程式的引數和屬性](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
- 請參閱[空間索引預存程式的引數和屬性](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)。  
+ 請參閱 [空間索引預存程式的引數和屬性](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)。  
   
 ## <a name="permissions"></a>權限  
  必須為使用者指派 PUBLIC 角色才能存取此程序。 需要在伺服器和物件上具有 READ ACCESS 權限。  
@@ -54,7 +55,7 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
  包含 NULL 值的屬性不會包含在傳回集合中。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用 `sp_help_spatial_geometry_index` 來調查** \@ qs**中給定查詢範例的資料表**geometry_col**上所定義的空間索引**SIndx_SpatialTable_geometry_col2** 。 這個範例只會傳回指定索引的核心屬性。  
+ 下列範例會使用 `sp_help_spatial_geometry_index` 來調查** \@ qs**中指定查詢範例在資料表**geometry_col**上定義的空間索引**SIndx_SpatialTable_geometry_col2** 。 這個範例只會傳回指定索引的核心屬性。  
   
 ```  
 declare @qs geometry  

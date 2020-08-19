@@ -1,4 +1,5 @@
 ---
+description: 授與 Oracle 權限的指令碼
 title: 授與 Oracle 權限的指令碼 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d742fd30-347a-452f-b5fc-b03232360c6b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4a25137ba445620e3af67a34105e1aff034faadf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 93dee9acfab71e9b94cba7f31b3e5b7c0ecb4452
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894418"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448125"
 ---
 # <a name="script-to-grant-oracle-permissions"></a>授與 Oracle 權限的指令碼
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

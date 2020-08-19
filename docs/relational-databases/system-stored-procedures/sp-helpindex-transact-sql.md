@@ -1,5 +1,6 @@
 ---
-title: sp_helpindex （Transact-sql） |Microsoft Docs
+description: sp_helpindex (Transact-SQL)
+title: sp_helpindex (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: c7f73ba0-ec35-4b10-aa5f-f1487e51fbf7
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 43bf9b75af8cc43af8c45e4cc2fe4f9d4e66e595
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b73c4a9e15feddb0d52d7ccdaaaf1132e71996f1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733171"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447000"
 ---
 # <a name="sp_helpindex-transact-sql"></a>sp_helpindex (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ sp_helpindex [ @objname = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @objname = ] 'name'`這是使用者定義資料表或視圖的完整或非限定名稱。 只有在指定完整資料表或檢視表名稱時，才會用到引號。 如果提供其中包括資料庫名稱的完整名稱，資料庫名稱就必須是目前資料庫的名稱。 *name*是**Nvarchar （776）**，沒有預設值。  
+`[ @objname = ] 'name'` 這是使用者定義資料表或視圖的限定或非限定名稱。 只有在指定完整資料表或檢視表名稱時，才會用到引號。 如果提供其中包括資料庫名稱的完整名稱，資料庫名稱就必須是目前資料庫的名稱。 *名稱* 是 **Nvarchar (776) **，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -50,15 +51,15 @@ sp_helpindex [ @objname = ] 'name'
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**index_name**|**sysname**|索引名稱。|  
-|**index_description**|**Varchar （210）**|索引描述，其中包括所在的檔案群組。|  
-|**index_keys**|**Nvarchar （2078）**|建立索引的資料表或檢視資料行。|  
+|**index_description**|**Varchar (210) **|索引描述，其中包括所在的檔案群組。|  
+|**index_keys**|**Nvarchar (2078) **|建立索引的資料表或檢視資料行。|  
   
  遞減索引資料行會列在結果集中，名稱後面會有一個減號 (-)；預設值是遞增索引資料行，會單獨列出名稱。  
   
 ## <a name="remarks"></a>備註  
- 如果使用 UPDATE STATISTICS 的 NORECOMPUTE 選項來設定索引，該資訊就會包含在**index_description**資料行中。  
+ 如果已使用 UPDATE STATISTICS 的 NORECOMPUTE 選項來設定索引，該資訊就會包含在 **index_description** 資料行中。  
   
- **sp_helpindex**只會公開能排序的索引資料行;因此，它不會公開 XML 索引或空間索引的相關資訊。  
+ **sp_helpindex** 只會公開能排序的索引資料行;因此，它不會公開 XML 索引或空間索引的相關資訊。  
   
 ## <a name="permissions"></a>權限  
  需要 **public** 角色的成員資格。  
@@ -74,10 +75,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [index_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
- [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的資料庫引擎預存程式 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
+ [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)  
   
   

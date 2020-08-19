@@ -1,4 +1,5 @@
 ---
+description: 執行包含資料表值參數的 SQL Server Native Client 命令
 title: 具有資料表值參數的命令
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,12 +14,12 @@ ms.assetid: 7ecba6f6-fe7a-462a-9aa3-d5115b6d4529
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 85dfdf19da0187832fcec316099688d2807de65b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: dfacff2fb4c09f3b2bff6230d0963bef292c1266
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246772"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448308"
 ---
 # <a name="executing-sql-server-native-client-commands-containing-table-valued-parameters"></a>執行包含資料表值參數的 SQL Server Native Client 命令
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,5 +1,6 @@
 ---
-title: sp_databases （Transact-sql） |Microsoft Docs
+description: sp_databases (Transact-SQL)
+title: sp_databases (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2a83b92a-9ecc-43c4-8ff4-e91e3a940b5a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 862101470f004c1e3681bd91745e9e2d10aab6bc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 427014e08e10a018fd8b04841a1082f2cdce292a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85867486"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447373"
 ---
 # <a name="sp_databases-transact-sql"></a>sp_databases (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,14 +46,14 @@ sp_databases
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**DATABASE_NAME**|**sysname**|資料庫的名稱。 在中 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，這個資料行代表儲存在**sys.databases**目錄檢視中的資料庫名稱。|  
+|**DATABASE_NAME**|**sysname**|資料庫的名稱。 在中 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，這個資料行代表儲存在 **sys.databases** 目錄檢視中的資料庫名稱。|  
 |**DATABASE_SIZE**|**int**|資料庫的大小 (以 KB 為單位)。|  
-|**備註**|**Varchar （254）**|對於 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，這個欄位一律會傳回 NULL。|  
+|**備註**|**Varchar (254) **|對於 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，這個欄位一律會傳回 NULL。|  
   
 ## <a name="remarks"></a>備註  
  傳回的資料庫名稱可用來作為 USE 陳述式中的參數，以變更目前資料庫的內容。  
   
- **sp_databases**在開放式資料庫連接（ODBC）中沒有對等的。  
+ **sp_databases** 在開放式資料庫連接 (ODBC) 中沒有對等專案。  
   
 ## <a name="permissions"></a>權限  
  需要 CREATE DATABASE、ALTER ANY DATABASE 或 VIEW ANY DEFINITION 權限，且必須擁有資料庫的存取權限。 無法拒絕 VIEW ANY DEFINITION 權限。  

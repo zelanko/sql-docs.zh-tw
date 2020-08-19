@@ -1,4 +1,5 @@
 ---
+description: 空間參考識別碼 (SRID)
 title: 空間參考識別碼 (SRID) | Microsoft Docs
 ms.date: 03/29/2019
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 0612658a-7d1b-4178-bdc2-42b914ea31a7
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7d95c1c3b1c8f578a80601b4996e1c6bd9dd63c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4ce3d6732b42640755f92e64244ae10c870b4666
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85666544"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447970"
 ---
 # <a name="spatial-reference-identifiers-srids"></a>空間參考識別碼 (SRID)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

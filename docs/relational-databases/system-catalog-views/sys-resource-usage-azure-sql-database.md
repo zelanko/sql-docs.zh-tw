@@ -1,5 +1,6 @@
 ---
-title: sys. resource_usage （Azure SQL Database） |Microsoft Docs
+description: sys.resource_usage (Azure SQL Database)
+title: sys. resource_usage (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.service: sql-database
@@ -19,12 +20,12 @@ ms.assetid: b90147a3-fd8e-408e-961d-5c7000e068ad
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 9ac9473dbdcc51a4c5313b27596ce38d0607d336
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d7f5a7aadb3a16a673bca0d8c0ba34108a158693
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85665266"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447808"
 ---
 # <a name="sysresource_usage-azure-sql-database"></a>sys.resource_usage (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -47,10 +48,10 @@ ms.locfileid: "85665266"
 |time|**datetime**|以每小時增加的時間 (UTC)。|  
 |database_name|**nvarchar**|使用者資料庫的名稱。|  
 |sku|**nvarchar**|SKU 的名稱。 以下是可能的值：<br /><br /> Web<br /><br /> Microsoft Store<br /><br /> 基本<br /><br /> 標準<br /><br /> Premium|  
-|usage_in_seconds|**int**|某一小時內所使用的 CPU 時間總和。<br /><br /> 注意：此資料行已被 V11 取代，不適用於 V12。 **值一律設定為0。**|  
+|usage_in_seconds|**int**|某一小時內所使用的 CPU 時間總和。<br /><br /> 注意：此資料行已針對 V11 取代，並不適用于 V12。 **值一律設定為0。**|  
 |storage_in_megabytes|**decimal**|某一小時的最大儲存體大小，包括資料庫資料、索引、預存程序和中繼資料。|  
   
 ## <a name="permissions"></a>權限  
- 此視圖適用于具有連接到虛擬**master**資料庫之許可權的所有使用者角色。  
+ 此視圖適用于具有連接至虛擬 **master** 資料庫之許可權的所有使用者角色。  
   
   

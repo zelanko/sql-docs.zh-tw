@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_os_spinlock_stats （Transact-sql） |Microsoft Docs
+description: 'sys. dm_os_spinlock_stats (Transact-sql) '
+title: sys. dm_os_spinlock_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql-non-specified
@@ -22,14 +23,14 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
-ms.openlocfilehash: 8343a5aa5d8e95474fb87c1b6a39e2a013323295
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: df183fe9b6ee5365f623e59dd1c94738afe5df8d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718771"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447574"
 ---
-# <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys.databases dm_os_spinlock_stats （Transact-sql）
+# <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys. dm_os_spinlock_stats (Transact-sql) 
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
@@ -39,22 +40,22 @@ ms.locfileid: "85718771"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |NAME|**nvarchar(256)**|Spinlock 類型的名稱。|  
-|次數|**bigint**|執行緒嘗試取得 spinlock 並遭到封鎖的次數，因為另一個執行緒目前持有 spinlock。|  
-|順|**bigint**|嘗試取得 spinlock 時，執行緒執行迴圈的次數。|  
-|spins_per_collision|**real**|每個衝突的旋轉比例。|  
-|sleep_time|**bigint**|在輪詢的事件中，執行緒花在睡眠狀態的時間量（以毫秒為單位）。|  
+|碰撞|**bigint**|執行緒嘗試取得 spinlock 並遭到封鎖的次數，因為另一個執行緒目前保留 spinlock。|  
+|旋轉|**bigint**|執行緒在嘗試取得 spinlock 時執行迴圈的次數。|  
+|spins_per_collision|**real**|每次衝突的旋轉比例。|  
+|sleep_time|**bigint**|執行緒在輪詢時花費在睡眠狀態的時間量（以毫秒為單位）。|  
 |輪詢之外機率|**int**|「旋轉」執行緒無法取得 spinlock 並產生排程器的次數。|  
 
 
 ## <a name="permissions"></a>權限  
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 許可權。   
-在高階 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 層級上，需要 `VIEW DATABASE STATE` 資料庫的許可權。 在 [ [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。    
+在進階層中 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ，需要 `VIEW DATABASE STATE` 資料庫中的許可權。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準和基本層中，需要  **伺服器管理員** 或 **Azure Active Directory 系統管理員** 帳戶。    
   
 ## <a name="remarks"></a>備註  
  
- dm_os_spinlock_stats 可以用來識別 spinlock 爭用的來源。 在某些情況下，您或許能夠解決或減少 spinlock 競爭。 不過有些時候您可能還是必須連絡 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客戶支援服務部門。  
+ sys. dm_os_spinlock_stats 可以用來識別 spinlock 爭用的來源。 在某些情況下，您可以解決或減少 spinlock 爭用。 不過有些時候您可能還是必須連絡 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客戶支援服務部門。  
   
- 您可以使用重設 sys. dm_os_spinlock_stats 的內容 `DBCC SQLPERF` ，如下所示：  
+ 您可以使用來重設 sys. dm_os_spinlock_stats 的內容，如下所示 `DBCC SQLPERF` ：  
   
 ```  
 DBCC SQLPERF ('sys.dm_os_spinlock_stats', CLEAR);  
@@ -66,10 +67,10 @@ GO
 > [!NOTE]  
 >  如果重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，將無法保存這些統計資料。 所有的資料都是從上次重設統計資料之後，或是從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動之後開始累加計算。  
   
-## <a name="spinlocks"></a>執行緒同步鎖定  
- Spinlock 是輕量同步處理物件，用來序列化資料結構的存取，通常會在短時間內保存。 當執行緒嘗試存取由另一個執行緒所持有的 spinlock 所保護的資源時，執行緒會執行迴圈，或「微調」並嘗試再次存取資源，而不是立即以閂鎖或其他資源等候來產生排程器。 執行緒會繼續旋轉，直到資源可供使用，或迴圈完成為止，此時執行緒會產生排程器並回到可執行檔佇列。 這種作法有助於減少過度的執行緒內容切換，但當 spinlock 的爭用很高時，可能會觀察到明顯的 CPU 使用率。
+## <a name="spinlocks"></a>旋轉鎖  
+ Spinlock 是輕量的同步處理物件，用來序列化通常會保留一小段時間的資料結構存取。 當執行緒嘗試存取由另一個執行緒所持有的 spinlock 所保護的資源時，執行緒會執行迴圈或「旋轉」，然後再次嘗試存取資源，而不是立即以閂鎖或其他資源等候來產生排程器。 執行緒將會繼續旋轉，直到資源可供使用或迴圈完成為止，此時執行緒將會產生排程器並返回可執行檔佇列。 這種作法有助於減少過度的執行緒內容切換，但當 spinlock 的爭用很高時，可能會觀察到顯著的 CPU 使用率。
    
- 下表包含一些最常見 spinlock 類型的簡短描述。  
+ 下表包含一些最常見的 spinlock 類型的簡短描述。  
   
 |Spinlock 類型|描述|  
 |-----------------|-----------------|  
@@ -120,7 +121,7 @@ GO
 |DBSEEDING_OPERATION|僅供內部使用。|
 |DBT_HASH|僅供內部使用。|
 |DBT_IO_LIST|僅供內部使用。|
-|DBTABLE|針對包含該資料庫屬性的 SQL Server 中的每個資料庫，控制記憶體內部資料結構的存取。 如需詳細資訊，請參閱[本文](https://techcommunity.microsoft.com/t5/SQL-Server/Improving-Concurrency-Scalability-of-SQL-Server-workload-by/ba-p/384789)。 |
+|DBTABLE|控制 SQL Server 中包含該資料庫屬性之每個資料庫的記憶體內部資料結構存取。 如需詳細資訊，請參閱[本文](https://techcommunity.microsoft.com/t5/SQL-Server/Improving-Concurrency-Scalability-of-SQL-Server-workload-by/ba-p/384789)。 |
 |DEFERRED_WF_EXT_DROP|僅供內部使用。|
 |DEK_INSTANCE|僅供內部使用。|
 |DELAYED_PARTITIONED_STACK|僅供內部使用。|
@@ -130,7 +131,7 @@ GO
 |DIGEST_CACHE|僅供內部使用。|
 |DINPBUF|僅供內部使用。|
 |DIRECTLOGCONSUMER|僅供內部使用。|
-|DP_LIST|針對已開啟間接檢查點的資料庫，控制其中途分頁清單的存取權。 如需詳細資訊，請參閱[本文](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510)。|
+|DP_LIST|控制已開啟間接檢查點的資料庫之中途分頁清單的存取權。 如需詳細資訊，請參閱[本文](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510)。|
 |DROP|僅供內部使用。|
 |DROP_TEMPO|僅供內部使用。|
 |DROPPED_ALLOC_UNIT|僅供內部使用。|
@@ -187,7 +188,7 @@ GO
 |LANG_RES_LOAD|僅供內部使用。|
 |LIVE_TARGET_TVF|僅供內部使用。|
 |LOCK_FREE_LIST|僅供內部使用。|
-|LOCK_HASH|保護對鎖定管理員雜湊表的存取，此資料表會儲存在資料庫中保留之鎖定的相關資訊。 如需詳細資訊，請參閱[本文](https://support.microsoft.com/kb/2926217)。|
+|LOCK_HASH|保護對鎖定管理員雜湊表的存取，該資料表會儲存保存在資料庫中之鎖定的相關資訊。 如需詳細資訊，請參閱[本文](https://support.microsoft.com/kb/2926217)。|
 |LOCK_NOTIFICATION|僅供內部使用。|
 |LOCK_RESOURCE_ID|僅供內部使用。|
 |LOCK_RW_ABTX_HASH_SET|僅供內部使用。|
@@ -219,7 +220,7 @@ GO
 |LPE_BATCH|僅供內部使用。|
 |LPE_SESSION|僅供內部使用。|
 |LPE_SXTP|僅供內部使用。|
-|LSID|僅供內部使用。|
+|Lsid|僅供內部使用。|
 |LSLIST|僅供內部使用。|
 |LSNREFLIST|僅供內部使用。|
 |LSS_SYNC_DTC|僅供內部使用。|
@@ -307,7 +308,7 @@ GO
 |SOS_ACTIVEDESCRIPTOR|僅供內部使用。|
 |SOS_BLOCKALLOCPARTIALLIST|僅供內部使用。|
 |SOS_BLOCKDESCRIPTORBUCKET|僅供內部使用。|
-|SOS_CACHESTORE|同步處理 SQL Server 中各種記憶體內部快取的存取，例如計畫快取或臨時表快取。 對於此 spinlock 類型的嚴重爭用，可能表示有許多不同的專案，視競爭中的特定快取而定。 請洽詢 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客戶支援服務，以取得疑難排解此 spinlock 類型的協助。 |
+|SOS_CACHESTORE|同步存取 SQL Server 中的各種記憶體內部快取，例如計畫快取或臨時表快取。 這種 spinlock 類型的繁重爭用可能表示許多不同的事情，視競爭中的特定快取而定。 請聯絡 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客戶支援服務，協助針對此 spinlock 類型進行疑難排解。 |
 |SOS_CACHESTORE_CLOCK|僅供內部使用。|
 |SOS_CLOCKALG_INTERNODE_SYNC|僅供內部使用。|
 |SOS_DEBUG_HOOK|僅供內部使用。|
@@ -386,7 +387,7 @@ GO
 |XCB_FREE_LIST|僅供內部使用。|
 |XCB_HASH|僅供內部使用。|
 |XCHNG_TRACE|僅供內部使用。|
-|XDES 時發生|僅供內部使用。|
+|XDES|僅供內部使用。|
 |XDES_HASH|僅供內部使用。|
 |XDESMGR|僅供內部使用。|
 |XDESTABLELIST|僅供內部使用。|
@@ -408,9 +409,9 @@ GO
  
  [DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
  
- [SQL Server 作業系統相關的動態管理 Views &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [SQL Server 作業系統相關的動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
 
- [在 SQL Server 中，Spinlock CPU 使用率的重大驅動程式為何？](https://techcommunity.microsoft.com/t5/SQL-Server-Support/When-is-Spinlock-a-Significant-Driver-of-CPU-utilization-in-SQL/ba-p/530142)
+ [何時 Spinlock SQL Server 中 CPU 使用率的重要驅動程式？](https://techcommunity.microsoft.com/t5/SQL-Server-Support/When-is-Spinlock-a-Significant-Driver-of-CPU-utilization-in-SQL/ba-p/530142)
 
  [診斷和解決 SQL Server 上的 Spinlock 爭用](https://www.microsoft.com/download/details.aspx?id=26666)
   

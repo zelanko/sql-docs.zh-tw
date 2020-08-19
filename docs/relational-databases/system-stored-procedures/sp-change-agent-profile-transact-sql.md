@@ -1,5 +1,6 @@
 ---
-title: sp_change_agent_profile （Transact-sql） |Microsoft Docs
+description: sp_change_agent_profile (Transact-SQL)
+title: sp_change_agent_profile (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b0084338c2629b8ffeb208edc5ac7532105e1271
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 752cbdcb0e1908ace200ae769e7c42d85ad6d044
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715942"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447357"
 ---
 # <a name="sp_change_agent_profile-transact-sql"></a>sp_change_agent_profile (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  變更儲存在[MSagent_profiles &#40;transact-sql&#41;](../../relational-databases/system-tables/msagent-profiles-transact-sql.md)資料表中之複寫代理程式設定檔的參數。 這個預存程序執行於任何資料庫中的散發者端。  
+  變更儲存在 [MSagent_profiles &#40;transact-sql&#41;](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) 資料表中儲存之複寫代理程式設定檔的參數。 這個預存程序執行於任何資料庫中的散發者端。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,11 +40,11 @@ sp_change_agent_profile [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @profile_id = ] profile_id`這是設定檔的識別碼。 *profile_id*是**int**，沒有預設值。  
+`[ @profile_id = ] profile_id` 這是設定檔的識別碼。 *profile_id* 是 **int**，沒有預設值。  
   
-`[ @property = ] 'property'`這是屬性的名稱。 *屬性*是**sysname**，沒有預設值。  
+`[ @property = ] 'property'` 這是屬性的名稱。 *屬性* 是 **sysname**，沒有預設值。  
   
-`[ @value = ] 'value'`這是屬性的新值。 *value*是**Nvarchar （3000）**，沒有預設值。  
+`[ @value = ] 'value'` 這是屬性的新值。 *值* 為 **Nvarchar (3000) **，沒有預設值。  
   
  這份資料表描述可變更的設定檔屬性。  
   
@@ -52,13 +53,13 @@ sp_change_agent_profile [ @profile_id = ] profile_id
 |**description**|設定檔的描述。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_change_agent_profile**用於所有類型的複寫中。  
+ **sp_change_agent_profile** 用於所有類型的複寫中。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_change_agent_profile**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色的成員，才可以執行 **sp_change_agent_profile**。  
   
 ## <a name="see-also"></a>另請參閱  
  [sp_add_agent_profile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   

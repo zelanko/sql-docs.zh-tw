@@ -1,4 +1,5 @@
 ---
+description: 使用 Database Mail 而非 SQL Mail
 title: 使用 Database Mail 取代 SQL Mail | Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b08df7be-d8be-4184-a661-38ec0ac85cd1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9857553d145659f182a00803f5021ebbad75bbe9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 342e330cc283d3a639e4145920c678084db846b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727258"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448220"
 ---
 # <a name="use-database-mail-instead-of-sql-mail"></a>使用 Database Mail 而非 SQL Mail
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

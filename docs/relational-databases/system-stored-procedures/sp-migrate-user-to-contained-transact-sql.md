@@ -1,5 +1,6 @@
 ---
-title: sp_migrate_user_to_contained （Transact-sql） |Microsoft Docs
+description: sp_migrate_user_to_contained (Transact-SQL)
+title: sp_migrate_user_to_contained (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/11/2019
 ms.prod: sql
@@ -17,20 +18,20 @@ helpviewer_keywords:
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d3faf15999e0c157859e3d2eee9c4119ab344844
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 95bd2aa7491b15b2e16172b0761c6dccc8eb5818
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727151"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446930"
 ---
 # <a name="sp_migrate_user_to_contained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  將對應至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的資料庫使用者移轉為具有密碼之自主資料庫使用者。 在自主資料庫中，使用這個程序來移除已安裝資料庫之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的相依性。 **sp_migrate_user_to_contained**會將使用者與原始登入區隔開 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，以便為自主資料庫個別管理密碼和預設語言等設定。 在將自主資料庫移至不同的實例之前，可以使用**sp_migrate_user_to_contained** ， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 以排除目前實例登入的相依性 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+  將對應至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的資料庫使用者移轉為具有密碼之自主資料庫使用者。 在自主資料庫中，使用這個程序來移除已安裝資料庫之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的相依性。 **sp_migrate_user_to_contained** 會將使用者與原始登入分開 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，以便針對自主資料庫分別管理密碼和預設語言等設定。 **sp_migrate_user_to_contained** 可以在將自主資料庫移至不同的實例之前使用， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 以消除目前實例登入的相依性 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 > [!NOTE]
-> 使用**sp_migrate_user_to_contained**時請小心，因為您將無法反轉效果。 此程式僅用於自主資料庫。 如需詳細資訊，請參閱自主[資料庫](../../relational-databases/databases/contained-databases.md)。  
+> 使用 **sp_migrate_user_to_contained**時請小心，因為您將無法反轉效果。 此程式只會在自主資料庫中使用。 如需詳細資訊，請參閱自主 [資料庫](../../relational-databases/databases/contained-databases.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,36 +44,36 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
   
 ## <a name="arguments"></a>引數  
  [** @username =** ] **N '***使用者***'**  
- 目前自主資料庫中對應至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已驗證登入的使用者名稱。 此值為**sysname**，預設值為**Null**。  
+ 目前自主資料庫中對應至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已驗證登入的使用者名稱。 此值為 **sysname**，預設值是 **Null**。  
   
  [** @rename =** ] **N '***copy_login_name***'**  | **N '***keep_name***'**  
- 當以登入為基礎的資料庫使用者與登入名稱具有不同的使用者名稱時，請使用*keep_name*在遷移期間保留資料庫使用者名稱。 使用 [ *copy_login_name* ]，以登入的名稱（而不是使用者）來建立新的自主資料庫使用者。 依據登入的資料庫使用者與登入名稱有相同的使用者名稱時，這兩個選項會在不變更名稱的情況下建立自主資料庫使用者。  
+ 當以登入為基礎的資料庫使用者與登入名稱具有不同的使用者名稱時，請使用 *keep_name* 在遷移期間保留資料庫的使用者名稱。 使用 *copy_login_name* 以登入的名稱建立新的自主資料庫使用者，而不是使用者。 依據登入的資料庫使用者與登入名稱有相同的使用者名稱時，這兩個選項會在不變更名稱的情況下建立自主資料庫使用者。  
   
  [** @disablelogin =** ] **N '***disable_login***'**  | **N '***do_not_disable_login***'**  
- *disable_login*會停用 master 資料庫中的登入。 若要在停用登入時進行連線，連接必須提供包含的資料庫名稱做為連接字串一部分的**初始目錄**。  
+ *disable_login* 停用 master 資料庫中的登入。 若要在停用登入時進行連接，連接必須提供自主資料庫名稱做為連接字串的一部分做為 **初始目錄** 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="remarks"></a>備註  
- 不論登入的屬性或許可權為何， **sp_migrate_user_to_contained**都會使用密碼建立自主資料庫使用者。 例如，如果登入已停用，或使用者遭到拒絕資料庫的**CONNECT**許可權，此程式就會成功。  
+ **sp_migrate_user_to_contained** 使用密碼建立自主資料庫使用者，而不論登入的屬性或許可權為何。 例如，如果已停用登入，或如果使用者拒絕資料庫的 **CONNECT** 許可權，程式就會成功。  
   
- **sp_migrate_user_to_contained**具有下列限制。  
+ **sp_migrate_user_to_contained** 具有下列限制。  
   
 -   使用者名稱不能已存在於資料庫中。  
   
 -   無法轉換內建使用者，例如 dbo 和 guest。  
   
--   使用者不能在已簽署之預存程式的**EXECUTE AS**子句中指定。  
+-   使用者無法在已簽署之預存程式的 **EXECUTE AS** 子句中指定。  
   
--   使用者不能擁有包含**EXECUTE AS OWNER**子句的預存程式。  
+-   使用者無法擁有包含 **EXECUTE AS OWNER** 子句的預存程式。  
   
--   **sp_migrate_user_to_contained**無法在系統資料庫中使用。  
+-   **sp_migrate_user_to_contained** 不能用在系統資料庫中。  
   
 ## <a name="security"></a>安全性  
- 當移轉使用者時，小心不要停用或刪除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的所有系統管理員登入。 如果所有登入都已刪除，請參閱[當系統管理員遭到鎖定時連接到 SQL Server](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)。  
+ 當移轉使用者時，小心不要停用或刪除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的所有系統管理員登入。 如果刪除所有登入，請參閱 [當系統管理員遭到鎖定時連接到 SQL Server](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)。  
   
- 如果**BUILTIN\Administrators**登入存在，系統管理員可以使用 [以**系統管理員身分執行**] 選項啟動其應用程式來進行連線。  
+ 如果有 **BUILTIN\Administrators** 登入，系統管理員可以使用 [以 **系統管理員身分執行** ] 選項啟動其應用程式來進行連線。  
   
 ### <a name="permissions"></a>權限  
  需要 **CONTROL SERVER** 權限。  
@@ -80,7 +81,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 ## <a name="examples"></a>範例  
   
 ### <a name="a-migrating-a-single-user"></a>A. 移轉單一使用者  
- 下列範例會將名為 `Barry` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入移轉為具有密碼之自主資料庫使用者。 此範例不會變更使用者名稱，而且會將登入保留為已啟用。  
+ 下列範例會將名為 `Barry` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入移轉為具有密碼之自主資料庫使用者。 此範例不會變更使用者名稱，而且會保留已啟用的登入。  
   
 ```sql  
 sp_migrate_user_to_contained   
@@ -117,7 +118,7 @@ DEALLOCATE user_cursor ;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [遷移至部分自主資料庫](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
+ [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
  [自主資料庫](../../relational-databases/databases/contained-databases.md)  
   
   
