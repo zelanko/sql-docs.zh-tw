@@ -1,4 +1,5 @@
 ---
+description: 空間資料 (SQL Server)
 title: 空間資料 (SQL Server) | Microsoft Docs
 ms.date: 10/11/2019
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32014323cf9921cdbff9db6235e6625b4dc431ec
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 38df38923b69bf24432cf4d5d162187c0962fcfc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725873"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88403344"
 ---
 # <a name="spatial-data-sql-server"></a>空間資料 (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

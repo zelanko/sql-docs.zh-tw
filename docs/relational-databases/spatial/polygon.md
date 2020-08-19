@@ -1,4 +1,5 @@
 ---
+description: Polygon
 title: Polygon | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,18 +14,18 @@ ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3522345ce61af05d3934bff0fb240f8b5100987a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 61062aae61a7653ea226ee56ecca51f0d99bb11a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85666895"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88403174"
 ---
 # <a name="polygon"></a>Polygon
 
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  **Polygon** 是儲存為一連串點的二維度介面，這些點可定義一個外部週框環形以及零個或多個內部環形。  
+  **Polygon** 是儲存為一連串點的二維介面，這些點可定義一個外部週框環形以及零個或多個內部環形。  
   
 ## <a name="polygon-instances"></a>Polygon 執行個體  
  **Polygon** 執行個體可以從環形組成 (此環形至少有三個相異點)。 **Polygon** 執行個體也可以是空的。  

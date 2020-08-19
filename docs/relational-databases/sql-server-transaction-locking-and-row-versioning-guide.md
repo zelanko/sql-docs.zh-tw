@@ -1,4 +1,5 @@
 ---
+description: 交易鎖定與資料列版本設定指南
 title: 交易鎖定與資料列版本設定指南
 ms.custom: seo-dt-2019
 ms.date: 03/10/2020
@@ -19,12 +20,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d1323c8736934a46fdb4ef8c4d8752364f8ae38d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 12d986004250f40acb9dc99d225fc30c015ac734
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87239328"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88403054"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>交易鎖定與資料列版本設定指南
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -1343,9 +1344,9 @@ BEGIN TRANSACTION
   
  **Version Store Size (KB)** 。 監視所有版本存放區的大小，以 KB 為單位。 此資訊有助於決定版本存放區的 tempdb 資料庫所需要的空間量。 持續監視這個計數器一段時間，可對 tempdb 所需的其他空間提供有用的評估。  
   
- 第 1 課：建立 Windows Azure 儲存體物件`Version Generation rate (KB/s)`。 監視所有版本存放區的版本產生速率 (以每秒 KB 數為單位)。  
+ `Version Generation rate (KB/s)`. 監視所有版本存放區的版本產生速率 (以每秒 KB 數為單位)。  
   
- 第 1 課：建立 Windows Azure 儲存體物件`Version Cleanup rate (KB/s)`。 監視所有版本存放區的版本清除速率 (以每秒 KB 數為單位)。  
+ `Version Cleanup rate (KB/s)`. 監視所有版本存放區的版本清除速率 (以每秒 KB 數為單位)。  
   
 > [!NOTE]  
 > Version Generation rate (KB/s) 和 Version Cleanup rate (KB/s) 的資訊可用來預測 tempdb 的空間需求。  
@@ -1362,11 +1363,11 @@ BEGIN TRANSACTION
   
  **Transactions**。 監視使用中交易的總數。 這不包括系統交易。  
   
- 第 1 課：建立 Windows Azure 儲存體物件`Snapshot Transactions`。 監視使用中快照集交易的總數。  
+ `Snapshot Transactions`. 監視使用中快照集交易的總數。  
   
- 第 1 課：建立 Windows Azure 儲存體物件`Update Snapshot Transactions`。 監視執行更新作業的使用中快照集交易的總數。  
+ `Update Snapshot Transactions`. 監視執行更新作業的使用中快照集交易的總數。  
   
- 第 1 課：建立 Windows Azure 儲存體物件`NonSnapshot Version Transactions`。 監視產生版本記錄的使用中非快照集交易的總數。  
+ `NonSnapshot Version Transactions`. 監視產生版本記錄的使用中非快照集交易的總數。  
   
 > [!NOTE]  
 > Update Snapshot Transactions 和 NonSnapshot Version Transactions 的總和代表參與版本產生的交易總數。 Snapshot Transactions 和 Update Snapshot Transactions 的差異可報告唯讀快照集交易的數目。  

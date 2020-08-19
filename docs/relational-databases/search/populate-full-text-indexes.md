@@ -1,4 +1,5 @@
 ---
+description: 擴展全文檢索索引
 title: 擴展全文檢索索引 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,12 +25,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90224fd31bcb4592055ca22890dd63996eadba34
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 77e6331623da6672b0b39ec7ca432201cd9a482b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629270"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88404134"
 ---
 # <a name="populate-full-text-indexes"></a>擴展全文檢索索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -217,7 +218,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
 以下是編目記錄檔名稱的變動部分。
 -   <**DatabaseID**> - 資料庫的識別碼。 \<**dbid**> 是前置字元為零的五位數數字。  
--   <**FullTextCatalogID**> - 全文檢索目錄識別碼。 \<**catid**> 是前置字元為零的五位數數字。  
+-   <**FullTextCatalogID**> - 全文檢索目錄識別碼。 \<**catid**> 是開頭為零的五位數數字。  
 -   <**n**> - 是一個整數，指示相同全文檢索目錄的編目記錄檔數目。  
   
  例如，`SQLFT0000500008.2` 是指資料庫識別碼 = 5 而且全文檢索目錄識別碼 = 8 之資料庫的編目記錄檔。 位於檔案名稱結尾的 2 表示此資料庫/目錄組有兩個搜耙記錄檔。  

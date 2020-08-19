@@ -1,4 +1,5 @@
 ---
+description: 合併式複寫的 Web 同步處理
 title: 合併式複寫的 Web 同步處理 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cfcb0ba165b7657a640bb509dc71dfaa441fd015
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9139d4e5b0ab2df1074774dc90af44bc711804ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720544"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88404474"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>合併式複寫的 Web 同步處理
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

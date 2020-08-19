@@ -1,4 +1,5 @@
 ---
+description: MultiPoint
 title: MultiPoint | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: 2aaab211-3aba-4dbd-90b7-095d997b1f62
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5551c6547fd93d0d6dce0565e152ba65650b6be7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f149e930c29be9a94ed6eee60efadd1a4f91d8d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640383"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88403295"
 ---
 # <a name="multipoint"></a>MultiPoint
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

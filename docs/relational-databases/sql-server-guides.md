@@ -1,4 +1,5 @@
 ---
+description: SQL Server 指南
 title: SQL Server 指南 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/03/2017
@@ -14,12 +15,12 @@ ms.assetid: a5d04171-dfbc-4b90-acd0-1bb27d4b7e34
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cea78f558ab8df4b1c32ae7c9dcf9d55b004d849
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5b1363347f8b3cdcf7efe46e08b16ad2d6e7f2b7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005824"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88402994"
 ---
 # <a name="sql-server-guides"></a>SQL Server 指南
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

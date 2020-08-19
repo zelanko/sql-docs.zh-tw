@@ -1,4 +1,5 @@
 ---
+description: 使用服務 SID 授與對 SQL Server 服務的權限
 title: 使用服務 SID 授與服務的權限
 ms.custom: seo-dt-2019
 author: randomnote1
@@ -7,12 +8,12 @@ ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.openlocfilehash: aeb813feb46c5895352e4da3ea748a3e2f12c1e2
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: f366af08581accf5ef1f1c8fc00830f6cc592537
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807618"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88403564"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>使用服務 SID 授與對 SQL Server 服務的權限
 
@@ -101,7 +102,7 @@ GRANT VIEW SERVER STATE TO [NT SERVICE\ClusSvc]
 GO
 ```
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>接下來的步驟
 
 如需服務 SID 結構的詳細資訊，請閱讀 [SERVICE_SID_INFO 結構](/windows/win32/api/winsvc/ns-winsvc-service_sid_info)。
 
