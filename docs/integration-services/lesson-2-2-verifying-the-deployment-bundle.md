@@ -1,4 +1,5 @@
 ---
+description: 課程 2-2 - 確認部署配套
 title: 步驟 2:確認部署配套 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 6c13f5c9-c75e-4e52-94dc-2d2db2c578fe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fec0b4e8180141fdea37e2ac484f5a2b0195b44a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4704aea54f73a0fa25db60ab9145a0ad3bc9359d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917232"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449662"
 ---
 # <a name="lesson-2-2---verifying-the-deployment-bundle"></a>課程 2-2 - 確認部署配套
 

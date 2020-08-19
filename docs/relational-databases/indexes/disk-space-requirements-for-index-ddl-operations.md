@@ -1,4 +1,5 @@
 ---
+description: Disk Space Requirements for Index DDL Operations
 title: 索引 DDL 作業的磁碟空間需求 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 71f51e9076b4f5c4be8a0875df323deeaaf80068
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7ff199a57c492c9a34bf05c49d954905f84f59a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629674"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448546"
 ---
 # <a name="disk-space-requirements-for-index-ddl-operations"></a>Disk Space Requirements for Index DDL Operations
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

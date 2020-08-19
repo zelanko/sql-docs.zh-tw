@@ -1,4 +1,5 @@
 ---
+description: 課程 4-2：建立損毀的檔案
 title: 步驟 2:建立損毀的檔案 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/07/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7ae6a1109ce6c2631f4adabd6d828794a1a21869
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 81bee95c84aabe02f2964f41849051a7c8c7052a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922179"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449630"
 ---
 # <a name="lesson-4-2-create-a-corrupted-file"></a>課程 4-2：建立損毀的檔案
 
@@ -42,13 +43,13 @@ ms.locfileid: "86922179"
   
 ## <a name="verify-that-an-error-occurs-during-run-time"></a>確認在執行階段會發生錯誤  
   
-1.  在 [偵錯]  功能表上，選取 [開始偵錯]  。  
+1.  在 [偵錯] 功能表上，選取 [開始偵錯]。  
   
     在資料流程的第三次反覆運算中，[查閱貨幣索引鍵] 轉換會嘗試處理 **Currency_BAD.txt** 檔案，但轉換會失敗。 轉換失敗會造成整個套件失敗。  
   
-2.  在 [偵錯]  功能表上，選取 [停止偵錯]  。  
+2.  在 [偵錯]**** 功能表上，選取 [停止偵錯]****。  
   
-3.  在設計介面上，選取 [執行結果]  索引標籤。  
+3.  在設計介面上，選取 [執行結果]**** 索引標籤。  
   
 4.  瀏覽記錄並確認已發生下列無法處理的錯誤：  
   

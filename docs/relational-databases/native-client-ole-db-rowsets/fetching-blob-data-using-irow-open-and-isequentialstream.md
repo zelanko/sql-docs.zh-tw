@@ -1,5 +1,6 @@
 ---
-title: BLOB，IRow：： Open，ISequentialStream
+description: 使用 IRow：： Open 和 ISequentialStream 提取 BLOB 資料
+title: BLOB、IRow：： Open、ISequentialStream
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,14 +17,14 @@ ms.assetid: 439b3976-84e7-4d11-8dba-f668adbc9159
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f986e195b0f2545c6fbf1f1af1a0a94d8e79abc
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 4d3329b336bb5f302a950aa5ea03d9896239dea2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243635"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448366"
 ---
-# <a name="fetching-blob-data-by-using-irowopen-and-isequentialstream"></a>使用 IRow：： Open 和 ISequentialStream 來提取 BLOB 資料
+# <a name="fetching-blob-data-by-using-irowopen-and-isequentialstream"></a>使用 IRow：： Open 和 ISequentialStream 提取 BLOB 資料
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   **IRow::Open** 僅支援開啟 DBGUID_STREAM 和 DBGUID_NULL 類型的物件。  

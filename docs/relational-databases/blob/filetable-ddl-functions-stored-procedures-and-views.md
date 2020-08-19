@@ -1,4 +1,5 @@
 ---
+description: FileTable DDL、函數、預存程序及檢視
 title: FileTable 函數、預存程序、檢視 | Microsoft Docs
 descriptions: Learn which Transact-SQL statements and which SQL Server functions, stored procedures, and views have been added or changed to support the FileTable feature.
 ms.custom: seo-lt-2019
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7e2e0f7f-94a8-4178-8bc7-d2e14ac8528c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 548bb412a8fc5d7a3ccae46ea42575b8a8dcaf46
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f1736422ff6ff81a7e48931b390acc710abf41b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85744320"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448940"
 ---
 # <a name="filetable-ddl-functions-stored-procedures-and-views"></a>FileTable DDL、函數、預存程序及檢視
 

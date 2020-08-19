@@ -1,5 +1,6 @@
 ---
-title: 保存已篩選和階層式記錄集 |Microsoft Docs
+description: 保存篩選過的階層式資料錄集
+title: 保存篩選和階層式記錄集 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d01aeb4d-4e43-450b-b3f2-0c27eaaf9f86
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5fa3fdd55fb78f16629907c174b08aab64ceb86e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a69b491f4bb5834331b9cfa582b6f72d248ba317
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763109"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453060"
 ---
 # <a name="persisting-filtered-and-hierarchical-recordsets"></a>保存篩選過的階層式資料錄集
-如果[篩選器](../../../ado/reference/ado-api/filter-property.md)屬性對**記錄集**有效，只會儲存篩選器底下可存取的資料列。 如果**記錄集**是階層式，則會儲存目前的子**記錄集**和其子系，包括父**記錄集**。 如果呼叫子**記錄集**的**Save**方法，則會儲存子系及其所有子系，但父系則不會。 如需階層式**記錄集**的詳細資訊，請參閱[資料成形](../../../ado/guide/data/data-shaping.md)。  
+如果 [篩選](../../../ado/reference/ado-api/filter-property.md) 屬性適用于 **記錄集**，則只會儲存篩選下的可存取資料列。 如果 **記錄集** 是階層式的，則會儲存目前的子 **記錄集** 和其子系，包括父 **記錄集**。 如果呼叫子**記錄集**的**Save**方法，則會儲存子系及其所有子系，但父系則否。 如需階層式 **記錄集**的詳細資訊，請參閱 [資料成形](../../../ado/guide/data/data-shaping.md)。  
   
 > [!NOTE]
->  以 XML 格式儲存階層式**記錄集**（資料圖形）時，適用某些限制。 如需詳細資訊，請參閱[以 XML 格式保存記錄](../../../ado/guide/data/persisting-records-in-xml-format.md)。
+>  將階層式 **記錄集** 儲存 (資料圖形) 為 XML 格式時，會有一些限制。 如需詳細資訊，請參閱 [以 XML 格式保存記錄](../../../ado/guide/data/persisting-records-in-xml-format.md)。

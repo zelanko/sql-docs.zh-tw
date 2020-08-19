@@ -1,4 +1,5 @@
 ---
+description: Integration Services 交易
 title: Integration Services 交易 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 46c42deda5b2b66d2979136ad6a82e0ad80042be
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: eee7131c831215278a8754efa913add075cfb57d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917465"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449771"
 ---
 # <a name="integration-services-transactions"></a>Integration Services 交易
 
@@ -62,11 +63,11 @@ ms.locfileid: "86917465"
   
 4.  以滑鼠右鍵按一下控制流程設計介面背景的任何位置，然後按一下 [屬性]  。  
   
-5.  在 [屬性]  視窗中，將 TransactionOption 屬性設定為 **Required**。  
+5.  在 [屬性]**** 視窗中，將 TransactionOption 屬性設定為 **Required**。  
   
-6.  在 [控制流程]  索引標籤的設計介面上，以滑鼠右鍵按一下您要在交易中註冊的工作或容器，然後按一下 [屬性]  。  
+6.  在 [控制流程]**** 索引標籤的設計介面上，以滑鼠右鍵按一下您要在交易中註冊的工作或容器，然後按一下 [屬性]****。  
   
-7.  在 [屬性]  視窗中，將 TransactionOption 屬性設定為 **Supported**。  
+7.  在 [屬性]**** 視窗中，將 TransactionOption 屬性設定為 **Supported**。  
   
     > [!NOTE]  
     >  若要在交易中編列連接，請註冊在交易中使用連接的工作。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](../integration-services/connection-manager/integration-services-ssis-connections.md)。  
@@ -86,18 +87,18 @@ ms.locfileid: "86917465"
   
 4.  以滑鼠右鍵按一下控制流程設計介面背景的任何位置，然後按一下 [屬性]  。  
   
-5.  在 [屬性]  視窗中，將 TransactionOption 屬性設定為 **Supported**。  
+5.  在 [屬性]**** 視窗中，將 TransactionOption 屬性設定為 **Supported**。  
   
     > [!NOTE]  
     >  封裝支援交易，但交易是由封裝中的工作或容器所啟動。  
   
-6.  在 [控制流程]  索引標籤的設計介面上，以滑鼠右鍵按一下要啟動其交易之封裝內的工作或容器，然後按一下 [屬性]  。  
+6.  在 [控制流程]**** 索引標籤的設計介面上，以滑鼠右鍵按一下要啟動其交易之封裝內的工作或容器，然後按一下 [屬性]****。  
   
-7.  在 [屬性]  視窗中，將 TransactionOption 屬性設定為 **Required**。  
+7.  在 [屬性]**** 視窗中，將 TransactionOption 屬性設定為 **Required**。  
   
-8.  如果交易由容器啟動，請以滑鼠右鍵按一下您要在交易中註冊的工作或容器，然後按一下 [屬性]  。  
+8.  如果交易由容器啟動，請以滑鼠右鍵按一下您要在交易中註冊的工作或容器，然後按一下 [屬性]****。  
   
-9. 在 [屬性]  視窗中，將 TransactionOption 屬性設定為 **Supported**。  
+9. 在 [屬性]**** 視窗中，將 TransactionOption 屬性設定為 **Supported**。  
   
     > [!NOTE]  
     >  若要在交易中編列連接，請註冊在交易中使用連接的工作。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](../integration-services/connection-manager/integration-services-ssis-connections.md)。  

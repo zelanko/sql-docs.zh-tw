@@ -1,4 +1,5 @@
 ---
+description: 備份及還原 DQS 資料庫
 title: 備份及還原 DQS 資料庫
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 5df48172681fef1ea75735702915ac1beedabee1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 03b58daec9def4e902e111719353110bfad1d69b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897567"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449978"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>備份及還原 DQS 資料庫
 
@@ -40,7 +41,7 @@ ms.locfileid: "85897567"
   
 -   您必須擁有 DQS_MAIN 資料庫的 dqs_administrator 角色，才能在 DQS 中終止任何執行中的活動或停止任何執行中的處理序。  
   
-##  <a name="backup-and-restore-dqs-databases"></a><a name="BackupRestore"></a>備份和還原 DQS 資料庫  
+##  <a name="backup-and-restore-dqs-databases"></a><a name="BackupRestore"></a> 備份和還原 DQS 資料庫  
   
 1.  啟動 Microsoft SQL Server Management Studio，並連接到適當的 SQL Server 執行個體。  
   

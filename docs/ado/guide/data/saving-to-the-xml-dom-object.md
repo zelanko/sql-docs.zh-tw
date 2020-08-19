@@ -1,4 +1,5 @@
 ---
+description: 儲存到 XML DOM 物件
 title: 儲存到 XML DOM 物件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4d20fd28-aaf8-4232-83ce-f9d1e5f93dae
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2360d9886fa718034bdf3fcc4ed1cacd459b2788
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c608abbae59244e2d0982328534b1cabcf1b903e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760904"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452900"
 ---
 # <a name="saving-to-the-xml-dom-object"></a>儲存到 XML DOM 物件
-您可以將 XML 格式的記錄集儲存至 MSXML DOM 物件的實例，如下列 Visual Basic 程式碼所示：  
+您可以將 XML 格式的記錄集儲存到 MSXML DOM 物件的實例，如下列 Visual Basic 程式碼所示：  
   
 ```  
 Dim xDOM As New MSXML.DOMDocument  

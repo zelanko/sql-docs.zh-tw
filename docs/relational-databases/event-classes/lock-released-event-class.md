@@ -1,4 +1,5 @@
 ---
+description: Lock:Released 事件類別
 title: Lock:Released 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: a150c300-72fa-4231-8f41-f1abd550a429
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3aed52bbb5af28a012f80bb185ccf7b386a94247
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4d79a3367fb115c775d51ac5badc7e399e667ded
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85642288"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448650"
 ---
 # <a name="lockreleased-event-class"></a>Lock:Released 事件類別
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

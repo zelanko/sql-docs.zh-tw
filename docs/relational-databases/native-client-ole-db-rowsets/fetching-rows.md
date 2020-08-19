@@ -1,5 +1,6 @@
 ---
-title: 提取資料列（Native Client OLE DB 提供者） |Microsoft Docs
+description: " (Native Client OLE DB 提供者中提取資料列) "
+title: " (原生用戶端 OLE DB 提供者提取資料列) |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,14 +18,14 @@ ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a200f97395336abd5425793393401ac4ab0c9346
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: dafe6b863b19a555b62b46227f470a6ea03fb133
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243620"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448354"
 ---
-# <a name="fetching-rows-native-client-ole-db-provider"></a>提取資料列（Native Client OLE DB 提供者）
+# <a name="fetching-rows-native-client-ole-db-provider"></a> (Native Client OLE DB 提供者中提取資料列) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   **IRowset** 介面是基底資料列集介面。 **IRowset** 介面提供的方法會循序擷取資料列、從這些資料列中取得資料，以及管理資料列。 取用者會使用 **IRowset** 中的方法，進行所有基本資料列集作業。 這包括提取與釋放資料列，以及取得資料行值。  

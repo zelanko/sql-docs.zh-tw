@@ -1,4 +1,5 @@
 ---
+description: 靜態資料指標
 title: 靜態資料指標 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: cce93ace-c4ed-4c6c-940c-28a50ff2fd12
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4baacc48beffda2d83a23ce24d3a31c314da5841
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 396083b57ad12b3cf5e917416272ec636696e91a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760824"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452820"
 ---
 # <a name="static-cursors"></a>靜態資料指標
-靜態資料指標一律會顯示第一次開啟資料指標時的結果集。 視執行而定，靜態資料指標為唯讀或讀取/寫入，並提供向前和向後滾動。 靜態資料指標通常不會在開啟資料指標之後，偵測對結果集的成員資格、順序或值所做的變更。 雖然不需要執行這項操作，但靜態資料指標可能會偵測自己的更新、刪除和插入。  
+靜態資料指標一律會顯示第一次開啟資料指標時的結果集。 根據執行的不同，靜態資料指標是唯讀或讀取/寫入，可提供向前及向後滾動。 靜態資料指標通常不會偵測到資料指標開啟後對結果集的成員資格、順序或值所做的變更。 雖然不需要執行這項操作，但靜態資料指標可能會偵測自己的更新、刪除和插入。  
   
- 靜態資料指標永遠不會偵測到其他更新、刪除和插入。 例如，假設靜態資料指標擷取一個資料列，而其他應用程式接著更新該資料列。 如果應用程式從靜態資料指標重新擷取該資料列，它所看到的值會保持不變，即使其他應用程式已進行變更亦然。 支援所有類型的滾動，但提供者可能會也不支援書簽。  
+ 靜態資料指標絕對不會偵測到其他更新、刪除和插入。 例如，假設靜態資料指標擷取一個資料列，而其他應用程式接著更新該資料列。 如果應用程式從靜態資料指標重新擷取該資料列，它所看到的值會保持不變，即使其他應用程式已進行變更亦然。 所有類型的滾動都受到支援，但提供者不一定支援書簽。  
   
- 如果您的應用程式不需要偵測資料變更，而且需要滾動，靜態資料指標就是最佳選擇。 使用**AdOpenStatic CursorTypeEnum** ，表示您想要在 ADO 中使用靜態資料指標。  
+ 如果您的應用程式不需要偵測資料變更，而且需要滾動，則靜態資料指標是最佳選擇。 使用 **AdOpenStatic CursorTypeEnum** 來指出您想要在 ADO 中使用靜態資料指標。  
   
 ## <a name="see-also"></a>另請參閱  
  [順向資料指標](../../../ado/guide/data/forward-only-cursors.md)   

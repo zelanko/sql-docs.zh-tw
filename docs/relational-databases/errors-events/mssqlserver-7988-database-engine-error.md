@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_7988
 title: MSSQLSERVER_7988 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 29b967b8-de30-4618-99a8-8b1155e69026
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: be9326ff03ac3ec8550c71e03c4889bd4492652e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cdf6e30194b84dd2c18dee114f020d1b1bea3d7c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767870"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448715"
 ---
 # <a name="mssqlserver_7988"></a>MSSQLSERVER_7988
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

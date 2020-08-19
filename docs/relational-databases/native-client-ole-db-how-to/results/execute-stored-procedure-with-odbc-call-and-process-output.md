@@ -1,4 +1,5 @@
 ---
+description: 使用 ODBC 呼叫和進程輸出執行 SQL Server Native Client 預存程式
 title: 預存程式、ODBC 呼叫、輸出
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5aa77741211b7f0fd1a118621aac9c8bf911902
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 934e25540b7d5b96f803c776d8ddda3fc8c29473
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248177"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448450"
 ---
 # <a name="execute-sql-server-native-client-stored-procedure-with-odbc-call-and-process-output"></a>使用 ODBC 呼叫和進程輸出執行 SQL Server Native Client 預存程式
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

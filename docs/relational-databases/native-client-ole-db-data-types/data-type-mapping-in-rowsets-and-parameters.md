@@ -1,5 +1,6 @@
 ---
-title: 資料列集和參數中的資料類型對應（Native Client OLE DB 提供者） |Microsoft Docs
+description: '資料列集和參數中的資料類型對應 (Native Client OLE DB 提供者) '
+title: 資料列集和參數中的資料類型對應 (Native Client OLE DB 提供者) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,17 +23,17 @@ ms.assetid: 3d831ff8-3b79-4698-b2c1-2b5dd2f8235c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 39b96f2f0b5ce4f1edac32ce3508c21c528f0a64
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 5804f8b5aa598908262d1e3fb89ec13a9b183ed7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472564"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448515"
 ---
-# <a name="sql-server-native-client-data-type-mapping-in-rowsets-and-parameters"></a>資料列集和參數中的 SQL Server Native Client 資料類型對應
+# <a name="sql-server-native-client-data-type-mapping-in-rowsets-and-parameters"></a>SQL Server Native Client 資料列集和參數中的資料類型對應
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  在資料列集和參數值中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用下列 OLE DB 定義的資料類型（在**IColumnsInfo：： GetColumnInfo**和**ICommandWithParameters：： GetParameterInfo**函數中報告的）來代表資料。  
+  在資料列集和 as 參數值中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用下列 OLE DB 的定義資料類型來表示資料 **： IColumnsInfo：： GetColumnInfo** 和 **ICommandWithParameters：： GetParameterInfo**中所報告的資料類型。  
   
 |SQL Server 資料類型|OLE DB 資料類型|  
 |--------------------------|----------------------|  
@@ -66,7 +67,7 @@ ms.locfileid: "87472564"
 |**varchar**|DBTYPE_STR|  
 |**XML**|DBTYPE_XML|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者支援取用者要求的資料轉換，如圖所示。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端 OLE DB 提供者支援取用者要求的資料轉換，如圖所示。  
   
  **sql_variant** 物件可保存任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型的資料，下列類型除外：text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max)、xml、timestamp 和 Microsoft .NET Framework Common Language Runtime (CLR) 使用者定義型別。 sql_variant 資料的執行個體不能用 sql_variant 做為它的基礎基底資料類型。 例如，資料行可以在某些資料列中包含 **smallint** 值，在其他資料列中包含 **float** 值，而在剩餘的資料列中包含 **char**/**nchar** 值。  
   
@@ -76,7 +77,7 @@ ms.locfileid: "87472564"
  以 DBTYPE_VARIANT 擷取 **sql_variant** 資料時，會將該資料置於緩衝區的 VARIANT 結構中。 但是 VARIANT 結構中的子類型可能不會對應到定義於 **sql_variant** 資料類型中的子類型。 接下來必須以 DBTYPE_SQLVARIANT 擷取 **sql_variant** 資料，才能讓所有的子類型相互對應。  
   
 ## <a name="dbtype_sqlvariant-data-type"></a>DBTYPE_SQLVARIANT 資料類型  
- 為了支援**SQL_variant**資料類型， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會公開稱為 DBTYPE_SQLVARIANT 的提供者特定資料類型。 以 DBTYPE_SQLVARIANT 擷取 **sql_variant** 資料時，該資料會儲存在提供者特定的 SSVARIANT 結構中。 SSVARIANT 結構包含的所有子類型都符合 **sql_variant** 資料類型的子類型。  
+ 為了支援 **SQL_variant** 資料類型， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會公開稱為 DBTYPE_SQLVARIANT 的提供者特定資料類型。 以 DBTYPE_SQLVARIANT 擷取 **sql_variant** 資料時，該資料會儲存在提供者特定的 SSVARIANT 結構中。 SSVARIANT 結構包含的所有子類型都符合 **sql_variant** 資料類型的子類型。  
   
  工作階段屬性 SSPROP_ALLOWNATIVEVARIANT 也必須設定為 TRUE。  
   
@@ -90,9 +91,9 @@ ms.locfileid: "87472564"
 ## <a name="ssprop_allownativevariant"></a>SSPROP_ALLOWNATIVEVARIANT  
  SSPROP_ALLOWNATIVEVARIANT 是工作階段屬性，而且是 DBPROPSET_SQLSERVERSESSION 屬性集的一部分。  
   
-|屬性識別碼|描述|  
+|屬性識別碼|說明|  
 |-|-|  
-|SSPROP_ALLOWNATIVEVARIANT|輸入：VT_BOOL<br /><br /> R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：決定所提取的資料是否為 DBTYPE_VARIANT 或 DBTYPE_SQLVARIANT。<br /><br /> VARIANT_TRUE：資料行類型是以 DBTYPE_SQLVARIANT 傳回，在此種情況下，緩衝區會保存 SSVARIANT 結構。<br /><br /> VARIANT_FALSE：資料行類型是以 DBTYPE_VARIANT 傳回，而且緩衝區將具有 VARIANT 結構。|  
+|SSPROP_ALLOWNATIVEVARIANT|輸入：VT_BOOL<br /><br /> R/W︰讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：決定擷取的資料是否為 DBTYPE_VARIANT 或 DBTYPE_SQLVARIANT。<br /><br /> VARIANT_TRUE：資料行類型會以 DBTYPE_SQLVARIANT 傳回，在此情況下，緩衝區將會保留 SSVARIANT 結構。<br /><br /> VARIANT_FALSE：資料行類型會以 DBTYPE_VARIANT 傳回，而且緩衝區將具有 VARIANT 結構。|  
   
 ## <a name="see-also"></a>另請參閱  
  [資料類型 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md)  

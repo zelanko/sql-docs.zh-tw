@@ -1,4 +1,5 @@
 ---
+description: 準備和執行命令
 title: 準備和執行命令 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,22 +13,22 @@ helpviewer_keywords:
 ms.assetid: 7448d9ee-7f4b-47e3-be54-2df8c9bbac32
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a59e357db60e3a29ec2473d4331ef4b6954889c7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 19539844381f38de4700925a0ecdbc0f8e74fb0d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763099"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453030"
 ---
 # <a name="preparing-and-executing-commands"></a>準備和執行命令
-命令是對提供者發出的指示，可對基礎資料來源執行某些作業。 例如，SQL 語句是 Microsoft SQL Data Provider 的命令。 在 ADO 中，命令通常是由**Command**物件表示，雖然簡單的命令也可以透過**連接**或**記錄集**物件來發行。  
+命令是對提供者發出的指示，可針對基礎資料來源執行某些作業。 例如，SQL 語句是 Microsoft SQL Data Provider 的命令。 在 ADO 中，命令通常是以 **命令** 物件來表示，雖然簡單的命令也可以透過 **連接** 或 **記錄集** 物件來發出。  
   
- 您可以使用**Command**物件向提供者要求任何支援的作業類型，假設提供者可以正確解讀命令字串。 資料提供者的常見作業是查詢資料庫，並在**記錄集**物件中傳回記錄，這可以被視為容器來保存結果，並使用工具來查看結果。 如同許多 ADO 物件，某些**命令**物件集合、方法或屬性可能會在參考時產生錯誤，視提供者的功能而定。  
+ 您可以使用 **命令** 物件，從提供者要求任何支援的作業類型（假設提供者可以正確地解讀命令字串）。 資料提供者的常見作業是查詢資料庫，並傳回記錄 **集** 物件中的記錄，這可以視為容器來保存結果，以及用來查看結果的工具。 和許多 ADO 物件一樣，視提供者的功能而定，某些 **命令** 物件集合、方法或屬性可能會在參考時產生錯誤。  
   
- 除了使用**Command**物件之外，您還可以在**Connection**物件或**Recordset**物件上的**Open**方法上使用**Execute**方法，以發出命令並執行它。 不過，如果您需要在程式碼中重複使用命令，或如果您需要使用命令傳遞詳細的參數資訊，您應該使用**命令**物件。 本章節稍後會詳細說明這些案例。  
+ 除了使用**命令**物件之外，您還可以在**連接**物件上使用**Execute**方法，或在**記錄集**物件上使用**Open**方法來發出命令並執行它。 但是，如果您需要在程式碼中重複使用命令，或需要使用命令傳遞詳細的參數資訊，則應該使用 **command** 物件。 本節稍後將詳細說明這些案例。  
   
 > [!NOTE]
->  某些**命令**可以將結果集當做二進位資料流程或單一**記錄**（而不是**記錄集**）傳回，如果提供者支援這種情況。 此外，某些**命令**並不打算傳回任何結果集（例如，SQL Update 查詢）。 這一節將涵蓋最常見的案例，不過：執行**命令**會以**記錄集**物件的形式傳回結果。 如需將結果傳回至**記錄**s 或**資料流程**的詳細資訊，請參閱[記錄和資料流程](../../../ado/guide/data/records-and-streams.md)。  
+>  如果提供者支援，某些 **命令**可將結果集當作二進位資料流程或單一 **記錄** （而不是 **記錄集**）傳回。 此外，某些 **命令**不會在所有 (（例如 SQL Update 查詢) ）傳回任何結果集。 本節將涵蓋最常見的案例，不過：執行以**記錄集**物件的形式傳回結果的**命令**。 如需將結果傳回至 **記錄**或 **串流**s 的詳細資訊，請參閱 [記錄和資料流程](../../../ado/guide/data/records-and-streams.md)。  
   
  此章節包含下列主題。  
   
@@ -39,7 +40,7 @@ ms.locfileid: "82763099"
   
 -   [使用命令呼叫預存程序](../../../ado/guide/data/calling-a-stored-procedure-with-a-command.md)  
   
--   [呼叫預存程式做為連線物件上的方法](../../../ado/guide/data/calling-a-stored-procedure-as-a-method-on-a-connection-object.md)  
+-   [在連線物件上呼叫預存程式做為方法](../../../ado/guide/data/calling-a-stored-procedure-as-a-method-on-a-connection-object.md)  
   
 -   [具名命令](../../../ado/guide/data/named-commands.md)  
   

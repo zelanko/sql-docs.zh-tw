@@ -1,4 +1,5 @@
 ---
+description: 設定 DQS 記錄檔的進階設定
 title: 設定 DQS 記錄檔的進階設定
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 95ddeb5c193e8b45cda0670419c890e503bbe05b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 48e953ae4cd86ba19edbcbadce68d12d1268d15a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894235"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449920"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>設定 DQS 記錄檔的進階設定
 
@@ -38,7 +39,7 @@ ms.locfileid: "85894235"
   
 -   您必須在想要修改 DQLog.Client.xml 檔案的電腦上，以 Administrators 群組成員的身分登入，才能設定 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 記錄設定。  
   
-##  <a name="configure-data-quality-server-log-settings"></a><a name="DQSServer"></a>設定資料品質伺服器記錄檔設定  
+##  <a name="configure-data-quality-server-log-settings"></a><a name="DQSServer"></a> 設定 Data Quality Server 記錄設定  
  在 DQS_MAIN 資料庫的 A_CONFIGURATION 資料表中， [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 記錄設定會以 XML 格式存在 **[ServerLogging]** 資料列的 **[VALUE]** 資料行中。 您可以執行下列 SQL 查詢，以便檢視組態資訊：  
   
 ```  
@@ -114,8 +115,8 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
 > [!NOTE]  
 >  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 記錄設定組態是以動態方式產生並儲存在 DQS_MAIN.Log 檔案中，而該檔案通常位於 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log (如果您安裝了 SQL Server 預設執行個體的話)。 不過，直接在此檔案中進行的變更不會保存，而且 DQS_MAIN 資料庫中 A_CONFIGURATION 資料表的組態設定會覆寫這些變更。  
   
-##  <a name="configure-data-quality-client-log-settings"></a><a name="DQSClient"></a>設定 Data Quality Client 記錄檔設定  
- [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]記錄設定設定檔（DQLog.Client.xml）通常是在 C:\Program FILES\MICROSOFT SQL server\130\tools\binn\dq\config。中提供。XML 檔案的內容類別似于您稍早針對記錄檔設定所修改的 XML 檔案 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 。 若要設定 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 記錄設定：  
+##  <a name="configure-data-quality-client-log-settings"></a><a name="DQSClient"></a> 設定 Data Quality Client 記錄檔設定  
+ [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]記錄設定設定檔 DQLog.Client.xml 通常位於 C:\Program FILES\MICROSOFT SQL Server\130\Tools\Binn\DQ\config。XML 檔案的內容類別似您稍早針對記錄檔設定所修改的 XML 檔案 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 。 若要設定 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 記錄設定：  
   
 1.  以系統管理員的身分執行任何 XML 編輯工具或 [記事本]。  
   

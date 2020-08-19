@@ -1,5 +1,6 @@
 ---
-title: CacheSize 屬性範例（VB） |Microsoft Docs
+description: CacheSize 屬性範例 (VB)
+title: " (VB) 的 CacheSize 屬性範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a237ffdb-6e5b-47c6-9901-d5cdbe8625f3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 166f18abc1adac56640374ef6e0ce5405e7fdc54
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fab0cc27720b6f5cff48441eef047dd219311c93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758894"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451080"
 ---
 # <a name="cachesize-property-example-vb"></a>CacheSize 屬性範例 (VB)
-這個範例會使用[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)屬性來顯示使用和不含30筆記錄快取所執行之作業的效能差異。  
+這個範例會使用 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) 屬性來顯示以和沒有30個記錄快取執行之作業的效能差異。  
   
 ```  
 'BeginCacheSizeVB  
@@ -120,5 +121,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [CacheSize 屬性（ADO）](../../../ado/reference/ado-api/cachesize-property-ado.md)   
+ [ (ADO) 的 CacheSize 屬性 ](../../../ado/reference/ado-api/cachesize-property-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

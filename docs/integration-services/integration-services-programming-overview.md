@@ -1,4 +1,5 @@
 ---
+description: Integration Services 程式設計概觀
 title: Integration Services 程式設計概觀 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ab3c2cdbb0e7c4628b757ab25f75d848e0a62887
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 3176e2d97a4a38172dc540a57b87006f599e29c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87952435"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449864"
 ---
 # <a name="integration-services-programming-overview"></a>Integration Services 程式設計概觀
 

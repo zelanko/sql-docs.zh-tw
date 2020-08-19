@@ -1,4 +1,5 @@
 ---
+description: Integration Services (SSIS) 封裝
 title: Integration Services (SSIS) 套件 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/31/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 34da25ac87cbcfbeb815b4053d60c390a9140f5d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 666e61788f402d405354f21bf583aa3f2e0b8286
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917508"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449810"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services (SSIS) 封裝
 
@@ -95,7 +96,7 @@ ms.locfileid: "86917508"
 |**Diagnostic**|提供影響封裝執行之系統組態的相關資訊，例如可以同時執行的可執行檔數目。|  
   
 ## <a name="set-the-properties-of-a-package"></a>設定套件的屬性  
- 您可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [屬性] 視窗中，或以程式設計方式設定屬性。  
+ 您可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [屬性]**** 視窗中，或以程式設計方式設定屬性。  
   
  如需如何使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]來設定這些屬性的詳細資訊，請參閱 [設定封裝屬性](../integration-services/set-package-properties.md)。  
   
@@ -111,7 +112,7 @@ ms.locfileid: "86917508"
 ## <a name="related-tasks"></a>相關工作  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 用來建立封裝的工具除了 [!INCLUDE[ssIS](../includes/ssis-md.md)] 物件模型之外，還包含兩項圖形工具：[ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 設計師] 和 [ [!INCLUDE[ssIS](../includes/ssis-md.md)] 匯入和匯出精靈]。 如需詳細資訊，請參閱下列主題。  
   
--   [使用 SQL Server 匯入和匯出精靈來匯入和匯出資料](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)  
+-   [使用 SQL Server 匯入和匯出精靈來匯入或匯出資料](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)  
   
 -   [在 SQL Server Data Tools 中建立套件](../integration-services/create-packages-in-sql-server-data-tools.md)  
   

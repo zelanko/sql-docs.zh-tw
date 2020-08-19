@@ -1,4 +1,5 @@
 ---
+description: Lock:Escalation 事件類別
 title: Lock:Escalation 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: d253b44c-7600-4afa-a3a7-03cc937c6a4b
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ec405817bc9ce89dd150adfcc2887ba2c703d556
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c1a4185e9234d9ee0a19acc0dfba0879c31ccfc3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737208"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448658"
 ---
 # <a name="lockescalation-event-class"></a>Lock:Escalation 事件類別
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

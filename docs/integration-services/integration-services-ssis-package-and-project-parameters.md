@@ -1,4 +1,5 @@
 ---
+description: Integration Services (SSIS) 套件和專案參數
 title: 套件和專案參數 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b32c0b24aea8e1a55060b501fd001c1ad7f90b36
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: c6949a8130601bf0bf3ffac5903d7584a16d7d83
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248027"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449821"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services (SSIS) 套件和專案參數
 

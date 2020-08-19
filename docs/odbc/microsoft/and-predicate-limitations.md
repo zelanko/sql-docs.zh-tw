@@ -1,4 +1,5 @@
 ---
+description: AND 述詞限制
 title: AND 述詞限制 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b9f363af-a60a-40f0-9c22-28aa7b159e06
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3d490dfa6466442532a7d3a35da031f4ed2dd4f0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b97975e8bc0fa5884830453aaa366f4d44716f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304669"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449560"
 ---
 # <a name="and-predicate-limitations"></a>AND 述詞限制
-最多支援40。
+最多可支援40。

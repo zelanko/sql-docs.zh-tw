@@ -1,4 +1,5 @@
 ---
+description: Integration Services 錯誤和訊息參考
 title: Integration Services 錯誤和訊息參考 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2020
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 32d2870ed0c64919b325a5a267ce695323bf4e04
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c2e520aaf997bb5c03b84e8ed9df8b426972b5a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917584"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449895"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 錯誤和訊息參考
 
@@ -2324,7 +2325,7 @@ ms.locfileid: "86917584"
 |0xC8000002|-939524094|DTSBC_E_INCORRECTEXACTNUMBEROFTOTALOUTPUTS|輸出和錯誤輸出的總數 %1!lu! 不正確。 必須正好是 %2!lu!。|  
 |0xC8000003|-939524093|DTSBC_E_FAILEDTOGETOUTPUTBYINDEX|無法使用索引 %1!lu! 擷取輸出。|  
 |0xC8000005|-939524091|DTSBC_E_INCORRECTEXACTNUMBEROFERROROUTPUTS|錯誤輸出數目 %1!lu! 不正確。 必須正好是 %2!lu!。|  
-|0xC8000006|-939524090|DTSBC_E_INVALIDVALIDATIONSTATUSVALUE|不正確的驗證狀態值 "%1!lu! " 包含不支援的資料類型。  必須是 DTSValidationStatus 列舉的其中一個值。|  
+|0xC8000006|-939524090|DTSBC_E_INVALIDVALIDATIONSTATUSVALUE|不正確的驗證狀態值 "%1!lu! ".  必須是 DTSValidationStatus 列舉的其中一個值。|  
 |0xC8000007|-939524089|DTSBC_E_INPUTHASNOOUTPUT|輸入"%1!lu!" 沒有同步輸出。|  
 |0xC8000008|-939524088|DTSBC_E_INPUTHASNOERROROUTPUT|輸入"%1!lu!" 沒有同步錯誤輸出。|  
 |0xC8000009|-939524087|DTSBC_E_INVALIDHTPIVALUE|HowToProcessInput 值 %1!lu! 無效。 必須是 HowToProcessInput 列舉的其中一個值。|  

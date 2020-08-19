@@ -1,4 +1,5 @@
 ---
+description: Integration Services 教學課程
 title: Integration Services 教學課程 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e74217c8-234a-4095-b3c0-5870707e5a87
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b33d565e73983ee1980998142478294ee7ef966b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b71ccf9806cb6451a171e561329757dc78a63201
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917464"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449761"
 ---
 # <a name="integration-services-tutorials"></a>Integration Services 教學課程
 

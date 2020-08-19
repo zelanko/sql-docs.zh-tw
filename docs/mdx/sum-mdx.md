@@ -1,5 +1,6 @@
 ---
-title: Sum （MDX） |Microsoft Docs
+description: Sum (MDX)
+title: Sum (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: eb4e9d55ef2228404dd9113170066e4a3612a0a1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f65525836157f5ac106cfa7ba0d5458689583def
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036669"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449620"
 ---
 # <a name="sum-mdx"></a>Sum (MDX)
 
@@ -66,7 +67,7 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
- 下列範例會使用 WITH MEMBER 關鍵字和**SUM**函數來定義量值維度中的匯出成員，其中包含 Geography 維度中 Country 屬性階層之加拿大和美國成員的「轉售商銷售量」量值總和。  
+ 下列範例會使用 WITH MEMBER 關鍵字和 **SUM** 函數來定義量值維度中的匯出成員，其中包含 Geography 維度中 Country 屬性階層的 [轉售商銷售量] 量值總和。  
   
 ```  
 WITH MEMBER Measures.NorthAmerica AS SUM   
@@ -80,7 +81,7 @@ SELECT {[Measures].[NorthAmerica]} ON 0,
 FROM [Adventure Works]  
 ```  
   
- **SUM**函數通常會與**CURRENTMEMBER**函式搭配使用，而這類函數會傳回根據階層 CURRENTMEMBER 而**有所不同的集合**。 例如，下列查詢會傳回從日曆年度開始到 Rows 軸上所顯示日期之間所有日期的 Internet Sales Amount 量值總和。  
+ **SUM**函數通常會搭配**CURRENTMEMBER**函數或**YTD**之類的函數使用，這些函數會傳回根據階層 CURRENTMEMBER 而改變的集合。 例如，下列查詢會傳回從日曆年度開始到 Rows 軸上所顯示日期之間所有日期的 Internet Sales Amount 量值總和。  
   
  `WITH MEMBER MEASURES.YTDSUM AS`  
   

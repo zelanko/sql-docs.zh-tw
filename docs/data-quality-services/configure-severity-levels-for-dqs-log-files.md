@@ -1,4 +1,5 @@
 ---
+description: 為 DQS 記錄檔設定嚴重性層級
 title: 為 DQS 記錄檔設定嚴重性層級
 ms.date: 03/01/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 068ae31abe61fac86d740fe3e03787fd32dde465
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6a23806f7b7def561d7cecc8e1592772c5675f58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894224"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449910"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>為 DQS 記錄檔設定嚴重性層級
 
@@ -49,14 +50,14 @@ ms.locfileid: "85894224"
 ####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_administrator 角色，才能設定記錄嚴重性設定。  
   
-##  <a name="configure-severity-levels-at-activity-level"></a><a name="ConfigureActivity"></a>在活動層級設定嚴重性層級  
- 您可以在 DQS 中設定以下活動的記錄嚴重性設定：定義域管理、知識探索、比對原則、資料清理、資料比對和參考資料服務。 若要這樣做：  
+##  <a name="configure-severity-levels-at-activity-level"></a><a name="ConfigureActivity"></a> 在活動層級設定嚴重性層級  
+ 您可以在 DQS 中設定以下活動的記錄嚴重性設定：定義域管理、知識探索、比對原則、資料清理、資料比對和參考資料服務。 操作方法：  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
 2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，按一下 **[組態]**。  
   
-3.  接下來，按一下 [**記錄檔設定**] 索引標籤。以下列出您可以選取嚴重性層級的 DQS 活動： [**定義域管理**]、[**知識探索**]、 **[清理專案（例如 RDS）**]、[比對**原則] 和**[比對專案] 和 [ **RDS**]。  
+3.  接著，按一下 [ **記錄檔設定** ] 索引標籤。以下列出您可以選取嚴重性層級的 DQS 活動： [ **定義域管理**]、[ **知識探索**]、[ **清理專案] (例如 [Rds) **、比對 **原則和**比對專案] 和 [ **rds**]。  
   
 4.  如果是 DQS 活動，請選取您想要記錄的嚴重性層級。 您可以選取下列其中一項： **[嚴重錯誤]**、 **[錯誤]**、 **[警告]**、 **[資訊]** 和 **[偵錯]**。 例如，如果您希望在知識探索活動中，只將嚴重訊息寫入 DQS 記錄檔，請針對 **[知識探索]** 活動於下拉式清單中選取 **[嚴重錯誤]** 。  
   
@@ -65,7 +66,7 @@ ms.locfileid: "85894224"
   
 5.  按一下 [關閉] 。  
   
-##  <a name="configure-severity-levels-at-module-level-advanced"></a><a name="ConfigureModule"></a>設定模組層級的嚴重性等級（Advanced）  
+##  <a name="configure-severity-levels-at-module-level-advanced"></a><a name="ConfigureModule"></a> 在模組層級設定嚴重性層級 (Advanced)   
  **[記錄檔設定]** 索引標籤中的 **[進階]** 區段可讓您在模組層級設定記錄嚴重性設定。 模組是 DQS 系統組件，可在 DQS 中實作某項功能內的各種不同功能。 例如，定義域管理活動包含類似以下的各種功能：定義定義域規則、定義規則條件、定義複合定義域的跨定義域規則等。  
   
  有時活動層級的資料粒度層級並不夠。 您可能會想要調查活動內的特定模組中是否發生問題。 它可幫助您選擇在模組層級設定記錄嚴重性，以便更精確地隔離和追蹤問題。  

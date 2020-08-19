@@ -1,4 +1,5 @@
 ---
+description: 建立複合定義域
 title: 建立複合定義域
 ms.date: 11/22/2011
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 4af1fc255fd5691b3caaf3f5ce92a28740d1b7b1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2ea7a9297f7a2f5e05a23bcab32b10922847882b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900482"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449890"
 ---
 # <a name="create-a-composite-domain"></a>建立複合定義域
 
@@ -39,7 +40,7 @@ ms.locfileid: "85900482"
 ####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能建立複合定義域。  
   
-##  <a name="create-a-composite-domain-in-the-knowledge-discovery-activity"></a><a name="ParsingKnowledgeDiscoveryActivity"></a>在知識探索活動中建立複合定義域  
+##  <a name="create-a-composite-domain-in-the-knowledge-discovery-activity"></a><a name="ParsingKnowledgeDiscoveryActivity"></a> 在知識探索活動中建立複合定義域  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -55,7 +56,7 @@ ms.locfileid: "85900482"
   
 7.  按一下 **[建立複合定義域]** 圖示。  
   
-##  <a name="create-a-composite-domain-in-the-domain-management-activity"></a><a name="DomainManagementActivity"></a>在定義域管理活動中建立複合定義域  
+##  <a name="create-a-composite-domain-in-the-domain-management-activity"></a><a name="DomainManagementActivity"></a> 在定義域管理活動中建立複合定義域  
   
 1.  在 Data Quality Services 用戶端首頁中，按一下 **[開啟知識庫]** ，然後選取知識庫，或是按一下 **[新增知識庫]** ，並輸入新知識庫的屬性。  
   
@@ -69,15 +70,15 @@ ms.locfileid: "85900482"
   
 6.  在 **[定義域清單]** 中，選取將屬於複合定義域之一部分的定義域，並按一下向右箭號，將其移到 **[複合定義域中的定義域]** 資料表。  
   
-7.  按一下 [確定] 。  
+7.  按一下 [確定]。  
   
-##  <a name="set-composite-domain-properties"></a><a name="CompositeDomainProperties"></a>設定複合定義域屬性  
+##  <a name="set-composite-domain-properties"></a><a name="CompositeDomainProperties"></a> 設定複合定義域屬性  
   
 1.  在 **[建立複合定義域]** 對話方塊中，輸入知識庫特有的名稱以及最多 256 個字元的描述。  
   
 2.  在 **[定義域清單]** 中，選取將屬於複合定義域之一部分的定義域，並按一下向右箭號，將其移到 **[複合定義域中的定義域]** 資料表。 這是單一定義域的清單，您可將其加入至您所建立的複合定義域。 只有已經建立而且尚未加入至現有複合定義域的單一定義域才可使用。 單一定義域不能加入至知識庫內一個以上的複合定義域，而且複合定義域不能加入至另一個複合定義域。  
   
-3.  按一下 [進階]****。  
+3.  按一下 **[進階]** 。  
   
 4.  針對 **[剖析方法]** 選取下列其中一項：  
   
@@ -91,10 +92,10 @@ ms.locfileid: "85900482"
   
 6.  按一下 **[完成]** ，完成定義域管理活動，如＜ [結束定義域管理活動](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)＞中所述。  
   
-##  <a name="follow-up-after-creating-a-composite-domain"></a><a name="FollowUp"></a>後續操作：建立複合定義域之後  
+##  <a name="follow-up-after-creating-a-composite-domain"></a><a name="FollowUp"></a> 後續操作：建立複合定義域之後  
  在建立複合定義域之後，您可以針對定義域執行其他定義域管理工作、執行知識探索來將知識加入至定義域，或者將比對原則加入至定義域。 如需詳細資訊，請參閱[執行知識探索](../data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../data-quality-services/managing-a-domain.md)或[建立比對原則](../data-quality-services/create-a-matching-policy.md)。  
   
-##  <a name="knowledge-based-parsing"></a><a name="KnowledgeBaseParsing"></a>以知識為基礎的剖析  
+##  <a name="knowledge-based-parsing"></a><a name="KnowledgeBaseParsing"></a> 以知識為基礎的剖析  
  Data Quality Services 可讓您根據知識來剖析資料，而不只是根據分隔符號或順序。 當複雜來源資料對應至複合定義域，而且您並未使用參考資料服務時，將會使用以知識為基礎的剖析。 您可以使用以知識為基礎的剖析，將資料來源中的資料剖析成相關的單一定義域。 當使用以知識為基礎的剖析時，DQS 會先嘗試使用知識將複雜資料剖析成單一定義域。 如果可能的話，它會將字串的若干部分識別為在一個或多個定義域中，並將字串剖析為其各個定義域。 例如，假設您將 "John B. Doe" 當做完整名稱欄位中的複雜值，而該欄位是由「完整名稱」複合網域所表示。 如果 DQS 在「名字」網域中識別 "John"，在「姓氏」網域中識別 "Doe"， 則 DQS 會根據網域知識將 “B.” 加入「中間名」網域中。  
   
  只有當您同時選取以分隔符號為基礎的剖析時，才可以使用以知識為基礎的剖析。 以知識為基礎的剖析不會取代分隔符號剖析，而是會將它增強。 只有當沒有知識存在時，DQS 才會使用分隔符號執行剖析。 在某些情況下，DQS 可能會判斷某些剖析是根據以知識為基礎的剖析，並判斷其他剖析是根據以分隔符號為基礎的剖析。  

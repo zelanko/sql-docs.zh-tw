@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_9955
 title: MSSQLSERVER_9955 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 77f30570-7790-4747-b372-eac71c036e19
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d2ba66554e258f1cc2e4f3b081ac4792b1a9abf9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6d58bb993cf9f4d6cac724d105bde28f9c05c77e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85636013"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448700"
 ---
 # <a name="mssqlserver_9955"></a>MSSQLSERVER_9955
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

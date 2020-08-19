@@ -1,4 +1,5 @@
 ---
+description: 結構描述區段
 title: 架構區段 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8222b697fec7d0dd5bd1f32425cf48761f25308e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2b7d3a82231e31771a6f01dc558feebdc98dcbe1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760894"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452890"
 ---
 # <a name="schema-section"></a>結構描述區段
-需要架構區段。 如前一個範例所示，ADO 會寫出每個資料行的詳細中繼資料，以盡可能保留資料值的語義以進行更新。 不過，若要在 XML 中載入，ADO 只需要資料行的名稱和它們所屬的資料列集。 以下是基本架構的範例：  
+需要架構區段。 如先前的範例所示，ADO 會寫出每個資料行的詳細中繼資料，盡可能地保留資料值的語法以進行更新。 不過，若要在 XML 中載入，ADO 只需要資料行的名稱和它們所屬的資料列集。 以下是基本架構的範例：  
   
 ```  
 <xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"  
@@ -40,10 +41,10 @@ ms.locfileid: "82760894"
 </xml>  
 ```  
   
- 在上述範例中，ADO 會將資料視為可變長度字串，因為架構中沒有包含型別資訊。  
+ 在上述範例中，ADO 會將資料視為可變長度的字串，因為架構中沒有包含任何類型資訊。  
   
 ## <a name="creating-aliases-for-column-names"></a>建立資料行名稱的別名  
- Rs： name 屬性可讓您建立資料行名稱的別名，讓易記名稱可以出現在資料列集所公開的資料行資訊中，而較短的名稱可能會用於 data 區段中。 例如，您可以修改先前的架構，將 ShipperID 對應至 s1、將其設為 s2，以及將電話到 s3，如下所示：  
+ Rs： name 屬性可讓您建立資料行名稱的別名，如此一來，資料列集所公開的資料行資訊中可能會出現易記的名稱，而且可能會在資料區段中使用較短的名稱。 例如，您可以修改先前的架構，將 ShipperID 對應至 s1、將其視為 s2 和 Phone 至 s3，如下所示：  
   
 ```  
 <s:Schema id="RowsetSchema">   
@@ -62,19 +63,19 @@ ms.locfileid: "82760894"
 </s:Schema>  
 ```  
   
- 然後，在 data 區段中，資料列會使用 name 屬性（而非 rs： name）來參考該資料行：  
+ 然後，在 [資料] 區段中，資料列會使用名稱屬性 (不是 rs： name) 參考該資料行：  
   
 ```  
 "<row s1="1" s2="Speedy Express" s3="(503) 555-9831"/>  
 ```  
   
- 每當資料行名稱不是 XML 中的有效屬性或標記名稱時，就需要建立資料行名稱的別名。 例如，"LastName" 必須有別名，因為具有內嵌空格的名稱是不正確屬性。 XML 剖析器不會正確處理下列程式程式碼，因此您必須為沒有內嵌空格的其他名稱建立別名。  
+ 每當資料行名稱不是 XML 的有效屬性或標記名稱時，就需要建立資料行名稱的別名。 例如，"LastName" 必須有別名，因為具有內嵌空格的名稱是不正確屬性。 XML 剖析器不會正確處理下列程式程式碼，因此您必須為沒有內嵌空格的其他名稱建立別名。  
   
 ```  
 <row last name="Jones"/>  
 ```  
   
- 在 XML 檔的架構和資料區段中，所有您用於 name 屬性的值都必須一致地用於每個位置。 下列範例顯示 s1 的一致使用：  
+ 任何您用於 name 屬性的值，都必須在每個資料行都是在 XML 檔的架構和資料區段中參考的位置，以一致的方式使用。 下列範例示範如何使用 s1 的一致性：  
   
 ```  
 <s:Schema id="RowsetSchema">  
@@ -95,10 +96,10 @@ ms.locfileid: "82760894"
 </rs:data>  
 ```  
   
- 同樣地，因為 `CompanyName` 在上一個範例中沒有定義的別名，所以 `CompanyName` 必須在整個檔中一致使用。  
+ 同樣地，因為 `CompanyName` 在先前的範例中並未定義別名，所以 `CompanyName` 必須在整個檔中一致地使用。  
   
 ## <a name="data-types"></a>資料類型  
- 您可以將資料類型套用至具有 dt： type 屬性的資料行。 如需允許之 XML 類型的最終指南，請參閱[W3C Xml 資料規格](http://www.w3.org/TR/1998/NOTE-XML-data/)的資料類型一節。 您可以透過兩種方式來指定資料類型：直接在資料行定義本身上指定 dt： type 屬性，或使用 s:datatype 結構做為資料行定義的嵌套元素。 例如，  
+ 您可以將資料類型套用至具有 dt： type 屬性的資料行。 如需允許的 XML 類型的最終指南，請參閱 [W3C Xml 資料規格](http://www.w3.org/TR/1998/NOTE-XML-data/)的資料類型一節。 您可以使用兩種方式來指定資料類型：直接在資料行定義上指定 dt： type 屬性，或使用 s:datatype 結構做為資料行定義的嵌套元素。 例如，  
   
 ```  
 <s:AttributeType name="Phone" >  
@@ -112,9 +113,9 @@ ms.locfileid: "82760894"
 <s:AttributeType name="Phone" dt:type="string"/>  
 ```  
   
- 如果您完全從資料列定義中省略 dt： type 屬性，則資料行的類型預設會是可變長度字串。  
+ 如果您完全從資料列定義中省略 dt： type 屬性，根據預設，資料行的類型會是可變長度的字串。  
   
- 如果您的型別資訊比單純的型別名稱（例如 dt： maxLength）還多，使用 s:datatype 子項目會更容易閱讀。 但這只是慣例，而不是必要條件。  
+ 如果您的類型資訊不只是類型名稱 (例如 dt： maxLength) ，它可讓您更容易閱讀使用 s:datatype 子項目。 但這只是慣例，而不是需求。  
   
  下列範例會進一步示範如何在您的架構中包含型別資訊。  
   
@@ -138,10 +139,10 @@ ms.locfileid: "82760894"
 <s:AttributeType name="title_id" dt:type="int"/>  
 ```  
   
- 第二個範例中的 rs： fixedlength 屬性有很細微的用法。 將 rs： fixedlength 屬性設定為 true 的資料行，表示資料必須具有架構中所定義的長度。 在此情況下，title_id 的有效值為 "123456"，其為 "123"。 不過，"123" 不是有效的，因為它的長度是3，而不是6。 如需 fixedlength 屬性的更完整描述，請參閱 OLE DB 程式設計人員指南。  
+ 第二個範例中的 rs： fixedlength 屬性有微妙的用法。 將 rs： fixedlength 屬性設為 true 的資料行，表示資料必須在架構中定義長度。 在此情況下，有效的 title_id 值為 "123456"，也就是 "123"。 不過，"123" 不是有效的，因為它的長度是3，而不是6。 如需 fixedlength 屬性的更完整說明，請參閱 OLE DB 程式設計人員指南。  
   
 ## <a name="handling-nulls"></a>處理 Null  
- Null 值是由 rs： maybenull 屬性處理。 如果此屬性設定為 true，則資料行的內容可以包含 null 值。 此外，如果在資料列中找不到該資料行，則從資料列集讀取資料的使用者將會從 IRowset：：數量詞（）取得 null 狀態。 請考慮來自「貨主」資料表的下列資料行定義。  
+ Null 值是由 rs： maybenull 屬性處理。 如果這個屬性設定為 true，則資料行的內容可以包含 null 值。 此外，如果在資料列中找不到資料行，則從資料列集讀取資料的使用者會從 IRowset：：取得 null 狀態， ( # A1。 請考慮下列來自 [貨主] 資料表的資料行定義。  
   
 ```  
 <s:AttributeType name="ShipperID">  
@@ -152,27 +153,27 @@ ms.locfileid: "82760894"
 </s:AttributeType>  
 ```  
   
- 定義允許 `CompanyName` null，但 `ShipperID` 不能包含 null 值。 如果 data 區段包含下列資料列，持續性提供者會將資料行的資料狀態設定 `CompanyName` 為 OLE DB 狀態常數 DBSTATUS_S_ISNull：  
+ 定義允許為 `CompanyName` null，但 `ShipperID` 不能包含 null 值。 如果 data 區段包含下列資料列，持續性提供者會將資料行的資料狀態設定 `CompanyName` 為 OLE DB 狀態常數 DBSTATUS_S_ISNull：  
   
 ```  
 <z:row ShipperID="1"/>  
 ```  
   
- 如果資料列完全是空的，如下所示，持續性提供者會傳回 DBSTATUS_E_UNAVAILABLE 的 OLE DB 狀態， `ShipperID` 並 DBSTATUS_S_ISNull 的名稱。  
+ 如果資料列完全是空的（如下所示），持續性提供者會傳回 DBSTATUS_E_UNAVAILABLE 的 OLE DB 狀態， `ShipperID` 並 DBSTATUS_S_ISNull 為公司。  
   
 ```  
 <z:row/>   
 ```  
   
- 請注意，長度為零的字串與 null 不同。  
+ 請注意，零長度的字串與 null 不同。  
   
 ```  
 <z:row ShipperID="1" CompanyName=""/>  
 ```  
   
- 在上一個資料列中，持續性提供者會傳回兩個數據行之 DBSTATUS_S_OK 的 OLE DB 狀態。 `CompanyName`在此案例中，只是 "" （長度為零的字串）。  
+ 針對前一個資料列，持續性提供者會傳回兩個數據行的 OLE DB 狀態為 DBSTATUS_S_OK。 `CompanyName`在此案例中，只是 "" (零長度的字串) 。  
   
- 如需有關 OLE DB 之 XML 檔的架構中可使用之 OLE DB 結構的詳細資訊，請參閱 "urn：架構-microsoft-com：資料列集" 的定義和 OLE DB 程式設計人員指南。  
+ 如需可用於 OLE DB 之 XML 檔架構內的 OLE DB 結構的詳細資訊，請參閱 "urn： schema-microsoft-com： rowset" 的定義和 OLE DB 程式設計人員指南。  
   
 ## <a name="see-also"></a>另請參閱  
  [以 XML 格式保存記錄](../../../ado/guide/data/persisting-records-in-xml-format.md)

@@ -1,4 +1,5 @@
 ---
+description: 課程 1-1 - 建立工作資料夾與環境變數
 title: 步驟 1：建立工作資料夾與環境變數 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 32e0f638af3978a0bf9b938b7131b7e86431f6a6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c91be2fffde29a362dd73da41159b4a4658bce3e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917431"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449738"
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>課程 1-1 - 建立工作資料夾與環境變數
 
@@ -36,9 +37,9 @@ ms.locfileid: "86917431"
   
 1.  以滑鼠右鍵按一下 [開始] 功能表，然後按一下 [檔案總管]。  
   
-2.  按一下 [本機磁碟 (C:)]  。  
+2.  按一下 [本機磁碟 (C:)]****。  
   
-3.  在 [檔案]  功能表上，指向 [新增]  ，然後按一下 [資料夾]  。  
+3.  在 [**檔案**] 功能表上，指向 [**新增**]，然後按一下 [**資料夾**]。  
   
 4.  將 [新資料夾] 重新命名為 **DeploymentTutorial**。  
   
@@ -46,21 +47,21 @@ ms.locfileid: "86917431"
   
 1.  在 **[開始]** 功能表上，按一下 **[控制台]** 。  
   
-2.  在 [控制台] 中，按兩下 [系統]  。  
+2.  在 [控制台] 中，按兩下 [系統]****。  
   
-3.  在 [系統內容]  對話方塊中，按一下 [進階]  索引標籤，然後按一下 [環境變數]  。  
+3.  在 [系統內容]**** 對話方塊中，按一下 [進階]**** 索引標籤，然後按一下 [環境變數]****。  
   
-4.  在 [環境變數]  對話方塊的 [系統變數]  框架中，按一下 [新增]  。  
+4.  在 [環境變數]**** 對話方塊的 [系統變數]**** 框架中，按一下 [新增]****。  
   
-5.  在 [新增系統變數] 對話方塊的 [變數名稱] 方塊中輸入 **DataTransfer**，並在 [變數值] 方塊中輸入 **C:\DeploymentTutorial\datatransferconfig.dtsconfig**。  
+5.  在 [新增系統變數]**** 對話方塊的 [變數名稱]**** 方塊中輸入 **DataTransfer**，並在 [變數值]**** 方塊中輸入 **C:\DeploymentTutorial\datatransferconfig.dtsconfig**。  
   
 6.  按一下 [確定]  。  
   
-7.  再次按一下 [新增]，然後在 [變數名稱] 方塊中輸入 **LoadXMLData**，並在 [變數值] 方塊中輸入 **C:\DeploymentTutorial\loadxmldataconfig.dtsconfig**。  
+7.  再次按一下 [新增]****，然後在 [變數名稱]**** 方塊中輸入 **LoadXMLData**，並在 [變數值]**** 方塊中輸入 **C:\DeploymentTutorial\loadxmldataconfig.dtsconfig**。  
   
-8.  按一下 [確定]  ，結束 [環境變數]  對話方塊。  
+8.  按一下 [確定]****，結束 [環境變數]**** 對話方塊。  
   
-9. 按一下 [確定]  ，結束 [系統內容]  對話方塊。  
+9. 按一下 [確定]****，結束 [系統內容]**** 對話方塊。  
   
 10. 選擇性重新啟動電腦。 如果不重新啟動電腦，新的變數名稱不會在「封裝組態精靈」中顯示，但您仍然可以使用這個名稱。  
   
@@ -68,26 +69,26 @@ ms.locfileid: "86917431"
   
 1.  在 **[開始]** 功能表上，按一下 **[控制台]** 。  
   
-2.  在 [控制台] 中，按兩下 [系統]  。  
+2.  在 [控制台] 中，按兩下 [系統]****。  
   
-3.  在 [系統內容]  對話方塊中，按一下 [進階]  索引標籤，然後按一下 [環境變數]  。  
+3.  在 [系統內容]**** 對話方塊中，按一下 [進階]**** 索引標籤，然後按一下 [環境變數]****。  
   
-4.  在 [環境變數]  對話方塊的 [系統變數]  框架中，按一下 [新增]  。  
+4.  在 [環境變數]**** 對話方塊的 [系統變數]**** 框架中，按一下 [新增]****。  
   
-5.  在 [新增系統變數] 對話方塊的 [變數名稱] 方塊中輸入 **DataTransfer**，並在 [變數值] 方塊中輸入 **C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig** 。  
+5.  在 [新增系統變數]**** 對話方塊的 [變數名稱]**** 方塊中輸入 **DataTransfer**，並在 [變數值]**** 方塊中輸入 **C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig** 。  
   
 6.  按一下 [確定]  。  
   
-7.  再次按一下 [新增]，然後在 [變數名稱] 方塊中輸入 **LoadXMLData**，並在 [變數值] 方塊中輸入 **C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig**。  
+7.  再次按一下 [新增]****，然後在 [變數名稱]**** 方塊中輸入 **LoadXMLData**，並在 [變數值]**** 方塊中輸入 **C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig**。  
   
-8.  按一下 [確定]  ，結束 [環境變數]  對話方塊。  
+8.  按一下 [確定]****，結束 [環境變數]**** 對話方塊。  
   
-9. 按一下 [確定]  ，結束 [系統內容]  對話方塊。  
+9. 按一下 [確定]****，結束 [系統內容]**** 對話方塊。  
   
 10. 選擇性重新啟動電腦。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
-[步驟 2：建立部署專案](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
+[步驟 2:建立部署專案](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
   
   
   

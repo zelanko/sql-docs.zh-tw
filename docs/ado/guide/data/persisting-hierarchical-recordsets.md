@@ -1,4 +1,5 @@
 ---
+description: 保存階層式資料錄集
 title: 保存階層式記錄集 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 43798bb5-98a6-4ad6-9bf8-78154b3a1827
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9c671adb19bd2e955b67ce23f268738ccf9033f5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4bfcb79e532609ad9b3eeb14fb07dec4fd1239f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763119"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453050"
 ---
 # <a name="persisting-hierarchical-recordsets"></a>保存階層式資料錄集
-您可以藉由呼叫[save](../../../ado/reference/ado-api/save-method.md)方法，將階層式**記錄集**儲存為 ADTG 或 XML 格式的檔案。 不過，將階層式**記錄集**儲存為 xml 格式時，會有兩項限制：如果階層式**記錄集**包含暫止的更新，您就無法儲存在 xml 中，而且您無法儲存參數化階層式**記錄集**。  
+您可以藉由呼叫[save](../../../ado/reference/ado-api/save-method.md)方法，將階層式**記錄集**儲存為 ADTG 或 XML 格式的檔案。 不過，以 XML 格式儲存階層式 **記錄集**時，會套用兩項限制：如果階層式 **記錄集** 包含暫止的更新，您就無法在 xml 中儲存，而且無法儲存參數化階層式 **記錄集**。  
   
- 如需資料成形提供者的詳細資訊，請參閱適用于[OLE DB 的 Microsoft 資料成形服務](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)（ADO）和[OLE DB 的資料成形服務總覽](https://msdn.microsoft.com/9f51e471-8e85-448e-9fb8-b64bbf767bf3)。  
+ 如需資料成形提供者的詳細資訊，請參閱適用 [于 OLE DB 的 Microsoft 資料成形服務](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (ADO) 和 [OLE DB 的資料成形服務總覽](https://msdn.microsoft.com/9f51e471-8e85-448e-9fb8-b64bbf767bf3)。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料成形範例](../../../ado/guide/data/data-shaping-example.md)   
- [正式圖形文法](../../../ado/guide/data/formal-shape-grammar.md)   
+ [正式式圖形文法](../../../ado/guide/data/formal-shape-grammar.md)   
  [一般 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)
