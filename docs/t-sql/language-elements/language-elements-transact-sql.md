@@ -1,4 +1,5 @@
 ---
+description: 語言項目 (Transact-SQL)
 title: 語言元素 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -13,12 +14,12 @@ ms.assetid: e9b8daff-b72f-4a53-907d-5a83a78785ec
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dd664349d144046a5589c494717d5b44471fdc31
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ea69ecefe9af08709601ce44ed8f7395927b6c54
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007333"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422472"
 ---
 # <a name="language-elements-transact-sql"></a>語言項目 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

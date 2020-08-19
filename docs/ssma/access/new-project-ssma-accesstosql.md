@@ -1,4 +1,5 @@
 ---
+description: '新專案 (SSMA)  (AccessToSQL) '
 title: 新專案 (SSMA)  (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -11,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: ca294f6d-eeb5-42ca-9306-156281a3f0f3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 61c14895f2e464713661f74890b2eb1d5ccc79f5
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 042634d7b08d4aa37c8efccbec2055e984b057a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937794"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423012"
 ---
 # <a name="new-project-ssma-accesstosql"></a>新專案 (SSMA)  (AccessToSQL) 
-使用 [**新增專案**] 對話方塊來建立新的 SSMA 專案。 若要存取 [**新增專案**] 對話方塊，請**在 [檔案] 功能表上**，按一下 [**新增專案**]。  
+使用 [ **新增專案** ] 對話方塊來建立新的 SSMA 專案。 若要存取 [ **新增專案** ] 對話方塊，請按一下 [檔案 **] 功能表上** 的 [ **新增專案**]。  
   
 ## <a name="options"></a>選項。  
 **名稱**  
   
-輸入專案的名稱。 SSMA 將會附加副檔名。  
+輸入專案的名稱。 SSMA 會附加副檔名。  
   
 **位置**  
   
@@ -40,13 +41,13 @@ ms.locfileid: "87937794"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
 -   SQL Azure  
   
 > [!IMPORTANT]  
-> 「SQL Azure」類型的新專案需要 SQL Server Native Client (SNAC) 10.5 版或更新版本，才能將存取資料表連結到 Azure SQL Database。   
-> 您可以從[Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272)取得最新版本的 SNAC。  
+> ' SQL Azure ' 類型的新專案需要 SQL Server Native Client (SNAC) 10.5 版或更新版本，才能將存取權資料表連結到 Azure SQL Database。   
+> 您可以從 [Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272)取得最新版本的 SNAC。  
   

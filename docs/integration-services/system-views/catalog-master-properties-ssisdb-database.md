@@ -1,4 +1,5 @@
 ---
+description: catalog.master_properties (SSISDB 資料庫)
 title: catalog.master_properties (SSISDB 資料庫) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/16/2016
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 00bfa716-5390-48e3-b30c-d954d5e0be47
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fbbb6599c4b50e30b566a9ec105b44d1b2853b9c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 09e13f54b3e7ee92ed72b055246ea1235845448f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912514"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422052"
 ---
 # <a name="catalogmaster_properties-ssisdb-database"></a>catalog.master_properties (SSISDB 資料庫)
 
@@ -25,11 +26,11 @@ ms.locfileid: "86912514"
 
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|property_name|**nvarchar(256)**|擴增主要屬性的名稱。|  
-|property_value|**nvarchar(max)**|擴增主要屬性的值。|
+|property_name|**nvarchar(256)**|相應放大主要屬性的名稱。|  
+|property_value|**nvarchar(max)**|相應放大主要屬性的值。|
 
 ## <a name="remarks"></a>備註
-這個檢視會顯示每個擴增主要屬性的資料列。 這個檢視會顯示的屬性包括：
+這個檢視會顯示每個相應放大主要屬性的資料列。 這個檢視會顯示的屬性包括：
 
 |屬性名稱|描述|  
 |-------------------|-----------------| 

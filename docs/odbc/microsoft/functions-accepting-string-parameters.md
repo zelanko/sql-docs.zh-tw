@@ -1,4 +1,5 @@
 ---
+description: 接受字串參數的函式
 title: 接受字串參數的函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 869b8421-f71e-4dfd-adce-691bd3012b16
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 01d0f143c72f57e946f7fe2bf52a50910d4e56aa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f634e65260332851d02d2fe67302f03529a6ff7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286298"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421852"
 ---
 # <a name="functions-accepting-string-parameters"></a>接受字串參數的函式
-所有接受字串參數的函式都會轉換成 Unicode。 （將會匯出函數的 "W" 形式）。位元組計數會轉換成這些適用 ODBC Api 的字元計數。 這適用于下列函數：  
+所有採用字串參數的函數都會轉換成 Unicode。  (將匯出函式的 "W" 形式。 ) 的位元組計數會轉換成適用之 ODBC Api 的字元計數。 這適用于下列功能：  
   
 -   **SQLConnect**  
   
@@ -34,7 +35,7 @@ ms.locfileid: "81286298"
   
 -   **SQLDescribeCol**  
   
--   **SQLError** （由**SQLGetDiagField**取代）  
+-   **SQLError** (取代了 **SQLGetDiagField**)   
   
 -   **SQLExecDirect**  
   
@@ -46,9 +47,9 @@ ms.locfileid: "81286298"
   
 -   **SQLGetInfo**  
   
--   **SQLGetStmtOption** （變成**SQLGetStmtAttr**）  
+-   **SQLGetStmtOption** (變成 **SQLGetStmtAttr**)   
   
--   **SQLSetStmtOption** （變成**SQLSetStmtAttr**）  
+-   **SQLSetStmtOption** (變成 **SQLSetStmtAttr**)   
   
 -   **SQLGetConnectOption**  
   

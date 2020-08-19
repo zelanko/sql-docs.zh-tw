@@ -1,4 +1,5 @@
 ---
+description: 建立連結的伺服器 (SQL Server Database Engine)
 title: 建立連結的伺服器
 ms.date: 01/24/2020
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e1bb0bc0ec1b16af3882880ac1d528a8c7907994
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 8d678f4950a493543e11878cc09e6cd23fb66b5b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823738"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424080"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>建立連結的伺服器 (SQL Server Database Engine)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

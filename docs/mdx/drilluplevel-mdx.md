@@ -1,5 +1,6 @@
 ---
-title: DrillupLevel （MDX） |Microsoft Docs
+description: DrillupLevel (MDX)
+title: DrillupLevel (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ef2f94eb843b3ffbfbb67eb6ca01f2114522e024
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cfdb8e77fcb92fe208e83f45c32a5c20c5d29615
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68049226"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421902"
 ---
 # <a name="drilluplevel-mdx"></a>DrillupLevel (MDX)
 
@@ -35,9 +36,9 @@ DrillupLevel(Set_Expression [ , Level_Expression ] )
  傳回層級的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- **DrillupLevel**函數會根據指定集合中包含的成員，傳回以階層方式組織的成員集合。 會保留指定集合中成員的順序。  
+ **DrillupLevel**函式會根據指定的集合中包含的成員，傳回以階層方式組織的一組成員。 會保留指定集合中成員的順序。  
   
- 如果指定了層級運算式， **DrillupLevel**函數只會抓取指定層級之上的那些成員，藉以建立集合。 如果指定層級運算式，而且在指定集合中沒有代表該指定層級的成員，則會傳回指定的集合。  
+ 如果指定了層級運算式， **DrillupLevel** 函式只會抓取高於指定層級的成員來建立集合。 如果指定層級運算式，而且在指定集合中沒有代表該指定層級的成員，則會傳回指定的集合。  
   
  如果沒有指定層級運算式，此函數只會擷取比指定集合中所參考之第一個維度的最低層級還要再高一個層級的那些成員，來建構集合。  
   

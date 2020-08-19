@@ -1,5 +1,6 @@
 ---
-title: SQLGetInfo （Access 驅動程式） |Microsoft Docs
+description: SQLGetInfo (Access 驅動程式)
+title: SQLGetInfo (Access 驅動程式) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,31 +14,31 @@ helpviewer_keywords:
 ms.assetid: c226aba7-a2f4-4b32-b640-92654b40e5a7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9a9208ce32faa221d543baf62e2169e4523ae437
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 11e725665171b85f994e45bc071b7cd2d9f01880
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298588"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421772"
 ---
 # <a name="sqlgetinfo-access-driver"></a>SQLGetInfo (Access 驅動程式)
 > [!NOTE]  
->  本主題提供存取驅動程式特定的資訊。 如需此函數的一般資訊，請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)底下的適當主題。  
+>  本主題提供存取驅動程式特定的資訊。 如需此函數的一般資訊，請參閱 [ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)下的適當主題。  
   
- **SQLGetInfo**支援 SQL_FILE_USAGE 資訊類型。 傳回的值是16位整數，表示驅動程式如何直接處理資料來源中的檔案：  
+ **SQLGetInfo** 支援 SQL_FILE_USAGE 資訊類型。 傳回的值為16位整數，指出驅動程式如何直接處理資料來源中的檔案：  
   
 -   SQL_FILE_NOT_SUPPORTED-驅動程式不是一層式驅動程式。  
   
--   SQL_FILE_TABLE-一層式驅動程式會將資料來源中的檔案視為資料表。  
+-   SQL_FILE_TABLE-單一層驅動程式會將資料來源中的檔案視為資料表。  
   
--   SQL_FILE_QUALIFIER-一層式驅動程式會將資料來源中的檔案視為辨識符號。  
+-   SQL_FILE_QUALIFIER-單一層驅動程式會將資料來源中的檔案視為限定詞。  
   
  ODBC 驅動程式會傳回 SQL_FILE_QUALIFIER，因為每個檔案都是完整的資料庫。  
   
 ## <a name="sql_bookmark_persistence"></a>SQL_BOOKMARK_PERSISTENCE  
  SQL_BP_SCROLL &#124; SQL_BP_UPDATE [1]  
   
- [1] 書簽會在認可之後保存，但在回復後不會保存。  
+ [1] 書簽會在認可之後保存，但是在復原之後不會保存。  
   
 ## <a name="sql_convert_binary"></a>SQL_CONVERT_BINARY  
  SQL_CVT_DOUBLE &#124; SQL_CVT_FLOAT &#124; SQL_CVT_INTEGER &#124; SQL_CVT_NUMERIC &#124; SQL_CVT_REAL &#124; SQL_CVT_SMALLINT &#124; SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
@@ -100,7 +101,7 @@ ms.locfileid: "81298588"
 ||4.0|04.00.0000|  
   
 > [!NOTE]  
->  不支援版本1.0 和1.1。 此外，Microsoft Access 版本3.0、7.0 和97中的資料格式不會有任何差異。  
+>  不支援版本1.0 和1.1。 此外，Microsoft Access 版本3.0、7.0 和97中的資料格式沒有任何差異。  
   
 ## <a name="sql_ddl_index"></a>SQL_DDL_INDEX  
  SQL_DL_CREATE_INDEX  
@@ -111,7 +112,7 @@ ms.locfileid: "81298588"
  SQL_GD_ANY_ORDER &#124; SQL_GD_ANY_COLUMN &#124; SQL_GD_BLOCK &#124; SQL_GD_BOUND  
   
 ## <a name="sql_keywords"></a>SQL_KEYWORDS  
- 拉丁字母  
+ 字母  
   
  AUTOINCREMENT  
   
@@ -121,17 +122,17 @@ ms.locfileid: "81298588"
   
  BYTE  
   
- 抵禦  
+ 計數器  
   
  CURRENCY  
   
  DATABASE  
   
- 名稱  
+ DATABASE  
   
  DATETIME  
   
- 接受  
+ 禁止  
   
  DISTINCTROW  
   
@@ -157,7 +158,7 @@ ms.locfileid: "81298588"
   
  INTEGER4  
   
- 合乎  
+ 邏輯  
   
  LOGICAL1  
   
@@ -169,7 +170,7 @@ ms.locfileid: "81298588"
   
  LONGTEXT  
   
- 備忘  
+ 備忘錄  
   
  MONEY  
   
@@ -189,7 +190,7 @@ ms.locfileid: "81298588"
   
  SHORT  
   
- 單機  
+ 單  
   
  SINGLEFLOAT  
   
@@ -205,7 +206,7 @@ ms.locfileid: "81298588"
   
  頂端  
   
- 轉換  
+ 變換  
   
  UNSIGNEDBYTE  
   

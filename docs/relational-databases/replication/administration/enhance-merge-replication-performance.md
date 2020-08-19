@@ -1,4 +1,5 @@
 ---
+description: 增強合併式複寫效能
 title: 增強合併式複寫效能 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: eee65227e767ec92fbb6d2c9d0f304b29cbc6aaa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 70399a3d0e21fc75014828837e7b4cb7738d9966
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897887"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423602"
 ---
 # <a name="enhance-merge-replication-performance"></a>增強合併式複寫效能
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  除了考慮＜ [增強一般複寫效能](../../../relational-databases/replication/administration/enhance-general-replication-performance.md)＞中所述的一般效能提示之外，還要考慮合併式複寫特定的以下幾個其他方面。  
+   除了考慮[增強一般複寫效能](../../../relational-databases/replication/administration/enhance-general-replication-performance.md)中所述的一般效能提示之外，還要考慮合併式複寫特定的以下幾個其他方面。  
   
 ## <a name="database-design"></a>資料庫設計  
   
@@ -42,7 +43,7 @@ ms.locfileid: "85897887"
   
 -   考慮包括大型物件 (LOB) 資料類型的過度正規化資料表。  
   
-     發生同步處理時，「合併代理程式」可能需要從「發行者」或「訂閱者」讀取及傳送整個資料列。 如果資料列包含使用 LOB 的資料行，則上述處理可能需要額外的記憶體配置，且即使這些資料行並未更新仍會對效能造成負面影響。 為了降低這一效能影響的可能性，請考慮將 LOB 資料行置於另一個資料表，對資料列資料的其餘部分使用一對一關聯性。 資料類型 **text**、 **ntext**和 **image** 已被取代。 若您納入 LOB，建議您分別依序使用資料類型 **varchar(max)** 、 **nvarchar(max)** 、 **varbinary(max)** 。  
+     發生同步處理時，「合併代理程式」可能需要從「發行者」或「訂閱者」讀取及傳送整個資料列。 如果資料列包含使用 LOB 的資料行，則上述處理可能需要額外的記憶體配置，且即使這些資料行並未更新仍會對效能造成負面影響。 為了降低這一效能影響的可能性，請考慮將 LOB 資料行置於另一個資料表，對資料列資料的其餘部分使用一對一關聯性。 資料類型 **text**、 **ntext**和 **image** 已被取代。 若您納入 LOB，建議您分別依序使用資料類型 **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)**。  
   
 ## <a name="publication-design"></a>發行集設計  
   

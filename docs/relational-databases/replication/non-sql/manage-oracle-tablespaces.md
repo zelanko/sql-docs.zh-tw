@@ -1,4 +1,5 @@
 ---
+description: 管理 Oracle 資料表空間
 title: 管理 Oracle 資料表空間 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b8ea6c3b-01d6-4efc-bbfb-03b264530bbd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e6f969ef7b006c6ccf3f24668322fe55c00511c4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0df07b2e1ae3e519624abae0a4ee81fbc7938f91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893302"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420462"
 ---
 # <a name="manage-oracle-tablespaces"></a>管理 Oracle 資料表空間
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

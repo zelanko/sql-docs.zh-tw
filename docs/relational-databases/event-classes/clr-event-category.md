@@ -1,4 +1,5 @@
 ---
+description: CLR 事件類別目錄
 title: CLR 事件類別目錄 | Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,16 +15,16 @@ ms.assetid: a7c0cd60-3bec-42be-ad5e-473bd26a06d9
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 978067f0d035fcd781d275bf77177e2b95383fdb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ab5397eb8ddcce4b4e455382cf40affee05d29bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762985"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420932"
 ---
 # <a name="clr-event-category"></a>CLR 事件類別目錄
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  **CLR** 事件類別目錄包含了在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Common Language Runtime (CLR) 物件時，所產生的事件類別。  
+  **CLR** 事件類別目錄包含了在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內執行 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) 物件時，所產生的事件類別。  
  
  ## <a name="assembly-load-event-class"></a>Assembly Load 事件類別 
   在執行載入組件的要求時，會發生 **Assembly Load** 事件類別。  
@@ -52,7 +53,7 @@ ms.locfileid: "85762985"
 |**SessionLoginName**|**nvarchar**|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 執行陳述式，則 **SessionLoginName** 將顯示 Login1 而 **LoginName** 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |**SPID**|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
-|「成功」 |**int**|指出組件載入成功 (1) 或失敗 (0)。|23|是|  
+|「成功」|**int**|指出組件載入成功 (1) 或失敗 (0)。|23|是|  
 |**TextData**|**ntext**|如果載入成功則為「組件載入成功」；否則為「組件載入失敗」。|1|是|  
   
 ## <a name="see-also"></a>另請參閱  

@@ -1,4 +1,5 @@
 ---
+description: Visual FoxPro 語言參考
 title: Visual FoxPro 語言參考 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8e052213-ca6f-44ca-917e-054ecb3eb0e5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 97615b04861c02d4319e7a301043bb9f3c17e8c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d5420e0b5f91324efdd0746c6da22c3a4e768d7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304780"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421532"
 ---
 # <a name="visual-foxpro-language-reference"></a>Visual FoxPro 語言參考
 此章節包含下列主題。  

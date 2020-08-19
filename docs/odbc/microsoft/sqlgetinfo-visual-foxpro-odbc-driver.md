@@ -1,5 +1,6 @@
 ---
-title: SQLGetInfo （Visual FoxPro ODBC Driver） |Microsoft Docs
+description: SQLGetInfo (Visual FoxPro ODBC Driver)
+title: SQLGetInfo (Visual FoxPro ODBC Driver) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,29 +13,29 @@ helpviewer_keywords:
 ms.assetid: fbc39e3d-67d9-4331-bf5f-76dbd74c4c45
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2d4b976083b46bf632c4890c7fce3b0f13a9a761
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 370661a9a0ade5c5159f93a9af37c17b675032c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81295188"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421672"
 ---
 # <a name="sqlgetinfo-visual-foxpro-odbc-driver"></a>SQLGetInfo (Visual FoxPro ODBC Driver)
 > [!NOTE]  
->  本主題包含 Visual FoxPro ODBC 驅動程式特有的資訊。 如需此函數的一般資訊，請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)底下的適當主題。  
+>  本主題包含 Visual FoxPro ODBC 驅動程式特定的資訊。 如需此函數的一般資訊，請參閱 [ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)下的適當主題。  
   
- 支援：完整  
+ 支援： Full  
   
  ODBC API 一致性：層級1  
   
- 傳回與連接控制碼（ *hdbc*）相關聯之 VISUAL FoxPro ODBC 驅動程式和資料來源的一般資訊。 下列清單顯示 Visual FoxPro ODBC Driver 針對每個*fInfoType*引數所傳回的值，以及有關傳回值的批註。  
+ 傳回與連接控制碼 *hdbc*相關之 VISUAL FoxPro ODBC 驅動程式和資料來源的一般資訊。 下列清單顯示每個 *fInfoType* 引數的 VISUAL FoxPro ODBC 驅動程式所傳回的值，以及有關傳回值的批註。  
   
- 如需詳細資訊，請參閱 ODBC 程式設計*人員參考*中的[SQLGetInfo](../../odbc/reference/syntax/sqlgetinfo-function.md) 。  
+ 如需詳細資訊，請參閱《 *ODBC 程式設計人員參考*》中的[SQLGetInfo](../../odbc/reference/syntax/sqlgetinfo-function.md) 。  
   
 ## <a name="a"></a>A  
  SQL_ACCESSIBLE_PROCEDURES 會傳回 ' N '。  
   
- SQL_ACCESSIBLE_TABLES 會傳回 ' Y '。  
+ SQL_ACCESSIBLE_TABLES 傳回 ' Y '。  
   
  SQL_ACTIVE_CONNECTIONS 會傳回0。  
   
@@ -46,11 +47,11 @@ ms.locfileid: "81295188"
  SQL_BOOKMARK_PERSISTENCE 會傳回 SQL_BP_SCROLL。  
   
 ## <a name="c"></a>C  
- SQL_COLUMN_ALIAS 會傳回 ' Y '。  
+ SQL_COLUMN_ALIAS 傳回 ' Y '。  
   
  SQL_CONCAT_Null_BEHAVIOR 會傳回 SQL_CB_Null。  
   
- SQL_CONVERT_BIGINT 會傳回0。 Visual FoxPro ODBC 驅動程式不支援*BigInt*。  
+ SQL_CONVERT_BIGINT 會傳回0。 Visual FoxPro ODBC 驅動程式不支援 *BigInt*。  
   
  SQL_CONVERT_BINARY 會傳回0。  
   
@@ -97,17 +98,17 @@ ms.locfileid: "81295188"
  SQL_CURSOR_ROLLBACK_BEHAVIOR 會傳回 SQL_CB_PRESERVE。  
   
 ## <a name="d"></a>D  
- SQL_DATA_SOURCE_NAME 會傳回以 DSN 形式傳遞給[SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md)或[SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)的值。如果未指定任何 DSN，則會傳回空字串。  
+ SQL_DATA_SOURCE_NAME 傳回以 DSN 傳遞給 [SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md)或 [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)的值;如果未指定任何 DSN，則會傳回空字串。  
   
  SQL_DATA_SOURCE_READ_ONLY 會傳回 ' N '。  
   
- 如果資料來源是[資料庫](../../odbc/microsoft/visual-foxpro-terminology.md)，SQL_DATABASE_NAME 會傳回目前資料庫的完整 UNC 路徑。 如果資料來源連接到[資料表](../../odbc/microsoft/visual-foxpro-terminology.md)的目錄，此函數會傳回目錄的路徑。  
+ 如果資料來源是 [資料庫](../../odbc/microsoft/visual-foxpro-terminology.md)，SQL_DATABASE_NAME 會傳回目前資料庫的完整 UNC 路徑。 如果資料來源連接到 [資料表](../../odbc/microsoft/visual-foxpro-terminology.md)的目錄，此函數會傳回目錄的路徑。  
   
  SQL_DBMS_NAME 會傳回 "Visual FoxPro"。  
   
  SQL_DBMS_VER 會傳回 "03.00.0000"。  
   
- SQL_DEFAULT_TXN_ISOLATION 會傳回 SQL_TXN_READ_COMMITTED。 不可能進行中途讀取，但不可重複讀取和幻像是可行的。  
+ SQL_DEFAULT_TXN_ISOLATION 會傳回 SQL_TXN_READ_COMMITTED。 不可能發生中途讀取，但不可重複的讀取和幻像是可行的。  
   
  SQL_DRIVER_HDBC 是由驅動程式管理員所執行。  
   
@@ -117,9 +118,9 @@ ms.locfileid: "81295188"
   
  SQL_DRIVER_HSTMT 是由驅動程式管理員所執行。  
   
- SQL_DRIVER_NAME 會傳回 "vfpodbc"。  
+ SQL_DRIVER_NAME 會傳回 "vfpodbc.dll"。  
   
- SQL_DRIVER_ODBC_VER 會傳回 "02.50" （SQL_SPEC_MAJOR，SQL_SPEC_MINOR）。  
+ SQL_DRIVER_ODBC_VER 會傳回 "02.50" (SQL_SPEC_MAJOR，SQL_SPEC_MINOR) 。  
   
  SQL_DRIVER_VER 會傳回 "01.00.0000"。  
   
@@ -143,7 +144,7 @@ ms.locfileid: "81295188"
   
 -   SQL_FD_FETCH_BOOKMARK。  
   
- SQL_FILE_USAGE 會傳回資料庫（. dbc 檔案）和免費資料表（.dbf 檔案）資料來源的 SQL_FILE_QUALIFIER。  
+ SQL_FILE_USAGE 會針對資料庫 ( dbc 檔案傳回 SQL_FILE_QUALIFIER，) 和針對任意資料表 ( .dbf 檔案) 資料來源。  
   
 ## <a name="g-h"></a>G-H  
  SQL_GETDATA_EXENSIONS 會傳回：  
@@ -178,9 +179,9 @@ ms.locfileid: "81295188"
   
  SQL_MAX_COLUMN_NAME_LEN 傳回128。  
   
- SQL_MAX_COLUMNS_IN_GROUP_BY 會傳回16。  
+ SQL_MAX_COLUMNS_IN_GROUP_BY 傳回16。  
   
- SQL_MAX_COLUMNS_IN_ORDER_BY 會傳回16。  
+ SQL_MAX_COLUMNS_IN_ORDER_BY 傳回16。  
   
  SQL_MAX_COLUMNS_IN_INDEX 會傳回0。  
   
@@ -206,13 +207,13 @@ ms.locfileid: "81295188"
   
  SQL_MAX_TABLE_NAME_LEN 傳回128。  
   
- SQL_MAX_TABLES_IN_SELECT 會傳回16。  
+ SQL_MAX_TABLES_IN_SELECT 傳回16。  
   
  SQL_MAX_USER_NAME_LEN 會傳回0。  
   
- SQL_MULT_RESULT_SETS 會傳回 ' Y '。  
+ SQL_MULT_RESULT_SETS 傳回 ' Y '。  
   
- SQL_MULTIPLE_ACTIVE_TXN 會傳回 ' Y '。 多個連接可以同時開啟數個交易。  
+ SQL_MULTIPLE_ACTIVE_TXN 傳回 ' Y '。 多個連接可以同時開啟數個交易。  
   
 ## <a name="n"></a>N  
  SQL_NEED_LONG_DATA_LEN 會傳回 ' N '。  
@@ -221,7 +222,7 @@ ms.locfileid: "81295188"
   
  SQL_Null_COLLATION 會傳回 SQL_NC_LOW。  
   
- SQL_NUMERIC_FUNCTIONS 會傳回 SQL_FN_NUM_POWER 以外的所有函式，但 Visual FoxPro ODBC 驅動程式不支援此功能。 支援下列功能：  
+ SQL_NUMERIC_FUNCTIONS 會傳回 SQL_FN_NUM_POWER 以外的所有函式，而 Visual FoxPro ODBC 驅動程式不支援此功能。 支援下列函式：  
   
 -   SQL_FN_NUM_ABS  
   
@@ -298,23 +299,23 @@ ms.locfileid: "81295188"
 ## <a name="q"></a>Q  
  SQL_QUALIFIER_LOCATION 會傳回 SQL_QL_START。  
   
- SQL_QUALIFIER_NAME_SEPARATOR 傳回 '！ ' 或 '\\'。 資料庫與資料表之間的分隔符號是連接到[資料庫](../../odbc/microsoft/visual-foxpro-terminology.md)之資料來源的 '！ '，而\\如果是[免費資料表](../../odbc/microsoft/visual-foxpro-terminology.md)目錄的資料來源，則為 ' '。  
+ SQL_QUALIFIER_NAME_SEPARATOR 傳回 '！ ' 或 ' \\ '。 資料庫與資料表之間的分隔符號為連接到 [資料庫](../../odbc/microsoft/visual-foxpro-terminology.md)之資料來源的 '！ '，而資料 \\ 源為 [無可用資料表](../../odbc/microsoft/visual-foxpro-terminology.md)目錄的資料來源之間的分隔符號。  
   
- SQL_QUALIFIER_TERM 會傳回 "database" 或 "directory"。 對於連接到[資料庫](../../odbc/microsoft/visual-foxpro-terminology.md)的資料來源，限定詞是「資料庫」，而「目錄」則是[免費資料表](../../odbc/microsoft/visual-foxpro-terminology.md)目錄的資料來源。  
+ SQL_QUALIFIER_TERM 會傳回「資料庫」或「目錄」。 辨識符號為連接到 [資料庫](../../odbc/microsoft/visual-foxpro-terminology.md)之資料來源的「資料庫」，而「目錄」則是 [免費資料表](../../odbc/microsoft/visual-foxpro-terminology.md)目錄的資料來源。  
   
  SQL_QUALIFIER_USAGE 不支援 SQL_QU_PRIVILEGE_DEFINITION;它會傳回 SQL_QU_DML_STATEMENT 或 SQL_QU_TABLE_DEFINITION。  
   
  SQL_QUOTED_IDENTIFIER_CASE 會傳回 SQL_IC_MIXED。  
   
 ## <a name="r"></a>R  
- SQL_ROW_UPDATES 會傳回 "N"。 Visual FoxPro ODBC 驅動程式只支援靜態和轉送資料指標。  
+ SQL_ROW_UPDATES 會傳回 "N"。 Visual FoxPro ODBC 驅動程式僅支援靜態和正向資料指標。  
   
 ## <a name="s"></a>S  
  SQL_SCROLL_CONCURRENCY 會傳回 SQL_SCCO_READ_ONLY。  
   
  SQL_SCROLL_OPTIONS 會傳回 SQL_SO_STATIC 或 SQL_SO_READONLY。  
   
- SQL_SEARCH_PATTERN_ESCAPE 會傳回\\""。  
+ SQL_SEARCH_PATTERN_ESCAPE 會傳回 " \\ "。  
   
  SQL_SERVER_NAME 會傳回 ""。  
   
@@ -374,7 +375,7 @@ ms.locfileid: "81295188"
   
 -   SQL_FN_SYS_IFNull  
   
- 但不是：  
+ 但不能：  
   
 -   SQL_FN_SYS_USERNAME  
   
@@ -395,7 +396,7 @@ ms.locfileid: "81295188"
   
 -   SQL_FN_TSI_YEAR  
   
- 但不是：  
+ 但不能：  
   
 -   SQL_FN_TSI_FRAC_SECOND  
   
@@ -454,4 +455,4 @@ ms.locfileid: "81295188"
 ## <a name="u-z"></a>U-Z  
  SQL_UNION 會傳回 SQL_U_UNION 或 SQL_U_UNION_ALL。  
   
- SQL_USER_NAME 會\<傳回空白>。
+ SQL_USER_NAME 傳回 \<blank> 。

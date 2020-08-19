@@ -1,4 +1,5 @@
 ---
+description: 授與、撤銷和拒絕權限
 title: 授與、撤銷和拒絕權限
 ms.custom: seo-dt-2019
 ms.date: 08/06/2017
@@ -16,11 +17,12 @@ ms.assetid: b0eb0f60-3e56-4880-b645-138832b38a1e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4516d94482e70fe704906dec6bd6ba3df36e108c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e9d8e391f69678ada618f50ab64d28513937e2ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001220"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420222"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>授與、撤銷和拒絕權限
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -30,7 +32,7 @@ ms.locfileid: "86001220"
  資料庫權限和資料庫物件權限也可藉由 <xref:Microsoft.SqlServer.Management.Smo.DatabasePermissionSet> 物件和 <xref:Microsoft.SqlServer.Management.Smo.ObjectPermissionSet> 物件，以類似的方式進行指派。  
   
 ## <a name="example"></a>範例  
- 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱 [Visual Studio .NET 中的建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="granting-server-permissions-in-visual-basic"></a>在 Visual Basic 中授與伺服器權限  
  此程式碼範例會將 Create Endpoint 和 Alter Any Endpoint 權限授與指定的登入，然後再列舉和顯示權限。 其中一個權限會被撤銷，然後再次列舉權限。 這個範例假設指定的登入一開始即具有指定的權限。  

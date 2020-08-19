@@ -1,4 +1,5 @@
 ---
+description: 建立、改變和移除檢視
 title: 建立、改變和移除檢視
 ms.custom: seo-dt-2019
 ms.date: 08/06/2017
@@ -13,11 +14,12 @@ ms.assetid: 7d445c0e-77ef-4734-993b-e022de31df23
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f84d81330552596387a46450e4deeee756b1c982
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 92a8a04eee2be3fdfa34cb5c5118bea7e3dad7ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001247"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420182"
 ---
 # <a name="creating-altering-and-removing-views"></a>建立、改變和移除檢視
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -26,7 +28,7 @@ ms.locfileid: "86001247"
  <xref:Microsoft.SqlServer.Management.Smo.View.TextBody%2A> 物件的 <xref:Microsoft.SqlServer.Management.Smo.View> 屬性會定義檢視。 該屬性等於用於建立檢視的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT 陳述式。  
   
 ## <a name="example"></a>範例  
- 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱 [Visual Studio .NET 中的建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-altering-and-removing-a-view-in-visual-basic"></a>在 Visual Basic 中建立、改變和移除檢視  
  此程式碼範例示範如何使用內部聯結建立兩個資料表的檢視。 該檢視是利用文字模式建立，所以必須設定 <xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A> 屬性。  

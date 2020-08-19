@@ -1,4 +1,5 @@
 ---
+description: 需要更新之備份的常見動作
 title: 需要更新之備份的常見動作 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ ms.assetid: a5975bf4-183e-42e3-b7d1-ad02f89d2e1d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: bd7af8a1e1713f3f0013350517eeacd518e3e601
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ea0d7aca2659d16bc761cfd4dc2146a96f977622
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918284"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423612"
 ---
 # <a name="common-actions-requiring-an-updated-backup"></a>需要更新之備份的常見動作
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

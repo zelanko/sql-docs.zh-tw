@@ -1,4 +1,5 @@
 ---
+description: 查詢處理架構指南
 title: 查詢處理架構指南 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/21/2020
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: b6964ee33ecbd52f538a60446c72d66bcde9927d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: ddc409af7352ce7770d905b4bc5b859497123645
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934369"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423722"
 ---
 # <a name="query-processing-architecture-guide"></a>查詢處理架構指南
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -104,7 +105,7 @@ GO
   `TableC`、 `TableB`、 `TableA`或  
   `TableB`、 `TableA`、 `TableC`或  
   `TableB`、 `TableC`、 `TableA`或  
-  `TableC`、`TableA`、`TableB`  
+  `TableC`, `TableA`, `TableB`  
 
 - **用來從每個資料表擷取資料的方法。**  
   一般而言，有各種不同的方式可存取每個資料表中的資料。 如果僅需要特定索引鍵值的一些資料列，則資料庫伺服器可以使用索引。 如果需要資料表中的所有資料列，則資料庫伺服器可以忽略索引，並執行資料表掃描。 如果需要資料表中的所有資料列，但其中有一個索引的索引鍵資料行是在 `ORDER BY`中，那麼，執行索引掃描來替代資料表掃描，就能儲存不同排序的結果集。 如果資料表非常小，則資料表掃描可能是所有資料表存取中最有效率的方式。

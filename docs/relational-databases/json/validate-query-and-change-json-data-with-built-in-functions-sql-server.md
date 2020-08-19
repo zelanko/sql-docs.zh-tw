@@ -1,4 +1,5 @@
 ---
+description: 使用內建函數，驗證、查詢以及變更 JSON 資料 (SQL Server)
 title: 使用內建函數，驗證、查詢以及變更 JSON 資料
 ms.date: 06/03/2020
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9819b334dfa5b6c9d2b9a91fb80293a40b4a4e67
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 76644f677a03f34312e6731f5a973167313ad22a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725205"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424090"
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>使用內建函數，驗證、查詢以及變更 JSON 資料 (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -174,7 +175,7 @@ FROM Families f
 | familyName | childGivenName | childFirstName | petName |
 | --- | --- | --- | --- |
 | AndersenFamily | Jesse | Merriam | Goofy |
-| AndersenFamily | Jesse | Merriam | Shadow |
+| AndersenFamily | Jesse | Merriam | 陰影 |
 | AndersenFamily | Lisa | Miller| `NULL` |
 
 根文件會與第一個 `OPENJSON(children)` 呼叫所傳回的兩個 `children` 資料列聯結，形成兩個資料列 (或元組)。 然後，每個資料列會與 `OPENJSON(pets)` 使用 `OUTER APPLY` 運算子所產生的新資料列聯結。 Jesse 有兩隻寵物，因此 `(AndersenFamily, Jesse, Merriam)` 會與針對 Goofy 和 Shadow 產生的兩個資料列聯結。 Lisa 沒有寵物，因此這個元組沒有 `OPENJSON(pets)` 傳回的任何資料列。 不過，因為我們使用 `OUTER APPLY`，所以將在資料行中取得 `NULL`。 如果我們使用 `CROSS APPLY` 而不是 `OUTER APPLY`，則結果中不會傳回 Lisa，因為沒有任何可與這個元組聯結的寵物資料列。
@@ -194,7 +195,7 @@ FROM Families f
   
 在這個 JSON 文字範例中，資料成員 "a" 和 "c" 為字串值，而資料成員 "b" 是陣列。 **JSON_VALUE** 和 **JSON_QUERY** 傳回下列結果︰  
   
-|Path|**JSON_VALUE** 傳回|**JSON_QUERY** 傳回|  
+|路徑|**JSON_VALUE** 傳回|**JSON_QUERY** 傳回|  
 |-----------|-----------------------------|-----------------------------|  
 |**$**|NULL 或錯誤|`{ "a": "[1,2]", "b": [1,2], "c":"hi"}`|  
 |**$.a**|[1,2]|NULL 或錯誤|  

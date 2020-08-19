@@ -1,4 +1,5 @@
 ---
+description: 執行 SQL Server Agent 作業工作 (維護計畫)
 title: 執行 SQL Server Agent 作業工作 (維護計畫) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4ed75956-ebb8-4d8c-9c16-fc0eb00bd3a0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0cf96745f6b2b2c904262a4952f63b6ec37f263e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 890d691fdd3ff7ad9a20079edefeacbeb3672aac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85667368"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424100"
 ---
 # <a name="execute-sql-server-agent-job-task-maintenance-plan"></a>執行 SQL Server Agent 作業工作 (維護計畫)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: catalog.worker_agents (SSISDB 資料庫)
 title: catalog.worker_agents (SSISDB 資料庫) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/16/2016
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 0bd0d827-e2f1-44fe-aa90-6bf922d68d16
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5f8c494e135764ddca11985f3036068c848f818b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9048a56959de62791b0f952aff086ae513098be2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912424"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421942"
 ---
 # <a name="catalogworker_agents-ssisdb-database"></a>catalog.worker_agents (SSISDB 資料庫)
 
@@ -30,7 +31,7 @@ ms.locfileid: "86912424"
 |DisplayName|**nvarchar(256)**|Scale Out 背景工作角色的顯示名稱。|
 |描述|**nvarchar(256)**|Scale Out 背景工作角色的描述。|
 |MachineName|**nvarchar(256)**|Scale Out 背景工作角色的電腦名稱。|
-|Tags|**nvarchar(max)**|Scale Out 背景工作角色的標籤。|
+|標籤|**nvarchar(max)**|Scale Out 背景工作角色的標籤。|
 |UserAccount|**nvarchar(256)**|執行 Scale Out 背景工作角色服務的使用者帳戶。|
 |LastOnlineTime|**datetimeoffset(7)**|Scale Out 背景工作角色上一次上線的時間。|
 

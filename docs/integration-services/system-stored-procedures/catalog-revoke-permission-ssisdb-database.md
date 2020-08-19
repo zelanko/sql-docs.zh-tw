@@ -1,4 +1,5 @@
 ---
+description: catalog.revoke_permission (SSISDB 資料庫)
 title: catalog.revoke_permission (SSISDB 資料庫) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7fd01336eca5b0717af288322a496c5b082b5b97
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0475b5adb825339c2c3c7a0927aabbea2bf889ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912914"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422092"
 ---
 # <a name="catalogrevoke_permission-ssisdb-database"></a>catalog.revoke_permission (SSISDB 資料庫)
 
@@ -91,7 +92,7 @@ catalog.revoke_permission [ @object_type = ] object_type
 |----------------------------|---------------------|----------------------------|-----------------------------|  
 |`1`|READ|允許主體讀取會被視為物件一部分 (例如屬性) 的資訊。 它不允許主體列舉或讀取物件內所包含之其他主體的內容。|資料夾、專案、環境、作業|  
 |`2`|MODIFY|允許主體修改會被視為物件一部分 (例如屬性) 的資訊。 它不允許主體修改物件內所包含之其他主體的內容。|資料夾、專案、環境、作業|  
-|`3`|執行 CREATE 陳述式之前，請先執行|允許主體執行專案中所有的封裝。|隨附此逐步解說的專案|  
+|`3`|執行 CREATE 陳述式之前，請先執行|允許主體執行專案中所有的封裝。|Project|  
 |`4`|MANAGE_PERMISSIONS|允許主體將權限指派至物件。|資料夾、專案、環境、作業|  
 |`100`|CREATE_OBJECTS|允許主體在資料夾中建立物件。|資料夾|  
 |`101`|READ_OBJECTS|允許主體讀取資料夾中的所有物件。|資料夾|  

@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_945
 title: MSSQLSERVER_945 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ee501d13-0bd9-4627-896c-ed5b1bdb88b3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5eb5efa87dbc6c94ffe591929460e036eedc6c42
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2bd18aad57eed6596ff83fc5fddbb50d33cba49a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85636374"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420892"
 ---
 # <a name="mssqlserver_945"></a>MSSQLSERVER_945
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

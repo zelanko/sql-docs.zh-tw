@@ -1,4 +1,5 @@
 ---
+description: 維護計畫 (伺服器)
 title: 維護計畫 (伺服器) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,16 +14,16 @@ f1_keywords:
 ms.assetid: ac24d1a8-dd2f-4162-b804-c0df1fc1e61d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b94b427f2523dce7057e835aeae48b2d40d24e83
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1a991404f0acaba448958773f54a4836032ecd07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754525"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420852"
 ---
 # <a name="maintenance-plan-servers"></a>維護計畫 (伺服器)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  使用 **[伺服器]** 對話方塊可選取要執行維護計畫的伺服器。  
+   使用 [伺服器]**** 對話方塊可選取要執行維護計畫的伺服器。  
   
  若要建立多伺服器維護計畫，必須設定多伺服器環境，其中包含一個主要伺服器以及一或多個目標伺服器。 針對多伺服器維護計畫，本機伺服器應設為主要伺服器。 在多伺服器環境中，這個對話方塊會顯示 **(本機)** 主要伺服器以及所有相對應的目標伺服器。 本機伺服器會建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業。 這會視您是否選取 **(本機)** 伺服器而啟用或停用。 如果選取目標伺服器，會建立多伺服器作業並下載到每個選取的目標伺服器。 如果沒有選取目標伺服器，會刪除多伺服器作業。  
   

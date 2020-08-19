@@ -1,4 +1,5 @@
 ---
+description: 執行 T-SQL 陳述式工作 (維護計畫)
 title: 執行 T-SQL 陳述式工作 (維護計畫) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: fef3e259-0c47-4f6e-ade0-aee95e3d6c1a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a38c1bcb1dc4f1aa48f69b2abd6c5d67924c7847
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d90a9aaa1b038d4d890c66ceb5f5e7b9c4befc81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85667079"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424060"
 ---
 # <a name="execute-t-sql-statement-task-maintenance-plan"></a>執行 T-SQL 陳述式工作 (維護計畫)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  使用 [執行 T-SQL 陳述式工作]  對話方塊，即可將您選擇的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式加入此維護計畫，來自訂維護計畫。  
+   使用 [執行 T-SQL 陳述式工作]**** 對話方塊，即可將您選擇的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式新增此維護計畫，來自訂維護計畫。  
   
 ## <a name="options"></a>選項。  
  **[連接]**  
@@ -58,7 +59,7 @@ ms.locfileid: "85667079"
  指定如何對伺服器進行驗證。  
   
  **使用 Windows 整合式安全性**  
- 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證連線到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的執行個體。  
+ 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證連線到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體。  
   
  **使用特定的使用者名稱和密碼**  
  使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 驗證，連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 無法使用此選項。  

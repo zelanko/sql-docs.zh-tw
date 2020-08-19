@@ -1,4 +1,5 @@
 ---
+description: catalog.explicit_object_permissions (SSISDB 資料庫)
 title: catalog.explicit_object_permissions (SSISDB 資料庫) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 49b09e0f-06e8-451f-b979-a0d91000bfe3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6cf55832764b595aac01b8fb8c69fb0516898bad
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e7052caddf7087239e734d6474c4d829f13e9948
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912534"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422082"
 ---
 # <a name="catalogexplicit_object_permissions-ssisdb-database"></a>catalog.explicit_object_permissions (SSISDB 資料庫)
 
@@ -42,7 +43,7 @@ ms.locfileid: "86912534"
 |----------------------------|---------------------|----------------------------|-----------------------------|  
 |`1`|READ|允許主體讀取會被視為物件一部分 (例如屬性) 的資訊。 它不允許主體列舉或讀取物件內所包含之其他主體的內容。|資料夾、專案、環境、作業|  
 |`2`|MODIFY|允許主體修改會被視為物件一部分 (例如屬性) 的資訊。 它不允許主體修改物件內所包含之其他主體的內容。|資料夾、專案、環境、作業|  
-|`3`|執行 CREATE 陳述式之前，請先執行|允許主體執行專案中所有的封裝。|隨附此逐步解說的專案|  
+|`3`|執行 CREATE 陳述式之前，請先執行|允許主體執行專案中所有的封裝。|Project|  
 |`4`|MANAGE_PERMISSIONS|允許主體將權限指派至物件。|資料夾、專案、環境、作業|  
 |`100`|CREATE_OBJECTS|允許主體在資料夾中建立物件。|資料夾|  
 |`101`|READ_OBJECTS|允許主體讀取資料夾中的所有物件。|資料夾|  

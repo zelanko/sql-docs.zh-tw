@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_8651
 title: MSSQLSERVER_8651 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4cc3498d-5449-4c4e-b1f9-3271831c725a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7a28655b2f86c02b1985196c05c16b866e3e0897
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d159f9865cff8090291f65d158e82a6ab315602b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85637126"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420962"
 ---
 # <a name="mssqlserver_8651"></a>MSSQLSERVER_8651
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

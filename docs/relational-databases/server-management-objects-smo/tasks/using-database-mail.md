@@ -1,4 +1,5 @@
 ---
+description: 使用 Database Mail
 title: 使用 Database Mail |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
@@ -15,21 +16,22 @@ ms.assetid: 7605390f-b485-48cc-8d97-e364a066067b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32da475e4b7b662c945f7af09b0663ec8ab159a1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 43a49f3ec79b75aeef6fe4282a2933616af723ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010939"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420172"
 ---
 # <a name="using-database-mail"></a>使用 Database Mail
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-  在 SMO 中，Database Mail 子系統是由 <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> 屬性所參考的 <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A> 物件表示。 藉由使用 SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> 物件，您可以設定 Database Mail 子系統，並且管理設定檔和郵件帳戶。 SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> 物件屬於**伺服器**物件，這表示郵件帳戶的範圍是在伺服器層級。  
+  在 SMO 中，Database Mail 子系統是由 <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> 屬性所參考的 <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A> 物件表示。 藉由使用 SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> 物件，您可以設定 Database Mail 子系統，並且管理設定檔和郵件帳戶。 SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> 物件屬於 **伺服器** 物件，表示郵件帳戶的範圍是在伺服器層級。  
   
 ## <a name="examples"></a>範例  
- 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱 [Visual Studio .NET 中的建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
- 對於使用 Database Mail 的程式 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，您必須包含**Imports**語句以限定郵件命名空間。 將陳述式插入至其他 **Imports** 陳述式之後、在應用程式中的任何宣告之前，例如：  
+ 針對使用 Database Mail 的程式 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，您必須包含 **Imports** 語句來限定 Mail 命名空間。 將陳述式插入至其他 **Imports** 陳述式之後、在應用程式中的任何宣告之前，例如：  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   

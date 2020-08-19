@@ -1,4 +1,5 @@
 ---
+description: catalog.set_object_parameter_value (SSISDB 資料庫)
 title: catalog.set_object_parameter_value (SSISDB 資料庫)| Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: fb887543-f92f-404d-9495-a1dd23a6716e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3ee0158f8d04405aef6ea0fd70f6a63f942471a1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a6991d846ffd6dd4673f3faca443c1bd1578ecaf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912792"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422122"
 ---
 # <a name="catalogset_object_parameter_value-ssisdb-database"></a>catalog.set_object_parameter_value (SSISDB 資料庫)
 
@@ -49,16 +50,16 @@ catalog.set_object_parameter_value [ @object_type = ] object_type
  包含參數之專案的名稱。 *project_name* 是 **nvarchar(128)** 。  
   
  [@parameter_name =] *parameter_name*  
- 參數名稱。 *parameter_name* 是 **nvarchar(128)** 。  
+ 參數名稱。 *parameter_name* 是 **nvarchar(128)**。  
   
  [@parameter_value =] *parameter_value*  
  參數的值。 *parameter_value* 是 **sql_variant**。  
   
  [@object_name =] *object_name*  
- 封裝名稱。 參數為封裝參數時，就需要這個引數。 *object_name* 是 **nvarchar(260)** 。  
+ 封裝的名稱。 參數為封裝參數時，就需要這個引數。 *object_name* 是 **nvarchar(260)**。  
   
  [@value_type =] *value_type*  
- 參數值的類型。 使用字元 `V` 表示如果執行前沒有指派任何值，就會預設使用常值 *parameter_value*。 使用字元 `R` 表示 *parameter_value* 這個參考值已設定為環境變數的名稱。 這是選擇性引數，根據預設，會使用字元 `V`。 *value_type* 是 **char(1)** 。  
+ 參數值的類型。 使用字元 `V` 表示如果執行前沒有指派任何值，就會預設使用常值 *parameter_value*。 使用字元 `R` 表示 *parameter_value* 這個參考值已設定為環境變數的名稱。 這是選擇性引數，根據預設，會使用字元 `V`。 *value_type* 是 **char(1)**。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  

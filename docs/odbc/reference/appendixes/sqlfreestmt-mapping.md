@@ -1,4 +1,5 @@
 ---
+description: SQLFreeStmt 對應
 title: SQLFreeStmt 對應 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 267d95f2-4f0c-47ab-9411-5afe105215a2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9d187db4d40132385b9ae4564fddbf89987e3e97
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1f5066593e900fc60eea0ce5a5fc183eb2e83137
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302009"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421482"
 ---
 # <a name="sqlfreestmt-mapping"></a>SQLFreeStmt 對應
-當應用程式以 SQL_DROP 的*Option*引數呼叫**SQLFreeStmt**時，透過*ODBC 3.x*驅動程式，呼叫  
+當應用程式*透過 ODBC 3.x 驅動程式以*SQL_DROP 的*選項*引數呼叫**SQLFreeStmt**時，呼叫  
   
 ```  
 SQLFreeStmt(hstmt, SQL_DROP)   
@@ -33,4 +34,4 @@ SQLFreeStmt(hstmt, SQL_DROP)
 SQLFreeHandle(SQL_HANDLE_STMT,Handle)  
 ```  
   
- 將*Handle*引數設定為*hstmt*中的值。
+ 將 *控制碼* 引數設定為 *hstmt*中的值。

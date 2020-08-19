@@ -1,24 +1,25 @@
 ---
+description: PredictTimeSeries (DMX)
 title: PredictTimeSeries (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 48b656283cbe251b0c8ecb4e7c7b41681cddc7ba
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 13655aadf5f95b776b83e48791e4f423d6ccc355
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893886"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422261"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  傳回時間序列資料的預測未來值。 時間序列資料是連續的，而且可以儲存在巢狀資料表或案例資料表中。 **PredictTimeSeries**函數一律會傳回一個嵌套的資料表。  
+  傳回時間序列資料的預測未來值。 時間序列資料是連續的，而且可以儲存在巢狀資料表或案例資料表中。 **PredictTimeSeries**函式一律會傳回嵌套的資料表。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,22 +38,22 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ```  
   
 ## <a name="arguments"></a>引數  
- *資料表資料行參考 >, 純量資料行參考 > \<*   *\<*  
+ *\<table column reference>*, *\<scalar column referenc>*  
  指定要預測之資料行的名稱。 此資料行可以包含純量或表格式資料。  
   
  *n*  
- 指定要預測之後續步驟的數目。 如果未指定*n*的值, 預設值為1。  
+ 指定要預測之後續步驟的數目。 如果未指定 *n*的值，則預設值為1。  
   
- *n*不可以是0。 如果您沒有至少進行一次預測，此函數會傳回錯誤。  
+ *n* 不可以是0。 如果您沒有至少進行一次預測，此函數會傳回錯誤。  
   
- *n-開始, n-結束*  
+ *n-開始、n-1*  
  指定時間序列步驟的範圍。  
   
- *n-start*必須是整數, 而且不可以是0。  
+ *n-start* 必須是整數，而且不可以是0。  
   
- *n-end*必須是大於*n-start*的整數。  
+ *n 端* 必須是大於 *n-start*的整數。  
   
- *\<來源查詢 >*  
+ *\<source query>*  
  定義用於進行預測的外部資料。  
   
  REPLACE_MODEL_CASES | EXTEND_MODEL_CASES  
@@ -65,12 +66,12 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
  只有在使用 PREDICTION JOIN 陳述式加入新資料時，才可以使用這些引數。 如果您使用 PREDICTION JOIN 查詢而且未指定引數，預設值會是 EXTEND_MODEL_CASES。  
   
 ## <a name="return-type"></a>傳回類型  
- *資料表運算式 >。* \<  
+ \<*table expression*>。  
   
 ## <a name="remarks"></a>備註  
  使用 PREDICTION JOIN 陳述式加入新資料時，[!INCLUDE[msCoName](../includes/msconame-md.md)] 時間序列演算法不支援歷程記錄預測。  
   
- 在 PREDICTION JOIN 中，預測程序永遠會在原始定型序列一結束之後的時間步驟開始。 即使您加入新資料也是如此。 因此, *n*參數和*n-start*參數值必須是大於0的整數。  
+ 在 PREDICTION JOIN 中，預測程序永遠會在原始定型序列一結束之後的時間步驟開始。 即使您加入新資料也是如此。 因此， *n* 參數和 *n 開始* 參數值必須是大於0的整數。  
   
 > [!NOTE]  
 >  新資料的長度不會影響預測的起點。 因此，如果您要加入新資料，也想進行新預測，請確認有將預測的起始點設定為大於新資料長度的值，或按照新資料的長度擴充預測的結束點。  
@@ -84,13 +85,13 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
 -   第三個範例示範如何使用 EXTEND_MODEL_CASES 參數，以全新的資料更新採礦模型。  
   
- 若要深入瞭解如何使用時間序列模型, 請參閱資料採礦教學[課程第2課:建立預測&#40;案例中繼資料採礦&#41; ](https://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2)教學課程和[時間序列預測 DMX 教學](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)課程。  
+ 若要深入瞭解時間序列模型的使用方式，請參閱資料採礦教學 [課程，第2課：建立預測案例 &#40;中繼資料採礦教學課程&#41;](https://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) 和 [時間序列預測 DMX 教學](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)課程。  
   
 > [!NOTE]  
 >  您可能會從模型中取得不同的結果；提供底下範例的結果只是為了說明結果格式。  
   
-### <a name="example-1-predicting-a-number-of-time-slices"></a>範例 1：預測一些時間配量  
- 下列範例會使用**PredictTimeSeries**函數來傳回接下來三個時間步驟的預測, 並將結果限制為歐洲和太平洋地區的 M200 系列。 在這個特定模型中, 可預測的屬性是 Quantity, 因此您`[Quantity]`必須使用做為 PredictTimeSeries 函數的第一個引數。  
+### <a name="example-1-predicting-a-number-of-time-slices"></a>範例 1：預測時間配量數目  
+ 下列範例會使用 **PredictTimeSeries** 函數來傳回接下來三個時間步驟的預測，並將結果限制在歐洲和太平洋地區的 M200 系列。 在這個特定模型中，可預測屬性為 Quantity，所以您必須使用 `[Quantity]` 做為 PredictTimeSeries 函數的第一個引數。  
   
 ```  
 SELECT FLATTENED  
@@ -118,7 +119,7 @@ OR [Model Region] = 'M200 Pacific'
 ### <a name="example-2-adding-new-data-and-using-replace_model_cases"></a>範例 2：加入新資料並使用 REPLACE_MODEL_CASES  
  假設您發現特定地區的資料不正確，而且您想要使用模型中的模式，但是要調整預測來符合新的資料。 或者，您可能會尋找具有更可靠之趨勢的另一個地區，而且想要將最可靠的模型套用到另一個地區的資料。  
   
- 在這類情況下，您可以使用 REPLACE_MODEL_CASES 參數，並指定新的資料集當做歷程記錄資料使用。 這樣一來，將會根據指定之模型內的模式來做預測，但是將會從新資料點的結尾繼續順利進行。 如需此案例的完整逐步解說, 請參閱[先進的&#40;時間序列預測元&#41;資料採礦教學](https://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71)課程。  
+ 在這類情況下，您可以使用 REPLACE_MODEL_CASES 參數，並指定新的資料集當做歷程記錄資料使用。 這樣一來，將會根據指定之模型內的模式來做預測，但是將會從新資料點的結尾繼續順利進行。 如需此案例的完整逐步解說，請參閱 [&#40;元資料採礦教學課程&#41;的 Advanced Time Series 預測 ](https://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71)。  
   
  下列 PREDICTION JOIN 查詢說明取代資料以及做出新預測的語法。 如果是取代資料，此範例會擷取 Amount 和 Quantity 資料行的值，並將每一個乘以二：  
   
@@ -145,24 +146,24 @@ ON
   
  下表比較預測的結果。  
   
- 原始預測:  
+ 原始預測：  
   
-||||  
+|Model Region|ReportingDate|數量|  
 |-|-|-|  
 |M200 Pacific|上午 7/25/2008 12:00:00|46|  
 |M200 Pacific|上午 8/25/2008 12:00:00|44|  
 |M200 Pacific|上午 9/25/2008 12:00:00|42|  
   
- 已更新的預測:  
+ 更新的預測：  
   
-||||  
+|Model Region|ReportingDate|數量|  
 |-|-|-|  
 |M200 Pacific|上午 7/25/2008 12:00:00|91|  
 |M200 Pacific|上午 8/25/2008 12:00:00|89|  
 |M200 Pacific|上午 9/25/2008 12:00:00|84|  
   
-### <a name="example-3-adding-new-data-and-using-extend_model_cases"></a>範例 3:加入新資料並使用 EXTEND_MODEL_CASES  
- 範例3說明如何使用*EXTEND_MODEL_CASES*選項來提供新的資料, 並將其新增至現有資料數列的結尾。 新的資料會加入到模型上，而不是取代現有的資料點。  
+### <a name="example-3-adding-new-data-and-using-extend_model_cases"></a>範例 3：加入新資料並使用 EXTEND_MODEL_CASES  
+ 範例3說明如何使用 *EXTEND_MODEL_CASES* 選項來提供新的資料，這些資料會加入至現有資料數列的結尾。 新的資料會加入到模型上，而不是取代現有的資料點。  
   
  在下列範例中，NATURAL PREDICTION JOIN 後面的 SELECT 陳述式內會提供新的資料。 您可以使用這個語法來提供新輸入的多個資料列，但是輸入的每一個新資料列都必須有唯一的時間戳記：  
   
@@ -185,7 +186,7 @@ WHERE ([Model Region] = 'M200 Europe'
  OR [Model Region] = 'M200 Pacific')  
 ```  
   
- 因為查詢會使用*EXTEND_MODEL_CASES*選項, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]所以會針對其預測採取下列動作:  
+ 由於查詢使用 *EXTEND_MODEL_CASES* 選項，因此 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會對其預測採取下列動作：  
   
 -   將兩個新月份的資料加入到模型中來增加定型案例的大小總計。  
   
@@ -193,13 +194,13 @@ WHERE ([Model Region] = 'M200 Europe'
   
 -   根據新擴充的模型，傳回剩餘三個時間配量的新預測。  
   
- 下表列出範例 2 查詢的結果。 請注意，針對 M200 Europe 傳回的前兩個值與您提供的新值一模一樣。 這是預設的行為；如果您想要在新資料的結尾之後開始預測，您必須指定開始和結束時間步驟。 如需如何執行這項操作的範例, [請參閱第5課:擴充時間序列模型](https://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d)。  
+ 下表列出範例 2 查詢的結果。 請注意，針對 M200 Europe 傳回的前兩個值與您提供的新值一模一樣。 這是預設的行為；如果您想要在新資料的結尾之後開始預測，您必須指定開始和結束時間步驟。  
   
  也請注意一點，您並未提供太平洋地區的新資料。 因此，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會針對全部五個時間配量傳回新預測。  
   
- 待M200 歐洲。 EXTEND_MODEL_CASES:  
+ Quantity： M200 歐洲。 EXTEND_MODEL_CASES：  
   
-|$TIME|Quantity|  
+|$TIME|數量|  
 |-----------|--------------|  
 |7/25/2008 0:00|10|  
 |8/25/2008 0:00|15|  
@@ -207,9 +208,9 @@ WHERE ([Model Region] = 'M200 Europe'
 |10/25/2008 0:00|69|  
 |11/25/2008 0:00|68|  
   
- 待太平洋 M200。 EXTEND_MODEL_CASES:  
+ Quantity： M200 太平洋。 EXTEND_MODEL_CASES：  
   
-|$TIME|Quantity|  
+|$TIME|數量|  
 |-----------|--------------|  
 |7/25/2008 0:00|46|  
 |8/25/2008 0:00|44|  
@@ -217,10 +218,10 @@ WHERE ([Model Region] = 'M200 Europe'
 |10/25/2008 0:00|42|  
 |11/25/2008 0:00|38|  
   
-## <a name="example-4-returning-statistics-in-a-time-series-prediction"></a>範例 4:傳回時間序列預測中的統計資料  
- **PredictTimeSeries**函數不支援*INCLUDE_STATISTICS*做為參數。 但是，下列查詢可用於傳回時間序列查詢的預測統計資料。 這個方式也可以搭配具有巢狀資料表資料行的模型使用。  
+## <a name="example-4-returning-statistics-in-a-time-series-prediction"></a>範例 4：傳回時間序列預測的統計資料  
+ **PredictTimeSeries**函數不支援做為參數*INCLUDE_STATISTICS* 。 但是，下列查詢可用於傳回時間序列查詢的預測統計資料。 這個方式也可以搭配具有巢狀資料表資料行的模型使用。  
   
- 在這個特定模型中, 可預測的屬性是 Quantity, 因此您`[Quantity]`必須使用做為 PredictTimeSeries 函數的第一個引數。 如果您的模型使用不同的可預測屬性，可以替代不同的資料行名稱。  
+ 在這個特定模型中，可預測屬性為 Quantity，所以您必須使用 `[Quantity]` 做為 PredictTimeSeries 函數的第一個引數。 如果您的模型使用不同的可預測屬性，可以替代不同的資料行名稱。  
   
 ```  
 SELECT FLATTENED [Model Region],  
@@ -252,7 +253,7 @@ OR [Model Region] = 'M200 North America'
 >  此範例使用 FLATTENED 關鍵字，讓結果更容易呈現在資料表中，不過，如果您的提供者支援階層式資料列集，可以省略 FLATTENED 關鍵字。 如果您省略 FLATTENED 關鍵字，查詢會傳回兩個資料行：第一個資料行包含識別 `[Model Region]` 資料數列的值，而第二個資料行則包含統計資料的巢狀資料表。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦延伸&#40;模組&#41; DMX 函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [資料採礦延伸模組 &#40;DMX&#41; 函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [時間序列模型查詢範例](https://docs.microsoft.com/analysis-services/data-mining/time-series-model-query-examples)   
  [Predict &#40;DMX&#41;](../dmx/predict-dmx.md)  
   

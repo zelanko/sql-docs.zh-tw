@@ -1,4 +1,5 @@
 ---
+description: 確認最大工作者執行緒設定
 title: 驗證最大工作者執行緒設定 | Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2d94adfd-3ba1-493a-b29a-b436f9d583df
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cc1e6d32a8318d30f699e896999245e586fc5db2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8c82c2359a8dd4828b8d7da465752eeec44c70f1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773108"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420472"
 ---
 # <a name="verify-max-worker-threads-setting"></a>確認最大工作者執行緒設定
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

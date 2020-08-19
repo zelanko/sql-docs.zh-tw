@@ -1,4 +1,5 @@
 ---
+description: catalog.projects (SSISDB 資料庫)
 title: catalog.projects (SSISDB 資料庫) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: a6b595e1-5227-47ce-8ee2-a28c1e1d5645
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8a0975d296454c7528860ca65ae3cecfb47e276f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 874d4a89af11ab022ce2714334b9aefb506de1a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912434"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421992"
 ---
 # <a name="catalogprojects-ssisdb-database"></a>catalog.projects (SSISDB 資料庫)
 

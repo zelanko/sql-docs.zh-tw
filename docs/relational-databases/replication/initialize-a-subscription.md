@@ -1,4 +1,5 @@
 ---
+description: 初始化訂閱
 title: 初始化訂閱 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -18,12 +19,12 @@ ms.assetid: d6013845-cb7a-4203-8e21-edce32f1d330
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 03a1a83dfb41da68565170f832b3b4233cfa9622
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 562a0cf16f677c9306df82b9e2618a793752ed93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716797"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423592"
 ---
 # <a name="initialize-a-subscription"></a>初始化訂閱
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

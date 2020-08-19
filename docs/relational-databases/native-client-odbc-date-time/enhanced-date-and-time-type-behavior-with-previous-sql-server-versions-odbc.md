@@ -1,5 +1,6 @@
 ---
-title: SQL 版本中的日期時間（ODBC）
+description: 舊版 SQL Server 的增強型日期/時間類型行為 (ODBC)
+title: SQL 版本 (ODBC) 的日期時間
 ms.custom: ''
 ms.date: 12/18/2019
 ms.prod: sql
@@ -13,11 +14,12 @@ ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b96e7807fd29e417616f2aec406d6a07f37ccf6f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 83616c86aec74aa7d30c71d9347722d89f1448e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004348"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420612"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>舊版 SQL Server 的增強型日期/時間類型行為 (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -25,25 +27,25 @@ ms.locfileid: "86004348"
   本主題描述使用增強型日期和時間增強功能的用戶端應用程式與早於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本進行通訊時，以及使用 Microsoft Data Access Components、Windows Data Access Components，或早於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client 版本的應用程式將命令傳送到支援增強型日期和時間功能的伺服器時的預期行為。  
   
 ## <a name="down-level-client-behavior"></a>下層用戶端行為  
- 使用早於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client 版本編譯的用戶端應用程式會將新的日期/時間類型視為 nvarchar 資料行。 資料行內容是常值標記法，如[ODBC 日期和時間改善的資料類型支援的](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)「資料格式：字串和常值」一節中所述。 資料行大小是針對資料行指定之小數秒有效位數的最大常值長度。  
+ 使用早於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client 版本編譯的用戶端應用程式會將新的日期/時間類型視為 nvarchar 資料行。 資料行內容是常值標記法，如 [ODBC 日期和時間改善的資料類型支援](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)的「資料格式：字串和常值」一節所述。 資料行大小是針對資料行指定之小數秒有效位數的最大常值長度。  
   
  資料庫目錄 API 將會傳回與傳回到用戶端之下層資料類型程式碼一致的中繼資料 (例如，nvarchar)，以及相關聯的下層表示法 (例如，適當的常值格式)。 不過，傳回的資料類型名稱將會是實際的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 類型名稱。  
   
- SQLDescribeCol、SQLDescribeParam、SQGetDescField 和 SQLColAttribute 所傳回的語句中繼資料，會傳回與下層類型一致的中繼資料，包括類型名稱。 這類下層類型的範例是**Nvarchar**。  
+ SQLDescribeCol、SQLDescribeParam、SQGetDescField 和 SQLColAttribute 所傳回的語句中繼資料將會傳回與下層類型一致的中繼資料，包括型別名稱。 這類下層型別的範例是 **Nvarchar**。  
   
- 當下層用戶端應用程式針對 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 已建立日期/時間類型的架構變更的（或更新版本）伺服器執行時，預期的行為如下所示：  
+ 當下層用戶端應用程式針對 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (或更新版本的) 伺服器執行時，架構會變更為日期/時間類型，預期的行為如下所示：  
   
 |SQL Server 2005 類型|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (或更新版本) 類型|ODBC 用戶端類型|結果轉換 (SQL 到 C)|參數轉換 (C 到 SQL)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
-|Datetime|日期|SQL_C_TYPE_DATE|確定|確定（1）|  
+|Datetime|Date|SQL_C_TYPE_DATE|確定|確定 (1) |  
 |||SQL_C_TYPE_TIMESTAMP|時間欄位會設定為零。|OK (2)<br /><br /> 如果時間欄位不為零，就會失敗。 使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
-||Time(0)|SQL_C_TYPE_TIME|確定|確定（1）|  
+||Time(0)|SQL_C_TYPE_TIME|確定|確定 (1) |  
 |||SQL_C_TYPE_TIMESTAMP|日期欄位設定為目前的日期。|OK (2)<br /><br /> 忽略日期。 如果小數秒不是零，就會失敗。 使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
-||Time(7)|SQL_C_TIME|失敗-不正確時間常值。|確定（1）|  
-|||SQL_C_TYPE_TIMESTAMP|失敗-不正確時間常值。|確定（1）|  
-||Datetime2 （3）|SQL_C_TYPE_TIMESTAMP|確定|確定（1）|  
-||Datetime2 （7）|SQL_C_TYPE_TIMESTAMP|確定|用戶端轉換會將值捨入為 1/300 秒。|  
-|Smalldatetime|日期|SQL_C_TYPE_DATE|確定|確定|  
+||Time(7)|SQL_C_TIME|失敗-不正確時間常值。|確定 (1) |  
+|||SQL_C_TYPE_TIMESTAMP|失敗-不正確時間常值。|確定 (1) |  
+||Datetime2 (3) |SQL_C_TYPE_TIMESTAMP|確定|確定 (1) |  
+||Datetime2 (7) |SQL_C_TYPE_TIMESTAMP|確定|用戶端轉換會將值捨入為 1/300 秒。|  
+|Smalldatetime|Date|SQL_C_TYPE_DATE|確定|確定|  
 |||SQL_C_TYPE_TIMESTAMP|時間欄位會設定為零。|OK (2)<br /><br /> 如果時間欄位不為零，就會失敗。 使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
 ||Time(0)|SQL_C_TYPE_TIME|確定|確定|  
 |||SQL_C_TYPE_TIMESTAMP|日期欄位設定為目前的日期。|OK (2)<br /><br /> 忽略日期。 如果小數秒不是零，就會失敗。<br /><br /> 使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
@@ -73,8 +75,8 @@ ms.locfileid: "86004348"
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_WVARCHAR|SQL_WVARCHAR|  
 |TYPE_NAME|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
-|COLUMN_SIZE|10|8、10、16|16|23|19, 21..27|26, 28..34|  
-|BUFFER_LENGTH|20|16、20. 32|16|16|38，42. 54|52、56. 68|  
+|COLUMN_SIZE|10|8、10. 16|16|23|19, 21..27|26, 28..34|  
+|BUFFER_LENGTH|20|16、20和32|16|16|38、42、54|52，56. 68|  
 |DECIMAL_DIGITS|NULL|NULL|0|3|NULL|NULL|  
 |SQL_DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_DATETIME|SQL_DATETIME|SQL_WVARCHAR|SQL_WVARCHAR|  
 |SQL_DATETIME_SUB|NULL|NULL|SQL_CODE_TIMESTAMP|SQL_CODE_TIMESTAMP|NULL|NULL|  
@@ -97,7 +99,7 @@ ms.locfileid: "86004348"
 |CREATE_PARAMS|NULL|NULL|NULL|NULL|NULL|NULL|  
 |NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|  
 |CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
-|SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|  
+|可搜尋|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|  
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |AUTO_UNIQUE_VALUE|NULL|NULL|NULL|NULL|NULL|NULL|  
@@ -115,4 +117,4 @@ ms.locfileid: "86004348"
  連接到舊版 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的伺服器執行個體時，嘗試使用新的伺服器類型或相關聯的中繼資料程式碼和描述元欄位都會傳回 SQL_ERROR。 系統將會產生包含 SQLSTATE HY004 和訊息「連接時，伺服器版本的 SQL 資料類型無效」的診斷記錄，或包含 07006 和訊息「限制的資料類型屬性違規」的診斷記錄。  
   
 ## <a name="see-also"></a>另請參閱  
- [ODBC&#41;&#40;的日期和時間改善](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [&#40;ODBC&#41;的日期和時間改進 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

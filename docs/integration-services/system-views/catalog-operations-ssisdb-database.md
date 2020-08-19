@@ -1,4 +1,5 @@
 ---
+description: catalog.operations (SSISDB 資料庫)
 title: catalog.operations (SSISDB 資料庫) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9455c5b1-60ff-45fc-8599-cc3abbd6daf5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 46f17290ddc026d66910e4a28c1ea36d7ad0286b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 231fa098ababe70c8a375e3f3f357bcbe90d6f09
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912466"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422012"
 ---
 # <a name="catalogoperations-ssisdb-database"></a>catalog.operations (SSISDB 資料庫)
 
@@ -37,7 +38,7 @@ ms.locfileid: "86912466"
 |object_type|**smallint**|受作業影響之物件的類型。 物件可以是資料夾 (`10`)、專案 (`20`)、封裝 (`30`)、環境 (`40`) 或執行執行個體 (`50`)。|  
 |object_id|**bigint**|受作業影響之物件的識別碼。|  
 |object_name|**nvarchar(260)**|物件的名稱。|  
-|status|**int**|作業狀態。 可能的值為已建立 (`1`)、執行中 (`2`)、已取消 (`3`)、失敗 (`4`)、暫止 (`5`)、意外結束 (`6`)、成功 (`7`)、停止 (`8`) 和已完成 (`9`)。|  
+|status|**int**|作業的狀態。 可能的值為已建立 (`1`)、執行中 (`2`)、已取消 (`3`)、失敗 (`4`)、暫止 (`5`)、意外結束 (`6`)、成功 (`7`)、停止 (`8`) 和已完成 (`9`)。|  
 |start_time|**datetimeoffset**|作業啟動的時間。|  
 |end_time|**datetimeoffsset**|作業結束的時間。|  
 |caller_sid|**varbinary(85)**|使用者的安全性識別碼 (SID) (如果使用 Windows 驗證登入)。|  

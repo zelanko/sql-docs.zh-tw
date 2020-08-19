@@ -1,4 +1,5 @@
 ---
+description: DBCC FREESYSTEMCACHE (Transact-SQL)
 title: DBCC FREESYSTEMCACHE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/25/2020
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 9c7ea9924a133194b089f4b0926731582f12c4fa
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 6edb71255096e8a3164361af07ca0d675f6a9e7d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483523"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422892"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +55,7 @@ DBCC FREESYSTEMCACHE
 ALL 會指定所有支援的快取。  
 _pool\_name_ 會指定 Resource Governor 集區快取。 僅會釋放與此集區相關的項目。  
   
-MARK_IN_USE_FOR_REMOVAL  
+MARK_IN_USE_FOR_REMOVAL   
 不再使用目前所用的項目之後，分別從其對應的快取中，以非同步的方式釋出這些項目。 在 DBCC FREESYSTEMCACHE WITH MARK_IN_USE_FOR_REMOVAL 執行之後，於快取中建立的新項目皆不受影響。  
   
 NO_INFOMSGS  

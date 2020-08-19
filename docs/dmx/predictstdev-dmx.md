@@ -1,5 +1,6 @@
 ---
-title: PredictStdev （DMX） |Microsoft Docs
+description: PredictStdev (DMX)
+title: PredictStdev (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,19 +9,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 25dde754c2e71c6aa40d763d7e3a81c3edca6938
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 262533a9c5f4a799bad0f72aee51f1399ba2f483
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970706"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422242"
 ---
 # <a name="predictstdev-dmx"></a>PredictStdev (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   傳回指定之資料行的預測標準差。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -34,7 +35,7 @@ PredictStdev(<scalar column reference>)
  所指定之類型的純量值 *\<scalar column reference>* 。  
   
 ## <a name="remarks"></a>備註  
- 如果資料行參考是離散的，則**PredictStdev**會傳回0，因為無法從離散值計算標準差。  
+ 如果資料行參考是離散的， **PredictStdev** 會傳回0，因為無法從離散值計算標準差。  
   
 ## <a name="examples"></a>範例  
  下列範例根據 TM Decision Tree 採礦模型，使用自然預測聯結以判斷個人是否可能成為腳踏車買主，也判斷預測的標準差。  
@@ -55,7 +56,7 @@ NATURAL PREDICTION JOIN
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦延伸模組 &#40;DMX&#41; 函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [DMX&#41;的函數 &#40;](../dmx/functions-dmx.md)   
- [&#40;DMX&#41;的一般預測函數](../dmx/general-prediction-functions-dmx.md)  
+ [DMX&#41;函數 &#40;](../dmx/functions-dmx.md)   
+ [&#40;DMX&#41;的一般預測函數 ](../dmx/general-prediction-functions-dmx.md)  
   
   

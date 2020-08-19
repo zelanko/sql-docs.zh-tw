@@ -1,4 +1,5 @@
 ---
+description: 使用 PowerShell 執行 SSIS 套件
 title: 使用 PowerShell 執行 SSIS 套件 | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a86309c484cac3538b48c797665661341ca6648
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 659fb23619eeb8f4f74c43307a03b082dfca1919
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921830"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422172"
 ---
 # <a name="run-an-ssis-package-with-powershell"></a>使用 PowerShell 執行 SSIS 套件
 
@@ -22,7 +23,7 @@ ms.locfileid: "86921830"
 
 本快速入門示範如何使用 PowerShell 指令碼，來連線至資料庫伺服器並執行 SSIS 套件。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 Azure SQL Database 伺服器會接聽連接埠 1433。 如果您要嘗試透過公司防火牆連線至 Azure SQL Database 伺服器，則必須在公司防火牆中開啟此連接埠，讓您成功連線。
 
@@ -41,10 +42,10 @@ Azure SQL Database 伺服器會接聽連接埠 1433。 如果您要嘗試透過�
 若要在 Azure SQL Database 上執行套件，請取得連線至 SSIS 目錄資料庫 (SSISDB) 所需的連線資訊。 在下列程序中，您需要完整伺服器名稱和登入資訊。
 
 1. 登入 [Azure 入口網站](https://portal.azure.com/)。
-2. 從左側功能表中選取 [SQL 資料庫]  ，然後選取 [SQL 資料庫]  頁面上的 SSISDB 資料庫。 
-3. 在您資料庫的 [概觀]  頁面上，檢閱完整伺服器名稱。 若要顯示 [按一下以複製]  選項，請將滑鼠指標暫留在伺服器名稱上。 
+2. 從左側功能表中選取 [SQL 資料庫]****，然後選取 [SQL 資料庫]**** 頁面上的 SSISDB 資料庫。 
+3. 在您資料庫的 [概觀]**** 頁面上，檢閱完整伺服器名稱。 若要顯示 [按一下以複製]**** 選項，請將滑鼠指標暫留在伺服器名稱上。 
 4. 如果您忘記 Azure SQL Database 伺服器登入資訊，請巡覽至 [SQL Database 伺服器] 頁面來檢視伺服器管理員名稱。 如有需要，您可以重設密碼。
-5. 按一下 [顯示資料庫連接字串]  。
+5. 按一下 [顯示資料庫連接字串]****。
 6. 檢閱完整 **ADO.NET** 連接字串。
 
 ## <a name="ssis-powershell-provider"></a>SSIS PowerShell 提供者
@@ -102,7 +103,7 @@ $result = $package.Execute("false", $null)
 Write-Host "Done."
 ```
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>接下來的步驟
 - 請考慮使用其他方式來執行套件。
     - [使用 SSMS 執行 SSIS 套件](./ssis-quickstart-run-ssms.md)
     - [使用 Transact-SQL 執行 SSIS 套件 (SSMS)](./ssis-quickstart-run-tsql-ssms.md)

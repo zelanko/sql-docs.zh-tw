@@ -1,4 +1,5 @@
 ---
+description: 設定及管理全文檢索搜尋的停用字詞與停用字詞表
 title: 設定及管理全文檢索搜尋的停用字詞與停用字詞表
 ms.date: 02/02/2017
 ms.prod: sql
@@ -18,20 +19,20 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 3f3274fa08c121fc9dfd3ee4c5268c975eca2661
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dad86600ba067bd0e03eb0e9b8a05be49593bf7d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725985"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423382"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>設定及管理全文檢索搜尋的停用字詞與停用字詞表
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  為精簡全文檢索索引， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 具有一種機制，可捨棄無助於搜尋卻經常出現的字串。 這些捨棄的字串稱為 *「停用字詞」* (Stopword)。 在索引建立期間，全文檢索引擎會從全文檢索索引省略停用字詞。 這代表全文檢索查詢不會搜尋停用字詞。  
+  為精簡全文檢索索引， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 具有一種機制，可捨棄無助於搜尋卻經常出現的字串。 這些捨棄的字串稱為 *「停用字詞」*(Stopword)。 在索引建立期間，全文檢索引擎會從全文檢索索引省略停用字詞。 這代表全文檢索查詢不會搜尋停用字詞。  
    
 **停用字詞**。 停用字詞可能是具有特定語言意義的字詞。 例如，在英文中，"a"、"and"、"is" 及 "the" 等字會排除在全文檢索索引外，因為一般而言這些字都無助於搜尋。 停用字詞也可能是不具有語言意義的 *Token*。  
 
-**停用字詞表**。 資料庫中的停用字詞是使用稱為停用字詞表的物件來管理。 「停用字詞表」  是停用字詞的清單，與全文檢索索引相關聯時，會套用至該索引上的全文檢索查詢。
+**停用字詞表**。 資料庫中的停用字詞是使用稱為停用字詞表的物件來管理。 「停用字詞表」是停用字詞的清單，與全文檢索索引相關聯時，會套用至該索引上的全文檢索查詢。
    
 ## <a name="use-an-existing-stoplist"></a>使用現有的停用字詞表  
  您可以透過下列方式使用現有的停用字詞表：  
@@ -50,11 +51,11 @@ ms.locfileid: "85725985"
   
 1.  在 [物件總管] 中，展開伺服器。  
   
-2.  展開 [資料庫]  ，然後展開含有您要建立全文檢索停用字詞表的資料庫。  
+2.  展開 [資料庫]****，然後展開含有您要建立全文檢索停用字詞表的資料庫。  
   
-3.  展開 [儲存體]  ，然後以滑鼠右鍵按一下 [全文檢索停用字詞表]  。  
+3.  展開 [儲存體]****，然後以滑鼠右鍵按一下 [全文檢索停用字詞表]****。  
   
-4.  選取 [新增全文檢索停用字詞表]  。  
+4.  選取 [新增全文檢索停用字詞表]****。  
   
 5.  輸入新的停用字詞表名稱。  
   
@@ -89,19 +90,19 @@ ms.locfileid: "85725985"
   
 1.  在 [物件總管] 中，展開伺服器。  
   
-2.  展開 **[資料庫]** ，然後展開此資料庫。  
+2.  展開 **[資料庫]**，然後展開此資料庫。  
   
-3.  展開 **[儲存體]** ，然後選取 **[全文檢索停用字詞表]** 。  
+3.  展開 **[儲存體]**，然後選取 **[全文檢索停用字詞表]**。  
   
-4.  以滑鼠右鍵按一下要變更屬性的停用字詞表，然後選取 [屬性]  。  
+4.  以滑鼠右鍵按一下要變更屬性的停用字詞表，然後選取 [屬性]****。  
   
 5.  在 [[全文檢索停用字詞表屬性]](https://msdn.microsoft.com/library/2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f) 對話方塊中：  
   
-    1.  在 **[動作]** 清單方塊中，選取下列其中一個動作： **[加入停用字詞]** 、 **[刪除停用字詞]** 、 **[刪除所有停用字詞]** 或 **[清除停用字詞表]** 。  
+    1.  在 **[動作]** 清單方塊中，選取下列其中一個動作： **[加入停用字詞]**、 **[刪除停用字詞]**、 **[刪除所有停用字詞]** 或 **[清除停用字詞表]**。  
   
     2.  如果已針對選定動作啟用 **[停用字詞]** 文字方塊，請輸入單一停用字詞。 這個停用字詞必須是唯一的，亦即，尚未存在您所選取之語言的這個停用字詞表中。  
   
-    3.  如果已針對選定動作啟用 [全文檢索語言]  清單方塊，請選取語言。  
+    3.  如果已針對選定動作啟用 [全文檢索語言]**** 清單方塊，請選取語言。  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
@@ -127,7 +128,7 @@ ms.locfileid: "85725985"
 |Instructions|1|  
 |are|2|  
 |applicable|3|  
-|to|4|  
+|至|4|  
 |these|5|  
 |Adventure|6|  
 |Works|7|  

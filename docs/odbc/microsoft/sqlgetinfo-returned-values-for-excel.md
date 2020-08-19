@@ -1,5 +1,6 @@
 ---
-title: Excel 的 SQLGetInfo 傳回值 |Microsoft Docs
+description: Excel 的 SQLGetInfo 傳回值
+title: SQLGetInfo Excel 的傳回值 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,25 +17,25 @@ helpviewer_keywords:
 ms.assetid: a0f4c3e4-5906-4ab3-ad34-c606f173169a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5e285e8978ae357201458ca9289616df7d404811
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6eeb52fe564cbb35b9d52583600803c8ebdb05f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298538"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421712"
 ---
 # <a name="sqlgetinfo-returned-values-for-excel"></a>Excel 的 SQLGetInfo 傳回值
-下表列出*fInfoType*引數的 C 語言 #defines 和**SQLGetInfo**傳回的對應值。 藉由將列出的 C 語言 #defines 傳遞至*fInfoType*引數中的**SQLGetInfo** ，即可抓取這項資訊。 如需**SQLGetInfo**所傳回之值的詳細資訊，請參閱 ODBC 程式設計*人員參考*。  
+下表列出 *fInfoType* 引數的 C 語言 #defines 以及 **SQLGetInfo**所傳回的對應值。 您可以藉由將列出的 C 語言 #defines 傳遞至*fInfoType*引數中的**SQLGetInfo** ，以抓取這項資訊。 如需 **SQLGetInfo**所傳回值的詳細資訊，請參閱《 ODBC 程式設計 *人員參考*》。  
   
 > [!NOTE]  
->  其中**SQLGetInfo**傳回32位位元遮罩，分隔號（&#124;）代表位 or。  
+>  其中 **SQLGetInfo** 會傳回32位的位元遮罩，分隔號 ( # A0) 代表位 or。  
   
 |InfoType|傳回值|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
 |SQL_ACTIVE_ENVIRONMENTS|0|  
-|SQL_AGGREGATE_FUNCTIONS|全部設定|  
+|SQL_AGGREGATE_FUNCTIONS|所有集合|  
 |SQL_ALTER_DOMAIN|0|  
 |SQL_ALTER_TABLE|0|  
 |SQL_ASYNC_MODE|0|  
@@ -81,7 +82,7 @@ ms.locfileid: "81298538"
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|來自 Odbc 的 DSN，如果在 Odbc 中使用 DRIVER 關鍵字，則為 ""。|  
+|SQL_DATA_SOURCE_NAME|Odbc.ini 中的 DSN，或 "" if DRIVER 關鍵字用於 Odbc.ini|  
 |SQL_DATA_SOURCE_READ_ONLY|"Y"|  
 |SQL_DATABASE_NAME|目前的資料庫目錄|  
 |SQL_DATETIME_LITERALS|0|  
@@ -94,9 +95,9 @@ ms.locfileid: "81298538"
 |SQL_DRIVER_HENV|由驅動程式管理員處理。|  
 |SQL_DRIVER_HLIB|由驅動程式管理員處理。|  
 |SQL_DRIVER_HSTMT|由驅動程式管理員處理。|  
-|SQL_DRIVER_NAME|"OdbcJt32"|  
+|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|"4.00.*nnnn*" （*nnnn*指定組建日期）|  
+|SQL_DRIVER_VER|"4.00*nnnn*" (*nnnn* 指定組建日期) |  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -111,7 +112,7 @@ ms.locfileid: "81298538"
 |SQL_GETDATA_EXTENSIONS|多個值|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"\`" （後引號）|  
+|SQL_IDENTIFIER_QUOTE_CHAR|" \` " (後引號) |  
 |SQL_KEYWORDS|多個值|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -122,7 +123,7 @@ ms.locfileid: "81298538"
 |SQL_MAX_COLUMNS_IN_INDEX|0|  
 |SQL_MAX_COLUMNS_IN_ORDER_BY|10|  
 |SQL_MAX_COLUMNS_IN_SELECT|255|  
-|SQL_MAX_COLUMNS_IN_TABLE|255<br /><br /> 使用 Microsoft Excel 驅動程式時，CREATE TABLE 語句可能會允許256資料行，但是255資料行限制仍然有效，而且資料行256的插入將會失敗。|  
+|SQL_MAX_COLUMNS_IN_TABLE|255<br /><br /> 使用 Microsoft Excel 驅動程式時，CREATE TABLE 語句可能會允許256個數據行，但是255資料行的限制仍然有效，且插入資料行256將會失敗。|  
 |SQL_MAX_CONCURRENT_ACTIVITIES|0|  
 |SQL_MAX_CURSOR_NAME_LEN|64|  
 |SQL_MAX_DRIVER_CONNECTIONS|64|  
@@ -156,11 +157,11 @@ ms.locfileid: "81298538"
 |SQL_SCROLL_OPTIONS|多個值|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|EXCEL|  
-|SQL_SPECIAL_CHARACTERS|"\`\@#$%^&~\*\_} {" ';：？/><,.! '-+= \\[] &#124; "|  
+|SQL_SPECIAL_CHARACTERS|"~ \` \@ #$%^& \* \_ -+= \\ } {" ';：？/><,.! '[] &#124; "|  
 |SQL_STRING_FUNCTIONS|多個值|  
 |SQL_SUBQUERIES|多個值|  
 |SQL_SYSTEM_FUNCTIONS|0|  
-|SQL_TABLE_TERM|目錄|  
+|SQL_TABLE_TERM|表|  
 |SQL_TIMEDATE_ADD_INTERVALS|0|  
 |SQL_TIMEDATE_DIFF_INTERVALS|0|  
 |SQL_TIMEDATE_FUNCTIONS|多個值|  

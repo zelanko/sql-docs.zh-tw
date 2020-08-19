@@ -1,4 +1,5 @@
 ---
+description: catalog.folders (SSISDB 資料庫)
 title: catalog.folders (SSISDB 資料庫) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 21a37c16-60aa-4b3f-8bca-ac90ad1697ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6b0a65abc9706af4156767f5ca6bed8fd5a3c69b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8ec7f8fad821c5c62d7b7ec58290050a52b0bf17
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912524"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422062"
 ---
 # <a name="catalogfolders-ssisdb-database"></a>catalog.folders (SSISDB 資料庫)
 

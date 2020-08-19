@@ -1,4 +1,5 @@
 ---
+description: 撰寫 ODBC 3.x 驅動程式
 title: 撰寫 ODBC 3.x 驅動程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 9b75f59b-623f-4711-9ca2-e751b3622e00
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 62f2a701fd5ac94c92d41494a4fd1ab023edaf25
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c5fec9b94dbcf60868c44e49d92bddb4bb73e9cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300358"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421342"
 ---
 # <a name="writing-odbc-3x-drivers"></a>撰寫 ODBC 3.x 驅動程式
-下表顯示 ODBC 3 中的函數支援。*x*驅動程式和 odbc 應用程式，以及在針對 ODBC 3 呼叫函數時，驅動程式管理員所執行的對應。*x*驅動程式。  
+下表顯示 ODBC 3 中的函數支援。*x* 驅動程式和 odbc 應用程式，以及當針對 ODBC 3 呼叫函式時，驅動程式管理員所執行的對應。*x* 驅動程式。  
   
-|函式|支援<br /><br /> 依據<br /><br /> ODBC 3。*x*<br /><br /> driver?|支援<br /><br /> 依據<br /><br /> ODBC 3。*x*<br /><br /> 應用程式?|對應/支援<br /><br /> 由 ODBC 3 所進行。*x*<br /><br /> 驅動程式管理員到<br /><br /> ODBC 3。*x*驅動程式？|  
+|函式|支援<br /><br /> 由<br /><br /> ODBC 3。*x*<br /><br /> 司機？|支援<br /><br /> 由<br /><br /> ODBC 3。*x*<br /><br /> 應用？|對應/支援<br /><br /> 由 ODBC 3 進行。*x*<br /><br /> 驅動程式管理員到<br /><br /> ODBC 3。*x* 驅動程式？|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  
 |**SQLAllocConnect**|否|否 [1]|是|  
 |**SQLAllocEnv**|否|否 [1]|是|  
@@ -105,14 +106,14 @@ ms.locfileid: "81300358"
 |**SQLTables**|是|是|否|  
 |**SQLTransact**|否|否 [1]|是|  
   
- [1] 這個函數在 ODBC 3 中已被取代。*x*。 ODBC 3。*x*應用程式不應該使用這個函數。 不過，開放式群組或 ISO CLI 相容的應用程式可以呼叫此函式。  
+ [1] 此函數已在 ODBC 3 中淘汰。*x*。 ODBC 3。*x* 應用程式不應使用此功能。 不過，開啟的群組或 ISO CLI 相容的應用程式可以呼叫此函式。  
   
- [2] ODBC 3。*x*應用程式應使用**SQLBindParameter** ，而不是**SQLBindParam**。 不過，開放式群組或 ISO CLI 相容的應用程式可以呼叫此函式。  
+ [2] ODBC 3。*x* 應用程式應該使用 **SQLBindParameter** ，而不是 **SQLBindParam**。 不過，開啟的群組或 ISO CLI 相容的應用程式可以呼叫此函式。  
   
- [3] 驅動程式寫入器應該注意 ODBC 2。*x* SQL_COLUMN_PRECISION、SQL_COLUMN_SCALE 和 SQL_COLUMN_LENGTH 的資料行屬性必須與**SQLColAttribute**支援。  
+ [3] 驅動程式寫入器應該注意 ODBC 2。**SQLColAttribute**必須支援*x*資料行屬性 SQL_COLUMN_PRECISION、SQL_COLUMN_SCALE 和 SQL_COLUMN_LENGTH。  
   
- [4] **SQLCopyDesc**由驅動程式管理員在每個屬於不同驅動程式的連接之間進行複製時，部分執行。 需要驅動程式，以支援兩個其本身連接的**SQLCopyDesc** 。 **SQLDrivers**這類函式（由驅動程式管理員單獨執行）不會顯示在這份清單上。  
+ [4] 當描述項複製到屬於不同驅動程式的連接時，驅動程式管理員會部分執行   **SQLCopyDesc** 。 需要有驅動程式，才能支援跨兩個連接的 **SQLCopyDesc** 。 僅由驅動程式管理員執行的函式（例如 **SQLDrivers**）不會顯示在此清單中。  
   
- [5] 在某些情況下，驅動程式可能需要支援此功能。 如需詳細資訊，請參閱此函式的參考頁面。  
+ [5] 在某些情況下，驅動程式可能需要支援此功能。 如需詳細資訊，請參閱此函數的參考頁面。  
   
- [6] 如果驅動程式支援的一組函式因連接連線而有所不同，驅動程式可以選擇支援**SQLGetFunctions** 。
+ [6] 如果驅動程式支援的一組函式因連接而異，則驅動程式可以選擇支援 **SQLGetFunctions** 。

@@ -1,4 +1,5 @@
 ---
+description: 第 2 課：從另一部電腦連線
 title: 第 2 課：從另一部電腦連線 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2016
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 77b0617fbaa8ea90388f40e16ed2b61cfd3bb2b8
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: b00c97499a8db987d9436e3c8a4cd703fb63c3ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396497"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424140"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>第 2 課：從另一部電腦連線
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

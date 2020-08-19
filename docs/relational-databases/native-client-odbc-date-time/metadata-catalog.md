@@ -1,4 +1,5 @@
 ---
+description: 中繼資料 - 目錄
 title: 目錄中繼資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -14,27 +15,28 @@ ms.assetid: b82665be-8cb1-4ad3-ac15-2e590bdc1815
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 853f8bae81b4d3039d4e06e4f0ec67ee22f3c5c3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1d48f89b3de07a8350217aa6dee79cfab3e32fa3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004334"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420602"
 ---
 # <a name="metadata---catalog"></a>中繼資料 - 目錄
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  本主題描述**SQLColumns**和**SQLProcedureColumns**傳回的資料行中繼資料，以及**SQLGetTypeInfo**所傳回的資料類型中繼資料。  
+  本主題說明 **SQLColumns** 和 **SQLProcedureColumns**傳回的資料行中繼資料，以及 **SQLGetTypeInfo**所傳回的資料類型中繼資料。  
   
 ## <a name="remarks"></a>備註  
- 下列資料行值是由**SQLColumns**和**SQLProcedureColumns**傳回日期/時間類型。  
+ **SQLColumns**和**SQLProcedureColumns**會傳回日期/時間類型的下列資料行值。  
   
 |參數類型|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |DATA_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
 |TYPE_NAME|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
-|COLUMN_SIZE|10|8、10、16|16|23|19, 21..27|26, 28..34|  
+|COLUMN_SIZE|10|8、10. 16|16|23|19, 21..27|26, 28..34|  
 |BUFFER_LENGTH|6|10|16|16|16|20|  
-|DECIMAL_DIGITS|0|0..7|0|3|1. 7|1. 7|  
+|DECIMAL_DIGITS|0|0..7|0|3|1.. 7|1.. 7|  
 |SQL_DATA_TYPE|SQL_DATETIME|SQL_SS_TYPE_TIME2|SQL_DATETIME|SQL_DATETIME|SQL_DATETIME|SQL_SS_TYPE_TIMESTAMPOFFSET|  
 |SQL_DATETIME_SUB|SQL_CODE_DATE|NULL|SQL_CODE_TIMESTAMP|SQL_CODE_TIMESTAMP|SQL_CODE_TIMESTAMP|NULL|  
 |CHAR_OCTET_LENGTH|NULL|NULL|NULL|NULL|NULL|NULL|  
@@ -52,7 +54,7 @@ ms.locfileid: "86004334"
 |CREATE_PARAMS|NULL|級別|NULL|NULL|級別|級別|  
 |NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|  
 |CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
-|SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|  
+|可搜尋|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|  
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |AUTO_UNIQUE_VALUE|NULL|NULL|NULL|NULL|NULL|NULL|  
@@ -66,6 +68,6 @@ ms.locfileid: "86004334"
 |USERTYPE|0|0|12|22|0|0|  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;ODBC&#41;的中繼資料](https://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
+ [ODBC&#41;的中繼資料 &#40;](https://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
   
   

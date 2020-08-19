@@ -1,5 +1,6 @@
 ---
-title: MSmerge_metadataaction_request （Transact-sql） |Microsoft Docs
+description: MSmerge_metadataaction_request (Transact-SQL)
+title: MSmerge_metadataaction_request (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,29 +18,29 @@ helpviewer_keywords:
 ms.assetid: cd31a114-900a-4218-ab58-d959e547c647
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: aee900d9f34fb1e8f64db3687d6121a72a9e3b96
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1266bd0c4a8af020a3e29900c2d82d881010a4e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889736"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423292"
 ---
 # <a name="msmerge_metadataaction_request-transact-sql"></a>MSmerge_metadataaction_request (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSmerge_metadataaction_request**資料表會針對所需的每個補償動作，各儲存一個資料列。 使用 Web 同步處理時，如果發生錯誤，而且必須重試同步處理，則會在**MSmerge_metadataaction_request**中輸入專案。 在進行後續合併的上傳階段時，對於所有屬於正在同步處理之發行集的發行項要求，都是從這份資料表擷取及上傳。 成功完成同步處理之後，就會刪除**MSmerge_metadataaction_request**資料表中的對應資料列。 這份資料表儲存在發行集資料庫的發行者端，以及訂閱資料庫的訂閱者端。  
+  **MSmerge_metadataaction_request**資料表會針對每個必要的補償動作，各儲存一個資料列。 使用 Web 同步處理時，如果發生錯誤，且必須重試同步處理，則會在 **MSmerge_metadataaction_request**中輸入專案。 在進行後續合併的上傳階段時，對於所有屬於正在同步處理之發行集的發行項要求，都是從這份資料表擷取及上傳。 順利完成同步處理之後，就會刪除 **MSmerge_metadataaction_request** 資料表中的對應資料列。 這份資料表儲存在發行集資料庫的發行者端，以及訂閱資料庫的訂閱者端。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**tablenick**|**int**|已發行資料表的暱稱。|  
 |**rowguid**|**uniqueidentifier**|給定資料列的資料列識別碼。|  
 |**action**|**tinyint**|識別必要的補償動作。|  
-|**代數**|**bigint**|必須進行補償動作的產生值。|  
-|**變更**|**int**|僅供內部使用。|  
+|**生成**|**bigint**|必須進行補償動作的產生值。|  
+|**改變**|**int**|僅供內部使用。|  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [&#40;Transact-sql&#41;的複寫視圖](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的複寫視圖 ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [合併式複寫的 Web 同步處理](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: SQLTables
 title: SQLTables |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,31 +15,32 @@ ms.assetid: 77b6c15c-9cf7-4019-b3f0-3d27d23ef656
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ec74b3f034e989c6991515e458cfb986c656e34
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 735a0fa33e894f6642b6183a517da0d61123a6a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012347"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420742"
 ---
 # <a name="sqltables"></a>SQLTables
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  SQLTables 可以在靜態伺服器資料指標上執行。 嘗試在可更新的（動態或索引鍵集）資料指標上執行 SQLTables 時，將會傳回 SQL_SUCCESS_WITH_INFO，表示資料指標類型已變更。  
+  SQLTables 可以在靜態伺服器資料指標上執行。 嘗試在可更新的 (動態或索引鍵集) 資料指標上執行 SQLTables 時，將會傳回 SQL_SUCCESS_WITH_INFO，指出資料指標類型已經變更。  
   
- 當 SQL_ALL_CATALOGS *CatalogName*參數，而且所有其他參數都包含預設值（Null 指標）時，SQLTables 會報告所有資料庫中的資料表。  
+ 當 SQL_ALL_CATALOGS *CatalogName* 參數，而且所有其他參數都包含 (Null 指標) 的預設值時，SQLTables 會報告所有資料庫中的資料表。  
   
- 若要報告可用的目錄、架構和資料表類型，SQLTables 會特別使用空字串（長度為零的位元組指標）。 空字串不是預設值 (NULL 指標)。  
+ 若要報告可用的目錄、架構和資料表類型，SQLTables 會)  (零長度的位元組指標，以特殊使用空字串。 空字串不是預設值 (NULL 指標)。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式藉由接受*CatalogName*參數的兩部分名稱，支援連結伺服器上之資料表的報告資訊： *Linked_Server_Name. Catalog_Name*。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會接受*CatalogName*參數的兩部分名稱，以支援連結伺服器上資料表的報告資訊： *Linked_Server_Name Catalog_Name*。  
   
- SQLTables 會傳回名稱符合*TableName*且由目前使用者擁有之任何資料表的相關資訊。  
+ SQLTables 會傳回名稱符合 *TableName* 且由目前使用者所擁有之任何資料表的相關資訊。  
   
 ## <a name="sqltables-and-table-valued-parameters"></a>SQLTables 和資料表值參數  
- 當語句屬性 SQL_SOPT_SS_NAME_SCOPE 的值 SQL_SS_NAME_SCOPE_TABLE_TYPE，而不是其預設值 SQL_SS_NAME_SCOPE_TABLE 時，SQLTables 會傳回資料表類型的相關資訊。 在 SQLTables 所傳回之結果集的資料行4中，針對資料表類型傳回的 TABLE_TYPE 值為 TABLE 類型。 如需 SQL_SOPT_SS_NAME_SCOPE 的詳細資訊，請參閱[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)。  
+ 當語句屬性 SQL_SOPT_SS_NAME_SCOPE 具有 SQL_SS_NAME_SCOPE_TABLE_TYPE 的值（而不是其預設值 SQL_SS_NAME_SCOPE_TABLE）時，SQLTables 會傳回資料表類型的相關資訊。 在 SQLTables 所傳回之結果集的資料行4中，針對資料表類型所傳回的 TABLE_TYPE 值是資料表類型。 如需 SQL_SOPT_SS_NAME_SCOPE 的詳細資訊，請參閱 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)。  
   
  資料表、檢視與同義字共用與資料表類型所使用之命名空間不同的一般命名空間。 雖然不可能擁有具有相同名稱的資料表和檢視，但是在相同的目錄和結構描述中，可能擁有具有相同名稱的資料表和資料表類型。  
   
- 如需資料表值參數的詳細資訊，請參閱[ODBC&#41;&#40;的資料表值參數](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
+ 如需資料表值參數的詳細資訊，請參閱 [&#40;ODBC&#41;的資料表值參數 ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
 ## <a name="example"></a>範例  
   

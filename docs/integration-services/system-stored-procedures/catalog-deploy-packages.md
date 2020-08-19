@@ -1,4 +1,5 @@
 ---
+description: catalog.deploy_packages
 title: catalog.deploy_packages | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 8e861df6-d103-4d84-8438-e822533f6849
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8d2fbfdeeda5ae16182808a1f222c07c243f71c1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 383fe8ab64e0488ded13726d83e80a8bf7244455
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913054"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422162"
 ---
 # <a name="catalogdeploy_packages"></a>catalog.deploy_packages 
 

@@ -1,5 +1,6 @@
 ---
-title: 文字檔的 SQLGetInfo 傳回值 |Microsoft Docs
+description: 文字檔的 SQLGetInfo 傳回值
+title: SQLGetInfo 文字檔的傳回值 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,25 +17,25 @@ helpviewer_keywords:
 ms.assetid: 739a9d72-26aa-42dd-b9fd-76c679976d09
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 98dcfb671a96e9b82d7349193926e8f0f5349324
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f6eac36c1a4907f0450dd54d5cb4c8dba54cc3db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298518"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421692"
 ---
 # <a name="sqlgetinfo-returned-values-for-text-files"></a>文字檔的 SQLGetInfo 傳回值
-下表列出*fInfoType*引數的 C 語言 #defines 和**SQLGetInfo**傳回的對應值。 藉由將列出的 C 語言 #defines 傳遞至*fInfoType*引數中的**SQLGetInfo** ，即可抓取這項資訊。 如需**SQLGetInfo**所傳回之值的詳細資訊，請參閱 ODBC 程式設計[人員參考](../../odbc/reference/odbc-programmer-s-reference.md)。  
+下表列出 *fInfoType* 引數的 C 語言 #defines 以及 **SQLGetInfo**所傳回的對應值。 您可以藉由將列出的 C 語言 #defines 傳遞至*fInfoType*引數中的**SQLGetInfo** ，以抓取這項資訊。 如需 **SQLGetInfo**所傳回值的詳細資訊，請參閱《 ODBC 程式設計 [人員參考](../../odbc/reference/odbc-programmer-s-reference.md)》。  
   
 > [!NOTE]  
->  其中**SQLGetInfo**傳回32位位元遮罩，分隔號（&#124;）代表位 or。  
+>  其中 **SQLGetInfo** 會傳回32位的位元遮罩，分隔號 ( # A0) 代表位 or。  
   
 |InfoType|傳回值|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
 |SQL_ACTIVE_ENVIRONMENTS|0|  
-|SQL_AGGREGATE_FUNCTIONS|全部設定|  
+|SQL_AGGREGATE_FUNCTIONS|所有集合|  
 |SQL_ALTER_DOMAIN|0|  
 |SQL_ALTER_TABLE|0|  
 |SQL_ASYNC_MODE|0|  
@@ -44,7 +45,7 @@ ms.locfileid: "81298518"
 |SQL_CATALOG_LOCATION|SQL_QL_START|  
 |SQL_CATALOG_NAME|"Y"|  
 |SQL_CATALOG_NAME_SEPARATOR|"\\"|  
-|SQL_CATALOG_TERM|Directory|  
+|SQL_CATALOG_TERM|目錄名|  
 |SQL_CATALOG_USAGE|多個值|  
 |SQL_COLLATION_SEQ|""|  
 |SQL_COLUMN_ALIAS|"Y"|  
@@ -81,11 +82,11 @@ ms.locfileid: "81298518"
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|來自 Odbc 的 DSN，如果在 Odbc 中使用 DRIVER 關鍵字，則為 ""。|  
+|SQL_DATA_SOURCE_NAME|Odbc.ini 中的 DSN，或 "" if DRIVER 關鍵字用於 Odbc.ini|  
 |SQL_DATA_SOURCE_READ_ONLY|"Y"|  
 |SQL_DATABASE_NAME|目前的資料庫目錄|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|文字|  
+|SQL_DBMS_NAME|中文|  
 |SQL_DBMS_VER|ISAM：文字<br /><br /> 版本：1.0<br /><br /> 版本號碼的格式：01.00.0000|  
 |SQL_DDL_INDEX|0|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
@@ -94,9 +95,9 @@ ms.locfileid: "81298518"
 |SQL_DRIVER_HENV|由驅動程式管理員處理。|  
 |SQL_DRIVER_HLIB|由驅動程式管理員處理。|  
 |SQL_DRIVER_HSTMT|由驅動程式管理員處理。|  
-|SQL_DRIVER_NAME|"OdbcJt32"|  
+|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|"4.00.*nnnn*" （*nnnn*指定組建日期）|  
+|SQL_DRIVER_VER|"4.00*nnnn*" (*nnnn* 指定組建日期) |  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -111,7 +112,7 @@ ms.locfileid: "81298518"
 |SQL_GETDATA_EXTENSIONS|多個值|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"\`" （後引號）|  
+|SQL_IDENTIFIER_QUOTE_CHAR|" \` " (後引號) |  
 |SQL_KEYWORDS|多個值|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -155,12 +156,12 @@ ms.locfileid: "81298518"
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|多個值|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|文字|  
-|SQL_SPECIAL_CHARACTERS|"~\`@ # $% ^& * _-+ =\\} {" ';：？/><,.! '[] &#124; "|  
+|SQL_SERVER_NAME|中文|  
+|SQL_SPECIAL_CHARACTERS|"~ \` @ # $% ^& * _-+ = \\ } {" ';：？/><,.! '[] &#124; "|  
 |SQL_STRING_FUNCTIONS|多個值|  
 |SQL_SUBQUERIES|多個值|  
 |SQL_SYSTEM_FUNCTIONS|0|  
-|SQL_TABLE_TERM|目錄|  
+|SQL_TABLE_TERM|表|  
 |SQL_TIMEDATE_ADD_INTERVALS|0|  
 |SQL_TIMEDATE_DIFF_INTERVALS|0|  
 |SQL_TIMEDATE_FUNCTIONS|多個值|  

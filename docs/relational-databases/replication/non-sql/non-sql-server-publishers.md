@@ -1,4 +1,5 @@
 ---
+description: 非 SQL Server 發行者
 title: 非 SQL Server 發行者 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 08a160a6-33be-46b5-bc7b-d53180d8bdf1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9114317fde7ff4145c1008ccaf51bb5f0cec855f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9560875e4db3a644644238b0140fadb33cf1877d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893293"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420442"
 ---
 # <a name="non-sql-server-publishers"></a>非 SQL Server 發行者  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "85893293"
   
  從非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫發佈對於下列狀況來說相當理想：  
   
-|狀況|描述|  
+|案例|描述|  
 |--------------|-----------------|  
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 應用程式部署|使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 進行開發，同時操作從非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫複寫的資料。|  
 |資料倉儲臨時伺服器|保持 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 臨時資料庫與非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫的同步處理。|  

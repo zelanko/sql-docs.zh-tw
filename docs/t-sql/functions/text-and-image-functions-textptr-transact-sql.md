@@ -1,4 +1,5 @@
 ---
+description: Text 和 Image 函式 - TEXTPTR (Transact-SQL)
 title: TEXTPTR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/23/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0150b1b9dace457b76130b7b0b3f863471637970
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 510f2e6f0097b79cd458907a73ae094ff5cc637d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111807"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422592"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Text 和 Image 函式 - TEXTPTR (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +68,7 @@ TEXTPTR ( column )
 |PATINDEX<b>('</b> _%pattern%_ **' ,** _expression_ **)**|傳回指定字元字串在 **text** 或 **ntext** 資料行中的字元位置。|  
 |DATALENGTH<b>(</b>_expression_ **)**|傳回 **text**、**ntext** 和 **image** 資料行中資料的長度。|  
 |SET TEXTSIZE|傳回 SELECT 陳述式所要傳回的 **text**、**ntext** 或 **image** 資料的限制 (以位元組為單位)。|  
-|SUBSTRING<b>(</b>_text_column_, _start_, _length_ **)**|傳回指定的 **start** 位移和 *length* 所指定的 *varchar* 字串。 長度應該小於 8 KB。|  
+|SUBSTRING<b>(</b>_text_column_, _start_, _length_ **)**|傳回指定的 *start* 位移和 *length* 所指定的 **varchar** 字串。 長度應該小於 8 KB。|  
   
 ## <a name="examples"></a>範例  
   
@@ -75,7 +76,7 @@ TEXTPTR ( column )
 >  若要執行下列範例，您必須安裝 **pubs** 資料庫。  
   
 ### <a name="a-using-textptr"></a>A. 使用 TEXTPTR  
- 下列範例會使用 `TEXTPTR` 函式來尋找 **資料庫的** 資料表中與 `logo` 建立關聯的 `New Moon Books`image`pub_info` 資料行 `pubs`。 這個文字指標放在本機變數 `@ptrval.` 中。  
+ 下列範例會使用 `TEXTPTR` 函式來尋找 `pubs` 資料庫的 `pub_info` 資料表中與 `New Moon Books` 建立關聯的 **image** 資料行 `logo`。 這個文字指標放在本機變數 `@ptrval.` 中。  
   
 ```  
 USE pubs;  
@@ -165,7 +166,7 @@ This is sample text data for Lucerne Publishing, publisher 9999 in the pubs data
 ```  
   
 ### <a name="d-returning-specific-text-data"></a>D. 傳回特定文字資料  
- 下列範例會尋找 `text` 資料庫 `pr_info` 資料表中與 `pub_id``0736` 建立關聯的 `pub_info` 資料行 (`pubs`)。 它先宣告本機變數 `@val`。 之後，將文字指標 (大型二進位字串) 放在 `@val` 中，將它當作一個參數來提供給 `READTEXT` 陳述式。 這會傳回從第 5 位元組 (位移 4) 開始的 10 個位元組。  
+ 下列範例會尋找 `pubs` 資料庫 `pub_info` 資料表中與 `pub_id``0736` 建立關聯的 `text` 資料行 (`pr_info`)。 它先宣告本機變數 `@val`。 之後，將文字指標 (大型二進位字串) 放在 `@val` 中，將它當作一個參數來提供給 `READTEXT` 陳述式。 這會傳回從第 5 位元組 (位移 4) 開始的 10 個位元組。  
   
 ```  
 USE pubs;  
