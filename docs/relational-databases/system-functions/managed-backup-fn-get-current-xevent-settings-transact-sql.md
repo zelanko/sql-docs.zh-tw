@@ -1,5 +1,6 @@
 ---
-title: managed_backup. fn_get_current_xevent_settings （Transact-sql） |Microsoft Docs
+description: 'managed_backup fn_get_current_xevent_settings (Transact-sql) '
+title: managed_backup fn_get_current_xevent_settings (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +21,14 @@ helpviewer_keywords:
 ms.assetid: 95d3adaa-bb9d-4833-b8b4-3d9fd4f9c82a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cff78d30f768360c55b212742770d8caded6f5ee
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 164038c2009f273ae922e65c922c1d962a72b7d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053444"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419522"
 ---
-# <a name="managed_backupfn_get_current_xevent_settings-transact-sql"></a>managed_backup. fn_get_current_xevent_settings （Transact-sql）
+# <a name="managed_backupfn_get_current_xevent_settings-transact-sql"></a>managed_backup fn_get_current_xevent_settings (Transact-sql) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   針對 Smart Admn 支援的每個擴充事件類型各傳回 1 個資料列。  
@@ -41,7 +43,7 @@ ms.locfileid: "86053444"
 smart_admin.fn_get_current_xevent_settings ()   
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>參量  
+##  <a name="arguments"></a><a name="Arguments"></a> 引數  
  此函數沒有任何引數。  
   
 ## <a name="table-returned"></a>傳回的資料表  
@@ -50,13 +52,13 @@ smart_admin.fn_get_current_xevent_settings ()
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |Event_name|NVARCHAR(128)|擴充事件類型|  
-|is_configurable|NVARCHAR(128)|如果事件是可設定的，則會設為**True** ，否則會設為**False**。|  
+|is_configurable|NVARCHAR(128)|如果事件是可設定的，則設定為 **True** ，否則會設為 **False**。|  
 |is_enabled|NVARCHAR(128)|如果已啟用事件，則設定為 True；如果未啟用，則設定為 False。 使用 smart_admin.sp_set_parameter 可啟用偵錯事件。|  
   
 ## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>權限  
- 需要函數的**SELECT**許可權。  
+ 需要函數的 **SELECT** 許可權。  
   
 ## <a name="examples"></a>範例  
  下列範例會傳回所有擴充事件及其目前狀態。  

@@ -1,4 +1,5 @@
 ---
+description: 使用記憶體最佳化的系統版本設定時態表
 title: 使用記憶體最佳化的系統版本設定時態表 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/05/2016
@@ -11,12 +12,12 @@ ms.assetid: 691d4f80-6754-43f5-8b43-d4facf08f6fc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16a064d023912782c29551cc88308df9cb8dbfad
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 6dfc85f00616cc37a6e6440e711a5f3abab6f40a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555271"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418942"
 ---
 # <a name="working-with-memory-optimized-system-versioned-temporal-tables"></a>使用記憶體最佳化的系統版本設定時態表
 

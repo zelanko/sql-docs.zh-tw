@@ -1,5 +1,6 @@
 ---
-title: InstanceName 屬性（ServerNetworkProtocolProperty）
+description: InstanceName 屬性 (ServerNetworkProtocolProperty 類別)
+title: 'InstanceName 屬性 (ServerNetworkProtocolProperty) '
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: b3f24bf0-6b02-496b-b08e-327f7b320bc5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bdd3f5ff14b694b9627040334f1b335c9eb707ce
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 07fe91957111f1f614e18fb9973b09b6a747c03b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880826"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418774"
 ---
 # <a name="instancename-property-servernetworkprotocolproperty-class"></a>InstanceName 屬性 (ServerNetworkProtocolProperty 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  取得 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 伺服器網路通訊協定安裝所在之實例的名稱。  
+  取得 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 伺服器網路通訊協定安裝所在的實例名稱。  
   
 ## <a name="syntax"></a>語法  
   

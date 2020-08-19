@@ -1,5 +1,6 @@
 ---
-title: sysssispackagefolders （Transact-sql） |Microsoft Docs
+description: sysssispackagefolders (Transact-SQL)
+title: sysssispackagefolders (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,23 +18,23 @@ helpviewer_keywords:
 ms.assetid: ddc4833f-27bf-4610-b739-d257961d17ac
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c525b1b457c2bc9f505a83cc89a08a57c27e6279
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7924de782ca499f5a92458d0024b57877c7310c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881276"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419122"
 ---
 # <a name="sysssispackagefolders-transact-sql"></a>sysssispackagefolders (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  針對所使用之資料夾階層中的每個邏輯資料夾，各包含一個資料列 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 。 當您連接到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 時，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的物件總管會列出這些資料夾。 資料夾會列出儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或檔案系統中的封裝。  
+  針對資料夾階層中使用的每個邏輯資料夾，各包含一個資料列 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 。 當您連接到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 時，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的物件總管會列出這些資料夾。 資料夾會列出儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或檔案系統中的封裝。  
   
- **Parentfolderid**資料行描述資料夾階層。 資料夾階層頂端的資料夾包含**parentfolderid**中的 null 值。  
+ **Parentfolderid**資料行描述資料夾階層。 資料夾階層頂端的資料夾在 **parentfolderid**中包含 null 值。  
   
- [**資料夾**名稱] 資料行包含物件總管中顯示的資料夾名稱。  
+ [ **資料夾** 名稱] 資料行包含出現在物件總管中的資料夾名稱。  
   
- 此資料表會儲存在**msdb**資料庫中。  
+ 此資料表儲存在 **msdb** 資料庫中。  
 
   
 |資料行名稱|資料類型|描述|  

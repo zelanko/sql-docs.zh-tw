@@ -1,4 +1,5 @@
 ---
+description: 建立檢查條件約束
 title: 建立檢查條件約束 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2017
@@ -17,12 +18,12 @@ ms.assetid: b8756304-9454-4d39-996a-64516831b7df
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b3c631e4c733c87662ab1a582f1388913f0c2b3f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 177caf959cd9f957525dd50a0b63a0dc2b304115
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753832"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419042"
 ---
 # <a name="create-check-constraints"></a>建立檢查條件約束
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,9 +53,9 @@ ms.locfileid: "85753832"
   
 #### <a name="to-create-a-new-check-constraint"></a>若要建立新的檢查條件約束  
   
-1.  在 [物件總管]  中，展開您想要加入檢查條件約束的資料表、以滑鼠右鍵按一下 [條件約束]  ，然後按一下 [新增條件約束]  。  
+1.  在 [物件總管]**** 中，展開您想要加入檢查條件約束的資料表、以滑鼠右鍵按一下 [條件約束]****，然後按一下 [新增條件約束]****。  
   
-2.  在 [檢查條件約束]  對話方塊中，按一下 [運算式]  欄位，然後按一下省略符號 **(...)** 。  
+2.  在 [檢查條件約束]**** 對話方塊中，按一下 [運算式]**** 欄位，然後按一下省略符號 **(...)**。  
   
 3.  在 **[檢查條件約束運算式]** 對話方塊中，輸入檢查條件約束的 SQL 運算式。 例如，若要將 `SellEndDate` 資料表之 `Product` 資料行中的項目限制為大於或等於 `SellStartDate` 資料行中日期的值或是 NULL 值，請輸入：  
   
@@ -71,19 +72,19 @@ ms.locfileid: "85753832"
     > [!NOTE]  
     >  請務必將任何非數字條件約束值放在單引號 (') 中。  
   
-4.  按一下 [確定]  。  
+4.  按一下 [確定]。  
   
-5.  在 [識別]  類別目錄中，您可以變更檢查條件約束的名稱，並且加入條件約束的描述 (擴充屬性)。  
+5.  在 [識別]**** 類別目錄中，您可以變更檢查條件約束的名稱，並且加入條件約束的描述 (擴充屬性)。  
   
 6.  在 **[資料表設計工具]** 類別目錄中，您可以設定強制執行條件約束的時間。  
   
-    |**收件人：**|**請在下列欄位中選取 [是]：**|  
+    |**變更為：**|**請在下列欄位中選取 [是]：**|  
     |-------------|---------------------------------------------|  
     |針對建立條件約束之前存在的資料測試條件約束|**檢查建立或重新啟用時的現有資料**|  
     |每次在此資料表上進行複寫作業時都強制執行條件約束|**強制複寫**|  
     |每次插入或更新此資料表的資料列時都強制執行條件約束|**於 INSERT 及 UPDATE 時強制套用**|  
   
-7.  按一下 [關閉]  。  
+7.  按一下 [關閉] 。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

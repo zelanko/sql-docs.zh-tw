@@ -1,4 +1,5 @@
 ---
+description: 系統追蹤函數
 title: 系統追蹤函數 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ dev_langs:
 ms.assetid: 166426e1-555d-4ce4-bae3-248dcac56883
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: da2149d7e1bf638aa2b79aa6ce620a7bfe7b1ae9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 08850a48a75f47d9cc4e3c849231983da20ee025
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734341"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419462"
 ---
 # <a name="system-trace-functions"></a>系統追蹤函數
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

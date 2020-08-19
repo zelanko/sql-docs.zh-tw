@@ -1,5 +1,6 @@
 ---
-title: sys.databases fulltext_semantic_languages （Transact-sql） |Microsoft Docs
+description: sys.fulltext_semantic_languages (Transact-SQL)
+title: sys. fulltext_semantic_languages (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,30 +20,30 @@ ms.assetid: b42a85e6-1db9-4a22-8a70-014574c95198
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: aad472489192516d367185572d1c9ac67eb78154
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 62b8f1fc18fd5c1253451a6a35eb13fd5e2b2105
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248774"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420092"
 ---
 # <a name="sysfulltext_semantic_languages-transact-sql"></a>sys.fulltext_semantic_languages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上註冊語義模型的每個語言，各傳回一個資料列。 當語言模型已註冊時，該語言會啟用語意索引。  
   
- 此目錄檢視類似于[fulltext_languages &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)。  
+ 此目錄檢視類似于 [sys. fulltext_languages &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)。  
     
 |資料行名稱|類型|描述|  
 |-|-|-|   
 |lcid|int|語言的 Microsoft Windows 地區設定識別碼 (LCID)。|  
-|NAME|sysname|這是sys.sys語言中的別名值， [&#40;transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)對應至**lcid**的值，或是數值 lcid 的字串表示。|  
+|NAME|sysname|這是sys.sys語言中的別名值 [ &#40;transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 對應至 **lcid**的值，或是數值 lcid 的字串表示。|  
   
 ## <a name="general-remarks"></a>一般備註  
  如需詳細資訊，請參閱 [安裝及設定語意搜尋](../../relational-databases/search/install-and-configure-semantic-search.md)。  
   
 ## <a name="metadata"></a>中繼資料  
- 如需安裝以支援語義索引的語義語言統計資料庫的詳細資訊，請查詢目錄檢視[sys.databases fulltext_semantic_language_statistics_database &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)。  
+ 如需安裝以支援語義索引之語義語言統計資料庫的詳細資訊，請查詢目錄檢視 [sys. fulltext_semantic_language_statistics_database &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)。  
   
 ## <a name="security"></a>安全性  
   
@@ -50,7 +51,7 @@ ms.locfileid: "87248774"
  目錄檢視內中繼資料的可見性會限制在使用者所擁有的安全性實體，或已授與使用者某些權限的安全性實體。  
   
 ## <a name="examples"></a>範例  
- 下列範例示範如何查詢**fulltext_semantic_languages sys.databases** ，以取得在目前實例上註冊以進行語義索引之所有語言模型的相關資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+ 下列範例示範如何查詢 **sys. fulltext_semantic_languages** ，以取得目前實例上已註冊以進行語義索引之所有語言模型的相關資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ```  
 SELECT * FROM sys.fulltext_semantic_languages;  

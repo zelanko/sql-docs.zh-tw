@@ -1,5 +1,6 @@
 ---
-title: sys. external_languages （Transact-sql）-SQL Server |Microsoft Docs
+description: sys. external_languages (Transact-sql) -SQL Server
+title: sys. external_languages (Transact-sql) -SQL Server |Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -19,28 +20,28 @@ ms.author: negust
 ms.reviewer: dphansen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 225e20e199a401e544be9c86a7b05a078f556530
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1f44ce24baf72b5bb93e8d649d8fa4ebed1d6e99
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751725"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420122"
 ---
-# <a name="sysexternal_languages-transact-sql"></a>sys.databases external_languages （Transact-sql）
+# <a name="sysexternal_languages-transact-sql"></a>sys. external_languages (Transact-sql) 
 [!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
 
 此目錄檢視會提供資料庫中的外部語言清單。 **R** 和 **Python** 為保留的名稱，且不能使用這些特定的名稱來建立任何外部語言。
 
 ## <a name="sysexternal_languages"></a>sys.external_languages
 
-目錄檢視 sys. external_languages 會針對資料庫中的每個外部語言列出一個資料列。
+目錄檢視 sys. external_languages 會列出資料庫中每個外部語言的資料列。
 
 |資料行名稱 |資料類型 | 描述|
 |------|------|------|
 |external_language_id |int | 外部語言的識別碼|
 |語言 |sysname |外部語言的名稱。 在資料庫中，這是唯一的。 R 和 Python 是每個實例的保留名稱|
 |create_date |datetime2 |建立的日期和時間|
-|principal_id |int |擁有此外部程式庫之主體的識別碼|
+|principal_id |int |擁有此外部程式庫的主體識別碼|
 
 ## <a name="see-also"></a>另請參閱  
 

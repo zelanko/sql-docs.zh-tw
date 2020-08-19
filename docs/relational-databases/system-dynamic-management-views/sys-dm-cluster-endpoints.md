@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_cluster_endpoints （Transact-sql） |Microsoft Docs
+description: 'sys. dm_cluster_endpoints (Transact-sql) '
+title: sys. dm_cluster_endpoints (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -19,14 +20,14 @@ ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fe06d6b7c00fe60c44b19468f9ef0cc814d25e5d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0bf884399e43d6437c133c7884db7100baca9553
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913227"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419762"
 ---
-# <a name="sysdm_cluster_endpoints-transact-sql"></a>sys.databases dm_cluster_endpoints （Transact-sql）
+# <a name="sysdm_cluster_endpoints-transact-sql"></a>sys. dm_cluster_endpoints (Transact-sql) 
 [!INCLUDE[sqlserver2019](../../includes/applies-to-version/sqlserver2019.md)]
 
 |資料行名稱|資料類型|描述|  

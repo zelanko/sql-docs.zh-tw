@@ -1,5 +1,6 @@
 ---
-title: PARAMETERS （Transact-sql） |Microsoft Docs
+description: PARAMETERS (Transact-SQL)
+title: " (Transact-sql) 的參數 |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,11 +20,12 @@ ms.assetid: 06ded0ca-7d21-4400-864a-b801e855b257
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ba42e693487fdf2bc9c7cb9565ee2448d6b3f9b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cf2d4b38a1bf29b129345c35f5d9bbb1e9a3c5f6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000432"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419382"
 ---
 # <a name="parameters-transact-sql"></a>PARAMETERS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,41 +36,41 @@ ms.locfileid: "86000432"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**SPECIFIC_CATALOG**|**Nvarchar （** 128 **）**|以這個項目為參數的常式之目錄名稱。|  
-|**SPECIFIC_SCHEMA**|**Nvarchar （** 128 **）**|以這個項目為參數的常式之結構描述名稱。<br /><br /> <strong> \* \* 重要 \* 事項 \* ：</strong>請勿使用 INFORMATION_SCHEMA 視圖來判斷物件的架構。 INFORMATION_SCHEMA views 只代表物件的中繼資料子集。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
-|**SPECIFIC_NAME**|**Nvarchar （** 128 **）**|以這個項目為參數的常式名稱。|  
+|**SPECIFIC_CATALOG**|**Nvarchar (** 128 **) **|以這個項目為參數的常式之目錄名稱。|  
+|**SPECIFIC_SCHEMA**|**Nvarchar (** 128 **) **|以這個項目為參數的常式之結構描述名稱。<br /><br /> <strong> \* \* 重要 \* 事項 \* ：</strong>請勿使用 INFORMATION_SCHEMA views 來判斷物件的架構。 INFORMATION_SCHEMA views 只代表物件的中繼資料子集。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|**SPECIFIC_NAME**|**Nvarchar (** 128 **) **|以這個項目為參數的常式名稱。|  
 |**ORDINAL_POSITION**|**int**|參數的序數位置從 1 開始。 若為函數的傳回值，則是 0。|  
-|**PARAMETER_MODE**|**Nvarchar （** 10 **）**|如果是輸入參數，便傳回 IN；如果是輸出參數，便傳回 OUT，如果是輸入/輸出參數，便傳回 INOUT。|  
-|**IS_RESULT**|**Nvarchar （** 10 **）**|如果指出常式的結果是函數，便傳回 YES。 否則，便傳回 NO。|  
-|**AS_LOCATOR**|**Nvarchar （** 10 **）**|如果宣告成定位器，便傳回 YES。 否則，便傳回 NO。|  
-|**PARAMETER_NAME**|**Nvarchar （** 128 **）**|參數的名稱。 如果這對應於函數的傳回值，便是 NULL。|  
-|**DATA_TYPE**|**Nvarchar （** 128 **）**|系統提供的資料類型。|  
-|**CHARACTER_MAXIMUM_LENGTH**|**int**|二進位或字元資料類型的最大長度 (以字元為單位)。<br /><br /> -1 適用于**xml**和大數數值型別資料。 否則，便傳回 NULL。|  
-|**CHARACTER_OCTET_LENGTH**|**int**|二進位或字元資料類型的最大長度 (以位元組為單位)。<br /><br /> -1 適用于**xml**和大數數值型別資料。 否則，便傳回 NULL。|  
-|**COLLATION_CATALOG**|**Nvarchar （** 128 **）**|一律傳回 NULL。|  
-|**COLLATION_SCHEMA**|**Nvarchar （** 128 **）**|一律傳回 NULL。|  
-|**COLLATION_NAME**|**Nvarchar （** 128 **）**|參數的定序名稱。 如果不是字元類型之一，便傳回 NULL。|  
-|**CHARACTER_SET_CATALOG**|**Nvarchar （** 128 **）**|參數字元集的目錄名稱。 如果不是字元類型之一，便傳回 NULL。|  
-|**CHARACTER_SET_SCHEMA**|**Nvarchar （** 128 **）**|一律傳回 NULL。|  
-|**CHARACTER_SET_NAME**|**Nvarchar （** 128 **）**|參數字元集的名稱。 如果不是字元類型之一，便傳回 NULL。|  
+|**PARAMETER_MODE**|**Nvarchar (** 10 **) **|如果是輸入參數，便傳回 IN；如果是輸出參數，便傳回 OUT，如果是輸入/輸出參數，便傳回 INOUT。|  
+|**IS_RESULT**|**Nvarchar (** 10 **) **|如果指出常式的結果是函數，便傳回 YES。 否則，便傳回 NO。|  
+|**AS_LOCATOR**|**Nvarchar (** 10 **) **|如果宣告成定位器，便傳回 YES。 否則，便傳回 NO。|  
+|**PARAMETER_NAME**|**Nvarchar (** 128 **) **|參數的名稱。 如果這對應於函數的傳回值，便是 NULL。|  
+|**DATA_TYPE**|**Nvarchar (** 128 **) **|系統提供的資料類型。|  
+|**CHARACTER_MAXIMUM_LENGTH**|**int**|二進位或字元資料類型的最大長度 (以字元為單位)。<br /><br /> -1 適用于 **xml** 和大數數值型別的資料。 否則，便傳回 NULL。|  
+|**CHARACTER_OCTET_LENGTH**|**int**|二進位或字元資料類型的最大長度 (以位元組為單位)。<br /><br /> -1 適用于 **xml** 和大數數值型別的資料。 否則，便傳回 NULL。|  
+|**COLLATION_CATALOG**|**Nvarchar (** 128 **) **|一律傳回 NULL。|  
+|**COLLATION_SCHEMA**|**Nvarchar (** 128 **) **|一律傳回 NULL。|  
+|**COLLATION_NAME**|**Nvarchar (** 128 **) **|參數的定序名稱。 如果不是字元類型之一，便傳回 NULL。|  
+|**CHARACTER_SET_CATALOG**|**Nvarchar (** 128 **) **|參數字元集的目錄名稱。 如果不是字元類型之一，便傳回 NULL。|  
+|**CHARACTER_SET_SCHEMA**|**Nvarchar (** 128 **) **|一律傳回 NULL。|  
+|**CHARACTER_SET_NAME**|**Nvarchar (** 128 **) **|參數字元集的名稱。 如果不是字元類型之一，便傳回 NULL。|  
 |**NUMERIC_PRECISION**|**tinyint**|近似數值資料、精確數值資料、整數資料或貨幣資料的有效位數。 否則，便傳回 NULL。|  
 |**NUMERIC_PRECISION_RADIX**|**smallint**|近似數值資料、精確數值資料、整數資料或貨幣資料的有效位數基數。 否則，便傳回 NULL。|  
 |**NUMERIC_SCALE**|**tinyint**|近似數值資料、精確數值資料、整數資料或貨幣資料的小數位數。 否則，便傳回 NULL。|  
-|**DATETIME_PRECISION**|**smallint**|如果參數類型為**datetime**或**Smalldatetime**，則為小數秒的有效位數。 否則，便傳回 NULL。|  
-|**INTERVAL_TYPE**|**Nvarchar （** 30 **）**|NULL。 保留供未來使用。|  
+|**DATETIME_PRECISION**|**smallint**|如果參數類型為 **datetime** 或 **Smalldatetime**，則為小數秒的有效位數。 否則，便傳回 NULL。|  
+|**INTERVAL_TYPE**|**Nvarchar (** 30 **) **|NULL。 保留供未來使用。|  
 |**INTERVAL_PRECISION**|**smallint**|NULL。 保留供未來使用。|  
-|**USER_DEFINED_TYPE_CATALOG**|**Nvarchar （** 128 **）**|NULL。 保留供未來使用。|  
-|**USER_DEFINED_TYPE_SCHEMA**|**Nvarchar （** 128 **）**|NULL。 保留供未來使用。|  
-|**USER_DEFINED_TYPE_NAME**|**Nvarchar （** 128 **）**|NULL。 保留供未來使用。|  
-|**SCOPE_CATALOG**|**Nvarchar （** 128 **）**|NULL。 保留供未來使用。|  
-|**SCOPE_SCHEMA**|**Nvarchar （** 128 **）**|NULL。 保留供未來使用。|  
-|**SCOPE_NAME**|**Nvarchar （** 128 **）**|NULL。 保留供未來使用。|  
+|**USER_DEFINED_TYPE_CATALOG**|**Nvarchar (** 128 **) **|NULL。 保留供未來使用。|  
+|**USER_DEFINED_TYPE_SCHEMA**|**Nvarchar (** 128 **) **|NULL。 保留供未來使用。|  
+|**USER_DEFINED_TYPE_NAME**|**Nvarchar (** 128 **) **|NULL。 保留供未來使用。|  
+|**SCOPE_CATALOG**|**Nvarchar (** 128 **) **|NULL。 保留供未來使用。|  
+|**SCOPE_SCHEMA**|**Nvarchar (** 128 **) **|NULL。 保留供未來使用。|  
+|**SCOPE_NAME**|**Nvarchar (** 128 **) **|NULL。 保留供未來使用。|  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的系統檢視](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
- [資訊架構視圖 &#40;Transact-sql&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
- [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統檢視 ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [&#40;Transact-sql&#41;的資訊架構視圖 ](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
+ [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+ [sys. objects &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)  
   
   

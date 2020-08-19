@@ -1,5 +1,6 @@
 ---
-title: syscollector_collection_sets （Transact-sql） |Microsoft Docs
+description: syscollector_collection_sets (Transact-SQL)
+title: syscollector_collection_sets (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: db0def92-f25b-45da-9709-eab972b33800
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b65cbb9596ff25e334609e978fdf61a89be41db4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 902a8f7513bf30194ec40d7d27714e98f47b2cac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896778"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419882"
 ---
 # <a name="syscollector_collection_sets-transact-sql"></a>syscollector_collection_sets (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "85896778"
 |logging_level|**smallint**|指定記錄層次 (0、1 或 2)。 不可為 Null。|  
 |days_until_expiration|**smallint**|這是已收集之資料儲存在管理資料倉儲中的天數。 不可為 Null。|  
 |description|**nvarchar(4000)**|描述收集組。 可為 Null。|  
-|dump_on_any_error|**bit**|開啟（1）或關閉（0）以指示是否要 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 在發生任何錯誤時建立傾印檔案。 不可為 Null。|  
+|dump_on_any_error|**bit**|開啟 (1) 或 off (0) 指出是否要 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 在發生任何錯誤時建立傾印檔案。 不可為 Null。|  
 |dump_on_codes|**nvarchar(max)**|包含用來觸發傾印檔案的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 錯誤碼清單。 可為 Null。|  
   
 ## <a name="permissions"></a>權限  
@@ -56,8 +57,8 @@ ms.locfileid: "85896778"
  資料收集器 API 僅允許您變更或刪除您所建立的收集組。 系統所提供的收集組無法加以修改或刪除。 但是，您仍然可以啟用或停用系統收集組，並變更它的組態。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的資料收集器預存程式](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [&#40;Transact-sql&#41;的資料收集器視圖](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
- [資料收集](../../relational-databases/data-collection/data-collection.md)  
+ [資料收集器預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的資料收集器視圖 ](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
+ [[資料收集]](../../relational-databases/data-collection/data-collection.md)  
   
   

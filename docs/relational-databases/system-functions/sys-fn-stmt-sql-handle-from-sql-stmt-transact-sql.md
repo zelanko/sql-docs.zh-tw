@@ -1,5 +1,6 @@
 ---
-title: sys.databases fn_stmt_sql_handle_from_sql_stmt （Transact-sql） |Microsoft Docs
+description: sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
+title: sys. fn_stmt_sql_handle_from_sql_stmt (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,16 +14,17 @@ ms.assetid: 6794e073-0895-4507-aba3-c3545acc843f
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ffc1ca0ec2e44377012f4149255bca80bce6af7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 809670e98a7d67a5a078939fdddc600ca0116ad1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002992"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419492"
 ---
 # <a name="sysfn_stmt_sql_handle_from_sql_stmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-  取得**stmt_sql_handle** [!INCLUDE[tsql](../../includes/tsql-md.md)] 指定參數化型別（simple 或強制）下之語句的 stmt_sql_handle。 這可讓您在知道儲存在查詢存放區中的查詢，方法是在您知道其文字時使用它們的**stmt_sql_handle** 。  
+  取得指定**stmt_sql_handle**之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 參數型別 (simple 或強制) 之語句的 stmt_sql_handle。 如此一來，當您知道查詢中的文字時，就可以使用它們的 **stmt_sql_handle** 來參考儲存在查詢存放區中的查詢。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,12 +40,12 @@ sys.fn_stmt_sql_handle_from_sql_stmt
   
 ## <a name="arguments"></a>引數  
  *query_sql_text*  
- 這是您想要其控制碼之查詢存放區中查詢的文字。 *query_sql_text*是**Nvarchar （max）**，沒有預設值。  
+ 這是您想要其控制碼之查詢存放區中的查詢文字。 *query_sql_text* 是 **Nvarchar (max) **，沒有預設值。  
   
  *query_param_type*  
- 這是查詢的參數類型。 *query_param_type*是**Tinyint**。 可能的值包括：  
+ 這是查詢的參數類型。 *query_param_type* 是 **Tinyint**。 可能的值包括：  
   
--   Null-預設為0  
+-   Null-預設值為0  
   
 -   0 - 無  
   
@@ -54,7 +56,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 -   3-強制  
   
 ## <a name="columns-returned"></a>傳回的資料行  
- 下表列出 sys.databases fn_stmt_sql_handle_from_sql_stmt 傳回的資料行。  
+ 下表列出 sys. fn_stmt_sql_handle_from_sql_stmt 傳回的資料行。  
   
 |資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
@@ -68,7 +70,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 ## <a name="remarks"></a>備註  
   
 ## <a name="permissions"></a>權限  
- 需要資料庫的**EXECUTE**許可權，以及查詢存放區目錄檢視的**刪除**許可權。  
+ 需要資料庫的 **EXECUTE** 許可權，以及查詢存放區目錄檢視的 **DELETE** 許可權。  
   
 ## <a name="examples"></a>範例  
  下列範例會執行語句，然後使用傳回 `sys.fn_stmt_sql_handle_from_sql_stmt` 該語句的 SQL 控制碼。  
@@ -78,7 +80,7 @@ SELECT * FROM sys.databases;
 SELECT * FROM sys.fn_stmt_sql_handle_from_sql_stmt('SELECT * FROM sys.databases', NULL);  
 ```  
   
- 使用函數，將查詢存放區資料與其他動態管理檢視相互關聯。 下列範例將：  
+ 使用函數可將查詢存放區資料與其他動態管理檢視相互關聯。 下列範例將：  
   
 ```  
 SELECT qt.query_text_id, q.query_id, qt.query_sql_text, qt.statement_sql_handle,  
@@ -98,7 +100,7 @@ JOIN sys.dm_exec_query_stats AS qs
  [sp_query_store_reset_exec_stats &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
  [sp_query_store_flush_db &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
  [sp_query_store_remove_query &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
- [查詢存放區目錄檢視 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
+ [查詢存放區 &#40;Transact-sql&#41;的目錄檢視 ](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [使用查詢存放區監視效能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
   
   

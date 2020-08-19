@@ -1,5 +1,6 @@
 ---
-title: MSsub_identity_range （Transact-sql） |Microsoft Docs
+description: MSsub_identity_range (Transact-SQL)
+title: MSsub_identity_range (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 26e20d28-14ed-44fc-af3b-4de386de4bb8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 57a2c4f5e6e0b556b47ef9d01f6584c727a751d2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7ec13e409f637063abbf5d2d3b99549a13d2d5ee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889363"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419092"
 ---
 # <a name="mssub_identity_range-transact-sql"></a>MSsub_identity_range (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85889363"
 |**objid**|**int**|具有複寫所管理的識別欄位之資料表的識別碼。|  
 |**range**|**bigint**|控制將在調整時，在訂閱者端進行指派的連續識別值的範圍大小。|  
 |**last_seed**|**bigint**|目前範圍的下限。|  
-|**threshold**|**int**|用來控制散發代理程式指派新識別範圍之時機的百分比值。 使用 [*臨界*值] 中指定的百分比時，散發代理程式會建立新的識別範圍。|  
+|**threshold**|**int**|用來控制散發代理程式指派新識別範圍之時機的百分比值。 使用 [ *臨界* 值] 中指定的值百分比時，散發代理程式會建立新的識別範圍。|  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

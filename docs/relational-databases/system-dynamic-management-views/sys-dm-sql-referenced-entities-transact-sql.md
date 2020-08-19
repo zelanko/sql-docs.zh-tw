@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_sql_referenced_entities （Transact-sql） |Microsoft Docs
+description: sys.dm_sql_referenced_entities (Transact-SQL)
+title: sys. dm_sql_referenced_entities (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2019
 ms.prod: sql
@@ -20,18 +21,18 @@ ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5acf2b0afd2285025112d6e3f224a5f44241a0b8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f219091eb016dddbf0f38932146a57cbd0a0a7b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634941"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419602"
 ---
 # <a name="sysdm_sql_referenced_entities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-針對中指定之參考實體的定義中的名稱所參考的每個使用者定義實體，各傳回一個資料列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 當另一個使用者定義實體（稱為「*參考實體*」）的持續性 SQL 運算式中出現名稱*時，會*建立兩個實體之間的相依性。 例如，如果某個預存程序為指定的參考實體，這個函數就會傳回在預存程序中參考的所有使用者定義實體，例如資料表、檢視表、使用者定義型別 (UDT) 或其他預存程序。  
+針對中指定之參考實體的定義中的名稱所參考的每個使用者定義實體，各傳回一個資料列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 在另一個使用者定義實體（稱為*參考實體*）的保存 SQL 運算式中 *，依*名稱顯示兩個實體之間的相依性時，會建立兩個實體之間的相依性。 例如，如果某個預存程序為指定的參考實體，這個函數就會傳回在預存程序中參考的所有使用者定義實體，例如資料表、檢視表、使用者定義型別 (UDT) 或其他預存程序。  
   
  您可以使用這個動態管理函數來回報下列由指定之參考實體所參考的實體類型：  
   
@@ -66,37 +67,37 @@ sys.dm_sql_referenced_entities (
   
 ## <a name="arguments"></a>引數  
  [ *schema_name*。 ] *referencing_entity_name*  
- 這是參考實體的名稱。 當參考的類別為 OBJECT 時，需要*schema_name* 。  
+ 這是參考實體的名稱。 當參考類別為 OBJECT 時，需要*schema_name* 。  
   
- *schema_name。 referencing_entity_name*是**Nvarchar （517）**。  
+ *schema_name。 referencing_entity_name* 是 **Nvarchar (517) **。  
   
  *<referencing_class>* ：： = {OBJECT |DATABASE_DDL_TRIGGER |SERVER_DDL_TRIGGER}  
  這是指定之參考實體的類別。 每個陳述式只能指定一個類別。  
   
- *<referencing_class>* 是**Nvarchar （60）**。  
+ *<referencing_class>* 是 **Nvarchar (60) **。  
   
 ## <a name="table-returned"></a>傳回的資料表  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |referencing_minor_id|**int**|當參考實體是資料行時，就是資料行識別碼，否則便是 0。 不可為 Null。|  
-|referenced_server_name|**sysname**|受參考實體之伺服器的名稱。<br /><br /> 這個資料行會因透過指定有效的四部分名稱所達成的跨伺服器相依性而擴展。 如需多部分名稱的詳細資訊，請參閱 transact-sql[語法慣例 &#40;transact-sql&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。<br /><br /> 若為參考了實體的非結構描述繫結相依性，但沒有指定四部分名稱，則為 NULL。<br /><br /> 因為架構系結的實體必須位於相同的資料庫中，因此只能使用兩部分（*schema. object*）名稱加以定義，所以為 Null。|  
-|referenced_database_name|**sysname**|受參考實體之資料庫的名稱。<br /><br /> 這個資料行會因透過指定有效的三部分或四部分名稱所達成的跨資料庫或跨伺服器參考而擴展。<br /><br /> 在使用一部分或兩部分名稱指定時，若為非結構描述繫結參考，則為 NULL。<br /><br /> 因為架構系結的實體必須位於相同的資料庫中，因此只能使用兩部分（*schema. object*）名稱加以定義，所以為 Null。|  
+|referenced_server_name|**sysname**|受參考實體之伺服器的名稱。<br /><br /> 這個資料行會因透過指定有效的四部分名稱所達成的跨伺服器相依性而擴展。 如需多部分名稱的詳細資訊，請參閱 transact-sql [&#41;&#40;Transact-sql 語法慣例 ](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。<br /><br /> 若為參考了實體的非結構描述繫結相依性，但沒有指定四部分名稱，則為 NULL。<br /><br /> 架構系結的實體必須是 Null，因為它們必須位於相同的資料庫中，因此只能使用兩部分 (架構來定義 *。物件*) 名稱。|  
+|referenced_database_name|**sysname**|受參考實體之資料庫的名稱。<br /><br /> 這個資料行會因透過指定有效的三部分或四部分名稱所達成的跨資料庫或跨伺服器參考而擴展。<br /><br /> 在使用一部分或兩部分名稱指定時，若為非結構描述繫結參考，則為 NULL。<br /><br /> 架構系結的實體必須是 Null，因為它們必須位於相同的資料庫中，因此只能使用兩部分 (架構來定義 *。物件*) 名稱。|  
 |referenced_schema_name|**sysname**|受參考實體所屬的結構描述。<br /><br /> 若為參考了實體的非結構描述繫結參考，但沒有指定結構描述名稱，則為 NULL。<br /><br /> 若為結構描述繫結的參考，則永遠不會是 NULL。|  
 |referenced_entity_name|**sysname**|受參考實體的名稱。 不可為 Null。|  
 |referenced_minor_name|**sysname**|當受參考實體是資料行時，就是資料行名稱，否則便是 NULL。 例如，在列出受參考實體本身的資料列中，referenced_minor_name 是 NULL。<br /><br /> 當資料行在參考實體中由名稱所識別，或者父實體用於 SELECT * 陳述式時，受參考的實體就是資料行。|  
-|referenced_id|**int**|受參考實體的識別碼。 當 referenced_minor_id 不是 0 時，referenced_id 就是在其中定義資料行的實體。<br /><br /> 若為跨伺服器參考，則一律是 NULL。<br /><br /> 因為資料庫離線或者找不到實體，無法判斷識別碼時，若為跨資料庫參考，則為 NULL。<br /><br /> 無法判斷識別碼時，若為資料庫中的參考，則為 NULL。 若為非架構系結的參考，當受參考的實體不存在於資料庫中，或名稱解析為呼叫端相依時，就無法解析識別碼。  在後者的情況下，is_caller_dependent 會設定為1。<br /><br /> 若為結構描述繫結的參考，則永遠不會是 NULL。|  
+|referenced_id|**int**|受參考實體的識別碼。 當 referenced_minor_id 不是 0 時，referenced_id 就是在其中定義資料行的實體。<br /><br /> 若為跨伺服器參考，則一律是 NULL。<br /><br /> 因為資料庫離線或者找不到實體，無法判斷識別碼時，若為跨資料庫參考，則為 NULL。<br /><br /> 無法判斷識別碼時，若為資料庫中的參考，則為 NULL。 若為非架構系結參考，當受參考的實體不存在於資料庫中，或名稱解析為呼叫端相依時，就無法解析此識別碼。  在後者的情況下，is_caller_dependent 設定為1。<br /><br /> 若為結構描述繫結的參考，則永遠不會是 NULL。|  
 |referenced_minor_id|**int**|當受參考實體是資料行時，就是資料行識別碼，否則便是 0。 例如，在列出受參考實體本身的資料列中，referenced_minor_is 是 0。<br /><br /> 若為非結構描述繫結參考，則只有在所有受參考的實體都可以繫結時，才會報告資料行相依性。 如果無法繫結任何受參考的實體，就不會報告任何資料行層級相依性，而且 referenced_minor_id 就是 0。 請參閱範例 D。|  
 |referenced_class|**tinyint**|受參考實體的類別。<br /><br /> 1 = 物件或資料行<br /><br /> 6 = 類型<br /><br /> 10 = XML 結構描述集合<br /><br /> 21 = 資料分割函數|  
 |referenced_class_desc|**nvarchar(60)**|受參考實體之類別的描述。<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
 |is_caller_dependent|**bit**|指出在執行階段發生之受參考實體的結構描述繫結。因此，實體識別碼的解析會相依於呼叫端的結構描述。 當受參考的實體為預存程序、擴充預存程序，或在 EXECUTE 陳述式內部呼叫的使用者定義函數時，就會發生這個事件。<br /><br /> 1 = 受參考的實體是呼叫端相依，而且在執行階段解析。 在此情況下，referenced_id 是 NULL。<br /><br /> 0 = 受參考的實體識別碼不是呼叫端相依。 若為結構描述繫結參考，以及明確指定結構描述名稱的跨資料庫和跨伺服器參考，則一律是 0。 例如，採用 `EXEC MyDatabase.MySchema.MyProc` 格式的實體參考與呼叫端無關。 不過，採用 `EXEC MyDatabase..MyProc` 格式的參考即與呼叫端相關。|  
-|is_ambiguous|**bit**|表示參考是不明確的，而且可以在執行時間解析成使用者自訂函數、使用者定義型別（UDT），或**xml**類型之資料行的 xquery 參考。 例如，假設 `SELECT Sales.GetOrder() FROM Sales.MySales` 陳述式是在預存程序中定義。 在執行該預存程序之前，不知道 `Sales.GetOrder()` 是 `Sales` 結構描述中的使用者自訂函數，還是名為 `Sales`、類型是 UDT 而且具有名為 `GetOrder()` 之方法的資料行。<br /><br /> 1 = 使用者定義函數或資料行與使用者定義型別 (UDT) 方法的參考模糊不清。<br /><br /> 0 = 參考不會模糊不清，或者在呼叫函數時，可成功繫結實體。<br /><br /> 若為結構描述繫結的參考，一律是 0。|  
+|is_ambiguous|**bit**|指出參考不明確，而且可以在執行時間解析成使用者自訂函數、使用者定義型別 (UDT) ，或 **xml**類型之資料行的 xquery 參考。 例如，假設 `SELECT Sales.GetOrder() FROM Sales.MySales` 陳述式是在預存程序中定義。 在執行該預存程序之前，不知道 `Sales.GetOrder()` 是 `Sales` 結構描述中的使用者自訂函數，還是名為 `Sales`、類型是 UDT 而且具有名為 `GetOrder()` 之方法的資料行。<br /><br /> 1 = 使用者定義函數或資料行與使用者定義型別 (UDT) 方法的參考模糊不清。<br /><br /> 0 = 參考不會模糊不清，或者在呼叫函數時，可成功繫結實體。<br /><br /> 若為結構描述繫結的參考，一律是 0。|  
 |is_selected|**bit**|1 = 選取物件或資料行。|  
 |is_updated|**bit**|1 = 修改物件或資料行。|  
 |is_select_all|**bit**|1 = 在 SELECT * 子句中使用此物件 (只限物件層級)。|  
 |is_all_columns_found|**bit**|1 = 可以找到物件的所有資料行相依性。<br /><br /> 0 = 無法找到物件的資料行相依性。|
-|is_insert_all|**bit**|1 = 在沒有資料行清單的 INSERT 語句中使用物件（僅限物件層級）。<br /><br />此資料行已在 SQL Server 2016 中新增。|  
-|is_incomplete|**bit**|1 = 物件或資料行有系結錯誤且不完整。<br /><br />此資料行已在 SQL Server 2016 SP2 中新增。|
+|is_insert_all|**bit**|1 = 在沒有資料行清單的 INSERT 語句中使用物件 (僅限物件層級) 。<br /><br />此資料行已加入 SQL Server 2016。|  
+|is_incomplete|**bit**|1 = 物件或資料行有系結錯誤，而且不完整。<br /><br />此資料行已加入 SQL Server 2016 SP2 中。|
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="exceptions"></a>例外狀況  
@@ -139,7 +140,7 @@ sys.dm_sql_referenced_entities (
 |分割區函數|否|是|  
 | &nbsp; | &nbsp; | &nbsp; |
 
- \*只有當資料表參考 [!INCLUDE[tsql](../../includes/tsql-md.md)] 計算資料行、CHECK 條件約束或 DEFAULT 條件約束的定義中的模組、使用者定義型別或 XML 架構集合時，才會將它當做參考實體進行追蹤。  
+ \* 只有當資料表參考 [!INCLUDE[tsql](../../includes/tsql-md.md)] 計算資料行的定義、CHECK 條件約束或 DEFAULT 條件約束中的模組、使用者定義型別或 XML 架構集合時，才會將資料表視為參考實體進行追蹤。  
   
  ** 所包含之整數值大於 1 的編號預存程序不會當做參考或受參考的實體進行追蹤。  
   
@@ -266,12 +267,12 @@ The dependencies reported for entity "dbo.Proc1" might not include
   
 ### <a name="e-demonstrating-dynamic-dependency-maintenance"></a>E. 示範動態相依性維護  
 
-此範例 E 假設已執行範例 D。 範例 E 顯示會動態維護相依性。 此範例會執行下列動作：
+此範例 E 假設已執行範例 D。 範例 E 顯示相依性是動態維護的。 此範例會執行下列操作：
 
-1. 重新建立 `Table1` ，其已在範例 D 中卸載。
-2. 然後， `sys.dm_sql_referenced_entities` 使用指定為參考實體的預存程式，再次執行。
+1. 重新建立 `Table1` ，在範例 D 中卸載。
+2. 然後再執行 `sys.dm_sql_referenced_entities` 一次，並將預存程式指定為參考實體。
 
-結果集顯示會傳回兩個數據表，以及在預存程式中定義的個別資料行。 此外，`is_all_columns_found` 資料行會針對所有物件和資料行傳回 1。
+結果集會顯示傳回兩個數據表，以及在預存程式中定義的個別資料行。 此外，`is_all_columns_found` 資料行會針對所有物件和資料行傳回 1。
 
 ```sql  
 CREATE TABLE Table1 (a int, b int, c AS a + b);  
@@ -304,7 +305,7 @@ GO
  ```
  
 ### <a name="f-returning-object-or-column-usage"></a>F. 傳回物件或資料行使用方式  
- 下列範例會傳回 `HumanResources.uspUpdateEmployeePersonalInfo` 預存程序的物件和資料行相依性。 這個程式會 `NationalIDNumber` `BirthDate,``MaritalStatus` `Gender` 根據指定的值來更新資料表的、和資料行 `Employee` `BusinessEntityID` 。 另一個預存 `upsLogError` 程式定義于 TRY .。。捕捉任何執行錯誤的 CATCH 區塊。 `is_selected`、`is_updated` 和 `is_select_all` 資料行會傳回如何在參考物件中使用這些物件和資料行的相關資訊。 修改的資料表和資料行會在 is_updated 資料行中由 1 表示。 只選取 `BusinessEntityID` 資料行，而且不會選取或修改 `uspLogError` 預存程序。  
+ 下列範例會傳回 `HumanResources.uspUpdateEmployeePersonalInfo` 預存程序的物件和資料行相依性。 此程式會 `NationalIDNumber` `BirthDate,``MaritalStatus` `Gender` `Employee` 根據指定的值來更新資料表的資料行、和 `BusinessEntityID` 。 另一個預存 `upsLogError` 程式是在 TRY ... 中定義。捕捉任何執行錯誤的 CATCH 區塊。 `is_selected`、`is_updated` 和 `is_select_all` 資料行會傳回如何在參考物件中使用這些物件和資料行的相關資訊。 修改的資料表和資料行會在 is_updated 資料行中由 1 表示。 只選取 `BusinessEntityID` 資料行，而且不會選取或修改 `uspLogError` 預存程序。  
 
 ```sql  
 USE AdventureWorks2012;

@@ -1,5 +1,6 @@
 ---
-title: NumberOfProps 屬性（ClientNetworkProtocol）
+description: NumberOfProps 屬性 (ClientNetworkProtocol 類別)
+title: 'NumberOfProps 屬性 (ClientNetworkProtocol) '
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 9c508bc5-c7a4-4db1-b3bf-c7098c66435a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ef51af586bd54eb7a8059de870bf1adf5dc0badc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3af0d8a773565cb776283e614dd7925624e9fd44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889032"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418872"
 ---
 # <a name="numberofprops-property-clientnetworkprotocol-class"></a>NumberOfProps 屬性 (ClientNetworkProtocol 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  取得[SetOrderValue 方法（ClientNetworkProtocol 類別）](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md)所指定之用戶端網路通訊協定的屬性數目。  
+  取得 SetOrderValue 方法所指定之用戶端網路通訊協定的屬性數目， [ (ClientNetworkProtocol 類別) ](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,7 +38,7 @@ object.NumberOfProps [= value]
   
 ## <a name="parts"></a>組件  
  *object*  
- 代表用戶端所使用之網路通訊協定的[ClientNetworkProtocol 類別](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)物件 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+ 代表用戶端所使用之網路通訊協定的 [ClientNetworkProtocol 類別](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) 物件 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  指定用戶端網路通訊協定之屬性數目的 uint32 值  

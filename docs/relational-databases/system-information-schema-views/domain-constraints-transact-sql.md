@@ -1,5 +1,6 @@
 ---
-title: DOMAIN_CONSTRAINTS （Transact-sql） |Microsoft Docs
+description: DOMAIN_CONSTRAINTS (Transact-SQL)
+title: DOMAIN_CONSTRAINTS (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: 436c4480-f1e3-403f-b2bd-de04539afe3c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 72c5bbbf2ad16061b87daf1a0346b7003b7648b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e8b6c3ba01c05e7a940063cf796c0c4371848198
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85647510"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419402"
 ---
 # <a name="domain_constraints-transact-sql"></a>DOMAIN_CONSTRAINTS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,19 +36,19 @@ ms.locfileid: "85647510"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**CONSTRAINT_CATALOG**|**Nvarchar （** 128 **）**|規則所在的資料庫。|  
-|**CONSTRAINT_SCHEMA**|**Nvarchar （** 128 **）**|包含條件約束之結構描述的名稱。<br /><br /> <strong> \* \* 重要 \* 事項 \* ：</strong>請勿使用 INFORMATION_SCHEMA 視圖來判斷物件的架構。 INFORMATION_SCHEMA views 只代表物件的中繼資料子集。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|**CONSTRAINT_CATALOG**|**Nvarchar (** 128 **) **|規則所在的資料庫。|  
+|**CONSTRAINT_SCHEMA**|**Nvarchar (** 128 **) **|包含條件約束之結構描述的名稱。<br /><br /> <strong> \* \* 重要 \* 事項 \* ：</strong>請勿使用 INFORMATION_SCHEMA views 來判斷物件的架構。 INFORMATION_SCHEMA views 只代表物件的中繼資料子集。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
 |**CONSTRAINT_NAME**|**sysname**|規則名稱。|  
-|**DOMAIN_CATALOG**|**Nvarchar （** 128 **）**|別名資料類型所在的資料庫。|  
-|**DOMAIN_SCHEMA**|**Nvarchar （** 128 **）**|包含別名資料類型之結構描述的名稱。<br /><br /> <strong> \* \* 重要 \* 事項 \* ：</strong>請勿使用 INFORMATION_SCHEMA 視圖來判斷資料類型的架構。 尋找類型之結構描述的唯一可靠方式就是使用 TYPEPROPERTY 函數。|  
+|**DOMAIN_CATALOG**|**Nvarchar (** 128 **) **|別名資料類型所在的資料庫。|  
+|**DOMAIN_SCHEMA**|**Nvarchar (** 128 **) **|包含別名資料類型之結構描述的名稱。<br /><br /> <strong> \* \* 重要 \* 事項 \* ：</strong>請勿使用 INFORMATION_SCHEMA views 來判斷資料類型的架構。 尋找類型之結構描述的唯一可靠方式就是使用 TYPEPROPERTY 函數。|  
 |**DOMAIN_NAME**|**sysname**|別名資料類型。|  
-|**IS_DEFERRABLE**|**Varchar （** 2 **）**|指定條件約束檢查是否可以延後。 一律傳回 NO。|  
-|**INITIALLY_DEFERRED**|**Varchar （** 2 **）**|指定一開始時是否延遲條件約束檢查。 一律傳回 NO。|  
+|**IS_DEFERRABLE**|**Varchar (** 2 **) **|指定條件約束檢查是否可以延後。 一律傳回 NO。|  
+|**INITIALLY_DEFERRED**|**Varchar (** 2 **) **|指定一開始時是否延遲條件約束檢查。 一律傳回 NO。|  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的系統檢視](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
- [資訊架構視圖 &#40;Transact-sql&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
- [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統檢視 ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [&#40;Transact-sql&#41;的資訊架構視圖 ](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
+ [sys. objects &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
   
   

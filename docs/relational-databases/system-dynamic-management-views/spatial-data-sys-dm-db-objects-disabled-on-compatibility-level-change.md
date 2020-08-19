@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_db_objects_disabled_on_compatibility_level_change （Transact-sql） |Microsoft Docs
+description: sys.dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL)
+title: sys. dm_db_objects_disabled_on_compatibility_level_change (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,12 +21,12 @@ ms.assetid: a5d70064-0330-48b9-b853-01eba50755d0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 76dc2cd3bf7d1cc250948286b2bfc69efea2485e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 10abd1a344912dd88fbfec60ecd307f80a5373cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634998"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419832"
 ---
 # <a name="spatial-data---sysdm_db_objects_disabled_on_compatibility_level_change"></a>空間資料-sys. dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,9 +41,9 @@ ms.locfileid: "85634998"
 sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )   
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>參量  
+##  <a name="arguments"></a><a name="Arguments"></a> 引數  
  *compatibility_level*  
- **int** ，可識別您打算設定的相容性層級。  
+ **int** ，識別您打算設定的相容性層級。  
   
 ## <a name="table-returned"></a>傳回的資料表  
   
@@ -52,7 +53,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 |**class_desc**|**nvarchar(60)**|條件約束的 OBJECT 或 COLUMN<br /><br /> 索引和堆積的 INDEX|  
 |**major_id**|**int**|條件約束的 OBJECT ID<br /><br /> 包含索引和堆積的資料表 OBJECT ID|  
 |**minor_id**|**int**|條件約束的 NULL<br /><br /> 索引和堆積的 Index_id|  
-|**依賴性**|**nvarchar(60)**|導致條件約束或索引停用的相依性說明。 升級期間所引發的警示也會使用相同的值。 範例包括：<br /><br /> 內建的 "space"<br /><br /> 系統 UDT 的 "geometry"<br /><br /> 系統 UDT 之方法的 "geography::Parse"|  
+|**依賴**|**nvarchar(60)**|導致條件約束或索引停用的相依性說明。 升級期間所引發的警示也會使用相同的值。 範例包括：<br /><br /> 內建的 "space"<br /><br /> 系統 UDT 的 "geometry"<br /><br /> 系統 UDT 之方法的 "geography::Parse"|  
   
 ## <a name="general-remarks"></a>一般備註  
  當相容性層級變更時，將會停用使用內建函數的保存計算資料行。 除此之外，當資料庫升級時，也會停用使用幾何或地理方法的保存計算資料行。  
@@ -111,13 +112,13 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 -   **Geography:: Reduce**  
   
 ### <a name="behavior-of-the-disabled-objects"></a>停用物件的行為  
- **索引**  
+ **索引數**  
   
- 如果叢集索引已停用，或強制非叢集索引，則會引發下列錯誤：「查詢處理器無法產生計畫，因為索引 '%。 \*在資料表或視圖 '% 上的 ls '。 \*ls ' 已停用」。 若要重新啟用這些物件，請在升級之後藉由呼叫**ALTER INDEX ON ... 來重建索引。REBUILD**。  
+ 如果停用叢集索引，或強制非叢集索引，則會引發下列錯誤：「查詢處理器無法產生計畫，因為索引 '%。 \*ls ' 在資料表或視圖 '%。 \*ls ' 已停用。」 若要重新啟用這些物件，請在升級之後重建索引，方法是 **在上呼叫 ALTER INDEX .。。重建**。  
   
- **堆積**  
+ **堆**  
   
- 如果使用了內含停用之堆積的資料表，將會引發下列錯誤。 若要重新啟用這些物件，請在升級之後，藉由呼叫**ALTER INDEX ALL ON .。。REBUILD**。  
+ 如果使用了內含停用之堆積的資料表，將會引發下列錯誤。 若要重新啟用這些物件，請在升級之後，藉由呼叫 **ALTER INDEX ALL ON 來重建 .。。重建**。  
   
 ```  
 // ErrorNumber: 8674  
@@ -134,7 +135,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  **檢查條件約束與外部索引鍵**  
   
- 停用檢查條件約束和外部索引鍵不會引發錯誤。 但資料列如果有所修改，將不會強制執行條件約束。 若要重新啟用這些物件，請在升級之後檢查條件約束，方法是呼叫**ALTER TABLE .。。CHECK 條件約束**。  
+ 停用檢查條件約束和外部索引鍵不會引發錯誤。 但資料列如果有所修改，將不會強制執行條件約束。 若要重新啟用這些物件，請在升級之後，藉由呼叫 ALTER TABLE 來檢查條件約束 ... **檢查條件約束**。  
   
  **保存計算資料行**  
   
@@ -146,7 +147,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
  需要 VIEW DATABASE STATE 權限。  
   
 ## <a name="example"></a>範例  
- 下列範例顯示 sys.databases 的查詢**dm_db_objects_disabled_on_compatibility_level_change** ，以尋找受影響的物件，並將相容性層級變更為120。  
+ 下列範例顯示 **sys. dm_db_objects_disabled_on_compatibility_level_change** 上的查詢，以尋找將相容性層級變更為120所影響的物件。  
   
 ```sql  
 SELECT * FROM sys.dm_db_objects_disabled_on_compatibility_level_change(120);  

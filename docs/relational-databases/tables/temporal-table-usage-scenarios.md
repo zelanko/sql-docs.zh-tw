@@ -1,4 +1,5 @@
 ---
+description: 時態表使用案例
 title: 時態表使用案例 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/16/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6a000df12b44b2da1913f45febfaa93e39f7af1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 40bc6d8774c4d8a9d37642df23d6b71237a37c6f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881222"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419072"
 ---
 # <a name="temporal-table-usage-scenarios"></a>時態表使用案例
 

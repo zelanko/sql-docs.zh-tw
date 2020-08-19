@@ -1,5 +1,6 @@
 ---
-title: managed_backup. fn_get_health_status （Transact-sql） |Microsoft Docs
+description: 'managed_backup fn_get_health_status (Transact-sql) '
+title: managed_backup fn_get_health_status (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,18 +21,19 @@ helpviewer_keywords:
 ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f5f155837f1e5dd9057c376152ceae56bce33d74
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 4aa10efc95af42c7793fb37b49a72061353b0ee0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053432"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419552"
 ---
-# <a name="managed_backupfn_get_health_status-transact-sql"></a>managed_backup. fn_get_health_status （Transact-sql）
+# <a name="managed_backupfn_get_health_status-transact-sql"></a>managed_backup fn_get_health_status (Transact-sql) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   傳回擴充事件針對一段指定期間所報告，包含 0 個、一個或多個彙總錯誤計數資料列的資料表。  
   
- 函式可用來回報 [Smart Admin] 底下服務的健全狀況狀態。 目前在 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 智慧型系統管理傘下受到支援。 因此傳回的錯誤與[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]相關。  
+ 此函數可用來回報智慧型管理員下服務的健全狀況狀態。 目前在 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 智慧管理傘下受到支援。 因此傳回的錯誤與[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]相關。  
   
  
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -42,7 +44,7 @@ ms.locfileid: "86053432"
 managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 'time_2')  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>參量  
+##  <a name="arguments"></a><a name="Arguments"></a> 引數  
  [@begin_time]  
  彙總的錯誤計數開始計算的期間。  @begin_time參數為 DATETIME。 預設值是 NULL。 當值為 NULL 時，函數將處理最早在目前時間的過去 30 分鐘內報告的事件。  
   
@@ -53,7 +55,7 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|number_of_storage_connectivity_errors|int|程式連線到 Azure 儲存體帳戶時的連接錯誤數目。|  
+|number_of_storage_connectivity_errors|int|當程式連接至 Azure 儲存體帳戶時的連線錯誤數目。|  
 |number_of_sql_errors|int|程式連接到 SQL Server 引擎時傳回的錯誤數目。|  
 |number_of_invalid_credential_errors|int|程式嘗試使用 SQL 認證進行驗證時傳回的錯誤數目。|  
 |number_of_other_errors|int|除了連接、SQL 或認證以外其他類別目錄中的錯誤數目。|  
@@ -62,12 +64,12 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
 |number_of_retention_loops|int|掃描資料庫以評估所設定保留週期的次數。|  
   
 ## <a name="best-practices"></a>最佳做法  
- 這些彙總計算可用來監視系統健全狀況。 例如，如果 number_of_retention_loops 資料行在 30 分鐘內為 0，則保留管理可能需要耗費長時間運作，或甚至運作不正確。 非零的錯誤資料行可能表示出現問題，應檢查擴充事件記錄來了解任何問題。 或者，使用預存程式**managed_backup. sp_get_backup_diagnostics**取得擴充事件的清單，以找出錯誤的詳細資料。  
+ 這些彙總計算可用來監視系統健全狀況。 例如，如果 number_of_retention_loops 資料行在 30 分鐘內為 0，則保留管理可能需要耗費長時間運作，或甚至運作不正確。 非零的錯誤資料行可能表示出現問題，應檢查擴充事件記錄來了解任何問題。 或者，使用預存程式 **managed_backup。 sp_get_backup_diagnostics** 取得擴充事件的清單，以找出錯誤的詳細資料。  
   
 ## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>權限  
- 需要函數的**SELECT**許可權。  
+ 需要函數的 **SELECT** 許可權。  
   
 ## <a name="examples"></a>範例  
   

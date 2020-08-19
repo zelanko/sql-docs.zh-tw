@@ -1,5 +1,6 @@
 ---
-title: 相依性屬性（SqlService）
+description: Dependencies 屬性 (SqlService 類別)
+title: '相依性屬性 (SqlService) '
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 92d54b7e-de2f-4978-b601-0196e37cbb41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f3a418ee4a0f20d47bd72b31140b6c0a88c45f2d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ba7fbda65a5ccfab9e5b9c42b73e0bbe51c2538d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880651"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418764"
 ---
 # <a name="dependencies-property-sqlservice-class"></a>Dependencies 屬性 (SqlService 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,5 +1,6 @@
 ---
-title: logmarkhistory （Transact-sql） |Microsoft Docs
+description: logmarkhistory (Transact-SQL)
+title: logmarkhistory (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 5c1becc5-f34e-4869-bf69-dfafab684540
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0b295105b76711e0e7305374cdd0ce380cd3abea
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d52c161baa58924a21966ed4c354fa614e677062
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890108"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419152"
 ---
 # <a name="logmarkhistory-transact-sql"></a>logmarkhistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  針對已認可的每個標示交易，各包含一個資料列。 此資料表會儲存在**msdb**資料庫中。  
+  針對已認可的每個標示交易，各包含一個資料列。 此資料表儲存在 **msdb** 資料庫中。  
   
 
 |資料行名稱|資料類型|描述|  
@@ -36,7 +37,7 @@ ms.locfileid: "85890108"
 |**mark_name**|**nvarchar(128)**|使用者提供的標示交易名稱。|  
 |**description**|**nvarchar(255)**|使用者提供的標示交易描述。 可以是 NULL。|  
 |**user_name**|**nvarchar(128)**|執行標示交易的資料庫使用者名稱。 可以是 NULL。|  
-|**lsn**|**numeric(25,0)**|標示所在之交易記錄的記錄序號。|  
+|**Lsn**|**numeric(25,0)**|標示所在之交易記錄的記錄序號。|  
 |**mark_time**|**datetime**|標示的交易之認可時間 (本機時間)。|  
   
 ## <a name="see-also"></a>另請參閱  

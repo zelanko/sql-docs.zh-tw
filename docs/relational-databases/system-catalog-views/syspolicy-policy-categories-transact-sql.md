@@ -1,5 +1,6 @@
 ---
-title: syspolicy_policy_categories （Transact-sql） |Microsoft Docs
+description: syspolicy_policy_categories (Transact-SQL)
+title: syspolicy_policy_categories (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 65f080c7-771f-4cf6-a7a0-88882c637f8d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 766aa7e2d60a19c5f6b6093dc72685175d8fbc3b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d7d5a115beb4f3f4ec543a8ae4861462cf750648
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900596"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419852"
 ---
 # <a name="syspolicy_policy_categories-transact-sql"></a>syspolicy_policy_categories (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

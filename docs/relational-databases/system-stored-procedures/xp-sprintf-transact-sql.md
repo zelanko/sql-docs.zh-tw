@@ -1,5 +1,6 @@
 ---
-title: xp_sprintf （Transact-sql） |Microsoft Docs
+description: xp_sprintf (Transact-SQL)
+title: xp_sprintf (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/09/2020
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1eedd65c-03cc-4eab-b76e-04684fdfec52
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 157b027580592f2d4663788911530c282bebfcc4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3bd830fc35da8604538d0d70171988e218ee5200
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755519"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419192"
 ---
 # <a name="xp_sprintf-transact-sql"></a>xp_sprintf (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,13 +42,13 @@ xp_sprintf { string OUTPUT , format }
   
 ## <a name="arguments"></a>引數  
  *string*  
- 這是接收輸出的**Varchar**變數。  
+ 這是接收輸出的 **Varchar** 變數。  
   
  OUTPUT  
  當指定這個引數時，它會將變數值放在輸出參數中。  
   
  *format*  
- 這是具有*引數*值之預留位置的格式字元字串，類似于 C 語言**sprintf**函數所支援的。 目前只支援 %s 格式引數。  
+ 是包含 *引數* 值之預留位置的格式字元字串，類似于 C 語言 **sprintf** 函式所支援的值。 目前只支援 %s 格式引數。  
   
  *引數*  
  這是代表對應格式引數值的字元字串。  
@@ -59,7 +60,7 @@ xp_sprintf { string OUTPUT , format }
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
- **xp_sprintf**會傳回下列訊息：  
+ **xp_sprintf** 會傳回下列訊息：  
   
  `The command(s) completed successfully.`  
   
@@ -67,8 +68,8 @@ xp_sprintf { string OUTPUT , format }
  需要 **public** 角色的成員資格。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [&#40;Transact-sql 的一般擴充預存程式&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的一般擴充預存程式 ](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [xp_sscanf &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/xp-sscanf-transact-sql.md)  
   
   

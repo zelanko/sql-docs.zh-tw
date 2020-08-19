@@ -1,5 +1,6 @@
 ---
-title: syspolicy_policies （Transact-sql） |Microsoft Docs
+description: syspolicy_policies (Transact-SQL)
+title: syspolicy_policies (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: aecf35bb-187e-4f80-870f-48081b88974e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 49ef90e030c2899e49adcb69e8765a57f623ace7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e56ab498d2502bcb7130ab2406a390d8bbd1055a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900579"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419802"
 ---
 # <a name="syspolicy_policies-transact-sql"></a>syspolicy_policies (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85900579"
 |schedule_uid|**uniqueidentifier**|當 execution_mode 為 [按排程時間] 時，會包含此排程的識別碼，否則為 NULL。|  
 |description|**nvarchar(max)**|此原則的描述。 描述資料行為選擇性，而且可為 NULL。|  
 |help_text|**nvarchar(4000)**|屬於 help_link 的超連結文字。|  
-|help_link|**Nvarchar （2083）**|由原則建立者指派給原則的其他說明超連結。|  
+|help_link|**Nvarchar (2083) **|由原則建立者指派給原則的其他說明超連結。|  
 |object_set_id|**int**|原則評估之物件集的識別碼。|  
 |is_enabled|**bit**|指出此原則目前為啟用 (1) 或停用 (0)。|  
 |job_id|**uniqueidentifier**|當 execution_mode 為 [按排程時間] 時，會包含執行此原則之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的識別碼。|  
@@ -50,7 +51,7 @@ ms.locfileid: "85900579"
 |date_modified|**datetime**|建立此原則的日期和時間。 如果從未修改過，則為 NULL。|  
   
 ## <a name="remarks"></a>備註  
- 當您針對原則式管理進行疑難排解時，請查詢[syspolicy_conditions](../../relational-databases/system-catalog-views/syspolicy-conditions-transact-sql.md)視圖，以判斷是否已啟用原則。 此檢視表也會顯示建立此原則或上次變更此原則的人。  
+ 當您針對以原則為基礎的管理進行疑難排解時，請查詢 [syspolicy_conditions](../../relational-databases/system-catalog-views/syspolicy-conditions-transact-sql.md) 視圖，以判斷是否已啟用原則。 此檢視表也會顯示建立此原則或上次變更此原則的人。  
   
 ## <a name="permissions"></a>權限  
  需要 msdb 資料庫中 PolicyAdministratorRole 角色的成員資格。  

@@ -1,4 +1,5 @@
 ---
+description: 使用資料行集
 title: 使用資料行集 | Microsoft 文件
 ms.custom: ''
 ms.date: 07/30/2015
@@ -14,12 +15,12 @@ ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a45bfb98fa5b8d5a9ce5c640d07c3c13ab7d5284
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 6082c8ffbdf2a2eaba1d24f64a85cfcbed393984
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396167"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418972"
 ---
 # <a name="use-column-sets"></a>使用資料行集
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "87396167"
   
  當資料表中的資料行數目很大，而且個別操作資料行很麻煩時，您應該考慮使用資料行集。 當應用程式在擁有許多資料行的資料表上使用資料行集來選取及插入資料時，可能會看到一些效能上的改善。 但是，當資料表中的資料行上定義許多索引時，資料行集的效能可能會降低。 這是因為執行計畫所需的記憶體數量增加的緣故。  
   
- 若要定義資料行集，請在 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 或 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 陳述式中使用 <資料行集名稱> FOR ALL_SPARSE_COLUMNS 關鍵字。  
+ 若要定義資料行集，請在 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 或 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 陳述式中使用 <資料行集名稱>** FOR ALL_SPARSE_COLUMNS 關鍵字。  
   
 ## <a name="guidelines-for-using-column-sets"></a>使用資料行集的指導方針  
  使用資料行集時，請考慮下列指導方針：  
@@ -112,7 +113,7 @@ GO
 ## <a name="using-the-sql_variant-data-type"></a>使用 sql_variant 資料類型  
  **sql_variant** 資料類型可以儲存多種不同的資料類型，例如 **int**、 **char**和 **date**。 資料行集會將與 **sql_variant** 值相關聯的資料類型資訊 (例如小數位數、有效位數和地區設定資訊)，輸出為產生之 XML 資料行內的屬性。 如果您嘗試在自訂產生的 XML 陳述式內提供這些屬性當做資料行集上插入或更新作業的輸入，某些屬性會是必要的，而且其中一些屬性會指派預設值。 下表列出當未提供值時，伺服器所產生的資料類型和預設值。  
   
-|資料類型|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|最大長度|Precision|調整|  
+|資料類型|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|長度上限|精確度|調整|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  
 |**char**、 **varchar**、 **binary**|-1|'Default'|0|0|8000|不適用**|不適用|  
 |**nvarchar**|-1|'Default'|0|0|4000|不適用|不適用|  

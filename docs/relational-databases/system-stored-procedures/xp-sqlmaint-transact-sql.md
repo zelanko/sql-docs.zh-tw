@@ -1,5 +1,6 @@
 ---
-title: xp_sqlmaint （Transact-sql） |Microsoft Docs
+description: xp_sqlmaint (Transact-SQL)
+title: xp_sqlmaint (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 08db9ea2487f51267e7c1f1e4bac4fd807b59fcd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cfe66be84a9f631422c624eaf65152569d0405bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890716"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419182"
 ---
 # <a name="xp_sqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,18 +44,18 @@ xp_sqlmaint 'switch_string'
   
 ## <a name="arguments"></a>引數  
  **'** *switch_string* **'**  
- 這是包含**sqlmaint**公用程式參數的字串。 參數和值必須用空格分隔。  
+ 這是包含 **sqlmaint** 公用程式參數的字串。 參數和值必須用空格分隔。  
   
- **-？** 參數對**xp_sqlmaint**無效。  
+ **-？** **xp_sqlmaint**的參數無效。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- 無。 如果**sqlmaint**公用程式失敗，則傳回錯誤。  
+ 無。 如果 **sqlmaint** 公用程式失敗，則傳回錯誤。  
   
 ## <a name="remarks"></a>備註  
- 如果這個程式是由使用 SQL Server Authentication 登入的使用者所呼叫，則在執行之前，會在*switch_string*前面加上 **-U "***login_id***"** 和 **-P "***password***"** 參數。 如果使用者是使用 Windows 驗證登入，則會傳遞*switch_string* ，而不會變更為**sqlmaint**。  
+ 如果使用 SQL Server Authentication 登入的使用者呼叫此程式，則在執行之前，會將 **-U "***login_id***"** 和 **-P "***password***"** 參數加到 *switch_string* 前面。 如果使用者使用 Windows 驗證登入，則會在不變更**sqlmaint**的情況下傳遞*switch_string* 。  
   
 ## <a name="permissions"></a>權限  
- 需要**系統管理員（sysadmin** ）固定伺服器角色中的成員資格。  
+ 需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
  在這個範例中，`xp_sqlmaint` 會呼叫 `sqlmaint` 來執行完整性檢查、建立報表檔，以及更新 `msdb.dbo.sysdbmaintplan_history`。  

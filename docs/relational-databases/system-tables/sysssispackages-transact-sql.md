@@ -1,5 +1,6 @@
 ---
-title: sysssispackages （Transact-sql） |Microsoft Docs
+description: sysssispackages (Transact-SQL)
+title: sysssispackages (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 66155dcd-dcdb-4e33-a242-1625828ad8d2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1fa0f587fc5939135b3d88b15066de29be6d8a7c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d1a1bda3bfea233f7a586a8147f268fbdb1e6ade
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889238"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419032"
 ---
 # <a name="sysssispackages-transact-sql"></a>sysssispackages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  針對儲存到的每個封裝，各包含一個資料列 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 此資料表會儲存在**msdb**資料庫中。  
+  針對儲存至的每個封裝，各包含一個資料列 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 此資料表儲存在 **msdb** 資料庫中。  
   
   
 |資料行名稱|資料類型|描述|  
@@ -40,7 +41,7 @@ ms.locfileid: "85889238"
 |**ownersid**|**varbinary**|建立封裝之使用者的唯一安全性識別碼。|  
 |**packagedata**|**image**|封裝。|  
 |**packageformat**|**int**|儲存封裝的格式：<br /><br /> 值為2表示封裝是以 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 格式儲存。<br /><br /> 值為3表示封裝是以 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或更新版本的格式儲存。|  
-|**packagetype**|**int**|建立封裝的用戶端。 可能的值如下：<br /><br /> 0 (預設值)<br /><br /> 1（匯 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 入和匯出嚮導）<br /><br /> 3（複寫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ）<br /><br /> 5（ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具）<br /><br /> 6 (維護計畫設計師或精靈)。<br /><br /> <br /><br /> 請注意，此資料行中的值會對應到 <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType> 列舉。|  
+|**packagetype**|**int**|建立封裝的用戶端。 可能的值如下：<br /><br /> 0 (預設值)<br /><br /> 1 (匯 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 入和匯出 Wizard) <br /><br /> 3 (複寫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) <br /><br /> 5 ([!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具) <br /><br /> 6 (維護計畫設計師或精靈)。<br /><br /> <br /><br /> 請注意，這個資料行中的值會對應到 <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType> 列舉。|  
 |**vermajor**|**int**|封裝的最新主要版本。|  
 |**verminor**|**int**|封裝的最新次要版本。|  
 |**verbuild**|**int**|封裝的最新組建。|  

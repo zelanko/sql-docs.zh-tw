@@ -1,5 +1,6 @@
 ---
-title: sys.openkeys （Transact-sql） |Microsoft Docs
+description: sys.openkeys (Transact-SQL)
+title: sys. sys.openkeys (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,12 +21,12 @@ ms.assetid: 719a1259-2398-4fcb-ba05-aeabba7aec21
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e23d8c1453211592f5d6ff0de70db081de1fbb29
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 93294903059bfd2db6b3bcb2995ce1318da8a309
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760314"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420072"
 ---
 # <a name="sysopenkeys-transact-sql"></a>sys.openkeys (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

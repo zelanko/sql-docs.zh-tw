@@ -1,5 +1,6 @@
 ---
-title: xp_loginconfig （Transact-sql） |Microsoft Docs
+description: xp_loginconfig (Transact-SQL)
+title: xp_loginconfig (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d380e799-2857-408a-bcbf-5e73a8e6aa5a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: afef091db5038a6ca302c07a6171557577d46797
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9e86352f992698387334531398bafc5bdfdc2d61
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890742"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419252"
 ---
 # <a name="xp_loginconfig-transact-sql"></a>xp_loginconfig (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,18 +44,18 @@ xp_loginconfig ['config_name']
   
 ## <a name="arguments"></a>引數  
  **'** *config_name* **'**  
- 這是您要顯示的組態值。 如果未指定*config_name* ，就會報告所有設定值。 *config_name*是**sysname**，預設值是 Null，它可以是下列值之一。  
+ 這是您要顯示的組態值。 如果未指定 *config_name* ，就會報告所有的設定值。 *config_name* 是 **sysname**，預設值是 Null，而且可以是下列值之一。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
-|**登入模式**|登入安全性模式。 可能的值為**混合**式和**Windows 驗證**。<br /><br /> 取代者：<br /><br /> `SELECT SERVERPROPERTY('IsIntegratedSecurityOnly'); GO`|  
-|**預設登入**|信任連接之授權使用者 (沒有相符登入名稱的使用者) 的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入識別碼名稱。 預設登入為**guest**。 提供這個值的目的，是為了與舊版相容。|  
+|**登入模式**|登入安全性模式。 可能的值為 **混合** 和 **Windows 驗證**。<br /><br /> 取代者：<br /><br /> `SELECT SERVERPROPERTY('IsIntegratedSecurityOnly'); GO`|  
+|**預設登入**|信任連接之授權使用者 (沒有相符登入名稱的使用者) 的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入識別碼名稱。 預設登入為 **guest**。 提供這個值的目的，是為了與舊版相容。|  
 |**預設網域**|信任連接之網路使用者的預設 Windows 網域名稱。 預設網域就是執行 Windows 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之電腦的網域。 提供這個值的目的，是為了與舊版相容。|  
-|**audit 層級**|稽核層級。 可能的值為 [**無**]、[**成功**]、[**失敗**] 和 [**全部**]。 稽核會寫入錯誤記錄檔和 Windows 事件檢視器中。|  
-|**設定主機名稱**|指出來自用戶端登入記錄的主機名稱，是否換成 Windows 網路使用者名稱。 可能的值為**true**或**false**。 如果設定此項，網路使用者名稱會出現在**sp_who**的 [輸出] 中。|  
-|**地圖**|報告有哪些特殊的 Windows 字元被對應至有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 底線字元 (_)。 可能的值為 [**網域分隔符號**] （預設）、[**空格**]、[ **null**] 或任何單一字元。 提供這個值的目的，是為了與舊版相容。|  
-|**map $**|報告有哪些特殊的 Windows 字元被對應至有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 貨幣符號字元 ($)。 可能的值為**網域分隔符號**、**空格**、 **null**或任何單一字元。 預設值是**space**。 提供這個值的目的，是為了與舊版相容。|  
-|**地圖#**|報告有哪些特殊的 Windows 字元被對應至有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 數字符號字元 (#)。 可能的值為**網域分隔符號**、**空格**、 **null**或任何單一字元。 預設值是連字號。 提供這個值的目的，是為了與舊版相容。|  
+|**審核等級**|稽核層級。 可能的值為 [ **無**]、[ **成功**]、[ **失敗**] 和 [ **全部**]。 稽核會寫入錯誤記錄檔和 Windows 事件檢視器中。|  
+|**設定主機名稱**|指出來自用戶端登入記錄的主機名稱，是否換成 Windows 網路使用者名稱。 可能的值為 **true** 或 **false**。 如果設定此項，網路使用者名稱就會顯示在 **sp_who**的輸出中。|  
+|**映射**|報告有哪些特殊的 Windows 字元被對應至有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 底線字元 (_)。 可能的值為 [ **網域分隔符號** ] (預設值) 、 **空間**、 **null**或任何單一字元。 提供這個值的目的，是為了與舊版相容。|  
+|**map $**|報告有哪些特殊的 Windows 字元被對應至有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 貨幣符號字元 ($)。 可能的值為 **網域分隔符號**、 **空格**、 **null**或任何單一字元。 預設值為 [ **空格**]。 提供這個值的目的，是為了與舊版相容。|  
+|**地圖#**|報告有哪些特殊的 Windows 字元被對應至有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 數字符號字元 (#)。 可能的值為 **網域分隔符號**、 **空格**、 **null**或任何單一字元。 預設值是連字號。 提供這個值的目的，是為了與舊版相容。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -67,12 +68,12 @@ xp_loginconfig ['config_name']
 |**config value**|**sysname**|組態值設定|  
   
 ## <a name="remarks"></a>備註  
- **xp_loginconfig**不能用來設定設定值。  
+ **xp_loginconfig** 不能用來設定設定值。  
   
  若要設定登入模式和稽核層級，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
 ## <a name="permissions"></a>權限  
- 需要**master**資料庫的 CONTROL 許可權。  
+ 需要 **master** 資料庫的 CONTROL 許可權。  
   
 ## <a name="examples"></a>範例  
   
@@ -95,7 +96,7 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [sp_denylogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
  [sp_grantlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
- [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_revokelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [xp_logininfo &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
   

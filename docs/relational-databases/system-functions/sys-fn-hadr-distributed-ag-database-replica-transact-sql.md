@@ -1,5 +1,6 @@
 ---
-title: sys.databases fn_hadr_distributed_ag_database_replica （Transact-sql） |Microsoft Docs
+description: 'sys. fn_hadr_distributed_ag_database_replica (Transact-sql) '
+title: sys. fn_hadr_distributed_ag_database_replica (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2016
 ms.prod: sql
@@ -19,13 +20,14 @@ helpviewer_keywords:
 ms.assetid: 0e6202a1-e872-4f53-99d7-c16b6f712efc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d7b894919a4149d37181d543b8d58fc820aad10b
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: f54cfdf987474435b452421620246b6432892a36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052996"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419502"
 ---
-# <a name="sysfn_hadr_distributed_ag_database_replica-transact-sql"></a>sys.databases fn_hadr_distributed_ag_database_replica （Transact-sql）
+# <a name="sysfn_hadr_distributed_ag_database_replica-transact-sql"></a>sys. fn_hadr_distributed_ag_database_replica (Transact-sql) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   用來將分散式可用性群組中的資料庫對應至本機可用性群組中的資料庫。  
@@ -41,17 +43,17 @@ sys.fn_hadr_distributed_ag_database_replica( lag_Id, database_id )
   
 ## <a name="arguments"></a>引數  
  '*lag_Id*'  
- 這是分散式可用性群組的識別碼。 *lag_Id*的類型為**uniqueidentifier**。  
+ 這是分散式可用性群組的識別碼。 *lag_Id* 是 **uniqueidentifier**類型。  
   
  '*database_id*'  
- 這是分散式可用性群組中的資料庫識別碼。 *database_id*的類型為**uniqueidentifier**。  
+ 這是分散式可用性群組中資料庫的識別碼。 *database_id* 是 **uniqueidentifier**類型。  
   
 ## <a name="tables-returned"></a>傳回的資料表  
  傳回下列資訊。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**group_database_id**|**uniqueidentifier**|本機可用性群組中的資料庫識別碼。|  
+|**group_database_id**|**uniqueidentifier**|本機可用性群組中資料庫的識別碼。|  
   
 ## <a name="examples"></a>範例  
   

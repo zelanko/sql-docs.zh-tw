@@ -1,5 +1,6 @@
 ---
-title: sysmail_help_profile_sp （Transact-sql） |Microsoft Docs
+description: sysmail_help_profile_sp (Transact-SQL)
+title: sysmail_help_profile_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 947038e26a4367425576261594befff032f6eeea
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 372f2309176b9fcf9cbb36fbcaf89d710393bb44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122726"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419292"
 ---
 # <a name="sysmail_help_profile_sp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +40,9 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @profile_id = ] profile_id`要傳回信息的設定檔識別碼。 *profile_id*是**int**，預設值是 Null。  
+`[ @profile_id = ] profile_id` 要傳回信息的設定檔識別碼。 *profile_id* 是 **int**，預設值是 Null。  
   
-`[ @profile_name = ] 'profile_name'`要傳回信息的設定檔名稱。 *profile_name*是**sysname**，預設值是 Null。  
+`[ @profile_name = ] 'profile_name'` 要傳回信息的設定檔名稱。 *profile_name* 是 **sysname**，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -56,12 +57,12 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 |**description**|**nvarchar(256)**|設定檔的描述。|  
   
 ## <a name="remarks"></a>備註  
- 指定設定檔名稱或設定檔識別碼時， **sysmail_help_profile_sp**會傳回該設定檔的相關資訊。 否則， **sysmail_help_profile_sp**會傳回實例中每個設定檔的相關資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+ 指定設定檔名稱或設定檔識別碼時， **sysmail_help_profile_sp** 會傳回該設定檔的相關資訊。 否則， **sysmail_help_profile_sp** 會傳回實例中每個設定檔的相關資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
- 預存程式**sysmail_help_profile_sp**在**msdb**資料庫中，而且是由**dbo**架構所擁有。 如果目前的資料庫不是**msdb**，就必須以三部分的名稱來執行此程式。  
+ 預存程式 **sysmail_help_profile_sp** 位於 **msdb** 資料庫中，而且是由 **dbo** 架構所擁有。 如果目前的資料庫不是 **msdb**，就必須以三部分名稱執行程式。  
   
 ## <a name="permissions"></a>權限  
- 此程式的執行許可權預設為**系統管理員（sysadmin** ）固定伺服器角色的成員。  
+ 此程式的執行許可權預設為 **系統管理員（sysadmin** ）固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  
  **A. 列出所有設定檔**  
@@ -100,6 +101,6 @@ profile_id  name                          description
   
 ## <a name="see-also"></a>另請參閱  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
- [Database Mail 預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [&#40;Transact-sql&#41;的 Database Mail 預存程式 ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

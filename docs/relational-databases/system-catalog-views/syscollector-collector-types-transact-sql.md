@@ -1,5 +1,6 @@
 ---
-title: syscollector_collector_types （Transact-sql） |Microsoft Docs
+description: syscollector_collector_types (Transact-SQL)
+title: syscollector_collector_types (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d1ff2329d0070d554f87e405a6030b744e98d23a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f7e0a45066cdc159f12ae9e6568be8d2d131b639
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896754"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419842"
 ---
 # <a name="syscollector_collector_types-transact-sql"></a>syscollector_collector_types (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85896754"
 |**upload_package_id**|**uniqueidentifer**|上傳封裝的 GUID。 不可為 Null。|  
 |**upload_package_path**|**nvarchar(4000)**|提供上傳封裝的路徑。 可為 Null。|  
 |**upload_package_name**|**sysname**|上傳封裝的名稱。 不可為 Null。|  
-|**is_system**|**bit**|開啟（1）或關閉（0）以指出收集器型別是否隨附于資料收集器，或是稍後由**dc_admin**新增。 這可能是本廠開發或由協力廠商開發的自訂類型。 不可為 Null。|  
+|**is_system**|**bit**|開啟 (1) 或 off (0) 來指出收集器型別是否隨附于資料收集器，或是否已在 **dc_admin**之後新增。 這可能是本廠開發或由協力廠商開發的自訂類型。 不可為 Null。|  
   
 ## <a name="permissions"></a>權限  
  需要 SELECT for **dc_operator**， **dc_proxy**。  
@@ -51,15 +52,15 @@ ms.locfileid: "85896754"
   
 |更新的內容|  
 |---------------------|  
-|已將**collection_type_uid**的資料行名稱更新為**collector_type_uid**。|  
-|已更正 [ **parameter_schema** ] 資料行的描述，指出此值可為 null。|  
-|已加入**parameter_formatter**資料行。|  
-|已更正**collection_package_path**資料行的資料類型，並已更新描述以指出此值可為 null。|  
-|已更正**upload_package_path**資料行的資料類型，並已更新描述以指出此值可為 null。|  
+|已將 **collection_type_uid** 的資料行名稱更新為 **collector_type_uid**。|  
+|已更正 **parameter_schema** 資料行的描述，指出此值可為 null。|  
+|已新增 **parameter_formatter** 資料行。|  
+|已更正 **collection_package_path** 資料行的資料類型，並已更新描述，以指出此值可為 null。|  
+|已更正 **upload_package_path** 資料行的資料類型，並已更新描述，以指出此值可為 null。|  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的資料收集器預存程式](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [&#40;Transact-sql&#41;的資料收集器視圖](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
- [資料收集](../../relational-databases/data-collection/data-collection.md)  
+ [資料收集器預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的資料收集器視圖 ](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
+ [[資料收集]](../../relational-databases/data-collection/data-collection.md)  
   
   

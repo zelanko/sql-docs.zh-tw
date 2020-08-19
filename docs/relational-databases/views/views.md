@@ -1,4 +1,5 @@
 ---
+description: 檢視
 title: 檢視表 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: ada83c28-e8b7-45d9-b53c-b3d67c8820c8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ef24d6eeb1739d40fb88eccd2fb18220ef6fea9
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: dda5e49aa6f51382beb390ae48a544565e2703d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395707"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418922"
 ---
 # <a name="views"></a>檢視
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "87395707"
 |描述如何建立檢視表。|[建立檢視表](../../relational-databases/views/create-views.md)|  
 |描述如何建立索引檢視表。|[建立索引檢視表](../../relational-databases/views/create-indexed-views.md)|  
 |描述如何修改檢視表定義。|[修改檢視表](../../relational-databases/views/modify-views.md)|  
-|描述如何透過檢視表修改資料。|[透過檢視表修改資料](../../relational-databases/views/modify-data-through-a-view.md)|  
+|描述如何透過檢視表修改資料。|[透過檢視修改資料](../../relational-databases/views/modify-data-through-a-view.md)|  
 |描述如何刪除檢視表。|[刪除檢視表](../../relational-databases/views/delete-views.md)|  
 |描述如何傳回檢視表 (例如檢視表定義) 的詳細資訊。|[取得檢視表的資訊](../../relational-databases/views/get-information-about-a-view.md)|  
 |描述如何重新命名檢視表。|[重新命名檢視表](../../relational-databases/views/rename-views.md)|  

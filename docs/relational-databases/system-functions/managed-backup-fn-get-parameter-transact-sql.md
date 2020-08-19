@@ -1,5 +1,6 @@
 ---
-title: managed_backup. fn_get_parameter （Transact-sql） |Microsoft Docs
+description: 'managed_backup fn_get_parameter (Transact-sql) '
+title: managed_backup fn_get_parameter (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/03/2016
 ms.prod: sql
@@ -20,13 +21,14 @@ helpviewer_keywords:
 ms.assetid: ed94e54d-4516-4806-a8ce-f013d3a04122
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 63894f891d633e5b8c2f32f32b1be6573bb97baa
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: da8c646cca92a5ef25fd12322fd8a6bd222a1c9e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053424"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419512"
 ---
-# <a name="managed_backupfn_get_parameter-transact-sql"></a>managed_backup. fn_get_parameter （Transact-sql）
+# <a name="managed_backupfn_get_parameter-transact-sql"></a>managed_backup fn_get_parameter (Transact-sql) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   傳回內含 0、1 或更多資料列參數和值組的資料表。  
@@ -43,15 +45,15 @@ ms.locfileid: "86053424"
 managed_backup.fn_get_parameter ('parameter_name' | '' | NULL )  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>參量  
+##  <a name="arguments"></a><a name="Arguments"></a> 引數  
  parameter_name  
- 參數的名稱。 parameter_name 為**NVARCHAR （128）**。 如果將 NULL 或空字串當做引數提供給函數，則會傳回所有設定之 Smart Admin 參數的名稱/值組。  
+ 參數的名稱。 parameter_name 是 **NVARCHAR (128) **。 如果將 NULL 或空字串當做引數提供給函數，則會傳回所有設定之 Smart Admin 參數的名稱/值組。  
   
 ## <a name="table-returned"></a>傳回的資料表  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|parameter_name|NVARCHAR(128)|參數的名稱。 以下是傳回的目前參數清單：<br/><br/>**FileRetentionDebugXevent**<br/><br/>**SSMBackup2WADebugXevent**<br/><br/>**SSMBackup2WANotificationEmailIds**<br/><br/>**SSMBackup2WAEnableUserDefinedPolicy**<br/><br/>**SSMBackup2WAEverConfigured**<br/><br/>**StorageOperationDebugXevent**|  
+|parameter_name|NVARCHAR(128)|參數的名稱。 以下是傳回的目前參數清單：<br/><br/>**FileRetentionDebugXevent**<br/><br/>**SSMBackup2WADebugXevent**<br/><br/>**>ssmbackup2wanotificationemailids**<br/><br/>**SSMBackup2WAEnableUserDefinedPolicy**<br/><br/>**SSMBackup2WAEverConfigured**<br/><br/>**StorageOperationDebugXevent**|  
 |parameter_value|NVARCHAR(128)|參數的目前設定值。|  
   
 ## <a name="security"></a>安全性  

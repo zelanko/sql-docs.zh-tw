@@ -1,4 +1,5 @@
 ---
+description: DDL 觸發程序
 title: DDL 觸發程序 | Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 89845e119f40b0a339bdeb7d6809ad0c017afc0d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0e70bf690c7e236bbe52eae905730dec8f9ac48a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757602"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418952"
 ---
 # <a name="ddl-triggers"></a>DDL 觸發程序
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +52,7 @@ ms.locfileid: "85757602"
   
  DDL 觸發程序不像 DML 觸發程序，並不以結構描述為範圍。 因此，OBJECT_ID、OBJECT_NAME、OBJECTPROPERTY 和 OBJECTPROPERTYEX 等函數無法用來查詢有關 DDL 觸發程序的中繼資料。 請改用目錄檢視。  
   
- 伺服器範圍的 DDL 觸發程序會出現在 SQL Server Management Studio 物件總管的 [觸發程序]  資料夾中。 這個資料夾在 **[伺服器物件]** 資料夾之下。 資料庫範圍的 DDL 觸發程序則是出現在 [資料庫觸發程序]  資料夾。 這個資料夾在對應資料庫的 **[可程式性]** 資料夾之下。  
+ 伺服器範圍的 DDL 觸發程序會出現在 SQL Server Management Studio 物件總管的 [觸發程序]**** 資料夾中。 這個資料夾在 **[伺服器物件]** 資料夾之下。 資料庫範圍的 DDL 觸發程序則是出現在 [資料庫觸發程序] 資料夾。 這個資料夾在對應資料庫的 **[可程式性]** 資料夾之下。  
   
 > [!IMPORTANT]  
 >  觸發程序內的惡意程式碼可能在擴大的權限下執行。 如需如何協助降低此威脅的詳細資訊，請參閱 [管理觸發程序安全性](../../relational-databases/triggers/manage-trigger-security.md)。  
@@ -115,7 +116,7 @@ GO
 |----------|-----------|  
 |描述如何建立、修改、刪除或停用 DDL 觸發程序。|[實作 DDL 觸發程序](../../relational-databases/triggers/implement-ddl-triggers.md)|  
 |描述如何建立 CLR DDL 觸發程序。|[建立 CLR 觸發程序](../../relational-databases/triggers/create-clr-triggers.md)|  
-|描述如何傳回有關 DDL 觸發程序的詳細資訊。|[取得 DDL 觸發程序的詳細資訊](../../relational-databases/triggers/get-information-about-ddl-triggers.md)|  
+|描述如何傳回有關 DDL 觸發程序的詳細資訊。|[取得 DDL 觸發程序的資訊](../../relational-databases/triggers/get-information-about-ddl-triggers.md)|  
 |描述如何傳回有關使用 EVENTDATA 函數引發 DDL 觸發程序之事件的詳細資訊。|[使用 EVENTDATA 函數](../../relational-databases/triggers/use-the-eventdata-function.md)|  
 |描述如何管理觸發程序安全性。|[管理觸發程序安全性](../../relational-databases/triggers/manage-trigger-security.md)|  
   
