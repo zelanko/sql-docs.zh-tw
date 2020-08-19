@@ -1,4 +1,5 @@
 ---
+description: Windows 定序名稱 (Transact-SQL)
 title: Windows 定序名稱 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2019
@@ -18,12 +19,12 @@ ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfe6578107f87eddb62f5f31efd93778f8c2af96
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 2a95152ded1edc82ea153c40b6f9df68c1d3dea7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484038"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426520"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows 定序名稱 (Transact-SQL)
 
@@ -74,12 +75,12 @@ CollationDesignator_<ComparisonStyle>
 省略此選項指定不區分全半形，**WS** 指定區分全半形。
 
 *VariationSelectorSensitivity*  
-- **適用於**：從 [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 起 
+- **適用於**：從 [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 開始 
 
 - 省略此選項指定不區分變化選取器，**VSS** 則指定區分變化選取器。
 
-**UTF8**  
-- **適用於**：從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起   
+[UTF8]  
+- **適用於**：從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始   
 
 - 指定要用於合格資料類型的 UTF-8 編碼。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。
 
@@ -192,7 +193,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |歐迪亞文 (印度)|Indic_General_100_<sup>1</sup>|無法使用|
 |普什圖文 (阿富汗)|Pashto_100_<sup>1</sup>|無法使用|
 |波斯文 (伊朗)|Persian_100_|無法使用|
-|旁遮普語 (印度)|Indic_General_100_<sup>1</sup>|Indic_General_90_|
+|旁遮普文 (印度)|Indic_General_100_<sup>1</sup>|Indic_General_90_|
 |蓋楚瓦文 (玻利維亞)|Latin1_General_100_|無法使用|
 |蓋楚瓦文 (厄瓜多)|Latin1_General_100_|無法使用|
 |蓋楚瓦文 (秘魯)|Latin1_General_100_|無法使用|
@@ -213,7 +214,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |塞爾維亞文 (塞爾維亞，拉丁)|Serbian_Latin_100_|無法使用|
 |賴索托文/北索托文 (南非)|Latin1_General_100_|無法使用|
 |塞茲瓦納文/班圖文 (南非)|Latin1_General_100_|無法使用|
-|僧伽羅語 (斯里蘭卡)|Indic_General_100_<sup>1</sup>|無法使用|
+|僧伽羅文 (斯里蘭卡)|Indic_General_100_<sup>1</sup>|無法使用|
 |斯瓦希里文 (肯亞)|Latin1_General_100_|無法使用|
 |敘利亞文 (敘利亞)|Syriac_100_<sup>1</sup>|Syriac_90_|
 |塔吉克文 (塔吉克)|Cyrillic_General_100_|無法使用|

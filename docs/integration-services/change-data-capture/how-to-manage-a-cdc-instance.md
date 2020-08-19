@@ -1,4 +1,5 @@
 ---
+description: How to Manage a CDC Instance
 title: 如何管理 CDC 執行個體 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5d9e677f-b872-497d-9cde-472184a214ab
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ed9a511eec4af95b7fe2a76e621e3651fc1f92e4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c4c09c590d92d97ea56c795db6fe8676d5771277
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921544"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426050"
 ---
 # <a name="how-to-manage-a-cdc-instance"></a>How to Manage a CDC Instance
 

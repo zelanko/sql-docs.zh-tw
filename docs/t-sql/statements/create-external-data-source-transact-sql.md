@@ -1,4 +1,5 @@
 ---
+description: CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 title: CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/26/2020
@@ -19,12 +20,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 380246afdb4bdded42f83992d877ef2c363cc18a
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 6ce99ecb6ed483ce7cff8363d38536d6ff447834
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111039"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426750"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -813,7 +814,7 @@ WITH
 CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
 WITH
   -- Please note the abfss endpoint when your account has secure transfer enabled
-  ( LOCATION = 'abfss://newyorktaxidataset.azuredatalakestore.net' , 
+  ( LOCATION = 'abfss://data@newyorktaxidataset.dfs.core.windows.net' , 
     CREDENTIAL = ADLS_credential ,
     TYPE = HADOOP
   ) ;

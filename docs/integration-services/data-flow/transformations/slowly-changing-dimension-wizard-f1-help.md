@@ -1,4 +1,5 @@
 ---
+description: 緩時變維度精靈 F1 說明
 title: 緩時變維度精靈 F1 說明 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e4d62b73-77c5-4b26-9b6d-d5f245768fc8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d4147da3260a2b8620d880e2d20c3ed4fd610d05
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d97c2228226b86a2f1700311743b99039c781025
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919457"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425730"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>緩時變維度精靈 F1 說明
 

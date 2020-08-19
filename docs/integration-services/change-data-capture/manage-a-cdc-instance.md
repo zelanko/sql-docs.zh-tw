@@ -1,4 +1,5 @@
 ---
+description: 管理 CDC 執行個體
 title: 管理 CDC 執行個體 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 929e6730ade53eeff07552652ff2905665fc4a49
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 0190e48bb33b0e62eb711e0833de4492af9ad434
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472544"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426040"
 ---
 # <a name="manage-a-cdc-instance"></a>管理 CDC 執行個體
 

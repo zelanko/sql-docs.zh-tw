@@ -1,4 +1,5 @@
 ---
+description: SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 title: SET TRANSACTION ISOLATION LEVEL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/22/2018
@@ -27,12 +28,12 @@ ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 73b805149ca1061c73572d742875fa11d9d81b23
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: e1e0142b312bbeff8fe222f86013af87ba93c866
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931692"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426490"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

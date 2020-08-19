@@ -1,4 +1,5 @@
 ---
+description: SQL Server 目的地自訂屬性
 title: SQL Server 目的地自訂屬性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b736aa6d-c154-44a0-be08-f25733fca1d9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 28b2257dc78950815fd65682c57713486993aaf9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 06ca0836b3c588e8b598ae60b47e540562f18802
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917774"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425790"
 ---
 # <a name="sql-server-destination-custom-properties"></a>SQL Server 目的地自訂屬性
 
@@ -28,17 +29,17 @@ ms.locfileid: "86917774"
   
 |屬性名稱|資料類型|描述|  
 |-------------------|---------------|-----------------|  
-|AlwaysUseDefaultCodePage|Boolean|強制使用 DefaultCodePage 屬性值。 此屬性的預設值為 **False**。|  
-|BulkInsertCheckConstraints|Boolean|一個值，指定大量插入是否會檢查條件約束。 這個屬性的預設值為 **True**。|  
-|BulkInsertFireTriggers|Boolean|一個值，指定大量插入是否會引發資料表上的觸發程序。 此屬性的預設值為 **False**。|  
+|AlwaysUseDefaultCodePage|布林值|強制使用 DefaultCodePage 屬性值。 此屬性的預設值為 **False**。|  
+|BulkInsertCheckConstraints|布林值|一個值，指定大量插入是否會檢查條件約束。 這個屬性的預設值為 **True**。|  
+|BulkInsertFireTriggers|布林值|一個值，指定大量插入是否會引發資料表上的觸發程序。 此屬性的預設值為 **False**。|  
 |BulkInsertFirstRow|整數|一個值，指定要插入的第一個資料列。 此屬性的預設值是 **-1**，表示未指派任何值|  
-|BulkInsertKeepIdentity|Boolean|一個值，指定值是否可插入識別欄位中。 此屬性的預設值為 **False**。|  
-|BulkInsertKeepNulls|Boolean|一個值，指定大量插入是否會保留 Null 值。 此屬性的預設值為 **False**。|  
+|BulkInsertKeepIdentity|布林值|一個值，指定值是否可插入識別欄位中。 此屬性的預設值為 **False**。|  
+|BulkInsertKeepNulls|布林值|一個值，指定大量插入是否會保留 Null 值。 此屬性的預設值為 **False**。|  
 |BulkInsertLastRow|整數|一個值，指定要插入的最後一個資料列。 此屬性的預設值是 **-1**，表示未指派任何值。|  
 |BulkInsertMaxErrors|整數|一個值，指定停止大量插入之前可以發生的錯誤數目。 此屬性的預設值是 **-1**，表示未指派任何值。|  
 |BulkInsertOrder|String|排序資料行的名稱。 每個資料行都可依遞增或遞減順序來排序。 如果使用了多個排序資料行，這些資料行名稱會以逗號隔開。|  
 |BulkInsertTableName|String|要將資料複製到其中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫資料表或檢視表。|  
-|BulkInsertTablock|Boolean|一個值，指定在進行大量插入期間是否會鎖定資料表。 這個屬性的預設值為 **True**。|  
+|BulkInsertTablock|布林值|一個值，指定在進行大量插入期間是否會鎖定資料表。 這個屬性的預設值為 **True**。|  
 |DefaultCodePage|整數|無法從資料來源中取得字碼頁資訊時要使用的字碼頁。|  
 |MaxInsertCommitSize|整數|一個值，指定要在批次中插入的資料列數目上限。 當此值為零時，就會在單一批次中插入所有資料列。|  
 |逾時|整數|一個值，指定如果沒有資料可供插入， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地在終止之前等候的秒數。 值為 0 表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地將不會逾時。這個屬性的預設值為 30。|  

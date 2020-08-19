@@ -1,4 +1,5 @@
 ---
+description: SQL Server 目的地
 title: SQL Server 目的地 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 278cfb16ddc6c00fba9570d7912a6d5fa3a31727
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dbd48bf2dee8268fa87209ab3d4283938961c918
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917764"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425800"
 ---
 # <a name="sql-server-destination"></a>SQL Server 目的地
 
@@ -36,7 +37,7 @@ ms.locfileid: "86917764"
   SQL Server 目的地會連接到本機 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，並大量載入資料到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表和檢視中。 如果封裝會存取遠端伺服器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，您就無法在這種封裝中使用 SQL Server 目的地。 反之，這種封裝應該使用 OLE DB 目的地。 如需詳細資訊，請參閱 [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)。  
   
 ## <a name="permissions"></a>權限  
- 使用者必須擁有「建立全域物件」權限，才能執行包含 SQL Server 目的地的封裝。 您可以使用「本機安全性原則」工具 (從 [系統管理工具]  功能表中開啟) 將此權限授與使用者。 如果您在執行使用 SQL Server 目的地的封裝時收到錯誤訊息，請確定執行該封裝的帳戶是否擁有「建立全域物件」權限。  
+ 使用者必須擁有「建立全域物件」權限，才能執行包含 SQL Server 目的地的封裝。 您可以使用「本機安全性原則」工具 (從 [系統管理工具]**** 功能表中開啟) 將此權限授與使用者。 如果您在執行使用 SQL Server 目的地的封裝時收到錯誤訊息，請確定執行該封裝的帳戶是否擁有「建立全域物件」權限。  
   
 ## <a name="bulk-inserts"></a>大量插入  
  如果您嘗試使用 SQL Server 目的地將資料大量載入遠端 SQL Server 資料庫，可能會看到類似下面這樣的錯誤訊息：「有 OLE DB 記錄可用」。 來源："Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client" Hresult: 0x80040E14 描述: 「無法大量載入，因為無法開啟 SSIS 檔案對應物件 'Global\DTSQLIMPORT」。 作業系統錯誤碼 2 (系統找不到指定的檔案)。 請確定是透過 Windows 安全性存取本機伺服器」。  
@@ -68,7 +69,7 @@ ms.locfileid: "86917764"
   
  如需大量載入選項的詳細資訊，請參閱 [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)。  
   
-#### <a name="performance-improvements"></a>效能改進  
+#### <a name="performance-improvements"></a>效能改善  
  若要提升大量插入以及大量插入作業期間存取資料表資料的效能，您應該變更預設選項，如下：  
   
 -   大量匯入作業期間不驗證目標資料表或檢視的條件約束。  
@@ -127,13 +128,13 @@ ms.locfileid: "86917764"
   
 ### <a name="options"></a>選項。  
  **[無快取]**  
- 從清單中選取現有的連接，或按一下 [新增]  來建立新的連接。  
+ 從清單中選取現有的連接，或按一下 [新增]**** 來建立新的連接。  
   
  **新增**  
  使用 [設定 OLE DB 連接管理員]  對話方塊來建立新的連接。  
   
  **使用資料表或檢視**  
- 從清單中選取現有的資料表或檢視，或按一下 [新增]  來建立新的連接。  
+ 從清單中選取現有的資料表或檢視，或按一下 [新增]**** 來建立新的連接。  
   
  **新增**  
  使用 [建立資料表]  對話方塊建立新的資料表。  
@@ -161,7 +162,7 @@ ms.locfileid: "86917764"
  檢視每個可用的目的地資料行，不論是否已經對應。  
   
 ## <a name="sql-destination-editor-advanced-page"></a>SQL 目的地編輯器 (進階頁面)
-  使用 [SQL 目的地編輯器] 對話方塊的 [進階] 頁面，即可指定進階大量插入選項。  
+  使用 [SQL 目的地編輯器]**** 對話方塊的 [進階]**** 頁面，即可指定進階大量插入選項。  
   
 ### <a name="options"></a>選項。  
  **保留識別**  
@@ -183,19 +184,19 @@ ms.locfileid: "86917764"
  指定要插入的第一個資料列。 此屬性的預設值為 **-1**，表示未指派任何值。  
   
 > [!NOTE]  
->  清除 [SQL 目的地編輯器]  中的文字方塊，以指出您不要指派此屬性的值。 在 [屬性]  視窗、[進階編輯器]  和物件模型中，請使用 -1。  
+>  清除 [SQL 目的地編輯器]**** 中的文字方塊，以指出您不要指派此屬性的值。 在 [屬性]**** 視窗、[進階編輯器]**** 和物件模型中，請使用 -1。  
   
  **最後一個資料列**  
  指定要插入的最後一個資料列。 此屬性的預設值為 **-1**，表示未指派任何值。  
   
 > [!NOTE]  
->  清除 [SQL 目的地編輯器]  中的文字方塊，以指出您不要指派此屬性的值。 在 [屬性]  視窗、[進階編輯器]  和物件模型中，請使用 -1。  
+>  清除 [SQL 目的地編輯器]**** 中的文字方塊，以指出您不要指派此屬性的值。 在 [屬性]**** 視窗、[進階編輯器]**** 和物件模型中，請使用 -1。  
   
  **最大錯誤數目**  
  指定停止大量插入之前可以發生的錯誤數目。 此屬性的預設值為 **-1**，表示未指派任何值。  
   
 > [!NOTE]  
->  清除 [SQL 目的地編輯器]  中的文字方塊，以指出您不要指派此屬性的值。 在 [屬性]  視窗、[進階編輯器]  和物件模型中，請使用 -1。  
+>  清除 [SQL 目的地編輯器]**** 中的文字方塊，以指出您不要指派此屬性的值。 在 [屬性]**** 視窗、[進階編輯器]**** 和物件模型中，請使用 -1。  
   
  **逾時**  
  指定因逾時而停止大量插入之前要等候的秒數。  

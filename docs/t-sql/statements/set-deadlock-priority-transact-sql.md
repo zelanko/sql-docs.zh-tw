@@ -1,4 +1,5 @@
 ---
+description: SET DEADLOCK_PRIORITY (Transact-SQL)
 title: SET DEADLOCK_PRIORITY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -24,12 +25,12 @@ ms.assetid: 810a3a8e-3da3-4bf9-bb15-7b069685a1b6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3786cdf92fce5c983e86b8f825d9d57a24e92dc3
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 5b628469c2a3b640fef35f14c28f658ad46d3782
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394131"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426530"
 ---
 # <a name="set-deadlock_priority-transact-sql"></a>SET DEADLOCK_PRIORITY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +48,9 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
 <numeric-priority> ::= { -10 | -9 | -8 | ... | 0 | ... | 8 | 9 | 10 }  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  LOW  
  指定如果目前的工作階段陷入死結，而其他陷入死結鏈結的工作階段的死結優先權設成 NORMAL 或 HIGH，或是大於 -5 的整數值，則目前工作階段將會是死結的犧牲者。 如果其他工作階段的死結優先權設為小於 -5 的整數值，則目前工作階段將不會是死結犧牲者。 另外它也會指定，如果另一個工作階段的死結優先權設為 LOW 或等於 -5 的整數值，則目前工作階段可以成為死結的犧牲者。  
   

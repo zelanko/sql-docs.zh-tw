@@ -1,4 +1,5 @@
 ---
+description: SMTP 連接管理員
 title: SMTP 連線管理員 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3795d442-714b-4bbb-9acd-75bf277a468a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4ed7c148645dc8788e2e089b3f7f7f74d480fafe
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a621a780f7bd0e9cc231630e5d20a02a3f95c0c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923305"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425980"
 ---
 # <a name="smtp-connection-manager"></a>SMTP 連接管理員
 

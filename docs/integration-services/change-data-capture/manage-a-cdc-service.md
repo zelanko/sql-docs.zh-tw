@@ -1,4 +1,5 @@
 ---
+description: 管理 CDC 服務
 title: 管理 CDC 服務 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 645ae53f-f352-4d6a-9eb0-264e53a93a18
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 187bfb6ccfb9cda80213487c7e315ec517f8d3dc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d4405c34f2282a9504c3c4c413f70ebf284d8d4f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922514"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426020"
 ---
 # <a name="manage-a-cdc-service"></a>管理 CDC 服務
 

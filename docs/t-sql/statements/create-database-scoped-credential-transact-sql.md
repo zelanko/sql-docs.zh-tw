@@ -1,4 +1,5 @@
 ---
+description: CREATE DATABASE SCOPED CREDENTIAL (TRANSACT-SQL)
 title: CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/25/2019
@@ -22,12 +23,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7ba0b83c6c03c761264fb6e85b8d93c09debef49
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 72f2f72300982473696132d327881a2f2b867dd9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87523360"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426830"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (TRANSACT-SQL)
 

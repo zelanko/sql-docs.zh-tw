@@ -1,4 +1,5 @@
 ---
+description: OData 來源
 title: OData 來源 | Microsoft Docs
 ms.date: 09/17/2018
 ms.prod: sql
@@ -15,12 +16,12 @@ f1_keywords:
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e06cb4ec3bbc74779ad2fcb4f36d6e75a4e7cb55
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8f74fa8478953c4c1353d35f49250896ab2a7ab8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916197"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425820"
 ---
 # <a name="odata-source"></a>OData 來源
 
@@ -80,7 +81,7 @@ OData 來源支援下列簡單資料類型：int、byte[]、bool、byte、DateTi
  在您選取或建立連接管理員之後，對話方塊會顯示連接管理員正在使用的 OData 通訊協定版本。  
   
  **新增**  
- 使用 [OData 連線管理員編輯器]  對話方塊建立新的連線管理員。  
+ 使用 [OData 連線管理員編輯器]**** 對話方塊建立新的連線管理員。  
   
  **使用集合或資源路徑**  
  從來源中指定選取資料的方法。  
@@ -91,13 +92,13 @@ OData 來源支援下列簡單資料類型：int、byte[]、bool、byte、DateTi
 |資源路徑|使用資源路徑從 OData 來源擷取資料。|  
   
  **查詢選項**  
- 指定查詢的選項。 例如： `$top=5` 
+ 指定查詢的選項。 例如：`$top=5` 
   
  **摘要 url**  
  根據您在此對話方塊中選取的選項顯示唯讀摘要 URL。  
   
  **預覽**  
- 使用 [預覽]  對話方塊來預覽結果。 **[預覽]** 最多可顯示 20 個資料列。  
+ 使用 [預覽]**** 對話方塊來預覽結果。 **[預覽]** 最多可顯示 20 個資料列。  
   
 ### <a name="dynamic-options"></a>動態選項  
   
@@ -107,10 +108,10 @@ OData 來源支援下列簡單資料類型：int、byte[]、bool、byte、DateTi
   
 #### <a name="use-collection-or-resource-path--resource-path"></a>使用集合或資源路徑 = 資源路徑  
  **Resource path**  
- 輸入資源路徑。 例如：Employees  
+ 輸入資源路徑。 例如：員工  
   
 ## <a name="odata-source-editor-columns-page"></a>OData 來源編輯器 (資料行頁面)
-  使用 [OData 來源編輯器]  對話方塊的 [資料行]  頁面，選取要包含在輸出中的外部 (來源) 資料行，並將其對應到輸出資料行。  
+  使用 [OData 來源編輯器]**** 對話方塊的 [資料行]**** 頁面，選取要包含在輸出中的外部 (來源) 資料行，並將其對應到輸出資料行。  
   
 ### <a name="options"></a>選項。  
  **可用的外部資料行**  
@@ -123,14 +124,14 @@ OData 來源支援下列簡單資料類型：int、byte[]、bool、byte、DateTi
  為每個輸出資料行提供唯一的名稱。 預設值為選取的外部 (來源) 資料行的名稱；不過，您也可以選擇任何唯一的、描述性的名稱。  
   
 ## <a name="odata-source-editor-error-output-page"></a>OData 來源編輯器 (錯誤輸出頁面)
-  使用 [OData 來源編輯器]  對話方塊的 [錯誤輸出]  頁面，選取錯誤處理選項，並設定錯誤輸出資料行上的屬性。  
+  使用 [OData 來源編輯器]**** 對話方塊的 [錯誤輸出]**** 頁面，選取錯誤處理選項，並設定錯誤輸出資料行上的屬性。  
   
 ### <a name="options"></a>選項。  
  **輸入/輸出**  
  檢視資料來源的名稱。  
   
  **資料行**  
- 檢視您在 [OData 來源編輯器]  對話方塊的 [連線管理員]  頁面上所選取的外部 (來源) 資料行。  
+ 檢視您在 [OData 來源編輯器]**** 對話方塊的 [連線管理員]**** 頁面上所選取的外部 (來源) 資料行。  
   
  **錯誤**  
  指定錯誤發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
@@ -150,6 +151,6 @@ OData 來源支援下列簡單資料類型：int、byte[]、bool、byte、DateTi
  將錯誤處理選項套用至選取的資料格。  
   
 ## <a name="see-also"></a>另請參閱  
- [OData 連線管理員](../../integration-services/connection-manager/odata-connection-manager.md)  
+ [OData 連接管理員](../../integration-services/connection-manager/odata-connection-manager.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Microsoft Connector for Teradata
 title: Microsoft Connector for Teradata | Microsoft Docs
 ms.custom: ''
 ms.date: 11/22/2019
@@ -9,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a33855bdd5871f39911210c1fa5afe38414268ce
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a866d7d1083435acffeb157edf9fe4a0bb725d3e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917716"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425760"
 ---
 # <a name="microsoft-connector-for-teradata"></a>Microsoft Connector for Teradata
 

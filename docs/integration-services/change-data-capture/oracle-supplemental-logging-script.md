@@ -1,4 +1,5 @@
 ---
+description: Oracle 補充記錄指令碼
 title: Oracle 補充記錄指令碼 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f2c2a71afd526aa177490c817631dd9cd1f5fdc2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ec1835467ed0fb3ac23d570d26d8416cd83521b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86901166"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425990"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Oracle 補充記錄指令碼
 

@@ -1,4 +1,5 @@
 ---
+description: DENY 伺服器權限 (Transact-SQL)
 title: DENY 伺服器權限 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/09/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 68d6b2a9-c36f-465a-9cd2-01d43a667e99
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 062bc1032bf94f9899522b661117f88d17233f5f
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 50377ed7b719eee6a135af5db6161d9eed824915
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484151"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426620"
 ---
 # <a name="deny-server-permissions-transact-sql"></a>DENY 伺服器權限 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,4 +1,5 @@
 ---
+description: 取消樞紐轉換
 title: 取消樞紐轉換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f635c64b-a9c5-4f11-9c40-9cd9d5298c5d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d0a0d34a154b9b92258424718bb7cd62e4ed295e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e4dd81bf33b43f4adf73225faa199fd9c5f792fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914866"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425630"
 ---
 # <a name="unpivot-transformation"></a>取消樞紐轉換
 

@@ -1,4 +1,5 @@
 ---
+description: 教學課程：撰寫國際性通用的 Transact-SQL 陳述式
 title: 教學課程：撰寫國際性通用的 Transact-SQL 陳述式 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2016
@@ -14,12 +15,12 @@ ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae6f97bd7aeea2bb587f5c572204d76f7167aafa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9d842186c057df54276d19c2b5b5774225961b3e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68051343"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426470"
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>教學課程：撰寫國際性通用的 Transact-SQL 陳述式
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,13 +39,13 @@ ms.locfileid: "68051343"
 [課程 1：建立資料庫物件](../t-sql/lesson-1-creating-database-objects.md)  
 在這一課，您會建立資料庫、在資料庫中建立資料表、插入資料至資料表、更新資料以及讀取資料。  
   
-[課程 2：設定資料庫物件的權限](../t-sql/lesson-2-configuring-permissions-on-database-objects.md)  
+[第 2 課：設定資料庫物件的權限](../t-sql/lesson-2-configuring-permissions-on-database-objects.md)  
 在這一課，您會建立登入及使用者， 也會建立檢視和預存程序，然後將使用者權授與預存程序。  
   
 [課程 3：刪除資料庫物件](../t-sql/lesson-3-deleting-database-objects.md)  
 在這一課，您會移除資料的存取、從資料表中刪除資料、刪除資料表，最後刪除資料庫。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
 為了完成本教學課程，您並不需要精通 SQL 語言，但必須了解基本資料庫概念 (如資料表)。 在進行本教學課程期間，您將建立資料庫以及建立 Windows 使用者。 這些工作需要高層權限，因此您必須以系統管理員的身份登入電腦。  
   
 另外，系統必須有安裝下列程式：  

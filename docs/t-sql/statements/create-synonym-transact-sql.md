@@ -1,4 +1,5 @@
 ---
+description: CREATE SYNONYM (Transact-SQL)
 title: CREATE SYNONYM (Transact-SQL)
 ms.custom: ''
 ms.date: 04/11/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7d4131868fbaf40c59be2b55aad5fe078490c824
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 6b157b8b501d33221f8cdc6d377c8e35aa57207d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484557"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426640"
 ---
 # <a name="create-synonym-transact-sql"></a>CREATE SYNONYM (Transact-SQL)
 

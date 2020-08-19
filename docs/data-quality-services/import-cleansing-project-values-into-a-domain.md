@@ -1,4 +1,5 @@
 ---
+description: 將清理專案值匯入定義域中
 title: 將清理專案值匯入定義域中
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 8688d5d20f1b5ac600e75327725ab18e9f8dba1b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 06600482f843ecf014b5ec8648bc8079c871be6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892393"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426350"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>將清理專案值匯入定義域中
 
@@ -58,7 +59,7 @@ ms.locfileid: "85892393"
   
     -   選取 **[加入 [新增] 索引標籤中的值]** ，除了 **[正確]** 和 **[更正]** 索引標籤中的值以外，也匯入 [新增] 索引標籤中的值。  
   
-    -   按一下 [確定] 。  
+    -   按一下 [確定]。  
   
 6.  當您返回 **[定義域值]** 索引標籤之後，成功匯入值的訊息隨即顯示。 已經匯入所以對定義域而言為新增的值將會顯示在 **[值]** 資料表中。  
   
@@ -68,7 +69,7 @@ ms.locfileid: "85892393"
   
 9. 若要搜尋特定字串，請在 **[尋找]** 文字方塊中輸入此字串。 按一下向上或向下箭號，逐步瀏覽符合搜尋準則的值。 這些值將會以黃色反白顯示。  
   
-10. 按一下 [完成] 。  
+10. 按一下 [完成]  。  
   
     > [!NOTE]  
     >   如需有關使用 **[定義域值]** 索引標籤中之值的詳細資訊，請參閱＜ [Change Domain Values](../data-quality-services/change-domain-values.md)＞。  

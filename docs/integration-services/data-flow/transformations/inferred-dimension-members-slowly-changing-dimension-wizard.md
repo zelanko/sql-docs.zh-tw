@@ -1,4 +1,5 @@
 ---
+description: 推斷的維度成員 (緩時變維度精靈)
 title: 推斷的維度成員 (緩時變維度精靈) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,19 +13,19 @@ f1_keywords:
 ms.assetid: 809e395f-2e10-48ff-8860-56403f130628
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6e6a71efbd5036a409cad5613fc35612724538d2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4066795817035e6ac149de7fd86b2f4fb816f828
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919261"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425770"
 ---
 # <a name="inferred-dimension-members-slowly-changing-dimension-wizard"></a>推斷的維度成員 (緩時變維度精靈)
 
 [!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  使用 [推斷的維度成員]  對話方塊來指定使用推斷的成員之選項。 在事實資料表參考尚未載入的維度成員時，推斷的成員即已存在。 當載入推斷成員的資料時，可以更新現有的記錄而不是建立新記錄。  
+  使用 [推斷的維度成員]**** 對話方塊來指定使用推斷的成員之選項。 在事實資料表參考尚未載入的維度成員時，推斷的成員即已存在。 當載入推斷成員的資料時，可以更新現有的記錄而不是建立新記錄。  
   
  若要深入了解這個精靈，請參閱＜ [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)＞。  
   

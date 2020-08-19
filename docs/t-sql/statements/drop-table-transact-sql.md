@@ -1,4 +1,5 @@
 ---
+description: DROP TABLE (Transact-SQL)
 title: DROP TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/12/2017
@@ -37,12 +38,12 @@ ms.assetid: 0b6f2b6f-3aa3-4767-943f-43df3c3c5cfd
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e0c7cc3432a18ad0203816523dc02cba6b56788
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: c8153dcaf2935163bd8991a9a2086f6d3e39a0c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485443"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426580"
 ---
 # <a name="drop-table-transact-sql"></a>DROP TABLE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -110,22 +111,22 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
 ### <a name="a-dropping-a-table-in-the-current-database"></a>A. 卸除目前資料庫中的資料表  
  下列範例會從目前資料庫移除 `ProductVendor1` 資料表及其資料和索引。  
   
-```  
+```sql  
 DROP TABLE ProductVendor1 ;  
 ```  
   
 ### <a name="b-dropping-a-table-in-another-database"></a>B. 卸除另一個資料庫中的資料表  
- 下列範例會卸除 `SalesPerson2` 資料庫中的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表。 您可以從伺服器執行個體的任何資料庫中執行這個範例。  
+ 下列範例會卸除 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中的 `SalesPerson2` 資料表。 您可以從伺服器執行個體的任何資料庫中執行這個範例。  
   
-```  
+```sql  
 DROP TABLE AdventureWorks2012.dbo.SalesPerson2 ;  
 ```  
   
 ### <a name="c-dropping-a-temporary-table"></a>C. 卸除暫存資料表  
  下列範例會建立一份暫存資料表、測試它是否存在、卸除它，再重新測試它是否存在。 此範例不使用 **IF EXISTS** 語法，其從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始可供使用。  
   
-```  
-CREATE TABLE #temptable (col1 int);  
+```sql  
+CREATE TABLE #temptable (col1 INT);  
 GO  
 INSERT INTO #temptable  
 VALUES (10);  
@@ -137,7 +138,6 @@ DROP TABLE #temptable;
 GO  
 --Test the drop.  
 SELECT * FROM #temptable;  
-  
 ```  
   
 ### <a name="d-dropping-a-table-using-if-exists"></a>D. 使用 IF EXISTS 來卸除資料表  
@@ -146,8 +146,8 @@ SELECT * FROM #temptable;
   
  下列範例會建立名稱為 T1 的資料表。 然後，第二個陳述式會卸除資料表。 第三個陳述式不會執行任何動作，因為資料表已刪除；但它不會造成錯誤。  
   
-```  
-CREATE TABLE T1 (Col1 int);  
+```sql  
+CREATE TABLE T1 (Col1 INT);  
 GO  
 DROP TABLE IF EXISTS T1;  
 GO  

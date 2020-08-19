@@ -1,4 +1,5 @@
 ---
+description: 詞彙擷取轉換
 title: 詞彙擷取轉換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -28,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c76fff59151ffd2e291cd259fbe35fdffd9c4eec
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 05e63dfc96f14db84feefe92165a952fb4207fd8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914254"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425700"
 ---
 # <a name="term-extraction-transformation"></a>詞彙擷取轉換
 

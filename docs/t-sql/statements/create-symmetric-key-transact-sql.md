@@ -1,4 +1,5 @@
 ---
+description: CREATE SYMMETRIC KEY (Transact-SQL)
 title: CREATE SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/11/2019
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 37e46ba0453f9606a5ddc5310e15d4263de57fcf
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: c378e113e07a9d85bbeedbf585f9b58f417812f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483196"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426670"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

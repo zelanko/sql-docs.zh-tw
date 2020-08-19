@@ -1,4 +1,5 @@
 ---
+description: replace value of (XML DML)
 title: replace value of (XML DML)
 ms.custom: ''
 ms.date: 07/26/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 70ef0ec9f3cec26b7e0a55df770a3983d0d8594e
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 7c4133965870627a475fc7314f55952c38694a6e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393046"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426510"
 ---
 # <a name="replace-value-of-xml-dml"></a>replace value of (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

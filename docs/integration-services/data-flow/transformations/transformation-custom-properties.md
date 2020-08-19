@@ -1,4 +1,5 @@
 ---
+description: 轉換自訂屬性
 title: 轉換自訂屬性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -41,12 +42,12 @@ helpviewer_keywords:
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fb2e93d5266b28ad7be189cd14034aca49abc3a1
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 1219bf8b502d7e91194b3413910aa7ae16ec09c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472502"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425690"
 ---
 # <a name="transformation-custom-properties"></a>轉換自訂屬性
 
@@ -210,7 +211,7 @@ ms.locfileid: "87472502"
   
 |屬性|資料類型|描述|  
 |--------------|---------------|-----------------|  
-|FastParse|Boolean|一個值，指出資料行會使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 所提供之速度更快但不區分地區設定的快速剖析常式，還是區分地區設定的標準剖析常式。 此屬性的預設值為 **False**。 如需詳細資訊，請參閱 [快速剖析](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 和 [標準剖析](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)。 。<br /><br /> 注意:雖然您無法在 [資料轉換編輯器]  中使用這個屬性，但是可以使用 [進階編輯器]  來設定這個屬性。|  
+|FastParse|Boolean|一個值，指出資料行會使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 所提供之速度更快但不區分地區設定的快速剖析常式，還是區分地區設定的標準剖析常式。 此屬性的預設值為 **False**。 如需詳細資訊，請參閱 [快速剖析](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 和 [標準剖析](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)。 .<br /><br /> 注意:雖然您無法在 [資料轉換編輯器]  中使用這個屬性，但是可以使用 [進階編輯器]  來設定這個屬性。|  
 |SourceInputColumnLineageId|整數|屬於輸出資料行來源之輸入資料行的 **LineageID** 。|  
   
  資料轉換的輸入、輸入資料行和輸出沒有任何自訂屬性。  

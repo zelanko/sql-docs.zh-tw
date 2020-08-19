@@ -1,4 +1,5 @@
 ---
+description: 逐步解說︰發行 SSIS 封裝做為 SQL 檢視
 title: 逐步解說︰將 SSIS 套件發佈為 SQL 檢視 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 410fb5cc9ebfe04b62b6d196e7757f2455234014
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1df84869443257dbfc73d5ef3984f3e37a15b6c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920327"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425640"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>逐步解說︰發行 SSIS 封裝做為 SQL 檢視
 

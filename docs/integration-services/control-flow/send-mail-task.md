@@ -1,4 +1,5 @@
 ---
+description: 傳送郵件工作
 title: 傳送電子郵件工作 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 581cdcddc2138b2d5cd78790be412e0ad0a9fdda
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f6b057a4f2d3959d3f56074a1af603eaba2902a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920459"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425870"
 ---
 # <a name="send-mail-task"></a>傳送郵件工作
 

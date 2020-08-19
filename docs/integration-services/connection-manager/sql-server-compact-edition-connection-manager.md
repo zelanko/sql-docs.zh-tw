@@ -1,4 +1,5 @@
 ---
+description: SQL Server Compact Edition 連接管理員
 title: SQL Server Compact Edition 連線管理員 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: ba627d4d-41f4-49fc-a921-f534cde67770
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 777c360fd17082c06ff9aa4b0356ff3a95cbd332
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ae61fcfcec740ee26a7fc2a57c0e03b0141e6e10
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917204"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425940"
 ---
 # <a name="sql-server-compact-edition-connection-manager"></a>SQL Server Compact Edition 連接管理員
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 連線管理員可讓封裝連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料庫。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Compact 目的地使用此連線管理員將資料載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料庫中的資料表。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 連線管理員可讓封裝連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料庫。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 目的地使用此連線管理員將資料載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料庫中的資料表。  
   
 > [!NOTE]  
 >  在 64 位元電腦上，您必須以 32 位元模式執行連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料來源的封裝。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用來連接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Compact 資料來源的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 提供者只有提供 32 位元版本。  
@@ -54,7 +55,7 @@ ms.locfileid: "86917204"
  如需以程式設計方式設定連線管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以程式設計方式加入連接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
   
 ## <a name="sql-server-compact-edition-connection-manager-editor-connection-page"></a>SQL Server Compact Edition 連接管理員編輯器 (連接頁面)
-  使用 [SQL Server Compact Edition 連線管理員]  對話方塊，指定連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料庫的屬性。  
+  使用 [SQL Server Compact Edition 連線管理員]**** 對話方塊，指定連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料庫的屬性。  
   
  若要深入了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact Edition 連線管理員，請參閱 [SQL Server Compact Edition 連線管理員](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)。  
   
@@ -63,13 +64,13 @@ ms.locfileid: "86917204"
  輸入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料庫的路徑與檔名。  
   
  **瀏覽**  
- 使用 [選取 SQL Server Compact Edition 資料庫] 對話方塊，尋找所要的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料庫檔案。  
+ 使用 [選取 SQL Server Compact Edition 資料庫]**** 對話方塊，尋找所要的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料庫檔案。  
   
  **輸入資料庫密碼**  
  輸入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料庫的密碼。  
   
 ## <a name="sql-server-compact-edition-connection-manager-editor-all-page"></a>SQL Server Compact Edition 連接管理員編輯器 (全部頁面)
-  使用 [SQL Server Compact Edition 連線管理員]  對話方塊，指定連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料庫的屬性。  
+  使用 [SQL Server Compact Edition 連線管理員]**** 對話方塊，指定連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料庫的屬性。  
   
  若要深入了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact Edition 連線管理員，請參閱 [SQL Server Compact Edition 連線管理員](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)。  
   
@@ -95,8 +96,8 @@ ms.locfileid: "86917204"
  **資料庫大小上限**  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料庫的大小上限 (以 MB 為單位)。  
   
- **模式**  
- 指定用來開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料庫的檔案模式。 此屬性的預設值為 [讀取寫入]  。  
+ **Mode**  
+ 指定用來開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料庫的檔案模式。 此屬性的預設值為 [讀取寫入]****。  
   
  模式選項有四個值，如下表所述。  
   

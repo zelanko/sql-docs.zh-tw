@@ -1,4 +1,5 @@
 ---
+description: REVOKE 類型權限 (Transact-SQL)
 title: REVOKE 類型權限 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3969c7e9-ca10-4c67-971b-25d2dfccf650
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5a160a4ddbcf80f77f2631a67170c47afd9ab14e
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 3565cb96bc39b1f51cf5c1c64a25abf1766ad695
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484869"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426480"
 ---
 # <a name="revoke-type-permissions-transact-sql"></a>REVOKE 類型權限 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -74,7 +75,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!CAUTION]  
 >  獲得授與 WITH GRANT OPTION 之權限的串聯撤銷，會同時撤銷該權限的 GRANT 和 DENY。  
   
- AS \<database_principal> 指定主體，執行此查詢的主體會從這個主體衍生其權限來撤銷權限。  
+ AS \<database_principal> 指定主體，執行這項查詢的主體會從這個主體衍生權利來撤銷權限。  
   
  *Database_user*  
  指定資料庫使用者。  

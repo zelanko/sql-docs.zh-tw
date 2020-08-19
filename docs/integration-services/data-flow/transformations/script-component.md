@@ -1,4 +1,5 @@
 ---
+description: 指令碼元件
 title: 指令碼元件 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e26918f5b545068ad5e121452dc704f7d72abe35
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9fdad63c6b5d97d9b6b8193babc67ad8a57a32f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919505"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425740"
 ---
 # <a name="script-component"></a>指令碼元件
 

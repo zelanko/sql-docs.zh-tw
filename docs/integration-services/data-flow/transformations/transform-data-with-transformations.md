@@ -1,4 +1,5 @@
 ---
+description: 使用轉換來轉換資料
 title: 使用轉換來轉換資料 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 96e1d318429b81f45088b176c45f1ccfc822a3de
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2d9422574f80febefc6458b389f04b4b1625b22c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914247"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425650"
 ---
 # <a name="transform-data-with-transformations"></a>使用轉換來轉換資料
 

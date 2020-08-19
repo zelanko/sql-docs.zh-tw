@@ -1,4 +1,5 @@
 ---
+description: 資料流程效能的功能
 title: 資料流程效能功能 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ec9af02a6c7259741e75eae826bc9e15afe3aa80
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3a0803ef58ede892cec17937cb4c38895de6cf53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86906735"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425860"
 ---
 # <a name="data-flow-performance-features"></a>資料流程效能的功能
 

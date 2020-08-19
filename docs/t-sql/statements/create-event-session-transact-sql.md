@@ -1,4 +1,5 @@
 ---
+description: CREATE EVENT SESSION (Transact-SQL)
 title: CREATE EVENT SESSION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/10/2019
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 359f2bdba7722c5ff30490d2648f68bf4b2c3db5
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 0f36aa2ea714e1055a350cc921ab043a23131ff7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392726"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426770"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 

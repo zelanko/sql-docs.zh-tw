@@ -1,4 +1,5 @@
 ---
+description: CREATE DEFAULT (Transact-SQL)
 title: CREATE DEFAULT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/25/2015
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 361963d6836cb4c4b89c62f8ca1481b292bc803e
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 8d1001196c5b4e88c105f0fa7e0355e97e3ee884
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392756"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426780"
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +57,7 @@ AS constant_expression [ ; ]
  預設值的名稱。 預設名稱必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。 您可以選擇性地指定預設擁有者名稱。  
   
 *constant_expression*  
-只包含常數值的[運算式](../../t-sql/language-elements/expressions-transact-sql.md) (其中不能有任何資料行或其他資料庫物件的名稱)。 您可以使用任何常數、內建函式或數學運算式，但包含別名資料類型的項目除外。 使用者自訂函式則不能使用。 請用單引號 ( **'** ) 括住字元和日期常數；貨幣、整數和浮點數常數不需要引號。 二進位資料的前面必須是 0x，貨幣資料的前面必須是錢幣符號 ($)。 預設值必須相容於資料行資料類型。  
+只包含常數值的[運算式](../../t-sql/language-elements/expressions-transact-sql.md) (其中不能有任何資料行或其他資料庫物件的名稱)。 您可以使用任何常數、內建函式或數學運算式，但包含別名資料類型的項目除外。 使用者自訂函式則不能使用。 請用單引號 (**'**) 括住字元和日期常數；貨幣、整數和浮點數常數不需要引號。 二進位資料的前面必須是 0x，貨幣資料的前面必須是錢幣符號 ($)。 預設值必須相容於資料行資料類型。  
   
 ## <a name="remarks"></a>備註  
  您只能在目前資料庫中建立預設名稱。 在資料庫內，必須藉由結構描述，使預設名稱成為唯一。 當您建立預設值時，請使用 **sp_bindefault**，將它繫結到資料行或別名資料類型。  
@@ -81,8 +82,8 @@ AS constant_expression [ ; ]
   
 |資料行定義|無項目，無預設值|無項目，有預設值|輸入 NULL，無預設值|輸入 NULL，有預設值|  
 |-----------------------|--------------------------|-----------------------|----------------------------|-------------------------|  
-|**NULL**|NULL|預設|NULL|NULL|  
-|**NOT NULL**|錯誤|預設|error|error|  
+|**NULL**|NULL|default|NULL|NULL|  
+|**NOT NULL**|錯誤|default|error|error|  
   
  若要重新命名預設值，請使用 **sp_rename**。 如需預設值的報表，請使用 **sp_help**。  
   

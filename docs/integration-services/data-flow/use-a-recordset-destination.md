@@ -1,4 +1,5 @@
 ---
+description: 使用資料錄集目的地
 title: 使用資料錄集目的地 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 605cdbdc7b813fbbecb819bd31bde42f8f5afdc7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4d823048d128d8837c80c724064ea0d8afe1a5a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916642"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425600"
 ---
 # <a name="use-a-recordset-destination"></a>使用資料錄集目的地
 
@@ -26,7 +27,7 @@ ms.locfileid: "86916642"
 
   資料錄集目的地不會將資料儲存到外部資料來源， 而是將資料儲存到資料類型為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Object **之** 封裝變數內儲存的資料錄集記憶體中。 當資料錄集目的地儲存資料之後，您通常要使用具有 Foreach ADO 列舉值的 Foreach 迴圈容器來一次處理資料錄集的一個資料列。 Foreach ADO 列舉值會將目前資料列的每一資料行值儲存到個別封裝變數之中。 接著，您在 Foreach 迴圈容器中設定的工作會讀取這些變數中的值，然後對它們執行一些動作。  
   
- 您可以在多種不同情況下使用資料錄集目的地。 以下是一些範例：  
+ 您可以在多種不同情況下使用資料錄集目的地。 這裡有一些範例：  
   
 -   您可以使用傳送郵件工作和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 運算式語言，為資料錄集的每個資料列傳送自訂的電子郵件訊息。  
   
@@ -51,11 +52,11 @@ ms.locfileid: "86916642"
   
 6.  將資料錄集目的地加入資料流程中，然後將它連接到轉換。 為資料錄集目的地的 **VariableName** 屬性，輸入您為了保存資料錄集所建立的變數名稱。  
   
-7.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [控制流程] 索引標籤上，加入 Foreach 迴圈容器並將此容器連接在資料流程工作之後。 然後，開啟 Foreach 迴圈編輯器  並依照下列設定來設定容器：  
+7.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [控制流程] 索引標籤上，加入 Foreach 迴圈容器並將此容器連接在資料流程工作之後。 然後，開啟 Foreach 迴圈編輯器**** 並依照下列設定來設定容器：  
   
-    1.  在 [集合]  頁面上，選取 [Foreach ADO 列舉值]。 然後，為 [ADO 物件來源變數]  選取包含資料錄集的變數。  
+    1.  在 [集合]**** 頁面上，選取 [Foreach ADO 列舉值]。 然後，為 [ADO 物件來源變數]**** 選取包含資料錄集的變數。  
   
-    2.  在 [變數對應]  頁面上，將您要使用的每一個資料行以零為基底之索引對應到適當的變數。  
+    2.  在 [變數對應]**** 頁面上，將您要使用的每一個資料行以零為基底之索引對應到適當的變數。  
   
          在迴圈的每個反覆運算中，列舉值會使用目前資料列中的資料行值來擴展這些變數。  
   
@@ -68,9 +69,9 @@ ms.locfileid: "86916642"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，建立新的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
-2.  在 [SSIS]  功能表上，選取 [變數]  。  
+2.  在 [SSIS]**** 功能表上，選取 [變數]****。  
   
-3.  在 [變數]  視窗中建立變數，用以保存資料錄集和目前資料列的資料行值：  
+3.  在 [變數]**** 視窗中建立變數，用以保存資料錄集和目前資料列的資料行值：  
   
     1.  建立名稱為 **BonusRecordset**的變數，並將其類型設為 **Object**。  
   
@@ -100,17 +101,17 @@ ms.locfileid: "86916642"
   
 #### <a name="to-configure-the-data-flow-and-the-recordset-destination"></a>設定資料流程和資料錄集目的地  
   
-1.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [控制流程] 索引標籤上，將資料流程工作加入設計介面。  
+1.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [控制流程]**** 索引標籤上，將資料流程工作加入設計介面。  
   
-2.  在 [資料流程]  索引標籤上，將 OLE DB 來源加入至資料流程工作，然後開啟 OLE DB 來源編輯器  。  
+2.  在 [資料流程]**** 索引標籤上，將 OLE DB 來源加入至資料流程工作，然後開啟 OLE DB 來源編輯器****。  
   
-3.  在編輯器的 [連線管理員]  頁面上，依照下列設定來設定來源：  
+3.  在編輯器的 [連線管理員]**** 頁面上，依照下列設定來設定來源：  
   
-    1.  針對 [OLE DB 連線管理員]  ，選取您先前建立的 OLE DB 連線管理員。  
+    1.  針對 [OLE DB 連線管理員]****，選取您先前建立的 OLE DB 連線管理員。  
   
-    2.  針對 [資料存取模式]  ，選取 [SQL 命令]  。  
+    2.  針對 [資料存取模式]****，選取 [SQL 命令]****。  
   
-    3.  針對 [SQL 命令文字]  ，輸入下列查詢：  
+    3.  針對 [SQL 命令文字]****，輸入下列查詢：  
   
         ```sql 
         SELECT     Person.Contact.EmailAddress, Person.Contact.FirstName, CONVERT(float, Sales.SalesPerson.Bonus) AS Bonus  
@@ -121,53 +122,53 @@ ms.locfileid: "86916642"
         > [!NOTE]  
         >  您必須將 Bonus 資料行中的 **currency** 值轉換為 **float** ，然後才能將此值載入 **Double**類型的封裝變數中。  
   
-4.  在 [資料流程]  索引標籤上，加入資料錄集目的地，然後將目的地連接到 OLE DB 來源之後。  
+4.  在 [資料流程]**** 索引標籤上，加入資料錄集目的地，然後將目的地連接到 OLE DB 來源之後。  
   
-5.  開啟資料錄集目的地編輯器  ，並依照下列設定來設定目的地：  
+5.  開啟資料錄集目的地編輯器****，並依照下列設定來設定目的地：  
   
-    1.  在 [元件屬性]  索引標籤上，為 [VariableName]  屬性選取 [User::BonusRecordset]  。  
+    1.  在 [元件屬性]**** 索引標籤上，為 [VariableName]**** 屬性選取 [User::BonusRecordset]****。  
   
-    2.  在 [輸入資料行]  索引標籤上，選取可用的全部三個資料行。  
+    2.  在 [輸入資料行]**** 索引標籤上，選取可用的全部三個資料行。  
   
 #### <a name="to-configure-the-foreach-loop-container-and-run-the-package"></a>設定 Foreach 迴圈容器並執行封裝  
   
-1.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [控制流程] 索引標籤上，加入 Foreach 迴圈容器，並將此容器連接在資料流程工作之後。  
+1.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [控制流程]**** 索引標籤上，加入 Foreach 迴圈容器，並將此容器連接在資料流程工作之後。  
   
-2.  開啟 Foreach 迴圈編輯器  ，依照下列設定來設定容器：  
+2.  開啟 Foreach 迴圈編輯器****，依照下列設定來設定容器：  
   
-    1.  在 [集合]  頁面上，為 [列舉值]  選取 [Foreach ADO 列舉值]  ，然後為 [ADO 物件來源變數]  選取 [User::BonusRecordset]  。  
+    1.  在 [集合]**** 頁面上，為 [列舉值]**** 選取 [Foreach ADO 列舉值]****，然後為 [ADO 物件來源變數]**** 選取 [User::BonusRecordset]****。  
   
-    2.  在 [變數對應]  頁面上，將 [User::EmailAddress]  對應到索引 0、將 [User::FirstName]  對應到索引 1，然後將 [User::Bonus]  對應到索引 2。  
+    2.  在 [變數對應]**** 頁面上，將 [User::EmailAddress]**** 對應到索引 0、將 [User::FirstName]**** 對應到索引 1，然後將 [User::Bonus]**** 對應到索引 2。  
   
-3.  在 [控制流程]  索引標籤上的 Foreach 迴圈容器中，加入傳送郵件工作。  
+3.  在 [控制流程]**** 索引標籤上的 Foreach 迴圈容器中，加入傳送郵件工作。  
   
-4.  開啟傳送郵件工作編輯器  ，然後在 [郵件]  頁面上，依照下列設定來設定工作：  
+4.  開啟傳送郵件工作編輯器****，然後在 [郵件]**** 頁面上，依照下列設定來設定工作：  
   
-    1.  針對 [SmtpConnection]  ，選取先前設定的 SMTP 連線管理員。  
+    1.  針對 [SmtpConnection]****，選取先前設定的 SMTP 連線管理員。  
   
-    2.  針對 [From]  ，輸入適當的電子郵件地址。  
+    2.  針對 [From]****，輸入適當的電子郵件地址。  
   
          如果使用您自己的電子郵件地址，可以確認封裝是否成功執行。 針對由傳送郵件工作傳送到 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]虛構銷售人員的郵件，您將會收到無法傳遞的收件者訊息。  
   
-    3.  針對 [To]  ，輸入預設的電子郵件地址。  
+    3.  針對 [To]****，輸入預設的電子郵件地址。  
   
          雖然不會使用這個值，但是這個值會在執行階段由各銷售人員的電子郵件地址所取代。  
   
-    4.  針對 [Subject]  ，輸入「您的年度獎金」。  
+    4.  針對 [Subject]****，輸入「您的年度獎金」。  
   
-    5.  針對 [MessageSourceType]  ，選取 [直接輸入]  。  
+    5.  針對 [MessageSourceType]****，選取 [直接輸入]****。  
   
-5.  在傳送郵件工作編輯器  的 [運算式]  頁面上，按一下省略符號按鈕 ( **...** ) 以開啟屬性運算式編輯器  。  
+5.  在傳送郵件工作編輯器**** 的 [運算式]**** 頁面上，按一下省略符號按鈕 (**...**) 以開啟屬性運算式編輯器****。  
   
-6.  在屬性運算式編輯器  中，輸入下列資訊：  
+6.  在屬性運算式編輯器**** 中，輸入下列資訊：  
   
-    1.  針對 [ToLine]  ，加入下列運算式：  
+    1.  針對 [ToLine]****，加入下列運算式：  
   
         ```  
         @[User::EmailAddress]  
         ```  
   
-    2.  針對 [MessageSource]  屬性，加入下列運算式：  
+    2.  針對 [MessageSource]**** 屬性，加入下列運算式：  
   
         ```  
         "Dear " +  @[User::FirstName] + ": The amount of your bonus for this year is $" +  (DT_WSTR, 12) @[User::Bonus] + ". Thank you!"  

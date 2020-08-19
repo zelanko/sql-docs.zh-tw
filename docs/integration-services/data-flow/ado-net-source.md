@@ -1,4 +1,5 @@
 ---
+description: ADO NET 來源
 title: ADO NET 來源 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: acbf13282531e22c37acd247a42f4f346fa6b393
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 94a94ba7bcd71510f82769ebb1517caef7e5a0fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922800"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425850"
 ---
 # <a name="ado-net-source"></a>ADO NET 來源
 

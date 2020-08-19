@@ -1,4 +1,5 @@
 ---
+description: 加入檔案連接管理員對話方塊 UI 參考
 title: 新增檔案連線管理員對話方塊 UI 參考 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 226dd6c94787af8c32d17cd7bf923a860645c5ac
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8096ccaf1fc92710e46970744a7a4f7cbe000700
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921706"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426030"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>加入檔案連接管理員對話方塊 UI 參考
 
@@ -48,13 +49,13 @@ ms.locfileid: "86921706"
  檢視已經使用如下所述的按鈕加入的檔案或資料夾。  
   
  **加入**  
- 使用 [選取檔案]  對話方塊來加入檔案，或使用 [瀏覽資料夾]  對話方塊來加入資料夾。  
+ 使用 [選取檔案]**** 對話方塊來加入檔案，或使用 [瀏覽資料夾]**** 對話方塊來加入資料夾。  
   
  **編輯**  
- 選取檔案或資料夾，然後使用 [選取檔案]  或 [瀏覽資料夾]  對話方塊以不同的檔案或資料夾來取代。  
+ 選取檔案或資料夾，然後使用 [選取檔案]**** 或 [瀏覽資料夾]**** 對話方塊以不同的檔案或資料夾來取代。  
   
  **移除**  
- 選取檔案或資料夾，然後使用 [移除]  按鈕將它從清單中移除。  
+ 選取檔案或資料夾，然後使用 [移除]**** 按鈕將它從清單中移除。  
   
  **箭頭按鈕**  
  選取檔案或資料夾，然後使用箭頭按鈕上移或下移來指定存取順序。  

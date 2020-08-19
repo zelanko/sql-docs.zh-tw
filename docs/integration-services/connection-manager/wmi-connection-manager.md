@@ -1,4 +1,5 @@
 ---
+description: WMI 連接管理員
 title: WMI 連線管理員 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fbfa4ba7-3d0d-4d6b-94ad-50741a88d03d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0efcca67f53415d34cd8522fa4a59a4ddd2dab79
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0bb36af50d48fb0155c85a1662b4dd4780f3f03d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918235"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425950"
 ---
 # <a name="wmi-connection-manager"></a>WMI 連接管理員
 
@@ -48,7 +49,7 @@ ms.locfileid: "86918235"
  如需以程式設計方式設定連線管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以程式設計方式加入連接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
   
 ## <a name="wmi-connection-manager-editor"></a>WMI 連接管理員編輯器
-  使用 [WMI 連線管理員]  對話方塊，以指定 Microsoft Windows Management Instrumentation (WMI) 與伺服器的連線。  
+  使用 [WMI 連線管理員]**** 對話方塊，以指定 Microsoft Windows Management Instrumentation (WMI) 與伺服器的連線。  
   
  若要深入了解 WMI 連接管理員，請參閱＜ [WMI Connection Manager](../../integration-services/connection-manager/wmi-connection-manager.md)＞。  
   
@@ -74,7 +75,7 @@ ms.locfileid: "86918235"
  **密碼**  
  如果您並未使用 Windows 驗證，則必須提供連接的密碼。  
   
- **Test**  
+ **測試**  
  測試連接管理員設定。  
   
 ## <a name="see-also"></a>另請參閱  

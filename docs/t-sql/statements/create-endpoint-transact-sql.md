@@ -1,4 +1,5 @@
 ---
+description: CREATE ENDPOINT (Transact-SQL)
 title: CREATE ENDPOINT (Transact-SQL)
 ms.custom: ''
 ms.date: 08/10/2017
@@ -31,12 +32,12 @@ helpviewer_keywords:
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c095857b42255551d8686d3809b5e13e4b1d7889
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 8851fcf2339196c3d35220341bc5f737a128aaff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392736"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426800"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 
