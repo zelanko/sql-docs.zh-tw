@@ -1,4 +1,5 @@
 ---
+description: uniqueidentifier (Transact-SQL)
 title: uniqueidentifier (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/01/2017
@@ -20,12 +21,12 @@ ms.assetid: b026035b-f3d2-4d70-989d-3884b4ca0233
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f7233d92e3b6a568d64f0b23817838d65dcbc74
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: bf9ac8c8f907da233cc1168df7d4e81cb42c6c53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396273"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88368234"
 ---
 # <a name="uniqueidentifier-transact-sql"></a>uniqueidentifier (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

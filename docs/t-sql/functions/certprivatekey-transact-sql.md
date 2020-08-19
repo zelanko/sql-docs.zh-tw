@@ -1,4 +1,5 @@
 ---
+description: CERTPRIVATEKEY (Transact-SQL)
 title: CERTPRIVATEKEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 33e0f01e-39ac-46da-94ff-fe53b1116df4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4fd9302ae396ffd8c09dcd998e0827032b98d36b
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 8dc94ac93a79ceabef40b9972293c086bfdc3eac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111654"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88367244"
 ---
 # <a name="certprivatekey-transact-sql"></a>CERTPRIVATEKEY (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -81,9 +82,9 @@ GO
 SELECT CERTPRIVATEKEY(CERT_ID('Shipping04'), 'jklalkaa/; uia3dd');  
 ```  
   
-如需使用 [CERTPRIVATEKEY](../../t-sql/functions/certencoded-transact-sql.md) 和 **CERTENCODED** 將憑證複製至其他資料庫的更複雜範例，請參閱 **CERTENCODED &#40;Transact-SQL&#41;** 範例 B。
+如需使用 **CERTPRIVATEKEY** 和 **CERTENCODED** 將憑證複製至其他資料庫的更複雜範例，請參閱 [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) 範例 B。
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 [安全性函數 &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
 [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)
 [安全性函式 &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)

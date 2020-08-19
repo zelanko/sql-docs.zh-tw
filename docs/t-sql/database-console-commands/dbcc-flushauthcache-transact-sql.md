@@ -1,4 +1,5 @@
 ---
+description: DBCC FLUSHAUTHCACHE (Transact-SQL)
 title: DBCC FLUSHAUTHCACHE (Transact-SQL)
 ms.custom: ''
 ms.date: 07/16/2017
@@ -18,12 +19,12 @@ ms.assetid: 681ef31d-ceb9-4da5-86bf-bf1240df950f
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e0a4ee56dcb1edbeba870aac79d9d64d569b6e7c
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 78b584379113b32389f38bf0e6dd3f821758c95d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484292"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88367894"
 ---
 # <a name="dbcc-flushauthcache-transact-sql"></a>DBCC FLUSHAUTHCACHE (Transact-SQL)
 

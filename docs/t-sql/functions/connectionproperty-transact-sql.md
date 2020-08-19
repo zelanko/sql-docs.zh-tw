@@ -1,4 +1,5 @@
 ---
+description: CONNECTIONPROPERTY (Transact-SQL)
 title: CONNECTIONPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6bd9ccae-af77-4a05-b97f-f8ab41cfde42
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec888090ae3cd6b4a14487681c98f0a34795beae
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 8d630d5c0cf4b51776bbfc6c6936267f11304557
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113577"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88367034"
 ---
 # <a name="connectionproperty-transact-sql"></a>CONNECTIONPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
