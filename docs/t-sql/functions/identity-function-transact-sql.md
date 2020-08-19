@@ -1,4 +1,5 @@
 ---
+description: IDENTITY (函數) (Transact-SQL)
 title: IDENTITY (Function) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: ebec77eb-fc02-4feb-b6c5-f0098d43ccb6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: daf9effbc4c130b4783500014554c4512b6581d1
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 6f8cd22140dd78ace01d685498306885b0081f21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113453"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88365234"
 ---
 # <a name="identity-function-transact-sql"></a>IDENTITY (函數) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -80,7 +81,7 @@ FROM OldTable;
 ```  
   
 ## <a name="examples"></a>範例  
- 下列範例會將 `Contact` 資料庫之 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表中所有的資料列，插入稱為 `NewContact` 的新資料表中。 這個 IDENTITY 函數在 `NewContact` 資料表中，使識別碼從 100 開始，而不是從 1 開始。  
+ 下列範例會將 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫之 `Contact` 資料表中所有的資料列，插入稱為 `NewContact` 的新資料表中。 這個 IDENTITY 函數在 `NewContact` 資料表中，使識別碼從 100 開始，而不是從 1 開始。  
   
 ```  
 USE AdventureWorks2012;  
