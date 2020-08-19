@@ -1,5 +1,6 @@
 ---
-title: 'ConnectionEvents （Visual C++ #import 的語法索引） |Microsoft Docs'
+description: '使用 #import) ConnectionEvents (Visual C++ 語法索引'
+title: '使用 #import) ConnectionEvents (Visual C++ 語法索引 |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: dd052d36-7730-4400-822b-0544fb1992b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7494af68f8989110023c44f750de2c520f3345c6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2e54d25090206aca862fa7e96496e995e9379b7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760274"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444470"
 ---
-# <a name="connectionevents-visual-c-syntax-index-with-import"></a>ConnectionEvents （使用 #import Visual C++ 語法索引）
+# <a name="connectionevents-visual-c-syntax-index-with-import"></a>使用 #import) ConnectionEvents (Visual C++ 語法索引
 ## <a name="events"></a>事件  
   
 ```  

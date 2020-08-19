@@ -1,4 +1,5 @@
 ---
+description: hierarchyid 資料類型方法參考
 title: hierarchyid (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: dbbc15d64e2bc6ae3ad20689303e42712ffa17fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 367f467a7b4a4d497897adf1c56f8053600d0a51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738221"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459962"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>hierarchyid 資料類型方法參考
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,9 +56,9 @@ ms.locfileid: "85738221"
   
 -   /0.1/0.2/  
   
-您可以在任何位置插入節點。 在 **/1/2/** 之後而在 **/1/3/** 之前插入的節點可以表示成 **/1/2.5/** 。 在 0 之前插入的節點具有負數的邏輯表示。 例如，在 **/1/1/** 之前的節點可以表示成 **/1/-1/** 。 節點不能有前置零。 例如， **/1/1.1/** 有效，但是 **/1/1.01/** 則無效。 若要避免發生錯誤，請使用 [GetDescendant](../../t-sql/data-types/getdescendant-database-engine.md) 方法來插入節點。
+您可以在任何位置插入節點。 在 **/1/2/** 之後而在 **/1/3/** 之前插入的節點可以表示成 **/1/2.5/**。 在 0 之前插入的節點具有負數的邏輯表示。 例如，在 **/1/1/** 之前的節點可以表示成 **/1/-1/**。 節點不能有前置零。 例如，**/1/1.1/** 有效，但是 **/1/1.01/** 則無效。 若要避免發生錯誤，請使用 [GetDescendant](../../t-sql/data-types/getdescendant-database-engine.md) 方法來插入節點。
   
-## <a name="data-type-conversion"></a>資料類型轉換
+## <a name="data-type-conversion"></a>資料型別轉換
 **hierarchyid** 資料類型可以轉換成其他資料類型，如下所示：
 -   使用 [ToString()](../../t-sql/data-types/tostring-database-engine.md) 方法來將 **hierarchyid** 值以 **nvarchar(4000)** 資料類型轉換成邏輯表示法。  
 -   使用 [Read()](../../t-sql/data-types/read-database-engine.md) 及 [Write()](../../t-sql/data-types/write-database-engine.md) 來將 **hierarchyid** 轉換成 **varbinary**。  

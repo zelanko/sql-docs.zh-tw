@@ -1,4 +1,5 @@
 ---
+description: Microsoft Connector for SAP BW F1 說明
 title: Microsoft Connector for SAP BW F1 說明 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aee724d88bfc203472c09d80e3e3ceec9bafa7f3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f52bd1f1c56a8f9dc84b1474bf4447c6311cb508
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924006"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430160"
 ---
 # <a name="microsoft-connector-for-sap-bw-f1-help"></a>Microsoft Connector for SAP BW F1 說明
 
@@ -36,7 +37,7 @@ ms.locfileid: "86924006"
   
 ### <a name="sap-bw-connection-manager-f1-help"></a>SAP BW 連接管理員 F1 說明  
   
--   [SAP BW 連線管理員編輯器](../integration-services/connection-manager/sap-bw-connection-manager-editor.md)  
+-   [SAP BW 連接管理員編輯器](../integration-services/connection-manager/sap-bw-connection-manager-editor.md)  
   
 ### <a name="sap-bw-source-f1-help"></a>SAP BW 來源 F1 說明  
   
@@ -66,19 +67,19 @@ ms.locfileid: "86924006"
   
 -   [SAP BW 目的地編輯器 &#40;進階頁面&#41;](../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
   
--   [ InfoPackage](../integration-services/data-flow/look-up-infopackage.md)  
+-   [查閱 InfoPackage](../integration-services/data-flow/look-up-infopackage.md)  
   
 -   [建立新的 InfoObject](../integration-services/data-flow/create-new-infoobject.md)  
   
 -   [建立交易資料的 InfoCube](../integration-services/data-flow/create-infocube-for-transaction-data.md)  
   
--   [查詢 InfoObject](../integration-services/data-flow/look-up-infoobject.md)  
+-   [查閱 InfoObject](../integration-services/data-flow/look-up-infoobject.md)  
   
 -   [建立 InfoSource](../integration-services/data-flow/create-infosource.md)  
   
 -   [建立交易資料的 InfoSource](../integration-services/data-flow/create-infosource-for-transaction-data.md)  
   
--   [建立主要資料的 InfoSource](../integration-services/data-flow/create-infosource-for-master-data.md)  
+-   [[建立主要資料的 InfoSource]](../integration-services/data-flow/create-infosource-for-master-data.md)  
   
 -   [建立 InfoPackage](../integration-services/data-flow/create-infopackage.md)  
   

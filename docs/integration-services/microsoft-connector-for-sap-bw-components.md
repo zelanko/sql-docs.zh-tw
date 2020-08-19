@@ -1,4 +1,5 @@
 ---
+description: Microsoft Connector for SAP BW 元件
 title: Microsoft Connector for SAP BW 元件 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bdf81735-dba7-45ef-8794-0eb67c01475a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 11775da254ac04203fa2b1f7ff44b012f0704ec6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ff14d08bebd8de8c2ea6b2475f70229db8bd4074
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921207"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430170"
 ---
 # <a name="microsoft-connector-for-sap-bw-components"></a>Microsoft Connector for SAP BW 元件
 
@@ -37,7 +38,7 @@ ms.locfileid: "86921207"
 >  Microsoft Connector 1.1 for SAP BW 的文件集是假設使用者已熟悉 SAP Netweaver BW 環境。 如需有關 SAP Netweaver BW 的詳細資訊，或有關如何設定 SAP Netweaver BW 物件與處理序的詳細資訊，請參閱 SAP 文件集。  
   
 ## <a name="in-this-section"></a>本節內容  
- [SAP BW 連線管理員](../integration-services/connection-manager/sap-bw-connection-manager.md)  
+ [SAP BW 連接管理員](../integration-services/connection-manager/sap-bw-connection-manager.md)  
  描述 SAP BW 連接管理員。 此連接管理員會將 SAP BW 來源或 SAP BW 目的地連接至 SAP Netweaver BW 版本 7 系統。  
   
  [SAP BW 來源](../integration-services/data-flow/sap-bw-source.md)  

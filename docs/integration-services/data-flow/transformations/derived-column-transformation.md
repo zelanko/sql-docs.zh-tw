@@ -1,4 +1,5 @@
 ---
+description: 衍生的資料行轉換
 title: 衍生資料行轉換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 82ef2a3959f1f3ae0d18aca2e8049f5a30f4a91f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 93548684fb17ce59e5cee78e2a7a268dfce903ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919381"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430690"
 ---
 # <a name="derived-column-transformation"></a>衍生的資料行轉換
 
@@ -78,7 +79,7 @@ ms.locfileid: "86919381"
 -   [使用衍生的資料行轉換來衍生資料行值](../../../integration-services/data-flow/transformations/derive-column-values-by-using-the-derived-column-transformation.md)  
   
 ## <a name="derived-column-transformation-editor"></a>衍生的資料行轉換編輯器
-  使用 [衍生的資料行轉換編輯器]  對話方塊，即可建立會擴展新的資料行或取代資料行的運算式。  
+  使用 [衍生的資料行轉換編輯器]**** 對話方塊，即可建立會擴展新的資料行或取代資料行的運算式。  
   
 ### <a name="options"></a>選項。  
  **變數和資料行**  
@@ -101,19 +102,19 @@ ms.locfileid: "86919381"
  **相關主題**︰[Integration Services &#40;SSIS&#41; 運算式](../../../integration-services/expressions/integration-services-ssis-expressions.md)、[運算子 &#40;SSIS 運算式&#41;](../../../integration-services/expressions/operators-ssis-expression.md)和[函數 &#40;SSIS 運算式&#41;](../../../integration-services/expressions/functions-ssis-expression.md)  
   
  **資料類型**  
- 如果將資料加入新的資料行，[衍生的資料行轉換編輯器]  對話方塊就會自動評估運算式，並且適當設定資料類型。 這個資料行的值是唯讀的。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../../integration-services/data-flow/integration-services-data-types.md)。  
+ 如果將資料加入新的資料行，[衍生的資料行轉換編輯器]**** 對話方塊就會自動評估運算式，並且適當設定資料類型。 這個資料行的值是唯讀的。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../../integration-services/data-flow/integration-services-data-types.md)。  
   
  **長度**  
- 如果將資料加入新的資料行，[衍生的資料行轉換編輯器]  對話方塊就會自動評估運算式，並且設定字串資料的資料行長度。 這個資料行的值是唯讀的。  
+ 如果將資料加入新的資料行，[衍生的資料行轉換編輯器]**** 對話方塊就會自動評估運算式，並且設定字串資料的資料行長度。 這個資料行的值是唯讀的。  
   
  **有效位數**  
- 如果將資料加入新的資料行，[衍生的資料行轉換編輯器]  對話方塊就會自動根據資料類型來設定數值資料的有效位數。 這個資料行的值是唯讀的。  
+ 如果將資料加入新的資料行，[衍生的資料行轉換編輯器]**** 對話方塊就會自動根據資料類型來設定數值資料的有效位數。 這個資料行的值是唯讀的。  
   
- **調整**  
- 如果將資料加入新的資料行，[衍生的資料行轉換編輯器]  對話方塊就會自動根據資料類型來設定數值資料的小數位數。 這個資料行的值是唯讀的。  
+ **縮放比例**  
+ 如果將資料加入新的資料行，[衍生的資料行轉換編輯器]**** 對話方塊就會自動根據資料類型來設定數值資料的小數位數。 這個資料行的值是唯讀的。  
   
  **字碼頁**  
- 如果將資料加入新的資料行，[衍生的資料行轉換編輯器]  對話方塊就會自動設定 DT_STR 資料類型的字碼頁。 您可以更新 [字碼頁]  。  
+ 如果將資料加入新的資料行，[衍生的資料行轉換編輯器]**** 對話方塊就會自動設定 DT_STR 資料類型的字碼頁。 您可以更新 [字碼頁]****。  
   
  **設定錯誤輸出**  
  使用 [ [設定錯誤輸出](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ] 對話方塊來指定如何處理錯誤。  

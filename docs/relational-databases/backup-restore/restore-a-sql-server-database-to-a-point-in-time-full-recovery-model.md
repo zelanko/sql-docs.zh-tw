@@ -1,4 +1,5 @@
 ---
+description: 將 SQL Server 資料庫還原至某個時間點 (完整復原模式)
 title: 將 SQL Server 資料庫還原至某個時間點 (完整復原模式) | Microsoft 文件
 decription: Learn how to restore a database to a point in time in SQL Server using SQL Server Management Studio or Transact-SQL in the full or bulk-logged recovery models.
 ms.custom: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f03b1f490e46fac62c42dea09e78e7fdf9c28acf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 984e57d309dbed6a2aeb29dcaa260ae8f07896c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717972"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429100"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>將 SQL Server 資料庫還原至某個時間點 (完整復原模式)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -81,7 +82,7 @@ ms.locfileid: "85717972"
   
          將您要的裝置加入 **[備份媒體]** 清單方塊後，按一下 **[確定]** 即可回到 **[一般]** 頁面。  
   
-         在 **[來源: 裝置: 資料庫]** 清單方塊中，選取應該還原的資料庫名稱。  
+         在 **[來源：裝置：資料庫]** 清單方塊中，選取應該還原的資料庫名稱。  
   
          **注意** ：這份清單只能在選取 **[裝置]** 時使用。 只有在所選取裝置上有備份的資料庫才可供使用。  
   
@@ -89,12 +90,12 @@ ms.locfileid: "85717972"
   
 6.  按一下 **[時間表]** ，存取 **[備份時間表]** 對話方塊。  
   
-7.  在 **[還原至]** 區段中，按一下 **[特定的日期與時間]** 。  
+7.  在 **[還原至]** 區段中，按一下 **[特定的日期與時間]**。  
   
 8.  使用 **[日期]** 及 **[時間]** 方塊或滑動軸，指定應該停止還原的特定日期與時間。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
     > [!NOTE]  
-    >  您可以使用 [時間表間隔]  方塊變更時間表上顯示的時間量。  
+    >   您可以使用 **[時間表間隔]** 方塊變更時間表上顯示的時間量。  
   
 9. 當您指定了特定的時間點之後，Database Recovery Advisor 便會在 **[要還原的備份組]** 方格的 **[還原]** 資料行中確定只選取要還原到該時間點所需的備份。 這些選取的備份為您的時間點還原構成了建議的還原計畫。 您應該只使用選取的備份來進行時間點還原作業。  
   
@@ -120,7 +121,7 @@ ms.locfileid: "85717972"
   
      如需這些選項的描述，請參閱[還原資料庫 &#40;選項頁面&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)。  
   
-12. 如果選取的時間點需要 [還原前先進行結尾記錄備份]  ，則會予以選取。 您不需要修改這個設定，但是即使不需要，還是可以選擇備份記錄結尾。  
+12. 如果選取的時間點需要 [還原前先進行結尾記錄備份]****，則會予以選取。 您不需要修改這個設定，但是即使不需要，還是可以選擇備份記錄結尾。  
   
 13. 若資料庫有使用中的連接，還原作業可能會失敗。 核取 **[關閉現有的連接選項]** ，確定已關閉 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 與資料庫之間的所有使用中連接。 這個核取方塊會在執行還原作業之前將資料庫設定為單一使用者模式，並在完成後將資料庫設定為多使用者模式。  
   
@@ -155,7 +156,7 @@ ms.locfileid: "85717972"
   
 3.  還原上一次的差異資料庫備份 (如有)，但不復原資料庫 (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY)。  
   
-4.  依建立的相同順序，套用每個交易記錄備份，並指定想要停止還原記錄的時間 (RESTORE DATABASE *database_name* FROM <backup_device> WITH STOPAT **=** _time_ **,** RECOVERY)。  
+4.  依建立的相同順序，套用每個交易記錄備份，並指定想要停止還原記錄的時間 (RESTORE DATABASE *database_name* FROM <backup_device> WITH STOPAT**=**_time_**,** RECOVERY)。  
   
     > [!NOTE]  
     >  RECOVERY 及 STOPAT 選項。 如果交易記錄備份中不含所要求的時間 (例如指定的時間超出交易記錄的結束時間)，則會產生警告訊息，且此資料庫會維持未復原狀態。  

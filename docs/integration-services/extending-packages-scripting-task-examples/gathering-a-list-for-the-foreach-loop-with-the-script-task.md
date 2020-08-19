@@ -1,4 +1,5 @@
 ---
+description: 以指令碼工作蒐集 ForEach 迴圈的清單
 title: 以指令碼工作蒐集 ForEach 迴圈的清單 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9a1ac7a00a9f181f511b214a28ed020827575db1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: aabae9ce08729c5dab6a0ea57c5e75900c9aaff8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923804"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430400"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>以指令碼工作蒐集 ForEach 迴圈的清單
 

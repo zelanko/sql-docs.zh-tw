@@ -1,4 +1,5 @@
 ---
+description: DBCC CHECKFILEGROUP (Transact-SQL)
 title: DBCC CHECKFILEGROUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: b194f23779914961899cdf8b07c82a4d0986aa79
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 15b156950ff752e96dc332c4071dbc748013aa3f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485279"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459890"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -94,7 +95,7 @@ DBCC CHECKFILEGROUP
 >  指定 PHYSICAL_ONLY 會造成 DBCC CHECKFILEGROUP 略過 FILESTREAM 資料的所有檢查。  
   
  MAXDOP  
- **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)。  
+ **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 到[目前的版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)。  
   
  覆寫陳述式之 **sp_configure** 的 **max degree of parallelism** 設定選項。 MAXDOP 可能會超過使用 sp_configure 所設定的值。 如果 MAXDOP 超過使用 Resource Governor 所設定的值，資料庫引擎就會使用 ALTER WORKLOAD GROUP (Transact-SQL) 中所描述的 Resource Governor MAXDOP 值。 當您使用 MAXDOP 查詢提示時，適用所有搭配 max degree of parallelism 組態選項使用的語意規則。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
   
@@ -143,7 +144,7 @@ DBCC CHECKFILEGROUP 命令執行完成之後，[!INCLUDE[ssNoVersion](../../incl
 |5|發生使 DBCC 命令終止的未知錯誤。|  
   
 ## <a name="error-reporting"></a>錯誤報告  
-每當 DBCC CHECKFILEGROUP 偵測到損毀錯誤時，都會在  *LOG 目錄中建立小型傾印檔案 (SQLDUMP*nnnn[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].txt)。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體已啟用「功能使用方式」資料收集及「錯誤報告」功能時，這個檔案會自動轉送到 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。 收集的資料是用來提升 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的功能。
+每當 DBCC CHECKFILEGROUP 偵測到損毀錯誤時，都會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] LOG 目錄中建立小型傾印檔案 (SQLDUMP*nnnn*.txt)。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體已啟用「功能使用方式」資料收集及「錯誤報告」功能時，這個檔案會自動轉送到 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。 收集的資料是用來提升 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的功能。
 傾印檔案包含 DBCC CHECKFILEGROUP 命令的結果以及其他診斷輸出。 這個檔案具有限制的任意存取控制清單 (DACL)。 存取權會限制為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶及系統管理員 **sysadmin** 角色的成員。 依預設，系統管理員 **sysadmin** 角色包含 Windows BUILTIN\Administrators 群組及本機系統管理員群組的所有成員。 如果資料收集程序失敗，DBCC 命令不會失敗。
   
 ## <a name="resolving-errors"></a>解決錯誤  
@@ -208,7 +209,7 @@ GO
 ```  
   
 ### <a name="b-checking-the-adventureworks-primary-filegroup-without-nonclustered-indexes"></a>B. 檢查 AdventureWorks PRIMARY 檔案群組，不含非叢集索引  
-下列範例會藉由指定主要檔案群組的識別碼，再指定 `AdventureWorks2012`，以檢查 `NOINDEX` 資料庫主要檔案群組 (排除非叢集索引)。
+下列範例會藉由指定主要檔案群組的識別碼，再指定 `NOINDEX`，以檢查 `AdventureWorks2012` 資料庫主要檔案群組 (排除非叢集索引)。
   
 ```sql  
 USE AdventureWorks2012;  

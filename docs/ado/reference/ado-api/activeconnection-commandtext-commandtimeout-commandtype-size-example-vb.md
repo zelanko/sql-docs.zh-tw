@@ -1,5 +1,6 @@
 ---
-title: 預存程式屬性範例（VB） |Microsoft Docs
+description: 'ActiveConnection、CommandText、CommandTimeout、CommandType、Size 和 Direction 屬性範例 (VB) '
+title: 預存程式屬性範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: dade4531-0bcc-4a52-8f86-b110ba2a3f9d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a90ae6ceca85a314de5112f02b2389e26bfa5bdc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7f7ce292b6b62f5c5a58f6f6b177f9e0d33ad10f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760744"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451700"
 ---
-# <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-vb"></a>ActiveConnection、CommandText、CommandTimeout、CommandType、Size 和 Direction 屬性範例（VB）
-這個範例會使用[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)、 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)、 [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md)、 [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)、 [Size](../../../ado/reference/ado-api/size-property-ado-parameter.md)和[Direction](../../../ado/reference/ado-api/direction-property.md)屬性來執行預存程式。  
+# <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-vb"></a>ActiveConnection、CommandText、CommandTimeout、CommandType、Size 和 Direction 屬性範例 (VB) 
+這個範例會使用 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)、 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)、 [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md)、 [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)、 [Size](../../../ado/reference/ado-api/size-property-ado-parameter.md)和 [Direction](../../../ado/reference/ado-api/direction-property.md) 屬性來執行預存程式。  
   
 ```  
 'BeginActiveConnectionVB  
@@ -134,14 +135,14 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ActiveCommand 屬性（ADO）](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [Command 物件（ADO）](../../../ado/reference/ado-api/command-object-ado.md)   
- [CommandText 屬性（ADO）](../../../ado/reference/ado-api/commandtext-property-ado.md)   
- [CommandTimeout 屬性（ADO）](../../../ado/reference/ado-api/commandtimeout-property-ado.md)   
- [CommandType 屬性（ADO）](../../../ado/reference/ado-api/commandtype-property-ado.md)   
- [Connection 物件（ADO）](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [ (ADO) 的 ActiveCommand 屬性 ](../../../ado/reference/ado-api/activecommand-property-ado.md)   
+ [ (ADO) 的命令物件 ](../../../ado/reference/ado-api/command-object-ado.md)   
+ [ (ADO) 的 CommandText 屬性 ](../../../ado/reference/ado-api/commandtext-property-ado.md)   
+ [ (ADO) 的 CommandTimeout 屬性 ](../../../ado/reference/ado-api/commandtimeout-property-ado.md)   
+ [ (ADO) 的 CommandType 屬性 ](../../../ado/reference/ado-api/commandtype-property-ado.md)   
+ [ (ADO) 的 Connection 物件 ](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Direction 屬性](../../../ado/reference/ado-api/direction-property.md)   
  [Parameter 物件](../../../ado/reference/ado-api/parameter-object.md)   
- [Record 物件（ADO）](../../../ado/reference/ado-api/record-object-ado.md)   
- [Recordset 物件（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [ (ADO) 的記錄物件 ](../../../ado/reference/ado-api/record-object-ado.md)   
+ [ (ADO) 的記錄集物件 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Size 屬性 (ADO 參數)](../../../ado/reference/ado-api/size-property-ado-parameter.md)

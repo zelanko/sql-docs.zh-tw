@@ -1,4 +1,5 @@
 ---
+description: 使用複寫監視器監視效能
 title: 使用複寫監視器監視效能 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d98498fa2f63ef4e4c3cd977c7612fd3277fbf91
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a881bfd928d8a8d1c84d85ea8d226bc2751126a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918712"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498730"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>使用複寫監視器監視效能
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,15 +47,15 @@ ms.locfileid: "86918712"
   
 -   超過指定的延遲 (交易受發行者認可與對應交易受訂閱者認可之間所經過的時間)。  
   
-     這可以套用於異動複寫。 若已達到或超過指定臨界值，狀態顯示為 **[效能嚴重不足]** 。  
+     這可以套用於異動複寫。 若已達到或超過指定臨界值，狀態顯示為 **[效能嚴重不足]**。  
   
 -   超過指定的同步處理時間。  
   
-     這可以套用於合併式複寫。 若已達到或超過指定臨界值，狀態顯示為 **[長期執行合併]** 。 您可以為撥號連接和區域網路 (LAN) 連接指定不同的臨界值。  
+     這可以套用於合併式複寫。 若已達到或超過指定臨界值，狀態顯示為 **[長期執行合併]**。 您可以為撥號連接和區域網路 (LAN) 連接指定不同的臨界值。  
   
 -   在給定時間內處理的資料列數達不到指定數目。  
   
-     這可以套用於合併式複寫。 若已達到或超過指定臨界值，狀態顯示為 **[效能嚴重不足]** 。 您可以為撥號連接和 LAN 連接指定不同的臨界值。  
+     這可以套用於合併式複寫。 若已達到或超過指定臨界值，狀態顯示為 **[效能嚴重不足]**。 您可以為撥號連接和 LAN 連接指定不同的臨界值。  
   
  如需相關資訊，請參閱 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
   
@@ -75,7 +76,7 @@ ms.locfileid: "86918712"
   
 -   對於異動複寫，效能品質由延遲臨界值決定。 如果不設定臨界值，則不顯示值。 下表顯示了臨界值和效能品質值之間的交互關聯。 例如，如果將臨界值設定為 60 秒，而實際延遲為 30 秒，則延遲為臨界值的 50%，結果值為「好」。  
   
-    |非常好|好|普通|差|重大|  
+    |非常好|好|普通|差|重要|  
     |---------------|----------|----------|----------|--------------|  
     |0 – 34%|35 – 59%|60 – 84%|85 – 99%|100% +|  
   
@@ -100,6 +101,6 @@ ms.locfileid: "86918712"
   
 ## <a name="see-also"></a>另請參閱  
  [監視複寫](../../../relational-databases/replication/monitor/monitoring-replication.md)   
- [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
+ [在複寫監視器中設定閾值和警告](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

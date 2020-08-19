@@ -1,4 +1,5 @@
 ---
+description: TYPE_NAME (Transact-SQL)
 title: TYPE_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ ms.assetid: e4075a2e-5f70-440f-986b-9ec8434e07c1
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da4c194a533f53704b5979dd88587869a1c67fb7
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: def376308310d249dfe65f0a66d38095e67733eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112604"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459491"
 ---
 # <a name="type_name-transact-sql"></a>TYPE_NAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,12 +60,12 @@ TYPE_NAME ( type_id )
 ## <a name="remarks"></a>備註  
  當 *type_id* 無效或呼叫者沒有足以參考這個類型的權限時，TYPE_NAME 會傳回 NULL。  
   
- TYPE_NAME 適用於系統資料類型，也適用於使用者自訂資料類型。 類型可以包含在任何結構描述中，但一律會傳回非限定類型名稱。 這表示名稱沒有 _schema_ **.** 前置詞。  
+ TYPE_NAME 適用於系統資料類型，也適用於使用者自訂資料類型。 類型可以包含在任何結構描述中，但一律會傳回非限定類型名稱。 這表示名稱沒有 _schema_**.** 前置詞。  
   
  系統函數可以用於選取清單、WHERE 子句以及任何可以使用運算式的位置。 如需詳細資訊，請參閱[運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md) 及 [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)。  
   
 ## <a name="examples"></a>範例  
- 下列範例會針對 `Vendor` 資料庫之 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表中的每個資料行，傳回物件名稱、資料行名稱和類型名稱。  
+ 下列範例會針對 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫之 `Vendor` 資料表中的每個資料行，傳回物件名稱、資料行名稱和類型名稱。  
   
 ```  
 SELECT o.name AS obj_name, c.name AS col_name,  
@@ -94,7 +95,7 @@ Vendor          PurchasingWebServiceURL  nvarchar
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下列範例會使用識別碼 `TYPE ID` 來傳回資料類型的 `1`。  
+ 下列範例會使用識別碼 `1` 來傳回資料類型的 `TYPE ID`。  
   
 ```  
 SELECT TYPE_NAME(36) AS Type36, TYPE_NAME(239) AS Type239;  

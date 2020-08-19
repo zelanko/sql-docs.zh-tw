@@ -1,4 +1,5 @@
 ---
+description: ~ (位元 NOT) (Transact-SQL)
 title: ~ (位元 NOT) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/10/2017
@@ -23,12 +24,12 @@ ms.assetid: 02da8016-f6c0-41ae-8d59-33eaa02bfc95
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cb8dc14764feeeb8ebc83f424d1b1e979e160e2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 498c2a81c0d7b94cd6288c24165f051bfc073fbf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915814"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459462"
 ---
 # <a name="-bitwise-not-transact-sql"></a>~ (位元 NOT) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

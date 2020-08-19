@@ -1,5 +1,6 @@
 ---
-title: ConnectionString 屬性（ADO） |Microsoft Docs
+description: ConnectionString 屬性 (ADO)
+title: " (ADO) 的 ConnectionString 屬性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,56 +16,56 @@ helpviewer_keywords:
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 39eb67a98d710e27c051d77aa7843663c853b9e0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 617ceace87a7f265d3d4db901b0a586481c19e32
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762629"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444450"
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString 屬性 (ADO)
-指出用來建立資料來源連接的資訊。  
+表示用來建立資料來源連接的資訊。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定或傳回**字串**值。  
+ 設定或傳回 **字串** 值。  
   
 ## <a name="remarks"></a>備註  
- 藉由傳遞詳細的連接字串（包含以分號分隔的一系列*引數* *= 值*語句），即可使用**ConnectionString**屬性來指定資料來源。  
+ 您可以使用 **ConnectionString** 屬性來指定資料來源，方法是傳遞包含一連串 *引數* *= value* 語句的詳細連接字串（以分號分隔）。  
   
- ADO 支援**ConnectionString**屬性的五個引數;任何其他引數會直接傳遞給提供者，而不需要 ADO 處理。 ADO 支援的引數如下所示。  
+ ADO 支援 **ConnectionString** 屬性的五個引數;任何其他引數都會直接傳遞給提供者，而不會由 ADO 處理。 ADO 支援的引數如下所示。  
   
 |引數|描述|  
 |--------------|-----------------|  
-|*提供者 =*|指定要用於連接的提供者名稱。|  
-|*檔案名 =*|指定包含預設連接資訊的提供者特定檔案（例如保存的資料來源物件）的名稱。|  
-|*遠端提供者 =*|指定開啟用戶端連接時所要使用的提供者名稱。 （僅限遠端資料服務）。|  
-|*遠端伺服器 =*|指定要在開啟用戶端連接時使用的伺服器路徑名稱。 （僅限遠端資料服務）。|  
-|*URL =*|將連接字串指定為識別資源（例如檔案或目錄）的絕對 URL。|  
+|*提供者 =*|指定連接所要使用之提供者的名稱。|  
+|*檔案名 =*|指定提供者特定檔案的名稱 (例如，保存的資料來源物件) 包含預設的連接資訊。|  
+|*遠端提供者 =*|指定開啟用戶端連接時要使用的提供者名稱。  (僅限遠端資料服務。 ) |  
+|*遠端伺服器 =*|指定開啟用戶端連接時要使用之伺服器的路徑名稱。  (僅限遠端資料服務。 ) |  
+|*URL =*|將連接字串指定為識別資源的絕對 URL，例如檔案或目錄。|  
   
- 設定**ConnectionString**屬性並開啟[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件之後，提供者可能會改變屬性的內容，例如，藉由將 ADO 定義的引數名稱對應至特定提供者的對等專案。  
+ 設定 **ConnectionString** 屬性並開啟 [連接](../../../ado/reference/ado-api/connection-object-ado.md) 物件之後，提供者可以改變屬性的內容，例如，將 ADO 定義的引數名稱對應至特定提供者的對等專案。  
   
- **Connectionstring**屬性會自動繼承[Open](../../../ado/reference/ado-api/open-method-ado-connection.md)方法的*connectionstring*引數所使用的值，因此您可以在**open**方法呼叫期間覆寫目前的**ConnectionString**屬性。  
+ **Connectionstring**屬性會自動繼承[Open](../../../ado/reference/ado-api/open-method-ado-connection.md)方法的*ConnectionString*引數所使用的值，因此您可以在**open**方法呼叫期間覆寫目前的**ConnectionString**屬性。  
   
- 因為*檔案名*引數會導致 ADO 載入相關聯的提供者，所以您無法同時傳遞*提供者*和*檔案名*引數。  
+ 因為 *檔案名* 引數會導致 ADO 載入關聯的提供者，所以您無法同時傳遞 *提供者* 和 *檔案名* 引數。  
   
- 當連接關閉時， **ConnectionString**屬性會是讀取/寫入，而在開啟時則為唯讀。  
+ 當連線關閉時，會讀取/寫入 **ConnectionString** 屬性，而當連接開啟時，則為唯讀屬性。  
   
- **ConnectionString**屬性中引數的重複專案會被忽略。 會使用任何引數的最後一個實例。  
+ **ConnectionString**屬性中的引數重複專案會被忽略。 使用任何引數的最後一個實例。  
   
 > [!NOTE]
->  **遠端資料服務使用量**在用戶端**連接**物件上使用時， **ConnectionString**屬性只能包含*遠端提供者*和*遠端伺服器*參數。  
+>  **遠端資料服務使用量** 使用於用戶端 **連接** 物件時， **ConnectionString** 屬性只能包含 *遠端提供者* 和 *遠端伺服器* 參數。  
   
  下表列出每個 Windows 作業系統的預設 ADO 提供者：  
   
 |預設 ADO 提供者|Windows 作業系統|  
 |--------------------------|------------------------------|  
-|MSDASQL<br /><br /> （若要改善原始程式碼的可讀性，請在連接字串中明確指定提供者名稱）。|Windows 2000 （32位）<br /><br /> Windows XP (32 位元)<br /><br /> Windows 2003 Server （32位）<br /><br /> Windows Vista (32 位元)<br /><br /> Windows Vista Service Pack 1 或更新版本（32位和64位）<br /><br /> Windows Vista 之後的 windows 版本（32位和64位）|  
-|沒有預設值。<br /><br /> 當 ADO 應用程式在下列作業系統上執行，而且未明確指定提供者時，ADO 會傳回下列錯誤：「ADODB。連接：未指定提供者，而且沒有指定的預設提供者」|Windows 2000 （64位）<br /><br /> Windows XP (64 位元)<br /><br /> Windows 2003 Server （64位）<br /><br /> Windows Vista (64 位元)|  
+|MSDASQL<br /><br />  (若要改善原始程式碼的可讀性，請在連接字串中明確指定提供者名稱。 ) |Windows 2000 (32 位) <br /><br /> Windows XP (32 位元)<br /><br /> Windows 2003 Server (32 位) <br /><br /> Windows Vista (32 位元)<br /><br /> Windows Vista Service Pack 1 或更新版本 (32 位和64位) <br /><br /> Windows Vista (32 位和64位) 之後的 windows 版本|  
+|沒有預設值。<br /><br /> 當 ADO 應用程式在下列作業系統上執行且未明確指定提供者時，ADO 會傳回下列錯誤：「ADODB。連接：未指定提供者，而且沒有指定的預設提供者」|Windows 2000 (64 位) <br /><br /> Windows XP (64 位元)<br /><br /> Windows 2003 Server (64 位) <br /><br /> Windows Vista (64 位元)|  
   
 ## <a name="applies-to"></a>套用至  
  [Connection 物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [ConnectionString、ConnectionTimeout 和 State 屬性範例（VB）](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
- [ConnectionString、ConnectionTimeout 和 State 屬性範例（VC + +）](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
+ [ConnectionString、ConnectionTimeout 和 State 屬性範例 (VB) ](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
+ [ConnectionString、ConnectionTimeout 和 State 屬性範例 (VC + +) ](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
  [附錄 A：提供者](../../../ado/guide/appendixes/appendix-a-providers.md)

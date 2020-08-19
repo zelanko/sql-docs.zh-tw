@@ -1,4 +1,5 @@
 ---
+description: 反斜線 (行接續符號) (Transact-SQL)
 title: 反斜線 (行接續符號) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/25/2019
@@ -28,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: c97fbb20-3d12-4d0b-9b52-62a229bc83c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 373706704791a2455877fb32f803297b1809d406
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2437daed52cb8b4a79431465f8a27e5464185e23
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918756"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459278"
 ---
 # <a name="backslash-line-continuation-transact-sql"></a>反斜線 (行接續符號) (Transact-SQL)
 

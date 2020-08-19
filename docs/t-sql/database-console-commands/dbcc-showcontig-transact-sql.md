@@ -1,4 +1,5 @@
 ---
+description: DBCC SHOWCONTIG (Transact-SQL)
 title: DBCC SHOWCONTIG (Transact-SQL)
 ms.custom: ''
 ms.date: 07/17/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: dd596c6915c7df811ff06e7aa5a75472ee106a68
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: a6843555e9f83a77470e35c5a854d53560f38a91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485236"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459871"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 

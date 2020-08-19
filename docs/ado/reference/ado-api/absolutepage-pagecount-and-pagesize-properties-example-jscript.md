@@ -1,5 +1,6 @@
 ---
-title: AbsolutePage、PageCount 和 PageSize 屬性範例（JScript） |Microsoft Docs
+description: 'AbsolutePage、PageCount 和 PageSize 屬性範例 (JScript) '
+title: AbsolutePage、PageCount 和 PageSize 屬性範例 (JScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2db6dd3f-5a9c-438c-ae62-d09242906c98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f07855b0c99e92c18a2d54ff632fad24e1fb03ae
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 60fae0949fb3ed44da3aaa585ee8af1f529575dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747615"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451820"
 ---
-# <a name="absolutepage-pagecount-and-pagesize-properties-example-jscript"></a>AbsolutePage、PageCount 和 PageSize 屬性範例（JScript）
-這個範例會示範 AbsolutePage、PageCount 和 PageSize 屬性。 將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器，然後將它儲存為**AbsolutePageJS。**  
+# <a name="absolutepage-pagecount-and-pagesize-properties-example-jscript"></a>AbsolutePage、PageCount 和 PageSize 屬性範例 (JScript) 
+此範例示範 AbsolutePage、PageCount 和 PageSize 屬性。 將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器，然後將它儲存為**AbsolutePageJS。**  
   
 ```  
 <!-- BeginAbsolutePageJS -->  
@@ -158,7 +159,7 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [AbsolutePage 屬性（ADO）](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
- [PageCount 屬性（ADO）](../../../ado/reference/ado-api/pagecount-property-ado.md)   
- [PageSize 屬性（ADO）](../../../ado/reference/ado-api/pagesize-property-ado.md)   
+ [ (ADO) 的 AbsolutePage 屬性 ](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
+ [ (ADO) 的 PageCount 屬性 ](../../../ado/reference/ado-api/pagecount-property-ado.md)   
+ [ (ADO) 的 PageSize 屬性 ](../../../ado/reference/ado-api/pagesize-property-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -1,4 +1,5 @@
 ---
+description: ODBC 驅動程式管理員所產生的事件
 title: ODBC 驅動程式管理員所產生的事件 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,32 +14,32 @@ helpviewer_keywords:
 ms.assetid: 8c6efbbd-2c7d-4342-aa7b-201f94b3e3e3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a7ce17f9ef8e082f94609e0f8fc432b8963d73a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2259867b2291299b5bed35536637a7968118e87b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305749"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482921"
 ---
 # <a name="events-generated-by-the-odbc-driver-manager"></a>ODBC 驅動程式管理員所產生的事件
 > [!IMPORTANT]  
->  從 Windows 8 開始已移除 Visual Studio Analyzer 的支援（Visual Studio Analyzer 僅包含在舊版的 Visual Studio 中）。 如需替代的疑難排解機制，請使用出價追蹤。  
+>  從 Windows 8 開始，Visual Studio Analyzer 的支援已移除 (Visual Studio Analyzer 僅包含在舊版的 Visual Studio ) 中。 如需替代的疑難排解機制，請使用「投標追蹤」。  
   
- 當按一下 [開始 Visual Studio Analyzer] 按鈕時，ODBC 驅動程式管理員所產生的事件就會註冊。 此工具本身提供系統定義的事件，以及建立自訂事件的能力。 如需有關事件的詳細資訊，請參閱檔 Visual Studio 套件中的*Visual Studio Analyzer 參考指南*。  
+ 按一下 [開始 Visual Studio Analyzer] 按鈕時，會註冊 ODBC 驅動程式管理員所產生的事件。 此工具本身提供系統定義的事件，以及建立自訂事件的能力。 如需事件的詳細資訊，請參閱 Visual Studio 檔套件內的 *Visual Studio Analyzer 參考指南* 。  
   
 |Visual Studio Analyzer 事件|描述|  
 |----------------------------------|-----------------|  
-|**拜訪**|在每個 ODBC API 專案上產生。|  
+|**呼叫**|在每個 ODBC API 專案上產生。|  
 |**ReturnException**|如果傳回碼為 SQL_ERROR，則會在每個 ODBC API 傳回時產生。|  
-|**ReturnNormal**|如果未 SQL_ERROR 傳回碼，則在每個 ODBC API 傳回時產生。|  
-|**連接開始**|表示已啟動連接;當 ODBC 驅動程式管理員呼叫驅動程式的連接 Api 時產生。|  
-|**連接完成**|表示連接已完成;當驅動程式的連接 Api 回到 ODBC 驅動程式管理員時產生。|  
-|**中斷連線啟動**|當 ODBC 驅動程式管理員呼叫驅動程式的**SQLDisconnect**函數時產生。|  
-|**中斷連線完成**|當驅動程式的**SQLDisconnect**函數返回 ODBC 驅動程式管理員時產生。|  
-|**QuerySend**|當 ODBC 驅動程式管理員呼叫驅動程式的**SQLPrepare**、 **SQLExecute**、 **SQLExecDirect**函式，以及**SQLTables**和**SQLColumns**之類的目錄函式時，就會產生此功能。|  
-|**QueryResult**|當驅動程式將結果集傳回給包含查詢之函式的 ODBC 驅動程式管理員時，就會產生。|  
-|**TransactionStart**|當應用程式將 SQL_ATTR_AUTOCOMMIT 的值設定為 SQL_AUTOCOMMIT_OFF，或在應用程式成功呼叫**SQLEndTran**之後產生。|  
-|**TransactionCommit**|當應用程式呼叫**SQLEndTran**來認可本機交易時產生。|  
-|**載入 transactionrollback.sln 方案**|當應用程式呼叫**SQLEndTran**以回復本機交易時產生。|  
-|**JoinDTC**|當應用程式加入分散式交易協調器（DTC）時產生。|  
-|**LeaveDTC**|當應用程式離開分散式交易協調器（DTC）時產生。|
+|**ReturnNormal**|如果未 SQL_ERROR 傳回碼，則會在每個 ODBC API 傳回時產生。|  
+|**連接開始**|表示連接已啟動;當 ODBC 驅動程式管理員呼叫驅動程式的連接 Api 時產生。|  
+|**連接完成**|表示連接已完成;當驅動程式的連接 Api 返回 ODBC 驅動程式管理員時產生。|  
+|**中斷連線啟動**|當 ODBC 驅動程式管理員呼叫驅動程式的 **SQLDisconnect** 函數時產生。|  
+|**中斷連線完成**|當驅動程式的 **SQLDisconnect** 函式回到 ODBC 驅動程式管理員時產生。|  
+|**QuerySend**|當 ODBC 驅動程式管理員呼叫驅動程式的 **SQLPrepare**、 **SQLExecute**、 **SQLExecDirect** 函式以及類別目錄函式（例如 **SQLTables** 和 **SQLColumns**）時，就會產生此功能。|  
+|**QueryResult**|當驅動程式將結果集傳回給包含查詢的函式之 ODBC 驅動程式管理員時產生。|  
+|**TransactionStart**|當應用程式將 SQL_ATTR_AUTOCOMMIT 的值設定為 SQL_AUTOCOMMIT_OFF，或在應用程式成功呼叫 **SQLEndTran**時產生。|  
+|**TransactionCommit**|當應用程式呼叫 **SQLEndTran** 來認可本機交易時產生。|  
+|**載入 transactionrollback.sln 方案**|當應用程式呼叫 **SQLEndTran** 來回複本機交易時產生。|  
+|**JoinDTC**|當應用程式加入分散式交易協調器 (DTC) 時產生。|  
+|**LeaveDTC**|當應用程式離開分散式交易協調器 (DTC) 時產生。|

@@ -1,5 +1,6 @@
 ---
-title: 步驟6：將變更傳送到伺服器（RDS 教學課程） |Microsoft Docs
+description: 步驟 6：將變更傳送到伺服器 (RDS 教學課程)
+title: 步驟6：將變更傳送到伺服器 (RDS 教學課程) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: b1e927d6-7d50-4978-9eef-045043cdce7a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2094562f03f768ad6c98feccd0ed4a1e932a8fca
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e2a52faceafdde92acb3aed1e2a1b765594777e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764639"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451900"
 ---
 # <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>步驟 6：將變更傳送到伺服器 (RDS 教學課程)
-如果已編輯**記錄集**物件，任何變更（也就是加入、變更或刪除的資料列）都可以傳回伺服器。  
+如果已編輯 **記錄集** 物件，則任何變更 (也就是新增、變更或刪除的資料列) 可以傳回給伺服器。  
   
 > [!NOTE]
->  RDS 的預設行為可以使用 ADO 物件和 Microsoft OLE DB 遠端處理提供者來隱含地叫用。 查詢可以傳回**記錄集**，而編輯的**記錄集**可以更新資料來源。 本教學課程不會叫用具有 ADO 物件的 RDS，但這就是它看起來的樣子：  
+>  RDS 的預設行為可以使用 ADO 物件和 Microsoft OLE DB 遠端處理提供者隱含地叫用。 查詢可以傳回 **記錄集**，而編輯的 **記錄集**可以更新資料來源。 本教學課程不會叫用具有 ADO 物件的 RDS，但這是它在執行時的外觀：  
   
 ```vb
 Dim rs as New ADODB.Recordset  
@@ -34,7 +35,7 @@ rs.   ' The equivalent of
 ...  
 ```  
   
- **部分 A**假設在此情況下，您只使用了[RDS。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) ，而且**記錄集**物件現在與 RDS 相關聯 **。DataControl**。 如果仍然設定[伺服器](../../../ado/reference/rds-api/server-property-rds.md)和[連接](../../../ado/reference/rds-api/connect-property-rds.md)屬性， [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)方法會以**記錄集**物件的任何變更來更新資料來源。  
+ **部分 A** 在此情況下，假設您只有使用 [RDS。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) ，而且 **記錄集** 物件現在與 RDS 相關聯 **。DataControl**。 如果仍然設定[伺服器](../../../ado/reference/rds-api/server-property-rds.md)和[連接](../../../ado/reference/rds-api/connect-property-rds.md)屬性，則[SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)方法會使用**記錄集**物件的任何變更來更新資料來源。  
   
 ```vb
 Sub RDSTutorial6A()  
@@ -52,7 +53,7 @@ DC.
 ...  
 ```  
   
- **第 B 部分**或者，您可以使用[RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)物件來補救伺服器，並指定連接和**記錄集**物件。  
+ **B 部分** 或者，您可以使用 [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 物件來補救伺服器，並指定連接和 **記錄集** 物件。  
   
 ```vb
 Sub RDSTutorial6B()  
@@ -72,9 +73,9 @@ End Sub
  **本教學課程即將結束。**  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統不再包含 RDS 伺服器元件（如需詳細資訊，請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)）。 RDS 用戶端元件將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="see-also"></a>另請參閱  
- [Microsoft OLE DB 遠端處理提供者（ADO 服務提供者）](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md)   
+ [Microsoft OLE DB (ADO 服務提供者的遠端處理提供者) ](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md)   
  [RDS 教學課程](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [RDS 教學課程 (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

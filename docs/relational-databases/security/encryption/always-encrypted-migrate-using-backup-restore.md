@@ -1,4 +1,5 @@
 ---
+description: 使用 Always Encrypted 備份和還原資料庫
 title: 使用 Always Encrypted 備份和還原資料庫 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/30/2019
@@ -10,12 +11,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb529b9cc518cd7802dfdbbddba8b88e399dbcba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ff78b0f657e70a16051531f1a0bea3fdc5cfe7d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85627385"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475516"
 ---
 # <a name="backup-and-restore-databases-using-always-encrypted"></a>使用 Always Encrypted 備份和還原資料庫 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "85627385"
 如果您將資料庫還原到不同伺服器或不同名稱，則不需要執行任何特殊動作來讓應用程式查詢目標資料庫中的加密資料，因為這兩個資料庫中的金鑰都相同。
 
 如需如何備份和還原資料庫的詳細資訊，請參閱：
-- [備份概觀 (SQL Server)](../../backup-restore/backup-overview-sql-server.md)
+- [Backup Overview (SQL Server)](../../backup-restore/backup-overview-sql-server.md)
 - [將資料庫還原到受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started-restore)
 
 ## <a name="next-steps"></a>後續步驟

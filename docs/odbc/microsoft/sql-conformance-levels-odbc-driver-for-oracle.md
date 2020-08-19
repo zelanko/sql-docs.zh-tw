@@ -1,5 +1,6 @@
 ---
-title: SQL 一致性層級（ODBC Driver for Oracle） |Microsoft Docs
+description: SQL 一致性層級 (ODBC Driver for Oracle)
+title: SQL 一致性層級 (ODBC Driver for Oracle) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: 077a6c6a-2c57-42c9-a4fd-4cf0e65cf7e2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 969296e377d398615ad95cf1337c3f9f97d5eb5c
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 78e98aed952ef8b15a4654be9f82e355d1b4177b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363398"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483421"
 ---
 # <a name="sql-conformance-levels-odbc-driver-for-oracle"></a>SQL 一致性層級 (ODBC Driver for Oracle)
 > [!IMPORTANT]  
->  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 請改用 Oracle 所提供的 ODBC 驅動程式。  
+>  未來的 Windows 版本將會移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 請改用 Oracle 提供的 ODBC 驅動程式。  
   
- ODBC Driver for Oracle 支援最低 SQL 文法和 Core SQL 文法，而且也支援下列 SQL ODBC 延伸模組：  
+ ODBC Driver for Oracle 支援最小的 SQL 文法和 Core SQL 文法，也支援下列 ODBC 擴充至 SQL：  
   
 -   日期、時間和時間戳記資料  
   
--   左方和右方外部聯結  
+-   左方和右外部聯結  
   
 -   數值函數：  
 
@@ -115,11 +116,11 @@ ms.locfileid: "87363398"
         :::column-end:::
     :::row-end:::
 
--   類型轉換函式：  
+-   類型轉換函數：  
 
     轉換  
 
 -   系統函數：  
   
     Ifnull  
-    User
+    使用者

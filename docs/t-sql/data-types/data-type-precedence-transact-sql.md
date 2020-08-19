@@ -1,4 +1,5 @@
 ---
+description: 資料類型優先順序 (Transact-SQL)
 title: 資料類型優先順序 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/23/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f4c804ab-ed3f-43b1-a024-c9ac6944b66b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bcf14745af6da26cc625e928d75f510e0da9a2e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6ed8d2a30d4bcc2cd1adaedc3cccd6642d701533
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70030357"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459920"
 ---
 # <a name="data-type-precedence-transact-sql"></a>資料類型優先順序 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md.md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -56,11 +57,11 @@ ms.locfileid: "70030357"
 1. **image**  
 1. **timestamp**  
 1. **uniqueidentifier**  
-1. **nvarchar** (包含 **nvarchar(max)** )  
+1. **nvarchar** (包含 **nvarchar(max)**)  
 1. **nchar**  
-1. **varchar** (包含 **varchar(max)** )  
+1. **varchar** (包含 **varchar(max)**)  
 1. **char**  
-1. **varbinary** (包含 **varbinary(max)** )  
+1. **varbinary** (包含 **varbinary(max)**)  
 1. **binary** (最低)  
   
 ## <a name="see-also"></a>另請參閱

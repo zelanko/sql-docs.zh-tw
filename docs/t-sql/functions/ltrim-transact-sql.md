@@ -1,4 +1,5 @@
 ---
+description: LTRIM (Transact-SQL)
 title: LTRIM (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/27/2017
@@ -23,12 +24,12 @@ ms.assetid: 369ed340-1a09-4597-a9eb-6720156cd39a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed3275d95ad1b7b7923c55b9ab7c82aadb4d3761
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 8cbf878b6e5dd7023e45a9057e1195c76a26ecb7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110912"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467972"
 ---
 # <a name="ltrim-transact-sql"></a>LTRIM (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +48,7 @@ LTRIM ( character_expression )
 
 ## <a name="arguments"></a>引數
  *character_expression*  
- 這是字元或二進位資料的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *character_expression* 可以是常數、變數或資料行。 *character_expression* 必須是可隱含地轉換為 **varchar**的資料類型，但是 **text** **ntext** 和 **image** 除外。 否則，請使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 來明確轉換 *character_expression*。  
+ 這是字元或二進位資料的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *character_expression* 可以是常數、變數或資料行。 *character_expression* 必須是可隱含地轉換為 **varchar**的資料類型，但是 **text****ntext** 和 **image** 除外。 否則，請使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 來明確轉換 *character_expression*。  
   
 ## <a name="return-type"></a>傳回類型  
  **varchar** 或 **nvarchar**  

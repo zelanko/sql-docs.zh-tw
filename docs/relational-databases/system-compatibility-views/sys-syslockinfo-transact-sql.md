@@ -1,5 +1,6 @@
 ---
-title: sys.syslockinfo （Transact-sql） |Microsoft Docs
+description: sys.syslockinfo (Transact-SQL)
+title: sys.syslockinfo (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 412cb7de4772c568247c90b568e9730814543db6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9714fab678f8466daf76d5963e1383b5e7d2dc52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896601"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490053"
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,12 +37,12 @@ ms.locfileid: "85896601"
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
 > [!IMPORTANT]  
->  這項功能已變更，與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不同。 如需詳細資訊，請參閱[SQL Server 2016 中資料庫引擎功能的重大變更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。  
+>  這項功能已變更，與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不同。 如需詳細資訊，請參閱 [SQL Server 2016 中資料庫引擎功能的重大變更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**rsc_text**|**nchar(32)**|鎖定資源的文字描述。 包含鎖定資源的一部份。|  
-|**rsc_bin**|**binary(16)**|二進位鎖定資源。 包含內含於鎖定管理員的實際鎖定資源。 此資料行包含在瞭解用於產生其專屬格式化鎖定資源的鎖定資源格式，以及在**syslockinfo**上執行自我聯結的工具。|  
+|**rsc_bin**|**binary(16)**|二進位鎖定資源。 包含內含於鎖定管理員的實際鎖定資源。 此資料行包含在工具中，可瞭解用來產生其專屬格式化鎖定資源的鎖定資源格式，以及在 **syslockinfo**上執行自我聯結的工具。|  
 |**rsc_valblk**|**binary(16)**|鎖定值區塊。 某些資源類型可能會將其他資料併入某鎖定資源中，而該鎖定資源並非由鎖定管理員雜湊以決定特定鎖定資源的擁有權。 例如，頁面鎖定不是由特定物件識別碼擁有。 適用於鎖定擴大和其他用途。 不過，頁面鎖定的物件識別碼可以併入鎖定值區塊中。|  
 |**rsc_dbid**|**smallint**|資源所關聯的資料庫識別碼。|  
 |**rsc_indid**|**smallint**|資源所關聯的索引識別碼 (如果適用的話)。|  
@@ -63,7 +64,7 @@ ms.locfileid: "85896601"
  需要伺服器的 VIEW SERVER STATE 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [將系統資料表對應至系統檢視 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;將系統資料表對應至系統檢視 ](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [相容性檢視 &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

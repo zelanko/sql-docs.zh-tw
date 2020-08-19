@@ -1,5 +1,6 @@
 ---
-title: sys.databases pdw_health_alerts （Transact-sql） |Microsoft Docs
+description: 'sys. pdw_health_alerts (Transact-sql) '
+title: sys. pdw_health_alerts (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -10,14 +11,14 @@ ms.assetid: 49c01e5f-ee47-41a0-871d-35a759f50851
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f28f48d8530111e2de12bbb6f075b69147ad1cff
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 3b2da23d973042638f39e52ed7c1173422a97eeb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396034"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475404"
 ---
-# <a name="syspdw_health_alerts-transact-sql"></a>sys.databases pdw_health_alerts （Transact-sql）
+# <a name="syspdw_health_alerts-transact-sql"></a>sys. pdw_health_alerts (Transact-sql) 
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   儲存可能發生在系統上之不同警示的屬性;這是警示的目錄資料表。  
@@ -25,15 +26,15 @@ ms.locfileid: "87396034"
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
 |alert_id|**int**|警示的唯一識別碼。<br /><br /> 此視圖的索引鍵。|NOT NULL|  
-|component_id|**int**|此警示適用之元件的識別碼。 元件是一般元件識別碼，例如「電源供應」，而不是特定的安裝。 請參閱[pdw_health_components &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md)。|NOT NULL|  
+|component_id|**int**|此警示適用的元件識別碼。 元件是一般的元件識別碼，例如「電源供應」，而不是安裝特有的元件識別碼。 請參閱 [sys. pdw_health_components &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md)。|NOT NULL|  
 |alert_name|**nvarchar(255)**|警示的名稱。|NOT NULL|  
-|state|**nvarchar(32)**|警示的狀態。|NOT NULL<br /><br /> 可能的值：<br /><br /> 投入<br /><br /> 'NonOperational'<br /><br /> 降級<br /><br /> 發生|  
-|severity|**nvarchar(32)**|警示的嚴重性。|NOT NULL<br /><br /> 可能的值：<br /><br /> 供<br /><br /> Warning<br /><br /> 糾錯|  
-|type|**nvarchar(32)**|警示的類型。|NOT NULL<br /><br /> 可能的值：<br /><br /> StatusChange-裝置狀態已變更。<br /><br /> 閾值-值已超過臨界值。|  
+|狀態|**nvarchar(32)**|警示的狀態。|NOT NULL<br /><br /> 可能的值：<br /><br /> 手術<br /><br /> 'NonOperational'<br /><br /> 降級<br /><br /> 沒有|  
+|severity|**nvarchar(32)**|警示的嚴重性。|NOT NULL<br /><br /> 可能的值：<br /><br /> 資訊<br /><br /> 條<br /><br /> 錯誤|  
+|type|**nvarchar(32)**|警示的類型。|NOT NULL<br /><br /> 可能的值：<br /><br /> StatusChange-裝置狀態已變更。<br /><br /> 臨界值-值已超過閾值。|  
 |description|**nvarchar(4000)**|警示的描述。|NOT NULL|  
-|condition (條件)|**nvarchar(255)**|類型 = 臨界值時使用。 定義警示臨界值的計算方式。|NULL|  
+|condition (條件)|**nvarchar(255)**|當 type = 臨界值時使用。 定義警示閾值的計算方式。|NULL|  
 |status|**nvarchar(32)**|警示狀態|NULL|  
-|condition_value|**bit**|指出是否允許在系統操作期間發生警示。|NULL<br /><br /> 可能值<br /><br /> 0-不會產生警示。<br /><br /> 1-產生警示。|  
+|condition_value|**bit**|指出是否允許在系統操作期間發生警示。|NULL<br /><br /> 可能值<br /><br /> 0-不產生警示。<br /><br /> 1-產生警示。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL 資料倉儲與平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  

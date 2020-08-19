@@ -1,4 +1,5 @@
 ---
+description: 支援自訂元件中的多目標
 title: 支援自訂元件中的多目標 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4020d295bc29fa3d240c0176611d446fcb427197
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7bfd8409894c1f98fe4d63efcd122b4bf8025aae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916384"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430460"
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>支援自訂元件中的多目標
 
@@ -24,7 +25,7 @@ ms.locfileid: "86916384"
 
  您現在可以在 SQL Server Data Tools (SSDT) 中使用 SSIS 設計工具，來建立、維護和執行目標為 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的套件。 若要取得 SSDT for Visual Studio 2015，請參閱[下載最新的 SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)。 
 
- 在方案總管中，在 Integration Services 專案上按一下滑鼠右鍵，然後選取 [屬性]  以開啟專案的屬性頁。 在 [組態屬性]  的 [一般]  索引標籤中，選取 [TargetServerVersion]  屬性，然後選擇 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
+ 在方案總管中，在 Integration Services 專案上按一下滑鼠右鍵，然後選取 [屬性] **** 以開啟專案的屬性頁。 在 [組態屬性] **** 的 [一般] **** 索引標籤中，選取 [TargetServerVersion] **** 屬性，然後選擇 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
    
  ![專案屬性對話方塊中的 TargetServerVersion 屬性](../../integration-services/media/targetserverversion2.png "專案屬性對話方塊中的 TargetServerVersion 屬性")  
  
@@ -99,7 +100,7 @@ public override void PerformDowngrade(int pipelineVersion, DTSTargetServerVersio
 
 **錯誤訊息。** 無法將 'System.__ComObject' 類型的 COM 物件轉換成 'Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100' 介面類型。 這項作業失敗，因為 IID 為 '{BE8C48A3-155B-4810-BA5C-BDF68A659E9E}' 的介面之 COM 元件上的 QueryInterface 呼叫，因為發生下列錯誤而失敗：不支援這類介面 (來自 HRESULT 的例外狀況：0x80004002 (E_NOINTERFACE))。 (Microsoft.SqlServer.DTSPipelineWrap)。
 
-**解決方案。** 如果您的自訂延伸模組參考 SSIS interop 組件，例如 Microsoft.SqlServer.DTSPipelineWrap 或 Microsoft.SqlServer.DTSRuntimeWrap，請將 [內嵌 Interop 類型]  屬性的值設成 **False**。
+**解決方案。** 如果您的自訂延伸模組參考 SSIS interop 組件，例如 Microsoft.SqlServer.DTSPipelineWrap 或 Microsoft.SqlServer.DTSRuntimeWrap，請將 [內嵌 Interop 類型] 屬性的值設成 **False**。
 
 ![內嵌 Interop 類型](../../integration-services/extending-packages-custom-objects/media/embed-interop-types.png)
 

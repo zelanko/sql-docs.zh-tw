@@ -1,4 +1,5 @@
 ---
+description: PARSENAME (Transact-SQL)
 title: PARSENAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2020
@@ -22,12 +23,12 @@ ms.assetid: abf34f99-9ee9-460b-85b2-930ca5c4b5ae
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8b85845eea5e2bfcb1c3074b155d442b30ae499d
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 047b760e2b3e7101cd471a4e1a8c65cbc970c023
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394793"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459648"
 ---
 # <a name="parsename-transact-sql"></a>PARSENAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: FORMATMESSAGE (Transact-SQL)
 title: FORMATMESSAGE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/12/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8528b0ed43aeafa95f7d196b1c88c5aad3330aaf
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 47eb4bb9e66f7f4fa9a84b694ebd8915f0c60d31
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111974"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459710"
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

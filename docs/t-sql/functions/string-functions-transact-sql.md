@@ -1,4 +1,5 @@
 ---
+description: 字串函數 (Transact-SQL)
 title: 字串函式 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/15/2016
@@ -18,12 +19,12 @@ ms.assetid: 6940a83d-5374-4af3-bb27-5d89c8af83ac
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4fd363bcbaa9d0db7eb895abd76277ecfd0338f1
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a27b97b0161f2d699eeaf394a53797e2640bac74
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245562"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459616"
 ---
 # <a name="string-functions-transact-sql"></a>字串函數 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;TOTAL_READ (Transact-SQL)'
 title: '@@TOTAL_READ (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/17/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b505fbe9-9569-4f3d-80b9-b64b5109ac98
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 2d812089875ef00b035e30ce98627c8b46462b31
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 6c301570941c451709d4574663dc71c6b7632ef6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110706"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459489"
 ---
 # <a name="x40x40total_read-transact-sql"></a>&#x40;&#x40;TOTAL_READ (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

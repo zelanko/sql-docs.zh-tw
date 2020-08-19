@@ -1,5 +1,6 @@
 ---
-title: Connection （ADO-WFC 語法） |Microsoft Docs
+description: Connection (ADO - WFC 語法)
+title: Connection (ADO-WFC 語法) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8cfc35bb-91e2-47da-ad4c-982e9162cd51
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b8602b170d4c067744fd002a98c949b8d0836d2e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4a9d467a2ab9073bd287fd0cf6a3fc36c60cabda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760304"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444520"
 ---
 # <a name="connection-ado---wfc-syntax"></a>Connection (ADO - WFC 語法)
-## <a name="package-commswfcdata"></a>封裝 .com. wfc. 資料  
+## <a name="package-commswfcdata"></a>封裝 .com. 資料  
   
 ### <a name="constructor"></a>建構函式  
   
@@ -44,7 +45,7 @@ public int executeUpdate(String commandText)
 public int executeUpdate(String commandText, int options)  
 ```  
   
- **ExecuteUpdate**方法是特殊的案例方法，會使用特定參數來呼叫基礎 ADO **execute**方法。 **ExecuteUpdate**方法不支援傳回**記錄集**物件，因此**execute**方法的*options*參數會使用**AdoEnums. ExecuteOptions. NORECORDS**進行修改。 在**execute**方法完成之後，其更新的*RecordsAffected*參數會傳回到**executeUpdate**方法，最後會以**int**的形式傳回。  
+ **ExecuteUpdate**方法是特殊的案例方法，會使用特定參數來呼叫基礎 ADO **execute**方法。 **ExecuteUpdate**方法不支援傳回**記錄集**物件，因此會使用**AdoEnums.ExecuteOptions**修改**execute**方法的*options*參數。 **Execute**方法完成之後，其更新的*RecordsAffected*參數會傳回給**executeUpdate**方法，最後會以**int**傳回。  
   
 ```  
 public void open()   
@@ -86,7 +87,7 @@ public com.ms.wfc.data.Errors getErrors()
 ```  
   
 ### <a name="events"></a>事件  
- 如需 ADO/WFC 事件的詳細資訊，請參閱[依語言的 Ado 事件](../../../ado/guide/data/ado-event-instantiation-by-language.md)具現化。  
+ 如需 ADO/WFC 事件的詳細資訊，請參閱 [Ado 事件具現化（依語言](../../../ado/guide/data/ado-event-instantiation-by-language.md)）。  
   
 ```  
 public void addOnBeginTransComplete(ConnectionEventHandler handler)  

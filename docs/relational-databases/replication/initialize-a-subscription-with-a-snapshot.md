@@ -1,4 +1,5 @@
 ---
+description: 使用新發行集的快照集初始化訂閱
 title: 使用快照集初始化訂閱
 ms.custom: ''
 ms.date: 03/23/2020
@@ -13,12 +14,12 @@ ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cb69f5c2033a515676587ddbef0cb3d14e3bc3d6
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 526be3921fa6b842415f0fbd2c78e2fd66981253
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396129"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475534"
 ---
 # <a name="initialize-a-subscription-with-a-snapshot-for-a-new-publication"></a>使用新發行集的快照集初始化訂閱
 

@@ -1,4 +1,5 @@
 ---
+description: 使用指令碼工作傳送 HTML 郵件訊息
 title: 以指令碼工作傳送 HTML 郵件訊息 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dd2b1eef-b04f-4946-87ab-7bc56bb525ce
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8df42af0f45aaff966e05c66cde7b32feaddd088
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6894402970f0d49c964553a12ec7ea5887568d50
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917130"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430370"
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>使用指令碼工作傳送 HTML 郵件訊息
 

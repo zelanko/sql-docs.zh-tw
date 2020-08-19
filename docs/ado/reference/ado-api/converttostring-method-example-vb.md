@@ -1,5 +1,6 @@
 ---
-title: ConvertToString 方法範例（VB） |Microsoft Docs
+description: ConvertToString 方法範例 (VB)
+title: " (VB) 的 ConvertToString 方法範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 31731e4f-3c0c-451e-8cbc-c9df28fabf6c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 90472a43cefe87fdc255d9794f16fa32ca0aff16
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6470866492d4d323ac287071c3c87c6b45d723b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762579"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444400"
 ---
 # <a name="converttostring-method-example-vb"></a>ConvertToString 方法範例 (VB)
 ```  
@@ -99,5 +100,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ConvertToString 方法（RDS）](../../../ado/reference/rds-api/converttostring-method-rds.md)   
+ [RDS)  (ConvertToString 方法 ](../../../ado/reference/rds-api/converttostring-method-rds.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

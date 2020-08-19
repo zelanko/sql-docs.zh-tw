@@ -1,4 +1,5 @@
 ---
+description: '|= (位元 OR 指派) (Transact-SQL)'
 title: '|= (位元 OR)'
 titleSuffix: SQL Server (Transact-SQL)
 ms.custom: seo-lt-2019
@@ -22,12 +23,12 @@ ms.assetid: bd746a4f-6498-4196-bf2e-b6f457a15d44
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7bb8a457873a40eb4023ce780946428e6294430
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: fc2fdfc46c53b5a345d6ac27847592485043f934
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394123"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459463"
 ---
 # <a name="-bitwise-or-assignment-transact-sql"></a>|= (位元 OR 指派) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

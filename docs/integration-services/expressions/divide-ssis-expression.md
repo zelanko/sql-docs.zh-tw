@@ -1,4 +1,5 @@
 ---
+description: Divide (SSIS 運算式)
 title: 除 (SSIS 運算式) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5bde9223-872d-443e-8a27-57735e1d8f3d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fb89b3a5696e9e9d7cff33db13f272ca2ec00fcb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 516d8705f38f3bdd7234f1975f5188d32f501efe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914862"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430600"
 ---
 # <a name="divide-ssis-expression"></a>Divide (SSIS 運算式)
 

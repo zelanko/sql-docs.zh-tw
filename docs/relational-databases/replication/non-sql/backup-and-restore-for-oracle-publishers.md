@@ -1,4 +1,5 @@
 ---
+description: Oracle 發行者的備份與還原
 title: Oracle 發行者的備份與還原 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e5f181d0-cacf-442b-8b7a-202b3cfc358b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c87c76f5e082e3d5c4abc158ff2be2ad33fe9a52
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: add288ad9b988647c5fa573596d5bbca5c4f9549
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883067"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475563"
 ---
 # <a name="backup-and-restore-for-oracle-publishers"></a>Oracle 發行者的備份與還原
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

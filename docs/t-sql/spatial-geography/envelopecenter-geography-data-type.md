@@ -1,4 +1,5 @@
 ---
+description: EnvelopeCenter (geography 資料類型)
 title: EnvelopeCenter (geography 資料類型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: dee9d807-faad-45b8-b3f3-7e8aa7d07147
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1304836d2408cff52e96138d163423dc407d0104
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: c6e7173111dd48e54c85410b89d5a450adfe1169
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555434"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459072"
 ---
 # <a name="envelopecenter-geography-data-type"></a>EnvelopeCenter (geography 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

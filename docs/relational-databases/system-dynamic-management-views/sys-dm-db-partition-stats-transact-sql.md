@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_db_partition_stats （Transact-sql） |Microsoft Docs
+description: sys.dm_db_partition_stats (Transact-SQL)
+title: sys. dm_db_partition_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/28/2020
 ms.prod: sql
@@ -20,11 +21,12 @@ ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 191dc00caa5ab39d3a3adf7882aa3bb88ea0d3f3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: eddc690043c541c3726c66bba40f4a81d188e91a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011633"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489998"
 ---
 # <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,15 +34,15 @@ ms.locfileid: "86011633"
   針對目前資料庫中的每個資料分割，各傳回其頁面和資料列計數資訊。  
   
 > [!NOTE]  
-> 若要從或呼叫此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用**dm_pdw_nodes_db_partition_stats**的名稱。 Sys. dm_pdw_nodes_db_partition_stats 中的 partition_id 不同于 Azure SQL 資料倉儲的 [sys.databases] 目錄檢視中的 partition_id。
+> 若要從或呼叫這個 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用名稱 **sys. dm_pdw_nodes_db_partition_stats**。 Sys. dm_pdw_nodes_db_partition_stats 中的 partition_id 與 Azure SQL 資料倉儲的 sys. 分割目錄查看中的 partition_id 不同。
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**partition_id**|**bigint**|資料分割的識別碼。 在資料庫中，這是唯一的。 這與 [ **sys.databases** ] 目錄檢視中**partition_id**的值相同，但 Azure SQL 資料倉儲除外。|  
+|**partition_id**|**bigint**|資料分割的識別碼。 在資料庫中，這是唯一的。 這與**sys.** 分割目錄檢視中的**partition_id**值相同，但 Azure SQL 資料倉儲除外。|  
 |object_id|**int**|資料分割所屬資料表或索引檢視的物件識別碼。|  
 |**index_id**|**int**|資料分割所屬之堆積或索引的識別碼。<br /><br /> 0 = 堆積<br /><br /> 1 = 叢集索引。<br /><br /> > 1 = 非叢集索引|  
 |**partition_number**|**int**|在索引或堆積內，以 1 為基底的資料分割編號。|  
-|**in_row_data_page_count**|**bigint**|這個資料分割中用來儲存同資料列資料的頁數。 如果資料分割屬於堆積，這個值是堆積中的資料頁數。 如果資料分割屬於索引，這個值是分葉層級中的頁數。 （[B] 樹狀目錄中的非分葉頁面不會包含在計數中）。任一情況下都不會包含 IAM （索引配置對應）分頁。 xVelocity 記憶體最佳化的資料行存放區索引之 Always 0。|  
+|**in_row_data_page_count**|**bigint**|這個資料分割中用來儲存同資料列資料的頁數。 如果資料分割屬於堆積，這個值是堆積中的資料頁數。 如果資料分割屬於索引，這個值是分葉層級中的頁數。 B 型樹狀目錄中 (非分葉頁面不包含在計數中。 ) IAM (索引配置對應) 頁面不會包含在任何一種情況中。 xVelocity 記憶體最佳化的資料行存放區索引之 Always 0。|  
 |**in_row_used_page_count**|**bigint**|這個資料分割中用來儲存和管理同資料列資料的總頁數。 這個計數包括非分葉 B 型樹狀目錄頁數、IAM 頁數，以及 **in_row_data_page_count** 資料行中包括的所有頁數。 永遠是 0，表示資料行存放區索引。|  
 |**in_row_reserved_page_count**|**bigint**|這個資料分割中為儲存和管理同資料列資料所保留的總頁數，不管這些頁面是否正在使用中。 永遠是 0，表示資料行存放區索引。|  
 |**lob_used_page_count**|**bigint**|資料分割中用來儲存和管理 out-of-row **text**、**ntext**、**image**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)** 和 **xml** 資料行的頁數。 IAM 頁數包括在內。<br /><br /> 資料分割中用來儲存和管理資料行存放區索引的 LOB 總數。|  
@@ -50,8 +52,8 @@ ms.locfileid: "86011633"
 |**used_page_count**|**bigint**|資料分割的總使用頁數。 計算為**in_row_used_page_count**  +  **lob_used_page_count**  +  **row_overflow_used_page_count**。|  
 |**reserved_page_count**|**bigint**|資料分割的總保留頁數。 計算為**in_row_reserved_page_count**  +  **lob_reserved_page_count**  +  **row_overflow_reserved_page_count**。|  
 |**row_count**|**bigint**|此資料分割中大約的資料列數目。|  
-|**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
-|**distribution_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 與散發相關聯的唯一數值識別碼。|  
+|**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在之節點的識別碼。|  
+|**distribution_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 與散發相關聯的唯一數值識別碼。|  
   
 ## <a name="remarks"></a>備註  
  **sys.dm_db_partition_stats** 顯示資料庫中所有資料分割用來儲存和管理同資料列資料、LOB 資料和資料列溢位資料的空間相關資訊。 每個資料分割顯示一個資料列。  
@@ -65,7 +67,7 @@ ms.locfileid: "86011633"
  個別資料表或索引的總計數可以藉由加入所有相關資料分割的計數來取得。  
   
 ## <a name="permissions"></a>權限  
- 需要 `VIEW DATABASE STATE` 和 `VIEW DEFINITION` 許可權，才能查詢**sys.databases dm_db_partition_stats**動態管理檢視。 如需動態管理檢視之許可權的詳細資訊，請參閱[動態管理檢視和函數 &#40;transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
+ 需要 `VIEW DATABASE STATE` 和 `VIEW DEFINITION` 許可權，才能查詢 **sys. dm_db_partition_stats** 動態管理檢視。 如需有關動態管理檢視之許可權的詳細資訊，請參閱 [&#40;transact-sql&#41;的動態管理檢視和函數 ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
   
 ## <a name="examples"></a>範例  
   
@@ -104,7 +106,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [資料庫相關的動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

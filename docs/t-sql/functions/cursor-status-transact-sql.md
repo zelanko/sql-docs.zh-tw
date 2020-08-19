@@ -1,4 +1,5 @@
 ---
+description: CURSOR_STATUS (Transact-SQL)
 title: CURSOR_STATUS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3a4a840e-04f8-43bd-aada-35d78c3cb6b0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 63c1513e044b825ed3ffa036b1e7014e0e4d4a6f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: ab7cbb48d371236d23d90de2347349318369f274
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112126"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459821"
 ---
 # <a name="cursor_status-transact-sql"></a>CURSOR_STATUS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -129,7 +130,7 @@ After Close
 ```  
   
 ## <a name="see-also"></a>另請參閱
-[資料指標函式 &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-functions-transact-sql.md)  
+[資料指標函數 &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-functions-transact-sql.md)  
 [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
   
   
