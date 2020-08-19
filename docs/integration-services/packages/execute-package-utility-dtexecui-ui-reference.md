@@ -1,4 +1,5 @@
 ---
+description: 執行套件公用程式 (dtexecui)
 title: 執行套件公用程式 (dtexecui) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 26e976ee2a62d29f8f14584159888de428431101
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 630fea974e83507984cae8a4ec2b7938fc551d25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472492"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425280"
 ---
 # <a name="execute-package-utility-dtexecui"></a>執行套件公用程式 (dtexecui)
 

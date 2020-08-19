@@ -1,4 +1,5 @@
 ---
+description: 連線控制代碼
 title: 連接控制碼 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,26 +14,26 @@ helpviewer_keywords:
 ms.assetid: 12222653-f04d-46d6-bdee-61348f5d550f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d5b03e0733e35984350d2a218b885dc148ca8f8f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a4457fa72c40892e208057ac013d3da1e557a6d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299018"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424790"
 ---
 # <a name="connection-handles"></a>連線控制代碼
-*連接*是由驅動程式和資料來源所組成。 連接控制碼會識別每個連接。 連接控制碼不只會定義要使用的驅動程式，而是要與該驅動程式搭配使用的資料來源。 在執行 ODBC （驅動程式管理員或驅動程式）的程式碼區段內，連接控制碼會識別包含連接資訊的結構，如下所示：  
+*連接*是由驅動程式和資料來源所組成。 連接控制碼會識別每個連接。 連接控制碼不只會定義要使用的驅動程式，也不會定義要與該驅動程式搭配使用的資料來源。 在處理 ODBC (驅動程式管理員或驅動程式) 的程式碼區段內，連接控制碼會識別包含連接資訊的結構，如下所示：  
   
 -   連接的狀態  
   
 -   目前的連接層級診斷  
   
--   目前在連接上配置的語句和描述項的控制碼  
+-   目前在連接上配置之語句和描述項的控制碼  
   
 -   每個連接屬性的目前設定  
   
- 如果驅動程式支援，ODBC 不會防止多個同時連接。 因此，在特定的 ODBC 環境中，多個連接控制碼可能會指向各種不同的驅動程式和資料來源、相同的驅動程式和各種資料來源，或甚至是與相同驅動程式和資料來源的多個連接。 有些驅動程式會限制它們支援的作用中連線數目;**SQLGetInfo**中的 SQL_MAX_DRIVER_CONNECTIONS 選項會指定特定驅動程式支援的作用中連接數目。  
+ 如果驅動程式支援，ODBC 不會防止多個同時連接。 因此，在特定的 ODBC 環境中，多個連接控制碼可能會指向各種驅動程式和資料來源、相同的驅動程式和各種資料來源，或甚至多個連接至相同的驅動程式和資料來源。 某些驅動程式會限制它們支援的作用中連線數目; **SQLGetInfo** 中的 SQL_MAX_DRIVER_CONNECTIONS 選項會指定特定驅動程式所支援的作用中連線數目。  
   
- 連接控制碼主要用於連接到資料來源（**SQLConnect**、 **SQLDriverConnect**或**SQLBrowseConnect**）、從資料來源（**SQLDisconnect**）中斷連接、取得驅動程式和資料來源（**SQLGetInfo**）的相關資訊、抓取診斷（**SQLGetDiagField**和**SQLGetDiagRec**），以及執行交易（**SQLEndTran**）。 當設定並取得連接屬性（**SQLSetConnectAttr**和**SQLGetConnectAttr**）時，以及取得 SQL 語句（**SQLNativeSql**）的原生格式時，也會使用它們。  
+ 連接處理常式主要是在連接至資料來源時使用 (**SQLConnect**、 **SQLDriverConnect**或 **SQLBrowseConnect**) 、從資料來源 (**SQLDisconnect**) 、取得驅動程式和資料來源的相關資訊 (**SQLGetInfo**) 、取得診斷 (**SQLGetDiagField** 和 **SQLGetDiagRec**) ，以及執行 (**SQLEndTran**) 的交易。 當設定和取得連接屬性時，也會使用它們 (**SQLSetConnectAttr** 和 **SQLGetConnectAttr**) ，以及取得 SQL 語句的原生格式 (**SQLNativeSql**) 。  
   
- 連接控制碼會使用**SQLAllocHandle**配置，並與**SQLFreeHandle**一起釋放。
+ 使用 **SQLAllocHandle** 來配置連接控制碼，並使用 **SQLFreeHandle**來釋放。

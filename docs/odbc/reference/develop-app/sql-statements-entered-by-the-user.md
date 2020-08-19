@@ -1,5 +1,6 @@
 ---
-title: 使用者所輸入的 SQL 語句 |Microsoft Docs
+description: 使用者所輸入的 SQL 陳述式
+title: 使用者輸入的 SQL 語句 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 109af162-93ba-425a-8fe5-49c7dc7cc784
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bf2f8cf36be392cb42a970fa2fb0b19c35daeb39
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6d7d7ee7ffc2a4c949173c3eee888e4c41b9e741
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301959"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424540"
 ---
 # <a name="sql-statements-entered-by-the-user"></a>使用者所輸入的 SQL 陳述式
 執行臨機操作分析的應用程式通常也會允許使用者直接輸入 SQL 語句。 例如：  
@@ -48,4 +49,4 @@ if ((rc1 == SQL_ERROR) || rc1 == SQL_SUCCESS_WITH_INFO) {
 }  
 ```  
   
- 這種方法可簡化應用程式編碼;應用程式會依賴使用者來建立 SQL 語句和資料來源，以檢查語句的有效性。 因為很難以撰寫可充分公開 SQL 複雜性的圖形化使用者介面，所以只要要求使用者輸入 SQL 語句文字，可能是較好的替代方案。 不過，這會要求使用者不僅知道 SQL，也需要瞭解所查詢之資料來源的架構。 有些應用程式會提供圖形化使用者介面，供使用者用來建立基本的 SQL 語句，同時提供文字介面供使用者修改。
+ 這種方法可簡化應用程式撰寫程式碼;應用程式會依賴使用者建立 SQL 語句，並在資料來源上檢查語句的有效性。 因為很難撰寫圖形化使用者介面來適當地公開 SQL 的複雜，所以直接要求使用者輸入 SQL 語句文字可能是最好的替代方法。 不過，這需要使用者不僅知道 SQL，也需要知道所查詢資料來源的架構。 有些應用程式會提供圖形化使用者介面，讓使用者可以用它來建立基本的 SQL 語句，也可以提供文字介面讓使用者可以修改它。

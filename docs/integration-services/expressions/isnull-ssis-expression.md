@@ -1,4 +1,5 @@
 ---
+description: ISNULL (SSIS 運算式)
 title: ISNULL (SSIS 運算式) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 88dbf49e-1307-4dda-b9db-ff1632053550
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 15392de2f7a77edd0a4f43f2edc1346a52cd1a5e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e166a88cf5f1f9b1c5c3d54f80e5367efe4ee90d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914544"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425490"
 ---
 # <a name="isnull-ssis-expression"></a>ISNULL (SSIS 運算式)
 

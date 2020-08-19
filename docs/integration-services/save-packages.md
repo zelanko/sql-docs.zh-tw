@@ -1,4 +1,5 @@
 ---
+description: 儲存封裝
 title: 儲存套件 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fb26be1034632ce747c21239636f9b0a4ec08114
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c9aa01dedc5bb49c2d8b6b9964cd332ee48fd7aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913264"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425170"
 ---
 # <a name="save-packages"></a>儲存封裝
 

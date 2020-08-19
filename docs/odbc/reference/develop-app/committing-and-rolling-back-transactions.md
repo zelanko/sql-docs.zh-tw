@@ -1,4 +1,5 @@
 ---
+description: 認可及回復交易
 title: 認可和回復交易 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 800f2c1a-6f79-4ed1-830b-aa1a62ff5165
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1c272d60242d31622452c4dcb0f6a16c4838768f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b84be4d2734d9485748351c99ff2675bf3b54213
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299108"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424840"
 ---
 # <a name="committing-and-rolling-back-transactions"></a>認可及回復交易
-若要在手動認可模式中認可或回復交易，應用程式會呼叫**SQLEndTran**。 支援交易之 Dbms 的驅動程式通常會藉由執行**COMMIT**或**ROLLBACK**語句來執行此函數。 當連接處於自動認可模式時，驅動程式管理員不會呼叫**SQLEndTran** ;它只會傳回 SQL_SUCCESS，即使應用程式嘗試復原交易也一樣。 由於不支援交易的 Dbms 驅動程式一律處於自動認可模式，因此可以執行**SQLEndTran**以傳回 SQL_SUCCESS，而不需要執行任何動作或完全不進行執行。  
+若要在手動認可模式下認可或復原交易，應用程式會呼叫 **SQLEndTran**。 支援交易的 Dbms 的驅動程式通常會藉由執行 **COMMIT** 或 **ROLLBACK** 語句來執行此函數。 當連接處於自動認可模式時，驅動程式管理員不會呼叫 **SQLEndTran** ;即使應用程式嘗試回復交易，它只會傳回 SQL_SUCCESS。 因為 Dbms 的驅動程式一律處於自動認可模式，所以它們可以執行 **SQLEndTran** 來傳回 SQL_SUCCESS 而不需要執行任何動作，或完全不執行任何動作。  
   
 > [!NOTE]  
->  應用程式不應該藉由使用**SQLExecute**或**SQLExecDirect**來執行**commit**或**ROLLBACK**語句，來認可或回復交易。 執行此動作的效果未定義。 可能的問題包括驅動程式已不再知道交易何時作用中，而且這些語句會針對不支援交易的資料來源而失敗。 這些應用程式應該改為呼叫**SQLEndTran** 。  
+>  應用程式不應使用**SQLExecute**或**SQLExecDirect**執行**commit**或**ROLLBACK**語句，來認可或回復交易。 執行這項操作的效果是未定義的。 可能的問題包括驅動程式不再知道交易何時處於作用中狀態，而且這些語句無法針對不支援交易的資料來源。 這些應用程式應該改為呼叫 **SQLEndTran** 。  
   
- 如果應用程式將環境控制碼傳遞至**SQLEndTran** ，但未傳遞連接控制碼，則驅動程式管理員在概念上會針對每個在環境中具有一或多個作用中連接的驅動程式，以環境控制碼呼叫**SQLEndTran** 。 然後，驅動程式會在環境中的每個連接上認可交易。 不過，請務必瞭解驅動程式或驅動程式管理員都不會在環境中的連線上執行兩階段認可;這只是一種程式設計方便，可同時為環境中的所有連接呼叫**SQLEndTran** 。  
+ 如果應用程式將環境控制碼傳遞至 **SQLEndTran** ，但未通過連線控制碼，則驅動程式管理員會在概念上針對環境中有一或多個作用中連線的每個驅動程式，使用環境控制碼來呼叫 **SQLEndTran** 。 然後，驅動程式會認可環境中每個連接的交易。 不過，請務必瞭解驅動程式和驅動程式管理員都不會在環境中的連線上執行兩階段認可;這只是針對環境中的所有連接同時呼叫 **SQLEndTran** 的程式設計便利性。  
   
- （*兩階段認可*通常用來認可分散到多個資料來源的交易。 在第一個階段中，資料來源會輪詢，以判斷它們是否可以認可交易的一部分。 在第二個階段中，交易實際上是在所有資料來源上進行認可。 如果任何資料來源在第一個階段中回復，而無法認可交易，則不會發生第二個階段。）
+  (*兩階段認可* 通常用來認可分散至多個資料來源的交易。 在第一個階段中，會將資料來源輪詢為是否可以認可交易的部分。 在第二個階段中，交易實際上是在所有資料來源上進行認可。 如果任何資料來源在無法認可交易的第一個階段回復，則不會發生第二個階段。 ) 

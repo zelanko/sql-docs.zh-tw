@@ -1,4 +1,5 @@
 ---
+description: 預設資料來源
 title: 預設資料來源 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,18 +22,18 @@ helpviewer_keywords:
 ms.assetid: dd473cc6-f051-4aa0-ab14-3dd1b37fe99e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 978362b7dfe92d1333f83be684f6326cf25dd69b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0aecd2ec64926a9d1a38d8e3d603124d45223004
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305989"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424712"
 ---
 # <a name="default-data-source"></a>預設資料來源
-在某些情況下，如果應用程式未明確指定，驅動程式可能會選取一個資料來源，稱為預設資料來源：  
+驅動程式可能會在應用程式未明確指定資料來源的情況下，選取稱為預設資料來源的資料來源：  
   
--   在**SQLConnect**的呼叫中， *ServerName*引數是長度為零的字串、Null 指標或預設值。  
+-   在 **SQLConnect** 的呼叫中， *ServerName* 引數為零長度字串、Null 指標或預設值。  
   
--   在呼叫**SQLDriverConnect** ，其中*InConnectionString*會指定**dsn**= DEFAULT，或使用**dsn**關鍵字指定不包含在系統資訊中的資料來源。  
+-   在呼叫 **SQLDriverConnect** 時， *InConnectionString* 會指定 **dsn**= DEFAULT，或以 **DSN** 關鍵字指定不包含在系統資訊中的資料來源。  
   
- 它是由驅動程式定義的預設資料來源的指定方式。 這可能牽涉到系統管理動作，而且可能會因使用者而異。
+ 它是驅動程式定義的預設資料來源指定方式。 這可能牽涉到系統管理動作，而且可能依存于使用者。

@@ -1,4 +1,5 @@
 ---
+description: 連線至 Excel 資料來源 (SQL Server 匯入和匯出精靈)
 title: 連線至 Excel 資料來源 (SQL Server 匯入和匯出精靈) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/02/2018
@@ -9,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 43fbaca0-36d8-4583-9056-af7010209b87
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a017d8de23da9297062e1d232ea86ad2aabb25a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 39ff753dec9f3f918fbd21dea3b04306feba307a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919994"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425300"
 ---
 # <a name="connect-to-an-excel-data-source-sql-server-import-and-export-wizard"></a>連線至 Excel 資料來源 (SQL Server 匯入和匯出精靈)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-本文示範如何從 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面中連線至 **Microsoft Excel** 資料來源。
+本文示範如何從 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源]**** 或 [選擇目的地]**** 頁面中連線至 **Microsoft Excel** 資料來源。
 
 下列螢幕擷取畫面顯示 Microsoft Excel 活頁簿的連接範例。
 
@@ -42,10 +43,10 @@ ms.locfileid: "86919994"
 -   本機電腦上的檔案為 **C:\\MyData.xlsx**。
 -   網路共用上的檔案為 **\\\\Sales\\Database\\Northwind.xlsx**。
 
-或按一下 [瀏覽]  。  
+或按一下 [瀏覽]****。  
   
  **瀏覽**  
- 使用 [開啟]  對話方塊來找出試算表。  
+ 使用 [開啟]**** 對話方塊來找出試算表。  
 
 > [!NOTE]
 > 精靈無法開啟受密碼保護的 Excel 檔案。

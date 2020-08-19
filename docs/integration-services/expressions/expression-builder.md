@@ -1,4 +1,5 @@
 ---
+description: 運算式產生器
 title: 運算式產生器 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0ebadab32a4f668cbcc523038634f171782602ec
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6f8eb6c6771e2684d03380a721c7ef96dcb08488
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917038"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425520"
 ---
 # <a name="expression-builder"></a>運算式產生器
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  使用 [運算式產生器]  對話方塊，即可藉由使用圖形化使用者介面列出變數以及提供函數的內建參考、類型轉換和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 運算式語言所包含的運算子，來建立和編輯屬性運算式或撰寫可設定變數值的運算式。  
+  使用 [運算式產生器]**** 對話方塊，即可藉由使用圖形化使用者介面列出變數以及提供函數的內建參考、類型轉換和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 運算式語言所包含的運算子，來建立和編輯屬性運算式或撰寫可設定變數值的運算式。  
   
  屬性運算式是指派給屬性的運算式。 在評估運算式時，會動態更新屬性以使用運算式的評估結果。 同樣地，變數中所使用的運算式可使運算式的評估結果更新變數值。  
   

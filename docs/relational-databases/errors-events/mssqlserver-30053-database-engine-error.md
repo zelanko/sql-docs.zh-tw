@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_30053
 title: MSSQLSERVER_30053 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -9,12 +10,12 @@ ms.topic: language-reference
 ms.assetid: 8ad23889-e243-4bd7-bc3e-150403399d89
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 243322fabd9ac9fd9a67c3de9ab1e43be6a3a2d8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c48552681225b6e540dfb55347a301ec4fc8c0d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723772"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424390"
 ---
 # <a name="mssqlserver_30053"></a>MSSQLSERVER_30053
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

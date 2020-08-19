@@ -1,4 +1,5 @@
 ---
+description: 建立擴充預存程序
 title: 建立擴充預存程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a649325e99d00aff6115ec5c0039dbbb1c7edb2a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 59a83b935549d1fdf856b61a41b6bc7727b177b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723434"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424180"
 ---
 # <a name="creating-extended-stored-procedures"></a>建立擴充預存程序
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "85723434"
   
 -   系統必須匯出從 DLL 外部呼叫的所有函數 (所有擴充預存程序函數)。  
   
-     您可以在 .def 檔的 [匯出] 區段中列出函式的名稱來匯出函式，也可以在原始程式碼中的函式名稱前面加上 __declspec （dllexport）、Microsoft 編譯器擴充功能（請注意， \_ _declspec （）的開頭為兩個底線）。  
+     您可以藉由在 .def 檔的匯出區段中列出名稱來匯出函式，也可以在原始程式碼中的函式名稱前面加上 __declspec (dllexport) ，也就是 Microsoft 編譯器擴充 (請注意， \_ _declspec ( # A4 的開頭是兩個底線) 。  
   
  建立擴充預存程序 DLL 時需要這些檔案。  
   
@@ -63,16 +64,16 @@ __declspec(dllexport) ULONG __GetXpVersion()
 > [!NOTE]  
 >  __declspec (dllexport) 是 Microsoft 專用的編譯器副檔名。 如果您的編譯器不支援此指示詞，您應該在 DEF 檔案的 EXPORTS 區段下匯出這個函數。  
   
- 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用追蹤旗標（T260）啟動時，或如果具有系統管理員許可權的使用者執行 DBCC TRACEON （260），而且如果擴充預存程式 DLL 不支援 __GetXpVersion （），就會出現警告訊息（錯誤8131：擴充預存程式 dll '% ' 未匯出 \_ _GetXpVersion （））。）會列印到錯誤記錄檔。 （請注意， \_ _GetXpVersion （）的開頭為兩個底線）。  
+ 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 從追蹤旗標 T260 開始時，或如果使用者具有系統管理員許可權，則會執行 DBCC TRACEON (260) ，而且如果擴充預存程式 dll 不支援 __GetXpVersion ( # A3，則會出現警告訊息 (錯誤8131：擴充預存程式 dll '% ' 並未匯出 \_ _GetXpVersion ( # A6. ) 會列印到錯誤記錄檔。  (請注意， \_ _GetXpVersion ( # A2 以兩個底線開始。 )   
   
- 如果擴充預存程序 DLL 匯出 __GetXpVersion()，但是函數所傳回的版本低於伺服器所需要的版本，敘述函數所傳回之版本以及伺服器所需之版本的警告訊息就會列印到錯誤記錄檔中。 如果您收到此訊息，則會從 _GetXpVersion （）傳回不正確的值 \_ ，或使用較舊版本的 srv 來進行編譯。  
+ 如果擴充預存程序 DLL 匯出 __GetXpVersion()，但是函數所傳回的版本低於伺服器所需要的版本，敘述函數所傳回之版本以及伺服器所需之版本的警告訊息就會列印到錯誤記錄檔中。 如果您收到此訊息，您會從 _GetXpVersion ( # A1 傳回不正確的值 \_ ，或您正在使用較舊版本的 srv. h 進行編譯。  
   
 > [!NOTE]  
 >  SetErrorMode 是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Win32 函數，不應該在擴充預存程序中呼叫。  
   
  建議長時間執行的擴充預存程序應該定期呼叫 srv_got_attention，讓該程序可以在連接遭到清除或批次遭到中止時自行結束。  
   
- 若要為擴充預存程序 DLL 偵錯，將其複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Binn 目錄。 若要指定用於偵錯工具的可執行檔，請輸入可執行檔的路徑和檔案名 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （例如，C:\PROGRAM Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe）。 如需 sqlservr.exe 引數的詳細資訊，請參閱[Sqlservr.exe 應用程式](../../tools/sqlservr-application.md)。  
+ 若要為擴充預存程序 DLL 偵錯，將其複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Binn 目錄。 若要指定偵錯工具會話的可執行檔，請輸入可執行檔的路徑和檔案名 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (例如，C:\PROGRAM Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe) 。 如需 sqlservr.exe 引數的詳細資訊，請參閱 [Sqlservr.exe 應用程式](../../tools/sqlservr-application.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [srv_got_attention &#40;擴充預存程式 API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-got-attention-extended-stored-procedure-api.md)  

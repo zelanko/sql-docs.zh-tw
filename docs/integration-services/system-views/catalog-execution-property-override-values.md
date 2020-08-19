@@ -1,4 +1,5 @@
 ---
+description: catalog.execution_property_override_values
 title: catalog.execution_property_override_values | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 83cbdd6f-ddde-47bf-abde-36bd24272621
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bad614fef3ce0a6942803464b618b2d9d3ce98b4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 230e2057c8257a37eb96c683abaf8348307a0cba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912555"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425090"
 ---
 # <a name="catalogexecution_property_override_values"></a>catalog.execution_property_override_values 
 
@@ -35,7 +36,7 @@ ms.locfileid: "86912555"
 |sensitive|**bit**|當值為 1 時，屬性為敏感值，而且會在儲存時加密。 當值為 0 時，屬性不是敏感值，而且會儲存為純文字。|  
   
 ## <a name="remarks"></a>備註  
- 這個檢視會針對使用 [執行封裝] 對話方塊之 [進階] 索引標籤中的 [屬性覆寫] 區段來覆寫屬性值的每個執行，顯示一個資料列。 屬性的路徑衍生自封裝工作的 [封裝路徑]  屬性。  
+ 這個檢視會針對使用 [執行封裝]**** 對話方塊之 [進階]**** 索引標籤中的 [屬性覆寫]**** 區段來覆寫屬性值的每個執行，顯示一個資料列。 屬性的路徑衍生自封裝工作的 [封裝路徑]**** 屬性。  
   
 ## <a name="permissions"></a>權限  
  這個檢視需要下列其中一個權限：  

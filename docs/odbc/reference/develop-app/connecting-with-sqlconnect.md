@@ -1,5 +1,6 @@
 ---
-title: 連接 SQLConnect |Microsoft Docs
+description: 使用 SQLConnect 進行連線
+title: 使用 SQLConnect 連接 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,17 +21,17 @@ helpviewer_keywords:
 ms.assetid: b16319d2-2c2c-4341-abb5-caa9e17362b4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 25c1dca7324f73f6aacf472fb225a09424c73d3a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 96667de75dfbe9c521b5f5e74ec4c1b366da725d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294648"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424830"
 ---
 # <a name="connecting-with-sqlconnect"></a>使用 SQLConnect 進行連線
-**SQLConnect**是最簡單的連接功能。 它需要資料來源名稱，並接受選擇性的使用者識別碼和密碼。 它適用于將資料來源名稱硬式編碼，且不需要使用者識別碼或密碼的應用程式。 它也適用于想要控制自己的「外觀」或沒有使用者介面的應用程式。 這類應用程式可以使用**SQLDataSources**建立資料來源的清單、提示使用者輸入資料來源、使用者識別碼和密碼，然後呼叫**SQLConnect**。  
+**SQLConnect** 是最簡單的連接函數。 它需要資料來源名稱，並接受選擇性的使用者識別碼和密碼。 它很適合用來對資料來源名稱進行硬式編碼，而不需要使用者識別碼或密碼的應用程式。 它也適用于想要控制自己的「外觀與風格」或沒有使用者介面的應用程式。 這類應用程式可以使用 **SQLDataSources**來建立資料來源清單、提示使用者提供資料來源、使用者識別碼和密碼，然後再呼叫 **SQLConnect**。  
   
- 下列範例會使用稱為 Northwind 的 DSN 來連接到 Northwind 資料庫，並從 Employees 資料表中的所有記錄抓取所有名字和姓氏欄位。  
+ 下列範例會使用名為 Northwind 的 DSN 連接到 Northwind 資料庫，並從 Employees 資料表中的所有記錄抓取所有的名字和姓氏欄位。  
   
 ```  
 // Connecting_with_SQLConnect.cpp  

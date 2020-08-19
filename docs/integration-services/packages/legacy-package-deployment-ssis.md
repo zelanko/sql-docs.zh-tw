@@ -1,4 +1,5 @@
 ---
+description: 舊版封裝部署 (SSIS)
 title: 舊版套件部署 (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -31,12 +32,12 @@ helpviewer_keywords:
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1ce860d112f171e4cc341c2b2e2b03149720e6b9
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 17e236dd8563801c487adcf0e0bfcdf822cacef6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472489"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425200"
 ---
 # <a name="legacy-package-deployment-ssis"></a>舊版封裝部署 (SSIS)
 

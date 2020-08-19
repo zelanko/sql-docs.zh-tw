@@ -1,4 +1,5 @@
 ---
+description: catalog.executions (SSISDB 資料庫)
 title: catalog.executions (SSISDB 資料庫) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 33a7603502d1b43ea7cfdd1fa5f9c84720705ade
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 438d551f45447b0b03b075576af9cffb2bde8a36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912548"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425100"
 ---
 # <a name="catalogexecutions-ssisdb-database"></a>catalog.executions (SSISDB 資料庫)
 
@@ -43,9 +44,9 @@ ms.locfileid: "86912548"
 |executed_as_sid|**varbinary(85)**|啟動執行執行個體之使用者的 SID。|  
 |executed_as_name|**nvarchar(128)**|用來啟動執行執行個體之資料庫主體的名稱。|  
 |use32bitruntime|**bit**|指出是否使用 32 位元執行階段，在 64 位元作業系統上執行封裝。 當值為 `1` 時，會使用 32 位元執行階段來執行。 當值為 `0` 時，會使用 64 位元執行階段來執行。|  
-|object_type|**smallint**|物件的類型。 物件可以是專案 (`20`) 或封裝 (`30`)。|  
+|object_type|**smallint**|物件的型別。 物件可以是專案 (`20`) 或封裝 (`30`)。|  
 |object_id|**bigint**|受作業影響之物件的識別碼。|  
-|status|**int**|作業狀態。 可能的值為已建立 (`1`)、執行中 (`2`)、已取消 (`3`)、失敗 (`4`)、暫止 (`5`)、意外結束 (`6`)、成功 (`7`)、停止 (`8`) 和已完成 (`9`)。|  
+|status|**int**|作業的狀態。 可能的值為已建立 (`1`)、執行中 (`2`)、已取消 (`3`)、失敗 (`4`)、暫止 (`5`)、意外結束 (`6`)、成功 (`7`)、停止 (`8`) 和已完成 (`9`)。|  
 |start_time|**datetimeoffset**|執行執行個體的啟動時間。|  
 |end_time|**datetimeoffsset**|執行執行個體的結束時間。|  
 |caller_sid|**varbinary(85)**|使用者的安全性識別碼 (SID) (如果使用 Windows 驗證登入)。|  

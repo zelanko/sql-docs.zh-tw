@@ -1,4 +1,5 @@
 ---
+description: '&amp;&amp; (邏輯 AND) (SSIS 運算式)'
 title: '&amp;&amp; (邏輯 AND) (SSIS 運算式) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8cb3517-d5d1-4861-9f04-905c719185ff
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 01e82c8971ae89580fa9613e3e9f94de11b6b4ac
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: abb14eae98abaad9ebaaf70331abd42300ee4eee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914471"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425400"
 ---
 # <a name="ampamp-logical-and-ssis-expression"></a>&amp;&amp; (邏輯 AND) (SSIS 運算式)
 
@@ -45,14 +46,14 @@ boolean_expression1 && boolean_expression2
 ## <a name="remarks"></a>備註  
  下表顯示 && 運算子的結果。  
   
-|結果|運算是|運算是|  
+|結果|運算是|運算式|  
 |------------|----------------|----------------|  
-|TRUE|TRUE|TRUE|  
-|FALSE|TRUE|FALSE|  
+|TRUE|TRUE|true|  
+|false|true|FALSE|  
 |FALSE|FALSE|FALSE|  
 |NULL|NULL|NULL|  
-|NULL|NULL|TRUE|  
-|FALSE|NULL|FALSE|  
+|NULL|NULL|true|  
+|false|NULL|false|  
   
 ## <a name="expression-examples"></a>運算式範例  
  此範例使用 **StandardCost** 和 **ListPrice** 資料行。 如果 **StandardCost** 資料行的值小於 300，且 **ListPrice** 資料行的值大於 500，則範例的評估結果為 TRUE。  

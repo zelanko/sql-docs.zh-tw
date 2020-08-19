@@ -1,4 +1,5 @@
 ---
+description: Integration Services (SSIS) 運算式
 title: Integration Services (SSIS) 運算式 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a5f9955f32db6b9d803541229a700671ec666b55
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: def15673fbc8c92148fa8ab025d6e1769b2ee236
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914551"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425500"
 ---
 # <a name="integration-services-ssis-expressions"></a>Integration Services (SSIS) 運算式
 
@@ -57,7 +58,7 @@ ms.locfileid: "86914551"
  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，已經設定運算式的連接管理員、變數和工作旁，會顯示一個特殊的圖示標記。 所有支援運算式的 SSIS 物件，都可以使用 **HasExpressions** 屬性，但不包括變數。 這個屬性可讓您輕易地識別哪些物件具有運算式。  
   
 ## <a name="expression-builder"></a>運算式產生器  
- 運算式產生器是可以用於建立運算式的圖形工具。 其位於 **[條件式分割轉換編輯器]** 、 **[衍生的資料行轉換編輯器]** 對話方塊及 **[運算式產生器]** 對話方塊中，是可以用於建立運算式的圖形工具。  
+ 運算式產生器是可以用於建立運算式的圖形工具。 其位於 **[條件式分割轉換編輯器]**、 **[衍生的資料行轉換編輯器]** 對話方塊及 **[運算式產生器]** 對話方塊中，是可以用於建立運算式的圖形工具。  
   
  運算式產生器會提供包含封裝特定之元素的資料夾和包含運算式語言所提供之函數、類型轉換和運算子的資料夾。 封裝特定的元素包括系統變數和使用者自訂變數。 在 **[條件式分割轉換編輯器]** 和 **[衍生的資料行轉換編輯器]** 對話方塊中，還可以檢視資料行。 若要建立轉換的運算式，可以將項目從資料夾拖曳至 **[條件]** 或 **[運算式]** 資料行，或直接在資料行中輸入運算式。 運算式產生器會自動加入必要的語法元素，例如變數名稱的前置詞 \@。  
   

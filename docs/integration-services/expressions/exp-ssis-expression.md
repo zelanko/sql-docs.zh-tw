@@ -1,4 +1,5 @@
 ---
+description: EXP (SSIS 運算式)
 title: EXP (SSIS 運算式) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4cd96d3c-58c9-4a67-a6f6-b72758232912
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 79770c7de19581540fc92a9a7214b312b03d85be
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 09848aaee36990b8fd56e1f73cb4ba0f5c934095
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917054"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425480"
 ---
 # <a name="exp-ssis-expression"></a>EXP (SSIS 運算式)
 

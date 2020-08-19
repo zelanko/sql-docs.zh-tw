@@ -1,4 +1,5 @@
 ---
+description: 了解指令碼元件物件模型
 title: 了解指令碼元件物件模型 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7e265f95741ba3957902e7f502232bc4c08bbcbd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bc5034010508f0a24f703962e4b78b7c9376ee9f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914227"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425340"
 ---
 # <a name="understanding-the-script-component-object-model"></a>了解指令碼元件物件模型
 

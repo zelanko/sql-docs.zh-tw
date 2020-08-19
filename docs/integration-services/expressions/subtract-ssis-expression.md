@@ -1,4 +1,5 @@
 ---
+description: '- (減) (SSIS 運算式)'
 title: '- (減) (SSIS 運算式) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0cfc28d52908a0578eeebe88ee7f9db749809ecd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f0615678e5c6613b5b709f711dc3f2cf9e7dfa8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915187"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425360"
 ---
 # <a name="--subtract-ssis-expression"></a>- (減) (SSIS 運算式)
 

@@ -1,4 +1,5 @@
 ---
+description: == (等於) (SSIS 運算式)
 title: == (等於) (SSIS 運算式) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5a8e26da00bf530052b1ae7f342d40f922a71d25
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 65ef2568a30ada4503252adf404c24b2c8b5017d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86910759"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425570"
 ---
 # <a name="-equal-ssis-expression"></a>== (等於) (SSIS 運算式)
 

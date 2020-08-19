@@ -1,4 +1,5 @@
 ---
+description: catalog.set_environment_variable_property (SSISDB 資料庫)
 title: catalog.set_environment_variable_property (SSISDB 資料庫) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: c1deb31e-b8d1-44ca-b355-570959bc6478
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: adb5a783c928cf9bac1f3ac9668306bff5eb8456
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f4cf7d169d9cdd3e319b243f831a76bb3fe3ab4a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912861"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425120"
 ---
 # <a name="catalogset_environment_variable_property-ssisdb-database"></a>catalog.set_environment_variable_property (SSISDB 資料庫)
 
@@ -47,10 +48,10 @@ catalog.set_environment_variable_property [ @folder_name = ] folder_name
  環境變數的名稱。 *variable_name* 是 **nvarchar(128)** 。  
   
  [ @property_name = ] *property_name*  
- 環境變數屬性的名稱。 *property_name* 是 **nvarchar(128)** 。  
+ 環境變數屬性的名稱。 *property_name* 是 **nvarchar(128)**。  
   
  [ @property_value = ] *property_value*  
- 環境變數屬性的值。 *property_value* 是 **nvarchar(4000)** 。  
+ 環境變數屬性的值。 *property_value* 是 **nvarchar(4000)**。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  

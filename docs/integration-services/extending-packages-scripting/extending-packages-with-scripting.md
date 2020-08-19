@@ -1,4 +1,5 @@
 ---
+description: 使用指令碼擴充封裝
 title: 使用指令碼擴充封裝 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 67fe18ef-f3aa-41d4-9b9d-5defd4618c4b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e7721e38ca3f9e19ecf3d8d4ee6113f1768427b4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b0c4a0b243fbb6935a0d456955e70b58f6ac1394
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915947"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425330"
 ---
 # <a name="extending-packages-with-scripting"></a>使用指令碼擴充封裝
 
@@ -42,7 +43,7 @@ ms.locfileid: "86915947"
  [參考指令碼解決方案中的其他組件](../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)  
  討論在指令碼專案中參考和使用外部組件與命名空間所需的步驟。  
   
- [以指令碼工作來擴充套件](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)  
+ [以指令碼工作擴充套件](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)  
  討論如何透過使用指令碼工作建立自訂工作。 通常會在每個封裝執行時呼叫工作，或是在封裝開啟每個資料來源時呼叫一次。  
   
  [以指令碼元件來擴充資料流程](../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  

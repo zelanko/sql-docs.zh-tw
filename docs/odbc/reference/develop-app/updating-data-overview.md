@@ -1,4 +1,5 @@
 ---
+description: 更新資料概觀
 title: 正在更新資料總覽 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 062036a4-cda6-4aaa-9765-f1ec3e0b31b1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9972ab61f041385ae4ca616df093ae63ad7a47d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2b1755ea75426030a96ed7b349cc82f0fc7e282a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300384"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424420"
 ---
 # <a name="updating-data-overview"></a>更新資料概觀
-應用程式可以藉由執行 SQL 語句或藉由呼叫**SQLSetPos**或**SQLBulkOperations**來更新資料。 **UPDATE**、 **DELETE**和**INSERT**語句直接在資料來源上執行，而且通常會受到驅動程式的支援。 搜尋的 update 和 delete 語句包含要變更之資料列的規格。 定位的 update 和 delete 語句和**SQLSetPos**會透過資料指標來處理資料來源，但較不普遍受到支援。  
+應用程式可以藉由執行 SQL 語句或呼叫 **SQLSetPos** 或 **SQLBulkOperations**來更新資料。 **UPDATE**、 **DELETE**和 **INSERT** 語句會直接在資料來源上運作，而且驅動程式通常會支援這些語句。 搜尋的 update 和 delete 語句包含要變更之資料列的規格。 定位的 update 和 delete 語句和 **SQLSetPos** 會透過資料指標在資料來源上執行動作，但較不廣泛支援。  
   
- 資料指標是否可以使用本節所述的方法來偵測對結果集所做的變更，取決於資料指標的類型及其實作為方式。 順向資料指標不會重新流覽資料列，因此不會偵測到任何變更。 如需可滾動資料指標是否能偵測變更的相關資訊，請參閱可滾動的資料[指標](../../../odbc/reference/develop-app/scrollable-cursors.md)。  
+ 資料指標是否可以使用本節所述的方法來偵測對結果集所做的變更，取決於資料指標的類型及其實作為方式。 順向資料指標不會重新流覽資料列，因此不會偵測到任何變更。 如需可滾動資料指標是否可以偵測變更的相關資訊，請參閱可滾動的資料 [指標](../../../odbc/reference/develop-app/scrollable-cursors.md)。  
   
  此章節包含下列主題。  
   

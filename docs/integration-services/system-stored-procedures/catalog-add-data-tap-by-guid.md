@@ -1,4 +1,5 @@
 ---
+description: catalog.add_data_tap_by_guid
 title: catalog.add_data_tap_by_guid | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: ed9d7fa3-61a1-4e21-ba43-1ead7dfc74eb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9c31a8eb1991871190a7d79070c85827bb184958
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: edf793ad65fa40152ed4d00c569cf001ae811b0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915064"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425160"
 ---
 # <a name="catalogadd_data_tap_by_guid"></a>catalog.add_data_tap_by_guid 
 

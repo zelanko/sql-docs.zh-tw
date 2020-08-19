@@ -1,5 +1,6 @@
 ---
-title: 保留關鍵字 |Microsoft Docs
+description: 保留關鍵字
+title: 保留的關鍵字 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3c83df20d95b9fe968b7c1c01cd8a9031043c8ad
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: a469e48f9de46453f60cfcbb468110dfb1f5d9dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362983"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424980"
 ---
 # <a name="reserved-keywords"></a>保留關鍵字
-以下是 ODBC 函數呼叫所用的保留字。 這些單字不會限制最小的 SQL 文法;不過，為了確保與支援核心 SQL 文法的驅動程式相容，應用程式應該避免使用任何這些關鍵字。 #**Define**值 SQL_ODBC_KEYWORDS 包含這些關鍵字的逗號分隔清單。  
+以下是 ODBC 函數呼叫所用的保留字。 這些字組不會限制 SQL 文法的最小值;不過，為了確保與支援核心 SQL 文法的驅動程式相容，應用程式應該避免使用這些關鍵字。 #**Define** 值 SQL_ODBC_KEYWORDS 包含這些關鍵字的逗號分隔清單。  
 
 :::row:::
     :::column:::
@@ -111,7 +112,7 @@ ms.locfileid: "87362983"
         EXISTS  
         EXTERNAL  
         EXTRACT  
-        FALSE  
+        false  
         FETCH  
         FIRST  
         FLOAT  
@@ -184,7 +185,7 @@ ms.locfileid: "87362983"
         ONLY  
         OPEN  
         OPTION  
-        OR  
+        或者  
         ORDER  
         OUTER  
         OUTPUT  
@@ -246,7 +247,7 @@ ms.locfileid: "87362983"
         TRANSLATE  
         TRANSLATION  
         TRIM  
-        TRUE  
+        true  
         UNION  
         UNIQUE  
         UNKNOWN  

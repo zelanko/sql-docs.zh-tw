@@ -1,4 +1,5 @@
 ---
+description: '&lt;= (小於或等於) (SSIS 運算式)'
 title: '&lt;= (小於或等於) (SSIS 運算式) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 946c5630-dccf-4dae-9cfd-6ea823641ab2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dbc5ff8aeceff48d203e15242cf8dfc305694c33
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5241cb30244dd3a3ee9371990d5843988ba4e16d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914504"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425430"
 ---
 # <a name="lt-less-than-or-equal-to-ssis-expression"></a>&lt;= (小於或等於) (SSIS 運算式)
 

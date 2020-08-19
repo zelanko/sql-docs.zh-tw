@@ -1,4 +1,5 @@
 ---
+description: 連接到 Azure Blob 儲存體 (SQL Server 匯入和匯出精靈)
 title: 連接到 Azure Blob 儲存體 (SQL Server 匯入和匯出精靈) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -9,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2c15c03c5041aeebb2ac46776eb65921f4725bd8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7338ef58a86667b829fc1554660b316690de451a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914095"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425260"
 ---
 # <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>連接到 Azure Blob 儲存體 (SQL Server 匯入和匯出精靈)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-本主題示範如何透過 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面，連接到 **Azure Blob 儲存體**資料來源。
+本主題示範如何透過 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源]**** 或 [選擇目的地]**** 頁面，連接到 **Azure Blob 儲存體**資料來源。
 
 > [!NOTE]
 > 若要使用 Azure Blob 來源或目的地，您必須安裝適用於 SQL Server Integration Services 的 Azure Feature Pack。

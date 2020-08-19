@@ -1,4 +1,5 @@
 ---
+description: XML 來源自訂屬性
 title: XML 來源自訂屬性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d9d64d5b477ff31334bc6b60b88e1bbb01811d8d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2f77a63b11636f2be16e3d7c81c5b902a95b2a84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920302"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425590"
 ---
 # <a name="xml-source-custom-properties"></a>XML 來源自訂屬性
 
@@ -29,7 +30,7 @@ ms.locfileid: "86920302"
 |屬性名稱|資料類型|描述|  
 |-------------------|---------------|-----------------|  
 |AccessMode|整數|用來存取 XML 資料的模式。|  
-|UseInlineSchema|Boolean|一個值，指出是否要使用 XML 來源中的內嵌結構描述定義。 此屬性的預設值為 **False**。|  
+|UseInlineSchema|布林值|一個值，指出是否要使用 XML 來源中的內嵌結構描述定義。 此屬性的預設值為 **False**。|  
 |XMLData|String|要從中擷取 XML 資料的檔案或變數。<br /><br /> 此屬性的值可以使用屬性運算式指定。|  
 |XMLSchemaDefinition|String|結構描述定義檔 (.xsd) 的路徑和檔案名稱。<br /><br /> 此屬性的值可以使用屬性運算式指定。|  
   

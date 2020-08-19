@@ -1,4 +1,5 @@
 ---
+description: catalog.set_execution_parameter_value (SSISDB 資料庫)
 title: catalog.set_execution_parameter_value (SSISDB 資料庫) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: da59f45f073f579a02b84727fad0e5ffef3faec5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7cc721f7f3568303d9fbb9f9a5f0724f8548207d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912834"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425110"
 ---
 # <a name="catalogset_execution_parameter_value-ssisdb-database"></a>catalog.set_execution_parameter_value (SSISDB 資料庫)
 
@@ -65,7 +66,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
  *object_type* 是 **smallint**。  
   
  [ @parameter_name = ] *parameter_name*  
- 參數名稱。 *parameter_name* 是 **nvarchar(128)** 。  
+ 參數名稱。 *parameter_name* 是 **nvarchar(128)**。  
   
  [ @parameter_value = ] *parameter_value*  
  參數的值。 *parameter_value* 是 **sql_variant**。  
@@ -79,7 +80,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
 |值|描述|  
 |-----------|-----------------|  
-|0|None<br /><br /> 關閉記錄功能。 只記錄封裝執行狀態。|  
+|0|無<br /><br /> 關閉記錄功能。 只記錄封裝執行狀態。|  
 |1|基本<br /><br /> 記錄所有事件，自訂和診斷事件除外。 這是預設值。|  
 |2|效能<br /><br /> 只記錄效能統計資料，以及 OnError 和 OnWarning 事件。|  
 |3|「詳細資訊」<br /><br /> 記錄所有事件，包括自訂和診斷事件。 <br />自訂事件，包括 Integration Services 工作所記錄的那些事件。 如需詳細資訊，請參閱[自訂訊息以進行記錄](../../integration-services/performance/integration-services-ssis-logging.md#custom_messages)|  

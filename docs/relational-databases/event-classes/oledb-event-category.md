@@ -1,4 +1,5 @@
 ---
+description: OLEDB 事件類別目錄
 title: OLEDB 事件類別目錄 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: cf93e424-3dac-462d-b3da-92e7d0b064d4
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca046bacc1a0dff03ddab4d0fc64004c50dc307c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8535123c46bc7249704808762b9b5d59c773976f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726231"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424220"
 ---
 # <a name="oledb-event-category"></a>OLEDB 事件類別目錄
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

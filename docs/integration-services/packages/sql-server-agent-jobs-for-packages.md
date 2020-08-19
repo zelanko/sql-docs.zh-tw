@@ -1,4 +1,5 @@
 ---
+description: 封裝的 SQL Server Agent 作業
 title: 套件的 SQL Server Agent 作業 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/29/2020
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 529f1eec3ca3c7f0fdb97b05aa86c6344721931f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 83eaa525c9cfa6ca80be2712fd0d21e42cc4f180
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919156"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425190"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>封裝的 SQL Server Agent 作業
 

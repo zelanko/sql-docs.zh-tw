@@ -1,4 +1,5 @@
 ---
+description: 執行 Integration Services (SSIS) 封裝
 title: 執行 Integration Services (SSIS) 套件 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/04/2018
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 29d9fce968a000a2212ada9776d1b5f3a812c25f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6e4119aacc17dec69b5d2c9aec560f3feb9dc0ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919157"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425230"
 ---
 # <a name="run-integration-services-ssis-packages"></a>執行 Integration Services (SSIS) 封裝
 

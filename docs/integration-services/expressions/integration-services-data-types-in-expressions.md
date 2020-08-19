@@ -1,4 +1,5 @@
 ---
+description: 運算式中的 Integration Services 資料類型
 title: 運算式中的 Integration Services 資料類型 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ae5e95da6599c4af10513ec72194671ba71561b2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f1812ac61d34e5d2d25738cffed0b5caf117ee82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914564"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425530"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>運算式中的 Integration Services 資料類型
 

@@ -1,4 +1,5 @@
 ---
+description: 停用索引和條件約束
 title: 停用索引和條件約束 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -24,12 +25,12 @@ ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6a012fc4aca38401a7476b759a9a13995dad87b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 464b8069b09af65c86521878803fdf1bd7744548
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629778"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424170"
 ---
 # <a name="disable-indexes-and-constraints"></a>停用索引和條件約束
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "85629778"
   
 -   **使用下列方法停用索引：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -105,9 +106,9 @@ ms.locfileid: "85629778"
   
 4.  按一下加號展開 **[索引]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您要停用的索引，然後選取 [停用]  。  
+5.  以滑鼠右鍵按一下您要停用的索引，然後選取 [停用]****。  
   
-6.  在 **[停用索引]** 對話方塊中，確認 **[要停用的索引]** 方格中有正確索引，然後按一下 **[確定]** 。  
+6.  在 **[停用索引]** 對話方塊中，確認 **[要停用的索引]** 方格中有正確索引，然後按一下 **[確定]**。  
   
 #### <a name="to-disable-all-indexes-on-a-table"></a>停用資料表上的所有索引  
   
@@ -117,9 +118,9 @@ ms.locfileid: "85629778"
   
 3.  按一下加號展開要停用索引的資料表。  
   
-4.  以滑鼠右鍵按一下 [索引]  資料夾，並選取 [全部停用]  。  
+4.  以滑鼠右鍵按一下 [索引]**** 資料夾，並選取 [全部停用]****。  
   
-5.  在 **[停用索引]** 對話方塊中，確認 **[要停用的索引]** 方格中有正確索引，然後按一下 **[確定]** 。 若要從 **[要停用的索引]** 方格中移除索引，請選取索引，然後按下 DELETE 鍵。  
+5.  在 **[停用索引]** 對話方塊中，確認 **[要停用的索引]** 方格中有正確索引，然後按一下 **[確定]**。 若要從 **[要停用的索引]** 方格中移除索引，請選取索引，然後按下 DELETE 鍵。  
   
  **[停用索引]** 對話方塊中提供下列資訊：  
   
@@ -130,7 +131,7 @@ ms.locfileid: "85629778"
  顯示建立索引的資料表名稱或檢視名稱。  
   
  **索引類型**  
- 顯示索引的類型：[叢集]  、[非叢集]  、[空間]  或 [XML]  。  
+ 顯示索引的類型：[叢集]****、[非叢集]****、[空間]**** 或 [XML]****。  
   
  **狀態**  
  顯示停用作業的狀態。 執行之後可能的值：  
@@ -139,11 +140,11 @@ ms.locfileid: "85629778"
   
      執行之前 **[狀態]** 為空白。  
   
--   **進行中**  
+-   **正在進行**  
   
      已經開始停用索引，但尚未完成。  
   
--   「成功」   
+-   「成功」  
   
      已成功地完成停用作業。  
   
@@ -151,11 +152,11 @@ ms.locfileid: "85629778"
   
      停用索引作業期間發生錯誤，未成功地完成作業。  
   
--   **Stopped**  
+-   **已停止**  
   
      因為使用者停止作業，所以未成功地完成停用索引。  
   
- **訊息**  
+ **Message**  
  提供停用作業期間錯誤訊息的文字。 在執行期間，會以超連結顯示錯誤。 超連結的文字會描述錯誤的主體。 **[訊息]** 資料行通常寬度不足以讀取完整訊息文字。 取得完整文字有兩種方式：  
   
 -   將滑鼠指標移至訊息資料格上，即可顯示具有錯誤文字的工具提示。  

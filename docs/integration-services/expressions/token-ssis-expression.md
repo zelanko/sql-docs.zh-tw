@@ -1,4 +1,5 @@
 ---
+description: TOKEN (SSIS 運算式)
 title: TOKEN (SSIS 運算式) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ca682adb998ad20b04e40cda29d5a083f4c4e58f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2490c95bf099e586de9692b6057f59fc6a6ce2fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913484"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425350"
 ---
 # <a name="token--ssis-expression"></a>TOKEN (SSIS 運算式)
 

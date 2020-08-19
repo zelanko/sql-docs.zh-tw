@@ -1,4 +1,5 @@
 ---
+description: '? 所解碼的字元：(條件) (SSIS 運算式)'
 title: '? : (條件) (SSIS 運算式) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 07e6668750bfd58e31d5f9dda0205cf8d57e967f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f63ea95489b639672ddb50b44fa882eecc463025
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923474"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425560"
 ---
-# <a name="--conditional-ssis-expression"></a>? : (條件) (SSIS 運算式)
+# <a name="--conditional-ssis-expression"></a>? 所解碼的字元：(條件) (SSIS 運算式)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 

@@ -1,4 +1,5 @@
 ---
+description: 虛擬類型識別碼
 title: 虛擬類型識別碼 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 8fa365d2-9de0-40c6-bcd2-a85613061baf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3fb8b89b3a4acf979a1cb67621b2223d22d303c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4c493366bebc1a9f0aff6a51089ae2eef80d4d86
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307979"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424990"
 ---
 # <a name="pseudo-type-identifiers"></a>虛擬類型識別碼
-為了方便應用程式設計，ODBC 會定義一些虛擬類型識別碼。 這些識別碼實際上並不會對應至實際的資料類型，而是根據情況而定，解析為現有的資料類型。  
+針對應用程式設計便利性，ODBC 會定義一些虛擬類型識別碼。 這些識別碼實際上並不會對應到實際的資料類型，而是根據這種情況來解析為現有的資料類型。  
   
  此章節包含下列主題。  
   

@@ -1,4 +1,5 @@
 ---
+description: 連線至 Oracle 資料來源 (SQL Server 匯入和匯出精靈)
 title: 連線至 Oracle 資料來源 (SQL Server 匯入和匯出精靈) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/29/2020
@@ -9,25 +10,25 @@ ms.topic: conceptual
 ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 202527022ccc78a4f0c89bb3cfbfe775ecde207b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 589010cedb022bfdaf22590eaeb92bea76b54420
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914116"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425270"
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>連線至 Oracle 資料來源 (SQL Server 匯入和匯出精靈)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-本主題示範如何透過 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面，連線至 **Oracle** 資料來源。 您可以使用數個資料提供者來連線至 Oracle。
+本主題示範如何透過 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源]**** 或 [選擇目的地]**** 頁面，連線至 **Oracle** 資料來源。 您可以使用數個資料提供者來連線至 Oracle。
 
 > [!IMPORTANT]
 > 這一篇 Microsoft 文章範圍未涵蓋連線至 Oracle 資料庫的詳細需求和必要條件。 本文假設您已安裝 Oracle 用戶端軟體，並已成功連線至目標 Oracle 資料庫。 如需詳細資訊，請參閱 Oracle 資料庫管理員或 Oracle 文件集。
 
 ## <a name="connect-to-oracle-with-the-net-framework-data-provider-for-oracle"></a>使用 .NET Framework Data Provider for Oracle 連線至 Oracle
-在您選取精靈的 [選擇資料來源] 或 [選擇目的地] 頁面上的 [.NET Framework Data Provider for Oracle] 之後，頁面會顯示提供者的分組選項清單。 其中有許多是不易記的名稱和不熟悉的設定。 不過別擔心，因為您只需要提供兩、三項資訊即可。 您可以忽略其他設定的預設值。
+在您選取精靈的 [選擇資料來源]**** 或 [選擇目的地]**** 頁面上的 [.NET Framework Data Provider for Oracle]**** 之後，頁面會顯示提供者的分組選項清單。 其中有許多是不易記的名稱和不熟悉的設定。 不過別擔心，因為您只需要提供兩、三項資訊即可。 您可以忽略其他設定的預設值。
 
 > [!NOTE]
 > 不論 Oracle 是您的來源還是目的地，此資料提供者的連線選項都會相同。 也就是，您在精靈的 [選擇資料來源]  和 [選擇目的地]  頁面上看到的選項會相同。
@@ -35,15 +36,15 @@ ms.locfileid: "86914116"
 |必要資訊|.Net Framework Data Provider for Oracle 屬性|
 |---|---|
 |伺服器名稱|**資料來源**|
-|驗證 (登入) 資訊|[使用者識別碼]  和 [密碼]  ；或 [整合式安全性] |
+|驗證 (登入) 資訊|[使用者識別碼]**** 和 [密碼]****；或 [整合式安全性]****|
 |||
 
-您不需要在清單的 [ConnectionString]  欄位中輸入連接字串。 當您為 Oracle 伺服器名稱 ([資料來源]  ) 輸入個別的值和登入資訊之後，精靈即會從個別的屬性和屬性值來組合連接字串。 
+您不需要在清單的 [ConnectionString]**** 欄位中輸入連接字串。 當您為 Oracle 伺服器名稱 ([資料來源]****) 輸入個別的值和登入資訊之後，精靈即會從個別的屬性和屬性值來組合連接字串。 
 
 ![使用 .NET 提供者連線至 Oracle](../../integration-services/import-export-data/media/connect-to-oracle-with-net-provider.jpg)
 
 ## <a name="connect-to-oracle-with-the-microsoft-odbc-driver-for-oracle"></a>使用 Microsoft ODBC Driver for Oracle 連線至 Oracle
-ODBC 驅動程式未列在資料來源的下拉式清單中。 若要使用 ODBC 驅動程式連線，請先在 [選擇資料來源] 或 [選擇目的地] 頁面上，將 [.NET Framework Data Provider for ODBC] 選取為資料來源。 此提供者作用為 ODBC 驅動程式的包裝函式。
+ODBC 驅動程式未列在資料來源的下拉式清單中。 若要使用 ODBC 驅動程式連線，請先在 [選擇資料來源]**** 或 [選擇目的地]**** 頁面上，將 [.NET Framework Data Provider for ODBC]**** 選取為資料來源。 此提供者作用為 ODBC 驅動程式的包裝函式。
 
 以下是您選取 .NET Framework Data Provider for ODBC 之後立即看到的一般畫面。
 

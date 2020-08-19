@@ -1,4 +1,5 @@
 ---
+description: Integration Services 封裝所記錄的事件
 title: Integration Services 套件所記錄的事件 | Microsoft Docs
 ms.custom: supportability
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cd247b193540076a1d0f922e94e752b1ea0456bb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 44f3efa30bc33bd7a8b9bc5057d2877be62f8f8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919139"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425180"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Integration Services 封裝所記錄的事件
 
@@ -39,7 +40,7 @@ ms.locfileid: "86919139"
 > [!NOTE]  
 >  此封裝會記錄下表中的訊息，即使您尚未針對此封裝啟用記錄也一樣。  
   
-|事件識別碼|符號名稱|Text|注意|  
+|事件識別碼|符號名稱|Text|備註|  
 |--------------|-------------------|----------|-----------|  
 |12288|DTS_MSG_PACKAGESTART|封裝 "" 已啟動。|封裝已開始執行。|  
 |12289|DTS_MSG_PACKAGESUCCESS|封裝 "" 已順利完成。|封裝執行成功，而且不再執行。|  
@@ -59,7 +60,7 @@ ms.locfileid: "86919139"
   
 ### <a name="messages-about-the-stages-of-package-execution"></a>封裝執行階段的相關訊息  
   
-|事件識別碼|符號名稱|Text|注意|  
+|事件識別碼|符號名稱|Text|備註|  
 |--------------|-------------------|----------|-----------|  
 |12544|DTS_MSG_EVENTLOGENTRY|事件名稱: %1%r 訊息: %9%r 操作員: %2%r 來源名稱: %3%r 來源識別碼: %4%r 執行識別碼: %5%r 開始時間: %6%r 結束時間: %7%r 資料碼: %8|當您將封裝記錄設定為應用程式事件記錄檔時，各種訊息都會使用這個一般格式。|  
 |12556|DTS_MSG_EVENTLOGENTRY_PACKAGESTART|事件名稱: %1%r 訊息: %9%r 操作員: %2%r 來源名稱: %3%r 來源識別碼: %4%r 執行識別碼: %5%r 開始時間: %6%r 結束時間: %7%r 資料碼: %8|封裝已啟動。|  
@@ -72,7 +73,7 @@ ms.locfileid: "86919139"
 ### <a name="messages-about-events-that-occur"></a>發生之事件的相關訊息  
  下表只會列出屬於事件結果的某些訊息。 如需 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所使用之錯誤、警告和參考用訊息的更完整清單，請參閱 [Integration Services 錯誤和訊息參考](../../integration-services/integration-services-error-and-message-reference.md)。  
   
-|事件識別碼|符號名稱|Text|注意|  
+|事件識別碼|符號名稱|Text|備註|  
 |--------------|-------------------|----------|-----------|  
 |12251|DTS_MSG_EVENTLOGENTRY_TASKFAILED|事件名稱: %1%r 訊息: %9%r 操作員: %2%r 來源名稱: %3%r 來源識別碼: %4%r 執行識別碼: %5%r 開始時間: %6%r 結束時間: %7%r 資料碼: %8|工作失敗。|  
 |12250|DTS_MSG_EVENTLOGENTRY_ERROR|事件名稱: %1%r 訊息: %9%r 操作員: %2%r 來源名稱: %3%r 來源識別碼: %4%r 執行識別碼: %5%r 開始時間: %6%r 結束時間: %7%r 資料碼: %8|這則訊息會報告已經發生的錯誤。|  
@@ -80,30 +81,30 @@ ms.locfileid: "86919139"
 |12258|DTS_MSG_EVENTLOGENTRY_INFORMATION|事件名稱: %1%r 訊息: %9%r 操作員: %2%r 來源名稱: %3%r 來源識別碼: %4%r 執行識別碼: %5%r 開始時間: %6%r 結束時間: %7%r 資料碼: %8|這則訊息會報告與錯誤或警告沒有關聯的參考用訊息。|  
 
 ## <a name="view-log-entries-in-the-log-events-window"></a>檢視記錄事件視窗中的記錄項目
-  此程序描述如何執行封裝並檢視封裝寫入的記錄項目。 您可以即時檢視記錄項目， 也可以複製及儲存寫入 [記錄事件]  視窗中的記錄項目，以執行進一步的分析。  
+  此程序描述如何執行封裝並檢視封裝寫入的記錄項目。 您可以即時檢視記錄項目， 也可以複製及儲存寫入 [記錄事件]**** 視窗中的記錄項目，以執行進一步的分析。  
   
- 您不需要將記錄項目寫入記錄檔，以便將項目寫入 [記錄事件]  視窗中。  
+ 您不需要將記錄項目寫入記錄檔，以便將項目寫入 [記錄事件]**** 視窗中。  
   
 ### <a name="to-view-log-entries"></a>檢視記錄項目  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
-2.  在 **[SSIS]** 功能表上，按一下 **記錄事件**。 您可以將 View.LogEvents 命令對應到您在 [選項] 對話方塊的 [鍵盤] 頁面中所選擇的組合鍵，以選擇性地顯示 [記錄事件] 視窗。  
+2.  在 **[SSIS]** 功能表上，按一下 **記錄事件**。 您可以將 View.LogEvents 命令對應到您在 [選項]**** 對話方塊的 [鍵盤]**** 頁面中所選擇的組合鍵，以選擇性地顯示 [記錄事件]**** 視窗。  
   
 3.  在 **[偵錯]** 功能表上，按一下 **[開始偵錯]** 。  
   
-     當執行階段遇到為了記錄而啟用的事件與自訂訊息時，每個事件或訊息的記錄項目都會寫入 [記錄事件]  視窗。  
+     當執行階段遇到為了記錄而啟用的事件與自訂訊息時，每個事件或訊息的記錄項目都會寫入 [記錄事件]**** 視窗。  
   
 4.  在 **[偵錯]** 功能表上，按一下 **[停止偵錯]** 。  
   
-     記錄項目將繼續保留在 [記錄事件]  視窗中，直到您重新執行封裝、執行不同的封裝或關閉 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 為止。  
+     記錄項目將繼續保留在 [記錄事件]**** 視窗中，直到您重新執行封裝、執行不同的封裝或關閉 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 為止。  
   
-5.  檢視 [記錄事件]  視窗中的記錄項目。  
+5.  檢視 [記錄事件]**** 視窗中的記錄項目。  
   
-6.  (選擇性) 按一下要複製的記錄項目，按一下滑鼠右鍵，然後按一下 [複製]  。  
+6.  (選擇性) 按一下要複製的記錄項目，按一下滑鼠右鍵，然後按一下 [複製]****。  
   
-7.  (選擇性) 按兩下記錄項目，然後在 [記錄項目]  對話方塊中檢視單一記錄項目的詳細資料。  
+7.  (選擇性) 按兩下記錄項目，然後在 [記錄項目]**** 對話方塊中檢視單一記錄項目的詳細資料。  
   
-8.  在 [記錄項目]  對話方塊中，按一下上下箭頭以顯示上一個或下一個記錄項目，然後按一下複製圖示來複製記錄項目。  
+8.  在 [記錄項目]**** 對話方塊中，按一下上下箭頭以顯示上一個或下一個記錄項目，然後按一下複製圖示來複製記錄項目。  
   
 9. 開啟文字編輯器、貼上，然後將記錄項目儲存為文字檔。

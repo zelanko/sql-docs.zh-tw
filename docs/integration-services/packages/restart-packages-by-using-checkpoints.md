@@ -1,4 +1,5 @@
 ---
+description: 使用檢查點來重新啟動封裝
 title: 使用檢查點來重新啟動套件 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: de6329a45f43d27dfcabb05252a17eb0ed3c6a2e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 090e89467a7916295abdc31305cbe993872ade60
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919164"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425240"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>使用檢查點來重新啟動封裝
 
