@@ -1,4 +1,5 @@
 ---
+description: char 和 varchar (Transact-SQL)
 title: char 和 varchar (Transact-SQL)
 ms.custom: ''
 ms.date: 11/19/2019
@@ -24,12 +25,12 @@ ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d61590f3d59551c826951bbb29e34b58ba515e8
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: bc348a82811998366494fd2f9464209f44d12204
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554513"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422922"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char 和 varchar (Transact-SQL)
 

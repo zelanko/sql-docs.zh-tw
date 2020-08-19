@@ -1,4 +1,5 @@
 ---
+description: InstanceOf (geography 資料類型)
 title: InstanceOf (geography 資料類型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1eaed0e4-1c72-45a9-9926-5b513335cf33
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 09d468b4f39ba50a0c195287961f3c3dc76e0ccd
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 384539d8978dd8ae169ae5cfb2b7b5abcf394686
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552921"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422382"
 ---
 # <a name="instanceof-geography-data-type"></a>InstanceOf (geography 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "86552921"
 ## <a name="return-types"></a>傳回型別  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
   
-CLR 傳回型別：**SqlBoolean**  
+CLR 傳回類型：**SqlBoolean**  
   
 ## <a name="remarks"></a>備註  
 如果 **geography** 執行個體的類型與指定的類型相同，或是指定的類型是此執行個體類型的上階，則會傳回 1，否則會傳回 0。  

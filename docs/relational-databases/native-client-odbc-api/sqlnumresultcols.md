@@ -1,4 +1,5 @@
 ---
+description: SQLNumResultCols
 title: SQLNumResultCols |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,20 +15,21 @@ ms.assetid: f79d8b3c-521e-4e50-a564-21d73ae5767b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8fec604f795aacc9a65f6ebce97afec1a784c755
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2f4f868d9e32aa553930929cc0f713c9cc29136c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009204"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424030"
 ---
 # <a name="sqlnumresultcols"></a>SQLNumResultCols
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  對於執行的語句， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驅動程式不會造訪伺服器來報告結果集中的資料行數目。 在此情況下， **SQLNumResultCols**不會造成伺服器往返。 如同[SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md)和[SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)，在已備妥但未執行的語句上呼叫**SQLNumResultCols**會產生伺服器往返。  
+  對於執行的語句而言， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驅動程式不會造訪伺服器來報告結果集中的資料行數目。 在此情況下， **SQLNumResultCols** 不會造成伺服器往返。 如同 [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) 和 [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)，在備妥但未執行的語句上呼叫 **SQLNumResultCols** 會產生伺服器往返。  
   
- 當 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或陳述式批次傳回多個結果資料列集時，結果集資料行的數目有可能從某個資料列集變成另一個資料列集。 應針對每個集合呼叫**SQLNumResultCols** 。 當資料行數目變更時，應用程式應該在提取資料列結果以前先重新繫結資料值。 如需有關處理多個結果集傳回的詳細資訊，請參閱[SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)。  
+ 當 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或陳述式批次傳回多個結果資料列集時，結果集資料行的數目有可能從某個資料列集變成另一個資料列集。 應針對每個集合呼叫**SQLNumResultCols** 。 當資料行數目變更時，應用程式應該在提取資料列結果以前先重新繫結資料值。 如需處理多個結果集傳回的詳細資訊，請參閱 [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)。  
   
- 從開始，database engine 的改進 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 可讓 SQLNumResultCols 取得預期結果的更精確描述。 這些更精確的結果可能與舊版的 SQLNumResultCols 所傳回的值不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如需詳細資訊，請參閱[中繼資料探索](../../relational-databases/native-client/features/metadata-discovery.md)。  
+ 資料庫引擎的增強功能從 [ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 允許 SQLNumResultCols] 取得預期結果更精確的描述。 這些更精確的結果可能與舊版的 SQLNumResultCols 所傳回的值不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如需詳細資訊，請參閱[中繼資料探索](../../relational-databases/native-client/features/metadata-discovery.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLNumResultCols 函式](https://go.microsoft.com/fwlink/?LinkId=59359)   

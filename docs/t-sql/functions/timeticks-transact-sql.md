@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;TIMETICKS (Transact-SQL)'
 title: '@@TIMETICKS (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 9d036633-837f-4309-9c45-3d9600258018
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 51bf793459483f970d037fe3b777176b44164948
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 076f9028ff74469f574bcc36d035378be6e430c4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112614"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422532"
 ---
 # <a name="x40x40timeticks-transact-sql"></a>&#x40;&#x40;TIMETICKS (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

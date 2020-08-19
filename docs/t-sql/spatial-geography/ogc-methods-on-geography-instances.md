@@ -1,4 +1,5 @@
 ---
+description: 地理位置例項上的 OGC 方法
 title: 地理例項上的 OGC 方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/27/2019
@@ -12,12 +13,12 @@ dev_langs:
 ms.assetid: a33d5db9-aed1-4c96-85bf-9d3b5051c635
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5ef4fb2ed952a1c991e0fc7d8ab614d80838ad86
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 68a3d52312124783fdda1813fb153ab3f6a84369
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85705869"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459060"
 ---
 # <a name="ogc-methods-on-geography-instances"></a>地理位置例項上的 OGC 方法
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

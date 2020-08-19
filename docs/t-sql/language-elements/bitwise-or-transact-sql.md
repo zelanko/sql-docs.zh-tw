@@ -1,4 +1,5 @@
 ---
+description: '| (位元 OR) (Transact-SQL)'
 title: '| (位元 OR) (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/10/2017
@@ -23,12 +24,12 @@ ms.assetid: 86a3b87f-9688-4eaf-a552-29f1b01d880a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 97bc42320852484c81959dc7530c53c79104cab3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5dce8843b20df446172db47a8d07fdb0ecf4b296
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923775"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459434"
 ---
 # <a name="-bitwise-or-transact-sql"></a>| (位元 OR) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

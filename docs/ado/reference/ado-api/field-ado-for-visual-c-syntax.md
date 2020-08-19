@@ -1,5 +1,6 @@
 ---
-title: Field （ADO for Visual C++ 語法） |Microsoft Docs
+description: Field (ADO for Visual C++ 語法)
+title: 適用于 Visual C++ 語法的欄位 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04631b08-3937-440b-ac09-cd166f239908
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 732181ecdeb50d8201e1b6d07e3b1c6d8116408b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9d403adf47ea25f1248b22db03013d0c8b9eb1e2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757094"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443800"
 ---
 # <a name="field-ado-for-visual-c-syntax"></a>Field (ADO for Visual C++ 語法)
 ## <a name="methods"></a>方法  

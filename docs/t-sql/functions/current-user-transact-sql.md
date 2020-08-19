@@ -1,4 +1,5 @@
 ---
+description: CURRENT_USER (Transact-SQL)
 title: CURRENT_USER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -22,12 +23,12 @@ ms.assetid: 29248949-325b-4063-9f55-5a445fb35c6e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f3d5c0b94e7b4154498f39dd7f2a2f247cf94f4
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 567c4049aaca763c249482e9340c7b424452e82b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112736"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468128"
 ---
 # <a name="current_user-transact-sql"></a>CURRENT_USER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,7 +64,7 @@ GO
 ```  
   
 ### <a name="b-using-current_user-as-a-default-constraint"></a>B. 使用 CURRENT_USER 做為 DEFAULT 條件約束  
-此範例會建立一份資料表，利用 `CURRENT_USER` 作為銷售資料列之 `DEFAULT` 資料行的 `order_person` 條件約束。
+此範例會建立一份資料表，利用 `CURRENT_USER` 作為銷售資料列之 `order_person` 資料行的 `DEFAULT` 條件約束。
   
 ```sql
 USE AdventureWorks2012;  
@@ -135,7 +136,7 @@ Arnalfo
 Wanida
 ```
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 [USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)  
 [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)  
 [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  

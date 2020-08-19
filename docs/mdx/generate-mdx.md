@@ -1,5 +1,6 @@
 ---
-title: 產生（MDX） |Microsoft Docs
+description: Generate (MDX)
+title: 產生 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c7a6008129d6b0a4c59412428c31f6e5de625f1f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9746d83589464f75bbc951c20dc15d04b7b2037d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005901"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429950"
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
 
@@ -45,9 +46,9 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  以字串運算式表示的有效分隔符號。  
   
 ## <a name="remarks"></a>備註  
- 如果指定第二個集合，則**產生**函數會傳回一個集合，其方式是將第二個集合中的元組套用至第一個集合中的每個元組，然後依 union 聯結產生的集合。 如果指定**ALL** ，則函式會在結果集中保留重複的專案。  
+ 如果指定了第二個集合，則 **產生** 函數會傳回一個集合，此集合是在第二個集合中套用元組至第一個集合中的每個元組時所產生的集合，然後依 union 聯結結果集。 如果指定 **ALL** ，函數會在結果集內保留重複專案。  
   
- 如果指定字串運算式，則**產生**函數會傳回一個字串，方法是針對第一個集合中的每個元組評估指定的字串運算式，然後串連結果。 另外，也可以選擇字串分隔符號，在產生的串連字串中分隔每個結果。  
+ 如果指定了字串運算式，則 **產生** 函數會針對第一個集合中的每個元組評估指定的字串運算式，然後串連結果來傳回產生的字串。 另外，也可以選擇字串分隔符號，在產生的串連字串中分隔每個結果。  
   
 ## <a name="examples"></a>範例  
   
@@ -72,7 +73,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
- 「**產生**」最常見的實際用法是針對一組成員評估複雜的集合運算式，例如 TopCount。 下列範例查詢會針對資料列上的每一個 Calendar Year 顯示前 10 大產品：  
+ **產生**最常見的實際使用方式，是在一組成員上評估複雜的集合運算式（例如 TopCount）。 下列範例查詢會針對資料列上的每一個 Calendar Year 顯示前 10 大產品：  
   
 ```  
 SELECT   
@@ -89,7 +90,7 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
- 請注意，每年會顯示不同的前10個，而且使用 [**產生**] 是取得此結果的唯一方式。 只是交叉聯結 Calendar Years 以及前 10 大產品集合將會顯示所有年度的前 10 大產品，每一年都會重複，如以下範例所示：  
+ 請注意，每年會顯示不同的前10個，且使用 [ **產生** ] 是取得此結果的唯一方法。 只是交叉聯結 Calendar Years 以及前 10 大產品集合將會顯示所有年度的前 10 大產品，每一年都會重複，如以下範例所示：  
   
 ```  
 SELECT   
@@ -105,7 +106,7 @@ FROM [Adventure Works]
 ```  
   
 ### <a name="string"></a>String  
- 下列範例示範如何使用「**產生**」來傳回字串：  
+ 下列範例示範如何使用「 **產生** 」來傳回字串：  
   
 ```  
 WITH   
@@ -124,7 +125,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  這種形式的**產生**函數在偵測計算時很有用，因為它可讓您傳回字串，以顯示集合中所有成員的名稱。 這可能比[SetToStr &#40;MDX&#41;](../mdx/settostr-mdx.md)函式所傳回之集合的嚴格 MDX 表示方式更容易閱讀。  
+>  這種形式的 **產生** 函數在調試計算時很有用，因為它可讓您傳回字串，以顯示集合中所有成員的名稱。 這可能比 [SetToStr &#40;MDX&#41;](../mdx/settostr-mdx.md) 函數所傳回之集合的 strict MDX 表示更容易閱讀。  
   
 ## <a name="see-also"></a>另請參閱  
  [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  

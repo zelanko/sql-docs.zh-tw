@@ -1,5 +1,6 @@
 ---
-title: MSpeer_topologyresponse （Transact-sql） |Microsoft Docs
+description: MSpeer_topologyresponse (Transact-SQL)
+title: MSpeer_topologyresponse (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,11 +19,12 @@ ms.assetid: 1bc5c0c6-c432-405c-89fd-e953d173a247
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d485e2942d9f941c3ea064f531f83d6314c6bc8e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6968280bf74e0dd191377affc3dc7750636f3413
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002697"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423312"
 ---
 # <a name="mspeer_topologyresponse-transact-sql"></a>MSpeer_topologyresponse (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +33,7 @@ ms.locfileid: "86002697"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|request_id|**int**|識別[MSpeer_topologyrequest](../../relational-databases/system-tables/mspeer-topologyrequest-transact-sql.md)資料表中的拓撲狀態要求專案。|  
+|request_id|**int**|識別 [MSpeer_topologyrequest](../../relational-databases/system-tables/mspeer-topologyrequest-transact-sql.md) 資料表中的拓撲狀態要求專案。|  
 |peer|**sysname**|產生回應的伺服器執行個體名稱。|  
 |peer_version|**int**|識別發行者的版本號碼。|  
 |peer_db|**sysname**|產生回應之對等的訂閱資料庫。|  

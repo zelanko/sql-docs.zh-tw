@@ -1,4 +1,5 @@
 ---
+description: T-SQL 教學課程：建立及查詢資料庫物件
 title: T-SQL 教學課程：建立及查詢資料庫物件 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2018
@@ -10,12 +11,12 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a8691ed6a84fce3eb12c8e13b2235356486c42f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 3a489da04d7a65bf854cebf06e8103e22c1abc12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248698"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459171"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>課程 1：建立及查詢資料庫物件
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "87248698"
   
 若要在 [!INCLUDE[tsql](../includes/tsql-md.md)] 中執行 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]陳述式，請開啟 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 並且連接到 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]的執行個體。  
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 若要完成本教學課程，您需要 SQL Server Management Studio 和 SQL Server 執行個體存取權。 
 
 - 安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
@@ -101,7 +102,7 @@ ms.locfileid: "87248698"
 ## <a name="insert-and-update-data-in-a-table"></a>在資料表中插入及更新資料
 既然您現在建立好 **Products** 資料表，就可以準備使用 INSERT 陳述式，將資料插入資料表。 在插入資料後，您將使用 UPDATE 陳述式來變更資料列的內容。 您將使用 UPDATE 陳述式的 WHERE 子句，限制對單一資料列進行更新。 接下來所述的四個陳述式將輸入下面資料。  
   
-|ProductID|ProductName|Price|ProductDescription|  
+|ProductID|ProductName|價格|ProductDescription|  
 |-------------|---------------|---------|----------------------|  
 |1|Clamp|12.48|Workbench clamp|  
 |50|Screwdriver|3.17|Flat head|  

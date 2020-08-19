@@ -1,4 +1,5 @@
 ---
+description: SELECT 子句 (Transact-SQL)
 title: SELECT 子句 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2017
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 47d4c1eea37f8c9edbba8bfdd9712a27cd0f0f0f
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 265e4692930874fb7458a4dd7e193ec1c0851c18
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554426"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459088"
 ---
 # <a name="select-clause-transact-sql"></a>SELECT 子句 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

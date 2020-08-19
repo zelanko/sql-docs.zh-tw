@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;Version - Transact SQL Configuration Functions'
 title: '@@VERSION (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/20/2018
@@ -21,12 +22,12 @@ ms.assetid: 385ba80e-7c28-41a5-9cdb-5648f3785983
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a92f830f4880278afacf10f59072b29dede6026
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: af4d350dfac4051a4d39b3ddd13dec45edd8141a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863405"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422602"
 ---
 # <a name="x40x40version---transact-sql-configuration-functions"></a>&#x40;&#x40;Version - Transact SQL Configuration Functions
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

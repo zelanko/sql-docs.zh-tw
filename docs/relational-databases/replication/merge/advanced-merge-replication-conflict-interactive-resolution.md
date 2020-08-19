@@ -1,4 +1,5 @@
 ---
+description: 進階合併式複寫衝突 - 互動式解決方法
 title: 互動式衝突解決方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 172c60c7-f605-4eb5-b185-54ae9e9d3c60
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 73a8d4b3d946106f00b8b0284e37691c0aff8690
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 02ae1373116ddd43059fc8b61c210bc1f607ee7e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894834"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423562"
 ---
 # <a name="advanced-merge-replication-conflict---interactive-resolution"></a>進階合併式複寫衝突 - 互動式解決方法
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

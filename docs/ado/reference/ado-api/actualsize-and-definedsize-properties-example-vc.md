@@ -1,5 +1,6 @@
 ---
-title: ActualSize 和 DefinedSize 屬性範例（VC + +） |Microsoft Docs
+description: 'ActualSize 和 DefinedSize 屬性範例 (VC + +) '
+title: ActualSize 和 DefinedSize 屬性範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 05f7cc97-b806-41d2-939d-a955d10844c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 092c67ec3fef6705d103e87cd5e47adc37397475
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b8a69e5ad4f31891ec93e84e835a6c0d1ffdcdce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760694"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451640"
 ---
-# <a name="actualsize-and-definedsize-properties-example-vc"></a>ActualSize 和 DefinedSize 屬性範例（VC + +）
-這個範例會使用[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)和[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)屬性，顯示欄位的定義大小和實際大小。  
+# <a name="actualsize-and-definedsize-properties-example-vc"></a>ActualSize 和 DefinedSize 屬性範例 (VC + +) 
+這個範例會使用 [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) 和 [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) 屬性來顯示所定義的大小和實際的欄位大小。  
   
 ## <a name="example"></a>範例  
   
@@ -128,16 +129,16 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
- **存放區名稱： Eric 閱讀書籍**  
+ **商店名稱： Eric 閱讀書籍**  
 **定義的大小：40**  
 **實際大小：19**  
-**存放區名稱： Barnum**  
+**商店名稱： Barnum 的**  
 **定義的大小：40**  
 **實際大小：8**  
 **商店名稱：新聞 & Brews**  
 **定義的大小：40**  
 **實際大小：12**  
-**商店名稱： Doc-U-中：品質總和書籍**  
+**商店名稱： Doc-U-材料：品質總和書籍**  
 **定義的大小：40**  
 **實際大小：36**  
 **存放區名稱： Fricative Bookshop**  
@@ -147,5 +148,5 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 **定義的大小：40**  
 **實際大小：8**   
 ## <a name="see-also"></a>另請參閱  
- [ActualSize 屬性（ADO）](../../../ado/reference/ado-api/actualsize-property-ado.md)   
+ [ (ADO) 的 ActualSize 屬性 ](../../../ado/reference/ado-api/actualsize-property-ado.md)   
  [DefinedSize 屬性](../../../ado/reference/ado-api/definedsize-property.md)

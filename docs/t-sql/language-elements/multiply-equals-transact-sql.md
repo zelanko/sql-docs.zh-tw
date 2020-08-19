@@ -1,4 +1,5 @@
 ---
+description: '*= (乘法指派) (Transact-SQL)'
 title: '*= (乘法指派) (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
@@ -22,12 +23,12 @@ ms.assetid: 816ff5dc-9a40-4c07-8351-39c194dbc079
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b0673255d0901c3139525a5ab77291591052dd4f
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: efe5aac194c70f2abbb1a6994a29bd900f9b4dd3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395661"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459343"
 ---
 # <a name="-multiplication-assignment-transact-sql"></a>*= (乘法指派) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

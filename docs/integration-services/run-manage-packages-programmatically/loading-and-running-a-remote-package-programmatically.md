@@ -1,4 +1,5 @@
 ---
+description: 以程式設計方式載入和執行遠端封裝
 title: 以程式設計方式載入和執行遠端套件 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 64a9702fd642f40e96f0ac0d017b3ddc132502c0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6db12047bd1a8228f6576989e8331b9611bb0742
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913326"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495554"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>以程式設計方式載入和執行遠端封裝
 
@@ -160,7 +161,7 @@ namespace LaunchSSISPackageAgent_CS
  下列程式碼範例示範如何建立和測試 Web 服務。  
   
 #### <a name="creating-the-web-service"></a>建立 Web 服務  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝可以直接從檔案、直接從 SQL Server 或從 SSIS 封裝存放區 (同時管理在 SQL Server 與特殊檔案系統資料夾中的封裝儲存體) 載入。{2} 這個範例使用 **Select Case** 或 **switch** 建構以選取適當的套件啟動語法並適當地串連輸入引數，來支援所有可用的選項。 LaunchPackage Web 服務方法會以整數而不是 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 值傳回封裝執行的結果，因此用戶端電腦不需要任何 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 組件的參考。  
+  封裝可以直接從檔案、直接從 SQL Server 或從 SSIS 封裝存放區 (同時管理在 SQL Server 與特殊檔案系統資料夾中的封裝儲存體) 載入。 這個範例使用 **Select Case** 或 **switch** 建構以選取適當的套件啟動語法並適當地串連輸入引數，來支援所有可用的選項。 LaunchPackage Web 服務方法會以整數而不是 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 值傳回封裝執行的結果，因此用戶端電腦不需要任何 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 組件的參考。  
   
 ###### <a name="to-create-a-web-service-to-run-packages-on-the-server-programmatically"></a>以程式設計方式建立 Web 服務以執行伺服器上的封裝  
   
@@ -168,7 +169,7 @@ namespace LaunchSSISPackageAgent_CS
   
 2.  新增 **Microsoft.SqlServer.ManagedDTS** 的參考，並將 **Imports** 或 **using** 陳述式新增至 **Microsoft.SqlServer.Dts.Runtime** 命名空間的程式碼檔案。  
   
-3.  將 LaunchPackage Web 服務方法的範例程式碼貼到類別中 (範例顯示程式碼視窗的整個內容)。  
+3.  將 LaunchPackage Web 服務方法的範例程式碼貼到類別中  (範例顯示程式碼視窗的整個內容)。  
   
 4.  藉由為 LaunchPackage 方法的輸入引數提供一組指向現有封裝的有效值，建立並測試 Web 服務。 例如，如果 package1.dtsx 是儲存在伺服器上的 C:\My Packages 中，則傳遞 "file" 以做為 sourceType 的值，傳遞 "C:\My Packages" 做為 sourceLocation 的值，並傳遞 "package1" (沒有副檔名) 做為 packageName 的值。  
   
@@ -343,7 +344,7 @@ public class LaunchSSISPackageServiceCS : System.Web.Services.WebService
   
 3.  加入 Web 服務專案的 Web 參考。 若有需要，請在範例程式碼中，為指派到 Web 服務 Proxy 物件的名稱，調整變數宣告。  
   
-4.  將 Main 常式與私用列舉的範例程式碼貼到程式碼中 (範例顯示程式碼視窗的整個內容)。  
+4.  將 Main 常式與私用列舉的範例程式碼貼到程式碼中  (範例顯示程式碼視窗的整個內容)。  
   
 5.  編輯呼叫 LaunchPackage 方法的程式碼行，為其輸入引數提供一組指向現有封裝的有效值。 例如，如果 package1.dtsx 是儲存在伺服器上的 C:\My Packages 中，則傳遞 "file" 以做為 `sourceType` 的值，傳遞 "C:\My Packages" 做為 `sourceLocation` 的值，並傳遞 "package1" (沒有副檔名) 做為 `packageName` 的值。  
   

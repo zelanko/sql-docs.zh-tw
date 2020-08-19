@@ -1,4 +1,5 @@
 ---
+description: catalog.get_parameter_values (SSISDB 資料庫)
 title: catalog.get_parameter_values (SSISDB 資料庫) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 5b1aeaf7-c938-4aef-bafc-e4d7a82eb578
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 947b8607c54e3cb2022b32be0f68bab0dc53ffee
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 349a68fa94cfb479c6c3823b2b295a3a65498692
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913008"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495396"
 ---
 # <a name="catalogget_parameter_values-ssisdb-database"></a>catalog.get_parameter_values (SSISDB 資料庫)
 
@@ -44,7 +45,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
  參數所在的專案名稱。 *project_name* 是 **nvarchar(128)** 。  
   
  [ @package_name = ] *package_name*  
- 封裝名稱。 指定封裝名稱，以擷取所有專案參數和來自特定封裝的參數。 *package_name* 是 **nvarchar(260)** 。  
+ 封裝名稱。 指定封裝名稱，以擷取所有專案參數和來自特定封裝的參數。 *package_name* 是 **nvarchar(260)**。  
   
  [ @reference_id = ] *reference_id*  
  環境參考的唯一識別碼。 這是選擇性參數。 *reference_id* 是 **bigint**。  
@@ -62,7 +63,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 |parameter_name|**sysname**|參數名稱。|  
 |parameter_value|**sql_variant**|參數的值。|  
 |sensitive|**bit**|當值為 `1` 時，參數值為敏感值。 當值為 `0` 時，參數值則不是敏感值。|  
-|required|**bit**|當值為 `1` 時，必須有參數值才能開始執行。 當值為 `0` 時，不需要參數值即可開始執行。|  
+|必要|**bit**|當值為 `1` 時，必須有參數值才能開始執行。 當值為 `0` 時，不需要參數值即可開始執行。|  
 |value_set|**bit**|當值為 `1` 時，表示參數值已指派。 當值為 `0` 時，表示參數值未指派。|  
   
 > [!NOTE]  

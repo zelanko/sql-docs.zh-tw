@@ -1,4 +1,5 @@
 ---
+description: DBCC INDEXDEFRAG (Transact-SQL)
 title: DBCC INDEXDEFRAG (Transact-SQL)
 ms.custom: ''
 ms.date: 07/16/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: ca27b41cffa6ee319acf27e62bc26e1f27a82c44
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 46bf3ce0853f1c8c4a8a9442e27f8235f95abbac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484283"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422832"
 ---
 # <a name="dbcc-indexdefrag-transact-sql"></a>DBCC INDEXDEFRAG (Transact-SQL)
 

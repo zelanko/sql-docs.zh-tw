@@ -1,5 +1,6 @@
 ---
-title: sp_help_targetserver （Transact-sql） |Microsoft Docs
+description: sp_help_targetserver (Transact-SQL)
+title: sp_help_targetserver (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a8b29b5d7698fdaceced322e30048c6c789f076e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b997402b52469342ebd8a034f6fb306dc389cee0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891668"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485971"
 ---
 # <a name="sp_help_targetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ sp_help_targetserver
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @server_name = ] 'server_name'`要傳回信息的伺服器名稱。 *server_name*是**Nvarchar （30）**，預設值是 Null。  
+`[ @server_name = ] 'server_name'` 要傳回信息的伺服器名稱。 *server_name* 是 **Nvarchar (30) **，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="result-sets"></a>結果集  
- 如果未指定*server_name* ， **sp_help_targetserver**會傳回此結果集。  
+ 如果未指定 *server_name* ， **sp_help_targetserver** 會傳回這個結果集。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -57,9 +58,9 @@ sp_help_targetserver
 |**enlist_date**|**datetime**|指定伺服器的編列日期。|  
 |**last_poll_date**|**datetime**|前次輪詢伺服器來尋找作業的日期。|  
 |**status**|**int**|指定伺服器的狀態。|  
-|**unread_instructions**|**int**|伺服器是否有未讀的指示。 如果所有資料列都已下載，則此資料行為**0**。|  
+|**unread_instructions**|**int**|伺服器是否有未讀的指示。 如果已下載所有資料列，這個資料行會是 **0**。|  
 |**local_time**|**datetime**|目標伺服器的本機日期和時間，以前次輪詢主要伺服器之後的目標伺服器本機時間為基礎。|  
-|**enlisted_by_nt_user**|**Nvarchar （100）**|編列了目標伺服器的 Microsoft Windows 使用者。|  
+|**enlisted_by_nt_user**|**Nvarchar (100) **|編列了目標伺服器的 Microsoft Windows 使用者。|  
 |**poll_interval**|**int**|目標伺服器輪詢主要 SQLServerAgent 服務來下載作業和上傳作業狀態的頻率 (以秒為單位)。|  
   
 ## <a name="permissions"></a>權限  

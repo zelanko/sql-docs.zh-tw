@@ -1,5 +1,6 @@
 ---
-title: BottomCount （MDX） |Microsoft Docs
+description: BottomCount (MDX)
+title: BottomCount (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: bd09c823e09270ebf7c9851b3c6760baf720db39
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e331a84efe36cef11951afac3f304957e4ffcb00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68016955"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494974"
 ---
 # <a name="bottomcount-mdx"></a>BottomCount (MDX)
 
@@ -38,12 +39,12 @@ BottomCount(Set_Expression, Count [,Numeric_Expression])
  有效的數值運算式，這通常是傳回數字之資料格座標的多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- 如果指定了數值運算式，這個函數會根據集合評估後指定的數值運算式值，以遞增順序來排序指定集合中的 Tuple。 然後， **BottomCount**函數會傳回指定數目的元組和最低值。  
+ 如果指定了數值運算式，這個函數會根據集合評估後指定的數值運算式值，以遞增順序來排序指定集合中的 Tuple。 然後， **BottomCount** 函式會傳回具有最小值的指定數量的元組。  
   
 > [!IMPORTANT]  
->  **BottomCount**函數（例如[TopCount](../mdx/topcount-mdx.md)函數）一律會中斷階層。  
+>  **BottomCount**函式（例如[TopCount](../mdx/topcount-mdx.md)函數）一律會中斷階層。  
   
- 如果未指定數值運算式，此函數會以自然順序傳回成員集合，而不會有任何排序，行為就像[Tail （MDX）](../mdx/tail-mdx.md)函數。  
+ 如果未指定數值運算式，則函式會以自然順序傳回成員的集合，不含任何排序，其行為就像 [Tail (MDX) ](../mdx/tail-mdx.md) 函數一樣。  
   
 ## <a name="example"></a>範例  
  下列範例會傳回每個日曆年度最低五檔 Product SubCategory 銷售的 Reseller Order Quantity 量值，並根據 Reseller Sales Amount 量值排序。  

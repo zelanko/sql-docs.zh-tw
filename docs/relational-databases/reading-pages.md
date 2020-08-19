@@ -1,4 +1,5 @@
 ---
+description: 讀取分頁
 title: 讀取分頁 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f8da760e-aacb-4661-9f3a-2578d8c11e4e
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: cf1f0f443bbc89e38291b9ecb6927cace18334e8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 76594b64112fc18a1041878f97f775c8f181866a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921784"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423672"
 ---
 # <a name="reading-pages"></a>讀取分頁
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

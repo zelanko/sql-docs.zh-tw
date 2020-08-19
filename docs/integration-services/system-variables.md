@@ -1,4 +1,5 @@
 ---
+description: 系統變數
 title: 系統變數 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: db0b1644491562c1d564a3df08da1b52eb69e947
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 913345034da936d6ed7a0c9ea3678c427b4f34ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912704"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495302"
 ---
 # <a name="system-variables"></a>系統變數
 
@@ -45,15 +46,15 @@ ms.locfileid: "86912704"
 |**ExecutionInstanceGUID**|String|執行封裝之執行個體的唯一識別碼。|  
 |**FailedConfigurations**|String|失敗的封裝組態名稱。|  
 |**IgnoreConfigurationsOnLoad**|Boolean|指出載入封裝時是否忽略封裝組態。|  
-|**InteractiveMode**|Boolean|指示封裝是否以互動模式執行。 如果封裝在 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中執行，則此屬性設為 [True]  。 如果封裝是使用 **DTExec** 命令提示字元公用程式來執行，則此屬性設為 [False]  。|  
+|**InteractiveMode**|Boolean|指示封裝是否以互動模式執行。 如果封裝在 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中執行，則此屬性設為 [True]****。 如果封裝是使用 **DTExec** 命令提示字元公用程式來執行，則此屬性設為 [False]****。|  
 |**LocaleId**|Int32|封裝使用的地區設定。|  
 |**MachineName**|String|執行封裝之電腦的名稱。|  
 |**OfflineMode**|Boolean|指出封裝是否處於離線模式。 離線模式不會取得與資料來源的連接。|  
 |**PackageID**|String|封裝的唯一識別碼。|  
-|**PackageName**|String|封裝名稱。|  
+|**PackageName**|String|封裝的名稱。|  
 |**StartTime**|Datetime|封裝開始執行的時間。|  
 |**ServerExecutionID**|Int64|在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器上執行之封裝的執行識別碼。<br /><br /> 預設值為零。 只有在 ISServerExec 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器上執行封裝時，才會變更此值。 有子封裝時，此值會從父封裝傳遞至子封裝。|  
-|**UserName**|String|啟動封裝之使用者的帳戶。 使用者名稱必須以網域名稱來限定。|  
+|**使用者名稱**|String|啟動封裝之使用者的帳戶。 使用者名稱必須以網域名稱來限定。|  
 |**VersionBuild**|Int32|封裝版本。|  
 |**VersionComment**|String|有關封裝版本的註解。|  
 |**VersionGUID**|String|版本的唯一識別碼。|  
@@ -93,7 +94,7 @@ ms.locfileid: "86912704"
 |**ProgressCountHigh**|Int32|64 位元值的較高部份，指示 OnProgress 事件處理的作業總數。|OnProgress 事件處理常式|  
 |**ProgressCountLow**|Int32|64 位元值的較低部份，指示 OnProgress 事件處理的作業總數。|OnProgress 事件處理常式|  
 |**ProgressDescription**|String|進度的描述。|OnProgress 事件處理常式|  
-|**Propagate**|Boolean|指示是否將事件傳播至較高層級的事件處理常式。<br /><br /> 注意：驗證封裝期間，會忽略 **Propagate** 變數的值。 如果您在子封裝中，將 **Propagate** 設為 [False]  ，這就無法防止事件向上擴展到父封裝。|所有事件處理常式|  
+|**Propagate**|Boolean|指示是否將事件傳播至較高層級的事件處理常式。<br /><br /> 注意：驗證封裝期間，會忽略 **Propagate** 變數的值。 如果您在子封裝中，將 **Propagate** 設為 [False]****，這就無法防止事件向上擴展到父封裝。|所有事件處理常式|  
 |**SourceDescription**|String|事件處理常式中引發事件之可執行檔的描述。|所有事件處理常式|  
 |**SourceID**|String|事件處理常式中引發事件之可執行檔的唯一識別碼。|所有事件處理常式|  
 |**SourceName**|String|事件處理常式中引發事件之可執行檔的名稱。|所有事件處理常式|  

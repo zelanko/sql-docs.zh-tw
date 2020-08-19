@@ -1,4 +1,5 @@
 ---
+description: catalog.get_project (SSISDB 資料庫)
 title: catalog.get_project (SSISDB 資料庫) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: f263c9e4-a7db-4888-a458-70ae99b1f729
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c9cf4af9eb84c725b8807329713a3cd62e42558a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d26de0736fc41d3b39f0f6c3e149b044c538ba41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913004"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495385"
 ---
 # <a name="catalogget_project-ssisdb-database"></a>catalog.get_project (SSISDB 資料庫)
 
@@ -34,10 +35,10 @@ catalog.get_project [ @folder_name = ] folder_name , [ @project_name = ] project
   
 ## <a name="arguments"></a>引數  
  [ @folder_name = ] *folder_name*  
- 包含專案之資料夾的名稱。 *folder_name* 是 **nvarchar(128)** 。  
+ 包含專案之資料夾的名稱。 *folder_name* 是 **nvarchar(128)**。  
   
  [ @project_name = ] *project_name*  
- 專案的名稱。 *project_name* 是 **nvarchar(128)** 。  
+ 專案的名稱。 *project_name* 是 **nvarchar(128)**。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  

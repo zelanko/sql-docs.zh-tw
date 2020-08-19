@@ -1,4 +1,5 @@
 ---
+description: 了解自訂檔案
 title: 瞭解自訂檔案 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2edcfaaae08da97eccfe7b9a570716a2dfedfc2c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 59c0f32f7e5ba467fd1b90a348a78432a16621ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764609"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451870"
 ---
 # <a name="understanding-the-customization-file"></a>了解自訂檔案
-自訂檔案中的每個區段標頭都是由包含型別和參數的方括弧（**[]**）所組成。 四個區段類型會以常值字串**connect**、 **sql**、 **userlist**或**logs**來表示。 參數是文字字串、預設值、使用者指定的識別碼，或不是任何內容。  
+自訂檔案中的每個區段標頭都是由方括弧 (**[]**) 包含型別和參數所組成。 這四個區段類型是由常值字串 **connect**、 **sql**、 **userlist**或 **logs**表示。 參數是常值字串、預設值、使用者指定的識別碼或 nothing。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統不再包含 RDS 伺服器元件（如需詳細資訊，請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)）。 RDS 用戶端元件將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 因此，每個區段都會標記下列其中一個區段標頭：  
+ 因此，每個區段都會以下列其中一個區段標頭標示：  
   
 ```console
   
@@ -44,27 +45,27 @@ identifier
 |部分|描述|  
 |----------|-----------------|  
 |**connect**|修改連接字串的常值字串。|  
-|**server**|修改命令字串的常值字串。|  
-|**userlist**|修改特定使用者存取權限的常值字串。|  
-|**退出**|指定記錄檔記錄操作錯誤的常值字串。|  
-|**預設**|如果未指定或找不到識別碼，則會使用常值字串。|  
-|*識別碼 (identifier)*|字串，符合**connect**或**命令**字串中的字串。<br /><br /> -如果區段標頭包含**connect** ，而且在連接字串中找到識別碼字串，請使用此區段。<br />-如果區段標頭包含**sql** ，而且在命令字串中找到識別碼字串，請使用此區段。<br />-如果區段標頭包含**userlist** ，而且識別碼字串符合**connect**區段識別碼，請使用此區段。|  
+|**Sql**|修改命令字串的常值字串。|  
+|**userlist**|常值字串，可修改特定使用者的存取權限。|  
+|**日誌**|常值字串，指定記錄操作錯誤的記錄檔。|  
+|**預設值**|如果未指定或找不到任何識別碼，則會使用常值字串。|  
+|*識別碼*|符合 **連接** 或 **命令** 字串中字串的字串。<br /><br /> -如果區段標頭包含 **connect** ，而且在連接字串中找到識別碼字串，請使用此區段。<br />-如果區段標頭包含 **sql** ，且在命令字串中找到識別碼字串，請使用此區段。<br />-如果區段標頭包含 **userlist** ，且識別碼字串符合 **connect** 區段識別碼，請使用此區段。|  
   
- **DataFactory**會呼叫處理常式，並傳遞用戶端參數。 處理常式會在用戶端參數中搜尋與適當區段標頭中的識別碼相符的整個字串。 如果找到相符的，該區段的內容就會套用至用戶端參數。  
+ **DataFactory**會呼叫處理常式，並傳遞用戶端參數。 此處理程式會在用戶端參數中搜尋符合適當區段標頭中識別碼的整個字串。 如果找到相符的，則會將該區段的內容套用至用戶端參數。  
   
- 在下列情況下，會使用特定的區段：  
+ 在下列情況下，會使用特定區段：  
   
--   如果用戶端連接字串關鍵字「**資料來源 =**_值_」的值部分符合**connect**區段識別碼，則會使用**connect**區段。 
+-   如果用戶端連接字串關鍵字 "**Data Source =**_value_" 的值部分符合**connect**區段識別碼，就會使用**connect**區段。 
   
 -   如果用戶端命令字串包含符合**sql**區段識別碼的字串，則會使用**sql**區段。  
   
--   如果沒有相符的識別碼，則會使用含有 default 參數的**connect**或**sql**區段。  
+-   如果沒有相符的識別碼，則會使用具有預設參數的 **connect** 或 **sql** 區段。  
   
--   如果**userlist**區段識別碼符合**connect**區段識別碼，則會使用**userlist**區段。 如果有相符的結果， **userlist**區段的內容就會套用至 [**連接]** 區段所控制的連接。  
+-   如果**userlist**區段識別碼符合**connect**區段識別碼，就會使用**userlist**區段。 如果有相符的內容， **userlist** 區段的內容會套用至 **connect** 區段所控管的連接。  
   
--   如果連接或命令字串中的字串不符合任何**connect**或**sql**區段標頭中的識別碼，而且沒有具有預設參數的**connect**或**sql**區段標頭，則會在不修改的情況下使用用戶端字串。  
+-   如果連接或命令字串中的字串不符合任何 **connect** 或 **sql** 區段標頭中的識別碼，而且沒有具有預設參數的 **connect** 或 **sql** 區段標頭，則會使用用戶端字串而不進行修改。  
   
--   每當**DataFactory**進行時，就會使用**logs**區段。  
+-   每當**DataFactory**正在運作時，就會使用**logs**區段。  
   
 ## <a name="see-also"></a>另請參閱  
  [自訂檔案連接區段](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   

@@ -1,5 +1,6 @@
 ---
-title: 最大值（MDX） |Microsoft Docs
+description: Max (MDX)
+title: 最大 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ad4bc2bf41caacbafb5bf36b5e95263ab2f85d22
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4cd8f78426229328e0b56fecc79fed4a8163668b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68098532"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429830"
 ---
 # <a name="max-mdx"></a>Max (MDX)
 

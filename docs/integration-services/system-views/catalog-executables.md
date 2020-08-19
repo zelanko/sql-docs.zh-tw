@@ -1,4 +1,5 @@
 ---
+description: catalog.executables
 title: catalog.executables | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: bae22d0c-e190-426f-a074-c1d1170e8dd8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 495a60de43826e633ee6c8eb2bcc7d38cf07706b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9c17439cda7e5071c4256be53ae4ec03dc3ccfff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912614"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495232"
 ---
 # <a name="catalogexecutables"></a>catalog.executables 
 

@@ -1,5 +1,6 @@
 ---
-title: sp_help_spatial_geography_index_xml （Transact-sql） |Microsoft Docs
+description: sp_help_spatial_geography_index_xml (Transact-SQL)
+title: sp_help_spatial_geography_index_xml (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 821d4127-3ce5-4474-8561-043404a20d81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7d25c8d57608357530e9344a41d23771d198ed23
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6190608c2c481b80f9cb3a1df8e8d2114387330b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717277"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486007"
 ---
 # <a name="sp_help_spatial_geography_index_xml-transact-sql"></a>sp_help_spatial_geography_index_xml (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  傳回關於**地理**空間索引之指定屬性集的名稱和值。 您可以選擇傳回核心屬性集或索引的所有屬性。  
+  傳回有關 **地理位置** 空間索引的指定屬性集的名稱和值。 您可以選擇傳回核心屬性集或索引的所有屬性。  
   
  結果會以 XML 片段傳回，該片段會顯示所選取屬性的名稱和值。  
   
@@ -45,10 +46,10 @@ sp_help_spatial_geography_index_xml [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>引數  
- 請參閱[空間索引預存程式的引數和屬性](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)。  
+ 請參閱 [空間索引預存程式的引數和屬性](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)。  
   
 ## <a name="properties"></a>屬性  
- 請參閱[空間索引預存程式的引數和屬性](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)。  
+ 請參閱 [空間索引預存程式的引數和屬性](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)。  
   
 ## <a name="permissions"></a>權限  
  必須為使用者指派 PUBLIC 角色才能存取此程序。 需要在伺服器和物件上具有 READ ACCESS 權限。  
@@ -57,9 +58,9 @@ sp_help_spatial_geography_index_xml [ @tabname =] 'tabname'
  包含 NULL 值的屬性不會包含在傳回集合中。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用 `sp_help_spatial_geography_index_xml` 來調查** \@ qs**中給定查詢範例的資料表**geography_col**上所定義的空間索引**SIndx_SpatialTable_geography_col2** 。 此範例以 XML 片段傳回指定索引的核心屬性，該片段會顯示所選取屬性的名稱和值。  
+ 下列範例會使用 `sp_help_spatial_geography_index_xml` 來調查** \@ qs**中指定查詢範例在資料表**geography_col**上定義的空間索引**SIndx_SpatialTable_geography_col2** 。 此範例以 XML 片段傳回指定索引的核心屬性，該片段會顯示所選取屬性的名稱和值。  
   
- 然後，會在結果集上執行[XQuery](../../xquery/xquery-basics.md) ，傳回特定屬性。  
+ 然後，會在結果集上執行 [XQuery](../../xquery/xquery-basics.md) ，傳回特定屬性。  
   
 ```  
 declare @qs geography  
@@ -69,7 +70,7 @@ exec sp_help_spatial_geography_index_xml 'geography_col', 'SIndx_SpatialTable_ge
 select @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');  
 ```  
   
- 類似于[sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)，此預存程式可讓您以程式設計方式存取**地理**空間索引的屬性，並以 XML 報告結果集。  
+ 類似于 [sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)，此預存程式可讓您以程式設計方式存取 **地理位置** 空間索引的屬性，並以 XML 報告結果集。  
   
  **地理位置**的周框方塊是整個地球。  
   

@@ -1,4 +1,5 @@
 ---
+description: 連線至 SQL Server 資料來源 (SQL Server 匯入和匯出精靈)
 title: 連線至 SQL Server 資料來源 (SQL Server 匯入和匯出精靈) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/29/2020
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f50c53d596c73565b3b5e56c27fa59fca0afe708
-ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
+ms.openlocfilehash: 87d7a1a9132d4a41bdc73100b4f86d51de5c6d08
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87790351"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495574"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>連線至 SQL Server 資料來源 (SQL Server 匯入和匯出精靈)
 

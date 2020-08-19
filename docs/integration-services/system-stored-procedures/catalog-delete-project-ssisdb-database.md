@@ -1,4 +1,5 @@
 ---
+description: catalog.delete_project (SSISDB 資料庫)
 title: catalog.delete_project (SSISDB 資料庫) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: f3431445-8dd2-443b-813e-b99db893977e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f23b9eb8b082b69486130e147d92bc16b63e13c2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 40e9a9a404c17b1a86b48fef45cdc32bf399ace3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913070"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495442"
 ---
 # <a name="catalogdelete_project-ssisdb-database"></a>catalog.delete_project (SSISDB 資料庫)
 
@@ -34,10 +35,10 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
   
 ## <a name="arguments"></a>引數  
  [ @folder_name = ] *folder_name*  
- 包含專案之資料夾的名稱。 *folder_name* 是 **nvarchar(128)** 。  
+ 包含專案之資料夾的名稱。 *folder_name* 是 **nvarchar(128)**。  
   
  [ @project_name = ] *project_name*  
- 要刪除之專案的名稱。 *project_name* 是 **nvarchar(128)** 。  
+ 要刪除之專案的名稱。 *project_name* 是 **nvarchar(128)**。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  

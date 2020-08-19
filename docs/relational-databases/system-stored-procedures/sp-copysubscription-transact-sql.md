@@ -1,5 +1,6 @@
 ---
-title: sp_copysubscription （Transact-sql） |Microsoft Docs
+description: sp_copysubscription (Transact-SQL)
+title: sp_copysubscription (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 80927c19376e97b25c21af1f93faedd5637eb8bb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d157cd75c3443c9a74a3bab6affe8fca75fb4db8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771202"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486179"
 ---
 # <a name="sp_copysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,24 +44,24 @@ sp_copysubscription [ @filename = ] 'file_name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @filename = ] 'file_name'`這是指定儲存資料檔案（.mdf）複本的完整路徑（包括檔案名）的字串。 [*檔案名*] 是**Nvarchar （260）**，沒有預設值。  
+`[ @filename = ] 'file_name'` 這是字串，指定儲存資料檔案副本 ( .mdf) 的完整路徑（包括檔案名）。 *檔案名* 是 **Nvarchar (260) **，沒有預設值。  
   
-`[ @temp_dir = ] 'temp_dir'`這是包含暫存檔案的目錄名稱。 *temp_dir*是**Nvarchar （260）**，預設值是 Null。 如果是 Null，則 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用預設資料目錄。 目錄應該有足夠的空間來存放組合了所有訂閱者資料庫檔案的檔案大小。  
+`[ @temp_dir = ] 'temp_dir'` 這是包含暫存檔案的目錄名稱。 *temp_dir* 是 **Nvarchar (260) **，預設值是 Null。 如果是 Null，則 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用預設的資料目錄。 目錄應該有足夠的空間來存放組合了所有訂閱者資料庫檔案的檔案大小。  
   
-`[ @overwrite_existing_file = ] 'overwrite_existing_file'`這是一個選擇性的布林值旗標，它會指定是否要覆寫** \@ filename**中指定之相同名稱的現有檔案。 *overwrite_existing_file*是**bit**，預設值是**0**。 如果是**1**，則會覆寫** \@ filename**所指定的檔案（如果存在的話）。 如果是**0**，如果檔案存在，則預存程式會失敗，而且不會覆寫檔案。  
+`[ @overwrite_existing_file = ] 'overwrite_existing_file'`這是選擇性的布林值旗標，指定是否要覆寫** \@ 檔案名**中指定之相同名稱的現有檔案。 *overwrite_existing_file*是 **bit**，預設值是 **0**。 如果是**1**，則會覆寫** \@ 檔案名**所指定的檔案（如果存在的話）。 如果是 **0**，如果檔案存在，預存程式就會失敗，而且不會覆寫檔案。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_copysubscription**用於所有類型的複寫中，將訂閱資料庫複製到檔案，做為在訂閱者端套用快照集的替代方法。 資料庫必須設定成只支援提取訂閱。 有適當權限的使用者可以建立訂閱資料庫的副本，再複製、傳輸或利用電子郵件來傳送訂閱檔 (.msf) 到另一個訂閱者，之後，便能在此將它附加成一項訂閱。  
+ **sp_copysubscription** 用於所有類型的複寫中，以便將訂閱資料庫複製到檔案，做為在訂閱者端套用快照集的替代方案。 資料庫必須設定成只支援提取訂閱。 有適當權限的使用者可以建立訂閱資料庫的副本，再複製、傳輸或利用電子郵件來傳送訂閱檔 (.msf) 到另一個訂閱者，之後，便能在此將它附加成一項訂閱。  
   
  所複製的訂閱資料庫大小必須小於 2 GB。  
   
- 只有具有用戶端訂閱的資料庫才支援**sp_copysubscription** ，而且當資料庫具有伺服器訂閱時無法執行。  
+ 只有具有用戶端訂閱的資料庫支援**sp_copysubscription** ，且當資料庫具有伺服器訂閱時，無法執行此功能。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_copysubscription**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色的成員，才可以執行 **sp_copysubscription**。  
   
 ## <a name="see-also"></a>另請參閱  
  [替代快照集資料夾位置](../../relational-databases/replication/snapshot-options.md)   

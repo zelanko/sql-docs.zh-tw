@@ -1,4 +1,5 @@
 ---
+description: 加入或編輯聯結
 title: 新增或編輯聯結 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 166107c908fb83c5fe4fae83f67b9dc4984bbafb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 30d6302a53101e41c85292b776b1128421520e95
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726100"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423632"
 ---
 # <a name="add-or-edit-join"></a>加入或編輯聯結
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

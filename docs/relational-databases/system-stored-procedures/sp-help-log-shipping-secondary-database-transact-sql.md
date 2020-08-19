@@ -1,5 +1,6 @@
 ---
-title: sp_help_log_shipping_secondary_database （Transact-sql） |Microsoft Docs
+description: sp_help_log_shipping_secondary_database (Transact-SQL)
+title: sp_help_log_shipping_secondary_database (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 215ad3a4a38abd962f43756ecb4c724c625f251d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ac291d5c829c1ddc4022a7d0d59f65348daa859a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893633"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485991"
 ---
 # <a name="sp_help_log_shipping_secondary_database-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +44,9 @@ sp_help_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @secondary_database = ] 'secondary_database'`這是次要資料庫的名稱。 *secondary_database*是**sysname**，沒有預設值。  
+`[ @secondary_database = ] 'secondary_database'` 這是次要資料庫的名稱。 *secondary_database* 是 **sysname**，沒有預設值。  
   
-`[ @secondary_id = ] 'secondary_id'`記錄傳送設定中次要伺服器的識別碼。 *secondary_id*是**uniqueidentifier** ，不能是 Null。  
+`[ @secondary_id = ] 'secondary_id'` 記錄傳送設定中次要伺服器的識別碼。 *secondary_id* 是 **uniqueidentifier** ，不能是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -85,12 +86,12 @@ sp_help_log_shipping_secondary_database
 |**last_restored_latency**|在主要資料庫中建立記錄備份和在次要資料庫中還原這個記錄備份，其間所經歷的時間 (以分鐘為單位)。<br /><br /> 初始值是 NULL。|  
   
 ## <a name="remarks"></a>備註  
- 如果您包含*secondary_database*參數，結果集會包含該次要資料庫的相關資訊。如果您包含*secondary_id*參數，結果集會包含所有與該次要識別碼相關聯之次要資料庫的資訊。  
+ 如果您包含 *secondary_database* 參數，結果集會包含次要資料庫的相關資訊;如果您包含 *secondary_id* 參數，結果集會包含與該次要識別碼相關聯的所有次要資料庫的相關資訊。  
   
- **sp_help_log_shipping_secondary_database**必須從次要伺服器的**master**資料庫中執行。  
+ **sp_help_log_shipping_secondary_database** 必須從次要伺服器的 **master** 資料庫中執行。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行此程式。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行這個程式。  
   
 ## <a name="see-also"></a>另請參閱  
  [sp_help_log_shipping_secondary_primary &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   

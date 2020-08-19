@@ -1,4 +1,5 @@
 ---
+description: 設定運算子 - EXCEPT 和 INTERSECT (Transact-SQL)
 title: EXCEPT 和 INTERSECT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -23,12 +24,12 @@ ms.assetid: b1019300-171a-4a1a-854f-e1e751de3565
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cf59a6245de8c1520dcd8196cc207fe2761d84c6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 06029c531fbdebfd74d3a2314221725a41647853
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918794"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459290"
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>設定運算子 - EXCEPT 和 INTERSECT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -84,7 +85,7 @@ EXCEPT 或 INTERSECT 所傳回結果集中任何資料行的 Null 屬性，都�
   
 如果 EXCEPT 或 INTERSECT 與運算式中的其他運算子搭配使用，就會依照下列優先順序內容來進行評估：  
   
-1.  括號中的運算式  
+1.  括弧內的運算式  
   
 2.  INTERSECT 運算子  
   

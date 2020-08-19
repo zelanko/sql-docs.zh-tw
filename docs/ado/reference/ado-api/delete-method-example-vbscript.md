@@ -1,5 +1,6 @@
 ---
-title: Delete 方法範例（VBScript） |Microsoft Docs
+description: Delete 方法範例 (VBScript)
+title: Delete 方法範例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: 78935d6d-1c1a-4306-a83a-1763210c69f9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8f88d533d22987b5aa2669ee421da951f74224eb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 269a9d78ae8b97efca0bc4fac247640dfabc7248
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765579"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444130"
 ---
 # <a name="delete-method-example-vbscript"></a>Delete 方法範例 (VBScript)
-這個範例會使用[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)方法，從[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)移除指定的記錄。  
+這個範例會使用 [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) 方法，從 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)移除指定的記錄。  
   
- 在 Active Server Page （ASP）中使用下列範例。 若要查看此功能完整的範例，您必須擁有位於 C:\Program Files\Microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb 的資料來源 Advworks-srv01 .mdb （與 SDK 一起安裝），或編輯範例程式碼中的路徑，以反映此檔案的實際位置。 這是 Microsoft Access 資料庫檔案。  
+ 使用 Active Server Page (ASP) 中的下列範例。 若要查看這個功能完整的範例，您必須使用位於 C:\Program Files\Microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb 的 SDK) 來安裝資料來源 Advworks-srv01 (，或編輯範例程式碼中的路徑，以反映此檔案的實際位置。 這是 Microsoft Access 資料庫檔案。  
   
- 使用 [**尋找**] 找出 Adovbs 檔案，並將它放在您打算使用的目錄中。 將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器中，然後將它儲存為**DeleteVBS。** 您可以在任何用戶端瀏覽器中查看結果。  
+ 使用 [ **尋找** ] 找出檔案 Adovbs，並將它放在您打算使用的目錄中。 將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器中，然後將它儲存為**DeleteVBS。** 您可以在任何用戶端瀏覽器中查看結果。  
   
- 若要練習範例，請先嘗試使用[AddNew](../../../ado/reference/ado-api/addnew-method-example-vbscript.md)範例來新增一些記錄。 然後您可以嘗試刪除它們。 在任何用戶端瀏覽器中查看結果。  
+ 若要練習此範例，請先嘗試使用 [AddNew](../../../ado/reference/ado-api/addnew-method-example-vbscript.md) 範例來加入一些記錄。 然後您可以嘗試刪除它們。 在任何用戶端瀏覽器中查看結果。  
   
 ```  
 <!-- BeginDeleteVBS -->  
@@ -170,5 +171,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Delete 方法（ADO Recordset）](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
+ [ (ADO 記錄集的 Delete 方法) ](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

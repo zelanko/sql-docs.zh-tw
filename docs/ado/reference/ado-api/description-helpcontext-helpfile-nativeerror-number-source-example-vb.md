@@ -1,5 +1,6 @@
 ---
-title: Error 物件屬性範例（VB） |Microsoft Docs
+description: 'Description、HelpCoNtext、NativeError、Number、Source 和 SQLState 屬性範例 (VB) '
+title: Error 物件屬性範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 5c728458-d85c-497c-afcf-2cfa36c3342a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f12456e8331739d665eb14ba3553e4f4f1d36ce3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a1047e2335932de243acd2940446bf2ad0e24316
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757274"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444090"
 ---
-# <a name="description-helpcontext-helpfile-nativeerror-number-source-and-sqlstate-properties-example-vb"></a>Description、HelpCoNtext、內容説明、NativeError、Number、Source 和 SQLState 屬性範例（VB）
-這個範例會觸發錯誤、將其設為陷阱，並顯示所產生[錯誤](../../../ado/reference/ado-api/error-object.md)物件的[描述](../../../ado/reference/ado-api/description-property.md)、 [HelpCoNtext](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)、內容[説明](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)程式、 [NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md)、[數位](../../../ado/reference/ado-api/number-property-ado.md)、[來源](../../../ado/reference/ado-api/source-property-ado-error.md)和[SQLState](../../../ado/reference/ado-api/sqlstate-property.md)屬性。  
+# <a name="description-helpcontext-helpfile-nativeerror-number-source-and-sqlstate-properties-example-vb"></a>Description、HelpCoNtext、NativeError、Number、Source 和 SQLState 屬性範例 (VB) 
+此範例會觸發錯誤、將其設為陷阱，並顯示所產生之[錯誤](../../../ado/reference/ado-api/error-object.md)物件的[描述](../../../ado/reference/ado-api/description-property.md)、 [HelpCoNtext](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)、[説明](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)、 [NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md)、[數位](../../../ado/reference/ado-api/number-property-ado.md)、[來源](../../../ado/reference/ado-api/source-property-ado-error.md)和[SQLState](../../../ado/reference/ado-api/sqlstate-property.md)屬性。  
   
 ```  
 'BeginDescriptionVB  
@@ -77,9 +78,9 @@ End Sub
 ## <a name="see-also"></a>另請參閱  
  [Description 屬性](../../../ado/reference/ado-api/description-property.md)   
  [Error 物件](../../../ado/reference/ado-api/error-object.md)   
- [HelpCoNtext，內容説明的屬性](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
- [HelpCoNtext，內容説明的屬性](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
- [NativeError 屬性（ADO）](../../../ado/reference/ado-api/nativeerror-property-ado.md)   
- [Number 屬性（ADO）](../../../ado/reference/ado-api/number-property-ado.md)   
- [Source 屬性（ADO Error）](../../../ado/reference/ado-api/source-property-ado-error.md)   
+ [HelpCoNtext，內容説明屬性](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
+ [HelpCoNtext，內容説明屬性](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
+ [ (ADO) 的 NativeError 屬性 ](../../../ado/reference/ado-api/nativeerror-property-ado.md)   
+ [Number 屬性 (ADO) ](../../../ado/reference/ado-api/number-property-ado.md)   
+ [ (ADO Error) 的 Source 屬性 ](../../../ado/reference/ado-api/source-property-ado-error.md)   
  [SQLState 屬性](../../../ado/reference/ado-api/sqlstate-property.md)

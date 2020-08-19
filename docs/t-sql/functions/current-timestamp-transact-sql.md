@@ -1,4 +1,5 @@
 ---
+description: CURRENT_TIMESTAMP (Transact-SQL)
 title: CURRENT_TIMESTAMP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -31,12 +32,12 @@ ms.assetid: c724d9cc-7b1f-4c71-bdf5-08bc52b33afc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1777a033358b350c676fbb79aa81677f0907bbd0
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 89ea4e2a54cee32d742dd0e3c2b9607a589f0b35
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112135"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468139"
 ---
 # <a name="current_timestamp-transact-sql"></a>CURRENT_TIMESTAMP (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "87112135"
   
 這個函式是相當於 [GETDATE](../../t-sql/functions/getdate-transact-sql.md) 的 ANSI SQL。
   
-如需所有 [ 日期和時間資料類型與函式的概觀，請參閱](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)日期和時間資料類型與函式[!INCLUDE[tsql](../../includes/tsql-md.md)]。
+如需所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和時間資料類型與函式的概觀，請參閱[日期和時間資料類型與函式](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -67,7 +68,7 @@ CURRENT_TIMESTAMP
 **datetime**
   
 ## <a name="remarks"></a>備註  
-只要是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式可以參考 `CURRENT_TIMESTAMP`datetime**運算式的任何位置，它們就可以參考**。
+只要是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式可以參考 **datetime** 運算式的任何位置，它們就可以參考 `CURRENT_TIMESTAMP`。
   
 `CURRENT_TIMESTAMP` 是非決定性函數。 參考這個資料行的檢視和運算式，是無法編製索引的。
   

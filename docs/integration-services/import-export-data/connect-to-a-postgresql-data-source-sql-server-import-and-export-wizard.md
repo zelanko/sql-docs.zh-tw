@@ -1,4 +1,5 @@
 ---
+description: 連線至 PostgreSQL 資料來源 (SQL Server 匯入和匯出精靈)
 title: 連線至 PostgreSQL 資料來源 (SQL Server 匯入和匯出精靈) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/29/2020
@@ -9,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5fdb7545f2dc8bf5d27b26e54bf76b0307aad235
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 023c791e27fba3c26ac3ccd9778f0beee44536b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921384"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495591"
 ---
 # <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>連線至 PostgreSQL 資料來源 (SQL Server 匯入和匯出精靈)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-本主題示範如何透過 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面，連線至 **PostgreSQL** 資料來源。 
+本主題示範如何透過 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源]**** 或 [選擇目的地]**** 頁面，連線至 **PostgreSQL** 資料來源。 
 
 > [!IMPORTANT]
 > 這一篇 Microsoft 文章範圍未涵蓋連線至 PostgreSQL 資料庫的詳細需求和必要條件。 本文假設您已安裝 PostgreSQL 用戶端軟體，並已成功連線至目標 PostgreSQL 資料庫。 如需詳細資訊，請參閱 PostgreSQL 資料庫管理員或 PostgreSQL 文件。
@@ -37,7 +38,7 @@ ms.locfileid: "86921384"
 或者，直接從下列 FTP 網站，下載適用於最新版 PostgreSQL ODBC 驅動程式 (psqlODBC) 的 Windows 安裝程式：[https://www.postgresql.org/ftp/odbc/versions/msi/](https://www.postgresql.org/ftp/odbc/versions/msi/)。 從 .zip 檔解壓縮檔案，並執行 .msi 檔案。
 
 ## <a name="connect-to-postgresql-with-the-postgresql-odbc-driver-psqlodbc"></a>使用 PostgreSQL ODBC 驅動程式 (psqlODBC) 連線至 PostgreSQL
-ODBC 驅動程式未列在資料來源的下拉式清單中。 若要使用 ODBC 驅動程式連線，請先在 [選擇資料來源] 或 [選擇目的地] 頁面上，將 [.NET Framework Data Provider for ODBC] 選取為資料來源。 此提供者作用為 ODBC 驅動程式的包裝函式。
+ODBC 驅動程式未列在資料來源的下拉式清單中。 若要使用 ODBC 驅動程式連線，請先在 [選擇資料來源]**** 或 [選擇目的地]**** 頁面上，將 [.NET Framework Data Provider for ODBC]**** 選取為資料來源。 此提供者作用為 ODBC 驅動程式的包裝函式。
 
 以下是您選取 .NET Framework Data Provider for ODBC 之後立即看到的一般畫面。
 
@@ -54,12 +55,12 @@ ODBC 驅動程式未列在資料來源的下拉式清單中。 若要使用 ODBC
 > 取得組合正確連接字串的說明。 或者，您可以提供現有 DSN (資料來源名稱) 或建立新的 DSN，而不提供連接字串。 如需這些選項的詳細資訊，請參閱[連線至 ODBC 資料來源](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)。
 
 **驅動程式**  
-ODBC 驅動程式的名稱，為 **PostgreSQL ODBC Driver(UNICODE)** 或 **PostgreSQL ODBC Driver(ANSI)** 。
+ODBC 驅動程式的名稱，為 **PostgreSQL ODBC Driver(UNICODE)** 或 **PostgreSQL ODBC Driver(ANSI)**。
 
 **Server**  
 PostgreSQL 伺服器的名稱。 
 
-**通訊埠**  
+**連接埠**  
 用來連線至 PostgreSQL 伺服器的連接埠。
 
 **Database**  

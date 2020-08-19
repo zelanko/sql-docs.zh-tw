@@ -1,4 +1,5 @@
 ---
+description: catalog.validate_package (SSISDB 資料庫)
 title: catalog.validate_package (SSISDB 資料庫) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0dc03df1-b793-408f-af4c-c11188729abf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 34a5d09a65238ff469877138bf3de5e23cf46836
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 632a0039692cbb6d22dba736f268bffff9be6f74
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912734"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495381"
 ---
 # <a name="catalogvalidate_package-ssisdb-database"></a>catalog.validate_package (SSISDB 資料庫)
 
@@ -49,7 +50,7 @@ catalog.validate_package [ @folder_name = ] folder_name
  包含封裝之專案的名稱。 *project_name* 是 **nvarchar(128)** 。  
   
  [ @package_name = ] *package_name*  
- 封裝名稱。 *package_name* 是 **nvarchar(260)** 。  
+ 封裝名稱。 *package_name* 是 **nvarchar(260)**。  
   
  [ @validation_id = ] *validation_id*  
  傳回驗證的唯一識別碼 (ID)。 *validation_id* 是 **bigint**。  

@@ -1,4 +1,5 @@
 ---
+description: 分析函數 (Transact-SQL)
 title: 分析函式 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -13,12 +14,12 @@ ms.assetid: 60fbff84-673b-48ea-9254-6ecdad20e7fe
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fcb02ea9ba7b93c606bb6fa00fd8547fc0ef376b
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 2227508b89336fca543f12f60b76e22094cb78f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396977"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422842"
 ---
 # <a name="analytic-functions-transact-sql"></a>分析函數 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: 描述項欄位
 title: 描述項欄位 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f38623c8-fdd4-4601-b1f0-97c593d31177
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d363c3e42a97c5d520c1a693ebed935b202b7247
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 56ca1fa7d558101774d10c8daa530fa32f3f7d21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362558"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476730"
 ---
 # <a name="descriptor-fields"></a>描述項欄位
-描述項包含*標頭*和*記錄*欄位，可完整描述資料行或參數。  
+描述項包含的 *標頭* 和 *記錄* 欄位可完整描述資料行或參數。  
   
  描述項包含下列標頭欄位的單一複本。 變更標頭欄位會影響所有的資料行或參數。  
 
@@ -40,7 +41,7 @@ ms.locfileid: "87362558"
     :::column-end:::
 :::row-end:::
 
- 描述項包含零個或多個描述項記錄。 根據描述項的類型，每一筆記錄都有一個資料行或參數。 系結新的資料行或參數時，會將新的記錄新增至描述元。 未系結資料行或參數時，會從描述項中移除記錄。 每一筆記錄都包含下欄欄位的單一複本：  
+ 描述項包含零或多個描述項記錄。 每一筆記錄都會描述資料行或參數，端視描述項的類型而定。 系結新的資料行或參數時，會將新的記錄新增至描述項。 當資料行或參數未系結時，會從描述項中移除記錄。 每一筆記錄都包含下欄欄位的單一複本：  
 
 :::row:::
     :::column:::
@@ -81,7 +82,7 @@ ms.locfileid: "87362558"
     :::column-end:::
 :::row-end:::
 
- 許多語句屬性會對應至描述元的標頭欄位。 透過呼叫**SQLSetStmtAttr**來設定這些屬性，並藉由呼叫**SQLSetDescField**來設定對應的描述元標頭欄位具有相同的效果。 這也適用于**SQLGetStmtAttr**和**SQLGetDescField**，這兩種情況都會抓取相同的資訊。 呼叫語句函式，而不是描述項函式，其優點是不需要抓取描述項控制碼。  
+ 許多語句屬性都對應至描述項的標頭欄位。 透過呼叫 **SQLSetStmtAttr** 來設定這些屬性，並藉由呼叫 **SQLSetDescField** 來設定對應的描述項標頭欄位具有相同的效果。 這同樣適用于 **SQLGetStmtAttr** 和 **SQLGetDescField**，這兩個都會抓取相同的資訊。 呼叫語句函式而不是描述項函式的優點是不需要抓取描述項控制碼。  
   
  您可以藉由設定語句屬性來設定下列標頭欄位：  
 

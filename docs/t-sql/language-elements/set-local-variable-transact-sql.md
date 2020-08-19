@@ -1,4 +1,5 @@
 ---
+description: SET @local_variable (Transact-SQL)
 title: SET @local_variable (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -18,12 +19,12 @@ ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2393d6e51eb7c5b0df6ff1d710829a772b58dfd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f60866f303302b45092592124fb5cb6ff9bdb118
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918800"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459298"
 ---
 # <a name="set-local_variable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -81,7 +82,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
 Common Language Runtime (CLR) 使用者定義型別的名稱。  
   
 `{ . | :: }`  
-指定 CLR 使用者自訂類型的方法。 對於執行個體 (非靜態) 方法，請使用句點 ( **.** )。 對於靜態方法，請使用兩個冒號 ( **::** )。 若要叫用 CLR 使用者自訂類型的方法、屬性或欄位，您必須具有類型的 EXECUTE 權限。  
+指定 CLR 使用者自訂類型的方法。 對於執行個體 (非靜態) 方法，請使用句點 (**.**)。 對於靜態方法，請使用兩個冒號 (**::**)。 若要叫用 CLR 使用者自訂類型的方法、屬性或欄位，您必須具有類型的 EXECUTE 權限。  
   
 _method_name_ **(** _argument_ [ **,** ... *n* ] **)**  
 利用一個或多個引數來修改類型執行個體狀態的使用者定義型別方法。 靜態方法必須是公用的。  
@@ -168,7 +169,7 @@ READ ONLY
 防止利用這個資料指標來更新。 UPDATE 或 DELETE 陳述式中的 WHERE CURRENT OF 子句無法參考這個資料指標。 這個選項會覆寫要更新之資料指標的預設功能。 這個關鍵字有別於先前的 READ_ONLY，READ 和 ONLY 之間是空格，而不是底線。  
   
 `UPDATE [OF column_name[ ,... n ] ]`  
-在資料指標內定義可更新的資料行。 如果提供 OF *column_name* [ **,** ...*n*]，則只允許修改所列出的資料行。 未提供任何清單時，除非資料指標已定義為 READ_ONLY，否則可以更新所有資料行。  
+在資料指標內定義可更新的資料行。 如果提供 OF *column_name* [**,**...*n*]，則只允許修改所列出的資料行。 未提供任何清單時，除非資料指標已定義為 READ_ONLY，否則可以更新所有資料行。  
   
 ## <a name="remarks"></a>備註  
 在宣告變數之後，會將它初始化成 NULL。 請使用 SET 陳述式，將非 NULL 值指派給宣告的變數。 將值指派給變數的 SET 陳述式會傳回單一值。 當您初始化多個變數時，每個區域變數都要使用個別的 SET 陳述式。  

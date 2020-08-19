@@ -1,4 +1,5 @@
 ---
+description: DataMember 屬性
 title: DataMember 屬性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,25 +16,25 @@ helpviewer_keywords:
 ms.assetid: 2c8fb09e-10ad-49b5-ab41-2603771780d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 87d525907edde2e3dc99b78eb827c571c604d8b7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f698c4a20fb76839460ca0930d45b8d18b2738be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763479"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444230"
 ---
 # <a name="datamember-property"></a>DataMember 屬性
-指出將從[DataSource](../../../ado/reference/ado-api/datasource-property-ado.md)屬性所參考之[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)抓取的資料成員名稱。  
+指出將從[DataSource](../../../ado/reference/ado-api/datasource-property-ado.md)屬性所參考的[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)取出的資料成員名稱。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定或傳回**字串**值。 名稱不區分大小寫。  
+ 設定或傳回 **字串** 值。 名稱不區分大小寫。  
   
 ## <a name="remarks"></a>備註  
- 這個屬性是用來建立資料繫結控制項與資料環境。 資料環境會維護資料（資料來源）集合，其中包含將表示為[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件的已命名物件（資料成員）。  
+ 這個屬性是用來建立資料繫結控制項與資料環境。 資料環境會維護資料 (資料來源的集合，) 包含命名物件 (資料成員) 將表示為 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 物件。  
   
  **DataMember**和**DataSource**屬性必須一起使用。  
   
- **DataMember**屬性會判斷**DataSource**屬性所指定的物件將會表示為**記錄集**物件。 設定此屬性之前，必須先關閉**記錄集**物件。 如果**datamember**屬性未設定于**datasource**屬性之前，或**datasource**屬性中指定的物件無法辨識**datamember**名稱，則會產生錯誤。  
+ **DataMember**屬性會決定**DataSource**屬性所指定的物件將會表示為**記錄集**物件。 必須先關閉 **記錄集** 物件，才能設定此屬性。 如果**datasource**屬性之前未設定**datamember**屬性，或**datasource**屬性中指定的物件無法辨識**datamember**名稱，就會產生錯誤。  
   
 ## <a name="usage"></a>使用量  
   

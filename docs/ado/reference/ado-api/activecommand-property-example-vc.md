@@ -1,5 +1,6 @@
 ---
-title: ActiveCommand 屬性範例（VC + +） |Microsoft Docs
+description: ActiveCommand 屬性範例 (VC++)
+title: ActiveCommand 屬性範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 8269ea29-912a-4d20-9360-f48b3746081f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f0f0b39b26fb349222a3ad04cd1414d9cf3ddafe
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c36744944fb88be4da22642246b54908809145cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760764"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451710"
 ---
 # <a name="activecommand-property-example-vc"></a>ActiveCommand 屬性範例 (VC++)
-這個範例會示範[ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md)屬性。  
+此範例示範 [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) 屬性。  
   
- 副程式會提供一個[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件，其**ActiveCommand**屬性會用來顯示建立**記錄集**的命令文字和參數。  
+ 會為副程式提供一個 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 物件，而此物件的 **ActiveCommand** 屬性是用來顯示建立 **記錄集**的命令文字和參數。  
   
 ## <a name="example"></a>範例  
   
@@ -221,5 +222,5 @@ Name = 'Anne  Ringer'
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ActiveCommand 屬性（ADO）](../../../ado/reference/ado-api/activecommand-property-ado.md)   
+ [ (ADO) 的 ActiveCommand 屬性 ](../../../ado/reference/ado-api/activecommand-property-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
