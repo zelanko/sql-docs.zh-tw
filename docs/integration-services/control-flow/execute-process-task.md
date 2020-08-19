@@ -1,4 +1,5 @@
 ---
+description: 執行處理工作
 title: 執行處理工作 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a47088f610dc016fe904b9b772e261b9bd2adcf0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0e34be2d218041a4c8994bf0bea5579942f444ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920679"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430980"
 ---
 # <a name="execute-process-task"></a>執行處理工作
 

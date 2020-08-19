@@ -1,4 +1,5 @@
 ---
+description: Indexes 集合屬性、方法和事件
 title: 索引集合屬性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b27b5c37-3db2-4831-a447-ee6442e24d87
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 769de1f1529555c539d43793dbcafb99bef01cbd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bcd274bd42235b489e017e7fd85bc3223008f57c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746831"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439900"
 ---
 # <a name="indexes-collection-properties-methods-and-events"></a>Indexes 集合屬性、方法和事件
 ## <a name="properties"></a>屬性  
@@ -26,9 +27,9 @@ ms.locfileid: "82746831"
  [Item 屬性](../../../ado/reference/ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>方法  
- [Append 方法（索引）](../../../ado/reference/adox-api/append-method-adox-indexes.md)  
+ [附加方法 (索引) ](../../../ado/reference/adox-api/append-method-adox-indexes.md)  
   
- [Delete 方法（集合）](../../../ado/reference/adox-api/delete-method-adox-collections.md)  
+ [Delete 方法 (集合) ](../../../ado/reference/adox-api/delete-method-adox-collections.md)  
   
  [Refresh 方法](../../../ado/reference/ado-api/refresh-method-ado.md)  
   

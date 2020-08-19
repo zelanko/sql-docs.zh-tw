@@ -1,4 +1,5 @@
 ---
+description: SQL 到 C 資料轉換範例
 title: SQL 到 C 資料轉換範例 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0190c76c-7f9b-42f4-be9d-cef7284840fd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 96b10dd93c807aaa49a7e10e198f789fb47ccdeb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a7a3d70a6f74a814262ddad580b5e5a2b0d79927
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296648"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429580"
 ---
 # <a name="sql-to-c-data-conversion-examples"></a>SQL 到 C 資料轉換範例
 
@@ -39,7 +40,7 @@ ms.locfileid: "81296648"
 |SQL_DOUBLE|1.2345678|SQL_C_STINYINT|忽略|1|n/a|  
 |SQL_TYPE_DATE|1992-12-31|SQL_C_CHAR|11|1992-12-31 \ 0 [a]|n/a|  
 |SQL_TYPE_DATE|1992-12-31|SQL_C_CHAR|10|-----|22003|  
-|SQL_TYPE_DATE|1992-12-31|SQL_C_TIMESTAMP|忽略|1992，12，31，0，0，0，0 [b]|n/a|  
+|SQL_TYPE_DATE|1992-12-31|SQL_C_TIMESTAMP|忽略|1992、12、31、0、0、0、0 [b]|n/a|  
 |SQL_TYPE_TIMESTAMP|1992-12-31 23：45：55.12|SQL_C_CHAR|23|1992-12-31 23：45： 55.12 \ 0 [a]|n/a|  
 |SQL_TYPE_TIMESTAMP|1992-12-31 23：45：55.12|SQL_C_CHAR|22|1992-12-31 23：45： 55.1 \ 0 [a]|01004|  
 |SQL_TYPE_TIMESTAMP|1992-12-31 23：45：55.12|SQL_C_CHAR|18|----|22003|  

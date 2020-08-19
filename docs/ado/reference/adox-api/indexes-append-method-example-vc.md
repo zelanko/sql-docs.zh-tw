@@ -1,5 +1,6 @@
 ---
-title: 索引附加方法範例（VC + +） |Microsoft Docs
+description: Indexes Append 方法範例 (VC++)
+title: " (VC + +) 的索引附加方法範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 33c559c4-4db7-4850-9309-2743a7ae5521
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 77624629aeb68381729f891f74f57a980f71a589
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3b70e539902fb2a3b43c732f7c8ead6b047818ee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763869"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439920"
 ---
 # <a name="indexes-append-method-example-vc"></a>Indexes Append 方法範例 (VC++)
 下列程式碼示範如何建立新的索引。 索引位於資料表中的兩個數據行上。  

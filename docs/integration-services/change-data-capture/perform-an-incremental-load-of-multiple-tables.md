@@ -1,4 +1,5 @@
 ---
+description: 執行多個資料表的累加式載入
 title: 執行多個資料表的累加式載入 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c52a54708b1842207582909cbfdc3bdfe831b303
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 80d1573e5ab4f0f598ef0b1af5ee415b785cdbdb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921302"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431150"
 ---
 # <a name="perform-an-incremental-load-of-multiple-tables"></a>執行多個資料表的累加式載入
 

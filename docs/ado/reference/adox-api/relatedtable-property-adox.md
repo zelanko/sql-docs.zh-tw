@@ -1,5 +1,6 @@
 ---
-title: RelatedTable 屬性（ADOX） |Microsoft Docs
+description: RelatedTable 屬性 (ADOX)
+title: RelatedTable 屬性 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -19,23 +20,23 @@ helpviewer_keywords:
 ms.assetid: cb54c6bc-2be2-40b1-bc11-90c10651b878
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43fa9707f4bda0974211fbba5f74ec10c14cf961
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fe412b89b4aee37252db62e9a58b3a11c9d2b88e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762821"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439560"
 ---
 # <a name="relatedtable-property-adox"></a>RelatedTable 屬性 (ADOX)
-表示相關資料表的名稱。  
+指出相關資料表的名稱。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定並傳回**字串**值。  
+ 設定並傳回 **字串** 值。  
   
 ## <a name="remarks"></a>備註  
  預設值為空字串 ("")。  
   
- 如果索引鍵是外鍵，則**RelatedTable**是包含索引鍵之資料表的名稱。  
+ 如果索引鍵是外鍵，則 **RelatedTable** 是包含索引鍵之資料表的名稱。  
   
 ## <a name="applies-to"></a>套用至  
  [Key 物件 (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  

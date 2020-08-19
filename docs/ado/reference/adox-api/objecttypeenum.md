@@ -1,4 +1,5 @@
 ---
+description: ObjectTypeEnum
 title: ObjectTypeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,22 +16,22 @@ helpviewer_keywords:
 ms.assetid: 3fdecfca-aa91-4596-ad98-610f1b7f840b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fe7d97909a2d38e548a072245b08110b1d61eb3c
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 22b2c36ab87079c7bc984606a36397a98ea67af7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943160"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439750"
 ---
 # <a name="objecttypeenum"></a>ObjectTypeEnum
-指定要設定其許可權或擁有權的資料庫物件類型。  
+指定要設定許可權或擁有權的資料庫物件類型。  
   
-|持續性|值|描述|  
+|常數|值|描述|  
 |--------------|-----------|-----------------|  
 |**adPermObjColumn**|2|物件是資料行。|  
 |**adPermObjDatabase**|3|物件是資料庫。|  
-|**adPermObjProcedure**|4|物件是一個程式。|  
-|**adPermObjProviderSpecific**|-1|物件是提供者所定義的類型。 如果*ObjectType*參數為**adPermObjProviderSpecific** ，且未提供*ObjectTypeId* ，就會發生錯誤。|  
+|**adPermObjProcedure**|4|物件是程式。|  
+|**adPermObjProviderSpecific**|-1|物件是提供者所定義的類型。 如果 *ObjectType* 參數是 **adPermObjProviderSpecific** ，而且未提供 *ObjectTypeId* ，就會發生錯誤。|  
 |**adPermObjTable**|1|物件是資料表。|  
 |**adPermObjView**|5|物件是一個視圖。|  
   

@@ -1,4 +1,5 @@
 ---
+description: User 物件屬性、方法和事件
 title: User 物件屬性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: becd590c-0db7-485c-8bf4-fa3456e4ba20
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e993688a7ac1c0dfe8e03f875d4cd91153debc2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4f1dd6d4e443a0426a5bd88231be944238e58bd7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762689"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439380"
 ---
 # <a name="user-object-properties-methods-and-events"></a>User 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  

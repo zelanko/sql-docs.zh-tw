@@ -1,5 +1,6 @@
 ---
-title: Connect 屬性範例（VBScript） |Microsoft Docs
+description: Connect 屬性範例 (VBScript)
+title: 連接屬性範例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cee201d56361d18ded5fbef1c2c36051c34ecdc8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f7b854f8d5b84883d28915af629c2af67036b718
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746267"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439220"
 ---
 # <a name="connect-property-example-vbscript"></a>Connect 屬性範例 (VBScript)
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統不再包含 RDS 伺服器元件（如需詳細資訊，請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)）。 RDS 用戶端元件將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 這段程式碼會示範如何在設計階段設定[Connect](../../../ado/reference/rds-api/connect-property-rds.md)屬性：  
+ 這段程式碼會示範如何在設計階段設定 [Connect](../../../ado/reference/rds-api/connect-property-rds.md) 屬性：  
   
 ```  
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33" ID="ADC1">  
@@ -37,9 +38,9 @@ ms.locfileid: "82746267"
 </OBJECT>  
 ```  
   
- 下列範例顯示如何在 VBScript 程式碼中，于執行時間設定**Connect**屬性。  
+ 下列範例示範如何在執行時間于 VBScript 程式碼中設定 **Connect** 屬性。  
   
- 若要測試此範例，請剪下本文> 的程式碼，並 \< \< 在一般 HTML 檔案中/Body> 標記，並將其命名為**ConnectVBS。** ASP 腳本會識別您的伺服器。  
+ 若要測試此範例，請在一般 HTML 檔案的和標記之間剪下並貼上程式碼， \<Body> \</Body> 並將它命名為**ConnectVBS。** ASP 腳本會識別您的伺服器。  
   
 ```  
 <!-- BeginConnectVBS -->  

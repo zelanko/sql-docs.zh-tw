@@ -1,4 +1,5 @@
 ---
+description: SQL 到 C：數值
 title: SQL 到 C：數值 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 76f8b5d5-4bd0-4dcb-a90a-698340e0d36e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 36b24da4023a96b686742416b83bb5790e129278
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d48706eddabc71f28c84fae5623a8c9e440d8506
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296408"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429560"
 ---
 # <a name="sql-to-c-numeric"></a>SQL 到 C：數值
 
@@ -34,28 +35,28 @@ ms.locfileid: "81296408"
 - SQL_SMALLINT  
 - SQL_DOUBLE SQL_INTEGER  
 
-下表顯示數值 SQL 資料可能轉換成的 ODBC C 資料類型。 如需資料表中的資料行和詞彙的說明，請參閱將[資料從 SQL 轉換成 C 資料類型](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)。  
+下表顯示可轉換數值 SQL 資料的 ODBC C 資料類型。 如需資料表中的資料行和詞彙的說明，請參閱將 [資料從 SQL 轉換成 C 資料類型](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)。  
 
 |C 類型識別碼|測試|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|字元位元組長度 < *BufferLength*<br /><br /> < *BufferLength*的整體數目（相對於小數）位數<br /><br /> 整體數目（相對於小數）數位 >= *BufferLength*|資料<br /><br /> 截斷的資料<br /><br /> 未定義|資料長度（以位元組為單位）<br /><br /> 資料長度（以位元組為單位）<br /><br /> 未定義|n/a<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|字元長度 < *BufferLength*<br /><br /> < *BufferLength*的整體數目（相對於小數）位數<br /><br /> 整體數目（相對於小數）數位 >= *BufferLength*|資料<br /><br /> 截斷的資料<br /><br /> 未定義|資料長度（以字元為單位）<br /><br /> 資料長度（以字元為單位）<br /><br /> 未定義|n/a<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_STINYINT<br /><br /> SQL_C_UTINYINT<br /><br /> SQL_C_TINYINT<br /><br /> SQL_C_SBIGINT<br /><br /> SQL_C_UBIGINT<br /><br /> SQL_C_SSHORT<br /><br /> SQL_C_USHORT<br /><br /> SQL_C_SHORT<br /><br /> SQL_C_SLONG<br /><br /> SQL_C_ULONG<br /><br /> SQL_C_LONG<br /><br /> SQL_C_NUMERIC|不截斷而轉換的資料 [a]<br /><br /> 以截斷小數數位 [a] 轉換的資料<br /><br /> 資料的轉換會導致整體遺失（相對於小數）數位 [a]|資料<br /><br /> 截斷的資料<br /><br /> 未定義|C 資料類型的大小<br /><br /> C 資料類型的大小<br /><br /> 未定義|n/a<br /><br /> 01S07<br /><br /> 22003|  
-|SQL_C_FLOAT<br /><br /> SQL_C_DOUBLE|資料位於要轉換數位的資料類型範圍內 [a]<br /><br /> 資料超出要轉換數位的資料類型範圍 [a]|資料<br /><br /> 未定義|C 資料類型的大小<br /><br /> 未定義|n/a<br /><br /> 22003|  
+|SQL_C_CHAR|字元位元組長度 < *BufferLength*<br /><br /> 相對於小數) 位數 < *BufferLength*的整體 (數目<br /><br /> 整個 (的數目，而不是小數) 位數 >= *BufferLength*|資料<br /><br /> 截斷的資料<br /><br /> 未定義|資料的長度（以位元組為單位）<br /><br /> 資料的長度（以位元組為單位）<br /><br /> 未定義|n/a<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|字元長度 < *BufferLength*<br /><br /> 相對於小數) 位數 < *BufferLength*的整體 (數目<br /><br /> 整個 (的數目，而不是小數) 位數 >= *BufferLength*|資料<br /><br /> 截斷的資料<br /><br /> 未定義|資料的長度（以字元為單位）<br /><br /> 資料的長度（以字元為單位）<br /><br /> 未定義|n/a<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_STINYINT<br /><br /> SQL_C_UTINYINT<br /><br /> SQL_C_TINYINT<br /><br /> SQL_C_SBIGINT<br /><br /> SQL_C_UBIGINT<br /><br /> SQL_C_SSHORT<br /><br /> SQL_C_USHORT<br /><br /> SQL_C_SHORT<br /><br /> SQL_C_SLONG<br /><br /> SQL_C_ULONG<br /><br /> SQL_C_LONG<br /><br /> SQL_C_NUMERIC|未截斷的資料轉換 [a]<br /><br /> 以截斷小數數位 [a] 轉換的資料<br /><br /> 轉換資料會導致整個 (遺失，而不是小數) 位數 [a]|資料<br /><br /> 截斷的資料<br /><br /> 未定義|C 資料類型的大小<br /><br /> C 資料類型的大小<br /><br /> 未定義|n/a<br /><br /> 01S07<br /><br /> 22003|  
+|SQL_C_FLOAT<br /><br /> SQL_C_DOUBLE|資料在轉換數位的資料類型範圍內 [a]<br /><br /> 資料超出要轉換數位的資料類型範圍 [a]|資料<br /><br /> 未定義|C 資料類型的大小<br /><br /> 未定義|n/a<br /><br /> 22003|  
 |SQL_C_BIT|資料為0或 1 [a]<br /><br /> 資料大於0、小於2，且不等於 1 [a]<br /><br /> 資料小於0或大於或等於 2 [a]|資料<br /><br /> 截斷的資料<br /><br /> 未定義|1 [b]<br /><br /> 1 [b]<br /><br /> 未定義|n/a<br /><br /> 01S07<br /><br /> 22003|  
 |SQL_C_BINARY|資料 <的位元組長度 = *BufferLength*<br /><br /> 資料 > *BufferLength*的位元組長度|資料<br /><br /> 未定義|資料的長度<br /><br /> 未定義|n/a<br /><br /> 22003|  
-|SQL_C_INTERVAL_MONTH [c] SQL_C_INTERVAL_YEAR [c] SQL_C_INTERVAL_DAY [c] SQL_C_INTERVAL_HOUR [c] SQL_C_INTERVAL_MINUTE [c] SQL_C_INTERVAL_SECOND [c]|資料未遭截斷<br /><br /> 小數秒數部分已截斷<br /><br /> 已截斷數位的整體部分|資料<br /><br /> 截斷的資料<br /><br /> 未定義|資料長度（以位元組為單位）<br /><br /> 資料長度（以位元組為單位）<br /><br /> 未定義|n/a<br /><br /> 01S07<br /><br /> 22015|  
-|SQL_C_INTERVAL_YEAR_TO_MONTH SQL_C_INTERVAL_DAY_TO_HOUR SQL_C_INTERVAL_DAY_TO_MINUTE SQL_C_INTERVAL_DAY_TO_SECOND SQL_C_INTERVAL_HOUR_TO_MINUTE SQL_C_INTERVAL_HOUR_TO_SECOND|已截斷數位的整體部分|未定義|未定義|22015|  
+|SQL_C_INTERVAL_MONTH [c] SQL_C_INTERVAL_YEAR [c] SQL_C_INTERVAL_DAY [c] SQL_C_INTERVAL_HOUR [c] SQL_C_INTERVAL_MINUTE [c] SQL_C_INTERVAL_SECOND [c]|未截斷資料<br /><br /> 小數秒部分已截斷<br /><br /> 截斷的數位的整個部分|資料<br /><br /> 截斷的資料<br /><br /> 未定義|資料的長度（以位元組為單位）<br /><br /> 資料的長度（以位元組為單位）<br /><br /> 未定義|n/a<br /><br /> 01S07<br /><br /> 22015|  
+|SQL_C_INTERVAL_YEAR_TO_MONTH SQL_C_INTERVAL_DAY_TO_HOUR SQL_C_INTERVAL_DAY_TO_MINUTE SQL_C_INTERVAL_DAY_TO_SECOND SQL_C_INTERVAL_HOUR_TO_MINUTE SQL_C_INTERVAL_HOUR_TO_SECOND|截斷的數位的整個部分|未定義|未定義|22015|  
   
- [a] 這項轉換會忽略*BufferLength*的值。 驅動程式假設 **TargetValuePtr*的大小是 C 資料類型的大小。  
+ [a] 此轉換會忽略 *BufferLength* 的值。 驅動程式會假設 **TargetValuePtr* 的大小是 C 資料類型的大小。  
   
  [b] 這是對應 C 資料類型的大小。  
   
- [c] 只有精確數值資料類型（SQL_DECIMAL、SQL_NUMERIC、SQL_TINYINT、SQL_SMALLINT、SQL_INTEGER 和 SQL_BIGINT 才支援這種轉換。 近似數值資料類型（SQL_REAL、SQL_FLOAT 或 SQL_DOUBLE）不受支援。  
+ [c] 只有精確數值資料類型才支援這項轉換 (SQL_DECIMAL、SQL_NUMERIC、SQL_TINYINT、SQL_SMALLINT、SQL_INTEGER 和 SQL_BIGINT) 。 近似的數值資料類型 (SQL_REAL、SQL_FLOAT 或 SQL_DOUBLE) 並不支援。  
 
 ## <a name="sql_c_numeric-and-sqlsetdescfield"></a>SQL_C_NUMERIC 和 SQLSetDescField
 
- 必須要有[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)函式，才能使用 SQL_C_NUMERIC 值來執行手動系結。 （請注意，SQLSetDescField 是在 ODBC 3.0 中加入）。若要執行手動系結，您必須先取得描述項控制碼。  
+ 需要 [SQLSetDescField 函數](../../../odbc/reference/syntax/sqlsetdescfield-function.md) 才能以 SQL_C_NUMERIC 值執行手動系結。  (請注意，SQLSetDescField 已加入 ODBC 3.0 中。 ) 若要執行手動系結，您必須先取得描述項控制碼。  
 
 ```cpp
 if (fCType == SQL_C_NUMERIC) {   

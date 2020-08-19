@@ -1,4 +1,5 @@
 ---
+description: KeyTypeEnum
 title: KeyTypeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 3e597c52-caf4-4341-8471-d1ade563dbf7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0160cde7efc41e0d946959e37ca34fdeabb17723
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9f8e1f16d9505de18751e80cc982f472d7ae0422
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763829"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439790"
 ---
 # <a name="keytypeenum"></a>KeyTypeEnum
-指定索引[鍵](../../../ado/reference/adox-api/key-object-adox.md)的類型： [主要]、[外部] 或 [唯一]。  
+指定索引 [鍵](../../../ado/reference/adox-api/key-object-adox.md)的類型： primary、foreign 或 unique。  
   
-|持續性|值|說明|  
+|常數|值|描述|  
 |--------------|-----------|-----------------|  
-|**adKeyPrimary**|1|預設值。 此索引鍵是主鍵。|  
+|**adKeyPrimary**|1|預設值。 金鑰是主要金鑰。|  
 |**adKeyForeign**|2|索引鍵為外部索引鍵。|  
 |**adKeyUnique**|3|索引鍵是唯一的。|  
   

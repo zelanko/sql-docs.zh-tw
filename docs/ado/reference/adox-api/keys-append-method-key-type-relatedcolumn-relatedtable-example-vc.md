@@ -1,5 +1,6 @@
 ---
-title: 建立新的外鍵範例（VC + +） |Microsoft Docs
+description: Keys Append 方法、Key Type、RelatedColumn、RelatedTable 和 UpdateRule 屬性範例 (VC++)
+title: " (VC + +) 建立新的外鍵範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 28495b8f-18dc-482c-995d-a120f6ae2006
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 260c29c18f6d8c95cbca6e06c25ebf05fceeec64
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 078e3078f57dea91cd5f73b6cce504545771f59e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763859"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439820"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vc"></a>Keys Append 方法、Key Type、RelatedColumn、RelatedTable 和 UpdateRule 屬性範例 (VC++)
-下列程式碼示範如何建立新的外鍵。 它假設有兩個數據表（客戶和訂單）存在。  
+下列程式碼示範如何建立新的外鍵。 它假設有兩個數據表 (客戶和訂單) 存在。  
   
 ```  
 // BeginCreateKeyCpp.cpp  

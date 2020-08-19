@@ -1,4 +1,5 @@
 ---
+description: Procedures 集合屬性、方法和事件
 title: 程式集合屬性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 557890e5-9a45-405d-a8d3-4f7c2b899c08
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f9bd7b39187e20b30e56a95a30b114e2eced1b68
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1a0558bf005ed06f508e7c5656a6a7aa51b79dc5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748628"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439590"
 ---
 # <a name="procedures-collection-properties-methods-and-events"></a>Procedures 集合屬性、方法和事件
 ## <a name="properties"></a>屬性  
@@ -26,9 +27,9 @@ ms.locfileid: "82748628"
  [Item 屬性](../../../ado/reference/ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>方法  
- [Append 方法（程式）](../../../ado/reference/adox-api/append-method-adox-procedures.md)  
+ [附加方法 (程式) ](../../../ado/reference/adox-api/append-method-adox-procedures.md)  
   
- [Delete 方法（集合）](../../../ado/reference/adox-api/delete-method-adox-collections.md)  
+ [Delete 方法 (集合) ](../../../ado/reference/adox-api/delete-method-adox-collections.md)  
   
  [Refresh 方法](../../../ado/reference/ado-api/refresh-method-ado.md)  
   

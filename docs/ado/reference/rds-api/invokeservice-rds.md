@@ -1,5 +1,6 @@
 ---
-title: InvokeService （RDS） |Microsoft Docs
+description: InvokeService (RDS)
+title: InvokeService (RDS) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: ad45c676-ec7e-4a3a-9a6b-a54f75eb3012
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1ead0a42c0c5239a0f3bb4cafecb584788e06832
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4b14c4f2b97f3002291f5be765b1b0dfe6cf4f1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751911"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438910"
 ---
 # <a name="invokeservice-rds"></a>InvokeService (RDS)
-在物件的支援版本上，傳回所要求介面的指標。  
+在更強大的物件版本上，將指標傳回至要求的介面。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統不再包含 RDS 伺服器元件（如需詳細資訊，請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)）。 RDS 用戶端元件將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至  [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,17 +41,17 @@ object.InvokeService(REFID riid, IUknown* punkNotSoFunctionalInterface, IUknown*
   
  *punkNotSoFunctionalInterface*  
   
- 在較不支援的來源物件。  
+ 在功能較少的來源物件。  
   
  *ppunkMoreFunctionalInterface*  
   
- 脫銷指標變數的位址，其會接收在*riid*中要求的介面指標。 成功傳回時， *ppunkMoreFunctionalInterface*參數會包含所要求的介面指標給物件。 如果物件不支援*riid*中指定的介面， *ppunkMoreFunctionalInterface*會設定為 Null。  
+ 擴展指標變數的位址，此變數會接收在 *riid*中要求的介面指標。 在成功傳回時， *ppunkMoreFunctionalInterface* 參數會包含要求的物件介面指標。 如果物件不支援在 *riid*中指定的介面， *ppunkMoreFunctionalInterface* 會設為 Null。  
   
 ## <a name="return-value"></a>傳回值  
- HRESULT 值，指出**InvokeService**方法的呼叫是否成功。  
+ HRESULT 值，指出對 **InvokeService** 方法的呼叫是否成功。  
   
 ## <a name="remarks"></a>備註  
- **InvokeService**的 RDS 資料指標引擎執行會接受輸入資料列集（或多個結果物件）、填入輸入資料列集的資料指標引擎，然後在其本身上傳回指標。  
+ **InvokeService**的 RDS 資料指標引擎實採用輸入資料列集 (或多個結果物件) 、從輸入資料列集填入資料指標引擎，然後將指標傳回本身。  
   
 ## <a name="applies-to"></a>套用至  
  [IRDSService 介面 (RDS)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)  

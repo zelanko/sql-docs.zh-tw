@@ -1,4 +1,5 @@
 ---
+description: 資料採礦查詢工作
 title: 資料採礦查詢工作 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e678774a8da38b8ff2e8c64adc7309828d6dffb6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 285bc5e3b2bdf9dfb1497539def56ecbaa77ccb3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919834"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431020"
 ---
 # <a name="data-mining-query-task"></a>資料採礦查詢工作
 
@@ -85,9 +86,9 @@ ms.locfileid: "86919834"
   
 ### <a name="mining-model-tab-options"></a>採礦模型索引標籤選項  
  **[連接]**  
- 在清單中選取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連線管理員，或按一下 [新增]  以建立新的連線管理員。  
+ 在清單中選取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連線管理員，或按一下 [新增]**** 以建立新的連線管理員。  
   
- **相關主題：** [Analysis Services 連線管理員](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
+ **相關主題：**  [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md) (Analysis Services 連線管理員)  
   
  **新增**  
  建立新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連線管理員。  
@@ -101,7 +102,7 @@ ms.locfileid: "86919834"
  選取在所選取採礦結構上建立的採礦模型。  
 
 ## <a name="data-mining-query-task-editor-query-tab"></a>資料採礦查詢工作編輯器 (查詢索引標籤)
-  使用 [資料採礦查詢工作]  對話方塊的 [查詢]  索引標籤，即可依據採礦模型建立預測查詢。 在此對話方塊中，您也可以將參數和結果集繫結到變數。  
+  使用 [資料採礦查詢工作]**** 對話方塊的 [查詢]**** 索引標籤，即可依據採礦模型建立預測查詢。 在此對話方塊中，您也可以將參數和結果集繫結到變數。  
   
  若要深入了解在封裝中實作資料採礦，請參閱 [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md) (資料採礦查詢工作) 和 [Data Mining Solutions](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)(資料採礦方案)。  
   
@@ -119,7 +120,7 @@ ms.locfileid: "86919834"
  **資料採礦查詢**  
  輸入資料採礦查詢。  
   
- **相關主題：** [資料採礦延伸模組 &#40;DMX&#41; 參考](../../dmx/data-mining-extensions-dmx-reference.md)  
+ **相關主題：**  [資料採礦延伸模組 &#40;DMX&#41; 參考](../../dmx/data-mining-extensions-dmx-reference.md)  
   
  **建立新查詢**  
  使用圖形工具來建立資料採礦查詢。  
@@ -128,7 +129,7 @@ ms.locfileid: "86919834"
   
 ### <a name="parameter-mapping-tab-options"></a>參數對應索引標籤選項  
  **參數名稱**  
- 選擇性地更新參數名稱。 在 [變數名稱]  清單中選取變數，即可將參數對應至變數。  
+ 選擇性地更新參數名稱。 在 [變數名稱]**** 清單中選取變數，即可將參數對應至變數。  
   
  **變數名稱**  
  在清單中選取變數，以將其對應至參數。  
@@ -137,13 +138,13 @@ ms.locfileid: "86919834"
  將參數加入清單中。  
   
  **移除**  
- 選取參數，然後按一下 [移除]  。  
+ 選取參數，然後按一下 [移除]****。  
   
 ### <a name="result-set-tab-options"></a>結果集索引標籤選項  
  **結果名稱**  
- 選擇性地更新結果集名稱。 在 [變數名稱]  清單中選取變數，即可將結果對應至變數。  
+ 選擇性地更新結果集名稱。 在 [變數名稱]**** 清單中選取變數，即可將結果對應至變數。  
   
- 按一下 [加入]  來加入結果之後，請為該結果提供唯一的名稱。  
+ 按一下 [加入]**** 來加入結果之後，請為該結果提供唯一的名稱。  
   
  **變數名稱**  
  在清單中選取變數，以將其對應至結果集。  
@@ -155,7 +156,7 @@ ms.locfileid: "86919834"
  將結果集加入清單中。  
   
  **移除**  
- 選取結果，然後按一下 [移除]  。  
+ 選取結果，然後按一下 [移除]****。  
 ## <a name="data-mining-query-task-editor-output-tab"></a>資料採礦查詢工作編輯器 (輸出索引標籤)
   使用 **[資料採礦查詢工作編輯器]** 對話方塊的 **[輸出]** 索引標籤，即可指定預測查詢的目的地。  
   
@@ -173,7 +174,7 @@ ms.locfileid: "86919834"
   
 ### <a name="output-tab-options"></a>輸出索引標籤選項  
  **[連接]**  
- 在清單中選取連線管理員，或按一下 [新增]  來建立新的連線管理員。  
+ 在清單中選取連線管理員，或按一下 [新增]**** 來建立新的連線管理員。  
   
  **新增**  
  建立新的連接管理員。 只能使用 ADO.NET 和 OLE DB 連接管理員類型。  

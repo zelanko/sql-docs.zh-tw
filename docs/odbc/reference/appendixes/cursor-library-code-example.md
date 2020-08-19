@@ -1,4 +1,5 @@
 ---
+description: 資料指標程式庫程式碼範例
 title: 資料指標程式庫程式碼範例 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 958a179c-97d9-4717-8d06-d33b715a9773
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cdbc751ecf6ed2427809c70707226f335a7b8d4b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8301cf0b608874075c7bc8c66bba25d00f07668d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284678"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429680"
 ---
 # <a name="cursor-library-code-example"></a>資料指標程式庫程式碼範例
 > [!IMPORTANT]  
->  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
+>  未來的 Windows 版本將會移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
   
- 下列範例會使用資料指標程式庫來抓取 ORDERS 資料表中的每個訂單識別碼、開啟日期和狀態。 然後，它會顯示20個數據列。 如果使用者更新此資料，則程式碼會更新資料列集緩衝區，並執行定位的 update 語句。 最後，它會提示使用者滾動並重複處理常式。  
+ 下列範例會使用資料指標程式庫，從 ORDERS 資料表中取出每個訂單的識別碼、開啟日期和狀態。 然後，它會顯示20個數據列。 如果使用者更新此資料，則程式碼會更新資料列集緩衝區，並執行定位的 update 語句。 最後，它會提示使用者滾動並重複程式。  
   
 ```  
 #define ROWS 20  

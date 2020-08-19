@@ -1,5 +1,6 @@
 ---
-title: Parameters 集合、Command 屬性範例（VB） |Microsoft Docs
+description: Parameters 集合、Command 屬性範例 (VB)
+title: Parameters 集合、Command 屬性範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7df1089e-69b7-476e-9244-19947c087351
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4feb9c7ec12bbf560c874b15389adcd3a7eec04a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c82fc6388f1a7ad6582cc91ab2589afda2912f6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763779"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439740"
 ---
 # <a name="parameters-collection-command-property-example-vb"></a>Parameters 集合、Command 屬性範例 (VB)
-下列程式碼示範如何搭配使用[command](../../../ado/reference/adox-api/command-property-adox.md)屬性與[command](../../../ado/reference/ado-api/command-object-ado.md)物件，以取得程式的參數資訊。  
+下列程式碼示範如何搭配[command](../../../ado/reference/ado-api/command-object-ado.md)物件使用[command](../../../ado/reference/adox-api/command-property-adox.md)屬性，以抓取程式的參數資訊。  
   
 ```  
 ' BeginParametersVB  
@@ -76,8 +77,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ActiveConnection 屬性（ADOX）](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Catalog 物件（ADOX）](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Command 屬性（ADOX）](../../../ado/reference/adox-api/command-property-adox.md)   
- [Procedure 物件（ADOX）](../../../ado/reference/adox-api/procedure-object-adox.md)   
+ [ActiveConnection 屬性 (ADOX) ](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
+ [ (ADOX) 的目錄物件 ](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [命令屬性 (ADOX) ](../../../ado/reference/adox-api/command-property-adox.md)   
+ [Procedure 物件 (ADOX) ](../../../ado/reference/adox-api/procedure-object-adox.md)   
  [Procedures 集合 (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)

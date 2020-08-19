@@ -1,4 +1,5 @@
 ---
+description: 一般檔案自訂屬性
 title: 一般檔案自訂屬性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7f2caeab-784c-4b0c-9b3e-6a88d1ccdbf9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eef1dd7c7cf1a977f8443f22e7bf3af9158b8ae7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9c20e9a830439e8065a1bbccfe7d25540c9ae639
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919765"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430850"
 ---
 # <a name="flat-file-custom-properties"></a>一般檔案自訂屬性
 
@@ -30,8 +31,8 @@ ms.locfileid: "86919765"
   
 |屬性名稱|資料類型|描述|  
 |-------------------|---------------|-----------------|  
-|FileNameColumnName|String|包含檔案名稱之輸出資料行的名稱。 如果沒有指定任何名稱，就不會產生包含檔案名稱的輸出資料行。<br /><br /> 注意：雖然您無法在 [一般檔案來源編輯器]  中使用這個屬性，但是可以使用 [進階編輯器]  來設定這個屬性。|  
-|RetainNulls|Boolean|一個值，指定當「資料轉換管線」引擎處理資料時，是否要將來源檔案的 Null 值保留成 Null 值。 此屬性的預設值為 **False**。|  
+|FileNameColumnName|String|包含檔案名稱之輸出資料行的名稱。 如果沒有指定任何名稱，就不會產生包含檔案名稱的輸出資料行。<br /><br /> 注意：雖然您無法在 [一般檔案來源編輯器]**** 中使用這個屬性，但是可以使用 [進階編輯器]**** 來設定這個屬性。|  
+|RetainNulls|布林值|一個值，指定當「資料轉換管線」引擎處理資料時，是否要將來源檔案的 Null 值保留成 Null 值。 此屬性的預設值為 **False**。|  
   
  一般檔案來源的輸出沒有任何自訂屬性。  
   
@@ -39,7 +40,7 @@ ms.locfileid: "86919765"
   
 |屬性名稱|資料類型|描述|  
 |-------------------|---------------|-----------------|  
-|FastParse|Boolean|一個值，指出資料行會使用 DTS 所提供之速度更快但不區分地區設定的快速剖析常式，還是區分地區設定的標準剖析常式。 如需詳細資訊，請參閱 [快速剖析](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 和 [標準剖析](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)。 此屬性的預設值為 **False**。<br /><br /> 注意：雖然您無法在 [一般檔案來源編輯器]  中使用這個屬性，但是可以使用 [進階編輯器]  來設定這個屬性。|  
+|FastParse|Boolean|一個值，指出資料行會使用 DTS 所提供之速度更快但不區分地區設定的快速剖析常式，還是區分地區設定的標準剖析常式。 如需詳細資訊，請參閱 [快速剖析](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 和 [標準剖析](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)。 此屬性的預設值為 **False**。<br /><br /> 注意：雖然您無法在 [一般檔案來源編輯器]**** 中使用這個屬性，但是可以使用 [進階編輯器]**** 來設定這個屬性。|  
   
  如需詳細資訊，請參閱 [一般檔案來源](../../integration-services/data-flow/flat-file-source.md)。  
   
@@ -51,8 +52,8 @@ ms.locfileid: "86919765"
   
 |屬性名稱|資料類型|描述|  
 |-------------------|---------------|-----------------|  
-|頁首|String|寫入任何資料之前插入檔案中的文字區塊。<br /><br /> 此屬性的值可以使用屬性運算式指定。|  
-|Overwrite|Boolean|一個值，指定要覆寫或附加至具有相同名稱的現有目的地檔案。 這個屬性的預設值為 **True**。|  
+|標頭|String|寫入任何資料之前插入檔案中的文字區塊。<br /><br /> 此屬性的值可以使用屬性運算式指定。|  
+|Overwrite|布林值|一個值，指定要覆寫或附加至具有相同名稱的現有目的地檔案。 這個屬性的預設值為 **True**。|  
   
  一般檔案目的地的輸入和輸入資料行沒有任何自訂屬性。  
   

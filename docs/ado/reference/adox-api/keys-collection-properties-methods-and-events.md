@@ -1,4 +1,5 @@
 ---
+description: Keys 集合屬性、方法和事件
 title: Keys 集合屬性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: eeb3746d-1c75-4bb0-97b5-2c2d073c8c0e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2a7b1a104c9ab68ef380f4318ed983e61113866
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 11ac84b96e9dee887da98683b9d88d4ced8a6332
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763839"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439800"
 ---
 # <a name="keys-collection-properties-methods-and-events"></a>Keys 集合屬性、方法和事件
 ## <a name="properties"></a>屬性  
@@ -26,9 +27,9 @@ ms.locfileid: "82763839"
  [Item 屬性](../../../ado/reference/ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>方法  
- [Append 方法（索引鍵）](../../../ado/reference/adox-api/append-method-adox-keys.md)  
+ [ (索引鍵附加方法) ](../../../ado/reference/adox-api/append-method-adox-keys.md)  
   
- [Delete 方法（集合）](../../../ado/reference/adox-api/delete-method-adox-collections.md)  
+ [Delete 方法 (集合) ](../../../ado/reference/adox-api/delete-method-adox-collections.md)  
   
  [Refresh 方法](../../../ado/reference/ado-api/refresh-method-ado.md)  
   

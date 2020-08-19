@@ -1,4 +1,5 @@
 ---
+description: SetObjectOwner 方法
 title: SetObjectOwner 方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e5170a37-9d6e-43db-bfb6-9b6631fa3048
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 615e62ad8a22c50851ea50a2a8511e0859b54652
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 216a01a6a182e7d2fad97a8ed88e6ca09719a33e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763309"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439530"
 ---
 # <a name="setobjectowner-method"></a>SetObjectOwner 方法
-指定[目錄](../../../ado/reference/adox-api/catalog-object-adox.md)中物件的擁有者。  
+指定 [目錄](../../../ado/reference/adox-api/catalog-object-adox.md)中物件的擁有者。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,7 +45,7 @@ Catalog.SetObjectOwner ObjectName, ObjectType, OwnerName [,ObjectTypeId]
  **字串**值，指定要擁有物件的[使用者](../../../ado/reference/adox-api/user-object-adox.md)或[群組](../../../ado/reference/adox-api/group-object-adox.md)的[名稱](../../../ado/reference/adox-api/name-property-adox.md)。  
   
  *ObjectTypeId*  
- 選擇性。 **Variant**值，指定 OLE DB 規格未定義之提供者物件類型的 GUID。 如果*ObjectType*設定為**adPermObjProviderSpecific**，則需要這個參數。否則，就不會使用它。  
+ 選擇性。 **Variant**值，指定 OLE DB 規格未定義之提供者物件類型的 GUID。 如果 *ObjectType* 設定為 **adPermObjProviderSpecific**，則需要此參數。否則，就不會使用它。  
   
 ## <a name="remarks"></a>備註  
  如果提供者不支援指定物件擁有者，就會發生錯誤。  
@@ -53,5 +54,5 @@ Catalog.SetObjectOwner ObjectName, ObjectType, OwnerName [,ObjectTypeId]
  [Catalog 物件 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [GetObjectOwner 和 SetObjectOwner 方法範例（VB）](../../../ado/reference/adox-api/getobjectowner-and-setobjectowner-methods-example-vb.md)   
+ [GetObjectOwner 和 SetObjectOwner 方法範例 (VB) ](../../../ado/reference/adox-api/getobjectowner-and-setobjectowner-methods-example-vb.md)   
  [GetObjectOwner 方法 (ADOX)](../../../ado/reference/adox-api/getobjectowner-method-adox.md)

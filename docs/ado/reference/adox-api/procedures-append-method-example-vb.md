@@ -1,5 +1,6 @@
 ---
-title: 程式 Append 方法範例（VB） |Microsoft Docs
+description: Procedures Append 方法範例 (VB)
+title: 程式附加方法範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ce83b966-474b-4f57-8eb9-370996dfc5c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b522521da7737f935ac64ab07126cab6b5cd0294
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 85b13a87e09d7c95ecad8b6ed283b8d8066b22f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763669"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439630"
 ---
 # <a name="procedures-append-method-example-vb"></a>Procedures Append 方法範例 (VB)
-下列程式碼示範如何使用[Command](../../../ado/reference/ado-api/command-object-ado.md)物件和 Procedure 集合[Append](../../../ado/reference/adox-api/append-method-adox-procedures.md)方法，在基礎資料來源中建立新的[程式](../../../ado/reference/adox-api/procedures-collection-adox.md)。  
+下列程式碼示範如何使用[Command](../../../ado/reference/ado-api/command-object-ado.md)物件和 Procedure collection [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md)方法，在基礎資料來源中建立新的[程式](../../../ado/reference/adox-api/procedures-collection-adox.md)。  
   
 ```  
 ' BeginCreateProcedureVB  
@@ -74,8 +75,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ActiveConnection 屬性（ADOX）](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Append 方法（ADOX 程式）](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Catalog 物件（ADOX）](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Procedure 物件（ADOX）](../../../ado/reference/adox-api/procedure-object-adox.md)   
+ [ActiveConnection 屬性 (ADOX) ](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
+ [Append 方法 (ADOX 程式) ](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
+ [ (ADOX) 的目錄物件 ](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Procedure 物件 (ADOX) ](../../../ado/reference/adox-api/procedure-object-adox.md)   
  [Procedures 集合 (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)

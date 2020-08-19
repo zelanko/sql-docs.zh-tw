@@ -1,4 +1,5 @@
 ---
+description: MERGE in Integration Services Packages
 title: Integration Services 封裝中的 MERGE | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e4b14fae3600b30c1e4f2d8fe5547533a4673242
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d184fd5c4e587f9f3a47f38961c2d009a1baf720
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915397"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430950"
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE in Integration Services Packages
 
