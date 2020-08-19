@@ -1,4 +1,5 @@
 ---
+description: ODBC 純量函數 (Transact-SQL)
 title: ODBC 純量函式 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -52,22 +53,22 @@ ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ebe21e82e6065aa28e4967b7d2f4d13f0fafe9d6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4ce160465056b18c7f6f347b0587603dd489fa06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003821"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445686"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC 純量函數 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  您可以在 [ 陳述式中使用 ](https://go.microsoft.com/fwlink/?LinkID=88579)ODBC 純量函式[!INCLUDE[tsql](../../includes/tsql-md.md)]。 這些陳述式會由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 進行解譯。 它們可用於預存程序和使用者自訂函數中。 這些項目包括字串、數值、時間、日期、間隔和系統函數。  
+  您可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中使用 [ODBC 純量函式](https://go.microsoft.com/fwlink/?LinkID=88579)。 這些陳述式會由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 進行解譯。 它們可用於預存程序和使用者自訂函數中。 這些項目包括字串、數值、時間、日期、間隔和系統函數。  
   
-## <a name="usage"></a>使用量  
+## <a name="usage"></a>使用方式  
  `SELECT {fn <function_name> [ (<argument>,....n) ] }`  
   
-## <a name="functions"></a>Functions  
+## <a name="functions"></a>函數  
  下表將列出不會在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中重複的 ODBC 純量函式。  
   
 ### <a name="string-functions"></a>字串函式  

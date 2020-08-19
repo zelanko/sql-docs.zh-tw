@@ -1,5 +1,6 @@
 ---
-title: Filter 和 RecordCount 屬性範例（VC + +） |Microsoft Docs
+description: " (VC + +) 的 Filter 和 RecordCount 屬性範例"
+title: " (VC + +) 的 Filter 和 RecordCount 屬性範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d079a56268d903970f7e99d987b1315d1decec44
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bb95298fbc88749acdb5058cc45694688e0c2c6e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763439"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443670"
 ---
-# <a name="filter-and-recordcount-properties-example-vc"></a>Filter 和 RecordCount 屬性範例（VC + +）
-這個範例會使用[Filter](../../../ado/reference/ado-api/filter-property.md)屬性，根據套用至現有**記錄集**的指定條件來開啟新的[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它會使用[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)屬性來顯示兩個**記錄集中**的記錄數目。 需要 FilterField 函數才能執行此程式。  
+# <a name="filter-and-recordcount-properties-example-vc"></a> (VC + +) 的 Filter 和 RecordCount 屬性範例
+這個範例會使用[Filter](../../../ado/reference/ado-api/filter-property.md)屬性，根據套用至現有**記錄集**的指定條件來開啟新的[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它會使用 [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) 屬性來顯示這兩個 **記錄集中**的記錄數目。 此程式必須有 FilterField 函數才能執行。  
   
 ## <a name="example"></a>範例  
   
@@ -303,6 +304,6 @@ Scootney Books, USA
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Filter 屬性](../../../ado/reference/ado-api/filter-property.md)   
- [RecordCount 屬性（ADO）](../../../ado/reference/ado-api/recordcount-property-ado.md)   
+ [篩選屬性](../../../ado/reference/ado-api/filter-property.md)   
+ [ (ADO) 的 RecordCount 屬性 ](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

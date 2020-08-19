@@ -1,5 +1,6 @@
 ---
-title: Move 方法範例（VBScript） |Microsoft Docs
+description: Move 方法範例 (VBScript)
+title: " (VBScript) 的 Move 方法範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 23db96e87538227691f00548c47c2f3d1858349b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d16881ba6ee448ab8efda506e506b0a7f3bde02c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762479"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443220"
 ---
 # <a name="move-method-example-vbscript"></a>Move 方法範例 (VBScript)
-這個範例會根據使用者輸入，使用[Move](../../../ado/reference/ado-api/move-method-ado.md)方法來定位記錄指標。  
+這個範例會根據使用者輸入，使用 [Move](../../../ado/reference/ado-api/move-method-ado.md) 方法來放置記錄指標。  
   
- 在 Active Server Page （ASP）中使用下列範例。 若要查看此功能完整的範例，您必須擁有位於 C:\Program Files\Microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb 的資料來源 Advworks-srv01 .mdb （與 SDK 一起安裝），或編輯範例程式碼中的路徑，以反映此檔案的實際位置。 這是 Microsoft Access 資料庫檔案。  
+ 使用 Active Server Page (ASP) 中的下列範例。 若要查看這個功能完整的範例，您必須使用位於 C:\Program Files\Microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb 的 SDK) 來安裝資料來源 Advworks-srv01 (，或編輯範例程式碼中的路徑，以反映此檔案的實際位置。 這是 Microsoft Access 資料庫檔案。  
   
- 使用 [**尋找**] 找出 Adovbs 檔案，並將它放在您打算使用的目錄中。 將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器，然後將它儲存為**MoveVBS。** 您可以在任何瀏覽器中查看結果。  
+ 使用 [ **尋找** ] 找出檔案 Adovbs，並將它放在您打算使用的目錄中。 將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器，然後將它儲存為**MoveVBS。** 您可以在任何瀏覽器中查看結果。  
   
- 請嘗試輸入字母或非整數，以查看錯誤處理工作。  
+ 請嘗試輸入字母或非整數來查看錯誤處理工作。  
   
 ```  
 <!-- BeginMoveVBS -->  
@@ -183,5 +184,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Move 方法（ADO）](../../../ado/reference/ado-api/move-method-ado.md)   
+ [ (ADO) 的 Move 方法 ](../../../ado/reference/ado-api/move-method-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

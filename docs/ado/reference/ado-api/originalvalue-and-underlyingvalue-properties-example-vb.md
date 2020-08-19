@@ -1,5 +1,6 @@
 ---
-title: OriginalValue 和 UnderlyingValue 屬性範例（VB） |Microsoft Docs
+description: 'OriginalValue 和 UnderlyingValue 屬性範例 (VB) '
+title: OriginalValue 和 UnderlyingValue 屬性範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1750804b-d7ef-47d6-8d73-1f51fa1cbe4a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f6a4332853a238f316689b67ee71410c59719786
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 189ca54160090bde8b526b8feec481dc31104ccb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762061"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442870"
 ---
-# <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>OriginalValue 和 UnderlyingValue 屬性範例（VB）
-這個範例會示範[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)和[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)屬性，方法是在記錄[集](../../../ado/reference/ado-api/recordset-object-ado.md)批次更新期間，當記錄的基礎資料變更時顯示訊息。  
+# <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>OriginalValue 和 UnderlyingValue 屬性範例 (VB) 
+此範例示範 [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) 和 [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) 屬性，方法是在記錄 [集](../../../ado/reference/ado-api/recordset-object-ado.md) 批次更新期間，如果記錄的基礎資料變更，則顯示訊息。  
   
 ```  
 'BeginOriginalValueVB  
@@ -120,6 +121,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [OriginalValue 屬性（ADO）](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
- [Recordset 物件（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [ (ADO) 的 OriginalValue 屬性 ](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
+ [ (ADO) 的記錄集物件 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [UnderlyingValue 屬性](../../../ado/reference/ado-api/underlyingvalue-property.md)

@@ -1,5 +1,6 @@
 ---
-title: SqlServiceType 屬性（SqlService）
+description: SqlServiceType 屬性 (SqlService 類別)
+title: 'SqlServiceType 屬性 (SqlService) '
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: dbff2968-3011-41d6-a141-52d814af0213
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6818c721d6f555ea2cf8e03aa7ed664fe10c04cd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 91c54b33387dec747aca2c5b9c274bb709057821
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888334"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446142"
 ---
 # <a name="sqlservicetype-property-sqlservice-class"></a>SqlServiceType 屬性 (SqlService 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +59,7 @@ object.SqlServiceType [= value]
 |*9*|MSSQLFDLauncher 是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 全文檢索篩選背景程式啟動器服務。|  
 |*10*|SQLPBENGINE 是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Polybase 引擎服務。|  
 |*11*|SQLPBDMS 是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Polybase 資料移動服務。|  
-|*12*|MSSQLLaunchpad 是啟動列 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務。|  
+|*12*|MSSQLLaunchpad 是啟動控制 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 板服務。|  
   
 ## <a name="see-also"></a>另請參閱  
  [啟動及停止服務](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

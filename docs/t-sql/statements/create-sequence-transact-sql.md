@@ -1,4 +1,5 @@
 ---
+description: CREATE SEQUENCE (Transact-SQL)
 title: CREATE SEQUENCE (Transact-SQL)
 ms.custom: ''
 ms.date: 04/11/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fae3e0c336af71fc73e8b39fd52d8ded0b478237
-ms.sourcegitcommit: 41ff0446bd8e4380aad40510ad579a3a4e096dfa
+ms.openlocfilehash: d24c140c8765185e358dffbbfd112cdba29fa7dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86465265"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444836"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
 

@@ -1,4 +1,5 @@
 ---
+description: NEWID (Transact-SQL)
 title: NEWID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2017
@@ -19,28 +20,30 @@ ms.assetid: f7014e60-96d5-457e-afc3-72b60ba20c0f
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fff840992f0b24af961acb069268cb41c550da2a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: b478b8ea685a5e8cf5399c5ca429936be9a18784
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397097"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445698"
 ---
 # <a name="newid-transact-sql"></a>NEWID (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-  建立類型為 **uniqueidentifier** 的唯一值。  
+建立類型為 **uniqueidentifier** 的唯一值。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql 
 NEWID ( )  
 ```  
   
-## <a name="return-types"></a>傳回型別  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>傳回型別
  **uniqueidentifier**  
   
 ## <a name="remarks"></a>備註  
@@ -51,7 +54,7 @@ NEWID ( )
 ### <a name="a-using-the-newid-function-with-a-variable"></a>A. 搭配變數使用 NEWID 函數  
  下列範例會使用 `NEWID()`，將值指派給宣告為 **uniqueidentifier** 資料類型的變數。 **uniqueidentifier** 資料類型變數的值會列印在所測試值的前面。  
   
-```  
+```sql
 -- Creating a local variable with DECLARE/SET syntax.  
 DECLARE @myid uniqueidentifier  
 SET @myid = NEWID()  
@@ -71,9 +74,9 @@ Value of @myid is: 6F9619FF-8B86-D011-B42D-00C04FC964FF
   
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
- 下列範例會建立 `cust`uniqueidentifier**資料類型的** 資料表，且使用 NEWID 在資料表中填入預設值。 在指派 `NEWID()` 的預設值時，每個新的資料列和現有的資料列，都有唯一的 `CustomerID` 資料行值。  
+ 下列範例會建立 **uniqueidentifier** 資料類型的 `cust` 資料表，且使用 NEWID 在資料表中填入預設值。 在指派 `NEWID()` 的預設值時，每個新的資料列和現有的資料列，都有唯一的 `CustomerID` 資料行值。  
   
-```  
+```sql
 -- Creating a table using NEWID for uniqueidentifier data type.  
 CREATE TABLE cust  
 (  
@@ -92,20 +95,20 @@ CREATE TABLE cust
 GO  
 -- Inserting 5 rows into cust table.  
 INSERT cust  
-(CustomerID, Company, ContactName, Address, City, StateProvince,   
+(Company, ContactName, Address, City, StateProvince,   
  PostalCode, CountryRegion, Telephone, Fax)  
 VALUES  
- (NEWID(), 'Wartian Herkku', 'Pirkko Koskitalo', 'Torikatu 38', 'Oulu', NULL,  
+ ('Wartian Herkku', 'Pirkko Koskitalo', 'Torikatu 38', 'Oulu', NULL,  
  '90110', 'Finland', '981-443655', '981-443655')  
-,(NEWID(), 'Wellington Importadora', 'Paula Parente', 'Rua do Mercado, 12', 'Resende', 'SP',  
+,('Wellington Importadora', 'Paula Parente', 'Rua do Mercado, 12', 'Resende', 'SP',  
  '08737-363', 'Brasil', '(14) 555-8122', '')  
-,(NEWID(), 'Cactus Comidas para Ilevar', 'Patricio Simpson', 'Cerrito 333', 'Buenos Aires', NULL,   
+,('Cactus Comidas para Ilevar', 'Patricio Simpson', 'Cerrito 333', 'Buenos Aires', NULL,   
  '1010', 'Argentina', '(1) 135-5555', '(1) 135-4892')  
-,(NEWID(), 'Ernst Handel', 'Roland Mendel', 'Kirchgasse 6', 'Graz', NULL,  
+,('Ernst Handel', 'Roland Mendel', 'Kirchgasse 6', 'Graz', NULL,  
  '8010', 'Austria', '7675-3425', '7675-3426')  
-,(NEWID(), 'Maison Dewey', 'Catherine Dewey', 'Rue Joseph-Bens 532', 'Bruxelles', NULL,  
+,('Maison Dewey', 'Catherine Dewey', 'Rue Joseph-Bens 532', 'Bruxelles', NULL,  
  'B-1180', 'Belgium', '(02) 201 24 67', '(02) 201 24 68');  
-GO  
+GO
 ```  
   
 ### <a name="c-using-uniqueidentifier-and-variable-assignment"></a>C. 使用 uniqueidentifier 和變數指派  

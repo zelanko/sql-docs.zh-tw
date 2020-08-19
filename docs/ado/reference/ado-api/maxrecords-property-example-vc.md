@@ -1,5 +1,6 @@
 ---
-title: MaxRecords 屬性範例（VC + +） |Microsoft Docs
+description: MaxRecords 屬性範例 (VC++)
+title: MaxRecords 屬性範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 16c837d37dc51c5f5203c1404b9c9a6bf9d8e95d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5888cf1ce3bb058c7c71e4bcec5b448d4f0ab9bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762519"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443260"
 ---
 # <a name="maxrecords-property-example-vc"></a>MaxRecords 屬性範例 (VC++)
-這個範例會使用[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)屬性來開啟包含***標題***資料表中10個最昂貴標題的[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
+此範例會使用 [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) 屬性來開啟 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) ，其中包含 ***標題*** 資料表中10個最昂貴的標題。  
   
 ## <a name="example"></a>範例  
   
@@ -165,17 +166,17 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **依價格列出前十名的標題：**  
-**但它是使用者易記的嗎？---22.95**  
+ **依價格的前十個標題：**  
+**但使用者是否可以使用？---22.95**  
 **電腦恐懼症和非恐懼症個人：行為變化---21.59**  
-**Onions、Leeks 和大蒜：烹飪地中海---20.95 的秘密**  
+**Onions、Leeks 和大蒜：烹飪地中海的秘密---20.95**  
 **矽谷---20.00 的秘密**  
-**忙碌主管的資料庫指南---19.99**  
-**電腦---19.99 的直接討論**  
-**矽谷 Gastronomic 會視為---19.99**  
+**忙碌的主管資料庫指南---19.99**  
+**---19.99 的電腦直接相關討論**  
+**矽谷 Gastronomic 會將---視為19.99**  
 **長時間的資料 Deprivation：四個案例研究---19.99**  
-**壽司，任何人都能---14.99**  
+**壽司，任何人？---14.99**  
 **50年 Buckingham Palace 廚房---11.95**   
 ## <a name="see-also"></a>另請參閱  
- [MaxRecords 屬性（ADO）](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
+ [ (ADO) 的 MaxRecords 屬性 ](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

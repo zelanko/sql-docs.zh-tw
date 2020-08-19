@@ -1,4 +1,5 @@
 ---
+description: GetDataProviderDSO 方法
 title: GetDataProviderDSO 方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a4c6bd5-0c79-4f81-a977-0561392d8d50
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 55272fdbcd0aacfc8e98cb4e38ae19270b3b461a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1a45d78960b8b6b1ba2534e39f080a6c94fc0655
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760044"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443570"
 ---
 # <a name="getdataproviderdso-method"></a>GetDataProviderDSO 方法
 從圖形提供者抓取基礎 OLE DB 資料來源物件。  
@@ -33,10 +34,10 @@ HRESULT GetDataProviderDSO(
   
 #### <a name="parameters"></a>參數  
  *ppDataProviderDSOIUnknown*  
- 脫銷 指標的指標，會傳回基礎 OLE DB 資料來源物件的 IUnknown。  
+ 擴展 指標的指標，該指標會傳回基礎 OLE DB 資料來源物件的 IUnknown。  
   
 ## <a name="remarks"></a>備註  
- 這個方法不會 addref 介面指標。 如果呼叫端計畫保留指標，則呼叫端必須執行必要的 addref 和發行。  
+ 這個方法不會 addref 介面指標。 如果呼叫端計畫要保留指標，則呼叫端必須進行必要的 addref 和發行。  
   
 ## <a name="applies-to"></a>適用於  
  [IDSOShapeExtensions 介面](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)

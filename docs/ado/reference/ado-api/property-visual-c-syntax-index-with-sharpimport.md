@@ -1,5 +1,6 @@
 ---
-title: '屬性（使用 #import 的 Visual C++ 語法索引） |Microsoft Docs'
+description: '屬性 (#import 的 Visual C++ 語法索引) '
+title: 屬性 (#import) 的 Visual C++ 語法索引 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 80988ca7-f514-438d-bf6f-9390dfe93fc3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: de7aa9f867e723099e7b6a7cc9177bf6d152cce8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4774f6224a156f11ac4c08c1576321f7dc42986b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759944"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442630"
 ---
-# <a name="property-visual-c-syntax-index-with-import"></a>屬性（使用 #import Visual C++ 語法索引）
+# <a name="property-visual-c-syntax-index-with-import"></a>屬性 (#import 的 Visual C++ 語法索引) 
 ## <a name="properties"></a>屬性  
   
 ```  

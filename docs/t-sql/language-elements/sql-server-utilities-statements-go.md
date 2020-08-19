@@ -1,4 +1,5 @@
 ---
+description: SQL Server 公用程式陳述式 - GO
 title: SQL Server 公用程式陳述式 - GO | Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d4bb3a16211ce138ab2c0dd861dc10a679d27446
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 973c8eb74a26047dfa8472497e403385e3678326
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915594"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445403"
 ---
 # <a name="sql-server-utilities-statements---go"></a>SQL Server 公用程式陳述式 - GO
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

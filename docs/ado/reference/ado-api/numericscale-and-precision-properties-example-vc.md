@@ -1,5 +1,6 @@
 ---
-title: NumericScale 和 Precision 屬性範例（VC + +） |Microsoft Docs
+description: NumericScale 和 Precision 屬性範例 (VC++)
+title: NumericScale 和 Precision 屬性範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 55d91ba8-4d80-4df6-af8e-060a19ddc138
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 35df19bc706e1844e7f6c9e5f3004614c1df5bd2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ba9487a8fb3db896a69664d8ea0075627ba457c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762307"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443040"
 ---
 # <a name="numericscale-and-precision-properties-example-vc"></a>NumericScale 和 Precision 屬性範例 (VC++)
-這個範例會使用[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)和[Precision](../../../ado/reference/ado-api/precision-property-ado.md)屬性，在***Pubs***資料庫的***折扣***資料表中顯示欄位的數值小數位數和有效位數。  
+這則範例會使用[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)和[precision](../../../ado/reference/ado-api/precision-property-ado.md)屬性，在***Pubs***資料庫的***折扣***表中顯示欄位的數值小數位數和有效位數。  
   
 ```cpp
 // BeginNumericScaleCpp.cpp  
@@ -134,5 +135,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [NumericScale 屬性（ADO）](../../../ado/reference/ado-api/numericscale-property-ado.md)   
+ [ (ADO) 的 NumericScale 屬性 ](../../../ado/reference/ado-api/numericscale-property-ado.md)   
  [Precision 屬性 (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)

@@ -1,4 +1,5 @@
 ---
+description: Property 物件屬性、方法和事件
 title: Property 物件屬性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 21f67a7d-6273-4648-9abd-2236650efa4c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 863e3591e8160373129f740b0d6bc4fb218ae082
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6f581ebc43b7ab8b4deefd3a73771e2a8835f94d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759954"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442600"
 ---
 # <a name="property-object-properties-methods-and-events"></a>Property 物件屬性、方法和事件
 ## <a name="properties"></a>屬性  

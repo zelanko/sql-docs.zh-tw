@@ -1,5 +1,6 @@
 ---
-title: 備妥的屬性範例（VB） |Microsoft Docs
+description: Prepared 屬性範例 (VB)
+title: " (VB) 的備妥屬性範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e3a3db2d-7f73-4288-ad08-5468f251d610
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7d5cb8a583e5434e81922f556ae62e3d0f4f312f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bfddc290ee906402490743205ca939d82db2dad6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761946"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442680"
 ---
 # <a name="prepared-property-example-vb"></a>Prepared 屬性範例 (VB)
-這個範例會藉由開啟兩個[命令](../../../ado/reference/ado-api/command-object-ado.md)物件（一個已備妥，一個尚未備妥）來示範[備](../../../ado/reference/ado-api/prepared-property-ado.md)妥的屬性。  
+此範例會藉由開啟兩個[命令](../../../ado/reference/ado-api/command-object-ado.md)物件（一個已備妥且尚未備妥）來示範[備](../../../ado/reference/ado-api/prepared-property-ado.md)妥的屬性。  
   
 ```  
 'BeginPreparedVB  
@@ -115,5 +116,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Command 物件（ADO）](../../../ado/reference/ado-api/command-object-ado.md)   
+ [ (ADO) 的命令物件 ](../../../ado/reference/ado-api/command-object-ado.md)   
  [Prepared 屬性 (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)

@@ -1,4 +1,5 @@
 ---
+description: EXP (Transact-SQL)
 title: EXP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,12 +20,12 @@ ms.assetid: 5a9b8c52-6fb6-4e33-8b02-a878785b2f51
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 949a07ae18a46101ea7ae905812aa5cd2072c37a
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a866a13a9abf74781e114a1fab4928a0c2cb1042
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111574"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445802"
 ---
 # <a name="exp-transact-sql"></a>EXP (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +44,7 @@ EXP ( float_expression )
 
 ## <a name="arguments"></a>引數
  *float_expression*  
- 為 [float](../../t-sql/language-elements/expressions-transact-sql.md) 類型或能夠隱含轉換成 **float** 類型的**運算式**。  
+ 為 **float** 類型或能夠隱含轉換成 **float** 類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="return-types"></a>傳回型別  
  **float**  
@@ -51,7 +52,7 @@ EXP ( float_expression )
 ## <a name="remarks"></a>備註  
  常數 **e** (2.718281...) 是自然對數的基底。  
   
- 數字的指數，是提升為數字乘冪的常數 **e**。 例如，EXP(1.0) = e^1.0 = 2.71828182845905 和 EXP(10) = e^10 = 22026.4657948067。  
+ 數字的指數是提高至數字乘冪的常數 **e**。 例如，EXP(1.0) = e^1.0 = 2.71828182845905 和 EXP(10) = e^10 = 22026.4657948067。  
   
  數字之自然對數的指數就是該數字本身：EXP (LOG (*n*)) = *n*。 數字之指數的自然對數就是該數字本身：LOG (EXP (*n*)) = *n*。  
   

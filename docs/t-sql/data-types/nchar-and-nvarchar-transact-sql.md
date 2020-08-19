@@ -1,4 +1,5 @@
 ---
+description: nchar 和 nvarchar (Transact-SQL)
 title: nchar 和 nvarchar (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/19/2019
@@ -16,12 +17,12 @@ ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63673258e2fa368544c6cc43158025770861a8f9
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 30a696079d07f0b4dc6c76ee78a712a553b10ef6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555603"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445938"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar 和 nvarchar (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,9 +45,9 @@ ms.locfileid: "86555603"
 若使用 **nchar** 或 **nvarchar**，建議您：
 - 當資料行資料項目的大小一致時，請使用 **nchar**。  
 - 當資料行資料項目的大小變化相當大時，請使用 **nvarchar**。  
-- 當資料行資料項目的大小變化相當大，且字串長度可能超出 4,000 位元組配對時，請使用 **nvarchar(max)** 。  
+- 當資料行資料項目的大小變化相當大，且字串長度可能超出 4,000 位元組配對時，請使用 **nvarchar(max)**。  
   
-**sysname** 是系統提供的使用者定義資料類型，功能相當於 **nvarchar(128)** ，但不可為 Null。 **sysname** 可用於參考資料庫物件名稱。
+**sysname** 是系統提供的使用者定義資料類型，功能相當於 **nvarchar(128)**，但不可為 Null。 **sysname** 可用於參考資料庫物件名稱。
   
 除非使用 COLLATE 子句指派特定定序；否則，使用 **nchar** 或 **nvarchar** 的物件會被指派資料庫的預設定序。
   

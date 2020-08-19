@@ -1,4 +1,5 @@
 ---
+description: datetime2 (Transact-SQL)
 title: datetime2 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/23/2017
@@ -22,12 +23,12 @@ ms.assetid: 868017f3-214f-43ef-8536-cc1632a2288f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d9be8cfb561ec2e5857c2bd5699b46a5418c9df
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cb7ef589270a5cdcd06d2eac18176ebbf529256d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008051"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445975"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
 
@@ -40,11 +41,11 @@ ms.locfileid: "86008051"
 |屬性|值|  
 |--------------|-----------|  
 |語法|**datetime2** [ (*毫秒精確度*) ]|  
-|使用量|DECLARE \@MyDatetime2 **datetime2(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime2(7)** )|  
+|使用方式|DECLARE \@MyDatetime2 **datetime2(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime2(7)** )|  
 |預設的字串常值格式<br /><br /> (用於下層用戶端)|YYYY-MM-DD hh:mm:ss[.小數秒數]<br /><br /> 如需詳細資訊，請參閱下列的＜下層用戶端的回溯相容性＞一節。|  
 |日期範圍|0001-01-01 到 31.12.99<br /><br /> 公元 1 年 1 月 1 日到公元 9999 年 12 月 31 日|  
 |時間範圍|00:00:00 到 23:59:59.9999999|  
-|時區位移範圍|None|  
+|時區位移範圍|無|  
 |元素範圍|YYYY 是代表年份的四位數字，範圍介於 0001 至 9999 之間。<br /><br /> MM 是代表指定年份中某個月份的兩位數字，範圍介於 01 至 12 之間。<br /><br /> DD 是代表指定月份中某個日期的兩位數字，範圍介於 01 至 31 之間 (視月份而定)。<br /><br /> hh 是代表小時的兩位數字，範圍介於 00 至 23 之間。<br /><br /> mm 是代表分鐘的兩位數字，範圍介於 00 至 59 之間。<br /><br /> ss 是代表秒鐘的兩位數字，範圍介於 00 至 59 之間。<br /><br /> n* 是代表小數秒數的零至七位數字，範圍介於 0 至 9999999 之間。 在 Informatica 中，毫秒會在 n > 3 時遭到截斷。|  
 |字元長度|最小 19 個位置 (YYYY-MM-DD hh:mm:ss)，最大 27 個位置 (YYYY-MM-DD hh:mm:ss.0000000)|  
 |有效位數，小數位數|0 至 7 位數，精確度為 100ns。 預設有效位數是 7 位數。|  

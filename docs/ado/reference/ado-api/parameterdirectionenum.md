@@ -1,4 +1,5 @@
 ---
+description: ParameterDirectionEnum
 title: ParameterDirectionEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,28 +16,28 @@ helpviewer_keywords:
 ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c109ea1c44fc44a4cdbb585e2c612ebf8c9b2909
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8c586b4e7ce2e18411d147e8aafb4eb144e01e6f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242604"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442780"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
-指定[參數](../../../ado/reference/ado-api/parameter-object.md)是否代表輸入參數、輸出參數、輸入和輸出參數，或預存程式的傳回值。  
+指定 [參數](../../../ado/reference/ado-api/parameter-object.md) 是否代表輸入參數、輸出參數、輸入和輸出參數，或預存程式的傳回值。  
   
-|持續性|值|描述|  
+|常數|值|描述|  
 |--------------|-----------|-----------------|  
-|**adParamInput**|1|預設值。 表示參數代表輸入參數。|  
-|**adParamInputOutput**|3|表示參數同時代表輸入和輸出參數。|  
-|**adParamOutput**|2|表示參數表示輸出參數。|  
-|**adParamReturnValue**|4|表示參數代表傳回值。|  
-|**adParamUnknown**|0|指出參數方向不明。|  
+|**adParamInput**|1|預設值。 指出參數表示輸入參數。|  
+|**adParamInputOutput**|3|指出參數同時代表輸入和輸出參數。|  
+|**adParamOutput**|2|指出參數代表輸出參數。|  
+|**adParamReturnValue**|4|指出參數代表傳回值。|  
+|**adParamUnknown**|0|指出參數方向未知。|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC 對等  
- Package： **.com. wfc. 資料**  
+## <a name="adowfc-equivalent"></a>ADO/WFC 相等  
+ 封裝： **.com. 資料**  
   
-|持續性|  
+|常數|  
 |--------------|  
 |AdoEnums.ParameterDirection.INPUT|  
 |AdoEnums.ParameterDirection.INPUTOUTPUT|  

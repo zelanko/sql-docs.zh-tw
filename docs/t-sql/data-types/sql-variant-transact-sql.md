@@ -1,4 +1,5 @@
 ---
+description: sql_variant (Transact-SQL)
 title: sql_variant (Transact-SQL)
 ms.custom: ''
 ms.date: 09/12/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a16ac1b62c5a0aad216db06dc4e11c8c7263da65
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: a1b6f93654e312f8c7a0266b3500c18a38ff511a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556198"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445910"
 ---
 # <a name="sql_variant-transact-sql"></a>sql_variant (Transact-SQL)
 

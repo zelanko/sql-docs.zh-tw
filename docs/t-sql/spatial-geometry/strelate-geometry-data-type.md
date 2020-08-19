@@ -1,4 +1,5 @@
 ---
+description: STRelate (geometry 資料類型)
 title: STRelate (geometry 資料類型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9dcb5f58-35ab-4bb3-86ee-2d29eefba6d3
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 6d884f29122b9b8afda3c994cba4a07290bb059b
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e427ca859bf6e1e861ed58bb7fdc4ab2dc869fc1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555616"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444970"
 ---
 # <a name="strelate-geometry-data-type"></a>STRelate (geometry 資料類型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

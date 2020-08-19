@@ -1,4 +1,5 @@
 ---
+description: PWDCOMPARE (Transact-SQL)
 title: PWDCOMPARE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5f84ff9e-c1ec-46aa-8501-50f854ebcc3a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ad59b8d81641999da674ca73db696c2f0c3ce1ef
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c03a83ed2dbe499e9b65a07446c04f0f6466ce93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111863"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445611"
 ---
 # <a name="pwdcompare-transact-sql"></a>PWDCOMPARE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,13 +47,13 @@ PWDCOMPARE ( 'clear_text_password'
 
 ## <a name="arguments"></a>引數
  **'** *clear_text_password* **'**  
- 這是未加密的密碼。 *clear_text_password* is **sysname** (**nvarchar(128)** )。  
+ 這是未加密的密碼。 *clear_text_password* is **sysname** (**nvarchar(128)**)。  
   
  *password_hash*  
- 這是密碼的加密雜湊。 *password_hash* 為 **varbinary(128)** 。  
+ 這是密碼的加密雜湊。 *password_hash* 為 **varbinary(128)**。  
   
  *version*  
- 如果 *password_hash* 代表的登入值早於已經移轉到 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 或更新版本，但從未轉換為 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 系統的 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]，則是可以設定為 1 的已淘汰參數。 *version* 為 **int**。  
+ 如果 *password_hash* 代表的登入值早於已經移轉到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更新版本，但從未轉換為 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 系統的 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]，則是可以設定為 1 的已淘汰參數。 *version* 為 **int**。  
   
 > [!CAUTION]  
 >  提供這個參數是為了回溯相容性，因為密碼雜湊 BLOB 現在包含自己的版本說明，所以會忽略它。 [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]  

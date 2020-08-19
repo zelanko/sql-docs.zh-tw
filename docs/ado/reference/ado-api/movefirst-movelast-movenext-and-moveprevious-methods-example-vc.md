@@ -1,5 +1,6 @@
 ---
-title: 記錄集的移動記錄指標範例（VC + +） |Microsoft Docs
+description: 'MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法範例 (VC + +) '
+title: 將記錄集範例的記錄指標移動 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 7f8aea7b-9183-4b29-8ac0-a393ed2e8bd5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 625bf0eddf76fb0acf7afdf790d8f88d41409b5f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0c528cf280e5bb011f558f72a74290ff7f690170
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762449"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443160"
 ---
-# <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vc"></a>MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法範例（VC + +）
-這個範例使用[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)和[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)方法，根據提供的命令移動記錄[集](../../../ado/reference/ado-api/recordset-object-ado.md)的記錄指標。 此範例需要 MoveAny 函數才能執行。  
+# <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vc"></a>MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法範例 (VC + +) 
+這個範例會使用 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)和 [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) 方法，根據提供的命令移動記錄 [集](../../../ado/reference/ado-api/recordset-object-ado.md) 的記錄指標。 需要有 MoveAny 函式，此範例才能執行。  
   
 ## <a name="example"></a>範例  
   
@@ -208,5 +209,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法（ADO）](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
+ [MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法 (ADO) ](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

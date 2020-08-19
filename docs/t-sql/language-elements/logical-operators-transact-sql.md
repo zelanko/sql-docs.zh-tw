@@ -1,4 +1,5 @@
 ---
+description: 邏輯運算子 (Transact-SQL)
 title: 邏輯運算子 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: edd92f08-76fb-4fd7-a4b6-8520d6a81df1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 55057a5cf385468fc7e01d813e451ac152c31c92
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1fe06931370c3c97598ed2b9789b1e692a3980ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706298"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445454"
 ---
 # <a name="logical-operators-transact-sql"></a>邏輯運算子 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

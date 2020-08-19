@@ -1,4 +1,5 @@
 ---
+description: SERVERPROPERTY (Transact-SQL)
 title: SERVERPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/28/2020
@@ -23,12 +24,12 @@ ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e797b97fec0fb2263780cb1623882d16a717b196
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 208c26d0dd9b11cdcc0783de69caf99cba0a0de4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823596"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445603"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 

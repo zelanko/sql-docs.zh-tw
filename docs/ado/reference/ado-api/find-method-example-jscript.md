@@ -1,5 +1,6 @@
 ---
-title: Find 方法範例（JScript） |Microsoft Docs
+description: Find 方法範例 (JScript)
+title: " (JScript 的 Find 方法範例) |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: adb5c37e-7874-41db-b4ee-572c1323deff
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6194866ef1b4649e6d54af8b8777cca8bce9bf52
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3c328a3efe858c7abd9872eef0fcd28dfa1ccb36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760114"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443630"
 ---
 # <a name="find-method-example-jscript"></a>Find 方法範例 (JScript)
-這個範例會使用[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)物件的[Find](../../../ado/reference/ado-api/find-method-ado.md)方法，找出並顯示***Northwind***資料庫中名稱以字母 G 開頭的公司，並將下列程式碼貼入 [記事本] 或其他文字編輯器，並將其儲存為**FindJS。**  
+此範例會使用[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件的[Find](../../../ado/reference/ado-api/find-method-ado.md)方法，找出並顯示***Northwind***資料庫中名稱以字母 G 開頭的公司。剪下並貼上下列程式碼至記事本或其他文字編輯器，然後將它儲存為**FindJS。**  
   
 ```  
 <!-- BeginFindJS -->  
@@ -153,5 +154,5 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Find 方法（ADO）](../../../ado/reference/ado-api/find-method-ado.md)   
+ [ (ADO) 的 Find 方法 ](../../../ado/reference/ado-api/find-method-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

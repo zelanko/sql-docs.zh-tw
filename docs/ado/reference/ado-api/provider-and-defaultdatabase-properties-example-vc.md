@@ -1,5 +1,6 @@
 ---
-title: Provider 和 DefaultDatabase 屬性範例（VC + +） |Microsoft Docs
+description: Provider 和 DefaultDatabase 屬性範例 (VC++)
+title: Provider 和 DefaultDatabase 屬性範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d9868c99-425a-4b10-af67-1929ed513fda
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bc0f81b24eba92e3962c14e42774a139e420b080
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e5ad64de17b67acfba0948398fbec7ba5e853eec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759914"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442610"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vc"></a>Provider 和 DefaultDatabase 屬性範例 (VC++)
-這個範例會使用不同的提供者開啟三個[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件，以示範[提供者](../../../ado/reference/ado-api/provider-property-ado.md)屬性。 它也會使用[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)屬性來設定 Microsoft ODBC 提供者的預設資料庫。  
+這個範例會使用不同的提供者來開啟三個[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件，以示範[提供者](../../../ado/reference/ado-api/provider-property-ado.md)屬性。 它也會使用 [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) 屬性來設定 Microsoft ODBC 提供者的預設資料庫。  
   
 ```  
 // Provider_and_DefaultDatabase_Properties.cpp  
@@ -134,6 +135,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Connection 物件（ADO）](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [ (ADO) 的 Connection 物件 ](../../../ado/reference/ado-api/connection-object-ado.md)   
  [DefaultDatabase 屬性](../../../ado/reference/ado-api/defaultdatabase-property.md)   
  [Provider 屬性 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)

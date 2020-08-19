@@ -1,4 +1,5 @@
 ---
+description: Reduce (geometry 資料類型)
 title: Reduce (geometry 資料類型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 132184bf-c4d2-4a27-900d-8373445dce2a
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 16ac1ced9d2bfbfa8de4b2c8cc577aeb83d15be0
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 704df574cc67a4321faea90795b248adb2859123
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554688"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445087"
 ---
 # <a name="reduce-geometry-data-type"></a>Reduce (geometry 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,4 +1,5 @@
 ---
+description: 將常值日期字串轉換成 DATE 值的非決定性轉換
 title: 日期常值的非決定性轉換 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/19/2018
@@ -12,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eba0e28d8f2d5587a07308a4ffcbf5f7eaedf278
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4c1d50cc58995479aa61b4c62639f9d13de6f400
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68119845"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445866"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>將常值日期字串轉換成 DATE 值的非決定性轉換
 
-允許將您的 CHARACTER 字串轉換成 DATE 資料類型時請務必小心。 原因是這類轉換通常都是「非決定性」  。
+允許將您的 CHARACTER 字串轉換成 DATE 資料類型時請務必小心。 原因是這類轉換通常都是「非決定性」__。
 
 您可以透過說明 [SET LANGUAGE](../statements/set-language-transact-sql.md) 和 [SET DATEFORMAT](../statements/set-dateformat-transact-sql.md) 的設定來控制這些非決定性轉換。
 
@@ -68,9 +69,9 @@ SL_Croatian
 
 - `SET DATEFORMAT dmy;`
 
-上述 **dmy** 格式表示範例日期字串 '01-03-2018' 會解譯為表示「2018 年 3 月的第一天」  。
+上述 **dmy** 格式表示範例日期字串 '01-03-2018' 會解譯為表示「2018 年 3 月的第一天」__。
 
-若改為指定 **mdy**，則相同的 '01-03-2018' 字串就會表示「2018 年 1 月的第三天」  。
+若改為指定 **mdy**，則相同的 '01-03-2018' 字串就會表示「2018 年 1 月的第三天」__。
 
 若指定 **ymd**，則無法保證輸出結果為何。 '2018' 的數值對天來說太大了。
 <!--
@@ -79,9 +80,9 @@ The preceding claim of "no guarantee" might be incorrect, in the minds of the SQ
 
 #### <a name="specific-countries"></a>特定國家/地區
 
-在日本和中國，會使用 **ymd** 的 DATEFORMAT。 格式部分為由大單位至小單位的合理順序。 因此，此格式的排序狀況相當良好。 此格式被視為是「國際」  格式。 其為國際格式的原因是四位數年份並不明確，且目前在地球上沒有任何國家/地區使用古老的 **ydm** 格式。
+在日本和中國，會使用 **ymd** 的 DATEFORMAT。 格式部分為由大單位至小單位的合理順序。 因此，此格式的排序狀況相當良好。 此格式被視為是「國際」__ 格式。 其為國際格式的原因是四位數年份並不明確，且目前在地球上沒有任何國家/地區使用古老的 **ydm** 格式。
 
-在其他國家/地區 (例如德國和法國) 中，DATEFORMAT 為 **dmy**，其表示 **'dd-mm-yyyy'** 。 **dmy** 格式的排序狀況並不良好，但仍然是由小單位至大單位的合理順序。
+在其他國家/地區 (例如德國和法國) 中，DATEFORMAT 為 **dmy**，其表示 **'dd-mm-yyyy'**。 **dmy** 格式的排序狀況並不良好，但仍然是由小單位至大單位的合理順序。
 
 美國和密克羅尼西亞聯邦是使用 **mdy** 的唯二國家/地區，此格式無法排序。 格式的混合順序符合語音上說明日期的模式。
 
@@ -119,9 +120,9 @@ YMD-Interpretation--?--NotGuaranteed
 
 在上述程式碼範例中，最後一個範例的格式 **ymd** 與輸入字串不符。 輸入字串之第三個節點表示對天來說太大的數值。 Microsoft 無法保證這類不相符所產生的輸出值。
 
-#### <a name="convert-offers-explicit-codes-for-_deterministic_-control-of-date-formats"></a>CONVERT 可提供「決定性」  日期格式控制的明確程式碼
+#### <a name="convert-offers-explicit-codes-for-_deterministic_-control-of-date-formats"></a>CONVERT 可提供「決定性」__ 日期格式控制的明確程式碼
 
-我們的 CAST 和 CONVERT 文件文章會列出您可以與 CONVERT 函式「決定性地」  控制日期轉換搭配使用的明確程式碼。 每個月該文章都擁有我們最高的頁面瀏覽次數。
+我們的 CAST 和 CONVERT 文件文章會列出您可以與 CONVERT 函式「決定性地」__ 控制日期轉換搭配使用的明確程式碼。 每個月該文章都擁有我們最高的頁面瀏覽次數。
 
 - [CAST 與 CONVERT (Transact-SQL)：日期與時間樣式](../functions/cast-and-convert-transact-sql.md#date-and-time-styles)
 - [CAST 與 CONVERT (Transact-SQL)：某些日期時間轉換不具決定性](../functions/cast-and-convert-transact-sql.md#certain-datetime-conversions-are-nondeterministic)
@@ -145,7 +146,7 @@ YMD-Interpretation--?--NotGuaranteed
 ## <a name="see-also"></a>另請參閱
 
 - [設定工作階段語言](../../relational-databases/collations/set-a-session-language.md)
-- [日期與時間資料類型及函式 (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md)
+- [日期和時間資料類型與函數 (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md)
 - [FORMAT (Transact-SQL)](../functions/format-transact-sql.md)
 - [ISDATE (Transact-SQL)](../functions/isdate-transact-sql.md)
 

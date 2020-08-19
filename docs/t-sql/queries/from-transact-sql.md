@@ -1,4 +1,5 @@
 ---
+description: FROM 子句與 JOIN、APPLY、PIVOT (Transact-SQL)
 title: FROM：JOIN、APPLY、PIVOT (T-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/01/2019
@@ -34,12 +35,12 @@ ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4aa3383d88121c1b9fce53c48c24ebfd3ebb73ff
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 810a61f438f88420829bb9656b328b2d93c7ef7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931667"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445367"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>FROM 子句與 JOIN、APPLY、PIVOT (Transact-SQL)
 
@@ -172,7 +173,9 @@ FROM { <table_source> [ ,...n ] }
     | REDISTRIBUTE  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
 \<table_source>  
  指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中使用的資料表、檢視表、資料表變數或衍生資料表來源 (含有別名或不含別名)。 陳述式中最多只能使用 256 個資料表來源 (雖然這項限制會隨著可用記憶體和查詢中之其他運算式的複雜度而改變)。 個別查詢可能無法支援多達 256 個資料表來源。  
   

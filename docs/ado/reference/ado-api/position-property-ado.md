@@ -1,5 +1,6 @@
 ---
-title: Position 屬性（ADO） |Microsoft Docs
+description: Position 屬性 (ADO)
+title: Position 屬性 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,30 +16,30 @@ helpviewer_keywords:
 ms.assetid: daa8319a-49aa-4c1c-9af6-0b01e9ab2f9d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f5669e22404ab75fc545708e1fc643cfefd3890a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d3402ebd39375957a224a020d441abbdc3379d71
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763349"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442720"
 ---
 # <a name="position-property-ado"></a>Position 屬性 (ADO)
-表示[資料流程](../../../ado/reference/ado-api/stream-object-ado.md)物件中目前的位置。  
+表示 [資料流程](../../../ado/reference/ado-api/stream-object-ado.md) 物件內的目前位置。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定或傳回**Long**值，指定從資料流程開頭到目前位置的位移（以位元組數為單位）。 預設值為0，表示資料流程中的第一個位元組。  
+ 設定或傳回 **Long** 值，指定從資料流程開頭開始之目前位置的位移（以位元組數為單位）。 預設值為0，代表資料流程中的第一個位元組。  
   
 ## <a name="remarks"></a>備註  
- 目前的位置可以移至資料流程結尾之後的點。 如果您指定的目前位置超出資料流程的結尾，**資料流程**物件的[大小](../../../ado/reference/ado-api/size-property-ado-stream.md)也會隨之增加。 以這種方式新增的任何新位元組都會是 null。  
+ 目前的位置可移至資料流程結尾之後的某個點。 如果您指定的目前位置超過資料流程的結尾，**資料流程**物件的[大小](../../../ado/reference/ado-api/size-property-ado-stream.md)將會據此增加。 以這種方式新增的任何新位元組都將會是 null。  
   
 > [!NOTE]
->  **位置**一律會測量個位元組。 針對使用多位元組字元集的文字資料流程，將位置乘以字元大小，以決定字元數。 例如，如果是兩個位元組的字元集，第一個字元位於位置0，第二個字元位於位置2，第三個字元位於位置4，依此類推。  
+>  **Position** 一律會測量位元組。 若為使用多位元組字元集的文字資料流程，請將位置乘以字元大小，以判斷字元數。 例如，在雙位元組字元集中，第一個字元位於位置0、位置2的第二個字元、位置4的第三個字元等等。  
   
 > [!NOTE]
->  負值不能用來變更**資料流程**中的目前位置。 只有正數可以用於**位置**。  
+>  負值不能用來變更 **資料流程**中的目前位置。 只有正數可以用於 **位置**。  
   
 > [!NOTE]
->  對於唯讀**資料流程**物件，如果**Position**設定為大於**資料流程****大小**的值，ADO 將不會傳回錯誤。 這不會變更**資料流程**的大小，也不會以任何方式改變**串流**內容。 不過，應該避免這麼做，因為它會產生無意義的**位置**值。  
+>  針對唯讀的**資料流程**物件，如果將 [**位置**] 設定為大於**資料流程****大小**的值，則 ADO 不會傳回錯誤。 這不會變更 **資料流程**的大小，也不會以任何方式改變 **串流** 內容。 不過，您應該避免這種情況，因為它會產生無意義的 **位置**值。  
   
 ## <a name="applies-to"></a>套用至  
  [Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  

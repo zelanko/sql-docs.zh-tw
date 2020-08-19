@@ -1,4 +1,5 @@
 ---
+description: ALTER PARTITION FUNCTION (Transact-SQL)
 title: ALTER PARTITION FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a8751da646792fc170b017039d6e5d1465e8b5ed
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: efac16278bec7099024cb5f9e7cc2480013728cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381272"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444886"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -70,7 +71,7 @@ ALTER PARTITION SCHEME 陳述式可以新增檔案群組或選取現有的檔案
 如果您在相同的檔案群組中建立所有資料分割，會在一開始時自動將該檔案群組指派為 NEXT USED 檔案群組。 但在分割作業執行之後，即不再有選取的 NEXT USED 檔案群組。 使用 ALTER PARTITION SCHEME 來將檔案群組明確指派為 NEXT USED 檔案群組，否則後續的分割作業將會失敗。  
   
 > [!NOTE]  
->  資料行存放區索引的限制：當資料表上存在資料行存放區索引時，僅能分割空的分割區。 執行此作業之前，您必須先卸除或停用資料行存放區索引。  
+>  資料行存放區索引的限制：當資料表上存在資料行存放區索引時，僅可分割空的資料分割。 執行此作業之前，您必須先卸除或停用資料行存放區索引。  
   
 MERGE [ RANGE ( *boundary_value*) ]  
 卸除分割區，並將該分割區中現有的所有值合併到剩餘的分割區中。 RANGE (*boundary_value*) 必須是現有的界限值，已卸除之資料分割中的值會合併到其中。 除非有剩餘的分割區會使用最初保存 *boundary_value* 的檔案群組，或者已用 NEXT USED 屬性來標示這個檔案群組，否則，此引數會從資料分割配置中移除該檔案群組。 合併的分割區存在於一開始未保存 *boundary_value* 的檔案群組中。 *boundary_value* 是可以參考變數 (包括使用者定義型別變數) 或函數 (包括使用者自訂函數) 的常數運算式。 它無法參考 [!INCLUDE[tsql](../../includes/tsql-md.md)] 運算式。 *boundary_value* 必須完全符合或可隱含轉換成其對應分割資料行的資料類型。 您也無法以值的大小和小數位數不符合其對應 *input_parameter_type* 之值的方式，在隱含轉換期間截斷 *boundary_value*。  

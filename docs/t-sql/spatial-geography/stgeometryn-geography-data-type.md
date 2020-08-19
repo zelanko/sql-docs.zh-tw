@@ -1,4 +1,5 @@
 ---
+description: STGeometryN (geography 資料類型)
 title: STGeometryN (geography 資料型別) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 53755f69-cd50-475b-b3b8-a1a9157cf03a
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1deed4d716bbee62dac425a9d71780aec445602e
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 812a5e63f21de77028c1f00a08f1819c5a07be13
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555769"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445240"
 ---
 # <a name="stgeometryn-geography-data-type"></a>STGeometryN (geography 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,6 +60,6 @@ SELECT @g.STGeometryN(2).ToString();
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [地理例項上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [地理位置例項上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

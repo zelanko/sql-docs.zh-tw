@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;NESTLEVEL (Transact-SQL)'
 title: '@@NESTLEVEL (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/17/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8c0b2134-8616-44f6-addc-6583c432fb62
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b161917c13cba013b06a292493b58dca23e35b97
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a6c28eca6f0496e8e66deef9a26aa4e7ef45ea81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110901"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445730"
 ---
 # <a name="x40x40nestlevel-transact-sql"></a>&#x40;&#x40;NESTLEVEL (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "87110901"
 ## <a name="remarks"></a>備註  
  每次預存程序呼叫另一個預存程序時，或參考 Common Language Runtime (CLR) 常式、類型或彙總來執行 Managed 程式碼時，巢狀層級都會遞增。 當到達最大值 32 時，交易便告終止。  
   
- 當在 @NESTLEVEL 字串內執行 @[!INCLUDE[tsql](../../includes/tsql-md.md)] 時，傳回的值為 1 + 目前的巢狀層級。 當使用 sp_executesql 來動態執行 @@NESTLEVEL 時，傳回的值是 2 + 目前的巢狀層級。  
+ 當在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 字串內執行 @@NESTLEVEL 時，傳回的值為 1 + 目前的巢狀層級。 當使用 sp_executesql 來動態執行 @@NESTLEVEL 時，傳回的值是 2 + 目前的巢狀層級。  
   
 ## <a name="examples"></a>範例  
   
@@ -87,7 +88,7 @@ Inner Level
 ```  
   
 ### <a name="b-calling-nestlevel"></a>B. 呼叫 @@NESTLEVEL  
- 下列範例會示範當呼叫 `SELECT` 時，`EXEC`、`sp_executesql` 及 `@@NESTLEVEL` 傳回值的差異。  
+ 下列範例會示範當呼叫 `@@NESTLEVEL` 時，`SELECT`、`EXEC` 及 `sp_executesql` 傳回值的差異。  
   
 ```  
 CREATE PROC usp_NestLevelValues AS  

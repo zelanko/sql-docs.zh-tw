@@ -1,5 +1,6 @@
 ---
-title: MaxRecords 屬性範例（VB） |Microsoft Docs
+description: MaxRecords 屬性範例 (VB)
+title: " (VB) 的 MaxRecords 屬性範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 630a3be4-7a87-41cf-997e-8bb50d89db1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38812977823e514b63a558640df86c08265257df
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 023519763173c26465cef568345990221b4a0e1a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754362"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443280"
 ---
 # <a name="maxrecords-property-example-vb"></a>MaxRecords 屬性範例 (VB)
-這個範例會使用[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)屬性來開啟包含***標題***資料表中10個最昂貴標題的[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
+此範例會使用 [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) 屬性來開啟 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) ，其中包含 ***標題*** 資料表中10個最昂貴的標題。  
   
 ```  
 'BeginMaxRecordsVB  
@@ -88,5 +89,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MaxRecords 屬性（ADO）](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
+ [ (ADO) 的 MaxRecords 屬性 ](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

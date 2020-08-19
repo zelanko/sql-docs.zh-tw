@@ -1,4 +1,5 @@
 ---
+description: '&amp; (位元 AND) (Transact-SQL)'
 title: '&amp; (位元 AND) (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/10/2017
@@ -21,12 +22,12 @@ ms.assetid: 20275755-4fa7-47b1-a9be-ac85606d63b0
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 948147292506544a5a0308cf7571c56d666bddd1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d011180343d58f2eae4de0cadec0b5057ecd1603
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919714"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445562"
 ---
 # <a name="amp-bitwise-and-transact-sql"></a>&amp; (位元 AND) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

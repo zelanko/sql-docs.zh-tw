@@ -1,4 +1,5 @@
 ---
+description: STLineFromText (geography 資料類型)
 title: STLineFromText (geometry 資料型別) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e0c05bde-077d-4ce2-b4ec-8861db9b996d
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5a18ea2d855cd40c15eb3659a782a706139f7a4f
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e4eaf35bb927fc876725a134f50b74bf73e5c48f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552459"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445157"
 ---
 # <a name="stlinefromtext-geography-data-type"></a>STLineFromText (geography 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +49,7 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
 ## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回類型：**SqlGeography**  
+ CLR 傳回型別：**SqlGeography**  
   
  OGC 類型：**LineString**  
   

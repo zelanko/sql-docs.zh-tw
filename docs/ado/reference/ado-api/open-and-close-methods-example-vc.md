@@ -1,5 +1,6 @@
 ---
-title: Open 和 Close 方法範例（VC + +） |Microsoft Docs
+description: Open 和 Close 方法範例 (VC++)
+title: Open 和 Close 方法範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f74a81fd-cbcc-4143-b9f8-774c88dd4fad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c7aa6605cb613a8cc3f3a6b41c50747d96991f8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: cabdbee513ab42111710520358a66f5f42122f77
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762209"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442990"
 ---
 # <a name="open-and-close-methods-example-vc"></a>Open 和 Close 方法範例 (VC++)
-這個範例會針對已開啟的[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)和[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件使用**Open**和[Close](../../../ado/reference/ado-api/close-method-ado.md)方法。  
+此範例會在已開啟的[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)和[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件上使用**Open**和[Close](../../../ado/reference/ado-api/close-method-ado.md)方法。  
   
 ```  
 // Open_Close_Methods.cpp  
@@ -206,8 +207,8 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Close 方法（ADO）](../../../ado/reference/ado-api/close-method-ado.md)   
- [Connection 物件（ADO）](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Open 方法（ADO Connection）](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Open 方法（ADO Recordset）](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+ [ (ADO) 的 Close 方法 ](../../../ado/reference/ado-api/close-method-ado.md)   
+ [ (ADO) 的 Connection 物件 ](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [ (ADO Connection) 的 Open 方法 ](../../../ado/reference/ado-api/open-method-ado-connection.md)   
+ [ (ADO 記錄集的 Open 方法) ](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

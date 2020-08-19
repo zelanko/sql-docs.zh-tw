@@ -1,4 +1,5 @@
 ---
+description: -- (註解) (Transact-SQL)
 title: -- (註解) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/25/2019
@@ -22,12 +23,12 @@ ms.assetid: 676ea8c2-52c1-4ef6-9354-320f1a091153
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c2c799aeb38088baacc6110459d42db6138f3575
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f7d802b17e338c3cf9c739e493970564fcdb3d51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922974"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445540"
 ---
 # <a name="---comment-transact-sql"></a>-- (註解) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

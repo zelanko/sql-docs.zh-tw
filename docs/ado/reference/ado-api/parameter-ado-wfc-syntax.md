@@ -1,5 +1,6 @@
 ---
-title: 參數（ADO-WFC 語法） |Microsoft Docs
+description: Parameter (ADO - WFC 語法)
+title: 參數 (ADO-WFC 語法) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5c3d60374102b92249062cbc705dc55c6d217537
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6fc5226da0ceeefc6ae961b2a3d358d1dc1955b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765449"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442820"
 ---
 # <a name="parameter-ado---wfc-syntax"></a>Parameter (ADO - WFC 語法)
-## <a name="package-commswfcdata"></a>封裝 .com. wfc. 資料  
+## <a name="package-commswfcdata"></a>封裝 .com. 資料  
   
 ### <a name="constructor"></a>建構函式  
   
@@ -65,13 +66,13 @@ public AdoProperties getProperties()
 ```  
   
 ## <a name="parameter-accessor-methods"></a>參數存取子方法  
- [Parameter](../../../ado/reference/ado-api/parameter-object.md)物件的[Value](../../../ado/reference/ado-api/value-property-ado.md)屬性會取得或設定該物件的內容。 內容會以 VARIANT 表示，這是一種可指派值的物件類型，以及數種資料類型的任何一種。  
+ [參數](../../../ado/reference/ado-api/parameter-object.md)物件的[Value](../../../ado/reference/ado-api/value-property-ado.md)屬性會取得或設定該物件的內容。 內容會表示為 VARIANT、可以指派值的物件類型，以及數個資料類型的任一個。  
   
- ADO/WFC 會使用**getValue**方法來執行**Value**屬性，它會傳回 VARIANT 物件;和**setValue**方法，其採用 VARIANT 做為引數。 在某些語言（例如 Microsoft Visual Basic）中，變體非常有效率。  
+ ADO/WFC 會使用**getValue**方法來實**值**屬性，此方法會傳回 VARIANT 物件;和**setValue**方法，它會採用 VARIANT 作為引數。 Variant 在某些語言（例如 Microsoft Visual Basic）中具有高效率。  
   
- 除了**Value**屬性，ADO/WFC 還提供使用 JAVA 資料類型的*存取*子方法，以取得和設定**參數**物件的內容。 這些方法大多都具有格式為**get**_datatype_或**set**_datatype_的名稱。  
+ 除了 **Value** 屬性之外，ADO/WFC 也提供 *存取* 子方法，這些方法會使用 JAVA 資料類型來取得和設定 **參數** 物件的內容。 這些方法大多都有格式的 **get**_datatype_ 或 **set**_datatype_。  
   
- 有一個值得注意的例外狀況：沒有**getNull**屬性;相反地，有一個**isNull**屬性會傳回布林值，指出欄位是否為 null。  
+ 有一個值得注意的例外狀況：沒有 **getNull** 屬性;相反地，有一個 **isNull** 屬性會傳回布林值，指出欄位是否為 null。  
   
 ```  
 public boolean getBoolean()  

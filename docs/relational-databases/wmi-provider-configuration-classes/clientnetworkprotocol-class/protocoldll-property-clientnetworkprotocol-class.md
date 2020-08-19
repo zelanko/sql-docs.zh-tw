@@ -1,5 +1,6 @@
 ---
-title: ProtocolDLL 屬性（ClientNetworkProtocol）
+description: ProtocolDLL 屬性 (ClientNetworkProtocol 類別)
+title: 'ProtocolDLL 屬性 (ClientNetworkProtocol) '
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: fe8650d5-7b9d-46f8-bf74-baf1d9d2a06a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4e93c5ed625cd5c81f9b3f7bea73c203ae590c7a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 17bde6ee4793e80a7dc3c3b536ba3337ac5de97c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888998"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446308"
 ---
 # <a name="protocoldll-property-clientnetworkprotocol-class"></a>ProtocolDLL 屬性 (ClientNetworkProtocol 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  取得[設定用戶端通訊協定](https://technet.microsoft.com/library/ms181035.aspx)所指定的網路通訊協定所需的 .DLL 檔案名。  
+  取得 [設定用戶端通訊](https://technet.microsoft.com/library/ms181035.aspx)協定所指定之網路通訊協定所需的 .DLL 檔案名。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,7 +38,7 @@ object.ProtocolDLL [= value]
   
 ## <a name="parts"></a>組件  
  *object*  
- 代表用戶端所使用之網路通訊協定的[ClientNetworkProtocol 類別](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)物件 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+ 代表用戶端所使用之網路通訊協定的 [ClientNetworkProtocol 類別](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) 物件 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  指定用戶端網路通訊協定所需之通訊協定 .dll 檔案的字串值。  

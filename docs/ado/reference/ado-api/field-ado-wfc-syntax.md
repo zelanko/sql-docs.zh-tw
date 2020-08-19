@@ -1,5 +1,6 @@
 ---
-title: Field （ADO-WFC 語法） |Microsoft Docs
+description: Field (ADO - WFC 語法)
+title: Field (ADO-WFC 語法) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1c4167b033163c8106a31070a83d044eb8e8fe7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b9f3c2e1cd7d64255b0bae2d8085a499530e7476
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757074"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443780"
 ---
 # <a name="field-ado---wfc-syntax"></a>Field (ADO - WFC 語法)
-## <a name="package-commswfcdata"></a>封裝 .com. wfc. 資料  
+## <a name="package-commswfcdata"></a>封裝 .com. 資料  
   
 ### <a name="methods"></a>方法  
   
@@ -44,7 +45,7 @@ public com.ms.com.IUnknown getDataFormat()
 public void setDataFormat(com.ms.com.IUnknown format)  
 ```  
   
- （如需詳細資訊，請參閱 IDataFormat 介面的檔。）  
+  (需詳細資訊，請參閱 IDataFormat 介面的檔。 )   
   
 ```  
 public int getDefinedSize()  
@@ -64,13 +65,13 @@ public AdoProperties getProperties()
 ```  
   
 ### <a name="field-accessor-methods"></a>欄位存取子方法  
- [Field](../../../ado/reference/ado-api/field-object.md)物件的[Value](../../../ado/reference/ado-api/value-property-ado.md)屬性會取得或設定該物件的內容。 內容會以 VARIANT 表示，這是一種可指派值的物件類型，以及數種資料類型的任何一種。  
+ [Field](../../../ado/reference/ado-api/field-object.md)物件的[Value](../../../ado/reference/ado-api/value-property-ado.md)屬性會取得或設定該物件的內容。 內容會表示為 VARIANT、可以指派值的物件類型，以及數個資料類型的任一個。  
   
- ADO/WFC 會使用**getValue**方法來執行**Value**屬性，它會傳回 VARIANT 物件;和**setValue**方法，其採用 VARIANT 做為引數。 在某些語言（例如 Microsoft Visual Basic）中，變體非常有效率。  
+ ADO/WFC 會使用**getValue**方法來實**值**屬性，此方法會傳回 VARIANT 物件;和**setValue**方法，它會採用 VARIANT 作為引數。 Variant 在某些語言（例如 Microsoft Visual Basic）中具有高效率。  
   
- 除了**Value**屬性，ADO/WFC 還提供使用 JAVA 資料類型的*存取*子方法，以取得和設定**欄位**物件的內容。 這些方法大多都具有格式為**get**_datatype_或**set**_datatype_的名稱。  
+ 除了 **Value** 屬性之外，ADO/WFC 還提供 *存取* 子方法，這些方法會使用 JAVA 資料類型來取得和設定 **欄位** 物件的內容。 這些方法大多都有格式的 **get**_datatype_ 或 **set**_datatype_。  
   
- 有兩個值得注意的例外狀況：其中一個**getObject**方法會傳回已強制轉型為指定類別的物件。 沒有**getNull**屬性;相反地，有一個**isNull**屬性會傳回布林值，指出欄位是否為 null。  
+ 有兩個值得注意的例外狀況：其中一個 **getObject** 方法會傳回已強制轉型為指定類別的物件。 沒有 **getNull** 屬性;相反地，有一個 **isNull** 屬性會傳回布林值，指出欄位是否為 null。  
   
 ```  
 public native boolean getBoolean();  

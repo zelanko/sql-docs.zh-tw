@@ -1,4 +1,5 @@
 ---
+description: 定序函式 - TERTIARY_WEIGHTS (Transact-SQL)
 title: TERTIARY_WEIGHTS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -20,12 +21,12 @@ ms.assetid: 7e1f5350-260b-4c61-8c84-69bb1a214f1f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f202d45b9c815154f252c0c016fe4931dbef069e
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 1a6cf4546193b02050c0559765fe3fa4ad368e02
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112142"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445890"
 ---
 # <a name="collation-functions---tertiary_weights-transact-sql"></a>定序函式 - TERTIARY_WEIGHTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,13 +45,13 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
 
 ## <a name="arguments"></a>引數
 *non_Unicode_character_string_expression*  
-SQL 第 3 定序上定義之 [char](../../t-sql/language-elements/expressions-transact-sql.md)、**varchar** 或 **varchar(max)** 類型的字串**運算式**。 如需這些定序的清單，請參閱「備註」一節。
+SQL 第 3 定序上定義之 **char**、**varchar** 或 **varchar(max)** 類型的字串[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 如需這些定序的清單，請參閱「備註」一節。
   
 ## <a name="return-types"></a>傳回類型
-`TERTIARY_WEIGHTS` 會在 **non_Unicode_character_string_expression** 為 *char* 或 **varchar** 時傳回 **varbinary**，並在 **non_Unicode_character_string_expression** 具有 *varchar(max)* 資料類型時傳回 **varbinary(max)** 。
+`TERTIARY_WEIGHTS` 會在 *non_Unicode_character_string_expression* 為 **char** 或 **varchar** 時傳回 **varbinary**，並在 *non_Unicode_character_string_expression* 具有 **varchar(max)** 資料類型時傳回 **varbinary(max)**。
   
 ## <a name="remarks"></a>備註  
-當 SQL 第 3 定序未定義 `TERTIARY_WEIGHTS`non_Unicode_character_string_expression *時，* 會傳回 NULL。 此表格顯示 SQL 第 3 定序：
+當 SQL 第 3 定序未定義 *non_Unicode_character_string_expression* 時，`TERTIARY_WEIGHTS` 會傳回 NULL。 此表格顯示 SQL 第 3 定序：
   
 |排序順序識別碼|SQL 定序|  
 |---|---|
@@ -87,7 +88,7 @@ SQL 第 3 定序上定義之 [char](../../t-sql/language-elements/expressions-tr
 |185|SQL_SwedishStd_Pref_CP1_CI_AS|  
 |186|SQL_Icelandic_Pref_CP1_CI_AS|  
   
-針對 `TERTIARY_WEIGHTS`char **、** varchar**或**varchar(max)**資料行之值所定義的計算資料行定義，使用**。 當查詢的 ORDER BY 子句指定 **char**、**varchar** 或 **varchar(max)** 資料行時，計算資料行和 **char**、**varchar** 或 **varchar(max)** 資料行的索引定義可以改善效能。
+針對 **char**、**varchar** 或 **varchar(max)** 資料行之值所定義的計算資料行定義，使用 `TERTIARY_WEIGHTS`。 當查詢的 ORDER BY 子句指定 **char**、**varchar** 或 **varchar(max)** 資料行時，計算資料行和 **char**、**varchar** 或 **varchar(max)** 資料行的索引定義可以改善效能。
   
 ## <a name="examples"></a>範例  
 此範例會在資料表中，建立一個將 `TERTIARY_WEIGHTS` 函式套用至 `char` 資料行之值的計算資料行：

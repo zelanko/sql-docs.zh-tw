@@ -1,4 +1,5 @@
 ---
+description: DATABASE_PRINCIPAL_ID (Transact-SQL)
 title: DATABASE_PRINCIPAL_ID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/14/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 908c7dd8-c10b-4658-92f6-0224f9835dd9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: edb269b7d27f76ea380533bc90af6831611adde1
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: da62d368b27c7539115e199742d5e7ed224eb75c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395103"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445849"
 ---
 # <a name="database_principal_id-transact-sql"></a>DATABASE_PRINCIPAL_ID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -71,7 +72,7 @@ SELECT DATABASE_PRINCIPAL_ID('db_owner');
 GO  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 [主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
 [權限階層 &#40;Database Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)  
 [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)

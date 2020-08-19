@@ -1,5 +1,6 @@
 ---
-title: ExitCode 屬性（SqlService）
+description: ExitCode 屬性 (SqlService 類別)
+title: 'ExitCode 屬性 (SqlService) '
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e6b8bff2-946f-4abe-bd50-1f7bb11fdddf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 144c6eb8797ca9e559c050b381e725d26e55d040
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ab792d72f904511bb17dda140132e86350255fa2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880643"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446116"
 ---
 # <a name="exitcode-property-sqlservice-class"></a>ExitCode 屬性 (SqlService 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

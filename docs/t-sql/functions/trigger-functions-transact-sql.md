@@ -1,4 +1,5 @@
 ---
+description: 觸發程序函數 (Transact-SQL)
 title: 觸發程序函式 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
@@ -12,12 +13,12 @@ dev_langs:
 ms.assetid: 3d77ac6d-5eb5-4cd6-ab60-46290ac4d9ce
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: be86c1b21efc84269f659a08a3dc1e3bc5fa4907
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d1b862bdbe8eae15f754cb8d9fc71e64e6fc143a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85714558"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445527"
 ---
 # <a name="trigger-functions-transact-sql"></a>觸發程序函數 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: RECONFIGURE (Transact-SQL)
 title: RECONFIGURE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/20/2016
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 44ccb855d3a9a4d545d2c882b1d3ff7b788419d2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bab30e48ce9b9452ab3e8c28ad409df30a6516aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915601"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445470"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

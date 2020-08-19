@@ -1,4 +1,5 @@
 ---
+description: 伺服器事件類別和屬性的 WMI 提供者
 title: 伺服器事件類別和屬性的 WMI 提供者
 ms.custom: ''
 ms.date: 03/03/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e2916cd7-a3ed-41e6-97b4-2ee060754cbe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 000aafb6c7fa7d0c78c0fa5a5596727b8736caad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f57bfbda8864ef04d79d09ea2483fbf940de255a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888151"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446110"
 ---
 # <a name="wmi-provider-for-server-events-classes-and-properties"></a>伺服器事件類別和屬性的 WMI 提供者
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,12 +28,12 @@ ms.locfileid: "85888151"
   
  若要得知可以從事件或事件群組查詢哪些屬性，請參考事件結構描述。 根據預設，事件結構描述會安裝在以下目錄：[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd。  
   
- 或者，您可以參考發佈于的事件架構 [https://schemas.microsoft.com/sqlserver](https://go.microsoft.com/fwlink/?linkid=43100) 。  
+ 或者，您可以參考在中發行的事件架構 [https://schemas.microsoft.com/sqlserver](https://go.microsoft.com/fwlink/?linkid=43100) 。  
   
- 例如，藉由參考 ALTER_DATABASE 事件，您將瞭解其父事件是 DDL_SERVER_LEVEL_EVENTS 而其屬性為**TSQLCommand**和**DatabaseName**。 此事件也會繼承屬性**SQLInstance**、 **PostTime**、 **ComputerName**、 **SPID**和**LoginName**。 此事件沒有任何子事件。  
+ 例如，藉由參考 ALTER_DATABASE 事件，您將會瞭解其父事件已 DDL_SERVER_LEVEL_EVENTS，而且其屬性為 **TSQLCommand** 和 **DatabaseName**。 此事件也會繼承屬性 **SQLInstance**、 **PostTime**、 **ComputerName**、 **SPID**和 **LoginName**。 此事件沒有任何子事件。  
   
 > [!NOTE]  
->  執行類似 DDL 作業的系統預存程序也可以引發事件通知。 請測試事件通知以判斷它們對執行之系統預存程序的回應。 例如，CREATE TYPE 語句和**sp_addtype**預存程式都會引發在 CREATE_TYPE 事件上建立的事件通知。 如需詳細資訊，請參閱[DDL 事件](../../relational-databases/triggers/ddl-events.md)。  
+>  執行類似 DDL 作業的系統預存程序也可以引發事件通知。 請測試事件通知以判斷它們對執行之系統預存程序的回應。 例如，CREATE TYPE 語句和 **sp_addtype** 預存程式都會引發在 CREATE_TYPE 事件上建立的事件通知。 如需詳細資訊，請參閱 [DDL 事件](../../relational-databases/triggers/ddl-events.md)。  
   
  **資料定義語言事件和事件群組**  
   
@@ -43,7 +44,7 @@ ms.locfileid: "85888151"
  ![追蹤事件和事件群組](../../relational-databases/wmi-provider-server-events/media/sql-wmi-trc-all-events.gif "追蹤事件和事件群組")  
   
 ## <a name="see-also"></a>另請參閱  
- [伺服器事件的 WMI 提供者概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)   
+ [伺服器事件概念的 WMI 提供者](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)   
  [搭配伺服器事件的 WMI 提供者使用 WQL](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)  
   
   

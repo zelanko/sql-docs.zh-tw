@@ -1,5 +1,6 @@
 ---
-title: Filter 和 RecordCount 屬性範例（JScript） |Microsoft Docs
+description: " (JScript) 的 Filter 和 RecordCount 屬性範例"
+title: 篩選和 RecordCount 屬性範例 (JScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 677fa67e-9cb9-4d7d-a786-beeb5bee5236
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 339a605e926b88dae5cee515af9579152613692c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 901fee0602957526cfa19d573161a4b9f2504900
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756800"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443700"
 ---
-# <a name="filter-and-recordcount-properties-example-jscript"></a>Filter 和 RecordCount 屬性範例（JScript）
-這個範例會在 Northwind 資料庫的 [公司] 資料表上開啟**記錄集**，然後使用 [[篩選](../../../ado/reference/ado-api/filter-property.md)] 屬性來限制 [公司名稱] 欄位以字母 D 開頭的記錄，並將下列程式碼貼入 [記事本] 或其他文字編輯器，並將其儲存為**FilterJS。**  
+# <a name="filter-and-recordcount-properties-example-jscript"></a> (JScript) 的 Filter 和 RecordCount 屬性範例
+這個範例會在 Northwind 資料庫的 [公司] 資料表上開啟**記錄集**，然後使用 [[篩選](../../../ado/reference/ado-api/filter-property.md)] 屬性來限制 [公司名稱] 欄位以字母 D 開頭的記錄。將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器，然後將它儲存為**FilterJS。**  
   
 ```  
 <!-- BeginFilterJS -->  
@@ -149,6 +150,6 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Filter 屬性](../../../ado/reference/ado-api/filter-property.md)   
- [RecordCount 屬性（ADO）](../../../ado/reference/ado-api/recordcount-property-ado.md)   
+ [篩選屬性](../../../ado/reference/ado-api/filter-property.md)   
+ [ (ADO) 的 RecordCount 屬性 ](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

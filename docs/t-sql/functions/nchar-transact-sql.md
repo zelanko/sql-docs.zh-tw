@@ -1,4 +1,5 @@
 ---
+description: NCHAR (Transact-SQL)
 title: NCHAR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -19,12 +20,12 @@ ms.assetid: 68cefc68-7c4f-4326-80c1-300f90cf19db
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dcd53208afaa16fdab638b854773163a6353bc05
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c6964acd1127db3bcdb25d551116865073e43974
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111473"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445717"
 ---
 # <a name="nchar-transact-sql"></a>NCHAR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,9 +49,9 @@ NCHAR ( integer_expression )
  如果資料庫的定序支援 SC 旗標，這會是從 0 到 1114111 (0 到 0x10FFFF) 的正整數。 如果指定了這個範圍以外的值，便會傳回 NULL。  
   
 ## <a name="return-types"></a>傳回型別  
- 當預設資料庫定序不支援增補字元時，便為 **nchar(1)** 。  
+ 當預設資料庫定序不支援增補字元時，便為 **nchar(1)**。  
   
- 當預設資料庫定序支援增補字元時，便為 **nvarchar(2)** 。  
+ 當預設資料庫定序支援增補字元時，便為 **nvarchar(2)**。  
   
  如果參數 *integer_expression* 在 0 - 0xFFFF 範圍內，則只會傳回一個字元。 對於較高值，NCHAR 會傳回對應的 Surrogate 字組。 請勿使用 `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)` 建構 Surrogate 字組。 而應使用支援增補字元的資料庫定序，然後為 Surrogate 字組指定 Unicode 字碼指標。 下列範例示範建構 Surrogate 字組的舊有樣式方法，以及指定 Unicode 字碼指標的慣用方法。  
   

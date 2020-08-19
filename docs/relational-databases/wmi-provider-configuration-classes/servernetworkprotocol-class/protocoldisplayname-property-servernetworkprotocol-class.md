@@ -1,5 +1,6 @@
 ---
-title: ProtocolDisplayName 屬性（ServerNetworkProtocol）
+description: ProtocolDisplayName 屬性 (ServerNetworkProtocol 類別)
+title: 'ProtocolDisplayName 屬性 (ServerNetworkProtocol) '
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ff51a836-7cff-4ddc-a92a-893f86e637cb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ef5bc5afbbe656e98de36f6c1d1b222de269f9f1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ce617b04cdef28b96b2c22cafa1af5a2cbcac0a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888718"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446197"
 ---
 # <a name="protocoldisplayname-property-servernetworkprotocol-class"></a>ProtocolDisplayName 屬性 (ServerNetworkProtocol 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ object.ProtocolDisplayName [= value]
   
 ## <a name="parts"></a>組件  
  *object*  
- 代表實例所使用之網路通訊協定的[ServerNetworkProtocol 類別](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md)物件 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+ 代表實例所使用之網路通訊協定的 [ServerNetworkProtocol 類別](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md) 物件 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  指定伺服器網路通訊協定之顯示名稱的字串值。  

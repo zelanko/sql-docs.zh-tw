@@ -1,4 +1,5 @@
 ---
+description: ClientSettingsGeneralFlag 類別
 title: ClientSettingsGeneralFlag 類別
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a0291a8-e8ef-42f6-a521-079410c5eeb1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ba3e3a6eaafc85b01d007d1c51cc2a043fa1c1ac
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d454ee7f53d6bd533b50433765c45304aa7b5ccf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888841"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446276"
 ---
 # <a name="clientsettingsgeneralflag-class"></a>ClientSettingsGeneralFlag 類別
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

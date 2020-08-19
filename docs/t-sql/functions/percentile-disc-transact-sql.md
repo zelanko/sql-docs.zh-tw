@@ -1,4 +1,5 @@
 ---
+description: PERCENTILE_DISC (Transact-SQL)
 title: PERCENTILE_DISC (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2015
@@ -19,12 +20,12 @@ ms.assetid: b545413d-c4f7-4c8e-8617-607599a26680
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1718a85927fa4b443576ab7835298db9f59178d
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: aba51bed39dc07ce130e22c6e701c8ada754e4f1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394227"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445666"
 ---
 # <a name="percentile_disc-transact-sql"></a>PERCENTILE_DISC (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

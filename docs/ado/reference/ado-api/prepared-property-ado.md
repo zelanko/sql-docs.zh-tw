@@ -1,5 +1,6 @@
 ---
-title: 已備妥的屬性（ADO） |Microsoft Docs
+description: Prepared 屬性 (ADO)
+title: " (ADO) 的備妥屬性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,29 +16,29 @@ helpviewer_keywords:
 ms.assetid: 11ca8825-765e-4bb4-a6ce-3f6564ad8755
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 58cce35e57116618137f4ee776901dba2a44eff4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 050651b5c25fcfdfa6723936659b9a11772c2b03
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761956"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442690"
 ---
 # <a name="prepared-property-ado"></a>Prepared 屬性 (ADO)
-指出是否要在執行之前儲存已編譯版本的[命令](../../../ado/reference/ado-api/command-object-ado.md)。  
+指出是否要在執行之前儲存 [命令](../../../ado/reference/ado-api/command-object-ado.md) 的編譯版本。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定或傳回**布林**值，如果設定為**True**，則表示應該準備命令。  
+ 設定或傳回 **布林** 值，如果設定為 **True**，則表示應該準備命令。  
   
 ## <a name="remarks"></a>備註  
- 使用已**備**妥的屬性，讓提供者在[命令](../../../ado/reference/ado-api/command-object-ado.md)物件第一次執行之前，儲存[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)屬性中指定之查詢的備妥（或已編譯）版本。 這可能會使命令的第一次執行速度變慢，但一旦提供者編譯命令，提供者將會使用命令的編譯版本進行任何後續的執行，這樣會導致效能提升。  
+ 使用**備**妥的屬性可讓提供者在[命令](../../../ado/reference/ado-api/command-object-ado.md)物件第一次執行之前，儲存[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)屬性中所指定之查詢的備妥 (或編譯的) 版本。 這可能會讓命令的第一次執行變慢，但是一旦提供者編譯命令之後，提供者將會使用命令的編譯版本進行任何後續的執行，這會導致效能提高。  
   
- 如果屬性為**False**，則提供者會直接執行**命令**物件，而不會建立已編譯的版本。  
+ 如果屬性為 **False**，則提供者會直接執行 **命令** 物件，而不會建立編譯的版本。  
   
- 如果提供者不支援命令準備，當這個屬性設定為**True**時，它可能會傳回錯誤。 如果提供者未傳回錯誤，它只會忽略準備命令的要求，並將**備**妥的屬性設定為**False**。  
+ 如果提供者不支援命令準備，當這個屬性設定為 **True**時，它可能會傳回錯誤。 如果提供者未傳回錯誤，則只會忽略準備命令的要求，並將 **備** 妥的屬性設定為 **False**。  
   
 ## <a name="applies-to"></a>套用至  
  [Command 物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [備妥的屬性範例（VB）](../../../ado/reference/ado-api/prepared-property-example-vb.md)   
+ [ (VB) 的備妥屬性範例 ](../../../ado/reference/ado-api/prepared-property-example-vb.md)   
  [Prepared 屬性範例 (VC++)](../../../ado/reference/ado-api/prepared-property-example-vc.md)   

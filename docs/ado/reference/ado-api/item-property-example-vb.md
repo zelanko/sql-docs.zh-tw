@@ -1,5 +1,6 @@
 ---
-title: Item 屬性範例（VB） |Microsoft Docs
+description: Item 屬性範例 (VB)
+title: 專案屬性範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b4476603-691b-4081-8797-a3d0b331dce5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0b9929c6c8547836131df61ae2d2576fae5aee38
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4ff98b6c2fe1dbb6da0131bf1a1d539fdfb74649
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765469"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443390"
 ---
 # <a name="item-property-example-vb"></a>Item 屬性範例 (VB)
-這個範例會示範[Item](../../../ado/reference/ado-api/item-property-ado.md)屬性如何存取集合的成員。 此範例會使用參數化命令開啟***Pubs***資料庫的***作者***資料表。  
+這個範例示範 [Item](../../../ado/reference/ado-api/item-property-ado.md) 屬性如何存取集合的成員。 此範例會使用參數化命令開啟***Pubs***資料庫的***作者***資料表。  
   
- 在命令中針對資料庫發出的參數，會依照索引和名稱從[命令](../../../ado/reference/ado-api/command-object-ado.md)物件的[Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)集合存取。 然後會依照索引和名稱，從該物件的[fields](../../../ado/reference/ado-api/fields-collection-ado.md)集合存取傳回之[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)的欄位。  
+ 針對資料庫發出的命令中的參數會依照索引和名稱從 [命令](../../../ado/reference/ado-api/command-object-ado.md) 物件的 [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) 集合存取。 然後，會根據索引和名稱，從該物件的[fields](../../../ado/reference/ado-api/fields-collection-ado.md)集合存取傳回之[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)的欄位。  
   
 ```  
 'BeginItemVB  
@@ -135,8 +136,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Command 物件（ADO）](../../../ado/reference/ado-api/command-object-ado.md)   
- [Fields 集合（ADO）](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Item 屬性（ADO）](../../../ado/reference/ado-api/item-property-ado.md)   
- [Parameters 集合（ADO）](../../../ado/reference/ado-api/parameters-collection-ado.md)   
+ [ (ADO) 的命令物件 ](../../../ado/reference/ado-api/command-object-ado.md)   
+ [ (ADO) 的欄位集合 ](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [專案屬性 (ADO) ](../../../ado/reference/ado-api/item-property-ado.md)   
+ [ (ADO) 的參數集合 ](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

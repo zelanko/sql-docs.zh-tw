@@ -1,4 +1,5 @@
 ---
+description: 提示 (Transact-SQL) - 資料表
 title: 資料表提示 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/21/2020
@@ -36,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c73969d5bd4b02373d9a16d292504530a626650b
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: d7dccda143515b801f06664d1916fbec6e2dcea3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555856"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445358"
 ---
 # <a name="hints-transact-sql---table"></a>提示 (Transact-SQL) - 資料表
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,4 +1,5 @@
 ---
+description: FieldAttributeEnum
 title: FieldAttributeEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,53 +16,53 @@ helpviewer_keywords:
 ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 89de6b52bd7987a2bdd2b8bee8e5c58b38d6074f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: fd8910f07b5f30170e8addd90fa41ab3299fbda5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242698"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443760"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
-指定[欄位](../../../ado/reference/ado-api/field-object.md)物件的一或多個屬性。  
+指定 [欄位](../../../ado/reference/ado-api/field-object.md) 物件的一或多個屬性。  
   
-|持續性|值|描述|  
+|常數|值|描述|  
 |--------------|-----------|-----------------|  
 |**adFldCacheDeferred**|0x1000|指出提供者會快取域值，並從快取中完成後續讀取。|  
-|**adFldFixed**|0x10|指出欄位包含固定長度的資料。|  
-|**adFldIsChapter**|0x2000|指出此欄位包含章節值，其指定與此父欄位相關的特定子記錄集。 [章節] 欄位通常用於資料成形或篩選。|  
-|**adFldIsCollection**|0x40000|表示欄位指定記錄所代表的資源是其他資源（例如資料夾）的集合，而不是簡單的資源，例如文字檔。|  
-|**adFldKeyColumn**|0x8000|表示欄位會指定資料行的全部或部分主要索引鍵。|  
-|**adFldIsDefaultStream**|0x20000|指出此欄位包含記錄所代表之資源的預設資料流程。 例如，預設資料流程可以是網站上根資料夾的 HTML 內容，當指定根 URL 時，它會自動提供服務。|  
+|**adFldFixed**|0x10|表示欄位包含固定長度的資料。|  
+|**adFldIsChapter**|0x2000|表示欄位包含章節值，此值會指定與此父欄位相關的特定子記錄集。 通常章節欄位會搭配資料成形或篩選使用。|  
+|**adFldIsCollection**|0x40000|指出此欄位指定記錄所表示的資源是其他資源（例如資料夾）的集合，而不是簡單的資源，例如文字檔。|  
+|**adFldKeyColumn**|0x8000|表示欄位會指定資料行的全部或一部分的主鍵。|  
+|**adFldIsDefaultStream**|0x20000|表示欄位包含記錄所代表之資源的預設資料流程。 例如，預設的資料流程可以是網站根資料夾的 HTML 內容，當指定根 URL 時，系統就會自動提供此內容。|  
 |**adFldIsNullable**|0x20|表示欄位接受 null 值。|  
-|**adFldIsRowURL**|0x10000|指出此欄位包含的 URL 會將資源命名為記錄所代表的資料存放區。|  
-|**adFldLong**|0x80|表示欄位是長二進位欄位。 也表示您可以使用[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)和[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)方法。|  
-|**adFldMayBeNull**|0x40|表示您可以從欄位讀取 null 值。|  
-|**adFldMayDefer**|0x2|表示欄位已延後（也就是，系統不會使用整筆記錄從資料來源中抓取域值，但只有在您明確存取時）。|  
-|**adFldNegativeScale**|0x4000|表示欄位代表來自支援負值小數值之資料行的數值。 小數值是由[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)屬性所指定。|  
-|**adFldRowID**|0x100|指出欄位包含無法寫入的持續性資料列識別碼，而且沒有任何有意義的值，除非識別資料列（例如記錄號碼、唯一識別碼等等）。|  
-|**adFldRowVersion**|0x200|指出欄位包含用來追蹤更新的某種時間或日期戳記。|  
+|**adFldIsRowURL**|0x10000|指出此欄位包含的 URL 會從記錄所代表的資料存放區中，為資源命名。|  
+|**adFldLong**|0x80|表示欄位是長二進位欄位。 也指出您可以使用 [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) 和 [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) 方法。|  
+|**adFldMayBeNull**|0x40|指出您可以從欄位讀取 null 值。|  
+|**adFldMayDefer**|0x2|表示欄位是延後的，也就是，不會從資料來源中取出整個記錄的域值，而只有在您明確存取這些欄位時。|  
+|**adFldNegativeScale**|0x4000|表示欄位代表支援負小數值的資料行中的數值。 小數位數是由 [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) 屬性所指定。|  
+|**adFldRowID**|0x100|指出欄位包含無法寫入的持續性資料列識別碼，且除了識別資料列 (（例如記錄號碼、唯一) 識別碼等）之外，沒有任何有意義的值。|  
+|**adFldRowVersion**|0x200|表示欄位包含某種用來追蹤更新的時間或日期戳記。|  
 |**adFldUnknownUpdatable**|0x8|指出提供者無法判斷您是否可以寫入欄位。|  
-|**adFldUnspecified**|-1 0xFFFFFFFF|指出提供者未指定欄位屬性。|  
-|**adFldUpdatable**|0x4|表示您可以寫入欄位。|  
+|**adFldUnspecified**|-1 0xFFFFFFFF|表示提供者未指定欄位屬性。|  
+|**adFldUpdatable**|0x4|指出您可以寫入欄位。|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC 對等  
- Package： **.com. wfc. 資料**  
+## <a name="adowfc-equivalent"></a>ADO/WFC 相等  
+ 封裝： **.com. 資料**  
   
-|持續性|  
+|常數|  
 |--------------|  
 |AdoEnums.FieldAttribute.CACHEDEFERRED|  
 |AdoEnums. FieldAttribute. FIXED|  
 |AdoEnums. FieldAttribute. ISNullABLE|  
 |AdoEnums. FieldAttribute. LONG|  
-|AdoEnums.FieldAttribute.MAYBENull|  
+|AdoEnums. FieldAttribute. MAYBENull|  
 |AdoEnums.FieldAttribute.MAYDEFER|  
 |AdoEnums.FieldAttribute.NEGATIVESCALE|  
-|AdoEnums. FieldAttribute. ROWID|  
+|AdoEnums. FieldAttribute|  
 |AdoEnums. FieldAttribute. ROWVERSION|  
 |AdoEnums.FieldAttribute.UNKNOWNUPDATABLE|  
 |AdoEnums. FieldAttribute。未指定|  
-|AdoEnums. FieldAttribute. 可更新|  
+|AdoEnums. FieldAttribute 可更新|  
   
 ## <a name="applies-to"></a>套用至  
 

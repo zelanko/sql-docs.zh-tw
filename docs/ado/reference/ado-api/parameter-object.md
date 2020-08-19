@@ -1,4 +1,5 @@
 ---
+description: Parameter 物件
 title: Parameter 物件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,43 +16,43 @@ helpviewer_keywords:
 ms.assetid: e010e794-7f0f-4026-8b5b-37328e437d63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 22af5fadda96adbe67c1c03aaa5cde3527df1113
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ac768cf83d370a1fc60508b5d6a476f0e586d4f6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759994"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442810"
 ---
 # <a name="parameter-object"></a>Parameter 物件
-根據參數化查詢或預存程式，表示與[命令](../../../ado/reference/ado-api/command-object-ado.md)物件相關聯的參數或引數。  
+根據參數化查詢或預存程式，表示與 [命令](../../../ado/reference/ado-api/command-object-ado.md) 物件相關聯的參數或引數。  
   
 ## <a name="remarks"></a>備註  
- 許多提供者都支援參數化命令。 這些是所需動作定義一次的命令，但變數（或參數）是用來改變命令的一些詳細資料。 例如，SQL SELECT 語句可以使用參數來定義 WHERE 子句的比對準則，另一個則是用來定義排序依據子句的資料行名稱。  
+ 許多提供者支援參數化命令。 這些命令只會定義所需的動作一次，但變數 (或參數) 用來改變命令的部分詳細資料。 例如，SQL SELECT 語句可以使用參數來定義 WHERE 子句的比對準則，並使用另一個來定義 SORT BY 子句的資料行名稱。  
   
- **參數**物件代表與參數化查詢相關聯的參數，或 in/out 引數和預存程式的傳回值。 視提供者的功能而定，某些集合、方法或**參數**物件的屬性可能無法使用。  
+ **參數** 物件代表與參數化查詢相關聯的參數，或是 in/out 引數和預存程式的傳回值。 視提供者的功能而定，可能無法使用 **參數** 物件的某些集合、方法或屬性。  
   
- 使用**參數**物件的集合、方法和屬性，您可以執行下列動作：  
+ 使用 **參數** 物件的集合、方法和屬性，您可以執行下列動作：  
   
--   設定或傳回具有[name](../../../ado/reference/ado-api/name-property-ado.md)屬性之參數的名稱。  
+-   使用 [name](../../../ado/reference/ado-api/name-property-ado.md) 屬性來設定或傳回參數的名稱。  
   
--   使用[value](../../../ado/reference/ado-api/value-property-ado.md)屬性來設定或傳回參數的值。 **Value**是**參數**物件的預設屬性。  
+-   使用 [value](../../../ado/reference/ado-api/value-property-ado.md) 屬性設定或傳回參數的值。 **值** 是 **參數** 物件的預設屬性。  
   
--   使用[屬性](../../../ado/reference/ado-api/attributes-property-ado.md)、[方向](../../../ado/reference/ado-api/direction-property.md)、有效[位數](../../../ado/reference/ado-api/precision-property-ado.md)、 [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)、[大小](../../../ado/reference/ado-api/size-property-ado-parameter.md)和[類型](../../../ado/reference/ado-api/type-property-ado.md)屬性來設定或傳回參數特性。  
+-   使用 [屬性](../../../ado/reference/ado-api/attributes-property-ado.md)、 [方向](../../../ado/reference/ado-api/direction-property.md)、有效 [位數](../../../ado/reference/ado-api/precision-property-ado.md)、 [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)、 [大小](../../../ado/reference/ado-api/size-property-ado-parameter.md)和 [類型](../../../ado/reference/ado-api/type-property-ado.md) 屬性來設定或傳回參數特性。  
   
--   使用[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)方法將長二進位或字元資料傳遞至參數。  
+-   使用 [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) 方法將長二進位或字元資料傳遞給參數。  
   
--   使用[Properties](../../../ado/reference/ado-api/properties-collection-ado.md)集合存取提供者特有的屬性。  
+-   使用 [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) 集合存取提供者特有的屬性。  
   
- 如果您知道與您要呼叫的預存程式或參數化查詢相關聯之參數的名稱和屬性，您可以使用[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)方法來建立具有適當屬性設定的**參數**物件，並使用[Append](../../../ado/reference/ado-api/append-method-ado.md)方法將它們新增至[parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)集合。 這可讓您設定和傳回參數值，而不需要在**Parameters**集合上呼叫[Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)方法，以從提供者（可能是需要大量資源的作業）取得參數資訊。  
+ 如果您知道您想要呼叫之預存程式或參數化查詢相關聯之參數的名稱和屬性，您可以使用 [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) 方法，以適當的屬性設定來建立 **參數** 物件，並使用 [Append](../../../ado/reference/ado-api/append-method-ado.md) 方法將它們加入至 [parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) 集合。 這可讓您設定和傳回參數值，而不需要呼叫**Parameters**集合上的[Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)方法，以從提供者取出參數資訊，這是可能需要大量資源的作業。  
   
- **參數**物件不安全，無法進行腳本處理。  
+ **參數**物件對腳本是不安全的。  
   
- 本章節包含下列主題。  
+ 本節包含下列主題。  
   
 -   [Parameter 物件屬性、方法和事件](../../../ado/reference/ado-api/parameter-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Command 物件（ADO）](../../../ado/reference/ado-api/command-object-ado.md)   
- [CreateParameter 方法（ADO）](../../../ado/reference/ado-api/createparameter-method-ado.md)   
- [Parameters 集合（ADO）](../../../ado/reference/ado-api/parameters-collection-ado.md)   
+ [ (ADO) 的命令物件 ](../../../ado/reference/ado-api/command-object-ado.md)   
+ [ (ADO) 的 CreateParameter 方法 ](../../../ado/reference/ado-api/createparameter-method-ado.md)   
+ [ (ADO) 的參數集合 ](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Properties 集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

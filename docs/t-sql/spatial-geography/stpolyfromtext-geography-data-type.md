@@ -1,4 +1,5 @@
 ---
+description: STPolyFromText (geography 資料類型)
 title: STPolyFromText (geography 資料型別) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d7e6a2bb-d301-49fb-9202-c70a9d169b4d
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a6fb63e1a853c96c972578a1be757dfcefd87751
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 154aff97ba24cf2dfd357a123e4075e78a534ecc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555335"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445141"
 ---
 # <a name="stpolyfromtext-geography-data-type"></a>STPolyFromText (geography 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +49,7 @@ STPolyFromText ( 'polygon_tagged_text' , SRID )
 ## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回類型：**SqlGeography**  
+ CLR 傳回型別：**SqlGeography**  
   
  OGC 類型：**Polygon**  
   

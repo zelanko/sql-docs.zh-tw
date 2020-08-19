@@ -1,5 +1,6 @@
 ---
-title: GetString 方法範例（VB） |Microsoft Docs
+description: GetString 方法範例 (VB)
+title: " (VB) 的 GetString 方法範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 14c96d71-46a8-4782-b474-80ce348e8bff
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f73ae3fa0600bad94493ab08c6248ee422cdb56
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c6b680c3a386629721c7e3256a69ec305d98af5d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758734"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443500"
 ---
 # <a name="getstring-method-example-vb"></a>GetString 方法範例 (VB)
-這個範例示範[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)方法。  
+此範例示範 [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) 方法。  
   
- 假設您正在進行資料存取問題的調試，而且想要快速且簡單的方式來列印小型[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)的目前內容。  
+ 假設您正在偵測資料存取問題，並想要快速且簡單的方式來列印小型 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)的目前內容。  
   
 ```  
 'BeginGetStringVB  
@@ -102,5 +103,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [GetString 方法（ADO）](../../../ado/reference/ado-api/getstring-method-ado.md)   
+ [ (ADO) 的 GetString 方法 ](../../../ado/reference/ado-api/getstring-method-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

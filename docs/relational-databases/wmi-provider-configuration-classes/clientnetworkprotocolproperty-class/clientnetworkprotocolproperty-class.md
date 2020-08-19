@@ -1,4 +1,5 @@
 ---
+description: ClientNetworkProtocolProperty 類別
 title: ClientNetworkProtocolProperty 類別
 ms.custom: ''
 ms.date: 03/04/2017
@@ -16,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: a6e8adb5-2ffd-4c49-b9e4-9a1e459ff7b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7a1abedd3b0cbd11e94387694c5535bffc2fa7ff
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2bf2dece4c745cadf1fc53c46bae9169010632f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881037"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446300"
 ---
 # <a name="clientnetworkprotocolproperty-class"></a>ClientNetworkProtocolProperty 類別
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [ClientNetworkProtocolProperty 類別](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)代表用戶端網路通訊協定的屬性。  
   
- 使用[ClientNetworkProtocolProperty 類別](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)，您可以執行下列工作：  
+ 使用 [ClientNetworkProtocolProperty 類別](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)，您可以執行下列工作：  
   
 -   設定索引值，以便從屬性清單中選取用戶端網路通訊協定屬性。  
   

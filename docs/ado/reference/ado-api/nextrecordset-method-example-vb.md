@@ -1,5 +1,6 @@
 ---
-title: NextRecordset 方法範例（VB） |Microsoft Docs
+description: NextRecordset 方法範例 (VB)
+title: " (VB) 的 NextRecordset 方法範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b14806da-80d9-4da4-bb87-f558b36a6ac0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 78480bd71a1d96f5c5447022e3c7748814003bea
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8a181482d7f0b2a1d6589209bc4b4e58ff11f9a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762379"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443100"
 ---
 # <a name="nextrecordset-method-example-vb"></a>NextRecordset 方法範例 (VB)
-這個範例會使用[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)方法來查看記錄集中的資料，其中使用由三個不同**SELECT**語句所組成的複合命令語句。  
+這個範例會使用 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) 方法來查看記錄集內的資料，此記錄集會使用由三個不同 **SELECT** 語句所組成的複合命令語句。  
   
 ```  
 'BeginNextRecordsetVB  
@@ -95,5 +96,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [NextRecordset 方法（ADO）](../../../ado/reference/ado-api/nextrecordset-method-ado.md)   
+ [ (ADO) 的 NextRecordset 方法 ](../../../ado/reference/ado-api/nextrecordset-method-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

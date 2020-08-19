@@ -1,5 +1,6 @@
 ---
-title: ParentRow 屬性（ADO） |Microsoft Docs
+description: ParentRow 屬性 (ADO)
+title: " (ADO) 的 ParentRow 屬性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 5ea8029b-eda4-490b-ae84-2ad036fb582f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 54d89c536145f413513fa67a8e76f7f00cf8322c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b81fc704c78b620c1319aa592336aba0489a3d37
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763369"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442740"
 ---
 # <a name="parentrow-property-ado"></a>ParentRow 屬性 (ADO)
-設定**ADORecordConstruction**物件上 OLE DB **row**物件的容器，以便將資料列的父系轉換成 ADO **Record**物件。  
+在**ADORecordConstruction**物件上設定 OLE DB 資料**列**物件的容器，以便將資料列的父系轉換成 ADO**記錄**物件。  
   
  唯寫。  
   
@@ -40,7 +41,7 @@ HRESULT put_ParentRow([in] IUnknown* pParent);
  資料列的容器。  
   
 ## <a name="return-values"></a>傳回值  
- 這個屬性方法會傳回標準 HRESULT 值，包括 S_OK 和 E_FAIL。  
+ 這個屬性方法會傳回標準的 HRESULT 值，包括 S_OK 和 E_FAIL。  
   
 ## <a name="applies-to"></a>套用至  
  [ADORecordConstruction 介面](../../../ado/reference/ado-api/adorecordconstruction-interface.md)

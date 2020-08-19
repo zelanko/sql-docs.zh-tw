@@ -1,5 +1,6 @@
 ---
-title: IsolationLevel 和 Mode 屬性範例（VB） |Microsoft Docs
+description: 'IsolationLevel 和 Mode 屬性範例 (VB) '
+title: IsolationLevel 和 Mode 屬性範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 3382fd41-0aa1-4091-97d3-624403111e07
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 893e60a87a59c882a361317af6bced3aabd7c3c7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: acbf64eca7aa7b0ccbd943d261968f8a70c8f9e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758674"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443440"
 ---
-# <a name="isolationlevel-and-mode-properties-example-vb"></a>IsolationLevel 和 Mode 屬性範例（VB）
-這個範例會使用[Mode](../../../ado/reference/ado-api/mode-property-ado.md)屬性來開啟獨佔連接，而[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)屬性則是用來開啟在隔離其他交易時所執行的交易。  
+# <a name="isolationlevel-and-mode-properties-example-vb"></a>IsolationLevel 和 Mode 屬性範例 (VB) 
+這個範例會使用 [Mode](../../../ado/reference/ado-api/mode-property-ado.md) 屬性來開啟獨佔連接，並使用 [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) 屬性來開啟在其他交易隔離時所執行的交易。  
   
 ```  
 'BeginIsolationLevelVB  
@@ -116,6 +117,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Connection 物件（ADO）](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [ (ADO) 的 Connection 物件 ](../../../ado/reference/ado-api/connection-object-ado.md)   
  [IsolationLevel 屬性](../../../ado/reference/ado-api/isolationlevel-property.md)   
  [Mode 屬性 (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)

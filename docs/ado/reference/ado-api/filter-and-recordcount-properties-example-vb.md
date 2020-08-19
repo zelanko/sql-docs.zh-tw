@@ -1,5 +1,6 @@
 ---
-title: Filter 和 RecordCount 屬性範例（VB） |Microsoft Docs
+description: Filter 和 RecordCount 屬性範例 (VB)
+title: Filter 和 RecordCount 屬性範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8eeb68293e7c800fda4c4dd395f840cfeeb2d572
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0f948d2f0ba3a70c1f9a7b3279b0eb9bf68b5b3a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756763"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443690"
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Filter 和 RecordCount 屬性範例 (VB)
-這個範例會在***Pubs***資料庫的「發行者」資料表上開啟[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。 接著，它會使用[Filter](../../../ado/reference/ado-api/filter-property.md)屬性，將可見記錄的數目限制為特定國家/地區的發行者。 **RecordCount**屬性是用來顯示已篩選和未篩選的記錄集之間的差異。  
+此範例會在***Pubs***資料庫的發行者資料表上開啟[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。 然後，它會使用 [Filter](../../../ado/reference/ado-api/filter-property.md) 屬性，將可見記錄的數目限制在特定國家/地區的發行者。 **RecordCount**屬性是用來顯示已篩選和未篩選的記錄集之間的差異。  
   
 ```  
 'BeginFilterVB  
@@ -108,13 +109,13 @@ End Sub
 ```  
   
 > [!NOTE]
->  當您知道想要選取的資料時，使用 SQL 語句開啟**記錄集**通常會更有效率。 這個範例會示範如何只建立一個**記錄集**，並從特定國家/地區取得記錄。  
+>  當您知道想要選取的資料時，使用 SQL 語句來開啟 **記錄集** 通常會更有效率。 這個範例會示範如何只建立一個 **記錄集** ，並從特定國家/地區取得記錄。  
   
 ```  
 Attribute VB_Name = "Filter"  
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Filter 屬性](../../../ado/reference/ado-api/filter-property.md)   
- [RecordCount 屬性（ADO）](../../../ado/reference/ado-api/recordcount-property-ado.md)   
+ [篩選屬性](../../../ado/reference/ado-api/filter-property.md)   
+ [ (ADO) 的 RecordCount 屬性 ](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

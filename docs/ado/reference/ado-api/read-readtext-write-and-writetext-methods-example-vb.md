@@ -1,5 +1,6 @@
 ---
-title: Read、ReadText、Write 和 WriteText 方法範例（VB） |Microsoft Docs
+description: " (VB 的讀取、ReadText、寫入和 WriteText 方法範例) "
+title: " (VB) 的讀取、ReadText、寫入和 WriteText 方法範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 699b73f7-04f9-4d46-94b2-6cb12be6de56
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a2a35d2f8e584843aa4395e63112de0211a70a7d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: de640c5348b43fa7da5ad7e10b2dfa404f9ff4b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754242"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442540"
 ---
-# <a name="read-readtext-write-and-writetext-methods-example-vb"></a>Read、ReadText、Write 和 WriteText 方法範例（VB）
-這個範例示範如何將文字方塊的內容同時讀取到文字[資料流程](../../../ado/reference/ado-api/stream-object-ado.md)和二進位**資料流程**。 所顯示的其他屬性和方法包括[位置](../../../ado/reference/ado-api/position-property-ado.md)、[大小](../../../ado/reference/ado-api/size-property-ado-parameter.md)、[字元集](../../../ado/reference/ado-api/charset-property-ado.md)和[SetEOS](../../../ado/reference/ado-api/seteos-method.md)。  
+# <a name="read-readtext-write-and-writetext-methods-example-vb"></a> (VB 的讀取、ReadText、寫入和 WriteText 方法範例) 
+此範例示範如何將文字方塊的內容讀取至文字 [資料流程](../../../ado/reference/ado-api/stream-object-ado.md) 和二進位 **資料流程**。 所顯示的其他屬性和方法包括 [位置](../../../ado/reference/ado-api/position-property-ado.md)、 [大小](../../../ado/reference/ado-api/size-property-ado-parameter.md)、 [字元集](../../../ado/reference/ado-api/charset-property-ado.md)和 [SetEOS](../../../ado/reference/ado-api/seteos-method.md)。  
   
 ```  
 'BeginReadVB  
@@ -111,12 +112,12 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [字元集屬性（ADO）](../../../ado/reference/ado-api/charset-property-ado.md)   
- [Position 屬性（ADO）](../../../ado/reference/ado-api/position-property-ado.md)   
+ [ (ADO) 的字元集屬性 ](../../../ado/reference/ado-api/charset-property-ado.md)   
+ [Position 屬性 (ADO) ](../../../ado/reference/ado-api/position-property-ado.md)   
  [Read 方法](../../../ado/reference/ado-api/read-method.md)   
  [ReadText 方法](../../../ado/reference/ado-api/readtext-method.md)   
  [SetEOS 方法](../../../ado/reference/ado-api/seteos-method.md)   
- [Size 屬性（ADO Stream）](../../../ado/reference/ado-api/size-property-ado-stream.md)   
- [Stream 物件（ADO）](../../../ado/reference/ado-api/stream-object-ado.md)   
+ [ (ADO Stream) 的 Size 屬性 ](../../../ado/reference/ado-api/size-property-ado-stream.md)   
+ [ (ADO) 的資料流程物件 ](../../../ado/reference/ado-api/stream-object-ado.md)   
  [Write 方法](../../../ado/reference/ado-api/write-method.md)   
  [WriteText 方法](../../../ado/reference/ado-api/writetext-method.md)

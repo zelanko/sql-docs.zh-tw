@@ -1,5 +1,6 @@
 ---
-title: SetStringValue 方法（ClientNetworkProtocolProperty）
+description: SetStringValue 方法 (ClientNetworkProtocolProperty 類別)
+title: 'SetStringValue 方法 (ClientNetworkProtocolProperty) '
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 88d67b22-0eea-48c9-ab73-e0b4907953df
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 60392a04607e2bc2c5c4b06edd940409d58af1a8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 81424c3ca4819c04dd70483fcaa691278a6e10da
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881030"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446260"
 ---
 # <a name="setstringvalue-method-clientnetworkprotocolproperty-class"></a>SetStringValue 方法 (ClientNetworkProtocolProperty 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  設定[PropertyIdx 屬性（ClientNetworkProtocolProperty 類別）](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md)值所參考之目前屬性的字串值。  
+  將 PropertyIdx 屬性所參考的目前屬性的字串值設定 [ (ClientNetworkProtocolProperty 類別) ](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md) 值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,7 +42,7 @@ object.SetStringValue(StrValue)
   
 #### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |*StrValue*|指定目前屬性之新值的字串值。|  
   

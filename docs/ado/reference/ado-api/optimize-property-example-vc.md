@@ -1,5 +1,6 @@
 ---
-title: Optimize 屬性範例（VC + +） |Microsoft Docs
+description: Optimize 屬性範例 (VC++)
+title: " (VC + +) 優化屬性範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bc8268f65e8bd7206ff0be1423785e1862147bed
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9f7db7d9ed14c91caf2551ef350833a67788920b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762071"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442880"
 ---
 # <a name="optimize-property-example-vc"></a>Optimize 屬性範例 (VC++)
-這個範例會示範[Field](../../../ado/reference/ado-api/field-object.md)物件 dynamic **Optimize**屬性。 在**Pubs**資料庫中，**作者**資料表的**zip**欄位未編制索引。 將**zip**欄位上的[Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)屬性設定為**True** ，會授權 ADO 建立索引，以提升[Find](../../../ado/reference/ado-api/find-method-ado.md)方法的效能。  
+此範例示範 [Field](../../../ado/reference/ado-api/field-object.md) 物件 dynamic **Optimize** 屬性。 不會編制**Pubs**資料庫中**作者**資料表的**zip**欄位索引。 將 [**壓縮**] 欄位上的 [[優化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)] 屬性設定為 [ **True** ] 會授權 ADO 建立索引，以改善[尋找](../../../ado/reference/ado-api/find-method-ado.md)方法的效能。  
   
 ## <a name="example"></a>範例  
   
@@ -132,7 +133,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Akiko Yokomoto 3 銀的 Ct. 胡桃會一籌莫展 CA**   
+ **Akiko Yokomoto 3 銀級的 Ct 會一籌莫展 CA**   
 ## <a name="see-also"></a>另請參閱  
  [Field 物件](../../../ado/reference/ado-api/field-object.md)   
  [Optimize 動態屬性 (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

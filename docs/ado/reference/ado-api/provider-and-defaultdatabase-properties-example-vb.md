@@ -1,5 +1,6 @@
 ---
-title: Provider 和 DefaultDatabase 屬性範例（VB） |Microsoft Docs
+description: 'Provider 和 DefaultDatabase 屬性範例 (VB) '
+title: Provider 和 DefaultDatabase 屬性範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 677e1dbe-bcf6-4028-a62c-e99b1c88bf7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d1c72fd2e84bfe8c39570181a7f975c70140d91c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: db5e40a1f82f95e7b4d78f4e6e3ce7703305abb0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759924"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442590"
 ---
-# <a name="provider-and-defaultdatabase-properties-example-vb"></a>Provider 和 DefaultDatabase 屬性範例（VB）
-這個範例會使用不同的提供者開啟三個[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件，以示範[提供者](../../../ado/reference/ado-api/provider-property-ado.md)屬性。 它也會使用[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)屬性來設定 Microsoft ODBC 提供者的預設資料庫。  
+# <a name="provider-and-defaultdatabase-properties-example-vb"></a>Provider 和 DefaultDatabase 屬性範例 (VB) 
+這個範例會使用不同的提供者來開啟三個[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件，以示範[提供者](../../../ado/reference/ado-api/provider-property-ado.md)屬性。 它也會使用 [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) 屬性來設定 Microsoft ODBC 提供者的預設資料庫。  
   
 > [!NOTE]
->  如果您要連接到支援 Windows 驗證的資料來源提供者，您應該在連接字串中指定**Trusted_Connection = yes**或**整合式安全性 = SSPI** ，而不是使用者識別碼和密碼資訊。  
+>  如果您要連接到支援 Windows 驗證的資料來源提供者，您應該在連接字串中指定 **Trusted_Connection = yes** 或 **整合式安全性 = SSPI** ，而不是使用者識別碼和密碼資訊。  
   
 ```  
 'BeginProviderVB  
@@ -105,6 +106,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Connection 物件（ADO）](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [ (ADO) 的 Connection 物件 ](../../../ado/reference/ado-api/connection-object-ado.md)   
  [DefaultDatabase 屬性](../../../ado/reference/ado-api/defaultdatabase-property.md)   
  [Provider 屬性 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)

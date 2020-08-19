@@ -1,5 +1,6 @@
 ---
-title: OriginalValue 和 UnderlyingValue 屬性範例（VC + +） |Microsoft Docs
+description: 'OriginalValue 和 UnderlyingValue 屬性範例 (VC + +) '
+title: OriginalValue 和 UnderlyingValue 屬性範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 142688ccbbd4e086592d419970a1c543e2211abc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6b4db7c5b7fdbd25687f37cc3c04101b25b9e997
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762041"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442890"
 ---
-# <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue 和 UnderlyingValue 屬性範例（VC + +）
-這個範例會示範[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)和[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)屬性，方法是在記錄[集](../../../ado/reference/ado-api/recordset-object-ado.md)批次更新期間，當記錄的基礎資料變更時顯示訊息。  
+# <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue 和 UnderlyingValue 屬性範例 (VC + +) 
+此範例示範 [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) 和 [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) 屬性，方法是在記錄 [集](../../../ado/reference/ado-api/recordset-object-ado.md) 批次更新期間，如果記錄的基礎資料變更，則顯示訊息。  
   
 ## <a name="example"></a>範例  
   
@@ -194,32 +195,32 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **資料已變更！**  
+ **資料已經改變！**  
 **標題識別碼： PS1372**  
 **目前的值： self_help**   
 **原始值：心理學**   
 **基礎值：社會學**   
-**資料已變更！**  
+**資料已經改變！**  
 **標題識別碼： PS2091**  
 **目前的值： self_help**   
 **原始值：心理學**   
 **基礎值：社會學**   
-**資料已變更！**  
+**資料已經改變！**  
 **標題識別碼： PS2106**  
 **目前的值： self_help**   
 **原始值：心理學**   
 **基礎值：社會學**   
-**資料已變更！**  
+**資料已經改變！**  
 **標題識別碼： PS3333**  
 **目前的值： self_help**   
 **原始值：心理學**   
 **基礎值：社會學**   
-**資料已變更！**  
+**資料已經改變！**  
 **標題識別碼： PS7777**  
 **目前的值： self_help**   
 **原始值：心理學**   
 **基礎值：社會學**    
 ## <a name="see-also"></a>另請參閱  
- [OriginalValue 屬性（ADO）](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
- [Recordset 物件（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [ (ADO) 的 OriginalValue 屬性 ](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
+ [ (ADO) 的記錄集物件 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [UnderlyingValue 屬性](../../../ado/reference/ado-api/underlyingvalue-property.md)

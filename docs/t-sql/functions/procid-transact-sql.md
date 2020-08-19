@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;PROCID (Transact-SQL)'
 title: '@@PROCID (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 0d4882c7-edb8-49b1-a470-2c7497b8998f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 76aed964e998448c558c7a9fa9a615ed05d4efaa
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: ca5a2c5fe01e67a4d2fb9486169e22c16d36f0a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112338"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445638"
 ---
 # <a name="x40x40procid-transact-sql"></a>&#x40;&#x40;PROCID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

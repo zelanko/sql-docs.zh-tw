@@ -1,4 +1,5 @@
 ---
+description: STWithin (geography 資料類型)
 title: STWithin (geography 資料類型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6fc745cc-7976-418a-a89a-c267e64ab3a2
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 04889706ac49652dbc01225c2d8e6bcf8c7347f3
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: ee911fe55a486d74d56df0481b91448221edbb55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554353"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445128"
 ---
 # <a name="stwithin-geography-data-type"></a>STWithin (geography 資料類型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

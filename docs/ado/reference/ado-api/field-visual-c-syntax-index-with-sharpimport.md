@@ -1,5 +1,6 @@
 ---
-title: 'Field （具有 #import 的 Visual C++ 語法索引） |Microsoft Docs'
+description: '使用 #import) 的欄位 (Visual C++ 語法索引'
+title: '使用 #import) 的欄位 (Visual C++ 語法索引 |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 90cb636a-9416-48a4-b4eb-bb11bbd40950
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 13e2c57f4e00b4a4dae03a11ee357dd8f1d6398e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c73bc04ebb334927ec7247afa1e38a598e9dc76e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758774"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443750"
 ---
-# <a name="field-visual-c-syntax-index-with-import"></a>Field （使用 #import Visual C++ 語法索引）
+# <a name="field-visual-c-syntax-index-with-import"></a>使用 #import) 的欄位 (Visual C++ 語法索引
 ## <a name="methods"></a>方法  
   
 ```  

@@ -1,4 +1,5 @@
 ---
+description: LockTypeEnum
 title: LockTypeEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,32 +16,32 @@ helpviewer_keywords:
 ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e609a51d6b9f42cb6101ff485633302193757fbd
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 52a6e4af75ac8887c23dd245a58981b1bbfb7eb2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242648"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443330"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
-指定在編輯期間放置在記錄上的鎖定類型。  
+指定在編輯期間放置於記錄的鎖定類型。  
   
-|持續性|值|描述|  
+|常數|值|描述|  
 |--------------|-----------|-----------------|  
 |**adLockBatchOptimistic**|4|表示開放式批次更新。 批次更新模式的必要參數。|  
-|**adLockOptimistic**|3|表示開放式鎖定，依記錄記錄。 提供者會使用開放式鎖定，只有在您呼叫[Update](../../../ado/reference/ado-api/update-method.md)方法時，才會鎖定記錄。|  
-|**adLockPessimistic**|2|表示封閉式鎖定，依記錄記錄。 提供者會執行必要的動作，以確保成功編輯記錄，通常是在編輯之後立即鎖定資料來源的記錄。|  
-|**adLockReadOnly**|1|表示唯讀記錄。 您不能改變數據。|  
-|**adLockUnspecified**|-1|未指定鎖定的類型。 若為複製，則會使用與原始相同的鎖定類型來建立複製。|  
+|**adLockOptimistic**|3|表示開放式鎖定、依記錄記錄。 提供者會使用開放式鎖定，只在您呼叫 [Update](../../../ado/reference/ado-api/update-method.md) 方法時鎖定記錄。|  
+|**adLockPessimistic**|2|指出封閉式鎖定、依記錄記錄。 提供者會執行必要的動作，以確保成功編輯記錄，通常是在編輯之後立即鎖定資料來源的記錄。|  
+|**adLockReadOnly**|1|表示唯讀記錄。 您無法變更資料。|  
+|**adLockUnspecified**|-1|未指定鎖定的類型。 若為複製，則會建立與原始的相同鎖定類型的複製。|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC 對等  
- Package： **.com. wfc. 資料**  
+## <a name="adowfc-equivalent"></a>ADO/WFC 相等  
+ 封裝： **.com. 資料**  
   
-|持續性|  
+|常數|  
 |--------------|  
 |AdoEnums.LockType.BATCHOPTIMISTIC|  
 |AdoEnums. LockType. 開放式|  
-|AdoEnums. LockType。封閉式|  
+|AdoEnums. LockType|  
 |AdoEnums. LockType READONLY|  
 |AdoEnums. LockType。未指定|  
   
