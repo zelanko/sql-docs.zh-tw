@@ -1,4 +1,5 @@
 ---
+description: 建立 DML 觸發程序
 title: 建立 DML 觸發程序 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/01/2017
@@ -19,12 +20,12 @@ ms.assetid: b2b52258-642b-462e-8e0f-18c09d2eccf4
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6248223fd2901a02e7aed494ea6a8a305e1f56ce
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: aace4785289cd041b72c98a880ac38741bf0d641
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757669"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446346"
 ---
 # <a name="create-dml-triggers"></a>建立 DML 觸發程序
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85757669"
 ##  <a name="how-to-create-a-dml-trigger"></a><a name="Procedures"></a> 如何建立 DML 觸發程序  
  您可以使用下列其中一項：  
   
--   [Transact-SQL](#SSMSProcedure)  
+-   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
@@ -49,11 +50,11 @@ ms.locfileid: "85757669"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  依序展開 [資料庫]  、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫、[資料表]  和 **Purchasing.PurchaseOrderHeader** 資料表。  
+2.  依序展開 [資料庫]****、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫、[資料表]**** 和 **Purchasing.PurchaseOrderHeader** 資料表。  
   
-3.  以滑鼠右鍵按一下 [觸發程序]  ，然後選取 [新增觸發程序]  。  
+3.  以滑鼠右鍵按一下 [觸發程序]****，然後選取 [新增觸發程序]****。  
   
-4.  在 **[查詢]** 功能表上，按一下 **[指定範本參數的值]** 。 您也可以按 (Ctrl-Shift-M) 開啟 [指定範本參數的值]  對話方塊。  
+4.  在 **[查詢]** 功能表上，按一下 **[指定範本參數的值]** 。 您也可以按 (Ctrl-Shift-M) 開啟 [指定範本參數的值]**** 對話方塊。  
   
 5.  在 **[指定範本參數的值]** 對話方塊中，為顯示的參數輸入下列值。  
   
@@ -69,7 +70,7 @@ ms.locfileid: "85757669"
   
 6.  按一下 [確定]  。  
   
-7.  在 [查詢編輯器]  中，將 `-- Insert statements for trigger here` 註解取代為下列陳述式：  
+7.  在 [查詢編輯器]**** 中，將 `-- Insert statements for trigger here` 註解取代為下列陳述式：  
   
     ```sql  
     IF @@ROWCOUNT = 1  
@@ -93,11 +94,11 @@ ms.locfileid: "85757669"
     END;  
     ```  
   
-8.  若要驗證語法是否有效，請在 [查詢]  功能表上按一下 [剖析]  。 如果傳回錯誤訊息，請比較陳述式與上列資訊，並視需要進行更正，然後重複此步驟。  
+8.  若要驗證語法是否有效，請在 [查詢]**** 功能表上按一下 [剖析]****。 如果傳回錯誤訊息，請比較陳述式與上列資訊，並視需要進行更正，然後重複此步驟。  
   
-9. 若要建立 DML 觸發程序，請在 [查詢]  功能表中按一下 [執行]  。 DML 觸發程序會建立為資料庫中的物件。  
+9. 若要建立 DML 觸發程序，請在 [查詢]**** 功能表中按一下 [執行]****。 DML 觸發程序會建立為資料庫中的物件。  
   
-10. 若要查看物件總管中所列的 DML 觸發程序，請以滑鼠右鍵按一下 [觸發程序]  ，然後選取 [重新整理]  。  
+10. 若要查看物件總管中所列的 DML 觸發程序，請以滑鼠右鍵按一下 [觸發程序]****，然後選取 [重新整理]****。  
 
  [開始之前](#Top)  
   
