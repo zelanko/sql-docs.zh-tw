@@ -1,4 +1,5 @@
 ---
+description: BETWEEN (Transact-SQL)
 title: BETWEEN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/28/2017
@@ -23,12 +24,12 @@ ms.assetid: a5d5b050-203e-4355-ac85-e08ef5ca7823
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5d3108c49eb60a478c375e2afed320ee965361d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 709af562247c040508627527c299ee6f5181da49
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919911"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417184"
 ---
 # <a name="between-transact-sql"></a>BETWEEN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +48,7 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
 
 ## <a name="arguments"></a>引數
  *test_expression*  
- 這是要在 [begin_expression](../../t-sql/language-elements/expressions-transact-sql.md) 和 *end_expression* 定義的範圍中測試的*運算式*。 *test_expression* 的資料類型必須與 *begin_expression* 和 *end_expression* 相同。  
+ 這是要在 *begin_expression* 和 *end_expression* 定義的範圍中測試的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *test_expression* 的資料類型必須與 *begin_expression* 和 *end_expression* 相同。  
   
  NOT  
  指定執行否定運算的述詞結果。  
@@ -65,9 +66,9 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
  **布林值**  
   
 ## <a name="result-value"></a>結果值  
- 如果 **test_expression** 的值大於或等於 *begin_expression* 的值且小於或等於 *end_expression* 的值，BETWEEN 就會傳回 *TRUE*。  
+ 如果 *test_expression* 的值大於或等於 *begin_expression* 的值且小於或等於 *end_expression* 的值，BETWEEN 就會傳回 **TRUE**。  
   
- 如果 **test_expression** 的值小於 *begin_expression* 的值或大於 *end_expression* 的值，NOT BETWEEN 就會傳回 *TRUE*。  
+ 如果 *test_expression* 的值小於 *begin_expression* 的值或大於 *end_expression* 的值，NOT BETWEEN 就會傳回 **TRUE**。  
   
 ## <a name="remarks"></a>備註  
  若要指定獨佔範圍，請使用大於 (>) 和小於 (<) 運算子。 如果 BETWEEN 或 NOT BETWEEN 述詞的任何輸入是 NULL，結果就是 UNKNOWN。  
@@ -180,7 +181,7 @@ WHERE RateChangeDate BETWEEN '20011212' AND '20020105';
  4           2002-01-05 00:00:00.000  
  ```  
  
- 查詢會擷取預期的資料列，因為已指定查詢中的日期值以及儲存在 **資料行中的**datetime`RateChangeDate` 值不含日期的時間部分。 未指定時間部分時，它會預設為上午 12:00。 請注意，若資料列包含 2002-01-05 上午 12:00 之後的時間部分， 此查詢將不會傳回該資料列，因為它是在範圍之外。  
+ 查詢會擷取預期的資料列，因為已指定查詢中的日期值以及儲存在 `RateChangeDate` 資料行中的 **datetime** 值不含日期的時間部分。 未指定時間部分時，它會預設為上午 12:00。 請注意，若資料列包含 2002-01-05 上午 12:00 之後的時間部分， 此查詢將不會傳回該資料列，因為它是在範圍之外。  
   
   
 ## <a name="see-also"></a>另請參閱  

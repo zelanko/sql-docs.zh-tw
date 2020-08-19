@@ -1,4 +1,5 @@
 ---
+description: DROP CREDENTIAL (Transact-SQL)
 title: DROP CREDENTIAL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/19/2015
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: df22c826-317d-45a6-b078-186acb65f71e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c86550e6854cbfcb547a8734f05e910e25df2b5a
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 1b28f91129bccf4c8005cd840d87f14f2a84b25e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485493"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416544"
 ---
 # <a name="drop-credential-transact-sql"></a>DROP CREDENTIAL (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

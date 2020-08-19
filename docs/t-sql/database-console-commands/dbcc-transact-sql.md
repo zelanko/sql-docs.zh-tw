@@ -1,4 +1,5 @@
 ---
+description: DBCC (Transact-SQL)
 title: DBCC (Transact-SQL)
 ms.custom: ''
 ms.date: 11/14/2017
@@ -36,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: c6da8c04-5b6b-459a-9f76-110c92ca8b29
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: c64938e93401532fd4df7e44af84c86388444277
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: d9cb8603a2c897c2e0de72467f8499970ab7afe3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484211"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417604"
 ---
 # <a name="dbcc-transact-sql"></a>DBCC (Transact-SQL)
 

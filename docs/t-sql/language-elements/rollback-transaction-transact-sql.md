@@ -1,4 +1,5 @@
 ---
+description: ROLLBACK TRANSACTION (Transact-SQL)
 title: ROLLBACK TRANSACTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2017
@@ -25,12 +26,12 @@ ms.assetid: 6882c5bc-ff74-476a-984b-164aeb036c66
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9eb54f4ecc659a3691ee7ed27a3330be8481e9e4
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: ca35aa4105bf3d54a84457fb51b48e9fc269ef72
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394143"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417124"
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +54,7 @@ ROLLBACK { TRAN | TRANSACTION }
 
 ## <a name="arguments"></a>引數
  *transaction_name*  
- 指派給 BEGIN TRANSACTION 之交易的名稱。 *transaction_name* 必須符合識別碼的規則，但只可使用交易名稱的前 32 個字元。 當建立巢狀交易時，*transaction_name* 必須是最外層 BEGIN TRANSACTION 陳述式的名稱。 即使  *執行個體不區分大小寫，* transaction_name[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 還是一律都會區分大小寫。  
+ 指派給 BEGIN TRANSACTION 之交易的名稱。 *transaction_name* 必須符合識別碼的規則，但只可使用交易名稱的前 32 個字元。 當建立巢狀交易時，*transaction_name* 必須是最外層 BEGIN TRANSACTION 陳述式的名稱。 即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體不區分大小寫，*transaction_name* 還是一律都會區分大小寫。  
   
  **@** *tran_name_variable*  
  這是包含有效交易名稱之使用者定義變數的名稱。 這個變數必須用 **char**、**varchar**、**nchar** 或 **nvarchar** 資料類型來宣告。  

@@ -1,4 +1,5 @@
 ---
+description: ReorientObject (geography 資料類型)
 title: ReorientObject (geography 資料類型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e2a1a4f1-211b-4e82-abed-03fc7140a83c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 6865a5246f7bb0afa7dd280041e98fada88c3099
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 9d4f8bf9f9b8409f9ab46af0b1fd0a728e80e505
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555176"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417024"
 ---
 # <a name="reorientobject-geography-data-type"></a>ReorientObject (geography 資料類型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,8 +34,7 @@ ms.locfileid: "86555176"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql
 .ReorientObject (geography)  
 ```  
   

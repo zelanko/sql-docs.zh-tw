@@ -1,4 +1,5 @@
 ---
+description: datetime (Transact-SQL)
 title: datetime (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/23/2017
@@ -22,12 +23,12 @@ ms.assetid: 9bd1cc5b-227b-4032-95d6-7581ddcc9924
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5fdd491296c9ba93e12421f46964016c0689a65c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 689a494e12f9b31f88d3ea060fe2c1b4a5fb2a3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008097"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417714"
 ---
 # <a name="datetime-transact-sql"></a>datetime (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,11 +43,11 @@ ms.locfileid: "86008097"
 |屬性|值|  
 |---|---|
 |語法|**datetime**|  
-|使用量|DECLARE \@MyDatetime **datetime**<br /><br /> 建立資料表 Table1 (Column1 **datetime** )|  
+|使用方式|DECLARE \@MyDatetime **datetime**<br /><br /> 建立資料表 Table1 (Column1 **datetime** )|  
 |預設的字串常值格式<br /><br /> (用於下層用戶端)|不適用|  
 |日期範圍|1753 年 1 月 1 日到 9999 年 12 月 31 日|  
 |時間範圍|00:00:00 到 23:59:59.997|  
-|時區位移範圍|None|  
+|時區位移範圍|無|  
 |元素範圍|YYYY 是代表年份的四位數，範圍介於 1753 至 9999 之間。<br /><br /> MM 是代表指定年份中某個月份的兩位數，範圍介於 01 至 12 之間。<br /><br /> DD 是代表指定月份中某個日期的兩位數，範圍介於 01 至 31 之間 (視月份而定)。<br /><br /> hh 是代表小時的兩位數，範圍介於 00 至 23 之間。<br /><br /> mm 是代表分鐘的兩位數，範圍介於 00 至 59 之間。<br /><br /> ss 是代表秒鐘的兩位數，範圍介於 00 至 59 之間。<br /><br /> n* 是代表小數秒數的零至三位數，範圍介於 0 至 999 之間。|  
 |字元長度|最小 19 個位置，最大 23 個位置|  
 |儲存體大小|8 個位元組|  

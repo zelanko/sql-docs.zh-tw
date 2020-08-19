@@ -1,4 +1,5 @@
 ---
+description: APPLOCK_MODE (Transact-SQL)
 title: APPLOCK_MODE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: e43d4917-77f1-45cc-b231-68ba7fee3385
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d3d171d77cf3462eb68893f4ac5f6230d73b8b11
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 9f7433be40f2a0a08ae075edfc3eaa9bd3252dca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113185"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417504"
 ---
 # <a name="applock_mode-transact-sql"></a>APPLOCK_MODE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +51,7 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
 用戶端應用程式指定的鎖定資源名稱。 應用程式必須確定資源名稱是唯一的。 指定的名稱會在內部雜湊成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 鎖定管理員可儲存在內部的值。 *resource_name* 是沒有預設值的 **nvarchar(255)** 。 *resource_name* 是以二進位來比較，不論目前資料庫的定序設定為何，都會區分大小寫。
   
 '*lock_owner*'  
-為鎖定的擁有者，也就是要求鎖定時的 *lock_owner* 值。 *lock_owner* 是 **nvarchar(32)** ，而且此值可以是**交易** (預設值) 或**工作階段**。
+為鎖定的擁有者，也就是要求鎖定時的 *lock_owner* 值。 *lock_owner* 是 **nvarchar(32)**，而且此值可以是**交易** (預設值) 或**工作階段**。
   
 ## <a name="return-types"></a>傳回類型
 **nvarchar(32)**
@@ -62,12 +63,12 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
 |-|-|-|  
 |**NoLock**|**更新**|**\*SharedIntentExclusive**|  
 |**IntentShared**|**IntentExclusive**|**\*UpdateIntentExclusive**|  
-|**Shared**|**排除**||  
+|[共用]****|**排除**||  
   
 *這個鎖定模式是其他鎖定模式的組合，且 sp_getapplock 無法明確地取得它。
   
 ## <a name="function-properties"></a>函式屬性
-**Nondeterministic**
+**不具決定性**
   
 **Nonindexable**
   
@@ -131,7 +132,7 @@ COMMIT TRAN;
 GO  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 [APPLOCK_TEST &#40;Transact-SQL&#41;](../../t-sql/functions/applock-test-transact-sql.md)  
 [sp_getapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
 [sp_releaseapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)

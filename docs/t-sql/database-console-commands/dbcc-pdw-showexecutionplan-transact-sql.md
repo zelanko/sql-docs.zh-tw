@@ -1,4 +1,5 @@
 ---
+description: DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 title: DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 ms.custom: ''
 ms.date: 07/16/2017
@@ -12,12 +13,12 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 0895a01f3110c90172ab763ebd0991c259da985d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: b83bba2f706b88e6a11e8efb50aaf5be4c52c152
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484599"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417624"
 ---
 # <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 

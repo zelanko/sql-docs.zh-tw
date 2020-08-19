@@ -1,4 +1,5 @@
 ---
+description: ALTER TABLE column_definition (Transact-SQL)
 title: column_definition (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/24/2018
@@ -21,12 +22,12 @@ ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4982b68ccae205c2f7c15590b4677a6db09b860d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 57350235ab3d5b6d59c72ac5efb20e84024f2203
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918651"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416904"
 ---
 # <a name="alter-table-column_definition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

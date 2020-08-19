@@ -1,4 +1,5 @@
 ---
+description: DBCC TRACEON - 追蹤旗標 (Transact-SQL)
 title: 追蹤旗標 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2020
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 67dc81b5a0a3c8c5e7dabdd1013f5927ceedff0b
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: a1c9281fff3c6b51a513617b522a362c9e800c07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87877805"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417614"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 追蹤旗標 (Transact-SQL)
 

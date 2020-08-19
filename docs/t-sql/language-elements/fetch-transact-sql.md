@@ -1,4 +1,5 @@
 ---
+description: FETCH (Transact-SQL)
 title: FETCH (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 005ec67edba5dd57a42d1866dbba169c0d32f070
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a15d8c06e47dd7ae651d0034037f2e3a4cd21bcb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923328"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417114"
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -93,7 +94,7 @@ FETCH
   
 -   如果未指定 `DYNAMIC`、`FORWARD_ONLY` 或 `FAST_FORWARD`，且指定了 `KEYSET`、`STATIC` 或 `SCROLL` 其中之一，則所有 `FETCH` 都受支援。  
   
--   `DYNAMIC SCROLL` 資料指標支援除了 `FETCH` 外的所有 `ABSOLUTE` 選項。  
+-   `DYNAMIC SCROLL` 資料指標支援除了 `ABSOLUTE` 外的所有 `FETCH` 選項。  
   
  `@@FETCH_STATUS` 函數會報告最後一個 `FETCH` 陳述式的狀態。 相同的資訊記錄在 sp_describe_cursor 傳回之資料指標的 fetch_status 資料行中。 試圖在 `FETCH` 陳述式傳回的資料上執行任何作業之前，您應該先利用這個狀態資訊來判斷該資料是否有效。 如需詳細資訊，請參閱 [@@FETCH_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/fetch-status-transact-sql.md)。  
   

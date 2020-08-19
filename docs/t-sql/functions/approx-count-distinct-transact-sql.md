@@ -1,4 +1,5 @@
 ---
+description: APPROX_COUNT_DISTINCT (Transact-SQL)
 title: APPROX_COUNT_DISTINCT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/12/2019
@@ -14,12 +15,12 @@ dev_langs:
 author: joesackmsft
 ms.author: josack
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08beac97cd70045f073be53cfeb93e9d1e4ad67f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e77c9cb851921db306e52594b49d472902f36563
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113154"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417524"
 ---
 # <a name="approx_count_distinct-transact-sql"></a>APPROX_COUNT_DISTINCT (Transact-SQL)
 
@@ -98,6 +99,6 @@ O                                                                7387803
 P                                                                388036
 ```
     
-## <a name="see-also"></a>另請參閱
-[彙總函式 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+## <a name="see-also"></a>請參閱
+[彙總函數 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
 [COUNT &#40;Transact-SQL&#41;](../../t-sql/functions/count-transact-sql.md) 

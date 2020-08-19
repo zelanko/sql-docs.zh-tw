@@ -1,4 +1,5 @@
 ---
+description: DENY 類型權限 (Transact-SQL)
 title: DENY 類型權限 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/09/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 564e3500-c567-43dc-993b-9ab50e99cf3f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5be985468ab82dfbe08e6ab02b127e383a1b39c2
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: d19b40869a7b69645918edb62eb9f654d595dcc1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484764"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416874"
 ---
 # <a name="deny-type-permissions-transact-sql"></a>DENY 類型權限 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

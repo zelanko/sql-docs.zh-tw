@@ -1,4 +1,5 @@
 ---
+description: DBCC DBREINDEX (Transact-SQL)
 title: DBCC DBREINDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/16/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 4933d363cc878d8b1f76c791cbc84d600e28dda7
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: fc18c47d87ada5b60cb57aba79e1063ce1f38c3a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485032"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417644"
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

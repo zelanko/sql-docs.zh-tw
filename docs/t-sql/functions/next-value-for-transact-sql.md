@@ -1,4 +1,5 @@
 ---
+description: NEXT VALUE FOR (Transact-SQL)
 title: NEXT VALUE FOR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/19/2016
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: cb3fd2d18f5602030de6231a0dbbcc92a200a5fc
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 8d383cc1530835635cc4c25957c25221a653dbfa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112907"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417274"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -96,7 +97,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   在使用 **ORDER BY** 子句的陳述式中 (除非使用 **NEXT VALUE FOR** ...**OVER** (**ORDER BY** ...))。  
   
--   在下列子句中：**FETCH**、**OVER**、**OUTPUT**、**ON**、**PIVOT**、**UNPIVOT**、**GROUP BY**、**HAVING**、**COMPUTE**、**COMPUTE BY** 或 **FOR XML**。  
+-   在下列子句中：**FETCH**、**OVER**、**OUTPUT**、**ON**、**PIVOT**、**UNPIVOT**、**GROUP BY**、**HAVING**、**COMPUTE**、**COMPUTE BY**，或 **FOR XML**。  
   
 -   在使用 **CASE**、**CHOOSE**、**COALESCE**、**IIF**、**ISNULL**，或 **NULLIF** 的條件運算式中。  
   
@@ -104,7 +105,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   在檢查條件約束的定義中。  
   
--   在規則或預設物件的定義中 (它可以用於預設條件約束中)。  
+-   在規則或預設物件的定義中  (它可以用於預設條件約束中)。  
   
 -   使用者定義資料表類型的預設值。  
   
@@ -138,7 +139,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   單一陳述式中為相同順序產生器的多個 **NEXT VALUE FOR** 函式呼叫必須全都使用相同的 **OVER** 子句定義。  
   
--   單一陳述式中參考不同順序產生器的多個 **NEXT VALUE FOR** 函式呼叫可以有不同的 **OVER** 子句定義。  
+-   單一陳述式中參考不同順序產生器的多個 **NEXT VALUE FOR** 函式呼叫可以有不同的** OVER** 子句定義。  
   
 -   套用至 **NEXT VALUE FOR** 函式的 **OVER** 子句不支援 **PARTITION BY** 次子句。  
   

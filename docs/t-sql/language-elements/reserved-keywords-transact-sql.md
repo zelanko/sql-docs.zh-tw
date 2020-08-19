@@ -1,4 +1,5 @@
 ---
+description: 保留關鍵字 (Transact-SQL)
 title: 保留關鍵字 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f963294781eea57c7957000d0daa1d149be3cd89
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 70b2e52af1ae87f4cacdb2189609c3ead2e3bc4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396343"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417104"
 ---
 # <a name="reserved-keywords-transact-sql"></a>保留關鍵字 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -491,7 +492,7 @@ ms.locfileid: "87396343"
         OF
     :::column-end:::
     :::column:::
-        {1}TRUNCATE{2}
+        TRUNCATE
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -598,7 +599,7 @@ ms.locfileid: "87396343"
         DROP
     :::column-end:::
     :::column:::
-        OR
+        或者
     :::column-end:::
     :::column:::
         VALUES
@@ -770,7 +771,7 @@ ms.locfileid: "87396343"
 :::row-end:::  
 :::row:::
     :::column:::
-        **ADD**
+        **新增**
     :::column-end:::
     :::column:::
         **EXTERNAL**
@@ -1436,7 +1437,7 @@ ms.locfileid: "87396343"
         **NONE**
     :::column-end:::
     :::column:::
-        **USER**
+        **使用者**
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -1834,7 +1835,7 @@ ms.locfileid: "87396343"
         LESS
     :::column-end:::
     :::column:::
-        SIZE
+        SIZE 
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -1944,7 +1945,7 @@ ms.locfileid: "87396343"
         MATCH
     :::column-end:::
     :::column:::
-        STATE
+        狀態
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -2175,7 +2176,7 @@ ms.locfileid: "87396343"
         OCCURRENCES_REGEX
     :::column-end:::
     :::column:::
-        TRUE
+        true
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -2455,7 +2456,7 @@ ms.locfileid: "87396343"
 :::row-end:::  
 :::row:::
     :::column:::
-        FALSE
+        false
     :::column-end:::
     :::column:::
         READS
@@ -2469,7 +2470,7 @@ ms.locfileid: "87396343"
         FILTER
     :::column-end:::
     :::column:::
-        real
+        REAL
     :::column-end:::
     :::column:::
         XMLEXISTS

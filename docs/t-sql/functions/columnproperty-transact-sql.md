@@ -1,4 +1,5 @@
 ---
+description: COLUMNPROPERTY (Transact-SQL)
 title: COLUMNPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9d62953d88773c6f378590db64aeeb3f94d6fe22
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 360089db91ed52ba90f0566868b4f1c87eb2fd8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111093"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417424"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -73,7 +74,7 @@ COLUMNPROPERTY ( id , column , property )
 |**IsSystemVerified**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 可以驗證資料行的決定性和有效位數屬性。 這個屬性只適用於計算資料行和檢視資料行。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：無效的輸入。|  
 |**IsXmlIndexable**|XML 資料行可用於 XML 索引中。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：無效的輸入。|  
 |**有效位數**|資料行或參數的資料類型長度。|指定的資料行資料類型長度<br /><br /> -1：**xml** 或大數值類型<br /><br /> NULL：無效的輸入。|  
-|**調整**|資料行或參數資料類型的小數位數。|小數位數值<br /><br /> NULL：無效的輸入。|  
+|**縮放比例**|資料行或參數資料類型的小數位數。|小數位數值<br /><br /> NULL：無效的輸入。|  
 |**StatisticalSemantics**|資料行啟用語意索引。|1：TRUE<br /><br /> 0：FALSE|  
 |**SystemDataAccess**|資料行是從存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統目錄或虛擬系統資料表中之資料的函數衍生而來。 這個屬性只適用於計算資料行和檢視資料行。|1：TRUE (表示唯讀存取。)<br /><br /> 0：FALSE<br /><br /> NULL：無效的輸入。|  
 |**UserDataAccess**|資料行是從存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本機執行個體所儲存的使用者資料表 (包括檢視和暫存資料表) 中之資料的函數衍生而來。 這個屬性只適用於計算資料行和檢視資料行。|1：TRUE (表示唯讀存取。)<br /><br /> 0：FALSE<br /><br /> NULL：無效的輸入。|  
@@ -108,7 +109,7 @@ Column Length
 50
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 [中繼資料函式 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)
   

@@ -1,4 +1,5 @@
 ---
+description: CREATE DIAGNOSTICS SESSION (Transact-SQL)
 title: CREATE DIAGNOSTICS SESSION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -12,12 +13,12 @@ ms.assetid: 662d019e-f217-49df-9e2f-b5662fa0342d
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 12a6e49e477ce3e61560438a6db141bfb5aab721
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 99f0c8b66e45fafa806848efa2f979fbbb0da054
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395767"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417094"
 ---
 # <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -106,7 +107,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
 ### <a name="a-creating-a-diagnostics-session"></a>A. 建立診斷工作階段  
  此範例會建立診斷工作階段，來記錄資料庫引擎效能的計量。 範例會建立能接聽引擎查詢的執行/結束事件及封鎖 DMS 事件的診斷工作階段。 傳回的內容是命令文字、電腦名稱、要求識別碼 (查詢識別碼)，以及建立事件的工作階段。  
   
-```  
+```sql  
 CREATE DIAGNOSTICS SESSION MYDIAGSESSION AS N'  
 <Session>  
    <MaxItemCount>100</MaxItemCount>  
@@ -130,13 +131,13 @@ CREATE DIAGNOSTICS SESSION MYDIAGSESSION AS N'
   
  在建立診斷工作階段之後，會執行查詢。  
   
-```  
+```sql  
 SELECT COUNT(EmployeeKey) FROM AdventureWorksPDW2012..FactSalesQuota;  
 ```  
   
  接著，會從 sysdiag 結構描述中選取診斷工作階段結果，以進行檢視。  
   
-```  
+```sql  
 SELECT * FROM master.sysdiag.MYDIAGSESSION;  
 ```  
   
@@ -146,14 +147,14 @@ SELECT * FROM master.sysdiag.MYDIAGSESSION;
   
  當您完成診斷工作階段之後，請使用 **DROP DIAGNOSTICS** 命令來卸除它。  
   
-```  
+```sql  
 DROP DIAGNOSTICS SESSION MYDIAGSESSION;  
 ```  
   
 ### <a name="b-alternative-diagnostic-session"></a>B. 替代的診斷工作階段  
  含有些許不同屬性的第二個範例。  
   
-```  
+```sql  
 -- Determine the session_id of your current session  
 SELECT TOP 1 session_id();  
 -- Replace \<*session_number*> in the code below with the numbers in your session_id  
@@ -184,7 +185,7 @@ CREATE DIAGNOSTICS SESSION PdwOptimizationDiagnostics AS N'
   
  執行查詢，例如：  
   
-```  
+```sql  
 USE ssawPDW;  
 GO  
 SELECT * FROM dbo.FactFinance;  
@@ -192,7 +193,7 @@ SELECT * FROM dbo.FactFinance;
   
  下列查詢會傳回授權時機：  
   
-```  
+```sql  
 SELECT *   
 FROM master.sysdiag.PdwOptimizationDiagnostics   
 ORDER BY DateTimePublished;  
@@ -200,7 +201,7 @@ ORDER BY DateTimePublished;
   
  當您完成診斷工作階段之後，請使用 **DROP DIAGNOSTICS** 命令來卸除它。  
   
-```  
+```sql  
 DROP DIAGNOSTICS SESSION PdwOptimizationDiagnostics;  
 ```  
   

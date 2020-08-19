@@ -1,4 +1,5 @@
 ---
+description: TRANSLATE (Transact-SQL)
 title: TRANSLATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/16/2020
@@ -16,12 +17,12 @@ ms.assetid: 0426fa90-ef6d-4d19-8207-02ee59f74aec
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1fbd5285ff4b794ea90ad3f8513e24ac166c0be
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 49a16c2b5f18eeda3a6abd1396650131543ead4f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112597"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417134"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
 
@@ -51,7 +52,7 @@ TRANSLATE ( inputString, characters, translations)
 
 ## <a name="remarks"></a>備註
 
-如果 `TRANSLATE`characters*和*translations*運算式的長度不同，則* 函數會傳回錯誤。 如果任何引數是 NULL，`TRANSLATE` 會傳回 NULL。  
+如果 *characters* 和 *translations* 運算式的長度不同，則 `TRANSLATE` 函數會傳回錯誤。 如果任何引數是 NULL，`TRANSLATE` 會傳回 NULL。  
 
 `TRANSLATE` 函式的行為類似於使用多個 [REPLACE](../../t-sql/functions/replace-transact-sql.md) 函式。 不過，`TRANSLATE` 不會多次取代 `inputString` 中的任何個別字元。 `characters` 參數中單一值可以取代 `inputString` 中的多個字元。 
 
@@ -126,7 +127,7 @@ SELECT TRANSLATE('abcdef','abc','bcd') AS Translated,
        REPLACE(REPLACE(REPLACE('abcdef','a','b'),'b','c'),'c','d') AS Replaced;
 ```
 
-結果如下：
+結果為：
 
 | 已轉譯 | 已取代 |  
 | ---------|--------- |

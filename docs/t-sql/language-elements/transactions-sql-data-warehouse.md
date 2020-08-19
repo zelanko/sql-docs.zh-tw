@@ -1,4 +1,5 @@
 ---
+description: 交易 (SQL 資料倉儲)
 title: 交易 (SQL 資料倉儲) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ac7b9a500bb87dca74082c9d16874131eb82402d
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 4e2912d3bb0608a105c4f68c857b2ea679a86c2f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197404"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417064"
 ---
 # <a name="transactions-sql-data-warehouse"></a>交易 (SQL 資料倉儲)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -103,7 +104,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
 ### <a name="a-using-an-explicit-transaction"></a>A. 使用明確交易  
   
-```  
+```sql  
 BEGIN TRANSACTION;  
 DELETE FROM HumanResources.JobCandidate  
     WHERE JobCandidateID = 13;  
@@ -113,8 +114,8 @@ COMMIT;
 ### <a name="b-rolling-back-a-transaction"></a>B. 復原交易  
  下列範例示範復原交易的效果。  在此範例中，ROLLBACK 陳述式將復原 INSERT 陳述式，但所建立的資料表仍會存在。  
   
-```  
-CREATE TABLE ValueTable (id int);  
+```sql  
+CREATE TABLE ValueTable (id INT);  
 BEGIN TRANSACTION;  
        INSERT INTO ValueTable VALUES(1);  
        INSERT INTO ValueTable VALUES(2);  
@@ -124,21 +125,21 @@ ROLLBACK;
 ### <a name="c-setting-autocommit"></a>C. 設定 AUTOCOMMIT  
  下列範例將 AUTOCOMMIT 設定設為 `ON`。  
   
-```  
+```sql  
 SET AUTOCOMMIT ON;  
 ```  
   
  下列範例將 AUTOCOMMIT 設定設為 `OFF`。  
   
-```  
+```sql  
 SET AUTOCOMMIT OFF;  
 ```  
   
 ### <a name="d-using-an-implicit-multi-statement-transaction"></a>D. 使用隱含的多重陳述式交易  
   
-```  
+```sql  
 SET AUTOCOMMIT OFF;  
-CREATE TABLE ValueTable (id int);  
+CREATE TABLE ValueTable (id INT);  
 INSERT INTO ValueTable VALUES(1);  
 INSERT INTO ValueTable VALUES(2);  
 COMMIT;  

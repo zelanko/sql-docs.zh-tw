@@ -1,4 +1,5 @@
 ---
+description: datetimeoffset (Transact-SQL)
 title: datetimeoffset (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/23/2017
@@ -23,12 +24,12 @@ ms.assetid: a0455b71-ca25-476e-a7a8-0770f1860bb7
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 274af7a5c9a1e8f12f661305e1e2d1206bf64664
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d58c0b86f5a3d46764d3be1e70444139b599172d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008044"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417664"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 
@@ -41,7 +42,7 @@ ms.locfileid: "86008044"
 |屬性|值|  
 |---|---|
 |語法|**datetimeoffset** [ (*毫秒精確度*) ]|  
-|使用量|DECLARE \@MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetimeoffset(7)** )|  
+|使用方式|DECLARE \@MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetimeoffset(7)** )|  
 |預設的字串常值格式 (用於下層用戶端)|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+&#124;-}hh:mm]<br /><br /> 如需詳細資訊，請參閱下列的＜下層用戶端的回溯相容性＞一節。|  
 |日期範圍|0001-01-01 到 31.12.99<br /><br /> 公元 1 年 1 月 1 日到公元 9999 年 12 月 31 日|  
 |時間範圍|00:00:00 到 23:59:59.9999999|  
@@ -53,8 +54,8 @@ ms.locfileid: "86008044"
 |精確度|100 奈秒|  
 |預設值|1900-01-01 00:00:00 00:00|  
 |Calendar|西曆|  
-|使用者自訂的小數秒數有效位數|是|  
-|時區位移感知和保留|是|  
+|使用者自訂的小數秒數有效位數|Yes|  
+|時區位移感知和保留|Yes|  
 |日光節約感知|否|  
   
 |指定的小數位數|結果 (有效位數，小數位數)|資料行長度 (以位元組為單位)|小數秒數有效位數|  
@@ -85,7 +86,7 @@ ms.locfileid: "86008044"
   
 時區位移範圍會遵循 XSD 結構描述定義的 W3C XML 標準，而且稍微與 SQL 2003 標準定義 (12:59 至 +14:00) 不同。
   
-選擇性的類型參數「毫秒精確度」  會指定秒鐘小數部分的位數。 這個值可以是介於 0 至 7 (100 奈秒) 之間的整數。 預設的「毫秒精確度」  為 100 奈秒 (秒鐘小數部分有七位數)。
+選擇性的類型參數「毫秒精確度」** 會指定秒鐘小數部分的位數。 這個值可以是介於 0 至 7 (100 奈秒) 之間的整數。 預設的「毫秒精確度」** 為 100 奈秒 (秒鐘小數部分有七位數)。
   
 這項資料會儲存於資料庫中，而且在伺服器中進行處理、比較、儲存和索引 (如同 UTC)。 時區位移將保留在資料庫中以便日後擷取。
   
@@ -131,7 +132,7 @@ SELECT @datetimeoffset AS '@datetimeoffset ', @date AS 'date';
   
 ```  
   
-如果轉換成 **time(n)** ，時、分、秒和毫秒都會複製。 時區值則會被截斷。 如果 **datetimeoffset(n)** 值的有效位數大於 **time(n)** 值的有效位數，此值將會四捨五入。 下列程式碼顯示將 `datetimeoffset(4)` 值轉換成 `time(3)` 值的結果。
+如果轉換成 **time(n)**，時、分、秒和毫秒都會複製。 時區值則會被截斷。 如果 **datetimeoffset(n)** 值的有效位數大於 **time(n)** 值的有效位數，此值將會四捨五入。 下列程式碼顯示將 `datetimeoffset(4)` 值轉換成 `time(3)` 值的結果。
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '12-10-25 12:32:10.1237 +01:0';  

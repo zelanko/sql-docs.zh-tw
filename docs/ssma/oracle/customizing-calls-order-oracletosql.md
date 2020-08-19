@@ -1,4 +1,5 @@
 ---
+description: 自訂呼叫順序 (OracleToSQL)
 title: 自訂呼叫順序 (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,22 +13,22 @@ ms.assetid: 9d273ee3-2438-45cc-b4d1-8d3b549904b4
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 8f02452ce32b25893b9a724a09112ed1ea83eb6d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: b12bec088690f5f83d8e2c40cdeb9fc6e003a88d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934914"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418374"
 ---
 # <a name="customizing-calls-order-oracletosql"></a>自訂呼叫順序 (OracleToSQL)
-在此步驟中，您會選取要叫用之物件的叫用順序。  
+在這個步驟中，您會選取將叫用物件的測試順序。  
   
 ## <a name="customizing-order"></a>自訂順序  
-使用放在方格頂端的按鈕和物件清單，以正確的順序放置物件。 或者，當資料列被選取時，您可以使用右邊出現的按鈕。  
+使用位於方格頂端的按鈕和物件清單，以正確的順序放置物件。 或者，當選取資料列時，您可以使用按鈕顯示在右側。  
   
 ## <a name="next-step"></a>後續步驟  
 [完成測試案例準備 &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[&#40;OracleToSQL&#41;測試遷移的資料庫物件](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[測試遷移的資料庫物件 &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

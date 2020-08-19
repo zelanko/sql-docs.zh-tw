@@ -1,4 +1,5 @@
 ---
+description: 管理在另一部伺服器上提供資料庫時所需的中繼資料
 title: 管理在另一部伺服器上提供資料庫時所需的中繼資料
 ms.date: 06/03/2020
 ms.prod: sql
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], metadata
 - credentials [SQL Server], metadata
 - copying databases
-ms.openlocfilehash: 0d0a777b42bc601d2f656cfbf3c31d488a3732e0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3dc93671874de47f45bd26ae12fa9ded44c9a4fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726455"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412844"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>管理在另一部伺服器上提供資料庫時所需的中繼資料
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -106,7 +107,7 @@ ms.locfileid: "85726455"
   
  如需此功能的詳細資訊，請參閱[認證 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)。  
   
-> **注意：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶使用認證。 若要了解 Proxy 帳戶的認證識別碼，請使用 [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) 系統資料表。  
+> **注意︰** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶使用認證。 若要了解 Proxy 帳戶的認證識別碼，請使用 [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) 系統資料表。  
   
   
 ##  <a name="cross-database-queries"></a><a name="cross_database_queries"></a> Cross-Database Queries  
@@ -242,7 +243,7 @@ ms.locfileid: "85726455"
   
 -   [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)  
   
--   [檢視作業步驟資訊](../../ssms/agent/view-job-step-information.md)  
+-   [View Job Step Information](../../ssms/agent/view-job-step-information.md)  
   
 -   [dbo.sysjobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)  
   
@@ -257,7 +258,7 @@ ms.locfileid: "85726455"
 ##  <a name="logins"></a><a name="logins"></a> 登入  
  登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體需要有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 此登入是用於驗證處理序，可確認主體是否能連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體。 在伺服器執行個體上未定義或定義不正確之對應 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的資料庫使用者無法登入此執行個體。 這類使用者就是伺服器執行個體上的資料庫 *「被遺棄使用者」* (Orphaned User)。 當資料庫還原、附加或複製到不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體後，資料庫使用者就可能會成為被遺棄使用者。  
   
- 若要在原始資料庫副本中產生部分或所有物件的指令碼，您可以使用「產生指令碼精靈」，然後在 **[選擇指令碼選項]** 對話方塊中，將 **[編寫登入的指令碼]** 選項設定為 **[True]** 。  
+ 若要在原始資料庫副本中產生部分或所有物件的指令碼，您可以使用「產生指令碼精靈」，然後在 **[選擇指令碼選項]** 對話方塊中，將 **[編寫登入的指令碼]** 選項設定為 **[True]**。  
   
 > **注意：** 如需如何設定鏡像資料庫登入的資訊，請參閱[設定資料庫鏡像或 AlwaysOn 可用性群組的登入帳戶 (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) 和[角色切換後針對登入和作業進行管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)。  
   
@@ -267,12 +268,12 @@ ms.locfileid: "85726455"
   
 -   系統物件的 GRANT、REVOKE 或 DENY 權限  
   
--   伺服器執行個體的 GRANT、REVOKE 或 DENY 權限 ( *「伺服器層級權限」* )  
+-   伺服器執行個體的 GRANT、REVOKE 或 DENY 權限 (*「伺服器層級權限」*)  
   
 ### <a name="grant-revoke-and-deny-permissions-on-system-objects"></a>系統物件的 GRANT、REVOKE 及 DENY 權限  
  系統物件 (例如，預存程序、擴充預存程序、函數和檢視) 的權限會存放在 **master** 資料庫中，而且您必須在目的地伺服器執行個體上設定這些權限。  
   
- 若要在原始資料庫副本中產生部分或所有物件的指令碼，您可以使用「產生指令碼精靈」，然後在 [選擇指令碼選項]  對話方塊中，將 [編寫物件層級權限的指令碼]  選項設定為 [True]  。  
+ 若要在原始資料庫副本中產生部分或所有物件的指令碼，您可以使用「產生指令碼精靈」，然後在 [選擇指令碼選項]**** 對話方塊中，將 [編寫物件層級權限的指令碼]**** 選項設定為 [True]****。  
   
    > [!IMPORTANT]
    > 當您在編寫登入的指令碼時，密碼並不會編寫在指令碼中。 如果您具有使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入，就必須修改目的地上的指令碼。  
@@ -285,7 +286,7 @@ ms.locfileid: "85726455"
  如需詳細資訊，請參閱 [GRANT 伺服器權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md)、[REVOKE 伺服器權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md) 和 [DENY 伺服器權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md)。  
   
 #### <a name="server-level-permissions-for-a-certificate-or-asymmetric-key"></a>憑證或非對稱金鑰的伺服器層級權限  
- 您無法直接將伺服器層級權限授與憑證或非對稱金鑰。 不過，伺服器層級權限會授與專為特定憑證或非對稱金鑰建立的對應登入。 因此，需要伺服器層級權限的每個憑證或非對稱金鑰都會需要自己的 *「憑證對應登入」* 或 *「非對稱金鑰對應登入」* 。 若要授與憑證或非對稱金鑰的伺服器層級權限，請將這些權限授與對應的登入。  
+ 您無法直接將伺服器層級權限授與憑證或非對稱金鑰。 不過，伺服器層級權限會授與專為特定憑證或非對稱金鑰建立的對應登入。 因此，需要伺服器層級權限的每個憑證或非對稱金鑰都會需要自己的 *「憑證對應登入」* 或 *「非對稱金鑰對應登入」*。 若要授與憑證或非對稱金鑰的伺服器層級權限，請將這些權限授與對應的登入。  
   
 > **注意：** 對應的登入只會用於授權以對應憑證或非對稱金鑰簽署的程式碼。 對應的登入無法用於驗證。  
   

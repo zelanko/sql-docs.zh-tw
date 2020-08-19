@@ -1,4 +1,5 @@
 ---
+description: ^ (位元互斥 OR) (Transact-SQL)
 title: ^ (位元排除 OR) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/10/2017
@@ -25,12 +26,12 @@ ms.assetid: f38f0ad4-46d0-40ea-9851-0f928fda5293
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e9014cd3bb989f853ab7ffddb4f030a3e8c202f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fe64aa29987ee280a79afd66faed94cbbc89540e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86902213"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417174"
 ---
 # <a name="-bitwise-exclusive-or-transact-sql"></a>^ (位元互斥 OR) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

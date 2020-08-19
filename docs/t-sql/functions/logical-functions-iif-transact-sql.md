@@ -1,4 +1,5 @@
 ---
+description: 邏輯函式 - IIF (Transact-SQL)
 title: IIF (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e3ccf8ed-1cec-43ac-90b7-d8597c24b050
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cda1db97174190f27f2de801c751045bffb61793
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 1b84e5749e7e217442e618d998cecf504d5be046
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112923"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417254"
 ---
 # <a name="logical-functions---iif-transact-sql"></a>邏輯函式 - IIF (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

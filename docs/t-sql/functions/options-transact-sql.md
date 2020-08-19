@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;OPTIONS (Transact-SQL)'
 title: '@@OPTIONS (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3d5c7f6e-157b-4231-bbb4-4645a11078b3
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 6bfbf40042b47d4c6773b0887348e5f1f7075526
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 12e2d3418a021a3ffee5db530d35f0fc8522dec1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112668"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417224"
 ---
 # <a name="x40x40options-transact-sql"></a>&#x40;&#x40;OPTIONS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +52,7 @@ ms.locfileid: "87112668"
   
  **\@\@OPTIONS** 函式會傳回選項的點陣圖，並轉換成以 10 為底數 (十進位) 的整數。 位元設定會儲存在[設定 user options 伺服器設定選項](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)主題中資料表內描述的位置裡。  
   
- 若要解碼 **\@\@OPTIONS** 值，請將 **\@\@OPTIONS** 傳回的整數轉換為二進位，然後在[設定使用者選項伺服器設定選項](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)的資料表中查詢該值。 例如，若 `SELECT @@OPTIONS;` 傳回值 `5496`，請使用 Windows 工程型小算盤 (**calc.exe**) 將十進位 `5496` 轉換成二進位。 結果為 `1010101111000`。 最右邊的字元 (二進位 1、2 及 4) 為 0，表示資料表中的前三個項目為關閉 (off)。 查閱資料表，您會看到它們為 **DISABLE_DEF_CNST_CHK**、**IMPLICIT_TRANSACTIONS** 和 **CURSOR_CLOSE_ON_COMMIT**。 下一個項目 (**位置中的**ANSI_WARNINGS`1000`) 為開啟 (on)。 在位元對應中繼續向左，然後在選項清單中向下。 當最左邊的選項為 0 時，就會被類型轉換截斷。 點陣圖 `1010101111000` 實際上是 `001010101111000` 來表示所有 15 個選項。  
+ 若要解碼 **\@\@OPTIONS** 值，請將 **\@\@OPTIONS** 傳回的整數轉換為二進位，然後在[設定使用者選項伺服器設定選項](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)的資料表中查詢該值。 例如，若 `SELECT @@OPTIONS;` 傳回值 `5496`，請使用 Windows 工程型小算盤 (**calc.exe**) 將十進位 `5496` 轉換成二進位。 結果為 `1010101111000`。 最右邊的字元 (二進位 1、2 及 4) 為 0，表示資料表中的前三個項目為關閉 (off)。 查閱資料表，您會看到它們為 **DISABLE_DEF_CNST_CHK**、**IMPLICIT_TRANSACTIONS** 和 **CURSOR_CLOSE_ON_COMMIT**。 下一個項目 (`1000` 位置中的 **ANSI_WARNINGS**) 為開啟 (on)。 在位元對應中繼續向左，然後在選項清單中向下。 當最左邊的選項為 0 時，就會被類型轉換截斷。 點陣圖 `1010101111000` 實際上是 `001010101111000` 來表示所有 15 個選項。  
   
 ## <a name="examples"></a>範例  
   
@@ -79,6 +80,6 @@ RAISERROR ('Current user has SET NOCOUNT turned on.', 1, 1)
 ## <a name="see-also"></a>另請參閱  
  [組態函式 &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [設定使用者選項伺服器組態選項](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)  
+ [設定 user options 伺服器組態選項](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)  
   
   

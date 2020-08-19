@@ -1,4 +1,5 @@
 ---
+description: POWER (Transact-SQL)
 title: POWER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -18,12 +19,12 @@ ms.assetid: 0fd34494-90b9-4559-8011-a8c1b9f40239
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c11afa07f04e01919b51daf92025ed5d82902ee7
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 857ad909b2f471edaebf661ccab4cca0077bc099
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111898"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417314"
 ---
 # <a name="power-transact-sql"></a>POWER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +43,7 @@ POWER ( float_expression , y )
 
 ## <a name="arguments"></a>引數
  *float_expression*  
- 為 [float](../../t-sql/language-elements/expressions-transact-sql.md) 類型或能夠隱含轉換成 **float** 類型的**運算式**。  
+ 為 **float** 類型或能夠隱含轉換成 **float** 類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
  *y*  
  為 *float_expression* 相乘的乘冪。 *y*　可為精確數值或近似數值資料類型類別目錄的運算式，但 **bit** 資料類型除外。  
@@ -151,7 +152,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-power-to-return-the-cube-of-a-number"></a>D：使用 POWER 傳回數字的立方  
- 下列範例示範傳回 `POWER` 的 3 次方 `2.0` 結果。  
+ 下列範例示範傳回 `2.0` 的 3 次方 `POWER` 結果。  
   
 ```  
 SELECT POWER(2.0, 3);  

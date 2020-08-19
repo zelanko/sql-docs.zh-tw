@@ -1,4 +1,5 @@
 ---
+description: DBCC UPDATEUSAGE (Transact-SQL)
 title: DBCC UPDATEUSAGE (Transact-SQL)
 ms.custom: ''
 ms.date: 11/14/2017
@@ -33,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 2528ac49fb62a41bebe55cb50392cb306ec93edf
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 9014d7c8f2990997f9dff3a1c18cdbf1beb4f089
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484199"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417584"
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE (Transact-SQL)
 
