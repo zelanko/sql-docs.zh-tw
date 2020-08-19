@@ -1,4 +1,5 @@
 ---
+description: HelloData 程式碼
 title: HelloData 程式碼 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6da136c5-fa93-4fe6-9bf5-90f4d92441fb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abf32aa1d645c282777b2df5d01499b7d63ab994
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e3389563b5ab290f35f01599ffcd617e3833fde4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762749"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453270"
 ---
 # <a name="hellodata-code"></a>HelloData 程式碼
 ```  
