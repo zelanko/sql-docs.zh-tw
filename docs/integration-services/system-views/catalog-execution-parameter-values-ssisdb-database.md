@@ -1,4 +1,5 @@
 ---
+description: catalog.execution_parameter_values (SSISDB 資料庫)
 title: catalog.execution_parameter_values (SSISDB 資料庫) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: ec93e67b-04ce-4aae-ab96-3ad20e9793ad
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 868f6bb8b1a0052e843ae9d0e93c1d9993febbfa
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 022d1d29438da9bebeb7e7544b01445f27803fce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912576"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495212"
 ---
 # <a name="catalogexecution_parameter_values-ssisdb-database"></a>catalog.execution_parameter_values (SSISDB 資料庫)
 
@@ -35,7 +36,7 @@ ms.locfileid: "86912576"
 |parameter_name|**sysname**|參數名稱。|  
 |parameter_value|**sql_variant**|參數的值。 當 sensitive 為 `0` 時，會顯示純文字值。 當 sensitive 為 `1` 時，會顯示 **NULL**。|  
 |sensitive|**bit**|當值為 `1` 時，參數值為敏感值。 當值為 `0` 時，參數值則不是敏感值。|  
-|required|**bit**|當值為 `1` 時，必須有參數值才能開始執行。 當值為 `0` 時，不需要參數值即可開始執行。|  
+|必要|**bit**|當值為 `1` 時，必須有參數值才能開始執行。 當值為 `0` 時，不需要參數值即可開始執行。|  
 |value_set|**bit**|當值為 `1` 時，表示參數值已指派。 當值為 `0` 時，表示參數值未指派。|  
 |runtime_override|**bit**|當值為 `1` 時，表示在開始執行之前，參數值已從原始值變更。 當值為 `0` 時，表示參數值為設定的原始參數值。|  
   

@@ -1,4 +1,5 @@
 ---
+description: 建立變更集 (Master Data Services)
 title: 建立變更集
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cfad6f1c-9125-4896-b5f5-a4b9f9593cc4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: db37dd8b4eed5c887cfceceb382fe57aa0d2fc33
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: ea6b6f0da9dc2660b91cd6432331256854a1d80c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812441"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495042"
 ---
 # <a name="create-a-changeset-master-data-services"></a>建立變更集 (Master Data Services)
 
@@ -23,15 +24,15 @@ ms.locfileid: "85812441"
 
   變更集是對主要資料所做的暫止變更集合。 如果實體需要核准變更，則必須將暫止變更儲存至變更集，然後提交由系統管理員核准。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
   
--   您必須擁有存取 [總管] 功能區域的權限。 如需詳細資訊，請參閱[功能區域許可權 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)  
+-   您必須擁有存取 [總管] 功能區域的權限。 如需詳細資訊，請參閱 [功能區許可權 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)  
   
 -   您必須至少具有實體或其中一個屬性的讀取存取權。  
   
 ## <a name="to-create-a-local-changeset"></a>建立本機變更集  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁] 頁面上，選取模型和版本，然後按一下 [ **Explorer**]。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取模型和版本，然後按一下 [ **Explorer**]。  
   
 2.  按一下 [實體] **** 功能表中的實體。  
   
@@ -43,7 +44,7 @@ ms.locfileid: "85812441"
   
 ## <a name="to-create-a-changeset-for-approval"></a>建立變更集以進行核准  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁] 頁面上，選取模型和版本，然後按一下 [ **Explorer**]。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取模型和版本，然後按一下 [ **Explorer**]。  
   
 2.  按一下 [實體] **** 功能表中的實體。  
   

@@ -1,4 +1,5 @@
 ---
+description: RTRIM (Transact-SQL)
 title: RTRIM (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/05/2017
@@ -21,12 +22,12 @@ ms.assetid: 52fd6e8d-650c-4f66-abcf-67765aa5aa83
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc4e974d05305fcb5598f7dce7c98992073d5611
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c32ad6071198cdb37f4f7c30310f6bc75400b2be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111869"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422612"
 ---
 # <a name="rtrim-transact-sql"></a>RTRIM (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: 變數 (Transact-SQL)
 title: 變數 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2017
@@ -13,12 +14,12 @@ ms.assetid: f372ae86-a003-40af-92de-fa52e3eea13f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abbfbd518796041c18f9bfe97522791c2ddf5f1f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b4eed82330e1a70ddbe269f3a0be845199b4931d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000728"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459248"
 ---
 # <a name="variables-transact-sql"></a>變數 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -94,7 +95,7 @@ DECLARE @MyCounter int;
 ```
 若要宣告一個以上的本機變數，請在第一個定義的本機變數後加上逗號，再指定下一個本機變數名稱與資料類型。
 
-例如，以下的 **DECLARE** 陳述式建立三個名為 **\@LastName**、 **\@FirstName** 和 **\@StateProvince** 的區域變數，均初始化為 NULL：  
+例如，以下的 **DECLARE** 陳述式建立三個名為 **\@LastName**、**\@FirstName** 和 **\@StateProvince** 的區域變數，均初始化為 NULL：  
 ```sql
 DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
 ```

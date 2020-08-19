@@ -1,5 +1,6 @@
 ---
-title: 準備和執行語句（ODBC） |Microsoft Docs
+description: 準備和執行陳述式 (ODBC)
+title: 準備和執行語句 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,11 +15,12 @@ ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2ae98d59558738e4bcff979b38e341dd852661f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7a00b92a059014ff36ee1e0b473285641ef107c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009464"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423768"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>準備和執行陳述式 (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,27 +28,27 @@ ms.locfileid: "86009464"
     
 ### <a name="to-prepare-a-statement-once-and-then-execute-it-multiple-times"></a>準備一次陳述式，然後執行多次  
   
-1.  呼叫[SQLPrepare 函數](https://go.microsoft.com/fwlink/?LinkId=59360)來準備語句。  
+1.  呼叫 [SQLPrepare 函數](https://go.microsoft.com/fwlink/?LinkId=59360) 來準備語句。  
   
-2.  （選擇性）呼叫[SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404)來判斷準備語句中的參數數目。  
+2.  （選擇性）呼叫 [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) 來判斷備妥語句中的參數數目。  
   
 3.  (選擇性) 針對準備陳述式中的每個參數：  
   
-    -   呼叫[SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md)以取得參數資訊。  
+    -   呼叫 [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) 以取得參數資訊。  
   
-    -   使用[SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md)，將每個參數系結至程式變數。 設定任何資料執行中參數。  
+    -   使用 [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md)將每個參數系結至程式變數。 設定任何資料執行中參數。  
   
 4.  針對準備陳述式的每個執行：  
   
     -   如果陳述式具有參數標記，請將資料值放在繫結參數緩衝區中。  
   
-    -   呼叫[SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400)來執行備妥的語句。  
+    -   呼叫 [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) 來執行備妥的語句。  
   
-    -   如果使用了資料執行中輸入參數， [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400)會傳回 SQL_NEED_DATA。 使用[SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405)和[SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)以區區塊轉送資料。  
+    -   如果使用了資料執行中的輸入參數， [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) 會傳回 SQL_NEED_DATA。 使用 [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 和 [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)以區區塊轉送資料。  
   
 ### <a name="to-prepare-a-statement-with-column-wise-parameter-binding"></a>準備含有資料行取向參數繫結的陳述式  
   
-1.  呼叫[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)以設定下列屬性：  
+1.  呼叫 [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) 來設定下列屬性：  
   
     -   將 SQL_ATTR_PARAMSET_SIZE 設定為參數集 (S) 的數目。  
   
@@ -56,9 +58,9 @@ ms.locfileid: "86009464"
   
     -   將 SQL_ATTR_PARAMS_STATUS_PTR 設定為指向 SQLUSSMALLINT 變數的陣列[S]，以保存參數狀態指標。  
   
-2.  呼叫 SQLPrepare 以準備語句。  
+2.  呼叫 SQLPrepare 來準備語句。  
   
-3.  （選擇性）呼叫[SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404)來判斷準備語句中的參數數目。  
+3.  （選擇性）呼叫 [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) 來判斷備妥語句中的參數數目。  
   
 4.  （選擇性）針對準備語句中的每個參數，呼叫 SQLDescribeParam 以取得參數資訊。  
   
@@ -90,7 +92,7 @@ ms.locfileid: "86009464"
   
     -   第二個部分是 SQLINTEGER 變數，可保存狀態指標。  
   
-2.  呼叫[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)以設定下列屬性：  
+2.  呼叫 [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) 來設定下列屬性：  
   
     -   將 SQL_ATTR_PARAMSET_SIZE 設定為參數集 (S) 的數目。  
   
@@ -100,9 +102,9 @@ ms.locfileid: "86009464"
   
     -   將 SQL_ATTR_PARAMS_STATUS_PTR 設定為指向 SQLUSSMALLINT 變數的陣列[S]，以保存參數狀態指標。  
   
-3.  呼叫 SQLPrepare 以準備語句。  
+3.  呼叫 SQLPrepare 來準備語句。  
   
-4.  針對每個參數標記，呼叫 SQLBindParameter，將參數資料值和資料長度指標指向其在步驟1所配置之結構陣列第一個元素中的變數。 如果參數是資料執行中參數，請設定此參數。  
+4.  針對每個參數標記，呼叫 SQLBindParameter，以將參數資料值和資料長度指標指向在步驟1中所配置之結構陣列第一個元素中的變數。 如果參數是資料執行中參數，請設定此參數。  
   
 5.  針對準備陳述式的每個執行：  
   
@@ -113,6 +115,6 @@ ms.locfileid: "86009464"
     -   如果使用了資料執行中輸入參數，SQLExecute 就會傳回 SQL_NEED_DATA。 使用 SQLParamData 和 SQLPutData 以區區塊轉送資料。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行查詢 &#40;ODBC&#41;的使用說明主題](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [&#40;ODBC&#41;執行查詢的 how to 主題 ](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

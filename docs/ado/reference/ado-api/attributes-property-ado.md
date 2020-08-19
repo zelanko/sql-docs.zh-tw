@@ -1,5 +1,6 @@
 ---
-title: Attributes 屬性（ADO） |Microsoft Docs
+description: Attributes 屬性 (ADO)
+title: 屬性 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,34 +18,34 @@ helpviewer_keywords:
 ms.assetid: acc15d40-68a6-4ba9-85bd-12d331aecaa6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fe649e6636f33dfc73ee5aac949830b4175cd3ec
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 43f374429d38cb4d3cb4516d640b6d05ef8e3efb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242448"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451200"
 ---
 # <a name="attributes-property-ado"></a>Attributes 屬性 (ADO)
 表示物件的一或多個特性。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定或傳回**Long**值。  
+ 設定或傳回 **Long** 值。  
   
- 若為[Connection](../../../ado/reference/ado-api/connection-object-ado.md)物件， **Attributes**屬性會是讀取/寫入，而其值可以是一或多個[XactAttributeEnum](../../../ado/reference/ado-api/xactattributeenum.md)值的總和。 預設為零 (0)。  
+ 若是 [連接](../../../ado/reference/ado-api/connection-object-ado.md) 物件，[ **屬性** ] 屬性為 [讀取/寫入]，而其值可以是一個或多個 [XactAttributeEnum](../../../ado/reference/ado-api/xactattributeenum.md) 值的總和。 預設為零 (0)。  
   
- 對於[參數](../../../ado/reference/ado-api/parameter-object.md)物件，**屬性**是可讀寫的，而其值可以是任何一個或多個[ParameterAttributesEnum](../../../ado/reference/ado-api/parameterattributesenum.md)值的總和。 預設值為**adParamSigned**。  
+ 針對 [參數](../../../ado/reference/ado-api/parameter-object.md) 物件， **屬性** （attribute）屬性（attribute）是讀取/寫入，而其值可以是任何一或多個 [ParameterAttributesEnum](../../../ado/reference/ado-api/parameterattributesenum.md) 值的總和。 預設值為 **adParamSigned**。  
   
- 如果是[欄位](../../../ado/reference/ado-api/field-object.md)物件， **Attributes**屬性可以是一個或多個[FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md)值的總和。 它通常是唯讀的。 不過，對於附加至[記錄](../../../ado/reference/ado-api/record-object-ado.md)之[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)集合的新**欄位**物件，只有在指定**欄位**的[Value](../../../ado/reference/ado-api/value-property-ado.md)屬性，而且資料提供者已藉由呼叫**Fields**集合的[Update](../../../ado/reference/ado-api/update-method.md)方法成功加入新的**欄位**之後，才會讀取/寫入**屬性**。  
+ 若為 [Field](../../../ado/reference/ado-api/field-object.md) 物件， **屬性** （attribute）屬性（attribute）可以是一或多個 [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md) 值的總和。 它通常是唯讀的。 不過，對於已附加至[記錄](../../../ado/reference/ado-api/record-object-ado.md)之[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)集合的新**欄位**物件，只有在指定**欄位**的[Value](../../../ado/reference/ado-api/value-property-ado.md)屬性，並藉由呼叫**Fields**集合的[Update](../../../ado/reference/ado-api/update-method.md)方法，讓資料提供者成功加入新**欄位**之後，才會讀取/寫入**屬性**。  
   
- 對於[屬性](../../../ado/reference/ado-api/property-object-ado.md)物件而言，屬性（attribute **）屬性（** attribute）是唯讀的，而且其值可以是任何一個或多個[PropertyAttributesEnum](../../../ado/reference/ado-api/propertyattributesenum.md)值的總和。  
+ 針對 [屬性](../../../ado/reference/ado-api/property-object-ado.md) 物件，屬性（attribute **）屬性（** attribute）是唯讀的，而且其值可以是任何一或多個 [PropertyAttributesEnum](../../../ado/reference/ado-api/propertyattributesenum.md) 值的總和。  
   
 ## <a name="remarks"></a>備註  
- 使用 [**屬性**] 屬性可設定或傳回**連接**物件、**參數**物件、**欄位**物件或**屬性**物件的特性。  
+ 您可以使用 [ **屬性** ] 屬性來設定或傳回 **連接** 物件、 **參數** 物件、 **欄位** 物件或 **屬性** 物件的特性。  
   
- 當您設定多個屬性時，可以加總適當的常數。 如果您將屬性值設定為包含不相容常數的總和，就會發生錯誤。  
+ 當您設定多個屬性時，您可以加總適當的常數。 如果您將屬性值設定為包含不相容常數的總和，就會發生錯誤。  
   
 > [!NOTE]
->  **遠端資料服務使用量**用戶端**連接**物件上無法使用這個屬性。  
+>  **遠端資料服務使用量** 用戶端 **連接** 物件上無法使用這個屬性。  
   
 ## <a name="applies-to"></a>套用至  
 
@@ -60,8 +61,8 @@ ms.locfileid: "87242448"
 :::row-end:::
 
 ## <a name="see-also"></a>另請參閱  
- [Attributes 和 Name 屬性範例（VB）](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
- [Attributes 和 Name 屬性範例（VC + +）](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   
- [AppendChunk 方法（ADO）](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
- [BeginTrans、CommitTrans 和 RollbackTrans 方法（ADO）](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
+ [屬性和名稱屬性範例 (VB) ](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
+ [屬性和名稱屬性範例 (VC + +) ](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   
+ [ (ADO) 的 AppendChunk 方法 ](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
+ [ (ADO) 的 BeginTrans、CommitTrans 和 RollbackTrans 方法 ](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
  [GetChunk 方法 (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)

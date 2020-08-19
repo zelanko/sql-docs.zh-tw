@@ -1,4 +1,5 @@
 ---
+description: 使用 Always Encrypted 與 [SQL Server 匯入和匯出精靈] 將資料移轉到資料行或從中移轉
 title: 使用 Always Encrypted 與 [SQL Server 匯入和匯出精靈] 將資料移轉到資料行或從中移轉 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/31/2019
@@ -16,12 +17,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42898b255427c5f3d870a21e17e2cdeb17039919
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 89592db85cd95996274484d17fd968d70a552373
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85627320"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423372"
 ---
 # <a name="migrate-data-to-or-from-columns-using-always-encrypted-with-sql-server-import-and-export-wizard"></a>使用 Always Encrypted 與 [SQL Server 匯入和匯出精靈] 將資料移轉到資料行或從中移轉 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

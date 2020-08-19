@@ -1,5 +1,6 @@
 ---
-title: LinRegVariance （MDX） |Microsoft Docs
+description: LinRegVariance (MDX)
+title: LinRegVariance (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b45328614bbefe730c815f528e82f220ad0093e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd223530c0b184dd723abbb68c2acccd1240d870
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905508"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477030"
 ---
 # <a name="linregvariance-mdx"></a>LinRegVariance (MDX)
 
@@ -38,13 +39,13 @@ LinRegVariance(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] ] 
  有效的數值運算式，這通常是傳回表示 X 軸數值之資料格座標的多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- 線性迴歸利用最小平方法，計算迴歸線方程式 (也就是說，數點之間的最佳直線)。 迴歸線具有下列方程式，其中 a 是斜率，而 b 是截距：  
+ 線性迴歸利用最小平方法，計算迴歸線方程式 (也就是說，數點之間的最佳直線)。 迴歸線有下列方程式，其中 a 是斜率，b 是截距：  
   
  y = ax+b  
   
  **LinRegVariance**函數會評估指定的 setagainst 第一個數值運算式，以取得 y 軸的值。 此函數接著會針對第二個數值運算式 (如果已指定) 來評估指定的集合，以取得 X 軸的值。 如果沒有指定第二個數值運算式，此函數會使用指定集合中的資料格目前內容，做為 X 軸的值。 Time 維度經常不指定 X 軸引數。  
   
- 取得一組點之後， **LinRegVariance**函式會傳回統計變異數，以描述線性方程序與點的符合程度。  
+ 取得點集合之後， **LinRegVariance** 函式會傳回統計變異數，以描述線性方程序與點的符合程度。  
   
 > [!NOTE]  
 >  **LinRegVariance**函數會忽略空的資料格或包含文字或邏輯值的資料格。 不過，此函數包括值為零的資料格。  

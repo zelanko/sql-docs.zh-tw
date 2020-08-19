@@ -1,4 +1,5 @@
 ---
+description: catalog.disable_worker_agent (SSISDB 資料庫)
 title: catalog.disable_worker_agent (SSISDB 資料庫) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/16/2016
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3f19dc4c-a000-4318-8fe1-e80d56720e66
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5e8b7714662bfeaa54a36af1805597cfb89e3347
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4b2642c70b5c48e6f9e1f6ad48c61ecc17f0cfc1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913028"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430120"
 ---
 # <a name="catalogdisable_worker_agent-ssisdb-database"></a>catalog.disable_worker_agent (SSISDB 資料庫)
 

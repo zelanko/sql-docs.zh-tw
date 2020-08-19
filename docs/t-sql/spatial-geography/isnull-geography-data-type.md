@@ -1,4 +1,5 @@
 ---
+description: IsNull (geography 資料類型)
 title: IsNull (geography 資料類型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c031074f-bfda-4584-a3bf-4e7c324f237f
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 98a68bfbdc39bd0731e047e5d6876410d4daf263
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: cd161c4d14241a6596e2a54ae79cd919fb776c59
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552913"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422372"
 ---
 # <a name="isnull-geography-data-type"></a>IsNull (geography 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

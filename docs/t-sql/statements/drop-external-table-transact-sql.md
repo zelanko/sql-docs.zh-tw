@@ -1,4 +1,5 @@
 ---
+description: DROP EXTERNAL TABLE (Transact-SQL)
 title: DROP EXTERNAL TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -13,12 +14,12 @@ ms.assetid: 02a6a236-0756-4570-abfa-6f677a7df042
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e627106c5c2b4456b3559971897687c95e9833b1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 75ad3c1c1de4d12a1efa2267c63a2f22e5f2cb2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68086667"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88415624"
 ---
 # <a name="drop-external-table-transact-sql"></a>DROP EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68086667"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 DROP EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
 [;]  
 ```  
@@ -50,7 +51,7 @@ DROP EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_n
   
 ### <a name="a-using-basic-syntax"></a>A. 使用基本語法  
   
-```  
+```sql  
 DROP EXTERNAL TABLE SalesPerson;  
 DROP EXTERNAL TABLE dbo.SalesPerson;  
 DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;  
@@ -59,17 +60,17 @@ DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;
 ### <a name="b-dropping-an-external-table-from-the-current-database"></a>B. 從目前的資料庫中卸除外部資料表  
  下列範例會從目前的資料庫移除 `ProductVendor1` 資料表及其資料和索引。  
   
-```  
+```sql  
 DROP EXTERNAL TABLE ProductVendor1;  
 ```  
   
 ### <a name="c-dropping-a-table-from-another-database"></a>C. 從另一個資料庫卸除資料表  
  下列範例會卸除 `EasternDivision` 資料庫中的 `SalesPerson` 資料表。  
   
-```  
+```sql  
 DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;  
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [CREATE EXTERNAL TABLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)  
+ [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)  
   

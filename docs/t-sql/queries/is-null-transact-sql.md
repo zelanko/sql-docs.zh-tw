@@ -1,4 +1,5 @@
 ---
+description: IS NULL (Transact-SQL)
 title: IS NULL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -32,12 +33,12 @@ ms.assetid: cdc45cd8-e9b6-4648-8417-892fbeab15af
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 327c641ff7d5ec9fabf67f2d8f1f9cf7231e7e49
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 38add99e2bbb16aa0d71394317a06c4850fe21a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555860"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459191"
 ---
 # <a name="is-null-transact-sql"></a>IS NULL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

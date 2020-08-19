@@ -1,5 +1,6 @@
 ---
-title: 層級（MDX） |Microsoft Docs
+description: Level (MDX)
+title: 層級 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b419cbb05aa616f163f5878bda83c9d68203575d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cfe1c3374b15b34a47fb1bd19b7233dd96db7151
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905664"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429880"
 ---
 # <a name="level-mdx"></a>Level (MDX)
 
@@ -32,7 +33,7 @@ Member_Expression.Level
  傳回成員的有效多維度運算式 (MDX) 運算式。  
   
 ### <a name="examples"></a>範例  
- 下列範例會使用**Level**函數來傳回「艾德作品」 cube 中的所有月份。  
+ 下列範例會使用 **Level** 函數來傳回「艾德作品」 cube 中的所有月份。  
   
 ```  
 SELECT[Date].[Fiscal].[Month].[February 2002].Level.Members ON 0,  
@@ -40,7 +41,7 @@ SELECT[Date].[Fiscal].[Month].[February 2002].Level.Members ON 0,
 FROM [Adventure Works]  
 ```  
   
- 下列範例會使用**level**函式，在「艾德公司」 Cube 的模型名稱屬性階層中，傳回「全部用途自行車」的層級名稱。  
+ 下列範例會使用 **level** 函式，在 [艾德作品] cube 的 [模型名稱] 屬性階層中，傳回所有用途自行車的層級名稱。  
   
 ```  
 WITH MEMBER Measures.x AS   

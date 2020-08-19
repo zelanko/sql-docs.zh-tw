@@ -1,4 +1,5 @@
 ---
+description: DATALENGTH (Transact-SQL)
 title: DATALENGTH (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/20/2019
@@ -22,12 +23,12 @@ ms.assetid: 00f377f1-cc3e-4eac-be47-b3e3f80267c9
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac8f7372833d70a46e5ea3cb343641b02aa05120
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 2bb43434dd528a7937f854ce287953f748d50076
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113087"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422812"
 ---
 # <a name="datalength-transact-sql"></a>DATALENGTH (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +53,7 @@ DATALENGTH ( expression )
 任何資料類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 ## <a name="return-types"></a>傳回類型
-如果 **expression** 具有 *nvarchar(max)* 、**varbinary(max)** 或 **varchar(max)** 資料類型，則為 **bigint**；否則為 **int**。
+如果 *expression* 具有 **nvarchar(max)**、**varbinary(max)** 或 **varchar(max)** 資料類型，則為 **bigint**；否則為 **int**。
   
 ## <a name="remarks"></a>備註  
 對於可以儲存可變長度資料的資料類型，`DATALENGTH` 會非常有用：
@@ -72,7 +73,7 @@ DATALENGTH ( expression )
 > 使用 [LEN](../../t-sql/functions/len-transact-sql.md) 傳回編碼成所給定字串運算式的字元數目，使用 [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) 則傳回所給定字串運算式的大小 (以位元組為單位)。 取決於資料行中所使用的資料類型和編碼類型而，這些輸出可能會有所不同。 如需不同編碼類型之間儲存體差異的詳細資訊，請參閱[定序與 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)。
 
 ## <a name="examples"></a>範例  
-此範例會尋找 `Name` 資料表中 `Product` 資料行的長度：
+此範例會尋找 `Product` 資料表中 `Name` 資料行的長度：
   
 ```sql
 USE AdventureWorks2016  

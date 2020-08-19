@@ -1,4 +1,5 @@
 ---
+description: ADOStreamConstruction 介面
 title: ADOStreamConstruction 介面 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 75af8d899c4fb0b97f4ee09795888ef773999b60
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f911be2784e849c8feb271127e2a83ed1ce90c4f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242808"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451310"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction 介面
-**ADOStreamConstruction**介面是用來從 C/c + + 應用程式中的 OLE DB **IStream**物件，來建立 ADO**資料流程**物件。  
+**ADOStreamConstruction**介面是用來從 C/c + + 應用程式中 OLE DB **IStream**物件來建立 ADO**資料流程**物件。  
   
 ## <a name="properties"></a>屬性  
   
 |屬性|描述|  
 |-|-|  
-|[資料流](../../../ado/reference/ado-api/stream-property.md)|讀取/寫入。 取得/設定 OLE DB**資料流程**物件。|  
+|[資料流](../../../ado/reference/ado-api/stream-property.md)|讀取/寫入。 取得/設定 OLE DB **資料流程** 物件。|  
   
 ## <a name="methods"></a>方法  
  無。  
@@ -38,16 +39,16 @@ ms.locfileid: "87242808"
  無。  
   
 ## <a name="remarks"></a>備註  
- 假設有一個 OLE DB 的**IStream**物件（ `pStream` ），將 ADO **Stream**物件（）的結構 `adoStr` 為下列三個基本作業：  
+ 假設有 OLE DB **IStream** 物件 (`pStream`) ，則 ADO **資料流程** 物件的結構 (`adoStr`) 為下列三個基本作業：  
   
-1.  建立 ADO**資料流程**物件：  
+1.  建立 ADO **資料流程** 物件：  
   
     ```  
     Stream20Ptr adoStr;  
     adoStr.CreateInstance(__uuidof(Stream));  
     ```  
   
-2.  查詢**Stream**物件上的**IADOStreamConstruction**介面：  
+2.  查詢**資料流程**物件上的**IADOStreamConstruction**介面：  
   
     ```  
     adoStreamConstructionPtr adoStrConstruct=NULL;  
@@ -55,7 +56,7 @@ ms.locfileid: "87242808"
                          (void**)&adoStrConstruct);  
     ```  
   
- 呼叫 `IADOStreamConstruction::get_Stream` 屬性方法，以在 ADO**資料流程**物件上設定 OLE DB **IStream**物件：  
+ 呼叫 `IADOStreamConstruction::get_Stream` 屬性方法，在 ADO**資料流程**物件上設定 OLE DB **IStream**物件：  
   
 ```  
 IUnknown *pUnk=NULL;  

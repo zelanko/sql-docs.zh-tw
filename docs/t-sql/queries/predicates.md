@@ -1,4 +1,5 @@
 ---
+description: 述詞
 title: 述詞 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: ddbc530c-f44d-4551-9ca3-3430258eb6c0
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 589eae77ae9d13befdf4f143142dd9dcaa67acd0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b2b6ac5b902575550ca5d09e42aae9d574fa4c36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248700"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422432"
 ---
 # <a name="predicates"></a>述詞
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

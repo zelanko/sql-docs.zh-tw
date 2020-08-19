@@ -1,5 +1,6 @@
 ---
-title: '&gt;= （大於或等於）（MDX） |Microsoft Docs'
+description: '&gt;= (大於或等於)  (MDX) '
+title: '&gt;= (大於或等於)  (MDX) |Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,14 +9,14 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0e8599378367dd47bd5858c09327795a25852105
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1e9ce7d9f7e372ac9193751c258af63ba6f300fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005846"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429930"
 ---
-# <a name="gt-greater-than-or-equal-to-mdx"></a>&gt;= （大於或等於）（MDX）
+# <a name="gt-greater-than-or-equal-to-mdx"></a>&gt;= (大於或等於)  (MDX) 
 
 
   執行比對作業，判定某個多維度運算式 (MDX) 運算式的值是否大於或等於另一個 MDX 運算式的值。  
@@ -36,9 +37,9 @@ MDX_Expression >= MDX_Expression
   
 -   如果第一個參數的值大於或等於第二個參數的值，**則為 true** 。  
   
--   如果第一個參數的值低於第二個參數的值，則**為 false** 。  
+-   如果第一個參數的值小於第二個參數的值，則**為 false** 。  
   
--   如果兩個參數都是 null，或是其中一個參數為 null，而另一個參數為0，則**為 true** 。  
+-   如果兩個參數都是 null 或其中一個參數為 null，而另一個參數為0，則**為 true** 。  
   
 ## <a name="examples"></a>範例  
  以下範例示範此運算子的用法。  

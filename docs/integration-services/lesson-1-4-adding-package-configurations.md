@@ -1,4 +1,5 @@
 ---
+description: 課程 1-4 - 新增套件設定
 title: 步驟 4：新增套件設定 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e92ad2f9b330ef088423a10199cd22f64ff77920
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 052bb905c78839c644a5436da568667b6665b432
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917374"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477200"
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>課程 1-4 - 新增套件設定
 

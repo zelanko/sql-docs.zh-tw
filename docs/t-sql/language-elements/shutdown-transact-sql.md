@@ -1,4 +1,5 @@
 ---
+description: SHUTDOWN (Transact-SQL)
 title: SHUTDOWN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db543ba464af2c71ba3390cb4574797713b8c764
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8d3d0bc74e2d928b81e00947095aa992669bcb54
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918770"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459256"
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +67,7 @@ SHUTDOWN [ WITH NOWAIT ]
   
 -   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員。  
   
--   從預設執行個體的命令提示字元執行 **net stop mssqlserver**，或從具名執行個體的命令提示字元執行 **net stop mssql$** _instancename_。  
+-   從預設執行個體的命令提示字元執行 **net stop mssqlserver**，或從具名執行個體的命令提示字元執行 **net stop mssql$**_instancename_。  
   
 -   使用 [控制台] 中的 [服務]。  
   

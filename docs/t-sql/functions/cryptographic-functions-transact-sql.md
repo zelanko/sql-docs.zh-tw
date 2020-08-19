@@ -1,4 +1,5 @@
 ---
+description: 加密函數 (Transact-SQL)
 title: 密碼編譯函式 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0be5626b-5a25-4d8c-9f44-7abbfccf816c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 77821dfc49bd1e3dba1bde1bc63da15bd9877bf6
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f54a52f2fdb4e17d3e32ab47ca7e3dccfcb9aeb2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248748"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468160"
 ---
 # <a name="cryptographic-functions-transact-sql"></a>密碼編譯函式 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -165,8 +166,8 @@ ms.locfileid: "87248748"
 
 &nbsp;
 
-## <a name="see-also"></a>另請參閱
-[函數](../../t-sql/functions/functions.md)  
+## <a name="see-also"></a>請參閱
+[函式](../../t-sql/functions/functions.md)  
 [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
 [權限階層 &#40;Database Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)  
 [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  

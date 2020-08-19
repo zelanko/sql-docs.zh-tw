@@ -1,5 +1,6 @@
 ---
-title: sp_dbmmonitorchangealert （Transact-sql） |Microsoft Docs
+description: sp_dbmmonitorchangealert (Transact-SQL)
+title: sp_dbmmonitorchangealert (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1b29f82b-9cf8-4539-8d5c-9a1024db8a50
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c5c520ff4b3e54f027f6afa5ca203c412f3f6291
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f4cfeffd28455b08b6ad3959f538f2eff95c6eb0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85866615"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486140"
 ---
 # <a name="sp_dbmmonitorchangealert-transact-sql"></a>sp_dbmmonitorchangealert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,15 +60,15 @@ sp_dbmmonitorchangealert database_name
 |4|鏡像認可負擔|指定在主體伺服器上產生警告之前所容許之每項交易的平均延遲毫秒數。 這項延遲是當主體伺服器執行個體等待鏡像伺服器執行個體將交易記錄寫入重做佇列中時所產生的負擔量。 只有在高安全性模式中才會顯出這個值的重要性。|  
 |5|保留期限|在資料庫鏡像狀態資料表中控制資料列保留時間的中繼資料。|  
   
- 如需對應于警告的事件識別碼的詳細資訊，請參閱[&#40;SQL Server&#41;，使用鏡像效能標準的警告臨界值和警示](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)。  
+ 如需與警告對應之事件識別碼的詳細資訊，請參閱 [使用鏡像效能計量的警告臨界值和警示 &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)。  
   
  *alert_threshold*  
  警告的臨界值。 如果在更新鏡像狀態時，傳回了這個臨界值以上的值，會在 Windows 事件記錄檔中輸入一個項目。 根據效能標準而定，這個值可能代表 KB、分鐘或毫秒。  
   
 > [!NOTE]  
->  若要查看目前的值，請執行[sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)預存程式。  
+>  若要查看目前的值，請執行 [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) 預存程式。  
   
- *後*  
+ *啟用*  
  是否已啟用警告？  
   
  0 = 警告已停用。  
@@ -84,7 +85,7 @@ sp_dbmmonitorchangealert database_name
  None  
   
 ## <a name="permissions"></a>權限  
- 需要**系統管理員（sysadmin** ）固定伺服器角色中的成員資格。  
+ 需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
  下列範例會為 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫設定每個效能標準的臨界值及保留期限。 下表顯示範例中所使用的值。  

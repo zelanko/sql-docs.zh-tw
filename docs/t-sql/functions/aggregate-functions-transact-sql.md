@@ -1,4 +1,5 @@
 ---
+description: 彙總函式 (Transact-SQL)
 title: 彙總函式 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/15/2018
@@ -18,12 +19,12 @@ ms.assetid: 0c06ae42-eb0a-4d77-9d74-aa1e7f344009
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7227f06adaf29b2ff9718ae28fc0b467053455c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 17b7b4f5eace501c035245f31ba22cbc4b1afb17
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007950"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422872"
 ---
 # <a name="aggregate-functions-transact-sql"></a>彙總函式 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

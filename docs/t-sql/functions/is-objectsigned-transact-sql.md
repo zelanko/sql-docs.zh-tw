@@ -1,4 +1,5 @@
 ---
+description: IS_OBJECTSIGNED (Transact-SQL)
 title: IS_OBJECTSIGNED (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: afbc4f7f-8266-4ee6-9802-14a2dbe69ef6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fe913220d11523bc52b36498d1517c384991e2de
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e6ef80c95e7ff6fb2751a86d10ea707b2a1033d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110455"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422712"
 ---
 # <a name="is_objectsigned-transact-sql"></a>IS_OBJECTSIGNED (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

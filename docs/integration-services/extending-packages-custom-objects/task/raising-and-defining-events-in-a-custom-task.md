@@ -1,4 +1,5 @@
 ---
+description: 引發並在自訂工作中定義事件
 title: 在自訂工作中引發和定義事件 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7a0cdd94e6ad739b24eccc5ce466a4e916850674
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 69f2f6c7f27f4a199ff96661595bb03b3eaafb62
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916306"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477355"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>引發並在自訂工作中定義事件
 

@@ -1,4 +1,5 @@
 ---
+description: 建立集合 (Master Data Services)
 title: 建立集合
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 112adceba92c705cf545f6f4a67771c3d31292cd
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 7a5566592be79b54d4beda1c814500aa166c2404
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812415"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495037"
 ---
 # <a name="create-a-collection-master-data-services"></a>建立集合 (Master Data Services)
 
@@ -26,7 +27,7 @@ ms.locfileid: "85812415"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當您想要建立分頁成員和合併成員的一般清單時，請建立集合。 集合不必包含實體的所有成員。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 [ **Explorer** ] 功能區域的許可權。  
@@ -51,15 +52,15 @@ ms.locfileid: "85812415"
   
 8.  或者，在 **[描述]** 方塊中，輸入集合的描述。  
   
-9. 按一下 [確定] 。  
+9. 按一下 [確定]。  
   
 ## <a name="next-steps"></a>後續步驟  
   
 -   [將成員加入至集合 &#40;Master Data Services&#41;](../master-data-services/add-members-to-a-collection-master-data-services.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Master Data Services 的集合&#41;](../master-data-services/collections-master-data-services.md)   
- [&#40;Master Data Services 刪除成員或集合&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)   
+ [集合 &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)   
+ [刪除成員或集合 &#40;Master Data Services&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)   
  [建立明確階層 &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)  
   
   

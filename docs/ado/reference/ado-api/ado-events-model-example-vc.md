@@ -1,5 +1,6 @@
 ---
-title: ADO 事件模型範例（VC + +） |Microsoft Docs
+description: ADO 事件模型範例 (VC++)
+title: ADO 事件模型範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,39 +15,39 @@ helpviewer_keywords:
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bce894f1e0cce8c8d8800b2633924f9cc5bc6bd9
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2bdb668584a0a725add4decc0bd64217d5dacbb5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747344"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451430"
 ---
 # <a name="ado-events-model-example-vc"></a>ADO 事件模型範例 (VC++)
-Ado 事件具現[化（依語言](../../../ado/guide/data/ado-event-instantiation-by-language.md)）的 Visual C++ 區段會提供如何具現化 ado 事件模型的一般描述。 以下是在 **#import**指示詞所建立的環境中，具現化事件模型的特定範例。  
+Ado 事件具現 [化（依語言](../../../ado/guide/data/ado-event-instantiation-by-language.md) ）的 Visual C++ 區段提供如何具現化 ADO 事件模型的一般描述。 以下是在 **#import** 指示詞所建立的環境內具現化事件模型的特定範例。  
   
- 一般描述會使用**adoint**做為方法簽章的參考。 不過，一般描述中的一些詳細資料會因使用 **#import**指示詞而稍微變更：  
+ 一般描述會使用 **adoint** 做為方法特徵標記的參考。 不過，一般描述中的一些詳細資料會因使用 **#import** 指示詞而稍微變更：  
   
--   **#Import**指示詞會解析其基本形式的**typedef**、方法簽章資料類型和修飾詞。  
+-   **#Import**指示詞會將**typedef**的、方法簽章資料類型和修飾詞解析為其基本形式。  
   
--   必須覆寫的純虛擬方法，其前面都會加上 "**raw_**"。  
+-   必須覆寫的純虛擬方法都以 "**raw_**" 作為前置詞。  
   
  有些程式碼只會反映編碼樣式。  
   
--   **建議**方法所使用的**IUnknown**指標是透過呼叫**QueryInterface**來明確取得。  
+-   使用對**QueryInterface**的呼叫，會明確取得「**建議**」方法所使用的**IUnknown**指標。  
   
--   您不需要在類別定義中明確地撰寫函式的程式碼。  
+-   您不需要在類別定義中明確編寫函式的程式碼。  
   
--   您可能想要撰寫更健全的 QueryInterface、AddRef 和 Release 的程式碼。  
+-   您可能想要撰寫更穩固的 QueryInterface、AddRef 和發行的執行程式碼。  
   
--   **__Uuidof （）** 指示詞會廣泛用來取得介面識別碼。  
+-   **__Uuidof ( # B1**指示詞廣泛用來取得介面識別碼。  
   
  最後，此範例包含一些工作程式碼。  
   
 -   此範例會撰寫為主控台應用程式。  
   
--   您應該在批註 "" 底下插入自己的程式碼 `// Do some work` 。  
+-   您應該在批註 "" 下插入自己的程式碼 `// Do some work` 。  
   
--   所有事件處理常式都預設為不執行任何動作，並取消進一步的通知。 您應該為應用程式插入適當的程式碼，並在必要時允許通知。  
+-   所有事件處理常式都會預設為不執行任何動作，並取消進一步的通知。 您應為您的應用程式插入適當的程式碼，並視需要允許通知。  
   
 ```  
 // ADO_Events_Model_Example.cpp  

@@ -1,4 +1,5 @@
 ---
+description: catalog.create_environment_reference (SSISDB 資料庫)
 title: catalog.create_environment_reference (SSISDB 資料庫) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 48069bea-31cb-4a0e-9849-a07edc94088f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 07f30518b775ac3a09ac2990376beb9947bed7a4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dcca4fd25fd201c9b278107dce188b6cab12d866
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916932"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477101"
 ---
 # <a name="catalogcreate_environment_reference-ssisdb-database"></a>catalog.create_environment_reference (SSISDB 資料庫)
 

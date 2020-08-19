@@ -1,4 +1,5 @@
 ---
+description: ShortestLineTo (geometry 資料類型)
 title: ShortestLineTo (geometry 資料型別) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 39a2d0e4-4f93-4e94-a27e-6ad9537cfe74
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 37008718b66d96ba604a72b49a5f082cc29766bc
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: bd22be1b41ec9213d8e42c66f4de187581d7381d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555629"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422292"
 ---
 # <a name="shortestlineto-geometry-data-type"></a>ShortestLineTo (geometry 資料類型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

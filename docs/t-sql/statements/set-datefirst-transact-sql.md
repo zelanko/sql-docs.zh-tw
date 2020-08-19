@@ -1,4 +1,5 @@
 ---
+description: SET DATEFIRST (Transact-SQL)
 title: SET DATEFIRST (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -25,12 +26,12 @@ ms.assetid: 6b0d0e52-8ac1-4f88-b091-f98d6fb8574a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aa66a7d6d30c355e1643ec4fce75f3cdb26465ae
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 8c46133b24b25901d2f9ac1a1982c45fdf804808
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483766"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88415524"
 ---
 # <a name="set-datefirst-transact-sql"></a>SET DATEFIRST (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

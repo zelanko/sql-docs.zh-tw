@@ -1,4 +1,5 @@
 ---
+description: DBCC CLEANTABLE (Transact-SQL)
 title: DBCC CLEANTABLE (Transact-SQL)
 ms.custom: ''
 ms.date: 11/14/2017
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 0dbbc956-15b1-427b-812c-618a044d07fa
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: a8294877bd557ae29ebc39b5b55534ed69088e29
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 5cde2ed7c2d53498bb360d36a0ae13edda5e3073
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485259"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468255"
 ---
 # <a name="dbcc-cleantable-transact-sql"></a>DBCC CLEANTABLE (Transact-SQL)
 

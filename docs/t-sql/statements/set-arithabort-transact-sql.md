@@ -1,4 +1,5 @@
 ---
+description: SET ARITHABORT (Transact-SQL)
 title: SET ARITHABORT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/04/2017
@@ -27,12 +28,12 @@ ms.assetid: f938a666-fdd1-4233-b97f-719f27b1a0e6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22c0829185c92587153039e5e3cf1a6cdad5ef29
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9c73faad3f032775b292897ee1f51c2d1a0a4228
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999441"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88415734"
 ---
 # <a name="set-arithabort-transact-sql"></a>SET ARITHABORT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +56,9 @@ SET ARITHABORT { ON | OFF }
 SET ARITHABORT ON
 ```
   
-## <a name="remarks"></a>備註  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>備註
 在登入工作階段中一律將 ARITHABORT 設為 ON。 將 ARITHABORT 設為 OFF 可能會對查詢最佳化造成負面影響，進而導致效能問題。  
   
 > [!WARNING]  
@@ -84,7 +87,7 @@ SET ARITHABORT 的設定會在執行階段發生，而非剖析階段。
   
 若要檢視 SET ARITHABORT 的目前設定，請執行下列查詢：
   
-```  
+```sql  
 DECLARE @ARITHABORT VARCHAR(3) = 'OFF';  
 IF ( (64 & @@OPTIONS) = 64 ) SET @ARITHABORT = 'ON';  
 SELECT @ARITHABORT AS ARITHABORT;  

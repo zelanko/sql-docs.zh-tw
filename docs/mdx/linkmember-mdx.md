@@ -1,5 +1,6 @@
 ---
-title: LinkMember （MDX） |Microsoft Docs
+description: LinkMember (MDX)
+title: LinkMember (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8a00388e067878d9c2165cbae6844f8020b7c63e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81d8d87caa0c844bd2754ba2d044936d43f8d48a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905607"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429860"
 ---
 # <a name="linkmember-mdx"></a>LinkMember (MDX)
 
@@ -35,10 +36,10 @@ LinkMember(Member_Expression, Hierarchy_Expression)
  傳回階層的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- **LinkMember**函數會傳回指定之階層中的成員，該階層符合相關階層中指定成員之每個層級的索引鍵值。 每個層級的屬性必須有相同的索引鍵基數和資料類型。 在非自然階層中，如果有多個項目符合屬性的索引鍵值，結果會是錯誤或未定。  
+ **LinkMember**函式會從指定的階層傳回成員，此成員會符合相關階層中指定成員之每個層級的索引鍵值。 每個層級的屬性必須有相同的索引鍵基數和資料類型。 在非自然階層中，如果有多個項目符合屬性的索引鍵值，結果會是錯誤或未定。  
   
 ## <a name="examples"></a>範例  
- 下列範例會使用**LinkMember**函式，針對行事曆階層中 Date. date 屬性階層之2002成員的父項，傳回「艾德作品」 cube 中的預設量值。  
+ 下列範例會使用 **LinkMember** 函式，針對行事曆階層中 Date. date 屬性階層的2002年7月1日成員，傳回「艾德作品」 cube 中的預設量值。  
   
 ```  
 SELECT  Hierarchize  

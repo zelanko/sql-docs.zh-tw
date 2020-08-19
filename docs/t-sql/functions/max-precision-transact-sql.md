@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;MAX_PRECISION (Transact-SQL)'
 title: '@@MAX_PRECISION (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 9e7158a1-e503-422a-b326-3c9b06e181b2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: de80639e43418afdca44afd781cb28d48477ff8b
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e6a44419d89a8c823794ad3bd69adcae1fbb463e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112415"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422632"
 ---
 # <a name="x40x40max_precision-transact-sql"></a>&#x40;&#x40;MAX_PRECISION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

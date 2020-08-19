@@ -1,4 +1,5 @@
 ---
+description: SQRT (SSIS 運算式)
 title: SQRT (SSIS 運算式) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 54a75389-c501-4e22-87b8-905f66d6a3a5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b12c303d12d0bc4dac23993b9da574409a8e3ae4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6308d8534e0a0d10d1696d86c09d619e8f8836aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914934"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477387"
 ---
 # <a name="sqrt-ssis-expression"></a>SQRT (SSIS 運算式)
 

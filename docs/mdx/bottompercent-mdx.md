@@ -1,5 +1,6 @@
 ---
-title: BottomPercent （MDX） |Microsoft Docs
+description: BottomPercent (MDX)
+title: BottomPercent (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cbcf9086cedc9221c39832bd0b7d55e5f0814c7f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b3ce341526270335564e9f67ccb89612854e098
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68016908"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494973"
 ---
 # <a name="bottompercent-mdx"></a>BottomPercent (MDX)
 
@@ -38,10 +39,10 @@ BottomPercent(Set_Expression, Percentage, Numeric_Expression)
  有效的數值運算式，這通常是傳回數字之資料格座標的多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- **BottomPercent**函數會針對指定的集合進行評估之後，計算指定之數值運算式的總和，並以遞增的順序排序集合。 然後，此函數會傳回最低值的元素，它們的總和值累計百分比至少是指定的百分比。 這個函數會傳回累計總計至少是指定百分比之集合的最小子集。 傳回從最大到最小排列的元素。  
+ **BottomPercent**函式會計算指定之數值運算式的總和，並對指定的集合進行評估，並以遞增順序排序集合。 然後，此函數會傳回最低值的元素，它們的總和值累計百分比至少是指定的百分比。 這個函數會傳回累計總計至少是指定百分比之集合的最小子集。 傳回從最大到最小排列的元素。  
   
 > [!IMPORTANT]  
->  **BottomPercent**函數（例如[TopPercent](../mdx/toppercent-mdx.md)函數）一律會中斷階層。 如需詳細資訊，請參閱 Order 函數。  
+>  **BottomPercent**函式（例如[TopPercent](../mdx/toppercent-mdx.md)函數）一律會中斷階層。 如需詳細資訊，請參閱 Order 函數。  
   
 ## <a name="example"></a>範例  
  下列範例會為 Bike 類別目錄傳回 2003 會計年度 Geography 維度 Geography 階層中 City 層級之成員的最小集合，此集合的累計總計使用 Reseller Sales Amount 量值計算至少是累計總計的 15% (以此集合中最小銷售數的成員開頭)。  

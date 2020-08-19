@@ -1,5 +1,6 @@
 ---
-title: '錯誤（Visual C++ #import 的語法索引） |Microsoft Docs'
+description: '使用 #import) Visual C++ 語法索引時發生錯誤 ('
+title: '使用 #import)  (Visual C++ 語法索引時發生錯誤 |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 1ee59754-59c8-48e2-a4fb-242fa788c1f9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c118bcc524aefb03f1f34f66cd595a83e21f72d9
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f4802a03c6178dff720b67bbdc17f0ca339a4886
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758784"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443960"
 ---
-# <a name="error-visual-c-syntax-index-with-import"></a>錯誤（Visual C++ #import 的語法索引）
+# <a name="error-visual-c-syntax-index-with-import"></a>使用 #import) Visual C++ 語法索引時發生錯誤 (
 ## <a name="properties"></a>屬性  
   
 ```  

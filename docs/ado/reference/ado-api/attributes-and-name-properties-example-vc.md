@@ -1,5 +1,6 @@
 ---
-title: Attributes 和 Name 屬性範例（VC + +） |Microsoft Docs
+description: '屬性和名稱屬性範例 (VC + +) '
+title: 屬性和名稱屬性範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 2db7c9ca-d7d0-4c8e-840b-b27d7933ec40
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b639cafe2f37b365c733f4aabc269f5f09c27918
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1b482b59344f141b01979e850056fbb4da93bc3c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762916"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451210"
 ---
-# <a name="attributes-and-name-properties-example-vc"></a>Attributes 和 Name 屬性範例（VC + +）
-這個範例會顯示[Connection](../../../ado/reference/ado-api/connection-object-ado.md)、 [Field](../../../ado/reference/ado-api/field-object.md)和[property](../../../ado/reference/ado-api/property-object-ado.md)物件的[Attributes](../../../ado/reference/ado-api/attributes-property-ado.md)屬性值。 它會使用[name](../../../ado/reference/ado-api/name-property-ado.md)屬性來顯示每個**欄位**和**屬性**物件的名稱。  
+# <a name="attributes-and-name-properties-example-vc"></a>屬性和名稱屬性範例 (VC + +) 
+此範例會顯示[連接](../../../ado/reference/ado-api/connection-object-ado.md)、[欄位](../../../ado/reference/ado-api/field-object.md)和[屬性](../../../ado/reference/ado-api/property-object-ado.md)物件的[Attributes](../../../ado/reference/ado-api/attributes-property-ado.md)屬性值。 它會使用 [name](../../../ado/reference/ado-api/name-property-ado.md) 屬性來顯示每個 **欄位** 和 **屬性** 物件的名稱。  
   
 ```  
 // BeginAttributesCpp.cpp  
@@ -181,8 +182,8 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Attributes 屬性（ADO）](../../../ado/reference/ado-api/attributes-property-ado.md)   
- [Connection 物件（ADO）](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [ (ADO) 的 Attributes 屬性 ](../../../ado/reference/ado-api/attributes-property-ado.md)   
+ [ (ADO) 的 Connection 物件 ](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Field 物件](../../../ado/reference/ado-api/field-object.md)   
- [Name 屬性（ADO）](../../../ado/reference/ado-api/name-property-ado.md)   
+ [ (ADO) 的 Name 屬性 ](../../../ado/reference/ado-api/name-property-ado.md)   
  [Property 物件 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)

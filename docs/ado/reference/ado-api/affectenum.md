@@ -1,4 +1,5 @@
 ---
+description: AffectEnum
 title: AffectEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,32 +16,32 @@ helpviewer_keywords:
 ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8c75c83fea1e6c8f4916180889635ddebd9cd915
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 551c2ec7b8351ed17841ed1a4073c1a411dc77d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242798"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451290"
 ---
 # <a name="affectenum"></a>AffectEnum
-指定哪些記錄會受到作業影響。  
+指定作業會影響哪些記錄。  
   
-|持續性|值|描述|  
+|常數|值|描述|  
 |--------------|-----------|-----------------|  
-|**adAffectAll**|3|如果沒有套用到**記錄集**的[篩選](../../../ado/reference/ado-api/filter-property.md)，會影響所有記錄。<br /><br /> 如果**Filter**屬性設定為字串準則（例如 "Author = ' Smith '"），則作業會影響目前章節中的可見記錄。<br /><br /> 如果**Filter**屬性設定為[FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md)或書簽陣列的成員，則作業將會影響**記錄集**的所有資料列。 **注意：** Visual Basic 物件瀏覽器中會隱藏 adAffectAll。|  
-|**adAffectAllChapters**|4|會影響**記錄集**所有同輩章節中的所有記錄，包括無法透過目前套用的任何**篩選器**看到的所有記錄。|  
+|**adAffectAll**|3|如果沒有將 [篩選](../../../ado/reference/ado-api/filter-property.md) 套用至 **記錄集**，會影響所有記錄。<br /><br /> 如果 **Filter** 屬性設定為字串準則 (例如 "Author = ' Smith '" ) ，則作業會影響目前章節中的可見記錄。<br /><br /> 如果 **Filter** 屬性設定為 [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) 的成員或書簽的陣列，則作業會影響 **記錄集**的所有資料列。 **注意： adAffectAll** 會隱藏在 Visual Basic 的物件瀏覽器中。|  
+|**adAffectAllChapters**|4|會影響 **記錄集**之所有同級章節中的所有記錄，包括無法透過目前套用的任何 **篩選** 來顯示的記錄。|  
 |**adAffectCurrent**|1|只會影響目前的記錄。|  
-|**adAffectGroup**|2|只會影響符合目前[篩選](../../../ado/reference/ado-api/filter-property.md)屬性設定的記錄。 您必須將**Filter**屬性設定為**FilterGroupEnum**值或**書簽**陣列，才能使用此選項。|  
+|**adAffectGroup**|2|只會影響符合目前 [篩選](../../../ado/reference/ado-api/filter-property.md) 屬性設定的記錄。 您必須將 **Filter** 屬性設定為 **FilterGroupEnum** 值或 **書簽** 陣列，才能使用此選項。|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC 對等  
- Package： **.com. wfc. 資料**  
+## <a name="adowfc-equivalent"></a>ADO/WFC 相等  
+ 封裝： **.com. 資料**  
   
-|持續性|  
+|常數|  
 |--------------|  
-|AdoEnums。會影響所有|  
-|AdoEnums。會影響 ALLCHAPTERS|  
-|AdoEnums。會影響目前的|  
-|AdoEnums。影響群組|  
+|AdoEnums 會影響。全部|  
+|AdoEnums 會影響 ALLCHAPTERS|  
+|AdoEnums 會影響目前的|  
+|AdoEnums 會影響到群組|  
   
 ## <a name="applies-to"></a>套用至  
 

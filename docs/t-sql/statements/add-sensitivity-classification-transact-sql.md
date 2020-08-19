@@ -1,4 +1,5 @@
 ---
+description: ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
 title: ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
 ms.prod: sql
 ms.technology: t-sql
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.custom: ''
 ms.date: 06/10/2020
 monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
-ms.openlocfilehash: dea40dcd8f9e7405d6fe4343e48b8cbdaf835593
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 8685b21029d97072425eede962ad59c9e9ef024e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87523200"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422302"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
 

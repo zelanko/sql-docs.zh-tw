@@ -1,4 +1,5 @@
 ---
+description: MATCH (Transact-SQL)
 title: MATCH (SQL Graph) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/26/2019
@@ -19,12 +20,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce954aaf4bab45b359bd57fea9af7b6e94933124
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 8a98fd2557655672389f5372009f3cf0adaa3ba9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555581"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459138"
 ---
 # <a name="match-transact-sql"></a>MATCH (Transact-SQL)
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]

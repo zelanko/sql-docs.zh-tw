@@ -1,5 +1,6 @@
 ---
-title: 建立子集語句（MDX） |Microsoft Docs
+description: MDX 資料定義 - CREATE SUBCUBE
+title: " (MDX) 建立子多維資料語句 |Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1034d96ce0d683d38139636d53471d23581807a1
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 24f8ade9255543fcb1d2c23b7959a5def93b21dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362798"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477020"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>MDX 資料定義 - CREATE SUBCUBE
 
@@ -35,7 +36,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
  *Select_Statement*  
  不包含 WITH、NON EMPTY 或 HAVING 子句，並且不要求維度或資料格屬性的有效多維度運算式 (MDX) SELECT 運算式。  
   
- 如需 Select 語句和**非視覺化**子句的詳細語法說明，請參閱[SELECT 語句 &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md) 。  
+ 如需 Select 語句和**非視覺化**子句的詳細語法說明，請參閱[&#40;MDX&#41;的 select 語句](../mdx/mdx-data-manipulation-select.md)。  
   
 ## <a name="remarks"></a>備註  
  Subcube 定義內排除預設成員時，座標將會相應地變更。 對於可彙總的屬性而言，預設成員會移動到 [All] 成員。 對於不可彙總的屬性而言，預設成員會移動到存在於 Subcube 內的成員。 下表包含 Subcube 範例以及預設成員組合。  
@@ -43,19 +44,19 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
 |原始的預設成員|可以彙總|子選擇|修訂過的預設成員|  
 |-----------------------------|-----------------------|---------------|----------------------------|  
 |Time.Year.All|是|{Time.Year.2003}|沒有變更|  
-|時間. 年。[1997]|是|{Time.Year.2003}|Time.Year.All|  
-|時間. 年。[1997]|否|{Time.Year.2003}|時間. 年。[2003]|  
-|時間. 年。[1997]|是|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
-|時間. 年。[1997]|否|{Time.Year.2003, Time.Year.2004}|Either Time.Year.[2003] 或<br /><br /> Time.Year.[2004]|  
+|Year。[1997]|是|{Time.Year.2003}|Time.Year.All|  
+|Year。[1997]|否|{Time.Year.2003}|Year。[2003]|  
+|Year。[1997]|是|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
+|Year。[1997]|否|{Time.Year.2003, Time.Year.2004}|Either Time.Year.[2003] 或<br /><br /> Time.Year.[2004]|  
   
  [All] 會員將永遠存在於 Subcube 內。  
   
  Subcube 內容中建立的工作階段物件會在卸除 Subcube 時一併卸除。  
   
- 如需 subcube 的詳細資訊，請參閱[在 mdx 中建立 subcube &#40;mdx&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)。  
+ 如需 subcube 的詳細資訊，請參閱 [在 mdx 中建立 subcube &#40;mdx&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)。  
   
 ## <a name="example"></a>範例  
- 下列範例會建立 Subcube，將明顯 Cube 空間限制於國家 (地區) 為加拿大的成員。 然後，它會使用**MEMBERS**函式傳回 Geography 使用者定義階層之 country 層級的所有成員-只傳回加拿大的國家/地區。  
+ 下列範例會建立 Subcube，將明顯 Cube 空間限制於國家 (地區) 為加拿大的成員。 然後，它會使用 **成員** 函式來傳回地理位置使用者定義階層之國家（地區）層級的所有成員-僅傳回加拿大的國家/地區。  
   
 ```  
 CREATE SUBCUBE [Adventure Works] AS  
@@ -126,9 +127,9 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
  [All Products] 和 [All Resellers] 的資料行與資料列個別包含所有成員的總計，而不只是可見成員的總計。  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 中的重要概念 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
+ [MDX &#40;Analysis Services&#41;的重要概念 ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
  [Mdx 腳本語句 &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
- [&#40;MDX&#41;的 DROP 子資料集語句](../mdx/mdx-data-definition-drop-subcube.md)   
+ [&#40;MDX&#41;卸載子多維資料語句 ](../mdx/mdx-data-definition-drop-subcube.md)   
  [SELECT 陳述式 &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)  
   
   

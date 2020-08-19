@@ -1,4 +1,5 @@
 ---
+description: Null (geography 資料類型)
 title: Null (geography 資料型別) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bb464b06-86e0-4b8b-ad78-04bd33b6069c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 4896de83781df95d4c3cbd673e866e51c04bd5fe
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 5967923f11fddfbdfb1871474f421b02583a6db7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552514"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422342"
 ---
 # <a name="null-geography-data-type"></a>Null (geography 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

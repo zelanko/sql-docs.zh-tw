@@ -1,5 +1,6 @@
 ---
-title: CalculationCurrentPass （MDX） |Microsoft Docs
+description: CalculationCurrentPass (MDX)
+title: CalculationCurrentPass (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 67950dbdf80dc18f798af798d53ab187facf86da
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 546b5a9dbec1914a8aeb0296ff892fda27c94c80
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68016878"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494951"
 ---
 # <a name="calculationcurrentpass-mdx"></a>CalculationCurrentPass (MDX)
 
@@ -28,7 +29,7 @@ CalculationCurrentPass()
 ```  
   
 ## <a name="remarks"></a>備註  
- **CalculationCurrentPass**函數會傳回目前查詢內容之計算行程的以零為起始的索引。 有了自動遞迴解析，此函式就不太實用。  
+ **CalculationCurrentPass**函式會傳回目前查詢內容的計算行程之以零為起始的索引。 使用自動遞迴解析時，此函式不會有很實用的用途。  
   
 ## <a name="see-also"></a>另請參閱  
  [CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)   

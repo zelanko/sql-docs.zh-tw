@@ -1,4 +1,5 @@
 ---
+description: READTEXT (Transact-SQL)
 title: READTEXT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/24/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 91b69853-1381-4306-8343-afdb73105738
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3b9ee26c8fcda094228e7bc5a26a4173c8a8d69b
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 5dead43fef139eec23cc219c30d5ef567f2fda0a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554763"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459112"
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

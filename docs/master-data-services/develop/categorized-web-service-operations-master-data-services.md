@@ -1,4 +1,5 @@
 ---
+description: 分類的 Web 服務作業 (Master Data Services)
 title: 分類的 Web 服務作業
 ms.custom: ''
 ms.date: 03/15/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 942fe6319d0cd47bac0fd11037214f0142f13818
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: bd6c3db52323385712bb946c63254e11c45cd5f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362964"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495020"
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>分類的 Web 服務作業 (Master Data Services)
 
@@ -103,7 +104,7 @@ ms.locfileid: "87362964"
 - <xref:Microsoft.MasterDataServices.ServiceClient.DataQualityOperationStatus%2A>
   
 ## <a name="data-import-operations"></a>資料匯入作業  
- 這些作業用於將資料匯入至 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫。 如需詳細資訊，請參閱[總覽：從資料表匯入資料 &#40;Master Data Services&#41;](../../master-data-services/overview-importing-data-from-tables-master-data-services.md)。  
+ 這些作業用於將資料匯入至 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫。 如需詳細資訊，請參閱 [總覽：從資料表匯入資料 &#40;Master Data Services&#41;](../../master-data-services/overview-importing-data-from-tables-master-data-services.md)。  
   
 - <xref:Microsoft.MasterDataServices.ServiceClient.EntityStagingClear%2A>
 - <xref:Microsoft.MasterDataServices.ServiceClient.EntityStagingGet%2A>

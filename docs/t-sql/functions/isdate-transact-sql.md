@@ -1,4 +1,5 @@
 ---
+description: ISDATE (Transact-SQL)
 title: ISDATE (Transact-SQL)
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -31,12 +32,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70ffa2d5ef3a24829bd55d86a156b5f5b3c9525b
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: b918faac1cad445956b85459f72557fde0c13116
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112984"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422722"
 ---
 # <a name="isdate-transact-sql"></a>ISDATE (Transact-SQL)
 

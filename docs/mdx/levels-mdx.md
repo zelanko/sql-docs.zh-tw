@@ -1,5 +1,6 @@
 ---
-title: 層級（MDX） |Microsoft Docs
+description: Levels (MDX)
+title: 層級 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 24e15602593f9116d499345ffca093f86ecfa135
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f3b0a7eaea166fdefbfd947faf95b58f74bdb8be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905638"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429870"
 ---
 # <a name="levels-mdx"></a>Levels (MDX)
 
@@ -42,15 +43,15 @@ Hierarchy_Expression.Levels( Level_Name )
  指定層級名稱的有效字串運算式。  
   
 ## <a name="remarks"></a>備註  
- 如果指定了層級編號，level**函數會**傳回與指定之以零為基底的位置相關聯的層級。  
+ 如果指定 **了層級** 編號，level 函式會傳回與指定之以零為基底的位置相關聯的層級。  
   
- 如果指定了層級名稱，level**函數會**傳回指定的層級。  
+ 如果指定了層級名稱，level **函數會** 傳回指定的層級。  
   
 > [!NOTE]  
 >  對於使用者自訂函數，請使用字串運算式語法。  
   
 ## <a name="examples"></a>範例  
- 下列範例說明每個**層級**函數的語法。  
+ 下列範例說明每個 **層級** 函數語法。  
   
 ### <a name="numeric"></a>數值  
  下列範例會傳回 Country 層級：  

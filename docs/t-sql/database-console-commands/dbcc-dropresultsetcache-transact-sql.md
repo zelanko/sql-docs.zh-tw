@@ -1,4 +1,5 @@
 ---
+description: DBCC DROPRESULTSETCACHE  (Transact-SQL)
 title: DBCC DROPRESULTSETCACHE (Transact-SQL)
 ms.custom: ''
 ms.date: 07/03/2019
@@ -12,12 +13,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 8f8151caa03eeac76285ba8a548a0a8843211d2e
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: aca4827018d012919b84014fc4654ddc0e684a7a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394575"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468202"
 ---
 # <a name="dbcc-dropresultsetcache--transact-sql"></a>DBCC DROPRESULTSETCACHE  (Transact-SQL)
 

@@ -1,4 +1,5 @@
 ---
+description: OPTION 子句 (Transact-SQL)
 title: OPTION 子句 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -21,12 +22,12 @@ ms.assetid: f47e2f3f-9302-4711-9d66-16b1a2a7ffe3
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a33aa8ea63c5ac97e163ac75462242b49bb915a4
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 362909e9cd98536d97751787820a5df0c08ed101
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555593"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459150"
 ---
 # <a name="option-clause-transact-sql"></a>OPTION 子句 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
