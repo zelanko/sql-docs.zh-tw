@@ -1,4 +1,5 @@
 ---
+description: Broker:Activation 事件類別
 title: Broker:Activation 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2019
@@ -12,12 +13,12 @@ ms.assetid: 481d5b13-657e-4b51-8783-ccac3595bd45
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f82d6608160c5936be20c8d4309c512c61e54e48
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f54ff7fc9d4877fcaa75c5e0f5cf1af19f4eaeb7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763039"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88410194"
 ---
 # <a name="brokeractivation-event-class"></a>Broker:Activation 事件類別
 
@@ -35,7 +36,7 @@ ms.locfileid: "85763039"
 |**EventSequence**|**int**|此事件的序號。|51|否|  
 |**EventSubClass**|**nvarchar**|此事件報告的特定動作。 下列其中一個值：<br /><br /> **start**：   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已開始啟用預存程序。<br /><br /> **ended**：啟用預存程序已正常結束。<br /><br /> **aborted**：啟用預存程序已結束並發生錯誤。|21|否|  
 |**HostName**|**nvarchar**|執行用戶端的電腦名稱。 這個資料行會在用戶端提供主機名稱時填入。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  
-|**IntegerData**|**int**|此佇列上作用中的工作數。|25|否|  
+|**IntegerData**|**int**|此佇列上作用中的工作數。|25|No|  
 |**IsSystem**|**int**|指出事件是發生在系統處理序或使用者處理序。 1 = 系統，0 = 使用者。|60|否|  
 |**LoginSid**|**image**|已登入之使用者的安全性識別碼 (SID)。 伺服器上的每一個登入之 SID 是唯一的。|41|是|  
 |**NTDomainName**|**nvarchar**|使用者所隸屬的 Windows 網域。|7|是|  

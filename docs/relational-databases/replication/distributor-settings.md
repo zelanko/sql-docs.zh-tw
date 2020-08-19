@@ -1,4 +1,5 @@
 ---
+description: 散發者設定
 title: 散發者設定 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,18 +16,18 @@ ms.assetid: 8276a521-bdd1-4783-bdb6-7ab43499c0ca
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5fd12812dc7bafd03c542c8561182ff5ce82ac2b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8620cbc1dce63d4c2e14949866329d34207f7fc9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85653316"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88406404"
 ---
 # <a name="distributor-settings"></a>散發者設定
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   **[散發者設定]** 對話方塊，可讓您針對已加入至複寫監視器之左窗格的散發者變更設定。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **啟動複寫監視器時自動連接**  
  選取以讓複寫監視器連接到「散發者」並擷取狀態資訊。  
   

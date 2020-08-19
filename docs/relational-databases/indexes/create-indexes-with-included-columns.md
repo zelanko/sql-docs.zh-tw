@@ -1,4 +1,5 @@
 ---
+description: 建立內含資料行的索引
 title: 建立內含資料行的索引 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
@@ -21,12 +22,12 @@ ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1042bcf452b369b295476a662028350f75e2aaab
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: d4b7c552fa3955818c8d9978802f950f07f8a6bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279151"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88408264"
 ---
 # <a name="create-indexes-with-included-columns"></a>建立內含資料行的索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

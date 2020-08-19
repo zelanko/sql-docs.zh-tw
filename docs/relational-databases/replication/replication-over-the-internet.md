@@ -1,4 +1,5 @@
 ---
+description: 透過網際網路的複寫
 title: 透過網際網路的複寫 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: 04e7f4ed-e244-4bbe-ba12-09c33abea09e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c5a1244ed340dcfd4794c14635d570530b88f5d9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f6493b937330cee143af65c1ca7926a05773abb3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716725"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88404894"
 ---
 # <a name="replication-over-the-internet"></a>透過網際網路的複寫
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

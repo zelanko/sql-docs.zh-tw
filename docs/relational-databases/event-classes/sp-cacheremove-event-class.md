@@ -1,4 +1,5 @@
 ---
+description: SP:CacheRemove 事件類別
 title: SP:CacheRemove 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: aaa3c5c4-2d3a-4832-a473-ce9bd4fb1c17
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb77b88d58807a1a1b2bafca59dee0a802b5c434
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a81ece3a80d130a0a3ad5d46c78335b7681caa1c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717709"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88409674"
 ---
 # <a name="spcacheremove-event-class"></a>SP:CacheRemove 事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

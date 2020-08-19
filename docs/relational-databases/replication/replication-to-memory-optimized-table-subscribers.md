@@ -1,4 +1,5 @@
 ---
+description: 複寫至記憶體最佳化資料表訂閱者
 title: 複寫至記憶體最佳化資料表訂閱者 | Microsoft 文件
 ms.custom: ''
 ms.date: 11/21/2016
@@ -11,12 +12,12 @@ ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: cf09640b63328dde0dee11b0b5f4bcd037cb1524
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7345d2ed17d8eca7bac386f4abe58893827ff00e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716709"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88404964"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>複寫至記憶體最佳化資料表訂閱者
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,26 +43,26 @@ ms.locfileid: "85716709"
      如果使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 進行設定，將 **sp_addarticle** 預存程序的 **\@schema_option** 參數設為   
     **0x40000000000**開始，將提供這項功能。  
   
-3.  在 [發行項屬性] 視窗中，將 啟用記憶體最佳化  設定為 [true]  。  
+3.  在 [發行項屬性] 視窗中，將 啟用記憶體最佳化 **** 設定為 [true] ****。  
   
 4.  啟動快照集代理程式作業來產生此發行集的初始快照集。 如需詳細資訊，請參閱 [建立和套用初始快照集](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
   
-5.  現在建立一項新訂閱。 在 [新增訂閱精靈]  中，將 記憶體最佳化訂閱  設定為 [true]  。  
+5.  現在建立一項新訂閱。 在 [新增訂閱精靈] **** 中，將 記憶體最佳化訂閱 **** 設定為 [true] ****。  
 
  記憶體最佳化資料表現在應該會開始接收來自發行者的更新。  
   
 #### <a name="reconfigure-an-existing-transaction-replication"></a>重新設定現有的交易複寫  
   
-1.  移至 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的訂閱屬性，並將 記憶體最佳化訂閱  設定為 [true]  。 重新初始化訂閱之前，不會套用所做的變更。  
+1.  移至 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的訂閱屬性，並將 記憶體最佳化訂閱 **** 設定為 [true] ****。 重新初始化訂閱之前，不會套用所做的變更。  
   
      如果使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 進行設定，將 **sp_addsubscription** 預存程序的 **\@memory_optimized** 參數設為 true。  
   
-2.  移至 [發行項屬性] 視窗 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 內的發行集，將 啟用記憶體  設定為 [true]。  
+2.  移至 [發行項屬性] 視窗 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 內的發行集，將 啟用記憶體 **** 設定為 [true]。  
   
      如果使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 進行設定，將 **sp_addarticle** 預存程序的 **\@schema_option** 參數設為   
     **0x40000000000**開始，將提供這項功能。  
   
-3.  記憶體最佳化資料表不支援叢集索引。 若要藉由在目的地上將複寫轉換為非叢集索引來處理此項目的話，請將 為記憶體最佳化發行項將叢集索引轉換為非叢集索引  設定為 [true]。  
+3.  記憶體最佳化資料表不支援叢集索引。 若要藉由在目的地上將複寫轉換為非叢集索引來處理此項目的話，請將 為記憶體最佳化發行項將叢集索引轉換為非叢集索引 **** 設定為 [true]。  
   
      如果使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 進行設定，將 **sp_addarticle** 預存程序的 **\@schema_option** 參數設為 **0x0000080000000000**。  
   

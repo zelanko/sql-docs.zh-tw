@@ -1,4 +1,5 @@
 ---
+description: 資料行存放區索引 - 設計指導
 title: 資料行存放區索引 - 設計指導 | Microsoft Docs
 ms.custom: ''
 ms.date: 12/01/2017
@@ -11,19 +12,19 @@ ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7831c441b553d92e205e4a51cf9d5dc6dbadee82
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e601f2b89000902647631fda9ee46a90a92e5b39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007517"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88409174"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>資料行存放區索引 - 設計指導
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 資料行存放區索引設計的高階建議。 下列幾個良好的設計決策，有助您實現資料行存放區索引所設計的高資料壓縮和查詢效能。 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 本文假設您熟悉資料行存放區架構和術語。 如需詳細資訊，請參閱[資料行存放區索引 - 概觀](../../relational-databases/indexes/columnstore-indexes-overview.md)和[資料行存放區索引架構](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)。
 
@@ -185,7 +186,7 @@ ms.locfileid: "86007517"
 |重組資料行存放區索引|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)|ALTER INDEX ...REORGANIZE 會線上重組資料行存放區索引。|  
 |合併具有資料行存放區索引的資料表。|[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)|
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>接下來的步驟
 若要針對下列項目，建立空的資料行存放區索引：
 
 * [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，請參閱 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)。

@@ -1,4 +1,5 @@
 ---
+description: 識別和存取控制 (複寫)
 title: 識別和存取控制 (複寫) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/20/2018
@@ -16,16 +17,16 @@ ms.assetid: 4da0e793-1ee4-4f69-a80b-45c6732a238d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ea34f0b2b7e0a6ab2770178d926a5a9710f43575
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c44efad10aeade68f42e76d4aa5622807159110f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920734"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88404824"
 ---
 # <a name="identity-and-access-control-replication"></a>識別和存取控制 (複寫)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
-  驗證是某一實體 (在本文中通常是某台電腦) 驗證另一個實體 (通常是另一台電腦或使用者) 的身分或所代表身分的處理，實體也稱為 *「主體」* 。 授權是向已驗證的主體授與資源 (例如檔案系統中的檔案或是資料庫中的資料表) 存取權的處理。  
+  驗證是某一實體 (在本文中通常是某台電腦) 驗證另一個實體 (通常是另一台電腦或使用者) 的身分或所代表身分的處理，實體也稱為 *「主體」*。 授權是向已驗證的主體授與資源 (例如檔案系統中的檔案或是資料庫中的資料表) 存取權的處理。  
   
  複寫安全性使用驗證與授權來控制對複寫資料庫物件，以及複寫處理所涉及的電腦和代理程式的存取權限。 這可透過三種機制來完成：  
   

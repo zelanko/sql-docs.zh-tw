@@ -1,4 +1,5 @@
 ---
+description: 計算資料行的索引
 title: 計算資料行的索引 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/19/2018
@@ -17,12 +18,12 @@ ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de2efcf3b99e21284cf964b1cd43bc85027ecaac
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ea5366a8080ccbfb4d48c8bcfda8928ed54932d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760798"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88408114"
 ---
 # <a name="indexes-on-computed-columns"></a>計算資料行的索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -95,7 +96,7 @@ COLUMNPROPERTY 函數的 **IsPrecise** 屬性會報告 *computed_column_expressi
 ## <a name="data-type-requirements"></a>資料類型需求
   
 -   針對計算資料行所定義的 *computed_column_expression* 並不能評估為 **text**、 **ntext**或 **image** 資料類型。  
--   從 **image**、 **ntext**、 **text**、 **varchar(max)** 、 **nvarchar(max)** 、 **varbinary(max)** 以及 **xml** 資料類型所衍生的計算資料行，只要其資料類型可作為索引鍵資料行，就可以製作成索引。  
+-   從 **image**、 **ntext**、 **text**、 **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)** 以及 **xml** 資料類型所衍生的計算資料行，只要其資料類型可作為索引鍵資料行，就可以製作成索引。  
 -   從 **image**、 **ntext**以及 **text** 資料類型所衍生的計算資料行，只要其資料類型可作為非索引鍵之索引資料行，就可作為非叢集索引中無索引鍵 (內含) 的資料行。  
 
 

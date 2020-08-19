@@ -1,4 +1,5 @@
 ---
+description: 重新初始化訂閱 - 所有訂閱
 title: 重新初始化訂閱 - 所有訂閱 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,18 +16,18 @@ ms.assetid: e1122018-9f74-43e3-8489-7eae33ff23d9
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9da983b0f59625c6bd2404512e99d4f0928bff01
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cee027fbc0e614e7aa6bbc14292b79141a9b4df1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767701"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88405534"
 ---
 # <a name="reinitialize-subscriptions---all-subscriptions"></a>重新初始化訂閱 - 所有訂閱
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  **[重新初始化訂閱]** 對話方塊可以讓您標示發行集的所有訂閱，以進行重新初始化。 重新初始化會牽涉到將快照集套用到每個訂閱者；對於交易式發行集的訂閱，這是由散發代理程式執行；而對於合併式發行集的訂閱，則是由合併代理程式執行。  
+   [重新初始化訂閱]**** 對話方塊可以讓您標示發行集的所有訂閱，以進行重新初始化。 重新初始化會牽涉到將快照集套用到每個訂閱者；對於交易式發行集的訂閱，這是由散發代理程式執行；而對於合併式發行集的訂閱，則是由合併代理程式執行。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **使用目前的快照集**  
  選取即可在散發代理程式或合併代理程式下次針對訂閱執行時，將目前的快照集套用到每個訂閱者。 如果沒有任何有效的快照集可以使用，則不可以選取此選項。  
   

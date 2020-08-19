@@ -1,4 +1,5 @@
 ---
+description: 重新初始化訂閱
 title: 重新初始化訂閱 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ ms.assetid: fb13712b-e7ad-4f1f-b605-4554bad0cb60
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f52645bd3890f070c712165aa55aef595604ebba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7f1992be76777862078f029df44a73f7b3579dc2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767674"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88405414"
 ---
 # <a name="reinitialize-subscriptions"></a>重新初始化訂閱
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

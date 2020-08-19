@@ -1,4 +1,5 @@
 ---
+description: 新增發行集精靈
 title: 新增發行集精靈 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -40,12 +41,12 @@ helpviewer_keywords:
 ms.assetid: 57d65d16-90d1-4b4c-b68e-6418a7064e76
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b4585af3758327ea21834918a89142d8101b8745
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 679534bfdd567a0bbe48e43188d846b99e16e860
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85721230"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88405824"
 ---
 # <a name="new-publication-wizard"></a>新增發行集精靈
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,15 +64,15 @@ ms.locfileid: "85721230"
   
 -   [代理程式安全性 &#40;新增發行集精靈&#41;](../../relational-databases/replication/agent-security-new-publication-wizard.md)  
   
--   [發行項](../../relational-databases/replication/articles.md)  
+-   [文章](../../relational-databases/replication/articles.md)  
   
 -   [發行項的問題](../../relational-databases/replication/article-issues.md)  
   
 -   [篩選資料表的資料列](../../relational-databases/replication/filter-table-rows.md)  
   
--   [新增或編輯篩選](../../relational-databases/replication/add-or-edit-filter.md)  
+-   [加入或編輯篩選](../../relational-databases/replication/add-or-edit-filter.md)  
   
--   [新增或編輯聯結](../../relational-databases/replication/add-or-edit-join.md)  
+-   [加入或編輯聯結](../../relational-databases/replication/add-or-edit-join.md)  
   
 -   [產生篩選](../../relational-databases/replication/generate-filters.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: 重新發行資料
 title: 重新發行資料 | Microsoft 文件
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 08dd294c6d9c0283c6f8e3616c8289d28f2e8ef2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f68cdd2d985c9c91829d4b1b12e9aa47e3a8d04a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716677"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88404794"
 ---
 # <a name="republish-data"></a>重新發行資料
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -59,7 +60,7 @@ ms.locfileid: "85716677"
   
  複寫支援下表所示的重新發行案例。  
   
-|發行者|發行訂閱者|用戶|  
+|Publisher|發行訂閱者|用戶|  
 |---------------|---------------------------|----------------|  
 |交易式發行集|交易式訂閱/交易式發行集|交易式訂閱|  
 |交易式發行集|交易式訂閱/合併式發行集*|合併訂閱|  

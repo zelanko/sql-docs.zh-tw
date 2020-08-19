@@ -1,4 +1,5 @@
 ---
+description: Showplan All for Query Compile 事件類別
 title: Showplan All for Query Compile 事件類別 | Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: bb1dc446-5e6c-43d6-9db8-78c76cc2e01f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 582efa7068b9e4ebadc4cdfd9f10ee93eb2774df
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c828eae145f5d3eacf3c6fd938c4f92b72f343d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726195"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88409854"
 ---
 # <a name="showplan-all-for-query-compile-event-class"></a>Showplan All for Query Compile 事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "85726195"
 |IsSystem|**int**|指出事件是發生在系統處理序或使用者處理序。 1 = 系統，0 = 使用者。|60|是|  
 |LineNumber|**int**|顯示包含錯誤的行號。|5|是|  
 |LoginName|**nvarchar**|使用者的登入名稱 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性登入或 DOMAIN\username 格式的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登入認證)。|11|是|  
-|LoginSID|**image**|已登入之使用者的安全性識別碼 (SID)。 您可以在 sys.server_principals 目錄檢視中找到這項資訊。 伺服器上的每一個登入之 SID 是唯一的。|41|否|  
+|LoginSID|**image**|已登入之使用者的安全性識別碼 (SID)。 您可以在 sys.server_principals 目錄檢視中找到這項資訊。 伺服器上的每一個登入之 SID 是唯一的。|41|No|  
 |NestLevel|**int**|代表 @@NESTLEVEL 所傳回之資料的整數。|29|是|  
 |NTDomainName|**nvarchar**|使用者所隸屬的 Windows 網域。|7|是|  
 |NTUserName|**nvarchar**|Windows 使用者名稱。|6|是|  

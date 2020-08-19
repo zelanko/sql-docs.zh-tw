@@ -1,5 +1,6 @@
 ---
-title: contains 函數 (XQuery) |Microsoft Docs
+title: 包含函式 (XQuery) |Microsoft Docs
+description: 瞭解如何在 XQuery 中使用 contains 函式來判斷指定的字串值是否包含指定的子字串值。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 54b3603c18d814276d700a220fbee5e16ed77502
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9c1f313a5316059a05cb30a5af6ef7a451353a3d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67899023"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724220"
 ---
 # <a name="functions-on-string-values---contains"></a>字串值的相關函式 - contains
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  傳回值的類型 xs: boolean，指出是否的值 *$arg1*包含所指定的字串值 *$arg2*。  
+  傳回 xs： boolean 類型的值，指出 *$arg 1* 的值是否包含 *$arg 2*所指定的字串值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,31 +36,31 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
 ```  
   
 ## <a name="arguments"></a>引數  
- *$arg1*  
+ *$arg 1*  
  要測試的字串值。  
   
  *$arg2*  
  要尋找的子字串。  
   
 ## <a name="remarks"></a>備註  
- 如果值 *$arg2*是零長度字串，此函數會傳回 **，則為 True**。 如果值 *$arg1*是零長度字串，而 *$arg2*不是零長度字串，此函數會傳回**False**。  
+ 如果 *$arg 2* 的值是長度為零的字串，則函數會傳回 **True**。 如果 *$arg 1* 的值是長度為零的字串，而 *$arg 2* 的值不是長度為零的字串，則函數會傳回 **False**。  
   
- 如果值 *$arg1*或是 *$arg2*是空的序列，引數會當成零長度字串。  
+ 如果 *$arg 1* 或 *$arg 2* 的值是空的序列，則會將引數視為零長度的字串。  
   
  contains() 函數會使用 XQuery 的預設 Unicode 字碼元素定序來進行字串比較。  
   
- 指定的子字串值 *$arg2*必須小於或等於 4000 個字元。 如果指定的值大於 4000 個字元，就會發生動態錯誤狀況，而且 contains （） 函數會傳回空的序列，而不是布林值**真**或是**False**。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不會針對 XQuery 運算式引發動態錯誤。  
+ 針對 *$arg 2* 指定的子字串值必須小於或等於4000個字元。 如果指定的值大於4000個字元，就會發生動態錯誤狀況，而且 contains ( # A1 函式會傳回空的序列，而不是布林值 **True** 或 **False**。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不會針對 XQuery 運算式引發動態錯誤。  
   
- 若要取得不區分大小寫的比較[大寫](../xquery/functions-on-string-values-upper-case.md)或 lower-case 函式都可用。  
+ 為了取得不區分大小寫的比較，可以使用 [大寫](../xquery/functions-on-string-values-upper-case.md) 或小寫函數。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>補充字元 (Surrogate 字組)  
- XQuery 函式中 Surrogate 字組的行為相依於資料庫相容性層級，而且在某些情況下，還相依於函式的預設命名空間 URI。 如需詳細資訊，請參閱主題中的 「 XQuery 函式是 Surrogate 感知 」 區段[SQL Server 2016 中的 Database Engine 功能的突破性變更](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。 另請參閱[ALTER DATABASE 相容性層級&#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)並[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)。  
+ XQuery 函式中 Surrogate 字組的行為相依於資料庫相容性層級，而且在某些情況下，還相依於函式的預設命名空間 URI。 如需詳細資訊，請參閱 [SQL Server 2016 中資料庫引擎功能的重大變更](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)主題中的「XQuery 函式是可代理感知」一節。 另請參閱 [ALTER DATABASE 相容性層級 &#40;transact-sql&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 和定 [序和 Unicode 支援](../relational-databases/collations/collation-and-unicode-support.md)。  
   
 ## <a name="examples"></a>範例  
- 本主題會提供 XQuery 範例，針對 AdventureWorks 資料庫中的各種 xml 類型資料行中儲存的 XML 執行個體。  
+ 本主題針對儲存在 AdventureWorks 資料庫的各種 xml 類型資料行中的 XML 實例提供 XQuery 範例。  
   
 ### <a name="a-using-the-contains-xquery-function-to-search-for-a-specific-character-string"></a>A. 使用 contains() XQuery 函式來搜尋特定的字元字串  
- 下列查詢會尋找產品摘要描述中有包含 Aerodynamic 一詞的產品。 此查詢會傳回 ProductID 及 <`Summary`> 這類產品的項目。  
+ 下列查詢會尋找產品摘要描述中有包含 Aerodynamic 一詞的產品。 此查詢會傳回 ProductID 和 `Summary` 這類產品的 <> 元素。  
   
 ```  
 --The product model description document uses  
@@ -109,6 +110,6 @@ where CatalogDescription.exist('
  `</Prod>`  
   
 ## <a name="see-also"></a>另請參閱  
- [針對 xml 資料類型的 XQuery 函式](../xquery/xquery-functions-against-the-xml-data-type.md)  
+ [針對 xml 資料類型的 XQuery 函數](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

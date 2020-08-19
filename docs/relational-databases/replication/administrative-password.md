@@ -1,4 +1,5 @@
 ---
+description: 管理密碼
 title: 管理密碼 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,18 +14,18 @@ ms.assetid: d43bebc8-e83a-457a-b7f4-a61a735f1904
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: a16cbfbbae359a563b60d11a79451ad72bd45383
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: feef4402a50bedb326b67c2de5633c90bf9e994e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85740441"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88406384"
 ---
 # <a name="administrative-password"></a>管理密碼
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  如果在此精靈的 **[散發者]** 頁面上為此發行者選取了遠端散發者，您就必須為複寫用於在發行者與散發者之間進行連接的 **distributor_admin** 登入輸入密碼。 密碼必須符合設定散發精靈的 **[散發者密碼]** 頁面上指定的密碼，或是在 **[散發者屬性]** 對話方塊的 **[發行者]** 頁面上指定的密碼。  
+   如果在此精靈的 [散發者]**** 頁面上為此發行者選取了遠端散發者，您就必須為複寫用於在發行者與散發者之間進行連線的 **distributor_admin** 登入輸入密碼。 密碼必須符合設定散發精靈的 **[散發者密碼]** 頁面上指定的密碼，或是在 **[散發者屬性]** 對話方塊的 **[發行者]** 頁面上指定的密碼。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **密碼**  
  為發行者與遠端散發者之間的連接輸入密碼。  
   

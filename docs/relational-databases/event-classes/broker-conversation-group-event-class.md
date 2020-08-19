@@ -1,4 +1,5 @@
 ---
+description: Broker:Conversation Group 事件類別
 title: Broker:Conversation Group 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2019
@@ -12,12 +13,12 @@ ms.assetid: 6595bef6-9d40-42eb-a934-735622dd23fb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c767f77683c46151fd0d9804a35f838d88ca0f0a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 68afde98f2e219cacf20175bfa0cb71ad7afa90a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85679314"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88410124"
 ---
 # <a name="brokerconversation-group-event-class"></a>Broker:Conversation Group 事件類別
 
@@ -34,7 +35,7 @@ ms.locfileid: "85679314"
 |**DatabaseID**|**int**|由 USE *database* 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE *database* 陳述式，則是預設資料庫的識別碼。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 資料行，則 **ServerName** 會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
 |**EventClass**|**int**|擷取的事件類別類型。 對於 **Broker:Conversation Group** ，一律為 **136**。|27|否|  
 |**EventSequence**|**int**|此事件的序號。|51|否|  
-|**EventSubClass**|**nvarchar**|事件子類別的類型，針對每個事件類別提供更詳細的相關資訊。 這個資料行可包含下列值：<br /><br /> **建立**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 建立新的交談群組。<br /><br /> **卸除**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 刪除交談群組。|21|是|  
+|**EventSubClass**|**nvarchar**|事件子類別的類型，針對每個事件類別提供更詳細的相關資訊。 這個資料行可包含下列值：<br /><br /> **Create**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 建立新的交談群組。<br /><br /> **卸除**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 刪除交談群組。|21|是|  
 |**GUID**|**uniqueidentifier**|此事件描述之交談群組的交談群組識別碼。|54|否|  
 |**HostName**|**nvarchar**|執行用戶端的電腦名稱。 這個資料行會在用戶端提供主機名稱時填入。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  
 |**IsSystem**|**int**|指出事件是發生在系統處理序或使用者處理序。 1 = 系統，0 = 使用者。|60|否|  

@@ -1,4 +1,5 @@
 ---
+description: 佇列讀取器代理程式
 title: 佇列讀取器代理程式 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: f02d24b6-dcb5-4126-b56e-fab41cfe4337
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f39bd1423977048c36e00dfae049293c1bcab689
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1b3c11190db072518a506950bc5bf3409d1be770
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737066"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88405644"
 ---
 # <a name="queue-reader-agent"></a>佇列讀取器代理程式
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **[佇列讀取器代理程式]** 對話方塊會顯示佇列讀取器代理程式的詳細資訊，其中包括狀態、記錄、參考訊息以及任何錯誤訊息。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  從 **[檢視]** 功能表中選取要檢視之佇列讀取器代理程式的工作階段，然後在標示為 **[佇列讀取器代理程式的工作階段]** 方格中，選取特定的工作階段。 有關這個工作階段的詳細資訊，會顯示在標示為 **[所選取工作階段中的動作]** 之方格中。 如果選取的工作階段結束時發生錯誤， **[所選取之工作階段的錯誤詳細資料或訊息]** 的文字區域也會顯示。  
   
  **檢視**  

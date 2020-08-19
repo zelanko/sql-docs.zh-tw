@@ -1,4 +1,5 @@
 ---
+description: Broker:Conversation 事件類別
 title: Broker:Conversation 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2019
@@ -12,12 +13,12 @@ ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0be5e9b2a86f49fdb80b36ac33cb51a6df4ddae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5167a04707739bd83b966aba28d7a2cab0003f2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85679507"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88410224"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation 事件類別
 
@@ -39,14 +40,14 @@ ms.locfileid: "85679507"
 |**HostName**|**nvarchar**|執行用戶端的電腦名稱。 這個資料行會在用戶端提供主機名稱時填入。 若要判斷主機名稱，請使用 **HOST_NAME** 函數。|8|是|  
 |**IsSystem**|**int**|指出事件是發生在系統處理序或使用者處理序。<br /><br /> 0 = 使用者<br /><br /> 1 = 系統|60|否|  
 |**LoginSid**|**image**|已登入之使用者的安全性識別碼 (SID)。 伺服器上的每一個登入之 SID 是唯一的。|41|是|  
-|**MethodName**|**nvarchar**|交談所屬的交談群組。|47|否|  
+|**MethodName**|**nvarchar**|交談所屬的交談群組。|47|No|  
 |**NTDomainName**|**nvarchar**|使用者所隸屬的 Windows 網域。|7|是|  
 |**NTUserName**|**nvarchar**|擁有產生此事件之連接的使用者名稱。|6|是|  
 |**ObjectName**|**nvarchar**|對話的交談控制代碼。|34|否|  
 |**優先順序**|**int**|交談的優先權等級。|5|是|  
 |**RoleName**|**nvarchar**|交談控制代碼的角色。 為 **initiator** 或 **target**其中一個角色。|38|否|  
 |**ServerName**|**nvarchar**|所追蹤的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。|26|否|  
-|**Severity**|**int**|如果此事件報告錯誤，即為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤嚴重性。|29|否|  
+|**嚴重性**|**int**|如果此事件報告錯誤，即為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤嚴重性。|29|否|  
 |**SPID**|**int**|由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指派給用戶端相關之處理序的伺服器處理序識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
 |**TextData**|**ntext**|交談的目前狀態。 可以具有下列其中一個值：|1|是|  

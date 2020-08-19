@@ -1,4 +1,5 @@
 ---
+description: 資料行存放區索引：概觀
 title: 資料行存放區索引：概觀 |Microsoft Docs
 ms.custom: ''
 ms.date: 05/08/2020
@@ -18,12 +19,12 @@ ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fd3f77eb969bb2425934a92a3def286ef612153a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: fdcb62b0810ceb4f82a8abbe3259b6379f4f8578
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246264"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88408864"
 ---
 # <a name="columnstore-indexes-overview"></a>資料行存放區索引：概觀
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

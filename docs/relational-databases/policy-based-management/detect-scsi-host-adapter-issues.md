@@ -1,4 +1,5 @@
 ---
+description: 偵測到 SCSI 主機介面卡問題
 title: 偵測 SCSI 主機介面卡問題 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 75225b64-c102-4f1b-888a-fe72710dbfcd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a4dc33b9fa7b6f48f1012d3a4e6442aa0f3a8370
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8617d6aba180ff6089e61eb00df1dca509905eb9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85654546"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88406464"
 ---
 # <a name="detect-scsi-host-adapter-issues"></a>偵測到 SCSI 主機介面卡問題
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

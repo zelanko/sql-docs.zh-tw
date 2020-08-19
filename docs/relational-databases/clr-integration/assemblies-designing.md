@@ -1,8 +1,8 @@
 ---
-title: 設計元件 |微軟文件
-description: 本文介紹了在設計要在 SQL Server 上託管的程式集時需要考慮的因素,包括程式集的打包、管理和限制。
+title: 設計元件 |Microsoft Docs
+description: 本文描述當您設計要在 SQL Server 上裝載的元件時所要考慮的因素，包括封裝、管理和元件的限制。
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/24/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: clr
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 65dbc1a4fdabbf234f4676d75011522a8f3481d8
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 76ca67598f2cb8c03c5d0e423ded66e2fe4dc700
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488041"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727672"
 ---
 # <a name="assemblies---designing"></a>組件 - 設計
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   此主題描述以下在設計組件時應該考慮的因數：  
   
 -   封裝組件  
@@ -35,7 +35,7 @@ ms.locfileid: "81488041"
   
  將程式碼封裝到組件時，應該要考慮以下事項：  
   
--   CLR 使用者定義型別及相依於 CLR 使用者自訂函數的索引，會導致保留的資料放在相依於組件的資料庫中。 資料庫中有相依於組件的保存資料時，修改組件的程式碼通常更為複雜。 因此，一般最好將保存資料相依性所依賴的程式碼 (例如，使用者定義型別及使用使用者自訂函數的索引)，跟沒有這類保存資料相依性的程式碼分開。 有關詳細資訊,請參閱[實現程式集](../../relational-databases/clr-integration/assemblies-implementing.md)和[ALTER ASSEMBLY &#40;执行 SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)。  
+-   CLR 使用者定義型別及相依於 CLR 使用者自訂函數的索引，會導致保留的資料放在相依於組件的資料庫中。 資料庫中有相依於組件的保存資料時，修改組件的程式碼通常更為複雜。 因此，一般最好將保存資料相依性所依賴的程式碼 (例如，使用者定義型別及使用使用者自訂函數的索引)，跟沒有這類保存資料相依性的程式碼分開。 如需詳細資訊，請參閱 [執行元件](../../relational-databases/clr-integration/assemblies-implementing.md) 和 [ALTER ASSEMBLY &#40;transact-sql&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)。  
   
 -   如果有段 Managed 程式碼需要更高的權限，最好將那個程式碼跟不需要較高權限的程式碼分隔，放在個別的組件。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "81488041"
 ### <a name="unsafe"></a>UNSAFE  
  UNSAFE 可讓組件無限制存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內外部的資源。 由 UNSAFE 組件內執行的程式碼可以呼叫 Unmanaged 程式碼。  
   
- 此外，指定 UNSAFE 可讓組件中的程式碼，執行 CLR 檢查器視為類型安全的作業。 這些作業可能會以未受控制的方式，存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序空間的記憶體緩衝區。 UNSAFE 組件也可能會破壞 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Common Language Runtime 的安全性系統。 UNSAFE 權限應只能由經驗豐富的開發人員或系統管理員，授與高度信任的組件。 只有**系統管理員**固定伺服器角色的成員才能創建 UNSAFE 程式集。  
+ 此外，指定 UNSAFE 可讓組件中的程式碼，執行 CLR 檢查器視為類型安全的作業。 這些作業可能會以未受控制的方式，存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序空間的記憶體緩衝區。 UNSAFE 組件也可能會破壞 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Common Language Runtime 的安全性系統。 UNSAFE 權限應只能由經驗豐富的開發人員或系統管理員，授與高度信任的組件。 只有 **系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠建立 UNSAFE 元件。  
   
 ## <a name="restrictions-on-assemblies"></a>組件的限制  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對組件中的 Managed 程式碼有特定限制，以確保能以可靠且可擴充的方式執行程式碼。 這代表不會允許在 SAFE 及 EXTERNAL_ACCESS 組件中，執行會危害伺服器強固性的特定作業。  
@@ -84,7 +84,7 @@ System.Security.UnverifiableCodeAttribute
 ```  
   
 ### <a name="disallowed-net-framework-apis"></a>不允許的 .NET Framework API  
- 任何[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]使用不允許的**主機保護屬性**之一進行批號簽名的 API 都不能從 SAFE 和EXTERNAL_ACCESS程式集調用。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 使用其中一個不允許的**HostProtectionAttributes**標注的任何 API 都無法從 SAFE 和 EXTERNAL_ACCESS 元件中呼叫。  
   
 ```  
 eSelfAffectingProcessMgmt  
@@ -102,23 +102,26 @@ eUI
  您必須使用 CREATE ASSEMBLY，將自訂組件所參考的任何組件載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。 下列 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 組件已經載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，因此不必使用 CREATE ASSEMBLY，就可以讓自訂組件參考這些組件。  
   
 ```  
-custommarshallers.dll  
-Microsoft.visualbasic.dll  
-Microsoft.visualc.dll  
+CustomMarshalers.dll  
+Microsoft.VisualBasic.dll  
+Microsoft.VisualC.dll  
 mscorlib.dll  
-system.data.dll  
+System.dll  
+System.Configuration.dll  
+System.Core.dll  
+System.Data.dll  
+System.Data.OracleClient.dll  
 System.Data.SqlXml.dll  
-system.dll  
-system.security.dll  
-system.web.services.dll  
-system.xml.dll  
-System.Transactions  
-System.Data.OracleClient  
-System.Configuration  
+System.Deployment.dll  
+System.Security.dll  
+System.Transactions.dll  
+System.Web.Services.dll  
+system.Xml.dll  
+System.Xml.Linq.dll  
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [程式集&#40;資料庫引擎&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [元件 &#40;資料庫引擎&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [CLR 整合安全性](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

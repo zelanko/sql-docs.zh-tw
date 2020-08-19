@@ -1,6 +1,6 @@
 ---
-title: SqlTrigger上下文物件 |微軟文件
-description: 在 SQL Server CLR 整合中,SqlTriggerContext 類為觸發器提供上下文資訊,包括操作類型和在操作中修改的列。
+title: SqlTriggerCoNtext 物件 |Microsoft Docs
+description: 在 SQL Server CLR 整合中，SqlTriggerCoNtext 類別會提供觸發程式的內容資訊，包括操作中修改的動作和資料行類型。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: 472a2d0b-64ae-4877-8f11-a5620aa698b7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 55e0ac850071615d9be7fb47442ed674eefab00a
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 4634a0c95e64516b6364fbfd68edeb9cd6156511
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487457"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765410"
 ---
 # <a name="sqltriggercontext-object"></a>SqlTriggerContext 物件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **SqlTriggerContext**類提供有關觸發器的上下文資訊。 此上下文資訊包括導致觸發器觸發的操作類型、更新操作中修改的列,以及數據定義語言 (DDL) 觸發器(描述觸發操作的 XML EventData 結構)中的 XML **EventData**結構。 有關如何使用**SqlTriggerContext**類別的詳細資訊和範例,請參考[CLR 觸發器](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  **SqlTriggerCoNtext**類別會提供觸發程式的相關內容資訊。 此內容相關資訊包括造成觸發程式引發的動作類型、更新作業中已修改的資料行，以及在資料定義語言 (DDL) 觸發程式（描述觸發作業的 XML **EventData** 結構）的情況。 如需如何使用 **SqlTriggerCoNtext** 類別的詳細資訊和範例，請參閱 [CLR 觸發](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)程式。  
   
- 有關詳細資訊,請參閱 .NET 框架 SDK 文檔中的**Microsoft.SqlServer.Server.SqlTriggerContext**類引用文檔。  
+ 如需詳細資訊，請參閱 .NET Framework SDK 檔中的 **SqlTriggerCoNtext** 類別參考檔。  
   
 ## <a name="see-also"></a>另請參閱  
- [CLR 觸發器](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)   
+ [CLR 觸發程式](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

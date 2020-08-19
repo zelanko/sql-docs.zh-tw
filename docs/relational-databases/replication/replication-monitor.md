@@ -1,4 +1,5 @@
 ---
+description: 複寫監視器
 title: 複寫監視器 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
@@ -15,12 +16,12 @@ ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ecf9c330ef81a37a70237061f039db29b17576d2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5c4d02bae3c39ce01bf894d3cdba3246eca932d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716731"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88404934"
 ---
 # <a name="replication-monitor"></a>複寫監視器
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "85716731"
   
 -   [複寫監視器，主要頁面](../../relational-databases/replication/replication-monitor-main-page.md)  
   
--   [新增發行者](../../relational-databases/replication/add-publisher.md)  
+-   [加入發行者](../../relational-databases/replication/add-publisher.md)  
   
 -   [散發者設定](../../relational-databases/replication/distributor-settings.md)  
   

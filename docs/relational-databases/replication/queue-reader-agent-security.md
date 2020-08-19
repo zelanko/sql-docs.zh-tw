@@ -1,4 +1,5 @@
 ---
+description: 佇列讀取器代理程式安全性
 title: 佇列讀取器代理程式安全性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 77938da0-2afd-4455-8826-f4a6a9440cb3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d56725b24865b80d2e0b5d9569e4927a7b07aff0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dc5a8ff1f69f26fc7925a2314151e9437ffefc65
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755615"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88406244"
 ---
 # <a name="queue-reader-agent-security"></a>佇列讀取器代理程式安全性
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
