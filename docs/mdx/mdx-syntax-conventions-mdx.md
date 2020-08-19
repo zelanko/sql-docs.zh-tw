@@ -1,5 +1,6 @@
 ---
-title: MDX 語法慣例（MDX） |Microsoft Docs
+description: MDX 語法慣例 (MDX)
+title: Mdx 語法慣例 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 063d629ff908210b2c8e042d2c131a3449295ba3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97cbdc1df2ab7f2107ed274ab91edf54e987635b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68138271"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483841"
 ---
 # <a name="mdx-syntax-conventions-mdx"></a>MDX 語法慣例 (MDX)
 
@@ -26,7 +27,7 @@ ms.locfileid: "68138271"
 |&#124; (分隔號)|在括號或大括號內分隔語法的項目。 您可以只選擇項目的其中一個。|  
 |`[ ]` (方括弧)|代表選擇性的語法項目。 不要輸入方括號。|  
 |[,] ...n|代表先前項目可被重複許多次。 項目有時是以逗號分隔。|  
-|\<label> ::=|代表語法區塊的名稱。 此慣例可用來群組與設定冗長語法一部分或語法單位的標籤，以便用於陳述式內的多個地方。 可以使用語法區塊的每個位置都會以角括弧括住的標籤來表示： \<標籤>。|  
+|\<label> ::=|代表語法區塊的名稱。 此慣例可用來群組與設定冗長語法一部分或語法單位的標籤，以便用於陳述式內的多個地方。 可以使用語法區塊的每個位置都會以角括弧括住的標籤表示： \<label> 。|  
   
 ## <a name="see-also"></a>另請參閱  
  [MDX 語言參考 &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  

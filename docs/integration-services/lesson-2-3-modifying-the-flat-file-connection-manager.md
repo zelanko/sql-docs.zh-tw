@@ -1,4 +1,5 @@
 ---
+description: 課程 2-3：修改一般檔案連線管理員
 title: 步驟 3：修改一般檔案連線管理員 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 348b7e9b948443f1cfd14390f30c58ab17d08ec6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bbe7698c4b97a11fd9b2b4dba581fbad5a8be8df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921497"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484102"
 ---
 # <a name="lesson-2-3-modify-the-flat-file-connection-manager"></a>課程 2-3：修改一般檔案連線管理員
 
@@ -27,23 +28,23 @@ ms.locfileid: "86921497"
   
 ## <a name="configure-the-flat-file-connection-manager-to-use-a-variable"></a>將一般檔案連線管理員設定成使用變數  
   
-1.  在 **[連接管理員]** 窗格中，以滑鼠右鍵按一下 **[範例一般檔案來源資料]** ，並選取 **[屬性]** 。  
+1.  在 **[連接管理員]** 窗格中，以滑鼠右鍵按一下 **[範例一般檔案來源資料]**，並選取 **[屬性]**。  
 
-2.  在 [屬性]  視窗中確認 **PackagePath** 的開頭為 **\Package.Connections**。 否則，請在 [連線管理員]  窗格中，以滑鼠右鍵按一下 [一般檔案來源資料範例]  ，並選取 [轉換為套件連線] 
+2.  在 [屬性]**** 視窗中確認 **PackagePath** 的開頭為 **\Package.Connections**。 否則，請在 [連線管理員]**** 窗格中，以滑鼠右鍵按一下 [一般檔案來源資料範例]****，並選取 [轉換為套件連線]****
   
-3.  在 [屬性]  視窗中，針對 [運算式]  選取空白資料格，然後選取省略符號按鈕 **(...)** 。  
+3.  在 [屬性]**** 視窗中，針對 [運算式]**** 選取空白資料格，然後選取省略符號按鈕 **(...)**。  
   
-4.  在 [屬性運算式編輯器]  對話方塊的 [屬性]  資料行中，選取 [ConnectionString]  。  
+4.  在 [屬性運算式編輯器]**** 對話方塊的 [屬性]**** 資料行中，選取 [ConnectionString]****。  
   
-5.  在 [運算式]  資料行中，選取省略符號按鈕 **(…)** 以開啟 [運算式產生器]  對話方塊。  
+5.  在 [運算式]**** 資料行中，選取省略符號按鈕 **(…)** 以開啟 [運算式產生器]**** 對話方塊。  
   
-6.  在 [運算式產生器]  對話方塊中，展開 [變數]  節點。  
+6.  在 [運算式產生器]**** 對話方塊中，展開 [變數]**** 節點。  
   
-7.  將變數 [User::varFileName]  拖曳至 [運算式]  方塊中。  
+7.  將變數 [User::varFileName]**** 拖曳至 [運算式]**** 方塊中。  
   
-8.  選取 **[確定]** 以關閉 [運算式產生器]  對話方塊。  
+8.  選取 **[確定]** 以關閉 [運算式產生器]**** 對話方塊。  
   
-9.  再次選取 [確定]  以關閉 [屬性運算式編輯器]  對話方塊。  
+9.  再次選取 [確定]**** 以關閉 [屬性運算式編輯器]**** 對話方塊。  
   
 ## <a name="go-to-next-task"></a>移至下一個工作  
 [步驟 4：測試第 2 課教學課程套件](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  

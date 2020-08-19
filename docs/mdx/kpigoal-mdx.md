@@ -1,5 +1,6 @@
 ---
-title: KPIGoal （MDX） |Microsoft Docs
+description: KPIGoal (MDX)
+title: KPIGoal (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f818731fdc2d7b7b6ee6b000fd4e85b150c9f92c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a6294fae27aa74a1091f0967292547c524f6f04b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105237"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483931"
 ---
 # <a name="kpigoal-mdx"></a>KPIGoal (MDX)
 

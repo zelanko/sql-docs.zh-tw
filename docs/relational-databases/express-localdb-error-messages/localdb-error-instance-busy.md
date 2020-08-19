@@ -1,4 +1,5 @@
 ---
+description: LOCALDB_ERROR_INSTANCE_BUSY
 title: LOCALDB_ERROR_INSTANCE_BUSY |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -9,12 +10,12 @@ ms.topic: reference
 ms.assetid: 0ed9d0f8-3297-4e31-a3e9-4a827f381789
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: e8f5eb6960a38b9aefc211530a1c29c0ccf8ae69
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 663b37d3667ce3751f78d322415ae80677ac3f02
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246085"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475892"
 ---
 # <a name="localdb_error_instance_busy"></a>LOCALDB_ERROR_INSTANCE_BUSY
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

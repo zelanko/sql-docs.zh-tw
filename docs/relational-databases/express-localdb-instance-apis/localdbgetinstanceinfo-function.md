@@ -1,4 +1,5 @@
 ---
+description: LocalDBGetInstanceInfo 函數
 title: LocalDBGetInstanceInfo 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,18 +16,18 @@ apitype: DLLExport
 ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b392098091a3a439271a6f01a28ae152405e17b7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f33e9f820eebd80680b4c2c631f30d74ca0f79da
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789496"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475859"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>LocalDBGetInstanceInfo 函數
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   傳回指定之 SQL Server Express LocalDB 執行個體的資訊，例如執行個體是否存在、執行個體使用的 LocalDB 版本、執行個體是否正在執行等等。  
   
- 此資訊會在名為**LocalDBInstanceInfo**的**結構**中傳回，其具有下列定義。  
+ 這項資訊會在名為**LocalDBInstanceInfo**的結構中傳回，此**結構**具有下列定義。  
   
 ```  
 typedef struct _LocalDBInstanceInfo  
@@ -93,7 +94,7 @@ HRESULT LocalDBGetInstanceInfo(
  [輸出] 儲存 LocalDB 執行個體資訊的緩衝區。  
   
  *dwInstanceInfoSize*  
- 源保留*InstanceInfo*緩衝區的大小。  
+ 輸出保存 *InstanceInfo* 緩衝區的大小。  
   
 ## <a name="returns"></a>傳回  
  S_OK  
@@ -127,9 +128,9 @@ HRESULT LocalDBGetInstanceInfo(
  發生意外錯誤。 請參閱事件記錄檔，以取得詳細資料。  
   
 ## <a name="details"></a>詳細資料  
- 引進**結構**大小引數（*lpInstanceInfoSize*）背後的原理是讓 API 傳回不同版本的**LocalDBInstanceInfostruct**，並有效地啟用向前和向後相容性。  
+  (*lpInstanceInfoSize*) 的**結構**大小引數引進背後的原理是讓 API 傳回不同版本的**LocalDBInstanceInfostruct**，以有效地啟用向前和回溯相容性。  
   
- 如果**結構**大小引數（*LpInstanceInfoSize*）符合**LocalDBInstanceInfostruct**已知版本的大小，則會傳回該**結構**版本。 否則會傳回 LOCALDB_ERROR_INVALID_PARAMETER。  
+ 如果 **結構** 大小引數 (*lpInstanceInfoSize*) 符合已知 **LocalDBInstanceInfostruct**版本的大小，則會傳回該 **結構** 的版本。 否則會傳回 LOCALDB_ERROR_INVALID_PARAMETER。  
   
  **LocalDBGetInstanceInfo** API 使用方式的典型範例如下所示：  
   
@@ -139,7 +140,7 @@ LocalDBInstanceInfo(L"Test", &ii, sizeof(LocalDBInstanceInfo));
   
 ```  
   
- 如需使用 LocalDB API 的程式碼範例，請參閱[SQL Server Express Localdb 參考](../../relational-databases/sql-server-express-localdb-reference.md)。  
+ 如需使用 LocalDB API 的程式碼範例，請參閱 [SQL Server Express Localdb 參考](../../relational-databases/sql-server-express-localdb-reference.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Express LocalDB 標頭和版本資訊](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  

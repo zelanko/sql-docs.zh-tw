@@ -1,4 +1,5 @@
 ---
+description: Microsoft SQL 資料庫函式是什麼？
 title: Microsoft SQL 資料庫函式是什麼？ | Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2017
@@ -20,12 +21,12 @@ ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 15a46fa3c1adc9478bd1da9c0152cb671be378cf
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 8e15d2d46f6bf1d7c922b11a210825cf78509ebe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395697"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468040"
 ---
 # <a name="what-are-the-sql-database-functions"></a>SQL 資料庫函式是什麼？
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

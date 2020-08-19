@@ -1,5 +1,6 @@
 ---
-title: SQL Server 訊息結果（Native Client OLE DB 提供者）
+description: SQL Server Native Client 訊息結果
+title: 'SQL Server 訊息結果 (Native Client OLE DB 提供者) '
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ ms.assetid: 6663c6f9-def1-4d9e-845b-2085e5efc401
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e28ec51b3802858c7565be8ac7262574d86bcb5f
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 9806bc940e6065a0a4c68dda74fcdf9f8a1bc4b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87331928"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475715"
 ---
 # <a name="sql-server-native-client-message-results"></a>SQL Server Native Client 訊息結果
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句不會 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在執行時產生 Native Client OLE DB 提供者資料列集或受影響的資料列計數：  
+  下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句不會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行時產生原生用戶端 OLE DB 提供者資料列集或受影響資料列的計數：  
   
 -   PRINT  
   
@@ -37,11 +38,11 @@ ms.locfileid: "87331928"
   
 -   SET STATISTICS  
   
- 這些陳述式會傳回一或多個參考用訊息，或使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回參考用訊息來取代資料列集或計數結果。 成功執行時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client OLE DB 提供者會傳回 S_OK，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生用戶端 OLE DB 提供者取用者可以使用訊息。  
+ 這些陳述式會傳回一或多個參考用訊息，或使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回參考用訊息來取代資料列集或計數結果。 在成功執行時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client OLE DB 提供者會傳回 S_OK，而且訊息可供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB 提供者取用者使用。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native client OLE DB 提供者會傳回 S_OK，而且在執行許多 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句或取用者執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者成員函式之後，會有一或多個可用的參考訊息。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端 OLE DB 提供者會傳回 S_OK，而且在執行許多 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句或取用者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB 提供者成員函式的取用者時，會有一或多個參考用訊息可供使用。  
   
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 每個成員函式執行之後，不論傳回碼的值為何、傳回的**IRowset**或**IMultipleResults**介面參考是否存在，或受影響的資料列計數，原生用戶端 OLE DB 提供者取用者允許動態指定查詢文字，都應該檢查錯誤介面。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]無論傳回碼的值為何、傳回的**IRowset**或**IMultipleResults**介面參考是否存在，或受影響的資料列計數為何，允許動態指定查詢文字的原生 OLE DB 用戶端，都應該在每個成員函式執行之後檢查錯誤介面。  
   
 ## <a name="see-also"></a>另請參閱  
  [錯誤](../../relational-databases/native-client-ole-db-errors/errors.md)  

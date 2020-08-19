@@ -1,4 +1,5 @@
 ---
+description: LOCALDB_ERROR_CANNOT_GET_USER_PROFILE_FOLDER
 title: LOCALDB_ERROR_CANNOT_GET_USER_PROFILE_FOLDER |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -9,12 +10,12 @@ ms.topic: reference
 ms.assetid: 3625c9cb-579c-4b4b-be74-0d4de7b64bb6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 938557d0ac2fe3c5ddaca6009518940936a78d05
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f16d5e93aa3a0e08a6ccb8dba666f1c9d27f52a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246155"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475902"
 ---
 # <a name="localdb_error_cannot_get_user_profile_folder"></a>LOCALDB_ERROR_CANNOT_GET_USER_PROFILE_FOLDER
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

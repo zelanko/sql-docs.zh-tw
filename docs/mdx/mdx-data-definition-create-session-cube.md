@@ -1,5 +1,6 @@
 ---
-title: CREATE SESSION CUBE 語句（MDX） |Microsoft Docs
+description: MDX 資料定義 - CREATE SESSION CUBE
+title: CREATE SESSION CUBE 語句 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ac95afcebcf07a5d691db5f2599b3290b9587d44
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 33cdbc4a018245249771ff350227d13f4e0f772e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038357"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483871"
 ---
 # <a name="mdx-data-definition---create-session-cube"></a>MDX 資料定義 - CREATE SESSION CUBE
 
@@ -101,13 +102,13 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
  dimension_name  
  工作階段 Cube 中維度的名稱。  
   
- FROM \<dim from 子句>  
+ FROM \<dim from clause>  
  只適用於衍生維度定義的有效規格。  
   
  NOT_RELATED_TO_FACTS  
  只適用於衍生維度定義的有效規格。  
   
- \<層級類型>  
+ \<level type>  
  只適用於衍生維度定義的有效規格。  
   
 ## <a name="remarks"></a>備註  

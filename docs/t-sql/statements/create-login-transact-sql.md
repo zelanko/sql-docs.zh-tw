@@ -1,4 +1,5 @@
 ---
+description: CREATE LOGIN (Transact-SQL)
 title: CREATE LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2020
@@ -27,12 +28,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ff1117c601cc42d8fa14147df18b90a10fc97bd
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 75866a02dee75aaaccb77e2f870b38222471d8c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87987963"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444808"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 

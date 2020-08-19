@@ -1,4 +1,5 @@
 ---
+description: XML 保存格式
 title: XML 持續性格式 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eb3abca1aabccd45bc76c4ec0ee5742531c47e28
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7a014addf2d3ff6c7b02ed9abc103cdbd7b2ecb8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748313"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452510"
 ---
 # <a name="xml-persistence-format"></a>XML 保存格式
-ADO 會針對它保存的 XML 資料流程使用 UTF-8 編碼。  
+ADO 會針對其保存的 XML 資料流程使用 UTF-8 編碼。  
   
- ADO XML 格式分成兩個區段，一個是架構區段，後面接著資料區段。 以下是 Northwind 資料庫的「貨主」資料表的範例 XML 檔案。 下列範例會討論 XML 的各個部分。  
+ ADO XML 格式分為兩個區段，也就是架構區段，後面接著 data 區段。 以下是來自 Northwind 資料庫之貨主資料表的範例 XML 檔。 下列範例會討論 XML 的各個部分。  
   
 ## <a name="remarks"></a>備註  
   
@@ -64,11 +65,11 @@ xmlns:z="#RowsetSchema">
 </xml>  
 ```  
   
- 架構會顯示命名空間、架構區段和資料區段的宣告。 [架構] 區段包含資料列、ShipperID、公司名稱和電話的定義。  
+ 架構會顯示命名空間的宣告、架構區段和資料區段。 [架構] 區段包含資料列、ShipperID、公司名稱和電話的定義。  
   
- 架構定義符合[W3C XML 資料規格](http://www.w3.org/TR/1998/NOTE-XML-data/)，而且可以完整驗證（雖然 Internet Explorer 5 不會進行驗證）。 XML-資料是目前唯一支援的記錄集持續性架構格式。  
+ 架構定義符合 [W3C XML 資料規格](http://www.w3.org/TR/1998/NOTE-XML-data/) ，而且可以完全驗證 (但 Internet Explorer 5) 中不會進行驗證。 XML 資料是目前唯一支援的記錄集持續性架構格式。  
   
- Data 區段有三個數據列，其中包含有關貨主的資訊。 如果是空的資料列集，data 區段可能是空的，但是 \< rs： data> 標記必須存在。 在沒有資料的情況下，您可以將標記速記撰寫為單純的 \< rs： data/>。 任何前面加上 "rs" 的標記都會指出它位於 urn：架構-microsoft-com：資料列集所定義的命名空間中。  
+ Data 區段有三個數據列，其中包含有關貨主的資訊。 如果是空的資料列集，資料區段可能是空的，但 \<rs:data> 必須有標記。 如果沒有任何資料，您就可以直接撰寫標記速記 \<rs:data/> 。 任何前面加上 "rs" 的標記，表示它位於 urn：架構-microsoft-com：資料列集所定義的命名空間中。  
   
 ## <a name="see-also"></a>另請參閱  
  [以 XML 格式保存記錄](../../../ado/guide/data/persisting-records-in-xml-format.md)

@@ -1,4 +1,5 @@
 ---
+description: ODBC API 參考
 title: ODBC API 參考 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,15 +12,15 @@ apitype: dllExport
 ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6065db0ea99efaec11190902ec9268db63a6d255
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1627838d3f34f8092dce2806a1b1d8f885b9bf6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298932"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476179"
 ---
 # <a name="odbc-api-reference"></a>ODBC API 參考
-本節中的主題會依字母順序描述每個 ODBC 函數。 每個函式都會定義為 C 程式設計語言函式。 描述包括下列各項：  
+本節中的主題會依字母順序描述每個 ODBC 函數。 每個函式都會定義為 C 程式設計語言函數。 描述包含下列各項：  
   
 -   目的  
   
@@ -39,16 +40,16 @@ ms.locfileid: "81298932"
   
 -   程式碼範例  
   
--   相關函式的參考  
+-   相關函數的參考  
   
- 標準 CLI 一致性層級可以是下列其中一項： ISO 92、Open Group、ODBC 或已被取代。 標記為符合 ISO 92 標準的函式也會出現在開放群組第1版中，因為 Open Group 是 ISO 92 的純粹超集合。 標記為開啟群組相容的函式也會出現在 ODBC 3 中。*x*，因為 ODBC 3。*x*是開放式群組第1版的純粹超集合。 標記為 ODBC 相容的函式會出現在兩個標準中。 標記為已被取代的函式在 ODBC 3 中已經被取代。*x*。  
+ 標準 CLI 一致性層級可以是下列其中一項： ISO 92、Open Group、ODBC 或已淘汰。 標記為符合 ISO 92 的函式也會出現在 Open Group 第1版中，因為 Open Group 是 ISO 92 的純粹超集合。 標記為「開啟群組相容」的函式也會出現在 ODBC 3 中。*x*，因為 ODBC 3。*x* 是開放式群組第1版的純超集合。 標記為 ODBC 相容的函式會出現在兩個標準中。 標記為已被取代的函式已在 ODBC 3 中被取代。*x*。  
   
- [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)函數描述中會說明診斷資訊的處理方式。 已包含與 SQLSTATE 值相關聯的文字，以提供條件的描述，但不適合用來規定特定文字。  
+ 診斷資訊的處理會在 [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) 函數描述中描述。 包含與 SQLSTATE 值相關聯的文字，以提供條件的描述，但不適合規定特定的文字。  
   
 > [!NOTE]  
->  如需有關 ODBC 函式的驅動程式特定資訊，請參閱驅動程式的一節。  
+>  如需有關 ODBC 函數的驅動程式特定資訊，請參閱驅動程式的一節。  
   
- 本節包含下列功能的主題：  
+ 本章節包含下列功能的主題：  
   
 -   [SQLAllocConnect 函式](../../../odbc/reference/syntax/sqlallocconnect-function.md)  
   
@@ -82,7 +83,7 @@ ms.locfileid: "81298932"
   
 -   [SQLCompleteAsync 函式](../../../odbc/reference/syntax/sqlcompleteasync-function.md)  
   
--   [SQLConnect 函數](../../../odbc/reference/syntax/sqlconnect-function.md)  
+-   [SQLConnect 函式](../../../odbc/reference/syntax/sqlconnect-function.md)  
   
 -   [SQLCopyDesc 函式](../../../odbc/reference/syntax/sqlcopydesc-function.md)  
   
@@ -94,7 +95,7 @@ ms.locfileid: "81298932"
   
 -   [SQLDisconnect 函式](../../../odbc/reference/syntax/sqldisconnect-function.md)  
   
--   [SQLDriverConnect 函數](../../../odbc/reference/syntax/sqldriverconnect-function.md)  
+-   [SQLDriverConnect 函式](../../../odbc/reference/syntax/sqldriverconnect-function.md)  
   
 -   [SQLDrivers 函式](../../../odbc/reference/syntax/sqldrivers-function.md)  
   
