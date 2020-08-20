@@ -1,4 +1,5 @@
 ---
+description: Long (geography 資料類型)
 title: Long (geography 資料類型) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
@@ -17,22 +18,22 @@ helpviewer_keywords:
 ms.assetid: bedbeced-70b8-4569-84f3-f86bfb04ce50
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7c3a5096426aa6fbfa69da1eacab3d0cd80f72ed
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 774ea7421e7616976bcedc1c848620accf8c07d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556168"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467487"
 ---
 # <a name="long-geography-data-type"></a>Long (geography 資料類型)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   **geography** 執行個體的經度屬性。  
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql
 .Long  
 ```  
 

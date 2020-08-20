@@ -1,4 +1,5 @@
 ---
+description: Transact-SQL 語法慣例 (Transact-SQL)
 title: Transact-SQL 語法慣例 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2018
@@ -28,12 +29,12 @@ ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cee1bcbb781319c4cabc2265962350d2480d9d97
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 427310d9693e4845290b1cbb06dba13a3d3101d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87392610"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467609"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL 語法慣例 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

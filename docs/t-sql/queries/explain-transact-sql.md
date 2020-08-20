@@ -1,4 +1,5 @@
 ---
+description: EXPLAIN (Transact-SQL)
 title: EXPLAIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2017
@@ -10,12 +11,12 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 7383e63ecb96a32c9b1f0087a138bc9f862eb722
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 4b115c4249a0eded065ed95d45a7892ec1595911
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395153"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467538"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL) 
 

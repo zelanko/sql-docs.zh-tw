@@ -1,4 +1,5 @@
 ---
+description: CREATE INDEX (Transact-SQL)
 title: CREATE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2020
@@ -54,12 +55,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61f09bbc1b1d7ed517dfb2fca623dca02209a498
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 19e4d14aa0e8624cf2ddc5ca37e3aba5ea27dff1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393196"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467255"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 

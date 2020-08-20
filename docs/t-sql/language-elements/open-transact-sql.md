@@ -1,4 +1,5 @@
 ---
+description: OPEN (Transact-SQL)
 title: OPEN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,17 +22,17 @@ helpviewer_keywords:
 ms.assetid: fd1c5e3b-6045-4a42-b646-3fca76e874c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 73199a9dba314f845c8dbb4268da0cc4fd0f4af4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 478c8c846f075c6d9a9705e978a53236a65e3536
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919899"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467581"
 ---
 # <a name="open-transact-sql"></a>OPEN (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  開啟 [!INCLUDE[tsql](../../includes/tsql-md.md)] 伺服器資料指標，並執行 DECLARE CURSOR 或 SET [!INCLUDE[tsql](../../includes/tsql-md.md)]cursor_variable*陳述式上指定的* 陳述式來擴展資料指標。  
+  開啟 [!INCLUDE[tsql](../../includes/tsql-md.md)] 伺服器資料指標，並執行 DECLARE CURSOR 或 SET *cursor_variable* 陳述式上指定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式來擴展資料指標。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: ALTER QUEUE (Transact-SQL)
 title: ALTER QUEUE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2016
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e7856a54070b58f6a834dd5a65b18b58e9667682
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 85e3edf2b7fd40fbf5bd9e046923354b5d299e41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381182"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467345"
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

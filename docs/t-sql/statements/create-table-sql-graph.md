@@ -1,4 +1,5 @@
 ---
+description: CREATE TABLE (SQL Graph)
 title: CREATE TABLE (SQL Graph) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/09/2019
@@ -32,12 +33,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 06a5284d057467ad687a503af0f70be8b01c2154
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 0653d3be257c77ab0eba1410104818d72c810c77
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483791"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467188"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE (SQL Graph)
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]

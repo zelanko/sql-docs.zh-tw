@@ -1,4 +1,5 @@
 ---
+description: STDistance (geometry 資料類型)
 title: STDistance (geometry 資料型別) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ac815bc7-5342-4cc4-af40-c80a1c4c8b68
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5bcb10fc64d6bac02b8ecc6faba0c8d7662b0adc
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 48ae04bdc272bcb7513fe4c2ac1d474406b4ba04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554998"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467363"
 ---
 # <a name="stdistance-geometry-data-type"></a>STDistance (geometry 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

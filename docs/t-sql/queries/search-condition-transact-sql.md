@@ -1,4 +1,5 @@
 ---
+description: 搜尋條件 (Transact-SQL)
 title: 搜尋條件 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/15/2018
@@ -37,12 +38,12 @@ ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a33c3a5c8ea050c6999cb043d8916ec548d8c54
-ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
+ms.openlocfilehash: 8d42e04e6701d086784290e6c2ba7d6d9540961e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87806751"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467580"
 ---
 # <a name="search-condition-transact-sql"></a>搜尋條件 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

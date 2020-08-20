@@ -1,4 +1,5 @@
 ---
+description: CREATE TABLE (Azure SQL 資料倉儲)
 title: CREATE TABLE (Azure SQL 資料倉儲) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
@@ -11,12 +12,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c9d942e2255c2c60978d41004cfe53097c99209d
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: df8d395f6d799f817a02943e59f98a29ac79aa29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332425"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467223"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL 資料倉儲)
 

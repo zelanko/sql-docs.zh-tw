@@ -1,4 +1,5 @@
 ---
+description: OGC 靜態地理方法
 title: OGC 靜態地理方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ dev_langs:
 ms.assetid: f5c79546-7f99-46a2-bf92-bd4ac8a50bf8
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 6f06565e0c49d9ae677dc9a063efa4ef746c0ecc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b51ee7e3c8f8d81186ce2b78253cea35bb44a2ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85705862"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467503"
 ---
 # <a name="ogc-static-geography-methods"></a>OGC 靜態地理方法
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

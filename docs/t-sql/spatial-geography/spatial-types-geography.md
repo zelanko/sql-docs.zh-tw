@@ -1,4 +1,5 @@
 ---
+description: 空間類型 - geography
 title: geography (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d9e4952a-1841-4465-a64b-11e9288dba1d
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1a344d490ee4941ea233de28008a1cb990938274
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 46489eadd2c56fbccca62dfe415611e0f8f66a2a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85705358"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467469"
 ---
 # <a name="spatial-types---geography"></a>空間類型 - geography
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

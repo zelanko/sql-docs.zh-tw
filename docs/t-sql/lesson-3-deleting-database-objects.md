@@ -1,4 +1,5 @@
 ---
+description: T-SQL 教學課程：刪除資料庫物件
 title: T-SQL 教學課程：刪除資料庫物件 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2018
@@ -12,14 +13,14 @@ ms.assetid: ecf26dd5-4535-4ed6-86fc-c73f9d9dedec
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 36b68bb833c5c95beeb65b792b9621f2f9bb9c4f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1a032737a39cf22e1b2d5516c615ced9d59dfc43
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68031576"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467526"
 ---
-# <a name="lesson-3-delete-database-objects"></a>課程 3：刪除資料庫物件
+# <a name="lesson-3-delete-database-objects"></a>第 3 課：刪除資料庫物件
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 在這個簡短的課程中，會移除您在第 1 課和第 2 課中所建立的物件，然後卸除資料庫。  
   

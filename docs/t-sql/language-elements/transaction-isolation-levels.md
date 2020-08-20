@@ -1,4 +1,5 @@
 ---
+description: 交易隔離等級
 title: 交易隔離等級 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 02bb71fa-1e92-4782-a9cf-6e256cc1f3ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f1532197e46e0ad6ea314ec83acb46b841ed7b72
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f9c3d400f67f42f206c9b6924f3d2ea90445d023
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731381"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467550"
 ---
 # <a name="transaction-isolation-levels"></a>交易隔離等級
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
