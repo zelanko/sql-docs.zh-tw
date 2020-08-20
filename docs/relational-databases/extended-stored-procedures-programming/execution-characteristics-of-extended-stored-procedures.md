@@ -1,4 +1,5 @@
 ---
+description: 擴充預存程序的執行特性
 title: 擴充預存程式的執行特性
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 6fe1f7e8-cc02-49df-8a2a-d47a96ec3567
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: d991dbdf8029a6021f4cf27a9010dec83b94a5ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 23162895a2e2461fbd6f0f0abbe71341ce2fbf91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758125"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460858"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>擴充預存程序的執行特性
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85758125"
   
 -  
   
- 載入擴充預存程式 DLL 之後，DLL 會保持載入伺服器的位址空間中，直到停止， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或系統管理員使用 DBCC *DLL_name* （FREE）明確卸載 DLL 為止。  
+ 載入擴充預存程式 DLL 之後，DLL 會保持載入至伺服器的位址空間，直到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 停止或系統管理員使用 DBCC *DLL_NAME* (FREE) 明確卸載 DLL。  
   
  擴充預存程序可以使用 EXECUTE 陳述式，從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 當做預存程序執行：  
   

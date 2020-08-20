@@ -1,5 +1,6 @@
 ---
-title: sys.databases extended_properties （Transact-sql） |Microsoft Docs
+description: 擴充屬性目錄檢視-sys. extended_properties
+title: sys. extended_properties (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,20 +21,21 @@ ms.assetid: 439b7299-dce3-4d26-b1c7-61be5e0df82a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5328e930d5200184c6db15dc6ac7083a61967464
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 76a910b12f744aa0620ba81c3db872db3d63b3d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85977590"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460725"
 ---
-# <a name="extended-properties-catalog-views---sysextended_properties"></a>擴充屬性目錄 Views-sys. extended_properties
+# <a name="extended-properties-catalog-views---sysextended_properties"></a>擴充屬性目錄檢視-sys. extended_properties
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   針對目前資料庫中每個擴充屬性，各傳回一個資料列。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|class|**tinyint**|可識別內容所在的項目類別。 可以是下列其中一項：<br /><br /> 0 = 資料庫<br /><br /> 1 = 物件或資料行<br /><br /> 2 = 參數<br /><br /> 3 = 結構描述<br /><br /> 4 = 資料庫主體<br /><br /> 5 = 組件<br /><br /> 6 = 類型<br /><br /> 7 = 索引<br /><br /> 10 = XML 結構描述集合<br /><br /> 15 = 訊息類型<br /><br /> 16 = 服務合約<br /><br /> 17 = 服務<br /><br /> 18 = 遠端服務繫結<br /><br /> 19 = 路由<br /><br /> 20 = 資料空間 (檔案群組或資料分割配置)<br /><br /> 21 = 資料分割函數<br /><br /> 22 = 資料庫檔案<br /><br /> 27 = 計畫指南|  
+|Class - 類別|**tinyint**|可識別內容所在的項目類別。 可以是下列其中一項：<br /><br /> 0 = 資料庫<br /><br /> 1 = 物件或資料行<br /><br /> 2 = 參數<br /><br /> 3 = 結構描述<br /><br /> 4 = 資料庫主體<br /><br /> 5 = 組件<br /><br /> 6 = 類型<br /><br /> 7 = 索引<br /><br /> 10 = XML 結構描述集合<br /><br /> 15 = 訊息類型<br /><br /> 16 = 服務合約<br /><br /> 17 = 服務<br /><br /> 18 = 遠端服務繫結<br /><br /> 19 = 路由<br /><br /> 20 = 資料空間 (檔案群組或資料分割配置)<br /><br /> 21 = 資料分割函數<br /><br /> 22 = 資料庫檔案<br /><br /> 27 = 計畫指南|  
 |class_desc|**nvarchar(60)**|擴充屬性所在的類別的描述。 可以是下列其中一項：<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> 參數<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> INDEX<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> DATASPACE<br /><br /> PARTITION_FUNCTION<br /><br /> DATABASE_FILE<br /><br /> PLAN_GUIDE|  
 |major_id|**int**|擴充屬性所在的項目識別碼，它是根據其類別加以解譯的。 對大部分的項目來說，這是套用至類別代表的識別碼。 下面是非標準主要識別碼的解譯：<br /><br /> 如果 class 是 0，則 major_id 一律為 0。<br /><br /> 如果 class 是 1、2 或 7，則 major_id 就是 object_id。|  
 |minor_id|**int**|擴充屬性所在項目的次要識別碼，它是根據其類別加以解譯的。 對於大部分的項目來說，這個值為 0；如果不是，則識別碼如下：<br /><br /> 如果 class = 1， minor_id 就是 column_id (資料行)，否則就是 0 (物件)。<br /><br /> 如果 class = 2，minor_id 就是 parameter_id。<br /><br /> 如果 class = 7，minor_id 就是 index_id。|  
@@ -44,9 +46,9 @@ ms.locfileid: "85977590"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [擴充屬性目錄檢視 &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/f39fd324-efd4-4468-884c-bf77ed1a026f)   
- [fn_listextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+ [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的擴充屬性目錄檢視 ](https://msdn.microsoft.com/library/f39fd324-efd4-4468-884c-bf77ed1a026f)   
+ [sys. fn_listextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [sp_addextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
  [sp_dropextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
  [sp_updateextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)  

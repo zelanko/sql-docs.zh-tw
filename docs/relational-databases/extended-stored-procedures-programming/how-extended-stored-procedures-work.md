@@ -1,5 +1,6 @@
 ---
-title: 擴充預存程式的工作方式 |Microsoft Docs
+description: 擴充預存程序運作方式
+title: 擴充預存程式的運作方式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e946d8c-3268-4b59-8a1c-1637909cd701
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 02a1c64974fdcab5a686a61ac35a3a2175e16314
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 49c5f3491d93ee71a0ce118a5f4ba387da770f1c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758084"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460813"
 ---
 # <a name="how-extended-stored-procedures-work"></a>擴充預存程序運作方式
 
@@ -28,7 +29,7 @@ ms.locfileid: "85758084"
   
  擴充預存程序藉以運作的程序為：  
   
-1.  當用戶端執行擴充預存程式時，會從用戶端應用程式以表格式資料流程（TDS）或簡單物件存取通訊協定（SOAP）格式將要求傳送至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+1.  當用戶端執行擴充預存程式時， (TDS) 或簡單物件存取通訊協定 (SOAP) 格式從用戶端應用程式傳輸到的要求會傳輸到表格式資料流程中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會搜尋與擴充預存程序相關聯的 DLL，並載入 DLL (如果尚未載入)。  
   

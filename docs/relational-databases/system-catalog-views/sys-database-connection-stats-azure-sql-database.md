@@ -1,4 +1,5 @@
 ---
+description: sys.database_connection_stats (Azure SQL Database)
 title: sys.database_connection_stats
 titleSuffix: Azure SQL Database
 ms.date: 01/28/2019
@@ -20,26 +21,26 @@ author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 047e6d6f9f6e7c0405eab27655ee9e2d97e1236b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 55bfc4c575cae194b45e6aa7dbd01fbe38562a82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787134"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460660"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL Database)
 
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  包含資料庫連接 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 事件**connectivity**的統計資料，提供資料庫連接成功和失敗的總覽。 如需線上活動的詳細資訊，請參閱 sys.databases 中的事件種類[event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)。  
+  包含 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 資料庫 **連接** 事件的統計資料，提供資料庫連接成功和失敗的總覽。 如需連接事件的詳細資訊，請參閱 sys. event_log 中的事件種類 [&#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)。  
   
 |統計資料|類型|描述|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|資料庫的名稱。|  
 |**start_time**|**datetime2**|彙總間隔開始的 UTC 日期和時間。 這個時間永遠是 5 分鐘的倍數。 例如：<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
-|**end_time**|**datetime2**|彙總間隔結束的 UTC 日期和時間。 **End_time**一定會比相同資料列中的對應**start_time**剛好晚5分鐘。|  
+|**end_time**|**datetime2**|彙總間隔結束的 UTC 日期和時間。 **End_time** 永遠比相同資料列中的對應 **start_time** 晚5分鐘。|  
 |**success_count**|**int**|成功連接的數目。|  
-|**total_failure_count**|**int**|連接失敗的總數。 這是**connection_failure_count**、 **terminated_connection_count**和**throttled_connection_count**的總和，且不包含鎖死事件。|  
+|**total_failure_count**|**int**|連接失敗的總數。 這是 **connection_failure_count**、 **terminated_connection_count**和 **throttled_connection_count**的總和，不包含鎖死事件。|  
 |**connection_failure_count**|**int**|登入失敗的數目。|  
 |**terminated_connection_count**|**int**|**_僅適用于 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11。_**<br /><br /> 終止的連接數目。|  
 |**throttled_connection_count**|**int**|**_僅適用于 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11。_**<br /><br /> 節流的連接數目。|  
@@ -58,7 +59,7 @@ ms.locfileid: "85787134"
   
 ### <a name="interval-start_time-and-end_time"></a>間隔的 start_time 和 end_time
 
- 事件發生在**start_time** _之後_，或在該間隔**end_time** _之前_的匯總間隔中 *，都會包含*事件。 例如，正巧發生在 `2012-10-30 19:25:00.0000000` 的事件只會納入到以下所示的第二段間隔：  
+ 當事件發生在**start_time**之後，或_在_該間隔**end_time** _之前_，事件*就會包含*在匯總間隔內。 例如，正巧發生在 `2012-10-30 19:25:00.0000000` 的事件只會納入到以下所示的第二段間隔：  
   
 ```  
   
@@ -73,25 +74,25 @@ start_time                    end_time
   
 ### <a name="data-retention"></a>資料保留
 
- 此視圖中的資料最多會保留30天，或可能較少，視資料庫的數目和每個資料庫所產生的唯一事件數目而定。 若要保留這項資訊更長的時間，請將資料複製到另一個資料庫。 在您製作檢視的初始副本之後，檢視中的資料列可能會隨資料累積而更新。 為了讓資料副本保持最新狀態，請定期執行資料列的資料表掃描，查看現有資料列的事件計數是否增加，並且識別新資料列 (您可以使用開始和結束時間識別唯一資料列)，然後用這些變更來更新您的資料副本。  
+ 此視圖中的資料最多會保留30天，或根據資料庫數目和每個資料庫所產生之唯一事件的數目而定，可能會較少。 若要保留這項資訊更長的時間，請將資料複製到另一個資料庫。 在您製作檢視的初始副本之後，檢視中的資料列可能會隨資料累積而更新。 為了讓資料副本保持最新狀態，請定期執行資料列的資料表掃描，查看現有資料列的事件計數是否增加，並且識別新資料列 (您可以使用開始和結束時間識別唯一資料列)，然後用這些變更來更新您的資料副本。  
   
 ### <a name="errors-not-included"></a>不包括錯誤
 
  這個檢視可能不會包括所有連接和錯誤資訊：  
   
-- 此視圖不包括所有 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 可能發生的資料庫錯誤，只會[&#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)中的事件種類 event_log 中指定的錯誤。  
+- 此視圖不包括所有 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 可能發生的資料庫錯誤，只包括 [sys. event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)中的事件種類所指定的錯誤。  
   
-- 如果資料中心內發生機器故障 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，事件資料表可能會遺失少量的資料。  
+- 如果資料中心內發生機器故障 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，則事件資料表中可能會遺失少量的資料。  
   
 - 如果已透過 DoSGuard 封鎖 IP 位址，則來自該 IP 位址的連接嘗試事件就無法收集，也不會出現在這個檢視中。  
   
 ## <a name="permissions"></a>權限
 
- 具有**master**資料庫存取權限的使用者具有此視圖的唯讀存取權。  
+ 擁有存取 **master** 資料庫之許可權的使用者，擁有此視圖的唯讀存取權。  
   
 ## <a name="example"></a>範例
 
- 下列範例顯示**database_connection_stats sys.databases**的查詢，以傳回在9/25/2011 和中午9/28/2011 （UTC）之間發生的資料庫連接摘要。 根據預設，查詢結果會依**start_time**排序（遞增順序）。  
+ 下列範例顯示 **sys. database_connection_stats** 的查詢，以傳回在9/25/2011 和中午 9/28/2011 (UTC) 之間發生的資料庫連接摘要。 根據預設，查詢結果會依 **start_time** (遞增順序) 排序。  
   
 ```sql
 SELECT *  

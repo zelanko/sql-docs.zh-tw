@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_33028
 title: MSSQLSERVER_33028 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c5cec0e4-0bcd-4907-826f-e7d835cfcb37
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ae11fbccaa4f577815e503d9a0dffaa34c7c04ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 83c7c1bcd4531ccd4dc1e0eb37876c6ed82d031b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723612"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460940"
 ---
 # <a name="mssqlserver_33028"></a>MSSQLSERVER_33028
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_9692
 title: MSSQLSERVER_9692 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 02399d6e-ab5e-4f30-8a3e-2bb1e8c135b5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1b5348d31c1b85d3f83797bef186362d62e36efb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8bf2d195fcb46ecc4cfd5e5f295542b76fc8b3bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85636181"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460846"
 ---
 # <a name="mssqlserver_9692"></a>MSSQLSERVER_9692
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

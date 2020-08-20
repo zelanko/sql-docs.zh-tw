@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_audit_class_type_map （Transact-sql） |Microsoft Docs
+description: sys.dm_audit_class_type_map (Transact-SQL)
+title: sys. dm_audit_class_type_map (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,26 +19,26 @@ helpviewer_keywords:
 ms.assetid: e10b5431-1bb0-47ca-8fd0-c04bd73a4410
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 646d3510a347e22ccf68701f5e89d57642323a71
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: ed8b45fcd8650d47c2acbce23a5e9033b65d58e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394438"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460506"
 ---
 # <a name="sysdm_audit_class_type_map-transact-sql"></a>sys.dm_audit_class_type_map (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-  傳回一個資料表，它會將稽核記錄檔中的 class_type 欄位對應到 sys.dm_audit_actions 中的 class_desc 欄位。 如需有關 Audit 的詳細資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱[SQL Server audit &#40;資料庫引擎&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
+  傳回一個資料表，它會將稽核記錄檔中的 class_type 欄位對應到 sys.dm_audit_actions 中的 class_desc 欄位。 如需有關 audit 的詳細資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱 [SQL Server audit &#40;資料庫引擎&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
 
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**class_type**|**char(2)**|所稽核之實體的類別類型。 對應至寫入到 audit 記錄檔的 class_type，並由**get_audit_file （）** 函數傳回。 不可為 Null。|  
+|**class_type**|**char(2)**|所稽核之實體的類別類型。 對應至寫入至 audit 記錄檔的 class_type，並由 **get_audit_file ( # B1 ** 函數傳回。 不可為 Null。|  
 |**class_type_desc**|**nvarchar(120)**|可稽核的實體名稱。 不可為 Null。|  
 |**securable_class_desc**|**nvarchar(120)**|對應到正在稽核之 class_type 的安全性實體物件。 如果 class_type 未對應到安全性實體物件，則為 NULL。 可以與 sys.dm_audit_actions 中的 class_desc 產生關聯。|  
   
 ## <a name="permissions"></a>權限  
- 主體必須具有**SELECT**許可權。 根據預設值，這會授與給 Public。  
+ 主體必須具有 **SELECT** 許可權。 根據預設值，這會授與給 Public。  
   
 ## <a name="see-also"></a>另請參閱  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

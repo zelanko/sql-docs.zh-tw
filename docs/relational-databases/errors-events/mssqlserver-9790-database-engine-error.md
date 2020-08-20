@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_9790
 title: MSSQLSERVER_9790 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 83fd379f-5deb-4f97-8cb4-282e3d3fed94
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 34cbae38961a979afc61b59f2fb79cf7085df19e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 04ead56d08fb1e2214a99c9ec4dcefb4d816660e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85636142"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460830"
 ---
 # <a name="mssqlserver_9790"></a>MSSQLSERVER_9790
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

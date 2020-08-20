@@ -1,5 +1,6 @@
 ---
-title: 資料庫維護計畫資料表（Transact-sql） |Microsoft Docs
+description: 資料庫維護計畫資料表 (Transact-SQL)
+title: 資料庫維護計畫資料表 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f264554c-5514-4df2-aadb-6dcdc2dfcfea
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4a561a2b6a00c87d213a08390ef3f12ab596d0c6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3c29bede925a84fda9d538c7f474ad6cebdf7c83
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762621"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460380"
 ---
 # <a name="database-maintenance-plan-tables-transact-sql"></a>資料庫維護計畫資料表 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,6 +46,6 @@ ms.locfileid: "85762621"
  針對每個升級的資料庫維護計畫，各包含一個資料列。  
   
 ## <a name="see-also"></a>另請參閱  
- [維護計劃](../../relational-databases/maintenance-plans/maintenance-plans.md)  
+ [維護計畫](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

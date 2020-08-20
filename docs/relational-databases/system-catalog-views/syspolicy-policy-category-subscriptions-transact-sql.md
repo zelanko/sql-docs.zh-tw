@@ -1,5 +1,6 @@
 ---
-title: syspolicy_policy_category_subscriptions （Transact-sql） |Microsoft Docs
+description: syspolicy_policy_category_subscriptions (Transact-SQL)
+title: syspolicy_policy_category_subscriptions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b3b3a7d7-0b78-46c0-9755-045f7a5692b9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ac307cf73097214a0100365de5fc76097a890df6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 99f95e323b88f6932a1f3af0ed3cf72d9bed964c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900559"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460502"
 ---
 # <a name="syspolicy_policy_category_subscriptions-transact-sql"></a>syspolicy_policy_category_subscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

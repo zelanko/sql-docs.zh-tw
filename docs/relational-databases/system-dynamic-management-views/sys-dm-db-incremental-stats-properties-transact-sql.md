@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_db_incremental_stats_properties （Transact-sql） |Microsoft Docs
+description: sys.dm_db_incremental_stats_properties (Transact-SQL)
+title: sys. dm_db_incremental_stats_properties (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/18/2017
 ms.prod: sql
@@ -18,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: aa0db893-34d1-419c-b008-224852e71307
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 20e4f7f015cc5d1ced1802e192c36f6c86471f0b
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: f6661c9dd7f581bb7c8dccc62b0b11547a73b4fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442915"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460438"
 ---
 # <a name="sysdm_db_incremental_stats_properties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   針對目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的指定資料庫物件 (資料表) 傳回累加統計資料的屬性。 `sys.dm_db_incremental_stats_properties` (其中包含資料分割編號) 的使用類似於用於非累加統計資料的 `sys.dm_db_stats_properties` 。 
   
-  這個函數是在 [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] Service pack 2 和 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] service pack 1 中引進。
+  此函數是在 [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] Service pack 2 和 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] service pack 1 中引進。
   
 ## <a name="syntax"></a>語法  
   
@@ -69,7 +70,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
  
  此行為可讓您在交叉套用至例如 `sys.dm_db_incremental_stats_properties` 和 `sys.objects` 等檢視中的資料列時，安全地使用 `sys.stats`。 這個方法可以傳回對應每個資料分割的統計資料屬性。 若要查看跨所有資料分割合併的合併統計資料屬性，請改用 sys.dm_db_stats_properties。 
 
-統計資料更新日期儲存在[統計資料 Blob 物件](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)中，其中還有[長條圖](../../relational-databases/statistics/statistics.md#histogram)和[密度向量](../../relational-databases/statistics/statistics.md#density)，不是儲存在中繼資料中。 未讀取任何資料來產生統計資料時，就不會建立統計資料 blob、無法使用日期，而且*last_updated*資料行是 Null。 這是已篩選統計資料的情況，其中述詞未傳回任何資料列，或為新的空白資料表的情況。
+統計資料更新日期儲存在[統計資料 Blob 物件](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)中，其中還有[長條圖](../../relational-databases/statistics/statistics.md#histogram)和[密度向量](../../relational-databases/statistics/statistics.md#density)，不是儲存在中繼資料中。 如果沒有讀取資料以產生統計資料，則不會建立統計資料 blob、無法使用日期，而且 *last_updated* 資料行是 Null。 這是已篩選統計資料的情況，其中述詞未傳回任何資料列，或為新的空白資料表的情況。
 
 ## <a name="permissions"></a>權限  
  要求使用者對於統計資料資料行擁有選取權限，或是使用者擁有資料表，或使用者是 `sysadmin` 固定伺服器角色、`db_owner` 固定資料庫角色或 `db_ddladmin` 固定資料庫角色的成員。  

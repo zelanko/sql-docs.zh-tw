@@ -1,5 +1,6 @@
 ---
-title: 使用資料執行中參數（ODBC） |Microsoft Docs
+description: 管理 text 和 image 資料行 - 使用資料執行中參數
+title: 使用 (ODBC) 的資料執行中參數 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,11 +14,12 @@ ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee2daaa43c4453db0020f3400ba126b2afcfd5e0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9542741a00cee0206931e6194e3ded2089fe3f4d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007910"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460756"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-parameters"></a>管理 text 和 image 資料行 - 使用資料執行中參數
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,15 +46,15 @@ ms.locfileid: "86007910"
 ## <a name="example"></a>範例  
  此範例顯示如何使用 SQLParamData 和 SQLPutData 讀取 SQL_LONG 變數字元資料。 IA64 不支援此範例。  
   
- 您需要名為 AdventureWorks 的 ODBC 資料來源，其預設資料庫為 AdventureWorks 範例資料庫  （您可以從[Microsoft SQL Server 範例和 [社區專案](https://go.microsoft.com/fwlink/?LinkID=85384)] 首頁下載 AdventureWorks 範例資料庫）。此資料來源必須以作業系統所提供的 ODBC 驅動程式為基礎（驅動程式名稱為 "SQL Server"）。 如果您要建立並執行此範例，當做 64 位元作業系統上的 32 位元應用程式，您必須利用 %windir%\SysWOW64\odbcad32.exe，以 ODBC 管理員身分建立 ODBC 資料來源。  
+ 您需要名為 AdventureWorks 的 ODBC 資料來源，其預設資料庫為 AdventureWorks 範例資料庫   (您可以從 [Microsoft SQL Server 範例和群組專案](https://go.microsoft.com/fwlink/?LinkID=85384) 首頁下載 AdventureWorks 範例資料庫。 ) 這個資料來源必須以作業系統所提供的 ODBC 驅動程式為基礎， (驅動程式名稱是 "SQL Server" ) 。 如果您要建立並執行此範例，當做 64 位元作業系統上的 32 位元應用程式，您必須利用 %windir%\SysWOW64\odbcad32.exe，以 ODBC 管理員身分建立 ODBC 資料來源。  
   
  這個範例會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 若要連接到具名執行個體，請變更 ODBC 資料來源的定義，以便使用下列格式指定執行個體：server\namedinstance。 根據預設，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 會安裝至具名執行個體。  
   
- 執行第一個（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）程式代碼清單，以建立此範例所使用的資料表。  
+ 執行第一個 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式代碼清單，以建立範例所使用的資料表。  
   
  使用 odbc32.lib 編譯第二個 (C++) 程式碼清單。 然後，執行此程式。  
   
- 執行第三個（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）程式代碼清單，以刪除此範例所使用的資料表。  
+ 執行第三個 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式代碼清單，以刪除範例所使用的資料表。  
   
 ```  
 use AdventureWorks  
@@ -224,6 +226,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [管理 text 和 image 資料行如何 &#40;ODBC&#41;的 how to 主題](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
+ [&#40;ODBC&#41;管理文字和影像資料行的 how to 主題 ](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
   
   

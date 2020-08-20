@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_8642
 title: MSSQLSERVER_8642 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fc498059-202f-4d0b-8599-4e784b47c186
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ced4c9b3e690b709be9d8f500ff2656cf6b5e220
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7ab7d742d6af4b9f2ae29e8cb9cffe645a1d7f49
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727426"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460876"
 ---
 # <a name="mssqlserver_8642"></a>MSSQLSERVER_8642
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
