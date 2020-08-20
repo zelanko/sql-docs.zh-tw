@@ -1,4 +1,5 @@
 ---
+description: SMO 物件模型命名空間
 title: SMO 命名空間 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
@@ -16,11 +17,12 @@ ms.assetid: 7bfabe4d-9f4c-4bc9-b998-93bd2b50ee8a
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 192e3b98e7091ba337fa1b0090c6add2a255a97a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f5e2c5b4574e03ed8820f3d9bfe307fe5a5c6e55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012287"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464930"
 ---
 # <a name="smo-object-model-namespaces"></a>SMO 物件模型命名空間
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -34,7 +36,7 @@ ms.locfileid: "86012287"
   
 |類別|函式|  
 |-----------|--------------|  
-|<xref:Microsoft.SqlServer.Management.Smo>|包含實例類別、公用程式類別和用來以程式設計方式操作的列舉 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|<xref:Microsoft.SqlServer.Management.Smo>|包含實例類別、公用程式類別，以及用來以程式設計方式操作的列舉 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |<xref:Microsoft.SqlServer.Management.Common>|包含 Replication Management Objects (RMO) 和 SMO 通用的類別，例如連接類別。|  
 |<xref:Microsoft.SqlServer.Management.Smo.Agent>|包含表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的類別。|  
 |<xref:Microsoft.SqlServer.Management.Smo.Wmi>|包含表示 WMI 提供者的類別。|  

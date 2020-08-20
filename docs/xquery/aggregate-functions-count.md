@@ -1,5 +1,6 @@
 ---
-title: count 函數（XQuery） |Microsoft Docs
+description: 彙總函式 - count
+title: count 函數 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a9f7131f-23e1-4d4d-a36c-180447543926
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f1b56d549d00fb0b76c530a5274adb6a9c82c80c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6691ca005de2ceec1de0408e358544292c58704d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85643719"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467180"
 ---
 # <a name="aggregate-functions---count"></a>彙總函式 - count
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  傳回 *$arg*所指定序列中包含的專案數。  
+  傳回 *$arg*所指定順序中所包含的專案數目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,10 +40,10 @@ fn:count($arg as item()*) as xs:integer
  要計數的項目  
   
 ## <a name="remarks"></a>備註  
- 如果 *$arg*是空的序列，則傳回0。  
+ 如果 *$arg* 是空的序列，則傳回0。  
   
 ## <a name="examples"></a>範例  
- 本主題針對 XML 實例提供 XQuery 範例，這些實例是儲存在 AdventureWorks 資料庫的各種**xml**類型資料行中。  
+ 本主題針對 XML 實例提供 XQuery 範例，這些實例是儲存在 AdventureWorks 資料庫的各種 **xml** 類型資料行中。  
   
 ### <a name="a-using-the-count-xquery-function-to-count-the-number-of-work-center-locations-in-the-manufacturing-of-a-product-model"></a>A. 使用 count() XQuery 函數計數在製造產品型號時工作中心的位置數目  
  下列查詢計數在製造產品型號的過程中 (ProductModelID=7) 工作中心的位置數目。  
@@ -64,9 +65,9 @@ WHERE Production.ProductModel.ProductModelID=7
   
 -   [XQuery](../xquery/modules-and-prologs-xquery-prolog.md)初構中的**namespace**關鍵字定義了命名空間前置詞。 之後會在 XQuery 主體中使用前置詞。  
   
--   查詢會建立包含 <`NoOfWorkStations`> 元素的 XML。  
+-   此查詢會將包含 <> 元素的 XML 結構 `NoOfWorkStations` 。  
   
--   XQuery 主體中的**count （）** 函式會計算 <`Location`> 元素的數目。  
+-   XQuery 主體中 ** ( # B1 ** 函式的計數，會計算 <`Location`> 元素的數目。  
   
  以下是結果：  
   
@@ -98,7 +99,7 @@ WHERE Production.ProductModel.ProductModelID= 7
                   ProductModelName="HL Touring Frame">6</NoOfWorkStations>  
 ```  
   
- 除了 XML 之外，您可用非 xml 類型來傳回這些值，如下列查詢所示。 查詢會使用[value （）方法（xml 資料類型）](../t-sql/xml/value-method-xml-data-type.md)來取出工作中心位置計數。  
+ 除了 XML 之外，您可用非 xml 類型來傳回這些值，如下列查詢所示。 此查詢會使用 [ ( # A1 方法 (xml 資料) 類型的值 ](../t-sql/xml/value-method-xml-data-type.md) ，以取得工作中心位置計數。  
   
 ```  
 SELECT  ProductModelID,   

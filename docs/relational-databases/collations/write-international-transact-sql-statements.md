@@ -1,4 +1,5 @@
 ---
+description: 撰寫國際通用的 Transact-SQL 陳述式
 title: 撰寫國際通用的 Transact-SQL 陳述式 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2019
@@ -18,12 +19,12 @@ ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72b2d6056d3a48d21804d02677867a9757f4f671
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8192fcd7d657c5842dfd60fcca36fec3e945413d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003934"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465514"
 ---
 # <a name="write-international-transact-sql-statements"></a>撰寫國際通用的 Transact-SQL 陳述式
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "86003934"
 -   最多到 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]，使用 **nchar**、**nvarchar** 及 **nvarchar(max)** 來取代所有使用的 **char**、**varchar** 及 **varchar(max)** 資料類型。 如果使用啟用[增補字元 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 的定序，則會使用 UTF-16 來編碼資料。 使用非 SC 定序會導致使用 UCS-2 來編碼資料。 這可避免字碼頁轉換問題。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。 
 
     > [!IMPORTANT]
-    > **text** 資料類型已淘汰，不應用於新的開發工作。 計劃將 **text** 資料轉換為 **varchar(max)** 。
+    > **text** 資料類型已淘汰，不應用於新的開發工作。 計劃將 **text** 資料轉換為 **varchar(max)**。
   
 -   您在執行月份和週中日的比較和運算時，請使用數值的日期部分，而不要使用名稱字串。 不同的語言設定會傳回不同的月份和週中日名稱。 例如，語言設定為「英文 (美國)」時，`DATENAME(MONTH,GETDATE())` 會傳回 `May`；當語言設定為「德文」時，會傳回 `Mai`；而當語言設定為「法文」時，會傳回 `mai`。 請改用如 [DATEPART](../../t-sql/functions/datepart-transact-sql.md) 的函式，使用數字月份而非名稱。 當您要將結果集顯示給使用者時，請使用 DATEPART 名稱，因為日期名稱通常比數值表示法來得有意義。 但是，不要根據特定語言的顯示名稱來撰寫任何程式碼邏輯。  
   
@@ -48,7 +49,7 @@ ms.locfileid: "86003934"
   
          **{ ts'** _yyyy_ **-** _mm_ **-** _dd_ _hh_ **:** _mm_ **:** _ss_ [ **.** _fff_] **'}** ，例如： **{ ts'1998-09-24 10:02:20'}**  
   
-         **{ d'** _yyyy_ **-** _mm_ **-** _dd_ **'}** ，例如： **{ d'1998-09-24'}**
+         **{ d'** _yyyy_ **-** _mm_ **-** _dd_ **'}**，例如：**{ d'1998-09-24'}**
   
          **{ t'** _hh_ **:** _mm_ **:** _ss_ **'}** ，例如： **{ t'10:02:20'}**  
   
@@ -62,7 +63,7 @@ ms.locfileid: "86003934"
         WHERE OrderDate = CONVERT(DATETIME, '20060719', 101)  
         ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)     
 [DATEPART &#40;Transact-SQL&#41;](../../t-sql/functions/datepart-transact-sql.md)        
 [定序與 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)      

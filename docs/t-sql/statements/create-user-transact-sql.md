@@ -1,4 +1,5 @@
 ---
+description: CREATE USER (Transact-SQL)
 title: CREATE USER (Transact-SQL)
 ms.custom: ''
 ms.date: 11/06/2019
@@ -29,12 +30,12 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed4f20d64aff96e367c0f3aeb5e56746826615f5
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 54734c9b463ab6450e0f5793d637b32d9e60553e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87862771"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467262"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 

@@ -1,4 +1,5 @@
 ---
+description: Query with Full-Text Search
 title: 使用全文檢索搜尋進行查詢 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 59e3c8713aac6648d7419e405d424b8b4080030a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: abc6f54441e4cf4baaaede6cf9e4766daac607a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629246"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464980"
 ---
 # <a name="query-with-full-text-search"></a>Query with Full-Text Search
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -132,7 +133,7 @@ GO
 
 ### <a name="freetextfreetexttable"></a>FREETEXT/FREETEXTTABLE
 
--   比對指定之單字、片語或句子 (「Freetext 字串」  ) 的意義，而不是確切的用字。
+-   比對指定之單字、片語或句子 (「Freetext 字串」**) 的意義，而不是確切的用字。
 -   如果在指定之資料行的全文檢索索引中找到任何詞彙或任何形式的詞彙，就會產生相符項目。
 
 ## <a name="compare-predicates-and-functions"></a>比較述詞和函式
@@ -168,14 +169,14 @@ GO
 使用其中一個函式的查詢也會針對每個傳回的資料列傳回一個相關排名值 (RANK) 和全文檢索索引鍵 (KEY)，如下所示：
 
 -   **KEY** 資料行。 KEY 資料行會傳回所傳回之資料列的唯一值。 KEY 資料行可用來指定選取準則。
--   **RANK** 資料行。 RANK 資料行會傳回每個資料列的「等級值」  (Rank Value)，表示資料列與選取準則的符合程度。 資料列中文字或文件的等級值越高，該資料列與給定全文檢索查詢的關聯性就越大。 不同的資料列可能會以完全相同的方式排名。 您可以透過指定選擇性 *top_n_by_rank* 參數，限制要傳回的相符項目數。 如需詳細資訊，請參閱 [限制 RANK 的搜索結果](../../relational-databases/search/limit-search-results-with-rank.md)。
+-   **RANK** 資料行。 RANK 資料行會傳回每個資料列的「等級值」**(Rank Value)，表示資料列與選取準則的符合程度。 資料列中文字或文件的等級值越高，該資料列與給定全文檢索查詢的關聯性就越大。 不同的資料列可能會以完全相同的方式排名。 您可以透過指定選擇性 *top_n_by_rank* 參數，限制要傳回的相符項目數。 如需詳細資訊，請參閱 [限制 RANK 的搜索結果](../../relational-databases/search/limit-search-results-with-rank.md)。
 
 **其他資訊**。 如需這些函式的語法和引數詳細資訊，請參閱[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 和 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)。
 
 ## <a name="specific-types-of-searches"></a><a name="examples_specific"></a> 特定的搜尋類型
 
 ###  <a name="search-for-a-specific-word-or-phrase-simple-term"></a><a name="Simple_Term"></a> 搜尋特定單字或片語 (簡單詞彙)  
- 您可以使用 [CONTAINS](../../t-sql/queries/contains-transact-sql.md)、[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)、[FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 或 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 來搜尋資料表中的特定單字或片語。 例如，如果您要搜尋 **資料庫中的**ProductReview[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表，以尋找某產品具有 "learning curve" 片語的所有註解，可依照下列方式使用 CONTAINS 述詞：  
+ 您可以使用 [CONTAINS](../../t-sql/queries/contains-transact-sql.md)、[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)、[FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 或 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 來搜尋資料表中的特定單字或片語。 例如，如果您要搜尋 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中的 **ProductReview** 資料表，以尋找某產品具有 "learning curve" 片語的所有註解，可依照下列方式使用 CONTAINS 述詞：  
   
 ```sql
 USE AdventureWorks2012  
@@ -191,7 +192,7 @@ GO
 
 #### <a name="more-info-about-simple-term-searches"></a>簡單字詞搜尋的詳細資訊
 
-在全文檢索搜尋中，「單字」  (或 Token  ) 是一種字串，其邊界是由適當的斷詞工具所識別，後面緊接著指定之語言的語言規則。 有效的「片語」  是由多個單字所組成 (不論單字之間是否有標點符號)。
+在全文檢索搜尋中，「單字」 (或 Token) 是一種字串，其邊界是由適當的斷詞工具所識別，後面緊接著指定之語言的語言規則。 有效的「片語」是由多個單字所組成 (不論單字之間是否有標點符號)。
 
 例如，"croissant" 是一個單字，而 "café au lait" 則是一個片語。 這類字詞與片語稱為簡單詞彙。
 
@@ -216,7 +217,7 @@ GO
 
 #### <a name="more-info-about-prefix-searches"></a>前置詞搜尋的詳細資訊
 
-「前置詞彙」  是指附加至單字前面以便產生衍生字或字形變化的字串。
+「前置詞彙」是指附加至單字前面以便產生衍生字或字形變化的字串。
 
 -   對於單一前置詞彙而言，任何以指定之詞彙為開頭的單字都會成為結果集的一部分。 例如，"auto*" 詞彙與 "automatic"、"automobile" 等字相符。
 
@@ -239,11 +240,11 @@ WHERE CONTAINS (Comments, 'FORMSOF(INFLECTIONAL, "foot")')
 GO  
 ```  
   
-全文檢索搜尋會使用字幹分析器  ，此工具可讓您搜尋動詞的不同時態和變化或是名詞的單複數形式。 如需字幹分析器的詳細資訊，請參閱 [設定及管理搜尋的斷詞工具與字幹分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
+全文檢索搜尋會使用字幹分析器，此工具可讓您搜尋動詞的不同時態和變化或是名詞的單複數形式。 如需字幹分析器的詳細資訊，請參閱 [設定及管理搜尋的斷詞工具與字幹分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
 
 #### <a name="more-info-about-generation-term-searches"></a>衍生詞彙搜尋的詳細資訊
 
-「字形變化」  是指動詞的不同時態和變化或是名詞的單複數。
+「字形變化」是指動詞的不同時態和變化或是名詞的單複數。
 
 例如，搜尋 "drive" 單字的字形變化。 如果資料表的不同資料列中包括 "drive"、"drives"、"drove"、"driving" 及 "driven" 等字，因為這些單字全都從 "drive" 這個字變化而來，所以都會出現在結果集中。
 
@@ -251,7 +252,7 @@ GO
 
 ### <a name="search-for-synonyms-of-a-specific-word"></a>搜尋特定單字的同義字
 
-「同義字」  會針對詞彙定義使用者指定的同義字。 如需同義字檔案的詳細資訊，請參閱[設定及管理全文檢索搜尋的同義字檔案](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)。
+「同義字」會針對詞彙定義使用者指定的同義字。 如需同義字檔案的詳細資訊，請參閱[設定及管理全文檢索搜尋的同義字檔案](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)。
 
 例如，如果 "{car, automobile, truck, van}" 項目新增到同義字中，您就可以搜尋 "car" 這個字的同義字變化。 由於 "automobile"、"truck"、"van" 或 "car" 這些字都是屬於內含 "car" 這個字的同義字擴充集，因此所查詢的資料表中，所有包含這些字的資料列都會出現在結果集。
 
@@ -259,7 +260,7 @@ GO
 
 ### <a name="search-for-a-word-near-another-word"></a>搜尋一個單字的「接近」單字
 
-「近接字詞」  表示彼此相近的單字或片語。 您也可以指定分隔第一個和最後一個搜尋詞彙之非搜尋詞彙的數目上限。 此外，您可以依任何順序或是您所指定的順序來搜尋字詞或片語。
+「近接字詞」** 表示彼此相近的單字或片語。 您也可以指定分隔第一個和最後一個搜尋詞彙之非搜尋詞彙的數目上限。 此外，您可以依任何順序或是您所指定的順序來搜尋字詞或片語。
 
 例如，您要尋找其中有 "ice" 單字接近 "hockey" 單字，或 "ice skating" 片語接近 "ice hockey" 片語的資料列。 
 
@@ -291,7 +292,7 @@ GO
 
 #### <a name="more-info-about-weighted-term-searches"></a>加權字詞搜尋的詳細資訊
 
-在加權字詞搜尋中，「加權值」  是表示每個單字與片語在一組單字與片語中的重要程度。 最小的加權值是 0.0，最大則為 1.0。
+在加權字詞搜尋中，「加權值」** 是表示每個單字與片語在一組單字與片語中的重要程度。 最小的加權值是 0.0，最大則為 1.0。
 
 例如，在搜尋多個詞彙的查詢中，您可以指派每個搜尋單字的加權值，以指出它與搜尋條件中之其他單字的相對重要性。 這類型之查詢的結果會根據您指派給搜尋單字的相對加權，先傳回最相關的資料列。 結果集包含具有任何指定之詞彙的文件或資料列 (或它們之間的內容)。不過，因為與不同搜尋詞彙相關聯的加權值具有變化，所以某些結果會被視為比其他結果更相關。
 
@@ -327,7 +328,7 @@ GO
 
 -   **停用字詞**。 定義全文檢索查詢時，全文檢索引擎會從搜尋準則中捨棄停用字詞 (也稱為非搜尋字)。 停用字詞是指 "a"、"and"、"is" 或 "the" 等字，這些字雖然經常出現，但通常對搜尋特定文字並無幫助。 停用字詞會列於停用字詞表中。 每個全文檢索索引都會與特定停用字詞表相關聯，以便判斷哪些停用字詞會在建立索引時，從查詢或索引中省略。 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的停用字詞與停用字詞表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
 
--   [語言]  ，含 **LANGUAGE** 選項。 許多查詢詞彙主要取決於斷詞工具行為。 若要確保您使用正確的斷詞工具 (和字幹分析器) 和同義字檔案，我們建議您指定 LANGUAGE 選項。 如需詳細資訊，請參閱 [選擇建立全文檢索索引時的語言](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)。  
+-   [語言]****，含 **LANGUAGE** 選項。 許多查詢詞彙主要取決於斷詞工具行為。 若要確保您使用正確的斷詞工具 (和字幹分析器) 和同義字檔案，我們建議您指定 LANGUAGE 選項。 如需詳細資訊，請參閱 [選擇建立全文檢索索引時的語言](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)。  
   
 -   **同義字**. FREETEXT 和 FREETEXTTABLE 查詢預設會使用同義字。 CONTAINS 和 CONTAINSTABLE 支援選擇性 THESAURUS 引數。 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的同義字檔案](configure-and-manage-thesaurus-files-for-full-text-search.md)。
   

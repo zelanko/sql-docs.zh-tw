@@ -1,4 +1,5 @@
 ---
+description: 將收集項加入收集組 (Transact-SQL)
 title: 將收集項新增至收集組 (T-SQL)
 ms.date: 06/03/2020
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: 9fe6454e-8c0e-4b50-937b-d9871b20fd13
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 3fc722a36601315dac08e6b497d89737fb2f4d33
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8ef2d09b1ce912f73d03d3e25f8dac0169e57f8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733896"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465472"
 ---
 # <a name="add-a-collection-item-to-a-collection-set-transact-sql"></a>將收集項加入收集組 (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -104,7 +105,7 @@ ms.locfileid: "85733896"
     GO  
     ```  
   
-     收集組及其收集項都會顯示在 [結果]  索引標籤上。  
+     收集組及其收集項都會顯示在 [結果]**** 索引標籤上。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立使用一般 T-SQL 查詢收集器型別的自訂收集組 &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   

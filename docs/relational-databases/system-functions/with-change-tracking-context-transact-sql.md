@@ -1,5 +1,6 @@
 ---
-title: WITH CHANGE_TRACKING_CONTEXT （Transact-sql） |Microsoft Docs
+description: WITH CHANGE_TRACKING_CONTEXT (Transact-SQL)
+title: WITH CHANGE_TRACKING_CONTEXT (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: 885e33a1-602a-4b94-8380-a63ac935a683
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aa900fcf6bd142c5f3d5eddde85df0a41419efa1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 850a20210b503cb3e6c05ab4c1ff69ee178cbbd7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752823"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464741"
 ---
 # <a name="with-change_tracking_context-transact-sql"></a>WITH CHANGE_TRACKING_CONTEXT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +43,7 @@ WITH CHANGE_TRACKING_CONTEXT ( context )
   
 #### <a name="parameters"></a>參數  
  *內容*  
- 藉由呼叫應用程式所提供的內容資訊，而且會與變更的變更追蹤資訊儲存在一起。 *coNtext*為**Varbinary （128）**。  
+ 藉由呼叫應用程式所提供的內容資訊，而且會與變更的變更追蹤資訊儲存在一起。 *內容* 是 **Varbinary (128) **。  
   
  這個值可以是常數或變數，但不得為 NULL。  
   
@@ -54,7 +55,7 @@ WITH CHANGE_TRACKING_CONTEXT ( context )
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [變更追蹤函數 &#40;Transact-sql&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
+ [變更追蹤函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [CHANGETABLE &#40;Transact-sql&#41;](../../relational-databases/system-functions/changetable-transact-sql.md)   
  [追蹤資料變更 &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
   

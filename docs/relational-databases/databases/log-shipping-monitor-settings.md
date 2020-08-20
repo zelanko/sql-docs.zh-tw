@@ -1,4 +1,5 @@
 ---
+description: 記錄傳送監視器設定
 title: 記錄傳送監視器設定 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 45e2ba7d-b3aa-4643-9451-bcb991572314
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: b4ff8d6e7348ece5f09f9ac529c474a302e30be7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 33ff5abf38eef7525dff17587a32529ddddc689b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726441"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465437"
 ---
 # <a name="log-shipping-monitor-settings"></a>記錄傳送監視器設定
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

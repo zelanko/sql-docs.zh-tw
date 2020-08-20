@@ -1,4 +1,5 @@
 ---
+description: 設定或變更資料庫定序
 title: 設定或變更資料庫定序 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/11/2019
@@ -13,12 +14,12 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba15bf9e1438da580e3b3d413c378d426b9b24e4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 22c6da8545c07424f95b83a56d406fceffeb6d1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733943"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465557"
 ---
 # <a name="set-or-change-the-database-collation"></a>設定或變更資料庫定序
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

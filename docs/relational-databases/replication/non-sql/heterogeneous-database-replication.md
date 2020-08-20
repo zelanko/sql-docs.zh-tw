@@ -1,4 +1,5 @@
 ---
+description: 異質資料庫複寫
 title: 異質資料庫複寫 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/28/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3fd983ad-e206-45db-9054-417c9b5bb815
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f392b232e81c0f6dcb2fcd546acf91a714f5c7ee
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 199177f4df8c97bfaf651b1d4ad42d5d864b757d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394382"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465080"
 ---
 # <a name="heterogeneous-database-replication"></a>異質資料庫複寫  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

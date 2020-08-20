@@ -1,4 +1,5 @@
 ---
+description: 建立自訂收集組 - 一般 T-SQL 查詢收集器類型
 title: 建立自訂收集組 - 一般 T-SQL 查詢收集器類型
 ms.date: 06/03/2020
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: 6b06db5b-cfdc-4ce0-addd-ec643460605b
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 8ca7e286d5e6d754bfa13c1e10907b7c040b86a9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 42ede39d7c0e247b0cd8939ed831533aeec293e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733856"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465483"
 ---
 # <a name="create-custom-collection-set---generic-t-sql-query-collector-type"></a>建立自訂收集組 - 一般 T-SQL 查詢收集器類型
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -123,7 +124,7 @@ ms.locfileid: "85733856"
     GO  
     ```  
   
-     您也可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中進行目視檢查。 在物件總管中，展開 [管理]  節點，然後展開 [資料收集]  。 將會顯示新的收集組。 收集組的紅色圓圈圖示是表示此收集組已經停止。  
+     您也可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中進行目視檢查。 在物件總管中，展開 [管理]**** 節點，然後展開 [資料收集]****。 將會顯示新的收集組。 收集組的紅色圓圈圖示是表示此收集組已經停止。  
   
 ## <a name="example"></a>範例  
  下列程式碼範例會結合上述步驟所列的範例。 請注意，這時針對收集項所設定的收集頻率 (5 秒) 將會遭到忽略，因為收集組的收集模式設定為 0，而這是快取模式。 如需相關資訊，請參閱 [Data Collection](../../relational-databases/data-collection/data-collection.md)。  

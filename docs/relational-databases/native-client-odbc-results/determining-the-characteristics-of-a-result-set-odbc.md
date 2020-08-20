@@ -1,5 +1,6 @@
 ---
-title: 結果集的特性（ODBC）
+description: 決定結果集的特性 (ODBC)
+title: 結果集 (ODBC) 的特性
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,18 +20,19 @@ ms.assetid: 90be414c-04b3-46c0-906b-ae7537989b7d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec78b6708feae1b8eea6394705516577772026ae
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 81554f5b82a37ab2c1597234e434ae396cc4c129
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002878"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465309"
 ---
 # <a name="determining-the-characteristics-of-a-result-set-odbc"></a>決定結果集的特性 (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   中繼資料是描述其他資料的資料。 例如，結果集中繼資料會描述結果集的特性，例如，結果集中的資料行數目、這些資料行的資料類型、其名稱、有效位數，以及 Null 屬性。  
   
- ODBC 會透過其目錄 API 函數提供中繼資料給應用程式。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會將許多 ODBC API 目錄函數實作為對應目錄程式的呼叫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+ ODBC 會透過其目錄 API 函數提供中繼資料給應用程式。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會將許多 ODBC API 目錄函數實作為對對應目錄程式的呼叫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  應用程式需要大部分結果集作業的中繼資料。 例如，應用程式會使用資料行的資料類型來決定要繫結到該資料行的變數種類。 它會使用字元資料行的位元組長度來決定從該資料行顯示資料必須擁有的空格數目。 應用程式決定資料行之中繼資料的方式取決於應用程式的類型。  
   
@@ -40,17 +42,17 @@ ms.locfileid: "86002878"
   
  若要決定結果集的特性，應用程式可以呼叫：  
   
--   [SQLNumResultCols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md)以判斷要求傳回的資料行數目。  
+-   [SQLNumResultCols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md) ，以判斷要求傳回的資料行數目。  
   
--   [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)或[SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) ，用來描述結果集中的資料行。  
+-   [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md) 或 [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) ，以描述結果集中的資料行。  
   
- 設計良好的應用程式撰寫時會假設結果集不明，並使用這些函數傳回的資訊來繫結結果集中的資料行。 準備並執行陳述式之後，應用程式可以隨時呼叫這些函數。 不過，為了達到最佳效能，應用程式應該在執行語句之後呼叫**SQLColAttribute**、 **SQLDescribeCol**和**SQLNumResultCols** 。  
+ 設計良好的應用程式撰寫時會假設結果集不明，並使用這些函數傳回的資訊來繫結結果集中的資料行。 準備並執行陳述式之後，應用程式可以隨時呼叫這些函數。 不過，為了達到最佳效能，應用程式應該在執行語句之後呼叫 **SQLColAttribute**、 **SQLDescribeCol**和 **SQLNumResultCols** 。  
   
  針對中繼資料，您可以擁有多個並行呼叫。 在 ODBC 目錄 API 實作之下的系統目錄程序可以在使用靜態伺服器資料指標時，由 ODBC 驅動程式呼叫。 這可讓應用程式並行處理 ODBC 目錄函數的多個呼叫。  
   
  如果應用程式多次使用特定一組中繼資料，在第一次取得中繼資料時，可能會從私用變數的快取資訊中獲益。 這樣可以防止稍後針對相同資訊呼叫 ODBC 目錄函數，這會強迫驅動程式往返伺服器。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;ODBC&#41;處理結果](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+ [處理 &#40;ODBC&#41;的結果 ](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

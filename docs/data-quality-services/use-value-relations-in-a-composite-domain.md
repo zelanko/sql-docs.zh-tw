@@ -1,4 +1,5 @@
 ---
+description: 使用複合定義域中的值關聯
 title: 使用複合定義域中的值關聯
 ms.date: 11/22/2011
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: e9876e5a232174c387fb46cf4f3b2012f1435dc2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 67d6d4743fc373afd0ac008a72c7d97751b8ac29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883296"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466579"
 ---
 # <a name="use-value-relations-in-a-composite-domain"></a>使用複合定義域中的值關聯
 
@@ -34,7 +35,7 @@ ms.locfileid: "85883296"
 ####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能檢視複合定義域中的值關聯。  
   
-##  <a name="view-value-relations"></a><a name="Use"></a>視圖值關聯  
+##  <a name="view-value-relations"></a><a name="Use"></a> 查看值關聯  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -49,9 +50,9 @@ ms.locfileid: "85883296"
     > [!NOTE]  
     >  **[值]** 資料表會顯示存在於複合定義域中的每一個值組合。 每一個值都會顯示在它所適用的單一定義域中。 值關聯資料表預設會依據頻率排序，但是您可以按一下另一個資料行，依據該資料行排序。 只會顯示頻率大於或等於 20 的值。  
   
-6.  您不能變更資料表中的任何值。 如果您已執行其他作業，請按一下 **[完成]** ，完成定義域管理活動。 否則，請按一下 [**取消**]。  
+6.  您不能變更資料表中的任何值。 如果您已執行其他作業，請按一下 **[完成]** ，完成定義域管理活動。 否則，請按一下 [ **取消**]。  
   
-##  <a name="follow-up-after-viewing-value-relations"></a><a name="FollowUp"></a>後續操作：查看值關聯之後  
+##  <a name="follow-up-after-viewing-value-relations"></a><a name="FollowUp"></a> 後續操作：查看值關聯之後  
  在檢視值關聯之後，您可以針對定義域執行其他定義域管理工作、執行知識探索來將知識加入至定義域，或者將比對原則加入至定義域。 如需詳細資訊，請參閱[執行知識探索](../data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../data-quality-services/managing-a-domain.md)或[建立比對原則](../data-quality-services/create-a-matching-policy.md)。  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 執行 Data Quality Client 應用程式
 title: 執行 Data Quality Client 應用程式
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 7125dd10e16b8013fccc1f584115550c026cc627
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ed5b6449ea470a63e27a1d23a057ed6507c2ed2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883342"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466660"
 ---
 # <a name="run-the-data-quality-client-application"></a>執行 Data Quality Client 應用程式
 
@@ -35,14 +36,14 @@ ms.locfileid: "85883342"
 ####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  您必須擁有授與 DQS_MAIN 資料庫的其中一個 DQS 角色 (dqs_adminstrator、dqs_kb_editor 或 dqs_kb_operator)，才能登入 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]。  
   
-##  <a name="run-data-quality-client"></a><a name="Run"></a>執行 Data Quality Client  
+##  <a name="run-data-quality-client"></a><a name="Run"></a> 執行 Data Quality Client  
  若要在已安裝 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 的電腦上執行它，請：  
   
 1.  按一下 [開始]****，並指向 [所有程式]****，然後依序按一下 [[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]]****、[Data Quality Services]**** 及 [Data Quality Client]****。  
   
-2.  在 **[連接到伺服器]** 對話方塊中：  
+2.  在 [連線至伺服器] 對話方塊中：  
   
-    1.  指定您想要讓 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式連接的目標伺服器。 若要連接到本機電腦上的 **，請選取** [(LOCAL)] [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 。 您也可以按一下向下箭號，然後選取 **\<Browse network for more servers>** 以連接到不同的伺服器（或依名稱連接到本機伺服器）。 此時會顯示 **[瀏覽伺服器]** 對話方塊。 您可以在 **[本機伺服器]** 索引標籤或 **[網路伺服器]** 索引標籤中選取伺服器。  
+    1.  指定您想要讓 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式連接的目標伺服器。 若要連接到本機電腦上的 **，請選取** [(LOCAL)] [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 。 您也可以按一下向下箭號，然後選取 **\<Browse network for more servers>** 以連接到不同的伺服器 (或依名稱) 連接到本機伺服器。 此時會顯示 **[瀏覽伺服器]** 對話方塊。 您可以在 **[本機伺服器]** 索引標籤或 **[網路伺服器]** 索引標籤中選取伺服器。  
   
     2.  加密 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 與 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]之間的資料傳輸，按一下 [選項] ****，然後選取 [加密連接] **** 核取方塊。  
   

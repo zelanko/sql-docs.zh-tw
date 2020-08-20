@@ -1,4 +1,5 @@
 ---
+description: 檢視定序資訊
 title: 檢視定序資訊 | Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 1338b4ea-7142-44bc-a3b9-44e54431405f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 981d1ea6bc006330ba49fdaf3b2221efa3d780a6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3bc53832315aac772230de80c23fc13505360af4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733919"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465513"
 ---
 # <a name="view-collation-information"></a>檢視定序資訊
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "85733919"
 ##  <a name="how-to-view-a-collation-setting"></a><a name="Procedures"></a> 如何檢視定序設定  
  您可以使用下列其中一項：  
   
--   [Transact-SQL](#SSMSProcedure)  
+-   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
@@ -36,28 +37,28 @@ ms.locfileid: "85733919"
   
 1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在執行個體上按一下滑鼠右鍵，然後選取 [屬性]  。  
+2.  在執行個體上按一下滑鼠右鍵，然後選取 [屬性]****。  
   
  **在 [物件總管] 中檢視資料庫的定序設定**  
   
 1.  在物件總管中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  展開 [資料庫]  ，然後在資料庫上按一下滑鼠右鍵，再選取 [屬性]  。  
+2.  展開 [資料庫] ****，然後在資料庫上按一下滑鼠右鍵，再選取 [屬性]****。  
   
  **在 [物件總管] 中檢視資料行的定序設定**  
   
 1.  在物件總管中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  依序展開 **[資料庫]** 、特定資料庫及 **[資料表]** 。  
+2.  依序展開 **[資料庫]**、特定資料庫及 **[資料表]**。  
   
-3.  展開包含資料行的資料表，然後展開 **[資料行]** 。  
+3.  展開包含資料行的資料表，然後展開 **[資料行]**。  
   
-4.  在資料行上按一下滑鼠右鍵，然後選取 [屬性]  。 如果定序屬性為空白，則資料行不是字元資料類型。  
+4.  在資料行上按一下滑鼠右鍵，然後選取 [屬性]****。 如果定序屬性為空白，則資料行不是字元資料類型。  
   
 ###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **檢視伺服器的定序設定**  
   
-1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後在工具列上按一下 **[新增查詢]** 。  
+1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後在工具列上按一下 **[新增查詢]**。  
   
 2.  在查詢視窗中，輸入下列使用 SERVERPROPERTY 系統函數的陳述式。  
   
@@ -73,7 +74,7 @@ ms.locfileid: "85733919"
   
  **檢視 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**  
   
-1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後在工具列上按一下 **[新增查詢]** 。  
+1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後在工具列上按一下 **[新增查詢]**。  
   
 2.  在查詢視窗中，輸入下列使用 SERVERPROPERTY 系統函數的陳述式。  
   
@@ -83,7 +84,7 @@ ms.locfileid: "85733919"
   
  **檢視資料庫的定序設定**  
   
-1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後在工具列上按一下 **[新增查詢]** 。  
+1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後在工具列上按一下 **[新增查詢]**。  
   
 2.  在查詢視窗中，輸入下列使用 sys.databases 系統目錄檢視的陳述式。  
   
@@ -99,7 +100,7 @@ ms.locfileid: "85733919"
   
  **檢視資料行的定序設定**  
   
-1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後在工具列上按一下 **[新增查詢]** 。  
+1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後在工具列上按一下 **[新增查詢]**。  
   
 2.  在查詢視窗中，輸入下列使用 sys.columns 系統目錄檢視的陳述式。  
   
@@ -109,7 +110,7 @@ ms.locfileid: "85733919"
   
  **檢視資料表與資料行的定序設定**  
 
-1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後在工具列上按一下 **[新增查詢]** 。  
+1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後在工具列上按一下 **[新增查詢]**。  
   
 2.  在查詢視窗中，輸入下列使用 sys.columns 系統目錄檢視的陳述式。  
   

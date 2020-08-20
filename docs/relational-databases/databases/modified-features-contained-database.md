@@ -1,4 +1,5 @@
 ---
+description: 修改的功能 (自主資料庫)
 title: 修改的功能 (自主資料庫) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2ac376cdb7fd57506470b03facdc16b415098b7a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5726487c9582a7f99b26154bdb92fa61647b1190
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726401"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465401"
 ---
 # <a name="modified-features-contained-database"></a>修改的功能 (自主資料庫)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

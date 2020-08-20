@@ -1,4 +1,5 @@
 ---
+description: 進階合併式複寫衝突 - 以 COM 為基礎的自訂解析程式
 title: 以 COM 為基礎的自訂解析程式 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 94195797-ad7a-4962-a8e3-b259cd13aa38
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 93093d342a7a7a7a45d625a089a0cdd2753db66c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 569669c45eb973993e932263ea8c87b7f3b4c0a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896343"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465243"
 ---
 # <a name="advanced-merge-replication-conflict---com-based-custom-resolvers"></a>進階合併式複寫衝突 - 以 COM 為基礎的自訂解析程式
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,5 +1,6 @@
 ---
-title: sys.databases HTTP_endpoints （Transact-sql） |Microsoft Docs
+description: sys.http_endpoints (Transact-SQL)
+title: sys. HTTP_endpoints (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 16f59695-ecd9-457e-8874-055af63f8ea7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 527cc2d7596a1bdd894ba71c1e3b1139150efc63
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b964a9974c8884618b1412827c5a53ad1c481d5e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896271"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464795"
 ---
 # <a name="syshttp_endpoints-transact-sql"></a>sys.http_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,8 +34,8 @@ ms.locfileid: "85896271"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**< 繼承的資料行>**||從 sys.databases 繼承[&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)的資料行。|  
-|**點**|**nvarchar(128)**|依照 SITE = 選項所指定的網站主機電腦名稱。|  
+|**< 繼承的資料行>**||從 [sys. 端點繼承 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)的資料行。|  
+|**網站**|**nvarchar(128)**|依照 SITE = 選項所指定的網站主機電腦名稱。|  
 |**url_path**|**nvarchar(4000)**|依照 PATH= 選項所指定，這個 HTTP 端點的 URL 只有路徑的部份。|  
 |**is_clear_port_enabled**|**bit**|1 = 利用 PORT = CLEAR 選項來啟用清除通訊埠|  
 |**clear_port**|**int**|CLEAR PORT = 選項所指定的通訊埠編號。<br /><br /> NULL = 未指定。|  
@@ -54,7 +55,7 @@ ms.locfileid: "85896271"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [端點目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 執行比對專案
 title: 執行比對專案
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 0a8a71349a5948c4ac162b82bd92d3b022446cb0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8f1d75abc4a4e7f5221c500c211e915fa51bd49b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883334"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466665"
 ---
 # <a name="run-a-matching-project"></a>執行比對專案
 
@@ -43,14 +44,14 @@ ms.locfileid: "85883334"
 ####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能執行比對專案。  
   
-##  <a name="first-step-starting-a-matching-project"></a><a name="StartingaMatchingProject"></a>第一步：啟動比對專案  
+##  <a name="first-step-starting-a-matching-project"></a><a name="StartingaMatchingProject"></a> 第一個步驟：啟動比對專案  
  您會在於 DQS 用戶端應用程式中建立的資料品質專案內執行比對活動。  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
 2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，按一下 **[新增資料品質專案]** ，於新的資料品質專案內執行比對。 為資料品質專案輸入名稱、輸入描述，然後在 **[使用知識庫]** 中選取您想要用於比對的知識庫。 為此活動按一下 **[比對]** 。 按 **[下一步]** 繼續前往對應階段。  
   
-3.  按一下 **[開啟資料品質專案]** ，在現有的資料品質專案中執行比對。 選取專案，然後按 **[下一步]** （或者，您可以按一下 [**最近使用的資料品質專案**] 底下的專案）。如果您開啟已關閉的比對專案，您將會進入比對專案活動已關閉的階段（如專案資料表中的 [**狀態**] 資料行或 [**最近使用的資料品質專案**] 底下的專案名稱所指示）。 如果您開啟已完成的比對專案，您將會移至 **[匯出]** 頁面 (而且您無法返回之前的畫面)。  
+3.  按一下 **[開啟資料品質專案]** ，在現有的資料品質專案中執行比對。 選取專案，然後按 **[下一步]**  (或您可以按一下 [ **最近使用的資料品質專案**] 下的專案。 ) 如果您開啟已關閉的比對專案，您將會繼續進行比對專案活動已 (關閉的階段（依專案資料表中的 [ **狀態** ] 資料行或 [ **最近使用的資料品質專案**) ] 下的專案名稱所指示）。 如果您開啟已完成的比對專案，您將會移至 **[匯出]** 頁面 (而且您無法返回之前的畫面)。  
   
 ##  <a name="mapping-stage"></a><a name="MappingStage"></a> 對應階段  
  在對應階段中，您會識別執行比對分析所針對的資料來源，而且您會將來源資料行對應至定義域，好讓定義域可供比對活動使用。  
@@ -75,7 +76,7 @@ ms.locfileid: "85883334"
     > [!NOTE]  
     >  按一下 **[關閉]** ，儲存比對專案的階段，並返回 DQS 首頁。 下一次開啟此專案時，就會從相同階段開始。 按一下 **[取消]** ，結束比對活動，不儲存工作並返回 DQS 首頁。  
   
-##  <a name="matching-stage"></a><a name="MatchingStage"></a>符合階段  
+##  <a name="matching-stage"></a><a name="MatchingStage"></a> 相符階段  
  在此階段中，您會執行電腦輔助的比對程序，此程序為您顯示根據比對規則的來源資料中有多少比對。 這個程序將會產生比對結果資料表，此資料表會顯示 DQS 已經識別的叢集 (叢集中的每一筆記錄都有其記錄識別碼和符合分數) 以及叢集的初始前置記錄。 叢集中的前置記錄是隨機選取的 當您執行比對專案時，您會在 **[匯出]** 頁面上選取存活規則來決定存活記錄。 叢集中的每一個額外資料列都視為相符項目，結果資料表中會提供其符合分數 (相較於前置記錄)。 叢集號碼與叢集中前置記錄的記錄識別碼相同。  
   
  在比對結果中，您可以篩選想要的資料，並拒絕不想要的相符項目。 您可以顯示整體比對程序的分析資料、有關套用之比對規則的細節，以及有關整體比對結果的統計資料。 比對程序可以識別重疊或非重疊的叢集，而且如果執行多次的話，就可以針對剛從來源複製且重新建立索引的資料或之前的資料來執行。  
@@ -104,7 +105,7 @@ ms.locfileid: "85883334"
   
 12. 按 **[下一步]** 繼續前往生存和匯出階段。  
   
-##  <a name="survivorship-and-exporting-stage"></a><a name="SurvivorshipandExportStage"></a>生存和匯出階段  
+##  <a name="survivorship-and-exporting-stage"></a><a name="SurvivorshipandExportStage"></a> 存活和匯出階段  
  在生存程序中，Data Quality Services 會決定每一個叢集的生存記錄，該記錄將會取代叢集中相符的其他記錄。 然後它會將比對及/或生存結果匯出到 SQL Server 資料庫中的資料表、.csv 檔案或 Excel 檔案。  
   
  生存是選擇性的。 您可以匯出結果而不執行生存，此時 DQS 將會使用比對分析中指定的樞紐記錄。 如果叢集中有兩筆或多筆記錄符合存活規則，則生存程序將會在衝突的記錄中選取最低的記錄識別碼，使其成為存活者。 您可以使用不同的存活規則，將存活者匯出到不同的檔案或資料表。  
@@ -166,10 +167,10 @@ ms.locfileid: "85883334"
     > [!NOTE]  
     >  如果您已完成比對專案，然後再次使用它，此專案將會在之前發行它的地方使用知識庫。 它不會使用您在完成專案之後對知識庫所做的任何變更。 若要使用這些變更或是使用新的知識庫，您必須建立新的比對專案。 在另一方面，如果您已經建立但是尚未完成比對專案，而且如果您在專案中執行比對，將會使用您已發行至比對原則的任何變更。  
   
-##  <a name="follow-up-after-running-a-matching-project"></a><a name="FollowUp"></a>後續操作：執行相符的專案之後  
+##  <a name="follow-up-after-running-a-matching-project"></a><a name="FollowUp"></a> 後續操作：在執行比對專案之後  
  在您執行比對專案之後，您可以變更知識庫中的比對原則，並根據更新的比對原則來建立及執行另一個比對專案。 如需相關資訊，請參閱 [建立訂閱](../data-quality-services/create-a-matching-policy.md)。  
   
-##  <a name="profiler-and-results-tabs"></a><a name="Profiler"></a>Profiler 和結果索引標籤  
+##  <a name="profiler-and-results-tabs"></a><a name="Profiler"></a> Profiler 和結果索引標籤  
  [分析工具] 和 [結果] 索引標籤包含比對程序的統計資料。  
   
 ### <a name="profiler-tab"></a>分析工具索引標籤  

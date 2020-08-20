@@ -1,4 +1,5 @@
 ---
+description: 發行集屬性，發行項
 title: 發行集屬性，發行項 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: bdeea318-a153-44b8-9e51-9155f3bad18b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: a1428dea04807f487bed059bc6fc857f47548d72
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fc2d2c325da67cf58a68f86d845dc053d62dc2f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720881"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465055"
 ---
 # <a name="publication-properties-articles"></a>發行集屬性，發行項
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,5 +1,6 @@
 ---
-title: 釋放描述元 |Microsoft Docs
+description: 釋放描述項
+title: 釋放描述項 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 317213f4-0ebb-4bf8-a37a-4d6b1313823f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: af30ceb29e032764b89aa2069086aa898a7d35db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 95c87b7ac70369509a72ff539c63ac888e5f3262
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305599"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465800"
 ---
 # <a name="freeing-descriptors"></a>釋放描述項
-明確配置的描述元可以藉由使用 SQL_HANDLE_DESC 的*HandleType*呼叫**SQLFreeHandle** ，或在連接控制碼釋放時隱含地釋放。 釋放明確配置的描述元之後，所有套用的已釋放描述元都會自動還原成隱含配置給它們的描述元。  
+明確配置的描述元可以明確地釋放，方法是使用*HandleType*的 SQL_HANDLE_DESC 呼叫**SQLFreeHandle** ，或在釋放連接控制碼時隱含地釋放。 當已明確配置的描述項釋出時，已套用的已釋放描述元會自動還原成隱含配置給它們的描述項。  
   
- 隱含配置的描述元只能藉由呼叫**SQLDisconnect**來釋放，這會卸載在連接上開啟的任何語句或描述元，或使用 SQL_HANDLE_STMT 的*HandleType*呼叫**SQLFreeHandle**來釋放語句控制碼，以及與語句相關聯的所有隱含配置描述元。 以 SQL_HANDLE_DESC 的*HandleType*呼叫**SQLFreeHandle** ，無法釋放隱含配置的描述元。  
+ 隱含配置的描述項只能透過呼叫**SQLDisconnect**來釋出，這會卸載在連接上開啟的任何語句或描述項，或透過 SQL_HANDLE_STMT 的*HandleType*來呼叫**SQLFreeHandle** ，以釋放語句控制碼以及與語句相關聯的所有隱含配置描述元。 以 SQL_HANDLE_DESC 的*HandleType*呼叫**SQLFreeHandle** ，無法釋放隱含配置的描述項。  
   
- 即使在釋放時，隱含配置的描述元仍然有效，而且可以在其欄位上呼叫**SQLGetDescField** 。
+ 即使在釋放時，隱含配置的描述項仍有效，而且可以在其欄位上呼叫 **SQLGetDescField** 。

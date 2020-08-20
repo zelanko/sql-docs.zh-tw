@@ -1,4 +1,5 @@
 ---
+description: 系統資料庫
 title: 系統資料庫 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
@@ -16,12 +17,12 @@ ms.assetid: 30468a7c-4225-4d35-aa4a-ffa7da4f1282
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 66f58a7526684384e4533290ee42c4cc75dea1a2
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: c880b9ff6a96a7bcd5365e3afc098467630b3a7a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864885"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465404"
 ---
 # <a name="system-databases"></a>系統資料庫
 

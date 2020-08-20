@@ -1,5 +1,6 @@
 ---
-title: sys.databases fn_trace_gettable （Transact-sql） |Microsoft Docs
+description: sys.fn_trace_gettable (Transact-SQL)
+title: sys. fn_trace_gettable (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c2590159-6ec5-4510-81ab-e935cc4216cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d1bc18704b4f2b239fe590184d58289d66b35fc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 85ffb20fb0ead23c8027ab9b4ba45f906fe8c097
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898279"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464738"
 ---
 # <a name="sysfn_trace_gettable-transact-sql"></a>sys.fn_trace_gettable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,15 +45,15 @@ fn_trace_gettable ( 'filename' , number_files )
   
 ## <a name="arguments"></a>引數  
  '*filename*'  
- 指定所要讀取的初始追蹤檔。 *filename*是**Nvarchar （256）**，沒有預設值。  
+ 指定所要讀取的初始追蹤檔。 *filename* 是 **Nvarchar (256) **，沒有預設值。  
   
  *number_files*  
- 指定要讀取的換用檔案的數目。 此數目包括*filename*中指定的初始檔案。 *number_files*為**int**。  
+ 指定要讀取的換用檔案的數目。 此數目包含 *檔案名*中指定的初始檔案。 *number_files* 是 **int**。  
   
 ## <a name="remarks"></a>備註  
- 如果*number_files*指定為**預設值**， **fn_trace_gettable**會讀取所有換用檔案，直到到達追蹤結尾為止。 **fn_trace_gettable**會傳回資料表，其中包含對指定追蹤有效的所有資料行。 如需詳細資訊，請參閱[sp_trace_setevent &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)。  
+ 如果 *number_files* 指定為 **預設值**， **fn_trace_gettable** 會讀取所有換用檔案，直到到達追蹤結尾為止。 **fn_trace_gettable** 會傳回資料表，其中所有資料行對指定的追蹤都有效。 如需詳細資訊，請參閱 [sp_trace_setevent &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)。  
   
- 請注意，fn_trace_gettable 函數不會載入換用檔案（使用*number_files*引數指定此選項時），其中原始追蹤檔案名的結尾是底線和數值。 （這不適用於在檔案變換時自動附加的底線和數位）。因應措施是，您可以將追蹤檔案重新命名，以移除原始檔案名稱中的底線。 例如，如果原始檔案名為**Trace_Oct_5 .trc** ，而換用檔案的名稱為**Trace_Oct_5_1 .trc**，則您可以將檔案重新命名為**TraceOct5. .trc**和**TraceOct5_1. .trc**。  
+ 請注意，當使用 *number_files* 引數來指定此選項時，fn_trace_gettable 函式將不會載入換用檔案 () 其中原始追蹤檔名稱的結尾是底線和數值。  (這並不適用于在檔案向前復原時自動附加的底線和數位。 ) 為因應措施，您可以重新命名追蹤檔案，以移除原始檔案名稱中的底線。 例如，如果原始檔案名為 **Trace_Oct_5 >flightrecordercurrent.trc** ，而換用檔案的名稱為 **Trace_Oct_5_1. >flightrecordercurrent.trc**，則您可以將檔案重新命名為 **TraceOct5. >flightrecordercurrent.trc** 和 **TraceOct5_1. >flightrecordercurrent.trc**。  
   
  這個函數可以讀取在執行它的執行個體中仍然有效的追蹤。  
   

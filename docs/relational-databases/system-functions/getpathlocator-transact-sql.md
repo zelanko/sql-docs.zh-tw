@@ -1,5 +1,6 @@
 ---
-title: GetPathLocator （Transact-sql） |Microsoft Docs
+description: GetPathLocator (Transact-SQL)
+title: GetPathLocator (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 78b7e220-445b-4fdf-811b-7253f4f2b058
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 133d2b109c54271c2e94cba2e88831f8f7aecf16
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2551dfbb7d71b33542f4bc6fd8087c10f974e45b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85662876"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464760"
 ---
 # <a name="getpathlocator-transact-sql"></a>GetPathLocator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +39,9 @@ GetPathLocator(filenamespace_path)
   
 ## <a name="arguments"></a>引數  
  *filenamespace_path*  
- FileTable 中的命名空間路徑。 命名空間路徑的類型為**Nvarchar （max）**。  
+ FileTable 中的命名空間路徑。 命名空間路徑的類型為 **Nvarchar (max) **。  
   
- 當資料庫屬於 Always On 可用性群組時， **GetPathLocator**函數會接受虛擬網路名稱（VNN）或電腦名稱稱。  
+ 當資料庫屬於 Always On 可用性群組時， **GetPathLocator** 函數會接受虛擬網路名稱 (VNN) 或電腦名稱稱。  
   
 ## <a name="return-type"></a>傳回類型  
  **hierarchyid**  
@@ -49,9 +50,9 @@ GetPathLocator(filenamespace_path)
  如需詳細資訊，請參閱 [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)。  
   
 ## <a name="examples"></a>範例  
- 當您要將檔案伺服器的檔案遷移至 FileTable 時，可以使用**GetPathLocator**函數。 在這個案例中，您要將檔案移入 FileTable，然後用 FileTable UNC 路徑取代每個檔案的原始 UNC 路徑。 如需完整範例，請參閱將檔案[載入 filetable](../../relational-databases/blob/load-files-into-filetables.md)。  
+ 當您將檔案伺服器中的檔案遷移至 FileTable 時，可以使用 **GetPathLocator** 函數。 在這個案例中，您要將檔案移入 FileTable，然後用 FileTable UNC 路徑取代每個檔案的原始 UNC 路徑。 如需完整範例，請參閱將檔案 [載入 filetable](../../relational-databases/blob/load-files-into-filetables.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 FileTables 中的目錄與路徑](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
+ [使用 FileTable 中的目錄與路徑](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   

@@ -1,5 +1,6 @@
 ---
-title: CHECK_CONSTRAINTS （Transact-sql） |Microsoft Docs
+description: CHECK_CONSTRAINTS (Transact-SQL)
+title: CHECK_CONSTRAINTS (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,11 +20,12 @@ ms.assetid: e9577fd2-c349-4dff-874c-9e57d2e5a3ec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2264c1eda9b4cba826b1229cc6dfe38a18a25572
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cb981a20b5af20307892f41e783620a3e25fa721
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999596"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464774"
 ---
 # <a name="check_constraints-transact-sql"></a>CHECK_CONSTRAINTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,15 +36,15 @@ ms.locfileid: "85999596"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**CONSTRAINT_CATALOG**|**Nvarchar （** 128 **）**|條件約束限定詞。|  
-|**CONSTRAINT_SCHEMA**|**Nvarchar （** 128 **）**|條件約束所屬的結構描述名稱。<br /><br /> &#42;&#42; 重要 &#42;&#42; 請勿使用 INFORMATION_SCHEMA 視圖來判斷物件的架構。 INFORMATION_SCHEMA views 只代表物件的中繼資料子集。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|**CONSTRAINT_CATALOG**|**Nvarchar (** 128 **) **|條件約束限定詞。|  
+|**CONSTRAINT_SCHEMA**|**Nvarchar (** 128 **) **|條件約束所屬的結構描述名稱。<br /><br /> &#42;&#42; 重要 &#42;&#42; 請勿使用 INFORMATION_SCHEMA views 來判斷物件的架構。 INFORMATION_SCHEMA views 只代表物件的中繼資料子集。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
 |**CONSTRAINT_NAME**|**sysname**|條件約束名稱。|  
-|**CHECK_CLAUSE**|**Nvarchar （** 4000 **）**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 定義陳述式的實際內文。|  
+|**CHECK_CLAUSE**|**Nvarchar (** 4000 **) **|[!INCLUDE[tsql](../../includes/tsql-md.md)] 定義陳述式的實際內文。|  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的系統檢視](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
- [資訊架構視圖 &#40;Transact-sql&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
- [check_constraints &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統檢視 ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [&#40;Transact-sql&#41;的資訊架構視圖 ](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
+ [sys. check_constraints &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: DQS 知識庫與定義域
 title: DQS 知識庫與定義域
 ms.date: 10/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: c677a999454f307f90b0f0444e67069ce81dfcc3
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: e27c84f54901bb66e2d934af661c3aac20aea384
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362486"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466751"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>DQS 知識庫與定義域
 
@@ -138,7 +139,7 @@ ms.locfileid: "87362486"
   
  比對可以在組成複合定義域的單一定義域上執行，但無法在複合定義域本身執行。  
   
-##  <a name="data-matching"></a><a name="Matching"></a>資料比對  
+##  <a name="data-matching"></a><a name="Matching"></a> 資料比對  
  除了透過定義域管理對知識庫進行手動變更之外，您還可以將比對知識加入至知識庫。 若要為刪除重複資料程序準備 DQS，您必須建立一個 DQS 將用來計算比對機率的比對原則。 此原則包含一個或多個資料管理人所建立的比對規則，以識別 DQS 比較資料列的方式。 資料管理人會決定應該比較資料列中的哪些資料欄位，以及每個欄位在比較時應該佔多少比重。 資料管理人也將決定要將多高的機率視為相符。 DQS 會將比對規則加入至資料品質專案中用於執行比對活動的知識庫。  
   
  如需有關知識庫與資料比對的詳細資訊，請參閱＜ [資料比對](../data-quality-services/data-matching.md)上維護多個知識庫。  

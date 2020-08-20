@@ -1,4 +1,5 @@
 ---
+description: 最佳化參數化資料列篩選
 title: 最佳化參數化資料列篩選 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 49349605-ebd0-4757-95be-c0447f30ba13
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8de8c84c20c410283372cb68cd871c55f9b0d043
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9a8915894340e031629992f11a4556bbbafd6077
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891980"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465033"
 ---
 # <a name="optimize-parameterized-row-filters"></a>最佳化參數化資料列篩選
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85891980"
   
 -   **若要最佳化參數化資料列篩選，請使用：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   

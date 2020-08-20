@@ -1,4 +1,5 @@
 ---
+description: 保護訂閱者
 title: 保護訂閱者 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0d2b4567f9f835e0118e882aa8ca85d1465c4b3f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: ade78fb39755026cdcc3a8f5ef6a96ffd99f9647
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110643"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465010"
 ---
 # <a name="secure-the-subscriber"></a>保護訂閱者
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]

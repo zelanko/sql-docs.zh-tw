@@ -1,4 +1,5 @@
 ---
+description: 使用 VPN 透過網際網路發行資料
 title: 使用 VPN 透過網際網路發行資料 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9ffb6546-9973-4574-aaa0-8fe0017e3601
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8b7fc72fedddf18927ab4f90ac3e93d31ae44481
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: da44ea18f5dd34ef4d6bfa5b31021eb53277cd22
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720831"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465042"
 ---
 # <a name="publish-data-over-the-internet-using-vpn"></a>使用 VPN 透過網際網路發行資料
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

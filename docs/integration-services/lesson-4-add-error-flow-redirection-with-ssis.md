@@ -1,5 +1,6 @@
 ---
-title: 第 4 課：使用 SSIS 來新增錯誤流程重新導向 | Microsoft Docs
+description: 第 4 課：使用 SSIS 加入錯誤流程重新導向
+title: 第 4 課：使用 SSIS 加入錯誤流程重新導向 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/07/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8858494792a8acd9d1af7aee887c24e45d8829f9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d7ef0a6862e334221fd497a5adc44ffd0ab7990d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918123"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466567"
 ---
 # <a name="lesson-4-add-error-flow-redirection-with-ssis"></a>第 4 課：使用 SSIS 來新增錯誤流程重新導向
 
@@ -33,7 +34,7 @@ ms.locfileid: "86918123"
   
 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 將錯誤資料寫入檔案之前，您需併入一個會取得錯誤描述的「指令碼」元件。 然後，您需重新設定 [查閱貨幣索引鍵] 轉換，以將任何無法處理的資料重新導向到 [指令碼] 轉換。  
   
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 > [!NOTE]
 > 如果您尚未這麼做，請參閱[第 1 課的先決條件](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites)。

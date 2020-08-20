@@ -1,4 +1,5 @@
 ---
+description: 將搜尋所使用的文字分隔還原為舊版 (SQL Server 搜尋)
 title: 將搜尋所使用的文字分隔還原為舊版
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4ea742a7dfd4db224e55765ff74bb67c4616f9bc
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 29861071eec3c87797843aaa40590c23d912ea52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934305"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464965"
 ---
 # <a name="revert-word-breakers-used-by-search-to-previous-version-sql-server-search"></a>將搜尋所使用的文字分隔還原為舊版 (SQL Server 搜尋)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

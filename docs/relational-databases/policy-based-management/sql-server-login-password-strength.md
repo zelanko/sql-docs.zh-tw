@@ -1,4 +1,5 @@
 ---
+description: SQL Server 登入密碼強度
 title: SQL Server 登入密碼強度 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b0862c3a-926b-490c-a37f-382e50146a3e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 58daac31e06f6a1b8120e2848452d9660c7bbe3c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cf90a1541ed047ce17b405dfc5727ed41a0b7d1b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774138"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465260"
 ---
 # <a name="sql-server-login-password-strength"></a>SQL Server 登入密碼強度
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

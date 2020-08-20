@@ -1,4 +1,5 @@
 ---
+description: 設定及管理全文檢索搜尋的同義字檔案
 title: 設定及管理全文檢索搜尋的同義字檔案
 ms.date: 07/01/2020
 ms.prod: sql
@@ -14,12 +15,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 8d97b66622254ad911cb7bf557c1a7368b4f3d40
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d713b4eb49a527f2cbbbf871cce9d01d4449443d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897997"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465060"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>設定及管理全文檢索搜尋的同義字檔案
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

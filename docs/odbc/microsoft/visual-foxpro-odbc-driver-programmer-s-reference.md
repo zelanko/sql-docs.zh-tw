@@ -1,5 +1,6 @@
 ---
-title: Visual FoxPro ODBC Driver 程式設計人員&#39;s 參考 |Microsoft Docs
+description: Visual FoxPro ODBC 驅動程式程式設計人員&#39;s 參考
+title: Visual FoxPro ODBC 驅動程式程式設計人員&#39;s 參考 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 00d722d4-ce99-4dbe-a503-1ab27cb6fe0a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2c3bab8d22b1f4c2bd37951e22637d7e887bd0d2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f57eb6cbb61cd8b4cdcf025ebaf5c78fb4098653
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304749"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466300"
 ---
-# <a name="visual-foxpro-odbc-driver-programmer39s-reference"></a>Visual FoxPro ODBC Driver 程式設計人員&#39;s 參考
+# <a name="visual-foxpro-odbc-driver-programmer39s-reference"></a>Visual FoxPro ODBC 驅動程式程式設計人員&#39;s 參考
 Visual FoxPro ODBC 驅動程式檔集的這一節包含下列主題：  
   
 -   [書簽支援](../../odbc/microsoft/bookmark-support-visual-foxpro-odbc-driver.md)  
@@ -33,7 +34,7 @@ Visual FoxPro ODBC 驅動程式檔集的這一節包含下列主題：
   
 -   [國際支援](../../odbc/microsoft/international-support-visual-foxpro-odbc-driver.md)  
   
--   [支援規則、觸發程式、預設值和預存程式](../../odbc/microsoft/support-rules-triggers-defaults-stored-procedures-visual-foxpro-odbc-driver.md)  
+-   [規則、觸發程式、預設值和預存程式的支援](../../odbc/microsoft/support-rules-triggers-defaults-stored-procedures-visual-foxpro-odbc-driver.md)  
   
 -   [支援的 ODBC SQL 文法](../../odbc/microsoft/supported-odbc-sql-grammar-visual-foxpro-odbc-driver.md)  
   

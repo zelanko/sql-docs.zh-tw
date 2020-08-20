@@ -1,4 +1,5 @@
 ---
+description: MSSQL_ENG018456
 title: MSSQL_ENG018456 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ ms.assetid: 3daa8144-d81f-445a-b6c3-4bb3e9fd1526
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 601a72251bdaf1d748a8c6e732066fbff888f053
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: a1460f1d46374bd621f65f5e89d5e632e24e72d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363488"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465191"
 ---
 # <a name="mssql_eng018456"></a>MSSQL_ENG018456
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

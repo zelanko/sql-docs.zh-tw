@@ -1,5 +1,6 @@
 ---
-title: 記錄傳送預存程式（Transact-sql） |Microsoft Docs
+description: 記錄傳送預存程序 (Transact-SQL)
+title: 記錄傳送預存程式 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 39554188-20fe-42ec-a53f-35e1dc98c274
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0dfcabddc59948e524168095666dfb6ce041b1fc
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 9eac82bbc30eee3419560b14055685738ed84927
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977549"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464705"
 ---
 # <a name="log-shipping-stored-procedures-transact-sql"></a>記錄傳送預存程序 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和更新的版本支援下列用來設定、修改和監視記錄傳送設定的系統預存程式。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和更新版本支援下列用來設定、修改和監視記錄傳送設定的系統預存程式。  
 
 :::row:::
     :::column:::
