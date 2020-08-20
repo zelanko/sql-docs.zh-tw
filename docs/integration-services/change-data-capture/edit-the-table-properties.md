@@ -1,4 +1,5 @@
 ---
+description: 編輯資料表屬性
 title: 編輯資料表屬性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 75854b88a3041def807b621b3e9f4caf6cf3b1c3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cfc848859ebbeeace4d07349d57cacad5808d5b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921637"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457700"
 ---
 # <a name="edit-the-table-properties"></a>編輯資料表屬性
 

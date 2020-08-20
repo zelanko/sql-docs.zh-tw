@@ -1,4 +1,5 @@
 ---
+description: 為交易加上註解 (Master Data Services)
 title: 為交易加上註解
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 140342398d35dfb7ad38940d0e2a2e7726e8375b
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 90ca7f628206e54a284866eaae4a18c3dfe54094
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811863"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456846"
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>為交易加上註解 (Master Data Services)
 
@@ -28,11 +29,11 @@ ms.locfileid: "85811863"
 > [!NOTE]  
 >  您無法刪除註解。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
   
 -   若要為所建立的交易加上註解，您必須擁有存取 [總管]**** 功能區域的權限，而且至少必須擁有您要加上註解之模型物件的**更新**權限。  
   
--   若要為所有使用者的交易加上註解，您必須擁有存取 [版本管理]**** 功能區域的權限，而且必須身為模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   若要為所有使用者的交易加上註解，您必須擁有存取 [版本管理]**** 功能區域的權限，而且必須身為模型管理員。 如需詳細資訊，請參閱系統 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-annotate-a-transaction-in-explorer"></a>若要在總管中為交易加上註解  
   

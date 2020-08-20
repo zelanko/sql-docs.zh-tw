@@ -1,4 +1,5 @@
 ---
+description: 以程式設計的方式載入和執行本機封裝
 title: 以程式設計方式載入和執行本機套件 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 90910f6ac7f5deb30b7f9c1b3f901d27f97ea51e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7b8138be9f9f643bae9f66611492e4ed7f703382
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919770"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457044"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>以程式設計的方式載入和執行本機封裝
 
@@ -61,7 +62,7 @@ ms.locfileid: "86919770"
   
 1.  啟動 Visual Studio 開發環境，並以慣用的開發語言建立新應用程式。 此範例使用主控台應用程式，不過，您也可以從 Windows Form 應用程式、ASP.NET Web 表單或 Web 服務或是 Windows 服務執行封裝。  
   
-2.  在 [專案]  功能表上，按一下 [新增參考]  ，然後新增 **Microsoft.SqlServer.ManagedDTS.dll** 的參考。 按一下 [確定]  。  
+2.  在 [專案]**** 功能表上，按一下 [新增參考]****，然後新增 **Microsoft.SqlServer.ManagedDTS.dll** 的參考。 按一下 [確定]  。  
   
 3.  使用 Visual Basic **Imports** 陳述式或 C# **using** 陳述式匯入 **Microsoft.SqlServer.Dts.Runtime** 命名空間。  
   

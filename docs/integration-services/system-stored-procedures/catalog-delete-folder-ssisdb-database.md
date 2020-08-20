@@ -1,4 +1,5 @@
 ---
+description: catalog.delete_folder (SSISDB 資料庫)
 title: catalog.delete_folder (SSISDB 資料庫) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: b9c08992-500c-447e-bc19-1eb13c9b0293
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9e22bb36904b63d2fbe2832443992342606ae074
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1257d1751798046dc176aa8969541f92ec0a215b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913075"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456881"
 ---
 # <a name="catalogdelete_folder-ssisdb-database"></a>catalog.delete_folder (SSISDB 資料庫)
 
@@ -37,7 +38,7 @@ catalog.delete_folder [ @folder_name = ] folder_name
  要刪除之資料夾的名稱。 *folder_name* 是 **nvarchar(128)** 。  
   
 ## <a name="return-code-value"></a>傳回碼值  
- None  
+ 無  
   
 ## <a name="result-sets"></a>結果集  
  None  

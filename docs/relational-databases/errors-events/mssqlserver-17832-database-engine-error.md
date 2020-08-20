@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_17832
 title: MSSQLSERVER_17832 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 69ccb3f9cb14acf7eeb57d60dea01d0229becf56
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 53a3ed421997c7c7fc9978b5b1dbce8f5d3c69c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85780750"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456348"
 ---
 # <a name="mssqlserver_17832"></a>MSSQLSERVER_17832
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

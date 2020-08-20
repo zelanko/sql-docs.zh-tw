@@ -1,4 +1,5 @@
 ---
+description: 比較字串資料
 title: 比較字串資料 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 76f3cdcde9b84b5e1bed3c421045f1a38742f1c6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7aa3d507527ea18e9d9296ee9b9cd10989932d5a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920014"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457380"
 ---
 # <a name="comparing-string-data"></a>比較字串資料
 
@@ -82,11 +83,11 @@ ms.locfileid: "86920014"
   
  「排序」、「彙總」「模糊群組」和「模糊查閱」轉換包含這些用於比較資料的選項。  
   
- 「模糊群組」和「模糊查閱」轉換的 [進階編輯器] 對話方塊中會顯示 **FullySensitive** 比較旗標。 選取 [FullySensitive]  比較旗標表示會套用所有的比較選項。  
+ 「模糊群組」和「模糊查閱」轉換的 [進階編輯器]**** 對話方塊中會顯示 **FullySensitive** 比較旗標。 選取 [FullySensitive]**** 比較旗標表示會套用所有的比較選項。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)   
  [快速剖析](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
- [標準剖析](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)  
+ [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)  
   
   

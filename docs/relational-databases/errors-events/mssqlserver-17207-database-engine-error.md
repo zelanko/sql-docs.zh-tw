@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_17207
 title: MSSQLSERVER_17207
 ms.custom: ''
 ms.date: 07/25/2020
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: PijoCoder
 ms.author: mathoma
-ms.openlocfilehash: 48bcd9ada3da7a1e95001487045105337b298d13
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a7938f28af84596f620246d3d70ad491cb22828c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87236180"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456445"
 ---
 # <a name="mssqlserver_17207"></a>MSSQLSERVER_17207
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

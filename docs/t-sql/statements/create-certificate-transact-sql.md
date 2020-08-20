@@ -1,4 +1,5 @@
 ---
+description: CREATE CERTIFICATE (Transact-SQL)
 title: CREATE CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/06/2020
@@ -27,12 +28,12 @@ ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4f4a1209a68dc011aafdc43f631766a35c5a243
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 4ae27e25e16022aa1ec497188bee7fde68a9bca3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392716"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458820"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asa-pdw](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]
@@ -144,7 +145,7 @@ CREATE CERTIFICATE certificate_name
 > 自主資料庫或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 無法使用這個選項。  
   
  BINARY = *private_key_bits*  
- **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 起) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指定為二進位常數的私密金鑰位元。 這些位元可以是加密形式。 如果加密的話，使用者必須提供解密密碼。 不會針對這個密碼執行密碼原則檢查。 私密金鑰位元應該採用 PVK 檔案格式。  
   
@@ -155,7 +156,7 @@ CREATE CERTIFICATE certificate_name
  指定用來加密私密金鑰的密碼。 請只在您要利用密碼來加密憑證時才使用這個選項。 如果省略這個子句，則會使用資料庫主要金鑰加密此私密金鑰。 *password* 必須符合執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的 Windows 密碼原則需求。 如需詳細資訊，請參閱＜ [Password Policy](../../relational-databases/security/password-policy.md)＞。  
   
  SUBJECT = '*certificate_subject_name*'  
- 「主旨」  一詞是指憑證中繼資料的欄位，如 X.509 標準所定義。 主旨不應超過 64 個字元，並會對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Linux 強制執行這項限制。 若是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Windows，主旨長度最多可達 128 個字元。 超過 128 個字元的主旨在儲存至目錄時會被截斷，但包含憑證的二進位大型物件 (BLOB) 會保留完整的主旨名稱。  
+ 「主旨」** 一詞是指憑證中繼資料的欄位，如 X.509 標準所定義。 主旨不應超過 64 個字元，並會對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Linux 強制執行這項限制。 若是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Windows，主旨長度最多可達 128 個字元。 超過 128 個字元的主旨在儲存至目錄時會被截斷，但包含憑證的二進位大型物件 (BLOB) 會保留完整的主旨名稱。  
   
  START_DATE = '*datetime*'  
  這是憑證生效的日期。 若未指定，會將 START_DATE 設為等於目前的日期。 START_DATE 為 UTC 時間，可以用任何可轉換成日期和時間的格式指定。  
@@ -169,7 +170,7 @@ CREATE CERTIFICATE certificate_name
 ## <a name="remarks"></a>備註  
  憑證是遵照 X.509 標準及支援 X.509 V1 欄位的資料庫層級安全性實體。 `CREATE CERTIFICATE` 可以從檔案、二進位常數或組件載入憑證。 這個陳述式也可以產生金鑰組及建立自簽憑證。  
   
- 私密金鑰必須為 \<= 2500 位元組的加密格式。 截至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 止，[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 產生的私密金鑰長度為 1024 個位元；從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始則為 2048 位元。 從外部來源匯入的私密金鑰，其最小長度為 384 個位元，其最大長度為 4,096 個位元。 匯入的私密金鑰，其長度必須為 64 個位元的整數倍。 用於 TDE 的憑證限制在 3456 位元的私密金鑰大小。  
+ 私密金鑰必須為 \<= 2500 位元組的加密格式。 截至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 止，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生的私密金鑰長度為 1024 個位元；從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始則為 2048 位元。 從外部來源匯入的私密金鑰，其最小長度為 384 個位元，其最大長度為 4,096 個位元。 匯入的私密金鑰，其長度必須為 64 個位元的整數倍。 用於 TDE 的憑證限制在 3456 位元的私密金鑰大小。  
   
  系統會儲存憑證的完整「序號」，但只有前 16 個位元組會出現在 sys.certificates 目錄檢視中。  
   

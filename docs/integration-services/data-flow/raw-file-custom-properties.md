@@ -1,4 +1,5 @@
 ---
+description: 原始檔案自訂屬性
 title: 原始檔案自訂屬性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ed2bc817f446481d228806f5f2ffb3222b79ecf0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 45e439343713ac98dfd293a21af90d75e1275847
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916054"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457274"
 ---
 # <a name="raw-file-custom-properties"></a>原始檔案自訂屬性
 
@@ -30,7 +31,7 @@ ms.locfileid: "86916054"
   
 |屬性名稱|資料類型|描述|  
 |-------------------|---------------|-----------------|  
-|AccessMode|整數 (列舉)|用來存取原始資料的模式。 可能的值為 [檔案名稱]  (0) 和 [來自變數的檔案名稱]  (1)。 預設值是 [檔案名稱]  (0)。|  
+|AccessMode|整數 (列舉)|用來存取原始資料的模式。 可能的值為 [檔案名稱]**** (0) 和 [來自變數的檔案名稱]**** (1)。 預設值是 [檔案名稱]**** (0)。|  
 |FileName|String|來源檔案的路徑和檔案名稱。|  
   
  原始檔案來源的輸出和輸出資料行沒有任何自訂屬性。  
@@ -45,9 +46,9 @@ ms.locfileid: "86916054"
   
 |屬性名稱|資料類型|描述|  
 |-------------------|---------------|-----------------|  
-|AccessMode|整數 (列舉)|一個值，指定 FileName 屬性包含檔案名稱，或包含檔案名稱之變數的名稱。 選項為 [檔案名稱]  (0) 和 [來自變數的檔案名稱]  (1)。|  
+|AccessMode|整數 (列舉)|一個值，指定 FileName 屬性包含檔案名稱，或包含檔案名稱之變數的名稱。 選項為 [檔案名稱]**** (0) 和 [來自變數的檔案名稱]**** (1)。|  
 |FileName|String|原始檔案目的地寫入的檔案名稱。|  
-|WriteOption|整數 (列舉)|一個值，指定原始檔案目的地是否會刪除具有相同名稱的現有檔案。 選項為 [永遠建立]  (0)、[建立一次]  (1)、[截斷與附加]  (3) 和 [附加]  (2)。 此屬性的預設值為 [永遠建立]  (0)。|  
+|WriteOption|整數 (列舉)|一個值，指定原始檔案目的地是否會刪除具有相同名稱的現有檔案。 選項為 [永遠建立]**** (0)、[建立一次]**** (1)、[截斷與附加]**** (3) 和 [附加]**** (2)。 此屬性的預設值為 [永遠建立]**** (0)。|  
   
 > [!NOTE]  
 >  附加作業要求已附加資料的中繼資料與檔案中已有資料的中繼資料相符。  

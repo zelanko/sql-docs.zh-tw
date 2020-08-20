@@ -1,4 +1,5 @@
 ---
+description: 重複使用封裝物件
 title: 重複使用套件物件 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 08f723bf-15b5-44bd-9a46-04e8781bfbfb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0068126b439ff99ec88c76a0329454cc5931b683
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6e18a7b006b3fc48682b4de2d6c2ba0b233bfd24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923761"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457080"
 ---
 # <a name="reuse-of-package-objects"></a>重複使用封裝物件
 
@@ -43,7 +44,7 @@ ms.locfileid: "86923761"
   
 ## <a name="related-tasks"></a>相關工作  
   
--   [複製套件物件](../integration-services/copy-package-objects.md)  
+-   [複製封裝物件](../integration-services/copy-package-objects.md)  
   
 -   [複製專案項目](https://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
   

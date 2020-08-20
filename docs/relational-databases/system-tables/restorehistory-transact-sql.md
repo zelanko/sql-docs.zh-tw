@@ -1,5 +1,6 @@
 ---
-title: restorehistory （Transact-sql） |Microsoft Docs
+description: restorehistory (Transact-SQL)
+title: restorehistory (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 9140ecc1-d912-4d76-ae70-e2a857da6d44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3db109ef79cbe2c24691719d4bd48384cfda478b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 26b3d319738ce827d482aafcfb76f91cc2ab53ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881431"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460278"
 ---
 # <a name="restorehistory-transact-sql"></a>restorehistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  每項還原作業都有一個資料列。 此資料表會儲存在**msdb**資料庫中。  
+  每項還原作業都有一個資料列。 此資料表儲存在 **msdb** 資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -35,10 +36,10 @@ ms.locfileid: "85881431"
 |**restore_date**|**datetime**|還原作業開始的日期和時間。 可以是 NULL。|  
 |**destination_database_name**|**nvarchar(128)**|還原作業的目的地資料庫名稱。 可以是 NULL。|  
 |**user_name**|**nvarchar(128)**|執行還原作業的使用者名稱。 可以是 NULL。|  
-|**backup_set_id**|**int**|用來識別還原的備份組的唯一識別碼。 參考**backupset （backup_set_id）**。|  
-|**restore_type**|**char （1）**|還原作業的類型：<br /><br /> D = 資料庫<br /><br /> F = 檔案<br /><br /> G = 檔案群組<br /><br /> I = 差異<br /><br /> L = 記錄<br /><br /> V = 僅驗證<br /><br /> 可以是 NULL。|  
+|**backup_set_id**|**int**|用來識別還原的備份組的唯一識別碼。 參考 **backupset (backup_set_id) **。|  
+|**restore_type**|**char (1) **|還原作業的類型：<br /><br /> D = 資料庫<br /><br /> F = 檔案<br /><br /> G = 檔案群組<br /><br /> I = 差異<br /><br /> L = 記錄<br /><br /> V = 僅驗證<br /><br /> 可以是 NULL。|  
 |**replace**|**bit**|指出還原作業是否指定了 REPLACE 選項：<br /><br /> 1 = 已指定<br /><br /> 0 = 未指定<br /><br /> 可以是 NULL。<br /><br /> 當資料庫還原到某個資料庫快照集時，0 是唯一選項。|  
-|**recovery**|**bit**|指出還原作業指定了 RECOVERY 或 NORECOVERY 選項：<br /><br /> 1 = RECOVERY<br /><br /> 可以是 NULL。<br /><br /> 當資料庫還原成資料庫快照集時，1是唯一的選項。<br /><br /> 0 = NORECOVERY|  
+|**recovery**|**bit**|指出還原作業指定了 RECOVERY 或 NORECOVERY 選項：<br /><br /> 1 = RECOVERY<br /><br /> 可以是 NULL。<br /><br /> 當資料庫還原為資料庫快照集時，1是唯一的選項。<br /><br /> 0 = NORECOVERY|  
 |**restart**|**bit**|指出還原作業是否指定了 RESTART 選項：<br /><br /> 1 = 已指定<br /><br /> 0 = 未指定<br /><br /> 可以是 NULL。<br /><br /> 當資料庫還原到某個資料庫快照集時，0 是唯一選項。|  
 |**stop_at**|**datetime**|復原資料庫的時間點。 可以是 NULL。|  
 |**device_count**|**tinyint**|還原作業所涉及的裝置數目。 這個數目可以小於備份媒體家族的數目。 可以是 NULL。<br /><br /> 當資料庫還原到某個資料庫快照集時，這個數目一律是 1。|  
@@ -46,10 +47,10 @@ ms.locfileid: "85881431"
 |**stop_before**|**bit**|指出復原是否包含具名標示的交易：<br /><br /> 0 = 復原暫停在標示交易之前。<br /><br /> 1 = 復原包括標示的交易。<br /><br /> 可以是 NULL。<br /><br /> 當資料庫還原到某個資料庫快照集時，這個值是 NULL。|  
   
 ## <a name="remarks"></a>備註  
- 若要減少此資料表以及其他備份和記錄資料表中的資料列數目，請執行[sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)預存程式。  
+ 若要減少此資料表以及其他備份和記錄資料表中的資料列數目，請執行 [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) 預存程式。  
   
 ## <a name="see-also"></a>另請參閱  
- [備份和還原資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
+ [備份與還原資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [restorefile &#40;Transact-sql&#41;](../../relational-databases/system-tables/restorefile-transact-sql.md)   
  [restorefilegroup &#40;Transact-sql&#41;](../../relational-databases/system-tables/restorefilegroup-transact-sql.md)   
  [系統資料表 &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  

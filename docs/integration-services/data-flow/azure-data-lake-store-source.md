@@ -1,4 +1,5 @@
 ---
+description: Azure Data Lake Store 來源
 title: Azure Data Lake Store 來源 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/16/2018
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: f9c3311f-7316-48d6-bf10-d810e70b4304
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b2091b4f19d5110e34c61ea7776214b740fc38f8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 38de021617ed0454048a3d8cd7f0c5732d09861f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919777"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457470"
 ---
 # <a name="azure-data-lake-store-source"></a>Azure Data Lake Store 來源
 

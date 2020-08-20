@@ -1,4 +1,5 @@
 ---
+description: 在 SQL Server Data Tools 中複製封裝
 title: 在 SQL Server Data Tools 中複製封裝 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 03edc659-e76d-48c0-a749-5f1899b6b507
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 52368632a7e2d871f91f4e7c60aad0a7f03dbcf9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9b1f57c7b37994a9a34a792fab2ab19169aa5d9e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923264"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457516"
 ---
 # <a name="copy-a-package-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中複製封裝
 

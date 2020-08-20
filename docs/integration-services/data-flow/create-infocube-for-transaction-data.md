@@ -1,4 +1,5 @@
 ---
+description: 建立交易資料的 InfoCube
 title: 建立交易資料的 InfoCube | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,21 +11,21 @@ ms.topic: conceptual
 ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7cc7e124f0220a5d7dcd1a146479a82801f83a3d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 18d7f3f10a2d7179d31e08e5a8e255df7295ca67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923574"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457390"
 ---
 # <a name="create-infocube-for-transaction-data"></a>建立交易資料的 InfoCube
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  使用 [建立交易資料的 InfoCube]  對話方塊可以在 SAP Netweaver BW 系統中建立交易資料的新 InfoCube。  
+  使用 [建立交易資料的 InfoCube]**** 對話方塊可以在 SAP Netweaver BW 系統中建立交易資料的新 InfoCube。  
   
- 您可以從 [SAP BW 目的地編輯器] 的 [連線管理員] 頁面開啟 [建立交易資料的 InfoCube] 對話方塊。 若要深入了解 SAP BW 目的地，請參閱 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)。  
+ 您可以從 [SAP BW 目的地編輯器]**** 的 [連線管理員]**** 頁面開啟 [建立交易資料的 InfoCube]**** 對話方塊。 若要深入了解 SAP BW 目的地，請參閱 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)。  
   
 > [!IMPORTANT]  
 >  Microsoft Connector 1.1 for SAP BW 的文件集是假設使用者已熟悉 SAP Netweaver BW 環境。 如需有關 SAP Netweaver BW 的詳細資訊，或有關如何設定 SAP Netweaver BW 物件與處理序的詳細資訊，請參閱 SAP 文件集。  
@@ -37,7 +38,7 @@ ms.locfileid: "86923574"
   
 3.  在 **[SAP BW 目的地編輯器]** 中，按一下 **[連接管理員]** 開啟編輯器的 **[連接管理員]** 頁面。  
   
-4.  在 [連線管理員]  頁面的 [建立 SAP BW 物件]  群組方塊中，選取 [InfoCube]  ，然後按一下 [建立]  。  
+4.  在 [連線管理員]**** 頁面的 [建立 SAP BW 物件]**** 群組方塊中，選取 [InfoCube]****，然後按一下 [建立]****。  
   
 ## <a name="general-options"></a>一般選項  
  **InfoCube 名稱**  

@@ -1,4 +1,5 @@
 ---
+description: catalog.create_folder (SSISDB 資料庫)
 title: catalog.create_folder (SSISDB 資料庫) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 06fb3549-e970-4ca2-a61f-59affb9c6dcc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3590308c901dc27ec417a925f316d290f499ca55
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9c0c28c81f607f5ab7ddc71d84ae52ea848d9334
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913129"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456948"
 ---
 # <a name="catalogcreate_folder-ssisdb-database"></a>catalog.create_folder (SSISDB 資料庫)
 

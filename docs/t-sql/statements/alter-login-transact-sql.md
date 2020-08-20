@@ -1,4 +1,5 @@
 ---
+description: ALTER LOGIN (Transact-SQL)
 title: ALTER LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/10/2020
@@ -24,12 +25,12 @@ ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef071062597fee3bb8a25b7cf6a866fa0ab393d1
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 5a0355e777d05ba9b8257f57a65999e6973c53b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988422"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458853"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 

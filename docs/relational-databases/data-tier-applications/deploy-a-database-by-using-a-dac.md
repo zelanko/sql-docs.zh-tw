@@ -1,4 +1,5 @@
 ---
+description: 使用 DAC 來部署資料庫
 title: 使用 DAC 部署資料庫 | Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: e93398b38e2fff73e63013fd0bfc1c4bedc31a43
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 4e122c2dbed9a0a1ff5ff4d9653e62f1ab6e5100
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988762"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456680"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>使用 DAC 來部署資料庫
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

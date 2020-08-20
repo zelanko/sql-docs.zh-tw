@@ -1,4 +1,5 @@
 ---
+description: 資料分割處理目的地自訂屬性
 title: 資料分割處理目的地自訂屬性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3eac4413-0c90-4b06-8f7e-d0d72f4d869d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e9bd6dff6e35b4fa78d69dc1c6703ca6a098f6c5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 87f70b54a0f43252bd6ebc2f28b32371715760cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920406"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457322"
 ---
 # <a name="partition-processing-destination-custom-properties"></a>資料分割處理目的地自訂屬性
 
@@ -38,7 +39,7 @@ ms.locfileid: "86920406"
 |NullKeyConvertedToUnknown|整數 (列舉)|當 UseDefaultConfiguration 為 **False**時，就是指出如何處理轉換成未知值之 Null 索引鍵的值。 可能的值為 **IgnoreError** (0)、 **ReportAndContinue** (1) 和 **ReportAndStop** (2)。 此屬性的預設值為 **IgnoreError** (0)。|  
 |NullKeyNotAllowed|整數 (列舉)|當 UseDefaultConfiguration 為 **False**時，就是指出如何處理不允許之 Null 的值。 可能的值為 **IgnoreError** (0)、 **ReportAndContinue** (1) 和 **ReportAndStop** (2)。 此屬性的預設值為 **ReportAndContinue** (1)。|  
 |ProcessType|整數 (列舉)|轉換所使用的資料分割處理類型。 可能的值為 **ProcessAdd** (1) (累加)、 **ProcessFull** (0) 和 **ProcessUpdate** (2)。|  
-|UseDefaultConfiguration|Boolean|一個值，指定轉換是否要使用預設錯誤組態。 如果這個屬性為 **False**，轉換就會使用此資料表中所列的錯誤處理自訂屬性值，包括 KeyDuplicate、KeyErrorAction 等屬性。|  
+|UseDefaultConfiguration|布林值|一個值，指定轉換是否要使用預設錯誤組態。 如果這個屬性為 **False**，轉換就會使用此資料表中所列的錯誤處理自訂屬性值，包括 KeyDuplicate、KeyErrorAction 等屬性。|  
   
  資料分割處理目的地的輸入和輸入資料行沒有任何自訂屬性。  
   

@@ -1,4 +1,5 @@
 ---
+description: Azure Data Lake Store 目的地
 title: Azure Data Lake Store 目的地 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 4c4f504f-dd2b-42c5-8a20-1a8ad9a5d632
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ebd3d19d42a39b92458d418d6ba13486f9c14e96
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 55a30f509074401bcf940639e9e4df14d0a58add
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922759"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457460"
 ---
 # <a name="azure-data-lake-store-destination"></a>Azure Data Lake Store 目的地
 
@@ -38,9 +39,9 @@ ms.locfileid: "86922759"
 
 2.  在 [Azure Data Lake Store 連線管理員]  欄位指定現有的 Azure Data Lake Store 連線管理員，或建立參考 Azure Data Lake Store 服務的新連線管理員。  
   
-    1.  在 [檔案路徑]  欄位指定想要寫入資料的檔案名稱。 如果此檔案已經存在，則會覆寫其內容。  
+    1.  在 [檔案路徑] **** 欄位指定想要寫入資料的檔案名稱。 如果此檔案已經存在，則會覆寫其內容。  
   
-    2.  在 [檔案格式]  欄位指定想要使用的檔案格式。  
+    2.  在 [檔案格式] **** 欄位指定想要使用的檔案格式。  
   
        檔案格式若為文字，則您必須指定 [資料行分隔符號字元]  值。 若檔案中第一個資料列包含資料行名稱，請選取 [第一個資料列的資料行名稱]  。  
 

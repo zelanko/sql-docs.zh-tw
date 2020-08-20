@@ -1,4 +1,5 @@
 ---
+description: catalog.create_execution_dump
 title: catalog.create_execution_dump | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 91319b0b-5536-4ab4-a403-9559ed9dd177
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a48142752c0016a2c215b9333dcbf518b63179c5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4c640ea3f78aa6e518b8f6d0250fbc288b40cd02
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914098"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456949"
 ---
 # <a name="catalogcreate_execution_dump"></a>catalog.create_execution_dump 
 

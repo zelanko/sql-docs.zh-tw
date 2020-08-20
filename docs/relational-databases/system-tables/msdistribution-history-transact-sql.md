@@ -1,5 +1,6 @@
 ---
-title: MSdistribution_history （Transact-sql） |Microsoft Docs
+description: MSdistribution_history (Transact-SQL)
+title: MSdistribution_history (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 55665bd2-9e1d-4efc-8f60-c63a24f66b28
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d6b60abffcb4831223ee35ac530c979865e03e05
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9f491e25b200a813f4751cb00250d914a79a364a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889976"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460347"
 ---
 # <a name="msdistribution_history-transact-sql"></a>MSdistribution_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85889976"
 |**start_time**|**datetime**|開始執行作業的時間。|  
 |**time**|**datetime**|記錄訊息的時間。|  
 |**duration**|**int**|訊息工作階段的持續時間 (以秒為單位)。|  
-|**批註**|**nvarchar(4000)**|訊息文字。|  
+|**評論**|**nvarchar(4000)**|訊息文字。|  
 |**xact_seqno**|**varbinary(16)**|前次處理的交易序號。|  
 |**current_delivery_rate**|**float**|在最後一個記錄項目之後，每秒傳遞的平均命令數。|  
 |**current_delivery_latency**|**int**|在前一個記錄項目之後，在命令輸入散發資料庫和套用至訂閱者之間的延遲 (毫秒)。|  
@@ -48,8 +49,8 @@ ms.locfileid: "85889976"
 |**delivery_rate**|**float**|平均每秒傳遞的命令數。|  
 |**delivery_latency**|**int**|在命令輸入散發資料庫和套用至訂閱者之間的延遲 (毫秒)。|  
 |**total_delivered_commands**|**bigint**|建立訂閱之後所傳遞的命令總數。|  
-|**error_id**|**int**|**MSrepl_error**系統資料表中的錯誤識別碼。|  
-|**updateable_row**|**bit**|如果可以覆寫記錄資料列，則設定為**1** 。|  
+|**error_id**|**int**|**MSrepl_error**系統資料表中錯誤的識別碼。|  
+|**updateable_row**|**bit**|如果可以覆寫歷程記錄資料列，請設定為 **1** 。|  
 |**timestamp**|**timestamp**|這份資料表的時間戳記資料行。|  
   
 ## <a name="see-also"></a>另請參閱  

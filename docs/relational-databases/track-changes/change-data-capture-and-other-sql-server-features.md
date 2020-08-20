@@ -1,4 +1,5 @@
 ---
+description: 異動資料擷取和其他 SQL Server 功能
 title: 異動資料擷取和其他 SQL Server 功能
 ms.custom: seo-dt-2019
 ms.date: 01/02/2019
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 39dad44c6c3e7d3679f9c8692cd152c12a2fae22
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 161fdd99d889d98f8ca93406020a9c524aac8bdc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889121"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460241"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>異動資料擷取和其他 SQL Server 功能
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

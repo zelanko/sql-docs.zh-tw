@@ -1,4 +1,5 @@
 ---
+description: SQL Server 連接所需的 CDC 服務權限
 title: SQL Server 連線所需的 CDC 服務權限 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d9e968f9-180c-4fa0-a849-98f2b1942330
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2332ccdc6e14734c6caed1e09b4dfa70b79e035d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2d82481f723c03f72d7e6572c3ad64b7e3ccdb36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86910848"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457605"
 ---
 # <a name="sql-server-connection-required-permissions-for-the-cdc-service"></a>SQL Server 連接所需的 CDC 服務權限
 
@@ -38,6 +39,6 @@ ms.locfileid: "86910848"
   
 ## <a name="see-also"></a>另請參閱  
  [連接到 SQL Server](../../integration-services/change-data-capture/connection-to-sql-server.md)   
- [連接到 SQL Server 以進行刪除作業](../../integration-services/change-data-capture/connection-to-sql-server-for-delete.md)  
+ [連接到 SQL Server 進行刪除](../../integration-services/change-data-capture/connection-to-sql-server-for-delete.md)  
   
   

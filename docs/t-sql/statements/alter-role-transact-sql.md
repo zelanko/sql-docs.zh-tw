@@ -1,4 +1,5 @@
 ---
+description: ALTER ROLE (Transact-SQL)
 title: ALTER ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2018
@@ -22,12 +23,12 @@ ms.assetid: e1e83caa-17cc-4871-b2db-2711339fb64f
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4b00464aaa9651f353a3c525cdf43badf72b88c
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: cc9f49a8a21ef4582f6f951a9301f33fe66002aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395409"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458890"
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,14 +64,16 @@ ALTER ROLE role_name
 [;]  
 ```  
   
-## <a name="arguments"></a>引數  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引數
  *role_name*  
- **適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 2008 起)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **適用於：**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 2008 起)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  指定要變更的資料庫角色。  
   
  ADD MEMBER *database_principal*  
- **適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 2012 起)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **適用於：**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 2012 起)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  指定要將資料庫主體新增至資料庫角色成員資格中。  
   
@@ -79,7 +82,7 @@ ALTER ROLE role_name
 -   *database_principal* 不能是固定資料庫角色或伺服器主體。  
   
 DROP MEMBER *database_principal*  
- **適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 2012 起)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **適用於：**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 2012 起)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  指定要從資料庫角色成員資格移除資料庫主體。  
   
@@ -88,7 +91,7 @@ DROP MEMBER *database_principal*
 -   *database_principal* 不能是固定資料庫角色或伺服器主體。  
   
 WITH NAME = *new_name*  
- **適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 2008 起)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **適用於：**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 2008 起)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  指定要變更使用者定義資料庫角色的名稱。 新的名稱不得已存在於資料庫中。  
   
@@ -118,7 +121,7 @@ WITH NAME = *new_name*
 ## <a name="examples"></a>範例  
   
 ### <a name="a-change-the-name-of-a-database-role"></a>A. 變更資料庫角色的名稱  
- **適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 2008 起)、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **適用於：**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 2008 起)、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  下列範例會將角色 `buyers` 的名稱改成 `purchasing`。   這個範例可以在 [AdventureWorks (英文)](https://msftdbprodsamples.codeplex.com/) 範例資料庫中執行。
   
@@ -127,7 +130,7 @@ ALTER ROLE buyers WITH NAME = purchasing;
 ```  
   
 ### <a name="b-add-or-remove-role-members"></a>B. 新增或移除角色成員  
- **適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 2012 起)、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **適用於：**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 2012 起)、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  這個範例會建立名為 `Sales` 的新資料庫。 它會將名稱為 Barry 的資料庫使用者加入至成員資格中，然後顯示如何移除成員 Barry。   這個範例可以在 [AdventureWorks (英文)](https://msftdbprodsamples.codeplex.com/) 範例資料庫中執行。
   

@@ -1,4 +1,5 @@
 ---
+description: 要求屬性值 (Master Data Services)
 title: 要求屬性值
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: dea2c4f9392cbc70d73d1eb383e7e0e2d306a1d3
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 74893d2d64a6de182206313a3d227c3a7db2f1de
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811883"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456735"
 ---
 # <a name="require-attribute-values-master-data-services"></a>要求屬性值 (Master Data Services)
 
@@ -29,12 +30,12 @@ ms.locfileid: "85811883"
 > [!NOTE]  
 >  在以網域屬性關聯性為基礎的衍生階層中，不會顯示遺漏網域屬性值的成員。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-require-attribute-values"></a>若要要求屬性值  
   
@@ -42,13 +43,13 @@ ms.locfileid: "85811883"
   
 2.  從功能表列，指向 **[管理]** ，然後按一下 **[商務規則]**。  
   
-3.  在 [**商務規則**] 頁面上，從 [**模型**] 下拉式清單中選取模型。  
+3.  在 [ **商務規則** ] 頁面上，從 [ **模型** ] 下拉式清單中選取模型。  
   
 4.  從 [實體] **** 下拉式清單選取實體。  
   
 5.  從 [成員類型] **** 下拉式清單中，選取要套用商務規則的成員類型。  
   
-6.  按一下 **[新增]** 。  
+6.  按一下 [新增] 。  
   
 7.  在 [名稱] **** 方塊中，輸入商務規則的名稱。  
   

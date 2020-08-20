@@ -1,4 +1,5 @@
 ---
+description: 保留字 (Master Data Services)
 title: 保留字
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 78dcf9320312f93dd08495f21bf0f6cc1b71516b
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 5eff7f5f2db1d1b155b94818083ddad11f23890e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811445"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456708"
 ---
 # <a name="reserved-words-master-data-services"></a>保留字 (Master Data Services)
 
@@ -39,16 +40,16 @@ ms.locfileid: "85811445"
   
 -   [成員](../master-data-services/reserved-words-master-data-services.md#members)  
   
-##  <a name="models"></a><a name="models"></a>機型  
+##  <a name="models"></a><a name="models"></a> 模型  
  如果您建立一個名稱設定為 **Name** 或 **Code** 的模型，請勿選取 [建立與模型同名的實體]****，原因是 **Name** 或 **Code** 無法用於實體的名稱。  
   
-##  <a name="entities"></a><a name="entities"></a>條目  
+##  <a name="entities"></a><a name="entities"></a> 實體  
  您無法針對實體名稱使用 **Name** 或 **Code**。  
   
-##  <a name="explicit-hierarchies"></a><a name="exhierarchies"></a>明確階層  
+##  <a name="explicit-hierarchies"></a><a name="exhierarchies"></a> 明確階層  
  您無法針對明確階層名稱使用 **Name** 或 **Code**。  
   
-##  <a name="attributes"></a><a name="attributes"></a>特性  
+##  <a name="attributes"></a><a name="attributes"></a> 屬性  
   
 -   **識別碼**  
   
@@ -76,7 +77,7 @@ ms.locfileid: "85811445"
   
 -   **Version_ID**  
   
-##  <a name="members"></a><a name="members"></a>屬於  
+##  <a name="members"></a><a name="members"></a> 成員  
  對於成員而言，您無法針對 **Code**屬性值使用 **MDMMemberStatus**、 **MDMUnused** 或 **ROOT** 。  
   
 ## <a name="see-also"></a>另請參閱  

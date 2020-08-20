@@ -1,4 +1,5 @@
 ---
+description: 檢閱及產生補充記錄指令碼
 title: 檢閱及產生補充記錄指令碼 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,19 +13,19 @@ f1_keywords:
 ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5f647bc913a52539992f3d6dcbb74b0dde1ff175
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 77a6b4f11ea2e01f43f1be335fad893ee87f1e90
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923889"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457680"
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>檢閱及產生補充記錄指令碼
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  使用 [指令碼]  索引標籤可在設定補充記錄的 Oracle 來源資料庫上執行或重新執行指令碼。  
+  使用 [指令碼]**** 索引標籤可在設定補充記錄的 Oracle 來源資料庫上執行或重新執行指令碼。  
   
  在您執行指令碼之前，請選取下列其中一項：  
   
@@ -59,6 +60,6 @@ ms.locfileid: "86923889"
   
 ## <a name="see-also"></a>另請參閱  
  [如何編輯 CDC 執行個體屬性](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [執行指令碼的 Oracle 認證](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
+ [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
   
   

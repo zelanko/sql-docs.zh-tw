@@ -1,4 +1,5 @@
 ---
+description: 擷取與了解變更資料
 title: 擷取與了解變更資料 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: af366697-6942-42bb-aea5-18fdef018965
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9ee6e9fa54a7050f2ef529749aa53019ca507fd8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f8c9a326ab700be3ebef26db7160323314f4af43
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923914"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457661"
 ---
 # <a name="retrieve-and-understand-the-change-data"></a>擷取與了解變更資料
 
@@ -34,7 +35,7 @@ ms.locfileid: "86923914"
   
 #### <a name="to-add-a-data-flow-task-to-the-package"></a>將資料流程工作加入至封裝  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [控制流程]  索引標籤上，加入「資料流程」工作。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [控制流程]**** 索引標籤上，加入「資料流程」工作。  
   
 2.  將準備查詢字串的先前工作連接到「資料流程」工作。  
   
@@ -46,21 +47,21 @@ ms.locfileid: "86923914"
   
 #### <a name="to-configure-an-ole-db-source-to-retrieve-the-change-data"></a>設定 OLE DB 來源以擷取變更資料  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [資料流程]  索引標籤上，加入 OLE DB 來源。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [資料流程]**** 索引標籤上，加入 OLE DB 來源。  
   
-2.  在 [OLE DB 來源編輯器]  的 [連線管理員]  頁面上，選取下列選項：  
+2.  在 [OLE DB 來源編輯器]**** 的 [連線管理員]**** 頁面上，選取下列選項：  
   
     1.  將有效的連接設定到來源資料庫。  
   
-    2.  針對 [資料存取模式]  ，選取 [來自變數的 SQL 命令]  。  
+    2.  針對 [資料存取模式]****，選取 [來自變數的 SQL 命令]****。  
   
-    3.  針對 [變數名稱]  ，選取 [User::SqlDataQuery]  。  
+    3.  針對 [變數名稱]****，選取 [User::SqlDataQuery]****。  
   
-3.  在 [OLE DB 來源編輯器]  的 [資料行]  頁面上，確定您需要的所有資料行都對應到輸出資料行。  
+3.  在 [OLE DB 來源編輯器]**** 的 [資料行]**** 頁面上，確定您需要的所有資料行都對應到輸出資料行。  
   
 ## <a name="next-step"></a>後續步驟  
  設定 OLE DB 來源以擷取變更資料後，下一個步驟是開始在封裝中設計資料流程。  
   
- **下一個主題：** [處理插入、更新與刪除作業](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)  
+ **下一個主題** [處理插入、更新與刪除](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)  
   
   

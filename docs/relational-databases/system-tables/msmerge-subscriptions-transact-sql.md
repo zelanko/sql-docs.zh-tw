@@ -1,5 +1,6 @@
 ---
-title: MSmerge_subscriptions （Transact-sql） |Microsoft Docs
+description: MSmerge_subscriptions (Transact-SQL)
+title: MSmerge_subscriptions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: cafd954a-92f8-44cb-a5d0-dce9aafa5ee1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eb31a5a858bb93c8ca503ba5e72687306c8750e7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e5648de8dd4d93e2f1fe1ed9290b9942f66cfe02
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889678"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460393"
 ---
 # <a name="msmerge_subscriptions-transact-sql"></a>MSmerge_subscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSmerge_subscriptions**資料表會針對訂閱者端之合併代理程式所服務的每個訂閱，各包含一個資料列。 這份資料表儲存在散發資料庫中。  
+  **MSmerge_subscriptions**資料表會針對訂閱者端的合併代理程式所服務的每個訂閱，各包含一個資料列。 這份資料表儲存在散發資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  

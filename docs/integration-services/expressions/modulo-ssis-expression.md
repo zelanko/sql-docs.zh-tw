@@ -1,4 +1,5 @@
 ---
+description: (模數) (SSIS 運算式)
 title: (模數) (SSIS 運算式) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e2920821-2f5b-4c76-8db8-8b9eddf4606f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a4065651c097d4cf9d2671ac486f294d7884b43a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 14ea6b261c63b06d5e6b3fbeb77822c0d3c6836f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918734"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457203"
 ---
 # <a name="modulo-ssis-expression"></a>(模數) (SSIS 運算式)
 

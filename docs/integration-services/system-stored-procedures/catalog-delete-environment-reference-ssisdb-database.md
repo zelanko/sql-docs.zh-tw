@@ -1,4 +1,5 @@
 ---
+description: catalog.delete_environment_reference (SSISDB 資料庫)
 title: catalog.delete_environment_reference (SSISDB 資料庫) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 1f68f157-c4e9-412c-92b3-53a2faaba29b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 92ca0764b48e54fc8a8548446001728d91677f99
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5ec190a40b71b874d2b888adff31ad99a41db1f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913114"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456915"
 ---
 # <a name="catalogdelete_environment_reference-ssisdb-database"></a>catalog.delete_environment_reference (SSISDB 資料庫)
 

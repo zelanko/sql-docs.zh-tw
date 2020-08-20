@@ -1,4 +1,5 @@
 ---
+description: Azure Feature Pack for Integration Services (SSIS)
 title: 適用於 Integration Services (SSIS) 的 Azure Feature Pack | Microsoft Docs
 ms.custom: ''
 ms.date: 12/24/2019
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 94d4a9121f32d1703ba7e64692ab235ee6eb04de
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: eb40e52398faac830e740f8aa57a3412559149cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916574"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457863"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Azure Feature Pack for Integration Services (SSIS)
 

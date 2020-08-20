@@ -1,4 +1,5 @@
 ---
+description: STDifference (geometry 資料類型)
 title: STDifference (geometry 資料類型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 737f39bb-8750-4ffb-8594-23febc2f1075
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: e59117b9c94fc06de58201a5857929e152357602
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: f8fc3fab7828f5978a3a944c9efb0eb3f9fbada2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555029"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458933"
 ---
 # <a name="stdifference-geometry-data-type"></a>STDifference (geometry 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

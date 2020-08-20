@@ -1,4 +1,5 @@
 ---
+description: ALTER INDEX (Transact-SQL)
 title: ALTER INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/21/2019
@@ -46,12 +47,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c16150f2023a863bbdcbecb138cc7ff6053b26a
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 0c62be335ac6fd04af05b7c6fddafedb7f764587
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381212"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458959"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 

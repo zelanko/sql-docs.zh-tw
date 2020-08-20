@@ -1,4 +1,5 @@
 ---
+description: CREATE CONTRACT (Transact-SQL)
 title: CREATE CONTRACT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c6fef1834b3e5b6afeda1df4c67e3403a6dd6d79
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 6f4b7360fa3429a621e364c27776c4f6a8f0a946
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391723"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458735"
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,14 +63,14 @@ CREATE CONTRACT contract_name
  *message_type_name*  
  這是要併入合約之訊息類型的名稱。  
   
- SENT BY  
- 指定哪一個端點可以傳送指定訊息類型的訊息。 合約記錄服務可以用來進行特定交談的訊息。 每一個交談有兩個端點：「起始端」  端點，這是起始交談的服務，以及「目標」  端點，這是起始端連絡的服務。  
+ SENT BY   
+ 指定哪一個端點可以傳送指定訊息類型的訊息。 合約記錄服務可以用來進行特定交談的訊息。 每一個交談有兩個端點：「起始端」** 端點，這是起始交談的服務，以及「目標」** 端點，這是起始端連絡的服務。  
   
- INITIATOR  
- 表示只有交談起始端可以傳送特定訊息類型的訊息。 開始交談的服務稱為交談的「起始端」  。  
+ INITIATOR   
+ 表示只有交談起始端可以傳送特定訊息類型的訊息。 開始交談的服務稱為交談的「起始端」**。  
   
  TARGET  
- 表示只有交談目標可以傳送特定訊息類型的訊息。 接受由另一服務起始之交談的服務稱為交談的「目標」  。  
+ 表示只有交談目標可以傳送特定訊息類型的訊息。 接受由另一服務起始之交談的服務稱為交談的「目標」**。  
   
  ANY  
  表示起始端和目標兩者都可以傳送這個類型的訊息。  
@@ -96,7 +97,7 @@ CREATE CONTRACT contract_name
  執行 CREATE CONTRACT 陳述式的使用者必須有所有指定訊息類型的 REFERENCES 權限。  
   
 ## <a name="examples"></a>範例  
- **A.建立合約**  
+ **A. 建立合約**  
   
  下列範例會依據三種訊息類型建立費用償還合約。  
   

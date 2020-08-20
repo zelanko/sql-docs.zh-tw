@@ -1,4 +1,5 @@
 ---
+description: 需要核准 (Master Data Services)
 title: 需要核准
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b475a53d-269d-49f3-bb42-965c555f80be
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 448a8174acef464fa1badb5a25d019891dd53bc6
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: f93514c1efd561aa989c03373f91edc2d552eba9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812053"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456816"
 ---
 # <a name="approval-required-master-data-services"></a>需要核准 (Master Data Services)
 
@@ -30,7 +31,7 @@ ms.locfileid: "85812053"
 >   
 >  商務規則所做的變更會略過核准。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 [系統管理] 功能區域的權限。  
@@ -43,7 +44,7 @@ ms.locfileid: "85812053"
   
 1.  在 [ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]] 中，按一下 **[系統管理]**。  
   
-2.  在 [**管理模型**] 頁面上，從方格中選取模型，然後按一下 [**實體**]。  
+2.  在 [ **管理模型** ] 頁面上，從方格中選取模型，然後按一下 [ **實體**]。  
   
 3.  在 [管理實體]**** 頁面上，從方格中選取含有您想要啟用 [需要核准]**** 之實體的資料列。  
   

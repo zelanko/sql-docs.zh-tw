@@ -1,4 +1,5 @@
 ---
+description: 建立 SQL Server 變更資料庫
 title: 建立 SQL Server 變更資料庫 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a4e5e945b1d6a43829d1e9cb3998335559808480
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b49e099d675aec6158048d8a2a0fb4fe1c0ba64a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918747"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457729"
 ---
 # <a name="create-the-sql-server-change-database"></a>建立 SQL Server 變更資料庫
 
@@ -35,7 +36,7 @@ ms.locfileid: "86918747"
   
  如需有關在 [連接到 SQL Server] 對話方塊中輸入資料的詳細資訊，請參閱＜ [SQL Server Connection for Instance Creation](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **Oracle CDC 執行個體**  
  輸入以下有關您建立之 CDC 執行個體的資訊。  
   
@@ -52,7 +53,7 @@ ms.locfileid: "86918747"
   
      若要建立資料庫，登入必須擁有 `sysasmin` 伺服器角色。 如需詳細資訊，請參閱上述的安全性注意事項。  
   
-     在您建立資料庫之後，可以按 **[下一步]** [Connect to an Oracle Source Database](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)。  
+     在您建立資料庫之後，可以按 **[下一步]**[Connect to an Oracle Source Database](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [如何建立 SQL Server 變更資料庫執行個體](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   

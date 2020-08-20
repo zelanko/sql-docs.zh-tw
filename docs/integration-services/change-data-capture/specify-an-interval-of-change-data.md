@@ -1,4 +1,5 @@
 ---
+description: 指定變更資料的間隔
 title: 指定變更資料的間隔 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ad9785a9cddc36d368a01ec507fe0c7b3909794b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7f82a0fe161a12f4a7d20b24218bd0347cdf6187
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921270"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457627"
 ---
 # <a name="specify-an-interval-of-change-data"></a>指定變更資料的間隔
 
@@ -87,13 +88,13 @@ ms.locfileid: "86921270"
   
 2.  開啟 **[執行 SQL 工作編輯器]** 然後在編輯器的 **[一般]** 頁面上，選取下列選項：  
   
-    1.  針對 **[ResultSet]** ，選取 **[單一資料列]** 。  
+    1.  針對 **[ResultSet]**，選取 **[單一資料列]**。  
   
     2.  將有效的連接設定到來源資料庫。  
   
-    3.  針對 **[SQLSourceType]** ，選取 **[直接輸入]** 。  
+    3.  針對 **[SQLSourceType]**，選取 **[直接輸入]**。  
   
-    4.  針對 **[SQLStatement]** ，輸入下列 SQL 陳述式：  
+    4.  針對 **[SQLStatement]**，輸入下列 SQL 陳述式：  
   
         ```sql
         SELECT DATEADD(dd,0, DATEDIFF(dd,0,GETDATE()-1)) AS ExtractStartTime,  

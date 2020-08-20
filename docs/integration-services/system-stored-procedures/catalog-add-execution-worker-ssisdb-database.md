@@ -1,4 +1,5 @@
 ---
+description: catalog.add_execution_worker (SSISDB 資料庫)
 title: catalog.add_execution_worker (SSISDB 資料庫) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/16/2016
@@ -11,12 +12,12 @@ ms.assetid: d587cedd-6402-4d5c-9526-7cd25627a037
 author: chugugrace
 ms.author: chugu
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: ffcd20f1895252cc09eca1fc87a055bd5c964a38
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 102277139885379f4c2f75c912756e09131ec546
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917629"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456989"
 ---
 # <a name="catalogadd_execution_worker-ssisdb-database"></a>catalog.add_execution_worker (SSISDB 資料庫)
 

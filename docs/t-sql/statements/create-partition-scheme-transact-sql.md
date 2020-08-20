@@ -1,4 +1,5 @@
 ---
+description: CREATE PARTITION SCHEME (Transact-SQL)
 title: CREATE PARTITION SCHEME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/10/2017
@@ -28,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b13706909d12d4fb27e981008aeca9e0b3e8ac2a
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: dd662f06ceff6ac917e8c56b830f7dd1241084fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392976"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458783"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -64,12 +65,12 @@ AS PARTITION partition_function_name
  這是使用資料分割結構描述的資料分割函數名稱。 資料分割函數所建立的資料分割會對應至資料分割結構描述所指定的檔案群組。 *partition_function_name* 必須已存在於資料庫中。 單一資料分割無法同時包含 FILESTREAM 和非 FILESTREAM 檔案群組。  
   
  ALL  
- 指定所有分割區都對應至 *file_group_name* 所提供的檔案群組，如果指定了 **[** PRIMARY **]** ，便是對應至主要檔案群組。 如果指定 ALL，則只能指定一個 *file_group_name*。  
+ 指定所有分割區都對應至 *file_group_name* 所提供的檔案群組，如果指定了 **[** PRIMARY **]**，便是對應至主要檔案群組。 如果指定 ALL，則只能指定一個 *file_group_name*。  
   
  *file_group_name* |  **[** PRIMARY **]** [ **,** _...n_]  
  指定用來存放 *partition_function_name* 所指定之分割區的檔案群組名稱。 *file_group_name* 必須已存在於資料庫中。  
   
- 如果指定了 **[** PRIMARY **]** ，就會將分割區儲存在主要檔案群組。 如果指定 ALL，則只能指定一個 *file_group_name*。 分割區是從分割區 1 開始，依照 [ **,** _...n_] 中列出檔案群組的順序來指派給各個檔案群組。 在 [ *,* **...n**] 中，可以重複指定相同的 _file_group_name_。 如果 *n* 不足無法存放 *partition_function_name* 中所指定的資料分割數目，則 CREATE PARTITION SCHEME 會失敗，並會出現一則錯誤。  
+ 如果指定了 **[** PRIMARY **]**，就會將分割區儲存在主要檔案群組。 如果指定 ALL，則只能指定一個 *file_group_name*。 分割區是從分割區 1 開始，依照 [ **,** _...n_] 中列出檔案群組的順序來指派給各個檔案群組。 在 [ **,** _...n_] 中，可以重複指定相同的 *file_group_name*。 如果 *n* 不足無法存放 *partition_function_name* 中所指定的資料分割數目，則 CREATE PARTITION SCHEME 會失敗，並會出現一則錯誤。  
   
  如果 *partition_function_name* 產生的分割區數目比檔案群組少，第一個未指派的檔案群組會標示為 NEXT USED，且會出現一則命名 NEXT USED 檔案群組的參考訊息。 如果指定 ALL，唯一的 *file_group_name* 會維護它的 NEXT USED 屬性，以用於這個 *partition_function_name*。 如果在 ALTER PARTITION FUNCTION 陳述式中建立資料分割，NEXT USED 檔案群組便會收到其他資料分割。 若要建立其他未指派的檔案群組來存放新的資料分割，請使用 ALTER PARTITION SCHEME。  
   
@@ -100,7 +101,7 @@ AS PARTITION myRangePF1
 TO (test1fg, test2fg, test3fg, test4fg);  
 ```  
   
- 在資料分割資料行 `myRangePF1`col1**上使用分割區函數** 之資料表的分割區，會依照下表所示進行指派。  
+ 在資料分割資料行 **col1** 上使用分割區函數 `myRangePF1` 之資料表的分割區，會依照下表所示進行指派。  
   
 ||||||  
 |-|-|-|-|-|  
@@ -120,7 +121,7 @@ AS PARTITION myRangePF2
 TO ( test1fg, test1fg, test1fg, test2fg );  
 ```  
   
- 在資料分割資料行 `myRangePF2`col1**上使用分割區函數** 之資料表的分割區，會依照下表所示進行指派。  
+ 在資料分割資料行 **col1** 上使用分割區函數 `myRangePF2` 之資料表的分割區，會依照下表所示進行指派。  
   
 ||||||  
 |-|-|-|-|-|  

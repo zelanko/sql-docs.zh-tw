@@ -1,4 +1,5 @@
 ---
+description: 資料分割處理目的地
 title: 資料分割處理目的地 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 50513545bf2737a8b331153c686acad7ebaf4bd2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ba6441215b1f1462195b83a99ce040da11d694fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916083"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457313"
 ---
 # <a name="partition-processing-destination"></a>資料分割處理目的地
 
@@ -57,12 +58,12 @@ ms.locfileid: "86916083"
   
 -   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
--   [分割區處理目的地自訂屬性](../../integration-services/data-flow/partition-processing-destination-custom-properties.md)  
+-   [資料分割處理目的地自訂屬性](../../integration-services/data-flow/partition-processing-destination-custom-properties.md)  
   
  如需如何設定屬性的詳細資訊，請參閱 [設定資料流程元件的屬性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
 ## <a name="partition-processing-destination-editor-connection-manager-page"></a>資料分割處理目的地編輯器 (連接管理員頁面)
-  使用 [資料分割處理目的地編輯器]  對話方塊的 [連線管理員]  頁面，以指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的連線。  
+  使用 [資料分割處理目的地編輯器]**** 對話方塊的 [連線管理員]**** 頁面，以指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的連線。  
   
 > [!NOTE]  
 >  此處描述的工作不適用於 Analysis Services 表格式模型。  您無法針對表格式模型，將輸入資料行對應至資料分割資料行。 您可以改用 Analysis Services 執行 DDL 工作 ( [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) ) 來處理資料分割。  
@@ -72,13 +73,13 @@ ms.locfileid: "86916083"
  從清單中選取現有的連線管理員，或按一下 [新增]  來建立新的連線。  
   
  **新增**  
- 使用 [加入 Analysis Services 連接管理員]  對話方塊來建立新的連接。  
+ 使用 [加入 Analysis Services 連接管理員]**** 對話方塊來建立新的連接。  
   
  **可用的資料分割清單**  
  選取要處理的資料分割。  
   
  **處理方法**  
- 選取處理方法。 此選項的預設值是 **[完整]** 。  
+ 選取處理方法。 此選項的預設值是 **[完整]**。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -111,7 +112,7 @@ ms.locfileid: "86916083"
 > [!NOTE]  
 >  此處描述的工作不適用於 Analysis Services 表格式模型。  您無法針對表格式模型，將輸入資料行對應至資料分割資料行。 您可以改用 Analysis Services 執行 DDL 工作 ( [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) ) 來處理資料分割。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **使用預設錯誤組態。**  
  指定是否要使用預設的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 錯誤處理。 依預設，此值為 **True**。  
   
@@ -130,10 +131,10 @@ ms.locfileid: "86916083"
  指定發生錯誤時，應該停止處理。  
   
  **錯誤數目**  
- 如果您已選取 [發生錯誤時停止]  ，請指定處理應該停止的錯誤臨界值。  
+ 如果您已選取 [發生錯誤時停止]****，請指定處理應該停止的錯誤臨界值。  
   
  **發生錯誤時要執行的動作**  
- 如果您已選取 [發生錯誤時停止]  ，請指定到達錯誤臨界值時要採取的動作。  
+ 如果您已選取 [發生錯誤時停止]****，請指定到達錯誤臨界值時要採取的動作。  
   
 |值|描述|  
 |-----------|-----------------|  

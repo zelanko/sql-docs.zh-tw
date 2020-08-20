@@ -1,5 +1,6 @@
 ---
-title: MSsnapshot_history （Transact-sql） |Microsoft Docs
+description: MSsnapshot_history (Transact-SQL)
+title: MSsnapshot_history (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 56bf4128-1689-4963-9343-432dd0898d31
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fedcf6dd9d4b30b92a6a98d97f49c0b3361f38ca
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7dcc8a6e5a35ca9062bf97dd4dece2afca078fb2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889398"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460322"
 ---
 # <a name="mssnapshot_history-transact-sql"></a>MSsnapshot_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,11 +37,11 @@ ms.locfileid: "85889398"
 |**start_time**|**datetime**|開始執行作業的時間。|  
 |**time**|**datetime**|記錄訊息的時間。|  
 |**duration**|**int**|訊息工作階段的持續時間 (以秒為單位)。|  
-|**批註**|**nvarchar(255)**|訊息文字。|  
+|**評論**|**nvarchar(255)**|訊息文字。|  
 |**delivered_transactions**|**int**|在工作階段所傳遞的交易總數。|  
 |**delivered_commands**|**int**|每秒傳遞的命令數。|  
-|**delivery_rate**|**float （53）**|平均每秒傳遞的命令數。|  
-|**error_id**|**int**|[MSrepl_errors](../../relational-databases/system-tables/msrepl-errors-transact-sql.md)系統資料表中的錯誤識別碼。|  
+|**delivery_rate**|**float(53)**|平均每秒傳遞的命令數。|  
+|**error_id**|**int**|[MSrepl_errors](../../relational-databases/system-tables/msrepl-errors-transact-sql.md)系統資料表中錯誤的識別碼。|  
 |**timestamp**|**timestamp**|這份資料表的時間戳記資料行。|  
   
 ## <a name="see-also"></a>另請參閱  

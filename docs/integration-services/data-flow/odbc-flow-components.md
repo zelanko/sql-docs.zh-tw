@@ -1,4 +1,5 @@
 ---
+description: ODBC 流程元件
 title: ODBC 流程元件 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 339d8c68dcafba40b73edbc8c003376a20ae8822
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c2ae72b5e59c56c976632fdc5572dcfae030f689
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914754"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457334"
 ---
 # <a name="odbc-flow-components"></a>ODBC 流程元件
 

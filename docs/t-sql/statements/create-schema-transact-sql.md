@@ -1,4 +1,5 @@
 ---
+description: CREATE SCHEMA (Transact-SQL)
 title: CREATE SCHEMA (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/01/2016
@@ -24,12 +25,12 @@ ms.assetid: df74fc36-20da-4efa-b412-c4e191786695
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f06c3e2b95fa571b26404a69653471738d7648ee
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: eef5bd9a0cd3c1a42797c9ca334f9efc4745f824
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392996"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458773"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -146,7 +147,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
 ### <a name="a-creating-a-schema-and-granting-permissions"></a>A. 建立結構描述及授與權限  
  下列範例會建立結構描述 `Sprockets`，這是由包含資料表 `Annik` 的 `NineProngs` 所擁有。 陳述式授與 `SELECT` 給 `Mandar`，拒絕 `SELECT` 給 `Prasanna`。 請注意，`Sprockets` 和 `NineProngs` 是在單一陳述式中建立。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE SCHEMA Sprockets AUTHORIZATION Annik  
@@ -161,13 +162,13 @@ GO
 ### <a name="b-creating-a-schema-and-a-table-in-the-schema"></a>B. 建立結構描述並在結構描述中建立資料表  
  下例範例會建立名為 `Sales` 的結構描述，然後在該結構描述中建立 `Sales.Region` 資料表。  
   
-```  
+```sql  
 CREATE SCHEMA Sales;  
 GO
   
 CREATE TABLE Sales.Region   
-(Region_id int NOT NULL,  
-Region_Name char(5) NOT NULL)  
+(Region_id INT NOT NULL,  
+Region_Name CHAR(5) NOT NULL)  
 WITH (DISTRIBUTION = REPLICATE);  
 GO  
 ```  
@@ -175,7 +176,7 @@ GO
 ### <a name="c-setting-the-owner-of-a-schema"></a>C. 設定結構描述的擁有者  
  下列範例會建立由 `Mary` 擁有的 `Production` 結構描述。  
   
-```  
+```sql  
 CREATE SCHEMA Production AUTHORIZATION [Contoso\Mary];  
 GO  
 ```  

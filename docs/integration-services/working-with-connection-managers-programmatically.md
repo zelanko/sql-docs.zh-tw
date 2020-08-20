@@ -1,4 +1,5 @@
 ---
+description: 以程式設計方式使用連接管理員
 title: 以程式設計方式使用連線管理員 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 14318e122888c4baa89a3919c08456545690cfa0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cf6262e6ec178514db6741d5ed53963ef2a1bfce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922272"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456860"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>以程式設計方式使用連接管理員
 
@@ -65,7 +66,7 @@ ms.locfileid: "86922272"
 |MULTIFILE|多個檔案連接管理員|**System.String**|其中一個檔案的路徑。|  
 |MULTIFLATFILE|多個一般檔案連接管理員|**System.String**|其中一個檔案的路徑。|  
 |SMOServer|SMO 連線管理員|**Microsoft.SqlServer.Management.Smo.Server**||  
-|SMTP|SMTP 連接管理員|**System.String**|例如： `SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
+|SMTP|SMTP 連接管理員|**System.String**|例如：`SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
 |WMI|WMI 連接管理員|**System.Management.ManagementScope**||  
 |SQLMOBILE|SQL Server Compact 連接管理員|**System.Data.SqlServerCe.SqlCeConnection**||  
   

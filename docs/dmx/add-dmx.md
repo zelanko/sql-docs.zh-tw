@@ -1,5 +1,6 @@
 ---
-title: + 載入（DMX） |Microsoft Docs
+description: '+  (新增)  (DMX) '
+title: +  (新增)  (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 63fe6414d6f1df9f3855c01e0e7f03f523fe3a36
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 36f87ddf567462401f59456093bcfa345cd300be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971926"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457910"
 ---
 # <a name="-add-dmx"></a>+ (加) (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -38,8 +39,8 @@ Numeric_Expression + Numeric_Expression
  兩個運算式的資料類型必須相同，或者其中一個運算式必須可以用隱含方式轉換為另一個運算式的資料類型。 如果一個運算式評估為 Null 值，則運算子會傳回其他運算式的結果。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;DMX&#41;的算術運算子](../dmx/operators-arithmetic.md)   
- [DMX&#41; Operator Reference &#40;的資料採礦延伸模組](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [DMX&#41;&#40;的運算子](../dmx/operators-dmx.md)  
+ [&#40;DMX&#41;的算術運算子 ](../dmx/operators-arithmetic.md)   
+ [資料採礦延伸模組 &#40;DMX&#41; 運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [DMX &#40;的運算子&#41;](../dmx/operators-dmx.md)  
   
   

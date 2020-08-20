@@ -1,4 +1,5 @@
 ---
+description: 系統管理功能區域 (主資料管理員)
 title: 系統管理功能區域
 ms.custom: ''
 ms.date: 04/01/2016
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4254e825-d76a-4daf-961f-087b961644a7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a43fa563892d1c48941c016e661f52e899989daf
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 7a9061ad704647aeb94282ab18e0fcb18377a4cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813214"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456717"
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>系統管理功能區域 (主資料管理員)
 
@@ -23,7 +24,7 @@ ms.locfileid: "85813214"
 
   在 [系統管理] 功能區域中，管理員可以建立模型及其所有物件， 也可以建立商務規則，並建立及部署模型封裝。 如需管理員的詳細資訊，請參閱[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
-## <a name="model"></a>型號  
+## <a name="model"></a>模型  
  [模型 &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)  
   
  [建立模型 &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)  

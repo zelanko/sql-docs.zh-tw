@@ -1,4 +1,5 @@
 ---
+description: 監視資料層應用程式
 title: 監視資料層應用程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5a07244e6f34dc8b6ec645bb31517e739b32265d
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: d485d827f94c3ed9fe8e30fa48fd978aca6971a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406121"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456507"
 ---
 # <a name="monitor-data-tier-applications"></a>監視資料層應用程式
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

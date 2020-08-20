@@ -1,4 +1,5 @@
 ---
+description: 幾何例項上擴充的方法
 title: 幾何執行個體上擴充的方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6472c5e1-d37f-4919-a903-177e90cbfe1b
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 3904de5f819db856ceaa7a3bf8b8e62882f5d92c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d3f649a84cc33cf134174edde1d6669fc8148517
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85700333"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458990"
 ---
 # <a name="extended-methods-on-geometry-instances"></a>幾何例項上擴充的方法
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

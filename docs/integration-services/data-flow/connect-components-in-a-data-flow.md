@@ -1,4 +1,5 @@
 ---
+description: 連接資料流程中的元件
 title: 連接資料流程中的元件 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0a2a700b9c2729f72d719ec5537c815daddd3518
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 97eb8da20c9a2f2d51606fee0d8505c0a298d05a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923584"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457406"
 ---
 # <a name="connect-components-in-a-data-flow"></a>連接資料流程中的元件
 

@@ -1,4 +1,5 @@
 ---
+description: 刪除主索引鍵
 title: 刪除主索引鍵 | Microsoft 文件
 ms.custom: ''
 ms.date: 07/25/2017
@@ -15,12 +16,12 @@ ms.assetid: c472e465-7bdd-4d74-8fc9-e47fca007ccb
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7465a183241211fe4372eea0c57f93f3cfe0aa49
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e281a418dc6bfc1ebf9ca1920564f22a9ff2f306
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002086"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460237"
 ---
 # <a name="delete-primary-keys"></a>刪除主索引鍵
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "86002086"
   
 -   **若要使用下列項目來刪除主索引鍵：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -50,22 +51,22 @@ ms.locfileid: "86002086"
   
 #### <a name="to-delete-a-primary-key-constraint-using-object-explorer"></a>若要使用物件總管來刪除主索引鍵條件約束  
   
-1.  在 [物件總管] 中，展開包含主索引鍵的資料表，然後展開 **[索引鍵]** 。  
+1.  在 [物件總管] 中，展開包含主索引鍵的資料表，然後展開 **[索引鍵]**。  
   
-2.  以滑鼠右鍵按一下索引鍵，然後選取 [刪除]  。  
+2.  以滑鼠右鍵按一下索引鍵，然後選取 [刪除]****。  
   
-3.  在 **[刪除物件]** 對話方塊中，確認指定了正確的索引鍵，然後按一下 **[確定]** 。  
+3.  在 **[刪除物件]** 對話方塊中，確認指定了正確的索引鍵，然後按一下 **[確定]**。  
   
 #### <a name="to-delete-a-primary-key-constraint-using-table-designer"></a>若要使用資料表設計工具來刪除主索引鍵條件約束  
   
-1.  在物件總管中，以滑鼠右鍵按一下含有主索引鍵的資料表，然後按一下 [設計]  。  
+1.  在物件總管中，以滑鼠右鍵按一下含有主索引鍵的資料表，然後按一下 [設計]****。  
   
-2.  在資料表方格中，以滑鼠右鍵按一下包含主索引鍵的資料列，然後選擇 [移除主索引鍵]  關閉設定。  
+2.  在資料表方格中，以滑鼠右鍵按一下包含主索引鍵的資料列，然後選擇 [移除主索引鍵]**** 關閉設定。  
   
     > [!NOTE]  
     >  若要恢復此一動作，可將資料表關閉而不儲存變更。 如果恢復刪除主索引鍵的動作，將會遺失所有對資料表進行的其他變更。  
   
-3.  在 [檔案]  功能表上，按一下 [儲存「資料表名稱」]。  
+3.  在 [檔案] **** 功能表上，按一下 [儲存「資料表名稱」__]****。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

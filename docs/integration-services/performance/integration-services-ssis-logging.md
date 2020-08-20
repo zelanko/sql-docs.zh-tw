@@ -1,4 +1,5 @@
 ---
+description: Integration Services (SSIS) 記錄
 title: Integration Services (SSIS) 記錄 | Microsoft Docs
 ms.custom: supportability
 ms.date: 03/14/2017
@@ -29,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ba8e26a75af5508e2fe18390e92fda3aea73c648
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cee8ccf62e9ec8a6497d3515e85b7aeff8f0b479
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918338"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457124"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) 記錄
 

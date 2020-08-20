@@ -1,4 +1,5 @@
 ---
+description: CREATE RULE (Transact-SQL)
 title: CREATE RULE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -29,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 72029c32440feac5d69e015a060d92bd204ec4f6
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 2615c5d5d75191067d64d7c562f50b330dfdc830
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392876"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458761"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,7 +78,7 @@ AS condition_expression
 ## <a name="remarks"></a>備註  
  CREATE RULE 無法在單一批次中，與其他 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式結合起來。 規則不適用於建立規則時已在資料庫中的資料，規則無法繫結到系統資料類型。  
   
- 規則只能建立在目前資料庫中。 建立好規則之後，請執行 **sp_bindrule**，將規則繫結到資料行或別名資料類型。 規則必須相容於資料行資料類型。 例如， "\@value LIKE A%" 不能用來作為數值資料行的規則。 規則無法繫結到 **text**、**ntext** **image**、**varchar (max)** 、**nvarchar(max)** 、**varbinary(max)** 、**xml**、CLR 使用者定義型別或 **timestamp** 資料行。 規則無法繫結到計算資料行。  
+ 規則只能建立在目前資料庫中。 建立好規則之後，請執行 **sp_bindrule**，將規則繫結到資料行或別名資料類型。 規則必須相容於資料行資料類型。 例如， "\@value LIKE A%" 不能用來作為數值資料行的規則。 規則無法繫結到 **text**、**ntext****image**、**varchar (max)**、**nvarchar(max)**、**varbinary(max)**、**xml**、CLR 使用者定義型別或 **timestamp** 資料行。 規則無法繫結到計算資料行。  
   
  請用單引號 (') 括住字元和日期常數，二進位常數前面要附加 0x。 如果規則與所繫結的資料行不相容，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會在插入值時 (而不是繫結規則時)，傳回一則錯誤訊息。  
   

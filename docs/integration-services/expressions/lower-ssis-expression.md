@@ -1,4 +1,5 @@
 ---
+description: LOWER (SSIS 運算式)
 title: LOWER (SSIS 運算式) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 109328e1-5604-40ff-895e-f2e7c13fff41
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d8c595260f6611fde605e24922ce1877674dc822
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fccd74824087b5b57eeaee5a091e94123e0b0f5e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86908160"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457220"
 ---
 # <a name="lower-ssis-expression"></a>LOWER (SSIS 運算式)
 

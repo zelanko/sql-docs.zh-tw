@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_17300
 title: MSSQLSERVER_17300 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d6bfb6-28af-4df6-8087-25807602d282
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: aa8cfb7b04e082beaa57cc790b4afb89f169f3a7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 23055c336c2cad273ba58b8a3bb061b93af3a80b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85780774"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456450"
 ---
 # <a name="mssqlserver_17300"></a>MSSQLSERVER_17300
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

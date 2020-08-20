@@ -1,4 +1,5 @@
 ---
+description: 核准或拒絕變更集 (Master Data Services)
 title: 核准或拒絕變更集
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 45bd01f9-ae15-4fc5-a2ba-eee565a26ef8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c0d7e090350fdaae094c8365d28a4e058bdfa62e
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 42b3b6ae849313a00111ceda1fb19eda334c0278
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812809"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456806"
 ---
 # <a name="approve-or-reject-a-changeset-master-data-services"></a>核准或拒絕變更集 (Master Data Services)
 
@@ -23,7 +24,7 @@ ms.locfileid: "85812809"
 
   變更集是對主要資料所做的暫止變更集合。 如果實體變更需要系統管理員核准，而且已提交變更集進行核准，您可以檢閱，然後再核准或拒絕變更集。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
   
 -   您必須擁有存取 [ **Explorer** ] 功能區域的許可權。 如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
   

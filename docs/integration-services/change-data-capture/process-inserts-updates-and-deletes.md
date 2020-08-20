@@ -1,4 +1,5 @@
 ---
+description: 處理插入、更新與刪除
 title: 處理插入、更新與刪除 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 940e3e9d4ab622ee9913eee4a0c62356542ed8d6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2f4fddbdaa770c79008d4c4c1cd481a0c6c6eeb2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921727"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457664"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>處理插入、更新與刪除
 
@@ -71,7 +72,7 @@ select
 ## <a name="next-step"></a>後續步驟  
  分割要處理的資料列後，下一個步驟是將變更套用到目的地。  
   
- **下一個主題：** [將變更套用到目的地](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
+ **下一個主題︰** [將變更套用到目的地](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Conditional Split Transformation](../../integration-services/data-flow/transformations/conditional-split-transformation.md)   

@@ -1,4 +1,5 @@
 ---
+description: CDC 來源自訂屬性
 title: CDC 來源自訂屬性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 744e9357-94a9-4202-abe8-1d3d202697e9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 187e05e82f3f7452a1a4d542188ab9e96073adac
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 05315d64b3edfdc994141f6480f81960af39ed01
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915468"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457429"
 ---
 # <a name="cdc-source-custom-properties"></a>CDC 來源自訂屬性
 

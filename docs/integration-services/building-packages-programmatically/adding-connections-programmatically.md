@@ -1,4 +1,5 @@
 ---
+description: 以程式設計方式加入連接
 title: 以程式設計方式新增連線 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7240ac7e24b2b9b6ca697809b3d06dc0da3d055f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 571037e357f6d4d99a0e1f0139c72bb2a8645be5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916109"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457838"
 ---
 # <a name="adding-connections-programmatically"></a>以程式設計方式加入連接
 

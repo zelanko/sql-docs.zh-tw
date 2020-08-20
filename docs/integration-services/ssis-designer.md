@@ -1,4 +1,5 @@
 ---
+description: SSIS 設計師
 title: SSIS 設計師 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/31/2016
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c4941e8bfbb47a5d4d4e7139a6c761483dec7ad8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c3306032f1ee69b99a2b7fd3c080003a93644ac3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921935"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457001"
 ---
 # <a name="ssis-designer"></a>SSIS 設計師
 

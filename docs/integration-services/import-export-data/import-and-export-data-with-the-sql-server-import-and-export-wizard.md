@@ -1,4 +1,5 @@
 ---
+description: 使用 SQL Server 匯入和匯出精靈來匯入或匯出資料
 title: 使用 SQL Server 匯入和匯出精靈來匯入和匯出資料 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/17/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 40ea51fdaaadc7d6a3d9505e2f972c9f26a78471
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cdb761ce5ea9b0a64b21880ef2945c0ff85876ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86909524"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457174"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>使用 SQL Server 匯入和匯出精靈來匯入或匯出資料
 
@@ -65,9 +66,9 @@ ms.locfileid: "86909524"
 -   [連線至 Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)
 -   [連線至 Access](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)
 -   [連線至 Azure Blob 儲存體](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)
--   [使用 ODBC 連線](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)
--   [連線至 PostgreSQL](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)
--   [連線至 MySQL](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)
+-   [與 ODBC 連線](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)
+-   [連線到 PostgreSQL](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)
+-   [連線到 MySQL](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)
 
 
 如需如何連線至此處未列出之資料來源的資訊，請參閱 [The Connection Strings Reference](https://www.connectionstrings.com/) (連接字串參考)。 此第三方網站包含範例連接字串，以及資料提供者及其所需連線資訊的更多資訊。
@@ -96,7 +97,7 @@ ms.locfileid: "86909524"
 
 如需 SSIS 的詳細資訊，請參閱 [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)。
 
-## <a name="whats-next"></a>下一步  
+## <a name="whats-next"></a>接下來要做什麼？  
  啟動精靈。 如需詳細資訊，請參閱 [啟動 SQL Server 匯入和匯出精靈](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)。  
 
 ## <a name="see-also"></a>另請參閱

@@ -1,4 +1,5 @@
 ---
+description: Integration Services 轉換
 title: Integration Services 轉換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ff200828c1204d15f648ec783fe720d86ac22dd1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1952a15280f2e1779ddc0c53828dd0801acb3827
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919244"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457260"
 ---
 # <a name="integration-services-transformations"></a>Integration Services 轉換
 

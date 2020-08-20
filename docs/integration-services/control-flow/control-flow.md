@@ -1,4 +1,5 @@
 ---
+description: 控制流程
 title: 控制流程 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 789a0f51697c1a605a2c5e0b08f98ccc87d78b1d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c483cab97fe4eb218ef1e823f53ed4cb6a7fd5f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915786"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457567"
 ---
 # <a name="control-flow"></a>控制流程
 
@@ -67,10 +68,10 @@ ms.locfileid: "86915786"
   
 ## <a name="related-tasks"></a>相關工作  
   
--   [在控制流程中新增或刪除工作或容器](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+-   [在控制流程中加入或刪除工作或容器](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 -   [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
--   [建立或取消元件的群組](../../integration-services/group-or-ungroup-components.md)  
+-   [將元件分組或取消分組](../../integration-services/group-or-ungroup-components.md)  
   
   

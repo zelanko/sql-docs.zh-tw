@@ -1,4 +1,5 @@
 ---
+description: 設定參數值對話方塊
 title: 設定參數值對話方塊 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ce9c2201-4e9a-4495-948f-b68deeaa7955
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a157124ed1167ecafa977de573cfdca8d275281f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f75e25778f7a38f0f096a0929286be2a3fd8ba26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922571"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457739"
 ---
 # <a name="set-parameter-value-dialog-box"></a>設定參數值對話方塊
 
@@ -40,7 +41,7 @@ ms.locfileid: "86922571"
   
 3.  展開 **[SSISDB]** 節點。  
   
-4.  以滑鼠右鍵按一下封裝或專案，再按一下 [設定]  ，然後按一下 [參數]  索引標籤或 [連線管理員]  索引標籤中的省略符號按鈕。  
+4.  以滑鼠右鍵按一下封裝或專案，再按一下 [設定]****，然後按一下 [參數]**** 索引標籤或 [連線管理員]**** 索引標籤中的省略符號按鈕。  
   
 ##  <a name="configure-the-options"></a><a name="option"></a> 設定選項  
  **參數**  

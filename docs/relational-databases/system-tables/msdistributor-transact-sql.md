@@ -1,5 +1,6 @@
 ---
-title: MSdistributor （Transact-sql） |Microsoft Docs
+description: MSdistributor (Transact-SQL)
+title: MSdistributor (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,22 +18,22 @@ helpviewer_keywords:
 ms.assetid: 981e9903-0b4b-4508-ac6d-2ee4c813a3d0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 79e27a2f5aad4a8b3bba722d0e6cedebaa5a4c60
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7086cae782cb002244466a6de56a9e8bb73827d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889959"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460355"
 ---
 # <a name="msdistributor-transact-sql"></a>MSdistributor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSdistributor**資料表包含散發者屬性。 此資料表會儲存在**msdb**資料庫中。  
+  **MSdistributor**資料表包含散發者屬性。 此資料表儲存在 **msdb** 資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**property**|**sysname**|屬性的名稱|  
-|**value**|**Nvarchar （3000）**|屬性的值|  
+|**value**|**Nvarchar (3000) **|屬性的值|  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

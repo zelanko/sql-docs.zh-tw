@@ -1,4 +1,5 @@
 ---
+description: 將旗標指派給版本 (Master Data Services)
 title: 將旗標指派給版本
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6629ec7e-32e7-4a1e-8b31-eb43c5923766
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 90ffe973c15df9d17eb1080f0e6b681791485681
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: add695750bb5caae36f5c5e6cf0d605709976730
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85814014"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456788"
 ---
 # <a name="assign-a-flag-to-a-version-master-data-services"></a>將旗標指派給版本 (Master Data Services)
 
@@ -29,12 +30,12 @@ ms.locfileid: "85814014"
 > [!NOTE]  
 >  版本旗標一次只能指派給一個版本。 如果指派的旗標已指派給另一個版本，該旗標會移至選取的版本。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[版本管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 -   您必須已建立要指派的版本旗標。 如需詳細資訊，請參閱 [建立版本旗標 &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)(管理員 (Master Data Services))。  
   
@@ -54,7 +55,7 @@ ms.locfileid: "85814014"
 4.  按下 ENTER 鍵儲存變更。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立 &#40;Master Data Services 的版本旗標&#41;](../master-data-services/create-a-version-flag-master-data-services.md)   
+ [&#40;Master Data Services 建立版本旗標&#41;](../master-data-services/create-a-version-flag-master-data-services.md)   
  [版本 &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
   

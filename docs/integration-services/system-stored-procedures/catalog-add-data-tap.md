@@ -1,4 +1,5 @@
 ---
+description: catalog.add_data_tap
 title: catalog.add_data_tap | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: a25ebcc7-535e-4619-adf6-4e2b5a62ba37
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cb4ede46fbff3d647ef57214a779335b256819c4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7a55ac708f7cd7c7573a116e984efdd031b04b65
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915045"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456980"
 ---
 # <a name="catalogadd_data_tap"></a>catalog.add_data_tap 
 

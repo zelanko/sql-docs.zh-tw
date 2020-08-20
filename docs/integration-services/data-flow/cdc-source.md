@@ -1,4 +1,5 @@
 ---
+description: CDC 來源
 title: CDC 來源 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ f1_keywords:
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 397936fb2bd6314c83460b233a59ef6e72e113d7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 86e5bfae7baa757b2655e63470be427ea46bebed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915470"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457418"
 ---
 # <a name="cdc-source"></a>CDC 來源
 

@@ -1,4 +1,5 @@
 ---
+description: 訂閱檢視格式 (Master Data Services)
 title: 訂閱檢視格式
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: dc0fc6dad3771b051859130f13a9b0f3bab54389
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: ac58c9c1edfce6b02f48c31e220d37d842b18527
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812313"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456730"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>訂閱檢視格式 (Master Data Services)
 
@@ -43,7 +44,7 @@ ms.locfileid: "85812313"
 |**衍生層級 (衍生階層檢視)**|包含層級格式的衍生階層結構。|  
   
 ## <a name="see-also"></a>另請參閱  
- [總覽：匯出資料 &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
+ [總覽：將資料匯出 &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
  [建立訂閱檢視以匯出資料 &#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
   
   
