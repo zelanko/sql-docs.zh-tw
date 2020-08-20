@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_5120
 title: MSSQLSERVER_5120
 ms.custom: ''
 ms.date: 07/25/2020
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: PijoCoder
 ms.author: mathoma
-ms.openlocfilehash: eab5970a6dd7e8fa136621a28d1f697461b33712
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 756fba8fdec761d149240cf00ca0229fd816d80f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246569"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487027"
 ---
 # <a name="mssqlserver_5120"></a>MSSQLSERVER_5120
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: 建立資料品質專案
 title: 建立資料品質專案
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 33e719fb9db8f51df9b79569df778429e3051984
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 62dd18cb55aa57b95ab325b3e48d1ec618bd75c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900464"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487952"
 ---
 # <a name="create-a-data-quality-project"></a>建立資料品質專案
 
@@ -37,7 +38,7 @@ ms.locfileid: "85900464"
 ####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 或 dqs_kb_operator 角色，才能建立資料品質專案。  
   
-##  <a name="create-a-data-quality-project"></a><a name="Create"></a>建立資料品質專案  
+##  <a name="create-a-data-quality-project"></a><a name="Create"></a> 建立資料品質專案  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -59,7 +60,7 @@ ms.locfileid: "85900464"
   
 4.  按一下 **[建立]** ，建立資料品質專案。  
   
-##  <a name="follow-up-after-creating-a-data-quality-project"></a><a name="FollowUp"></a>後續操作：建立資料品質專案之後  
+##  <a name="follow-up-after-creating-a-data-quality-project"></a><a name="FollowUp"></a> 後續操作：建立資料品質專案之後  
  建立資料品質專案之後，系統會顯示可用來執行選取活動的精靈：清理或比對。 如需清理和比對活動的詳細資訊，請參閱[資料清理](../data-quality-services/data-cleansing.md)和[資料比對](../data-quality-services/data-matching.md)。  
   
   

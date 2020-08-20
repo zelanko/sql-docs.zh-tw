@@ -1,5 +1,6 @@
 ---
-title: sys.databases sp_cdc_help_jobs （Transact-sql） |Microsoft Docs
+description: sys.sp_cdc_help_jobs (Transact-SQL)
+title: sys. sp_cdc_help_jobs (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9399b4bc-8293-408f-b3cb-f904e0657fb5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0e5f1bc891a9ed3ce41d2b692d94995fc8ff0909
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 884d9f9b6e0cf60268d0d980f1141fee627e5a19
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891073"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485526"
 ---
 # <a name="syssp_cdc_help_jobs-transact-sql"></a>sys.sp_cdc_help_jobs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,23 +42,23 @@ sys.sp_cdc_help_jobs
 ```  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="result-sets"></a>結果集  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|作業的識別碼。|  
-|**job_type**|**Nvarchar （20）**|作業類型。|  
-|**maxtrans**|**int**|每個掃描循環中要處理的交易數目上限。<br /><br /> **maxtrans**只對 capture 作業有效。|  
-|**maxscans**|**int**|要執行以便從記錄中擷取所有資料列的掃描循環數目上限。<br /><br /> **maxscans**只對 capture 作業有效。|  
-|**系列**|**bit**|旗標，指出擷取作業是連續執行 (1)，還是僅執行一次 (0)。 如需詳細資訊，請參閱[sp_cdc_add_job &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)。<br /><br /> 「**連續**」只對「捕獲」作業有效。|  
-|**pollinginterval**|**bigint**|記錄掃描循環之間的秒數。<br /><br /> **pollinginterval**只對 capture 作業有效。|  
-|**保存**|**bigint**|變更資料列要保留在變更資料表中的分鐘數。<br /><br /> **保留**僅適用于清除作業。|  
+|**job_type**|**Nvarchar (20) **|作業類型。|  
+|**>maxtrans**|**int**|每個掃描循環中要處理的交易數目上限。<br /><br /> **>maxtrans** 僅適用于 capture 工作。|  
+|**maxscans**|**int**|要執行以便從記錄中擷取所有資料列的掃描循環數目上限。<br /><br /> **maxscans** 僅適用于 capture 工作。|  
+|**連續**|**bit**|旗標，指出擷取作業是連續執行 (1)，還是僅執行一次 (0)。 如需詳細資訊，請參閱 [sys. sp_cdc_add_job &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)。<br /><br /> 「**連續**」只對「捕獲」作業有效。|  
+|**pollinginterval**|**bigint**|記錄掃描循環之間的秒數。<br /><br /> **pollinginterval** 僅適用于 capture 工作。|  
+|**保留**|**bigint**|變更資料列要保留在變更資料表中的分鐘數。<br /><br /> **保留** 僅適用于清除作業。|  
 |**threshold**|**bigint**|可以使用單一清除陳述式來刪除的最大刪除項目數。|  
   
 ## <a name="permissions"></a>權限  
- 需要**db_owner**固定資料庫角色中的成員資格。  
+ 需要 **db_owner** 固定資料庫角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
  下列範例會傳回針對 `AdventureWorks2012` 資料庫所定義之擷取和清除作業的相關資訊。  

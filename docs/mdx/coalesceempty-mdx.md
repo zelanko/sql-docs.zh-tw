@@ -1,5 +1,6 @@
 ---
-title: CoalesceEmpty （MDX） |Microsoft Docs
+description: CoalesceEmpty (MDX)
+title: CoalesceEmpty (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f760220b02396591e684a83305111e487908d19b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4fd02400d6b560e1cc0b21908b788a257f56b26c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006299"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487581"
 ---
 # <a name="coalesceempty-mdx"></a>CoalesceEmpty (MDX)
 
@@ -45,16 +46,16 @@ CoalesceEmpty(String_Expression1 [ ,String_Expression2,...n] )
  有效的字串運算式，一般是用來替代第一個字串運算式所傳回之 NULL 的指定字串值。  
   
 ## <a name="remarks"></a>備註  
- 如果指定了一個或多個數值運算式， **CoalesceEmpty**函數會傳回可解析為非空白值之第一個數值運算式的數值（由左至右）。 如果指定的數值運算式都無法解析成非空白值，那麼此函數會傳回空白資料格的值。 一般說來，第二個數值運算式的值是用來替代第一個數值運算式所傳回之 NULL 的數值。  
+ 如果指定了一或多個數值運算式， **CoalesceEmpty** 函式會傳回第一個數值運算式的數值 (從左至右的) ，可解析為非空白值。 如果指定的數值運算式都無法解析成非空白值，那麼此函數會傳回空白資料格的值。 一般說來，第二個數值運算式的值是用來替代第一個數值運算式所傳回之 NULL 的數值。  
   
  如果指定了一個或多個字串運算式，此函數會傳回能解析為非空白值之第一個字串運算式的字串值 (從左到右)。 如果指定的字串運算式都無法解析成非空白值，那麼此函數會傳回空白資料格的值。 一般說來，第二個字串運算式的值是用來替代第一個字串運算式所傳回之 NULL 的字串值。  
   
- **CoalesceEmpty**函數只能接受相同類型的值。 換句話說，所有指定的值運算式只能評估為數值資料類型或空白資料格的值，否則所有指定的值運算式必須評估為字串資料類型或空白資料格的值。 單次呼叫此函數無法包含數值與字串運算式。  
+ **CoalesceEmpty**函數只能採用相同型別的值。 換句話說，所有指定的值運算式只能評估為數值資料類型或空白資料格的值，否則所有指定的值運算式必須評估為字串資料類型或空白資料格的值。 單次呼叫此函數無法包含數值與字串運算式。  
   
  如需有關空的資料格的詳細資訊，請參閱 OLE DB 文件集。  
   
 ## <a name="example"></a>範例  
- 下列範例會查詢「**艾德工作**」 cube。 此範例會傳回每個產品的訂單數量，以及按類別計算的訂單數量百分比。 **CoalesceEmpty**函數可確保在格式化匯出成員時，null 值會表示為零（0）。  
+ 下列範例會查詢「 **艾德作品** 」 cube。 此範例會傳回每個產品的訂單數量，以及按類別計算的訂單數量百分比。 **CoalesceEmpty**函數可確保在格式化匯出成員時，null 值會以零 (0) 表示。  
   
 ```  
 WITH   

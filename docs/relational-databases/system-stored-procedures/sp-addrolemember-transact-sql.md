@@ -1,4 +1,5 @@
 ---
+description: sp_addrolemember (Transact-SQL)
 title: sp_addrolemember (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/30/2019
@@ -18,12 +19,12 @@ ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f00b2446595835cb4ff556c34d58a3dd04b448a8
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 59193e08c71a7827e347be5b06bbe4cc81ffa826
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180093"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486332"
 ---
 # <a name="sp_addrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "88180093"
   在目前資料庫的資料庫角色中，加入資料庫使用者、資料庫角色、Windows 登入或 Windows 群組。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]請改用[ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) 。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用 [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) 。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,11 +43,11 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
 ```    
   
 ## <a name="arguments"></a>引數  
- [ @rolename =] '*角色*'  
- 這是目前資料庫中的資料庫角色名稱。 「*角色*」是一種**sysname**，沒有預設值。  
+ [ @rolename =] '*role*'  
+ 這是目前資料庫中的資料庫角色名稱。 *role* 是 **sysname**，沒有預設值。  
   
  [ @membername =] '*security_account*'  
- 這是加入角色的安全性帳戶。 *security_account*是**sysname**，沒有預設值。 *security_account*可以是資料庫使用者、資料庫角色、windows 登入或 windows 群組。  
+ 這是加入角色的安全性帳戶。 *security_account* 是 **sysname**，沒有預設值。 *security_account* 可以是資料庫使用者、資料庫角色、windows 登入或 windows 群組。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -58,7 +59,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
   
  sp_addrolemember 無法將固定資料庫角色、固定伺服器角色或 dbo 加入至角色。
   
- 您只能使用 sp_addrolemember 將成員加入資料庫角色中。 若要將成員加入至伺服器角色，請使用[sp_addsrvrolemember &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)。  
+ 您只能使用 sp_addrolemember 將成員加入資料庫角色中。 若要將成員加入至伺服器角色，請使用 [sp_addsrvrolemember &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)。  
   
 ## <a name="permissions"></a>權限  
  將成員加入彈性資料庫角色中需要下列其中一項：  
@@ -67,14 +68,14 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
   
 -   擁有此角色之角色中的成員資格。  
   
--   **ALTER ANY role**許可權或 Role 的**alter**許可權。  
+-   **ALTER ANY role** 許可權或 Role 的 **alter** 許可權。  
   
  將成員加入固定資料庫角色需要 db_owner 固定資料庫角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-adding-a-windows-login"></a>A. 加入 Windows 登入  
- 下列範例會將 Windows 登入加入 `Contoso\Mary5` 至 `AdventureWorks2012` 資料庫，做為使用者 `Mary5` 。 然後會將 `Mary5` 使用者加入到 `Production` 角色。  
+ 下列範例會將 Windows 登入 `Contoso\Mary5` `AdventureWorks2012` 做為使用者加入至資料庫 `Mary5` 。 然後會將 `Mary5` 使用者加入到 `Production` 角色。  
   
 > [!NOTE]  
 >  由於 `Contoso\Mary5` 也稱為 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中的資料庫使用者 `Mary5`，因此必須指定 `Mary5` 使用者名稱。 除非 `Contoso\Mary5` 登入存在，否則此陳述式會失敗。 請從您的網域使用登入來測試。  
@@ -96,10 +97,10 @@ EXEC sp_addrolemember 'Production', 'Mary5';
 ## <a name="examples-sspdw"></a>範例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-adding-a-windows-login"></a>C. 加入 Windows 登入  
- 下列範例會將登入新增 `LoginMary` 至 `AdventureWorks2008R2` 資料庫做為使用者 `UserMary` 。 然後會將 `UserMary` 使用者加入到 `Production` 角色。  
+ 下列範例會將登入加入 `LoginMary` 至 `AdventureWorks2008R2` 資料庫做為使用者 `UserMary` 。 然後會將 `UserMary` 使用者加入到 `Production` 角色。  
   
 > [!NOTE]  
->  因為登 `LoginMary` 入稱為資料庫中的資料庫使用者 `UserMary` ，所以 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] `UserMary` 必須指定使用者名稱。 除非 `Mary5` 登入存在，否則此陳述式會失敗。 登入和使用者通常具有相同的名稱。 這個範例會使用不同的名稱來區分影響登入與使用者的動作。  
+>  因為登 `LoginMary` 入在資料庫中稱為資料庫使用者 `UserMary` ，所以 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] `UserMary` 必須指定使用者名稱。 除非 `Mary5` 登入存在，否則此陳述式會失敗。 登入和使用者的名稱通常相同。 此範例會使用不同的名稱來區分影響登入與使用者的動作。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -117,11 +118,11 @@ EXEC sp_addrolemember 'Production', 'UserMary'
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的安全性預存程式](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的安全性預存程式 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addsrvrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
  [sp_droprolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_grantdbaccess &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
- [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [資料庫層級角色](../../relational-databases/security/authentication-access/database-level-roles.md)  
   
   

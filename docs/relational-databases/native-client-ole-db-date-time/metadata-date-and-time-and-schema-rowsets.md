@@ -1,5 +1,6 @@
 ---
-title: 日期和時間與架構資料列集
+description: 中繼資料-SQL Server Native Client 中的日期和時間和架構資料列集
+title: 日期和時間和架構資料列集
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -13,14 +14,14 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2b6ca8c13930da79d47f103f7eaa00185e64ca2
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f3aa326a76a752ac7e85bd852051663f46b8c4a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245803"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486716"
 ---
-# <a name="metadata---date-and-time-and-schema-rowsets-in-sql-server-native-client"></a>中繼資料-SQL Server Native Client 中的日期和時間與架構資料列集
+# <a name="metadata---date-and-time-and-schema-rowsets-in-sql-server-native-client"></a>中繼資料-SQL Server Native Client 中的日期和時間和架構資料列集
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   本主題提供有關 COLUMNS 資料列集和 PROCEDURE_PARAMETERS 資料列集的資訊。 這項資訊與 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中引進的 OLE DB 日期和時間增強功能相關。  
@@ -30,12 +31,12 @@ ms.locfileid: "87245803"
   
 |資料行類型|DATA_TYPE|COLUMN_FLAGS、DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
-|date|DBTYPE_DBDATE|清除|0|  
-|time|DBTYPE_DBTIME2|設定|0..7|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|清除|0|  
-|Datetime|DBTYPE_DBTIMESTAMP|清除|3|  
-|datetime2|DBTYPE_DBTIMESTAMP|設定|0..7|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|設定|0..7|  
+|date|DBTYPE_DBDATE|Clear|0|  
+|time|DBTYPE_DBTIME2|Set|0..7|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|Clear|0|  
+|Datetime|DBTYPE_DBTIMESTAMP|Clear|3|  
+|datetime2|DBTYPE_DBTIMESTAMP|Set|0..7|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Set|0..7|  
   
  在 COLUMN_FLAGS 中，DBCOLUMNFLAGS_ISFIXEDLENGTH 對 date/time 類型永遠為 true，而且下列旗標永遠為 false：  
   
@@ -77,7 +78,7 @@ ms.locfileid: "87245803"
 |CREATE_PARAMS|NULL|級別|NULL|NULL|級別|級別|  
 |IS_NULLABLE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
 |CASE_SENSITIVE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|可搜尋|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|  
+|SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|  
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  

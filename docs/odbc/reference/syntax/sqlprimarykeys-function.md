@@ -1,4 +1,5 @@
 ---
+description: SQLPrimaryKeys 函數
 title: SQLPrimaryKeys 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 3f809b09-3c1b-415e-80c5-a603e8e25d5b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 24407670ab9f1489a14bec19d910060b49d4bda0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8907b72704e148529a76a91f4c47592fc8d5b887
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306863"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487172"
 ---
 # <a name="sqlprimarykeys-function"></a>SQLPrimaryKeys 函數
-**標準**  
+**一致性**  
  引進的版本： ODBC 1.0 標準合規性： ODBC  
   
- **摘要**  
- **SQLPrimaryKeys**會傳回構成資料表主要索引鍵的資料行名稱。 驅動程式會以結果集的形式傳回信息。 此函式不支援在單一呼叫中傳回多個資料表的主鍵。  
+ **總結**  
+ **SQLPrimaryKeys** 會傳回組成資料表之主鍵的資料行名稱。 驅動程式會以結果集的形式傳回信息。 在單一呼叫中，此函式不支援從多個資料表傳回主要索引鍵。  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,88 +50,88 @@ SQLRETURN SQLPrimaryKeys(
   
 ## <a name="arguments"></a>引數  
  *StatementHandle*  
- 源語句控制碼。  
+ 輸出語句控制碼。  
   
  *CatalogName*  
- 源目錄名稱。 如果驅動程式支援某些資料表的目錄，但不適用於其他資料表，例如當驅動程式從不同的 Dbms 抓取資料時，空字串（""）代表沒有目錄的資料表。 *CatalogName*不能包含字串搜尋模式。  
+ 輸出目錄名稱。 如果驅動程式支援某些資料表的目錄，但不支援其他資料表的目錄（例如，當驅動程式從不同 Dbms 抓取資料時），則空字串 ( "" ) 表示這些資料表沒有目錄。 *CatalogName* 不能包含字串搜尋模式。  
   
- 如果 SQL_ATTR_METADATA_ID 語句屬性設定為 SQL_TRUE，則會將*CatalogName*視為識別碼，而且其大小寫不重要。 如果 SQL_FALSE，則*CatalogName*是一般引數;它會以字面方式處理，而且其大小寫很重要。 如需詳細資訊，請參閱[目錄函數中的引數](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)。  
+ 如果 SQL_ATTR_METADATA_ID 語句屬性設定為 SQL_TRUE， *CatalogName* 會被視為識別碼，而其大小寫並不重要。 如果 SQL_FALSE， *CatalogName* 是一般的引數;它是以真正的方式處理，而其大小寫相當重要。 如需詳細資訊，請參閱 [目錄函數中的引數](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)。  
   
  *NameLength1*  
- 源**CatalogName*的長度（以字元為單位）。  
+ 輸出**CatalogName*的長度（以字元為單位）。  
   
  *SchemaName*  
- 源架構名稱。 如果驅動程式支援某些資料表的架構，但不適用於其他資料表，例如當驅動程式從不同的 Dbms 抓取資料時，空字串（""）代表沒有架構的資料表。 *SchemaName*不能包含字串搜尋模式。  
+ 輸出架構名稱。 如果驅動程式支援某些資料表的架構，但不支援其他資料表的架構（例如，當驅動程式從不同 Dbms 抓取資料時），則空字串 ( "" ) 表示那些沒有架構的資料表。 *SchemaName* 不能包含字串搜尋模式。  
   
- 如果 SQL_ATTR_METADATA_ID 語句屬性設定為 SQL_TRUE，則會將*SchemaName*視為識別碼，而且其大小寫不重要。 如果 SQL_FALSE，則*SchemaName*是一般引數;它會以字面方式處理，而且其大小寫並不重要。  
+ 如果 SQL_ATTR_METADATA_ID 語句屬性設定為 SQL_TRUE， *SchemaName* 會被視為識別碼，而其大小寫並不重要。 如果 SQL_FALSE， *SchemaName* 是一般的引數;它是以字面方式處理，而其大小寫並不重要。  
   
  *NameLength2*  
- 源**SchemaName*的長度（以字元為單位）。  
+ 輸出**SchemaName*的長度（以字元為單位）。  
   
- *TableName*  
- 源資料表名稱。 這個引數不可以是 null 指標。 *TableName*不能包含字串搜尋模式。  
+ *名*  
+ 輸出資料表名稱。 這個引數不可以是 null 指標。 *TableName* 不能包含字串搜尋模式。  
   
- 如果 SQL_ATTR_METADATA_ID 語句屬性設定為 SQL_TRUE，會將*TableName*視為識別碼，而且其大小寫不重要。 如果 SQL_FALSE， *TableName*就是一般引數;它會以字面方式處理，而且其大小寫並不重要。  
+ 如果 SQL_ATTR_METADATA_ID 語句屬性設定為 SQL_TRUE， *TableName* 會被視為識別碼，而其大小寫並不重要。 如果 SQL_FALSE， *TableName* 就是一般的引數;它是以字面方式處理，而其大小寫並不重要。  
   
  *NameLength3*  
- 源**TableName*的長度（以字元為單位）。  
+ 輸出**TableName*的長度（以字元為單位）。  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR 或 SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診斷  
- 當**SQLPrimaryKeys**傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 時，可以藉由呼叫具有 SQL_HANDLE_STMT *HandleType*和*StatementHandle**控制碼*的**SQLGetDiagRec**來取得相關聯的 SQLSTATE 值。 下表列出**SQLPrimaryKeys**常傳回的 SQLSTATE 值，並在此函式的內容中說明每一個值;「（DM）」標記法優先于驅動程式管理員所傳回之 SQLSTATEs 的描述。 除非另有說明，否則，與每個 SQLSTATE 值相關聯的傳回碼都是 SQL_ERROR。  
+ 當**SQLPrimaryKeys**傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 時，可以藉由呼叫**SQLGetDiagRec**和*HandleType* （SQL_HANDLE_STMT）和*StatementHandle*的*控制碼*來取得相關聯的 SQLSTATE 值。 下表列出 **SQLPrimaryKeys** 常傳回的 SQLSTATE 值，並在此函式的內容中說明每一個值;「 (DM) 」標記法優先于驅動程式管理員所傳回的 SQLSTATEs 描述。 除非另有說明，否則會 SQL_ERROR 與每個 SQLSTATE 值相關聯的傳回碼。  
   
 |SQLSTATE|錯誤|描述|  
 |--------------|-----------|-----------------|  
-|01000|一般警告|驅動程式特定的參考用訊息。 （函數會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|08S01|通訊連結失敗|在函式完成處理之前，驅動程式連線到驅動程式的資料來源之間的通訊連結失敗。|  
-|24000|指標狀態無效|（DM）已在*StatementHandle*上開啟資料指標，且已呼叫**SQLFetch**或**SQLFetchScroll** 。<br /><br /> 已在*StatementHandle*上開啟資料指標，但尚未呼叫**SQLFetch**或**SQLFetchScroll** 。|  
-|40001|序列化失敗|因為另一筆交易發生資源鎖死，所以交易已回復。|  
-|40003|語句完成不明|此函式執行期間相關聯的連接失敗，無法判斷交易的狀態。|  
-|HY000|一般錯誤|發生錯誤，但沒有任何特定 SQLSTATE，且未定義任何執行特定的 SQLSTATE。 MessageText 緩衝區中的**SQLGetDiagRec**所傳回的錯誤訊息描述錯誤及其原因。 * \* *|  
-|HY001|記憶體配置錯誤|驅動程式無法配置支援執行或完成函數所需的記憶體。|  
-|HY008|已取消作業|已啟用*StatementHandle*的非同步處理。 已呼叫函式，在完成執行之前，會在*StatementHandle*上呼叫**SQLCancel**或**SQLCancelHandle** 。 然後在*StatementHandle*上再次呼叫函式。<br /><br /> 已呼叫函式，並在完成執行之前，從多執行緒應用程式中的不同執行緒在*StatementHandle*上呼叫**SQLCancel**或**SQLCancelHandle** 。|  
-|HY009|Null 指標的使用不正確|（DM） *TableName*引數為 null 指標。<br /><br /> SQL_ATTR_METADATA_ID 語句屬性已設定為 SQL_TRUE、 *CatalogName*引數為 null 指標，而 SQL_CATALOG_NAME 資訊類型的**SQLGetInfo**傳回支援的目錄名稱。<br /><br /> （DM） SQL_ATTR_METADATA_ID 語句屬性已設定為 SQL_TRUE，而*SchemaName*引數為 null 指標。|  
-|HY010|函數順序錯誤|（DM）已針對與*StatementHandle*相關聯的連接控制碼呼叫以非同步方式執行的函式。 呼叫**SQLPrimaryKeys**函數時，這個非同步函式仍在執行中。<br /><br /> （DM）已針對*StatementHandle*呼叫**SQLExecute**、 **SQLExecDirect**或**SQLMoreResults** ，並 SQL_PARAM_DATA_AVAILABLE 傳回。 在抓取所有資料流程參數的資料之前，會呼叫這個函式。<br /><br /> （DM）已針對*StatementHandle*呼叫非同步執行的函式（而非這個函式），而且在呼叫這個函數時仍在執行中。<br /><br /> （DM）已針對*StatementHandle*呼叫**SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**或**SQLSetPos** ，並傳回 SQL_NEED_DATA。 在傳送資料給所有資料執行中參數或資料行之前，已呼叫此函數。|  
-|HY013|記憶體管理錯誤|無法處理函數呼叫，因為無法存取基礎記憶體物件，可能是因為記憶體不足的狀況。|  
-|HY090|不正確字串或緩衝區長度|（DM）其中一個名稱長度引數的值小於0，但不等於 SQL_NTS，且相關聯的名稱引數不是 null 指標。<br /><br /> 其中一個 name length 引數的值超過對應名稱的最大長度值。|  
-|HY117|連接因未知的交易狀態而暫停。 僅允許中斷連線和唯讀功能。|（DM）如需暫停狀態的詳細資訊，請參閱[SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)函式。|  
-|HYC00|未執行的選擇性功能|已指定目錄，而驅動程式或資料來源不支援目錄。<br /><br /> 已指定架構，而驅動程式或資料來源不支援架構。<br /><br /> 驅動程式或資料來源不支援 SQL_ATTR_CONCURRENCY 和 SQL_ATTR_CURSOR_TYPE 語句屬性的目前設定組合。<br /><br /> SQL_ATTR_USE_BOOKMARKS 語句屬性已設定為 SQL_UB_VARIABLE，而 SQL_ATTR_CURSOR_TYPE 語句屬性已設定為驅動程式不支援書簽的資料指標類型。|  
-|HYT00|已超過逾時的設定|在資料來源傳回要求的結果集之前，超時期間已過期。 超時期間是透過**SQLSetStmtAttr**設定，SQL_ATTR_QUERY_TIMEOUT。|  
-|HYT01|連接逾時已過期|在資料來源回應要求之前，連接逾時時間已過期。 連接逾時時間是透過**SQLSetConnectAttr**設定，SQL_ATTR_CONNECTION_TIMEOUT。|  
-|IM001|驅動程式不支援此功能|（DM）與*StatementHandle*相關聯的驅動程式不支援此功能。|  
+|01000|一般警告|驅動程式特定的告知性訊息。  (函數會傳回 SQL_SUCCESS_WITH_INFO。 ) |  
+|08S01|通訊連結失敗|在函式完成處理之前，驅動程式與連接驅動程式的資料來源之間的通訊連結失敗。|  
+|24000|指標狀態無效| (DM) 在 *StatementHandle*上開啟資料指標，且已呼叫 **SQLFetch** 或 **SQLFetchScroll** 。<br /><br /> 在 *StatementHandle*上開啟了資料指標，但尚未呼叫 **SQLFetch** 或 **SQLFetchScroll** 。|  
+|40001|序列化失敗|因為另一個交易發生資源鎖死，所以已回復交易。|  
+|40003|語句完成不明|在此函數執行期間，相關聯的連接失敗，而且無法判斷交易的狀態。|  
+|HY000|一般錯誤|發生未定義特定 SQLSTATE 的錯誤，且未定義任何執行特定的 SQLSTATE。 **SQLGetDiagRec**在* \* MessageText*緩衝區中傳回的錯誤訊息會描述錯誤及其原因。|  
+|HY001|記憶體配置錯誤|驅動程式無法配置支援執行或完成函式所需的記憶體。|  
+|HY008|已取消作業|*StatementHandle*已啟用非同步處理。 呼叫函式，並在完成執行之前，在*StatementHandle*上呼叫**SQLCancel**或**SQLCancelHandle** 。 然後在 *StatementHandle*上再次呼叫該函式。<br /><br /> 呼叫函式，並在完成執行之前，從多執行緒應用程式中的不同執行緒在*StatementHandle*上呼叫**SQLCancel**或**SQLCancelHandle** 。|  
+|HY009|Null 指標的用法無效| (DM) *TableName* 引數為 null 指標。<br /><br /> SQL_ATTR_METADATA_ID 語句屬性已設定為 SQL_TRUE、 *CatalogName* 引數為 null 指標，且具有 SQL_CATALOG_NAME 資訊類型的 **SQLGetInfo** 會傳回支援的目錄名稱。<br /><br />  (DM) SQL_ATTR_METADATA_ID 語句屬性已設定為 SQL_TRUE，且 *SchemaName* 引數為 null 指標。|  
+|HY010|函數順序錯誤| (DM) 以非同步方式執行的函式，是與 *StatementHandle*相關聯的連接控制碼所呼叫。 呼叫 **SQLPrimaryKeys** 函式時，仍在執行此非同步函式。<br /><br /> 針對*StatementHandle*呼叫**SQLExecute**、 **SQLEXECDIRECT**或**SQLMoreResults** () DM，並傳回 SQL_PARAM_DATA_AVAILABLE。 在抓取所有資料流程參數的資料之前，會呼叫此函數。<br /><br />  (DM) 以非同步方式執行的函式 (不是針對 *StatementHandle* 呼叫這個) ，而且在呼叫此函式時仍在執行。<br /><br /> 針對*StatementHandle*呼叫 (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**或**SQLSetPos** ，並傳回 SQL_NEED_DATA。 在傳送所有資料執行中參數或資料行的資料之前，會呼叫此函數。|  
+|HY013|記憶體管理錯誤|無法處理函式呼叫，因為無法存取基礎記憶體物件，可能是因為記憶體不足的情況。|  
+|HY090|不正確字串或緩衝區長度| (DM) 其中一個名稱長度引數的值小於0，但不等於 SQL_NTS，而關聯的名稱引數不是 null 指標。<br /><br /> 其中一個名稱長度引數的值超過對應名稱的最大長度值。|  
+|HY117|由於未知的交易狀態，連接已暫止。 只允許中斷連接和唯讀功能。| (DM) 如需暫停狀態的詳細資訊，請參閱 [SQLEndTran 函數](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
+|HYC00|未執行選用功能|已指定目錄，且驅動程式或資料來源不支援目錄。<br /><br /> 指定了架構，而驅動程式或資料來源不支援架構。<br /><br /> 驅動程式或資料來源不支援 SQL_ATTR_CONCURRENCY 和 SQL_ATTR_CURSOR_TYPE 語句屬性的目前設定組合。<br /><br /> SQL_ATTR_USE_BOOKMARKS 語句屬性已設定為 SQL_UB_VARIABLE，而且 SQL_ATTR_CURSOR_TYPE 語句屬性已設定為驅動程式不支援書簽的資料指標類型。|  
+|HYT00|已超過逾時的設定|在資料來源傳回要求的結果集之前，已過期的超時時間。 Timeout 期限是透過 **SQLSetStmtAttr**、SQL_ATTR_QUERY_TIMEOUT 設定。|  
+|HYT01|連接逾時已過期|連接逾時期間已在資料來源回應要求之前過期。 連接逾時期間是透過 **SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT 設定。|  
+|IM001|驅動程式不支援此功能| (DM) 與 *StatementHandle* 相關聯的驅動程式不支援此功能。|  
 |IM017|非同步通知模式中的輪詢已停用|每當使用通知模型時，就會停用輪詢。|  
-|IM018|尚未呼叫**SQLCompleteAsync**來完成這個控制碼上先前的非同步作業。|如果控制碼上先前的函式呼叫傳回 SQL_STILL_EXECUTING 而且如果啟用通知模式，則必須在控制碼上呼叫**SQLCompleteAsync** ，才能執行後置處理並完成作業。|  
+|IM018|尚未呼叫**SQLCompleteAsync**來完成這個控制碼上先前的非同步作業。|如果控制碼上先前的函式呼叫傳回 SQL_STILL_EXECUTING，而且如果啟用了通知模式，則必須在控制碼上呼叫 **SQLCompleteAsync** ，以進行後置處理，並完成作業。|  
   
-## <a name="comments"></a>評價  
- **SQLPrimaryKeys**會以標準結果集的形式傳回結果，並依 TABLE_CAT、TABLE_SCHEM、TABLE_NAME 和 KEY_SEQ 排序。 如需如何使用這項資訊的詳細資訊，請參閱[目錄資料的使用](../../../odbc/reference/develop-app/uses-of-catalog-data.md)。  
+## <a name="comments"></a>註解  
+ **SQLPrimaryKeys** 會以 TABLE_CAT、TABLE_SCHEM、TABLE_NAME 和 KEY_SEQ 排序的標準結果集傳回結果。 如需有關如何使用這項資訊的詳細資訊，請參閱 [目錄資料的使用](../../../odbc/reference/develop-app/uses-of-catalog-data.md)。  
   
- ODBC 3 的下列資料行已經重新命名。*x*。 資料行名稱變更不會影響回溯相容性，因為應用程式會依資料行編號來系結。  
+ 下列資料行已經重新命名為 ODBC 3。*x*。 資料行名稱的變更不會影響回溯相容性，因為應用程式會依資料行編號進行系結。  
   
-|ODBC 2.0 資料行|ODBC 3。*x*資料行|  
+|ODBC 2.0 資料行|ODBC 3。*x* 資料行|  
 |---------------------|-----------------------|  
 |TABLE_QUALIFIER|TABLE_CAT|  
 |TABLE_OWNER|TABLE_SCHEM|  
   
- 若要判斷 TABLE_CAT、TABLE_SCHEM、TABLE_NAME 和 COLUMN_NAME 資料行的實際長度，請使用 SQL_MAX_CATALOG_NAME_LEN、SQL_MAX_SCHEMA_NAME_LEN、SQL_MAX_TABLE_NAME_LEN 和 SQL_MAX_COLUMN_NAME_LEN 選項來呼叫**SQLGetInfo** 。  
+ 若要判斷 TABLE_CAT、TABLE_SCHEM、TABLE_NAME 和 COLUMN_NAME 資料行的實際長度，請使用 SQL_MAX_CATALOG_NAME_LEN、SQL_MAX_SCHEMA_NAME_LEN、SQL_MAX_TABLE_NAME_LEN 和 SQL_MAX_COLUMN_NAME_LEN 選項來呼叫 **SQLGetInfo** 。  
   
 > [!NOTE]  
->  如需 ODBC 目錄函數的一般使用、引數和傳回資料的詳細資訊，請參閱[目錄函數](../../../odbc/reference/develop-app/catalog-functions.md)。  
+>  如需 ODBC 目錄函數的一般使用、引數和傳回資料的詳細資訊，請參閱 [目錄函數](../../../odbc/reference/develop-app/catalog-functions.md)。  
   
- 下表列出結果集中的資料行。 驅動程式可以定義超過資料行6（PK_NAME）的其他資料行。 應用程式應該從結果集的結尾向下計算，而不是指定明確的序數位置，藉以取得驅動程式特定資料行的存取權。 如需詳細資訊，請參閱[目錄函數所傳回的資料](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)。  
+ 下表列出結果集中的資料行。 除了資料行6以外的其他資料行 (PK_NAME) 可以由驅動程式定義。 應用程式應該從結果集的結尾算下，而不是指定明確的序數位置，藉以取得驅動程式特定資料行的存取權。 如需詳細資訊，請參閱 [目錄函數所傳回的資料](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)。  
   
-|資料行名稱|資料行編號|資料類型|評價|  
+|資料行名稱|資料行編號|資料類型|註解|  
 |-----------------|-------------------|---------------|--------------|  
-|TABLE_CAT （ODBC 1.0）|1|Varchar|主要索引鍵資料表目錄名稱;如果不適用於資料來源，則為 Null。 如果驅動程式支援某些資料表的目錄，但不適用於其他資料表，例如當驅動程式從不同的 Dbms 抓取資料時，它會針對沒有目錄的那些資料表傳回空字串（""）。|  
-|TABLE_SCHEM （ODBC 1.0）|2|Varchar|主鍵資料表架構名稱;如果不適用於資料來源，則為 Null。 如果驅動程式支援某些資料表的架構，但不適用於其他資料表，例如當驅動程式從不同的 Dbms 抓取資料時，它會針對沒有架構的資料表傳回空字串（""）。|  
-|TABLE_NAME （ODBC 1.0）|3|Varchar not Null|主要索引鍵資料表名稱。|  
-|COLUMN_NAME （ODBC 1.0）|4|Varchar not Null|主要索引鍵資料行名稱。 對於沒有名稱的資料行，驅動程式會傳回空字串。|  
-|KEY_SEQ （ODBC 1.0）|5|Smallint 非 NULL|索引鍵中的資料行序號（從1開始）。|  
-|PK_NAME （ODBC 2.0）|6|Varchar|主要金鑰名稱。 如果不適用於資料來源，則為 Null。|  
+|TABLE_CAT (ODBC 1.0) |1|Varchar|主鍵資料表目錄名稱;如果不適用於資料來源，則為 Null。 如果驅動程式支援某些資料表的目錄，但不支援其他資料表的目錄，例如當驅動程式從不同 Dbms 抓取資料時，它會針對沒有目錄的那些資料表傳回空字串 ( "" ) 。|  
+|TABLE_SCHEM (ODBC 1.0) |2|Varchar|主鍵資料表架構名稱;如果不適用於資料來源，則為 Null。 如果驅動程式支援某些資料表的架構，但不支援其他資料表的架構（例如，當驅動程式從不同 Dbms 抓取資料時），則會針對沒有架構的資料表傳回空字串 ( "" ) 。|  
+|TABLE_NAME (ODBC 1.0) |3|Varchar not Null|主鍵資料表名稱。|  
+|COLUMN_NAME (ODBC 1.0) |4|Varchar not Null|主要索引鍵資料行名稱。 驅動程式會針對沒有名稱的資料行傳回空字串。|  
+|KEY_SEQ (ODBC 1.0) |5|Smallint 非 NULL|從 1) 開始，索引鍵 (中的資料行序號。|  
+|PK_NAME (ODBC 2.0) |6|Varchar|主要索引鍵名稱。 如果不適用於資料來源，則為 Null。|  
   
 ## <a name="code-example"></a>程式碼範例  
- 請參閱[SQLForeignKeys](../../../odbc/reference/syntax/sqlforeignkeys-function.md)。  
+ 請參閱 [SQLForeignKeys](../../../odbc/reference/syntax/sqlforeignkeys-function.md)。  
   
 ## <a name="related-functions"></a>相關函數  
   
@@ -138,7 +139,7 @@ SQLRETURN SQLPrimaryKeys(
 |---------------------------|---------|  
 |將緩衝區系結至結果集內的資料行|[SQLBindCol 函數](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
 |取消語句處理|[SQLCancel 函式](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|提取資料區塊或透過結果集進行滾動|[SQLFetchScroll 函式](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
+|提取資料區塊或滾動整個結果集|[SQLFetchScroll 函式](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
 |以順向方向提取單一資料列或資料區塊|[SQLFetch 函式](../../../odbc/reference/syntax/sqlfetch-function.md)|  
 |傳回外鍵的資料行|[SQLForeignKeys 函數](../../../odbc/reference/syntax/sqlforeignkeys-function.md)|  
 |傳回資料表統計資料和索引|[SQLStatistics 函式](../../../odbc/reference/syntax/sqlstatistics-function.md)|  

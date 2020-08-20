@@ -1,5 +1,6 @@
 ---
-title: sp_syscollector_update_collection_set （Transact-sql） |Microsoft Docs
+description: sp_syscollector_update_collection_set (Transact-SQL)
+title: sp_syscollector_update_collection_set (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8ed9fe58317d1dbe1cb3de59b11f556bc96b1d9f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 00285e7f1e170a671cd38149098e485c90f710db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892823"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485671"
 ---
 # <a name="sp_syscollector_update_collection_set-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,37 +56,37 @@ sp_syscollector_update_collection_set
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @collection_set_id = ] collection_set_id`這是收集組的唯一本機識別碼。 *collection_set_id*是**int** ，而且如果*name*為 Null，則必須有值。  
+`[ @collection_set_id = ] collection_set_id` 這是收集組的唯一本機識別碼。 *collection_set_id* 為 **int** ，而且如果 *name* 為 Null，則必須具有值。  
   
-`[ @name = ] 'name'`這是收集組的名稱。 *name*是**sysname** ，如果*collection_set_id*是 Null，則必須有值。  
+`[ @name = ] 'name'` 這是收集組的名稱。 *名稱* 是 **sysname** ，而且如果 *collection_set_id* 為 Null，則必須有值。  
   
-`[ @new_name = ] 'new_name'`這是收集組的新名稱。 *new_name*是**sysname**，而且如果使用的話，不可以是空字串。 *new_name*必須是唯一的。 如需目前的收集組名稱清單，請查詢 syscollector_collection_sets 系統檢視表。  
+`[ @new_name = ] 'new_name'` 這是收集組的新名稱。 *new_name* 為 **sysname**，如果使用的話，不可以是空字串。 *new_name* 必須是唯一的。 如需目前的收集組名稱清單，請查詢 syscollector_collection_sets 系統檢視表。  
   
-`[ @target = ] 'target'`保留供日後使用。  
+`[ @target = ] 'target'` 保留供日後使用。  
   
-`[ @collection_mode = ] collection_mode`這是要使用之資料收集的類型。 *collection_mode*是**Smallint** ，而且可以有下列其中一個值：  
+`[ @collection_mode = ] collection_mode` 這是要使用之資料收集的型別。 *collection_mode* 是 **Smallint** ，而且可以有下列其中一個值：  
   
  0 - 快取模式。 資料收集和上傳會依照不同的排程。 指定連續收集的快取模式。  
   
  1 - 非快取模式。 資料收集和上傳位於相同的排程上。 針對特定收集或快照集收集指定非快取模式。  
   
- 如果是從非快取模式變更為快取模式（0），您也必須指定*schedule_uid*或*schedule_name*。  
+ 如果從非快取模式變更為快取模式 (0) ，您也必須指定 *schedule_uid* 或 *schedule_name*。  
   
-`[ @days_until_expiration = ] days_until_expiration`這是收集的資料儲存在管理資料倉儲中的天數。 *days_until_expiration*為**Smallint**。 *days_until_expiration*必須是0或正整數。  
+`[ @days_until_expiration = ] days_until_expiration` 這是收集的資料儲存在管理資料倉儲中的天數。 *days_until_expiration* 為 **Smallint**。 *days_until_expiration* 必須是0或正整數。  
   
-`[ @proxy_id = ] proxy_id`這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy 帳戶的唯一識別碼。 *proxy_id*為**int**。  
+`[ @proxy_id = ] proxy_id` 這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy 帳戶的唯一識別碼。 *proxy_id* 為 **int**。  
   
-`[ @proxy_name = ] 'proxy_name'`這是 proxy 的名稱。 *proxy_name*是**sysname**且可為 null。  
+`[ @proxy_name = ] 'proxy_name'` 這是 proxy 的名稱。 *proxy_name* 為 **sysname** ，且可為 null。  
   
-`[ @schedule_uid = ] 'schedule_uid'`這是指向排程的 GUID。 *schedule_uid*是**uniqueidentifier**。  
+`[ @schedule_uid = ] 'schedule_uid'` 這是指向排程的 GUID。 *schedule_uid* 為 **uniqueidentifier**。  
   
- 若要取得*schedule_uid*，請查詢 sysschedules 系統資料表。  
+ 若要取得 *schedule_uid*，請查詢 sysschedules 系統資料表。  
   
- 當*collection_mode*設定為0時，必須指定*schedule_uid*或*schedule_name* 。 當*collection_mode*設為1時， *schedule_uid*或*schedule_name*會在指定時予以忽略。  
+ 當 *collection_mode* 設定為0時，必須指定 *schedule_uid* 或 *schedule_name* 。 當 *collection_mode* 設定為1時，如果指定，就會忽略 *schedule_uid* 或 *schedule_name* 。  
   
-`[ @schedule_name = ] 'schedule_name'`這是排程的名稱。 *schedule_name*是**sysname**且可為 null。 如果指定， *schedule_uid*必須是 Null。 若要取得*schedule_name*，請查詢 sysschedules 系統資料表。  
+`[ @schedule_name = ] 'schedule_name'` 這是排程的名稱。 *schedule_name* 為 **sysname** ，且可為 null。 如果有指定， *schedule_uid* 必須是 Null。 若要取得 *schedule_name*，請查詢 sysschedules 系統資料表。  
   
-`[ @logging_level = ] logging_level`這是記錄層級。 *logging_level*是**Smallint**並具有下列其中一個值：  
+`[ @logging_level = ] logging_level` 這是記錄層級。 *logging_level* 是 **Smallint** ，具有下列其中一個值：  
   
  0 - 記錄執行資訊和追蹤的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 事件：  
   
@@ -107,17 +108,17 @@ sp_syscollector_update_collection_set
   
  *Logging_level*的預設值為1。  
   
-`[ @description = ] 'description'`這是收集組的描述。 *描述*為**Nvarchar （4000）**。  
+`[ @description = ] 'description'` 這是收集組的描述。 *描述* 是 **Nvarchar (4000) **。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
  sp_syscollector_update_collection_set 必須在 msdb 系統資料庫的內容中執行。  
   
  *Collection_set_id*或*名稱*都必須有值，兩者都不能是 Null。 若要取得這些值，請查詢 syscollector_collection_sets 系統檢視表。  
   
- 如果收集組正在執行，您只能更新*schedule_uid*和*描述*。 若要停止收集組，請使用[sp_syscollector_stop_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md)。  
+ 如果收集組正在執行，您只能更新 *schedule_uid* 和 *描述*。 若要停止收集組，請使用 [sp_syscollector_stop_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md)。  
   
 ## <a name="permissions"></a>權限  
  需要 dc_admin 或 dc_operator (具有 EXECUTE 權限) 固定資料庫角色中的成員資格，才能執行此程序。 雖然 dc_operator 可以執行此預存程序，但是這個角色的成員會受限於他們可以變更的屬性。 下列屬性只能由 dc_admin 變更：  
@@ -179,7 +180,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [資料收集](../../relational-databases/data-collection/data-collection.md)   
  [syscollector_collection_sets &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
  [dbo.sys排程 &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  

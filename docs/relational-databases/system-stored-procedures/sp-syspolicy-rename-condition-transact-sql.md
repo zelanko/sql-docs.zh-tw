@@ -1,5 +1,6 @@
 ---
-title: sp_syspolicy_rename_condition （Transact-sql） |Microsoft Docs
+description: sp_syspolicy_rename_condition (Transact-SQL)
+title: sp_syspolicy_rename_condition (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d9f3f9b1-701b-4fce-9b42-c282656caf84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 11f3abeff6d66e4a4a60c9e35d8eec0d742f753a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1df9ab11c50340b75d51481822f4a8925df34a51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892725"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485620"
 ---
 # <a name="sp_syspolicy_rename_condition-transact-sql"></a>sp_syspolicy_rename_condition (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,19 +41,19 @@ sp_syspolicy_rename_condition { [ @name = ] 'name' | [ @condition_id = ] conditi
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @name = ] 'name'`這是您想要重新命名的條件名稱。 *名稱*是**sysname**，而且如果*condition_id*是 Null，就必須指定。  
+`[ @name = ] 'name'` 這是您要重新命名的條件名稱。 *名稱* 是 **sysname**，而且如果 *condition_id* 為 Null，則必須指定。  
   
-`[ @condition_id = ] condition_id`這是您想要重新命名之條件的識別碼。 *condition_id*是**int**，而且如果*name*為 Null，就必須指定。  
+`[ @condition_id = ] condition_id` 這是您要重新命名之條件的識別碼。 *condition_id* 為 **int**，而且如果 *name* 為 Null，則必須指定。  
   
-`[ @new_name = ] 'new_name'`這是條件的新名稱。 *new_name*是**sysname**，而且是必要的。 不得為 NULL 或空字串。  
+`[ @new_name = ] 'new_name'` 這是條件的新名稱。 *new_name* 為 **sysname**，而且是必要的。 不得為 NULL 或空字串。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
  您必須在 msdb 系統資料庫的內容中執行 sp_syspolicy_rename_condition。  
   
- 您必須為 [*名稱*] 或 [ *condition_id*] 指定一個值。 兩者不得同時為 NULL。 若要取得這些值，請查詢 msdb.dbo.syspolicy_conditions 系統檢視表。  
+ 您必須指定 *name* 或 *condition_id*的值。 兩者不得同時為 NULL。 若要取得這些值，請查詢 msdb.dbo.syspolicy_conditions 系統檢視表。  
   
 ## <a name="permissions"></a>權限  
  需要 PolicyAdministratorRole 固定資料庫角色中的成員資格。  

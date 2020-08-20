@@ -1,4 +1,5 @@
 ---
+description: 從 Microsoft Excel 存取 Visual FoxPro 資料來源
 title: 從 Microsoft Excel 存取 Visual FoxPro 資料來源 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2c143020-0403-4592-80e0-84229f3d40be
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b4afaeebb5b3a0d2430eafc6febf98f2fb9c16bf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3ce4e3bf96a41918fff392117a2fbbd1b9eb47f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302072"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487571"
 ---
 # <a name="accessing-a-visual-foxpro-data-source-from-microsoft-excel"></a>從 Microsoft Excel 存取 Visual FoxPro 資料來源
 如果您已安裝 Microsoft Query，您可以在 Microsoft Excel 中建立連接到 Visual FoxPro 資料的資料來源。  
@@ -35,16 +36,16 @@ ms.locfileid: "81302072"
   
 4.  在 [ODBC 資料來源] 對話方塊中，按一下 [新增]。  
   
-5.  在 [新增資料來源] 對話方塊中，從 [已安裝的 ODBC 驅動程式] 清單方塊中選取 [Microsoft Visual FoxPro Driver]，然後按一下 [確定]。  
+5.  在 [加入資料來源] 對話方塊中，從 [已安裝的 ODBC 驅動程式] 清單方塊選取 [Microsoft Visual FoxPro 驅動程式]，然後按一下 [確定]。  
   
-6.  在 [ [ODBC Visual FoxPro 安裝程式] 對話方塊](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)中，輸入 [資料來源名稱]、選取 [資料庫類型]、輸入資料庫或目錄的路徑，然後按一下 [確定]。  
+6.  在 [ [ODBC Visual FoxPro 安裝程式] 對話方塊](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)中，輸入資料來源名稱、選取資料庫類型、輸入資料庫或目錄的路徑，然後按一下 [確定]。  
   
      新的資料來源名稱會顯示在 [ODBC 資料來源] 對話方塊的 [輸入資料來源] 文字方塊中。  
   
 7.  按一下 [確定]。  
   
-     新的資料來源名稱會在 [選取資料來源] 對話方塊的 [可用的資料來源] 文字方塊中選取。  
+     在 [選取資料來源] 對話方塊的 [可用的資料來源] 文字方塊中，會選取新的資料來源名稱。  
   
 8.  按一下 [使用]。  
   
- 您現在可以將資料表加入至開啟的查詢。 如需建立查詢的詳細資訊，請參閱[從 Visual FoxPro 資料庫將資料匯入 Microsoft Excel](../../odbc/microsoft/importing-data-into-microsoft-excel-from-a-visual-foxpro-database.md)。
+ 您現在可以將資料表加入至開啟的查詢。 如需建立查詢的詳細資訊，請參閱 [從 Visual FoxPro 資料庫將資料匯入 Microsoft Excel](../../odbc/microsoft/importing-data-into-microsoft-excel-from-a-visual-foxpro-database.md)。

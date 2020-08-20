@@ -1,5 +1,6 @@
 ---
-title: IBCPSession：： BCPControl (Native Client OLE DB 提供者) |Microsoft Docs
+description: 'IBCPSession：： BCPControl (Native Client OLE DB 提供者) '
+title: IBCPSession：： BCPControl (Native Client OLE DB provider) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: d58f3fe1-45e3-4e46-8e9c-000971829d99
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42f50ec668d61d9244f6f2ba413095fb1642a964
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: f90f55df46097416bc3f3b2c801d021ad0ee50ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87942063"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486711"
 ---
 # <a name="ibcpsessionbcpcontrol-native-client-ole-db-provider"></a>IBCPSession：： BCPControl (Native Client OLE DB 提供者) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +54,7 @@ HRESULT BCPControl(
 |BCP_OPTION_FILEFMT|資料檔案格式的版本號碼。 這個號碼可以是 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)])、90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)])、100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)])、110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 或 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])。 120 是預設值。 這個值在使用舊版伺服器支援的格式匯出和匯入資料時非常實用。  例如，若要將從 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 伺服器文字資料行所取得的資料匯入至 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更新伺服器的 **varchar(max)** 資料行中，您必須指定版本號碼為 80。 同樣地，當您從 **varchar(max)** 資料行匯出資料時，如果指定版本號碼為 80，則資料會以 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 格式加以儲存，就像儲存文字資料行的格式一樣，並可以匯入至 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 伺服器的文字資料行。|  
 |BCP_OPTION_FIRST|要複製的檔案或資料表的資料列。 預設值為 1，小於 1 的值會將這個選項重設為預設。|  
 |BCP_OPTION_FIRSTEX|如果是 BCP Out 作業，則指定將資料庫資料表第一個資料列複製到資料檔案中。<br /><br /> 如果是 BCP In 作業，則指定將資料檔案的第一個資料列複製到資料庫資料表中。<br /><br /> *iValue* 參數必須是包含值的 64 位元組帶正負號整數之位址。 可傳遞至 BCPFIRSTEX 的最大值為 2^63-1。|  
-|BCP_OPTION_FMTXML|用於指定所產生的格式檔案應該是 XML 格式。 根據預設，這個選項是關閉的，而且格式檔案會儲存為文字檔案。 XML 格式檔案提供更大的彈性，但是有一些條件約束。 例如，您不可以同時指定欄位的前置詞和結束字元，即使在更早版本中是可以這麼做的。<br /><br /> 注意：只有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝工具和 Native Client 時，才支援 XML 格式檔案 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|BCP_OPTION_FMTXML|用於指定所產生的格式檔案應該是 XML 格式。 根據預設，這個選項是關閉的，而且格式檔案會儲存為文字檔案。 XML 格式檔案提供更大的彈性，但是有一些條件約束。 例如，您不可以同時指定欄位的前置詞和結束字元，即使在更早版本中是可以這麼做的。<br /><br /> 注意：只有當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具與 Native Client 一起安裝時，才支援 XML 格式檔案 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |BCP_OPTION_HINTS|*iValue* 引數包含寬字元字串指標。 定址的字串會指定處理提示的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大量複製或傳回結果集的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式指定為傳回一個以上的結果集，則第一個結果集之後的所有結果集都會被忽略。|  
 |BCP_OPTION_KEEPIDENTITY|當 *iValue* 引數設定為 TRUE 時，這個選項會指定大量複製方法插入為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料行提供的資料值 (這些值是由識別條件約束所定義)。 輸入檔案必須提供識別資料行的值。 如果沒有設定，就會為插入的資料列產生新的識別值。 檔案中屬於識別欄位的所有資料都會被忽略。|  
 |BCP_OPTION_KEEPNULLS|指定檔案中的空資料值在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中是否會轉換為 NULL 值。 當 *iValue* 引數設定為 TRUE，空的值在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中會轉換為 NULL。 預設是將空的值轉換為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中資料行的預設值 (如果有預設值的話)。|  
@@ -76,7 +77,7 @@ HRESULT BCPControl(
  此方法已成功。  
   
  E_FAIL  
- 發生提供者特定的錯誤;如需詳細資訊，請使用[ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15)介面。  
+ 發生提供者特有的錯誤，如需詳細資訊，請使用 [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) 介面。  
   
  E_UNEXPECTED  
  此方法的呼叫是非預期的。 例如，在呼叫這個函數之前，不會呼叫 [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 方法。  

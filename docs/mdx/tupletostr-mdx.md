@@ -1,5 +1,6 @@
 ---
-title: TupleToStr （MDX） |Microsoft Docs
+description: TupleToStr (MDX)
+title: TupleToStr (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d6cde1f60274d1437517d89e48b111e9e7298b9d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 69e81156b26d4becb05390c8684b433584793697
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097368"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487621"
 ---
 # <a name="tupletostr-mdx"></a>TupleToStr (MDX)
 
 
-  傳回對應至指定之元組的多維度運算式（MDX）格式字串。  
+  傳回對應至指定之元組 (MDX) 格式字串的多維度運算式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,10 +33,10 @@ TupleToStr(Tuple_Expression)
  傳回 Tuple 的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- 這個函數是用來將 Tuple 的字串表示傳送至外部函數，以進行剖析。 傳回的字串會以大括弧{}括住，而每個成員（如果在元組中明確定義了一個以上）會以逗號分隔。  
+ 這個函數是用來將 Tuple 的字串表示傳送至外部函數，以進行剖析。 傳回的字串會以大括弧括住， {} 而且每個成員如果在元組中明確定義了一個以上的成員，則會以逗號分隔。  
   
 ## <a name="examples"></a>範例  
- 下列範例會傳回字串（[Date]. [行事歷年度]. & [2001]、[Geography]。[Geography]。[Country]. & [美國]）：  
+ 下列範例會傳回字串 ( [Date]。[行事歷年度]. & [2001]，[Geography]。[Geography]。[Country]. & [美國] ) ：  
   
 ```  
 WITH MEMBER Measures.x AS TupleToStr   

@@ -1,5 +1,6 @@
 ---
-title: sp_syspolicy_subscribe_to_policy_category （Transact-sql） |Microsoft Docs
+description: sp_syspolicy_subscribe_to_policy_category (Transact-SQL)
+title: sp_syspolicy_subscribe_to_policy_category (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: de88cc49-bcc8-4dc6-8e59-ad85cfbfb2fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b8c4ec221c0d122fa2397df7e9adbe6f1f3ef436
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: beadf9f07bb78abb750a1f94383b926e5be505ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891476"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485566"
 ---
 # <a name="sp_syspolicy_subscribe_to_policy_category-transact-sql"></a>sp_syspolicy_subscribe_to_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,12 +40,12 @@ sp_syspolicy_subscribe_to_policy_category [ @policy_category = ] 'policy_categor
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @policy_category = ] 'policy_category'`這是您想要讓資料庫訂閱的原則類別目錄名稱。 *policy_category*是**sysname**，而且是必要的。  
+`[ @policy_category = ] 'policy_category'` 這是您要讓資料庫訂閱的原則類別目錄名稱。 *policy_category* 為 **sysname**，而且是必要的。  
   
- 若要取得*policy_category*的值，請查詢 msdb.dbo.syspolicy_policy_categories 系統檢視。  
+ 若要取得 *policy_category*的值，請查詢 msdb.dbo.syspolicy_policy_categories 系統檢視。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
  您必須在您想要新增原則類別目錄訂閱的資料庫內容中執行 sp_syspolicy_subscribe_to_policy_category。  

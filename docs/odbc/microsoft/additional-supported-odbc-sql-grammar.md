@@ -1,4 +1,5 @@
 ---
+description: 其他支援的 ODBC SQL 文法
 title: 其他支援的 ODBC SQL 文法 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,27 +14,27 @@ helpviewer_keywords:
 ms.assetid: 2ead7727-3245-4c2b-91f5-ed946ef4edf5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d6ac9bd3a54e1f06f17bf6b92485ce5b9cc52882
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3081f287a1d580c2e3bced671cbfc40b15780241
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307129"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487561"
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>其他支援的 ODBC SQL 文法
-ODBC 驅動程式完全支援核心和擴充 ODBC 2.5 文法中的最小 ODBC 2.5 文法和下列子句。 藉由跳到[ALTER TABLE 語句](../../odbc/microsoft/alter-table-statement.md)、相互[關聯名稱](../../odbc/microsoft/correlation-names.md)和程式[調用](../../odbc/microsoft/procedure-invocation.md)主題，可以顯示其他資訊。  
+ODBC 驅動程式完全支援核心和延伸 ODBC 2.5 文法中的最小 ODBC 2.5 文法和下列子句。 您可以跳到 [ALTER TABLE 語句](../../odbc/microsoft/alter-table-statement.md)、相互 [關聯名稱](../../odbc/microsoft/correlation-names.md)和程式 [調用](../../odbc/microsoft/procedure-invocation.md) 的主題，以顯示其他資訊。  
   
--   近似數值常值（核心）  
+-    (核心) 的近似數值常值  
   
--   [ALTER TABLE 語句](../../odbc/microsoft/alter-table-statement.md)（Core）  
+-   [ALTER TABLE 語句](../../odbc/microsoft/alter-table-statement.md) (Core)   
   
--   二進位常值（擴充）  
+-    (擴充) 的二進位常值  
   
--   相互[關聯名稱](../../odbc/microsoft/correlation-names.md)（核心）  
+-   核心)  (的相互[關聯名稱](../../odbc/microsoft/correlation-names.md)  
   
--   [程序呼叫](../../odbc/microsoft/procedure-invocation.md)（擴充）  
+-   擴充)  (程式[調用](../../odbc/microsoft/procedure-invocation.md)  
   
--   [BETWEEN](../../odbc/microsoft/between-predicate.md)述詞（核心）  
+-   [BETWEEN](../../odbc/microsoft/between-predicate.md) 述詞 (Core)   
   
 -   [CREATE INDEX 語句](../../odbc/microsoft/create-index-statement.md)  
   
@@ -51,15 +52,15 @@ ODBC 驅動程式完全支援核心和擴充 ODBC 2.5 文法中的最小 ODBC 2.
   
 -   [含 GROUP BY 的 ORDER BY](../../odbc/microsoft/order-by-with-group-by.md)  
   
--   EXISTS 述詞（Core）  
+-   EXISTS 述詞 (Core)   
   
--   IN （*valuelist*）（核心）  
+-   在 (*valuelist*)  (Core)   
   
--   [Jet：外部聯結](../../odbc/microsoft/jet-outer-joins.md)（擴充）  
+-   [Jet：外部聯結](../../odbc/microsoft/jet-outer-joins.md) (擴充)   
   
--   SELECT 語句（Extended）（包括 GROUP BY、HAVING 和 UNION 子句）  
+-   SELECT 語句 (擴充)  (包括 GROUP BY、HAVING 和 UNION 子句)   
   
--   子查詢（子選擇）（核心）  
+-   子查詢 (子選擇)  (Core)   
   
 -   [純量函數](../../odbc/microsoft/scalar-functions.md)  
   

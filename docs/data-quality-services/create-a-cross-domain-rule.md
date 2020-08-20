@@ -1,4 +1,5 @@
 ---
+description: 建立跨定義域規則
 title: 建立跨定義域規則
 ms.date: 11/22/2011
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 3124e5d844e3b0e1adc2053b0d62bdb000591f9d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 96e56120e8573294ddc051932e2b629025cc76de
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900470"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487955"
 ---
 # <a name="create-a-cross-domain-rule"></a>建立跨定義域規則
 
@@ -90,7 +91,7 @@ ms.locfileid: "85900470"
   
     4.  再次按一下 **[加入定義域規則的新測試詞彙]** 圖示，加入另一組測試值。  
   
-    5.  按一下 [**對所有詞彙測試定義域規則**] 圖示。 如果某組測試值有效，DQS 就會在該資料列的 **[有效性]** 資料行中輸入核取記號。 如果某組測試值無效，DQS 就會在該資料列的 [有效性] 資料行中輸入含驚嘆號的三角形。  
+    5.  按一下 [ **對所有詞彙測試定義域規則** ] 圖示。 如果某組測試值有效，DQS 就會在該資料列的 **[有效性]** 資料行中輸入核取記號。 如果某組測試值無效，DQS 就會在該資料列的 [有效性] 資料行中輸入含驚嘆號的三角形。  
   
     6.  測試完成之後，請在 **[測試複合定義域規則]** 對話方塊中按一下 **[關閉]** 。  
   

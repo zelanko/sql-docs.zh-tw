@@ -1,4 +1,5 @@
 ---
+description: 資料表值參數描述項欄位
 title: 資料表值參數描述項欄位 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,11 +14,12 @@ ms.assetid: 4e009eff-c156-4d63-abcf-082ddd304de2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 868e99a34febf86f5750e374fb408e87134b8e85
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e5e8f06fc25aceda016398b414c895c349804008
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998348"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486745"
 ---
 # <a name="table-valued-parameter-descriptor-fields"></a>資料表值參數描述項欄位
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,9 +28,9 @@ ms.locfileid: "85998348"
   
 ## <a name="remarks"></a>備註  
   
-|名稱|Location|類型|描述|  
+|名稱|位置|類型|描述|  
 |----------|--------------|----------|-----------------|  
-|SQL_CA_SS_TYPE_NAME|IPD|SQLTCHAR *|資料表值參數的伺服器類型名稱。<br /><br /> 當資料表值參數類型名稱是在呼叫 SQLBindParameter 時指定時，一定要將它指定為 Unicode 值，即使在以 ANSI 應用程式形式建立的應用程式中也是如此。 參數*StrLen_or_IndPtr*所使用的值應該是 SQL_NTS 或名稱的字串長度乘以 SIZEOF （WCHAR）。<br /><br /> 透過 SQLSetDescField 指定資料表值參數類型名稱時，可以使用符合應用程式建立方式的常值來指定。 ODBC 驅動程式管理員將會執行所有必要的 Unicode 轉換。|  
+|SQL_CA_SS_TYPE_NAME|IPD|SQLTCHAR *|資料表值參數的伺服器類型名稱。<br /><br /> 在 SQLBindParameter 的呼叫上指定資料表值參數類型名稱時，必須一律將它指定為 Unicode 值，即使是在建立為 ANSI 應用程式的應用程式中也一樣。 用於參數 *StrLen_or_IndPtr* 的值應該是 SQL_NTS，或名稱的字串長度乘以 SIZEOF (WCHAR) 。<br /><br /> 當資料表值參數類型名稱是透過 SQLSetDescField 指定時，可以使用符合應用程式建立方式的常值來指定。 ODBC 驅動程式管理員將會執行所有必要的 Unicode 轉換。|  
 |SQL_CA_SS_TYPE_CATALOG_NAME (唯讀)|IPD|SQLTCHAR *|類型定義所在的目錄。|  
 |SQL_CA_SS_TYPE_SCHEMA_NAME|IPD|SQLTCHAR *|類型定義所在的結構描述。|  
   
@@ -36,10 +38,10 @@ ms.locfileid: "85998348"
   
  當參數焦點設定為資料表值參數時，資料表值參數適用下列的陳述式屬性和描述項標頭欄位：  
   
-|名稱|Location|類型|描述|  
+|名稱|位置|類型|描述|  
 |----------|--------------|----------|-----------------|  
-|SQL_ATTR_PARAMSET_SIZE<br /><br /> (這相當於在 APD 中的 SQL_DESC_ARRAY_SIZE)。|APD|SQLUINTEGER|資料表值參數的緩衝區陣列的陣列大小。 這是緩衝區可容納的最大資料列數目，或者以資料列表示的緩衝區大小；資料表值參數值本身的資料列可能多於或少於緩衝區所能保存的資料列。 預設值為 1。<br /><br /> 注意：如果 SQL_SOPT_SS_PARAM_FOCUS 設定為預設值0，SQL_ATTR_PARAMSET_SIZE 會參考語句並指定參數集的數目。 如果 SQL_SOPT_SS_PARAM_FOCUS 設定為資料表值參數的序數，則它會參考資料表值參數並針對資料表值參數而指定每個參數集的資料列數。|  
-|SQL_ATTR_PARAM _BIND_TYPE|APD|SQLINTEGER|預設值為 SQL_PARAM_BIND_BY_COLUMN。<br /><br /> 若要選取資料列繫結，這個欄位會設定為會繫結到資料表值參數資料列集之結構或緩衝區執行個體的長度。 這個長度會包含所有繫結資料行以及結構或緩衝區之任何填補的空間。 如此可確保在使用指定長度遞增繫結資料行的位址時，結果會指向下一個資料列中相同資料行的起始處。 在 ANSI C 中使用**sizeof**運算子時，會保證此行為。|  
+|SQL_ATTR_PARAMSET_SIZE<br /><br /> (這相當於在 APD 中的 SQL_DESC_ARRAY_SIZE)。|APD|SQLUINTEGER|資料表值參數的緩衝區陣列的陣列大小。 這是緩衝區可容納的最大資料列數目，或者以資料列表示的緩衝區大小；資料表值參數值本身的資料列可能多於或少於緩衝區所能保存的資料列。 預設值為 1。<br /><br /> 注意：如果 SQL_SOPT_SS_PARAM_FOCUS 設定為其預設值0，則 SQL_ATTR_PARAMSET_SIZE 會參考語句並指定參數集的數目。 如果 SQL_SOPT_SS_PARAM_FOCUS 設定為資料表值參數的序數，則它會參考資料表值參數並針對資料表值參數而指定每個參數集的資料列數。|  
+|SQL_ATTR_PARAM _BIND_TYPE|APD|SQLINTEGER|預設值為 SQL_PARAM_BIND_BY_COLUMN。<br /><br /> 若要選取資料列繫結，這個欄位會設定為會繫結到資料表值參數資料列集之結構或緩衝區執行個體的長度。 這個長度會包含所有繫結資料行以及結構或緩衝區之任何填補的空間。 如此可確保在使用指定長度遞增繫結資料行的位址時，結果會指向下一個資料列中相同資料行的起始處。 在 ANSI C 中使用 **sizeof** 運算子時，會保證此行為。|  
 |SQL_ATTR_PARAM_BIND_OFFSET_PTR|APD|SQLINTEGER*|預設值為 Null 指標。<br /><br /> 如果此欄位非 Null，則驅動程式會取消指標的參考、將取消參考的值加入至描述項記錄中的每個延遲欄位 (SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR)，然後使用新的指標值來存取資料值。|  
   
  這些欄位只有在使用資料表值參數時才有效，其他的資料類型會加以忽略。  
@@ -53,6 +55,6 @@ ms.locfileid: "85998348"
  SQL_CA_SS_TYPE_CATALOG_NAME 和 SQL_CA_SS_TYPE_SCHEMA_NAME 也可以用來擷取與 CLR 使用者定義型別參數相關聯的目錄和結構描述。 這些欄位是這些類型現有之類型特定目錄結構描述屬性的替代項目。  
   
 ## <a name="see-also"></a>另請參閱  
- [ODBC&#41;&#40;的資料表值參數](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [ODBC&#41;&#40;資料表值參數 ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

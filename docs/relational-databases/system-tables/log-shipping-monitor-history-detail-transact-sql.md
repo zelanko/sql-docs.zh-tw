@@ -1,5 +1,6 @@
 ---
-title: log_shipping_monitor_history_detail （Transact-sql） |Microsoft Docs
+description: log_shipping_monitor_history_detail (Transact-SQL)
+title: log_shipping_monitor_history_detail (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 7080c888-323b-4206-a1ab-e6c51f9e2579
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 30679d8123bf2f5f4339d53d52cadcc39cdd4542
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f4a3b6562d6b5b01ccf1bf40842dac404b1add1e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890167"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485498"
 ---
 # <a name="log_shipping_monitor_history_detail-transact-sql"></a>log_shipping_monitor_history_detail (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  儲存記錄傳送作業的記錄詳細資料。 此資料表會儲存在**msdb**資料庫中。  
+  儲存記錄傳送作業的記錄詳細資料。 此資料表儲存在 **msdb** 資料庫中。  
   
  主要伺服器和次要伺服器也會使用記錄和監視的相關資料表。  
   
@@ -43,9 +44,9 @@ ms.locfileid: "85890167"
 |**message**|**nvarchar(max)**|訊息文字。|  
   
 ## <a name="remarks"></a>備註  
- 這份資料表包含記錄傳送代理程式的記錄詳細資料。 若要識別代理程式會話，請使用**agent_id**、 **agent_type**和**session_id**的資料行。 若要查看代理程式會話的歷程記錄詳細資料，請依**log_time**排序。  
+ 這份資料表包含記錄傳送代理程式的記錄詳細資料。 若要識別代理程式會話，請使用 **agent_id**、 **agent_type**和 **session_id**資料行。 若要查看代理程式會話的歷程記錄詳細資料，請依 **log_time**排序。  
   
- 除了儲存在遠端監視伺服器之外，主伺服器的相關資訊也會儲存在主伺服器的**log_shipping_monitor_history_detail**資料表中，而次要伺服器的相關資訊也會儲存在次要伺服器的**log_shipping_monitor_history_detail**資料表中。  
+ 除了儲存在遠端監視伺服器之外，主伺服器的相關資訊也會儲存在主伺服器的 **log_shipping_monitor_history_detail** 資料表中，而次要伺服器的相關資訊也會儲存在次要伺服器的 **log_shipping_monitor_history_detail** 資料表中。  
   
 ## <a name="see-also"></a>另請參閱  
  [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
@@ -53,7 +54,7 @@ ms.locfileid: "85890167"
  [sp_cleanup_log_shipping_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
  [sp_refresh_log_shipping_monitor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
  [sp_delete_log_shipping_secondary_database &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
- [&#40;Transact-sql&#41;的系統資料表](../../relational-databases/system-tables/system-tables-transact-sql.md)   
+ [系統資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)   
  [log_shipping_monitor_error_detail &#40;Transact-sql&#41;](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)  
   
   

@@ -1,5 +1,6 @@
 ---
-title: sp_reinitmergepullsubscription （Transact-sql） |Microsoft Docs
+description: sp_reinitmergepullsubscription (Transact-SQL)
+title: sp_reinitmergepullsubscription (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 48464bc9-60aa-4886-b526-163f010102b8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5efb256d77a676cc394fb2731127deb17037a205
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d65bd7f5e6967bac665892de55566cf4d151144f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901428"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485757"
 ---
 # <a name="sp_reinitmergepullsubscription-transact-sql"></a>sp_reinitmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,19 +41,19 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publisher = ] 'publisher'`這是發行者的名稱。 *publisher*是**sysname**，預設值是 ALL。  
+`[ @publisher = ] 'publisher'` 這是發行者的名稱。 *publisher* 是 **sysname**，預設值是 ALL。  
   
-`[ @publisher_db = ] 'publisher_db'`這是發行者資料庫的名稱。 *publisher_db*是**sysname**，預設值是 ALL。  
+`[ @publisher_db = ] 'publisher_db'` 這是發行者資料庫的名稱。 *publisher_db* 是 **sysname**，預設值是 ALL。  
   
-`[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**，預設值是 ALL。  
+`[ @publication = ] 'publication'` 這是發行集的名稱。 *發行* 集是 **sysname**，預設值是 ALL。  
   
-`[ @upload_first = ] 'upload_first'`這是指在訂閱重新初始化之前，是否上傳訂閱者端的變更。 *upload_first*是**Nvarchar （5）**，預設值是 FALSE。 若**為 true**，則會在重新初始化訂閱之前，先上傳變更。 若**為 false**，則不會上傳變更。  
+`[ @upload_first = ] 'upload_first'` 這是指在訂閱重新初始化之前，是否上傳在訂閱者端進行的變更。 *upload_first* 是 **Nvarchar (5) **，預設值是 FALSE。 若 **為 true**，則會在訂閱重新初始化之前上傳變更。 如果 **為 false**，則不會上傳變更。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_reinitmergepullsubscription**用於合併式複寫中。  
+ **sp_reinitmergepullsubscription** 用於合併式複寫中。  
   
  如果您新增、卸除或變更參數化篩選，在重新初始化期間，便無法將訂閱者的暫止變更上傳到發行者。 如果您要上傳暫止變更，請在變更篩選之前，同步處理所有訂閱。  
   
@@ -63,7 +64,7 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
  [!code-sql[HowTo#sp_reinitmergepullsubwithupload](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergepullsubscr_2.sql)]  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_reinitmergepullsubscription**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色或 **db_owner** 固定資料庫角色的成員，才能夠執行 **sp_reinitmergepullsubscription**。  
   
 ## <a name="see-also"></a>另請參閱  
  [重新初始化訂閱](../../relational-databases/replication/reinitialize-a-subscription.md)   

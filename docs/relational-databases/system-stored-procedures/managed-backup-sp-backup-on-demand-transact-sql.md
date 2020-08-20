@@ -1,5 +1,6 @@
 ---
-title: managed_backup. sp_backup_on_demand （Transact-sql） |Microsoft Docs
+description: 'managed_backup sp_backup_on_demand (Transact-sql) '
+title: managed_backup sp_backup_on_demand (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,18 +21,19 @@ helpviewer_keywords:
 ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5b2ee41dcc94e0bc84b6a5347ba84609b73e3335
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 4357cc8cc214f610ef1f61c27dd8e05be3e3d56b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053511"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486291"
 ---
-# <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup. sp_backup_on_demand （Transact-sql）
+# <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup sp_backup_on_demand (Transact-sql) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   要求[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]執行指定資料庫的備份。  
   
- 使用此預存程序可執行以[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]設定之資料庫的隨選備份。 這可防止備份鏈和進程中的任何中斷， [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 並將備份儲存在相同的 Azure Blob 儲存體容器中。  
+ 使用此預存程序可執行以[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]設定之資料庫的隨選備份。 這可防止備份鏈和進程中的任何中斷， [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 且備份會儲存在相同的 Azure Blob 儲存體容器中。  
   
  成功完成備份時，會傳回完整備份檔案路徑。 此路徑包含備份作業所產生之新備份檔案的名稱和位置。  
   
@@ -47,12 +49,12 @@ EXEC managed_backup.sp_backup_on_demand
   
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>參量  
+##  <a name="arguments"></a><a name="Arguments"></a> 引數  
  @database_name  
- 執行備份所在之資料庫的名稱。 @database_name為**SYSNAME**。  
+ 執行備份所在之資料庫的名稱。 @database_name是**SYSNAME**。  
   
  @type  
- 要執行的備份類型：資料庫或記錄。 @type參數是**NVARCHAR （32）**。  
+ 要執行的備份類型：資料庫或記錄。 @type參數為**NVARCHAR (32) **。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

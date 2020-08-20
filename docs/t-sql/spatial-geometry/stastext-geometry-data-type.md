@@ -1,4 +1,5 @@
 ---
+description: STAsText (geometry 資料類型)
 title: STAsText (geometry 資料型別) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e0decf5e-2858-4c56-b61a-6123f47fb51c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: b2c16ad7d74d69f743708bbf95fdaf0d23f43e14
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: b04948983ca371a457f7908f48544a73a268ded5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554316"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488225"
 ---
 # <a name="stastext-geometry-data-type"></a>STAsText (geometry 資料類型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,5 +1,6 @@
 ---
-title: sp_replflush （Transact-sql） |Microsoft Docs
+description: sp_replflush (Transact-SQL)
+title: sp_replflush (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 20809f5f-941d-427f-8f0c-de7a6c487584
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eb038176fb0a2d81f2c643e9e21cc336c97d48ff
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 144bffdd6076b73c8b10fca3c7d9f878d77091d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725726"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485733"
 ---
 # <a name="sp_replflush-transact-sql"></a>sp_replflush (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "85725726"
   排清發行項快取。 這個預存程序執行於發行集資料庫的發行者端。  
   
 > [!IMPORTANT]  
->  您應該不需要手動執行這個程序。 **sp_replflush**只能用來針對複寫支援專業人員所導向的複寫進行疑難排解。  
+>  您應該不需要手動執行這個程序。 **sp_replflush** 只能用於疑難排解複寫的問題，如有經驗的複寫支援專業人員所導向。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,20 +41,20 @@ sp_replflush
 ```  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_replflush**用於異動複寫中。  
+ **sp_replflush** 用於異動複寫中。  
   
- 發行項定義儲存在快取中，以提高效率。 每當修改或卸載發行項定義時，其他複寫預存程式就會使用**sp_replflush** 。  
+ 發行項定義儲存在快取中，以提高效率。 每當修改或捨棄發行項定義時，其他複寫預存程式就會使用**sp_replflush** 。  
   
- 只有單一用戶端連接可以有對於給定資料庫的記錄讀取器存取權。 如果用戶端具有資料庫的記錄讀取器存取權，則執行**sp_replflush**會導致用戶端釋放其存取權。 然後，其他用戶端可以使用**sp_replcmds**或**sp_replshowcmds**來掃描交易記錄。  
+ 只有單一用戶端連接可以有對於給定資料庫的記錄讀取器存取權。 如果用戶端具有資料庫的記錄讀取器存取權，執行 **sp_replflush** 會導致用戶端釋放其存取權。 然後，其他用戶端就可以使用 **sp_replcmds** 或 **sp_replshowcmds**來掃描交易記錄。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_replflush**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色或 **db_owner** 固定資料庫角色的成員，才能夠執行 **sp_replflush**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_replcmds &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
+ [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
  [sp_repldone &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
  [sp_repltrans &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

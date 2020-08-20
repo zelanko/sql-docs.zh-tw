@@ -1,5 +1,6 @@
 ---
-title: sys.databases sp_cdc_enable_db （Transact-sql） |Microsoft Docs
+description: sys.sp_cdc_enable_db (Transact-SQL)
+title: sys. sp_cdc_enable_db (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98258dbee3e2afa59314e340b27661a816a48b0f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 810e39bf9c4ff4626bf957978a12d77df6e60d54
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891137"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485502"
 ---
 # <a name="syssp_cdc_enable_db-transact-sql"></a>sys.sp_cdc_enable_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,9 +53,9 @@ sys.sp_cdc_enable_db
  None  
   
 ## <a name="remarks"></a>備註  
- 無法在[系統資料庫](../../relational-databases/databases/system-databases.md)或散發資料庫上啟用變更資料捕獲。  
+ 無法在 [系統資料庫](../../relational-databases/databases/system-databases.md) 或散發資料庫上啟用變更資料捕獲。  
   
- sys.sp_cdc_enable_db 會建立具有整個資料庫範圍的異動資料擷取物件，包括中繼資料資料表和 DDL 觸發程序。 它也會建立 cdc 架構和 cdc 資料庫使用者，並將[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)目錄檢視中資料庫專案的 is_cdc_enabled 資料行設定為1。  
+ sys.sp_cdc_enable_db 會建立具有整個資料庫範圍的異動資料擷取物件，包括中繼資料資料表和 DDL 觸發程序。 它也會建立 cdc 架構和 cdc 資料庫使用者，並將 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中資料庫專案的 is_cdc_enabled 資料行設定為1。  
   
 ## <a name="permissions"></a>權限  
  需要系統管理員 (sysadmin) 固定伺服器角色中的成員資格。  
@@ -70,6 +71,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_cdc_disable_db &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)  
+ [sys. sp_cdc_disable_db &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)  
   
   

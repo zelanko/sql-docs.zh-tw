@@ -1,4 +1,5 @@
 ---
+description: dqs 管理
 title: dqs 管理
 ms.date: 10/01/2012
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 3ad4fb8f24ca51741c21fead975a1c745f661b87
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1874867b02aea521e44ff6ee0af4d8cfdfb57298
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888102"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487779"
 ---
 # <a name="dqs-administration"></a>dqs 管理
 
@@ -34,7 +35,7 @@ ms.locfileid: "85888102"
   
 -   讓 DQS 系統管理員從 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 監控 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]上的 DQS 活動，並 *終止* 正在執行的活動或 *停止* 活動中正在執行的程序 (如有需要)。  
   
--   設定參考資料服務設定，例如使用 Azure Marketplace 和管理直接協力廠商參考資料服務提供者的連線能力。  
+-   設定參考資料服務設定，例如設定與 Azure Marketplace 的連接，以及管理直接協力廠商參考資料服務提供者。  
   
 -   設定清理與比對活動的臨界值。  
   
@@ -42,7 +43,7 @@ ms.locfileid: "85888102"
   
 -   根據事件的嚴重性層級設定記錄。  
   
-##  <a name="administration-activities-by-using-data-quality-client"></a><a name="AdminUsingClent"></a>使用 Data Quality Client 的系統管理活動  
+##  <a name="administration-activities-by-using-data-quality-client"></a><a name="AdminUsingClent"></a> 使用 Data Quality Client 管理活動  
  這些活動是使用 **中的** [管理] [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]功能所執行。  
   
 ### <a name="activity-monitoring"></a>活動監控  
@@ -51,7 +52,7 @@ ms.locfileid: "85888102"
 ### <a name="configuration"></a>組態  
  **中的** [組態] [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 畫面可讓 DQS 系統管理員進行下列操作：  
   
--   **參考資料**：設定參考資料服務提供者： Azure Marketplace 或直接參考資料服務提供者。 設定參考資料服務提供者之後，您可以在知識庫中的定義域管理活動期間，對應具有參考資料的定義域/複合定義域，然後使用相同的知識庫，在資料品質專案中進行清理活動。 它也可讓您指定用來連線到網際網路的 proxy 設定，以使用 Azure Marketplace。  
+-   **參考資料**：設定參考資料服務提供者： Azure Marketplace 或直接參考資料服務提供者。 設定參考資料服務提供者之後，您可以在知識庫中的定義域管理活動期間，對應具有參考資料的定義域/複合定義域，然後使用相同的知識庫，在資料品質專案中進行清理活動。 它也可讓您指定用來連線到網際網路以使用 Azure Marketplace 的 proxy 設定。  
   
 -   **一般設定**：指定資料清理和資料比對的臨界值，以及是否在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]中啟用分析所使用的通知。 這些臨界值是由 DQS 在資料品質專案中，於電腦輔助的清理和比對活動期間所使用。  
   
@@ -60,7 +61,7 @@ ms.locfileid: "85888102"
 > [!NOTE]  
 >  **[組態]** 畫面僅適用於擁有 DQS_MAIN 資料庫之 dqs_administrator 角色的使用者。  
   
-##  <a name="administration-activities-outside-of-data-quality-client"></a><a name="AdminOutsideClient"></a>Data Quality Client 外部的管理活動  
+##  <a name="administration-activities-outside-of-data-quality-client"></a><a name="AdminOutsideClient"></a> Data Quality Client 之外的管理活動  
  在 Data Quality Client 外部執行的活動包括：  
   
 -   **備份和還原 DQS 資料庫**：DQS 資料庫的備份和還原與任何 SQL Server 資料庫的備份和還原相同，但有專屬於 DQS 的一些考量。  

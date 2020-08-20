@@ -1,5 +1,6 @@
 ---
-title: sp_helprotect （Transact-sql） |Microsoft Docs
+description: sp_helprotect (Transact-SQL)
+title: sp_helprotect (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8f170c15cdc75c8832adae7fae4147829b3b4bb9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: eab1ad6fa3e71f4ef5c39ca06b081ed6b3889d29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899496"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485896"
 ---
 # <a name="sp_helprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85899496"
   傳回報表，報表中有目前資料庫中之物件的使用者權限或陳述式權限的相關資訊。  
   
 > [!IMPORTANT]  
->  **sp_helprotect**不會傳回中所引進之安全性實體的相關資訊 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。 請改用[sys.databases database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)和[fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) 。  
+>  **sp_helprotect** 不會傳回中引進的安全性實體相關資訊 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。 請改用 [sys. database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) 並 [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) 。  
   
  不會列出一律指派給固定伺服器角色或固定資料庫角色的權限。 不包括依本身在角色中的成員資格獲得權限的登入或使用者。  
   
@@ -47,15 +48,15 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @name = ] 'object_statement'`這是目前資料庫中的物件名稱，或是具有要報告之許可權的語句。 *object_statement*是**Nvarchar （776）**，預設值是 Null，它會傳回所有物件和語句許可權。 如果值是物件 (資料表、檢視、預存程序或擴充預存程序)，它必須是目前資料庫中的有效物件。 物件名稱可以包含「_擁有_者」形式的擁有者辨識符號 **。**_物件_。  
+`[ @name = ] 'object_statement'` 這是目前資料庫中的物件名稱，或具有要報告之許可權的語句。 *object_statement* 是 **Nvarchar (776) **，預設值為 Null，它會傳回所有物件和語句許可權。 如果值是物件 (資料表、檢視、預存程序或擴充預存程序)，它必須是目前資料庫中的有效物件。 物件名稱可以_包含擁有者形式的_擁有者辨識符號 **。**_物件_。  
   
- 如果*object_statement*是語句，它可以是 CREATE 語句。  
+ 如果 *object_statement* 是語句，它可以是 CREATE 語句。  
   
-`[ @username = ] 'security_account'`這是傳回許可權之主體的名稱。 *security_account*是**sysname**，預設值是 Null，它會傳回目前資料庫中的所有主體。 *security_account*必須存在於目前的資料庫中。  
+`[ @username = ] 'security_account'` 這是傳回的許可權所屬的主體名稱。 *security_account* 是 **sysname**，預設值是 Null，會傳回目前資料庫中的所有主體。 *security_account* 必須存在於目前的資料庫中。  
   
-`[ @grantorname = ] 'grantor'`這是授與許可權之主體的名稱。 授與者是**sysname**，預設*值是 Null* ，它會傳回資料庫中任何主體所授與之許可權的所有資訊。  
+`[ @grantorname = ] 'grantor'` 這是授與許可權之主體的名稱。 *授權* 者是 **sysname**，預設值是 Null，會傳回資料庫中任何主體授與之許可權的所有資訊。  
   
-`[ @permissionarea = ] 'type'`這是一個字元字串，指出是否要顯示物件使用權限（字元字串**o**）、語句許可權（字元字串**s**），或兩者（**os**）。 *類型*為**Varchar （10）**，預設值為**os**。 *類型*可以是**o**和**s**的任何組合，在**o**和**s**之間不含逗號或空格。  
+`[ @permissionarea = ] 'type'` 這是一個字元字串，指出是否要顯示物件使用權限 (字元字串 **o**) 、語句許可權 (字元字串 **s**) ，或兩者 (**作業系統**) 。 *類型* 是 **Varchar (10) **，預設值是 **os**。 *type* 可以是 **o** 和 **s**的任何組合，在 **o** 與 **s**之間可以有逗號或空格。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -68,7 +69,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 |**Object**|**sysname**|物件的名稱。|  
 |**者**|**sysname**|對其授與權限之主體的名稱。|  
 |**授與者**|**sysname**|對指定的被授與者授與權限之主體的名稱。|  
-|**ProtectType**|**Nvarchar （10）**|保護類型的名稱：<br /><br /> GRANT REVOKE|  
+|**ProtectType**|**Nvarchar (10) **|保護類型的名稱：<br /><br /> GRANT REVOKE|  
 |**動作**|**nvarchar(60)**|權限的名稱。 權限陳述式是否有效，需根據物件類型而定。|  
 |**資料行**|**sysname**|權限的類型：<br /><br /> 全部 = 權限涵蓋物件的所有目前資料行。<br /><br /> 新增 = 權限涵蓋未來可能在物件上變更 (利用 ALTER 陳述式) 的任何新資料行。<br /><br /> 全部+新增 = 全部和新增的組合。<br /><br /> 如果權限類型不適用於資料行，則傳回句號。|  
   
@@ -132,10 +133,10 @@ EXEC sp_helprotect @name = 'CREATE TABLE';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的安全性預存程式](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [拒絕 &#40;Transact-sql&#41;](../../t-sql/statements/deny-transact-sql.md)   
+ [&#40;Transact-sql&#41;的安全性預存程式 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
- [REVOKE &#40;Transact-sql&#41;](../../t-sql/statements/revoke-transact-sql.md)   
+ [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: CREATE PROCEDURE (Transact-SQL)
 title: CREATE PROCEDURE (Transact-SQL)
 ms.custom: ''
 ms.date: 09/06/2017
@@ -46,12 +47,12 @@ ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0897e58e9d60ef8d53ce4d9be07fb5f1f3228c4
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 368c73b776b3aa9a8088ccd7d19fe1b28a56c1eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392886"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488141"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 
@@ -346,7 +347,7 @@ SELECT DB_NAME() AS ThisDB;
 稍微複雜一點的方法，是提供讓程序更有彈性的輸入參數。 例如：
 
 ```sql
-CREATE PROC What_DB_is_that @ID int
+CREATE PROC What_DB_is_that @ID INT
 AS
 SELECT DB_NAME(@ID) AS ThatDB;
 ```
@@ -420,7 +421,7 @@ CREATE PROCEDURE 陳述式無法在單一批次中，與其他 [!INCLUDE[tsql](.
 
 ```sql
 -- Passing the function value as a variable.
-DECLARE @CheckDate datetime = GETDATE();
+DECLARE @CheckDate DATETIME = GETDATE();
 EXEC dbo.uspGetWhereUsedProductID 819, @CheckDate;
 GO
 ```
@@ -469,7 +470,7 @@ GO
 下列範例示範如何建立原生編譯的預存程序，以存取經記憶體最佳化的資料表 `dbo.Departments`：
 
 ```sql
-CREATE PROCEDURE dbo.usp_add_kitchen @dept_id int, @kitchen_count int NOT NULL
+CREATE PROCEDURE dbo.usp_add_kitchen @dept_id INT, @kitchen_count INT NOT NULL
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 AS
 BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE = N'us_english')
@@ -552,9 +553,9 @@ FROM '\\MachineName\HandlingLOBUsingCLR\bin\Debug\HandlingLOBUsingCLR.dll';
 GO
 CREATE PROCEDURE dbo.GetPhotoFromDB
 (
-    @ProductPhotoID int
-    , @CurrentDirectory nvarchar(1024)
-    , @FileName nvarchar(1024)
+    @ProductPhotoID INT
+    , @CurrentDirectory NVARCHAR(1024)
+    , @FileName NVARCHAR(1024)
 )
 AS EXTERNAL NAME HandlingLOBUsingCLR.LargeObjectBinary.GetPhotoFromDB;
 GO
@@ -573,8 +574,8 @@ IF OBJECT_ID ( 'HumanResources.uspGetEmployees', 'P' ) IS NOT NULL
     DROP PROCEDURE HumanResources.uspGetEmployees;
 GO
 CREATE PROCEDURE HumanResources.uspGetEmployees
-    @LastName nvarchar(50),
-    @FirstName nvarchar(50)
+    @LastName NVARCHAR(50),
+    @FirstName NVARCHAR(50)
 AS
 
     SET NOCOUNT ON;
@@ -609,8 +610,8 @@ IF OBJECT_ID ( 'HumanResources.uspGetEmployees2', 'P' ) IS NOT NULL
     DROP PROCEDURE HumanResources.uspGetEmployees2;
 GO
 CREATE PROCEDURE HumanResources.uspGetEmployees2
-    @LastName nvarchar(50) = N'D%',
-    @FirstName nvarchar(50) = N'%'
+    @LastName NVARCHAR(50) = N'D%',
+    @FirstName NVARCHAR(50) = N'%'
 AS
     SET NOCOUNT ON;
     SELECT FirstName, LastName, JobTitle, Department
@@ -642,10 +643,10 @@ EXECUTE HumanResources.uspGetEmployees2 N'H%', N'S%';
 IF OBJECT_ID ( 'Production.uspGetList', 'P' ) IS NOT NULL
     DROP PROCEDURE Production.uspGetList;
 GO  
-CREATE PROCEDURE Production.uspGetList @Product varchar(40)
-    , @MaxPrice money
-    , @ComparePrice money OUTPUT
-    , @ListPrice money OUT
+CREATE PROCEDURE Production.uspGetList @Product VARCHAR(40)
+    , @MaxPrice MONEY
+    , @ComparePrice MONEY OUTPUT
+    , @ListPrice MONEY OUT
 AS  
     SET NOCOUNT ON;
     SELECT p.[Name] AS Product, p.ListPrice AS 'List Price'
@@ -670,18 +671,18 @@ GO
 > 建立程序以及使用變數時，都必須定義 OUTPUT 變數。 參數名稱與變數名稱不一定要相符；不過，除非使用 `@ListPrice` = *variable*，否則資料類型與參數定位必須相符。
 
 ```sql
-DECLARE @ComparePrice money, @Cost money ;
+DECLARE @ComparePrice MONEY, @Cost MONEY;
 EXECUTE Production.uspGetList '%Bikes%', 700,
     @ComparePrice OUT,
     @Cost OUTPUT
 IF @Cost <= @ComparePrice
 BEGIN
     PRINT 'These products can be purchased for less than
-    $'+RTRIM(CAST(@ComparePrice AS varchar(20)))+'.'
+    $'+RTRIM(CAST(@ComparePrice AS VARCHAR(20)))+'.'
 END
 ELSE
     PRINT 'The prices for all products in this category exceed
-    $'+ RTRIM(CAST(@ComparePrice AS varchar(20)))+'.';
+    $'+ RTRIM(CAST(@ComparePrice AS VARCHAR(20)))+'.';
 ```
 
 部分結果集如下：
@@ -784,7 +785,7 @@ GO
 
 ```sql
 CREATE PROCEDURE HumanResources.Update_VacationHours
-@NewHours smallint, @Rowcount int OUTPUT
+@NewHours SMALLINT, @Rowcount INT OUTPUT
 AS
 SET NOCOUNT ON;
 UPDATE HumanResources.Employee
@@ -798,8 +799,8 @@ WHERE CurrentFlag = 1;
 SET @Rowcount = @@rowcount;
 
 GO
-DECLARE @Rowcount int
-EXEC HumanResources.Update_VacationHours 40, @Rowcount output
+DECLARE @Rowcount INT
+EXEC HumanResources.Update_VacationHours 40, @Rowcount OUTPUT
 PRINT @Rowcount;
 ```
 
@@ -812,7 +813,7 @@ PRINT @Rowcount;
 下列範例使用 TRY...CATCH 建構傳回預存程序執行期間所攔截到的錯誤資訊。
 
 ```sql
-CREATE PROCEDURE Production.uspDeleteWorkOrder ( @WorkOrderID int )
+CREATE PROCEDURE Production.uspDeleteWorkOrder ( @WorkOrderID INT )
 AS
 SET NOCOUNT ON;
 BEGIN TRY
@@ -832,7 +833,7 @@ BEGIN CATCH
     ROLLBACK
 
   -- Return the error information.
-  DECLARE @ErrorMessage nvarchar(4000), @ErrorSeverity int;
+  DECLARE @ErrorMessage NVARCHAR(4000), @ErrorSeverity INT;
   SELECT @ErrorMessage = ERROR_MESSAGE(),@ErrorSeverity = ERROR_SEVERITY();
   RAISERROR(@ErrorMessage, @ErrorSeverity, 1);
 END CATCH;
@@ -845,7 +846,7 @@ EXEC Production.uspDeleteWorkOrder 13;
    cause an error when the procedure definition is altered, but produces
    an error when the procedure is executed.
 */
-ALTER PROCEDURE Production.uspDeleteWorkOrder ( @WorkOrderID int )
+ALTER PROCEDURE Production.uspDeleteWorkOrder ( @WorkOrderID INT )
 AS
 
 BEGIN TRY
@@ -866,7 +867,7 @@ BEGIN CATCH
     ROLLBACK TRANSACTION
 
   -- Return the error information.
-  DECLARE @ErrorMessage nvarchar(4000), @ErrorSeverity int;
+  DECLARE @ErrorMessage NVARCHAR(4000), @ErrorSeverity INT;
   SELECT @ErrorMessage = ERROR_MESSAGE(),@ErrorSeverity = ERROR_SEVERITY();
   RAISERROR(@ErrorMessage, @ErrorSeverity, 1);
 END CATCH;
@@ -937,7 +938,7 @@ NULL
 IF OBJECT_ID ( 'dbo.uspProductByVendor', 'P' ) IS NOT NULL
     DROP PROCEDURE dbo.uspProductByVendor;
 GO
-CREATE PROCEDURE dbo.uspProductByVendor @Name varchar(30) = '%'
+CREATE PROCEDURE dbo.uspProductByVendor @Name VARCHAR(30) = '%'
 WITH RECOMPILE
 AS
     SET NOCOUNT ON;

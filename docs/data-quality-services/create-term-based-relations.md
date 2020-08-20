@@ -1,4 +1,5 @@
 ---
+description: 建立以詞彙為主的關聯
 title: 建立以詞彙為主的關聯
 ms.date: 11/08/2011
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b6b0a4fe9786e47ec8352ce829be628c11bea928
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 29d8da0efeb42d554353fa25395b3058e82e3dbf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882576"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487851"
 ---
 # <a name="create-term-based-relations"></a>建立以詞彙為主的關聯
 
@@ -62,7 +63,7 @@ ms.locfileid: "85882576"
 ####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能建立以詞彙為主的關聯。  
   
-##  <a name="create-term-based-relations"></a><a name="Create"></a>建立以詞彙為主的關聯  
+##  <a name="create-term-based-relations"></a><a name="Create"></a> 建立以詞彙為基礎的關聯  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   

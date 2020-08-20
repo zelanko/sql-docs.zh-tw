@@ -1,5 +1,6 @@
 ---
-title: sp_manage_jobs_by_login （Transact-sql） |Microsoft Docs
+description: sp_manage_jobs_by_login (Transact-SQL)
+title: sp_manage_jobs_by_login (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e810bf996f7dbaa8624c6a0e834011d759aa9348
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fb7d27bab8fd7593b92f52d33fd847facab4ee0c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899379"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485882"
 ---
 # <a name="sp_manage_jobs_by_login-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,20 +43,20 @@ sp_manage_jobs_by_login
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @action = ] 'action'`要針對指定的登入採取的動作。 *動作*為**Varchar （10）**，沒有預設值。 當 [*動作*] 為 [**刪除**] 時， **sp_manage_jobs_by_login**會刪除*current_owner_login_name*所擁有的所有工作。 **重新指派***動作*時，會將所有工作指派給*new_owner_login_name*。  
+`[ @action = ] 'action'` 針對指定登入所採取的動作。 *動作* 是 **Varchar (10) **，沒有預設值。 當 *動作*是 **刪除**時， **sp_manage_jobs_by_login** 會刪除 *current_owner_login_name*所擁有的所有作業。 **重新指派***動作*時，會將所有工作指派給*new_owner_login_name*。  
   
-`[ @current_owner_login_name = ] 'current_owner_login_name'`目前作業擁有者的登入名稱。 *current_owner_login_name*是**sysname**，沒有預設值。  
+`[ @current_owner_login_name = ] 'current_owner_login_name'` 目前作業擁有者的登入名稱。 *current_owner_login_name* 是 **sysname**，沒有預設值。  
   
-`[ @new_owner_login_name = ] 'new_owner_login_name'`新作業擁有者的登入名稱。 只有在*動作***重新指派**時，才使用此參數。 *new_owner_login_name*是**sysname**，預設值是 Null。  
+`[ @new_owner_login_name = ] 'new_owner_login_name'` 新作業擁有者的登入名稱。 只有在*動作***重新指派**時，才使用此參數。 *new_owner_login_name* 是 **sysname**，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="result-sets"></a>結果集  
  None  
   
 ## <a name="permissions"></a>權限  
- 若要執行這個預存程式，使用者必須被授與**系統管理員（sysadmin** ）固定伺服器角色。  
+ 若要執行這個預存程式，使用者必須被授與 **系統管理員（sysadmin** ）固定伺服器角色。  
   
 ## <a name="examples"></a>範例  
  下列範例會將 `danw` 的所有作業重新指派給 `françoisa`。  

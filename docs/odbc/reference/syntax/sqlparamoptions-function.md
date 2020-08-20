@@ -1,4 +1,5 @@
 ---
+description: SQLParamOptions 函式
 title: SQLParamOptions 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,25 +21,25 @@ helpviewer_keywords:
 ms.assetid: ee08e987-0243-4060-ab21-64da11fe444f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 209cfe6444918a40f5199af1f1a839050a3a6a57
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14ee51c744e05d1f908010657f4de544aa5d0c43
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306909"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487239"
 ---
 # <a name="sqlparamoptions-function"></a>SQLParamOptions 函式
-**標準**  
+**一致性**  
  引進的版本： ODBC 1.0 標準合規性：已淘汰  
   
- **摘要**  
- Odbc 2.0 函數**SQLParamOptions**已在 odbc 3 中被取代。*x*會呼叫[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)。  
+ **總結**  
+ Odbc 3 中已取代 ODBC 2.0 函數 **SQLParamOptions** 。*x* 呼叫 [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)。  
   
 > [!NOTE]  
->  如需在 ODBC 2 時，驅動程式管理員將此函式對應至哪個功能的詳細資訊。*x*應用程式正在使用 ODBC 3。*x*驅動程式，請參閱附錄 G：驅動程式方針中的[對應已淘汰](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)函式以提供回溯相容性。  
+>  如需有關驅動程式管理員將此函式對應到 ODBC 2 時的詳細資訊。*x* 應用程式正在使用 ODBC 3。*x* 驅動程式，請參閱附錄 G：驅動程式指導方針中的 [對應已淘汰](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) 函式以提供回溯相容性。  
   
 ## <a name="remarks"></a>備註  
- 如果您的應用程式將在64位作業系統上執行，請參閱[ODBC 64 位資訊](../../../odbc/reference/odbc-64-bit-information.md)。  
+ 如果您的應用程式將在64位作業系統上執行，請參閱 [ODBC 64 位資訊](../../../odbc/reference/odbc-64-bit-information.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [ODBC API 參考](../../../odbc/reference/syntax/odbc-api-reference.md)   

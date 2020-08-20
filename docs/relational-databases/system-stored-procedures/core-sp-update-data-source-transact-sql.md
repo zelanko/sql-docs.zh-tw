@@ -1,5 +1,6 @@
 ---
-title: core. sp_update_data_source （Transact-sql） |Microsoft Docs
+description: core.sp_update_data_source (Transact-SQL)
+title: core. sp_update_data_source (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6b25dfb47c49bd53a4544649d8e10e4c092d04de
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 19644668bc9daf054aeb8907be5ca8ff29a7bb84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898214"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486384"
 ---
 # <a name="coresp_update_data_source-transact-sql"></a>core.sp_update_data_source (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,25 +48,25 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
   
 ## <a name="arguments"></a>引數  
  [ @collection_set_uid =] '*collection_set_uid*'  
- 收集組的 GUID。 *collection_set_uid*是**uniqueidentifier**，沒有預設值。 若要取得 GUID，請查詢 msdb 資料庫中的 dbo.syscollector_collection_sets 檢視表。  
+ 收集組的 GUID。 *collection_set_uid* 是 **uniqueidentifier**，沒有預設值。 若要取得 GUID，請查詢 msdb 資料庫中的 dbo.syscollector_collection_sets 檢視表。  
   
  [ @machine_name =] '*machine_name*'  
- 收集組所在的伺服器名稱。 *machine_name*是**sysname** ，沒有預設值。  
+ 收集組所在的伺服器名稱。 *machine_name* 是 **sysname** ，沒有預設值。  
   
  [ @named_instance =] '*named_instance*'  
- 收集組的執行個體名稱。 *named_instance*是**sysname**，沒有預設值。  
+ 收集組的執行個體名稱。 *named_instance* 是 **sysname**，沒有預設值。  
   
 > [!NOTE]  
->  *named_instance*必須是完整的實例名稱，其中包含電腦名稱稱和實例名稱，其格式為*computername* \\ *instancename*。  
+>  *named_instance*必須是完整的實例名稱，此名稱是由電腦名稱稱和實例名稱所組成，格式為*computername* \\ *實例*名稱。  
   
  [ @days_until_expiration =] *days_until_expiration*  
- 快照集資料保留期限中剩餘的天數。 *days_until_expiration*為**Smallint**。  
+ 快照集資料保留期限中剩餘的天數。 *days_until_expiration* 為 **Smallint**。  
   
  [ @source_id =] *source_id*  
- 更新來源的唯一識別碼。 *source_id*是**int** ，且會當做 OUTPUT 傳回。  
+ 更新來源的唯一識別碼。 *source_id* 是 **int** ，而且會傳回做為 OUTPUT。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
  每次上傳封裝開始將資料上傳至管理資料倉儲時，資料收集器執行階段元件就會呼叫 core.sp_update_data_source。 如果上次上傳之後已經發生了下列其中一項變更，就會更新 core.source_info_internal 資料表：  
@@ -75,7 +76,7 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 -   days_until_expiration 的值已變更。  
   
 ## <a name="permissions"></a>權限  
- 需要**mdw_writer** （具有 EXECUTE 許可權）固定資料庫角色中的成員資格。  
+ 需要 **mdw_writer** (中具有 EXECUTE 許可權) 固定資料庫角色的成員資格。  
   
 ## <a name="examples"></a>範例  
  下列範例會更新資料來源 (在此案例中為「磁碟使用量」收集組)、設定到期之前的天數，並傳回來源的識別碼。 此範例中會使用預設執行個體。  
@@ -93,8 +94,8 @@ EXEC core.sp_update_data_source
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [&#40;Transact-sql&#41;的資料收集器預存程式](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [資料收集器預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [管理資料倉儲](../../relational-databases/data-collection/management-data-warehouse.md)  
   
   

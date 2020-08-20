@@ -1,4 +1,5 @@
 ---
+description: CREATE COLUMN MASTER KEY (Transact-SQL)
 title: CREATE COLUMN MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/15/2019
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 02d57df3e018e558f5e8a42a63647aeefdff77ff
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 3e6b80b2737517e0d78a5ca4adbd1c66e619fc8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110682"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488056"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -81,7 +82,7 @@ CREATE COLUMN MASTER KEY key_name
     |-----------------------------|--------------------------|
     |'MSSQL_CERTIFICATE_STORE'|Windows 憑證存放區| 
     |'MSSQL_CSP_PROVIDER'|支援 Microsoft CryptoAPI 的存放區，例如硬體安全性模組 (HSM)。|
-    |'MSSQL_CNG_STORE'|支援新一代密碼編譯 API 的存放區，例如硬體安全性模組 (HSM)。|  
+    |'MSSQL_CNG_STORE'|支援 Cryptography API: Next Generation 的存放區，例如硬體安全性模組 (HSM)。|  
     |'AZURE_KEY_VAULT'|請參閱[開始使用 Azure Key Valut](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)|  
     |'MSSQL_JAVA_KEYSTORE'| Java 金鑰存放區。}
   
@@ -140,7 +141,7 @@ key_path
     其中：  
   
     *ProviderName*  
-    資料行主要金鑰存放區的金鑰儲存提供者 (KSP) 名稱，該提供者會實作新一代密碼編譯 (CNG) API。 如果您使用 HSM 作為金鑰存放區，此提供者名稱必須是您 HSM 廠商提供的 KSP 名稱。 必須在用戶端電腦上安裝提供者。  
+    資料行主要金鑰存放區的金鑰儲存提供者 (KSP) 名稱，該提供者會實作新一代密碼編譯 (CNG)。 如果您使用 HSM 作為金鑰存放區，此提供者名稱必須是您 HSM 廠商提供的 KSP 名稱。 必須在用戶端電腦上安裝提供者。  
   
     *KeyIdentifier*  
     金鑰存放區中用作資料行主要金鑰的金鑰識別碼。  
@@ -163,11 +164,10 @@ key_path
 ENCLAVE_COMPUTATIONS  
 指定資料行主要金鑰已啟用記憶體保護區。 您可以將所有使用資料行主要金鑰加密的資料行加密金鑰與伺服器端安全記憶體保護區共用，並將它們用於記憶體保護區內部的計算。 如需詳細資訊，請參閱[具有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。
 
-*signature*  
-二進位常值，它是數位簽署「金鑰路徑」  和使用資料行主要金鑰之 ENCLAVE_COMPUTATIONS 設定的結果。 簽章會反映是否已指定 ENCLAVE_COMPUTATIONS。 簽章會保護所簽署的值不會受到未經授權的使用者所改變。 已啟用 Always Encrypted 的用戶端驅動程式會驗證簽章，並在簽章無效時，傳回錯誤給應用程式。 簽章需使用用戶端工具予以產生。 如需詳細資訊，請參閱[具有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。
-  
-  
-## <a name="remarks"></a>備註  
+*簽章*  
+二進位常值，它是數位簽署「金鑰路徑」** 和使用資料行主要金鑰之 ENCLAVE_COMPUTATIONS 設定的結果。 簽章會反映是否已指定 ENCLAVE_COMPUTATIONS。 簽章會保護所簽署的值不會受到未經授權的使用者所改變。 已啟用 Always Encrypted 的用戶端驅動程式會驗證簽章，並在簽章無效時，傳回錯誤給應用程式。 簽章需使用用戶端工具予以產生。 如需詳細資訊，請參閱[具有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。
+
+## <a name="remarks"></a>備註
 
 請在資料庫中建立資料行加密金鑰中繼資料項目之前，以及可在使用 Always Encrypted 為資料庫中任何資料行進行加密之前，建立資料行主要金鑰中繼資料項目。 中繼資料中的資料行主要金鑰項目不包含實際資料行主要金鑰。 資料行主要金鑰必須儲存在外部資料行金鑰存放區 (SQL Server 之外)。 中繼資料中的金鑰存放區提供者名稱和資料行主要金鑰路徑，對用戶端應用程式而言都必須有效。 用戶端應用程式必須使用資料行主要金鑰來解密資料行加密金鑰。 資料行加密金鑰會使用資料行主要金鑰進行加密。 用戶端應用程式也需要查詢加密資料行。
 

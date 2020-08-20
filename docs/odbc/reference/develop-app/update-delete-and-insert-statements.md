@@ -1,4 +1,5 @@
 ---
+description: UPDATE、DELETE 以及 INSERT 陳述式
 title: UPDATE、DELETE 和 INSERT 語句 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,38 +17,38 @@ helpviewer_keywords:
 ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f12682a5d012d6981afce0085e9c920ed2f2ffbc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b01582594bb54f8feafef3f98118d3e17286fae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284258"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487421"
 ---
 # <a name="update-delete-and-insert-statements"></a>UPDATE、DELETE 以及 INSERT 陳述式
-以 SQL 為基礎的應用程式會藉由執行**UPDATE**、 **DELETE**和**INSERT**語句來對資料表進行變更。 這些語句是最低 SQL 文法一致性層級的一部分，而且必須受到所有驅動程式和資料來源的支援。  
+以 SQL 為基礎的應用程式會藉由執行 **UPDATE**、 **DELETE**和 **INSERT** 語句來變更資料表。 這些語句是最基本的 SQL 文法一致性層級的一部分，而且必須由所有驅動程式和資料來源支援。  
   
  這些語句的語法如下：  
   
- **更新**_資料表-名稱_  
+ **更新**_資料表名稱_  
   
- **設定**資料_行識別碼_ **=** {*expression* &#124; **Null**}  
+ **設定**資料 _行識別碼_ **=** {*expression* &#124; **Null**}  
   
- [**，** 資料_行識別碼_ **=** {*expression* &#124; **Null**}] .。。  
+ [**，** 資料 _行識別碼_ **=** {*expression* &#124; **Null**}]...  
   
  [**WHERE** _搜尋條件_]  
   
- **從**_資料表名稱_[**WHERE** _搜尋-條件_] 刪除  
+ **從**_資料表名稱_刪除 [**WHERE** _搜尋條件_]  
   
- **插入**_資料表名稱_[（資料 **(** _行識別碼_[，資料 **,** _行識別碼_] .。。**)**]  
+ **插入**_資料表名稱_[ (資料** (** _行識別碼_[，資料 **,** _行識別碼_] .。。**) **]  
   
- {*查詢規格*&#124;**值（** _插入-值_[**，** _插入值_] .。。**)**}  
+ {*查詢規格* &#124; **值 (** _插入值_ [**，** _插入值_] .。。**) **}  
   
- 請注意，*查詢規格*元素僅適用于 Core 和 extended sql 文法，而且*運算式*和*搜尋條件*元素在核心和擴充 sql 文法中會變得更複雜。  
+ 請注意， *查詢規格* 元素只適用于 Core 和擴充的 sql 文法，而且在核心和擴充的 sql 文法中， *運算式* 和 *搜尋條件* 元素會變得更複雜。  
   
- 如同其他 SQL 語句， **UPDATE**、 **DELETE**和**INSERT**語句在使用參數時，通常會更有效率。 例如，您可以準備並重複執行下列語句，以便在 Orders 資料表中插入多個資料列：  
+ 如同其他 SQL 語句， **UPDATE**、 **DELETE**和 **INSERT** 語句在使用參數時，通常會更有效率。 例如，下列語句可以備妥並重複執行，以便在 Orders 資料表中插入多個資料列：  
   
 ```  
 INSERT INTO Orders (PartID, Description, Price) VALUES (?, ?, ?)  
 ```  
   
- 藉由傳遞參數值的陣列，可以增加這項效率。 如需有關語句參數和參數值陣列的詳細資訊，請參閱[語句參數](../../../odbc/reference/develop-app/statement-parameters.md)。
+ 您可以傳遞參數值陣列來提高這項效率。 如需有關語句參數和參數值陣列的詳細資訊，請參閱 [語句參數](../../../odbc/reference/develop-app/statement-parameters.md)。

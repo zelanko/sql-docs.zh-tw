@@ -1,5 +1,6 @@
 ---
-title: sp_renamedb （Transact-sql） |Microsoft Docs
+description: sp_renamedb (Transact-SQL)
+title: sp_renamedb (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7dd9d4ff-20e1-4857-9a8e-a5bff767cf76
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a947bd670e57660f1f523c56f7422a28eacc39e0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bbf6e245c580a54d68ddaba146bc26050f4264ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891485"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485755"
 ---
 # <a name="sp_renamedb-transact-sql"></a>sp_renamedb (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,15 +43,15 @@ sp_renamedb [ @dbname = ] 'old_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @dbname = ] 'old_name'`這是資料庫的目前名稱。 *old_name*是**sysname**，沒有預設值。  
+`[ @dbname = ] 'old_name'` 這是資料庫的目前名稱。 *old_name* 是 **sysname**，沒有預設值。  
   
-`[ @newname = ] 'new_name'`這是資料庫的新名稱。 *new_name*必須遵循識別碼的規則。 *new_name*是**sysname**，沒有預設值。  
+`[ @newname = ] 'new_name'` 這是資料庫的新名稱。 *new_name* 必須遵循識別碼的規則。 *new_name* 是 **sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或非零數字 (失敗)  
   
 ## <a name="permissions"></a>權限  
- 需要**系統管理員（sysadmin** ）或**dbcreator**固定伺服器角色中的成員資格。  
+ 需要 **系統管理員（sysadmin** ）或 **dbcreator** 固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
  下列範例會建立 `Accounting` 資料庫，再將資料庫名稱改為 `Financial`。 然後再查詢 `sys.databases` 目錄檢視，來驗證資料庫的新名稱。  
@@ -69,9 +70,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的資料庫引擎預存程式 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [sp_changedbowner &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
+ [sp_changedbowner &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
  [sp_helpdb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

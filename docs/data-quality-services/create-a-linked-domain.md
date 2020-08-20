@@ -1,4 +1,5 @@
 ---
+description: 建立連結的定義域
 title: 建立連結的定義域
 ms.date: 11/08/2011
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 68c8fe492dfe05945b670b137b0d2f427d82d486
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b2fb5b1a57b39a91735e213385c7756a7bb05984
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887958"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487859"
 ---
 # <a name="create-a-linked-domain"></a>建立連結的定義域
 
@@ -45,7 +46,7 @@ ms.locfileid: "85887958"
 ####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能建立連結的定義域。  
   
-##  <a name="create-a-linked-domain"></a><a name="Create"></a>建立連結的定義域  
+##  <a name="create-a-linked-domain"></a><a name="Create"></a> 建立連結的定義域  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   

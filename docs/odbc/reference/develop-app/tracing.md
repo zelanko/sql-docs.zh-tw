@@ -1,4 +1,5 @@
 ---
+description: 追蹤
 title: 追蹤 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 77ed4c6c-d976-4eb2-8526-a12697b0ef83
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4a08047409b203916fe5403cf28802d8570647cf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 25a7a08fb5c5d2fb203151fb014bdc0edfd25746
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298045"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487481"
 ---
 # <a name="tracing"></a>追蹤
-ODBC 驅動程式管理員有一個追蹤設備，可讓 ODBC 應用程式所發出的函式呼叫順序記錄並轉譯到記錄檔中。 追蹤是由追蹤 DLL 執行，它會捕獲應用程式和驅動程式管理員之間的呼叫，以及驅動程式管理員和驅動程式之間的呼叫。 這種追蹤方法會將 odbc*2.X 驅動程式*管理員所執行的追蹤，和 odbc 2.x 中*執行的追蹤*取代。  
+ODBC 驅動程式管理員有一個追蹤設備，可讓 ODBC 應用程式所進行的函式呼叫順序記錄並轉譯到記錄檔中。 追蹤是由追蹤 DLL 執行，此 DLL 會在應用程式與驅動程式管理員之間，以及在驅動程式管理員與驅動程式之間，捕獲呼叫。 這種追蹤方法*會以 Odbc* Spy 取代 odbc*2.X 驅動程式*管理員所執行的追蹤，以及 odbc 2.x 中執行的追蹤。  
   
  此章節包含下列主題。  
   

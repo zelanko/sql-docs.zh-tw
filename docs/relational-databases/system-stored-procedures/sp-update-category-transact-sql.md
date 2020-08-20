@@ -1,5 +1,6 @@
 ---
-title: sp_update_category （Transact-sql） |Microsoft Docs
+description: sp_update_category (Transact-SQL)
+title: sp_update_category (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3c738d918c43764048cd0c67ade2fccc9be961c7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f4eaf2fe7fd4b1ee613bec30dbf6967eaeab8b51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891356"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485568"
 ---
 # <a name="sp_update_category-transact-sql"></a>sp_update_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,26 +43,26 @@ sp_update_category
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @class = ] 'class'`要更新之分類的類別。 *class*是**Varchar （8）**，沒有預設值，它可以是下列其中一個值。  
+`[ @class = ] 'class'` 要更新之類別的類別。 *類別*是 **Varchar (8) **，沒有預設值，它可以是下列值之一。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
-|**消息**|更新警示類別目錄。|  
-|**任務**|更新作業類別目錄。|  
-|**操作**|更新運算子類別目錄。|  
+|**警報**|更新警示類別目錄。|  
+|**工作**|更新作業類別目錄。|  
+|**運算元**|更新運算子類別目錄。|  
   
-`[ @name = ] 'old_name'`類別目錄的目前名稱。 *old_name*是**sysname**，沒有預設值。  
+`[ @name = ] 'old_name'` 類別目錄的目前名稱。 *old_name*是 **sysname**，沒有預設值。  
   
-`[ @new_name = ] 'new_name'`類別目錄的新名稱。 *new_name*是**sysname**，沒有預設值。  
+`[ @new_name = ] 'new_name'` 類別目錄的新名稱。 *new_name*是 **sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_update_category**必須從**msdb**資料庫中執行。  
+ **sp_update_category** 必須從 **msdb** 資料庫執行。  
   
 ## <a name="permissions"></a>權限  
- 若要執行這個預存程式，使用者必須被授與**系統管理員（sysadmin** ）固定伺服器角色。  
+ 若要執行這個預存程式，使用者必須被授與 **系統管理員（sysadmin** ）固定伺服器角色。  
   
 ## <a name="examples"></a>範例  
  下列範例會將作業類別目錄 `AdminJobs` 重新命名為 `Administrative Jobs`。  

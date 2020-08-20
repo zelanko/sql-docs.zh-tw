@@ -1,4 +1,5 @@
 ---
+description: 第 6-3 課：測試第 6 課套件
 title: 步驟 3：測試第 6 課套件 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dec02c9a17a2eb1db3411c9b359ad55a83ac4fa5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6fc7b150f94d0f857244587140fd54b8fe7d38c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922364"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487714"
 ---
 # <a name="lesson-6-3-test-the-lesson-6-package"></a>第 6-3 課：測試第 6 課套件
 
@@ -39,9 +40,9 @@ ms.locfileid: "86922364"
   
 ## <a name="test-the-lesson-6-package"></a>測試第 6 課套件  
   
-1.  在 [偵錯]  功能表上，選取 [開始偵錯]  。  
+1.  在 [偵錯] 功能表上，選取 [開始偵錯]。  
   
-2.  在套件執行完成之後，於 [偵錯]  功能表上，選取 [停止偵錯]  。  
+2.  在套件執行完成之後，於 [偵錯]**** 功能表上，選取 [停止偵錯]****。  
   
 ## <a name="go-to-next-task"></a>移至下一個工作
 [步驟 4：部署第 6 課套件](../integration-services/lesson-6-4-deploying-the-lesson-6-package.md)  

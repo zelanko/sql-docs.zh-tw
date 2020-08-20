@@ -1,5 +1,6 @@
 ---
-title: sp_helpntgroup （Transact-sql） |Microsoft Docs
+description: sp_helpntgroup (Transact-SQL)
+title: sp_helpntgroup (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 02b4f7c1-480a-436c-8bae-7a2488be45d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7f52bf995a4d8f24d2b987ad08602cf9184cff8f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9ad0853553de51ba53b363bc400facde0c01652e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893543"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485931"
 ---
 # <a name="sp_helpntgroup-transact-sql"></a>sp_helpntgroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @ntname = ] 'name'`這是 Windows 群組的名稱。 *name*是**sysname**，預設值是 Null。 *名稱*必須是有效的 Windows 群組，而且具有目前資料庫的存取權。 如果未指定*name* ，輸出中就會包含具有目前資料庫存取權的所有 Windows 群組。  
+`[ @ntname = ] 'name'` 這是 Windows 群組的名稱。 *名稱* 是 **sysname**，預設值是 Null。 *名稱* 必須是有效的 Windows 群組，而且具有目前資料庫的存取權。 如果未指定 *name* ，則輸出中會包含目前資料庫存取權的所有 Windows 群組。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -50,11 +51,11 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**NTGroupName**|**sysname**|Windows 群組的名稱。|  
 |**NTGroupId**|**smallint**|群組識別碼 (ID)。|  
-|**SID**|**Varbinary （85）**|**NTGroupName**的安全識別碼（SID）。|  
+|**SID**|**Varbinary (85) **|**.Ntgroupname**的安全識別碼 (SID) 。|  
 |**HasDbAccess**|**int**|1 = Windows 群組具有資料庫的存取權限。|  
   
 ## <a name="remarks"></a>備註  
- 若要查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目前資料庫中的角色清單，請使用**sp_helprole**。  
+ 若要查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目前資料庫中的角色清單，請使用 **sp_helprole**。  
   
 ## <a name="permissions"></a>權限  
  需要 **public** 角色的成員資格。  
@@ -67,7 +68,7 @@ EXEC sp_helpntgroup;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的安全性預存程式](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的安全性預存程式 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_grantdbaccess &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
  [sp_helprole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
  [sp_revokedbaccess &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revokedbaccess-transact-sql.md)   

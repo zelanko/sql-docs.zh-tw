@@ -1,5 +1,6 @@
 ---
-title: sys.databases database_filestream_options （Transact-sql） |Microsoft Docs
+description: sys.database_filestream_options (Transact-SQL)
+title: sys. database_filestream_options (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3383c607-0bbc-456a-ab37-7230f4cbf0e9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2cb185c2cec6bd2a7104384b3b75e14e2de4167f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e52c737798c6aff82194d74808edb1e37a9f8531
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887928"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486411"
 ---
 # <a name="sysdatabase_filestream_options-transact-sql"></a>sys.database_filestream_options (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,11 +35,11 @@ ms.locfileid: "85887928"
  如需有關 FileTable 的詳細資訊，請參閱 [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)。  
   
   
-|資料行|類型|說明|  
+|資料行|類型|描述|  
 |------------|----------|-----------------|  
 |**database_id**|**int**|資料庫的識別碼。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體內，這個值是唯一的。|  
 |**directory_name**|**nvarchar(255)**|所有 FileTable 命名空間的資料庫層級目錄。|  
-|**non_transacted_access**|**tinyint**|已啟用的非交易式 FILESTREAM 資料存取層級。 存取層級是由**CREATE DATABASE**或**ALTER database**語句的 NON_TRANSACTED_ACCESS 選項所設定。<br /><br /> 這個設定有下列其中一個值：<br /><br /> 0-未啟用。 這是預設值。 此層級是藉由提供 [ **NON_TRANSACTED_ACCESS** ] 選項的 [ **OFF** ] 值來設定。<br /><br /> 1-唯讀存取。 此層級是藉由提供 [ **NON_TRANSACTED_ACCESS** ] 選項的 [ **READ_ONLY** ] 值來設定。<br /><br /> 3-完整存取。 此層級是藉由提供 [ **NON_TRANSACTED_ACCESS** ] 選項的 [**完整**] 值來設定。<br /><br /> 5 - 正在轉換為 READONLY<br /><br /> 6-正在轉換為 OFF|  
+|**non_transacted_access**|**tinyint**|已啟用的非交易式 FILESTREAM 資料存取層級。 存取層級是由 **CREATE DATABASE** 或 **ALTER database** 語句的 NON_TRANSACTED_ACCESS 選項所設定。<br /><br /> 這個設定有下列其中一個值：<br /><br /> 0-未啟用。 這是預設值。 此層級是藉由為**NON_TRANSACTED_ACCESS**選項提供**OFF**值來設定。<br /><br /> 1-唯讀存取。 此層級是藉由提供**NON_TRANSACTED_ACCESS**選項的**READ_ONLY**值來設定。<br /><br /> 3-完整存取權。 此層級是藉由提供**NON_TRANSACTED_ACCESS**選項的**FULL**值所設定。<br /><br /> 5 - 正在轉換為 READONLY<br /><br /> 6-轉換成關閉|  
 |**non_transacted_access_desc**|**nvarchar(60)**|Non_transacted_access 中所識別之非交易式存取層級的描述。<br /><br /> 這個設定有下列其中一個值：<br /><br /> 無-這是預設值。<br /><br /> READ_ONLY<br /><br /> FULL<br /><br /> IN_TRANSITION_TO_READ_ONLY<br /><br /> IN_TRANSITION_TO_OFF|  
   
 ## <a name="see-also"></a>另請參閱  

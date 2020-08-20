@@ -1,5 +1,6 @@
 ---
-title: sp_refreshsqlmodule （Transact-sql） |Microsoft Docs
+description: sp_refreshsqlmodule (Transact-SQL)
+title: sp_refreshsqlmodule (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/25/2018
 ms.prod: sql
@@ -26,12 +27,12 @@ ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 11b7ec3592e73d890a6abab1e0d5df39e53eef18
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 0c2621ffb96ad93d75e5b59e11963f93bf0f32eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396450"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485870"
 ---
 # <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -56,26 +57,26 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @name = ] 'module\_name'`這是預存程式、使用者定義函數、view、DML 觸發程式、資料庫層級 DDL 觸發程式或伺服器層級 DDL 觸發程式的名稱。 *module_name*不可以是 common language RUNTIME （CLR）預存程式或 CLR 函數。 *module_name*不可以是架構系結。 *module_name*是**Nvarchar**，沒有預設值。 *module_name*可以是多部分的識別碼，但只能參考目前資料庫中的物件。  
+`[ @name = ] 'module\_name'` 這是預存程式、使用者定義函數、view、DML 觸發程式、資料庫層級 DDL 觸發程式或伺服器層級 DDL 觸發程式的名稱。 *module_name* 不能是 common language RUNTIME (clr) 預存程式或 clr 函數。 *module_name* 不能是架構系結。 *module_name* 是 **Nvarchar**，沒有預設值。 *module_name* 可以是多部分識別碼，但只能參考目前資料庫中的物件。  
   
-`[ , @namespace = ] ' \<class> '`這是指定之模組的類別。 當*module_name*是 DDL 觸發程式時， \<class> 則為必要。 *\<class>* 是**Nvarchar**（20）。 有效輸入包括：  
+`[ , @namespace = ] ' \<class> '` 這是指定之模組的類別。 當 *module_name* 是 DDL 觸發程式時， \<class> 則為必要項。 *\<class>* 是 **Nvarchar** (20) 。 有效輸入包括：  
 
 * DATABASE_DDL_TRIGGER
 
-* SERVER_DDL_TRIGGER-**適用于**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
+* SERVER_DDL_TRIGGER- **適用**于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本。
 
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或非零數字 (失敗)  
   
 ## <a name="remarks"></a>備註  
- 當對受模組影響其定義的物件進行變更時，應該執行**sp_refreshsqlmodule** 。 否則，在查詢或叫用模組時，可能會產生非預期的結果。 若要重新整理視圖，您可以使用**sp_refreshsqlmodule**或**sp_refreshview**的結果相同。  
+ 當對模組的基礎物件進行變更時，應執行**sp_refreshsqlmodule** ，以影響其定義。 否則，在查詢或叫用模組時，可能會產生非預期的結果。 若要重新整理視圖，您可以使用 **sp_refreshsqlmodule** 或 **sp_refreshview** 具有相同的結果。  
   
- **sp_refreshsqlmodule**不會影響與物件相關聯的任何許可權、擴充屬性或 SET 選項。  
+ **sp_refreshsqlmodule** 不會影響與物件相關聯的任何許可權、擴充屬性或 SET 選項。  
   
  若要重新整理伺服器層級 DDL 觸發程序，請從任何資料庫的內容執行此預存程序。  
   
 > [!NOTE]  
->  當您執行**sp_refreshsqlmodule**時，會卸載與物件相關聯的任何簽章。  
+>  當您執行 **sp_refreshsqlmodule**時，會卸載與物件相關聯的任何簽章。  
   
 ## <a name="permissions"></a>權限  
  需要模組的 ALTER 權限，以及物件所參考之任何 CLR 使用者自訂型別和 XML 結構描述集合的 REFERENCES 權限。 當指定的模組是資料庫層級 DDL 觸發程序時，便需要目前資料庫的 ALTER ANY DATABASE DDL TRIGGER 權限。 當指定的模組是伺服器層級 DDL 觸發程序時，便需要 CONTROL SERVER 權限。  
@@ -169,6 +170,6 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [sp_refreshview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
- [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [&#40;Transact-sql&#41;的資料庫引擎預存程式 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

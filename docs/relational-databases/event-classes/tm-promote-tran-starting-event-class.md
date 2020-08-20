@@ -1,4 +1,5 @@
 ---
+description: TM：Promote Tran Starting 事件類別
 title: 'TM: Promote Tran Starting 事件類別 | Microsoft 文件'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,14 +13,14 @@ ms.assetid: 32da85bb-d980-4044-8572-31372867649b
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2fd62597676c6b74778b5c6f917dfd05d6978f0d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 04a7125e6792f943f4046ae52b1849c6caf5edc1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790902"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487032"
 ---
-# <a name="tm-promote-tran-starting-event-class"></a>TM: Promote Tran Starting 事件類別
+# <a name="tm-promote-tran-starting-event-class"></a>TM：Promote Tran Starting 事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   TM: Promote Tran Starting 事件類別指出正在開始 PROMOTE TRANSACTION 要求。 要求是從用戶端透過交易管理介面傳送。  
   

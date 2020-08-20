@@ -1,4 +1,5 @@
 ---
+description: 建立定義域
 title: 建立定義域
 ms.date: 11/08/2011
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 529f0233f95a4f2ee123b2cc3c6974e4f5e6faf4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c3a97b28ed41f71fe73c1184bdea28870beecd1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887991"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487880"
 ---
 # <a name="create-a-domain"></a>建立定義域
 
@@ -56,7 +57,7 @@ ms.locfileid: "85887991"
   
 3.  在 **[定義域管理]** 頁面上，按一下定義域清單上方的 **[建立定義域]** 圖示。  
   
-##  <a name="set-domain-properties"></a><a name="Properties"></a>設定網域屬性  
+##  <a name="set-domain-properties"></a><a name="Properties"></a> 設定定義域屬性  
   
 1.  在 **[建立定義域]** 對話方塊中，輸入知識庫特有的名稱以及最多 256 個字元的描述。  
   
@@ -87,7 +88,7 @@ ms.locfileid: "85887991"
   
 8.  如果資料類型是 **[字串]**，請選取 **[停用語法錯誤演算法]** 來擴展定義域，而不檢查字串值的語法錯誤。  
   
-9. 按一下 [確定] 。  
+9. 按一下 [確定]。  
   
 10. 按一下 **[完成]** ，完成定義域管理活動，如＜ [結束定義域管理活動](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)＞中所述。  
   

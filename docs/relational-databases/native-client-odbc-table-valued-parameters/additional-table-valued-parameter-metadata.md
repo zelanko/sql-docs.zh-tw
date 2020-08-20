@@ -1,4 +1,5 @@
 ---
+description: 其他資料表值參數中繼資料
 title: 其他資料表值參數中繼資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,16 +15,17 @@ ms.assetid: 6c193188-5185-4373-9a0d-76cfc150c828
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1aed8844cffc6ccfb6608e4077f792dcf8651e6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9e5f1e73c57c607ce4b223de9f5fec67ff41da9e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004604"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486763"
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>其他資料表值參數中繼資料
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  為了取得資料表值參數的中繼資料，應用程式會呼叫 SQLProcedureColumns。 若為數據表值參數，SQLProcedureColumns 會傳回單一資料列。 已加入兩個額外 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的特定資料行 SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME，以提供與資料表值參數相關聯之資料表類型的架構和目錄資訊。 依照 ODBC 規格規定，SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 會出現在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中所加入的所有驅動程式專用資料行之前，以及 ODBC 本身所託管的所有資料行之後。  
+  為了取得資料表值參數的中繼資料，應用程式會呼叫 SQLProcedureColumns。 如果是資料表值參數，SQLProcedureColumns 會傳回單一資料列。 已新增兩個額外 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的資料行 SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME，以提供與資料表值參數相關聯之資料表類型的架構和目錄資訊。 依照 ODBC 規格規定，SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 會出現在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中所加入的所有驅動程式專用資料行之前，以及 ODBC 本身所託管的所有資料行之後。  
   
  下表列出對於資料表值參數相當重要的資料行。  
   
@@ -48,11 +50,11 @@ ms.locfileid: "86004604"
   
  WVarchar 資料行在 ODBC 規格中定義為 Varchar，但是實際上在所有最新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驅動程式中會傳回為 Wvarchar。 當 Unicide 支援加入到 ODBC 3.5 規格，但是尚未明確呼叫時，會進行此變更。  
   
- 若要取得資料表值參數的其他中繼資料，應用程式會使用 SQLColumns 和 SQLPrimaryKeys 目錄函數。 針對資料表值參數呼叫這些函數之前，應用程式必須將陳述式屬性 SQL_SOPT_SS_NAME_SCOPE 設定為 SQL_SS_NAME_SCOPE_TABLE_TYPE。 此值表示應用程式需要資料表類型 (而非實際資料表) 的中繼資料。 然後，應用程式會傳遞資料表值參數的 TYPE_NAME 做為*TableName*參數。 SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 分別與*CatalogName*和*SchemaName*參數搭配使用，以識別資料表值參數的目錄和架構。 當應用程式完成擷取資料表值參數的中繼資料時，必須將 SQL_SOPT_SS_NAME_SCOPE 社回 SQL_SS_NAME_SCOPE_TABLE 的預設值。  
+ 為了取得資料表值參數的其他中繼資料，應用程式會使用目錄函數 SQLColumns 和 SQLPrimaryKeys。 針對資料表值參數呼叫這些函數之前，應用程式必須將陳述式屬性 SQL_SOPT_SS_NAME_SCOPE 設定為 SQL_SS_NAME_SCOPE_TABLE_TYPE。 此值表示應用程式需要資料表類型 (而非實際資料表) 的中繼資料。 然後，應用程式會以 *TableName* 參數的形式傳遞資料表值參數的 TYPE_NAME。 SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 分別用於 *CatalogName* 和 *SchemaName* 參數，以識別資料表值參數的目錄和架構。 當應用程式完成擷取資料表值參數的中繼資料時，必須將 SQL_SOPT_SS_NAME_SCOPE 社回 SQL_SS_NAME_SCOPE_TABLE 的預設值。  
   
  當 SQL_SOPT_SS_NAME_SCOPE 設定為 SQL_SS_NAME_SCOPE_TABLE 時，連結伺服器的查詢會失敗。 使用包含伺服器元件的目錄呼叫 SQLColumns 或 SQLPrimaryKeys 將會失敗。  
   
 ## <a name="see-also"></a>另請參閱  
- [ODBC&#41;&#40;的資料表值參數](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [ODBC&#41;&#40;資料表值參數 ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

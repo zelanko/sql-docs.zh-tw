@@ -1,5 +1,6 @@
 ---
-title: sp_syspolicy_set_log_on_success （Transact-sql） |Microsoft Docs
+description: sp_syspolicy_set_log_on_success (Transact-SQL)
+title: sp_syspolicy_set_log_on_success (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6b33383b-5949-488a-a911-59299a270f46
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4534c8178d20462377dcacced00e9f6cc9bbc029
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cb17728ab1ac9c063f2198ec707254bf6b2f8eed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892633"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485586"
 ---
 # <a name="sp_syspolicy_set_log_on_success-transact-sql"></a>sp_syspolicy_set_log_on_success (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,19 +41,19 @@ sp_syspolicy_set_log_on_success [ @value = ] value
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @value = ] value`判斷是否會記錄成功的原則評估。 *value*是**sqlvariant**，它可以是下列其中一個值：  
+`[ @value = ] value` 判斷是否會記錄成功的原則評估。 *值* 是 **sqlvariant**，它可以是下列其中一個值：  
   
 -   0 或 'false' = 成功的原則評估不會記錄下來。  
   
 -   1 或 'true' = 成功的原則評估會記錄下來。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
  您必須在 msdb 系統資料庫的內容中執行 sp_syspolicy_set_log_on_success。  
   
- *當值*設定為0或 ' false ' 時，只會記錄失敗的原則評估。  
+ 當 *值* 設定為0或設為 ' false ' 時，只會記錄失敗的原則評估。  
   
 ## <a name="permissions"></a>權限  
  需要 PolicyAdministratorRole 固定資料庫角色中的成員資格。  

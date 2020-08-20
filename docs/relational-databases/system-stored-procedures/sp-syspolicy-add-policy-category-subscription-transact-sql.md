@@ -1,5 +1,6 @@
 ---
-title: sp_syspolicy_add_policy_category_subscription （Transact-sql） |Microsoft Docs
+description: sp_syspolicy_add_policy_category_subscription (Transact-SQL)
+title: sp_syspolicy_add_policy_category_subscription (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4284f550-9a3f-4726-8181-15e407fbf08f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 99e27db247ca38897b65ef73c38e3eb48e1f1358
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ba22b7025aa30216d94804440fec2c86eea5fc09
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892777"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485648"
 ---
 # <a name="sp_syspolicy_add_policy_category_subscription-transact-sql"></a>sp_syspolicy_add_policy_category_subscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,18 +43,18 @@ sp_syspolicy_add_policy_category_subscription [ @target_type = ] 'target_type'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @target_type = ] 'target_type'`這是類別目錄訂閱的目標型別。 *target_type*是**sysname**，是必要的，而且必須設定為 ' DATABASE '。  
+`[ @target_type = ] 'target_type'` 這是類別目錄訂閱的目標型別。 *target_type* 為 **sysname**、為必要項，而且必須設定為 ' DATABASE '。  
   
-`[ @target_object = ] 'target_object'`這是將訂閱類別目錄的資料庫名稱。 *target_object*是**sysname**，而且是必要的。  
+`[ @target_object = ] 'target_object'` 這是將訂閱類別目錄的資料庫名稱。 *target_object* 為 **sysname**，而且是必要的。  
   
-`[ @policy_category = ] 'policy_category'`這是要訂閱的原則類別目錄名稱。 *policy_category*是**sysname**，而且是必要的。  
+`[ @policy_category = ] 'policy_category'` 這是要訂閱的原則類別目錄名稱。 *policy_category* 為 **sysname**，而且是必要的。  
   
- 若要取得*policy_category*的值，請查詢 msdb.dbo.syspolicy_policy_categories 系統檢視。  
+ 若要取得 *policy_category*的值，請查詢 msdb.dbo.syspolicy_policy_categories 系統檢視。  
   
-`[ @policy_category_subscription_id = ] policy_category_subscription_id`這是類別目錄訂閱的識別碼。 *policy_category_subscription_id*是**int**，且會當做 OUTPUT 傳回。  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id` 這是類別目錄訂閱的識別碼。 *policy_category_subscription_id* 是 **int**，而且會傳回做為 OUTPUT。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
  您必須在 msdb 系統資料庫的內容中執行 sp_syspolicy_add_policy_category_subscription。  

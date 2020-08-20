@@ -1,4 +1,5 @@
 ---
+description: 建立知識庫
 title: 建立知識庫
 ms.date: 06/04/2013
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: aa740172957e3f0ba08812e298db5621ba43e890
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1dd8e0379d25b231de873ccfd1529284e62f0f1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887987"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487899"
 ---
 # <a name="create-a-knowledge-base"></a>建立知識庫
 
@@ -35,7 +36,7 @@ ms.locfileid: "85887987"
 ####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 或 dqs_administrator 角色，才能建立知識庫。  
   
-##  <a name="create-a-knowledge-base"></a><a name="Createaknowledgebase"></a>建立知識庫  
+##  <a name="create-a-knowledge-base"></a><a name="Createaknowledgebase"></a> 建立知識庫  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   

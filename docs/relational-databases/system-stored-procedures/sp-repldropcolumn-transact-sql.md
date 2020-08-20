@@ -1,5 +1,6 @@
 ---
-title: sp_repldropcolumn （Transact-sql） |Microsoft Docs
+description: sp_repldropcolumn (Transact-SQL)
+title: sp_repldropcolumn (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fdc1ec5f-f108-42b4-a2d8-f06a71913ab8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 718309e24e9ad7936dfc359e6db6ac529c926345
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0724bb3be7b22dc506f6038a9a5b9d1a1d25c0a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646102"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485750"
 ---
 # <a name="sp_repldropcolumn-transact-sql"></a>sp_repldropcolumn (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "85646102"
   從已發行的現有資料表發行項中卸除資料行。 這個預存程序執行於發行集資料庫的發行者端。  
   
 > [!IMPORTANT]
->  這個預存程序已被取代，支援它的目的，主要是為了與舊版相容。 它應該只用于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 發行者和重新發行 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 訂閱者。 這個程序不應該用於含有 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本中導入之資料類型的資料行。  
+>  這個預存程序已被取代，支援它的目的，主要是為了與舊版相容。 它應該只搭配 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 發行者和重新發行 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 訂閱者使用。 這個程序不應該用於含有 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本中導入之資料類型的資料行。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,30 +46,30 @@ sp_repldropcolumn [ @source_object = ] 'source_object', [ @column = ] 'column'
   
 ## <a name="arguments"></a>引數  
  [ @source_object =] '*source_object*'  
- 這是包含要卸除之資料行的資料表發行項名稱。 *source_object*是 Nvarchar （258），沒有預設值。  
+ 這是包含要卸除之資料行的資料表發行項名稱。 *source_object* 是 Nvarchar (258) ，沒有預設值。  
   
- [ @column =] ' 資料*行*'  
+ [ @column =] '*column*'  
  這是資料表中要卸除的資料行名稱。 資料*行*是 sysname，沒有預設值。  
   
  [ @from_agent =] *from_agent*  
- 預存程序是否由複寫代理程式執行。 *from_agent*是 int，預設值是0，當複寫代理程式執行這個預存程式時，會使用1的值，而在其他情況下，應該使用預設值0。  
+ 預存程序是否由複寫代理程式執行。 *from_agent* 是 int，預設值是0，當複寫代理程式執行這個預存程式時，會使用值1，而在其他情況下，則應該使用預設值0。  
   
  [ @schema_change_script =] '*schema_change_script*'  
- 指定用來修改系統產生之自訂預存程序的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令碼的名稱和路徑。 *schema_change_script*是 Nvarchar （4000），預設值是 Null。 複寫可讓使用者自訂的自訂預存程序，取代異動複寫所用的一個或多個預設程序。 *schema_change_script*是在使用 sp_repldropcolumn 對複寫的資料表發行項進行架構變更之後執行，而且可用來執行下列其中一項動作：  
+ 指定用來修改系統產生之自訂預存程序的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令碼的名稱和路徑。 *schema_change_script* 是 Nvarchar (4000) ，預設值是 Null。 複寫可讓使用者自訂的自訂預存程序，取代異動複寫所用的一個或多個預設程序。 *schema_change_script* 是在使用 sp_repldropcolumn 對複寫資料表發行項進行架構變更之後執行，而且可以用來執行下列其中一項：  
   
--   如果自動重新產生自訂預存程式， *schema_change_script*可以用來卸載這些自訂預存程式，並以支援新架構的使用者定義自訂預存程式來取代它們。  
+-   如果自動重新產生自訂預存程式， *schema_change_script* 可以用來卸載這些自訂預存程式，並將其取代為支援新架構的使用者定義自訂預存程式。  
   
 -   如果未自動重新產生自訂預存程式， *schema_change_script*可以用來重新產生這些預存程式，或建立使用者定義的自訂預存程式。  
   
  [ @force_invalidate_snapshot =] *force_invalidate_snapshot*  
- 啟用或停用使快照集失效的能力。 *force_invalidate_snapshot*是 bit，預設值是1。  
+ 啟用或停用使快照集失效的能力。 *force_invalidate_snapshot* 是 bit，預設值是1。  
   
  1 指定發行項的變更可能使快照集失效，若是如此，1 值會提供將出現之新快照集的權限。  
   
  0 指定發行項的變更不會使快照集失效。  
   
  [ @force_reinit_subscription =] *force_reinit_subscription*  
- 啟用或停用重新初始化訂閱的能力。 *force_reinit_subscription*是位，預設值是0。  
+ 啟用或停用重新初始化訂閱的能力。 *force_reinit_subscription* 是 bit，預設值是0。  
   
  0 指定發行項的變更不會使訂閱重新初始化。  
   

@@ -1,5 +1,6 @@
 ---
-title: sp_helppeerresponses （Transact-sql） |Microsoft Docs
+description: sp_helppeerresponses (Transact-SQL)
+title: sp_helppeerresponses (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: e55789d1-43fb-4a37-9e5e-60ccef122a5d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7b6e6ed76873abba0988045a1c336b4a34fb5d48
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9c1570b01ca8ae3d62303e64760dbc8664981bcb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893531"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485918"
 ---
 # <a name="sp_helppeerresponses-transact-sql"></a>sp_helppeerresponses (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  傳回對點對點複寫拓撲中的參與者所收到之特定狀態要求的所有回應，此要求是藉由在拓撲中任何已發行的資料庫上執行[sp_helppeerrequests](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)來起始。 這個預存程序是在參與點對點複寫拓撲之發行者的發行集資料庫執行。 如需相關資訊，請參閱 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。  
+  傳回從點對點複寫拓撲中的參與者收到之特定狀態要求的所有回應，此要求是藉由在拓撲中任何發行的資料庫上執行 [sp_helppeerrequests](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) 來起始。 這個預存程序是在參與點對點複寫拓撲之發行者的發行集資料庫執行。 如需相關資訊，請參閱 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -37,27 +38,27 @@ sp_helppeerresponses [ @request_id = ] request_id
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @request_id = ] request_id`這是特定狀態要求的識別碼。 *request_id*是**int**，沒有預設值。  
+`[ @request_id = ] request_id` 這是特定狀態要求的識別碼。 *request_id* 是 **int**，沒有預設值。  
   
 ## <a name="result-sets"></a>結果集  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**request_id**|**int**|狀態要求的識別碼。|  
-|**級**|**sysname**|產生回應的對等名稱。|  
+|**同行**|**sysname**|產生回應的對等名稱。|  
 |**peer_db**|**sysname**|在產生回應之對等的資料庫名稱。|  
 |**received_date**|**datetime**|從傳送回應的對等處，要求器收到回應的日期和時間。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_helppeerresponses**用於點對點異動複寫中。  
+ **sp_helppeerresponses** 用於點對點異動複寫中。  
   
- 在還原點對點拓撲中發行的資料庫時，會使用**sp_helppeerresponses**程式。  
+ 還原點對點拓撲中發行的資料庫時，會使用**sp_helppeerresponses**程式。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_helppeerresponses**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色或 **db_owner** 固定資料庫角色的成員，才能夠執行 **sp_helppeerresponses**。  
   
 ## <a name="see-also"></a>另請參閱  
  [sp_deletepeerrequesthistory &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   

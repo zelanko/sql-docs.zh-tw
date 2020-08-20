@@ -1,4 +1,5 @@
 ---
+description: SSIS 工具箱
 title: SSIS 工具箱 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
@@ -14,19 +15,19 @@ f1_keywords:
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1d69335c7455dcd34fc5368a68c86193c2fc7526
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2523c8ac095a576d243aef661092e7939e27863b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921812"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487661"
 ---
 # <a name="ssis-toolbox"></a>SSIS 工具箱
 
 [!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  所有自動安裝在本機電腦上的元件，都會列在 **SSIS 工具箱**中。 當您安裝其他元件時，在此工具箱內按一下滑鼠右鍵，然後按一下 [重新整理工具箱]  即可加入元件。  
+  所有自動安裝在本機電腦上的元件，都會列在 **SSIS 工具箱**中。 當您安裝其他元件時，在此工具箱內按一下滑鼠右鍵，然後按一下 [重新整理工具箱]**** 即可加入元件。  
  
  當您建立新的 SSIS 專案，或開啟現有的專案時，**SSIS 工具箱** 會自動開啟。 您也可以按一下位於套件設計介面右上角的工具箱按鈕開啟此工具箱，或是按一下 [檢視]-> [其他視窗]-> [SSIS 工具箱] 加以開啟。
  
@@ -39,7 +40,7 @@ ms.locfileid: "86921812"
 > 您無法從工具箱中*移除*已經安裝的元件。  
 
 ## <a name="toolbox-categories"></a>工具箱類別
- 在 **[SSIS 工具箱]** 中，會將控制流程和資料流程元件組織成不同的類別目錄。  您可以展開及摺疊類別，並重新排列元件。  若要還原預設的組織方式，可以在工具箱內按一下滑鼠右鍵，再按一下 [還原工具箱預設值]  。  
+ 在 **[SSIS 工具箱]** 中，會將控制流程和資料流程元件組織成不同的類別目錄。  您可以展開及摺疊類別，並重新排列元件。  若要還原預設的組織方式，可以在工具箱內按一下滑鼠右鍵，再按一下 [還原工具箱預設值]****。  
   
  當您選取 **[控制流程]** 、 **[資料流程]** 和 **[事件處理常式]** 索引標籤時， **[我的最愛]** 與 **[通用]** 類別目錄會出現在工具箱中。 當您選取 **[控制流程]** 索引標籤或 **[事件處理常式]** 索引標籤時， **[其他工作]** 類別目錄會出現在工具箱中。當您選取 **[資料流程]** 索引標籤時， **[其他轉換]** 、 **[其他來源]** 和 **[其他目的地]** 類別目錄會出現在工具箱中。  
 
@@ -64,5 +65,5 @@ ms.locfileid: "86921812"
   
 ## <a name="refresh-the-ssis-toolbox"></a>重新整理 SSIS 工具箱  
   
-1.  在 SSIS 工具箱中按一下滑鼠右鍵，然後按一下 [重新整理工具箱]  。  
+1.  在 SSIS 工具箱中按一下滑鼠右鍵，然後按一下 [重新整理工具箱]****。  
 

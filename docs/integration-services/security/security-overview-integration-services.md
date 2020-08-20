@@ -1,4 +1,5 @@
 ---
+description: 安全性概觀 (Integration Services)
 title: 安全性概觀 (Integration Services) | Microsoft Docs
 ms.custom: security
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b4abc0de87f8dc11fbbd1d66b32b2eb9a0f6f2b9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9e45f6fc97531038c7d1d16c34eb18fc19d189cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922012"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487678"
 ---
 # <a name="security-overview-integration-services"></a>安全性概觀 (Integration Services)
 
@@ -140,10 +141,10 @@ ms.locfileid: "86922012"
   
 -   [建立使用者定義角色](../../integration-services/security/integration-services-roles-ssis-service.md#create)  
   
--   [指派讀取器和寫入器角色給套件](../../integration-services/security/integration-services-roles-ssis-service.md#assign)  
+-   [指派讀取器和寫入器角色給封裝](../../integration-services/security/integration-services-roles-ssis-service.md#assign)  
   
 -   [透過設定登錄值實作簽署原則](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md#registry)  
   
 -   [使用數位憑證來簽署封裝](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md#cert)  
   
--   [設定或變更套件的保護等級](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#set_protection)  
+-   [設定或變更封裝的保護等級](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#set_protection)  

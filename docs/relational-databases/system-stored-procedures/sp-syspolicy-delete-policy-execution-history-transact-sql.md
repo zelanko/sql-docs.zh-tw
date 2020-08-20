@@ -1,5 +1,6 @@
 ---
-title: sp_syspolicy_delete_policy_execution_history （Transact-sql） |Microsoft Docs
+description: sp_syspolicy_delete_policy_execution_history (Transact-SQL)
+title: sp_syspolicy_delete_policy_execution_history (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fe651af9-267e-45ec-b4e7-4b0698fb1be3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cbee07cd02ca423a633133546130615bcb1d60c1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 99a17425f74b1ae2f5db7c4a6002e27ca7780f21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892708"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485617"
 ---
 # <a name="sp_syspolicy_delete_policy_execution_history-transact-sql"></a>sp_syspolicy_delete_policy_execution_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,17 +41,17 @@ sp_syspolicy_delete_policy_execution_history [ @policy_id = ] policy_id ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @policy_id = ] policy_id`這是您想要刪除其執行歷程記錄之原則的識別碼。 *policy_id*是**int**，而且是必要的。 可以是 NULL。  
+`[ @policy_id = ] policy_id` 這是您想要刪除執行記錄之原則的識別碼。 *policy_id* 是 **int**，而且是必要的。 可以是 NULL。  
   
-`[ @oldest_date = ] 'oldest_date'`這是您要保留原則執行歷程記錄的最舊日期。 早於這個日期的執行記錄會遭到刪除。 *oldest_date*是**datetime**，而且是必要的。 可以是 NULL。  
+`[ @oldest_date = ] 'oldest_date'` 這是您要保留原則執行歷程記錄的最舊日期。 早於這個日期的執行記錄會遭到刪除。 *oldest_date* 是 **datetime**，而且是必要的。 可以是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
  您必須在 msdb 系統資料庫的內容中執行 sp_syspolicy_delete_policy_execution_history。  
   
- 若要取得*policy_id*的值，並查看執行歷程記錄日期，您可以使用下列查詢：  
+ 若要取得 *policy_id*的值，以及若要查看執行歷程記錄日期，您可以使用下列查詢：  
   
 ```  
 SELECT a.name AS N'policy_name', b.policy_id, b.start_date, b.end_date  
@@ -61,13 +62,13 @@ ON a.policy_id = b.policy_id
   
  如果您針對一個或兩個值指定 NULL，將適用下列行為：  
   
--   若要刪除所有原則執行歷程記錄，請同時為*policy_id*和*oldest_date*指定 Null。  
+-   若要刪除所有原則執行記錄，請針對 *policy_id* 和 *oldest_date*指定 Null。  
   
--   若要刪除特定原則的所有原則執行歷程記錄，請指定*policy_id*的原則識別碼，並指定 Null 做為*oldest_date*。  
+-   若要刪除特定原則的所有原則執行記錄，請指定 *policy_id*的原則識別碼，並將 Null 指定為 *oldest_date*。  
   
--   若要在特定日期之前刪除所有原則的原則執行歷程記錄，請指定 Null 做為*policy_id*，並指定*oldest_date*的日期。  
+-   若要在特定日期之前刪除所有原則的原則執行記錄，請針對 *policy_id*指定 Null，然後指定 *oldest_date*的日期。  
   
- 若要封存原則執行記錄，您可以在 [物件總管] 中開啟「原則記錄」記錄檔，並將執行記錄匯出到某個檔案。 若要存取原則歷程記錄，請展開 [**管理**]，以滑鼠右鍵按一下 [**原則管理**]，然後按一下 [**查看歷程記錄**]。  
+ 若要封存原則執行記錄，您可以在 [物件總管] 中開啟「原則記錄」記錄檔，並將執行記錄匯出到某個檔案。 若要存取原則歷程記錄，請展開 [ **管理**]，以滑鼠右鍵按一下 [ **原則管理**]，然後按一下 [ **View History**]。  
   
 ## <a name="permissions"></a>權限  
  需要 PolicyAdministratorRole 固定資料庫角色中的成員資格。  

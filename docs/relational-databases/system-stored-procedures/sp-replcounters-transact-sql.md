@@ -1,5 +1,6 @@
 ---
-title: sp_replcounters （Transact-sql） |Microsoft Docs
+description: sp_replcounters (Transact-SQL)
+title: sp_replcounters (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fe585b1f-edda-421f-81d6-8a03a3a535d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98e5064c571a67afe445f265eaac693432cb5b38
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c4646b4062a0557a4c0b8a3086eef10f3e1a38a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85645447"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485729"
 ---
 # <a name="sp_replcounters-transact-sql"></a>sp_replcounters (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -49,13 +50,13 @@ sp_replcounters
 |**Replnextlsn**|**binary(10)**|等待傳遞給散發資料庫的下一項認可記錄的 LSN。|  
   
 ## <a name="remarks"></a>備註  
- **sp_replcounters**用於異動複寫中。  
+ **sp_replcounters** 用於異動複寫中。  
   
 ## <a name="permissions"></a>權限  
- 需要**db_owner**固定資料庫角色或**系統管理員（sysadmin** ）固定伺服器角色中的成員資格。  
+ 需要 **db_owner** 固定資料庫角色或 **系統管理員（sysadmin** ）固定伺服器角色中的成員資格。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_replcmds &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
+ [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
  [sp_repldone &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
  [sp_replflush &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

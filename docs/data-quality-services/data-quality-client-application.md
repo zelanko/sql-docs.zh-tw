@@ -1,4 +1,5 @@
 ---
+description: Data Quality Client 應用程式
 title: Data Quality Client 應用程式
 ms.date: 10/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 88deed9104d231b666a1ab3e6dfd72da94ad1465
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9442b966c7a7b5679e685fe330b52807c46af35f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899123"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487811"
 ---
 # <a name="data-quality-client-application"></a>Data Quality Client 應用程式
 
@@ -38,7 +39,7 @@ ms.locfileid: "85899123"
 |內容描述|主題|  
 |-------------------------|-----------|  
 |描述如何使用 DQS 中的知識文庫和定義域。|[DQS 知識庫與定義域](../data-quality-services/dqs-knowledge-bases-and-domains.md)|  
-|描述如何在 DQS 中清理資料。|[Data Cleansing](../data-quality-services/data-cleansing.md)|  
+|描述如何在 DQS 中清理資料。|[資料清理](../data-quality-services/data-cleansing.md)|  
 |描述如何在 DQS 中執行比對。|[資料比對](../data-quality-services/data-matching.md)|  
 |描述如何管理 DQS。|[dqs 管理](../data-quality-services/dqs-administration.md)|  
   

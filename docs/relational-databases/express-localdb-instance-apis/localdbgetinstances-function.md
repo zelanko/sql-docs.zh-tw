@@ -1,4 +1,5 @@
 ---
+description: LocalDBGetInstances 函數
 title: LocalDBGetInstances 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ apitype: DLLExport
 ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b7804207c887d95a719575406cfc85ae78d1bd7f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: de9e71560a66fb376d6aab2a6e334173be311aca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765233"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486903"
 ---
 # <a name="localdbgetinstances-function"></a>LocalDBGetInstances 函數
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,10 +41,10 @@ HRESULT LocalDBGetInstances(
   
 ## <a name="parameters"></a>參數  
  *pInstanceNames*  
- 輸出當此函式傳回時，會包含使用者工作站上已命名和預設 LocalDB 實例的名稱。  
+ 出當此函式傳回時，會在使用者的工作站上包含已命名和預設 LocalDB 實例的名稱。  
   
  *lpdwNumberOfInstances*  
- [輸入/輸出]在輸入時，包含*pInstanceNames*緩衝區中實例名稱的位置數目。 輸出時，包含在使用者工作站上找到的 LocalDB 實例數目。  
+ [輸入/輸出]在輸入時，包含 *pInstanceNames* 緩衝區中實例名稱的位置數目。 在輸出中，包含在使用者工作站上找到的 LocalDB 實例數目。  
   
 ## <a name="returns"></a>傳回  
  S_OK  
@@ -71,7 +72,7 @@ HRESULT LocalDBGetInstances(
  發生意外錯誤。 請參閱事件記錄檔，以取得詳細資料。  
   
 ## <a name="remarks"></a>備註  
- 如需使用 LocalDB API 的程式碼範例，請參閱[SQL Server Express Localdb 參考](../../relational-databases/sql-server-express-localdb-reference.md)。  
+ 如需使用 LocalDB API 的程式碼範例，請參閱 [SQL Server Express Localdb 參考](../../relational-databases/sql-server-express-localdb-reference.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Express LocalDB 標頭和版本資訊](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  

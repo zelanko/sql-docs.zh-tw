@@ -1,4 +1,5 @@
 ---
+description: Integration Services 服務所記錄的事件
 title: Integration Services 服務所記錄的事件 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1a3d0272916814eb8ba9234217d6e7978c8a925e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a9897a33c986a78061d18b06ba76db7685e5fb3a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922015"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487691"
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Integration Services 服務所記錄的事件
 
@@ -71,23 +72,23 @@ ms.locfileid: "86922015"
   
 1.  開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
-2.  在 **[檔案]** 功能表上，按一下 **[連接物件總管]** 。  
+2.  在 **[檔案]** 功能表上，按一下 **[連接物件總管]**。  
   
-3.  在 **[連接到伺服器]** 對話方塊中，選取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器類型，選取或尋找要連接的伺服器，然後按一下 **[連接]** 。  
+3.  在 **[連接到伺服器]** 對話方塊中，選取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器類型，選取或尋找要連接的伺服器，然後按一下 **[連接]**。  
   
-4.  在物件總管中，以滑鼠右鍵按一下 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，然後按一下 [檢視記錄]  。  
+4.  在物件總管中，以滑鼠右鍵按一下 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，然後按一下 [檢視記錄]****。  
   
-5.  若要檢視 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 事件，請選取 **[SQL Server Integration Services]** 。 **[NT 事件]** 選項會隨 **[SQL Server Integration Services]** 選項的選取和清除而自動選取和清除。  
+5.  若要檢視 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 事件，請選取 **[SQL Server Integration Services]**。 **[NT 事件]** 選項會隨 **[SQL Server Integration Services]** 選項的選取和清除而自動選取和清除。  
   
 ### <a name="to-view-service-events-for-integration-services-in-windows-event-viewer"></a>在 Windows 事件檢視器中檢視 Integration Services 的服務事件  
   
-1.  在 **[控制台]** 中，如果您使用「一般檢視」，請按一下 **[系統管理工具]** ，如果您使用「類別檢視」，請按一下 **[效能及維護]** ，然後按一下 **[系統管理工具]** 。  
+1.  在 **[控制台]** 中，如果您使用「一般檢視」，請按一下 **[系統管理工具]**，如果您使用「類別檢視」，請按一下 **[效能及維護]** ，然後按一下 **[系統管理工具]**。  
   
-2.  按一下 **[事件檢視器]** 。  
+2.  按一下 **[事件檢視器]**。  
   
-3.  在 **[事件檢視器]** 對話方塊中，按一下 **[應用程式]** 。  
+3.  在 **[事件檢視器]** 對話方塊中，按一下 **[應用程式]**。  
   
-4.  在 [應用程式]  嵌入式管理單元中，尋找 [來源]  資料行中值為 **SQLISService** 的項目，以滑鼠右鍵按一下該項目，然後按一下 [屬性]  。  
+4.  在 [應用程式]**** 嵌入式管理單元中，尋找 [來源]**** 資料行中值為 **SQLISService** 的項目，以滑鼠右鍵按一下該項目，然後按一下 [屬性]****。  
   
 5.  選擇性地按一下向上箭頭或向下箭頭，以顯示上一個或下一個事件。  
   
@@ -95,7 +96,7 @@ ms.locfileid: "86922015"
   
 7.  選擇使用位元組或文字顯示事件資料。  
   
-8.  按一下 [確定]  。  
+8.  按一下 [確定]。  
   
 9. 在 **[檔案]** 功能表上，按一下 **[結束]** ，以關閉 **[事件檢視器]** 對話方塊。  
  

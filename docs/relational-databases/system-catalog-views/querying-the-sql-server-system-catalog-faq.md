@@ -1,4 +1,5 @@
 ---
+description: 查詢 SQL Server 系統目錄 FAQ
 title: 查詢 SQL Server 系統目錄常見問題 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 78a0a77cc02512d031f7a6749871150026647acf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 17b7367ddcd8795eef64181934c8d44bb648c6e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787209"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486576"
 ---
 # <a name="querying-the-sql-server-system-catalog-faq"></a>查詢 SQL Server 系統目錄 FAQ
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   本主題包含常見問題集的清單。 這些問題的答案就是根據目錄檢視而來的查詢。  
   
-##  <a name="frequently-asked-questions"></a><a name="_TOP"></a>常見問題  
+##  <a name="frequently-asked-questions"></a><a name="_TOP"></a> 常見問題  
  下列各節將依類別列出常見問題集。  
   
 ### <a name="data-types"></a>資料類型  
@@ -109,7 +110,7 @@ ms.locfileid: "85787209"
   
 ## <a name="answers"></a>回答  
   
-###  <a name="how-do-i-find-all-the-tables-that-do-not-have-a-clustered-index-in-a-specified-database"></a><a name="_FAQ1"></a>如何? 在指定的資料庫中找不到叢集索引的所有資料表嗎？  
+###  <a name="how-do-i-find-all-the-tables-that-do-not-have-a-clustered-index-in-a-specified-database"></a><a name="_FAQ1"></a> 如何? 在指定的資料庫中找不到叢集索引的所有資料表嗎？  
  在您執行下列查詢之前，請使用有效的資料庫名稱取代 `<database_name>`。  
   
 ```  
@@ -141,7 +142,7 @@ GO
   
  [返回頁首](#_TOP)  
   
-###  <a name="how-do-i-find-all-the-owners-of-entities-contained-in-a-specified-schema"></a><a name="_FAQ2"></a>如何? 尋找指定的架構中包含的所有實體擁有者嗎？  
+###  <a name="how-do-i-find-all-the-owners-of-entities-contained-in-a-specified-schema"></a><a name="_FAQ2"></a> 如何? 尋找指定架構中包含的所有實體擁有者？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>` 及 `<schema_name>`。  
   
 ```  
@@ -169,7 +170,7 @@ GO
   
  [返回頁首](#_TOP)  
   
-###  <a name="how-do-i-find-all-the-tables-that-do-not-have-a-primary-key"></a><a name="_FAQ3"></a>如何? 尋找沒有主鍵的所有資料表嗎？  
+###  <a name="how-do-i-find-all-the-tables-that-do-not-have-a-primary-key"></a><a name="_FAQ3"></a> 如何? 尋找所有沒有主鍵的資料表？  
  在您執行下列查詢之前，請使用有效的資料庫名稱取代 `<database_name>`。  
   
 ```  
@@ -204,7 +205,7 @@ GO
   
  [返回頁首](#_TOP)  
   
-###  <a name="how-do-i-find-all-the-tables-that-do-not-have-an-index"></a><a name="_FAQ4"></a>如何? 尋找沒有索引的所有資料表嗎？  
+###  <a name="how-do-i-find-all-the-tables-that-do-not-have-an-index"></a><a name="_FAQ4"></a> 如何? 尋找沒有索引的所有資料表？  
  在您執行下列查詢之前，請使用有效的資料庫名稱取代 `<database_name>`。  
   
 ```  
@@ -221,7 +222,7 @@ GO
   
  [返回頁首](#_TOP)  
   
-###  <a name="how-do-i-find-all-the-tables-that-have-an-identity-column"></a><a name="_FAQ5"></a>如何? 尋找具有識別欄位的所有資料表嗎？  
+###  <a name="how-do-i-find-all-the-tables-that-have-an-identity-column"></a><a name="_FAQ5"></a> 如何? 尋找有識別欄位的所有資料表？  
  在您執行下列查詢之前，請使用有效的資料庫名稱取代 `<database_name>`。  
   
 ```  
@@ -256,7 +257,7 @@ GO
   
  [返回頁首](#_TOP)  
   
-###  <a name="how-do-i-find-the-data-types-of-the-columns-of-a-specified-table"></a><a name="_FAQ7"></a>如何? 找出指定之資料表的資料行類型嗎？  
+###  <a name="how-do-i-find-the-data-types-of-the-columns-of-a-specified-table"></a><a name="_FAQ7"></a> 如何? 尋找指定資料表之資料行的資料類型？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>` 及 `<schema_name.table_name>`。  
   
 ```  
@@ -281,7 +282,7 @@ GO
   
  [返回頁首](#_TOP)  
   
-###  <a name="how-do-i-find-the-dependencies-on-a-specified-function"></a><a name="_FAQ8"></a>如何? 在指定的函式上尋找相依性嗎？  
+###  <a name="how-do-i-find-the-dependencies-on-a-specified-function"></a><a name="_FAQ8"></a> 如何? 尋找指定函數的相依性？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>` 及 `<schema_name.function_name>`。  
   
 ```  
@@ -299,7 +300,7 @@ GO
   
  [返回頁首](#_TOP)  
   
-###  <a name="how-do-i-find-all-the-stored-procedures-in-a-database"></a><a name="_FAQ9"></a>如何? 尋找資料庫中的所有預存程式？  
+###  <a name="how-do-i-find-all-the-stored-procedures-in-a-database"></a><a name="_FAQ9"></a> 如何? 尋找資料庫中的所有預存程式？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>`。  
   
 ```  
@@ -318,7 +319,7 @@ GO
   
  [返回頁首](#_TOP)  
   
-###  <a name="how-do-i-find-the-parameters-for-a-specified-stored-procedure-or-function"></a><a name="_FAQ10"></a>如何? 找出指定的預存程式或函數的參數嗎？  
+###  <a name="how-do-i-find-the-parameters-for-a-specified-stored-procedure-or-function"></a><a name="_FAQ10"></a> 如何? 尋找指定預存程式或函數的參數？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>` 及 `<schema_name.object_name>`。  
   
 ```  
@@ -344,7 +345,7 @@ GO
   
  [返回頁首](#_TOP)  
   
-###  <a name="how-do-i-find-all-the-user-defined-functions-in-a-database"></a><a name="_FAQ12"></a>如何? 在資料庫中尋找所有使用者定義函數嗎？  
+###  <a name="how-do-i-find-all-the-user-defined-functions-in-a-database"></a><a name="_FAQ12"></a> 如何? 尋找資料庫中的所有使用者定義函數？  
  在您執行下列查詢之前，請使用有效的資料庫名稱取代 `<database_name>`。  
   
 ```  
@@ -363,7 +364,7 @@ GO
   
  [返回頁首](#_TOP)  
   
-###  <a name="how-do-i-find-all-views-in-a-database"></a><a name="_FAQ13"></a>如何? 在資料庫中尋找所有視圖嗎？  
+###  <a name="how-do-i-find-all-views-in-a-database"></a><a name="_FAQ13"></a> 如何? 尋找資料庫中的所有視圖？  
  在您執行下列查詢之前，請使用有效的資料庫名稱取代 `<database_name>`。  
   
 ```  
@@ -381,7 +382,7 @@ FROM sys.views;
   
  [返回頁首](#_TOP)  
   
-###  <a name="how-do-i-find-all-the-entities-that-have-been-modified-in-the-last-n-days"></a><a name="_FAQ6"></a>如何? 尋找過去 N 天內修改過的所有實體嗎？  
+###  <a name="how-do-i-find-all-the-entities-that-have-been-modified-in-the-last-n-days"></a><a name="_FAQ6"></a> 如何? 尋找過去 N 天內修改過的所有實體？  
  在您執行下列查詢之前，請使用有效的值取代 `<database_name>` 及 `<n_days>`。  
   
 ```  
@@ -401,7 +402,7 @@ GO
   
  [返回頁首](#_TOP)  
   
-###  <a name="how-do-i-find-the-lob-data-types-of-a-specified-table"></a><a name="_FAQ14"></a>如何? 找出指定資料表的 LOB 資料類型嗎？  
+###  <a name="how-do-i-find-the-lob-data-types-of-a-specified-table"></a><a name="_FAQ14"></a> 如何? 尋找指定資料表的 LOB 資料類型？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>` 及 `<schema_name.table_name>`。  
   
 ```  
@@ -429,7 +430,7 @@ GO
   
  [返回頁首](#_TOP)  
   
-###  <a name="how-do-i-view-the-definition-of-a-module"></a><a name="_FAQ15"></a>如何? 看到模組的定義嗎？  
+###  <a name="how-do-i-view-the-definition-of-a-module"></a><a name="_FAQ15"></a> 如何? 查看模組的定義嗎？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>` 及 `<schema_name.object_name>`。  
   
 ```  
@@ -454,7 +455,7 @@ GO
   
  [返回頁首](#_TOP)  
   
-###  <a name="how-do-i-view-the-definition-of-a-server-level-trigger"></a><a name="_FAQ19"></a>如何? 查看伺服器層級觸發程式的定義嗎？  
+###  <a name="how-do-i-view-the-definition-of-a-server-level-trigger"></a><a name="_FAQ19"></a> 如何? 查看伺服器層級觸發程式的定義嗎？  
   
 ```  
 SELECT definition  
@@ -465,7 +466,7 @@ GO
   
  [返回頁首](#_TOP)  
   
-###  <a name="how-do-i-find-the-columns-of-a-primary-key-for-a-specified-table"></a><a name="_FAQ16"></a>如何? 尋找指定資料表的主鍵資料行嗎？  
+###  <a name="how-do-i-find-the-columns-of-a-primary-key-for-a-specified-table"></a><a name="_FAQ16"></a> 如何? 尋找指定資料表之主鍵的資料行？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>` 及 `<schema_name.table_name>`。  
   
 ```  
@@ -508,7 +509,7 @@ GO
   
  [返回頁首](#_TOP)  
   
-###  <a name="how-do-i-find-the-columns-of-a-foreign-key-for-a-specified-table"></a><a name="_FAQ17"></a>如何? 找出指定資料表的外鍵資料行嗎？  
+###  <a name="how-do-i-find-the-columns-of-a-foreign-key-for-a-specified-table"></a><a name="_FAQ17"></a> 如何? 尋找指定資料表外鍵的資料行？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>` 及 `<schema_name.table_name>`。  
   
 ```  
@@ -532,7 +533,7 @@ WHERE f.parent_object_id = OBJECT_ID('<schema_name.table_name>');
   
  [返回頁首](#_TOP)  
   
-###  <a name="how-do-i-find-the-permissions-granted-or-denied-to-a-specified-principal"></a><a name="_FAQ18"></a>如何? 尋找對指定的主體授與或拒絕的許可權嗎？  
+###  <a name="how-do-i-find-the-permissions-granted-or-denied-to-a-specified-principal"></a><a name="_FAQ18"></a> 如何? 尋找對指定主體授與或拒絕的許可權？  
  下列範例會建立一個函數，可傳回在其上檢查權限之實體的名稱。 此函數會在後面的查詢中叫用。 您必須在想要檢查權限的每個資料庫中建立此函數。  
   
 ```  
@@ -615,7 +616,7 @@ GO
   
  [返回頁首](#_TOP)  
   
-###  <a name="how-do-i-determine-if-a-column-is-used-in-a-computed-column-expression"></a><a name="_FAQ20"></a>如何? 判斷是否在計算資料行運算式中使用資料行？  
+###  <a name="how-do-i-determine-if-a-column-is-used-in-a-computed-column-expression"></a><a name="_FAQ20"></a> 如何? 判斷是否在計算資料行運算式中使用資料行？  
  在您執行下列查詢之前，請 `<database_name>` `<schema_name.table_name>` `<column_name` 使用有效的名稱取代、和>。  
   
 ```  
@@ -637,7 +638,7 @@ GO
   
  [返回頁首](#_TOP)  
   
-###  <a name="how-do-i-find-all-the-columns-that-are-used-in-a-computed-column-expression"></a><a name="_FAQ21"></a>如何? 尋找計算資料行運算式中使用的所有資料行？  
+###  <a name="how-do-i-find-all-the-columns-that-are-used-in-a-computed-column-expression"></a><a name="_FAQ21"></a> 如何? 尋找計算資料行運算式中使用的所有資料行？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>`。  
   
 ```  
@@ -659,8 +660,8 @@ GO
   
  [返回頁首](#_TOP)  
   
-###  <a name="how-do-i-find-the-columns-that-depend-on-a-specified-clr-user-defined-type-or-alias-type"></a><a name="_FAQ22"></a>如何? 尋找相依于指定 CLR 使用者定義型別或別名型別的資料行？  
- 在您執行下列查詢之前，請 `<database_name>` 使用有效的名稱取代，並 `<schema_name.data_type_name>` 使用有效的架構限定 CLR 使用者定義型別或架構限定的別名型別名稱。 下列查詢需要**db_owner**角色的成員資格或許可權，才能查看資料庫中的所有相依資料行和計算資料行中繼資料。  
+###  <a name="how-do-i-find-the-columns-that-depend-on-a-specified-clr-user-defined-type-or-alias-type"></a><a name="_FAQ22"></a> 如何? 尋找相依于指定 CLR 使用者定義型別或別名類型的資料行？  
+ 在您執行下列查詢之前，請 `<database_name>` 使用有效的名稱取代，並 `<schema_name.data_type_name>` 以有效、架構合格的 CLR 使用者定義型別或架構限定的別名類型名稱取代。 下列查詢需要 **db_owner** 角色的成員資格或許可權，才能查看資料庫中所有的相依資料行和計算資料行中繼資料。  
   
 ```  
 USE <database_name>;  
@@ -681,7 +682,7 @@ GO
   
 ```  
   
- 下列查詢會根據 CLR 使用者定義的類型或別名，傳回限制且窄的資料行視圖，但是**public**角色可以看到結果集。 如果您已將使用者定義型別的 REFERENCE 權限授與他人，卻沒有權限檢視使用該類型之人所建立物件的中繼資料，則可以使用這個查詢。  
+ 下列查詢會根據 CLR 使用者定義型別或別名，傳回限制且窄的資料行觀點，但 **public** 角色可以看到結果集。 如果您已將使用者定義型別的 REFERENCE 權限授與他人，卻沒有權限檢視使用該類型之人所建立物件的中繼資料，則可以使用這個查詢。  
   
 ```  
 USE <database_name>;  
@@ -697,7 +698,7 @@ GO
   
  [返回頁首](#_TOP)  
   
-###  <a name="how-do-i-find-the-computed-columns-that-depend-on-a-specified-clr-user-defined-type-or-alias-type"></a><a name="_FAQ23"></a>如何? 尋找相依于指定 CLR 使用者定義型別或別名型別的計算資料行？  
+###  <a name="how-do-i-find-the-computed-columns-that-depend-on-a-specified-clr-user-defined-type-or-alias-type"></a><a name="_FAQ23"></a> 如何? 尋找相依于指定 CLR 使用者定義型別或別名類型的計算資料行？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>`，並使用符合結構描述的有效 CLR 使用者定義型別、別名類型名稱來取代 `<schema_name.data_type_name>`。  
   
 ```  
@@ -714,8 +715,8 @@ WHERE referenced_major_id = TYPE_ID('<schema_name.data_type_name>')
   
  [返回頁首](#_TOP)  
   
-###  <a name="how-do-i-find-the-parameters-that-depend-on-a-specified-clr-user-defined-type-or-alias-type"></a><a name="_FAQ24"></a>如何? 尋找相依于指定 CLR 使用者定義型別或別名型別的參數嗎？  
- 在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>`，並使用符合結構描述的有效 CLR 使用者定義型別、別名類型名稱來取代 `<schema_name.data_type_name>`。 下列查詢需要**db_owner**角色的成員資格或許可權，才能查看資料庫中的所有相依資料行和計算資料行中繼資料。  
+###  <a name="how-do-i-find-the-parameters-that-depend-on-a-specified-clr-user-defined-type-or-alias-type"></a><a name="_FAQ24"></a> 如何? 尋找相依于指定 CLR 使用者定義型別或別名類型的參數？  
+ 在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>`，並使用符合結構描述的有效 CLR 使用者定義型別、別名類型名稱來取代 `<schema_name.data_type_name>`。 下列查詢需要 **db_owner** 角色的成員資格或許可權，才能查看資料庫中所有的相依資料行和計算資料行中繼資料。  
   
 ```  
 USE <database_name>;  
@@ -740,7 +741,7 @@ GO
   
 ```  
   
- 下列查詢會傳回相依于 CLR 使用者定義型別或別名之參數的限制和窄視圖，但是**public**角色可以看到結果集。 如果您已將使用者定義型別的 REFERENCE 權限授與他人，卻沒有權限檢視使用該類型之人所建立物件的中繼資料，則可以使用這個查詢。  
+ 下列查詢會根據 CLR 使用者定義型別或別名，傳回限制且窄的參數視圖，但 **public** 角色可以看到結果集。 如果您已將使用者定義型別的 REFERENCE 權限授與他人，卻沒有權限檢視使用該類型之人所建立物件的中繼資料，則可以使用這個查詢。  
   
 ```  
 USE <database_name>;  
@@ -756,8 +757,8 @@ GO
   
  [返回頁首](#_TOP)  
   
-###  <a name="how-do-i-find-the-check-constraints-that-depend-on-a-specified-clr-user-defined-type"></a><a name="_FAQ25"></a>如何? 尋找相依于指定 CLR 使用者定義型別的檢查條件約束？  
- 在您執行下列查詢之前，請 `<database_name>` 使用有效的名稱取代，並 `<schema_name.data_type_name>` 使用有效的架構限定 CLR 使用者定義型別名稱。  
+###  <a name="how-do-i-find-the-check-constraints-that-depend-on-a-specified-clr-user-defined-type"></a><a name="_FAQ25"></a> 如何? 尋找相依于指定 CLR 使用者定義型別的檢查條件約束？  
+ 在您執行下列查詢之前，請 `<database_name>` 使用有效的名稱取代，並 `<schema_name.data_type_name>` 以有效且符合架構的 CLR 使用者定義型別名稱取代。  
   
 ```  
 USE <database_name>;  
@@ -776,10 +777,10 @@ GO
   
  [返回頁首](#_TOP)  
   
-###  <a name="how-do-i-find-the-views-transact-sql-functions-and-transact-sql-stored-procedures-that-depend-on-a-specified-clr-user-defined-type-or-alias-type"></a><a name="_FAQ26"></a>如何? 找出相依于指定 CLR 使用者定義型別或別名型別的 views、Transact-sql 函數和 Transact-sql 預存程式嗎？  
+###  <a name="how-do-i-find-the-views-transact-sql-functions-and-transact-sql-stored-procedures-that-depend-on-a-specified-clr-user-defined-type-or-alias-type"></a><a name="_FAQ26"></a> 如何? 尋找相依于指定 CLR 使用者定義型別或別名類型的 views、Transact-sql 函數和 Transact-sql 預存程式？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>`，並使用符合結構描述的有效 CLR 使用者定義型別、別名類型名稱來取代 `<schema_name.data_type_name>`。  
   
- 在函數或程序中定義的參數隱含結構描述繫結。 因此，您可以使用[sql_dependencies](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)目錄檢視來查看相依于 CLR 使用者定義型別或別名類型的參數。 程序和觸發程序不是結構描述繫結。 這表示任何定義於程序或觸發程序主體的運算式，與 CLR 使用者定義型別或別名資料型別之間的相依性不會保留。 具有相依于 CLR 使用者定義型別或別名型別之運算式的架構系結視圖和架構系結使用者定義函數，會在**sql_dependencies**目錄檢視中維護。 類型與 CLR 函數及 CLR 程序之間的相依性不會保留。  
+ 在函數或程序中定義的參數隱含結構描述繫結。 因此，您可以使用 [sys. sql_dependencies](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md) 目錄檢視來查看相依于 CLR 使用者定義型別或別名類型的參數。 程序和觸發程序不是結構描述繫結。 這表示任何定義於程序或觸發程序主體的運算式，與 CLR 使用者定義型別或別名資料型別之間的相依性不會保留。 架構系結視圖和架構系結使用者定義函數（具有相依于 CLR 使用者定義型別或別名類型的運算式）會在 **sys. sql_dependencies** 目錄檢視中進行維護。 類型與 CLR 函數及 CLR 程序之間的相依性不會保留。  
   
  下列查詢會針對指定的 CLR 使用者定義型別或別名資料型別，傳回其檢視、[!INCLUDE[tsql](../../includes/tsql-md.md)] 函數及 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序中的所有結構描述繫結相依性。  
   
@@ -804,7 +805,7 @@ GO
   
  [返回頁首](#_TOP)  
   
-###  <a name="how-do-i-find-all-the-constraints-for-a-specified-table"></a><a name="_FAQ27"></a>如何? 尋找指定資料表的所有條件約束嗎？  
+###  <a name="how-do-i-find-all-the-constraints-for-a-specified-table"></a><a name="_FAQ27"></a> 如何? 尋找指定資料表的所有條件約束？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>` 及 `<schema_name.table_name>`。  
   
 ```  
@@ -828,7 +829,7 @@ GO
   
  [返回頁首](#_TOP)  
   
-###  <a name="how-do-i-find-all-the-indexes-for-a-specified-table"></a><a name="_FAQ28"></a>如何? 尋找指定資料表的所有索引嗎？  
+###  <a name="how-do-i-find-all-the-indexes-for-a-specified-table"></a><a name="_FAQ28"></a> 如何? 尋找指定資料表的所有索引嗎？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>` 及 `<schema_name.table_name>`。  
   
 ```  
@@ -857,7 +858,7 @@ GO
   
  [返回頁首](#_TOP)  
   
-###  <a name="how-do-i-find-all-the-objects-that-have-a-specified-column-name"></a><a name="_FAQ30"></a>如何? 尋找所有具有指定之資料行名稱的物件嗎？  
+###  <a name="how-do-i-find-all-the-objects-that-have-a-specified-column-name"></a><a name="_FAQ30"></a> 如何? 尋找具有指定之資料行名稱的所有物件？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>` 及 `<column_name>`。  
   
 ```  
@@ -887,7 +888,7 @@ GO
   
  [返回頁首](#_TOP)  
   
-###  <a name="how-do-i-find-all-the-user-defined-tables-in-a-specified-database"></a><a name="_FAQ31"></a>如何? 在指定的資料庫中尋找所有使用者定義資料表嗎？  
+###  <a name="how-do-i-find-all-the-user-defined-tables-in-a-specified-database"></a><a name="_FAQ31"></a> 如何? 尋找指定資料庫中的所有使用者定義資料表？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>`。  
   
 ```  
@@ -901,7 +902,7 @@ GO
   
  [返回頁首](#_TOP)  
   
-###  <a name="how-do-i-find-all-the-tables-and-indexes-that-are-partitioned"></a><a name="_FAQ32"></a>如何? 尋找已分割的所有資料表和索引嗎？  
+###  <a name="how-do-i-find-all-the-tables-and-indexes-that-are-partitioned"></a><a name="_FAQ32"></a> 如何? 尋找已分割的所有資料表和索引嗎？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>`。  
   
 ```  
@@ -923,7 +924,7 @@ GO
   
  [返回頁首](#_TOP)  
   
-###  <a name="how-do-i-find-all-the-statistics-on-a-specified-object"></a><a name="_FAQ33"></a>如何? 在指定的物件上尋找所有統計資料嗎？  
+###  <a name="how-do-i-find-all-the-statistics-on-a-specified-object"></a><a name="_FAQ33"></a> 如何? 尋找指定物件上的所有統計資料？  
  在您執行以下查詢之前，請使用有效的名稱取代 `<database_name>`，並使用有效的資料表、索引檢視或資料表值函數名稱來取代 `<schema_name.object_name>`。  
   
 ```  
@@ -942,7 +943,7 @@ GO
   
  [返回頁首](#_TOP)  
   
-###  <a name="how-do-i-find-all-the-statistics-and-statistics-columns-on-a-specified-object"></a><a name="_FAQ34"></a>如何? 在指定的物件上尋找所有統計資料和統計資料行嗎？  
+###  <a name="how-do-i-find-all-the-statistics-and-statistics-columns-on-a-specified-object"></a><a name="_FAQ34"></a> 如何? 尋找指定物件上的所有統計資料和統計資料資料行？  
  在您執行以下查詢之前，請使用有效的名稱取代 `<database_name>`，並使用有效的資料表、索引檢視或資料表值函數名稱來取代 `<schema_name.object_name>`。  
   
 ```  
@@ -963,7 +964,7 @@ GO
   
  [返回頁首](#_TOP)  
   
-###  <a name="how-do-i-find-the-definition-of-a-view"></a><a name="_FAQ35"></a>如何? 尋找視圖的定義嗎？  
+###  <a name="how-do-i-find-the-definition-of-a-view"></a><a name="_FAQ35"></a> 如何? 尋找視圖的定義嗎？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>` 及 `<schema_name.object_name>`。  
   
 ```  
@@ -989,6 +990,6 @@ GO
  [返回頁首](#_TOP)  
   
 ## <a name="see-also"></a>另請參閱  
- [將系統資料表對應至系統檢視 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
+ [&#40;Transact-sql&#41;將系統資料表對應至系統檢視 ](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

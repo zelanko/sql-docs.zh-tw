@@ -1,4 +1,5 @@
 ---
+description: STBoundary (geometry 資料類型)
 title: STBoundary (geometry 資料類型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f0551674-e6e8-4926-9038-df03f2c807d7
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 2f99cc9931a136d7b3d3919687e5e5b8ffee269c
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 5db55454ff0221435ce703b9388ffce2420752be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555988"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488113"
 ---
 # <a name="stboundary-geometry-data-type"></a>STBoundary (geometry 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

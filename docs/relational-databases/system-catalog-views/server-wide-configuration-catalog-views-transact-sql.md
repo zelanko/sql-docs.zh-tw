@@ -1,5 +1,6 @@
 ---
-title: 全伺服器設定目錄 Views （Transact-sql） |Microsoft Docs
+description: 伺服器範圍組態目錄檢視 (Transact-SQL)
+title: " (Transact-sql) 的全伺服器設定目錄檢視 |Microsoft Docs"
 ms.custom: ''
 ms.date: 12/01/2015
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fa039662-6eb6-47d9-952c-229a4dffa81d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4340e6368f3865b26c9d8fb6e18c049ca71ba263
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 558c4bd2bfcee6c7aa53bc84bfcefe646672fe6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442769"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486521"
 ---
 # <a name="server-wide-configuration-catalog-views-transact-sql"></a>伺服器範圍組態目錄檢視 (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -50,6 +51,6 @@ ms.locfileid: "87442769"
 
 ## <a name="see-also"></a>另請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [&#40;Transact-sql&#41;的系統檢視](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [&#40;Transact-sql&#41;的系統檢視 ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

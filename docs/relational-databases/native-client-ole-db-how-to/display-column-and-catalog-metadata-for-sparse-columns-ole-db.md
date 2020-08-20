@@ -1,5 +1,6 @@
 ---
-title: 稀疏資料行的中繼資料（OLE DB）
+description: 'SQL Server Native Client (OLE DB 的稀疏資料行顯示資料行和目錄中繼資料) '
+title: " (OLE DB) 的稀疏資料行中繼資料"
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -11,19 +12,19 @@ ms.assetid: 3b8ccad5-411d-4b79-b95e-ee524714f7d6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2f8f5c90aadc601ce6c63bcd0f6915a540f43f69
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 6e9aa2f1710df5a1acee8fa7b7c7a9be72b88a87
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247878"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486721"
 ---
-# <a name="sql-server-native-client-display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>SQL Server Native Client 顯示稀疏資料行的資料行和目錄中繼資料（OLE DB）
+# <a name="sql-server-native-client-display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>SQL Server Native Client (OLE DB 的稀疏資料行顯示資料行和目錄中繼資料) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   此範例會建立包含三個資料行的資料表：疏鬆資料行、非疏鬆資料行的資料行，以及資料行集資料行。 接著，範例會顯示 OLE DB 旗標以顯示非疏鬆資料行和資料行集資料行的資料行和目錄中繼資料。  
   
- 此範例適用於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本。 如需稀疏資料行的詳細資訊，請參閱[SQL Server Native Client 中的稀疏資料行支援](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)。  
+ 此範例適用於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本。 如需有關稀疏資料行的詳細資訊，請參閱 [SQL Server Native Client 中的稀疏資料行支援](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)。  
   
 ## <a name="example"></a>範例  
  請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
