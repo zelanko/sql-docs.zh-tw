@@ -1,5 +1,6 @@
 ---
-title: sp_OADestroy （Transact-sql） |Microsoft Docs
+description: sp_OADestroy (Transact-SQL)
+title: sp_OADestroy (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0bd1cff4-ceff-4095-9ae4-e1e65a80f5d6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 363d89a420d6fd927293fc39525e1a95d7ebd4b0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5bb9f3e59cf27c9bfbac1430c0d7c0830170367d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893424"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473928"
 ---
 # <a name="sp_oadestroy-transact-sql"></a>sp_OADestroy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,21 +41,21 @@ sp_OADestroy objecttoken
   
 ## <a name="arguments"></a>引數  
  *objecttoken*  
- 這是先前使用**sp_OACreate**所建立之 OLE 物件的物件 token。  
+ 這是先前使用 **sp_OACreate**所建立之 OLE 物件的物件 token。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或非零數字 (失敗)，這個數字是 OLE Automation 物件所傳回之 HRESULT 的整數值。  
   
- 如需 HRESULT 傳回碼的詳細資訊，請參閱[OLE Automation 傳回碼和錯誤資訊](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)。  
+ 如需 HRESULT 傳回碼的詳細資訊，請參閱 [OLE Automation 傳回碼和錯誤資訊](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)。  
   
 ## <a name="remarks"></a>備註  
- 如果未呼叫**sp_OADestroy** ，則會在批次結束時自動終結所建立的 OLE 物件。  
+ 如果未呼叫 **sp_OADestroy** ，則會在批次結束時自動終結所建立的 OLE 物件。  
   
 ## <a name="permissions"></a>權限  
- 需要**系統管理員（sysadmin** ）固定伺服器角色的成員資格，或直接在這個預存程式上執行許可權。 `Ole Automation Procedures`必須**啟用**設定，才能使用與 OLE Automation 相關的任何系統程式。  
+ 需要 **系統管理員（sysadmin** ）固定伺服器角色中的成員資格，或直接在此預存程式上執行許可權。 `Ole Automation Procedures` 必須 **啟用** 設定，才能使用任何與 OLE Automation 相關的系統程式。  
   
 ## <a name="examples"></a>範例  
- 下列範例會終結先前建立的**SQLServer**物件。  
+ 下列範例會終結先前建立的 **SQLServer** 物件。  
   
 ```  
 EXEC @hr = sp_OADestroy @object;  

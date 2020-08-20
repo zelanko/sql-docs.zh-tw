@@ -1,4 +1,5 @@
 ---
+description: 登入觸發程序
 title: 登入觸發程序 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/19/2018
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2f0ebb2f-de10-482d-9806-1a5de5b312b8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1ebc4f10802f7a90dc828bab4b6f2aa1d01d6ccd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ad0a631bde0a7747ce5457ebd47c88771aad1aa9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68058626"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472932"
 ---
 # <a name="logon-triggers"></a>登入觸發程序
 [!INCLUDE[tsql-appliesto-ss2008-appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]

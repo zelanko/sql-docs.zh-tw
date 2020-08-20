@@ -1,5 +1,6 @@
 ---
-title: PeriodsToDate （MDX） |Microsoft Docs
+description: PeriodsToDate (MDX)
+title: PeriodsToDate (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 812cd16a7d6b7a17d4f2f12098f22e32cf0d3363
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b18fe4d90a8a0c56424c5e0a7f3607ceea0eae4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055636"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471700"
 ---
 # <a name="periodstodate-mdx"></a>PeriodsToDate (MDX)
 
@@ -35,9 +36,9 @@ PeriodsToDate( [ Level_Expression [ ,Member_Expression ] ] )
  傳回成員的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- 在指定層級的範圍內， **PeriodsToDate**函數會傳回與指定成員位於相同層級上的一組期間，從第一個週期開始，並以指定的成員結束。  
+ 在指定層級的範圍內， **PeriodsToDate** 函數會傳回與指定成員位於相同層級的一組期間，從第一個期間開始，並以指定的成員結尾。  
   
--   如果指定了層級，階層的目前成員就會*被推斷為*階層。**CurrentMember** *，其中階層*是指定層級的階層。  
+-   如果指定層級，階層的目前成員 *是推斷階層*。**CurrentMember**，其中 *階層是指定*層級的階層。  
   
 -   如果沒有指定層級或成員，此層級為量值群組中 Time 類型之第一個維度上、第一個階層的目前成員的父層級。  
   
@@ -46,7 +47,7 @@ PeriodsToDate( [ Level_Expression [ ,Member_Expression ] ] )
  `TopCount(Descendants(Ancestor(Member_Expression, Level_Expression), Member_Expression.Level), 1):Member_Expression`  
   
 ## <a name="examples"></a>範例  
- 下列範例會從「**艾德公司**」 `Measures.[Order Quantity]` cube 中傳回成員的總和（在`Date`維度中包含的前八2003個月內）。  
+ 下列範例會傳回成員的總和 `Measures.[Order Quantity]` ，此成員是在維度所包含之日曆年度2003的前八個月 `Date` ，從 [ **艾德作品** ] cube 匯總而來。  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  

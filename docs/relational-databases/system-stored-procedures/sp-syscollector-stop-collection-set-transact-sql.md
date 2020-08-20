@@ -1,5 +1,6 @@
 ---
-title: sp_syscollector_stop_collection_set （Transact-sql） |Microsoft Docs
+description: sp_syscollector_stop_collection_set (Transact-SQL)
+title: sp_syscollector_stop_collection_set (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4668cfb7-462f-40d0-948c-8f740a792a4d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 46e8735e48925464d2dc715979a75998b97bd673
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a1133928ce137726e4d24996132902316239f469
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892801"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473606"
 ---
 # <a name="sp_syscollector_stop_collection_set-transact-sql"></a>sp_syscollector_stop_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,18 +45,18 @@ sp_syscollector_stop_collection_set
   
 ## <a name="arguments"></a>引數  
  [ @collection_set_id =] *collection_set_id*  
- 這是收集組的唯一本機識別碼。 *collection_set_id*是**int** ，預設值為 Null。 如果*name*為 Null， *collection_set_id*必須有值。  
+ 這是收集組的唯一本機識別碼。 *collection_set_id* 是 **int** ，預設值是 Null。 如果*name*為 Null， *collection_set_id*必須有值。  
   
  [ @name =] '*name*'  
- 這是收集組的名稱。 *名稱*是**sysname** ，預設值是 Null。 如果*collection_set_id*為 Null，*名稱*就必須有值。  
+ 這是收集組的名稱。 *名稱* 是 **sysname** ，預設值是 Null。 如果*collection_set_id*為 Null，則*名稱*必須具有值。  
   
  [ @stop_collection_job =] *stop_collection_job*  
- 如果收集組的收集作業正在執行，則指定將它停止。 *stop_collection_job*是**bit** ，預設值是1。  
+ 如果收集組的收集作業正在執行，則指定將它停止。 *stop_collection_job* 是 **bit** ，預設值是1。  
   
- *stop_collection_job*僅適用于收集模式設定為快取的收集組。 如需詳細資訊，請參閱[sp_syscollector_create_collection_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)。  
+ *stop_collection_job* 只適用于收集模式設定為快取的收集組。 如需詳細資訊，請參閱 [sp_syscollector_create_collection_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
  sp_syscollector_create_collection_set 必須在 msdb 系統資料庫的內容中執行。  

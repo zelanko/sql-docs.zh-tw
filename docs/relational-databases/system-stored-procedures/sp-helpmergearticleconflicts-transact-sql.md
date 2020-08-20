@@ -1,5 +1,6 @@
 ---
-title: sp_helpmergearticleconflicts （Transact-sql） |Microsoft Docs
+description: sp_helpmergearticleconflicts (Transact-SQL)
+title: sp_helpmergearticleconflicts (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4678a2b9-9a5f-4193-a20d-2e11fc896c3a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 776f46d1f2e61c0f866352ee9c373e4619a2e282
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9a2e2272713266ea0dbae5d4bc8da76bff87b919
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893563"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474050"
 ---
 # <a name="sp_helpmergearticleconflicts-transact-sql"></a>sp_helpmergearticleconflicts (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,11 +40,11 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'`這是合併式發行集的名稱。*發行*集是**sysname**，預設值是 **%** ，它會傳回資料庫中有衝突的所有發行項。  
+`[ @publication = ] 'publication'` 這是合併式發行集的名稱。*發行* 集是 **sysname**，預設值是 **%** ，它會傳回資料庫中有衝突的所有發行項。  
   
-`[ @publisher = ] 'publisher'`這是發行者的名稱。*publisher*是**sysname**，預設值是 Null。  
+`[ @publisher = ] 'publisher'` 這是發行者的名稱。*publisher* 是 **sysname**，預設值是 Null。  
   
-`[ @publisher_db = ] 'publisher_db'`這是發行者資料庫的名稱。*publisher_db*是**sysname**，預設值是 Null。  
+`[ @publisher_db = ] 'publisher_db'` 這是發行者資料庫的名稱。*publisher_db* 是 **sysname**，預設值是 Null。  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -51,21 +52,21 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
 |-----------------|---------------|-----------------|  
 |**文章**|**sysname**|發行項的名稱。|  
 |**source_owner**|**sysname**|來源物件的擁有者。|  
-|**source_object**|**Nvarchar （386）**|來源物件的名稱。|  
+|**source_object**|**Nvarchar (386) **|來源物件的名稱。|  
 |**conflict_table**|**nvarchar(258)**|儲存插入或更新衝突的資料表名稱。|  
 |**guidcolname**|**sysname**|來源物件的 RowGuidCol 名稱。|  
 |**centralized_conflicts**|**int**|是否將衝突記錄儲存在給定的發行者。|  
   
- 如果發行項只有刪除衝突，而且沒有**conflict_table**的資料列，則結果集中的**conflict_table**名稱會是 Null。  
+ 如果發行項只有刪除衝突，且沒有 **conflict_table** 資料列，則結果集中的 **CONFLICT_TABLE** 名稱為 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_helpmergearticleconflicts**用於合併式複寫中。  
+ **sp_helpmergearticleconflicts** 用於合併式複寫中。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色和**db_owner**固定資料庫角色的成員，才能夠執行**sp_helpmergearticleconflicts**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色和 **db_owner** 固定資料庫角色的成員，才能夠執行 **sp_helpmergearticleconflicts**。  
   
 ## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

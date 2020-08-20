@@ -1,4 +1,5 @@
 ---
+description: 'sp_pdw_database_encryption (SQL 資料倉儲) '
 title: sp_pdw_database_encryption (SQL 資料倉儲) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -11,17 +12,17 @@ ms.assetid: f5ccb424-7a95-4557-b774-c69de33c1545
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7bb76c27edcd7ae81423857db8effb7232e46895
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 930cc3f0c9f50637ea1937f2d4d8dde563413471
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173176"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473885"
 ---
 # <a name="sp_pdw_database_encryption-sql-data-warehouse"></a>sp_pdw_database_encryption (SQL 資料倉儲) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  使用**sp_pdw_database_encryption**在設備上啟用透明資料加密 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。 當**sp_pdw_database_encryption**設為1時，請使用**ALTER database**語句，利用 TDE 來加密資料庫。  
+  使用 **sp_pdw_database_encryption** 來啟用設備的透明資料加密 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。 當 **sp_pdw_database_encryption** 設定為1時，請使用 **ALTER database** 語句來加密資料庫，方法是使用 TDE。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,22 +33,22 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 ```  
   
 #### <a name="parameters"></a>參數  
-`[ @enabled = ] enabled`決定是否啟用透明資料加密。 *enabled*是**int**，它可以是下列其中一個值：  
+`[ @enabled = ] enabled` 判斷是否已啟用透明資料加密。 *enabled* 是 **int**，它可以是下列其中一個值：  
   
 -   0 = 停用  
   
 -   1 = 啟用  
   
- 執行不含參數的**sp_pdw_database_encryption** ，會以純量結果集的形式傳回設備上 TDE 的目前狀態：0表示已停用，或1表示已啟用。  
+ 執行不含參數的 **sp_pdw_database_encryption** 會將設備上 TDE 的目前狀態傳回為純量結果集：0表示已停用，或1表示已啟用。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** (成功) 或**1** (失敗)   
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- 當使用**sp_pdw_database_encryption**啟用 TDE 時，會卸載 tempdb 資料庫、重新建立和加密。 基於這個理由，在有其他使用 tempdb 的作用中會話時，無法在設備上啟用 TDE。 在設備上啟用或停用 TDE 是一個動作，它會變更設備的狀態，在大多數情況下，預期會在設備生命週期中執行一次，而且應該在設備上沒有流量時執行。  
+ 使用 **sp_pdw_database_encryption**啟用 TDE 時，會卸載 tempdb 資料庫、重新建立和加密。 基於這個理由，當使用 tempdb 的其他使用中會話時，無法在設備上啟用 TDE。 在設備上啟用或停用 TDE 是變更設備狀態的動作，在大部分情況下，預期會在設備存留期內執行一次，而且應該在設備上沒有流量時執行。  
   
 ## <a name="permissions"></a>權限  
- 需要**系統管理員（sysadmin** ）固定資料庫角色中的成員資格，或**CONTROL SERVER**許可權。  
+ 需要 **系統管理員（sysadmin** ）固定資料庫角色中的成員資格或 **CONTROL SERVER** 許可權。  
   
 ## <a name="example"></a>範例  
  下列範例會在設備上啟用 TDE。  

@@ -1,4 +1,5 @@
 ---
+description: 教學課程：搭配使用 Azure Blob 儲存體服務和 SQL Server 2016
 title: 教學課程：搭配使用 Azure Blob 儲存體服務和 SQL Server 2016
 ms.custom: seo-dt-2019
 ms.date: 07/22/2020
@@ -14,12 +15,12 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4e8d09fd7af7501427490178ef7cc9624b7e98a1
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: baf78116ef5d200246a0da7f4f8ce5c8686d2426
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247264"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472937"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>教學課程：搭配使用 Azure Blob 儲存體服務和 SQL Server 2016
 
@@ -30,7 +31,7 @@ Microsoft Azure Blob 儲存體服務的 SQL Server 整合支援一開始是 SQL 
 
 本教學課程會在多個章節中示範如何在 Microsoft Azure Blob 儲存體服務中使用 SQL Server 資料檔案。 每個章節都著重在特定工作，並且應該依序完成章節。 首先，您將學習如何使用預存存取原則和共用存取簽章在 Blob 儲存體中建立新的容器。 然後，您將學習如何建立 SQL Server 認證，以便整合 SQL Server 與 Azure Blob 儲存體。 接下來，您會將資料庫備份至 Blob 儲存體，並將它還原至 Azure 虛擬機器。 您接著將使用 SQL Server 2016 檔案快照集交易記錄備份還原至某個時間點和新的資料庫。 最後，本教學課程將示範如何使用中繼資料系統預存程序和函數，協助您了解和使用檔案快照集備份。
   
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 若要完成本教學課程，您必須熟悉 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 備份與還原概念以及 T-SQL 語法。 若要使用本教學課程，您需要 Azure 儲存體帳戶、SQL Server Management Studio (SSMS)、存取 SQL Server 內部部署執行個體的權限、存取執行 SQL Server 2016 Azure 虛擬機器 (VM) 的權限，以及 AdventureWorks2016 資料庫。 此外，用來發出 BACKUP 或 RESTORE 命令的帳戶，應該位於擁有 **ALTER ANY CREDENTIAL** 權限的 **db_backupoperator** 資料庫角色中。 
 
@@ -484,7 +485,7 @@ SQL Server 認證是用來儲存連接到 SQL Server 外部資源所需之驗證
 [Azure 中資料庫檔案的檔案快照集備份](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
 [SQL Server 備份至 URL](../relational-databases/backup-restore/sql-server-backup-to-url.md) 
 [共用存取簽章，第 1 部分：了解 SAS 模型](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
-[Create Container (建立容器)](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
+[建立容器](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
 [Set Container ACL (設定容器 ACL)](https://msdn.microsoft.com/library/azure/dd179391.aspx)  
 [取得容器 ACL](https://msdn.microsoft.com/library/azure/dd179469.aspx)
 [認證 &#40;資料庫引擎&#41;](../relational-databases/security/authentication-access/credentials-database-engine.md)  

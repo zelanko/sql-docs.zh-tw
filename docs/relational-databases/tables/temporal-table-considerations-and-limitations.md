@@ -1,4 +1,5 @@
 ---
+description: 時態表考量與限制
 title: 時態表考量與限制 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2017
@@ -11,12 +12,12 @@ ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 97d7b734cf0933f9e5bcdaccb177e05e452ff061
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 6670767b552b1f20b82d45499d3eeb21cbc83f40
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552694"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472999"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>時態表考量與限制
 

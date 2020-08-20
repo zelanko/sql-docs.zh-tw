@@ -1,4 +1,5 @@
 ---
+description: GRANT 物件權限 (Transact-SQL)
 title: GRANT 物件權限 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
@@ -16,12 +17,12 @@ ms.assetid: c001c2e7-d092-43d4-8fa6-693b3ec4c3ea
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e15656ca8506ac03f2556f202284d601b58a981
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 5cca05a701f7ec0255536c496ae5288cd1105835
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483939"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472266"
 ---
 # <a name="grant-object-permissions-transact-sql"></a>GRANT 物件權限 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

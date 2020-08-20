@@ -1,5 +1,6 @@
 ---
-title: GetCurrentCertificate 方法（SInstance）
+description: GetCurrentCertificate 方法 (SInstance 類別)
+title: 'GetCurrentCertificate 方法 (SInstance) '
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d2b72df-cb21-414a-abef-917f13d4de62
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5193a7a92df39b291ddbe69fec905cceb09f90a8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 28f413d6869fde5eb62f7ab9d1f8ef6e8b28cac4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888546"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472790"
 ---
 # <a name="getcurrentcertificate-method-sinstance-class"></a>GetCurrentCertificate 方法 (SInstance 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ object.GetCurrentCertificate(SHA)
   
 #### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |*SHA*|在方法完成之後指定目前安全性憑證的字串物件值 (輸出參數)。|  
   

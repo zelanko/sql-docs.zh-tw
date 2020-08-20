@@ -1,4 +1,5 @@
 ---
+description: 將資料行加入資料表 (Database Engine)
 title: 將資料行新增至資料表 (資料庫引擎) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/27/2016
@@ -15,12 +16,12 @@ ms.assetid: abeb8d52-d562-4e29-9e1e-2923ae874859
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a0212f7615feb36b9c9f14d0a07e28445fac5597
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: ad7cb3cdba7b9b20a28362b8570cc6e2fc0b04d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394480"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473068"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>將資料行加入資料表 (Database Engine)
 
@@ -44,7 +45,7 @@ ms.locfileid: "87394480"
 
 ### <a name="to-insert-columns-into-a-table-with-table-designer"></a>若要使用資料表設計工具將資料行插入資料表中
 
-1. 在物件總管  中，以滑鼠右鍵按一下要加入資料行的資料表，然後選擇 [設計]  。
+1. 在物件總管**** 中，以滑鼠右鍵按一下要加入資料行的資料表，然後選擇 [設計]****。
 2. 在 **[資料行名稱]** 資料行中，按一下第一個空白資料格。
 3. 在資料格中輸入資料行名稱。 資料行名稱為必要值。
 4. 按下 TAB 鍵以移至 [ **資料類型** ] 資料格，然後從下拉式清單中選取資料類型。
@@ -52,14 +53,14 @@ ms.locfileid: "87394480"
    此為必要值。若未加以選擇，將會指派預設值。
 
    > [!NOTE]
-   > 您可以在 [資料庫工具] 的 [選項] 對話方塊中變更預設值。
+   >  您可以在 [ **資料庫工具** ] 的 [ **選項**] 對話方塊中變更預設值。
 
 5. 在 [ **資料行屬性** ] 索引標籤中繼續定義其他任何的資料行屬性。
 
     > [!NOTE]
-    > 資料行屬性的預設值會在您建立新資料行時加入，但是您可以在 [資料行屬性]  索引標籤中變更預設值。
+    >  資料行屬性的預設值會在您建立新資料行時加入，但是您可以在 **[資料行屬性]** 索引標籤中變更預設值。
 
-6. 新增資料行之後，請從 [檔案]  功能表中，選擇 [儲存 <資料表名稱>]   。
+6. 新增資料行之後，請從 [檔案]**** 功能表中，選擇 [儲存 <資料表名稱>]**** __。
   
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL
   

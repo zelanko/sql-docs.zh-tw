@@ -1,5 +1,6 @@
 ---
-title: sp_syscollector_delete_collection_set （Transact-sql） |Microsoft Docs
+description: sp_syscollector_delete_collection_set (Transact-SQL)
+title: sp_syscollector_delete_collection_set (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 29c63a74-4db4-4068-bd57-9fb519b0c598
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9adfe94e791f8c0b0bb38305c538bd72918a71e1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bc45db14899bca41f279fee8e452f81030e8aab5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892914"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473611"
 ---
 # <a name="sp_syscollector_delete_collection_set-transact-sql"></a>sp_syscollector_delete_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,13 +43,13 @@ sp_syscollector_delete_collection_set [[ @collection_set_id = ] collection_set_i
   
 ## <a name="arguments"></a>引數  
  [ @collection_set_id =] *collection_set_id*  
- 這是收集組的唯一識別碼。 *collection_set_id*是**int** ，而且如果*name*為 Null，則必須有值。  
+ 這是收集組的唯一識別碼。 *collection_set_id* 為 **int** ，而且如果 *name* 為 Null，則必須具有值。  
   
  [ @name =] '*name*'  
- 這是收集組的名稱。 *name*是**sysname** ，如果*collection_set_id*是 Null，則必須有值。  
+ 這是收集組的名稱。 *名稱* 是 **sysname** ，而且如果 *collection_set_id* 為 Null，則必須有值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
  sp_syscollector_delete_collection_set 必須在 msdb 系統資料庫的內容中執行。  
@@ -61,7 +62,7 @@ sp_syscollector_delete_collection_set [[ @collection_set_id = ] collection_set_i
  需要 dc_admin (具有 EXECUTE 權限) 固定資料庫角色中的成員資格，才能執行此程序。  
   
 ## <a name="examples"></a>範例  
- 下列範例會刪除指定*collection_set_id*的使用者定義收集組。  
+ 下列範例會刪除指定 *collection_set_id*的使用者定義收集組。  
   
 ```  
 USE msdb;  
@@ -71,7 +72,7 @@ EXEC dbo.sp_syscollector_delete_collection_set
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的資料收集器預存程式](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [資料收集器預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [資料收集](../../relational-databases/data-collection/data-collection.md)   
  [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
   

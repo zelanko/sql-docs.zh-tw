@@ -1,5 +1,6 @@
 ---
-title: sp_helpconstraint （Transact-sql） |Microsoft Docs
+description: sp_helpconstraint (Transact-SQL)
+title: sp_helpconstraint (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: 29d6cd36-535d-4765-bca8-62f9d9886ff5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4da545089c2fba177c25c6ea00b49efa6464426c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7d743730b70559d928f4fd46db67e9602168c139
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634054"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474099"
 ---
 # <a name="sp_helpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,18 +42,18 @@ sp_helpconstraint [ @objname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @objname = ] 'table'`這是要傳回哪些條件約束資訊的資料表。 指定的資料表必須是目前資料庫的本機資料表。 *table*是**Nvarchar （776）**，沒有預設值。  
+`[ @objname = ] 'table'` 這是傳回哪些條件約束資訊的資料表。 指定的資料表必須是目前資料庫的本機資料表。 *資料表* 是 **Nvarchar (776) **，沒有預設值。  
   
-`[ @nomsg = ] 'no_message'`這是列印資料表名稱的選擇性參數。 *no_message*是**Varchar （5）**，預設值是**msg**。**nomsg**會抑制列印。  
+`[ @nomsg = ] 'no_message'` 這是列印資料表名稱的選擇性參數。 *no_message* 是 **Varchar (5) **，預設值是 **msg**。 **nomsg** 會抑制列印。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
- 如果它參與主鍵， **sp_helpconstraint**會顯示遞減的索引資料行。 遞減索引資料行會列在結果集中，名稱後面會有一個減號 (-)。 預設值是遞增索引資料行，會單獨列出名稱。  
+ **sp_helpconstraint** 如果參與主鍵，則會顯示遞減索引資料行。 遞減索引資料行會列在結果集中，名稱後面會有一個減號 (-)。 預設值是遞增索引資料行，會單獨列出名稱。  
   
 ## <a name="remarks"></a>備註  
- 執行**sp_help**_資料表_會報告指定之資料表的所有相關資訊。 若只要查看條件約束資訊，請使用**sp_helpconstraint**。  
+ 執行 **sp_help**_資料表_ 會報告有關指定資料表的所有資訊。 若只要查看條件約束資訊，請使用 **sp_helpconstraint**。  
   
 ## <a name="permissions"></a>權限  
  需要 **public** 角色的成員資格。  
@@ -67,13 +68,13 @@ EXEC sp_helpconstraint 'Production.Product';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的資料庫引擎預存程式 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
- [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [key_constraints &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
- [check_constraints &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   
- [default_constraints &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md)  
+ [&#40;Transact-sql&#41;的系統預存程式 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [sys. key_constraints &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
+ [sys. check_constraints &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   
+ [sys. default_constraints &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md)  
   
   

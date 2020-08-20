@@ -1,5 +1,6 @@
 ---
-title: trace_xe_action_map （Transact-sql） |Microsoft Docs
+description: 擴充事件資料表 - trace_xe_action_map
+title: trace_xe_action_map (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: 208a1413-ce7f-4521-b765-d74723627302
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 835ca342cabc37826c4425391e531820c8600b11
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: efc717f2112cf72d4b73648ff66491eae67a9e26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750200"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473269"
 ---
 # <a name="extended-events-tables---trace_xe_action_map"></a>擴充事件資料表 - trace_xe_action_map
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  針對對應到 SQL 追蹤資料行識別碼的每個擴充事件動作包含一個資料列。 此資料表儲存在主資料庫的 sys 架構中。  
+  針對對應到 SQL 追蹤資料行識別碼的每個擴充事件動作包含一個資料列。 此資料表儲存在 master 資料庫的 sys 架構中。  
   
   
 |資料行名稱|資料類型|描述|  

@@ -1,5 +1,6 @@
 ---
-title: SQLFreeEnv （Visual FoxPro ODBC Driver） |Microsoft Docs
+description: SQLFreeEnv (Visual FoxPro ODBC Driver)
+title: SQLFreeEnv (Visual FoxPro ODBC Driver) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 83011775-e31d-4663-b68b-999113a20d5b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e50e03f7c549b903ab52a6d449de0ddc516bf0fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae91df0b669b837784171b696ed4c6fac2342ebd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81280608"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471560"
 ---
 # <a name="sqlfreeenv-visual-foxpro-odbc-driver"></a>SQLFreeEnv (Visual FoxPro ODBC Driver)
 > [!NOTE]  
->  本主題包含 Visual FoxPro ODBC 驅動程式特有的資訊。 如需此函數的一般資訊，請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)底下的適當主題。  
+>  本主題包含 Visual FoxPro ODBC 驅動程式特定的資訊。 如需此函數的一般資訊，請參閱 [ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)下的適當主題。  
   
- 支援：完整  
+ 支援： Full  
   
  ODBC API 一致性：核心層級  
   
  關閉 Visual FoxPro ODBC 驅動程式，並釋放與驅動程式相關聯的所有記憶體。  
   
- 如需詳細資訊，請參閱 ODBC 程式設計*人員參考*中的[SQLFreeEnv](../../odbc/reference/syntax/sqlfreeenv-function.md) 。
+ 如需詳細資訊，請參閱《 *ODBC 程式設計人員參考*》中的[SQLFreeEnv](../../odbc/reference/syntax/sqlfreeenv-function.md) 。

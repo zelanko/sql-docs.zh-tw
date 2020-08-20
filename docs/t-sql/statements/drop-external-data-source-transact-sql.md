@@ -1,4 +1,5 @@
 ---
+description: DROP EXTERNAL DATA SOURCE (Transact-SQL)
 title: DROP EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -13,12 +14,12 @@ ms.assetid: 3f65a2f5-a6c6-4be5-8ca4-6057078fe10e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a1ea2729261ee6ecbe5659286aed03c2a2a2527
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 46d9296cfaf667682de241d052b41711d084a835
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81626268"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472273"
 ---
 # <a name="drop-external-data-source-transact-sql"></a>DROP EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -42,7 +43,7 @@ DROP EXTERNAL DATA SOURCE external_data_source_name
 ## <a name="metadata"></a>中繼資料  
  若要檢視外部資料來源的清單，請使用 sys.external_data_sources 系統檢視。  
   
-```  
+```sql  
 SELECT * FROM sys.external_data_sources;  
 ```  
   
@@ -59,7 +60,7 @@ SELECT * FROM sys.external_data_sources;
   
 ### <a name="a-using-basic-syntax"></a>A. 使用基本語法  
   
-```  
+```sql  
 DROP EXTERNAL DATA SOURCE mydatasource;  
 ```  
   

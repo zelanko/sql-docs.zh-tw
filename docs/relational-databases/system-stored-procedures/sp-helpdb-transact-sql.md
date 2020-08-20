@@ -1,5 +1,6 @@
 ---
-title: sp_helpdb （Transact-sql） |Microsoft Docs
+description: sp_helpdb (Transact-SQL)
+title: sp_helpdb (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3fda6aba2ce361e814a0196db6138b38f13ce359
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c94db417a7257d38f5b607854beeeb5663c30ea7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899577"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474128"
 ---
 # <a name="sp_helpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @dbname = ] 'name'`這是要報告其資訊的資料庫名稱。 *名稱*是**sysname**，沒有預設值。 如果未指定*name* ，則**sp_helpdb** **sys.databases**目錄檢視中所有資料庫的報告。  
+`[ @dbname = ] 'name'` 這是要報告其資訊的資料庫名稱。 *名稱* 是 **sysname**，沒有預設值。 如果未指定*name* ，則會在**sys.databases**目錄檢視中的所有資料庫上**sp_helpdb**報表。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -49,33 +50,33 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|資料庫名稱。|  
-|**db_size**|**Nvarchar （13）**|資料庫的總大小。|  
-|**主人**|**sysname**|資料庫擁有者，例如**sa**。|  
+|**db_size**|**Nvarchar (13) **|資料庫的總大小。|  
+|**擁有者**|**sysname**|資料庫擁有者，例如 **sa**。|  
 |**dbid**|**smallint**|資料庫識別碼。|  
 |**created**|**nvarchar(11)**|資料庫的建立日期。|  
-|**status**|**Nvarchar （600）**|資料庫目前所設定的資料庫選項值清單 (以逗號分隔)。<br /><br /> 布林值選項必須已啟用，才會列出。 非布林值選項會以*option_name*值的形式，列出其對應的值 = * *。<br /><br /> 如需詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。|  
+|**status**|**Nvarchar (600) **|資料庫目前所設定的資料庫選項值清單 (以逗號分隔)。<br /><br /> 布林值選項必須已啟用，才會列出。 非布林值的選項會以*option_name*值的形式，以其對應的值列出 = * *。<br /><br /> 如需詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。|  
 |**compatibility_level**|**tinyint**|資料庫相容性層級：60、65、70、80 或 90。|  
   
- 如果指定*name* ，則會有一個額外的結果集，顯示指定資料庫的檔案配置。  
+ 如果指定了 *name* ，則會有一個額外的結果集，顯示指定資料庫的檔案配置。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**name**|**nchar(128)**|邏輯檔案名稱。|  
 |**fileid**|**smallint**|檔案識別碼。|  
-|**filename**|**Nchar （260）**|作業系統檔案名稱 (實體檔案名稱)。|  
+|**filename**|**Nchar (260) **|作業系統檔案名稱 (實體檔案名稱)。|  
 |**filegroup**|**nvarchar(128)**|檔案所屬的檔案群組。<br /><br /> NULL = 檔案是記錄檔。 它永遠不在檔案群組中。|  
-|**size**|**Nvarchar （18）**|檔案大小 (以 MB 為單位)。|  
-|**maxsize**|**Nvarchar （18）**|檔案所能成長的大小上限。 這個欄位中的 UNLIMITED 值指出，檔案將成長到磁碟已滿。|  
-|**growth**|**Nvarchar （18）**|檔案的成長遞增。 這表示每次需要新空間時，檔案所增加的空間量。|  
-|**實例**|**Varchar （9）**|檔案的使用方式。 針對資料檔案，此值為「**僅限資料**」，而記錄檔的值為「**僅限記錄**」。|  
+|**size**|**Nvarchar (18) **|檔案大小 (以 MB 為單位)。|  
+|**maxsize**|**Nvarchar (18) **|檔案所能成長的大小上限。 這個欄位中的 UNLIMITED 值指出，檔案將成長到磁碟已滿。|  
+|**增長**|**Nvarchar (18) **|檔案的成長遞增。 這表示每次需要新空間時，檔案所增加的空間量。|  
+|**使用**|**Varchar (9) **|檔案的使用方式。 針對資料檔案，值為「 **僅限資料** 」，而針對記錄檔，其值為「 **僅限記錄**」。|  
   
 ## <a name="remarks"></a>備註  
- 結果集中的 [**狀態**] 資料行會報告資料庫中已設定為 [開啟] 的選項。 [**狀態**] 資料行不會報告所有資料庫選項。 若要查看目前資料庫選項設定的完整清單，請使用**sys.databases**目錄檢視。  
+ 結果集中的 [ **狀態** ] 資料行會報告資料庫中已設定為 [開啟] 的選項。 [ **狀態** ] 資料行不會報告所有資料庫選項。 若要查看目前資料庫選項設定的完整清單，請使用 **sys. 資料庫** 目錄檢視。  
   
 ## <a name="permissions"></a>權限  
- 當指定了單一資料庫時，就需要資料庫中**public**角色的成員資格。 若未指定任何資料庫，則需要**master**資料庫中**public**角色的成員資格。  
+ 指定單一資料庫時，需要資料庫中 **public** 角色的成員資格。 如果未指定任何資料庫，則需要**master**資料庫中**public**角色的成員資格。  
   
- 如果無法存取資料庫， **sp_helpdb**會顯示錯誤訊息15622，以及資料庫的相關資訊。  
+ 如果無法存取資料庫， **sp_helpdb** 會顯示錯誤訊息15622，以及資料庫的最多相關資訊。  
   
 ## <a name="examples"></a>範例  
   
@@ -95,13 +96,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的資料庫引擎預存程式 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [database_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
- [master_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+ [sys. master_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

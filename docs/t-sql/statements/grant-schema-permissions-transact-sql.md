@@ -1,4 +1,5 @@
 ---
+description: GRANT 結構描述權限 (Transact-SQL)
 title: GRANT 結構描述權限 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/19/2017
@@ -18,12 +19,12 @@ ms.assetid: b2aa1fc8-e7af-45d2-9f80-737543c8aa95
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed1c5c45e9ad2ffe46a836708c5686097c61227f
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 25d81e7dae5f3c02311ec47148a855c0ad3304d8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484359"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472261"
 ---
 # <a name="grant-schema-permissions-transact-sql"></a>GRANT 結構描述權限 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -80,7 +81,7 @@ AS *granting_principal*
 ## <a name="remarks"></a>備註  
   
 > [!IMPORTANT]  
->  在某些情況下，ALTER 與 REFERENCE 權限的結合可允許被授與者檢視資料或執行未經授權的函數。 例如：擁有資料表的 ALTER 權限和函數的 REFERENCE 權限之使用者，可以透過函數來建立計算資料行並執行它。 在此情況下，使用者也必須擁有計算資料行的 SELECT 權限。  
+>  在某些情況下，ALTER 與 REFERENCE 權限的結合可允許被授與者檢視資料或執行未經授權的函數。 例如：擁有資料表 ALTER 權限和函式 REFERENCE 權限的使用者，可以透過函式建立並執行計算資料行。 在此情況下，使用者也必須擁有計算資料行的 SELECT 權限。  
   
  結構描述是一個由資料庫所包含的資料庫層級安全性實體，在權限階層中，此資料庫為該安全性實體的父系。 下面所列的是可以授與之最特定且最有限的結構描述權限，並列出利用隱含方式來併入這些權限的較通用權限。  
   

@@ -1,5 +1,6 @@
 ---
-title: XML 預存程式（Transact-sql） |Microsoft Docs
+description: XML 預存程序 (Transact-SQL)
+title: " (Transact-sql) 的 XML 預存程式 |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 11c84ddb-662b-43a6-9625-9eaa589f0966
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d6d893afca1dc39dc98dc3dc212b79474ae81890
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 0ac976aaa5ef4b7ed07b77f37f1a0ae2d92443c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122980"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473324"
 ---
 # <a name="xml-stored-procedures-transact-sql"></a>XML 預存程序 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

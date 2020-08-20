@@ -1,5 +1,6 @@
 ---
-title: sys.databases sp_xtp_control_query_exec_stats （Transact-sql） |Microsoft Docs
+description: sys.sp_xtp_control_query_exec_stats (Transact-SQL)
+title: sys. sp_xtp_control_query_exec_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/13/2015
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4838125d-ad1e-479e-b7d2-42655e8f4f02
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7f451e3d6083a32db87c7e453413cf6b318e739f
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 0963985b2f6f83d9be8c19be35fd16b0451dda8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442656"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473405"
 ---
 # <a name="syssp_xtp_control_query_exec_stats-transact-sql"></a>sys.sp_xtp_control_query_exec_stats (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "87442656"
   
  啟用統計資料收集時，效能會降低。 如果您只需要對一個或少數幾個原生編譯的預存程序進行疑難排解，可以只針對這幾個原生編譯的預存程序啟用統計資料收集。  
   
- 若要啟用所有原生編譯預存程式的程式層級的統計資料收集，請參閱[sys.databases &#40;transact-sql&#41;sp_xtp_control_proc_exec_stats ](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)。  
+ 若要在程式層級啟用所有原生編譯預存程式的統計資料收集，請參閱 [sys. sp_xtp_control_proc_exec_stats &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,17 +44,17 @@ sp_xtp_control_query_exec_stats [ [ @new_collection_value = ] collection_value ]
 ```  
   
 ## <a name="arguments"></a>引數  
- @new_collection_value=*值*  
+ @new_collection_value = *值*  
  決定程序層級統計資料收集為開啟 (1) 或關閉 (0)。  
   
- @new_collection_value當啟動時，會設定為零 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+ @new_collection_value 當啟動時，會設為零 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
- @database_id= = *database_id*， @xtp_object_id = *procedure_id*  
- 原生編譯預存程序的資料庫識別碼和物件識別碼。 如果已針對實例啟用統計資料收集（[sp_xtp_control_proc_exec_stats sys.databases &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)），則會收集原生編譯預存程式的統計資料。 關閉執行個體上的統計資料收集並不會關閉個別原生編譯預存程序的統計資料收集。  
+ @database_id = = *database_id*， @xtp_object_id = *procedure_id*  
+ 原生編譯預存程序的資料庫識別碼和物件識別碼。 如果啟用實例的統計資料收集 ([sys. sp_xtp_control_proc_exec_stats &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)) ，則會收集原生編譯預存程式的統計資料。 關閉執行個體上的統計資料收集並不會關閉個別原生編譯預存程序的統計資料收集。  
   
- 使用[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)、 [sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)、 [DB_ID &#40;Transact-sql&#41;](../../t-sql/functions/db-id-transact-sql.md)或 OBJECT_ID &#40;transact-sql&#41;，以取得資料庫和預存[程式](../../t-sql/functions/object-id-transact-sql.md)的識別碼。  
+ 使用 [sys. 資料庫 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)、 [sys. 程式 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)、 [DB_ID &#40;Transact-sql&#41;](../../t-sql/functions/db-id-transact-sql.md)或 [OBJECT_ID &#40;transact-sql&#41;](../../t-sql/functions/object-id-transact-sql.md) 取得資料庫和預存程式的識別碼。  
   
- @old_collection_value=*值*  
+ @old_collection_value = *值*  
  傳回目前狀態。  
   
 ## <a name="return-code"></a>傳回碼  
@@ -83,7 +84,7 @@ SELECT @c AS 'collection status';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

@@ -1,5 +1,6 @@
 ---
-title: RemoveCertificate 方法（SInstance）
+description: RemoveCertificate 方法 (SInstance 類別)
+title: 'RemoveCertificate 方法 (SInstance) '
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e5dbafa-a634-4617-9622-510514fce0ce
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3e05ddbcfc27dfa65d3b8cf99c5a02a74e9f0f49
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c222a9a11e19aad744dd34570e1b20f3e61cfffd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888527"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472725"
 ---
 # <a name="removecertificate-method-sinstance-class"></a>RemoveCertificate 方法 (SInstance 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

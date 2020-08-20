@@ -1,5 +1,6 @@
 ---
-title: sp_prepexec （Transact-sql） |Microsoft Docs
+description: sp_prepexec (Transact-SQL)
+title: sp_prepexec (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: f9141850-a62b-43bf-8e46-b2f92b75ca56
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3bc3e9a74a29564ad8c531223be371f47fd09662
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b8d6d652c6324344af24b9efbb5b74e3accf203e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891530"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473900"
 ---
 # <a name="sp_prepexec-transact-sql"></a>sp_prepexec (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  準備和執行參數化 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句。 sp_prepexec 結合 sp_prepare 和 sp_execute 的功能。 此動作是由表格式資料流程（TDS）封包中的 ID = 13 所叫用。  
+  準備和執行參數化 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句。 sp_prepexec 結合 sp_prepare 和 sp_execute 的功能。 這項動作是以表格式資料流程中的識別碼 = 13 為 (，TDS) 封包。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,17 +41,17 @@ sp_prepexec handle OUTPUT, params , stmt
 ```  
   
 ## <a name="arguments"></a>引數  
- *圖*  
- 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生的*控制碼*識別碼。 *handle*是具有**int**傳回值的必要參數。  
+ *處理*  
+ 這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生的 *控制碼* 識別碼。 *控制碼* 是具有 **int** 傳回值的必要參數。  
   
  *params*  
- 識別參數化的陳述式。 變數的*params*定義會取代語句中的參數標記。 *params*是針對**Ntext**、 **Nchar**或**Nvarchar**輸入值呼叫的必要參數。 如果陳述式未參數化，則輸入 NULL 值。  
+ 識別參數化的陳述式。 變數的 *params* 定義會取代為語句中的參數標記。 *params* 是呼叫 **Ntext**、 **Nchar**或 **Nvarchar** 輸入值的必要參數。 如果陳述式未參數化，則輸入 NULL 值。  
   
- *把*  
- 定義資料指標結果集。 *Stmt*參數是必要的，而且會呼叫**Ntext**、 **Nchar**或**Nvarchar**輸入值。  
+ *stmt*  
+ 定義資料指標結果集。 需要 *stmt* 參數，並呼叫 **Ntext**、 **Nchar**或 **Nvarchar** 輸入值。  
   
  *bound_param*  
- 指定選擇性使用其他參數。 *bound_param*會呼叫任何資料類型的輸入值，以指定使用中的其他參數。  
+ 指定選擇性使用其他參數。 *bound_param* 會呼叫任何資料類型的輸入值，以指定使用中的其他參數。  
   
 ## <a name="examples"></a>範例  
  下列範例會準備並執行簡單的語句：  

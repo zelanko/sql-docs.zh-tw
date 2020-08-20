@@ -1,5 +1,6 @@
 ---
-title: sp_helpmergearticlecolumn （Transact-sql） |Microsoft Docs
+description: sp_helpmergearticlecolumn (Transact-SQL)
+title: sp_helpmergearticlecolumn (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7dc556d25cdac393c13df81af4eee54664ff0acb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f85830c11ca64f3540995411a2cfe1dac6044544
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891639"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474026"
 ---
 # <a name="sp_helpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +39,9 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'`這是發行集的名稱。*發行*集是**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 這是發行集的名稱。*發行* 集是 **sysname**，沒有預設值。  
   
-`[ @article = ] 'article'`這是要取得其資訊之發行項的資料表或視圖名稱。*文章*是**sysname**，沒有預設值。  
+`[ @article = ] 'article'` 這是要取得資訊的發行項所在的資料表或視圖名稱。*文章* 是 **sysname**，沒有預設值。  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -48,16 +49,16 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 |-----------------|---------------|-----------------|  
 |**column_id**|**sysname**|識別欄位。|  
 |**column_name**|**sysname**|這是資料表或檢視的資料行名稱。|  
-|**發佈**|**bit**|指定是否已發行資料行名稱。<br /><br /> **1**指定正在發行資料行。<br /><br /> **0**指定未發佈。|  
+|**發表**|**bit**|指定是否已發行資料行名稱。<br /><br /> **1** 指定正在發行資料行。<br /><br /> **0** 指定未發行。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_helpmergearticlecolumn**用於合併式複寫中。  
+ **sp_helpmergearticlecolumn** 用於合併式複寫中。  
   
 ## <a name="permissions"></a>權限  
- 只有散發資料庫中**replmonitor**固定資料庫角色或發行集之發行集存取清單中的成員，才可以執行**sp_helpmergearticlecolumn**。  
+ 只有散發資料庫中的 **replmonitor** 固定資料庫角色成員，或是發行集的發行集存取清單中，才可以執行 **sp_helpmergearticlecolumn**。  
   
 ## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

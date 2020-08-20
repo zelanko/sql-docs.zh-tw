@@ -1,4 +1,5 @@
 ---
+description: GRANT 端點權限 (Transact-SQL)
 title: GRANT 端點權限 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/17/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9eda885c-fc3a-4c9d-8de6-ce07fb35a934
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 49e815376b97606036b454f387ea96868719278c
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: b7c5fa05a31a3087970a12acbe8d6a69a6a647ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483573"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472247"
 ---
 # <a name="grant-endpoint-permissions-transact-sql"></a>GRANT 端點權限 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

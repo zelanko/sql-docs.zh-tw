@@ -1,5 +1,6 @@
 ---
-title: log_shipping_monitor_error_detail （Transact-sql） |Microsoft Docs
+description: log_shipping_monitor_error_detail (Transact-SQL)
+title: log_shipping_monitor_error_detail (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 0c38a625-60d2-4ee2-bcf3-2ba367914220
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1abbc89dcd085d65f2b44aab54d731f17184b9a7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 25c1187b463a52c4f5340356c23b77430ef0123f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890183"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473252"
 ---
 # <a name="log_shipping_monitor_error_detail-transact-sql"></a>log_shipping_monitor_error_detail (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  儲存記錄傳送作業的錯誤詳細資料。 此資料表會儲存在**msdb**資料庫中。  
+  儲存記錄傳送作業的錯誤詳細資料。 此資料表儲存在 **msdb** 資料庫中。  
   
  主要伺服器和次要伺服器也會使用記錄和監視的相關資料表。  
   
@@ -47,9 +48,9 @@ ms.locfileid: "85890183"
 ## <a name="remarks"></a>備註  
  這份資料表包含記錄傳送代理程式的錯誤詳細資料。 每個錯誤都會記錄成例外狀況的序列。 每個代理程式工作階段都可能有多個錯誤 (序列)。  
   
- 除了儲存在遠端監視伺服器之外，主伺服器的相關資訊也會儲存在主伺服器的**log_shipping_monitor_error_detail**資料表中，而次要伺服器的相關資訊也會儲存在次要伺服器的**log_shipping_monitor_error_detail**資料表中。  
+ 除了儲存在遠端監視伺服器之外，主伺服器的相關資訊也會儲存在主伺服器的 **log_shipping_monitor_error_detail** 資料表中，而次要伺服器的相關資訊也會儲存在次要伺服器的 **log_shipping_monitor_error_detail** 資料表中。  
   
- 若要識別代理程式會話，請使用**agent_id**、 **agent_type**和**session_id**的資料行。 依**log_time**排序，以查看錯誤的記錄順序。  
+ 若要識別代理程式會話，請使用 **agent_id**、 **agent_type**和 **session_id**資料行。 依 **log_time** 排序，以查看錯誤的記錄順序。  
   
 ## <a name="see-also"></a>另請參閱  
  [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

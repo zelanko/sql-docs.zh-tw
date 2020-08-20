@@ -1,5 +1,6 @@
 ---
-title: sp_updateextendedproperty （Transact-sql） |Microsoft Docs
+description: sp_updateextendedproperty (Transact-SQL)
+title: sp_updateextendedproperty (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/12/2016
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: 7f02360f-cb9e-48b4-b75f-29b4bc9ea304
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 28341d5b79cf58d5b432d007cc7abe134da0d190
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5f8bedf71c6ec255aa0b81117c80e9aca6f5b1f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755573"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473483"
 ---
 # <a name="sp_updateextendedproperty-transact-sql"></a>sp_updateextendedproperty (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,31 +54,31 @@ sp_updateextendedproperty
   
 ## <a name="arguments"></a>引數  
  [ @name =] {'*property_name*'}  
- 這是要更新的屬性名稱。 *property_name*是**sysname**，而且不能是 Null。  
+ 這是要更新的屬性名稱。 *property_name* 為 **sysname**，不能是 Null。  
   
  [ @value =] {'*value*'}  
- 這是與屬性相關聯的值。 *value*是**SQL_variant**，預設值是 Null。 *值*的大小不得超過7500個位元組。  
+ 這是與屬性相關聯的值。 *值* 是 **SQL_variant**，預設值是 Null。 *值*的大小不能超過7500個位元組。  
   
  [ @level0type =] {'*level0_object_type*'}  
- 使用者或使用者定義類型。 *level0_object_type*是**Varchar （128）**，預設值是 Null。 有效的輸入包括元件、合約、事件通知、檔案群組、訊息類型、資料分割函數、資料分割配置、計劃指南、遠端服務系結、路由、架構、服務、使用者、觸發程式、類型和 Null。  
+ 使用者或使用者定義類型。 *level0_object_type* 是 **Varchar (128) **，預設值是 Null。 有效的輸入為 ASSEMBLY、CONTRACT、EVENT NOTIFICATION、FILEGROUP、MESSAGE TYPE、PARTITION FUNCTION、PARTITION 配置、PLAN GUIDE、REMOTE SERVICE BINDING、ROUTE、SCHEMA、SERVICE、USER、TRIGGER、TYPE 和 Null。  
   
 > [!IMPORTANT]  
 >  在未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，會移除層級 0 類型的 USER 和 TYPE。 請避免在新的開發工作中使用這些功能，並規劃修改目前使用這些功能的應用程式。 請改用 SCHEMA 來當做層級 0 類型，而不是使用 USER。 如果是 TYPE，請使用 SCHEMA 當做層級 0 類型，並使用 TYPE 當做層級 1 類型。  
   
  [ @level0name =] {'*level0_object_name*'}  
- 這是所指定之層級 1 物件類型的名稱。 *level0_object_name*是**sysname** ，預設值是 Null。  
+ 這是所指定之層級 1 物件類型的名稱。 *level0_object_name* 是 **sysname** ，預設值是 Null。  
   
  [ @level1type =] {'*level1_object_type*'}  
- 這是層級 1 物件的類型。 *level1_object_type*是**Varchar （128）** ，預設值是 Null。 有效輸入如下：AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SYNONYM、TABLE、TABLE_TYPE、TYPE、VIEW、XML SCHEMA COLLECTION 和 NULL。  
+ 這是層級 1 物件的類型。 *level1_object_type* 是 **Varchar (128) ** ，預設值是 Null。 有效輸入如下：AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SYNONYM、TABLE、TABLE_TYPE、TYPE、VIEW、XML SCHEMA COLLECTION 和 NULL。  
   
  [ @level1name =] {'*level1_object_name*'}  
- 這是所指定之層級 1 物件類型的名稱。 *level1_object_name*是**sysname** ，預設值是 Null。  
+ 這是所指定之層級 1 物件類型的名稱。 *level1_object_name* 是 **sysname** ，預設值是 Null。  
   
  [ @level2type =] {'*level2_object_type*'}  
- 這是層級 2 物件的類型。 *level2_object_type*是**Varchar （128）** ，預設值是 Null。 有效輸入如下：COLUMN、CONSTRAINT、EVENT NOTIFICATION、INDEX、PARAMETER、TRIGGER 和 NULL。  
+ 這是層級 2 物件的類型。 *level2_object_type* 是 **Varchar (128) ** ，預設值是 Null。 有效輸入如下：COLUMN、CONSTRAINT、EVENT NOTIFICATION、INDEX、PARAMETER、TRIGGER 和 NULL。  
   
  [ @level2name =] {'*level2_object_name*'}  
- 這是所指定之層級 2 物件類型的名稱。 *level2_object_name*是**sysname**，預設值是 Null。  
+ 這是所指定之層級 2 物件類型的名稱。 *level2_object_name* 是 **sysname**，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -85,7 +86,7 @@ sp_updateextendedproperty
 ## <a name="remarks"></a>備註  
  為了指定擴充屬性，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的物件會分類成 3 個層級 (0、1 和 2)。 層級 0 是最高層級，定義為資料庫範圍所包含的物件。 層級 1 物件包含在結構描述或使用者範圍中，層級 2 物件包含在層級 1 物件中。 任何這些層級的物件都可以定義擴充屬性。 對一個層級中物件的參考必須用擁有或包含其較高層級物件的名稱來限定。  
   
- 指定有效的*property_name*和*值*，如果所有物件類型和名稱都是 null，則更新的屬性會屬於目前的資料庫。  
+ 假設有有效的 *property_name* 和 *值*，如果所有物件類型和名稱都是 null，則更新的屬性會屬於目前的資料庫。  
   
 ## <a name="permissions"></a>權限  
  除了下列例外狀況，db_owner 和 db_ddladmin 固定資料庫角色的成員可以更新任何物件的擴充屬性：db_ddladmin 不能將屬性加入至資料庫本身，或加入至使用者或角色中。  
@@ -136,10 +137,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [fn_listextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+ [&#40;Transact-sql&#41;的資料庫引擎預存程式 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sys. fn_listextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [sp_addextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
  [sp_dropextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
- [extended_properties &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
+ [sys. extended_properties &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
   
   

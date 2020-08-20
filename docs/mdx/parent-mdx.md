@@ -1,5 +1,6 @@
 ---
-title: 父系（MDX） |Microsoft Docs
+description: Parent (MDX)
+title: 父 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9449c81e9f8e8de0c21d96062337e91b2f56398d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bbedef9142d87c1522df516884797a0a6dff0b1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037191"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471710"
 ---
 # <a name="parent-mdx"></a>Parent (MDX)
 

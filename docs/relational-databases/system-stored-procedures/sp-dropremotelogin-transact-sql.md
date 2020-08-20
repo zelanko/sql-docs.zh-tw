@@ -1,5 +1,6 @@
 ---
-title: sp_dropremotelogin （Transact-sql） |Microsoft Docs
+description: sp_dropremotelogin (Transact-SQL)
+title: sp_dropremotelogin (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 183e7ce052e4ec9b5eba625f5e5e21fb16f1a5e7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6ccb8f6c4bbf5795784c8ad3712c5fe8163ff0e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881780"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474214"
 ---
 # <a name="sp_dropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 
@@ -44,26 +45,26 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @remoteserver = ] 'remoteserver'`這是對應至要移除之遠端登入的遠端伺服器名稱。 *remoteserver*是**sysname**，沒有預設值。 *remoteserver*必須已經存在。  
+`[ @remoteserver = ] 'remoteserver'` 這是對應至要移除之遠端登入的遠端伺服器名稱。 *remoteserver* 是 **sysname**，沒有預設值。 *remoteserver* 必須已經存在。  
   
-`[ @loginame = ] 'login'`這是本機伺服器上與遠端伺服器相關聯的選擇性登入名稱。 *login* 是預設值為 NULL 的 **sysname**。 若已指定，*登*入必須已經存在。  
+`[ @loginame = ] 'login'` 這是本機伺服器上與遠端伺服器相關聯的選擇性登入名稱。 *login* 是預設值為 NULL 的 **sysname**。 如果有指定，*登*入必須已經存在。  
   
-`[ @remotename = ] 'remote_name'`這是從遠端伺服器登入時，對應至*登*入之遠端登入的選擇性名稱。 *remote_name*是**sysname**，預設值是 Null。  
+`[ @remotename = ] 'remote_name'` 這是從遠端伺服器登入時，對應至 *登* 入之遠端登入的選擇性名稱。 *remote_name* 是 **sysname**，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="remarks"></a>備註  
- 如果只指定*remoteserver* ，則會從本機伺服器移除該遠端伺服器的所有遠端登入。 如果同時指定*login* ，則會從本機伺服器移除對應至該特定本機登入之*remoteserver*的所有遠端登入。 如果也指定了*remote_name* ，則只會從本機伺服器移除*remoteserver*中該遠端使用者的遠端登入。  
+ 如果只指定 *remoteserver* ，該遠端伺服器的所有遠端登入都會從本機伺服器移除。 如果也指定 *login* ， *remoteserver* 對應至該特定本機登入的所有遠端登入，都會從本機伺服器移除。 如果也指定了 *remote_name* *，則只會從* 本機伺服器移除該遠端使用者的遠端登入。  
   
- 若要新增本機伺服器使用者，請使用**sp_addlogin**。 若要移除本機伺服器使用者，請使用**sp_droplogin**。  
+ 若要加入本機伺服器使用者，請使用 **sp_addlogin**。 若要移除本機伺服器使用者，請使用 **sp_droplogin**。  
   
- 只有當您使用舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，才需要遠端登入。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 版和更新的版本，都改用連結伺服器登入。 使用**sp_addlinkedsrvlogin**和**sp_droplinkedsrvlogin**加入和移除連結的伺服器登入。  
+ 只有當您使用舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，才需要遠端登入。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 版和更新的版本，都改用連結伺服器登入。 使用 **sp_addlinkedsrvlogin** 和 **sp_droplinkedsrvlogin** 來新增和移除連結的伺服器登入。  
   
- **sp_dropremotelogin**不能在使用者自訂交易內執行。  
+ **sp_dropremotelogin** 無法在使用者自訂交易內執行。  
   
 ## <a name="permissions"></a>權限  
- 需要**系統管理員（sysadmin** ）或**securityadmin**固定伺服器角色中的成員資格。  
+ 需要 **系統管理員（sysadmin** ）或 **securityadmin** 固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
   
@@ -89,9 +90,9 @@ EXEC sp_dropremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的安全性預存程式](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
- [sp_addlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
+ [&#40;Transact-sql&#41;的安全性預存程式 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
  [sp_addremotelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
  [sp_addserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [sp_droplinkedsrvlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   

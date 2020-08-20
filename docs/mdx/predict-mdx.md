@@ -1,5 +1,6 @@
 ---
-title: Predict （MDX） |Microsoft Docs
+description: Predict (MDX)
+title: 預測 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 165d03b886ad8e9beeb09bf5a835c879cc23a2a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97d65cec90020b14bba242b4183ada8f02c2c368
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055581"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471670"
 ---
 # <a name="predict-mdx"></a>Predict (MDX)
 
@@ -41,7 +42,7 @@ Predict(Mining_Model_Name,String_Expression)
  評估為指定採礦模型之有效 DMX 運算式的有效字串運算式。  
   
 ## <a name="remarks"></a>備註  
- **Predict**函式會在指定之「採礦模型」的內容中評估指定的字串運算式。  
+ **Predict**函數會在指定的採礦模型的內容中評估指定的字串運算式。  
   
  資料採礦語法及函數的相關文件，記錄於資料採礦運算式 (DMX) 參考中。  
   

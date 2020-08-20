@@ -1,5 +1,6 @@
 ---
-title: sp_syscollector_create_collection_set （Transact-sql） |Microsoft Docs
+description: sp_syscollector_create_collection_set (Transact-SQL)
+title: sp_syscollector_create_collection_set (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 227c25b9e64e2630fe16b946383c37fd2989caaa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d5b1d3b125a60608727273cc9ce2796fa254f174
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892959"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473642"
 ---
 # <a name="sp_syscollector_create_collection_set-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,33 +56,33 @@ sp_syscollector_create_collection_set
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @name = ] 'name'`這是收集組的名稱。 *名稱*是**sysname** ，不能是空字串或 Null。  
+`[ @name = ] 'name'` 這是收集組的名稱。 *名稱* 是 **sysname** ，不能是空字串或 Null。  
   
- *名稱*必須是唯一的。 如需目前的收集組名稱清單，請查詢 syscollector_collection_sets 系統檢視表。  
+ *名稱* 必須是唯一的。 如需目前的收集組名稱清單，請查詢 syscollector_collection_sets 系統檢視表。  
   
-`[ @target = ] 'target'`保留供日後使用。 *名稱*為**Nvarchar （128）** ，預設值為 Null。  
+`[ @target = ] 'target'` 保留供日後使用。 *名稱* 是 **Nvarchar (128) ** ，預設值是 Null。  
   
-`[ @collection_mode = ] collection_mode`指定收集和儲存資料的方式。 *collection_mode*是**Smallint** ，而且可以有下列其中一個值：  
+`[ @collection_mode = ] collection_mode` 指定收集和儲存資料的方式。 *collection_mode* 是 **Smallint** ，而且可以有下列其中一個值：  
   
  0 - 快取模式。 資料收集和上傳會依照不同的排程。 指定連續收集的快取模式。  
   
  1 - 非快取模式。 資料收集和上傳位於相同的排程上。 針對特定收集或快照集收集指定非快取模式。  
   
- *Collection_mode*的預設值為0。 當*collection_mode*為0時，必須指定*schedule_uid*或*schedule_name* 。  
+ *Collection_mode*的預設值為0。 當 *collection_mode* 是0時，必須指定 *schedule_uid* 或 *schedule_name* 。  
   
-`[ @days_until_expiration = ] days_until_expiration`這是收集的資料儲存在管理資料倉儲中的天數。 *days_until_expiration*是**Smallint** ，預設值為730（兩年）。 *days_until_expiration*必須是0或正整數。  
+`[ @days_until_expiration = ] days_until_expiration` 這是收集的資料儲存在管理資料倉儲中的天數。 *days_until_expiration* 是 **Smallint** ，預設值為 730 (兩年) 。 *days_until_expiration* 必須是0或正整數。  
   
-`[ @proxy_id = ] proxy_id`這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy 帳戶的唯一識別碼。 *proxy_id*是**int** ，預設值為 Null。 如果指定， *proxy_name*必須是 Null。 若要取得*proxy_id*，請查詢 sysproxies 系統資料表。 dc_admin 固定資料庫角色必須具有存取此 Proxy 的權限。 如需詳細資訊，請參閱[建立 SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md)。  
+`[ @proxy_id = ] proxy_id` 這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy 帳戶的唯一識別碼。 *proxy_id* 是 **int** ，預設值是 Null。 如果有指定， *proxy_name* 必須是 Null。 若要取得 *proxy_id*，請查詢 sysproxies 系統資料表。 dc_admin 固定資料庫角色必須具有存取此 Proxy 的權限。 如需詳細資訊，請參閱 [建立 SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md)。  
   
-`[ @proxy_name = ] 'proxy_name'`這是 proxy 帳戶的名稱。 *proxy_name*是**sysname** ，預設值是 Null。 如果指定， *proxy_id*必須是 Null。 若要取得*proxy_name*，請查詢 sysproxies 系統資料表。  
+`[ @proxy_name = ] 'proxy_name'` 這是 proxy 帳戶的名稱。 *proxy_name* 是 **sysname** ，預設值是 Null。 如果有指定， *proxy_id* 必須是 Null。 若要取得 *proxy_name*，請查詢 sysproxies 系統資料表。  
   
-`[ @schedule_uid = ] 'schedule_uid'`這是指向排程的 GUID。 *schedule_uid*是**uniqueidentifier** ，預設值為 Null。 如果指定， *schedule_name*必須是 Null。 若要取得*schedule_uid*，請查詢 sysschedules 系統資料表。  
+`[ @schedule_uid = ] 'schedule_uid'` 這是指向排程的 GUID。 *schedule_uid* 是 **uniqueidentifier** ，預設值為 Null。 如果有指定， *schedule_name* 必須是 Null。 若要取得 *schedule_uid*，請查詢 sysschedules 系統資料表。  
   
- 當*collection_mode*設定為0時，必須指定*schedule_uid*或*schedule_name* 。 當*collection_mode*設為1時， *schedule_uid*或*schedule_name*會在指定時予以忽略。  
+ 當 *collection_mode* 設定為0時，必須指定 *schedule_uid* 或 *schedule_name* 。 當 *collection_mode* 設定為1時，如果指定，就會忽略 *schedule_uid* 或 *schedule_name* 。  
   
-`[ @schedule_name = ] 'schedule_name'`這是排程的名稱。 *schedule_name*是**sysname** ，預設值是 Null。 如果指定， *schedule_uid*必須是 Null。 若要取得*schedule_name*，請查詢 sysschedules 系統資料表。  
+`[ @schedule_name = ] 'schedule_name'` 這是排程的名稱。 *schedule_name* 是 **sysname** ，預設值是 Null。 如果有指定， *schedule_uid* 必須是 Null。 若要取得 *schedule_name*，請查詢 sysschedules 系統資料表。  
   
-`[ @logging_level = ] logging_level`這是記錄層級。 *logging_level*是**Smallint**並具有下列其中一個值：  
+`[ @logging_level = ] logging_level` 這是記錄層級。 *logging_level* 是 **Smallint** ，具有下列其中一個值：  
   
  0 – 記錄執行資訊和追蹤的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 事件：  
   
@@ -103,14 +104,14 @@ sp_syscollector_create_collection_set
   
  *Logging_level*的預設值為1。  
   
-`[ @description = ] 'description'`這是收集組的描述。 *描述*是**Nvarchar （4000）** ，預設值為 Null。  
+`[ @description = ] 'description'` 這是收集組的描述。 *描述* 是 **Nvarchar (4000) ** ，預設值是 Null。  
   
-`[ @collection_set_id = ] collection_set_id`這是收集組的唯一本機識別碼。 *collection_set_id*是具有 OUTPUT 的**int** ，而且是必要的。  
+`[ @collection_set_id = ] collection_set_id` 這是收集組的唯一本機識別碼。 *collection_set_id* 是具有 OUTPUT 的 **int** ，而且是必要的。  
   
-`[ @collection_set_uid = ] 'collection_set_uid'`這是收集組的 GUID。 *collection_set_uid*是具有輸出的**uniqueidentifier** ，其預設值為 Null。  
+`[ @collection_set_uid = ] 'collection_set_uid'` 這是收集組的 GUID。 *collection_set_uid* 是具有 OUTPUT 的 **uniqueidentifier** ，預設值為 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
  sp_syscollector_create_collection_set 必須在 msdb 系統資料庫的內容中執行。  
@@ -157,8 +158,8 @@ EXEC dbo.sp_syscollector_create_collection_set
   
 ## <a name="see-also"></a>另請參閱  
  [資料收集](../../relational-databases/data-collection/data-collection.md)   
- [建立使用一般 T-SQL 查詢收集器型別的自訂收集組 &#40;Transact-sql&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
- [&#40;Transact-sql&#41;的資料收集器預存程式](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [建立使用一般 T-SQL 查詢收集器型別 &#40;Transact-sql&#41;的自訂收集組 ](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
+ [資料收集器預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
   
   

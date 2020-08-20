@@ -1,5 +1,6 @@
 ---
-title: sp_help_jobserver （Transact-sql） |Microsoft Docs
+description: sp_help_jobserver (Transact-SQL)
+title: sp_help_jobserver (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 93511eedfe434419270cccf6c5b4c3c685a8eeef
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8f0093529c27d8dae022e005f92eeaf4f84e99b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893672"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474175"
 ---
 # <a name="sp_help_jobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,14 +43,14 @@ sp_help_jobserver
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @job_id = ] job_id`要傳回其資訊的作業識別碼。 *job_id*是**uniqueidentifier**，預設值是 Null。  
+`[ @job_id = ] job_id` 要傳回其資訊的作業識別碼。 *job_id* 是 **uniqueidentifier**，預設值是 Null。  
   
-`[ @job_name = ] 'job_name'`要傳回其資訊的作業名稱。 *job_name*是**sysname**，預設值是 Null。  
+`[ @job_name = ] 'job_name'` 要傳回其資訊的作業名稱。 *job_name* 是 **sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  必須指定*job_id*或*job_name* ，但不能同時指定兩者。  
+>  必須指定 *job_id* 或 *job_name* ，但不能同時指定兩者。  
   
-`[ @show_last_run_details = ] show_last_run_details`這是指上次執行的執行資訊是否為結果集的一部分。 *show_last_run_details*是**Tinyint**，預設值是**0**。 **0**不包含最後執行的資訊，而**1**則是。  
+`[ @show_last_run_details = ] show_last_run_details` 這是指上次執行的執行資訊是否為結果集的一部分。 *show_last_run_details* 是 **Tinyint**，預設值是 **0**。 **0** 不包含最後執行的資訊， **1** 則是。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -63,7 +64,7 @@ sp_help_jobserver
 |**enlist_date**|**datetime**|將目標伺服器編列到主要伺服器的日期。|  
 |**last_poll_date**|**datetime**|目標伺服器前次輪詢主要伺服器的日期。|  
   
- 如果執行**sp_help_jobserver**時， *show_last_run_details*設定為**1**，則結果集會有這些額外的資料行。  
+ 如果 **sp_help_jobserver** 執行時 *show_last_run_details* 設定為 **1**，則結果集會有這些額外的資料行。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -84,7 +85,7 @@ sp_help_jobserver
   
  如需這些角色權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
- **SQLAgentUserRole**的成員只能查看他們所擁有之作業的資訊。  
+ **SQLAgentUserRole**的成員只能看到他們所擁有之作業的資訊。  
   
 ## <a name="examples"></a>範例  
  下列範例會傳回 `NightlyBackups` 作業的相關資訊，其中包括上次執行的資訊。  

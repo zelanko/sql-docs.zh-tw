@@ -1,5 +1,6 @@
 ---
-title: Order （MDX） |Microsoft Docs
+description: Order (MDX)
+title: Order (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d540b299fd08aa78576b19040a4cfafb9046ae7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4db745ea01a56d68fe259ebb2fffb5aae250abd4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055677"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471740"
 ---
 # <a name="order-mdx"></a>Order (MDX)
 
@@ -45,12 +46,12 @@ Order(Set_Expression, String_Expression
  有效的字串運算式，這通常是傳回數字 (以字串表示) 之資料格座標的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- **Order**函式可以是階層式（如使用**ASC**或**DESC**旗標所指定）或非階層式（如使用**BASC**或**BDESC**旗標所指定; **B**代表「中斷階層」）。 如果指定了**ASC**或**DESC** ， **Order**函式會先根據成員在階層中的位置排列，然後排序每個層級。 如果指定**BASC**或**BDESC** ， **Order**函式會排列集合中的成員，而不考慮階層。 在未指定任何旗標的情況下， **ASC**是預設值。  
+ **Order**函數可以是使用**ASC**或**DESC**旗標所指定的階層式 () 或使用**BASC**或**BDESC**旗標指定的非階層式 (。**B**代表「中斷階層」 ) 。 如果指定 **ASC** 或 **DESC** ， **Order** 函數會先根據其在階層中的位置來排列成員，然後再排序每個層級。 如果指定了 **BASC** 或 **BDESC** ， **Order** 函數就會排列集合中的成員，而不考慮階層。 在未指定旗標的情況下， **ASC** 是預設值。  
   
- 如果**Order**函式用於交叉聯結兩個或多個階層的集合，且使用**DESC**旗標，則只會排序集合中最後一個階層的成員。 這不同於 Analysis Services 2000，其集合內的所有階層都會排序。  
+ 如果 **Order** 函數是與交叉聯結兩個或多個階層的集合搭配使用，並使用 **DESC** 旗標，則只會排序集合中最後一個階層的成員。 這不同於 Analysis Services 2000，其集合內的所有階層都會排序。  
   
 ## <a name="examples"></a>範例  
- 下列範例會從「**艾德工作**」 cube 傳回「日期」維度上行事曆階層中所有行事曆季的轉售商訂單數目。**Order**函數會重新排序資料列軸的集合。 **Order**函式會按照階層所`[Reseller Order Count]`決定`[Calendar]`的遞減階層順序來排序集合。  
+ 下列範例會從「 **艾德作品** 」 cube 傳回「日期」維度上行事曆階層中所有行事曆季的轉售商訂單數。 **Order** 函數會重新排序 ROWS 軸的集合。 **Order**函數會依 `[Reseller Order Count]` 階層所決定的遞減階層順序來排序集合 `[Calendar]` 。  
   
  `SELECT`  
   
@@ -68,7 +69,7 @@ Order(Set_Expression, String_Expression
   
  `FROM [Adventure Works]`  
   
- 請注意，在此範例中，當**DESC**旗標變更為**BDESC**時，階層會中斷，而日曆季的清單則會傳回，而不考慮階層：  
+ 請注意，在此範例中，當 **DESC** 旗標變更為 **BDESC**時，階層會中斷，而且會傳回日曆季清單，而不考慮階層：  
   
  `SELECT`  
   
@@ -86,7 +87,7 @@ Order(Set_Expression, String_Expression
   
  `FROM [Adventure Works]`  
   
- 下列範例不考慮階層，而根據 Reseller Gross Profit 傳回前五名產品銷售子類別的 Reseller Sales 量值。 只有在使用**Order**函數排序結果之後，才會使用**子集**函數來傳回集合中的前5個元組。  
+ 下列範例不考慮階層，而根據 Reseller Gross Profit 傳回前五名產品銷售子類別的 Reseller Sales 量值。 在使用**Order**函數排序結果之後，會使用**子集**函數來傳回集合中的前5個元組。  
   
  `SELECT Subset`  
   
@@ -108,7 +109,7 @@ Order(Set_Expression, String_Expression
   
  `FROM [Adventure Works]`  
   
- 下列範例會根據「轉售商銷售量」量值，使用**rank**函數來排名 City 階層的成員，然後以順位的順序顯示。 藉由使用**Order**函數先排序 City 階層的成員集合，排序只會執行一次，然後再以排序的順序呈現線性掃描。  
+ 下列範例會根據「轉售商銷售量」量值，使用 **rank** 函數來為 City 階層的成員進行排名，然後以排名順序顯示這些成員。 藉由使用 **Order** 函數來先排序 City 階層的成員集合，排序只會完成一次，然後再以線性掃描的形式呈現排序的順序。  
   
 ```  
 WITH   
@@ -126,7 +127,7 @@ SELECT {[Measures].[City Rank],[Measures].[Reseller Sales Amount]}  ON 0
 FROM [Adventure Works]  
 ```  
   
- 下列範例會傳回唯一的集合中的產品數目，使用**order**函數來排序非空白的元組，然後再利用**篩選**函數。 **CurrentOrdinal**函數是用來比較和消除系結。  
+ 下列範例會使用 **order** 函數來排序非空白的元組，然後再利用 **Filter** 函數，傳回集合中唯一的產品數目。 **CurrentOrdinal**函數是用來比較和消除系結。  
   
 ```  
 WITH MEMBER [Measures].[PrdTies] AS Count  
@@ -160,7 +161,7 @@ SELECT {[Measures].[PrdTies]} ON 0
 FROM [Adventure Works]  
 ```  
   
- 若要瞭解**DESC**旗標如何與元組集合搭配使用，請先考慮下列查詢的結果：  
+ 若要瞭解 **DESC** 旗標如何搭配一組元組使用，請先考慮下列查詢的結果：  
   
 ```  
   
@@ -174,7 +175,7 @@ FROM [Adventure Works]
   
 ```  
   
- 在 Rows 軸上，您可以看到銷售領域群組已經依稅額的遞減次序排序，如下：北美、歐洲、太平洋、NA。 現在，如果我們將銷售領域群組的集合與一組產品子類別結合，並以相同方式套用**Order**函式，就會發生什麼情況，如下所示：  
+ 在 Rows 軸上，您可以看到銷售領域群組已經依稅額的遞減次序排序，如下：北美、歐洲、太平洋、NA。 現在，如果我們將一組銷售領域群組與一組產品子類別結合，並以相同方式套用 **Order** 函式，就會發生什麼事，如下所示：  
   
 ```  
   
@@ -190,7 +191,7 @@ FROM [Adventure Works]
   
 ```  
   
- 雖然產品子類別目錄的集合已經依遞減階層次序排序，但現在銷售領域群組並未排序，而是以它們在階層中的順序出現：歐洲、NA、北美和太平洋。 這是因為只有 Tuple 集合中的最後一個階層 (即產品子類別目錄) 才會排序。 若要重現 Analysis Services 2000 的行為，請在交叉聯結之前使用一系列的 nested**產生**函數來排序每個集合，例如：  
+ 雖然產品子類別目錄的集合已經依遞減階層次序排序，但現在銷售領域群組並未排序，而是以它們在階層中的順序出現：歐洲、NA、北美和太平洋。 這是因為只有 Tuple 集合中的最後一個階層 (即產品子類別目錄) 才會排序。 若要重現 Analysis Services 2000 的行為，請使用一連串的嵌套 **產生** 函數來排序每個集合，然後再進行交叉聯結，例如：  
   
 ```  
   

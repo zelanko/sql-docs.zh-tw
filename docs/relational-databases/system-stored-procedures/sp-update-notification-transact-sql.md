@@ -1,5 +1,6 @@
 ---
-title: sp_update_notification （Transact-sql） |Microsoft Docs
+description: sp_update_notification (Transact-SQL)
+title: sp_update_notification (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2b3018d982558f5d023d25695a541c8b109c015f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 32ddc8e2afae79b458d39f577d75176ba6f9dec1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891347"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473514"
 ---
 # <a name="sp_update_notification-transact-sql"></a>sp_update_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,11 +44,11 @@ sp_update_notification
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @alert_name = ] 'alert'`與此通知相關聯的警示名稱。 *警示*為**sysname**，沒有預設值。  
+`[ @alert_name = ] 'alert'` 與此通知相關聯的警示名稱。 *警示* 是 **sysname**，沒有預設值。  
   
-`[ @operator_name = ] 'operator'`會在警示發生時收到通知的操作員。 *運算子*是**sysname**，沒有預設值。  
+`[ @operator_name = ] 'operator'` 警示發生時將收到通知的操作員。 *運算子* 是 **sysname**，沒有預設值。  
   
-`[ @notification_method = ] notification`用來通知操作員的方法。 *通知*是**Tinyint**，沒有預設值，而且可以是下列其中一個或多個值。  
+`[ @notification_method = ] notification` 用來通知操作員的方法。 *通知*是 **Tinyint**，沒有預設值，而且可以是下列其中一個或多個值。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -57,18 +58,18 @@ sp_update_notification
 |**7**|所有方法|  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_update_notification**必須從**msdb**資料庫中執行。  
+ **sp_update_notification** 必須從 **msdb** 資料庫執行。  
   
- 您可以使用指定的*notification_method*來更新沒有必要位址資訊之操作員的通知。 如果傳送電子郵件訊息或呼叫器通知失敗，會在 Microsoft SQL Server Agent 錯誤記錄中報告這項失敗。  
+ 您可以使用指定的 *notification_method*來更新沒有必要位址資訊之操作員的通知。 如果傳送電子郵件訊息或呼叫器通知失敗，會在 Microsoft SQL Server Agent 錯誤記錄中報告這項失敗。  
   
 ## <a name="permissions"></a>權限  
- 若要執行這個預存程式，使用者必須被授與**系統管理員（sysadmin** ）固定伺服器角色。  
+ 若要執行這個預存程式，使用者必須被授與 **系統管理員（sysadmin** ）固定伺服器角色。  
   
 ## <a name="examples"></a>範例  
- 下列範例會針對警示傳送給的通知，修改通知方法 `François Ajenstat` `Test Alert` 。  
+ 下列範例會修改針對警示傳送之通知的通知方法 `François Ajenstat` `Test Alert` 。  
   
 ```  
 USE msdb ;  

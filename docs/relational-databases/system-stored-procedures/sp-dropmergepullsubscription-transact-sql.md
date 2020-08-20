@@ -1,5 +1,6 @@
 ---
-title: sp_dropmergepullsubscription （Transact-sql） |Microsoft Docs
+description: sp_dropmergepullsubscription (Transact-SQL)
+title: sp_dropmergepullsubscription (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9301dd80-72f7-4adb-9b13-87e7f9114248
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 84fbed9341d01c8fe7d1c2d4e57df16aa027711a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1dab181e38d9c072f5e25dc8db490a7538bbe615
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881801"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474247"
 ---
 # <a name="sp_dropmergepullsubscription-transact-sql"></a>sp_dropmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,27 +41,27 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**，預設值是 Null。 此為必要參數。 指定 [**全部**] 的值，以移除所有發行集的訂閱  
+`[ @publication = ] 'publication'` 這是發行集的名稱。 *發行* 集是 **sysname**，預設值是 Null。 此為必要參數。 指定 [ **全部** ] 的值以移除所有發行集的訂閱  
   
-`[ @publisher = ] 'publisher'`這是發行者的名稱。 *publisher*是**sysname**，預設值是 Null。 此為必要參數。  
+`[ @publisher = ] 'publisher'` 這是發行者的名稱。 *publisher*是 **sysname**，預設值是 Null。 此為必要參數。  
   
-`[ @publisher_db = ] 'publisher_db'`這是發行者資料庫的名稱。 *publisher_db*是**sysname**，預設值是 Null。 此為必要參數。  
+`[ @publisher_db = ] 'publisher_db'` 這是發行者資料庫的名稱。 *publisher_db*是 **sysname**，預設值是 Null。 此為必要參數。  
   
-`[ @reserved = ] 'reserved'`保留供日後使用。 *reserved*是**bit**，預設值是**0**。  
+`[ @reserved = ] 'reserved'` 保留供日後使用。 *reserved* 是 **bit**，預設值是 **0**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_dropmergepullsubscription**用於合併式複寫中。  
+ **sp_dropmergepullsubscription** 用於合併式複寫中。  
   
- **sp_dropmergepullsubscription**會卸載這個合併提取訂閱的合併代理程式，但不會在**sp_addmergepullsubscription**中建立合併代理程式。  
+ **sp_dropmergepullsubscription** 會卸載這個合併提取訂閱的合併代理程式，但不會在 **sp_addmergepullsubscription**中建立合併代理程式。  
   
 ## <a name="example"></a>範例  
  [!code-sql[HowTo#sp_dropmergepullsubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropmergepullsubscrip_1.sql)]  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色的成員或建立合併提取訂閱的使用者，才能夠執行**sp_dropmergepullsubscription**。 只有在建立合併提取訂閱的使用者屬於此角色時， **db_owner**固定資料庫角色才能夠執行**sp_dropmergepullsubscription** 。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色的成員或建立合併提取訂閱的使用者，才可以執行 **sp_dropmergepullsubscription**。 只有在建立合併提取訂閱的使用者屬於此角色時， **db_owner** 固定資料庫角色才能執行 **sp_dropmergepullsubscription** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [刪除提取訂閱](../../relational-databases/replication/delete-a-pull-subscription.md)   

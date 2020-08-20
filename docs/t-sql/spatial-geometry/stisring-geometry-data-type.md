@@ -1,4 +1,5 @@
 ---
+description: STIsRing (geometry 資料類型)
 title: STIsRing (geometry 資料類型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ea0063be-1c74-4cc4-ac6f-b65321ddfa54
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ad91e97b30f5cc0e232437dcc8ae775253801abc
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 06702731a47683c44d6096b354c3ec2f773aefaf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555960"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472470"
 ---
 # <a name="stisring-geometry-data-type"></a>STIsRing (geometry 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

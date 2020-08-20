@@ -1,4 +1,5 @@
 ---
+description: BufferWithTolerance (geometry 資料類型)
 title: BufferWithTolerance (geometry 資料類型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ea306ec0acca8cdb2a21a1ecbeff2c5efe5bf56b
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: fc0cfc790f933935de0f9aee96dd7c6e7b66425f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555122"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472530"
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (geometry 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "86555122"
  *tolerance*  
  這是 **float** 運算式，用來指定緩衝距離的容錯。  
   
- 「容錯」  係指所傳回線性近似值之理想緩衝距離的最大變異。  
+ 「容錯」** 係指所傳回線性近似值之理想緩衝距離的最大變異。  
   
  例如，點的理想緩衝距離是圓形，但是這必須由多邊形來模擬。 當容錯越小時，多邊形就會有越多的點，這樣會增加結果的複雜度，但是會減少錯誤。  
   

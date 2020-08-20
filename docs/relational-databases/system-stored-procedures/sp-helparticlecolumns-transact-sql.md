@@ -1,5 +1,6 @@
 ---
-title: sp_helparticlecolumns （Transact-sql） |Microsoft Docs
+description: sp_helparticlecolumns (Transact-SQL)
+title: sp_helparticlecolumns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4ab8250e12f5b553a9c2c080b0a1e4efe9eb1657
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eed4538f2ffe43faf6ef83685ba3b5984198663c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786184"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474170"
 ---
 # <a name="sp_helparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,17 +40,17 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'`這是包含發行項的發行集名稱。 *發行*集是**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 這是包含發行項的發行集名稱。 *發行* 集是 **sysname**，沒有預設值。  
   
-`[ @article = ] 'article'`這是傳回其資料行的發行項名稱。 *文章*是**sysname**，沒有預設值。  
+`[ @article = ] 'article'` 這是傳回資料行的發行項名稱。 *文章* 是 **sysname**，沒有預設值。  
   
-`[ @publisher = ] 'publisher'`指定非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *publisher*是**sysname**，預設值是 Null。  
+`[ @publisher = ] 'publisher'` 指定非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *publisher* 是 **sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  發行者發佈要求的發行項時，不應指定*發行者* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+>  發行者發行要求的發行項時，不應指定*發行者* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （未發行的資料行）或**1** （已發行的資料行）  
+ **0** (未發行的資料行) 或 **1** (已發行的資料行)   
   
 ## <a name="result-sets"></a>結果集  
   
@@ -57,17 +58,17 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 |-----------------|---------------|-----------------|  
 |**資料行識別碼**|**int**|資料行的識別碼。|  
 |**column**|**sysname**|資料行的名稱。|  
-|**發佈**|**bit**|資料行是否已發行：<br /><br /> **0** = 否<br /><br /> **1** = 是|  
+|**發表**|**bit**|資料行是否已發行：<br /><br /> **0** = 否<br /><br /> **1** = 是|  
 |**發行者類型**|**sysname**|在發行者端之資料行的資料類型。|  
 |**訂閱者類型**|**sysname**|在訂閱者端之資料行的資料類型。|  
   
 ## <a name="remarks"></a>備註  
- **sp_helparticlecolumns**用於快照式和異動複寫中。  
+ **sp_helparticlecolumns** 用於快照式和異動複寫中。  
   
- **sp_helparticlecolumns**在檢查垂直資料分割時很有用。  
+ **sp_helparticlecolumns** 有助於檢查垂直資料分割。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色、 **db_owner**固定資料庫角色，或目前發行集之發行集存取清單的成員，才能夠執行**sp_helparticlecolumns**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色、 **db_owner** 固定資料庫角色，或目前發行集之發行集存取清單的成員，才能夠執行 **sp_helparticlecolumns**。  
   
 ## <a name="see-also"></a>另請參閱  
  [定義和修改資料行篩選](../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)   

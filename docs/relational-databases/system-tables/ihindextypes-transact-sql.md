@@ -1,5 +1,6 @@
 ---
-title: IHindextypes （Transact-sql） |Microsoft Docs
+description: IHindextypes (Transact-SQL)
+title: IHindextypes (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 5eb67d59-a19d-4dba-9d2b-657f87818f6b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6bb1a749b5bc293c306136f806cd6558b1192688
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 03f7ffd43625051cf8711e3ef2537c0f64ab5caf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890304"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473297"
 ---
 # <a name="ihindextypes-transact-sql"></a>IHindextypes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **IHindextypes**系統資料表會針對非 SQL Server 發行者所支援的每個非 SQL Server 索引類型，各包含一個資料列。 這份資料表儲存在散發資料庫中。  
+  **IHindextypes**系統資料表針對非 SQL Server 發行者所支援的每個非 SQL Server 索引類型，各包含一個資料列。 這份資料表儲存在散發資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  

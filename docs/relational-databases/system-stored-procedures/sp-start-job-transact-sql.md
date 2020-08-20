@@ -1,5 +1,6 @@
 ---
-title: sp_start_job （Transact-sql） |Microsoft Docs
+description: sp_start_job (Transact-SQL)
+title: sp_start_job (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 506fde9c77a0a78ef36bc4a89933ccdbe6a5f45d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fcf38d9b430943669a17e0ab1dd449eb4c75a18b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893011"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473725"
 ---
 # <a name="sp_start_job-transact-sql"></a>sp_start_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,26 +46,26 @@ sp_start_job
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @job_name = ] 'job_name'`要啟動之作業的名稱。 必須指定*job_id*或*job_name* ，但不能同時指定兩者。 *job_name*是**sysname**，預設值是 Null。  
+`[ @job_name = ] 'job_name'` 要啟動的作業名稱。 必須指定 *job_id* 或 *job_name* ，但不能同時指定兩者。 *job_name* 是 **sysname**，預設值是 Null。  
   
-`[ @job_id = ] job_id`要啟動之作業的識別碼。 必須指定*job_id*或*job_name* ，但不能同時指定兩者。 *job_id*是**uniqueidentifier**，預設值是 Null。  
+`[ @job_id = ] job_id` 要啟動之作業的識別碼。 必須指定 *job_id* 或 *job_name* ，但不能同時指定兩者。 *job_id* 是 **uniqueidentifier**，預設值是 Null。  
   
 `[ @error_flag = ] error_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @server_name = ] 'server_name'`要在其上啟動作業的目標伺服器。 *server_name*是**Nvarchar （128）**，預設值是 Null。 *server_name*必須是作業目前設為目標的其中一個目標伺服器。  
+`[ @server_name = ] 'server_name'` 要在其上啟動作業的目標伺服器。 *server_name* 是 **Nvarchar (128) **，預設值是 Null。 *server_name* 必須是作業目前目標的其中一部目標伺服器。  
   
-`[ @step_name = ] 'step_name'`開始執行作業的步驟名稱。 只適用於本機作業。 *step_name*是**sysname**，預設值是 Null  
+`[ @step_name = ] 'step_name'` 開始執行作業的步驟名稱。 只適用於本機作業。 *step_name* 是 **sysname**，預設值是 Null  
   
 `[ @output_flag = ] output_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="result-sets"></a>結果集  
  None  
   
 ## <a name="remarks"></a>備註  
- 這個預存程式是在**msdb**資料庫中。  
+ 這個預存程式在 **msdb** 資料庫中。  
   
 ## <a name="permissions"></a>權限  
  依預設，只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員，才能夠執行這個預存程序。 其他使用者必須被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫的下列其中一個** Agent 固定資料庫角色。  
@@ -77,7 +78,7 @@ sp_start_job
   
  如需這些角色權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
- **SQLAgentUserRole**和**SQLAgentReaderRole**的成員只能啟動他們所擁有的作業。 **SQLAgentOperatorRole**的成員可以啟動所有本機作業，包括其他使用者所擁有的工作。 **系統管理員（sysadmin** ）的成員可以啟動所有本機和多伺服器作業。  
+ **SQLAgentUserRole**和**SQLAgentReaderRole**的成員只能啟動其所擁有的作業。 **SQLAgentOperatorRole**的成員可以啟動所有本機作業，包括其他使用者所擁有的工作。 **系統管理員（sysadmin** ）的成員可以啟動所有本機和多伺服器作業。  
   
 ## <a name="examples"></a>範例  
  下列範例會啟動名稱為 `Weekly Sales Data Backup` 的作業。  

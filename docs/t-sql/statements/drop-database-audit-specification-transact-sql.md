@@ -1,4 +1,5 @@
 ---
+description: DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)
 title: DROP DATABASE AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3c387c6e-9a67-4daa-b64a-c87f6b3c9c4f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ebf969293f515a38c1721abb4f08c94c8ac7eb32
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: e4abd76d2f2fb4b2036036e165ec8f075003fc21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484139"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472298"
 ---
 # <a name="drop-database-audit-specification-transact-sql"></a>DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

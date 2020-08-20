@@ -1,5 +1,6 @@
 ---
-title: sp_help_spatial_geography_index （Transact-sql） |Microsoft Docs
+description: sp_help_spatial_geography_index (Transact-SQL)
+title: sp_help_spatial_geography_index (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: c9bf5675-eafc-4d71-bfdb-da963384fa0c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1864aec83a60c83a1ff10bb0c5e3f814631c27fc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e8c9073ae1a2536c87437c94fd9fe224c2c63e63
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733264"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474150"
 ---
 # <a name="sp_help_spatial_geography_index-transact-sql"></a>sp_help_spatial_geography_index (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  傳回關於**地理**空間索引之指定屬性集的名稱和值。 結果會以資料表格式傳回。 您可以選擇傳回核心屬性集或索引的所有屬性。  
+  傳回有關 **地理位置** 空間索引的指定屬性集的名稱和值。 結果會以資料表格式傳回。 您可以選擇傳回核心屬性集或索引的所有屬性。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,10 +43,10 @@ sp_help_spatial_geography_index [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>引數  
- 請參閱[空間索引預存程式的引數和屬性](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)。  
+ 請參閱 [空間索引預存程式的引數和屬性](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)。  
   
 ## <a name="properties"></a>屬性  
- 請參閱[空間索引預存程式的引數和屬性](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)。  
+ 請參閱 [空間索引預存程式的引數和屬性](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)。  
   
 ## <a name="permissions"></a>權限  
  必須為使用者指派 PUBLIC 角色才能存取此程序。 需要在伺服器和物件上具有 READ ACCESS 權限。  
@@ -53,7 +54,7 @@ sp_help_spatial_geography_index [ @tabname =] 'tabname'
 ## <a name="remarks"></a>備註  
   
 ## <a name="example"></a>範例  
- 下列範例會使用 `sp_help_spatial_geography_index` 來調查** \@ qs**中給定查詢範例在資料表**geography_col**上定義的**地理位置**空間索引**SIndx_SpatialTable_geography_col2** 。 這個範例只會傳回指定索引的核心屬性。  
+ 下列範例會使用 `sp_help_spatial_geography_index` 來調查** \@ qs**中指定查詢範例在資料表**geography_col**上定義的**地理**空間索引**SIndx_SpatialTable_geography_col2** 。 這個範例只會傳回指定索引的核心屬性。  
   
 ```  
 declare @qs geography  

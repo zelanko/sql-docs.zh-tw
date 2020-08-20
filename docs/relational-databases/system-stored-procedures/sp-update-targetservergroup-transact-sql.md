@@ -1,5 +1,6 @@
 ---
-title: sp_update_targetservergroup （Transact-sql） |Microsoft Docs
+description: sp_update_targetservergroup (Transact-SQL)
+title: sp_update_targetservergroup (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ac65ed6-e07e-40e4-a282-13bfd92dfa41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 16cd7c339a476875ee3f3a7319ddaf57f0d69711
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6aa33876376560cfc90cbf7ab03a69fcf94fa6a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891269"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473516"
 ---
 # <a name="sp_update_targetservergroup-transact-sql"></a>sp_update_targetservergroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,18 +42,18 @@ sp_update_targetservergroup
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @name = ] 'current_name'`目標伺服器群組的名稱。 *current_name*是**sysname**，沒有預設值。  
+`[ @name = ] 'current_name'` 目標伺服器群組的名稱。 *current_name* 是 **sysname**，沒有預設值。  
   
-`[ @new_name = ] 'new_name'`目標伺服器群組的新名稱。 *new_name*是**sysname**，沒有預設值。  
+`[ @new_name = ] 'new_name'` 目標伺服器群組的新名稱。 *new_name* 是 **sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="permissions"></a>權限  
- 若要執行這個預存程式，使用者必須被授與**系統管理員（sysadmin** ）固定伺服器角色。  
+ 若要執行這個預存程式，使用者必須被授與 **系統管理員（sysadmin** ）固定伺服器角色。  
   
 ## <a name="remarks"></a>備註  
- **sp_update_targetservergroup**必須從**msdb**資料庫中執行。  
+ **sp_update_targetservergroup** 必須從 **msdb** 資料庫執行。  
   
 ## <a name="examples"></a>範例  
  下列範例會將目標伺服器群組的名稱 `Servers Processing Customer Orders` 改成 `Local Servers Processing Customer Orders`。  

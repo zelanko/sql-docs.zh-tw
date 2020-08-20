@@ -1,5 +1,6 @@
 ---
-title: sysreplicationalerts （Transact-sql） |Microsoft Docs
+description: sysreplicationalerts (Transact-SQL)
+title: sysreplicationalerts (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,32 +18,32 @@ helpviewer_keywords:
 ms.assetid: 6ed15828-8cca-4cf0-b2ff-1ecd0d8db11a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d46b3d8fa816a1c980c1486b233232c46c90df65
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f364d00a57c5b31020689ed3a002300e073d429d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881300"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473102"
 ---
 # <a name="sysreplicationalerts-transact-sql"></a>sysreplicationalerts (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  包含會造成引發複寫警示之條件的相關資訊。 此資料表會儲存在**msdb**資料庫中。  
+  包含會造成引發複寫警示之條件的相關資訊。 此資料表儲存在 **msdb** 資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|警示的識別碼。|  
-|**status**|**int**|使用者自訂值：<br /><br /> **0** = Unserviced。<br /><br /> **1** = 已維修。|  
+|**status**|**int**|使用者自訂值：<br /><br /> **0** = Unserviced。<br /><br /> **1** = 服務。|  
 |**agent_type**|**int**|代理程式的類型：<br /><br /> **1** = 快照集代理程式。<br /><br /> **2** = 記錄讀取器代理程式。<br /><br /> **3** = 散發代理程式。<br /><br /> **4** = 合併代理程式。|  
-|**agent_id**|**int**|來自資料表**MSsnapshot_agents**、 **MSlogreader_agents**、 **MSdistribution_agents**或**MSmerge_agents**中的代理程式識別碼。|  
-|**error_id**|**int**|儲存在**MSrepl_errors**中的錯誤識別碼。|  
+|**agent_id**|**int**|資料表中的代理程式識別碼 **MSsnapshot_agents**、 **MSlogreader_agents**、 **MSdistribution_agents**或 **MSmerge_agents**。|  
+|**error_id**|**int**|儲存在 **MSrepl_errors**中之錯誤的識別碼。|  
 |**alert_error_code**|**int**|當記載這項記錄時，所引發之警示的訊息識別碼。|  
 |**time**|**datetime**|插入記錄的時間。|  
 |**publisher**|**sysname**|與引發這項警示之代理程式相關聯的發行者名稱。|  
 |**publisher_db**|**sysname**|與引發這項警示之代理程式相關聯的發行者資料庫。|  
-|**發行集**|**sysname**|與引發這項警示之代理程式相關聯的發行集。|  
-|**publication_type**|**int**|發行集類型：<br /><br /> **0** = 快照集。<br /><br /> **1** = 交易式。<br /><br /> **2** = Merge。|  
-|**預訂**|**sysname**|與引發這項警示之代理程式相關聯的訂閱者名稱。|  
+|**出版**|**sysname**|與引發這項警示之代理程式相關聯的發行集。|  
+|**publication_type**|**int**|發行集類型：<br /><br /> **0** = 快照集。<br /><br /> **1** = 交易式。<br /><br /> **2** = 合併。|  
+|**使用者**|**sysname**|與引發這項警示之代理程式相關聯的訂閱者名稱。|  
 |**subscriber_db**|**sysname**|與引發這項警示之代理程式相關聯的訂閱者資料庫名稱。|  
 |**文章**|**sysname**|與引發這項警示之代理程式相關聯的發行項名稱。|  
 |**destination_object**|**sysname**|與警示相關聯的訂閱資料表名稱。|  

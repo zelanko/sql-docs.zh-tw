@@ -1,4 +1,5 @@
 ---
+description: 實作 DDL 觸發程序
 title: 實作 DDL 觸發程序 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: f44e5340-1d18-40e9-828e-0ffcca091ae3
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8466ffbe1327647f01a6da275cba843b0502a6bd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b6ad03a2ca062ecc93d8027d544ca37ef142cb74
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750109"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472980"
 ---
 # <a name="implement-ddl-triggers"></a>實作 DDL 觸發程序
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

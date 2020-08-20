@@ -1,5 +1,6 @@
 ---
-title: 支援的純量函數（Visual FoxPro ODBC Driver） |Microsoft Docs
+description: 支援的純量函式 (Visual FoxPro ODBC Driver)
+title: " (Visual FoxPro ODBC 驅動程式) 支援的純量函數 |Microsoft Docs"
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6541192e-e562-4de0-9f20-40afa41fb84a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8da1011fca453be6b1b677ca4bda84fee29b2a81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3184adab18c4366e53dfb9ea7f890e5182db9f69
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284788"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471490"
 ---
 # <a name="supported-scalar-functions-visual-foxpro-odbc-driver"></a>支援的純量函式 (Visual FoxPro ODBC Driver)
-Visual FoxPro ODBC 驅動程式支援下列三種類型的純量函數，如 ODBC SQL 文法：字串、數值和時間和日期函式中所定義。  
+Visual FoxPro ODBC 驅動程式支援三種類型的純量函數，如 ODBC SQL 文法： string、numeric 和 time 和 date 函數中所定義。  
   
  此章節包含下列主題。  
   

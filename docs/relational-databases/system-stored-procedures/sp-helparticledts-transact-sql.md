@@ -1,5 +1,6 @@
 ---
-title: sp_helparticledts （Transact-sql） |Microsoft Docs
+description: sp_helparticledts (Transact-SQL)
+title: sp_helparticledts (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cd1aed60-e056-4ff3-86ee-62b19433d890
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cfacdd363e66401bc9cfbf494f6cb64ab12446fe
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6340460ff9bc1c8d0454d7ad0e4f05637df772bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634540"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474138"
 ---
 # <a name="sp_helparticledts-transact-sql"></a>sp_helparticledts (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,9 +38,9 @@ sp_helparticledts [ @publication = ] 'publication', [ @article = ] 'article'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 這是發行集的名稱。 *發行* 集是 **sysname**，沒有預設值。  
   
-`[ @article = ] 'article'`這是發行集中的發行項名稱。 *文章*是**sysname**，沒有預設值。  
+`[ @article = ] 'article'` 這是發行集中的發行項名稱。 *文章* 是 **sysname**，沒有預設值。  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -52,14 +53,14 @@ sp_helparticledts [ @publication = ] 'publication', [ @article = ] 'article'
 |**post_script_task_name**|**sysname**|在複製快照集資料之後發生的程式設計工作之工作名稱。 發生錯誤時，中止執行程式。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_helparticledts**用於快照式複寫和異動複寫中。  
+ **sp_helparticledts** 用於快照式複寫和異動複寫中。  
   
  當在 Data Transformation Services (DTS) 程式中命名作業時，必須遵照複寫代理程式所需要的一些命名慣例。 如果是自訂工作，如執行 SQL 工作，名稱就是發行項名稱、前置詞和選擇性部分的串連字串。 當撰寫程式碼時，如果您不確定工作名稱應該是什麼，結果集會提供應該使用的工作名稱。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色和**db_owner**固定資料庫角色的成員，才能夠執行**sp_helparticledts**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色和 **db_owner** 固定資料庫角色的成員，才能夠執行 **sp_helparticledts**。  
   
   

@@ -1,5 +1,6 @@
 ---
-title: sp_syscollector_update_collector_type （Transact-sql） |Microsoft Docs
+description: sp_syscollector_update_collector_type (Transact-SQL)
+title: sp_syscollector_update_collector_type (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f315b95b100315691d1ace30a3fe3bb2e9788d27
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 477fb448d91939933cea7132ad8b532de7a162e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892797"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473575"
 ---
 # <a name="sp_syscollector_update_collector_type-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,21 +45,21 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @collector_type_uid = ] 'collector_type_uid'`這是收集器型別的 GUID。 *collector_type_uid*是**uniqueidentifier**，而且如果是 Null，則會自動建立並當做輸出傳回。  
+`[ @collector_type_uid = ] 'collector_type_uid'` 這是收集器型別的 GUID。 *collector_type_uid* 是 **uniqueidentifier**，而且如果是 Null，則會自動建立並傳回做為輸出。  
   
-`[ @name = ] 'name'`這是收集器型別的名稱。 *名稱*是**sysname** ，必須指定。  
+`[ @name = ] 'name'` 這是收集器型別的名稱。 *名稱* 是 **sysname** ，必須指定。  
   
-`[ @parameter_schema = ] 'parameter_schema'`這是此收集器型別的 XML 架構。 *parameter_schema*是**xml** ，某些收集器型別可能需要它。 如果它不是必要項目，這個引數就可能是 NULL。  
+`[ @parameter_schema = ] 'parameter_schema'` 這是此收集器型別的 XML 架構。 *parameter_schema* 是 **xml** ，而且特定收集器型別可能需要它。 如果它不是必要項目，這個引數就可能是 NULL。  
   
-`[ @collection_package_id = ] collection_package_id`這是指向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 收集組所使用之集合封裝的本機唯一識別碼。 *collection_package_id*是**uniqueidentifier** ，而且是必要的。 若要取得*collection_package_id*的值，請在 msdb 資料庫中查詢 dbo.syscollector_collector_types 系統檢視。  
+`[ @collection_package_id = ] collection_package_id` 這是指向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 收集組所使用之集合封裝的本機唯一識別碼。 *collection_package_id* 是 **uniqueidentifier** ，而且是必要的。 若要取得 *collection_package_id*的值，請查詢 msdb 資料庫中的 dbo.syscollector_collector_types 系統檢視。  
   
-`[ @upload_package_id = ] upload_package_id`這是指向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 收集組所使用之上傳封裝的本機唯一識別碼。 *upload_package_id*是**uniqueidentifier** ，而且是必要的。 若要取得*upload_package_id*的值，請在 msdb 資料庫中查詢 dbo.syscollector_collector_types 系統檢視。  
+`[ @upload_package_id = ] upload_package_id` 這是指向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 收集組所使用之上傳封裝的本機唯一識別碼。 *upload_package_id* 為 **uniqueidentifier** 且為必要項。 若要取得 *upload_package_id*的值，請查詢 msdb 資料庫中的 dbo.syscollector_collector_types 系統檢視。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="permissions"></a>權限  
- 需要**dc_admin** （具有 EXECUTE 許可權）固定資料庫角色中的成員資格。  
+ 需要 **dc_admin** (中具有 EXECUTE 許可權) 固定資料庫角色的成員資格。  
   
 ## <a name="example"></a>範例  
  此範例會更新一般 T-SQL 查詢收集器型別  (在此範例中，將會使用一般 T-SQL 查詢收集器型別的預設結構描述)。  
@@ -101,7 +102,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [資料收集](../../relational-databases/data-collection/data-collection.md)  
+ [&#40;Transact-sql&#41;的系統預存程式 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [[資料收集]](../../relational-databases/data-collection/data-collection.md)  
   
   

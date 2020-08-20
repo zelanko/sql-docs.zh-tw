@@ -1,4 +1,5 @@
 ---
+description: ALTER ASSEMBLY (Transact-SQL)
 title: ALTER ASSEMBLY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/07/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ecea611192ee3e2bd2d64419e53bfa6c7601c0b8
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: c6c555402f16e46d049409e1d10196ef91bf4169
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301907"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472414"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

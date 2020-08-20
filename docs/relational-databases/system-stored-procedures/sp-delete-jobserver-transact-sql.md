@@ -1,5 +1,6 @@
 ---
-title: sp_delete_jobserver （Transact-sql） |Microsoft Docs
+description: sp_delete_jobserver (Transact-SQL)
+title: sp_delete_jobserver (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6d63ed32-68cf-4d8f-aa40-05a3826e05b8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bf97ac7ffd72cf6f3d8b0d04987fa1eacce47835
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ef3896c2e425d1b85c80bd4b7fa057df4f8b5df4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85864054"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474338"
 ---
 # <a name="sp_delete_jobserver-transact-sql"></a>sp_delete_jobserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,26 +41,26 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @job_id = ] job_id`將從中移除指定目標伺服器之作業的識別碼。 *job_id*是**uniqueidentifier**，預設值是 Null。  
+`[ @job_id = ] job_id` 將從中移除指定目標伺服器之作業的識別碼。 *job_id* 是 **uniqueidentifier**，預設值是 Null。  
   
-`[ @job_name = ] 'job_name'`將從中移除指定目標伺服器之作業的名稱。 *job_name*是**sysname**，預設值是 Null。  
+`[ @job_name = ] 'job_name'` 將從中移除指定目標伺服器之作業的名稱。 *job_name* 是 **sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  必須指定*job_id*或*job_name* ;兩者都無法指定。  
+>  必須指定 *job_id* 或 *job_name* ;不可同時指定兩者。  
   
-`[ @server_name = ] 'server'`要從指定作業中移除的目標伺服器名稱。 *伺服器*是**Nvarchar （30）**，沒有預設值。 *伺服器*可以是 **（本機）** 或遠端目標伺服器的名稱。  
+`[ @server_name = ] 'server'` 要從指定作業中移除的目標伺服器名稱。 *伺服器* 是 **Nvarchar (30) **，沒有預設值。 *伺服器* 可以 ** (本機) **或遠端目標伺服器的名稱。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="result-sets"></a>結果集  
  None  
   
 ## <a name="permissions"></a>權限  
- 若要執行這個預存程式，使用者必須是**系統管理員（sysadmin** ）固定伺服器角色的成員。  
+ 若要執行這個預存程式，使用者必須是 **系統管理員（sysadmin** ）固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  
- 下列範例會移除伺服器來 `SEATTLE2` 處理 `Weekly Sales Backups` 作業。  
+ 下列範例會 `SEATTLE2` 從處理作業中移除伺服器 `Weekly Sales Backups` 。  
   
 > [!NOTE]  
 >  這個範例假設先前已建立 `Weekly Sales Backups` 作業。  

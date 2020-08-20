@@ -1,5 +1,6 @@
 ---
-title: sp_detach_db （Transact-sql） |Microsoft Docs
+description: sp_detach_db (Transact-SQL)
+title: sp_detach_db (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/30/2015
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ee5261834a0eeb11b4f7f6a21ab5110c0d42fd48
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 66f3e4543e3090d3a2bb0fee7179abaf2e017503
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85861120"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474296"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,16 +46,16 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @dbname = ] 'database_name'`這是要卸離的資料庫名稱。 *database_name*是**sysname**值，預設值是 Null。  
+`[ @dbname = ] 'database_name'` 這是要卸離的資料庫名稱。 *database_name* 是 **sysname** 值，預設值是 Null。  
   
-`[ @skipchecks = ] 'skipchecks'`指定是否要略過或執行更新統計資料。 *skipchecks*是**Nvarchar （10）** 值，預設值是 Null。 若要略過 UPDATE STATISTICS，請指定**true**。 若要明確執行 UPDATE STATISTICS，請指定**false**。  
+`[ @skipchecks = ] 'skipchecks'` 指定是否略過或執行更新統計資料。 *skipchecks* 是 **Nvarchar (10) ** 值，預設值是 Null。 若要略過 UPDATE STATISTICS，請指定 **true**。 若要明確地執行更新統計資料，請指定 **false**。  
   
  根據預設，系統會執行 UPDATE STATISTICS 來更新資料表和索引之資料的相關資訊。 對於要移至唯讀媒體的資料庫而言，執行 UPDATE STATISTICS 很有用。  
   
-`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'`指定在資料庫卸離作業期間，將不會卸載與要卸離之資料庫相關聯的全文檢索索引檔案。 *KeepFulltextIndexFile*是**Nvarchar （10）** 值，預設值是**true**。 如果*KeepFulltextIndexFile*為**false**，則會卸載與資料庫相關聯的所有全文檢索索引檔案和全文檢索索引的中繼資料，除非資料庫是唯讀的。 如果為 Null 或**true**，則會保留全文檢索相關的中繼資料。  
+`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` 指定與要卸離之資料庫相關聯的全文檢索索引檔案，將不會在資料庫卸離作業期間卸載。 *>keepfulltextindexfile* 是 **Nvarchar (10) ** 值，預設值為 **true**。 如果 *>keepfulltextindexfile* 為 **false**，則會卸載與資料庫相關聯的所有全文檢索索引檔案和全文檢索索引的中繼資料，除非資料庫是唯讀的。 如果為 Null 或 **true**，則會保留全文檢索相關的中繼資料。  
   
 > [!IMPORTANT]
->  在的未來版本中，將會移除** \@ keepfulltextindexfile**參數 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 請勿在新的開發工作中使用此參數，並且盡快修改使用此參數的應用程式。  
+>  未來的版本將移除** \@ >keepfulltextindexfile**參數 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 請勿在新的開發工作中使用此參數，並且盡快修改使用此參數的應用程式。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -63,10 +64,10 @@ sp_detach_db [ @dbname= ] 'database_name'
  None  
   
 ## <a name="remarks"></a>備註  
- 卸離資料庫時，就會卸除其所有中繼資料。 如果資料庫是任何登入帳戶的預設資料庫， **master**就會成為其預設資料庫。  
+ 卸離資料庫時，就會卸除其所有中繼資料。 如果資料庫是任何登入帳戶的預設資料庫， **master** 會成為其預設資料庫。  
   
 > [!NOTE]  
->  如需如何查看所有登入帳戶之預設資料庫的詳細資訊，請參閱[sp_helplogins &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)。 如果您有必要的許可權，您可以使用[ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md)將新的預設資料庫指派給登入。  
+>  如需如何查看所有登入帳戶之預設資料庫的詳細資訊，請參閱 [sp_helplogins &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)。 如果您有必要的許可權，您可以使用 [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) 將新的預設資料庫指派給登入。  
   
 ## <a name="restrictions"></a>限制  
  如果出現下列的任何狀況，您便無法卸離資料庫：  
@@ -75,7 +76,7 @@ sp_detach_db [ @dbname= ] 'database_name'
   
 -   如果已複寫，就表示已發行資料庫。  
   
-     在您可以卸離資料庫之前，您必須執行[sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)來停用發行。  
+     在卸離資料庫之前，您必須執行 [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)來停用發行。  
   
     > [!NOTE]  
     >  如果您無法使用 **sp_replicationdboption**，可執行 [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)來移除複寫。  
@@ -100,9 +101,9 @@ sp_detach_db [ @dbname= ] 'database_name'
 ## <a name="obtaining-exclusive-access"></a>取得獨佔存取權  
  您需要有資料庫的獨佔存取權才能卸離資料庫。 如果您要卸離的資料庫正在使用中，請先將資料庫設為 SINGLE_USER 模式以取得獨佔存取權，才能進行卸離。
 
- 將資料庫設為 SINGLE_USER 之前，請先確定 AUTO_UPDATE_STATISTICS_ASYNC 選項是否設為 OFF。 此選項設為 ON 時，更新統計資料的背景執行緒會取得資料庫連接，而您就無法以單一使用者模式存取資料庫。 如需詳細資訊，請參閱[將資料庫設定為單一使用者模式](../databases/set-a-database-to-single-user-mode.md)。
+ 將資料庫設為 SINGLE_USER 之前，請先確定 AUTO_UPDATE_STATISTICS_ASYNC 選項是否設為 OFF。 此選項設為 ON 時，更新統計資料的背景執行緒會取得資料庫連接，而您就無法以單一使用者模式存取資料庫。 如需詳細資訊，請參閱 [將資料庫設定為單一使用者模式](../databases/set-a-database-to-single-user-mode.md)。
 
- 例如，下列語句會在所有目前的使用者中斷與資料庫的連線之後，取得 `ALTER DATABASE` 資料庫的獨佔存取權 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 。  
+ 例如，下列語句會 `ALTER DATABASE` [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 在所有目前使用者與資料庫中斷連線之後，取得資料庫的獨佔存取權。  
   
 ```  
 USE master;  
@@ -112,16 +113,16 @@ GO
 ```  
   
 > [!NOTE]  
->  若要立即或在指定的秒數內，從資料庫強制目前的使用者，請同時使用 ROLLBACK 選項： ALTER DATABASE *database_name* SET SINGLE_USER WITH ROLLBACK *rollback_option*。 如需詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。  
+>  若要立即或在指定的秒數內強制讓目前的使用者離開資料庫，請同時使用 ROLLBACK 選項： ALTER DATABASE *database_name* SET SINGLE_USER WITH rollback *rollback_option*。 如需詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。  
   
 ## <a name="reattaching-a-database"></a>重新附加資料庫  
  卸離的檔案會保留下來，您可以利用 CREATE DATABASE 來重新附加它 (使用 FOR ATTACH 或 FOR ATTACH_REBUILD_LOG 選項)。 您可以將這些檔案移到另一部伺服器，將它附加在那裡。  
   
 ## <a name="permissions"></a>權限  
- 需要**系統管理員（sysadmin** ）固定伺服器角色中的成員資格，或資料庫之**db_owner**角色的成員資格。  
+ 需要 **系統管理員（sysadmin** ）固定伺服器角色中的成員資格，或是資料庫之 **db_owner** 角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
- 下列範例會 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 將*skipchecks*設定為 true 的資料庫卸離。  
+ 下列範例會 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 將 *skipchecks* 設為 true 的資料庫卸離。  
   
 ```  
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  

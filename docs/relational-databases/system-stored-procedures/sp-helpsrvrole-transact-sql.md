@@ -1,5 +1,6 @@
 ---
-title: sp_helpsrvrole （Transact-sql） |Microsoft Docs
+description: sp_helpsrvrole (Transact-SQL)
+title: sp_helpsrvrole (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9319cc35d3059bc1efafa3c4640b164c39d8bbfa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9686de531821bc5b143caac7f756f9cae5af8ac0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899479"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473998"
 ---
 # <a name="sp_helpsrvrole-transact-sql"></a>sp_helpsrvrole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +40,9 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @srvrolename = ] 'role'`這是固定伺服器角色的名稱。 *role*是**sysname**，預設值是 Null。 *role*可以是下列其中一個值。  
+`[ @srvrolename = ] 'role'` 這是固定伺服器角色的名稱。 *role* 是 **sysname**，預設值是 Null。 *role* 可以是下列其中一個值。  
   
-|固定伺服器角色|說明|  
+|固定伺服器角色|描述|  
 |-----------------------|-----------------|  
 |系統管理員 (sysadmin)|系統管理員|  
 |securityadmin|安全性管理員|  
@@ -60,16 +61,16 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |ServerRole|**sysname**|伺服器角色的名稱|  
-|說明|**sysname**|ServerRole 的描述|  
+|描述|**sysname**|ServerRole 的描述|  
   
 ## <a name="remarks"></a>備註  
  固定伺服器角色定義於伺服器層級，具有執行特定伺服器層級管理活動的權限。 固定伺服器角色無法加入、移除或變更。  
   
- 若要加入或移除伺服器角色的成員，請參閱[ALTER SERVER ROLE &#40;transact-sql&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)。  
+ 若要在伺服器角色中加入或移除成員，請參閱 [ALTER SERVER ROLE &#40;transact-sql&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)。  
   
- 所有登入都是公用的成員。 sp_helpsrvrole 無法辨識 public 角色，因為在內部， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並不會將 public 當做角色來執行。  
+ 所有登入都是 public 的成員。 sp_helpsrvrole 無法辨識 public 角色，因為在內部，不 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會以角色形式執行 public。  
   
- sp_helpsrvrole 不會採用使用者定義的伺服器角色做為引數。 若要列出使用者定義的伺服器角色，請參閱[ALTER SERVER ROLE &#40;transact-sql&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)中的範例。  
+ sp_helpsrvrole 不會將使用者定義的伺服器角色做為引數。 若要列出使用者定義的伺服器角色，請參閱 [ALTER SERVER ROLE &#40;transact-sql&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)中的範例。  
   
 ## <a name="permissions"></a>權限  
  需要 public 角色中的成員資格。  
@@ -98,7 +99,7 @@ sp_helpsrvrole 'diskadmin' ;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的安全性預存程式](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的安全性預存程式 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [伺服器層級角色](../../relational-databases/security/authentication-access/server-level-roles.md)   
  [sp_addsrvrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
  [sp_dropsrvrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   

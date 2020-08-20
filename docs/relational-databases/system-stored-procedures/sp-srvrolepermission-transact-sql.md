@@ -1,5 +1,6 @@
 ---
-title: sp_srvrolepermission （Transact-sql） |Microsoft Docs
+description: sp_srvrolepermission (Transact-SQL)
+title: sp_srvrolepermission (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5709667f-e3e4-48a2-93ec-af5e22a2ac58
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 930b5ae195ab917faf5425bd2084314a633318b3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fb7a553adf516002a61f54ef900fd579f9d15856
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893033"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473707"
 ---
 # <a name="sp_srvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @srvrolename = ] 'role'`這是傳回許可權之固定伺服器角色的名稱。 *role*是**sysname**，預設值是 Null。 如果未指定角色，則會傳回所有固定伺服器角色的權限。 *角色*可以有下列其中一個值。  
+`[ @srvrolename = ] 'role'` 這是要傳回許可權的固定伺服器角色的名稱。 *role* 是 **sysname**，預設值是 Null。 如果未指定角色，則會傳回所有固定伺服器角色的權限。 *角色* 可以具有下列其中一個值。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |**sysadmin**|系統管理員|  
 |**securityadmin**|安全性管理員|  
@@ -66,7 +67,7 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 |**權限**|**sysname**|與**ServerRole**相關聯的許可權|  
   
 ## <a name="remarks"></a>備註  
- 列出的權限包括可以執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，以及固定伺服器角色成員可以執行的其他特殊活動。 若要顯示固定伺服器角色的清單，請執行**sp_helpsrvrole**。  
+ 列出的權限包括可以執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，以及固定伺服器角色成員可以執行的其他特殊活動。 若要顯示固定伺服器角色的清單，請執行 **sp_helpsrvrole**。  
   
  **系統管理員（sysadmin** ）固定伺服器角色具有所有其他固定伺服器角色的許可權。  
   
@@ -82,7 +83,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的安全性預存程式](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的安全性預存程式 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addsrvrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
  [sp_dropsrvrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
  [sp_helpsrvrole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql.md)   

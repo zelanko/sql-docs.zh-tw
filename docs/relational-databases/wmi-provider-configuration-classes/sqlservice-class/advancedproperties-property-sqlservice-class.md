@@ -1,5 +1,6 @@
 ---
-title: AdvancedProperties 屬性（SqlService）
+description: AdvancedProperties 屬性 (SqlService 類別)
+title: 'AdvancedProperties 屬性 (SqlService) '
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
@@ -16,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 63bcb7e2-1f78-4961-b4b9-1b635a89079b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e9eeb0516aab43760476f37406d6396a5bb9220d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 95f6b8b63918122d85354f4f30694f22cbbaa4ee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888398"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472715"
 ---
 # <a name="advancedproperties-property-sqlservice-class"></a>AdvancedProperties 屬性 (SqlService 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  取得物件參考的陣列，其中包含**SqlService**物件的 advanced 屬性。  
+  取得物件參考的陣列，其中包含 **SqlService** 物件的 advanced 屬性。  
   
 ## <a name="syntax"></a>語法  
   

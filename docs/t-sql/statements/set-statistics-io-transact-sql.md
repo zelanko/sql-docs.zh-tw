@@ -1,4 +1,5 @@
 ---
+description: SET STATISTICS IO (Transact-SQL)
 title: SET STATISTICS IO (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/10/2016
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 84d113230152bdade11192db086f44911028a474
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 25b6b222e68325e75d4be8ae10cae6e95ff408e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765691"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472193"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +47,9 @@ ms.locfileid: "85765691"
 SET STATISTICS IO { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>備註  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>備註
  當 STATISTICS IO 為 ON 時，會顯示統計資訊，而其為 OFF 時，則不會顯示資訊。   
   
  在這個選項設為 ON 之後，所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式都會傳回統計資訊，直到這個選項設為 OFF 為止。  
@@ -60,9 +63,9 @@ SET STATISTICS IO { ON | OFF }
 |**邏輯讀取**|從資料快取中讀取的頁數。|  
 |**實體讀取**|從磁碟中讀取的頁數。|  
 |**讀取前讀取**|放入查詢快取中的頁數。|  
-|**LOB 邏輯讀取**|從資料快取中讀取的頁數。 包含 **text**、**ntext**、**image**、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 或資料行存放區索引頁。|  
-|**LOB 實體讀取**|從磁碟中讀取的頁數。 包含 **text**、**ntext**、**image**、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 或資料行存放區索引頁。|  
-|**LOB 讀取前讀取**|放入查詢快取中的頁數。 包含 **text**、**ntext**、**image**、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 或資料行存放區索引頁。|
+|**LOB 邏輯讀取**|從資料快取中讀取的頁數。 包含 **text**、**ntext**、**image**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)** 或資料行存放區索引頁。|  
+|**LOB 實體讀取**|從磁碟中讀取的頁數。 包含 **text**、**ntext**、**image**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)** 或資料行存放區索引頁。|  
+|**LOB 讀取前讀取**|放入查詢快取中的頁數。 包含 **text**、**ntext**、**image**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)** 或資料行存放區索引頁。|
 
  SET STATISTICS IO 的設定是在執行階段進行設定，而不是在剖析階段進行設定。
 

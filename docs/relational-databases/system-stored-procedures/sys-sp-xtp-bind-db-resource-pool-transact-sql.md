@@ -1,5 +1,6 @@
 ---
-title: sys.databases sp_xtp_bind_db_resource_pool （Transact-sql） |Microsoft Docs
+description: sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
+title: sys. sp_xtp_bind_db_resource_pool (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2016
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b6f7e2f05d03c1bb43b184c259a5cef4b5d3b7e2
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 17b73b2acd00e7ea299c1d9e64bbac270485c678
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442451"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473462"
 ---
 # <a name="syssp_xtp_bind_db_resource_pool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +67,7 @@ Database 'Hekaton_DB213' does not exist. Make sure that the name is entered corr
   
 **資料庫是系統資料庫**  
  無法在系統資料庫中建立 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 資料表。  因此，針對這類資料庫建立 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 記憶體的繫結是無效的作法。  系統會傳回下列錯誤：  
-*Database_name% s 指的是系統資料庫。 資源集區只能系結至使用者資料庫。*  
+*Database_name% s 指的是系統資料庫。 資源集區只可系結至使用者資料庫。*  
   
 ```  
 Msg 41371, Level 16, State 1, Procedure sp_xtp_bind_db_resource_pool_internal, Line 51  
@@ -83,7 +84,7 @@ Resource pool 'Pool_Hekaton' does not exist or resource governor has not been re
 ```  
   
 **Pool_name 參考保留的系統集區**  
- 集區名稱「內部」和「預設」是保留給系統池。  將資料庫明確繫結至其中一個集區是無效的作法。  如果輸入系統集區名稱，就會傳回下列錯誤：  
+ 集區名稱 "INTERNAL" 和 "DEFAULT" 會保留給系統集區。  將資料庫明確繫結至其中一個集區是無效的作法。  如果輸入系統集區名稱，就會傳回下列錯誤：  
 *資源集區% s 是系統資源集區。 系統資源集區可能無法使用此程式明確地系結至資料庫。*  
   
 ```  
@@ -92,7 +93,7 @@ Database 'Hekaton_DB' cannot be explicitly bound to the resource pool 'internal'
 ```  
   
 **資料庫已經繫結至另一個資源集區**  
- 一個資料庫在任何時候都只能繫結至一個資源集區。 您必須先明確移除資源集區的資料庫繫結，然後才能將它們繫結至其他集區。 請參閱[sp_xtp_unbind_db_resource_pool &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)。  
+ 一個資料庫在任何時候都只能繫結至一個資源集區。 您必須先明確移除資源集區的資料庫繫結，然後才能將它們繫結至其他集區。 請參閱 [sys. sp_xtp_unbind_db_resource_pool &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)。  
 *資料庫% s 已經系結至資源集區% s。 您必須先解除系結，才能建立新的系結。*  
   
 ```  

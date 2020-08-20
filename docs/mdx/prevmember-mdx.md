@@ -1,5 +1,6 @@
 ---
-title: PrevMember （MDX） |Microsoft Docs
+description: PrevMember (MDX)
+title: PrevMember (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e5aa91ac2ab5b4056a693535c19a9e250a865dd0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6f02dfca925fce4399bb9f0c4a8c7ff1e005e598
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020660"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471660"
 ---
 # <a name="prevmember-mdx"></a>PrevMember (MDX)
 
@@ -32,10 +33,10 @@ Member_Expression.PrevMember
  傳回成員的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- **PrevMember**函數會傳回與指定成員位於相同層級中的上一個成員。  
+ **PrevMember**函數會傳回與指定成員在相同層級中的先前成員。  
   
 ## <a name="example"></a>範例  
- 下列範例顯示的簡單查詢，會使用**PrevMember**函數，在 rows 軸上的目前成員之前顯示成員名稱：  
+ 下列範例顯示使用 **PrevMember** 函數的簡單查詢，可在資料列軸上的目前成員之前顯示成員名稱：  
   
  `WITH MEMBER MEASURES.PREVMEMBERDEMO AS`  
   
@@ -47,7 +48,7 @@ Member_Expression.PrevMember
   
  `FROM [Adventure Works]`  
   
- 下列範例會根據使用彙總函式評估之使用者選取的 State-Province 成員值，傳回上一個時間週期銷售值衰退的轉售商計數。 **Hierarchize**和**DrillDownLevel**函數是用來傳回 product 維度中產品類別目錄的拒絕銷售值。 **PrevMember**函數是用來比較目前的時間週期與上一個時間週期。  
+ 下列範例會根據使用彙總函式評估之使用者選取的 State-Province 成員值，傳回上一個時間週期銷售值衰退的轉售商計數。 **Hierarchize**和**DrillDownLevel**函數是用來傳回 product 維度中產品類別目錄的拒絕銷售值。 **PrevMember**函數是用來比較目前的時間週期與先前的時間週期。  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS   

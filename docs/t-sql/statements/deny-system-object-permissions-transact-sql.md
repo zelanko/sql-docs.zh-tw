@@ -1,4 +1,5 @@
 ---
+description: DENY 系統物件權限 (Transact-SQL)
 title: DENY 系統物件權限 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4e43f954-0982-470b-a239-08a13c61563a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e4e866d6cc2c117599f276b51569321cc2ba6107
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 5d3e39d3a9533a75089c3126503abdd338c25ca1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484152"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472319"
 ---
 # <a name="deny-system-object-permissions-transact-sql"></a>DENY 系統物件權限 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +42,7 @@ DENY { SELECT | EXECUTE } ON [ sys.]system_object TO principal
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引數
- [ **sys.** ]  
+ [ **sys.**]  
  只有在參考目錄檢視和動態管理檢視時，才需要 **sys** 限定詞。  
   
  *system_object*  
@@ -89,6 +90,6 @@ GO
  [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)   
  [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
  [GRANT 系統物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)   
- [REVOKE 系統物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md)  
+ [REVOKE System Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md)  
   
   

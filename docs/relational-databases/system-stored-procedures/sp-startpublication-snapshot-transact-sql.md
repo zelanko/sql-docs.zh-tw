@@ -1,5 +1,6 @@
 ---
-title: sp_startpublication_snapshot （Transact-sql） |Microsoft Docs
+description: sp_startpublication_snapshot (Transact-SQL)
+title: sp_startpublication_snapshot (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2cf568ee-0679-4d19-a394-27210bff61e5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4138757f6be1d20c11e9b65111ef28b1b1d93119
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c41f52def223dbaf8d1a580e310022cdcd92af81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893003"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473700"
 ---
 # <a name="sp_startpublication_snapshot-transact-sql"></a>sp_startpublication_snapshot (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,20 +39,20 @@ sp_startpublication_snapshot [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 這是發行集的名稱。 *發行* 集是 **sysname**，沒有預設值。  
   
-`[ @publisher = ] 'publisher'`這是非發行者的名稱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *publisher*是**sysname**，預設值是 Null。 您不應該將這個參數指定給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。  
+`[ @publisher = ] 'publisher'` 這是非發行者的名稱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *publisher* 是 **sysname**，預設值是 Null。 您不應該將這個參數指定給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_startpublication_snapshot**用於所有類型的複寫。  
+ **sp_startpublication_snapshot** 用於所有類型的複寫。  
   
- 若是非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者，這個預存程式會在散發資料庫的「散發者」端執行。  
+ 如果是非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者，這個預存程式會在散發資料庫的散發者端執行。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_startpublication_snapshot**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色或 **db_owner** 固定資料庫角色的成員，才能夠執行 **sp_startpublication_snapshot**。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立和套用初始快照集](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   

@@ -1,4 +1,5 @@
 ---
+description: DENY 資料庫權限 (Transact-SQL)
 title: DENY 資料庫權限 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/21/2019
@@ -18,12 +19,12 @@ ms.assetid: 36cc4e2c-5a24-4975-9920-9305f12c6e7c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d475cf52dfb5e1dcfb7d8503333f4ebdfe8aa367
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 672a75e49fa92283c187041b6a64e83a57783a5f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484952"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472352"
 ---
 # <a name="deny-database-permissions-transact-sql"></a>DENY 資料庫權限 (Transact-SQL)
 

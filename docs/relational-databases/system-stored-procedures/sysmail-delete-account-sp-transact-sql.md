@@ -1,5 +1,6 @@
 ---
-title: sysmail_delete_account_sp （Transact-sql） |Microsoft Docs
+description: sysmail_delete_account_sp (Transact-SQL)
+title: sysmail_delete_account_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2adcac78-4a4a-407e-9666-1d9c43c73cc2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9b49f1b42a1484ca5449c3e65e274a3626b62809
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 749aee08d548f3658c5cfba3e44e4cbf4667f6b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890978"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473390"
 ---
 # <a name="sysmail_delete_account_sp-transact-sql"></a>sysmail_delete_account_sp (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,12 +40,12 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @account_id = ] account_id`要刪除之帳戶的識別碼。 *account_id*是**int**，沒有預設值。 必須指定*account_id*或*account_name* 。  
+`[ @account_id = ] account_id` 要刪除之帳戶的識別碼。 *account_id* 是 **int**，沒有預設值。 必須指定 *account_id* 或 *account_name* 。  
   
-`[ @account_name = ] 'account_name'`要刪除的帳戶名稱。 *account_name*是**sysname**，沒有預設值。 必須指定*account_id*或*account_name* 。  
+`[ @account_name = ] 'account_name'` 要刪除的帳戶名稱。 *account_name* 是 **sysname**，沒有預設值。 必須指定 *account_id* 或 *account_name* 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="result-sets"></a>結果集  
  None  
@@ -52,10 +53,10 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
 ## <a name="remarks"></a>備註  
  不論是否有設定檔正在使用指定的帳戶，這個程序皆會予以刪除。 未包含任何帳戶的設定檔，無法順利傳送電子郵件。  
   
- 預存程式**sysmail_delete_account_sp**在**msdb**資料庫中，而且是由**dbo**架構所擁有。 如果目前的資料庫不是**msdb**，就必須以三部分的名稱來執行此程式。  
+ 預存程式 **sysmail_delete_account_sp** 位於 **msdb** 資料庫中，而且是由 **dbo** 架構所擁有。 如果目前的資料庫不是 **msdb**，就必須以三部分名稱執行程式。  
   
 ## <a name="permissions"></a>權限  
- 此程式的執行許可權預設為**系統管理員（sysadmin** ）固定伺服器角色的成員。  
+ 此程式的執行許可權預設為 **系統管理員（sysadmin** ）固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  
  下列範例會顯示刪除名稱為 `AdventureWorks Administrator` 的 Database Mail 帳戶。  

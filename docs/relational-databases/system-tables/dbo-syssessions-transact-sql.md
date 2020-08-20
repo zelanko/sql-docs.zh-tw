@@ -1,5 +1,6 @@
 ---
-title: dbo.sys會話（Transact-sql） |Microsoft Docs
+description: dbo.syssessions (Transact-SQL)
+title: dbo.sys會話 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2019
 ms.prod: sql
@@ -18,28 +19,28 @@ helpviewer_keywords:
 ms.assetid: 187819b6-c7f4-4a26-b74c-0a89e96695cf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 13d57b4c36d238cb8e6893ff912e7052ba2e079f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 72fa9a3d55b3ed783fcbfc7c230676e7fe653eea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890381"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473282"
 ---
 # <a name="dbosyssessions-transact-sql"></a>dbo.syssessions (Transact-SQL)
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-每次啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 時，它都會建立新的工作階段。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 利用工作階段來保留 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務非預期地重新啟動或停止時的作業狀態。 **Syssessions**資料表的每個資料列都包含一個會話的相關資訊。 使用**sysjobactivity**資料表來查看每個會話結束時的作業狀態。  
+每次啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 時，它都會建立新的工作階段。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 利用工作階段來保留 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務非預期地重新啟動或停止時的作業狀態。 **Syssessions**資料表的每個資料列都包含一個會話的相關資訊。 您可以使用 **sysjobactivity** 資料表來查看每個會話結束時的工作狀態。  
   
- 此資料表會儲存在**msdb**資料庫中。  
+ 此資料表儲存在 **msdb** 資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 工作階段的識別碼。 這個 session_id 不是會話的 SPID，而是此系統資料表中的識別值。|  
+|**session_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 工作階段的識別碼。 此 session_id 不是會話的 SPID，而是此系統資料表內的識別值。|  
 |**agent_start_date**|**datetime**|啟動這個工作階段的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務的日期和時間。|  
   
 ## <a name="remarks"></a>備註  
- 只有身為**系統管理員（sysadmin** ）固定伺服器角色成員的使用者，才能夠存取此資料表。  
+ 只有屬於 **系統管理員（sysadmin** ）固定伺服器角色成員的使用者，才能夠存取此資料表。  
   
 ## <a name="see-also"></a>另請參閱  
  [dbo.sysjobactivity &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysjobactivity-transact-sql.md)  

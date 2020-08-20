@@ -1,5 +1,6 @@
 ---
-title: sp_help_fulltext_catalogs_cursor （Transact-sql） |Microsoft Docs
+description: sp_help_fulltext_catalogs_cursor (Transact-SQL)
+title: sp_help_fulltext_catalogs_cursor (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: d44478d1-0cc4-415e-9d1a-6dccb64674fa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9ab95a6e2d4b44c42735c5ffd9fe084a2a85854
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3c9fb8cc87cf3221aff60cb492540d377e2f89b6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728170"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474227"
 ---
 # <a name="sp_help_fulltext_catalogs_cursor-transact-sql"></a>sp_help_fulltext_catalogs_cursor (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85728170"
   利用資料指標來傳回指定全文檢索目錄之全文檢索索引資料表的識別碼、名稱、根目錄、狀態和數目。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]請改用[sys.databases fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)目錄檢視。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用 [sys. fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) 目錄 view。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,9 +45,9 @@ sp_help_fulltext_catalogs_cursor [ @cursor_return= ] @cursor_variable OUTPUT ,
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @cursor_return = ] @cursor_variable OUTPUT`這是**cursor**類型的輸出變數。 這個資料指標是可捲動的唯讀動態資料指標。  
+`[ @cursor_return = ] @cursor_variable OUTPUT` 這是 **cursor**類型的輸出變數。 這個資料指標是可捲動的唯讀動態資料指標。  
   
-`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'`這是全文檢索目錄的名稱。 *fulltext_catalog_name*是**sysname**。 如果這個參數省略或是 NULL，就會傳回與目前資料庫相關聯之所有全文檢索目錄的相關資訊。  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` 這是全文檢索目錄的名稱。 *fulltext_catalog_name* 為 **sysname**。 如果這個參數省略或是 NULL，就會傳回與目前資料庫相關聯之所有全文檢索目錄的相關資訊。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -57,12 +58,12 @@ sp_help_fulltext_catalogs_cursor [ @cursor_return= ] @cursor_variable OUTPUT ,
 |-----------------|---------------|-----------------|  
 |**fulltext_catalog_id**|**smallint**|全文檢索目錄識別碼。|  
 |**名稱**|**sysname**|全文檢索目錄的名稱。|  
-|**路徑名**|**nvarchar(260)**|從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 開始，這個子句不會有任何作用。|  
+|**PATH**|**nvarchar(260)**|從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 開始，這個子句不會有任何作用。|  
 |**狀態**|**int**|目錄的全文檢索索引擴展狀態：<br /><br /> 0 = 閒置<br /><br /> 1 = 完整擴展進行中<br /><br /> 2 = 已暫停<br /><br /> 3 = 調整執行速度<br /><br /> 4 = 復原中<br /><br /> 5 = 已關閉<br /><br /> 6 = 累加擴展進行中<br /><br /> 7 = 正在建立索引<br /><br /> 8 = 磁碟已滿， 已暫停<br /><br /> 9 = 變更追蹤|  
 |**NUMBER_FULLTEXT_TABLES**|**int**|與目錄相關聯之全文檢索索引資料表的數目。|  
   
 ## <a name="permissions"></a>權限  
- [執行許可權] 預設為 [**公用**] 角色。  
+ 執行許可權預設為 **public** 角色。  
   
 ## <a name="examples"></a>範例  
  下列範例會傳回 `Cat_Desc` 全文檢索目錄的相關資訊。  

@@ -1,5 +1,6 @@
 ---
-title: sp_dropmessage （Transact-sql） |Microsoft Docs
+description: sp_dropmessage (Transact-SQL)
+title: sp_dropmessage (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c8c9ac233cdc71d8886224182c2c3b91cd871450
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 46c95708903063b4fade98e3d45e29e184e93efd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881792"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474228"
 ---
 # <a name="sp_dropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  從 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體中，卸除指定的使用者自訂錯誤訊息。 您可以使用**sys.databases**目錄檢視來查看使用者定義的訊息。  
+  從 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體中，卸除指定的使用者自訂錯誤訊息。 您可以使用 **sys. messages** 目錄檢視來查看使用者定義的訊息。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,9 +41,9 @@ sp_dropmessage [ @msgnum = ] message_number
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @msgnum = ] message_number`這是要卸載的訊息編號。 *message_number*必須是訊息編號大於50000的使用者自訂訊息。 *message_number*是**int**，預設值是 Null。  
+`[ @msgnum = ] message_number` 這是要卸載的訊息編號。 *message_number* 必須是訊息編號大於50000的使用者自訂訊息。 *message_number* 是 **int**，預設值是 Null。  
   
-`[ @lang = ] 'language'`這是要卸載之訊息的語言。 如果指定**all** ，則會捨棄*message_number*的所有語言版本。 *language*是**sysname**，預設值是 Null。  
+`[ @lang = ] 'language'` 這是要卸載之訊息的語言。 如果指定 **all** ，則會卸載 *message_number* 的所有語言版本。 *language* 是 **sysname**，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -51,15 +52,15 @@ sp_dropmessage [ @msgnum = ] message_number
  無。  
   
 ## <a name="permissions"></a>權限  
- 需要**sysadmin**和**serveradmin**固定伺服器角色中的成員資格。  
+ 需要 **系統管理員（sysadmin** ）和 **serveradmin** 固定伺服器角色中的成員資格。  
   
 ## <a name="remarks"></a>備註  
- 除非已針對*language*指定**all** ，否則必須先卸載訊息的所有當地語系化版本，才能卸載美國英文版的訊息。  
+ 除非針對*語言*指定**all** ，否則必須先卸載訊息的所有當地語系化版本，才能卸載美國英文版的訊息。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-dropping-a-user-defined-message"></a>A. 卸除使用者自訂訊息  
- 下列範例會從 sys.databases 中卸載使用者定義的訊息（數位 `50001` ）。 **sys.messages**  
+ 下列範例會 `50001` 從 **sys. 訊息**中卸載使用者定義的訊息。  
   
 ```  
 USE master;  

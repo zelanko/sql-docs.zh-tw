@@ -1,5 +1,6 @@
 ---
-title: sp_syspolicy_configure （Transact-sql） |Microsoft Docs
+description: sp_syspolicy_configure (Transact-SQL)
+title: sp_syspolicy_configure (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 70c10922-9345-4190-ba69-808a43f760da
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bd11fa935dadc2ed7332275f3f6c66613cc831af
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 820952e0829014efc3669759dabf5d1dfc208d91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892751"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473574"
 ---
 # <a name="sp_syspolicy_configure-transact-sql"></a>sp_syspolicy_configure (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +41,9 @@ sp_syspolicy_configure [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @name = ] 'name'`這是您想要設定的設定名稱。 *name*是**sysname**，必須是，而且不能是 Null 或空字串。  
+`[ @name = ] 'name'` 這是您想要設定的設定名稱。 *名稱* 是 **sysname**，是必要的，而且不可以是 Null 或空字串。  
   
- *名稱*可以是下列任何值：  
+ *名稱* 可以是下列任何一個值：  
   
 -   'Enabled' - 判斷是否啟用以原則為基礎的管理。  
   
@@ -50,24 +51,24 @@ sp_syspolicy_configure [ @name = ] 'name'
   
 -   'LogOnSuccess' - 指定以原則為基礎的管理是否會記錄成功的原則評估。  
   
-`[ @value = ] value`這是與指定的*名稱*值相關聯的值。 *值*為**SQL_variant**，且為必要。  
+`[ @value = ] value` 這是與指定的 *名稱*值相關聯的值。 *值* 為 **SQL_variant**，且為必要項。  
   
--   如果您為 [*名稱*] 指定 [Enabled]，可以使用下列其中一個值：  
+-   如果您為 [ *名稱*] 指定 [Enabled]，您可以使用下列其中一個值：  
   
     -   0 = 停用以原則為基礎的管理  
   
     -   1 = 啟用以原則為基礎的管理  
   
--   如果您為 [*名稱*] 指定 ' HistoryRententionInDays '，請將天數指定為整數值。  
+-   如果您為 [ *名稱*] 指定 ' HistoryRententionInDays '，請將天數指定為整數值。  
   
--   如果您為 [*名稱*] 指定 ' LogOnSuccess '，您可以使用下列其中一個值：  
+-   如果您為 *名稱*指定 ' LogOnSuccess '，您可以使用下列其中一個值：  
   
     -   0 = 只記錄失敗的原則評估。  
   
     -   1 = 成功和失敗的原則評估都會記錄。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
  您必須在 msdb 系統資料庫的內容中執行 sp_syspolicy_configure。  

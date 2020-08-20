@@ -1,5 +1,6 @@
 ---
-title: sp_syscollector_delete_collection_item （Transact-sql） |Microsoft Docs
+description: sp_syscollector_delete_collection_item (Transact-SQL)
+title: sp_syscollector_delete_collection_item (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9c2b0990-1d3d-4a59-94a0-3cca6fef4681
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f0753ed820012d0bbae1fb263b7881aad663ee45
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bdb7e5d54cd9e9edacf13e99c4a9b95cc9938cca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892943"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473644"
 ---
 # <a name="sp_syscollector_delete_collection_item-transact-sql"></a>sp_syscollector_delete_collection_item (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,13 +43,13 @@ sp_syscollector_delete_collection_item [[ @collection_item_id = ] collection_ite
   
 ## <a name="arguments"></a>引數  
  [ @collection_item_id =] *collection_item_id*  
- 這是收集項目的唯一識別碼。 *collection_item_id*是**int** ，預設值是 Null。 如果*name*為 Null， *collection_item_id*必須有值。  
+ 這是收集項目的唯一識別碼。 *collection_item_id* 是 **int** ，預設值是 Null。 如果*name*為 Null， *collection_item_id*必須有值。  
   
  [ @name =] '*name*'  
- 這是收集項目的名稱。 *名稱*是**sysname** ，預設值是 Null。 如果*collection_item_id*為 Null，*名稱*就必須有值。  
+ 這是收集項目的名稱。 *名稱* 是 **sysname** ，預設值是 Null。 如果*collection_item_id*為 Null，則*名稱*必須具有值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
  sp_syscollector_delete_collection_item 必須在 msdb 系統資料庫的內容中執行。 不能從系統收集組中刪除收集項。  
@@ -70,7 +71,7 @@ EXEC sp_syscollector_delete_collection_item @name = 'MyCollectionItem1';
 ## <a name="see-also"></a>另請參閱  
  [資料收集](../../relational-databases/data-collection/data-collection.md)   
  [sp_syscollector_create_collection_item &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
- [&#40;Transact-sql&#41;的資料收集器預存程式](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [資料收集器預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [syscollector_collection_items &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
   
   

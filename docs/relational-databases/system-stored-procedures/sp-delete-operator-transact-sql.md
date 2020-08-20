@@ -1,5 +1,6 @@
 ---
-title: sp_delete_operator （Transact-sql） |Microsoft Docs
+description: sp_delete_operator (Transact-SQL)
+title: sp_delete_operator (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ff6c2c4b-e9fe-4d0c-bbc2-a2ddcc1acb95
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c584dceb9306d6a74575b548bfd9d8548acb47a5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 22fcae3edb3d882826e80bdb7a359726eac930fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862479"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474318"
 ---
 # <a name="sp_delete_operator-transact-sql"></a>sp_delete_operator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,12 +41,12 @@ sp_delete_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @name = ] 'name'`要刪除的操作員名稱。 *名稱*是**sysname**，沒有預設值。  
+`[ @name = ] 'name'` 要刪除的操作員名稱。 *名稱* 是 **sysname**，沒有預設值。  
   
-`[ @reassign_to_operator = ] 'reassign_operator'`可重新指派指定操作員的警示之操作員的名稱。 *reassign_operator*是**sysname**，預設值是 Null。  
+`[ @reassign_to_operator = ] 'reassign_operator'` 可以重新指派指定操作員的警示之操作員的名稱。 *reassign_operator* 是 **sysname**，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="result-sets"></a>結果集  
  None  

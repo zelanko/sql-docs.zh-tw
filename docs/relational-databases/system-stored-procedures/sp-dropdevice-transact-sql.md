@@ -1,5 +1,6 @@
 ---
-title: sp_dropdevice （Transact-sql） |Microsoft Docs
+description: sp_dropdevice (Transact-SQL)
+title: sp_dropdevice (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: c8b07189-7c35-414b-acc1-45bd6e7e17c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9be64080f6e1c56daa0901dbdc174c83d40cf541
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dd4c4a02e581b743b780db715b61f06ef7f22413
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85859992"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474290"
 ---
 # <a name="sp_dropdevice-transact-sql"></a>sp_dropdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  從的實例卸載資料庫裝置或備份裝置 [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)] ，並從**master.dbo.sys裝置**中刪除專案。  
+  從的實例卸載資料庫裝置或備份裝置 [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)] ，從 **master.dbo.sys裝置**中刪除專案。  
    
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,9 +42,9 @@ sp_dropdevice [ @logicalname = ] 'device'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @logicalname = ] 'device'`這是在**master.dbo.sysdevices.name**中列出的資料庫裝置或備份裝置的邏輯名稱。 *裝置*為**sysname**，沒有預設值。  
+`[ @logicalname = ] 'device'` 這是 **master.dbo.sysdevices.name**中所列的資料庫裝置或備份裝置的邏輯名稱。 *裝置* 是 **sysname**，沒有預設值。  
   
-`[ @delfile = ] 'delfile'`指定是否應該刪除實體備份裝置檔案。 *delfile*是**Varchar （7）**。 如果指定為**DELFILE**，則會刪除實體備份裝置磁片檔案。  
+`[ @delfile = ] 'delfile'` 指定是否應該刪除實體備份裝置檔案。 *delfile* 是 **Varchar (7) **。 如果指定為 **DELFILE**，則會刪除實體備份裝置磁片檔。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -52,7 +53,7 @@ sp_dropdevice [ @logicalname = ] 'device'
  None  
   
 ## <a name="remarks"></a>備註  
- **sp_dropdevice**不能用在交易內部。  
+ **sp_dropdevice** 不能用在交易內。  
   
 ## <a name="permissions"></a>權限  
  需要 **diskadmin** 固定伺服器角色的成員資格。  

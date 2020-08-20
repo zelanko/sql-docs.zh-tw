@@ -1,4 +1,5 @@
 ---
+description: 課程 3-3 - 測試已部署的套件
 title: 步驟 3：測試已部署的套件 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6fb3889d57052bcd305056a6468a2fa42d79d5c4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f6c7fed5c20d9025be9ad9bce060d6fa83de378a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922191"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471981"
 ---
 # <a name="lesson-3-3---testing-the-deployed-packages"></a>課程 3-3 - 測試已部署的套件
 
@@ -41,7 +42,7 @@ ms.locfileid: "86922191"
   
 1.  按一下 **[開始]** ，依序指向 **[所有程式]** 和 **[Microsoft SQL Server]** ，然後按一下 **[SQL Server Management Studio]** 。  
   
-2.  在 **[連接到伺服器]** 對話方塊中，從 **[伺服器類型]** 清單中選取 **[Integration Services]** ，並在 **[伺服器名稱]** 方塊中提供伺服器名稱，然後按一下 **[連接]** 。  
+2.  在 **[連接到伺服器]** 對話方塊中，從 **[伺服器類型]** 清單中選取 **[Integration Services]** ，並在 **[伺服器名稱]** 方塊中提供伺服器名稱，然後按一下 **[連接]**。  
   
     > [!IMPORTANT]  
     > 如果您無法連接到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務目前可能沒有執行。 若要了解此服務的狀態，請按一下 **[開始]** ，依序指向 **[所有程式]** 、 **[Microsoft SQL Server]** 和 **[組態工具]** ，然後按一下 **[SQL Server 組態管理員]** 。 在左窗格中，按一下 **[SQL Server 服務]** 。 在右窗格中，尋找 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務。 如果此服務尚未執行，請將它啟動。  
@@ -54,16 +55,16 @@ ms.locfileid: "86922191"
   
 2.  展開 [MSDB] 資料夾。 由於您已將封裝部署到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，因此所有部署的封裝都會存放在 msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫中，而且所有部署的封裝都會出現在 MSDB 資料夾中。 除非您已將封裝部署到「部署教學課程」以外的檔案系統中，否則 [File System] 資料夾應該是空的。  
   
-3.  從封裝清單的最上方開始，以滑鼠右鍵按一下 [DataTransfer]，然後按一下 **[執行封裝]** 。  
+3.  從封裝清單的最上方開始，以滑鼠右鍵按一下 [DataTransfer]，然後按一下 **[執行封裝]**。  
   
-4.  在 **[執行封裝公用程式]** 對話方塊中，按一下 **[執行]** 。  
+4.  在 **[執行封裝公用程式]** 對話方塊中，按一下 **[執行]**。  
   
-5.  在 **[執行封裝公用程式]** 對話方塊中，檢視封裝的執行進度和執行結果。 當 **[停止]** 按鈕變成無法使用的狀態時，即表示封裝已完成，請按一下 **[關閉]** 。  
+5.  在 **[執行封裝公用程式]** 對話方塊中，檢視封裝的執行進度和執行結果。 當 **[停止]** 按鈕變成無法使用的狀態時，即表示封裝已完成，請按一下 **[關閉]**。  
   
     > [!IMPORTANT]  
     > 如果在封裝執行中按一下 **[停止]** ，封裝將無法完成。  
   
-6.  在 **[執行封裝公用程式]** 對話方塊中，按一下 **[關閉]** 。  
+6.  在 **[執行封裝公用程式]** 對話方塊中，按一下 **[關閉]**。  
   
 7.  針對 LoadXML 封裝，重複步驟 3 到 6。  
   
@@ -71,7 +72,7 @@ ms.locfileid: "86922191"
   
 ### <a name="to-verify-the-results-of-the-datatransfer-package"></a>若要確認 DataTransfer 封裝的結果  
   
-1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的工具列上，按一下 **[新增查詢]** 。  
+1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的工具列上，按一下 **[新增查詢]**。  
   
 2.  在 **[連接到伺服器]** 對話方塊中，從 **[伺服器類型]** 清單中選取 **[Database Engine]** ，並在 **[伺服器名稱]** 方塊中提供安裝教學課程封裝所在的伺服器名稱或是輸入 (local)，然後選取驗證模式。 如果要使用「SQL Server 驗證」，請提供使用者名稱和密碼。  
   
@@ -87,11 +88,11 @@ ms.locfileid: "86922191"
   
     查詢會傳回 31 個資料列。 傳回結果包含文字檔 Customers.txt 中 [YearlyIncome] 資料行值大於 100000 的所有資料列。  
   
-6.  找到 [DeploymentTutorial] 資料夾，以滑鼠右鍵按一下 XML 記錄檔 Deployment Tutorial Log，然後按一下 [開啟]  。 您可以使用「記事本」或其他文字/XML 編輯器來開啟此檔案。  
+6.  找到 [DeploymentTutorial] 資料夾，以滑鼠右鍵按一下 XML 記錄檔 Deployment Tutorial Log，然後按一下 [開啟]****。 您可以使用「記事本」或其他文字/XML 編輯器來開啟此檔案。  
   
 ### <a name="to-verify-the-results-of-the-loadxmldata-package"></a>若要確認 LoadXMLData 封裝的結果  
   
-1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的工具列上，按一下 **[新增查詢]** 。  
+1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的工具列上，按一下 **[新增查詢]**。  
   
 2.  如果提示您重新連接，請在 **[連接到伺服器]** 對話方塊中，從 **[伺服器類型]** 清單中選取 **[Database Engine]** ，並在 **[伺服器名稱]** 方塊中提供安裝教學課程封裝所在的伺服器名稱或是輸入 (local)，然後選取驗證模式。 如果要使用「SQL Server 驗證」，請提供使用者名稱和密碼。  
   
