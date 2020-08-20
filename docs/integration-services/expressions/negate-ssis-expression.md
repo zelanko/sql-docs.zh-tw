@@ -1,4 +1,5 @@
 ---
+description: '- (變換正負號) (SSIS 運算式)'
 title: '- (負) (SSIS 運算式) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f0118dfc-aced-4de2-953e-5ebf9c962b8d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9322d5a25b8b65432e83ddeac03f486722a50b7c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 610b67eaf281c276134d5ea4c13bad1368aa1c80
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86911778"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477538"
 ---
 # <a name="--negate-ssis-expression"></a>- (負) (SSIS 運算式)
 

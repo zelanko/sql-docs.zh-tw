@@ -1,4 +1,5 @@
 ---
+description: catalog.cleanup_server_execution_keys
 title: catalog.cleanup_server_execution_keys | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a79f1006-54e8-4cbf-96f8-5ed143ebb830
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a05de5d22c05c151d080ccf523b8577ba5b1033c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c7a3fc7c8d945050d1fcd9d74d543fbee26a0e45
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915651"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477184"
 ---
 # <a name="catalogcleanup_server_execution_keys"></a>catalog.cleanup_server_execution_keys 
 

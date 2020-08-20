@@ -1,4 +1,5 @@
 ---
+description: POWER (SSIS 運算式)
 title: POWER (SSIS 運算式) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: db48ae65-bfa6-4db1-8d3c-d0d4f8a399bc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 80e14ad3da38f95c845ffdfd42590a23e8b36f99
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e09a9f03d0eea0ebaceb657a05635e64a46abe7a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921086"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477507"
 ---
 # <a name="power-ssis-expression"></a>POWER (SSIS 運算式)
 

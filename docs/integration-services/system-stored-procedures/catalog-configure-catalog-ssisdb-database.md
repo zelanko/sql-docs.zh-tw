@@ -1,4 +1,5 @@
 ---
+description: catalog.configure_catalog (SSISDB 資料庫)
 title: catalog.configure_catalog (SSISDB 資料庫) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 72690c61-f462-4c25-9fce-08a687b0bd41
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d2fedf409343225343bb03f61a8345a27eb68b0e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4506270730f8681315501e76ad1a338ff65b18c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86904193"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477118"
 ---
 # <a name="catalogconfigure_catalog-ssisdb-database"></a>catalog.configure_catalog (SSISDB 資料庫)
 
@@ -34,10 +35,10 @@ catalog.configure_catalog [ @property_name = ] property_name , [ @property_value
   
 ## <a name="arguments"></a>引數  
  [ @property_name = ] *property_name*  
- 目錄屬性的名稱。 *property_name* 是 **nvarchar(255)** 。 如需可用屬性的詳細資訊，請參閱 [catalog.catalog_properties &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)。  
+ 目錄屬性的名稱。 *property_name* 是 **nvarchar(255)**。 如需可用屬性的詳細資訊，請參閱 [catalog.catalog_properties &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)。  
   
  [ @property_value = ] *property_value*  
- 目錄屬性的值。 *property_value* 是 **nvarchar(255)** 。 如需屬性值的詳細資訊，請參閱 [catalog.catalog_properties &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)  
+ 目錄屬性的值。 *property_value* 是 **nvarchar(255)**。 如需屬性值的詳細資訊，請參閱 [catalog.catalog_properties &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

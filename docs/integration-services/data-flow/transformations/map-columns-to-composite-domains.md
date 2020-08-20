@@ -1,4 +1,5 @@
 ---
+description: 將資料行對應到複合定義域
 title: 將資料行對應到複合定義域 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d9422412-8a3d-45ae-af7f-072c902a09ba
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 311b7d3117d0c8675ed6399c9eeaf85247373295
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4508244cb9558cc63c9e1b2185c89c5a43d659cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919234"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477665"
 ---
 # <a name="map-columns-to-composite-domains"></a>將資料行對應到複合定義域
 
@@ -30,7 +31,7 @@ ms.locfileid: "86919234"
   
 ### <a name="to-map-multiple-columns-to-a-composite-domain"></a>若要將多個資料行對應到複合定義域  
   
-1.  以滑鼠右鍵按一下 DQS 清理轉換，然後按一下 [編輯]  。  
+1.  以滑鼠右鍵按一下 DQS 清理轉換，然後按一下 [編輯]****。  
   
 2.  在 **[連接管理員]** 索引標籤上，確認複合定義域出現在可用的定義域清單中。  
   
@@ -38,13 +39,13 @@ ms.locfileid: "86919234"
   
 4.  針對 **[輸入資料行]** 欄位中所列的每一個資料行，從 **[定義域]** 欄位中選取個別的單一定義域。 務必只選取位於複合定義域內的單一定義域。  
   
-5.  視需要修改 **[來源別名]** 、 **[輸出別名]** 和 **[狀態別名]** 欄位中所顯示的名稱。  
+5.  視需要修改 **[來源別名]**、 **[輸出別名]** 和 **[狀態別名]** 欄位中所顯示的名稱。  
   
 6.  視需要在 **[進階]** 索引標籤上設定屬性。如需這些屬性的詳細資訊，請參閱＜ [DQS Cleansing Transformation Editor Dialog Box](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md)＞。  
   
 ### <a name="to-map-a-column-with-delimited-values-to-a-composite-domain"></a>若要將具有分隔值的資料行對應到複合定義網域  
   
-1.  以滑鼠右鍵按一下 DQS 清理轉換，然後按一下 [編輯]  。  
+1.  以滑鼠右鍵按一下 DQS 清理轉換，然後按一下 [編輯]****。  
   
 2.  在 **[連接管理員]** 索引標籤上，確認複合定義域出現在可用的定義域清單中。  
   
@@ -52,7 +53,7 @@ ms.locfileid: "86919234"
   
 4.  針對 **[輸入資料行]** 欄位中所列的資料行，從 **[定義域]** 欄位中選取複合定義域。  
   
-5.  視需要修改 **[來源別名]** 、 **[輸出別名]** 和 **[狀態別名]** 欄位中所顯示的名稱。  
+5.  視需要修改 **[來源別名]**、 **[輸出別名]** 和 **[狀態別名]** 欄位中所顯示的名稱。  
   
 6.  視需要在 **[進階]** 索引標籤上設定屬性。如需這些屬性的詳細資訊，請參閱＜ [DQS Cleansing Transformation Editor Dialog Box](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md)＞。  
   

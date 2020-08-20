@@ -1,4 +1,5 @@
 ---
+description: 建立資料庫 (SQL Server 匯入和匯出精靈)
 title: 建立資料庫 (SQL Server 匯入和匯出精靈) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -11,27 +12,27 @@ f1_keywords:
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f3616da1034fa0c590a4544691e22ffd054eaa10
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5c9788c6a7e23759352f22acd543358305ad0a9a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922404"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477252"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>建立資料庫 (SQL Server 匯入和匯出精靈)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-如果您在 [選擇目的地]  頁面上選取 [新增]  來建立新的 SQL Server 目的地資料庫，[ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [建立資料庫]  對話方塊。 在此頁面中提供新資料庫的名稱。 (選擇性) 您也可以變更新資料庫及其記錄檔的初始大小和自動成長等設定。 
+如果您在 [選擇目的地] **** 頁面上選取 [新增] **** 來建立新的 SQL Server 目的地資料庫，[ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [建立資料庫] **** 對話方塊。 在此頁面中提供新資料庫的名稱。 (選擇性) 您也可以變更新資料庫及其記錄檔的初始大小和自動成長等設定。 
 
-精靈中的 [建立資料庫]  對話方塊只提供基本選項，可用來建立新的 SQL Server 資料庫。 若要查看及設定新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的所有選項，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來建立資料庫，或在精靈建立資料庫之後進行設定。 
+精靈中的 [建立資料庫]**** 對話方塊只提供基本選項，可用來建立新的 SQL Server 資料庫。 若要查看及設定新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的所有選項，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來建立資料庫，或在精靈建立資料庫之後進行設定。 
 
 > [!NOTE]
-> 如果您想要尋找 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE DATABASE 陳述式的相關資訊，而不是 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 之 [建立資料庫] 對話方塊的相關資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
+> 如果您想要尋找 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE DATABASE 陳述式的相關資訊，而不是 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 之 [建立資料庫]**** 對話方塊的相關資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
 
 ## <a name="screen-shot-of-the-create-database-page"></a>[建立資料庫] 頁面的螢幕擷取畫面  
-下列螢幕擷取畫面顯示精靈的 [建立資料庫]  對話方塊。  
+下列螢幕擷取畫面顯示精靈的 [建立資料庫] **** 對話方塊。  
 
 ![[匯入和匯出精靈] 的 [建立資料庫] 頁面](../../integration-services/import-export-data/media/create-database.png "[匯入和匯出精靈] 的 [建立資料庫] 頁面")  
 
@@ -59,7 +60,7 @@ ms.locfileid: "86922404"
 ## <a name="optionally-specify-data-file-and-log-file-options"></a>選擇性指定資料檔案和記錄檔選項
 
 > [!TIP]
-> 您必須在 [名稱]  欄位中提供新資料庫的名稱，但是通常可以將檔案大小和檔案成長的其他設定保留為預設值。
+> 您必須在 [名稱] **** 欄位中提供新資料庫的名稱，但是通常可以將檔案大小和檔案成長的其他設定保留為預設值。
 
 ### <a name="data-file-options"></a>資料檔案選項  
  **初始大小**  
@@ -90,6 +91,6 @@ ms.locfileid: "86922404"
 ### <a name="more-info"></a>其他資訊
 如需您在此頁面看到之檔案大小選項的詳細資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。 
 
-## <a name="whats-next"></a>下一步  
- 在您提供精靈將建立之新資料庫的名稱並按一下 [確定]  之後，[建立資料庫]  對話方塊會讓您回到 [選擇目的地]  頁面。 如需詳細資訊，請參閱 [選擇目的地](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)。  
+## <a name="whats-next"></a>接下來要做什麼？  
+ 在您提供精靈將建立之新資料庫的名稱並按一下 [確定] **** 之後，[建立資料庫] **** 對話方塊會讓您回到 [選擇目的地] **** 頁面。 如需詳細資訊，請參閱 [選擇目的地](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)。  
 

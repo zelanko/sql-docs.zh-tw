@@ -1,4 +1,5 @@
 ---
+description: Merge Join Transformation
 title: 合併聯結轉換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8aaed0cb230867a7eb7b7ad640e9535975dd34d9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fab9313b76527744a53af64203794f7ec1b696d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86906161"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477648"
 ---
 # <a name="merge-join-transformation"></a>Merge Join Transformation
 

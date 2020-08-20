@@ -1,4 +1,5 @@
 ---
+description: 運算子優先順序與關聯性
 title: 運算子優先順序與關聯性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5094164f-dabc-45b5-b611-384feb2b3fe3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 801f0358ce5dd6b68e42aff37e7135ec813b3bc0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cda01c12856bff3e28b06c9cfddccb368e6a3e6b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86901172"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477487"
 ---
 # <a name="operator-precedence-and-associativity"></a>運算子優先順序與關聯性
 
@@ -31,7 +32,7 @@ ms.locfileid: "86901172"
   
 |運算子符號|運算類型|關聯性|  
 |---------------------|-----------------------|-------------------|  
-|( )|運算是|由左至右|  
+|( )|運算式|由左至右|  
 |-、!、~|一元 (Unary)|由右至左|  
 |轉換|一元 (Unary)|由右至左|  
 |*, / ,%|乘法|由左至右|  
@@ -43,7 +44,7 @@ ms.locfileid: "86901172"
 |&#124;|位元包含 OR|由左至右|  
 |&&|邏輯 AND|由左至右|  
 |&#124;&#124;|邏輯 OR|由左至右|  
-|? 所解碼的字元：|條件運算式|由右至左|  
+|? :|條件運算式|由右至左|  
   
 ## <a name="see-also"></a>另請參閱  
  [運算子 &#40;SSIS 運算式&#41;](../../integration-services/expressions/operators-ssis-expression.md)  

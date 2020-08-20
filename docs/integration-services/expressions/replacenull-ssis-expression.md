@@ -1,4 +1,5 @@
 ---
+description: REPLACENULL (SSIS 運算式)
 title: REPLACENULL (SSIS 運算式) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 70db7832-b5a0-4db5-a8ad-42ad8630d8e8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 52366d8d4eb99ccab769894cbf5c39023c89c199
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f90bf0dfc2eba97d8a0c1b8b2e9bd7cdf8a0e565
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919074"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477458"
 ---
 # <a name="replacenull-ssis-expression"></a>REPLACENULL (SSIS 運算式)
 

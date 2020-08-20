@@ -1,4 +1,5 @@
 ---
+description: 開發自訂工作
 title: 開發自訂工作 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: dcbd8615-fa6d-4ddb-b8a5-0b19dddd6239
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 78c9b2359776c085c2617ea83c2b798c586b514f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fbc5b697eb08747ec83dc19cb292256c0a755fd3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916344"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477330"
 ---
 # <a name="developing-a-custom-task"></a>開發自訂工作
 

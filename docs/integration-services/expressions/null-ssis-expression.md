@@ -1,4 +1,5 @@
 ---
+description: NULL (SSIS 運算式)
 title: NULL (SSIS 運算式) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: df144237-3fbb-41ac-8624-efd92b6522b9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 574c846d2fb002fe317ddc8e3000aeabbb5cf082
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a915824a474cf90f7c9764f6bd5938457511a51d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921377"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477520"
 ---
 # <a name="null-ssis-expression"></a>NULL (SSIS 運算式)
 

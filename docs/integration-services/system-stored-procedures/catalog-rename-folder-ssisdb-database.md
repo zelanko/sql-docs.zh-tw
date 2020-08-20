@@ -1,4 +1,5 @@
 ---
+description: catalog.rename_folder (SSISDB 資料庫)
 title: catalog.rename_folder (SSISDB 資料庫) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 336ab467-c32f-4d2e-a79c-174dc6fab75e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e37cbc4e6d0faa35b72e3f4bdc809d41bb39f586
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 65b913576b68e5c84037eac57205b23b81d53f95
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912924"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477097"
 ---
 # <a name="catalogrename_folder-ssisdb-database"></a>catalog.rename_folder (SSISDB 資料庫)
 
@@ -34,13 +35,13 @@ catalog.rename_folder [ @old_name = ] old_name , [ @new_name = ] new_name
   
 ## <a name="arguments"></a>引數  
  [ @old_name = ] *old_name*  
- 資料夾的原始名稱。 *old_name* 是 **nvarchar(128)** 。  
+ 資料夾的原始名稱。 *old_name* 是 **nvarchar(128)**。  
   
  [ @new_name = ] *new_name*  
- 資料夾的新名稱。 *new_name* 是 **nvarchar(128)** 。  
+ 資料夾的新名稱。 *new_name* 是 **nvarchar(128)**。  
   
 ## <a name="return-code-value"></a>傳回碼值  
- None  
+ 無  
   
 ## <a name="result-sets"></a>結果集  
  None  

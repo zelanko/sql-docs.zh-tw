@@ -1,4 +1,5 @@
 ---
+description: 百分比取樣轉換
 title: 百分比取樣轉換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ba85ead154888f68cab1ed343fc03b643049f91a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 73394ed84f1222e98bf2e7605f378918f8e6be45
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919561"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477595"
 ---
 # <a name="percentage-sampling-transformation"></a>百分比取樣轉換
 

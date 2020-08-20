@@ -1,4 +1,5 @@
 ---
+description: catalog.cleanup_server_log
 title: catalog.cleanup_server_log | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c97ebcdca436e05488e85e84565cece028a8d7a9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0942fa73c29b14ba5b07b305126e4ba70bfa0cb1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86904746"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477181"
 ---
 # <a name="catalogcleanup_server_log"></a>catalog.cleanup_server_log 
 

@@ -1,4 +1,5 @@
 ---
+description: catalog.startup
 title: catalog.startup | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 271fd405-246a-4852-bfbe-f557241ce6ea
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fedf6c41eb47de9fdafef5375af7f0f04b0ab335
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d3ad08806328cbeb1e99ff997db9dc6593ce9430
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912757"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477078"
 ---
 # <a name="catalogstartup"></a>catalog.startup 
 
@@ -28,7 +29,7 @@ ms.locfileid: "86912757"
   
  預存程序會在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 伺服器執行個體效能降低時，修正正在執行之任何封裝的狀態。  
   
- 您可以選擇讓預存程序在每次 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 伺服器執行個體重新啟動時自動執行，方法是選取 [建立目錄] 對話方塊中的 [在 SQL Server 啟動時允許自動執行 Integration Services 預存程序] 選項。  
+ 您可以選擇讓預存程序在每次 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 伺服器執行個體重新啟動時自動執行，方法是選取 [建立目錄]**** 對話方塊中的 [在 SQL Server 啟動時允許自動執行 Integration Services 預存程序]**** 選項。  
   
 ## <a name="syntax"></a>語法  
   

@@ -1,4 +1,5 @@
 ---
+description: 多點傳送轉換
 title: 多點傳送轉換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c353401a2182461452e086da05d8f4e155a3ac2a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2eb7f7274075450c3372f264f4f78c36f0059524
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919550"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477615"
 ---
 # <a name="multicast-transformation"></a>多點傳送轉換
 

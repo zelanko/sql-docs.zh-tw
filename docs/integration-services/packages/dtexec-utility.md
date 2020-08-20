@@ -1,4 +1,5 @@
 ---
+description: dtexec 公用程式
 title: dtexec 公用程式 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/26/2016
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 53a05fea022a2ea0232bc44646509ee3a84028af
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 206f7d54967eea85c96198e78471f026197a6a64
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919204"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477234"
 ---
 # <a name="dtexec-utility"></a>dtexec 公用程式
 

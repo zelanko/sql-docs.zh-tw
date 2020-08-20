@@ -1,4 +1,5 @@
 ---
+description: catalog.rename_environment (SSISDB 資料庫)
 title: catalog.rename_environment (SSISDB 資料庫) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: c73d7452-31c5-4f4e-afcc-e9eca760c826
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 400b93128b19ca12550816889c732793c0e9e5d0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6641ff60f49534a303d3f60110dbdd63aab2ed29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912931"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477116"
 ---
 # <a name="catalogrename_environment-ssisdb-database"></a>catalog.rename_environment (SSISDB 資料庫)
 
@@ -42,7 +43,7 @@ catalog.rename_environment [ @folder_name = ] folder_name
  環境的原始名稱。 *environment_name* 是 **nvarchar(128)** 。  
   
  [ @new_environment_name = ] *new_environment_name*  
- 環境的新名稱。 *new_environment_name* 是 **nvarchar(128)** 。  
+ 環境的新名稱。 *new_environment_name* 是 **nvarchar(128)**。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  

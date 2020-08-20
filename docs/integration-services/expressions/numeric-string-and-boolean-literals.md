@@ -1,4 +1,5 @@
 ---
+description: 數值、字串及布林常值
 title: 常值 (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f8405bd4cb76470eb415dc058caff3931a6b4624
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2ae5d096a90d4e755a57842fb9fb242f7d863eee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918624"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477489"
 ---
 # <a name="numeric-string-and-boolean-literals"></a>數值、字串及布林常值
 
@@ -80,7 +81,7 @@ ms.locfileid: "86918624"
   
     |後置詞|結果類型|  
     |------------|-----------------|  
-    |None|DT_I4|  
+    |無|DT_I4|  
     |U|DT_UI4|  
     |L|DT_I8|  
     |UL|DT_UI8|  

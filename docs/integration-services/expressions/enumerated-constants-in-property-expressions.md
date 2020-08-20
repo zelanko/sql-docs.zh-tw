@@ -1,4 +1,5 @@
 ---
+description: 屬性運算式中的列舉常數
 title: 屬性運算式中的列舉常數 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c233d75beabca847937f85977acfd0e2230dc7c2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 692e2e19b86b5d47d207c32c3024365675603c07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922756"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477580"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>屬性運算式中的列舉常數
 
@@ -95,7 +96,7 @@ ms.locfileid: "86922756"
   
 |DTSPrecedenceEvalOp 中的易記名稱|數值|  
 |------------------------------------------|-------------------|  
-|運算是|1|  
+|運算式|1|  
 |條件約束|2|  
 |ExpressionAndConstraint|3|  
 |ExpressionOrConstraint|4|  
@@ -275,7 +276,7 @@ ms.locfileid: "86922756"
   
 |TransferAction 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
-|[複製]|0|  
+|複製|0|  
 |移動|1|  
   
  **Method** 屬性：使用來自 **TransferMethod** 列舉的值設定。  
@@ -292,7 +293,7 @@ ms.locfileid: "86922756"
 |-------------------------------------|-------------------|  
 |FailTask|0|  
 |Overwrite|1|  
-|Skip|2|  
+|跳過|2|  
   
 ### <a name="transfer-jobs-task"></a>傳送作業工作  
  **IfObjectExists** 屬性：使用來自 **IfObjectExists** 列舉的值設定。  
@@ -301,7 +302,7 @@ ms.locfileid: "86922756"
 |-------------------------------------|-------------------|  
 |FailTask|0|  
 |Overwrite|1|  
-|Skip|2|  
+|跳過|2|  
   
 ### <a name="transfer-logins-task"></a>傳送登入工作  
  **IfObjectExists** 屬性：使用來自 **IfObjectExists** 列舉的值設定。  
@@ -310,7 +311,7 @@ ms.locfileid: "86922756"
 |-------------------------------------|-------------------|  
 |FailTask|0|  
 |Overwrite|1|  
-|Skip|2|  
+|跳過|2|  
   
  **LoginsToTransfer** 屬性：使用來自 **LoginsToTransfer** 列舉的值進行設定。  
   
@@ -327,14 +328,14 @@ ms.locfileid: "86922756"
 |-------------------------------------|-------------------|  
 |FailTask|0|  
 |Overwrite|1|  
-|Skip|2|  
+|跳過|2|  
   
 ### <a name="transfer-sql-server-objects-task"></a>傳送 SQL Server 物件工作  
  **ExistingData** 屬性：使用來自 **ExistingData** 列舉的值設定。  
   
 |ExistingData 中的易記名稱|數值|  
 |-----------------------------------|-------------------|  
-|Replace|0|  
+|取代|0|  
 |附加|1|  
   
 ### <a name="web-service-task"></a>Web 服務工作  
@@ -475,7 +476,7 @@ ms.locfileid: "86922756"
   
 |DTSXMLDiffAlgorithm 中的易記名稱|數值|  
 |------------------------------------------|-------------------|  
-|Auto|0|  
+|自動|0|  
 |快速|1|  
 |精確|2|  
   
@@ -518,7 +519,7 @@ ms.locfileid: "86922756"
   
 |DestinationType 中的易記名稱|數值|  
 |--------------------------------------|-------------------|  
-|Auto|0|  
+|自動|0|  
 |手動|1|  
   
  **ExistingBackupsAction** 屬性：使用來自 **ActionForExistingBackups** 列舉的值設定。  
@@ -533,7 +534,7 @@ ms.locfileid: "86922756"
 |BackupTaskType 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
 |資料庫|0|  
-|檔案|1|  
+|檔案儲存體|1|  
 |Log|2|  
   
  **BackupDevice** 屬性：使用來自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件 (SMO) **DeviceType** 列舉的值進行設定。  

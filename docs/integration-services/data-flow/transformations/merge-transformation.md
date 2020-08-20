@@ -1,4 +1,5 @@
 ---
+description: 合併轉換
 title: 合併轉換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a444abac97c69755e234e39a9c6e3ae623af8d89
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7d8ed9805a62095f732f3f4621d3c133793ac7bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919576"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477631"
 ---
 # <a name="merge-transformation"></a>合併轉換
 
@@ -75,7 +76,7 @@ ms.locfileid: "86919576"
 -   [排序合併和合併聯結轉換的資料](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="merge-transformation-editor"></a>合併轉換編輯器
-  使用 [合併轉換編輯器]  ，即可指定來自兩個已排序資料集的資料行，以進行合併。  
+  使用 [合併轉換編輯器]****，即可指定來自兩個已排序資料集的資料行，以進行合併。  
   
 > [!IMPORTANT]  
 >  合併轉換針對其輸入需要已排序的資料。 如需這項重要需求的詳細資訊，請參閱 [排序合併和合併聯結轉換的資料](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。  
