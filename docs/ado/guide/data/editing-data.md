@@ -1,4 +1,5 @@
 ---
+description: 編輯資料
 title: 編輯資料 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc80c8ad9985efc21e2f583d8ca72751e21c1a2b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b7fc5d177b05447637d635a9f132c9f9da086ef2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761034"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453460"
 ---
 # <a name="editing-data"></a>編輯資料
-我們已說明如何使用 ADO 連接到資料來源、執行命令、取得**記錄集**物件中的結果，以及在**記錄集中**流覽。 本節著重于下一個基本 ADO 作業：編輯資料。  
+我們已說明如何使用 ADO 連接到資料來源、執行命令、取得 **記錄集** 物件中的結果，以及在 **記錄集**內導覽。 本節著重于下一個基本 ADO 作業：編輯資料。  
   
- 這一節會繼續使用在[檢查資料](../../../ado/guide/data/examining-data.md)時所引進的範例**記錄集**，但有一項重要的變更。 下列程式碼是用來開啟**記錄集**：  
+ 本節將繼續使用在[檢查資料](../../../ado/guide/data/examining-data.md)時所引進的範例**記錄集**，但有一項重要變更。 下列程式碼用來開啟 **記錄集**：  
   
 ```  
 'BeginEditIntro  
@@ -43,13 +44,13 @@ ms.locfileid: "82761034"
 'EndEditIntro  
 ```  
   
- 對程式碼的重要變更牽涉到在*GetNewConnection*函式中，將**連接**物件的**CursorLocation**屬性設定為等於**adUseClient** （在下一個範例中顯示），這表示使用的是用戶端資料指標。 如需有關用戶端和伺服器端資料指標之間差異的詳細資訊，請參閱[瞭解資料指標和鎖定](../../../ado/guide/data/understanding-cursors-and-locks.md)。  
+ 程式碼的重要變更包括將**連接**物件的**CursorLocation**屬性設定為*GetNewConnection*函式中的**adUseClient** ， (下一個範例) 中所示，這表示使用用戶端資料指標。 如需用戶端和伺服器端資料指標之間差異的詳細資訊，請參閱 [瞭解資料指標和鎖定](../../../ado/guide/data/understanding-cursors-and-locks.md)。  
   
- **CursorLocation**屬性的**adUseClient**設定會將游標的位置從資料來源（在此案例中為 SQL Server）移至用戶端程式代碼的位置（桌面工作站）。 這項設定會強制 ADO 針對用戶端上的 OLE DB 叫用用戶端資料指標引擎，以便建立和管理資料指標。  
+ **CursorLocation**屬性的**adUseClient**設定會將資料指標的位置從資料來源移 (SQL Server，在此案例中) 至桌面工作站)  (的用戶端程式代碼位置。 這項設定會強制 ADO 針對用戶端上的 OLE DB 叫用用戶端資料指標引擎，以便建立和管理資料指標。  
   
- 您可能也注意到**Open**方法的**LockType**參數已變更為**adLockBatchOptimistic**。 這會以批次模式開啟資料指標。 （提供者會快取多個變更，並只有在您呼叫**UpdateBatch**方法時，才會將它們寫入基礎資料來源）。等到呼叫**UpdateBatch**方法之後，才會在資料庫中更新對**記錄集**所做的變更。  
+ 您也可能已經注意到， **Open**方法的**LockType**參數已變更為**adLockBatchOptimistic**。 這會以批次模式開啟資料指標。  (提供者會快取多項變更，而且只有在您呼叫**updatebatch**方法時，才會將這些變更寫入基礎資料來源。在呼叫**updatebatch**方法之前，將不會在資料庫中更新對**記錄集**所做的變更 ) 。  
   
- 最後，本節中的程式碼會使用 GetNewConnection 函數的修改版本。 這個版本的函式現在會傳回用戶端資料指標。 函式看起來像這樣：  
+ 最後，本節中的程式碼會使用修改過的 GetNewConnection 函式版本。 此版本的函式現在會傳回用戶端資料指標。 函數看起來像這樣：  
   
 ```  
 'BeginNewConnection  

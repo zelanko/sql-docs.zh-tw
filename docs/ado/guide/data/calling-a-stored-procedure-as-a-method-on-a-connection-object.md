@@ -1,5 +1,6 @@
 ---
-title: 呼叫預存程式做為連線物件上的方法 |Microsoft Docs
+description: 以 Connection 物件方法的形式來呼叫預存程序
+title: 在連線物件上呼叫預存程式做為方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0bb81e82e27decadbf6d31ce9bc391023474ecba
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8e5e019760c4496b7dab769cb96fbd7b2eab4f47
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761234"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453700"
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>以 Connection 物件方法的形式來呼叫預存程序
-您可以呼叫預存程式，如同在相關聯的開啟**連接**物件上的原生方法一樣。 這類似于在**連接**物件上呼叫已命名的命令。  
+您可以呼叫預存程式，就像是相關聯開啟 **連接** 物件上的原生方法一樣。 這類似于在 **連接** 物件上呼叫指名的命令。  
   
- 下列 Visual Basic 程式碼範例會呼叫 Northwind 範例資料庫中的預存程式（稱為 CustOrdersOrders），以方便您使用。  
+ 下列 Visual Basic 程式碼範例會呼叫 Northwind 範例資料庫中的預存程式（稱為 CustOrdersOrders），這會在這裡再次列出以方便您使用。  
   
 ```  
 CREATE PROCEDURE CustOrdersOrders @CustomerID nchar(5) AS  
@@ -34,7 +35,7 @@ WHERE CustomerID = @CustomerID
 ORDER BY OrderID  
 ```  
   
- 下列程式碼範例示範如何呼叫預存程式，如同在相關聯的開啟**連接**物件上的原生方法一樣。  
+ 下列程式碼範例示範如何呼叫預存程式，就像是相關聯開啟 **連接** 物件上的原生方法一樣。  
   
 ```  
 Const DS = "MySQLServer"  

@@ -1,4 +1,5 @@
 ---
+description: Command 物件參數
 title: 命令物件參數 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 10e7ef4a-78bf-4e91-931e-cbc6c065dd4c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0935fa2b45d0ab496072f4f3a9619c821afc8383
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f2e2cd8da9522c7aead905cc0c19debe132faf4b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761183"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453670"
 ---
 # <a name="command-object-parameters"></a>Command 物件參數
-上一個主題討論了如何[建立和執行簡單的命令](../../../ado/guide/data/creating-and-executing-a-simple-command.md)。 下一個範例會顯示更有趣的[命令](../../../ado/reference/ado-api/command-object-ado.md)物件用法，其中 SQL 命令已參數化。 這項修改可讓您重複使用命令，每次傳遞不同的參數值。 因為**命令**物件上的 [備妥的[屬性](../../../ado/reference/ado-api/prepared-property-ado.md)] 屬性設定為**true**，所以 ADO 會要求提供者先編譯[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)中指定的命令，然後才第一次執行。 它也會將已編譯的命令保留在記憶體中。 這會在第一次執行命令時稍微減緩執行，因為準備它需要額外負荷，但是之後每次呼叫命令時，效能就會提升。 因此，只有在使用超過一次的情況下，才應該準備命令。  
+上一個主題所討論的 [是建立和執行簡單的命令](../../../ado/guide/data/creating-and-executing-a-simple-command.md)。 在下一個範例中，已將 SQL 命令參數化，就會顯示更有趣的 [命令](../../../ado/reference/ado-api/command-object-ado.md) 物件用法。 這項修改可讓您重複使用命令，並每次傳遞不同的參數值。 因為**Command**物件上的 [[備妥屬性](../../../ado/reference/ado-api/prepared-property-ado.md)] 屬性設定為 [ **true**]，所以在第一次執行時，ADO 會要求提供者先編譯[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)中指定的命令。 它也會將編譯的命令保留在記憶體中。 這會讓命令在第一次執行時稍微變慢，因為準備它所需的額外負荷，但每次呼叫命令之後，效能就會提升。 因此，只有在使用的命令超過一段時間時，才應該準備好這些命令。  
   
 ```  
 'BeginManualParamCmd  
@@ -118,4 +119,4 @@ End Function
 'EndNewConnection  
 ```  
   
- 並非所有提供者都支援備妥的命令。 如果提供者不支援命令準備，則一旦此屬性設定為**True**時，可能會傳回錯誤。 如果未傳回錯誤，則會忽略準備命令的要求，並將**備**妥的屬性設定為**false**。
+ 並非所有提供者都支援備妥的命令。 如果提供者不支援命令準備，當這個屬性設定為 **True**時，它可能會傳回錯誤。 如果它不會傳回錯誤，則會忽略準備命令的要求，並將 **備** 妥的屬性設定為 **false**。

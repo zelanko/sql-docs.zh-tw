@@ -1,4 +1,5 @@
 ---
+description: 編輯現有的記錄
 title: 編輯現有的記錄 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 17ce1263-5897-452a-9ea5-c7f96b33df65
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71d8b825766ca94984ca2dc0b51577488178920f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3c720d43135cb54cd610ea6e9a7e32ac249c1081
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761024"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453450"
 ---
 # <a name="editing-existing-records"></a>編輯現有的記錄
-若要編輯現有的記錄，請移至您想要編輯的資料列，並變更您想要變更之欄位的**Value**屬性。 如需**欄位**物件之**Value**屬性的詳細資訊，請參閱[檢查資料](../../../ado/guide/data/examining-data.md)。 視您的資料指標類型而定，您將使用**Update**或**UpdateBatch**將變更傳送回資料來源。 如需詳細資訊，請參閱[更新和保存資料](../../../ado/guide/data/updating-and-persisting-data.md)。  
+若要編輯現有的記錄，請移至您想要編輯的資料列，然後變更您要變更之欄位的 [ **值** ] 屬性。 如需 **Field** 物件的 **Value** 屬性的詳細資訊，請參閱 [檢查資料](../../../ado/guide/data/examining-data.md)。 視您的資料指標類型而定，您將使用 **Update** 或 **UpdateBatch** 將變更傳送回資料來源。 如需詳細資訊，請參閱 [更新和保存資料](../../../ado/guide/data/updating-and-persisting-data.md)。  
   
- 使用預存程式搭配命令物件來執行更新，以及執行其他作業，通常會更有效率，因為預存程式不需要建立資料指標。 如需資料指標的詳細資訊，請參閱[瞭解資料指標和鎖定](../../../ado/guide/data/understanding-cursors-and-locks.md)。
+ 通常更有效率的方式是使用預存程式搭配 command 物件來執行更新，以及執行其他作業，因為預存程式不需要建立資料指標。 如需資料指標的詳細資訊，請參閱 [瞭解資料指標和鎖定](../../../ado/guide/data/understanding-cursors-and-locks.md)。

@@ -1,5 +1,6 @@
 ---
-title: 預見錯誤 |Microsoft Docs
+description: 預期的錯誤
+title: 預期的錯誤 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: ea1d4a97-58c3-476b-a496-cc80db2a90d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f28a6dc9d79ba59229609cbde94642e31274b9eb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 799a238d37e7b2fe4f5f4c8af5bb396513b75b03
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761254"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453730"
 ---
 # <a name="anticipating-errors"></a>預期的錯誤
-錯誤防護的重要性至少與錯誤處理相同。 最後一節包含您的應用程式可以採取的預防措施簡短清單，以協助避免發生錯誤。  
+錯誤防護至少與錯誤處理一樣重要。 最後一節包含您的應用程式可採取的一些預防措施，以協助讓錯誤更不可能發生。  
   
- 嘗試使用這些物件執行作業之前，請先檢查**state**屬性中的值，檢查物件的狀態。 例如，如果您的應用程式使用全域**連接**，請檢查其**State**屬性，以查看它是否已經開啟，然後再呼叫**open**方法。  
+ 檢查物件的狀態，方法是在嘗試使用這些物件執行作業之前，先檢查 **state** 屬性中的值。 例如，如果您的應用程式使用全域 **連接**，請檢查其 **狀態** 屬性，以查看它是否已在呼叫 **open** 方法之前開啟。  
   
--   接受使用者資料的任何程式都必須包含驗證該資料的程式碼，然後再將它傳送至資料存放區。 您不能依賴資料存放區、提供者、ADO，甚至是您的程式設計語言來通知您問題。 您必須檢查使用者輸入的每個位元組，以確保資料的欄位是正確的類型，而且必要的欄位不是空的。  
+-   接受使用者資料的任何程式都必須包含程式碼，才能在將資料傳送至資料存放區之前先驗證該資料。 您無法依賴資料存放區、提供者、ADO 或甚至是您的程式設計語言，來通知您有問題。 您必須檢查使用者輸入的每個位元組，確定資料是其欄位的正確類型，而且所需的欄位不是空的。  
   
- 嘗試將任何資料寫入資料存放區之前，請先檢查資料。 若要這麼做，最簡單的方式是處理**WillMove**事件或**WillUpdateRecordset**事件。 如需處理 ADO 事件的更完整討論，請參閱[處理 Ado 事件](../../../ado/guide/data/handling-ado-events.md)。  
+ 請先檢查資料，然後再嘗試將任何資料寫入資料存放區。 最簡單的方式是處理 **WillMove** 事件或 **WillUpdateRecordset** 事件。 如需處理 ADO 事件的更完整討論，請參閱 [處理 Ado 事件](../../../ado/guide/data/handling-ado-events.md)。  
   
- 嘗試移動記錄指標之前，請確定**記錄集**物件不在**記錄集**的界限之外。 如果您嘗試**在當** **BOF**為 true 時執行**MoveNext**或**MovePrev** ，則會發生錯誤。 如果當**EOF**和**BOF**都是 True 時，執行任何**Move**方法，就會產生錯誤。  
+ 嘗試移動記錄指標之前，請確定 **記錄集** 物件不在 **記錄集** 界限之外。 如果您嘗試 **MoveNext** **EOF** 為 true 或 **MovePrev** ，當 **BOF** 為 true 時，將會發生錯誤。 如果您在**EOF**和**BOF**都為 True 時執行任何**移動**方法，則會產生錯誤。  
   
- 如果您嘗試在空的**記錄集**上執行**搜尋**和**尋找**之類的作業，也會發生錯誤。
+ 如果您嘗試在空的**記錄集**上執行**搜尋**和**尋找**等作業，也會發生錯誤。

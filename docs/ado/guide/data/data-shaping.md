@@ -1,4 +1,5 @@
 ---
+description: 資料成形
 title: 資料成形 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 62bd7dc9-45b5-4ca9-8b52-457325e0ce9e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7108db5b16b47b8e53b8bddb7f16ad132dcc98fd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2a15e137fd3dfcd8c863bbe2fb1d5bc5fe756851
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758314"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453540"
 ---
 # <a name="data-shaping"></a>資料成形
 此章節包含下列主題。  

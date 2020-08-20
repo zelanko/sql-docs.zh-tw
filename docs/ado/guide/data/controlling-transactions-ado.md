@@ -1,5 +1,6 @@
 ---
-title: 控制交易（ADO） |Microsoft Docs
+description: 控制交易 (ADO)
+title: " (ADO) 控制交易 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 189240e8-3ffa-4024-81a9-c6cb5d17eee0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 36b75231cddc276a9f0889f3a569dedce2380732
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 861fe39f270a007fdd3896c4150a02a0fd905b47
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761154"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453630"
 ---
 # <a name="controlling-transactions-ado"></a>控制交易 (ADO)
-ADO 支援連接中的交易處理，並提供**連接**物件上**BeginTrans**、 **CommitTrans**和**RollbackTrans**方法的協助。 下列簡單的程式碼片段將說明如何在 ADO 中執行交易處理的一般概念。  
+ADO 支援連接中的交易處理，以及**連接**物件的**BeginTrans**、 **CommitTrans**和**RollbackTrans**方法的協助。 下列簡單的程式碼片段說明如何在 ADO 中執行交易處理的一般概念。  
   
 ```  
 Const DS = "MySqlServer"  
@@ -77,6 +78,6 @@ oRs.Close
 oConn.Close  
 ```  
   
- 在這裡，交易處理是用來確保兩個記錄都會更新為一個作業單位，而且這兩個產品名稱完全是交換或未變更。  
+ 在此，我們會使用交易處理來確保兩筆記錄會更新為一個作業單位，而且兩個產品名稱完全是互換或未變更。  
   
- 如需交易處理的詳細討論，請參閱[更新和保存資料](../../../ado/guide/data/updating-and-persisting-data.md)。
+ 如需交易處理的詳細討論，請參閱 [更新和保存資料](../../../ado/guide/data/updating-and-persisting-data.md)。

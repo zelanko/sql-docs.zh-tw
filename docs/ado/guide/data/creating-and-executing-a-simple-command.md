@@ -1,4 +1,5 @@
 ---
+description: 建立和執行簡單的命令
 title: 建立和執行簡單的命令 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,26 +14,26 @@ helpviewer_keywords:
 ms.assetid: 0b81af6f-b9ae-4f7c-b59b-b5bdd775036f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9f4946af23a684e1bc98556c914cbd9e271fd208
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ea860584e00b7b25a69d406ee81a24c4c8f01844
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761134"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453610"
 ---
 # <a name="creating-and-executing-a-simple-command"></a>建立和執行簡單的命令
-簡單的命令是指未參數化，而且不需要持續性。 有三種方式可以建立和執行簡單的命令。  
+簡單的命令是未參數化，而且不需要持續性的命令。 有三種方式可建立和執行簡單的命令。  
   
--   使用**Command**物件  
+-   使用 **命令** 物件  
   
--   使用**Connection**物件  
+-   使用 **Connection** 物件  
   
--   使用**記錄集**物件  
+-   使用 **記錄集** 物件  
   
-## <a name="using-a-command-object"></a>使用 Command 物件  
- 若要使用**command**物件來建立簡單的命令，您必須將指令指派給**Command**物件的**CommandText**屬性，並為**CommandType**屬性設定適當的值。 執行命令需要將開啟的連接指派給**command**物件的**ActiveConnection**屬性，然後呼叫**command**物件上的**Execute**方法。  
+## <a name="using-a-command-object"></a>使用命令物件  
+ 若要使用**命令**物件建立簡單的命令，您必須將指令指派給**Command**物件的**CommandText**屬性，並為**CommandType**屬性設定適當的值。 執行命令時，會要求將開啟的連接指派給**command**物件的**ActiveConnection**屬性，後面接著呼叫**command**物件的**Execute**方法。  
   
- 下列程式碼片段顯示使用**command**物件對資料來源執行命令的基本方法。 這個範例會使用傳回資料列的命令，並以**記錄集**物件的形式傳回命令執行的結果。  
+ 下列程式碼片段顯示使用 **命令** 物件針對資料來源執行命令的基本方法。 這個範例會使用傳回資料列的命令，並以 **記錄集** 物件的形式傳回命令執行的結果。  
   
 ```  
     'BeginBasicCmd  
@@ -108,7 +109,7 @@ End Function
 ```  
   
 ## <a name="using-a-recordset-object"></a>使用記錄集物件  
- 您也可以建立命令做為文字字串，並將它與命令類型（adCmdText）一起在**記錄集**物件上與**Open**方法搭配執行。 下列程式碼片段示範這種情況。  
+ 您也可以將命令建立為文字字串，並將它 pas 至**記錄集**物件上的**Open**方法，連同命令類型 (adCmdText) ）來執行。 下列程式碼片段示範這一點。  
   
 ```  
   
@@ -147,7 +148,7 @@ Set objRs = Nothing
 ```  
   
 ## <a name="using-a-connection-object"></a>使用 Connection 物件  
- 您也可以在開啟的連線物件上執行命令。 先前的程式碼範例現在變成：  
+ 您也可以在開啟的連線物件上執行命令。 上述程式碼範例現在變成：  
   
 ```  
 Const DS = "MySqlServer"  
