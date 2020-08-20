@@ -1,5 +1,6 @@
 ---
-title: sys. services （Transact-sql） |Microsoft Docs
+description: sys.services (Transact-SQL)
+title: sys. services (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 16d0b0c5-5cce-469b-aa3d-4b9248e0c085
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6372f1073bbcb4746aafce78048e4af7c05f7158
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 89d8d4202372660ec44b8fc12a3a8513949f3bd9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901734"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455149"
 ---
 # <a name="sysservices-transact-sql"></a>sys.services (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

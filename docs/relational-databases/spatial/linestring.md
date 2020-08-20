@@ -1,4 +1,5 @@
 ---
+description: LineString
 title: LineString | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f739a8344eacaaa3e0057608b79bf60c88d1b29
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0e1a16547649ce07eadf15942da8cb548e8e10bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751063"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455390"
 ---
 # <a name="linestring"></a>LineString
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  **LineString** 是代表一連串的點及連接這些點之線段的一維度物件。  
+  **LineString** 是代表一連串的點及連線這些點之線段的一維物件。  
   
 ## <a name="linestring-instances"></a>LineString 執行個體  
  下圖顯示 **LineString** 執行個體的範例。  

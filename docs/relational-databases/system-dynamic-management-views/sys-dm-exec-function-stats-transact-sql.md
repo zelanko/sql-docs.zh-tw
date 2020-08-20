@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_exec_function_stats （Transact-sql） |Microsoft Docs
+description: 'sys. dm_exec_function_stats (Transact-sql) '
+title: sys. dm_exec_function_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/30/2019
 ms.prod: sql
@@ -18,22 +19,22 @@ ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 25ec8e19343d707fefdda9049428280b1dfddb80
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: baa8bd4e62d66812d6f2ba32e4c94bc1b80da99f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396777"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454923"
 ---
-# <a name="sysdm_exec_function_stats-transact-sql"></a>sys.databases dm_exec_function_stats （Transact-sql）
+# <a name="sysdm_exec_function_stats-transact-sql"></a>sys. dm_exec_function_stats (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-  傳回快取函數的匯總效能統計資料。 此視圖會針對每個快取函數計畫傳回一個資料列，而且資料列的存留期只要函式維持快取。 從快取中移除函式時，會從這個視圖中去除對應的資料列。 此時，就會引發效能統計資料 SQL 追蹤事件 (與 **sys.dm_exec_query_stats** 很相似)。 傳回純量函數的相關資訊，包括記憶體內建函式和 CLR 純量函數。 不會傳回資料表值函式的相關資訊。  
+  傳回快取函數的匯總效能統計資料。 此視圖會針對每個快取的函式計畫傳回一個資料列，而且只要函數維持快取狀態，資料列的存留期就會傳回。 從快取中移除函式時，會從這個視圖中刪除對應的資料列。 此時，就會引發效能統計資料 SQL 追蹤事件 (與 **sys.dm_exec_query_stats** 很相似)。 傳回純量函數的相關資訊，包括記憶體內建函式和 CLR 純量函數。 不會傳回資料表值函數的相關資訊。  
   
- 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，動態管理檢視不可以公開可能會影響資料庫內含項目的資訊或公開有關使用者可存取之其他資料庫的資訊。 為避免公開此資訊，包含不屬於連接租使用者之資料的每個資料列都會被篩選掉。  
+ 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，動態管理檢視不可以公開可能會影響資料庫內含項目的資訊或公開有關使用者可存取之其他資料庫的資訊。 為了避免公開此資訊，每個包含不屬於已連線租使用者之資料的資料列都會被篩選掉。  
   
 > [!NOTE]
-> **Dm_exec_function_stats**的結果可能會隨著每次執行而不同，因為資料只會反映完成的查詢，而不是仍在進行中的查詢。 
+> **Sys. dm_exec_function_stats**的結果可能會隨著每次執行而有所不同，因為資料只會反映完成的查詢，而不是仍在進行中的查詢。 
 
   
 |資料行名稱|資料類型|描述|  
@@ -42,43 +43,43 @@ ms.locfileid: "87396777"
 |object_id|**int**|函數的物件識別碼。|  
 |**type**|**char(2)**|物件的類型： FN = 純量值函式|  
 |**type_desc**|**nvarchar(60)**|物件類型的描述： SQL_SCALAR_FUNCTION|  
-|**sql_handle**|**varbinary(64)**|這可以用來與從這個函式中執行的**dm_exec_query_stats**中的查詢相互關聯。|  
-|**plan_handle**|**varbinary(64)**|記憶體中計畫的識別碼。 這個識別碼是暫時性的，只有當計畫留在快取時才會保留。 這個值可與**sys.databases dm_exec_cached_plans**動態管理檢視搭配使用。<br /><br /> 當原生編譯的函數查詢記憶體優化資料表時，一律會0x000。|  
-|**cached_time**|**datetime**|函數新增至快取的時間。|  
+|**sql_handle**|**varbinary(64)**|這可以用來與 **sys. dm_exec_query_stats** 中從這個函數內執行的查詢相互關聯。|  
+|**plan_handle**|**varbinary(64)**|記憶體中計畫的識別碼。 這個識別碼是暫時性的，只有當計畫留在快取時才會保留。 這個值可以與 **sys. dm_exec_cached_plans** 動態管理檢視一起使用。<br /><br /> 當原生編譯的函數查詢記憶體優化資料表時，一律會0x000。|  
+|**cached_time**|**datetime**|將函數新增至快取的時間。|  
 |**last_execution_time**|**datetime**|上次執行函數的時間。|  
-|**execution_count**|**bigint**|函式自上次編譯以來執行的次數。|  
-|**total_worker_time**|**bigint**|此函式在編譯以來執行所耗用的 CPU 時間總量（以微秒為單位）。<br /><br /> 對於原生編譯的函式，如果多個執行花費的時間少於1毫秒， **total_worker_time**可能會不正確。|  
-|**last_worker_time**|**bigint**|上次執行函數時所耗用的 CPU 時間（以微秒為單位）。 <sup>1</sup>|  
-|**min_worker_time**|**bigint**|此函式在單次執行期間曾耗用的最小 CPU 時間（以微秒為單位）。 <sup>1</sup>|  
-|**max_worker_time**|**bigint**|此函式在單次執行期間曾耗用的最大 CPU 時間（以微秒為單位）。 <sup>1</sup>|  
-|**total_physical_reads**|**bigint**|此函式在編譯以來執行所執行的實體讀取總數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
+|**execution_count**|**bigint**|自上次編譯函式之後，該函式已執行的次數。|  
+|**total_worker_time**|**bigint**|這個函式在編譯以來執行所耗用的 CPU 時間總量（以微秒為單位）。<br /><br /> 對於原生編譯的函式，如果有多個執行花費的時間少於1毫秒， **total_worker_time** 可能不正確。|  
+|**last_worker_time**|**bigint**|上次執行函數所耗用的 CPU 時間（以微秒為單位）。 <sup>1</sup>|  
+|**min_worker_time**|**bigint**|此函數在單次執行期間曾經耗用的最小 CPU 時間（以微秒為單位）。 <sup>1</sup>|  
+|**max_worker_time**|**bigint**|此函數在單次執行期間曾耗用的最大 CPU 時間（以微秒為單位）。 <sup>1</sup>|  
+|**total_physical_reads**|**bigint**|此函式自編譯以來執行所執行的實體讀取總數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
 |**last_physical_reads**|**bigint**|上次執行函數時所執行的實體讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
-|**min_physical_reads**|**bigint**|此函式在單次執行期間曾執行的最小實體讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
-|**max_physical_reads**|**bigint**|此函式在單次執行期間曾執行的最大實體讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
-|**total_logical_writes**|**bigint**|這個函式在編譯後執行的邏輯寫入總數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
+|**min_physical_reads**|**bigint**|這個函式在單次執行期間曾執行的最小實體讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
+|**max_physical_reads**|**bigint**|此函數在單次執行期間曾執行的最大實體讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
+|**total_logical_writes**|**bigint**|這個函式在編譯以來執行所執行的邏輯寫入總數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
 |**last_logical_writes**|**bigint**|上次執行計畫時修改的緩衝集區頁數。 如果已修改頁面，則不會計算寫入。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
-|**min_logical_writes**|**bigint**|這個函數在單次執行期間曾執行的最小邏輯寫入數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
-|**max_logical_writes**|**bigint**|這個函數在單次執行期間曾執行的最大邏輯寫入數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
-|**total_logical_reads**|**bigint**|此函式在編譯以來執行所執行的邏輯讀取總數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
+|**min_logical_writes**|**bigint**|此函數在單次執行期間曾執行的最小邏輯寫入數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
+|**max_logical_writes**|**bigint**|此函數在單次執行期間曾執行的最大邏輯寫入數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
+|**total_logical_reads**|**bigint**|這個函式在編譯以來執行所執行的邏輯讀取總數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
 |**last_logical_reads**|**bigint**|上次執行函數時所執行的邏輯讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
-|**min_logical_reads**|**bigint**|此函式在單次執行期間曾執行的最小邏輯讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
-|**max_logical_reads**|**bigint**|此函式在單次執行期間曾執行的最大邏輯讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
-|**total_elapsed_time**|**bigint**|此函式的完成執行經歷的總時間（以微秒為單位）。|  
-|**last_elapsed_time**|**bigint**|最近完成執行此函式的經過時間（以微秒為單位）。|  
-|**min_elapsed_time**|**bigint**|此函式已完成執行的最小經過時間（以微秒為單位）。|  
-|**max_elapsed_time**|**bigint**|此函式已完成執行的已耗用時間上限（以微秒為單位）。|  
-|**total_page_server_reads**|**bigint**|此函式在編譯以來執行所執行的頁面伺服器讀取總數。<br /><br /> **適用物件：** Azure SQL Database 超大規模資料庫。|  
-|**last_page_server_reads**|**bigint**|上次執行函數時所執行的頁面伺服器讀取數目。<br /><br /> **適用物件：** Azure SQL Database 超大規模資料庫。|  
-|**min_page_server_reads**|**bigint**|這個函式在單次執行期間曾執行的最小頁面伺服器讀取數。<br /><br /> **適用物件：** Azure SQL Database 超大規模資料庫。|  
-|**max_page_server_reads**|**bigint**|這個函式在單次執行期間曾執行的最大頁面伺服器讀取數。<br /><br /> **適用物件：** Azure SQL Database 超大規模資料庫。|
+|**min_logical_reads**|**bigint**|此函數在單次執行期間曾執行的最小邏輯讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
+|**max_logical_reads**|**bigint**|此函數在單次執行期間曾執行的最大邏輯讀取數。<br /><br /> 查詢記憶體最佳化的資料表時一律為 0。|  
+|**total_elapsed_time**|**bigint**|此函數完成執行的總經過時間（以微秒為單位）。|  
+|**last_elapsed_time**|**bigint**|此函數最近完成執行的經過時間（以微秒為單位）。|  
+|**min_elapsed_time**|**bigint**|此函數完成執行的最少經過時間（以微秒為單位）。|  
+|**max_elapsed_time**|**bigint**|此函數完成執行的最大經過時間（以微秒為單位）。|  
+|**total_page_server_reads**|**bigint**|此函式自編譯以來執行所執行的頁面伺服器讀取總數。<br /><br /> **適用于：** Azure SQL Database 超大規模。|  
+|**last_page_server_reads**|**bigint**|上次執行函數時所執行的頁面伺服器讀取數。<br /><br /> **適用于：** Azure SQL Database 超大規模。|  
+|**min_page_server_reads**|**bigint**|這個函式在單次執行期間曾執行的最小頁面伺服器讀取數。<br /><br /> **適用于：** Azure SQL Database 超大規模。|  
+|**max_page_server_reads**|**bigint**|這個函式在單次執行期間曾執行的最大頁面伺服器讀取數。<br /><br /> **適用于：** Azure SQL Database 超大規模。|
   
 ## <a name="permissions"></a>權限  
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 許可權。   
-在高階 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 層級上，需要 `VIEW DATABASE STATE` 資料庫的許可權。 在 [ [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
+在進階層中 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ，需要 `VIEW DATABASE STATE` 資料庫中的許可權。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準和基本層中，需要  **伺服器管理員** 或 **Azure Active Directory 系統管理員** 帳戶。   
   
 ## <a name="examples"></a>範例  
- 下列範例會傳回平均經過時間所識別的前十個函數的相關資訊。  
+ 下列範例會傳回平均經過時間所識別的前十個函式的相關資訊。  
   
 ```  
 SELECT TOP 10 d.object_id, d.database_id, OBJECT_NAME(object_id, database_id) 'function name',   
@@ -91,10 +92,10 @@ ORDER BY [total_worker_time] DESC;
   
 ## <a name="see-also"></a>另請參閱  
  [執行相關的動態管理檢視和函數 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [dm_exec_sql_text &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+ [sys. dm_exec_sql_text &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
  [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  
- [dm_exec_trigger_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)   
- [dm_exec_procedure_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+ [sys. dm_exec_trigger_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)   
+ [sys. dm_exec_procedure_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
   
   

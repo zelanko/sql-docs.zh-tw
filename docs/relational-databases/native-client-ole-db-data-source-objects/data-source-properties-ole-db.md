@@ -1,5 +1,6 @@
 ---
-title: 資料來源屬性（Native Client OLE DB 提供者） |Microsoft Docs
+description: 'SQL Server Native Client 資料來源屬性 (OLE DB) '
+title: " (Native Client OLE DB 提供者的資料來源屬性) |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,22 +17,22 @@ ms.assetid: 6e14fefc-4e0b-4847-a833-4cf0abe65d50
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a4613a0185a5b81b6049f638337afce4608f292c
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: e26ea91c7734a4cff58b2cf026ee17cadcdf2e9a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242273"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455996"
 ---
-#  <a name="sql-server-native-client-data-source-properties-ole-db"></a>SQL Server Native Client 資料來源屬性（OLE DB）
+#  <a name="sql-server-native-client-data-source-properties-ole-db"></a>SQL Server Native Client 資料來源屬性 (OLE DB) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者會依照下列方式實作為資料來源屬性。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端 OLE DB 提供者會依照下列方式來執行資料來源屬性。  
   
 |屬性識別碼|描述|  
 |-----------------|-----------------|  
-|DBPROP_CURRENTCATALOG|R/W：讀取/寫入 預設值：無<br /><br /> 描述： DBPROP_CURRENTCATALOG 的值會報告 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會話的目前資料庫。 設定屬性值的效果與使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] USE *database* 陳述式設定目前資料庫的效果相同。<br /><br /> 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始，如果您呼叫 [sp_defaultdb](../../relational-databases/system-stored-procedures/sp-defaultdb-transact-sql.md) 並以小寫指定資料庫名稱，即使資料庫原始是以混合大小寫的名稱建立，DBPROP_CURRENTCATALOG 也會以小寫傳回名稱。 使用舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，DBPROP_CURRENTCATALOG 會傳回預期的混合大小寫。|  
-|DBPROP_MULTIPLECONNECTIONS|R/W：讀取/寫入 預設值：VARIANT_FALSE<br /><br /> 描述：如果連接執行的命令不會產生資料列集，或者產生的資料列集不是伺服器資料指標，而且您執行其他命令，當 DBPROP_MULTIPLECONNECTIONS 為 VARIANT_TRUE 時，將會建立一個新的連接來執行新命令。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]如果 DBPROP_MULTIPLECONNECTION VARIANT_FALSE，或者如果交易在連接上作用中，Native Client OLE DB 提供者就不會建立另一個連接。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]如果 VARIANT_FALSE DBPROP_MULTIPLECONNECTIONS，Native Client OLE DB 提供者會傳回 DB_E_OBJECTOPEN，如果有使用中的交易，則會傳回 E_FAIL。 交易與鎖定是以連接為基礎，由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理。 如果產生另一個連接，個別連接上的命令不會共用鎖定。 為確保命令之間不會互相封鎖，保留另一個命令要求之資料列上的鎖定。 建立多個工作階段時也是如此。<br /><br /> 每個工作階段都有一個個別的連接。|  
+|DBPROP_CURRENTCATALOG|R/W：讀取/寫入 預設值：無<br /><br /> 描述： DBPROP_CURRENTCATALOG 的值會報告 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生用戶端 OLE DB 提供者會話的目前資料庫。 設定屬性值的效果與使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] USE *database* 陳述式設定目前資料庫的效果相同。<br /><br /> 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始，如果您呼叫 [sp_defaultdb](../../relational-databases/system-stored-procedures/sp-defaultdb-transact-sql.md) 並以小寫指定資料庫名稱，即使資料庫原始是以混合大小寫的名稱建立，DBPROP_CURRENTCATALOG 也會以小寫傳回名稱。 使用舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，DBPROP_CURRENTCATALOG 會傳回預期的混合大小寫。|  
+|DBPROP_MULTIPLECONNECTIONS|R/W：讀取/寫入 預設值：VARIANT_FALSE<br /><br /> 描述：如果連接執行的命令不會產生資料列集，或者產生的資料列集不是伺服器資料指標，而且您執行其他命令，當 DBPROP_MULTIPLECONNECTIONS 為 VARIANT_TRUE 時，將會建立一個新的連接來執行新命令。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]如果 DBPROP_MULTIPLECONNECTION VARIANT_FALSE 或在連接上使用中交易，Native Client OLE DB 提供者將不會建立其他連接。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]如果 DBPROP_MULTIPLECONNECTIONS 是 VARIANT_FALSE 的 Native Client OLE DB 提供者會傳回 DB_E_OBJECTOPEN，而且如果有使用中的交易，則會傳回 E_FAIL。 交易與鎖定是以連接為基礎，由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理。 如果產生另一個連接，個別連接上的命令不會共用鎖定。 為確保命令之間不會互相封鎖，保留另一個命令要求之資料列上的鎖定。 建立多個工作階段時也是如此。<br /><br /> 每個工作階段都有一個個別的連接。|  
   
  在提供者特定的屬性集 DBPROPSET_SQLSERVERDATASOURCE 中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會定義下列額外的資料來源屬性。  
   

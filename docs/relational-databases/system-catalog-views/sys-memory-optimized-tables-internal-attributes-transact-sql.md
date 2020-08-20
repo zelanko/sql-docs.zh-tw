@@ -1,5 +1,6 @@
 ---
-title: sys.databases memory_optimized_tables_internal_attributes （Transact-sql） |Microsoft Docs
+description: sys.memory_optimized_tables_internal_attributes (Transact-SQL)
+title: sys. memory_optimized_tables_internal_attributes (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -20,11 +21,12 @@ ms.assetid: 78ef5807-0504-4de8-9a01-ede6c03c7ff1
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 636bacd800bc75d0b7a087683e1aef34584d596e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: fc11ec8d075d52643f06eb91f0a55a1b6948c88c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004806"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455238"
 ---
 # <a name="sysmemory_optimized_tables_internal_attributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -35,7 +37,7 @@ ms.locfileid: "86004806"
 | :------ |:----------| :-----|
 |object_id  |**int**|       使用者資料表識別碼。 為支援使用者資料表而存在的內部記憶體最佳化資料表 (例如 Hk/資料行存放區組合時的非資料列儲存或刪除的資料列) 與其父系有相同的 object_id。 |
 |xtp_object_id  |**bigint**|    對應至內部記憶體最佳化資料表的記憶體內部 OLTP 物件識別碼，可用於支援使用者資料表。 它是資料庫內唯一且可因物件的存留期而變更。 
-|類型|  **int** |   內部資料表的類型。<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
+|type|  **int** |   內部資料表的類型。<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
 |type_desc| **nvarchar(60)**|   類型的描述<br/><br/>DELETED_ROWS_TABLE -> 追蹤資料行存放區索引之已刪除資料列的內部資料表<br/>USER_TABLE -> 包含同資料列使用者資料的資料表<br/>DICTIONARIES_TABLE -> 資料行存放區索引字典<br/>SEGMENTS_TABLE -> 資料行存放區索引的壓縮區段<br/>ROW_GROUPS_INFO_TABLE -> 資料行存放區索引之壓縮資料列群組的相關中繼資料<br/>INTERNAL OFF-ROW DATA TABLE -> 用來儲存非資料列資料行的內部資料表。 在此情況下，minor_id 會反映 column_id。<br/>INTERNAL_TEMPORAL_HISTORY_TABLE -> 磁碟式記錄資料表的熱結尾。 記錄中插入的資料列會先插入此內部記憶體最佳化資料表。 有一項背景工作會以非同步方式，將此內部資料表的資料列移至磁碟式記錄資料表。 |
 |minor_id|  **int**|    0 表示使用者或內部資料表<br/><br/>非 0 表示 off-row 儲存的資料行識別碼。 sys.columns 中有 column_id 的結合。<br/><br/>每個 off-row 儲存的資料行在此系統檢視中都有對應的資料列。|
 
@@ -112,7 +114,7 @@ WHERE moa.type IN (0, 2, 3, 4)
 GROUP BY o.schema_id, moa.object_id, i.name;
 ```
 
-使用下列查詢來細分記憶體優化資料表上用於資料行存放區索引的內部結構的記憶體耗用量：
+使用下列查詢，將記憶體優化資料表上用於資料行存放區索引的內部結構的記憶體耗用量細分：
 
 ```Transact-SQL
 SELECT

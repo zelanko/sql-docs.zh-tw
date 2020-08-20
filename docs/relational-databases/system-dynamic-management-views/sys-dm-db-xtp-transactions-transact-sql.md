@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_db_xtp_transactions （Transact-sql） |Microsoft Docs
+description: sys.dm_db_xtp_transactions (Transact-SQL)
+title: sys. dm_db_xtp_transactions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -20,12 +21,12 @@ ms.assetid: 5c1a0a7a-e851-4b6f-8dfd-c9655fbf5a51
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b5bfd506f1baa20a4edd36701e37c78847881089
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: b1769cb338c75329b56c440b7278ca648ef8c4f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442873"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454977"
 ---
 # <a name="sysdm_db_xtp_transactions-transact-sql"></a>sys.dm_db_xtp_transactions (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "87442873"
 |session_id|**smallint**|執行此交易之工作階段的工作階段識別碼。 與 sys.dm_exec_sessions 聯結。|  
 |begin_tsn|**bigint**|交易的開始交易序號。|  
 |end_tsn|**bigint**|交易的結束交易序號。|  
-|state|**int**|交易的狀態：<br /><br /> 0=ACTIVE<br /><br /> 1=COMMITTED<br /><br /> 2=ABORTED<br /><br /> 3=VALIDATING|  
+|狀態|**int**|交易的狀態：<br /><br /> 0=ACTIVE<br /><br /> 1=COMMITTED<br /><br /> 2=ABORTED<br /><br /> 3=VALIDATING|  
 |state_desc|**nvarchar**|交易狀態的描述。|  
 |result|**int**|此交易的結果。 以下是可能的值。<br /><br /> 0 - IN PROGRESS<br /><br /> 1 - SUCCESS<br /><br /> 2 - ERROR<br /><br /> 3 - COMMIT DEPENDENCY<br /><br /> 4 - VALIDATION FAILED (RR)<br /><br /> 5 - VALIDATION FAILED (SR)<br /><br /> 6 - ROLLBACK|  
 |result_desc|**nvarchar**|此交易的結果。 以下是可能的值。<br /><br /> IN PROGRESS<br /><br /> SUCCESS<br /><br /> ERROR<br /><br /> COMMIT DEPENDENCY<br /><br /> VALIDATION FAILED (RR)<br /><br /> VALIDATION FAILED (SR)<br /><br /> ROLLBACK|  

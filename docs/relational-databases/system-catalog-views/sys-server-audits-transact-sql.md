@@ -1,5 +1,6 @@
 ---
-title: sys.databases server_audits （Transact-sql） |Microsoft Docs
+description: sys.server_audits (Transact-SQL)
+title: sys. server_audits (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 51c55ae32742c0e8d821174ca99e1d2694e1fa8b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 171a4709759419f24ca2d596896ef8c1e5e0b3ce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882153"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455200"
 ---
 # <a name="sysserver_audits-transact-sql"></a>sys.server_audits (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85882153"
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|稽核的識別碼。|  
 |**name**|**sysname**|稽核的名稱。|  
-|**audit_guid**|**uniqueidentifier**|用來在伺服器啟動和資料庫附加作業期間，用來列舉成員伺服器&#124;資料庫審核規格之審核的 GUID。|  
+|**audit_guid**|**uniqueidentifier**|用於在伺服器啟動和資料庫附加作業期間，用來列舉成員伺服器&#124;資料庫審核規格之審核的 GUID。|  
 |**create_date**|**datetime**|建立稽核的 UTC 日期。|  
 |**modify_date**|**datetime**|上次修改稽核的 UTC 日期。|  
 |**principal_id**|**int**|對伺服器註冊之稽核擁有者的識別碼。|  
@@ -45,10 +46,10 @@ ms.locfileid: "85882153"
 |**on_failure_desc**|**nvarchar(60)**|寫入動作項目失敗：<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  
 |**is_state_enabled**|**tinyint**|0-已停用<br /><br /> 1 - 已啟用|  
 |**queue_delay**|**int**|寫入磁碟前等候的最大時間值 (以毫秒計)。 如果為 0，則表示稽核將會保證寫入，然後事件才可以繼續。|  
-|**推斷**|**Nvarchar （3000）**|套用至事件的述詞運算式。|  
+|**謂詞**|**Nvarchar (3000) **|套用至事件的述詞運算式。|  
   
 ## <a name="permissions"></a>權限  
- 具有**ALTER ANY SERVER AUDIT**或**VIEW any DEFINITION**許可權的主體可存取此目錄檢視。 此外，主體不得被拒絕**VIEW ANY DEFINITION**許可權。  
+ 具有 **ALTER ANY SERVER AUDIT** 或 **VIEW any DEFINITION** 許可權的主體可存取此目錄檢視。 此外，主體也不得被拒絕 **VIEW ANY DEFINITION** 許可權。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
@@ -59,7 +60,7 @@ ms.locfileid: "85882153"
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
  [ALTER SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
  [DROP SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
- [CREATE DATABASE AUDIT 規格 &#40;Transact-sql&#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
+ [CREATE DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
  [ALTER DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
  [DROP DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
@@ -71,7 +72,7 @@ ms.locfileid: "85882153"
  [sys.database_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
  [sys.dm_server_audit_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
  [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
- [dm_audit_class_type_map &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
+ [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
  [建立伺服器稽核與伺服器稽核規格](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 連接到伺服器 (Oracle)，登入
 title: 連接到伺服器 (Oracle)，登入 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: 86ed91a1-a07c-46f2-a913-67317ef2255e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 22e029a225d46d24730bb16c9ef55a13f676c81e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b585e2a17e577aab7ade2c5906bdcd184a12e8dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773947"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455590"
 ---
 # <a name="connect-to-server-oracle-login"></a>連接到伺服器 (Oracle)，登入
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  使用 [連線到伺服器]  對話方塊的 [登入]  索引標籤，即可指定從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 散發者連線到 Oracle 發行者的帳戶。 您必須使用在發行者組態期間，為複寫管理的使用者結構描述指定之相同帳戶。 如需詳細資訊，請參閱[設定 Oracle 發行者](../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)。  
+  使用 [連線到伺服器]**** 對話方塊的 [登入]**** 索引標籤，即可指定從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 散發者連線到 Oracle 發行者的帳戶。 您必須使用在發行者組態期間，為複寫管理的使用者結構描述指定之相同帳戶。 如需詳細資訊，請參閱[設定 Oracle 發行者](../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)。  
   
 ## <a name="options"></a>選項。  
  **伺服器執行個體**  
  Oracle 發行者的透明網路基質 (Transparent Network Substrate，TNS) 名稱，是安裝在散發者上的 Oracle 用戶端軟體於組態期間指定的。  
   
  **驗證**  
- 選取 **[Oracle 標準驗證]** (建議選項) 或 **[Windows 驗證]** 。 如果您選取 **[Windows 驗證]** ：  
+ 選取 **[Oracle 標準驗證]** (建議選項) 或 **[Windows 驗證]** 。 如果您選取 **[Windows 驗證]**：  
   
 -   Oracle 伺服器必須設定為允許使用 Windows 認證進行連接。 如需詳細資訊，請參閱 Oracle 文件集。  
   

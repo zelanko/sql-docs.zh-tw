@@ -1,4 +1,5 @@
 ---
+description: SQL 追蹤
 title: SQL 追蹤 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/27/2018
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9941f85f14d5b1f820ad7166a7bb106db4bf0fb1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7368f8e10c38008836d86d7dea14d2ab8add4a93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750923"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455323"
 ---
 # <a name="sql-trace"></a>SQL 追蹤
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -82,7 +83,7 @@ SQL 追蹤使用追蹤輸出的資料行來描述追蹤執行時傳回的事件�
 |**ClientProcessID**|9|主機電腦指派給用戶端應用程式執行中處理序的識別碼。 如果用戶端提供處理序識別碼，這個資料行就會擴展。|  
 |**ColumnPermissions**|44|指出是否設定資料行權限。 您可以剖析陳述式文字，以判斷資料行所套用的權限。|  
 |**CPU**|18|事件所使用的 CPU 時間量 (以毫秒為單位)。|  
-|**資料庫識別碼**|3|由 USE <資料庫名稱>  陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE <資料庫名稱>  陳述式，則是預設資料庫的識別碼。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 資料行，則 **ServerName** 會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|  
+|**資料庫識別碼**|3|由 USE <資料庫名稱>** 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE <資料庫名稱>** 陳述式，則是預設資料庫的識別碼。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 資料行，則 **ServerName** 會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|  
 |**DatabaseName**|35|正在其中執行使用者陳述式的資料庫名稱。|  
 |**DBUserName**|40|用戶端的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者名稱。|  
 |**有效期間**|13|事件的持續期間 (以百萬分之一秒為單位)。<br /><br /> 伺服器會以百萬分之一秒為單位 (百萬分之一秒，或 10<sup>-6</sup>秒) 報告事件的持續時間，並以毫秒為單位 (千分之一秒，或 10<sup>-3</sup>秒) 報告事件使用的 CPU 時間量。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 圖形化使用者介面預設會以毫秒為單位來顯示 **Duration** 資料行，但是當追蹤儲存到檔案或資料庫資料表時，會以百萬分之一秒為單位來寫入 **Duration** 資料行值。|  
@@ -104,7 +105,7 @@ SQL 追蹤使用追蹤輸出的資料行來描述追蹤執行時傳回的事件�
 |**LoginName**|11|使用者的登入名稱 (SQL Server 安全性登入或 DOMAIN\Username 格式的 Windows 登入認證)。|  
 |**LoginSid**|41|已登入之使用者的安全性識別碼 (SID)。 您可以在 **master** 資料庫的 **sys.server_principals** 檢視中找到此資訊。 每個資料庫登入都有唯一的 ID。|  
 |**MethodName**|47|OLEDB 方法的名稱。|  
-|**模式**|32|各種事件用來描述事件所要求或已接收的狀態之整數。|  
+|**Mode**|32|各種事件用來描述事件所要求或已接收的狀態之整數。|  
 |**NestLevel**|29|代表 @@NESTLEVEL 所傳回資料的整數。|  
 |**NTDomainName**|7|使用者所隸屬的 Microsoft Windows 網域。|  
 |**NTUserName**|6|Windows 使用者名稱。|  
@@ -124,13 +125,13 @@ SQL 追蹤使用追蹤輸出的資料行來描述追蹤執行時傳回的事件�
 |**RowCounts**|48|批次中的資料列數目。|  
 |**ServerName**|26|所追蹤的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。|  
 |**SessionLoginName**|64|引發工作階段的使用者登入名稱。 例如，如果您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 **連接到** ，卻以 **Login2**執行陳述式，則 **SessionLoginName** 會顯示 **Login1**，而 **LoginName** 會顯示 **Login2**。 此資料行會同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|  
-|**Severity**|20|例外事件的嚴重性層級。|  
+|**嚴重性**|20|例外事件的嚴重性層級。|  
 |**SourceDatabaseID**|62|其中存在著物件來源的資料庫之識別碼。|  
 |**SPID**|12|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指派給用戶端相關聯之處理序的伺服器處理序識別碼 (SPID)。|  
 |**SqlHandle**|63|這是一個 64 位元雜湊，以隨選查詢的文字或 SQL 物件的資料庫和物件識別碼為基礎。 這個值可以傳給 **sys.dm_exec_sql_text()** ，以擷取相關聯的 SQL 文字。|  
 |**StartTime**|14|事件啟動的時間 (如果有的話)。|  
 |**State**|30|錯誤狀態碼。|  
-|「成功」 |23|代表事件成功與否。 數值包括：<br /><br /> **1** = 成功<br /><br /> **0** = 失敗<br /><br /> 例如， **1** 表示權限檢查成功， **0** 表示檢查失敗。|  
+|「成功」|23|代表事件成功與否。 數值包括：<br /><br /> **1** = 成功<br /><br /> **0** = 失敗<br /><br /> 例如， **1** 表示權限檢查成功， **0** 表示檢查失敗。|  
 |**TargetLoginName**|42|對於目標為登入的動作，這是目標登入的名稱；例如，要加入新登入。|  
 |**TargetLoginSid**|43|對於目標為登入的動作，這是目標登入的 SID；例如，要加入新登入。|  
 |**TargetUserName**|39|對於目標為資料庫使用者的動作，這是該使用者的名稱；例如，要授與使用者權限。|  
@@ -140,7 +141,7 @@ SQL 追蹤使用追蹤輸出的資料行來描述追蹤執行時傳回的事件�
 |**Writes**|17|伺服器代表事件所執行的實體磁碟寫入作業次數。|  
 |**XactSequence**|50|用來描述目前交易的 Token。|  
   
- \* 依預設，所有事件都會擴展這些資料行。  
+ * 依預設，所有事件都會擴展這些資料行。  
   
  \*\*如需 **ObjectType** 資料行的詳細資訊，請參閱 [ObjectType 追蹤事件資料行](../../relational-databases/event-classes/objecttype-trace-event-column.md)。  
   

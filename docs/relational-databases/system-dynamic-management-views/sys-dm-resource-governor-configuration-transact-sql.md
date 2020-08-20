@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_resource_governor_configuration （Transact-sql） |Microsoft Docs
+description: sys.dm_resource_governor_configuration (Transact-SQL)
+title: sys. dm_resource_governor_configuration (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c89aab6a-0434-4ce6-af8c-f8a1a3284e38
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4b2a8e13035e04b67fb510570914bcb5fddfcac6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: eeae5dc43fcdb0c13c789fa1aa36f6597030a992
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898651"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454870"
 ---
 # <a name="sysdm_resource_governor_configuration-transact-sql"></a>sys.dm_resource_governor_configuration (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,8 +34,8 @@ ms.locfileid: "85898651"
 
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|classifier_function_id|**int**|資源管理員目前使用之分類函數的識別碼。 如果目前沒有使用任何函數，則傳回值 0。 不可為 Null。<br /><br /> **注意：** 此函式是用來分類新的要求，並使用規則將這些要求路由傳送至適當的工作負載群組。 如需詳細資訊，請參閱 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)。|  
-|is_reconfiguration_pending|**bit**|表示是否要使用 ALTER RESOURCE GOVERNOR RECONFIGURE 陳述式對群組或集區進行變更，但尚未套用到記憶體中組態。 傳回的值為下列任一項：<br /><br /> 0 – 不需要重新設定陳述式。<br /><br /> 1 – 需要重新設定陳述式或伺服器重新啟動，才能套用暫止的組態變更。<br /><br /> **注意：** 停用 Resource Governor 時，傳回的值一律為0。<br /><br /> 不可為 Null。|  
+|classifier_function_id|**int**|資源管理員目前使用之分類函數的識別碼。 如果目前沒有使用任何函數，則傳回值 0。 不可為 Null。<br /><br /> **注意：** 此函式是用來分類新的要求，並使用規則將這些要求路由至適當的工作負載群組。 如需詳細資訊，請參閱 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)。|  
+|is_reconfiguration_pending|**bit**|表示是否要使用 ALTER RESOURCE GOVERNOR RECONFIGURE 陳述式對群組或集區進行變更，但尚未套用到記憶體中組態。 傳回的值為下列任一項：<br /><br /> 0 – 不需要重新設定陳述式。<br /><br /> 1 – 需要重新設定陳述式或伺服器重新啟動，才能套用暫止的組態變更。<br /><br /> **注意：** 當 Resource Governor 停用時，傳回的值一律為0。<br /><br /> 不可為 Null。|  
 |max_outstanding_io_per_volume|**int**|**適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。<br /><br /> 每個磁碟區未完成的 I/O 數目上限。|  
   
 ## <a name="remarks"></a>備註  
@@ -65,8 +66,8 @@ go
  需要 VIEW SERVER STATE 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [resource_governor_configuration &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-configuration-transact-sql.md)   
+ [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [sys. resource_governor_configuration &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-configuration-transact-sql.md)   
  [資源管理員](../../relational-databases/resource-governor/resource-governor.md)  
   
   

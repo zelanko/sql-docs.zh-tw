@@ -1,5 +1,6 @@
 ---
-title: Data FILESTREAM，ISequentialStream ICommandText
+description: 將資料傳送至 SQL Server Native Client ISequentialStream 系結至 ICommandText 的 FILESTREAM
+title: Data FILESTREAM、ISequentialStream ICommandText
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,19 +12,19 @@ ms.assetid: 2225f6ab-a6cf-4c95-8291-2d2a13be7952
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efdc485c139e6b35a025b87b39c2bfd7c21caf9e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ce919a10aaca50b8b86368b54ad0f584a3264957
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243659"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455764"
 ---
-# <a name="send-data-to-filestream-in-sql-server-native-client---isequentialstream-bound-to-icommandtext"></a>在 ISequentialStream 系結至 ICommandText 的 SQL Server Native Client 中，將資料傳送至 FILESTREAM
+# <a name="send-data-to-filestream-in-sql-server-native-client---isequentialstream-bound-to-icommandtext"></a>將資料傳送至 SQL Server Native Client ISequentialStream 系結至 ICommandText 的 FILESTREAM
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   此範例會使用繫結至 ICommandText 參數的 ISequentialStream 介面，將介於 4MB 與 4GB 之間的資料傳送到 Filestream 資料行。  
   
- 如需有關 filestream 功能的詳細資訊，請參閱[&#40;OLE DB&#41;的 Filestream 支援](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)。  
+ 如需 filestream 功能的詳細資訊，請參閱 [&#40;OLE DB&#41;的 Filestream 支援 ](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)。  
   
 ## <a name="example"></a>範例  
  編譯並執行此範例之前，請先啟用 FILESTREAM 支援 ([啟用及設定 FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md))。  

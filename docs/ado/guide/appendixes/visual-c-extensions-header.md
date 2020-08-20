@@ -1,5 +1,6 @@
 ---
-title: Visual C++ 延伸模組標頭 |Microsoft Docs
+description: Visual C++ Extensions 標題
+title: Visual C++ Extensions 標頭 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c5b4e7a3bc960882830fa447f58f74e6728a559
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 25a435b2fd4739710f208e50c1265db441d54f7e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761496"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453920"
 ---
 # <a name="visual-c-extensions-header"></a>Visual C++ Extensions 標題
-下列標頭**icrsint**詳述的介面，可讓用戶端將**記錄集**的欄位，抓取至衍生自**CADORecordBinding**的類別中所定義的變數。 您必須為您想要存取的每個欄位指定 ADO 系結宏。  
+下列標頭 **icrsint**會詳細說明允許用戶端將欄位從 **記錄集** 取出至衍生自 **CADORecordBinding**之類別中所定義變數的介面。 您必須針對想要存取的每個欄位指定 ADO 系結宏。  
   
 ```cpp
 #ifndef _ICRSINT_H_  
@@ -208,5 +209,5 @@ public:
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Visual C++ 延伸模組範例](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
+ [Visual C++ 擴充功能範例](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
  [使用 Visual C++ Extensions](../../../ado/guide/appendixes/using-visual-c-extensions.md)

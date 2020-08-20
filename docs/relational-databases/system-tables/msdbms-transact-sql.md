@@ -1,5 +1,6 @@
 ---
-title: MSdbms （Transact-sql） |Microsoft Docs
+description: MSdbms (Transact-SQL)
+title: MSdbms (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,23 +18,23 @@ helpviewer_keywords:
 ms.assetid: 2be631bf-de09-4e7a-9ccb-d6c37b81c237
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e21108f2fccbc614fc71ff6ae132ae14cd457ea7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c5d6eac8b328fa085b3129b705d73f3456df5c03
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889999"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454659"
 ---
 # <a name="msdbms-transact-sql"></a>MSdbms (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSdbms**資料表包含異質資料庫複寫支援的所有資料庫管理系統（DBMS）版本的主要清單。 此資料表會儲存在**msdb**資料庫中。  
+  **MSdbms**資料表包含資料庫管理系統所有版本的主要清單 (DBMS) 支援進行異質資料庫複寫。 此資料表儲存在 **msdb** 資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**dbms_id**|**int**|識別每個唯一的 DBMS 和版本。|  
-|**而言**|**sysname**|DBMS 名稱。<br /><br /> MSSQLSERVER<br /><br /> DB2<br /><br /> ORACLE<br /><br /> SYBASE|  
-|**version**|**Varchar （10）**|DBMS 版本。|  
+|**Dbms**|**sysname**|DBMS 名稱。<br /><br /> MSSQLSERVER<br /><br /> DB2<br /><br /> ORACLE<br /><br /> SYBASE|  
+|**version**|**Varchar (10) **|DBMS 版本。|  
   
 ## <a name="see-also"></a>另請參閱  
  [異質資料庫複寫](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

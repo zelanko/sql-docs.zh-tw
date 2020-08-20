@@ -1,4 +1,5 @@
 ---
+description: Oracle 發行者
 title: Oracle 發行者 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 019b7c49-dcca-445d-8969-5982a8ccbc1a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 123fe0cfb6233eb640befb6521720b8cdeebf6e6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fb2b2f519ed8b548c6c1f149a72f28528d9fd26f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85721050"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455545"
 ---
 # <a name="oracle-publisher"></a>Oracle 發行者
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -28,12 +29,12 @@ ms.locfileid: "85721050"
 > [!IMPORTANT]  
 >  如果另一位管理員將 Oracle 資料庫設定為發行者，則在按 **[下一步]** 之後，將提示您輸入用來連接 Oracle 資料庫進行複寫之登入的密碼。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會在您的登入和 Oracle 資料庫的連結伺服器連接之間建立對應。 對於後續的 Oracle 資料庫連接，您就不必再輸入密碼。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **Oracle 發行者**  
- 從清單中選取 Oracle 發行者。 此清單包含先前已設定執行此精靈之伺服器為其散發者的 Oracle 發行者。 如果清單是空的，或您要使用的 Oracle 發行者不在清單中，請按一下 **[加入 Oracle 發行者]** 。  
+ 從清單中選取 Oracle 發行者。 此清單包含先前已設定執行此精靈之伺服器為其散發者的 Oracle 發行者。 如果清單是空的，或您要使用的 Oracle 發行者不在清單中，請按一下 **[加入 Oracle 發行者]**。  
   
  **[加入 Oracle 發行者]**  
- 按一下以啟動 **[散發者屬性]** 對話方塊。 在此對話方塊中，按一下 **[加入]** ，然後按一下 **[加入 Oracle 發行者]** 。 在 **[連接到伺服器]** 對話方塊中，指定 Oracle 伺服器名稱，以及複寫管理的使用者結構描述之登入和密碼。 如需詳細資訊，請參閱[連線到伺服器 &#40;Oracle&#41;，登入](../../relational-databases/replication/connect-to-server-oracle-login.md)。  
+ 按一下以啟動 **[散發者屬性]** 對話方塊。 在此對話方塊中，按一下 **[加入]**，然後按一下 **[加入 Oracle 發行者]**。 在 **[連接到伺服器]** 對話方塊中，指定 Oracle 伺服器名稱，以及複寫管理的使用者結構描述之登入和密碼。 如需詳細資訊，請參閱[連線到伺服器 &#40;Oracle&#41;，登入](../../relational-databases/replication/connect-to-server-oracle-login.md)。  
   
 > [!NOTE]  
 >  如果執行精靈的伺服器尚未設定為散發者，則會提示您立即設定。  

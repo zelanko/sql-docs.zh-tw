@@ -1,4 +1,5 @@
 ---
+description: CircularString
 title: CircularString | Microsoft 文件
 ms.custom: ''
 ms.date: 07/16/2020
@@ -11,12 +12,12 @@ ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c322662347302504d789599aab5887f2ee7ae47e
-ms.sourcegitcommit: 56f6892b3795da308d226d4b3c5c859ead2e830a
+ms.openlocfilehash: 6d7aada1fca725dde6247e621a1ed6ca190c99f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86438200"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455426"
 ---
 # <a name="circularstring"></a>CircularString
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

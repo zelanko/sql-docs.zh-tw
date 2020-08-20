@@ -1,5 +1,6 @@
 ---
-title: Microsoft OLE DB 持續性提供者（ADO 服務提供者） |Microsoft Docs
+description: 'Microsoft OLE DB 持續性提供者 (ADO 服務提供者) '
+title: Microsoft OLE DB 持續性提供者 (ADO 服務提供者) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,41 +15,41 @@ helpviewer_keywords:
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc8c8f099e703433f57e9d8ff463e229213503be
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9a1211a84bf42afdb406c085e57f5bb36f48a168
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758464"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454110"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Microsoft OLE DB 持續性提供者總覽
-Microsoft OLE DB 持續性提供者可讓您將[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件儲存至檔案中，並于稍後從檔案還原該**記錄集**物件。 會保留架構資訊、資料和暫止的變更。
+Microsoft OLE DB 持續性提供者可讓您將 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 物件儲存至檔案中，並在稍後從檔案還原該 **記錄集** 物件。 系統會保留架構資訊、資料和暫止的變更。
 
- 您可以將**記錄集**儲存為專屬的先進資料表語法（ADTG）格式或 open 可延伸標記語言 (XML) （XML）格式。
+ 您可以將 **記錄集** 儲存在專屬的 Advanced Table 資料表中， (ADTG) 格式或 open 可延伸標記語言 (XML)  (XML) 格式。
 
 ## <a name="provider-keyword"></a>Provider 關鍵字
- 若要叫用此提供者，請在連接字串中指定下列關鍵字和值。
+ 若要叫用這個提供者，請在連接字串中指定下列關鍵字和值。
 
 ```vb
 "Provider=MSPersist"
 ```
 
 ## <a name="errors"></a>Errors
- 在您的應用程式中，可以偵測到此提供者所發出的下列錯誤。
+ 您可以在應用程式中偵測到此提供者所發出的下列錯誤。
 
 |持續性|描述|
 |--------------|-----------------|
-|E_BADSTREAM|開啟的檔案沒有有效的格式（亦即，格式不是 ADTG 或 XML）。|
-|E_CANTPERSISTROWSET|儲存的**記錄集**物件具有防止儲存的特性。|
+|E_BADSTREAM|開啟的檔案沒有有效的格式 (也就是說，格式不是 ADTG 或 XML) 。|
+|E_CANTPERSISTROWSET|儲存的 **記錄集** 物件具有阻礙儲存的特性。|
 
 ## <a name="remarks"></a>備註
  Microsoft OLE DB 持續性提供者不會公開任何動態屬性。
 
- 目前，只有參數化的階層式**記錄集**物件無法儲存。
+ 目前，只能儲存參數化階層式 **記錄集** 物件。
 
- 如需有關持續儲存**記錄集**物件的詳細資訊，請參閱[記錄集持續](../../../ado/guide/data/more-about-recordset-persistence.md)性。
+ 如需持續儲存 **記錄集** 物件的詳細資訊，請參閱 [記錄集持續](../../../ado/guide/data/more-about-recordset-persistence.md)性。
 
- 當資料流程用來開啟**記錄集時，** 應該不會指定**Open**方法的*Source*參數以外的任何參數。
+ 當資料流程用來開啟**記錄集時，** 不應該指定**Open**方法的*Source*參數以外的任何參數。
 
 ## <a name="see-also"></a>另請參閱
-[Microsoft OLE DB 持續性提供者（ADO 服務提供者）](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)
+[Microsoft OLE DB 持續性提供者 (ADO 服務提供者) ](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)

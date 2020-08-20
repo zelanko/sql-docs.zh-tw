@@ -1,5 +1,6 @@
 ---
-title: sys.databases masked_columns （Transact-sql） |Microsoft Docs
+description: 'sys. masked_columns (Transact-sql) '
+title: sys. masked_columns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/25/2016
 ms.prod: sql
@@ -18,33 +19,34 @@ ms.assetid: 671577e4-d757-4b8d-9aa9-0fc8d51ea9ca
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bdd6815ab43d8bb36877038485774a8d61714e36
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 28946de442b72309f3284338e6f426c655a4d0f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004818"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455246"
 ---
-# <a name="sysmasked_columns-transact-sql"></a>sys.databases masked_columns （Transact-sql）
+# <a name="sysmasked_columns-transact-sql"></a>sys. masked_columns (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-  使用 [ **masked_columns** ] 視圖來查詢已套用動態資料遮罩函數的資料表資料行。 此檢視繼承自 **sys.columns** 檢視。 它會傳回 **sys.columns** 檢視中的所有資料行，加上 **is_masked** 和 **masking_function** 資料行，指出資料行是否已遮罩，若已遮罩，則指出定義了哪個遮罩函數。 此檢視只會顯示已套用遮罩函數的資料行。  
+  您可以使用 **sys. masked_columns** view 來查詢已套用動態資料遮罩函數的資料表資料行。 此檢視繼承自 **sys.columns** 檢視。 它會傳回 **sys.columns** 檢視中的所有資料行，加上 **is_masked** 和 **masking_function** 資料行，指出資料行是否已遮罩，若已遮罩，則指出定義了哪個遮罩函數。 此檢視只會顯示已套用遮罩函數的資料行。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|這個資料行所屬的物件識別碼。|  
 |NAME|**sysname**|資料行的名稱。 在物件中，這是唯一的。|  
 |column_id|**int**|資料行的識別碼。 在物件中，這是唯一的。<br /><br /> 資料行識別碼不一定會循序排列。|  
-|**masked_columns**會傳回繼承自**sys.databases**的更多資料行。|各種|如需更多資料行定義，請參閱[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) 。|  
-|is_masked|**bit**|指出資料行是否已遮罩。 1表示已遮罩。|  
+|**sys. masked_columns** 會傳回許多繼承自 **sys.** 資料行的資料行。|各種|如需更多資料行定義，請參閱 [sys. columns &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) 。|  
+|is_masked|**bit**|指出資料行是否為遮罩。 1表示遮罩。|  
 |masking_function|**nvarchar(4000)**|資料行的遮罩函數。|  
   
 ## <a name="remarks"></a>備註  
   
 ## <a name="permissions"></a>權限  
- 此視圖會傳回使用者在資料表上具有某種許可權，或使用者具有 VIEW ANY DEFINITION 許可權之資料表的相關資訊。  
+ 此視圖會傳回資料表的相關資訊，其中使用者在資料表上具有某種許可權，或使用者具有 VIEW ANY DEFINITION 許可權。  
   
 ## <a name="example"></a>範例  
- 下列查詢會將**masked_columns sys.databases**聯結到**sys.databases** ，以傳回所有遮罩資料行的相關資訊。  
+ 下列查詢會將 **sys. masked_columns** 聯結至 **sys. 資料表** ，以傳回所有遮罩資料行的相關資訊。  
   
 ```  
 SELECT tbl.name as table_name, c.name AS column_name, c.is_masked, c.masking_function  

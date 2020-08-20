@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_exec_compute_nodes （Transact-sql） |Microsoft Docs
+description: 'sys. dm_exec_compute_nodes (Transact-sql) '
+title: sys. dm_exec_compute_nodes (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,30 +23,30 @@ ms.assetid: 0de4b7a4-401f-4e2d-9ab0-c54587e05154
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8b7148904df1a9c59bb6b12fd521945b70e2f4d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4e13b8a3a6514548b05b3663a4a785128e23c80d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830653"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454900"
 ---
-# <a name="sysdm_exec_compute_nodes-transact-sql"></a>sys.databases dm_exec_compute_nodes （Transact-sql）
+# <a name="sysdm_exec_compute_nodes-transact-sql"></a>sys. dm_exec_compute_nodes (Transact-sql) 
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   保存與 PolyBase 資料管理搭配使用之節點的相關資訊。 它會針對每個節點列出一個資料列。  
   
- 使用此 DMV 查看相應放大叢集中的所有節點清單及其角色、名稱和 IP 位址。  
+ 使用此 DMV 來查看相應放大叢集中的所有節點清單，及其角色、名稱和 IP 位址。  
   
-|資料行名稱|資料類型|說明|範圍|  
+|資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
-|compute_node_id|**int**|與節點相關聯的唯一數值識別碼。 此視圖的索引鍵。|跨向外延展叢集（不論類型為何）都是唯一的。|  
-|類型|**nvarchar(32)**|節點的類型。|「計算」、「HEAD」|  
-|name|**nvarchar(32)**|節點的邏輯名稱。|適當長度的任何字串。|  
+|compute_node_id|**int**|與節點相關聯的唯一數值識別碼。 此視圖的索引鍵。|不論類型為何，都是在相應放大叢集中唯一的。|  
+|type|**nvarchar(32)**|節點的類型。|「計算」、「標頭」|  
+|NAME|**nvarchar(32)**|節點的邏輯名稱。|適當長度的任何字串。|  
 |address|**nvarchar(32)**|此節點的 IP 位址。|IP 位址範圍|  
   
 ## <a name="see-also"></a>另請參閱  
  [使用動態管理檢視進行 PolyBase 疑難排解](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
- [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [資料庫相關的動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

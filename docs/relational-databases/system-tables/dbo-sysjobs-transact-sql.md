@@ -1,5 +1,6 @@
 ---
-title: dbo.sys作業（Transact-sql） |Microsoft Docs
+description: dbo.sysjobs (Transact-SQL)
+title: dbo.sys作業 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,36 +20,36 @@ helpviewer_keywords:
 ms.assetid: e244a6a5-54c2-47a6-8039-dd1852b0ae59
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 00bab120cd8d0e931f0aba77ce7aee694126339c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 71fc80a0c847957f52b85344139c75a397b8e6c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890489"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454730"
 ---
 # <a name="dbosysjobs-transact-sql"></a>dbo.sysjobs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  儲存 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 所要執行之各項排程作業的資訊。 此資料表會儲存在**msdb**資料庫中。  
+  儲存 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 所要執行之各項排程作業的資訊。 此資料表儲存在 **msdb** 資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|作業的唯一識別碼。|  
 |**originating_server_id**|**int**|作業的來源伺服器識別碼。|  
 |**name**|**sysname**|作業的名稱。|  
-|**後**|**tinyint**|指出是否啟用作業，以便執行。|  
+|**啟用**|**tinyint**|指出是否啟用作業，以便執行。|  
 |**description**|**nvarchar(512)**|作業的描述。|  
 |**start_step_id**|**int**|應該作為執行起點的作業步驟識別碼。|  
 |**category_id**|**int**|作業類別目錄的識別碼。|  
-|**owner_sid**|**Varbinary （85）**|作業擁有者的安全性識別碼 (SID)。|  
-|**notify_level_eventlog**|**int**|表示在哪些情況下，應該將通知事件記錄到 Microsoft Windows 應用程式記錄檔的**位元遮罩**：<br /><br /> **0** = 永不<br /><br /> **1** = 當作業成功時<br /><br /> **2** = 當作業失敗時<br /><br /> **3** = 每次作業完成時（不論作業結果為何）|  
-|**notify_level_email**|**int**|這是一個位元組遮罩，指出在哪些情況之下，應該在作業完成時傳送通知電子郵件：<br /><br /> **0** = 永不<br /><br /> **1** = 當作業成功時<br /><br /> **2** = 當作業失敗時<br /><br /> **3** = 每次作業完成時（不論作業結果為何）|  
-|**notify_level_netsend**|**int**|這是一個位元組遮罩，指出在哪些情況之下，應該在作業完成時傳送網路訊息：<br /><br /> **0** = 永不<br /><br /> **1** = 當作業成功時<br /><br /> **2** = 當作業失敗時<br /><br /> **3** = 每次作業完成時（不論作業結果為何）|  
-|**notify_level_page**|**int**|這是一個位元組遮罩，指出在哪些情況之下，應該在作業完成時傳送頁面：<br /><br /> **0** = 永不<br /><br /> **1** = 當作業成功時<br /><br /> **2** = 當作業失敗時<br /><br /> **3** = 每次作業完成時（不論作業結果為何）|  
+|**owner_sid**|**Varbinary (85) **|作業擁有者的安全性識別碼 (SID)。|  
+|**notify_level_eventlog**|**int**|表示在哪些情況下，應該將通知事件記錄到 Microsoft Windows 應用程式記錄檔的**位元遮罩**：<br /><br /> **0** = 永不<br /><br /> **1** = 當作業成功時<br /><br /> **2** = 當作業失敗時<br /><br /> **3** = 每當作業完成時 (，不論工作結果) |  
+|**notify_level_email**|**int**|這是一個位元組遮罩，指出在哪些情況之下，應該在作業完成時傳送通知電子郵件：<br /><br /> **0** = 永不<br /><br /> **1** = 當作業成功時<br /><br /> **2** = 當作業失敗時<br /><br /> **3** = 每當作業完成時 (，不論工作結果) |  
+|**notify_level_netsend**|**int**|這是一個位元組遮罩，指出在哪些情況之下，應該在作業完成時傳送網路訊息：<br /><br /> **0** = 永不<br /><br /> **1** = 當作業成功時<br /><br /> **2** = 當作業失敗時<br /><br /> **3** = 每當作業完成時 (，不論工作結果) |  
+|**notify_level_page**|**int**|這是一個位元組遮罩，指出在哪些情況之下，應該在作業完成時傳送頁面：<br /><br /> **0** = 永不<br /><br /> **1** = 當作業成功時<br /><br /> **2** = 當作業失敗時<br /><br /> **3** = 每當作業完成時 (，不論工作結果) |  
 |**notify_email_operator_id**|**int**|要通知的操作員電子郵件名稱。|  
 |**notify_netsend_operator_id**|**int**|傳送網路訊息時所用的電腦或使用者識別碼。|  
 |**notify_page_operator_id**|**int**|傳送呼叫時所用的電腦或使用者識別碼。|  
-|**delete_level**|**int**|**位元遮罩**，指出在哪些情況下，應該在作業完成時刪除作業：<br /><br /> **0** = 永不<br /><br /> **1** = 當作業成功時<br /><br /> **2** = 當作業失敗時<br /><br /> **3** = 每次作業完成時（不論作業結果為何）|  
+|**delete_level**|**int**|此為**位元遮罩**，指出在哪些情況下，應該在作業完成時刪除作業：<br /><br /> **0** = 永不<br /><br /> **1** = 當作業成功時<br /><br /> **2** = 當作業失敗時<br /><br /> **3** = 每當作業完成時 (，不論工作結果) |  
 |**date_created**|**datetime**|作業的建立日期。|  
 |**date_modified**|**datetime**|上次修改作業的日期。|  
 |**version_number**|**int**|作業的版本。|  

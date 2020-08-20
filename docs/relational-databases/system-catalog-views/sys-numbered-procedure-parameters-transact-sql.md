@@ -1,5 +1,6 @@
 ---
-title: sys.databases numbered_procedure_parameters （Transact-sql） |Microsoft Docs
+description: sys.numbered_procedure_parameters (Transact-SQL)
+title: sys. numbered_procedure_parameters (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: a441d46d-1f30-41c2-8d94-e9442f59786e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d3216f6719371b4e62e25a06a6341ad030620d20
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2edff92d0cac8a45bfc895e77f5d113701b903f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883803"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455205"
 ---
 # <a name="sysnumbered_procedure_parameters-transact-sql"></a>sys.numbered_procedure_parameters (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  針對編號程序的每個參數，各包含一個資料列。 當您建立編號的預存程序時，基本程序的編號為 1。 後續所有程序則為 2 號、3 號等，依此類推。 **numbered_procedure_parameters**包含所有後續程式的參數定義，編號為2（含）以上。 這份檢視不會顯示基本預存程序 (編號 = 1) 的參數。 基本預存程序類似於未編號的預存程序。 因此，其參數會以[sys.databases （transact-sql）](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)表示。  
+  針對編號程序的每個參數，各包含一個資料列。 當您建立編號的預存程序時，基本程序的編號為 1。 後續所有程序則為 2 號、3 號等，依此類推。 **sys. numbered_procedure_parameters** 包含所有後續程式（編號為2以上）的參數定義。 這份檢視不會顯示基本預存程序 (編號 = 1) 的參數。 基本預存程序類似於未編號的預存程序。 因此，其參數會以 [sys. 參數表示 (transact-sql) ](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)。  
   
 > [!IMPORTANT]  
 >  編號程序已被取代。 不再使用編號程序。 當編譯使用這份目錄檢視的查詢時，會引發 DEPRECATION_ANNOUNCEMENT 事件。  
@@ -41,8 +42,8 @@ ms.locfileid: "85883803"
 |-----------------|---------------|-----------------|  
 |object_id|**int**|這個參數所屬物件的識別碼。|  
 |**procedure_number**|**smallint**|這個程序在物件內的編號，大於或等於 2。|  
-|**name**|**sysname**|參數的名稱。 在**procedure_number**內是唯一的。|  
-|**parameter_id**|**int**|參數的識別碼。 在**procedure_number**內是唯一的。|  
+|**name**|**sysname**|參數的名稱。 在 **procedure_number**中是唯一的。|  
+|**parameter_id**|**int**|參數的識別碼。 在 **procedure_number**中是唯一的。|  
 |**system_type_id**|**tinyint**|參數系統類型的識別碼。|  
 |**user_type_id**|**int**|參數的類型識別碼 (如使用者所定義)。|  
 |**max_length**|**smallint**|參數的最大長度 (以位元組為單位)。<br /><br /> -1 = 資料行的資料類型是 varchar(max)、nvarchar(max) 或 varbinary(max)。|  
@@ -58,7 +59,7 @@ ms.locfileid: "85883803"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的物件目錄檢視](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [物件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

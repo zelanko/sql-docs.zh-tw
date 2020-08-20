@@ -1,4 +1,5 @@
 ---
+description: STPolyFromWKB (geometry 資料類型)
 title: STPolyFromWKB (geometry 資料類型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8e8f0c41-0c62-4919-9d4c-d37c93fdd31c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: b46ac4b887c28cd5ad7600ff19cb0a694da79550
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 0e15bc16518c9b5dbc53369a4919f3e289a7d261
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555615"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454207"
 ---
 # <a name="stpolyfromwkb-geometry-data-type"></a>STPolyFromWKB (geometry 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

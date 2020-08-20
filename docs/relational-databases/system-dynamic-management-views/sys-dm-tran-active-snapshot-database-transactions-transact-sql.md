@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_tran_active_snapshot_database_transactions （Transact-sql） |Microsoft Docs
+description: sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
+title: sys. dm_tran_active_snapshot_database_transactions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,11 +21,12 @@ ms.assetid: 55b83f9c-da10-4e65-9846-f4ef3c0c0f36
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 79f609de2cc683656eb7c6b1b2db27962246bbf2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 67fc1004da354aca3eebb446300d284c85b944e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009371"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454835"
 ---
 # <a name="sysdm_tran_active_snapshot_database_transactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,9 +48,9 @@ ms.locfileid: "86009371"
  此動態管理檢視不包含任何系統交易。  
   
 > [!NOTE]  
->  若要從或呼叫此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用**dm_pdw_nodes_tran_active_snapshot_database_transactions**的名稱。  
+>  若要從或呼叫這個 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用名稱 **sys. dm_pdw_nodes_tran_active_snapshot_database_transactions**。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -68,15 +70,15 @@ sys.dm_tran_active_snapshot_database_transactions
 |**max_version_chain_traversed**|**int**|為了尋找交易一致版本而往返之版本鏈結的最大長度。|  
 |**average_version_chain_traversed**|**real**|在往返的版本鏈結中資料列版本的平均數目。|  
 |**elapsed_time_seconds**|**bigint**|自從交易取得其交易序號以來的經歷時間。|  
-|**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
+|**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在之節點的識別碼。|  
   
 ## <a name="permissions"></a>權限
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 許可權。   
-在高階 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 層級上，需要 `VIEW DATABASE STATE` 資料庫的許可權。 在 [ [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
+在進階層中 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ，需要 `VIEW DATABASE STATE` 資料庫中的許可權。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準和基本層中，需要  **伺服器管理員** 或 **Azure Active Directory 系統管理員** 帳戶。   
 
 ## <a name="remarks"></a>備註  
- **dm_tran_active_snapshot_database_transactions**會報告已指派交易序號（XSN）的交易。 交易會在第一次存取版本存放區時指派 XSN。 在已啟用快照集隔離或使用資料列版本設定之讀取認可隔離的資料庫中，這些範例顯示將 XSN 指派給交易的時間：  
+ **sys. dm_tran_active_snapshot_database_transactions** 報告 (XSN) 指派的交易序號的交易。 交易會在第一次存取版本存放區時指派 XSN。 在已啟用快照集隔離或使用資料列版本設定之讀取認可隔離的資料庫中，這些範例顯示將 XSN 指派給交易的時間：  
   
 -   如果交易在可序列化的隔離等級下執行，將會在交易第一次執行可以建立資料列版本的陳述式 (例如 UPDATE 作業) 時指派 XSN。  
   
@@ -142,9 +144,9 @@ elapsed_time_seconds
 333  
 ```  
   
- 下列資訊會評估來自**sys. dm_tran_active_snapshot_database_transactions**的結果：  
+ 下列資訊會評估 **sys. dm_tran_active_snapshot_database_transactions**的結果：  
   
--   XSN-57：因為此交易不是在快照隔離下執行，所以 `is_snapshot` 值和 `first_snapshot_sequence_num` 為 `0` 。 `transaction_sequence_num` 顯示此筆交易已經指派了交易序號，因為 ALLOW_SNAPSHOT_ISOLATION 或 READ_COMMITTED_SNAPSHOT 其中一個或兩個資料庫選項為 ON。  
+-   XSN-57：因為此交易不是在快照集隔離下執行，所以 `is_snapshot` 值和 `first_snapshot_sequence_num` 為 `0` 。 `transaction_sequence_num` 顯示此筆交易已經指派了交易序號，因為 ALLOW_SNAPSHOT_ISOLATION 或 READ_COMMITTED_SNAPSHOT 其中一個或兩個資料庫選項為 ON。  
   
 -   XSN-58：這筆交易不是在快照集隔離下執行，而且 XSN-57 的相同資訊也適用。  
   
@@ -153,8 +155,8 @@ elapsed_time_seconds
 -   XSN-60：這是在快照集隔離下執行的第二筆交易。 其輸出顯示的資訊與 XSN-59 相同。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;設定交易隔離等級](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
- [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [設定交易隔離等級 &#40;Transact-sql&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
+ [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [交易相關的動態管理檢視和函數 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

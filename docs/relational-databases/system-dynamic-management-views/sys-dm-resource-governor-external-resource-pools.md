@@ -1,5 +1,6 @@
 ---
-title: dm_resource_governor_external_resource_pools (Transact-sql) |Microsoft Docs
+description: 'sys. dm_resource_governor_external_resource_pools (Transact-sql) '
+title: sys. dm_resource_governor_external_resource_pools (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2020
 ms.prod: sql
@@ -20,14 +21,14 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bfc975662e2efef22957bb78b03125d67d2188d5
-ms.sourcegitcommit: cd1a5d152d05aeee3252ce313e63d396734f85bd
+ms.openlocfilehash: 32df69f207de0e1c604c10d58f4d28b4a3a34aa5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88239206"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454848"
 ---
-# <a name="sysdm_resource_governor_external_resource_pools-transact-sql"></a>dm_resource_governor_external_resource_pools (Transact-sql) 
+# <a name="sysdm_resource_governor_external_resource_pools-transact-sql"></a>sys. dm_resource_governor_external_resource_pools (Transact-sql) 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 傳回目前外部資源集區狀態的相關資訊、資源集區的目前設定，以及資源集區統計資料。 
@@ -43,7 +44,7 @@ ms.locfileid: "88239206"
 | max_processes|**int**|並行外部進程的最大數目。 預設值為 0 時，不會指定任何限制。 不可為 Null。|
 | max_memory_percent|**int**|在此資源集區中，可供要求所用之伺服器記憶體總量百分比的目前組態。 不可為 Null。 |
 | statistics_start_time|**datetime**|重設此集區統計資料時的時間。 不可為 Null。 
-| peak_memory_kb|**bigint**|資源集區使用的記憶體數量上限（以 kb 為單位）。 不可為 Null。 |
+| peak_memory_kb|**bigint**|資源集區所使用的記憶體數量上限（以 kb 為單位）。 不可為 Null。 |
 | write_io_count|**int**|重設 Resource Governor 統計資料之後發出的寫入 IO 總數。 不可為 Null。 |
 | read_io_count|**int**|重設 Resource Governor 統計資料之後發出的讀取 IO 總數。 不可為 Null。 |
 | total_cpu_kernel_ms|**bigint**|重設 Resource Governor 統計資料之後的累計 CPU 使用者核心時間 (以毫秒為單位)。 不可為 Null。 |

@@ -1,5 +1,6 @@
 ---
-title: sys.databases server_file_audits （Transact-sql） |Microsoft Docs
+description: sys.server_file_audits (Transact-SQL)
+title: sys. server_file_audits (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -19,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 34467a44025e345af271b70231db2653bcb29e85
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 614f1761a9b2a6e5e40fe917af2b2501389e9fc2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892356"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455221"
 ---
 # <a name="sysserver_file_audits-transact-sql"></a>sys.server_file_audits (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  包含有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 伺服器實例上 audit 中 file audit 類型的擴充資訊。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
+  包含有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 伺服器實例上 audit 中檔案審核類型的延伸資訊。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -45,7 +46,7 @@ ms.locfileid: "85892356"
 |on_failure_desc|**nvarchar(60)**|寫入動作項目失敗：<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL OPERATION|  
 |is_state_enabled|**tinyint**|0 = 停用<br /><br /> 1 = 啟用|  
 |queue_delay|**int**|寫入磁碟前等候的最大時間建議值 (以毫秒計)。 如果為 0，則表示稽核將會保證寫入，然後事件才可以繼續。|  
-|predicate|**Nvarchar （8000）**|套用至事件的述詞運算式。|  
+|predicate|**Nvarchar (8000) **|套用至事件的述詞運算式。|  
 |max_file_size|**bigint**|稽核的大小上限 (以 MB 為單位)：<br /><br /> 0 = 選定稽核的類型無限制/不適用。|  
 |max_rollover_files|**int**|要搭配換用選項使用的檔案數量上限。|  
 |max_files|**int**|不要搭配換用選項使用的檔案數量上限。|  
@@ -54,7 +55,7 @@ ms.locfileid: "85892356"
 |log_file_name|**nvarchar(260)**|CREATE AUDIT DDL 中提供之記錄檔的基底名稱。 會有一個累加數字加入 base_log_name 檔案當做後置詞，以建立記錄檔名稱。|  
   
 ## <a name="permissions"></a>權限  
- 具有**ALTER ANY SERVER AUDIT**或**VIEW any DEFINITION**許可權的主體可存取此目錄檢視。 此外，主體不得被拒絕**VIEW ANY DEFINITION**許可權。  
+ 具有 **ALTER ANY SERVER AUDIT** 或 **VIEW any DEFINITION** 許可權的主體可存取此目錄檢視。 此外，主體也不得被拒絕 **VIEW ANY DEFINITION** 許可權。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
@@ -65,19 +66,19 @@ ms.locfileid: "85892356"
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
  [ALTER SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
  [DROP SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
- [CREATE DATABASE AUDIT 規格 &#40;Transact-sql&#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
+ [CREATE DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
  [ALTER DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
  [DROP DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
  [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)   
  [sys.server_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
- [sys.databases server_file_audits （Transact-sql）](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
+ [sys. server_file_audits (Transact-sql) ](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
  [sys.server_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
  [sys.database_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
  [sys.database_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
  [sys.dm_server_audit_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
  [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
- [dm_audit_class_type_map &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
+ [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
  [建立伺服器稽核與伺服器稽核規格](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
   

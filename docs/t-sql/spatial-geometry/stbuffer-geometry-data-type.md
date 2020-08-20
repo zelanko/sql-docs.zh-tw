@@ -1,4 +1,5 @@
 ---
+description: STBuffer (geometry 資料類型)
 title: STBuffer (geometry 資料類型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: b461b711ba7e91e4c29a362523b3ebb4a1228004
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: c916977259dc82638117b800e5fc6c2d306edf04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552802"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454239"
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (geometry 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

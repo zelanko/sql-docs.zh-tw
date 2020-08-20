@@ -1,5 +1,6 @@
 ---
-title: 使用 ISequentialStream 的 FILESTREAM （OLE DB）
+description: '使用 SQL Server Native Client (OLE DB 中的 ISequentialStream，從 FILESTREAM 資料行取出資料) '
+title: 使用 ISequentialStream (OLE DB) 的 FILESTREAM
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -11,19 +12,19 @@ ms.assetid: 814cb31e-6fd1-4eb7-afe3-25b520638815
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 736bf5aa1c40e824731eb630b6c64d74d72ad9e5
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 7a2eb8976fe40c1f24861d511c8afc636566dcda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247829"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455717"
 ---
-# <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-in-sql-server-native-client-ole-db"></a>使用 SQL Server Native Client （OLE DB）中的 ISequentialStream，從 FILESTREAM 資料行取出資料
+# <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-in-sql-server-native-client-ole-db"></a>使用 SQL Server Native Client (OLE DB 中的 ISequentialStream，從 FILESTREAM 資料行取出資料) 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   此範例會範例如何在 ICommandText 介面中使用 ISequentialStream 介面來擷取 Filestream 資料行中的單一記錄。  
   
- 如需有關 filestream 功能的詳細資訊，請參閱[&#40;OLE DB&#41;的 Filestream 支援](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)。  
+ 如需 filestream 功能的詳細資訊，請參閱 [&#40;OLE DB&#41;的 Filestream 支援 ](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)。  
   
 ## <a name="example"></a>範例  
  請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  

@@ -1,4 +1,5 @@
 ---
+description: 建立、修改及卸除空間索引
 title: 建立、修改及卸除空間索引 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f1bd6350c31b29855915de1be8288ec1fcbe2a56
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4aeb545a92ef4eca7bdb7542b951021336de9800
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751115"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455423"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>建立、修改及卸除空間索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

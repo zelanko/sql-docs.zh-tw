@@ -1,5 +1,6 @@
 ---
-title: BLOB 資料至 SQL、IROWSETFASTLOAD、ISEQUENTIALSTREAM
+description: '使用 IROWSETFASTLOAD 和 ISEQUENTIALSTREAM 將 BLOB 資料傳送到 SQL SERVER， (Native Client OLE DB) '
+title: 將 BLOB 資料寫入 SQL、IROWSETFASTLOAD、ISEQUENTIALSTREAM
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,14 +12,14 @@ ms.assetid: cb022814-a86b-425d-9b24-eaac20ab664e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 916fbd7596d427d06f0c01982a2bff33eb764a44
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 0efc0dc4257ea0ae69ebafd30e257add9b2df95d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246975"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455685"
 ---
-# <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-in-native-client-ole-db"></a>使用中的 IROWSETFASTLOAD 和 ISEQUENTIALSTREAM 將 BLOB 資料傳送到 SQL SERVER （Native Client OLE DB）
+# <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-in-native-client-ole-db"></a>使用 IROWSETFASTLOAD 和 ISEQUENTIALSTREAM 將 BLOB 資料傳送到 SQL SERVER， (Native Client OLE DB) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   此範例會示範如何使用 IRowsetFastLoad 來串流處理每個資料列中不同長度的 BLOB 資料。  
@@ -36,7 +37,7 @@ ms.locfileid: "87246975"
  如需詳細資訊，請參閱 [BLOB 與 OLE 物件](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，您應該使用[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)將它們加密。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
   
 ## <a name="example"></a>範例  
  執行第一個 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單，以建立應用程式所使用的資料表。  

@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_db_stats_properties （Transact-sql） |Microsoft Docs
+description: sys.dm_db_stats_properties (Transact-SQL)
+title: sys. dm_db_stats_properties (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/18/2017
 ms.prod: sql
@@ -20,17 +21,17 @@ ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f7a88ef6865575d8e5c505cd563b463637dd8070
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 241fe5283d5d843bbfb84bec4809dbe5d2c5dc62
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738699"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455054"
 ---
 # <a name="sysdm_db_stats_properties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  針對目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的指定資料庫物件 (資料表或索引檢視表) 傳回統計資料的屬性。 如需資料分割資料表，請參閱類似的[sys.databases dm_db_incremental_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md)。 
+  針對目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的指定資料庫物件 (資料表或索引檢視表) 傳回統計資料的屬性。 若為數據分割資料表，請參閱類似的 [sys. dm_db_incremental_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md)。 
  
 ## <a name="syntax"></a>語法  
   
@@ -56,20 +57,20 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |rows_sampled|**bigint**|針對統計資料計算進行取樣的資料列總數。|  
 |steps|**int**|長條圖中的步驟數。 如需詳細資訊，請參閱 [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)。|  
 |unfiltered_rows|**bigint**|套用篩選運算式 (針對篩選的統計資料) 之前，資料表中的資料列總數。 如果統計資料未經過篩選，unfiltered_row 就會等於 rows 資料行中傳回的值。|  
-|modification_counter|**bigint**|自從上次更新統計資料以來，前端統計資料資料行 (用以建置長條圖的資料行) 的總修改次數。<br /><br /> 記憶體優化資料表：啟動 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 此資料行中包含：自從上次更新統計資料或重新開機資料庫之後，資料表的修改總數。|  
-|persisted_sample_percent|**float**|使用於未明確指定取樣百分比之統計資料更新的保存取樣百分比。 如果值為零，表示這個統計資料未設定保存取樣百分比。<br /><br /> **適用於：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
+|modification_counter|**bigint**|自從上次更新統計資料以來，前端統計資料資料行 (用以建置長條圖的資料行) 的總修改次數。<br /><br /> 記憶體優化資料表：啟動 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 此資料行中包含：自上一次更新統計資料或重新開機資料庫之後，資料表的修改總數。|  
+|persisted_sample_percent|**float**|使用於未明確指定取樣百分比之統計資料更新的保存取樣百分比。 如果值為零，表示這個統計資料未設定保存取樣百分比。<br /><br /> **適用範圍：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
   
-## <a name="remarks"></a><a name="Remarks"></a>備註  
- **dm_db_stats_properties**在下列任何情況下都會傳回空的資料列集：  
+## <a name="remarks"></a><a name="Remarks"></a> 備註  
+ **sys. dm_db_stats_properties** 會在下列任何情況下傳回空的資料列集：  
   
--   **object_id**或**stats_id**是 Null。    
+-   **object_id** 或 **stats_id** 為 Null。    
 -   找不到指定的物件，或者該物件沒有對應至資料表或索引檢視表。    
 -   指定的統計資料識別碼沒有對應至指定之物件識別碼的現有統計資料。    
 -   目前的使用者沒有檢視統計資料物件的權限。  
   
- 這種行為可讓您在將 cross 套用到 views 之類的資料列（例如**sys.databases**和**sys.databases**）時，安全地使用**sys. dm_db_stats_properties** 。  
+ 此行為可讓 **sys. dm_db_stats_properties** 的安全使用，當交叉套用至如 **sys. objects** 和 **sys.databases**等視圖中的資料列時。  
  
-統計資料更新日期儲存在[統計資料 Blob 物件](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)中，其中還有[長條圖](../../relational-databases/statistics/statistics.md#histogram)和[密度向量](../../relational-databases/statistics/statistics.md#density)，不是儲存在中繼資料中。 未讀取任何資料來產生統計資料時，就不會建立統計資料 blob、無法使用日期，而且*last_updated*資料行是 Null。 這是已篩選統計資料的情況，其中述詞未傳回任何資料列，或為新的空白資料表的情況。
+統計資料更新日期儲存在[統計資料 Blob 物件](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)中，其中還有[長條圖](../../relational-databases/statistics/statistics.md#histogram)和[密度向量](../../relational-databases/statistics/statistics.md#density)，不是儲存在中繼資料中。 如果沒有讀取資料以產生統計資料，則不會建立統計資料 blob、無法使用日期，而且 *last_updated* 資料行是 Null。 這是已篩選統計資料的情況，其中述詞未傳回任何資料列，或為新的空白資料表的情況。
   
 ## <a name="permissions"></a>權限  
  要求使用者對於統計資料資料行擁有選取權限，或是使用者擁有資料表，或使用者是 `sysadmin` 固定伺服器角色、`db_owner` 固定資料庫角色或 `db_ddladmin` 固定資料庫角色的成員。  
@@ -105,8 +106,8 @@ WHERE modification_counter > 1000;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [DBCC SHOW_STATISTICS &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
+ [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
+ [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
  [物件相關的動態管理檢視和函數 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)   
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
  [sys.dm_db_incremental_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md)  

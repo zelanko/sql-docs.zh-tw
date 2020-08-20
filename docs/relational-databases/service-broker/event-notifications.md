@@ -1,4 +1,5 @@
 ---
+description: 事件通知
 title: 事件通知 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: de9035c84862bcde78c3a6f42133d8cbd52ae9b5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c6e65e71b1bd07c4fff7acd79711934012fd3146
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764964"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455441"
 ---
 # <a name="event-notifications"></a>事件通知
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

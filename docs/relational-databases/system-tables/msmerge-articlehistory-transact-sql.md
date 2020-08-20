@@ -1,5 +1,6 @@
 ---
-title: MSmerge_articlehistory （Transact-sql） |Microsoft Docs
+description: MSmerge_articlehistory (Transact-SQL)
+title: MSmerge_articlehistory (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 2870e7ea-dbec-4636-9171-c2cee96018ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 86f2432073b580dfa59b92683d4401cb53296b02
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b12fea643b97bda83758288459681ff98e9423cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889880"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454638"
 ---
 # <a name="msmerge_articlehistory-transact-sql"></a>MSmerge_articlehistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSmerge_articlehistory**資料表會追蹤在合併代理程式同步處理會話期間對發行項所做的變更，並在進行變更的每個發行項中包含一個資料列。 這份資料表儲存在散發資料庫中。  
+  **MSmerge_articlehistory**資料表會追蹤合併代理程式同步處理會話期間對發行項所做的變更，並針對變更的每個發行項，各有一個資料列。 這份資料表儲存在散發資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -39,7 +40,7 @@ ms.locfileid: "85889880"
 |**插入**|**int**|在同步處理時，曾經套用至某篇特定發行項的插入數量。 這個值會在同步處理時增加，而結束值就代表總數。|  
 |**更新**|**int**|在同步處理時，曾經套用至某篇特定發行項的更新數量。 這個值會在同步處理時增加，而結束值就代表總數。|  
 |**刪除**|**int**|在同步處理時，曾經套用至某篇特定發行項的刪除數量。 這個值會在同步處理時增加，而結束值就代表總數。|  
-|**相**|**int**|在同步處理時所發生的衝突數量。 這個值會在同步處理時增加，而結束值就代表總數。|  
+|**衝突**|**int**|在同步處理時所發生的衝突數量。 這個值會在同步處理時增加，而結束值就代表總數。|  
 |**conflicts_resolved**|**int**|在進行已解析的同步處理時所發生的衝突數量。 這個值會在同步處理時增加，而結束值就代表總數。|  
 |**rows_retried**|**int**|在同步處理時重試的失敗列數。 這個值會在同步處理時增加，而結束值就代表總數。|  
 |**percent_complete**|**decimal**|合併代理程式在工作階段時，花在該發行項的總同步處理時間的百分比。 這個值是 NULL，維持到工作階段完成為止。|  

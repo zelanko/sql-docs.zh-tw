@@ -1,5 +1,6 @@
 ---
-title: 資料來源資訊屬性（Native Client OLE DB 提供者） |Microsoft Docs
+description: '資料來源資訊屬性 (Native Client OLE DB 提供者) '
+title: 資料來源資訊屬性 (Native Client OLE DB 提供者) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 7fd80e47-5bd9-41e2-a3d3-091a7c8c5f2b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6bd0f6a5cd28d4b8ec2f7ba8063de551c45d6b94
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 40cc17b96b863c9beb47b3bfec416543117f8743
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247027"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455828"
 ---
 #  <a name="sql-server-native-client-data-source-information-properties"></a>SQL Server Native Client 資料來源資訊屬性
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "87247027"
   
 |屬性識別碼|描述|  
 |-----------------|-----------------|  
-|SSPROP_COLUMNLEVELCOLLATION|輸入：VT_BOOL<br /><br /> R/W：讀取<br /><br /> 預設值：VARIANT_TRUE<br /><br /> 描述：用於判斷是否支援資料行定序。<br /><br /> VARIANT_TRUE：支援資料行層級定序。<br /><br /> VARIANT_FALSE：不支援資料行層級定序。|  
+|SSPROP_COLUMNLEVELCOLLATION|類型：VT_BOOL<br /><br /> R/W：讀取<br /><br /> 預設值：VARIANT_TRUE<br /><br /> 描述：用於判斷是否支援資料行定序。<br /><br /> VARIANT_TRUE：支援資料行層級定序。<br /><br /> VARIANT_FALSE：不支援資料行層級定序。|  
 |SSPROP_UNICODELCID|類型：VT_I4 R/W：讀取<br /><br /> 描述：Unicode 地區設定識別碼。<br /><br /> 這是用於 Unicode 資料排序的地區設定。|  
 |SSPROP_UNICODECOMPARISONSTYLE|類型：VT_I4 R/W：讀取<br /><br /> 描述：Unicode 比較樣式。<br /><br /> 用於 Unicode 資料排序的排序選項。|  
   

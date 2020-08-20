@@ -1,4 +1,5 @@
 ---
+description: ADO 事件具現化：Visual C++
 title: ADO 事件具現化： Visual C++ |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,17 +13,17 @@ dev_langs:
 ms.assetid: 385ad90a-37d0-497c-94aa-935d21fed78f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc3f3e0f70864444e4ff07ba16ac37cbd42234df
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 118b3515665da6a5f03e6001d9b4a1b7d1822ab5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761304"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453780"
 ---
 # <a name="ado-event-instantiation-visual-c"></a>ADO 事件具現化：Visual C++
-這是如何在 Microsoft® Visual C++®中將 ADO 事件具現化的描述。 如需完整的說明，請參閱[ADO 事件模型範例（VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md) 。  
+這是如何在 Microsoft® Visual C++®中具現化 ADO 事件的圖解描述。 如需完整的說明，請參閱 [ADO 事件模型範例 (VC + +) ](../../../ado/reference/ado-api/ado-events-model-example-vc.md) 。  
   
- 建立衍生自**ConnectionEventsVt**和**RecordsetEventsVt**介面（從檔案 adoint 中找到）的類別。  
+ 建立衍生自 **ConnectionEventsVt** 和 **RecordsetEventsVt** 介面的類別（位於檔案 adoint 中）。  
   
 ```  
 // BeginEventExampleVC01  
@@ -49,7 +50,7 @@ class CRstEvent : public RecordsetEventsVt
 // EndEventExampleVC01  
 ```  
   
- 在這兩個類別中，執行每個事件處理常式方法。 每個方法都已足夠只傳回 S_OK 的 HRESULT。 不過，當您讓它知道您的事件處理常式可以使用時，預設會連續呼叫它們。 相反地，您可能會想要在第一次將**adStatus**設定為**adStatusUnwantedEvent**之後，不要求進一步通知。  
+ 在這兩個類別中執行每個事件處理常式方法。 每個方法都只會傳回 S_OK 的 HRESULT。 但是，當您知道您的事件處理常式可以使用時，預設會持續呼叫它們。 相反地，您可能會想要在第一次將 **adStatus** 設定為 **adStatusUnwantedEvent**時，不要求進一步的通知。  
   
 ```  
 // BeginEventExampleVC02  
@@ -65,11 +66,11 @@ STDMETHODIMP CConnEvent::ConnectComplete(
 // EndEventExampleVC02  
 ```  
   
- 事件類別繼承自**IUnknown**，因此您也必須執行**QueryInterface**、 **AddRef**和**Release**方法。 也會執行類別的函式和析構函式。 選擇您最熟悉的 Visual C++ 工具來簡化這部分的工作。  
+ 事件類別繼承自 **IUnknown**，因此您也必須執行 **QueryInterface**、 **AddRef**和 **Release** 方法。 也可執行類別的函式和析構函數。 選擇您最熟悉的 Visual C++ 工具，以簡化工作的這個部分。  
   
- 藉由在**IConnectionPointContainer**和**IConnectionPoint**介面的[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)和[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件上發出**QueryInterface** ，讓它知道您的事件處理常式可供使用。 然後針對每個類別發出**IConnectionPoint：： Advise** 。  
+ 藉由對**IConnectionPointContainer**和**IConnectionPoint**介面的[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)和[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件發出**QueryInterface** ，讓它知道您的事件處理常式可以使用。 然後針對每個類別發出 **IConnectionPoint：： Advise** 。  
   
- 例如，假設您使用布耳函數，如果它成功通知**記錄集**物件您有可用的事件處理常式，則會傳回**True** 。  
+ 例如，假設您使用的布耳函數會成功通知**記錄集**物件您有可用的事件處理常式，則會傳回**True** 。  
   
 ```  
 // BeginEventExampleVC03  
@@ -98,9 +99,9 @@ return TRUE;
 // EndEventExampleVC03  
 ```  
   
- 此時，會啟用**RecordsetEvent**系列的事件，並在發生**記錄集**事件時呼叫您的方法。  
+ 此時， **RecordsetEvent** 系列的事件已啟用，而且您的方法會在發生 **記錄集** 事件時被呼叫。  
   
- 之後，當您想要讓事件處理常式無法使用時，請再次取得連接點，併發出**IConnectionPoint：： Unadvise**方法。  
+ 稍後，當您想要讓事件處理常式無法使用時，請再次取得連接點，併發出 **IConnectionPoint：： Unadvise** 方法。  
   
 ```  
 // BeginEventExampleVC04  
@@ -112,9 +113,9 @@ if (FAILED(hr)) return FALSE;
 // EndEventExampleVC04  
 ```  
   
- 您必須適當地發行介面和終結類別物件。  
+ 您必須適當地釋放介面和終結類別物件。  
   
- 下列程式碼顯示**記錄集**事件接收類別的完整範例。  
+ 下列程式碼顯示 **記錄集** 事件接收器類別的完整範例。  
   
 ```  
 // BeginEventExampleVC05.cpp  

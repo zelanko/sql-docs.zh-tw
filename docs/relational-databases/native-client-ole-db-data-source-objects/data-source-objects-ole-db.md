@@ -1,5 +1,6 @@
 ---
-title: 資料來源物件（Native Client OLE DB 提供者） |Microsoft Docs
+description: 'SQL Server Native Client 資料來源物件 (OLE DB) '
+title: " (Native Client OLE DB 提供者的資料來源物件) |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,23 +20,23 @@ ms.assetid: c1d4ed20-ad3b-4e33-a26b-38d7517237b7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d0fb6b31376118fca3f2458c21b61c35beec618
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: abcad20ac1866e33f07d3b65f3a804949da9e2fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242255"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455778"
 ---
-#  <a name="sql-server-native-client-data-source-objects-ole-db"></a>SQL Server Native Client 資料來源物件（OLE DB）
+#  <a name="sql-server-native-client-data-source-objects-ole-db"></a>SQL Server Native Client 資料來源物件 (OLE DB) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client 會針對用於建立資料存放區連結的一組 OLE DB 介面（例如），使用「資料來源」一詞 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 建立提供者之資料來源物件的實例是 Native Client 取用者的第一個工作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 會針對用來建立資料存放區連結的 OLE DB 介面組（例如），使用「資料來源」一詞 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 建立提供者資料來源物件的實例是 Native Client 取用者的第一個工作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
- 每個 OLE DB 提供者都會為自己宣告一個類別識別碼 (CLSID)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者的 CLSID 是 C/c + + GUID CLSID_SQLNCLI10 （符號 SQLNCLI_CLSID 會解析成您所參考之 SQLNCLI 檔中的正確 progid）。 透過 CLSID，取用者會使用 OLE **CoCreateInstance** 函式來製造資料來源物件的執行個體。  
+ 每個 OLE DB 提供者都會為自己宣告一個類別識別碼 (CLSID)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端 OLE DB 提供者的 CLSID 是 C/c + + GUID CLSID_SQLNCLI10 (符號 SQLNCLI_CLSID 會解析為您所參考的 SQLNCLI .h 檔案中的正確 progid) 。 透過 CLSID，取用者會使用 OLE **CoCreateInstance** 函式來製造資料來源物件的執行個體。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client 是同進程伺服器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者物件的實例是使用 CLSCTX_INPROC_SERVER 宏所建立，以指出可執行檔內容。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 是同進程伺服器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端 OLE DB 提供者物件的實例是使用 CLSCTX_INPROC_SERVER 宏來建立，以指出可執行內容。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者資料來源物件會公開允許取用者連接到現有資料庫的 OLE DB 初始化介面 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端 OLE DB 提供者資料來源物件會公開 OLE DB 初始化介面，可讓取用者連接到現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  
   
  透過 Native Client OLE DB 提供者所建立的每個連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都會自動設定這些選項：  
   
@@ -51,7 +52,7 @@ ms.locfileid: "87242255"
   
 -   SET CONCAT_OF_NULL_YIELDS_NULL ON  
   
- 這個範例會使用類別識別碼宏來建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生用戶端 OLE DB 提供者資料來源物件，並取得其**IDBInitialize**介面的參考。  
+ 這個範例會使用類別識別碼宏來建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生用戶端 OLE DB 提供者資料來源物件，並取得其 **IDBInitialize** 介面的參考。  
   
 ```  
 IDBInitialize*   pIDBInitialize;  
@@ -72,9 +73,9 @@ else
 }  
 ```  
   
- 成功建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者資料來源物件的實例之後，取用者應用程式就可以透過初始化資料來源並建立會話來繼續。 OLE DB 工作階段會顯示允許資料存取與操作的介面。  
+ 在成功建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生用戶端的實例 OLE DB 提供者資料來源物件之後，取用者應用程式就可以透過初始化資料來源並建立會話來繼續。 OLE DB 工作階段會顯示允許資料存取與操作的介面。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 成功初始化資料來源時，使其第一次連接到指定的實例。 只要在任何資料來源初始化介面上維持參考，或是在呼叫 **IDBInitialize::Uninitialize** 方法前，都會維持連線。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端 OLE DB 提供者會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 成功的資料來源初始化過程中，將第一個連接到指定的實例。 只要在任何資料來源初始化介面上維持參考，或是在呼叫 **IDBInitialize::Uninitialize** 方法前，都會維持連線。  
   
 ## <a name="in-this-section"></a>本節內容  
   

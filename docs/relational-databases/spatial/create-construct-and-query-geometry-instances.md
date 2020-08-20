@@ -1,4 +1,5 @@
 ---
+description: 建立、建構及查詢幾何執行個體
 title: 建立、建構及查詢 geometry 執行個體 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed268a5b8097b637c8a7e51eecf2e088aad58e04
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6d6a82ad07670a714cb701498224cb20d0207862
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751125"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455417"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>建立、建構及查詢幾何執行個體
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  平面空間資料類型 ( **geometry**) 代表 Euclidean (平面) 座標系統中的資料。 這種類型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中是實作為 Common Language Runtime (CLR) 資料類型。  
+   平面空間資料類型 (**geometry**) 代表 Euclidean (平面) 座標系統中的資料。 這種類型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中是實作為 Common Language Runtime (CLR) 資料類型。  
   
  **geometry** 類型已預先定義，而且可在每一個資料庫中使用。 您可以建立 **geometry** 類型的資料表資料行，並使用與其他 CLR 類型相同的方式來操作 **geometry** 資料。  
   
@@ -137,7 +138,7 @@ ms.locfileid: "85751125"
  您可以使用下列方法傳回 WKT 或 WKB 格式的 **geometry** 執行個體：  
   
  **傳回 WKT 表示法的 geometry 執行個體**  
- [STAsText &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/stastext-geometry-data-type.md)  
+ [STAsText &#40;geometry 資料型別&#41;](../../t-sql/spatial-geometry/stastext-geometry-data-type.md)  
   
  [ToString &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/tostring-geometry-data-type.md)  
   
@@ -177,7 +178,7 @@ ms.locfileid: "85751125"
   
   
 ###  <a name="number-of-points"></a><a name="number"></a> 點數  
- 所有非空白的 **geometry** 執行個體都是由 *「點」* (point) 所組成。 這些點代表幾何繪製所在平面的 X 和 Y 座標。 **geometry** 提供許多內建方法來查詢執行個體的點。  
+ 所有非空白的 **geometry** 執行個體都是由 *「點」*(point) 所組成。 這些點代表幾何繪製所在平面的 X 和 Y 座標。 **geometry** 提供許多內建方法來查詢執行個體的點。  
   
  **傳回組成執行個體的點數**  
  [STNumPoints &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/stnumpoints-geometry-data-type.md)  
@@ -218,14 +219,14 @@ ms.locfileid: "85751125"
   
   
 ###  <a name="empty"></a><a name="empty"></a> Empty  
- 「空的」  **geometry** 執行個體沒有任何點。 空的 **LineString, CircularString**、 **CompoundCurve**和 **MultiLineString** 執行個體的長度是零。 空的 **Polygon**、 **CurvePolygon**和 **MultiPolygon** 執行個體的區域是 0。  
+ 「空的」**geometry** 執行個體沒有任何點。 空的 **LineString, CircularString**、 **CompoundCurve**和 **MultiLineString** 執行個體的長度是零。 空的 **Polygon**、 **CurvePolygon**和 **MultiPolygon** 執行個體的區域是 0。  
   
  **判斷執行個體是否為空的**  
  [STIsEmpty](../../t-sql/spatial-geometry/stisempty-geometry-data-type.md)。  
   
   
 ###  <a name="simple"></a><a name="simple"></a> Simple  
- 如果要讓執行個體的 **geometry** 為 *「簡單」* (simple)，它必須符合以下兩個需求：  
+ 如果要讓執行個體的 **geometry** 為 *「簡單」*(simple)，它必須符合以下兩個需求：  
   
 -   此例項的每一個圖形都不能自己相交 (除了在它的端點上以外)。  
   
@@ -265,13 +266,13 @@ SELECT @g.STBoundary().ToString();
  [STBoundary](../../t-sql/spatial-geometry/stboundary-geometry-data-type.md)  
    
 ###  <a name="envelope"></a><a name="envelope"></a> 範圍  
- *geometry* 執行個體的 **「範圍」** (Envelope) (也稱為 *「週框方塊」* (Bounding Box)) 是執行個體的最小和最大座標 (X,Y) 組成的座標軸對齊矩形。  
+ *geometry* 執行個體的 **「範圍」** (Envelope) (也稱為 *「週框方塊」*(Bounding Box)) 是執行個體的最小和最大座標 (X,Y) 組成的座標軸對齊矩形。  
   
  **傳回執行個體的範圍**  
  [STEnvelope](../../t-sql/spatial-geometry/stenvelope-geometry-data-type.md)  
   
 ###  <a name="closure"></a><a name="closure"></a> 封閉性  
- 「封閉式」  **geometry** 執行個體是起始點與結束點相同的圖形。 **Polygon** 執行個體視為封閉式。 **Point** 執行個體視為非封閉式。  
+ 「封閉式」__**geometry** 執行個體是起始點與結束點相同的圖形。 **Polygon** 執行個體視為封閉式。 **Point** 執行個體視為非封閉式。  
   
  環形是簡單、封閉的 **LineString** 執行個體。  
   

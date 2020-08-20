@@ -1,5 +1,6 @@
 ---
-title: Visual C++ 延伸模組範例 |Microsoft Docs
+description: Visual C++ Extensions 範例
+title: Visual C++ 擴充功能範例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d48315598c17b9462e9a42de58bd54313a4fd794
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 06e7ca7204d673ac5888962f3d4f5095e9fe5a9d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761506"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453940"
 ---
 # <a name="visual-c-extensions-example"></a>Visual C++ Extensions 範例
-此程式會顯示如何從欄位中抓取值，並將其轉換成 C/c + + 變數。  
+此程式會顯示如何從欄位取出值，並轉換成 C/c + + 變數。  
   
- 這個範例也會利用「智慧型指標」，它會自動處理 `QueryInterface` **IADORecordBinding**介面呼叫和參考計數的 COM 特定詳細資料。  
+ 這個範例也會利用「智慧型指標」，這會自動處理 `QueryInterface` **IADORecordBinding** 介面之呼叫和參考計數的 COM 特定詳細資料。  
   
  如果沒有智慧型指標，您可以撰寫程式碼：  
   
@@ -44,13 +45,13 @@ if (picRs) picRs->Release();
 _COM_SMARTPTR_TYPEDEF(IADORecordBinding, __uuidof(IADORecordBinding));  
 ```  
   
- 並將指標具現化，如下所示：  
+ 然後具現化指標，如下所示：  
   
 ```cpp
 IADORecordBindingPtr picRs(pRs);  
 ```  
   
- 由於 Visual C++ 延伸模組是由**Recordset**物件所執行，因此智慧型指標的函式會 `picRs` 接受 _ `RecordsetPtr` 指標 `pRs` 。 此函式會 `QueryInterface` 使用 `pRs` 來呼叫來尋找 `IADORecordBinding` 介面。  
+ 由於 Visual C++ 延伸模組是由 **記錄集** 物件所執行，因此智慧型指標的函式 `picRs` 會採用 _ `RecordsetPtr` 指標 `pRs` 。 使用的函式會呼叫 `QueryInterface` `pRs` ，以找出 `IADORecordBinding` 介面。  
   
 ```cpp
 // Visual_Cpp_Extensions_Example.cpp  
@@ -110,5 +111,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 Visual C++ 延伸模組](../../../ado/guide/appendixes/using-visual-c-extensions.md)   
+ [使用 Visual C++ 擴充功能](../../../ado/guide/appendixes/using-visual-c-extensions.md)   
  [Visual C++ Extensions 標題](../../../ado/guide/appendixes/visual-c-extensions-header.md)

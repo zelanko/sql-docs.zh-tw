@@ -1,5 +1,6 @@
 ---
-title: 設定大型資料（Native Client OLE DB 提供者）
+description: '將大型資料 (Native Client OLE DB 提供者) '
+title: '將大型資料 (Native Client OLE DB 提供者) '
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,14 +14,14 @@ ms.assetid: b057f04b-e5f4-466e-a39a-090dae797236
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e7c7d1dd8f24db346b80d7ec95459c54ea95071
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 29949d33bea732df0a3570ae63d528be3132c592
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246967"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455660"
 ---
-# <a name="set-large-data-native-client-ole-db-provider"></a>設定大型資料（Native Client OLE DB 提供者）
+# <a name="set-large-data-native-client-ole-db-provider"></a>將大型資料 (Native Client OLE DB 提供者) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   此範例會示範如何設定 BLOB 資料、建立資料表、加入範例記錄、在資料列集中提取該記錄，然後設定 BLOB 欄位的值。 IA64 不支援此範例。  
@@ -30,7 +31,7 @@ ms.locfileid: "87246967"
  此範例需要 AdventureWorks 範例資料庫，您可以從 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案首頁) 下載。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，您應該使用[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)將它們加密。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
   
 ## <a name="procedures"></a>程序  
   
@@ -51,7 +52,7 @@ ms.locfileid: "87246967"
 ## <a name="example"></a>範例  
   
 ### <a name="description"></a>描述  
- 使用 ole32.lib oleaut32.lib 編譯並執行下列 C++ 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連接到已命名的實例，請將連接字串從 L "（local）" 變更為 L "（local） \\ \name"，其中 name 是已命名的實例。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
+ 使用 ole32.lib oleaut32.lib 編譯並執行下列 C++ 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連線到具名執行個體，請將連接字串從 L"(local)" 變更為 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
   
 ### <a name="code"></a>程式碼  
   

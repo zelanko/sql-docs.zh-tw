@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_qn_subscriptions （Transact-sql） |Microsoft Docs
+description: 查詢通知-sys. dm_qn_subscriptions
+title: sys. dm_qn_subscriptions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c83d70ad2bb534d9d17104316aecd40a4b21fe05
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2d19178ff8e4b684fbc32fb80d23ee057fb55db7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894689"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455094"
 ---
 # <a name="query-notifications---sysdm_qn_subscriptions"></a>查詢通知-sys. dm_qn_subscriptions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,15 +35,15 @@ ms.locfileid: "85894689"
 |-----------------|---------------|-----------------|  
 |**id**|**int**|訂閱的識別碼。|  
 |**database_id**|**int**|執行通知查詢的資料庫識別碼。 這個資料庫會儲存與這項訂閱有關的資訊。|  
-|**sid**|**Varbinary （85）**|建立和擁有這項訂閱之伺服器主體的安全性識別碼。|  
+|**希**|**Varbinary (85) **|建立和擁有這項訂閱之伺服器主體的安全性識別碼。|  
 |object_id|**int**|儲存訂閱參數相關資訊的內部資料表識別碼。|  
 |**created**|**datetime**|建立訂閱的日期和時間。|  
-|**timeout**|**int**|訂閱的逾時 (以秒為單位)。 通知會標示為在過了這個時間之後引發。<br /><br /> 注意：實際引發時間可能大於指定的超時時間。不過，如果在指定的超時時間之後（但在引發訂閱之前）發生使訂閱失效的變更，就會 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 確保在進行變更時引發。|  
+|**timeout**|**int**|訂閱的逾時 (以秒為單位)。 通知會標示為在過了這個時間之後引發。<br /><br /> 注意：實際引發時間可能大於指定的超時時間。但是，如果在指定的超時時間之後，但在引發訂用帳戶之前，會使訂閱失效的變更發生，就會 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 確保在進行變更時引發。|  
 |**status**|**int**|指出訂閱的狀態。 如需狀態碼的清單，請參閱＜備註＞底下的表格。|  
   
 ## <a name="relationship-cardinalities"></a>關聯性基數  
   
-|從|至|開啟|類型|  
+|寄件者|收件者|開啟|類型|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|多對一|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|object_id|多對一|  
@@ -131,7 +132,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [查詢通知相關的動態管理檢視 &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
  [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
   

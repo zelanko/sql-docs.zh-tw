@@ -1,4 +1,5 @@
 ---
+description: 建立、建構並查詢地理位置執行個體
 title: 建立、建構並查詢 geography 執行個體 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,16 +15,16 @@ ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2ab74d3cb24118b147743165d6db221ea337629
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 271e1135cddfb775432660c1d4385753e95fbf16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730811"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455470"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>建立、建構並查詢地理位置執行個體
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  地理位置空間資料類型 ( **geography**) 代表圓形表面座標系統中的資料。 這種類型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中是實作為 .NET Common Language Runtime (CLR) 資料類型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 資料類型會儲存橢圓體 (圓形地球) 資料，例如 GPS 經緯度座標。  
+   地理位置空間資料類型 (**geography**) 代表圓形表面座標系統中的資料。 這種類型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中是實作為 .NET Common Language Runtime (CLR) 資料類型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 資料類型會儲存橢圓體 (圓形地球) 資料，例如 GPS 經緯度座標。  
   
  **geography** 類型已預先定義，而且可在每一個資料庫中使用。 您可以建立 **geography** 類型的資料表資料行，並使用與其他系統提供之類型相同的方式來操作 **geography** 資料。  
   
@@ -135,7 +136,7 @@ ms.locfileid: "85730811"
  一旦建構了 **geography** 執行個體之後，您就可以使用下列方法來判斷它的格式是否正確、傳回執行個體類型，或者如果它是 **GeometryCollection** 執行個體，就會傳回特定的 **geography** 執行個體。  
   
  **傳回 geography 類型的執行個體**  
- [STGeometryType &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md)  
+ [STGeometryType &#40;geography 資料型別&#41;](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md)  
   
  **判斷 geography 是否為特定的執行個體類型**  
  [InstanceOf &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/instanceof-geography-data-type.md)  
@@ -147,10 +148,10 @@ ms.locfileid: "85730811"
  [STGeometryN &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/stgeometryn-geography-data-type.md)STGeometryN (geography 資料類型)  
   
 ###  <a name="number-of-points"></a><a name="number"></a> 點數  
- 所有非空白的 **geography** 執行個體都是由 *「點」* (Point) 所組成。 這些點代表 **geography** 執行個體繪製所在之地球的經緯度座標。 **geography** 資料類型提供了許多內建方法來查詢執行個體的點。  
+ 所有非空白的 **geography** 執行個體都是由 *「點」*(Point) 所組成。 這些點代表 **geography** 執行個體繪製所在之地球的經緯度座標。 **geography** 資料類型提供了許多內建方法來查詢執行個體的點。  
   
  **傳回組成執行個體的點數**  
- [STNumPoints &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/stnumpoints-geography-data-type.md)  
+ [STNumPoints &#40;geography 資料型別&#41;](../../t-sql/spatial-geography/stnumpoints-geography-data-type.md)  
   
  **傳回執行個體中的特定點**  
  [STPointN &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md)  
@@ -168,19 +169,19 @@ ms.locfileid: "85730811"
  [STDimension &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/stdimension-geography-data-type.md)  
   
  **傳回執行個體的長度**  
- [STLength &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/stlength-geography-data-type.md)  
+ [STLength &#40;geography 資料型別&#41;](../../t-sql/spatial-geography/stlength-geography-data-type.md)  
   
  **傳回執行個體的區域**  
  [STArea &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/starea-geography-data-type.md)  
   
 ###  <a name="empty"></a><a name="empty"></a> Empty  
- 「空的」  **geography** 執行個體沒有任何點。 空的 **LineString、CircularString**、 **CompoundCurve**和 **MultiLineString** 執行個體的長度是 0。 空的 **Polygon、CurvePolygon** 和 **MultiPolygon** 執行個體的區域是 0。  
+ 「空的」**geography** 執行個體沒有任何點。 空的 **LineString、CircularString**、 **CompoundCurve**和 **MultiLineString** 執行個體的長度是 0。 空的 **Polygon、CurvePolygon** 和 **MultiPolygon** 執行個體的區域是 0。  
   
  **判斷執行個體是否為空的**  
  [STIsEmpty &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/stisempty-geography-data-type.md)  
   
 ###  <a name="closure"></a><a name="closure"></a> 封閉性  
- 「封閉式」  **geography** 執行個體是起始點與結束點相同的圖形。 **Polygon** 執行個體視為封閉式。 **Point** 執行個體視為非封閉式。  
+ 「封閉式」**geography** 執行個體是起始點與結束點相同的圖形。 **Polygon** 執行個體視為封閉式。 **Point** 執行個體視為非封閉式。  
   
  環形是簡單、封閉的 **LineString** 執行個體。  
   

@@ -1,4 +1,5 @@
 ---
+description: CurvePolygon
 title: CurvePolygon | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3789ee478e1c77518c7ce1992ed4a5134c886498
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 69aaa7667e0aa1576dc1ec2744e1f07a402ccdf0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751103"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455410"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

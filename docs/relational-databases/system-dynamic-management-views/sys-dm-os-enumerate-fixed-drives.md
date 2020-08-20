@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_os_enumerate_fixed_drives （Transact-sql） |Microsoft Docs
+description: 'sys. dm_os_enumerate_fixed_drives (Transact-sql) '
+title: sys. dm_os_enumerate_fixed_drives (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/18/2019
 ms.prod: sql
@@ -16,33 +17,33 @@ helpviewer_keywords:
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c8b243a269454bb1480051f50ab52d83d5fde80b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6be0f2083a39bad3d232fd3105fa94c92fb71640
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898772"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454927"
 ---
-# <a name="sysdm_os_enumerate_fixed_drives-transact-sql"></a>sys.databases dm_os_enumerate_fixed_drives （Transact-sql）
+# <a name="sysdm_os_enumerate_fixed_drives-transact-sql"></a>sys. dm_os_enumerate_fixed_drives (Transact-sql) 
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-SQL Server 2019 中引進。
+在 SQL Server 2019 中引進。
 
-列舉掛接到磁碟機號的磁片區，例如 `C:\` 。
+列舉掛接到磁碟機號的磁片區（例如） `C:\` 。
 
 |資料行名稱|資料類型|描述|
 |-----------------|---------------|-----------------|  
 |`fixed_drive_path`|`nvarchar(512)`|磁片區的路徑，例如 `C:\` 。|  
-|`drive_type`|`int`|磁片磁碟機類型的程式碼。 請[ `GetDriveTypeW` 參閱](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew)函式。|
-|`drive_type_desc`|`nvarchar(512)`|磁片磁碟機類型的描述。 請[ `GetDriveTypeW` 參閱](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew)函式。|
+|`drive_type`|`int`|磁片磁碟機類型的代碼。 請參閱[ `GetDriveTypeW` 函數](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew)。|
+|`drive_type_desc`|`nvarchar(512)`|磁片磁碟機類型的描述。 請參閱[ `GetDriveTypeW` 函數](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew)。|
 |`free_space_in_bytes`|`bigint`|磁片可用空間（以位元組為單位）。|
 
 ## <a name="permissions"></a>權限
 
-使用者必須具有 `VIEW SERVER STATE` 伺服器的許可權。
+使用者必須擁有 `VIEW SERVER STATE` 伺服器的許可權。
 
 ## <a name="see-also"></a>另請參閱  
 
- [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [I/o 相關的動態管理檢視和函數 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  

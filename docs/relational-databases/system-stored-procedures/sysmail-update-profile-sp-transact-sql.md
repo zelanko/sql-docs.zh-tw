@@ -1,5 +1,6 @@
 ---
-title: sysmail_update_profile_sp （Transact-sql） |Microsoft Docs
+description: sysmail_update_profile_sp (Transact-SQL)
+title: sysmail_update_profile_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c795b604538a26fc7602ea245bd4d1d8c9c52d33
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 78a123514e990499f191cbc6742870647adebc5e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890811"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454735"
 ---
 # <a name="sysmail_update_profile_sp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,27 +41,27 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @profile_id = ] profile_id`要更新的設定檔識別碼。 *profile_id*是**int**，預設值是 Null。 至少必須指定*profile_id*或*profile_name*的其中一個。 如果同時指定這兩者，程序會變更設定檔的名稱。  
+`[ @profile_id = ] profile_id` 要更新的設定檔識別碼。 *profile_id* 是 **int**，預設值是 Null。 至少必須指定其中一個 *profile_id* 或 *profile_name* 。 如果同時指定這兩者，程序會變更設定檔的名稱。  
   
-`[ @profile_name = ] 'profile_name'`要更新之設定檔的名稱，或設定檔的新名稱。 *profile_name*是**sysname**，預設值是 Null。 至少必須指定*profile_id*或*profile_name*的其中一個。 如果同時指定這兩者，程序會變更設定檔的名稱。  
+`[ @profile_name = ] 'profile_name'` 要更新之設定檔的名稱，或設定檔的新名稱。 *profile_name* 是 **sysname**，預設值是 Null。 至少必須指定其中一個 *profile_id* 或 *profile_name* 。 如果同時指定這兩者，程序會變更設定檔的名稱。  
   
-`[ @description = ] 'description'`設定檔的新描述。 *description*是**Nvarchar （256）**，預設值是 Null。  
+`[ @description = ] 'description'` 設定檔的新描述。 *描述* 是 **Nvarchar (256) **，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
  當同時指定設定檔識別碼和設定檔名稱時，程序會將設定檔名稱改成所提供的名稱，且會更新設定檔的描述。 當只提供了這些引數的其中一個時，程序會更新設定檔的描述。  
   
- 預存程式**sysmail_update_profile_sp**在**msdb**資料庫中，而且是由**dbo**架構所擁有。 如果目前的資料庫不是**msdb**，就必須以三部分的名稱來執行此程式。  
+ 預存程式 **sysmail_update_profile_sp** 位於 **msdb** 資料庫中，而且是由 **dbo** 架構所擁有。 如果目前的資料庫不是 **msdb**，就必須以三部分名稱執行程式。  
   
 ## <a name="permissions"></a>權限  
- 此程式的執行許可權預設為**系統管理員（sysadmin** ）固定伺服器角色的成員。  
+ 此程式的執行許可權預設為 **系統管理員（sysadmin** ）固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  
  **A. 變更設定檔的描述**  
   
- 下列範例會變更 `AdventureWorks Administrator` **msdb**資料庫中名為之設定檔的描述。  
+ 下列範例會變更 `AdventureWorks Administrator` **msdb** 資料庫中名為之設定檔的描述。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_profile_sp  
@@ -83,6 +84,6 @@ EXECUTE msdb.dbo.sysmail_update_profile_sp
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [Database Mail 設定物件](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [建立 Database Mail 帳戶](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Database Mail 預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [&#40;Transact-sql&#41;的 Database Mail 預存程式 ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

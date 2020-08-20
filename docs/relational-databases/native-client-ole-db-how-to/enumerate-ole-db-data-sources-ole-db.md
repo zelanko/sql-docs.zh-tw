@@ -1,5 +1,6 @@
 ---
-title: 列舉 OLE DB 的資料來源（Native Client OLE DB 提供者） |Microsoft Docs
+description: '列舉 SQL Server Native Client OLE DB 資料來源 (OLE DB) '
+title: 列舉 (Native Client OLE DB provider 的 OLE DB 資料來源) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,19 +14,19 @@ ms.assetid: ba240060-3237-4fb8-b2fb-b87fda2b1e7a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c61674c160d4d0f9171b63d1d051f8d41230eccc
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a27332a7948c535b768f6507aad81ca72bbcbb26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247858"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455970"
 ---
-# <a name="enumerate-sql-server-native-client-ole-db-data-sources-ole-db"></a>列舉資料來源 SQL Server Native Client OLE DB （OLE DB）
+# <a name="enumerate-sql-server-native-client-ole-db-data-sources-ole-db"></a>列舉 SQL Server Native Client OLE DB 資料來源 (OLE DB) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   此範例會示範如何使用列舉值物件來列出可用的資料來源。  
   
- 為了列出 SQLOLEDB 列舉值可見的資料來源，取用者會呼叫[ISourcesRowset：： GetSourcesRowset](https://go.microsoft.com/fwlink/?LinkId=120312)方法。 這個方法會傳回有關目前可見之資料來源的資訊資料列集。  
+ 若要列出 SQLOLEDB 列舉值可見的資料來源，取用者會呼叫 [ISourcesRowset：： GetSourcesRowset](https://go.microsoft.com/fwlink/?LinkId=120312) 方法。 這個方法會傳回有關目前可見之資料來源的資訊資料列集。  
   
  根據所使用的網路程式庫而定，將會搜尋適當的網域來找出資料來源。 如果是具名管道，這就是用戶端登入的網域。 如果是 AppleTalk，這就是預設區域。 如果是 SPX/IPX，這就是連結中找到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝清單。 如果是 Banyan VINES，這就是本機網路上找到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝。 不支援多重通訊協定和 TCP/IP 通訊端。  
   
@@ -34,7 +35,7 @@ ms.locfileid: "87247858"
  此範例需要 AdventureWorks 範例資料庫，您可以從 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案首頁) 下載。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，您應該使用[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)將它們加密。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>若要列舉 OLE DB 資料來源  
   
@@ -51,7 +52,7 @@ ms.locfileid: "87247858"
 6.  呼叫 **IRowset::GetData** 來從資料列集的資料列複本擷取資料，然後加以處理。  
   
 ## <a name="example"></a>範例  
- 使用 ole32.lib 編譯並執行下列 C++ 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連接到已命名的實例，請將連接字串從 L "（local）" 變更為 L "（local） \\ \name"，其中 name 是已命名的實例。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
+ 使用 ole32.lib 編譯並執行下列 C++ 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連線到具名執行個體，請將連接字串從 L"(local)" 變更為 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
   
 ```  
 // compile with: ole32.lib  

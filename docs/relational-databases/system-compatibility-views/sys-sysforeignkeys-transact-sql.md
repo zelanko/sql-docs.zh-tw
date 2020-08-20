@@ -1,5 +1,6 @@
 ---
-title: sys.sysforeignkeys （Transact-sql） |Microsoft Docs
+description: sys.sysforeignkeys (Transact-SQL)
+title: sys.sysforeignkeys (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 41544236-1c46-4501-be88-18c06963b6e8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fff6be675a0433b3e51df74086fba59b8772b8d7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 15a02ec0dc5b6b1e5b376876b18e36863468e59e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901059"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455090"
 ---
 # <a name="syssysforeignkeys-transact-sql"></a>sys.sysforeignkeys (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "85901059"
 |**keyno**|**smallint**|參考資料行清單中的資料行位置。|  
   
 ## <a name="see-also"></a>另請參閱  
- [將系統資料表對應至系統檢視 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;將系統資料表對應至系統檢視 ](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [相容性檢視 &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

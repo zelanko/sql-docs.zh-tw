@@ -1,5 +1,6 @@
 ---
-title: sys. database_usage （Azure SQL Database） |Microsoft Docs
+description: sys.database_usage (Azure SQL Database)
+title: sys. database_usage (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.service: sql-database
@@ -20,33 +21,33 @@ ms.assetid: be6820de-60bf-4ddd-ace7-4077893d630f
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 4b68fbc20fb220af49036890edc2b67d1a4f7b65
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c72973c21b2e660667b2bed31d771f3ce19c43b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724677"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455257"
 ---
 # <a name="sysdatabase_usage-azure-sql-database"></a>sys.database_usage (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  **注意：這僅適用于 Azure SQL Database V11。**  
+  **注意：這只適用于 Azure SQL Database V11。**  
   
  列出伺服器上資料庫的數目、類型和持續時間 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。  
   
- [ **Sys.databases database_usage** ] 視圖包含下列資料行。  
+ **Sys. database_usage** view 包含下列資料行。  
   
 |資料行名稱|描述|  
 |-----------------|-----------------|  
 |time|使用事件發生的日期。|  
-|sku|資料庫的服務層級類型： **Web**、 **Business**、 **Basic**、 **Standard**、 **Premium**|  
+|sku|資料庫的服務層類型： **Web**、 **Business**、 **Basic**、 **Standard**、 **Premium**|  
 |quantity|當天存在之 SKU 類型資料庫的數目上限。|  
   
 ## <a name="permissions"></a>權限  
- 此視圖的唯讀存取權可供所有具有連接到**master**資料庫之許可權的使用者使用。  
+ 此視圖的唯讀存取權可供具有連接 **master** 資料庫之許可權的所有使用者使用。  
   
 ## <a name="remarks"></a>備註  
- **Database_usage** view 會針對訂閱的每一天傳回一個資料列。  
+ **Sys. database_usage** view 會針對您的訂用帳戶的每一天，各傳回一個資料列。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Database 定價詳細資料](https://go.microsoft.com/fwlink/?LinkID=394978)   

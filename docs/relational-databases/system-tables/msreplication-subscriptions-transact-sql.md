@@ -1,5 +1,6 @@
 ---
-title: MSreplication_subscriptions （Transact-sql） |Microsoft Docs
+description: MSreplication_subscriptions (Transact-SQL)
+title: MSreplication_subscriptions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,23 +18,23 @@ helpviewer_keywords:
 ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4d0ec6418e25b59afb3a82ed8b6b97f4e2ceadc6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1f8af3b4666556e41da1e48917c584e41dbddedd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889463"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454596"
 ---
 # <a name="msreplication_subscriptions-transact-sql"></a>MSreplication_subscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSreplication_subscriptions**資料表會針對服務本機訂閱者資料庫的每個散發代理程式，各包含一個複寫資訊資料列。 這份資料表儲存在訂閱資料庫中。  
+  **MSreplication_subscriptions**資料表會針對服務本機訂閱者資料庫的每個散發代理程式，各包含一列複寫資訊。 這份資料表儲存在訂閱資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**publisher**|**sysname**|發行者的名稱。|  
 |**publisher_db**|**sysname**|發行者資料庫的名稱。|  
-|**發行集**|**sysname**|發行集的名稱。|  
+|**出版**|**sysname**|發行集的名稱。|  
 |**independent_agent**|**bit**|指出這個發行集是否有獨立的散發代理程式。|  
 |**subscription_type**|**int**|訂閱的類型：<br /><br /> 0 = 發送。<br /><br /> 1 = 提取。<br /><br /> 2 = 匿名。|  
 |**distribution_agent**|**sysname**|散發代理程式的名稱。|  
@@ -48,7 +49,7 @@ ms.locfileid: "85889463"
   
 ## <a name="see-also"></a>另請參閱  
  [複寫資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [&#40;Transact-sql&#41;的複寫視圖](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的複寫視圖 ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_helpsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   
   

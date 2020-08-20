@@ -1,5 +1,6 @@
 ---
-title: CONTAINSTABLE （Transact-sql） |Microsoft Docs
+description: CONTAINSTABLE (Transact-SQL)
+title: CONTAINSTABLE (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2015
 ms.prod: sql
@@ -33,19 +34,19 @@ ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3107dbb5771731fd15bb1432b2a180af612c86fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ae9077610031075f71564eb5938b2a1415842827
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790446"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454790"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  針對資料行傳回含有零個、一個或多個資料列的資料表，這些資料行包含與單一文字或詞組的精確或模糊 (較不精確) 相符、單字彼此在一定距離之間的接近度，或加權相符。 CONTAINSTABLE 用於 SELECT 語句的[from 子句](../../t-sql/queries/from-transact-sql.md)中 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，其參考方式就像是一般資料表名稱一樣。 它會在包含以字元為基礎之資料類型的全文檢索索引資料行上執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文檢索搜尋。  
+  針對資料行傳回含有零個、一個或多個資料列的資料表，這些資料行包含與單一文字或詞組的精確或模糊 (較不精確) 相符、單字彼此在一定距離之間的接近度，或加權相符。 CONTAINSTABLE 可用於 SELECT 語句的 [FROM 子句](../../t-sql/queries/from-transact-sql.md) 中 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，並以一般資料表名稱的形式來參考。 它會在包含以字元為基礎之資料類型的全文檢索索引資料行上執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文檢索搜尋。  
   
- CONTAINSTABLE 適用于與[contains](../../t-sql/queries/contains-transact-sql.md)述詞相同的相符專案類型，並使用與 contains 相同的搜尋條件。  
+ CONTAINSTABLE 適用于與 [contains](../../t-sql/queries/contains-transact-sql.md) 述詞相同的比對類型，並且使用與 contains 相同的搜尋條件。  
   
  和 CONTAINS 不同的是，使用 CONTAINSTABLE 的查詢會傳回每個資料列的相關次序值 (RANK) 和全文檢索索引鍵 (KEY)。  如需有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所支援全文檢索搜尋形式的資訊，請參閱[使用全文檢索搜尋進行查詢](../../relational-databases/search/query-with-full-text-search.md)。  
   
@@ -114,9 +115,9 @@ CONTAINSTABLE
   
 ## <a name="arguments"></a>引數  
  *table*  
- 這是已經過全文檢索索引處理的資料表名稱。 *資料表*可以是一、兩個、三個或四個部分的資料庫物件名稱。 當查詢檢視時，只能包含一個全文檢索索引基底資料表。  
+ 這是已經過全文檢索索引處理的資料表名稱。 *資料表* 可以是一、兩個、三個或四部分的資料庫物件名稱。 當查詢檢視時，只能包含一個全文檢索索引基底資料表。  
   
- *資料表*無法指定伺服器名稱，而且無法用於針對連結伺服器的查詢。  
+ *資料表* 不能指定伺服器名稱，也不能在針對連結伺服器的查詢中使用。  
   
  *column_name*  
  這是為了全文檢索搜尋而進行索引處理的一個或多個資料行名稱。 資料行可為以下類型：**char**、**varchar**、**nchar**、**nvarchar**、**text**、**ntext**、**image**、**xml**、**varbinary** 或 **varbinary(max)** 。  
@@ -125,29 +126,29 @@ CONTAINSTABLE
  指出您可以指定多個資料行，各資料行用逗號分隔。 *column_list* 必須括在括號中。 除非已指定 *language_term*，否則 *column_list* 之所有資料行的語言都必須相同。  
   
  \*  
- 指定*資料表*中的所有全文檢索索引資料行都應該用來搜尋指定的搜尋條件。 除非已指定 *language_term*，否則資料表之所有資料行的語言都必須相同。  
+ 指定 *資料表* 中的所有全文檢索索引資料行都應該用來搜尋給定的搜尋條件。 除非已指定 *language_term*，否則資料表之所有資料行的語言都必須相同。  
   
  LANGUAGE *language_term*  
- 這是在查詢過程中，其資源將用於斷詞、詞幹分析、同義字和非搜尋字（或[停用字詞](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)）移除的語言。 這個參數是選擇性的，可以指定成對應於語言地區設定識別碼 (LCID) 的字串、整數或十六進位值。 如果指定 *language_term*，系統就會將它所代表的語言套用至搜尋條件的所有項。 如果未指定任何值，就會使用資料行全文檢索語言。  
+ 這是將用於斷詞、詞幹分析、同義字及非搜尋字 (或 [停用字詞](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) 移除作為查詢一部分的語言。 這個參數是選擇性的，可以指定成對應於語言地區設定識別碼 (LCID) 的字串、整數或十六進位值。 如果指定 *language_term*，系統就會將它所代表的語言套用至搜尋條件的所有項。 如果未指定任何值，就會使用資料行全文檢索語言。  
   
  如果不同語言的文件當做二進位大型物件 (BLOB) 一起儲存在單一資料行中，給定文件的地區設定識別碼 (LCID) 會判斷要建立其內容索引所使用的語言。 查詢這類資料行時，指定 *LANGUAGE**language_term* 可以增加完全相符的機率。  
   
  當指定為字串時， *language_term*對應到[sys.sys語言](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)相容性檢視中的**alias**資料行值。  字串必須以單引號括住，如 '*language_term*'。 當指定為整數時，*language_term* 是用於識別語言的實際 LCID。 當指定為十六進位值時，*language_term* 是 0x，後面接著 LCID 的十六進位值。 十六進位值不能超出 8 位數，開頭的零也包括在內。  
   
- 如果這個值是雙位元組字集（DBCS）格式， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將它轉換成 Unicode。  
+ 如果這個值是雙位元組字集 (DBCS) 格式，[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將其轉換成 Unicode。  
   
  如果指定的語言無效，或尚未安裝對應於這個語言的資源，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會傳回錯誤。 若要使用中性語言資源，請將 0x0 指定為 *language_term*。  
   
  *top_n_by_rank*  
- 指定只傳回*n*個最高等級的相符專案（遞減順序）。 只有在指定整數值*n*時，才適用。 如果結合 *top_n_by_rank* 與其他參數，則查詢所傳回的資料列數目會少於實際符合所有述詞的資料列數目。 *top_n_by_rank*可讓您僅重新叫用最相關的叫用，以提高查詢效能。  
+ 指定只傳回 *n* 個最高等級的相符專案（以遞減順序）。 只有在指定了整數值 *n*時才適用。 如果結合 *top_n_by_rank* 與其他參數，則查詢所傳回的資料列數目會少於實際符合所有述詞的資料列數目。 *top_n_by_rank* 可讓您只重新叫用最相關的叫用來提高查詢效能。  
   
  <contains_search_condition>  
- 指定要在 *column_name* 中搜尋的文字，以及要比對的條件。 如需搜尋條件的詳細資訊，請參閱[CONTAINS &#40;transact-sql&#41;](../../t-sql/queries/contains-transact-sql.md)。  
+ 指定要在 *column_name* 中搜尋的文字，以及要比對的條件。 如需搜尋條件的詳細資訊，請參閱 [CONTAINS &#40;transact-sql&#41;](../../t-sql/queries/contains-transact-sql.md)。  
   
 ## <a name="remarks"></a>備註  
  全文檢索述詞與函數會在 FROM 述詞中隱含的單一資料表上處理。 若要在多個資料表上進行搜尋，請使用 FROM 子句中聯結的資料表，在兩個或多個資料表之產品的結果集上進行搜尋。  
   
- 傳回的資料表有一個名稱為**KEY**的資料行，其中包含全文檢索索引鍵值。 每個全文檢索索引資料表都有一個資料行，其值保證是唯一的，而且在索引**鍵**資料行中傳回的值，是符合包含搜尋條件中所指定之選取條件之資料列的全文檢索索引鍵值。 從 OBJECTPROPERTYEX 函數取得的**TableFulltextKeyColumn**屬性會提供此唯一索引鍵資料行的識別。 若要取得與全文檢索索引之全文檢索索引鍵相關聯之資料行的識別碼，請使用**sys.databases fulltext_indexes**。 如需詳細資訊，請參閱[fulltext_indexes &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)。  
+ 傳回的資料表有一個名為 **key** 的資料行，其中包含全文檢索索引鍵值。 每個全文檢索索引資料表都有一個資料行，其值保證是唯一的，而且在索引 **鍵** 資料行中傳回的值，是符合包含搜尋條件中所指定的選取準則之資料列的全文檢索索引鍵值。 從 OBJECTPROPERTYEX 函數取得的 **TableFulltextKeyColumn** 屬性提供此唯一索引鍵資料行的識別。 若要取得與全文檢索索引之全文檢索索引鍵相關聯之資料行的識別碼，請使用 **sys. fulltext_indexes**。 如需詳細資訊，請參閱 [sys. fulltext_indexes &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)。  
   
  若要取得原始資料表中您想要的資料列，請指定含有 CONTAINSTABLE 資料列的聯結。 使用 CONTAINSTABLE 的 SELECT 陳述式之 FROM 子句的一般形式如下：  
   
@@ -158,7 +159,7 @@ FROM table AS FT_TBL INNER JOIN
    ON FT_TBL.unique_key_column = KEY_TBL.[KEY];  
 ```  
   
- CONTAINSTABLE 所產生的資料表包含一個名為**RANK**的資料行。 **次序**資料行是每個資料列的值（從0到1000），表示資料列與選取準則相符的程度。 SELECT 陳述式通常利用下列其中一種方法來使用這個等級值：  
+ CONTAINSTABLE 所產生的資料表包含一個名為 **RANK**的資料行。 **RANK**資料行是一個值 (從0到1000的) ，分別指出資料列符合選取準則的程度。 SELECT 陳述式通常利用下列其中一種方法來使用這個等級值：  
   
 -   在 ORDER BY 子句中，傳回等級最高的資料列做為資料表中前面的資料列。  
   
@@ -170,7 +171,7 @@ FROM table AS FT_TBL INNER JOIN
 ## <a name="examples"></a>範例  
   
 ### <a name="a-simple-example"></a>A. 簡單範例  
- 下列範例會建立並填入兩個數據行的簡單資料表，其中列出3個縣/市和其旗標中的色彩。 它會建立並填入資料表的全文檢索目錄和索引。 然後會示範**CONTAINSTABLE**語法。 這個範例會示範當搜尋值符合多次時，次序值如何增加高。 在最後一個查詢中，同時包含綠色和黑色的坦尚尼亞，其順位高於僅包含其中一個查詢色彩的。  
+ 下列範例會建立並填入兩個數據行的簡單資料表，並在其旗標中列出3個縣（市）和色彩。 它會建立並填入資料表上的全文檢索目錄和索引。 然後會示範 **CONTAINSTABLE** 語法。 此範例示範當搜尋值多次符合時，排名值的成長方式。 在最後一個查詢中，包含綠色和黑色的坦尚尼亞具有高於義大利的等級，其中只包含其中一個查詢的色彩。  
   
 ```  
 CREATE TABLE Flags (Country nvarchar(30) NOT NULL, FlagColors varchar(200));  
@@ -278,10 +279,10 @@ GO
 ```  
   
 > [!NOTE]  
->  使用 top_n_by_rank 不需要*language_term* argumentis 語言 *。*  
+>  使用 top_n_by_rank 不需要 argumentis 語言 *language_term* *。*  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 RANK 限制搜尋結果](../../relational-databases/search/limit-search-results-with-rank.md)   
+ [以排名限制搜尋結果](../../relational-databases/search/limit-search-results-with-rank.md)   
  [使用全文檢索搜尋進行查詢](../../relational-databases/search/query-with-full-text-search.md)   
  [建立全文檢索搜尋查詢 &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   

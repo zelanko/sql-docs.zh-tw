@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_exec_query_optimizer_info （Transact-sql） |Microsoft Docs
+description: sys.dm_exec_query_optimizer_info (Transact-SQL)
+title: sys. dm_exec_query_optimizer_info (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,11 +21,12 @@ ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6febd2233e15794bd72874bd92aab6e31c0266f1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6ca14221b1d7c8555c03cfc2a976cd09ec562687
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005219"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454990"
 ---
 # <a name="sysdm_exec_query_optimizer_info-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,22 +34,22 @@ ms.locfileid: "86005219"
   傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢最佳化工具作業的詳細統計資料。 您可以使用這個檢視來調整工作負載，找出查詢最佳化的問題或可供改善之處。 例如，您可以使用最佳化總數、經過時間值和最終成本值，比較目前工作負載的查詢最佳化以及調整過程中所觀察到的任何變化。 部分計數器只提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部診斷使用的相關資料。 這些計數器會標示「僅供內部使用」。  
   
 > [!NOTE]  
->  若要從或呼叫此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用**dm_pdw_nodes_exec_query_optimizer_info**的名稱。  
+>  若要從或呼叫這個 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用名稱 **sys. dm_pdw_nodes_exec_query_optimizer_info**。  
   
 |名稱|資料類型|描述|  
 |----------|---------------|-----------------|  
-|**counter**|**nvarchar(4000)**|最佳化工具統計資料事件的名稱。|  
+|**計數器**|**nvarchar(4000)**|最佳化工具統計資料事件的名稱。|  
 |**occurrence**|**bigint**|這個計數器最佳化事件的出現次數。|  
 |**value**|**float**|每一事件發生的平均屬性值。|  
-|**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
+|**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在之節點的識別碼。|  
   
 ## <a name="permissions"></a>權限  
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 許可權。   
-在高階 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 層級上，需要 `VIEW DATABASE STATE` 資料庫的許可權。 在 [ [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
+在進階層中 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ，需要 `VIEW DATABASE STATE` 資料庫中的許可權。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準和基本層中，需要  **伺服器管理員** 或 **Azure Active Directory 系統管理員** 帳戶。   
     
 ## <a name="remarks"></a>備註  
- **sys. dm_exec_query_optimizer_info**包含下列屬性（計數器）。 所有發生值會累計並在系統重新啟動時設為 0。 所有值欄位的值於系統重新啟動時設為 NULL。 所有指定平均值的值資料行值會使用來自同一資料列的發生值作為平均值計算中的分母。 所有的查詢優化都會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 判斷**dm_exec_query_optimizer_info**的變更時進行測量，包括使用者和系統產生的查詢。 執行已經快取的計畫並不會變更**dm_exec_query_optimizer_info**中的值，只有優化才有意義。  
+ **sys. dm_exec_query_optimizer_info** 包含 (計數器) 的下列屬性。 所有發生值會累計並在系統重新啟動時設為 0。 所有值欄位的值於系統重新啟動時設為 NULL。 所有指定平均值的值資料行值會使用來自同一資料列的發生值作為平均值計算中的分母。 當判斷 dm_exec_query_optimizer_info 的變更時，會測量所有的查詢優化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，包括使用者和系統產生的查詢。 **dm_exec_query_optimizer_info** 執行已快取的計畫不會變更 **dm_exec_query_optimizer_info**中的值，只會有很大的優化。  
   
 |計數器|出現次數|值|  
 |-------------|----------------|-----------|  
@@ -81,7 +83,7 @@ ms.locfileid: "86005219"
 |聯結提示|聯結提示強制執行聯結演算法的次數。|不適用|  
 |檢視參考|檢視在查詢中被參考的次數。|不適用|  
 |遠端查詢|查詢參考最少一個遠端資料來源 (如具有四部分名稱的資料表或 OPENROWSET 結果) 的最佳化數目。|不適用|  
-|最大 DOP|最佳化的總數。|最佳化計畫的平均有效 MAXDOP 值。 根據預設，有效 MAXDOP 是由 [平行處理原則**的最大程度**] 伺服器設定選項所決定，而且可能會根據 MAXDOP 查詢提示的值來覆寫特定查詢。|  
+|最大 DOP|最佳化的總數。|最佳化計畫的平均有效 MAXDOP 值。 依預設，有效的 MAXDOP 是由 [平行處理原則的 **最大程度** ] 伺服器設定選項所決定，而且可以針對特定查詢以 MAXDOP 查詢提示的值加以覆寫。|  
 |最大遞迴層級|查詢提示指定 MAXRECURSION 層級大於 0 的最佳化數目。|查詢提示指定最大遞迴層級之最佳化的平均 MAXRECURSION 層級。|  
 |索引檢視已載入|僅供內部使用|僅供內部使用|  
 |相符的索引檢視|與一或多份索引檢視相符的最佳化數目。|相符檢視的平均數。|  
@@ -127,7 +129,7 @@ SELECT (SELECT CAST (occurrence AS float) FROM sys.dm_exec_query_optimizer_info 
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [執行相關的動態管理檢視和函式 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

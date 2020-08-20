@@ -1,5 +1,6 @@
 ---
-title: IHcolumns （Transact-sql） |Microsoft Docs
+description: IHcolumns (Transact-SQL)
+title: IHcolumns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c1870e1d826fef593f5458004d424a02185028e2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0bc33419b8bb710b223150e1880002ff49681870
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890316"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454693"
 ---
 # <a name="ihcolumns-transact-sql"></a>IHcolumns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85890316"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|識別已發行的資料行。|  
-|**publishercolumn_id**|**int**|將已發行資料行與儲存在[IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md)系統資料表中的資料行中繼資料產生關聯。|  
+|**publishercolumn_id**|**int**|將已發行的資料行與儲存在 [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) 系統資料表中的資料行中繼資料產生關聯。|  
 |**name**|**sysname**|指定資料行名稱。|  
 |**article_id**|**int**|識別欄位所屬的發行項。|  
 |**column_ordinal**|**int**|依序識別欄位。|  
@@ -42,12 +43,12 @@ ms.locfileid: "85890316"
 |**mapped_length**|**bigint**|訂閱者的資料行長度。|  
 |**mapped_prec**|**int**|訂閱者的資料行有效位數。|  
 |**mapped_scale**|**int**|訂閱者的資料行小數位數。|  
-|**mapped_nullable**|**bit**|指出訂閱者端的資料行是否接受 Null 值，其中**1**表示接受 null 值。|  
+|**mapped_nullable**|**bit**|指出訂閱者端的資料行是否接受 Null 值，其中 **1** 表示接受 null 值。|  
   
 ## <a name="see-also"></a>另請參閱  
  [異質資料庫複寫](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [複寫資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [&#40;Transact-sql&#41;的複寫視圖](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的複寫視圖 ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_articlecolumn &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sysarticlecolumns &#40;System View&#41; &#40;Transact-sql&#41;](../../relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md)   
  [sysarticlecolumns &#40;Transact-sql&#41;](../../relational-databases/system-tables/sysarticlecolumns-transact-sql.md)  

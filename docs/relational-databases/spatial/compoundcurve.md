@@ -1,4 +1,5 @@
 ---
+description: CompoundCurve
 title: CompoundCurve | Microsoft Docs
 ms.date: 07/16/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ada315623e41e188a93eb7bef8df2295e437429
-ms.sourcegitcommit: 56f6892b3795da308d226d4b3c5c859ead2e830a
+ms.openlocfilehash: 83f1b6753aa679c5e54fd14475ab30f2d498a23e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86438190"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455428"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

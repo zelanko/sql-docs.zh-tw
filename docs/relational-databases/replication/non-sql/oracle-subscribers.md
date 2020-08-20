@@ -1,4 +1,5 @@
 ---
+description: Oracle 訂閱者
 title: Oracle 訂閱者 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 40942d92f30790f896888bd71cf4523a14d1cc48
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3e7b6abc6b235950fef107a870e53d827dee6f5e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883039"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455598"
 ---
 # <a name="oracle-subscribers"></a>Oracle 訂閱者
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -86,7 +87,7 @@ ms.locfileid: "85883039"
   
     -   請確定空白字串尚未做為資料行值插入已發行的資料表中。  
   
-    -   如果通知「散發代理程式」記錄中的錯誤並繼續處理是可接受的，則請使用「散發代理程式」的 **-SkipErrors** 參數。 指定 Oracle 錯誤碼 1400 ( **-SkipErrors1400**)。  
+    -   如果通知「散發代理程式」記錄中的錯誤並繼續處理是可接受的，則請使用「散發代理程式」的 **-SkipErrors** 參數。 指定 Oracle 錯誤碼 1400 (**-SkipErrors1400**)。  
   
     -   修改已產生的建立資料表指令碼，同時從可能包含了與空白字串相關聯的任何字元資料行中移除 NOT NULL 屬性，並且使用 @creation_script sp_addarticle [的](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)參數為發行項提供做為自訂建立指令碼的已修改指令碼。  
   
@@ -124,7 +125,7 @@ ms.locfileid: "85883039"
 |**nvarchar(1-1000)**|VARCHAR2(1-2000)|  
 |**nvarchar(1001-4000)**|NCLOB|  
 |**nvarchar(max)**|NCLOB|  
-|**real**|real|  
+|**real**|REAL|  
 |**smalldatetime**|日期|  
 |**smallint**|NUMBER(5,0)|  
 |**smallmoney**|NUMBER(10,4)|  

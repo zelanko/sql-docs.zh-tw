@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_db_xtp_nonclustered_index_stats （Transact-sql） |Microsoft Docs
+description: sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)
+title: sys. dm_db_xtp_nonclustered_index_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -20,12 +21,12 @@ ms.assetid: d55ba31c-296c-419b-9c4b-c126e0a3d156
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7631a10e909eb0adae9d38b89c06632e2d013c2
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: ab0d96196bf77489b7176f03ed59552458deec75
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442458"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455015"
 ---
 # <a name="sysdm_db_xtp_nonclustered_index_stats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "87442458"
   
  大量重試表示發生並行問題，請連絡 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 支援人員。  
   
- 如需有關記憶體優化的非叢集索引的詳細資訊，請參閱[SQL Server 記憶體中 OLTP 內部總覽](https://t.co/T6zToWc6y6)，第17頁。  
+ 如需記憶體優化的非叢集索引的詳細資訊，請參閱 [SQL Server 記憶體內部 OLTP 內部總覽](https://t.co/T6zToWc6y6)，第17頁。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  

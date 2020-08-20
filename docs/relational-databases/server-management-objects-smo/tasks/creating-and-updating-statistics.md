@@ -1,4 +1,5 @@
 ---
+description: 建立和更新統計資料
 title: 建立和更新統計資料
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,11 +14,12 @@ ms.reviewer: matteot
 ms.custom: seo-dt-2019
 ms.date: 06/04/2020
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f916833f97db69370a4a01eb7d796d4016c00c9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3939942c7655206a448797f0258d883eac904fef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001235"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455494"
 ---
 # <a name="create-and-update-statistics"></a>建立和更新統計資料
 
@@ -25,11 +27,11 @@ ms.locfileid: "86001235"
 
 在 SMO 中，有關在資料庫中處理查詢的統計資訊可以利用 <xref:Microsoft.SqlServer.Management.Smo.Statistic> 物件來收集。
 
-您可以使用和物件來建立任何資料行的統計 <xref:Microsoft.SqlServer.Management.Smo.Statistic> 資料 <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn> 。 您可以執行 <xref:Microsoft.SqlServer.Management.Smo.Statistic.Update%2A> 方法來更新 <xref:Microsoft.SqlServer.Management.Smo.Statistic> 物件中的統計資料。 結果則可在查詢最佳化工具中檢視。
+您可以使用和物件，為任何資料行建立統計 <xref:Microsoft.SqlServer.Management.Smo.Statistic> 資料 <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn> 。 您可以執行 <xref:Microsoft.SqlServer.Management.Smo.Statistic.Update%2A> 方法來更新 <xref:Microsoft.SqlServer.Management.Smo.Statistic> 物件中的統計資料。 結果則可在查詢最佳化工具中檢視。
 
 ## <a name="example"></a>範例
 
-若要使用所提供的任何程式碼範例，您可以選擇程式設計環境、程式設計範本，以及用來建立應用程式的程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。
+若要使用所提供的任何程式碼範例，您可以選擇要在其中建立應用程式的程式設計環境、程式設計範本和程式設計語言。 如需詳細資訊，請參閱 [Visual Studio .NET 中的建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。
 
 ## <a name="create-and-update-statistics-in-visual-basic"></a>在 Visual Basic 中建立和更新統計資料
 
