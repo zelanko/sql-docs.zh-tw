@@ -1,5 +1,6 @@
 ---
-title: ISSAsynchStatus （Native Client OLE DB 提供者） |Microsoft Docs
+description: 'ISSAsynchStatus (Native Client OLE DB 提供者) '
+title: ISSAsynchStatus (Native Client OLE DB 提供者) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,17 +17,17 @@ ms.assetid: c643f09f-9ccc-4d8b-9243-3cde86c2bd46
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49d409c97e4ae07d4953610e8e6ba51933574728
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 340360c49d55d62e38c908e914cd81e7fab6d766
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246893"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490817"
 ---
-# <a name="issasynchstatus-native-client-ole-db-provider"></a>ISSAsynchStatus （Native Client OLE DB 提供者）
+# <a name="issasynchstatus-native-client-ole-db-provider"></a>ISSAsynchStatus (Native Client OLE DB 提供者) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  **ISSAsynchStatus**會公開對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 非同步作業的支援。 這是選擇性的介面，繼承自核心 OLE DB 介面**IDBAsynchStatus**。 除了繼承自 **IDBAsynchStatus** 的 **Abort** 和 **GetStatus** 方法之外，**ISSAsynchStatus** 還提供一個新方法，用來等到非同步作業完成或發生逾時。  
+  **ISSAsynchStatus** 會公開 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 非同步作業的支援。 這是選擇性的介面，繼承自核心 OLE DB 介面 **>idbasynchstatus**。 除了繼承自 **IDBAsynchStatus** 的 **Abort** 和 **GetStatus** 方法之外，**ISSAsynchStatus** 還提供一個新方法，用來等到非同步作業完成或發生逾時。  
   
 |方法|描述|  
 |------------|-----------------|  

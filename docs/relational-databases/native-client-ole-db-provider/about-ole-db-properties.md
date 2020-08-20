@@ -1,4 +1,5 @@
 ---
+description: 關於 SQL Server Native Client OLE DB 屬性
 title: 關於 OLE DB 屬性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: 0b36a61e-b542-400d-a3d2-e6f643caf2c6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 87f6d05fa4d58f6ba7ca94476a4bf5b36bb09226
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b7c6e88a9f8a5083e18744e954a6063cda076750
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246857"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490723"
 ---
 # <a name="about-sql-server-native-client-ole-db-properties"></a>關於 SQL Server Native Client OLE DB 屬性
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "87246857"
   
  每個屬性 (Property) 都有一個值、類型、描述和讀取/寫入屬性 (Attribute)，而且資料列集屬性 (Property) 還會包含一個指標，表示它是否能夠以逐資料行的方式套用。  
   
- 屬性是由 GUID 以及代表屬性識別碼的整數所識別。 屬性集是共用相同 GUID 之所有屬性的集合。 除了預先定義的 OLE DB 屬性集以外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者也會在其中執行提供者特定的屬性集和屬性。 每個屬性都屬於一或多個屬性群組。 屬性群組是套用至特定物件之所有屬性的群組。 某些屬性群組包括初始化屬性群組、資料來源屬性群組、工作階段屬性群組、資料列集屬性群組、資料表屬性群組和資料行屬性群組。 其中每個屬性群組都具有屬性。  
+ 屬性是由 GUID 以及代表屬性識別碼的整數所識別。 屬性集是共用相同 GUID 之所有屬性的集合。 除了預先定義的 OLE DB 屬性集以外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會在其中執行提供者特定的屬性集和屬性。 每個屬性都屬於一或多個屬性群組。 屬性群組是套用至特定物件之所有屬性的群組。 某些屬性群組包括初始化屬性群組、資料來源屬性群組、工作階段屬性群組、資料列集屬性群組、資料表屬性群組和資料行屬性群組。 其中每個屬性群組都具有屬性。  
   
  設定屬性值包括：  
   

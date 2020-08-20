@@ -1,5 +1,6 @@
 ---
-title: sp_enum_proxy_for_subsystem （Transact-sql） |Microsoft Docs
+description: sp_enum_proxy_for_subsystem (Transact-SQL)
+title: sp_enum_proxy_for_subsystem (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 21df62ff7ab60933281ca0dce0e7bc2bc2b3b7c1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f484764e05a23594c32494934a9c366154e02aeb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891921"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489419"
 ---
 # <a name="sp_enum_proxy_for_subsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
 
@@ -43,16 +44,16 @@ sp_enum_proxy_for_subsystem
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @proxy_id = ] proxy_id`要列出資訊的 proxy 識別碼。 *Proxy_id*是**int**，預設值是 Null。 可以指定*識別碼*或*proxy_name* 。  
+`[ @proxy_id = ] proxy_id` 要列出資訊之 proxy 的識別碼。 *Proxy_id*是**int**，預設值是 Null。 可以指定 *識別碼* 或 *proxy_name* 。  
   
-`[ @proxy_name = ] 'proxy_name'`要列出資訊之 proxy 的名稱。 *Proxy_name*是**sysname**，預設值是 Null。 可以指定*識別碼*或*proxy_name* 。  
+`[ @proxy_name = ] 'proxy_name'` 要列出資訊的 proxy 名稱。 *Proxy_name*是**sysname**，預設值是 Null。 可以指定 *識別碼* 或 *proxy_name* 。  
   
-`[ @subsystem_id = ] subsystem_id`要列出資訊的子系統識別碼。 *Subsystem_id*是**int**，預設值是 Null。 可以指定*subsystem_id*或*subsystem_name* 。  
+`[ @subsystem_id = ] subsystem_id` 要列出資訊之子系統的識別碼。 *Subsystem_id*是**int**，預設值是 Null。 您可以指定 *subsystem_id* 或 *subsystem_name* 。  
   
-`[ @subsystem_name = ] 'subsystem_name'`要列出資訊之子系統的名稱。 *Subsystem_name*是**sysname**，預設值是 Null。 可以指定*subsystem_id*或*subsystem_name* 。  
+`[ @subsystem_name = ] 'subsystem_name'` 要列出資訊之子系統的名稱。 *Subsystem_name*是**sysname**，預設值是 Null。 您可以指定 *subsystem_id* 或 *subsystem_name* 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="result-sets"></a>結果集  
   
@@ -65,16 +66,16 @@ sp_enum_proxy_for_subsystem
 | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>備註  
- 未提供任何參數時， **sp_enum_proxy_for_subsystem**會列出每個子系統之實例中所有 proxy 的相關資訊。  
+ 未提供任何參數時， **sp_enum_proxy_for_subsystem** 會針對每個子系統列出實例中所有 proxy 的相關資訊。  
   
- 當提供 proxy 識別碼或 proxy 名稱時， **sp_enum_proxy_for_subsystem**會列出 proxy 可存取的子系統。 提供子系統識別碼或子系統名稱時， **sp_enum_proxy_for_subsystem**會列出可存取該子系統的 proxy。  
+ 當提供 proxy 識別碼或 proxy 名稱時， **sp_enum_proxy_for_subsystem** 會列出 proxy 可存取的子系統。 提供子系統識別碼或子系統名稱時， **sp_enum_proxy_for_subsystem** 會列出可存取該子系統的 proxy。  
   
  當同時提供 Proxy 資訊和子系統資訊時，如果指定的 Proxy 有權存取指定的子系統，結果集會傳回一個資料列。  
   
- 這個預存程式位於**msdb**中。  
+ 這個預存程式位於 **msdb**中。  
   
 ## <a name="permissions"></a>權限  
- 此程式的執行許可權預設為**系統管理員（sysadmin** ）固定伺服器角色的成員。  
+ 此程式的執行許可權預設為 **系統管理員（sysadmin** ）固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  
   

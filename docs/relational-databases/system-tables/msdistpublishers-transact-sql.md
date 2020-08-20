@@ -1,5 +1,6 @@
 ---
-title: Msdb.dbo.msdistpublishers （Transact-sql） |Microsoft Docs
+description: MSdistpublishers (Transact-SQL)
+title: MSdistpublishers (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 31844099-4b33-4dc9-84b4-bac70aa82598
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 06335bd3ddc5e656d32cf481cfa181143a79cb31
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ccbc9a47974a0bbd5429cc8b92cd1f5bbffae792
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889985"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488794"
 ---
 # <a name="msdistpublishers-transact-sql"></a>MSdistpublishers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  **Msdb.dbo.msdistpublishers**資料表會針對本機散發者所支援的每個遠端發行者，各包含一個資料列。 此資料表會儲存在**msdb**資料庫中。  
+  **MSdistpublishers**資料表會針對本機散發者所支援的每個遠端發行者，各包含一個資料列。 此資料表儲存在 **msdb** 資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -34,13 +35,13 @@ ms.locfileid: "85889985"
 |**distribution_db**|**sysname**|散發資料庫的名稱。|  
 |**working_directory**|**nvarchar(255)**|用來儲存發行集資料和結構描述檔案的工作目錄名稱。|  
 |**security_mode**|**int**|在散發者端實作的安全性模式：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。<br /><br /> **1** = Windows 驗證。|  
-|**登入**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入識別碼。|  
-|**password**|**Nvarchar （524）**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的密碼 (加密)。|  
+|**登錄**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入識別碼。|  
+|**password**|**Nvarchar (524) **|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的密碼 (加密)。|  
 |**active**|**bit**|指出本機散發者是否正由遠端發行者所使用。|  
-|**trusted**|**bit**|指出遠端發行者所用的密碼，是否與本機散發者一樣：<br /><br /> **0** = 遠端發行者需要有密碼，才能連接到散發者。<br /><br /> **1** = 不需要密碼。|  
+|**trusted**|**bit**|指出遠端發行者所用的密碼，是否與本機散發者一樣：<br /><br /> **0** = 遠端發行者端需要有密碼，才能連接到「散發者」。<br /><br /> **1** = 不需要密碼。|  
 |**third_party**|**bit**|發行者是否為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的一項安裝：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝。**1** = 異質資料源。|  
-|**publisher_type**|**sysname**|發行者類型：<br /><br /> **MSSQLSERVER**  =  MSSQLSERVER [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者.<br /><br /> **Oracle** = 標準的 oracle 發行者。<br /><br /> **ORACLE 閘道**= Oracle 閘道發行者。|  
-|**storage_connection_string**|**Nvarchar （779）**|Azure SQL Database 儲存體連接字串的值。|  
+|**publisher_type**|**sysname**|發行者類型：<br /><br /> **MSSQLSERVER**  =  MSSQLSERVER [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]出版商。<br /><br /> **Oracle** = 標準的 oracle 發行者。<br /><br /> **ORACLE 閘道** = Oracle 閘道發行者。|  
+|**storage_connection_string**|**Nvarchar (779) **|Azure SQL Database 儲存體連接字串的值。|  
 
   
 ## <a name="see-also"></a>另請參閱  

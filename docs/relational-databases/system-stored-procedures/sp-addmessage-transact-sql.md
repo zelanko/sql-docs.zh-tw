@@ -1,5 +1,6 @@
 ---
-title: sp_addmessage （Transact-sql） |Microsoft Docs
+description: sp_addmessage (Transact-SQL)
+title: sp_addmessage (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: adf32fad3c233023529d362cd7382ca6376b3cee
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 86a7c1c41cf9b745efea8b2368d5120f0b03d3ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85877386"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489564"
 ---
 # <a name="sp_addmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  將新的使用者自訂錯誤訊息儲存在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體中。 使用 [ **sp_addmessage** ] 儲存的訊息，可以使用 [ **sys.databases** ] 目錄檢視來查看。  
+  將新的使用者自訂錯誤訊息儲存在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體中。 使用 **sp_addmessage** 儲存的訊息，可以使用 **sys. messages** 目錄檢視來查看。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,20 +43,20 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @msgnum = ] msg_id`這是訊息的識別碼。 *msg_id*是**int** ，預設值是 Null。 使用者自訂錯誤訊息的*msg_id*可以是介於50001和2147483647之間的整數。 *Msg_id*和*語言*的組合必須是唯一的;如果已有指定語言的識別碼，則會傳回錯誤。  
+`[ @msgnum = ] msg_id` 這是訊息的識別碼。 *msg_id* 是 **int** ，預設值是 Null。 使用者自訂錯誤訊息的*msg_id*可以是介於50001到2147483647之間的整數。 *Msg_id*和*language*的組合必須是唯一的;如果指定的語言已經有識別碼，就會傳回錯誤。  
   
-`[ @severity = ]severity`這是錯誤的嚴重性層級。 *嚴重性*是**Smallint** ，預設值是 Null。 有效的層級範圍是 1 到 25。 如需有關嚴重性的詳細資訊，請參閱 [Database Engine 錯誤嚴重性](../../relational-databases/errors-events/database-engine-error-severities.md)。  
+`[ @severity = ]severity` 這是錯誤的嚴重性層級。 *嚴重性* 是 **Smallint** ，預設值是 Null。 有效的層級範圍是 1 到 25。 如需有關嚴重性的詳細資訊，請參閱 [Database Engine 錯誤嚴重性](../../relational-databases/errors-events/database-engine-error-severities.md)。  
   
-`[ @msgtext = ] 'msg'`這是錯誤訊息的文字。 *msg*是**Nvarchar （255）** ，預設值是 Null。  
+`[ @msgtext = ] 'msg'` 這是錯誤訊息的文字。 *msg* 是 **Nvarchar (255) ** ，預設值是 Null。  
   
-`[ @lang = ] 'language'`這是此訊息的語言。 *language*是**sysname** ，預設值是 Null。 因為多個語言可以安裝在同一部伺服器上，所以*language*會指定要在其中寫入每個訊息的語言。 省略*language*時，語言是會話的預設語言。  
+`[ @lang = ] 'language'` 這是此訊息的語言。 *language* 是 **sysname** ，預設值是 Null。 由於多個語言可以安裝在相同的伺服器上，因此 *語言* 會指定撰寫每個訊息的語言。 省略 *語言* 時，語言是會話的預設語言。  
   
-`[ @with_log = ] { 'TRUE' | 'FALSE' }`這是指訊息發生時是否要寫入 Windows 應用程式記錄檔。 ** \@ with_log**是**Varchar （5）** ，預設值是 FALSE。 如果是 TRUE，錯誤一律會寫入 Windows 應用程式記錄檔中。 如果是 FALSE，錯誤就不一定會寫入 Windows 應用程式記錄檔中，但隨著錯誤的產生方式而不同，也可能會寫入。 只有**系統管理員（sysadmin** ）伺服器角色的成員可以使用此選項。  
+`[ @with_log = ] { 'TRUE' | 'FALSE' }` 這是指訊息發生時，是否要將訊息寫入 Windows 應用程式記錄檔。 ** \@ with_log**是**Varchar (5) ** ，預設值是 FALSE。 如果是 TRUE，錯誤一律會寫入 Windows 應用程式記錄檔中。 如果是 FALSE，錯誤就不一定會寫入 Windows 應用程式記錄檔中，但隨著錯誤的產生方式而不同，也可能會寫入。 只有 **系統管理員（sysadmin** ）伺服器角色的成員，才能夠使用此選項。  
   
 > [!NOTE]  
 >  如果訊息寫入 Windows 應用程式記錄檔中，它也會寫入 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 錯誤記錄檔中。  
   
-`[ @replace = ] 'replace'`如果指定為字串*replace*，則會以新的郵件內文和嚴重性層級來覆寫現有的錯誤訊息。 *replace*是**Varchar （7）** ，預設值是 Null。 如果*msg_id*已經存在，就必須指定此選項。 如果您取代美式英文訊息，則會取代所有其他語言中具有相同*msg_id*的所有訊息的嚴重性層級。  
+`[ @replace = ] 'replace'` 如果指定為字串 *取代*，則會使用新的郵件內文和嚴重性層級來覆寫現有的錯誤訊息。 *replace* 是 **Varchar (7) ** ，預設值是 Null。 如果 *msg_id* 已存在，則必須指定此選項。 如果您取代了美國英文訊息，則會以相同 *msg_id*的所有其他語言中的所有訊息來取代嚴重性層級。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -75,12 +76,12 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
  由於語言語法差異，當地語系化訊息中的參數號碼可能與原始訊息中的順序不符。  
   
 ## <a name="permissions"></a>權限  
-需要**系統管理員（sysadmin** ）或**serveradmin**固定伺服器角色中的成員資格。  
+需要 **系統管理員（sysadmin** ）或 **serveradmin** 固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-defining-a-custom-message"></a>A. 定義自訂訊息  
- 下列範例會將自訂訊息新增至**sys.databases**。  
+ 下列範例會將自訂訊息新增至 **sys. messages**。  
   
 ```  
 USE master;  

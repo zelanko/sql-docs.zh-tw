@@ -1,5 +1,6 @@
 ---
-title: sp_help_jobs_in_schedule （Transact-sql） |Microsoft Docs
+description: sp_help_jobs_in_schedule (Transact-SQL)
+title: sp_help_jobs_in_schedule (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55dbd9d513383fc4ed299dd56be5022b68f68bac
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2c314f209e1b020598d1a0ab2ef946f2494ca989
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893657"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489363"
 ---
 # <a name="sp_help_jobs_in_schedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,12 +42,12 @@ sp_help_jobs_in_schedule
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @schedule_id = ] schedule_id`要列出資訊的排程識別碼。 *schedule_id*是**int**，沒有預設值。 可以指定*schedule_id*或*schedule_name* 。  
+`[ @schedule_id = ] schedule_id` 要列出資訊的排程識別碼。 *schedule_id* 是 **int**，沒有預設值。 可以指定 *schedule_id* 或 *schedule_name* 。  
   
-`[ @schedule_name = ] 'schedule_name'`要列出資訊的排程名稱。 *schedule_name*是**sysname**，沒有預設值。 可以指定*schedule_id*或*schedule_name* 。  
+`[ @schedule_name = ] 'schedule_name'` 要列出資訊的排程名稱。 *schedule_name* 是 **sysname**，沒有預設值。 可以指定 *schedule_id* 或 *schedule_name* 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="result-sets"></a>結果集  
  傳回下列結果集：  
@@ -56,19 +57,19 @@ sp_help_jobs_in_schedule
 |**job_id**|**uniqueidentifier**|作業的唯一識別碼。|  
 |**originating_server**|**nvarchar(30)**|作業的來源伺服器名稱。|  
 |**name**|**sysname**|作業的名稱。|  
-|**後**|**tinyint**|指出是否啟用作業，以便執行。|  
+|**啟用**|**tinyint**|指出是否啟用作業，以便執行。|  
 |**description**|**nvarchar(512)**|作業的描述。|  
 |**start_step_id**|**int**|應該作為執行起點的作業步驟識別碼。|  
 |**類別**|**sysname**|作業類別目錄。|  
-|**主人**|**sysname**|作業擁有者。|  
-|**notify_level_eventlog**|**int**|這是一個位元遮罩，指出在哪些情況之下，應該將通知事件記錄在 Microsoft Windows 應用程式記錄檔中。 它可以是下列值之一：<br /><br /> **0** = 永不<br /><br /> **1** = 當作業成功時<br /><br /> **2** = 當作業失敗時<br /><br /> **3** = 每次作業完成時（不論作業結果為何）|  
-|**notify_level_email**|**int**|這是一個位元組遮罩，指出在哪些情況之下，應該在作業完成時傳送通知電子郵件。 可能的值與**notify_level_eventlog**相同。|  
-|**notify_level_netsend**|**int**|這是一個位元組遮罩，指出在哪些情況之下，應該在作業完成時傳送網路訊息。 可能的值與**notify_level_eventlog**相同。|  
-|**notify_level_page**|**int**|這是一個位元組遮罩，指出在哪些情況之下，應該在作業完成時傳送頁面。 可能的值與**notify_level_eventlog**相同。|  
+|**擁有者**|**sysname**|作業擁有者。|  
+|**notify_level_eventlog**|**int**|這是一個位元遮罩，指出在哪些情況之下，應該將通知事件記錄在 Microsoft Windows 應用程式記錄檔中。 它可以是下列值之一：<br /><br /> **0** = 永不<br /><br /> **1** = 當作業成功時<br /><br /> **2** = 當作業失敗時<br /><br /> **3** = 每當作業完成時 (，不論工作結果) |  
+|**notify_level_email**|**int**|這是一個位元組遮罩，指出在哪些情況之下，應該在作業完成時傳送通知電子郵件。 可能的值與 **notify_level_eventlog**的值相同。|  
+|**notify_level_netsend**|**int**|這是一個位元組遮罩，指出在哪些情況之下，應該在作業完成時傳送網路訊息。 可能的值與 **notify_level_eventlog**的值相同。|  
+|**notify_level_page**|**int**|這是一個位元組遮罩，指出在哪些情況之下，應該在作業完成時傳送頁面。 可能的值與 **notify_level_eventlog**的值相同。|  
 |**notify_email_operator**|**sysname**|要通知的操作員電子郵件名稱。|  
 |**notify_netsend_operator**|**sysname**|傳送網路訊息時所用的電腦或使用者名稱。|  
 |**notify_page_operator**|**sysname**|傳送呼叫時所用的電腦或使用者名稱。|  
-|**delete_level**|**int**|這是一個位元組遮罩，指出在哪些情況之下，應該在作業完成時刪除作業。 可能的值與**notify_level_eventlog**相同。|  
+|**delete_level**|**int**|這是一個位元組遮罩，指出在哪些情況之下，應該在作業完成時刪除作業。 可能的值與 **notify_level_eventlog**的值相同。|  
 |**date_created**|**datetime**|作業的建立日期。|  
 |**date_modified**|**datetime**|上次修改作業的日期。|  
 |**version_number**|**int**|作業的版本 (每次修改作業時，都會自動更新)。|  
@@ -115,7 +116,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Agent 預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的 SQL Server Agent 預存程式 ](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_attach_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
  [sp_delete_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   

@@ -1,5 +1,6 @@
 ---
-title: 執行命令（Native Client OLE DB 提供者） |Microsoft Docs
+description: " (Native Client OLE DB 提供者執行命令) "
+title: " (Native Client OLE DB 提供者執行命令) |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: bb0b3cbf-fe45-46ba-b2ec-c5a39e3c7081
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4bb82c242e5bf04d0ceb233814bb2f9eeef9281f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d62e574b27887200b86a201b38520e26c83cf878
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247640"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490769"
 ---
 # <a name="executing-a-sql-server-native-client-command"></a>執行 SQL Server Native Client 命令
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

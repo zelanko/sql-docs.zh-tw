@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_os_hosts （Transact-sql） |Microsoft Docs
+description: sys.dm_os_hosts (Transact-SQL)
+title: sys. dm_os_hosts (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a313ff3b-1fe9-421e-b94b-cea19c43b0e5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3e3d49d77dbee94bb365d58b7012c45cdaddf4f7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8e740acbef6a2980c0fed6c27b4d7c892883803b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898794"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489811"
 ---
 # <a name="sysdm_os_hosts-transact-sql"></a>sys.dm_os_hosts (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85898794"
   傳回所有目前在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體登錄的主機。 這份檢視也會傳回這些主機所用的資源。  
   
 > [!NOTE]  
->  若要從或呼叫此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用**dm_pdw_nodes_os_hosts**的名稱。  
+>  若要從或呼叫這個 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用名稱 **sys. dm_pdw_nodes_os_hosts**。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -43,20 +44,20 @@ ms.locfileid: "85898794"
 |**completed_ios_count**|**int**|透過這個主機發出和完成的 I/O 總數。|  
 |**completed_ios_in_bytes**|**bigint**|透過這個主機完成的 I/O 總位元組計數。|  
 |**active_ios_count**|**int**|與這個主機相關而目前在等待完成的 I/O 要求總數。|  
-|**default_memory_clerk_address**|**varbinary(8)**|與這個主機相關聯之記憶體 Clerk 物件的記憶體位址。 如需詳細資訊，請參閱[dm_os_memory_clerks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)。|  
-|**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
+|**default_memory_clerk_address**|**varbinary(8)**|與這個主機相關聯之記憶體 Clerk 物件的記憶體位址。 如需詳細資訊，請參閱 [sys. dm_os_memory_clerks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)。|  
+|**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在之節點的識別碼。|  
   
 ## <a name="permissions"></a>權限
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 許可權。   
-在高階 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 層級上，需要 `VIEW DATABASE STATE` 資料庫的許可權。 在 [ [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
+在進階層中 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ，需要 `VIEW DATABASE STATE` 資料庫中的許可權。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準和基本層中，需要  **伺服器管理員** 或 **Azure Active Directory 系統管理員** 帳戶。   
 
 ## <a name="remarks"></a>備註  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允許不屬於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可執行檔一部分的元件 (例如 OLE DB 提供者) 配置記憶體，以及參與非先佔式排程。 這些元件會由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 主控，並且這些元件所配置的所有資源都會進行追蹤。 主控可讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更有效地管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可執行檔之外部元件所使用的資源。  
   
 ## <a name="relationship-cardinalities"></a>關聯性基數  
   
-|從|至|關聯性|  
+|寄件者|收件者|關聯性|  
 |----------|--------|------------------|  
 |sys.dm_os_hosts. default_memory_clerk_address|sys.dm_os_memory_clerks. memory_clerk_address|一對一|  
 |sys.dm_os_hosts. host_address|sys.dm_os_memory_clerks. host_address|一對一|  
@@ -78,8 +79,8 @@ GROUP BY h.type;
   
 ## <a name="see-also"></a>另請參閱  
 
- [dm_os_memory_clerks &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)   
- [SQL Server 作業系統相關的動態管理 Views &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [sys. dm_os_memory_clerks &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)   
+ [SQL Server 作業系統相關的動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

@@ -1,5 +1,6 @@
 ---
-title: sp_helptracertokens （Transact-sql） |Microsoft Docs
+description: sp_helptracertokens (Transact-SQL)
+title: sp_helptracertokens (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 61f27234-531d-4b37-8fa3-fe4c32e6f521
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cee4dd07152a20310b920b93ae70ee5589d7ae13
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8a971f50c57d8544293da7bcb0714ac5de3b8430
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736909"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489245"
 ---
 # <a name="sp_helptracertokens-transact-sql"></a>sp_helptracertokens (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,14 +40,14 @@ sp_helptracertokens [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'`這是插入追蹤 token 的發行集名稱。 *發行*集是**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 這是插入追蹤 token 的發行集名稱。 *發行* 集是 **sysname**，沒有預設值。  
   
-`[ @publisher = ] 'publisher'`發行者的名稱。 *publisher*是**sysname**，預設值是 Null。  
+`[ @publisher = ] 'publisher'` 發行者的名稱。 *publisher* 是 **sysname**，預設值是 Null。  
   
 > [!NOTE]
->  這個參數只能指定給非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。  
+>  這個參數只能針對非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者指定。  
   
-`[ @publisher_db = ] 'publisher_db'`發行集資料庫的名稱。 *publisher_db*是**sysname**，預設值是 Null。 如果預存程序執行於發行者端，則會忽略這個參數。  
+`[ @publisher_db = ] 'publisher_db'` 發行集資料庫的名稱。 *publisher_db* 是 **sysname**，預設值是 Null。 如果預存程序執行於發行者端，則會忽略這個參數。  
   
 ## <a name="result-set"></a>結果集  
   
@@ -56,18 +57,18 @@ sp_helptracertokens [ @publication = ] 'publication'
 |**publisher_commit**|**datetime**|在發行集資料庫的發行者端認可 Token 記錄的日期和時間。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_helptracertokens**用於異動複寫中。  
+ **sp_helptracertokens** 用於異動複寫中。  
   
- **sp_helptracertokens**可用來在執行[sp_helptracertokenhistory &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)時取得追蹤 token 識別碼。  
+ **sp_helptracertokens** 用來在執行 [sp_helptracertokenhistory &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)時取得追蹤 token 識別碼。  
   
 ## <a name="example"></a>範例  
  [!code-sql[HowTo#sp_tracertokens](../../relational-databases/replication/codesnippet/tsql/sp-helptracertokens-tran_1.sql)]  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色、發行集資料庫中的**db_owner**固定資料庫角色，或散發資料庫中**db_owner**固定資料庫或**replmonitor**角色的成員，才能夠執行**sp_helptracertokenhistory**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色的成員、發行集資料庫中的 **db_owner** 固定資料庫角色，或散發資料庫中的 **db_owner** 固定資料庫或 **replmonitor** 角色，才能執行 **sp_helptracertokenhistory**。  
   
 ## <a name="see-also"></a>另請參閱  
  [測量異動複寫的延遲並驗證連接](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   

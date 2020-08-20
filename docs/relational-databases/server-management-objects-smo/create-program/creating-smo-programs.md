@@ -1,4 +1,5 @@
 ---
+description: 建立 SMO 程式
 title: 建立 SMO 程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,11 +18,12 @@ ms.assetid: 7d2f0bcf-f1ae-45b8-bc3f-7aea4fae7e45
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5fe4da5dbd07cef57b6028ce015b184cffa9563f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b55530e34a77878c551dc8ea4ff0fa2936325755
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008417"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490435"
 ---
 # <a name="creating-smo-programs"></a>建立 SMO 程式
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -32,7 +34,7 @@ ms.locfileid: "86008417"
 |-----------|-----------------|  
 |[連接到 SQL Server 的執行個體](../../../relational-databases/server-management-objects-smo/create-program/connecting-to-an-instance-of-sql-server.md)|建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體連接的最基本 SMO 程式。 示範 Windows 驗證和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證。 同時包含示範連接到本機和遠端 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的範例。|  
 |[從 SQL Server 的執行個體中斷連接](../../../relational-databases/server-management-objects-smo/create-program/disconnecting-from-an-instance-of-sql-server.md)|示範如何從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體中斷連接的程式。|  
-|[呼叫方法](../../../relational-databases/server-management-objects-smo/create-program/calling-methods.md)|本節描述呼叫方法的一般方法。 示範參數的使用，以及如何處理在 <xref:System.Data.DataTable> 物件中傳回之資料的資料表。 也包括如何呼叫物件的函式，以及如何呼叫**Clone**方法的範例。|  
+|[呼叫方法](../../../relational-databases/server-management-objects-smo/create-program/calling-methods.md)|本節描述呼叫方法的一般方法。 示範參數的使用，以及如何處理在 <xref:System.Data.DataTable> 物件中傳回之資料的資料表。 也包含如何呼叫物件的函式，以及如何呼叫 **Clone** 方法的範例。|  
 |[設定屬性 - SMO](../../../relational-databases/server-management-objects-smo/create-program/setting-properties-smo.md)|本節描述如何設定不同類型的屬性。 示範如何設定和取得物件屬性。 同時包含建立物件時設定物件屬性，以及如何反覆運算物件所有屬性的範例。|  
 |[使用集合](../../../relational-databases/server-management-objects-smo/create-program/using-collections.md)|討論與物件集合搭配使用之技術的各種程式。 示範如何使用集合參考物件。 同時包含如何反覆運算集合成員的範例。|  
 |[處理 SMO 事件](../../../relational-databases/server-management-objects-smo/create-program/handling-smo-events.md)|本節描述如何在 SMO 中設定與處理事件。 包含如何設定事件處理常式，以及如何設定事件訂閱的範例。|  

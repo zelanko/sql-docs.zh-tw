@@ -1,4 +1,5 @@
 ---
+description: 第 1 課：將資料表轉換為階層式結構
 title: 第 1 課：將資料表轉換為階層式結構 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2018
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 18a7ad2ca8c66f2960fae9a051d0d2546adb02f5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a1a4d64425d6d02fbc57bde9f84159c4f09f4929
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757718"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488562"
 ---
 # <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>第 1 課：將資料表轉換為階層式結構
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "85757718"
 本課程會檢查現有的資料表、建立包含 **hierarchyid** 資料行的新資料列、使用來源資料表中的資料擴展資料表，然後示範三個索引策略。 這個課程包含下列主題：  
  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
 若要完成本教學課程，您需要 SQL Server Management Studio、執行 SQL Server 伺服器的存取權，以及 AdventureWorks 資料庫。
 
 - 安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
@@ -94,7 +95,7 @@ ms.locfileid: "85757718"
 
 
 ## <a name="populate-a-table-with-existing-hierarchical-data"></a>使用現有的階層式資料填入資料表
-此工作會建立一個新的資料表，並以 **EmployeeDemo** 資料表中的資料填入該資料表。 此工作的步驟如下：  
+ 此工作會建立一個新的資料表，並以 **EmployeeDemo** 資料表中的資料填入該資料表。 此工作的步驟如下：  
   
 -   建立包含 **hierarchyid** 資料行的新資料表。 此資料行可以取代現有的 **EmployeeID** 和 **ManagerID** 資料行。 不過，您將會保留這些資料行。 這是因為現有的應用程式可能會參考這些資料行，而且這些資料行也可以在轉換後，協助您了解資料。 資料表定義指定 **OrgNode** 為主索引鍵，其會要求該資料行所包含的值不得重複。 **OrgNode** 資料行上的叢集索引將以 **OrgNode** 順序儲存資料。    
 -   建立暫存資料表，該資料表可用於追蹤各個主管手下的直屬員工人數。 
@@ -223,7 +224,7 @@ ms.locfileid: "85757718"
     ```  
   
 ## <a name="optimizing-the-neworg-table"></a>最佳化 NewOrg 資料表
-您在 **使用現有的階層式資料填入資料表** 工作中建立的 [NewOrd](../../relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) 資料表包含所有員工資訊，並使用 **hierarchyid** 資料類型代表階層式結構。 此工作會新增索引以支援在 **hierarchyid** 資料行上進行搜尋。  
+ 您在[使用現有的階層式資料填入資料表](../../relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md)工作中建立的 **NewOrd** 資料表包含所有員工資訊，並使用 **hierarchyid** 資料類型代表階層結構。 此工作會新增索引以支援在 **hierarchyid** 資料行上進行搜尋。  
   
 
 **hierarchyid** 資料行 (**OrgNode**) 是 **NewOrg** 資料表的主要索引鍵。 建立資料表時，它包含名為 **PK_NewOrg_OrgNode** 的叢集索引以強制 **OrgNode** 資料行的唯一性。 此叢集索引也支援深度優先的資料表搜尋。  

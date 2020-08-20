@@ -1,4 +1,5 @@
 ---
+description: 建立同義字
 title: 建立同義字 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: fedfa7a5-d0b6-4e2b-90f4-a08122958e33
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44e814efc2cc1d48698dda9d4b413a494f53ef3f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 28709eaba9bf8afb2f2c26749db4bb52c80fd64e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787239"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490366"
 ---
 # <a name="create-synonyms"></a>建立同義字
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "85787239"
   
 1.  在 **[物件總管]** 中，展開您要建立新檢視表的資料庫。  
   
-2.  以滑鼠右鍵按一下 [同義字]  資料夾，然後按一下 [新增同義字]  。  
+2.  以滑鼠右鍵按一下 [同義字]**** 資料夾，然後按一下 [新增同義字]****。  
   
 3.  在 **[加入新的同義字]** 對話方塊中，輸入下列資訊。  
 

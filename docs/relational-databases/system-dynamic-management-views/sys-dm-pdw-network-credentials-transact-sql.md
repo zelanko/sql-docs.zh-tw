@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_pdw_network_credentials （Transact-sql） |Microsoft Docs
+description: 'sys. dm_pdw_network_credentials (Transact-sql) '
+title: sys. dm_pdw_network_credentials (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -12,32 +13,32 @@ ms.assetid: d4fee3ad-6285-4ea5-8513-5e6eb617abb0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8be0dde15dea7c02cda9fb59cdc71680ec494178
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 922c1ec6594f01488515bc1e9f18efa07a53e884
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395950"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489771"
 ---
-# <a name="sysdm_pdw_network_credentials-transact-sql"></a>sys.databases dm_pdw_network_credentials （Transact-sql）
+# <a name="sysdm_pdw_network_credentials-transact-sql"></a>sys. dm_pdw_network_credentials (Transact-sql) 
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
-  傳回所有目標伺服器在設備中儲存的所有網路認證清單 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 。 系統會針對控制項節點和每個計算節點列出結果。  
+  針對所有目標伺服器，傳回儲存在設備中所有網路認證的清單 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 。 系統會列出控制項節點和每個計算節點的結果。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |pdw_node_id|**int**|與節點相關聯的唯一數值識別碼。|  
-|target_server_name|**nvarchar(32)**|[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]將使用使用者名稱和密碼認證存取的目標伺服器 IP 位址。|  
+|target_server_name|**nvarchar(32)**|[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]將會使用使用者名稱和密碼認證來存取之目標伺服器的 IP 位址。|  
 |username|**nvarchar(32)**|儲存密碼的使用者名稱。|  
 |last_modified|**datetime**|上次修改認證之作業的日期時間。|  
   
 ## <a name="permissions"></a>權限  
- 需要 VIEW SERVER 狀態。  
+ 需要 VIEW SERVER STATE。  
   
 ## <a name="general-remarks"></a>一般備註  
- 這個動態管理檢視的索引鍵是*pdw_node_id*加*target_server_name*。  
+ 這個動態管理檢視的索引鍵是 *pdw_node_id* 加 *target_server_name*。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL 資料倉儲和平行處理資料倉儲動態管理 Views &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [SQL 資料倉儲和平行處理資料倉儲動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

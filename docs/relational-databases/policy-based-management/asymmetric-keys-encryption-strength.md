@@ -1,4 +1,5 @@
 ---
+description: 非對稱金鑰加密強度
 title: 非對稱金鑰加密強度 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 235ff2ab-1c5a-45c7-a91b-9db69b958b60
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 82c217eb64c0471b1d4261880a0dc61b1a18995d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 193f18868c3e5d3afad51a304ab5f19836dfb1d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655131"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490676"
 ---
 # <a name="asymmetric-keys-encryption-strength"></a>非對稱金鑰加密強度
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

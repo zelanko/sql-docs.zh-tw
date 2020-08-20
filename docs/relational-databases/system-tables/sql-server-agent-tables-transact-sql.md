@@ -1,5 +1,6 @@
 ---
-title: SQL Server Agent 資料表（Transact-sql） |Microsoft Docs
+description: SQL Server Agent 資料表 (Transact-SQL)
+title: SQL Server Agent 資料表 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6cb39bfd-079e-4be4-9c42-2fa234c65ce1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a677a563666acff5c18f84a3f133b03b616072ce
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f5635cd863017ad389178cd3d0954854472eb5c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753875"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488672"
 ---
 # <a name="sql-server-agent-tables-transact-sql"></a>SQL Server Agent 資料表 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

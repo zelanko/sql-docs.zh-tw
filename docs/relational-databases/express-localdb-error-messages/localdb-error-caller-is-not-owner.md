@@ -1,4 +1,5 @@
 ---
+description: LOCALDB_ERROR_CALLER_IS_NOT_OWNER
 title: LOCALDB_ERROR_CALLER_IS_NOT_OWNER |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -9,12 +10,12 @@ ms.topic: reference
 ms.assetid: f3303072-2b44-4443-936c-f024b0b2a8c5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6f87a007de4a85dfc3d86931c0e1d043ab32e3a5
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 392cf42ea7d338a1d5097f2cc97c113504717e87
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87361151"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490992"
 ---
 # <a name="localdb_error_caller_is_not_owner"></a>LOCALDB_ERROR_CALLER_IS_NOT_OWNER
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

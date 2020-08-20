@@ -1,5 +1,6 @@
 ---
-title: sp_delete_maintenance_plan_job （Transact-sql） |Microsoft Docs
+description: sp_delete_maintenance_plan_job (Transact-SQL)
+title: sp_delete_maintenance_plan_job (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1c2148c3-2928-4d9b-b1c8-3512cfbd6a63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 516bfaa2b581b19570e7edffc7567ae1d520bb85
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8aab6443a16b5de89bb3d8764beabfa5dc8beb34
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862731"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489404"
 ---
 # <a name="sp_delete_maintenance_plan_job-transact-sql"></a>sp_delete_maintenance_plan_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,20 +46,20 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @plan_id = ] 'plan\_id'`指定維護計畫的識別碼。 *plan_id*是**uniqueidentifier**，而且必須是有效的識別碼。  
+`[ @plan_id = ] 'plan\_id'` 指定維護計畫的識別碼。 *plan_id* 是 **uniqueidentifier**，必須是有效的識別碼。  
   
-`[ @job_id = ] 'job\_id'`指定與維護計畫相關聯之作業的識別碼。 *job_id*是**uniqueidentifier**，而且必須是有效的識別碼。  
+`[ @job_id = ] 'job\_id'` 指定與維護計畫相關聯之作業的識別碼。 *job_id* 是 **uniqueidentifier**，必須是有效的識別碼。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="remarks"></a>備註  
- **sp_delete_maintenance_plan_job**必須從**msdb**資料庫中執行。  
+ **sp_delete_maintenance_plan_job** 必須從 **msdb** 資料庫執行。  
   
- 當所有作業都已從維護計畫中移除時，我們建議使用者執行**sp_delete_maintenance_plan_db** ，以從方案中移除其餘的資料庫。  
+ 當所有作業都已從維護計畫中移除之後，我們建議使用者執行 **sp_delete_maintenance_plan_db** ，以從方案中移除剩餘的資料庫。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_delete_maintenance_plan_job**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色的成員，才可以執行 **sp_delete_maintenance_plan_job**。  
   
 ## <a name="examples"></a>範例  
  這個範例會從維護計畫中移除 "B8FCECB1-E22C-11D2-AA64-00C04F688EAE" 作業。  
@@ -69,6 +70,6 @@ EXECUTE   sp_delete_maintenance_plan_job N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC'
   
 ## <a name="see-also"></a>另請參閱  
  [維護計畫](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [資料庫維護計畫預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
+ [&#40;Transact-sql&#41;的資料庫維護計畫預存程式 ](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   
   

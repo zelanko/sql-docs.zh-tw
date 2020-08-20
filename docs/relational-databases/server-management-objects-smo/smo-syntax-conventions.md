@@ -1,4 +1,5 @@
 ---
+description: SMO 語法慣例
 title: SMO 語法慣例 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,18 +17,19 @@ ms.assetid: 27aa179a-f3ee-4c70-9e7b-e26dba28bc3c
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c7a883ff0a596e6e258ea6fcb9557697bbea986
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9e6526db71839eab76789d5aaf15900e2e5596ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012259"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490413"
 ---
 # <a name="smo-syntax-conventions"></a>SMO 語法慣例
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理物件（SMO）印刷慣例是根據 Visual Studio .NET 參考資料中使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SMO) 印刷慣例的管理物件是以 Visual Studio .NET 參考資料中使用的方式為基礎 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
   
-|慣例|用途|  
+|慣例|用於|  
 |----------------|--------------|  
 |大寫|用於作業系統層級的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、巨集名稱和詞彙；文字中的檔案名稱。|  
 |`monospace`|命令列和程式碼範例。|  

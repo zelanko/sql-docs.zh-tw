@@ -1,5 +1,6 @@
 ---
-title: sp_help_fulltext_catalog_components （Transact-sql） |Microsoft Docs
+description: sp_help_fulltext_catalog_components (Transact-SQL)
+title: sp_help_fulltext_catalog_components (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fb7cbf41a439c5221892142178d1341a9284f555
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 008c9b4f6cd0478e960d77ff6c39b45d9a34fbe2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901485"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489360"
 ---
 # <a name="sp_help_fulltext_catalog_components-transact-sql"></a>sp_help_fulltext_catalog_components (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,18 +48,18 @@ sp_help_fulltext_catalog_components
 |-----------------|---------------|-----------------|  
 |**全文檢索目錄名稱**|**int**|全文檢索目錄的名稱。|  
 |**全文檢索目錄識別碼**|**sysname**|全文檢索目錄的識別碼。|  
-|**componenttype**|**sysname**|這是元件的類型， 發生下列情形之一：<br /><br /> Filter<br /><br /> 通訊協定處理常式<br /><br /> 斷詞工具|  
+|**componenttype**|**sysname**|這是元件的類型， 下列其中之一：<br /><br /> 篩選<br /><br /> 通訊協定處理常式<br /><br /> 斷詞工具|  
 |**componentname**|**sysname**|元件的名稱。|  
-|**clsid**|**uniqueidentifier**|元件的類別識別碼。|  
-|**fullpath**|**nvarchar(256)**|元件位置的路徑。<br /><br /> Null = 呼叫端不是**serveradmin**固定伺服器角色的成員。|  
+|**Clsid**|**uniqueidentifier**|元件的類別識別碼。|  
+|**fullpath**|**nvarchar(256)**|元件位置的路徑。<br /><br /> Null = 呼叫端不是 **serveradmin** 固定伺服器角色的成員。|  
 |**version**|**nvarchar(30)**|元件的版本。|  
-|**負責**|**sysname**|元件的製造商名稱。|  
+|**manufacturer**|**sysname**|元件的製造商名稱。|  
   
 ## <a name="permissions"></a>權限  
  需要 **public** 角色的成員資格。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的全文檢索搜尋和語義搜尋預存程式](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
+ [全文檢索搜尋和語義搜尋預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
  [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [sp_help_fulltext_system_components &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)   
  [全文檢索搜尋](../../relational-databases/search/full-text-search.md)  

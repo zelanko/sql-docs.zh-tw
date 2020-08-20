@@ -1,5 +1,6 @@
 ---
-title: IHpublishers （Transact-sql） |Microsoft Docs
+description: IHpublishers (Transact-SQL)
+title: IHpublishers (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 77007246-f10b-4b87-8edf-7afc3c2096af
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d2e2b5037854cdd533f48549c5b4c4694907fd5e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6ab92ff375fdf7774cbb008c366559677c09ad9b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890243"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488821"
 ---
 # <a name="ihpublishers-transact-sql"></a>IHpublishers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85890243"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|識別非 SQL Server 發行者。|  
-|**製造商**|**sysname**|非 SQL Server 資料庫的供應商名稱。|  
+|**供應商**|**sysname**|非 SQL Server 資料庫的供應商名稱。|  
 |**publisher_guid**|**uniqueidentifier**|識別非 SQL Server 發行者的 GUID。|  
 |**flush_request_time**|**datetime**|指出上次變更發行項中繼資料的日期和時間，這項變更要求記錄讀取器代理程式更新它的中繼資料快取。|  
 |**version**|**sysname**|指出非 SQL Server 發行者版本的文字字串。|  
@@ -42,7 +43,7 @@ ms.locfileid: "85890243"
 ## <a name="see-also"></a>另請參閱  
  [異質資料庫複寫](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [複寫資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [&#40;Transact-sql&#41;的複寫視圖](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的複寫視圖 ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_adddistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_changedistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
  [sp_helpdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)  

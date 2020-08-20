@@ -1,4 +1,5 @@
 ---
+description: 修改檢查條件約束
 title: 修改檢查條件約束 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2017
@@ -16,12 +17,12 @@ ms.assetid: f22daef8-e350-40ef-8ff0-b5f87d1d9e56
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea5ecb64640df674d0f55d7347c1e8cb2d78d3ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 024897c426ed1bee082a75f44365698274424977
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786069"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488555"
 ---
 # <a name="modify-check-constraints"></a>修改檢查條件約束
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,15 +52,15 @@ ms.locfileid: "85786069"
   
 #### <a name="to-modify-a-check-constraint"></a>若要修改檢查條件約束  
   
-1.  在 [物件總管]  中，以滑鼠右鍵按一下包含檢查條件約束的資料表，並選取 [設計]  。  
+1.  在 [物件總管]**** 中，以滑鼠右鍵按一下包含檢查條件約束的資料表，並選取 [設計]****。  
   
-2.  在 [資料表設計工具]  功能表上，按一下 [檢查條件約束...]  。  
+2.  在 [資料表設計工具]**** 功能表上，按一下 [檢查條件約束...]****。  
   
 3.  在 **[檢查條件約束]** 對話方塊的 **[選取的檢查條件約束]** 底下，選取您想要編輯的條件約束。  
   
 4.  完成下表中的動作：  
   
-    |至|請依照下列步驟：|  
+    |收件者|請依照下列步驟：|  
     |--------|------------------------|  
     |編輯條件約束運算式|在 **[運算式]** 欄位中輸入新的運算式。|  
     |重新命名條件約束|在 **[名稱]** 欄位中輸入新的名稱。|  
@@ -70,9 +71,9 @@ ms.locfileid: "85786069"
     > [!NOTE]  
     >  某些資料庫具有不同的檢查條件約束功能。  
   
-5.  按一下 [關閉]  。  
+5.  按一下 [關閉] 。  
   
-6.  在 [檔案]  功能表上，按一下 [儲存「資料表名稱」]。  
+6.  在 [檔案] **** 功能表上，按一下 [儲存「資料表名稱」__]****。  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要修改檢查條件約束**  

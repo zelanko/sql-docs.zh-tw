@@ -1,4 +1,5 @@
 ---
+description: SP:Recompile 事件類別
 title: SP:Recompile 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 526c8eae-a07b-4d0e-b91e-8e537835d77d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d25f529ddc0bb4e7bc3add5189a5ee9aadccad2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6eb30e4ac6db44a2eb66fa24df09c7f65860fdbd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749559"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491021"
 ---
 # <a name="sprecompile-event-class"></a>SP:Recompile 事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

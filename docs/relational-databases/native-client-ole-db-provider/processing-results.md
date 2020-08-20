@@ -1,5 +1,6 @@
 ---
-title: 處理結果（Native Client OLE DB 提供者）
+description: " (Native Client OLE DB 提供者處理結果) "
+title: " (Native Client OLE DB 提供者處理結果) "
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,14 +17,14 @@ ms.assetid: 20887ac4-f649-4e7f-92e6-f929e2e70952
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e897ed893e545370cffe14eedf8fdf346e32e552
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: c2e88f5b81c29d249e58f972646b9335d02c31f6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247645"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490705"
 ---
-# <a name="processing-results-native-client-ole-db-provider"></a>處理結果（Native Client OLE DB 提供者）
+# <a name="processing-results-native-client-ole-db-provider"></a> (Native Client OLE DB 提供者處理結果) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   如果資料列集物件是由命令的執行所產生或是直接從提供者產生資料列集物件而產生，則取用者需要擷取及存取此資料列集中的資料。  

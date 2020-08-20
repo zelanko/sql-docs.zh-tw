@@ -1,5 +1,6 @@
 ---
-title: sp_helpremotelogin （Transact-sql） |Microsoft Docs
+description: sp_helpremotelogin (Transact-SQL)
+title: sp_helpremotelogin (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d912271e1f772ed0161b6c97977917d525b7d771
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 93d907cec14712af625867a14537060e33b3f09b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899518"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489265"
 ---
 # <a name="sp_helpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,10 +45,10 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
   
 ## <a name="arguments"></a>引數  
  [ @remoteserver **=** ] **'***remoteserver***'**  
- 這是要傳回相關遠端登入資訊的遠端伺服器。 *remoteserver*是**sysname**，預設值是 Null。 如果未指定*remoteserver* ，則會傳回本機伺服器上定義之所有遠端伺服器的相關資訊。  
+ 這是要傳回相關遠端登入資訊的遠端伺服器。 *remoteserver* 是 **sysname**，預設值是 Null。 如果未指定 *remoteserver* ，則會傳回本機伺服器上所定義之所有遠端伺服器的相關資訊。  
   
  [ @remotename **=** ] **'***remote_name***'**  
- 這是遠端伺服器上的特定遠端登入。 *remote_name*是**sysname**，預設值是 Null。 如果未指定*remote_name* ，就會傳回針對*remoteserver*定義之所有遠端使用者的相關資訊。  
+ 這是遠端伺服器上的特定遠端登入。 *remote_name* 是 **sysname**，預設值是 Null。 如果未指定 *remote_name* ，則會傳回針對 *remoteserver* 定義之所有遠端使用者的相關資訊。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -86,7 +87,7 @@ EXEC sp_helpremotelogin;
 ## <a name="see-also"></a>另請參閱  
  [sp_addremotelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
  [sp_dropremotelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
- [sp_helpserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_remoteoption &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

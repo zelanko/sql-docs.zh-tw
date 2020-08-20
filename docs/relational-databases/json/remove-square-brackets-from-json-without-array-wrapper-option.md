@@ -1,4 +1,5 @@
 ---
+description: 從 JSON 輸出移除方括弧 - WITHOUT_ARRAY_WRAPPER 選項
 title: 從 JSON 輸出移除方括弧 - WITHOUT_ARRAY_WRAPPER 選項
 ms.date: 06/03/2020
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d4e2757f8ae471ae4e050612fb4e1e8d20fe550
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f4580a7c3a566ba14f5cf20e177760751a451791
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730401"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490895"
 ---
 # <a name="remove-square-brackets-from-json---without_array_wrapper-option"></a>從 JSON 輸出移除方括弧 - WITHOUT_ARRAY_WRAPPER 選項
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

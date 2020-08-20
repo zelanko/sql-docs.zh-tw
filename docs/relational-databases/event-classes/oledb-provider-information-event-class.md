@@ -1,4 +1,5 @@
 ---
+description: OLEDB Provider Information 事件類別
 title: OLEDB Provider Information 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: a0316c4e-4b8c-4754-8a35-222f3c0907d1
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 257b638a91d964ca1d207785602af6e9e4c19d9f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cbda0ad19379a5ef491ca7e92e26374baa6336ab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85791052"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491019"
 ---
 # <a name="oledb-provider-information-event-class"></a>OLEDB Provider Information 事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

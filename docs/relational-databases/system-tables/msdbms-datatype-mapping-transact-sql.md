@@ -1,5 +1,6 @@
 ---
-title: MSdbms_datatype_mapping （Transact-sql） |Microsoft Docs
+description: MSdbms_datatype_mapping (Transact-SQL)
+title: MSdbms_datatype_mapping (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,28 +18,28 @@ helpviewer_keywords:
 ms.assetid: 13289a0b-dfb0-4771-ad80-4c5f83cded99
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a3004de66d8bf911056f62b0d4fbdfb55b969871
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bfdf9ab815a1623aa6c323c256b9f7a4d4e27263
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890036"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488781"
 ---
 # <a name="msdbms_datatype_mapping-transact-sql"></a>MSdbms_datatype_mapping (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSdbms_datatype_mapping**資料表包含從源資料庫管理系統（DBMS）中的資料類型對應到目的地 DBMS 中的一或多個特定資料類型的允許資料類型對應。 此資料表會儲存在**msdb**資料庫中，並用於異質資料庫複寫。  
+  **MSdbms_datatype_mapping**資料表包含從源資料庫管理系統中資料類型所允許的資料類型對應， (DBMS) 到目的地 DBMS 中的一或多個特定資料類型。 此資料表儲存在 **msdb** 資料庫中，用於進行異質資料庫複寫。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**datatype_mapping_id**|**int**|識別每個唯一的資料類型對應。|  
 |**map_id**|**int**|識別來源資料類型。|  
 |**dest_datatype_id**|**int**|識別目的地資料類型。|  
-|**dest_precision**|**bigint**|定義目的地資料類型的有效位數，其中 Null 值表示不使用有效位數，而 **-1**值表示使用源資料類型的有效位數。|  
-|**dest_scale**|**int**|定義目的地資料類型的小數值，其中 Null 值表示不使用小數值，而 **-1**的值表示使用源資料類型的小數值。|  
-|**dest_length**|**bigint**|定義目的地資料類型的長度，其中 Null 值表示不使用長度，而 **-1**的值表示使用源資料類型的長度。|  
+|**dest_precision**|**bigint**|定義目的地資料類型的有效位數，其中 Null 值表示不使用有效位數，而 **-1** 值表示使用源資料類型的有效位數。|  
+|**dest_scale**|**int**|定義目的地資料類型的小數位數，其中 Null 值表示不使用小數位數， **-1** 值表示使用源資料類型的小數位數。|  
+|**dest_length**|**bigint**|定義目的地資料類型的長度，其中 Null 值表示不使用長度，而 **-1** 的值表示使用源資料類型的長度。|  
 |**dest_nullable**|**bit**|指出對應中的目的地資料行是否允許 NULL 值，其中 NULL 值表示不需要這個目的地。|  
-|**dest_createparams**|**int**|用來描述每個資料類型所適用之長度、有效位數和小數位數組合的點陣圖，其中包括：<br /><br /> **0x1** = PRECISION。<br /><br /> **0x2** = SCALE。<br /><br /> **0x4** = 長度。|  
+|**dest_createparams**|**int**|用來描述每個資料類型所適用之長度、有效位數和小數位數組合的點陣圖，其中包括：<br /><br /> **0x1** = 有效位數。<br /><br /> **0x2** = 小數位數。<br /><br /> **0x4** = 長度。|  
   
 ## <a name="see-also"></a>另請參閱  
  [異質資料庫複寫](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

@@ -1,4 +1,5 @@
 ---
+description: SQL Server Native Client (OLE DB) 介面
 title: OLE DB 參考
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,18 +17,19 @@ ms.assetid: 7c462c92-ad5b-4dd5-817d-2b89c83d8fe4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8ae4be358e1c9de77841756d9adb84abc92b7bd7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: efd4e1f3692ebe6c78625a14cfc81d66f552ebaa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005323"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490749"
 ---
 # <a name="sql-server-native-client-ole-db-interfaces"></a>SQL Server Native Client (OLE DB) 介面
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者會將介面公開給想要在執行的一或多部電腦上存取資料的取用者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者是 OLE DB 版本2.0 相容提供者。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端 OLE DB 提供者會將介面公開給想要在執行的一或多部電腦上存取資料的取用者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端 OLE DB 提供者是 OLE DB 版本2.0 相容的提供者。  
   
- 這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client OLE DB 提供者程式設計參考不會記載所有 OLE DB 介面和方法，只會記載使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者時，顯示提供者特定行為的介面和方法。  
+ 此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生用戶端 OLE DB 提供者程式設計參考不會記載所有 OLE DB 介面和方法，只會記載使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者時提供提供者特定行為的介面和方法。  
   
  如需核心 OLE DB 介面與方法的完整描述，請參閱 [OLE DB 程式設計人員參考](https://go.microsoft.com/fwlink/?LinkId=45232)。  
   

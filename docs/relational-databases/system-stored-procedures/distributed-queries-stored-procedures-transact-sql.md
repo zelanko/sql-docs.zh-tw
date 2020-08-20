@@ -1,5 +1,6 @@
 ---
-title: 分散式查詢預存程式（Transact-sql） |Microsoft Docs
+description: 分散式查詢預存程序 (Transact-SQL)
+title: 分散式查詢預存程式 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0fbf2846-885e-4de2-b552-f6453c3ca136
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 788140d9936b0e90f7f6e0ad5ea2f5aa6f04e239
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 7766180a9b93a8e6fd4af5eaf0855a8de182a063
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977565"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489728"
 ---
 # <a name="distributed-queries-stored-procedures-transact-sql"></a>分散式查詢預存程序 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

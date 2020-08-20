@@ -1,5 +1,6 @@
 ---
-title: sp_control_plan_guide （Transact-sql） |Microsoft Docs
+description: sp_control_plan_guide (Transact-SQL)
+title: sp_control_plan_guide (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 08121eb48e637f2cb6bc404407f7a37d41dbeb2d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b05a3b807f80bccb0c07d876cbb2c10db43f3111
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85870140"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489509"
 ---
 # <a name="sp_control_plan_guide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,22 +52,22 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
   
 ## <a name="arguments"></a>引數  
  **N '** _plan_guide_name_ **'**  
- 指定要卸除、啟用或停用的計畫指南。 *plan_guide_name*會解析為目前的資料庫。 如果未指定， *plan_guide_name*預設為 Null。  
+ 指定要卸除、啟用或停用的計畫指南。 *plan_guide_name* 會解析為目前的資料庫。 如果未指定， *plan_guide_name* 預設為 Null。  
   
  DROP  
- 卸載*plan_guide_name*所指定的計劃指南。 在卸除計畫指南之後，未來執行先前符合計畫指南的查詢時，不會受計畫指南的影響。  
+ 卸載 *plan_guide_name*所指定的計劃指南。 在卸除計畫指南之後，未來執行先前符合計畫指南的查詢時，不會受計畫指南的影響。  
   
  DROP ALL  
- 卸除目前資料庫中的所有計畫指南。 當指定 DROP ALL 時，無法指定**N '**_plan_guide_name_ 。  
+ 卸除目前資料庫中的所有計畫指南。 如果指定 DROP ALL，則無法指定**N '**_plan_guide_name_ 。  
   
  DISABLE  
- 停用*plan_guide_name*所指定的計劃指南。 在停用計畫指南之後，未來執行先前符合計畫指南的查詢時，不會受計畫指南的影響。  
+ 停用 *plan_guide_name*所指定的計劃指南。 在停用計畫指南之後，未來執行先前符合計畫指南的查詢時，不會受計畫指南的影響。  
   
  DISABLE ALL  
  停用目前資料庫中的所有計畫指南。 當指定 DISABLE ALL 時，無法指定**N '**_plan_guide_name_ 。  
   
  ENABLE  
- 啟用*plan_guide_name*所指定的計劃指南。 計畫指南在啟用之後，可以符合適合的查詢。 依預設，在建立計畫指南時，會啟用計畫指南。  
+ 啟用 *plan_guide_name*所指定的計劃指南。 計畫指南在啟用之後，可以符合適合的查詢。 依預設，在建立計畫指南時，會啟用計畫指南。  
   
  ENABLE ALL  
  啟用目前資料庫中的所有計畫指南。 當指定 ENABLE ALL 時，無法指定**N '**_plan_guide_name_**'**。  
@@ -76,10 +77,10 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
   
  停用已停用的計畫指南，或啟用已啟用的計畫指南，都沒有作用，執行時也不會發生錯誤。  
   
- 並非所有版本都可使用計劃指南 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。 不過，您可以在任何版本的中，使用 DROP 或 DROP ALL 選項來執行**sp_control_plan_guide** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+ 並非所有版本都可使用計劃指南 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。 不過，您可以在任何版本的中使用 DROP 或 DROP ALL 選項來執行 **sp_control_plan_guide** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="permissions"></a>權限  
- 若要在 object 類型的計劃指南（已建立指定** @type = '** OBJECT **'** ）上執行**sp_control_plan_guide** ，需要計劃指南所參考之物件的 ALTER 許可權。 所有其他計畫指南都需要 ALTER DATABASE 權限。  
+ 若要在 object (的計劃指南（指定** @type = '** object **'** ）上執行**sp_control_plan_guide** ，) 需要計劃指南所參考之物件的 ALTER 許可權。 所有其他計畫指南都需要 ALTER DATABASE 權限。  
   
 ## <a name="examples"></a>範例  
   
@@ -134,10 +135,10 @@ EXEC sp_control_plan_guide N'DISABLE ALL';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的資料庫引擎預存程式 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
- [plan_guides &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
+ [sys.plan_guides &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
  [計畫指南](../../relational-databases/performance/plan-guides.md)  
   
   

@@ -1,5 +1,6 @@
 ---
-title: sysmail_delete_mailitems_sp （Transact-sql） |Microsoft Docs
+description: sysmail_delete_mailitems_sp (Transact-SQL)
+title: sysmail_delete_mailitems_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 052e97d1d744656c223e000adca7028fd11b7e0d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ebfd972849ff27ca0f0b6b73117a786c146e610b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890961"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488981"
 ---
 # <a name="sysmail_delete_mailitems_sp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,20 +41,20 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ \@sent_before = ] 'sent_before'`刪除以*sent_before*引數提供的日期和時間為止的電子郵件。 *sent_before*是具有 Null 做為預設值的**日期時間**。 NULL 表示所有日期。  
+`[ \@sent_before = ] 'sent_before'` 刪除以 *sent_before* 引數提供的日期和時間等電子郵件。 *sent_before* 為 **datetime** ，預設值為 Null。 NULL 表示所有日期。  
   
-`[ \@sent_status = ] 'sent_status'`刪除*sent_status*所指定之類型的電子郵件。 *sent_status*為**Varchar （8）** ，沒有預設值。 有效的專案會傳送 **、未****傳送**、**重試**，以及**失敗**。 NULL 表示所有狀態。  
+`[ \@sent_status = ] 'sent_status'` 刪除 *sent_status*所指定之類型的電子郵件。 *sent_status* 是 **Varchar (8) ** ，沒有預設值。 有效的專案會傳送 **、未****傳送**、**重試**及**失敗**。 NULL 表示所有狀態。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- Database Mail 訊息及其附件會儲存在**msdb**資料庫中。 應定期刪除訊息，以防止**msdb**成長超過預期，並符合您組織的檔保留計畫。 您可以使用**sysmail_delete_mailitems_sp**預存程式，從 Database Mail 資料表中永久刪除電子郵件訊息。 一個選擇性引數可藉由提供日期和時間，讓您只刪除較舊的電子郵件。 比該引數舊的電子郵件會被刪除。 另一個選擇性引數可讓您只刪除特定類型的電子郵件，指定為**sent_status**引數。 您必須為** \@ sent_before**或** \@ sent_status**提供引數。 若要刪除所有訊息，請使用** \@ sent_before = getdate （）**。  
+ Database Mail 訊息及其附件都會儲存在 **msdb** 資料庫中。 應定期刪除訊息，以防止 **msdb** 成長超過預期，並符合您組織的檔保留計畫。 您可以使用 **sysmail_delete_mailitems_sp** 預存程式，從 Database Mail 資料表中永久刪除電子郵件訊息。 一個選擇性引數可藉由提供日期和時間，讓您只刪除較舊的電子郵件。 比該引數舊的電子郵件會被刪除。 另一個選擇性引數可讓您只刪除特定類型的電子郵件，指定為 **sent_status** 引數。 您必須為** \@ sent_before**或** \@ sent_status**提供引數。 若要刪除所有訊息，請使用** \@ sent_before = getdate ( # B1 **。  
   
- 刪除電子郵件也會刪除這些訊息的相關附加檔案。 刪除電子郵件並不會刪除**sysmail_event_log**中的對應專案。 使用[sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md)從記錄中刪除專案。  
+ 刪除電子郵件也會刪除這些訊息的相關附加檔案。 刪除電子郵件並不會刪除 **sysmail_event_log**中的對應專案。 使用 [sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md) 從記錄檔中刪除專案。  
   
 ## <a name="permissions"></a>權限  
- 根據預設，這個預存程式會被授與**系統管理員（sysadmin** ）固定伺服器角色和**DatabaseMailUserRole**的成員執行。 **系統管理員（sysadmin** ）固定伺服器角色的成員可以執行此程式，以刪除所有使用者所傳送的電子郵件。 **DatabaseMailUserRole**的成員只能刪除該使用者所傳送的電子郵件。  
+ 依預設，此預存程式會被授與 **系統管理員（sysadmin** ）固定伺服器角色和 **DatabaseMailUserRole**的成員執行。 **系統管理員（sysadmin** ）固定伺服器角色的成員可以執行這個程式來刪除所有使用者傳送的電子郵件。 **DatabaseMailUserRole**的成員只能刪除該使用者傳送的電子郵件。  
   
 ## <a name="examples"></a>範例  
   

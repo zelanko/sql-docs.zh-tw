@@ -1,5 +1,6 @@
 ---
-title: 建立與資料來源的連接（Native Client OLE DB 提供者） |Microsoft Docs
+description: " (Native Client OLE DB 提供者建立與資料來源的連接) "
+title: " (Native Client OLE DB provider) 建立與資料來源的連接 |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ ms.assetid: 7ebd1394-cc8d-4bcf-92f3-c374a26e7ba0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1dc465bfa63a0822fc4a1de7b13611c0d1121017
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 384d6b0b9db152d1418b009c50345151786875e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248167"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490714"
 ---
 # <a name="establishing-a-connection-to-a-sql-server-native-client-data-source"></a>建立 SQL Server Native Client 資料來源的連接
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  若要存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者，取用者必須先呼叫**CoCreateInstance**方法來建立資料來源物件的實例。 唯一類別識別項 (CLSID) 會識別每個 OLE DB 提供者。 針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者，類別識別碼為 CLSID_SQLNCLI10。 您也可以使用符號 SQLNCLI_CLSID，解析為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 您所參考的 SQLNCLI 中所使用的 Native Client OLE DB 提供者。  
+  若要存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生用戶端 OLE DB 提供者，取用者必須先呼叫 **CoCreateInstance** 方法來建立資料來源物件的實例。 唯一類別識別項 (CLSID) 會識別每個 OLE DB 提供者。 若為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者，則 CLSID_SQLNCLI10 的類別識別碼。 您也可以使用將解析為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 您所參考 SQLNCLI 中所使用之 Native Client OLE DB 提供者的符號 SQLNCLI_CLSID。  
   
  資料來源物件會公開 **IDBProperties** 介面，取用者可以使用這個介面來提供基本驗證資訊；例如，伺服器名稱、資料庫名稱、使用者識別碼和密碼。 呼叫 **IDBProperties::SetProperties** 方法可設定這些屬性。  
   
@@ -43,7 +44,7 @@ CoCreateInstance(CLSID_SQLNCLI10,
                  (void **) &pIDBInitialize)  
 ```  
   
- 這個對**CoCreateInstance**的呼叫會建立與 CLSID_SQLNCLI10 相關聯之類別的單一物件（CSLID 與用來建立物件的資料和程式碼相關聯）。 IID_IDBInitialize 是介面 (**IDBInitialize**) 識別項的參考，用於與物件進行通訊。  
+ 這個對 **CoCreateInstance** 的呼叫會建立與 CLSID_SQLNCLI10 (CSLID 相關聯之類別的單一物件，該物件與將用來建立物件) 的資料和程式碼相關聯。 IID_IDBInitialize 是介面 (**IDBInitialize**) 識別項的參考，用於與物件進行通訊。  
   
  以下是初始化與建立資料來源之連接的範例函數。  
   

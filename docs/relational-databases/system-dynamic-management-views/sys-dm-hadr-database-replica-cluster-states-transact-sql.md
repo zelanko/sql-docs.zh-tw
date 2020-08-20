@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_hadr_database_replica_cluster_states （Transact-sql） |Microsoft Docs
+description: sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
+title: sys. dm_hadr_database_replica_cluster_states (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,17 +21,17 @@ helpviewer_keywords:
 ms.assetid: 6f719071-ebce-470d-aebd-1f55ee8cd70a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c7924044720c001951ac80e303ac8fe19fc3e489
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6e12ac1d979d1acfab0614bad27ae2f937245870
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718766"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489833"
 ---
 # <a name="sysdm_hadr_database_replica_cluster_states-transact-sql"></a>sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  傳回包含資訊的資料列，該資訊的目的是為了提供您 Windows Server 容錯移轉叢集 (WSFC) 叢集中每個 Always On 可用性群組內 AlwaysOn 可用性群組的可用性資料庫健康情況見解。 查詢**sys. dm_hadr_database_replica_states**以回答下列問題：  
+  傳回包含資訊的資料列，該資訊的目的是為了提供您 Windows Server 容錯移轉叢集 (WSFC) 叢集中每個 Always On 可用性群組內 AlwaysOn 可用性群組的可用性資料庫健康情況見解。 查詢 **sys. dm_hadr_database_replica_states** 可回答下列問題：  
   
 -   可用性群組中的所有資料庫都已準備好可進行容錯移轉嗎？  
   
@@ -38,7 +39,7 @@ ms.locfileid: "85718766"
   
 -   如果主要複本目前無法使用，哪一個次要複本會在成為主要複本時允許最少的資料遺失？  
   
--   當[sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)   **log_reuse_wait_desc**資料行的值為 "AVAILABILITY_REPLICA" 時，可用性群組中的哪一個次要複本會在指定的主資料庫上保存記錄截斷？  
+-   當 [sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)   **log_reuse_wait_desc** 資料行的值為 "AVAILABILITY_REPLICA" 時，可用性群組中的次要複本會在指定的主資料庫上保留記錄截斷？  
    
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -58,8 +59,8 @@ ms.locfileid: "85718766"
   
 ## <a name="see-also"></a>另請參閱  
  [Always On 可用性群組動態管理檢視和函數 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
- [Always On 可用性群組目錄檢視 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [&#40;Transact-sql&#41;監視可用性群組](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [AlwaysOn 可用性群組目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
+ [監視可用性群組 &#40;Transact-sql&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
   

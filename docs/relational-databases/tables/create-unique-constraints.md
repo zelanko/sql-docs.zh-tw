@@ -1,4 +1,5 @@
 ---
+description: 建立唯一的條件約束
 title: 建立唯一的條件約束 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2020
@@ -17,12 +18,12 @@ ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef372c63ec954a0be878d013f4198ee6f5656a53
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: aa8ab586235c33d6620bbce15676f226a85779d8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002152"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488612"
 ---
 # <a name="create-unique-constraints"></a>建立唯一的條件約束
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -55,15 +56,15 @@ ms.locfileid: "86002152"
   
 #### <a name="to-create-a-unique-constraint"></a>若要建立唯一條件約束  
   
-1.  在**物件總管**中，以滑鼠右鍵按一下要加入唯一條件約束的資料表，然後按一下 [設計]  。  
+1.  在**物件總管**中，以滑鼠右鍵按一下要加入唯一條件約束的資料表，然後按一下 [設計]****。  
   
-2.  在 [資料表設計工具]  功能表上，按一下 [索引/索引鍵]  。  
+2.  在 [資料表設計工具] 功能表上，按一下 [索引/索引鍵]。  
   
-3.  在 [索引/索引鍵]  對話方塊中，按一下 [加入]  。  
+3.  在 [索引/索引鍵]**** 對話方塊中，按一下 [加入]****。  
   
-4.  在 [一般]  底下的方格中，按一下 [類型]  ，然後從屬性右邊的下拉式清單方塊中選擇 [唯一索引鍵]  。  
+4.  在 [一般]**** 底下的方格中，按一下 [類型]****，然後從屬性右邊的下拉式清單方塊中選擇 [唯一索引鍵]****。  
   
-5.  在 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]   。  
+5.  在 [檔案] **** 功能表上，按一下 [儲存「資料表名稱」__]****。  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

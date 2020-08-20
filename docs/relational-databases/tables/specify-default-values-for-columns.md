@@ -1,4 +1,5 @@
 ---
+description: 指定資料行的預設值
 title: 指定資料行的預設值 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2020
@@ -14,12 +15,12 @@ ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e624926eb55adf65bd8390e6929cfa04aa742ba4
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 361e98e19788f4d2c6aa921caf71e58552ee53a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395806"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488553"
 ---
 # <a name="specify-default-values-for-columns"></a>指定資料行的預設值
 
@@ -37,7 +38,7 @@ ms.locfileid: "87395806"
 
 在您開始之前，請留意下列限制和約束：
 
-- 如果 [預設值]  欄位中的輸入內容取代繫結的預設值 (顯示為沒有括弧)，系統會提示您解除繫結預設值，並使用新的預設值加以取代。
+- 如果 [預設值]**** 欄位中的輸入內容取代繫結的預設值 (顯示為沒有括弧)，系統會提示您解除繫結預設值，並使用新的預設值加以取代。
 
 - 若要輸入文字字串，請將此值放在單引號 (') 之中，不要使用雙引號 (")，因為它們是保留供引號識別碼使用。
 
@@ -55,7 +56,7 @@ ms.locfileid: "87395806"
 
 ### <a name="object-explorer"></a>物件總管
 
-1. 在 [物件總管]  中，找到要變更小數位數的資料行，以滑鼠右鍵按一下包含該資料行的資料表，然後按一下 [設計]  。
+1. 在 [物件總管]**** 中，找到要變更小數位數的資料行，以滑鼠右鍵按一下包含該資料行的資料表，然後按一下 [設計]****。
 
 2. 選取您要指定預設值的資料行。
 
@@ -64,7 +65,7 @@ ms.locfileid: "87395806"
    > [!NOTE]
    > 若要輸入數字預設值，請輸入數字。 若為物件或函數，請輸入其名稱。 若為英數字元預設值，請在單引號內部輸入值。
 
-4. 在 [檔案]  功能表上，按一下 [儲存「資料表名稱」  ]  。
+4. 在 [檔案]  功能表上，按一下 [儲存「資料表名稱」]。
 
 ## <a name="use-transact-sql-to-specify-a-default"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL 來指定預設值
 

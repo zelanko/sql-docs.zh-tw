@@ -1,5 +1,6 @@
 ---
-title: ISQLServerErrorInfo：： GetErrorInfo (Native Client OLE DB 提供者) |Microsoft Docs
+description: 'ISQLServerErrorInfo：： GetErrorInfo (Native Client OLE DB 提供者) '
+title: ISQLServerErrorInfo：： GetErrorInfo (Native Client OLE DB provider) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,19 +17,19 @@ ms.assetid: 83265c9c-eaf9-41f0-9f73-b0ae0972f0d5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f9ce6ced9e5de3f7474d8dd16797213042ad4705
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 5fdcb446f9f1525db0fa03f5a359ffbe69fc0990
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87947605"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490880"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-native-client-ole-db-provider"></a>ISQLServerErrorInfo：： GetErrorInfo (Native Client OLE DB 提供者) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤詳細資料之 Native Client OLE DB 提供者 SSERRORINFO 結構的指標。  
+  傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤詳細資料之原生用戶端 OLE DB 提供者 SSERRORINFO 結構的指標。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者會定義**ISQLServerErrorInfo**錯誤介面。 此介面會傳回來自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤的詳細資料，包括其嚴重性和狀態。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端 OLE DB 提供者會定義**ISQLServerErrorInfo**錯誤介面。 此介面會傳回來自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤的詳細資料，包括其嚴重性和狀態。  
 
   
 ## <a name="syntax"></a>語法  
@@ -55,10 +56,10 @@ HRESULT GetErrorInfo(
  *ppSSErrorInfo* 或 *ppErrorStrings* 引數為 NULL。  
   
  E_OUTOFMEMORY  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者無法配置足夠的記憶體來完成要求。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端 OLE DB 提供者無法配置足夠的記憶體來完成要求。  
   
 ## <a name="remarks"></a>備註  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者會針對透過取用者傳遞之指標所傳回的 SSERRORINFO 和 OLECHAR 字串配置記憶體。 當取用者不再需要存取錯誤資料時，必須使用 **IMalloc::Free** 方法來取消配置這個記憶體。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端 OLE DB 提供者會針對透過取用者傳遞之指標所傳回的 SSERRORINFO 和 OLECHAR 字串配置記憶體。 當取用者不再需要存取錯誤資料時，必須使用 **IMalloc::Free** 方法來取消配置這個記憶體。  
   
  SSERRORINFO 結構定義如下：  
   
@@ -76,7 +77,7 @@ typedef struct tagSSErrorInfo
 SSERRORINFO;  
 ```  
   
-|成員|描述|  
+|member|描述|  
 |------------|-----------------|  
 |*pwszMessage*|來自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的錯誤訊息。 此訊息會透過 **IErrorInfo::GetDescription** 方法傳回。|  
 |*pwszServer*|發生錯誤之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。|  

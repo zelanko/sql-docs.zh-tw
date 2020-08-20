@@ -1,5 +1,6 @@
 ---
-title: MSmerge_sessions （Transact-sql） |Microsoft Docs
+description: MSmerge_sessions (Transact-SQL)
+title: MSmerge_sessions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 09ada8fc-c148-4379-9524-7826b1b0216c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8eaed22600fe2c5c548d2e40b3e496ee81c92faf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5d2fdb3e9855aa86e599df6f70233dbf0d0f160f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889723"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488719"
 ---
 # <a name="msmerge_sessions-transact-sql"></a>MSmerge_sessions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSmerge_sessions**資料表包含具有先前合併代理程式作業會話結果的歷程記錄資料列。 每次執行合併代理程式時，都會在這個資料中加入一個新的資料列。 這份資料表儲存在散發資料庫中。  
+  **MSmerge_sessions**資料表包含記錄資料列，其中包含先前合併代理程式作業會話的結果。 每次執行合併代理程式時，都會在這個資料中加入一個新的資料列。 這份資料表儲存在散發資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -59,7 +60,7 @@ ms.locfileid: "85889723"
 |**runstatus**|**int**|執行狀態如下：<br /><br /> **1** = 開始。<br /><br /> **2** = 成功。<br /><br /> **3** = 進行中。<br /><br /> **4** = 閒置。<br /><br /> **5** = 重試。<br /><br /> **6** = 失敗。|  
 |**estimated_upload_changes**|**int**|發行者端必須套用的估計變更數目。|  
 |**estimated_download_changes**|**int**|訂閱者端必須套用的估計變更數目。|  
-|**connection_type**|**int**|上傳期間所用的連接：<br /><br /> **1** = 區域網路（LAN）。<br /><br /> **2** = 撥號網路連接。<br /><br /> **3** = Web 同步處理。|  
+|**connection_type**|**int**|上傳期間所用的連接：<br /><br /> **1** = 區域網路 (LAN) 。<br /><br /> **2** = 撥號網路連接。<br /><br /> **3** = Web 同步處理。|  
 |**timestamp**|**timestamp**|這份資料表的時間戳記資料行。|  
   
 ## <a name="see-also"></a>另請參閱  

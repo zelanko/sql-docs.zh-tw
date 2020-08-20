@@ -1,5 +1,6 @@
 ---
-title: core. sp_purge_data （Transact-sql） |Microsoft Docs
+description: core.sp_purge_data (Transact-SQL)
+title: core. sp_purge_data (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0b7432238a3bedc85f6f9d971299fa7de2705df8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d2ab402b1641e72225bf579d5b0aa5a21b345637
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898206"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489749"
 ---
 # <a name="coresp_purge_data-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,21 +48,21 @@ core.sp_purge_data
   
 ## <a name="arguments"></a>引數  
  [ @retention_days =] *retention_days*  
- 要將資料保留在管理資料倉儲資料表中的天數。 已移除時間戳記早于*retention_days*的資料。 *retention_days*是**Smallint**，預設值是 Null。 如果已指定，此值必須是正數。 如果為 NULL，core.snapshots 檢視表中 valid_through 資料行的值就會決定適合移除的資料列。  
+ 要將資料保留在管理資料倉儲資料表中的天數。 已移除時間戳記早于 *retention_days* 的資料。 *retention_days* 是 **Smallint**，預設值是 Null。 如果已指定，此值必須是正數。 如果為 NULL，core.snapshots 檢視表中 valid_through 資料行的值就會決定適合移除的資料列。  
   
  [ @instance_name =] '*instance_name*'  
- 收集組的執行個體名稱。 *instance_name*是**sysname**，預設值是 Null。  
+ 收集組的執行個體名稱。 *instance_name* 是 **sysname**，預設值是 Null。  
   
- *instance_name*必須是完整的實例名稱，其中包含電腦名稱稱和實例名稱，其格式為*computername* \\ *instancename*。 如果為 NULL，就會使用本機伺服器上的預設執行個體。  
+ *instance_name*必須是完整的實例名稱，此名稱是由電腦名稱稱和實例名稱所組成，格式為*computername* \\ *實例*名稱。 如果為 NULL，就會使用本機伺服器上的預設執行個體。  
   
  [ @collection_set_uid =] '*collection_set_uid*'  
- 收集組的 GUID。 *collection_set_uid*是**uniqueidentifier**，預設值是 Null。 如果為 NULL，就會從所有收集組中移除合格的資料列。 若要取得這個值，請查詢 syscollector_collection_sets 目錄檢視。  
+ 收集組的 GUID。 *collection_set_uid* 是 **uniqueidentifier**，預設值是 Null。 如果為 NULL，就會從所有收集組中移除合格的資料列。 若要取得這個值，請查詢 syscollector_collection_sets 目錄檢視。  
   
- [ @duration =]*持續時間*  
- 清除作業應該執行的最大分鐘數。 *duration*是**Smallint**，預設值是 Null。 如果已指定，此值必須是零或正整數。 如果為 NULL，此作業就會一直執行，直到移除所有合格的資料列或手動停止此作業為止。  
+ [ @duration =] *持續時間*  
+ 清除作業應該執行的最大分鐘數。 *duration* 是 **Smallint**，預設值是 Null。 如果已指定，此值必須是零或正整數。 如果為 NULL，此作業就會一直執行，直到移除所有合格的資料列或手動停止此作業為止。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
  這個程序會根據保留週期，在 core.snapshots 檢視表中選取符合移除資格的資料列。 然後，系統會從 core.snapshots_internal 資料表中刪除符合移除資格的所有資料列。 刪除先前的資料列會在所有管理資料倉儲資料表中觸發串聯刪除動作。 這項作業是使用 ON DELETE CASCADE 子句所完成，而該子句是針對儲存所收集之資料的所有資料表所定義。  
@@ -71,7 +72,7 @@ core.sp_purge_data
  此程序必須在管理資料倉儲資料庫的內容中執行。  
   
 ## <a name="permissions"></a>權限  
- 需要**mdw_admin** （具有 EXECUTE 許可權）固定資料庫角色中的成員資格。  
+ 需要 **mdw_admin** (中具有 EXECUTE 許可權) 固定資料庫角色的成員資格。  
   
 ## <a name="examples"></a>範例  
   
@@ -85,7 +86,7 @@ GO
 ```  
   
 ### <a name="b-specifying-retention-and-duration-values"></a>B. 指定保留和持續時間值  
- 下列範例會從管理資料倉儲中移除超過 7 天的資料。 此外， @duration 系統會指定參數，讓作業的執行時間不超過5分鐘。  
+ 下列範例會從管理資料倉儲中移除超過 7 天的資料。 此外， @duration 也會指定參數，讓作業執行的時間不會超過5分鐘。  
   
 ```  
 USE <management_data_warehouse>;  
@@ -94,7 +95,7 @@ GO
 ```  
   
 ### <a name="c-specifying-an-instance-name-and-collection-set"></a>C. 指定執行個體名稱和收集組  
- 下列範例會針對指定之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的給定收集組，從管理資料倉儲中移除資料。 由於 @retention_days 未指定，因此會使用 [core. 快照] 視圖中 [valid_through] 資料行中的值來判斷適合移除之收集組的資料列。  
+ 下列範例會針對指定之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的給定收集組，從管理資料倉儲中移除資料。 因為 @retention_days 未指定，所以在 [核心] 的 [valid_through] 資料行中的值會用來判斷符合移除資格之收集組的資料列。  
   
 ```  
 USE <management_data_warehouse>;  
@@ -108,7 +109,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [資料收集器預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
   
   

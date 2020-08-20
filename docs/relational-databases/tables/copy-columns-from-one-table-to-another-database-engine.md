@@ -1,4 +1,5 @@
 ---
+description: 將資料行從一個資料表複製至另一個資料表 (Database Engine)
 title: 將資料行從一個資料表複製至另一個資料表 (Database Engine) | Microsoft 文件
 ms.custom: ''
 ms.date: 09/01/2016
@@ -14,12 +15,12 @@ ms.assetid: 5f5e70dc-69f9-44b8-bc48-b5d51ac20d77
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b3195e1f826dde57dba9113efa51733b2a3bd1dd
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: f1952dc72148ee9e8d0d68b375f39f5fc3bedfc3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395825"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488627"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>將資料行從一個資料表複製至另一個資料表 (Database Engine)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +55,7 @@ ms.locfileid: "87395825"
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>若要將資料行定義從一個資料表複製到另一個資料表  
   
-1.  以滑鼠右鍵按一下含有要複製之資料行的資料表，以及您要複製到其中的目標資料表，再按一下 [設計]  ，加以開啟。  
+1.  以滑鼠右鍵按一下含有要複製之資料行的資料表，以及您要複製到其中的目標資料表，再按一下 [設計]****，加以開啟。  
   
 2.  按一下您要複製資料行的資料表索引標籤，並選取這些資料行。  
   
@@ -62,7 +63,7 @@ ms.locfileid: "87395825"
   
 4.  按一下資料行複製目的地的資料表之索引標籤。  
   
-5.  選取要在其前面插入資料行的資料行，並從 **[編輯]** 功能表中，按一下 **[貼上]** 。  
+5.  選取要在其前面插入資料行的資料行，並從 **[編輯]** 功能表中，按一下 **[貼上]**。  
 
 #### <a name="to-copy-data-from-one-table-to-another"></a>若要將資料從一個資料表複製到另一個資料表  
   
@@ -73,13 +74,13 @@ ms.locfileid: "87395825"
   
 2.  開啟新的 [查詢編輯器] 視窗。 
 
-3.  以滑鼠右鍵按一下 [查詢編輯器]，然後按一下 [在編輯器中設計查詢]  。 
+3.  以滑鼠右鍵按一下 [查詢編輯器]，然後按一下 [在編輯器中設計查詢]****。 
 
-4.  在 [新增資料表]  對話方塊中，選取來源和目的地資料表，並按一下 [新增]  ，然後關閉 [新增資料表]  對話方塊。 
+4.  在 [新增資料表]**** 對話方塊中，選取來源和目的地資料表，並按一下 [新增]****，然後關閉 [新增資料表]**** 對話方塊。 
 
-5.  以滑鼠右鍵按一下 [查詢編輯器] 的已開啟區域，並指向 [變更類型]  ，然後按一下 [插入結果]  。  
+5.  以滑鼠右鍵按一下 [查詢編輯器] 的已開啟區域，並指向 [變更類型]****，然後按一下 [插入結果]****。  
 
-6.  在 [選擇插入結果的目標資料表]  對話方塊中，選取目的地資料表。 
+6.  在 [選擇插入結果的目標資料表]**** 對話方塊中，選取目的地資料表。 
 
 7.  在 [查詢設計工具] 的上方部分，按一下來源資料表中的來源資料行。
 

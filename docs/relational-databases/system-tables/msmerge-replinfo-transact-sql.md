@@ -1,5 +1,6 @@
 ---
-title: MSmerge_replinfo （Transact-sql） |Microsoft Docs
+description: MSmerge_replinfo (Transact-SQL)
+title: MSmerge_replinfo (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,24 +18,24 @@ helpviewer_keywords:
 ms.assetid: b0924094-c0cc-49c1-869a-65be0d0465a0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0add40a3062575e809b0e4c6e4f864eba6ec8e0d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a5dc2aeae67fabd1ae53a1f6f6744e104017f596
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889750"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488739"
 ---
 # <a name="msmerge_replinfo-transact-sql"></a>MSmerge_replinfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSmerge_replinfo**資料表會針對每個訂用帳戶各包含一個資料列。 這個資料表會追蹤訂閱的資訊。 這份資料表儲存在發行集和訂閱資料庫中。  
+  **MSmerge_replinfo**資料表針對每個訂閱都包含一個資料列。 這個資料表會追蹤訂閱的資訊。 這份資料表儲存在發行集和訂閱資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**repid**|**uniqueidentifier**|複本的唯一識別碼。|  
 |**use_interactive_resolver**|**bit**|指定是否在重新調整期間使用互動式解析程式。<br /><br /> **0** = 不使用互動式解析程式。<br /><br /> **1** = 使用互動式解析程式。|  
-|**validation_level**|**int**|在訂閱執行的類型驗證。 指定的驗證層級可以是下列值之一：<br /><br /> **0** = 無驗證。<br /><br /> **1** = 僅限資料列計數驗證。<br /><br /> **2** = 資料列計數和總和檢查碼驗證。<br /><br /> **3** = 資料列計數和二進位總和檢查碼驗證。|  
-|**resync_gen**|**bigint**|用於重新同步訂閱的層代 (Generation) 號碼。 值為 **-1**表示訂用帳戶未標示為重新同步處理。|  
+|**validation_level**|**int**|在訂閱執行的類型驗證。 指定的驗證層級可以是下列值之一：<br /><br /> **0** = 不驗證。<br /><br /> **1** = 僅限資料列計數驗證。<br /><br /> **2** = 資料列計數和總和檢查碼驗證。<br /><br /> **3** = 資料列計數及二進位總和檢查碼驗證。|  
+|**resync_gen**|**bigint**|用於重新同步訂閱的層代 (Generation) 號碼。 **-1**值表示訂用帳戶未標示為重新同步處理。|  
 |**login_name**|**sysname**|建立訂閱的使用者名稱。|  
 |**hostname**|**sysname**|在產生訂閱用的資料分割時，參數化資料列篩選器所用的值。|  
 |**merge_jobid**|**binary(16)**|這個訂閱的合併作業識別碼。|  

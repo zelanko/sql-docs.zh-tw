@@ -1,5 +1,6 @@
 ---
-title: sp_posttracertoken （Transact-sql） |Microsoft Docs
+description: sp_posttracertoken (Transact-SQL)
+title: sp_posttracertoken (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 24da5cd2-1c45-475e-93db-5bdf660f1c2c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1354645781d4d6207311349689fb8431e3cb7912
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 74e1bcab6a1db0f8c92b82475689f24b53d72316
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891547"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489130"
 ---
 # <a name="sp_posttracertoken-transact-sql"></a>sp_posttracertoken (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,25 +42,25 @@ sp_posttracertoken [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'`這是測量延遲的發行集名稱。 *發行*集是**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 這是要測量延遲的發行集名稱。 *發行* 集是 **sysname**，沒有預設值。  
   
-`[ @tracer_token_id = ] _tracer_token_id OUTPUT`這是插入之追蹤 token 的識別碼。 *tracer_token_id*是**int** ，預設值是 Null，它是一個 OUTPUT 參數。 此值可用來執行[sp_helptracertokenhistory &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)或[sp_deletetracertokenhistory &#40;transact-sql](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)&#41;而不需要先執行[sp_helptracertokens &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)。  
+`[ @tracer_token_id = ] _tracer_token_id OUTPUT` 這是所插入之追蹤 token 的識別碼。 *tracer_token_id* 是 **int** ，預設值是 Null，它是一個 OUTPUT 參數。 您可以使用此值來執行 [sp_helptracertokenhistory &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md) 或 [sp_deletetracertokenhistory &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) ，而不需要先執行 [sp_helptracertokens &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)。  
   
-`[ @publisher = ] 'publisher'`指定非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *publisher*是**sysname**，預設值是 Null，而且不能指定給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。  
+`[ @publisher = ] 'publisher'` 指定非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *publisher* 是 **sysname**，預設值是 Null，不應該為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者指定。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_posttracertoken**用於異動複寫中。  
+ **sp_posttracertoken** 用於異動複寫中。  
   
 ## <a name="example"></a>範例  
  [!code-sql[HowTo#sp_tracertokens](../../relational-databases/replication/codesnippet/tsql/sp-posttracertoken-trans_1.sql)]  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_posttracertoken**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色或 **db_owner** 固定資料庫角色的成員，才能夠執行 **sp_posttracertoken**。  
   
 ## <a name="see-also"></a>另請參閱  
- [針對異動複寫測量延遲及驗證連線](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
+ [針對異動複寫測量延遲及驗證連接](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
   

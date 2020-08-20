@@ -1,5 +1,6 @@
 ---
-title: ISSAsynchStatus：： WaitForAsynchCompletion （Native Client OLE DB 提供者） |Microsoft Docs
+description: 'ISSAsynchStatus：： WaitForAsynchCompletion in SQL Server Native Client (OLE DB) '
+title: ISSAsynchStatus：： WaitForAsynchCompletion (Native Client OLE DB provider) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,14 +17,14 @@ ms.assetid: 9f65e9e7-eb93-47a1-bc42-acd4649fbd0e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5c3af0d700ff8ad4d06af98a4b0387bd9e0f850
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b5557c9f73effcea3064b674081bd00901ef9e0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246894"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490801"
 ---
-# <a name="issasynchstatuswaitforasynchcompletion-in-sql-server-native-client-ole-db"></a>SQL Server Native Client 中的 ISSAsynchStatus：： WaitForAsynchCompletion （OLE DB）
+# <a name="issasynchstatuswaitforasynchcompletion-in-sql-server-native-client-ole-db"></a>ISSAsynchStatus：： WaitForAsynchCompletion in SQL Server Native Client (OLE DB) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   等到非同步執行的作業完成或發生逾時為止。  
@@ -45,7 +46,7 @@ HRESULT WaitForAsynchCompletion(
  此方法已成功。  
   
  E_UNEXPECTED  
- 因為已呼叫**ITransaction：： Commit**或**ITransaction：： Abort** ，或資料列集在其初始化階段已取消，所以資料列集處於未使用的狀態。  
+ 因為已呼叫 **ITransaction：： Commit** 或 **ITransaction：： Abort** ，或已在其初始化階段取消資料列集，所以資料列集處於未使用狀態。  
   
  DB_E_CANCELED  
  非同步處理已在資料列集擴展或資料來源物件初始化期間取消。  
@@ -57,7 +58,7 @@ HRESULT WaitForAsynchCompletion(
 >  除了以上列出的傳回碼值，**ISSAsynchStatus::WaitForAsynchCompletion** 方法也支援透過核心 OLEDB **ICommand::Execute** 和 **IDBInitialize::Initialize** 方法所傳回的傳回碼值。  
   
 ## <a name="remarks"></a>備註  
- 在逾時值 (以毫秒為單位) 已過，或暫止的作業完成前，**ISSAsynchStatus::WaitForAsynchCompletion** 方法將不會傳回。 **Command**物件具有**CommandTimeout**屬性，可控制查詢將在超時前執行的秒數。如果搭配**ISSAsynchStatus：： WaitForAsynchCompletion**方法使用，將會忽略**CommandTimeout**屬性。  
+ 在逾時值 (以毫秒為單位) 已過，或暫止的作業完成前，**ISSAsynchStatus::WaitForAsynchCompletion** 方法將不會傳回。 **Command** 物件的 **CommandTimeout** 屬性會控制查詢在逾時前執行的秒數。如果搭配 **ISSAsynchStatus::WaitForAsynchCompletion** 方法使用，將會忽略 **CommandTimeout** 屬性。  
   
  非同步作業會忽略逾時屬性。 **ISSAsynchStatus::WaitForAsynchCompletion** 的逾時參數會指定將控制項傳回給呼叫端前經過的時間上限。 如果這個逾時過期，會傳回 DB_S_ASYNCHRONOUS。 逾時絕不會取消非同步作業。 如果應用程式需要取消沒有在逾時期間內完成的非同步作業，它必須等到逾時，然後明確地取消此作業 (如果有傳回 DB_S_ASYNCHRONOUS)。  
   

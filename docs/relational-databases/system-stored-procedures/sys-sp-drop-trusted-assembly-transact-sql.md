@@ -1,5 +1,6 @@
 ---
-title: sys.databases sp_drop_trusted_assembly （Transact-sql） |Microsoft Docs
+description: sys.sp_drop_trusted_assembly (Transact-SQL)
+title: sys. sp_drop_trusted_assembly (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql
@@ -20,17 +21,17 @@ ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4dbeed2c84db6a94237df6878fba688c6ed08a66
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fd3c1747fee1e23e0f68a7bcf1744f40e80786b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85625942"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489025"
 ---
 # <a name="syssp_drop_trusted_assembly-transact-sql"></a>sys.sp_drop_trusted_assembly (Transact-SQL)  
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
 
-從伺服器上的受信任元件清單中卸載元件。
+從伺服器上受信任的元件清單中卸載元件。
 
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -43,12 +44,12 @@ sp_drop_trusted_assembly
 
 ## <a name="arguments"></a>引數
 
-[ @hash =] '*值*'  
-要從伺服器的信任元件清單中卸載之元件的 SHA2_512 雜湊值。 當 clr strict 安全性啟用時，即使元件不帶正負號或資料庫未標示為值得信任，也可能會載入受信任的元件。
+[ @hash =] '*value*'  
+要從伺服器的受信任元件清單中卸載之元件的 SHA2_512 雜湊值。 當 clr strict 安全性啟用時，即使元件未簽署或資料庫未標示為值得信任，也可能會載入信任的元件。
 
 ## <a name="remarks"></a>備註  
 
-此程式會從 sys.databases 中移除元件[trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)。
+此程式會從 [sys. trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)移除元件。
 
 ## <a name="permissions"></a>權限
 
@@ -56,7 +57,7 @@ sp_drop_trusted_assembly
 
 ## <a name="examples"></a>範例  
 
-下列範例會從伺服器的信任元件清單中卸載元件雜湊。  
+下列範例會從伺服器的受信任元件清單中卸載元件雜湊。  
 
 ```  
 EXEC sp_drop_trusted_assembly 
@@ -64,7 +65,7 @@ EXEC sp_drop_trusted_assembly
 ```  
 
 ## <a name="see-also"></a>另請參閱  
-  [sp_add_trusted_assembly](sys-sp-add-trusted-assembly-transact-sql.md) [sys. trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) [DROP assembly &#40;transact-sql&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)  
+  [sys. sp_add_trusted_assembly](sys-sp-add-trusted-assembly-transact-sql.md) [sys. trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) [DROP assembly &#40;transact-sql&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)  
   [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
   [sys.dm_clr_loaded_assemblies](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)  
 

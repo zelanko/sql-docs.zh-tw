@@ -1,5 +1,6 @@
 ---
-title: ISSCommandWithParameters （Native Client OLE DB 提供者）
+description: 'ISSCommandWithParameters (Native Client OLE DB 提供者) '
+title: 'ISSCommandWithParameters (Native Client OLE DB 提供者) '
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,20 +17,20 @@ ms.assetid: 3419b7f3-36a3-4863-816e-e641e4e90496
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de38a824824e35faac5ee40e691569f2abaae685
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 896926a74bff62ccc84c3a80ad0169dd97858524
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246887"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490754"
 ---
-# <a name="isscommandwithparameters-native-client-ole-db-provider"></a>ISSCommandWithParameters （Native Client OLE DB 提供者）
+# <a name="isscommandwithparameters-native-client-ole-db-provider"></a>ISSCommandWithParameters (Native Client OLE DB 提供者) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  **ISSCommandWithParameters**會公開對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML 和使用者定義類型（UDT）的支援。 這是選擇性的介面，繼承自核心 OLE DB 介面**ICommandWithParameters**。 除了繼承自**ICommandWithParameters**的三個方法以外，**GetParameterInfo**、 **MapParameterNames**和**SetParameterInfo**;**ISSCommandWithParameters**提供兩種新的方法，可用來處理伺服器特定的資料類型。  
+  **ISSCommandWithParameters** 會公開 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (UDT) 的 XML 和使用者定義類型的支援。 這是選擇性的介面，繼承自核心 OLE DB 介面 **ICommandWithParameters**。 除了繼承自 **ICommandWithParameters**的三種方法; **GetParameterInfo**、 **MapParameterNames**和 **SetParameterInfo**; **ISSCommandWithParameters** 提供兩種用來處理伺服器特定資料類型的新方法。  
   
 > [!NOTE]  
->  使用服務元件時，可以使用**ISSCommandWithParameters**介面，但服務元件本身不會使用此介面。  
+>  使用服務元件時，可以使用 **ISSCommandWithParameters** 介面，但服務元件本身將不會使用此介面。  
   
 |方法|描述|  
 |------------|-----------------|  

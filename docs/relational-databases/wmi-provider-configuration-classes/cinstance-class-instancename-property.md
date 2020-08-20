@@ -1,5 +1,6 @@
 ---
-title: InstanceName 屬性（CInstance）
+description: CInstance 類別 - InstanceName 屬性
+title: 'InstanceName 屬性 (CInstance) '
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 806fafa8-bf89-4ce8-a082-8081dde9fcc3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5541dffc9f590f9caf69ac5feba637dc4cb0605e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2700a8c00fb84388c42ba935585df9c713f26b62
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889068"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488541"
 ---
 # <a name="cinstance-class---instancename-property"></a>CInstance 類別 - InstanceName 屬性
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  取得用戶端實例的名稱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+  取得用戶端的實例名稱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="syntax"></a>語法  
   

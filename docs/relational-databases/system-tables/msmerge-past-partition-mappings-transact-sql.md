@@ -1,5 +1,6 @@
 ---
-title: MSmerge_past_partition_mappings （Transact-sql） |Microsoft Docs
+description: MSmerge_past_partition_mappings (Transact-SQL)
+title: MSmerge_past_partition_mappings (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,25 +18,25 @@ helpviewer_keywords:
 ms.assetid: 06d54ff5-4d29-4eeb-b8be-64d032e53134
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2895684bc8769a16120d4831ccc9b0dc9a6f2391
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c61039aa752dc27bb493d27c7062ee80b7e26278
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889759"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488740"
 ---
 # <a name="msmerge_past_partition_mappings-transact-sql"></a>MSmerge_past_partition_mappings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSmerge_past_partition_mappings**資料表會針對指定的已變更資料列所屬的每個資料分割識別碼，各儲存一個資料列，但不再屬於。 這份資料表儲存在發行集資料庫中。  
+  **MSmerge_past_partition_mappings**資料表會為指定的已變更資料列所用的每個資料分割識別碼，各儲存一個資料列，但再也不屬於。 這份資料表儲存在發行集資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**publication_number**|**smallint**|發行集編號，儲存在**sysmergepublications**中。|  
+|**publication_number**|**smallint**|儲存在 **sysmergepublications**中的發行集編號。|  
 |**tablenick**|**int**|已發行資料表的暱稱。|  
 |**rowguid**|**uniqueidentifier**|給定資料列的資料列識別碼。|  
 |**partition_id**|**int**|資料列所屬的資料分割識別碼。 如果資料列變更與所有訂閱者相關，則此值為-1。|  
-|**代數**|**bigint**|發生資料分割變更的層代 (Generation) 值。|  
+|**生成**|**bigint**|發生資料分割變更的層代 (Generation) 值。|  
 |**原因**|**tinyint**|僅供內部使用。|  
   
 ## <a name="see-also"></a>另請參閱  

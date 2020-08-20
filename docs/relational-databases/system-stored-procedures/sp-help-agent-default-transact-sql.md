@@ -1,5 +1,6 @@
 ---
-title: sp_help_agent_default （Transact-sql） |Microsoft Docs
+description: sp_help_agent_default (Transact-SQL)
+title: sp_help_agent_default (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f92f64fe005bb49dd919f77e25931d5af025a8ea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ad0ae89b2cc2b09222fea863a008104e43ccfd15
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757876"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489462"
 ---
 # <a name="sp_help_agent_default-transact-sql"></a>sp_help_agent_default (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,9 +39,9 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @profile_id = ] _profile_idOUTPUT`這是代理程式類型的預設設定識別碼。 *profile_id*是**int**，沒有預設值。*profile_id*也是輸出參數，並會傳回代理程式類型的預設設定識別碼。  
+`[ @profile_id = ] _profile_idOUTPUT` 這是代理程式類型的預設設定識別碼。 *profile_id* 是 **int**，沒有預設值。*profile_id* 也是輸出參數，並會傳回代理程式類型之預設設定的識別碼。  
   
-`[ @agent_type = ] 'agent_type'`這是代理程式的類型。 *agent_type*為**int**，沒有預設值，而且可以是下列其中一個值。  
+`[ @agent_type = ] 'agent_type'` 這是代理程式的類型。 *agent_type* 是 **int**，沒有預設值，它可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -51,13 +52,13 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 |**9**|佇列讀取器代理程式|  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_help_agent_default**用於所有類型的複寫中。  
+ **sp_help_agent_default** 用於所有類型的複寫中。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色或**replmonitor**固定資料庫角色的成員，才能夠執行**sp_help_agent_default**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色或 **replmonitor** 固定資料庫角色的成員，才可以執行 **sp_help_agent_default**。  
   
 ## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

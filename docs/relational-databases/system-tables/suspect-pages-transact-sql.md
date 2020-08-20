@@ -1,5 +1,6 @@
 ---
-title: suspect_pages （Transact-sql） |Microsoft Docs
+description: suspect_pages (Transact-SQL)
+title: suspect_pages (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,25 +19,25 @@ helpviewer_keywords:
 ms.assetid: 119c8d62-eea8-44fb-bf72-de469c838c50
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: aa13a24d933157aaa1dc546a2e55c1dc0d1ef7ed
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c2532301ee2459f66281be8cf1b782574768e283
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881450"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488649"
 ---
 # <a name="suspect_pages-transact-sql"></a>suspect_pages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  針對每個失敗並出現次要 823 錯誤或 824 錯誤的頁面，各包含一個資料列。 本表將列出這些頁面，因為雖然它們疑似有問題，但實際上可能是正常的。 當可疑的頁面修復時，其狀態會在 [ **event_type** ] 資料行中更新。  
+  針對每個失敗並出現次要 823 錯誤或 824 錯誤的頁面，各包含一個資料列。 本表將列出這些頁面，因為雖然它們疑似有問題，但實際上可能是正常的。 修復可疑的頁面時，會更新 **event_type** 資料行中的狀態。  
   
- 下表（限制為1000個數據列）儲存在**msdb**資料庫中。  
+ 下表（限制為1000個數據列）儲存在 **msdb** 資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|這個頁面所套用的資料庫識別碼。|  
 |**file_id**|**int**|資料庫內的檔案識別碼。|  
-|**page_id**|**bigint**|可疑頁面的識別碼。 每個頁面都有一個頁面識別碼，它是一個 32 位元的值，用來識別頁面在資料庫中的位置。 **Page_id**是 8 KB 頁面的資料檔案位移。 每個頁面識別碼在檔案內都是唯一的。|  
+|**page_id**|**bigint**|可疑頁面的識別碼。 每個頁面都有一個頁面識別碼，它是一個 32 位元的值，用來識別頁面在資料庫中的位置。 **Page_id**是 8 KB 頁面的資料檔案中的位移。 每個頁面識別碼在檔案內都是唯一的。|  
 |**event_type**|**int**|這是錯誤的類型，它有下列幾種：<br /><br /> 1 = 導致可疑頁面 (例如，磁碟錯誤) 的 823 錯誤，或總和檢查碼錯誤或頁面損毀 (例如，頁面識別碼不正確) 以外的 824 錯誤。<br /><br /> 2 = 總和檢查碼錯誤。<br /><br /> 3 = 頁面損毀。<br /><br /> 4 = 已還原 (在頁面標示為不正確之後還原頁面)。<br /><br /> 5 = 已修復 (DBCC 已修復頁面)。<br /><br /> 7 = 已由 DBCC 取消配置。|  
 |**error_count**|**int**|錯誤的發生次數。|  
 |**last_update_date**|**datetime**|上次更新的日期和時間戳記。|  
@@ -47,7 +48,7 @@ ms.locfileid: "85881450"
 ## <a name="see-also"></a>另請參閱  
  [還原頁面 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
  [資料庫可疑資料頁面事件類別](../../relational-databases/event-classes/database-suspect-data-page-event-class.md)   
- [&#40;Transact-sql&#41;的系統資料表](../../relational-databases/system-tables/system-tables-transact-sql.md)   
+ [系統資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)   
  [管理 suspect_pages 資料表 &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  
   
   

@@ -1,5 +1,6 @@
 ---
-title: sp_delete_jobstep （Transact-sql） |Microsoft Docs
+description: sp_delete_jobstep (Transact-SQL)
+title: sp_delete_jobstep (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 421ede8e-ad57-474a-9fb9-92f70a3e77e3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 77557dee97475ef713c88c969de98a241d955eea
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7fc21ae11a1ade4780b99a86d03b7c9948c05663
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85863906"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489405"
 ---
 # <a name="sp_delete_jobstep-transact-sql"></a>sp_delete_jobstep (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,16 +42,16 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @job_id = ] job_id`將從中移除步驟之作業的識別碼。 *job_id*是**uniqueidentifier**，預設值是 Null。  
+`[ @job_id = ] job_id` 將從中移除步驟之作業的識別碼。 *job_id*是 **uniqueidentifier**，預設值是 Null。  
   
-`[ @job_name = ] 'job_name'`將從中移除步驟的作業名稱。 *job_name*是**sysname**，預設值是 Null。  
+`[ @job_name = ] 'job_name'` 將從中移除步驟之作業的名稱。 *job_name*是 **sysname**，預設值是 Null。  
   
-> **注意：** 必須指定*job_id*或*job_name* ;兩者都無法指定。  
+> **注意：** 必須指定 *job_id* 或 *job_name* ;不可同時指定兩者。  
   
-`[ @step_id = ] step_id`要移除之步驟的識別碼。 *step_id*是**int**，沒有預設值。  
+`[ @step_id = ] step_id` 要移除之步驟的識別碼。 *step_id*是 **int**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="result-sets"></a>結果集  
  None  
@@ -58,7 +59,7 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ## <a name="remarks"></a>備註  
  移除作業步驟會自動更新參考已刪除步驟的其他作業步驟。  
   
- 如需與特定作業相關聯之步驟的詳細資訊，請執行**sp_help_jobstep**。  
+ 如需與特定作業相關聯之步驟的詳細資訊，請執行 **sp_help_jobstep**。  
   
 > **注意：** 呼叫*step_id*值為零的**sp_delete_jobstep** ，會刪除作業的所有作業步驟。  
   
@@ -75,7 +76,7 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
  如需這些角色權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
- 只有**系統管理員（sysadmin** ）的成員可以刪除另一位使用者所擁有的作業步驟。  
+ 只有 **系統管理員（sysadmin** ）的成員可以刪除其他使用者所擁有的作業步驟。  
   
 ## <a name="examples"></a>範例  
  下列範例會從 `1` 作業中，移除作業步驟 `Weekly Sales Data Backup`。  

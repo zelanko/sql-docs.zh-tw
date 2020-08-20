@@ -1,5 +1,6 @@
 ---
-title: conflict_ &lt; schema &gt; _ &lt; table &gt; （transact-sql） |Microsoft Docs
+description: 'conflict_ &lt; 架構 &gt; _ &lt; 資料表 &gt; (transact-sql) '
+title: conflict_ &lt; 架構 &gt; _ &lt; 資料表 &gt; (transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/15/2016
 ms.prod: sql
@@ -17,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 72e364d451a78726c1ac98c42659db9c8f6034b0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a4a378eeef86204f87ce8eaa13a442752636c066
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890578"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488883"
 ---
-# <a name="conflict_ltschemagt_lttablegt-transact-sql"></a>conflict_ &lt; 架構 &gt; _ &lt; 資料表 &gt; （transact-sql）
+# <a name="conflict_ltschemagt_lttablegt-transact-sql"></a>conflict_ &lt; 架構 &gt; _ &lt; 資料表 &gt; (transact-sql) 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Conflict_ \<schema> _ \<table> 資料表包含點對點複寫中衝突資料列的相關資訊。 發行集中每個複寫的資料表都有衝突資料表，衝突資料表的名稱是附加在結構描述和發行項名稱後面。 發行項特定的衝突資料表會存在於每一個發行集資料庫內。  
@@ -33,18 +34,18 @@ ms.locfileid: "85890578"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|__$originator_id|**int**|引發衝突變更之節點的識別碼。 如需識別碼的清單，請執行[sp_help_peerconflictdetection](../../relational-databases/system-stored-procedures/sp-help-peerconflictdetection-transact-sql.md)。|  
+|__$originator_id|**int**|引發衝突變更之節點的識別碼。 如需識別碼的清單，請執行 [sp_help_peerconflictdetection](../../relational-databases/system-stored-procedures/sp-help-peerconflictdetection-transact-sql.md)。|  
 |__$origin_datasource|**int**|引發衝突變更的節點。|  
-|__$tranid|**Nvarchar （40）**|衝突變更的記錄序號 (LSN) (當套用到 __$origin_datasource 時)。|  
+|__$tranid|**Nvarchar (40) **|衝突變更的記錄序號 (LSN) (當套用到 __$origin_datasource 時)。|  
 |__$conflict_type|**int**|衝突的類型，它可以是下列其中一個值：<br /><br /> 1：更新失敗，因為另一項更新變更了本機資料列，或是已經刪除再重新插入此資料列。<br /><br /> 2：更新失敗，因為本機資料列已被刪除。<br /><br /> 3：刪除失敗，因為另一項更新變更了本機資料列，或是已經刪除再重新插入此資料列。<br /><br /> 4：刪除失敗，因為本機資料列已被刪除。<br /><br /> 5：插入失敗，因為本機資料列已經插入，或是已經插入後再更新。|  
 |__$is_winner|**bit**|指出此資料表中的資料列是否為衝突的贏家，這表示它已套用到本機節點。|  
-|__$pre_version|**Varbinary （32）**|引發衝突變更的資料庫版本。|  
-|__$reason_code|**int**|此衝突的解決程式碼。 可以是下列其中一個值：<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> 如需詳細資訊，請參閱 **__ $ reason_text**。|  
-|__$reason_text|**Nvarchar （720）**|此衝突的解決方法。 可以是下列其中一個值：<br /><br /> 已解決 (1)<br /><br /> 未解決 (2)<br /><br /> 未知 (0)|  
-|__$update_bitmap|**Varbinary （** *n* **）**。 大小會根據內容而有所不同。|指出當發生更新與更新之間的衝突時，已更新哪一個資料行的點陣圖。|  
+|__$pre_version|**Varbinary (32) **|引發衝突變更的資料庫版本。|  
+|__$reason_code|**int**|此衝突的解決程式碼。 可以是下列值之一：<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> 如需詳細資訊，請參閱 **__ $ reason_text**。|  
+|__$reason_text|**Nvarchar (720) **|此衝突的解決方法。 可以是下列值之一：<br /><br /> 已解決 (1)<br /><br /> 未解決 (2)<br /><br /> 未知 (0)|  
+|__$update_bitmap|**Varbinary (** *n* **) **。 大小會隨著內容而有所不同。|指出當發生更新與更新之間的衝突時，已更新哪一個資料行的點陣圖。|  
 |__$inserted_date|**datetime**|衝突資料列插入此資料表的日期和時間。|  
 |__$row_id|**timestamp**|與產生衝突之資料列有關聯的資料列版本。|  
-|__$change_id|**binary （8）**|如果是本機資料列，這個值會等於與此本機資料列衝突之傳入資料列的 __$row_id。 如果是傳入資料列，這個值會是 NULL。|  
+|__$change_id|**二元 (8) **|如果是本機資料列，這個值會等於與此本機資料列衝突之傳入資料列的 __$row_id。 如果是傳入資料列，這個值會是 NULL。|  
 |\<base table column names>|\<base table column types>|衝突資料表針對基底資料表中的每個資料行各包含一個資料行。|  
   
 ## <a name="see-also"></a>另請參閱  

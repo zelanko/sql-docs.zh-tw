@@ -1,4 +1,5 @@
 ---
+description: 重新命名使用者定義函數
 title: 重新命名使用者定義函式 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -11,12 +12,12 @@ ms.assetid: c2695a5c-9cc5-4b18-8771-53027ca9a9af
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c80d1d948f24c212c547c9367f05802c8570fe01
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3af6036a3bc6cf2b751eed6a1df173fca2c9a117
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768303"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488571"
 ---
 # <a name="rename-user-defined-functions"></a>重新命名使用者定義函數
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -67,7 +68,7 @@ ms.locfileid: "85768303"
   
     -   彙總函式  
   
-4.  以滑鼠右鍵按一下您要重新命名的函數，然後選取 [重新命名]  。  
+4.  以滑鼠右鍵按一下您要重新命名的函數，然後選取 [重新命名]****。  
   
 5.  輸入函式的新名稱。  
   

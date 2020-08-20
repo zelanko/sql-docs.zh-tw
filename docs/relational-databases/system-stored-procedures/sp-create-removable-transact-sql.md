@@ -1,5 +1,6 @@
 ---
-title: sp_create_removable （Transact-sql） |Microsoft Docs
+description: sp_create_removable (Transact-SQL)
+title: sp_create_removable (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 454b077e39a8ff1c17c3a742bb7acd00e8e719f8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b004ff5c004d51bcd0af402fc081f96745d9b9ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85869880"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489492"
 ---
 # <a name="sp_create_removable-transact-sql"></a>sp_create_removable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85869880"
   建立抽取式媒體資料庫。 建立三個或更多檔案 (系統目錄資料表和交易記錄各有一個檔案，資料表有一個或多個檔案)，將資料庫放在這些檔案中。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]我們建議您改用[CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) 。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 我們建議您改用 [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) 。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,27 +56,27 @@ sp_create_removable
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @dbname = ] 'dbname'`這是要建立以在卸載式媒體上使用的資料庫名稱。 *dbname*是**sysname**。  
+`[ @dbname = ] 'dbname'` 這是要建立以在卸載式媒體上使用的資料庫名稱。 *dbname* 是 **sysname**。  
   
-`[ @syslogical = ] 'syslogical'`這是包含系統目錄資料表之檔案的邏輯名稱。 *syslogical*為**sysname**。  
+`[ @syslogical = ] 'syslogical'` 這是包含系統目錄資料表之檔案的邏輯名稱。 *syslogical* 為 **sysname**。  
   
-`[ @sysphysical = ] 'sysphysical'`這是機構名稱。 其中包括系統目錄資料表所在檔案的完整路徑。 *sysphysical*是**Nvarchar （260）**。  
+`[ @sysphysical = ] 'sysphysical'` 這是機構名稱。 其中包括系統目錄資料表所在檔案的完整路徑。 *sysphysical* 是 **Nvarchar (260) **。  
   
-`[ @syssize = ] syssize`這是保存系統目錄資料表的檔案大小（以 mb 為單位）。 *syssize*是**int**。最小*syssize*為1。  
+`[ @syssize = ] syssize` 這是保存系統目錄資料表之檔案的大小（以 mb 為單位）。 *syssize* 是 **int**。最小 *syssize* 為1。  
   
-`[ @loglogical = ] 'loglogical'`這是包含交易記錄檔之檔案的邏輯名稱。 *loglogical*為**sysname**。  
+`[ @loglogical = ] 'loglogical'` 這是包含交易記錄檔的邏輯名稱。 *loglogical* 為 **sysname**。  
   
-`[ @logphysical = ] 'logphysical'`這是機構名稱。 其中包括交易記錄所在檔案的完整路徑。 *logphysical*是**Nvarchar （260）**。  
+`[ @logphysical = ] 'logphysical'` 這是機構名稱。 其中包括交易記錄所在檔案的完整路徑。 *logphysical* 是 **Nvarchar (260) **。  
   
-`[ @logsize = ] logsize`這是包含交易記錄檔的檔案大小（以 mb 為單位）。 *logsize*是**int**。最小*logsize*為1。  
+`[ @logsize = ] logsize` 這是包含交易記錄檔的檔案大小（以 mb 為單位）。 *logsize* 是 **int**。最小 *logsize* 為1。  
   
-`[ @datalogical1 = ] 'datalogical'`這是包含資料表之檔案的邏輯名稱。 *datalogical*為**sysname**。  
+`[ @datalogical1 = ] 'datalogical'` 這是包含資料表之檔案的邏輯名稱。 *datalogical* 為 **sysname**。  
   
  必須有 1 至 16 個資料檔。 當預期資料庫較大，必須分散到多個磁碟時，通常會建立一個以上的資料檔。  
   
-`[ @dataphysical1 = ] 'dataphysical'`這是機構名稱。 其中包括資料表所在檔案的完整路徑。 *dataphysical*是**Nvarchar （260）**。  
+`[ @dataphysical1 = ] 'dataphysical'` 這是機構名稱。 其中包括資料表所在檔案的完整路徑。 *dataphysical* 是 **Nvarchar (260) **。  
   
-`[ @datasize1 = ] 'datasize'`這是包含資料表的檔案大小（以 mb 為單位）。 *datasize*為**int**。*Datasize*的最小值為1。  
+`[ @datasize1 = ] 'datasize'` 這是包含資料表之檔案的大小（以 mb 為單位）。 *datasize* 是 **int**。 *Datasize* 的最小值為1。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

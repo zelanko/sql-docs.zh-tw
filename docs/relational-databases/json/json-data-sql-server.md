@@ -1,4 +1,5 @@
 ---
+description: SQL Server 中的 JSON 資料
 title: 使用 JSON 資料
 ms.date: 06/03/2020
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 380d5d51a5286bac66d89c5d79df34cc3834cf9b
-ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
+ms.openlocfilehash: ffc15af15be20b4ba1bbcd5566c5e63ac0d7226f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84423512"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490922"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server 中的 JSON 資料
 

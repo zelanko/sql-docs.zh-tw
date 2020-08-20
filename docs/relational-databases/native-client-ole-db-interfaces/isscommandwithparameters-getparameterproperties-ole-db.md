@@ -1,4 +1,5 @@
 ---
+description: 'ISSCommandWithParameters：： GetParameterProperties in SQL Server Native Client (OLE DB) '
 title: ISSCommandWithParameters::GetParameterProperties (OLE DB)
 ms.custom: ''
 ms.date: 03/04/2017
@@ -16,14 +17,14 @@ ms.assetid: 7f4cc5ea-d028-4fe5-9192-bd153ab3c26c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a017c6b3f9002fe0c57581a332ee2282f4de1924
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a0ec5b9666e5b61bfc018825848ca543e42d38c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246873"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490787"
 ---
-# <a name="isscommandwithparametersgetparameterproperties-in-sql-server-native-client-ole-db"></a>SQL Server Native Client 中的 ISSCommandWithParameters：： GetParameterProperties （OLE DB）
+# <a name="isscommandwithparametersgetparameterproperties-in-sql-server-native-client-ole-db"></a>ISSCommandWithParameters：： GetParameterProperties in SQL Server Native Client (OLE DB) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   傳回 SSPARAMPROPS 屬性集結構的陣列，而且每個 UDT 或 XML 參數使用一個 SSPARAMPROPS 屬性集。  
@@ -41,13 +42,13 @@ HRESULT GetParameterProperties(
  記憶體的指標，其中包含在 *prgParamProperties* 中傳回的 SSPARAMPROPS 結構數目。  
   
  *prgParamProperties*[out]  
- 藉其傳回 SSPARAMPROPS 結構陣列的記憶體指標。 提供者會為結構配置記憶體，並將位址傳回此記憶體;取用者不再需要結構時，會使用**IMalloc：： Free**釋放此記憶體。 在呼叫**IMalloc：： Free** for *prgParamProperties*之前，取用者也必須針對每個 DBPROP 結構的*vValue*屬性呼叫**VariantClear** ，以便在 variant 包含參考型別（例如 BSTR）的情況下，避免發生記憶體流失的情況。如果*時 pcparams*在輸出上為零，或發生 DB_E_ERRORSOCCURRED 以外的錯誤，則提供者不會配置任何記憶體，並可確保*prgParamProperties*在輸出上為 null 指標。  
+ 藉其傳回 SSPARAMPROPS 結構陣列的記憶體指標。 提供者會為結構配置記憶體，並將位址傳回給這個記憶體;當取用者不再需要該結構時，會以 **IMalloc：： Free** 釋放此記憶體。 在針對 *>prgparamproperties*呼叫**IMalloc：： Free**之前，取用者也必須針對每個 DBPROP 結構的*vValue*屬性呼叫**VariantClear** ，以避免在變數包含參考型別 (例如 BSTR 的情況下造成記憶體流失。 ) 如果輸出上的*pcParams*為零，或發生 DB_E_ERRORSOCCURRED 以外的錯誤，則提供者不會配置任何記憶體，並確保 *>prgparamproperties*在輸出時為 null 指標。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **GetParameterProperties**方法會傳回與 Core OLE DB **ICommandProperties：： GetProperties**方法相同的錯誤碼，不同之處在于無法引發 DB_S_ERRORSOCCURRED 和 DB_E_ERRORSOCCURED。  
+ **GetParameterProperties**方法會傳回與 Core OLE DB **ICommandProperties：： GetProperties**方法相同的錯誤碼，但不能引發 DB_S_ERRORSOCCURRED 和 DB_E_ERRORSOCCURED。  
   
 ## <a name="remarks"></a>備註  
- **ISSCommandWithParameters：： GetParameterProperties**的行為一致，與**GetParameterInfo**有關。 如果尚未呼叫[ISSCommandWithParameters：： SetParameterProperties](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)或**SetParameterInfo** ，或已使用 cParams 等於零的呼叫， **GetParameterInfo**會衍生參數資訊，並傳回這個。 如果至少已針對一個參數呼叫**ISSCommandWithParameters：： SetParameterProperties**或**SetParameterInfo** ， **ISSCommandWithParameters：： GetParameterProperties**只會針對已呼叫**ISSCommandWithParameters：： SetParameterProperties**的參數傳回屬性。 如果在**ISSCommandWithParameters：： GetParameterProperties**或**GetParameterInfo**之後呼叫**ISSCommandWithParameters：： SetParameterProperties** ，則對**ISSCommandWithParameters：： GetParameterProperties**的後續呼叫會針對已呼叫**ISSCommandWithParameters：： SetParameterProperties**的參數傳回覆寫的值。  
+ **ISSCommandWithParameters：： GetParameterProperties** 的行為一致，與 **GetParameterInfo**有關。 如果未呼叫 [ISSCommandWithParameters：： SetParameterProperties](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) 或 **SetParameterInfo** ，或其 cParams 等於零，則 **GetParameterInfo** 會衍生參數資訊並傳回此值。 如果已針對至少一個參數呼叫 **ISSCommandWithParameters：： SetParameterProperties** 或 **SetParameterInfo** ， **ISSCommandWithParameters：： GetParameterProperties** 只會針對已呼叫 **ISSCommandWithParameters：： SetParameterProperties** 的參數傳回屬性。 如果在**ISSCommandWithParameters：： GetParameterProperties**或**GetParameterInfo**之後呼叫**ISSCommandWithParameters：： SetParameterProperties** ，則對**ISSCommandWithParameters：： GetParameterProperties**的後續呼叫會針對已呼叫**ISSCommandWithParameters：： SetParameterProperties**的參數傳回覆寫的值。  
   
  SSPARAMPROPS 結構定義如下：  
 
@@ -59,7 +60,7 @@ struct SSPARAMPROPS {
 };
 ```
 
-|成員|描述|  
+|member|描述|  
 |------------|-----------------|  
 |*iOrdinal*|所傳遞參數的序數。|  
 |*cPropertySets*|*rgPropertySets* 中的 DBPROPSET 結構數目。|  

@@ -1,5 +1,6 @@
 ---
-title: log_shipping_secondary_databases （Transact-sql） |Microsoft Docs
+description: log_shipping_secondary_databases (Transact-SQL)
+title: log_shipping_secondary_databases (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: ba2374af-86b8-480c-a10c-51e7c4e3ae23
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d5dcc3f2a76f069d90fd756410a8b478552c6f6b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cee2eca7d0f75b6a27c17056f70195f3aae14d99
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890122"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488851"
 ---
 # <a name="log_shipping_secondary_databases-transact-sql"></a>log_shipping_secondary_databases (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  在記錄傳送組態中，儲存每個次要資料庫各一項記錄。 此資料表會儲存在**msdb**資料庫中。  
+  在記錄傳送組態中，儲存每個次要資料庫各一項記錄。 此資料表儲存在 **msdb** 資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -40,7 +41,7 @@ ms.locfileid: "85890122"
 |**block_size**|**int**|用來做為備份裝置區塊大小的大小 (以位元組為單位)。|  
 |**buffer_count**|**int**|備份或還原作業所用的緩衝區總數。|  
 |**max_transfer_size**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 向備份裝置發出的最大輸入或輸出要求大小 (以位元組為單位)。|  
-|**last_restored_file**|**Nvarchar （500）**|前一個還原到次要資料庫的備份檔之檔案名稱。|  
+|**last_restored_file**|**Nvarchar (500) **|前一個還原到次要資料庫的備份檔之檔案名稱。|  
 |**last_restored_date**|**datetime**|在次要資料庫中，前一個還原作業的日期和時間。|  
   
 ## <a name="see-also"></a>另請參閱  

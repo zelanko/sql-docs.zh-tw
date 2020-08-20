@@ -1,4 +1,5 @@
 ---
+description: 刪除發行項
 title: 刪除發行項 | Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ ms.assetid: 185b58fc-38c0-4abe-822e-6ec20066c863
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 43cdd142ac3933884aa9876395a24c7076626d99
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2c9f2fd0d7cede5981258ccc74cecd2608ba931a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920744"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490548"
 ---
 # <a name="delete-an-article"></a>刪除發行項
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

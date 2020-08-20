@@ -1,5 +1,6 @@
 ---
-title: sysmail_help_principalprofile_sp （Transact-sql） |Microsoft Docs
+description: sysmail_help_principalprofile_sp (Transact-SQL)
+title: sysmail_help_principalprofile_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9f4d5af37675811b978e444e40e730ad59fd823b
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 8325480c2869f9b3e35caab51935eba36d888afb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122728"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488954"
 ---
 # <a name="sysmail_help_principalprofile_sp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,16 +42,16 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @principal_id = ] principal_id`這是要列出之關聯的**msdb**資料庫中，資料庫使用者或角色的識別碼。 *principal_id*是**int**，預設值是 Null。 可以指定*principal_id*或*principal_name* 。  
+`[ @principal_id = ] principal_id` 這是要列出之關聯的 **msdb** 資料庫中，資料庫使用者或角色的識別碼。 *principal_id* 是 **int**，預設值是 Null。 可以指定 *principal_id* 或 *principal_name* 。  
   
-`[ @principal_name = ] 'principal_name'`這是要列出之關聯的**msdb**資料庫中，資料庫使用者或角色的名稱。 *principal_name*是**sysname**，預設值是 Null。 可以指定*principal_id*或*principal_name* 。  
+`[ @principal_name = ] 'principal_name'` 這是要列出之關聯的 **msdb** 資料庫中，資料庫使用者或角色的名稱。 *principal_name* 是 **sysname**，預設值是 Null。 可以指定 *principal_id* 或 *principal_name* 。  
   
-`[ @profile_id = ] profile_id`這是要列出之關聯的設定檔識別碼。 *profile_id*是**int**，預設值是 Null。 可以指定*profile_id*或*profile_name* 。  
+`[ @profile_id = ] profile_id` 這是要列出之關聯的設定檔識別碼。 *profile_id* 是 **int**，預設值是 Null。 可以指定 *profile_id* 或 *profile_name* 。  
   
-`[ @profile_name = ] 'profile_name'`這是要列出之關聯的設定檔名稱。 *profile_name*是**sysname**，預設值是 Null。 可以指定*profile_id*或*profile_name* 。  
+`[ @profile_name = ] 'profile_name'` 這是要列出之關聯的設定檔名稱。 *profile_name* 是 **sysname**，預設值是 Null。 可以指定 *profile_id* 或 *profile_name* 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="result-sets"></a>結果集  
  傳回包含下表所列資料行的結果集。  
@@ -64,9 +65,9 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 |**is_default**|**bit**|指出設定檔是否為使用者預設設定檔的旗標。|  
   
 ## <a name="remarks"></a>備註  
- 如果叫用不含參數的**sysmail_help_principalprofile_sp** ，則傳回的結果集會列出實例中的所有關聯 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 否則，結果集會包含符合提供參數之關聯的資訊。 例如，提供設定檔名稱時，程序便會列出設定檔的所有關聯。  
+ 如果叫用不含參數的 **sysmail_help_principalprofile_sp** ，傳回的結果集會列出實例中的所有關聯 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 否則，結果集會包含符合提供參數之關聯的資訊。 例如，提供設定檔名稱時，程序便會列出設定檔的所有關聯。  
   
- **sysmail_help_principalprofile_sp**是在**msdb**資料庫中，而且是由**dbo**架構所擁有。 如果目前的資料庫不是**msdb**，就必須以三部分的名稱來執行此程式。  
+ **sysmail_help_principalprofile_sp** 位於 **msdb** 資料庫中，而且是由 **dbo** 架構所擁有。 如果目前的資料庫不是 **msdb**，就必須以三部分名稱執行程式。  
   
 ## <a name="permissions"></a>權限  
  需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
@@ -108,6 +109,6 @@ principal_id principal_name     profile_id  profile_name                   is_de
   
 ## <a name="see-also"></a>另請參閱  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
- [Database Mail 預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [&#40;Transact-sql&#41;的 Database Mail 預存程式 ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

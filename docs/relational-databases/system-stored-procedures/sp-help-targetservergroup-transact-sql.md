@@ -1,5 +1,6 @@
 ---
-title: sp_help_targetservergroup （Transact-sql） |Microsoft Docs
+description: sp_help_targetservergroup (Transact-SQL)
+title: sp_help_targetservergroup (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ec3a4a68-b591-431c-9518-053ede522d0c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 10f96877b346396166f2980d47085c726a66bc19
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 75d725bec30d25d46216e292d7e96ff8f2b5f899
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881566"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489370"
 ---
 # <a name="sp_help_targetservergroup-transact-sql"></a>sp_help_targetservergroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,10 +41,10 @@ sp_help_targetservergroup
 ```  
   
 ## <a name="argument"></a>引數  
-`[ @name = ] 'name'`這是要傳回信息的目標伺服器組名。 *name*是**sysname**，預設值是 Null。  
+`[ @name = ] 'name'` 這是要傳回信息的目標伺服器組名。 *名稱* 是 **sysname**，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="result-sets"></a>結果集  
   
@@ -53,7 +54,7 @@ sp_help_targetservergroup
 |**name**|**sysname**|伺服器群組的名稱|  
   
 ## <a name="permissions"></a>權限  
- 執行此程式的許可權預設為**系統管理員（sysadmin** ）固定伺服器角色。  
+ 執行此程式的許可權預設為 **系統管理員（sysadmin** ）固定伺服器角色。  
   
 ## <a name="examples"></a>範例  
   

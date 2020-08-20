@@ -1,4 +1,5 @@
 ---
+description: 使用記憶體內部 OLTP 最佳化 JSON 處理
 title: 使用記憶體內部 OLTP 最佳化 JSON 處理
 ms.date: 06/03/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 30a31cb80a9aea2f99824dbf7912714870059be3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 73106658572120b2c679c2ac37e2770fbc1151a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730410"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490926"
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>使用記憶體內部 OLTP 最佳化 JSON 處理
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

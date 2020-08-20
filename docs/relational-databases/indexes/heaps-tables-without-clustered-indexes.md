@@ -1,4 +1,5 @@
 ---
+description: 堆積 (無叢集索引的資料表)
 title: 堆積 (無叢集索引的資料表) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/01/2016
@@ -17,12 +18,12 @@ ms.assetid: df5c4dfb-d372-4d0f-859a-a2d2533ee0d7
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e186d1da5ab42b25c120303a545c9164d949ad45
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ac59dabc8cba303ab0b4e8e8c63811772461d216
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786475"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490955"
 ---
 # <a name="heaps-tables-without-clustered-indexes"></a>堆積 (無叢集索引的資料表)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,4 +1,5 @@
 ---
+description: JSON 路徑運算式 (SQL Server)
 title: JSON 路徑運算式
 ms.date: 06/03/2020
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90f30c6fc18915b96f17ddf8e775e06bf94559a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8be99986e6ca9ded5bb28e53b5c3ae166e8b86b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715374"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490941"
 ---
 # <a name="json-path-expressions-sql-server"></a>JSON 路徑運算式 (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -65,7 +66,7 @@ SELECT * FROM OPENJSON(@json, N'lax $.info');
   
 -   屬性路徑是一組路徑步驟。 路徑步驟可包含下列元素和運算子。  
   
-    -   索引鍵名稱。 例如 `$.name` 和 `$."first name"`。 如果索引鍵名稱以貨幣符號開頭或包含特殊字元 (例如空格)，請用引號括起。   
+    -   索引鍵名稱。 例如，`$.name` 與 `$."first name"`。 如果索引鍵名稱以貨幣符號開頭或包含特殊字元 (例如空格)，請用引號括起。   
   
     -   陣列元素。 例如： `$.product[3]` 。 以零為基底的陣列。  
   

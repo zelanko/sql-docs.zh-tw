@@ -1,5 +1,6 @@
 ---
-title: sp_dbmmonitorhelpalert （Transact-sql） |Microsoft Docs
+description: sp_dbmmonitorhelpalert (Transact-SQL)
+title: sp_dbmmonitorhelpalert (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ab1a8338a25394b3a750e09e0b0da6c6099c97ee
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 942696e1d05ac149780ca226d4a6ba500a3aa11c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85865852"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489411"
 ---
 # <a name="sp_dbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +58,7 @@ sp_dbmmonitorhelpalert database_name
 |4|鏡像認可負擔|指定在主體伺服器上產生警告之前所容許之每項交易的平均延遲毫秒數。 這項延遲是當主體伺服器執行個體等待鏡像伺服器執行個體將交易記錄寫入重做佇列中時所產生的負擔量。 只有在高安全性模式中才會顯出這個值的重要性。|  
 |5|保留期限|在資料庫鏡像狀態資料表中控制資料列保留時間的中繼資料。|  
   
- 如需對應于警告的事件識別碼的詳細資訊，請參閱[&#40;SQL Server&#41;，使用鏡像效能標準的警告臨界值和警示](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)。  
+ 如需與警告對應之事件識別碼的詳細資訊，請參閱 [使用鏡像效能計量的警告臨界值和警示 &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  None  
@@ -67,9 +68,9 @@ sp_dbmmonitorhelpalert database_name
   
 |資料行|資料類型|描述|  
 |------------|---------------|-----------------|  
-|**alert_id**|**int**|下表列出每個效能標準的**alert_id**值，以及**sp_dbmmonitorresults**結果集中顯示的度量單位度量：|  
-|**threshold**|**int**|警告的臨界值。 如果在更新鏡像狀態時，傳回了這個臨界值以上的值，會在 Windows 事件記錄檔中輸入一個項目。 根據警告而定，這個值可能代表 KB、分鐘或毫秒。 如果目前尚未設定臨界值，則此值為 NULL。<br /><br /> **注意：** 若要查看目前的值，請執行[sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)預存程式。|  
-|**後**|**bit**|0 = 事件已停用。<br /><br /> 1 = 事件已啟用。<br /><br /> **注意：** 保留期限一律為啟用狀態。|  
+|**alert_id**|**int**|下表列出每個效能標準的 **alert_id** 值，以及顯示在 **sp_dbmmonitorresults** 結果集中的度量單位測量單位：|  
+|**threshold**|**int**|警告的臨界值。 如果在更新鏡像狀態時，傳回了這個臨界值以上的值，會在 Windows 事件記錄檔中輸入一個項目。 根據警告而定，這個值可能代表 KB、分鐘或毫秒。 如果目前尚未設定臨界值，則此值為 NULL。<br /><br /> **注意：** 若要查看目前的值，請執行 [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) 預存程式。|  
+|**啟用**|**bit**|0 = 事件已停用。<br /><br /> 1 = 事件已啟用。<br /><br /> **注意：** 保留期限一律為啟用狀態。|  
   
 |值|效能標準|單位|  
 |-----------|------------------------|----------|  
@@ -80,7 +81,7 @@ sp_dbmmonitorhelpalert database_name
 |5|保留期限|小時|  
   
 ## <a name="permissions"></a>權限  
- 需要**系統管理員（sysadmin** ）固定伺服器角色中的成員資格。  
+ 需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
  下列範例會傳回資料列，指出是否已在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫上啟用尚未傳送之最舊交易效能標準的警告。  

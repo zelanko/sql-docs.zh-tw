@@ -1,5 +1,6 @@
 ---
-title: sp_syscollector_update_collection_item （Transact-sql） |Microsoft Docs
+description: sp_syscollector_update_collection_item (Transact-SQL)
+title: sp_syscollector_update_collection_item (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: efbdc613c641482df6b4dfe88a7f132124276578
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bf31cc498e140070b97f76593a8ce675ebd804ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892808"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489081"
 ---
 # <a name="sp_syscollector_update_collection_item-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,24 +48,24 @@ sp_syscollector_update_collection_item
   
 ## <a name="arguments"></a>引數  
  [ @collection_item_id =] *collection_item_id*  
- 這是識別收集項的唯一識別碼。 *collection_item_id*是**int** ，預設值為 Null。 如果*name*為 Null， *collection_item_id*必須有值。  
+ 這是識別收集項的唯一識別碼。 *collection_item_id* 是 **int** ，預設值是 Null。 如果*name*為 Null， *collection_item_id*必須有值。  
   
  [ @name =] '*name*'  
- 這是收集項目的名稱。 *名稱*是**sysname** ，預設值是 Null。 如果*collection_item_id*為 Null，*名稱*就必須有值。  
+ 這是收集項目的名稱。 *名稱* 是 **sysname** ，預設值是 Null。 如果*collection_item_id*為 Null，則*名稱*必須具有值。  
   
  [ @new_name =] '*new_name*'  
- 這是收集項的新名稱。 *new_name*是**sysname**，而且如果使用的話，不可以是空字串。  
+ 這是收集項的新名稱。 *new_name* 為 **sysname**，如果使用的話，不可以是空字串。  
   
- *new_name*必須是唯一的。 如需目前的收集項名稱清單，請查詢 syscollector_collection_items 系統檢視表。  
+ *new_name* 必須是唯一的。 如需目前的收集項名稱清單，請查詢 syscollector_collection_items 系統檢視表。  
   
- [ @frequency =]*頻率*  
- 這是此收集項收集資料的頻率 (以秒為單位)。 *frequency*是**int**，預設值是5，這是可指定的最小值。  
+ [ @frequency =] *頻率*  
+ 這是此收集項收集資料的頻率 (以秒為單位)。 *frequency* 是 **int**，預設值是5，可以指定的最小值。  
   
  [ @parameters =] '*parameters*'  
- 收集項的輸入參數。 *參數*是**xml** ，預設值是 Null。 *參數*架構必須符合收集器型別的參數架構。  
+ 收集項的輸入參數。 *參數* 是 **xml** ，預設值是 Null。 *參數*架構必須符合收集器型別的參數架構。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或1（失敗）  
+ **0** (成功) 或 1 (失敗)   
   
 ## <a name="remarks"></a>備註  
  如果收集組設定為非快取模式，系統就會忽略變更此頻率，因為這個模式會導致在針對收集組指定的排程中同時發生資料收集和上傳作業。 若要檢視收集組的狀態，請執行下列查詢。 使用要更新之收集項的識別碼取代 `<collection_item_id>`。  
@@ -89,7 +90,7 @@ WHERE collection_item_id = <collection_item_id>;
 -   @parameters  
   
 ## <a name="examples"></a>範例  
- 下列範例是根據[sp_syscollector_create_collection_item &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)中定義的範例所建立的收集項。  
+ 下列範例是以 [sp_syscollector_create_collection_item &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)中定義的範例中所建立的收集項目為基礎。  
   
 ### <a name="a-changing-the-collection-frequency"></a>A. 變更收集頻率  
  下列範例會針對指定的收集項變更收集頻率。  
@@ -138,7 +139,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [資料收集](../../relational-databases/data-collection/data-collection.md)   
  [sp_syscollector_create_collection_item &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
  [syscollector_collection_items &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  

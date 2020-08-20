@@ -1,4 +1,5 @@
 ---
+description: 可更新訂閱 - 佇列更新衝突解決方法
 title: 佇列更新衝突偵測和解決 | Microsoft 文件
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9364de40aed4218d1abf73dac1502413c3509edf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 18cc2c5b4b93a77303fe9e59b3e8eae7f5597633
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883209"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490529"
 ---
 # <a name="updatable-subscriptions---queued-updating-conflict-resolution"></a>可更新訂閱 - 佇列更新衝突解決方法
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -61,7 +62,7 @@ ms.locfileid: "85883209"
   
  **若要檢視資料衝突**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：[View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md) (檢視交易式發行集的資料衝突 &#40;SQL Server Management Studio&#41;)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]:[檢視交易式發行集的資料衝突 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   
 ### <a name="publisher-wins"></a>發行者優先  
  當衝突解決設定成「發行者優先」時，會以發行者的資料為基礎來維護交易一致性。 衝突中的交易會在初始它的訂閱者復原。  
