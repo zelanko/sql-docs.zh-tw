@@ -1,4 +1,5 @@
 ---
+description: 重新命名檢視
 title: 重新命名檢視 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: 5eed0488-81d2-40e8-8fdf-b0a640a591d0
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 856c40bbe7031a8adf2a789f8ac2a674d572838c
-ms.sourcegitcommit: da836a2e23bd2ed56d2a72983f7b5b18c6f13342
+ms.openlocfilehash: 135bccd7ff94a88f7f1036b4bce4e55451eab4e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85082676"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463661"
 ---
 # <a name="rename-views"></a>重新命名檢視
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -38,11 +39,11 @@ ms.locfileid: "85082676"
   
 -   **使用下列方法重新命名檢視：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作：** [重新命名檢視後](#FollowUp)  
+-   **Follow Up:**  [After renaming a view](#FollowUp)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
@@ -60,7 +61,7 @@ ms.locfileid: "85082676"
   
 1.  在 **[物件總管]** 中，展開資料庫，此資料庫包含您要重新命名的檢視，然後展開 **[檢視]** 資料夾。  
   
-2.  以滑鼠右鍵按一下您要重新命名的檢視，然後選取 **[重新命名]** 。  
+2.  以滑鼠右鍵按一下您要重新命名的檢視，然後選取 **[重新命名]**。  
   
 3.  輸入檢視的新名稱。  
 

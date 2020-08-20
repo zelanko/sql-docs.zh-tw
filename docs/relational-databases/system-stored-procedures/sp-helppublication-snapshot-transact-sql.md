@@ -1,5 +1,6 @@
 ---
-title: sp_helppublication_snapshot （Transact-sql） |Microsoft Docs
+description: sp_helppublication_snapshot (Transact-SQL)
+title: sp_helppublication_snapshot (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 97b4a7ae-40a5-4328-88f1-ff5d105bbb34
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a1dc48a88bd9a180b7cb0ce65a24c607b80cd6a9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e6d350d42a057177ef488d581dd247e93eb9e29d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725756"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464191"
 ---
 # <a name="sp_helppublication_snapshot-transact-sql"></a>sp_helppublication_snapshot (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,31 +39,31 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 這是發行集的名稱。 *發行* 集是 **sysname**，沒有預設值。  
   
-`[ @publisher = ] 'publisher'`指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *publisher*是**sysname**，預設值是 Null。  
+`[ @publisher = ] 'publisher'` 指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *publisher* 是 **sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  將發行項加入發行者時，不應使用「*發行者*」 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+>  將發行項加入至發行者時，不應使用「*發行者*」 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="result-sets"></a>結果集  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|快照集代理程式的識別碼。|  
-|**name**|**Nvarchar （100）**|快照集代理程式的名稱。|  
+|**name**|**Nvarchar (100) **|快照集代理程式的名稱。|  
 |**publisher_security_mode**|**smallint**|這是連接到發行者時，代理程式所用的安全性模式，它可以是下列項目之一：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證<br /><br /> **1** = Windows 驗證。|  
 |**publisher_login**|**sysname**|當連接到發行者時所用的登入。|  
-|**publisher_password**|**Nvarchar （524）**|基於安全性理由， **\*\*\*\*\*\*\*\*\*\*** 一律會傳回的值。|  
+|**publisher_password**|**Nvarchar (524) **|基於安全性考慮， **\*\*\*\*\*\*\*\*\*\*** 一律會傳回的值。|  
 |**job_id**|**uniqueidentifier**|代理程式作業的唯一識別碼。|  
-|**job_login**|**nvarchar(512)**|這是用來執行快照集代理程式的 Windows 帳戶，其傳回的格式為*DOMAIN* \\ *username*。|  
-|**job_password**|**sysname**|基於安全性理由， **\*\*\*\*\*\*\*\*\*\*** 一律會傳回的值。|  
+|**job_login**|**nvarchar(512)**|這是快照集代理程式執行時所用的 Windows 帳戶，以網域使用者*DOMAIN* \\ *名稱*的格式傳回。|  
+|**job_password**|**sysname**|基於安全性考慮， **\*\*\*\*\*\*\*\*\*\*** 一律會傳回的值。|  
 |**schedule_name**|**sysname**|這個代理程式作業所用的排程名稱。|  
-|**frequency_type**|**int**|這是排程執行代理程式的頻率，它可以是下列值之一。<br /><br /> **1** = 一次<br /><br /> **2** = 視需要<br /><br /> **4** = 每天<br /><br /> **8** = 每週<br /><br /> **16** = 每月<br /><br /> **32** = 每月相對<br /><br /> **64** = 自動啟動<br /><br /> **128** = 週期性|  
-|**frequency_interval**|**int**|代理程式執行的天數，它可以是下列值之一。<br /><br /> **1** = 星期日<br /><br /> **2** = 星期一<br /><br /> **3** = 星期二<br /><br /> **4** = 星期三<br /><br /> **5** = 星期四<br /><br /> **6** = 星期五<br /><br /> **7** = 星期六<br /><br /> **8** = 日<br /><br /> **9** = 工作日<br /><br /> **10** = 週末|  
-|**frequency_subday_type**|**int**|這是定義當*frequency_type*為**4** （每天）時，代理程式執行頻率的類型，而且可以是下列其中一個值。<br /><br /> **1** = 在指定的時間<br /><br /> **2** = 秒<br /><br /> **4** = 分鐘<br /><br /> **8** = 小時|  
-|**frequency_subday_interval**|**int**|排程執行代理程式之間發生的*frequency_subday_type*間隔數。|  
-|**frequency_relative_interval**|**int**|這是當*frequency_type*是**32** （每月相對）時，代理程式在指定月份執行的一周，而且可以是下列其中一個值。<br /><br /> **1** = 第一個<br /><br /> **2** = 秒<br /><br /> **4** = 第三個<br /><br /> **8** = 第四個<br /><br /> **16** = 最後|  
+|**frequency_type**|**int**|這是排程執行代理程式的頻率，它可以是下列值之一。<br /><br /> **1** = 一次<br /><br /> **2** = 隨選<br /><br /> **4** = 每日<br /><br /> **8** = 每週<br /><br /> **16** = 每月<br /><br /> **32** = 每月相對<br /><br /> **64** = 自動啟動<br /><br /> **128** = 週期性|  
+|**frequency_interval**|**int**|代理程式執行的天數，它可以是下列值之一。<br /><br /> **1** = 星期日<br /><br /> **2** = 星期一<br /><br /> **3** = 星期二<br /><br /> **4** = 星期三<br /><br /> **5** = 星期四<br /><br /> **6** = 星期五<br /><br /> **7** = 星期六<br /><br /> **8** = 天<br /><br /> **9** = 工作日<br /><br /> **10** = 週末日|  
+|**frequency_subday_type**|**int**|這種類型會定義 *frequency_type* 為 **4** (每日) 時，代理程式的執行頻率，而且可以是下列值之一。<br /><br /> **1** = 指定時間<br /><br /> **2** = 秒<br /><br /> **4** = 分鐘<br /><br /> **8** = 小時|  
+|**frequency_subday_interval**|**int**|代理程式排程執行之間發生的 *frequency_subday_type* 間隔數目。|  
+|**frequency_relative_interval**|**int**|當 *frequency_type* 為 **32** (每月相對) ，且可以是下列其中一個值時，代理程式會在指定的月份內執行。<br /><br /> **1** = First<br /><br /> **2** = 秒<br /><br /> **4** = 第三<br /><br /> **8** = 第四個<br /><br /> **16** = Last|  
 |**frequency_recurrence_factor**|**int**|排程執行代理程式的間隔週數或月數。|  
 |**active_start_date**|**int**|這是第一次排程執行代理程式的日期，格式為 YYYYMMDD。|  
 |**active_end_date**|**int**|這是最後一次排程執行代理程式的日期，格式為 YYYYMMDD。|  
@@ -70,13 +71,13 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 |**active_end_time**|**int**|這是最後一次排程執行代理程式的時間，格式為 HHMMSS。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_help_publication_snapshot**用於所有類型的複寫中。  
+ **sp_help_publication_snapshot** 用於所有類型的複寫中。  
   
 ## <a name="permissions"></a>權限  
- 只有在發行者端的**系統管理員（sysadmin** ）固定伺服器角色成員，或是發行集資料庫之**db_owner**固定資料庫角色的成員，才能夠執行**sp_help_publication_snapshot**。  
+ 只有在發行者端的 **系統管理員（sysadmin** ）固定伺服器角色的成員，或是發行集資料庫之 **db_owner** 固定資料庫角色的成員，才能夠執行 **sp_help_publication_snapshot**。  
   
 ## <a name="see-also"></a>另請參閱  
  [檢視及修改發行集屬性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   

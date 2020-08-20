@@ -1,4 +1,5 @@
 ---
+description: 時態表安全性
 title: 時態表安全性 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/16/2019
@@ -11,12 +12,12 @@ ms.assetid: 60e5d6f6-a26d-4bba-aada-42e382bbcd38
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f9392a6ef282d1a3201e5edb2a4fa026adc5752
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 5dbfd363746a0849643835d3d9cf567c8f065e7f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122769"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463725"
 ---
 # <a name="temporal-table-security"></a>時態表安全性
 

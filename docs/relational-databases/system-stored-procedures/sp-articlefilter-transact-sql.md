@@ -1,5 +1,6 @@
 ---
-title: sp_articlefilter （Transact-sql） |Microsoft Docs
+description: sp_articlefilter (Transact-SQL)
+title: sp_articlefilter (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4c3fee32-a43f-4757-a029-30aef4696afb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 037812be8b38c9be107197a72bd7a161e56904c9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 263d572d5ef5a65ed2d8c22f7ba1bfd3b16c08c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716233"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464560"
 ---
 # <a name="sp_articlefilter-transact-sql"></a>sp_articlefilter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,59 +44,59 @@ sp_articlefilter [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'`這是包含發行項的發行集名稱。 *發行*集是**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 這是包含發行項的發行集名稱。 *發行* 集是 **sysname**，沒有預設值。  
   
-`[ @article = ] 'article'`這是發行項的名稱。 *文章*是**sysname**，沒有預設值。  
+`[ @article = ] 'article'` 這是發行項的名稱。 *文章* 是 **sysname**，沒有預設值。  
   
-`[ @filter_name = ] 'filter_name'`這是要從*filter_name*建立之篩選預存程式的名稱。 *filter_name*是**Nvarchar （386）**，預設值是 Null。 您必須指定發行項篩選的唯一名稱。  
+`[ @filter_name = ] 'filter_name'` 這是要從 *filter_name*建立之篩選預存程式的名稱。 *filter_name* 是 **Nvarchar (386) **，預設值是 Null。 您必須指定發行項篩選的唯一名稱。  
   
-`[ @filter_clause = ] 'filter_clause'`這是定義水準篩選的限制（WHERE）子句。 當輸入限制子句時，請省略 WHERE 關鍵字。 *filter_clause*是**Ntext**，預設值是 Null。  
+`[ @filter_clause = ] 'filter_clause'` 這是定義水準篩選之) 子句的限制 (。 當輸入限制子句時，請省略 WHERE 關鍵字。 *filter_clause* 是 **Ntext**，預設值是 Null。  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`認可這個預存程式所採取的動作可能會使現有的快照集失效。 *force_invalidate_snapshot*是**bit**，預設值是**0**。  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 認可這個預存程式所採取的動作可能使現有的快照集失效。 *force_invalidate_snapshot* 是 **bit**，預設值是 **0**。  
   
- **0**指定發行項的變更不會使快照集失效。 如果預存程序偵測到變更需要新的快照集，就會發生錯誤，且不會進行任何變更。  
+ **0** 指定發行項的變更不會使快照集失效。 如果預存程序偵測到變更需要新的快照集，就會發生錯誤，且不會進行任何變更。  
   
- **1**指定發行項的變更可能會導致快照集無效，如果有現有的訂閱需要新的快照集，則會提供要標示為已淘汰之現有快照集的許可權，並產生新的快照集。  
+ **1** 指定發行項的變更可能使快照集失效，如果有現有的訂閱需要新的快照集，則會將現有快照集的許可權標示為已淘汰，並產生新的快照集。  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription`認可這個預存程式所採取的動作可能需要重新初始化現有的訂閱。 *force_reinit_subscription*是**bit**，預設值是**0**。  
+`[ @force_reinit_subscription = ] force_reinit_subscription` 認可這個預存程式所採取的動作可能需要重新初始化現有的訂閱。 *force_reinit_subscription* 是 **bit**，預設值是 **0**。  
   
- **0**指定發行項的變更不會造成重新初始化訂閱的需求。 如果預存程序偵測到變更需要重新初始化訂閱，就會發生錯誤，且不會進行任何變更。  
+ **0** 指定發行項的變更不會造成訂閱重新初始化的需求。 如果預存程序偵測到變更需要重新初始化訂閱，就會發生錯誤，且不會進行任何變更。  
   
- **1**指定發行項的變更會使現有的訂閱重新初始化，並提供要進行訂閱重新初始化的許可權。  
+ **1** 指定發行項的變更會使現有的訂閱重新初始化，且會提供將發生之訂閱重新初始化的許可權。  
   
-`[ @publisher = ] 'publisher'`指定非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *publisher*是**sysname**，預設值是 Null。  
+`[ @publisher = ] 'publisher'` 指定非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *publisher* 是 **sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  *發行者*不應用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。  
+>  *發行者* 不應與發行者一起使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_articlefilter**用於快照式複寫和異動複寫中。  
+ **sp_articlefilter** 用於快照式複寫和異動複寫中。  
   
- 針對具有現有訂閱的發行項執行**sp_articlefilter** ，需要重新初始化這些訂閱。  
+ 針對具有現有訂閱的發行項執行 **sp_articlefilter** ，需要重新初始化這些訂閱。  
   
- **sp_articlefilter**建立篩選器，會將篩選預存程式的識別碼插入[sysarticles &#40;transact-sql&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md)資料表的**篩選**條件資料行中，然後在**filter_clause**資料行中插入限制子句的文字。  
+ **sp_articlefilter**建立篩選，請將篩選預存程式的識別碼插入[sysarticles &#40;transact-sql&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md)資料表的 [**篩選**] 資料行中，然後將限制子句的文字插入**filter_clause**資料行中。  
   
- 若要建立具有水準篩選的發行項，請執行不含*篩選*參數的[sp_addarticle &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 。 執行**sp_articlefilter**，提供包括*filter_clause*在內的所有參數，然後執行[sp_articleview &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)，提供所有參數，包括相同的*filter_clause*。 如果篩選已存在，而且**sysarticles**中的**類型**為**1** （記錄式發行項），則會刪除先前的篩選，並建立新的篩選。  
+ 若要建立具有水準篩選的發行項，請執行不含*篩選*參數的[sp_addarticle &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 。 執行 **sp_articlefilter**，提供包括 *filter_clause*在內的所有參數，然後執行 [sp_articleview &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)，提供包含相同 *filter_clause*的所有參數。 如果篩選已經存在，且**sysarticles**中的**類型**是**1** (記錄檔發行項) ，則會刪除先前的篩選並建立新的篩選準則。  
   
- 如果未提供*filter_name*和*filter_clause* ，則會刪除先前的篩選準則，並將篩選識別碼設定為**0**。  
+ 如果未提供 *filter_name* 和 *filter_clause* ，則會刪除先前的篩選並將篩選識別碼設定為 **0**。  
   
 ## <a name="example"></a>範例  
  [!code-sql[HowTo#sp_AddTranArticle](../../relational-databases/replication/codesnippet/tsql/sp-articlefilter-transac_1.sql)]  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_articlefilter**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色或 **db_owner** 固定資料庫角色的成員，才能夠執行 **sp_articlefilter**。  
   
 ## <a name="see-also"></a>另請參閱  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
- [定義和修改靜態資料列篩選](../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
+ [定義及修改靜態資料列篩選](../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
  [sp_addarticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articleview &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
  [sp_changearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_droparticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
- [sp_helparticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
+ [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

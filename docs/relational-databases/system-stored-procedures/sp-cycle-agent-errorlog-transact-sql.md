@@ -1,5 +1,6 @@
 ---
-title: sp_cycle_agent_errorlog （Transact-sql） |Microsoft Docs
+description: sp_cycle_agent_errorlog (Transact-SQL)
+title: sp_cycle_agent_errorlog (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8aa96182-60b7-4d7b-b2a7-ccce70378c6e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ceda2ac8c7d5280515d28e489b0c568804a41242
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d289ef03ea7404a149d8b644d8dc2dee7f25f78b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85868407"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464360"
 ---
 # <a name="sp_cycle_agent_errorlog-transact-sql"></a>sp_cycle_agent_errorlog (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,18 +40,18 @@ sp_cycle_agent_errorlog
 ```  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="result-sets"></a>結果集  
  None  
   
 ## <a name="remarks"></a>備註  
- 每次 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動代理程式時，目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agent 錯誤記錄檔都會重新命名為**SQLAgent。 1**;**SQLAgent**會變成**SQLAgent。 2**， **SQLAgent**會變成**SQLAgent。 3**，依此類推。 **sp_cycle_agent_errorlog**可讓您迴圈錯誤記錄檔，而不需要停止和啟動伺服器。  
+ 每次 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動代理程式時，會將目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式錯誤記錄檔重新命名為 **SQLAgent。 1**; **SQLAgent** 會變成 **SQLAgent。 2**， **SQLAgent. 2** 變成 **SQLAgent. 3**，依此類推。 **sp_cycle_agent_errorlog** 可讓您在不停止和啟動伺服器的情況下，迴圈錯誤記錄檔。  
   
- 這個預存程式必須從**msdb**資料庫中執行。  
+ 這個預存程式必須從 **msdb** 資料庫執行。  
   
 ## <a name="permissions"></a>權限  
- **Sp_cycle_agent_errorlog**的執行許可權僅限於**系統管理員（sysadmin** ）固定伺服器角色的成員。  
+ **Sp_cycle_agent_errorlog**的 Execute 許可權僅限於**系統管理員（sysadmin** ）固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  
  下列範例會循環處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 錯誤記錄。  

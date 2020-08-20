@@ -1,5 +1,6 @@
 ---
-title: sp_add_log_shipping_alert_job （Transact-sql） |Microsoft Docs
+description: sp_add_log_shipping_alert_job (Transact-SQL)
+title: sp_add_log_shipping_alert_job (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: dd95d96e-8963-4aa9-bdcc-3e4b1bc002d3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ca0d81b9e8c08fc25c86303d4f3fe7cf02013498
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b5c872f0346cce50ff27e442991efa5e5f4e4391
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879926"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464700"
 ---
 # <a name="sp_add_log_shipping_alert_job-transact-sql"></a>sp_add_log_shipping_alert_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  這個預存程序會檢查是否已在這部伺服器上建立警示作業。 如果警示作業不存在，這個預存程式會建立警示作業，並將其作業識別碼新增至**log_shipping_monitor_alert**資料表。 依預設，會啟用警示作業，且會每兩分鐘執行一次。  
+  這個預存程序會檢查是否已在這部伺服器上建立警示作業。 如果警示作業不存在，此預存程式會建立警示作業，並將其作業識別碼加入 **log_shipping_monitor_alert** 資料表中。 依預設，會啟用警示作業，且會每兩分鐘執行一次。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,13 +50,13 @@ sp_add_log_shipping_alert_job
  None  
   
 ## <a name="remarks"></a>備註  
- **sp_add_log_shipping_alert_job**必須從監視伺服器上的**master**資料庫中執行。  
+ **sp_add_log_shipping_alert_job** 必須從監視伺服器上的 **master** 資料庫執行。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行此程式。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行這個程式。  
   
 ## <a name="examples"></a>範例  
- 這個範例會顯示**sp_add_log_shipping_alert_job**的執行，以建立警示作業識別碼。  
+ 此範例示範如何執行 **sp_add_log_shipping_alert_job** 來建立警示作業識別碼。  
   
 ```  
 USE master  

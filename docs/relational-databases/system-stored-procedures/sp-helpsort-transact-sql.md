@@ -1,5 +1,6 @@
 ---
-title: sp_helpsort （Transact-sql） |Microsoft Docs
+description: sp_helpsort (Transact-SQL)
+title: sp_helpsort (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: 2a88d079-3755-43cb-8a54-97d0114149e6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2da3e78c5fde49a3d83c3813f70c5d56a1915908
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 22a34a8285a2043159e1bf56191381c6ac933bc5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750522"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464166"
 ---
 # <a name="sp_helpsort-transact-sql"></a>sp_helpsort (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +47,7 @@ sp_helpsort
  傳回伺服器預設定序。  
   
 ## <a name="remarks"></a>備註  
- 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用指定的定序來安裝實例以與舊版安裝相容，sp_helpsort 會傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 空白**sp_helpsort**的結果。 當此行為發生時，您可以藉由查詢 SERVERPROPERTY 物件來判斷定序，例如： `SELECT SERVERPROPERTY ('Collation');` 。  
+ 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用指定的定序來安裝實例，以便與先前的安裝相容 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ， **sp_helpsort** 會傳回空白的結果。 當此行為發生時，您可以藉由查詢 SERVERPROPERTY 物件來判斷定序，例如： `SELECT SERVERPROPERTY ('Collation');` 。  
   
 ## <a name="permissions"></a>權限  
  需要 **public** 角色的成員資格。  
@@ -67,8 +68,8 @@ sp_helpsort;
  `Latin1-General, case-sensitive, accent-sensitive, kanatype-insensitive, width-insensitive for Unicode Data, SQL Server Sort Order 51 on Code Page 1252 for non-Unicode Data.`  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的資料庫引擎預存程式 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
  [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)  

@@ -1,5 +1,6 @@
 ---
-title: sp_refresh_log_shipping_monitor （Transact-sql） |Microsoft Docs
+description: sp_refresh_log_shipping_monitor (Transact-SQL)
+title: sp_refresh_log_shipping_monitor (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 93abffe797a4507c9d3329f864e09753ca1f1da0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6125ac4a916ff9d19777644a9db5fd853c045290
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891522"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464066"
 ---
 # <a name="sp_refresh_log_shipping_monitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +44,9 @@ sp_refresh_log_shipping_monitor
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @agent_id = ] 'agent_id'`用於備份的主要識別碼，或用於複製或還原的次要識別碼。 *agent_id*是**uniqueidentifier** ，不能是 Null。  
+`[ @agent_id = ] 'agent_id'` 備份的主要識別碼或複製或還原的次要識別碼。 *agent_id* 是 **uniqueidentifier** ，不能是 Null。  
   
-`[ @agent_type = ] 'agent_type'`記錄傳送作業的類型。  
+`[ @agent_type = ] 'agent_type'` 記錄傳送作業的類型。  
   
  0 = 備份。  
   
@@ -53,11 +54,11 @@ sp_refresh_log_shipping_monitor
   
  2 = 還原。  
   
- *agent_type*是**Tinyint** ，不能是 Null。  
+ *agent_type* 是 **Tinyint** ，不能是 Null。  
   
-`[ @database = ] 'database'`備份或還原代理程式記錄所使用的主要或次要資料庫。  
+`[ @database = ] 'database'` 由備份或還原代理程式記錄所使用的主要或次要資料庫。  
   
-`[ @mode ] n`指定是否要重新整理監視器資料或將它清除。 *M*的資料類型是 Tinyint，而支援的值為：  
+`[ @mode ] n` 指定是否要重新整理監視器資料或將其清除。 *M*的資料類型是 Tinyint，支援的值為：  
   
  1 = 重新整理 (這是預設值。)  
   
@@ -70,12 +71,12 @@ sp_refresh_log_shipping_monitor
  無。  
   
 ## <a name="remarks"></a>備註  
- **sp_refresh_log_shipping_monitor**會使用尚未傳送的任何會話資訊來重新整理**log_shipping_monitor_primary**、 **log_shipping_monitor_secondary**、 **log_shipping_monitor_history_detail**和**log_shipping_monitor_error_detail**資料表。 這可讓您在監視器不同步一段時間之後，將監視伺服器和主要或次要伺服器同步化。 另外，必要的話，它也可讓您清除監視伺服器的監視資訊。  
+ **sp_refresh_log_shipping_monitor** 使用尚未傳送的任何會話資訊重新整理 **log_shipping_monitor_primary**、 **log_shipping_monitor_secondary**、 **log_shipping_monitor_history_detail**和 **log_shipping_monitor_error_detail** 資料表。 這可讓您在監視器不同步一段時間之後，將監視伺服器和主要或次要伺服器同步化。 另外，必要的話，它也可讓您清除監視伺服器的監視資訊。  
   
- **sp_refresh_log_shipping_monitor**必須從主要或次要伺服器上的**master**資料庫中執行。  
+ **sp_refresh_log_shipping_monitor** 必須從主要或次要伺服器上的 **master** 資料庫執行。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行此程式。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行這個程式。  
   
 ## <a name="see-also"></a>另請參閱  
  [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

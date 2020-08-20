@@ -1,5 +1,6 @@
 ---
-title: sp_attach_schedule （Transact-sql） |Microsoft Docs
+description: sp_attach_schedule (Transact-SQL)
+title: sp_attach_schedule (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6bc01db6ae019694cbff4082c394fd8c736b9a5a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8108bdad26c02b02ae2e88b1780fada126e2c797
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85874368"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464475"
 ---
 # <a name="sp_attach_schedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,26 +43,26 @@ sp_attach_schedule
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @job_id = ] job_id`要加入排程之作業的作業識別碼。 *job_id*是**uniqueidentifier**，預設值是 Null。  
+`[ @job_id = ] job_id` 要加入排程之作業的作業識別碼。 *job_id*是 **uniqueidentifier**，預設值是 Null。  
   
-`[ @job_name = ] 'job_name'`要加入排程的作業名稱。 *job_name*是**sysname**，預設值是 Null。  
-  
-> [!NOTE]  
->  必須指定*job_id*或*job_name* ，但不能同時指定兩者。  
-  
-`[ @schedule_id = ] schedule_id`要為作業設定之排程的排程識別碼。 *schedule_id*是**int**，預設值是 Null。  
-  
-`[ @schedule_name = ] 'schedule_name'`要為作業設定的排程名稱。 *schedule_name*是**sysname**，預設值是 Null。  
+`[ @job_name = ] 'job_name'` 要加入排程的作業名稱。 *job_name*是 **sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  必須指定*schedule_id*或*schedule_name* ，但不能同時指定兩者。  
+>  必須指定 *job_id* 或 *job_name* ，但不能同時指定兩者。  
+  
+`[ @schedule_id = ] schedule_id` 要為作業設定之排程的排程識別碼。 *schedule_id*是 **int**，預設值是 Null。  
+  
+`[ @schedule_name = ] 'schedule_name'` 要為作業設定的排程名稱。 *schedule_name*是 **sysname**，預設值是 Null。  
+  
+> [!NOTE]  
+>  必須指定 *schedule_id* 或 *schedule_name* ，但不能同時指定兩者。  
   
 ## <a name="remarks"></a>備註  
  排程和作業的擁有者必須相同。  
   
  多項作業可以設定同一份排程。 一項作業可以根據多份排程來執行。  
   
- 這個預存程式必須從**msdb**資料庫中執行。  
+ 這個預存程式必須從 **msdb** 資料庫執行。  
   
 ## <a name="permissions"></a>權限  
  依預設，只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員，才能夠執行這個預存程序。 其他使用者必須被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫的下列其中一個** Agent 固定資料庫角色。  

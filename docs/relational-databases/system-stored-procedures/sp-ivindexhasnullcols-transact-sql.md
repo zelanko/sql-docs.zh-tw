@@ -1,5 +1,6 @@
 ---
-title: sp_ivindexhasnullcols （Transact-sql） |Microsoft Docs
+description: sp_ivindexhasnullcols (Transact-SQL)
+title: sp_ivindexhasnullcols (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 837a589827b4bf4db9d4e7d38e00d56b646e781a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 86fef9d3b131770e11edde117ea12e96d336de24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891613"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464196"
 ---
 # <a name="sp_ivindexhasnullcols-transact-sql"></a>sp_ivindexhasnullcols (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,23 +39,23 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @viewname = ] 'view_name'`這是要驗證的視圖名稱。 *view_name*是**sysname**，沒有預設值。  
+`[ @viewname = ] 'view_name'` 這是要驗證的視圖名稱。 *view_name* 是 **sysname**，沒有預設值。  
   
-`[ @fhasnullcols = ] field_has_null_columns OUTPUT`這是表示視圖索引是否有允許 Null 之資料行的旗標。 *view_name*是**sysname**，沒有預設值。 如果視圖索引具有允許 Null 的資料行，則傳回**1**的值。 如果此視圖不包含允許 Null 的資料行，則傳回**0**的值。  
+`[ @fhasnullcols = ] field_has_null_columns OUTPUT` 這是一個旗標，指出視圖索引是否有允許 Null 的資料行。 *view_name* 是 **sysname**，沒有預設值。 如果視圖索引有允許 Null 的資料行，則傳回值 **1** 。 如果視圖不包含允許 Null 的資料行，則傳回 **0** 值。  
   
 > [!NOTE]  
->  如果預存程式本身傳回**1**的傳回碼，表示預存程式執行發生失敗，則此值為**0** ，應予以忽略。  
+>  如果預存程式本身傳回錯誤碼 **1**，表示預存程式執行發生失敗，則此值為 **0** ，應予以忽略。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- 異動複寫會使用**sp_ivindexhasnullcols** 。  
+ **sp_ivindexhasnullcols** 是由異動複寫使用。  
   
  依預設，發行集中的索引檢視發行項會建立成訂閱者端的資料表。 不過，當索引資料行允許 NULL 值時，會將索引檢視建立成在訂閱者端的索引檢視，而非資料表。 當執行這個預存程序時，它可以警示使用者目前的索引檢視有沒有這個問題。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_ivindexhasnullcols**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色或 **db_owner** 固定資料庫角色的成員，才能夠執行 **sp_ivindexhasnullcols**。  
   
 ## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -1,5 +1,6 @@
 ---
-title: Properties 屬性（ServerNetworkProtocolIPAddress）
+description: Properties 屬性 (ServerNetworkProtocolIPAddress 類別)
+title: 'Properties 屬性 (ServerNetworkProtocolIPAddress) '
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7de217be-50fe-463e-af44-fdd6b79a7045
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b2487e65ac8f1497a345b6ea73931e06b0ac80f2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2152a45652eb04aaffd0e6efb221cbf101fd8146
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880869"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463578"
 ---
 # <a name="properties-property-servernetworkprotocolipaddress-class"></a>Properties 屬性 (ServerNetworkProtocolIPAddress 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

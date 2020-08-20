@@ -1,5 +1,6 @@
 ---
-title: sysarticles （系統檢視）（Transact-sql） |Microsoft Docs
+description: sysarticles (系統檢視) (Transact-SQL)
+title: sysarticles (System View)  (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 18f8c9b3-cab7-4e8f-8754-11ac38c3f789
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fc8e815063ff1dd6df7a34ff255d632bb0208b64
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f926cb0f00f8975afe065ccab87a8aa7a1436266
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881270"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463841"
 ---
 # <a name="sysarticles-system-view-transact-sql"></a>sysarticles (系統檢視) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,36 +32,36 @@ ms.locfileid: "85881270"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**artid**|**int**|提供發行項唯一識別碼的識別欄位。|  
+|**>artid**|**int**|提供發行項唯一識別碼的識別欄位。|  
 |**creation_script**|**nvarchar(255)**|發行項的結構描述指令碼。|  
 |**del_cmd**|**nvarchar(255)**|執行於 DELETE 的命令；否則，便從記錄檔中建構。|  
 |**description**|**nvarchar(255)**|發行項的描述性項目。|  
 |**dest_table**|**sysname**|目的地資料表的名稱。|  
-|**出**|**int**|用來進行水平資料分割的預存處理序識別碼。|  
+|**濾波器**|**int**|用來進行水平資料分割的預存處理序識別碼。|  
 |**filter_clause**|**ntext**|用來進行水平篩選的發行項 WHERE 子句。|  
 |**ins_cmd**|**nvarchar(255)**|執行於 INSERT 的命令；否則，便從記錄檔中建構。|  
 |**name**|**sysname**|發行項的相關聯名稱，在發行集內是唯一的。|  
 |**objid**|**int**|已發行的資料表物件識別碼。|  
 |**pubid**|**int**|發行項所屬發行集的識別碼。|  
-|**pre_creation_cmd**|**tinyint**|DROP TABLE、DELETE TABLE 或 TRUNCATE 的預先建立命令：<br /><br /> **0** = 無。<br /><br /> **1** = DROP。<br /><br /> **2** = DELETE。<br /><br /> **3** = 截斷。|  
-|**status**|**tinyint**|發行項選項和狀態的位元遮罩，它可能是一或多個這些值的位元邏輯 OR 結果：<br /><br /> **1** = 發行項在使用中。<br /><br /> **8** = 在 INSERT 語句中包含資料行名稱。<br /><br /> **16** = 使用參數化語句。<br /><br /> **24** = 在 INSERT 語句中包含資料行名稱，並使用參數化語句。<br /><br /> **64** = 發行項的水準資料分割是由可轉換的訂閱所定義。<br /><br /> 例如，使用參數化語句的使用中發行項在此資料行中的值為**17** 。 值為**0**表示發行項為非使用中，且未定義任何其他屬性。|  
+|**pre_creation_cmd**|**tinyint**|DROP TABLE、DELETE TABLE 或 TRUNCATE 的預先建立命令：<br /><br /> **0** = 無。<br /><br /> **1** = 卸載。<br /><br /> **2** = 刪除。<br /><br /> **3** = 截斷。|  
+|**status**|**tinyint**|發行項選項和狀態的位元遮罩，它可能是一或多個這些值的位元邏輯 OR 結果：<br /><br /> **1** = 發行項為使用中。<br /><br /> **8** = 在 INSERT 語句中包含資料行名稱。<br /><br /> **16** = 使用參數化語句。<br /><br /> **24** = 兩者都會在 INSERT 語句中包含資料行名稱，並使用參數化語句。<br /><br /> **64** = 發行項的水準資料分割是由可轉換的訂閱所定義。<br /><br /> 例如，使用參數化語句的使用中發行項在此資料行中的值為 **17** 。 **0**值表示發行項為非使用中，且未定義任何其他屬性。|  
 |**sync_objid**|**int**|代表發行項定義之資料表或檢視的識別碼。|  
-|**type**|**tinyint**|發行項的類型：<br /><br /> **1** = 以記錄為基礎的發行項。<br /><br /> **3** = 含有手動篩選的記錄式發行項。<br /><br /> **5** = 具有手動視圖的記錄式發行項。<br /><br /> **7** = 以記錄為基礎的發行項，具有手動篩選和手動視圖。<br /><br /> **8** = 預存程式執行。<br /><br /> **24** = 可序列化預存程式執行。<br /><br /> **32** = 預存程式（僅限架構）。<br /><br /> **64** = View （僅限架構）。<br /><br /> **128** = 函數（僅限架構）。|  
+|**type**|**tinyint**|發行項的類型：<br /><br /> **1** = 記錄式發行項。<br /><br /> **3** = 具有手動篩選的記錄式發行項。<br /><br /> **5** = 具有手動 view 的記錄式文章。<br /><br /> **7** = 具有手動篩選和手動視圖的記錄式發行項。<br /><br /> **8** = 預存程式執行。<br /><br /> **24** = 可序列化預存程式執行。<br /><br /> **32** = 預存程式 (只) 的架構。<br /><br /> **64** = 僅) View (架構。<br /><br /> **128** = 函式 (僅) 的架構。|  
 |**upd_cmd**|**nvarchar(255)**|執行於 UPDATE 的命令；否則，便從記錄檔中建構。|  
-|**schema_option**|**binary （8）**|發行項的結構描述產生選項位元遮罩，這會控制要針對發行項結構描述的哪些部分編寫指令碼，才能傳遞到訂閱者。 如需結構描述選項的詳細資訊，請參閱 [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。|  
+|**schema_option**|**二元 (8) **|發行項的結構描述產生選項位元遮罩，這會控制要針對發行項結構描述的哪些部分編寫指令碼，才能傳遞到訂閱者。 如需結構描述選項的詳細資訊，請參閱 [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。|  
 |**dest_owner**|**sysname**|目的地資料庫的資料表擁有者。|  
 |**ins_scripting_proc**|**int**|當複寫 INSERT 陳述式時，所執行的已登錄之自訂預存程序或指令碼。|  
 |**del_scripting_proc**|**int**|當複寫 DELETE 陳述式時，所執行的已登錄之自訂預存程序或指令碼。|  
 |**upd_scripting_proc**|**int**|當複寫 UPDATE 陳述式時，所執行的已登錄之自訂預存程序或指令碼。|  
 |**custom_script**|**nvarchar(2048)**|在 DDL 觸發程序結束時，所執行的已登錄之自訂預存程序或指令碼。|  
-|**fire_triggers_on_snapshot**|**bit**|指出當套用快照集時，是否執行複寫的觸發程序，它可以是下列值之一：<br /><br /> **0** = 不執行觸發程式。<br /><br /> **1** = 執行觸發程式。|  
+|**fire_triggers_on_snapshot**|**bit**|指出當套用快照集時，是否執行複寫的觸發程序，它可以是下列值之一：<br /><br /> **0** = 不執行觸發程式。<br /><br /> **1** = 觸發程式執行。|  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [&#40;Transact-sql&#41;的複寫視圖](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的複寫視圖 ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addarticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_changearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
- [sp_helparticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
+ [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [sysarticles &#40;Transact-sql&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md)  
   
   

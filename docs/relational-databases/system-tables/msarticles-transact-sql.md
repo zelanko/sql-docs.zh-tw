@@ -1,5 +1,6 @@
 ---
-title: MSarticles （Transact-sql） |Microsoft Docs
+description: MSarticles (Transact-SQL)
+title: MSarticles (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1acd79a5-b3e2-4161-9592-7acc2a41ba38
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d6272b8370b461db0a7a2259be3de4d584ea8498
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f6a33127f1ba95fb17daff02ddcfaf64232cf94c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890053"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463890"
 ---
 # <a name="msarticles-transact-sql"></a>MSarticles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

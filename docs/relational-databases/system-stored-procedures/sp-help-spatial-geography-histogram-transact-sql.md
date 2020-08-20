@@ -1,5 +1,6 @@
 ---
-title: sp_help_spatial_geography_histogram （Transact-sql） |Microsoft Docs
+description: sp_help_spatial_geography_histogram (Transact-SQL)
+title: sp_help_spatial_geography_histogram (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c1ed475c78decb3891185b90d3dc032ab896bdf0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c1713bb208fd556b23776fcfc2871879e6aa0d79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790352"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464236"
 ---
 # <a name="sp_help_spatial_geography_histogram-transact-sql"></a>sp_help_spatial_geography_histogram (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,15 +41,15 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @tabname = ] 'tabname'`這是已指定空間索引之資料表的完整或非限定名稱。  
+`[ @tabname = ] 'tabname'` 這是已指定空間索引之資料表的限定或非限定名稱。  
   
- 只有在指定限定資料表時，才會用到引號。 如果提供其中包括資料庫名稱的完整名稱，資料庫名稱就必須是目前資料庫的名稱。 *tabname*是**sysname**，沒有預設值。  
+ 只有在指定限定資料表時，才會用到引號。 如果提供其中包括資料庫名稱的完整名稱，資料庫名稱就必須是目前資料庫的名稱。 *tabname* 是 **sysname**，沒有預設值。  
   
-`[ @colname = ] 'columnname'`這是指定的空間資料行名稱。 *columnname*是**sysname**，沒有預設值。  
+`[ @colname = ] 'columnname'` 這是指定的空間資料行名稱。 *columnname* 是 **sysname**，沒有預設值。  
   
-`[ @resolution = ] 'resolution'`這是周框方塊的解析度。 有效的值是從 10 到 5000。 *解決*方式是**Tinyint**，沒有預設值。  
+`[ @resolution = ] 'resolution'` 是周框方塊的解析度。 有效的值是從 10 到 5000。 *解析度* 是 **Tinyint**，沒有預設值。  
   
-`[ @sample = ] 'sample'`這是所使用之資料表的百分比。 有效的值為0到100。 *tablesample*為**float**。 預設值為 100。  
+`[ @sample = ] 'sample'` 這是使用的資料表百分比。 有效的值是從0到100。 *tablesample* 是 **浮點數**。 預設值為 100。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  會傳回資料表值。 下列方格描述資料表的資料行內容。  
@@ -56,11 +57,11 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|代表每一個資料格的唯一識別碼，從 1 開始計數。|  
-|**格值**|**區域**|這是表示每個資料格的矩形多邊形。 資料格形狀與空間索引所使用的資料格形狀相同。|  
+|**細胞**|**地理位置**|這是表示每個資料格的矩形多邊形。 資料格形狀與空間索引所使用的資料格形狀相同。|  
 |**row_count**|**bigint**|指出觸及或包含資料格之空間物件的數目。|  
   
 ## <a name="permissions"></a>權限  
- 使用者必須是**public**角色的成員。 需要在伺服器和物件上具有 READ ACCESS 權限。  
+ 使用者必須是 **public** 角色的成員。 需要在伺服器和物件上具有 READ ACCESS 權限。  
   
 ## <a name="remarks"></a>備註  
  SSMS 空間索引標籤會顯示結果的圖形化表示。 您可以對空間視窗查詢結果，以取得結果項目的近似數目。  
@@ -71,13 +72,13 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
  **Geography**類型的周框方塊是整個地球。  
   
 ## <a name="examples"></a>範例  
- 下列範例會在資料庫的資料表上呼叫**sp_help_spatial_geography_histogram** `Person.Address` [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 。  
+ 下列範例會在資料庫的資料表上呼叫  **sp_help_spatial_geography_histogram** `Person.Address` [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 。  
   
 ```  
 EXEC sp_help_spatial_geography_histogram @tabname = Person.Address, @colname = SpatialLocation, @resolution = 64, @sample = 30;  
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的空間索引預存程式](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)  
+ [&#40;Transact-sql&#41;的空間索引預存程式 ](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)  
   
   

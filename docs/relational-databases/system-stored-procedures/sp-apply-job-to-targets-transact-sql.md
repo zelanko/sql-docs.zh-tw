@@ -1,5 +1,6 @@
 ---
-title: sp_apply_job_to_targets （Transact-sql） |Microsoft Docs
+description: sp_apply_job_to_targets (Transact-SQL)
+title: sp_apply_job_to_targets (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dbefdf6a045dce468365aa585b7efad775709c2c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1f821418b5e6a75aa51264abb0d265f907b8957d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85874922"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464547"
 ---
 # <a name="sp_apply_job_to_targets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,27 +43,27 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @job_id = ] job_id`要套用至指定目標伺服器或目標伺服器群組之作業的作業識別碼。 *job_id*是**uniqueidentifier**，預設值是 Null。  
+`[ @job_id = ] job_id` 要套用至指定目標伺服器或目標伺服器群組之作業的作業識別碼。 *job_id* 是 **uniqueidentifier**，預設值是 Null。  
   
-`[ @job_name = ] 'job_name'`要套用至指定之相關聯目標伺服器或目標伺服器群組的作業名稱。 *job_name*是**sysname**，預設值是 Null。  
+`[ @job_name = ] 'job_name'` 要套用至指定之相關聯目標伺服器或目標伺服器群組的作業名稱。 *job_name* 是 **sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  必須指定*job_id*或*job_name* ，但不能同時指定兩者。  
+>  必須指定 *job_id* 或 *job_name* ，但不能同時指定兩者。  
   
-`[ @target_server_groups = ] 'target_server_groups'`要套用指定作業的目標伺服器群組清單（以逗號分隔）。 *target_server_groups*是**Nvarchar （2048）**，預設值是 Null。  
+`[ @target_server_groups = ] 'target_server_groups'` 要套用指定作業的目標伺服器群組清單（以逗號分隔）。 *target_server_groups* 是 **Nvarchar (2048) **，預設值是 Null。  
   
-`[ @target_servers = ] 'target_servers'`要套用指定作業的目標伺服器清單（以逗號分隔）。 *target_servers*是**Nvarchar （2048）**，預設值是 Null。  
+`[ @target_servers = ] 'target_servers'` 要套用指定作業的目標伺服器清單（以逗號分隔）。 *target_servers*是 **Nvarchar (2048) **，預設值是 Null。  
   
-`[ @operation = ] 'operation'`這是指應該將指定的作業套用至指定的目標伺服器或目標伺服器群組，或從中移除。 *operation*是**Varchar （7）**，預設值是 APPLY。 有效的作業為**APPLY**和**REMOVE**。  
+`[ @operation = ] 'operation'` 這是指是否應該將指定的作業套用至指定的目標伺服器或目標伺服器群組，或從中移除。 *運算*是 **Varchar (7) **，預設值是 APPLY。 有效的作業為 **APPLY** 和 **REMOVE**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_apply_job_to_targets**提供一種簡單的方式，從多個目標伺服器套用（或移除）作業，而這是針對每個所需的目標伺服器呼叫**sp_add_jobserver** （或**sp_delete_jobserver**）的替代方法。  
+ **sp_apply_job_to_targets** 提供簡單的方法，讓您從多個目標伺服器套用 (或移除) 作業，而且是針對每個需要的目標伺服器，呼叫 **sp_add_jobserver** (或 **sp_delete_jobserver**) 一次的替代方法。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行此程式。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行這個程式。  
   
 ## <a name="examples"></a>範例  
  下列範例會將先前建立的 `Backup Customer Information` 作業套用在 `Servers Maintaining Customer Information` 群組中的所有目標伺服器上。  

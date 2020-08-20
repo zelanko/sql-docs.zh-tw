@@ -1,5 +1,6 @@
 ---
-title: sp_helprolemember （Transact-sql） |Microsoft Docs
+description: sp_helprolemember (Transact-SQL)
+title: sp_helprolemember (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 42797510-aa5d-4564-85ac-27418419af9c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a6007f595555843c783718fecfb6adbe2d74103c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 360b700d6fe123c3a87ddb45878a3806e5671bee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891628"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464180"
 ---
 # <a name="sp_helprolemember-transact-sql"></a>sp_helprolemember (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @rolename = ] ' role '`這是目前資料庫中的角色名稱。 *role*是**sysname**，預設值是 Null。 *角色*必須存在於目前的資料庫中。 如果未指定*role* ，則會傳回至少包含一個來自目前資料庫之成員的所有角色。  
+`[ @rolename = ] ' role '` 這是目前資料庫中的角色名稱。 *role* 是 **sysname**，預設值是 Null。 *角色* 必須存在於目前的資料庫中。 如果未指定 *role* ，則會傳回包含目前資料庫中至少一個成員的所有角色。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -49,15 +50,15 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**DbRole**|**sysname**|目前資料庫中角色的名稱。|  
-|**基**|**sysname**|DbRole 成員的名稱 **。**|  
-|**MemberSID**|**Varbinary （85）**|**成員名稱**的安全識別碼。|  
+|**名**|**sysname**|DbRole 成員的名稱 **。**|  
+|**MemberSID**|**Varbinary (85) **|**成員名稱**的安全識別碼。|  
   
 ## <a name="remarks"></a>備註  
- 如果資料庫包含嵌套角色，**成員**名稱可以是角色的名稱。 **sp_helprolemember**不會顯示透過嵌套角色取得的成員資格。 例如，如果 User1 是 Role1 的成員，而且 Role1 是 Role2 的成員，`EXEC sp_helprolemember 'Role2'`; 將會傳回 Role1，而不是 Role1 的成員 (此範例中為 User1)。 若要傳回嵌套的成員資格，您必須針對每個嵌套角色重複執行**sp_helprolemember** 。  
+ 如果資料庫包含嵌套角色，則 **成員** 名稱可能是角色的名稱。 **sp_helprolemember** 不會顯示透過嵌套角色取得的成員資格。 例如，如果 User1 是 Role1 的成員，而且 Role1 是 Role2 的成員，`EXEC sp_helprolemember 'Role2'`; 將會傳回 Role1，而不是 Role1 的成員 (此範例中為 User1)。 若要傳回嵌套成員資格，您必須針對每個嵌套角色重複執行 **sp_helprolemember** 。  
   
- 使用 [ **sp_helpsrvrolemember**顯示固定伺服器角色的成員。  
+ 使用 **sp_helpsrvrolemember** 來顯示固定伺服器角色的成員。  
   
- 使用[IS_ROLEMEMBER &#40;transact-sql&#41;](../../t-sql/functions/is-rolemember-transact-sql.md)來檢查指定使用者的角色成員資格。  
+ 使用 [IS_ROLEMEMBER &#40;transact-sql&#41;](../../t-sql/functions/is-rolemember-transact-sql.md) 來檢查指定使用者的角色成員資格。  
   
 ## <a name="permissions"></a>權限  
  需要 **public** 角色的成員資格。  
@@ -70,7 +71,7 @@ EXEC sp_helprolemember 'Sales';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的安全性預存程式](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的安全性預存程式 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sp_droprolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_helprole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   

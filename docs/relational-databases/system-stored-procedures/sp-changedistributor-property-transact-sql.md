@@ -1,5 +1,6 @@
 ---
-title: sp_changedistributor_property （Transact-sql） |Microsoft Docs
+description: sp_changedistributor_property (Transact-SQL)
+title: sp_changedistributor_property (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04f503a1-307c-4de0-bac6-e6e97d5b6940
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 441fe87551fd06ba786b4b36589bea00d7d399b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 284f669f81f0954c0a9676d5f7a4ab8a213eba58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771536"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464427"
 ---
 # <a name="sp_changedistributor_property-transact-sql"></a>sp_changedistributor_property (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,32 +39,32 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @property = ] 'property'`這是指定之散發者的屬性。 *屬性*是**sysname**，它可以是下列其中一個值。  
+`[ @property = ] 'property'` 這是指定散發者的屬性。 *屬性* 是 **sysname**，它可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
 |**heartbeat_interval**|在未記錄進度訊息的情況下，代理程式所能執行的最大分鐘數。|  
-|NULL (預設值)|所有可用的*屬性*值都會列印出來。|  
+|NULL (預設值)|列印所有可用的 *屬性* 值。|  
   
-`[ @value = ] 'value'`這是給定散發者屬性的值。 *value*是**Varchar （255）**，預設值是 Null。  
+`[ @value = ] 'value'` 這是給定散發者屬性的值。 *值* 是 **Varchar (255) **，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_changedistributor_property**用於所有類型的複寫中。  
+ **sp_changedistributor_property** 用於所有類型的複寫中。  
   
 ## <a name="example"></a>範例  
  [!code-sql[HowTo#sp_changedistributor_property](../../relational-databases/replication/codesnippet/tsql/sp-changedistributor-pro_1.sql)]  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_changedistributor_property**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色的成員，才可以執行 **sp_changedistributor_property**。  
   
 ## <a name="see-also"></a>另請參閱  
- [查看和修改散發者和發行者屬性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [檢視及修改散發者和發行者屬性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistributor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
  [sp_dropdistributor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   
- [sp_helpdistributor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
+ [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

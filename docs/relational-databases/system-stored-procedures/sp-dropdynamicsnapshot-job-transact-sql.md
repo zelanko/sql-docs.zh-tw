@@ -1,5 +1,6 @@
 ---
-title: sp_dropdynamicsnapshot_job （Transact-sql） |Microsoft Docs
+description: sp_dropdynamicsnapshot_job (Transact-SQL)
+title: sp_dropdynamicsnapshot_job (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 128e428a-01b3-4062-8c6e-d22d5fa268a9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 224de422a7f43b7e2c3ff1dc090eeb3b55c752b1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 85a81b9dac7fd543a1840263da91ec644652cadf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85860157"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464379"
 ---
 # <a name="sp_dropdynamicsnapshot_job-transact-sql"></a>sp_dropdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  利用參數化的資料列篩選器來移除發行集的篩選資料快照集作業。 這個預存程序執行於發行集資料庫的發行者端。 刪除作業時，會從[MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md)系統資料表中刪除所有相關資料。  
+  利用參數化的資料列篩選器來移除發行集的篩選資料快照集作業。 這個預存程序執行於發行集資料庫的發行者端。 刪除作業時，會從 [MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md) 系統資料表刪除所有相關資料。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,25 +41,25 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'`這是要從中移除已篩選之資料快照集作業的發行集名稱。 *發行*集是**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 這是要移除已篩選資料快照集作業的發行集名稱。 *發行* 集是 **sysname**，沒有預設值。  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`這是要移除之已篩選資料快照集作業的名稱。 *dynamic_snapshot_jobname*是 sysname，如果未提供，則預設為與*dynamic_snapshot_jobid*相關聯的任何工作名稱。  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` 這是要移除之已篩選資料快照集作業的名稱。 *dynamic_snapshot_jobname*為 sysname，如果未提供，則預設為任何與 *dynamic_snapshot_jobid*相關聯的工作名稱。  
   
-`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'`這是要移除之已篩選資料快照集作業的識別碼。 *dynamic_snapshot_jobid*是**uniqueidentifier**，預設值是 Null。  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` 這是要移除之已篩選資料快照集作業的識別碼。 *dynamic_snapshot_jobid*是 **uniqueidentifier**，預設值是 Null。  
   
 > [!IMPORTANT]  
->  只能指定*dynamic_snapshot_jobid*或*dynamic_snapshot_jobname* 。 如果未提供*dynamic_snapshot_jobid*或*dynamic_snapshot_jobname*的值，則會移除發行集的所有動態快照集作業。  
+>  只能指定 *dynamic_snapshot_jobid*或 *dynamic_snapshot_jobname* 。 如果沒有為 *dynamic_snapshot_jobid*或 *dynamic_snapshot_jobname*提供值，則會移除發行集的所有動態快照集作業。  
   
 `[ @ignore_distributor = ] ignore_distributor`*ignore_distributor*是**bit**，預設值是**0**。 這個參數可在不執行散發者清除工作的情況下，用來卸除動態快照集作業。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_dropdynamicsnapshot**用於合併式複寫中。  
+ **sp_dropdynamicsnapshot** 用於合併式複寫中。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_dropdynamicsnapshot**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色或 **db_owner** 固定資料庫角色的成員，才能夠執行 **sp_dropdynamicsnapshot**。  
   
 ## <a name="see-also"></a>另請參閱  
  [sp_adddynamicsnapshot_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md)  

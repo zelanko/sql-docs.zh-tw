@@ -1,4 +1,5 @@
 ---
+description: 啟用和停用變更追蹤 (SQL Server)
 title: 啟用和停用變更追蹤
 ms.custom: seo-dt-2019
 ms.date: 08/08/2016
@@ -18,12 +19,12 @@ ms.assetid: 1c92ec7e-ae53-4498-8bfd-c66a42a24d54
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 775feb5c2393c8b482deb2deb919fc93576e3ce6
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 77e90d0c788840ba82074ab67883e563b2c05977
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279068"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463710"
 ---
 # <a name="enable-and-disable-change-tracking-sql-server"></a>啟用和停用變更追蹤 (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

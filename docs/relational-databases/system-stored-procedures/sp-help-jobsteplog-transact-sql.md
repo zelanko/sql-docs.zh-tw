@@ -1,5 +1,6 @@
 ---
-title: sp_help_jobsteplog （Transact-sql） |Microsoft Docs
+description: sp_help_jobsteplog (Transact-SQL)
+title: sp_help_jobsteplog (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 1a0be7b1-8f31-4b4c-aadb-586c0e00ed04
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7ef843202631d632b2a3712554cf67c9eca0878e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3c3659e9f82da6d735bb8d5c53d6a182d4fa14d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891800"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464245"
 ---
 # <a name="sp_help_jobsteplog-transact-sql"></a>sp_help_jobsteplog (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  傳回有關特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟記錄的中繼資料。 **sp_help_jobsteplog**不會傳回實際的記錄檔。  
+  傳回特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式作業步驟記錄的相關中繼資料。 **sp_help_jobsteplog** 不會傳回實際的記錄。  
 
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -42,16 +43,16 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @job_id = ] 'job_id'`要傳回作業步驟記錄資訊的作業識別碼。 *job_id*是**int**，預設值是 Null。  
+`[ @job_id = ] 'job_id'` 要傳回作業步驟記錄資訊的作業識別碼。 *job_id* 是 **int**，預設值是 Null。  
   
-`[ @job_name = ] 'job_name'`作業的名稱。 *job_name*是**sysname**，預設值是 Null。  
+`[ @job_name = ] 'job_name'` 作業的名稱。 *job_name* 是 **sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  必須指定*job_id*或*job_name* ，但不能同時指定兩者。  
+>  必須指定 *job_id* 或 *job_name* ，但不能同時指定兩者。  
   
-`[ @step_id = ] step_id`作業中步驟的識別碼。 如果沒有包含這個識別碼，便會包含作業中的所有步驟。 *step_id*是**int**，預設值是 Null。  
+`[ @step_id = ] step_id` 作業中步驟的識別碼。 如果沒有包含這個識別碼，便會包含作業中的所有步驟。 *step_id* 是 **int**，預設值是 Null。  
   
-`[ @step_name = ] 'step_name'`作業中的步驟名稱。 *step_name*是**sysname**，預設值是 Null。  
+`[ @step_name = ] 'step_name'` 作業中的步驟名稱。 *step_name* 是 **sysname**，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -62,7 +63,7 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|作業的唯一識別碼。|  
 |**job_name**|**sysname**|作業的名稱。|  
-|**step_id**|**int**|作業內的步驟識別碼。 例如，如果步驟是作業中的第一個步驟，其*step_id*為1。|  
+|**step_id**|**int**|作業內的步驟識別碼。 例如，如果步驟是作業中的第一個步驟，其 *step_id* 為1。|  
 |**step_name**|**sysname**|作業中的步驟名稱。|  
 |**step_uid**|**uniqueidentifier**|作業中的 (系統產生) 步驟的唯一識別碼。|  
 |**date_created**|**datetime**|步驟的建立日期。|  
@@ -71,7 +72,7 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**日誌**|**nvarchar(max)**|作業步驟記錄輸出。|  
   
 ## <a name="remarks"></a>備註  
- **sp_help_jobsteplog**是在**msdb**資料庫中。  
+ **sp_help_jobsteplog** 位於 **msdb** 資料庫中。  
   
 ## <a name="permissions"></a>權限  
  依預設，只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員，才能夠執行這個預存程序。 其他使用者必須被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫的下列其中一個** Agent 固定資料庫角色。  
@@ -119,6 +120,6 @@ GO
  [sp_help_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
  [sp_delete_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
  [sp_delete_jobsteplog &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql.md)   
- [SQL Server Agent 預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
+ [&#40;Transact-sql&#41;的 SQL Server Agent 預存程式 ](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

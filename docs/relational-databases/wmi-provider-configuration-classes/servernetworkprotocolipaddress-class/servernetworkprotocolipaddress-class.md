@@ -1,4 +1,5 @@
 ---
+description: ServerNetworkProtocolIPAddress 類別
 title: ServerNetworkProtocolIPAddress 類別
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1dbea791-c5a2-4911-b23c-64bddd860dae
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0cc6f508b355ffae370ea83e45449e0217f70dda
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f25a207619031eb0ec9efdc54f788332ab565bd8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880844"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463640"
 ---
 # <a name="servernetworkprotocolipaddress-class"></a>ServerNetworkProtocolIPAddress 類別
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

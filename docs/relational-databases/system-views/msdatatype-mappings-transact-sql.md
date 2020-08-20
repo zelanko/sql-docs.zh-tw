@@ -1,5 +1,6 @@
 ---
-title: MSdatatype_mappings （Transact-sql） |Microsoft Docs
+description: MSdatatype_mappings (Transact-SQL)
+title: MSdatatype_mappings (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,21 +18,21 @@ helpviewer_keywords:
 ms.assetid: 13cdabb3-6e07-4e8d-ae80-4235022ccc7f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 16da7db2dcf42ebfa00d634814f27839a3988a71
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f67f313d177b5ef22e6cb97b9ab25d5281c860e2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889192"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463827"
 ---
 # <a name="msdatatype_mappings-transact-sql"></a>MSdatatype_mappings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSdatatype_mappings**視圖會將 SQL Server 的資料類型對應至非 SQL Server 的資料庫管理系統（DBMS）所使用的資料類型。 此資料表會儲存在**msdb**資料庫中。  
+  **MSdatatype_mappings**視圖會將 SQL Server 資料類型對應至非 SQL Server 資料庫管理系統 (DBMS) 所使用的資料類型。 此資料表儲存在 **msdb** 資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**dbms_name**|**nvarchar(128)**|這是 DBMS 的名稱。 以下是可能的值及其描述。<br /><br /> **MSSQLSERVER**：目的地是 SQL Server 資料庫。<br />**Oracle**：目的地是 oracle 資料庫。<br />**DB2**：目的地是 IBM DB2 資料庫。<br />**Sybase**：目的地是 SYBASE 資料庫。|  
+|**dbms_name**|**nvarchar(128)**|這是 DBMS 的名稱。 以下是可能的值及其描述。<br /><br /> **MSSQLSERVER**：目的地是 SQL Server 資料庫。<br />**Oracle**：目的地是 oracle 資料庫。<br />**DB2**：目的地是 IBM DB2 資料庫。<br />**Sybase**：目的地是 sybase 資料庫。|  
 |**sql_type**|**nvarchar(128)**|這是 SQL Server 資料類型。|  
 |**dest_type**|**nvarchar(128)**|這是非 SQL Server 資料類型的名稱。|  
 |**dest_prec**|**bigint**|這是非 SQL Server 資料類型的有效位數。|  

@@ -1,5 +1,6 @@
 ---
-title: sp_remoteoption （Transact-sql） |Microsoft Docs
+description: sp_remoteoption (Transact-SQL)
+title: sp_remoteoption (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c9a7309b-eab7-4192-a414-e282581af4e5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 01f87d00c1f0a8cc9ff7ca492092738a96f98c06
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8bd92e5335b04dd7fca13dfa7fb64a867cee4b3c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901416"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464060"
 ---
 # <a name="sp_remoteoption-transact-sql"></a>sp_remoteoption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

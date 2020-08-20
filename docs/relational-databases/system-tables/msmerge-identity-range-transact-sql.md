@@ -1,5 +1,6 @@
 ---
-title: MSmerge_identity_range （Transact-sql） |Microsoft Docs
+description: MSmerge_identity_range (Transact-SQL)
+title: MSmerge_identity_range (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,28 +18,28 @@ helpviewer_keywords:
 ms.assetid: 493a2028-88a0-4e83-ad89-ae5661d9f477
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d4b83d497e70182d8980ec043396b79d7c65ec49
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4011fcc653e72327fbbd20b3b7d8ec1da135f4f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889770"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463913"
 ---
 # <a name="msmerge_identity_range-transact-sql"></a>MSmerge_identity_range (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSmerge_identity_range**資料表是用來追蹤指派給訂閱之識別資料行的數值範圍，而複寫會自動管理這些範圍指派。 這份資料表儲存在發行集和訂閱資料庫中。  
+  **MSmerge_identity_range**資料表可用來追蹤指派給識別欄位的數值範圍，以訂閱發行集的訂閱，而複寫會自動管理這些範圍指派。 這份資料表儲存在發行集和訂閱資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**subid**|**uniqueidentifier**|給定訂閱的唯一識別碼。|  
-|**artid**|**uniqueidentifier**|給定發行項的唯一識別碼。|  
-|**range_begin**|**數位（38）**|在目前範圍開頭的識別值。|  
-|**range_end**|**數位（38）**|在目前範圍結尾的識別值。|  
-|**next_range_begin**|**數位（38）**|在下一個要指派之範圍開頭的識別值。|  
-|**next_range_end**|**數位（38）**|在下一個要指派之範圍結尾的識別值。|  
-|**is_pub_range**|**bit**|如果將識別範圍指派給發行集，則值為**1** 。|  
-|**max_used**|**數位（38）**|所能指派的最大識別值。|  
+|**>artid**|**uniqueidentifier**|給定發行項的唯一識別碼。|  
+|**range_begin**|**數值 (38) **|在目前範圍開頭的識別值。|  
+|**range_end**|**數值 (38) **|在目前範圍結尾的識別值。|  
+|**next_range_begin**|**數值 (38) **|在下一個要指派之範圍開頭的識別值。|  
+|**next_range_end**|**數值 (38) **|在下一個要指派之範圍結尾的識別值。|  
+|**is_pub_range**|**bit**|如果將識別範圍指派給發行集，則值為 **1** 。|  
+|**max_used**|**數值 (38) **|所能指派的最大識別值。|  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

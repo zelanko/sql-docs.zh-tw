@@ -1,5 +1,6 @@
 ---
-title: sp_changedistributiondb （Transact-sql） |Microsoft Docs
+description: sp_changedistributiondb (Transact-SQL)
+title: sp_changedistributiondb (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b9bd4367a4af33195ffdb3e233980f46205ca39a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fb52176989ef6e90eb132da21abcd299444aec8d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760206"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464437"
 ---
 # <a name="sp_changedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,36 +40,36 @@ sp_changedistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @database = ] 'database'`這是散發資料庫的名稱。 *資料庫*是**sysname**，沒有預設值。  
+`[ @database = ] 'database'` 這是散發資料庫的名稱。 *資料庫* 是 **sysname**，沒有預設值。  
   
-`[ @property = ] 'property'`這是給定資料庫要變更的屬性。 *屬性*是**sysname**，它可以是下列其中一個值。  
+`[ @property = ] 'property'` 這是給定資料庫要變更的屬性。 *屬性* 是 **sysname**，它可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
 |**history_retention**|記錄資料表保留期限。|  
 |**max_distretention**|最大散發保留期限。|  
 |**min_distretention**|最小散發保留期限。|  
-|NULL (預設值)|所有可用的*屬性*值都會列印出來。|  
+|NULL (預設值)|列印所有可用的 *屬性* 值。|  
   
-`[ @value = ] 'value'`這是指定之屬性的新值。 *value*是**Nvarchar （255）**，預設值是 Null。  
+`[ @value = ] 'value'` 這是指定之屬性的新值。 *值* 是 **Nvarchar (255) **，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_changedistributiondb**用於所有類型的複寫中。  
+ **sp_changedistributiondb** 用於所有類型的複寫中。  
   
 ## <a name="example"></a>範例  
  [!code-sql[HowTo#sp_changedistributiondb](../../relational-databases/replication/codesnippet/tsql/sp-changedistributiondb-_1.sql)]  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_changedistributiondb**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色的成員，才可以執行 **sp_changedistributiondb**。  
   
 ## <a name="see-also"></a>另請參閱  
- [查看和修改散發者和發行者屬性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [檢視及修改散發者和發行者屬性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistributiondb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
  [sp_dropdistributiondb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
- [sp_helpdistributiondb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
+ [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

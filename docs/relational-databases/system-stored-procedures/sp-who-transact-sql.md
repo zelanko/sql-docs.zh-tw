@@ -1,5 +1,6 @@
 ---
-title: sp_who （Transact-sql） |Microsoft Docs
+description: sp_who (Transact-SQL)
+title: sp_who (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bfcf04c0f6dd7455bac9beaa65b29eb1b2a8f9cc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a3d3af35b9d886e41d43e0c480c49a7e593e00f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891212"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463971"
 ---
 # <a name="sp_who-transact-sql"></a>sp_who (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  提供實例中目前使用者、會話和進程的相關資訊 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 。 您可以篩選資訊，只傳回屬於特定使用者或屬於特定工作階段的非閒置處理序。  
+  提供實例中目前使用者、會話和處理常式的相關資訊 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 。 您可以篩選資訊，只傳回屬於特定使用者或屬於特定工作階段的非閒置處理序。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,13 +40,13 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @loginame = ] 'login' | session ID | 'ACTIVE'`用來篩選結果集。  
+`[ @loginame = ] 'login' | session ID | 'ACTIVE'` 用來篩選結果集。  
   
- *login*是**sysname** ，可識別屬於特定登入的進程。  
+ *登* 入 **sysname** 會識別屬於特定登入的進程。  
   
- *會話識別碼*是屬於實例的會話識別碼 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *會話識別碼*為**Smallint**。  
+ *會話識別碼* 是屬於該實例的會話識別碼 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *會話識別碼* 為 **Smallint**。  
   
- [作用中]**會排除等待**使用者下一個命令的會話。  
+ 作用**中排除等候**使用者的下一個命令的會話。  
   
  如果沒有提供任何值，程序會報告屬於執行個體的所有工作階段。  
   
@@ -53,28 +54,28 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
- **sp_who**會傳回包含下列資訊的結果集。  
+ **sp_who** 會傳回包含下列資訊的結果集。  
   
 |資料行|資料類型|描述|  
 |------------|---------------|-----------------|  
 |**spid**|**smallint**|工作階段識別碼。|  
-|**ecid**|**smallint**|特定工作階段識別碼所關聯之給定執行緒的執行內容識別碼。<br /><br /> ECID = {0，1，2，3，.。。*n*}，其中0一律代表主要或父執行緒，{1，2，3，.。。*n*} 代表子執行緒。|  
-|**status**|**nchar(30)**|處理序狀態。 可能的值包括：<br /><br /> **休眠**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在重設工作階段。<br /><br /> **正在**執行。 工作階段正在執行一或多個批次。 啟用 Multiple Active Result Set (MARS) 之後，工作階段就可以執行多個批次。 如需詳細資訊，請參閱[使用 Multiple Active Result Sets &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)。<br /><br /> **背景**。 工作階段正在執行背景工作，例如死結偵測。<br /><br /> **復原**。 工作階段正在進行交易回復。<br /><br /> **暫**止。 工作階段正在等候工作者執行緒變成可用狀態。<br /><br /> 可**執行。** 在等候取得時間配量時，工作階段的工作位於排程器的可執行佇列中。<br /><br /> **spinloop**。 工作階段的工作正在等候單一執行緒存取鎖變成可用狀態。<br /><br /> 已**暫停**。 工作階段正在等候事件 (例如 I/O) 完成。|  
+|**ecid**|**smallint**|特定工作階段識別碼所關聯之給定執行緒的執行內容識別碼。<br /><br /> ECID = {0，1，2，3，.。。*n*}，其中0一律代表主要或父執行緒，{1，2，3，.。。*n*} 表示子執行緒。|  
+|**status**|**nchar(30)**|處理序狀態。 可能的值包括：<br /><br /> **休眠**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在重設工作階段。<br /><br /> **正在**執行。 工作階段正在執行一或多個批次。 啟用 Multiple Active Result Set (MARS) 之後，工作階段就可以執行多個批次。 如需詳細資訊，請參閱[使用 Multiple Active Result Sets &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)。<br /><br /> **背景**。 工作階段正在執行背景工作，例如死結偵測。<br /><br /> **復原**。 工作階段正在進行交易回復。<br /><br /> **暫**止。 工作階段正在等候工作者執行緒變成可用狀態。<br /><br /> **runnable**。 在等候取得時間配量時，工作階段的工作位於排程器的可執行佇列中。<br /><br /> **spinloop**。 工作階段的工作正在等候單一執行緒存取鎖變成可用狀態。<br /><br /> 已**暫**止。 工作階段正在等候事件 (例如 I/O) 完成。|  
 |**loginame**|**nchar(128)**|特定處理序所關聯的登入名稱。|  
 |**hostname**|**nchar(128)**|每個處理序的主機或電腦名稱。|  
-|**blk**|**char （5）**|封鎖處理序的工作階段識別碼 (如果有)。 否則，這個資料行就是零。<br /><br /> 當被遺棄的分散式交易封鎖了與指定工作階段識別碼相關的交易時，這個資料行會針對進行封鎖的被遺棄交易傳回 '-2'。|  
+|**blk**|**char (5) **|封鎖處理序的工作階段識別碼 (如果有)。 否則，這個資料行就是零。<br /><br /> 當被遺棄的分散式交易封鎖了與指定工作階段識別碼相關的交易時，這個資料行會針對進行封鎖的被遺棄交易傳回 '-2'。|  
 |**dbname**|**nchar(128)**|處理序所用的資料庫。|  
-|**cmd**|**nchar(16)**|針對處理序來執行的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 命令 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、內部 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理序等等)。 在 SQL Server 2019 中，資料類型已變更為**Nchar （26）**。|  
+|**cmd**|**nchar(16)**|針對處理序來執行的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 命令 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、內部 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理序等等)。 在 SQL Server 2019 中，資料類型已變更為 **Nchar (26) **。|  
 |**request_id**|**int**|在特定工作階段中執行的要求識別碼。|  
   
- 發生平行處理時，會針對特定的工作階段識別碼建立子執行緒。 主要執行緒會以 `spid = <xxx>` 和 `ecid =0` 的方式指出。 另一個子執行緒具有相同的 `spid = <xxx>` ，但**ecid** > 0。  
+ 發生平行處理時，會針對特定的工作階段識別碼建立子執行緒。 主要執行緒會以 `spid = <xxx>` 和 `ecid =0` 的方式指出。 其他子執行緒相同 `spid = <xxx>` ，但 **ecid** > 0。  
   
 ## <a name="remarks"></a>備註  
  進行封鎖的處理序 (可能擁有獨佔鎖定) 為持有另一處理序所需要之資源的處理序。  
   
  所有被遺棄的分散式交易都會有指派的工作階段識別碼值 '-2'。 被遺棄的分散式交易是不與任何工作階段識別碼相關聯的分散式交易。 如需詳細資訊，請參閱 [使用標示的異動以一致的方式復原相關資料庫 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)。  
   
- 查詢 sys. dm_exec_sessions 的**is_user_process**資料行，以分隔系統進程與使用者進程。  
+ 查詢 sys. dm_exec_sessions 的 **is_user_process** 資料行，以分隔系統進程與使用者進程。  
   
 ## <a name="permissions"></a>權限  
  需要有這部伺服器的 VIEW SERVER STATE 權限，才能在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上看到所有執行中的工作階段。 否則，使用者只會看到目前的工作階段。  
@@ -120,8 +121,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_lock &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
- [sys.sys進程 &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
+ [ &#40;Transact-sql&#41;的sys.sys進程 ](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,6 @@
 ---
-title: sp_query_store_unforce_plan （Transact-sql） |Microsoft Docs
+description: 'sp_query_store_unforce_plan (Transact-sql) '
+title: sp_query_store_unforce_plan (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -21,13 +22,14 @@ ms.assetid: a52f91d0-ff1e-46ad-ba36-b32d9623c9ab
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c6af13e434fcf7fdc4c1738f71c76f092a0ed71d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b85e3a49faad133e52eab6ab542ec195dc4d58b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012609"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464100"
 ---
-# <a name="sp_query_store_unforce_plan-transact-sql"></a>sp_query_store_unforce_plan （Transact-sql）
+# <a name="sp_query_store_unforce_plan-transact-sql"></a>sp_query_store_unforce_plan (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   針對特定查詢啟用 unforcing 先前強制的計畫。  
@@ -41,9 +43,9 @@ sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @query_id = ] query_id`這是查詢的識別碼。 *query_id*是**Bigint**，沒有預設值。  
+`[ @query_id = ] query_id` 這是查詢的識別碼。 *query_id* 是 **Bigint**，沒有預設值。  
   
-`[ @plan_id = ] plan_id`這是不會再強制執行之查詢計劃的識別碼。 *plan_id*是**Bigint**，沒有預設值。  
+`[ @plan_id = ] plan_id` 這是將不再強制執行之查詢計劃的識別碼。 *plan_id* 是 **Bigint**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -51,7 +53,7 @@ sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;
 ## <a name="remarks"></a>備註  
   
 ## <a name="permissions"></a>權限  
- 需要資料庫的**ALTER**許可權。
+ 需要資料庫的 **ALTER** 許可權。
   
 ## <a name="examples"></a>範例  
  下列範例會傳回查詢存放區中查詢的相關資訊。  
@@ -65,7 +67,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- 識別您想要取消強制執行的 query_id 和 plan_id 之後，請使用下列範例來取消強制執行方案。  
+ 找出您想要取消的 query_id 和 plan_id 之後，請使用下列範例來取消方案。  
   
 ```sql  
 EXEC sp_query_store_unforce_plan 3, 3;  
@@ -77,7 +79,7 @@ EXEC sp_query_store_unforce_plan 3, 3;
  [sp_query_store_remove_query &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
  [sp_query_store_reset_exec_stats &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
  [sp_query_store_flush_db &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
- [查詢存放區目錄檢視 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
+ [查詢存放區 &#40;Transact-sql&#41;的目錄檢視 ](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [使用查詢存放區監視效能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
  [使用查詢存放區的最佳作法](../../relational-databases/performance/best-practice-with-the-query-store.md#CheckForced)     
   

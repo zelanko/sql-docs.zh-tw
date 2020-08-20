@@ -1,4 +1,5 @@
 ---
+description: 追蹤資料變更 (SQL Server)
 title: 追蹤資料變更
 ms.custom: seo-dt-2019
 ms.date: 08/08/2016
@@ -20,12 +21,12 @@ ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8a21168cd89dd2604c7c1f593ca5ca7d2532eb4d
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 02ac9ba37fae91916675a8a8edb4dfe904306112
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864975"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463789"
 ---
 # <a name="track-data-changes-sql-server"></a>追蹤資料變更 (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

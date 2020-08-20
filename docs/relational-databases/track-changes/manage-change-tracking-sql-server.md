@@ -1,4 +1,5 @@
 ---
+description: 管理變更追蹤 (SQL Server)
 title: 管理變更追縱
 ms.custom: seo-dt-2019
 ms.date: 08/08/2016
@@ -16,12 +17,12 @@ ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58093593dc2824d67e4b04cb6a02e52a1422555a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4c965816a7eca3d0a512f87cdf556b4f194b20e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725362"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463773"
 ---
 # <a name="manage-change-tracking-sql-server"></a>管理變更追蹤 (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

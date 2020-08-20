@@ -1,5 +1,6 @@
 ---
-title: sys.databases sp_cdc_scan （Transact-sql） |Microsoft Docs
+description: sys.sp_cdc_scan (Transact-SQL)
+title: sys. sp_cdc_scan (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 46e4294c-97b8-47d6-9ed9-b436a9929353
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 558a2fd9ff62baa3448609eb42e5f31883fbac53
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0ad39bba5f8a3fbee5bcecde3e41ad9a7f7f4442
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891058"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463928"
 ---
 # <a name="syssp_cdc_scan-transact-sql"></a>sys.sp_cdc_scan (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,16 +45,16 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @maxtrans = ] max_trans`每個掃描迴圈中要處理的交易數目上限。 *max_trans*是**int** ，預設值是500。  
+`[ @maxtrans = ] max_trans` 每個掃描迴圈中要處理的最大交易數目。 *max_trans* 是 **int** ，預設值是500。  
   
-`[ @maxscans = ] max_scans`要執行的掃描迴圈數目上限，以便從記錄檔中解壓縮所有資料列。 *max_scans*是**int** ，預設值是10。  
+`[ @maxscans = ] max_scans` 要從記錄檔中提取所有資料列時要執行的掃描迴圈數目上限。 *max_scans* 是 **int** ，預設值是10。  
   
-`[ @continuous = ] continuous`指出預存程式是否應在執行單一掃描迴圈（0）或連續執行時結束，並在暫停掃描週期（1）之前，暫停*polling_interval*所指定的時間。 *連續*是**Tinyint** ，預設值是0。  
+`[ @continuous = ] continuous` 指出在執行單一掃描迴圈之後，預存程式是否應該結束 (0) 或連續執行、暫停 *polling_interval* 所指定的時間，然後再暫停掃描週期 (1) 。 *連續* 是 **Tinyint** ，預設值是0。  
   
-`[ @pollinginterval = ] polling_interval`記錄掃描迴圈之間的秒數。 *polling_interval*是**Bigint** ，預設值是0。  
+`[ @pollinginterval = ] polling_interval` 記錄檔掃描迴圈之間的秒數。 *polling_interval* 是 **Bigint** ，預設值是0。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="result-sets"></a>結果集  
  None  

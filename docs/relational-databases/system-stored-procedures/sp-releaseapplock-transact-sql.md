@@ -1,5 +1,6 @@
 ---
-title: sp_releaseapplock （Transact-sql） |Microsoft Docs
+description: sp_releaseapplock (Transact-SQL)
+title: sp_releaseapplock (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: 51b03c2f-0d54-40f5-9172-e747942d4a46
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c737f6c139a82735e4da1d764b4036bb93c8b2a4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 39c78005aba5d601496df5b8af153acf1667581a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751694"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464039"
 ---
 # <a name="sp_releaseapplock-transact-sql"></a>sp_releaseapplock (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,16 +45,16 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
   
 ## <a name="arguments"></a>引數  
  [ @Resource =] '*resource_name*'  
- 這是用戶端應用程式所指定的鎖定資源名稱。 應用程式必須確定資源是唯一的。 指定的名稱會在內部雜湊成可儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 鎖定管理員中的值。 *resource_name*是**Nvarchar （255）** ，沒有預設值。 *resource_name*是以二進位進行比較，因此不論目前資料庫的定序設定為何，都會區分大小寫。  
+ 這是用戶端應用程式所指定的鎖定資源名稱。 應用程式必須確定資源是唯一的。 指定的名稱會在內部雜湊成可儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 鎖定管理員中的值。 *resource_name* 是 **Nvarchar (255) ** 沒有預設值。 *resource_name* 是以二進位來比較，因此不論目前資料庫的定序設定為何，都會區分大小寫。  
   
  [ @LockOwner =] '*lock_owner*'  
- 為鎖定的擁有者，也就是要求鎖定時的 *lock_owner* 值。 *lock_owner* 為 **nvarchar(32)**。 這個值可以是 **Transaction ** (預設值) 或 **Session **。 當*lock_owner*值為**交易**時，根據預設或明確地指定，sp_getapplock 必須從交易內執行。  
+ 為鎖定的擁有者，也就是要求鎖定時的 *lock_owner* 值。 *lock_owner* 為 **nvarchar(32)**。 這個值可以是 **Transaction ** (預設值) 或 **Session **。 當 *lock_owner* 值為 **transaction**時，根據預設或明確地指定，必須從交易內執行 sp_getapplock。  
   
  [ @DbPrincipal =] '*database_principal*'  
- 這是擁有資料庫中物件權限的使用者、角色或應用程式角色。 函數的呼叫端必須是*database_principal*、dbo 或 db_owner 固定資料庫角色的成員，才能成功呼叫函式。 預設值是 public。  
+ 這是擁有資料庫中物件權限的使用者、角色或應用程式角色。 函數的呼叫端必須是 *database_principal*、dbo 或 db_owner 固定資料庫角色的成員，才能成功呼叫函式。 預設值是 public。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- \>= 0 （成功），或 < 0 （失敗）  
+ \>= 0 (成功) ，或 < 0 (失敗)   
   
 |值|結果|  
 |-----------|------------|  
