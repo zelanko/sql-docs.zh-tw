@@ -1,4 +1,5 @@
 ---
+description: DBCC TRACEOFF (Transact-SQL)
 title: DBCC TRACEOFF (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 1379afba-6480-454b-9c65-5e64cb4f3415
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: bccf6b5064f58d7e0d7ad9c06514d25cf97c9ca9
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 1b6990452c110cb012e206389a679688d2ff961d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483503"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479765"
 ---
 # <a name="dbcc-traceoff-transact-sql"></a>DBCC TRACEOFF (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

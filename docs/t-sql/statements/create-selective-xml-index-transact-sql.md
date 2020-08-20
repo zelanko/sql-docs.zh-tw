@@ -1,4 +1,5 @@
 ---
+description: CREATE SELECTIVE XML INDEX (Transact-SQL)
 title: CREATE SELECTIVE XML INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
@@ -12,12 +13,12 @@ dev_langs:
 ms.assetid: 1d769f62-f646-4057-b93a-bf5f90e935ed
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 81bfeb64f7acded533c78d5937160dacb86af652
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6afa1d468d23738fb54ee49f5ed7221dfb4d85ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767039"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478934"
 ---
 # <a name="create-selective-xml-index-transact-sql"></a>CREATE SELECTIVE XML INDEX (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

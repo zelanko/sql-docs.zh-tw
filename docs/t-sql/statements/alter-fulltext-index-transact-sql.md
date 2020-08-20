@@ -1,4 +1,5 @@
 ---
+description: ALTER FULLTEXT INDEX (Transact-SQL)
 title: ALTER FULLTEXT INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fa8594033c004bed2f37204d9de96a75bcfb83f3
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 0f8b215f3e90822fe285b93274b7d93a7e1ee8b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301836"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479140"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -83,16 +84,16 @@ ALTER FULLTEXT INDEX ON table_name
 >  如需詳細資訊，請參閱[變更追蹤與 NO POPULATION 參數之間的互動](#change-tracking-no-population)。
   
  MANUAL  
- 指定追蹤的變更會手動傳播 (藉由呼叫 ALTER FULLTEXT INDEX...START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 (「手動母體擴展」  )。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 來定期呼叫這個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
+ 指定追蹤的變更會手動傳播 (藉由呼叫 ALTER FULLTEXT INDEX...START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 (「手動母體擴展」)。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 來定期呼叫這個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   
  AUTO  
- 指定在修改基底資料表中的資料時，同時自動散佈追蹤變更 (「自動母體擴展」  )。 雖然變更會自動傳播，但這些變更可能不會立即反映在全文檢索索引中。 預設值是 AUTO。  
+ 指定在修改基底資料表中的資料時，同時自動散佈追蹤變更 (「自動母體擴展」**)。 雖然變更會自動傳播，但這些變更可能不會立即反映在全文檢索索引中。 預設值是 AUTO。  
   
  OFF  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不保留索引資料的變更清單。  
   
  ADD | DROP *column_name*  
- 指定要在全文檢索索引中新增或刪除的資料行。 資料行必須屬於以下類型：**char**、**varchar** **nchar** **nvarchar** **text**、**ntext**、**image**、**xml**、**varbinary**，或 **varbinary(max)** 。  
+ 指定要在全文檢索索引中新增或刪除的資料行。 資料行必須屬於以下類型：**char**、**varchar****nchar****nvarchar****text**、**ntext**、**image**、**xml**、**varbinary**，或 **varbinary(max)**。  
   
  請只在先前已啟用了全文檢索索引的資料行上，使用 DROP 子句。  
   
@@ -129,7 +130,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  建立其他關鍵片語以及屬於統計語意索引一部分的文件相似度索引。 如需詳細資訊，請參閱[語意搜尋 &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md)。  
   
- [ **,** _...n_]  
+ [ **,**_...n_]  
  指出 ADD、ALTER 或 DROP 子句可以指定多個資料行。 當指定多個資料行時，請用逗號來分開這些資料行。  
   
  WITH NO POPULATION  
@@ -257,7 +258,7 @@ ALTER FULLTEXT INDEX ON table_name
   
      此陳述式會導致完整母體擴展 (預設行為)。  但在此母體擴展開始之前，Full-Text Engine 會自動截斷索引。  
   
-### <a name="scenario-b-turning-off-the-search-property-list-and-later-associating-the-index-with-any-search-property-list"></a>狀況 B：關閉搜尋屬性清單，且稍後為索引與任何搜尋屬性清單建立關聯  
+### <a name="scenario-b-turning-off-the-search-property-list-and-later-associating-the-index-with-any-search-property-list"></a>狀況 B：關閉搜尋屬性清單，而且稍後將索引與任何搜尋屬性清單產生關聯  
   
 1.  在 `table_1` 上，建立具有搜尋屬性清單 `spl_1` 的全文檢索索引，接著執行自動的完整母體擴展 (預設行為)：  
   

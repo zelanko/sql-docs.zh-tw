@@ -1,4 +1,5 @@
 ---
+description: ALTER INDEX (選擇性 XML 索引)
 title: ALTER INDEX (選擇性 XML 索引) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2017
@@ -12,12 +13,12 @@ dev_langs:
 ms.assetid: cca96a8f-7737-42d2-bbcc-03d5f858dcc1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ce6f6005e3e2b6966a4bc9e457b1ee552ea017f1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 11aa4f80e391644c796280e2d236c710e70bee2a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85761872"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479073"
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX (選擇性 XML 索引)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -137,7 +138,9 @@ identifier
  [WITH **(** \<index_options> **)** ]  
  使用未包含 FOR 子句的 ALTER INDEX 時，只能指定 \<index_options>。 當您使用 ALTER INDEX 加入或移除索引中的路徑時，索引選項不是有效的引數。 如需索引選項的詳細資訊，請參閱 [CREATE XML INDEX &#40;Selective XML Indexes&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)。  
   
-## <a name="remarks"></a>備註  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>備註
   
 > [!IMPORTANT]  
 >  當您執行 ALTER INDEX 陳述式時，一律會重建選擇性 XML 索引。 請務必考慮這個程序對於伺服器資源的影響。  

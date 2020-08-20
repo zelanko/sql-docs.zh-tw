@@ -1,4 +1,5 @@
 ---
+description: LOGINPROPERTY (Transact-SQL)
 title: LOGINPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -32,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: b34df777-79b0-49a5-88db-b99998479a5d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 20b67d4b1913cd896d3c4473b0c0f161b833154f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c3014a8d57602dc80b7faeec26dbc85d43f91c44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111900"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479614"
 ---
 # <a name="loginproperty-transact-sql"></a>LOGINPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -78,7 +79,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 |**PasswordLastSetTime**|傳回設定目前密碼的日期。|  
 |**PasswordHashAlgorithm**|傳回用來雜湊密碼的演算法。|  
   
-## <a name="returns"></a>傳回值  
+## <a name="returns"></a>傳回  
  資料類型相依於要求的值。  
   
  **IsLocked**、**IsExpired** 及 **IsMustChange** 的類型為 **int**。  

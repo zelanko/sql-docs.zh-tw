@@ -1,4 +1,5 @@
 ---
+description: '!&gt;(不大於) (Transact-SQL)'
 title: '!&gt;(不大於) (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/13/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 71a413ed-64f1-4ab9-9c52-c5959a77d00f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bdb02dc7a2bc8a5f8fc58b197481f3135907e0fe
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a7235630eaa2e60db49fe1230ce1f496dae69e63
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918504"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479435"
 ---
 # <a name="gt-not-greater-than-transact-sql"></a>!&gt;(不大於) (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

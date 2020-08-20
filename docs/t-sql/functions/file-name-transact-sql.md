@@ -1,4 +1,5 @@
 ---
+description: FILE_NAME (Transact-SQL)
 title: FILE_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 68b298aa-ce47-4af5-b59f-9a1b46d48326
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8f47e9c58921cbbf473295e62cc78f9bbd99f714
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4f6a8a9625582bd40b988f787bfdd6201bb2b747
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112449"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479686"
 ---
 # <a name="file_name-transact-sql"></a>FILE_NAME (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +59,7 @@ FILE_NAME ( file_id )
 *file_ID* 對應於 sys.master_files 目錄檢視或 sys.database_files 目錄檢視中的 file_id 資料行。  
   
 ## <a name="examples"></a>範例  
-此範例會傳回 `file_ID 1` 資料庫中 `file_ID` 和 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 的檔案名稱。  
+此範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `file_ID 1` 和 `file_ID` 的檔案名稱。  
   
 ```sql  
 SELECT FILE_NAME(1) AS 'File Name 1', FILE_NAME(2) AS 'File Name 2';  

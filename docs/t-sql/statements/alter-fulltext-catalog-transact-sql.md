@@ -1,4 +1,5 @@
 ---
+description: ALTER FULLTEXT CATALOG (Transact-SQL)
 title: ALTER FULLTEXT CATALOG (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 31a47aaf-6c7f-48a4-a86a-d57aec66c9cb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7fd19ebcedda06703058d96313ab477d660393d5
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 4f7bba432c31146e9bec8bdfc54ea3bee63e9bc4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301864"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479093"
 ---
 # <a name="alter-fulltext-catalog-transact-sql"></a>ALTER FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,12 +60,12 @@ ALTER FULLTEXT CATALOG catalog_name
  WITH ACCENT_SENSITIVITY = {ON|OFF}  
  指定全文檢索索引和查詢要改變的目錄是否區分腔調字。  
   
- 若要判斷全文檢索目錄目前的區分重音字屬性設定，請針對 **catalog_name**，搭配 *accentsensitivity* 屬性值來使用 FULLTEXTCATALOGPROPERTY 函數。 如果函數傳回 '1'，全文檢索目錄就會區分腔調字；如果函數傳回 '0'，目錄就不會區分腔調字。  
+ 若要判斷全文檢索目錄目前的區分重音字屬性設定，請針對 *catalog_name*，搭配 **accentsensitivity** 屬性值來使用 FULLTEXTCATALOGPROPERTY 函數。 如果函數傳回 '1'，全文檢索目錄就會區分腔調字；如果函數傳回 '0'，目錄就不會區分腔調字。  
   
  目錄和資料庫區分腔調字的預設值相同。  
   
  REORGANIZE  
- 通知 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行「主要合併」  ，其中包括將索引作業過程所建立的較小索引合併到單一大型索引中。 合併全文檢索索引片段可以改善效能，並釋出磁碟和記憶體資源。 如果全文檢索目錄經常變更，請定期利用這個命令來重新組織全文檢索目錄。  
+ 通知 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行「主要合併」**，其中包括將索引作業過程所建立的較小索引合併到單一大型索引中。 合併全文檢索索引片段可以改善效能，並釋出磁碟和記憶體資源。 如果全文檢索目錄經常變更，請定期利用這個命令來重新組織全文檢索目錄。  
   
  REORGANIZE 也會將內部索引和目錄結構最佳化。  
   

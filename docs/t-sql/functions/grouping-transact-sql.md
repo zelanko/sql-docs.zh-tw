@@ -1,4 +1,5 @@
 ---
+description: GROUPING (Transact-SQL)
 title: GROUPING (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/03/2019
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 4efa3868-1fc4-4626-8fb1-e863cc03e422
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b19bc2719abf59c0ab347c677b172ac9797a00d4
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 6618a42226981241e893bc0a930b1028af114074
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396346"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479657"
 ---
 # <a name="grouping-transact-sql"></a>GROUPING (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

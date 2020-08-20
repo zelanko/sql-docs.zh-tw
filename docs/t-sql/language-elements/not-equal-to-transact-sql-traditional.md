@@ -1,4 +1,5 @@
 ---
+description: 不等於 (Transact SQL) - 傳統
 title: '&lt;&gt; (不等於) (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/13/2017
@@ -24,12 +25,12 @@ ms.assetid: 34cf9b38-d589-4be9-925a-116e224609a0
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c6e3c1ec06dc31a2d39fbecc0a237ede3e55a4ff
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 391c463740ddf0b211908e3f9fec48b84dbc6495
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918514"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479529"
 ---
 # <a name="not-equal-to-transact-sql---traditional"></a>不等於 (Transact SQL) - 傳統
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

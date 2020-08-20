@@ -1,4 +1,5 @@
 ---
+description: ALTER EXTERNAL LIBRARY (Transact-SQL)
 title: ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2020
@@ -17,15 +18,15 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: b4c70e47b166e218bf6f08735360cd85755bb345
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b899136782f19af9707e7855987b74647da4c8f0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736015"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479087"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 修改現有外部套件程式庫的內容。
 
@@ -203,6 +204,8 @@ WITH ( LANGUAGE = <language> )
 
 指定套件的語言。 此值可以是 **R**、**Python** 或外部語言的名稱 (請參閱[建立外部語言](create-external-language-transact-sql.md))。
 ::: moniker-end
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="remarks"></a>備註
 

@@ -1,4 +1,5 @@
 ---
+description: UNICODE (Transact-SQL)
 title: UNICODE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ ms.assetid: 5e3c40b2-8401-4741-9f2a-bae70eaa4da6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0f6500371f5a3cc854c823118f70306255b13d45
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 56a8d99b228c1115af02109e5715020463126f78
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112236"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479519"
 ---
 # <a name="unicode-transact-sql"></a>UNICODE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +51,7 @@ UNICODE ( 'ncharacter_expression' )
 **int**  
   
 ## <a name="remarks"></a>備註  
-在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本與 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，UNICODE 函式會傳回範圍介於 000000 到 00FFFF 之間的 UCS-2 字碼元素，此範圍可代表 Unicode 基本多語平面 (BMP) 中的 65,535 個字元。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，當使用支援[補充字元 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 的定序時，UNICODE 會傳回範圍 000000 到 10FFFF 之間的 UTF-16 字碼元素。 如需 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 中 Unicode 支援的詳細資訊，請參閱[定序和 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn)。 
+在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 之前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本與 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，UNICODE 函式會傳回範圍介於 000000 到 00FFFF 之間的 UCS-2 字碼元素，此範圍可代表 Unicode 基本多語平面 (BMP) 中的 65,535 個字元。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，當使用支援[補充字元 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 的定序時，UNICODE 會傳回範圍 000000 到 10FFFF 之間的 UTF-16 字碼元素。 如需 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 中 Unicode 支援的詳細資訊，請參閱[定序和 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn)。 
   
 ## <a name="examples"></a>範例  
   

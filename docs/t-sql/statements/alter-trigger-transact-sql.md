@@ -1,4 +1,5 @@
 ---
+description: ALTER TRIGGER (Transact-SQL)
 title: ALTER TRIGGER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/08/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a038026afd2e15ffda6f5f78a63704fa1d6bcad4
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 051f3b675aaf4ab8e7a2ce84b4bb587676355a41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380941"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479020"
 ---
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

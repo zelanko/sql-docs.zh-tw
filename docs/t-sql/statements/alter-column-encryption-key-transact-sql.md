@@ -1,4 +1,5 @@
 ---
+description: ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 title: ALTER COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/15/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 2296050c41b774e2180532c79b816d112c6e2a7c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4fcda824e7d64bc5eb769f1f1e322430f7f2bb91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110253"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479170"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -60,8 +61,8 @@ ALTER COLUMN ENCRYPTION KEY key_name
   
 > [!WARNING]  
 >  絕對不要在此陳述式中傳遞純文字的 CEK 值。 這麼做會影響此功能的優。  
-  
-## <a name="remarks"></a>備註  
+
+## <a name="remarks"></a>備註
 一般來說，資料行加密金鑰建立時只會使用一個加密值。 當資料行主要金鑰必須輪替時 (目前資料行主要金鑰必須換成新的資料行主要金鑰)，您可以新增資料行加密金鑰值，並以新的資料行主要金鑰來加密。 此工作流程一方面可讓您確保用戶端應用程式能夠存取由資料行加密金鑰加密的資料，一方面也可確保用戶端應用程式能夠使用新的資料行主要金鑰。 如果用戶端應用程式中的驅動程式已啟用 Always Encrypted，但沒有新的主要金鑰存取權，其可使用以舊資料行主要金鑰加密的資料行加密金鑰值來存取敏感性資料。 Always Encrypted 支援的加密演算法需要使用 256 位元純文字值。 
  
 建議您使用 SQL Server Management Studio (SSMS) 或 PowerShell 之類的工具來輪替資料行主要金鑰。 請參閱[使用 SQL Server Management Studio 輪替 Always Encrypted 金鑰](../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-ssms.md)和[使用 PowerShell 輪替 Always Encrypted 金鑰](../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)。

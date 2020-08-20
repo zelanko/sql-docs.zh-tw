@@ -1,4 +1,5 @@
 ---
+description: ALTER EVENT SESSION (Transact-SQL)
 title: ALTER EVENT SESSION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/07/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 819799dbabbe28a254dbc1cbe1a069f6664a9eea
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 49e5a61e89046341d2514183be74afc1a7e01674
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111255"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479153"
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

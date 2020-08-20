@@ -1,4 +1,5 @@
 ---
+description: FILEPROPERTYEX (Transact-SQL)
 title: FILEPROPERTYEX (Transact-SQL) | Microsoft Docs
 ms.date: 07/23/2019
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - file names [SQL Server], FILEPROPERTYEX
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d0eb763436bc4dd26815879c33c9a8461d9a38d7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4fca1a10c6e0fce286854b96ac673e602744cdb6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732321"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479659"
 ---
 # <a name="filepropertyex-transact-sql"></a>FILEPROPERTYEX (Transact-SQL)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -41,10 +42,10 @@ FILEPROPERTYEX ( name , property )
   
 ## <a name="arguments"></a>引數  
  *name*  
- 這是包含傳回屬性資訊所屬的目前資料庫之相關聯檔案名稱的運算式。 *file_name* 為 **nchar(128)** 。  
+ 這是包含傳回屬性資訊所屬的目前資料庫之相關聯檔案名稱的運算式。 *file_name* 為 **nchar(128)**。  
   
  *property*  
- 這是包含要傳回之檔案屬性名稱的運算式。 *property* 為 **varchar(128)** ，而且可以是下列值之一。  
+ 這是包含要傳回之檔案屬性名稱的運算式。 *property* 為 **varchar(128)**，而且可以是下列值之一。  
 
 
   

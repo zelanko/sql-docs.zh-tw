@@ -1,4 +1,5 @@
 ---
+description: NOT (Transact-SQL)
 title: NOT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -21,12 +22,12 @@ ms.assetid: dc07cc35-20f1-46e6-9995-2938390dc19a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0bda0a8199275ad124786e0eaf56bac4efdead6c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5e70dbb22c231a6d4eeb2367ad2e5231c93f4d07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923169"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479431"
 ---
 # <a name="not-transact-sql"></a>NOT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,7 +61,7 @@ ms.locfileid: "86923169"
   
 ||NOT|  
 |------|---------|  
-|**TRUE**|FALSE|  
+|**TRUE**|false|  
 |**FALSE**|TRUE|  
 |**UNKNOWN**|UNKNOWN|  
   

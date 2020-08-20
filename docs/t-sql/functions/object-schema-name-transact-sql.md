@@ -1,4 +1,5 @@
 ---
+description: OBJECT_SCHEMA_NAME (Transact-SQL)
 title: OBJECT_SCHEMA_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/25/2018
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 5ba90bb9-d045-4164-963e-e9e96c0b1e8b
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 5453bfb7efb79b2b60a3855d28e195b0bcedb81f
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: f68dea4c08218aeafd60c8cb4d951b60c8e1cdfa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394795"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479643"
 ---
 # <a name="object_schema_name-transact-sql"></a>OBJECT_SCHEMA_NAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -45,7 +46,7 @@ OBJECT_SCHEMA_NAME ( object_id [, database_id ] )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引數
- object_id   
+ object_id  
  這是所要使用的物件識別碼。 *object_id* 為 **int**，而且會假設為指定資料庫或目前資料庫內容中的結構描述範圍物件。  
   
  *database_id*  

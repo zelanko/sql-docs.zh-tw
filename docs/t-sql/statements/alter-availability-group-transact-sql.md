@@ -1,4 +1,5 @@
 ---
+description: ALTER AVAILABILITY GROUP (Transact-SQL)
 title: ALTER AVAILABILITY GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/02/2018
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 23df9963bccefaa5a637c7b93196f37e722ac3e4
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 8b3953f0f0000ce67f3d58ffbc4be07b5d921734
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332011"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479208"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

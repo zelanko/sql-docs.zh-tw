@@ -1,4 +1,5 @@
 ---
+description: CREATE SERVICE (Transact-SQL)
 title: CREATE SERVICE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5fb4e378dcba2a125c569d8fa96a1d279e88d724
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 9ceb3cfbae19670789d7dc8776805b14b463a059
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484545"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478903"
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -52,12 +53,12 @@ CREATE SERVICE service_name
  這是要建立的服務名稱。 新服務會建立在目前資料庫中，擁有者是 AUTHORIZATION 子句所指定的主體。 您不可指定伺服器、資料庫和結構描述名稱。 *service_name* 必須是有效的 **sysname**。  
   
 > [!NOTE]  
-> 請勿建立針對 *service_name* 使用關鍵字 ANY 的服務。 當您在 `ANY` 中針對服務名稱指定 `CREATE BROKER PRIORITY` 時，就會考慮所有服務的優先權。 這並不限於名稱為 ANY 的服務。  
+> 請勿建立針對 *service_name* 使用關鍵字 ANY 的服務。 當您在 `CREATE BROKER PRIORITY` 中針對服務名稱指定 `ANY` 時，就會考慮所有服務的優先權。 這並不限於名稱為 ANY 的服務。  
   
  AUTHORIZATION *owner_name*  
  將服務的擁有者設為指定的資料庫使用者或角色。 當目前的使用者是 **dbo** 或 **sa** 時，*owner_name* 可以是任何有效使用者或角色的名稱。 否則，*owner_name* 必須是目前使用者的名稱、目前使用者有其 IMPERSONATE 權限的使用者名稱，或目前使用者所屬的角色名稱。  
   
- ON QUEUE [ _schema_name_ **.** ] *queue_name*  
+ ON QUEUE [ _schema_name_**.** ] *queue_name*  
  指定接收服務訊息的佇列。 佇列必須在服務的相同資料庫中。 如果未提供 *schema_name*，結構描述就是執行陳述式之使用者的預設結構描述。  
   
  *contract_name*  

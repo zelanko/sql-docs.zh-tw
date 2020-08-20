@@ -1,4 +1,5 @@
 ---
+description: BINARY_CHECKSUM  (Transact-SQL)
 title: BINARY_CHECKSUM  (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -19,12 +20,12 @@ ms.assetid: 07fece4d-58e3-446e-a3b5-92fe24d2d1fb
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dbf7006b435dc9012fc98fcd103a88e03471d65f
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 922f1da9e2988f5bf6a316101bad175dbe46b2b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397107"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479732"
 ---
 # <a name="binary_checksum--transact-sql"></a>BINARY_CHECKSUM  (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -78,7 +79,7 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
   
 例如，"McCavity" 和 "Mccavity" 字串的 `BINARY_CHECKSUM` 值不同。 反之，在不區分大小寫的伺服器中，`CHECKSUM` 就會針對那些字串傳回相同的總和檢查碼值。 您應該避免比較 `CHECKSUM` 值與 `BINARY_CHECKSUM` 值。
  
-`BINARY_CHECKSUM` 支援任意長度的類型 **varbinary(max)** ，並支援最多 255 個字元的類型 **nvarchar(max)** 。
+`BINARY_CHECKSUM` 支援任意長度的類型 **varbinary(max)**，並支援最多 255 個字元的類型 **nvarchar(max)**。
   
 ## <a name="examples"></a>範例  
 此範例使用 `BINARY_CHECKSUM` 來偵測資料表資料列中的變更。
@@ -99,7 +100,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱
-[彙總函式 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+[彙總函數 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
 [CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
 [CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)  
 [HASHBYTES &#40;Transact-SQL&#41;](../../t-sql/functions/hashbytes-transact-sql.md)  

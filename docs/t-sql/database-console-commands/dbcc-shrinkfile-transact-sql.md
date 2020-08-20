@@ -1,4 +1,5 @@
 ---
+description: DBCC SHRINKFILE (Transact-SQL)
 title: DBCC SHRINKFILE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2017
@@ -29,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 32ce225096e6a232c824a9fc360cb2c3a282f4b2
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 203b53928ee41dcc75194cef6171959cdc08dd71
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484227"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479773"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -76,7 +77,7 @@ FILESTREAM 檔案群組容器不支援此選項。
 如果已指定，DBCC SHRINKFILE 會嘗試將檔案壓縮成 *target_size*。 檔案所要釋出區域中所使用頁面會移至檔案保留區域中的可用空間。 例如，有 10 MB 的資料檔案時，*target_size* 為 8 的 DBCC SHRINKFILE 作業會將檔案最後 2 MB 中所有已使用頁面移入檔案前 8 MB 中任何未配置的頁面。 DBCC SHRINKFILE 不會將檔案壓縮成超過所需的預存資料大小。 例如，如果使用了 10 MB 資料檔案中的 7 MB，將 *target_size* 設為 6 的 DBCC SHRINKFILE 陳述式，只會將檔案壓縮成 7 MB，而不是 6 MB。
   
 EMPTYFILE  
-將指定檔案中的所有資料移轉到「相同檔案群組」  的其他檔案中。 換言之，EMPTYFILE 會將指定檔案中資料移轉至同一檔案群組中的其他檔案。 儘管這不是唯讀檔案，但 EMPTYFILE 可確保不會將任何新資料新增至檔案。 您可以使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 陳述式來移除檔案。 如果您使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 陳述式來變更檔案大小，則唯讀旗標會重設，且可以新增資料。
+將指定檔案中的所有資料移轉到「相同檔案群組」**** 的其他檔案中。 換言之，EMPTYFILE 會將指定檔案中資料移轉至同一檔案群組中的其他檔案。 儘管這不是唯讀檔案，但 EMPTYFILE 可確保不會將任何新資料新增至檔案。 您可以使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 陳述式來移除檔案。 如果您使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 陳述式來變更檔案大小，則唯讀旗標會重設，且可以新增資料。
 
 對於 FILESTREAM 檔案群組容器來說，在 FILESTREAM 記憶體回收行程已執行並刪除所有由 EMPTYFILE 複製至其他容器且已不需要的檔案群組容器檔案之前，您無法使用 ALTER DATABASE 來移除檔案。 如需詳細資訊，請參閱 [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)
   
@@ -163,7 +164,7 @@ transaction with timestamp 15 and other snapshot transactions linked to
 timestamp 15 or with timestamps older than 109 to finish.  
 ```  
   
-此訊息表示時間戳記在 109 (壓縮作業所完成的最後一項交易) 之前的快照集交易將封鎖壓縮作業。 這也表示 **sys.dm_tran_active_snapshot_database_transactions** 動態管理檢視中的 **transaction_sequence_num** 或 [first_snapshot_sequence_num](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 資料行包含值 15。 如果 **transaction_sequence_num** 或 **first_snapshot_sequence_num** 檢視資料行所包含數字小於壓縮作業最後完成的交易 (109)，壓縮作業將會等到這些交易完成。
+此訊息表示時間戳記在 109 (壓縮作業所完成的最後一項交易) 之前的快照集交易將封鎖壓縮作業。 這也表示 [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 動態管理檢視中的 **transaction_sequence_num** 或 **first_snapshot_sequence_num** 資料行包含值 15。 如果 **transaction_sequence_num** 或 **first_snapshot_sequence_num** 檢視資料行所包含數字小於壓縮作業最後完成的交易 (109)，壓縮作業將會等到這些交易完成。
   
 若要解決這個問題，可以執行下列其中一項工作：
 -   結束正在封鎖壓縮作業的交易。
@@ -176,7 +177,7 @@ timestamp 15 or with timestamps older than 109 to finish.
 ## <a name="examples"></a>範例  
   
 ### <a name="shrinking-a-data-file-to-a-specified-target-size"></a>將資料檔案壓縮為指定的目標大小  
-下列範例會將 `DataFile1` 使用者資料庫中名為 `UserDB` 之資料檔案大小壓縮成 7 MB。
+下列範例會將 `UserDB` 使用者資料庫中名為 `DataFile1` 之資料檔案大小壓縮成 7 MB。
   
 ```sql  
 USE UserDB;  

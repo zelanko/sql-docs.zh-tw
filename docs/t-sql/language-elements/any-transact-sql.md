@@ -1,4 +1,5 @@
 ---
+description: ANY (Transact-SQL)
 title: ANY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: ddadefd7-49ad-4be1-b34d-dcf155558d34
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 60c62cfe6dc94e095672b70ea289e2e400e54697
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0814e6a45952e1603cc217b82374bcaf7fd895c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85708119"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479466"
 ---
 # <a name="any-transact-sql"></a>ANY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

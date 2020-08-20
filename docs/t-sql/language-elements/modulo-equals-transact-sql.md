@@ -1,4 +1,5 @@
 ---
+description: '%= (模數指派) (Transact-SQL)'
 title: '%= (模數指派) (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
@@ -22,12 +23,12 @@ ms.assetid: 45e35516-1f4c-406b-a580-70a14b087847
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 20bbd65e39a3a689c01612615d54c34e12932a1e
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: a80710e2f05786ab5541bb658de6850d7068329e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395687"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479533"
 ---
 # <a name="-modulus-assignment-transact-sql"></a>%= (模數指派) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

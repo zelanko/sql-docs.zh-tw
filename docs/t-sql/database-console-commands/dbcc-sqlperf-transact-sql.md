@@ -1,4 +1,5 @@
 ---
+description: DBCC SQLPERF (Transact-SQL)
 title: DBCC SQLPERF (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/07/2018
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: baa77f853e048fdc1098a93ae7036fd927efbe9c
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: cae65d63d9974d12698949bce4c5483fcb380c17
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485550"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479757"
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,10 +60,10 @@ LOGSPACE
 > [!IMPORTANT]
 > 如需從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 起有關交易記錄空間使用量資訊的詳細資訊，請參閱本主題中的[備註](#Remarks)一節。
   
-**"sys.dm_os_latch_stats"** , CLEAR  
+**"sys.dm_os_latch_stats"**, CLEAR  
 重設閂鎖統計資料。 如需詳細資訊，請參閱 [sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)。 此選項在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中無法使用。  
   
-**"sys.dm_os_wait_stats"** , CLEAR  
+**"sys.dm_os_wait_stats"**, CLEAR  
 重設等候統計資料。 如需詳細資訊，請參閱 [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。 此選項在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中無法使用。  
   
 WITH NO_INFOMSGS  

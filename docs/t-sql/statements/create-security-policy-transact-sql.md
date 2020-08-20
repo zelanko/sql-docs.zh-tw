@@ -1,4 +1,5 @@
 ---
+description: CREATE SECURITY POLICY (Transact-SQL)
 title: CREATE SECURITY POLICY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: de5ab7ebb06a6ba51241b06a3ee6f618378bc635
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: da7b906f774bb3cf56acdb8c60587146fa98ae50
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110670"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478963"
 ---
 # <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -88,7 +89,8 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
  [*table_schema_name*.] *table_name*  
  這是套用安全性述詞的目標資料表。 單一資料表可以有多個已停用的安全性原則，但無論何時都只能啟用一個安全性原則。  
   
-## <a name="remarks"></a>備註  
+
+## <a name="remarks"></a>備註
  搭配使用述詞函式與記憶體最佳化資料表時，您必須包含 **SCHEMABINDING** 並使用 **WITH NATIVE_COMPILATION** 編譯提示。  
   
  BLOCK 述詞會在執行對應的 DML 作業後加以評估。 因此，READ UNCOMMITTED 查詢可以查看之後會回復的暫時性值。  

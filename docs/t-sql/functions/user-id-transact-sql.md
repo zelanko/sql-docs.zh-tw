@@ -1,4 +1,5 @@
 ---
+description: USER_ID (Transact-SQL)
 title: USER_ID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 67fd29bc-eda9-4d4d-b148-5d3659181a43
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 646ed2166a7519c12fd7695ef49bfe3aca7c0738
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 472a56ce6adf6b4020178ba8195642d88665d9d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113273"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479474"
 ---
 # <a name="user_id-transact-sql"></a>USER_ID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

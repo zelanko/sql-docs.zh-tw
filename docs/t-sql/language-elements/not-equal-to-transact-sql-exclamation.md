@@ -1,4 +1,5 @@
 ---
+description: 不等於 (Transact SQL) - 驚嘆號
 title: '!= (不等於) (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
@@ -22,12 +23,12 @@ ms.assetid: f1054809-04f2-4995-9ebd-cb67098e6708
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0dcc4ee950337c46372ae8d5c8956614465fe2eb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 272174b8d7b6c9ad82e75142bc919548e4ebddb3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007289"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479439"
 ---
 # <a name="not-equal-to-transact-sql---exclamation"></a>不等於 (Transact SQL) - 驚嘆號
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

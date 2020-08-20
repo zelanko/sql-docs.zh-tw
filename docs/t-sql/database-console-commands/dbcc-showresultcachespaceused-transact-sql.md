@@ -1,4 +1,5 @@
 ---
+description: DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
 title: DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
 ms.custom: ''
 ms.date: 07/03/2019
@@ -12,12 +13,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: edf186ecb27c0440bb714fe69f4094012bb6c141
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 813f838e1eae555d28f51a4f799864cc2b2dce15
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396844"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479770"
 ---
 # <a name="dbcc-showresultcachespaceused-transact-sql"></a>DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
 

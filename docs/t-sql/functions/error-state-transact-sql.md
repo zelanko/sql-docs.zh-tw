@@ -1,5 +1,6 @@
 ---
-title: ERROR_STATE (Transact-SQL) | Microsoft Docs
+description: ERROR_STATE (Transact-SQL)
+title: ERROR_STATE (Transact-SQL)
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,14 +24,15 @@ ms.assetid: 6059af00-83fe-409f-ab7c-daad111bc671
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56e08b872179ba09c130326b957f2c86b4b8c0db
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 9426f7d3717a32a473628ea82e789c4e8fd580fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87393963"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479734"
 ---
 # <a name="error_state-transact-sql"></a>ERROR_STATE (Transact-SQL)
+
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   傳回造成執行 TRY...CATCH 建構的 CATCH 區塊之錯誤的狀態碼。  
@@ -43,7 +45,9 @@ ms.locfileid: "87393963"
 ERROR_STATE ( )  
 ```  
   
-## <a name="return-types"></a>傳回型別  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>傳回型別
  **int**  
   
 ## <a name="return-value"></a>傳回值  
@@ -52,7 +56,7 @@ ERROR_STATE ( )
  如果是在 CATCH 區塊範圍之外呼叫，便傳回 NULL。  
   
 ## <a name="remarks"></a>備註  
- 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 程式碼中的多個點都可能會引發某些錯誤訊息。 例如，在許多不同情況下，都有可能產生 "1105" 錯誤。 每個產生錯誤的特定狀況，都會指派唯一的狀態碼。  
+ 對於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]，程式碼的多個點都可能會產生某些錯誤訊息。 例如，在許多不同情況下，都有可能產生 "1105" 錯誤。 每個產生錯誤的特定狀況，都會指派唯一的狀態碼。  
   
  當檢視已知問題的資料庫時，例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知識庫，您可以利用狀態碼來判斷所記錄的問題，與您遇到的錯誤是否相同。 例如，如果知識庫文件討論狀態為 2 的 1105 錯誤訊息，而您收到的 1105 錯誤訊息的狀態卻是 3，錯誤原因可能不是文章所報告的原因。  
   

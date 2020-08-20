@@ -1,4 +1,5 @@
 ---
+description: STDimension (geography 資料類型)
 title: STDimension (geography 資料類型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4368b0f6-0678-4ade-87dc-b43d8b2e8d92
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7dfd48621e2d587d985a695d00f4f091877c4814
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e7cd207272093ab77aea443737f27bd99a35e2e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552873"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479291"
 ---
 # <a name="stdimension-geography-data-type"></a>STDimension (geography 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -69,6 +70,6 @@ FROM @temp;
 |Polygon|2|  
   
 ## <a name="see-also"></a>另請參閱  
- [地理例項上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [地理位置例項上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

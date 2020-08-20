@@ -1,4 +1,5 @@
 ---
+description: ALTER FULLTEXT STOPLIST (Transact-SQL)
 title: ALTER FULLTEXT STOPLIST (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f6ad87d5-6a34-435a-8456-8244947c5c83
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e22cb4fcd9d87c68b54d071d5877f564a2c72540
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 8a7105e0f5360144594d215063b6a2f91590e54c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301834"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479069"
 ---
 # <a name="alter-fulltext-stoplist-transact-sql"></a>ALTER FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -65,7 +66,7 @@ ALTER FULLTEXT STOPLIST stoplist_name
   
  *language_term* 可以指定為對應於語言地區設定識別碼 (LCID) 的字串、整數或十六進位值，如下所示：  
   
-|[格式]|描述|  
+|格式|描述|  
 |------------|-----------------|  
 |String|*language_term* 會對應到 [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 相容性檢視中的 **alias** 資料行值。 字串必須以單引號括住，如 **'***language_term***'** 。|  
 |整數|*language_term* 是語言的 LCID。|  

@@ -1,4 +1,5 @@
 ---
+description: COS (Transact-SQL)
 title: COS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -19,12 +20,12 @@ ms.assetid: c9fa8ae1-3373-4f3e-9b97-fa05077c1040
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2d3ffd5e10b1301b8b02c2381b36cf186b947a35
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 096c24a129a7262248add636094c8288d4291c6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113585"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479739"
 ---
 # <a name="cos-transact-sql"></a>COS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +44,7 @@ COS ( float_expression )
 
 ## <a name="arguments"></a>引數
 *float_expression*  
-一個 [float](../../t-sql/language-elements/expressions-transact-sql.md) 類型的**運算式**。
+一個 **float** 類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 ## <a name="return-types"></a>傳回類型
 **float**

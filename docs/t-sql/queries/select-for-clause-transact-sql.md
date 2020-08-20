@@ -1,4 +1,5 @@
 ---
+description: SELECT - FOR 子句 (Transact-SQL)
 title: FOR 子句 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/08/2019
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c734833e71bcfc0ffb04deb227404b089b78d3cb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a3f8fb497c95bd7f1df6f1ea8a51be938bc1a555
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736292"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479454"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT - FOR 子句 (Transact-SQL)
 

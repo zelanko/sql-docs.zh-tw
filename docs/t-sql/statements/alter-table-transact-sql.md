@@ -1,4 +1,5 @@
 ---
+description: ALTER TABLE (Transact-SQL)
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/23/2020
@@ -59,12 +60,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b9f3f2a1ba5cac36862362d152ceb824aeadf347
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: 94e6ab85dd61babfc6a4ca2e4d57b3ee546a0d03
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435469"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479063"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -1846,7 +1847,7 @@ ORDER BY p.partition_number ;
 
 ### <a name="c-determining-the-partition-column-for-a-partitioned-table"></a>C. 判斷資料分割資料表的資料分割資料行
 
-下列查詢會傳回資料表之分割區資料行的名稱。 第 1 課：建立 Windows Azure 儲存體物件`FactResellerSales`。
+下列查詢會傳回資料表之分割區資料行的名稱。 `FactResellerSales`.
 
 ```sql
 SELECT t.object_id AS Object_ID, t.name AS TableName,

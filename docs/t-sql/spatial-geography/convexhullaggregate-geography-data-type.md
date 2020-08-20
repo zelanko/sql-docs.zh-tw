@@ -1,4 +1,5 @@
 ---
+description: ConvexHullAggregate (geography 資料類型)
 title: ConvexHullAggregate (geography 資料型別) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 21784c66-2725-471b-9e2d-a8c2e3695197
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 2e09d6f8375d1c48ea86a31c632ca2d13273a53a
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: a43aad8c89ff1fccdcb8165c77140283a3d10b20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555473"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479395"
 ---
 # <a name="convexhullaggregate-geography-data-type"></a>ConvexHullAggregate (geography 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

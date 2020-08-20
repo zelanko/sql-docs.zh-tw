@@ -1,4 +1,5 @@
 ---
+description: CREATE FUNCTION (Transact-SQL)
 title: CREATE FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2020
@@ -40,12 +41,12 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 568afeaa4a138e37bedb4102f4ec12409a73fe9e
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: b097202564578ebeb52592d6bdae789f9c0d2fd6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391713"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479001"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 

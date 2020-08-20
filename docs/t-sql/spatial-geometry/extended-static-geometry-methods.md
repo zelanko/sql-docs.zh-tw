@@ -1,4 +1,5 @@
 ---
+description: 擴充的靜態幾何方法
 title: 擴充的靜態幾何方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 04c02af0-5243-4d53-b35a-ddc4113ee8f6
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: bf1eb5767f02e3b6d97ae0ff8392e13732fd46f5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1c0de5ee8e55dee1a7edab464a5a8550f72aa1ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736054"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479294"
 ---
 # <a name="extended-static-geometry-methods"></a>擴充的靜態幾何方法
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
