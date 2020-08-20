@@ -97,9 +97,7 @@
               href: ../machine-learning/tutorials/python-clustering-model-build.md
             - name: 4 - 部署模型
               href: ../machine-learning/tutorials/python-clustering-model-deploy.md
-        - name: 使用 revoscalepy 建立 Python 模型
-          href: ../machine-learning/tutorials/use-python-revoscalepy-to-create-model.md
-        - name: 適用於 SQL 的 Python 開發人員
+        - name: NYC 計程車秘訣 (分類)
           items:
             - name: 1 - 簡介
               href: ../machine-learning/tutorials/python-taxi-classification-introduction.md
@@ -111,6 +109,8 @@
               href: ../machine-learning/tutorials/python-taxi-classification-train-model.md
             - name: 5 - 預測
               href: ../machine-learning/tutorials/python-taxi-classification-deploy-model.md
+        - name: 使用 revoscalepy 建立 Python 模型
+          href: ../machine-learning/tutorials/use-python-revoscalepy-to-create-model.md
     - name: R
       items:
         - name: R 教學課程
@@ -135,9 +135,7 @@
               href: ../machine-learning/tutorials/r-clustering-model-build.md
             - name: 4 - 部署模型
               href: ../machine-learning/tutorials/r-clustering-model-deploy.md
-        - name: 建立資料分割型模型
-          href: ../machine-learning/tutorials/r-tutorial-create-models-per-partition.md
-        - name: 適用於 SQL 的 R 開發人員
+        - name: NYC 計程車秘訣 (分類)
           items:
             - name: 1. 簡介
               href: ../machine-learning/tutorials/r-taxi-classification-introduction.md
@@ -149,6 +147,8 @@
               href: ../machine-learning/tutorials/r-taxi-classification-train-model.md
             - name: 5. 預測
               href: ../machine-learning/tutorials/r-taxi-classification-deploy-model.md
+        - name: 建立資料分割型模型
+          href: ../machine-learning/tutorials/r-tutorial-create-models-per-partition.md
         - name: 在 R 工具中使用 SQL ML
           items:
             - name: 1. 簡介
