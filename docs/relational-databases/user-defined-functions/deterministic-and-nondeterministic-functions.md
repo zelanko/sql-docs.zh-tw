@@ -1,4 +1,5 @@
 ---
+description: 決定性與非決定性函數
 title: 決定性與非決定性函式 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/26/2017
@@ -17,12 +18,12 @@ ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7df37d9b9339ef98e438e15678c0781df2875a18
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f2665ab9b5a30209a123056664921334ce3c8367
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247254"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485297"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>決定性與非決定性函數
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

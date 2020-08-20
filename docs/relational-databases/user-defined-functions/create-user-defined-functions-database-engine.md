@@ -1,4 +1,5 @@
 ---
+description: 建立使用者定義函數 (Database Engine)
 title: 建立使用者定義函式 (Database Engine) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/09/2017
@@ -19,12 +20,12 @@ ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1cd1d720f5f5e9a9896e341a31d604405ae7d0d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9739c1c5476b189cce41d14190165c9b82587f93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722880"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485335"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>建立使用者定義函數 (Database Engine)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

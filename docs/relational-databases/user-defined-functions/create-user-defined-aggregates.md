@@ -1,4 +1,5 @@
 ---
+description: 建立使用者定義彙總
 title: 建立使用者定義彙總 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c278b746-6323-4b32-b460-239915acc067
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d66db5586f5f80f8f0e8954d041befbcd4c5eba4
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 6a27c30c836b314260f8a7b5c238a8ce0a88e178
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053614"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485320"
 ---
 # <a name="create-user-defined-aggregates"></a>建立使用者定義彙總
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

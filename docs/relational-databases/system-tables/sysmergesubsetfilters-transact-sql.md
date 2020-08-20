@@ -1,5 +1,6 @@
 ---
-title: sysmergesubsetfilters （Transact-sql） |Microsoft Docs
+description: sysmergesubsetfilters (Transact-SQL)
+title: sysmergesubsetfilters (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f91d1c6c-3132-47f6-926c-88f56848cafe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a106c5e60570d553c00d6ec077caacf43a716eee
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7257cd9ab4de29343015fa1050c336d3e8a69e65
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881335"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485421"
 ---
 # <a name="sysmergesubsetfilters-transact-sql"></a>sysmergesubsetfilters (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,11 +35,11 @@ ms.locfileid: "85881335"
 |**filtername**|**sysname**|用來建立發行項的篩選名稱。|  
 |**join_filterid**|**int**|代表聯結篩選的物件識別碼。|  
 |**pubid**|**uniqueidentifier**|發行集的識別碼。|  
-|**artid**|**uniqueidentifier**|發行項的識別碼。|  
+|**>artid**|**uniqueidentifier**|發行項的識別碼。|  
 |**art_nickname**|**int**|發行項的暱稱。|  
 |**join_articlename**|**sysname**|要加以聯結以便判斷資料列是否屬於它的資料表名稱。|  
 |**join_nickname**|**int**|要加以聯結以便判斷資料列是否屬於它的資料表暱稱。|  
-|**join_unique_key**|**int**|表示**join_tablename**的唯一索引鍵上的聯結：<br /><br /> 0 = 不是唯一索引鍵。<br /><br /> 1 = 唯一索引鍵。|  
+|**join_unique_key**|**int**|指出 **join_tablename**的唯一索引鍵上的聯結：<br /><br /> 0 = 不是唯一索引鍵。<br /><br /> 1 = 唯一索引鍵。|  
 |**expand_proc**|**sysname**|合併代理程式用來識別需要從訂閱者中傳送或移除之資料列的預存程序名稱。|  
 |**join_filterclause**|**nvarchar(1000)**|用於聯結的篩選子句。|  
 |**filter_type**|**tinyint**|指定篩選類型，它可以是下列項目之一：<br /><br /> 1 = 聯結篩選。<br /><br /> 2 = 邏輯記錄連結。<br /><br /> 3 = 聯結篩選和邏輯記錄連結。|  

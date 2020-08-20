@@ -1,4 +1,5 @@
 ---
+description: 執行使用者定義函數
 title: 執行使用者定義函式 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/24/2016
@@ -14,12 +15,12 @@ ms.assetid: 0de7744d-9b73-463f-ae80-e31a020004b5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e5cbfd29ea270dec6e2c1ff13b2e3cdbcc15a19
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a11e341e5eff031e7c6b2e8f83e58b77253a39e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736661"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485291"
 ---
 # <a name="execute-user-defined-functions"></a>執行使用者定義函數
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

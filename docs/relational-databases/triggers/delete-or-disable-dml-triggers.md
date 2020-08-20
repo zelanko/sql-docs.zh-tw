@@ -1,4 +1,5 @@
 ---
+description: 刪除或停用 DML 觸發程序
 title: 刪除或停用 DML 觸發程序 | Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ ms.assetid: 0f97f953-33c5-4b26-afeb-db2a26ce38b4
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 56af23085e590c5c9d63b6b3da6626b4c2edb601
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ec282485aec37e07684de2430c2379bf584b4b05
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757584"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485419"
 ---
 # <a name="delete-or-disable-dml-triggers"></a>刪除或停用 DML 觸發程序
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -65,21 +66,21 @@ ms.locfileid: "85757584"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  展開您要的資料庫，展開 **[資料表]** ，然後展開包含您要刪除之觸發程序的資料表。  
+2.  展開您要的資料庫，展開 **[資料表]**，然後展開包含您要刪除之觸發程序的資料表。  
   
-3.  展開 **[觸發程序]** ，以滑鼠右鍵按一下要刪除的觸發程序，然後按一下 **[刪除]** 。  
+3.  展開 **[觸發程序]**，以滑鼠右鍵按一下要刪除的觸發程序，然後按一下 **[刪除]**。  
   
-4.  在 **[刪除物件]** 對話方塊中，確認要刪除的觸發程序，然後按一下 **[確定]** 。  
+4.  在 **[刪除物件]** 對話方塊中，確認要刪除的觸發程序，然後按一下 **[確定]**。  
   
 #### <a name="to-disable-and-enable-a-dml-trigger"></a>若要停用和啟用 DML 觸發程序  
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  展開您要的資料庫，展開 **[資料表]** ，然後展開包含您要停用之觸發程序的資料表。  
+2.  展開您要的資料庫，展開 **[資料表]**，然後展開包含您要停用之觸發程序的資料表。  
   
-3.  展開 **[觸發程序]** ，以滑鼠右鍵按一下要停用的觸發程序，然後按一下 **[停用]** 。  
+3.  展開 **[觸發程序]**，以滑鼠右鍵按一下要停用的觸發程序，然後按一下 **[停用]**。  
   
-4.  若要啟用觸發程序，請按一下 **[啟用]** 。  
+4.  若要啟用觸發程序，請按一下 **[啟用]**。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

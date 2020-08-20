@@ -1,4 +1,5 @@
 ---
+description: 管理系統建立版本之時態表中的歷程記錄資料保留
 title: 管理由系統設定版本之時態表中的歷程記錄資料
 ms.custom: seo-lt-2019
 ms.date: 05/18/2017
@@ -11,12 +12,12 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 01ca3494bce1f392757206a5ae68ae736d0f9a95
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 9ff4ab5295328ff71325f3f864b9d0747f299152
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552696"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485402"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>管理系統建立版本之時態表中的歷程記錄資料保留
 

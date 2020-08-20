@@ -1,4 +1,5 @@
 ---
+description: 刪除使用者定義函數
 title: 刪除使用者定義函數 | Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,12 +12,12 @@ ms.assetid: db1d668a-23b7-4757-a9c5-1bd848ba7f6d
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 48d0b41d77f562983b5e6a0ecd19ff3f98551887
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bd339199cb32fc98490a5e2861591cbc2232c061
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722856"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485326"
 ---
 # <a name="delete-user-defined-functions"></a>刪除使用者定義函數
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -65,7 +66,7 @@ ms.locfileid: "85722856"
   
     -   彙總函式  
   
-4.  以滑鼠右鍵按一下您想刪除的函數，然後選取 [刪除]  。  
+4.  以滑鼠右鍵按一下您想刪除的函數，然後選取 [刪除]****。  
   
 5.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]** 。  
 

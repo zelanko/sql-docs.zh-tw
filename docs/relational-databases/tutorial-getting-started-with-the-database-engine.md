@@ -1,4 +1,5 @@
 ---
+description: 教學課程：Database Engine 使用者入門
 title: 教學課程：Database Engine 使用者入門
 ms.custom: seo-dt-2019
 ms.date: 06/21/2017
@@ -17,14 +18,14 @@ ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 25ab3abd88a92afb2dc90c4d97bcced3443d22e9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8398d6dcd8dc4fa10a6a4e4c52c0e910a9de1f18
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753793"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485371"
 ---
-# <a name="tutorial-getting-started-with-the-database-engine"></a>教學課程：Database Engine 使用者入門
+# <a name="tutorial-getting-started-with-the-database-engine"></a>教學課程：資料庫引擎使用者入門
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 
 歡迎使用 [!INCLUDE[ssDE](../includes/ssde-md.md)] 使用者入門教學課程。 本教學課程的主要對象是剛接觸 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 且已安裝 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]的使用者。 這個簡短的教學課程可幫助您開始使用 [!INCLUDE[ssDE](../includes/ssde-md.md)]。  
@@ -34,18 +35,18 @@ ms.locfileid: "85753793"
   
 這個教學課程分成兩個課程：  
   
-[第 1 課：連接到資料庫引擎](../relational-databases/lesson-1-connecting-to-the-database-engine.md)  
+[第 1 課：連線到資料庫引擎](../relational-databases/lesson-1-connecting-to-the-database-engine.md)  
 在這一課，您將學會如何連接到 [!INCLUDE[ssDE](../includes/ssde-md.md)] 並讓其他人可以連接。  
   
-[第 2 課：從另一部電腦連接](../relational-databases/lesson-2-connecting-from-another-computer.md)  
+[第 2 課：從另一部電腦連線](../relational-databases/lesson-2-connecting-from-another-computer.md)  
 在這一課，您將學會如何從第二部電腦連接到 [!INCLUDE[ssDE](../includes/ssde-md.md)] ，包括啟用通訊協定、設定通訊埠及設定防火牆設定。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
 本教學課程沒有知識方面的必要條件。  
   
 您的系統必須已經安裝下列項目，才能使用這個教學課程：  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]第 1 課：建立 Windows Azure 儲存體物件[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 若要安裝 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，請參閱[下載 SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. 若要安裝 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，請參閱[下載 SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。  
   
 ## <a name="see-also"></a>另請參閱  
 [教學課程：SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  

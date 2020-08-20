@@ -1,4 +1,5 @@
 ---
+description: 建立巢狀觸發程序
 title: 建立巢狀觸發程序 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,16 +21,16 @@ ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 357dae5608e938eda4ea4fd42a92420f9297958e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2709846194c14dc08653efa761edd6660620872a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757667"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485368"
 ---
 # <a name="create-nested-triggers"></a>建立巢狀觸發程序
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  觸發程序執行用來起始另一個觸發程序的動作時，DML 和 DDL 觸發程序就是巢狀觸發程序。 這些動作可以起始化其他觸發程序等等。 DML 與 DDL 觸發程序最多可以巢狀方式嵌套多達 32 層。 您可以透過 [巢狀觸發程序]  伺服器組態選項來控制 AFTER 觸發程序是否可為巢狀。 不論此設定為何，INSTEAD OF 觸發程序 (只有 DML 觸發程序可為 INSTEAD OF 觸發程序) 均可為巢狀。  
+  觸發程序執行用來起始另一個觸發程序的動作時，DML 和 DDL 觸發程序就是巢狀觸發程序。 這些動作可以起始化其他觸發程序等等。 DML 與 DDL 觸發程序最多可以巢狀方式嵌套多達 32 層。 您可以透過 [巢狀觸發程序]**** 伺服器組態選項來控制 AFTER 觸發程序是否可為巢狀。 不論此設定為何，INSTEAD OF 觸發程序 (只有 DML 觸發程序可為 INSTEAD OF 觸發程序) 均可為巢狀。  
   
 > [!NOTE]  
 >  任何從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 觸發程序對 Managed 程式碼的參考，都會算成 32 層巢狀限制中的一層。 從 Managed 程式碼內叫用的方法，不列入這項限制。  

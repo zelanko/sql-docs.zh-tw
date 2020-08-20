@@ -1,4 +1,5 @@
 ---
+description: 管理觸發程序安全性
 title: 管理觸發程序安全性 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/22/2020
@@ -12,12 +13,12 @@ ms.assetid: e94720a8-a3a2-4364-b0a3-bbe86e3ce4d5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bdbc04c4a1294605b59c04fb9df9a3c44b1f077f
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 73e56eb0ffcc4996ddd6903f2e79c14947b9a450
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483689"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485382"
 ---
 # <a name="manage-trigger-security"></a>管理觸發程序安全性
 
