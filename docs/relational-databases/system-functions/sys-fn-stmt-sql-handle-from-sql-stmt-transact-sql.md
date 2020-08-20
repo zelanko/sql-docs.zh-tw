@@ -14,15 +14,16 @@ ms.assetid: 6794e073-0895-4507-aba3-c3545acc843f
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 809670e98a7d67a5a078939fdddc600ca0116ad1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5008d433757351e6d4be65d6db9c3ba8e0deb10f
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419492"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646498"
 ---
 # <a name="sysfn_stmt_sql_handle_from_sql_stmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   取得指定**stmt_sql_handle**之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 參數型別 (simple 或強制) 之語句的 stmt_sql_handle。 如此一來，當您知道查詢中的文字時，就可以使用它們的 **stmt_sql_handle** 來參考儲存在查詢存放區中的查詢。  
   

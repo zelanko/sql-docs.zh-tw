@@ -1,4 +1,5 @@
 ---
+description: 實作桌面資料庫驅動程式
 title: 執行桌面資料庫驅動程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a8bf304b-eff1-447c-887c-dabdb5353a2d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0b25a5e8ed7a39a11b207c185f47855c7670473e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 19d9e95fff84340c520b37e64f88f845d161e25d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81290608"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500311"
 ---
 # <a name="implementing-desktop-database-drivers"></a>實作桌面資料庫驅動程式
-有關如何執行和設定 Microsoft ODBC 桌面資料庫驅動程式的指示和技術資訊，請參閱 ODBC 資料來源管理員線上說明。 此檔案可在[MICROSOFT ODBC 資料來源管理員](../../odbc/admin/odbc-data-source-administrator.md)的驅動程式安裝程式常式期間存取。  
+您可以在 ODBC 資料來源管理員線上說明中，找到有關如何執行和設定 Microsoft ODBC Desktop 資料庫驅動程式的指示和技術提示。 您可以在 [MICROSOFT ODBC 資料來源管理員](../../odbc/admin/odbc-data-source-administrator.md)的驅動程式安裝常式期間存取這個檔案。  
   
  此章節包含下列主題。  
   
@@ -30,7 +31,7 @@ ms.locfileid: "81290608"
   
 -   [ODBC 元件檔案](../../odbc/microsoft/odbc-component-files.md)  
   
--   [硬體和軟體需求](../../odbc/microsoft/hardware-and-software-requirements-odbc.md)  
+-   [硬體及軟體需求](../../odbc/microsoft/hardware-and-software-requirements-odbc.md)  
   
 -   [桌面資料庫驅動程式的描述項](../../odbc/microsoft/descriptors-and-desktop-database-drivers.md)  
   

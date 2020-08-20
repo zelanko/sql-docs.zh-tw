@@ -1,5 +1,6 @@
 ---
-title: SetToStr （MDX） |Microsoft Docs
+description: SetToStr (MDX)
+title: SetToStr (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3965c3cc8ea2a2f2de292ca0c75e49c957e04f02
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0317de06f3d68388fac5be752d26e27f0d373a89
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036976"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500441"
 ---
 # <a name="settostr-mdx"></a>SetToStr (MDX)
 
@@ -32,7 +33,7 @@ SetToStr(Set_Expression)
  傳回集合的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- 這個函數是用來將集合的字串表示傳送至外部函數，以進行剖析。 傳回的字串會以大括弧{}括住，並以逗號分隔集合中的每個專案。  
+ 這個函數是用來將集合的字串表示傳送至外部函數，以進行剖析。 傳回的字串會以大括弧括住 {} ，並以逗號分隔集合中的每個專案。  
   
 ## <a name="example"></a>範例  
  下列範例會傳回包含 Geography.Country 屬性階層之所有成員的字串。  

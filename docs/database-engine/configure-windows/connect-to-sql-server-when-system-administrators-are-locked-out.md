@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eec9e95ccbc326d3d2f64d224cf11f3d059bb8f7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 801602c78193f9fc3fa9cdab40b98c3dc3dd42e0
+ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717081"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512312"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>當系統管理員遭到鎖定時連線到 SQL Server 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "85717081"
 
 當您以單一使用者模式啟動執行個體時，請先停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務。 否則，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 可能會先連線，取得與伺服器的唯一可用連線，並封鎖您登入。
 
-在您能夠登入之前，未知的用戶端應用程式也可能取得唯一可用的連線。 為了避免發生這種情況，您可以使用 `-m` 選項，後面接著應用程式名稱，以將連線限制為來自指定應用程式的單一連線。 例如，使用 `-m"sqlcmd"` 啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，會將連線限制為單一連線，以將自己識別為 **sqlcmd** 用戶端程式。 若要在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中透過查詢編輯器連線，請使用 `-m"Microsoft SQL Server Management Studio - Query"`。  
+在您能夠登入之前，未知的用戶端應用程式也可能取得唯一可用的連線。 為了避免發生這種情況，您可以使用 `-m` 選項，後面接著應用程式名稱，以將連線限制為來自指定應用程式的單一連線。 例如，使用 `-mSQLCMD` 啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，會將連線限制為單一連線，以將自己識別為 **sqlcmd** 用戶端程式。 若要在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中透過查詢編輯器連線，請使用 `-m"Microsoft SQL Server Management Studio - Query"`。  
 
 
 > [!IMPORTANT]  
@@ -55,7 +55,7 @@ ms.locfileid: "85717081"
 | 選項 | 描述 | 使用時機 |
 |:---|:---|:---|
 |`-m` | 將連線限制為單一連線 | 當沒有其他使用者嘗試連線到執行個體，或您不確定用來連線到執行個體的應用程式名稱時。 |
-|`-m"sqlcmd"`| 將連線限制為單一連線，其必須將自己識別為 **sqlcmd** 用戶端程式| 當您計畫使用 **sqlcmd** 連線到執行個體，而且您想要防止其他應用程式取得唯一可用的連線時。 |
+|`-mSQLCMD`| 將連線限制為單一連線，其必須將自己識別為 **sqlcmd** 用戶端程式| 當您計畫使用 **sqlcmd** 連線到執行個體，而且您想要防止其他應用程式取得唯一可用的連線時。 |
 |`-m"Microsoft SQL Server Management Studio - Query"`| 將連線限制為單一連線，其必須將自己識別為 **Microsoft SQL Server Management Studio - 查詢**應用程式。| 當您計畫透過 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的查詢編輯器連線到執行個體，而且您想要防止其他應用程式取得唯一可用的連線時。 |
 |`-f`| 將連線限制為單一連線，並以基本組態來啟動執行個體 | 當某些其他組態導致您無法啟動時。 |
 | &nbsp; | &nbsp; | &nbsp; |

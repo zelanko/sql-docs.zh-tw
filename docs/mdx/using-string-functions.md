@@ -1,4 +1,5 @@
 ---
+description: 使用字串函數
 title: 使用字串函數 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,19 +9,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 74eec478baad335cb5be6a78ec1faea2d15030ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2160662a5e8fe9e89e133e053cca820fc60a66e9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037990"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500481"
 ---
 # <a name="using-string-functions"></a>使用字串函數
 
 
   多維度運算式 (MDX) 中每個物件幾乎都可以使用字串函數。 在預存程序中，字串函數主要用來將物件轉換為字串表示法。 您也可以使用字串函數在物件上評估字串運算式，以傳回一個值。  
   
- 最廣泛使用的字串函數是**Name**和**Uniquename**。 這些函數會分別傳回某個物件的名稱和唯一名稱。 它們大多用於偵錯計算來找出函數所傳回的成員。  
+ 最廣泛使用的字串函數為 **Name** 和 **Uniquename**。 這些函數會分別傳回某個物件的名稱和唯一名稱。 它們大多用於偵錯計算來找出函數所傳回的成員。  
   
 ## <a name="examples"></a>範例  
  下列範例查詢會示範如何使用這些函數：  
@@ -71,7 +72,7 @@ ms.locfileid: "68037990"
   
  `FROM [Adventure Works]`  
   
- 另一組常用的字串函數就是那些可讓您將包含物件或運算式 (可解析成物件) 之唯一名稱的字串轉換成物件本身的函數。 下列範例查詢示範**StrToMember**和**StrToSet**函數如何執行這項操作：  
+ 另一組常用的字串函數就是那些可讓您將包含物件或運算式 (可解析成物件) 之唯一名稱的字串轉換成物件本身的函數。 下列範例查詢示範 **StrToMember** 和 **StrToSet** 函式如何執行這項作業：  
   
  `SELECT`  
   
@@ -98,11 +99,11 @@ ms.locfileid: "68037990"
  `FROM [Adventure Works]`  
   
 > [!NOTE]  
->  應謹慎使用**StrToMember**和**StrToSet**函數。 因為如果在計算定義內使用它們，可能會產生極差的查詢效能。  
+>  **StrToMember**和**StrToSet**函數應該謹慎使用。 因為如果在計算定義內使用它們，可能會產生極差的查詢效能。  
   
 ## <a name="see-also"></a>另請參閱  
  [產生 &#40;MDX&#41;](../mdx/generate-mdx.md)   
- [MDX&#41;的名稱 &#40;](../mdx/name-mdx.md)   
+ [MDX&#41;名稱 &#40;](../mdx/name-mdx.md)   
  [UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)   
  [函數 &#40;MDX 語法&#41;](../mdx/functions-mdx-syntax.md)   
  [使用預存程式 &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)   

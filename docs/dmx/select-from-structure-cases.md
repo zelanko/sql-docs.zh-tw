@@ -1,4 +1,5 @@
 ---
+description: 選取 [從 &lt; 結構] &gt; 。例
 title: 選取 [從 &lt; 結構] &gt; 。案例 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,23 +9,23 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2e0fc30945396f22184e1d18c6b132d8e2e2d781
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 6e4a14565a0ac4b2aba19dd1ef0dfbbfdc4454b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970428"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500909"
 ---
-# <a name="select-from-ltstructuregtcases"></a>選取 [從 &lt; 結構] &gt; 。種
+# <a name="select-from-ltstructuregtcases"></a>選取 [從 &lt; 結構] &gt; 。例
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   傳回用於建立採礦結構的案例。  
   
  如果結構上未啟用鑽研，則陳述式會失敗。 同時，如果使用者沒有採礦結構的鑽研權限，陳述式將會失敗。  
   
- 在中 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，預設會啟用新的採礦結構的鑽取。 若要確認是否已針對特定結構啟用「鑽看」，請檢查**CacheMode**屬性的值是否設定為**KeepTrainingCases**。  
+ 在中 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，根據預設會啟用新的採礦結構的「鑽取」。 若要確認是否已針對特定結構啟用「鑽取」，請檢查 **CacheMode** 屬性的值是否設定為 **KeepTrainingCases**。  
   
- 如果**CacheMode**的值變更為**ClearAfterProcessing**，則會從快取中清除結構案例，而且您無法使用 [鑽看]。  
+ 如果 **CacheMode** 的值變更為 **>clearafterprocessing**，則會從快取中清除結構案例，而且您無法使用「鑽取」。  
   
 > [!NOTE]  
 >  您無法使用資料採礦延伸模組 (DMX)，在採礦結構上啟用或停用鑽研。  
@@ -46,7 +47,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
   
  運算式可以包含資料行識別碼、使用者定義函數，以及 VBA 函數。  
   
- *表示*  
+ *結構*  
  結構的名稱。  
   
  *條件運算式*  
@@ -62,10 +63,10 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
 SELECT StructureColumn('<column name>') FROM <model>.CASES  
 ```  
   
- 因此，若要保護敏感性資料或個人資訊，您應該先建立您的資料來源 view 來遮罩個人資訊，並且只在必要時才授與**AllowDrillthrough**許可權給採礦結構或採礦模型。  
+ 因此，若要保護敏感性資料或個人資訊，您應該將資料來源 view 視為遮罩個人資訊，並只在必要時授與 **AllowDrillthrough** 許可權給採礦結構或採礦模型。  
   
 ## <a name="examples"></a>範例  
- 下列範例是以 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] 資料庫和相關聯的採礦模型為基礎的「目標郵寄」為依據。 如需詳細資訊，請參閱[基本資料採礦教學](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)課程。  
+ 下列範例是根據以資料庫為基礎的採礦結構、目標郵寄以及 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] 相關聯的採礦模型。 如需詳細資訊，請參閱 [基本資料採礦教學](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)課程。  
   
 ### <a name="example-1-drill-through-to-structure-cases"></a>範例 1：鑽研結構案例  
  下列範例會傳回採礦結構「目標郵寄」中，最舊的 500 位客戶的清單。 此查詢會傳回採礦模型中的所有資料行，但會將資料列限制為購買自行車的客戶，並以年齡加以排序。 您也可以編輯運算式清單，僅傳回您需要的資料行。  

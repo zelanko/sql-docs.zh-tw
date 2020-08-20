@@ -17,15 +17,16 @@ helpviewer_keywords:
 ms.assetid: df84842a-71eb-4fda-b448-5953cf9985dc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f759896a21b99d54efc41db9ea3aba22c8580dcb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1a856f10e59fa41bc9cd6d27c9c88097aa90c9c4
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489960"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646362"
 ---
 # <a name="sysdm_exec_session_wait_stats-transact-sql"></a>sys. dm_exec_session_wait_stats (Transact-sql) 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   傳回針對每個會話執行的執行緒所遇到之所有等候的相關資訊。 您可以使用此視圖來診斷會話的效能問題 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，以及特定查詢和批次的效能問題。  此視圖會傳回會話相同的資訊，此資訊是針對 [sys. dm_os_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) 所匯總，但也提供 **session_id** 號碼。  
   

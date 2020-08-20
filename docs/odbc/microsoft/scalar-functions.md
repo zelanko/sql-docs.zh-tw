@@ -1,4 +1,5 @@
 ---
+description: 純量函數
 title: 純量函數 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 18e1e0c1-b43f-44d9-b310-7d9e1d499e8b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 85548baf08c5403ca5c4b9886c34e9dbd4c45759
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: d741984a369a5b0667be0a7516ae896ad07b9aa9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362420"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500261"
 ---
 # <a name="scalar-functions"></a>純量函數
-Microsoft ODBC 桌面資料庫驅動程式支援下列純量函數：  
+Microsoft ODBC Desktop 資料庫驅動程式支援下列純量函數：  
 
 :::row:::
     :::column:::
@@ -54,4 +55,4 @@ Microsoft ODBC 桌面資料庫驅動程式支援下列純量函數：
     :::column-end:::
 :::row-end:::
 
- 如需純量函數之引數和傳回值的相關資訊，請參閱*ODBC 程式設計人員參考*的附錄 F。
+ 如需純量函數的引數和傳回值的詳細資訊，請參閱《 ODBC 程式設計*人員參考*》的附錄 F。

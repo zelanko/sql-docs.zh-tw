@@ -1,5 +1,6 @@
 ---
-title: OPENROWSET （DMX） |Microsoft Docs
+description: '&lt;來源資料查詢 &gt; -OPENROWSET'
+title: OPENROWSET (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b19b897b65ffb3a4c9e940370ffdead1e10b6d31
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 8da3686e7772b7e997690d509c8092917635497a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970315"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500760"
 ---
 # <a name="ltsource-data-querygt---openrowset"></a>&lt;來源資料查詢 &gt; -OPENROWSET
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  以對外部提供者的查詢取代來源資料查詢。 INSERT、SELECT FROM 預測聯結，以及 SELECT FROM 天然預測聯結語句支援**OPENROWSET**。  
+  以對外部提供者的查詢取代來源資料查詢。 INSERT、SELECT FROM 預測聯結，以及 SELECT FROM 自然預測聯結語句支援 **OPENROWSET**。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,7 +39,7 @@ OPENROWSET(provider_name,provider_string,query_syntax)
  傳回資料列集的查詢語法。  
   
 ## <a name="remarks"></a>備註  
- 資料採礦提供者會使用*provider_name*和*provider_string，* 建立與資料來源物件的連接，而且會執行*query_syntax*中指定的查詢，以從來源資料中取出資料列集。  
+ 資料採礦提供者會使用 *provider_name* 和 provider_string 來建立與資料來源物件的連接 *，* 並會執行 *query_syntax* 中指定的查詢，以從來源資料取出資料列集。  
   
 ## <a name="examples"></a>範例  
  下列範例可以用在 PREDICTION JOIN 陳述式中，使用 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] SELECT 陳述式從 [!INCLUDE[tsql](../includes/tsql-md.md)] 資料庫擷取資料。  

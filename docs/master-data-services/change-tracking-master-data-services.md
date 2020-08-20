@@ -1,4 +1,5 @@
 ---
+description: 變更追蹤 (Master Data Services)
 title: 變更追蹤
 ms.custom: ''
 ms.date: 03/15/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5e879c65-0d38-454f-9a20-62a6e72c89f7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7883f3dda53897eb9d53e9ff4e9e41e6731775d0
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 134f6e6b573fd77440b656504c12c292e7ff37c4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811633"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500676"
 ---
 # <a name="change-tracking-master-data-services"></a>變更追蹤 (Master Data Services)
 

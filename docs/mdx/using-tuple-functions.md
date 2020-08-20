@@ -1,4 +1,5 @@
 ---
+description: 使用 Tuple 函數
 title: 使用元組函數 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9a329c8786ce580469e4601709509ca8a2de73f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d858fa6e67712a6ab93608dae20a15dca629c01e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037985"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500491"
 ---
 # <a name="using-tuple-functions"></a>使用 Tuple 函數
 
@@ -22,7 +23,7 @@ ms.locfileid: "68037985"
   
  Tuple 函數跟成員函數和集合函數一樣，對於交涉 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中找到的多維度結構而言不可或缺。  
   
- MDX 中有三個元組函式，[目前 &#40;mdx&#41;](../mdx/current-mdx.md)，[專案 &#40;元組&#41; &#40;Mdx&#41;](../mdx/item-tuple-mdx.md)和[StrToTuple &#40;mdx&#41;](../mdx/strtotuple-mdx.md)。 下列範例查詢會示範如何使用每一個函數：  
+ MDX 中有三個元組函式、 [目前的 &#40;mdx&#41;](../mdx/current-mdx.md)、 [專案 &#40;元組&#41; &#40;Mdx&#41;](../mdx/item-tuple-mdx.md) 和 [StrToTuple &#40;mdx&#41;](../mdx/strtotuple-mdx.md)。 下列範例查詢會示範如何使用每一個函數：  
   
  `WITH`  
   

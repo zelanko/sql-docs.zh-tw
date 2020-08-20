@@ -21,15 +21,16 @@ ms.assetid: 78ef5807-0504-4de8-9a01-ede6c03c7ff1
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc11ec8d075d52643f06eb91f0a55a1b6948c88c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 23a58092954d1026071a469676e3fbfcc6628158
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455238"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646329"
 ---
 # <a name="sysmemory_optimized_tables_internal_attributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 讓用於儲存使用者記憶體最佳化資料表的每個內部記憶體最佳化資料表都包含一列資料列。 每個使用者資料表都會對應一或多份內部資料表。 單一資料表用於儲存核心資料。 其他的內部資料表用來支援功能，例如暫時的資料行存放區索引與記憶體最佳化資料表的非資料列 (LOB) 儲存。
  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 46c41c4bf06082e36df1ea48165520afbc4a3210
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ddfa137e0efd93bfad2a59a4fc2c8da2c189cdc3
+ms.sourcegitcommit: a0245fdae1ff9045f587a3a67b72f34405d35a4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481970"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88618118"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -95,7 +95,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |選項|值|  
 |------------|-----------|  
 |ANSI_PADDING|1|  
-|Parallel Plan|2|  
+|ParallelPlan<br /><br /> 指出計畫平行處理原則選項已變更。|2|  
 |FORCEPLAN|4|  
 |CONCAT_NULL_YIELDS_NULL|8|  
 |ANSI_WARNINGS|16|  
@@ -122,7 +122,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 |選項|值|  
 |------------|-----------|  
-|None|0|  
+|無|0|  
 |INSENSITIVE|1|  
 |SCROLL|2|  
 |READ ONLY|4|  

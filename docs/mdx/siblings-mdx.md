@@ -1,5 +1,6 @@
 ---
-title: 同輩（MDX） |Microsoft Docs
+description: Siblings (MDX)
+title: " (MDX) 的同級Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9d8ba2dd26575ebd41f4a6c275a2668b1421dee6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cfced6c9fb760903ef93a26e8e417df3d6cabd40
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036953"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500431"
 ---
 # <a name="siblings-mdx"></a>Siblings (MDX)
 

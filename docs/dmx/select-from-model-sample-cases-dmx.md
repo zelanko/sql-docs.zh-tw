@@ -1,5 +1,6 @@
 ---
-title: 選取 [從 &lt; 模型] &gt; 。SAMPLE_CASES （DMX） |Microsoft Docs
+description: '從 &lt; 模型選取 &gt; 。SAMPLE_CASES (DMX) '
+title: 從 &lt; 模型選取 &gt; 。SAMPLE_CASES (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,19 +9,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7eda9b0e13ee5cbf918d80f41b9a517906a56a57
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: af927d9c998d245c31511c29450eafac31e1d54b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970500"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500866"
 ---
-# <a name="select-from-ltmodelgtsample_cases-dmx"></a>選取 [從 &lt; 模型] &gt; 。SAMPLE_CASES （DMX）
+# <a name="select-from-ltmodelgtsample_cases-dmx"></a>從 &lt; 模型選取 &gt; 。SAMPLE_CASES (DMX) 
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   傳回代表用於培訓資料採礦模型之案例的範例案例。  
   
- 若要使用這個陳述式，您必須在建立採礦模型時啟用鑽研。 如需有關啟用「鑽取」的詳細資訊，請參閱[&#40;dmx&#41;建立採礦模型](../dmx/create-mining-model-dmx.md)、[選取 &#40;dmx&#41;](../dmx/select-into-dmx.md)，以及[改變 &#40;dmx&#41;的採礦結構](../dmx/alter-mining-structure-dmx.md)。  
+ 若要使用這個陳述式，您必須在建立採礦模型時啟用鑽研。 如需啟用鑽取的詳細資訊，請參閱 [建立 &#40;dmx&#41;的採礦模型 ](../dmx/create-mining-model-dmx.md)、 [選取 &#40;dmx&#41;](../dmx/select-into-dmx.md)，以及 [改變 &#40;dmx&#41;的採礦結構 ](../dmx/alter-mining-structure-dmx.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -52,7 +53,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
  雖然時序 [!INCLUDE[msCoName](../includes/msconame-md.md)] 群集演算法是唯一 [!INCLUDE[msCoName](../includes/msconame-md.md)] 支援使用 SELECT FROM 的演算法 \<model> 。SAMPLE_CASES，協力廠商演算法也可能支援它。  
   
 ## <a name="examples"></a>範例  
- 下列範例會傳回用於培訓 Target Mail 採礦模型的範例案例。 在**WHERE**子句中使用[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)函數，只會傳回與 ' 000000003 ' 節點相關聯的案例。 節點字串可以在結構描述資料列集的 NODE_UNIQUE_NAME 資料行中找到。  
+ 下列範例會傳回用於培訓 Target Mail 採礦模型的範例案例。 在**WHERE**子句中使用[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)函數只會傳回與 ' 000000003 ' 節點相關聯的案例。 節點字串可以在結構描述資料列集的 NODE_UNIQUE_NAME 資料行中找到。  
   
 ```  
 Select * from [Sequence Clustering].SAMPLE_Cases  

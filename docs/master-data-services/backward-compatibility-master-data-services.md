@@ -1,4 +1,5 @@
 ---
+description: 回溯相容性 (Master Data Services)
 title: 回溯相容性
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3f2ae84c-6666-460b-befe-bd72405c0778
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 36ce24e70cebaf5774565d99693b88fb77d8e021
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: d69eaaa9dd346999dc26d9ae12d14bd214849fea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813698"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500804"
 ---
 # <a name="backward-compatibility-master-data-services"></a>回溯相容性 (Master Data Services)
 

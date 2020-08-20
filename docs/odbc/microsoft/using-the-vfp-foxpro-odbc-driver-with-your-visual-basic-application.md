@@ -1,5 +1,6 @@
 ---
-title: 搭配您的 Visual Basic 應用程式使用 VFP FoxPro ODBC 驅動程式 |Microsoft Docs
+description: 搭配使用 VFP FoxPro ODBC Driver 與 Visual Basic 應用程式
+title: 使用 VFP FoxPro ODBC 驅動程式搭配您的 Visual Basic 應用程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 5223ca23-5df6-4ebc-aa3b-70682ff27a8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 871c392166fa2f5726e6f9e8651bf758dc144a00
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 07ec83ccab43890bccbf5e12582628fdb98d29c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292698"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500051"
 ---
 # <a name="using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application"></a>搭配使用 VFP FoxPro ODBC Driver 與 Visual Basic 應用程式
-您的 Microsoft® Visual Basic®應用程式可以藉由建立連接至 Visual FoxPro 資料來源的資料控制項，與 Visual FoxPro 資料進行通訊。  
+您的 Microsoft® Visual Basic®應用程式可以藉由建立連接到 Visual FoxPro 資料來源的資料控制來與 Visual FoxPro 資料進行通訊。  
   
-#### <a name="to-connect-to-visual-foxpro-data-using-the-data-control-in-visual-basic"></a>若要使用中的資料控制項連接到 Visual FoxPro 資料 Visual Basic  
+#### <a name="to-connect-to-visual-foxpro-data-using-the-data-control-in-visual-basic"></a>使用 Visual Basic 中的資料控制連接到 Visual FoxPro 資料  
   
 1.  建立名為 "test" 的資料來源，以連接到包含在 Visual FoxPro 中的 TasTrade 範例資料庫。 預設的 Visual FoxPro 安裝會將 TasTrade 範例資料庫放在位置：  
   
@@ -33,21 +34,21 @@ ms.locfileid: "81292698"
     c:\vfp\samples\mainsamp\data\tastrade.dbc  
     ```  
   
-2.  在 Visual Basic 中，建立新的表單，並在其中放置一個文字方塊和一個資料控制項。  
+2.  在 Visual Basic 中，建立新的表單，並將文字方塊和資料控制項放在其上。  
   
-3.  變更資料控制項的 Connect 屬性，如下所示：  
+3.  變更資料控制的 Connect 屬性，如下所示：  
   
     ```  
     ODBC;DATABASE=tastrade;DSN=test  
     ```  
   
-4.  將 [當項] 屬性變更為下列內容：  
+4.  將 [變更] 屬性變更為下列內容：  
   
     ```  
     2 - Snapshot  
     ```  
   
-5.  將 [RecordSource] 屬性變更為下列內容：  
+5.  將 [記錄] 屬性變更為下列內容：  
   
     ```  
     customer  
@@ -59,10 +60,10 @@ ms.locfileid: "81292698"
     data1  
     ```  
   
-7.  將文字方塊的 [DataField] 屬性變更為下列內容：  
+7.  將文字方塊的 DataField 屬性變更為下列內容：  
   
     ```  
     customer_id  
     ```  
   
-8.  執行表單，並使用資料控制項略過 Visual FoxPro TasTrade 範例資料庫中的客戶識別碼欄位。
+8.  執行表單，然後使用資料控制略過 Visual FoxPro TasTrade 範例資料庫中的客戶識別碼欄位。

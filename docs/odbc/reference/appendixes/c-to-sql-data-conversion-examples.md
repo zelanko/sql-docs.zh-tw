@@ -1,4 +1,5 @@
 ---
+description: C 到 SQL 資料轉換範例
 title: C 到 SQL 資料轉換範例 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9f390afc-d8b8-4286-b559-98b3b8781f3d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0e21654f183946675c63cee10a3c08754e1508f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 65b0dd229139de060dd79132ee3ca7215906442a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81291988"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500011"
 ---
 # <a name="c-to-sql-data-conversion-examples"></a>C 到 SQL 資料轉換範例
 下列範例說明驅動程式如何將 C 資料轉換成 SQL 資料：  
@@ -36,13 +37,13 @@ ms.locfileid: "81291988"
 |SQL_C_TYPE_DATE|1992、12、31 [c]|SQL_CHAR|10|1992-12-31|n/a|  
 |SQL_C_TYPE_DATE|1992、12、31 [c]|SQL_CHAR|9|----|22003|  
 |SQL_C_TYPE_DATE|1992、12、31 [c]|SQL_TIMESTAMP|n/a|1992-12-31 00：00：00。0|n/a|  
-|SQL_C_TYPE_TIMESTAMP|1992，12，31，23，45，55，120000000 [d]|SQL_CHAR|22|1992-12-31 23：45：55.12|n/a|  
-|SQL_C_TYPE_TIMESTAMP|1992，12，31，23，45，55，120000000 [d]|SQL_CHAR|21|1992-12-31 23：45：55。1|22001|  
-|SQL_C_TYPE_TIMESTAMP|1992，12，31，23，45，55，120000000 [d]|SQL_CHAR|18|----|22003|  
+|SQL_C_TYPE_TIMESTAMP|1992、12、31、23、45、55、120000000 [d]|SQL_CHAR|22|1992-12-31 23：45：55.12|n/a|  
+|SQL_C_TYPE_TIMESTAMP|1992、12、31、23、45、55、120000000 [d]|SQL_CHAR|21|1992-12-31 23：45：55。1|22001|  
+|SQL_C_TYPE_TIMESTAMP|1992、12、31、23、45、55、120000000 [d]|SQL_CHAR|18|----|22003|  
   
- [a] "\ 0" 代表 null 終止位元組。 只有在 SQL_NTS 資料長度時，才需要 null 終止位元組。  
+ [a] "\ 0" 代表 null 終止位元組。 只有當資料的長度 SQL_NTS 時，才需要 null 終止位元組。  
   
- [b] 除了數位的位元組之外，正負號需要一個位元組，而小數點需要另一個位元組。  
+ [b] 除了數位的位元組之外，還需要一個位元組，而小數點必須有一個位元組。  
   
  [c] 這份清單中的數位是儲存在 SQL_DATE_STRUCT 結構之欄位中的數位。  
   

@@ -1,4 +1,5 @@
 ---
+description: 商務規則條件 (Master Data Services)
 title: 商務規則條件
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d2e0a8c3-4c2e-407c-856e-68d95ebda9ed
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4849b2f16c691db08766ca451673d0960ee69222
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 5d6894fa23743581be1b8c87f8dd4c9e5d7b799c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813697"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500793"
 ---
 # <a name="business-rule-conditions-master-data-services"></a>商務規則條件 (Master Data Services)
 
@@ -42,8 +43,8 @@ ms.locfileid: "85813697"
 |**結尾不是**|選取的屬性 **結尾不是** 特定屬性、特定屬性值或空白。<br /><br /> 此條件僅適用於文字及連結值。|  
 |**contains**|選取的屬性 **包含** 特定的屬性、特定的屬性值或空白。<br /><br /> 此條件僅適用於文字及連結值。|  
 |**不包含**|選取的屬性 **不包含** 特定屬性、特定屬性值或空白。<br /><br /> 此條件僅適用於文字及連結值。|  
-|**包含模式**|選取的屬性 **包含特定屬性、特定屬性值或空白的模式** 。 使用 .NET Framework 規則運算式來指定模式。<br /><br /> 如需正則運算式的詳細資訊，請參閱 MSDN Library 中的[正則運算式語言元素](https://go.microsoft.com/fwlink/?LinkId=164401)。<br /><br /> 此條件僅適用於文字及連結值。|  
-|**不包含模式**|選取的屬性 **不包含模式** 特定屬性、特定屬性值或空白。 使用 .NET Framework 規則運算式來指定模式。<br /><br /> 如需正則運算式的詳細資訊，請參閱 MSDN Library 中的[正則運算式語言元素](https://go.microsoft.com/fwlink/?LinkId=164401)。<br /><br /> 此條件僅適用於文字及連結值。|  
+|**包含模式**|選取的屬性 **包含特定屬性、特定屬性值或空白的模式** 。 使用 .NET Framework 規則運算式來指定模式。<br /><br /> 如需正則運算式的詳細資訊，請參閱 MSDN Library 中的 [正則運算式語言元素](https://go.microsoft.com/fwlink/?LinkId=164401) 。<br /><br /> 此條件僅適用於文字及連結值。|  
+|**不包含模式**|選取的屬性 **不包含模式** 特定屬性、特定屬性值或空白。 使用 .NET Framework 規則運算式來指定模式。<br /><br /> 如需正則運算式的詳細資訊，請參閱 MSDN Library 中的 [正則運算式語言元素](https://go.microsoft.com/fwlink/?LinkId=164401) 。<br /><br /> 此條件僅適用於文字及連結值。|  
 |**包含子集**|選取的屬性 **包含特定屬性或特定屬性值的子集** 。 您必須指定搜尋的起始位置 (例如，1 表示從第一個字元開始搜尋)。<br /><br /> 此條件僅適用於文字及連結值。|  
 |**不包含子集**|選取的屬性 **不包含子集** 特定屬性或特定屬性值。 您必須指定搜尋的起始位置 (例如，1 表示從第一個字元開始搜尋)。<br /><br /> 此條件僅適用於文字及連結值。|  
 |**已變更**|選取的屬性自上次商務規則套用到成員之後 **已經變更** 。 您必須指定此屬性所隸屬的變更群組。<br /><br /> 如需變更追蹤群組的詳細資訊，請參閱[將屬性加入至變更追蹤群組 &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)。<br /><br /> 此條件適用於文字、數字、日期及連結值。|  

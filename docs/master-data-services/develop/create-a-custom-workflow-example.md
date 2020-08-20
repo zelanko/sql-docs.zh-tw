@@ -1,4 +1,5 @@
 ---
+description: 建立自訂工作流程 - 範例
 title: 自訂工作流程範例
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,21 +11,21 @@ ms.topic: reference
 ms.assetid: dfd1616c-a75c-4f32-bdb1-7569e367bf41
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 404fab4ed966fd8b29bc4160e7a7d721dd6397e7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4c04e5da6a1e6ddb09f27613888c872ca7e94df6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923078"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500609"
 ---
 # <a name="create-a-custom-workflow---example"></a>建立自訂工作流程 - 範例
 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 中，當您建立自訂工作流程類別庫時，您會建立一個實作 Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender 介面的類別。 此介面包含一個方法[MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) ，當工作流程啟動時，SQL Server MDS 工作流程整合服務呼叫。 [MasterDataServices. WorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))方法包含兩個參數： *workflowType*包含您在的 [**工作流程類型**] 文字方塊中輸入的文字 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] ，而*dataElement*包含觸發工作流程商務規則之專案的中繼資料和專案資料。  
+  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 中，當您建立自訂工作流程類別庫時，您會建立一個實作 Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender 介面的類別。 這個介面包含一個方法 [MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) ，當工作流程啟動時，SQL Server MDS 工作流程整合服務會呼叫這個方法。 [MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))方法包含兩個參數： *workflowType*包含您在的 [**工作流程類型**] 文字方塊中輸入的文字 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] ，而*dataElement*則包含觸發工作流程商務規則之專案的中繼資料和專案資料。  
   
 ## <a name="custom-workflow-example"></a>自訂工作流程範例  
- 下列程式碼範例示範如何執行[IWorkflowTypeExtender StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))方法，以便從觸發工作流程商務規則之專案的 XML 資料中，解壓縮名稱、程式碼和 LastChgUserName 屬性，以及如何呼叫預存程式將其插入另一個資料庫。 如需項目資料 XML 的範例，以及所包含之標記的說明，請參閱[自訂工作流程 XML 描述 &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-xml-description.md)。  
+ 下列程式碼範例示範如何執行 [MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))  方法，以從觸發工作流程商務規則之專案的 XML 資料中解壓縮 Name、Code 和 LastChgUserName 屬性，以及如何呼叫預存程式將其插入另一個資料庫。 如需項目資料 XML 的範例，以及所包含之標記的說明，請參閱[自訂工作流程 XML 描述 &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-xml-description.md)。  
   
 ```csharp  
 using System;  

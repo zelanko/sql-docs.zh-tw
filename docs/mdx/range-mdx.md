@@ -1,5 +1,6 @@
 ---
-title: ：（範圍）（MDX） |Microsoft Docs
+description: ': (範圍) (MDX)'
+title: ： (範圍)  (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6afc3a73b958062bd6472153b2452bc0e3fa6cfc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d52a78a1fcdefa4ee7bf09fa4125b488165e09c4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020626"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500461"
 ---
 # <a name="-range-mdx"></a>: (範圍) (MDX)
 
@@ -35,7 +36,7 @@ Member_Expression : Member_Expression
  包含指定成員以及指定成員間所有成員的集合。  
   
 ## <a name="remarks"></a>備註  
- 兩個參數指定的成員，都必須在指定維度的相同層級與階層內。 如果兩個參數都指定相同的成員，則 **：（範圍）** 運算子會傳回只包含指定之成員的集合。 如果第一個參數為 Null，則集合會包含從第二個參數內指定之成員的層級開始的所有成員，一直到包含該成員為止。 如果第二個參數為 Null，則集合會包含從第一個參數內指定之成員開始的所有成員，一直到包含相同層級上的最後一個成員為止。  
+ 兩個參數指定的成員，都必須在指定維度的相同層級與階層內。 如果兩個參數都指定相同的成員，則 **： (範圍) ** 運算子會傳回只包含指定成員的集合。 如果第一個參數為 Null，則集合會包含從第二個參數內指定之成員的層級開始的所有成員，一直到包含該成員為止。 如果第二個參數為 Null，則集合會包含從第一個參數內指定之成員開始的所有成員，一直到包含相同層級上的最後一個成員為止。  
   
  此集合運算在 MDX 中無相等函數。  
   

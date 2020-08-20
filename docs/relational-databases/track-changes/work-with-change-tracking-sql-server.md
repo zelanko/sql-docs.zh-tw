@@ -1,4 +1,5 @@
 ---
+description: 使用變更追蹤 (SQL Server)
 title: 使用變更追蹤
 ms.custom: seo-dt-2019
 ms.date: 08/08/2016
@@ -22,12 +23,12 @@ ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 766503222750e991cb24bcdffebbc6bcdee28954
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 69e648dddc84de1c136fbf1830e7eeb639bcb5e7
+ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731555"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512304"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>使用變更追蹤 (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -155,7 +156,7 @@ END
 ```sql  
 -- Check all tables with change tracking enabled  
 IF EXISTS (  
-  SELECT COUNT(*) FROM sys.change_tracking_tables  
+  SELECT 1 FROM sys.change_tracking_tables  
   WHERE min_valid_version > @last_synchronization_version )  
 BEGIN  
   -- Handle invalid version & do not enumerate changes  

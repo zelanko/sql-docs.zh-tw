@@ -1,4 +1,5 @@
 ---
+description: 文字檔驅動程式的程式設計考量
 title: 文字檔驅動程式設計考慮 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: aabff9d9-20ea-4b68-b8fd-1e33061bd0ef
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 72f624f65cadd6d7cbd5eb9d9354c84200733de0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ea34c4ea0b61b5f1c35d0bcd1bb0d49b4af05bd6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81279838"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500081"
 ---
 # <a name="text-file-driver-programming-considerations"></a>文字檔驅動程式的程式設計考量
 本節包含下列主題：  

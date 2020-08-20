@@ -1,4 +1,5 @@
 ---
+description: 升級 Analysis Services
 title: 升級 Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2017
@@ -21,12 +22,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 61b67a70b3193763a46a7aa99783397ee57d0e92
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 74894762db3d65e3789922c39e3571c531906c82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362599"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500936"
 ---
 # <a name="upgrade-analysis-services"></a>升級 Analysis Services
 

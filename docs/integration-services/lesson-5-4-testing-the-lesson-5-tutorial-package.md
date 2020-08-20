@@ -1,4 +1,5 @@
 ---
+description: 第 5-4 課：測試第 5 課套件
 title: 步驟 4：測試第 5 課套件 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/08/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cc02e55b0079ec10e8335168ce754c77dfdc3ad0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 57bad9d0d13f85ae52858005e3fb6acc6f9532f0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918107"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500798"
 ---
 # <a name="lesson-5-4-test-the-lesson-5-package"></a>第 5-4 課：測試第 5 課套件
 
@@ -40,9 +41,9 @@ ms.locfileid: "86918107"
   
 ## <a name="test-the-lesson-5-package"></a>測試第 5 課套件  
   
-1.  在 [偵錯]  功能表上，選取 [開始偵錯]  。  
+1.  在 [偵錯] 功能表上，選取 [開始偵錯]。  
   
-2.  在套件執行完成之後，於 [偵錯]  功能表上，選取 [停止偵錯]  。  
+2.  在套件執行完成之後，於 [偵錯]**** 功能表上，選取 [停止偵錯]****。  
   
 ## <a name="next-lesson"></a>下一課  
 [第 6 課：在 SSIS 中搭配專案部署模型使用參數](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  

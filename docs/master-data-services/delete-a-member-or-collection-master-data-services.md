@@ -1,4 +1,5 @@
 ---
+description: 刪除成員或集合 (Master Data Services)
 title: 刪除成員或集合
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 613fa319c00ab100e52835faab1eafc33c07c9be
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: c7245b06b114c62b7fd0dde543f8a7a2859bd842
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811542"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500624"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>刪除成員或集合 (Master Data Services)
 
@@ -32,7 +33,7 @@ ms.locfileid: "85811542"
 > [!NOTE]  
 >  如果某個成員是當做另一個成員的網域屬性值使用，您就無法刪除該成員。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 [ **Explorer** ] 功能區域的許可權。  
@@ -66,7 +67,7 @@ ms.locfileid: "85811542"
 8.  在確認對話方塊中按一下 **[確定]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Master Data Services 重新啟用成員或集合&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
+ [重新啟用成員或集合 &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
  [成員 &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
  [集合 &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
   
