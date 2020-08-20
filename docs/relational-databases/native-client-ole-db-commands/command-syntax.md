@@ -1,5 +1,6 @@
 ---
-title: 命令語法（Native Client OLE DB 提供者） |Microsoft Docs
+description: '命令語法 (Native Client OLE DB 提供者) '
+title: 命令語法 (Native Client OLE DB provider) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,17 +17,17 @@ ms.assetid: d463d3d7-e5cb-426d-8e92-aa29980356b6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1fa327cac7eadf825ed5ef5564d6051d53a445ab
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: deaa3210d469fb25f0e26ce56c324f08e00154d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243991"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455840"
 ---
 # <a name="sql-server-native-client-command-syntax"></a>SQL Server Native Client 命令語法
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者會辨識 DBGUID_SQL 宏指定的命令語法。 對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者，此規範表示 ODBC SQL、ISO 和的混合物 [!INCLUDE[tsql](../../includes/tsql-md.md)] 是有效的語法。 例如，下列 SQL 陳述式會使用 ODBC SQL 逸出序列來指定 LCASE 字串函數：  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者會辨識 DBGUID_SQL 宏所指定的命令語法。 若為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者，此規範表示 ODBC SQL、ISO 和的混合物 [!INCLUDE[tsql](../../includes/tsql-md.md)] 是有效的語法。 例如，下列 SQL 陳述式會使用 ODBC SQL 逸出序列來指定 LCASE 字串函數：  
   
 ```  
 SELECT customerid={fn LCASE(CustomerID)} FROM Customers  
@@ -38,10 +39,10 @@ SELECT customerid={fn LCASE(CustomerID)} FROM Customers
 SELECT customerid=LOWER(CustomerID) FROM Customers  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]當指定為命令的文字時，Native Client OLE DB 提供者會成功處理任一種語句的形式。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]當指定為命令的文字時，Native Client OLE DB 提供者會成功處理任一種形式的語句。  
   
 ## <a name="stored-procedures"></a>預存程序  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者命令來執行預存程式時，請使用命令文字中的 ODBC 呼叫 escape 順序。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接著，Native Client OLE DB 提供者會使用的遠端程序呼叫機制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來優化命令處理。 例如，下列 ODBC SQL 陳述式是比 [!INCLUDE[tsql](../../includes/tsql-md.md)] 形式慣用的命令文字：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider 命令執行預存程式時，請使用命令文字中的 ODBC CALL escape 序列。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端 OLE DB 提供者接著會使用的遠端程序呼叫機制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來優化命令處理。 例如，下列 ODBC SQL 陳述式是比 [!INCLUDE[tsql](../../includes/tsql-md.md)] 形式慣用的命令文字：  
   
 -   ODBC SQL  
   
