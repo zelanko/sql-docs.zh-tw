@@ -1,4 +1,5 @@
 ---
+description: 建立 Database Mail 設定檔和帳戶對話方塊
 title: 建立 Database Mail 設定檔和帳戶對話方塊
 ms.custom: ''
 ms.date: 03/20/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b1bc67db4ebfe6d72b466562e7075fb93489ba29
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: d6c9b1c9b455b7e192c5c4c4ec921b8b9cdebcba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812416"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461796"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>建立 Database Mail 設定檔和帳戶對話方塊
 
@@ -45,14 +46,14 @@ ms.locfileid: "85812416"
 |**回覆電子郵件地址**|選擇性設定。 輸入將用來回覆這個帳戶所送出之電子郵件訊息的電子郵件地址。 範例回覆電子郵件地址為 admin@contoso.com。|  
 |**SMTP 伺服器**|輸入帳戶用來傳送電子郵件的 SMTP 伺服器名稱或 IP 位址。 範例 SMTP 伺服器格式為 **smtp.***<公司名稱>***.com**。 如需相關說明，請洽詢您的郵件管理員。|  
 |**連接埠號碼**|輸入此帳戶之 SMTP 伺服器的通訊埠編號。 預設 SMTP 通訊埠為 25。|  
-|**這個伺服器需要安全連接 (SSL)**|使用傳輸層安全性（TLS）來加密通訊，先前稱為安全通訊端層（SSL）。|  
+|**這個伺服器需要安全連接 (SSL)**|使用傳輸層安全性 (TLS) （先前稱為安全通訊端層 (SSL) ）加密通訊。|  
   
 ## <a name="smtp-authentication"></a>SMTP 驗證  
  Database Mail 可以使用 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]的認證、使用您提供的其他認證或以匿名方式傳送。 最佳作法如下：如果電子郵件伺服器需要驗證，請建立要用於 Database Mail 的特定使用者帳戶。 這個使用者帳戶應該具有最小權限，而且不應該為任何其他目的使用。  
   
 |控制項名稱|描述|  
 |------------------|-----------------|  
-|**使用 Database Engine 服務認證的 Windows 驗證**|指定 Database Mail 應該使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] Windows 服務帳戶的認證在 SMTP 伺服器上進行驗證。|  
+|**使用 Database Engine 服務認證的 Windows 驗證**|指定 Database Mail 應使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] Windows 服務帳戶的認證在 SMTP 伺服器上進行驗證。|  
 |**基本驗證**|指定 Database Mail 應該使用特定的使用者名稱和密碼在 SMTP 伺服器上驗證。 此資訊僅用於電子郵件伺服器的驗證，而且帳戶不需要對應到執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 之電腦上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用者。|  
 |**使用者名稱**|輸入 Database Mail 用來登入 SMTP 伺服器之使用者帳戶的名稱。 如果 SMTP 伺服器需要基本驗證，則使用者名稱是必要的。|  
 |**密碼**|輸入 Database Mail 用來登入 SMTP 伺服器的密碼。 如果 SMTP 伺服器需要基本驗證，則需要密碼。|  

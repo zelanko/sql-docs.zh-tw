@@ -1,4 +1,5 @@
 ---
+description: 管理知識庫
 title: 管理知識庫
 ms.date: 06/04/2013
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 2f445f4c076497db3c41947e3105440de9025175
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5676a182615dfa7ddf23dcda1841a6530467a8c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882751"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462080"
 ---
 # <a name="manage-a-knowledge-base"></a>管理知識庫
 
@@ -32,7 +33,7 @@ ms.locfileid: "85882751"
 ####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能開啟知識庫。  
   
-##  <a name="manage-a-knowledge-base"></a><a name="Manage"></a>管理知識庫  
+##  <a name="manage-a-knowledge-base"></a><a name="Manage"></a> 管理知識庫  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -70,7 +71,7 @@ ms.locfileid: "85882751"
   
         8.  **建立日期**：建立的日期  
   
-##  <a name="follow-up-after-managing-a-knowledge-base"></a><a name="FollowUp"></a>後續操作：管理知識庫之後  
+##  <a name="follow-up-after-managing-a-knowledge-base"></a><a name="FollowUp"></a> 後續操作：管理知識庫之後  
  管理知識庫之後，下一個步驟將取決於您針對知識庫所採取的動作：  
   
 -   如果您開啟了知識庫，就要繼續進行已選取的活動。  

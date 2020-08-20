@@ -1,4 +1,5 @@
 ---
+description: 分葉權限 (Master Data Services)
 title: 分葉權限
 ms.custom: ''
 ms.date: 03/15/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 112c046e6a3e0eb51b18ba397c718907fa0829c9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: a50723727690307492d3d16cb3671e762dec401f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813294"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461739"
 ---
 # <a name="leaf-permissions-master-data-services"></a>分葉權限 (Master Data Services)
 
@@ -63,8 +64,8 @@ ms.locfileid: "85813294"
   
 |名稱|程式碼|Subcategory (更新)|  
 |----------|----------|----------------------------|  
-|Mountain-100|BK-M101|{5}山區自行車|  
-|Mountain-100|BK-M201|{5}山區自行車|  
+|Mountain-100|BK-M101|{5} 山區自行車|  
+|Mountain-100|BK-M201|{5} 山區自行車|  
   
  在總管**** 中，您可以更新 Subcategory 資料行中的任何屬性值。 如果您沒有屬性的權限，就不會顯示該屬性。  
   

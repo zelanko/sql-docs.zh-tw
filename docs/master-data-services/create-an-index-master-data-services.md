@@ -1,4 +1,5 @@
 ---
+description: 建立索引 (Master Data Services)
 title: 建立索引
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: da814796cb4f03008857b20d6f8f7d00b70a8b4a
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 48d78cffb116996848035e3675e707994226f080
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813068"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461820"
 ---
 # <a name="create-an-index-master-data-services"></a>建立索引 (Master Data Services)
 
@@ -23,12 +24,12 @@ ms.locfileid: "85813068"
 
   在您經常查詢的屬性清單上建立自訂索引，以提升查詢效能。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取系統管理功能區域的權限。 如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
  **建立索引**  
   
@@ -52,7 +53,7 @@ ms.locfileid: "85813068"
   
 |資料行名稱|描述|  
 |-----------------|-----------------|  
-|狀態|索引狀態。<br /><br /> 當您按一下 [**儲存**] 時，會顯示 [![正在更新狀態](../master-data-services/media/mds-statusicon-updating.png "更新狀態的圖示")影像] 圖示，指出索引正在更新。<br /><br /> 如果建立或編輯索引時發生錯誤，則會顯示 [![錯誤狀態](../master-data-services/media/mds-statusicon-error.png "錯誤狀態圖示")影像] 圖示。<br /><br /> 否則，狀態會是 [確定]，而 [![確定狀態影像] 圖示](../master-data-services/media/mds-statusicon-ok.png "[確定] 狀態的圖示")會顯示。|  
+|狀態|索引狀態。<br /><br /> 當您按一下 [ **儲存**] 時，會顯示 ![更新狀態](../master-data-services/media/mds-statusicon-updating.png "更新狀態的圖示") 影像的圖示，指出正在更新索引。<br /><br /> 如果建立或編輯索引時發生錯誤，則會顯示 ![錯誤狀態](../master-data-services/media/mds-statusicon-error.png "錯誤狀態圖示") 影像的圖示。<br /><br /> 否則，狀態會是 [確定]，而且會顯示 [ ![確定] 狀態](../master-data-services/media/mds-statusicon-ok.png "[確定] 狀態的圖示") 影像的圖示。|  
 |名稱|索引名稱。|  
 |是唯一的|指定索引是否是唯一的。|  
 |依據屬性|顯示定義索引的屬性顯示名稱。|  

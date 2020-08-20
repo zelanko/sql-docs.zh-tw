@@ -1,5 +1,6 @@
 ---
-title: 選取（DMX） |Microsoft Docs
+description: SELECT (DMX)
+title: 選取 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: bf4164308b0fdc9e6ba3fabb756c18214757cde5
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 1e44c7d2f4bf872a7629a48c305114f09f98ee66
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970610"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462033"
 ---
 # <a name="select-dmx"></a>SELECT (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  資料採礦延伸模組（DMX）中的**SELECT**語句會用於資料採礦中的下列工作：  
+  資料採礦延伸模組中的 **SELECT** 語句 (DMX) 用於資料採礦中的下列工作：  
   
 -   瀏覽現有採礦模型的內容  
   
@@ -47,7 +48,7 @@ SELECT FLATTENED <select list> FROM ...
 ```  
   
 ## <a name="top-n-and-order-by"></a>TOP \<n> 和 ORDER BY  
- 您可以使用運算式來排序查詢的結果，然後可以使用**ORDER by**和**TOP**子句的組合傳回結果的子集。 這在您只想將結果傳送至最可能的回應者的目標郵寄等狀況中很有用。 您可以依照預測機率來排序目標郵寄預測查詢的結果，然後只傳回前幾個 \<n> 結果。  
+ 您可以使用運算式來排序查詢的結果，然後可以使用 **ORDER by** 和 **TOP** 子句的組合傳回結果的子集。 這在您只想將結果傳送至最可能的回應者的目標郵寄等狀況中很有用。 您可以依預測機率來排序目標郵寄預測查詢的結果，然後只傳回前幾個 \<n> 結果。  
   
 ## <a name="select-list"></a>選取清單  
  可以包含純量資料 *\<select list>* 行參考、預測函數和運算式。 可使用的選項是根據演算法及下列內容而定：  
@@ -76,13 +77,13 @@ JOIN <source data query>
 ```  
   
 ## <a name="where"></a>WHERE  
- 您可以使用**WHERE**子句來限制查詢所傳回的案例。 **Where**子句會指定**where**運算式中的資料行參考必須與 SELECT 語句之中的資料行參考具有相同的語義 *\<select list>* ，而且只能傳回布林運算式。 **SELECT** **WHERE**子句的語法如下所示  
+ 您可以使用 **WHERE** 子句來限制查詢所傳回的案例。 **Where**子句會指定**where**運算式中的資料行參考必須與 SELECT 語句中的資料行參考具有相同的語義 *\<select list>* ，而且只能傳回布林運算式。 **SELECT** **WHERE**子句的語法如下所示  
   
 ```  
 WHERE < condition expression >  
 ```  
   
- **Select**語句的 select List 和**WHERE**子句必須遵循下列規則：  
+ **Select**語句的 select List 和**WHERE**子句必須遵守下列規則：  
   
 -   選取清單必須包含不傳回布林結果的運算式。 您可以修改運算式，但是運算式必須傳回非布林結果。  
   
@@ -93,38 +94,38 @@ WHERE < condition expression >
   
 -   [從 &#60;模型選取&#62; 預測聯結 &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)  
   
--   [從 &#60;模型&#62; &#40;DMX&#41;中選取](../dmx/select-from-model-dmx.md)  
+-   [從 &#60;模型&#62; &#40;DMX&#41;中選取 ](../dmx/select-from-model-dmx.md)  
   
  第一種類型的預測可以讓您即時或批次建立複雜的預測。  
   
  第二種預測類型會在採礦模型裡的可預測資料行上建立空白的預測聯結，並傳回資料行的最可能狀態。 這個查詢的結果完全以採礦模型的內容為準。  
   
- 您可以使用下列語法，將 select 語句插入 SELECT FROM 預測聯結語句的來源查詢中。  
+ 您可以使用下列語法，將 select 語句插入 SELECT FROM 預測 JOIN 語句的來源查詢中。  
   
 ```  
 SELECT FROM PREDICTION JOIN (<SELECT statement>) AS t, WHERE <SELECT statement>  
 ```  
   
- 如需建立預測查詢的詳細資訊，請參閱[DMX 預測查詢的結構和使用](../dmx/structure-and-usage-of-dmx-prediction-queries.md)方式。  
+ 如需有關建立預測查詢的詳細資訊，請參閱 [DMX 預測查詢的結構和使用](../dmx/structure-and-usage-of-dmx-prediction-queries.md)方式。  
   
 ## <a name="clause-syntax"></a>子句語法  
- 由於使用**SELECT**語句流覽的複雜度，詳細的語法元素和引數是由子句所描述。 如需有關每個子句的詳細資訊，請按一下以下清單中的主題：  
+ 由於使用 **SELECT** 語句流覽的複雜度，詳細的語法元素和引數會由子句描述。 如需有關每個子句的詳細資訊，請按一下以下清單中的主題：  
   
- [從 &#60;模型 &#62; &#40;DMX 中選取 [相異]&#41;](../dmx/select-distinct-from-model-dmx.md)  
+ [選取 [不同于 &#60;模型 &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)  
   
- [從 &#60;模型&#62; 中選取。DMX&#41;的內容 &#40;](../dmx/select-from-model-content-dmx.md)  
+ [從 &#60;模型&#62; 選取。DMX&#41;內容 &#40;](../dmx/select-from-model-content-dmx.md)  
   
- [從 &#60;模型&#62; 中選取。DMX&#41;&#40;案例](../dmx/select-from-model-cases-dmx.md)  
+ [從 &#60;模型&#62; 選取。DMX&#41;&#40;案例 ](../dmx/select-from-model-cases-dmx.md)  
   
- [從 &#60;模型&#62; 中選取。SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)  
+ [從 &#60;模型&#62; 選取。SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)  
   
- [從 &#60;模型&#62; 中選取。DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)  
+ [從 &#60;模型&#62; 選取。DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)  
   
  [從 &#60;模型選取&#62; 預測聯結 &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)  
   
- [從 &#60;模型&#62; &#40;DMX&#41;中選取](../dmx/select-from-model-dmx.md)  
+ [從 &#60;模型&#62; &#40;DMX&#41;中選取 ](../dmx/select-from-model-dmx.md)  
   
- [從 &#60;結構&#62; 中選取。種](../dmx/select-from-structure-cases.md)  
+ [從 &#60;結構&#62; 選取。例](../dmx/select-from-structure-cases.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦延伸模組 &#40;DMX&#41; 資料定義語句](../dmx/dmx-statements-data-definition.md)   

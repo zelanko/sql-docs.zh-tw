@@ -1,4 +1,5 @@
 ---
+description: 第 1 課：使用 SSIS 來建立專案和基本套件
 title: 第 1 課：使用 SSIS 來建立專案和基本套件 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aeeac3c8033bfde5a528dd791e7b23b4f9973e1f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 428295430a2abb50738742db088b9573a7bf35a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917302"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461986"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>第 1 課：使用 SSIS 來建立專案和基本套件
 
@@ -27,7 +28,7 @@ ms.locfileid: "86917302"
   
 在建立套件之前，您必須先了解來源資料和目的地中使用的格式。 接著，您便可以定義將來源資料與目的地對應所需的轉換。  
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 本教學課程倚賴 Microsoft SQL Server Data Tools，這是一組範例套件及一個範例資料庫。
 
@@ -37,9 +38,9 @@ ms.locfileid: "86917302"
 
     1.  瀏覽至 [Integration Services 教學課程檔案](https://www.microsoft.com/download/details.aspx?id=56827) \(英文\)。
 
-    2.  選取 [Download] \(下載\)  按鈕。
+    2.  選取 [Download] \(下載\)**** 按鈕。
 
-    3.  選取 [Creating a Simple ETL Package.zip] \(建立簡單的 ETL Package.zip\)  檔案，然後選取 [Next] \(下一步\)  。
+    3.  選取 [Creating a Simple ETL Package.zip] \(建立簡單的 ETL Package.zip\)**** 檔案，然後選取 [Next] \(下一步\)****。
 
     4.  下載檔案之後，將其內容解壓縮至本機目錄。  
 

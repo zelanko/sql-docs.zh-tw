@@ -1,4 +1,5 @@
 ---
+description: 建立屬性群組 (Master Data Services)
 title: 建立屬性群組
 ms.custom: ''
 ms.date: 03/15/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2075a9b9faddf7028f0b0b27b52cf34db20a17ba
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: ffe84797d519961ab26e6d43fb48a5c4c2dd3e13
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813398"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461825"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>建立屬性群組 (Master Data Services)
 
@@ -26,12 +27,12 @@ ms.locfileid: "85813398"
 
   當您想要在總管**** 方格的個別索引標籤上顯示屬性時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中建立屬性群組。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 -   至少有一個屬性必須存在。 如需詳細資訊，請參閱 [建立文字屬性 &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)(管理員 (Master Data Services))。  
   
@@ -39,7 +40,7 @@ ms.locfileid: "85813398"
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
   
-2.  在 [**管理模型**] 頁面上，從方格中選取模型，然後按一下 [**實體**]。  
+2.  在 [ **管理模型** ] 頁面上，從方格中選取模型，然後按一下 [ **實體**]。  
   
 3.  在 [管理實體]**** 頁面上，從方格中選取含有您想要為其建立屬性群組之實體的資料列。  
   
@@ -73,7 +74,7 @@ ms.locfileid: "85813398"
   
 ## <a name="see-also"></a>另請參閱  
  [屬性群組 &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)   
- [Master Data Services &#40;的屬性&#41;](../master-data-services/attributes-master-data-services.md)   
+ [屬性 &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
  [變更屬性組名 &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-group-name-master-data-services.md)   
  [刪除屬性群組 &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-group-master-data-services.md)   
  [分葉權限 &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)   

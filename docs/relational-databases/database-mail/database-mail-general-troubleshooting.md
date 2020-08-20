@@ -1,4 +1,5 @@
 ---
+description: Database Mail 疑難排解的一般步驟
 title: 針對一般 Database Mail 進行疑難排解
 ms.date: 06/03/2020
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 92496d6c02903ad6c7c14c5b2fd134797f608997
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 524b2cb81b5c50eadfefd607f4bb62a7ac3bd6cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726506"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461040"
 ---
 # <a name="general-database-mail-troubleshooting-steps"></a>Database Mail 疑難排解的一般步驟 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

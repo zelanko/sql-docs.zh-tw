@@ -1,4 +1,5 @@
 ---
+description: 第 1 課：準備建立部署套件組合
 title: 第 1 課：準備建立部署配套 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,14 +11,14 @@ ms.topic: tutorial
 ms.assetid: b6fe283c-9856-4ba1-a497-e3912424fd18
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e13cbefc2c46acf07ad3d1d412b652089fe72adb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c5ef2363d07fc6560199154633fc45d93eb10c13
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917284"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461989"
 ---
-# <a name="lesson-1-preparing-to-create-the-deployment-bundle"></a>第 1 課：準備建立部署配套
+# <a name="lesson-1-preparing-to-create-the-deployment-bundle"></a>第 1 課：準備建立部署套件組合
 
 [!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
@@ -35,18 +36,18 @@ ms.locfileid: "86917284"
 ## <a name="lesson-tasks"></a>課程工作  
 這一課包含下列工作：  
   
--   [步驟 1：建立工作資料夾和環境變數](../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md)  
+-   [步驟 1:建立工作資料夾和環境變數](../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md)  
   
--   [步驟 2：建立部署專案](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
+-   [步驟 2:建立部署專案](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
   
--   [步驟 3：新增套件和其他檔案](../integration-services/lesson-1-3-adding-packages-and-other-files.md)  
+-   [步驟 3：新增封裝和其他檔案](../integration-services/lesson-1-3-adding-packages-and-other-files.md)  
   
--   [步驟 4：新增套件設定](../integration-services/lesson-1-4-adding-package-configurations.md)  
+-   [步驟 4：新增封裝組態](../integration-services/lesson-1-4-adding-package-configurations.md)  
   
 -   [步驟 5：測試更新的套件](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
 ## <a name="start-the-lesson"></a>開始課程  
-[步驟 1：建立工作資料夾和環境變數](../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md)  
+[步驟 1:建立工作資料夾和環境變數](../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md)  
   
   
   

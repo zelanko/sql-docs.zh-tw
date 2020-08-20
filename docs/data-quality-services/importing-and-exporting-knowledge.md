@@ -1,4 +1,5 @@
 ---
+description: 匯入和匯出知識
 title: 匯入和匯出知識
 ms.date: 07/31/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 517e672cdb5bb7a6991f83b72f25f937ecbb6359
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 639e248fd938f3d2429b3d33729414224db1dc8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362818"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462118"
 ---
 # <a name="importing-and-exporting-knowledge"></a>匯入和匯出知識
 

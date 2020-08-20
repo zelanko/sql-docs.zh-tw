@@ -1,4 +1,5 @@
 ---
+description: 管理複合定義域
 title: 管理複合定義域
 ms.date: 07/31/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 2d463b65247dc5606605f1760ef6a259b5f534e9
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 49fc9ae96b23f9c7d524b1a31d6ab266474411d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363050"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462066"
 ---
 # <a name="managing-a-composite-domain"></a>管理複合定義域
 

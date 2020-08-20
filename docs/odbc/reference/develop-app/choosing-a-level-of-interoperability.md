@@ -1,4 +1,5 @@
 ---
+description: 選擇互通性層級
 title: 選擇互通性層級 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 1f915832-a7c1-41cd-8c4f-bf6d976951b0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: aa04eea9821b024f9e8dadc8ad09f449d4fb14b5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4d46f2bdb37e909e9bae0d3d5a7811f464e33bd7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303354"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461590"
 ---
 # <a name="choosing-a-level-of-interoperability"></a>選擇互通性層級
-假設應用程式將使用 ODBC，下一步就是判斷需要何種層級的互通性。 基本的互通性層級通常是應用程式類型的功能：自訂應用程式傾向于無法互通，垂直應用程式通常會在有限的 Dbms 數目之間互通，而一般應用程式通常會在所有 Dbms 之間互通。  
+假設應用程式會使用 ODBC，下一步是判斷需要何種層級的互通性。 基本的互通性層級通常是應用程式類型的函式：自訂應用程式通常不會互通，垂直應用程式通常會在有限數目的 Dbms 之間互通，而一般應用程式通常會在所有 Dbms 之間互通。  
   
  此章節包含下列主題。  
   

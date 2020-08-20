@@ -1,4 +1,5 @@
 ---
+description: ODBC 64 位元資訊
 title: ODBC 64 位資訊 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,28 +11,28 @@ ms.topic: conceptual
 ms.assetid: ed9851ce-44ee-4c8e-b626-1d0b52da30fe
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b9cb8e3fc42d0ad71ac83f1432c165f243f39012
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 791bb54481ae5844061852f5321bdf07fc027b1a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298298"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461280"
 ---
 # <a name="odbc-64-bit-information"></a>ODBC 64 位元資訊
-從 Windows Server 2003 開始，Microsoft 作業系統已支援64位的 ODBC 程式庫。 MDAC 2.7 SDK 最初隨附的 ODBC 標頭和程式庫包含變更，可讓程式設計人員輕鬆地為新的64位平臺撰寫程式碼。 藉由確保您的程式碼使用下面所列的 ODBC 定義類型，您可以根據 **_WIN64**或**WIN32**宏，針對64位和32位平臺編譯相同的原始程式碼。  
+從 Windows Server 2003 開始，Microsoft 作業系統已支援64位 ODBC 程式庫。 第一次隨附于 MDAC 2.7 SDK 的 ODBC 標頭和程式庫包含變更，可讓程式設計人員輕鬆地為新的64位平臺撰寫程式碼。 藉由確保您的程式碼使用下面所列的 ODBC 定義型別，您可以針對64位和32位平臺，根據 **_WIN64** 或 **WIN32** 宏編譯相同的原始程式碼。  
   
- 針對64位處理器進行程式設計時，有幾個重點要牢記在心：  
+ 針對64位處理器進行程式設計時，請記住幾個重點：  
   
--   雖然指標的大小已從4個位元組變更為8個位元組，但整數和長仍然是4個位元組的值。 已定義8個位元組整數的類型**INT64**和**UINT64** 。 當 **_WIN64**已定義時，新的 Odbc 類型**SQLLEN**和**SQLULEN**會在 ODBC 標頭檔中定義為**INT64**和**UINT64** 。  
+-   雖然指標的大小已從4個位元組變更為8個位元組，但整數和長仍然是4個位元組的值。 已定義8個位元組整數的類型 **INT64** 和 **UINT64** 。 當 **_WIN64**已定義時，新的 Odbc 類型**SQLLEN**和**SQLULEN**會在 ODBC 標頭檔中定義為**INT64**和**UINT64** 。  
   
--   ODBC 中的數個函式會宣告為接受指標參數。 在32位 ODBC 中，定義為指標的參數經常用來根據呼叫的內容，傳遞整數值或緩衝區的指標。 當然，這是可能的，因為指標和整數的大小相同。 在 64-bit Windows 中，這不是這種情況。  
+-   ODBC 中的數個函式會宣告為採用指標參數。 在32位 ODBC 中，定義為指標的參數經常用來根據呼叫的內容，將整數值或指標傳遞至緩衝區。 當然，這可能是因為指標和整數具有相同的大小。 在64位的 Windows 中，這種情況並非如此。  
   
--   某些先前使用**SQLINTEGER**和**SQLUINTEGER**參數定義的 ODBC 函數，在適當使用新的**SQLLEN**和**SQLULEN** typedef 時已變更。 這些變更會在下一節 [函式宣告變更] 中列出。  
+-   某些先前以 **SQLINTEGER** 和 **SQLUINTEGER** 參數定義的 ODBC 函數，在適當的情況下會變更為使用新的 **SQLLEN** 和 **SQLULEN** typedef。 這些變更會在下一節中列出，也就是函式宣告的變更。  
   
--   某些可透過各種**SQLSet**和**SQLGet**函式設定的描述項欄位已變更為配合64位值，而其他則仍然是32位值。 設定和抓取這些欄位時，請確定您使用適當大小的變數。 已變更的描述項欄位的詳細資訊列在 [函式宣告變更] 底下。  
+-   您可以透過各種 **SQLSet** 和 **SQLGet** 函式設定的部分描述項欄位已變更為容納64位值，其他則仍是32位值。 設定和抓取這些欄位時，請確定您使用的是適當大小的變數。 [函式宣告變更] 底下會列出哪些描述項欄位已變更的詳細資訊。  
   
 ## <a name="function-declaration-changes"></a>函式宣告變更  
- 下列函式簽章已針對64位程式設計進行變更。 粗體文字中的專案是不同的特定參數。  
+ 以下是64位程式設計的函式簽章已變更。 粗體文字中的專案是不同的特定參數。  
   
 ```cpp
 SQLBindCol (SQLHSTMT StatementHandle, SQLUSMALLINT ColumnNumber,  
@@ -111,8 +112,8 @@ SQLSetStmtOption (SQLHSTMT StatementHandle, SQLUSMALLINT Option,
    SQLULEN Value);  
 ```  
   
-## <a name="changes-in-sql-data-types"></a>SQL 資料類型中的變更  
- 下列四種 SQL 類型在僅限 32-bit 上仍然受支援;它們不是針對64位編譯器所定義。 這些類型不再用於 MDAC 2.7 中的任何參數;使用這些類型會導致在64位平臺上發生編譯器失敗。  
+## <a name="changes-in-sql-data-types"></a>SQL 資料類型的變更  
+ 下列四種 SQL 類型在僅限32位中仍受支援;它們並未針對64位編譯器定義。 這些類型不再用於 MDAC 2.7 中的任何參數;使用這些類型會導致64位平臺上的編譯器失敗。  
   
 ```cpp
 #ifdef WIN32   
@@ -145,7 +146,7 @@ typedef UINT64 SQLULEN;
 #endif  
 ```  
   
- 雖然 SQL_C_BOOKMARK 在 ODBC 3.0 中被取代，但針對2.0 用戶端上的64位編譯器，此值已變更：  
+ 雖然 SQL_C_BOOKMARK 在 ODBC 3.0 中已被取代，但是針對2.0 用戶端上的64位編譯器，此值已變更：  
   
 ```cpp
 #ifdef _WIN64   
@@ -162,11 +163,11 @@ typedef SQLULEN BOOKMARK;
 ```  
   
 ## <a name="values-returned-from-odbc-api-calls-through-pointers"></a>透過指標從 ODBC API 呼叫傳回的值  
- 下列 ODBC 函數呼叫 take 做為輸入參數，其為從驅動程式傳回資料之緩衝區的指標。 傳回之資料的內容和意義取決於函數的其他輸入參數。 在某些情況下，這些方法現在可能會傳回64位（8位元組整數）值，而不是典型的32位（4位元組）整數值。 這些案例如下所示：  
+ 下列 ODBC 函式呼叫會以輸入參數作為輸入參數，此緩衝區會傳回從驅動程式傳回資料的緩衝區指標。 傳回的資料的內容和意義是由函數的其他輸入參數所決定。 在某些情況下，這些方法現在可能會傳回64位 (8 位元組整數) 值，而不是一般32位 (4 位元組) 整數值。 這些情況如下所示：  
   
  **SQLColAttribute**  
   
- 當*FieldIdentifier*參數具有下列其中一個值時，會在 **numericattribute 所述*中傳回64位值：  
+ 當 *FieldIdentifier* 參數具有下列其中一個值時，**>numericattribute*中會傳回64位值：  
   
  SQL_DESC_AUTO_UNIQUE_VALUE  
   
@@ -204,7 +205,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLColAttributes**  
   
- 當*fDescType*參數具有下列其中一個值時，會在 **pfDesc*中傳回64位值：  
+ 當 *fDescType* 參數具有下列其中一個值時，**pfDesc*中會傳回64位值：  
   
  SQL_COLUMN_COUNT  
   
@@ -228,7 +229,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLGetConnectAttr**  
   
- 當*屬性*參數具有下列其中一個值時，*值*會傳回64位值：  
+ 當 *Attribute* 參數具有下列其中一個值時， *值*中會傳回64位值：  
   
  SQL_ATTR_ASYNC_ENABLE  
   
@@ -240,13 +241,13 @@ typedef SQLULEN BOOKMARK;
   
  **SQLGetConnectOption**  
   
- 當*屬性*參數具有下列其中一個值時，*值*會傳回64位值：  
+ 當 *Attribute* 參數具有下列其中一個值時， *值*中會傳回64位值：  
   
  SQL_ATTR_QUIET_MODE  
   
  **SQLGetDescField**  
   
- 當*FieldIdentifier*參數具有下列其中一個值時，會在 **valueptr 是*中傳回64位值：  
+ 當 *FieldIdentifier* 參數具有下列其中一個值時，**ValuePtr*中會傳回64位值：  
   
  SQL_DESC_ARRAY_SIZE  
   
@@ -270,7 +271,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLGetDiagField**  
   
- 當*以*參數具有下列其中一個值時，會在 **DiagInfoPtr*中傳回64位值：  
+ 當 *以* 參數具有下列其中一個值時，**DiagInfoPtr*中會傳回64位值：  
   
  SQL_DIAG_CURSOR_ROW_COUNT  
   
@@ -280,7 +281,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLGetInfo**  
   
- 當*InfoType*參數具有下列其中一個值時，會在 **InfoValuePtr*中傳回64位值：  
+ 當 *InfoType* 參數具有下列其中一個值時，**InfoValuePtr*中會傳回64位值：  
   
  SQL_DRIVER_HDBC  
   
@@ -288,7 +289,7 @@ typedef SQLULEN BOOKMARK;
   
  SQL_DRIVER_HLIB  
   
- 當*InfoType*有下列兩個值的其中一個時 **InfoValuePtr*為 64-位在輸入和輸出上：  
+ 當 *InfoType* 具有下列兩個值時 **InfoValuePtr* 是輸入和輸出的 64-位：  
   
  SQL_DRIVER_HDESC  
   
@@ -296,7 +297,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLGetStmtAttr**  
   
- 當*屬性*參數具有下列其中一個值時，會在 **valueptr 是*中傳回64位值：  
+ 當 *Attribute* 參數具有下列其中一個值時，會在 **ValuePtr*中傳回64位值：  
   
  SQL_ATTR_APP_PARAM_DESC  
   
@@ -364,7 +365,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLGetStmtOption**  
   
- 當*Option*參數具有下列其中一個值時，會以 **value*傳回64位值：  
+ 當 *Option* 參數具有下列其中一個值時，會在 **值*中傳回64位值：  
   
  SQL_KEYSET_SIZE  
   
@@ -376,7 +377,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetConnectAttr**  
   
- 當*屬性*參數具有下列其中一個值時，會以傳*值*方式傳遞64位值：  
+ 當 *Attribute* 參數具有下列其中一個值時，會以 *值*形式傳遞64位值：  
   
  SQL_ATTR_ASYNC_ENABLE  
   
@@ -388,13 +389,13 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetConnectOption**  
   
- 當*屬性*參數具有下列其中一個值時，會以傳*值*方式傳遞64位值：  
+ 當 *Attribute* 參數具有下列其中一個值時，會以 *值*形式傳遞64位值：  
   
  SQL_ATTR_QUIET_MODE  
   
  **SQLSetDescField**  
   
- 當*FieldIdentifier*參數具有下列其中一個值時，會在*valueptr 是*中傳遞64位值：  
+ 當 *FieldIdentifier* 參數具有下列其中一個值時，會在 *ValuePtr*中傳遞64位值：  
   
  SQL_DESC_ARRAY_SIZE  
   
@@ -418,7 +419,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetStmtAttr**  
   
- 當*屬性*參數具有下列其中一個值時，會在*valueptr 是*中傳遞64位值：  
+ 當 *Attribute* 參數具有下列其中一個值時，會在 *ValuePtr*中傳遞64位值：  
   
  SQL_ATTR_APP_PARAM_DESC  
   
@@ -486,7 +487,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetStmtOption**  
   
- 當*Option*參數具有下列其中一個值時，會以傳*值*方式傳遞64位值：  
+ 當 *Option* 參數具有下列其中一個值時，會以 *值*形式傳遞64位值：  
   
  SQL_KEYSET_SIZE  
   

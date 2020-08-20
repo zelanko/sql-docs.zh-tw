@@ -1,4 +1,5 @@
 ---
+description: 安裝 Data Quality Services
 title: 安裝 Data Quality Services
 ms.date: 09/11/2017
 ms.prod: sql
@@ -9,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 7558b68c6cdc286d2152f1dee8d4ae325d699ed1
-ms.sourcegitcommit: 2e6c4104dca8680064eb64a7a79a3e15e1b4365f
+ms.openlocfilehash: 35ca44da3c63d8de38a342cbf1f63bceb1916e15
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85942706"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462119"
 ---
 # <a name="install-data-quality-services"></a>安裝 Data Quality Services
 
 [!INCLUDE [SQL Server - Windows only ](../../includes/applies-to-version/sql-windows-only.md)]
 
-  [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)]（DQS）包含下列兩個元件： **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** 和 **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]** 。  
+  [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) 包含下列兩個元件： **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** 和 **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]** 。  
   
-|DQS 元件|說明|  
+|DQS 元件|描述|  
 |-------------------|-----------------|  
 |[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 會安裝在 [!INCLUDE[ssNoversion](../../includes/ssNoVersion-md.md)] Database Engine 之上，並且包含三個資料庫：DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA。 DQS_MAIN 包含 DQS 預存程序、DQS 引擎和已發行的知識庫。 DQS_PROJECTS 包含資料品質專資訊。 DQS_STAGING_DATA 是暫存區域，您可以從中複製來源資料以執行 DQS 作業，然後匯出已處理的資料。|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 是可以用於連接到 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]的獨立應用程式，其提供高直覺性的圖形化使用者介面，讓您可以執行資料品質作業，以及其他與 DQS 相關的管理工作。|  
@@ -45,7 +46,7 @@ ms.locfileid: "85942706"
 > [!NOTE]  
 >  本主題不包含從命令列執行安裝程式的指示。 如需安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 和用戶端之命令列選項的資訊，請參閱[從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Feature) 中的[功能參數](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
   
-##  <a name="pre-installation-tasks"></a><a name="PreInstallationTasks"></a>預先安裝工作  
+##  <a name="pre-installation-tasks"></a><a name="PreInstallationTasks"></a> 預先安裝工作  
  安裝 DQS 之前，請先確認您的電腦符合最低系統需求。 下表提供 DQS 元件之最低系統需求的相關資訊：  
   
 |DQS 元件|最低系統需求|  
@@ -62,15 +63,15 @@ ms.locfileid: "85942706"
   
  如需安裝 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 之最低系統需求的詳細資訊，請參閱[安裝 SQL Server 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
   
-##  <a name="data-quality-services-installation-tasks"></a><a name="DQSInstallation"></a>Data Quality Services 安裝工作  
+##  <a name="data-quality-services-installation-tasks"></a><a name="DQSInstallation"></a> Data Quality Services 安裝工作  
  您必須使用 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 安裝程式安裝 DQS 元件。 當您執行 SQL Server 安裝程式時，必須執行一連串的安裝精靈頁面，依據您的需求選取適當的選項。 下表只列出安裝精靈中的部分頁面，您在這些頁面中選取的選項將會影響 DQS 的安裝：  
   
 |頁面|動作|  
 |----------|------------|  
-|特徵選取|選取：<br /><br /> [Database Engine Services]**** 底下的 [Data Quality Services]**** 以安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]。 <br />如果您選取 [Data Quality Services]**** 核取方塊，SQL Server 安裝程式會複製位於電腦上 SQL Server 執行個體目錄底下的 Installer 檔案 DQSInstaller.exe。 在您完成 SQL Server 安裝程式之後，必須執行這個檔案才能「完成」**[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 的安裝。 此外，您也必須執行一些額外的步驟來設定 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，然後才能使用它。 如需詳細資訊，請參閱 [安裝後工作](#PostInstallationTasks)。<br /><br /> [Data Quality Client]**** 以安裝 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]。<br /><br /> 使用**管理工具-完成**[**管理工具-基本**] 以安裝 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。 此工具可為您提供圖形使用者介面以管理 SQL Server 執行個體，並且協助您在安裝後執行額外的工作，如下一節中所列。|  
+|特徵選取|選取：<br /><br /> [Database Engine Services]**** 底下的 [Data Quality Services]**** 以安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]。 <br />如果您選取 [Data Quality Services]**** 核取方塊，SQL Server 安裝程式會複製位於電腦上 SQL Server 執行個體目錄底下的 Installer 檔案 DQSInstaller.exe。 在您完成 SQL Server 安裝程式之後，必須執行這個檔案才能「完成」**[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 的安裝。 此外，您也必須執行一些額外的步驟來設定 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，然後才能使用它。 如需詳細資訊，請參閱 [安裝後工作](#PostInstallationTasks)。<br /><br /> [Data Quality Client]**** 以安裝 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]。<br /><br />  (建議 **的) 管理工具-** 在 [ **管理工具-基本** ] 下進行安裝 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。 此工具可為您提供圖形使用者介面以管理 SQL Server 執行個體，並且協助您在安裝後執行額外的工作，如下一節中所列。|  
 |Database Engine 組態|按一下 [加入目前使用者]****，將使用者的 Windows 帳戶加入系統管理員固定伺服器角色。 您稍後必須能夠執行 DQSInstaller.exe 檔案以完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安裝。|  
   
-##  <a name="post-installation-tasks"></a><a name="PostInstallationTasks"></a>安裝後工作  
+##  <a name="post-installation-tasks"></a><a name="PostInstallationTasks"></a> 後續安裝工作  
  完成 SQL Server 安裝精靈之後，您必須執行本節所述的額外步驟，才能完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 的安裝、進行設定，然後使用它。  
   
 1.  若要完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安裝，請執行 DQSInstaller.exe 檔案。 執行 DQSInstaller.exe 檔案時：  
@@ -89,7 +90,7 @@ ms.locfileid: "85942706"
   
      這樣就完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安裝。  
   
-     如需詳細資訊，請參閱[執行 DQSInstaller.exe 以完成 Data Quality Server 安裝](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)。  
+     如需詳細資訊，請參閱 [執行 DQSInstaller.exe 以完成 Data Quality Server 安裝](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)。  
   
 2.  對使用者授與 DQS 角色：  
   
@@ -116,10 +117,10 @@ ms.locfileid: "85942706"
 ## <a name="see-also"></a>另請參閱  
  [影片：安裝和設定 DQS](https://go.microsoft.com/fwlink/?LinkId=238241)   
  [.NET Framework 更新之後升級 SQLCLR 元件](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
- [使用 DQSInstaller.exe匯出和匯入 DQS 知識庫](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   
+ [使用 DQSInstaller.exe匯出和匯入 DQS 知識庫 ](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   
  [升級 Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)   
  [移除 Data Quality Server 物件](../../sql-server/install/remove-data-quality-server-objects.md)   
- [安裝 SQL Server 的商業智慧功能](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
+ [安裝 SQL Server 商務智慧功能](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
  [卸載 SQL Server](../../sql-server/install/uninstall-sql-server.md)   
  [Data Quality Services](../../data-quality-services/data-quality-services.md)   
  [針對 DQS 中的安裝和組態問題進行疑難排解](https://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  

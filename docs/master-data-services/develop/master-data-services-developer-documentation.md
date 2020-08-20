@@ -1,4 +1,5 @@
 ---
+description: Master Data Services 開發人員文件
 title: 開發人員檔
 ms.custom: ''
 ms.date: 03/17/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e3dc41680a336936bf419dbcd52255e8a60120a3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3c1772c12889da4200553a7f303e2b6c9c26b894
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892272"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461758"
 ---
 # <a name="master-data-services-developer-documentation"></a>Master Data Services 開發人員文件
 
@@ -42,7 +43,7 @@ ms.locfileid: "85892272"
  <xref:Microsoft.MasterDataServices.ServiceClient> 類別之 Web 服務作業的分類清單。  
   
 ## <a name="custom-workflows"></a>自訂工作流程  
- [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 使用商務規則建立基本工作流程解決方案。 您可以自動更新與驗證資料，並根據您所指定的條件傳送電子郵件通知。 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 中的商務規則可用來管理最常見的工作流程案例。 如果您的工作流程需要更複雜的事件處理 (例如多層審核或複雜決策樹)，可以設定 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 將資料傳送到您所建立的自訂組件。 若要處理自訂工作流程，您必須在 web 應用程式電腦上設定並啟動 SQL Server MDS 工作流程整合服務，並建立可執行[MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130))介面的元件。  
+ [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 使用商務規則建立基本工作流程解決方案。 您可以自動更新與驗證資料，並根據您所指定的條件傳送電子郵件通知。 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 中的商務規則可用來管理最常見的工作流程案例。 如果您的工作流程需要更複雜的事件處理 (例如多層審核或複雜決策樹)，可以設定 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 將資料傳送到您所建立的自訂組件。 若要處理自訂工作流程，您必須在 web 應用程式電腦上設定和啟動 SQL Server MDS 工作流程整合服務，以及建立可執行 [MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) 介面的元件。  
   
 ### <a name="custom-workflow-content"></a>自訂的工作流程內容  
  [建立自訂工作流程 &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)  

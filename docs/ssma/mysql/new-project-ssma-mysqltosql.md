@@ -1,4 +1,5 @@
 ---
+description: 新增專案 (SSMA) (MySQLToSQL)
 title: 新專案 (SSMA)  (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: 7a3846ee-b221-47a5-ac8c-d08a962931af
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1d1e6b634fbb5c131e7f9e7ffdce1c374ca40162
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 7c8136b85de92fa4b7019ac8b9320aba4b3fdd06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935297"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463350"
 ---
 # <a name="new-project-ssma-mysqltosql"></a>新增專案 (SSMA) (MySQLToSQL)
-使用 [**新增專案**] 對話方塊來建立新的 SSMA 專案。 若要存取 [**新增專案**] 對話方塊，請**在 [檔案] 功能表上**，按一下 [**新增專案**]。  
+使用 [ **新增專案** ] 對話方塊來建立新的 SSMA 專案。 若要存取 [ **新增專案** ] 對話方塊，請按一下 [檔案 **] 功能表上** 的 [ **新增專案**]。  
   
 ## <a name="options"></a>選項。  
 **名稱**  
   
-輸入專案的名稱。 SSMA 將會附加副檔名。  
+輸入專案的名稱。 SSMA 會附加副檔名。  
   
 **位置**  
   
@@ -38,7 +39,7 @@ ms.locfileid: "87935297"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   

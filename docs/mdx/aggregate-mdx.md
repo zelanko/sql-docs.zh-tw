@@ -1,5 +1,6 @@
 ---
-title: 匯總（MDX） |Microsoft Docs
+description: Aggregate (MDX)
+title: 匯總 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6c75ab71456dc8b7ffc3efdf6bd157693de14881
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1e3f00ffbf662422f162d493a585d3972518431
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017176"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461690"
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
 
@@ -37,12 +38,12 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 ## <a name="remarks"></a>備註  
  如果已指定空的 Tuple 集合或空的集合，此函數會傳回空白值。  
   
- 下表描述**聚合**函數如何與不同的彙總函式搭配運作。  
+ 下表描述 **聚合** 函數如何以不同的彙總函式運作。  
   
 |彙總運算子|結果|  
 |--------------------------|------------|  
 |Sum|傳回集合上的值總和。|  
-|Count|傳回集合上的值計數。|  
+|計數|傳回集合上的值計數。|  
 |最大值|傳回集合上的最大值。|  
 |最小值|傳回集合上的最小值。|  
 |局部加總彙總函式|將形狀投射到時間座標軸後，傳回在集合上局部加總行為的計算。|  
@@ -55,7 +56,7 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 |指派|指派是根據量值彙總函式進行彙總。 如果量值彙總函式是相異計數，則指派是加總的。|  
   
 ## <a name="examples"></a>範例  
- 下列範例會從「**艾德公司**」 `Measures.[Order Quantity]` cube 中傳回成員的總和（在`Date`維度中包含的前八2003個月內）。  
+ 下列範例會傳回成員的總和 `Measures.[Order Quantity]` ，此成員是在維度所包含之日曆年度2003的前八個月 `Date` ，從 [ **艾德作品** ] cube 匯總而來。  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -123,13 +124,13 @@ WHERE ([Geography].[State-Province].x,
   
 ## <a name="see-also"></a>另請參閱  
  [PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md)   
- [&#40;MDX&#41;的子系](../mdx/children-mdx.md)   
+ [&#40;MDX 的子系&#41;](../mdx/children-mdx.md)   
  [Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
- [&#40;&#41; &#40;MDX&#41;設定計數](../mdx/count-set-mdx.md)   
+ [&#40;設定&#41; &#40;MDX&#41;的計數 ](../mdx/count-set-mdx.md)   
  [篩選 &#40;MDX&#41;](../mdx/filter-mdx.md)   
  [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
  [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
- [MDX&#41;的屬性 &#40;](../mdx/properties-mdx.md)   
+ [MDX&#41;&#40;屬性 ](../mdx/properties-mdx.md)   
  [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
  [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   

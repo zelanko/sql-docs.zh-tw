@@ -1,4 +1,5 @@
 ---
+description: Data Quality Client 首頁畫面
 title: Data Quality Client 首頁畫面
 ms.date: 02/29/2012
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 4b1a25fc4bee5c66838c7e29f7c34dc67a572b79
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: aaca3245731102ad667f8507761f57da0adb1437
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899110"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462401"
 ---
 # <a name="data-quality-client-home-screen"></a>Data Quality Client 首頁畫面
 
@@ -24,7 +25,7 @@ ms.locfileid: "85899110"
 
   使用這個畫面以存取 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 三大工作群組的使用者介面：知識庫管理、資料品質專案，以及系統管理。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
   
 ### <a name="knowledge-base-management"></a>知識庫管理  
  DQS 知識庫是中繼資料的儲存機制，DQS 使用中繼資料以改善資料品質。 此中繼資料是由 DQS 平台在電腦輔助的知識探索程序中以及資料服務員在互動式定義域管理程序中所建立。  
@@ -59,11 +60,11 @@ ms.locfileid: "85899110"
  顯示與連接之 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]相關的所有目前和歷程記錄活動的狀態檢視。 監視的活動類型包含知識管理、資料品質專案和以 SSIS 為基礎的資料更正。  
   
  **Configuration**  
- 顯示參考資料服務帳戶的設定屬性（透過 Azure Marketplace 並直接參考資料服務）、一般設定（互動式清理、比對和程式碼剖析）和記錄嚴重性設定。  
+ 顯示參考資料服務帳戶的設定屬性 (透過 Azure Marketplace 和直接參考資料服務) 、一般設定 (互動式清理、比對和分析) 和記錄嚴重性設定。  
   
 ## <a name="see-also"></a>另請參閱  
  [DQS 知識庫和定義域](../data-quality-services/dqs-knowledge-bases-and-domains.md)   
- [&#40;DQS&#41;的資料品質專案](../data-quality-services/data-quality-projects-dqs.md)   
+ [&#40;DQS&#41;的資料品質專案 ](../data-quality-services/data-quality-projects-dqs.md)   
  [dqs 管理](../data-quality-services/dqs-administration.md)  
   
   

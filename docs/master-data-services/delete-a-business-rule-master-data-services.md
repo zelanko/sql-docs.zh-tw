@@ -1,4 +1,5 @@
 ---
+description: 刪除商務規則 (Master Data Services)
 title: 刪除商務規則
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b97aa4f9-569f-451d-ad62-65b81f980299
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 475af6465a5e79e6577c60ac88a312fb5d0d4cf9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 1a649c1d04d1d52fee2864991bbe051b04814ee6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812770"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461747"
 ---
 # <a name="delete-a-business-rule-master-data-services"></a>刪除商務規則 (Master Data Services)
 
@@ -29,12 +30,12 @@ ms.locfileid: "85812770"
 > [!NOTE]  
 >  您可以避免資料使用商務規則來加以驗證，其方式是排除該商務規則，而不是將它刪除。 如需詳細資訊，請參閱 [排除商務規則 &#40;Master Data Services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-delete-a-business-rule"></a>若要刪除商務規則  
   
@@ -42,7 +43,7 @@ ms.locfileid: "85812770"
   
 2.  從功能表列，指向 **[管理]** ，然後按一下 **[商務規則]**。  
   
-3.  在 [**商務規則**] 頁面上，從 [**模型**] 下拉式清單中選取模型。  
+3.  在 [ **商務規則** ] 頁面上，從 [ **模型** ] 下拉式清單中選取模型。  
   
 4.  從 [實體] **** 下拉式清單選取實體。  
   

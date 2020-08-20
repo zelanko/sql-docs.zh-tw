@@ -1,4 +1,5 @@
 ---
+description: 建立及執行實體同步關係 (Master Data Services)
 title: 建立及執行實體同步關係
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1dee8767cc5d8d975ef327073d5767967207eed2
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 6e96975fbd7946c53f60af29a91cec938b0ffeb0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813031"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461790"
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>建立及執行實體同步關係 (Master Data Services)
 
@@ -23,12 +24,12 @@ ms.locfileid: "85813031"
 
   實體同步是實體版本間單向且可重複的同步處理。 它提供不同模型間共用實體資料的方法。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  建立實體同步關係的必要條件：  
   
 -   您必須擁有存取系統管理功能區域的權限。 如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
--   您必須是目標模型的模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必須是目標模型的模型管理員。 如需詳細資訊，請參閱系統 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 -   您必須至少具備來源實體及其屬性與成員的讀取存取權。  
   
@@ -36,7 +37,7 @@ ms.locfileid: "85813031"
   
 -   您必須擁有存取系統管理功能區域的權限。 如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
--   您必須是目標模型的模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必須是目標模型的模型管理員。 如需詳細資訊，請參閱系統 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
  建立實體同步關係時，請考量以下事項。  
   
@@ -97,7 +98,7 @@ ms.locfileid: "85813031"
   
 |資料行|描述|  
 |------------|-----------------|  
-|狀態|同步關係狀態。<br /><br /> 當您按一下 [**儲存**] 或 [執行同步處理關聯性] 時，會顯示 [![正在更新狀態](../master-data-services/media/mds-statusicon-updating.png "更新狀態的圖示")影像] 圖示，表示同步處理關聯性正在更新中。<br /><br /> 如果建立、編輯或執行同步關聯性時發生錯誤，則會顯示 [![錯誤狀態](../master-data-services/media/mds-statusicon-error.png "錯誤狀態圖示")影像] 圖示。<br /><br /> 否則，狀態為 [確定]，並顯示 [![確定狀態影像] 圖示](../master-data-services/media/mds-statusicon-ok.png "[確定] 狀態的圖示")。|  
+|狀態|同步關係狀態。<br /><br /> 當您按一下 [ **儲存** ] 或 [執行同步關聯性] 時，就會顯示 ![更新狀態](../master-data-services/media/mds-statusicon-updating.png "更新狀態的圖示") 影像的圖示，指出同步關係正在更新。<br /><br /> 如果建立、編輯或執行同步關係時發生錯誤，就會顯示 ![錯誤狀態](../master-data-services/media/mds-statusicon-error.png "錯誤狀態圖示") 影像的圖示。<br /><br /> 否則，狀態會是 [確定]，而且會顯示 [ ![確定] 狀態](../master-data-services/media/mds-statusicon-ok.png "[確定] 狀態的圖示") 影像的圖示。|  
 |來源模型|來源模型名稱。|  
 |來源版本|來源版本名稱。|  
 |來源實體|來源實體名稱。|  

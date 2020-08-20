@@ -1,4 +1,5 @@
 ---
+description: 環境控制代碼
 title: 環境控制碼 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,26 +14,26 @@ helpviewer_keywords:
 ms.assetid: 917f1b0c-272b-4e37-a1f5-87cd24b9fa21
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b504995e99dfad032598485e370b4d5a6681ae81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1aa22a89288f4dd5a8400484078f57b60fc135fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300438"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461500"
 ---
 # <a name="environment-handles"></a>環境控制代碼
-*環境*是用來存取資料的全域內容;與環境相關聯的是本質上的全域資訊，例如：  
+*環境*是用來存取資料的全域內容;與環境相關聯的任何資訊都是全域性質的資訊，例如：  
   
 -   環境的狀態  
   
 -   目前的環境層級診斷  
   
--   目前在環境上配置的連接控制碼  
+-   目前已在環境上配置的連接控制碼  
   
 -   每個環境屬性的目前設定  
   
- 在執行 ODBC （驅動程式管理員或驅動程式）的程式碼片段內，環境控制碼會識別包含此資訊的結構。  
+ 在處理 ODBC (驅動程式管理員或驅動程式) 的程式碼中，環境控制碼會識別包含這項資訊的結構。  
   
- 在 ODBC 應用程式中，通常不會使用環境控制碼。 它們一律用於呼叫**SQLDataSources**和**SQLDrivers** ，有時用於對**SQLAllocHandle**、 **SQLEndTran**、 **SQLFreeHandle**、 **SQLGetDiagField**和**SQLGetDiagRec**的呼叫。  
+ 環境控制碼不常用於 ODBC 應用程式。 它們一律用於呼叫 **SQLDataSources** 和 **SQLDrivers** ，有時會用於 **SQLAllocHandle**、 **SQLEndTran**、 **SQLFreeHandle**、 **SQLGetDiagField**和 **SQLGetDiagRec**的呼叫中。  
   
- 執行 ODBC （驅動程式管理員或驅動程式）的每個程式碼片段都包含一個或多個環境控制碼。 例如，驅動程式管理員會針對連接到它的每個應用程式維護個別的環境控制碼。 環境控制碼會使用**SQLAllocHandle**配置，並與**SQLFreeHandle**一起釋放。
+ 在驅動程式管理員或驅動程式) 中執行 ODBC (的每個程式碼都包含一或多個環境控制碼。 例如，驅動程式管理員會為每個連接到它的應用程式維護個別的環境控制碼。 環境控制碼會使用 **SQLAllocHandle** 進行配置，並使用 **SQLFreeHandle**來釋放。

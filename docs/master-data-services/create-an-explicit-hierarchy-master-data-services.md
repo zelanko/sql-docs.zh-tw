@@ -1,4 +1,5 @@
 ---
+description: 建立明確階層 (Master Data Services)
 title: 建立明確階層
 ms.custom: ''
 ms.date: 04/01/2016
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 13eab8e856ecb690cf0aa9badb77c8c91fc790ce
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 8512e53686d747fedb8ac5158a388e48b38469e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813056"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461807"
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>建立明確階層 (Master Data Services)
 
@@ -28,12 +29,12 @@ ms.locfileid: "85813056"
   
  建立明確階層之後，您可以在總管**** 功能區域的這個階層中加入成員。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 -   您必須啟用明確階層和集合的實體。  
   
@@ -41,11 +42,11 @@ ms.locfileid: "85813056"
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
   
-2.  在 [**管理模型**] 頁面上，從方格中選取模型，然後按一下 [**實體**]。  
+2.  在 [ **管理模型** ] 頁面上，從方格中選取模型，然後按一下 [ **實體**]。  
   
 3.  在 [管理實體]**** 頁面上，從方格中選取含有您想要為其建立明確階層的實體的資料列。  
   
-4.  按一下 [**明確**階層]。  
+4.  按一下 [ **明確**階層]。  
   
 5.  在 [管理明確階層]**** 頁面上，按一下 [加入]****。  
   
@@ -76,7 +77,7 @@ ms.locfileid: "85813056"
   
 ## <a name="see-also"></a>另請參閱  
  [明確階層 &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
- [具有明確大寫的衍生階層 &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
+ [具有明確 Caps &#40;Master Data Services&#41;的衍生階層 ](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
  [變更明確階層名稱 &#40;Master Data Services&#41;](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)  
   
   

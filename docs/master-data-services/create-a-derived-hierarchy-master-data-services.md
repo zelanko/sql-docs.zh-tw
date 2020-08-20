@@ -1,4 +1,5 @@
 ---
+description: 建立衍生階層 (Master Data Services)
 title: 建立衍生階層
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fec653c4-11cc-46a2-8dd8-b605341ebb40
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a2ff6e7eed27cd3482aa6acc7a6609562e8d3ea6
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 4ada9791d75d273bd28c516019be8cf9e7ce1088
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812781"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461880"
 ---
 # <a name="create-a-derived-hierarchy-master-data-services"></a>建立衍生階層 (Master Data Services)
 
@@ -29,12 +30,12 @@ ms.locfileid: "85812781"
 > [!NOTE]  
 >  如果成員沒有網域屬性值，衍生階層中不會包含此成員。 若需要求所有成員的網域屬性值，請參閱[要求屬性值 &#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md)。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-create-a-derived-hierarchy"></a>若要建立衍生階層  
   
@@ -44,7 +45,7 @@ ms.locfileid: "85812781"
   
 3.  在 [衍生階層維護]**** 頁面上，選取 [模型]**** 清單中的模型。  
   
-4.  按一下 **[新增]** 。  
+4.  按一下 [新增] 。  
   
 5.  在 [加入衍生階層]**** 頁面上的 [衍生階層名稱]**** 方塊中，輸入階層的名稱。  
   
@@ -61,7 +62,7 @@ ms.locfileid: "85812781"
   
 ## <a name="see-also"></a>另請參閱  
  [衍生階層 &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)   
- [具有明確大寫的衍生階層 &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
+ [具有明確 Caps &#40;Master Data Services&#41;的衍生階層 ](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
  [網域屬性 &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
   
   

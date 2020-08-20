@@ -1,4 +1,5 @@
 ---
+description: 建立 SQL Server Agent 作業以封存 Database Mail 訊息及事件記錄檔
 title: 建立 SQL Server Agent 作業以封存 Database Mail 訊息及事件
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 1cc39f3a2a849bd60cda71c5988eeb0cadcd9a88
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 73139f22c3a69494f6a8e27df22aa4bf26c3cf87
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737598"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461044"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>建立 SQL Server Agent 作業以封存 Database Mail 訊息及事件記錄檔
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,4 +1,5 @@
 ---
+description: Data Quality Services
 title: Data Quality Services
 ms.date: 10/12/2013
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 138086e898617da8e14714dd97e74568bcd57c0d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dc765b9cca33e249e4efda60bad08781eee35b15
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882859"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462146"
 ---
 # <a name="data-quality-services"></a>Data Quality Services
 
@@ -27,17 +28,17 @@ ms.locfileid: "85882859"
  如需有關安裝 DQS 的詳細資訊，請參閱＜ [Install Data Quality Services](../data-quality-services/install-windows/install-data-quality-services.md)＞。 如想將 DQS 現有版本升級至 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]，請參閱[升級 Data Quality Services](../database-engine/install-windows/upgrade-data-quality-services.md)。  
   
  **依區域瀏覽內容**  
- ![小型檔案資料夾圖示](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小型檔案資料夾圖示") [Data Quality Client 應用程式](../data-quality-services/data-quality-client-application.md)  
+ [Data Quality Client 應用程式](../data-quality-services/data-quality-client-application.md)的![小型檔案資料夾圖示](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小型檔案資料夾圖示")  
   
- ![小型檔案資料夾圖示](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小型檔案資料夾圖示") [DQS 知識庫和定義域](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
+ ![小型檔案資料夾圖示](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小型檔案資料夾圖示") [DQS 知識庫和網域](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
  ![小型檔案資料夾圖示](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小型檔案資料夾圖示")[資料品質專案](../data-quality-services/data-quality-projects-dqs.md)  
   
  ![小型檔案資料夾圖示](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小型檔案資料夾圖示")[資料清理](../data-quality-services/data-cleansing.md)  
   
- ![小型檔案資料夾圖示](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小型檔案資料夾圖示")[資料符合](../data-quality-services/data-matching.md)  
+ ![小型檔案資料夾圖示](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小型檔案資料夾圖示")[資料](../data-quality-services/data-matching.md)比對  
   
- [DQS 中的](../data-quality-services/reference-data-services-in-dqs.md)![小型檔案資料夾圖示](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小型檔案資料夾圖示")參考資料服務  
+ DQS 中的![小型檔案資料夾圖示](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小型檔案資料夾圖示")[參考資料服務](../data-quality-services/reference-data-services-in-dqs.md)  
   
  DQS 中的![小型檔案資料夾圖示](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小型檔案資料夾圖示")[資料分析和通知](../data-quality-services/data-profiling-and-notifications-in-dqs.md)  
   

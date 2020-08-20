@@ -1,4 +1,5 @@
 ---
+description: 建立日期屬性 (Master Data Services)
 title: 建立日期屬性
 ms.custom: ''
 ms.date: 03/15/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cb52caebef0a9c042e3f7a077aa098cdc42b7ff4
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 5b2bb59ff72884649feb2167c41c5d838b9779d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363151"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461896"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>建立日期屬性 (Master Data Services)
 
@@ -29,20 +30,20 @@ ms.locfileid: "87363151"
 > [!NOTE]  
 >  該屬性稱為 DateTime，但不支援時間值。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱系統[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
--   您必須有要建立屬性的實體。 如需詳細資訊，請參閱[建立實體 &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)。  
+-   您必須有要建立屬性的實體。 如需詳細資訊，請參閱 [建立實體 &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)。  
   
 ### <a name="to-create-a-date-attribute"></a>若要建立日期屬性  
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
   
-2.  在 [**管理模型**] 頁面上，從方格中選取模型，然後按一下 [**實體**]。  
+2.  在 [ **管理模型** ] 頁面上，從方格中選取模型，然後按一下 [ **實體**]。  
   
 3.  在 [管理實體] **** 頁面上，選取您要為其建立屬性之實體的資料列。  
   
@@ -56,7 +57,7 @@ ms.locfileid: "87363151"
   
     -   如果是集合的屬性，請選取 [成員類型] **** 清單方塊的 [集合] **** 。  
   
-6.  在 **[名稱]** 方塊中，輸入屬性的名稱。 如需不應當做屬性名稱使用的字組清單，請參閱[保留字 &#40;Master Data Services&#41;](../master-data-services/reserved-words-master-data-services.md)。  
+6.  在 **[名稱]** 方塊中，輸入屬性的名稱。 如需不應該當做屬性名稱使用的單字清單，請參閱 [&#40;Master Data Services&#41;的保留字 ](../master-data-services/reserved-words-master-data-services.md)。  
   
 7.  (選擇性) 輸入顯示名稱，然後在 [描述] **** 方塊中輸入屬性的描述。  
   
@@ -90,7 +91,7 @@ ms.locfileid: "87363151"
  輸入遮罩是自訂的 .NET DateTime 格式字串。 如需詳細資訊，請參閱 [自訂日期和時間格式字串](https://msdn.microsoft.com/library/8kb3ddd4\(v=vs.110\).aspx)  
   
 ## <a name="see-also"></a>另請參閱  
- [Master Data Services &#40;的屬性&#41;](../master-data-services/attributes-master-data-services.md)   
+ [屬性 &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
  [變更屬性名稱和資料類型 &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [建立以網域為基礎的屬性 &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
  [建立檔案屬性 &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
