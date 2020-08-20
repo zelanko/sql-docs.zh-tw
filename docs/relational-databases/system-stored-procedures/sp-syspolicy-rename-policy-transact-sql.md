@@ -1,5 +1,6 @@
 ---
-title: sp_syspolicy_rename_policy （Transact-sql） |Microsoft Docs
+description: sp_syspolicy_rename_policy (Transact-SQL)
+title: sp_syspolicy_rename_policy (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ce2b07f5-23b1-4f49-8e7b-c18cf3f3d45b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e157090ba5fb9b6c3c9da7fb88d0aa0612d2f727
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 782128b1d41f94c63f4e9de22e618378c4ec6e6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892693"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481008"
 ---
 # <a name="sp_syspolicy_rename_policy-transact-sql"></a>sp_syspolicy_rename_policy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,19 +42,19 @@ sp_syspolicy_rename_policy { [ @name = ] 'name' | [ @policy_id = ] policy_id }
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @name = ] 'name'`這是您想要重新命名的原則名稱。 *名稱*是**sysname**，而且如果*policy_id*是 Null，就必須指定。  
+`[ @name = ] 'name'` 這是您想要重新命名的原則名稱。 *名稱* 是 **sysname**，而且如果 *policy_id* 為 Null，則必須指定。  
   
-`[ @policy_id = ] policy_id`這是您要重新命名之原則的識別碼。 *policy_id*是**int**，而且如果*name*為 Null，就必須指定。  
+`[ @policy_id = ] policy_id` 這是您要重新命名之原則的識別碼。 *policy_id* 為 **int**，而且如果 *name* 為 Null，則必須指定。  
   
-`[ @new_name = ] 'new_name'`這是原則的新名稱。 *new_name*是**sysname**，而且是必要的。 不得為 NULL 或空字串。  
+`[ @new_name = ] 'new_name'` 這是原則的新名稱。 *new_name* 為 **sysname**，而且是必要的。 不得為 NULL 或空字串。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
  您必須在 msdb 系統資料庫的內容中執行 sp_syspolicy_rename_policy。  
   
- 您必須為 [*名稱*] 或 [ *policy_id*] 指定一個值。 兩者不得同時為 NULL。 若要取得這些值，請查詢 msdb.dbo.syspolicy_policies 系統檢視表。  
+ 您必須指定 *name* 或 *policy_id*的值。 兩者不得同時為 NULL。 若要取得這些值，請查詢 msdb.dbo.syspolicy_policies 系統檢視表。  
   
 ## <a name="permissions"></a>權限  
  需要 PolicyAdministratorRole 固定資料庫角色中的成員資格。  

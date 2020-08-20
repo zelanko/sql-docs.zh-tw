@@ -1,5 +1,6 @@
 ---
-title: sp_scriptdynamicupdproc （Transact-sql） |Microsoft Docs
+description: sp_scriptdynamicupdproc (Transact-SQL)
+title: sp_scriptdynamicupdproc (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6c6d6639f22963c1b058a1b9a20ed5758c00c417
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 381e2b7ad6c8b463cb410b6d40a6cd6c6b3addec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901324"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481119"
 ---
 # <a name="sp_scriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,19 +38,19 @@ sp_scriptdynamicupdproc [ @artid =] artid
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @artid = ] artid`這是發行項識別碼。 *artid*是**int**，沒有預設值。  
+`[ @artid = ] artid` 這是發行項識別碼。 *>artid* 是 **int**，沒有預設值。  
   
 ## <a name="result-sets"></a>結果集  
- 傳回由單一**Nvarchar （4000）** 資料行所組成的結果集。 這個結果集形成用來建立自訂預存程序的完整 CREATE PROCEDURE 陳述式。  
+ 傳回由單一 **Nvarchar (4000) ** 資料行所組成的結果集。 這個結果集形成用來建立自訂預存程序的完整 CREATE PROCEDURE 陳述式。  
   
 ## <a name="remarks"></a>備註  
- **sp_scriptdynamicupdproc**用於異動複寫中。 預設 MCALL 指令碼邏輯包括 UPDATE 陳述式內的所有資料行，且利用點陣圖來判斷已變更的資料行。 如果資料行並未變更，資料行會重設為其本身，這通常不會有問題。 如果資料行已建立索引，就會進行額外的處理。 動態方法只包括已變更的資料行，這會提供最佳的 UPDATE 字串。 不過，當建立動態 UPDATE 陳述式時，會在執行階段進行額外的處理。 我們建議您測試動態和靜態方法，然後再選擇最佳方案。  
+ **sp_scriptdynamicupdproc** 用於異動複寫中。 預設 MCALL 指令碼邏輯包括 UPDATE 陳述式內的所有資料行，且利用點陣圖來判斷已變更的資料行。 如果資料行並未變更，資料行會重設為其本身，這通常不會有問題。 如果資料行已建立索引，就會進行額外的處理。 動態方法只包括已變更的資料行，這會提供最佳的 UPDATE 字串。 不過，當建立動態 UPDATE 陳述式時，會在執行階段進行額外的處理。 我們建議您測試動態和靜態方法，然後再選擇最佳方案。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_scriptdynamicupdproc**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色或 **db_owner** 固定資料庫角色的成員，才能夠執行 **sp_scriptdynamicupdproc**。  
   
 ## <a name="examples"></a>範例  
- 這個範例會在**pubs**資料庫的**作者**資料表上建立發行項（ *artid*設為**1**），並指定 UPDATE 語句是要執行的自訂程式：  
+ 這個範例會建立一個發行項， (在**pubs**資料庫的**作者**資料表上將 *>artid*設為**1**) ，並指定 UPDATE 語句是要執行的自訂程式：  
   
 ```  
 'MCALL sp_mupd_authors'  

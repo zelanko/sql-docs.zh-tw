@@ -1,5 +1,6 @@
 ---
-title: sp_help_peerconflictdetection （Transact-sql） |Microsoft Docs
+description: sp_help_peerconflictdetection (Transact-SQL)
+title: sp_help_peerconflictdetection (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 59e04107-5eaa-44a1-beb6-ac4f2dbbcb28
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0bf806900b25b69d98cc1abaab4bd49db444e5e9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 03dc129a50e9bffdf7052dd0bed2e9d58fb20310
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891713"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481173"
 ---
 # <a name="sp_help_peerconflictdetection-transact-sql"></a>sp_help_peerconflictdetection (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,11 +39,11 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @publication =] '*發行*'  
- 這是要傳回資訊的發行集名稱。 *發行*集是**sysname**，沒有預設值。  
+ [ @publication =] '*發行*集 '  
+ 這是要傳回資訊的發行集名稱。 *發行* 集是 **sysname**，沒有預設值。  
   
- [ @timeout =]*超時*  
- 指定此程序等候拓撲中每個節點之回應的時間長度 (以秒為單位)，過了這段期間將會逾時。 如果拓撲中有唯讀訂閱者，指定逾時值是無效的。 唯讀訂閱者絕對不會回應來自這個程序的呼叫。 *timeout*是**int**，預設值是60。  
+ [ @timeout =] *超時*  
+ 指定此程序等候拓撲中每個節點之回應的時間長度 (以秒為單位)，過了這段期間將會逾時。 如果拓撲中有唯讀訂閱者，指定逾時值是無效的。 唯讀訂閱者絕對不會回應來自這個程序的呼叫。 *timeout* 是 **int**，預設值是60。  
   
 ## <a name="result-sets"></a>結果集  
  sp_help_peerconflictdetection 會傳回三個結果集， 這些結果記載於以下主題中：  
@@ -54,7 +55,7 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
 -   [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md)  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
  sp_help_peerconflictdetection 會用於點對點異動複寫中。  

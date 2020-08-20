@@ -1,5 +1,6 @@
 ---
-title: sp_cursor_list （Transact-sql） |Microsoft Docs
+description: sp_cursor_list (Transact-SQL)
+title: sp_cursor_list (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e228e44fe8327bb22ea833a8dc7a531b50bcab26
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7f033c24d2cfd84c26c9008e3f73adf5152715c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85869721"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481360"
 ---
 # <a name="sp_cursor_list-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,12 +43,12 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
   
 ## <a name="arguments"></a>引數  
  [ @cursor_return =] *cursor_variable_name*輸出  
- 這是宣告資料指標變數的名稱。 *cursor_variable_name*是**cursor**，沒有預設值。 資料指標是一個可捲動的動態唯讀資料指標。  
+ 這是宣告資料指標變數的名稱。 *cursor_variable_name* 是資料 **指標**，沒有預設值。 資料指標是一個可捲動的動態唯讀資料指標。  
   
  [ @cursor_scope =] *cursor_scope*  
- 指定要報告的資料指標層級。 *cursor_scope*為**int**，沒有預設值，而且可以是下列其中一個值。  
+ 指定要報告的資料指標層級。 *cursor_scope* 是 **int**，沒有預設值，它可以是下列值之一。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |1|報告所有本機資料指標。|  
 |2|報告所有全域資料指標。|  
@@ -64,10 +65,10 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |reference_name|**sysname**|用來參考資料指標的名稱。 如果是利用 DECLARE CURSOR 陳述式所提供的名稱來參考資料指標，參考名稱就與資料指標名稱相同。 如果是利用變數來參考資料指標，參考名稱就是資料指標變數的名稱。|  
-|cursor_name|**sysname**|DECLARE CURSOR 陳述式的資料指標名稱。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，如果資料指標是藉由將資料指標變數設定為數據指標來建立， **cursor_name**會傳回資料指標變數的名稱。  在舊版中，這個輸出資料行會傳回系統產生的名稱。|  
+|cursor_name|**sysname**|DECLARE CURSOR 陳述式的資料指標名稱。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，如果資料指標是藉由將資料指標變數設定為數據指標所建立， **cursor_name** 會傳回資料指標變數的名稱。  在舊版中，這個輸出資料行會傳回系統產生的名稱。|  
 |cursor_scope|**smallint**|1 = LOCAL <br /><br /> 2 = GLOBAL|  
 |status|**smallint**|與 CURSOR_STATUS 系統函數所報告相同的值：<br /><br /> 1 = 資料指標名稱或變數所參考的資料指標是開啟的。 如果資料指標是不區分、靜態或索引鍵集，它至少會有一個資料列。 如果資料指標是動態的，結果集就會有零或多個資料列。<br /><br /> 0 = 資料指標名稱或變數所參考的資料指標是開啟的，但沒有資料列。 動態資料指標永不傳回這個值。<br /><br /> -1 = 資料指標名稱或變數所參考的資料指標是關閉的。<br /><br /> -2 = 只適用於資料指標變數。 沒有指派給變數的資料指標。 可能是 OUTPUT 參數將資料指標指派給變數，但傳回之前，預存程序便關閉了資料指標。<br /><br /> -3 = 含指定名稱的資料指標或資料指標變數不存在，或資料指標變數還沒有配置資料指標。|  
-|模型|**smallint**|1 = 不區分 (或靜態)<br /><br /> 2 = 索引鍵集<br /><br /> 3 = 動態<br /><br /> 4 = 向前快轉|  
+|model|**smallint**|1 = 不區分 (或靜態)<br /><br /> 2 = 索引鍵集<br /><br /> 3 = 動態<br /><br /> 4 = 向前快轉|  
 |並行|**smallint**|1 = 唯讀<br /><br /> 2 = 捲動鎖定<br /><br /> 3 = 開放式|  
 |scrollable|**smallint**|0 = 順向<br /><br /> 1 = 可捲動|  
 |open_status|**smallint**|0 = 已關閉<br /><br /> 1 = 開啟|  
@@ -85,7 +86,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
   
 -   ODBC 應用程式所開啟的 API 伺服器資料指標，之後會被稱為 SQLSetCursorName，用來指定資料指標名稱。  
   
- 請利用 sp_describe_cursor_columns 來取得資料指標所傳回之結果集的屬性描述。 請利用 sp_describe_cursor_tables 來取得資料指標所參考之基底資料表的報表。 sp_describe_cursor 會報告與 sp_cursor_list 相同的資訊，但僅適用于指定的資料指標。  
+ 請利用 sp_describe_cursor_columns 來取得資料指標所傳回之結果集的屬性描述。 請利用 sp_describe_cursor_tables 來取得資料指標所參考之基底資料表的報表。 sp_describe_cursor 報告與 sp_cursor_list 相同的資訊，但僅適用于指定的資料指標。  
   
 ## <a name="permissions"></a>權限  
  執行權限預設會授與給 public 角色。  

@@ -1,4 +1,5 @@
 ---
+description: 日期和時間類型
 title: 日期和時間類型 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/23/2017
@@ -12,12 +13,12 @@ dev_langs:
 ms.assetid: 100d5670-e2d8-425c-a927-2b4dfe453e28
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9cd224234c992184bce0e29e036e2e44aa0b6b4f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 646c797959c0b9fc0ebe4faada379256b298c0c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732831"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479879"
 ---
 # <a name="date-and-time-types"></a>日期和時間類型
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

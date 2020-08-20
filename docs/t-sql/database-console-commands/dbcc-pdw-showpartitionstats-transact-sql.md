@@ -1,4 +1,5 @@
 ---
+description: DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
 title: DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
 ms.custom: ''
 ms.date: 07/17/2017
@@ -11,12 +12,12 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 6d1a1a72fbe5ef1b8382901a62adfd95a907b765
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 03ef74fb824c39aee0045f378f6aaf5268052794
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484259"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479834"
 ---
 # <a name="dbcc-pdw_showpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
 

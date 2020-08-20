@@ -1,5 +1,6 @@
 ---
-title: sp_getsubscriptiondtspackagename （Transact-sql） |Microsoft Docs
+description: sp_getsubscriptiondtspackagename (Transact-SQL)
+title: sp_getsubscriptiondtspackagename (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 606c40aa-2593-43af-9762-0f260bbb51f2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b52cc85ed5576ab40599141b551382a288c537f7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e21e0ffd1815e56f50f09f08460657a37271ac9d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881605"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481240"
 ---
 # <a name="sp_getsubscriptiondtspackagename-transact-sql"></a>sp_getsubscriptiondtspackagename (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,12 +39,12 @@ sp_getsubscriptiondtspackagename [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'`這是發行集的名稱。 **'***發行***'** 是**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 這是發行集的名稱。 **'***發行***集 '** 是 **sysname**，沒有預設值。  
   
-`[ @subscriber = ] 'subscriber'`這是訂閱者的名稱。 *訂閱者*是 sysname，預設值是 Null。  
+`[ @subscriber = ] 'subscriber'` 這是訂閱者的名稱。 *訂閱者* 是 sysname，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="result-sets"></a>結果集  
   
@@ -52,9 +53,9 @@ sp_getsubscriptiondtspackagename [ @publication = ] 'publication'
 |**new_package_name**|**sysname**|DTS 封裝的名稱。|  
   
 ## <a name="remarks"></a>備註  
- **sp_getsubscriptiondtspackagename**用於快照式複寫和異動複寫中。  
+ **sp_getsubscriptiondtspackagename** 用於快照式複寫和異動複寫中。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_getsubscriptiondtspackagename**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色或 **db_owner** 固定資料庫角色的成員，才能夠執行 **sp_getsubscriptiondtspackagename**。  
   
   

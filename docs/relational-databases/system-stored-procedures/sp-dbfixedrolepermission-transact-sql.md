@@ -1,5 +1,6 @@
 ---
-title: sp_dbfixedrolepermission （Transact-sql） |Microsoft Docs
+description: sp_dbfixedrolepermission (Transact-SQL)
+title: sp_dbfixedrolepermission (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 69c80caccabb81fd2da1b3bdbe13ada8c5aa2582
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4bf302c2ab41d62da1e612b6e8661c00d53e50e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85867678"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481335"
 ---
 # <a name="sp_dbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  顯示固定資料庫角色的權限。 **sp_dbfixedrolepermission**會在中傳回正確的資訊 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 。 輸出不會反映 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中實作的權限階層變更。 如需詳細資訊，請參閱[資料庫層級角色](../../relational-databases/security/authentication-access/database-level-roles.md#fixed-database-roles)，這會顯示固定資料庫角色的清單及其對應的許可權。  
+  顯示固定資料庫角色的權限。 **sp_dbfixedrolepermission** 會在中傳回正確的資訊 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 。 輸出不會反映 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中實作的權限階層變更。 如需詳細資訊，請參閱 [資料庫層級角色](../../relational-databases/security/authentication-access/database-level-roles.md#fixed-database-roles)，其中顯示固定資料庫角色的清單，以及它的對應許可權。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -42,7 +43,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @rolename = ] 'role'`這是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固定資料庫角色的名稱。 *role*是**sysname**，預設值是 Null。 如果未指定*role* ，則會顯示所有固定資料庫角色的許可權。  
+`[ @rolename = ] 'role'` 這是有效 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固定資料庫角色的名稱。 *role* 是 **sysname**，預設值是 Null。 如果未指定 *role* ，則會顯示所有固定資料庫角色的許可權。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -52,10 +53,10 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**DbFixedRole**|**sysname**|固定資料庫角色的名稱|  
-|**權限**|**Nvarchar （70）**|與**DbFixedRole**相關聯的許可權|  
+|**權限**|**Nvarchar (70) **|與**DbFixedRole**相關聯的許可權|  
   
 ## <a name="remarks"></a>備註  
- 若要顯示固定資料庫角色的清單，請執行**sp_helpdbfixedrole**。 下表顯示固定資料庫角色。  
+ 若要顯示固定資料庫角色的清單，請執行 **sp_helpdbfixedrole**。 下表顯示固定資料庫角色。  
   
 |固定資料庫角色|描述|  
 |-------------------------|-----------------|  
@@ -69,7 +70,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 |**db_denydatareader**|資料庫拒絕資料讀取器|  
 |**db_denydatawriter**|資料庫拒絕資料寫入器|  
   
- **Db_owner**固定資料庫角色的成員具有所有其他固定資料庫角色的許可權。 若要顯示固定伺服器角色的許可權，請執行**sp_srvrolepermission**。  
+ **Db_owner**固定資料庫角色的成員具有所有其他固定資料庫角色的許可權。 若要顯示固定伺服器角色的許可權，請執行 **sp_srvrolepermission**。  
   
  結果集包括可以執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，以及資料庫角色成員可以執行的其他特殊活動。  
   
@@ -85,7 +86,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的安全性預存程式](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的安全性預存程式 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sp_droprolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_helpdbfixedrole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md)   

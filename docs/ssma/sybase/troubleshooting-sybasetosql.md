@@ -1,4 +1,5 @@
 ---
+description: 疑難排解 (SybaseToSQL)
 title: 疑難排解 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: 8684ed23-c36b-46f6-9687-30ad7f47f876
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 81796da3f15586fca400e4b3d4f07819ebe58308
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: e03d61c4ab08db69748b63109099d03ba95f9450
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934567"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480343"
 ---
 # <a name="troubleshooting-sybasetosql"></a>疑難排解 (SybaseToSQL)
-在執行主控台腳本或命令時，遇到遷移問題並不罕見。  
+在執行主控台腳本或命令的中途遇到遷移問題並不常見。  
   
-可修復的錯誤可能與：  
+可修復的錯誤可能與下列相關：  
   
 1.  函式  
   
@@ -35,5 +36,5 @@ ms.locfileid: "87934567"
   
 6.  變更專案設定  
   
-您可以藉由開啟透過主控台所建立的專案檔，使用 SSMA 使用者介面來修正問題。  
+您可以藉由開啟透過主控台建立的專案檔來修正問題，方法是使用 SSMA 使用者介面。  
   

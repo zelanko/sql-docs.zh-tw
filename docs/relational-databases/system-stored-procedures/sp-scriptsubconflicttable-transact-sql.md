@@ -1,5 +1,6 @@
 ---
-title: sp_scriptsubconflicttable （Transact-sql） |Microsoft Docs
+description: sp_scriptsubconflicttable (Transact-SQL)
+title: sp_scriptsubconflicttable (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 13867145-3dad-47a4-8d50-a65175418479
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 93656ff6bec2acc3c3f6f7ee189b1c45db75a7d6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e1c6d2a6ea66f0e2d937e1564d4abed36bd4af44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899195"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481051"
 ---
 # <a name="sp_scriptsubconflicttable-transact-sql"></a>sp_scriptsubconflicttable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,12 +38,12 @@ sp_scriptsubconflicttable [@publication =] 'publication'    , [@article =] 'arti
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'`這是包含發行項的發行集名稱。 這個名稱在資料庫內必須是唯一的。 *發行*集是**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 這是包含發行項的發行集名稱。 這個名稱在資料庫內必須是唯一的。 *發行* 集是 **sysname**，沒有預設值。  
   
-`[ @article = ] 'article'`這是訂閱發行項的名稱。 *文章*是**sysname**，沒有預設值。  
+`[ @article = ] 'article'` 這是訂閱發行項的名稱。 *文章* 是 **sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="result-sets"></a>結果集  
   
@@ -51,13 +52,13 @@ sp_scriptsubconflicttable [@publication =] 'publication'    , [@article =] 'arti
 |**cmdtext**|**nvarchar(4000)**|傳回針對給定的佇列訂閱發行項，在訂閱者上建立衝突資料表的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。 這份指令碼執行於訂閱資料庫的訂閱者端。|  
   
 ## <a name="remarks"></a>備註  
- **sp_scriptsubconflicttable**用於具有手動套用初始快照集之訂用帳戶的訂閱者。 衝突資料表是訂閱者的一份選擇性資料表。  
+ **sp_scriptsubconflicttable** 會用於具有以手動方式套用初始快照集之訂閱的訂閱者。 衝突資料表是訂閱者的一份選擇性資料表。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_scriptsubconflicttable**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色或 **db_owner** 固定資料庫角色的成員，才能夠執行 **sp_scriptsubconflicttable**。  
   
 ## <a name="see-also"></a>另請參閱  
- [佇列更新衝突偵測和解決](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
+ [佇列更新衝突偵測和解決方式](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

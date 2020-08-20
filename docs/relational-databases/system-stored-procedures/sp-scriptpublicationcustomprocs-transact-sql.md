@@ -1,5 +1,6 @@
 ---
-title: sp_scriptpublicationcustomprocs （Transact-sql） |Microsoft Docs
+description: sp_scriptpublicationcustomprocs (Transact-SQL)
+title: sp_scriptpublicationcustomprocs (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: b06102d5-4284-4834-b126-bc0baea49be5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 19a7b793a1bd7a72941a8f07baba44c584e5d8f2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d31a6f58b62d242fd6fe056eaac198fb0a7b7738
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85645382"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481054"
 ---
 # <a name="sp_scriptpublicationcustomprocs-transact-sql"></a>sp_scriptpublicationcustomprocs (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  針對啟用了自動產生自訂程序結構描述選項的發行集之所有資料表發行項，編寫自訂 INSERT、UPDATE 和 DELETE 程序的指令碼。 **sp_scriptpublicationcustomprocs**特別適用于設定手動套用快照集的訂閱。  
+  針對啟用了自動產生自訂程序結構描述選項的發行集之所有資料表發行項，編寫自訂 INSERT、UPDATE 和 DELETE 程序的指令碼。 **sp_scriptpublicationcustomprocs** 特別適用于設定手動套用快照集的訂閱。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -37,18 +38,18 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication_name'`這是發行集的名稱。 *publication_name*是**sysname** ，沒有預設值。  
+`[ @publication = ] 'publication_name'` 這是發行集的名稱。 *publication_name* 是 **sysname** ，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="result-sets"></a>結果集  
- 傳回由單一**Nvarchar （4000）** 資料行所組成的結果集。 這個結果集形成建立自訂預存程序時，所需要的完整 CREATE PROCEDURE 陳述式。  
+ 傳回由單一 **Nvarchar (4000) ** 資料行所組成的結果集。 這個結果集形成建立自訂預存程序時，所需要的完整 CREATE PROCEDURE 陳述式。  
   
 ## <a name="remarks"></a>備註  
  不含自動產生自訂程序 (0x2) 結構描述選項的發行項，並不編寫自訂程序的指令碼。  
   
- **Sp_scriptpublicationcustomprocs**會使用下列程式來建立「訂閱者」的程式，而不應直接執行：  
+ **Sp_scriptpublicationcustomprocs**會使用下列程式來建立訂閱者的程式，且不應該直接執行：  
   
  **sp_script_reconciliation_delproc**  
   
@@ -75,7 +76,7 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
  **sp_scriptxupdproc**  
   
 ## <a name="permissions"></a>權限  
- 執行許可權會授與**public**;系統會在此預存程式內執行程式安全性檢查，以限制在目前資料庫中，對**sysadmin**固定伺服器角色的成員和**db_owner**固定資料庫角色的存取權。  
+ Execute 許可權會授與 **public**;系統會在此預存程式內執行程式性安全性檢查，以限制 **系統管理員（sysadmin** ）固定伺服器角色的成員，以及目前資料庫中 **db_owner** 固定資料庫角色的存取權。  
   
 ## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

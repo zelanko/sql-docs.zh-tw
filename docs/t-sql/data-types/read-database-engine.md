@@ -1,4 +1,5 @@
 ---
+description: 使用 CSharp 讀取 (資料庫引擎)
 title: Read (資料庫引擎) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/16/2020
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f2b8207c-b69f-4327-a874-100b3a1f27d8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 89739f7e53ddccfc95cb9e84311f1ed18e147de6
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 1fa01bbaa018e53bba906a0c2b9b53d8b75df02d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552583"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479878"
 ---
 # <a name="read-database-engine-by-using-csharp"></a>使用 CSharp 讀取 (資料庫引擎)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

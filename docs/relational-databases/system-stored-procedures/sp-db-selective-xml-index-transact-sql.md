@@ -1,5 +1,6 @@
 ---
-title: sp_db_selective_xml_index （Transact-sql） |Microsoft Docs
+description: sp_db_selective_xml_index (Transact-SQL)
+title: sp_db_selective_xml_index (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 017301a2-4a23-4e68-82af-134f3d4892b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eeed1432c6f3c3ba4f6dcd80608c2c40bd0db374
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 787750b0b69f70989d6a060f82e754573189d708
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728206"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481398"
 ---
 # <a name="sp_db_selective_xml_index-transact-sql"></a>sp_db_selective_xml_index (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85728206"
   啟用和停用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫上的選擇性 XML 索引功能。 如果呼叫時未使用任何參數，則預存程序會在特定資料庫上啟用選擇性 XML 索引時傳回 1。  
   
 > [!NOTE]  
->  若要使用這個預存程式停用選擇性 XML 索引，必須使用[ALTER DATABASE SET 選項 &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)命令，將資料庫置於簡單的復原模式。  
+>  若要使用這個預存程式停用選擇性 XML 索引，必須使用 [ALTER database SET Options &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) 命令，將資料庫設為簡單復原模式。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,9 +44,9 @@ ms.locfileid: "85728206"
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @ db_name = ] 'db_name'`要在其上啟用或停用選擇性 XML 索引的資料庫名稱。 如果*db_name*為 Null，則會假設為目前的資料庫。  
+`[ @ db_name = ] 'db_name'` 要啟用或停用選擇性 XML 索引之資料庫的名稱。 如果 *db_name* 為 Null，則會假設為目前的資料庫。  
   
-`[ @action = ] 'action'`決定是否要啟用或停用索引。 如果傳遞的另一個值除外 ' on '、' true '、' off ' 或 ' false '，則會引發錯誤。  
+`[ @action = ] 'action'` 決定是否要啟用或停用索引。 如果傳遞的另一個值是 ' on '、' true '、' off ' 或 ' false ' 以外的值，則會引發錯誤。  
   
 ```  
   

@@ -1,5 +1,6 @@
 ---
-title: sp_help_maintenance_plan （Transact-sql） |Microsoft Docs
+description: sp_help_maintenance_plan (Transact-SQL)
+title: sp_help_maintenance_plan (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a14767d15891ae970269feda6e712bf490ff5420
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 85a2f93384dbca55e26a38933ab9afd730da9f76
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893613"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481202"
 ---
 # <a name="sp_help_maintenance_plan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   傳回指定維護計畫的相關資訊。 如果未指定計畫，這個預存程序會傳回所有維護計畫的相關資訊。  
   
-> **注意：** 這個預存程式會與資料庫維護計畫搭配使用。 這項功能已被不使用這個預存程序的維護計畫所取代。 請使用這個程序來維護由舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級之安裝的資料庫維護計畫。  
+> **注意：** 這個預存程式會與資料庫維護計畫一起使用。 這項功能已被不使用這個預存程序的維護計畫所取代。 請使用這個程序來維護由舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級之安裝的資料庫維護計畫。  
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
@@ -44,27 +45,27 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @plan_id = ] 'plan\_id'`指定維護計畫的計畫識別碼。 *plan_id*是**UNIQUEIDENTIFIER**。 預設值是 NULL。  
+`[ @plan_id = ] 'plan\_id'` 指定維護計畫的計畫識別碼。 *plan_id* 為 **UNIQUEIDENTIFIER**。 預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  None  
   
 ## <a name="result-sets"></a>結果集  
- 如果指定了*plan_id* ， **sp_help_maintenance_plan**會傳回三個數據表：方案、資料庫和作業。  
+ 如果指定 *plan_id* ， **sp_help_maintenance_plan** 會傳回三個數據表： Plan、Database 和 Job。  
   
 ### <a name="plan-table"></a>計畫資料表  
   
-|資料行名稱|資料類型|說明|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**plan_id**|**uniqueidentifier**|維護計畫識別碼。|  
 |**plan_name**|**sysname**|維護計畫名稱。|  
 |**date_created**|**datetime**|維護計畫的建立日期。|  
-|**主人**|**sysname**|維護計畫的擁有者。|  
+|**擁有者**|**sysname**|維護計畫的擁有者。|  
 |**max_history_rows**|**int**|用來將維護計畫的記錄記載到系統資料表中，所配置的最大資料列數。|  
 |**remote_history_server**|**int**|可以寫入記錄報表之遠端伺服器的名稱。|  
 |**max_remote_history_rows**|**int**|在遠端伺服器系統資料表中，可寫入記錄報表的資料列最大配置列數。|  
 |**user_defined_1**|**int**|預設值是 NULL。|  
-|**user_defined_2**|**Nvarchar （100）**|預設值是 NULL。|  
+|**user_defined_2**|**Nvarchar (100) **|預設值是 NULL。|  
 |**user_defined_3**|**datetime**|預設值是 NULL。|  
 |**user_defined_4**|**uniqueidentifier**|預設值是 NULL。|  
   
@@ -78,13 +79,13 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
   
 |資料行名稱|描述|  
 |-----------------|-----------------|  
-|**job_id**|與維護計畫相關聯之所有作業的識別碼。 *job_id*是**uniqueidentifier**。|  
+|**job_id**|與維護計畫相關聯之所有作業的識別碼。 *job_id* 為 **uniqueidentifier**。|  
   
 ## <a name="remarks"></a>備註  
- **sp_help_maintenance_plan**是在**msdb**資料庫中。  
+ **sp_help_maintenance_plan** 位於 **msdb** 資料庫中。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_help_maintenance_plan**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色的成員，才可以執行 **sp_help_maintenance_plan**。  
   
 ## <a name="examples"></a>範例  
  這個範例說明 FAD6F2AB-3571-11D3-9D4A-00C04FB925FC 維護計畫的相關資訊。  
@@ -96,6 +97,6 @@ EXECUTE   sp_help_maintenance_plan
   
 ## <a name="see-also"></a>另請參閱  
  [維護計畫](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [資料庫維護計畫預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
+ [&#40;Transact-sql&#41;的資料庫維護計畫預存程式 ](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   
   

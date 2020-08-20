@@ -1,5 +1,6 @@
 ---
-title: sp_repltrans （Transact-sql） |Microsoft Docs
+description: sp_repltrans (Transact-SQL)
+title: sp_repltrans (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 738e2322-335b-44fa-820e-f31c02743978
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ea8d8c948c3a04a5c63377f5209fbe946d945c09
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c6a80364b3df96bb454cf9d43f1de2ee217a796f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640009"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481087"
 ---
 # <a name="sp_repltrans-transact-sql"></a>sp_repltrans (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,15 +38,15 @@ sp_repltrans
 ```  
   
 ## <a name="result-sets"></a>結果集  
- **sp_repltrans**會傳回從中執行之發行集資料庫的相關資訊，讓您可以查看目前尚未散發的交易（交易記錄檔中剩餘尚未傳送給「散發者」的交易）。 結果集會顯示每項交易的第一個和最後一個記錄的記錄序號。 **sp_repltrans**類似于[sp_replcmds &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md) ，但不會傳回交易的命令。  
+ **sp_repltrans** 會傳回從中執行之發行集資料庫的相關資訊，讓您可以查看目前未散發的交易， (尚未傳送給散發者) 的交易記錄中剩餘的交易。 結果集會顯示每項交易的第一個和最後一個記錄的記錄序號。 **sp_repltrans** 類似于 [sp_replcmds &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md) 但不會傳回交易的命令。  
   
 ## <a name="remarks"></a>備註  
- **sp_repltrans**用於異動複寫中。  
+ **sp_repltrans** 用於異動複寫中。  
   
  非發行者不支援**sp_repltrans** [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_repltrans**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色或 **db_owner** 固定資料庫角色的成員，才能夠執行 **sp_repltrans**。  
   
 ## <a name="see-also"></a>另請參閱  
  [sp_repldone &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   

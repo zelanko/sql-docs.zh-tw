@@ -1,4 +1,5 @@
 ---
+description: 疑難排解 (OracleToSQL)
 title: 疑難排解 (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,17 +11,17 @@ ms.assetid: 1dfd6ebb-9fcc-4588-8052-7b8219602132
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: bdc600dd84dad777f54ca41bd7f4c76db9434b5d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 30983c2468a4e0f4a2969084c9043cff48c6bfe9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932639"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480387"
 ---
 # <a name="troubleshooting-oracletosql"></a>疑難排解 (OracleToSQL)
-在執行主控台腳本或命令時，遇到遷移問題並不罕見。  
+在執行主控台腳本或命令的中途遇到遷移問題並不常見。  
   
-可修復的錯誤可能與：  
+可修復的錯誤可能與下列相關：  
   
 1.  函式  
   
@@ -34,5 +35,5 @@ ms.locfileid: "87932639"
   
 6.  變更專案設定  
   
-您可以藉由開啟透過主控台所建立的專案檔，使用 SSMA 使用者介面來修正問題。  
+您可以藉由開啟透過主控台建立的專案檔來修正問題，方法是使用 SSMA 使用者介面。  
   

@@ -1,4 +1,5 @@
 ---
+description: DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)
 title: DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD  (Transact-SQL)
 ms.custom: seo-dt-2019
 ms.date: 07/03/2019
@@ -12,12 +13,12 @@ dev_langs:
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 5c3dd051156178572a03eeff23052e2c103d9555
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 2a849fdf387361bdf217e1b40a81aa8c600931d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395880"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479850"
 ---
 # <a name="dbcc-pdw_showmaterializedviewoverhead-transact-sql"></a>DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)  
 
@@ -44,9 +45,9 @@ DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( " [ schema_name .] materialized_view_nam
 
 ## <a name="remarks"></a>備註
 
-資料倉儲引擎會將追蹤資料列新增至每個受影響檢視以反映所做的變更，以便隨即重新整理具體化檢視。 從具體化檢視選取包括掃描檢視的叢集資料行存放區索引，以及套用這些增量變更。  追蹤資料列 (TOTAL_ROWS-BASE_VIEW_ROWS) 在使用者 REBUILD 具體化檢視之前不會被刪除。  
+資料倉儲引擎會將追蹤資料列新增至每個受影響檢視以反映所做的變更，以便隨即重新整理具體化檢視。 從具體化檢視選取包括掃描檢視的叢集資料行存放區索引，以及套用這些增量變更。追蹤資料列 (TOTAL_ROWS-BASE_VIEW_ROWS) 在使用者 REBUILD 具體化檢視之前不會被刪除。  
 
-Overhead_ratio 的計算方式為 TOTAL_ROWS/MAX(1, BASE_VIEW_ROWS)。  如果很高，則 SELECT 效能將會降低。  使用者可以重建具體化檢視以降低其額外負荷率。
+Overhead_ratio 的計算方式為 TOTAL_ROWS/MAX(1, BASE_VIEW_ROWS)。  如果很高，則 SELECT 效能將會降低。使用者可以重建具體化檢視以降低其額外負荷率。
 
 ## <a name="permissions"></a>權限  
   

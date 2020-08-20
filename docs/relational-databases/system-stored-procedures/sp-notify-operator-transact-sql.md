@@ -1,5 +1,6 @@
 ---
-title: sp_notify_operator （Transact-sql） |Microsoft Docs
+description: sp_notify_operator (Transact-SQL)
+title: sp_notify_operator (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 07f18ad85f759340d43825ce8c6a95c11696d2f0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c6a1c623ec7172a7cab48c49491619184d618ebf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893438"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481096"
 ---
 # <a name="sp_notify_operator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,24 +48,24 @@ sp_notify_operator
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @profile_name = ] 'profilename'`用來傳送訊息之 Database Mail 設定檔的名稱。 *profilename*是**Nvarchar （128）**。 如果未指定*profilename* ，則會使用預設的 Database Mail 設定檔。  
+`[ @profile_name = ] 'profilename'` 用來傳送訊息之 Database Mail 設定檔的名稱。 *profilename* 是 **Nvarchar (128) **。 如果未指定 *profilename* ，則會使用預設的 Database Mail 設定檔。  
   
-`[ @id = ] id`要傳送訊息的操作員識別碼。 *id*是**int**，預設值是 Null。 必須指定*識別碼*或*名稱*的其中一個。  
+`[ @id = ] id` 要傳送訊息之操作員的識別碼。 *id* 是 **int**，預設值是 Null。 必須指定其中一個 *識別碼* 或 *名稱* 。  
   
-`[ @name = ] 'name'`要傳送訊息的操作員名稱。 *name*是**Nvarchar （128）**，預設值是 Null。 必須指定*識別碼*或*名稱*的其中一個。  
+`[ @name = ] 'name'` 要傳送訊息的操作員名稱。 *名稱* 是 **Nvarchar (128) **，預設值是 Null。 必須指定其中一個 *識別碼* 或 *名稱* 。  
   
-> **注意：** 必須先定義操作員的電子郵件地址，才能接收訊息。  
+> **注意：** 必須先為操作員定義電子郵件地址，才能接收訊息。  
   
-`[ @subject = ] 'subject'`電子郵件訊息的主旨。 *subject*是**Nvarchar （256）** ，沒有預設值。  
+`[ @subject = ] 'subject'` 電子郵件訊息的主旨。 [*主體*] 是**Nvarchar (256) ** ，沒有預設值。  
   
-`[ @body = ] 'message'`電子郵件訊息的主體。 *訊息*為**Nvarchar （max）** ，沒有預設值。  
+`[ @body = ] 'message'` 電子郵件訊息的主體。 *訊息* 是 **Nvarchar (max) ** ，沒有預設值。  
   
-`[ @file_attachments = ] 'attachment'`要附加至電子郵件訊息的檔案名。 *附件*是**Nvarchar （512）**，沒有預設值。  
+`[ @file_attachments = ] 'attachment'` 要附加至電子郵件訊息的檔案名。 *附件* 是 **Nvarchar (512) **，沒有預設值。  
   
-`[ @mail_database = ] 'mail_host_database'`指定郵件主機資料庫的名稱。 *mail_host_database*為**Nvarchar （128）**。 如果未指定*mail_host_database* ，預設會使用**msdb**資料庫。  
+`[ @mail_database = ] 'mail_host_database'` 指定郵件主機資料庫的名稱。 *mail_host_database* 是 **Nvarchar (128) **。 如果未指定任何 *mail_host_database* ，預設會使用 **msdb** 資料庫。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
  將指定的訊息傳送給指定操作員的電子郵件地址。 如果未設定操作員的電子郵件地址，就會傳回錯誤。  
@@ -98,7 +99,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Agent 預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的 SQL Server Agent 預存程式 ](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_help_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
  [sp_delete_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)  

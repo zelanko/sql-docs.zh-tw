@@ -1,5 +1,6 @@
 ---
-title: MSrepl_queuedtraninfo （Transact-sql） |Microsoft Docs
+description: MSrepl_queuedtraninfo (Transact-SQL)
+title: MSrepl_queuedtraninfo (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,23 +18,23 @@ helpviewer_keywords:
 ms.assetid: af7a5baf-32ea-475f-b6b9-68c557b4980c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dcefa2680dd5126c9d3cd378d6e71f527681f12e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e95ac3bb96d726b1b02d0258f9364cc48a3af09d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889487"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480720"
 ---
 # <a name="msrepl_queuedtraninfo-transact-sql"></a>MSrepl_queuedtraninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  複寫程式會使用**MSreplication_queuedtraninfo**資料表來儲存所有使用 SQL 型佇列更新之佇列更新訂閱所發出的佇列命令相關資訊。 這份資料表儲存在訂閱資料庫中。  
+  複寫進程會使用 **MSreplication_queuedtraninfo** 資料表來儲存所有使用 SQL 型佇列更新之佇列更新訂閱所發出的佇列命令相關資訊。 這份資料表儲存在訂閱資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**publisher**|**sysname**|發行者的名稱。|  
 |**publisher_db**|**sysname**|發行集資料庫的名稱。|  
-|**發行集**|**sysname**|發行集的名稱。|  
+|**出版**|**sysname**|發行集的名稱。|  
 |**tranid**|**sysname**|執行佇列命令所用的交易識別碼。|  
 |**maxorderkey**|**bigint**|僅供內部使用。|  
 |**commandcount**|**bigint**|僅供內部使用。|  

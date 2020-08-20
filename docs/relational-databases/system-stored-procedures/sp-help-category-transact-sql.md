@@ -1,5 +1,6 @@
 ---
-title: sp_help_category （Transact-sql） |Microsoft Docs
+description: sp_help_category (Transact-SQL)
+title: sp_help_category (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2e753d9296c873f6092d2ae15f001f8deeec4ad4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0db25b095536c06e03c87b3bc21dacc5f8c7d0f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901520"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481245"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,28 +43,28 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @class = ] 'class'`關於所要求資訊的類別。 *class*為**Varchar （8）**，預設值為**JOB**。 *類別*可以是下列其中一個值。  
+`[ @class = ] 'class'` 要求的資訊所屬的類別。 *類別* 是 **Varchar (8) **，預設值是 **JOB**。 *類別* 可以是下列其中一個值。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
-|**任務**|提供作業類別目錄的相關資訊。|  
-|**消息**|提供警示類別目錄的相關資訊。|  
-|**操作**|提供操作員類別目錄的相關資訊。|  
+|**工作**|提供作業類別目錄的相關資訊。|  
+|**警報**|提供警示類別目錄的相關資訊。|  
+|**運算元**|提供操作員類別目錄的相關資訊。|  
   
-`[ @type = ] 'type'`所要求之資訊所屬的類別目錄類型。 *type*是**Varchar （12）**，預設值是 Null，它可以是下列值之一。  
+`[ @type = ] 'type'` 要求的資訊所屬的類別目錄類型。 *type* 是 **Varchar (12) **，預設值是 Null，而且可以是下列其中一個值。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
-|**本機**|本機作業類別目錄。|  
+|**LOCAL**|本機作業類別目錄。|  
 |**MULTI -SERVER**|多伺服器作業類別目錄。|  
-|**NONE**|**作業**以外類別的分類。|  
+|**NONE**|**作業**以外類別的類別。|  
   
-`[ @name = ] 'name'`所要求之資訊所屬的類別目錄名稱。 *name*是**sysname**，預設值是 Null。  
+`[ @name = ] 'name'` 要求的資訊所屬的類別目錄名稱。 *名稱* 是 **sysname**，預設值是 Null。  
   
-`[ @suffix = ] suffix`指定結果集中的**category_type**資料行是否為識別碼或名稱。 *尾碼*是**bit**，預設值是**0**。 **1**會將**category_type**顯示為名稱， **0**則會顯示為識別碼。  
+`[ @suffix = ] suffix` 指定結果集中的 **category_type** 資料行是否為識別碼或名稱。 *尾碼* 是 **bit**，預設值是 **0**。 **1** 以名稱顯示 **category_type** ， **0** 則顯示為識別碼。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="result-sets"></a>結果集  
  當** \@ 尾碼**為**0**時， **sp_help_category**會傳回下列結果集：  
@@ -79,11 +80,11 @@ sp_help_category [ [ @class = ] 'class' ]
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|類別目錄識別碼|  
-|**category_type**|**sysname**|類別目錄的類型。 其中一個**本機**、**多伺服器**或**無**|  
+|**category_type**|**sysname**|類別目錄的類型。 其中一個 **本機**、 **多伺服器**或 **無**|  
 |**name**|**sysname**|類別目錄名稱|  
   
 ## <a name="remarks"></a>備註  
- **sp_help_category**必須從**msdb**資料庫中執行。  
+ **sp_help_category** 必須從 **msdb** 資料庫執行。  
   
  如果未指定任何參數，結果集會提供所有作業類別目錄的相關資訊。  
   

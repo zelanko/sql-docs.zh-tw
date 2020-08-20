@@ -1,5 +1,6 @@
 ---
-title: MSqreader_history （Transact-sql） |Microsoft Docs
+description: MSqreader_history (Transact-SQL)
+title: MSqreader_history (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: c5c91d39-513c-4a77-870b-c8ef74a1cd6b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8ee889df3e29f486c12393870858fa0af2ea6546
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 64e6041c37c70359c645f1a0f6027503b185772c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889555"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480776"
 ---
 # <a name="msqreader_history-transact-sql"></a>MSqreader_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSqreader_history**資料表包含與本機散發者相關聯之佇列讀取器代理程式的記錄資料列。 這份資料表儲存在散發資料庫中。  
+  **MSqreader_history**資料表包含與本機散發者相關聯的佇列讀取器代理程式的記錄資料列。 這份資料表儲存在散發資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -37,14 +38,14 @@ ms.locfileid: "85889555"
 |**start_time**|**datetime**|代理程式工作階段啟動的日期和時間。|  
 |**time**|**datetime**|上次記錄之訊息的日期和時間。|  
 |**duration**|**int**|所記錄之工作階段活動的經歷時間 (以秒為單位)。|  
-|**批註**|**nvarchar(255)**|描述性文字。|  
+|**評論**|**nvarchar(255)**|描述性文字。|  
 |**transaction_id**|**nvarchar(40)**|與訊息一起儲存的交易識別碼 (如果適用的話)。|  
 |**transaction_status**|**int**|交易的狀態。|  
 |**transactions_processed**|**int**|在工作階段所處理的累計交易數。|  
 |**commands_processed**|**int**|在工作階段所處理的累計命令數。|  
-|**delivery_rate**|**float （53）**|每秒傳遞的平均命令數。|  
-|**transaction_rate**|**float （53）**|交易處理率。|  
-|**預訂**|**sysname**|訂閱者的名稱。|  
+|**delivery_rate**|**float(53)**|每秒傳遞的平均命令數。|  
+|**transaction_rate**|**float(53)**|交易處理率。|  
+|**使用者**|**sysname**|訂閱者的名稱。|  
 |**subscriberdb**|**sysname**|訂閱資料庫的名稱。|  
 |**error_id**|**int**|如果不是零，則數位代表 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤訊息。|  
 |**timestamp**|**timestamp**|資料表的時間戳記資料行。|  

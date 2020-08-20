@@ -1,5 +1,6 @@
 ---
-title: sp_unregister_custom_scripting （Transact-sql） |Microsoft Docs
+description: sp_unregister_custom_scripting (Transact-SQL)
+title: sp_unregister_custom_scripting (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: b6e9e0d2-9144-434d-88af-4874f2582399
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9cd0ff590213b5dd687235328696d4956b0bb224
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0247061b99b53cb53e12fa4e5e3a1284430287e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892567"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480923"
 ---
 # <a name="sp_unregister_custom_scripting-transact-sql"></a>sp_unregister_custom_scripting (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  這個預存程式會移除使用者定義的自訂預存 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式或腳本檔案，該檔案是藉由執行[sp_register_custom_scripting](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md)來註冊。 這個預存程序執行於發行集資料庫的發行者端。  
+  這個預存 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式會移除由執行 [sp_register_custom_scripting](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md)所註冊的使用者定義自訂預存程式或腳本檔。 這個預存程序執行於發行集資料庫的發行者端。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,27 +40,27 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @type = ] 'type'`這是要移除之自訂預存程式或腳本的類型。 *類型*為**Varchar （16）**，沒有預設值，而且可以是下列其中一個值。  
+`[ @type = ] 'type'` 這是要移除之自訂預存程式或腳本的類型。 *type* 是 **Varchar (16) **，沒有預設值，它可以是下列值之一。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
-|**插入**|註冊的自訂預存程序或指令碼，是在複寫 INSERT 陳述式時執行。|  
+|**insert**|註冊的自訂預存程序或指令碼，是在複寫 INSERT 陳述式時執行。|  
 |**update**|註冊的自訂預存程序或指令碼，是在複寫 UPDATE 陳述式時執行。|  
 |**delete**|註冊的自訂預存程序或指令碼，是在複寫 DELETE 陳述式時執行。|  
 |**custom_script**|註冊的自訂預存程序或指令碼，是在資料定義語言 (DDL) 觸發程序結尾執行。|  
   
-`[ @publication = ] 'publication'`要移除其自訂預存程式或腳本的發行集名稱。 *發行*集是**sysname**，預設值是 Null。  
+`[ @publication = ] 'publication'` 要移除之自訂預存程式或腳本的發行集名稱。 *發行* 集是 **sysname**，預設值是 Null。  
   
-`[ @article = ] 'article'`要移除之自訂預存程式或腳本的發行項名稱。 發行*項是* **sysname**，預設值是 Null。  
+`[ @article = ] 'article'` 要移除之自訂預存程式或腳本的發行項名稱。 *文章* 是 **sysname**，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_unregister_custom_scripting**用於快照式和異動複寫中。  
+ **sp_unregister_custom_scripting** 用於快照式和異動複寫中。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色、 **db_owner**固定資料庫角色或**db_ddladmin**固定資料庫角色的成員，才能夠執行**sp_unregister_custom_scripting**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色、 **db_owner** 固定資料庫角色或 **db_ddladmin** 固定資料庫角色的成員，才能夠執行 **sp_unregister_custom_scripting**。  
   
 ## <a name="see-also"></a>另請參閱  
  [sp_register_custom_scripting &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md)  

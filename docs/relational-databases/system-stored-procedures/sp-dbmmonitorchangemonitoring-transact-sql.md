@@ -1,5 +1,6 @@
 ---
-title: sp_dbmmonitorchangemonitoring （Transact-sql） |Microsoft Docs
+description: sp_dbmmonitorchangemonitoring (Transact-SQL)
+title: sp_dbmmonitorchangemonitoring (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 17be755b-673d-4cd4-9544-6ecb4220bed3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2b2fa71ba90acc49f3edf70ff35363410fb3d3b6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 26623f79621402523ce4a5641884fb1e080170a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85866650"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481380"
 ---
 # <a name="sp_dbmmonitorchangemonitoring-transact-sql"></a>sp_dbmmonitorchangemonitoring (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ sp_dbmmonitorchangemonitoring parameter
 ```  
   
 ## <a name="arguments"></a>引數  
- *實參*  
+ *參數*  
  指定要變更之參數的識別碼。 目前只有下列的參數可用：  
   
  1 = 更新週期  
@@ -62,7 +63,7 @@ sp_dbmmonitorchangemonitoring parameter
  None  
   
 ## <a name="permissions"></a>權限  
- 需要**系統管理員（sysadmin** ）固定伺服器角色中的成員資格。  
+ 需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
  下列範例將更新週期變更為 5 分鐘。  

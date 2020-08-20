@@ -1,5 +1,6 @@
 ---
-title: dbo.sys通知（Transact-sql） |Microsoft Docs
+description: dbo.sysnotifications (Transact-SQL)
+title: dbo.sys通知 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c5150d18-e8b7-48a7-ada7-77c583af6e41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1b6ac4c1c037c186e1fe6fc20ad1b3ef0cfba976
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a55ba4b149466f127ee7e4d96d0df5677004bf56
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890422"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480821"
 ---
 # <a name="dbosysnotifications-transact-sql"></a>dbo.sysnotifications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

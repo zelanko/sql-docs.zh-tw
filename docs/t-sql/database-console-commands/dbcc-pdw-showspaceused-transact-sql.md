@@ -1,4 +1,5 @@
 ---
+description: DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 title: DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 ms.custom: ''
 ms.date: 07/17/2017
@@ -12,12 +13,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 748ed216b16788e176db5ad459d8e2b05c563c96
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: b5f8274b7d73bb0119b165b1cfbe65473b499d55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484233"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479817"
 ---
 # <a name="dbcc-pdw_showspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 

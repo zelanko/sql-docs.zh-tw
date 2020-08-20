@@ -1,4 +1,5 @@
 ---
+description: DBCC CHECKIDENT (Transact-SQL)
 title: DBCC CHECKIDENT (Transact-SQL)
 ms.custom: ''
 ms.date: 03/07/2019
@@ -29,12 +30,12 @@ ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: fd1523d0c1cb9d21240887f2d801e447828def0e
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: b7fd8592ed2643d25736539c91b3e3bedfdd75ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395184"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479857"
 ---
 # <a name="dbcc-checkident-transact-sql"></a>DBCC CHECKIDENT (Transact-SQL)
 
@@ -46,7 +47,7 @@ ms.locfileid: "87395184"
   
 ## <a name="syntax"></a>語法  
   
-```console
+```syntaxsql
 
 -- Syntax for SQL Server and Azure SQL Database  
 
@@ -68,6 +69,8 @@ DBCC CHECKIDENT
 [ WITH NO_INFOMSGS ]  
 
 ```
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>引數
 
  *table_name*  

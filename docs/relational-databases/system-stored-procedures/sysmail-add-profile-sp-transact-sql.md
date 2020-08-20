@@ -1,5 +1,6 @@
 ---
-title: sysmail_add_profile_sp （Transact-sql） |Microsoft Docs
+description: sysmail_add_profile_sp (Transact-SQL)
+title: sysmail_add_profile_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2ae569ea3623c81e99bac6dd5a163393c07c0301
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f78f4ea075f04c4deb447ad9b68e3707b4e19ffb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891008"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480859"
 ---
 # <a name="sysmail_add_profile_sp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,29 +42,29 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @profile_name = ] 'profile\_name'`新設定檔的名稱。 *profile_name*是**sysname**，沒有預設值。  
+`[ @profile_name = ] 'profile\_name'` 新設定檔的名稱。 *profile_name* 是 **sysname**，沒有預設值。  
  
    > [!NOTE]
-   > 必須呼叫使用 Azure SQL 受控執行個體 SQL 代理程式的設定檔名稱**AzureManagedInstance_dbmail_profile**
+   > 您必須呼叫使用 Azure SQL 受控執行個體 SQL Agent 的設定檔名稱 **AzureManagedInstance_dbmail_profile**
   
-`[ @description = ] 'description'`新設定檔的選擇性描述。 *描述*是**Nvarchar （256）**，沒有預設值。  
+`[ @description = ] 'description'` 新設定檔的選擇性描述。 *描述* 是 **Nvarchar (256) **，沒有預設值。  
   
-`[ @profile_id = ] _new\_profile\_id OUTPUT`傳回新設定檔的識別碼。 *new_profile_id*是**int**，預設值是 Null。  
+`[ @profile_id = ] _new\_profile\_id OUTPUT` 傳回新設定檔的識別碼。 *new_profile_id* 是 **int**，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- Database Mail 設定檔會保存任意數目的 Database Mail 帳戶。 Database Mail 預存程序可以利用這個程序所產生的設定檔名稱或設定檔識別碼來參考設定檔。 如需將帳戶新增至設定檔的詳細資訊，請參閱[sysmail_add_profileaccount_sp &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)。  
+ Database Mail 設定檔會保存任意數目的 Database Mail 帳戶。 Database Mail 預存程序可以利用這個程序所產生的設定檔名稱或設定檔識別碼來參考設定檔。 如需將帳戶新增至設定檔的詳細資訊，請參閱 [sysmail_add_profileaccount_sp &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)。  
   
- 設定檔名稱和描述可以使用預存程式**sysmail_update_profile_sp**進行變更，而設定檔識別碼在設定檔的生命週期內會保持不變。  
+ 您可以使用預存程式 **sysmail_update_profile_sp**來變更設定檔名稱和描述，而設定檔識別碼在設定檔的存留期間仍維持不變。  
   
  Microsoft [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的設定檔名稱必須是唯一的，否則，預存程序會傳回一則錯誤。  
   
- 預存程式**sysmail_add_profile_sp**在**msdb**資料庫中，而且是由**dbo**架構所擁有。 如果目前的資料庫不是**msdb**，就必須以三部分的名稱來執行此程式。  
+ 預存程式 **sysmail_add_profile_sp** 位於 **msdb** 資料庫中，而且是由 **dbo** 架構所擁有。 如果目前的資料庫不是 **msdb**，就必須以三部分名稱執行程式。  
   
 ## <a name="permissions"></a>權限  
- 此程式的執行許可權預設為**系統管理員（sysadmin** ）固定伺服器角色的成員。  
+ 此程式的執行許可權預設為 **系統管理員（sysadmin** ）固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  
  **A. 建立新的設定檔**  
@@ -95,6 +96,6 @@ SELECT @profileId ;
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [建立 Database Mail 帳戶](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [Database Mail 設定物件](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Database Mail 預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [&#40;Transact-sql&#41;的 Database Mail 預存程式 ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

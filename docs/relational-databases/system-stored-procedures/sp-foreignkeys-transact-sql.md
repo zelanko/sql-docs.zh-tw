@@ -1,5 +1,6 @@
 ---
-title: sp_foreignkeys （Transact-sql） |Microsoft Docs
+description: sp_foreignkeys (Transact-SQL)
+title: sp_foreignkeys (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 04df50dc8378dc346079c807f8e517f1e6bbecdd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8f7d3fe93965bcfcb516e79452b6725940c1e68c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891887"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481282"
 ---
 # <a name="sp_foreignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,32 +46,32 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @table_server = ] 'table_server'`這是傳回資料表資訊的連結伺服器名稱。 *table_server*是**sysname**，沒有預設值。  
+`[ @table_server = ] 'table_server'` 這是傳回資料表資訊之連結伺服器的名稱。 *table_server* 是 **sysname**，沒有預設值。  
   
-`[ @pktab_name = ] 'pktab_name'`這是具有主鍵的資料表名稱。 *pktab_name*是**sysname**，預設值是 Null。  
+`[ @pktab_name = ] 'pktab_name'` 這是具有主鍵的資料表名稱。 *pktab_name* 是 **sysname**，預設值是 Null。  
   
-`[ @pktab_schema = ] 'pktab_schema'`這是具有主鍵的架構名稱。 *pktab_schema*是**sysname**，預設值是 Null。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這包含擁有者名稱。  
+`[ @pktab_schema = ] 'pktab_schema'` 這是具有主鍵的架構名稱。 *pktab_schema*是 **sysname**，預設值是 Null。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這包含擁有者名稱。  
   
-`[ @pktab_catalog = ] 'pktab_catalog'`這是具有主鍵的目錄名稱。 *pktab_catalog*是**sysname**，預設值是 Null。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這包含資料庫名稱。  
+`[ @pktab_catalog = ] 'pktab_catalog'` 這是具有主鍵的目錄名稱。 *pktab_catalog*是 **sysname**，預設值是 Null。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這包含資料庫名稱。  
   
-`[ @fktab_name = ] 'fktab_name'`這是具有外鍵之資料表的名稱。 *fktab_name*是**sysname**，預設值是 Null。  
+`[ @fktab_name = ] 'fktab_name'` 這是具有外鍵之資料表的名稱。 *fktab_name*是 **sysname**，預設值是 Null。  
   
-`[ @fktab_schema = ] 'fktab_schema'`這是具有外鍵的架構名稱。 *fktab_schema*是**sysname**，預設值是 Null。  
+`[ @fktab_schema = ] 'fktab_schema'` 這是含外鍵的架構名稱。 *fktab_schema*是 **sysname**，預設值是 Null。  
   
-`[ @fktab_catalog = ] 'fktab_catalog'`這是含外鍵的目錄名稱。 *fktab_catalog*是**sysname**，預設值是 Null。  
+`[ @fktab_catalog = ] 'fktab_catalog'` 這是含外鍵的目錄名稱。 *fktab_catalog*是 **sysname**，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  None  
   
 ## <a name="result-sets"></a>結果集  
- 各種 DBMS 產品都支援三部分的資料表命名（_目錄_）**。**_架構_**。**_table_），這會在結果集中表示。  
+ 各種 DBMS 產品可針對 (_目錄_的資料表，支援三部分的命名 **。**_架構_**。**_資料表_) ，在結果集中表示。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**PKTABLE_CAT**|**sysname**|主索引鍵所在之資料表的目錄。|  
 |**PKTABLE_SCHEM**|**sysname**|主索引鍵所在之資料表的結構描述。|  
 |**PKTABLE_NAME**|**sysname**|資料表 (含主索引鍵) 的名稱。 這個欄位一律會傳回值。|  
-|**PKCOLUMN_NAME**|**sysname**|所傳回**TABLE_NAME**之每個資料行的主鍵資料行名稱。 這個欄位一律會傳回值。|  
+|**PKCOLUMN_NAME**|**sysname**|傳回之 **TABLE_NAME** 的每個資料行的主鍵資料行名稱。 這個欄位一律會傳回值。|  
 |**FKTABLE_CAT**|**sysname**|外部索引鍵所在之資料表的目錄。|  
 |**FKTABLE_SCHEM**|**sysname**|外部索引鍵所在之資料表的結構描述。|  
 |**FKTABLE_NAME**|**sysname**|資料表 (含外部索引鍵) 的名稱。 這個欄位一律會傳回值。|  
@@ -103,7 +104,7 @@ EXEC sp_foreignkeys @table_server = N'Seattle1',
  [sp_catalogs &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
  [sp_column_privileges &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
  [sp_indexes &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [sp_linkedservers &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
  [sp_primarykeys &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
  [sp_tables_ex &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [sp_table_privileges &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   

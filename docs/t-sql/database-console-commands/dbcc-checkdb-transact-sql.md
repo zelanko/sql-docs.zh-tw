@@ -1,4 +1,5 @@
 ---
+description: DBCC CHECKDB (Transact-SQL)
 title: DBCC CHECKDB (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/14/2017
@@ -34,12 +35,12 @@ helpviewer_keywords:
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 59feed74768411b5a0c00baba6b6e882155fc225
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 392e8843f461635411b485e3ebd97725c460ed70
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485284"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479911"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

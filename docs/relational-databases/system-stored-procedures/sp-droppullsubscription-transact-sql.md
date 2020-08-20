@@ -1,5 +1,6 @@
 ---
-title: sp_droppullsubscription （Transact-sql） |Microsoft Docs
+description: sp_droppullsubscription (Transact-SQL)
+title: sp_droppullsubscription (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 12215e39e90586bf8346c96cde3f0f3f5f386e6a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0451fcee1d17a2838af12f782498be61b8431586
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783794"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481298"
 ---
 # <a name="sp_droppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,27 +41,27 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publisher = ] 'publisher'`這是遠端伺服器名稱。 *publisher*是**sysname**，沒有預設值。 如果是**all**，就會卸載所有發行者上的訂用帳戶。  
+`[ @publisher = ] 'publisher'` 這是遠端伺服器名稱。 *publisher* 是 **sysname**，沒有預設值。 如果是 **all**，就會卸載所有發行者的訂閱。  
   
-`[ @publisher_db = ] 'publisher_db'`這是發行者資料庫的名稱。 *publisher_db*是**sysname**，沒有預設值。 **all**表示所有發行者資料庫。  
+`[ @publisher_db = ] 'publisher_db'` 這是發行者資料庫的名稱。 *publisher_db* 是 **sysname**，沒有預設值。 **all** 表示所有發行者資料庫。  
   
-`[ @publication = ] 'publication'`這是發行集名稱。 *發行*集是**sysname**，沒有預設值。 如果是**all**，就會卸載所有發行集的訂閱。  
+`[ @publication = ] 'publication'` 這是發行集名稱。 *發行* 集是 **sysname**，沒有預設值。 如果是 **all**，就會將訂用帳戶放到所有發行集。  
   
 `[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_droppullsubscription**用於快照式複寫和異動複寫中。  
+ **sp_droppullsubscription** 用於快照式複寫和異動複寫中。  
   
- **sp_droppullsubscription**刪除 MSreplication_subscriptions 中的對應資料列[&#40;transact-sql&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)資料表和訂閱者端對應的散發者代理程式。 如果[MSreplication_subscriptions &#40;transact-sql&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)中沒有剩餘的資料列，則會卸載資料表。  
+ **sp_droppullsubscription** 會在 [MSreplication_subscriptions &#40;transact-sql&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) 資料表中刪除對應的資料列，並在訂閱者端刪除對應的散發者代理程式。 如果 [MSreplication_subscriptions &#40;transact-sql&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)中沒有剩餘的資料列，它會卸載資料表。  
   
 ## <a name="example"></a>範例  
  [!code-sql[HowTo#sp_droptranpullsubscription](../../relational-databases/replication/codesnippet/tsql/sp-droppullsubscription-_1.sql)]  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色的成員或建立提取訂閱的使用者，才能夠執行**sp_droppullsubscription**。 只有在建立提取訂閱的使用者屬於此角色時， **db_owner**固定資料庫角色才能夠執行**sp_droppullsubscription** 。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色的成員或建立提取訂閱的使用者，才可以執行 **sp_droppullsubscription**。 只有在建立提取訂閱的使用者屬於此角色時， **db_owner** 固定資料庫角色才能執行 **sp_droppullsubscription** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [刪除提取訂閱](../../relational-databases/replication/delete-a-pull-subscription.md)   

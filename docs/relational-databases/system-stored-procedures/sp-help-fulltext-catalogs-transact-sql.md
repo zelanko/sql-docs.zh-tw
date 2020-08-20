@@ -1,5 +1,6 @@
 ---
-title: sp_help_fulltext_catalogs （Transact-sql） |Microsoft Docs
+description: sp_help_fulltext_catalogs (Transact-SQL)
+title: sp_help_fulltext_catalogs (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1b94f280-e095-423f-88bc-988c9349d44c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 403e4ac16f7b01cc0acdefb26c51c9e4519ed3bb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2ad2cc153d4bc9fb7e95c88cb97401387e4d4a39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901491"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481220"
 ---
 # <a name="sp_help_fulltext_catalogs-transact-sql"></a>sp_help_fulltext_catalogs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85901491"
   傳回指定全文檢索目錄之全文檢索索引資料表的識別碼、名稱、根目錄、狀態和數目。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]請改用[sys.databases fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)目錄檢視。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用 [sys. fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) 目錄 view。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,24 +43,24 @@ sp_help_fulltext_catalogs [ @fulltext_catalog_name = ] 'fulltext_catalog_name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'`這是全文檢索目錄的名稱。 *fulltext_catalog_name*是**sysname**。 如果省略這個參數或它的值是 NULL，就會傳回目前資料庫所關聯的所有全文檢索目錄的相關資訊。  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` 這是全文檢索目錄的名稱。 *fulltext_catalog_name* 為 **sysname**。 如果省略這個參數或它的值是 NULL，就會傳回目前資料庫所關聯的所有全文檢索目錄的相關資訊。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
- 下表顯示以**ftcatid**排序的結果集。  
+ 下表顯示依 **ftcatid**排序的結果集。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**fulltext_catalog_id**|**smallint**|全文檢索目錄識別碼。|  
 |**名稱**|**sysname**|全文檢索目錄的名稱。|  
-|**路徑名**|**nvarchar(260)**|從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 開始，這個子句不會有任何作用。|  
+|**PATH**|**nvarchar(260)**|從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 開始，這個子句不會有任何作用。|  
 |**狀態**|**int**|目錄的全文檢索索引擴展狀態：<br /><br /> 0 = 閒置<br /><br /> 1 = 完整擴展進行中<br /><br /> 2 = 已暫停<br /><br /> 3 = 調整執行速度<br /><br /> 4 = 復原中<br /><br /> 5 = 已關閉<br /><br /> 6 = 累加擴展進行中<br /><br /> 7 = 正在建立索引<br /><br /> 8 = 磁碟已滿， 已暫停<br /><br /> 9 = 變更追蹤<br /><br /> NULL = 使用者沒有全文檢索目錄的 VIEW 權限，或資料庫未啟用全文檢索，或未安裝全文檢索元件。|  
 |**NUMBER_FULLTEXT_TABLES**|**int**|與目錄相關聯之全文檢索索引資料表的數目。|  
   
 ## <a name="permissions"></a>權限  
- 執行許可權預設為**public**角色的成員。  
+ 執行許可權預設為 **public** 角色的成員。  
   
 ## <a name="examples"></a>範例  
  下列範例會傳回 `Cat_Desc` 全文檢索目錄的相關資訊。  

@@ -1,4 +1,5 @@
 ---
+description: rowversion (Transact-SQL)
 title: rowversion (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -26,17 +27,17 @@ helpviewer_keywords:
 ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f2962d457ce079bd0ec2164f9fdd2a982b983f14
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 087e3e1d67bce5d8f46f03cdb1cad05578b39b46
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85638137"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479881"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-此資料類型會公開在資料庫中自動產生的唯一二進位數字。 **rowversion** 通常用來作為版本戳記資料表資料列的機制。 儲存體大小是 8 位元組。 **rowversion** 資料類型只是會遞增的數字，因此不會保留日期或時間。 若要記錄日期或時間，請使用 **datetime2** 資料類型。
+此資料類型會公開在資料庫中自動產生的唯一二進位數字。 **rowversion** 通常用來作為版本戳記資料表資料列的機制。 儲存區大小為 8 位元組。 **rowversion** 資料類型只是會遞增的數字，因此不會保留日期或時間。 若要記錄日期或時間，請使用 **datetime2** 資料類型。
   
 ## <a name="remarks"></a>備註  
 每個資料庫都有一個計數器，會針對在資料庫內包含 **rowversion** 資料行的資料表所執行的每個插入或更新作業而遞增。 這個計數器是資料庫資料列版本。 這會追蹤資料庫內的相對時間，而不是可關聯於時鐘的實際時間。 資料表只能有一個 **rowversion** 資料行。 每次修改或插入含 **rowversion** 資料行的資料列時，都會在 **rowversion** 資料行中插入遞增的資料庫資料列版本值。 這個屬性會使 **rowversion** 資料行不適合作為索引鍵 (尤其是主索引鍵) 的候選項。 資料列的任何更新都會變更資料列版本值，因而會變更索引鍵值。 如果資料行在主索引鍵中，舊的索引鍵值便不再有效，參考舊值的外部索引鍵也不再有效。 如果動態資料指標參考資料表，所有更新都會變更資料列在資料指標中的位置。 如果資料行在索引鍵中，資料列的所有更新也會產生索引的更新。  **rowversion** 值會隨著任何 update 陳述式而遞增，即使沒有變更任何資料列值。 (例如，若資料行值為 5，而 update 陳述式將該值設為 5，即使沒有任何變更，此動作仍然會被視為更新；因此 **rowversion** 便會遞增。)

@@ -1,5 +1,6 @@
 ---
-title: sp_vupgrade_mergeobjects （Transact-sql） |Microsoft Docs
+description: sp_vupgrade_mergeobjects (Transact-SQL)
+title: sp_vupgrade_mergeobjects (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 73257c2e-cc4c-48e7-9d66-7ef045bdd4f5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2e2237feb8ba1be19df876cedc480b15cc430a30
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: da875b534164230609015492e88b10986808c5de
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891224"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480891"
 ---
 # <a name="sp_vupgrade_mergeobjects-transact-sql"></a>sp_vupgrade_mergeobjects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,23 +46,23 @@ sp_vupgrade_mergeobjects [ [@login = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @login = ] 'login'`這是在散發資料庫中建立新的系統物件時，所要使用的系統管理員登入。 *login* 是預設值為 NULL 的 **sysname**。 如果*security_mode*設定為**1**（也就是 Windows 驗證），則不需要這個參數。  
+`[ @login = ] 'login'` 這是在散發資料庫中建立新的系統物件時，所要使用的系統管理員登入。 *login* 是預設值為 NULL 的 **sysname**。 如果 *security_mode* 設定為 **1**（Windows 驗證），則不需要這個參數。  
   
-`[ @password = ] 'password'`這是在散發資料庫中建立新的系統物件時，所要使用的系統管理員密碼。 *password*是**sysname**，預設值是 **' '** （空字串）。 如果*security_mode*設定為**1**（也就是 Windows 驗證），則不需要這個參數。  
+`[ @password = ] 'password'` 這是在散發資料庫中建立新的系統物件時，所要使用的系統管理員密碼。 *password* 是 **sysname**，預設值是 **' '** (空白字串) 。 如果 *security_mode* 設定為 **1**（Windows 驗證），則不需要這個參數。  
   
-`[ @security_mode = ] 'security_mode'`這是在散發資料庫中建立新的系統物件時，所要使用的登入安全性模式。 *security_mode*是**bit** ，預設值是**1**。 如果是**0**， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 則會使用驗證。 如果是**1**，則會使用 Windows 驗證。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @security_mode = ] 'security_mode'` 這是在散發資料庫中建立新的系統物件時，所要使用的登入安全性模式。 *security_mode* 是 **bit** ，預設值為 **1**。 如果是 **0**， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 則會使用驗證。 如果是 **1**，則會使用 Windows 驗證。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_vupgrade_mergeobjects**僅用於合併式複寫。  
+ **sp_vupgrade_mergeobjects** 只用于合併式複寫。  
   
 ## <a name="permissions"></a>權限  
- 需要**系統管理員（sysadmin** ）固定伺服器角色中的成員資格。  
+ 需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的複寫預存程式](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的複寫預存程式 ](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [升級複寫的資料庫](../../database-engine/install-windows/upgrade-replicated-databases.md)  
   
   

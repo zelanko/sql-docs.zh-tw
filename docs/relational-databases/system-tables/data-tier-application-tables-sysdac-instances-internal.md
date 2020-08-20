@@ -1,5 +1,6 @@
 ---
-title: sysdac_instances_internal （Transact-sql） |Microsoft Docs
+description: 資料層應用程式資料表 - sysdac_instances_internal
+title: sysdac_instances_internal (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d2d52cc4-3463-431a-b779-6fbfdeee1dfc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98b33a43eeb52ca99c50235e5c3865c79cd92125
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5677f92a5a7cb4a74b72bb45d058ad4c198442fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890565"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480816"
 ---
 # <a name="data-tier-application-tables---sysdac_instances_internal"></a>資料層應用程式資料表 - sysdac_instances_internal
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,14 +35,14 @@ ms.locfileid: "85890565"
 |instance_id|**uniqueidentifier**|DAC 執行個體的識別碼。|  
 |instance_name|**sysname**|部署執行個體時指定之 DAC 執行個體的名稱。|  
 |type_name|**sysname**|建立 DAC 封裝時指定之 DAC 的名稱。|  
-|type_version|**Nvarchar （64）**|建立 DAC 封裝時指定之 DAC 的版本。|  
+|type_version|**Nvarchar (64) **|建立 DAC 封裝時指定之 DAC 的版本。|  
 |description|**nvarchar(4000)**|建立 DAC 封裝時寫入之 DAC 的描述。|  
 |type_stream|**varbinary(max)**|包含 DAC 中之邏輯物件編碼表示法的位元資料流，例如，資料表和檢視表。|  
 |date_created|**datetime**|建立 DAC 執行個體的日期和時間。|  
 |created_by|**sysname**|建立 DAC 執行個體的登入。|  
   
 ## <a name="remarks"></a>備註  
- 此視圖的唯讀存取權可供所有具有連接到 master 資料庫之許可權的使用者使用。  
+ 此視圖的唯讀存取權可供具有連接 master 資料庫之許可權的所有使用者使用。  
   
 ## <a name="permissions"></a>權限  
  需要系統管理員 (sysadmin) 固定伺服器角色中的成員資格。  

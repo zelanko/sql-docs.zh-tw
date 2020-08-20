@@ -1,5 +1,6 @@
 ---
-title: sp_droplogin （Transact-sql） |Microsoft Docs
+description: sp_droplogin (Transact-SQL)
+title: sp_droplogin (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e58684d1-c394-48de-906e-da6ee91100c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e28c02cb5816b65d5cc1bb1d196683a9bdf47e4d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cb6e3055c886760f51e8dcd303774a2fc76a61c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85858543"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481327"
 ---
 # <a name="sp_droplogin-transact-sql"></a>sp_droplogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85858543"
   移除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 這可防止他人以該登入名稱存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]請改用[DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md) 。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用 [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md) 。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,15 +43,15 @@ sp_droplogin [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @loginame = ] 'login'`這是要移除的登入。 *login*是**sysname**，沒有預設值。 *登*入必須已經存在於中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+`[ @loginame = ] 'login'` 這是要移除的登入。 *login* 是 **sysname**，沒有預設值。 *登* 入必須已經存在於中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="remarks"></a>備註  
- **sp_droplogin**會呼叫 DROP LOGIN。  
+ **sp_droplogin** 會呼叫 DROP LOGIN。  
   
- **sp_droplogin**不能在使用者自訂交易內執行。  
+ **sp_droplogin** 無法在使用者自訂交易內執行。  
   
 ## <a name="permissions"></a>權限  
  需要伺服器的 ALTER ANY LOGIN 權限。  
@@ -64,7 +65,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的安全性預存程式](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的安全性預存程式 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [DROP LOGIN &#40;Transact-sql&#41;](../../t-sql/statements/drop-login-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
