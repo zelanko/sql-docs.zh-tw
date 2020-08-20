@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_os_memory_nodes （Transact-sql） |Microsoft Docs
+description: sys.dm_os_memory_nodes (Transact-SQL)
+title: sys. dm_os_memory_nodes (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -20,27 +21,28 @@ ms.assetid: bf4032fe-7db1-40e9-a62e-d69cebff4b44
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1dffead9abbd537ef9ead278d0a6da0603a8b3f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a59dbc31c74a76d31abaf3f44b93a0323cf9a318
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999092"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474896"
 ---
 # <a name="sysdm_os_memory_nodes-transact-sql"></a>sys.dm_os_memory_nodes (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部的配置會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體管理員。 追蹤來自 sys.databases 的進程記憶體計數器之間的差異**dm_os_process_memory**和內部計數器，可以表示記憶體空間中外部元件的記憶體使用量 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部的配置會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體管理員。 從 **sys. dm_os_process_memory** 和內部計數器追蹤進程記憶體計數器之間的差異，可能表示記憶體空間中的外部元件記憶體使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
- 每個實體 NUMA 記憶體節點都會建立一些節點。 這些可能會與 sys.databases 中的 CPU 節點不同**dm_os_nodes**。  
+ 每個實體 NUMA 記憶體節點都會建立一些節點。 這些可能與 **sys. dm_os_nodes**中的 CPU 節點不同。  
   
  系統不會追蹤直接透過 Windows 記憶體配置常式完成的配置。 下表將提供僅使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體管理員介面所完成之記憶體配置的相關資訊。  
   
 > [!NOTE]  
->  若要從或呼叫此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用**dm_pdw_nodes_os_memory_nodes**的名稱。  
+>  若要從或呼叫這個 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用名稱 **sys. dm_pdw_nodes_os_memory_nodes**。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**memory_node_id**|**smallint**|指定記憶體節點的識別碼。 與**dm_os_memory_clerks**的**memory_node_id**相關。 不可為 Null。|  
+|**memory_node_id**|**smallint**|指定記憶體節點的識別碼。 與**sys. dm_os_memory_clerks** **memory_node_id**相關。 不可為 Null。|  
 |**virtual_address_space_reserved_kb**|**bigint**|指出未經認可也沒有對應至實體頁面的虛擬位址保留數目 (以 KB 為單位)。 不可為 Null。|  
 |**virtual_address_space_committed_kb**|**bigint**|指定已經認可或對應至實體頁面的虛擬位址數量 (以 KB 為單位)。 不可為 Null。|  
 |**locked_page_allocations_kb**|**bigint**|指定已經由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 鎖定的實體記憶體數量 (以 KB 為單位)。 不可為 Null。|  
@@ -54,15 +56,15 @@ ms.locfileid: "85999092"
 |**processor_group**|**smallint**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 僅供內部使用。 不可為 Null。|  
 |**foreign_committed_kb**|**bigint**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 指定來自其他記憶體節點的認可記憶體數量 (以 KB 為單位)。 不可為 Null。|  
 |**target_kb** |**bigint** |**適用於**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更新版本、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 指定記憶體節點的記憶體目標（以 KB 為單位）。 |   
-|**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
+|**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在之節點的識別碼。|  
   
 ## <a name="permissions"></a>權限
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 許可權。   
-在高階 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 層級上，需要 `VIEW DATABASE STATE` 資料庫的許可權。 在 [ [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
+在進階層中 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ，需要 `VIEW DATABASE STATE` 資料庫中的許可權。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準和基本層中，需要  **伺服器管理員** 或 **Azure Active Directory 系統管理員** 帳戶。   
 
 ## <a name="see-also"></a>另請參閱  
-  [SQL Server 作業系統相關的動態管理 Views &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+  [SQL Server 作業系統相關的動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

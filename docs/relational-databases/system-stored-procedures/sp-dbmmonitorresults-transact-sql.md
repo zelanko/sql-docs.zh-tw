@@ -1,5 +1,6 @@
 ---
-title: sp_dbmmonitorresults （Transact-sql） |Microsoft Docs
+description: sp_dbmmonitorresults (Transact-SQL)
+title: sp_dbmmonitorresults (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d90b4d76be9d75bbad28053a1e61ffb1c12212fa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d302c6c592dda3dc4612310a3af8cabc0113aef6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85865668"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474416"
 ---
 # <a name="sp_dbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -73,7 +74,7 @@ sp_dbmmonitorresults database_name
   
  0 = 不要更新資料庫的狀態。 只會使用最後兩個資料列來計算結果，而資料列的存在時間是依狀態資料表於何時重新整理而定。  
   
- 1 = 在計算結果之前，藉由呼叫**sp_dbmmonitorupdate**來更新資料庫的狀態。 不過，如果狀態資料表在前15秒內已更新，或使用者不是**系統管理員（sysadmin** ）固定伺服器角色的成員，則**sp_dbmmonitorresults**執行而不更新狀態。  
+ 1 = 在計算結果之前，藉由呼叫 **sp_dbmmonitorupdate** 來更新資料庫的狀態。 但是，如果在前15秒內已更新狀態資料表，或使用者不是 **系統管理員（sysadmin** ）固定伺服器角色的成員， **sp_dbmmonitorresults** 會在不更新狀態的情況下執行。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  None  
@@ -100,13 +101,13 @@ sp_dbmmonitorresults database_name
 |**local_time**|**datetime**|更新這個資料列時本機伺服器執行個體上的系統時間。|  
   
 ## <a name="remarks"></a>備註  
- **sp_dbmmonitorresults**只能在**msdb**資料庫的內容中執行。  
+ **sp_dbmmonitorresults** 只能在 **msdb** 資料庫的內容中執行。  
   
 ## <a name="permissions"></a>權限  
- 需要**系統管理員（sysadmin** ）固定伺服器角色中的成員資格，或**msdb**資料庫中的**dbm_monitor**固定資料庫角色。 **Dbm_monitor**角色可讓其成員查看資料庫鏡像狀態，但不會加以更新，但不會查看或設定資料庫鏡像事件。  
+ 需要**系統管理員（sysadmin** ）固定伺服器角色中的成員資格，或是**msdb**資料庫的**dbm_monitor**固定資料庫角色中的成員資格。 **Dbm_monitor**角色可讓其成員查看資料庫鏡像狀態，但不會加以更新，但不會顯示或設定資料庫鏡像事件。  
   
 > [!NOTE]  
->  第一次執行**sp_dbmmonitorupdate**時，它會在**msdb**資料庫中建立**dbm_monitor**固定資料庫角色。 **系統管理員（sysadmin** ）固定伺服器角色的成員可以將任何使用者加入至**dbm_monitor**固定資料庫角色。  
+>  當**sp_dbmmonitorupdate**第一次執行時，它會在**msdb**資料庫中建立**dbm_monitor**固定資料庫角色。 **系統管理員（sysadmin** ）固定伺服器角色的成員可以將任何使用者新增至**dbm_monitor**固定資料庫角色。  
   
 ## <a name="examples"></a>範例  
  下列範例會傳回在前兩個小時期間記錄的資料列，而不會更新資料庫的狀態。  

@@ -1,5 +1,6 @@
 ---
-title: 與作業系統相關的動態管理檢視 SQL Server （Transact-sql） |Microsoft Docs
+description: SQL Server 作業系統相關的動態管理檢視 (Transact-SQL)
+title: SQL Server 作業系統相關的動態管理檢視 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/17/2018
 ms.prod: sql
@@ -16,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 3030c86a-0a74-4fed-ac0f-392e244cb965
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0ca96f4134e58a129ed14129431f5d8caceae31d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2b95dc736e02dd274723686429907fbccf4fea2a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243799"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475045"
 ---
 # <a name="sql-server-operating-system-related-dynamic-management-views-transact-sql"></a>SQL Server 作業系統相關的動態管理檢視 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-本節記載與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作業系統（SQLOS）相關聯的動態管理檢視（DMV）。 SQLOS 負責管理特定的作業系統資源 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。
+本節說明與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作業系統 (SQLOS) 相關聯的動態管理檢視 (DMV) 。 SQLOS 負責管理特定的作業系統資源 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。
 
 
 |  |  |
@@ -57,7 +58,7 @@ ms.locfileid: "87243799"
 
 
 
- 下列與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作業系統相關的動態管理檢視為 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 。  
+ 下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作業系統相關的動態管理檢視為 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 。  
   
 |||  
 |-|-|  

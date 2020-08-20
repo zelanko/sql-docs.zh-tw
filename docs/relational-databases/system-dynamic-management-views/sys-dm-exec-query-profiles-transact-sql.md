@@ -1,5 +1,6 @@
 ---
-title: dm_exec_query_profiles (Transact-sql) |Microsoft Docs
+description: sys.dm_exec_query_profiles (Transact-SQL)
+title: sys. dm_exec_query_profiles (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/25/2019
 ms.prod: sql
@@ -20,12 +21,12 @@ ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 51dd6f1d831931fcd8e14e38a3ca94ae440dae1a
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 4cbb0c5bb226842aeb9767fd4ac9c3a8122dc790
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865366"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474978"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -33,14 +34,14 @@ ms.locfileid: "87865366"
 監視查詢執行時的即時查詢進度。 例如，使用此 DMV 判斷查詢的哪個部份執行得很慢。 使用描述欄位中識別的資料行可將此 DMV 與其他系統 DMV 聯結。 或者，使用時間戳記資料行，將此 DMV 與其他效能計數器 (例如效能監視器 xperf) 聯結在一起。  
   
 ## <a name="table-returned"></a>傳回的資料表  
-傳回的計數器是以每個執行緒的每個運算子為基礎。 結果是動態的，而且不符合現有選項的結果，例如， `SET STATISTICS XML ON` 當查詢完成時，只會建立輸出。  
+傳回的計數器是以每個執行緒的每個運算子為基礎。 結果是動態的，且不符合現有選項的結果，例如 `SET STATISTICS XML ON` 在查詢完成時只會建立輸出。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|識別此查詢執行所在的工作階段。 參考 dm_exec_sessions.session_id。|  
 |request_id|**int**|識別目標要求。 參考 dm_exec_sessions.request_id。|  
-|sql_handle|**varbinary(64)**|這是一個標記，可唯一識別查詢所屬的批次或預存程式。 參考 dm_exec_query_stats.sql_handle。|  
-|plan_handle|**varbinary(64)**|這是一個標記，可唯一識別已執行之批次的查詢執行計畫，且其計畫位於計畫快取中，或目前正在執行。 參考 dm_exec_query_stats. plan_handle。|  
+|sql_handle|**varbinary(64)**|這是可唯一識別查詢所屬批次或預存程式的 token。 參考 dm_exec_query_stats.sql_handle。|  
+|plan_handle|**varbinary(64)**|這是一種權杖，可唯一識別已執行之批次的查詢執行計畫，而且其計畫位於計畫快取或目前正在執行中。 參考 dm_exec_query_stats。 plan_handle。|  
 |physical_operator_name|**nvarchar(256)**|實體運算子名稱。|  
 |node_id|**int**|識別查詢樹狀結構中的運算子節點。|  
 |thread_id|**int**|區分屬於相同查詢運算子節點的執行緒 (針對平行查詢)。|  
@@ -56,8 +57,8 @@ ms.locfileid: "87865366"
 |first_row_time|**bigint**|開啟第一個資料列的時間戳記 (以毫秒為單位)。|  
 |last_row_time|**bigint**|開啟最後一個資料列的時間戳記 (以毫秒為單位)。|  
 |close_time|**bigint**|關閉的時間戳記 (以毫秒為單位)。|  
-|elapsed_time_ms|**bigint**|目前為止目標節點的作業所使用的已耗用時間總計 (（以毫秒為單位）) 。|  
-|cpu_time_ms|**bigint**|目前為止，目標節點的作業使用的總 CPU 時間 (（以毫秒為單位）) 。|  
+|elapsed_time_ms|**bigint**|目標節點作業到目前為止所使用的總經過時間（以毫秒為單位） () 。|  
+|cpu_time_ms|**bigint**|目標節點作業到目前為止， (的總 CPU 時間（以毫秒為單位）) 使用。|  
 |database_id|**smallint**|包含在上面執行讀取和寫入之物件的資料庫識別碼。|  
 |object_id|**int**|正在上面執行讀取和寫入之物件的識別碼。 參考 sys.objects.object_id。|  
 |index_id|**int**|資料列集開啟所依據的索引 (如果有的話)。|  
@@ -71,29 +72,29 @@ ms.locfileid: "87865366"
 |lob_read_ahead_count|**bigint**|目前為止的 LOB 預先讀取數目。|  
 |segment_read_count|**int**|目前為止的區段預先讀取數目。|  
 |segment_skip_count|**int**|目前為止略過的區段數目。| 
-|actual_read_row_count|**bigint**|套用剩餘述詞之前，由運算子讀取的資料列數目。| 
-|estimated_read_row_count|**bigint**|**適用物件：** 從 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 開始。 <br/>在套用剩餘述詞之前，由運算子讀取的估計資料列數目。|  
+|actual_read_row_count|**bigint**|套用剩餘的述詞之前，由運算子讀取的資料列數目。| 
+|estimated_read_row_count|**bigint**|**適用于：** 從 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 開始。 <br/>在套用剩餘的述詞之前，要由運算子讀取的資料列數目。|  
   
 ## <a name="general-remarks"></a>一般備註  
- 如果 [查詢計劃] 節點沒有任何 i/o，所有 i/o 相關的計數器都會設定為 Null。  
+ 如果查詢計劃節點沒有任何 i/o，則所有 i/o 相關的計數器都會設定為 Null。  
   
- 這個 DMV 所報告的 i/o 相關計數器，會比透過 `SET STATISTICS IO` 下列兩種方式的報告更為精細：  
+ 這個 DMV 所報告的 i/o 相關計數器比 `SET STATISTICS IO` 下列兩個方式所報告的計數器更細微：  
   
--   `SET STATISTICS IO`將所有 i/o 的計數器一起分組到指定的資料表。 使用此 DMV 時，會針對查詢計劃中的每個節點，取得對資料表執行 i/o 的個別計數器。  
+-   `SET STATISTICS IO` 將所有 i/o 的計數器群組在一起。 使用此 DMV，您將會針對查詢計劃中每個執行資料表 i/o 的節點，取得個別的計數器。  
   
 -   如果有平行掃描，此 DMV 會針對掃描上運作的每個平行執行緒報告計數器。
  
-從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始，*標準查詢執行統計資料分析基礎結構*會與*輕量查詢執行統計資料分析基礎結構*並存存在。 `SET STATISTICS XML ON`和 `SET STATISTICS PROFILE ON` 一律使用*標準查詢執行統計資料分析基礎結構*。 `sys.dm_exec_query_profiles`若要填入，必須啟用其中一個查詢分析基礎結構。 如需詳細資訊，請參閱[查詢分析基礎結構](../../relational-databases/performance/query-profiling-infrastructure.md)。    
+從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始， *標準的查詢執行統計資料分析基礎結構* 會與 *輕量查詢執行統計資料分析基礎結構*並存存在。 `SET STATISTICS XML ON` 而且 `SET STATISTICS PROFILE ON` 一律使用 *標準的查詢執行統計資料分析基礎結構*。 `sys.dm_exec_query_profiles`若要填入，必須啟用其中一個查詢分析基礎結構。 如需詳細資訊，請參閱[查詢分析基礎結構](../../relational-databases/performance/query-profiling-infrastructure.md)。    
 
 >[!NOTE]
-> 調查中的查詢必須在啟用查詢分析基礎結構**之後**啟動，在查詢開始之後啟用它將不會產生結果 `sys.dm_exec_query_profiles` 。 如需如何啟用查詢分析基礎結構的詳細資訊，請參閱[查詢分析基礎結構](../../relational-databases/performance/query-profiling-infrastructure.md)。
+> 正在進行調查的查詢必須在啟用查詢分析基礎結構 **之後** 啟動，而在查詢開始之後啟用它將不會在中產生結果 `sys.dm_exec_query_profiles` 。 如需如何啟用查詢分析基礎結構的詳細資訊，請參閱 [查詢分析基礎結構](../../relational-databases/performance/query-profiling-infrastructure.md)。
 
 ## <a name="permissions"></a>權限  
 在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 和 AZURE SQL 受控執行個體上，需要 `VIEW DATABASE STATE` 資料庫角色的許可權和成員資格 `db_owner` 。   
-在高階 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 層級上，需要 `VIEW DATABASE STATE` 資料庫的許可權。 在 [ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
+在進階層中 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ，需要 `VIEW DATABASE STATE` 資料庫中的許可權。 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 標準和基本層中，需要  **伺服器管理員** 或 **Azure Active Directory 系統管理員** 帳戶。   
    
 ## <a name="examples"></a>範例  
- 步驟1：登入您打算執行查詢的會話，您將流量分析 `sys.dm_exec_query_profiles` 。 若要設定查詢以進行分析，請使用 `SET STATISTICS PROFILE ON` 。 在此相同工作階段中執行查詢。  
+ 步驟1：登入您想要在其中執行您將流量分析的查詢之會話 `sys.dm_exec_query_profiles` 。 若要設定查詢以進行分析，請使用 `SET STATISTICS PROFILE ON` 。 在此相同工作階段中執行查詢。  
   
 ```sql  
 --Configure query for profiling with sys.dm_exec_query_profiles  
@@ -107,7 +108,7 @@ GO
 --Next, run your query in this session, or in any other session if query profiling has been enabled globally 
 ```  
   
- 步驟2：登入與執行查詢的會話不同的第二個會話。  
+ 步驟2：登入與您的查詢執行所在會話不同的第二個會話。  
   
  下列陳述式摘要目前正在工作階段 54 中執行的查詢進度。 為了達成目的，它會計算每個節點所有執行緒的輸出資料列總數，並且將它和該節點的輸出資料列預估數比較。  
   

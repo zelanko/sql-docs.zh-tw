@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_8689
 title: MSSQLSERVER_8689 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 99467a32-6576-4272-a076-b16c06933f2a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 18c8e591f255b57f8cbb935075695fca7bcc3960
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3cb49e744aad34a9147c665d4c81d78e06d87165
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85637058"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476032"
 ---
 # <a name="mssqlserver_8689"></a>MSSQLSERVER_8689
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

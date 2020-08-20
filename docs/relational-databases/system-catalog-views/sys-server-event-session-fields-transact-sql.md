@@ -1,5 +1,6 @@
 ---
-title: sys.databases server_event_session_fields （Transact-sql） |Microsoft Docs
+description: sys.server_event_session_fields (Transact-SQL)
+title: sys. server_event_session_fields (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7109f9fb-8a1f-432c-92d1-6f8af3e96af1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3b87440f9f5e1afc6ea1ede20054e4f34db8087d
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: ffead368e1c89d9e2d963eb4fb3f806c4bde327a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442473"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475268"
 ---
 # <a name="sysserver_event_session_fields-transact-sql"></a>sys.server_event_session_fields (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -47,13 +48,13 @@ ms.locfileid: "87442473"
   
 | 寄件者 | 收件者 | 關聯性 |
 | ---- | -- | ------------ |
-|sys.server_event_session_actions.event_session_id|server_event_sessions. event_session_id|多對一|  
+|sys.server_event_session_actions.event_session_id|sys. server_event_sessions. event_session_id|多對一|  
 |sys.server_event_session_actions.event_id<br /><br /> sys.server_event_session_actions.object_id<br /><br /> sys.server_event_session_actions.event_session_id|sys.server_event_session_events.event_session_id<br /><br /> sys.server_event_session_events.event_id|多對一|  
 |sys.server_event_session_actions.event_session_id<br /><br /> sys.server_event_session_actions.object_id|sys.server_event_session_targets.event_session_id<br /><br /> sys.server_event_session_targets.target_id|多對一|  
   
 ## <a name="see-also"></a>另請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [擴充事件目錄檢視 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的擴充事件目錄檢視 ](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [擴充事件](../../relational-databases/extended-events/extended-events.md)  
   
   

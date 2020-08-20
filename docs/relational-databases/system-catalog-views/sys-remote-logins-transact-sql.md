@@ -1,5 +1,6 @@
 ---
-title: sys.databases remote_logins （Transact-sql） |Microsoft Docs
+description: sys.remote_logins (Transact-SQL)
+title: sys. remote_logins (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 38477e91-d084-4df7-b1de-b930c5580189
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 587e117ce58ca0beff93adc8be864bcf6777b416
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9c1dc75f4a790d93d13a998e56fb32cf2ad5ddfb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880013"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475280"
 ---
 # <a name="sysremote_logins-transact-sql"></a>sys.remote_logins (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85880013"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**server_id**|**int**|**Sys.databases**中的伺服器識別碼。 這個名稱是由「遠端」伺服器發出的連接所提供。|  
+|**server_id**|**int**|**Sys. 伺服器**中的伺服器識別碼。 這個名稱是由「遠端」伺服器發出的連接所提供。|  
 |**remote_name**|**sysname**|連接會提供讓您對應的登入名稱。 如果是 NULL，則採用連接所指定的登入名稱。|  
 |**local_principal_id**|**int**|登入對應所在伺服器主體的識別碼。 如果是 0，則遠端登入會對應至同名登入。|  
 |**modify_date**|**datetime**|上次變更連結登入的日期。|  
@@ -42,7 +43,7 @@ ms.locfileid: "85880013"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [連結伺服器目錄檢視 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
+ [連結的伺服器目錄檢視 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

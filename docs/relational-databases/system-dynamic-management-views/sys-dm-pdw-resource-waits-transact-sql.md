@@ -1,5 +1,6 @@
 ---
-title: dm_pdw_resource_waits (Transact-sql) |Microsoft Docs
+description: 'sys. dm_pdw_resource_waits (Transact-sql) '
+title: sys. dm_pdw_resource_waits (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/26/2019
 ms.prod: sql
@@ -12,14 +13,14 @@ ms.assetid: a43ce9a2-5261-41e3-97f0-555ba05ebed9
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 83d4fda9c4e2a4d7f9eabd29a101e51a8d5cd8ab
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: cf3b21433a4eb19be526487e9df03a8df7bce276
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197157"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474676"
 ---
-# <a name="sysdm_pdw_resource_waits-transact-sql"></a>dm_pdw_resource_waits (Transact-sql) 
+# <a name="sysdm_pdw_resource_waits-transact-sql"></a>sys. dm_pdw_resource_waits (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   顯示中所有資源類型的等候資訊 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。  
@@ -27,20 +28,20 @@ ms.locfileid: "86197157"
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
 |wait_id|**bigint**|要求在等候清單中的位置。|以零為基底的序數。 這在所有等候專案中都不是唯一的。|  
-|session_id|**nvarchar(32)**|發生等候狀態之會話的識別碼。|請參閱[dm_pdw_exec_sessions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)中的 session_id。|  
-|類型|**nvarchar(255)**|此專案所代表的等候類型。|可能的值：<br /><br /> 連線<br /><br /> 區域變數並行查詢<br /><br /> 分散式查詢並行<br /><br /> DMS 並行<br /><br /> 備份並行|  
-|object_type|**nvarchar(255)**|受等候影響的物件類型。|可能的值：<br /><br /> **目標**<br /><br /> **資料**<br /><br /> **筆記本電腦**<br /><br /> **SCHEMA**<br /><br /> **應用程式**|  
-|object_name|**Nvarchar (386) **|受等候影響之指定物件的名稱或 GUID。|資料表和 views 會以三個部分的名稱顯示。<br /><br /> 索引和統計資料會顯示四部分名稱。<br /><br /> 名稱、主體和資料庫都是字串名稱。|  
-|request_id|**nvarchar(32)**|發生等候狀態之要求的識別碼。|要求的 QID 識別碼。<br /><br /> 載入要求的 GUID 識別碼。|  
+|session_id|**nvarchar(32)**|等候狀態發生所在之會話的識別碼。|請參閱 [sys. dm_pdw_exec_sessions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)中的 session_id。|  
+|type|**nvarchar(255)**|此專案代表的等候類型。|可能的值：<br /><br /> Connection<br /><br /> 本機查詢並行<br /><br /> 平行存取分散式查詢<br /><br /> DMS 平行存取<br /><br /> 備份並行|  
+|object_type|**nvarchar(255)**|受等候影響的物件類型。|可能的值：<br /><br /> **物件**<br /><br /> **資料庫**<br /><br /> **系統**<br /><br /> **模式**<br /><br /> **應用**|  
+|object_name|**Nvarchar (386) **|受等候影響之指定物件的名稱或 GUID。|資料表和視圖會以三部分名稱顯示。<br /><br /> 索引和統計資料會以四部分名稱顯示。<br /><br /> 名稱、主體和資料庫都是字串名稱。|  
+|request_id|**nvarchar(32)**|等候狀態發生所在要求的識別碼。|要求的 QID 識別碼。<br /><br /> 載入要求的 GUID 識別碼。|  
 |request_time|**datetime**|要求鎖定或資源的時間。||  
 |acquire_time|**datetime**|取得鎖定或資源的時間。||  
-|state|**nvarchar(50)**|等候狀態的狀態。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|priority|**int**|等待專案的優先順序。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|concurrency_slots_used|**int**|內部|請參閱下方的[監視資源等候](#monitor-resource-waits)|  
-|resource_class|**Nvarchar (20) **|內部 |請參閱下方的[監視資源等候](#monitor-resource-waits)|  
+|狀態|**nvarchar(50)**|等候狀態的狀態。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|priority|**int**|等候專案的優先權。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|concurrency_slots_used|**int**|內部|請參閱下方的[監視器資源等候](#monitor-resource-waits)|  
+|resource_class|**Nvarchar (20) **|內部 |請參閱下方的[監視器資源等候](#monitor-resource-waits)|  
   
 ## <a name="monitor-resource-waits"></a>監視資源等候 
-隨著[工作負載群組](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation)的引進，平行存取插槽已不再適用。  使用下列查詢和資料 `resources_requested` 行，以瞭解執行要求所需的資源。
+隨著 [工作負載群組](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation)的引入，平行存取插槽不再適用。  使用下列查詢和資料 `resources_requested` 行，以瞭解執行要求所需的資源。
 
 ```sql
 select rw.wait_id
@@ -60,6 +61,6 @@ select rw.wait_id
 ```
 
 ## <a name="see-also"></a>另請參閱  
- [SQL 資料倉儲和平行處理資料倉儲動態管理 Views &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [SQL 資料倉儲和平行處理資料倉儲動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

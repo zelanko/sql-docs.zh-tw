@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_db_xtp_gc_cycle_stats （Transact-sql） |Microsoft Docs
+description: sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
+title: sys. dm_db_xtp_gc_cycle_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -20,12 +21,12 @@ ms.assetid: bbc9704e-158e-4d32-b693-f00dce31cd2f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e0edb4d46ae47b4c45dc01f7d2e33f856424352
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: a1a18919675522753775c91712105b1193c4f0aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442570"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475036"
 ---
 # <a name="sysdm_db_xtp_gc_cycle_stats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -43,12 +44,12 @@ ms.locfileid: "87442570"
  如需詳細資訊，請參閱[記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。  
   
   
-|資料行名稱|類型|說明|  
+|資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
 |cycle_id|**bigint**|記憶體回收循環的唯一識別碼。|  
 |ticks_at_cycle_start|**bigint**|循環開始時的時間刻度。|  
 |ticks_at_cycle_end|**bigint**|循環結束時的時間刻度。|  
-|base_generation|**bigint**|資料庫中目前的基底層代值。 這代表用來識別記憶體回收交易之最舊作用中交易的時間戳記。 最舊的作用中交易識別碼會以 16 的增量更新。 例如，如果您的交易識別碼為124、125、126 .。。139，此值會是124。 當您加入另一筆交易時 (例如 140)，此值將會是 140。|  
+|base_generation|**bigint**|資料庫中目前的基底層代值。 這代表用來識別記憶體回收交易之最舊作用中交易的時間戳記。 最舊的作用中交易識別碼會以 16 的增量更新。 例如，如果您的交易識別碼為124、125、126 .。。139，值會是124。 當您加入另一筆交易時 (例如 140)，此值將會是 140。|  
 |xacts_copied_to_local|**bigint**|從交易管線複製到資料庫之層代陣列的交易數目。|  
 |xacts_in_gen_0- xacts_in_gen_15|**bigint**|每一層代 (Generation) 的交易數目。|  
   

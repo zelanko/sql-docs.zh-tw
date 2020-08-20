@@ -1,5 +1,6 @@
 ---
-title: sys.databases （Transact-sql） |Microsoft Docs
+description: sys.stats (Transact-SQL)
+title: sys. stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/18/2017
 ms.prod: sql
@@ -20,27 +21,28 @@ ms.assetid: 42605c80-126f-460a-befb-a0b7482fae6a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 19a338aa9f5d20dd9a6d089cdf4b56bcf1a4b541
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 18c6900c0eae313b77e796a99666dd1176d9f2df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012914"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475222"
 ---
 # <a name="sysstats-transact-sql"></a>sys.stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中資料表、索引和索引檢視表的每個統計資料物件，各包含一個資料列。 每個索引都會有一個具有相同名稱和識別碼（**index_id**stats_id）的對應統計資料列  =  ** **，但並非每個統計資料列都有對應的索引。  
+  針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中資料表、索引和索引檢視表的每個統計資料物件，各包含一個資料列。 每個索引都會有一個具有相同名稱和識別碼 (**index_id**stats_id) 的對應統計資料列  =  **stats_id** ，但並非每個統計資料列都有對應的索引。  
   
- 目錄檢視[sys. stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)提供資料庫中每個資料行的統計資訊。 如需統計資料的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。  
+ 目錄檢視 [sys. stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) 會提供資料庫中每個資料行的統計資料資訊。 如需統計資料的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|這些統計資料所屬物件的識別碼。|  
 |**name**|**sysname**|統計資料的名稱。 在物件中，這是唯一的。|  
-|**stats_id**|**int**|統計資料的識別碼。 在物件中，這是唯一的。<br /><br />如果統計資料對應到索引，則*stats_id*值與[sys.databases](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)目錄檢視中的*index_id*值相同。|  
+|**stats_id**|**int**|統計資料的識別碼。 在物件中，這是唯一的。<br /><br />如果統計資料對應到索引，則*stats_id*值與[sys. 索引](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)目錄檢視中的*index_id*值相同。|  
 |**auto_created**|**bit**|指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否自動建立統計資料。<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未自動建立統計資料。<br /><br /> 1 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自動建立統計資料。|  
 |**user_created**|**bit**|指出使用者是否建立統計資料。<br /><br /> 0 = 使用者未建立統計資料。<br /><br /> 1 = 使用者建立統計資料。|  
-|**no_recompute**|**bit**|指出是否使用**NORECOMPUTE**選項建立統計資料。<br /><br /> 0 = 未使用**NORECOMPUTE**選項來建立統計資料。<br /><br /> 1 = 統計資料是使用**NORECOMPUTE**選項所建立。|  
+|**no_recompute**|**bit**|指出是否使用 **NORECOMPUTE** 選項建立統計資料。<br /><br /> 0 = 未使用 **NORECOMPUTE** 選項建立統計資料。<br /><br /> 1 = 統計資料是使用 **NORECOMPUTE** 選項所建立。|  
 |**has_filter**|**bit**|0 = 統計資料沒有篩選，而且會在所有資料列上計算。<br /><br /> 1 = 統計資料有篩選，而且只會在滿足篩選定義的資料列上計算。|  
 |**filter_definition**|**nvarchar(max)**|包含在已篩選之統計資料內的資料列子集運算式。<br /><br /> NULL = 非篩選的統計資料。|  
 |**is_temporary**|**bit**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 指出統計資料是否為暫時性。 暫時性統計資料支援已啟用唯讀存取的 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 次要資料庫。<br /><br /> 0 = 統計資料不是暫時性。<br /><br /> 1 = 統計資料是暫時性。|  
@@ -67,12 +69,12 @@ WHERE s.object_id = OBJECT_ID('HumanResources.Employee');
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的物件目錄檢視](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [物件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查詢 SQL Server 系統目錄常見問題](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [數位](../../relational-databases/statistics/statistics.md)    
- [dm_db_stats_properties &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
- [dm_db_stats_histogram &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
+ [統計資料](../../relational-databases/statistics/statistics.md)    
+ [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
+ [sys. dm_db_stats_histogram &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
  [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)
  
 

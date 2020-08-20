@@ -1,5 +1,6 @@
 ---
-title: sys.databases service_queues （Transact-sql） |Microsoft Docs
+description: sys.service_queues (Transact-SQL)
+title: sys. service_queues (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,24 +20,24 @@ helpviewer_keywords:
 ms.assetid: 9fd9fa76-6128-410c-896f-741e6050143a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a52c25da243107de672d0d7cd136471ea632b0eb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ded21f580d0243f6c1343af675497d91308d4a16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897526"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475255"
 ---
 # <a name="sysservice_queues-transact-sql"></a>sys.service_queues (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  包含資料庫中每個屬於服務佇列之物件的資料列，並具有**sys.databases。類型**= SQ。  
+  針對資料庫中的每個物件，各包含一個資料列，該物件為服務佇列，而 **sys. objects。 type** = SQ。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**\<inherited columns>**||如需此視圖所繼承之資料行的清單，請參閱[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
+|**\<inherited columns>**||如需此視圖所繼承之資料行的清單，請參閱 [sys. objects &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
 |**max_readers**|**smallint**|佇列所能接受的最大並行讀取器數。|  
-|**activation_procedure**|**Nvarchar （776）**|啟用程序的三部份名稱。|  
-|**execute_as_principal_id**|**int**|EXECUTE AS 資料庫主體的識別碼。<br /><br /> 在預設或 EXECUTE AS CALLER 的情況下為 NULL。<br /><br /> 如果 EXECUTE AS SELF EXECUTE AS，則為指定主體的識別碼 \<principal> 。<br /><br /> -2 = EXECUTE AS OWNER。|  
+|**activation_procedure**|**Nvarchar (776) **|啟用程序的三部份名稱。|  
+|**execute_as_principal_id**|**int**|EXECUTE AS 資料庫主體的識別碼。<br /><br /> 在預設或 EXECUTE AS CALLER 的情況下為 NULL。<br /><br /> 如果 EXECUTE AS SELF EXECUTE AS，則為指定之主體的識別碼 \<principal> 。<br /><br /> -2 = EXECUTE AS OWNER。|  
 |**is_activation_enabled**|**bit**|1 = 啟用啟動。|  
 |**is_receive_enabled**|**bit**|1 = 啟用接收。|  
 |**is_enqueue_enabled**|**bit**|1 = 啟用加入佇列。|  
@@ -47,7 +48,7 @@ ms.locfileid: "85897526"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的物件目錄檢視](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [物件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

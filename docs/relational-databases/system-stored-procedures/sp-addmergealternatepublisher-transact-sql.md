@@ -1,5 +1,6 @@
 ---
-title: sp_addmergealternatepublisher （Transact-sql） |Microsoft Docs
+description: sp_addmergealternatepublisher (Transact-SQL)
+title: sp_addmergealternatepublisher (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: de46e0b1-d946-4021-bff6-2d8e3187656d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6ef8e5152fb715172f6c04854e342c46b759f25
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 11e06e0dacb97d7c52b34874d90a1398561cc7dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757973"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474507"
 ---
 # <a name="sp_addmergealternatepublisher-transact-sql"></a>sp_addmergealternatepublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,32 +46,32 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publisher = ] 'publisher'`這是發行者的名稱。 *publisher*是**sysname**，沒有預設值。  
+`[ @publisher = ] 'publisher'` 這是發行者的名稱。 *publisher* 是 **sysname**，沒有預設值。  
   
-`[ @publisher_db = ] 'publisher_db'`這是發行集資料庫的名稱。 *publisher_db*是**sysname**，沒有預設值。  
+`[ @publisher_db = ] 'publisher_db'` 這是發行集資料庫的名稱。 *publisher_db* 是 **sysname**，沒有預設值。  
   
-`[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 這是發行集的名稱。 *發行* 集是 **sysname**，沒有預設值。  
   
-`[ @alternate_publisher = ] 'alternate_synchronization_partner'`這是替代發行者的名稱。 *alternate_synchronization_partner*是**sysname**，沒有預設值。  
+`[ @alternate_publisher = ] 'alternate_synchronization_partner'` 這是替代發行者的名稱。 *alternate_synchronization_partner* 是 **sysname**，沒有預設值。  
   
-`[ @alternate_publisher_db = ] 'alternate_publisher_db'`這是替代發行者上的發行集資料庫名稱。 *alternate_publisher_db*是**sysname**，沒有預設值。  
+`[ @alternate_publisher_db = ] 'alternate_publisher_db'` 這是替代發行者上的發行集資料庫名稱。 *alternate_publisher_db* 是 **sysname**，沒有預設值。  
   
-`[ @alternate_publication = ] 'alternate_synchronization_partner'`這是替代同步處理夥伴上的發行集名稱。 *alternate_synchronization_partner*是**sysname**，沒有預設值。  
+`[ @alternate_publication = ] 'alternate_synchronization_partner'` 這是替代同步處理夥伴上的發行集名稱。 *alternate_synchronization_partner* 是 **sysname**，沒有預設值。  
   
-`[ @alternate_distributor = ] 'alternate_distributor'`這是替代同步夥伴的散發者名稱。 *alternate_distributor*是**sysname**，沒有預設值。  
+`[ @alternate_distributor = ] 'alternate_distributor'` 這是替代同步處理夥伴的散發者名稱。 *alternate_distributor* 是 **sysname**，沒有預設值。  
   
-`[ @friendly_name = ] 'friendly_name'`這是可以識別組成替代同步處理夥伴之「發行者」、「發行集」和「散發者」關聯的「顯示名稱」。 *friendly_name*是**Nvarchar （255）**，預設值是 Null。  
+`[ @friendly_name = ] 'friendly_name'` 這是用來識別組成替代同步處理夥伴之發行者、發行集和散發者之關聯的顯示名稱。 *friendly_name* 是 **Nvarchar (255) **，預設值是 Null。  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_addmergealternatepublisher**用於合併式複寫中。  
+ **sp_addmergealternatepublisher** 用於合併式複寫中。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_addmergealternatepublisher**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色或 **db_owner** 固定資料庫角色的成員，才能夠執行 **sp_addmergealternatepublisher**。  
   
 ## <a name="see-also"></a>另請參閱  
  [sp_dropmergealternatepublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergealternatepublisher-transact-sql.md)   

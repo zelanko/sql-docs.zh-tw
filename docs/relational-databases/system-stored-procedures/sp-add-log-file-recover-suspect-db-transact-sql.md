@@ -1,5 +1,6 @@
 ---
-title: sp_add_log_file_recover_suspect_db （Transact-sql） |Microsoft Docs
+description: sp_add_log_file_recover_suspect_db (Transact-SQL)
+title: sp_add_log_file_recover_suspect_db (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: b41ca3a5-7222-4c22-a012-e66a577a82f6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 52ede21961df29543714f4c31044ef2e261302c0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b67ebd25d3418392e4a6aa7986e3305ee6eae0ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879925"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474581"
 ---
 # <a name="sp_add_log_file_recover_suspect_db-transact-sql"></a>sp_add_log_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  當因為記錄空間不足 (9002 錯誤) 而無法完成資料庫的復原作業時，將記錄檔加入檔案群組中。 新增檔案之後， **sp_add_log_file_recover_suspect_db**關閉可疑的設定，並完成資料庫的復原。 這些參數與 ALTER DATABASE *database_name*新增記錄檔相同。  
+  當因為記錄空間不足 (9002 錯誤) 而無法完成資料庫的復原作業時，將記錄檔加入檔案群組中。 加入檔案之後， **sp_add_log_file_recover_suspect_db** 會關閉可疑設定，並完成資料庫的復原。 這些參數與 ALTER DATABASE *database_name* ADD LOG FILE 的參數相同。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,21 +45,21 @@ sp_add_log_file_recover_suspect_db [ @dbName= ] 'database' ,
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @dbName = ] 'database'`這是資料庫的名稱。 *資料庫*是**sysname**，沒有預設值。  
+`[ @dbName = ] 'database'` 這是資料庫的名稱。 *資料庫* 是 **sysname**，沒有預設值。  
   
-`[ @name = ] 'logical_file_name'`這是參考檔案時，在中使用的名稱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 在伺服器中，這個名稱必須是唯一的。 *logical_file_name*是**Nvarchar （260）**，沒有預設值。  
+`[ @name = ] 'logical_file_name'` 這是在參考檔案時，所使用的名稱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 在伺服器中，這個名稱必須是唯一的。 *logical_file_name* 是 **Nvarchar (260) **，沒有預設值。  
   
-`[ @filename = ] 'os_file_name'`這是作業系統用於檔案的路徑和檔案名。 這個檔案必須在安裝了 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的伺服器中。 *os_file_name*是**Nvarchar （260）**，沒有預設值。  
+`[ @filename = ] 'os_file_name'` 這是作業系統用於檔案的路徑和檔案名。 這個檔案必須在安裝了 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的伺服器中。 *os_file_name* 是 **Nvarchar (260) **，沒有預設值。  
   
-`[ @size = ] 'size_ '`這是檔案的初始大小。 *size*是**Nvarchar （20）**，預設值是 Null。 請指定一個整數，不包括小數點。 您可以利用 MB 和 KB 後置詞來指定百萬位元組或千位元組。 預設值是 MB。 最小值是 512 KB。 如果未指定*size* ，預設值為 1 MB。  
+`[ @size = ] 'size_ '` 這是檔案的初始大小。 *大小* 是 **Nvarchar (20) **，預設值是 Null。 請指定一個整數，不包括小數點。 您可以利用 MB 和 KB 後置詞來指定百萬位元組或千位元組。 預設值是 MB。 最小值是 512 KB。 如果未指定 *大小* ，則預設值為 1 MB。  
   
-`[ @maxsize = ] 'max_size_ '`這是檔案可成長的大小上限。 *max_size*是**Nvarchar （20）**，預設值是 Null。 請指定一個整數，不包括小數點。 您可以利用 MB 和 KB 後置詞來指定百萬位元組或千位元組。 預設值是 MB。  
+`[ @maxsize = ] 'max_size_ '` 這是檔案所能成長的大小上限。 *max_size* 是 **Nvarchar (20) **，預設值是 Null。 請指定一個整數，不包括小數點。 您可以利用 MB 和 KB 後置詞來指定百萬位元組或千位元組。 預設值是 MB。  
   
- 如果未指定*max_size* ，檔案將會成長，直到磁片已滿為止。 當磁碟將滿時，[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 應用程式記錄檔會警告管理員。  
+ 如果未指定 *max_size* ，檔案會成長到磁片已滿為止。 當磁碟將滿時，[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 應用程式記錄檔會警告管理員。  
   
-`[ @filegrowth = ] 'growth_increment_ '`這是每次需要新空間時加入檔案的空間量。 *growth_increment*是**Nvarchar （20）**，預設值是 Null。 0 值表示不成長。 請指定一個整數，不包括小數點。 您可以用 MB、KB 或百分比 (%) 來指定這個值。 當指定 % 時，成長的遞增是增量發生時之指定的檔案大小百分比。 如果指定的數字不含 MB、KB 或 % 後置詞，預設值是 MB。  
+`[ @filegrowth = ] 'growth_increment_ '` 這是每次需要新空間時，檔案所增加的空間量。 *growth_increment* 是 **Nvarchar (20) **，預設值是 Null。 0 值表示不成長。 請指定一個整數，不包括小數點。 您可以用 MB、KB 或百分比 (%) 來指定這個值。 當指定 % 時，成長的遞增是增量發生時之指定的檔案大小百分比。 如果指定的數字不含 MB、KB 或 % 後置詞，預設值是 MB。  
   
- 如果*growth_increment*為 Null，則預設值為10%，而最小大小值為 64 KB。 指定的大小會捨入到最接近 64 KB。  
+ 如果 *growth_increment* 為 Null，則預設值為10%，而最小大小值為 64 KB。 指定的大小會捨入到最接近 64 KB。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -67,7 +68,7 @@ sp_add_log_file_recover_suspect_db [ @dbName= ] 'database' ,
  None  
   
 ## <a name="permissions"></a>權限  
- 執行許可權預設為**系統管理員（sysadmin** ）固定伺服器角色的成員。 這些權限無法轉讓。  
+ Execute 許可權預設為 **系統管理員（sysadmin** ）固定伺服器角色的成員。 這些權限無法轉讓。  
   
 ## <a name="examples"></a>範例  
  在下列範例中，`db1` 資料庫在復原期間，因記錄空間不足 (9002 錯誤) 而標示為受到質疑。  

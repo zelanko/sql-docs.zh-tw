@@ -1,5 +1,6 @@
 ---
-title: sp_changemergesubscription （Transact-sql） |Microsoft Docs
+description: sp_changemergesubscription (Transact-SQL)
+title: sp_changemergesubscription (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a51ae948e546d616e6fd17a5b37501f112907560
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 388d33f9d812534ecee54dac41cfe7ad852e139d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85871853"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474450"
 ---
 # <a name="sp_changemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,20 +43,20 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'`這是要變更的發行集名稱。 *發行*集是**sysname**，預設值是 Null。 發行集必須已存在，且必須符合識別碼的規則。  
+`[ @publication = ] 'publication'` 這是要變更的發行集名稱。 *發行* 集是 **sysname**，預設值是 Null。 發行集必須已存在，且必須符合識別碼的規則。  
   
-`[ @subscriber = ] 'subscriber'`這是訂閱者的名稱。 *訂閱者*是**sysname**，預設值是 Null。  
+`[ @subscriber = ] 'subscriber'` 這是訂閱者的名稱。 *訂閱者* 是 **sysname**，預設值是 Null。  
   
-`[ @subscriber_db = ] 'subscriber_db'`這是訂閱資料庫的名稱。 *subscriber_db*是**sysname**，預設值是 Null。  
+`[ @subscriber_db = ] 'subscriber_db'` 這是訂閱資料庫的名稱。 *subscriber_db*是 **sysname**，預設值是 Null。  
   
-`[ @property = ] 'property'`這是給定發行集要變更的屬性。 *屬性*是**sysname**，它可以是資料表中的其中一個值。  
+`[ @property = ] 'property'` 這是給定發行集要變更的屬性。 *屬性* 是 **sysname**，它可以是資料表中的其中一個值。  
   
-`[ @value = ] 'value'`這是指定之*屬性*的新值。 *value*是**Nvarchar （255）**，它可以是資料表中的其中一個值。  
+`[ @value = ] 'value'` 這是指定之 *屬性*的新值。 *值* 為 **Nvarchar (255) **，而且可以是資料表中的其中一個值。  
   
-|屬性|值|說明|  
+|屬性|值|描述|  
 |--------------|-----------|-----------------|  
 |**description**||這個合併訂閱的描述。|  
-|**priority**||這是訂閱優先權。 在偵測到衝突時，預設解析程式會利用優先權挑選贏的一方。|  
+|**優先**||這是訂閱優先權。 在偵測到衝突時，預設解析程式會利用優先權挑選贏的一方。|  
 |**merge_job_login**||用來執行代理程式之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶的登入。|  
 |**merge_job_password**||用來執行代理程式之 Windows 帳戶的密碼。|  
 |**publisher_security_mode**|**1**|當連接到發行者時，使用 Windows 驗證。|  
@@ -73,15 +74,15 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 |NULL (預設值)|NULL (預設值)||  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_changemergesubscription**用於合併式複寫中。  
+ **sp_changemergesubscription** 用於合併式複寫中。  
   
  變更代理程式的登入或密碼之後，您必須先停止並重新啟動代理程式，變更才會生效。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_changemergesubscription**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色或 **db_owner** 固定資料庫角色的成員，才能夠執行 **sp_changemergesubscription**。  
   
 ## <a name="see-also"></a>另請參閱  
  [sp_addmergesubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   

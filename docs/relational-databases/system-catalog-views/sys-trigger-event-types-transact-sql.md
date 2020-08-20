@@ -1,5 +1,6 @@
 ---
-title: sys.databases trigger_event_types （Transact-sql） |Microsoft Docs
+description: sys.trigger_event_types (Transact-SQL)
+title: sys. trigger_event_types (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 054aed54-7151-4760-934a-149fa434f1ae
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 81fb3ac8d7bf843b9d64e4f0f10cff6abd83b042
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 03fe8a341d9ee1541eac716d94603cc2b2b209cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897689"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475186"
 ---
 # <a name="systrigger_event_types-transact-sql"></a>sys.trigger_event_types (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,14 +35,14 @@ ms.locfileid: "85897689"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**type**|**int**|造成觸發程序引發的事件或事件群組的類型。|  
-|**type_name**|**Nvarchar （64）**|事件或事件群組的名稱。 這可以在[CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md)語句的 FOR 子句中指定。|  
+|**type_name**|**Nvarchar (64) **|事件或事件群組的名稱。 這可以在 [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md) 語句的 FOR 子句中指定。|  
 |**parent_type**|**int**|事件或事件群組之父項的事件群組類型。|  
   
 ## <a name="permissions"></a>權限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的物件目錄檢視](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [物件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

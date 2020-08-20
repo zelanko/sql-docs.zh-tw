@@ -1,5 +1,6 @@
 ---
-title: pdw_nodes_tables (Transact-sql) |Microsoft Docs
+description: 'sys. pdw_nodes_tables (Transact-sql) '
+title: sys. pdw_nodes_tables (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -12,27 +13,27 @@ ms.assetid: 473b5d14-171b-4a16-9195-acf36d3f786c
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 78af01169c643acfc82f7a3db035ae32518695bd
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 7b50d1757371a1ca379a4cf8f79410ceaef9a614
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196866"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475356"
 ---
-# <a name="syspdw_nodes_tables-transact-sql"></a>pdw_nodes_tables (Transact-sql) 
+# <a name="syspdw_nodes_tables-transact-sql"></a>sys. pdw_nodes_tables (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  針對主體所擁有或已被授與某些許可權的每個資料表物件，各包含一個資料列。  
+  針對主體所擁有的每個資料表物件，以及已授與主體某些許可權的資料表物件，各包含一個資料列。  
   
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
-|\<inherited columns>||如需此視圖所繼承之資料行的清單，請參閱[sys.databases](../system-catalog-views/sys-objects-transact-sql.md)。||  
+|\<inherited columns>||如需此視圖所繼承之資料行的清單，請參閱 [sys. objects](../system-catalog-views/sys-objects-transact-sql.md)。||  
 |lob_data_space_id|**int**||一律是 0。|  
-|filestream_data_space_id|**int**|FILESTREAM 檔案群組或的資料空間識別碼[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|NULL|  
-|max_column_id_used|**int**|這個資料表所使用的最大資料行識別碼。||  
+|filestream_data_space_id|**int**|FILESTREAM 檔案群組或的資料空間識別碼 [!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|NULL|  
+|max_column_id_used|**int**|此資料表所使用的最大資料行識別碼。||  
 |lock_on_bulk_load|**bit**|資料表在大量載入時會予以鎖定。|TBD|  
 |uses_ansi_nulls|**bit**|資料表是在 SET ANSI_NULLS 資料庫選項為 ON 的情況下加以建立。|1|  
-|is_replicated|**bit**|1 = 資料表是使用複寫來發行。|0不支援複寫。|  
+|is_replicated|**bit**|1 = 使用複寫發行資料表。|0不支援複寫。|  
 |has_replication_filter|**bit**|1 = 資料表有一項複寫篩選。|0|  
 |is_merge_published|**bit**|1 = 資料表是利用合併式複寫來發行。|0不支援。|  
 |is_sync_tran_subscribed|**bit**|1 = 資料表是利用立即更新訂閱來訂閱。|0不支援。|  

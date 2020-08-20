@@ -1,5 +1,6 @@
 ---
-title: IBCPSession2：： BCPSetBulkMode （Native Client OLE DB 提供者） |Microsoft Docs
+description: 'IBCPSession2：： BCPSetBulkMode (Native Client OLE DB 提供者) '
+title: IBCPSession2：： BCPSetBulkMode (Native Client OLE DB provider) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,14 +14,14 @@ ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc8b48c6a9dab071df8fa3df1977f62afb91659d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 001eae4473b25c440dc3db54a5936e351f5566c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247697"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475707"
 ---
-# <a name="ibcpsession2bcpsetbulkmode-native-client-ole-db-provider"></a>IBCPSession2：： BCPSetBulkMode （Native Client OLE DB 提供者）
+# <a name="ibcpsession2bcpsetbulkmode-native-client-ole-db-provider"></a>IBCPSession2：： BCPSetBulkMode (Native Client OLE DB 提供者) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   IBCPSession2::BCPSetBulkMode 提供了 [IBCPSession::BCPColFmt &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) 的替代方式，可用於指定資料行格式。 不同於設定個別資料行格式屬性的 IBCPSession::BCPColFmt，IBCPSession2::BCPSetBulkMode 會設定所有屬性。  
@@ -54,7 +55,7 @@ HRESULT BCPSetBulkMode (
  cbRow  
  資料列結束字元值的長度 (以位元組為單位)。  
   
-## <a name="returns"></a>傳回  
+## <a name="returns"></a>傳回值  
  IBCPSession2::BCPSetBulkMode 可能會傳回下列其中一個值：  
   
 |||  
@@ -72,7 +73,7 @@ HRESULT BCPSetBulkMode (
   
  下表將列出 *property* 參數的常數。  
   
-|屬性|說明|  
+|屬性|描述|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|指定字元輸出模式。<br /><br /> 對應至 BCP.EXE 中的 -c 選項，以及 *eUserDataType* 屬性設定為 **BCP_TYPE_SQLCHARACTER** 的 IBCPSession::BCPColFmt。|  
 |BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 輸出模式。<br /><br /> 對應至 BCP.EXE 中的 -w 選項，以及 *eUserDataType* 屬性設定為 **BCP_TYPE_SQLNCHAR** 的 IBCPSession::BCPColFmt。|  

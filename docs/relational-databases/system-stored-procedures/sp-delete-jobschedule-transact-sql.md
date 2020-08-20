@@ -1,5 +1,6 @@
 ---
-title: sp_delete_jobschedule （Transact-sql） |Microsoft Docs
+description: sp_delete_jobschedule (Transact-SQL)
+title: sp_delete_jobschedule (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,25 +18,25 @@ helpviewer_keywords:
 ms.assetid: 82fbb48b-603a-4016-a7fb-1ce17fb76919
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8a74d7235b1faa80c1fe65f80717c39e7944f343
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ee25a531baeaf96b4090f0cb0f165e6cd4c8d203
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85864273"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474405"
 ---
 # <a name="sp_delete_jobschedule-transact-sql"></a>sp_delete_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   刪除作業的排程。  
   
- **sp_delete_jobschedule**僅為回溯相容性而提供。  
+ **sp_delete_jobschedule** 僅為了回溯相容性而提供。  
   
   
 ## <a name="remarks"></a>備註  
- 現在，您可以在作業之外，獨立管理作業排程。 若要從作業中移除排程，請使用**sp_detach_schedule**。 若要刪除排程，請使用**sp_delete_schedule**。  
+ 現在，您可以在作業之外，獨立管理作業排程。 若要從作業中移除排程，請使用 **sp_detach_schedule**。 若要刪除排程，請使用 **sp_delete_schedule**。  
   
-> **注意： sp_delete_jobschedule**不支援附加到多個作業的排程。 如果現有的腳本呼叫**sp_delete_jobschedule**移除附加至多個作業的排程，此程式就會傳回錯誤。  
+> **注意： sp_delete_jobschedule** 不支援附加至多個作業的排程。 如果現有的腳本呼叫 **sp_delete_jobschedule** 移除附加至多個作業的排程，則程式會傳回錯誤。  
   
 ## <a name="permissions"></a>權限  
  依預設，只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員，才能夠執行這個預存程序。 其他使用者必須被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫的下列其中一個** Agent 固定資料庫角色。  
@@ -48,7 +49,7 @@ ms.locfileid: "85864273"
   
  如需這些角色權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
- **系統管理員（sysadmin** ）角色的成員可以刪除任何作業排程。 不是**系統管理員（sysadmin** ）角色成員的使用者只能刪除他們所擁有的作業排程。  
+ **系統管理員（sysadmin** ）角色的成員可以刪除任何作業排程。 非 **系統管理員（sysadmin** ）角色成員的使用者只能刪除他們所擁有的作業排程。  
   
 ## <a name="see-also"></a>另請參閱  
  [sp_delete_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   

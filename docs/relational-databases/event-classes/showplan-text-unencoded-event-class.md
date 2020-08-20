@@ -1,4 +1,5 @@
 ---
+description: Showplan Text (未編碼) 事件類別
 title: Showplan Text (未編碼) 事件類別 | Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 0aad4563-8caf-4971-92af-55992bc5ff2c
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 95ed07b8bfc4f59e6c11cac11722a37aa5c565fc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a1533f8ae074127692a503ec76601cfa8ca38aa1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726163"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475968"
 ---
 # <a name="showplan-text-unencoded-event-class"></a>Showplan Text (未編碼) 事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_os_memory_clerks （Transact-sql） |Microsoft Docs
+description: sys.dm_os_memory_clerks (Transact-SQL)
+title: sys. dm_os_memory_clerks (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -20,11 +21,12 @@ ms.assetid: 1d556c67-5c12-46d5-aa8c-7ec1bb858df7
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e0323d826440dc339d380c468df8b0131ee81eb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d59bbf5e64dfac8ea13b3123c9729bc608510b07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999068"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474908"
 ---
 # <a name="sysdm_os_memory_clerks-transact-sql"></a>sys.dm_os_memory_clerks (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +34,7 @@ ms.locfileid: "85999068"
   傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中所有目前作用中記憶體 Clerk 集。  
   
 > [!NOTE]  
->  若要從或呼叫此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用**dm_pdw_nodes_os_memory_clerks**的名稱。  
+>  若要從或呼叫這個 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用名稱 **sys. dm_pdw_nodes_os_memory_clerks**。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -49,14 +51,14 @@ ms.locfileid: "85999068"
 |**shared_memory_reserved_kb**|**bigint**|指定記憶體 Clerk 所保留的共用記憶體數量。 記憶體數量已保留給共用記憶體和檔案對應使用。 不可為 Null。|  
 |**shared_memory_committed_kb**|**bigint**|指定記憶體 Clerk 認可的共用記憶體數量。 不可為 Null。|  
 |**page_size_in_bytes**|**bigint**|指定這個記憶體 Clerk 的頁面配置資料粒度。 不可為 Null。|  
-|**page_allocator_address**|**varbinary(8)**|指定頁面配置器的位址。 這個位址對記憶體人員而言是唯一的，而且可以在**sys.databases**中用來找出系結到這個職員的記憶體物件。 dm_os_memory_objects 不可為 Null。|  
-|**host_address**|**varbinary(8)**|指定這個記憶體 Clerk 之主機的記憶體位址。 如需詳細資訊，請參閱[dm_os_hosts &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md)。 元件（例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client）會 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 透過主機介面來存取記憶體資源。<br /><br /> 0x00000000 = 記憶體 Clerk 屬於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。<br /><br /> 不可為 Null。|  
-|**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
+|**page_allocator_address**|**varbinary(8)**|指定頁面配置器的位址。 這個位址對記憶體的職員而言是唯一的，而且可以在 **sys. dm_os_memory_objects** 中用來找出系結至此職員的記憶體物件。 不可為 Null。|  
+|**host_address**|**varbinary(8)**|指定這個記憶體 Clerk 之主機的記憶體位址。 如需詳細資訊，請參閱 [sys. dm_os_hosts &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md)。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生用戶端等元件會 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 透過主機介面存取記憶體資源。<br /><br /> 0x00000000 = 記憶體 Clerk 屬於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。<br /><br /> 不可為 Null。|  
+|**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在之節點的識別碼。|  
   
 ## <a name="permissions"></a>權限 
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 許可權。   
-在高階 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 層級上，需要 `VIEW DATABASE STATE` 資料庫的許可權。 在 [ [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
+在進階層中 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ，需要 `VIEW DATABASE STATE` 資料庫中的許可權。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準和基本層中，需要  **伺服器管理員** 或 **Azure Active Directory 系統管理員** 帳戶。   
   
 ## <a name="remarks"></a>備註  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體管理員是由三層階層組成。 階層底端是記憶體節點。 中層級是由記憶體 Clerk、記憶體快取和記憶體集區所組成。 最上層是由記憶體物件組成。 這些物件通常用在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體中配置記憶體。  
@@ -65,12 +67,12 @@ ms.locfileid: "85999068"
   
 ## <a name="see-also"></a>另請參閱  
 
- [SQL Server 作業系統相關的動態管理 Views &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [dm_os_sys_info &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
- [dm_exec_query_memory_grants &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
- [dm_exec_requests &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [dm_exec_query_plan &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
- [dm_exec_sql_text &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
+ [SQL Server 作業系統相關的動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+ [sys. dm_os_sys_info &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
+ [sys. dm_exec_query_memory_grants &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
+ [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sys. dm_exec_query_plan &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
+ [sys. dm_exec_sql_text &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
   
   
 

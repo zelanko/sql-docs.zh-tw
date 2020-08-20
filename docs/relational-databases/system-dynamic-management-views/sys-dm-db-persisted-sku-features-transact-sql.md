@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_db_persisted_sku_features （Transact-sql） |Microsoft Docs
+description: sys.dm_db_persisted_sku_features (Transact-SQL)
+title: sys. dm_db_persisted_sku_features (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -19,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c41fcc673152f0cb253c0a5f10721beb40cf7628
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f99385bb016ca640955d7d3c6077521d1a7cabf7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894573"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475065"
 ---
 # <a name="sysdm_db_persisted_sku_features-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的某些功能會變更 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 將資訊儲存在資料庫檔案中的方式， 這些功能受限為特定版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 包含這些功能的資料庫無法移至不支援它們的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 使用 [dm_db_persisted_sku_features 動態管理] 視圖，列出目前資料庫中已啟用的版本特定功能。
+  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的某些功能會變更 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 將資訊儲存在資料庫檔案中的方式， 這些功能受限為特定版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 包含這些功能的資料庫無法移至不支援它們的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 您可以使用 sys. dm_db_persisted_sku_features 動態管理檢視來列出目前資料庫中啟用的特定版本功能。
   
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本)。
   
@@ -42,30 +43,30 @@ ms.locfileid: "85894573"
  需要資料庫的 VIEW DATABASE STATE 權限。  
   
 ## <a name="remarks"></a>備註  
- 如果資料庫未使用特定版本可能會限制的功能，則此視圖不會傳回任何資料列。  
+ 如果資料庫未使用特定版本所限制的任何功能，則 view 不會傳回任何資料列。  
   
- dm_db_persisted_sku_features 可能會列出下列僅限於特定版本的資料庫變更功能 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ：  
+ sys. dm_db_persisted_sku_features 可能會列出下列受限於特定版本的資料庫變更功能 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ：  
   
--   **ChangeCapture**：表示資料庫已啟用變更資料捕獲。 若要移除變更資料捕獲，請使用[sys.databases sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)預存程式。 如需詳細資訊，請參閱[關於異動資料擷取 &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)。  
+-   **ChangeCapture**：表示資料庫已啟用變更資料捕捉。 若要移除變更資料捕獲，請使用 [sys. sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) 預存程式。 如需詳細資訊，請參閱[關於異動資料擷取 &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)。  
   
--   **ColumnStoreIndex**：表示至少有一個資料表具有資料行存放區索引。 若要讓資料庫移到不 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援這項功能的版本，請使用[DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)或[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)語句來移除資料行存放區索引。 如需詳細資訊，請參閱資料行存放區[索引](../../relational-databases/indexes/columnstore-indexes-overview.md)。  
+-   **ColumnStoreIndex**：表示至少有一個資料表有資料行存放區索引。 若要讓資料庫移至不 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援這項功能的版本，請使用 [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 或 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) 語句移除資料行存放區索引。 如需詳細資訊，請參閱資料行存放區 [索引](../../relational-databases/indexes/columnstore-indexes-overview.md)。  
   
     **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本)。  
   
--   **壓縮**：表示至少有一個資料表或索引使用資料壓縮或 vardecimal 儲存格式。 若要讓資料庫移到不 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援這項功能的版本，請使用[alter TABLE](../../t-sql/statements/alter-table-transact-sql.md)或[alter INDEX](../../t-sql/statements/alter-index-transact-sql.md)語句來移除資料壓縮。 若要移除 Vardecimal 儲存格式，請使用 sp_tableoption 陳述式。 如需詳細資訊，請參閱 [Data Compression](../../relational-databases/data-compression/data-compression.md)。  
+-   **壓縮**：表示至少有一個資料表或索引使用資料壓縮或 vardecimal 儲存格式。 若要讓資料庫移至不 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援這項功能的版本，請使用 [alter TABLE](../../t-sql/statements/alter-table-transact-sql.md) 或 [alter INDEX](../../t-sql/statements/alter-index-transact-sql.md) 語句來移除資料壓縮。 若要移除 Vardecimal 儲存格式，請使用 sp_tableoption 陳述式。 如需詳細資訊，請參閱 [Data Compression](../../relational-databases/data-compression/data-compression.md)。  
   
--   **MultipleFSContainers**：表示資料庫使用多個 FILESTREAM 容器。 資料庫具有具有多個容器（檔案）的 FILESTREAM 檔案群組。 如需詳細資訊，請參閱 [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)。  
+-   **MultipleFSContainers**：表示資料庫使用多個 FILESTREAM 容器。 資料庫具有多個容器 (檔案) 的 FILESTREAM 檔案群組。 如需詳細資訊，請參閱 [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)。  
   
 -   **InMemoryOLTP**：表示資料庫使用記憶體內部 OLTP。 資料庫具有 MEMORY_OPTIMIZED_DATA 檔案群組。 如需詳細資訊，請參閱[記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。  
   
   **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本)。 
   
--   **性別.** 指出資料庫包含分割區資料表、分割區索引、分割區配置或分割區函數。 若要讓資料庫移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本，而不是 Enterprise 或 Developer，修改位於單一分割區上的資料表是不夠的， 您必須移除分割區資料表。 如果此資料表包含資料，請使用 SWITCH PARTITION 將每一個分割區轉換成非分割區資料表， 然後刪除分割區資料表、分割區配置和分割區函數。  
+-   **分區。** 指出資料庫包含分割區資料表、分割區索引、分割區配置或分割區函數。 若要讓資料庫移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本，而不是 Enterprise 或 Developer，修改位於單一分割區上的資料表是不夠的， 您必須移除分割區資料表。 如果此資料表包含資料，請使用 SWITCH PARTITION 將每一個分割區轉換成非分割區資料表， 然後刪除分割區資料表、分割區配置和分割區函數。  
   
 -   **TransparentDataEncryption。** 指出資料庫的加密方式為透明資料加密。 若要移除透明資料加密，請使用 ALTER DATABASE 陳述式。 如需詳細資訊，請參閱[透明資料加密 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)。  
 
 > [!NOTE]
-> 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 1 開始，這些功能（TransparentDataEncryption 除外） **。** 可跨多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本使用，而不限於 Enterprise 或 Developer edition。
+> 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 1 開始，除了 TransparentDataEncryption 以外，這些功能都有 **。** 可跨多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本使用，且不限於 Enterprise 或 Developer 版本。
 
  若要判斷資料庫是否使用任何受限於特定版本的功能，請在資料庫中執行下列陳述式：  
   
@@ -75,8 +76,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [資料庫相關的動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
- [SQL Server 2016 的版本和支援功能](../../sql-server/editions-and-components-of-sql-server-2016.md)   
+ [SQL Server 2016 的版本與支援功能](../../sql-server/editions-and-components-of-sql-server-2016.md)   
  [版本及支援的 SQL Server 2017 功能](../../sql-server/editions-and-components-of-sql-server-2017.md)  
   

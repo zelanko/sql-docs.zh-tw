@@ -1,5 +1,6 @@
 ---
-title: sys.databases fn_servershareddrives （Transact-sql） |Microsoft Docs
+description: sys.fn_servershareddrives (Transact-SQL)
+title: sys. fn_servershareddrives (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ff01eff7-8cb6-460c-ba7a-6a52bda6d471
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fa0b61680108d669ce023797b787ccb0e1d9c840
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d3fa98a1e24e20469da6fd39bf64db61451582d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898316"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474618"
 ---
 # <a name="sysfn_servershareddrives-transact-sql"></a>sys.fn_servershareddrives (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85898316"
   傳回叢集伺服器所用的共用磁碟機的名稱。  
   
 > [!IMPORTANT]  
->  保留這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統函數的目的在於提供回溯相容性。 我們建議您改用[sys.databases dm_io_cluster_valid_path_names &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md) 。  
+>  保留這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統函數的目的在於提供回溯相容性。 我們建議您改用 [sys. dm_io_cluster_valid_path_names &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md) 。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,9 +46,9 @@ fn_servershareddrives()
 ```  
   
 ## <a name="tables-returned"></a>傳回的資料表  
- 如果目前的伺服器是叢集伺服器， **fn_servershareddrives**會傳回共用磁片磁碟機的磁片磁碟機名稱。  
+ 如果目前的伺服器是叢集伺服器， **fn_servershareddrives** 會傳回共用磁片磁碟機的磁片磁碟機名稱。  
   
- 如果目前的伺服器實例不是叢集伺服器， **fn_servershareddrives**會傳回空的資料列集。  
+ 如果目前的伺服器實例不是叢集伺服器， **fn_servershareddrives** 會傳回空的資料列集。  
   
 ## <a name="remarks"></a>備註  
  `fn_servershareddrives` 會傳回這個叢集伺服器所用的共用磁碟機清單。 這些共用磁片磁碟機屬於與資源相同的叢集群組 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 另外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源會相依於這些磁碟機。  
@@ -75,8 +76,8 @@ SELECT * FROM fn_servershareddrives();
  n  
   
 ## <a name="see-also"></a>另請參閱  
- [dm_io_cluster_valid_path_names &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md)   
- [dm_io_cluster_shared_drives &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)   
- [fn_virtualservernodes &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-virtualservernodes-transact-sql.md)  
+ [sys. dm_io_cluster_valid_path_names &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md)   
+ [sys. dm_io_cluster_shared_drives &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)   
+ [sys. fn_virtualservernodes &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-virtualservernodes-transact-sql.md)  
   
   

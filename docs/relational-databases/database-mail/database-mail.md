@@ -1,4 +1,5 @@
 ---
+description: Database Mail
 title: Database Mail | Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: dc3af385e52e998aa8bab2d84fc117987f522ebf
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 36dbf63620fa42d923605e83505b3f13212528ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864529"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476267"
 ---
 # <a name="database-mail"></a>Database Mail
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

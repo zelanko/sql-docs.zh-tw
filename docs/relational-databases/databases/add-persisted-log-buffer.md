@@ -1,4 +1,5 @@
 ---
+description: 將保存的記錄緩衝區新增至資料庫
 title: 將保存的記錄緩衝區新增至資料庫
 ms.custom: ''
 ms.date: 10/30/2019
@@ -18,12 +19,12 @@ ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: c325713cff5ad96d88b2cf3a3e54cc8759fcc968
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cf3289d9d233da56c22739d3912045c2cdaa7554
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727595"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476176"
 ---
 # <a name="add-persisted-log-buffer-to-a-database"></a>將保存的記錄緩衝區新增至資料庫
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -80,7 +81,7 @@ ALTER DATABASE <MyDB> SET MULTI_USER;
 
 適用一般的還原條件。 如果保存的記錄緩衝區還原到 DAX 磁碟區或裝載，則其會繼續運作，否則可予以安全移除。
   
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>接下來的步驟
 
 - [How It Works (It Just Runs Faster):Non-Volatile Memory SQL Server Tail Of Log Caching on NVDIMM](https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/) (運作方式 (只是執行速度較快)：NVDIMM 上的非揮發性記憶體 SQL Server 結尾記錄快取)
 - [Data exposed:Latency and Durability with SQL Server 2016](https://channel9.msdn.com/Shows/Data-Exposed/Latency-and-Durability-with-SQL-Server-2016) (已公開的資料：SQL Server 2016 的延遲和持久性)

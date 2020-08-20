@@ -1,5 +1,6 @@
 ---
-title: sp_changemergepullsubscription （Transact-sql） |Microsoft Docs
+description: sp_changemergepullsubscription (Transact-SQL)
+title: sp_changemergepullsubscription (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 349fecb1324d0af0e6d6d7b099064781e6f8aeb1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 904db034372ce3be7b4f3bf3e1f7dc4a95d8383d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85872548"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474427"
 ---
 # <a name="sp_changemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,21 +42,21 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**，預設值是%。  
+`[ @publication = ] 'publication'` 這是發行集的名稱。 *發行* 集是 **sysname**，預設值是%。  
   
-`[ @publisher = ] 'publisher'`這是發行者的名稱。 *publisher*是**sysname**，預設值是%。  
+`[ @publisher = ] 'publisher'` 這是發行者的名稱。 *publisher*是 **sysname**，預設值是%。  
   
-`[ @publisher_db = ] 'publisher_db'`這是發行者資料庫的名稱。 *publisher_db*是**sysname**，預設值是%。  
+`[ @publisher_db = ] 'publisher_db'` 這是發行者資料庫的名稱。 *publisher_db*是 **sysname**，預設值是%。  
   
-`[ @property = ] 'property'`這是要變更之屬性的名稱。 *屬性*是**sysname**，它可以是資料表中的其中一個值。  
+`[ @property = ] 'property'` 這是要變更的屬性名稱。 *屬性* 是 **sysname**，它可以是資料表中的其中一個值。  
   
-`[ @value = ] 'value'`這是指定之屬性的新值。 *value*是**Nvarchar （255）**，它可以是資料表中的其中一個值。  
+`[ @value = ] 'value'` 這是指定之屬性的新值。 *值*為 **Nvarchar (255) **，而且可以是資料表中的其中一個值。  
   
-|屬性|值|說明|  
+|屬性|值|描述|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||當位置不是預設位置，或在預設位置之外還有其他位置時，快照集資料夾的儲存位置。|  
 |**description**||這個合併提取訂閱的描述。|  
-|**伺服器**||散發者的名稱。|  
+|**轉銷商**||散發者的名稱。|  
 |**distributor_login**||用於散發者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入識別碼|  
 |**distributor_password**||用於散發者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的密碼 (加密)。|  
 |**distributor_security_mode**|**1**|當連接到散發者時，使用 Windows 驗證。|  
@@ -74,12 +75,12 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**internet_url**||代表 Web 同步處理之複寫接聽程式位置的 URL。|  
 |**merge_job_login**||用來執行代理程式之 Windows 帳戶的登入。|  
 |**merge_job_password**||用來執行代理程式之 Windows 帳戶的密碼。|  
-|**priority**||僅適用于回溯相容性;請改為在發行者端執行[sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) ，以修改訂閱的優先順序。|  
+|**優先**||僅適用于回溯相容性;請改為在發行者端執行 [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) ，以修改訂用帳戶的優先順序。|  
 |**publisher_login**||用於發行者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入識別碼。|  
 |**publisher_password**||用於發行者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的密碼 (加密)。|  
 |**publisher_security_mode**|**0**|當連接到發行者時，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。|  
 ||**1**|當連接到發行者時，使用 Windows 驗證。|  
-||**2**|同步處理觸發程式會使用靜態**sysservers**專案來執行遠端程序呼叫（RPC），而且必須在**sysservers**資料表中將發行者定義為遠端伺服器或連結的伺服器。|  
+||**2**|同步處理觸發程式會使用靜態 **sysservers** 專案來執行遠端程序呼叫 (RPC) ，而且必須在 **sysservers** 資料表中將發行者定義為遠端伺服器或連結伺服器。|  
 |**sync_type**|**自動**|先將發行資料表的結構描述和初始資料傳送給訂閱者。|  
 ||無|訂閱者已有發行資料表的結構描述和初始資料；一律會傳送系統資料表和資料。|  
 |**use_ftp**|**true**|利用 FTP 而不是一般通訊協定來擷取快照集。|  
@@ -89,20 +90,20 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**use_interactive_resolver**|**true**|在協調期間，使用互動式解析程式。|  
 ||**false**|不使用互動式解析程式。|  
 |**working_directory**||當指定利用 FTP 來傳送快照集檔案的選項時，傳送快照集檔案之目錄的完整路徑。|  
-|NULL (預設值)||傳回*屬性*的支援值清單。|  
+|NULL (預設值)||傳回 *屬性*支援值的清單。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_changemergepullsubscription**用於合併式複寫中。  
+ **sp_changemergepullsubscription** 用於合併式複寫中。  
   
  假設目前伺服器和目前資料庫是訂閱者和訂閱者資料庫。  
   
  變更代理程式的登入或密碼之後，您必須先停止並重新啟動代理程式，變更才會生效。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_changemergepullsubscription**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色或 **db_owner** 固定資料庫角色的成員，才能夠執行 **sp_changemergepullsubscription**。  
   
 ## <a name="see-also"></a>另請參閱  
  [檢視及修改提取訂閱屬性](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   

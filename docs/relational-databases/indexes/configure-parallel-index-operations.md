@@ -1,4 +1,5 @@
 ---
+description: 設定平行索引作業
 title: 設定平行索引作業 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -17,12 +18,12 @@ ms.assetid: 8ec8c71e-5fc1-443a-92da-136ee3fc7f88
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ffd74e1cf495ef3cfc1784011fb1d7c18b5ab15d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7f4226d3fac66ec20f5012a15bb092b666cf86f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760873"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475799"
 ---
 # <a name="configure-parallel-index-operations"></a>設定平行索引作業
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -93,11 +94,11 @@ ms.locfileid: "85760873"
   
 4.  展開 **[索引]** 資料夾。  
   
-5.  以滑鼠右鍵按一下要設定平行處理原則最大程度的索引，然後選取 [屬性]  。  
+5.  以滑鼠右鍵按一下要設定平行處理原則最大程度的索引，然後選取 [屬性]****。  
   
 6.  在 **[選取頁面]** 底下，選取 **[選項]** 。  
   
-7.  選取 **[平行處理原則的最大程度]** ，然後輸入介於 1 和 64 之間的一些值。  
+7.  選取 **[平行處理原則的最大程度]**，然後輸入介於 1 和 64 之間的一些值。  
   
 8.  按一下 [確定]  。  
 
@@ -140,7 +141,7 @@ ms.locfileid: "85760873"
     GO  
     ```  
  
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 [查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing)    
 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)     
 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)     

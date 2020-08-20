@@ -1,5 +1,6 @@
 ---
-title: 全文檢索搜尋和語義搜尋函數（Transact-sql） |Microsoft Docs
+description: 全文檢索搜尋與語意搜尋函數 (Transact-SQL)
+title: " (Transact-sql) 的全文檢索搜尋和語義搜尋函數 |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a61a3694-7604-4583-962e-fc30f771c6fa
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cdf480d27a0cc0a1b1b646a5c902d7994ad88b5e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: deb790da4e4e263318717c3ee81cc8ee8d467ae6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734374"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474629"
 ---
 # <a name="full-text-search-and-semantic-search-functions-transact-sql"></a>全文檢索搜尋與語意搜尋函數 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85734374"
  針對包含完全或部分 (較不精確) 符合單一字詞及片語、字詞彼此之間的相似程度或加權相符的資料行，傳回包含零個、一個或多個資料列的資料表。  
   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)  
- 傳回零個、一個或多個資料列的資料表，其中包含的值符合指定之*freetext_string*中文字的意義，而不只是確切的用語。  
+ 傳回零個、一個或多個資料列的資料表，這些資料行包含的值符合指定之 *freetext_string*中文字的意義，而不只是確切的用語。  
   
 ## <a name="semantic-search-functions"></a>語意搜尋函數  
  [semantickeyphrasetable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md)  

@@ -1,5 +1,6 @@
 ---
-title: semanticsimilaritydetailstable （Transact-sql） |Microsoft Docs
+description: semanticsimilaritydetailstable (Transact-SQL)
+title: semanticsimilaritydetailstable (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4b264f5276ad9d9f411fcdd14550130eb412a1b0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fa94a6c16eaaf2548b3c0375d43848d5e03a7f12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771561"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474574"
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   會傳回零個、一個或多個主要片語的資料列，而這些主要片語對於兩個內容語意類似之文件 (來源文件與比對文件) 來說是共同的主要片語。  
   
- 此資料列集函數可在 SELECT 語句的 FROM 子句中參考 
+ 您可以在 SELECT 語句的 FROM 子句中參考這個資料列集函數 
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,7 +47,7 @@ SEMANTICSIMILARITYDETAILSTABLE
     )  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>參量  
+##  <a name="arguments"></a><a name="Arguments"></a> 引數  
  **table**  
  這是已啟用全文檢索和語意索引之資料表的名稱。  
   
@@ -74,10 +75,10 @@ SEMANTICSIMILARITYDETAILSTABLE
 |Column_name|類型|描述|  
 |------------------|----------|-----------------|  
 |**keyphrase**|**NVARCHAR**|來源文件與比對文件中出現類似度的主要片語。|  
-|**成績**|**即時**|此主要片語與兩份文件中所有其他類似片語之關聯性的相對值。<br /><br /> 此值是 [0.0, 1.0] 範圍內的小數值，分數愈高表示權重愈高。1.0 為滿分。|  
+|**得分**|**真正**|此主要片語與兩份文件中所有其他類似片語之關聯性的相對值。<br /><br /> 此值是 [0.0, 1.0] 範圍內的小數值，分數愈高表示權重愈高。1.0 為滿分。|  
   
 ## <a name="general-remarks"></a>一般備註  
- 如需詳細資訊，請參閱[使用語義搜尋尋找相似及相關的檔](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)。  
+ 如需詳細資訊，請參閱 [使用語義搜尋尋找相似及相關的檔](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)。  
   
 ## <a name="metadata"></a>中繼資料  
  如需有關語意相似度擷取和母體擴展的詳細資訊和狀態，請查詢下列動態管理檢視：  
@@ -92,7 +93,7 @@ SEMANTICSIMILARITYDETAILSTABLE
  需要建立全文檢索和語意索引之基底資料表的 SELECT 權限。  
   
 ## <a name="examples"></a>範例  
- 下列範例會抓取5個主要片語，其在 AdventureWorks2012 範例資料庫的**HumanResources humanresources.jobcandidate**資料表中的指定候選項目之間具有最高的相似性分數。 @CandidateId和 @MatchedID 變數代表全文檢索索引之索引鍵資料行中的值。  
+ 下列範例會在 AdventureWorks2012 範例資料庫的 **HumanResources. humanresources.jobcandidate** 資料表中，抓取具有最高相似性分數的5個主要片語。 @CandidateId和 @MatchedID 變數代表來自全文檢索索引之索引鍵資料行的值。  
   
 ```sql  
 SELECT TOP(5) KEY_TBL.keyphrase, KEY_TBL.score  

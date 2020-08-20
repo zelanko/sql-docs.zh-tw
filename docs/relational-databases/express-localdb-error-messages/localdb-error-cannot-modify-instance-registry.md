@@ -1,4 +1,5 @@
 ---
+description: LOCALDB_ERROR_CANNOT_MODIFY_INSTANCE_REGISTRY
 title: LOCALDB_ERROR_CANNOT_MODIFY_INSTANCE_REGISTRY |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -9,12 +10,12 @@ ms.topic: reference
 ms.assetid: bb14e3c5-5349-47e8-8e6b-16ff26dfb368
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6c7372e73a888fd2b91ae5280469a0a0cdcb70db
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 980f5a4fb071fc59c802995febebde5861c0c0ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246135"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475934"
 ---
 # <a name="localdb_error_cannot_modify_instance_registry"></a>LOCALDB_ERROR_CANNOT_MODIFY_INSTANCE_REGISTRY
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

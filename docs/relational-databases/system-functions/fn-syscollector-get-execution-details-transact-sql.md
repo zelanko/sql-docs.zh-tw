@@ -1,5 +1,6 @@
 ---
-title: fn_syscollector_get_execution_details （Transact-sql） |Microsoft Docs
+description: fn_syscollector_get_execution_details (Transact-SQL)
+title: fn_syscollector_get_execution_details (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2442148dbb8f9db45f5b80ba8b2a4fdd90ef5c29
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 615dd195f9553242b92b8830462036ab6384b665
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898463"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474651"
 ---
 # <a name="fn_syscollector_get_execution_details-transact-sql"></a>fn_syscollector_get_execution_details (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ fn_syscollector_get_execution_details ( log_id )
   
 ## <a name="arguments"></a>引數  
  *log_id*  
- 執行記錄的本機唯一識別碼。 *log_id*為**int**。  
+ 執行記錄的本機唯一識別碼。 *log_id* 為 **int**。  
   
 ## <a name="table-returned"></a>傳回的資料表  
   
@@ -57,13 +58,13 @@ fn_syscollector_get_execution_details ( log_id )
 |endtime|**datetime**|封裝完成的時間。|  
 |datacode|**int**|識別記錄項目相關事件的整數值。 "0" 表示事件沒有提供任何識別碼。|  
 |databytes|**image**|識別傳回值的位元組陣列。|  
-|message|**nvarchar**|事件的描述以及與此事件相關的資訊。|  
+|訊息|**nvarchar**|事件的描述以及與此事件相關的資訊。|  
   
 ## <a name="permissions"></a>權限  
- 需要**dc_operator**的 SELECT 許可權。  
+ 需要 **dc_operator**的 SELECT 許可權。  
   
 ## <a name="see-also"></a>另請參閱  
- [啟用 SQL Server Data Tools 中的封裝記錄功能](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)   
- [資料收集](../../relational-databases/data-collection/data-collection.md)  
+ [在 SQL Server Data Tools 中啟用套件記錄](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)   
+ [[資料收集]](../../relational-databases/data-collection/data-collection.md)  
   
   

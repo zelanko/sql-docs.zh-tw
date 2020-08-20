@@ -1,4 +1,5 @@
 ---
+description: LocalDBFormatMessage 函數
 title: LocalDBFormatMessage 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ apitype: DLLExport
 ms.assetid: 31b3152a-94cf-4f75-a31b-296d7dd16dbe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 57c110763c38f1d400d03178568ff955a9c1840b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5d3083d789124023985577d1a04a811ff2273915
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789477"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475837"
 ---
 # <a name="localdbformatmessage-function"></a>LocalDBFormatMessage 函數
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +60,7 @@ HRESULT LocalDBFormatMessage(
  [輸出] 儲存 LocalDB 錯誤訊息的緩衝區。  
   
  *lpcchMessage*  
- [輸入/輸出][輸入] 包含*wszMessage*緩衝區的大小（以字元為單位）。 輸出時，如果指定的緩衝區大小太小，則會包含所需的緩衝區大小 (以字元為單位)，包括尾端的 Null。 如果函數成功，則會在訊息中包含字元數，尾端的 Null 不計。  
+ [輸入/輸出]On 輸入包含 *wszMessage* 緩衝區的大小（以字元為單位）。 輸出時，如果指定的緩衝區大小太小，則會包含所需的緩衝區大小 (以字元為單位)，包括尾端的 Null。 如果函數成功，則會在訊息中包含字元數，尾端的 Null 不計。  
   
 ## <a name="returns"></a>傳回  
  S_OK  
@@ -78,13 +79,13 @@ HRESULT LocalDBFormatMessage(
  未提供要求語言的訊息。  
   
  [LOCALDB_ERROR_INSUFFICIENT_BUFFER](../../relational-databases/express-localdb-error-messages/localdb-error-insufficient-buffer.md)  
- 輸入緩衝區*wszMessage*太短，且未要求截斷。  
+ 輸入緩衝區 *wszMessage* 太短，且未要求截斷。  
   
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
  發生意外錯誤。 請參閱事件記錄檔，以取得詳細資料。  
   
 ## <a name="remarks"></a>備註  
- 如需使用 LocalDB API 的程式碼範例，請參閱[SQL Server Express Localdb 參考](../../relational-databases/sql-server-express-localdb-reference.md)。  
+ 如需使用 LocalDB API 的程式碼範例，請參閱 [SQL Server Express Localdb 參考](../../relational-databases/sql-server-express-localdb-reference.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Express LocalDB 標頭和版本資訊](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  

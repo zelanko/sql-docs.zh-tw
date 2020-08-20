@@ -1,5 +1,6 @@
 ---
-title: sys.sys訊息（Transact-sql） |Microsoft Docs
+description: sys.sysmessages (Transact-SQL)
+title: sys.sys訊息 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 44bee7d9-7517-4071-99be-8b36f979c7cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25d1e3624dcaacd78325ba359cfb559a24eff3f6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c54d1cd0db8de1753a6dd81bfbde71c6944df6e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882048"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475129"
 ---
 # <a name="syssysmessages-transact-sql"></a>sys.sysmessages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "85882048"
 |**msglangid**|**smallint**|系統訊息群組識別碼。|  
   
 ## <a name="see-also"></a>另請參閱  
- [將系統資料表對應至系統檢視 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;將系統資料表對應至系統檢視 ](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [相容性檢視 &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

@@ -1,5 +1,6 @@
 ---
-title: sp_add_maintenance_plan_job （Transact-sql） |Microsoft Docs
+description: sp_add_maintenance_plan_job (Transact-SQL)
+title: sp_add_maintenance_plan_job (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7205855c-964f-4f55-bf75-39a55f6fe7bd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 89f9f2c1ac1982a1e86d0f48dbf7e1e0c9d26301
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 710a151e6e965b523b26a67e82814d4b23091aba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879701"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474613"
 ---
 # <a name="sp_add_maintenance_plan_job-transact-sql"></a>sp_add_maintenance_plan_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,21 +45,21 @@ sp_add_maintenance_plan_job [ @plan_id = ] 'plan_id' , [ @job_id = ] 'job_id'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @plan_id = ] 'plan_id'`指定維護計畫的識別碼。 *plan_id*是**uniqueidentifier**，而且必須是有效的識別碼。  
+`[ @plan_id = ] 'plan_id'` 指定維護計畫的識別碼。 *plan_id* 是 **uniqueidentifier**，必須是有效的識別碼。  
   
-`[ @job_id = ] 'job_id'`指定要與維護計畫相關聯之作業的識別碼。 *job_id*是**uniqueidentifier**，而且必須是有效的識別碼。 若要建立工作或作業，請執行**sp_add_job**，或使用 SQL Server Management Studio。  
+`[ @job_id = ] 'job_id'` 指定要與維護計畫相關聯之作業的識別碼。 *job_id* 是 **uniqueidentifier**，必須是有效的識別碼。 若要建立作業或作業，請執行 **sp_add_job**，或使用 SQL Server Management Studio。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="remarks"></a>備註  
- **sp_add_maintenance_plan_job**必須從**msdb**資料庫中執行。  
+ **sp_add_maintenance_plan_job** 必須從 **msdb** 資料庫執行。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_add_maintenance_plan_job**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色的成員，才可以執行 **sp_add_maintenance_plan_job**。  
   
 ## <a name="examples"></a>範例  
- 這個範例會將 "B8FCECB1-E22C-11D2-AA64-00C04F688EAE" 作業新增至使用**sp_add_maintenance_plan_job**建立的維護計畫。  
+ 此範例會將 "B8FCECB1-E22C-11D2-AA64-00C04F688EAE" 作業新增至使用 **sp_add_maintenance_plan_job**所建立的維護計畫。  
   
 ```  
 EXECUTE   sp_add_maintenance_plan_job N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC', N'B8FCECB1-E22C-11D2-AA64-00C04F688EAE';  
@@ -66,6 +67,6 @@ EXECUTE   sp_add_maintenance_plan_job N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC', N
   
 ## <a name="see-also"></a>另請參閱  
  [維護計畫](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [資料庫維護計畫預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
+ [&#40;Transact-sql&#41;的資料庫維護計畫預存程式 ](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   
   

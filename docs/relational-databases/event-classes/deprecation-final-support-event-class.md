@@ -1,4 +1,5 @@
 ---
+description: Deprecation Final Support 事件類別
 title: Deprecation Final Support 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 2b4d88d0-62be-45c0-bea8-c5900d553d31
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b5c9f0878d2a35dc82565a799b3c09725b65dd4a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 79702c2d62ae28a7a4af9f965ee12478db55c6b6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716973"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475996"
 ---
 # <a name="deprecation-final-support-event-class"></a>Deprecation Final Support 事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,5 +1,6 @@
 ---
-title: sys. trigger （Transact-sql） |Microsoft Docs
+description: sys.triggers (Transact-SQL)
+title: sys. 觸發程式 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,19 +21,19 @@ ms.assetid: cefa4fc4-b8b9-4cd7-b124-eed5283acbfc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8bcf1832c8f25da9ac10274c3dac2f6d120c98ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0e26d3791aab49ef3b901a6298deccb33af8b742
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733408"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475183"
 ---
 # <a name="systriggers-transact-sql"></a>sys.triggers (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  針對每個 TR 或 TA 類型的觸發程序物件，各包含一個資料列。 DML 觸發程式名稱是以架構為範圍，因此會顯示在**sys.databases**中。 而 DDL 觸發程序名稱是由父實體來限定範圍，因此只會顯示在這份檢視中。  
+  針對每個 TR 或 TA 類型的觸發程序物件，各包含一個資料列。 DML 觸發程式名稱是以架構為範圍，因此在 **sys. 物件**中是可見的。 而 DDL 觸發程序名稱是由父實體來限定範圍，因此只會顯示在這份檢視中。  
   
- [ **Parent_class** ] 和 [**名稱**] 資料行可唯一識別資料庫中的觸發程式。  
+ **Parent_class**和**名稱**資料行可唯一識別資料庫中的觸發程式。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -40,7 +41,7 @@ ms.locfileid: "85733408"
 |object_id|**int**|物件識別碼。 在資料庫中，這是唯一的。|  
 |**parent_class**|**tinyint**|觸發程序父系的類別。<br /><br /> 0 = DDL 觸發程序的資料庫。<br /><br /> 1 = DML 觸發程序的物件或資料行。|  
 |**parent_class_desc**|**nvarchar(60)**|觸發程序父類別的描述。<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN|  
-|**parent_id**|**int**|觸發程序父系的識別碼，如下所示：<br /><br /> 0 = 以資料庫為父系的觸發程序。<br /><br /> 若為 DML 觸發程式，這是定義 DML 觸發程式之資料表或視圖的**object_id** 。|  
+|**parent_id**|**int**|觸發程序父系的識別碼，如下所示：<br /><br /> 0 = 以資料庫為父系的觸發程序。<br /><br /> 針對 DML 觸發程式，這是定義 DML 觸發程式之資料表或視圖的 **object_id** 。|  
 |**type**|**char(2)**|物件類型：<br /><br /> TA = 組件 (CLR) 觸發程序<br /><br /> TR = SQL 觸發程序|  
 |**type_desc**|**nvarchar(60)**|物件類型的描述。<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
 |**create_date**|**datetime**|建立觸發程序的日期。|  
@@ -54,7 +55,7 @@ ms.locfileid: "85733408"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的安全性目錄檢視](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [安全性目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

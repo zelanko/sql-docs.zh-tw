@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_os_volume_stats （Transact-sql） |Microsoft Docs
+description: sys.dm_os_volume_stats (Transact-SQL)
+title: sys. dm_os_volume_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/06/2019
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 17bf3d47fe394407f848f4d9536fb202652e04db
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 75e6753328857be7f677a253fde790dd51defc51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829322"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474810"
 ---
 # <a name="sysdm_os_volume_stats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
@@ -38,18 +39,18 @@ ms.locfileid: "82829322"
 sys.dm_os_volume_stats (database_id, file_id)  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>參量  
+##  <a name="arguments"></a><a name="Arguments"></a> 引數  
  *database_id*  
  資料庫的識別碼。 *database_id* 為沒有預設值的 **int**。 不能是 NULL。  
   
  *file_id*  
- 檔案識別碼。 *file_id*是**int**，沒有預設值。 不能是 NULL。  
+ 檔案識別碼。 *file_id* 是 **int**，沒有預設值。 不能是 NULL。  
   
 ## <a name="table-returned"></a>傳回的資料表  
   
 ||||  
 |-|-|-|  
-|**資料行**|**資料類型**|**描述**|  
+|**資料行**|**Data type**|**說明**|  
 |**database_id**|**int**|資料庫的識別碼。 不可為 null。|  
 |**file_id**|**int**|檔案識別碼。 不可為 null。|  
 |**volume_mount_point**|**nvarchar(512)**|磁碟區根目錄所在的掛接點。 可以傳回空字串。|  
@@ -90,7 +91,7 @@ CROSS APPLY sys.dm_os_volume_stats(DB_ID(f.name), f.file_id);
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [master_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [sys. master_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
   
   

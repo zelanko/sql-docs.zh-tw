@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_db_xtp_index_stats （Transact-sql） |Microsoft Docs
+description: sys.dm_db_xtp_index_stats (Transact-SQL)
+title: sys. dm_db_xtp_index_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -20,19 +21,19 @@ ms.assetid: 8d0a50b8-2015-4576-930f-e3307dfc888e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 91afcf9bc654c73b6dad416bf9c5d114ca1edee5
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 096398c66e43ae36a9d2565394a7621ad45a4260
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442691"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475047"
 ---
 # <a name="sysdm_db_xtp_index_stats-transact-sql"></a>sys.dm_db_xtp_index_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   包含上次重新啟動資料庫之後收集的統計資料。  
   
- 如需詳細資訊，請參閱記憶體內部[&#40;記憶體優化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)和在[記憶體優化資料表上使用索引的指導方針](https://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b)。  
+ 如需詳細資訊，請參閱記憶體內部 [OLTP &#40;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md) 記憶體優化的&#41;以及在 [記憶體優化資料表上使用索引的指導方針](https://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b)。  
 
   
 |資料行名稱|資料類型|描述|  
