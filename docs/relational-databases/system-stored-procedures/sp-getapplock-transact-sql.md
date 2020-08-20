@@ -1,5 +1,6 @@
 ---
-title: sp_getapplock （Transact-sql） |Microsoft Docs
+description: sp_getapplock (Transact-SQL)
+title: sp_getapplock (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7f1072cf996bf32c9511586c24cd6eb8dbb920f6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 03531efe84a3443089922d5f7cfd5b2bc43e5241
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752811"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469447"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,27 +48,27 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
   
 ## <a name="arguments"></a>引數  
  [ @Resource =] '*resource_name*'  
- 這是一個字串，指定用來識別鎖定資源的名稱。 應用程式必須確定資源名稱是唯一的。 指定的名稱會在內部雜湊成可儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 鎖定管理員中的值。 *resource_name*是**Nvarchar （255）** ，沒有預設值。 如果資源字串的長度超過**Nvarchar （255）**，則會截斷成**Nvarchar （255）**。  
+ 這是一個字串，指定用來識別鎖定資源的名稱。 應用程式必須確定資源名稱是唯一的。 指定的名稱會在內部雜湊成可儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 鎖定管理員中的值。 *resource_name* 是 **Nvarchar (255) ** 沒有預設值。 如果資源字串的長度超過 **Nvarchar (255) **，它將會被截斷為 **Nvarchar (255) **。  
   
- *resource_name*是以二進位來比較，因此不論目前資料庫的定序設定為何，都會區分大小寫。  
+ *resource_name* 是以二進位來比較，因此不論目前資料庫的定序設定為何，都會區分大小寫。  
   
 > [!NOTE]  
 >  取得應用程式鎖定之後，只會擷取純文字中的前 32 個字元，其餘部分會予以雜湊。  
   
  [ @LockMode =] '*lock_mode*'  
- 這是要取得的特定資源鎖定模式。 *lock_mode*為**Varchar （32）** ，而且沒有預設值。 此值可以是下列任何一項： **Shared**、 **Update**、 **IntentShared**、 **IntentExclusive**或**Exclusive**。 如需詳細資訊，請參閱[鎖定模式](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes)。
+ 這是要取得的特定資源鎖定模式。 *lock_mode* 是 **Varchar (32) ** 且沒有預設值。 值可以是下列任何一項： **Shared**、 **Update**、 **IntentShared**、 **IntentExclusive**或 **Exclusive**。 如需詳細資訊，請參閱 [鎖定模式](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes)。
   
  [ @LockOwner =] '*lock_owner*'  
- 為鎖定的擁有者，也就是要求鎖定時的 *lock_owner* 值。 *lock_owner*為**Varchar （32）**。 這個值可以是 **Transaction ** (預設值) 或 **Session **。 當*lock_owner*值為**交易**時，根據預設或明確地指定，sp_getapplock 必須從交易內執行。  
+ 為鎖定的擁有者，也就是要求鎖定時的 *lock_owner* 值。 *lock_owner* 是 **Varchar (32) **。 這個值可以是 **Transaction ** (預設值) 或 **Session **。 當 *lock_owner* 值為 **transaction**時，根據預設或明確地指定，必須從交易內執行 sp_getapplock。  
   
- [ @LockTimeout =] '*值*'  
- 這是鎖定逾時值 (以毫秒為單位)。 預設值與 @ 所傳回的值相同 @LOCK_TIMEOUT 。 若要指出鎖定要求應傳回-1 的傳回碼，而不是在無法立即授與要求時等待鎖定，請指定0。  
+ [ @LockTimeout =] '*value*'  
+ 這是鎖定逾時值 (以毫秒為單位)。 預設值與 @ 所傳回的值相同 @LOCK_TIMEOUT 。 若要指出當要求無法立即授與時，鎖定要求應該傳回-1 的傳回碼，而不是等候鎖定，請指定0。  
   
  [ @DbPrincipal =] '*database_principal*'  
- 這是擁有資料庫中物件權限的使用者、角色或應用程式角色。 函數的呼叫端必須是*database_principal*、dbo 或 db_owner 固定資料庫角色的成員，才能成功呼叫函式。 預設值是 public。  
+ 這是擁有資料庫中物件權限的使用者、角色或應用程式角色。 函數的呼叫端必須是 *database_principal*、dbo 或 db_owner 固定資料庫角色的成員，才能成功呼叫函式。 預設值是 public。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- \>= 0 （成功），或 < 0 （失敗）  
+ \>= 0 (成功) ，或 < 0 (失敗)   
   
 |值|結果|  
 |-----------|------------|  
@@ -79,7 +80,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 |-999|表示參數驗證或其他呼叫錯誤。|  
   
 ## <a name="remarks"></a>備註  
- 資源所設定的鎖定與目前交易或目前工作階段相關聯。 當認可或回復交易時，便會釋放與目前交易相關聯的鎖定。 當會話已登出時，就會釋放與會話相關聯的鎖定。當伺服器因任何原因而關閉時，就會釋放所有鎖定。  
+ 資源所設定的鎖定與目前交易或目前工作階段相關聯。 當認可或回復交易時，便會釋放與目前交易相關聯的鎖定。 會話登出時，就會釋放與會話相關聯的鎖定。當伺服器因為任何原因而關閉時，就會釋放所有鎖定。  
   
  sp_getapplock 所建立的鎖定資源建立在工作階段的目前資料庫中。 每項鎖定資源都是用下列各項的合計值來識別的：  
   
@@ -91,7 +92,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
   
  只有 @DbPrincipal 參數中指定的資料庫主體成員，才能夠取得指定這個主體的應用程式鎖定。 dbo 和 db_owner 角色的成員會隱含地被視為所有角色的成員。  
   
- 您可以利用 sp_releaseapplock 來明確釋放鎖定。 當應用程式針對相同鎖定資源來重複呼叫 sp_getapplock 時，也必須呼叫 sp_releaseapplock 相同次數，以便釋出鎖定。  以鎖定擁有者開啟鎖定時 `Transaction` ，在認可或回復交易時，就會釋放該鎖定。
+ 您可以利用 sp_releaseapplock 來明確釋放鎖定。 當應用程式針對相同鎖定資源來重複呼叫 sp_getapplock 時，也必須呼叫 sp_releaseapplock 相同次數，以便釋出鎖定。  當鎖定擁有者開啟鎖定時 `Transaction` ，就會在認可或回復交易時釋放該鎖定。
   
  如果針對相同鎖定資源呼叫了 sp_getapplock 許多次，但有任何要求所指定的鎖定模式與現有的模式不同，資源便會受到兩個鎖定模式的聯合影響。 在大部分情況下，這表示鎖定模式會升級成較強的鎖定模式、現有的模式，或新要求的模式。 這個較強的鎖定模式會保留到最後釋出鎖定為止，即使鎖定釋出呼叫先發生，也是如此。 例如，在下列呼叫順序中，資源會保留 `Exclusive` 模式，而不是 `Shared` 模式。  
   
@@ -111,7 +112,7 @@ GO
   
  含應用程式鎖定的死結不會回復要求應用程式鎖定的交易。 當因為傳回值而可能需要進行任何回復時，您必須手動回復。 因此，建議您在程式碼中併入錯誤檢查，以便在傳回某些值 (如 -3) 時，起始 ROLLBACK TRANSACTION 或替代動作。  
   
- 範例如下：  
+ 請看以下範例：  
   
 ```  
 USE AdventureWorks2012;  

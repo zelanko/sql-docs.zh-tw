@@ -1,5 +1,6 @@
 ---
-title: sp_getbindtoken （Transact-sql） |Microsoft Docs
+description: sp_getbindtoken (Transact-SQL)
+title: sp_getbindtoken (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5db87d77-85fa-45a3-a23a-3ea500f9a5ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 31e95bf970f4050315ed1b74b7bb87d3ed3788fd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 74e2e9f849e725702e6e721ad6e2a4653e84f528
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881637"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469430"
 ---
 # <a name="sp_getbindtoken-transact-sql"></a>sp_getbindtoken (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +44,7 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
   
 ## <a name="arguments"></a>引數  
  [ @out_token =] '*return_value*'  
- 這是用來繫結工作階段的 Token。 *return_value*為**Varchar （255）** ，沒有預設值。  
+ 這是用來繫結工作階段的 Token。 *return_value* 是 **Varchar (255) ** ，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  None  
@@ -52,7 +53,7 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
  None  
   
 ## <a name="remarks"></a>備註  
- 只有在使用中交易內執行預存程式時，sp_getbindtoken 才會傳回有效的 token。 否則，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會傳回錯誤訊息。 例如：  
+ 只有當預存程式在使用中的交易內執行時，sp_getbindtoken 才會傳回有效的 token。 否則，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會傳回錯誤訊息。 例如：  
   
 ```  
 -- Declare a variable to hold the bind token.  
@@ -65,7 +66,7 @@ Cannot get a transaction token if there is no transaction active.
 Reissue the statement after a transaction has been started.  
 ```  
   
- 當 sp_getbindtoken 用來在開啟的交易內登錄分散式交易連接時，會傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 相同的 token。 例如：  
+ 當 sp_getbindtoken 用來在開啟的交易內登錄分散式交易連接時，會傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 相同的標記。 例如：  
   
 ```  
 USE AdventureWorks2012;  
@@ -127,7 +128,7 @@ SELECT @bind_token AS Token;
   
 ## <a name="see-also"></a>另請參閱  
  [sp_bindsession &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
- [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [srv_getbindtoken &#40;擴充預存程式 API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)  
   
   

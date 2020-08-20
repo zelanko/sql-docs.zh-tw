@@ -1,5 +1,6 @@
 ---
-title: sp_grant_publication_access （Transact-sql） |Microsoft Docs
+description: sp_grant_publication_access (Transact-SQL)
+title: sp_grant_publication_access (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 17993952-def6-4a16-b1c1-323ec42967f8
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 319f61f1cf1587117b4f8205b208c4f3e7deb6be
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5078173bfdf8ea079c0fa553c64a6235b101cdc2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891834"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469354"
 ---
 # <a name="sp_grant_publication_access-transact-sql"></a>sp_grant_publication_access (Transact-SQL)
 
@@ -38,22 +39,22 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'`這是要存取的發行集名稱。 **'***發行***'** 是**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 這是要存取的發行集名稱。 **'***發行***集 '** 是 **sysname**，沒有預設值。  
   
-`[ @login = ] 'login'`這是登入識別碼。 **'***login***'** 是**sysname**，沒有預設值。  
+`[ @login = ] 'login'` 這是登入識別碼。 **'***login***'** 是 **sysname**，沒有預設值。  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_grant_publication_access**用於快照式、交易式和合併式複寫中。  
+ **sp_grant_publication_access** 用於快照式、交易式和合併式複寫中。  
   
  這個預存程序可以重複呼叫。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_grant_publication_access**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色或 **db_owner** 固定資料庫角色的成員，才能夠執行 **sp_grant_publication_access**。  
   
 ## <a name="see-also"></a>另請參閱  
  [sp_help_publication_access &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)   

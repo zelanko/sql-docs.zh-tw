@@ -1,5 +1,6 @@
 ---
-title: sp_help_log_shipping_alert_job （Transact-sql） |Microsoft Docs
+description: sp_help_log_shipping_alert_job (Transact-SQL)
+title: sp_help_log_shipping_alert_job (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4d4b4577-c393-4961-b2d3-b56e980b787b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d831935d70d65756b431632c0b9b64d87049173c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 799880f18cdb5ad89d27eebeaca48ede85bd50fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891764"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469314"
 ---
 # <a name="sp_help_log_shipping_alert_job-transact-sql"></a>sp_help_log_shipping_alert_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,10 +50,10 @@ sp_help_log_shipping_alert_job
  這個預存程式會傳回 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄傳送警示作業的 AGENT 作業識別碼。 如果沒有任何記錄傳送警示作業存在，它會傳回空的結果集。  
   
 ## <a name="remarks"></a>備註  
- **sp_help_log_shipping_alert_job**必須從監視伺服器上的**master**資料庫中執行。  
+ **sp_help_log_shipping_alert_job** 必須從監視伺服器上的 **master** 資料庫執行。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行此程式。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行這個程式。  
   
 ## <a name="see-also"></a>另請參閱  
  [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

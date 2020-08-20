@@ -1,4 +1,5 @@
 ---
+description: TRY_PARSE (Transact-SQL)
 title: TRY_PARSE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 184cebde63a58c399f5719c3d07c0846a3163f9a
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: f8df055fa3d40a8d31d25ad9917d86a86363335c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87523130"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467725"
 ---
 # <a name="try_parse-transact-sql"></a>TRY_PARSE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -94,7 +95,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
   
 |全名|Alias|LCID|專屬文化特性|  
 |---------------|-----------|----------|----------------------|  
-|us_english|英文|1033|zh-TW|  
+|us_english|英文|1033|en-US|  
 |Deutsch|德文|1031|de-DE|  
 |Français|法文|1036|fr-FR|  
 |日本語|日文|1041|ja-JP|  

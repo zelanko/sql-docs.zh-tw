@@ -1,4 +1,5 @@
 ---
+description: STATS_DATE (Transact-SQL)
 title: STATS_DATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/18/2017
@@ -22,12 +23,12 @@ ms.assetid: f9ec3101-1e41-489d-b519-496a0d6089fb
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 69f5b2a658ab40f180c4a1aafbc71f4dc7a264bf
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 1bc07124925f28ea0114a95ec5a60319bd2112bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112639"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467821"
 ---
 # <a name="stats_date-transact-sql"></a>STATS_DATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +48,7 @@ STATS_DATE ( object_id , stats_id )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引數
- object_id   
+ object_id  
  包含統計資料之資料表或索引檢視表的識別碼。  
   
  *stats_id*  
@@ -61,7 +62,7 @@ STATS_DATE ( object_id , stats_id )
  
  統計資料更新日期儲存在[統計資料 Blob 物件](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)中，其中還有[長條圖](../../relational-databases/statistics/statistics.md#histogram)和[密度向量](../../relational-databases/statistics/statistics.md#density)，不是儲存在中繼資料中。 如果沒有讀取資料以產生統計資料，則不會建立統計 Blob，而且日期也不可使用。 這是已篩選統計資料的情況，其中述詞未傳回任何資料列，或為新的空白資料表的情況。
  
- 如果統計資料對應到索引，*sys.stats* 目錄檢視中的 [stats_id](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 值會與 *sys.indexes* 目錄檢視中的 [index_id](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 值相同。
+ 如果統計資料對應到索引，[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 目錄檢視中的 *stats_id* 值會與 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 目錄檢視中的 *index_id* 值相同。
   
 ## <a name="permissions"></a>權限  
  需要 db_owner 固定資料庫角色中的成員資格或權限，才能檢視資料表或索引檢視表的中繼資料。  
@@ -81,7 +82,7 @@ WHERE object_id = OBJECT_ID('Person.Address');
 GO  
 ```  
   
- 如果統計資料對應到索引，*sys.stats* 目錄檢視中的 [stats_id](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 值會與 *sys.indexes* 目錄檢視中的 [index_id](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 值相同，而且下列查詢會傳回與之前查詢相同的結果。 如果統計資料未對應到索引，統計資料會在 sys.stats 結果中而不是 sys.indexes 結果中。  
+ 如果統計資料對應到索引，[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 目錄檢視中的 *stats_id* 值會與 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 目錄檢視中的 *index_id* 值相同，而且下列查詢會傳回與之前查詢相同的結果。 如果統計資料未對應到索引，統計資料會在 sys.stats 結果中而不是 sys.indexes 結果中。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -142,7 +143,7 @@ WHERE s.object_id = OBJECT_ID('dbo.DimCustomer');
 GO  
 ```  
   
- 如果統計資料對應到索引，*sys.stats* 目錄檢視中的 [stats_id](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 值會與 *sys.indexes* 目錄檢視中的 [index_id](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 值相同，而且下列查詢會傳回與之前查詢相同的結果。 如果統計資料未對應到索引，統計資料會在 sys.stats 結果中而不是 sys.indexes 結果中。  
+ 如果統計資料對應到索引，[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 目錄檢視中的 *stats_id* 值會與 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 目錄檢視中的 *index_id* 值相同，而且下列查詢會傳回與之前查詢相同的結果。 如果統計資料未對應到索引，統計資料會在 sys.stats 結果中而不是 sys.indexes 結果中。  
   
 ```sql  
 USE AdventureWorksPDW2012;  

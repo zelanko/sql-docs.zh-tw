@@ -1,4 +1,5 @@
 ---
+description: SESSION_CONTEXT (Transact-SQL)
 title: SESSION_CONTEXT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/14/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b6bdbc54-331a-43cc-ab3d-3872d6a12100
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 00056403e2b2ef00862b7552c76fd98b851cabe5
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: ae64d9e63d6c6a6c77642144275af00a8418a8d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394761"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467900"
 ---
 # <a name="session_context-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -37,8 +38,6 @@ ms.locfileid: "87394761"
 SESSION_CONTEXT(N'key')  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## <a name="arguments"></a>引數
  'key'  
  要擷取之值的索引鍵 (類型為 sysname)。  

@@ -1,5 +1,6 @@
 ---
-title: sp_fulltext_pendingchanges （Transact-sql） |Microsoft Docs
+description: sp_fulltext_pendingchanges (Transact-SQL)
+title: sp_fulltext_pendingchanges (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: fee042fe-4781-4a33-a01b-d98fb5629f1b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a86792b69e9bdd00c41c9ed5582046aee634d533
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5d91423e81a8597fcf7cccb30a11d47482ea9964
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772185"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469446"
 ---
 # <a name="sp_fulltext_pendingchanges-transact-sql"></a>sp_fulltext_pendingchanges (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,17 +56,17 @@ sp_fulltext_pendingchanges table_id
  <sup>* 資料類型 Key，與基底資料表中全文檢索索引鍵資料行的資料類型一樣。</sup>  
   
 ## <a name="permissions"></a>權限  
- 需要**系統管理員（sysadmin** ）固定伺服器角色中的成員資格。  
+ 需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
   
 ## <a name="remarks"></a>備註  
  如果沒有任何變更可以處理，就會傳回空的資料列集。  
   
- 全文檢索搜尋查詢不會傳回**Status**值為0的資料列。 這是因為資料列已經從基底資料表中刪除，並且正在等候從全文檢索索引中刪除。  
+ 全文檢索搜尋查詢不會傳回 **Status** 值為0的資料列。 這是因為資料列已經從基底資料表中刪除，並且正在等候從全文檢索索引中刪除。  
   
- 若要找出特定資料表暫止的變更數目，請使用 OBJECTPROPERTYEX 函數的**TableFullTextPendingChanges**屬性。  
+ 若要找出特定資料表有多少變更暫止，請使用 OBJECTPROPERTYEX 函數的 **TableFullTextPendingChanges** 屬性。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的全文檢索搜尋和語義搜尋預存程式](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
+ [全文檢索搜尋和語義搜尋預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
  [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)  
   
   

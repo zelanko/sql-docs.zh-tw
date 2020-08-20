@@ -1,4 +1,5 @@
 ---
+description: USER_NAME (Transact-SQL)
 title: USER_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -24,12 +25,12 @@ ms.assetid: ab32d644-4228-449a-9ef0-5a975c305775
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dd303885ba4849932687248b2ae26c78d92b3a8a
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: eb4be6c95f60be21e594b98725a636aebce62bfc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112221"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467700"
 ---
 # <a name="user_name-transact-sql"></a>USER_NAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,7 +58,7 @@ USER_NAME ( [ id ] )
  當省略 *id* 時，會假設為目前內容中的目前使用者。 如果參數包含 NULL 一詞，就會傳回 NULL。 在 EXECUTE AS 陳述式後不指定 *id* 來呼叫 USER_NAME 時，USER_NAME 會傳回模擬使用者的名稱。 如果 Windows 主體利用群組中的成員資格來存取資料庫，則 USER_NAME 會傳回 Windows 主體名稱而非群組。  
  
 > [!NOTE]
-> 雖然 Azure SQL Database 支援 USER_NAME 函式，但 Azure SQL Database 不支援使用 USER_NAME 的「執行身分」  。 
+> 雖然 Azure SQL Database 支援 USER_NAME 函式，但 Azure SQL Database 不支援使用 USER_NAME 的「執行身分」。 
   
 ## <a name="examples"></a>範例  
   

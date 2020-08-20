@@ -1,4 +1,5 @@
 ---
+description: TYPEPROPERTY (Transact-SQL)
 title: TYPEPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ ms.assetid: bc311c80-bac5-46ab-a5c8-68b1c6bbf24a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a504fb547e89a348d1fe6b5f6168f81fd0d7656
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 455f736f73d2b4ba6c5e798b3cd9d8376ee4217b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110711"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467708"
 ---
 # <a name="typeproperty-transact-sql"></a>TYPEPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +55,7 @@ TYPEPROPERTY (type , property)
 |**AllowsNull**|允許 Null 值的資料類型。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 找不到資料類型。|  
 |**OwnerId**|類型的擁有者。<br /><br /> 注意：結構描述擁有者不一定是類型擁有者。|非 Null = 類型擁有者的資料庫使用者識別碼。<br /><br /> NULL = 不支援的類型，或類型識別碼無效。|  
 |**有效位數**|資料類型的有效位數。|位數或字元數。<br /><br /> -1 = **xml** 或大型數值資料類型<br /><br /> NULL = 找不到資料類型。|  
-|**調整**|資料類型的小數位數。|資料類型的小數位數數目。<br /><br /> NULL = 資料類型不是 **numeric**，或找不到。|  
+|**縮放比例**|資料類型的小數位數。|資料類型的小數位數數目。<br /><br /> NULL = 資料類型不是 **numeric**，或找不到。|  
 |**UsesAnsiTrim**|當建立資料類型時，ANSI 填補設定是 ON。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 找不到資料類型，或它不是二進位或字串資料類型。|  
   
 ## <a name="return-types"></a>傳回型別  

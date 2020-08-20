@@ -1,4 +1,5 @@
 ---
+description: LIKE (Transact-SQL)
 title: LIKE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -31,12 +32,12 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37cf0c961903707f86ec838c45d5935e72d72402
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f8886fbf2a94df7fd338572f2156e66ee6fc50ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922946"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467661"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -67,7 +68,7 @@ match_expression [ NOT ] LIKE pattern
  *match_expression*  
  這是字元資料類型的任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
- *pattern*  
+ *模式*  
  這是要在 *match_expression* 中搜尋的特定字元字串，可包含下列有效的萬用字元。 *pattern* 最多可有 8,000 個位元組。  
   
 |萬用字元|描述|範例|  
@@ -200,7 +201,7 @@ GO
   
  如果 LIKE 模式中逸出字元之後沒有任何字元，模式便無效，且 LIKE 會傳回 FALSE。 如果逸出字元之後的字元不是萬用字元，就會捨棄萬用字元，並將之後的字元當作一般字元來處理。 這些字元包括用一組左右括弧 ([ ]) 括住的百分比符號 (%)、底線 (_) 和左括弧 ([) 萬用字元。 逸出字元也可以在左右括弧字元 ([ ]) 中使用，包括用來逸出插入號 (^)、連字號 (-) 或右括弧 (])。  
   
- 0x0000 (**char(0)** ) 是 Windows 定序中未定義的字元，且不得包含在 LIKE 中。  
+ 0x0000 (**char(0)**) 是 Windows 定序中未定義的字元，且不得包含在 LIKE 中。  
   
 ## <a name="examples"></a>範例  
   
@@ -270,7 +271,7 @@ Gail                  Westover             305-555-0100
 ```
 
 ### <a name="c-using-the-escape-clause"></a>C. 使用 ESCAPE 子句  
- 下列範例會利用 `ESCAPE` 子句和逸出字元來尋找 `10-15%` 資料表 `c1` 資料行中完全相符的 `mytbl2` 字元字串。  
+ 下列範例會利用 `ESCAPE` 子句和逸出字元來尋找 `mytbl2` 資料表 `c1` 資料行中完全相符的 `10-15%` 字元字串。  
   
 ```sql
 USE tempdb;  
@@ -333,7 +334,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="f-using-not-like-with-the--wildcard-character"></a>F. 使用 NOT LIKE 搭配 % 萬用字元  
- 下列範例會在 `DimEmployee` 資料表中尋找所有開頭不是 `612` 的電話號碼。  。  
+ 下列範例會在 `DimEmployee` 資料表中尋找所有開頭不是 `612` 的電話號碼。  .  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -345,7 +346,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="g-using-like-with-the-_-wildcard-character"></a>G. 使用 LIKE 搭配 _ 萬用字元  
- 下列範例會在 `6` 資料表中尋找區碼是以 `2` 開頭且以 `DimEmployee` 結尾的所有電話號碼。 % 萬用字元會包含在搜尋模式的結尾，用來比對電話資料行值中的所有後續字元。  
+ 下列範例會在 `DimEmployee` 資料表中尋找區碼是以 `6` 開頭且以 `2` 結尾的所有電話號碼。 % 萬用字元會包含在搜尋模式的結尾，用來比對電話資料行值中的所有後續字元。  
   
 ```sql  
 -- Uses AdventureWorks  

@@ -1,5 +1,6 @@
 ---
-title: sp_gettopologyinfo （Transact-sql） |Microsoft Docs
+description: sp_gettopologyinfo (Transact-SQL)
+title: sp_gettopologyinfo (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 8bbe8a06-a4aa-4219-8402-12db6a4682c6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: db6c762b104edbb297f92c703a7e28dbf6f1c141
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 423739aa8ae2407b2b536fa9e2313c9073e0b6c6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891863"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469410"
 ---
 # <a name="sp_gettopologyinfo-transact-sql"></a>sp_gettopologyinfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  傳回有關點對點異動複寫拓撲的資訊。 執行此程式之前，請先執行[sp_requestpeertopologyinfo](../../relational-databases/system-stored-procedures/sp-requestpeertopologyinfo-transact-sql.md)來收集資訊。  
+  傳回有關點對點異動複寫拓撲的資訊。 執行此程式之前，請先執行 [sp_requestpeertopologyinfo](../../relational-databases/system-stored-procedures/sp-requestpeertopologyinfo-transact-sql.md) 來收集資訊。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,16 +39,16 @@ sp_gettopologyinfo [ @request_id = ] request_id
   
 ## <a name="arguments"></a>引數  
  [ @request_id =] *request_id*  
- 這是拓撲狀態要求的識別碼。 *request_id*是**int**，預設值是 Null。 若要取得識別碼，請使用 @request_id [sp_requestpeertopologyinfo](../../relational-databases/system-stored-procedures/sp-requestpeertopologyinfo-transact-sql.md)的 output 參數，或查詢[MSpeer_topologyrequest](../../relational-databases/system-tables/mspeer-topologyrequest-transact-sql.md)系統資料表。  
+ 這是拓撲狀態要求的識別碼。 *request_id* 是 **int**，預設值是 Null。 若要取得識別碼，請使用 @request_id [sp_requestpeertopologyinfo](../../relational-databases/system-stored-procedures/sp-requestpeertopologyinfo-transact-sql.md) 的 output 參數或查詢 [MSpeer_topologyrequest](../../relational-databases/system-tables/mspeer-topologyrequest-transact-sql.md) 系統資料表。  
   
 ## <a name="result-sets"></a>結果集  
- sp_gettopologyinfo 會傳回具有單一 XML 資料行的結果集。 XML 資料行中的資料與[MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md)系統資料表中的資料相同。  
+ sp_gettopologyinfo 會傳回具有單一 XML 資料行的結果集。 XML 資料行中的資料與 [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md) 系統資料表中的資料相同。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- sp_gettopologyinfo 會用於點對點異動複寫中。 執行 sp_gettopologyinfo 之前，請先執行[sp_requestpeertopologyinfo](../../relational-databases/system-stored-procedures/sp-requestpeertopologyinfo-transact-sql.md) 。 這些程序是由「設定點對點拓撲精靈」所使用，但是如果您需要 XML 格式的拓撲資訊，也可以直接使用這些程序。 如果您偏好表格式結果，請查詢[MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md)系統資料表。  
+ sp_gettopologyinfo 會用於點對點異動複寫中。 執行 sp_gettopologyinfo 之前，請先執行 [sp_requestpeertopologyinfo](../../relational-databases/system-stored-procedures/sp-requestpeertopologyinfo-transact-sql.md) 。 這些程序是由「設定點對點拓撲精靈」所使用，但是如果您需要 XML 格式的拓撲資訊，也可以直接使用這些程序。 如果您偏好表格式結果，請查詢 [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md) 系統資料表。  
   
 ## <a name="permissions"></a>權限  
  需要系統管理員 (sysadmin) 固定伺服器角色或 db_owner 固定資料庫角色中的成員資格。  

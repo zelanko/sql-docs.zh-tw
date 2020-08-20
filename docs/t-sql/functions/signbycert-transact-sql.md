@@ -1,4 +1,5 @@
 ---
+description: SIGNBYCERT (Transact-SQL)
 title: SIGNBYCERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: b4c6bced-4473-4bae-85b9-56deced495f9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e1c0705a6057842b80f7e9bf59412f0a64af30ae
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 32fa18577753641583ff5b6c12d864da0f0e36af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112301"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467877"
 ---
 # <a name="signbycert-transact-sql"></a>SIGNBYCERT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +55,7 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
  為 **nvarchar**、**char**、**varchar** 或 **nchar** 類型的變數，其中包含將簽署的資料。  
   
  **'** *password* **'**  
- 這是用來加密憑證私密金鑰的密碼。 *password* 為 **nvarchar(128)** 。  
+ 這是用來加密憑證私密金鑰的密碼。 *password* 為 **nvarchar(128)**。  
   
 ## <a name="return-types"></a>傳回型別  
  **varbinary**，大小上限為 8,000 位元組。  
@@ -63,7 +64,7 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
  需要憑證的 CONTROL 權限。  
   
 ## <a name="examples"></a>範例  
- 下列範例使用憑證 `@SensitiveData` 簽署 `ABerglundCert07` 中的文字，且先使用密碼 "pGFD4bb925DGvbd2439587y" 將憑證解密。 然後將純文字和簽章插入資料表 `SignedData04`。  
+ 下列範例使用憑證 `ABerglundCert07` 簽署 `@SensitiveData` 中的文字，且先使用密碼 "pGFD4bb925DGvbd2439587y" 將憑證解密。 然後將純文字和簽章插入資料表 `SignedData04`。  
   
 ```  
 DECLARE @SensitiveData nvarchar(max);  

@@ -1,4 +1,5 @@
 ---
+description: sp_executesql (Transact-SQL)
 title: sp_executesql (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -19,12 +20,12 @@ ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61a93d541e34c152d7c0ab5191ffe577c782c6e2
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 492a0db844d0278808bdc8cf6bba27d980447f8d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180230"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469503"
 ---
 # <a name="sp_executesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,22 +50,22 @@ sp_executesql [ @stmt = ] statement
 ```  
   
 ## <a name="arguments"></a>引數  
- [ \@ stmt =]*語句*  
- 這是包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句或批次的 Unicode 字串。 \@stmt 必須是 Unicode 常數或 Unicode 變數。 不允許使用比較複雜的 Unicode 運算式，如用 + 運算子來串連兩個字串。 不允許使用字元常數。 如果指定了 Unicode 常數，它的前面必須加上**N**。例如，Unicode 常數**N ' sp_who '** 有效，但字元常數 **' sp_who '** 則不是。 字串大小只受到可用資料庫伺服器記憶體的限制。 在64位伺服器上，字串大小限制為 2 GB，Nvarchar 的大小上限** (最大) **。  
+ [ \@ stmt =] *語句*  
+ 這是包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句或批次的 Unicode 字串。 \@stmt 必須是 Unicode 常數或 Unicode 變數。 不允許使用比較複雜的 Unicode 運算式，如用 + 運算子來串連兩個字串。 不允許使用字元常數。 如果指定了 Unicode 常數，則前面必須加上 **N**。例如，Unicode 常數 **N ' sp_who '** 有效，但字元常數 **' Sp_who '** 則否。 字串大小只受到可用資料庫伺服器記憶體的限制。 在64位伺服器上，字串的大小限制為 2 GB， **Nvarchar (max) **的大小上限。  
   
 > [!NOTE]  
->  \@stmt 可以包含具有與變數名稱相同形式的參數，例如：`N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
+>  \@stmt 可以包含具有和變數名稱相同形式的參數，例如： `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
- 包含在 stmt 中的每個參數在 \@ \@ params 參數定義清單和參數值清單中都必須有對應的專案。  
+ 在 stmt 中包含的每個參數都 \@ 必須在 \@ params 參數定義清單和參數值清單中都有對應的專案。  
   
- [ \@ params =] N ' \@*parameter_name* *data_type* [,.。。*n* ] '  
- 這是一個字串，其中包含已內嵌在 stmt 中之所有參數的定義 \@ 。此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 *n*是指出其他參數定義的預留位置。 Stmt 中指定的每個參數都 \@ 必須在 params 中定義 \@ 。 如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] stmt 中的語句或批次不 \@ 包含參數， \@ 則不需要 params。 這個參數的預設值是 NULL。  
+ [ \@ params =] N ' \@*parameter_name* *data_type* [,.。。 *n* ] '  
+ 這是一個字串，其中包含已內嵌在 stmt 中之所有參數的定義 \@ 。字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 *n* 是指出其他參數定義的預留位置。 在 stmt 中指定的每個參數都 \@ 必須在 params 中定義 \@ 。 如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] stmt 中的語句或批次不 \@ 包含參數， \@ 則不需要 params。 這個參數的預設值是 NULL。  
   
  [ \@ param1 =] '*value1*'  
- 這是參數字串所定義的第一個參數的值。 這個值可以是 Unicode 常數或 Unicode 變數。 針對包含在 stmt 中的每個參數，都必須提供參數值 \@ 。當 [!INCLUDE[tsql](../../includes/tsql-md.md)] stmt 中的語句或批次沒有參數時，不需要這些值 \@ 。  
+ 這是參數字串所定義的第一個參數的值。 這個值可以是 Unicode 常數或 Unicode 變數。 在 stmt 中包含的每個參數都必須提供參數值 \@ 。如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] stmt 中的語句或批次沒有參數，則不需要這些值 \@ 。  
   
  [ OUT | OUTPUT ]  
- 指出這個參數是輸出參數。 **text**、 **Ntext**和**image**參數可用來做為輸出參數，除非程式是 common language runtime (CLR) 程式。 除非此程序是一個 CLR 程序，否則使用 OUTPUT 關鍵字的輸出參數可以是資料指標預留位置。  
+ 指出這個參數是輸出參數。 除非程式是 common language runtime (CLR) 程式，否則**text**、 **Ntext**和**image**參數可以當做 OUTPUT 參數使用。 除非此程序是一個 CLR 程序，否則使用 OUTPUT 關鍵字的輸出參數可以是資料指標預留位置。  
   
  *n*  
  這是其他參數值的預留位置。 這些值只能是常數或變數。 這些值不能是比較複雜的運算式，如函數或利用運算子來建立的運算式。  
@@ -76,9 +77,9 @@ sp_executesql [ @stmt = ] statement
  從內建在 SQL 字串內的所有 SQL 陳述式中傳回結果集。  
   
 ## <a name="remarks"></a>備註  
- 如本主題稍早的「語法」一節所述，必須依照特定順序輸入 sp_executesql 參數。 如果未按順序輸入參數，就會出現錯誤訊息。  
+ 您必須依照本主題稍早的「語法」一節中所述，以特定順序輸入 sp_executesql 參數。 如果未按順序輸入參數，就會出現錯誤訊息。  
   
- 關於批次、名稱範圍和資料庫內容，sp_executesql 的行為和 EXECUTE 相同。 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] \@ 執行 sp_executesql 語句之前，不會編譯 sp_executesql stmt 參數中的語句或批次。 \@然後會編譯並執行 stmt 的內容，做為與呼叫 sp_executesql 之批次的執行計畫不同的執行計畫。 sp_executesql 批次無法參考稱為 sp_executesql 的批次中所宣告的變數。 稱為 sp_executesql 的批次看不到 sp_executesql 批次中的本機資料指標或變數。 資料庫內容中的變更會持續到 sp_executesql 陳述式結束。  
+ 關於批次、名稱範圍和資料庫內容，sp_executesql 的行為和 EXECUTE 相同。 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] \@ 執行 sp_executesql 語句之前，不會編譯 sp_executesql stmt 參數中的語句或批次。 然後，將 \@ 會以執行計畫的形式來編譯和執行 stmt 的內容，並將其與呼叫 sp_executesql 之批次的執行計畫分開執行。 sp_executesql 批次無法參考稱為 sp_executesql 的批次中所宣告的變數。 稱為 sp_executesql 的批次看不到 sp_executesql 批次中的本機資料指標或變數。 資料庫內容中的變更會持續到 sp_executesql 陳述式結束。  
   
  當陳述式參數值的變更是唯一的變數時，您可以利用 sp_executesql 取代預存程序來重複執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 由於 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式本身維持不變，只有參數值改變，因此，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢最佳化工具可能會重複使用它針對第一次執行所產生的執行計畫。  
   
@@ -205,7 +206,7 @@ GO
  在這個程序中使用 sp_executesql，比利用 EXECUTE 來執行字串有效。 當使用 sp_executesql 時，只會產生 12 個 INSERT 字串版本，每月資料表各一個。 當使用 EXECUTE 時，每個 INSERT 字串都是唯一的，因為參數值不同。 雖然這兩個方法會產生相同的批次數目，但 sp_executesql 所產生之 INSERT 字串的類似性，使得查詢最佳化工具更可能重複使用執行計畫。  
   
 ### <a name="c-using-the-output-parameter"></a>C. 使用 OUTPUT 參數  
- 下列範例會使用 `OUTPUT` 參數來儲存參數中的語句所產生的結果集 `SELECT` `@SQLString` 。`SELECT`接著會執行使用參數值的兩個語句 `OUTPUT` 。  
+ 下列範例會使用 `OUTPUT` 參數來儲存參數中的語句所產生的結果集 `SELECT` `@SQLString` 。 `SELECT` 接著會執行使用參數值的兩個語句 `OUTPUT` 。  
   
 ```sql  
 USE AdventureWorks2012;  
