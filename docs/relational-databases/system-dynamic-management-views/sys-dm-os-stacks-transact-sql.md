@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_os_stacks （Transact-sql） |Microsoft Docs
+description: sys.dm_os_stacks (Transact-SQL)
+title: sys. dm_os_stacks (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ ms.assetid: a69b06c4-28f0-4535-8fa1-9f132db4d916
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 869ebff08a3bb20ea531f3a1bdcdf59eafdcdceb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1a91347a94f5623e9a3bb7b430eca9dae2ff6fcf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718759"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481891"
 ---
 # <a name="sysdm_os_stacks-transact-sql"></a>sys.dm_os_stacks (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,19 +40,19 @@ ms.locfileid: "85718759"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**stack_address**|**varbinary(8)**|這項堆疊配置的唯一位址。 不可為 Null。|  
-|**frame_index**|**int**|每一行都代表一個函式呼叫，當特定**stack_address**以根據框架索引的遞增順序進行排序時，會傳回完整的呼叫堆疊。 不可為 Null。|  
+|**frame_index**|**int**|每一行代表一個函式呼叫，當特定 **stack_address**的依框架索引以遞增順序排序時，會傳回完整的呼叫堆疊。 不可為 Null。|  
 |**frame_address**|**varbinary(8)**|函數呼叫的位址。 不可為 Null。|  
   
 ## <a name="remarks"></a>備註  
- **dm_os_stacks**要求伺服器和其他元件的符號必須存在於伺服器上，才能正確顯示資訊。  
+ **sys. dm_os_stacks** 要求伺服器和其他元件的符號必須存在於伺服器上，才能正確顯示資訊。  
   
 ## <a name="permissions"></a>權限
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 許可權。   
-在高階 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 層級上，需要 `VIEW DATABASE STATE` 資料庫的許可權。 在 [ [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
+在進階層中 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ，需要 `VIEW DATABASE STATE` 資料庫中的許可權。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準和基本層中，需要  **伺服器管理員** 或 **Azure Active Directory 系統管理員** 帳戶。   
 
 
 ## <a name="see-also"></a>另請參閱  
-  [SQL Server 作業系統相關的動態管理 Views &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+  [SQL Server 作業系統相關的動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   

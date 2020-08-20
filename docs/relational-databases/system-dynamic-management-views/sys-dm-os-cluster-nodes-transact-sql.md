@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_os_cluster_nodes （Transact-sql） |Microsoft Docs
+description: sys.dm_os_cluster_nodes (Transact-SQL)
+title: sys. dm_os_cluster_nodes (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -18,32 +19,32 @@ helpviewer_keywords:
 ms.assetid: 92fa804e-2d08-42c6-a36f-9791544b1d42
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2ca978e746ce9d702b8ec4e3ebc8680a702d49f2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c5ee6538ed70c73177f5cd23b14739df48fd2af8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898838"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481906"
 ---
 # <a name="sysdm_os_cluster_nodes-transact-sql"></a>sys.dm_os_cluster_nodes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對容錯移轉叢集執行個體組態中之每個節點傳回一個資料列。 如果目前的執行個體就是容錯移轉叢集執行個體，將會傳回定義有此容錯移轉叢集執行個體 (先前稱為「虛擬伺服器」) 之節點的清單。 如果目前的伺服器執行個體不是容錯移轉叢集執行個體，它會傳回空的資料列集。  
   
-> **注意：** 若要從或呼叫此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用**dm_pdw_nodes_os_cluster_nodes**的名稱。  
+> **注意：** 若要從或呼叫這個 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用名稱 **sys. dm_pdw_nodes_os_cluster_nodes**。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**NodeName**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體 (虛擬伺服器) 組態中的節點名稱。|  
-|status|**int**|容錯移轉叢集實例中節點的狀態 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ：0、1、2、3、-1。 如需詳細資訊，請參閱[GetClusterNodeState 函數](https://go.microsoft.com/fwlink/?LinkId=204794)。|  
-|status_description|**Nvarchar （20）**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集節點狀態的說明。<br /><br /> 0 = 啟動<br /><br /> 1 = 關閉<br /><br /> 2 = 暫停<br /><br /> 3 = 正在加入<br /><br /> 1 = 未知|  
+|status|**int**|容錯移轉叢集實例中節點的狀態 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ：0、1、2、3、-1。 如需詳細資訊，請參閱 [GetClusterNodeState 函數](https://go.microsoft.com/fwlink/?LinkId=204794)。|  
+|status_description|**Nvarchar (20) **|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集節點狀態的說明。<br /><br /> 0 = 啟動<br /><br /> 1 = 關閉<br /><br /> 2 = 暫停<br /><br /> 3 = 正在加入<br /><br /> 1 = 未知|  
 |is_current_owner|bit|1 表示這個節點是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集資源的目前擁有者。|  
-|pdw_node_id|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在節點的識別碼。|  
+|pdw_node_id|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在之節點的識別碼。|  
   
 ## <a name="remarks"></a>備註  
  當啟用容錯移轉叢集時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體 (虛擬伺服器) 組態所指定之一部分的任何容錯移轉叢集節點中執行。  
   
-> **注意：** 此視圖會取代將在未來版本中被取代的 fn_virtualservernodes 函式。  
+> **注意：** 這個視圖會取代 fn_virtualservernodes 函式，在未來的版本中將會被取代。  
   
 ## <a name="permissions"></a>權限  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體需要伺服器的 VIEW SERVER STATE 權限。  
@@ -65,9 +66,9 @@ FROM sys.dm_os_cluster_nodes;
 |Node3|1|機|0|  
   
 ## <a name="see-also"></a>另請參閱  
- [dm_os_cluster_properties &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-properties-transact-sql.md)   
- [dm_io_cluster_shared_drives &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)   
- [fn_virtualservernodes &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-virtualservernodes-transact-sql.md)   
+ [sys. dm_os_cluster_properties &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-properties-transact-sql.md)   
+ [sys. dm_io_cluster_shared_drives &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)   
+ [sys. fn_virtualservernodes &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-virtualservernodes-transact-sql.md)   
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   
