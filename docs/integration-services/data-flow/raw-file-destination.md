@@ -1,4 +1,5 @@
 ---
+description: Raw File Destination
 title: 原始檔案目的地 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 93b992e9931c2e62f359beeca98d7d53e46a95eb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9cf51661228dcb9b6dd5e42ff900b3770b540898
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916038"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495774"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
 
@@ -117,11 +118,11 @@ ms.locfileid: "86916038"
   
  若要在迴圈的第一次反覆運算中建立檔案，然後在迴圈的後續反覆運算中附加資料列，您需要在設計階段執行下列動作：  
   
-1.  將 WriteOption 屬性設為 [CreateOnce]  或 [CreateAlways]  ，然後執行一次迴圈的反覆運算。 檔案就會建立， 這可確保附加資料的中繼資料與該檔案相符。  
+1.  將 WriteOption 屬性設為 [CreateOnce]**** 或 [CreateAlways]****，然後執行一次迴圈的反覆運算。 檔案就會建立， 這可確保附加資料的中繼資料與該檔案相符。  
   
-2.  將 WriteOption 屬性重設為 [Append]  ValidateExternalMetadata 屬性設定為 [False]  。  
+2.  將 WriteOption 屬性重設為 [Append]**** ValidateExternalMetadata 屬性設定為 [False]****。  
   
- 如果您使用 [TruncateAppend]  選項，而不是 [Append]  選項，它就會截斷在任何先前反覆運算中新增的資料列，然後附加新的資料列。 使用 [TruncateAppend]  選項也會要求資料符合檔案格式。  
+ 如果您使用 [TruncateAppend]**** 選項，而不是 [Append]**** 選項，它就會截斷在任何先前反覆運算中新增的資料列，然後附加新的資料列。 使用 [TruncateAppend]**** 選項也會要求資料符合檔案格式。  
   
 ## <a name="configuration-of-the-raw-file-destination"></a>原始檔案目的地的組態  
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
@@ -153,7 +154,7 @@ ms.locfileid: "86916038"
   
 1.  將「原始檔案」目的地加入至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]封裝。  
   
-2.  以滑鼠右鍵按一下此元件，然後按一下 **[編輯]** 。  
+2.  以滑鼠右鍵按一下此元件，然後按一下 **[編輯]**。  
   
 ###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> 設定連接管理員索引標籤上的選項  
  **存取模式**  
@@ -195,7 +196,7 @@ ms.locfileid: "86916038"
   
 1.  將「原始檔案」目的地加入至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]封裝。  
   
-2.  以滑鼠右鍵按一下此元件，然後按一下 **[編輯]** 。  
+2.  以滑鼠右鍵按一下此元件，然後按一下 **[編輯]**。  
   
 ###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> 設定連接管理員索引標籤上的選項  
  **存取模式**  

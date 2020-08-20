@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_xe_session_targets （Transact-sql） |Microsoft Docs
+description: sys.dm_xe_session_targets (Transact-SQL)
+title: sys. dm_xe_session_targets (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 76fbc3e1-ad88-4a47-8bf1-471c3bee5ad8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1a13b9642caa236e930dbf7861a0c6604760189d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6a99a7f3b956f1cdc8de7db41ff1538e76f8f9e2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898519"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498210"
 ---
 # <a name="sysdm_xe_session_targets-transact-sql"></a>sys.dm_xe_session_targets (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "85898519"
   
 ### <a name="relationship-cardinalities"></a>關聯性基數  
   
-|從|至|關聯性|  
+|寄件者|收件者|關聯性|  
 |----------|--------|------------------|  
 |sys.dm_xe_session_targets.event_session_address|sys.dm_xe_sessions.address|多對一|  
   

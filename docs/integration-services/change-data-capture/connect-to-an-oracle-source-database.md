@@ -1,4 +1,5 @@
 ---
+description: 連接到 Oracle 來源資料庫
 title: 連線到 Oracle 來源資料庫 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2fbae89e26f240c05848fda10f37240f7977de49
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c0d888548f8d3dd4bc0f2615db7f7435dc6b5414
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924024"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496244"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>連接到 Oracle 來源資料庫
 

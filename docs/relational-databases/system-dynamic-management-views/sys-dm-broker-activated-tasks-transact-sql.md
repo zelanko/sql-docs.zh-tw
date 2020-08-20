@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_broker_activated_tasks （Transact-sql） |Microsoft Docs
+description: sys.dm_broker_activated_tasks (Transact-SQL)
+title: sys. dm_broker_activated_tasks (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 17e6f87f-8f56-489d-9aed-216afc8ef310
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 99e8e606ecddc6b57549947a1c72ba8115262bef
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3a09275a9b000ab673e187fdb2e1a47d35c1e548
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893965"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498366"
 ---
 # <a name="sysdm_broker_activated_tasks-transact-sql"></a>sys.dm_broker_activated_tasks (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "85893965"
 |**spid**|**int**|啟動的預存程序之工作階段識別碼。 NULLABLE。|  
 |**database_id**|**smallint**|佇列定義所在的資料庫識別碼。 NULLABLE。|  
 |**queue_id**|**int**|啟動的預存程序所針對之佇列的物件識別碼。 NULLABLE。|  
-|**procedure_name**|**Nvarchar （650）**|啟動的預存程序名稱。 NULLABLE。|  
+|**procedure_name**|**Nvarchar (650) **|啟動的預存程序名稱。 NULLABLE。|  
 |**execute_as**|**int**|預存程序執行身分的使用者識別碼。 NULLABLE。|  
   
 ## <a name="permissions"></a>權限  
@@ -47,12 +48,12 @@ ms.locfileid: "85893965"
   
 ## <a name="relationship-cardinalities"></a>關聯性基數  
   
-|從|至|關聯性|  
+|寄件者|收件者|關聯性|  
 |----------|--------|------------------|  
 |dm_broker_activated_tasks.spid|dm_exec_sessions.session_id|一對一|  
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理 Views 和函數 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Service Broker 相關的動態管理檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   

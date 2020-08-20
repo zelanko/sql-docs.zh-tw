@@ -1,4 +1,5 @@
 ---
+description: ODBC 連接管理員
 title: ODBC 連線管理員 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2b362f60e2fb38ce9a9eda476dd4b1077055da18
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a70375f6ad677dcec18fe0606d5a09cec8960f70
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914159"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496091"
 ---
 # <a name="odbc-connection-manager"></a>ODBC 連接管理員
 
@@ -65,10 +66,10 @@ ms.locfileid: "86914159"
  檢視選取之 ODBC 連接管理員的屬性與值。  
   
  **新增**  
- 使用 [連線管理員]  對話方塊來建立 ODBC 連線管理員。 此對話方塊也可以讓您在必要時建立新的 ODBC 資料來源。  
+ 使用 [連線管理員]**** 對話方塊來建立 ODBC 連線管理員。 此對話方塊也可以讓您在必要時建立新的 ODBC 資料來源。  
   
  **刪除**  
- 請選取一個連接，然後使用 [刪除]  按鈕刪除它。  
+ 請選取一個連接，然後使用 [刪除]**** 按鈕刪除它。  
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 連接](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   

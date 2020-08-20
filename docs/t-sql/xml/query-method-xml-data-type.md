@@ -1,4 +1,5 @@
 ---
+description: query() 方法 (xml 資料類型)
 title: query() 方法 (xml 資料類型)
 ms.custom: ''
 ms.date: 04/16/2020
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fa686b8cac90a783fa8286b739a6e88195fa8ba4
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 1a8383e599cde5ab99bdf7238e177196eb059784
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393036"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496351"
 ---
 # <a name="query-method-xml-data-type"></a>query() 方法 (xml 資料類型)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

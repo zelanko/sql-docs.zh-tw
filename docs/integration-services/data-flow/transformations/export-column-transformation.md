@@ -1,4 +1,5 @@
 ---
+description: 匯出資料行轉換
 title: 匯出資料行轉換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 450d7856924f5a7f8292ce65b1184aeb657ff40e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9d7741de0a6a1d0195344613330bffd3f0c0c62d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919364"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495714"
 ---
 # <a name="export-column-transformation"></a>匯出資料行轉換
 
@@ -43,11 +44,11 @@ ms.locfileid: "86919364"
 |False|False|否|轉換會建立新檔案，並將資料寫入檔案。|  
 |True|False|否|轉換會建立新檔案，並將資料寫入檔案。|  
 |False|True|否|轉換會建立新檔案，並將資料寫入檔案。|  
-|True|True|否|轉換未通過設計階段驗證。 將兩個屬性都設定為 [true]  是無效的。|  
-|False|False|是|發生執行階段錯誤。 檔案存在，但轉換無法寫入該檔案。|  
-|False|True|是|轉換會刪除並重新建立檔案，然後將資料寫入該檔案中。|  
-|True|False|是|轉換會開啟該檔案，並將資料寫入檔案結尾。|  
-|True|True|是|轉換未通過設計階段驗證。 將兩個屬性都設定為 [true]  是無效的。|  
+|True|True|否|轉換未通過設計階段驗證。 將兩個屬性都設定為 [true]**** 是無效的。|  
+|False|False|Yes|發生執行階段錯誤。 檔案存在，但轉換無法寫入該檔案。|  
+|False|True|Yes|轉換會刪除並重新建立檔案，然後將資料寫入該檔案中。|  
+|True|否|Yes|轉換會開啟該檔案，並將資料寫入檔案結尾。|  
+|True|True|Yes|轉換未通過設計階段驗證。 將兩個屬性都設定為 [true]**** 是無效的。|  
   
 ## <a name="configuration-of-the-export-column-transformation"></a>設定匯出資料行轉換  
  您可以利用下列方式設定「匯出資料行」轉換：  
@@ -102,7 +103,7 @@ ms.locfileid: "86919364"
  檢視輸出的名稱。 按一下名稱即可展開檢視來包含資料行。  
   
  **資料行**  
- 檢視您在 [匯出資料行轉換編輯器] 對話方塊的 [資料行] 頁面上選取的輸出資料行。  
+ 檢視您在 [匯出資料行轉換編輯器]**** 對話方塊的 [資料行]**** 頁面上選取的輸出資料行。  
   
  **錯誤**  
  指定您要在錯誤發生時採取什麼動作：忽略失敗、重新導向資料列，或使元件失效。  

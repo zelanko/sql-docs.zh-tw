@@ -1,4 +1,5 @@
 ---
+description: 查閱 InfoPackage
 title: 查閱 InfoPackage | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,21 +11,21 @@ ms.topic: conceptual
 ms.assetid: 7c0cb7a4-cd07-44cc-85cb-eb1ad91f85fd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 43ad94c5f4cc7d97b99dd0cfadda9811e4ce5f05
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 348ac42f2903b039e88a073cb24b1ae6d95dec7f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916498"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495811"
 ---
 # <a name="look-up-infopackage"></a>查閱 InfoPackage
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  使用 [查閱 InfoPackage]  對話方塊可以查閱 SAP Netweaver BW 系統中定義的 InfoPackage。 出現 InfoPackage 的清單時，請選取您要的 InfoPackage，然後目的地就會將必要的值填入相關聯的選項。  
+  使用 [查閱 InfoPackage]**** 對話方塊可以查閱 SAP Netweaver BW 系統中定義的 InfoPackage。 出現 InfoPackage 的清單時，請選取您要的 InfoPackage，然後目的地就會將必要的值填入相關聯的選項。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的 SAP BW 目的地會使用 [查閱 ProcessChain]  對話方塊。 若要深入了解 SAP BW 目的地，請參閱 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的 SAP BW 目的地會使用 [查閱 ProcessChain]**** 對話方塊。 若要深入了解 SAP BW 目的地，請參閱 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)。  
   
 > [!IMPORTANT]  
 >  Microsoft Connector 1.1 for SAP BW 的文件集是假設使用者已熟悉 SAP Netweaver BW 環境。 如需有關 SAP Netweaver BW 的詳細資訊，或有關如何設定 SAP Netweaver BW 物件與處理序的詳細資訊，請參閱 SAP 文件集。  
@@ -37,7 +38,7 @@ ms.locfileid: "86916498"
   
 3.  在 **[SAP BW 目的地編輯器]** 中，按一下 **[連接管理員]** 開啟編輯器的 **[連接管理員]** 頁面。  
   
-4.  在 [連線管理員]  頁面的 [InfoPackage/InfoSource]  群組方塊中，按一下 [查閱]  顯示 [查閱 InfoPackage]  對話方塊。  
+4.  在 [連線管理員]**** 頁面的 [InfoPackage/InfoSource]**** 群組方塊中，按一下 [查閱]**** 顯示 [查閱 InfoPackage]**** 對話方塊。  
   
 ## <a name="lookup-options"></a>查閱選項  
  在查閱欄位中，您可以使用星號萬用字元 (*) 或結合星號萬用字元使用部分字串來篩選結果。 不過，如果您將查閱欄位保留空白，查閱作業就只會比對該欄位中的空白字串。  

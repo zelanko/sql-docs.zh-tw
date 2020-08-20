@@ -1,4 +1,5 @@
 ---
+description: 查閱 InfoObject
 title: 查閱 InfoObject | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,21 +11,21 @@ ms.topic: conceptual
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5fc863ce6460977b2eb91c53531983a0dde92668
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 93050f2a583f3fa378778397470506787c7001f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916495"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495854"
 ---
 # <a name="look-up-infoobject"></a>查閱 InfoObject
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  使用 [查閱 InfoObject]  對話方塊可以查閱 SAP Netweaver BW 系統中定義的 InfoObject。 出現可用的 InfoObject 清單時，請選取您要的 InfoObject，然後 SAP BW 目的地就會將必要的值填入相關聯的選項。  
+  使用 [查閱 InfoObject]**** 對話方塊可以查閱 SAP Netweaver BW 系統中定義的 InfoObject。 出現可用的 InfoObject 清單時，請選取您要的 InfoObject，然後 SAP BW 目的地就會將必要的值填入相關聯的選項。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的 SAP BW 目的地會使用 [查閱 InfoObject]  對話方塊。 若要深入了解 SAP BW 目的地，請參閱 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的 SAP BW 目的地會使用 [查閱 InfoObject]**** 對話方塊。 若要深入了解 SAP BW 目的地，請參閱 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)。  
   
 > [!IMPORTANT]  
 >  Microsoft Connector 1.1 for SAP BW 的文件集是假設使用者已熟悉 SAP Netweaver BW 環境。 如需有關 SAP Netweaver BW 的詳細資訊，或有關如何設定 SAP Netweaver BW 物件與處理序的詳細資訊，請參閱 SAP 文件集。  
@@ -37,15 +38,15 @@ ms.locfileid: "86916495"
   
 3.  在 **[SAP BW 目的地編輯器]** 中，按一下 **[連接管理員]** 開啟編輯器的 **[連接管理員]** 頁面。  
   
-4.  在 [連線管理員]  頁面的 [建立 SAP BW 物件]  群組方塊中，選取下列其中一個選項：  
+4.  在 [連線管理員]**** 頁面的 [建立 SAP BW 物件]**** 群組方塊中，選取下列其中一個選項：  
   
-    1.  選取 [InfoCube]  。 然後按一下 [ **建立**]。 在 [建立交易資料的 InfoCube] 對話方塊中，於清單內其中一個資料列的 [IObject] 資料行中，按一下 [搜尋]。 每個資料列都代表封裝之資料流程中的資料行。  
+    1.  選取 [InfoCube]****。 接著按一下 [ **建立**]。 在 [建立交易資料的 InfoCube]**** 對話方塊中，於清單內其中一個資料列的 [IObject]**** 資料行中，按一下 [搜尋]****。 每個資料列都代表封裝之資料流程中的資料行。  
   
-    2.  選取 [InfoSource]  。 接著，按一下 [建立]  。 在 [建立 InfoSource]  對話方塊中，選取 [交易資料]  。 在 [建立交易資料的 InfoSource] 對話方塊中，於清單內其中一個資料列的 [IObject] 資料行中，按一下 [搜尋]。 每個資料列都代表封裝之資料流程中的資料行。  
+    2.  選取 [InfoSource]****。 然後，按一下 [建立]。 在 [建立 InfoSource]**** 對話方塊中，選取 [交易資料]****。 在 [建立交易資料的 InfoSource]**** 對話方塊中，於清單內其中一個資料列的 [IObject]**** 資料行中，按一下 [搜尋]****。 每個資料列都代表封裝之資料流程中的資料行。  
   
-    3.  選取 [InfoSource]  。 接著，按一下 [建立]  。 在 [建立 InfoSource]  對話方塊中，選取 [主要資料]  。 在 [建立主要資料的 InfoSource]  對話方塊中，按一下 [查閱]  。  
+    3.  選取 [InfoSource]****。 然後，按一下 [建立]。 在 [建立 InfoSource]**** 對話方塊中，選取 [主要資料]****。 在 [建立主要資料的 InfoSource]**** 對話方塊中，按一下 [查閱]****。  
   
- 您也可以在 [建立新的 InfoObject] 對話方塊的 [屬性] 區段中按一下 [加入]，藉以開啟 [查閱 InfoObject] 對話方塊。  
+ 您也可以在 [建立新的 InfoObject]**** 對話方塊的 [屬性]**** 區段中按一下 [加入]****，藉以開啟 [查閱 InfoObject]**** 對話方塊。  
   
 ## <a name="lookup-options"></a>查閱選項  
  在查閱欄位文字方塊中，您可以使用星號萬用字元 (*) 或結合星號萬用字元使用部分字串來篩選結果。 不過，如果您將查閱欄位保留空白，查閱處理序就只會比對該欄位中的空白字串。  

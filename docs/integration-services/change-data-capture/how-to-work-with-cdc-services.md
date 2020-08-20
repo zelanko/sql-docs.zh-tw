@@ -1,4 +1,5 @@
 ---
+description: 如何使用 CDC 服務
 title: 如何使用 CDC 服務 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: db5c718a-6e7f-48ec-82a3-9d5b131716e5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 435aa5014d19c51704a5a93a7b35c365e095b9c8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b98acd138794028dcecce9d121295154358799b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915804"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496121"
 ---
 # <a name="how-to-work-with-cdc-services"></a>如何使用 CDC 服務
 
@@ -28,7 +29,7 @@ ms.locfileid: "86915804"
   
 1.  從 **[開始]** 功能表，選取 **[Oracle CDC 服務組態]** 。  
   
-2.  從左窗格選取 [本機 CDC 服務]  \ (根層級)。  
+2.  從左窗格選取 [本機 CDC 服務]**** \ (根層級)。  
   
 3.  您會執行下列其中一項或兩項工作：  
   
@@ -48,7 +49,7 @@ ms.locfileid: "86915804"
   
          從 CDC 服務組態主控台右側的 **[動作]** 窗格中按一下 **[新增服務]** 。  
   
-         您也可以用滑鼠右鍵按一下 [本機 CDC 服務]  ，並選取 [新增服務]  。  
+         您也可以用滑鼠右鍵按一下 [本機 CDC 服務]，並選取 [新增服務]。  
   
          隨即開啟 [新增 Oracle CDC 服務] 對話方塊。  
   

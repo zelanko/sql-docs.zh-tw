@@ -1,4 +1,5 @@
 ---
+description: DAY (SSIS 運算式)
 title: DAY (SSIS 運算式) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d8447187-49df-45b7-a98e-142ad44fd3e2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9b170928624565d8dc1f80cea93eed4473db3e5e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dff99f077b9260f6bb41fe39661ad831404b4f65
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921273"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495623"
 ---
 # <a name="day-ssis-expression"></a>DAY (SSIS 運算式)
 

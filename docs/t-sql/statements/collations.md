@@ -1,4 +1,5 @@
 ---
+description: COLLATE (Transact-SQL)
 title: COLLATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/30/2019
@@ -19,12 +20,12 @@ ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab4b79abe293e01ac0087ea68363f7378d180a07
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: e6f5df8b371ded189d63095c86baeb417afe4ca4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380871"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496928"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
 

@@ -1,4 +1,5 @@
 ---
+description: 連線至 Access 資料來源 (SQL Server 匯入和匯出精靈)
 title: 連線至 Access 資料來源 (SQL Server 匯入和匯出精靈) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/20/2017
@@ -9,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 79c994357b7d57f138bc022b6f4b3cdf3963111b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 80d04346e20567d546b2ea73b361f1a1fff2c694
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913181"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495573"
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>連線至 Access 資料來源 (SQL Server 匯入和匯出精靈)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-本主題示範如何從 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面中連線至 **Microsoft Access** 資料來源。
+本主題示範如何從 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源]**** 或 [選擇目的地]**** 頁面中連線至 **Microsoft Access** 資料來源。
 
 下列螢幕擷取畫面顯示 Microsoft Access 資料庫的連接範例。 在此範例中，您不需要輸入使用者名稱和密碼，因為目標資料庫不會使用工作群組資訊檔案。
 
@@ -46,13 +47,13 @@ ms.locfileid: "86913181"
 > 您可能必須下載並安裝其他檔案，才能連線至 Access 資料庫。 如需詳細資訊，請參閱此頁面上的[取得連線至 Access 所需的檔案](#officeDownloads)。
 
  **檔案名稱**  
-指定 Access 檔案的路徑和檔案名稱。 例如，本機電腦檔案為 **C:\\MyData.mdb**，或網路共用檔案為 **\\\\Sales\\Database\\Northwind.mdb**。 或按一下 [瀏覽]  。 
+指定 Access 檔案的路徑和檔案名稱。 例如，本機電腦檔案為 **C:\\MyData.mdb**，或網路共用檔案為 **\\\\Sales\\Database\\Northwind.mdb**。 或按一下 [瀏覽]****。 
 
 > [!NOTE]
-> 如果您按一下 [瀏覽]  找到 Access 檔案，則 [開啟]  對話方塊預設會篩選較舊 .MDB 格式和副檔名的檔案。 不過，資料提供者也可以開啟具有較新 .ACCDB 格式和副檔名的檔案。
+> 如果您按一下 [瀏覽]**** 找到 Access 檔案，則 [開啟]**** 對話方塊預設會篩選較舊 .MDB 格式和副檔名的檔案。 不過，資料提供者也可以開啟具有較新 .ACCDB 格式和副檔名的檔案。
   
  **瀏覽**  
- 使用 [開啟]  對話方塊來找出資料庫檔案。  
+ 使用 [開啟]**** 對話方塊來找出資料庫檔案。  
   
  **使用者名稱**  
 如果工作群組資訊檔案是與資料庫建立關聯，則請提供有效的使用者名稱。  
@@ -63,7 +64,7 @@ ms.locfileid: "86913181"
 如果所有使用者都使用單一密碼來保護資料庫，請參閱[資料庫檔案受到密碼保護嗎？](#database_password)。
   
  **進階**  
-在 [資料連結屬性]  對話方塊中，指定進階選項 (例如資料庫密碼或非預設工作群組資訊檔案)。  
+在 [資料連結屬性]**** 對話方塊中，指定進階選項 (例如資料庫密碼或非預設工作群組資訊檔案)。  
 
 ## <a name="i-dont-see-access-in-the-list-of-data-sources"></a>我在資料來源清單中看不到 Access
 如果您在資料來源清單中看不到 Access，則您正在執行 64 位元精靈嗎？ Excel 和 Access 的提供者一般是 32 位元，而且在 64 位元精靈中看不到。 請改執行 32 位元精靈。
@@ -85,19 +86,19 @@ ms.locfileid: "86913181"
 ## <a name="is-the-database-file-password-protected"></a><a name="database_password"></a> 資料庫檔案受到密碼保護嗎？
 在某些情況下，Access 資料庫受到密碼保護，但不使用工作群組資訊檔案。 所有使用者都必須提供相同的密碼，但不需要輸入使用者名稱。 若要提供資料庫密碼，請執行下列動作。
 
-1.  在 [選擇資料來源]  或 [選擇目的地]  頁面上，按一下 [進階]  按鈕以開啟 [資料連結屬性]  對話方塊。  
-2.  在 [資料連結屬性]  對話方塊中，選取 [全部]  索引標籤。  
-3.  在屬性和值的清單中，選取 [Jet OLEDB:Database 密碼]  。   
+1.  在 [選擇資料來源]**** 或 [選擇目的地]**** 頁面上，按一下 [進階]**** 按鈕以開啟 [資料連結屬性]**** 對話方塊。  
+2.  在 [資料連結屬性]**** 對話方塊中，選取 [全部]**** 索引標籤。  
+3.  在屬性和值的清單中，選取 [Jet OLEDB:Database 密碼] ****。   
     
     ![指定 Access 密碼、畫面 1](../../integration-services/import-export-data/media/specify-access-password-screen-1.jpg) 
-4.  按一下 [編輯值]  開啟 [編輯屬性值]  對話方塊。  
+4.  按一下 [編輯值]**** 開啟 [編輯屬性值]**** 對話方塊。  
     
     ![指定 Access 密碼、畫面 2](../../integration-services/import-export-data/media/specify-access-password-screen-2.jpg)
-5.  在 [編輯屬性值]  對話方塊中，輸入資料庫密碼。
-6.  按一下每個對話方塊中的 [確定]  返回精靈的 [選擇資料來源]  或 [選擇目的地]  頁面，並繼續。
+5.  在 [編輯屬性值]**** 對話方塊中，輸入資料庫密碼。
+6.  按一下每個對話方塊中的 [確定]**** 返回精靈的 [選擇資料來源]**** 或 [選擇目的地]**** 頁面，並繼續。
 
 ## <a name="keep-your-autonumber-values-when-you-export-from-access"></a>從 Access 匯出時保留自動編號值
-若要允許將來源資料中的現有識別值插入目的地資料表中的識別資料行，請選擇 [資料行對應] 對話方塊的 [啟用識別插入] 選項。 目的地識別欄位一般預設不允許您插入現有值。 若要顯示 [資料行對應] 對話方塊，請在到達精靈的 [選取來源資料表和檢視] 頁面時選取 [編輯對應]。 若要查看這些頁面，請參閱[選取來源資料表和檢視](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md)和[資料行對應](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md)。
+若要允許將來源資料中的現有識別值插入目的地資料表中的識別資料行，請選擇 [資料行對應]**** 對話方塊的 [啟用識別插入]**** 選項。 目的地識別欄位一般預設不允許您插入現有值。 若要顯示 [資料行對應]**** 對話方塊，請在到達精靈的 [選取來源資料表和檢視]**** 頁面時選取 [編輯對應]****。 若要查看這些頁面，請參閱[選取來源資料表和檢視](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md)和[資料行對應](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md)。
 
 如果您現有的主索引鍵位於識別資料行、autonumber 資料行或對等項目內，您通常必須選取此選項來保留現有的主索引鍵值。 否則目的地識別欄位通常會指派新值。
 

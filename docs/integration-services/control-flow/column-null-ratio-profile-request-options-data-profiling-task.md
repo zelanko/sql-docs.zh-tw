@@ -1,4 +1,5 @@
 ---
+description: 資料行 Null 比例設定檔要求選項 (資料分析工作)
 title: 資料行 Null 比例設定檔要求選項 (資料分析工作) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 157ef8e4-fd23-4f81-8194-eebf74e9fd86
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 470fcd41ed1605374ee3a5c4d5bb69b8b44c0c0d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7f25cb279d26355461f622587aa56f9e0ef4ac1e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923966"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496011"
 ---
 # <a name="column-null-ratio-profile-request-options-data-profiling-task"></a>資料行 Null 比例設定檔要求選項 (資料分析工作)
 
@@ -34,7 +35,7 @@ ms.locfileid: "86923966"
 ## <a name="request-properties-options"></a>要求屬性選項  
  **[要求屬性]** 窗格會針對 **[資料行 Null 比例要求]** 顯示下列選項群組：  
   
--   **[資料]** ，其中包括 **[TableOrView]** 和 **[資料行]** 選項。  
+-   **[資料]**，其中包括 **[TableOrView]** 和 **[資料行]** 選項。  
   
 -   **一般**  
   
@@ -61,7 +62,7 @@ ms.locfileid: "86923966"
   
 #### <a name="column-options"></a>資料行選項  
  **IsWildCard**  
- 指定是否已經選取 **(\*)** 萬用字元。 如果您已選取 **(\*)** 來分析所有資料行，這個選項會設定為 [True]。 如果您已選取要分析的個別資料行，它就會設定為 **[False]** 。 此選項是唯讀的。  
+ 指定是否已經選取 **(\*)** 萬用字元。 如果您已選取 **(\*)** 來分析所有資料行，這個選項會設定為 [True]****。 如果您已選取要分析的個別資料行，它就會設定為 **[False]** 。 此選項是唯讀的。  
   
  **ColumnName**  
  顯示所選取資料行的名稱。 如果您已選取 **(\*)** 來分析所有資料行，這個選項就是空白的。 此選項是唯讀的。  

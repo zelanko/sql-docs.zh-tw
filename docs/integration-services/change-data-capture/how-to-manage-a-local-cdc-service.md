@@ -1,4 +1,5 @@
 ---
+description: 如何管理本機 CDC 服務
 title: 如何管理本機 CDC 服務 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7f9be649-cd93-40c1-bc48-0480106f207c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 488ff9dc4cbe33881e7c7c9bf80d4a5d347507d7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1d103c224088d2dfa22fe1d8dcb36306177aac54
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916547"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496170"
 ---
 # <a name="how-to-manage-a-local-cdc-service"></a>如何管理本機 CDC 服務
 
@@ -61,6 +62,6 @@ ms.locfileid: "86916547"
          您也可以用滑鼠右鍵按一下您要編輯屬性的 CDC 服務，然後選取 [屬性]  。  
   
 ## <a name="see-also"></a>另請參閱  
- [管理 Oracle CDC 服務](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
+ [Manage an Oracle CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 建立交易資料的 InfoSource
 title: 建立交易資料的 InfoSource | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 28c3d7da3777f20957d0bdd4cf0881453af2cc00
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5b37416ef8283f32909b216508defda671080e30
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923977"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495915"
 ---
 # <a name="create-infosource-for-transaction-data"></a>建立交易資料的 InfoSource
 

@@ -1,4 +1,5 @@
 ---
+description: Integration Services 路徑
 title: Integration Services 路徑 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4443598b2fa59e51a9c8ec6b5161b913f2890056
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a69d70b9e58458303dbba3444b6a8c38fb40ccc0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918872"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495851"
 ---
 # <a name="integration-services-paths"></a>Integration Services 路徑
 
@@ -37,11 +38,11 @@ ms.locfileid: "86918872"
  如果您在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中執行封裝，則可將資料檢視器附加到路徑，來檢視資料流程中的資料。 資料檢視器可以設定為在方格中顯示資料。 資料檢視器是一種有用的偵錯工具。 如需詳細資訊，請參閱 [偵錯資料流程](../../integration-services/troubleshooting/debugging-data-flow.md)。  
   
 ## <a name="configure-the-path"></a>設定路徑  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師提供 [資料流程路徑編輯器]  對話方塊，用以設定路徑屬性、檢視通過該路徑之資料行的中繼資料，並設定資料檢視器。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師提供 [資料流程路徑編輯器]**** 對話方塊，用以設定路徑屬性、檢視通過該路徑之資料行的中繼資料，並設定資料檢視器。  
   
  可設定的路徑屬性包括名稱、描述及路徑的註解。 您還可以程式設計方式設定路徑。 如需詳細資訊，請參閱 [以程式設計方式連接資料流程元件](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)。  
   
- 路徑註解顯示路徑來源的名稱，或在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中 [資料流程] 索引標籤設計介面上的路徑名稱。 路徑註解與您可加入資料流程、控制流程和事件處理常式的註解相似。 唯一不同之處在於路徑註解是附加到路徑上的，而其他註解則顯示於 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [資料流程]、[控制流程] 和 [事件處理常式] 索引標籤上。  
+ 路徑註解顯示路徑來源的名稱，或在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中 [資料流程]**** 索引標籤設計介面上的路徑名稱。 路徑註解與您可加入資料流程、控制流程和事件處理常式的註解相似。 唯一不同之處在於路徑註解是附加到路徑上的，而其他註解則顯示於 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [資料流程]****、[控制流程]**** 和 [事件處理常式]**** 索引標籤上。  
   
  中繼資料顯示上一個元件輸出中之每個資料行的名稱、資料類型、有效位數、小數位數、長度、字碼頁和來源元件。 來源元件是建立資料行的資料流程元件。 但不一定是資料流程中的第一個元件。 例如，「聯集全部」和「排序」轉換都會建立自己的資料行，因此它們是其輸出資料行的來源。 相反地，「複製資料行」轉換可以通過資料行而不對其進行變更，或可以藉由複製輸入資料行來建立新的資料行。 因此「複製資料行」轉換僅是新資料行的來源元件。  
 
@@ -52,9 +53,9 @@ ms.locfileid: "86918872"
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  按一下 [資料流程]  索引標籤，然後按兩下路徑。  
+3.  按一下 [資料流程]**** 索引標籤，然後按兩下路徑。  
   
-4.  在 [資料流程路徑編輯器]  中按一下 [一般]  。 然後，您可以編輯路徑的預設名稱並提供路徑的描述。 您還可以修改 PathAnnotation 屬性。  
+4.  在 [資料流程路徑編輯器]**** 中按一下 [一般]****。 然後，您可以編輯路徑的預設名稱並提供路徑的描述。 您還可以修改 PathAnnotation 屬性。  
   
 5.  按一下 [確定]  。  
   
@@ -88,7 +89,7 @@ ms.locfileid: "86918872"
  顯示路徑開頭的輸出。  
  
 ## <a name="metadata-page---data-flow-path-editor"></a>中繼資料頁面 - 資料流程路徑編輯器
-使用 [資料流程路徑編輯器] 對話方塊的 [中繼資料] 頁面，即可檢視路徑資料行的中繼資料。  
+使用 [資料流程路徑編輯器]**** 對話方塊的 [中繼資料]**** 頁面，即可檢視路徑資料行的中繼資料。  
   
 ### <a name="options"></a>選項。  
  **路徑中繼資料**  
@@ -103,7 +104,7 @@ ms.locfileid: "86918872"
  **有效位數**  
  列出數值中的位數。  
   
- **調整**  
+ **縮放比例**  
  列出數值中之小數點右邊的位數。  
   
  **長度**  
@@ -138,13 +139,13 @@ ms.locfileid: "86918872"
  列出資料檢視器的類型。  
   
  **加入**  
- 按一下即可使用 [設定資料檢視器]  對話方塊加入資料檢視器。  
+ 按一下即可使用 [設定資料檢視器]**** 對話方塊加入資料檢視器。  
   
  **刪除**  
  按一下即可刪除選取的資料檢視器。  
   
  **設定**  
- 按一下即可使用 [設定資料檢視器]  對話方塊，來設定選取的資料檢視器。  
+ 按一下即可使用 [設定資料檢視器]**** 對話方塊，來設定選取的資料檢視器。  
  
 ## <a name="path-properties"></a>路徑屬性
 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件模型中的資料流程物件具有元件層級、輸入和輸出層級，以及輸入資料行和輸出資料行層級上的通用屬性和自訂屬性。 許多屬性都有唯讀的值，這些值是在執行階段由資料流程引擎所指派。  

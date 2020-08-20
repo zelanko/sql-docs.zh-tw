@@ -1,4 +1,5 @@
 ---
+description: 建立 InfoSource
 title: 建立 InfoSource | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,21 +11,21 @@ ms.topic: conceptual
 ms.assetid: e7db233b-5464-43de-9d26-6dd24c7ac1b7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7a81bf2cef2329853df05eda97e2ce53501369c8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c4672ce48890af7202445d283d15c2c167550f5a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923538"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495906"
 ---
 # <a name="create-infosource"></a>建立 InfoSource
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  使用 [建立 InfoSource]  對話方塊可以建立新的 InfoSource。 若要建立新的 InfoSource，您可以使用 [建立交易資料的 InfoSource]  或 [建立主要資料的 InfoSource]  對話方塊。  
+  使用 [建立 InfoSource]**** 對話方塊可以建立新的 InfoSource。 若要建立新的 InfoSource，您可以使用 [建立交易資料的 InfoSource]**** 或 [建立主要資料的 InfoSource]**** 對話方塊。  
   
- 您可以從 [SAP BW 目的地編輯器] 的 [連線管理員] 頁面開啟 [建立 InfoSource] 對話方塊。 若要深入了解 SAP BW 目的地，請參閱 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)。  
+ 您可以從 [SAP BW 目的地編輯器]**** 的 [連線管理員]**** 頁面開啟 [建立 InfoSource]**** 對話方塊。 若要深入了解 SAP BW 目的地，請參閱 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)。  
   
 > [!IMPORTANT]  
 >  Microsoft Connector 1.1 for SAP BW 的文件集是假設使用者已熟悉 SAP Netweaver BW 環境。 如需有關 SAP Netweaver BW 的詳細資訊，或有關如何設定 SAP Netweaver BW 物件與處理序的詳細資訊，請參閱 SAP 文件集。  
@@ -43,12 +44,12 @@ ms.locfileid: "86923538"
  **交易資料**  
  建立交易資料的新 InfoSource。  
   
- 如果您選取此選項，就會開啟 [建立交易資料的 InfoSource]  對話方塊。 您可以使用 [建立交易資料的 InfoSource]  對話方塊來建立新的 InfoSource。 如需此對話方塊的詳細資訊，請參閱 [建立交易資料的 InfoSource](../../integration-services/data-flow/create-infosource-for-transaction-data.md)。  
+ 如果您選取此選項，就會開啟 [建立交易資料的 InfoSource]**** 對話方塊。 您可以使用 [建立交易資料的 InfoSource]**** 對話方塊來建立新的 InfoSource。 如需此對話方塊的詳細資訊，請參閱 [建立交易資料的 InfoSource](../../integration-services/data-flow/create-infosource-for-transaction-data.md)。  
   
  **主要資料**  
  建立主要資料的新 InfoSource。  
   
- 如果您選取此選項，就會開啟 [建立主要資料的 InfoSource]  對話方塊。 您可以使用 [建立主要資料的 InfoSource]  對話方塊來建立新的 InfoSource。 如需此對話方塊的詳細資訊，請參閱 [建立主要資料的 InfoSource](../../integration-services/data-flow/create-infosource-for-master-data.md)。  
+ 如果您選取此選項，就會開啟 [建立主要資料的 InfoSource]**** 對話方塊。 您可以使用 [建立主要資料的 InfoSource]**** 對話方塊來建立新的 InfoSource。 如需此對話方塊的詳細資訊，請參閱 [建立主要資料的 InfoSource](../../integration-services/data-flow/create-infosource-for-master-data.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Microsoft Connector for SAP BW F1 說明](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  

@@ -1,4 +1,5 @@
 ---
+description: 排序轉換
 title: 排序轉換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 728c9351-84a8-4a89-be4d-d50d4adc04e0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7ca81d0c01b618fd880e3e0ae8c2afe830f8dc24
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ccfa786e538ba6e38ad47e5e61aacc89c1bfb318
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914274"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495649"
 ---
 # <a name="sort-transformation"></a>排序轉換
 

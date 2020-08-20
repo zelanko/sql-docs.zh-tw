@@ -1,4 +1,5 @@
 ---
+description: 使用 OLE DB 目的地來載入資料
 title: 使用 OLE DB 目的地來載入資料 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 71879f64bbe46900b27c467f37d4fdacd9cb7b13
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3165371fc1153636ae869b650468342e3614b024
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916517"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495822"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>使用 OLE DB 目的地來載入資料
 
@@ -34,25 +35,25 @@ ms.locfileid: "86916517"
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  按一下 [資料流程]  索引標籤，然後將 OLE DB 目的地從 [工具箱]  拖曳至設計介面。  
+3.  按一下 [資料流程]**** 索引標籤，然後將 OLE DB 目的地從 [工具箱]**** 拖曳至設計介面。  
   
 4.  將連接子從資料來源或前一個轉換拖曳至目的地，以便將 OLE DB 目的地連接到資料流程。  
   
 5.  按兩下 OLE DB 目的地。  
   
-6.  在 [連接管理員] 頁面的 [OLE DB 目的地編輯器] 對話方塊中，選取現有的 OLE DB 連接管理員，或按一下 [新增] 以新建連接管理員。 如需相關資訊，請參閱 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
+6.  在 [連接管理員]**** 頁面的 [OLE DB 目的地編輯器]**** 對話方塊中，選取現有的 OLE DB 連接管理員，或按一下 [新增]**** 以新建連接管理員。 如需相關資訊，請參閱 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
   
 7.  選取資料存取方法：  
   
     -   **資料表或檢視** ：在資料庫中選取包含資料的資料表或檢視。  
   
-    -   **資料表或檢視 - 快速載入**：在資料庫中選取包含資料的資料表或檢視，然後設定快速載入選項：[保留識別]  、[保留 Null]  、[資料表鎖定]  、[檢查條件約束]  、[每批次的資料列]  或 [插入認可大小上限]  。  
+    -   **資料表或檢視 - 快速載入**：在資料庫中選取包含資料的資料表或檢視，然後設定快速載入選項：[保留識別]****、[保留 Null]****、[資料表鎖定]****、[檢查條件約束]****、[每批次的資料列]**** 或 [插入認可大小上限]****。  
   
     -   **資料表名稱或檢視名稱變數** ：選取使用者自訂變數，該變數包含資料庫中資料表或檢視的名稱。  
   
     -   **資料表名稱或檢視名稱變數 - 快速載入** ：選取使用者自訂變數，該變數含有資料庫中包含該資料之資料表或檢視的名稱，然後設定快速載入選項。  
   
-    -   **SQL 命令**：輸入 SQL 命令，或按一下 [建立查詢]  ，以使用 [查詢產生器]  來撰寫 SQL 命令。  
+    -   **SQL 命令**：輸入 SQL 命令，或按一下 [建立查詢]****，以使用 [查詢產生器]**** 來撰寫 SQL 命令。  
   
 8.  按一下 **[對應]** ，然後將資料行從一個清單拖曳至另一個清單，使 **[可用的輸入資料行]** 清單中的資料行對應至 **[可用的目的地資料行]** 清單中的資料行。  
   

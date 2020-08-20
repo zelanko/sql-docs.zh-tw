@@ -1,4 +1,5 @@
 ---
+description: ODBC Destination Custom Properties
 title: ODBC 目的地自訂屬性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 07508c40-6c08-4359-96cd-8ff17671244d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: efd46a4579553a1662713112a0fb6659a11b85da
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ae44b6ea06ea2ae00e8cfd52ad924f61a0b79895
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915894"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495778"
 ---
 # <a name="odbc-destination-custom-properties"></a>ODBC Destination Custom Properties
 
@@ -28,7 +29,7 @@ ms.locfileid: "86915894"
 |-------------------|---------------|-----------------|  
 |Connection|ODBC 連接|用來存取目的地資料庫的 ODBC 連接。|  
 |BatchSize|整數|大量載入的批次大小。 這是當做批次載入的資料列數目。 這只適用於支援資料列取向的參數繫結時。 如果不支援資料列取向的參數繫結，則批次大小為 1。|  
-|BindCharColumnAs|整數 (列舉)|此屬性決定 ODBC 目的地如何繫結具有多位元組字串類型 (如 SQL_CHAR、SQL_VARCHAR 或 SQL_LONGVARCHAR) 的資料行。<br /><br /> 可能值為 Unicode (0) 和 ANSI (1)。前者繫結 SQL_C_WCHAR 等資料行，後者則繫結 SQL_C_CHAR 等資料行。 預設值為 Unicode (0)。<br /><br /> 對於支援繫結 CHAR 參數做為寬字元字串的大多數 ODBC 3.x 提供者和 ODBC 2.x 提供者，Unicode 是最佳選項。 當您選取 Unicode 而且 ExposeCharColumnsAsUnicode 為 True 時，使用者不需要指定來源資料庫所用的字碼頁。<br /><br /> **注意** ：雖然您無法在 **[ODBC 目的地編輯器]** 中使用這個屬性，但是可以使用 **[進階編輯器]** 來設定這個屬性。|  
+|BindCharColumnAs|整數 (列舉)|此屬性決定 ODBC 目的地如何繫結具有多位元組字串類型 (如 SQL_CHAR、SQL_VARCHAR 或 SQL_LONGVARCHAR) 的資料行。<br /><br /> 可能值為 Unicode (0) 和 ANSI (1)。前者繫結 SQL_C_WCHAR 等資料行，後者則繫結 SQL_C_CHAR 等資料行。 預設值為 Unicode (0)。<br /><br /> 對於支援繫結 CHAR 參數做為寬字元字串的大多數 ODBC 3.x 提供者和 ODBC 2.x 提供者，Unicode 是最佳選項。 當您選取 Unicode 而且 ExposeCharColumnsAsUnicode 為 True 時，使用者不需要指定來源資料庫所用的字碼頁。<br /><br /> **注意：** 雖然您無法在 [ODBC 目的地編輯器] 中使用這個屬性，但是可以使用 [進階編輯器] 來設定這個屬性。|  
 |BindNumericAs|整數 (列舉)|此屬性決定 ODBC 目的地如何繫結具有 SQL_TYPE_NUMERIC 和 SQL_TYPE_DECIMAL 資料類型之數值資料的資料行。<br /><br /> 可能值為 Char (0) 和 Numeric (1)。前者繫結 SQL_C_CHAR 等資料行，後者則繫結 SQL_C_NUMERIC 等資料行。 預設值為 Char (0)。<br /><br /> **注意**：雖然您無法在 **[ODBC 目的地編輯器]** 中使用這個屬性，但是可以使用 **[進階編輯器]** 來設定這個屬性。|  
 |DefaultCodePage|整數|要用於字串資料行的字碼頁。<br /><br /> **注意**：雖然您無法在 **[ODBC 目的地編輯器]** 中使用這個屬性，但是可以使用 **[進階編輯器]** 來設定這個屬性。|  
 |InsertMethod|整數 (列舉)|用於插入資料的方法。 可能值為逐列 (0) 和批次 (1)。 預設值為批次 (1)。<br /><br /> 如需這些選項的詳細資訊，請參閱 [ODBC 目的地](../../integration-services/data-flow/odbc-destination.md)中的＜載入選項＞。|  

@@ -1,4 +1,5 @@
 ---
+description: value() 方法 (xml 資料類型)
 title: value() 方法 (xml 資料類型)
 ms.custom: ''
 ms.date: 07/26/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 316b7fda88a274812f376a511ca5f26638f0cea6
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 2299352c6047dd177c900fe0747245b27037d2ab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393006"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496332"
 ---
 # <a name="value-method-xml-data-type"></a>value() 方法 (xml 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

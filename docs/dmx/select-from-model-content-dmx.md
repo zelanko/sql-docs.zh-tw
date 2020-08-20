@@ -1,5 +1,6 @@
 ---
-title: 選取 [從 &lt; 模型] &gt; 。內容（DMX） |Microsoft Docs
+description: 從 &lt; 模型選取 &gt; 。DMX) 內容 (
+title: 從 &lt; 模型選取 &gt; 。 (DMX) 的內容 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,14 +9,14 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 15294c85fc119aff6b8c3cc43b1a99a6b79dc141
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 02e95e2620799e596bc5deaeb203bbc8c2c1a4e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970596"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496277"
 ---
-# <a name="select-from-ltmodelgtcontent-dmx"></a>選取 [從 &lt; 模型] &gt; 。內容（DMX）
+# <a name="select-from-ltmodelgtcontent-dmx"></a>從 &lt; 模型選取 &gt; 。DMX) 內容 (
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   傳回指定之資料採礦模型的採礦模型結構描述資料列集。  
@@ -46,12 +47,12 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  選擇性。 傳回純量值的運算式。  
   
 ## <a name="remarks"></a>備註  
- **SELECT FROM** _\<model>_ **。CONTENT**語句會傳回每個演算法特定的內容。 例如，您可能想要使用自訂應用程式中關聯規則模型之所有規則的描述。 您可以使用**SELECT FROM \<model> 。** 要在模型的 NODE_RULE 資料行中傳回值的 CONTENT 語句。  
+ **SELECT FROM** _\<model>_ **。CONTENT**語句會傳回每個演算法特定的內容。 例如，您可能想要使用自訂應用程式中關聯規則模型之所有規則的描述。 您可以使用 **SELECT FROM \<model> 。** 在模型的 NODE_RULE 資料行中傳回值的 CONTENT 語句。  
   
  下表列出包含在採礦模型內容中的資料行。  
   
 > [!NOTE]  
->  演算法可能對資料行有不同的解譯，以便正確地表示內容。 如需每個演算法的「採礦模型」內容的描述，以及如何解讀及查詢每個模型類型之「採礦模型」內容的秘訣，請參閱[&#40;Analysis Services 資料採礦&#41;的「採礦模型內容](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)」。  
+>  演算法可能對資料行有不同的解譯，以便正確地表示內容。 如需每個演算法的「採礦模型」內容的描述，以及如何針對每個模型類型解讀和查詢「採礦模型」內容的秘訣，請參閱 [&#40;Analysis Services 資料採礦&#41;的「採礦模型內容 ](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)」。  
   
 |CONTENT 資料列集資料行|描述|  
 |---------------------------|-----------------|  
@@ -88,10 +89,10 @@ WHERE NODE_TYPE = 1
 |-----------------|----------------|  
 |TM_DecisionTree|0|  
   
- 下列查詢會使用**IsDescendant**函數來傳回上一個查詢中所傳回之節點的直屬子系。  
+ 下列查詢會使用 **IsDescendant** 函數來傳回前一個查詢所傳回之節點的直屬子系。  
   
 > [!NOTE]  
->  因為 NODE_NAME 的值是字串，所以您無法使用子 select 語句，將 NODE_ID 當做引數傳回至**IsDescendant**函數。  
+>  因為 NODE_NAME 的值是字串，所以您無法使用子 select 語句來傳回 NODE_ID 做為 **IsDescendant** 函數的引數。  
   
 ```  
 SELECT NODE_NAME, NODETYPE, NODE_CAPTION   

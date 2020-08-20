@@ -1,4 +1,5 @@
 ---
+description: BACKUP (Transact-SQL)
 title: BACKUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/22/2020
@@ -46,12 +47,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 568a3824405798cf7fc23f9dc0b28f6b43d0fff9
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: e696c5f44059f47af6f4b27f030c2979a25c1b6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864409"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496917"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 

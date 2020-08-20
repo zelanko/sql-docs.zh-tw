@@ -1,5 +1,6 @@
 ---
-title: 受管理的備份預存程式（Transact-sql） |Microsoft Docs
+description: " (Transact-sql) 的 Managed 備份預存程式"
+title: " (Transact-sql) 的 Managed 備份預存程式 |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,16 +13,17 @@ dev_langs:
 ms.assetid: bc9d5273-b47d-4c32-a3af-839d963e0548
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 739c95d16b28bac2f5e5b53975fe72f872e984e0
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 7cad3ee246c9ca0e9867c2726091d1e0d269780a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052725"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498091"
 ---
-# <a name="managed-backup-stored-procedures-transact-sql"></a>受管理的備份預存程式（Transact-sql）
+# <a name="managed-backup-stored-procedures-transact-sql"></a> (Transact-sql) 的 Managed 備份預存程式
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  下列預存程式可以用來設定 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。  
+  您可以使用下列預存程式來設定 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。  
   
 ## <a name="in-this-section"></a>本節內容  
  [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)  

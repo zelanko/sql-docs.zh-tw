@@ -1,4 +1,5 @@
 ---
+description: WMI 事件監看員工作
 title: WMI 事件監看員工作 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 205c755ce2a719031c0b07a2884134d81bd55d55
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5187cdcfcb6ffc66ed2985123256ebf3943163a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914617"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495897"
 ---
 # <a name="wmi-event-watcher-task"></a>WMI 事件監看員工作
 
@@ -169,7 +170,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 #### <a name="wqlquerysource--file-connection"></a>WQLQuerySource = 檔案連接  
  **WQLQuerySource**  
- 在清單中選取檔案連線管理員，或按一下 \<**New connection...**> 來建立新的連線管理員。  
+ 在清單中選取檔案連線管理員，或按一下 [\<**New connection...**>] 以建立新的連線管理員。  
   
  **相關主題：** [檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)、[檔案連線管理員編輯器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   

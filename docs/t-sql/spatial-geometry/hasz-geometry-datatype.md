@@ -1,4 +1,5 @@
 ---
+description: HasZ (geometry 資料類型)
 title: HasZ (geometry 資料類型) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/05/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aa378943-252a-4079-848b-6c59344fcfce
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 2bb62f6c4f2064ed5bbfd82b0c5c9a15ad0feace
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 58c43b02c466fa2f5f1bc2b06006855b894cd65c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555659"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497059"
 ---
 # <a name="hasz-geometry-datatype"></a>HasZ (geometry 資料類型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

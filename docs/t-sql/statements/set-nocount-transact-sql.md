@@ -1,4 +1,5 @@
 ---
+description: SET NOCOUNT (Transact-SQL)
 title: SET NOCOUNT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,12 +25,12 @@ ms.assetid: eb3e6727-cb26-4bc2-84c7-171cbac02029
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f55c6db01dac215649960298470d4b5aaea8c731
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: befdd61fcc82351cb16d2b9b9e13c99c7ea573f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395079"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496468"
 ---
 # <a name="set-nocount-transact-sql"></a>SET NOCOUNT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -45,7 +46,9 @@ ms.locfileid: "87395079"
 SET NOCOUNT { ON | OFF }   
 ```  
   
-## <a name="remarks"></a>備註  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>備註
  當 SET NOCOUNT 是 ON 時，不會傳回計數。 當 SET NOCOUNT 是 OFF 時，會傳回計數。  
   
  即使 SET NOCOUNT 是 ON，也會更新 @@ROWCOUNT 函式。  

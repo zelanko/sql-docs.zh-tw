@@ -1,4 +1,5 @@
 ---
+description: XML 資料修改語言 (XML DML)
 title: XML 資料修改語言 (XML DML)
 ms.custom: ''
 ms.date: 03/16/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 20ce50d2-c07b-4e41-93a7-1380d2cd49cb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ce5cb12d755319255497bac7b96cd3945e92a86d
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 2aaa0b9a37527c10de34e1f1037fe33a8dab3608
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391825"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496311"
 ---
 # <a name="xml-data-modification-language-xml-dml"></a>XML 資料修改語言 (XML DML)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

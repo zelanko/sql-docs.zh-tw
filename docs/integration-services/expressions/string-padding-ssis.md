@@ -1,4 +1,5 @@
 ---
+description: 字串填補 (SSIS)
 title: 字串填補 (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d3fed73d-e0d4-4c67-9355-fb7083a72dd6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f7a5c168c49f906a397a175f3b1a85514b2b63bb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e5b72ff09988b609a82f4a5c2f57c6825ad5f0cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915214"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495619"
 ---
 # <a name="string-padding-ssis"></a>字串填補 (SSIS)
 

@@ -1,4 +1,5 @@
 ---
+description: SAP BW 目的地
 title: SAP BW 目的地 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 79523f9e589ff24c909442024430317dd531c2e4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1b1398c6884fd154d4f142f10a6d14844a3e7875
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917846"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495776"
 ---
 # <a name="sap-bw-destination"></a>SAP BW 目的地
 
@@ -45,9 +46,9 @@ ms.locfileid: "86917846"
   
 1.  建立新的來源系統：  
   
-    1.  選取 [協力廠商/暫存 BAPI]  類型。  
+    1.  選取 [協力廠商/暫存 BAPI]**** 類型。  
   
-    2.  針對 [目標系統的通訊類型]  ，選取 [非 Unicode (非使用中 MDMP 設定)]  。  
+    2.  針對 [目標系統的通訊類型]****，選取 [非 Unicode (非使用中 MDMP 設定)]****。  
   
     3.  指派適當的程式識別碼。  
   
@@ -102,19 +103,19 @@ ms.locfileid: "86917846"
   
  設定 SAP BW 目的地時，您也可以使用各種對話方塊來查閱或建立 SAP Netweaver BW 物件。 如需有關這些對話方塊的詳細資訊，請按下列其中一個主題：  
   
--   [ InfoPackage](../../integration-services/data-flow/look-up-infopackage.md)  
+-   [查閱 InfoPackage](../../integration-services/data-flow/look-up-infopackage.md)  
   
 -   [建立新的 InfoObject](../../integration-services/data-flow/create-new-infoobject.md)  
   
 -   [建立交易資料的 InfoCube](../../integration-services/data-flow/create-infocube-for-transaction-data.md)  
   
--   [查詢 InfoObject](../../integration-services/data-flow/look-up-infoobject.md)  
+-   [查閱 InfoObject](../../integration-services/data-flow/look-up-infoobject.md)  
   
 -   [建立 InfoSource](../../integration-services/data-flow/create-infosource.md)  
   
 -   [建立交易資料的 InfoSource](../../integration-services/data-flow/create-infosource-for-transaction-data.md)  
   
--   [建立主要資料的 InfoSource](../../integration-services/data-flow/create-infosource-for-master-data.md)  
+-   [[建立主要資料的 InfoSource]](../../integration-services/data-flow/create-infosource-for-master-data.md)  
   
 -   [建立 InfoPackage](../../integration-services/data-flow/create-infopackage.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: HTTP 連接管理員
 title: HTTP 連線管理員 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ef8b2df4b24f50f600683a5c6e9bb815208970cc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cd88a7f40787ecc33d99fe0c749c477f23b526a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918544"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496123"
 ---
 # <a name="http-connection-manager"></a>HTTP 連接管理員
 
@@ -35,7 +36,7 @@ ms.locfileid: "86918544"
   
  當您將 HTTP 連線管理員加入封裝時， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立連線管理員，用來在執行階段解析為 HTTP 連接、設定連線管理員屬性，以及將連線管理員加入封裝的 **Connections** 集合。  
   
- 連接管理員的 **ConnectionManagerType** 屬性會設定為 **HTTP.** 。  
+ 連接管理員的 **ConnectionManagerType** 屬性會設定為 **HTTP.**。  
   
  您可以利用下列方式設定 HTTP 連接管理員：  
   
@@ -56,7 +57,7 @@ ms.locfileid: "86918544"
  如需以程式設計方式設定連線管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>。  
   
 ## <a name="http-connection-manager-editor-server-page"></a>HTTP 連接管理員編輯器 (伺服器頁面)
-  使用 [HTTP 連接管理員編輯器] 對話方塊的 [伺服器] 索引標籤指定各項屬性，例如 URL 和安全性認證，以設定 HTTP 連接管理員。 HTTP 連接讓封裝得以經由使用 HTTP 傳送或接收檔案，存取 Web 伺服器。 設定 HTTP 連接管理員之後，可以同時測試連接。  
+  使用 [HTTP 連接管理員編輯器]**** 對話方塊的 [伺服器]**** 索引標籤指定各項屬性，例如 URL 和安全性認證，以設定 HTTP 連接管理員。 HTTP 連接讓封裝得以經由使用 HTTP 傳送或接收檔案，存取 Web 伺服器。 設定 HTTP 連接管理員之後，可以同時測試連接。  
   
 > [!IMPORTANT]  
 >  HTTP 連接管理員僅支援匿名驗證和基本驗證， 而不支援 Windows 驗證。  
@@ -67,7 +68,7 @@ ms.locfileid: "86918544"
  **伺服器 URL**  
  輸入伺服器的 URL。  
   
- 如果您計劃使用 [Web 服務工作編輯器] 中 [一般] 頁面上的 [下載 WSDL] 按鈕來下載 WSDL 檔案，請輸入 WSDL 檔案的 URL。 這個 URL 需以 "?wsdl" 結尾。  
+ 如果您計劃使用 [Web 服務工作編輯器]**** 中 [一般]**** 頁面上的 [下載 WSDL]**** 按鈕來下載 WSDL 檔案，請輸入 WSDL 檔案的 URL。 這個 URL 需以 "?wsdl" 結尾。  
   
  **使用認證**  
  指定 HTTP 連接管理員是否使用使用者的安全性認證進行驗證。  
@@ -85,7 +86,7 @@ ms.locfileid: "86918544"
  指定 HTTP 連接管理員是否使用用戶端憑證進行驗證。  
   
  **[MSSQLSERVER 的通訊協定內容]**  
- 使用 [選取憑證]  對話方塊，即可從清單中選取憑證。 文字方塊會顯示與此憑證相關聯的名稱。  
+ 使用 [選取憑證]**** 對話方塊，即可從清單中選取憑證。 文字方塊會顯示與此憑證相關聯的名稱。  
   
  **逾時 (以秒為單位)**  
  提供連接到 Web 伺服器的逾時設定。 此屬性的預設值為 30 秒。  
@@ -94,7 +95,7 @@ ms.locfileid: "86918544"
  提供寫入資料的區塊大小。  
   
  **測試連接**  
- 設定 HTTP 連接管理員之後，請按一下 [測試連接]  以確認可以看到連接。  
+ 設定 HTTP 連接管理員之後，請按一下 [測試連接]**** 以確認可以看到連接。  
   
 ## <a name="http-connection-manager-editor-proxy-page"></a>HTTP 連接管理員編輯器 (Proxy 頁面)
   使用 **[HTTP 連接管理員編輯器]** 對話方塊的 **[Proxy]** 索引標籤，來設定 HTTP 連接管理員使用 Proxy 伺服器。 HTTP 連接讓封裝得以經由使用 HTTP 傳送或接收檔案，存取 Web 伺服器。  
@@ -130,7 +131,7 @@ ms.locfileid: "86918544"
  輸入您想要針對它略過 Proxy 伺服器的位址。  
   
  **移除**  
- 選取一個位址，然後按一下 [移除]  來移除它。  
+ 選取一個位址，然後按一下 [移除]**** 來移除它。  
   
 ## <a name="see-also"></a>另請參閱  
  [Web 服務工作](../../integration-services/control-flow/web-service-task.md)   

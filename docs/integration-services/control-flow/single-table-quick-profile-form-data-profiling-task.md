@@ -1,4 +1,5 @@
 ---
+description: 單一資料表快速分析表單 (資料分析工作)
 title: 單一資料表快速分析表單 (資料分析工作) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9da9e33020b89074eb42751eaba89d22e251ef69
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b974db6df0f18a8063201f9e83ec905b87267301
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920975"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495954"
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>單一資料表快速分析表單 (資料分析工作)
 
@@ -53,7 +54,7 @@ ms.locfileid: "86920975"
 |**[最多可達 N 個資料行當做行列式資料行]**|選取要在可能的組合中當做行列式資料行進行測試的資料行數目上限。 預設值為 1。 最大值為 1000。 ˥Ƃ，選取 2 種測試組合，其中單一資料行或兩個資料行組合是另一個 (相依) 資料行的行列式資料行。|  
   
 > [!NOTE]  
->  您無法在 [單一資料表快速分析表單]  中使用值包含設定檔類型。  
+>   您無法在 **[單一資料表快速分析表單]** 中使用值包含設定檔類型。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料分析工作編輯器 &#40;一般頁面&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   

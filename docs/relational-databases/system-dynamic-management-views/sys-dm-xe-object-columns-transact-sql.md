@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_xe_object_columns （Transact-sql） |Microsoft Docs
+description: sys.dm_xe_object_columns (Transact-SQL)
+title: sys. dm_xe_object_columns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d96a14f3-4284-45ff-b1fe-4858e540a013
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 005455742f1fbb782e663672c0cc104bd1cb28f9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c8d615d2c2de89262c0c760c56431e77b6e06086
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898607"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498274"
 ---
 # <a name="sysdm_xe_object_columns-transact-sql"></a>sys.dm_xe_object_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,24 +37,24 @@ ms.locfileid: "85898607"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|NAME|**nvarchar(256)**|資料行的名稱。 名稱在物件中是唯一的。 不可為 Null。|  
-|column_id|**int**|資料行的識別碼。 搭配 column_type 使用時，column_id 在物件中是唯一的。 不可為 Null。|  
-|object_name|**nvarchar(256)**|這個資料行所屬之物件的名稱。 有多對一關聯性與 sys.databases dm_xe_objects。識別碼。不可為 null。|  
+|NAME|**nvarchar(256)**|資料行名稱。 名稱在物件內是唯一的。 不可為 Null。|  
+|column_id|**int**|資料行的識別碼。 與 column_type 搭配使用時，column_id 在物件內是唯一的。 不可為 Null。|  
+|object_name|**nvarchar(256)**|這個資料行所屬之物件的名稱。 Sys. dm_xe_objects 識別碼有多對一關聯性。不可為 null。|  
 |object_package_guid|**uniqueidentifier**|包含物件之封裝的 GUID。 不可為 Null。|  
 |type_name|**nvarchar(256)**|此資料行之類型的名稱。 不可為 Null。|  
 |type_package_guid|**uniqueidentifier**|包含資料行資料類型之封裝的 GUID。 不可為 Null。|  
-|column_type|**nvarchar(60)**|指示如何使用這個資料行。 不可為 Null。 column_type 可以是下列其中一項：<br /><br /> readonly。 此資料行包含無法變更的靜態值。<br /><br /> data。 此資料行包含物件所公開的執行階段資料。<br /><br /> customizable。 此資料行包含可以變更的值。<br /><br /> 注意：變更此值可以修改物件的行為。|  
+|column_type|**nvarchar(60)**|指示如何使用這個資料行。 不可為 Null。 column_type 可以是下列其中一項：<br /><br /> readonly。 此資料行包含無法變更的靜態值。<br /><br /> 定型 此資料行包含物件所公開的執行階段資料。<br /><br /> customizable。 此資料行包含可以變更的值。<br /><br /> 注意：變更此值可以修改物件的行為。|  
 |column_value|**nvarchar(256)**|會顯示與物件資料行相關聯的靜態值。 可為 Null。|  
 |capabilities|**int**|描述資料行之功能的點陣圖。 可為 Null。|  
 |capabilities_desc|**nvarchar(256)**|這個物件資料行之功能的描述。 這個值可以是下列其中一個值：<br /><br /> Mandatory。 將父物件繫結至事件工作階段時，必須設定此值。<br /><br /> 可為 Null。|  
-|description|**Nvarchar （3072）**|此物件資料行的描述。 可為 Null。|  
+|description|**Nvarchar (3072) **|此物件資料行的描述。 可為 Null。|  
   
 ## <a name="permissions"></a>權限  
  需要伺服器的 VIEW SERVER STATE 權限。  
   
 ### <a name="relationship-cardinalities"></a>關聯性基數  
   
-|從|至|關聯性|  
+|寄件者|收件者|關聯性|  
 |----------|--------|------------------|  
 |sys.dm_xe_object_columns.object_name、sys.dm_xe_object_columns.object_package_guid|sys.dm_xe_objects.name、<br /><br /> sys.dm_xe_objects.package_guid|多對一|  
 |sys.dm_xe_object_columns.type_name<br /><br /> sys.dm_xe_object_columns.type_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_objects.package_guid|多對一|  

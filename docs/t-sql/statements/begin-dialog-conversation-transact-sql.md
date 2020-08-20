@@ -1,4 +1,5 @@
 ---
+description: BEGIN DIALOG CONVERSATION (Transact-SQL)
 title: BEGIN DIALOG CONVERSATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -30,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6ae198ad14426a71c8c86838c15e60ce0464cebf
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 980563b7aa2b8a169f271a40f97f1f49295e7a84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380841"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496940"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -103,7 +104,7 @@ WHERE database_id = DB_ID() ;
  指定對話維持開啟狀態的最大時間量。 為了使對話順利完成，兩個端點必須在存留期間過期之前明確地結束對話。 *dialog_lifetime* 值必須以秒為單位來表示。 存留期間的類型是 **int**。當沒有指定 LIFETIME 子句時，對話存留期間是 **int** 資料類型的最大值。  
   
  ENCRYPTION  
- 指定當這個對話方塊所傳送和接收訊息在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體之外傳送時，是否必須加密。 必須加密的對話是「安全的對話」  。 當 ENCRYPTION = ON 且未設定支援加密所需要的憑證時，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會在交談上傳回錯誤訊息。 當 ENCRYPTION = OFF 時，如果設定 *target_service_name* 的遠端服務繫結，便會使用加密；否則，會以不加密的方式來傳送訊息。 如果沒有這個子句，預設值便是 ON。  
+ 指定當這個對話方塊所傳送和接收訊息在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體之外傳送時，是否必須加密。 必須加密的對話是「安全的對話」**。 當 ENCRYPTION = ON 且未設定支援加密所需要的憑證時，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會在交談上傳回錯誤訊息。 當 ENCRYPTION = OFF 時，如果設定 *target_service_name* 的遠端服務繫結，便會使用加密；否則，會以不加密的方式來傳送訊息。 如果沒有這個子句，預設值便是 ON。  
   
 > [!NOTE]  
 >  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的相同執行個體中各項服務之間交換的訊息，絕對不會加密。 不過，如果交談服務在不同資料庫中，使用加密的交談仍需要資料庫主要金鑰以及用於加密的憑證。 如此一來，當進行交談時，如果其中一個資料庫移到不同的執行個體，仍可以繼續交談。  

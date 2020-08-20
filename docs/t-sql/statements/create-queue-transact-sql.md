@@ -1,4 +1,5 @@
 ---
+description: CREATE QUEUE (Transact-SQL)
 title: CREATE QUEUE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/25/2019
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6bf798524d8ccdc4ee1a5971e3c78a1302dcde58
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: e472951762704fbb616dd10effe7d7920aef4efe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391733"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496859"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 

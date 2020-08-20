@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_xe_objects （Transact-sql） |Microsoft Docs
+description: sys.dm_xe_objects (Transact-SQL)
+title: sys. dm_xe_objects (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4f4e4a404c2bc2ac49ad9916cef668e1eb1656ab
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d01fb234585c5d4d95e80a3d0b1c5a356b589b2c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898586"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498283"
 ---
 # <a name="sysdm_xe_objects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "85898586"
  |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |NAME|**nvarchar(60)**|物件的名稱。 名稱在特定物件類型的封裝內是唯一的。 不可為 Null。|  
-|object_type|**nvarchar(60)**|物件的型別。 object_type 為下列其中一項：<br /><br /> event<br /><br /> 動作<br /><br /> 目標<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> type<br /><br /> 不可為 Null。|  
+|object_type|**nvarchar(60)**|物件的類型。 object_type 是下列其中一項：<br /><br /> event<br /><br /> 動作<br /><br /> 目標<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> type<br /><br /> 不可為 Null。|  
 |package_guid|**uniqueidentifier**|公開此動作之封裝的 GUID。 這與 sys.dm_xe_packages.package_id 之間是多對一的關聯性。 不可為 Null。|  
 |description|**nvarchar(256)**|動作的描述。 描述是由封裝作者所設定。 不可為 Null。|  
 |capabilities|**int**|描述此物件之功能的點陣圖。 可為 Null。|  
@@ -58,7 +59,7 @@ ms.locfileid: "85898586"
   
 ### <a name="relationship-cardinalities"></a>關聯性基數  
   
-|從|至|關聯性|  
+|寄件者|收件者|關聯性|  
 |----------|--------|------------------|  
 |sys.dm_xe_objects.package_guid|sys.dm_xe_packages.guid|多對一|  
   

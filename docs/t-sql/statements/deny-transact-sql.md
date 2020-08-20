@@ -1,4 +1,5 @@
 ---
+description: DENY (Transact-SQL)
 title: DENY (Transact-SQL)
 ms.custom: ''
 ms.date: 05/15/2017
@@ -27,12 +28,12 @@ ms.assetid: c32d1e01-9ee9-4665-a516-fcfece58078e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e146021bf3bd601e01f6220ffcf42de970e63657
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 91fa70155ba54ffbe9709cecc408810085e8a604
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484816"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496856"
 ---
 # <a name="deny-transact-sql"></a>DENY (Transact-SQL)
 

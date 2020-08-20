@@ -1,5 +1,6 @@
 ---
-title: 變更追蹤函數（Transact-sql） |Microsoft Docs
+description: 變更追蹤函數 (Transact-SQL)
+title: 變更追蹤函式 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: 04eb53c4-8b69-414e-9696-185d227fea35
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 08a9d5907c93b020f45ec8405361626266ec1300
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 69a301c266ce546733ef1fb26bf1479a5c2d8a2f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734425"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498219"
 ---
 # <a name="change-tracking-functions-transact-sql"></a>變更追蹤函數 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -30,11 +31,11 @@ ms.locfileid: "85734425"
   
 |函式|描述|  
 |--------------|-----------------|  
-|[CHANGETABLE （CHANGES）](../../relational-databases/system-functions/changetable-transact-sql.md)|針對資料表在指定之版本之後發生的所有變更，傳回追蹤資訊。|  
-|[CHANGETABLE （VERSION）](../../relational-databases/system-functions/changetable-transact-sql.md)|針對指定的資料列傳回最新的變更追蹤資訊。|  
-|[CHANGE_TRACKING_MIN_VALID_VERSION （）](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)|當您使用[CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md)函數時，傳回有效的最小版本，以便在從指定的資料表取得變更追蹤資訊時使用。|  
+|[CHANGETABLE (變更) ](../../relational-databases/system-functions/changetable-transact-sql.md)|針對資料表在指定之版本之後發生的所有變更，傳回追蹤資訊。|  
+|[CHANGETABLE (版本) ](../../relational-databases/system-functions/changetable-transact-sql.md)|針對指定的資料列傳回最新的變更追蹤資訊。|  
+|[CHANGE_TRACKING_MIN_VALID_VERSION ( # B1 ](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)|當您使用 [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md) 函數時，傳回可用於從指定資料表取得變更追蹤資訊的最小版本。|  
 |[CHANGE_TRACKING_CURRENT_VERSION](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)|取得與最後確認之交易相關聯的版本。 下次您使用 CHANGETABLE 列舉變更時，可以使用這個版本。|  
-|[CHANGE_TRACKING_IS_COLUMN_IN_MASK](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)|解讀 CHANGETABLE （CHANGES ...）函數傳回的 SYS_CHANGE_COLUMNS 值。|  
+|[CHANGE_TRACKING_IS_COLUMN_IN_MASK](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)|解讀 CHANGETABLE (CHANGES ) 函數所傳回的 SYS_CHANGE_COLUMNS 值。|  
 |[WITH CHANGE_TRACKING_CONTEXT](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md)|應用程式變更資料時，啟用變更內容的指定，例如，訂閱者識別碼。|  
   
 ## <a name="see-also"></a>另請參閱  

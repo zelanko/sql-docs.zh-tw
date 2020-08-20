@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_xe_packages （Transact-sql） |Microsoft Docs
+description: sys.dm_xe_packages (Transact-SQL)
+title: sys. dm_xe_packages (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3ae80e8db245c5a70db238a17b5d09bb682b09b1
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 98c43952212ffd101bfc822f68c39a1e04bce150
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942350"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498247"
 ---
 # <a name="sysdm_xe_packages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "86942350"
 |-----------------|---------------|-----------------|  
 |NAME|**nvarchar(256)**|封裝的名稱。 描述會從封裝本身公開。 不可為 Null。|  
 |guid|**uniqueidentifier**|識別此封裝的 GUID。 不可為 Null。|  
-|description|**Nvarchar （3072）**|封裝的描述。 descriptionis 由封裝作者所設定，而且不可為 null。|  
+|description|**Nvarchar (3072) **|封裝的描述。 descriptionis 由封裝作者所設定，而且不可為 null。|  
 |capabilities|**int**|描述這個封裝之功能的點陣圖。 可為 Null。|  
 |capabilities_desc|**nvarchar(256)**|此封裝所有可能之功能的清單。 可為 Null。|  
 |module_guid|**nvarchar(60)**|公開此封裝之模組的 GUID。 不可為 Null。|  

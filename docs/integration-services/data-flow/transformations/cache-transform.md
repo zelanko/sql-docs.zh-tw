@@ -1,4 +1,5 @@
 ---
+description: 快取轉換
 title: 快取轉換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b9fc1882dec5946e002d906afc07541d0923fc18
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fddf4562e1d2899e667f245b32309617c4147b29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922478"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495726"
 ---
 # <a name="cache-transform"></a>快取轉換
 
@@ -55,9 +56,9 @@ ms.locfileid: "86922478"
     > [!NOTE]  
     >  每個輸入資料行都必須對應至目的地資料行，而資料行資料類型也必須相符； 否則，「 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 設計師」會顯示錯誤訊息。  
   
-     您可以使用 [快取連線管理員編輯器]  修改資料行資料類型、名稱和其他資料行屬性。  
+     您可以使用 [快取連線管理員編輯器]**** 修改資料行資料類型、名稱和其他資料行屬性。  
   
- 您可以透過 [ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 設計師] 設定屬性。 如需可在 [進階編輯器]  對話方塊中設定之屬性的詳細資訊，請參閱[轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)。  
+ 您可以透過 [ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 設計師] 設定屬性。 如需可在 [進階編輯器]**** 對話方塊中設定之屬性的詳細資訊，請參閱[轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)。  
   
  如需如何設定屬性的詳細資訊，請參閱 [設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
@@ -68,7 +69,7 @@ ms.locfileid: "86922478"
   
 ### <a name="options"></a>選項。  
  **[完整快取]**  
- 使用清單方塊來選取現有的快取連線管理員，或使用 [新增]  按鈕來建立新的連線。  
+ 使用清單方塊來選取現有的快取連線管理員，或使用 [新增]**** 按鈕來建立新的連線。  
   
  **新增**  
  使用 [快取連接管理員編輯器] 對話方塊來建立新的連接。  

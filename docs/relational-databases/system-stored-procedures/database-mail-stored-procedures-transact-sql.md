@@ -1,5 +1,6 @@
 ---
-title: Database Mail 預存程式（Transact-sql） |Microsoft Docs
+description: Database Mail 預存程序 (Transact-SQL)
+title: Database Mail 預存程式 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 3bdb0e6d-9d09-465e-9a3f-7a8ccd53aca8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e4b4b54bbe70ab1f1362b574722fc77c6fea1bc2
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: fe53eb3fb72ed20389fdd72ec9e3b7094e28ccf0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977582"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498126"
 ---
 # <a name="database-mail-stored-procedures-transact-sql"></a>Database Mail 預存程序 (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援下列用來在實例內執行電子郵件作業的系統預存程式 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援下列系統預存程式，這些預存程式是用來從實例內執行電子郵件作業 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="database-mail-procedures"></a>Database Mail 程序  
 

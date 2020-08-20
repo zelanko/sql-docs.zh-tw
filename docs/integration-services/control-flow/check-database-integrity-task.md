@@ -1,4 +1,5 @@
 ---
+description: 檢查資料庫完整性工作
 title: 檢查資料庫完整性工作 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5a82fe99-4503-429f-9337-e6bac7649fe4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1bcdd5c54db4695e3b8d7b97d10d6de0ba8f9226
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bc0cd7d0cc188d5e88273a69aaa8a1ee36f7b20e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923059"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496025"
 ---
 # <a name="check-database-integrity-task"></a>檢查資料庫完整性工作
 

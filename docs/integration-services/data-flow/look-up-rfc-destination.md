@@ -1,4 +1,5 @@
 ---
+description: 查閱 RFC 目的地
 title: 查閱 RFC 目的地 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,21 +11,21 @@ ms.topic: conceptual
 ms.assetid: db9404d8-4c42-45e5-a100-c7a84b056109
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 023ecbe65136661f8afbaaf68078cd0a04cc2a1f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d938b3d742dd9d4b43f0a9b3704281392d89049d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916466"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495799"
 ---
 # <a name="look-up-rfc-destination"></a>查閱 RFC 目的地
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  使用 [查閱 RFC 目的地]  對話方塊可以查閱 SAP Netweaver BW 系統中定義的 RFC 目的地。 出現可用的 RFC 目的地清單時，請選取您要的目的地，然後此元件就會將必要的值填入相關聯的選項。  
+  使用 [查閱 RFC 目的地]**** 對話方塊可以查閱 SAP Netweaver BW 系統中定義的 RFC 目的地。 出現可用的 RFC 目的地清單時，請選取您要的目的地，然後此元件就會將必要的值填入相關聯的選項。  
   
- SAP BW 來源和 SAP BW 目的地都會使用 [查閱 RFC 目的地]  對話方塊。 如需 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 這些元件的詳細資訊，請參閱 [SAP BW 來源](../../integration-services/data-flow/sap-bw-source.md) 和 [SAP BW 目的地](../../integration-services/data-flow/sap-bw-destination.md)。  
+ SAP BW 來源和 SAP BW 目的地都會使用 [查閱 RFC 目的地]**** 對話方塊。 如需 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 這些元件的詳細資訊，請參閱 [SAP BW 來源](../../integration-services/data-flow/sap-bw-source.md) 和 [SAP BW 目的地](../../integration-services/data-flow/sap-bw-destination.md)。  
   
 > [!IMPORTANT]  
 >  Microsoft Connector 1.1 for SAP BW 的文件集是假設使用者已熟悉 SAP Netweaver BW 環境。 如需有關 SAP Netweaver BW 的詳細資訊，或有關如何設定 SAP Netweaver BW 物件與處理序的詳細資訊，請參閱 SAP 文件集。  
@@ -33,13 +34,13 @@ ms.locfileid: "86916466"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含 SAP BW 來源或目的地的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
   
-2.  在 [資料流程]  索引標籤中，按兩下 SAP BW 來源或目的地。  
+2.  在 [資料流程]**** 索引標籤中，按兩下 SAP BW 來源或目的地。  
   
-3.  在 [SAP BW 來源編輯器]  或 [SAP BW 目的地編輯器]  中，按一下 [連線管理員]  開啟編輯器的 [連線管理員]  頁面。  
+3.  在 [SAP BW 來源編輯器]**** 或 [SAP BW 目的地編輯器]**** 中，按一下 [連線管理員]**** 開啟編輯器的 [連線管理員]**** 頁面。  
   
-4.  在 [連線管理員]  頁面的 [RFC 目的地]  群組方塊中，按一下 [查閱]  顯示 [查閱 RFC 目的地]  對話方塊。  
+4.  在 [連線管理員]**** 頁面的 [RFC 目的地]**** 群組方塊中，按一下 [查閱]**** 顯示 [查閱 RFC 目的地]**** 對話方塊。  
   
-     在 [SAP BW 來源編輯器] 中，只有當 [執行模式] 的值是 [P - 觸發處理鏈結] 或 [W - 等候通知] 時，才會出現 [RFC 目的地] 群組方塊。  
+     在 [SAP BW 來源編輯器]**** 中，只有當 [執行模式]**** 的值是 [P - 觸發處理鏈結]**** 或 [W - 等候通知]**** 時，才會出現 [RFC 目的地]**** 群組方塊。  
   
 ## <a name="options"></a>選項。  
  **目的地**  

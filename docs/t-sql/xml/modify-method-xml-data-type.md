@@ -1,4 +1,5 @@
 ---
+description: modify() 方法 (xml 資料類型)
 title: modify() 方法 (xml 資料類型)
 ms.custom: ''
 ms.date: 07/26/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52430735-51f4-46d1-a308-9aecf8648fda
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 52a2766833d6ab4349c3f6b000f35e9d686396bd
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 56037b1a9caf1c6b37c62e0bdb10ecbf76c045a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393086"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496357"
 ---
 # <a name="modify-method-xml-data-type"></a>modify() 方法 (xml 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,4 +1,5 @@
 ---
+description: ALTER WORKLOAD GROUP (Transact-SQL)
 title: ALTER WORKLOAD GROUP (Transact-SQL)
 ms.custom: ''
 ms.date: 05/05/2020
@@ -18,12 +19,12 @@ ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 3909a970b37b23a1767d45bdae14e29441822acb
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 0f6cc0556c8d6e1f08b5b6fbe543508328781409
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864459"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496951"
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 

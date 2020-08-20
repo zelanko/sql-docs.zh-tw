@@ -1,5 +1,6 @@
 ---
-title: managed_backup. sp_set_parameter （Transact-sql） |Microsoft Docs
+description: 'managed_backup sp_set_parameter (Transact-sql) '
+title: managed_backup sp_set_parameter (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +21,14 @@ helpviewer_keywords:
 ms.assetid: bd8ae5fd-1337-4b7f-b0a4-153cbca9fa5f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3eab417e1d959c990e53aca3119546a73a3e1aad
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 8341c09305f6e02317d5b49a9e8239d18213b242
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052910"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498071"
 ---
-# <a name="managed_backupsp_set_parameter-transact-sql"></a>managed_backup. sp_set_parameter （Transact-sql）
+# <a name="managed_backupsp_set_parameter-transact-sql"></a>managed_backup sp_set_parameter (Transact-sql) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   設定指定的 Smart Admin 系統參數值。  
@@ -44,22 +46,22 @@ EXEC managed_backup.sp_set_parameter
     ,[@parameter_value = ] 'parameter_value'  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>參量  
+##  <a name="arguments"></a><a name="Arguments"></a> 引數  
  @parameter_name  
- 您要設定值之參數的名稱。 @parameter_name為 NVARCHAR （128）。 可用的參數名稱為**SSMBackup2WANotificationEmailIds**、 **SSMBackup2WADebugXevent**、 **SSMBackup2WAEnableUserDefinedPolicy**、 **FileRetentionDebugXevent**和**StorageOperationDebugXevent**。  
+ 您要設定值之參數的名稱。 @parameter_name 是 NVARCHAR (128) 。 可用的參數名稱為 **>ssmbackup2wanotificationemailids**、 **SSMBackup2WADebugXevent**、 **SSMBackup2WAEnableUserDefinedPolicy**、 **FileRetentionDebugXevent**和 **StorageOperationDebugXevent**。  
   
  @parameter_value  
- 您要設定之參數的值。 @parameter值為 NVARCHAR （128）。  以下是允許的參數名稱與值組：  
+ 您要設定之參數的值。 @parameter 值為 NVARCHAR (128) 。  以下是允許的參數名稱與值組：  
   
--   @parameter_name= ' SSMBackup2WANotificationEmailIds '： @parameter_value = ' email '  
+-   @parameter_name = ' >ssmbackup2wanotificationemailids '： @parameter_value  = ' email '  
   
--   @parameter_name= ' SSMBackup2WAEnableUserDefinedPolicy '： @parameter_value = {' true ' |' false '}  
+-   @parameter_name = ' SSMBackup2WAEnableUserDefinedPolicy '： @parameter_value  = {' true ' |' false '}  
   
--   @parameter_name= ' SSMBackup2WADebugXevent '： @parameter_value = {' true ' |' false '}  
+-   @parameter_name = ' SSMBackup2WADebugXevent '： @parameter_value  = {' true ' |' false '}  
   
--   @parameter_name= ' FileRetentionDebugXevent '： @parameter_value = {' true ' |' false '}  
+-   @parameter_name = ' FileRetentionDebugXevent '： @parameter_value  = {' true ' |' false '}  
   
--   @parameter_name= ' StorageOperationDebugXevent ' = {' true ' |' false '}  
+-   @parameter_name = ' StorageOperationDebugXevent ' = {' true ' |' false '}  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -70,7 +72,7 @@ EXEC managed_backup.sp_set_parameter
 ## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>權限  
- 需要 managed_backup 上的**EXECUTE**許可權**sp_set_parameter**預存程式。  
+ 需要 managed_backup 的 **EXECUTE** 許可權 **。 sp_set_parameter** 預存程式。  
   
 ## <a name="examples"></a>範例  
  下列範例啟用作業和偵錯擴充事件。  

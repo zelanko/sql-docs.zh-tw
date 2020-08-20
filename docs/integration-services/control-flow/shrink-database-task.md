@@ -1,4 +1,5 @@
 ---
+description: 壓縮資料庫工作
 title: 壓縮資料庫工作 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e66286f8-97b1-4e5a-86b4-e56f1932b7d5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 428c03cd4926b43db45a5de7adaadfbc99c31827
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 066a41ecdb41ff27d0043204c6254b65371e6b15
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920994"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495969"
 ---
 # <a name="shrink-database-task"></a>壓縮資料庫工作
 

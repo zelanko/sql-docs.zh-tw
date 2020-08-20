@@ -1,4 +1,5 @@
 ---
+description: 完成緩時變維度精靈
 title: 完成緩時變維度精靈 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,19 +13,19 @@ f1_keywords:
 ms.assetid: f8ed1a54-d79a-43ca-80a0-02547d97c0f9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb0d230f07ff082a16c55699f6c49eade131359e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e41f9348d083210a267f2a71a7da3f87c1b37591
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919330"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495667"
 ---
 # <a name="finish-the-slowly-changing-dimension-wizard"></a>完成緩時變維度精靈
 
 [!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  使用 [完成緩時變維度精靈]  對話方塊，即可在精靈為緩時變維度建立支援之前，先確認您的選擇。  
+  使用 [完成緩時變維度精靈]**** 對話方塊，即可在精靈為緩時變維度建立支援之前，先確認您的選擇。  
   
  若要深入了解這個精靈，請參閱＜ [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)＞。  
   

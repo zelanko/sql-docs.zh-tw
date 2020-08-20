@@ -1,4 +1,5 @@
 ---
+description: Integration Services 資料類型
 title: Integration Services 資料類型 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ffa03bda518d3b30119cca0534a070f2140712fc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 504c89f7c3c150451e9bf59e1f6c0b7984eb1a1c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86904816"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495868"
 ---
 # <a name="integration-services-data-types"></a>Integration Services 資料類型
 
@@ -64,7 +65,7 @@ ms.locfileid: "86904816"
 |DT_UI4|四位元組不帶正負號的整數。|  
 |DT_UI8|八位元組不帶正負號的整數。|  
 |DT_WSTR|最大長度為 4000 字元，以 Null 終止的 Unicode 字元字串。 如果資料行值包含額外的 Null 結束字元，字串就會在第一個 Null 出現時被截斷。|  
-|DT_IMAGE|大小上限為 2^31-1 (2,147,483,647) 個位元組的二進位值。 。|  
+|DT_IMAGE|大小上限為 2^31-1 (2,147,483,647) 個位元組的二進位值。 .|  
 |DT_NTEXT|最大長度為 2^30 - 1 (1,073,741,823) 個字元的 Unicode 字元字串。|  
 |DT_TEXT|最大長度為 2^31-1 (2,147,483,647) 個字元的 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/MBCS 字元字串。|  
   
@@ -113,7 +114,7 @@ ms.locfileid: "86904816"
   
 |轉換 DT_FILETIME 到|結果|  
 |-----------------------------|------------|  
-|DT_FILETIME|無變更。|  
+|DT_FILETIME|沒有變更。|  
 |DT_DATE|轉換資料類型。|  
 |DT_DBDATE|移除時間值。|  
 |DT_DBTIME|移除日期值。<br /><br /> 當小數秒值的小數位數大於 DT_DBTIME 資料類型可包含的小數位數時，將小數秒值移除。 在移除小數秒值之後，產生有關此資料截斷的報表。 如需詳細資訊，請參閱 [處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。|  
@@ -127,7 +128,7 @@ ms.locfileid: "86904816"
 |轉換 DT_DATE 到|結果|  
 |-------------------------|------------|  
 |DT_FILETIME|轉換資料類型。|  
-|DT_DATE|無變更。|  
+|DT_DATE|沒有變更。|  
 |DT_DBDATE|移除 DT_DATA 資料類型所代表的時間值。|  
 |DT_DBTIME|移除 DT_DATE 資料類型所代表的日期值。|  
 |DT_DBTIME2|移除 DT_DATE 資料類型所代表的日期值。|  
@@ -141,7 +142,7 @@ ms.locfileid: "86904816"
 |---------------------------|------------|  
 |DT_FILETIME|將 DT_FILETIME 資料類型中的時間欄位設定為零。|  
 |DT_DATE|將 DT_DATE 資料類型中的時間欄位設定為零。|  
-|DT_DBDATE|無變更。|  
+|DT_DBDATE|沒有變更。|  
 |DT_DBTIME|將 DT_DBTIME 資料類型中的時間欄位設定為零。|  
 |DT_DBTIME2|將 DT_DBTIME2 資料類型中的時間欄位設定為零。|  
 |DT_DBTIMESTAMP|將 DT_DBTIMESTAMP 資料類型中的時間欄位設定為零。|  
@@ -155,7 +156,7 @@ ms.locfileid: "86904816"
 |DT_FILETIME|將 DT_FILETIME 資料類型中的日期欄位設定為目前的日期。|  
 |DT_DATE|將 DT_DATE 資料類型中的日期欄位設定為目前的日期。|  
 |DT_DBDATE|將 DT_DBDATE 資料類型中的日期欄位設定為目前的日期。|  
-|DT_DBTIME|無變更。|  
+|DT_DBTIME|沒有變更。|  
 |DT_DBTIME2|轉換資料類型。|  
 |DT_DBTIMESTAMP|將 DT_DBTIMESTAMP 資料類型中的日期欄位設定為目前的日期。|  
 |DT_DBTIMESTAMP2|將 DT_DBTIMESTAMP2 資料類型中的日期欄位設定為目前的日期。|  
@@ -183,7 +184,7 @@ ms.locfileid: "86904816"
 |DT_DBDATE|移除 DT_DBTIMESTAMP 資料類型所代表的時間值。|  
 |DT_DBTIME|移除 DT_DBTIMESTAMP 資料類型所代表的日期值。<br /><br /> 當小數秒值的小數位數大於 DT_DBTIME 資料類型可包含的小數秒位數時，將小數秒值移除。 在移除小數秒值之後，產生有關此資料截斷的報表。 如需詳細資訊，請參閱 [處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。|  
 |DT_DBTIME2|移除 DT_DBTIMESTAMP 資料類型所代表的日期值。<br /><br /> 當小數秒值的小數位數大於 DT_DBTIME2 資料類型可包含的小數秒位數時，將小數秒值移除。 在移除小數秒值之後，產生有關此資料截斷的報表。 如需詳細資訊，請參閱 [處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。|  
-|DT_DBTIMESTAMP|無變更。|  
+|DT_DBTIMESTAMP|沒有變更。|  
 |DT_DBTIMESTAMP2|當小數秒值的小數位數大於 DT_DBTIMESTAMP2 資料類型可包含的小數秒位數時，將小數秒值移除。 在移除小數秒值之後，產生有關此資料截斷的報表。 如需詳細資訊，請參閱 [處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。|  
 |DT_DBTIMESTAMPOFFSET|將 DT_DBTIMESTAMPOFFSET 資料類型中的時區欄位設定為零。<br /><br /> 當小數秒值的小數位數大於 DT_DBTIMESTAMPOFFSET 資料類型可包含的小數秒位數時，將小數秒值移除。 在移除小數秒值之後，產生有關此資料截斷的報表。 如需詳細資訊，請參閱 [處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。|  
   
@@ -242,7 +243,7 @@ ms.locfileid: "86904816"
 |DT_I4|int|int|long||INTEGER|INTEGER|  
 |DT_I8|BIGINT|BIGINT|||bigint|bigint|  
 |DT_NUMERIC|decimal, numeric|decimal, numeric|Decimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
-|DT_R4|real|real|Single||real|real|  
+|DT_R4|real|real|Single||real|REAL|  
 |DT_R8|FLOAT|FLOAT|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
 |DT_STR|char, varchar||VarChar||char, varchar|char, varchar|  
 |DT_UI1|TINYINT|TINYINT|Byte||||  
@@ -252,7 +253,7 @@ ms.locfileid: "86904816"
 |DT_WSTR|nchar, nvarchar, sql_variant, xml|char, varchar, nchar, nvarchar, sql_variant, xml|LongText|CHAR, ROWID, VARCHAR2, NVARCHAR2, NCHAR|GRAPHIC, VARGRAPHIC|GRAPHIC, VARGRAPHIC|  
 |DT_IMAGE|image|image|LongBinary|LONG RAW, BLOB, LOBLOCATOR, BFILE, VARGRAPHIC, LONG VARGRAPHIC, user-defined|CHAR () FOR BIT DATA, VARCHAR () FOR BIT DATA|CHAR () FOR BIT DATA, VARCHAR () FOR BIT DATA, BLOB|  
 |DT_NTEXT|ntext|text, ntext||LONG, CLOB, NCLOB, NVARCHAR, TEXT|LONG VARCHAR, NCHAR, NVARCHAR, TEXT|LONG VARCHAR, DBCLOB, NCHAR, NVARCHAR, TEXT|  
-|DT_TEXT|text||||LONG VARCHAR FOR BIT DATA|LONG VARCHAR FOR BIT DATA, CLOB|  
+|DT_TEXT|文字||||LONG VARCHAR FOR BIT DATA|LONG VARCHAR FOR BIT DATA, CLOB|  
   
  如需資料流程中對應資料類型的資訊，請參閱 [使用資料流程中的資料類型](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)。  
   

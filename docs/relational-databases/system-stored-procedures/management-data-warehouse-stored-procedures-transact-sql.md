@@ -1,5 +1,6 @@
 ---
-title: 管理資料倉儲預存程式（Transact-sql） |Microsoft Docs
+description: 管理資料倉儲預存程序 (Transact-SQL)
+title: " (Transact-sql) 的管理資料倉儲預存程式 |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: bc492b18-6965-4bb5-8065-fe2641d29590
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b1dc4579216af9f47d120f19662de2908cf7f40f
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: f71ed91509fca2d0df69b2fdd35e7c32c11351a9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394313"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498154"
 ---
 # <a name="management-data-warehouse-stored-procedures-transact-sql"></a>管理資料倉儲預存程序 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

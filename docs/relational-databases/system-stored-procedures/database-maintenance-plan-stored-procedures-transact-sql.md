@@ -1,5 +1,6 @@
 ---
-title: 資料庫維護計畫預存程式（Transact-sql） |Microsoft Docs
+description: 資料庫維護計畫預存程序 (Transact-SQL)
+title: " (Transact-sql) 的資料庫維護計畫預存程式 |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f5f658e3-417e-4286-9213-5738266f3b28
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0326b5a4101d6c18d84302c38bcf8de02ce924b5
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 806cf56fa2bf80e1d44e914d58e937b64f625b20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395253"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498105"
 ---
 # <a name="database-maintenance-plan-stored-procedures-transact-sql"></a>資料庫維護計畫預存程序 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "87395253"
 :::row-end:::
 
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [維護計畫](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

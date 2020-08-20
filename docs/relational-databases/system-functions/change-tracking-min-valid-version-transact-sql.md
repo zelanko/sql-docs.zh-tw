@@ -1,5 +1,6 @@
 ---
-title: CHANGE_TRACKING_MIN_VALID_VERSION （Transact-sql） |Microsoft Docs
+description: CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)
+title: CHANGE_TRACKING_MIN_VALID_VERSION (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -19,17 +20,17 @@ ms.assetid: 5a43d23f-adcf-4c0b-95ad-07cee03c1f9d
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23e91a60672e400d658403533433a97694407a39
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: af42a0f719e490ce32c6f81ee92722a540f1271a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734406"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498138"
 ---
 # <a name="change_tracking_min_valid_version-transact-sql"></a>CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  當您使用[CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md)函數時，傳回用戶端上有效的最小版本，以便在從指定的資料表取得變更追蹤資訊時使用。  
+  當您使用 [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md) 函數時，傳回可用於從指定的資料表取得變更追蹤資訊的最小版本。  
     
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,13 +43,13 @@ CHANGE_TRACKING_MIN_VALID_VERSION ( table_object_id )
   
 ## <a name="arguments"></a>引數  
  *table_object_id*  
- 這是資料表的物件識別碼。 *table_object_id*為**int**。  
+ 這是資料表的物件識別碼。 *table_object_id* 是 **int**。  
   
 ## <a name="return-type"></a>傳回類型  
  **bigint**  
   
 ## <a name="remarks"></a>備註  
- 使用此函數來驗證 CHANGETABLE 的*last_sync_version*參數值。 如果*last_sync_version*小於此函數所報告的值，則稍後呼叫 CHANGETABLE 所傳回的結果可能無效。  
+ 使用此函數可驗證 CHANGETABLE 的 *last_sync_version* 參數值。 如果 *last_sync_version* 小於此函數所報告的值，則稍後對 CHANGETABLE 呼叫所傳回的結果可能會無效。  
   
  CHANGE_TRACKING_MIN_VALID_VERSION 會使用下列資訊判斷傳回值：  
   
@@ -87,7 +88,7 @@ ELSE
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [變更追蹤函數 &#40;Transact-sql&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
+ [變更追蹤函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [sys.change_tracking_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)  
   
   

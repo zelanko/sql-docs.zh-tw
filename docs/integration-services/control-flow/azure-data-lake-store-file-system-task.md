@@ -1,4 +1,5 @@
 ---
+description: Azure Data Lake Store 檔案系統工作
 title: Azure Data Lake Store 檔案系統工作 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2017
@@ -11,12 +12,12 @@ f1_keywords:
 author: Lingxi-Li
 ms.author: lingxl
 ms.reviewer: maghan
-ms.openlocfilehash: 9460730ae4756bb2862de751bc72cad649e38298
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 27ee71393bfbad6c824de25bd95c9ca465cf2a51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913884"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496073"
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Azure Data Lake Store 檔案系統工作
 
@@ -30,7 +31,7 @@ Azure Data Lake Store 檔案系統工作是 [SQL Server Integration Services (SS
 
 ## <a name="configure-the-azure-data-lake-store-file-system-task"></a>設定 Azure Data Lake Store 檔案系統工作
 
-若要將 Azure Data Lake Store 檔案系統工作新增至套件，請將它從 SSIS 工具箱拖曳至設計工具畫布。 然後按兩下工作，或按一下滑鼠右鍵選取 [編輯]  ，開啟 [Azure Data Lake Store File System Task Editor] (Azure Data Lake Store 檔案系統工作編輯器)  對話方塊。
+若要將 Azure Data Lake Store 檔案系統工作新增至套件，請將它從 SSIS 工具箱拖曳至設計工具畫布。 然後按兩下工作，或按一下滑鼠右鍵選取 [編輯]****，開啟 [Azure Data Lake Store File System Task Editor] (Azure Data Lake Store 檔案系統工作編輯器)**** 對話方塊。
 
 **Operation** 屬性會指定要執行的檔案系統作業。 選取下列作業的其中之一：
 

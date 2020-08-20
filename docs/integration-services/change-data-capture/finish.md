@@ -1,4 +1,5 @@
 ---
+description: '[完成]'
 title: 完成 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 94a57ff1-f77f-4c04-8bf5-cdab691d3421
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ed0007c348297bd0b0b8488981e2f73f65dfadf7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3822a3eb91d32ce935d590a25712c51f51fe1b7e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921615"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496221"
 ---
 # <a name="finish"></a>[完成] 
 
