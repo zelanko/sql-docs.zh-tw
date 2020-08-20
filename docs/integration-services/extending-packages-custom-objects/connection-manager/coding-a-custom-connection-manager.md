@@ -1,4 +1,5 @@
 ---
+description: 撰寫自訂連接管理員的程式碼
 title: 撰寫自訂連線管理員的程式碼 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b12b6778-1f01-4a7d-984d-73f2f7630aa5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3c53711952ce405befe2575471e676ffd2297b67
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 352735b75d99f87b741959b6c53f66937860588f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918145"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484299"
 ---
 # <a name="coding-a-custom-connection-manager"></a>撰寫自訂連接管理員的程式碼
 
@@ -264,6 +265,6 @@ public override void ReleaseConnection(object connection)
  
 ## <a name="see-also"></a>另請參閱  
  [建立自訂連線管理員](../../../integration-services/extending-packages-custom-objects/connection-manager/creating-a-custom-connection-manager.md)   
- [開發自訂連線管理員的使用者介面](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
+ [開發自訂連接管理員的使用者介面](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
   
   

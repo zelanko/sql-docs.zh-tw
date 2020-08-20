@@ -1,4 +1,5 @@
 ---
+description: SAP BW 目的地編輯器 (進階頁面)
 title: SAP BW 目的地編輯器 (進階頁面) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,19 +13,19 @@ f1_keywords:
 ms.assetid: 862957db-bbc6-4dda-bc0e-591457f1baa7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 34af54db2bca8f4876507b827725b3d0831490f2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4d137eef410a3b406ea2b18a9893a5f4ca4a061b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920664"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484519"
 ---
 # <a name="sap-bw-destination-editor-advanced-page"></a>SAP BW 目的地編輯器 (進階頁面)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  使用 SAP BW 目的地編輯器  的 [進階]  頁面可以設定進階設定，例如封裝大小和逾時資訊。  
+  使用 SAP BW 目的地編輯器**** 的 [進階]**** 頁面可以設定進階設定，例如封裝大小和逾時資訊。  
   
  若要深入了解 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的 SAP BW 目的地，請參閱 [SAP BW 目的地](../../integration-services/data-flow/sap-bw-destination.md)。  
   
@@ -37,7 +38,7 @@ ms.locfileid: "86920664"
   
 2.  在 [資料流程]  索引標籤上，按兩下 SAP BW 目的地。  
   
-3.  在 SAP BW 目的地編輯器  中，按一下 [進階]  開啟編輯器的 [進階]  頁面。  
+3.  在 SAP BW 目的地編輯器**** 中，按一下 [進階]**** 開啟編輯器的 [進階]**** 頁面。  
   
 ## <a name="options"></a>選項。  
   

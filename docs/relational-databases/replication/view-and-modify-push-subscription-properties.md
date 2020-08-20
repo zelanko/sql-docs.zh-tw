@@ -1,4 +1,5 @@
 ---
+description: 檢視及修改發送訂閱屬性
 title: 檢視及修改發送訂閱屬性 | Microsoft 文件
 ms.custom: ''
 ms.date: 03/16/2017
@@ -18,12 +19,12 @@ ms.assetid: 801d2995-7aa5-4626-906e-c8190758ec71
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: bc1ac4c366ad35411c184e4a466d97da51c4538c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 73e4b46d36f91c67794446ef5bf563d1753b90c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111748"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482298"
 ---
 # <a name="view-and-modify-push-subscription-properties"></a>檢視及修改發送訂閱屬性
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

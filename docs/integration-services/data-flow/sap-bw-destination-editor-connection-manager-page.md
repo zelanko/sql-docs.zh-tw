@@ -1,4 +1,5 @@
 ---
+description: SAP BW 目的地編輯器 (連接管理員頁面)
 title: SAP BW 目的地編輯器 (連線管理員頁面) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2df00ea414e24b1863fcae16832b5f3bbb1f5b79
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ccd18ea2d13b643899b5492b0151984b275b8c80
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913595"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484556"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>SAP BW 目的地編輯器 (連接管理員頁面)
 
@@ -48,7 +49,7 @@ ms.locfileid: "86913595"
  從清單中選取現有的連線管理員，或按一下 [新增]  來建立新的連線。  
   
  **新增**  
- 使用 [SAP BW 連線管理員]  對話方塊來建立新的連線管理員。  
+ 使用 [SAP BW 連線管理員]**** 對話方塊來建立新的連線管理員。  
   
  **測試負載**  
  執行載入程序的測試，這項測試會使用您已選取的設定，但是不會載入任何資料列。  
@@ -76,7 +77,7 @@ ms.locfileid: "86913595"
  輸入與 InfoPackage 相關聯之邏輯系統的名稱。  
   
  **查閱**  
- 使用 [查閱 InfoPackage]  對話方塊來查閱 InfoPackage。 如需有關此對話方塊的詳細資訊，請參閱＜ [Look Up InfoPackage](../../integration-services/data-flow/look-up-infopackage.md)＞。  
+ 使用 [查閱 InfoPackage]**** 對話方塊來查閱 InfoPackage。 如需有關此對話方塊的詳細資訊，請參閱＜ [Look Up InfoPackage](../../integration-services/data-flow/look-up-infopackage.md)＞。  
   
 ### <a name="rfc-destination-options"></a>RFC 目的地選項  
  您不需要事先了解並輸入這些值。 使用 **[查閱]** 按鈕，即可尋找並選取適當的 RFC 目的地。 在您選取 RFC 目的地之後，此元件就會針對這些選項輸入適當的值。  
@@ -91,7 +92,7 @@ ms.locfileid: "86913595"
  輸入與 RFC 目的地相關聯的程式識別碼。  
   
  **查閱**  
- 使用 [查閱 RFC 目的地]  對話方塊來查閱 RFC 目的地。 如需有關此對話方塊的詳細資訊，請參閱＜ [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md)＞。  
+ 使用 [查閱 RFC 目的地]**** 對話方塊來查閱 RFC 目的地。 如需有關此對話方塊的詳細資訊，請參閱＜ [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md)＞。  
   
 ### <a name="create-sap-bw-objects-options"></a>建立 SAP BW 物件選項  
  **選取 物件類型**  

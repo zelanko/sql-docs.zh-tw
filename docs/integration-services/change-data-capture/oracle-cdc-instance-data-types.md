@@ -1,4 +1,5 @@
 ---
+description: Oracle CDC 執行個體資料類型
 title: Oracle CDC 執行個體資料類型 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: eec13d8d-c15a-4542-bfc4-da66b1a6bfe0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b777b6d9bbf6cbdf42436876b20a08ffd032c80a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b29f2c462f3d9cba5fc140598932314fd0501fe5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917150"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484679"
 ---
 # <a name="oracle-cdc-instance-data-types"></a>Oracle CDC 執行個體資料類型
 
@@ -29,7 +30,7 @@ ms.locfileid: "86917150"
   
 |Oracle 資料庫資料類型|SQL Server 資料類型|  
 |-------------------------------|--------------------------|  
-|BINARY_FLOAT|real|  
+|BINARY_FLOAT|REAL|  
 |BINARY_DOUBLE|FLOAT|  
 |CHAR|NVARCHAR|  
 |日期|DATETIME|  

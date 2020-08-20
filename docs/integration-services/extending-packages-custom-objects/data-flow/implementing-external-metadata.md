@@ -1,4 +1,5 @@
 ---
+description: 實作外部中繼資料
 title: 實作外部中繼資料 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 65757d974c6deb690248343140a157e81e083a70
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 76296ff7dc7c5084a2c62613182c4d3e0fa6f80b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919651"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484186"
 ---
 # <a name="implementing-external-metadata"></a>實作外部中繼資料
 
@@ -79,9 +80,9 @@ End Sub
  對於維護外部中繼資料行集合的元件，驗證將需要額外的步驟，因為您必須針對其他的資料行集合來驗證。 驗證可以分成連接式驗證或中斷連接式驗證。  
   
 ### <a name="connected-validation"></a>連接式驗證  
- 當元件連接至外部資料來源時，會直接針對外部資料來源，驗證輸入或輸出集合中的資料行。 此外，也必須驗證外部中繼資料集合中的資料行。 這是必要的，因為透過使用 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中的 [進階編輯器] 即可修改外部中繼資料集合，而且對集合的變更是無法偵測的。 因此，在連接時，元件必須確定外部中繼資料資料行集合中的資料行會持續反映外部資料來源的資料行。  
+ 當元件連接至外部資料來源時，會直接針對外部資料來源，驗證輸入或輸出集合中的資料行。 此外，也必須驗證外部中繼資料集合中的資料行。 這是必要的，因為透過使用 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中的 [進階編輯器]**** 即可修改外部中繼資料集合，而且對集合的變更是無法偵測的。 因此，在連接時，元件必須確定外部中繼資料資料行集合中的資料行會持續反映外部資料來源的資料行。  
   
- 您可以選擇將集合的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100.IsUsed%2A> 屬性設定為 **false**，以隱藏 [進階編輯器] 中的外部中繼資料集合。 然而這也可能會隱藏編輯器的 [資料行對應]  索引標籤，它可讓使用者從輸入或輸出集合將資料行對應到外部中繼資料行集合中的資料行。 將此屬性設定為 **false** 並不會防止開發人員以程式設計方式修改集合，但是確實可以為專用於 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 的元件之外部中繼資料行集合提供一層保護。  
+ 您可以選擇將集合的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100.IsUsed%2A> 屬性設定為 **false**，以隱藏 [進階編輯器]**** 中的外部中繼資料集合。 然而這也可能會隱藏編輯器的 [資料行對應]**** 索引標籤，它可讓使用者從輸入或輸出集合將資料行對應到外部中繼資料行集合中的資料行。 將此屬性設定為 **false** 並不會防止開發人員以程式設計方式修改集合，但是確實可以為專用於 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 的元件之外部中繼資料行集合提供一層保護。  
   
 ### <a name="disconnected-validation"></a>中斷連接式驗證  
  當元件和外部資料來源中斷連接時，因為輸入或輸出集合中的資料行會直接針對外部中繼資料集合中的資料行 (而非針對外部來源) 進行驗證，驗證就較為簡單。 當元件連至其外部資料來源的連接尚未建立時，或是當 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 屬性為 **false** 時，元件應該執行中斷連接式驗證。  

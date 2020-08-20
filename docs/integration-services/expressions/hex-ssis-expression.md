@@ -1,4 +1,5 @@
 ---
+description: HEX (SSIS 運算式)
 title: HEX (SSIS 運算式) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e9189790bb29d5595459f0fcabecdf735fc0bdf1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a2fdba3ec151b363766ffb29e88afbdfc4575bc2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86910734"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484466"
 ---
 # <a name="hex-ssis-expression"></a>HEX (SSIS 運算式)
 

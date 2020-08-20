@@ -1,4 +1,5 @@
 ---
+description: 處理複寫代理程式設定檔
 title: 處理複寫代理程式設定檔 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: caa16f4b8d0ea5aff2251a8b673a6fa90fb1366c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1b40afe7f9e7e74fb70f7b08a1c7532e5a65c715
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914333"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482493"
 ---
 # <a name="work-with-replication-agent-profiles"></a>處理複寫代理程式設定檔
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,5 +1,6 @@
 ---
-title: MeasureGroupMeasures （MDX） |Microsoft Docs
+description: MeasureGroupMeasures (MDX)
+title: MeasureGroupMeasures (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 45d7adc5e1f4e103790d9d067bc4876fb5b134d2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3adb11cd39e5a85e498f9b04ac714385d944c48a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68033872"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483831"
 ---
 # <a name="measuregroupmeasures-mdx"></a>MeasureGroupMeasures (MDX)
 

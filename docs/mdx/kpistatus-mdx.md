@@ -1,5 +1,6 @@
 ---
-title: KPIStatus （MDX） |Microsoft Docs
+description: KPIStatus (MDX)
+title: KPIStatus (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: aa07788bc00cc3317024d287f1054a67c6447356
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 645f7d816d2d51ca5124a8b5300029cd57ae93d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905887"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483921"
 ---
 # <a name="kpistatus-mdx"></a>KPIStatus (MDX)
 

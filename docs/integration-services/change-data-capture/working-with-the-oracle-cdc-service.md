@@ -1,4 +1,5 @@
 ---
+description: 使用 Oracle CDC 服務
 title: 使用 Oracle CDC 服務 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cc7afe35c99a12e8e92111d05e62d9d0a5dd9c9c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a4734ab0b63605fbf6c8f8f59580789858a1a757
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922794"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484671"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>使用 Oracle CDC 服務
 

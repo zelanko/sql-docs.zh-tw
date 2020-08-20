@@ -1,4 +1,5 @@
 ---
+description: Teradata 目的地
 title: Teradata 目的地 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/22/2019
@@ -9,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2091999bce0fbacb99083239a7eb209fa8939505
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: caa6cc656e37f4718e06c9af010b458dfa1b738d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912365"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484503"
 ---
 # <a name="teradata-destination"></a>Teradata 目的地
 
@@ -50,11 +51,11 @@ Teradata 目的地支援兩種資料載入模式：
 ## <a name="error-handling"></a>錯誤處理
 
 載入處理期間傳回的錯誤會寫入至載入處理期間鎖定的暫存錯誤資料表。
-您可於進階編輯器中的 [最大錯誤數目 (MaxErrors)]  屬性設定可寫入這些資料表的錯誤數目上限。
+您可於進階編輯器中的 [最大錯誤數目 (MaxErrors)]**** 屬性設定可寫入這些資料表的錯誤數目上限。
 
 如果錯誤數目上限大於零，則會產生具有唯一名稱的錯誤資料表，並將資訊訊息輸出至封裝記錄檔。 錯誤則會透過標準 SSIS 元件錯誤輸出進行擷取。
 
-載入處理完成後，就會卸除暫存資料表。 如果 Teradata 目的地無法讀取時態表，除非您已選取 [永遠卸除錯誤資料表]  屬性，否則將不會卸除這些資料表。  如果載入處理在完成前就停止，您可以視需要手動卸除這些資料表。 這些資料表與目的地資料表位於相同的資料庫中。
+載入處理完成後，就會卸除暫存資料表。 如果 Teradata 目的地無法讀取時態表，除非您已選取 [永遠卸除錯誤資料表]**** 屬性，否則將不會卸除這些資料表。  如果載入處理在完成前就停止，您可以視需要手動卸除這些資料表。 這些資料表與目的地資料表位於相同的資料庫中。
 
 當達到**最大錯誤數目**時，目標資料表的狀態會取決於您所使用的模式。
 
@@ -71,9 +72,9 @@ TPT 資料流模式中則沒有平行處理原則的限制。 您可以針對相
 
 ## <a name="troubleshooting-the-teradata-destination"></a>針對 Teradata 目的地進行疑難排解
 
-您可以記錄 Teradata 來源對 Teradata 平行傳輸器 API (TPT API) 所執行的呼叫。 您可以啟用封裝記錄，然後在封裝層級選取 [診斷]  事件來記錄呼叫。
+您可以記錄 Teradata 來源對 Teradata 平行傳輸器 API (TPT API) 所執行的呼叫。 您可以啟用封裝記錄，然後在封裝層級選取 [診斷]**** 事件來記錄呼叫。
 
-您可以藉由啟用 ODBC 驅動程式管理員追蹤，記錄 Teradada 來源對 Teradata ODBC 驅動程式所執行的 ODBC 呼叫。 如需詳細資訊，請參閱 Microsoft 文件集＜如何使用 ODBC 資料來源管理員產生 ODBC 追蹤＞。 
+您可以藉由啟用 ODBC 驅動程式管理員追蹤，記錄 Teradada 來源對 Teradata ODBC 驅動程式所執行的 ODBC 呼叫。 如需詳細資訊，請參閱 Microsoft 文件集＜如何使用 ODBC 資料來源管理員產生 ODBC 追蹤＞。
 
 ## <a name="teradata-destination-custom-properties"></a>Teradata 目的地自訂屬性
 
@@ -82,29 +83,29 @@ TPT 資料流模式中則沒有平行處理原則的限制。 您可以針對相
 |屬性名稱|資料類型|描述|
 |:-|:-|:-|
 |AlwaysDropErrorTable|Boolean|預設值為 **False**。 若設定為 **True**，則即使 Teradata 目的地讀取失敗亦會卸除錯誤資料表。|
-|ArraySupport|Boolean|預設值為 **True**。 若設定為 **True**，則 DML 群組會使用 ArraySupport。 僅適用於 TPT 資料流。 這個屬性位於 [進階編輯器]  中。|
-|緩衝區|整數|要增加的要求緩衝區數目，可以將值設定為 2 到 64。 僅適用於 TPT 資料流。 這個屬性位於 [進階編輯器]  中。|
-|BufferMode|Boolean|預設值為 **True**。 如果使用 PutBuffer 功能，則必須設定為 **True**。 這個屬性位於 [進階編輯器]  中。|
-|BufferSize|整數|用於傳送載入包裹的輸出緩衝區大小 (以 KB 為單位)。 預設值為 1024。 僅適用於 TPT 載入。 這個屬性位於 [進階編輯器]  中。|
+|ArraySupport|Boolean|預設值為 **True**。 若設定為 **True**，則 DML 群組會使用 ArraySupport。 僅適用於 TPT 資料流。 這個屬性位於 [進階編輯器]**** 中。|
+|緩衝區|整數|要增加的要求緩衝區數目，可以將值設定為 2 到 64。 僅適用於 TPT 資料流。 這個屬性位於 [進階編輯器]**** 中。|
+|BufferMode|Boolean|預設值為 **True**。 如果使用 PutBuffer 功能，則必須設定為 **True**。 這個屬性位於 [進階編輯器]**** 中。|
+|BufferSize|整數|用於傳送載入包裹的輸出緩衝區大小 (以 KB 為單位)。 預設值為 1024。 僅適用於 TPT 載入。 這個屬性位於 [進階編輯器]**** 中。|
 |DataEncryption|Boolean|預設值為 **False**。 若設定為 **True**，則會使用完整安全性加密。|
-|DefaultCodePage|整數|當資料來源沒有字碼頁資訊時，所要使用的字碼頁。 <br>**注意**：這個屬性位於 [進階編輯器]  中。|
-|DetailedTracingLevel|整數 (列舉)|選取下列其中一個選項以進行進階追蹤： <br> **Off**：不使用進階記錄。 <br> **一般**：記錄驅動程式特定的活動一般追蹤。 <br> **CLI**：記錄 CLIv2 相關的活動追蹤。 <br> **通知方法**：記錄通知功能相關的活動追蹤。 <br> **通用程式庫**：記錄 Opcommon 程式庫活動追蹤。 <br> **全部**：記錄以上所有的活動追蹤。 <br> 進階追蹤記錄檔定義於 **DetailedTracingFile** 屬性中。 <br> 如果選項不為 Off，則您必須設定 **DetailedTracingFile** 屬性。 <br> 這個屬性位於 [進階編輯器]  中。|
-|DetailedTracingFile|String|當 **DetailedTracingLevel** 不為 **Off** 時，則會自動產生的記錄檔路徑。 這個屬性位於 [進階編輯器]  中。|
+|DefaultCodePage|整數|當資料來源沒有字碼頁資訊時，所要使用的字碼頁。 <br>**注意**：這個屬性位於 [進階編輯器] 中。|
+|DetailedTracingLevel|整數 (列舉)|選取下列其中一個選項以進行進階追蹤： <br> **Off**：不使用進階記錄。 <br> **一般**：記錄驅動程式特定的活動一般追蹤。 <br> **CLI**：記錄 CLIv2 相關的活動追蹤。 <br> **通知方法**：記錄通知功能相關的活動追蹤。 <br> **通用程式庫**：記錄 Opcommon 程式庫活動追蹤。 <br> **全部**：記錄以上所有的活動追蹤。 <br> 進階追蹤記錄檔定義於 **DetailedTracingFile** 屬性中。 <br> 如果選項不為 Off，則您必須設定 **DetailedTracingFile** 屬性。 <br> 這個屬性位於 [進階編輯器]**** 中。|
+|DetailedTracingFile|String|當 **DetailedTracingLevel** 不為 **Off** 時，則會自動產生的記錄檔路徑。 這個屬性位於 [進階編輯器]**** 中。|
 |DiscardLargeRow|Boolean|預設值為 **False**。 若設定為 **True**，則捨棄大型資料列 (大於 64K)|
 |ErrorTableName|String|錯誤資料表名稱。 預設值為目標資料表名稱|
-|ExtendedStringColumnsAllocation|Boolean|若設定為 **True**，則會使用**最大傳輸字元配置因數**。 <br> 如果 Teradata 資料庫的 [匯出寬度資料表識別碼]  屬性設定為 [最大的預設值]  ，則此值應該設定為 **True**。 <br> 預設值為 **False**。|
+|ExtendedStringColumnsAllocation|Boolean|若設定為 **True**，則會使用**最大傳輸字元配置因數**。 <br> 如果 Teradata 資料庫的 [匯出寬度資料表識別碼]**** 屬性設定為 [最大的預設值]****，則此值應該設定為 **True**。 <br> 預設值為 **False**。|
 |FastLoad|Boolean|若設定為 **True**，則會使用快速載入。 預設值為 **false**。 這項功能也可以在 [Teradata 目的地編輯器 (連線管理員頁面)](#teradata-destination-editor-connection-manager-page) 中設定。|
-|MaxErrors|整數|停止資料流程之前可以發生的錯誤數目。 預設值為 **0**，表示沒有錯誤數目的限制。<br> 如果已在 [錯誤處理]  頁面中選取 [重新導向流程]  。 在達到錯誤數目限制之前，所有錯誤都會在錯誤輸出中傳回。 如需詳細資訊，請參閱 [Teradata 目的地編輯器 (錯誤輸出頁面)](#teradata-destination-editor-error-output-page)。|
+|MaxErrors|整數|停止資料流程之前可以發生的錯誤數目。 預設值為 **0**，表示沒有錯誤數目的限制。<br> 如果已在 [錯誤處理]**** 頁面中選取 [重新導向流程]****。 在達到錯誤數目限制之前，所有錯誤都會在錯誤輸出中傳回。 如需詳細資訊，請參閱 [Teradata 目的地編輯器 (錯誤輸出頁面)](#teradata-destination-editor-error-output-page)。|
 |MaxSessions|整數|已登入的工作階段數目上限。 這個值必須大於一。 預設值為每個可用 AMP 的一個工作階段。|
 |MinSessions|整數|已登入的工作階段數目下限。 這個值必須大於一。 預設值為每個可用 AMP 的一個工作階段。|
-|Pack|整數|要壓縮為多重陳述式要求的陳述式數目。 預設值為 20，允許的上限為 2400。 僅適用於 TPT 資料流。 這個屬性位於 [進階編輯器]  中。|
-|PackMaximum|Boolean|若設定為 **True**，則會自動判斷目前資料流作業的最大壓縮因素。 僅適用於 TPT 資料流。 這個屬性位於 [進階編輯器]  中。|
-|QueryBandSessInfo|Varchar|為使用者定義、並以工作階段為基礎的查詢頻帶運算式，可讓您進行退款監視和治理。 這個屬性必須為連接字串格式。 這個屬性位於 [進階編輯器]  中。|
-|ReplicationOveride|整數 (列舉)|選項： <br> **預設值**：不將 SET SESSION OVERRIDE REPLICATION 陳述式傳送到資料庫。 使用資料庫的預設設定。 <br> **於**：覆寫一般複寫服務控制項。 <br> **Off**：使用一般複寫服務控制項。 <br> 這個屬性只適用於 TPT 資料流。 <br> 這個屬性位於 [進階編輯器]  中。|
-|Robust|Boolean|若設定為 **True**，則使用強固重新啟動邏輯以復原並重新啟動作業。 這個屬性只適用於 **TPT 資料流**。 這個屬性位於 [進階編輯器]  中。|
+|Pack|整數|要壓縮為多重陳述式要求的陳述式數目。 預設值為 20，允許的上限為 2400。 僅適用於 TPT 資料流。 這個屬性位於 [進階編輯器]**** 中。|
+|PackMaximum|Boolean|若設定為 **True**，則會自動判斷目前資料流作業的最大壓縮因素。 僅適用於 TPT 資料流。 這個屬性位於 [進階編輯器]**** 中。|
+|QueryBandSessInfo|Varchar|為使用者定義、並以工作階段為基礎的查詢頻帶運算式，可讓您進行退款監視和治理。 這個屬性必須為連接字串格式。 這個屬性位於 [進階編輯器]**** 中。|
+|ReplicationOveride|整數 (列舉)|選項： <br> **預設值**：不將 SET SESSION OVERRIDE REPLICATION 陳述式傳送到資料庫。 使用資料庫的預設設定。 <br> **於**：覆寫一般複寫服務控制項。 <br> **Off**：使用一般複寫服務控制項。 <br> 這個屬性只適用於 TPT 資料流。 <br> 這個屬性位於 [進階編輯器]**** 中。|
+|Robust|Boolean|若設定為 **True**，則使用強固重新啟動邏輯以復原並重新啟動作業。 這個屬性只適用於 **TPT 資料流**。 這個屬性位於 [進階編輯器]**** 中。|
 |TableName|String|包含所要使用之資料的資料表名稱。|
-|TenacityHours|整數|當已在執行載入/匯出作業的最大數目時，TPT 驅動程式嘗試登入的小時數。 預設值為 4 小時。 這個屬性位於 [進階編輯器]  中|
-|TenacitySleep|整數|在達到限制時，TPT 驅動程式在嘗試登入前暫停的分鐘數。 限制是由 **MaxSessions** 與 **TenacityHours** 屬性所定義。 預設值為 6 分鐘。 這個屬性位於 [進階編輯器]  中|
+|TenacityHours|整數|當已在執行載入/匯出作業的最大數目時，TPT 驅動程式嘗試登入的小時數。 預設值為 4 小時。 這個屬性位於 [進階編輯器] 中|
+|TenacitySleep|整數|在達到限制時，TPT 驅動程式在嘗試登入前暫停的分鐘數。 限制是由 **MaxSessions** 與 **TenacityHours** 屬性所定義。 預設值為 6 分鐘。 這個屬性位於 [進階編輯器] 中|
 |UnicodePassThrough|Boolean|Off (預設值)：停用 Unicode 通過。 <br>On：啟用 Unicode 通過。|
 
 ## <a name="configuring-the-teradata-destination"></a>設定 Teradata 目的地
@@ -124,13 +125,13 @@ Teradata 目的地可以透過程式設計的方式或 SSIS 設計工具來設�
 **[進階編輯器]** 對話方塊包含可以程式設計方式設定的屬性。
 若要開啟 **[進階編輯器]** 對話方塊：
 
-- 在 Integration Services 專案的 [資料流程]  畫面中，以滑鼠右鍵按一下 [Teradata 目的地]，然後選取 [顯示進階編輯器]  。
+- 在 Integration Services 專案的 [資料流程]**** 畫面中，以滑鼠右鍵按一下 [Teradata 目的地]，然後選取 [顯示進階編輯器]****。
 
 如需有關可在 [進階編輯器] 對話方塊中設定之屬性的詳細資訊，請參閱 [Teradata 目的地自訂屬性](#teradata-destination-custom-properties)。
 
 ## <a name="teradata-destination-editor-connection-manager-page"></a>Teradata 目的地編輯器 (連線管理員頁面)
 
-使用 [Teradata 目的地編輯器]  對話方塊的 [連線管理員]  頁面，即可選取目的地的 Teradata 連線管理員。 這個頁面也可以讓您從資料庫中選取資料表或檢視。
+使用 [Teradata 目的地編輯器]**** 對話方塊的 [連線管理員]**** 頁面，即可選取目的地的 Teradata 連線管理員。 這個頁面也可以讓您從資料庫中選取資料表或檢視。
 
 若要開啟Teradata 目的地編輯器連線管理員頁面
 
@@ -144,11 +145,11 @@ Teradata 目的地可以透過程式設計的方式或 SSIS 設計工具來設�
 
 **[ODBC 目的地編輯器]**
 
-從清單中選取現有的連線管理員，或按一下 [新增]  以建立新的 Teradata 連線管理員。
+從清單中選取現有的連線管理員，或按一下 [新增]**** 以建立新的 Teradata 連線管理員。
 
 **新增**
 
-按一下 **[新增]** 。 [Teradata 連線管理員編輯器]  對話方塊隨即開啟，讓您能夠建立新的連線管理員。
+按一下 **[新增]** 。 [Teradata 連線管理員編輯器]**** 對話方塊隨即開啟，讓您能夠建立新的連線管理員。
 
 **資料存取模式**
 
@@ -173,7 +174,7 @@ Teradata 目的地可以透過程式設計的方式或 SSIS 設計工具來設�
 
 ## <a name="teradata-destination-editor-mappings-page"></a>Teradata 目的地編輯器 (對應頁面)
 
-使用 [Teradata 目的地編輯器]  對話方塊的 [對應]  頁面，將輸入資料行對應至目的地資料行。
+使用 [Teradata 目的地編輯器]**** 對話方塊的 [對應]**** 頁面，將輸入資料行對應至目的地資料行。
 
 若要開啟 Teradata 目的地編輯器對應頁面
 
@@ -195,7 +196,7 @@ Teradata 目的地可以透過程式設計的方式或 SSIS 設計工具來設�
 
 **輸入資料行**
 
-檢視所選取的輸入資料行。 您可以選取 [< 忽略 >]  移除對應，將資料行從輸出排除。
+檢視所選取的輸入資料行。 您可以選取 [< 忽略 >]**** 移除對應，將資料行從輸出排除。
 
 **目的地資料行**
 

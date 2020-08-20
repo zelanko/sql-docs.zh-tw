@@ -1,4 +1,5 @@
 ---
+description: 使用彙總轉換來彙總資料集中的值
 title: 使用彙總轉換來彙總資料集中的值 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7290cc15e5721918af9eaa3507465db222f812cf
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6c53ac2228a7ddbef51473ba42c9688566e9dbfb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915759"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484431"
 ---
 # <a name="aggregate-values-in-a-dataset-with-the-aggregate-transformation"></a>使用彙總轉換來彙總資料集中的值
 
@@ -49,7 +50,7 @@ ms.locfileid: "86915759"
   
 8.  (選擇性) 修改 **[輸出別名]** 資料行中的值。  
   
-9. 若要變更預設彙總作業 **[群組依據]** ，請在 **[作業]** 清單中選取不同的作業。  
+9. 若要變更預設彙總作業 **[群組依據]**，請在 **[作業]** 清單中選取不同的作業。  
   
 10. 若要變更預設比較，請選取 **[比較旗標]** 資料行中列出的個別比較旗標。 依預設，比較會忽略大小寫、假名類型、不佔空間字元和字元寬度。  
   

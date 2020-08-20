@@ -1,5 +1,6 @@
 ---
-title: PropertyValueType 屬性（SqlServiceAdvancedProperty）
+description: PropertyValueType 屬性 (SqlServiceAdvancedProperty 類別)
+title: 'PropertyValueType 屬性 (SqlServiceAdvancedProperty) '
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f1b1dcc6-6d44-4ad2-8c2e-4fd48c2c8086
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 22a1933170fcf12243305eccec63fe5f2b4c3262
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 23226ed2719a548645df4aebdf44834420871f82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880504"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485044"
 ---
 # <a name="propertyvaluetype-property-sqlserviceadvancedproperty-class"></a>PropertyValueType 屬性 (SqlServiceAdvancedProperty 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ object.PropertyValueType [= value]
  代表進階屬性的 [SqlServiceAdvancedProperty 類別](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) 物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
- **Uint32**值，表示屬性的資料類型。  
+ 表示屬性之資料類型的 **uint32** 值。  
   
 ## <a name="remarks"></a>備註  
   

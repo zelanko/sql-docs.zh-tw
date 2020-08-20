@@ -1,4 +1,5 @@
 ---
+description: 錯誤和事件參考 (複寫)
 title: 錯誤和事件參考 (複寫) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 273caba1a25efbfd30bb856f6ebaf157b9bf5a03
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 10d2073949de158c0773876adef0ba06d6e587eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85652983"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482400"
 ---
 # <a name="errors-and-events-reference-replication"></a>錯誤和事件參考 (複寫)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -78,7 +79,7 @@ ms.locfileid: "85652983"
 |MSSQL_ENG021642。 請參閱 [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)。|異質性發行者需要已連結伺服器。 已經存在名稱為 '%s' 的連結伺服器。 請移除連結的伺服器或選擇其他發行者名稱。|  
 |MSSQL_ENG021663。 請參閱 [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)。|找不到有效的來源資料表 [%s].[%s] 主索引鍵。|  
 |MSSQL_ENG021684。 請參閱 [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)。|與 Oracle 發行者 '%s' 管理者登入相關聯的權限不足。|  
-|[MSSQL_ENG021797](../../relational-databases/replication/mssql-eng021797.md)|'%s' 必須是有效的 Windows 登入，其格式為：'MACHINE\Login' 或 'DOMAIN\Login'。 請參閱 '%s' 的文件集。|  
+|[MSSQL_ENG021797](../../relational-databases/replication/mssql-eng021797.md)|'%s' 必須是有效的 Windows 登入，格式為：'MACHINE\Login' 或 'DOMAIN\Login'。 請參閱 '%s' 的文件集。|  
 |[MSSQL_ENG021798](../../relational-databases/replication/mssql-eng021798.md)|在繼續進行之前，必須先經由 '%s' 將 '%s' 代理程式作業加入。 請參閱 '%s' 的文件集。|  
 |[MSSQL_REPL020011](../../relational-databases/replication/mssql-repl020011.md)|該處理無法執行 '%1' (在 '%2')。|  
 |[MSSQL_REPL027056](../../relational-databases/replication/mssql-repl027056.md)|合併處理無法變更生成集記錄 '%1'。 執行疑難排解時，以詳細資訊記錄重新啟動同步處理，並指定要寫入的輸出檔案。|  

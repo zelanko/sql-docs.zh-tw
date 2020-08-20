@@ -1,4 +1,5 @@
 ---
+description: 要求記錄檔
 title: 要求記錄檔 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 165d3833-0493-490c-9f63-8a134a7fafb8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9c0a129bd8985180a9094b8846e685c0d4025313
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fe85b46fcdcfdb398993dc073f69a8c31aa08742
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922744"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484559"
 ---
 # <a name="request-log"></a>要求記錄檔
 
@@ -36,7 +37,7 @@ ms.locfileid: "86922744"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含 SAP BW 來源的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
   
-2.  在 [資料流程]  索引標籤上，按兩下 SAP BW 來源。  
+2.  在 [資料流程] 索引標籤上，按兩下 SAP BW 來源。  
   
 3.  在 **[SAP BW 來源編輯器]** 中，按一下 **[連接管理員]** 開啟編輯器的 **[連接管理員]** 頁面。  
   
@@ -60,7 +61,7 @@ ms.locfileid: "86922744"
 |I|參考資訊。|  
 |A|作業已中止。|  
   
- **訊息**  
+ **Message**  
  顯示與記錄之事件相關聯的訊息文字。  
   
 ## <a name="see-also"></a>另請參閱  

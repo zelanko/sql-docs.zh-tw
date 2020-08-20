@@ -1,4 +1,5 @@
 ---
+description: 開發具有同步輸出的自訂轉換元件
 title: 開發具有同步輸出的自訂轉換元件 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0b4c465ddb7efab8c5e2398facc51e89425389cb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 755fdbcd3ecf01e0b76548f728d77c66ebe011a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920214"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484301"
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>開發具有同步輸出的自訂轉換元件
 
@@ -115,7 +116,7 @@ End Class
   
  資料行的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A> 會決定為其他屬性設定的值。 下表顯示每個 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A> 的相依屬性之需求。 未列出的資料類型會將其相依屬性設定為零。  
   
-|DataType|長度|調整|Precision|CodePage|  
+|DataType|長度|調整|精確度|CodePage|  
 |--------------|------------|-----------|---------------|--------------|  
 |DT_DECIMAL|0|大於 0，且小於或等於 28。|0|0|  
 |DT_CY|0|0|0|0|  

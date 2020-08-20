@@ -1,4 +1,5 @@
 ---
+description: 進階合併式複寫衝突 - 選擇解析程式
 title: 選擇解析程式 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b7dec3fa-d9d9-409d-b946-f9b9a3202829
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 297580770800c7cd251d604e67884a2b069f52f8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ad013d29b6915f83e4fd80df3e929e4585064b9f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896303"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482398"
 ---
 # <a name="advanced-merge-replication-conflict---choose-a-resolver"></a>進階合併式複寫衝突 - 選擇解析程式
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,5 +1,6 @@
 ---
-title: sys.sys許可權（Transact-sql） |Microsoft Docs
+description: sys.syspermissions (Transact-SQL)
+title: sys.sys(Transact-sql) 的許可權 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ba9a9a88-55d2-41a7-b09b-342e8b9a54c5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f28ff4a642b1772d7aee921b6047e81a3b306a5b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 62a64d7c1ede52ee990c8021d13d8b4de6a52ff6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897348"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482079"
 ---
 # <a name="syssyspermissions-transact-sql"></a>sys.syspermissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85897348"
 |-----------------|---------------|-----------------|  
 |**id**|**int**|物件權限的物件識別碼。<br /><br /> 0 = 陳述式權限。|  
 |**grantee**|**smallint**|該權限影響所及的使用者、群組或角色識別碼。|  
-|**授權**|**smallint**|授與或拒絕該權限的使用者、群組或角色的識別碼。|  
+|**grantor**|**smallint**|授與或拒絕該權限的使用者、群組或角色的識別碼。|  
 |**actadd**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**actmod**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**seladd**|**varbinary(4000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -50,7 +51,7 @@ ms.locfileid: "85897348"
 |**refmod**|**varbinary(4000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 ## <a name="see-also"></a>另請參閱  
- [將系統資料表對應至系統檢視 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;將系統資料表對應至系統檢視 ](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [相容性檢視 &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

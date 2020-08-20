@@ -1,4 +1,5 @@
 ---
+description: 建立自訂連接管理員
 title: 建立自訂連線管理員 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e83f8e02-ace4-42e0-b979-2f6be1460985
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c137a62711ad824772b1845776cd383b3ee235ce
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 55eafedfd05ce1dde2468bfda62b515057ea4bb6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919456"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484250"
 ---
 # <a name="creating-a-custom-connection-manager"></a>建立自訂連接管理員
 
@@ -47,7 +48,7 @@ ms.locfileid: "86919456"
  透過使用強式名稱金鑰檔案，將兩個專案都設定成簽署將在建立時期產生的組件。  
   
 ### <a name="applying-the-dtsconnection-attribute"></a>套用 DtsConnection 屬性  
- 將 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> 屬性套用至您已建立的類別，以便將它識別為連接管理員。 此屬性會提供連接管理員的名稱、描述和連接類型等設計階段資訊。 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.ConnectionType%2A> 與 **Description** 屬性會對應至顯示在 [加入 SSIS 連線管理員] 對話方塊中的 [類型] 與 [描述] 資料行，這個對話方塊將在為 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中的封裝設定連接時顯示。  
+ 將 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> 屬性套用至您已建立的類別，以便將它識別為連接管理員。 此屬性會提供連接管理員的名稱、描述和連接類型等設計階段資訊。 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.ConnectionType%2A> 與 **Description** 屬性會對應至顯示在 [加入 SSIS 連線管理員]**** 對話方塊中的 [類型]**** 與 [描述]**** 資料行，這個對話方塊將在為 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中的封裝設定連接時顯示。  
   
  使用 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> 屬性將連接管理員連結至其自訂使用者介面。 如需取得此屬性所需的公開金鑰權杖，可以使用 **sn.exe -t**，從要用於簽署使用者介面組件的金鑰組 (.snk) 檔案顯示公開金鑰權杖。  
   
@@ -79,6 +80,6 @@ ConnectionManagerBase
   
 ## <a name="see-also"></a>另請參閱  
  [撰寫自訂連線管理員的程式碼](../../../integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md)   
- [開發自訂連線管理員的使用者介面](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
+ [開發自訂連接管理員的使用者介面](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
   
   

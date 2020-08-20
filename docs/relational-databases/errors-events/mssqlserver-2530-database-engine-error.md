@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_2530
 title: MSSQLSERVER_2530 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -9,12 +10,12 @@ ms.topic: language-reference
 ms.assetid: 5d4be07a-38a5-4b25-819c-4dcb4636cc15
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 76ad2670dc60665fa128dd97aa335330228262ef
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3da9afc7a5a648b541cf88a2d83aa6c738895832
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85780350"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482818"
 ---
 # <a name="mssqlserver_2530"></a>MSSQLSERVER_2530
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

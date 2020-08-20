@@ -1,5 +1,6 @@
 ---
-title: 資料收集器視圖（Transact-sql） |Microsoft Docs
+description: 資料收集器檢視 (Transact-SQL)
+title: " (Transact-sql) 的資料收集器視圖 |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a005e885-7813-4c7e-b332-b01d9e9d4054
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 69ae9f64a47283d001fbb6a210f530034b21f228
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b35f12b1ff06e417a01fafe6f4de1c012ee8f9fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918040"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482211"
 ---
 # <a name="data-collector-views-transact-sql"></a>資料收集器檢視 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  資料收集器會提供下列檢視，以便顯示資料收集器組態的相關資訊，例如收集器型別屬性、收集組和收集組項目，以及在收集組執行時取得的執行統計資料。 這些 views 在**msdb**資料庫中，也會提供基礎資料表的抽象層。 這個抽象層會防止他人直接存取資料表，同時允許對資料表進行變更，但不影響任何相關聯的應用程式，藉以強化安全性。  
+  資料收集器會提供下列檢視，以便顯示資料收集器組態的相關資訊，例如收集器型別屬性、收集組和收集組項目，以及在收集組執行時取得的執行統計資料。 這些位於 **msdb** 資料庫中的 views 也會提供基礎資料表的抽象層。 這個抽象層會防止他人直接存取資料表，同時允許對資料表進行變更，但不影響任何相關聯的應用程式，藉以強化安全性。  
 
 :::row:::
     :::column:::

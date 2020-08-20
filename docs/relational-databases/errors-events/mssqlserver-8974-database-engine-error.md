@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_8974
 title: MSSQLSERVER_8974 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 52098678-0858-4a14-ad07-37ebbafca5fc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 965fcd25d086fba70157dc4730659c414b65f192
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 821a2cb075a6223bf33ca18f95128984d0dad297
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85636986"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482665"
 ---
 # <a name="mssqlserver_8974"></a>MSSQLSERVER_8974
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

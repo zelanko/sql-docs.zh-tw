@@ -1,4 +1,5 @@
 ---
+description: 將定義域匯出成 .dqs 檔案
 title: 將定義域匯出成 .dqs 檔案
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: eba10d3d-b5c4-447b-8a30-fa07996cb28e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: f9e672685a2135fd494da4adb8a1844a25243f6f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d3e37309a430b92e12493c178eeaf7a117a41552
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895356"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484858"
 ---
 # <a name="export-a-domain-to-a-dqs-file"></a>將定義域匯出成 .dqs 檔案
 
@@ -38,7 +39,7 @@ ms.locfileid: "85895356"
 ####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能將定義域匯出到 .dqs 資料檔。  
   
-##  <a name="export-a-domain-to-a-dqs-file"></a><a name="Export"></a>將網域匯出至 dqs 檔案  
+##  <a name="export-a-domain-to-a-dqs-file"></a><a name="Export"></a> 將網域匯出至 dqs 檔案  
  您可以從任何 [定義域管理] 頁面匯出。 您可以從使用者介面的控制項或是 [定義域清單] 窗格之內容功能表的命令中取得匯出命令。  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
@@ -51,9 +52,9 @@ ms.locfileid: "85895356"
   
 5.  在 [匯出到資料檔]**** 對話方塊中，移至您想要用來儲存檔案的資料夾、為檔案命名或是保留預設名稱、將 [DQS 資料檔 (\*.dqs)]**** 保留為 [檔案類型]****，然後按一下 [儲存]****。  
   
-6.  在 **[匯出定義域]** 對話方塊中，確認此對話方塊中的狀態行指出已完成匯出。 按一下 [確定] 。  
+6.  在 **[匯出定義域]** 對話方塊中，確認此對話方塊中的狀態行指出已完成匯出。 按一下 [確定]。  
   
-##  <a name="follow-up-after-exporting-a-domain-to-a-dqs-file"></a><a name="FollowUp"></a>後續操作：將定義域匯出至 dqs 檔案之後  
+##  <a name="follow-up-after-exporting-a-domain-to-a-dqs-file"></a><a name="FollowUp"></a> 後續操作：將定義域匯出至 dqs 檔案之後  
  在您將定義域匯出到 .dqs 檔案之後，您可以將此定義域匯入另一個知識庫中。  
   
   

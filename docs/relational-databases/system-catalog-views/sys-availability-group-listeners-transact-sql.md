@@ -1,5 +1,6 @@
 ---
-title: sys.databases availability_group_listeners （Transact-sql） |Microsoft Docs
+description: sys.availability_group_listeners (Transact-SQL)
+title: sys. availability_group_listeners (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b5e7d1fb-3ffb-4767-8135-604c575016b1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8b4257c7a4eba52ece199ee3a3426774e92ce0da
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c558cab7e06e914921f55fdf521ee293e3e22568
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750712"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482163"
 ---
 # <a name="sysavailability_group_listeners-transact-sql"></a>sys.availability_group_listeners (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,11 +39,11 @@ ms.locfileid: "85750712"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**group_id**|**uniqueidentifier**|[Sys. availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)的可用性群組識別碼（**group_id**）。|  
-|**listener_id**|**Nvarchar （36）**|叢集資源識別碼中的 GUID。|  
-|**dns_name**|**Nvarchar （63）**|可用性群組接聽程式的已設定網路名稱 (主機名稱)。|  
-|**port**|**int**|為可用性群組接聽程式設定的 TCP 通訊埠編號。<br /><br /> NULL = 接聽程式已在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外面設定，而且其通訊埠編號尚未加入至可用性群組。 若要加入埠，請 pleaseuse [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)語句的 MODIFY 接聽程式選項 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。|  
-|**is_conformant**|**bit**|此 IP 組態是否符合標準，可為下列其中一個值：<br /><br /> 1 = 接聽程式符合標準。 只有 "OR" 關聯性存在於其網際網路通訊協定（IP）位址之間。 *一致*包含[CREATE AVAILABILITY GROUP](../../t-sql/statements/create-availability-group-transact-sql.md)語句所建立的每個 IP 設定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 此外，如果已在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外面建立 IP 組態 (例如，藉由使用 WSFC 容錯移轉叢集管理員)，但是可由 ALTER AVAILABILITY GROUP tsql 陳述式加以修改，則表示 IP 組態符合標準。<br /><br /> 0 = 接聽程式不符合標準。 一般來說，這表示 IP 位址無法使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命令加以設定，但是已直接在 WSFC 叢集中定義。|  
+|**group_id**|**uniqueidentifier**|可用性群組識別碼 (從[sys. availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) **group_id**) 。|  
+|**listener_id**|**Nvarchar (36) **|叢集資源識別碼中的 GUID。|  
+|**dns_name**|**Nvarchar (63) **|可用性群組接聽程式的已設定網路名稱 (主機名稱)。|  
+|**port**|**int**|為可用性群組接聽程式設定的 TCP 通訊埠編號。<br /><br /> NULL = 接聽程式已在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外面設定，而且其通訊埠編號尚未加入至可用性群組。 若要加入埠，請 pleaseuse [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)語句的 [修改接聽程式] 選項 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。|  
+|**is_conformant**|**bit**|此 IP 組態是否符合標準，可為下列其中一個值：<br /><br /> 1 = 接聽程式符合標準。  (IP) 位址的網際網路通訊協定中，只會存在「或」關聯。 *符合標準*：會包含[CREATE AVAILABILITY GROUP](../../t-sql/statements/create-availability-group-transact-sql.md)語句所建立的每個 IP 設定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 此外，如果已在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外面建立 IP 組態 (例如，藉由使用 WSFC 容錯移轉叢集管理員)，但是可由 ALTER AVAILABILITY GROUP tsql 陳述式加以修改，則表示 IP 組態符合標準。<br /><br /> 0 = 接聽程式不符合標準。 一般來說，這表示 IP 位址無法使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命令加以設定，但是已直接在 WSFC 叢集中定義。|  
 |**ip_configuration_string_from_cluster**|**nvarchar(max)**|此接聽程式的叢集 IP 組態字串 (如果有的話)。 NULL = 接聽程式沒有虛擬 IP 位址。 例如：<br /><br /> IPv4 位址：`65.55.39.10`。<br /><br /> IPv6 位址：`2001::4898:23:1002:20f:1fff:feff:b3a3`|  
   
 ## <a name="security"></a>安全性  
@@ -52,8 +53,8 @@ ms.locfileid: "85750712"
   
 ## <a name="see-also"></a>另請參閱  
  [Always On 可用性群組動態管理檢視和函數 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
- [Always On 可用性群組目錄檢視 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [&#40;Transact-sql&#41;監視可用性群組](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [AlwaysOn 可用性群組目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
+ [監視可用性群組 &#40;Transact-sql&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   

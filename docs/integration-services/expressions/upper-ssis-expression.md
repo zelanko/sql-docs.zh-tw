@@ -1,4 +1,5 @@
 ---
+description: UPPER (SSIS 運算式)
 title: UPPER (SSIS 運算式) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d33985f7-1048-4023-83e4-274090acda78
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f14c91f8f1bd21701d43d42388963ed22d105a43
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bd1a7c2d716f3043693840097dd832dec143cd70
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920616"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484361"
 ---
 # <a name="upper-ssis-expression"></a>UPPER (SSIS 運算式)
 

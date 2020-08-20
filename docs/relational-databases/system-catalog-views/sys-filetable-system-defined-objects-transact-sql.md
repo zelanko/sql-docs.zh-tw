@@ -1,5 +1,6 @@
 ---
-title: sys.databases filetable_system_defined_objects （Transact-sql） |Microsoft Docs
+description: sys.filetable_system_defined_objects (Transact-SQL)
+title: sys. filetable_system_defined_objects (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 62022e6b-46f6-495f-b14b-53f41e040361
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0232a635267dc97f53f67309fb59d06651d918ce
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7076e365989a9ceeac69ed9025f579edd8071a1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786434"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482121"
 ---
 # <a name="sysfiletable_system_defined_objects-transact-sql"></a>sys.filetable_system_defined_objects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,8 +38,8 @@ ms.locfileid: "85786434"
   
 |資料行|資料類型|描述|  
 |------------|---------------|-----------------|  
-|object_id|**int**|與 FileTable 相關的系統定義物件的物件識別碼。<br /><br /> 參考**sys.databases**中的物件。|  
-|**parent_object_id**|**int**|父 FileTable 的物件識別碼。<br /><br /> 參考**sys.databases**中的物件。|  
+|object_id|**int**|與 FileTable 相關的系統定義物件的物件識別碼。<br /><br /> 參考 **sys. 物件**中的物件。|  
+|**parent_object_id**|**int**|父 FileTable 的物件識別碼。<br /><br /> 參考 **sys. 物件**中的物件。|  
   
 ## <a name="see-also"></a>另請參閱  
  [建立、改變及卸除 FileTable](../../relational-databases/blob/create-alter-and-drop-filetables.md)   

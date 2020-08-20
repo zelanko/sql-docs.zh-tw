@@ -1,4 +1,5 @@
 ---
+description: 訂閱類型
 title: 訂閱類型 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 9a50f588-ee45-4a87-826f-372ff0798587
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c8b31b962fed5f250f2c16c74736a1a2061341fd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7816e2d4b0094b502979811fa25c42c9c447ffc0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729349"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482268"
 ---
 # <a name="subscription-type"></a>訂閱類型
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "85729349"
 >  建立訂閱之後，就無法變更訂閱類型。  
   
 ## <a name="options"></a>選項。  
- **訂閱屬性**  
+ **訂用帳戶屬性**  
  針對每個訂閱者，請從 **[訂閱類型]** 資料行的下拉式清單方塊中選取 **[客訂閱]** 或 **[主訂閱]** 。 針對擁有主訂閱的訂閱者，請在 **[衝突解決的優先權]** 資料行中輸入介於 0 和 99.99 之間的數字 (數字愈高，訂閱者的優先權就愈高)。  
   
 ## <a name="see-also"></a>另請參閱  

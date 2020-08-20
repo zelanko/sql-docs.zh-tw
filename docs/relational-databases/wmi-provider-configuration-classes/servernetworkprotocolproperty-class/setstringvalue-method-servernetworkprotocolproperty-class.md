@@ -1,5 +1,6 @@
 ---
-title: SetStringValue 方法（ServerNetworkProtocolProperty）
+description: SetStringValue 方法 (ServerNetworkProtocolProperty 類別)
+title: 'SetStringValue 方法 (ServerNetworkProtocolProperty) '
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0911df30-55f7-4fca-a1fb-01d2c91c1467
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d688677f4c1d58e39e6ad8e66aacf5fd17efdb77
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4b080227ebe17970196aa817320b6ce6959dfc0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888621"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485151"
 ---
 # <a name="setstringvalue-method-servernetworkprotocolproperty-class"></a>SetStringValue 方法 (ServerNetworkProtocolProperty 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,11 +38,11 @@ object.SetStringValue(StrValue)
   
 ## <a name="parts"></a>組件  
  *object*  
- 代表實例上網路通訊協定之屬性的[ServerNetworkProtocolProperty 類別](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)物件 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+ 代表實例上網路通訊協定之屬性的 [ServerNetworkProtocolProperty 類別](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md) 物件 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 #### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |*StrValue*|指定目前屬性之新值的字串值。|  
   

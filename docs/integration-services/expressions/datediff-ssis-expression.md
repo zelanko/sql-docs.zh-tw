@@ -1,4 +1,5 @@
 ---
+description: DATEDIFF (SSIS 運算式)
 title: DATEDIFF (SSIS 運算式) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2f869de30e8f6b6c65d01cc3189d9e63abfb57e7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3e7133fffcea2afe188e00f2c80aa51d6825386c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914734"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484414"
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF (SSIS 運算式)
 
@@ -53,13 +54,13 @@ DATEDIFF(datepart, startdate, endate)
 |日期部份|縮寫|  
 |--------------|-------------------|  
 |Year|yy, yyyy|  
-|Quarter|qq, q|  
+|季|qq, q|  
 |Month|mm, m|  
 |Dayofyear|dy, y|  
-|Day|dd, d|  
+|天|dd, d|  
 |週|wk, ww|  
 |Weekday|dw, w|  
-|Hour|Hh|  
+|小時|Hh|  
 |Minute|mi, n|  
 |Second|ss, s|  
 |Millisecond|Ms|  

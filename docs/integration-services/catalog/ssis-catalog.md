@@ -1,4 +1,5 @@
 ---
+description: SSIS 目錄
 title: SSIS 目錄 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/12/2018
@@ -14,12 +15,12 @@ f1_keywords:
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e2ae3fa6680916e01bb69e2e8d2d243404a311f0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e507742ac9da235499749ed2345b25cfa11d87e9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922577"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484898"
 ---
 # <a name="ssis-catalog"></a>SSIS 目錄
 

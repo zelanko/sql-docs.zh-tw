@@ -1,5 +1,6 @@
 ---
-title: IBCPSession：： BCPInit (Native Client OLE DB 提供者) |Microsoft Docs
+description: 'IBCPSession：： BCPInit (Native Client OLE DB 提供者) '
+title: IBCPSession：： BCPInit (Native Client OLE DB provider) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: 583096d7-da34-49be-87fd-31210aac81aa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f23247e09c47bc41aa7a12c89df4be6fdb5791bb
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 182a3f3516c7eb965255392b808cbc24bb839338
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87941028"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482611"
 ---
 # <a name="ibcpsessionbcpinit-native-client-ole-db-provider"></a>IBCPSession：： BCPInit (Native Client OLE DB 提供者) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +45,7 @@ HRESULT BCPInit(
   
  **BCPInit** 方法會檢查資料庫來源或目標資料表的結構，而不會檢查資料檔案的結構。 此方法會根據資料庫資料表、檢視或 SELECT 結果集中的每個資料行，指定資料檔的資料格式值。 這個指定包括每個資料行的資料類型、資料中是否有長度或 null 指標和結束字元位元組字串，以及固定長度資料類型的寬度。 **BCPInit** 方法會設定這些值，如下所示：  
   
--   指定的資料類型為資料行在資料庫資料表、檢視或 SELECT 結果集中的資料類型。 資料類型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以 Native Client 標頭檔中指定的原生資料類型來列舉， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (sqlncli) 。 其值會採用 BCP_TYPE_XXX 的模式。 資料會以其電腦格式表示。 也就是說，來自 integer 資料類型之資料行的資料會根據建立資料檔案之電腦，以四個位元組由大到小或由小到大的順序表示。  
+-   指定的資料類型為資料行在資料庫資料表、檢視或 SELECT 結果集中的資料類型。 資料型別是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以 Native Client 標頭檔中指定的原生資料類型來列舉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (sqlncli) 。 其值會採用 BCP_TYPE_XXX 的模式。 資料會以其電腦格式表示。 也就是說，來自 integer 資料類型之資料行的資料會根據建立資料檔案之電腦，以四個位元組由大到小或由小到大的順序表示。  
   
 -   如果資料庫資料類型的長度是固定的，資料檔案資料的長度也是固定的。 處理資料的大量複製方法 (例如 [IBCPSession::BCPExec](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpexec-ole-db.md)) 會剖析資料列，期望資料在資料檔案中的長度與資料在資料庫資料表、檢視或 SELECT 資料行清單中指定的長度相同。 例如，定義為 `char(13)` 之資料庫資料行的資料，對於檔案中資料的每個資料列，必須以 13 個字元表示。 如果資料庫資料行允許使用 Null 值，固定長度的資料前置詞可以是 Null 指標。  
   
@@ -81,7 +82,7 @@ HRESULT BCPInit(
  此方法已成功。  
   
  E_FAIL  
- 發生提供者特定的錯誤。如需詳細資訊，請使用[ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15)介面。  
+ 發生提供者特有的錯誤，如需詳細資訊，請使用 [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) 介面。  
   
  E_OUTOFMEMORY  
  記憶體不足錯誤  

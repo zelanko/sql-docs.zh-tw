@@ -1,4 +1,5 @@
 ---
+description: Attunity Oracle 異動資料擷取設計工具
 title: Attunity Oracle Change Data Capture 設計工具 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a4b2bcc1153aa1e90d38a7aedf83d176d34294cd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b8f93db32602579feaff3a3230739f6fa2621fd6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918657"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484711"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Attunity Oracle 異動資料擷取設計工具
 
@@ -46,15 +47,15 @@ ms.locfileid: "86918657"
   
 -   [Oracle CDC 資料庫](../../integration-services/change-data-capture/the-oracle-cdc-databases.md)  
   
--   [Attunity 的 Oracle 變更資料擷取 (CDC) 設計工具 F1 說明參考](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md)  
+-   [Attunity Oracle Change Data Capture (CDC) 設計工具 F1 說明參考](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md)  
   
--   [Attunity 的 Oracle 變更資料擷取 (CDC) 設計工具使用說明指南](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-how-to-guide.md)  
+-   [Attunity Oracle Change Data Capture (CDC) 設計工具使用說明指南](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-how-to-guide.md)  
   
 -   [用來建立執行個體的 SQL Server 連接](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
   
 -   [進階連接屬性](../../integration-services/change-data-capture/advanced-connection-properties.md)  
   
--   [執行指令碼的 Oracle 認證](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
+-   [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
   
 -   [Oracle 補充記錄指令碼](../../integration-services/change-data-capture/oracle-supplemental-logging-script.md)  
   

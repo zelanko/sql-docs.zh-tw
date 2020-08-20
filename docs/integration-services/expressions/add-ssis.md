@@ -1,4 +1,5 @@
 ---
+description: + (加) (SSIS)
 title: + (加法) (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44df4154-fed5-4e7f-9995-e703a0164f6a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c08a7b40d0bc6f83a8b1ffb7adeaf882841a82a3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7b2d71a9f059276d654ccf0cd5776532c86e3fb1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923517"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484432"
 ---
 # <a name="-add-ssis"></a>+ (加) (SSIS)
 

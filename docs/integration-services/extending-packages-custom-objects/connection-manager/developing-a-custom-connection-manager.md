@@ -1,4 +1,5 @@
 ---
+description: 開發自訂連接管理員
 title: 開發自訂連線管理員 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bda0b29e-57f5-4879-b04d-1396dc56daa8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b12f6d4259625e43fa0839963020921d7ad7ff0b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ad61fc88b68d2df7fb04839ef0f8fc3978a05e14
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920004"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484245"
 ---
 # <a name="developing-a-custom-connection-manager"></a>開發自訂連接管理員
 
@@ -40,13 +41,13 @@ ms.locfileid: "86920004"
 ## <a name="in-this-section"></a>本節內容  
  本章節描述如何建立和設定自訂連接管理員及其選用自訂使用者介面，以及如何撰寫它們的程式碼。 在本章節中所顯示的程式碼片段是取自 SQL Server 自訂連接管理員範例。  
   
- [建立自訂連線管理員](../../../integration-services/extending-packages-custom-objects/connection-manager/creating-a-custom-connection-manager.md)  
+ [建立自訂連接管理員](../../../integration-services/extending-packages-custom-objects/connection-manager/creating-a-custom-connection-manager.md)  
  描述如何為自訂連接管理員專案建立類別。  
   
- [撰寫自訂連線管理員的程式碼](../../../integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md)  
+ [撰寫自訂連接管理員的程式碼](../../../integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md)  
  描述如何透過覆寫基底類別的方法與屬性，來實作自訂連接管理員。  
   
- [開發自訂連線管理員的使用者介面](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
+ [開發自訂連接管理員的使用者介面](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
  描述如何實作使用者介面類別以及用以設定自訂連接管理員的表單。  
   
 ## <a name="related-sections"></a>相關章節  

@@ -1,4 +1,5 @@
 ---
+description: 開發自訂資料流程元件
 title: 開發自訂資料流程元件 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: be126913-2a9a-41c9-9bf5-a7b0a0aea2f8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d29e650bb3dc812b4b64f3bb0c336d094adf1e8d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e47c1f8efed8920a32eac7625ab15deb6e9c167b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921234"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484213"
 ---
 # <a name="developing-a-custom-data-flow-component"></a>開發自訂資料流程元件
 
@@ -42,10 +43,10 @@ ms.locfileid: "86921234"
  [資料流程元件的執行階段方法](../../../integration-services/extending-packages-custom-objects/data-flow/run-time-methods-of-a-data-flow-component.md)  
  描述自訂資料流程元件中實作的執行階段方法。  
   
- [執行計劃和緩衝配置](../../../integration-services/extending-packages-custom-objects/data-flow/execution-plan-and-buffer-allocation.md)  
+ [執行計劃和緩衝區配置](../../../integration-services/extending-packages-custom-objects/data-flow/execution-plan-and-buffer-allocation.md)  
  描述資料流程執行計劃以及資料緩衝區的配置。  
   
- [在資料流程中使用資料類型](../../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)  
+ [使用資料流程中的資料類型](../../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)  
  說明資料流程如何將 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 資料類型對應至 .NET Framework Managed 資料類型。  
   
  [驗證資料流程元件](../../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md)  
@@ -60,7 +61,7 @@ ms.locfileid: "86921234"
  [在資料流程元件中記錄和定義記錄項目](../../../integration-services/extending-packages-custom-objects/data-flow/logging-and-defining-log-entries-in-a-data-flow-component.md)  
  說明如何建立和寫入自訂記錄項目。  
   
- [在資料流程元件中使用錯誤輸出](../../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)  
+ [使用資料流程元件中的錯誤輸出](../../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)  
  說明如何將錯誤資料列重新導向至替代輸出。  
   
  [升級資料流程元件的版本](../../../integration-services/extending-packages-custom-objects/data-flow/upgrading-the-version-of-a-data-flow-component.md)  

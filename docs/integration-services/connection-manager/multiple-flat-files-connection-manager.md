@@ -1,4 +1,5 @@
 ---
+description: 多個一般檔案連接管理員
 title: 多個一般檔案連線管理員 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dc4c1b81917e07ec23b543f64cb81942104ad31d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bac3edc5c3be2a54a999a4b68c7bb0e15f686651
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923099"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484692"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>多個一般檔案連接管理員
 

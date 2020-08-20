@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_802 - Database Engine 錯誤
 title: MSSQLSERVER_802 - Database Engine 錯誤 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5892ed24-4dcb-4bf9-a8a4-a7ca898832d5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 49dc8f238ca553a1b94a88c8add528a5068b48cd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c6beb0d2b1930f03955918e1464d2a7eb966db66
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715421"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482714"
 ---
 # <a name="mssqlserver_802---database-engine-error"></a>MSSQLSERVER_802 - Database Engine 錯誤
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

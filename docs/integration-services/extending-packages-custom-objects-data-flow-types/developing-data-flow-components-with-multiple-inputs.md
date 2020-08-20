@@ -1,4 +1,5 @@
 ---
+description: 開發具有多個輸入的資料流程元件
 title: 開發具有多個輸入的資料流程元件 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 3c7b50e8-2aa6-4f6a-8db4-e8293bc21027
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fee34f2e35920f8a470c549afec71c5bf4963913
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e73d9b4a6f23473e0dcb7600507dc29fd795679a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920204"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484296"
 ---
 # <a name="developing-data-flow-components-with-multiple-inputs"></a>開發具有多個輸入的資料流程元件
 
@@ -58,7 +59,7 @@ public class Shuffler : Microsoft.SqlServer.Dts.Pipeline.PipelineComponent
 > [!NOTE]  
 >  您的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 方法實作不應該呼叫基底類別中實作。 基底類別中這個方法的預設實作只會引發 **NotImplementedException**。  
   
- 實作這個方法時，您會針對每個元件的輸入設定布林值 *canProcess* 陣列中的元素狀態 (輸入是由它們在 *inputIDs* 陣列中的識別碼值所識別)。當您針對某個輸入將 *canProcess* 陣列中的項目值設定為 **true** 時，資料流程引擎會呼叫元件的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 方法，並且為指定的輸入提供更多資料。  
+ 實作這個方法時，您會針對每個元件的輸入設定布林值 *canProcess* 陣列中的元素狀態  (輸入是由它們在 *inputIDs* 陣列中的識別碼值所識別)。當您針對某個輸入將 *canProcess* 陣列中的項目值設定為 **true** 時，資料流程引擎會呼叫元件的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 方法，並且為指定的輸入提供更多資料。  
   
  有更多的上游資料可供使用時，至少一個輸入的 *canProcess* 陣列項目值必須一律是 **true**，否則處理就會停止。  
   

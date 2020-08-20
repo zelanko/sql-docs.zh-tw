@@ -1,4 +1,5 @@
 ---
+description: SQLMoreResults
 title: SQLMoreResults |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,23 +15,24 @@ ms.assetid: f65698c3-7291-480d-9dab-58b13feb7771
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f07ca0aa93fd7b415f2ada75331c7c9bdd0dce15
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 75674ea7f628c89ff183158cf2defb4ccdfe6f2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000347"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482633"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  **SQLMoreResults**可讓應用程式取得多組結果資料列。 包含 COMPUTE 子句或是已提交之 ODBC 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式批次的 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式會造成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式產生多個結果集。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允許建立伺服器資料指標來處理任一案例中的結果。 因此，開發人員必須確保 ODBC 陳述式正在封鎖中。 開發人員必須用完傳回的資料或是取消 ODBC 陳述式，然後才能處理連接上其他作用中陳述式的資料。  
+  **SQLMoreResults** 可讓應用程式取出多組結果資料列。 包含 COMPUTE 子句或是已提交之 ODBC 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式批次的 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式會造成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式產生多個結果集。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允許建立伺服器資料指標來處理任一案例中的結果。 因此，開發人員必須確保 ODBC 陳述式正在封鎖中。 開發人員必須用完傳回的資料或是取消 ODBC 陳述式，然後才能處理連接上其他作用中陳述式的資料。  
   
 > [!NOTE]  
 >  只有在連接至 [!INCLUDE[tsql](../../includes/tsql-md.md)] 之前的伺服器版本時，才支援包含 COMPUTE 子句的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SELECT 陳述式。  
   
- 開發人員可以判斷結果集資料行和資料列的屬性，這些資料行和資料列是由 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式的 COMPUTE 子句所產生。 如需詳細資訊，請參閱[SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)。  
+ 開發人員可以判斷結果集資料行和資料列的屬性，這些資料行和資料列是由 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式的 COMPUTE 子句所產生。 如需詳細資訊，請參閱 [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)。  
   
- 使用結果集中的 unfetched 資料列來呼叫**SQLMoreResults**時，會遺失這些資料列，並提供下一個結果資料列集的資料列資料。  
+ 當使用結果集中的 unfetched 資料列來呼叫 **SQLMoreResults** 時，這些資料列會遺失，而且會提供下一個結果資料列集的資料列資料。  
   
 ## <a name="examples"></a>範例  
   

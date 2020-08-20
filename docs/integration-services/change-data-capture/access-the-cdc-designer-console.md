@@ -1,4 +1,5 @@
 ---
+description: 存取 CDC 設計工具主控台
 title: 存取 CDC 設計工具主控台 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: b168c64e-c1b5-42d4-a92a-84de1dd0324e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b7e9e546ed8acf995bdf3efaac56af8e44e8b61e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4cb9b5a4c97e178e3acfbd64f1f99f831f116f09
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86900864"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484835"
 ---
 # <a name="access-the-cdc-designer-console"></a>存取 CDC 設計工具主控台
 
@@ -54,10 +55,10 @@ ms.locfileid: "86900864"
  輸入 Oracle CDC Windows 服務在逾時之前，等候執行命令的時間 (以秒數為單位)。預設值是 **30**。  
   
  **加密連接**  
- 針對 Oracle CDC 服務與使用加密連線之目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間的通訊選取 [加密連線]  。**進階**：按一下 [進階]  ，並在必要時，於 [進階連接屬性] 對話方塊中輸入其他任何連接屬性。  
+ 針對 Oracle CDC 服務與使用加密連接之目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間的通訊選取 [加密連接]****。**進階**：按一下 [進階]****，並在必要時，於 [進階連接屬性] 對話方塊中輸入其他任何連接屬性。  
   
  **進階**  
- 按一下 [進階]  ，並在必要時，於 [進階連接屬性] 對話方塊中輸入其他任何連接屬性。  
+ 按一下 [進階]****，並在必要時，於 [進階連接屬性] 對話方塊中輸入其他任何連接屬性。  
   
  如需 [進階連接屬性] 對話方塊的資訊，請參閱 [進階連接屬性](../../integration-services/change-data-capture/advanced-connection-properties.md)。  
   

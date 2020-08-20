@@ -1,4 +1,5 @@
 ---
+description: Excel 來源
 title: Excel 來源 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/15/2018
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 90d9d2a7607d61b6eb777dce37950408f3376cf4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9664786703f0d9b81ce2a939bd422ea41a2fd8f6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913233"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484569"
 ---
 # <a name="excel-source"></a>Excel 來源
 
@@ -69,10 +70,10 @@ ms.locfileid: "86913233"
   
 ### <a name="static-options"></a>靜態選項  
  **[無快取]**  
- 從清單中選取現有的 Excel 連線管理員，或按一下 [新增]  建立新的連線管理員。  
+ 從清單中選取現有的 Excel 連線管理員，或按一下 [新增]**** 建立新的連線管理員。  
   
  **新增**  
- 使用 [Excel 連線管理員]  對話方塊來建立新的連線管理員。  
+ 使用 [Excel 連線管理員]**** 對話方塊來建立新的連線管理員。  
   
  **資料存取模式**  
  從來源中指定選取資料的方法。  
@@ -99,7 +100,7 @@ ms.locfileid: "86913233"
   
 #### <a name="data-access-mode--sql-command"></a>資料存取模式 = SQL 命令  
  **SQL 命令文字**  
- 輸入 SQL 查詢的文字，按一下 [建立查詢]  建立查詢，或按一下 [瀏覽]  瀏覽至包含查詢文字的檔案。  
+ 輸入 SQL 查詢的文字，按一下 [建立查詢]**** 建立查詢，或按一下 [瀏覽]**** 瀏覽至包含查詢文字的檔案。  
   
  **參數**  
  如果您所輸入的參數化查詢使用 ? 做為查詢文字中的參數預留位置，請使用 **[設定查詢參數]** 對話方塊，將查詢輸入參數對應到封裝變數。  
@@ -118,7 +119,7 @@ ms.locfileid: "86913233"
  選取包含 SQL 查詢文字的變數。  
   
 ## <a name="excel-source-editor-columns-page"></a>Excel 來源編輯器 (資料行頁面)
-  使用 [Excel 來源編輯器]  對話方塊的 [資料行]  頁面，將輸出資料行對應至每個外部 (來源) 資料行。  
+  使用 [Excel 來源編輯器]**** 對話方塊的 [資料行]**** 頁面，將輸出資料行對應至每個外部 (來源) 資料行。  
   
 ### <a name="options"></a>選項。  
  **可用的外部資料行**  
@@ -131,14 +132,14 @@ ms.locfileid: "86913233"
  為每個輸出資料行提供唯一的名稱。 預設值為選取的外部 (來源) 資料行的名稱；不過，您也可以選擇任何唯一的、描述性的名稱。 提供的名稱將顯示在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師內。  
   
 ## <a name="excel-source-editor-error-output-page"></a>Excel 來源編輯器 (錯誤輸出頁面)
-  使用 [Excel 來源編輯器]  對話方塊的 [錯誤輸出]  頁面，以選取錯誤處理選項，並設定錯誤輸出資料行上的屬性。  
+  使用 [Excel 來源編輯器]**** 對話方塊的 [錯誤輸出]**** 頁面，以選取錯誤處理選項，並設定錯誤輸出資料行上的屬性。  
   
 ### <a name="options"></a>選項。  
  **輸入或輸出**  
  檢視資料來源的名稱。  
   
  **資料行**  
- 檢視您在 [Excel 來源編輯器]  對話方塊的 [連線管理員]  頁面上所選取的外部 (來源) 資料行。  
+ 檢視您在 [Excel 來源編輯器]**** 對話方塊的 [連線管理員]**** 頁面上所選取的外部 (來源) 資料行。  
   
  **錯誤**  
  指定錯誤發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  

@@ -1,4 +1,5 @@
 ---
+description: 設定及管理搜尋的文字分隔與詞幹分析器 (SQL Server)
 title: 設定及管理搜尋的文字分隔與詞幹分析器
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,20 +22,20 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 8ae5dbc9652ed690edc6964db38cc8e0d5536625
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7a33d02cb6ca1cbc100a458d254cf962d2d0d34b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629525"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482285"
 ---
 # <a name="configure--manage-word-breakers--stemmers-for-search-sql-server"></a>設定及管理搜尋的文字分隔與詞幹分析器 (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 斷詞工具及字幹分析器，會在所有全文檢索索引資料上執行語文分析。 語言分析會執行下列兩項作業：
 
--   **尋找文字分界 (斷詞)** 。 「斷詞工具」  會根據語言的語彙規則，判斷文字分界存在的位置，藉以識別個別單字。 每個單字 (也稱為 *Token*) 都會使用壓縮表示來插入全文檢索索引中，以便減少其大小。
+-   **尋找文字分界 (斷詞)**。 「斷詞工具」** 會根據語言的語彙規則，判斷文字分界存在的位置，藉以識別個別單字。 每個單字 (也稱為 *Token*) 都會使用壓縮表示來插入全文檢索索引中，以便減少其大小。
 
--   **結合動詞 (字幹分析)** 。 *「字幹分析器」* (Stemmer) 會根據該語言的規則來產生特定單字的字形變化 (例如，"running"、"ran" 和 "runner" 是 "run" 單字的不同形態)。
+-   **結合動詞 (字幹分析)**。 *「字幹分析器」* (Stemmer) 會根據該語言的規則來產生特定單字的字形變化 (例如，"running"、"ran" 和 "runner" 是 "run" 單字的不同形態)。
 
 ## <a name="word-breakers-and-stemmers-are-language-specific"></a>斷詞工具和字幹分析器依語言而異
 
@@ -72,7 +73,7 @@ GO
 ##  <a name="set-the-default-full-text-language-option"></a><a name="default"></a> 設定預設全文檢索語言選項  
  若為當地語系化的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式就會將 **default full-text language** 選項設定為伺服器的語言 (如果有相符項目存在的話)。 若 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]為非當地語系化的版本時，則 **或** 選項會是英文。  
   
- 建立或更改全文檢索索引時，您可以為每個全文檢索索引資料行指定不同的語言。 如果沒有為資料行指定語言，則預設值會是 [預設全文檢索語言]  組態選項的值。  
+ 建立或更改全文檢索索引時，您可以為每個全文檢索索引資料行指定不同的語言。 如果沒有為資料行指定語言，則預設值會是 [預設全文檢索語言]**** 組態選項的值。  
   
 > [!NOTE]  
 >  除非在查詢中指定 LANGUAGE 選項，否則列在單一全文檢索查詢函數子句的所有資料行都必須使用相同的語文。 查詢之全文檢索索引資料行所用的語言會決定要對全文檢索查詢述詞 ([CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)) 與函數 ([CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 和 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)) 之引數執行的語言分析。  

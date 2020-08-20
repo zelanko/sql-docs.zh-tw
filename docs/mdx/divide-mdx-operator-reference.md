@@ -1,5 +1,6 @@
 ---
-title: 拆分（MDX） |Microsoft Docs
+description: 除 MDX 運算子參考
+title: " (將) 分割 (MDX) |Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,14 +9,14 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8dd20a0b60e105ac48a54d533055717e3f07a006
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a0d6947e1e0b4dc45d56980b734c2de98d8ad24c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68049320"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484021"
 ---
-# <a name="divide---mdx-operator-reference"></a>除法 MDX 運算子參考
+# <a name="divide---mdx-operator-reference"></a>除 MDX 運算子參考
 
 
   執行算術運算，將一個數字除以另一個數字。  
@@ -31,16 +32,16 @@ Dividend / Divisor
  *股利*  
  傳回數值的有效多維度運算式 (MDX) 運算式。  
   
- *除數*  
+ *因數*  
  傳回數值的有效 MDX 運算式。  
   
 ## <a name="return-value"></a>傳回值  
  具有較高優先順序之參數的資料類型的值。  
   
 ## <a name="remarks"></a>備註  
- **/（除法）** 運算子所傳回的實際值代表第一個運算式除以第二個運算式的商。  
+ **/ (除以) **運算子所傳回的實際值，代表第一個運算式除以第二個運算式的商。  
   
- 兩個運算式的資料類型必須相同，或者其中一個運算式必須可以用隱含方式轉換為另一個運算式的資料類型。 如果*除數*評估為 null 值，則運算子會引發錯誤。 如果*除數*和被*除數*都評估為 null 值，則運算子會傳回 null 值。  
+ 兩個運算式的資料類型必須相同，或者其中一個運算式必須可以用隱含方式轉換為另一個運算式的資料類型。 如果 *除數* 評估為 null 值，則運算子會引發錯誤。 如果 *除數* 和被 *除數* 都評估為 null 值，則運算子會傳回 null 值。  
   
 ## <a name="examples"></a>範例  
  以下範例示範此運算子的用法。  

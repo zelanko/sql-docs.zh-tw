@@ -1,4 +1,5 @@
 ---
+description: 移轉後驗證和最佳化指南
 title: 移轉後驗證和最佳化指南 | Microsoft Docs
 ms.date: 01/09/2019
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-ms.openlocfilehash: 72af408a25ecc085d60fd18e25243cd71c42c337
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6af3d91a76dd1964b7ef2e929392f85eb4b9245c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914427"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482481"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>移轉後驗證和最佳化指南
 

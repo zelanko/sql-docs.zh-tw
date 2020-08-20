@@ -1,4 +1,5 @@
 ---
+description: 第 6-4 課：部署第 6 課套件
 title: 步驟 4：部署第 6 課套件 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3d17145c0fc275d9023446436e4c052c441e8c94
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7a5ced20faa10d98d664a478c9a551de12a73947
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922354"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484083"
 ---
 # <a name="lesson-6-4-deploy-the-lesson-6-package"></a>第 6-4 課：部署第 6 課套件
 

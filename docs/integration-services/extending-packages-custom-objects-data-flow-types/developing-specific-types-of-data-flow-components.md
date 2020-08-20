@@ -1,4 +1,5 @@
 ---
+description: 開發特定類型的資料流程元件
 title: 開發特定類型的資料流程元件 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 348e219a-b8ff-425e-b9c6-811880101c54
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ec92e90ca9e08ed9931328e31e17f8eb78f885c0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 28f31c63139ddd5ce6b09933411cb600e246de53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920191"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484281"
 ---
 # <a name="developing-specific-types-of-data-flow-components"></a>開發特定類型的資料流程元件
 
@@ -55,6 +56,6 @@ ms.locfileid: "86920191"
   
 ## <a name="see-also"></a>另請參閱  
  [比較指令碼解決方案和自訂物件](../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)   
- [開發指令碼元件的特定類型](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)  
+ [開發特定類型的指令碼元件](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)  
   
   

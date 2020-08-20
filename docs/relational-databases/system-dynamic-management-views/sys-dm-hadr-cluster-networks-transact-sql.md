@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_hadr_cluster_networks （Transact-sql） |Microsoft Docs
+description: sys.dm_hadr_cluster_networks (Transact-SQL)
+title: sys. dm_hadr_cluster_networks (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ece32b15-d63f-4f93-92b7-e2930333e97a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dfb1a973e9c86fa67b4e3495f77dff42273d8bc5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 571100358aa553ea0999fafd0f9c69be66dac9fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783921"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481919"
 ---
 # <a name="sysdm_hadr_cluster_networks-transact-sql"></a>sys.dm_hadr_cluster_networks (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,8 +41,8 @@ ms.locfileid: "85783921"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**member_name**|**nvarchar(128)**|WSFC 叢集中節點的電腦名稱。|  
-|**network_subnet_ip**|**Nvarchar （48）**|此電腦所屬之子網路的網路 IP 位址。 這可以是 IPv4 或 IPv6 位址。|  
-|**network_subnet_ipv4_mask**|**Nvarchar （45）**|網路的子網路遮罩，可指定此 IP 位址所屬的子網路。 **network_subnet_ipv4_mask**在[CREATE AVAILABILITY GROUP](../../t-sql/statements/create-availability-group-transact-sql.md)或[ALTER AVAILABILITY group](../../t-sql/statements/alter-availability-group-transact-sql.md)語句的 WITH DHCP 子句中，指定 dhcp <network_subnet_option> 選項 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。<br /><br /> NULL = IPv6 子網路。|  
+|**network_subnet_ip**|**Nvarchar (48) **|此電腦所屬之子網路的網路 IP 位址。 這可以是 IPv4 或 IPv6 位址。|  
+|**network_subnet_ipv4_mask**|**Nvarchar (45) **|網路的子網路遮罩，可指定此 IP 位址所屬的子網路。 **network_subnet_ipv4_mask**在[CREATE Availability GROUP](../../t-sql/statements/create-availability-group-transact-sql.md)或[ALTER AVAILABILITY group](../../t-sql/statements/alter-availability-group-transact-sql.md)語句的 WITH dhcp 子句中，指定 dhcp <network_subnet_option> 選項 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。<br /><br /> NULL = IPv6 子網路。|  
 ||||  
 |**network_subnet_prefix_length**|**int**|網路 IP 前置長度，可指定此電腦所屬的子網路。|  
 |**is_public**|**bit**|網路在 WSFC 叢集上為公用或私用，可為下列其中一個值：<br /><br /> 0 = 私用<br /><br /> 1 = 公用|  
@@ -53,9 +54,9 @@ ms.locfileid: "85783921"
  需要伺服器的 VIEW SERVER STATE 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [容錯移轉叢集和 Always On 可用性群組 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)   
- [&#40;Transact-sql&#41;監視可用性群組](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
- [dm_os_cluster_nodes &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
+ [容錯移轉叢集和 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)   
+ [監視可用性群組 &#40;Transact-sql&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [sys. dm_os_cluster_nodes &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
  [查詢 SQL Server 系統目錄常見問題](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

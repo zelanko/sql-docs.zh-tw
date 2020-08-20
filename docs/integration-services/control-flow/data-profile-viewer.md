@@ -1,4 +1,5 @@
 ---
+description: 資料設定檔檢視器
 title: 資料設定檔檢視器 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4197d1acc7a7faaa8414b6ff73e7d6876610cece
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a2ee5f6f01a098c2e8a67b09e915a947010d5758
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919807"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484612"
 ---
 # <a name="data-profile-viewer"></a>資料設定檔檢視器
 

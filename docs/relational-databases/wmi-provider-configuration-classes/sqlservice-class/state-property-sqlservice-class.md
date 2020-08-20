@@ -1,5 +1,6 @@
 ---
-title: State 屬性（SqlService）
+description: State 屬性 (SqlService 類別)
+title: 'State 屬性 (SqlService) '
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9e09f419-947c-4d4b-9a49-2d3396c847cd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5273d7dd27753b62a22520f2d1aa1f9a28dc8b5a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 606c991cd1f5b20f888fc2a2bf9d500e4e5ec410
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880594"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485063"
 ---
 # <a name="state-property-sqlservice-class"></a>State 屬性 (SqlService 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +55,7 @@ object.State [= value]
  停止暫止。 服務正在等候停止。  
   
  4  
- 執行中。 服務正在執行中。  
+ 執行中。 服務正在執行。  
   
  5  
  繼續暫止。 服務正在等候繼續。  
@@ -63,7 +64,7 @@ object.State [= value]
  暫停暫止。 服務正在等候暫停。  
   
  7  
- 已暫停。 服務已暫停。  
+ 已暫停。 暫停服務。  
   
 ## <a name="remarks"></a>備註  
   

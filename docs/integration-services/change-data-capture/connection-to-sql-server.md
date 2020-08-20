@@ -1,4 +1,5 @@
 ---
+description: 連接到 SQL Server
 title: 連線到 SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5bb582f9-68d3-4c1e-ab02-6fc16807f1a5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0d8e8bce65061ac4cb9b0d4ea9829ab24a92da40
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f45b001faf8f290d36ef8239945a844f78af46fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916244"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484621"
 ---
 # <a name="connection-to-sql-server"></a>連接到 SQL Server
 

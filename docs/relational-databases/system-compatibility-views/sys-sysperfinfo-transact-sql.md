@@ -1,5 +1,6 @@
 ---
-title: sys.sysperfinfo （Transact-sql） |Microsoft Docs
+description: sys.sysperfinfo (Transact-SQL)
+title: sys.sysperfinfo (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,31 +21,31 @@ helpviewer_keywords:
 ms.assetid: e22a81cd-27de-4690-9443-6aad6393bd3c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a2cdadb112dbceb6a3b031707b8ba8b889bad822
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1122c224e21fa633c2c04cd156a49878fefc7daa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895856"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482099"
 ---
 # <a name="syssysperfinfo-transact-sql"></a>sys.sysperfinfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  包含 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 可以透過 Windows 系統監視器顯示之內部效能計數器的標記法。  
+  包含 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 可透過 Windows 系統監視器顯示的內部效能計數器表示。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**object_name**|**nchar(128)**|效能物件名稱，例如**sqlserver： LockManager**或**sqlserver： BufferManager**。|  
-|**counter_name**|**nchar(128)**|物件內效能計數器的名稱，例如要求的**頁面要求**或**鎖定**。|  
-|**instance_name**|**nchar(128)**|計數器的具名執行個體。 例如，針對每個鎖定類型（例如**資料表**、**頁面**、索引**鍵**等等）維護了計數器。 相似計數器的執行個體名稱各不相同。|  
+|**object_name**|**nchar(128)**|效能物件名稱，例如 **sqlserver： LockManager** 或 **sqlserver： BufferManager**。|  
+|**counter_name**|**nchar(128)**|物件內的效能計數器名稱，例如要求的 **頁面要求** 或 **鎖定**。|  
+|**instance_name**|**nchar(128)**|計數器的具名執行個體。 例如，系統會針對每一種鎖定類型維護計數器，例如 **資料表**、 **頁面**、索引 **鍵**等等。 相似計數器的執行個體名稱各不相同。|  
 |**cntr_value**|**bigint**|實際的計數器值。 這通常都是一個層級計數器或單純增加的計數器，用來計算執行個體事件的出現次數。|  
 |**cntr_type**|**int**|Windows 效能架構所定義的計數器類型。|  
   
 ## <a name="see-also"></a>另請參閱  
- [將系統資料表對應至系統檢視 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;將系統資料表對應至系統檢視 ](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [相容性檢視 &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

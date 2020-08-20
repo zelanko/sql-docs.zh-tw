@@ -1,4 +1,5 @@
 ---
+description: 進階連接屬性
 title: 進階連線屬性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4edfab68-7e68-45e8-a3f3-a0049ff7eb9e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 925b7155af44d77dc33506c0ff4d574be9970eb4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fd7ed8863356ff3e6b67d456628bd3dbc1ab6a5b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916554"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484742"
 ---
 # <a name="advanced-connection-properties"></a>進階連接屬性
 
@@ -28,7 +29,7 @@ ms.locfileid: "86916554"
   
  您使用 **[進階連接屬性]** 對話方塊所加入的參數會加入至 **[連接到 SQL Server]** 對話方塊中所選取的參數。  
   
- 提供之每一個參數的最後一個執行個體都會覆寫該參數之前的任何執行個體。 使用 **[進階連接參數]** 對話方塊加入的參數會遵循及取代 **[SQL Server 連接]** 對話方塊中所提供的參數。 例如，如果 [SQL Server 連接]  對話方塊指定 SERVER1 當做伺服器名稱，而且 [其他連接參數]  頁面包含 ;SERVER=SERVER2，則會對 SERVER2 進行連接。  
+ 提供之每一個參數的最後一個執行個體都會覆寫該參數之前的任何執行個體。 使用 **[進階連接參數]** 對話方塊加入的參數會遵循及取代 **[SQL Server 連接]** 對話方塊中所提供的參數。 例如，如果 [SQL Server 連接]**** 對話方塊指定 SERVER1 當做伺服器名稱，而且 [其他連接參數]**** 頁面包含 ;SERVER=SERVER2，則會對 SERVER2 進行連接。  
   
  使用 **[進階連接屬性]** 對話方塊加入的參數會以純文字格式傳遞。  
   

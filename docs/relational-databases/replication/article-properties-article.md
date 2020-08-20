@@ -1,4 +1,5 @@
 ---
+description: 發行項屬性 - &lt;發行項&gt;
 title: 發行項屬性 - &lt;發行項&gt; | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 46fbde4be37677cc873089b00b53dd0be706a333
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6a0703042862d995d8890c01fee519915b513e3a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722205"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482431"
 ---
 # <a name="article-properties---ltarticlegt"></a>發行項屬性 - &lt;發行項&gt;
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

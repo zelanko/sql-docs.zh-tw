@@ -1,5 +1,6 @@
 ---
-title: sys.sys參考（Transact-sql） |Microsoft Docs
+description: sys.sysreferences (Transact-SQL)
+title: sys.sys參考 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,12 +22,12 @@ ms.assetid: 81276f13-202e-4e74-962d-46eb98c98d2e
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01d369adc6611091e87cb35794532da4522560ae
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 5018b2f2776e14dc9563983c1743ba486f565225
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87393306"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482080"
 ---
 # <a name="syssysreferences-transact-sql"></a>sys.sysreferences (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -45,8 +46,8 @@ ms.locfileid: "87393306"
 |**keycnt**|**smallint**|索引鍵中的資料行數。|  
 |**forkeys**|**varbinary(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**refkeys**|**varbinary(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**fkeydbid**|**smallint**|已保留。|  
-|**rkeydbid**|**smallint**|已保留。|  
+|**fkeydbid**|**smallint**|保留的。|  
+|**rkeydbid**|**smallint**|保留的。|  
 |**fkey1**|**smallint**|參考資料行的資料行識別碼。|  
 |**fkey2**|**smallint**|參考資料行的資料行識別碼。|  
 |**fkey3**|**smallint**|參考資料行的資料行識別碼。|  
@@ -81,7 +82,7 @@ ms.locfileid: "87393306"
 |**rkey16**|**smallint**|被參考之資料行的資料行識別碼。|  
   
 ## <a name="see-also"></a>另請參閱  
- [將系統資料表對應至系統檢視 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;將系統資料表對應至系統檢視 ](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [相容性檢視 &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

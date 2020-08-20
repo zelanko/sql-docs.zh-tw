@@ -1,4 +1,5 @@
 ---
+description: 驗證對話方塊
 title: 驗證對話方塊 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d261c049ab59459d81a26d8f9cf23c7268ce53e8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a65f5d8114907472eb03aa06e428927aa1408b7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922548"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484906"
 ---
 # <a name="validate-dialog-box"></a>驗證對話方塊
 
@@ -47,7 +48,7 @@ ms.locfileid: "86922548"
   
 4.  展開包含您要驗證之專案或封裝的資料夾。  
   
-5.  以滑鼠右鍵按一下封裝，然後按一下 [驗證]  。  
+5.  以滑鼠右鍵按一下封裝，然後按一下 [驗證]****。  
   
 ##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> 設定 [一般] 頁面上的選項  
  **環境**  

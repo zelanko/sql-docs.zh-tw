@@ -1,4 +1,5 @@
 ---
+description: Microsoft Replication Interactive Conflict Resolver
 title: 互動式衝突解析程式 (合併式)
 describes: Describes the Interactive Conflict Resolver that can be used for merge subscriptions that are synchronized using the Windows Synchronization Manager.
 ms.custom: seo-lt-2019
@@ -14,12 +15,12 @@ ms.assetid: d3d4a480-782b-4b1d-b839-565c8cf6cb24
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b96d438aa8332a024932dec689ada2efa419d139
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 242e6847c2c00177ba9939781d56831d8cb9492a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87108317"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482404"
 ---
 # <a name="microsoft-replication-interactive-conflict-resolver"></a>Microsoft Replication Interactive Conflict Resolver
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

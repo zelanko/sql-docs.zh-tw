@@ -1,4 +1,5 @@
 ---
+description: SAP BW 目的地編輯器 (錯誤輸出頁面)
 title: SAP BW 目的地編輯器 (錯誤輸出頁面) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,19 +13,19 @@ f1_keywords:
 ms.assetid: a543d811-0bd2-4890-a0d3-f5fdcd4524b8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7143a95115836a4f3a975468e5acdb369ee1e8bf
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6c3c080e03e34b8b7cf953a5d3544cb4d3bb39ab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913594"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484518"
 ---
 # <a name="sap-bw-destination-editor-error-output-page"></a>SAP BW 目的地編輯器 (錯誤輸出頁面)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  使用 [SAP BW 目的地編輯器] 的 [錯誤輸出] 頁面可以指定錯誤處理選項。  
+  使用 [SAP BW 目的地編輯器]**** 的 [錯誤輸出]**** 頁面可以指定錯誤處理選項。  
   
  若要深入了解 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的 SAP BW 目的地，請參閱 [SAP BW 目的地](../../integration-services/data-flow/sap-bw-destination.md)。  
   
@@ -37,7 +38,7 @@ ms.locfileid: "86913594"
   
 2.  在 [資料流程]  索引標籤上，按兩下 SAP BW 目的地。  
   
-3.  在 [SAP BW 目的地編輯器]  中，按一下 [錯誤輸出]  開啟編輯器的 [錯誤輸出]  頁面。  
+3.  在 [SAP BW 目的地編輯器]**** 中，按一下 [錯誤輸出]**** 開啟編輯器的 [錯誤輸出]**** 頁面。  
   
 ## <a name="options"></a>選項。  
   

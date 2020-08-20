@@ -1,5 +1,6 @@
 ---
-title: SCOPE 語句（MDX） |Microsoft Docs
+description: SCOPE 陳述式 (MDX)
+title: MDX)  (範圍語句 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2f355842999b505a97c3387ab9e51d3b651c3b7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4c9f6738b2d7e0764e750b25f09001b7e9d3864a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68138275"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483861"
 ---
 # <a name="mdx-scripting---scope"></a>MDX 指令碼 - SCOPE
 
@@ -78,12 +79,12 @@ Limited_Set ::=
 > [!NOTE]  
 >  隱藏 SCOPE 陳述式中公開的成員。  
   
- 範圍語句會建立公開「漏洞」的 subcube，而不論**MDX 相容性**設定為何。 例如，陳述式 `Scope( Customer.State.members )` 可以包括不含州/省 (但已插入不可見的預留位置成員) 之國家 (地區) 中的州/省。  
+ 範圍語句會建立公開「漏洞」的 subcube，而不論 **MDX 相容性** 設定為何。 例如，陳述式 `Scope( Customer.State.members )` 可以包括不含州/省 (但已插入不可見的預留位置成員) 之國家 (地區) 中的州/省。  
   
  SCOPE 陳述式內建立的導出成員與命名集，不會受到 SCOPE 陳述式的影響。  
   
 ## <a name="example"></a>範例  
- 下列範例從「艾德作品」範例方案中的 MDX 計算腳本，將目前的範圍定義為會計年度2005中的會計季度和「銷售量配額」量值，然後使用**ParallelPeriod**函數，將值指派給目前範圍中的資料格。 然後，此範例會使用另一個 SCOPE 語句來修改範圍，然後使用[This （MDX）](../mdx/this-mdx.md)函數執行另一個指派。  
+ 下列範例從「艾德作品」範例方案中的 MDX 計算腳本，將目前的範圍定義為會計年度2005中的會計季度和「銷售量配額」量值，然後使用 **ParallelPeriod** 函式，將值指派給目前範圍中的資料格。 然後，此範例會使用另一個 SCOPE 語句來修改範圍，然後使用 [這個 (MDX) ](../mdx/this-mdx.md) 函數來執行另一個指派。  
   
 ```  
 Scope   

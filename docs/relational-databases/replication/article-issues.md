@@ -1,4 +1,5 @@
 ---
+description: 發行項的問題
 title: 發行項問題 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: bde57da2-dd47-412f-9df7-9224968b2448
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 02f4089ba5f8f9536c3481dbb34bdbbbe8f795ba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b1fdefcb9a356f17032338b5d4ba04bfc1ff37d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727246"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482469"
 ---
 # <a name="article-issues"></a>發行項的問題
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,4 +1,5 @@
 ---
+description: 檢視和修改發行項屬性
 title: 檢視和修改發行項屬性 | Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ ms.assetid: e71831fa-3d39-4e4a-9706-4d3a497082cc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9c94ac08036d7544b7aa48f8628b0a2fc3476fcc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b05251b3c5e63f3af65b91f361083b5473ff8bf2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923640"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482317"
 ---
 # <a name="view-and-modify-article-properties"></a>檢視和修改發行項屬性
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

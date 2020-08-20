@@ -1,4 +1,5 @@
 ---
+description: 語法 (SSIS)
 title: 語法 (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 50e6319c78bedccb0b34cd48a2d09e6b6cc0ba3a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3262135632cc10036bf03c93edd448de16fbbc79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913496"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484392"
 ---
 # <a name="syntax-ssis"></a>語法 (SSIS)
 
@@ -36,7 +37,7 @@ ms.locfileid: "86913496"
   
  如需屬性運算式中使用的範例運算式，請參閱 [在封裝中使用屬性運算式](../../integration-services/expressions/use-property-expressions-in-packages.md)。  
   
-## <a name="identifiers"></a>識別碼  
+## <a name="identifiers"></a>識別項  
  運算式可以包括資料行和變數識別碼。 資料行可在資料來源中產生，或在資料流程中藉由轉換建立。 運算式可以使用歷程識別碼來參考資料行。 歷程識別碼是用來識別封裝元素的唯一號碼。 運算式中參考的歷程識別碼必須包括井字號 (#) 前置詞。 例如，歷程識別碼 138 是使用 #138 參考。  
   
  運算式可包括 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 提供的系統變數和自訂變數。 在運算式中參考變數時，必須包括 \@ 前置詞。 例如，`Counter` 變數是使用 \@Counter 來參考。 \@ 字元並非變數名稱的一部分；該字元僅用來向運算式評估工具表示該識別碼為變數。 如需詳細資訊，請參閱[識別碼 &#40;SSIS&#41;](../../integration-services/expressions/identifiers-ssis.md)。  
@@ -44,7 +45,7 @@ ms.locfileid: "86913496"
 ## <a name="literals"></a>常值  
  運算式可以包含數值、字串及布林常值。 運算式中使用的字串常值必須加上引號。 數值和布林常值則不使用引號。 運算式語言包括常逸出之字元的逸出序列。 如需詳細資訊，請參閱[常值 &#40;SSIS&#41;](../../integration-services/expressions/numeric-string-and-boolean-literals.md)。  
   
-## <a name="operators"></a>操作員  
+## <a name="operators"></a>運算子  
  運算式評估工具包含一組運算子，提供與 Transact-SQL、C++ 和 C# 語言中運算子類似的功能。 不過，運算式語言還包括額外的運算子，並且使用您可能不熟悉的不同符號。 如需詳細資訊，請參閱[運算子 &#40;SSIS 運算式&#41;](../../integration-services/expressions/operators-ssis-expression.md)。  
   
 ### <a name="namespace-resolution-operator"></a>命名空間解析運算子  
@@ -68,7 +69,7 @@ ms.locfileid: "86913496"
 ###### <a name="equality-operators"></a>相等運算子  
  運算式評估工具文法描述提供 == 相等運算子。 此運算子相當於 Transact-SQL 中的 = 運算子以及 C# 中的 == 運算子。  
   
-## <a name="functions"></a>Functions  
+## <a name="functions"></a>函數  
  運算式語言包括與 Transact-SQL 函數和 C# 方法類似的日期和時間函數、數學函數以及字串函數。  
   
  其中有少數函數的名稱與 Transact-SQL 函數相同，但是在運算式評估工具中其功能則稍有不同。  
