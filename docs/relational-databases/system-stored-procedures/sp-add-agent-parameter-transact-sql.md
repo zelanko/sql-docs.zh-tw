@@ -1,5 +1,6 @@
 ---
-title: sp_add_agent_parameter （Transact-sql） |Microsoft Docs
+description: sp_add_agent_parameter (Transact-SQL)
+title: sp_add_agent_parameter (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 055f4765-0574-47c3-bf7d-6ef6e9bd8b34
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: cf8704f4106cd701c5c5d2bbeab324ed2f75e731
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: abd0a36fe9699c3fc72db4848d08ad6469ae3dc0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731761"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481631"
 ---
 # <a name="sp_add_agent_parameter-transact-sql"></a>sp_add_agent_parameter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,9 +40,9 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @profile_id = ] profile_id`這是**msdb**資料庫中**MSagent_profiles**資料表的設定檔識別碼。 *profile_id*是**int**，沒有預設值。  
+`[ @profile_id = ] profile_id`這是**msdb**資料庫的**MSagent_profiles**資料表中的設定檔識別碼。 *profile_id* 是 **int**，沒有預設值。  
   
- 若要找出此*profile_id*所代表的代理程式類型，請在[MSagent_profiles &#40;transact-sql&#41;](../../relational-databases/system-tables/msagent-profiles-transact-sql.md)資料表中尋找*profile_id* ，並記下*agent_type*域值。 其值如下：  
+ 若要找出此*profile_id*所代表的代理程式類型，請在[MSagent_profiles &#40;transact-sql&#41;](../../relational-databases/system-tables/msagent-profiles-transact-sql.md)資料表中找出*profile_id* ，然後記下*agent_type*域值。 其值如下：  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -51,7 +52,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
 |**4**|合併代理程式|  
 |**9**|佇列讀取器代理程式|  
   
-`[ @parameter_name = ] 'parameter_name'`這是參數的名稱。 *parameter_name*是**sysname**，沒有預設值。 如需系統設定檔中已定義的參數清單，請參閱複寫[代理程式設定檔](../../relational-databases/replication/agents/replication-agent-profiles.md)。 如需每個代理程式完整的有效參數清單，請參閱下列主題：  
+`[ @parameter_name = ] 'parameter_name'` 這是參數的名稱。 *parameter_name* 是 **sysname**，沒有預設值。 如需系統設定檔中已定義的參數清單，請參閱複寫 [代理程式設定檔](../../relational-databases/replication/agents/replication-agent-profiles.md)。 如需每個代理程式完整的有效參數清單，請參閱下列主題：  
   
 -   [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
@@ -63,19 +64,19 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
   
 -   [複寫佇列讀取器代理程式](../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
-`[ @parameter_value = ] 'parameter_value'`這是要指派給參數的值。 *parameter_value*是**Nvarchar （255）**，沒有預設值。  
+`[ @parameter_value = ] 'parameter_value'` 這是要指派給參數的值。 *parameter_value* 是 **Nvarchar (255) **，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_add_agent_parameter**用於快照式複寫、異動複寫和合併式複寫中。  
+ **sp_add_agent_parameter** 用於快照式複寫、異動複寫和合併式複寫中。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_add_agent_parameter**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色的成員，才可以執行 **sp_add_agent_parameter**。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用複寫代理程式設定檔](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
+ [處理複寫代理程式設定檔](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
  [複寫代理程式設定檔](../../relational-databases/replication/agents/replication-agent-profiles.md)   
  [sp_add_agent_profile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
  [sp_change_agent_profile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)   

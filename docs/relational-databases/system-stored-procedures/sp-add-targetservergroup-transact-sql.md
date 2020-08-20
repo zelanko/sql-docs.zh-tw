@@ -1,5 +1,6 @@
 ---
-title: sp_add_targetservergroup （Transact-sql） |Microsoft Docs
+description: sp_add_targetservergroup (Transact-SQL)
+title: sp_add_targetservergroup (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: acb69343-d766-46ff-b771-0c7655c5231a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 550f09426f294ecef58398a2bd3b5f03028e0eef
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c0c4d50b224de77f4bc794227b583dea6aa5f512
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85878570"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481580"
 ---
 # <a name="sp_add_targetservergroup-transact-sql"></a>sp_add_targetservergroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,19 +40,19 @@ sp_add_targetservergroup [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @name = ] 'name'`要建立的伺服器組名。 *名稱*是**sysname**，沒有預設值。 *名稱*不能包含逗號。  
+`[ @name = ] 'name'` 要建立的伺服器組名。 *名稱* 是 **sysname**，沒有預設值。 *名稱* 不能包含逗號。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="result-sets"></a>結果集  
  None  
   
 ## <a name="remarks"></a>備註  
- 目標伺服器群組提供一種簡單的方式，以將作業目標鎖定某個目標伺服器集合。 如需詳細資訊，請參閱[sp_apply_job_to_targets](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)。  
+ 目標伺服器群組提供一種簡單的方式，以將作業目標鎖定某個目標伺服器集合。 如需詳細資訊，請參閱 [sp_apply_job_to_targets](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行此程式。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行這個程式。  
   
 ## <a name="examples"></a>範例  
  下列範例會建立名稱為 `Servers Processing Customer Orders` 的目標伺服器群組。  

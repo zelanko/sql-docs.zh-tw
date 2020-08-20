@@ -1,5 +1,6 @@
 ---
-title: sp_changeqreader_agent （Transact-sql） |Microsoft Docs
+description: sp_changeqreader_agent (Transact-SQL)
+title: sp_changeqreader_agent (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d3fe79c5-31ef-4565-bf38-b476b5fb16f7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e3ecfc002a04cb499898b63976e7a094b4a05fd5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 99dcccc85577d854996b37743ee8f8cdd32bbebe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85871375"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481430"
 ---
 # <a name="sp_changeqreader_agent-transact-sql"></a>sp_changeqreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,27 +40,27 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @job_login = ] 'job_login'`[!INCLUDE[msCoName](../../includes/msconame-md.md)]這是用來執行代理程式之 Windows 帳戶的登入。 *job_login*是**Nvarchar （257）**，預設值是 Null。  
+`[ @job_login = ] 'job_login'` 這是用來 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 執行代理程式之 Windows 帳戶的登入。 *job_login* 是 **Nvarchar (257) **，預設值是 Null。  
   
-`[ @job_password = ] 'job_password'`這是執行代理程式之 Windows 帳戶的密碼。 *job_password*是**sysname**，預設值是 Null。  
+`[ @job_password = ] 'job_password'` 這是用來執行代理程式之 Windows 帳戶的密碼。 *job_password* 是 **sysname**，預設值是 Null。  
   
-`[ @frompublisher = ] frompublisher`這是指程式是否正在發行者端執行。 *frompublisher*是 bit，預設值是**0**。 值為**1**表示正在從發行集資料庫的發行者執行此程式。  
+`[ @frompublisher = ] frompublisher` 這是指是否正在發行者端執行程式。 *frompublisher* 是 bit，預設值是 **0**。 **1**值表示正在從發行集資料庫的「發行者」端執行程式。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_changeqreader_agent**用於異動複寫中。  
+ **sp_changeqreader_agent** 用於異動複寫中。  
   
- **sp_changeqreader_agent**是用來變更執行佇列讀取器代理程式所使用的 Windows 帳戶。 您可以變更現有 Windows 登入的密碼，或者提供新的 Windows 登入和密碼。  
+ **sp_changeqreader_agent** 用來變更佇列讀取器代理程式執行時所使用的 Windows 帳戶。 您可以變更現有 Windows 登入的密碼，或者提供新的 Windows 登入和密碼。  
   
  變更代理程式的登入或密碼之後，您必須先停止並重新啟動代理程式，變更才會生效。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_changeqreader_agent**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色的成員，才可以執行 **sp_changeqreader_agent**。  
   
 ## <a name="see-also"></a>另請參閱  
- [查看及修改複寫安全性設定](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
+ [檢視及修改複寫安全性設定](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [sp_addqreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md)  
   
   

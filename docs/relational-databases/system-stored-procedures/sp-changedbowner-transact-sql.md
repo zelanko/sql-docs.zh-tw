@@ -1,5 +1,6 @@
 ---
-title: sp_changedbowner （Transact-sql） |Microsoft Docs
+description: sp_changedbowner (Transact-SQL)
+title: sp_changedbowner (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 516ef311-e83b-45c9-b9cd-0e0641774c04
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 51f0e6107068f28f1c03c357564f131c133fec9e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 648ac83b7c0af68e0ead64ed7a0868ea5777c389
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85872477"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481525"
 ---
 # <a name="sp_changedbowner-transact-sql"></a>sp_changedbowner (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85872477"
   變更目前資料庫的擁有者。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]請改用[ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) 。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 改為使用 [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) 。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,10 +45,10 @@ sp_changedbowner [ @loginame = ] 'login'
   
 ## <a name="arguments"></a>引數  
  [ @loginame =] '*login*'  
- 這是目前資料庫新擁有者的登入識別碼。 *login*是**sysname**，沒有預設值。 *login*必須是現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或 Windows 使用者。 如果*登*入已經透過資料庫中現有的使用者安全性帳戶來存取資料庫，就不能成為目前資料庫的擁有者。 若要防止這種情況，請先卸除目前資料庫的使用者。  
+ 這是目前資料庫新擁有者的登入識別碼。 *login* 是 **sysname**，沒有預設值。 *登* 入必須是已經存在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或 Windows 使用者。 如果*登*入已經透過資料庫中現有的使用者安全性帳戶來存取資料庫，就不能成為目前資料庫的擁有者。 若要防止這種情況，請先卸除目前資料庫的使用者。  
   
  [ @map =] *remap_alias_flag*  
- *Remap_alias_flag*參數已被取代，因為已從移除登入別名 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 使用*remap_alias_flag*參數並不會造成錯誤，但是沒有任何作用。  
+ *Remap_alias_flag*的參數已被取代，因為已從移除登入別名 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 使用 *remap_alias_flag* 參數並不會造成錯誤，但也不會有任何作用。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -57,9 +58,9 @@ sp_changedbowner [ @loginame = ] 'login'
   
  master、model 或 tempdb 系統資料庫的擁有者不能變更。  
   
- 若要顯示有效*登*入值的清單，請執行 sp_helplogins 預存程式。  
+ 若要顯示有效 *登* 入值的清單，請執行 sp_helplogins 預存程式。  
   
- 只使用*login*參數執行 sp_changedbowner，會將資料庫擁有權變更為*登*入。  
+ 只要使用 *login* 參數執行 sp_changedbowner，就會將資料庫擁有權變更為 *登*入。  
   
  不過，您也可以利用 ALTER AUTHORIZATION 陳述式來變更任何安全性實體的擁有者。 如需詳細資訊，請參閱 [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)。  
   
@@ -74,10 +75,10 @@ EXEC sp_changedbowner 'Albert';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的安全性預存程式](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的安全性預存程式 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [sp_dropalias &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md)   
- [sp_dropuser &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
+ [sp_dropuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
  [sp_helpdb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
  [sp_helplogins &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

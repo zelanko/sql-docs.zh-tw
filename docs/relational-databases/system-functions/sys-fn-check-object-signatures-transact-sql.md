@@ -1,5 +1,6 @@
 ---
-title: sys.databases fn_check_object_signatures （Transact-sql） |Microsoft Docs
+description: sys.fn_check_object_signatures (Transact-SQL)
+title: sys. fn_check_object_signatures (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,11 +21,12 @@ ms.assetid: 47509566-d3d7-46a9-89c1-91b4895d56b9
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 497e27859a299fbee1a9ab91ac3d0f7625d04afe
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: e7dc2f5c8700bef804b77e97917250152988baf7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091481"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481816"
 ---
 # <a name="sysfn_check_object_signatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -54,10 +56,10 @@ fn_ check_object_signatures (
  \@*class* 是 **sysname**。  
   
  { \@ *thumbprint* }  
- 用來加密金鑰的憑證 SHA-1 雜湊，或用來加密金鑰的非對稱金鑰 GUID。 \@*指紋*為**Varbinary （20）**。  
+ 用來加密金鑰的憑證 SHA-1 雜湊，或用來加密金鑰的非對稱金鑰 GUID。 \@*指紋* 是 **Varbinary (20) **。  
   
 ## <a name="tables-returned"></a>傳回的資料表  
- 下表列出**fn_check_object_signatures**傳回的資料行。  
+ 下表列出 **fn_check_object_signatures** 傳回的資料行。  
   
 |資料行|類型|描述|  
 |------------|----------|-----------------|  
@@ -67,7 +69,7 @@ fn_ check_object_signatures (
 |is_signature_valid|**int**|如果 is_signed 值是 1，就會在簽章無效時傳回 0。 當簽章有效時，則傳回 1。<br /><br /> 如果 is_signed 值是 0，則一律傳回 0。|  
   
 ## <a name="remarks"></a>備註  
- 使用**fn_check_object_signatures**來確認惡意使用者未遭到物件的篡改。  
+ 使用 **fn_check_object_signatures** 來確認惡意使用者未遭篡改物件。  
   
 ## <a name="permissions"></a>權限  
  需要憑證或非對稱金鑰的 VIEW DEFINITION。  

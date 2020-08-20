@@ -1,5 +1,6 @@
 ---
-title: sp_add_targetsvrgrp_member （Transact-sql） |Microsoft Docs
+description: sp_add_targetsvrgrp_member (Transact-SQL)
+title: sp_add_targetsvrgrp_member (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5021ed5b-acca-4f8b-b9db-18733059c359
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f18af2207069ab3a4d8b8a05c9c0a5b7a3fe6deb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 347f9581db7da96d93d69a25625af1bc40260f0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85878240"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481570"
 ---
 # <a name="sp_add_targetsvrgrp_member-transact-sql"></a>sp_add_targetsvrgrp_member (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,12 +40,12 @@ sp_add_targetsvrgrp_member [ @group_name = ] 'group_name' , [ @server_name = ] '
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @group_name = ] 'group_name'`群組的名稱。 *group_name*是**sysname**，沒有預設值。  
+`[ @group_name = ] 'group_name'` 群組的名稱。 *group_name* 是 **sysname**，沒有預設值。  
   
-`[ @server_name = ] 'server_name'`應新增至指定群組的伺服器名稱。 *server_name*是**Nvarchar （30）**，沒有預設值。  
+`[ @server_name = ] 'server_name'` 應新增至指定群組的伺服器名稱。 *server_name* 是 **Nvarchar (30) **，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="result-sets"></a>結果集  
  None  
@@ -53,7 +54,7 @@ sp_add_targetsvrgrp_member [ @group_name = ] 'group_name' , [ @server_name = ] '
  目標伺服器可以是多個目標伺服器群組的成員。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行此程式。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行這個程式。  
   
 ## <a name="examples"></a>範例  
  下列範例會加入 `Servers Maintaining Customer Information` 群組，且會將 `LONDON1` 加入這個群組中。  

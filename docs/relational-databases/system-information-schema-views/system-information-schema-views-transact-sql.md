@@ -1,5 +1,6 @@
 ---
-title: 系統資訊架構 Views （Transact-sql） |Microsoft Docs
+description: '系統資訊架構視圖 (Transact-sql) '
+title: 系統資訊架構視圖 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2019
 ms.prod: sql
@@ -18,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5d004965c3ac358c9caf72c2de55b003a4a24d3c
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: c1b093be8f2a3cdb6fceb3cffbbe70ca2312fa81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942833"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481709"
 ---
-# <a name="system-information-schema-views-transact-sql"></a>系統資訊架構 Views （Transact-sql）
+# <a name="system-information-schema-views-transact-sql"></a>系統資訊架構視圖 (Transact-sql) 
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
@@ -41,7 +42,7 @@ ms.locfileid: "86942833"
 |資料庫|目錄|
 |結構描述|結構描述|
 |Object|Object|
-|使用者自訂資料類型|Domain|
+|使用者自訂資料類型|網域|
 
 這個名稱對應慣例適用於下列與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ISO 相容的檢視。
 
@@ -102,6 +103,6 @@ WHERE TABLE_NAME = N'Product';
 
 ## <a name="see-also"></a>另請參閱
 
-- [&#40;Transact-sql&#41;的系統檢視](../../relational-databases/system-views/replication-views-transact-sql.md)
+- [&#40;Transact-sql&#41;的系統檢視 ](../../relational-databases/system-views/replication-views-transact-sql.md)
 - [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
 - [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md) 

@@ -1,5 +1,6 @@
 ---
-title: sys.databases fn_virtualservernodes （Transact-sql） |Microsoft Docs
+description: sys.fn_virtualservernodes (Transact-SQL)
+title: sys. fn_virtualservernodes (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +24,12 @@ ms.assetid: 257f3b8d-93c0-4444-87f1-ea211bd8cad0
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ec290179cdbf3e61f0e5033acbf3156dbc6441a
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 085867d196e9ba2a29557819f76dbe4586e0bbec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091662"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481734"
 ---
 # <a name="sysfn_virtualservernodes-transact-sql"></a>sys.fn_virtualservernodes (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -35,7 +37,7 @@ ms.locfileid: "86091662"
   傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體可在其中執行的容錯移轉叢集執行個體節點清單。 在容錯移轉叢集環境中，這項資訊非常有用。  
   
 > [!IMPORTANT]
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 包含此系統函數是為了回溯相容性。 我們建議您改用[sys.databases dm_os_cluster_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md) 。  
+>  這 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 是為了回溯相容性而包含的系統函數。 我們建議您改用 [sys. dm_os_cluster_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md) 。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,9 +49,9 @@ fn_virtualservernodes()
 ```  
   
 ## <a name="tables-returned"></a>傳回的資料表  
- 如果目前的伺服器是叢集伺服器， **fn_virtualservernodes**會傳回已定義這個實例之容錯移轉叢集實例節點的清單 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+ 如果目前的伺服器是叢集伺服器， **fn_virtualservernodes** 會傳回已定義這個實例的容錯移轉叢集實例節點清單 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
- 如果目前的伺服器實例不是叢集伺服器， **fn_virtualservernodes**會傳回空的資料列集。  
+ 如果目前的伺服器實例不是叢集伺服器， **fn_virtualservernodes** 會傳回空的資料列集。  
   
 ## <a name="permissions"></a>權限  
  使用者必須有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 VIEW SERVER STATE 權限。  
@@ -72,7 +74,7 @@ SELECT * FROM fn_virtualservernodes();
  SS3-CLUSN2  
   
 ## <a name="see-also"></a>另請參閱  
- [dm_os_cluster_nodes &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
- [fn_servershareddrives &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-servershareddrives-transact-sql.md)  
+ [sys. dm_os_cluster_nodes &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
+ [sys. fn_servershareddrives &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-servershareddrives-transact-sql.md)  
   
   

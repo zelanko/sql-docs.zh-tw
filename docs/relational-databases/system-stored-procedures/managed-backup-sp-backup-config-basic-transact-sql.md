@@ -1,5 +1,6 @@
 ---
-title: managed_backup. sp_backup_config_basic （Transact-sql） |Microsoft Docs
+description: managed_backup.sp_backup_config_basic (Transact-SQL)
+title: managed_backup sp_backup_config_basic (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/03/2016
 ms.prod: sql
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 67ed480e1d34e688413cd7242bd25501dcd3074a
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 90ca851e5056b5c592b5cab67fc695f598b67ed1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052924"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481670"
 ---
 # <a name="managed_backupsp_backup_config_basic-transact-sql"></a>managed_backup.sp_backup_config_basic (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -32,7 +34,7 @@ ms.locfileid: "86052924"
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]設定特定資料庫或實例的基本設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 > [!NOTE]  
->  您可以自行呼叫此程式，以建立基本的受管理備份設定。 不過，如果您打算加入「高級功能」或「自訂排程」，請先使用 managed_backup 來設定這些設定[sp_backup_config_advanced &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)和 managed_backup。在使用此程式啟用受管理備份之前，請先[sp_backup_config_schedule &#40;transact-sql&#41;。](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
+>  您可以自行呼叫此程式，以建立基本的 managed backup 設定。 但是，如果您打算新增 advanced 功能或自訂排程，請先使用 managed_backup 設定這些設定 [。 sp_backup_config_advanced &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) 和 Managed_backup sp_backup_config_schedule [transact-sql &#40;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) ，然後再使用此程式啟用受控備份。  
    
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,27 +46,27 @@ EXEC managed_backup.sp_backup_config_basic
     ,[@retention_days = ] 'retention_period_in_days'    ,[@credential_name = ] 'sql_credential_name'  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>參量  
+##  <a name="arguments"></a><a name="Arguments"></a> 引數  
  @enable_backup  
- 啟用或停用指定資料庫的[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。 @enable_backup為**位**。 設定的第一個實例時，所需的參數 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果您要變更現有的設定 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ，此參數是選擇性的。 在此情況下，任何未指定的設定值都會保留其現有的值。  
+ 啟用或停用指定資料庫的[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。 @enable_backup是**BIT**。 設定第一個實例時的必要參數 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果您要變更現有的設定 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ，此參數是選擇性的。 在此情況下，任何未指定的設定值都會保留其現有的值。  
   
  @database_name  
- 在特定資料庫上啟用受管理備份的資料庫名稱。  
+ 在特定資料庫上啟用 managed 備份的資料庫名稱。  
   
  @container_url  
- 指出備份位置的 URL。 當 @credential_name 為 Null 時，此 URL 是 Azure 儲存體中 blob 容器的共用存取簽章（SAS） url，而備份則使用新的備份來封鎖 blob 功能。 如需詳細資訊，請參閱[瞭解 SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。 當 @credential_name 指定時，這會是儲存體帳戶 URL，而備份會使用已被取代的備份來分頁 blob 功能。  
+ 指出備份位置的 URL。 當 @credential_name 為 Null 時，此 URL 是共用存取簽章 (SAS) URL 指向 Azure 儲存體中的 blob 容器，而備份則使用新的備份來封鎖 blob 功能。 如需詳細資訊，請參閱 [瞭解 SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。 當 @credential_name 指定時，這會是儲存體帳戶 URL，而備份會使用已淘汰的備份來分頁 blob 功能。  
   
 > [!NOTE]  
->  此參數目前僅支援 SAS URL。  
+>  此參數目前只支援 SAS URL。  
   
  @retention_days  
- 備份檔案的保留期限，以天數為單位。 @storage_url為 INT。 當您 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 第一次在實例上設定時，這是必要的參數 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 變更設定時 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ，這個參數是選擇性的。 如果未指定，則會保留現有的組態值。  
+ 備份檔案的保留期限，以天數為單位。 @storage_url是 INT。 當您 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 第一次在實例上設定時，這是必要的參數 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 變更設定時 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ，這個參數是選擇性的。 如果未指定，則會保留現有的組態值。  
   
  @credential_name  
- 用來向 Azure 儲存體帳戶進行驗證的 SQL 認證名稱。 @credentail_name為**SYSNAME**。 當指定時，備份會儲存至分頁 blob。 如果此參數為 Null，備份將會儲存為區塊 blob。 備份至分頁 blob 已淘汰，因此最好使用新的區塊 blob 備份功能。 用來變更[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]組態時為選擇性參數。 如果未指定，則會保留現有的設定值。  
+ 用來向 Azure 儲存體帳戶驗證之 SQL 認證的名稱。 @credentail_name 為 **SYSNAME**。 當指定時，備份會儲存至分頁 blob。 如果此參數為 Null，則備份會儲存為區塊 blob。 備份至分頁 blob 已被取代，因此最好使用新的區塊 blob 備份功能。 用來變更[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]組態時為選擇性參數。 如果未指定，則會保留現有的設定值。  
   
 > [!WARNING]
->  目前不支援** \@ credential_name**參數。 僅支援備份至區塊 blob，這需要此參數為 Null。  
+>  目前不支援** \@ credential_name**參數。 只支援備份至區塊 blob，這需要將此參數設為 Null。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -83,7 +85,7 @@ New-AzureStorageContainer -Name mycontainer -Context $context
 New-AzureStorageContainerSASToken -Name mycontainer -Permission rwdl -FullUri -Context $context  
 ```  
   
- 下列範例 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 會針對在其上執行的 SQL Server 實例啟用，並將保留原則設為30天，並將目的地設定為名為 ' mystorageaccount ' 的儲存體帳戶中名為 ' mycontainer ' 的容器。  
+ 下列範例 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 會針對執行它的 SQL Server 實例啟用、將保留原則設定為30天、將目的地設定為名為 ' mystorageaccount ' 之儲存體帳戶中名為 ' mycontainer ' 的容器。  
   
 ```Transact-SQL 
 Use msdb;  
@@ -108,7 +110,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [managed_backup。 sp_backup_config_advanced &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)   
+ [managed_backup sp_backup_config_advanced &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)   
  [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
   
   

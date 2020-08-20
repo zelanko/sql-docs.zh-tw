@@ -1,4 +1,5 @@
 ---
+description: sp_add_category (Transact-SQL)
 title: sp_add_category (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,22 +18,22 @@ helpviewer_keywords:
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 323a86b4efbaa63d8858341c68908e30258d4889
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 40ce855f929a19f9dbcd757b0e1ea8774fbe2cb3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865286"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481680"
 ---
 # <a name="sp_add_category-transact-sql"></a>sp_add_category (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  將作業、警示或操作員的指定類別目錄加入伺服器中。 如需替代方法，請參閱[使用 SQL Server Management Studio 建立作業類別目錄](/sql/ssms/agent/create-a-job-category)。
+  將作業、警示或操作員的指定類別目錄加入伺服器中。 如需替代方法，請參閱 [使用 SQL Server Management Studio 建立作業類別目錄](/sql/ssms/agent/create-a-job-category)。
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
  > [!IMPORTANT]  
- > 在[AZURE SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)上，目前不支援大部分的 SQL Server Agent 功能。 如需詳細資訊，請參閱[AZURE SQL 受控執行個體與 SQL Server 的 t-sql 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+ > 在 [AZURE SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)上，大部分但並非所有的 SQL Server Agent 功能目前都受到支援。 如需詳細資料，請參閱 [AZURE SQL 受控執行個體與 SQL Server 的 t-sql 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) 。
   
 ## <a name="syntax"></a>語法  
   
@@ -45,7 +46,7 @@ sp_add_category
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @class = ] 'class'`要加入之類別目錄的類別。 *類別*是**Varchar (8) ** ，預設值為 JOB，而且可以是下列其中一個值。  
+`[ @class = ] 'class'` 要加入之類別目錄的類別。 *類別* 是 **Varchar (8) ** 具有工作的預設值，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -53,27 +54,27 @@ sp_add_category
 |ALERT|加入警示類別目錄。|  
 |OPERATOR|加入操作員類別目錄。|  
   
-`[ @type = ] 'type'`要加入之類別目錄的類型。 *類型*是**Varchar (12) **，預設值為**LOCAL**，而且可以是下列其中一個值。  
+`[ @type = ] 'type'` 要加入的類別目錄類型。 *type* 是 **Varchar (12) **，預設值是 **LOCAL**，它可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
 |LOCAL|本機作業類別目錄。|  
 |多伺服器|多伺服器作業類別目錄。|  
-|無|作業以外之類別的分類 **。**|  
+|無|作業以外類別的類別 **。**|  
   
-`[ @name = ] 'name'`要加入之類別目錄的名稱。 在指定的類別內，這個名稱必須是唯一的。 *名稱*是**sysname**，沒有預設值。  
+`[ @name = ] 'name'` 要加入的類別目錄名稱。 在指定的類別內，這個名稱必須是唯一的。 *名稱* 是 **sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** (成功) 或**1** (失敗)   
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="result-sets"></a>結果集  
  None  
   
 ## <a name="remarks"></a>備註  
- **sp_add_category**必須從**msdb**資料庫中執行。  
+ **sp_add_category** 必須從 **msdb** 資料庫執行。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_add_category**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色的成員，才可以執行 **sp_add_category**。  
   
 ## <a name="examples"></a>範例  
  下列範例會建立名稱為 `AdminJobs` 的本機作業類別目錄。  
