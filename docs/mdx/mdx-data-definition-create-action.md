@@ -1,5 +1,6 @@
 ---
-title: CREATE ACTION 語句（MDX） |Microsoft Docs
+description: MDX 資料定義 - CREATE ACTION
+title: " (MDX) 建立動作語句 |Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b723a706521b24c9aa216c46f617d8ff94997137
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7132c28e93dbc11eee1c5a4e4d53126f280fa74a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68098547"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494901"
 ---
 # <a name="mdx-data-definition---create-action"></a>MDX 資料定義 - CREATE ACTION
 
@@ -72,32 +73,32 @@ FOR
  有效的字串運算式。  
   
 ## <a name="remarks"></a>備註  
- 用戶端應用程式可以建立和執行不安全的動作；用戶端應用程式也可以使用不安全的函數。 若要避免這些情況，請使用 [**安全性選項**] 屬性。 如需詳細資訊，請參閱＜安全性選項屬性＞。  
+ 用戶端應用程式可以建立和執行不安全的動作；用戶端應用程式也可以使用不安全的函數。 若要避免這些情況，請使用 [ **安全性選項** ] 屬性。 如需詳細資訊，請參閱＜安全性選項屬性＞。  
   
 > [!NOTE]  
->  包含此陳述式是為了回溯相容性 (Backward Compatibility) 的需要。 不支援新[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的動作，例如「鑽取」或「報表」動作。  
+>  包含此陳述式是為了回溯相容性 (Backward Compatibility) 的需要。 不支援新的動作 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，例如「鑽取」或「報表」動作。  
   
 ## <a name="action-types"></a>動作類型  
- 下表描述中[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]可用的各種動作類型。  
+ 下表描述中可用的不同動作類型 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。  
   
 |動作類型|描述|  
 |-----------------|-----------------|  
-|**URL**|傳回的動作字串是 URL，應使用網際網路瀏覽器開啟。<br /><br /> 注意：如果此動作的開頭不是`https://`或`https://`，瀏覽器將無法使用此動作，除非**SafetyOptions**設為**DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**。|  
+|**URL**|傳回的動作字串是 URL，應使用網際網路瀏覽器開啟。<br /><br /> 注意：如果此動作不 `https://` 是以或開頭 `https://` ，除非 **SafetyOptions** 設定為 **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**，否則瀏覽器將無法使用動作。|  
 |**HTML**|傳回的動作字串是 HTML 指令碼。 應將此字串儲存至檔案，而且應使用網際網路瀏覽器來轉譯此檔案。 在此情況下，可能會將整個指令碼視為已產生 HTML 的一部分執行。|  
-|**句**|傳回的動作字串是一種語句，必須藉由將 command 物件的**ICommand：： SetText**方法設定為字串，並呼叫**ICommand：： Execute**方法來執行。 如果未能成功執行此命令，會傳回錯誤。|  
-|**集中**|傳回的動作字串是 MDX 語句，必須藉由將 command 物件的**ICommand：： SetText**方法設定為字串，並呼叫**ICommand：： Execute**方法來執行。 要求的介面識別碼（IID）應為**IDataset**。 如果已建立資料集，此命令就能成功執行。 用戶端應用程式應該允許使用者瀏覽傳回的資料集。|  
-|**資料列集**|與**DATASET**相似，但用戶端應用程式應該要求**IRowset**的 iid，而不是要求**IDataset**的 iid。 如果已建立資料列集，此命令就能成功執行。 用戶端應用程式應該允許使用者瀏覽傳回的資料列集。|  
-|**命令列**|用戶端應用程式應執行此動作字串。 此字串是一個命令列。|  
-|**專屬**|除非用戶端應用程式有自訂、非一般的特定動作，否則應用程式不應該顯示，也不該執行此動作。 除非用戶端應用程式藉由在**APPLICATION_NAME**上設定適當的限制，明確要求，否則不會將專屬動作傳回給用戶端應用程式。|  
+|**聲明**|傳回的動作字串是必須藉由將命令物件的 **ICommand：： SetText** 方法設定為字串，並呼叫 **ICommand：： Execute**方法來執行的語句。 如果未能成功執行此命令，會傳回錯誤。|  
+|**資料**|傳回的動作字串是一個 MDX 語句，必須藉由將命令物件的 **ICommand：： SetText** 方法設定為字串，並呼叫 **ICommand：： Execute** 方法來執行。 要求的介面識別碼 (IID) 應 **IDataset**。 如果已建立資料集，此命令就能成功執行。 用戶端應用程式應該允許使用者瀏覽傳回的資料集。|  
+|**ROWSET**|類似于**資料集**，用戶端應用程式應該要求**IRowset**的 iid，而不是要求**IDataset**的 iid。 如果已建立資料列集，此命令就能成功執行。 用戶端應用程式應該允許使用者瀏覽傳回的資料列集。|  
+|**命令**|用戶端應用程式應執行此動作字串。 此字串是一個命令列。|  
+|**專有**|除非用戶端應用程式有自訂、非一般的特定動作，否則應用程式不應該顯示，也不該執行此動作。 除非用戶端應用程式藉由在 **APPLICATION_NAME**上設定適當的限制，明確要求這些動作，否則不會將專屬動作傳回給用戶端應用程式。|  
   
 ## <a name="invocation-types"></a>引動過程類型  
  下表描述 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中可用的不同引動過程類型。 引動過程類型只由用戶端應用程式使用，可協助判定何時要叫用動作。 引動過程類型實際上不會決定動作的引動過程行為。  
   
 |引動過程類型|描述|  
 |---------------------|-----------------|  
-|**互動式**|此動作應透過使用者互動，由用戶端應用程式叫用。|  
+|**互動**|此動作應透過使用者互動，由用戶端應用程式叫用。|  
 |**ON_OPEN**|此動作應在目標物件開啟時，由用戶端應用程式叫用。 目前未實作此引動過程類型。|  
-|**成批**|此動作應在用戶端應用程式決定要在批次作業中叫用目標物件時，由用戶端應用程式叫用。 目前未實作此引動過程類型。|  
+|**批**|此動作應在用戶端應用程式決定要在批次作業中叫用目標物件時，由用戶端應用程式叫用。 目前未實作此引動過程類型。|  
   
 ### <a name="scope"></a>影響範圍  
  每個動作是為特定 Cube 而定義，而且在該 Cube 中有唯一的名稱。 一個動作可有下表列出的其中一個範圍。  
@@ -118,7 +119,7 @@ FOR
  此動作僅適用於特定資料格。  
   
  集合範圍  
- 此動作僅適用於集合。 名稱**ActionParameterSet**是保留供應用程式在動作的運算式內使用。  
+ 此動作僅適用於集合。 名稱 **ActionParameterSet**會保留給動作運算式內的應用程式使用。  
   
 ## <a name="see-also"></a>另請參閱  
  [Mdx 資料定義語句 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  

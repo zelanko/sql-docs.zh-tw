@@ -1,4 +1,5 @@
 ---
+description: 了解同步和非同步轉換
 title: 了解同步和非同步轉換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1c2748384a8ea4901a21ffa94498da5405043227
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 849f01ba00bddd67ca2de2c16b6953cff9b06c36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913710"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495145"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>了解同步和非同步轉換
 
@@ -45,7 +46,7 @@ ms.locfileid: "86913710"
   
 -   輸入資料列和輸出資料列之間有一對一的關係。 彙總轉換就是一個範例，其中的元件必須在輸出中加入資料列，才能保留計算的彙總值。  
   
- 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 指令碼和程式設計中，您會指定非同步轉換，其方式是將 0 的值指派給元件輸出的 **SynchronousInputID** 屬性。 。 這樣會告訴資料流程引擎不要將每一個資料列自動傳送給輸出。 然後您必須撰寫程式碼，明確地將每一個資料列傳送給適當的輸出，其方式是將其加入到針對非同步轉換輸出所建立的新輸出緩衝區內。  
+ 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 指令碼和程式設計中，您會指定非同步轉換，其方式是將 0 的值指派給元件輸出的 **SynchronousInputID** 屬性。 . 這樣會告訴資料流程引擎不要將每一個資料列自動傳送給輸出。 然後您必須撰寫程式碼，明確地將每一個資料列傳送給適當的輸出，其方式是將其加入到針對非同步轉換輸出所建立的新輸出緩衝區內。  
   
 > [!NOTE]  
 >  由於來源元件也必須明確地將它從資料來源讀取的每一個資料列加入到它的輸出緩衝區內，所以來源類似於具有非同步輸出的轉換。  

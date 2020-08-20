@@ -1,4 +1,5 @@
 ---
+description: DTCTransaction 事件類別
 title: DTCTransaction 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: 9a2d358e-5b8f-4d0b-8b93-6705c009ad57
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c66dc8844aa47748fe5f4beb3a15e8b26f120c90
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d000b8ae419c6c360d6d8b5a6ce498266e7a540c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716943"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494331"
 ---
 # <a name="dtctransaction-event-class"></a>DTCTransaction 事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  使用 **DTCTransaction** 事件類別，可監視透過 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 分散式交易協調器 (DTC) 進行協調之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 交易的狀態。 這些包括牽涉到同一個 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體中兩個以上資料庫的交易，以及牽涉到兩個以上 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體的分散式交易。  
+   使用 **DTCTransaction** 事件類別，可監視透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (DTC) 進行協調之 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 交易的狀態。 這些包括牽涉到同一個 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體中兩個以上資料庫的交易，以及牽涉到兩個以上 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體的分散式交易。  
   
 ## <a name="dtctransaction-event-class-data-columns"></a>DTCTransaction 事件類別資料行  
   

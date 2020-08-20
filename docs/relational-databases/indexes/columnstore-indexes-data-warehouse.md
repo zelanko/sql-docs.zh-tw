@@ -1,4 +1,5 @@
 ---
+description: 資料行存放區索引 - 資料倉儲
 title: 資料行存放區索引 - 資料倉儲 | Microsoft Docs
 ms.custom: ''
 ms.date: 12/01/2017
@@ -11,19 +12,19 @@ ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4e9ca11ccf29cc1f13b5d4c70a229634674b3d9f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3ffd31c536952780f487504fae715797bd07028d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007522"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494209"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>資料行存放區索引 - 資料倉儲
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   結合資料分割的資料行存放區索引對於建置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料倉儲非常重要。  
   
-## <a name="whats-new"></a>新功能  
+## <a name="whats-new"></a>最新消息  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 導入了這些增強資料行存放區效能的功能：  
   
 -   AlwaysOn 支援在可讀取之次要複本上的資料行存放區索引進行查詢。  

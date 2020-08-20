@@ -1,4 +1,5 @@
 ---
+description: catalog.event_messages
 title: catalog.event_messages | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2e19ca7fac23979ecd691ed6cab45fa2cfec9564
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 29fcb7e924f444b44435b6c46dcdf76a88ebeec5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912626"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495259"
 ---
 # <a name="catalogevent_messages"></a>catalog.event_messages 
 
@@ -33,7 +34,7 @@ ms.locfileid: "86912626"
 |Message_time|datetimeoffset(7)|建立訊息的時間。|  
 |Message_type|SMALLINT|顯示的訊息類型。 如需訊息類型的詳細資訊，請參閱 [catalog.operation_messages &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md)。|  
 |Message_source_type|SMALLINT|訊息的來源。|  
-|message|nvarchar(max)|訊息的文字。|  
+|訊息|nvarchar(max)|訊息的文字。|  
 |Extended_info_id|BIGINT|在 [catalog.extended_operation_info &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md) 檢視中所找到，且與作業訊息相關之其他資訊的識別碼。|  
 |Package_name|nvarchar(260)|封裝檔案的名稱。|  
 |Event_name|nvarchar(1024)|與訊息相關聯的執行階段事件。|  

@@ -1,4 +1,5 @@
 ---
+description: 疑難排解封裝開發的工具
 title: 套件開發的疑難排解工具 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 652ebe1e842acd6b51b53f229bed09b60ab0fe41
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e4f59f38a15bf7a703bbdf18277b4e384d1f4c94
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913727"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495129"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>疑難排解封裝開發的工具
 
@@ -33,11 +34,11 @@ ms.locfileid: "86913727"
 ## <a name="troubleshooting-design-time-validation-issues"></a>疑難排解設計階段驗證問題  
  在最新版的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中開啟封裝時，系統會先驗證所有連線，然後才驗證所有資料流程元件，並將緩慢或無法使用的所有連線設為離線工作。 這有助於減少驗證封裝資料流程的延遲。  
   
- 開啟封裝之後，您也可以以滑鼠右鍵按一下 [連接管理員]  區域中的連接管理員，然後按一下 [離線工作]  來關閉連接。 這可以在 SSIS 設計師中加快作業。  
+ 開啟封裝之後，您也可以以滑鼠右鍵按一下 [連接管理員]**** 區域中的連接管理員，然後按一下 [離線工作]**** 來關閉連接。 這可以在 SSIS 設計師中加快作業。  
   
  已設為離線工作的連接將保持離線狀態，直到您執行下列其中一項作業為止：  
   
--   以滑鼠右鍵按一下 SSIS 設計師之 [連接管理員]  區域中的連接管理員，然後按一下 [測試連接性]  來測試連接。  
+-   以滑鼠右鍵按一下 SSIS 設計師之 [連接管理員]**** 區域中的連接管理員，然後按一下 [測試連接性]**** 來測試連接。  
   
      例如，開啟封裝之後，一開始會將連線設為離線工作。 您要修改連接字串來解決問題，然後按一下 **[測試連接性]** 來測試連線。  
   
@@ -94,6 +95,6 @@ ms.locfileid: "86913727"
   
 ## <a name="see-also"></a>另請參閱  
  [封裝執行的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)   
- [資料流程效能功能](../../integration-services/data-flow/data-flow-performance-features.md)  
+ [資料流程效能的功能](../../integration-services/data-flow/data-flow-performance-features.md)  
   
   

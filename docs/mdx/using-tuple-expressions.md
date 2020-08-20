@@ -1,4 +1,5 @@
 ---
+description: 使用 Tuple 運算式
 title: 使用元組運算式 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 55b55f2104e900104c051021fc02761d32c63e5e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0dfba7ed88a27c7cdcc56ff29861d593cca33e91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68135127"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494841"
 ---
 # <a name="using-tuple-expressions"></a>使用 Tuple 運算式
 
@@ -25,7 +26,7 @@ ms.locfileid: "68135127"
   
  Tuple 識別碼的完整運算式是由一個或多個明確指定的成員所組成 (嵌在括號中)：  
   
- （*Member_expression* [，*Member_expression* ...]）  
+  (*Member_expression* [，*Member_expression* ...] )   
   
  Tuple 可以是完整 Tuple、可以包含隱含成員，或也可以包含單一成員。  
   
@@ -36,7 +37,7 @@ ms.locfileid: "68135127"
   
 -   如果隱含參考的階層有預設成員，則會將該預設成員加入 Tuple。  
   
--   如果隱含參考的階層沒有預設成員，則會使用預設階層的 **（全部）** 成員。  
+-   如果隱含參考的階層沒有預設成員，則會使用 (預設階層的 ** 所有) ** 成員。  
   
 -   如果隱含參考的階層沒有預設成員，就會使用此階層之最高層級的第一個成員。  
   
@@ -44,7 +45,7 @@ ms.locfileid: "68135127"
  如果 Tuple 運算式有單一成員，MDX 會將該成員轉換成單一成員 Tuple，以供評估運算式之用。 換句話說，提供成員運算式 `[Measures].[TestMeasure]` (而非 Tuple 運算式)，在功能上相當於 Tuple 運算式 `( [Measures].[TestMeasure] ).`  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX&#41;&#40;的運算式](../mdx/expressions-mdx.md)   
+ [MDX &#40;運算式&#41;](../mdx/expressions-mdx.md)   
  [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

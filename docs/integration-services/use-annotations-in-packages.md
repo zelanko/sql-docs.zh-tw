@@ -1,4 +1,5 @@
 ---
+description: 使用封裝中的註解
 title: 在套件中使用註解 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 48c8ed9a-b10d-490c-9ba7-4b77aa44e3dd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 56bc48040555dbcc7a48f1ec6d1e6d7422a53aaa
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5e25927358f87c63c2c7d6dcbfb92b565d02994e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913704"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495111"
 ---
 # <a name="use-annotations-in-packages"></a>使用封裝中的註解
 
@@ -40,19 +41,19 @@ ms.locfileid: "86913704"
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  在 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中，以滑鼠右鍵按一下 [控制流程]  、[資料流程]  或 [事件處理常式]  索引標籤設計介面上的任何位置，然後按一下 [加入註解]  。 索引標籤的設計介面上將出現一個文字區塊。  
+3.  在 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中，以滑鼠右鍵按一下 [控制流程]****、[資料流程]**** 或 [事件處理常式]**** 索引標籤設計介面上的任何位置，然後按一下 [加入註解]****。 索引標籤的設計介面上將出現一個文字區塊。  
   
 4.  加入文字。  
   
     > [!NOTE]  
     >  如果不加入文字，則按一下區塊以外的位置，文字區塊便會移除。  
   
-5.  若要變更註解中文字的大小或格式，請在註解按一下滑鼠右鍵，然後選取 [設定文字註解的字型]  。  
+5.  若要變更註解中文字的大小或格式，請在註解按一下滑鼠右鍵，然後選取 [設定文字註解的字型]****。  
   
 6.  若要加入其他文字行，請按 ENTER。  
   
      註解方塊會自動在您加入其他文字行時放大。  
   
-7.  若要將註解加入群組，請在註解上按一下滑鼠右鍵，然後按一下 [群組]  。  
+7.  若要將註解加入群組，請在註解上按一下滑鼠右鍵，然後按一下 [群組]****。  
   
-8.  若要儲存更新的封裝，請按一下 **[檔案]** 功能表上的 **[全部儲存]** 。  
+8.  若要儲存更新的封裝，請按一下 **[檔案]** 功能表上的 **[全部儲存]**。  

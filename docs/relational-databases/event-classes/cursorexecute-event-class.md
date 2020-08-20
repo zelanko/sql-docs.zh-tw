@@ -1,4 +1,5 @@
 ---
+description: CursorExecute 事件類別
 title: CursorExecute 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 83399fd8-cc25-4d3c-8985-7a824ef08e08
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db1b52180a644c4350b66833f559845ab0f9c181
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 65834775bd190e5d8638d5eba33b38c7d01b2997
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762951"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494430"
 ---
 # <a name="cursorexecute-event-class"></a>CursorExecute 事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85762951"
 |**GroupID**|**int**|SQL 追蹤事件引發所在之工作負載群組的識別碼。|66|是|  
 |**Handle**|**int**|整數，ODBC、OLE DB 或 DB-Library 用來與伺服器協調執行作業。|33|是|  
 |**HostName**|**nvarchar**|執行用戶端的電腦名稱。 如果用戶端提供主機名稱，這個資料行就會擴展。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  
-|**IntegerData**|**int**|資料指標類型。 值為：<br /><br /> 1 = 索引鍵集<br /><br /> 2 = 動態<br /><br /> 4 = 順向<br /><br /> 8 = 靜態<br /><br /> 16 = 向前快轉|25|否|  
+|**IntegerData**|**int**|資料指標類型。 值為：<br /><br /> 1 = 索引鍵集<br /><br /> 2 = 動態<br /><br /> 4 = 順向<br /><br /> 8 = 靜態<br /><br /> 16 = 向前快轉|25|No|  
 |**IsSystem**|**int**|指出事件是發生在系統處理序或使用者處理序。 1 = 系統，0 = 使用者。|60|是|  
 |**LoginName**|**nvarchar**|使用者的登入名稱 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性登入或 DOMAIN\username 格式的 Windows 登入認證)。|11|是|  
 |**LoginSid**|**image**|已登入之使用者的安全性識別碼 (SID)。 您可以在 **sys.server_principals** 目錄檢視中找到這項資訊。 伺服器上的每一個登入之 SID 是唯一的。|41|是|  
@@ -55,6 +56,6 @@ ms.locfileid: "85762951"
 ## <a name="see-also"></a>另請參閱  
  [擴充事件](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [資料指標](../../relational-databases/cursors.md)  
+ [游標](../../relational-databases/cursors.md)  
   
   

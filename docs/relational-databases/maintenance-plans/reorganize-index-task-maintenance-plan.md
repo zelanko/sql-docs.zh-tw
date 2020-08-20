@@ -1,4 +1,5 @@
 ---
+description: 重新組織索引工作 (維護計畫)
 title: 重新組織索引工作 (維護計畫) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/21/2017
@@ -14,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: e9cbebbd-f36f-4176-9832-382a46ac946c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c6615df0fafc2190eece4aa74c7bf36e57a2d80a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3af62a68c6aeb36f6527afc66744ad8c2f66947f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715356"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494164"
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>重新組織索引工作 (維護計畫)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  使用 [重新組織索引工作]  對話方塊，即可將索引頁面移至更有效率的搜尋順序。 此工作會使用 `ALTER INDEX REORGANIZE` 陳述式搭配 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫。  
+   使用 [重新組織索引工作]**** 對話方塊，即可將索引頁移至更有效率的搜尋順序。 此工作會使用 `ALTER INDEX REORGANIZE` 陳述式搭配 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫。  
   
 ## <a name="options"></a>選項。  
  **[連接]**  
@@ -52,7 +53,7 @@ ms.locfileid: "85715356"
      產生維護計畫，只針對選取的資料庫執行維護工作。 如果選擇此選項，則必須在清單中至少選取一個資料庫。  
   
  **Object**  
- 限制 [選取範圍]  格線僅顯示資料表、檢視或兩者。  
+ 限制 [選取範圍] 格線僅顯示資料表、檢視或兩者。  
   
  **選取範圍**  
  指定受此工作影響的資料表或索引。 [物件] 方塊中的 [資料表和檢視] 為選取狀態時無法使用。  
@@ -85,10 +86,10 @@ ms.locfileid: "85715356"
  指定如何對伺服器進行驗證。  
   
  **使用 Windows 整合式安全性**  
- 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 驗證連線到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的執行個體。  
+ 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體。  
   
  **使用特定的使用者名稱和密碼**  
- 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證連線到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 無法使用此選項。  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體。 無法使用此選項。  
   
  **使用者名稱**  
  提供驗證時要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 無法使用此選項。  

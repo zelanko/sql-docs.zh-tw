@@ -1,5 +1,6 @@
 ---
-title: 錯誤（MDX） |Microsoft Docs
+description: Error (MDX)
+title: MDX)  (時發生錯誤 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 91d07c6bbb4eb4731c9a802e47cd8f4c71aa5aeb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f95ee71586f5571d91221fe8889198a44a1252b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68031234"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494921"
 ---
 # <a name="error-mdx"></a>Error (MDX)
 
@@ -32,7 +33,7 @@ Error( [ Error_Text ] )
  包含要傳回之錯誤訊息的有效字串運算式。  
   
 ## <a name="examples"></a>範例  
- 下列查詢顯示如何在匯出量值內使用**Error**函式：  
+ 下列查詢顯示如何在匯出量值內使用 **Error** 函式：  
   
  `WITH MEMBER MEASURES.ERRORDEMO AS ERROR("THIS IS AN ERROR")`  
   

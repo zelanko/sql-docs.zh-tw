@@ -1,4 +1,5 @@
 ---
+description: Execution Warnings 事件類別
 title: Execution Warnings 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 2c69e321-dc9a-4483-886d-81350adae2be
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a97c0e6527d7a598a0d0a026d2f058a6b7773d48
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3fec6e96a402a8eaf9d97129b4a86e4f1e5a5438
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789553"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494368"
 ---
 # <a name="execution-warnings-event-class"></a>Execution Warnings 事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

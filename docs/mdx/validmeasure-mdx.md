@@ -1,5 +1,6 @@
 ---
-title: ValidMeasure （MDX） |Microsoft Docs
+description: ValidMeasure (MDX)
+title: ValidMeasure (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b3bce4baf3dc3499621f67defd40a4579e9cd460
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cd2bc2385a3445076636fb1b4001120463d1cd89
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037947"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494827"
 ---
 # <a name="validmeasure-mdx"></a>ValidMeasure (MDX)
 
@@ -32,13 +33,13 @@ ValidMeasure(Tuple_Expression)
  傳回 Tuple 的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- **ValidMeasure**函式會傳回元組的值，忽略與元組傳回值的量值群組沒有關聯性的屬性。 基於兩個原因，屬性可以與量值無關：  
+ **ValidMeasure**函式會傳回元組的值，忽略與元組所傳回之量值的量值群組沒有關聯性的屬性。 基於兩個原因，屬性可以與量值無關：  
   
 -   屬性的維度與 Tuple 中量值的量值群組沒有關聯性。  
   
 -   屬性的維度與量值的量值群組沒有關聯性，但是資料粒度屬性不是索引鍵屬性，而且資料粒度屬性與 Tuple 中之屬性沒有直接關聯性。  
   
- 這個函式所指定的行為是預設的伺服器端行為，並且是由量值群組物件上的**IgnoreUnrelatedDimensions**屬性所控制。  
+ 此函數指定的行為是預設的伺服器端行為，而且是由量值群組物件上的 **IgnoreUnrelatedDimensions** 屬性所控制。  
   
  對於指定之 Tuple 中每個具資料粒度的屬性 (也就是說，Tuple 中的成員不是 All 成員時)，這類屬性的目前座標會移動如下：  
   

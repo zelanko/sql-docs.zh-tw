@@ -1,4 +1,5 @@
 ---
+description: SP:CacheMiss 事件類別
 title: SP:CacheMiss 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 82229233-f772-4558-95a0-d54584d1b1ae
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7fd15f3c331ff43509827a59e62e980ac1844782
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2362da269365dce5012e397de4241ed37bcda43f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717737"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494276"
 ---
 # <a name="spcachemiss-event-class"></a>SP:CacheMiss 事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

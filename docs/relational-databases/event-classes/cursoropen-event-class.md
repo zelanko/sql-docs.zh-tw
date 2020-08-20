@@ -1,4 +1,5 @@
 ---
+description: CursorOpen 事件類別
 title: CursorOpen 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: d39262c0-0035-42fc-b989-7a16ae0c7345
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e7851febee7a47c57a5e376cfe5b92ed2999927
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a8252eb2af628ecc838a995699d941c2ddb2462a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773531"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494421"
 ---
 # <a name="cursoropen-event-class"></a>CursorOpen 事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,6 +56,6 @@ ms.locfileid: "85773531"
 ## <a name="see-also"></a>另請參閱  
  [擴充事件](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [資料指標](../../relational-databases/cursors.md)  
+ [游標](../../relational-databases/cursors.md)  
   
   

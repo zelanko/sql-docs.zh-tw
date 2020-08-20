@@ -1,4 +1,5 @@
 ---
+description: 管理資料收集
 title: 管理資料收集 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2016
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7e63c3bd8f95e8edf20b51f22ee828636f7160b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1056cfe7d80bdf97c97c344d3b9f3dfc4dc6fdcd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758136"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494631"
 ---
 # <a name="manage-data-collection"></a>管理資料收集
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -162,7 +163,7 @@ ms.locfileid: "85758136"
 |--------------------|-----------------|  
 |[sp_syscollector_delete_execution_log_tree &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-execution-log-tree-transact-sql.md)|從執行記錄中刪除收集組項目。|  
   
-### <a name="functions"></a>Functions  
+### <a name="functions"></a>函數  
  下表描述的是您可以用來取得執行和追蹤資訊的函數。  
   
 |函式名稱|描述|  
@@ -171,7 +172,7 @@ ms.locfileid: "85758136"
 |[fn_syscollector_get_execution_stats &#40;Transact-SQL&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-stats-transact-sql.md)|取得收集組或封裝的執行統計資料。 這些資訊包含所記錄的錯誤。|  
 |[snapshots.fn_trace_getdata &#40;Transact-SQL&#41;](../../relational-databases/system-functions/snapshots-fn-trace-getdata-transact-sql.md)|取得使用一般 SQL 追蹤收集器型別來收集資料時所記錄的事件。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行預存程序](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)   
  [使用 SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)   
  [[資料收集]](../../relational-databases/data-collection/data-collection.md)  

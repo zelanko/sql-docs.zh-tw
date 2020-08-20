@@ -1,4 +1,5 @@
 ---
+description: LocalDBGetVersions 函數
 title: LocalDBGetVersions 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ apitype: DLLExport
 ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1548b23aceb5eb4f622ada1289df88ff790c8645
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0ddc76949165266656558a7f99c959fc0942d005
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640848"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494233"
 ---
 # <a name="localdbgetversions-function"></a>LocalDBGetVersions 函數
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,10 +37,10 @@ ms.locfileid: "85640848"
   
 ## <a name="parameters"></a>參數  
  *pVersionNames*  
- 輸出包含使用者工作站上可用的 LocalDB 版本名稱。  
+ 出包含使用者工作站上可用之 LocalDB 版本的名稱。  
   
  *lpdwNumberOfVersions*  
- [輸入/輸出]在輸入時，會保留*pVersionNames*緩衝區中版本的插槽數目。   
+ [輸入/輸出]輸入時，會保留 *pVersionNames* 緩衝區中版本的位置數目。   
 在輸出時，保存現有 LocalDB 版本的數目。  
   
 ## <a name="returns"></a>傳回  
@@ -59,7 +60,7 @@ ms.locfileid: "85640848"
  發生意外錯誤。 請參閱事件記錄檔，以取得詳細資料。  
   
 ## <a name="remarks"></a>備註  
- 如需使用 LocalDB API 的程式碼範例，請參閱[SQL Server Express Localdb 參考](../../relational-databases/sql-server-express-localdb-reference.md)。  
+ 如需使用 LocalDB API 的程式碼範例，請參閱 [SQL Server Express Localdb 參考](../../relational-databases/sql-server-express-localdb-reference.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Express LocalDB 標頭和版本資訊](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  

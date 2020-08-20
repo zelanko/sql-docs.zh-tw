@@ -1,4 +1,5 @@
 ---
+description: CursorPrepare 事件類別
 title: CursorPrepare 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 990e50fb-b3ee-4366-8613-2c40d4a456f7
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f4ee0bf31c737a1910f0606e54a6d0d42440fd99
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8f20e33fcdfab7476481a4a712b99ae76a09ffa5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719886"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494405"
 ---
 # <a name="cursorprepare-event-class"></a>CursorPrepare 事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,6 +55,6 @@ ms.locfileid: "85719886"
 ## <a name="see-also"></a>另請參閱  
  [擴充事件](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [資料指標](../../relational-databases/cursors.md)  
+ [游標](../../relational-databases/cursors.md)  
   
   
