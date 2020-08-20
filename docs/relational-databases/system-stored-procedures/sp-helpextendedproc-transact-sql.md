@@ -1,5 +1,6 @@
 ---
-title: sp_helpextendedproc （Transact-sql） |Microsoft Docs
+description: sp_helpextendedproc (Transact-SQL)
+title: sp_helpextendedproc (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e1f017e-c898-4225-b375-6a73ef9aac7b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bf7e95f30eb4a6abdc61b47b5f64b20f0ed4b27a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 68bc88bdaddc873c0f272ffef37d6465cddb45af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881580"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493221"
 ---
 # <a name="sp_helpextendedproc-transact-sql"></a>sp_helpextendedproc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85881580"
   報告目前定義的擴充預存程序及程序 (函數) 所屬之動態連結程式庫 (DLL) 的名稱。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]請改用[CLR 整合](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用 [CLR 整合](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) 。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +43,7 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @funcname = ] 'procedure'`這是報告的資訊所屬的擴充預存程式名稱。 程式是**sysname**，預設*值是 Null* 。  
+`[ @funcname = ] 'procedure'` 這是要報告其資訊的擴充預存程式名稱。 程式是**sysname**，預設*值是 Null* 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -55,10 +56,10 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 |**dll**|**nvarchar(255)**|DLL 的名稱。|  
   
 ## <a name="remarks"></a>備註  
- 當指定了*procedure*時， **sp_helpextendedproc**會報告指定的擴充預存程式。 未提供此參數時， **sp_helpextendedproc**會傳回所有擴充預存程式名稱，以及每個擴充預存程式所屬的 DLL 名稱。  
+ 當 *指定了程式* 時， **sp_helpextendedproc** 所指定擴充預存程式上的報表。 如果未提供這個參數， **sp_helpextendedproc** 會傳回所有擴充預存程式名稱，以及每個擴充預存程式所屬的 DLL 名稱。  
   
 ## <a name="permissions"></a>權限  
- 執行**sp_helpextendedproc**的許可權會授與**public**。  
+ 授與執行 **sp_helpextendedproc** 的許可權授與 **public**。  
   
 ## <a name="examples"></a>範例  
   

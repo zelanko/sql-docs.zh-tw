@@ -1,5 +1,6 @@
 ---
-title: IHpublishertables （Transact-sql） |Microsoft Docs
+description: IHpublishertables (Transact-SQL)
+title: IHpublishertables (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7d16ac39-633a-4fe2-8f22-1d9afc191ee9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b0d04f3fea97e4943fbbaecf83637141afce482f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1606172b9d7cb0917e5a71465142937790149761
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890228"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492761"
 ---
 # <a name="ihpublishertables-transact-sql"></a>IHpublishertables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85890228"
 |**table_id**|**int**|識別已發行的資料表。|  
 |**publisher_id**|**smallint**|識別發行資料表所在位置的非 SQL Server 發行者。|  
 |**name**|**sysname**|已發行之資料表的名稱。|  
-|**主人**|**sysname**|資料表擁有者。|  
+|**擁有者**|**sysname**|資料表擁有者。|  
   
 ## <a name="see-also"></a>另請參閱  
  [異質資料庫複寫](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_26013
 title: MSSQLSERVER_26013 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7362fca4-b005-4872-bdfa-a3e32f834db8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 19e9bd114135d2df7694dd7d7fba60287aa5d519
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b0d6efc8f8d1c4a80d811c70feb7177b8dbffc95
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723778"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491378"
 ---
 # <a name="mssqlserver_26013"></a>MSSQLSERVER_26013
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

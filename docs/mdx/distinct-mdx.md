@@ -1,5 +1,6 @@
 ---
-title: Distinct （MDX） |Microsoft Docs
+description: Distinct (MDX)
+title: Distinct (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 283f1c10f4030ea2efc23ee237a61b402cefb396
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6d3139623d0eca7986f6bcef1d27a3475b5f371a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67999897"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491425"
 ---
 # <a name="distinct-mdx"></a>Distinct (MDX)
 
@@ -32,7 +33,7 @@ Distinct(Set_Expression)
  傳回集合的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- 如果**Distinct**函式在指定的集合中尋找重複的元組，則此函式只會保留重複元組的第一個實例，同時保留該集合的順序不變。  
+ 如果 **相異** 函數在指定的集合中找到重複的元組，則此函式只會保留重複元組的第一個實例，而不會保留集合的順序。  
   
 ## <a name="examples"></a>範例  
  下列範例查詢會示範如何搭配命名集使用 Distinct 函數，以及如何搭配 Count 函數用它來尋找集合中相異 Tuple 的數目：  

@@ -1,4 +1,5 @@
 ---
+description: 管理加速資料庫復原
 title: 管理加速資料庫復原 | Microsoft Docs
 ms.date: 08/12/2019
 ms.prod: sql
@@ -12,12 +13,12 @@ author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b8f2433eb096e6b354c5f174a2e8db3437dede2d
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 2936b17929239c947c87a5e694adaa1e31adae13
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942657"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491351"
 ---
 # <a name="manage-accelerated-database-recovery"></a>管理加速資料庫復原
 

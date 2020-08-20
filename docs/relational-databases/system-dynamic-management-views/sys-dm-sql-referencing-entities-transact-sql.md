@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_sql_referencing_entities （Transact-sql） |Microsoft Docs
+description: sys.dm_sql_referencing_entities (Transact-SQL)
+title: sys. dm_sql_referencing_entities (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,17 +21,17 @@ ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a467a445dda5f4d950c5bf4813f5ec69606df487
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 03848d99d6af31e1ceb04e10f97af26fac58011f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943056"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493577"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  針對在目前資料庫中依據名稱參考其他使用者定義實體的每個實體，各傳回一個資料列。 當一個實體（稱為受*參考的實體*）以名稱出現在另一個實體的持續性 SQL 運算式中（稱為「*參考實體*」）時，就會建立兩個實體之間的相依性。 例如，如果使用者定義型別 (UDT) 指定為受參考的實體，這個函數就會傳回在定義中依據名稱參考該類型的每個使用者自訂實體。 此函數不會傳回其他資料庫中可能參考指定實體的實體。 這個函數必須在 master 資料庫的內容中執行，以便傳回伺服器層級 DDL 觸發程序當做參考實體。  
+  針對在目前資料庫中依據名稱參考其他使用者定義實體的每個實體，各傳回一個資料列。 在另一個實體（稱為*參考實體*）的保存 SQL 運算式*中，依*名稱顯示兩個實體之間的相依性時，會建立兩個實體之間的相依性。 例如，如果使用者定義型別 (UDT) 指定為受參考的實體，這個函數就會傳回在定義中依據名稱參考該類型的每個使用者自訂實體。 此函數不會傳回其他資料庫中可能參考指定實體的實體。 這個函數必須在 master 資料庫的內容中執行，以便傳回伺服器層級 DDL 觸發程序當做參考實體。  
   
  您可以使用這個動態管理函數來回報下列在目前資料庫中參考指定實體的實體類型：  
   
@@ -60,15 +61,15 @@ sys.dm_sql_referencing_entities (
 ```  
   
 ## <a name="arguments"></a>引數  
- `schema_name.referenced_entity_name`這是受參考實體的名稱。  
+ `schema_name.referenced_entity_name` 這是受參考實體的名稱。  
   
  `schema_name` 是必要項目，但受參考類別為 PARTITION_FUNCTION 的情況除外。  
   
- `schema_name.referenced_entity_name`是**Nvarchar （517）**。  
+ `schema_name.referenced_entity_name` 是 **Nvarchar (517) **。  
   
- `<referenced_class> ::= { OBJECT  | TYPE | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION }`這是受參考實體的類別。 每個陳述式只能指定一個類別。  
+ `<referenced_class> ::= { OBJECT  | TYPE | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION }` 這是受參考實體的類別。 每個陳述式只能指定一個類別。  
   
- `<referenced_class>`是**Nvarchar**（60）。  
+ `<referenced_class>` 是 **Nvarchar** (60) 。  
   
 ## <a name="table-returned"></a>傳回的資料表  
   
@@ -99,7 +100,7 @@ sys.dm_sql_referencing_entities (
   
 |實體類型|參考實體|受參考的實體|  
 |-----------------|------------------------|-----------------------|  
-|資料表|是*|是|  
+|Table|是*|是|  
 |檢視|是|是|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序**|是|是|  
 |CLR 預存程序|否|是|  
@@ -116,7 +117,7 @@ sys.dm_sql_referencing_entities (
 |XML 結構描述集合|否|是|  
 |分割區函數|否|是|  
   
- \*只有當資料表參考 [!INCLUDE[tsql](../../includes/tsql-md.md)] 計算資料行、CHECK 條件約束或 DEFAULT 條件約束的定義中的模組、使用者定義型別或 XML 架構集合時，才會將它當做參考實體進行追蹤。  
+ \* 只有當資料表參考 [!INCLUDE[tsql](../../includes/tsql-md.md)] 計算資料行的定義、CHECK 條件約束或 DEFAULT 條件約束中的模組、使用者定義型別或 XML 架構集合時，才會將資料表視為參考實體進行追蹤。  
   
  ** 所包含之整數值大於 1 的編號預存程序不會當做參考或受參考的實體進行追蹤。  
   
@@ -152,7 +153,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>B. 傳回參考給定類型的實體  
- 下列範例會傳回參考別名類型 `dbo.Flag` 的實體。 結果集會顯示有兩個預存程序使用這個類型。 此 `dbo.Flag` 類型也用於資料表中的數個數據行定義中， `HumanResources.Employee` 不過，因為此類型不在資料表中的計算資料行、CHECK 條件約束或 DEFAULT 條件約束的定義中，所以不會傳回資料表的任何資料列 `HumanResources.Employee` 。  
+ 下列範例會傳回參考別名類型 `dbo.Flag` 的實體。 結果集會顯示有兩個預存程序使用這個類型。 此 `dbo.Flag` 類型也用於資料表中數個數據行的定義中， `HumanResources.Employee` 但因為該類型不在資料表的計算資料行、CHECK 條件約束或 DEFAULT 條件約束的定義中，所以不會傳回資料表的任何資料列 `HumanResources.Employee` 。  
   
 ```sql  
 USE AdventureWorks2012;  

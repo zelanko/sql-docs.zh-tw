@@ -1,5 +1,6 @@
 ---
-title: sp_xp_cmdshell_proxy_account （Transact-sql） |Microsoft Docs
+description: sp_xp_cmdshell_proxy_account (Transact-SQL)
+title: sp_xp_cmdshell_proxy_account (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,20 +20,20 @@ ms.assetid: f807c373-7fbc-4108-a2bd-73b48a236003
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f465a27aeac13a8c0a0e810d52aacccc6022133
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 700a33f9d91cce6e7cc8488f5bde687baa741ad9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722969"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492884"
 ---
 # <a name="sp_xp_cmdshell_proxy_account-transact-sql"></a>sp_xp_cmdshell_proxy_account (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  建立**xp_cmdshell**的 proxy 認證。  
+  建立 **xp_cmdshell**的 proxy 認證。  
   
 > [!NOTE]  
->  預設會停用**xp_cmdshell** 。 若要啟用**xp_cmdshell**，請參閱[Xp_cmdshell 伺服器設定選項](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)。  
+>  預設會停用**xp_cmdshell** 。 若要啟用 **xp_cmdshell**，請參閱 [Xp_cmdshell Server Configuration 選項](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,9 +58,9 @@ sp_xp_cmdshell_proxy_account [ NULL | { 'account_name' , 'password' } ]
  0 (成功) 或 1 (失敗)  
   
 ## <a name="remarks"></a>備註  
- Proxy 認證將會被稱為 **# #xp_cmdshell_proxy_account # #**。  
+ Proxy 認證將會被呼叫 **# #xp_cmdshell_proxy_account # #**。  
   
- 當使用 Null 選項執行時， **sp_xp_cmdshell_proxy_account**會刪除 proxy 認證。  
+ 使用 Null 選項執行時， **sp_xp_cmdshell_proxy_account** 會刪除 proxy 認證。  
   
 ## <a name="permissions"></a>權限  
  需要 CONTROL SERVER 權限。  
@@ -84,9 +85,9 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [xp_cmdshell &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)   
- [&#40;Transact-sql&#41;建立認證](../../t-sql/statements/create-credential-transact-sql.md)   
- [&#40;Transact-sql&#41;的認證](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
- [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
+ [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [安全性預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)  
   
   

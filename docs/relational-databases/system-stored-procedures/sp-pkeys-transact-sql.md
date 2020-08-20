@@ -1,4 +1,5 @@
 ---
+description: sp_pkeys (Transact-SQL)
 title: sp_pkeys (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ ms.assetid: e614c75d-847b-4726-8f6f-cd18de688eda
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d5e7f0d0d3495abcd716fb5763b29d7e26192f60
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7a291d4b76a7fe141234a43c458b865a1d956381
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173175"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493081"
 ---
 # <a name="sp_pkeys-transact-sql"></a>sp_pkeys (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,15 +44,15 @@ sp_pkeys [ @table_name = ] 'name'
   
 ## <a name="arguments"></a>引數  
  [ @table_name =] '*name*'  
- 這是要傳回信息的資料表。 *名稱*是**sysname**，沒有預設值。 不支援萬用字元的模式比對。  
+ 這是要傳回信息的資料表。 *名稱* 是 **sysname**，沒有預設值。 不支援萬用字元的模式比對。  
   
  [ @table_owner =] '*owner*'  
- 指定已指定資料表的資料表擁有者。 *owner*是**sysname**，預設值是 Null。 不支援萬用字元的模式比對。 如果未指定*owner* ，則會套用基礎 DBMS 的預設資料表可見度規則。  
+ 指定已指定資料表的資料表擁有者。 *owner* 是 **sysname**，預設值是 Null。 不支援萬用字元的模式比對。 如果未指定 *owner* ，則適用基礎 DBMS 的預設資料表可見度規則。  
   
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果目前使用者擁有一份含指定之名稱的資料表，就會傳回該資料表的資料行。 如果未指定*擁有*者，而且目前使用者並未擁有具有指定*名稱*的資料表，這個程式就會尋找資料庫擁有者所擁有之指定*名稱*的資料表。 如果資料表存在，就會傳回這份資料表的資料行。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果目前使用者擁有一份含指定之名稱的資料表，就會傳回該資料表的資料行。 如果未指定 *擁有* 者，且目前的使用者未擁有具有指定 *名稱*的資料表，這個程式就會尋找資料庫擁有者所擁有之指定 *名稱* 的資料表。 如果資料表存在，就會傳回這份資料表的資料行。  
   
  [ @table_qualifier =] '*限定詞*'  
- 這是資料表限定詞。 *限定詞*是**sysname**，預設值是 Null。 各種 DBMS 產品都支援三部分的資料表命名 (辨識_符號_**。**_擁有_者 **。**_名稱_) 。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，這個資料行代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
+ 這是資料表限定詞。 *限定詞* 是 **sysname**，預設值是 Null。 各種 DBMS 產品都支援資料表 (辨識_符號_的三部分命名 **。**_擁有_者 **。**) _名稱_。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，這個資料行代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  None  
@@ -95,7 +96,7 @@ EXEC sp_pkeys @table_name = N'DimAccount';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的目錄預存程式](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的目錄預存程式 ](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

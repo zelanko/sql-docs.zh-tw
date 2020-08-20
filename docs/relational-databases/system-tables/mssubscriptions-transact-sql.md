@@ -1,5 +1,6 @@
 ---
-title: MSsubscriptions （Transact-sql） |Microsoft Docs
+description: MSsubscriptions (Transact-SQL)
+title: MSsubscriptions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: b7e8301d-d115-41f6-8d4f-e0d25f453b25
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 210329f301790b9a977e356d883c13a8a246a9c3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9a9d40affe98a2447e22535301948e3c0976d2af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889325"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492700"
 ---
 # <a name="mssubscriptions-transact-sql"></a>MSsubscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSsubscriptions**資料表會針對本機散發者所服務之訂用帳戶中的每個發行項，各包含一個資料列。 這份資料表儲存在散發資料庫中。  
+  **MSsubscriptions**資料表會針對本機散發者所服務之訂用帳戶中的每個已發行發行項，各包含一個資料列。 這份資料表儲存在散發資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -38,14 +39,14 @@ ms.locfileid: "85889325"
 |**article_id**|**int**|發行項的識別碼。|  
 |**subscriber_id**|**smallint**|訂閱者的識別碼。|  
 |**subscriber_db**|**sysname**|訂閱資料庫的名稱。|  
-|**subscription_type**|**int**|訂閱的類型：<br /><br /> **0** = Push。<br /><br /> **1** = 提取。<br /><br /> **2** = 匿名。|  
+|**subscription_type**|**int**|訂閱的類型：<br /><br /> **0** = 推送。<br /><br /> **1** = 提取。<br /><br /> **2** = 匿名。|  
 |**sync_type**|**tinyint**|同步處理的類型：<br /><br /> **1** = 自動。<br /><br /> **2** = 無同步處理。|  
 |**status**|**tinyint**|訂閱的狀態：<br /><br /> **0** = 非使用中。<br /><br /> **1** = 已訂閱。<br /><br /> **2** = 使用中。|  
 |**subscription_seqno**|**varbinary(16)**|快照集交易序號。|  
-|**snapshot_seqno_flag**|**bit**|指出快照集交易序號的來源，其中**1**值表示**subscription_seqno**是快照序號。|  
+|**snapshot_seqno_flag**|**bit**|指出快照集交易序號的來源，其中 **1** 的值表示 **subscription_seqno** 是快照序號。|  
 |**independent_agent**|**bit**|指出這個發行集是否有獨立的散發代理程式。|  
 |**subscription_time**|**datetime**|僅供內部使用。|  
-|**loopback_detection**|**bit**|適用於雙向異動複寫拓撲中的訂閱。 回送偵測會判斷散發代理程式是否將起源於訂閱者端的交易傳回給訂閱者：<br /><br /> **1** = 不傳回。<br /><br /> **0** = 傳回。<br /><br />|  
+|**loopback_detection**|**bit**|適用於雙向異動複寫拓撲中的訂閱。 回送偵測會判斷散發代理程式是否將起源於訂閱者端的交易傳回給訂閱者：<br /><br /> **1** = 不會送回。<br /><br /> **0** = 傳回。<br /><br />|  
 |**agent_id**|**int**|代理程式的識別碼。|  
 |**update_mode**|**tinyint**|更新的類型。|  
 |**publisher_seqno**|**varbinary(16)**|這項訂閱在發行者端的交易序號。|  
@@ -53,7 +54,7 @@ ms.locfileid: "85889325"
   
 ## <a name="see-also"></a>另請參閱  
  [複寫資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [&#40;Transact-sql&#41;的複寫視圖](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的複寫視圖 ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_helpsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   
   

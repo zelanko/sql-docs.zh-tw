@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_8712
 title: MSSQLSERVER_8712 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 292fb3bc-062e-41e4-a566-b5d3d0b21977
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 17fdac486f2f9dc6dc38872a4e5aa7fd153a68ce
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fefaaae1f1bed8001fd9c55ff8a26fad71daec51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85637036"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491125"
 ---
 # <a name="mssqlserver_8712"></a>MSSQLSERVER_8712
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

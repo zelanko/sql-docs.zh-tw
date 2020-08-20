@@ -1,4 +1,5 @@
 ---
+description: 管理原則類別目錄
 title: 管理原則類別目錄 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: d188a819-731f-4029-98aa-780d3299a0ce
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0bf099a705615826202a273a1c245c7b5537ee30
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 26b15222f570304f321337a4b3574c3fa2f3b945
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716864"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493995"
 ---
 # <a name="manage-policy-categories"></a>管理原則類別目錄
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +59,7 @@ ms.locfileid: "85716864"
   
 2.  按一下加號展開 **[管理]** 資料夾。  
   
-3.  以滑鼠右鍵按一下 [原則管理]  並選取 [管理類別目錄]  。  
+3.  以滑鼠右鍵按一下 [原則管理]**** 並選取 [管理類別目錄]****。  
   
      **[管理原則類別目錄]** 對話方塊中提供下列資訊：  
   

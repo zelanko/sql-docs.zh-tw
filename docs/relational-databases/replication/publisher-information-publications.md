@@ -1,4 +1,5 @@
 ---
+description: 發行者資訊，發行集
 title: 發行者資訊，發行集 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f5d897beb238b53e632044aee838f5ee6295ef48
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8d321f41871469284b3ce8dd3402cc16eee385d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719533"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493874"
 ---
 # <a name="publisher-information-publications"></a>發行者資訊，發行集
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "85719533"
   
  **[效能嚴重不足]** 狀態值與交易式訂閱和合併訂閱有關；對交易式訂閱而言，唯有已設定臨界值時，才會顯示此狀態值。 如需效能測量和設定閾值的資訊，請參閱[使用複寫監視器監視效能](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)和[在複寫監視器中設定閾值和警告](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
   
- **發行集**  
+ **發行**  
  每個發行集的名稱，格式為 *PublicationDatabaseName: PublicationName*。  
   
  **訂用帳戶**  
@@ -68,7 +69,7 @@ ms.locfileid: "85719533"
  **目前的平均效能** 和 **目前最差效能**  
  僅限 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本。 分別代表發行集之所有訂閱的平均效能評比和最差效能評比。 評比是以複寫監視器最近使用的度量單位為基礎，並不反映訂閱經過一段時間的效能。  
   
- 對異動複寫而言，複寫監視器只會顯示已定義效能臨界值之發行集的值。 如果發行集未定義效能臨界值，則此資料行會顯示 **[未啟用]** 。 對合併式複寫而言，在相同連接類型 (撥號或 LAN) 上發生過五次同步處理，且每次同步處理都具有 50 或更多個變更之後，複寫監視器才會顯示值。 如果具有 50 或更多個變更的同步處理少於五次，或者最近的同步處理少於 50 個變更，則此資料行為空白。  
+ 對異動複寫而言，複寫監視器只會顯示已定義效能臨界值之發行集的值。 如果發行集未定義效能臨界值，則此資料行會顯示 **[未啟用]**。 對合併式複寫而言，在相同連接類型 (撥號或 LAN) 上發生過五次同步處理，且每次同步處理都具有 50 或更多個變更之後，複寫監視器才會顯示值。 如果具有 50 或更多個變更的同步處理少於五次，或者最近的同步處理少於 50 個變更，則此資料行為空白。  
   
  效能評比是下列其中一個值：  
   
@@ -80,7 +81,7 @@ ms.locfileid: "85719533"
   
 -   差  
   
--   重大  
+-   重要  
   
  如需如何定義效能評比和如何設定效能閾值的詳細資訊，請參閱[使用複寫監視器監視效能](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)。  
   

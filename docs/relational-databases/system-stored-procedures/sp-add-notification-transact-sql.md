@@ -1,5 +1,6 @@
 ---
-title: sp_add_notification （Transact-sql） |Microsoft Docs
+description: sp_add_notification (Transact-SQL)
+title: sp_add_notification (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7492c9cd086d63a00909fc64bde87c39aaf2c096
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0c009cd32cf3fdd92fbb638a00d5f1f4a024a1b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879391"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493528"
 ---
 # <a name="sp_add_notification-transact-sql"></a>sp_add_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,11 +41,11 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @alert_name = ] 'alert'`此通知的警示。 *警示*為**sysname**，沒有預設值。  
+`[ @alert_name = ] 'alert'` 此通知的警示。 *警示* 是 **sysname**，沒有預設值。  
   
-`[ @operator_name = ] 'operator'`要在警示發生時收到通知的操作員。 *運算子*是**sysname**，沒有預設值。  
+`[ @operator_name = ] 'operator'` 發生警示時所要通知的操作員。 *運算子* 是 **sysname**，沒有預設值。  
   
-`[ @notification_method = ] notification_method`用來通知操作員的方法。 *notification_method*是**Tinyint**，沒有預設值。 *notification_method*可以是與**或**邏輯運算子結合的其中一個或多個值。  
+`[ @notification_method = ] notification_method` 用來通知操作員的方法。 *notification_method* 是 **Tinyint**，沒有預設值。 *notification_method* 可以是與 **or** 邏輯運算子結合的一或多個值。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -53,13 +54,13 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 |**4**|**net send**|  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="result-sets"></a>結果集  
  None  
   
 ## <a name="remarks"></a>備註  
- **sp_add_notification**必須從**msdb**資料庫中執行。  
+ **sp_add_notification** 必須從 **msdb** 資料庫執行。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了一種簡單的圖形方式供您管理整個警示系統。 建議您利用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 來設定您的警示基礎結構。  
   
@@ -68,12 +69,12 @@ sp_add_notification [ @alert_name = ] 'alert' ,
  如果傳送電子郵件訊息或呼叫器通知發生失敗，此失敗會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務錯誤記錄檔中報告。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_add_notification**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色的成員，才可以執行 **sp_add_notification**。  
   
 ## <a name="examples"></a>範例  
  下列範例會加入指定警示 (`Test Alert`) 的電子郵件通知。  
   
-> **注意：** 這個範例假設 `Test Alert` 已經存在，而且 `François Ajenstat` 是有效的操作員名稱。  
+> **注意：** 這個範例假設 `Test Alert` 已經存在，而且 `François Ajenstat` 是有效的運算子名稱。  
   
 ```  
 USE msdb ;  

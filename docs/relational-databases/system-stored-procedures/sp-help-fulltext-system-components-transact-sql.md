@@ -1,5 +1,6 @@
 ---
-title: sp_help_fulltext_system_components （Transact-sql） |Microsoft Docs
+description: sp_help_fulltext_system_components (Transact-SQL)
+title: sp_help_fulltext_system_components (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,17 +19,17 @@ ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e6239ac1bb413d2291b94e7ac05b445c770e5f13
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0686017e612b5d9d7d2c1f932321a965b7f1448a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827648"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493202"
 ---
 # <a name="sp_help_fulltext_system_components-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
 
-  傳回有關已註冊之斷詞工具、篩選和通訊協定處理常式的詳細資訊。 **sp_help_fulltext_system_components**也會傳回資料庫識別碼的清單，以及已使用指定之元件的全文檢索目錄。  
+  傳回有關已註冊之斷詞工具、篩選和通訊協定處理常式的詳細資訊。 **sp_help_fulltext_system_components** 也會傳回已使用指定元件之資料庫和全文檢索目錄的識別碼清單。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,19 +46,19 @@ sp_help_fulltext_system_components
  'all'  
  傳回所有全文檢索元件的資訊。  
   
-`[ @component_type = ] component_type`指定元件的類型。 *component_type*可以是下列其中一項：  
+`[ @component_type = ] component_type` 指定元件的類型。 *component_type* 可以是下列其中一項：  
   
--   **系統**  
+-   **分詞**  
   
--   **出**  
+-   **濾波器**  
   
--   **protocol handler**  
+-   **通訊協定處理常式**  
   
 -   **fullpath**  
   
- 如果指定了完整路徑，則*param*也必須以元件 DLL 的完整路徑來指定，否則會傳回錯誤訊息。  
+ 如果指定了完整路徑，您也必須使用元件 DLL 的完整路徑來指定 *param* ，否則會傳回錯誤訊息。  
   
-`[ @param = ] param`視元件類型而定，這是下列其中一項：地區設定識別碼（LCID）、具有 "." 前置詞的副檔名、通訊協定處理常式的完整元件名稱，或元件 DLL 的完整路徑。  
+`[ @param = ] param` 視元件類型而定，這是下列其中一項：地區設定識別碼 (LCID) 、副檔名為 "." 的首碼、通訊協定處理常式的完整元件名稱，或元件 DLL 的完整路徑。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -67,14 +68,14 @@ sp_help_fulltext_system_components
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**componenttype**|**sysname**|這是元件的類型， 發生下列情形之一：<br /><br /> filter<br /><br /> protocol handler<br /><br /> wordbreaker|  
+|**componenttype**|**sysname**|這是元件的類型， 下列其中之一：<br /><br /> filter<br /><br /> protocol handler<br /><br /> wordbreaker|  
 |**componentname**|**sysname**|元件的名稱。|  
-|**clsid**|**uniqueidentifier**|元件的類別識別碼。|  
-|**fullpath**|**nvarchar(256)**|元件位置的路徑。<br /><br /> Null = 呼叫端不是**serveradmin**固定伺服器角色的成員。|  
+|**Clsid**|**uniqueidentifier**|元件的類別識別碼。|  
+|**fullpath**|**nvarchar(256)**|元件位置的路徑。<br /><br /> Null = 呼叫端不是 **serveradmin** 固定伺服器角色的成員。|  
 |**version**|**nvarchar(30)**|元件的版本。|  
-|**負責**|**sysname**|元件的製造商名稱。|  
+|**manufacturer**|**sysname**|元件的製造商名稱。|  
   
- 只有在有一或多個使用*component_type*的全文檢索目錄存在時，才會傳回下列結果集。  
+ 只有當有一個或多個使用 *component_type*的全文檢索目錄存在時，才會傳回下列結果集。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -82,7 +83,7 @@ sp_help_fulltext_system_components
 |**ftcatid**|**int**|全文檢索目錄的識別碼。|  
   
 ## <a name="permissions"></a>權限  
- 需要**public**角色中的成員資格;不過，使用者只能看到他們具有 VIEW DEFINITION 許可權之全文檢索目錄的相關資訊。 只有**serveradmin**固定伺服器角色的成員，才能夠看到**fullpath**資料行中的值。  
+ 需要 **public** 角色中的成員資格;不過，使用者只能看到他們具有 VIEW DEFINITION 許可權之全文檢索目錄的相關資訊。 只有 **serveradmin** 固定伺服器角色的成員，才能夠看到 **fullpath** 資料行中的值。  
   
 ## <a name="remarks"></a>備註  
  當準備升級時，這個方法尤其重要。 請在特定資料庫內執行這個預存程序，並利用輸出來判斷升級是否會影響到特定的目錄。  
@@ -106,7 +107,7 @@ GO
 ```  
   
 ### <a name="c-determining-whether-a-specific-word-breaker-is-registered"></a>C. 判斷特定的斷詞工具是否已註冊  
- 下列範例會列出土耳其文 (LCID = 1055) 的斷詞工具 (如果它已經安裝在系統上，並在服務執行個體上註冊)。 這個範例會指定參數名稱， ** \@ component_type**和** \@ param**。  
+ 下列範例會列出土耳其文 (LCID = 1055) 的斷詞工具 (如果它已經安裝在系統上，並在服務執行個體上註冊)。 此範例會指定參數名稱、 ** \@ component_type**和** \@ 參數**。  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  
@@ -137,8 +138,8 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [查看或變更已註冊的篩選與斷詞工具](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
- [設定及管理搜尋的斷詞工具與字幹分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
+ [設定及管理搜尋的斷詞工具和字幹分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [設定及管理搜尋的篩選](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
- [&#40;Transact-sql&#41;的全文檢索搜尋和語義搜尋預存程式](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
+ [全文檢索搜尋和語義搜尋預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

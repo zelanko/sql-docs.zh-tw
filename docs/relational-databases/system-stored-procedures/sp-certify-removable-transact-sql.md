@@ -1,5 +1,6 @@
 ---
-title: sp_certify_removable （Transact-sql） |Microsoft Docs
+description: sp_certify_removable (Transact-SQL)
+title: sp_certify_removable (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d1ba13cd3ae77a13e329c39fea22a9ee9550ed47
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9f5bf1f0fd8a73948c2cc85937af4bc4c5ec7ffc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85873160"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493409"
 ---
 # <a name="sp_certify_removable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,15 +44,15 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @dbname = ] 'dbname'`指定要驗證的資料庫。 *dbname*是**sysname**。  
+`[ @dbname = ] 'dbname'` 指定要驗證的資料庫。 *dbname* 是 **sysname**。  
   
-`[ @autofix = ] 'auto'`將資料庫和所有資料庫物件的擁有權提供給系統管理員，並卸載任何使用者建立的資料庫使用者和非預設許可權。 *auto*是**Nvarchar （4）**，預設值是 Null。  
+`[ @autofix = ] 'auto'` 將資料庫和所有資料庫物件的擁有權提供給系統管理員，並卸載任何使用者建立的資料庫使用者和非預設許可權。 *auto* 是 **Nvarchar (4) **，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="remarks"></a>備註  
- 如果資料庫已正確設定， **sp_certify_removable**會執行下列動作：  
+ 如果資料庫已正確設定， **sp_certify_removable** 會執行下列動作：  
   
 -   將資料庫設為離線，以便複製檔案。  
   
@@ -59,9 +60,9 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
 -   將資料檔案群組標示為唯讀，以便將這些檔案複製到唯讀媒體中。  
   
- 系統管理員必須是資料庫和所有資料庫物件的擁有者。 系統管理員是存在於所有執行之伺服器上的已知使用者， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 而且在稍後散發和安裝資料庫時，它可能會存在。  
+ 系統管理員必須是資料庫和所有資料庫物件的擁有者。 系統管理員是已知的使用者，存在於所有執行的伺服器上， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 且在稍後散發和安裝資料庫時可能會存在。  
   
- 如果您在沒有**自動**值的情況下執行**sp_certify_removable** ，它會傳回下列任何條件的相關資訊：  
+ 如果您在沒有**auto**值的情況下執行**sp_certify_removable** ，它會傳回下列任何條件的相關資訊：  
   
 -   系統管理員不是資料庫擁有者。  
   
@@ -73,14 +74,14 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
  您可以利用下列方式來更正這些狀況：  
   
--   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具和程式，然後再次執行**sp_certify_removable** 。  
+-   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具和程式，然後再次執行 **sp_certify_removable** 。  
   
--   只要使用**auto**值來執行**sp_certify_removable** 。  
+-   您只需使用**auto**值來執行**sp_certify_removable** 。  
   
- 請注意，這個預存程序只會檢查使用者和使用者權限。 您可以將群組加入資料庫中，以及將權限授與這些群組。 如需詳細資訊，請參閱[GRANT &#40;transact-sql&#41;](../../t-sql/statements/grant-transact-sql.md)。  
+ 請注意，這個預存程序只會檢查使用者和使用者權限。 您可以將群組加入資料庫中，以及將權限授與這些群組。 如需詳細資訊，請參閱 [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)的相關資訊。  
   
 ## <a name="permissions"></a>權限  
- 執行許可權僅限於**系統管理員（sysadmin** ）固定伺服器角色的成員。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色的成員，才可執行許可權。  
   
 ## <a name="examples"></a>範例  
  下列範例會證明 `inventory` 資料庫已完成移除的準備。  

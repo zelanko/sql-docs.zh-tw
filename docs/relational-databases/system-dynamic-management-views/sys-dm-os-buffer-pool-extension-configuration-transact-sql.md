@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_os_buffer_pool_extension_configuration （Transact-sql） |Microsoft Docs
+description: sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
+title: sys. dm_os_buffer_pool_extension_configuration (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/09/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d52cc481-4d29-4f33-b63d-231ec35d092f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0654796ace5d5026539fc50f514b0407362633fc
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 463ca3dcf57856a2dae6fff308dba857e40fcd7c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442743"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493636"
 ---
 # <a name="sysdm_os_buffer_pool_extension_configuration-transact-sql"></a>sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
 
@@ -35,10 +36,10 @@ ms.locfileid: "87442743"
   
 | 資料行名稱 | 資料類型 | 描述 |
 | :---------- | :-------- | :---------- |
-|path|**Nvarchar**（256）|緩衝集區延伸模組快取的路徑和檔案名稱。 可為 Null。|  
+|path|**Nvarchar** (256) |緩衝集區延伸模組快取的路徑和檔案名稱。 可為 Null。|  
 |file_id|**int**|緩衝集區延伸模組檔案的識別碼。 不可為 Null。|  
-|state|**int**|緩衝集區延伸模組功能的狀態。 不可為 Null。<br /><br /> 0 - 緩衝集區延伸模組已停用<br /><br /> 1 - 緩衝集區延伸模組停用中<br /><br /> 2-保留供未來使用<br /><br /> 3 - 緩衝集區延伸模組啟用中<br /><br /> 4 - 保留供日後使用<br /><br /> 5 - 緩衝集區延伸模組已啟用|  
-|state_description|**Nvarchar**（60）|描述緩衝集區延伸模組功能的狀態。 可為 Null。<br /><br /> 0 = BUFFER POOL EXTENSION DISABLED<br /><br /> 5 = 緩衝集區延伸模組已啟用|
+|狀態|**int**|緩衝集區延伸模組功能的狀態。 不可為 Null。<br /><br /> 0 - 緩衝集區延伸模組已停用<br /><br /> 1 - 緩衝集區延伸模組停用中<br /><br /> 2-保留供日後使用<br /><br /> 3 - 緩衝集區延伸模組啟用中<br /><br /> 4 - 保留供日後使用<br /><br /> 5 - 緩衝集區延伸模組已啟用|  
+|state_description|**Nvarchar** (60) |描述緩衝集區延伸模組功能的狀態。 可為 Null。<br /><br /> 0 = BUFFER POOL EXTENSION DISABLED<br /><br /> 5 = 已啟用緩衝集區延伸|
 |current_size_in_kb|**bigint**|緩衝集區延伸模組檔案的目前大小。 不可為 Null。|
 | &nbsp; | &nbsp; | &nbsp; |
 

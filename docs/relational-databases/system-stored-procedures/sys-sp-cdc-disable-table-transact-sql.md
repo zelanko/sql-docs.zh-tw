@@ -1,5 +1,6 @@
 ---
-title: sys.databases sp_cdc_disable_table （Transact-sql） |Microsoft Docs
+description: sys.sp_cdc_disable_table (Transact-SQL)
+title: sys. sp_cdc_disable_table (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9d8f258662f9dddb4f1a0ecdb1c375666fc18cb4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e1dcc5dffd4c9a718227c85ce8f421b8cb45bbd8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891158"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492836"
 ---
 # <a name="syssp_cdc_disable_table-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,29 +47,29 @@ sys.sp_cdc_disable_table
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @source_schema = ] 'source\_schema'`這是包含來源資料表之架構的名稱。 *source_schema*是**sysname**，沒有預設值，而且不能是 Null。  
+`[ @source_schema = ] 'source\_schema'` 這是包含來源資料表之架構的名稱。 *source_schema* 是 **sysname**，沒有預設值，而且不能是 Null。  
   
- *source_schema*必須存在於目前的資料庫中。  
+ *source_schema* 必須存在於目前的資料庫中。  
   
-`[ @source_name = ] 'source\_name'`這是要停用變更資料捕獲的來源資料表名稱。 *source_name*是**sysname**，沒有預設值，而且不能是 Null。  
+`[ @source_name = ] 'source\_name'` 這是要停用變更資料捕捉的來源資料表名稱。 *source_name* 是 **sysname**，沒有預設值，而且不能是 Null。  
   
- *source_name*必須存在於目前的資料庫中。  
+ *source_name* 必須存在於目前的資料庫中。  
   
-`[ @capture_instance = ] 'capture\_instance' | 'all'`這是要針對指定的來源資料表停用的 capture 實例名稱。 *capture_instance*是**sysname** ，不能是 Null。  
+`[ @capture_instance = ] 'capture\_instance' | 'all'` 這是要針對指定的來源資料表停用的捕獲實例名稱。 *capture_instance* 為 **sysname** ，而且不可以是 Null。  
   
- 當指定了 ' all ' 時，就會停用為*source_name*定義的所有 capture 實例。  
+ 當指定 ' all ' 時，會停用針對 *source_name* 所定義的所有捕獲實例。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="result-sets"></a>結果集  
  None  
   
 ## <a name="remarks"></a>備註  
- **sp_cdc_disable_table**會卸載與指定之來源資料表和 capture 實例相關聯的變更資料捕獲變更資料表和系統函數。 它會從變更資料捕獲系統資料表中刪除與指定的 capture 實例相關聯的任何資料列，並將[sys.databases](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)目錄檢視中資料表專案的**is_tracked_by_cdc**資料行設定為0。  
+ **sys. sp_cdc_disable_table** 會卸載與指定之來源資料表和 capture 實例相關聯的變更資料捕獲變更資料表和系統函數。 它會從變更資料捕獲系統資料表刪除與指定之 capture 實例相關聯的任何資料列，並將[sys. 資料表](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)目錄檢視中資料表專案的**is_tracked_by_cdc**資料行設定為0。  
   
 ## <a name="permissions"></a>權限  
- 需要**db_owner**固定資料庫角色中的成員資格。  
+ 需要 **db_owner** 固定資料庫角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
  下列範例會停用 `HumanResources.Employee` 資料表的異動資料擷取。  
@@ -83,6 +84,6 @@ EXECUTE sys.sp_cdc_disable_table
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_cdc_enable_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)  
+ [sys. sp_cdc_enable_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)  
   
   

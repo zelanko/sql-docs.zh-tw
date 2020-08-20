@@ -1,5 +1,6 @@
 ---
-title: sp_unregistercustomresolver （Transact-sql） |Microsoft Docs
+description: sp_unregistercustomresolver (Transact-SQL)
+title: sp_unregistercustomresolver (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 08bd20c8-c6be-4be2-be9f-2b5e1d7bee43
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 935796cb328807eb4413991eeac97a95bd9b9384
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e1d5957d830b322be2b4c32030a514988583522f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891387"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492894"
 ---
 # <a name="sp_unregistercustomresolver-transact-sql"></a>sp_unregistercustomresolver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,18 +38,18 @@ sp_unregistercustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @article_resolver = ] 'article_resolver'`指定要取消註冊之自訂商務邏輯的名稱。 *article_resolver*是**Nvarchar （255）**，沒有預設值。 如果移除的商務邏輯是 COM 元件，這個參數就是元件的易記名稱。 如果商務邏輯是一個 .NET Framework 組件，這個參數就是組件的名稱。  
+`[ @article_resolver = ] 'article_resolver'` 指定要取消註冊之自訂商務邏輯的名稱。 *article_resolver* 是 **Nvarchar (255) **，沒有預設值。 如果移除的商務邏輯是 COM 元件，這個參數就是元件的易記名稱。 如果商務邏輯是一個 .NET Framework 組件，這個參數就是組件的名稱。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_unregistercustomresolver**用於合併式複寫中。  
+ **sp_unregistercustomresolver** 用於合併式複寫中。  
   
- 使用複寫拓撲中任何伺服器上的[sp_enumcustomresolvers](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) ，以傳回可用於拓撲的已註冊自訂商務邏輯模組或 COM 解析程式的清單。  
+ 在複寫拓撲中的任何伺服器上使用 [sp_enumcustomresolvers](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) ，以傳回已註冊的自訂商務邏輯模組清單，或可供拓撲使用的 COM 解析程式。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_unregistercustomresolver**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色或 **db_owner** 固定資料庫角色的成員，才能夠執行 **sp_unregistercustomresolver**。  
   
 ## <a name="see-also"></a>另請參閱  
  [sp_lookupcustomresolver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-lookupcustomresolver-transact-sql.md)   

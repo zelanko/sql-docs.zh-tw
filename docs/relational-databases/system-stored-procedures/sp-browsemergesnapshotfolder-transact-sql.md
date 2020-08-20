@@ -1,5 +1,6 @@
 ---
-title: sp_browsemergesnapshotfolder （Transact-sql） |Microsoft Docs
+description: sp_browsemergesnapshotfolder (Transact-SQL)
+title: sp_browsemergesnapshotfolder (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e248642f-5fea-4ed7-be1a-36ff75abcfde
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e03232e394adcb6c6ee8fcf208754cf72ca9e951
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f6f78e04052c204eda42ccda97227f0c5c2e0e7c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85873882"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493442"
 ---
 # <a name="sp_browsemergesnapshotfolder-transact-sql"></a>sp_browsemergesnapshotfolder (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,26 +38,26 @@ sp_browsemergesnapshotfolder [@publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 這是發行集的名稱。 *發行* 集是 **sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="result-sets"></a>結果集  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**snapshot_folder**|**Nvarchar （2000）**|快照集目錄的完整路徑。|  
+|**snapshot_folder**|**Nvarchar (2000) **|快照集目錄的完整路徑。|  
   
 ## <a name="remarks"></a>備註  
- **sp_browsemergesnapshotfolder**用於合併式複寫中。  
+ **sp_browsemergesnapshotfolder** 用於合併式複寫中。  
   
  如果將發行集設定成同時在發行者工作目錄和發行者快照集資料夾中產生快照集檔案，結果集會包含兩個資料列。第一個資料列包含發行集快照集資料夾，第二個資料列包含發行者工作目錄。  
   
- **sp_browsemergesnapshotfolder**適用于判斷產生合併快照集檔案的目錄。 之後，就可以從替代快照集位置中，將這個資料夾/路徑及其內容複製到抽取式媒體，以及用來同步處理訂閱的快照集。  
+ **sp_browsemergesnapshotfolder** 有助於判斷產生合併快照集檔案的目錄。 之後，就可以從替代快照集位置中，將這個資料夾/路徑及其內容複製到抽取式媒體，以及用來同步處理訂閱的快照集。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_browsemergesnapshotfolder**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色或 **db_owner** 固定資料庫角色的成員，才能夠執行 **sp_browsemergesnapshotfolder**。  
   
 ## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

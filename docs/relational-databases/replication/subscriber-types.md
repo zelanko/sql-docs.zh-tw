@@ -1,4 +1,5 @@
 ---
+description: 訂閱者類型
 title: 訂閱者類型 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ ms.assetid: a70656cb-21c9-4489-be77-ccd396747e3b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0f067af154d19bdd2ead1682d70dba74c70bef38
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5e557028d035ae9e04f52eedfdef10d66d3ba2d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111212"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493846"
 ---
 # <a name="subscriber-types"></a>訂閱者類型
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

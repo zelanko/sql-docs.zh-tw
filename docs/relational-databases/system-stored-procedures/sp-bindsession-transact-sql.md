@@ -1,5 +1,6 @@
 ---
-title: sp_bindsession （Transact-sql） |Microsoft Docs
+description: sp_bindsession (Transact-SQL)
+title: sp_bindsession (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1436fe21-ad00-4a98-aca1-1451a5e571d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0204b8d56b7351173716480bd14768152089a242
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 60345defb9e5038286ddc9e4011525cb516315a9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85874170"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493459"
 ---
 # <a name="sp_bindsession-transact-sql"></a>sp_bindsession (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +44,7 @@ sp_bindsession { 'bind_token' | NULL }
   
 ## <a name="arguments"></a>引數  
  **'** *bind_token* **'**  
- 這是用來識別原本使用**sp_getbindtoken**或 Open 資料服務**srv_getbindtoken**函式所取得之交易的 token。 *bind_token*為**Varchar （255）**。  
+ 這是識別原本使用 **sp_getbindtoken** 或開放式資料服務 **srv_getbindtoken** 函數取得之交易的標記。 *bind_token*是 **Varchar (255) **。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -51,13 +52,13 @@ sp_bindsession { 'bind_token' | NULL }
 ## <a name="remarks"></a>備註  
  繫結的兩個工作階段會共用交易和鎖定。 每個工作階段都會保留它自己的隔離等級，在一個工作階段上設定新的隔離等級，並不會影響另一工作階段的隔離等級。 每個工作階段都維持由它的安全性帳戶來識別，且只能存取帳戶已獲授權的資料庫資源。  
   
- **sp_bindsession**會使用系結 token 來系結兩個或多個現有的用戶端會話。 這些用戶端工作階段必須在從中取得繫結 Token 的相同 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體中。 工作階段是一個執行命令的用戶端。 繫結的資料庫工作階段會共用交易和鎖定空間。  
+ **sp_bindsession** 使用系結權杖來系結兩個或多個現有的用戶端會話。 這些用戶端工作階段必須在從中取得繫結 Token 的相同 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體中。 工作階段是一個執行命令的用戶端。 繫結的資料庫工作階段會共用交易和鎖定空間。  
   
- 從某個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體取得的繫結 Token，無法供連接到另一個執行個體的用戶端工作階段使用，即使是 DTC 交易也是如此。 繫結 Token 只在每個執行個體的本機環境內有效，不同的執行個體並不能共用它。 若要系結另一個實例上的用戶端會話 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，您必須藉由執行**sp_getbindtoken**來取得不同的系結 token。  
+ 從某個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體取得的繫結 Token，無法供連接到另一個執行個體的用戶端工作階段使用，即使是 DTC 交易也是如此。 繫結 Token 只在每個執行個體的本機環境內有效，不同的執行個體並不能共用它。 若要在的另一個實例上系結用戶端會話 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，您必須執行 **sp_getbindtoken**來取得不同的系結 token。  
   
- 如果**sp_bindsession**在使用非作用中的權杖時，將會失敗並產生錯誤。  
+ 如果使用非使用中的權杖， **sp_bindsession**將會失敗，並出現錯誤。  
   
- 藉由使用**sp_bindsession**而不指定*bind_token* ，或在*bind_token*中傳遞 Null，從會話解除系結。  
+ 使用 **sp_bindsession** 不指定 *bind_token* 或在 *bind_token*中傳遞 Null 來解除系結會話。  
   
 ## <a name="permissions"></a>權限  
  需要 **public** 角色的成員資格。  
@@ -66,7 +67,7 @@ sp_bindsession { 'bind_token' | NULL }
  下列範例會將指定的繫結 Token 繫結到目前的工作階段。  
   
 > [!NOTE]  
->  範例中所示的系結 token 是藉由在執行**sp_bindsession**之前執行**sp_getbindtoken**來取得。  
+>  範例中顯示的系結 token 是在執行**sp_bindsession**之前執行**sp_getbindtoken**所取得。  
   
 ```  
 USE master;  

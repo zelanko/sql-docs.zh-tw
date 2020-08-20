@@ -1,5 +1,6 @@
 ---
-title: sp_delete_schedule （Transact-sql） |Microsoft Docs
+description: sp_delete_schedule (Transact-SQL)
+title: sp_delete_schedule (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8fe6f851ffb3ab15781d5a2ffbbcaca3bf15829f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0746a5039d27cb03edd379b5dee9b69525125156
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862803"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493295"
 ---
 # <a name="sp_delete_schedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,24 +41,24 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @schedule_id = ] schedule_id`要刪除之排程的排程識別碼。 *schedule_id*是**int**，預設值是 Null。  
+`[ @schedule_id = ] schedule_id` 要刪除之排程的排程識別碼。 *schedule_id* 是 **int**，預設值是 Null。  
   
-> **注意：** 必須指定*schedule_id*或*schedule_name* ，但不能同時指定兩者。  
+> **注意：** 必須指定 *schedule_id* 或 *schedule_name* ，但不能同時指定兩者。  
   
-`[ @schedule_name = ] 'schedule_name'`要刪除的排程名稱。 *schedule_name*是**sysname**，預設值是 Null。  
+`[ @schedule_name = ] 'schedule_name'` 要刪除的排程名稱。 *schedule_name* 是 **sysname**，預設值是 Null。  
   
-> **注意：** 必須指定*schedule_id*或*schedule_name* ，但不能同時指定兩者。  
+> **注意：** 必須指定 *schedule_id* 或 *schedule_name* ，但不能同時指定兩者。  
   
-`[ @force_delete = ] force_delete`指定如果排程附加至作業，程式是否應該失敗。 *Force_delete*是 bit，預設值是**0**。 當*force_delete*為**0**時，如果排程附加至作業，則預存程式會失敗。 當*force_delete*為**1**時，不論排程是否附加至作業，都會刪除排程。  
+`[ @force_delete = ] force_delete` 指定如果排程附加至作業，程式是否應該失敗。 *Force_delete* 是 bit，預設值是 **0**。 當 *force_delete* 是 **0**時，如果排程附加至作業，預存程式就會失敗。 當 *force_delete* 為 **1**時，不論排程是否附加至作業，都會刪除排程。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="result-sets"></a>結果集  
  None  
   
 ## <a name="remarks"></a>備註  
- 依預設，如果排程附加至作業中，並無法刪除排程。 若要刪除附加至作業的排程，請為*force_delete*指定**1**的值。 刪除排程，並不會停止目前在執行中的作業。  
+ 依預設，如果排程附加至作業中，並無法刪除排程。 若要刪除附加至作業的排程，請針對*force_delete*指定**1**的值。 刪除排程，並不會停止目前在執行中的作業。  
   
 ## <a name="permissions"></a>權限  
  依預設，只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員，才能夠執行這個預存程序。 其他使用者必須被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫的下列其中一個** Agent 固定資料庫角色。  
@@ -72,7 +73,7 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
   
  如需這些角色權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
- 只有**系統管理員（sysadmin** ）角色的成員，才能夠刪除另一位使用者所擁有的作業排程。  
+ 只有 **系統管理員（sysadmin** ）角色的成員，才能夠刪除另一位使用者所擁有的作業排程。  
   
 ## <a name="examples"></a>範例  
   
@@ -102,7 +103,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [執行作業](../../ssms/agent/implement-jobs.md)   
+ [實作作業](../../ssms/agent/implement-jobs.md)   
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)  
   
   

@@ -1,5 +1,6 @@
 ---
-title: 年初迄今（MDX） |Microsoft Docs
+description: Ytd (MDX)
+title: Ytd (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2e3fcd823dea5d651cd7be9295fa4c6bba25380c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14f286a304e03624a9ce20c1bd7b045dffc38688
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68125755"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491366"
 ---
 # <a name="ytd-mdx"></a>Ytd (MDX)
 
 
-  傳回與指定成員相同層級的一組兄弟成員，從第一個兄弟開始，並以指定的成員結束，如同時間維度中的*Year*層級所限制。  
+  傳回一組與指定成員相同層級的一組同級成員，從第一個同級開始，並以指定的成員結束，如同時間維度中的 *Year* 層級所限制。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,12 +33,12 @@ Ytd( [ Member_Expression ] )
  傳回成員的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- 如果未指定成員運算式，預設值為第一個階層的目前成員，其在量值群組中類型為*Time*的第一個*維度中，* 層級為 year 類型。  
+ 如果沒有指定成員運算式，預設值就是量值*群組中，* 第一個維度類型的第一個維度*中，* 第一個階層的目前成員。  
   
- **Ytd**函數是[PeriodsToDate](../mdx/periodstodate-mdx.md)函數的快捷方式函式，其中層級所依據之屬性階層的 Type 屬性會設定為*年*。 也就是說，`Ytd(Member_Expression)` 相當於 `PeriodsToDate(Year_Level_Expression,Member_Expression)`。 請注意，當 Type 屬性設定為*FiscalYears*時，此函數將無法運作。  
+ **Ytd**函數是[PeriodsToDate](../mdx/periodstodate-mdx.md)函數的快捷方式函式，其中層級所依據之屬性階層的型別屬性會設定為*年份*。 也就是說，`Ytd(Member_Expression)` 相當於 `PeriodsToDate(Year_Level_Expression,Member_Expression)`。 請注意，當 Type 屬性設定為 *FiscalYears*時，這個函數將無法運作。  
   
 ## <a name="example"></a>範例  
- 下列範例會從「**艾德公司**」 `Measures.[Order Quantity]` cube 中傳回成員的總和（在`Date`維度中包含的前八2003個月內）。  
+ 下列範例會傳回成員的總和 `Measures.[Order Quantity]` ，此成員是在維度所包含之日曆年度2003的前八個月 `Date` ，從 [ **艾德作品** ] cube 匯總而來。  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8MonthsCY2003] AS  
@@ -53,7 +54,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- 年初**迄今**常用於不指定任何參數的情況下，這表示[CurrentMember &#40;MDX&#41;](../mdx/currentmember-mdx.md)函數會在報表中顯示執行中累計年初至今的總計，如下列查詢所示：  
+ **Ytd** 通常會搭配未指定參數的組合使用，這表示 [CurrentMember &#40;MDX&#41;](../mdx/currentmember-mdx.md) 函數將會在報表中顯示執行中的累積年初至今總計，如下列查詢所示：  
   
  `WITH MEMBER MEASURES.YTDDEMO AS`  
   

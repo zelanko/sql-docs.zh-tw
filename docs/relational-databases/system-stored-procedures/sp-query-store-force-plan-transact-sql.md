@@ -1,4 +1,5 @@
 ---
+description: 'sp_query_store_force_plan (Transact-sql) '
 title: sp_query_store_force_plan (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
@@ -21,19 +22,19 @@ ms.assetid: 0068f258-b998-4e4e-b47b-e375157c8213
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6aeea1c726e190945095b478e960266908019e0b
-ms.sourcegitcommit: 95be98587f6a3730ca75a77676dd952c45e4f53a
+ms.openlocfilehash: 3aa708d4af93449e2efe3d26cb9b92496c497942
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88046794"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493050"
 ---
 # <a name="sp_query_store_force_plan-transact-sql"></a>sp_query_store_force_plan (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-  針對特定查詢啟用強制特定計劃。  
+  可為特定查詢強制執行特定計劃。  
   
- 針對特定查詢強制執行計畫時，每次 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 遇到查詢時，它會嘗試在查詢最佳化工具中強制計畫。 如果計畫強制失敗，則會引發擴充事件，並指示查詢最佳化工具以正常方式進行優化。  
+ 當針對特定查詢強制執行計畫時，每次 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 遇到查詢時，它會嘗試在查詢最佳化工具中強制執行計畫。 如果強制執行計畫失敗，則會引發擴充事件，並指示查詢最佳化工具以正常方式進行優化。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,9 +45,9 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @query_id = ] query_id`這是查詢的識別碼。 *query_id*是**Bigint**，沒有預設值。  
+`[ @query_id = ] query_id` 這是查詢的識別碼。 *query_id* 是 **Bigint**，沒有預設值。  
   
-`[ @plan_id = ] plan_id`這是要強制執行之查詢計劃的識別碼。 *plan_id*是**Bigint**，沒有預設值。  
+`[ @plan_id = ] plan_id` 這是要強制執行之查詢計劃的識別碼。 *plan_id* 是 **Bigint**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -54,7 +55,7 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ## <a name="remarks"></a>備註  
   
 ## <a name="permissions"></a>權限  
- 需要資料庫的**ALTER**許可權。
+ 需要資料庫的 **ALTER** 許可權。
   
 ## <a name="examples"></a>範例  
  下列範例會傳回查詢存放區中查詢的相關資訊。  
@@ -68,7 +69,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- 在您識別要強制執行的 query_id 和 plan_id 之後，請使用下列範例來強制查詢使用計畫。  
+ 找出您想要強制執行的 query_id 和 plan_id 之後，請使用下列範例強制查詢使用計畫。  
   
 ```sql  
 EXEC sp_query_store_force_plan 3, 3;  
@@ -78,7 +79,7 @@ EXEC sp_query_store_force_plan 3, 3;
  [sp_query_store_remove_plan &#40;Transct-sql-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
  [sp_query_store_remove_query &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
  [sp_query_store_unforce_plan &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   
- [查詢存放區目錄檢視 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
+ [查詢存放區 &#40;Transact-sql&#41;的目錄檢視 ](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [使用查詢存放區監視效能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [sp_query_store_reset_exec_stats &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
  [sp_query_store_flush_db &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)       

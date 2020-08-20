@@ -1,5 +1,6 @@
 ---
-title: MSrepl_commands （Transact-sql） |Microsoft Docs
+description: MSrepl_commands (Transact-SQL)
+title: MSrepl_commands (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 53b9f9cd-9429-47a0-aba2-908fc60e7036
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6d4dcbee03f1d5514e2b24520409804b1f27cefe
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 65b6e3924202153ff061da018bcce40ec9de0524
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889521"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492738"
 ---
 # <a name="msrepl_commands-transact-sql"></a>MSrepl_commands (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,13 +39,13 @@ ms.locfileid: "85889521"
 |**originator_id**|**int**|發起者的識別碼。|  
 |**command_id**|**int**|命令的識別碼。|  
 |**partial_command**|**bit**|指出這是否為部分命令。|  
-|**command**|**Varbinary （1024）**|命令值。|  
+|**command**|**Varbinary (1024) **|命令值。|  
 |**hashkey**|**int**|僅供內部使用。|  
 |**originator_lsn**|**varbinary(16)**|識別原始發行集中，該命令的 LSN。 用於點對點異動複寫中。|  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [&#40;Transact-sql&#41;的複寫視圖](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的複寫視圖 ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 建立及管理全文檢索索引
 title: 建立及管理全文檢索索引 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/31/2020
@@ -13,12 +14,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d51f0b31729d6b061c7e8cfd82b5047796c6daa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 347f59a7498e34ac1b99956990507559363813c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758072"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493845"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>建立及管理全文檢索索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -64,11 +65,11 @@ ms.locfileid: "85758072"
 ### <a name="view-the-properties-of-a-full-text-index-with-management-studio"></a>使用 Management Studio 檢視全文檢索索引的屬性 
 1.  在 Management Studio 中，於 [物件總管] 中展開伺服器。  
   
-2.  展開 [資料庫]  ，然後展開包含全文檢索索引的資料庫。  
+2.  展開 [資料庫]，然後展開包含全文檢索索引的資料庫。  
   
 3.  展開 **[資料表]** 。  
   
-4.  以滑鼠右鍵按一下已定義全文檢索索引的資料表、選取 [全文檢索索引]  ，然後按一下 [全文檢索索引]  內容功能表上的 [屬性]  。 這樣就會開啟 [全文檢索索引屬性]  對話方塊。  
+4.  以滑鼠右鍵按一下已定義全文檢索索引的資料表、選取 [全文檢索索引]，然後按一下 [全文檢索索引] 內容功能表上的 [屬性]。 這樣就會開啟 [全文檢索索引屬性]  對話方塊。  
   
 5.  在 **[選取頁面]** 窗格中，您可以選取下列任何頁面：  
   

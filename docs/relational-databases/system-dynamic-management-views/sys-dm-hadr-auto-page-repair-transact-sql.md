@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_hadr_auto_page_repair （Transact-sql） |Microsoft Docs
+description: sys.dm_hadr_auto_page_repair (Transact-SQL)
+title: sys. dm_hadr_auto_page_repair (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/05/2019
 ms.prod: sql
@@ -20,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: d7840adf-4a1b-41ac-bc94-102c07ad1c79
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 53e41822c48bb61e9253ddd22eb1f348d539ca7d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 93c963fbe285407e56cafb8d13ebed0b7d4b3f31
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752857"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493681"
 ---
 # <a name="sysdm_hadr_auto_page_repair-transact-sql"></a>sys.dm_hadr_auto_page_repair (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對可用性複本上的任何可用性資料庫進行的每個自動修復頁面嘗試行為，各傳回一個資料列，該可用性複本是針對伺服器執行個體的任何可用性群組所裝載。 這個檢視包含在給定之主要或次要資料庫上進行最新自動修復頁面嘗試行為的資料列，而且每個資料庫最多 100 個資料列。 一旦資料庫到達上限時，下一個自動修復頁面嘗試行為的資料列就會取代其中一個現有的項目。
   
-  下表定義各種資料行的意義：  
+  下表定義各資料行的意義：  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -40,7 +41,7 @@ ms.locfileid: "85752857"
 |**file_id**|**int**|頁面所在之檔案的識別碼。|  
 |**page_id**|**bigint**|檔案中頁面的識別碼。|  
 |**error_type**|**int**|錯誤的類型。 其值可能是：<br /><br /> **-** 1 = 所有硬體823錯誤<br /><br /> 1 = 總和檢查碼錯誤或頁面損毀 (例如，頁面識別碼不正確) 以外的 824 錯誤<br /><br /> 2 = 總和檢查碼錯誤<br /><br /> 3 = 頁面損毀|  
-|**page_status**|**int**|修復頁面嘗試行為的狀態：<br /><br /> 2 = 已將夥伴的要求排入佇列。<br /><br /> 3 = 要求已傳送給夥伴。<br /><br /> 4 = 已成功修復頁面。<br /><br /> 5 = 在上次嘗試/自動修復頁面時無法修復頁面，將會嘗試重新修復頁面。|  
+|**page_status**|**int**|修復頁面嘗試行為的狀態：<br /><br /> 2 = 已將夥伴的要求排入佇列。<br /><br /> 3 = 要求已傳送給夥伴。<br /><br /> 4 = 已成功修復頁面。<br /><br /> 5 = 在上次嘗試/自動頁面修復期間無法修復頁面，將會再次嘗試修復頁面。|  
 |**modification_time**|**datetime**|上次變更頁面狀態的時間。|  
   
 ## <a name="security"></a>安全性  

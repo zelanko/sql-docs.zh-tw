@@ -1,4 +1,5 @@
 ---
+description: Errors and Warnings 事件類別目錄 (Database Engine)
 title: 錯誤和警告事件類別目錄
 ms.date: 06/03/2020
 ms.prod: sql
@@ -14,16 +15,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: d31361a5512a93620d6ae2fbab34ff918a0837ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8243110252460d8838897139903f306937caf57f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716936"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491103"
 ---
 # <a name="errors-and-warnings-event-category-database-engine"></a>Errors and Warnings 事件類別目錄 (Database Engine)
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  **Errors and Warnings** 事件類別目錄包含一般的錯誤與警告事件。  
+  **Errors and Warnings** 事件類別目錄包含一般錯誤與警告事件。  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -31,7 +32,7 @@ ms.locfileid: "85716936"
 |-----------|-----------------|  
 |[Attention 事件類別](../../relational-databases/event-classes/attention-event-class.md)|指出發生 **Attention** 事件。|  
 |[Background Job Error 事件類別](../../relational-databases/event-classes/background-job-error-event-class.md)|指出背景作業已異常結束。|  
-|[Bitmap Warning 事件類別](../../relational-databases/event-classes/bitmap-warning-event-class.md)|指出查詢中已經停用點陣圖篩選。|  
+|[點陣圖警告事件類別](../../relational-databases/event-classes/bitmap-warning-event-class.md)|指出查詢中已經停用點陣圖篩選。|  
 |[Blocked Process Report 事件類別](../../relational-databases/event-classes/blocked-process-report-event-class.md)|指出封鎖工作已超出指定的時間量。|  
 |[CPU Threshold Exceeded 事件類別](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)|指出資源管理員偵測到超出指定之 CPU 臨界值的查詢。|  
 |[ErrorLog 事件類別](../../relational-databases/event-classes/errorlog-event-class.md)|指出錯誤事件已記錄在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔中。|  

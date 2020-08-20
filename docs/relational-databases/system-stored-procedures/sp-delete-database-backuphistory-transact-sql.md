@@ -1,5 +1,6 @@
 ---
-title: sp_delete_database_backuphistory （Transact-sql） |Microsoft Docs
+description: sp_delete_database_backuphistory (Transact-SQL)
+title: sp_delete_database_backuphistory (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4c237944-453d-49fb-8d0e-4596945ac147
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4d1600578197545628c1b43fb80787f6565ba7c8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8a820a9a1da8a3938835f02a68d481b5f88790d4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85864367"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493317"
 ---
 # <a name="sp_delete_database_backuphistory-transact-sql"></a>sp_delete_database_backuphistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @database_name = ] database_name`指定與備份和還原作業相關的資料庫名稱。 *database_name*是**sysname**，沒有預設值。  
+`[ @database_name = ] database_name` 指定包含在備份和還原作業中的資料庫名稱。 *database_name* 是 **sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -48,7 +49,7 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
  None  
   
 ## <a name="remarks"></a>備註  
- **sp_delete_database_backuphistory**必須從**msdb**資料庫中執行。  
+ **sp_delete_database_backuphistory** 必須從 **msdb** 資料庫執行。  
   
  這個預存程序會影響下列資料表：  
   
@@ -69,7 +70,7 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
 -   [restorehistory](../../relational-databases/system-tables/restorehistory-transact-sql.md)  
   
 ## <a name="permissions"></a>權限  
- 需要**系統管理員（sysadmin** ）固定伺服器角色中的成員資格。  
+ 需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
  下列範例會刪除 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫在備份與還原記錄資料表中的所有項目。  

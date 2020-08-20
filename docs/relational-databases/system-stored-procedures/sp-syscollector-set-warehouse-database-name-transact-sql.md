@@ -1,5 +1,6 @@
 ---
-title: sp_syscollector_set_warehouse_database_name （Transact-sql） |Microsoft Docs
+description: sp_syscollector_set_warehouse_database_name (Transact-SQL)
+title: sp_syscollector_set_warehouse_database_name (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a85aca1b-8135-4c81-9a05-da5aec76f1ed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 86b5037b1aa581dd99385c9be13ea58ee8a571dd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f1a1ef892a3b00f847269f10d151fcc26f1d821c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892855"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492977"
 ---
 # <a name="sp_syscollector_set_warehouse_database_name-transact-sql"></a>sp_syscollector_set_warehouse_database_name (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,15 +42,15 @@ sp_syscollector_set_warehouse_database_name [ @database_name = ] 'database_name'
   
 ## <a name="arguments"></a>引數  
  [ @database_name =] '*database_name*'  
- 這是管理資料倉儲的名稱。 *database_name*是**sysname** ，預設值是 Null。  
+ 這是管理資料倉儲的名稱。 *database_name* 是 **sysname** ，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
  您必須先停用資料收集器，然後再變更資料收集器範圍組態。 如果資料收集器為啟用狀態，這個程序就會失敗。  
   
- 若要查看目前的資料庫名稱，請查詢[syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)系統檢視。  
+ 若要查看目前的資料庫名稱，請查詢 [syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md) 系統檢視。  
   
 ## <a name="permissions"></a>權限  
  需要 dc_admin (具有 EXECUTE 權限) 固定資料庫角色中的成員資格，才能執行此程序。  

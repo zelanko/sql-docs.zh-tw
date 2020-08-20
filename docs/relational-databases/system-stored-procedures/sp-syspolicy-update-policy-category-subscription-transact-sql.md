@@ -1,5 +1,6 @@
 ---
-title: sp_syspolicy_update_policy_category_subscription （Transact-sql） |Microsoft Docs
+description: sp_syspolicy_update_policy_category_subscription (Transact-SQL)
+title: sp_syspolicy_update_policy_category_subscription (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0769566-8f5c-4c8a-84d3-ee17ea6e0cb4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fde97529258f8f413a50db1933a95c1842f20c1a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 78f2b47d687c695c50710d045e99494ac61598b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891444"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492966"
 ---
 # <a name="sp_syspolicy_update_policy_category_subscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,23 +43,23 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @policy_category_subscription_id = ] policy_category_subscription_id`這是您想要更新之原則類別目錄訂用帳戶的識別碼。 *policy_category_subscription_id*是**int**，而且是必要的。  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id` 這是您想要更新之原則類別目錄訂閱的識別碼。 *policy_category_subscription_id* 是 **int**，而且是必要的。  
   
-`[ @target_type = ] 'target_type'`這是類別目錄訂閱的目標型別。 *target_type*是**sysname**，預設值是 Null。  
+`[ @target_type = ] 'target_type'` 這是類別目錄訂閱的目標型別。 *target_type* 是 **sysname**，預設值是 Null。  
   
- 如果您指定*target_type*，此值必須設定為 ' DATABASE '。  
+ 如果您指定 *target_type*，此值必須設定為 ' DATABASE '。  
   
-`[ @target_object = ] 'target_object'`這是將訂閱原則類別目錄的資料庫名稱。 *target_object*是**sysname**，預設值是 Null。  
+`[ @target_object = ] 'target_object'` 這是將訂閱原則類別目錄的資料庫名稱。 *target_object* 是 **sysname**，預設值是 Null。  
   
-`[ @policy_category = ] 'policy_category'`這是您想要讓資料庫訂閱的原則類別目錄名稱。 *policy_category*是**sysname**，預設值是 Null。  
+`[ @policy_category = ] 'policy_category'` 這是您要讓資料庫訂閱的原則類別目錄名稱。 *policy_category* 是 **sysname**，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
  您必須在 msdb 系統資料庫的內容中執行 sp_syspolicy_update_policy_category_subscription。  
   
- 若要取得*policy_category_subscription_id*和*policy_category*的值，您可以使用下列查詢：  
+ 若要取得 *policy_category_subscription_id* 的值和 *policy_category*，您可以使用下列查詢：  
   
 ```  
 SELECT a.policy_category_subscription_id, a.target_type, a.target_object  

@@ -1,5 +1,6 @@
 ---
-title: sys.databases dm_cryptographic_provider_properties （Transact-sql） |Microsoft Docs
+description: sys.dm_cryptographic_provider_properties (Transact-SQL)
+title: sys. dm_cryptographic_provider_properties (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 024b0095-6766-4189-a39a-d316c5ec2874
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c588e2c87783bfaeaf09b70350ec00c50c3b1f4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 562c2884b0eda3488b436c1007c188ec7c64425b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894584"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493778"
 ---
 # <a name="sysdm_cryptographic_provider_properties-transact-sql"></a>sys.dm_cryptographic_provider_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85894584"
 |-----------------|---------------|-----------------|  
 |provider_id|**int**|密碼編譯提供者的識別碼。|  
 |guid|**uniqueidentifier**|唯一的提供者 GUID。|  
-|provider_version|**nvarchar(256)**|提供者的版本，格式為 '*aa.bb.cccc.dd*'。|  
+|provider_version|**nvarchar(256)**|格式為 '*aa.bb.cccc.dd*' 之提供者的版本。|  
 |sqlcrypt_version|**nvarchar(256)**|密碼編譯 API 的主要版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，格式為 '*aa.bb.cccc.dd*'。|  
 |friendly_name|**nvarchar(2048)**|提供者所提供的名稱。|  
 |authentication_type|**nvarchar(256)**|WINDOWS、BASIC 或 OTHER。|  
@@ -52,10 +53,10 @@ ms.locfileid: "85894584"
  sys.dm_cryptographic_provider_properties 檢視表會公開讓人看到。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的安全性目錄檢視](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [安全性目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [可延伸金鑰管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
- [建立 &#40;Transact-sql&#41;的密碼編譯提供者](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
+ [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
  [安全性相關的動態管理檢視和函數 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

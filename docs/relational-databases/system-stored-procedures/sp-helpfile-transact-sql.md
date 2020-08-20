@@ -1,5 +1,6 @@
 ---
-title: sp_helpfile （Transact-sql） |Microsoft Docs
+description: sp_helpfile (Transact-SQL)
+title: sp_helpfile (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1546e0ae-5a99-4e01-9eb9-d147fa65884c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 86fdfa8fe60e16cbfa9bfd0364953ec1df84a20f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9974e4e83247b7af96937bb9cbb304d617a49934
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881556"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493222"
 ---
 # <a name="sp_helpfile-transact-sql"></a>sp_helpfile (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_helpfile [ [ @filename= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @filename = ] 'name'`這是目前資料庫中任何檔案的邏輯名稱。 *name*是**sysname**，預設值是 Null。 如果未指定*name* ，則會傳回目前資料庫中所有檔案的屬性。  
+`[ @filename = ] 'name'` 這是目前資料庫中任何檔案的邏輯名稱。 *名稱* 是 **sysname**，預設值是 Null。 如果未指定 *name* ，則會傳回目前資料庫中所有檔案的屬性。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -49,13 +50,13 @@ sp_helpfile [ [ @filename= ] 'name' ]
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|邏輯檔案名稱。|  
-|**fileid**|**smallint**|檔案的數值識別碼。 如果已指定*name* ，則不會傳回 *。*|  
-|**filename**|**Nchar （260）**|實體檔案名稱。|  
+|**fileid**|**smallint**|檔案的數值識別碼。 如果指定 *名稱* ，則不會傳回 *。*|  
+|**filename**|**Nchar (260) **|實體檔案名稱。|  
 |**filegroup**|**sysname**|檔案所屬的檔案群組。<br /><br /> NULL = 檔案是記錄檔。 它永遠不在檔案群組中。|  
-|**size**|**Nvarchar （15）**|檔案大小 (以 KB 為單位)。|  
-|**maxsize**|**Nvarchar （15）**|檔案所能成長的大小上限。 這個欄位中的 UNLIMITED 值指出，檔案將成長到磁碟已滿。|  
-|**growth**|**Nvarchar （15）**|檔案的成長遞增。 這表示每次需要新空間時，檔案所增加的空間量。<br /><br /> 0 = 檔案是固定大小，不會成長。|  
-|**實例**|**Varchar （9）**|針對資料檔案，此值為「**僅限資料**」，而記錄檔的值為「**僅限記錄**」。|  
+|**size**|**Nvarchar (15) **|檔案大小 (以 KB 為單位)。|  
+|**maxsize**|**Nvarchar (15) **|檔案所能成長的大小上限。 這個欄位中的 UNLIMITED 值指出，檔案將成長到磁碟已滿。|  
+|**增長**|**Nvarchar (15) **|檔案的成長遞增。 這表示每次需要新空間時，檔案所增加的空間量。<br /><br /> 0 = 檔案是固定大小，不會成長。|  
+|**使用**|**Varchar (9) **|針對資料檔，此值為 [ **僅限資料** ]，而針對記錄檔，其值為 [ **僅限記錄**]。|  
   
 ## <a name="permissions"></a>權限  
  需要 **public** 角色的成員資格。  
@@ -71,12 +72,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的資料庫引擎預存程式 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_helpfilegroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
- [database_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [master_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
- [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
- [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [sys. master_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [資料庫檔案與檔案群組](../../relational-databases/databases/database-files-and-filegroups.md)  
   
   

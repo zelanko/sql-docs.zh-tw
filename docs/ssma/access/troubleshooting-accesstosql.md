@@ -1,4 +1,5 @@
 ---
+description: 針對 (AccessToSQL) 進行疑難排解
 title: 疑難排解 (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: 04cd7ffa-5402-4aba-90dd-8b562dd4b0bb
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d86b8f573e8539971dae9d9386d4b255977f5d3d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 2798fb492dc7cc91649e6790d133037d4f476882
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933864"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492521"
 ---
-# <a name="troubleshooting-accesstosql"></a> (AccessToSQL) 疑難排解
-在執行主控台腳本或命令時，遇到遷移問題並不罕見。  
+# <a name="troubleshooting-accesstosql"></a>針對 (AccessToSQL) 進行疑難排解
+在執行主控台腳本或命令的中途遇到遷移問題並不常見。  
   
-可修復的錯誤可能與：  
+可修復的錯誤可能與下列相關：  
   
 1.  函式  
   
@@ -33,5 +34,5 @@ ms.locfileid: "87933864"
   
 6.  變更專案設定  
   
-您可以藉由開啟透過主控台所建立的專案檔，使用 SSMA 使用者介面來修正問題。  
+您可以藉由開啟透過主控台建立的專案檔來修正問題，方法是使用 SSMA 使用者介面。  
   

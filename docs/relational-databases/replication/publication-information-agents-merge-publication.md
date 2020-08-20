@@ -1,4 +1,5 @@
 ---
+description: 發行集資訊，代理程式 (合併式發行集)
 title: 發行集資訊，代理程式 (合併式發行集) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -12,16 +13,16 @@ f1_keywords:
 ms.assetid: 73ff590a-20da-4f10-b592-c60b7226d22b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2aa581588367a96036c62704c47f6ac6924fef5c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ce84b55a553b26e6fe9141601987f1e743584699
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720999"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493879"
 ---
 # <a name="publication-information-agents-merge-publication"></a>發行集資訊，代理程式 (合併式發行集)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  **[代理程式]** 索引標籤會顯示選取之發行集的快照集代理程式的摘要資訊。  
+   [代理程式]**** 索引標籤會顯示選取之發行集的快照集代理程式的摘要資訊。  
   
 ## <a name="options"></a>選項。  
  如需快照集代理程式的詳細資訊與相關工作，請以滑鼠右鍵按一下代理程式的資料列，然後按一下快速鍵功能表上的選項。 若要變更方格顯示資料的方式，請以滑鼠右鍵按一下方格，然後按一下下列其中一個選項：  
@@ -45,7 +46,7 @@ ms.locfileid: "85720999"
   
 -   未執行  
   
--   Completed  
+-   已完成  
   
  **代理程式**  
  快照集代理程式。 這是唯一與合併式發行集相關聯的代理程式。 合併代理程式與這個發行集的訂閱相關聯。 如需詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  

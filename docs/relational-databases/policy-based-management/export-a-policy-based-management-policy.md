@@ -1,4 +1,5 @@
 ---
+description: 匯出原則式管理原則
 title: 匯出原則式管理原則 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f0001b33-9078-4432-8460-496736fb325a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c97684af46e58625c7bd63e7e07fd33c6f3ce39d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 62fff3bda286f50b2220dbb1ea4732547e98829f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760526"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493996"
 ---
 # <a name="export-a-policy-based-management-policy"></a>匯出原則式管理原則
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85760526"
   
 -   **若要使用下列項目來匯出原則：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
@@ -48,13 +49,13 @@ ms.locfileid: "85760526"
   
 2.  按一下加號展開 **[管理]** 資料夾。  
   
-3.  按一下加號展開 **[原則管理]** 。  
+3.  按一下加號展開 **[原則管理]**。  
   
 4.  按一下加號展開 **[原則]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您想要匯出的原則，然後選取 [匯出原則]  。  
+5.  以滑鼠右鍵按一下您想要匯出的原則，然後選取 [匯出原則]****。  
   
 6.  在 **[匯出原則]** 對話方塊的位址列中，輸入檔案的路徑和名稱。 或者，在對話方塊的導覽窗格中尋找適當的檔案位置，然後在 **[檔案名稱]** 方塊中輸入 XML 檔案的名稱。  
   
-7.  完成時，按一下 [儲存]  。  
+7.  完成時，按一下 [儲存]。  
 

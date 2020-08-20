@@ -1,5 +1,6 @@
 ---
-title: sys. dm_db_wait_stats （Azure SQL Database） |Microsoft Docs
+description: sys.dm_db_wait_stats (Azure SQL Database)
+title: sys. dm_db_wait_stats (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.service: sql-database
@@ -19,12 +20,12 @@ ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 7b770e22ccf2da14d0ad88d6f93725ef93410c84
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c8932754b69fab7086f0eb6a98d979e93669daff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85677581"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493744"
 ---
 # <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -62,7 +63,7 @@ ms.locfileid: "85677581"
 ## <a name="permissions"></a>權限  
  需要伺服器的 VIEW DATABASE STATE 權限。  
   
-##  <a name="types-of-waits"></a><a name="WaitTypes"></a>等候的類型  
+##  <a name="types-of-waits"></a><a name="WaitTypes"></a> 等候類型  
  資源等候  
  當工作者要求存取無法使用的資源時 (因為該資源正被另一個工作者使用中，因此還不能使用)，會發生資源等候的情形。 鎖定、閂鎖、網路和磁碟 I/O 等候，都是資源等候的範例。 鎖定和閂鎖等候是對同步處理物件的等候。  
   
@@ -74,7 +75,7 @@ ms.locfileid: "85677581"
   
  雖然執行緒已經不在等候中，執行緒也不必立即開始執行。 因為這類執行緒會先置於可執行之工作者的佇列上，而且必須等候排程器執行某個配量才行。  
   
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 等候時間計數器中是**Bigint**值，因此不容易在舊版中做為對等計數器的計數器變換 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 等候時間計數器中是 **Bigint** 值，因此在舊版的中，並不像計數器變換一樣容易成為相等的計數器 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  下表列出工作會遇到的等候類型。  
   
@@ -192,27 +193,27 @@ ms.locfileid: "85677581"
 |LATCH_SH |在等候 SH (共用) 閂鎖時發生。 其中不包括緩衝區閂鎖或交易標示閂鎖。 sys.dm_os_latch_stats 中提供 LATCH_* 等候的清單。 請注意，sys.dm_os_latch_stats 會將 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 和 LATCH_DT 等候分組在一起。|  
 |LATCH_UP |在等候 UP (更新) 閂鎖時發生。 其中不包括緩衝區閂鎖或交易標示閂鎖。 sys.dm_os_latch_stats 中提供 LATCH_* 等候的清單。 請注意，sys.dm_os_latch_stats 會將 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 和 LATCH_DT 等候分組在一起。|  
 |LAZYWRITER_SLEEP |在延遲寫入器工作暫止時發生。 這是等候中的背景工作所花的時間。 如果您要尋找使用者拋錨點，就不要考慮這個狀態。|  
-|LCK_M_BU |當工作在等候取得大量更新 (BU) 鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_IS|當工作在等候取得意圖共用 (IS) 鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_IU|當工作在等候取得意圖更新 (IU) 鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_IX |當工作在等候取得意圖獨佔 (IX) 鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_RIn_NL |當工作在等候取得目前索引鍵值的 NULL 鎖定，以及目前索引鍵和前一個索引鍵之間的插入範圍鎖定時發生。 索引鍵的 NULL 鎖定是一個立即釋放鎖定。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_RIn_S |當工作在等候取得目前索引鍵值的共用鎖定，以及目前索引鍵和前一個索引鍵之間的插入範圍鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_RIn_U |工作在等候取得目前索引鍵值的更新鎖定，以及目前索引鍵和前一個索引鍵之間的插入範圍鎖定。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_RIn_X |當工作在等候取得目前索引鍵值的獨佔鎖定，以及目前索引鍵和前一個索引鍵之間的插入範圍鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_RS_S |當工作在等候取得目前索引鍵值的共用鎖定，以及目前索引鍵和前一個索引鍵之間的共用範圍鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_RS_U |當工作在等候取得目前索引鍵值的更新鎖定，以及目前索引鍵和前一個索引鍵之間的更新範圍鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_RX_S |當工作在等候取得目前索引鍵值的共用鎖定，以及目前索引鍵和前一個索引鍵之間的獨佔範圍鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_RX_U |當工作在等候取得目前索引鍵值的更新鎖定，以及目前索引鍵和前一個索引鍵之間的獨佔範圍鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_RX_X |當工作在等候取得目前索引鍵值的獨佔鎖定，以及目前索引鍵和前一個索引鍵之間的獨佔範圍鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_S |當工作在等候取得共用鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_SCH_M |當工作在等候取得結構描述修改鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_SCH_S |當工作在等候取得結構描述共用鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_SIU |當工作在等候取得共用意圖更新鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_SIX |當工作在等候取得共用意圖獨佔鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_U |當工作在等候取得更新鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_UIX |當工作在等候取得更新意圖獨佔鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
-|LCK_M_X |當工作在等候取得獨佔鎖定時發生。 如需鎖定相容性矩陣，請參閱[dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_BU |當工作在等候取得大量更新 (BU) 鎖定時發生。 如需鎖定相容性矩陣，請參閱 [sys. dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_IS|當工作在等候取得意圖共用 (IS) 鎖定時發生。 如需鎖定相容性矩陣，請參閱 [sys. dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_IU|當工作在等候取得意圖更新 (IU) 鎖定時發生。 如需鎖定相容性矩陣，請參閱 [sys. dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_IX |當工作在等候取得意圖獨佔 (IX) 鎖定時發生。 如需鎖定相容性矩陣，請參閱 [sys. dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_RIn_NL |當工作在等候取得目前索引鍵值的 NULL 鎖定，以及目前索引鍵和前一個索引鍵之間的插入範圍鎖定時發生。 索引鍵的 NULL 鎖定是一個立即釋放鎖定。 如需鎖定相容性矩陣，請參閱 [sys. dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_RIn_S |當工作在等候取得目前索引鍵值的共用鎖定，以及目前索引鍵和前一個索引鍵之間的插入範圍鎖定時發生。 如需鎖定相容性矩陣，請參閱 [sys. dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_RIn_U |工作在等候取得目前索引鍵值的更新鎖定，以及目前索引鍵和前一個索引鍵之間的插入範圍鎖定。 如需鎖定相容性矩陣，請參閱 [sys. dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_RIn_X |當工作在等候取得目前索引鍵值的獨佔鎖定，以及目前索引鍵和前一個索引鍵之間的插入範圍鎖定時發生。 如需鎖定相容性矩陣，請參閱 [sys. dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_RS_S |當工作在等候取得目前索引鍵值的共用鎖定，以及目前索引鍵和前一個索引鍵之間的共用範圍鎖定時發生。 如需鎖定相容性矩陣，請參閱 [sys. dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_RS_U |當工作在等候取得目前索引鍵值的更新鎖定，以及目前索引鍵和前一個索引鍵之間的更新範圍鎖定時發生。 如需鎖定相容性矩陣，請參閱 [sys. dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_RX_S |當工作在等候取得目前索引鍵值的共用鎖定，以及目前索引鍵和前一個索引鍵之間的獨佔範圍鎖定時發生。 如需鎖定相容性矩陣，請參閱 [sys. dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_RX_U |當工作在等候取得目前索引鍵值的更新鎖定，以及目前索引鍵和前一個索引鍵之間的獨佔範圍鎖定時發生。 如需鎖定相容性矩陣，請參閱 [sys. dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_RX_X |當工作在等候取得目前索引鍵值的獨佔鎖定，以及目前索引鍵和前一個索引鍵之間的獨佔範圍鎖定時發生。 如需鎖定相容性矩陣，請參閱 [sys. dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_S |當工作在等候取得共用鎖定時發生。 如需鎖定相容性矩陣，請參閱 [sys. dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_SCH_M |當工作在等候取得結構描述修改鎖定時發生。 如需鎖定相容性矩陣，請參閱 [sys. dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_SCH_S |當工作在等候取得結構描述共用鎖定時發生。 如需鎖定相容性矩陣，請參閱 [sys. dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_SIU |當工作在等候取得共用意圖更新鎖定時發生。 如需鎖定相容性矩陣，請參閱 [sys. dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_SIX |當工作在等候取得共用意圖獨佔鎖定時發生。 如需鎖定相容性矩陣，請參閱 [sys. dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_U |當工作在等候取得更新鎖定時發生。 如需鎖定相容性矩陣，請參閱 [sys. dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_UIX |當工作在等候取得更新意圖獨佔鎖定時發生。 如需鎖定相容性矩陣，請參閱 [sys. dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
+|LCK_M_X |當工作在等候取得獨佔鎖定時發生。 如需鎖定相容性矩陣，請參閱 [sys. dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
 |LOG_RATE_GOVERNOR|發生在資料庫正在等待配額寫入記錄中時。|  
 |LOGBUFFER |當工作在等候記錄緩衝區的空間來儲存記錄時發生。 如果這個值一直居高不下，可能表示記錄裝置趕不上伺服器產生的記錄量。|  
 |LOGGENERATION|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -250,17 +251,17 @@ ms.locfileid: "85677581"
 |PREEMPTIVE_CLOSEBACKUPVDIDEVICE|當 SQLOS 排程器切換到先佔式模式，以便關閉虛擬備份裝置時發生。|  
 |PREEMPTIVE_CLUSAPI_CLUSTERRESOURCECONTROL|當 SQLOS 排程器切換到先佔式模式，以便執行 Windows 容錯移轉叢集作業時發生。|  
 |PREEMPTIVE_COM_COCREATEINSTANCE|當 SQLOS 排程器切換到先佔式模式，以便建立 COM 物件時發生。|  
-|PREEMPTIVE_HADR_LEASE_MECHANISM|適用于 CSS 診斷的 Always On 可用性群組租用管理員排程。|  
+|PREEMPTIVE_HADR_LEASE_MECHANISM|CSS 診斷的 Always On 可用性群組租用管理員排程。|  
 |PREEMPTIVE_SOSTESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_STRESSDRIVER|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_TESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_XETESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PRINT_ROLLBACK_PROGRESS|用於使用者處理序在已經使用 ALTER DATABASE 終止子句加以轉換的資料庫中結束時等候。 如需詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。|  
 |PWAIT_HADR_CHANGE_NOTIFIER_TERMINATION_SYNC|在背景工作正在等候接收 (經由輪詢) Windows Server 容錯移轉叢集通知的背景工作終止時發生。  僅供內部使用。|  
-|PWAIT_HADR_CLUSTER_INTEGRATION|[附加]、[取代] 和/或 [移除] 作業正在等候抓取 Always On 內部清單（例如網路、網路位址或可用性群組接聽程式的清單）的寫入鎖定。  僅供內部使用。|  
-|PWAIT_HADR_OFFLINE_COMPLETED|Always On drop 可用性群組作業正在等候目標可用性群組離線，然後再終結 Windows Server 容錯移轉叢集物件。|  
+|PWAIT_HADR_CLUSTER_INTEGRATION|附加、取代和/或移除作業正在等候抓取 Always On 內部清單的寫入鎖定 (例如網路、網路位址或可用性群組接聽程式) 的清單。  僅供內部使用。|  
+|PWAIT_HADR_OFFLINE_COMPLETED|Always On 卸載可用性群組作業正在等候目標可用性群組離線，再終結 Windows Server 容錯移轉叢集物件。|  
 |PWAIT_HADR_ONLINE_COMPLETED|Always On 建立或容錯移轉可用性群組作業正在等候目標可用性群組上線。|  
-|PWAIT_HADR_POST_ONLINE_COMPLETED|Always On drop 可用性群組作業正在等候先前命令中排程的任何背景工作終止。 例如，可能會存在將可用性資料庫轉換成主要角色的背景工作。 DROP AVAILABILITY GROUP DDL 必須等候此背景工作終止，才能避免競爭情形。|  
+|PWAIT_HADR_POST_ONLINE_COMPLETED|Always On 卸載可用性群組作業正在等候已排程為先前命令之一部分的任何背景工作終止。 例如，可能會存在將可用性資料庫轉換成主要角色的背景工作。 DROP AVAILABILITY GROUP DDL 必須等候此背景工作終止，才能避免競爭情形。|  
 |PWAIT_HADR_WORKITEM_COMPLETED|等候非同步工作完成之執行緒的內部等候。 這是預期的等候，而且可供 CSS 使用。|  
 |PWAIT_MD_LOGIN_STATS|在登入統計資料的中繼資料中執行內部同步處理期間發生。|  
 |PWAIT_MD_RELATION_CACHE|在資料表或索引的中繼資料中執行內部同步處理期間發生。|  

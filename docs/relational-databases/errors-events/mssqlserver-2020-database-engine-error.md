@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_2020
 title: MSSQLSERVER_2020 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4a8bf90f-a083-4c53-84f0-d23c711c8081
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 60736413f572f997bdad1e10eb1fdf79b612aa48
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d38c7fad5e12e68fbf36a4cea6805ff514101ba5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893067"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491445"
 ---
 # <a name="mssqlserver_2020"></a>MSSQLSERVER_2020
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

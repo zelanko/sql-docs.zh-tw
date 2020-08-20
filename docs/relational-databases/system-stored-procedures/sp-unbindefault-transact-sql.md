@@ -1,5 +1,6 @@
 ---
-title: sp_unbindefault （Transact-sql） |Microsoft Docs
+description: sp_unbindefault (Transact-SQL)
+title: sp_unbindefault (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d8ca77607b6b83f437792800060c368db91ae3bf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2a78e7ac859e4750f543befd2e574214dae35386
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891408"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492975"
 ---
 # <a name="sp_unbindefault-transact-sql"></a>sp_unbindefault (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85891408"
   將預設值和資料行或目前資料庫中之別名資料類型解除繫結，或移除其預設值。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]我們建議您改為使用[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)或[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)語句中的 default 關鍵字來建立預設定義。  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] 我們建議您改為使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 或 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 語句中的 default 關鍵字來建立預設定義。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,20 +44,20 @@ sp_unbindefault [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @objname = ] 'object_name'`這是要解除系結之預設值所在的資料表和資料行或別名資料類型的名稱。 *object_name*是**Nvarchar （776）**，沒有預設值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會試圖先將兩部分識別碼解析成資料行名稱，再解析成別名資料類型。  
+`[ @objname = ] 'object_name'` 這是要解除系結之預設值的資料表和資料行名稱，或是別名資料類型。 *object_name* 是 **Nvarchar (776) **，沒有預設值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會試圖先將兩部分識別碼解析成資料行名稱，再解析成別名資料類型。  
   
  當您將預設值和別名資料類型解除繫結時，也會解除繫結這個資料類型有相同預設值的任何資料行。 直接繫結預設值之資料類型的資料行不受影響。  
   
 > [!NOTE]  
->  *object_name*可以包含方括弧 **[]** 做為分隔識別碼字元。 如需詳細資訊，請參閱＜ [Database Identifiers](../../relational-databases/databases/database-identifiers.md)＞。  
+>  *object_name* 可以包含方括弧 **[]** 做為分隔的識別碼字元。 如需詳細資訊，請參閱＜ [Database Identifiers](../../relational-databases/databases/database-identifiers.md)＞。  
   
-`[ @futureonly = ] 'futureonly_flag'`只有在解除系結別名資料類型的預設值時，才會使用。 *futureonly_flag*是**Varchar （15）**，預設值是 Null。 當*futureonly_flag* **futureonly**時，資料類型的現有資料行不會失去指定的預設值。  
+`[ @futureonly = ] 'futureonly_flag'` 只有解除系結別名資料類型的預設值時才會使用。 *futureonly_flag* 是 **Varchar (15) **，預設值是 Null。 當 *futureonly_flag* 為 **futureonly**時，資料類型的現有資料行就不會遺失指定的預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="remarks"></a>備註  
- 若要顯示預設的文字，請執行**sp_helptext** ，並以預設的名稱做為參數。  
+ 若要顯示預設值的文字，請執行 **sp_helptext** ，並以預設名稱做為參數。  
   
 ## <a name="permissions"></a>權限  
  將預設值和資料表資料行解除繫結，需要資料表的 ALTER 權限。 將預設值和別名資料類型解除繫結，需要類型的 CONTROL 權限，或類型所屬結構描述的 ALTER 權限。  
@@ -85,7 +86,7 @@ EXEC sp_unbindefault 'ssn', 'futureonly';
 ```  
   
 ### <a name="d-using-delimited-identifiers"></a>D. 使用分隔識別碼  
- 下列範例會示範如何在*object_name*參數中使用分隔識別碼。  
+ 下列範例示範如何在 *object_name* 參數中使用分隔識別碼。  
   
 ```  
 CREATE TABLE [t.3] (c1 int); -- Notice the period as part of the table   
@@ -100,8 +101,8 @@ EXEC sp_unbindefault '[t.3].c1';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的資料庫引擎預存程式 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [DROP DEFAULT &#40;Transact-sql&#41;](../../t-sql/statements/drop-default-transact-sql.md)   
  [sp_bindefault &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   

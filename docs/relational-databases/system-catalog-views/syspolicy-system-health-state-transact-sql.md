@@ -1,5 +1,6 @@
 ---
-title: syspolicy_system_health_state （Transact-sql） |Microsoft Docs
+description: syspolicy_system_health_state (Transact-SQL)
+title: syspolicy_system_health_state (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 00815106-9fe4-481d-a9e1-a256101887f4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 500688f04715513bd0fe3849b095296e59bab747
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 66a99f117b9c6d8de7a92d328da812869a594f73
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900550"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493756"
 ---
 # <a name="syspolicy_system_health_state-transact-sql"></a>syspolicy_system_health_state (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85900550"
 |health_state_id|**bigint**|原則健全狀態記錄的識別碼。|  
 |policy_id|**int**|原則的識別碼。|  
 |last_run_date|**datetime**|上次執行此原則的日期和時間。|  
-|target_query_expression_with_id|**Nvarchar （400）**|目標運算式 (具有指派給識別變數的值)，可針對評估的原則定義目標。|  
+|target_query_expression_with_id|**Nvarchar (400) **|目標運算式 (具有指派給識別變數的值)，可針對評估的原則定義目標。|  
 |target_query_expression|**nvarchar(max)**|運算式，可針對評估的原則定義目標。|  
 |result|**bit**|這個目標與此原則有關的健全狀態：<br /><br /> 0 = 失敗<br /><br /> 1 = 成功|  
   

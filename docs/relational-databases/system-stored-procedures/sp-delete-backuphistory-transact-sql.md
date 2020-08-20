@@ -1,5 +1,6 @@
 ---
-title: sp_delete_backuphistory （Transact-sql） |Microsoft Docs
+description: sp_delete_backuphistory (Transact-SQL)
+title: sp_delete_backuphistory (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,20 +18,20 @@ helpviewer_keywords:
 ms.assetid: bdb56834-616e-47e4-b942-e895d2325e97
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 172d50a126ff0c12d55e9566e5bb7b9213c38fe8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: be5b2d16d3a6131d6c579a7f4f3c422ac003da73
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85865024"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493367"
 ---
 # <a name="sp_delete_backuphistory-transact-sql"></a>sp_delete_backuphistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  刪除指定日期之前備份組的項目，以縮減備份和還原記錄資料表的大小。 在執行每個備份或還原作業之後，會在備份和還原記錄資料表中加入其他資料列;因此，我們建議您定期執行**sp_delete_backuphistory**。  
+  刪除指定日期之前備份組的項目，以縮減備份和還原記錄資料表的大小。 在每次執行備份或還原作業之後，會將其他資料列新增至備份和還原記錄資料表;因此，我們建議您定期執行 **sp_delete_backuphistory**。  
   
 > [!NOTE]  
->  「備份」和「還原記錄」資料表位於**msdb**資料庫中。  
+>  備份和還原記錄資料表位於 **msdb** 資料庫中。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +43,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @oldest_date = ] 'oldest\_date'`這是備份和還原記錄資料表中所保留的最舊日期。 *oldest_date*為**datetime**，沒有預設值。  
+`[ @oldest_date = ] 'oldest\_date'` 這是備份和還原記錄資料表中所保留的最舊日期。 *oldest_date* 為 **datetime**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -51,7 +52,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
  None  
   
 ## <a name="remarks"></a>備註  
- **sp_delete_backuphistory**必須從**msdb**資料庫中執行，而且會影響下列資料表：  
+ **sp_delete_backuphistory** 必須從 **msdb** 資料庫執行，而且會影響下表：  
   
 -   [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)  
   
@@ -72,7 +73,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
  實體備份檔案會保留下來，即使所有記錄都遭刪除也一樣。  
   
 ## <a name="permissions"></a>權限  
- 需要**系統管理員（sysadmin** ）固定伺服器角色中的成員資格，但許可權可以授與其他使用者。  
+ 需要 **系統管理員（sysadmin** ）固定伺服器角色中的成員資格，但許可權可授與給其他使用者。  
   
 ## <a name="examples"></a>範例  
  下列範例會刪除備份和還原記錄資料表中， 在 2010 年 1 月 14 日 12:00 A.M. 之前的所有項目。  

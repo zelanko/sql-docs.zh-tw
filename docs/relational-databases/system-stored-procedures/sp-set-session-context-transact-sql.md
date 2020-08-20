@@ -1,5 +1,6 @@
 ---
-title: sp_set_session_coNtext （Transact-sql） |Microsoft Docs
+description: 'sp_set_session_coNtext (Transact-sql) '
+title: sp_set_session_coNtext (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/14/2019
 ms.prod: sql
@@ -18,17 +19,17 @@ ms.assetid: 7a3a3b2a-1408-4767-a376-c690e3c1fc5b
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 11a3bae7cc6cbf025370a947c8fa3194f978d419
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 7f1aff8d7d8496604983c54099f818e98fffbf18
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394501"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493049"
 ---
-# <a name="sp_set_session_context-transact-sql"></a>sp_set_session_coNtext （Transact-sql）
+# <a name="sp_set_session_context-transact-sql"></a>sp_set_session_coNtext (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-在會話內容中設定索引鍵/值組。  
+在會話內容中設定機碼值組。  
   
 
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -43,33 +44,33 @@ sp_set_session_context [ @key= ] N'key', [ @value= ] 'value'
   
 ## <a name="arguments"></a>引數  
  [ @key =] N'key '  
- 要設定的索引鍵，屬於**sysname**類型。 金鑰大小上限為128個位元組。  
+ 要設定的索引鍵，屬於 **sysname**型別。 金鑰大小上限為128個位元組。  
   
- [ @value =] ' 值 '  
- 指定之索引鍵的值，其類型為**SQL_variant**。 將值設為 Null 會釋出記憶體。 大小上限是 8,000 位元組。  
+ [ @value =] ' value '  
+ 指定之索引鍵的值，其類型為 **SQL_variant**。 將值設定為 Null 會釋出記憶體。 大小上限是 8,000 位元組。  
   
  [ @read_only =] {0 | 1}  
- **Bit**類型的旗標。 如果是1，則無法在此邏輯連接上再次變更指定之索引鍵的值。 如果為0（預設值），則可以變更此值。  
+ **Bit**類型的旗標。 如果是1，則無法在此邏輯連接上再次變更指定之索引鍵的值。 如果 0 (預設) ，則可以變更值。  
   
 ## <a name="permissions"></a>權限  
- 任何使用者都可以設定其會話的會話內容。  
+ 任何使用者都可以設定會話的會話內容。  
   
 ## <a name="remarks"></a>備註  
- 和其他預存程式一樣，只有常值和變數（非運算式或函式呼叫）可以當做參數來傳遞。  
+ 就像其他預存程式一樣， (不是運算式或函式呼叫的常值和變數) 可作為參數傳遞。  
   
- 會話內容的總大小限制為 1 MB。 如果您設定的值會導致超過此限制，則語句會失敗。 您可以監視 sys.databases 中的整體記憶體使用量[dm_os_memory_objects &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)。  
+ 會話內容的總大小限制為 1 MB。 如果您設定的值會導致超過此限制，則語句會失敗。 您可以在 [sys. dm_os_memory_objects 中監視 &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)的整體記憶體使用量。  
   
- 您可以藉由查詢[sys.databases dm_os_memory_cache_counters &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md)監視整體記憶體使用量，如下所示：`SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
+ 您可以藉由查詢 [sys. dm_os_memory_cache_counters &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) 來監視整體記憶體使用量，如下所示： `SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
   
 ## <a name="examples"></a>範例  
- 下列範例顯示如何設定，然後傳回名為 language 且值為英文的會話內容索引鍵。  
+ 下列範例示範如何設定，然後傳回名為 language 且值為英文的會話內容金鑰。  
   
 ```  
 EXEC sys.sp_set_session_context @key = N'language', @value = 'English';  
 SELECT SESSION_CONTEXT(N'language');  
 ```  
   
- 下列範例示範選擇性唯讀旗標的用法。  
+ 下列範例示範如何使用選擇性的唯讀旗標。  
   
 ```  
 EXEC sys.sp_set_session_context @key = N'user_id', @value = 4, @read_only = 1;  

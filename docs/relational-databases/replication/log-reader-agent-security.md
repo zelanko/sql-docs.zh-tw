@@ -1,4 +1,5 @@
 ---
+description: 記錄讀取器代理程式安全性
 title: 記錄讀取器代理程式安全性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ ms.assetid: d6981e74-ddb8-41b8-9ea1-56c2ece63b8a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 33d63d25aa2b20959a4b36f63ba2a7f518c0230a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 19bd3e83dbac4222dcdb476c5d952c0773a623e9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760456"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493961"
 ---
 # <a name="log-reader-agent-security"></a>記錄讀取器代理程式安全性
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

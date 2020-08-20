@@ -1,4 +1,5 @@
 ---
+description: SQLFreeEnv 函式
 title: SQLFreeEnv 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,22 +20,22 @@ helpviewer_keywords:
 ms.assetid: 32000150-e120-445e-b269-43200f813b2a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e6f036c6feca31985afdddddb63df683f6c0daae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 853184b9f9cb298a9942190e96053469eafaa67b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285798"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491291"
 ---
 # <a name="sqlfreeenv-function"></a>SQLFreeEnv 函式
-**標準**  
+**一致性**  
  引進的版本： ODBC 1.0 標準合規性：已淘汰  
   
- **摘要**  
- 在 ODBC 3.x*中，odbc*2.0 函數**SQLFreeEnv**已由**SQLFreeHandle**取代。 如需詳細資訊，請參閱[SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)。  
+ **總結**  
+ 在 ODBC 3.x *中，odbc*2.0 函數 **SQLFreeEnv** 已被 **SQLFreeHandle**取代。 如需詳細資訊，請參閱 [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)。  
   
 > [!NOTE]
->  如需 ODBC 2.x 應用程式*使用 odbc 3.x* *驅動程式時*，驅動程式管理員將此函式對應至哪個功能的詳細資訊，請參閱附錄 G：驅動程式方針中的對應已被[取代](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)的函式，以取得回溯相容性。  
+>  如需當 ODBC 2.x 應用程式*與 odbc 3.x* *驅動程式搭配*使用時，驅動程式管理員會將此函式對應至的詳細資訊，請參閱附錄 G：驅動程式指導方針中的[對應已淘汰](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)函式以提供回溯相容性。  
   
 ## <a name="see-also"></a>另請參閱  
  [ODBC API 參考](../../../odbc/reference/syntax/odbc-api-reference.md)   

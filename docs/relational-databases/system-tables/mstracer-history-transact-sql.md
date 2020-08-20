@@ -1,5 +1,6 @@
 ---
-title: MStracer_history （Transact-sql） |Microsoft Docs
+description: MStracer_history (Transact-SQL)
+title: MStracer_history (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 97237a0c-d574-4b17-8a94-1a8730b31d98
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8c9f554d57935921c068ad25cb51991c47cdbd2a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cc21b23e670c13de44fbbb6485bc1d977a23d79f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881476"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492692"
 ---
 # <a name="mstracer_history-transact-sql"></a>MStracer_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MStracer_history**表會維護在訂閱者端收到的所有追蹤 token 的記錄。 這份資料表儲存在散發資料庫中，並且由複寫用來監視效能之用。  
+  **MStracer_history**資料表會維護所有已在訂閱者端接收的追蹤 token 記錄。 這份資料表儲存在散發資料庫中，並且由複寫用來監視效能之用。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
