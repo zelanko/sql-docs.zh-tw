@@ -1,4 +1,5 @@
 ---
+description: RESTORE 陳述式 - HEADERONLY (Transact-SQL)
 title: RESTORE HEADERONLY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2018
@@ -23,12 +24,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: d44a81dbe1b010ff4f42363062aafeb7e5571021
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: f4411388de1c2a621665a65aacddc188a3a9f2ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279504"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478747"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE 陳述式 - HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]

@@ -1,4 +1,5 @@
 ---
+description: DROP APPLICATION ROLE (Transact-SQL)
 title: DROP APPLICATION ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 44121ee7-ef40-405d-b03b-f8ddb4e3c559
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7e301c2fdca2a6c5646ddd61241c2879970c1bf9
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 4274c8a7689dacd251c872b3066b4422c4c90d80
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484739"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478911"
 ---
 # <a name="drop-application-role-transact-sql"></a>DROP APPLICATION ROLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

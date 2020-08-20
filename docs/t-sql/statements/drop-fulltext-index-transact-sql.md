@@ -1,4 +1,5 @@
 ---
+description: DROP FULLTEXT INDEX (Transact-SQL)
 title: DROP FULLTEXT INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 7443a4ab-1d43-4a22-bbba-a07f620892cb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9e421f99d3ba6542ed0cd30e4f821d5ac5a48f9f
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 111b04595ee418b277b5284452787fe1307a233b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483989"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478827"
 ---
 # <a name="drop-fulltext-index-transact-sql"></a>DROP FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

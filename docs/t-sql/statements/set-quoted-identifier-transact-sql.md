@@ -1,4 +1,5 @@
 ---
+description: SET QUOTED_IDENTIFIER (Transact-SQL)
 title: SET QUOTED_IDENTIFIER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/21/2019
@@ -25,12 +26,12 @@ ms.assetid: 10f66b71-9241-4a3a-9292-455ae7252565
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8933c07f0cfcc70131738ba2936b4262fb7ae249
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f216887909893d91384fa91479820588dfdae1a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002435"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478697"
 ---
 # <a name="set-quoted_identifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
 
@@ -53,6 +54,8 @@ SET QUOTED_IDENTIFIER { ON | OFF }
 
 SET QUOTED_IDENTIFIER ON
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="remarks"></a>備註
 當 `SET QUOTED_IDENTIFIER` 為 ON (預設值) 時，識別碼可由雙引號分隔 (" ")，且常值必須由單引號分隔 (' ')。 用雙引號來分隔的所有字串都會解譯為物件識別碼。 因此，附加引號的識別碼不需要遵照 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的識別碼規則。 它們可以是保留關鍵字，也可以包括 [!INCLUDE[tsql](../../includes/tsql-md.md)] 識別碼通常不接受的字元。 文字字串運算式不能用雙引號來分隔；您必須用單引號來括住文字字串。 如果單引號 (') 是常值字串的一部分，則可以用兩個單引號 (") 來代表。 當資料庫中的物件名稱使用保留關鍵字時，`SET QUOTED_IDENTIFIER` 必須為 ON。

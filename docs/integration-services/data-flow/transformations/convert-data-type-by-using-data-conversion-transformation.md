@@ -1,4 +1,5 @@
 ---
+description: 使用資料轉換來轉換資料類型
 title: 使用資料轉換來轉換資料類型 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9cb9eeaab778b314d8084ec739a1364d40e19c3b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 55585698aaeddc5147455bda61b14eac695071fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920627"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477738"
 ---
 # <a name="convert-data-type-with-data-conversion-transformation"></a>使用資料轉換來轉換資料類型
 
@@ -40,7 +41,7 @@ ms.locfileid: "86920627"
   
 5.  按兩下 [資料轉換]。  
   
-6.  在 [資料轉換編輯器]  對話方塊中，於 [可用的輸入資料行]  資料表中，選取您要轉換其資料類型之資料行旁邊的核取方塊。  
+6.  在 [資料轉換編輯器]**** 對話方塊中，於 [可用的輸入資料行]**** 資料表中，選取您要轉換其資料類型之資料行旁邊的核取方塊。  
   
     > [!NOTE]  
     >  您可以對輸入資料行套用多個資料轉換。  
@@ -49,7 +50,7 @@ ms.locfileid: "86920627"
   
 8.  在 **[資料類型]** 清單中，選取資料行的新資料類型。 預設資料類型是輸入資料行的資料類型。  
   
-9. (選擇性) 視所選取資料類型而定，更新 **[長度]** 、 **[有效位數]** 、 **[小數位數]** 及 **[字碼頁]** 資料行中的值。  
+9. (選擇性) 視所選取資料類型而定，更新 **[長度]**、 **[有效位數]**、 **[小數位數]** 及 **[字碼頁]** 資料行中的值。  
   
 10. 若要設定錯誤輸出，請按一下 **[設定錯誤輸出]** 。 如需詳細資訊，請參閱 [偵錯資料流程](../../../integration-services/troubleshooting/debugging-data-flow.md)。  
   

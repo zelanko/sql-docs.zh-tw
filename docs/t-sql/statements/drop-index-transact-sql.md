@@ -1,4 +1,5 @@
 ---
+description: DROP INDEX (Transact-SQL)
 title: DROP INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
@@ -32,12 +33,12 @@ ms.assetid: 2b1464c8-934c-405f-8ef7-2949346b5372
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6f35c835eb8165bf0c9985a2bea322f8f30d64b6
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 231684d3b0db7b6175c6865452ae3fb2551595d4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483835"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478866"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -273,7 +274,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 ### <a name="a-dropping-an-index"></a>A. 卸除一個索引  
  下列範例會刪除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `ProductVendor` 資料表的 `IX_ProductVendor_VendorID` 索引。  
   
-```  
+```sql  
 DROP INDEX IX_ProductVendor_BusinessEntityID   
     ON Purchasing.ProductVendor;  
 GO  
@@ -282,7 +283,7 @@ GO
 ### <a name="b-dropping-multiple-indexes"></a>B. 卸除多個索引  
  下列範例會在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的單一交易中刪除兩個索引。  
   
-```  
+```sql  
 DROP INDEX  
     IX_PurchaseOrderHeader_EmployeeID ON Purchasing.PurchaseOrderHeader,  
     IX_Address_StateProvinceID ON Person.Address;  
@@ -294,7 +295,7 @@ GO
   
 **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
-```  
+```sql  
 DROP INDEX AK_BillOfMaterials_ProductAssemblyID_ComponentID_StartDate   
     ON Production.BillOfMaterials WITH (ONLINE = ON, MAXDOP = 2);  
 GO  
@@ -305,7 +306,7 @@ GO
   
 **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
-```  
+```sql  
 --Create a clustered index on the PRIMARY filegroup if the index does not exist.  
 CREATE UNIQUE CLUSTERED INDEX  
     AK_BillOfMaterials_ProductAssemblyID_ComponentID_StartDate   
@@ -358,7 +359,7 @@ GO
   
  下列範例會卸除條件約束來刪除含 PRIMARY KEY 條件約束的叢集索引。 `ProductCostHistory` 資料表沒有 FOREIGN KEY 條件約束。 如果有的話，您必須先移除這些條件約束。  
   
-```  
+```sql  
 -- Set ONLINE = OFF to execute this example on editions other than Enterprise Edition.  
 ALTER TABLE Production.TransactionHistoryArchive  
 DROP CONSTRAINT PK_TransactionHistoryArchive_TransactionID  
@@ -368,7 +369,7 @@ WITH (ONLINE = ON);
 ### <a name="f-dropping-an-xml-index"></a>F. 卸除 XML 索引  
  下列範例會卸除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `ProductModel` 資料表的 XML 索引。  
   
-```  
+```sql  
 DROP INDEX PXML_ProductModel_CatalogDescription   
     ON Production.ProductModel;  
 ```  
@@ -378,7 +379,7 @@ DROP INDEX PXML_ProductModel_CatalogDescription
   
 **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
-```  
+```sql  
 DROP INDEX PK_MyClusteredIndex   
     ON dbo.MyTable   
     WITH (MOVE TO MyPartitionScheme,  

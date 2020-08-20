@@ -1,4 +1,5 @@
 ---
+description: Integration Services (SSIS) 連接
 title: Integration Services (SSIS) 連線 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 29ecedb74759b3290ff5fb391b95048aeaba5e8d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 07b2ffa19412e46b555c9ef8b77372f1b401ea57
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923152"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477928"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) 連接
 

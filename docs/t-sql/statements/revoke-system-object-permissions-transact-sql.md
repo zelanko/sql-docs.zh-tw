@@ -1,4 +1,5 @@
 ---
+description: REVOKE 系統物件權限 (Transact-SQL)
 title: REVOKE 系統物件權限 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 84983238-dd7d-45bd-99bb-52c9d8e96a87
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 16c9bf98a0210a172da9eed533f511128099a291
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 98a4987e056b8475216bfb4e99fa2fe81582f881
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483702"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478698"
 ---
 # <a name="revoke-system-object-permissions-transact-sql"></a>REVOKE 系統物件權限 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引數
- [**sys.** ] .  
+ [**sys.**] .  
  只有在參考目錄檢視和動態管理檢視時，才需要 **sys** 限定詞。  
   
  *system_object*  

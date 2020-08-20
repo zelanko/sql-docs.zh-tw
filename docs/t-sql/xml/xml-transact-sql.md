@@ -1,4 +1,5 @@
 ---
+description: xml (Transact-SQL)
 title: xml (Transact-SQL)
 ms.custom: ''
 ms.date: 07/26/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9198f671-8e61-4ca4-9c3a-859f84020e62
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b06e817cd649937b48c95fb6dc31e2ae38978c7a
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 15543b21a462d8ad01ddc3a1cc5ba82847ee3016
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393236"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478692"
 ---
 # <a name="xml-transact-sql"></a>xml (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

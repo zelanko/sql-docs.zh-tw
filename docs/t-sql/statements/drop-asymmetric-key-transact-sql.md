@@ -1,4 +1,5 @@
 ---
+description: DROP ASYMMETRIC KEY (Transact-SQL)
 title: DROP ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: bf94ac07-9b62-4318-b55b-1eed8f3a1ac6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9f0ab3341c71500c915b39bb69c28542751ed9b6
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 49260a78ef3012f022a6d523bc2cc1d7ea1b128f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484729"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478893"
 ---
 # <a name="drop-asymmetric-key-transact-sql"></a>DROP ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,4 +1,5 @@
 ---
+description: Web 服務工作
 title: Web 服務工作 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4db56206a629a4bf392ef56641564208ff1a9d3c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cecf1f8803b0180ef6127cde203659be26f3c6c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913810"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477900"
 ---
 # <a name="web-service-task"></a>Web 服務工作
 

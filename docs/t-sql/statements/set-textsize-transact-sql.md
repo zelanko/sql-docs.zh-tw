@@ -1,4 +1,5 @@
 ---
+description: SET TEXTSIZE (Transact-SQL)
 title: SET TEXTSIZE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/12/2016
@@ -24,20 +25,20 @@ ms.assetid: 787154a6-39a6-4dd6-a6d0-67b4364f95d5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0d2bc5f425655b7c1163648c1331c51efb0730c0
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 55de9c8c10e1827797d730736db6d0fe99704622
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484854"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478687"
 ---
 # <a name="set-textsize-transact-sql"></a>SET TEXTSIZE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  指定 SELECT 陳述式傳回的 **varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 、**text**、**ntext** 和 **image** 資料大小。  
+  指定 SELECT 陳述式傳回的 **varchar(max)**、**nvarchar(max)**、**varbinary(max)**、**text**、**ntext** 和 **image** 資料大小。  
   
 > [!IMPORTANT]
->   的未來版本將會移除 **ntext**、**text** 及 [!INCLUDE[msCoName](../../includes/msconame-md.md)]image[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。 請避免在新的開發工作中使用這些資料類型，並規劃修改目前在使用這些資料類型的應用程式。 請改用 **nvarchar(max)** 、 **varchar(max)** 和 **varbinary(max)** 。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未來版本將會移除 **ntext**、**text** 及 **image** 資料類型。 請避免在新的開發工作中使用這些資料類型，並規劃修改目前在使用這些資料類型的應用程式。 請改用 **nvarchar(max)**、 **varchar(max)** 和 **varbinary(max)** 。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,11 +52,11 @@ SET TEXTSIZE { number }
 
 ## <a name="arguments"></a>引數
  *number*  
- 是 **varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 、**text**、**ntext** 或 **image** 資料長度 (以位元組為單位)。 *number* 是整數，最大值為 2147483647 (2GB)。  值為 -1 表示沒有限制。 值為 0 時，會將大小重設為預設值 4KB。  
+ 是 **varchar(max)**、**nvarchar(max)**、**varbinary(max)**、**text**、**ntext** 或 **image** 資料長度 (以位元組為單位)。 *number* 是整數，最大值為 2147483647 (2GB)。  值為 -1 表示沒有限制。 值為 0 時，會將大小重設為預設值 4KB。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (10.0 及更高版本) 和 ODBC Driver for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在連線時自動指定 `-1` (無限制)。  
   
- **若是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 以前的版本：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式和適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者 (第 9 版) 在連線時會將 TEXTSIZE 設為 2147483647。  
+ **若是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 以前的版本：**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式和適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者 (第 9 版) 在連線時會將 TEXTSIZE 設為 2147483647。  
   
 ## <a name="remarks"></a>備註  
  設定 SET TEXTSIZE 會影響 @@TEXTSIZE 函式。  

@@ -1,4 +1,5 @@
 ---
+description: DROP PARTITION SCHEME (Transact-SQL)
 title: DROP PARTITION SCHEME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6efbc87c-1c92-4e43-96a7-e0f30f1db185
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 37d39425489c99853b57bbf1f41cb2bd460b62d8
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 5d8b2a228bbe2405c4cfb0738193bcd0d770c277
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484381"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478800"
 ---
 # <a name="drop-partition-scheme-transact-sql"></a>DROP PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]

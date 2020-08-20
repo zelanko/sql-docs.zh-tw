@@ -1,4 +1,5 @@
 ---
+description: REVOKE 對稱金鑰權限 (Transact-SQL)
 title: REVOKE 對稱金鑰權限 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 091da030-a768-4aa3-9509-cc23bd719cea
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e83d4ecebc9100112f27a813d38c587fe5bc35de
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: ac402c441a0640eb565e41697e89f6ab68a60df1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483760"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478682"
 ---
 # <a name="revoke-symmetric-key-permissions-transact-sql"></a>REVOKE 對稱金鑰權限 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,4 +1,5 @@
 ---
+description: 依據變更類型來導向 CDC 資料流
 title: 依據變更類型來導向 CDC 資料流 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3afa531e-f425-40a4-a1bf-1c3e1727287e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d0a8a8f712f25f452bbe5bcdd24470998e995ad0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fc9b1025bc4b3d4399203d12253a1aa9caa38883
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915924"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477882"
 ---
 # <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>依據變更類型來導向 CDC 資料流
 
@@ -52,7 +53,7 @@ ms.locfileid: "86915924"
   
      若要開啟 **[進階編輯器]** 對話方塊：  
   
-    -   在 **專案的** [資料流程] [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 畫面中，以滑鼠右鍵按一下 CDC 分隔器，然後選取 **[顯示進階編輯器]** 。  
+    -   在 **專案的** [資料流程] [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 畫面中，以滑鼠右鍵按一下 CDC 分隔器，然後選取 **[顯示進階編輯器]**。  
   
      如需有關使用 CDC 分隔器的詳細資訊，請參閱＜Microsoft SQL Server Integration Services 的 CDC 元件＞。  
   

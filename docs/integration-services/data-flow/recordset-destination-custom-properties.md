@@ -1,4 +1,5 @@
 ---
+description: 資料錄集目的地自訂屬性
 title: 資料錄集目的地自訂屬性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 1568ed6a-022c-4839-b73e-4eb49558bbc2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3cc9691c3ed3f894a5231e76870f8075d6d08f4b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2d8494479e14516ac9448498e8ec09301c6493aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916008"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477840"
 ---
 # <a name="recordset-destination-custom-properties"></a>資料錄集目的地自訂屬性
 

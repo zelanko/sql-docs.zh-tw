@@ -1,4 +1,5 @@
 ---
+description: '[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件的資料來源'
 title: 資料來源 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/27/2016
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 20bd12bf7d7fd516bfa660252c34964a4cf9bec7
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 6d622a00995ec8a371ef531994e4f18c61173a20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87523320"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477974"
 ---
 # <a name="data-sources-for-ssisnoversion-packages"></a>[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件的資料來源
 

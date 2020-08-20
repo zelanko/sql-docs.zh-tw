@@ -1,4 +1,5 @@
 ---
+description: DROP ASSEMBLY (Transact-SQL)
 title: DROP ASSEMBLY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/10/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 452d181a-a8e6-44a3-975d-29966d01b18d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 61dc0f3a7af65386d2568f5389674b6d781562e8
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 96c9142b0a6906606529807ab245c6a397c8b5aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484754"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478935"
 ---
 # <a name="drop-assembly-transact-sql"></a>DROP ASSEMBLY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +56,7 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
  *assembly_name*  
  這是您要卸除的組件名稱。  
   
- WITH NO DEPENDENTS  
+ WITH NO DEPENDENTS   
  如果指定的話，只會卸除 *assembly_name*，而不會卸除該組件參考的任何相依組件。 若未指定，DROP ASSEMBLY 就會卸除 *assembly_name* 和所有的相依組件。  
   
 ## <a name="remarks"></a>備註  

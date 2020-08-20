@@ -1,4 +1,5 @@
 ---
+description: 針對查閱轉換來建立及部署快取
 title: 針對查閱轉換來建立及部署快取 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d0f402739a63d4e11983c4ad1b50d0c2f337a9e1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0d212a870d0b66108cb1b905249fc8ba2a611a91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918847"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477737"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>針對查閱轉換來建立及部署快取
 

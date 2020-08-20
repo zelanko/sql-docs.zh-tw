@@ -1,4 +1,5 @@
 ---
+description: DROP DEFAULT (Transact-SQL)
 title: DROP DEFAULT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/10/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 976037fc77274b5b2fc6d43a4dc1a177ca6f73a9
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 1146be44b4ae2d02c1fcd94c4b0f2d53f52e55e9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485192"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478880"
 ---
 # <a name="drop-default-transact-sql"></a>DROP DEFAULT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

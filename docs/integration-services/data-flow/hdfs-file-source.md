@@ -1,4 +1,5 @@
 ---
+description: HDFS 檔案來源
 title: HDFS 檔案來源 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: f8cda200-c389-4a2e-8ee9-5d59b326aac1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3be6be9e43d6e9e643ea76c4d4a08cd5b370b343
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b015d1d62e42b5b453c273d899c387a222c3fe2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920257"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477800"
 ---
 # <a name="hdfs-file-source"></a>HDFS 檔案來源
 
@@ -31,7 +32,7 @@ ms.locfileid: "86920257"
  ![HDFS 檔案來源編輯器](../../integration-services/data-flow/media/hdfs-file-source.png "HDFS 檔案來源編輯器")  
   
 ## <a name="options"></a>選項。  
- 在 [Hadoop File Source Editor (Hadoop 檔案來源編輯器)] 對話方塊的 [一般] 索引標籤上，設定下列選項。  
+ 在 [Hadoop File Source Editor (Hadoop 檔案來源編輯器)]**** 對話方塊的 [一般]**** 索引標籤上，設定下列選項。  
   
 |欄位|描述|  
 |-----------|-----------------|  
@@ -41,7 +42,7 @@ ms.locfileid: "86920257"
 |**資料行分隔符號字元**|如果您選取文字格式，請指定資料行分隔符號字元。|  
 |**第一個資料列的資料行名稱**|如果您選取文字格式，請指定檔案中的第一個資料列是否包含資料行名稱。|  
   
- 設定這些選項之後，請選取 [資料行]  索引標籤，將資料流程中的來源資料行對應至目的地資料行。  
+ 設定這些選項之後，請選取 [資料行]**** 索引標籤，將資料流程中的來源資料行對應至目的地資料行。  
   
 ## <a name="see-also"></a>另請參閱  
  [Hadoop 連接管理員](../../integration-services/connection-manager/hadoop-connection-manager.md)   

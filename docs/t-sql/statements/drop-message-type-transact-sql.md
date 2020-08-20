@@ -1,4 +1,5 @@
 ---
+description: DROP MESSAGE TYPE (Transact-SQL)
 title: DROP MESSAGE TYPE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 805e8ad5-8a93-49f0-88e5-e6fca8814dd5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0f4bebe01b180c4ea1bc2fe8ee75711529d1df6f
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: b93b022ed1937b3923a44d5c13b62ff2038df958
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484666"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478821"
 ---
 # <a name="drop-message-type-transact-sql"></a>DROP MESSAGE TYPE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

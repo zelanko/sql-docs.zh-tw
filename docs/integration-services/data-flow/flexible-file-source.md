@@ -1,4 +1,5 @@
 ---
+description: 彈性檔案來源
 title: 彈性檔案來源 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
@@ -12,12 +13,12 @@ f1_keywords:
 - sql14.dts.designer.afpextfilesrc.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 996ee931207979b8741706673cdbf1ee02520613
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6e91be4a96d91117448def702a617d9e44acc70a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912344"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477812"
 ---
 # <a name="flexible-file-source"></a>彈性檔案來源
 
@@ -29,7 +30,7 @@ ms.locfileid: "86912344"
 - [Azure Blob 儲存體](https://azure.microsoft.com/services/storage/blobs/)
 - [Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction) \(部分機器翻譯\)
   
-若要查看適用於彈性檔案來源的編輯器，可在資料流程設計師上拖放 [彈性檔案來源]  ，然後按兩下以開啟編輯器。
+若要查看適用於彈性檔案來源的編輯器，可在資料流程設計師上拖放 [彈性檔案來源]****，然後按兩下以開啟編輯器。
   
 **彈性檔案來源**是 [SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) 的元件。  
   
@@ -54,7 +55,7 @@ ms.locfileid: "86912344"
 - **skipLineCount：** 表示從輸入檔讀取資料時會略過非空白資料列的數目。 如果同時指定 skipLineCount 和 firstRowAsHeader，則會先略過行，然後從輸入檔讀取標頭資訊。
 - **treatEmptyAsNull：** 指定從輸入檔讀取資料時是否將 Null 或空字串視為 Null 值。 **預設**值為 True。
 
-指定連線資訊後，請切換至 [資料行]  頁面，將來源資料行對應至 SSIS 資料流程的目的地資料行。
+指定連線資訊後，請切換至 [資料行]**** 頁面，將來源資料行對應至 SSIS 資料流程的目的地資料行。
 
 **服務主體權限設定的注意事項**
 

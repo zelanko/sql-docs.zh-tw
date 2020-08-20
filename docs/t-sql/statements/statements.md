@@ -1,4 +1,5 @@
 ---
+description: Transact-SQL 陳述式
 title: 陳述式 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/17/2020
@@ -13,12 +14,12 @@ ms.assetid: d8d6f62a-e815-425c-a80e-a63fd34ec275
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0fc44d29ca0b94f03fd94e89d5ba442f53fdf5da
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 0d357611c8db6f593223f388f532d4253e0dd6fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87392006"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478662"
 ---
 # <a name="transact-sql-statements"></a>Transact-SQL 陳述式
 

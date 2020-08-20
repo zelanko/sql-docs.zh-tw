@@ -1,4 +1,5 @@
 ---
+description: 條件式分割轉換
 title: 條件式分割轉換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb286721fac9e90a5e1d34bfb8a30ac9ac52032f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0e63cd4f6c045d00ef3835f2207d8d8001ff1b27
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923199"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477757"
 ---
 # <a name="conditional-split-transformation"></a>條件式分割轉換
 
@@ -79,7 +80,7 @@ ms.locfileid: "86923199"
 >  條件式分割轉換會將每個輸入資料列導向至單一輸出。 如果輸入多重條件，轉換會將每個資料列傳送到條件為 True 的第一個輸出，而略過該資料列後續的條件。 如果您需要連續評估數個條件，就可能需要在資料流程中串連多重條件式分割轉換。  
   
 ### <a name="options"></a>選項。  
- **Order**  
+ **順序**  
  選取資料列並使用右邊的方向鍵來變更評估運算式的順序。  
   
  **輸出名稱**  
@@ -90,7 +91,7 @@ ms.locfileid: "86923199"
   
  此屬性的值可以使用屬性運算式指定。  
   
- **相關主題：** [Integration Services &#40;SSIS&#41; 運算式](../../../integration-services/expressions/integration-services-ssis-expressions.md)、[運算子 &#40;SSIS 運算式&#41;](../../../integration-services/expressions/operators-ssis-expression.md)和[函數 &#40;SSIS 運算式&#41;](../../../integration-services/expressions/functions-ssis-expression.md)  
+ **相關主題︰**  [Integration Services &#40;SSIS&#41; 運算式](../../../integration-services/expressions/integration-services-ssis-expressions.md)[運算子 &#40;SSIS 運算式&#41;](../../../integration-services/expressions/operators-ssis-expression.md)和[函數 &#40;SSIS 運算式&#41;](../../../integration-services/expressions/functions-ssis-expression.md)  
   
  **預設輸出名稱**  
  輸入預設輸出的名稱，或使用預設值。  

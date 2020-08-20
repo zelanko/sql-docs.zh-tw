@@ -1,4 +1,5 @@
 ---
+description: 彈性檔案目的地
 title: 彈性檔案目的地 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
@@ -12,12 +13,12 @@ f1_keywords:
 - sql14.dts.designer.afpextfiledest.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9c5e53ba85af16c65161857d9f93c50e5105fa50
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 72bc4d08685f411cb07194234e37f20e5bdbaac4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914988"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477810"
 ---
 # <a name="flexible-file-destination"></a>彈性檔案目的地
 
@@ -30,7 +31,7 @@ ms.locfileid: "86914988"
 - [Azure Blob 儲存體](https://azure.microsoft.com/services/storage/blobs/)
 - [Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction) \(部分機器翻譯\)
    
-將 [彈性檔案目的地]  拖放到資料流程設計師，然後按兩下以查看編輯器。
+將 [彈性檔案目的地]**** 拖放到資料流程設計師，然後按兩下以查看編輯器。
   
 **彈性檔案目的地**是 [SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) 的元件。  
 

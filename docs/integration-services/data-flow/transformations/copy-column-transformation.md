@@ -1,4 +1,5 @@
 ---
+description: 複製資料行轉換
 title: 複製資料行轉換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1c72a313-9026-46bc-a57f-c6b3f47346f8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: af29ab26c4bd67bdb4ac00eadcfa59bb61bbb7ba
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 129cbbbc4c119a865f55567edc93900466013e39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914596"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477732"
 ---
 # <a name="copy-column-transformation"></a>複製資料行轉換
 
@@ -60,7 +61,7 @@ ms.locfileid: "86914596"
  從可用輸入資料行的清單中選取要複製的資料行。 您的選擇會反映在 **[可用的輸入資料行]** 資料表的核取方塊選擇中。  
   
  **輸出別名**  
- 輸入每個新輸出資料行的別名。 預設為 **[的副本]** ，後面緊接著輸入資料行的名稱，但是您也可以選擇任何唯一的描述性名稱。  
+ 輸入每個新輸出資料行的別名。 預設為 **[的副本]**，後面緊接著輸入資料行的名稱，但是您也可以選擇任何唯一的描述性名稱。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料流程](../../../integration-services/data-flow/data-flow.md)   

@@ -1,4 +1,5 @@
 ---
+description: 快取連接管理員
 title: 快取連線管理員 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 21cc4725f69d35043734da6d9210bac0a6b65e4d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c546eee3e6dfe71d3e554f28c467407fc5baea16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920824"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477933"
 ---
 # <a name="cache-connection-manager"></a>快取連接管理員
 
@@ -65,10 +66,10 @@ ms.locfileid: "86920824"
   
  查閱轉換會針對參考資料集執行查閱。  
   
- [快取連線管理員編輯器]  對話方塊包含下列索引標籤：  
+ [快取連線管理員編輯器]**** 對話方塊包含下列索引標籤：  
   
 ###  <a name="general-tab"></a><a name="generaltab"></a> General Tab  
- 使用 [快取連線管理員編輯器] 對話方塊的 [一般] 索引標籤即可指出要從檔案中讀取快取，還是要將快取儲存至檔案。  
+ 使用 [快取連線管理員編輯器]**** 對話方塊的 [一般]**** 索引標籤即可指出要從檔案中讀取快取，還是要將快取儲存至檔案。  
   
 #### <a name="options"></a>選項。  
  **連線管理員名稱**  
@@ -124,7 +125,7 @@ ms.locfileid: "86920824"
  **有效位數**  
  針對特定資料行資料類型指定有效位數。 位數 (Precision) 是指數字中總共的位數。 如果適用於資料類型，您可以更新 **Precision**。  
   
- **調整**  
+ **縮放比例**  
  針對特定資料行資料類型指定小數位數。 小數位數 (Scale) 則是指數字中小數點右方的位數。 如果適用於資料類型，您可以更新 **Scale**。  
   
  **字碼頁**  

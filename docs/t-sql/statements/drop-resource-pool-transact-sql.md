@@ -1,4 +1,5 @@
 ---
+description: DROP RESOURCE POOL (Transact-SQL)
 title: DROP RESOURCE POOL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 18cd6dd9-7a6d-4a08-b9d5-649af23583d5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c3251d0b979c64ef28ef827408f7118b51e2bf98
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: faad24f1b4cd637dadb05edef812ababbc75000e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483972"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478780"
 ---
 # <a name="drop-resource-pool-transact-sql"></a>DROP RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   卸除使用者定義的資源管理員資源集區。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
   
 ## <a name="syntax"></a>語法  
   

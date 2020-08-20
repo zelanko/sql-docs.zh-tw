@@ -1,4 +1,5 @@
 ---
+description: RESTORE 陳述式 (Transact-SQL)
 title: RESTORE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
@@ -40,12 +41,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 089265151307a72e2f029d016df216e077c2dd88
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: ea50c64985b67dfbc4221f65dc1f4cc5daaab721
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864331"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478648"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 陳述式 (Transact-SQL)
 

@@ -1,4 +1,5 @@
 ---
+description: DROP PROCEDURE (Transact-SQL)
 title: DROP PROCEDURE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
@@ -25,12 +26,12 @@ ms.assetid: 1c2d7235-7b9b-4336-8f17-429e7d82c2c3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c97f61aa00ba7242f6d02920fda91949adbff1c6
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: a47efce8d5daf789088b8beca4ad9576e1651958
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484109"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478860"
 ---
 # <a name="drop-procedure-transact-sql"></a>DROP PROCEDURE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -81,20 +82,20 @@ DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
 ## <a name="examples"></a>範例  
  下列範例會移除目前資料庫中的 `dbo.uspMyProc` 預存程序。  
   
-```  
+```sql  
 DROP PROCEDURE dbo.uspMyProc;  
 GO  
 ```  
   
  下列範例會移除目前資料庫中的數個預存程序。  
   
-```  
+```sql  
 DROP PROCEDURE dbo.uspGetSalesbyMonth, dbo.uspUpdateSalesQuotes, dbo.uspGetSalesByYear;  
 ```  
   
  下列範例會移除 `dbo.uspMyProc` 預存程序，前提是如果它存在但不會因為程序不存在而造成錯誤。 這是 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的新語法。  
   
-```  
+```sql  
 DROP PROCEDURE IF EXISTS dbo.uspMyProc;  
 GO  
 ```  

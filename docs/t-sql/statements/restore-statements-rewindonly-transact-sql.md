@@ -1,4 +1,5 @@
 ---
+description: RESTORE 陳述式 - REWINDONLY (Transact-SQL)
 title: RESTORE REWINDONLY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 252285ed8560d6a8dd2361077100f2ce9633f707
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 32162b5b3245c77d0f462b56cae2ddf9d39db9bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484033"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478722"
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>RESTORE 陳述式 - REWINDONLY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

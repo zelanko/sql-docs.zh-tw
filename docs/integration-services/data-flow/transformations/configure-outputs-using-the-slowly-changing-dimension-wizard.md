@@ -1,4 +1,5 @@
 ---
+description: 使用緩時變維度精靈來設定輸出
 title: 使用緩時變維度精靈來設定輸出 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7120a86d04a21f448d423719fa7d963658a2774a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 09e71583c11366ca4aa7356b923b8d0f576081f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922444"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477754"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>使用緩時變維度精靈來設定輸出
 
@@ -52,19 +53,19 @@ ms.locfileid: "86922444"
   
 4.  為每個資料行選取變更類型。  
   
-    -   [變更屬性]  會覆寫記錄中的現有值。  
+    -   [變更屬性]**** 會覆寫記錄中的現有值。  
   
-    -   [歷程記錄屬性]  會新建記錄而不是更新現有的記錄。  
+    -   [歷程記錄屬性]**** 會新建記錄而不是更新現有的記錄。  
   
-    -   [固定屬性]  指示資料行的值不得變更。  
+    -   [固定屬性]**** 指示資料行的值不得變更。  
   
 5.  設定固定和變更屬性選項。  
   
-     如果設定資料行使用 [固定屬性]  變更類型，您可以指定在這些資料行中偵測到變更時，「緩時變維度」轉換是否失敗。 如果設定資料行使用 [變更屬性]  變更類型，則可以指定是否更新所有符合的記錄，包括過期記錄。  
+     如果設定資料行使用 [固定屬性]**** 變更類型，您可以指定在這些資料行中偵測到變更時，「緩時變維度」轉換是否失敗。 如果設定資料行使用 [變更屬性]**** 變更類型，則可以指定是否更新所有符合的記錄，包括過期記錄。  
   
 6.  設定記錄屬性選項。  
   
-     如果設定資料行使用 [歷程記錄屬性]  變更類型，您必須選擇如何區分目前記錄和過期記錄。 您可以使用目前資料列指標資料行或兩個日期資料行，以識別目前資料列和過期資料列。 如果使用目前資料列指標資料行，可以將其設定為 **Current**、 **True** ，和 **Expired,** 或 **False** 。 您也可以輸入自訂值。 如果您使用兩個日期資料行，即開始日期和結束日期，則當透過輸入日期或選取系統變數然後使用其值的方式設定日期資料行值時，您可以指定要使用的日期。  
+     如果設定資料行使用 [歷程記錄屬性]**** 變更類型，您必須選擇如何區分目前記錄和過期記錄。 您可以使用目前資料列指標資料行或兩個日期資料行，以識別目前資料列和過期資料列。 如果使用目前資料列指標資料行，可以將其設定為 **Current**、 **True** ，和 **Expired,** 或 **False** 。 您也可以輸入自訂值。 如果您使用兩個日期資料行，即開始日期和結束日期，則當透過輸入日期或選取系統變數然後使用其值的方式設定日期資料行值時，您可以指定要使用的日期。  
   
 7.  指定對推斷成員的支援，並選擇推斷成員記錄包含的資料行。  
   
@@ -81,7 +82,7 @@ ms.locfileid: "86922444"
      ![來自緩時變維度精靈的資料流程](../../../integration-services/data-flow/transformations/media/dimensionwizard.gif "來自緩時變維度精靈的資料流程")  
   
 ## <a name="updating-slowly-changing-dimension-outputs"></a>更新緩時變維度輸出  
- 更新「緩時變維度」轉換輸出之組態的最簡單方法，就是重新執行「緩時變維度精靈」並修改精靈頁面中的屬性。 您還可以使用 [進階編輯器]  對話方塊或以程式設計方式更新「緩時變維度」轉換。  
+ 更新「緩時變維度」轉換輸出之組態的最簡單方法，就是重新執行「緩時變維度精靈」並修改精靈頁面中的屬性。 您還可以使用 [進階編輯器]**** 對話方塊或以程式設計方式更新「緩時變維度」轉換。  
   
 ## <a name="see-also"></a>另請參閱  
  [緩時變維度轉換](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  

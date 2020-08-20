@@ -1,4 +1,5 @@
 ---
+description: Azure HDInsight 連線管理員
 title: Azure HDInsight 連線管理員 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/28/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 29d01bd9-8b38-43b1-b937-67f8aea57c0f
 author: Lingxi-Li
 ms.author: lingxl
-ms.openlocfilehash: 810ca8895157bc65e587d2faee89622ae9ec55f6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6acb9fec83da610246001df5bc68591ecab1a225
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918568"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478010"
 ---
 # <a name="azure-hdinsight-connection-manager"></a>Azure HDInsight 連線管理員
 
@@ -31,7 +32,7 @@ ms.locfileid: "86918568"
 
 若要建立及設定 **Azure HDInsight 連線管理員**，請遵循下列步驟：
 
-1. 在 [新增 SSIS 連線管理員]  對話方塊中，選取 [AzureHDInsight]  ，然後按一下 [新增]  。
-2. 在 [Azure HDInsight Connection Manager Editor] (Azure HDInsight 連線管理員編輯器)  對話方塊中，指定 HDInsight 叢集要連線的**叢集 DNS 名稱** (前面不加上通訊協定)、**使用者名稱**和**密碼**。
+1. 在 [新增 SSIS 連線管理員]**** 對話方塊中，選取 [AzureHDInsight]****，然後按一下 [新增]****。
+2. 在 [Azure HDInsight Connection Manager Editor] (Azure HDInsight 連線管理員編輯器)**** 對話方塊中，指定 HDInsight 叢集要連線的**叢集 DNS 名稱** (前面不加上通訊協定)、**使用者名稱**和**密碼**。
 3. 按一下 **[確定]** ，關閉對話方塊。
-4. 您可以在 [屬性]  視窗中看到您建立的連線管理員屬性。
+4. 您可以在 [屬性] **** 視窗中看到您建立的連線管理員屬性。

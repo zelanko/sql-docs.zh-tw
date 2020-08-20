@@ -1,4 +1,5 @@
 ---
+description: 傳送登入工作
 title: 傳送登入工作 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 242a5c58321ad211a7e27b28b4574433c45ceceb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7ff8e4b35d30e9b2504dd128ca9694007647f5eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914769"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477913"
 ---
 # <a name="transfer-logins-task"></a>傳送登入工作
 

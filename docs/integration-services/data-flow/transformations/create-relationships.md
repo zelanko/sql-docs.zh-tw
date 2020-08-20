@@ -1,4 +1,5 @@
 ---
+description: 建立關聯性
 title: 建立關聯性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 6ebd305f-ffd2-4a1d-b24c-e28c151b94f5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b961f1d97430b87343832710c27d79e1e329c6bf
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 67dcda91fa83869c927b10d769af3866b8bcd146
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918840"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477720"
 ---
 # <a name="create-relationships"></a>建立關聯性
 
@@ -27,11 +28,11 @@ ms.locfileid: "86918840"
   使用 **[建立關聯性]** 對話方塊，即可編輯來源資料行與查閱資料表資料行之間的對應，而這些資料行是在模糊查閱轉換編輯器、查閱轉換編輯器和詞彙查閱轉換編輯器中進行設定。  
   
 > [!NOTE]  
->  從詞彙查閱轉換編輯器中叫用時，[建立關聯性]  對話方塊只會顯示 [輸入資料行]  和 [查閱資料行]  清單。  
+>   從詞彙查閱轉換編輯器中叫用時， **[建立關聯性]** 對話方塊只會顯示 **[輸入資料行]** 和 **[查閱資料行]** 清單。  
   
  若要深入了解使用 **[建立關聯性]** 對話方塊的轉換，請參閱＜ [Fuzzy Lookup Transformation](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)＞、＜ [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md)＞和＜ [Term Lookup Transformation](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **輸入資料行**  
  從可用的輸入資料行清單中選取。  
   

@@ -1,4 +1,5 @@
 ---
+description: RESTORE 陳述式 - 引數 (Transact-SQL)
 title: RESTORE 引數 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2018
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9db8bf61a26d012c36d3279887c0043478910216
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 49394aa04c726d015bbff3ea31a06ec47ffd64d4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483925"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478770"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE 陳述式 - 引數 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

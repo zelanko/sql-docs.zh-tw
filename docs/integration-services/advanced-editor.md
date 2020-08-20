@@ -1,4 +1,5 @@
 ---
+description: 進階編輯器
 title: 進階編輯器 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ f1_keywords:
 ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5e8c23226d43bd9d10d56b84ae0b4edccc40151d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 343ebe85334869f97b374e5386c05b47fbc8b48e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923167"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478053"
 ---
 # <a name="advanced-editor"></a>進階編輯器
 
