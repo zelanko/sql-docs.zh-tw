@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_3456
 title: MSSQLSERVER_3456 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: d11b2b2c-3ae4-4023-b82f-05b561bfacce
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c51f604d4a0d875a0ef4c51ec47106a28b6ca674
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0f240d063cd1215a738e2f1fa63b50b11e3c5cb9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723471"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456177"
 ---
 # <a name="mssqlserver_3456"></a>MSSQLSERVER_3456
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: 線上索引作業的指導方針
 title: 線上索引作業的指導方針 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/12/2019
@@ -18,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4dde42d927732e0209fed114e6d8d50451ab6379
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ce049f8c597526187ccce8ba7fdb498d8280cf1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629622"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455937"
 ---
 # <a name="guidelines-for-online-index-operations"></a>線上索引作業的指導方針
 

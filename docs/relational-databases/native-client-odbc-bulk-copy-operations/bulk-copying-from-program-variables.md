@@ -1,5 +1,6 @@
 ---
-title: 從程式變數大量複製 |Microsoft Docs
+description: 從程式變數中大量複製
+title: 從程式變數進行大量複製 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,11 +20,12 @@ ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 543d14bf67cfc4587c315090533c1066646493c7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 50b1177e65ad2ef082335fa29a180ddd8f489adf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012331"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455966"
 ---
 # <a name="bulk-copying-from-program-variables"></a>從程式變數中大量複製
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +42,7 @@ ms.locfileid: "86012331"
   
  **bcp_bind** 可支援用來處理變動長度資料的三個方法：  
   
--   只搭配資料變數使用 *cbData* 。 將資料的長度放在 *cbData*中。 每次要大量複製的資料長度變更時，請呼叫[bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)以重設*cbData*。 如果使用了其他兩個方法的其中一種，請針對 *cbData*指定 SQL_VARLEN_DATA。 如果為資料行提供的所有資料值都是 NULL，請針對 *cbData*指定 SQL_NULL_DATA。  
+-   只搭配資料變數使用 *cbData* 。 將資料的長度放在 *cbData*中。 每次要大量複製之資料的長度變更時，請呼叫 [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)以重設 *cbData*。 如果使用了其他兩個方法的其中一種，請針對 *cbData*指定 SQL_VARLEN_DATA。 如果為資料行提供的所有資料值都是 NULL，請針對 *cbData*指定 SQL_NULL_DATA。  
   
 -   使用指標變數。 當每一個新的資料值移到資料變數內時，請將該值的長度儲存在指標變數中。 如果使用了其他兩個方法的其中一種，請針對 *cbIndicator*指定 0。  
   
@@ -56,13 +58,13 @@ ms.locfileid: "86012331"
   
 |ODBC SQL 資料類型|ODBC C 資料類型|bcp_bind *type* 參數|SQL Server 資料類型|  
 |-----------------------|----------------------|--------------------------------|--------------------------|  
-|SQL_CHAR|SQL_C_CHAR|SQLCHARACTER|**字母**<br /><br /> **char**|  
+|SQL_CHAR|SQL_C_CHAR|SQLCHARACTER|**字元**<br /><br /> **char**|  
 |SQL_VARCHAR|SQL_C_CHAR|SQLCHARACTER|**varchar**<br /><br /> **character varying**<br /><br /> **char varying**<br /><br /> **sysname**|  
 |SQL_LONGVARCHAR|SQL_C_CHAR|SQLCHARACTER|**text**|  
 |SQL_WCHAR|SQL_C_WCHAR|SQLNCHAR|**nchar**|  
 |SQL_WVARCHAR|SQL_C_WCHAR|SQLNVARCHAR|**nvarchar**|  
 |SQL_WLONGVARCHAR|SQL_C_WCHAR|SQLNTEXT|**ntext**|  
-|SQL_DECIMAL|SQL_C_CHAR|SQLCHARACTER|**decimal**<br /><br /> **十進位**<br /><br /> **money**<br /><br /> **smallmoney**|  
+|SQL_DECIMAL|SQL_C_CHAR|SQLCHARACTER|**decimal**<br /><br /> **12 月**<br /><br /> **money**<br /><br /> **smallmoney**|  
 |SQL_NUMERIC|SQL_C_NUMERIC|SQLNUMERICN|**numeric**|  
 |SQL_BIT|SQL_C_BIT|SQLBIT|**bit**|  
 |SQL_TINYINT (帶正負號)|SQL_C_SSHORT|SQLINT2|**smallint**|  
@@ -70,7 +72,7 @@ ms.locfileid: "86012331"
 |SQL_SMALL_INT (帶正負號)|SQL_C_SSHORT|SQLINT2|**smallint**|  
 |SQL_SMALL_INT (不帶正負號)|SQL_C_SLONG|SQLINT4|**int**<br /><br /> **integer**|  
 |SQL_INTEGER (帶正負號)|SQL_C_SLONG|SQLINT4|**int**<br /><br /> **integer**|  
-|SQL_INTEGER (不帶正負號)|SQL_C_CHAR|SQLCHARACTER|**decimal**<br /><br /> **十進位**|  
+|SQL_INTEGER (不帶正負號)|SQL_C_CHAR|SQLCHARACTER|**decimal**<br /><br /> **12 月**|  
 |SQL_BIGINT (帶正負號和不帶正負號)|SQL_C_CHAR|SQLCHARACTER|**bigint**|  
 |SQL_REAL|SQL_C_FLOAT|SQLFLT4|**real**|  
 |SQL_FLOAT|SQL_C_DOUBLE|SQLFLT8|**float**|  
@@ -84,7 +86,7 @@ ms.locfileid: "86012331"
 |SQL_GUID|SQL_C_GUID|SQLUNIQUEID|**uniqueidentifier**|  
 |SQL_INTERVAL_|SQL_C_CHAR|SQLCHARACTER|**char**|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]沒有帶正負號的**Tinyint**、不帶正負號的**Smallint**或不帶正負號的**int**資料類型。 若要避免在移轉這些資料類型時發生資料值遺失的情況，請使用次大的整數資料類型來建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。 若要避免使用者之後加入原始資料類型所允許之範圍以外的值，請將規則套用到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料行，將可允許的值限制為原始來源中受到該資料類型所支援的範圍：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 沒有帶正負號的 **Tinyint**、不帶正負號的 **Smallint**或不帶正負號的 **int** 資料類型。 若要避免在移轉這些資料類型時發生資料值遺失的情況，請使用次大的整數資料類型來建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。 若要避免使用者之後加入原始資料類型所允許之範圍以外的值，請將規則套用到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料行，將可允許的值限制為原始來源中受到該資料類型所支援的範圍：  
   
 ```  
 CREATE TABLE Sample_Ints(STinyIntCol   SMALLINT,  
@@ -106,13 +108,13 @@ GO
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不直接支援間隔資料類型。 但是，應用程式可以將間隔逸出序列當做字元字串儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字元資料行中。 應用程式可以讀取它們供日後使用，但是它們不能在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中使用。  
   
- 大量複製函數可用來將資料快速載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中 (該資料是從 ODBC 資料來源讀取)。 只搭配資料變數使用 [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) 可將結果集的資料行繫結至程式變數，然後使用 **bcp_bind** 可將相同程式變數繫結至大量複製作業。 呼叫[SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)或**SQLFetch**會接著從 ODBC 資料來源將資料列提取到程式變數中，而呼叫[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)會從程式變數大量複製資料至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+ 大量複製函數可用來將資料快速載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中 (該資料是從 ODBC 資料來源讀取)。 只搭配資料變數使用 [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) 可將結果集的資料行繫結至程式變數，然後使用 **bcp_bind** 可將相同程式變數繫結至大量複製作業。 接著，呼叫 [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) 或 **SQLFETCH** 會將 ODBC 資料來源中的資料列提取到程式變數中，然後呼叫 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) 大量複製程式變數中的資料到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
- 每當應用程式需要變更原本在**bcp_bind** _pData_參數中指定之資料變數的位址時，都可以使用[bcp_colptr](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md)函數。 每當應用程式需要變更原本在 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) cbData **參數中指定的資料長度時，可以隨時使用**_bcp_collen_ 函數。  
+ 每當應用程式需要變更原本在**bcp_bind** _.pdata_參數中指定的資料變數位址時，就可以使用[bcp_colptr](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md)函數。 每當應用程式需要變更原本在 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) cbData **參數中指定的資料長度時，可以隨時使用**_bcp_collen_ 函數。  
   
  您無法使用大量複製將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的資料讀入程式變數中；因為並沒有類似 "bcp_readrow" 函數的項目。 您只能將應用程式中的資料傳送到伺服器。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;ODBC&#41;執行大量複製作業](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
+ [&#40;ODBC&#41;執行大量複製作業 ](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

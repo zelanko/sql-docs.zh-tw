@@ -1,5 +1,6 @@
 ---
-title: 命令參數（Native Client OLE DB 提供者） |Microsoft Docs
+description: " (Native Client OLE DB 提供者的命令參數) "
+title: " (Native Client OLE DB provider) 的命令參數 |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 072ead49-ebaf-41eb-9a0f-613e9d990f26
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f77c6efacf6110a3a69a073f1743583ac6e42387
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: bb1e6e149a17e5315f1675aed52ec010a1751b4b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247057"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455881"
 ---
 # <a name="sql-server-native-client-command-parameters"></a>SQL Server Native Client 命令參數
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "87247057"
 {call SalesByCategory('Produce', ?)}  
 ```  
   
- 為了藉由減少網路流量來改善效能， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 除非在執行命令之前呼叫了**ICommandWithParameters：： GetParameterInfo**或**ICommandPrepare：:P 準備**，否則 Native Client OLE DB 提供者不會自動衍生參數資訊。 這表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者不會自動執行下列動作：  
+ 為了藉由減少網路流量來改善效能， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 除非在執行命令之前呼叫 **ICommandWithParameters：： GetParameterInfo** 或 **ICommandPrepare：:P 準備** ，否則原生用戶端 OLE DB 提供者不會自動衍生參數資訊。 這表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者不會自動：  
   
 -   確認使用 **ICommandWithParameters::SetParameterInfo** 所指定之資料類型的正確性。  
   
@@ -54,12 +55,12 @@ ms.locfileid: "87247057"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者支援 SQL 語句命令中的輸入參數。 在程序呼叫命令中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援輸入、輸出和輸入/輸出參數。 在執行 (只有在沒有傳回任何資料列集時) 或應用程式已用盡所有傳回的資料列集時，輸出參數值就會傳回應用程式。 若要確保傳回的值有效，請使用 **IMultipleResults** 來強制資料列集取用。  
   
- 您不需要在 DBPARAMBINDINFO 結構中指定預存程序參數的名稱。 請使用 Null 作為*pwszName*成員的值，以指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者應該忽略參數名稱，並只使用**ICommandWithParameters：： SetParameterInfo**的*rgParamOrdinals*成員中指定的序數。 如果命令文字同時包含已命名和未命名的參數，您就必須在任何已命名的參數前面指定所有未命名的參數。  
+ 您不需要在 DBPARAMBINDINFO 結構中指定預存程序參數的名稱。 使用 Null 作為*pwszName*成員的值，以指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者應該忽略參數名稱，並只使用**ICommandWithParameters：： SetParameterInfo**之*rgParamOrdinals*成員中指定的序數。 如果命令文字同時包含已命名和未命名的參數，您就必須在任何已命名的參數前面指定所有未命名的參數。  
   
- 如果指定了預存程式參數的名稱， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會檢查名稱，以確保它是有效的。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者從取用者收到錯誤的參數名稱時，會傳回錯誤。  
+ 如果指定預存程式參數的名稱， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生用戶端 OLE DB 提供者會檢查名稱，以確保它是有效的。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端 OLE DB 提供者從取用者收到錯誤的參數名稱時，會傳回錯誤。  
   
 > [!NOTE]  
->  為了公開 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML 和使用者定義型別（UDT）的支援， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會實行新的[ISSCommandWithParameters](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)介面。  
+>  為了公開支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML 和使用者定義型別 (UDT) ， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider 會執行新的 [ISSCommandWithParameters](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) 介面。  
   
 ## <a name="see-also"></a>另請參閱  
  [命令](../../relational-databases/native-client-ole-db-commands/commands.md)  

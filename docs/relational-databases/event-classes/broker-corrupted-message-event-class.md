@@ -1,4 +1,5 @@
 ---
+description: Broker:Corrupted Message 事件類別
 title: Broker:Corrupted Message 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2019
@@ -12,18 +13,18 @@ ms.assetid: 084bf198-2138-438e-bdc7-4ff1e04300f7
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89e0683676a34393b787e1a2ee57069fb8939dbf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d54abb31cfe2f7541edb459f1d55356c7ae643db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85679253"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456012"
 ---
 # <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message 事件類別
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會建立 **Broker:Corrupted Message** 事件。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 Service Broker 收到損毀的訊息時， 會建立 **Broker:Corrupted Message** 事件。  
   
 ## <a name="brokercorrupted-message-event-class-data-columns"></a>Broker:Corrupted Message 事件類別資料行  
   
@@ -48,7 +49,7 @@ ms.locfileid: "85679253"
 |**ObjectName**|**nvarchar**|交談另一端的服務名稱，以及遠端資料庫用來連接此資料庫的連接字串。|34|否|  
 |**RoleName**|**nvarchar**|接收此訊息的結束點角色。 下列其中一個值。<br /><br /> **起始端**：接收的結束點是交談的起始端。<br /><br /> **目標**：接收的結束點是交談的目標。|38|否|  
 |**ServerName**|**nvarchar**|正在追蹤之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。|26|否|  
-|**Severity**|**int**|若錯誤造成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將訊息卸除，此錯誤的嚴重性。|29|否|  
+|**嚴重性**|**int**|若錯誤造成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將訊息卸除，此錯誤的嚴重性。|29|否|  
 |**SPID**|**int**|由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指派給用戶端關聯之處理序的伺服器處理序識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
 |**State**|**int**|指出產生事件的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原始程式碼內的位置。 每個可能產生此事件的位置都有不同的狀態碼。 Microsoft 支援工程師可以使用此狀態碼來尋找產生事件的位置。|30|否|  

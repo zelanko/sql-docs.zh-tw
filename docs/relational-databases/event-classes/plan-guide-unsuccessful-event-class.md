@@ -1,4 +1,5 @@
 ---
+description: Plan Guide Unsuccessful 事件類別
 title: Plan Guide Unsuccessful 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: ef9759f8-5613-4884-9257-86b609313f69
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c65beb690edf055b1cf3730d08e8d3ecb02841c6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4ae7a0efd783fb27c92019434ca2cf136ab40749
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733756"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456052"
 ---
 # <a name="plan-guide-unsuccessful-event-class"></a>Plan Guide Unsuccessful 事件類別
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

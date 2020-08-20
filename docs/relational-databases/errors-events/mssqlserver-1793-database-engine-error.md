@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_1793
 title: MSSQLSERVER_1793 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -9,12 +10,12 @@ ms.topic: language-reference
 ms.assetid: 808db1d0-acc1-41d0-9287-8a5455001a02
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 52547eb1067d52078fec7f97cf2560ff745ba03d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: aa2ba67308273dc70de17cb2812b752421559bfe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85780690"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456375"
 ---
 # <a name="mssqlserver_1793"></a>MSSQLSERVER_1793
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

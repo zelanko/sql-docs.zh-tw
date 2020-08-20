@@ -1,4 +1,5 @@
 ---
+description: PreConnect:Completed 事件類別
 title: PreConnect:Completed 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ ms.assetid: 7ed2f620-6511-4985-9961-d2927c2b1759
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc4b65a9ffe3873401271d0bfcf0cf669a82c0b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 207bdcf6240b4b24b9d051045e0334e4a074f033
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733771"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455953"
 ---
 # <a name="preconnectcompleted-event-class"></a>PreConnect:Completed 事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

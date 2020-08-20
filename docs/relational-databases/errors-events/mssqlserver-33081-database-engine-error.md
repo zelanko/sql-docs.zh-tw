@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_33081
 title: MSSQLSERVER_33081 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 839705e7-fa37-4c0d-9f3f-95a9eab98bcf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f4986a4d8d89ad9bd8cfa7c213e069c26c998b9c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3267a9195cd5128864bcb55503ffe1720be9299c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723582"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456311"
 ---
 # <a name="mssqlserver_33081"></a>MSSQLSERVER_33081
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

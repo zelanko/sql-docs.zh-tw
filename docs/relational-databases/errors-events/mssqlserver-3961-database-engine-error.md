@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_3961
 title: MSSQLSERVER_3961 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3bbc6965-6445-400c-940a-2d85b037513f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 65c0b87c7194c5b20e2023926c5870c5ce32c392
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 837215560e15ff01a84f614ac087ff96930db3cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723459"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456119"
 ---
 # <a name="mssqlserver_3961"></a>MSSQLSERVER_3961
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

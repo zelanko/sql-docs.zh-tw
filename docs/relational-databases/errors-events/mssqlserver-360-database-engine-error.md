@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_360
 title: MSSQLSERVER_360 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e2b7c1b2-3679-4206-9b25-6bd55ef96a2c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3ad12a38d7921ba2c10a4b044ca85035646db171
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 81b33aec71484900aa9dbb03826b146bdbdc209c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723436"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456160"
 ---
 # <a name="mssqlserver_360"></a>MSSQLSERVER_360
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

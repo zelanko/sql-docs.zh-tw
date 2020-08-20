@@ -1,4 +1,5 @@
 ---
+description: Broker 事件類別目錄
 title: Broker 事件類別目錄 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2019
@@ -14,18 +15,18 @@ ms.assetid: 470dc93c-0dda-4d89-829b-937738d59b31
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 924959b2c5c5b9782a1e73e404644299ba5bd5d8
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: ab93bbb94022f25206154e94531754315ef21c34
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971516"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456013"
 ---
 # <a name="broker-event-category"></a>Broker 事件類別目錄
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-**Broker** 事件類別目錄包含一般的 Service Broker 事件。  
+**Broker** 事件類別目錄包含一般 Service Broker 事件。  
   
 ## <a name="in-this-section"></a>本節內容  
   

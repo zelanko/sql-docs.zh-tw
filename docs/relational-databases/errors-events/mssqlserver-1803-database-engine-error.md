@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_1803
 title: MSSQLSERVER_1803 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: d4315390-82f1-4c4c-8d1b-1a4989537cca
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ebcd94ac84c3b7c0a02acc4a493f16abf47b685d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5a1e652d3ccf32a85fc0c1299f54c00a34ea06fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85780688"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456345"
 ---
 # <a name="mssqlserver_1803"></a>MSSQLSERVER_1803
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
