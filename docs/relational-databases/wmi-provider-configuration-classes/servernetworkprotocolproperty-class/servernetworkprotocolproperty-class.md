@@ -1,4 +1,5 @@
 ---
+description: ServerNetworkProtocolProperty 類別
 title: ServerNetworkProtocolProperty 類別
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 72e124ad-a610-405a-8749-b2508068b348
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e548826432fb19263c7a54cb84109cf4731f9eb7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8a9185e085dd3fe871fcf81e152f5704ed94fb89
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888668"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488363"
 ---
 # <a name="servernetworkprotocolproperty-class"></a>ServerNetworkProtocolProperty 類別
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [ServerNetworkProtocolProperty 類別](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)代表伺服器網路通訊協定的屬性。  
   
- 使用[ServerNetworkProtocolProperty 類別](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)，您可以執行下列工作：  
+ 使用 [ServerNetworkProtocolProperty 類別](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)，您可以執行下列工作：  
   
 -   檢查目前屬性所屬的通訊協定。  
   

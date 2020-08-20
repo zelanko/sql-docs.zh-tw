@@ -1,5 +1,6 @@
 ---
-title: GetCurrentCertificate 方法（SecurityCertificate）
+description: GetCurrentCertificate 方法 (SecurityCertificate 類別)
+title: 'GetCurrentCertificate 方法 (SecurityCertificate) '
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 987a2671-1801-45c4-93e6-29f883c58720
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f849a8ea6734a6e65aa0ea62b9569e4297bf3613
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f245bbd7e0e7c43c1401e604ed0b69896de65ee7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880959"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488463"
 ---
 # <a name="getcurrentcertificate-method-securitycertificate-class"></a>GetCurrentCertificate 方法 (SecurityCertificate 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ object.GetCurrentCertificate(SHA , SQLInstance)
   
 #### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |*SHA*|在方法完成之後指定目前安全性憑證 SHA 指模的字串值 (輸出參數)。|  
 |*SQLInstance*|指定需要憑證之執行個體的字串值。|  

@@ -1,5 +1,6 @@
 ---
-title: SetStartMode 方法（SqlService）
+description: SetStartMode 方法 (SqlService 類別)
+title: 'SetStartMode 方法 (SqlService) '
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f6f198b4-f9a4-468c-8977-76462ef06e61
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 15cfa1eddcd9a32b51984d3833c288fc006d395b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b60886ac53fc31a2c0a0da469ace5adfdb1b1d74
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888351"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488341"
 ---
 # <a name="setstartmode-method-sqlservice-class"></a>SetStartMode 方法 (SqlService 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,17 +42,17 @@ object.SetStartMode(StartMode)
   
 #### <a name="parameters"></a>參數  
  *StartMode*  
- 指定服務實例之啟動模式的**uint32**值。  
+ 指定服務實例之啟動模式的 **uint32** 值。  
   
  有效值如下：  
   
  值 = 0。 Boot - 由作業系統載入程式啟動的裝置驅動程式。 這個值只適用於驅動程式服務。  
   
- 值 = 1。 由**IoInitSystem**方法啟動的系統裝置磁碟機。 這個值只適用於驅動程式服務。  
+ 值 = 1。 **IoInitSystem**方法啟動的系統裝置磁碟機。 這個值只適用於驅動程式服務。  
   
  值 = 2。 Automatic - 要由服務控制管理員在系統啟動期間自動啟動的服務。  
   
- 值 = 3。 Manual-當進程呼叫**StartService**方法時，由電腦系統管理員啟動的服務。  
+ 值 = 3。 當進程呼叫 **StartService** 方法時，由電腦系統管理員啟動的手動服務。  
   
  值 = 4。 Disabled - 無法再啟動服務。  
   
