@@ -1,4 +1,5 @@
 ---
+description: 重新命名資料庫
 title: 重新命名資料庫 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/02/2018
@@ -14,12 +15,12 @@ ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ff09925b3fd51debbdeda647cd1ae7255f5fa0d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0d6131b3481be154cda88aee47bd226ce293613e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728391"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471167"
 ---
 # <a name="rename-a-database"></a>重新命名資料庫
 
@@ -40,7 +41,7 @@ ms.locfileid: "85728391"
   
      [Transact-SQL](#rename-a-database-using-transact-sql)  
   
-- **後續操作：** [重新命名資料庫之後](#backup-after-renaming-a-database)  
+- **Follow Up:**  [After renaming a database](#backup-after-renaming-a-database)  
 
 > [!NOTE]
 > 若要重新命名 Azure SQL 資料倉儲或平行處理資料倉儲中的資料庫，請使用 [RENAME (Transact-SQL)](../../t-sql/statements/rename-transact-sql.md) 陳述式。
@@ -65,13 +66,13 @@ ms.locfileid: "85728391"
 使用 SQL Server Management Studio，透過下列步驟重新命名 SQL Server 或 Azure SQL 資料庫。
 
   
-1. 在 [物件總管]  中，連線至 SQL 執行個體。  
+1. 在 [物件總管]**** 中，連線至 SQL 執行個體。  
   
 2. 請確定資料庫沒有任何開啟的連線。 如果您使用 SQL Server，則可以[將資料庫設定為單一使用者模式](../../relational-databases/databases/set-a-database-to-single-user-mode.md)關閉任何開啟的連線，並防止其他使用者在您變更資料庫名稱時連線。  
   
-3. 在 [物件總管] 中，展開 [資料庫]  ，並以滑鼠右鍵按一下要重新命名的資料庫，然後按一下 [重新命名]  。  
+3. 在 [物件總管] 中，展開 [資料庫]****，並以滑鼠右鍵按一下要重新命名的資料庫，然後按一下 [重新命名]****。  
   
-4. 輸入新的資料庫名稱，然後按一下 **[確定]** 。  
+4. 輸入新的資料庫名稱，然後按一下 **[確定]**。  
   
 5. (選擇性) 如果資料庫是您的預設資料庫，請參閱[在重新命名之後重設您的預設資料庫](#reset-your-default-database-after-rename)。
 

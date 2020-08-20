@@ -1,5 +1,6 @@
 ---
-title: VIEW_TABLE_USAGE （Transact-sql） |Microsoft Docs
+description: VIEW_TABLE_USAGE (Transact-SQL)
+title: VIEW_TABLE_USAGE (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,11 +20,12 @@ ms.assetid: 0aeefb3f-02ef-457e-8c42-84ddb26f1c88
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 20bb4455a0f845ed651cd62db16df877e44607e7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0c4c477efba071a750b476e0ff4a6b96d27b1520
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006246"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469848"
 ---
 # <a name="view_table_usage-transact-sql"></a>VIEW_TABLE_USAGE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,18 +36,18 @@ ms.locfileid: "86006246"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**VIEW_CATALOG**|**Nvarchar （** 128 **）**|檢視限定詞。|  
-|**VIEW_SCHEMA**|**Nvarchar （** 128 **）**|包含檢視的結構描述名稱。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 只有可靠的方法可以尋找物件的架構，就是查詢 sys.databases 目錄檢視。|  
+|**VIEW_CATALOG**|**Nvarchar (** 128 **) **|檢視限定詞。|  
+|**VIEW_SCHEMA**|**Nvarchar (** 128 **) **|包含檢視的結構描述名稱。<br /><br /> **&#42;&#42; 重要 &#42;&#42;**  只有可靠的方法可尋找物件的架構，就是查詢 sys. objects 目錄檢視。|  
 |**VIEW_NAME**|**sysname**|檢視名稱。|  
-|**TABLE_CATALOG**|**Nvarchar （** 128 **）**|資料表限定詞。|  
-|**TABLE_SCHEMA**|**Nvarchar （** 128 **）**|包含基底資料表之結構描述的名稱。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 只有可靠的方法可以尋找物件的架構，就是查詢 sys.databases 目錄檢視。|  
+|**TABLE_CATALOG**|**Nvarchar (** 128 **) **|資料表限定詞。|  
+|**TABLE_SCHEMA**|**Nvarchar (** 128 **) **|包含基底資料表之結構描述的名稱。<br /><br /> **&#42;&#42; 重要 &#42;&#42;**  只有可靠的方法可尋找物件的架構，就是查詢 sys. objects 目錄檢視。|  
 |**TABLE_NAME**|**sysname**|作為檢視基礎的基底資料表。|  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的系統檢視](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
- [資訊架構視圖 &#40;Transact-sql&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
- [sql_dependencies &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)   
- [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統檢視 ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [&#40;Transact-sql&#41;的資訊架構視圖 ](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
+ [sys. sql_dependencies &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)   
+ [sys. objects &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-views-transact-sql.md)  
   
   

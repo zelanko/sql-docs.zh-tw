@@ -1,4 +1,5 @@
 ---
+description: 使用 SQLSetPos 更新資料列集中的資料列
 title: 使用 SQLSetPos 更新資料列集中的資料列 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,33 +15,33 @@ helpviewer_keywords:
 ms.assetid: d83a8c2a-5aa8-4f19-947c-79a817167ee1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4851d4ba741379fc188b2b88c895a378ef3bb80d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1b1b50007a03ee1973d92acafbe8f2be1022f52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298968"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471213"
 ---
 # <a name="updating-rows-in-the-rowset-with-sqlsetpos"></a>使用 SQLSetPos 更新資料列集中的資料列
-**SQLSetPos**的更新作業會讓資料來源更新資料表的一個或多個選取資料列，並在每個系結的資料行中使用應用程式緩衝區中的資料（除非長度/指標緩衝區中的值 SQL_COLUMN_IGNORE）。 未系結的資料行將不會更新。  
+**SQLSetPos**的更新作業會讓資料來源更新資料表的一或多個選取的資料列，並使用每個系結資料行的應用程式緩衝區中的資料 (除非長度/指標緩衝區中的值 SQL_COLUMN_IGNORE) 。 不會更新未系結的資料行。  
   
- 若要使用**SQLSetPos**更新資料列，應用程式會執行下列動作：  
+ 若要使用 **SQLSetPos**來更新資料列，應用程式會執行下列動作：  
   
-1.  將新的資料值放在資料列集緩衝區中。 如需有關如何使用**SQLSetPos**傳送長資料的詳細資訊，請參閱[冗長資料和 SQLSetPos 和 SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md)。  
+1.  將新的資料值放在資料列集緩衝區中。 如需有關如何使用 **SQLSetPos**傳送長資料的詳細資訊，請參閱 [Long data And SQLSetPos and SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md)。  
   
-2.  視需要設定每個資料行的長度/指標緩衝區中的值。 這是系結至字串緩衝區的 SQL_NTS 資料行的位元組長度、系結至二進位緩衝區之資料行的位元組長度，以及要設定為 Null 的任何資料行 SQL_Null_DATA。  
+2.  視需要設定每個資料行的長度/指標緩衝區中的值。 這是系結至字串緩衝區之資料行的資料或 SQL_NTS 的位元組長度、系結至二進位緩衝區的資料行之資料的位元組長度，以及要設定為 Null 之任何資料行的 SQL_Null_DATA。  
   
-3.  設定這些資料行的長度/指標緩衝區中不會更新為 SQL_COLUMN_IGNORE 的值。 雖然應用程式可以略過此步驟並重新傳送現有資料，但這種情況沒有效率，而且會在讀取資料時將值傳送到已截斷的資料來源。  
+3.  在這些資料行的長度/指標緩衝區中設定值，這些資料行不會更新為 SQL_COLUMN_IGNORE。 雖然應用程式可以略過此步驟並重新傳送現有的資料，但在讀取資料時，將值傳送至資料來源的風險並不高。  
   
-4.  呼叫**SQLSetPos**並將*Operation*設定為 SQL_UPDATE，並將*RowNumber*設定為要更新的資料列數目。 如果*RowNumber*是0，則會更新資料列集中的所有資料列。  
+4.  會呼叫 **SQLSetPos** ，並將 *Operation* 設定為 SQL_UPDATE，並將 *RowNumber* 設定為要更新的資料列編號。 如果 *RowNumber* 是0，則會更新資料列集中的所有資料列。  
   
- 在**SQLSetPos**傳回之後，目前的資料列會設定為更新的資料列。  
+ **SQLSetPos**傳回之後，會將目前的資料列設定為更新的資料列。  
   
- 更新資料列集的所有資料列（*RowNumber*等於0）時，應用程式可以藉由將資料列作業陣列的對應元素（由 SQL_ATTR_ROW_OPERATION_PTR 語句屬性所指向）設定為 SQL_ROW_IGNORE，來停用特定資料列的更新。 資料列作業陣列會對應至資料列狀態陣列的元素大小和數目（由 SQL_ATTR_ROW_STATUS_PTR 語句屬性所指向）。 若只要更新結果集中已成功提取且尚未從資料列集刪除的資料列，應用程式會使用提取資料列集的函式中的資料列狀態陣列，做為要**SQLSetPos**的資料列作業陣列。  
+ 更新資料列集的所有資料列時 (*RowNumber* 等於 0) ，應用程式可以藉由將 SQL_ATTR_ROW_OPERATION_PTR 語句屬性) 所指向的資料列作業 (陣列的對應元素設定為 SQL_ROW_IGNORE，來停用特定資料列的更新。 資料列作業陣列會對應到資料列狀態陣列 (所指向之資料列狀態陣列的大小和數目（由 SQL_ATTR_ROW_STATUS_PTR 語句屬性) 所指向）。 若只要更新結果集中成功提取的資料列，而且尚未從資料列集刪除資料列集，應用程式會使用提取資料列集的函式的資料列狀態陣列，作為要 **SQLSetPos**的資料列作業陣列。  
   
- 針對傳送至資料來源做為更新的每個資料列，應用程式緩衝區應該具有有效的資料列資料。 如果應用程式緩衝區已藉由提取填滿，而且如果已維護資料列狀態陣列，則每個資料列位置的值都不應該 SQL_ROW_DELETED、SQL_ROW_ERROR 或 SQL_ROW_NOROW。  
+ 針對以更新的形式傳送到資料來源的每個資料列，應用程式緩衝區應該有有效的資料列資料。 如果應用程式緩衝區是藉由提取來填滿，且資料列狀態陣列已維持，則在這些資料列位置的值不應為 SQL_ROW_DELETED、SQL_ROW_ERROR 或 SQL_ROW_NOROW。  
   
- 例如，下列程式碼可讓使用者流覽 Customers 資料表，並更新、刪除或加入新的資料列。 它會在呼叫**SQLSetPos**來更新或加入新的資料列之前，將新的資料放入資料列集緩衝區中。 在資料列集緩衝區的結尾會配置額外的資料列來保存新的資料列;這可防止在新資料列的資料放入緩衝區時覆寫現有資料。  
+ 例如，下列程式碼可讓使用者在 Customers 資料表中滾動，以及更新、刪除或加入新的資料列。 它會在呼叫 **SQLSetPos** 來更新或加入新的資料列之前，將新的資料放在資料列集緩衝區中。 在資料列集緩衝區的結尾配置額外的資料列來保存新的資料列;這可防止在將新資料列的資料放入緩衝區時，覆寫現有的資料。  
   
 ```  
 #define UPDATE_ROW   100  

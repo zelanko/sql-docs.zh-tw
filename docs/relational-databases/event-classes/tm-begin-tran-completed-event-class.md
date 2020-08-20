@@ -1,4 +1,5 @@
 ---
+description: TM：Begin Tran Completed 事件類別
 title: 'TM: Begin Tran Completed 事件類別 | Microsoft 文件'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,14 +13,14 @@ ms.assetid: 95ddd3c6-51ef-4ad1-afd0-3aed82c9f724
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3635af680084bd43be1997c7355afe550bc7f698
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e65ad484e5e90a55e06f7bf1d5936e10b7fa1694
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790941"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470672"
 ---
-# <a name="tm-begin-tran-completed-event-class"></a>TM: Begin Tran Completed 事件類別
+# <a name="tm-begin-tran-completed-event-class"></a>TM：Begin Tran Completed 事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   TM: Begin Tran Completed 事件類別表示 BEGIN TRANSACTION 要求已完成。 要求是從用戶端透過交易管理介面傳送。  
   

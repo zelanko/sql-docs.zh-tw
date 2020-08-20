@@ -1,5 +1,6 @@
 ---
-title: 以原則為基礎的管理預存程式（Transact-sql） |Microsoft Docs
+description: 原則式管理預存程序 (Transact-SQL)
+title: 以原則為基礎的管理預存程式 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: df64ab19-4e66-4702-96bd-32ad587d00f0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0a8e08f63bc4bb039436c94f0fb678ace795927a
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 1811a67ac9eceb3e6f1fd14d27de2b7d04e07684
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977513"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469800"
 ---
 # <a name="policy-based-management-stored-procedures-transact-sql"></a>原則式管理預存程序 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援下列用於以原則為基礎之管理的系統預存程式。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援下列用於以原則為基礎之管理的系統預存程式。  
   
 > [!IMPORTANT]  
 >  只支援《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中所說明的以原則為基礎的管理預存程序。 文件所未說明的預存程序會由內部以原則為基礎的管理元件所使用，而且不應該用它們來管理以原則為基礎的管理。  

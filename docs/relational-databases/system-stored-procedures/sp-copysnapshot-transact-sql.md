@@ -1,5 +1,6 @@
 ---
-title: sp_copysnapshot （Transact-sql） |Microsoft Docs
+description: sp_copysnapshot (Transact-SQL)
+title: sp_copysnapshot (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a012a32f-6f26-45bf-8046-b51cd7fec455
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 17a554d6bccdfb067600f10122122bd542fe9c6b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 85d15ffb52e41d072db3d583644eb7269cd57a33
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771195"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469700"
 ---
 # <a name="sp_copysnapshot-transact-sql"></a>sp_copysnapshot (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  將指定發行集的快照集資料夾複製到** \@ destination_folder**中列出的資料夾。 這個預存程序執行於發行集資料庫的發行者端。 這個預存程序可用來將快照集複製到抽取式媒體 (如 CD-ROM)。  
+  將指定之發行集的快照集資料夾複製到** \@ destination_folder**中列出的資料夾。 這個預存程序執行於發行集資料庫的發行者端。 這個預存程序可用來將快照集複製到抽取式媒體 (如 CD-ROM)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,22 +40,22 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'`這是要複製其快照集內容的發行集名稱。 *發行*集是**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 這是要複製其快照集內容的發行集名稱。 *發行* 集是 **sysname**，沒有預設值。  
   
-`[ @destination_folder = ] 'destination_folder'`這是要複製發行集快照集內容的資料夾名稱。 *destination_folder*是**Nvarchar （255）**，沒有預設值。 *Destination_folder*可以是替代位置，例如另一部伺服器、網路磁碟機機或卸載式媒體（例如 cd-rom 或抽取式磁碟）。  
+`[ @destination_folder = ] 'destination_folder'` 這是要複製發行集快照集內容的資料夾名稱。 *destination_folder*是 **Nvarchar (255) **，沒有預設值。 *Destination_folder*可以是替代位置，例如在另一部伺服器、網路磁碟機機或卸載式媒體上 (例如 cd-rom 或抽取式磁碟) 。  
   
-`[ @subscriber = ] 'subscriber'`這是訂閱者的名稱。 *訂閱者*是 sysname，預設值是 Null。  
+`[ @subscriber = ] 'subscriber'` 這是訂閱者的名稱。 *訂閱者* 是 sysname，預設值是 Null。  
   
-`[ @subscriber_db = ] 'subscriber_db'`這是訂閱資料庫的名稱。 *subscriber_db*是 sysname，預設值是 Null。  
+`[ @subscriber_db = ] 'subscriber_db'` 這是訂閱資料庫的名稱。 *subscriber_db* 是 sysname，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_copysnapshot**用於所有類型的複寫中。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行7.0 版和更早版本的訂閱者無法使用替代快照集位置。  
+ **sp_copysnapshot** 用於所有類型的複寫中。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行7.0 版及更早版本的訂閱者無法使用替代快照集位置。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_copysnapshot**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色或 **db_owner** 固定資料庫角色的成員，才能夠執行 **sp_copysnapshot**。  
   
 ## <a name="see-also"></a>另請參閱  
  [替代快照集資料夾位置](../../relational-databases/replication/snapshot-options.md)   

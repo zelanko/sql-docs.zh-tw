@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_511
 title: MSSQLSERVER_511 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0c85686a-53c1-4180-ba8c-2000e68a0d63
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b3e094206a4fbbc9620ff7eed96e01c8b0a06f5f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: beb8f25c2251904f84f358012a5e1ad26450abfd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715434"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471042"
 ---
 # <a name="mssqlserver_511"></a>MSSQLSERVER_511
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

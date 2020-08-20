@@ -1,4 +1,5 @@
 ---
+description: 新增代理程式設定檔
 title: 新增代理程式設定檔 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ ms.assetid: ebf59330-a421-45a5-9020-0484a96852bc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: a8005527ac59223fc4ad2cbe05bf1b871aa13998
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b8bfc5c942c10d141ee57793fa6e7a68fcd30513
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85721239"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470184"
 ---
 # <a name="new-agent-profile"></a>新增代理程式設定檔
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

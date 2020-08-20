@@ -1,4 +1,5 @@
 ---
+description: 新增訂閱精靈 (UI 參考)
 title: 新增訂閱精靈 (UI 參考) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ ms.assetid: fd201921-7c96-4fcc-85fe-61d91396429b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 01e2797b760c8fd5a31b05cd5a16f02df889ca20
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 3e4bef2f1c7d5ff091e1efb6978fb6ebef0794ee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110509"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470139"
 ---
 # <a name="new-subscription-wizard-ui-reference"></a>新增訂閱精靈 (UI 參考)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "87110509"
   
 -   [&#60;AgentName&#62; 代理程式位置](../../relational-databases/replication/agentname-agent-location.md)  
   
--   [[發行者屬性]](../../relational-databases/replication/subscribers.md)  
+-   [訂閱者](../../relational-databases/replication/subscribers.md)  
   
 -   [加入非 SQL Server 訂閱者](../../relational-databases/replication/add-non-sql-server-subscriber.md)  
   

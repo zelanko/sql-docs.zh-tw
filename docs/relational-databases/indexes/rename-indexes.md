@@ -1,4 +1,5 @@
 ---
+description: 重新命名索引
 title: 重新命名索引 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -15,12 +16,12 @@ ms.assetid: d3d612a1-ea1b-4d99-85d2-0a2ad54f4b0e
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 29f7a3f1a7eeb34d7ce8ce3a5d886ea4137000d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b20ea3e11cc08463a377616e319c8398525c90b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786456"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470417"
 ---
 # <a name="rename-indexes"></a>重新命名索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,17 +60,17 @@ ms.locfileid: "85786456"
   
 2.  按一下加號展開 **[資料表]** 資料夾。  
   
-3.  以滑鼠右鍵按一下要重新命名索引的資料表，然後選取 [設計]  。  
+3.  以滑鼠右鍵按一下要重新命名索引的資料表，然後選取 [設計]****。  
   
-4.  在 [資料表設計工具]  功能表上，按一下 [索引/索引鍵]  。  
+4.  在 [資料表設計工具] 功能表上，按一下 [索引/索引鍵]。  
   
-5.  從 [選取的主/唯一索引鍵或索引]  文字方塊中選取要重新命名的索引。  
+5.  從 [選取的主/唯一索引鍵或索引]**** 文字方塊中選取要重新命名的索引。  
   
 6.  在方格中，按一下 [ **名稱** ]，然後在文字方塊輸入新名稱。  
   
-7.  按一下 [關閉]  。  
+7.  按一下 [關閉] 。  
   
-8.  在 [檔案] 功能表上，按一下 [儲存 _資料表名稱_]。  
+8.  在 [檔案]**** 功能表上，按一下 [儲存 _資料表名稱_]****。  
 
 #### <a name="to-rename-an-index-by-using-object-explorer"></a>使用物件總管重新命名索引  
   
@@ -81,7 +82,7 @@ ms.locfileid: "85786456"
   
 4.  按一下加號展開 **[索引]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您要重新命名的索引，然後選取 [重新命名]  。  
+5.  以滑鼠右鍵按一下您要重新命名的索引，然後選取 [重新命名]****。  
   
 6.  鍵入索引的新名稱，然後按 Enter 鍵。  
   

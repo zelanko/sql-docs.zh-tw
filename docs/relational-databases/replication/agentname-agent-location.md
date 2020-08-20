@@ -1,4 +1,5 @@
 ---
+description: '&lt;代理程式名稱&gt; 代理程式位置'
 title: '&lt;代理程式名稱&gt; 代理程式位置 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ ms.assetid: dc664d80-fbe3-4586-aba8-a71fa62d14f0
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c44303cdfde6549c908e024a199f7b4635b46c7f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b60c997ccd244be75c8946fb7465e2bdd98def66
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730242"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470297"
 ---
 # <a name="ltagentnamegt-agent-location"></a>&lt;代理程式名稱&gt; 代理程式位置
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

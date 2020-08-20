@@ -1,5 +1,6 @@
 ---
-title: 外部作業目錄檢視（Transact-sql） |Microsoft Docs
+description: " (Transact-sql) 的外部作業目錄檢視"
+title: " (Transact-sql) 的外部作業目錄檢視 |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ dev_langs:
 ms.assetid: 9abc595c-346d-42dc-a227-a73cd0a356eb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cacca0d6558670f48ba0d8458c28d0213e57373f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 99ee5534acdf7fa67bf031a2a9ab213528a0bbea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882979"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470080"
 ---
-# <a name="external-operations-catalog-views-transact-sql"></a>外部作業目錄檢視（Transact-sql）
+# <a name="external-operations-catalog-views-transact-sql"></a> (Transact-sql) 的外部作業目錄檢視
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  以下是外部資料物件的目錄檢視，例如資料來源、檔案格式和資料表。 您可以使用這些 views 來查詢專案的狀態，例如 PolyBase 作業中使用的 Hadoop 資料表。  
+  以下是外部資料物件的目錄檢視，例如資料來源、檔案格式和資料表。 使用這些 views 來查詢專案的狀態，例如 PolyBase 作業中使用的 Hadoop 資料表。  
   
  [sys.external_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)  
   

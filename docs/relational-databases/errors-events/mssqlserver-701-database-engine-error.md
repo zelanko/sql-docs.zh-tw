@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_701
 title: MSSQLSERVER_701 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3b975000-63a1-43c2-a40f-89d0a8a36bef
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f0ad5eb99009a6f9f980edc062c10a5c98831984
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d0e3280044c9d8d0677f8f1d0fd63413ac987b36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85780233"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470848"
 ---
 # <a name="mssqlserver_701"></a>MSSQLSERVER_701
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

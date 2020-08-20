@@ -1,4 +1,5 @@
 ---
+description: LOCALDB_ERROR_UNKNOWN_ERROR_CODE
 title: LOCALDB_ERROR_UNKNOWN_ERROR_CODE |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -9,12 +10,12 @@ ms.topic: reference
 ms.assetid: 8f8472b6-e6fc-44f3-82c7-25f127461fa8
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7c8efcbb197ca33ca27efb611549ef6c7f2454c7
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: cde59062f32b002a621fdceb18ee6fc3b8a27ecb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245955"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470516"
 ---
 # <a name="localdb_error_unknown_error_code"></a>LOCALDB_ERROR_UNKNOWN_ERROR_CODE
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

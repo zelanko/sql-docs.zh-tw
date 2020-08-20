@@ -1,4 +1,5 @@
 ---
+description: Resource 資料庫
 title: Resource 資料庫 | Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d592b2b4-bc36-4eb9-9385-8fe4dff0dced
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9ba6ba2d1238c75c29990a8ab2bd98ea419cc606
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 629ea93dc57c516aaf2c0a2f72d23c668d56af64
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728377"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471130"
 ---
 # <a name="resource-database"></a>Resource 資料庫
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: 移動使用者資料庫
 title: 移動使用者資料庫 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,16 +25,16 @@ helpviewer_keywords:
 ms.assetid: ad9a4e92-13fb-457d-996a-66ffc2d55b79
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ae4bcbf6a8fe10fb07d644c697c8d3ac04631555
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0892e0a2a6db25e6a82f56177544572b8a5af388
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728430"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471210"
 ---
 # <a name="move-user-databases"></a>移動使用者資料庫
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，您可以在 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 陳述式的 FILENAME 子句中指定新的檔案位置，以便將使用者資料庫的資料、記錄和全文檢索目錄檔案移到新位置。 這種方法適用於在相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體內移動資料庫檔案。 若要將資料庫移到另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體或移到另一個伺服器，請使用 [備份和還原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) 或 [卸離和附加作業](../../relational-databases/databases/move-a-database-using-detach-and-attach-transact-sql.md)。  
+   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，您可以在 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 陳述式的 FILENAME 子句中指定新的檔案位置，以便將使用者資料庫的資料、記錄和全文檢索目錄檔案移到新位置。 這種方法適用於在相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體內移動資料庫檔案。 若要將資料庫移到另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體或移到另一個伺服器，請使用 [備份和還原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) 或 [卸離和附加作業](../../relational-databases/databases/move-a-database-using-detach-and-attach-transact-sql.md)。  
   
 ## <a name="considerations"></a>考量  
  將資料庫移動到其他伺服器執行個體，以提供一致的經驗給使用者和應用程式時，您可能必須為資料庫重新建立部分或全部的中繼資料。 如需詳細資訊，請參閱 [在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  

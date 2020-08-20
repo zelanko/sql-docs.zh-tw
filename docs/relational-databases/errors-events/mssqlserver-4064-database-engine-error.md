@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_4064
 title: MSSQLSERVER_4064 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 32112b90-0a2f-4834-a027-756811732be7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 711f182407fa3b06c48fd81d36dcf80558adaf90
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 27f5ccbad0bd1722f8c9a4fbe1d2b7cd0fd633da
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717868"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471077"
 ---
 # <a name="mssqlserver_4064"></a>MSSQLSERVER_4064
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

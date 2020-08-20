@@ -1,4 +1,5 @@
 ---
+description: 轉譯 DLL 和桌面資料庫驅動程式
 title: 轉譯 Dll 和桌面資料庫驅動程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 09ebe734-39a0-4af0-a39b-1d5479f69635
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 20346e705cfe3a20d305b9d517ee05198c8b2879
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b9c8fb937f612faf4fb4c69918379ac65df4d8c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303049"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471442"
 ---
 # <a name="translation-dlls-and-desktop-database-drivers"></a>轉譯 DLL 和桌面資料庫驅動程式
 不支援。

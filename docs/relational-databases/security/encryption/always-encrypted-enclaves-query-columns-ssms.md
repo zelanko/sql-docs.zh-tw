@@ -1,4 +1,5 @@
 ---
+description: 使用具有安全記憶體保護區的 Always Encrypted 與 SSMS 查詢資料行
 title: 使用具有安全記憶體保護區的 Always Encrypted 與 SSMS 查詢資料行 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/31/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 50f44a01383a307ac462c0f4fcb3e9e3f67d66fa
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 74149cdcf8dd12280103c592c5a8662dddf4e750
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411504"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470090"
 ---
 # <a name="query-columns-using-always-encrypted-with-secure-enclaves-with-ssms"></a>使用具有安全記憶體保護區的 Always Encrypted 與 SSMS 查詢資料行
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]

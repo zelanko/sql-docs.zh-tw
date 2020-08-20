@@ -1,5 +1,6 @@
 ---
-title: sp_enumdsn （Transact-sql） |Microsoft Docs
+description: sp_enumdsn (Transact-SQL)
+title: sp_enumdsn (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 171cbc7d-7406-4cb0-8602-9405243bfd1d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 092866e2f8efd69ad0baccc73984dcf8a7db051c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: afc6b97a969aa833e96bd4d8c2ad1a35ae35d14b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891895"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469480"
 ---
 # <a name="sp_enumdsn-transact-sql"></a>sp_enumdsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,14 +38,14 @@ sp_enumdsn
 ```  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="result-sets"></a>結果集  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**資料來源名稱**|**sysname**|資料來源的名稱。|  
-|**描述**|**varchar(255)**|資料來源的描述。|  
+|**說明**|**varchar(255)**|資料來源的描述。|  
 |**型別**|**int**|資料來源的類型：<br /><br /> **1** = ODBC DSN<br /><br /> **3** = OLE DB 資料來源|  
 |**提供者名稱**|**varchar(255)**|OLE DB 提供者的名稱。 ODBC DSN 的這個值是 NULL。|  
   
@@ -54,7 +55,7 @@ sp_enumdsn
  例如，如果伺服器是利用系統帳戶使用者內容來執行的，傳回的資料來源名稱 (DSN) 便全為系統帳戶所關聯的系統 DSN。 如果是以私用使用者帳戶來執行伺服器，則只會傳回這位使用者的私用帳戶所定義之 DSN。  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_enumdsn**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色的成員，才可以執行 **sp_enumdsn**。  
   
 ## <a name="see-also"></a>另請參閱  
  [sp_dsninfo &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dsninfo-transact-sql.md)   

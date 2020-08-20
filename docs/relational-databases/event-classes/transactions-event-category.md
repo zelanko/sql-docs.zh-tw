@@ -1,4 +1,5 @@
 ---
+description: Transaction 事件類別目錄
 title: Transactions 事件類別 | Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: bfc75c5b-7115-49d8-9148-a0c84ee66a9a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a828d66db6b70c7ea03bd3398f7cd3ac9fd791e8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 086ea0a7206c667242d3aa631fa0f46f86220b2d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728326"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470617"
 ---
 # <a name="transactions-event-category"></a>Transaction 事件類別目錄
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,16 +32,16 @@ ms.locfileid: "85728326"
 |-----------|-----------------|  
 |[DTCTransaction 事件類別](../../relational-databases/event-classes/dtctransaction-event-class.md)|追蹤 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散式交易協調器 (MS DTC) 所協調的交易。 這些是散發於 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的二或多個資料庫或執行個體之間的交易。|  
 |[SQLTransaction 事件類別](../../relational-databases/event-classes/sqltransaction-event-class.md)|追蹤 [!INCLUDE[tsql](../../includes/tsql-md.md)] BEGIN TRAN、COMMIT TRAN、SAVE TRAN 與 ROLLBACK TRAN 陳述式。|  
-|[TM: Begin Tran Completed 事件類別](../../relational-databases/event-classes/tm-begin-tran-completed-event-class.md)|表示已完成 BEGIN TRANSACTION 要求。|  
-|[TM: Begin Tran Starting 事件類別](../../relational-databases/event-classes/tm-begin-tran-starting-event-class.md)|表示正在啟動 BEGIN TRANSACTION 要求。|  
-|[TM: Commit Tran Completed 事件類別](../../relational-databases/event-classes/tm-commit-tran-completed-event-class.md)|表示已完成 COMMIT TRANSACTION 要求。|  
-|[TM: Commit Tran Starting 事件類別](../../relational-databases/event-classes/tm-commit-tran-starting-event-class.md)|表示正在啟動 COMMIT TRANSACTION 要求。|  
-|[TM: Promote Tran Completed 事件類別](../../relational-databases/event-classes/tm-promote-tran-completed-event-class.md)|表示已完成 PROMOTE TRANSACTION 要求。|  
-|[TM: Promote Tran Starting 事件類別](../../relational-databases/event-classes/tm-promote-tran-starting-event-class.md)|表示正在啟動 PROMOTE TRANSACTION 要求。|  
-|[TM: Rollback Tran Completed 事件類別](../../relational-databases/event-classes/tm-rollback-tran-completed-event-class.md)|表示已完成 ROLLBACK TRANSACTION 要求。|  
-|[TM: Rollback Tran Starting 事件類別](../../relational-databases/event-classes/tm-rollback-tran-starting-event-class.md)|表示正在啟動 ROLLBACK TRANSACTION 要求。|  
-|[TM: Save Tran Completed 事件類別](../../relational-databases/event-classes/tm-save-tran-completed-event-class.md)|表示已完成 SAVE TRANSACTION 要求。|  
-|[TM: Save Tran Starting 事件類別](../../relational-databases/event-classes/tm-save-tran-starting-event-class.md)|表示正在啟動 SAVE TRANSACTION 要求。|  
+|[TM：Begin Tran Completed 事件類別](../../relational-databases/event-classes/tm-begin-tran-completed-event-class.md)|表示已完成 BEGIN TRANSACTION 要求。|  
+|[TM：Begin Tran Starting 事件類別](../../relational-databases/event-classes/tm-begin-tran-starting-event-class.md)|表示正在啟動 BEGIN TRANSACTION 要求。|  
+|[TM：Commit Tran Completed 事件類別](../../relational-databases/event-classes/tm-commit-tran-completed-event-class.md)|表示已完成 COMMIT TRANSACTION 要求。|  
+|[TM：Commit Tran Starting 事件類別](../../relational-databases/event-classes/tm-commit-tran-starting-event-class.md)|表示正在啟動 COMMIT TRANSACTION 要求。|  
+|[TM：Promote Tran Completed 事件類別](../../relational-databases/event-classes/tm-promote-tran-completed-event-class.md)|表示已完成 PROMOTE TRANSACTION 要求。|  
+|[TM：Promote Tran Starting 事件類別](../../relational-databases/event-classes/tm-promote-tran-starting-event-class.md)|表示正在啟動 PROMOTE TRANSACTION 要求。|  
+|[TM：Rollback Tran Completed 事件類別](../../relational-databases/event-classes/tm-rollback-tran-completed-event-class.md)|表示已完成 ROLLBACK TRANSACTION 要求。|  
+|[TM：Rollback Tran Starting 事件類別](../../relational-databases/event-classes/tm-rollback-tran-starting-event-class.md)|表示正在啟動 ROLLBACK TRANSACTION 要求。|  
+|[TM：Save Tran Completed 事件類別](../../relational-databases/event-classes/tm-save-tran-completed-event-class.md)|表示已完成 SAVE TRANSACTION 要求。|  
+|[TM：Save Tran Starting 事件類別](../../relational-databases/event-classes/tm-save-tran-starting-event-class.md)|表示正在啟動 SAVE TRANSACTION 要求。|  
 |[TransactionLog 事件類別](../../relational-databases/event-classes/transactionlog-event-class.md)|追蹤交易何時寫入資料庫交易記錄檔。|  
   
   

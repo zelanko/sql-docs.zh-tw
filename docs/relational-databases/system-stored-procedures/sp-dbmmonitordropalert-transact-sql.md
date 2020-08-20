@@ -1,5 +1,6 @@
 ---
-title: sp_dbmmonitordropalert （Transact-sql） |Microsoft Docs
+description: sp_dbmmonitordropalert (Transact-SQL)
+title: sp_dbmmonitordropalert (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: fe4a134b-25bf-464e-a5c4-358de215b65a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 00841f918a5b93b0ae27f907bff263f4c0a0174a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a8c627b9686a2937ec23c8333c128a12a8b39cb1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85866378"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469663"
 ---
 # <a name="sp_dbmmonitordropalert-transact-sql"></a>sp_dbmmonitordropalert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,9 +57,9 @@ sp_dbmmonitordropalert database_name
 |5|保留期限|在資料庫鏡像狀態資料表中控制資料列保留時間的中繼資料。|  
   
 > [!NOTE]  
->  不論是使用**sp_dbmmonitorchangealert**或「資料庫鏡像監視器」來指定，此程式都會捨棄警告臨界值。  
+>  此程式會捨棄警告臨界值，不論是否使用 **sp_dbmmonitorchangealert** 或資料庫鏡像監視器來指定它們。  
   
- 如需對應于警告的事件識別碼的詳細資訊，請參閱[&#40;SQL Server&#41;，使用鏡像效能標準的警告臨界值和警示](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)。  
+ 如需與警告對應之事件識別碼的詳細資訊，請參閱 [使用鏡像效能計量的警告臨界值和警示 &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  None  
@@ -67,7 +68,7 @@ sp_dbmmonitordropalert database_name
  None  
   
 ## <a name="permissions"></a>權限  
- 需要**系統管理員（sysadmin** ）固定伺服器角色中的成員資格。  
+ 需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
  下列範例會發出 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的保留期限設定。  

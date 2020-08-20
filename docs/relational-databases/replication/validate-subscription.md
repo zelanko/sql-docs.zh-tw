@@ -1,4 +1,5 @@
 ---
+description: 驗證訂閱
 title: 驗證訂閱 | Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,22 +16,22 @@ ms.assetid: 74bdf5e1-b886-4284-b5fb-332bf79ae083
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e95a160e405adb8cdc77a763840489b436c9bf96
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 2e80697f75a6234b913e0784b0110873b3c848ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110537"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470126"
 ---
 # <a name="validate-subscription"></a>驗證訂閱
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
   使用 **[驗證訂閱]** 對話方塊以指定下次執行訂閱的合併代理程式時，應驗證合併式發行集的訂閱。 驗證的結果會在複寫監視器中顯示。 如需詳細資訊，請參閱 [Validate Data at the Subscriber](../../relational-databases/replication/validate-data-at-the-subscriber.md)。  
   
- 也可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下發行集，然後按一下 [驗證所有訂閱]  來驗證合併式發行集的所有訂閱。  
+ 也可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下發行集，然後按一下 [驗證所有訂閱]**** 來驗證合併式發行集的所有訂閱。  
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **上一次嘗試驗證的日期**  
  合併代理程式工作階段上一次進行訂閱驗證的日期，無論驗證成功與否。  
   

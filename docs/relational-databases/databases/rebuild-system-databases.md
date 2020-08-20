@@ -1,4 +1,5 @@
 ---
+description: 重建系統資料庫
 title: 重建系統資料庫 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/06/2016
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 681396511bbcee9b68800ccd86e62837a95efd77
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 439c723463516ad046c6a37a6d327b289efc9eb6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728396"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471158"
 ---
 # <a name="rebuild-system-databases"></a>重建系統資料庫
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

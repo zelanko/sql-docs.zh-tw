@@ -1,5 +1,6 @@
 ---
-title: sp_dropsrvrolemember （Transact-sql） |Microsoft Docs
+description: sp_dropsrvrolemember (Transact-SQL)
+title: sp_dropsrvrolemember (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7be99181-d221-49d0-9cb2-c930d8c044a0
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 213b8301a471e00107ce7d3ac6bf493e6aea87c4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 55199532fc86d48914bea690125a1afb55a255cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85662471"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469518"
 ---
 # <a name="sp_dropsrvrolemember-transact-sql"></a>sp_dropsrvrolemember (Transact-SQL)
 
@@ -31,7 +32,7 @@ ms.locfileid: "85662471"
 從固定伺服器角色移除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或 Windows 使用者或群組。
 
 > [!IMPORTANT]
-> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]請改用[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 。
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 。
 
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -44,10 +45,10 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
 ## <a name="arguments"></a>引數
 
 **[ @loginame =]** '_login_'  
-這是要從固定伺服器角色中移除的登入名稱。 *login*是**sysname**，沒有預設值。 *登*入必須存在。  
+這是要從固定伺服器角色中移除的登入名稱。 *login* 是 **sysname**，沒有預設值。 *登* 入必須存在。  
 
-**[ @rolename =]** '_角色_'  
-這是伺服器角色的名稱。 *role*是**sysname**，預設值是 Null。 *role*必須是下列其中一個值：  
+**[ @rolename =]** '_role_'  
+這是伺服器角色的名稱。 *role* 是 **sysname**，預設值是 Null。 *角色* 必須是下列其中一個值：  
 
 -   系統管理員 (sysadmin)  
   
@@ -86,10 +87,10 @@ EXEC sp_dropsrvrolemember 'JackO', 'sysadmin';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [建立伺服器角色 &#40;Transact-sql&#41;](../../t-sql/statements/create-server-role-transact-sql.md)   
+ [&#40;Transact-sql&#41;建立伺服器角色 ](../../t-sql/statements/create-server-role-transact-sql.md)   
  [DROP SERVER ROLE &#40;Transact-sql&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)   
- [&#40;Transact-sql&#41;的安全性預存程式](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的安全性預存程式 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addsrvrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
  [sp_droprolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
- [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的系統預存程式 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [安全性函數 &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  

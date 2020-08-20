@@ -1,4 +1,5 @@
 ---
+description: 限制 RANK 的搜索結果
 title: 使用 RANK 限制搜索結果 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58e73100fce87fb6eda3827a41ae6c747eec4104
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f68204154f2bbbc3c78d3aeec7e9221a625f355d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629452"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470133"
 ---
 # <a name="limit-search-results-with-rank"></a>限制 RANK 的搜索結果
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -166,7 +167,7 @@ Rank = min( MaxQueryRank, HitCount * 16 * StatisticalWeight / MaxOccurrence )
   
  **NEAR 的等級**  
   
- CONTAINSTABLE 支援使用 NEAR 選項來查詢彼此相近的兩個或多個搜尋詞彙。 每個傳回之資料列的等級值是以許多參數為基礎。 其中一個主要次序因數是相對於文件長度的符合項目 (或「叫用」  ) 總數。 因此，例如，如果 100 個字的文件和 900 個字的文件包含完全相同的符合項目，100 個字的文件就會具有較高的等級。  
+ CONTAINSTABLE 支援使用 NEAR 選項來查詢彼此相近的兩個或多個搜尋詞彙。 每個傳回之資料列的等級值是以許多參數為基礎。 其中一個主要次序因數是相對於文件長度的符合項目 (或「叫用」**) 總數。 因此，例如，如果 100 個字的文件和 900 個字的文件包含完全相同的符合項目，100 個字的文件就會具有較高的等級。  
   
  資料列中每個叫用的總長度也會根據該叫用之第一個和最後一個搜尋詞彙之間的距離影響該資料列的等級。 距離越小，叫用對資料列等級值造成的影響就越大。 如果全文檢索查詢沒有指定整數做為最大距離，只包含距離大於 100 個邏輯詞彙之叫用的文件將具有等級 0。  
   

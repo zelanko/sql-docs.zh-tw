@@ -1,4 +1,5 @@
 ---
+description: 管理及監視伺服器執行個體的全文檢索搜尋
 title: 管理及監視 SQL Server 執行個體的全文檢索搜尋
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e638dfe871d2ba4582228c097291d7f118fa47d0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e4ad414772e61a0100b52e9e665255922e5b908e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629453"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470108"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>管理及監視伺服器執行個體的全文檢索搜尋
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,9 +37,9 @@ ms.locfileid: "85629453"
   
 #### <a name="to-view-and-change-server-properties-for-full-text-search"></a>檢視與變更全文檢索搜尋的伺服器屬性  
   
-1.  在物件總管中，以滑鼠右鍵按一下伺服器，然後按一下 [屬性]  。  
+1.  在物件總管中，以滑鼠右鍵按一下伺服器，然後按一下 [屬性]。  
   
-2.  在 [伺服器屬性]  對話方塊中，按一下 [進階]  頁面檢視全文檢索搜尋的相關伺服器資訊。 全文檢索屬性如下所示：  
+2.  在 [伺服器屬性]**** 對話方塊中，按一下 [進階]**** 頁面檢視全文檢索搜尋的相關伺服器資訊。 全文檢索屬性如下所示：  
 
     -   **預設全文檢索語言**  
   

@@ -1,4 +1,5 @@
 ---
+description: 刪除原則式管理原則
 title: 刪除原則式管理原則 | Microsoft 文件
 ms.custom: ''
 ms.date: 08/01/2016
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 488f0305-190c-4223-aa5c-e9bd43b520eb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ca019a5183cabcc78468fa504d9bfd98f8532032
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: de66aa15b385ee2aef206e026550aca95e770f12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749431"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470310"
 ---
 # <a name="delete-a-policy-based-management-policy"></a>刪除原則式管理原則
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85749431"
   
 -   **若要使用下列項目來刪除原則：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
@@ -48,12 +49,12 @@ ms.locfileid: "85749431"
   
 2.  按一下加號展開 **[管理]** 資料夾。  
   
-3.  按一下加號展開 **[原則管理]** 。  
+3.  按一下加號展開 **[原則管理]**。  
   
 4.  按一下加號展開 **[原則]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您想要刪除的原則，然後選取 [刪除]  。  
+5.  以滑鼠右鍵按一下您想要刪除的原則，然後選取 [刪除]****。  
   
-6.  在 **[刪除物件]** 對話方塊中，確定已選取正確的條件，然後按一下 **[確定]** 。  
+6.  在 **[刪除物件]** 對話方塊中，確定已選取正確的條件，然後按一下 **[確定]**。  
   
   

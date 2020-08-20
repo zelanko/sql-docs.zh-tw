@@ -1,5 +1,6 @@
 ---
-title: sp_configure_peerconflictdetection （Transact-sql） |Microsoft Docs
+description: sp_configure_peerconflictdetection (Transact-SQL)
+title: sp_configure_peerconflictdetection (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6fb182115af1ff2c3190939d63c209a7d98bed44
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b7ad54f6ff92d150ad862709b0fcc8412911c7fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85870872"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469707"
 ---
 # <a name="sp_configure_peerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,26 +45,26 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @publication =] '*發行*'  
- 這是要設定衝突偵測的發行集名稱。 *發行*集是**sysname**，沒有預設值。  
+ [ @publication =] '*發行*集 '  
+ 這是要設定衝突偵測的發行集名稱。 *發行* 集是 **sysname**，沒有預設值。  
   
  [ @action =] '*action*'  
- 指定發行集啟用或停用衝突偵測。 *動作*是**Nvarchar （5）**，它可以是下列值之一。  
+ 指定發行集啟用或停用衝突偵測。 *動作* 是 **Nvarchar (5) **，它可以是下列值之一。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |**enable**|針對發行集啟用衝突偵測。|  
 |**disable**|針對發行集停用衝突偵測。|  
 |NULL (預設值)||  
   
  [ @originator_id =] *originator_id*  
- 針對點對點拓撲中的節點指定識別碼。 *originator_id*是**int**，預設值是 Null。 如果*動作*設定為 [**啟用**]，這個識別碼就會用於衝突偵測。 請指定拓撲中從未使用過的非零正數識別碼。 如需已經使用的識別碼清單，請查詢 [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) 系統資料表。  
+ 針對點對點拓撲中的節點指定識別碼。 *originator_id* 是 **int**，預設值是 Null。 如果 [ *動作* ] 設定為 [ **啟用**]，則此識別碼會用於衝突偵測。 請指定拓撲中從未使用過的非零正數識別碼。 如需已經使用的識別碼清單，請查詢 [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) 系統資料表。  
   
  [ @conflict_retention =] *conflict_retention*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @continue_onconflict =] '*continue_onconflict*']  
- 決定散發代理程式在偵測到衝突之後是否會繼續處理變更。 *continue_onconflict*是**Nvarchar （5）** ，預設值為 FALSE。  
+ 決定散發代理程式在偵測到衝突之後是否會繼續處理變更。 *continue_onconflict* 是 **Nvarchar (5) ** ，預設值為 FALSE。  
   
 > [!CAUTION]  
 >  我們建議您使用預設值 FALSE。 當這個選項設定為 TRUE 時，散發代理程式會套用具有最高訂閱者識別碼之節點的衝突資料列，藉以嘗試聚合拓撲中的資料。 但是，這個方法無法保證聚合。 您應該確定在偵測到衝突之後，拓撲是一致的。 如需詳細資訊，請參閱＜ [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)＞中的「處理衝突」。  
@@ -71,14 +72,14 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
  [ @local =] '*local*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @timeout =]*超時*  
+ [ @timeout =] *超時*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- sp_configure_peerconflictdetection 用於點對點異動複寫中。 若要使用衝突偵測，所有節點都必須 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 執行或更新版本，而且必須針對所有節點啟用偵測。  
+ sp_configure_peerconflictdetection 用於點對點異動複寫中。 若要使用衝突偵測，所有節點都必須 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 執行或更新版本，且必須針對所有節點啟用偵測。  
   
 ## <a name="permissions"></a>權限  
  需要系統管理員 (sysadmin) 固定伺服器角色或 db_owner 固定資料庫角色中的成員資格。  

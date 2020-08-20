@@ -1,4 +1,5 @@
 ---
+description: 刪除原則式管理條件
 title: 刪除原則式管理條件 | Microsoft 文件
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e04148b8-f6dd-4c50-a5ef-c650b71dbf4d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0c710c1b90f432abdb93d9013dd2310d93f2b651
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3265e970fbad572e09527dedcb35397d811daefa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749453"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470315"
 ---
 # <a name="delete-a-policy-based-management-condition"></a>刪除原則式管理條件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85749453"
   
 -   **若要使用下列項目來刪除條件：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
@@ -48,11 +49,11 @@ ms.locfileid: "85749453"
   
 2.  按一下加號展開 **[管理]** 資料夾。  
   
-3.  按一下加號展開 **[原則管理]** 。  
+3.  按一下加號展開 **[原則管理]**。  
   
 4.  按一下加號展開 **[條件]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您想要刪除的條件，然後選取 [刪除]  。  
+5.  以滑鼠右鍵按一下您想要刪除的條件，然後選取 [刪除]****。  
   
-6.  在 **[刪除物件]** 對話方塊中，確定已選取正確的條件，然後按一下 **[確定]** 。  
+6.  在 **[刪除物件]** 對話方塊中，確定已選取正確的條件，然後按一下 **[確定]**。  
 

@@ -1,4 +1,5 @@
 ---
+description: 資料表名稱
 title: 資料表名稱 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: f7a5cb0a-3be7-4f46-82f9-64ffdbceaa9b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 91a415cd456186f18ef358b9d504145f78152774
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b264999f800e4387099240526f558110c39e27a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303119"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471456"
 ---
 # <a name="table-names"></a>資料表名稱
-當使用 dBASE、Microsoft Excel、Paradox 或文字驅動程式時，在 SELECT 或 DELETE 的 FROM 子句中發生的資料表名稱會在 INSERT 中的 INTO 子句之後，而且在 UPDATE、CREATE TABLE 和 DROP TABLE 之後可以包含有效的路徑、主要名稱和副檔名。  
+使用 dBASE、Microsoft Excel、Paradox 或 Text 驅動程式時，在 SELECT 或 DELETE 的 FROM 子句中出現的資料表名稱、INSERT 中的 INTO 子句之後，以及更新之後、CREATE TABLE 和 DROP TABLE 可以包含有效的路徑、主要名稱和副檔名。  
   
- 在 SQL 語句中的其他地方使用資料表名稱並不支援使用路徑或延伸，但只會接受主要名稱（例如，從 C:\ABC\EMP EMP）。  
+ 在 SQL 語句中的其他位置使用資料表名稱並不支援使用路徑或延伸模組，但只會接受主要名稱 (例如，從 C:\ABC\EMP) EMP。  
   
- 您可以使用相互關聯名稱（別名）。 例如：  
+ 您可以使用)  (別名的相互關聯名稱。 例如：  
   
 ```  
 SELECT *    

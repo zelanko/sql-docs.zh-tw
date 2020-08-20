@@ -1,5 +1,6 @@
 ---
-title: sp_delete_notification （Transact-sql） |Microsoft Docs
+description: sp_delete_notification (Transact-SQL)
+title: sp_delete_notification (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b55d3898-596d-47a5-a4f0-d65dc736223b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 05682482a720bbf14a17497299676ac6a0cc23d4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 65a8442c4f957cda4db9c33e0988ba5dca05ca88
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862639"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469613"
 ---
 # <a name="sp_delete_notification-transact-sql"></a>sp_delete_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,12 +42,12 @@ sp_delete_notification
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @alert_name = ] 'alert'`警示的名稱。 *警示*為**sysname**，沒有預設值。  
+`[ @alert_name = ] 'alert'` 警示的名稱。 *警示* 是 **sysname**，沒有預設值。  
   
-`[ @operator_name = ] 'operator'`操作員的名稱。 *運算子*是**sysname**，沒有預設值。  
+`[ @operator_name = ] 'operator'` 操作員的名稱。 *運算子* 是 **sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="result-sets"></a>結果集  
  None  
@@ -55,7 +56,7 @@ sp_delete_notification
  移除通知只會移除通知；警示和操作員會保留不動。  
   
 ## <a name="permissions"></a>權限  
- 若要執行這個預存程式，使用者必須被授與**系統管理員（sysadmin** ）固定伺服器角色。  
+ 若要執行這個預存程式，使用者必須被授與 **系統管理員（sysadmin** ）固定伺服器角色。  
   
 ## <a name="examples"></a>範例  
  下列範例會在發生 `François Ajenstat` 警示時，移除傳給 `Test Alert` 操作員的通知。  
@@ -71,7 +72,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_add_alert &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
+ [sp_add_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
  [sp_add_notification &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
  [sp_add_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_delete_alert &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)   

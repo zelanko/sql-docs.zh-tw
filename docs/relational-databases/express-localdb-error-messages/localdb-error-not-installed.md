@@ -1,4 +1,5 @@
 ---
+description: LOCALDB_ERROR_NOT_INSTALLED
 title: LOCALDB_ERROR_NOT_INSTALLED |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -9,12 +10,12 @@ ms.topic: reference
 ms.assetid: e7912885-1c14-409b-9022-83ad4c36f3bd
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7cc95b39eb41baee83791f6e87d235676feb9831
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 9caaf20096c489eb4e7ff5ff4620c22acda57436
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246015"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470585"
 ---
 # <a name="localdb_error_not_installed"></a>LOCALDB_ERROR_NOT_INSTALLED
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "87246015"
 |事件識別碼|278|  
 |事件來源|SQL Server 本機資料庫執行階段 12.0|  
 |元件|本機資料庫執行階段 API|  
-|訊息文字|注意：郵件內文是空的，因為此訊息表示整個 LocalDB API （包括將 HRESULT 對應至郵件內文的 FormatMessage 函數）無法使用。|  
+|訊息文字|注意：郵件內文是空的，因為此訊息表示整個 LocalDB API (包括將 HRESULT 對應至郵件內文的 FormatMessage 函式，) 無法使用的功能。|  
   
 ## <a name="explanation"></a>說明  
  電腦上未安裝本機資料庫執行階段。  

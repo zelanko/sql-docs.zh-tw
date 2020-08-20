@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_611
 title: MSSQLSERVER_611 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ac6a213f-5c38-44ad-bc85-a62863786614
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 92875014b61628330f42a2ee9e631eb4b3b89ba9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 33076c77372ac62f154fbe5d3c60273447be99e9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733805"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470958"
 ---
 # <a name="mssqlserver_611"></a>MSSQLSERVER_611
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

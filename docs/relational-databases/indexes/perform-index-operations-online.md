@@ -1,4 +1,5 @@
 ---
+description: 線上執行索引作業
 title: 線上執行索引作業 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/15/2019
@@ -15,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 10561f70eaed5aad48e62f0cd4e87a1c2851bcbe
-ms.sourcegitcommit: 7ce4a81c1b91239c8871c50f97ecaf387f439f6c
+ms.openlocfilehash: c8bb42554935076679107d78ee5c2eed0b838797
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86217776"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470435"
 ---
 # <a name="perform-index-operations-online"></a>線上執行索引作業
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,5 +1,6 @@
 ---
-title: 如何：將資料列插入 Geography 資料行（ODBC） |Microsoft Docs
+description: 如何：將資料列插入 Geography 資料行 (ODBC)
+title: 如何：將資料列插入至 Geography 資料行 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,11 +12,12 @@ ms.assetid: 0b6516f7-1fc0-4b01-a2d0-add0571070d5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a952f0442f41ede8c2151a580fb4ad19b516d1cf
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: eb225cdb2a1407ecc4941823471bd569c6d9b943
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009414"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470445"
 ---
 # <a name="how-to-insert-rows-into-geography-column-odbc"></a>如何：將資料列插入 Geography 資料行 (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,10 +28,10 @@ ms.locfileid: "86009414"
   
  此範例不適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的任何 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本。  
   
- 如需空間儲存體的詳細資訊，請參閱[空間資料 &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)。  
+ 如需空間儲存體的詳細資訊，請參閱 [SQL Server&#41;的空間資料 &#40;](../../relational-databases/spatial/spatial-data-sql-server.md)。  
   
 ## <a name="example"></a>範例  
- 第一個（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）程式代碼清單會建立此範例所使用的資料表。  
+ 第一個 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式代碼清單會建立此範例所使用的資料表。  
   
  使用 odbc32.lib 和 user32.lib 編譯第二個 (C++) 程式碼清單。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
   
@@ -37,7 +39,7 @@ ms.locfileid: "86009414"
   
  這個範例會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 若要連接到具名執行個體，請變更 ODBC 資料來源的定義，以便使用下列格式指定執行個體：server\namedinstance。 根據預設，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 會安裝至具名執行個體。  
   
- 第三個（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）程式代碼清單會刪除此範例所使用的資料表。  
+ 第三個 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式代碼清單會刪除此範例所使用的資料表。  
   
 ```sql
 use tempdb  

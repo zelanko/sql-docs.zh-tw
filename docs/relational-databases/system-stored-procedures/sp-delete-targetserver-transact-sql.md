@@ -1,5 +1,6 @@
 ---
-title: sp_delete_targetserver （Transact-sql） |Microsoft Docs
+description: sp_delete_targetserver (Transact-SQL)
+title: sp_delete_targetserver (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4489e34ec83bd3981e464e72cb8e72885fcc994f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 290da3e982e98287305e2e9f277037fea0e8f86a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862193"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469601"
 ---
 # <a name="sp_delete_targetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,23 +42,23 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @server_name = ] 'server'`要移除為可用目標伺服器的伺服器名稱。 *伺服器*是**Nvarchar （30）**，沒有預設值。  
+`[ @server_name = ] 'server'` 要移除為可用目標伺服器的伺服器名稱。 *伺服器* 是 **Nvarchar (30) **，沒有預設值。  
   
-`[ @clear_downloadlist = ] clear_downloadlist`指定是否要清除目標伺服器的下載清單。 *clear_downloadlist*是類型**bit**，預設值是**1**。 當*clear_downloadlist*為**1**時，此程式會先清除伺服器的下載清單，再刪除伺服器。 當*clear_downloadlist*為**0**時，不會清除下載清單。  
+`[ @clear_downloadlist = ] clear_downloadlist` 指定是否要清除目標伺服器的下載清單。 *clear_downloadlist* 是類型 **bit**，預設值是 **1**。 當 *clear_downloadlist* 為 **1**時，此程式會在刪除伺服器之前清除伺服器的下載清單。 當 *clear_downloadlist* 為 **0**時，不會清除下載清單。  
   
-`[ @post_defection = ] post_defection`指定是否要將瑕疵指示張貼至目標伺服器。 *post_defection*是類型**bit**，預設值是1。 當*post_defection*為**1**時，此程式會在刪除伺服器之前，將瑕疵指示張貼到目標伺服器。 當*post_defection*為**0**時，此程式不會將缺失指示張貼至目標伺服器。  
+`[ @post_defection = ] post_defection` 指定是否要將瑕疵指令張貼至目標伺服器。 *post_defection* 是類型 **bit**，預設值是1。 當 *post_defection* 為 **1**時，此程式會在刪除伺服器之前，將缺失指令張貼至目標伺服器。 當 *post_defection* 是 **0**時，此程式不會將瑕疵指令張貼到目標伺服器。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="result-sets"></a>結果集  
  None  
   
 ## <a name="remarks"></a>備註  
- 刪除目標伺服器的一般方式是呼叫目標伺服器上的**sp_msx_defect** 。 只有在需要手動脫離時，才使用**sp_delete_targetserver** 。  
+ 刪除目標伺服器的一般方式是在目標伺服器上呼叫 **sp_msx_defect** 。 只有在需要手動脫離時，才使用 **sp_delete_targetserver** 。  
   
 ## <a name="permissions"></a>權限  
- 若要執行這個預存程式，使用者必須被授與**系統管理員（sysadmin** ）固定伺服器角色。  
+ 若要執行這個預存程式，使用者必須被授與 **系統管理員（sysadmin** ）固定伺服器角色。  
   
 ## <a name="examples"></a>範例  
  下列範例會從可用的作業伺服器群組中，移除 `LONDON1` 伺服器。  

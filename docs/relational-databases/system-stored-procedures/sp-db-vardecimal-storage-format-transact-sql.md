@@ -1,5 +1,6 @@
 ---
-title: sp_db_vardecimal_storage_format （Transact-sql） |Microsoft Docs
+description: sp_db_vardecimal_storage_format (Transact-SQL)
+title: sp_db_vardecimal_storage_format (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6122a9b2720331b8211a06db051492946f4209b4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9e0c834696f37dd61fcc5830d9e5ef40302e5b7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85867578"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469683"
 ---
 # <a name="sp_db_vardecimal_storage_format-transact-sql"></a>sp_db_vardecimal_storage_format (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,10 +49,10 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
   
 ## <a name="arguments"></a>引數  
  [ @dbname =] '*database_name*'  
- 這是即將變更儲存格式之資料庫的名稱。 *database_name*是**sysname**，沒有預設值。 如果省略資料庫名稱，就會傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中所有資料庫的 Vardecimal 儲存格式狀態。  
+ 這是即將變更儲存格式之資料庫的名稱。 *database_name* 是 **sysname**，沒有預設值。 如果省略資料庫名稱，就會傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中所有資料庫的 Vardecimal 儲存格式狀態。  
   
- [ @vardecimal_storage_format =] {' 在 ' | ' 上OFF '}  
- 指定是否啟用 Vardecimal 儲存格式。 @vardecimal_storage_format 可以是 ON 或 OFF。 參數為**Varchar （3）**，沒有預設值。 如果提供了資料庫名稱，但省略 @vardecimal_storage_format，就會傳回指定之資料庫的目前設定。 這個引數對於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本沒有任何作用。  
+ @vardecimal_storage_format在 ' | ' 上的 [=] {'OFF '}  
+ 指定是否啟用 Vardecimal 儲存格式。 @vardecimal_storage_format 可以是 ON 或 OFF。 參數是 **Varchar (3) **，沒有預設值。 如果提供了資料庫名稱，但省略 @vardecimal_storage_format，就會傳回指定之資料庫的目前設定。 這個引數對於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本沒有任何作用。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -74,7 +75,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
   
  若要將 Vardecimal 儲存格式狀態變更為 OFF，資料庫就必須設定為簡單復原模式。 當資料庫設定為簡單復原模式時，就會中斷記錄鏈結。 在您將 Vardecimal 儲存格式狀態設定為 OFF 之後，請執行完整資料庫備份。  
   
- 如果有資料表正使用 Vardecimal 資料庫壓縮，將此狀態變更為 OFF 將會失敗。 若要變更資料表的儲存格式，請使用[sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)。 若要判斷資料庫中的哪個資料表正在使用 Vardecimal 儲存格式，請使用 `OBJECTPROPERTY` 函數並搜尋 `TableHasVarDecimalStorageFormat` 屬性，如下列範例所示。  
+ 如果有資料表正使用 Vardecimal 資料庫壓縮，將此狀態變更為 OFF 將會失敗。 若要變更資料表的儲存格式，請使用 [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)。 若要判斷資料庫中的哪個資料表正在使用 Vardecimal 儲存格式，請使用 `OBJECTPROPERTY` 函數並搜尋 `TableHasVarDecimalStorageFormat` 屬性，如下列範例所示。  
   
 ```  
 USE AdventureWorks2012 ;  
@@ -109,6 +110,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [&#40;Transact-sql&#41;的資料庫引擎預存程式 ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

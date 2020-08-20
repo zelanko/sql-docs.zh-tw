@@ -1,5 +1,6 @@
 ---
-title: sp_dbmmonitordropmonitoring （Transact-sql） |Microsoft Docs
+description: sp_dbmmonitordropmonitoring (Transact-SQL)
+title: sp_dbmmonitordropmonitoring (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6f2d552d-bfd7-47a5-8dcb-05560aa1a32d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0382c4aba6e71cace73ec74febae0fa654a09a30
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 23fd7c300f7eed9716347d32a7554660a48fc535
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85866146"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469641"
 ---
 # <a name="sp_dbmmonitordropmonitoring-transact-sql"></a>sp_dbmmonitordropmonitoring (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +50,7 @@ sp_dbmmonitordropmonitoring
  None  
   
 ## <a name="permissions"></a>權限  
- 需要**系統管理員（sysadmin** ）固定伺服器角色中的成員資格。  
+ 需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
  下列範例會在所有伺服器執行個體上的鏡像資料庫中卸除資料庫鏡像監視。  

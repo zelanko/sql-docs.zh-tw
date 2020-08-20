@@ -1,4 +1,5 @@
 ---
+description: 將資料庫設定為單一使用者模式
 title: 將資料庫設定為單一使用者模式 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fb5254eb-b635-4b39-8361-136fd36f2b1f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ba2485d34df61b931afef75d68cddbde6b01289f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 591a2d22a603c51f44bdfa16d4072e6b9ad36c73
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763381"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471134"
 ---
 # <a name="set-a-database-to-single-user-mode"></a>將資料庫設定為單一使用者模式
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "85763381"
   
      [限制事項](#Restrictions)  
   
-     [必要條件](#Prerequisites)  
+     [先決條件](#Prerequisites)  
   
      [安全性](#Security)  
   
@@ -62,13 +63,13 @@ ms.locfileid: "85763381"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  以滑鼠右鍵按一下要變更的資料庫，然後按一下 [屬性]  。  
+2.  以滑鼠右鍵按一下要變更的資料庫，然後按一下 [屬性]****。  
   
 3.  在 [資料庫屬性]  對話方塊中按一下 [選項]  頁面。  
   
-4.  從 **[限制存取]** 選項中，選取 **[單一]** 。  
+4.  從 **[限制存取]** 選項中，選取 **[單一]**。  
   
-5.  如果其他使用者已連接到資料庫，則會出現 **[開啟連接]** 訊息。 若要變更屬性並關閉其他所有連接，請按一下 **[是]** 。  
+5.  如果其他使用者已連接到資料庫，則會出現 **[開啟連接]** 訊息。 若要變更屬性並關閉其他所有連接，請按一下 **[是]**。  
   
  您也可使用這個程序，將資料庫設定為多個或限制存取。 如需限制存取選項的詳細資訊，請參閱[資料庫屬性 &#40;選項頁面&#41;](../../relational-databases/databases/database-properties-options-page.md)。  
   

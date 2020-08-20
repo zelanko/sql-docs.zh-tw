@@ -1,4 +1,5 @@
 ---
+description: 變更發行集與發行項屬性
 title: 變更發行集與發行項屬性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -17,12 +18,12 @@ ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8d2da3afadaf9dc56a7003b007be28cf6c3f1c63
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b11e768bac90b70174c736ae828c39a9a78b3bb9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914431"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470157"
 ---
 # <a name="change-publication-and-article-properties"></a>變更發行集與發行項屬性
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "86914431"
   
 ## <a name="publication-properties-for-snapshot-and-transactional-replication"></a>快照式和異動複寫的發行集屬性  
   
-|描述|預存程序|屬性|需求|  
+|描述|預存程序|屬性|規格需求|  
 |-----------------|----------------------|----------------|------------------|  
 |變更快照集格式。|**sp_changepublication**|**sync_method**|新的快照集。|  
 |變更快照集位置。|**sp_changepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|新的快照集。|  
@@ -44,7 +45,7 @@ ms.locfileid: "86914431"
   
 ## <a name="article-properties-for-snapshot-and-transactional-replication"></a>快照式和異動複寫的發行項屬性  
   
-|描述|預存程序|屬性|需求|  
+|描述|預存程序|屬性|規格需求|  
 |-----------------|----------------------|----------------|------------------|  
 |卸除發行項|**sp_droparticle**|所有參數。|可以在建立訂閱之前卸除發行項。 使用預存程序，可以卸除發行項訂閱；使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]，必須卸除、重新建立並同步處理整個訂閱。 如需詳細資訊，請參閱[在現有發行集中新增和卸除發行項](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)。|  
 |變更資料行篩選。|**sp_articlecolumn**|`@column`<br /><br /> `@operation`|新的快照集。<br /><br /> 重新初始化訂閱。|  
@@ -62,7 +63,7 @@ ms.locfileid: "86914431"
   
 ## <a name="publication-properties-for-merge-replication"></a>合併式複寫的發行集屬性  
   
-|描述|預存程序|屬性|需求|  
+|描述|預存程序|屬性|規格需求|  
 |-----------------|----------------------|----------------|------------------|  
 |變更快照集格式|**sp_changemergepublication**|**sync_mode**|新的快照集。|  
 |變更快照集位置。|**sp_changemergepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|新的快照集。|  
@@ -81,7 +82,7 @@ ms.locfileid: "86914431"
   
 ## <a name="article-properties-for-merge-replication"></a>合併式複寫的發行項屬性  
   
-|描述|預存程序|屬性|需求|  
+|描述|預存程序|屬性|規格需求|  
 |-----------------|----------------------|----------------|------------------|  
 |卸除發行項，其中發行項在發行集中具有最終參數化篩選。|**sp_dropmergearticle**|所有參數|新的快照集。<br /><br /> 重新初始化訂閱。|  
 |卸除發行項，其中發行項是聯結篩選或邏輯記錄中的父系 (這會有卸除聯結的副作用)。|**sp_dropmergearticle**|所有參數|新的快照集。<br /><br /> 重新初始化訂閱。|  

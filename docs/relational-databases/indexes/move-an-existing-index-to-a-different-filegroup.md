@@ -1,4 +1,5 @@
 ---
+description: 將現有的索引移至不同的檔案群組
 title: 將現有的索引移至不同的檔案群組 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 01b7f9191c34e9c83c472abfb560c365e9e5f9b0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: abbd77be3e20cc69bc12cd69f07fa82ec99d95db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771704"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470457"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>將現有的索引移至不同的檔案群組
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,19 +64,19 @@ ms.locfileid: "85771704"
   
 2.  按一下加號展開 **[資料表]** 資料夾。  
   
-3.  以滑鼠右鍵按一下包含您要移動之索引的資料表，然後選取 [設計]  。  
+3.  以滑鼠右鍵按一下包含您要移動之索引的資料表，然後選取 [設計]****。  
   
-4.  在 [資料表設計工具]  功能表上，按一下 [索引/索引鍵]  。  
+4.  在 [資料表設計工具] 功能表上，按一下 [索引/索引鍵]。  
   
 5.  選取您要移動的索引。  
   
-6.  在主要方格中，展開 **[資料空間規格]** 。  
+6.  在主要方格中，展開 **[資料空間規格]**。  
   
 7.  選取 **[檔案群組或分割區配置名稱]** ，然後從清單中選取要將索引移至其中的檔案群組或分割區配置。  
   
-8.  按一下 [關閉]  。  
+8.  按一下 [關閉] 。  
   
-9. 在 [檔案] 功能表上，選取 [儲存 _table_name_]。  
+9. 在 [檔案]**** 功能表上，選取 [儲存 _table_name_]****。  
 
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>若要在物件總管中將現有的索引移到不同的檔案群組  
   
@@ -87,9 +88,9 @@ ms.locfileid: "85771704"
   
 4.  按一下加號展開 **[索引]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您要移動的索引，然後選取 [屬性]  。  
+5.  以滑鼠右鍵按一下您要移動的索引，然後選取 [屬性]****。  
   
-6.  在 **[選取頁面]** 底下，選取 **[儲存體]** 。  
+6.  在 **[選取頁面]** 底下，選取 **[儲存體]**。  
   
 7.  選取要移動索引的檔案群組。  
   
@@ -101,7 +102,7 @@ ms.locfileid: "85771704"
   
 8.  按一下 [確定]  。  
   
- 下列資訊可從 [索引屬性 - **index_name**]  對話方塊的 [儲存體]  頁面取得：  
+ 下列資訊可從 [索引屬性 - _index_name_] 對話方塊的 [儲存體] 頁面取得：  
   
  **檔案群組**  
  在指定的檔案群組中儲存索引。 清單僅顯示標準 (資料列) 檔案群組。 預設清單選取項目為資料庫的 PRIMARY 檔案群組。  

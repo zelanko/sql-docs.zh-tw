@@ -1,4 +1,5 @@
 ---
+description: SQL:StmtRecompile 事件類別
 title: SQL:StmtRecompile 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 3a134751-3e93-4fe8-bf22-1e0561189293
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e9bcf25f84e13ddd7c21ed8752a6ac0bbde6ea0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d46e1d95da0fe802dd2110d3a2c1d5c0768799c4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790985"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470718"
 ---
 # <a name="sqlstmtrecompile-event-class"></a>SQL:StmtRecompile 事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

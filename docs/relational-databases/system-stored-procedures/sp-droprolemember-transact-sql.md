@@ -1,4 +1,5 @@
 ---
+description: sp_droprolemember (Transact-SQL)
 title: sp_droprolemember (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
@@ -18,12 +19,12 @@ ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
 ms.author: vanto
 author: VanMSFT
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ffff6387f2129c2e3bdb2af726e6b87e665554e
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 1bbd0dfdeedb0954bb82f97dae6419a9a7f2d852
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180069"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469545"
 ---
 # <a name="sp_droprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
 
@@ -53,9 +54,9 @@ sp_droprolemember 'role' ,
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @rolename = ] 'role'` 這是要從中移除成員的角色名稱。 *role* 是 **sysname**，沒有預設值。 *角色* 必須存在於目前的資料庫中。  
+`[ @rolename = ] 'role'` 這是要移除成員的角色名稱。 *role* 是 **sysname**，沒有預設值。 *角色* 必須存在於目前的資料庫中。  
   
-`[ @membername = ] 'security_account'` 這是從角色移除的安全性帳戶名稱。 *security_account* 是 **sysname**，沒有預設值。 *security_account* 可以是資料庫使用者、另一個資料庫角色、windows 登入或 windows 群組。 *security_account* 必須存在於目前的資料庫中。  
+`[ @membername = ] 'security_account'` 這是要從角色移除的安全性帳戶名稱。 *security_account* 是 **sysname**，沒有預設值。 *security_account* 可以是資料庫使用者、另一個資料庫角色、windows 登入或 windows 群組。 *security_account* 必須存在於目前的資料庫中。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -65,7 +66,7 @@ sp_droprolemember 'role' ,
   
  若要從固定伺服器角色中移除使用者，請使用 sp_dropsrvrolemember。 您無法從 public 角色中移除使用者，也不能從任何角色中移除 dbo。  
   
- 使用 sp_helpuser 查看角色的成員 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並使用 ALTER role 將成員新增至角色。  
+ 使用 sp_helpuser 查看角色的成員 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並使用 ALTER role 將成員加入至角色。  
   
 ## <a name="permissions"></a>權限  
  需要角色的 ALTER 權限。  

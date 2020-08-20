@@ -1,5 +1,6 @@
 ---
-title: sys.databases index_columns （Transact-sql） |Microsoft Docs
+description: sys.index_columns (Transact-SQL)
+title: sys. index_columns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -20,28 +21,29 @@ ms.assetid: 211471aa-558a-475c-9b94-5913c143ed12
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e6ad338ac15944ab2ac7113dc134ecec1f143a3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a7ab62980770499214f05fce8cfc1096aa7d088f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000518"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469963"
 ---
 # <a name="sysindex_columns-transact-sql"></a>sys.index_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  針對屬於**sys.databases**索引或未排序資料表（堆積）一部分的每個資料行，各包含一個資料列。  
+  針對每個資料行，各包含一個資料列，這些資料行是 **sys. 索引** 索引或未排序資料表 (堆積) 的一部分。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|索引定義所在的物件識別碼。|  
 |**index_id**|**int**|資料行定義所在的索引識別碼。|  
-|**index_column_id**|**int**|索引資料行的識別碼。 **index_column_id**只有在**index_id**內才是唯一的。|  
-|**column_id**|**int**|**Object_id**中的資料行識別碼。<br /><br /> 0 = 非叢集索引中的資料列識別碼 (RID)。<br /><br /> **column_id**只有在**object_id**內才是唯一的。|  
-|**key_ordinal**|**tinyint**|索引鍵資料行組中的序數 (以 1 為基底)。<br /><br /> 0 = 不是索引鍵資料行，或是 XML 索引、資料行存放區索引或空間索引。<br /><br /> 注意： XML 或空間索引不可以是索引鍵，因為基礎資料行無法比較，這表示無法排序其值。|  
+|**index_column_id**|**int**|索引資料行的識別碼。 **index_column_id** 只有在 **index_id**內才是唯一的。|  
+|**column_id**|**int**|**Object_id**中的資料行識別碼。<br /><br /> 0 = 非叢集索引中的資料列識別碼 (RID)。<br /><br /> **column_id** 只有在 **object_id**內才是唯一的。|  
+|**key_ordinal**|**tinyint**|索引鍵資料行組中的序數 (以 1 為基底)。<br /><br /> 0 = 不是索引鍵資料行，或是 XML 索引、資料行存放區索引或空間索引。<br /><br /> 注意： XML 或空間索引不可以是索引鍵，因為基礎資料行是無法比較的，也就是說，它們的值無法排序。|  
 |**partition_ordinal**|**tinyint**|分割區資料行組中的序數 (以 1 為基底)。 叢集資料行存放區索引最多可以有 1 個分割區資料行。<br /><br /> 0 = 不是分割區資料行。|  
 |**is_descending_key**|**bit**|1 = 索引鍵資料行是以遞減方式排序。<br /><br /> 0 = 索引鍵資料行是以遞增方式排序，或者資料行是資料行存放區索引或雜湊索引的一部分。|  
-|**is_included_column**|**bit**|1 = 資料行是利用 CREATE INDEX INCLUDE 子句加入索引中的非索引鍵資料行，或者資料行是資料行存放區索引的一部分。<br /><br /> 0 = 資料行並未加入。<br /><br /> 以隱含方式加入的資料行，因為它們是叢集索引鍵的一部分，所以不會列在**sys.databases 中。 index_columns**。<br /><br /> 因為是分割區資料行而隱含新增的資料行會當做 0 傳回。| 
-|**column_store_order_ordinal**</br> 適用于： Azure SQL 資料倉儲（預覽）|**tinyint**|排序的叢集資料行存放區索引中 order 資料行集合內的序數（以1為基底）。|
+|**is_included_column**|**bit**|1 = 資料行是利用 CREATE INDEX INCLUDE 子句加入索引中的非索引鍵資料行，或者資料行是資料行存放區索引的一部分。<br /><br /> 0 = 資料行並未加入。<br /><br /> 因為資料行是叢集索引鍵的一部分，所以不會列在 **sys. index_columns**中，因此會隱含地加入資料行。<br /><br /> 因為是分割區資料行而隱含新增的資料行會當做 0 傳回。| 
+|**column_store_order_ordinal**</br> 適用于： Azure SQL 資料倉儲 (預覽) |**tinyint**|序數 (以1為基礎) 在排序的叢集資料行存放區索引中的 order 資料行集合內。|
   
 ## <a name="permissions"></a>權限
 
@@ -83,12 +85,12 @@ IX_BillOfMaterials_UnitMeasureCode                         UnitMeasureCode    1 
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的物件目錄檢視](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [&#40;Transact-sql&#41;的目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [物件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
+ [sys. objects &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
- [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+ [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [查詢 SQL Server 系統目錄 FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

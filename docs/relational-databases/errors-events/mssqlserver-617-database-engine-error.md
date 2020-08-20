@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_617
 title: MSSQLSERVER_617 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 213545d9-08a7-4427-bfd1-8b7e16644281
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e921b1f17567a4e25455b91d022c827c6175d8d0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f336f8b1d8cc6f20e259715f6396ce1f5e126d43
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733790"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470920"
 ---
 # <a name="mssqlserver_617"></a>MSSQLSERVER_617
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

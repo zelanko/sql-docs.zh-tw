@@ -1,4 +1,5 @@
 ---
+description: 分割資料表與索引
 title: 資料分割資料表與索引 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/20/2016
@@ -16,12 +17,12 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e99e37091732143f3cf412904f15f567a229e1c1
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 5cbc395652b7c829fe3694bf5d040a319073e958
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243819"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470357"
 ---
 # <a name="partitioned-tables-and-indexes"></a>分割資料表與索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

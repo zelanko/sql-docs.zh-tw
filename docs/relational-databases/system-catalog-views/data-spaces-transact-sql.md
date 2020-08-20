@@ -1,5 +1,6 @@
 ---
-title: 資料空間（Transact-sql） |Microsoft Docs
+description: 資料空間 (Transact-SQL)
+title: " (Transact-sql) 的資料空間 |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ab95e6f8-51dc-4018-9d19-cc0a6de893a5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 01248e73c56ead5234e625105801f7e293518e54
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1ca8f547c24c09733d2313dd56a0e38e5da82ab8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918034"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470060"
 ---
 # <a name="data-spaces-transact-sql"></a>資料空間 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "86918034"
 :::row-end:::
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的系統檢視](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [&#40;Transact-sql&#41;的系統檢視 ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

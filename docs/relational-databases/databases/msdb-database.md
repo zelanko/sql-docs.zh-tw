@@ -1,4 +1,5 @@
 ---
+description: msdb 資料庫
 title: msdb 資料庫 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/10/2016
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: e1117deac53e93f208e7f93af9f20ae38e603fe3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 02632ce64dbd7b10571e559daf8fde4475a4e37b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728418"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471190"
 ---
 # <a name="msdb-database"></a>msdb 資料庫
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

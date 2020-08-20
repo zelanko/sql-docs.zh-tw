@@ -1,5 +1,6 @@
 ---
-title: 使用語句（ODBC） |Microsoft Docs
+description: 使用陳述式 (ODBC)
+title: 使用 (ODBC) 的語句 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,11 +14,12 @@ ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49e653ff458ee816a00654e574b27fe2d9f327b2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1d3a6cead69651eedec63d9c34e24674ec6dd6ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009422"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470414"
 ---
 # <a name="use-a-statement-odbc"></a>使用陳述式 (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -72,6 +74,6 @@ ms.locfileid: "86009422"
 8.  使用 SQL_HANDLE_STMT 的 *HandleType* 呼叫 [SQLFreeHandle](../../../relational-databases/native-client-odbc-api/sqlfreehandle.md)，以釋放陳述式控制代碼。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行查詢 &#40;ODBC&#41;的使用說明主題](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [&#40;ODBC&#41;執行查詢的 how to 主題 ](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   
