@@ -1,4 +1,5 @@
 ---
+description: 呼叫方法
 title: 呼叫方法 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
@@ -16,23 +17,24 @@ ms.assetid: c88d5c5f-9ff0-4f84-b2b6-24c6b90fa15e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 82f8808819a94493998d7862592f65082ef8191a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: bfcb45457c5b9625bb4f1eda3704c37e9e89cbc8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006389"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498555"
 ---
 # <a name="calling-methods"></a>呼叫方法
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-  方法會執行與物件相關的特定工作，例如在資料庫上發出**檢查點**，或要求實例的登入列舉清單 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+  方法會執行與物件相關的特定工作，例如在資料庫上發出 **檢查點** ，或要求實例的登入列舉清單 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
  方法會在物件上執行作業。 方法可以採用參數，而且通常有一個傳回值。 傳回值可以是簡單資料類型、複雜物件，或包含許多成員的結構。  
   
  使用例外狀況處理來偵測方法是否成功。 如需詳細資訊，請參閱 [Handling SMO Exceptions](../../../relational-databases/server-management-objects-smo/create-program/handling-smo-exceptions.md)。  
   
 ## <a name="examples"></a>範例  
-如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱  [Visual Studio .NET 中的建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
  
   
 ## <a name="using-a-simple-smo-method-in-visual-basic"></a>在 Visual Basic 中使用簡單 SMO 方法  

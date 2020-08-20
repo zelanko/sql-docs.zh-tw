@@ -1,4 +1,5 @@
 ---
+description: 在 SMO 中設定 SQL Server
 title: 在 SMO 中設定 SQL Server
 ms.custom: seo-dt-2019
 ms.date: 08/06/2017
@@ -14,16 +15,17 @@ ms.assetid: 0a372643-15cb-45a7-8665-04f1215df8ed
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e685a8c2980cf3faa375e9fb13b3d6d873f1735
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 82b797bdf365b5b1226f63bae31047f4c6aa29c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000269"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498541"
 ---
 # <a name="configuring-sql-server-in-smo"></a>在 SMO 中設定 SQL Server
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-  在 SMO 中，物件 <xref:Microsoft.SqlServer.Management.Smo.Information> 、 <xref:Microsoft.SqlServer.Management.Smo.Settings> 物件、物件 <xref:Microsoft.SqlServer.Management.Smo.UserOptions> 和物件都 <xref:Microsoft.SqlServer.Management.Smo.Configuration> 包含實例的設定和資訊 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+  在 SMO 中， <xref:Microsoft.SqlServer.Management.Smo.Information> 物件、物件、物件 <xref:Microsoft.SqlServer.Management.Smo.Settings> <xref:Microsoft.SqlServer.Management.Smo.UserOptions> 和 <xref:Microsoft.SqlServer.Management.Smo.Configuration> 物件包含實例的設定和資訊 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 具有多個描述已安裝之執行個體行為的屬性。 這些屬性描述啟動選項、伺服器預設值、檔案和目錄、系統和處理資訊、產品和版本、連接資訊、記憶體選項、語言和定序選取項目，以及驗證模式。  
   
@@ -34,14 +36,14 @@ ms.locfileid: "86000269"
   
  <xref:Microsoft.SqlServer.Management.Smo.UserOptions> 物件屬性包含目前與算術、ANSI 標準和交易相關之連接行為的詳細資訊。  
   
- 此外也有一組由 <xref:Microsoft.SqlServer.Management.Smo.Configuration> 物件所代表的組態選項。 其中包含一組屬性，代表可由 **sp_configure** 預存程序修改的選項。 [**優先權提升**]、[復原**間隔**] 和 [**網路封包大小**] 等選項會控制實例的效能 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 這其中許多選項都可以動態變更，但在某些情況下，當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的執行個體重新啟動時，會先設定值然後再加以變更。  
+ 此外也有一組由 <xref:Microsoft.SqlServer.Management.Smo.Configuration> 物件所代表的組態選項。 其中包含一組屬性，代表可由 **sp_configure** 預存程序修改的選項。 **優先權提升**、復原**間隔**和**網路封包大小**等選項，會控制實例的效能 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 這其中許多選項都可以動態變更，但在某些情況下，當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的執行個體重新啟動時，會先設定值然後再加以變更。  
   
  每個組態選項都有 <xref:Microsoft.SqlServer.Management.Smo.Configuration> 物件屬性。 您可以使用 <xref:Microsoft.SqlServer.Management.Smo.ConfigProperty> 物件來修改全域組態設定。 許多屬性都擁有最大和最小值，這些值也會儲存為 <xref:Microsoft.SqlServer.Management.Smo.ConfigProperty> 屬性。 這些屬性需要 <xref:Microsoft.SqlServer.Management.Smo.ConfigurationBase.Alter%2A> 方法才能認可對實例的變更 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
  <xref:Microsoft.SqlServer.Management.Smo.Configuration> 物件中的所有組態選項都必須由系統管理員變更。  
   
 ## <a name="examples"></a>範例  
- 在下列的程式碼範例中，您必須選取用於建立應用程式的程式設計環境、程式設計範本和程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 在下列的程式碼範例中，您必須選取用於建立應用程式的程式設計環境、程式設計範本和程式設計語言。 如需詳細資訊，請參閱 [Visual Studio .NET 中的建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="modifying-sql-server-configuration-options-in-visual-basic"></a>在 Visual Basic 中修改 SQL Server 組態選項  
  此程式碼範例會顯示如何在 Visual Basic .NET 中更新組態選項， 也會擷取並顯示有關指定組態選項最大及最小值的詳細資訊。 最後，此程式會通知使用者變更是否是以動態方式進行，或者在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的執行個體重新啟動之前都會儲存變更。  
@@ -74,7 +76,7 @@ End If
 ``` 
   
 ## <a name="modifying-sql-server-settings-in-visual-basic"></a>在 Visual Basic 中修改 SQL Server 設定  
- 此程式碼範例會在和中顯示實例的相關資訊 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] <xref:Microsoft.SqlServer.Management.Smo.Information> <xref:Microsoft.SqlServer.Management.Smo.Settings> ，並修改 <xref:Microsoft.SqlServer.Management.Smo.Settings> 和 <xref:Microsoft.SqlServer.Management.Smo.UserOptions> 物件屬性中的設定。  
+ 程式碼範例會在和中顯示實例的相關資訊 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] <xref:Microsoft.SqlServer.Management.Smo.Information> <xref:Microsoft.SqlServer.Management.Smo.Settings> ，並修改 <xref:Microsoft.SqlServer.Management.Smo.Settings> 和物件屬性中的設定 <xref:Microsoft.SqlServer.Management.Smo.UserOptions> 。  
   
  在此範例中，<xref:Microsoft.SqlServer.Management.Smo.UserOptions> 物件和 <xref:Microsoft.SqlServer.Management.Smo.Settings> 物件兩者都擁有 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> 方法。 您可以個別地為這些執行 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> 方法。  
   
@@ -97,7 +99,7 @@ srv.Alter()
 ```
   
 ## <a name="modifying-sql-server-settings-in-visual-c"></a>在 Visual C# 中修改 SQL Server 設定  
- 此程式碼範例會在和中顯示實例的相關資訊 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] <xref:Microsoft.SqlServer.Management.Smo.Information> <xref:Microsoft.SqlServer.Management.Smo.Settings> ，並修改 <xref:Microsoft.SqlServer.Management.Smo.Settings> 和 <xref:Microsoft.SqlServer.Management.Smo.UserOptions> 物件屬性中的設定。  
+ 程式碼範例會在和中顯示實例的相關資訊 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] <xref:Microsoft.SqlServer.Management.Smo.Information> <xref:Microsoft.SqlServer.Management.Smo.Settings> ，並修改 <xref:Microsoft.SqlServer.Management.Smo.Settings> 和物件屬性中的設定 <xref:Microsoft.SqlServer.Management.Smo.UserOptions> 。  
   
  在此範例中，<xref:Microsoft.SqlServer.Management.Smo.UserOptions> 物件和 <xref:Microsoft.SqlServer.Management.Smo.Settings> 物件兩者都擁有 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> 方法。 您可以個別地為這些執行 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> 方法。  
   
@@ -135,7 +137,7 @@ srv.Alter()
 ```  
   
 ## <a name="modifying-sql-server-settings-in-powershell"></a>在 PowerShell 中修改 SQL Server 設定  
- 此程式碼範例會在和中顯示實例的相關資訊 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] <xref:Microsoft.SqlServer.Management.Smo.Information> <xref:Microsoft.SqlServer.Management.Smo.Settings> ，並修改 <xref:Microsoft.SqlServer.Management.Smo.Settings> 和 <xref:Microsoft.SqlServer.Management.Smo.UserOptions> 物件屬性中的設定。  
+ 程式碼範例會在和中顯示實例的相關資訊 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] <xref:Microsoft.SqlServer.Management.Smo.Information> <xref:Microsoft.SqlServer.Management.Smo.Settings> ，並修改 <xref:Microsoft.SqlServer.Management.Smo.Settings> 和物件屬性中的設定 <xref:Microsoft.SqlServer.Management.Smo.UserOptions> 。  
   
  在此範例中，<xref:Microsoft.SqlServer.Management.Smo.UserOptions> 物件和 <xref:Microsoft.SqlServer.Management.Smo.Settings> 物件兩者都擁有 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> 方法。 您可以個別地為這些執行 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> 方法。  
   

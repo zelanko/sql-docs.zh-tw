@@ -1,5 +1,6 @@
 ---
-title: sys.databases availability_read_only_routing_lists （Transact-sql） |Microsoft Docs
+description: sys.availability_read_only_routing_lists (Transact-SQL)
+title: sys. availability_read_only_routing_lists (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 0686bc5a-c206-41ef-b40a-79a8259d51d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 60922201a6ec819fe1e90b43acc3d0c8e8469167
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 41ce60f3a498d80237c995af0760ae08757dd8bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733504"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498482"
 ---
 # <a name="sysavailability_read_only_routing_lists-transact-sql"></a>sys.availability_read_only_routing_lists (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,8 +48,8 @@ ms.locfileid: "85733504"
   
 ## <a name="see-also"></a>另請參閱  
  [Always On 可用性群組動態管理檢視和函數 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
- [Always On 可用性群組目錄檢視 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [&#40;Transact-sql&#41;監視可用性群組](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [AlwaysOn 可用性群組目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
+ [監視可用性群組 &#40;Transact-sql&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   

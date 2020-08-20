@@ -1,5 +1,6 @@
 ---
-title: 空間資料目錄 Views |Microsoft Docs
+description: 空間資料目錄檢視
+title: 空間資料目錄檢視 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ dev_langs:
 ms.assetid: c40bc75a-73f3-4d3f-82e1-4c023dfe958f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e56798156950b4d616ee1df3ceab5ccf7306567c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0479039ce13cc03e9440ad7faccb8739a0331611
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720392"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498443"
 ---
 # <a name="spatial-data-catalog-views"></a>空間資料目錄檢視
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85720392"
  [sys.spatial_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)  
  表示空間索引的主要索引資訊。  
   
- [spatial_reference_systems &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md)  
+ [sys. spatial_reference_systems &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md)  
  列出支援的空間參考系統 (SRID)。  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 使用 Always Encrypted 匯出和匯入資料庫
 title: 使用 Always Encrypted 匯出和匯入資料庫 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/30/2019
@@ -12,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e19404372f3729343e41f3880dbf7d8b3e3ad35a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d4b82259c992000578a4fcca1c5807cf551dc9d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85627399"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498560"
 ---
 # <a name="export-and-import-databases-using-always-encrypted"></a>使用 Always Encrypted 匯出和匯入資料庫 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

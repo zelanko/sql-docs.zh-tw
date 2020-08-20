@@ -1,4 +1,5 @@
 ---
+description: 建立、改變和移除結構描述
 title: 建立、改變和移除結構描述
 ms.date: 08/06/2017
 ms.prod: sql
@@ -12,11 +13,12 @@ ms.assetid: 3e3619de-c6a2-4280-b2be-4ec9924608fb
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23ef575804fcb85beacf4096cd21b3c81a19c327
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8d2d9b43b70f77989a0dd0a3439449bff40deaaa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001291"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498486"
 ---
 # <a name="creating-altering-and-removing-schemas"></a>建立、改變和移除結構描述
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -24,7 +26,7 @@ ms.locfileid: "86001291"
   <xref:Microsoft.SqlServer.Management.Smo.Schema> 物件表示資料庫物件的擁有權內容。 <xref:Microsoft.SqlServer.Management.Smo.Database.Schemas%2A> 物件的 <xref:Microsoft.SqlServer.Management.Smo.Database> 屬性表示 <xref:Microsoft.SqlServer.Management.Smo.Schema> 物件的集合。  
   
 ## <a name="example"></a>範例  
- 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱 [Visual Studio .NET 中的建立 Visual C&#35; SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-altering-and-removing-a-schema-in-visual-basic"></a>在 Visual Basic 中建立、改變和移除結構描述  
  此程式碼範例示範如何建立結構描述，並將其指派給資料庫物件。 程式接著會授與權限給使用者，然後再於結構描述中建立新的資料表。  
