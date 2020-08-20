@@ -1,4 +1,5 @@
 ---
+description: OLEDB Errors 事件類別
 title: OLEDB Errors 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 0ce1e906-5d92-42f2-ab38-8771ad5ca008
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64df0d85fb8e4bb9e3ea54c7d8613a1a39ac3406
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8e5dcfa83a7bd4e02f6868239da756c6f7b7a2c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726243"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499411"
 ---
 # <a name="oledb-errors-event-class"></a>OLEDB Errors 事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

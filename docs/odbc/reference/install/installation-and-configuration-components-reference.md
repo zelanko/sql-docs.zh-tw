@@ -1,4 +1,5 @@
 ---
+description: 安裝和設定元件參考
 title: 安裝和設定元件參考 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: c48b4303-6f39-4b5e-9134-1113cdef0e43
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b7a9c62df89318b32a431146511b9404c2802ded
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 99b8772e823b24a8d88e8d52def5b916fbac4a62
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301947"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499791"
 ---
 # <a name="installation-and-configuration-components-reference"></a>安裝和設定元件參考
 > [!NOTE]  
->  從 Windows XP 和 Windows Server 2003 開始，ODBC 包含在 Windows 作業系統中。 您只應該在舊版 Windows 上明確安裝 ODBC。  
+>  從 Windows XP 和 Windows Server 2003 開始，ODBC 會包含在 Windows 作業系統中。 您應該只在舊版的 Windows 上明確地安裝 ODBC。  
   
  下列各節提供用來安裝和設定 ODBC 之元件的相關資訊。  
   

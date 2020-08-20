@@ -1,4 +1,5 @@
 ---
+description: 要監看的功能
 title: 要監看的功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 0fb1693b-11c3-43b1-bb16-c3323b7b2d45
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 10fa5df8a47837e92d4215f558d52711a0df3440
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ee7da25bccf0ed3d3649412c702a426a31c3ad44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305679"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499898"
 ---
 # <a name="features-to-watch-for"></a>要監看的功能
-本節說明應用程式開發人員通常會針對授與的一些功能。 事實上，這些功能在 Dbms 間的支援和支援方式上有很大的差異;失敗的程式碼可能會導致互通的應用程式發生問題。  
+本節將說明一些應用程式開發人員經常採用的功能。 事實上，這些功能在 Dbms 之間有很大的支援和支援方式，失敗的程式碼可能會造成互通的應用程式發生問題。  
   
- 本節不會列出應用程式開發人員需要考慮的所有功能。 如需相關資訊，請參閱[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)、 [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)和[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)函式說明、[附錄 C： SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)和本手冊中討論每項功能的章節。  
+ 本節不會列出應用程式開發人員需要考慮的所有功能。 如需相關資訊，請參閱 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)、 [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)和 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) 函式說明、 [附錄 C： SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)，以及本手冊討論每項功能的各節。  
   
  此章節包含下列主題。  
   

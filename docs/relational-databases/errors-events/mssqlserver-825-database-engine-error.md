@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_825
 title: MSSQLSERVER_825 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f69f8214-5af1-4769-878b-117ad6eaff52
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: feb29108caee72b7171cd0cbcf2c455672020a69
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f8499e53cfd5a3011ae7bbf226d98a159bf5bdd3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767839"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499468"
 ---
 # <a name="mssqlserver_825"></a>MSSQLSERVER_825
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: 索引作業的交易記錄磁碟空間
 title: 索引作業的交易記錄磁碟空間 | Microsoft 文件
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4f8a4922-4507-4072-be67-c690528d5c3b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8a88bbccbe0fd1a57455343858f463afe072ed99
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 84c81b849ced12ffaf799c84511ff67649664775
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722319"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499321"
 ---
 # <a name="transaction-log-disk-space-for-index-operations"></a>索引作業的交易記錄磁碟空間
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85722319"
 4.  不要在外顯交易中執行線上索引作業。 這樣需等到外顯交易結束之後，才能截斷記錄檔。  
   
 ## <a name="related-content"></a>相關內容  
- [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
+ [索引 DDL 作業的磁碟空間需求](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
   
  [索引磁碟空間範例](../../relational-databases/indexes/index-disk-space-example.md)  
   

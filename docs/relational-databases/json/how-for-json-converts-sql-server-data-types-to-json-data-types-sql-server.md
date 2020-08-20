@@ -1,4 +1,5 @@
 ---
+description: FOR JSON 如何將 SQL Server 資料類型轉換為 JSON 資料類型 (SQL Server)
 title: FOR JSON 如何將 SQL Server 資料類型轉換為 JSON 資料類型。
 ms.date: 06/03/2020
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 56ef56aa22a67a3286b544211d161568dae5e8d9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2d010978b7c660b43a5fe6487ac57e0d6143b282
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722289"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499288"
 ---
 # <a name="how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server"></a>FOR JSON 如何將 SQL Server 資料類型轉換為 JSON 資料類型 (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85722289"
 |位元類型|bit|布林值 (true 或 false)|  
 |日期和時間類型|date、datetime、datetime2、time、datetimeoffset|字串|  
 |二進位類型|varbinary、binary、image、timestamp、rowversion|BASE64 編碼字串|  
-|CLR 類型|geometry、geography、其他 CLR 類型|不支援。 這些類型傳回錯誤。<br /><br /> 在 SELECT 陳述式中，使用 CAST 或 CONVERT，或使用 CLR 屬性或方法，將來源資料轉換成可以順利轉換成 JSON 類型的 SQL Server 資料類型。 例如，針對幾何類型使用 **STAsText()** ，或針對任何 CLR 類型使用 **ToString()** 。 之後 JSON 輸出值的類型會衍生自您在 SELECT 陳述式中套用的轉換傳回類型。|  
+|CLR 類型|geometry、geography、其他 CLR 類型|不支援。 這些類型傳回錯誤。<br /><br /> 在 SELECT 陳述式中，使用 CAST 或 CONVERT，或使用 CLR 屬性或方法，將來源資料轉換成可以順利轉換成 JSON 類型的 SQL Server 資料類型。 例如，針對幾何類型使用 **STAsText()**，或針對任何 CLR 類型使用 **ToString()**。 之後 JSON 輸出值的類型會衍生自您在 SELECT 陳述式中套用的轉換傳回類型。|  
 |其他類型|uniqueidentifier、money|字串|  
 
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>深入了解 SQL Server 和 Azure SQL Database 中的 JSON  

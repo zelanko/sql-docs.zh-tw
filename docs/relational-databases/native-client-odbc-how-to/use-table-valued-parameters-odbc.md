@@ -1,5 +1,6 @@
 ---
-title: 使用資料表值參數（ODBC） |Microsoft Docs
+description: 使用資料表值參數 (ODBC)
+title: 使用資料表值參數 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,18 +12,19 @@ ms.assetid: 6f8da6ab-9de6-4d0a-9b7e-acb76a50a2e7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80d3e54ce50b385267ee5148b07367fdac7dcc58
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b1d5b7baaba443c948e0c02440d6e38520eb16c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011215"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499165"
 ---
 # <a name="use-table-valued-parameters-odbc"></a>使用資料表值參數 (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   此範例示範如何使用資料表值參數插入多個資料列、搭配多個資料行使用資料表值參數、搭配一個伺服器的呼叫使用資料表值參數。  
   
- 如需資料表值參數的詳細資訊，請參閱[ODBC&#41;&#40;的資料表值參數](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。 如需使用資料表值參數的更多範例，請參閱[ODBC 資料表值參數程式設計範例](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)。  
+ 如需資料表值參數的詳細資訊，請參閱 [&#40;ODBC&#41;的資料表值參數 ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。 如需使用資料表值參數的更多範例，請參閱 [ODBC 資料表值參數程式設計範例](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)。  
   
 ## <a name="example"></a>範例  
  您將需要稱為 TVPDemo 的 ODBC 資料來源。 TVPDemo 的預設資料庫可以是您電腦上的任何測試資料庫。 對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，此資料來源必須以 ODBC 驅動程式為基礎。  

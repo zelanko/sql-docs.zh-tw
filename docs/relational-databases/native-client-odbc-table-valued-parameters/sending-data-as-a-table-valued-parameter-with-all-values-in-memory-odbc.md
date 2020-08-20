@@ -1,5 +1,6 @@
 ---
-title: 資料表值參數，記憶體中的值（ODBC）
+description: 使用記憶體中的所有值，將資料當做資料表值參數傳送 (ODBC)
+title: '資料表值參數、記憶體中的值 (ODBC) '
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,16 +14,17 @@ ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 569c730b85a91ae9232758a2a1847cb1dbccba56
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 676d0c40ca7c064945284d5a486ec0cda698688d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998385"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499066"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>使用記憶體中的所有值，將資料當做資料表值參數傳送 (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  本主題描述所有的值都在記憶體中時，如何將資料當做資料表值參數傳送至預存程序。 如需示範資料表值參數的另一個範例，請參閱[使用資料表值參數 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
+  本主題描述所有的值都在記憶體中時，如何將資料當做資料表值參數傳送至預存程序。 如需示範資料表值參數的另一個範例，請參閱 [使用資料表值參數 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
   
 ## <a name="prerequisite"></a>必要條件  
  此程序假設已在伺服器上執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)]：  
@@ -88,7 +90,7 @@ from @Items
        sizeof(OrdDate), &cbOrdDate);  
     ```  
   
-3.  參數繫結的第二個階段是建立資料表值參數的資料行。 參數焦點會先設定為資料表值參數的序數。 然後，使用 SQLBindParameter 來系結資料表值的資料行，其方式與預存程式的參數相同，但具有 ParameterNumber 的資料行序數。 如果有其他資料表值參數，則會輪流將焦點設定為每個資料表值參數，並繫結其資料行。 最後，參數焦點就會重設為 0。  
+3.  參數繫結的第二個階段是建立資料表值參數的資料行。 參數焦點會先設定為資料表值參數的序數。 然後，會使用 SQLBindParameter 來系結資料表值的資料行，就像是預存程式的參數，但使用 ParameterNumber 的資料行序數一樣。 如果有其他資料表值參數，則會輪流將焦點設定為每個資料表值參數，並繫結其資料行。 最後，參數焦點就會重設為 0。  
   
     ```cpp
     // Bind columns for the table-valued parameter (param 2).  

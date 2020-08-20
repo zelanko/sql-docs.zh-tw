@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_8649
 title: MSSQLSERVER_8649 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 992dbc74-7c3a-498b-9f1b-b28387640677
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d305866fb884b62540cfbe2cc13a613981999749
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7b599848c71b465d80c01eecd594f841ab5c0e72
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765278"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499436"
 ---
 # <a name="mssqlserver_8649"></a>MSSQLSERVER_8649
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

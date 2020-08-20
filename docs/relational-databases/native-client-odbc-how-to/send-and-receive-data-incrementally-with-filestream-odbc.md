@@ -1,5 +1,6 @@
 ---
-title: 增量資料，FILESTREAM （ODBC）
+description: 利用 FILESTREAM 累加地傳送和接收資料 (ODBC)
+title: 以累加方式、FILESTREAM (ODBC) 的資料
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,27 +12,28 @@ ms.assetid: b82ecf4c-f151-4a99-8717-a73ee5ec994f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f475eb3ba5887932ff760077fb001e520ca48130
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4cbd57baf461cb9317f2d6c4baea469b9063d62a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002924"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499212"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>利用 FILESTREAM 累加地傳送和接收資料 (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   此範例會示範如何使用 FILESTREAM 功能，以 SQLPutData 和 SQLGetData 累加地傳送和接收資料。  
   
- 如需有關 FILESTREAM 功能的詳細資訊，請參閱[&#40;ODBC&#41;的 Filestream 支援](../../relational-databases/native-client/odbc/filestream-support-odbc.md)。  
+ 如需 FILESTREAM 功能的詳細資訊，請參閱 [&#40;ODBC&#41;的 Filestream 支援 ](../../relational-databases/native-client/odbc/filestream-support-odbc.md)。  
   
 ## <a name="example"></a>範例  
  編譯並執行此範例之前，請先啟用 FILESTREAM 支援 ([啟用及設定 FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md))。  
   
- 第一個（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）程式代碼清單會建立此範例所使用的資料庫。 您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體必須擁有執行這個指令碼的寫入存取權 (例如，以本機系統帳戶的身分登入)。  
+ 第一個 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式代碼清單會建立此範例所使用的資料庫。 您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體必須擁有執行這個指令碼的寫入存取權 (例如，以本機系統帳戶的身分登入)。  
   
  第二個程式碼清單是 C++ 程式碼。 您必須指定伺服器，然後在 C++ 程式碼清單中，將 "MyServer" 變更為有效的伺服器名稱。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。 請使用 odbc32.lib、user32.lib、/D "_UNICODE"、/D "UNICODE"、odbc32.lib 和 /EHsc 編譯 C++ 程式碼清單。  
   
- 第三個（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）程式代碼清單會刪除此範例所使用的資料庫。  
+ 第三個 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式代碼清單會刪除此範例所使用的資料庫。  
   
 ```sql
 USE master  

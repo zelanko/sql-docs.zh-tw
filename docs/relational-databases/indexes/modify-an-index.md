@@ -1,4 +1,5 @@
 ---
+description: 修改索引
 title: 修改索引 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -15,12 +16,12 @@ ms.assetid: 97e3110d-fde7-4f5d-9309-dc1697960aeb
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9c8334573b66b5c227a5033a63b5aedf06909c78
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 15a7386c08d2b9147858cab3fde212cf285902cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68316964"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499358"
 ---
 # <a name="modify-an-index"></a>修改索引
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -44,11 +45,11 @@ ms.locfileid: "68316964"
   
 1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  展開 **[資料庫]** ，展開資料表所在的資料庫，然後展開 **[資料表]** 。  
+2.  展開 **[資料庫]**，展開資料表所在的資料庫，然後展開 **[資料表]**。  
   
-3.  展開索引所在的資料表，然後展開 **[索引]** 。  
+3.  展開索引所在的資料表，然後展開 **[索引]**。  
   
-4.  以滑鼠右鍵按一下您要修改的索引，然後按一下 [屬性]  。  
+4.  以滑鼠右鍵按一下您要修改的索引，然後按一下 [屬性]****。  
   
 5.  在 **[索引屬性]** 對話方塊中，進行所需的變更。 例如，您可以在索引鍵中加入或移除資料行，或是變更索引選項的設定。  
   

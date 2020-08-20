@@ -1,4 +1,5 @@
 ---
+description: 使用 FOR JSON 將查詢結果格式化為 JSON (SQL Server)
 title: 使用 FOR JSON 將查詢結果格式化為 JSON
 ms.date: 06/03/2020
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4e9aee7c2c8de20c50c101e3573e4d3d9259b661
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7862fa1b8454fba689edda2f8a451320315c1021
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722268"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499311"
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>使用 FOR JSON 將查詢結果格式化為 JSON (SQL Server)
 

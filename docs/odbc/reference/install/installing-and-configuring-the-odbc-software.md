@@ -1,5 +1,6 @@
 ---
-title: 安裝和設定 ODBC 軟體 |Microsoft Docs
+description: 安裝及設定 ODBC 軟體
+title: 安裝及設定 ODBC 軟體 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: e2580f7d-d614-4e14-a9a3-804e8061b00e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a71d021f7ff9d1ef73a3a64c1b5bb27dea1caeba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 733fb0cd75b5c0f3040e83ee2c55aba46e3cc1ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301923"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499754"
 ---
 # <a name="installing-and-configuring-the-odbc-software"></a>安裝及設定 ODBC 軟體
 > [!NOTE]  
->  從 Windows XP 和 Windows Server 2003 開始，ODBC 包含在 Windows 作業系統中。 您只應該在舊版 Windows 上明確安裝 ODBC。  
+>  從 Windows XP 和 Windows Server 2003 開始，ODBC 會包含在 Windows 作業系統中。 您應該只在舊版的 Windows 上明確地安裝 ODBC。  
   
  此章節包含下列主題。  
   

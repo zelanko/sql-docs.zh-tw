@@ -1,4 +1,5 @@
 ---
+description: 索引 JSON 資料
 title: 索引 JSON 資料 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2020
@@ -13,12 +14,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77cdc132f3ef52baf6124d3f52279ad1c16b9bde
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1e1de8032c72f829dbc564bae38b12b120f13695
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755768"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499235"
 ---
 # <a name="index-json-data"></a>索引 JSON 資料
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "85755768"
 資料庫索引可改善篩選和排序作業的效能。 若不使用索引，則 SQL Server 在您每次查詢資料時必須執行完整的資料表掃描。  
   
 ## <a name="index-json-properties-by-using-computed-columns"></a>使用計算資料行的索引 JSON 屬性  
-將 JSON 資料儲存於 SQL Server 時，通常都要依 JSON 文件的一或多個「屬性」  來篩選或排序查詢結果。  
+將 JSON 資料儲存於 SQL Server 時，通常都要依 JSON 文件的一或多個「屬性」** 來篩選或排序查詢結果。  
 
 ### <a name="example"></a>範例 
 在此範例中，假設 AdventureWorks `SalesOrderHeader` 資料表含有 `Info` 資料行，其中包含關於銷售訂單的各種資訊 (JSON 格式)。 例如，它包含客戶、銷售人員、收件和帳單地址等相關資訊。 而您要使用資料行 `Info` 的值來篩選客戶的銷售訂單。
@@ -45,7 +46,7 @@ WHERE JSON_VALUE(Info, '$.Customer.Name') = N'Aaron Campbell'
 ```  
 
 ### <a name="example-index"></a>範例索引
-若您想要針對 JSON 文件中的屬性加速篩選或 `ORDER BY` 子句處理，則可使用與其他資料行所用相同的索引。 不過，您無法「直接」  參考 JSON 文件中的屬性。
+若您想要針對 JSON 文件中的屬性加速篩選或 `ORDER BY` 子句處理，則可使用與其他資料行所用相同的索引。 不過，您無法「直接」參考 JSON 文件中的屬性。
     
 1.  首先必須建立「虛擬資料行」來傳回要用於篩選的值。
 2.  然後您必須在該虛擬資料行建立索引。  

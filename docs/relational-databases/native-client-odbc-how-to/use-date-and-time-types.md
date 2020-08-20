@@ -1,4 +1,5 @@
 ---
+description: 使用日期和時間類型
 title: 使用日期和時間類型 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,16 +12,17 @@ ms.assetid: a2aa5644-1e39-4d78-b149-0599d3502cda
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a5bdf4f4f48c65fe4f37992c7968bbeb8103a17c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: de9a93cf1c05652b09676c215533f26ddf3e0d2c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000578"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499178"
 ---
 # <a name="use-date-and-time-types"></a>使用日期和時間類型
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  此範例顯示如何初始化在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中加入的日期/時間資料結構。 接著，它會準備輸入值、繫結參數，然後執行查詢。 如需有關使用這些類型的詳細資訊，請參閱[ODBC&#41;&#40;的日期和時間改善](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+  此範例顯示如何初始化在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中加入的日期/時間資料結構。 接著，它會準備輸入值、繫結參數，然後執行查詢。 如需有關使用這些類型的詳細資訊，請參閱 [&#40;ODBC&#41;的日期和時間改進 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="example"></a>範例  
  您將需要稱為 DateTime 的 ODBC 資料來源。 DateTime 的預設資料庫應該是 tempdb。 對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，此資料來源必須以 ODBC 驅動程式為基礎。  
@@ -29,11 +31,11 @@ ms.locfileid: "86000578"
   
  這個範例會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 若要連接到具名執行個體，請變更 ODBC 資料來源的定義，以便使用下列格式指定執行個體：server\namedinstance。 根據預設，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 會安裝至具名執行個體。  
   
- 第一個（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）程式代碼清單會建立此範例所使用的資料表。  
+ 第一個 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式代碼清單會建立此範例所使用的資料表。  
   
  使用 odbc32.lib 和 user32.lib 編譯第二個 (C++) 程式碼清單。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
   
- 第三個（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）程式代碼清單會刪除此範例所使用的資料表。  
+ 第三個 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式代碼清單會刪除此範例所使用的資料表。  
   
 ```sql
 use tempdb  

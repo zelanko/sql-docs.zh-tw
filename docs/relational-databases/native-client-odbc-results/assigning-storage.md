@@ -1,5 +1,6 @@
 ---
-title: 指派儲存體 |Microsoft Docs
+description: 指派儲存體
+title: 指派存放裝置 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,18 +23,19 @@ ms.assetid: 11c81955-5300-495f-925f-9256f2587b58
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d891ae890f101fff704dfa0500e6cbb3724ffbf5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2006f41abcdc086a49ce04e91a579294a411dd07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002903"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499125"
 ---
 # <a name="assigning-storage"></a>指派儲存體
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   應用程式可以在執行 SQL 陳述式之前或之後指派結果的儲存體。 如果應用程式先準備或執行 SQL 陳述式，它就可以查詢結果集的相關資訊，然後再指派結果的儲存體。 例如，如果結果集是未知的，應用程式就必須擷取資料行的數目，然後才能指派它們的儲存體。  
   
- 為了讓資料行的儲存區產生關聯，應用程式會呼叫[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)並傳遞它：  
+ 為了讓資料行的儲存體產生關聯，應用程式會呼叫 [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)並傳遞它：  
   
 -   要轉換資料的目標資料類型。  
   
@@ -51,15 +53,15 @@ ms.locfileid: "86002903"
   
 -   當每個資料行繫結至自己的變數陣列時，就會完成資料行取向繫結。  
   
-     藉由呼叫[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)並將*屬性*設定為 SQL_ATTR_ROW_BIND_TYPE，並將*valueptr 是*設定為 SQL_BIND_BY_COLUMN 來指定資料行取向系結。 所有陣列的元素數目都必須相同。  
+     藉由呼叫 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) ，並將 *屬性* 設定為 SQL_ATTR_ROW_BIND_TYPE，並將 *ValuePtr* 設定為 SQL_BIND_BY_COLUMN 來指定資料行取向系結。 所有陣列的元素數目都必須相同。  
   
 -   當 SQL 陳述式的所有參數都是以單位的形式繫結至含有參數個別變數的結構陣列時，就會完成資料列取向繫結。  
   
-     資料列取向系結的指定方式是呼叫**SQLSetStmtAttr** ，並將*屬性*設定為 SQL_ATTR_ROW_BIND_TYPE，並將*valueptr 是*設定為包含將會接收結果集資料行之變數的結構大小。  
+     藉由呼叫 **SQLSetStmtAttr** ，並將 *屬性* 設定為 SQL_ATTR_ROW_BIND_TYPE，並將 *ValuePtr* 設定為保留將接收結果集資料行之變數的結構大小，藉以指定資料列取向的系結。  
   
  應用程式也會將 SQL_ATTR_ROW_ARRAY_SIZE 設定為資料行或資料列陣列中的元素數目，並且設定 SQL_ATTR_ROW_STATUS_PTR 和 SQL_ATTR_ROWS_FETCHED_PTR。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;ODBC&#41;處理結果](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+ [處理 &#40;ODBC&#41;的結果 ](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 在 JSON 中包含 Null 值 - INCLUDE_NULL_VALUES 選項
 title: 在 JSON 中包含 Null 值 - INCLUDE_NULL_VALUES 選項
 ms.date: 06/03/2020
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c6a7de04cf998910402f271426d5fe8020972a1e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 78cef40fd3674f0f7ad4a128e0724013b959ae2c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755756"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499240"
 ---
 # <a name="include-null-values-in-json---include_null_values-option"></a>在 JSON 中包含 Null 值 - INCLUDE_NULL_VALUES 選項
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

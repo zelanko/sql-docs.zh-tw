@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_824
 title: MSSQLSERVER_824 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2aa22246-2712-4fdb-9744-36e7e6f3175e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f33df8f287cc60c34035ee22b8a03be65440f6ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0e2242b539f5fadb18beb54115e2cbad95336497
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767850"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499513"
 ---
 # <a name="mssqlserver_824"></a>MSSQLSERVER_824
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

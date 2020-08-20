@@ -1,4 +1,5 @@
 ---
+description: 設定索引選項
 title: 設定索引選項 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/26/2019
@@ -25,12 +26,12 @@ ms.assetid: 7969af33-e94c-41f7-ab89-9d9a2747cd5c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7f365e59f615c532ae168bacafe690d66501eea4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1427a47837063db4fd617c8489d99a3ab7927d15
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85659353"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499375"
 ---
 # <a name="set-index-options"></a>設定索引選項
 
@@ -71,12 +72,12 @@ ms.locfileid: "85659353"
 
 1. 在 [物件總管] 中，按一下加號展開資料庫，此資料庫包含您要修改索引屬性的資料表。
 2. 按一下加號展開 **[資料表]** 資料夾。
-3. 以滑鼠右鍵按一下要修改索引屬性的資料表，然後選取 [設計]  。
-4. 在 [資料表設計工具]  功能表上，按一下 [索引/索引鍵]  。
+3. 以滑鼠右鍵按一下要修改索引屬性的資料表，然後選取 [設計]。
+4. 在 [資料表設計工具] 功能表上，按一下 [索引/索引鍵]。
 5. 選取您要修改的索引。 其屬性會在主要方格中顯示。
 6. 變更任何和所有屬性的設定，以自訂索引。
-7. 按一下 [關閉]  。
-8. 在 [檔案]  功能表上，選取 [儲存 _table_name_]  。
+7. 按一下 [關閉] 。
+8. 在 [檔案]**** 功能表上，選取 [儲存 _table_name_]****。
 
 ### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>在物件總管中修改索引的屬性
 
@@ -84,10 +85,10 @@ ms.locfileid: "85659353"
 2. 按一下加號展開 **[資料表]** 資料夾。
 3. 按一下加號展開要修改索引屬性的資料表。
 4. 按一下加號展開 **[索引]** 資料夾。
-5. 以滑鼠右鍵按一下要修改其屬性的索引，然後選取 [屬性]  。
+5. 以滑鼠右鍵按一下要修改其屬性的索引，然後選取 [屬性]****。
 6. 在 **[選取頁面]** 底下，選取 **[選項]** 。
 7. 變更任何和所有屬性的設定，以自訂索引。
-8. 若要新增、移除或變更索引資料行的位置，請選取 [索引屬性 - _index_name_]  對話方塊中的 [一般]  頁面。 如需相關資訊，請參閱 [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)
+8. 若要新增、移除或變更索引資料行的位置，請選取 [索引屬性 - _index_name_] 對話方塊中的 [一般] 頁面。 如需相關資訊，請參閱 [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)
 
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL
 
