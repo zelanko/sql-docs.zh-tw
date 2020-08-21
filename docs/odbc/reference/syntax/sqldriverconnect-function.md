@@ -1,8 +1,8 @@
 ---
-description: SQLDriverConnect 函數
 title: SQLDriverConnect 函式 |Microsoft Docs
+description: SQLDriverConnect 函式是 ODBC API 標準的一部分，而本參考檔提供其語法的相關資訊。
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/20/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -20,32 +20,20 @@ helpviewer_keywords:
 ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6abdafe0a01d5c8182c5427c45545930c84e08e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d9ff73c570e607f687ff8293587b8dbcef551926
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476141"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88745898"
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriverConnect 函數
 **一致性**  
  引進的版本： ODBC 1.0 標準合規性： ODBC  
   
  **總結**  
- **SQLDriverConnect** 是 **SQLConnect**的替代方案。 它支援的資料來源需要比 **SQLConnect**中的三個引數更多的連接資訊，而對話方塊會提示使用者輸入所有連接資訊，以及未在系統資訊中定義的資料來源。  
-  
- **SQLDriverConnect** 提供下列連接屬性：  
-  
--   使用包含資料來源名稱、一或多個使用者識別碼、一或多個密碼，以及資料來源所需的其他資訊的連接字串來建立連接。  
-  
--   使用部分連接字串或沒有其他資訊來建立連接;在此情況下，驅動程式管理員和驅動程式都會提示使用者提供連接資訊。  
-  
--   建立未在系統資訊中定義之資料來源的連接。 如果應用程式提供部分連接字串，驅動程式可能會提示使用者輸入連接資訊。  
-  
--   使用從 dsn 檔案中的資訊所建立的連接字串，建立與資料來源的連接。  
-  
- 建立連接之後， **SQLDriverConnect** 會傳回已完成的連接字串。 應用程式可以將此字串用於後續的連接要求。 如需詳細資訊，請參閱 [使用 SQLDriverConnect 連接](../../../odbc/reference/develop-app/connecting-with-sqldriverconnect.md)。  
-  
+ **SQLDriverConnect** 是 **SQLConnect**的替代方案。 它支援的資料來源需要比 **SQLConnect**中的三個引數更多的連接資訊，而對話方塊會提示使用者輸入所有連接資訊，以及未在系統資訊中定義的資料來源。 如需詳細資訊，請參閱 [使用 SQLDriverConnect 連接](../develop-app/connecting-with-sqldriverconnect.md)。  
+
 ## <a name="syntax"></a>語法  
   
 ```cpp  
@@ -360,7 +348,7 @@ int main() {
 |如需下列資訊|請參閱|  
 |---------------------------|---------|  
 |配置控制碼|[SQLAllocHandle 函式](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
-|探索和列舉連接到資料來源所需的值|[SQLBrowseConnect 函式](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|  
+|探索和列舉連接到資料來源所需的值|[SQLBrowseConnect 函數](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|  
 |連線到資料來源|[SQLConnect 函式](../../../odbc/reference/syntax/sqlconnect-function.md)|  
 |中斷與資料來源的連接|[SQLDisconnect 函式](../../../odbc/reference/syntax/sqldisconnect-function.md)|  
 |傳回驅動程式描述和屬性|[SQLDrivers 函式](../../../odbc/reference/syntax/sqldrivers-function.md)|  
