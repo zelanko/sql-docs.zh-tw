@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f5a1058b23c92160b039d2cb439d429b46bfcb98
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7baed4eff98c8286c1c84bd346826b4c49e4fa75
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452090"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759558"
 ---
 # <a name="rds-scenario"></a>RDS 案例
 > [!IMPORTANT]
@@ -50,22 +50,20 @@ ms.locfileid: "88452090"
   
  此案例包含下列主題。  
   
--   [通訊錄應用程式的系統需求](../../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)  
+-   [通訊錄應用程式的系統需求](./system-requirements-for-the-address-book-application.md)  
   
--   [執行通訊錄 SQL 指令碼](../../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)  
+-   [執行通訊錄 SQL 指令碼](./running-the-address-book-sql-script.md)  
   
--   [執行通訊錄範例應用程式](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)  
+-   [執行通訊錄應用程式範例](./running-the-address-book-sample-application.md)  
   
--   [通訊錄資料繫結物件](../../../ado/guide/remote-data-service/address-book-data-binding-object.md)  
+-   [通訊錄資料繫結物件](./address-book-data-binding-object.md)  
   
--   [通訊錄命令按鈕](../../../ado/guide/remote-data-service/address-book-command-buttons.md)  
+-   [通訊錄命令按鈕](./address-book-command-buttons.md)  
   
--   [通訊錄導覽按鈕](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)  
+-   [通訊錄導覽按鈕](./address-book-navigation-buttons.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [通訊錄應用程式的系統需求](../../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)   
- [Microsoft ActiveX Data Objects (ADO) ](../../../ado/microsoft-activex-data-objects-ado.md)   
- [RDS 基本概念](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
- [RDS 教學課程](../../../ado/guide/remote-data-service/rds-tutorial.md)
-
-
+ [通訊錄應用程式的系統需求](./system-requirements-for-the-address-book-application.md)   
+ [Microsoft ActiveX Data Objects (ADO) ](../../microsoft-activex-data-objects-ado.md)   
+ [RDS 基本概念](./rds-fundamentals.md)   
+ [RDS 教學課程](./rds-tutorial.md)

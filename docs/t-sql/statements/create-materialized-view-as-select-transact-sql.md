@@ -1,4 +1,5 @@
 ---
+description: CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)
 title: CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2020
@@ -37,12 +38,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 221b26f59feb3c51ade10fd4923f30e1ade91fbf
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 8d9dce220699fcdc2448ac19727d34ddd1bdad67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394633"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444831"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
@@ -108,7 +109,7 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
   
 ## <a name="remarks"></a>備註
 
-Azure 資料倉儲中具體化檢視類似 SQL Server 中的索引檢視表。  它的限制幾乎與索引檢視表相同 (請參閱[建立索引檢視表](/sql/relational-databases/views/create-indexed-views)以取得詳資訊)，不過具體化檢視支援彙總函式。   
+Azure 資料倉儲中具體化檢視類似 SQL Server 中的索引檢視表。它的限制幾乎與索引檢視表相同 (請參閱[建立索引檢視表](/sql/relational-databases/views/create-indexed-views)以取得詳資訊)，不過具體化檢視支援彙總函式。   
 
 只有具體化檢視才支援 CLUSTERED COLUMNSTORE INDEX。 
 
@@ -142,7 +143,8 @@ SQL Server Management Studio 中的 EXPLAIN 計畫與圖形化預估執行計畫
 
 ## <a name="permissions"></a>權限
 
-至少必須有資料庫中的 CREATE VIEW 權限，以及正在建立之檢視表所在之結構描述的 ALTER 權限。 
+需要 1) REFERENCES 與 CREATE VIEW 權限，或 2) 要在其中建立檢視之結構描述上的 CONTROL 權限。 
+
   
 ## <a name="see-also"></a>另請參閱
 

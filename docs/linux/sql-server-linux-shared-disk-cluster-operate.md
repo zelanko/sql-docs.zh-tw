@@ -1,6 +1,6 @@
 ---
 title: 手動容錯移轉 FCI - Linux 上的 SQL Server
-description: 了解如何在 Linux 上的 SQL Server 上手動容錯移轉叢集執行個體 (FCI)。
+description: 了解如何在 Linux 上的 SQL Server 中對容錯移轉叢集執行個體 (FCI) 進行手動容錯移轉，特別是 Red Hat Linux Enterprise、Ubuntu 和 Suse Linux Enterprise Server。
 ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 58c30fc1e88ec3b7e90549f28b13f91e3330675d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2be454ad7d2ca85f1648ba7f98ea503627d6c437
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897257"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088738"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>操作容錯移轉叢集執行個體 - Linux 上的 SQL Server
 

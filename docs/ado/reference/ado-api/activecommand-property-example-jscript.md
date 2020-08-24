@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: be09e2af-ba31-4168-8ccd-2461bb24e49a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1d39a5cdfdf83f87f92a3b9087eda49a72a52f6b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a8b36a7fe46e975d27d4b255d3bb5928916faac7
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451730"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759918"
 ---
 # <a name="activecommand-property-example-jscript"></a>ActiveCommand 屬性範例 (JScript)
-此範例示範 [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) 屬性。 將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器，然後將它儲存為**ActiveCommandJS。**  
+此範例示範 [ActiveCommand](./activecommand-property-ado.md) 屬性。 將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器，然後將它儲存為**ActiveCommandJS。**  
   
 ```  
 <!-- BeginActiveCommandJS -->  
@@ -127,6 +127,6 @@ if (strName.length > 0)
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADO) 的 ActiveCommand 屬性 ](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [ (ADO) 的命令物件 ](../../../ado/reference/ado-api/command-object-ado.md)   
- [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [ (ADO) 的 ActiveCommand 屬性 ](./activecommand-property-ado.md)   
+ [ (ADO) 的命令物件 ](./command-object-ado.md)   
+ [Recordset 物件 (ADO)](./recordset-object-ado.md)

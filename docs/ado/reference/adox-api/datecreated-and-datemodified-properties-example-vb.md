@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d608ea35-6e68-402f-8184-a5041e408678
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 51400e11416ff7a8e7a336a815e4a11d8033d316
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bab3ba9d4cff5036e6024c7c13c3ba8404a7987
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440180"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770767"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vb"></a>DateCreated 和 DateModified 屬性範例 (VB)
-這個範例會示範 [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) 和 [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) 屬性，方法是將新資料 [行](../../../ado/reference/adox-api/column-object-adox.md) 加入現有的 [資料表](../../../ado/reference/adox-api/table-object-adox.md) ，並建立新的 **資料表**。 此範例需要 DateOutput 程式才能執行。  
+這個範例會示範 [DateCreated](./datecreated-property-adox.md) 和 [DateModified](./datemodified-property-adox.md) 屬性，方法是將新資料 [行](./column-object-adox.md) 加入現有的 [資料表](./table-object-adox.md) ，並建立新的 **資料表**。 此範例需要 DateOutput 程式才能執行。  
   
 ```  
 ' BeginDateCreatedVB  
@@ -96,9 +96,9 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [DateCreated 屬性 (ADOX) ](../../../ado/reference/adox-api/datecreated-property-adox.md)   
- [DateModified 屬性 (ADOX) ](../../../ado/reference/adox-api/datemodified-property-adox.md)   
- [Procedure 物件 (ADOX) ](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [程式集合 (ADOX) ](../../../ado/reference/adox-api/procedures-collection-adox.md)   
- [View Object (ADOX) ](../../../ado/reference/adox-api/view-object-adox.md)   
- [Views 集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+ [DateCreated 屬性 (ADOX) ](./datecreated-property-adox.md)   
+ [DateModified 屬性 (ADOX) ](./datemodified-property-adox.md)   
+ [Procedure 物件 (ADOX) ](./procedure-object-adox.md)   
+ [程式集合 (ADOX) ](./procedures-collection-adox.md)   
+ [View Object (ADOX) ](./view-object-adox.md)   
+ [Views 集合 (ADOX)](./views-collection-adox.md)

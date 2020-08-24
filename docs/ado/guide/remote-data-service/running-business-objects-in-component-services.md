@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3077d0b6-42d6-4f10-8e5d-42e6204f1109
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 52e90a1913a0500a174e335c178ea8a556d9659a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6732724e842d4183aa7e663994df34c57f366933
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452010"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759358"
 ---
 # <a name="running-business-objects-in-component-services"></a>在 Component Services 中執行商務物件
 > [!IMPORTANT]
@@ -28,12 +28,10 @@ ms.locfileid: "88452010"
   
 -   建立為 .exe 檔案的商務物件可以透過 DCOM 來呼叫。 如果這些商務物件是透過 Internet Information Services (IIS) 使用，則會受限於額外的資料封送處理，而這會使用戶端效能變慢。  
   
--   建立為 .dll 檔案的商務物件可以透過 IIS 使用，因此也可以透過 HTTP 使用。 如果您使用 Windows NT，也只能透過元件服務或透過 Microsoft Transaction Server 使用它們。 您必須在 IIS 伺服器電腦上註冊商務物件 Dll，才能透過 IIS 來存取它們。 如需有關如何設定 DLL 以在 DCOM 上執行的詳細資訊，請參閱「 [啟用 dll 以在 dcom 上執行](../../../ado/guide/remote-data-service/enabling-a-dll-to-run-on-dcom.md)」一節。  
+-   建立為 .dll 檔案的商務物件可以透過 IIS 使用，因此也可以透過 HTTP 使用。 如果您使用 Windows NT，也只能透過元件服務或透過 Microsoft Transaction Server 使用它們。 您必須在 IIS 伺服器電腦上註冊商務物件 Dll，才能透過 IIS 來存取它們。 如需有關如何設定 DLL 以在 DCOM 上執行的詳細資訊，請參閱「 [啟用 dll 以在 dcom 上執行](./enabling-a-dll-to-run-on-dcom.md)」一節。  
   
 > [!NOTE]
->  使用 **GetObjectCoNtext**、 **SetComplete**和 **SetAbort**將中介層的商務物件實作為元件服務元件時，如果您使用 Windows NT) 內容物件來維持跨多個用戶端呼叫的狀態，則商務物件可以使用元件服務 (或 MTS。 這種情況可以使用 DCOM，這通常是在受信任的用戶端與內部網路中的伺服器之間執行。 在此案例中為[RDS。](../../../ado/reference/rds-api/dataspace-object-rds.md)用戶端上的空間物件和[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)方法會由**ITransactionCoNtext**介面所提供並由元件服務所執行的交易內容物件和**CreateInstance**方法取代。  
+>  使用 **GetObjectCoNtext**、 **SetComplete**和 **SetAbort**將中介層的商務物件實作為元件服務元件時，如果您使用 Windows NT) 內容物件來維持跨多個用戶端呼叫的狀態，則商務物件可以使用元件服務 (或 MTS。 這種情況可以使用 DCOM，這通常是在受信任的用戶端與內部網路中的伺服器之間執行。 在此案例中為[RDS。](../../reference/rds-api/dataspace-object-rds.md)用戶端上的空間物件和[CreateObject](../../reference/rds-api/createobject-method-rds.md)方法會由**ITransactionCoNtext**介面所提供並由元件服務所執行的交易內容物件和**CreateInstance**方法取代。  
   
 ## <a name="see-also"></a>另請參閱  
- [RDS 基本概念](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
+ [RDS 基本概念](./rds-fundamentals.md)

@@ -1,6 +1,6 @@
 ---
 title: 在 Linux 上安裝 SQL Server Integration Services
-description: 本文描述如何在 Linux 上安裝 SQL Server Integration Services (SSIS)。
+description: 本文描述如何在 Linux 上安裝 SQL Server Integration Services (SSIS)。 您可以在 Ubuntu 16.04 和 Red Hat Enterprise Linux 上安裝 SSIS。
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
@@ -8,12 +8,12 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 681ba70f94819d9e7d4f129cfaf409a968e80bca
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a8ec33ad6d3c2bfc9c8f3adab2acad2fdb74ce0d
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882524"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088768"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>在 Linux 上安裝 SQL Server Integration Services (SSIS)
 
@@ -217,10 +217,10 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 | 環境變數 | 描述 |
 |---|---|
 | ACCEPT_EULA | 當設定為任何值 (例如 "Y") 時，即接受 SQL Server 授權條款。|
-| SSIS_PID | 設定 SQL Server 版本或產品金鑰。 下列為可能的值：<ul><li>評估</li><li>開發人員</li><li>Express</li><li>Web</li><li>標準</li><li>Enterprise</li><li>產品金鑰</li></ul>如果您指定產品金鑰，則其格式必須為 *#####* - *#####* - *#####* - *#####* - *#####* ，其中 *#* 是字母或數字。  |
+| SSIS_PID | 設定 SQL Server 版本或產品金鑰。 下列為可能的值：<ul><li>評估</li><li>開發人員</li><li>Express</li><li>Web</li><li>Standard</li><li>企業</li><li>產品金鑰</li></ul>如果您指定產品金鑰，則其格式必須為 *#####* - *#####* - *#####* - *#####* - *#####* ，其中 *#* 是字母或數字。  |
 | | |
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>接下來的步驟
 
 若要在 Linux 上執行 SSIS 套件，請參閱[使用 SSIS 在 Linux 上的 SQL Server 擷取、轉換和載入資料](sql-server-linux-migrate-ssis.md)。
 

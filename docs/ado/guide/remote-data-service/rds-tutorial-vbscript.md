@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: e2a48c4d-88b1-43ff-a202-9cdec54997d2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ea18ea1d5df16d26b47bcddcdf284e51dc0c2fcf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6c8e93e72833e649f46ebda5885d3a16c5afece6
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452080"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759508"
 ---
 # <a name="rds-tutorial-vbscript"></a>RDS 教學課程 (VBScript)
-這是以 Microsoft Visual Basic Scripting Edition 撰寫的 RDS 教學課程。 如需本教學課程用途的說明，請參閱 [RDS 教學](../../../ado/guide/remote-data-service/rds-tutorial.md)課程。  
+這是以 Microsoft Visual Basic Scripting Edition 撰寫的 RDS 教學課程。 如需本教學課程用途的說明，請參閱 [RDS 教學](./rds-tutorial.md)課程。  
   
 > [!IMPORTANT]
 >  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 在本教學課程中， [RDS。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 和 [RDS。空間](../../../ado/reference/rds-api/dataspace-object-rds.md) 是在設計階段建立的，也就是說，它們是以物件標記來定義，如下所示： `<OBJECT>...</OBJECT>` 。 或者，您也可以在執行時間使用 CreateObject 方法來建立它們， [ (RDS) ](../../../ado/reference/rds-api/createobject-method-rds.md) 方法。 例如， **RDS。** 您可以建立 DataControl 物件，如下所示：  
+ 在本教學課程中， [RDS。DataControl](../../reference/rds-api/datacontrol-object-rds.md) 和 [RDS。空間](../../reference/rds-api/dataspace-object-rds.md) 是在設計階段建立的，也就是說，它們是以物件標記來定義，如下所示： `<OBJECT>...</OBJECT>` 。 或者，您也可以在執行時間使用 CreateObject 方法來建立它們， [ (RDS) ](../../reference/rds-api/createobject-method-rds.md) 方法。 例如， **RDS。** 您可以建立 DataControl 物件，如下所示：  
   
 ```vb
 Set DC = Server.CreateObject("RDS.DataControl")  
@@ -59,7 +59,7 @@ Set DC = Server.CreateObject("RDS.DataControl")
  不過，在本教學課程中，請使用虛構伺服器 ">yourserver.database.windows.net"。  
   
 > [!NOTE]
->  留意 **ByRef** 引數的資料類型。 VBScript 不讓您指定變數型別，因此您必須一律傳遞 **Variant**。 使用 HTTP 時，如果您使用 Rds 叫用，RDS 將可讓您將 Variant 傳遞給需要非變異的方法 **。空間** 物件 [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) 方法。 使用 DCOM 或同進程伺服器時，您必須符合用戶端和伺服器端上的參數類型，否則會收到「類型不符」的錯誤。  
+>  留意 **ByRef** 引數的資料類型。 VBScript 不讓您指定變數型別，因此您必須一律傳遞 **Variant**。 使用 HTTP 時，如果您使用 Rds 叫用，RDS 將可讓您將 Variant 傳遞給需要非變異的方法 **。空間** 物件 [CreateObject](../../reference/rds-api/createobject-method-rds.md) 方法。 使用 DCOM 或同進程伺服器時，您必須符合用戶端和伺服器端上的參數類型，否則會收到「類型不符」的錯誤。  
   
 ```vb
 Set DF1 = DS1.CreateObject("RDSServer.DataFactory", "https://yourServer")  
@@ -140,4 +140,4 @@ End Sub
  **本教學課程即將結束。**  
   
 ## <a name="see-also"></a>另請參閱  
- [RDS 教學課程](../../../ado/guide/remote-data-service/rds-tutorial.md)   
+ [RDS 教學課程](./rds-tutorial.md)

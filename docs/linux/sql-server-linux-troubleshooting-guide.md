@@ -1,6 +1,6 @@
 ---
 title: 針對 Linux 上的 SQL Server 進行疑難排解
-description: 針對使用 Linux 上的 SQL Server 提供疑難排解秘訣。
+description: 針對在 Linux 上或在 Docker 容器中執行的 Microsoft SQL Server 進行疑難排解。 了解哪裡可以找到有關支援功能和已知限制的資訊。
 author: VanMSFT
 ms.author: vanto
 ms.date: 05/01/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 7c2c191fa05f1c584c9e45e88cd5bd5b0e3b7851
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 99ac4b9fbd0ce616cebc707026eff1d5eb15895f
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897227"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088737"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>針對 Linux 上的 SQL Server 進行疑難排解
 
@@ -76,7 +76,7 @@ ms.locfileid: "85897227"
 
 ### <a name="manage-the-execution-of-the-mssql-docker-container"></a>管理 mssql Docker 容器的執行
 
-您可以執行下列命令來取得最新建立之 SQL Server Docker容器的狀態和容器識別碼 (識別碼位於 [容器識別碼]  資料行底下)：
+您可以執行下列命令來取得最新建立之 SQL Server Docker容器的狀態和容器識別碼 (識別碼位於 [容器識別碼]**** 資料行底下)：
 
    ```bash
    sudo docker ps -l

@@ -1,4 +1,5 @@
 ---
+description: Microsoft Connector for Oracle
 title: Microsoft Connector for Oracle | Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2019
@@ -9,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1ef8ccdfc30c772548cff4caa816ef1a582c8823
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a5bb5631a398e398b45b84a0ee70b51f49c90988
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913794"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430750"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Microsoft Connector for Oracle
 
@@ -55,6 +56,10 @@ Microsoft Connector for Oracle 支援下列 Microsoft SQL Server 產品：
 - [SQL Server 2016：Microsoft Connector Version 4.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=52950) \(英文\)
 - [SQL Server 2014：Microsoft Connector Version 3.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=44582) \(英文\)
 - [SQL Server 2012：Microsoft Connector Version 2.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=29283) \(英文\)
+
+## <a name="limitations-and-known-issues"></a>限制與已知問題
+
+- 檢視不會列在 Oracle 來源「資料表或檢視的名稱」之下。 因應措施是，使用 SQL 命令並執行 select * from view，或在進階編輯器中將檢視名稱設定為屬性 [Oracle Source].[TableName]。
 
 ## <a name="uninstallation"></a>解除安裝
 

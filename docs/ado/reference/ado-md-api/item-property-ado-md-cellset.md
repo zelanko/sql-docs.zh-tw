@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 92f81199f52323e1e317c27b5206ebe69e674879
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 12df2a7d592be4fa42d8cc0df779a375ab987cb2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440960"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778067"
 ---
 # <a name="item-property-ado-md-cellset"></a>Item 屬性 (ADO MD Cellset)
-使用它的座標，從資料格 [集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) 抓取儲存格。  
+使用它的座標，從資料格 [集](./cellset-object-ado-md.md) 抓取儲存格。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,7 +46,7 @@ Cell = Cellset.Item ( Positions)
 -   序數位置  
   
 ## <a name="remarks"></a>備註  
- 使用**Item**屬性可傳回資料格[集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)物件內的[Cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md)物件。 如果 **專案** 屬性找不到對應至 *位置* 引數的資料格，就會發生錯誤。  
+ 使用**Item**屬性可傳回資料格[集](./cellset-object-ado-md.md)物件內的[Cell](./cell-object-ado-md.md)物件。 如果 **專案** 屬性找不到對應至 *位置* 引數的資料格，就會發生錯誤。  
   
  **Item**屬性是 [**儲存格**] 物件的預設屬性。 下列語法形式可以互換：  
   
@@ -66,8 +66,8 @@ Cellset.Item ( Positions )Cellset ( Positions )
 >  您的資料提供者可能不支援依成員名稱抓取資料格。 如需詳細資訊，請參閱提供者的檔。  
   
 ## <a name="applies-to"></a>套用至  
- [Cellset 物件 (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
+ [Cellset 物件 (ADO MD)](./cellset-object-ado-md.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [資料格物件 (ADO MD) ](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
- [Cellset 物件 (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)
+ [資料格物件 (ADO MD) ](./cell-object-ado-md.md)   
+ [Cellset 物件 (ADO MD)](./cellset-object-ado-md.md)

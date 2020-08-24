@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a676f0a7-7d17-45db-87c1-3fc78627465f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a6263acd1a51aa73ab004103eb6a7315626335ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21f8333c0fd8b4d290f2d76aa35ef8cfea73b35d
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452130"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759678"
 ---
 # <a name="rds-fundamentals"></a>RDS 基本概念
 > [!IMPORTANT]
@@ -27,20 +27,18 @@ ms.locfileid: "88452130"
   
  下列主題介紹 RDS。  
   
--   [遠端資料存取的解決方案](../../../ado/guide/remote-data-service/solutions-for-remote-data-access.md)  
+-   [遠端資料存取的解決方案](./solutions-for-remote-data-access.md)  
   
--   [基本 RDS 程式設計模型](../../../ado/guide/remote-data-service/basic-rds-programming-model.md)  
+-   [基本 RDS 程式設計模型](./basic-rds-programming-model.md)  
   
--   [RDS 程式設計模型詳述](../../../ado/guide/remote-data-service/rds-programming-model-in-detail.md)  
+-   [RDS 程式設計模型詳述](./rds-programming-model-in-detail.md)  
   
--   [具有物件的 RDS 程式設計模型](../../../ado/guide/remote-data-service/rds-programming-model-with-objects.md)  
+-   [具有物件的 RDS 程式設計模型](./rds-programming-model-with-objects.md)  
   
--   [RDS 物件模型摘要](../../../ado/guide/remote-data-service/rds-object-model-summary.md)  
+-   [RDS 物件模型摘要](./rds-object-model-summary.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [遠端資料存取的解決方案](../../../ado/guide/remote-data-service/solutions-for-remote-data-access.md)   
- [RDS 案例](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [RDS 教學課程](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [RDS 提供使用方式與安全性](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
-
+ [遠端資料存取的解決方案](./solutions-for-remote-data-access.md)   
+ [RDS 案例](./rds-scenario.md)   
+ [RDS 教學課程](./rds-tutorial.md)   
+ [RDS 使用方式與安全性](./rds-usage-and-security.md)

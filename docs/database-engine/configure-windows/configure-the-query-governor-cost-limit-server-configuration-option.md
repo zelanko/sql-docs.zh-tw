@@ -1,6 +1,6 @@
 ---
 title: 設定 query governor cost limit 伺服器組態選項 | Microsoft Docs
-description: 了解查詢管理員成本限制選項。 了解如何使用此選項來限制僅執行 SQL Server 預估會在特定時間內完成的查詢。
+description: 了解查詢管理員成本限制選項。 查看如何加以使用以限制查詢的執行。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: e7b8f084-1052-4133-959b-cebf4add790f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 016ca109ae4ad609637a1919c29515dea2548083
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 02b34ab8d3c0a3efd79d7d136bf26401ba92fdf4
+ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785877"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88216735"
 ---
 # <a name="configure-the-query-governor-cost-limit-server-configuration-option"></a>設定 query governor cost limit 伺服器組態選項
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] query governor cost limit [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 查詢管理員成本限制選項指定查詢可執行的時間週期上限。 查詢成本代表在特定的硬體組態上，預估完成查詢所需的時間 (以秒為單位)。 此選項的預設值為 0，這會將查詢管理員設定為關閉。 這允許所有查詢在沒有任何時間限制下執行。 如果指定非零的非負值，查詢若超過該值的估計成本，查詢管理員就不允許執行此查詢。  
+此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] query governor cost limit [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 成本限制選項會指定允許指定查詢執行的估計成本上限。 查詢成本是由查詢最佳化工具根據估計執行需求 (例如 CPU 時間、記憶體與磁碟 IO) 所決定的抽象數字。 其代表在特定的硬體組態上，估計完成查詢所需的時間 (以秒為單位)。 這個抽象數字不等於在執行中執行個體上完成查詢所需的時間。 您應該將其視為相對量值。 此選項的預設值為 0，這會將查詢管理員設定為關閉。 將值設定為 0，以允許所有查詢在沒有任何時間限制的情況下執行。 如果指定非零的非負值，查詢若超過該值的估計成本，查詢管理員就不允許執行此查詢。   
   
  **本主題內容**  
   
@@ -66,7 +66,7 @@ ms.locfileid: "85785877"
   
 3.  選取或清除 **[使用查詢管理員防止執行時間很長的查詢]** 核取方塊。  
   
-     如果您選取此核取方塊，請在下方方塊中輸入一個正值，這是查詢管理員用來禁止執行任何長度超過該值的查詢。  
+     如果您選取此核取方塊，請在下列方塊中輸入一個正值，這是查詢管理員用來禁止執行任何估計成本超過該值的查詢。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -76,7 +76,7 @@ ms.locfileid: "85785877"
   
 2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例示範如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 將 `query governor cost limit` 選項的值設定為 `120` 秒。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例示範如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)，將 `query governor cost limit` 選項的值設定為估計查詢成本上限 `120`。
   
 ```sql  
 USE AdventureWorks2012 ;  

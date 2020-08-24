@@ -1,6 +1,6 @@
 ---
 title: SQL Server 容器的高可用性
-description: 本文介紹 SQL Server 容器的高可用性
+description: 了解 SQL Server 容器的高可用性。 同時了解如何在 Kubernetes 上使用 SQL Server 部署容器。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 688db496825af348183e195bfd4003cfcfb53d81
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 00665a8306dbf586b92cfec14a8fe21f631f96c9
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "69653380"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088893"
 ---
 # <a name="high-availability-for-sql-server-containers"></a>SQL Server 容器的高可用性
 
@@ -40,7 +40,7 @@ SQL Server 2017 和更新版本支援 Kubernetes 上的容器。
 
 若要在 Kubernetes 中建立容器，請參閱[在 Kubernetes 中部署 SQL Server 容器](tutorial-sql-server-containers-kubernetes.md)
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>接下來的步驟
 
 若要在 Azure Kubernetes Service (AKS) 中部署 SQL Server 容器，請參閱這些範例：
 * [在 Docker 容器中部署 SQL Server](sql-server-linux-configure-docker.md)

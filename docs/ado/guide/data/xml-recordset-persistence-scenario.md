@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c61663a1fc88f4e8efe464da0220df22133bdc2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 42fbc8670320761697caf4c956c1f9b64bda5c24
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452500"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758418"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>XML 資料錄集保存案例
 在此案例中，您將建立 Active Server Pages (ASP) 應用程式，將記錄集物件的內容直接儲存至 ASP 回應物件。  
@@ -26,7 +26,7 @@ ms.locfileid: "88452500"
 > [!NOTE]
 >  此案例要求您的伺服器必須已安裝 Internet information Server 5.0 (IIS) 或更新版本。  
   
- 傳回的記錄集會使用 [DataControl 物件 (RDS) ](../../../ado/reference/rds-api/datacontrol-object-rds.md)顯示在 Internet Explorer 中。  
+ 傳回的記錄集會使用 [DataControl 物件 (RDS) ](../../reference/rds-api/datacontrol-object-rds.md)顯示在 Internet Explorer 中。  
   
  若要建立此案例，必須執行下列步驟：  
   
@@ -85,12 +85,12 @@ ms.locfileid: "88452500"
 %>  
 ```  
   
- 請注意，ASP 回應物件指定為記錄集 [儲存方法](../../../ado/reference/ado-api/save-method.md)的目的地。 Save 方法的目的地可以是任何支援 IStream 介面的物件，例如 ado [資料流程物件 (ado) ](../../../ado/reference/ado-api/stream-object-ado.md)，或是包含要儲存記錄集之完整路徑的檔案名。  
+ 請注意，ASP 回應物件指定為記錄集 [儲存方法](../../reference/ado-api/save-method.md)的目的地。 Save 方法的目的地可以是任何支援 IStream 介面的物件，例如 ado [資料流程物件 (ado) ](../../reference/ado-api/stream-object-ado.md)，或是包含要儲存記錄集之完整路徑的檔案名。  
   
  請先儲存並關閉 XMLResponse，然後再繼續進行下一個步驟。 此外，請從預設的 ADO 程式庫安裝資料夾將 adovbs 檔案複製到您儲存 XMLResponse .asp 檔案的相同資料夾。  
   
 ## <a name="step-4-receive-and-display-the-data"></a>步驟4：接收和顯示資料  
- 在這個步驟中，您將建立一個 HTML 檔案，其中包含內嵌 [DataControl 物件 (RDS) ](../../../ado/reference/rds-api/datacontrol-object-rds.md) 物件，該物件指向 XMLResponse .asp 檔案以取得記錄集。 使用文字編輯器（例如 [記事本]）開啟 default.htm，然後加入下列程式碼。 將 URL 中的 "sqlserver" 取代為您的伺服器名稱。  
+ 在這個步驟中，您將建立一個 HTML 檔案，其中包含內嵌 [DataControl 物件 (RDS) ](../../reference/rds-api/datacontrol-object-rds.md) 物件，該物件指向 XMLResponse .asp 檔案以取得記錄集。 使用文字編輯器（例如 [記事本]）開啟 default.htm，然後加入下列程式碼。 將 URL 中的 "sqlserver" 取代為您的伺服器名稱。  
   
 ```  
 <HTML>  
@@ -114,5 +114,5 @@ ms.locfileid: "88452500"
  關閉 default.htm 的檔案，並將它儲存到您儲存 XMLResponse 的相同資料夾中。 使用 Internet Explorer 4.0 或更新版本，開啟 HTTPs://*sqlserver*/XMLPersist/default.htm 的 URL，並觀察結果。 資料會顯示在系結的 DHTML 資料表中。 現在開啟 URL HTTPs:// *sqlserver* /XMLPersist/XMLResponse.asp 並觀察結果。 XML 隨即顯示。  
   
 ## <a name="see-also"></a>另請參閱  
- [Save 方法](../../../ado/reference/ado-api/save-method.md)   
- [以 XML 格式保存記錄](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [Save 方法](../../reference/ado-api/save-method.md)   
+ [以 XML 格式保存記錄](./persisting-records-in-xml-format.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 194ce221-49bd-4474-ba34-91453d329381
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad20679059706d9349fd6e4fd37dd6c6b5a8ea2d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a060f6fb7ac635368e92651d2e286d68c0f299eb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441900"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777277"
 ---
 # <a name="status-property-example-vc"></a>Status 屬性範例 (VC++)
-此範例會使用 [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) 屬性來顯示批次更新發生之前已在批次作業中修改哪些記錄。  
+此範例會使用 [Status](./status-property-ado-recordset.md) 屬性來顯示批次更新發生之前已在批次作業中修改哪些記錄。  
   
 ```  
 // BeginStatusCpp.cpp  
@@ -188,4 +188,4 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Status 屬性 (ADO Recordset)](../../../ado/reference/ado-api/status-property-ado-recordset.md)
+ [Status 屬性 (ADO Recordset)](./status-property-ado-recordset.md)

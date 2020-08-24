@@ -13,36 +13,36 @@ helpviewer_keywords:
 ms.assetid: 90a05168-87d0-45e8-8b32-0b64fec74ad2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3b1496230281d7199774475437c0d12be67e7cfe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b54985a01911e7e8fce9082c424c5da86340395b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440400"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771177"
 ---
 # <a name="catalog-object-properties-methods-and-events"></a>Catalog 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  
- [ActiveConnection 屬性](../../../ado/reference/adox-api/activeconnection-property-adox.md)  
+ [ActiveConnection 屬性](./activeconnection-property-adox.md)  
   
- [群組集合](../../../ado/reference/adox-api/groups-collection-adox.md)  
+ [群組集合](./groups-collection-adox.md)  
   
- [程式集合](../../../ado/reference/adox-api/procedures-collection-adox.md)  
+ [程式集合](./procedures-collection-adox.md)  
   
- [資料表集合](../../../ado/reference/adox-api/tables-collection-adox.md)  
+ [資料表集合](./tables-collection-adox.md)  
   
- [使用者集合](../../../ado/reference/adox-api/users-collection-adox.md)  
+ [使用者集合](./users-collection-adox.md)  
   
- [Views 集合](../../../ado/reference/adox-api/views-collection-adox.md)  
+ [Views 集合](./views-collection-adox.md)  
   
 ## <a name="methods"></a>方法  
- [Create 方法](../../../ado/reference/adox-api/create-method-adox.md)  
+ [Create 方法](./create-method-adox.md)  
   
- [GetObjectOwner 方法](../../../ado/reference/adox-api/getobjectowner-method-adox.md)  
+ [GetObjectOwner 方法](./getobjectowner-method-adox.md)  
   
- [SetObjectOwner 方法](../../../ado/reference/adox-api/setobjectowner-method.md)  
+ [SetObjectOwner 方法](./setobjectowner-method.md)  
   
 ## <a name="events"></a>事件  
  無。  
   
 ## <a name="see-also"></a>另請參閱  
- [Catalog 物件 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)
+ [Catalog 物件 (ADOX)](./catalog-object-adox.md)

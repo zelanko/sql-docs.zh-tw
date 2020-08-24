@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5c3f5bdb8a52f686ae336aa51986591788669979
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2bd5979526e453e33674441ebd4e433f2a7ad6f3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441670"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777037"
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>唯一的資料表、唯一的架構、唯一的目錄屬性-動態 (ADO) 
-可讓您在由多個基表的聯結作業所形成的 [記錄集中](../../../ado/reference/ado-api/recordset-object-ado.md) ，嚴密地控制對特定基表所做的修改。  
+可讓您在由多個基表的聯結作業所形成的 [記錄集中](./recordset-object-ado.md) ，嚴密地控制對特定基表所做的修改。  
   
 -   **唯一資料表** ：指定允許更新、插入和刪除的基表名稱。  
   
@@ -40,16 +40,16 @@ ms.locfileid: "88441670"
   
  **唯一資料表**的主鍵會被視為整個**記錄集**的主要索引鍵。 這是用於任何需要主要金鑰之方法的金鑰。  
   
- 當設定 **Unique table** 時， [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) 方法只會影響命名資料表。 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)、 [Resync](../../../ado/reference/ado-api/resync-method.md)、 [Update](../../../ado/reference/ado-api/update-method.md)和[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法會影響**記錄集**的任何適當基礎基表。  
+ 當設定 **Unique table** 時， [Delete](./delete-method-ado-recordset.md) 方法只會影響命名資料表。 [AddNew](./addnew-method-ado.md)、 [Resync](./resync-method.md)、 [Update](./update-method.md)和[UpdateBatch](./updatebatch-method.md)方法會影響**記錄集**的任何適當基礎基表。  
   
- 執行任何自訂重新同步處理之前，必須先指定**唯一資料表**。 如果未指定 **Unique Table** ， [Resync 命令](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md) 屬性將沒有任何作用。  
+ 執行任何自訂重新同步處理之前，必須先指定**唯一資料表**。 如果未指定 **Unique Table** ， [Resync 命令](./resync-command-property-dynamic-ado.md) 屬性將沒有任何作用。  
   
  如果找不到唯一基表，則會產生執行階段錯誤。  
   
- 當[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性設定為**adUseClient**時，這些動態屬性都會附加到**記錄集**物件[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)集合。  
+ 當[CursorLocation](./cursorlocation-property-ado.md)屬性設定為**adUseClient**時，這些動態屬性都會附加到**記錄集**物件[屬性](./properties-collection-ado.md)集合。  
   
 ## <a name="applies-to"></a>套用至  
- [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset 物件 (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Recordset 物件 (ADO)](./recordset-object-ado.md)

@@ -16,26 +16,26 @@ helpviewer_keywords:
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4356ad974c45e16cec32d45fa2ed6aeb42209f5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 929421784aabdcd3e414d6005fc3d48ade2f68e2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442170"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777537"
 ---
 # <a name="schemaenum"></a>SchemaEnum
-指定[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)方法所抓取之架構**記錄集**的類型。  
+指定[OpenSchema](./openschema-method.md)方法所抓取之架構**記錄集**的類型。  
   
 ## <a name="remarks"></a>備註  
- 如需有關每個 ADO 常數所傳回之函式和資料行的詳細資訊，請參閱 [附錄 B：](https://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1) OLE DB 程式設計人員參考的架構資料列集的主題。 下表的 [描述] 部分中，每個主題的名稱會列在括弧中。  
+ 如需有關每個 ADO 常數所傳回之函式和資料行的詳細資訊，請參閱 [附錄 B：](/previous-versions/windows/desktop/ms712921(v=vs.85)) OLE DB 程式設計人員參考的架構資料列集的主題。 下表的 [描述] 部分中，每個主題的名稱會列在括弧中。  
   
- 有關針對每個 ADO MD 常數所傳回之函式和資料行的詳細資訊，請參閱 OLE DB 中的 [Olap 物件和架構](https://msdn.microsoft.com/d20bb2a6-68bd-423f-9ec8-eb930cd0c144) 資料列集， (olap) 檔的中的 OLE DB。 每個主題的名稱會列在下表的 [描述] 資料行中的括弧內。  
+ 有關針對每個 ADO MD 常數所傳回之函式和資料行的詳細資訊，請參閱 OLE DB 中的 [Olap 物件和架構](/previous-versions/windows/desktop/ms723056(v=vs.85)) 資料列集， (olap) 檔的中的 OLE DB。 每個主題的名稱會列在下表的 [描述] 資料行中的括弧內。  
   
- 您可以參考 ADO [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) 主題的 Description 資料行，將 OLE DB 檔中的資料行資料類型轉譯為 ado 資料類型。 例如， **DBTYPE_WSTR** 的 OLE DB 資料類型相當於 **adWChar**的 ADO 資料類型。  
+ 您可以參考 ADO [DataTypeEnum](./datatypeenum.md) 主題的 Description 資料行，將 OLE DB 檔中的資料行資料類型轉譯為 ado 資料類型。 例如， **DBTYPE_WSTR** 的 OLE DB 資料類型相當於 **adWChar**的 ADO 資料類型。  
   
- ADO 會產生常數、 **adSchemaDBInfoKeywords** 和 **adSchemaDBInfoLiterals**等類似架構的結果。 ADO 會建立 **記錄集**，然後以 **IDBInfo：： GetKeywords** 和 **IDBInfo：： GetLiteralInfo** 方法分別傳回的值填入每個資料列。 如需這些方法的其他資訊，請參閱 OLE DB 程式設計人員參考的 [IDBInfo](https://msdn.microsoft.com/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) 一節。  
+ ADO 會產生常數、 **adSchemaDBInfoKeywords** 和 **adSchemaDBInfoLiterals**等類似架構的結果。 ADO 會建立 **記錄集**，然後以 **IDBInfo：： GetKeywords** 和 **IDBInfo：： GetLiteralInfo** 方法分別傳回的值填入每個資料列。 如需這些方法的其他資訊，請參閱 OLE DB 程式設計人員參考的 [IDBInfo](/previous-versions/windows/desktop/ms713663(v=vs.85)) 一節。  
   
-|常數|值|描述|條件約束資料行|  
+|持續性|值|描述|條件約束資料行|  
 |--------------|-----------|-----------------|------------------------|  
 |**adSchemaAsserts**|0|傳回指定使用者所擁有之目錄中定義的判斷提示。<br /><br />  (判斷提示資料列集) |CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaCatalogs**|1|傳回與可從 DBMS 存取之目錄相關聯的實體屬性。<br /><br />  (目錄資料列集) |CATALOG_NAME|  
@@ -82,7 +82,7 @@ ms.locfileid: "88442170"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 相等  
  封裝： **.com. 資料**  
   
-|常數|  
+|持續性|  
 |--------------|  
 |AdoEnums|  
 |AdoEnums 目錄|  
@@ -127,4 +127,4 @@ ms.locfileid: "88442170"
 |AdoEnums. Schema. VIEWTABLEUSAGE|  
   
 ## <a name="applies-to"></a>套用至  
- [OpenSchema 方法](../../../ado/reference/ado-api/openschema-method.md)
+ [OpenSchema 方法](./openschema-method.md)

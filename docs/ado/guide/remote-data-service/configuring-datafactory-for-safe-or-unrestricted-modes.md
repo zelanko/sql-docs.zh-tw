@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 8ff24805-dc7a-42ae-b600-5bad0e3f51b8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a0b01eada84095b94740319a6d63ed6b0066425d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ffd9c1b82225a131722cdaf384c4bd5662b5322f
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452300"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758388"
 ---
 # <a name="configuring-datafactory-for-safe-or-unrestricted-modes"></a>為安全或不受限制模式設定 DataFactory
 > [!IMPORTANT]
 >  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 根據預設，ADO 會安裝「安全」的 [RDSServer DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 設定。 RDS 伺服器元件的安全模式表示下列情況成立：  
+ 根據預設，ADO 會安裝「安全」的 [RDSServer DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) 設定。 RDS 伺服器元件的安全模式表示下列情況成立：  
   
 1.  RDSServer. DataFactory 需要處理常式 (這是由登錄機碼設定) 所強制。  
   
@@ -32,15 +32,12 @@ ms.locfileid: "88452300"
   
 3.  Msdfmap.ini 檔案安裝在 Windows 目錄中。 您必須根據自己的需求來設定此檔案，才能在三層模式中使用 RDS。  
   
- （選擇性）您可以設定不受限制的 **DataFactory** 安裝。 您可以直接使用**DataFactory** ，而不需要使用自訂處理常式。 使用者仍然可以藉由修改連接字串來使用自訂處理常式，但這不是必要的。 如需有關使用 **RDSServer DataFactory** 物件之含意的詳細資訊，請參閱 [保護 RDS 應用程式](../../../ado/guide/remote-data-service/securing-rds-applications.md)。  
+ （選擇性）您可以設定不受限制的 **DataFactory** 安裝。 您可以直接使用**DataFactory** ，而不需要使用自訂處理常式。 使用者仍然可以藉由修改連接字串來使用自訂處理常式，但這不是必要的。 如需有關使用 **RDSServer DataFactory** 物件之含意的詳細資訊，請參閱 [保護 RDS 應用程式](./securing-rds-applications.md)。  
   
  已提供登錄檔 handsafe 來設定安全設定的處理常式登錄專案。 若要在安全模式中執行，請執行 handsafe .reg。  
   
  執行 handsafe 之後，您必須在 [命令提示字元] 視窗中輸入下列命令，以停止並重新啟動 Web 服務器上的 World Wide Web 發行服務： "NET STOP W3SVC" 和 "NET START W3SVC"。  
   
 ## <a name="see-also"></a>另請參閱  
- [DataFactory 自訂](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [RDS 基本概念](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
-
+ [DataFactory 自訂](./datafactory-customization.md)   
+ [RDS 基本概念](./rds-fundamentals.md)

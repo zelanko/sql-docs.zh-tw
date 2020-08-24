@@ -1,5 +1,6 @@
 ---
-title: '@@DBTS (Transact-SQL) | Microsoft Docs'
+description: '&#x40;&#x40;DBTS (Transact-SQL)'
+title: DBTS (Transact-SQL)
 ms.custom: ''
 ms.date: 09/18/2017
 ms.prod: sql
@@ -18,14 +19,15 @@ helpviewer_keywords:
 ms.assetid: 91842ddd-91c0-4445-a03f-116f6bc991d0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5493589b7a87af2ea856a63e81c3b366eb410d9e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1f11adca5f8a3fe72a0365e84a746cdec2d5e049
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85682940"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417404"
 ---
 # <a name="x40x40dbts-transact-sql"></a>&#x40;&#x40;DBTS (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 此函式會傳回目前資料庫的目前 **timestamp** 資料類型值。 目前的資料庫將會有保證唯一的時間戳記值。
@@ -34,10 +36,12 @@ ms.locfileid: "85682940"
   
 ## <a name="syntax"></a>語法  
   
-```
+```syntaxsql
 @@DBTS  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-types"></a>傳回類型
 **varbinary**
   
@@ -47,7 +51,7 @@ ms.locfileid: "85682940"
 變更交易隔離等級不會影響 @@DBTS 函式。
   
 ## <a name="examples"></a>範例  
-此範例會傳回 **資料庫目前的**timestamp[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]。
+此範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫目前的 **timestamp**。
   
 ```sql
 USE AdventureWorks2012;  
@@ -55,7 +59,7 @@ GO
 SELECT @@DBTS;  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 [組態函式 &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)  
 [資料指標並行 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md)  
 [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  

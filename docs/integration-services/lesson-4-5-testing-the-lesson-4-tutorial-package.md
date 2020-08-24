@@ -1,4 +1,5 @@
 ---
+description: 步驟 5：測試第 4 課教學課程套件
 title: 步驟 5：測試第 4 課教學課程套件 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/07/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c209aea67a04d7f602ec2015bdb3e7535c9bc8dd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ccd458d09c43a97693c620b9498ad1d593751905
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916859"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457128"
 ---
 # <a name="lesson-4-5-test-the-lesson-4-package"></a>課程 4-5：測試第 4 課套件
 
@@ -43,9 +44,9 @@ ms.locfileid: "86916859"
   
 ## <a name="run-the-lesson-4-tutorial-package"></a>執行第 4 課教學課程套件  
   
-1.  在 [偵錯]  功能表上，選取 [開始偵錯]  。  
+1.  在 [偵錯] 功能表上，選取 [開始偵錯]。  
   
-2.  在套件執行完成之後，於 [偵錯]  功能表上，選取 [停止偵錯]  。  
+2.  在套件執行完成之後，於 [偵錯]**** 功能表上，選取 [停止偵錯]****。  
   
 ## <a name="view-the-contents-of-the-erroroutputtxt-file"></a>檢視 ErrorOutput.txt 檔案的內容  
   

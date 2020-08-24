@@ -1,6 +1,6 @@
 ---
 title: 使用 PowerShell 管理 Linux 上的 SQL Server
-description: 本文概述 Windows 上的 PowerShell 如何用於 Linux 上的 SQL Server。
+description: 了解有關 SQL Server PowerShell 的詳細資料，並查看如何透過 Linux 上的 SQL Server 使用 Windows 的幾個範例。
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
-ms.openlocfilehash: 29d655fc1a63513db073520981398d2b5a66c529
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4539ce49614004d9187d8f503fe165eb14bee2b0
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900139"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088878"
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>使用 Windows 上的 PowerShell 管理 Linux 上的 SQL Server
 

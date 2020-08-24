@@ -13,24 +13,24 @@ helpviewer_keywords:
 ms.assetid: c45d795b-3272-4df4-a54c-7cd4fcb187fd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb2a3fd6f848b43de981d1239657ebc5097202fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 45644a1b295f7a4e83c2fed7d45daa5291744f65
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441230"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778317"
 ---
 # <a name="cell-object-properties-methods-and-events"></a>Cell 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  
- [FormattedValue 屬性](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md)  
+ [FormattedValue 屬性](./formattedvalue-property-ado-md.md)  
   
- [序數屬性 (儲存格) ](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)  
+ [序數屬性 (儲存格) ](./ordinal-property-ado-md-cell.md)  
   
- [位置集合](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)  
+ [位置集合](./positions-collection-ado-md.md)  
   
- [屬性集合](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [屬性集合](../ado-api/properties-collection-ado.md)  
   
- [Value 屬性](../../../ado/reference/ado-md-api/value-property-ado-md.md)  
+ [Value 屬性](./value-property-ado-md.md)  
   
 ## <a name="methods"></a>方法  
  無。  
@@ -39,4 +39,4 @@ ms.locfileid: "88441230"
  無。  
   
 ## <a name="see-also"></a>另請參閱  
- [Cell 物件 (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)
+ [Cell 物件 (ADO MD)](./cell-object-ado-md.md)

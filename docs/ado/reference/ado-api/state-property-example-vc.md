@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1c38cd3b-e4f5-4754-b115-ef5e46d24ab9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 90c08625fb319733f391af5d84f5de053021904c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5cd76fac1fa65f74935f318e2d39d6a1502f2428
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441959"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777327"
 ---
 # <a name="state-property-example-vc"></a>State 屬性範例 (VC++)
-這個範例會使用 [State](../../../ado/reference/ado-api/state-property-ado.md) 屬性來顯示非同步連接開啟和執行非同步命令時的訊息。  
+這個範例會使用 [State](./state-property-ado.md) 屬性來顯示非同步連接開啟和執行非同步命令時的訊息。  
   
 ```  
 // BeginStateCpp.cpp  
@@ -137,4 +137,4 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [State 屬性 (ADO)](../../../ado/reference/ado-api/state-property-ado.md)
+ [State 屬性 (ADO)](./state-property-ado.md)

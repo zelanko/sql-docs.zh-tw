@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c0ed8195-09af-42c8-99c7-038ecc8a5c9f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d1067f47d50b344731c0f270671861f381a3242
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7907572a282835e8d56150dbd034d530dd646b8a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440430"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771327"
 ---
 # <a name="attributes-property-example-vb"></a>Attributes 屬性範例 (VB)
-此範例示範資料[行](../../../ado/reference/adox-api/column-object-adox.md)的[Attributes](../../../ado/reference/adox-api/attributes-property-adox.md)屬性。 將它設定為**adColNullable** ，可讓使用者將[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)[欄位](../../../ado/reference/ado-api/field-object.md)的值設定為空字串。 在這種情況下，使用者可以區分不知道資料的記錄，以及不適用資料的記錄。  
+此範例示範資料[行](./column-object-adox.md)的[Attributes](./attributes-property-adox.md)屬性。 將它設定為**adColNullable** ，可讓使用者將[記錄集](../ado-api/recordset-object-ado.md)[欄位](../ado-api/field-object.md)的值設定為空字串。 在這種情況下，使用者可以區分不知道資料的記錄，以及不適用資料的記錄。  
   
 ```  
 ' BeginAttributesVB  
@@ -127,6 +127,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Attributes 屬性 (ADOX) ](../../../ado/reference/adox-api/attributes-property-adox.md)   
- [ (ADOX) 的目錄物件 ](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Column 物件 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)
+ [Attributes 屬性 (ADOX) ](./attributes-property-adox.md)   
+ [ (ADOX) 的目錄物件 ](./catalog-object-adox.md)   
+ [Column 物件 (ADOX)](./column-object-adox.md)

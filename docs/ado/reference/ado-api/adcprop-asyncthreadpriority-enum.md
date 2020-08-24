@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: f0965617-17d8-41e0-98d0-f824274735a6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 00878f5caddcbd8060c9c85222bc061533542bf8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 446a220868a2cf0b0a518bde95897b9d1f41a3b3
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451620"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760273"
 ---
 # <a name="adcprop_asyncthreadpriority_enum"></a>ADCPROP_ASYNCTHREADPRIORITY_ENUM
-針對 RDS [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 物件，指定抓取資料之非同步執行緒的執行優先權。  
+針對 RDS [記錄集](./recordset-object-ado.md) 物件，指定抓取資料之非同步執行緒的執行優先權。  
   
- 使用這些常數搭配 **記錄集** 「**背景執行緒優先順序**」動態屬性，它會在 ADO 對 OLE DB 動態屬性索引中參考，並記載于適用于 [OLE DB 檔的 Microsoft 資料指標服務](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) 中。  
+ 使用這些常數搭配 **記錄集** 「**背景執行緒優先順序**」動態屬性，它會在 ADO 對 OLE DB 動態屬性索引中參考，並記載于適用于 [OLE DB 檔的 Microsoft 資料指標服務](../../guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) 中。  
   
 |常數|值|描述|  
 |--------------|-----------|-----------------|  

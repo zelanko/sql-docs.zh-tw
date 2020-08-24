@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 63a5f26b-e7ca-47d9-a004-59eaad6052b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c367d9e8926d04852bde756a430116f25bfc3b31
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7f21ac9577b45bbeca2d57a3c54c40d542fe5220
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452030"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759418"
 ---
 # <a name="remote-data-service-rds"></a>遠端資料服務 (RDS)
 遠端資料服務 (RDS) 是 ADO 的一項功能，可讓您將資料從伺服器移至用戶端應用程式或網頁、操作用戶端上的資料，以及在單一來回行程中將更新傳回伺服器。  
@@ -29,30 +29,8 @@ ms.locfileid: "88452030"
   
  RDS 程式設計人員指南包含下列章節：  
   
--   [RDS 基本概念](../../../ado/guide/remote-data-service/rds-fundamentals.md)  
+-   [RDS 基本概念](./rds-fundamentals.md)  
   
--   [RDS 教學課程](../../../ado/guide/remote-data-service/rds-tutorial.md)  
+-   [RDS 教學課程](./rds-tutorial.md)  
   
--   [RDS 提供使用方式與安全性](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-   [RDS 使用方式與安全性](./rds-usage-and-security.md)

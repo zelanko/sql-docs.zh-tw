@@ -1,6 +1,6 @@
 ---
 title: 在 Linux 上安裝 SQL Server 全文檢索搜尋
-description: 本文描述如何在 Linux 上安裝 SQL Server 全文檢索搜尋。
+description: 了解如何在 Linux 上安裝 SQL Server 全文檢索搜尋。 全文檢索搜尋可讓您針對 SQL Server 資料表中以字元為基礎的資料執行全文檢索查詢。
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: 781730767836eab18f613c9c1e99e0279635f7b3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 054de1a7f4213a7a8c23ff44bab021d2b64c9f35
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895281"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088778"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>在 Linux 上安裝 SQL Server 全文檢索搜尋
 
@@ -86,7 +86,7 @@ sudo zypper update mssql-server-fts
 
 全文檢索搜尋會使用[文字分隔](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)，決定如何根據語言識別個別字詞。 您可以查詢 **sys.fulltext_languages** 目錄檢視來取得已註冊的文字分隔清單。 下列語言的文字分隔會隨著 SQL Server 一起安裝：
 
-| Language | 語言識別碼 |
+| 語言 | 語言識別碼 |
 |---|---|
 | 中性 | 0 |
 | 阿拉伯文 | 1025 |
@@ -256,7 +256,7 @@ sudo zypper update mssql-server-fts
 |.xml | 41B9BE05-B3AF-460C-BF0B-2CDD44A093B1 | 12.0.9735.0 |
 
 ## <a name="semantic-search"></a>語意搜尋
-[語意搜尋](../relational-databases/search/semantic-search-sql-server.md)是以全文檢索搜尋功能為基礎，可擷取相關「關鍵片語」  並以統計方式編制索引。 這可讓您查詢資料庫中文件內的意義。 它也有助於識別類似的文件。
+[語意搜尋](../relational-databases/search/semantic-search-sql-server.md)是以全文檢索搜尋功能為基礎，可擷取相關「關鍵片語」** 並以統計方式編制索引。 這可讓您查詢資料庫中文件內的意義。 它也有助於識別類似的文件。
 
 若要使用語意搜尋，您必須先將語意語言統計資料的資料庫還原至您的電腦。
 
@@ -280,6 +280,6 @@ sudo zypper update mssql-server-fts
     GO
     ```
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>接下來的步驟
 
 如需全文檢索搜尋的資訊，請參閱 [SQL Server 全文檢索搜尋](../relational-databases/search/full-text-search.md)。 

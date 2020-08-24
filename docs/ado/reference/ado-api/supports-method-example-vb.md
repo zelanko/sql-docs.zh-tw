@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4042f1a7bffc935333232a6267d06d905a34545f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3e644bc69ec4d77dfdb280a263836784eebc39df
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441770"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777147"
 ---
 # <a name="supports-method-example-vb"></a>Supports 方法範例 (VB)
-這個範例會使用 [支援](../../../ado/reference/ado-api/supports-method.md) 方法來顯示以不同資料指標類型開啟的記錄集所支援的選項。 此程式必須有 DisplaySupport 程式才能執行。  
+這個範例會使用 [支援](./supports-method.md) 方法來顯示以不同資料指標類型開啟的記錄集所支援的選項。 此程式必須有 DisplaySupport 程式才能執行。  
   
 ```  
 'BeginSupportsVB  
@@ -163,5 +163,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADO) 的記錄集物件 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Supports 方法](../../../ado/reference/ado-api/supports-method.md)
+ [ (ADO) 的記錄集物件 ](./recordset-object-ado.md)   
+ [Supports 方法](./supports-method.md)

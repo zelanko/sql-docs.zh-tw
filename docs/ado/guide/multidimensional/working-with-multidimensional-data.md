@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7c37f18f8bcaa3d0c1f78b3ddb8d0c6413fe7277
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3804925eb893b656d555419ab81753ff464f41bd
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452390"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758768"
 ---
 # <a name="working-with-multidimensional-data"></a>使用多維度資料
 資料 *格集* 是查詢多維度資料的結果。 它是由一組軸所組成，通常不能超過四個軸，而且通常只有兩個或三個。 *軸*是一或多個維度的成員集合，可用來尋找或篩選 cube 中的特定值。  
@@ -29,7 +29,7 @@ ms.locfileid: "88452390"
   
  資料 *格* 是位於軸座標交集處的物件。 每個資料格都有相關聯的多個資訊片段，包括資料本身、格式化的字串 (資料格資料) 的可顯示格式，以及資料格序數值。  (每個資料格都是資料格集內唯一的序數值。 資料格集的第一個資料格的序數值為零，而資料格集的第二個數據列中最左邊的資料格有八個數據行的序數值為8。 )   
   
- 例如，cube 具有下列六個維度 (請注意，這個 cube 架構與在多維度 [架構和資料](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)) 的總覽中提供的範例稍有不同：  
+ 例如，cube 具有下列六個維度 (請注意，這個 cube 架構與在多維度 [架構和資料](./overview-of-multidimensional-schemas-and-data.md)) 的總覽中提供的範例稍有不同：  
   
 -   Salesperson  
   
@@ -76,11 +76,11 @@ ms.locfileid: "88452390"
 Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec  
 ```  
   
- 資料格集、資料格、軸和位置全都以對應物件的 ADO MD[表示：資料格、資料](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)[格](../../../ado/reference/ado-md-api/cell-object-ado-md.md)、[軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)和[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)。  
+ 資料格集、資料格、軸和位置全都以對應物件的 ADO MD[表示：資料格、資料](../../reference/ado-md-api/cellset-object-ado-md.md)[格](../../reference/ado-md-api/cell-object-ado-md.md)、[軸](../../reference/ado-md-api/axis-object-ado-md.md)和[位置](../../reference/ado-md-api/position-object-ado-md.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [ADO MD 物件模型](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [ADO (多維度)  (ADO MD) ](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
- [多維度架構和資料的總覽](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
- [使用 ADO MD 進行程式設計](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
- [搭配 ADO MD 使用 ADO](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)
+ [ADO MD 物件模型](../../reference/ado-md-api/ado-md-object-model.md)   
+ [ADO (多維度)  (ADO MD) ](./ado-multidimensional-ado-md.md)   
+ [多維度架構和資料的總覽](./overview-of-multidimensional-schemas-and-data.md)   
+ [使用 ADO MD 進行程式設計](./programming-with-ado-md.md)   
+ [搭配 ADO MD 使用 ADO](./using-ado-with-ado-md.md)

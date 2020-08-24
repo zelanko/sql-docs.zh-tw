@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ef37e858-c05f-4f52-a65f-3ce6037e0d03
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db965e76f8d62bc90f0f6a5640e8ca4e7752bfd6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 73ab5507d755fed32fa54b36a82f9ca915a8e194
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452290"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758638"
 ---
 # <a name="configuring-rds-on-windows-2000"></a>在 Windows 2000 上設定 RDS
 如果您在升級到 Windows 2000 之後遇到 RDS 無法正常運作的問題，請遵循下列步驟來針對問題進行疑難排解：  
@@ -41,6 +41,4 @@ ms.locfileid: "88452290"
 >  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統不再包含 RDS 伺服器元件。 將使用 RDS 的應用程式遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="see-also"></a>另請參閱  
- [RDS 基本概念](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
+ [RDS 基本概念](./rds-fundamentals.md)

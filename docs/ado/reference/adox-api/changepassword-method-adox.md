@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d187fbc6-5fac-4abb-803d-bf344dcf0302
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d23920fff14bfa04020223ad0150f480f6073723
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 94ddd75bddf8845012fe0845826eea264718cc91
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440370"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771167"
 ---
 # <a name="changepassword-method-adox"></a>ChangePassword 方法 (ADOX)
-變更 [使用者](../../../ado/reference/adox-api/user-object-adox.md) 帳戶的密碼。  
+變更 [使用者](./user-object-adox.md) 帳戶的密碼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,7 +47,7 @@ User.ChangePassword OldPassword, NewPassword
  如果提供者不支援管理受信任的屬性，就會發生錯誤。  
   
 ## <a name="applies-to"></a>套用至  
- [User 物件 (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
+ [User 物件 (ADOX)](./user-object-adox.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Groups 和 Users Append、ChangePassword 方法範例 (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)
+ [Groups 和 Users Append、ChangePassword 方法範例 (VB)](./groups-and-users-append-changepassword-methods-example-vb.md)

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3a5db5f0-094b-46e1-939b-d9fa9417a406
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 20145847731b831bcfb21ca27c0229b064e33286
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 36d5deae232c609473b2cd81b203559343df2d00
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441890"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777257"
 ---
 # <a name="stayinsync-property-example-vc"></a>StayInSync 屬性範例 (VC++)
-此範例示範 [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) 屬性如何加速存取階層式 [記錄集中](../../../ado/reference/ado-api/recordset-object-ado.md)的資料列。  
+此範例示範 [StayInSync](./stayinsync-property.md) 屬性如何加速存取階層式 [記錄集中](./recordset-object-ado.md)的資料列。  
   
- 外部迴圈會顯示每個作者的名字、姓氏、狀態和識別。 每當父**記錄集**移至新的資料列時，就會從[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)集合中取出每個資料列的附加**記錄集**，並自動指派給**rstTitleAuthor** by **StayInSync**屬性。 內部迴圈會在附加的記錄集中顯示每個資料列的四個欄位。  
+ 外部迴圈會顯示每個作者的名字、姓氏、狀態和識別。 每當父**記錄集**移至新的資料列時，就會從[Fields](./fields-collection-ado.md)集合中取出每個資料列的附加**記錄集**，並自動指派給**rstTitleAuthor** by **StayInSync**屬性。 內部迴圈會在附加的記錄集中顯示每個資料列的四個欄位。  
   
 ```  
 // BeginStayInSyncCpp.cpp  
@@ -145,6 +145,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADO) 的欄位集合 ](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [ (ADO) 的記錄集物件 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [StayInSync 屬性](../../../ado/reference/ado-api/stayinsync-property.md)
+ [ (ADO) 的欄位集合 ](./fields-collection-ado.md)   
+ [ (ADO) 的記錄集物件 ](./recordset-object-ado.md)   
+ [StayInSync 屬性](./stayinsync-property.md)

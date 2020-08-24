@@ -1,7 +1,7 @@
 ---
 title: 在 RHEL 上自動安裝 SQL Server
 titleSuffix: SQL Server
-description: SQL Server 指令碼範例 - 在 Red Hat Enterprise Linux 上自動安裝 (RHEL)
+description: 使用範例 Bash 指令碼，在 Red Hat Enterprise Linux (RHEL) 上安裝 SQL Server 2017，而不需進行互動式輸入。
 ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
@@ -9,12 +9,12 @@ ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: a5681a7700e77d0cc5fd4afb7267a21f298c1f87
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fda9b1459cf7cd0b15252cfb0e51e0d3ad4e9374
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894129"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88089018"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>範例：Red Hat Enterprise Linux 的 SQL Server 自動安裝指令碼
 

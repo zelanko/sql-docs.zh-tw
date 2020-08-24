@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59c0f32f7e5ba467fd1b90a348a78432a16621ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 18c7d09707a69967560765f880a3c6563de1506e
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451870"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759866"
 ---
 # <a name="understanding-the-customization-file"></a>了解自訂檔案
 自訂檔案中的每個區段標頭都是由方括弧 (**[]**) 包含型別和參數所組成。 這四個區段類型是由常值字串 **connect**、 **sql**、 **userlist**或 **logs**表示。 參數是常值字串、預設值、使用者指定的識別碼或 nothing。  
@@ -45,7 +45,7 @@ identifier
 |部分|描述|  
 |----------|-----------------|  
 |**connect**|修改連接字串的常值字串。|  
-|**Sql**|修改命令字串的常值字串。|  
+|**sql**|修改命令字串的常值字串。|  
 |**userlist**|常值字串，可修改特定使用者的存取權限。|  
 |**日誌**|常值字串，指定記錄操作錯誤的記錄檔。|  
 |**預設值**|如果未指定或找不到任何識別碼，則會使用常值字串。|  
@@ -68,11 +68,10 @@ identifier
 -   每當**DataFactory**正在運作時，就會使用**logs**區段。  
   
 ## <a name="see-also"></a>另請參閱  
- [自訂檔案連接區段](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [自訂檔案記錄區段](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [自訂檔案 SQL 區段](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [自訂檔案 UserList 區段](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [DataFactory 自訂](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [必要的用戶端設定](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [撰寫您自己的自訂處理常式](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
+ [自訂檔案連接區段](./customization-file-connect-section.md)   
+ [自訂檔案記錄區段](./customization-file-logs-section.md)   
+ [自訂檔案 SQL 區段](./customization-file-sql-section.md)   
+ [自訂檔案 UserList 區段](./customization-file-userlist-section.md)   
+ [DataFactory 自訂](./datafactory-customization.md)   
+ [必要的用戶端設定](./required-client-settings.md)   
+ [撰寫您自己的自訂處理常式](./writing-your-own-customized-handler.md)

@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: ea604f3144f371047c00171947c0b7ceaeaa602f
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 528eedeb18de9b0d1a8558edecccf5470a374eda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988395"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479152"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL)
 
@@ -741,14 +741,14 @@ FORCED
 <a name="query-store"></a> **\<query_store_options> ::=**      
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始)
 
-ON | **OFF** | CLEAR [ ALL ]     
+ON | **OFF** [ FORCED ] | CLEAR [ ALL ]     
 控制是否在此資料庫中啟用查詢存放區，且控制查詢存放區內容的移除。 如需詳細資訊，請參閱[查詢存放區使用案例](../../relational-databases/performance/query-store-usage-scenarios.md)。
 
 開啟     
 啟用查詢存放區。
 
 OFF      
-停用查詢存放區。 OFF 是預設值。 
+停用查詢存放區。 OFF 是預設值。 FORCED 為選擇性。 FORCED 會中止所有執行中的查詢存放區背景工作，並略過查詢存放區關閉時的同步排清。 導致查詢存放區以最快的速度關機。 基本上會立即將查詢存放區關閉。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 引進了 FORCED。
 
 > [!NOTE]  
 > 您無法在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 單一資料庫和彈性集區停用查詢存放區。 執行 `ALTER DATABASE [database] SET QUERY_STORE = OFF` 將會傳回警告 `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`。 
@@ -1868,10 +1868,13 @@ ON | OFF | CLEAR [ ALL ]
 控制是否在此資料庫中啟用查詢存放區，且控制查詢存放區內容的移除。
 
 開啟     
-啟用查詢存放區。
+啟用查詢存放區。 ON 為預設值。
 
 OFF     
-停用查詢存放區。 這是預設值。
+停用查詢存放區。 
+
+> [!NOTE]  
+> 您無法在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 單一資料庫和彈性集區停用查詢存放區。 執行 `ALTER DATABASE [database] SET QUERY_STORE = OFF` 將會傳回警告 `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`。 
 
 CLEAR     
 移除查詢存放區的內容。
@@ -3323,7 +3326,7 @@ OFF
 
 ### <a name="remarks"></a>備註
 
-此命令必須在連線到 `master` 資料庫時執行。 開啟或關閉使用者資料庫的 READ_COMMITTED_SNAPSHOT，將會終止此資料庫的所有開放連線。 建議您在資料庫維護期間或等到資料庫沒有使用中的連線再進行此變更，除了執行 ALTER DATABSE 命令的連線以外。  資料庫不一定要處於單一使用者模式。 不支援變更工作階段層級的 READ_COMMITTED_SNAPSHOT 設定。  若要確認資料庫的這項設定，請檢查 sys.databases 中的 is_read_committed_snapshot_on 資料行。
+此命令必須在連線到 `master` 資料庫時執行。 開啟或關閉使用者資料庫的 READ_COMMITTED_SNAPSHOT，將會終止此資料庫的所有開放連線。 建議您在資料庫維護期間或等到資料庫沒有使用中的連線再進行此變更，執行 ALTER DATABASE 命令的連線除外。  資料庫不一定要處於單一使用者模式。 不支援變更工作階段層級的 READ_COMMITTED_SNAPSHOT 設定。  若要確認資料庫的這項設定，請檢查 sys.databases 中的 is_read_committed_snapshot_on 資料行。
 
 在已啟用 READ_COMMITTED_SNAPSHOT 的資料庫中，如果有多個資料版本存在，查詢可能會遭遇較低的效能。 長時間開啟的交易也會導致資料庫大小增加。 如果封鎖版本清除的這些交易進行資料變更，就會發生此問題。  
 
