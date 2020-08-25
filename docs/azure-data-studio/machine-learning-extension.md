@@ -5,17 +5,17 @@ description: 適用於 Azure Data Studio 的機器學習延伸模組可讓您管
 ms.date: 05/19/2020
 ms.reviewer: sstein
 ms.prod: azure-data-studio
-ms.technology: machine-learning
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 8a415678b777ba6142bab01bced7d7da908b2204
-ms.sourcegitcommit: 68c1dbc465898e20ec95f98cc2f14a8c9cd166a7
+ms.openlocfilehash: 5b54ec71ec3debaf39b0788cac0c1534300a4a72
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051107"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88745548"
 ---
 # <a name="machine-learning-extension-preview-for-azure-data-studio"></a>適用於 Azure Data Studio 的機器學習延伸模組 (預覽)
 

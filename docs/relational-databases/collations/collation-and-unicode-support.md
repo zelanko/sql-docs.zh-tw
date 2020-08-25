@@ -33,12 +33,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f9d8025daba4b4006b0d87422cffe8ea73f82c6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 39803c2063bf6afbae9bc6797d85499fc91a10bd
+ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466120"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564668"
 ---
 # <a name="collation-and-unicode-support"></a>定序與 Unicode 支援
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -372,9 +372,6 @@ Windows 定序會定義規則，以便依據相關聯的 Windows 系統地區設
 |優魯巴文 (奈及利亞)|0x046a|0x0409|Latin1_General_CI_AS|
 |祖魯文/祖魯文 (南非)|0x0435|0x0409|Latin1_General_CI_AS|
 
-> [!NOTE]
-> 您無法在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定期間選取僅限 Unicode 定序，因為系統不支援將它們當作伺服器層級定序。    
-    
 將定序指派給伺服器之後，除非匯出所有資料庫物件和資料，並重建 *master* 資料庫，然後匯入所有資料庫物件和資料，否則無法變更此定序。 若不變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的預設定序，您可以在建立新資料庫或資料庫資料行時，指定想要的定序。    
 
 若要查詢 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的伺服器定序，請使用 `SERVERPROPERTY` 函式：

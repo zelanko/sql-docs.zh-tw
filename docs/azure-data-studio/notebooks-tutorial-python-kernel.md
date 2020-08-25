@@ -6,15 +6,15 @@ ms.author: garye
 ms.reviewer: mikeray, alayu, maghan
 ms.topic: tutorial
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.custom: ''
 ms.date: 07/01/2020
-ms.openlocfilehash: 7eb7af0577cb74f180991bf455c36c9122972643
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 268caea0eb9101606963dce09d33a725eb964255
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920449"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88745868"
 ---
 # <a name="create-and-run-a-python-notebook"></a>建立及執行 Python 筆記本
 

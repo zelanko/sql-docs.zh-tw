@@ -12,16 +12,18 @@ ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4298cbc0c80937f01f37126c93b01f927c8cbd2f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21e97c74d99a3ce653a79c68727e714d773cbba9
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427480"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645776"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>查詢系統建立版本時態表中的資料
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 當您想要取得時態表中資料的最新 (實際) 狀態，您能夠以您查詢非時態表完全一樣的方式查詢。 如果 PERIOD 資料行未隱藏，其值會出現在 SELECT \* 查詢中。 如果您將 **PERIOD** 資料行指定為隱藏，其值不會出現在 SELECT \* 查詢中。 當 **PERIOD** 資料行隱藏時，請特別參考 SELECT 子句中的 **PERIOD** 資料行，以傳回這些資料行的值。
 

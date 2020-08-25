@@ -17,15 +17,16 @@ ms.assetid: fddbdc9e-958b-4614-8e88-6ca205d64a4e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5df4a0e197a55262afb57382ad1145194b66d3db
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7e9617509a4e9e0a08dbcd1a0d6225e748c9f59a
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473030"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646653"
 ---
 # <a name="modify-unique-constraints"></a>修改唯一的條件約束
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改唯一條件約束。  
   
@@ -54,7 +55,7 @@ ms.locfileid: "88473030"
   
 1.  在 [物件總管]**** 中，以滑鼠右鍵按一下包含唯一條件約束的資料表，然後選取 [設計]****。  
   
-2.  在 [資料表設計工具]**** 功能表中，按一下 [索引/索引鍵]****。  
+2.  在 [資料表設計工具] 功能表中，按一下 [索引/索引鍵]。  
   
 3.  在 [索引/索引鍵]**** 對話方塊的 [選取的主/唯一索引鍵或索引]**** 底下，選取您想要編輯的條件約束。  
   

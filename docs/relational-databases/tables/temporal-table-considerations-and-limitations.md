@@ -12,16 +12,18 @@ ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6670767b552b1f20b82d45499d3eeb21cbc83f40
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b3d276d144730bfeb39b0cde13720da61de72b67
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472999"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645817"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>時態表考量與限制
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 使用時態表時由於系統版本性質使然，因此需要瞭解某些考量與限制。
 

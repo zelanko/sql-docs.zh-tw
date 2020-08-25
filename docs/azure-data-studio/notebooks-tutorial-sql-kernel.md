@@ -6,15 +6,15 @@ ms.author: maghan
 ms.reviewer: mikeray, alayu
 ms.topic: tutorial
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.custom: ''
 ms.date: 07/01/2020
-ms.openlocfilehash: 66d8c464a0f03eb227e9fda50f6b5ad249f828da
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 022950fa27887618f16e5569ffe3370c069ea71c
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920428"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88745858"
 ---
 # <a name="create-and-run-a-sql-server-notebook"></a>建立並執行 SQL Server 筆記本
 

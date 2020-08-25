@@ -12,16 +12,18 @@ ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3543738d8987beaeb6eafc69a446ab63e9b0c27
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a12607d7279b8a7789d6365c11825608f57ad628
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463730"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646078"
 ---
 # <a name="temporal-tables"></a>暫存資料表
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 SQL Server 2016 開始支援時態表 (又稱為由系統控制版本的時態表)。這項資料庫功能帶來內建支援，能提供任何時間點儲存於資料表中的資料相關資訊，而不再侷限於當下的時刻。 時態性是 ANSI SQL 2011 中引入的資料庫功能。
 
