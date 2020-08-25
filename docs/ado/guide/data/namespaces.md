@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4ab26dd8f767315a3392a2434689561fdb391d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4973bd2e822d3ec56b4e8cb4aa9b7a359e07b977
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453140"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805774"
 ---
 # <a name="namespaces"></a>命名空間
 ADO 中的 XML 持續性格式會使用下列四個命名空間。  
@@ -47,4 +47,4 @@ xmlns:rs="urn:schemas-microsoft-com:rowset"
  只要整個 XML 檔都使用此名稱，使用者就可以將此定義為任何名稱。 ADO 一律會寫出 "s"、"rs"、"dt" 和 "z"，但是這些前置詞名稱不會硬式編碼到載入元件中。  
   
 ## <a name="see-also"></a>另請參閱  
- [以 XML 格式保存記錄](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [以 XML 格式保存記錄](./persisting-records-in-xml-format.md)

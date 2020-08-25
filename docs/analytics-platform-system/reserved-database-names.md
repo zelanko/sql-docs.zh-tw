@@ -10,14 +10,14 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 77625b2a8b1169af90ab0573fa57a4246f81ceab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400468"
 ---
 # <a name="reserved-database-names-in-parallel-data-warehouse"></a>平行處理資料倉儲中的保留資料庫名稱
-保留的資料庫名稱是無法指派給 SQL Server PDW 中使用者資料庫的名稱。  
+保留的資料庫名稱是無法在 SQL Server PDW 中指派給使用者資料庫的名稱。  
   
 保留的資料庫名稱清單：  
   

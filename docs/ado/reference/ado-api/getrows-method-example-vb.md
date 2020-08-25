@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9f7c78bb-7bb8-4c4f-8e5a-4d3bfc8a208f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d05785a005ea6f0bbeb000d8abb74609318b741
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a4f57460813cc72e4d513b9954739bcc02a5e4b8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443520"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775017"
 ---
 # <a name="getrows-method-example-vb"></a>GetRows 方法範例 (VB)
-這個範例會使用 [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) 方法，從 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 取出指定的資料列數目，並將產生的資料填入陣列。 在兩種情況下， **getrows** 方法會傳回小於所需的資料列數目：若已達到 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) ，或如果 **GetRows** 嘗試抓取其他使用者刪除的記錄，則為。 只有在第二個案例發生時，函式才會傳回 **False** 。 此程式必須有 GetRowsOK 函數才能執行。  
+這個範例會使用 [GetRows](./getrows-method-ado.md) 方法，從 [記錄集](./recordset-object-ado.md) 取出指定的資料列數目，並將產生的資料填入陣列。 在兩種情況下， **getrows** 方法會傳回小於所需的資料列數目：若已達到 [EOF](./bof-eof-properties-ado.md) ，或如果 **GetRows** 嘗試抓取其他使用者刪除的記錄，則為。 只有在第二個案例發生時，函式才會傳回 **False** 。 此程式必須有 GetRowsOK 函數才能執行。  
   
 ```  
 'BeginGetRowsVB  
@@ -114,5 +114,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADO) 的 GetRows 方法 ](../../../ado/reference/ado-api/getrows-method-ado.md)   
- [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [ (ADO) 的 GetRows 方法 ](./getrows-method-ado.md)   
+ [Recordset 物件 (ADO)](./recordset-object-ado.md)

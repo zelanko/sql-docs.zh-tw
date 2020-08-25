@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 24eb03ba-ccfd-4353-b6af-03586b2da6fd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b1e2c46549f680e248d5734efa58d949d83f3800
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1b13b3f3dcdaa2bdd45dabedd5310dc4cdd3db86
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438990"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768217"
 ---
 # <a name="filtercriterion-property-rds"></a>FilterCriterion 屬性 (RDS)
 表示要在篩選值中使用的評估運算子。  
@@ -36,26 +36,24 @@ DataControl.FilterCriterion = String
   
 #### <a name="parameters"></a>參數  
  *DataControl*  
- 代表 RDS 的物件變數 [。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 物件。  
+ 代表 RDS 的物件變數 [。DataControl](./datacontrol-object-rds.md) 物件。  
   
  *String*  
- **字串**值，指定[FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md)對記錄的評估運算子。 可以是下列任何一項： <、 \<=, > 、>=、= 或 <>。  
+ **字串**值，指定[FilterValue](./filtervalue-property-rds.md)對記錄的評估運算子。 可以是下列任何一項： <、 \<=, > 、>=、= 或 <>。  
   
 ## <a name="remarks"></a>備註  
- [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md)、 [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md)、 [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md)、 **FilterCriterion**和[FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)屬性提供用戶端快取上的排序和篩選功能。 排序功能會依據一個資料行的值來排序記錄。 篩選功能會根據尋找準則顯示記錄的子集，而完整的 [記錄集會](../../../ado/reference/ado-api/recordset-object-ado.md) 保留在快取中。 [Reset](../../../ado/reference/rds-api/reset-method-rds.md)方法會執行準則，並將目前的**記錄集**取代為可更新的**記錄集**。  
+ [SortColumn](./sortcolumn-property-rds.md)、 [SortDirection](./sortdirection-property-rds.md)、 [FilterValue](./filtervalue-property-rds.md)、 **FilterCriterion**和[FilterColumn](./filtercolumn-property-rds.md)屬性提供用戶端快取上的排序和篩選功能。 排序功能會依據一個資料行的值來排序記錄。 篩選功能會根據尋找準則顯示記錄的子集，而完整的 [記錄集會](../ado-api/recordset-object-ado.md) 保留在快取中。 [Reset](./reset-method-rds.md)方法會執行準則，並將目前的**記錄集**取代為可更新的**記錄集**。  
   
  "！ =" 運算子對 **FilterCriterion**無效;請改用 "<>"。  
   
  如果同時設定篩選和排序屬性，而且您呼叫 **Reset** 方法，則會先篩選資料列集，然後再進行排序。 針對遞增排序，null 值位於頂端;針對遞減排序，null 值位於底部 (遞增是) 的預設行為。  
   
 ## <a name="applies-to"></a>套用至  
- [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl 物件 (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [FilterColumn、FilterCriterion、FilterValue、SortColumn 和 SortDirection 屬性以及 Reset 方法範例 (VBScript) ](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
- [FilterColumn 屬性 (RDS) ](../../../ado/reference/rds-api/filtercolumn-property-rds.md)   
- [FilterValue 屬性 (RDS) ](../../../ado/reference/rds-api/filtervalue-property-rds.md)   
- [SortColumn 屬性 (RDS) ](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
- [SortDirection 屬性 (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
-
-
+ [FilterColumn、FilterCriterion、FilterValue、SortColumn 和 SortDirection 屬性以及 Reset 方法範例 (VBScript) ](./filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
+ [FilterColumn 屬性 (RDS) ](./filtercolumn-property-rds.md)   
+ [FilterValue 屬性 (RDS) ](./filtervalue-property-rds.md)   
+ [SortColumn 屬性 (RDS) ](./sortcolumn-property-rds.md)   
+ [SortDirection 屬性 (RDS)](./sortdirection-property-rds.md)

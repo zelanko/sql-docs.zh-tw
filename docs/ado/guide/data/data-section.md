@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abf0202e75ef64825d6dc815624adc1c1d337174
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f8cd34a76e2de6a37ee7fe3c647e845c0fbf3fac
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453570"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806195"
 ---
 # <a name="data-section"></a>資料區段
 Data 區段會定義資料列集的資料以及任何暫止的更新、插入或刪除。 Data 區段可以包含零或多個資料列。 它只能包含一個資料列集的資料，其中資料列是由架構定義。 此外，如先前所述，您可以省略沒有任何資料的資料行。 如果在 data 區段中使用屬性或子項目，但架構區段中未定義該結構，則會以無訊息方式忽略它。  
@@ -86,4 +86,4 @@ Data 區段會定義資料列集的資料以及任何暫止的更新、插入或
  更新一律會包含整個原始資料列資料，後面接著已變更的資料列資料。 變更的資料列可能包含所有資料行，或只包含實際變更的資料行。 在上述範例中，不會變更貨運公司2的資料列，而且只有 Phone 資料行已變更托運商3的值，因此只有已變更資料列中包含的資料行。 針對貨主12、13和14所插入的資料列會在一個 rs： insert 標記下一起批次處理。 請注意，已刪除的資料列也可以一起批次處理，不過這不會顯示在前一個範例中。  
   
 ## <a name="see-also"></a>另請參閱  
- [以 XML 格式保存記錄](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [以 XML 格式保存記錄](./persisting-records-in-xml-format.md)

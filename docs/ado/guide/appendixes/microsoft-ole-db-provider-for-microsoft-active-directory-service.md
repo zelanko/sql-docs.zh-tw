@@ -16,24 +16,24 @@ helpviewer_keywords:
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f5a2513d8440adedaa0faecae2b544c9ea99bef0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c196b790299c4c241e5c8eda762b43115b71a038
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454120"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806578"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft OLE DB Provider for Microsoft Active Directory Service
 Active Directory 服務介面 (ADSI) 提供者，可讓 ADO 透過 ADSI 連接到異類目錄服務。 除了任何符合 LDAP 規範的目錄服務和 Novell 目錄服務之外，這也可讓 ADO 應用程式唯讀存取 Microsoft Windows NT 4.0 和 Microsoft Windows 2000 目錄服務。 ADSI 本身是以提供者模型為基礎，因此，如果有新的提供者提供另一個目錄的存取權，則 ADO 應用程式將能夠順暢地進行存取。 ADSI 提供者已啟用無限制執行緒和 Unicode。  
   
 ## <a name="connection-string-parameters"></a>連接字串參數  
- 若要連接到這個提供者，請將[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)屬性的**提供者**引數設定如下：  
+ 若要連接到這個提供者，請將[ConnectionString](../../reference/ado-api/connectionstring-property-ado.md)屬性的**提供者**引數設定如下：  
   
 ```vb
 ADSDSOObject  
 ```  
   
- 讀取 [Provider](../../../ado/reference/ado-api/provider-property-ado.md) 屬性也會傳回這個字串。  
+ 讀取 [Provider](../../reference/ado-api/provider-property-ado.md) 屬性也會傳回這個字串。  
   
 ## <a name="typical-connection-string"></a>一般連接字串  
  此提供者的一般連接字串如下所示：  
@@ -81,69 +81,69 @@ objectClass='user' AND objectCategory='Person'"
 ```  
   
 ## <a name="remarks"></a>備註  
- 提供者不接受預存程序呼叫或簡單的資料表名稱 (例如， [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) 屬性一律會 **adCmdText**) 。 如需更詳盡的命令文字元素說明，請參閱 Active Directory 服務介面檔。  
+ 提供者不接受預存程序呼叫或簡單的資料表名稱 (例如， [CommandType](../../reference/ado-api/commandtype-property-ado.md) 屬性一律會 **adCmdText**) 。 如需更詳盡的命令文字元素說明，請參閱 Active Directory 服務介面檔。  
   
 ## <a name="recordset-behavior"></a>記錄集行為  
- 下表列出使用此提供者開啟之 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 物件上的可用功能。 只有靜態資料指標類型 (**adOpenStatic**) 可用。  
+ 下表列出使用此提供者開啟之 [記錄集](../../reference/ado-api/recordset-object-ado.md) 物件上的可用功能。 只有靜態資料指標類型 (**adOpenStatic**) 可用。  
   
- 如需提供者設定的**記錄集**行為詳細資訊，請執行[支援](../../../ado/reference/ado-api/supports-method.md)的方法，並列舉**記錄集**的[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)集合，以判斷是否存在提供者特定的動態屬性。  
+ 如需提供者設定的**記錄集**行為詳細資訊，請執行[支援](../../reference/ado-api/supports-method.md)的方法，並列舉**記錄集**的[屬性](../../reference/ado-api/properties-collection-ado.md)集合，以判斷是否存在提供者特定的動態屬性。  
   
  **標準 ADO 記錄集屬性的可用性：**  
   
 |屬性|可用性|  
 |--------------|------------------|  
-|[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|讀取/寫入|  
-|[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|讀取/寫入|  
-|[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|唯讀|  
-|[轉爐](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|唯讀|  
-|[書籤](../../../ado/reference/ado-api/bookmark-property-ado.md)|讀取/寫入|  
-|[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|讀取/寫入|  
-|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|一律 **adUseServer**|  
-|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|一律 **adOpenStatic**|  
-|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|一律 **adEditNone**|  
-|[Eof](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|唯讀|  
-|[Filter](../../../ado/reference/ado-api/filter-property.md)|讀取/寫入|  
-|[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|讀取/寫入|  
-|[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|無法使用|  
-|[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|讀取/寫入|  
-|[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|唯讀|  
-|[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|讀取/寫入|  
-|[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|唯讀|  
-|[Source](../../../ado/reference/ado-api/source-property-ado-recordset.md)|讀取/寫入|  
-|[State](../../../ado/reference/ado-api/state-property-ado.md)|唯讀|  
-|[狀態](../../../ado/reference/ado-api/status-property-ado-recordset.md)|唯讀|  
+|[AbsolutePage](../../reference/ado-api/absolutepage-property-ado.md)|讀取/寫入|  
+|[AbsolutePosition](../../reference/ado-api/absoluteposition-property-ado.md)|讀取/寫入|  
+|[ActiveConnection](../../reference/ado-api/activeconnection-property-ado.md)|唯讀|  
+|[轉爐](../../reference/ado-api/bof-eof-properties-ado.md)|唯讀|  
+|[書籤](../../reference/ado-api/bookmark-property-ado.md)|讀取/寫入|  
+|[CacheSize](../../reference/ado-api/cachesize-property-ado.md)|讀取/寫入|  
+|[CursorLocation](../../reference/ado-api/cursorlocation-property-ado.md)|一律 **adUseServer**|  
+|[CursorType](../../reference/ado-api/cursortype-property-ado.md)|一律 **adOpenStatic**|  
+|[EditMode](../../reference/ado-api/editmode-property.md)|一律 **adEditNone**|  
+|[Eof](../../reference/ado-api/bof-eof-properties-ado.md)|唯讀|  
+|[Filter](../../reference/ado-api/filter-property.md)|讀取/寫入|  
+|[LockType](../../reference/ado-api/locktype-property-ado.md)|讀取/寫入|  
+|[MarshalOptions](../../reference/ado-api/marshaloptions-property-ado.md)|無法使用|  
+|[MaxRecords](../../reference/ado-api/maxrecords-property-ado.md)|讀取/寫入|  
+|[PageCount](../../reference/ado-api/pagecount-property-ado.md)|唯讀|  
+|[PageSize](../../reference/ado-api/pagesize-property-ado.md)|讀取/寫入|  
+|[RecordCount](../../reference/ado-api/recordcount-property-ado.md)|唯讀|  
+|[Source](../../reference/ado-api/source-property-ado-recordset.md)|讀取/寫入|  
+|[State](../../reference/ado-api/state-property-ado.md)|唯讀|  
+|[狀態](../../reference/ado-api/status-property-ado-recordset.md)|唯讀|  
   
  **標準 ADO 記錄集方法的可用性：**  
   
 |方法|是否可用？|  
 |------------|----------------|  
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|否|  
-|[取消](../../../ado/reference/ado-api/cancel-method-ado.md)|否|  
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|否|  
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|否|  
-|[複製](../../../ado/reference/ado-api/clone-method-ado.md)|是|  
-|[關閉](../../../ado/reference/ado-api/close-method-ado.md)|是|  
-|[刪除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|否|  
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|是|  
-|[移動](../../../ado/reference/ado-api/move-method-ado.md)|是|  
-|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|  
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|  
-|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|  
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|  
-|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|是|  
-|[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)|是|  
-|[重新](../../../ado/reference/ado-api/requery-method.md)|是|  
-|[重新同步處理](../../../ado/reference/ado-api/resync-method.md)|是|  
-|[支援](../../../ado/reference/ado-api/supports-method.md)|是|  
-|[更新](../../../ado/reference/ado-api/update-method.md)|否|  
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|否|  
+|[AddNew](../../reference/ado-api/addnew-method-ado.md)|否|  
+|[取消](../../reference/ado-api/cancel-method-ado.md)|否|  
+|[CancelBatch](../../reference/ado-api/cancelbatch-method-ado.md)|否|  
+|[CancelUpdate](../../reference/ado-api/cancelupdate-method-ado.md)|否|  
+|[複製](../../reference/ado-api/clone-method-ado.md)|是|  
+|[關閉](../../reference/ado-api/close-method-ado.md)|是|  
+|[刪除](../../reference/ado-api/delete-method-ado-recordset.md)|否|  
+|[GetRows](../../reference/ado-api/getrows-method-ado.md)|是|  
+|[移動](../../reference/ado-api/move-method-ado.md)|是|  
+|[MoveFirst](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|  
+|[MoveLast](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|  
+|[MoveNext](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|  
+|[MovePrevious](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|  
+|[NextRecordset](../../reference/ado-api/nextrecordset-method-ado.md)|是|  
+|[開啟](../../reference/ado-api/open-method-ado-recordset.md)|是|  
+|[重新](../../reference/ado-api/requery-method.md)|是|  
+|[重新同步處理](../../reference/ado-api/resync-method.md)|是|  
+|[支援](../../reference/ado-api/supports-method.md)|是|  
+|[更新](../../reference/ado-api/update-method.md)|否|  
+|[UpdateBatch](../../reference/ado-api/updatebatch-method.md)|否|  
   
  如需 ADSI 和提供者細節的詳細資訊，請參閱 Active Directory 服務介面檔或流覽 ADSI 網頁。  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADO) 的 CommandType 屬性 ](../../../ado/reference/ado-api/commandtype-property-ado.md)   
- [ (ADO) 的 ConnectionString 屬性 ](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
- [ (ADO) 的屬性集合 ](../../../ado/reference/ado-api/properties-collection-ado.md)   
- [ (ADO) 的提供者屬性 ](../../../ado/reference/ado-api/provider-property-ado.md)   
- [ (ADO) 的記錄集物件 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Supports 方法](../../../ado/reference/ado-api/supports-method.md)
+ [ (ADO) 的 CommandType 屬性 ](../../reference/ado-api/commandtype-property-ado.md)   
+ [ (ADO) 的 ConnectionString 屬性 ](../../reference/ado-api/connectionstring-property-ado.md)   
+ [ (ADO) 的屬性集合 ](../../reference/ado-api/properties-collection-ado.md)   
+ [ (ADO) 的提供者屬性 ](../../reference/ado-api/provider-property-ado.md)   
+ [ (ADO) 的記錄集物件 ](../../reference/ado-api/recordset-object-ado.md)   
+ [Supports 方法](../../reference/ado-api/supports-method.md)

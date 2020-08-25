@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f74a81fd-cbcc-4143-b9f8-774c88dd4fad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cabdbee513ab42111710520358a66f5f42122f77
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 151802a801afe8d9b8b4ca9d46301f738d79fa1a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442990"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773817"
 ---
 # <a name="open-and-close-methods-example-vc"></a>Open 和 Close 方法範例 (VC++)
-此範例會在已開啟的[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)和[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件上使用**Open**和[Close](../../../ado/reference/ado-api/close-method-ado.md)方法。  
+此範例會在已開啟的[記錄集](./recordset-object-ado.md)和[連接](./connection-object-ado.md)物件上使用**Open**和[Close](./close-method-ado.md)方法。  
   
 ```  
 // Open_Close_Methods.cpp  
@@ -207,8 +207,8 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADO) 的 Close 方法 ](../../../ado/reference/ado-api/close-method-ado.md)   
- [ (ADO) 的 Connection 物件 ](../../../ado/reference/ado-api/connection-object-ado.md)   
- [ (ADO Connection) 的 Open 方法 ](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [ (ADO 記錄集的 Open 方法) ](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [ (ADO) 的 Close 方法 ](./close-method-ado.md)   
+ [ (ADO) 的 Connection 物件 ](./connection-object-ado.md)   
+ [ (ADO Connection) 的 Open 方法 ](./open-method-ado-connection.md)   
+ [ (ADO 記錄集的 Open 方法) ](./open-method-ado-recordset.md)   
+ [Recordset 物件 (ADO)](./recordset-object-ado.md)

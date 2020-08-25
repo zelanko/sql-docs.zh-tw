@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d8304849-3f80-4cf3-9425-529d2a8ebedd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 30be1e48aca9a942b0a98d0f119f1f8e8218144b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5cbf00fc32364c1077be44ebb791708f361ec4da
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439330"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768977"
 ---
 # <a name="views-and-fields-collections-example-vb"></a>Views 和 Fields 集合範例 (VB)
-下列程式碼示範如何使用 [Command](../../../ado/reference/adox-api/command-property-adox.md) 屬性和 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) 物件來抓取視圖的欄位資訊。  
+下列程式碼示範如何使用 [Command](./command-property-adox.md) 屬性和 [Recordset](../ado-api/recordset-object-ado.md) 物件來抓取視圖的欄位資訊。  
   
 ```  
 ' BeginViewFieldsVB  
@@ -79,8 +79,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ActiveConnection 屬性 (ADOX) ](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [ (ADOX) 的目錄物件 ](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [命令屬性 (ADOX) ](../../../ado/reference/adox-api/command-property-adox.md)   
- [View Object (ADOX) ](../../../ado/reference/adox-api/view-object-adox.md)   
- [Views 集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+ [ActiveConnection 屬性 (ADOX) ](./activeconnection-property-adox.md)   
+ [ (ADOX) 的目錄物件 ](./catalog-object-adox.md)   
+ [命令屬性 (ADOX) ](./command-property-adox.md)   
+ [View Object (ADOX) ](./view-object-adox.md)   
+ [Views 集合 (ADOX)](./views-collection-adox.md)

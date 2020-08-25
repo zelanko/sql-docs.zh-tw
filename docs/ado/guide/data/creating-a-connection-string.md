@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f544805336fdea586fac5697b3abde009dc6f7ff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d6a682a706e18046bde0a6d117d1964262700c1c
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453620"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806270"
 ---
 # <a name="creating-a-connection-string"></a>建立連接字串
 連接字串是由引數/值組的清單所組成 (也就是) 的參數，以分號分隔。 例如：  
@@ -42,7 +42,7 @@ ms.locfileid: "88453620"
   
  其他引數會傳遞給 *提供者* 引數中所指定的提供者，而不會由 ADO 處理。  
   
- HelloData 中的 HelloData 應用程式 [：簡單的 ADO 應用程式](../../../ado/guide/data/hellodata-a-simple-ado-application.md) 使用下列連接字串：  
+ HelloData 中的 HelloData 應用程式 [：簡單的 ADO 應用程式](./hellodata-a-simple-ado-application.md) 使用下列連接字串：  
   
 ```vb
 m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _  

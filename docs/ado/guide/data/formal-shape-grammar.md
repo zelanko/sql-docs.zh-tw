@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6a8d92abc3a1b0d7e6d39ac4149c186c5a2fc2eb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 75cfedbafa7bc0c1b954f8bbdea29ec92d45c07f
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453370"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806831"
 ---
 # <a name="formal-shape-grammar"></a>正式 Shape 文法
 這是建立任何 shape 命令的正式文法：  
@@ -69,10 +69,10 @@ ms.locfileid: "88453370"
 |\<expression>|Visual Basic for Applications 運算式，其運算元是相同資料列中的其他非計算資料行。|  
   
 ## <a name="see-also"></a>另請參閱  
- [存取階層式記錄集中的資料列](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [資料成形總覽](../../../ado/guide/data/data-shaping-overview.md)   
- [資料成形所需的提供者](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [Shape APPEND 子句](../../../ado/guide/data/shape-append-clause.md)   
- [一般圖形命令](../../../ado/guide/data/shape-commands-in-general.md)   
- [Shape COMPUTE 子句](../../../ado/guide/data/shape-compute-clause.md)   
- [Visual Basic for Applications 函式](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+ [存取階層式記錄集中的資料列](./accessing-rows-in-a-hierarchical-recordset.md)   
+ [資料成形總覽](./data-shaping-overview.md)   
+ [資料成形所需的提供者](./required-providers-for-data-shaping.md)   
+ [Shape APPEND 子句](./shape-append-clause.md)   
+ [一般圖形命令](./shape-commands-in-general.md)   
+ [Shape COMPUTE 子句](./shape-compute-clause.md)   
+ [Visual Basic for Applications 函式](./visual-basic-for-applications-functions.md)

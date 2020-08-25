@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 59030e99-de9c-4506-a450-67dfcb6f7c00
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 612d7dfd7b274b69f6ceeb3801d1a85e454d6d5f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 66404237dbcb0a5cd74dd5eaf77d30f3af7e70a7
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438810"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767807"
 ---
 # <a name="rds-code-examples"></a>RDS 程式碼範例
 > [!IMPORTANT]
@@ -28,8 +28,8 @@ ms.locfileid: "88438810"
   
  **注意** 將整個程式碼範例貼入您的程式碼編輯器中。 如果使用部分範例或遺失段落格式，此範例可能無法正確執行。  
   
--   [Microsoft Visual Basic 中的 RDS 程式碼範例](../../../ado/reference/rds-api/rds-code-examples-in-visual-basic.md)  
+-   [Microsoft Visual Basic 中的 RDS 程式碼範例](./rds-code-examples-in-visual-basic.md)  
   
--   [Microsoft Visual Basic Scripting Edition 中的 RDS 程式碼範例](../../../ado/reference/rds-api/rds-code-examples-in-vbscript.md)  
+-   [Microsoft Visual Basic Scripting Edition 中的 RDS 程式碼範例](./rds-code-examples-in-vbscript.md)  
   
--   [Microsoft Visual C++ 中的 RDS 程式碼範例](../../../ado/reference/rds-api/rds-code-examples-in-visual-c.md)  
+-   [Microsoft Visual C++ 中的 RDS 程式碼範例](./rds-code-examples-in-visual-c.md)

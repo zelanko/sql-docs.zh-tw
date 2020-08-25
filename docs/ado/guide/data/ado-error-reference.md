@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec9df42f3aee56d06883478e365fffcb71790d00
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a286804eb5ea575e259c3b54a106edea83f55f57
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453860"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806697"
 ---
 # <a name="ado-errors"></a>ADO 錯誤
-**ErrorValueEnum**常數描述 ADO 誤差值。 如需這些列舉常數的完整清單（包括值），請參閱 [附錄 B： ADO 錯誤](../../../ado/guide/appendixes/appendix-b-ado-errors.md)。 本節將探討一些更有趣的錯誤，並說明可能引發這些錯誤的某些特定情況，或是解決問題的解決方案。 系統會列出 **ErrorValueEnum** 常數和簡短的正向十進位數。
+**ErrorValueEnum**常數描述 ADO 誤差值。 如需這些列舉常數的完整清單（包括值），請參閱 [附錄 B： ADO 錯誤](../appendixes/appendix-b-ado-errors.md)。 本節將探討一些更有趣的錯誤，並說明可能引發這些錯誤的某些特定情況，或是解決問題的解決方案。 系統會列出 **ErrorValueEnum** 常數和簡短的正向十進位數。
 
 |Number|ErrorValueEnum 常數|描述/可能的原因|
 |------------|-----------------------------|----------------------------------|

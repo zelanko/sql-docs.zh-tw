@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 06e7ca7204d673ac5888962f3d4f5095e9fe5a9d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ae7eaab32f14ce653d766cfe38408118cc37b763
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453940"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806781"
 ---
 # <a name="visual-c-extensions-example"></a>Visual C++ Extensions 範例
 此程式會顯示如何從欄位取出值，並轉換成 C/c + + 變數。  
@@ -111,5 +111,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 Visual C++ 擴充功能](../../../ado/guide/appendixes/using-visual-c-extensions.md)   
- [Visual C++ Extensions 標題](../../../ado/guide/appendixes/visual-c-extensions-header.md)
+ [使用 Visual C++ 擴充功能](./using-visual-c-extensions.md)   
+ [Visual C++ Extensions 標題](./visual-c-extensions-header.md)

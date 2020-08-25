@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6e0488c3-934d-4976-99dc-65c580dc7a3c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 227c3ead2744c475a54f129078b5674587ae3849
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7fb247f62173a0c622a08eb2d55af005efcb2669
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453120"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805679"
 ---
 # <a name="ole-db-providers-ado"></a>OLE DB 提供者 (ADO)
 OLE DB 定義一組 COM 介面，讓應用程式能夠統一存取儲存在不同資訊來源中的資料。 這種方法可讓資料來源透過支援適用于資料來源之 DBMS 功能數量的介面來共用其資料。 根據設計，OLE DB 的高效能架構是以其使用彈性、元件為基礎的服務模型為基礎。 除了在應用程式和資料之間擁有指定數目的中介層，OLE DB 只需要需要多少元件才能完成特定工作。  
@@ -42,6 +42,6 @@ OLE DB 定義一組 COM 介面，讓應用程式能夠統一存取儲存在不�
   
  此章節包含下列主題。  
   
--   [資料提供者](../../../ado/guide/data/data-providers.md)  
+-   [資料提供者](./data-providers.md)  
   
--   [服務提供者和元件](../../../ado/guide/data/service-providers-and-components.md)
+-   [服務提供者和元件](./service-providers-and-components.md)

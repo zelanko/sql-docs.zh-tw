@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0e08af60-f668-4092-8b6a-9e8b6db90448
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4b37c4ef22e44f1b7686d7b0313b07531f85540a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f273fb32b41b54e696544719df5f7c50a32f4acb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443210"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774277"
 ---
 # <a name="move-method-example-vc"></a>Move 方法範例 (VC++)
-這個範例會使用 [Move](../../../ado/reference/ado-api/move-method-ado.md) 方法，根據使用者輸入來放置記錄指標。  
+這個範例會使用 [Move](./move-method-ado.md) 方法，根據使用者輸入來放置記錄指標。  
   
 ## <a name="example"></a>範例  
   
@@ -259,4 +259,4 @@ Enter number of records to Move
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Move 方法 (ADO)](../../../ado/reference/ado-api/move-method-ado.md)
+ [Move 方法 (ADO)](./move-method-ado.md)

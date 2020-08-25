@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: bc8f710d-0621-4673-8d8e-0361e44abed0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7901bf5888b3a0d4ee339b146b4eb693a88fe892
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1caf78c0f15ef2e0a3f4ad6fe73ec44684c0e4ef
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450760"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776017"
 ---
 # <a name="compareenum"></a>CompareEnum
 指定兩筆記錄以其書簽表示的相對位置。  
   
-|常數|值|描述|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
 |**adCompareEqual**|1|指出書簽相等。|  
 |**adCompareGreaterThan**|2|指出第一個書簽是在第二個書簽之後。|  
@@ -37,7 +37,7 @@ ms.locfileid: "88450760"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 相等  
  封裝： **.com. 資料**  
   
-|常數|  
+|持續性|  
 |--------------|  
 |AdoEnums，比較. 等於|  
 |AdoEnums. GREATERTHAN|  
@@ -46,7 +46,7 @@ ms.locfileid: "88450760"
 |AdoEnums. NOTEQUAL|  
   
 ## <a name="applies-to"></a>套用至  
- [CompareBookmarks 方法 (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)  
+ [CompareBookmarks 方法 (ADO)](./comparebookmarks-method-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [CompareBookmarks 方法 (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)
+ [CompareBookmarks 方法 (ADO)](./comparebookmarks-method-ado.md)

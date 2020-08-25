@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d89f25dc6e37c0b5c569d5db7c4f8486115ce94a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aec0ad3065deb60f99f672712c085fe054885d27
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453710"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806382"
 ---
 # <a name="boundaries-of-a-recordset"></a>資料錄集的界限
 **記錄集** 支援 **BOF** 和 **EOF** 屬性，分別描繪出資料集的開頭和結尾。 您可以將 **BOF** 和 **EOF** 視為位於 **記錄集**開頭和結尾的「虛設」記錄。 計算 **BOF** 和 **EOF**，我們的範例 **記錄集** 現在看起來像這樣：  
@@ -70,4 +70,4 @@ else
   
  此配置適用于所有類型的資料指標，且與基礎提供者無關。 如果您嘗試判斷 **記錄集** 物件的 emptiness，方法是檢查其 **RecordCount** 屬性值是否為零 (0) ，您必須採取預防措施，以使用支援在結果中傳回記錄數目的適當資料指標和提供者。  
   
- 如果您刪除 **記錄集** 物件中的最後一筆記錄，資料指標會保持在不定的狀態。 在您嘗試重新置放目前的記錄之前（視提供者而定）， **BOF** 和 **EOF** 屬性可能會維持 **False** 。 如需詳細資訊，請參閱 [使用 Delete 方法刪除記錄](../../../ado/guide/data/deleting-records-using-the-delete-method.md)。
+ 如果您刪除 **記錄集** 物件中的最後一筆記錄，資料指標會保持在不定的狀態。 在您嘗試重新置放目前的記錄之前（視提供者而定）， **BOF** 和 **EOF** 屬性可能會維持 **False** 。 如需詳細資訊，請參閱 [使用 Delete 方法刪除記錄](./deleting-records-using-the-delete-method.md)。

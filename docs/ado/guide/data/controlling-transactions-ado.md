@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 189240e8-3ffa-4024-81a9-c6cb5d17eee0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 861fe39f270a007fdd3896c4150a02a0fd905b47
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 279c77e7bbd5d676ab3f5f53b41e9e3172ab0d57
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453630"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806284"
 ---
 # <a name="controlling-transactions-ado"></a>控制交易 (ADO)
 ADO 支援連接中的交易處理，以及**連接**物件的**BeginTrans**、 **CommitTrans**和**RollbackTrans**方法的協助。 下列簡單的程式碼片段說明如何在 ADO 中執行交易處理的一般概念。  
@@ -80,4 +80,4 @@ oConn.Close
   
  在此，我們會使用交易處理來確保兩筆記錄會更新為一個作業單位，而且兩個產品名稱完全是互換或未變更。  
   
- 如需交易處理的詳細討論，請參閱 [更新和保存資料](../../../ado/guide/data/updating-and-persisting-data.md)。
+ 如需交易處理的詳細討論，請參閱 [更新和保存資料](./updating-and-persisting-data.md)。

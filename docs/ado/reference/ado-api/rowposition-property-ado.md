@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9d068fed-39bf-4842-afc3-686a2af2145d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 330c090c9e4eedd6a083d58a55243d470514541f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0f5f78843e38c2a3ff6b21c90bc9ed7f2c573ee4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442460"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777607"
 ---
 # <a name="rowposition-property-ado"></a>RowPosition 屬性 (ADO)
 取得或設定來自**ADORecordsetConstruction**物件的 OLE DB **RowPosition**物件。 當您使用 **put_RowPosition** 設定 **RowPosition** 物件時，產生的 **記錄集** 物件會使用 **RowPosition** 物件來決定目前的資料列。  
@@ -53,4 +53,4 @@ HRESULT put_RowPosition([in] IUnknown* pRowPos);
  當設定這個屬性時，如果**RowPosition**物件上的資料列**集**物件與**記錄集**物件**上的資料列集物件不同**，前者會覆寫後者。 相同的行為也適用于**RowPosition**的目前**章節**。  
   
 ## <a name="applies-to"></a>套用至  
- [ADORecordsetConstruction 介面](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)
+ [ADORecordsetConstruction 介面](./adorecordsetconstruction-interface.md)

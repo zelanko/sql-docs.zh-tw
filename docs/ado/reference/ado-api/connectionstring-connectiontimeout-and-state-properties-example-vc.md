@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c6bd2609-4c49-462f-a1aa-7bee0f615adb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4b0281b569a6bfaf4f28d6958011ab3efacb4221
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7efad01088e4151d37dea9d71c1662a228e0c822
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444460"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775927"
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vc"></a>ConnectionString、ConnectionTimeout 和 State 屬性範例 (VC + +) 
-這個範例示範使用 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 屬性來開啟 [連接](../../../ado/reference/ado-api/connection-object-ado.md) 物件的不同方式。 它也會使用 [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) 屬性來設定連接逾時時間，並使用 [State](../../../ado/reference/ado-api/state-property-ado.md) 屬性來檢查連接的狀態。 此程式必須有 >getstate 函數才能執行。  
+這個範例示範使用 [ConnectionString](./connectionstring-property-ado.md) 屬性來開啟 [連接](./connection-object-ado.md) 物件的不同方式。 它也會使用 [ConnectionTimeout](./connectiontimeout-property-ado.md) 屬性來設定連接逾時時間，並使用 [State](./state-property-ado.md) 屬性來檢查連接的狀態。 此程式必須有 >getstate 函數才能執行。  
   
 > [!NOTE]
 >  如果您要連接到支援 Windows 驗證的資料來源提供者，您應該在連接字串中指定 **Trusted_Connection = yes** 或 **整合式安全性 = SSPI** ，而不是使用者識別碼和密碼資訊。  
@@ -168,7 +168,7 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADO) 的 Connection 物件 ](../../../ado/reference/ado-api/connection-object-ado.md)   
- [ (ADO) 的 ConnectionString 屬性 ](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
- [ (ADO) 的 ConnectionTimeout 屬性 ](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)   
- [State 屬性 (ADO)](../../../ado/reference/ado-api/state-property-ado.md)
+ [ (ADO) 的 Connection 物件 ](./connection-object-ado.md)   
+ [ (ADO) 的 ConnectionString 屬性 ](./connectionstring-property-ado.md)   
+ [ (ADO) 的 ConnectionTimeout 屬性 ](./connectiontimeout-property-ado.md)   
+ [State 屬性 (ADO)](./state-property-ado.md)

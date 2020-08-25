@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a571c36a67a4d2c1c3b98c64c826af949b0e773
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 39e50c060dc602cb2bdd3541a454624e41b4d5b3
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453250"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805973"
 ---
 # <a name="how-event-handlers-work-together"></a>事件處理常式如何協同運作
-除非您是在 Visual Basic 中進行程式設計，否則無論您是否真的處理所有事件，都必須實作為 **連接** 和 **記錄集** 事件的所有事件處理常式。 您必須執行的實作為工作量取決於您的程式設計語言。 如需詳細資訊，請參閱 [ADO 事件具現化（依語言](../../../ado/guide/data/ado-event-instantiation-by-language.md)）。  
+除非您是在 Visual Basic 中進行程式設計，否則無論您是否真的處理所有事件，都必須實作為 **連接** 和 **記錄集** 事件的所有事件處理常式。 您必須執行的實作為工作量取決於您的程式設計語言。 如需詳細資訊，請參閱 [ADO 事件具現化（依語言](./ado-event-instantiation-by-language.md)）。  
   
 ## <a name="paired-event-handlers"></a>成對的事件處理常式  
  每個事件處理常式都會有相關聯的 **完整** 事件處理常式。 例如，當您的應用程式變更欄位的值時，就會呼叫 **WillChangeField** 事件處理常式。 如果可接受變更，您的應用程式會讓 **adStatus** 參數保持不變，並執行此作業。 當作業完成時， **FieldChangeComplete** 事件會通知您的應用程式作業已完成。 如果成功完成， **adStatus** 會包含 **adStatusOK**;否則， **adStatus** 會包含 **adStatusErrorsOccurred** ，您必須檢查 **error** 物件以判斷錯誤的原因。  
@@ -46,7 +46,7 @@ ms.locfileid: "88453250"
   
  單一 **完整** 事件處理常式有助於管理非同步作業。 每個非同步作業都有適當的 **完整** 事件。  
   
- 例如，填入大型 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 物件可能需要很長的時間。 如果您的應用程式已正確撰寫，您可以啟動作業 `Recordset.Open(...,adAsyncExecute)` ，並繼續進行其他處理。 當 **記錄集** 是由 **ExecuteComplete** 事件填入時，最終會收到通知。  
+ 例如，填入大型 [記錄集](../../reference/ado-api/recordset-object-ado.md) 物件可能需要很長的時間。 如果您的應用程式已正確撰寫，您可以啟動作業 `Recordset.Open(...,adAsyncExecute)` ，並繼續進行其他處理。 當 **記錄集** 是由 **ExecuteComplete** 事件填入時，最終會收到通知。  
   
 ## <a name="single-event-handlers-and-multiple-objects"></a>單一事件處理常式和多個物件  
  程式設計語言的彈性（例如 Microsoft Visual C++®）可讓您有一個事件處理常式處理來自多個物件的事件。 例如，您可能有一個 **中斷** 連接事件處理常式處理來自數個 **連接** 物件的事件。 如果其中一個連接結束，則會呼叫 **中斷連接** 事件處理常式。 您可以判斷哪個連接造成事件，因為事件處理常式物件參數會設定為對應的 **連接** 物件。  
@@ -55,7 +55,7 @@ ms.locfileid: "88453250"
 >  這項技術無法在 Visual Basic 中使用，因為該語言只能將一個物件關聯至事件處理常式。  
   
 ## <a name="see-also"></a>另請參閱  
- [ADO 事件處理常式摘要](../../../ado/guide/data/ado-event-handler-summary.md)   
- [ADO 事件具現化（依語言）](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
- [事件參數](../../../ado/guide/data/event-parameters.md)   
- [事件種類](../../../ado/guide/data/types-of-events.md)
+ [ADO 事件處理常式摘要](./ado-event-handler-summary.md)   
+ [ADO 事件具現化（依語言）](./ado-event-instantiation-by-language.md)   
+ [事件參數](./event-parameters.md)   
+ [事件的類型](./types-of-events.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e0e7b7ba-3943-43cb-a2cd-0e4667187973
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 79cc1b0b69914e8f2a00c3e8cf4557ac89c54c6d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 83b78ff80ab428daf616014a316c14e2e3185c27
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451070"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776537"
 ---
 # <a name="cachesize-property-example-vc"></a>CacheSize 屬性範例 (VC++)
-這個範例會使用 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) 屬性來顯示以和沒有30個記錄快取執行之作業的效能差異。  
+這個範例會使用 [CacheSize](./cachesize-property-ado.md) 屬性來顯示以和沒有30個記錄快取執行之作業的效能差異。  
   
 ```  
 // CacheSize_Property_Sample.cpp  
@@ -162,5 +162,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADO) 的 CacheSize 屬性 ](../../../ado/reference/ado-api/cachesize-property-ado.md)   
- [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [ (ADO) 的 CacheSize 屬性 ](./cachesize-property-ado.md)   
+ [Recordset 物件 (ADO)](./recordset-object-ado.md)

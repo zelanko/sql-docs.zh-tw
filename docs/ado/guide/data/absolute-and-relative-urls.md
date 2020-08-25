@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43fc1a32428f54682b8fde5dea0f0140568c482e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 285fba254c025268abc9ea93f6d6e53e39a87aca
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453910"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806726"
 ---
 # <a name="absolute-and-relative-urls"></a>絕對和相對 URL
 URL 會指定儲存在本機電腦或網路電腦上的目標位置。 目標可以是檔案、目錄、HTML 網頁、影像、程式等等。  
@@ -46,22 +46,22 @@ URL 會指定儲存在本機電腦或網路電腦上的目標位置。 目標可
  如果包含，則 *資源* 為目標，而且通常是檔案的名稱。 它可能是簡單的檔案 *，* 其中包含單一二進位位元組資料流程或 *結構化檔，* 其中包含一或多個儲存體和二進位資料流程位元組資料流程。  
   
 ## <a name="url-scheme-registration"></a>URL 配置註冊  
- 如果提供者支援 Url，則提供者會註冊一或多個 URL 配置。 註冊表示任何使用配置的 Url 都會自動叫用已註冊的提供者。 例如， *HTTP* 配置會註冊到 [Microsoft OLE DB 提供者進行網際網路發佈](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 ADO 假設所有前面加上 "HTTP" 的 Url 都代表要與網際網路發佈提供者一起使用的 Web 資料夾或檔案。 如需提供者所註冊配置的詳細資訊，請參閱您的提供者檔。  
+ 如果提供者支援 Url，則提供者會註冊一或多個 URL 配置。 註冊表示任何使用配置的 Url 都會自動叫用已註冊的提供者。 例如， *HTTP* 配置會註冊到 [Microsoft OLE DB 提供者進行網際網路發佈](../appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 ADO 假設所有前面加上 "HTTP" 的 Url 都代表要與網際網路發佈提供者一起使用的 Web 資料夾或檔案。 如需提供者所註冊配置的詳細資訊，請參閱您的提供者檔。  
   
 ## <a name="defining-context-with-a-url"></a>使用 URL 定義內容  
- 以 [連接](../../../ado/reference/ado-api/connection-object-ado.md) 物件表示的開啟連接的一個函式，是將後續作業限制為該連接所代表的資料來源。 也就是說，連接會定義後續作業的內容。  
+ 以 [連接](../../reference/ado-api/connection-object-ado.md) 物件表示的開啟連接的一個函式，是將後續作業限制為該連接所代表的資料來源。 也就是說，連接會定義後續作業的內容。  
   
- 使用 ADO 2.7 或更新版本時，絕對 URL 也可以定義內容。 例如，以絕對 URL 開啟 [記錄](../../../ado/reference/ado-api/record-object-ado.md) 物件時，會以隱含方式建立 **連接** 物件來代表 URL 所指定的資源。  
+ 使用 ADO 2.7 或更新版本時，絕對 URL 也可以定義內容。 例如，以絕對 URL 開啟 [記錄](../../reference/ado-api/record-object-ado.md) 物件時，會以隱含方式建立 **連接** 物件來代表 URL 所指定的資源。  
   
- 定義內容的絕對 URL 可以在**Record** object [Open](../../../ado/reference/ado-api/open-method-ado-record.md)方法的*ActiveConnection*參數中指定。 絕對 URL 也可以指定為 **Connection** 物件 [open](../../../ado/reference/ado-api/open-method-ado-connection.md) 方法 *ConnectionString* 參數中 "URL =" 關鍵字的值，以及 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 物件 [open](../../../ado/reference/ado-api/open-method-ado-recordset.md) method *ActiveConnection* 參數。  
+ 定義內容的絕對 URL 可以在**Record** object [Open](../../reference/ado-api/open-method-ado-record.md)方法的*ActiveConnection*參數中指定。 絕對 URL 也可以指定為 **Connection** 物件 [open](../../reference/ado-api/open-method-ado-connection.md) 方法 *ConnectionString* 參數中 "URL =" 關鍵字的值，以及 [記錄集](../../reference/ado-api/recordset-object-ado.md) 物件 [open](../../reference/ado-api/open-method-ado-recordset.md) method *ActiveConnection* 參數。  
   
  您也可以藉由開啟代表目錄的 **記錄** 或 **記錄集** 物件來定義內容，因為這些物件已經有指定內容的隱含或明確宣告的 **連接** 物件。  
   
 ## <a name="scoped-operations"></a>範圍作業  
- 內容也會定義範圍，也就是可參與後續作業的目錄及其子目錄。 **記錄**物件有數個範圍的方法，可在目錄及其所有子目錄上運作。 這些方法包括 [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)、 [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)和 [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)。  
+ 內容也會定義範圍，也就是可參與後續作業的目錄及其子目錄。 **記錄**物件有數個範圍的方法，可在目錄及其所有子目錄上運作。 這些方法包括 [CopyRecord](../../reference/ado-api/copyrecord-method-ado.md)、 [MoveRecord](../../reference/ado-api/moverecord-method-ado.md)和 [DeleteRecord](../../reference/ado-api/deleterecord-method-ado.md)。  
   
 ## <a name="relative-urls-as-command-text"></a>相對 Url 作為命令文字  
- 您可以指定要在資料來源上執行的命令，方法是在**連接**物件的[Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)方法的*CommandText*參數中輸入字串，然後在**記錄集**物件的[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法的*source*參數中輸入字串。  
+ 您可以指定要在資料來源上執行的命令，方法是在**連接**物件的[Execute](../../reference/ado-api/execute-method-ado-connection.md)方法的*CommandText*參數中輸入字串，然後在**記錄集**物件的[Open](../../reference/ado-api/open-method-ado-recordset.md)方法的*source*參數中輸入字串。  
   
  您可以在 *CommandText* 或 *Source* 參數中指定相對 URL。 相對 URL 實際上不代表命令，例如 SQL 命令;它只會指定參數。 使用中連接的內容必須是絕對 URL，而且 *Option* 參數必須設為 **adCmdTableDirect**。  
   
@@ -86,9 +86,9 @@ recordset.Open "", "URL=https://YourServer/Winnt/",,,adCmdTableDirect
 ## <a name="ole-db-provider-supplied-url-schemes"></a>OLE DB 提供者提供的 URL 配置  
  完整 URL 的前置部分是用來存取由 URL 其餘部分所識別之資源的 *配置* 。 例如，HTTP (超文字傳輸通訊協定) 和 FTP (檔案傳輸通訊協定) 。  
   
- ADO 支援可辨識自己的 URL 配置的 OLE DB 提供者。 例如， [Microsoft OLE DB Provider for Internet 發佈](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)*可存取* 「已發佈」的 Windows 2000 檔案，可辨識現有的 HTTP 配置。  
+ ADO 支援可辨識自己的 URL 配置的 OLE DB 提供者。 例如， [Microsoft OLE DB Provider for Internet 發佈](../appendixes/microsoft-ole-db-provider-for-internet-publishing.md)*可存取* 「已發佈」的 Windows 2000 檔案，可辨識現有的 HTTP 配置。  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADO) 的 Connection 物件 ](../../../ado/reference/ado-api/connection-object-ado.md)   
- [ (ADO) 的記錄物件 ](../../../ado/reference/ado-api/record-object-ado.md)   
- [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [ (ADO) 的 Connection 物件 ](../../reference/ado-api/connection-object-ado.md)   
+ [ (ADO) 的記錄物件 ](../../reference/ado-api/record-object-ado.md)   
+ [Recordset 物件 (ADO)](../../reference/ado-api/recordset-object-ado.md)

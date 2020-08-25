@@ -15,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 822c9f6ef6aebe5e32bb37e4c89a9bb4e6d7db68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1747f01b554e8df45a7835e2cb2006adcdb3079a
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454070"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806613"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Microsoft OLE DB Provider for Microsoft Jet 總覽
 Microsoft Jet 的 OLE DB 提供者可讓 ADO 存取 Microsoft Jet 資料庫。
 
 ## <a name="connection-string-parameters"></a>連接字串參數
- 若要連接到這個提供者，請將[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)屬性的*提供者*引數設定如下：
+ 若要連接到這個提供者，請將[ConnectionString](../../reference/ado-api/connectionstring-property-ado.md)屬性的*提供者*引數設定為下列屬性：
 
 ```vb
 Microsoft.Jet.OLEDB.4.0
 ```
 
- 讀取 [Provider](../../../ado/reference/ado-api/provider-property-ado.md) 屬性也會傳回這個字串。
+ 讀取 [Provider](../../reference/ado-api/provider-property-ado.md) 屬性也會傳回這個字串。
 
 ## <a name="typical-connection-string"></a>一般連接字串
  此提供者的一般連接字串為：
@@ -54,7 +54,7 @@ Microsoft.Jet.OLEDB.4.0
 >  如果您要連接到支援 Windows 驗證的資料來源提供者，您應該在連接字串中指定 **Trusted_Connection = yes** 或 **整合式安全性 = SSPI** ，而不是使用者識別碼和密碼資訊。
 
 ## <a name="provider-specific-connection-parameters"></a>提供者特定的連接參數
- Microsoft Jet 的 OLE DB 提供者除了 ADO 定義的動態屬性之外，還支援數個提供者特定的動態屬性。 如同所有其他**連接**參數，您可以使用**連接**物件的**Properties**集合或連接字串的一部分來設定這些參數。
+ 除了 ADO 定義的其他動態屬性以外，Microsoft Jet 的 OLE DB 提供者還支援數個提供者專屬的動態屬性。 如同所有其他**連接**參數，您可以使用**連接**物件的**Properties**集合或連接字串的一部分來設定這些參數。
 
  下表列出這些屬性以及對應的 OLE DB 屬性名稱（以括弧括住）。
 
@@ -69,7 +69,7 @@ Microsoft.Jet.OLEDB.4.0
 |Jet OLEDB：加密資料庫 (DBPROP_JETOLEDB_ENCRYPTDATABASE) |指出是否應該加密壓縮的資料庫。 如果未設定此屬性，則如果原始資料庫也已加密，壓縮的資料庫將會加密。|
 |Jet OLEDB：引擎類型 (DBPROP_JETOLEDB_ENGINE) |表示用來存取目前資料存放區的儲存引擎。|
 |Jet OLEDB：獨佔非同步延遲 (DBPROP_JETOLEDB_EXCLUSIVEASYNCDELAY) |指出當資料庫以獨佔方式開啟時，Jet 可以延遲非同步寫入磁片的時間長度上限（以毫秒為單位）。<br /><br /> 除非 **JET OLEDB： Flush Transaction Timeout** 設定為0，否則會忽略這個屬性。|
-|Jet OLEDB： Flush Transaction Timeout (DBPROP_JETOLEDB_FLUSHTRANSACTIONTIMEOUT) |指出儲存在快取中以供非同步寫入的資料實際寫入磁片的等候時間量。 此設定會覆寫 **JET oledb：共用非同步延遲** 和 **Jet Oledb：獨佔非同步延遲**的值。|
+|Jet OLEDB： Flush Transaction Timeout (DBPROP_JETOLEDB_FLUSHTRANSACTIONTIMEOUT) |表示在快取中儲存的資料寫入至磁片之前等候的時間量。 此設定會覆寫 **JET oledb：共用非同步延遲** 和 **Jet Oledb：獨佔非同步延遲**的值。|
 |Jet OLEDB：全域大量交易 (DBPROP_JETOLEDB_GLOBALBULKNOTRANSACTIONS) |指出 SQL 大量交易是否交易。|
 |Jet OLEDB：全域部分大量 Ops (DBPROP_JETOLEDB_GLOBALBULKPARTIAL) |表示用來開啟資料庫的密碼。|
 |Jet OLEDB：隱含認可同步處理 (DBPROP_JETOLEDB_IMPLICITCOMMITSYNC) |指出在內部隱含交易中所做的變更是以同步或非同步模式撰寫的。|
@@ -106,16 +106,16 @@ Microsoft.Jet.OLEDB.4.0
 |Jet OLEDB：儲存的查詢 (DBPROP_JETOLEDB_STOREDQUERY) |指出是否應該將命令文字轉譯為預存查詢，而不是 SQL 命令。|
 |Jet OLEDB：驗證 Set (DBPROP_JETOLEDB_VALIDATEONSET) 的規則|指出當設定資料行資料或將變更認可到資料庫時，是否要評估 Jet 驗證規則。|
 
- 根據預設，OLE DB Provider for Microsoft Jet 會以讀取/寫入模式開啟 Microsoft Jet 資料庫。 若要在唯讀模式中開啟資料庫，請將 ADO**連接**物件的[mode](../../../ado/reference/ado-api/mode-property-ado.md)屬性設為**adModeRead**。
+ 根據預設，OLE DB Provider for Microsoft Jet 會以讀取/寫入模式開啟 Microsoft Jet 資料庫。 若要在唯讀模式中開啟資料庫，請將 ADO**連接**物件的[mode](../../reference/ado-api/mode-property-ado.md)屬性設為**adModeRead**。
 
 ## <a name="command-object-usage"></a>命令物件使用方式
- [命令](../../../ado/reference/ado-api/command-object-ado.md)物件中的命令文字會使用 MICROSOFT Jet SQL 方言。 您可以在命令文字中指定傳回資料列的查詢、動作查詢和資料表名稱;但是，不支援預存程式，也不應該指定。
+ [命令](../../reference/ado-api/command-object-ado.md)物件中的命令文字會使用 MICROSOFT Jet SQL 方言。 您可以在命令文字中指定傳回資料列的查詢、動作查詢和資料表名稱;但是，不支援預存程式，也不應該指定。
 
 ## <a name="recordset-behavior"></a>記錄集行為
- Microsoft Jet 資料庫引擎不支援動態資料指標。 因此，Microsoft Jet 的 OLE DB 提供者不支援 **adLockDynamic** 資料指標類型。 當要求動態資料指標時，提供者會傳回索引鍵集資料指標，並重設 [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) 屬性，以指出傳回的 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 類型。 此外，如果要求了可更新的 **記錄集** (**LockType** 是 **adLockOptimistic**、 **adLockBatchOptimistic**或 **adLockPessimistic**) 提供者也會傳回索引鍵集資料指標，並重設 **CursorType** 屬性。
+ Microsoft Jet 資料庫引擎不支援動態資料指標。 因此，Microsoft Jet 的 OLE DB 提供者不支援 **adLockDynamic** 資料指標類型。 當要求動態資料指標時，提供者會傳回索引鍵集資料指標，並重設 [CursorType](../../reference/ado-api/cursortype-property-ado.md) 屬性，以指出傳回的 [記錄集](../../reference/ado-api/recordset-object-ado.md) 類型。 此外，如果要求了可更新的 **記錄集** (**LockType** 是 **adLockOptimistic**、 **adLockBatchOptimistic**或 **adLockPessimistic**) 提供者也會傳回索引鍵集資料指標，並重設 **CursorType** 屬性。
 
 ## <a name="dynamic-properties"></a>動態屬性
- OLE DB Provider for Microsoft Jet 會將數個動態屬性插入未開啟之[連接](../../../ado/reference/ado-api/connection-object-ado.md)、[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)和[命令](../../../ado/reference/ado-api/command-object-ado.md)物件的**properties**集合中。
+ OLE DB Provider for Microsoft Jet 會將數個動態屬性插入未開啟之[連接](../../reference/ado-api/connection-object-ado.md)、[記錄集](../../reference/ado-api/recordset-object-ado.md)和[命令](../../reference/ado-api/command-object-ado.md)物件的**properties**集合中。
 
  下表是每個動態屬性之 ADO 和 OLE DB 名稱的交叉索引。 OLE DB 程式設計人員參考是依「描述」一詞來參考 ADO 屬性名稱。 您可以在 OLE DB 程式設計人員參考中找到這些屬性的詳細資訊。
 
@@ -336,4 +336,4 @@ Microsoft.Jet.OLEDB.4.0
 |更新|DBPROP_UPDATABILITY|
 |使用書簽|DBPROP_BOOKMARKS|
 
- 如需有關 Microsoft Jet OLE DB 提供者的特定執行詳細資料和功能資訊，請參閱 OLE DB 檔中的 [Jet 提供者](https://msdn.microsoft.com/library/windows/desktop/ms722791.aspx) 。
+ 如需有關 Microsoft Jet OLE DB 提供者的特定執行詳細資料和功能資訊，請參閱 OLE DB 檔中的 [Jet 提供者](/previous-versions/windows/desktop/ms722791(v=vs.85)) 。

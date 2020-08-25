@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 299c37bd-19ff-4261-8571-b9665687e075
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c313e424c44ce289254267e6d6aa651308ae25df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 508508da57fc7a0b1ab899acf3f77b1a49a7fa9b
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453520"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806923"
 ---
 # <a name="dealing-with-failed-updates"></a>處理失敗的更新
 當更新最後有錯誤時，您解決錯誤的方式取決於錯誤的本質和嚴重性，以及應用程式的邏輯。 但是，如果資料庫與其他使用者共用，則一般的錯誤是其他人會在您進行之前修改欄位。 這類錯誤稱為「衝突」。 ADO 偵測到這種情況並報告錯誤。  
@@ -38,4 +38,4 @@ Loop
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [批次模式](../../../ado/guide/data/batch-mode.md)
+ [批次模式](./batch-mode.md)

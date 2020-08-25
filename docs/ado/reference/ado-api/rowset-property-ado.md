@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7d359294-4ff2-47e0-8111-0c221b24d80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8f6342de5be5b2c6ba6e1bf58408cfabc6e31088
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f966261864cb7717b31e4851062228c3e6d63e92
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442230"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777617"
 ---
 # <a name="rowset-property-ado"></a>Rowset 屬性 (ADO)
 取得或設定**ADORecordsetConstruction**物件上/的 OLE DB 資料列**集**物件。 當您使用 put_Rowset 時，資料列集會轉換成 ADO **記錄集** 物件。  
@@ -50,4 +50,4 @@ HRESULT put_Rowset([in] IUnknown* pRowset);
  這個屬性方法會傳回標準的 HRESULT 值，包括 S_OK 和 E_FAIL。  
   
 ## <a name="applies-to"></a>套用至  
- [ADORecordsetConstruction 介面](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)
+ [ADORecordsetConstruction 介面](./adorecordsetconstruction-interface.md)

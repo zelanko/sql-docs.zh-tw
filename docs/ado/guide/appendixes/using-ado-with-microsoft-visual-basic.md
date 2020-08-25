@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b4e8304204a6eaebf6b64d5cb9ad44e5fa1602da
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: efb206f3c0fbbeb0fbc700f8e714ddd1d5ee5a8c
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454010"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806518"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>搭配使用 ADO 與 Microsoft Visual Basic 和 Visual Basic for Applications
 無論您使用 Visual Basic 或 Visual Basic for Applications，設定 ADO 專案和撰寫 ADO 程式碼都很類似。 本主題討論如何搭配使用 ADO 與 Visual Basic 和 Visual Basic for Applications，並注意任何差異。
@@ -110,10 +110,10 @@ Set conn1 = CreateObject("ADODB.Connection.2.0") As Object
  使用 **CreateObject** 方法來具現化物件的速度通常會比使用 **Dim** 語句慢。
 
 ## <a name="handling-events"></a>處理事件
- 為了處理 Microsoft Visual Basic 中的 ADO 事件，您必須使用 **WithEvents** 關鍵字宣告模組層級變數。 變數只能宣告為類別模組的一部分，而且必須在模組層級宣告。 如需處理 ADO 事件的更完整討論，請參閱 [處理 Ado 事件](../../../ado/guide/data/handling-ado-events.md)。
+ 為了處理 Microsoft Visual Basic 中的 ADO 事件，您必須使用 **WithEvents** 關鍵字宣告模組層級變數。 變數只能宣告為類別模組的一部分，而且必須在模組層級宣告。 如需處理 ADO 事件的更完整討論，請參閱 [處理 Ado 事件](../data/handling-ado-events.md)。
 
 ## <a name="visual-basic-examples"></a>Visual Basic 範例
- ADO 檔中包含許多 Visual Basic 範例。 如需詳細資訊，請參閱 [Microsoft Visual Basic 中的 ADO 程式碼範例](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)。
+ ADO 檔中包含許多 Visual Basic 範例。 如需詳細資訊，請參閱 [Microsoft Visual Basic 中的 ADO 程式碼範例](../../reference/ado-api/ado-code-examples-in-visual-basic.md)。
 
 ## <a name="see-also"></a>另請參閱
- [Microsoft ActiveX Data Objects (ado) ](../../../ado/microsoft-activex-data-objects-ado.md)搭配使用 ado [與 MICROSOFT VISUAL C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)搭配 [使用 ado 與指令碼語言](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)
+ [Microsoft ActiveX Data Objects (ado) ](../../microsoft-activex-data-objects-ado.md)搭配使用 ado [與 MICROSOFT VISUAL C++](./using-ado-with-microsoft-visual-c.md)搭配 [使用 ado 與指令碼語言](./using-ado-with-scripting-languages.md)

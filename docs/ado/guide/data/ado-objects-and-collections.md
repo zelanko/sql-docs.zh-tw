@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7a745aae-9372-49b6-8dae-b9c93e5f3216
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cbebf1e910fd749ff4f582c57da6c8c2656e9f61
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 101eab85f19922b56a7e7f86f330188d87fcc9fe
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453760"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806422"
 ---
 # <a name="ado-objects-and-collections"></a>ADO 物件和集合
 ADO 是由下列九個物件和四個集合所組成。  
@@ -40,4 +40,4 @@ ADO 是由下列九個物件和四個集合所組成。
 |**錯誤** 集合|包含為了回應單一提供者相關的失敗而建立的所有 **錯誤** 物件。|  
   
 ## <a name="see-also"></a>另請參閱  
- [ADO 物件模型](../../../ado/reference/ado-api/ado-object-model.md)
+ [ADO 物件模型](../../reference/ado-api/ado-object-model.md)

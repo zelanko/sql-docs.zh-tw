@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1576cedd9352b5f134f3886ee901d40cebeccb33
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2e8520dc35b7a6d913736637cabaf34a2bd60651
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454030"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806533"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB 遠端處理提供者總覽
 Microsoft OLE DB 遠端處理提供者可讓用戶端電腦上的本機使用者叫用遠端電腦上的資料提供者。 如您是遠端電腦上的本機使用者，指定遠端電腦的資料提供者參數。 然後指定遠端處理提供者用來存取遠端電腦的參數。 然後您就可以像本機使用者一樣存取遠端電腦。
@@ -40,21 +40,21 @@ Microsoft OLE DB 遠端處理提供者可讓用戶端電腦上的本機使用者
 
 |關鍵字|描述|
 |-------------|-----------------|
-|**資料來源**|指定遠端資料源的名稱。 它會傳遞至 OLE DB 的遠端處理提供者進行處理。<br /><br /> 這個關鍵字相當於 [RDS。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 物件的 [Connect](../../../ado/reference/rds-api/connect-property-rds.md) 屬性。|
+|**資料來源**|指定遠端資料源的名稱。 它會傳遞至 OLE DB 的遠端處理提供者進行處理。<br /><br /> 這個關鍵字相當於 [RDS。DataControl](../../reference/rds-api/datacontrol-object-rds.md) 物件的 [Connect](../../reference/rds-api/connect-property-rds.md) 屬性。|
 
 ## <a name="dynamic-properties"></a>動態屬性
- 叫用此服務提供者時，會將下列動態屬性加入至 [連接](../../../ado/reference/ado-api/connection-object-ado.md)物件的 [屬性](../../../ado/reference/ado-api/properties-collection-ado.md) 集合。
+ 叫用此服務提供者時，會將下列動態屬性加入至 [連接](../../reference/ado-api/connection-object-ado.md)物件的 [屬性](../../reference/ado-api/properties-collection-ado.md) 集合。
 
 |動態屬性名稱|描述|
 |---------------------------|-----------------|
-|**DFMode**|表示 DataFactory 模式。 字串，指定伺服器上所需的 [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 物件版本。 請先設定這個屬性，然後再開啟連接來要求特定版本的 **DataFactory**。 如果要求的版本無法使用，則會嘗試使用先前的版本。 如果沒有之前的版本，將會發生錯誤。 如果 **DFMode** 小於可用的版本，就會發生錯誤。 連接完成後，這個屬性是唯讀的。<br /><br /> 可以是下列其中一個有效的字串值：<br /><br /> -"25"-版本 2.5 (預設) <br />-"21"-版本2。1<br />-"20"-版本2。0<br />-"15"-版本1。5|
+|**DFMode**|表示 DataFactory 模式。 字串，指定伺服器上所需的 [DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) 物件版本。 請先設定這個屬性，然後再開啟連接來要求特定版本的 **DataFactory**。 如果要求的版本無法使用，則會嘗試使用先前的版本。 如果沒有之前的版本，將會發生錯誤。 如果 **DFMode** 小於可用的版本，就會發生錯誤。 連接完成後，這個屬性是唯讀的。<br /><br /> 可以是下列其中一個有效的字串值：<br /><br /> -"25"-版本 2.5 (預設) <br />-"21"-版本2。1<br />-"20"-版本2。0<br />-"15"-版本1。5|
 |**命令屬性**|指出將新增至命令 (資料列集之字串的值，) 由 MS 遠端提供者傳送到伺服器的屬性。 這個字串的預設值是 vt_empty。|
 |**目前的 DFMode**|表示伺服器上 **DataFactory** 的實際版本號碼。 檢查這個屬性，以查看是否接受 **DFMode** 屬性所要求的版本。<br /><br /> 可以是下列其中一個有效的長整數值：<br /><br /> -25-2.5 版 (預設) <br />-21-版本2。1<br />-20-版本2。0<br />-15-版本1。5<br /><br /> 使用 **MSRemote** 提供者時，將 "DFMode = 20;" 新增至連接字串，可以在更新資料時提升伺服器的效能。 使用此設定時，伺服器上的 **RDSServer DataFactory** 物件會使用較不需要大量資源的模式。 不過，此設定無法使用下列功能：<br /><br /> -使用參數化查詢。<br />-在呼叫 **Execute** 方法之前取得參數或資料行資訊。<br />-將 **交易更新** 設定為 **True**。<br />-正在取得資料列狀態。<br />-呼叫 **Resync** 方法。<br />-透過 **Update Resync** 屬性明確或自動重新整理 () 。<br />-設定 **命令** 或 **記錄集** 屬性。<br />-使用 **adCmdTableDirect**。|
-|**處理常式**|指出伺服器端自訂程式的名稱 (或處理常式) 擴充 [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)的功能，以及處理常式所使用的任何參數，全部以逗號分隔 ( "，" ) 。 **字串**值。|
+|**處理常式**|指出伺服器端自訂程式的名稱 (或處理常式) 擴充 [RDSServer. DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md)的功能，以及處理常式所使用的任何參數，全部以逗號分隔 ( "，" ) 。 **字串**值。|
 |**網際網路超時**|指出等候傳送至伺服器之要求的最大毫秒數。  (預設值為5分鐘。 ) |
 |**遠端提供者**|指出要在遠端伺服器上使用的資料提供者名稱。|
-|**遠端伺服器**|指出此連接所要使用的伺服器名稱和通訊協定。 這個屬性就相當於 [RDS。DataContro](../../../ado/reference/rds-api/datacontrol-object-rds.md) 物件 [伺服器](../../../ado/reference/rds-api/server-property-rds.md) 屬性。|
-|**交易更新**|當設定為 **True**時，這個值會指出當在伺服器上執行 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) 時，它會在交易內完成。 此布林值動態屬性的預設值為 **False**。|
+|**遠端伺服器**|指出此連接所要使用的伺服器名稱和通訊協定。 這個屬性就相當於 [RDS。DataContro](../../reference/rds-api/datacontrol-object-rds.md) 物件 [伺服器](../../reference/rds-api/server-property-rds.md) 屬性。|
+|**交易更新**|當設定為 **True**時，這個值會指出當在伺服器上執行 [UpdateBatch](../../reference/ado-api/updatebatch-method.md) 時，它會在交易內完成。 此布林值動態屬性的預設值為 **False**。|
 
  您也可以藉由在連接字串中將其名稱指定為關鍵字，來設定可寫入動態屬性。 例如，藉由指定下列各項，將 [ **網際網路超時** 動態] 屬性設定為五秒：
 
@@ -71,14 +71,14 @@ cn.Properties("Internet Timeout") = 5000
 ```
 
 ## <a name="remarks"></a>備註
- 在 ADO 2.0 中，OLE DB 的遠端處理提供者只能在[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)物件**Open**方法的*ActiveConnection*參數中指定。 從 ADO 2.1 開始，也可以在[Connection](../../../ado/reference/ado-api/connection-object-ado.md) object **Open**方法的*ConnectionString*參數中指定提供者。
+ 在 ADO 2.0 中，OLE DB 的遠端處理提供者只能在[Recordset](../../reference/ado-api/recordset-object-ado.md)物件**Open**方法的*ActiveConnection*參數中指定。 從 ADO 2.1 開始，也可以在[Connection](../../reference/ado-api/connection-object-ado.md) object **Open**方法的*ConnectionString*參數中指定提供者。
 
- RDS 的對等專案 **。** 無法使用 DataControl 物件 [SQL](../../../ado/reference/rds-api/sql-property.md) 屬性。 改為使用 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 物件 **Open** method *Source* 引數。
+ RDS 的對等專案 **。** 無法使用 DataControl 物件 [SQL](../../reference/rds-api/sql-property.md) 屬性。 改為使用 [記錄集](../../reference/ado-api/recordset-object-ado.md) 物件 **Open** method *Source* 引數。
 
  **注意** 指定 "...;Remote Provider = MS Remote; ... "會建立四層案例。 非三個階層的案例尚未經過測試，因此不需要。
 
 ## <a name="example"></a>範例
- 這個範例會在名為 *>yourserver.database.windows.net*的伺服器上，對**Pubs**資料庫的**作者**資料表執行查詢。 遠端資料源和遠端伺服器的名稱是在[Connection](../../../ado/reference/ado-api/connection-object-ado.md)物件的[open](../../../ado/reference/ado-api/open-method-ado-connection.md)方法中提供，而 SQL 查詢則是在[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件的[open](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法中指定。 會傳回、編輯 **記錄集** 物件，並使用它來更新資料來源。
+ 這個範例會在名為 *>yourserver.database.windows.net*的伺服器上，對**Pubs**資料庫的**作者**資料表執行查詢。 遠端資料源和遠端伺服器的名稱是在[Connection](../../reference/ado-api/connection-object-ado.md)物件的[open](../../reference/ado-api/open-method-ado-connection.md)方法中提供，而 SQL 查詢則是在[記錄集](../../reference/ado-api/recordset-object-ado.md)物件的[open](../../reference/ado-api/open-method-ado-recordset.md)方法中指定。 會傳回、編輯 **記錄集** 物件，並使用它來更新資料來源。
 
 ```vb
 Dim rs as New ADODB.Recordset
@@ -92,4 +92,4 @@ rs.UpdateBatch     'Equivalent of RDS SubmitChanges
 ```
 
 ## <a name="see-also"></a>另請參閱
- [OLE DB 遠端處理提供者總覽](https://msdn.microsoft.com/4083b72f-68c4-4252-b366-abb70db5ca2b)
+ [OLE DB 遠端處理提供者總覽](/previous-versions/windows/desktop/ms713673(v=vs.85))

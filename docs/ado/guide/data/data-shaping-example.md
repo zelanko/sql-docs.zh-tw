@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1bfdcad4-52e1-45bc-ad21-783657ef0a44
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f3b10494a9ae9fb49de6bf2779395f9eb065cd9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 127586308fe030507a2b4f4de6951a8068b034fd
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453560"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806173"
 ---
 # <a name="data-shaping-example"></a>資料成形範例
 下列資料成形命令示範如何從 Northwind 資料庫的**Customers**和**Orders**資料表建立階層式**記錄集**。  
@@ -29,7 +29,7 @@ APPEND ({SELECT OrderID, OrderDate, CustomerID FROM Orders} AS chapOrders
 RELATE customerID TO customerID)   
 ```  
   
- 當此命令用來開啟**記錄集**物件時 (如[Visual Basic 的資料成形) 範例](../../../ado/guide/data/visual-basic-example-of-data-shaping.md)所示，它會為**Customers**資料表所傳回的每一筆記錄建立 (**chapOrders**) 的章節。 本章包含從**Orders**資料表傳回之**記錄集**的子集。 **ChapOrders**章節包含有關指定客戶所下訂單的所有要求資訊。 在此範例中，章節包含三個數據行： [ **訂單 id**]、[ **訂購日期**] 和 [ **CustomerID**]。  
+ 當此命令用來開啟**記錄集**物件時 (如[Visual Basic 的資料成形) 範例](./visual-basic-example-of-data-shaping.md)所示，它會為**Customers**資料表所傳回的每一筆記錄建立 (**chapOrders**) 的章節。 本章包含從**Orders**資料表傳回之**記錄集**的子集。 **ChapOrders**章節包含有關指定客戶所下訂單的所有要求資訊。 在此範例中，章節包含三個數據行： [ **訂單 id**]、[ **訂購日期**] 和 [ **CustomerID**]。  
   
  結果成形 **記錄集** 的前兩個專案如下所示：  
   
@@ -42,10 +42,10 @@ RELATE customerID TO customerID)
   
  有第二種方式可使用 SHAPE 命令：亦即，從子**記錄集**產生父**記錄集**。 子 **記錄集中** 的記錄會分組（通常是使用 by 子句），而且會針對子系中每個產生的群組，將一個資料列加入至父 **記錄集** 。 如果省略 BY 子句，子 **記錄集會** 形成單一群組，且父 **記錄集** 將只包含一個資料列。 這對於計算整個子 **記錄集**的「總計」匯總很有用。  
   
- SHAPE 命令結構也可讓您以程式設計方式建立已成形的 **記錄集**。 然後，您可以透過程式設計方式或透過適當的視覺控制項來存取 **記錄集** 的元件。 Shape 命令的發出方式就像任何其他 ADO 命令文字一樣。 如需詳細資訊，請參閱 [一般圖形命令](../../../ado/guide/data/shape-commands-in-general.md)。  
+ SHAPE 命令結構也可讓您以程式設計方式建立已成形的 **記錄集**。 然後，您可以透過程式設計方式或透過適當的視覺控制項來存取 **記錄集** 的元件。 Shape 命令的發出方式就像任何其他 ADO 命令文字一樣。 如需詳細資訊，請參閱 [一般圖形命令](./shape-commands-in-general.md)。  
   
  無論父 **記錄集** 的形成方式為何，它都會包含用來將它與子 **記錄集**相關聯的章節資料行。 如果您想要的話，父 **記錄集** 也可以有資料行包含匯總 (SUM、MIN、MAX 等等) 子資料列。 父 **記錄集和子記錄集** 都可以有資料行包含 **記錄集**內資料列上的運算式，以及新的和一開始是空的資料行。  
   
  本節將繼續進行下列主題。  
   
--   [Visual Basic 的資料成形範例](../../../ado/guide/data/visual-basic-example-of-data-shaping.md)
+-   [Visual Basic 的資料成形範例](./visual-basic-example-of-data-shaping.md)

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9f8cf1b2-3def-453f-a0ff-4646c5f15262
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 847fe5406fcdcd75010a0f4836c6f35df4ab1da1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1895410181cea9a916589d766d2fa9254ca8642b
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453160"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805813"
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>更多可以在資料錄集中移動的方法
-下列四種方法可用來在 **記錄集**內四處移動或滾動： [MoveFirst、MoveLast、MoveNext 和 MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)。  (在順向資料指標上無法使用這些方法的部分。 )   
+下列四種方法可用來在 **記錄集**內四處移動或滾動： [MoveFirst、MoveLast、MoveNext 和 MovePrevious](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)。  (在順向資料指標上無法使用這些方法的部分。 )   
   
  **MoveFirst** 會將目前的記錄位置變更為 **記錄集**內的第一筆記錄。 **MoveLast** 會將目前的記錄位置變更為 **記錄集**內的最後一筆記錄。 若要使用 **MoveFirst** 或 **MoveLast**， **記錄集** 物件必須支援書簽或後置資料指標移動;否則，方法呼叫將會產生錯誤。  
   

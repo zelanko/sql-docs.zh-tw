@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fc525a10d6211ee5f15517618f2cc5b99c8abee8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a0ce44d1df589dc77a8a4cdfa216b0c54ce288dc
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88355394"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805478"
 ---
 # <a name="ado-security-design-features"></a>ADO 安全性設計功能
 下列章節說明 ActiveX Data Objects (ADO) 2.8 和更新版本中的安全性設計功能。 這些變更已在 ADO 2.8 中進行，以提升安全性。 Windows Vista 中的 Windows DAC 6.0 中包含的 ADO 6.0，在功能上相當於 Windows XP 和 Windows Server 2003 中的 MDAC 2.8 所包含的 ADO 2.8。 本主題提供有關如何在 ADO 2.8 或更新版本中最安全地保護應用程式的資訊。
@@ -55,9 +55,9 @@ Website, click OK, otherwise click Cancel.
 ### <a name="disk-accessible-code-limited-now-to-trusted-sites"></a>磁片可存取的程式碼現已限制為信任的網站
  ADO 2.8 中的其他設計變更是特別限制一組有限 Api 的能力，而這可能會造成在本機電腦上讀取或寫入檔案的可能性。 以下是執行 Internet Explorer 時，已針對安全而進一步限制的 API 方法：
 
--   如果使用[LoadFromFile](../../ado/reference/ado-api/loadfromfile-method-ado.md)或[SaveToFile](../../ado/reference/ado-api/savetofile-method.md)方法，則適用于 ADO**資料流程**物件。
+-   如果使用[LoadFromFile](../reference/ado-api/loadfromfile-method-ado.md)或[SaveToFile](../reference/ado-api/savetofile-method.md)方法，則適用于 ADO**資料流程**物件。
 
--   如果是 ADO **記錄集** 物件，請使用 [Save](../../ado/reference/ado-api/save-method.md) 方法或 [Open](../../ado/reference/ado-api/open-method-ado-recordset.md) 方法（例如，在設定 **AdCmdFile** 選項時），或使用 [Microsoft OLE DB 持續性提供者 (MSPersist) ](../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md) 。
+-   如果是 ADO **記錄集** 物件，請使用 [Save](../reference/ado-api/save-method.md) 方法或 [Open](../reference/ado-api/open-method-ado-recordset.md) 方法（例如，在設定 **AdCmdFile** 選項時），或使用 [Microsoft OLE DB 持續性提供者 (MSPersist) ](./appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md) 。
 
  針對這些有限的可能磁片可存取函式集合，如果有任何使用這些方法的程式碼在 Internet Explorer 中執行，則 ADO 2.8 和更新版本會發生下列行為：
 
@@ -69,12 +69,12 @@ Website, click OK, otherwise click Cancel.
     >  在 ADO 2.8 和更新版本中，使用者不會收到警示或建議將網站新增至 [信任的網站] 區域清單。 因此，管理受信任的網站清單，是要部署或支援需要存取本機檔案系統的網站架構應用程式之人員的責任。
 
 ### <a name="access-blocked-to-the-activecommand-property-on-recordset-objects"></a>對記錄集物件的 ActiveCommand 屬性封鎖存取
- 在 Internet Explorer 中執行時，ADO 2.8 現在會封鎖對使用中**記錄集**物件的[ActiveCommand](../../ado/reference/ado-api/activecommand-property-ado.md)屬性存取，並傳回錯誤。 無論頁面是否來自 [信任的網站] 清單中註冊的網站，都會發生此錯誤。
+ 在 Internet Explorer 中執行時，ADO 2.8 現在會封鎖對使用中**記錄集**物件的[ActiveCommand](../reference/ado-api/activecommand-property-ado.md)屬性存取，並傳回錯誤。 無論頁面是否來自 [信任的網站] 清單中註冊的網站，都會發生此錯誤。
 
 ### <a name="changes-in-handling-for-ole-db-providers-and-integrated-security"></a>OLE DB 提供者和整合式安全性的處理變更
  針對潛在的安全性問題和考慮，查看 ADO 2.7 和較早的版本時，已發現下列案例：
 
- 在某些情況下，支援整合式安全性 [DBPROP_AUTH_INTEGRATED](https://msdn.microsoft.com/library/windows/desktop/ms712973.aspx) 屬性的 OLE DB 提供者可能會允許已編寫腳本的網頁重複使用 ADO 連線物件，以使用使用者目前的登入認證，不慎連接到其他伺服器。 為了避免發生這種情況，ADO 2.8 和更新版本會根據其選擇提供（或不提供）整合式安全性的方式，來處理 OLE DB 提供者。
+ 在某些情況下，支援整合式安全性 [DBPROP_AUTH_INTEGRATED](/previous-versions/windows/desktop/ms712973(v=vs.85)) 屬性的 OLE DB 提供者可能會允許已編寫腳本的網頁重複使用 ADO 連線物件，以使用使用者目前的登入認證，不慎連接到其他伺服器。 為了避免發生這種情況，ADO 2.8 和更新版本會根據其選擇提供（或不提供）整合式安全性的方式，來處理 OLE DB 提供者。
 
  針對從 [信任的網站] 區域清單中列出的網站載入的網頁，下表提供 ADO 2.8 和更新版本如何在每個案例中管理 ADO 連接的明細。
 
@@ -97,18 +97,18 @@ This Website is using your identity to access a data source. If you trust this W
 >  針對未受信任的網站 (也就是未列在 [信任的網站] 區域清單中的網站) ，如果提供者也不受信任 (如本節稍早所述) ，則使用者可能會在資料列中看到兩個安全性警告，這是有關不安全提供者的警告，以及嘗試使用其身分識別的第二個警告。 如果使用者按一下 [確定] 第一個警告，則會執行上表所述的 Internet Explorer 設定和回應行為程式碼。
 
 ## <a name="controlling-whether-password-text-is-returned-in-ado-connection-strings"></a>控制是否要在 ADO 連接字串中傳回密碼文字
- 當您嘗試取得 ADO**連接**物件的[ConnectionString](../../ado/reference/ado-api/connectionstring-property-ado.md)屬性值時，會發生下列事件：
+ 當您嘗試取得 ADO**連接**物件的[ConnectionString](../reference/ado-api/connectionstring-property-ado.md)屬性值時，會發生下列事件：
 
 1.  如果連接已開啟，則會對基礎 OLE DB 提供者進行初始化呼叫，以取得連接字串。
 
-2.  根據 [DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO](https://msdn.microsoft.com/library/windows/desktop/ms714905.aspx) 屬性之 OLE DB 提供者中的設定，密碼會與傳回的其他連接字串資訊一起包含在一起。
+2.  根據 [DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO](/previous-versions/windows/desktop/ms714905(v=vs.85)) 屬性之 OLE DB 提供者中的設定，密碼會與傳回的其他連接字串資訊一起包含在一起。
 
  例如，如果 ADO 連接動態屬性 **保存安全性資訊** 設為 **True**，則會在傳回的連接字串中包含密碼資訊。 否則，如果基礎提供者已將此屬性設定為 **False** (例如使用 SQLOLEDB 提供者) ，則會在傳回的連接字串中省略密碼資訊。
 
  如果您使用的是協力廠商 (，也就是您的 ADO 應用程式程式碼中的非 Microsoft) OLE DB 提供者，您可能會檢查 **DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO** 屬性的執行方式，以判斷是否允許在 ado 連接字串中包含密碼資訊。
 
 ## <a name="checking-for-non-file-devices-when-loading-and-saving-recordsets-or-streams"></a>在載入和儲存記錄集或資料流程時檢查非檔案裝置
- 針對 ADO 2.7 及更早版本，用來讀取和寫入以檔案為基礎之資料的檔案輸入/輸出作業（例如 [ [開啟](../../ado/reference/ado-api/open-method-ado-recordset.md) ] 和 [ [儲存](../../ado/reference/ado-api/save-method.md) ]）在某些情況下可能會允許使用指定非磁片型檔案類型的 URL 或檔案名。 例如，您可以使用 LPT1、COM2、PRN.TXT、AUX 作為系統上的印表機和輔助裝置之間的輸入/輸出別名（使用特定的
+ 針對 ADO 2.7 及更早版本，用來讀取和寫入以檔案為基礎之資料的檔案輸入/輸出作業（例如 [ [開啟](../reference/ado-api/open-method-ado-recordset.md) ] 和 [ [儲存](../reference/ado-api/save-method.md) ]）在某些情況下可能會允許使用指定非磁片型檔案類型的 URL 或檔案名。 例如，您可以使用 LPT1、COM2、PRN.TXT、AUX 作為系統上的印表機和輔助裝置之間的輸入/輸出別名（使用特定的
 
  針對 ADO 2.8 和更新版本，此功能已更新。 針對開啟和儲存 **記錄集** 和 **資料流程** 物件，ADO 現在會執行檔案類型檢查，以確保 URL 或檔案名中指定的輸入或輸出裝置是實際的檔案。
 

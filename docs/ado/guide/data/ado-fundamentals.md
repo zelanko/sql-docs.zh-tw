@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 02574be8fc8333e357e31fe1e1425d6e237871a1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d3f76cca88b2be94973b2271c81279b76b2706bc
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453770"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806423"
 ---
 # <a name="ado-fundamentals"></a>ADO 基本概念
 ADO 為開發人員提供強大的邏輯物件模型，可透過 OLE DB 系統介面，以程式設計方式存取、編輯及更新各種資料來源中的資料。 ADO 最常見的用法是查詢關係資料庫中的資料表或資料表、取出並在應用程式中顯示結果，而且可能讓使用者進行和儲存資料的變更。 其他工作包含下列各項：  
@@ -57,10 +57,10 @@ ADO 為開發人員提供強大的邏輯物件模型，可透過 OLE DB 系統�
   
  不過，在我們討論這些細節之前，我們將介紹 ADO 物件模型，以及以 Microsoft® Visual Basic®撰寫的簡單 ADO 應用程式，並執行四個主要的 ADO 作業：  
   
--   [ADO 物件和集合](../../../ado/guide/data/ado-objects-and-collections.md)  
+-   [ADO 物件和集合](./ado-objects-and-collections.md)  
   
--   [HelloData：簡易 ADO 應用程式](../../../ado/guide/data/hellodata-a-simple-ado-application.md)  
+-   [HelloData：簡易 ADO 應用程式](./hellodata-a-simple-ado-application.md)  
   
--   [OLE DB 提供者](../../../ado/guide/data/ole-db-providers-ado.md)  
+-   [OLE DB 提供者](./ole-db-providers-ado.md)  
   
--   [錯誤](../../../ado/guide/data/errors-ado.md)
+-   [錯誤](./errors-ado.md)

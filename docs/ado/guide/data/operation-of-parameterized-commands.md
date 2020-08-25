@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 36934de15041ddec97b0cc266a980f4908518a24
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e21089ed2fd513f4c82ba9c30478b51fee6c4ebe
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453100"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805635"
 ---
 # <a name="operation-of-parameterized-commands"></a>參數化命令的作業
 如果您使用的是大型的子 **記錄集**，特別是與父 **記錄集**的大小相較之下，但只需要存取一些子章節，您可能會發現使用參數化命令會更有效率。  
@@ -39,7 +39,7 @@ SHAPE {SELECT * FROM customer}
  父資料表和子資料工作表的資料行名稱都是 common， *cust_id*。 *子命令*有 "？" 預留位置，其關聯子句參考 (也就是 ".。。參數 0 ") 。  
   
 > [!NOTE]
->  PARAMETER 子句僅適用于 shape 命令語法。 它與 ADO [參數](../../../ado/reference/ado-api/parameter-object.md) 物件或 [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) 集合沒有關聯。  
+>  PARAMETER 子句僅適用于 shape 命令語法。 它與 ADO [參數](../../reference/ado-api/parameter-object.md) 物件或 [Parameters](../../reference/ado-api/parameters-collection-ado.md) 集合沒有關聯。  
   
  執行參數化圖形命令時，會發生下列情況：  
   
@@ -49,7 +49,7 @@ SHAPE {SELECT * FROM customer}
   
 3.  存取父資料列的章節資料行時，會使用 customer 的值來執行 *子命令* 。 cust_id 做為參數的值。  
   
-4.  在步驟3中建立的資料提供者資料列集內的所有資料列，都會用來填入子 **記錄集**。 在此範例中，這是 Orders 資料表中的所有資料列，其中 cust_id 等於 customer 的值。 cust_id。 根據預設，子 **記錄集會**在用戶端上快取，直到父 **記錄集** 的所有參考都已釋放為止。 若要變更此行為，請將**記錄集**[動態屬性](../../../ado/reference/ado-api/ado-dynamic-property-index.md)快取**子資料列**設為**False**。  
+4.  在步驟3中建立的資料提供者資料列集內的所有資料列，都會用來填入子 **記錄集**。 在此範例中，這是 Orders 資料表中的所有資料列，其中 cust_id 等於 customer 的值。 cust_id。 根據預設，子 **記錄集會**在用戶端上快取，直到父 **記錄集** 的所有參考都已釋放為止。 若要變更此行為，請將**記錄集**[動態屬性](../../reference/ado-api/ado-dynamic-property-index.md)快取**子資料列**設為**False**。  
   
 5.  已抓取之子資料列的參考 (也就是，子 **記錄集**) 的章節會放置在父 **記錄集**目前資料列的章節資料行中。  
   
@@ -90,6 +90,6 @@ APPEND ({SELECT * FROM games WHERE home_team = ? OR visiting_team = ?}
 >  使用 WHERE 子句時，參數無法使用 text、Ntext 和 image 的 SQL 資料類型，否則會產生包含下列描述的錯誤： `Invalid operator for data type` 。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料成形範例](../../../ado/guide/data/data-shaping-example.md)   
- [正式式圖形文法](../../../ado/guide/data/formal-shape-grammar.md)   
- [一般 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)
+ [資料成形範例](./data-shaping-example.md)   
+ [正式式圖形文法](./formal-shape-grammar.md)   
+ [一般 Shape 命令](./shape-commands-in-general.md)

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a97db427db3c0dc42e004e1b0fcd0a889c9d6c5b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0e5927c2c3b32540ebfe54307203e0425600e2f2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443680"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775317"
 ---
 # <a name="filter-property"></a>Filter 屬性
-表示 [記錄集中](../../../ado/reference/ado-api/recordset-object-ado.md)資料的篩選。  
+表示 [記錄集中](./recordset-object-ado.md)資料的篩選。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值
 
@@ -34,11 +34,11 @@ ms.locfileid: "88443680"
   
 -   **書簽的陣列：** 唯一書簽值的陣列，這些值會指向記錄 **集** 物件中的記錄。  
   
--   [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md)值。  
+-   [FilterGroupEnum](./filtergroupenum.md)值。  
   
 ## <a name="remarks"></a>備註
 
-使用 **Filter** 屬性可選擇性地顯示 **記錄集** 物件中的記錄。 篩選的 **記錄集會** 變成目前的資料指標。 根據目前資料 **指標** 傳回值的其他屬性會受到影響，例如 [ABSOLUTEPOSITION 屬性 (ado) ](../../../ado/reference/ado-api/absoluteposition-property-ado.md)、 [AbsolutePage 屬性 (ado) ](../../../ado/reference/ado-api/absolutepage-property-ado.md)、 [RecordCount 屬性 (ado) ](../../../ado/reference/ado-api/recordcount-property-ado.md)和 [PageCount 屬性 (ado) ](../../../ado/reference/ado-api/pagecount-property-ado.md)。 將 **篩選** 屬性設定為特定的新值，會將目前的記錄移至符合新值的第一筆記錄。
+使用 **Filter** 屬性可選擇性地顯示 **記錄集** 物件中的記錄。 篩選的 **記錄集會** 變成目前的資料指標。 根據目前資料 **指標** 傳回值的其他屬性會受到影響，例如 [ABSOLUTEPOSITION 屬性 (ado) ](./absoluteposition-property-ado.md)、 [AbsolutePage 屬性 (ado) ](./absolutepage-property-ado.md)、 [RecordCount 屬性 (ado) ](./recordcount-property-ado.md)和 [PageCount 屬性 (ado) ](./pagecount-property-ado.md)。 將 **篩選** 屬性設定為特定的新值，會將目前的記錄移至符合新值的第一筆記錄。
   
 準則字串是由子句所組成，其格式為 *FieldName-運算子-Value* (例如 `"LastName = 'Smith'"`) 。 您可以藉由串連個別子句 **和和** (（例如 `"LastName = 'Smith' AND FirstName = 'John'"`) 或 **或** (例如) ）來建立複合子句 `"LastName = 'Smith' OR LastName = 'Jones'"` 。 針對準則字串，請使用下列指導方針：
 
@@ -59,9 +59,9 @@ ms.locfileid: "88443680"
   
 -   在 **LIKE** 子句中，您可以在模式的開頭和結尾使用萬用字元。 例如，您可以使用 `LastName Like '*mit*'`。 或者， **您可以在模式** 結尾使用萬用字元。 例如： `LastName Like 'Smit*'` 。  
   
- 篩選準則常數可讓您在批次更新模式中，輕鬆地解決個別記錄衝突，例如，您可以只查看在最後一個 [UpdateBatch 方法](../../../ado/reference/ado-api/updatebatch-method.md) 方法呼叫期間受影響的記錄。  
+ 篩選準則常數可讓您在批次更新模式中，輕鬆地解決個別記錄衝突，例如，您可以只查看在最後一個 [UpdateBatch 方法](./updatebatch-method.md) 方法呼叫期間受影響的記錄。  
   
-設定 **篩選** 屬性本身可能會因為與基礎資料發生衝突而失敗。 例如，當另一位使用者已刪除記錄時，可能會發生此錯誤。 在這種情況下，提供者會將警告傳回 [ (ADO) 集合的錯誤集合 ](../../../ado/reference/ado-api/errors-collection-ado.md) ，但不會停止程式執行。 只有當所有要求的記錄有衝突時，才會發生執行時間的錯誤。 您可以使用 [ [ (ADO 記錄集) ](../../../ado/reference/ado-api/status-property-ado-recordset.md) ] 屬性的 [狀態] 屬性來尋找有衝突的記錄。  
+設定 **篩選** 屬性本身可能會因為與基礎資料發生衝突而失敗。 例如，當另一位使用者已刪除記錄時，可能會發生此錯誤。 在這種情況下，提供者會將警告傳回 [ (ADO) 集合的錯誤集合 ](./errors-collection-ado.md) ，但不會停止程式執行。 只有當所有要求的記錄有衝突時，才會發生執行時間的錯誤。 您可以使用 [ [ (ADO 記錄集) ](./status-property-ado-recordset.md) ] 屬性的 [狀態] 屬性來尋找有衝突的記錄。  
   
 將 **Filter** 屬性設定為長度為零的字串 ( "" ) 與使用 **adFilterNone** 常數的效果相同。
   
@@ -74,7 +74,7 @@ ms.locfileid: "88443680"
 
 此設定會在執行時間產生錯誤。 但是，套用 `rs.Filter = "C=2"` 在相同的欄位上不會產生任何錯誤。 而且會從目前的記錄集篩選出此欄位。
 
-如需書簽值的說明，您可以在其中建立要與 Filter 屬性搭配使用的陣列，請參閱 [書簽屬性 (ADO) ](../../../ado/reference/ado-api/bookmark-property-ado.md) 屬性。
+如需書簽值的說明，您可以在其中建立要與 Filter 屬性搭配使用的陣列，請參閱 [書簽屬性 (ADO) ](./bookmark-property-ado.md) 屬性。
 
 只有準則字串形式的篩選準則會影響保存的 **記錄集**的內容。 準則字串的範例為 `OrderDate > '12/31/1999'` 。 使用書簽陣列建立的篩選準則，或使用 **FilterGroupEnum**中的值，並不會影響保存的 **記錄集**的內容。 這些規則適用于使用用戶端或伺服器端資料指標所建立的記錄集。
   
@@ -100,11 +100,11 @@ ms.locfileid: "88443680"
   
 ## <a name="applies-to"></a>套用至
 
-[Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+[Recordset 物件 (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>另請參閱
 
-[ (VB) ](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md) 
- 的 Filter 和 RecordCount 屬性範例[ (VC + +) 的 Filter 和 RecordCount 屬性範例](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md) 
-[ (ADO) ](../../../ado/reference/ado-api/clear-method-ado.md) 
- 的 Clear 方法[優化屬性-動態 (ADO) ](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)
+[ (VB) ](./filter-and-recordcount-properties-example-vb.md) 
+ 的 Filter 和 RecordCount 屬性範例[ (VC + +) 的 Filter 和 RecordCount 屬性範例](./filter-and-recordcount-properties-example-vc.md) 
+[ (ADO) ](./clear-method-ado.md) 
+ 的 Clear 方法[優化屬性-動態 (ADO) ](./optimize-property-dynamic-ado.md)

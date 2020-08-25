@@ -13,27 +13,27 @@ helpviewer_keywords:
 ms.assetid: 72cf9eb3-31f6-441c-aede-5383fdfb81af
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b8d0e0d5c5f0b53699f314292941dac618e5da3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5a75ef0e885b6d90f2b305d5737e6b70a2bf0b92
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441400"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776757"
 ---
 # <a name="ado-md-code-examples"></a>ADO MD 程式碼範例
 使用下列程式碼範例，瞭解如何使用 ADO MD 物件、方法和屬性。 這些範例是隨 SQL Server 7.0 Microsoft SQL Server OLAP 服務一起安裝之範例應用程式的子集。  
   
  這些範例會使用 MSOLAP OLE DB 提供者，並針對 Microsoft SQL Server OLAP 服務本機主機執行。 不過，這些範例的目的是要示範 ADO MD 程式設計技術的基礎，而且應該可以輕鬆地調整為其他資料來源或提供者。  
   
--   [Visual Basic 中的 ADO MD 程式碼範例](../../../ado/reference/ado-md-api/ado-md-code-examples-in-visual-basic.md)  
+-   [Visual Basic 中的 ADO MD 程式碼範例](./ado-md-code-examples-in-visual-basic.md)  
   
--   [Visual Basic Scripting Edition 中的 ADO MD 程式碼範例](../../../ado/reference/ado-md-api/ado-md-code-examples-in-visual-basic-scripting-edition.md)  
+-   [Visual Basic Scripting Edition 中的 ADO MD 程式碼範例](./ado-md-code-examples-in-visual-basic-scripting-edition.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [ADO MD API 參考](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
- [ADO MD 集合](../../../ado/reference/ado-md-api/ado-md-collections.md)   
- [ADO MD 列舉常數](../../../ado/reference/ado-md-api/ado-md-enumerated-constants.md)   
- [ADO MD 方法](../../../ado/reference/ado-md-api/ado-md-methods.md)   
- [ADO MD 物件模型](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [ADO MD 物件](../../../ado/reference/ado-md-api/ado-md-objects.md)   
- [ADO MD 屬性](../../../ado/reference/ado-md-api/ado-md-properties.md)
+ [ADO MD API 參考](./ado-md-object-model.md?view=sql-server-ver15)   
+ [ADO MD 集合](./ado-md-collections.md)   
+ [ADO MD 列舉常數](./ado-md-enumerated-constants.md)   
+ [ADO MD 方法](./ado-md-methods.md)   
+ [ADO MD 物件模型](./ado-md-object-model.md)   
+ [ADO MD 物件](./ado-md-objects.md)   
+ [ADO MD 屬性](./ado-md-properties.md)

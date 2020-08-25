@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c9ab7dd72816d47b4f8a1c7aa55ba8751399e41a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b9676087d23ff17b7aaa4c4ad6cab20eaec644ca
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453510"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806909"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>偵測並解決衝突
 如果您在立即模式中處理記錄集，則可能會發生平行存取問題的機率比較低。 另一方面，如果您的應用程式使用批次模式更新，則在另一位使用者編輯相同記錄所做的變更儲存之前，可能有一位使用者可能會變更記錄。 在這種情況下，您會想要讓應用程式正常地處理衝突。 您可能想要讓最後一個人將更新傳送到伺服器「獲勝」。 或者，您可能想要讓最近的使用者選擇兩個衝突值之間的選項，以決定應優先執行的更新。  
@@ -114,7 +114,7 @@ ms.locfileid: "88453510"
   
  您可以使用目前記錄或特定欄位的 Status 屬性來判斷發生何種衝突。  
   
- 如需錯誤處理的詳細資訊，請參閱 [錯誤處理](../../../ado/guide/data/error-handling.md)。  
+ 如需錯誤處理的詳細資訊，請參閱 [錯誤處理](./error-handling.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [批次模式](../../../ado/guide/data/batch-mode.md)
+ [批次模式](./batch-mode.md)
