@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 607142ec89a1032fe42bab87c0dfad0f2a276387
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c5b5f21c1af3a3438b9e00cd00f4ed2baf338e2
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453150"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805801"
 ---
 # <a name="named-commands"></a>具名命令
-[建立和執行簡單的命令](../../../ado/guide/data/creating-and-executing-a-simple-command.md) 會顯示一個執行命令的方式。 還有另一種方式：您可以將它命名為命令，然後直接在**連接**物件上呼叫這個指名的命令， (指派給**Command**物件的**ActiveConnection**屬性) 。 命名命令表示將名稱指派給**command**物件的**name**屬性。 例如，  
+[建立和執行簡單的命令](./creating-and-executing-a-simple-command.md) 會顯示一個執行命令的方式。 還有另一種方式：您可以將它命名為命令，然後直接在**連接**物件上呼叫這個指名的命令， (指派給**Command**物件的**ActiveConnection**屬性) 。 命名命令表示將名稱指派給**command**物件的**name**屬性。 例如，  
   
 ```  
 objCmd.Name = "GetCustomers"  
@@ -91,4 +91,4 @@ ErrHandler:
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Connection 物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Connection 物件 (ADO)](../../reference/ado-api/connection-object-ado.md)

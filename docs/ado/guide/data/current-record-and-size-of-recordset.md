@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 12d4b9803682e94326636dd27bbc3f134eea23d8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bf1757eac1d3c94c0d26439c3519060def03e27
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453600"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806204"
 ---
 # <a name="current-record-and-size-of-recordset"></a>目前的記錄和資料錄集的大小
-本節說明如何在 JScript 程式碼範例的範例 **記錄集中** 找出資料指標的目前位置 [，以傳回記錄集](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)。  
+本節說明如何在 JScript 程式碼範例的範例 **記錄集中** 找出資料指標的目前位置 [，以傳回記錄集](./jscript-code-example-to-return-a-recordset.md)。  
   
 ## <a name="current-record"></a>目前記錄  
  資料集中的目前記錄會對應至 **記錄集** 物件的資料指標位置所指向的記錄。 當 **記錄集** 物件從資料來源傳回做為呼叫 **記錄集**的結果時，請開啟、 **Command.Exe刻意**或 **Connection.Exe** 的 (包含 **NamedCommand** 和 **StoredProcedure**) ，資料指標會設定為指向第一筆記錄。 在範例資料集中，初始目前的記錄是 "圖報 Bob 的有機蒙娜 Pears" 專案。  
@@ -38,14 +38,14 @@ ms.locfileid: "88453600"
   
  在某些情況下，提供者或資料指標無法先從資料來源提取所有記錄，而無法判斷 **RecordCount** 值。 若要確保正確的計數，請呼叫**記錄集**。呼叫**記錄集之前的** **MoveLast**方法 RecordCount。  
   
- 使用[JScript 程式碼範例](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)取得的範例**記錄集**物件會使用順向資料指標，因此在此物件上呼叫**RecordCount**一律會產生-1。 如果您變更呼叫 **記錄集**的程式程式碼。**Open** 方法如下列範例所示， **RecordCount** 屬性會傳回實際提取的記錄數目。  
+ 使用[JScript 程式碼範例](./jscript-code-example-to-return-a-recordset.md)取得的範例**記錄集**物件會使用順向資料指標，因此在此物件上呼叫**RecordCount**一律會產生-1。 如果您變更呼叫 **記錄集**的程式程式碼。**Open** 方法如下列範例所示， **RecordCount** 屬性會傳回實際提取的記錄數目。  
   
 ```  
 oRs.Open sSQL, sCnStr, adOpenStatic, adLockOptimistic, adCmdText   
 ```  
   
- 這是因為具有 [Microsoft OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) 支援 **RecordCount**的靜態資料指標。 在此範例中，有五筆記錄，因此 **RecordCount** 應該產生5的值。  
+ 這是因為具有 [Microsoft OLE DB Provider for SQL Server](../appendixes/microsoft-ole-db-provider-for-sql-server.md) 支援 **RecordCount**的靜態資料指標。 在此範例中，有五筆記錄，因此 **RecordCount** 應該產生5的值。  
   
  本節包含下列主題。  
   
- [資料錄集的界限](../../../ado/guide/data/boundaries-of-a-recordset.md)
+ [資料錄集的界限](./boundaries-of-a-recordset.md)

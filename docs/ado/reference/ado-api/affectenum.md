@@ -16,27 +16,27 @@ helpviewer_keywords:
 ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 551c2ec7b8351ed17841ed1a4073c1a411dc77d0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d67a4916328d5d6d435da1b8080be42e52b35f67
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451290"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776647"
 ---
 # <a name="affectenum"></a>AffectEnum
 指定作業會影響哪些記錄。  
   
-|常數|值|描述|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
-|**adAffectAll**|3|如果沒有將 [篩選](../../../ado/reference/ado-api/filter-property.md) 套用至 **記錄集**，會影響所有記錄。<br /><br /> 如果 **Filter** 屬性設定為字串準則 (例如 "Author = ' Smith '" ) ，則作業會影響目前章節中的可見記錄。<br /><br /> 如果 **Filter** 屬性設定為 [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) 的成員或書簽的陣列，則作業會影響 **記錄集**的所有資料列。 **注意： adAffectAll** 會隱藏在 Visual Basic 的物件瀏覽器中。|  
+|**adAffectAll**|3|如果沒有將 [篩選](./filter-property.md) 套用至 **記錄集**，會影響所有記錄。<br /><br /> 如果 **Filter** 屬性設定為字串準則 (例如 "Author = ' Smith '" ) ，則作業會影響目前章節中的可見記錄。<br /><br /> 如果 **Filter** 屬性設定為 [FilterGroupEnum](./filtergroupenum.md) 的成員或書簽的陣列，則作業會影響 **記錄集**的所有資料列。 **注意： adAffectAll** 會隱藏在 Visual Basic 的物件瀏覽器中。|  
 |**adAffectAllChapters**|4|會影響 **記錄集**之所有同級章節中的所有記錄，包括無法透過目前套用的任何 **篩選** 來顯示的記錄。|  
 |**adAffectCurrent**|1|只會影響目前的記錄。|  
-|**adAffectGroup**|2|只會影響符合目前 [篩選](../../../ado/reference/ado-api/filter-property.md) 屬性設定的記錄。 您必須將 **Filter** 屬性設定為 **FilterGroupEnum** 值或 **書簽** 陣列，才能使用此選項。|  
+|**adAffectGroup**|2|只會影響符合目前 [篩選](./filter-property.md) 屬性設定的記錄。 您必須將 **Filter** 屬性設定為 **FilterGroupEnum** 值或 **書簽** 陣列，才能使用此選項。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 相等  
  封裝： **.com. 資料**  
   
-|常數|  
+|持續性|  
 |--------------|  
 |AdoEnums 會影響。全部|  
 |AdoEnums 會影響 ALLCHAPTERS|  
@@ -47,11 +47,11 @@ ms.locfileid: "88451290"
 
 :::row:::
     :::column:::
-        [CancelBatch 方法 (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)  
-        [Delete 方法 (ADO Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)  
+        [CancelBatch 方法 (ADO)](./cancelbatch-method-ado.md)  
+        [Delete 方法 (ADO Recordset)](./delete-method-ado-recordset.md)  
     :::column-end:::
     :::column:::
-        [Resync 方法](../../../ado/reference/ado-api/resync-method.md)  
-        [UpdateBatch 方法](../../../ado/reference/ado-api/updatebatch-method.md)  
+        [Resync 方法](./resync-method.md)  
+        [UpdateBatch 方法](./updatebatch-method.md)  
     :::column-end:::
 :::row-end:::

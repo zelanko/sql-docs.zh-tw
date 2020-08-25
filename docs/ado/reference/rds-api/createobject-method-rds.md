@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 430031bab7e644278693aa26095aaa1724b715ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0fbc77fd5107e5642ba4fabe2f331c803ffde392
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439200"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768637"
 ---
 # <a name="createobject-method-rds"></a>CreateObject 方法 (RDS)
 建立目標商務物件的 proxy，並傳回其指標。 Proxy 會封裝資料並將其封送處理至伺服器端存根，以便與商務物件進行通訊，以透過網際網路傳送要求和資料。 針對同進程元件物件，不會使用任何 proxy，只會提供物件的指標。  
@@ -42,7 +42,7 @@ ms.locfileid: "88439200"
  物件變數，其會評估為 *ProgID*中指定之類型的物件。  
   
  *空間*  
- 代表 RDS 的物件變數 [。](../../../ado/reference/rds-api/dataspace-object-rds.md) 用來建立新物件之實例的空間物件。  
+ 代表 RDS 的物件變數 [。](./dataspace-object-rds.md) 用來建立新物件之實例的空間物件。  
   
  *ProgID*  
  **字串**值，包含指定伺服器端商務物件的程式設計識別碼，該物件會執行應用程式的商務規則。  
@@ -54,11 +54,9 @@ ms.locfileid: "88439200"
  *HTTP 通訊協定*是標準的 Web 通訊協定;*HTTPS*是安全的 Web 通訊協定。 在不使用 HTTP 的情況下執行區域網路時，請使用 *DCOM 通訊協定* 。 同 *進程* 通訊協定是本機動態程式庫 (DLL) ;它不會使用網路。  
   
 ## <a name="applies-to"></a>套用至  
- [DataSpace 物件 (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)  
+ [DataSpace 物件 (RDS)](./dataspace-object-rds.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [ (VBScript) 的 DataFactory 物件、查詢方法和 CreateObject 方法範例 ](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)   
- [ (VBScript) 的空間物件和 CreateObject 方法範例 ](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)   
- [CreateRecordset 方法 (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)
-
-
+ [ (VBScript) 的 DataFactory 物件、查詢方法和 CreateObject 方法範例 ](./datafactory-object-query-method-and-createobject-method-example-vbscript.md)   
+ [ (VBScript) 的空間物件和 CreateObject 方法範例 ](./dataspace-object-and-createobject-method-example-vbscript.md)   
+ [CreateRecordset 方法 (RDS)](./createrecordset-method-rds.md)

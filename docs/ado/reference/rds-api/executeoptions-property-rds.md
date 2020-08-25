@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dacac570cac3525593f281e52742f4efeb8cba4b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 042a69dd679cf84e2ab26da77cda3c06d2abd94e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439030"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768307"
 ---
 # <a name="executeoptions-property-rds"></a>ExecuteOptions 屬性 (RDS)
 指出是否已啟用非同步執行。  
@@ -32,24 +32,22 @@ ms.locfileid: "88439030"
   
 |持續性|描述|  
 |--------------|-----------------|  
-|**adcExecSync**|以同步方式執行下次重新整理 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 。|  
+|**adcExecSync**|以同步方式執行下次重新整理 [記錄集](../ado-api/recordset-object-ado.md) 。|  
 |**adcExecAsync**|預設值。 以非同步方式執行下次重新整理 **記錄集** 。|  
   
 > [!NOTE]
 >  使用這些常數的每個可執行檔都必須提供宣告。 您可以從 Adcvbs 檔案中，剪下並貼上您想要的常數宣告（位於 RDS 程式庫的預設安裝資料夾中）。  
   
 ## <a name="remarks"></a>備註  
- 如果 **ExecuteOptions** 設定為 **adcExecAsync**，則會以非同步方式在 RDS 上 **執行下次重新** 整理呼叫 [。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 物件的 **記錄集**。  
+ 如果 **ExecuteOptions** 設定為 **adcExecAsync**，則會以非同步方式在 RDS 上 **執行下次重新** 整理呼叫 [。DataControl](./datacontrol-object-rds.md) 物件的 **記錄集**。  
   
- 如果您嘗試在另一個可能變更 RDS 的非同步作業時，呼叫 [Reset](../../../ado/reference/rds-api/reset-method-rds.md)、 [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md)、 [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)、 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)或 [Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) [。](../../../ado/reference/rds-api/datacontrol-object-rds.md) 正在執行 DataControl 物件的 **記錄集** ，發生錯誤。  
+ 如果您嘗試在另一個可能變更 RDS 的非同步作業時，呼叫 [Reset](./reset-method-rds.md)、 [Refresh](./refresh-method-rds.md)、 [SubmitChanges](./submitchanges-method-rds.md)、 [CancelUpdate](../ado-api/cancelupdate-method-ado.md)或 [Recordset](./recordset-sourcerecordset-properties-rds.md) [。](./datacontrol-object-rds.md) 正在執行 DataControl 物件的 **記錄集** ，發生錯誤。  
   
- 如果非同步作業期間發生錯誤，則為 **RDS。DataControl** 物件的 [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) 值會從 **adcReadyStateLoaded** 變更為 **adcReadyStateComplete**，而且 **記錄集** 屬性值不會維持 *Nothing*。  
+ 如果非同步作業期間發生錯誤，則為 **RDS。DataControl** 物件的 [ReadyState](./readystate-property-rds.md) 值會從 **adcReadyStateLoaded** 變更為 **adcReadyStateComplete**，而且 **記錄集** 屬性值不會維持 *Nothing*。  
   
 ## <a name="applies-to"></a>套用至  
- [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl 物件 (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [ExecuteOptions 和 FetchOptions 屬性範例 (VBScript) ](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
- [Cancel 方法 (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)
-
-
+ [ExecuteOptions 和 FetchOptions 屬性範例 (VBScript) ](./executeoptions-and-fetchoptions-properties-example-vbscript.md)   
+ [Cancel 方法 (RDS)](./cancel-method-rds.md)

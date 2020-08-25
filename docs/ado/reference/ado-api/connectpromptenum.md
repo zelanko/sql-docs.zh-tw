@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 21026e24-62b7-4cc9-8aef-62c1fc6cba75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0ad8fe77bb3472931d3b16d5849b047001922c96
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 48d5cdb61cee2051d3469b7cfeee85629521d71e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444410"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775797"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
 指定是否應顯示對話方塊，以在開啟與資料來源的連接時提示遺漏參數。  
   
-|常數|值|描述|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
 |**adPromptAlways**|1|一律提示。|  
 |**adPromptComplete**|2|提示是否需要更多資訊。|  
@@ -36,7 +36,7 @@ ms.locfileid: "88444410"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 相等  
  封裝： **.com. 資料**  
   
-|常數|  
+|持續性|  
 |--------------|  
 |AdoEnums. ConnectPrompt. 一律|  
 |AdoEnums. ConnectPrompt. 完成|  
@@ -44,4 +44,4 @@ ms.locfileid: "88444410"
 |AdoEnums. ConnectPrompt. 永不|  
   
 ## <a name="applies-to"></a>套用至  
- [Prompt 動態屬性 (ADO)](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)
+ [Prompt 動態屬性 (ADO)](./prompt-property-dynamic-ado.md)

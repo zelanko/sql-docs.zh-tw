@@ -1,6 +1,6 @@
 ---
 title: 還原 master 資料庫
-description: 在 Analytics Platform System （AP）中還原 master 資料庫。
+description: 在 Analytics Platform System (AP) 中還原 master 資料庫。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -10,31 +10,31 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6d122881f5283da86f66494ee2f049756d151551
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400457"
 ---
-# <a name="restore-the-master-database-in-analytics-platform-system-aps"></a>在 Analytics Platform System （AP）中還原 master 資料庫
-SQL Server PDW Configuration Manager 的 [**還原主版**] 頁面可讓您從備份還原 master 資料庫。  
+# <a name="restore-the-master-database-in-analytics-platform-system-aps"></a>在 Analytics Platform System (AP 中還原 master 資料庫) 
+SQL Server PDW Configuration Manager 的 [ **還原主版** ] 頁面可讓您從備份還原 master 資料庫。  
   
 ## <a name="before-you-begin"></a>開始之前  
   
 > [!IMPORTANT]  
-> 若要執行還原，SQL Server PDW 必須刪除目前的 master 資料庫，其中包含使用者安全性資訊和資料庫目錄。 建議您在執行還原之前，先備份目前的 master 資料庫。  
+> 若要執行還原，SQL Server PDW 必須刪除目前的 master 資料庫，其中包含使用者安全性資訊和資料庫目錄。 建議您在執行還原之前，先建立目前 master 資料庫的備份。  
   
 ## <a name="to-restore-the-master-database"></a>還原 master 資料庫  
   
-1.  啟動 Configuration Manager。 如需詳細資訊，請參閱[&#40;分析平臺系統&#41;啟動 Configuration Manager ](launch-the-configuration-manager.md)。  
+1.  啟動 Configuration Manager。 如需詳細資訊，請參閱 [啟動 Configuration Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)。  
   
-2.  在 Configuration Manager 的左窗格中，按一下 [**還原主要**]。  
+2.  在 Configuration Manager 的左窗格中，按一下 [ **還原 Master**]。  
   
 3.  選取要還原的主要備份。  
   
-4.  按一下 [套用]  。  
+4.  按一下 [套用]。  
   
-5.  若要執行還原，SQL Server PDW 將會關閉所有設備服務，並中斷所有使用者的連線。 還原完成之後，SQL Server PDW 會重新開機設備服務。  
+5.  若要執行還原，SQL Server PDW 將會關閉所有設備服務，並中斷所有使用者的連線。 還原完成之後，SQL Server PDW 將會重新開機設備服務。  
   
 ![DWConfig 應用裝置 PDW 還原 master](./media/restore-the-master-database/SQL_Server_PDW_DWConfig_ApplPDWRestore.png "SQL_Server_PDW_DWConfig_ApplPDWRestore")  
   

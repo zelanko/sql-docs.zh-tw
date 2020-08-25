@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2b1e062f-3294-4a6f-8241-a17045c4df18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83cfc60dcbc3efa51b5e1465ff09c80b4db75ead
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e26b3f364595adea7e1eadc65114bffb19db2639
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453360"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806822"
 ---
 # <a name="forward-only-cursors"></a>順向資料指標
 一般預設資料指標類型（稱為順向 (或非可滾動的) 資料指標）只能在結果集中向前移動。 順向資料指標不支援滾動 (在結果集中向前及向後移動的能力) ;它僅支援從開始到結果集的結尾提取資料列。 使用某些順向資料指標 (例如 SQL Server 資料指標程式庫) ，目前使用者所做的所有插入、更新和刪除語句 (或由其他使用者所認可，) 會在提取資料列時顯示結果集內的資料列。 不過，由於無法反向捲動資料指標，因此擷取資料列之後對資料庫中資料列所進行的變更，都無法經由資料指標看見。  
@@ -31,6 +31,6 @@ ms.locfileid: "88453360"
  如果您的應用程式不需要在結果集中進行滾動，順向資料指標是以最少量的額外負荷快速取出資料的最佳方式。 使用 **AdOpenForwardOnly CursorTypeEnum** 來指出您想要在 ADO 中使用順向資料指標。  
   
 ## <a name="see-also"></a>另請參閱  
- [靜態資料指標](../../../ado/guide/data/static-cursors.md)   
- [索引鍵集資料指標](../../../ado/guide/data/keyset-cursors.md)   
- [動態資料指標](../../../ado/guide/data/dynamic-cursors.md)
+ [靜態資料指標](./static-cursors.md)   
+ [索引鍵集資料指標](./keyset-cursors.md)   
+ [動態資料指標](./dynamic-cursors.md)

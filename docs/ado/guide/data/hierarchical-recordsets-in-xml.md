@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cd1e9e9b2dd1dc3512c95100baed0c83745250bb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3e6180c8aa422c5833234afba7881a1a4c8b9049
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453260"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806022"
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>XML 中的階層式資料錄集
 ADO 允許將階層式記錄集物件保存為 XML。 使用階層式記錄集物件時，父記錄集中的欄位值是另一個記錄集。 這類欄位會表示為 XML 資料流程中的子項目，而不是屬性。  
@@ -126,4 +126,4 @@ Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select st
 -   如果子記錄有多個父記錄的參考，則在重新開啟記錄集時，子記錄集可能會包含重複的記錄。 不過，只有在使用者直接與基礎子資料列集一起運作時，才會顯示這些重複專案。 如果使用章節來導覽子記錄集 (這是流覽 ADO) 的唯一方法，則不會顯示重複的專案。  
   
 ## <a name="see-also"></a>另請參閱  
- [以 XML 格式保存記錄](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [以 XML 格式保存記錄](./persisting-records-in-xml-format.md)

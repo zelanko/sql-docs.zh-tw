@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6a0109a0-f2d9-4f7c-8e1e-42763f9acaea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b3740b6ff922204d7f68f507c75011819de8ccfc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c1e7719277bd7b03dac00d315243a94c9b84ec01
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450930"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776207"
 ---
 # <a name="collections-ado-for-visual-c-syntax"></a>Collections (ADO for Visual C++ 語法)
 ## <a name="parameters"></a>參數  
@@ -38,11 +38,11 @@ Refresh(void);
   
  如需相關資訊，請參閱  
   
--   [Append 方法 (ADO)](../../../ado/reference/ado-api/append-method-ado.md)  
+-   [Append 方法 (ADO)](./append-method-ado.md)  
   
--   [Delete 方法 (ADO Parameters 集合)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)  
+-   [Delete 方法 (ADO Parameters 集合)](./delete-method-ado-parameters-collection.md)  
   
--   [Refresh 方法 (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
+-   [Refresh 方法 (ADO)](./refresh-method-ado.md)  
   
 ### <a name="properties"></a>屬性  
   
@@ -53,9 +53,9 @@ get_Item(VARIANT Index, _ADOParameter **ppvObject);
   
  如需相關資訊，請參閱  
   
--   [Count 屬性 (ADO)](../../../ado/reference/ado-api/count-property-ado.md)  
+-   [Count 屬性 (ADO)](./count-property-ado.md)  
   
--   [Item 屬性 (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
+-   [Item 屬性 (ADO)](./item-property-ado.md)  
   
 ## <a name="fields"></a>欄位  
   
@@ -69,11 +69,11 @@ Refresh(void);
   
  如需相關資訊，請參閱  
   
--   [Append 方法 (ADO)](../../../ado/reference/ado-api/append-method-ado.md)  
+-   [Append 方法 (ADO)](./append-method-ado.md)  
   
--   [Delete 方法 (ADO Parameters 集合)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)  
+-   [Delete 方法 (ADO Parameters 集合)](./delete-method-ado-parameters-collection.md)  
   
--   [Refresh 方法 (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
+-   [Refresh 方法 (ADO)](./refresh-method-ado.md)  
   
 ### <a name="properties"></a>屬性  
   
@@ -84,9 +84,9 @@ get_Item(VARIANT Index, ADOField **ppvObject);
   
  如需相關資訊，請參閱  
   
--   [Count 屬性 (ADO)](../../../ado/reference/ado-api/count-property-ado.md)  
+-   [Count 屬性 (ADO)](./count-property-ado.md)  
   
--   [Item 屬性 (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
+-   [Item 屬性 (ADO)](./item-property-ado.md)  
   
 ## <a name="errors"></a>Errors  
   
@@ -99,9 +99,9 @@ Refresh(void);
   
  如需相關資訊，請參閱  
   
--   [Clear 方法 (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)  
+-   [Clear 方法 (ADO)](./clear-method-ado.md)  
   
--   [Refresh 方法 (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
+-   [Refresh 方法 (ADO)](./refresh-method-ado.md)  
   
 ### <a name="properties"></a>屬性  
   
@@ -112,9 +112,9 @@ get_Item(VARIANT Index, ADOError **ppvObject);
   
  如需相關資訊，請參閱  
   
--   [Count 屬性 (ADO)](../../../ado/reference/ado-api/count-property-ado.md)  
+-   [Count 屬性 (ADO)](./count-property-ado.md)  
   
--   [Item 屬性 (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
+-   [Item 屬性 (ADO)](./item-property-ado.md)  
   
 ## <a name="properties"></a>屬性  
   
@@ -126,7 +126,7 @@ Refresh(void);
   
  如需相關資訊，請參閱  
   
--   [Refresh 方法 (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
+-   [Refresh 方法 (ADO)](./refresh-method-ado.md)  
   
 ### <a name="properties"></a>屬性  
   
@@ -137,12 +137,12 @@ get_Item(VARIANT Index, ADOProperty **ppvObject);
   
  如需相關資訊，請參閱  
   
--   [Count 屬性 (ADO)](../../../ado/reference/ado-api/count-property-ado.md)  
+-   [Count 屬性 (ADO)](./count-property-ado.md)  
   
--   [Item 屬性 (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
+-   [Item 屬性 (ADO)](./item-property-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADO) 收集錯誤 ](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [ (ADO) 的欄位集合 ](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [ (ADO) 的參數集合 ](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Properties 集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [ (ADO) 收集錯誤 ](./errors-collection-ado.md)   
+ [ (ADO) 的欄位集合 ](./fields-collection-ado.md)   
+ [ (ADO) 的參數集合 ](./parameters-collection-ado.md)   
+ [Properties 集合 (ADO)](./properties-collection-ado.md)

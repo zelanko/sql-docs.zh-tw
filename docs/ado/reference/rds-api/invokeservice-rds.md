@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ad45c676-ec7e-4a3a-9a6b-a54f75eb3012
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4b14c4f2b97f3002291f5be765b1b0dfe6cf4f1d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9367a8766b0a26a4f83869aad1d11a417a03d9c3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438910"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768047"
 ---
 # <a name="invokeservice-rds"></a>InvokeService (RDS)
 在更強大的物件版本上，將指標傳回至要求的介面。  
@@ -54,9 +54,7 @@ object.InvokeService(REFID riid, IUknown* punkNotSoFunctionalInterface, IUknown*
  **InvokeService**的 RDS 資料指標引擎實採用輸入資料列集 (或多個結果物件) 、從輸入資料列集填入資料指標引擎，然後將指標傳回本身。  
   
 ## <a name="applies-to"></a>套用至  
- [IRDSService 介面 (RDS)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)  
+ [IRDSService 介面 (RDS)](./irdsservice-interface-rds.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [RDS 方法](../../../ado/reference/rds-api/rds-methods.md)
-
-
+ [RDS 方法](./rds-methods.md)

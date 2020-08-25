@@ -1,6 +1,6 @@
 ---
 title: 使用 PolyBase 存取 Azure Blob 儲存體中的外部資料
-description: 說明如何在平行處理資料倉儲中設定 PolyBase，以連線至外部 Hadoop。
+description: 說明如何設定平行資料倉儲中的 PolyBase，以連接到外部 Hadoop。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4ea61ea7e6983f9601783957eee6776f36eccfb4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400719"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>設定 PolyBase 存取 Azure Blob 儲存體中的外部資料
@@ -21,7 +21,7 @@ ms.locfileid: "74400719"
 本文說明如何在 SQL Server 實例上使用 PolyBase 來查詢 Azure Blob 儲存體中的外部資料。
 
 > [!NOTE]
-> AP 目前僅支援標準一般用途 v1 本機多餘的（LRS） Azure Blob 儲存體。
+> AP 目前僅支援標準的一般用途 v1 本地 (LRS) Azure Blob 儲存體。
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -30,9 +30,9 @@ ms.locfileid: "74400719"
 
 ### <a name="configure-azure-blob-storage-connectivity"></a>設定 Azure Blob 儲存體連線能力
 
-首先，設定要使用 Azure Blob 儲存體的 AP。
+首先，將 AP 設定為使用 Azure Blob 儲存體。
 
-1. 使用設定為 Azure Blob 儲存體提供者的「hadoop 連線能力」來執行[sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 。 若要尋找提供者的值，請參閱 [PolyBase 連線設定](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)。
+1. 執行 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ，並將「hadoop 連線能力」設定為 Azure Blob 儲存體提供者。 若要尋找提供者的值，請參閱 [PolyBase 連線設定](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)。
 
    ```sql  
    -- Values map to various external data sources.  
@@ -45,13 +45,13 @@ ms.locfileid: "74400719"
    GO
    ```  
 
-2. 使用[設備 Configuration Manager](launch-the-configuration-manager.md)上的 [服務狀態] 頁面重新開機 ap 區域。
+2. 使用 [設備 Configuration Manager](launch-the-configuration-manager.md)上的服務狀態頁面重新開機 ap 區域。
   
 ## <a name="configure-an-external-table"></a>設定外部資料表
 
 若要查詢 Azure Blob 儲存體中的資料，您必須定義要在 Transact-SQL 查詢中使用的外部資料表。 下列步驟描述如何設定外部資料表。
 
-1. 在資料庫上建立主要金鑰。 需要加密認證秘密。
+1. 在資料庫上建立主要金鑰。 必須加密認證秘密。
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
@@ -66,7 +66,7 @@ ms.locfileid: "74400719"
    WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';
    ```
 
-1. 使用 [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md) 建立外部資料來源。
+1. 建立外部資料源，並 [建立外部資料源](../t-sql/statements/create-external-data-source-transact-sql.md)。
 
    ```sql
    -- LOCATION:  Azure account storage account name and blob container name.  
@@ -124,7 +124,7 @@ ms.locfileid: "74400719"
 
 ### <a name="ad-hoc-queries"></a>特定查詢  
 
-下列臨機操作查詢會聯結與 Azure Blob 儲存體中資料的關聯式。 它會選取速度低於 35 mph 的客戶，將儲存在 SQL Server 中的結構化客戶資料，聯結到儲存在 Azure Blob 儲存體中的汽車感應器資料。  
+下列臨機操作查詢會聯結關聯式與 Azure Blob 儲存體中的資料。 它會選取快于 35 >mph 的客戶，將儲存在 SQL Server 中的結構化客戶資料，與儲存在 Azure Blob 儲存體中的汽車感應器資料聯結。  
 
 ```sql  
 SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,
@@ -136,7 +136,7 @@ ORDER BY CarSensor_Data.Speed DESC
 
 ### <a name="importing-data"></a>匯入資料  
 
-下列查詢會將外部資料匯入至 AP。 這個範例會將快速驅動程式的資料匯入至 AP，以進行更深入的分析。 為了改善效能，它會運用 AP 中的資料行存放區技術。  
+下列查詢會將外部資料匯入至 AP。 此範例會將快速驅動程式的資料匯入至 AP，以進行更深入的分析。 為了改善效能，它會利用 AP 中的資料行存放區技術。  
 
 ```sql
 CREATE TABLE Fast_Customers
@@ -155,7 +155,7 @@ ON Insured_Customers.CustomerKey = SensorD.CustomerKey
 
 ### <a name="exporting-data"></a>匯出資料  
 
-下列查詢會將資料從 AP 匯出至 Azure Blob 儲存體。 它可以用來將關聯式資料封存到 Azure Blob 儲存體，同時仍然可以查詢它。
+下列查詢會將資料從 AP 匯出至 Azure Blob 儲存體。 它可以用來將關聯式資料封存到 Azure Blob 儲存體，同時仍能進行查詢。
 
 ```sql
 -- Export data: Move old data to Azure Blob storage while keeping it query-able via an external table.  
@@ -173,7 +173,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 
 ## <a name="view-polybase-objects-in-ssdt"></a>在 SSDT 中查看 PolyBase 物件  
 
-在 SQL Server Data Tools 中，外部資料表會顯示在個別的資料夾**外部資料表**中。 外部資料來源和外部檔案格式會在 [外部資源] **** 下方的子資料夾中。  
+在 SQL Server Data Tools 中，外部資料表會顯示在個別的資料夾 **外部資料表**中。 外部資料來源和外部檔案格式會在 [外部資源] **** 下方的子資料夾中。  
   
 ![SSDT 中的 PolyBase 物件](media/polybase/external-tables-datasource.png)  
 

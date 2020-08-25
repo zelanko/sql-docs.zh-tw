@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d9cb84a1-4ec2-4d41-8f92-dec2e17cde67
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: de6f23eb8f04bf8a71f828af9303c66d86859f10
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b7d6a356fb188cdd8507bdb80d79e4c9ceb6a1a5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438830"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767857"
 ---
 # <a name="rds-code-examples-in-visual-basic"></a>Visual Basic 中的 RDS 程式碼範例
 > [!IMPORTANT]
@@ -34,8 +34,6 @@ ms.locfileid: "88438830"
   
 ## <a name="properties"></a>屬性  
   
--   [處理常式屬性範例](../../../ado/reference/rds-api/handler-property-example-vb.md)  
+-   [處理常式屬性範例](./handler-property-example-vb.md)  
   
--   [InternetTimeout 屬性範例](../../../ado/reference/rds-api/internettimeout-property-example-vb.md)
-
-
+-   [InternetTimeout 屬性範例](./internettimeout-property-example-vb.md)

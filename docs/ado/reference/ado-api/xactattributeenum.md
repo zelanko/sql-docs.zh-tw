@@ -16,28 +16,28 @@ helpviewer_keywords:
 ms.assetid: e7dcecd3-7dc7-445c-b922-f700c3067fbc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2528c9b7a8cf9eb2918983d90e57ac39e6ee989e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1c7ea7ccbf1a588458db9e213bfa57837e89898f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441450"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776817"
 ---
 # <a name="xactattributeenum"></a>XactAttributeEnum
-指定 [連接](../../../ado/reference/ado-api/connection-object-ado.md) 物件的交易屬性。  
+指定 [連接](./connection-object-ado.md) 物件的交易屬性。  
   
-|常數|值|描述|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
-|**adXactAbortRetaining**|262144|藉由呼叫 [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 來自動啟動新的交易，以執行保留中止。 並非所有提供者都支援此行為。|  
-|**adXactCommitRetaining**|131072|藉由呼叫 [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 來自動啟動新的交易，以執行保留認可。 並非所有提供者都支援此行為。|  
+|**adXactAbortRetaining**|262144|藉由呼叫 [RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) 來自動啟動新的交易，以執行保留中止。 並非所有提供者都支援此行為。|  
+|**adXactCommitRetaining**|131072|藉由呼叫 [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) 來自動啟動新的交易，以執行保留認可。 並非所有提供者都支援此行為。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 相等  
  封裝： **.com. 資料**  
   
-|常數|  
+|持續性|  
 |--------------|  
 |AdoEnums.XactAttribute.ABORTRETAINING|  
 |AdoEnums.XactAttribute.COMMITRETAINING|  
   
 ## <a name="applies-to"></a>套用至  
- [Attributes 屬性 (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
+ [Attributes 屬性 (ADO)](./attributes-property-ado.md)

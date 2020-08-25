@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: bfed5cfa-7f57-463b-9da2-0c612a079d30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d8a29f2e1f35ddddc28e4aa3fb3c52c649e3056
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1f2f6f3fa47c53a5a6873024284e58604a8e8a2c
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453530"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806919"
 ---
 # <a name="deleting-records-using-the-delete-method"></a>使用 Delete 方法刪除記錄
-使用 **Delete** 方法會將目前的記錄或記錄 **集** 物件中的一組記錄標記為刪除。 如果 **記錄集** 物件不允許刪除記錄，則會發生錯誤。 如果您是在立即更新模式中，則會立即在資料庫中進行刪除。 如果無法成功刪除記錄 (由於資料庫完整性違規（例如) ），記錄在呼叫 Update 之後仍會維持在編輯模式中 **。** 這表示您必須先使用 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) 來取消更新，才能移出目前的記錄 (例如，使用 [Close](../../../ado/reference/ado-api/close-method-ado.md)、 [Move](../../../ado/reference/ado-api/move-method-ado.md)或 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)) 。  
+使用 **Delete** 方法會將目前的記錄或記錄 **集** 物件中的一組記錄標記為刪除。 如果 **記錄集** 物件不允許刪除記錄，則會發生錯誤。 如果您是在立即更新模式中，則會立即在資料庫中進行刪除。 如果無法成功刪除記錄 (由於資料庫完整性違規（例如) ），記錄在呼叫 Update 之後仍會維持在編輯模式中 **。** 這表示您必須先使用 [CancelUpdate](../../reference/ado-api/cancelupdate-method-ado.md) 來取消更新，才能移出目前的記錄 (例如，使用 [Close](../../reference/ado-api/close-method-ado.md)、 [Move](../../reference/ado-api/move-method-ado.md)或 [NextRecordset](../../reference/ado-api/nextrecordset-method-ado.md)) 。  
   
  如果您是在批次更新模式中，則會將記錄標示為從快取中刪除，而且當您呼叫 **UpdateBatch** 方法時，就會實際刪除。  (若要查看已刪除的記錄，請在呼叫**Delete**之後，將**Filter**屬性設定為**adFilterAffectedRecords** 。 )   
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9194bffa-5bdf-4dff-af86-f7158c23bfa7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb24cdf6acbe58891177dfc84d6c1e341699b129
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 092af21c57b733e12c233cb201304cbc27930c80
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439060"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768377"
 ---
 # <a name="dataspace-object-rds"></a>DataSpace 物件 (RDS)
 > [!IMPORTANT]
@@ -27,9 +27,9 @@ ms.locfileid: "88439060"
   
  建立位於仲介層的自訂商務物件之用戶端 proxy。  
   
- 遠端資料服務需要商務物件 proxy，才能讓用戶端元件與位於仲介層的商務物件進行通訊。 Proxy 有助於封裝、解除封裝和傳輸 (封送處理跨進程或電腦界限的應用程式 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 資料) 。  
+ 遠端資料服務需要商務物件 proxy，才能讓用戶端元件與位於仲介層的商務物件進行通訊。 Proxy 有助於封裝、解除封裝和傳輸 (封送處理跨進程或電腦界限的應用程式 [記錄集](../ado-api/recordset-object-ado.md) 資料) 。  
   
- 遠端資料服務會使用 **RDS。** 用來建立商務物件 proxy 的空間物件 [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) 方法。 只要建立其中介層商務物件對應項的實例，就會以動態方式建立商務物件 proxy。 遠端資料服務支援下列通訊協定： HTTP、HTTPS (HTTP 安全通訊端) 、DCOM 以及同進程 (用戶端元件，以及商務物件位於) 的相同電腦上。  
+ 遠端資料服務會使用 **RDS。** 用來建立商務物件 proxy 的空間物件 [CreateObject](./createobject-method-rds.md) 方法。 只要建立其中介層商務物件對應項的實例，就會以動態方式建立商務物件 proxy。 遠端資料服務支援下列通訊協定： HTTP、HTTPS (HTTP 安全通訊端) 、DCOM 以及同進程 (用戶端元件，以及商務物件位於) 的相同電腦上。  
   
 > [!NOTE]
 >  Rds 在 Rds 時以「無狀態」的方式運作 **。空間** 物件會使用 HTTP 或 HTTPS 通訊協定。 也就是說，在伺服器傳迴響應之後，會捨棄用戶端要求的任何內部資訊。  
@@ -46,9 +46,7 @@ ms.locfileid: "88439060"
   
  本節包含下列主題。  
   
--   [DataSpace 物件 (RDS) 屬性、方法和事件](../../../ado/reference/rds-api/dataspace-object-rds-properties-methods-and-events.md)  
+-   [DataSpace 物件 (RDS) 屬性、方法和事件](./dataspace-object-rds-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [DataSpace 物件和 CreateObject 方法範例 (VBScript)](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)
-
-
+ [DataSpace 物件和 CreateObject 方法範例 (VBScript)](./dataspace-object-and-createobject-method-example-vbscript.md)

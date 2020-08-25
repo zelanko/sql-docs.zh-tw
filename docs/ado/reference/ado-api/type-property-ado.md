@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: de97e62a8152e7d14d1442cc1da9b5138ddc39fe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cd16324e4daa3e14e47da21ad4fd528e68c1a614
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441740"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777097"
 ---
 # <a name="type-property-ado"></a>Type 屬性 (ADO)
-指出 [參數](../../../ado/reference/ado-api/parameter-object.md)、 [欄位](../../../ado/reference/ado-api/field-object.md)或 [屬性](../../../ado/reference/ado-api/property-object-ado.md) 物件的操作類型或資料類型。  
+指出 [參數](./parameter-object.md)、 [欄位](./field-object.md)或 [屬性](./property-object-ado.md) 物件的操作類型或資料類型。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定或傳回 [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) 值。  
+ 設定或傳回 [DataTypeEnum](./datatypeenum.md) 值。  
   
 ## <a name="remarks"></a>備註  
- 針對 **參數** 物件， **Type** 屬性為 read/write。 針對附加至[記錄](../../../ado/reference/ado-api/record-object-ado.md)之[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)集合的新**欄位**物件，只有在已指定**欄位**的[Value](../../../ado/reference/ado-api/value-property-ado.md)屬性，而且資料提供者已透過呼叫**Fields**集合的[Update](../../../ado/reference/ado-api/update-method.md)方法成功加入新**欄位**之後，才可讀取/寫入**型**別。  
+ 針對 **參數** 物件， **Type** 屬性為 read/write。 針對附加至[記錄](./record-object-ado.md)之[欄位](./fields-collection-ado.md)集合的新**欄位**物件，只有在已指定**欄位**的[Value](./value-property-ado.md)屬性，而且資料提供者已透過呼叫**Fields**集合的[Update](./update-method.md)方法成功加入新**欄位**之後，才可讀取/寫入**型**別。  
   
  對於所有其他物件而言， **Type** 屬性是唯讀的。  
   
@@ -39,18 +39,18 @@ ms.locfileid: "88441740"
 
 :::row:::
     :::column:::
-        [Field 物件](../../../ado/reference/ado-api/field-object.md)  
+        [Field 物件](./field-object.md)  
     :::column-end:::
     :::column:::
-        [Parameter 物件](../../../ado/reference/ado-api/parameter-object.md)  
+        [Parameter 物件](./parameter-object.md)  
     :::column-end:::
     :::column:::
-        [Property 物件 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+        [Property 物件 (ADO)](./property-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>另請參閱  
- [Type 屬性範例 (欄位)  (VB) ](../../../ado/reference/ado-api/type-property-example-field-vb.md)   
- [Type 屬性範例 (屬性)  (VC + +) ](../../../ado/reference/ado-api/type-property-example-property-vc.md)   
- [ (ADO) 的 RecordType 屬性 ](../../../ado/reference/ado-api/recordtype-property-ado.md)   
- [Type 屬性 (ADO Stream)](../../../ado/reference/ado-api/type-property-ado-stream.md)
+ [Type 屬性範例 (欄位)  (VB) ](./type-property-example-field-vb.md)   
+ [Type 屬性範例 (屬性)  (VC + +) ](./type-property-example-property-vc.md)   
+ [ (ADO) 的 RecordType 屬性 ](./recordtype-property-ado.md)   
+ [Type 屬性 (ADO Stream)](./type-property-ado-stream.md)

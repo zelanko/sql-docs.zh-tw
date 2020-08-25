@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f226f9687f1bce3def616739f43f4d283d019ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ea9319e89c44b9cbb66b3acecdcbea4afa3e61c4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441440"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776776"
 ---
 # <a name="activeconnection-property-ado-md"></a>ActiveConnection 屬性 (ADO MD)
-指出目前的儲存格集或目錄目前所屬的 ADO [連接](../../../ado/reference/ado-api/connection-object-ado.md) 物件。  
+指出目前的儲存格集或目錄目前所屬的 ADO [連接](../ado-api/connection-object-ado.md) 物件。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
  設定或傳回包含定義連接或**連接**物件之字串的**變數**。 預設值是空的。  
@@ -34,9 +34,9 @@ ms.locfileid: "88441440"
 ## <a name="remarks"></a>備註  
  您可以將此屬性設定為有效的 ADO **連接** 物件或有效的連接字串。 當這個屬性設定為連接字串時，提供者會使用此定義來建立新的 **連接** 物件，並開啟連接。  
   
- 如果您使用[open](../../../ado/reference/ado-md-api/open-method-ado-md.md)方法的*ActiveConnection*引數來開啟[儲存格](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)物件， **ActiveConnection**屬性將會繼承引數的值。  
+ 如果您使用[open](./open-method-ado-md.md)方法的*ActiveConnection*引數來開啟[儲存格](./cellset-object-ado-md.md)物件， **ActiveConnection**屬性將會繼承引數的值。  
   
- 將[目錄](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)物件的**ActiveConnection**屬性設定為**Nothing** ，就不會釋放相關聯的資料，[包括 CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)集合中的資料，以及任何相關的[維度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) [、階層](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)、[層級](../../../ado/reference/ado-md-api/level-object-ado-md.md)和[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)物件。 關閉用來開啟**目錄**的**連接**物件，其效果與將**ActiveConnection**屬性設定為**Nothing**一樣。  
+ 將[目錄](./catalog-object-ado-md.md)物件的**ActiveConnection**屬性設定為**Nothing** ，就不會釋放相關聯的資料，[包括 CubeDefs](./cubedefs-collection-ado-md.md)集合中的資料，以及任何相關的[維度](./dimension-object-ado-md.md) [、階層](./hierarchy-object-ado-md.md)、[層級](./level-object-ado-md.md)和[成員](./member-object-ado-md.md)物件。 關閉用來開啟**目錄**的**連接**物件，其效果與將**ActiveConnection**屬性設定為**Nothing**一樣。  
   
  變更**目錄**物件的**ActiveConnection**屬性所參考之連接的預設資料庫，會使**目錄**的內容失效。  
   
@@ -61,14 +61,14 @@ ms.locfileid: "88441440"
 
 :::row:::
     :::column:::
-        [Catalog 物件 (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)  
+        [Catalog 物件 (ADO MD)](./catalog-object-ado-md.md)  
     :::column-end:::
     :::column:::
-        [Cellset 物件 (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
+        [Cellset 物件 (ADO MD)](./cellset-object-ado-md.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>另請參閱  
- [ (VB) 的集格範例 ](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
- [ (ADO) 的 Connection 物件 ](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Open 方法 (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)
+ [ (VB) 的集格範例 ](./cellset-example-vb.md)   
+ [ (ADO) 的 Connection 物件 ](../ado-api/connection-object-ado.md)   
+ [Open 方法 (ADO MD)](./open-method-ado-md.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7821e971d32f855fc219a2883f4190b9434d998
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 49964c5dc3f9f6402c853f4adddabd798db4b2f0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442080"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777447"
 ---
 # <a name="sort-property-example-vb"></a>Sort 屬性範例 (VB)
-此範例會使用[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件[的 Sort](../../../ado/reference/ado-api/sort-property.md)屬性，重新排序衍生自***Pubs***資料庫之***作者***資料表的**記錄集**資料列。 次要公用程式常式會列印每個資料列。  
+此範例會使用[記錄集](./recordset-object-ado.md)物件[的 Sort](./sort-property.md)屬性，重新排序衍生自***Pubs***資料庫之***作者***資料表的**記錄集**資料列。 次要公用程式常式會列印每個資料列。  
   
 ```  
 'BeginSortVB  
@@ -111,5 +111,5 @@ Attribute VB_Name = "Sort"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADO) 的記錄集物件 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Sort 屬性](../../../ado/reference/ado-api/sort-property.md)
+ [ (ADO) 的記錄集物件 ](./recordset-object-ado.md)   
+ [Sort 屬性](./sort-property.md)
