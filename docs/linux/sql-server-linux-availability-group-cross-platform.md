@@ -1,6 +1,6 @@
 ---
 title: 設定 Windows 和 Linux 上的 SQL Server Always On 可用性群組
-description: 使用 Windows 和 Linux 上的複本設定 SQL Server Always On 可用性群組。
+description: 了解如何使用 Windows 伺服器上某個複本與 Linux 伺服器上的另一個複本來建立 SQL Server Always On 可用性群組 (AG)。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2eec1f7f24f8465fb5d2bd4406de4c11aef8a518
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9d38aed51796609a9fb97c2f6d06a7383fba9dde
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773590"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088943"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>設定 Windows 和 Linux 上的 SQL Server Always On 可用性群組 (跨平台)
 

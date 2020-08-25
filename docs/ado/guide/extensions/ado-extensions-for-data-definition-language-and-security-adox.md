@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: c6579b5b-a93e-48c5-8847-743fc4590cd2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 505acc976f47d7888d941fa90af2482aa0049554
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 807cd8a739956c56457c20b6b3bcc327dd5d3d51
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452470"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758908"
 ---
 # <a name="ado-extensions-for-data-definition-language-and-security-adox"></a>資料定義語言和安全性的 ADO 延伸模組 (ADOX)
 此章節包含下列主題。  
   
--   [ADOX 基礎](../../../ado/guide/extensions/adox-fundamentals.md)  
+-   [ADOX 基本概念](./adox-fundamentals.md)  
   
--   [ADOX 的提供者支援](../../../ado/guide/extensions/provider-support-for-adox-ado.md)
+-   [ADOX 的提供者支援](./provider-support-for-adox-ado.md)

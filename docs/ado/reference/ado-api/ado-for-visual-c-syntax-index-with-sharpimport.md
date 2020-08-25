@@ -18,45 +18,45 @@ helpviewer_keywords:
 ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f93ee0d10c3de2bbfe36673c6b521c0f38111ff2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8189af2c578600df66a16fd0f41ac259dbbe68d6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451400"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771827"
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>使用 #import 的 Visual C++ 語法索引的 ADO
 此索引是以 Microsoft Visual C++ 和 **#import** 指示詞為基礎的 ADO 語言參考交互參考。  
   
  這個特定的索引是藉由使用 **#import**指示詞編譯器，然後再重新格式化所產生的 .tlh 檔案而衍生的。 \* 只保留方法、屬性和事件的相關資訊。 針對每個屬性宣告的替代語法會由對應的 "" 指示詞列出 `__declspec(property...)` 。  
   
- 強烈建議您閱讀 [VISUAL C++ ADO 程式設計](../../../ado/guide/appendixes/visual-c-ado-programming.md) ，以取得詳細資訊。  
+ 強烈建議您閱讀 [VISUAL C++ ADO 程式設計](../../guide/appendixes/visual-c-ado-programming.md) ，以取得詳細資訊。  
   
  針對下列元素，會列出 Visual C++ 中具有 **#import** 指示詞的方法和屬性語法：  
   
--   [ADO 集合](../../../ado/reference/ado-api/collections-visual-c-syntax-index-with-sharpimport.md)  
+-   [ADO 集合](./collections-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Command 物件](../../../ado/reference/ado-api/command-visual-c-syntax-index-with-sharpimport.md)  
+-   [Command 物件](./command-visual-c-syntax-index-with-sharpimport.md)  
   
--   [連線物件](../../../ado/reference/ado-api/connection-visual-c-syntax-index-with-sharpimport.md)  
+-   [連線物件](./connection-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Error 物件](../../../ado/reference/ado-api/error-visual-c-syntax-index-with-sharpimport.md)  
+-   [Error 物件](./error-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Field 物件](../../../ado/reference/ado-api/field-visual-c-syntax-index-with-sharpimport.md)  
+-   [Field 物件](./field-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Parameter 物件](../../../ado/reference/ado-api/parameter-visual-c-syntax-index-with-sharpimport.md)  
+-   [Parameter 物件](./parameter-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Property 物件](../../../ado/reference/ado-api/property-visual-c-syntax-index-with-sharpimport.md)  
+-   [Property 物件](./property-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Record 物件](../../../ado/reference/ado-api/record-visual-c-syntax-index-with-sharpimport.md)  
+-   [Record 物件](./record-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Recordset 物件](../../../ado/reference/ado-api/recordset-visual-c-syntax-index-with-sharpimport.md)  
+-   [Recordset 物件](./recordset-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Stream 物件](../../../ado/reference/ado-api/stream-visual-c-syntax-index-with-sharpimport.md)  
+-   [Stream 物件](./stream-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Connection 的事件](../../../ado/reference/ado-api/connectionevents-visual-c-syntax-index-with-sharpimport.md)  
+-   [Connection 的事件](./connectionevents-visual-c-syntax-index-with-sharpimport.md)  
   
--   [記錄集事件](../../../ado/reference/ado-api/recordsetevents-visual-c-syntax-index-with-sharpimport.md)  
+-   [記錄集事件](./recordsetevents-visual-c-syntax-index-with-sharpimport.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [適用於 COM 的 ADO for Visual C++ 語法索引](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)
+ [適用於 COM 的 ADO for Visual C++ 語法索引](./ado-for-visual-c-syntax-index-for-com.md)

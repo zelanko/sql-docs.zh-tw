@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a77ff78be14566f472af277459b2bdaa52aad748
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0b651389b4badd57e6a76b3b38c47c34cc814706
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440230"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770907"
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>Connection Close 方法、Table Type 屬性範例 (VB)
-將 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) 屬性設定為 **Nothing** 時，應該會關閉與目錄的連接。 相關聯的集合將會是空的。 從目錄中的架構物件建立的任何物件都將會是孤立的。 這些已快取之物件上的任何屬性仍可供使用，但嘗試讀取需要對提供者呼叫的屬性將會失敗。  
+將 [ActiveConnection](./activeconnection-property-adox.md) 屬性設定為 **Nothing** 時，應該會關閉與目錄的連接。 相關聯的集合將會是空的。 從目錄中的架構物件建立的任何物件都將會是孤立的。 這些已快取之物件上的任何屬性仍可供使用，但嘗試讀取需要對提供者呼叫的屬性將會失敗。  
   
 ```  
 ' BeginCloseConnectionVB  
@@ -67,17 +67,17 @@ End Sub
 ' EndCloseConnectionVB  
 ```  
   
- 關閉用來開啟目錄的 [連接](../../../ado/reference/ado-api/connection-object-ado.md) 物件，其效果與將 **ActiveConnection** 屬性設定為 **Nothing**一樣。  
+ 關閉用來開啟目錄的 [連接](../ado-api/connection-object-ado.md) 物件，其效果與將 **ActiveConnection** 屬性設定為 **Nothing**一樣。  
   
 ```  
 Attribute VB_Name = "Connection"  
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ActiveConnection 屬性 (ADOX) ](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [ (ADOX) 的目錄物件 ](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [資料行物件 (ADOX) ](../../../ado/reference/adox-api/column-object-adox.md)   
- [資料行集合 (ADOX) ](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [資料表物件 (ADOX) ](../../../ado/reference/adox-api/table-object-adox.md)   
- [資料表集合 (ADOX) ](../../../ado/reference/adox-api/tables-collection-adox.md)   
- [Type 屬性 (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)
+ [ActiveConnection 屬性 (ADOX) ](./activeconnection-property-adox.md)   
+ [ (ADOX) 的目錄物件 ](./catalog-object-adox.md)   
+ [資料行物件 (ADOX) ](./column-object-adox.md)   
+ [資料行集合 (ADOX) ](./columns-collection-adox.md)   
+ [資料表物件 (ADOX) ](./table-object-adox.md)   
+ [資料表集合 (ADOX) ](./tables-collection-adox.md)   
+ [Type 屬性 (Table) (ADOX)](./type-property-table-adox.md)

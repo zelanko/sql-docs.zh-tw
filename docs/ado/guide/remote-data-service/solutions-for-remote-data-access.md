@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 27217324754143bcb1933bc1b9b139dccc7dee45
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d337ef92600dbda0a54d2c2c51ab4e8caeed646c
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451960"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759208"
 ---
 # <a name="solutions-for-remote-data-access"></a>遠端資料存取的解決方案
 ## <a name="the-issue"></a>問題  
@@ -44,9 +44,7 @@ ms.locfileid: "88451960"
  RDS 定義了程式設計模型，也就是取得存取及更新資料來源所需的活動順序，以透過媒介取得資料的存取權，例如 Internet Information Services (IIS) 。 程式設計模型會摘要說明 RDS 的整個功能。  
   
 ## <a name="see-also"></a>另請參閱  
- [基本 RDS 程式設計模型](../../../ado/guide/remote-data-service/basic-rds-programming-model.md)   
- [RDS 案例](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [RDS 教學課程](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [RDS 提供使用方式與安全性](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
-
+ [基本 RDS 程式設計模型](./basic-rds-programming-model.md)   
+ [RDS 案例](./rds-scenario.md)   
+ [RDS 教學課程](./rds-tutorial.md)   
+ [RDS 使用方式與安全性](./rds-usage-and-security.md)

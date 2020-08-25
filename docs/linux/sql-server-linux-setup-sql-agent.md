@@ -1,6 +1,6 @@
 ---
 title: 在 Linux 上設定 SQL Server Agent
-description: 此文章描述如何在 Linux 上啟用或安裝 SQL Server Agent。
+description: 了解如何在 Linux 上啟用或安裝 SQL Server Agent。 從 SQL Server 2017 CU4 開始，SQL Server Agent 已隨附於 mssql-server 套件。
 author: VanMSFT
 ms.author: vanto
 ms.date: 12/05/2019
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
-ms.openlocfilehash: 85869c797e8f91ca28d468c6a4a52dd52ea45a92
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6554acf46da19a9833cf649bce34a455cbc92e5b
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882531"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088789"
 ---
 # <a name="install-sql-server-agent-on-linux"></a>在 Linux 上安裝 SQL Server Agent
 
@@ -127,5 +127,5 @@ sudo systemctl restart mssql-server
 
 如果您需要離線安裝，請在[版本資訊](sql-server-linux-release-notes.md)中找到 SQL Server Agent 套件下載。 然後使用[安裝 SQL Server](sql-server-linux-setup.md#offline)一文所述的相同離線安裝步驟。
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>接下來的步驟
 如需如何使用 SQL Server Agent 來建立、排程和執行作業的詳細資訊，請參閱[在 Linux 上執行 SQL Server Agent 作業](sql-server-linux-run-sql-server-agent-job.md)。

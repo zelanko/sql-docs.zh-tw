@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c21e12d3601f40b1749067f04ce3d655ea0c1109
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d5c87c5374a0e631b08d355e5f1fc0d7c0862d23
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438600"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767407"
 ---
 # <a name="sql-property"></a>SQL 屬性
-表示用來取出 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)的查詢字串。  
+表示用來取出 [記錄集](../ado-api/recordset-object-ado.md)的查詢字串。  
   
- 您可以在 RDS 的設計階段設定 **SQL** 屬性 [。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 物件的物件標記，或在腳本程式碼的執行時間。  
+ 您可以在 RDS 的設計階段設定 **SQL** 屬性 [。DataControl](./datacontrol-object-rds.md) 物件的物件標記，或在腳本程式碼的執行時間。  
   
 > [!IMPORTANT]
 >  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
@@ -50,13 +50,11 @@ Run time: DataControl.SQL = "QueryString"
  如果自訂的伺服器端商務物件會抓取用戶端的資料， **SQL** 屬性就是選擇性的。  
   
 ## <a name="applies-to"></a>套用至  
- [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl 物件 (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [ (VBScript) 的 SQL 屬性範例 ](../../../ado/reference/rds-api/sql-property-example-vbscript.md)   
- [連接屬性 (RDS) ](../../../ado/reference/rds-api/connect-property-rds.md)   
- [ (RDS) 的查詢方法 ](../../../ado/reference/rds-api/query-method-rds.md)   
- [ (RDS) 的 Refresh 方法 ](../../../ado/reference/rds-api/refresh-method-rds.md)   
- [SubmitChanges 方法 (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
-
+ [ (VBScript) 的 SQL 屬性範例 ](./sql-property-example-vbscript.md)   
+ [連接屬性 (RDS) ](./connect-property-rds.md)   
+ [ (RDS) 的查詢方法 ](./query-method-rds.md)   
+ [ (RDS) 的 Refresh 方法 ](./refresh-method-rds.md)   
+ [SubmitChanges 方法 (RDS)](./submitchanges-method-rds.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b01cbc62-fbd7-4068-b16c-8b0f80a05887
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 86bdb1cd343ff0c8b3375760c843ef1c4d93c2dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fb9ab9b7b97875ee62fe96a39ff8d34591810560
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438890"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767947"
 ---
 # <a name="onerror-event-rds"></a>onError 事件 (RDS)
 每當作業期間發生錯誤時，就會呼叫 **onError** 事件。  
@@ -48,10 +48,8 @@ onError SCode, Description, Source, CancelDisplay
  **布林**值，如果設定為**True**，則會防止錯誤顯示在對話方塊中。  
   
 ## <a name="applies-to"></a>套用至  
- [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl 物件 (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [ADO 事件模型範例 (VC + +) ](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [ADO 事件處理常式摘要](../../../ado/guide/data/ado-event-handler-summary.md)
-
-
+ [ADO 事件模型範例 (VC + +) ](../ado-api/ado-events-model-example-vc.md)   
+ [ADO 事件處理常式摘要](../../guide/data/ado-event-handler-summary.md)

@@ -1,4 +1,5 @@
 ---
+description: OLE DB 目的地
 title: OLE DB 目的地 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 046e23f3861af9e1a1b6877036d90f249bb04723
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 91f2323a61440792654b341364efb79506c5cdd3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86908294"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477790"
 ---
 # <a name="ole-db-destination"></a>OLE DB 目的地
 
@@ -129,6 +130,8 @@ ms.locfileid: "86908294"
   
 > [!NOTE]  
 >  在 **[OLE DB 目的地編輯器]** 中無法使用 OLE DB 目的地的 **CommandTimeout**屬性，但可使用 **[進階編輯器]** 來設定這個屬性。 此外， **[進階編輯器]** 中只會有特定的快速載入選項。 如需有關這些屬性的詳細資訊，請參閱＜ [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md)＞的＜OLE DB 目的地＞一節。  
+> 
+>  只有當資料存取模式是 **SQL 命令**時，**CommandTimeout** 屬性才會生效。
   
 ### <a name="static-options"></a>靜態選項  
  **[無快取]**  

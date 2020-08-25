@@ -1,18 +1,18 @@
 ---
 title: Linux 上的 SQL Server 常見問題集
-description: 本文提供 SQL Server 在 Linux 上執行的常見問題解答。
+description: 此文章提供 SQL Server 在 Linux 上執行的常見問題集 (FAQ) 解答。
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: a41223036980a77a45094f2a64c22b898902548c
-ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.openlocfilehash: fa7cd3bd09f71555c826622030e3183d269abb4a
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87477350"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088888"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux 上的 SQL Server 常見問題集 (FAQ)
 

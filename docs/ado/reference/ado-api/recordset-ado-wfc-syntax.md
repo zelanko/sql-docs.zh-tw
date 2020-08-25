@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bd1f571e-007f-432e-ada1-5c3e436c1a22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1c116d2cece30da93cf167e7952096dbf019666
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bd0989fcabdcb7ae017efb87a9c117b4ba037524
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442430"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772297"
 ---
 # <a name="recordset-ado---wfc-syntax"></a>Recordset (ADO - WFC 語法)
 ## <a name="package-commswfcdata"></a>封裝 .com. 資料  
@@ -136,7 +136,7 @@ public AdoProperties getProperties()
 ```  
   
 ### <a name="events"></a>事件  
- 如需 ADO/WFC 事件的詳細資訊，請參閱 [Ado 事件具現化（依語言](../../../ado/guide/data/ado-event-instantiation-by-language.md)）。  
+ 如需 ADO/WFC 事件的詳細資訊，請參閱 [Ado 事件具現化（依語言](../../guide/data/ado-event-instantiation-by-language.md)）。  
   
 ```  
 public void addOnEndOfRecordset(RecordsetEventHandler handler)  
@@ -164,4 +164,4 @@ public void removeOnWillMove(RecordsetEventHandler handler)
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Recordset 物件 (ADO)](./recordset-object-ado.md)

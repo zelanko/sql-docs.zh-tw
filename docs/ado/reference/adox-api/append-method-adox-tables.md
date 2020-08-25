@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a362ed51-314c-4783-9598-538dbf755f3d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6069b3d99e021be01d8fd2d724b7c25868167bd3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2f54f1491327b9b0294dec1332a3fb9ff8b2c69c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440470"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771387"
 ---
 # <a name="append-method-adox-tables"></a>Append 方法 (ADOX Tables)
-將新的 [資料表](../../../ado/reference/adox-api/table-object-adox.md) 物件加入至 [資料表](../../../ado/reference/adox-api/tables-collection-adox.md) 集合。  
+將新的 [資料表](./table-object-adox.md) 物件加入至 [資料表](./tables-collection-adox.md) 集合。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,15 +42,15 @@ Tables.Append Table
  如果提供者不支援建立資料表，就會發生錯誤。  
   
 ## <a name="applies-to"></a>套用至  
- [Tables 集合 (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)  
+ [Tables 集合 (ADOX)](./tables-collection-adox.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Columns 和 Tables Append 方法、Name 屬性範例 (VB) ](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [ (VB) 的 ParentCatalog 屬性範例 ](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
- [將方法附加至 ADOX 資料行 () ](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [將方法附加至 ADOX 群組 () ](../../../ado/reference/adox-api/append-method-adox-groups.md)   
- [附加方法 (ADOX 索引) ](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [附加方法 (ADOX 索引鍵) ](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Append 方法 (ADOX 程式) ](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [ (ADOX 使用者的 Append 方法) ](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Append 方法 (ADOX Views)](../../../ado/reference/adox-api/append-method-adox-views.md)
+ [Columns 和 Tables Append 方法、Name 屬性範例 (VB) ](./columns-and-tables-append-methods-name-property-example-vb.md)   
+ [ (VB) 的 ParentCatalog 屬性範例 ](./parentcatalog-property-example-vb.md)   
+ [將方法附加至 ADOX 資料行 () ](./append-method-adox-columns.md)   
+ [將方法附加至 ADOX 群組 () ](./append-method-adox-groups.md)   
+ [附加方法 (ADOX 索引) ](./append-method-adox-indexes.md)   
+ [附加方法 (ADOX 索引鍵) ](./append-method-adox-keys.md)   
+ [Append 方法 (ADOX 程式) ](./append-method-adox-procedures.md)   
+ [ (ADOX 使用者的 Append 方法) ](./append-method-adox-users.md)   
+ [Append 方法 (ADOX Views)](./append-method-adox-views.md)

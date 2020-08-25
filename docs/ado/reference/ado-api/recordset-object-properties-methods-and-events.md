@@ -13,128 +13,128 @@ helpviewer_keywords:
 ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 35eba7d8e34c6803f997f052c1798f825aae1ff0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 88751b720685700d37d775208afd38e100910b69
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442410"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772157"
 ---
 # <a name="recordset-object-properties-methods-and-events"></a>Recordset 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  
- [AbsolutePage 屬性](../../../ado/reference/ado-api/absolutepage-property-ado.md)  
+ [AbsolutePage 屬性](./absolutepage-property-ado.md)  
   
- [AbsolutePosition 屬性](../../../ado/reference/ado-api/absoluteposition-property-ado.md)  
+ [AbsolutePosition 屬性](./absoluteposition-property-ado.md)  
   
- [ActiveCommand 屬性](../../../ado/reference/ado-api/activecommand-property-ado.md)  
+ [ActiveCommand 屬性](./activecommand-property-ado.md)  
   
- [ActiveConnection 屬性](../../../ado/reference/ado-api/activeconnection-property-ado.md)  
+ [ActiveConnection 屬性](./activeconnection-property-ado.md)  
   
- [BOF、EOF 屬性](../../../ado/reference/ado-api/bof-eof-properties-ado.md)  
+ [BOF、EOF 屬性](./bof-eof-properties-ado.md)  
   
- [Bookmark 屬性](../../../ado/reference/ado-api/bookmark-property-ado.md)  
+ [Bookmark 屬性](./bookmark-property-ado.md)  
   
- [CacheSize 屬性](../../../ado/reference/ado-api/cachesize-property-ado.md)  
+ [CacheSize 屬性](./cachesize-property-ado.md)  
   
- [CursorLocation 屬性](../../../ado/reference/ado-api/cursorlocation-property-ado.md)  
+ [CursorLocation 屬性](./cursorlocation-property-ado.md)  
   
- [CursorType 屬性](../../../ado/reference/ado-api/cursortype-property-ado.md)  
+ [CursorType 屬性](./cursortype-property-ado.md)  
   
- [DataMember 屬性](../../../ado/reference/ado-api/datamember-property.md)  
+ [DataMember 屬性](./datamember-property.md)  
   
- [DataSource 屬性](../../../ado/reference/ado-api/datasource-property-ado.md)  
+ [DataSource 屬性](./datasource-property-ado.md)  
   
- [EditMode 屬性](../../../ado/reference/ado-api/editmode-property.md)  
+ [EditMode 屬性](./editmode-property.md)  
   
- [Fields 集合](../../../ado/reference/ado-api/fields-collection-ado.md)  
+ [Fields 集合](./fields-collection-ado.md)  
   
- [Filter 屬性](../../../ado/reference/ado-api/filter-property.md)  
+ [Filter 屬性](./filter-property.md)  
   
- [Index 屬性](../../../ado/reference/ado-api/index-property.md)  
+ [Index 屬性](./index-property.md)  
   
- [LockType 屬性](../../../ado/reference/ado-api/locktype-property-ado.md)  
+ [LockType 屬性](./locktype-property-ado.md)  
   
- [MarshalOptions 屬性](../../../ado/reference/ado-api/marshaloptions-property-ado.md)  
+ [MarshalOptions 屬性](./marshaloptions-property-ado.md)  
   
- [MaxRecords 屬性](../../../ado/reference/ado-api/maxrecords-property-ado.md)  
+ [MaxRecords 屬性](./maxrecords-property-ado.md)  
   
- [PageCount 屬性](../../../ado/reference/ado-api/pagecount-property-ado.md)  
+ [PageCount 屬性](./pagecount-property-ado.md)  
   
- [PageSize 屬性](../../../ado/reference/ado-api/pagesize-property-ado.md)  
+ [PageSize 屬性](./pagesize-property-ado.md)  
   
- [屬性集合](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [屬性集合](./properties-collection-ado.md)  
   
- [RecordCount 屬性](../../../ado/reference/ado-api/recordcount-property-ado.md)  
+ [RecordCount 屬性](./recordcount-property-ado.md)  
   
- [Sort 屬性](../../../ado/reference/ado-api/sort-property.md)  
+ [Sort 屬性](./sort-property.md)  
   
- [Source 屬性 (ADO Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)  
+ [Source 屬性 (ADO Recordset)](./source-property-ado-recordset.md)  
   
- [State 屬性](../../../ado/reference/ado-api/state-property-ado.md)  
+ [State 屬性](./state-property-ado.md)  
   
- [Status 屬性 (ADO Recordset)](../../../ado/reference/ado-api/status-property-ado-recordset.md)  
+ [Status 屬性 (ADO Recordset)](./status-property-ado-recordset.md)  
   
- [StayInSync 屬性](../../../ado/reference/ado-api/stayinsync-property.md)  
+ [StayInSync 屬性](./stayinsync-property.md)  
   
 ## <a name="methods"></a>方法  
- [AddNew 方法](../../../ado/reference/ado-api/addnew-method-ado.md)  
+ [AddNew 方法](./addnew-method-ado.md)  
   
- [Cancel 方法](../../../ado/reference/ado-api/cancel-method-ado.md)  
+ [Cancel 方法](./cancel-method-ado.md)  
   
- [CancelBatch 方法](../../../ado/reference/ado-api/cancelbatch-method-ado.md)  
+ [CancelBatch 方法](./cancelbatch-method-ado.md)  
   
- [CancelUpdate 方法](../../../ado/reference/ado-api/cancelupdate-method-ado.md)  
+ [CancelUpdate 方法](./cancelupdate-method-ado.md)  
   
- [Clone 方法](../../../ado/reference/ado-api/clone-method-ado.md)  
+ [Clone 方法](./clone-method-ado.md)  
   
- [Close 方法](../../../ado/reference/ado-api/close-method-ado.md)  
+ [Close 方法](./close-method-ado.md)  
   
- [CompareBookmarks 方法](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)  
+ [CompareBookmarks 方法](./comparebookmarks-method-ado.md)  
   
- [Delete 方法 (ADO Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)  
+ [Delete 方法 (ADO Recordset)](./delete-method-ado-recordset.md)  
   
- [Find 方法](../../../ado/reference/ado-api/find-method-ado.md)  
+ [Find 方法](./find-method-ado.md)  
   
- [GetRows 方法](../../../ado/reference/ado-api/getrows-method-ado.md)  
+ [GetRows 方法](./getrows-method-ado.md)  
   
- [GetString 方法](../../../ado/reference/ado-api/getstring-method-ado.md)  
+ [GetString 方法](./getstring-method-ado.md)  
   
- [Move 方法](../../../ado/reference/ado-api/move-method-ado.md)  
+ [Move 方法](./move-method-ado.md)  
   
- [MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)  
+ [MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)  
   
- [NextRecordset 方法](../../../ado/reference/ado-api/nextrecordset-method-ado.md)  
+ [NextRecordset 方法](./nextrecordset-method-ado.md)  
   
- [Open 方法 (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
+ [Open 方法 (ADO Recordset)](./open-method-ado-recordset.md)  
   
- [Requery 方法](../../../ado/reference/ado-api/requery-method.md)  
+ [Requery 方法](./requery-method.md)  
   
- [Resync 方法](../../../ado/reference/ado-api/resync-method.md)  
+ [Resync 方法](./resync-method.md)  
   
- [Save 方法](../../../ado/reference/ado-api/save-method.md)  
+ [Save 方法](./save-method.md)  
   
- [Seek 方法](../../../ado/reference/ado-api/seek-method.md)  
+ [Seek 方法](./seek-method.md)  
   
- [Supports 方法](../../../ado/reference/ado-api/supports-method.md)  
+ [Supports 方法](./supports-method.md)  
   
- [Update 方法](../../../ado/reference/ado-api/update-method.md)  
+ [Update 方法](./update-method.md)  
   
- [UpdateBatch 方法](../../../ado/reference/ado-api/updatebatch-method.md)  
+ [UpdateBatch 方法](./updatebatch-method.md)  
   
 ## <a name="events"></a>事件  
- [EndOfRecordset 事件](../../../ado/reference/ado-api/endofrecordset-event-ado.md)  
+ [EndOfRecordset 事件](./endofrecordset-event-ado.md)  
   
- [FetchComplete 事件](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)  
+ [FetchComplete 事件](./fetchcomplete-event-ado.md)  
   
- [FetchProgress 事件](../../../ado/reference/ado-api/fetchprogress-event-ado.md)  
+ [FetchProgress 事件](./fetchprogress-event-ado.md)  
   
- [WillChangeField 和 FieldChangeComplete 事件](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)  
+ [WillChangeField 和 FieldChangeComplete 事件](./willchangefield-and-fieldchangecomplete-events-ado.md)  
   
- [WillChangeRecord 和 RecordChangeComplete 事件](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)  
+ [WillChangeRecord 和 RecordChangeComplete 事件](./willchangerecord-and-recordchangecomplete-events-ado.md)  
   
- [WillChangeRecordset 和 RecordsetChangeComplete 事件](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)  
+ [WillChangeRecordset 和 RecordsetChangeComplete 事件](./willchangerecordset-and-recordsetchangecomplete-events-ado.md)  
   
- [WillMove 和 MoveComplete 事件](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)  
+ [WillMove 和 MoveComplete 事件](./willmove-and-movecomplete-events-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Recordset 物件 (ADO)](./recordset-object-ado.md)

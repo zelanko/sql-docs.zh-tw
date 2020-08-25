@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 449bfe5056cdf96f86b5371731c2d1c0b00ba31e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c7fc8cd189534a217468f71188479a8df100fed6
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452420"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758358"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>多維度結構描述和資料的概觀
 ## <a name="understanding-multidimensional-schemas"></a>瞭解多維度架構  
@@ -32,7 +32,7 @@ ms.locfileid: "88452420"
   
  *成員*是維度中的資料項目。 一般而言，您會使用成員建立標題或描述資料庫的量值。  
   
- Cube 是由 ADO MD 中的 [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) 物件表示。 維度、階層、層級和成員也會以對應的 ADO MD 物件表示： [維度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)、 [階層](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)、 [層級](../../../ado/reference/ado-md-api/level-object-ado-md.md)和 [成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)。  
+ Cube 是由 ADO MD 中的 [CubeDef](../../reference/ado-md-api/cubedef-object-ado-md.md) 物件表示。 維度、階層、層級和成員也會以對應的 ADO MD 物件表示： [維度](../../reference/ado-md-api/dimension-object-ado-md.md)、 [階層](../../reference/ado-md-api/hierarchy-object-ado-md.md)、 [層級](../../reference/ado-md-api/level-object-ado-md.md)和 [成員](../../reference/ado-md-api/member-object-ado-md.md)。  
   
 ### <a name="dimensions"></a>維度  
  Cube 的維度取決於您的商務實體和要在資料庫中建立模型的資料類型。 一般而言，每個維度都是一個獨立的進入點，也就是選取資料的機制。  
@@ -54,7 +54,7 @@ Hamburg, Munich, Stuttgart}
 ### <a name="hierarchies"></a>階層  
  階層定義維度層級可以「匯總」或群組的方式。 維度可以有一個以上的階層。 [Geography] 維度中有一個自然階層：  
   
-### <a name="levels"></a>等級  
+### <a name="levels"></a>層級  
  在上圖所示的 [地理位置] 維度範例中，每個方塊都代表階層中的層級。  
   
  每個層級都有一組成員，如下所示：  
@@ -85,8 +85,8 @@ Hamburg, Munich, Stuttgart}
  此範例也會說明另一個特性：年份階層中，周層級的某些成員不會出現在年度季階層的任何層級中。 因此，階層不需要包含維度的所有成員。  
   
 ## <a name="see-also"></a>另請參閱  
- [ADO MD 物件模型](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [ADO (多維度)  (ADO MD) ](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
- [使用 ADO MD 進行程式設計](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
- [使用 ADO 搭配 ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)   
- [使用多維度資料](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)
+ [ADO MD 物件模型](../../reference/ado-md-api/ado-md-object-model.md)   
+ [ADO (多維度)  (ADO MD) ](./ado-multidimensional-ado-md.md)   
+ [使用 ADO MD 進行程式設計](./programming-with-ado-md.md)   
+ [使用 ADO 搭配 ADO MD](./using-ado-with-ado-md.md)   
+ [使用多維度資料](./working-with-multidimensional-data.md)

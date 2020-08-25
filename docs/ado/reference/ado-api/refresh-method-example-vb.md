@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f5375fa1-4711-4f7e-9ba4-54c427f71325
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 168bdaa7736c5f9d3c974d0a5f6aa4fae2b323bc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a019d0f4e260feb7e9e9034fc7b9cf63b623bedf
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442340"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771967"
 ---
 # <a name="refresh-method-example-vb"></a>Refresh 方法範例 (VB)
-此範例示範如何使用[refresh](../../../ado/reference/ado-api/refresh-method-ado.md)方法來重新整理預存程式[命令](../../../ado/reference/ado-api/command-object-ado.md)物件的[參數](../../../ado/reference/ado-api/parameters-collection-ado.md)集合。  
+此範例示範如何使用[refresh](./refresh-method-ado.md)方法來重新整理預存程式[命令](./command-object-ado.md)物件的[參數](./parameters-collection-ado.md)集合。  
   
 ```vb
 'BeginRefreshVB  
@@ -122,6 +122,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADO) 的命令物件 ](../../../ado/reference/ado-api/command-object-ado.md)   
- [ (ADO) 的參數集合 ](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Refresh 方法 (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)
+ [ (ADO) 的命令物件 ](./command-object-ado.md)   
+ [ (ADO) 的參數集合 ](./parameters-collection-ado.md)   
+ [Refresh 方法 (ADO)](./refresh-method-ado.md)

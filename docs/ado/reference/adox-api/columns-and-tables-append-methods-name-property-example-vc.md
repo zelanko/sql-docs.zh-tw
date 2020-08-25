@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2b6dfef9-bcdf-483d-a164-2fa3ec81a43f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 655c1d014f312ae0706b242bb8b108d871bcef3b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8e729cc177c6c994d8dc0d16392a6e5b3281a610
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440290"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770997"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vc"></a>Columns 和 Tables Append 方法、Name 屬性範例 (VC++)
 下列程式碼示範如何建立新的資料表。  
@@ -83,6 +83,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [將方法附加至 ADOX 資料行 () ](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [附加方法 (ADOX 資料表) ](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Name 屬性 (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)
+ [將方法附加至 ADOX 資料行 () ](./append-method-adox-columns.md)   
+ [附加方法 (ADOX 資料表) ](./append-method-adox-tables.md)   
+ [Name 屬性 (ADOX)](./name-property-adox.md)

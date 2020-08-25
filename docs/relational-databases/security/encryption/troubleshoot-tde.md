@@ -14,12 +14,12 @@ ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 16368fe948d2cefeb052d503385c99cedfb097ff
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: c37c2aa1f36fca57e544dc588d492be98c653fef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87899010"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448066"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>在 Azure Key Vault 中使用客戶受控金鑰進行透明資料加密的常見錯誤
 
@@ -165,7 +165,7 @@ ms.locfileid: "87899010"
 
 ## <a name="getting-tde-status-from-the-activity-log"></a>從活動記錄中取得 TDE 狀態
 
-為了允許因 Azure Key Vault 金鑰存取問題而要允許監視資料庫狀態，系統將會根據 Azure Resource Manager URL 和 Subscription+Resourcegroup+ServerName+DatabseName，將下列事件記錄到資源識別碼的[活動記錄](https://docs.microsoft.com/azure/service-health/alerts-activity-log-service-notifications) \(部分機器翻譯\) 中： 
+為了允許監視因 Azure Key Vault 金鑰存取問題而造成的資料庫狀態，系統將會根據 Azure Resource Manager URL 與 Subscription+Resourcegroup+ServerName+DatabaseName，將下列事件記錄到資源識別碼的[活動記錄](https://docs.microsoft.com/azure/service-health/alerts-activity-log-service-notifications) \(部分機器翻譯\) 中： 
 
 **當服務失去 Azure Key Vault 金鑰存取權時的事件**
 

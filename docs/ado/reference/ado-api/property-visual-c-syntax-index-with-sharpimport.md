@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 80988ca7-f514-438d-bf6f-9390dfe93fc3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4774f6224a156f11ac4c08c1576321f7dc42986b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7894f7d665ace4790544ce781d895c29f0918510
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442630"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772887"
 ---
 # <a name="property-visual-c-syntax-index-with-import"></a>屬性 (#import 的 Visual C++ 語法索引) 
 ## <a name="properties"></a>屬性  
@@ -44,4 +44,4 @@ __declspec(property(get=GetValue,put=PutValue)) _variant_t Value;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Property 物件 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)
+ [Property 物件 (ADO)](./property-object-ado.md)

@@ -18,25 +18,25 @@ helpviewer_keywords:
 ms.assetid: 790e46a2-13d2-451e-a8be-130bd9a206a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 578e9a0d03382e5e0dc143e07351cfb8890f278d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c7cc82893ce5c20c27f44851b555850db4cd9cc8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442370"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772097"
 ---
 # <a name="recordtype-property-ado"></a>RecordType 屬性 (ADO)
-表示 [記錄](../../../ado/reference/ado-api/record-object-ado.md) 物件的類型。  
+表示 [記錄](./record-object-ado.md) 物件的類型。  
   
 ## <a name="return-value"></a>傳回值  
- 傳回 [RecordTypeEnum](../../../ado/reference/ado-api/recordtypeenum.md) 值。  
+ 傳回 [RecordTypeEnum](./recordtypeenum.md) 值。  
   
 ## <a name="remarks"></a>備註  
  **RecordType**屬性是唯讀的。  
   
 ## <a name="applies-to"></a>套用至  
- [Record 物件 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+ [Record 物件 (ADO)](./record-object-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Type 屬性 (ADO) ](../../../ado/reference/ado-api/type-property-ado.md)   
- [Type 屬性 (ADO Stream)](../../../ado/reference/ado-api/type-property-ado-stream.md)
+ [Type 屬性 (ADO) ](./type-property-ado.md)   
+ [Type 屬性 (ADO Stream)](./type-property-ado-stream.md)

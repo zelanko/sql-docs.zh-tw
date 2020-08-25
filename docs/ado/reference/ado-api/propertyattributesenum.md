@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 96a01955-a6b4-4cbf-9c73-52bcd1e9fb25
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bac29c74bf70e29828fe8ec238839cd64e78fd7a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 823505aae912c64c2fd7d3375b3426cb6428bcdd
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442560"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772867"
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
-指定 [屬性](../../../ado/reference/ado-api/property-object-ado.md) 物件的屬性。  
+指定 [屬性](./property-object-ado.md) 物件的屬性。  
   
-|常數|值|描述|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
 |**adPropNotSupported**|0|指出提供者不支援此屬性。|  
 |**adPropRequired**|1|指出使用者必須在初始化資料來源之前，指定這個屬性的值。|  
@@ -37,7 +37,7 @@ ms.locfileid: "88442560"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 相等  
  封裝： **.com. 資料**  
   
-|常數|  
+|持續性|  
 |--------------|  
 |AdoEnums.PropertyAttributes.NOTSUPPORTED|  
 |AdoEnums. PropertyAttributes。必要|  
@@ -46,4 +46,4 @@ ms.locfileid: "88442560"
 |AdoEnums.PropertyAttributes.WRITE|  
   
 ## <a name="applies-to"></a>套用至  
- [Attributes 屬性 (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
+ [Attributes 屬性 (ADO)](./attributes-property-ado.md)

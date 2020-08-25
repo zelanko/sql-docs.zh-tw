@@ -2,7 +2,7 @@
 title: 以單一使用者模式啟動 SQL Server | Microsoft Docs
 description: 了解 SQL Server 中的單一使用者模式。 查看此模式何時有用，以及如何使用啟動選項「-m」，在此模式中啟動 SQL Server 的執行個體。
 ms.custom: ''
-ms.date: 09/20/2017
+ms.date: 08/11/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 31b0075dfa6b3f4fa380e8b43054d0c98ebd8d81
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8651bcaa4aebf69eae9622031b49fb562b7be9f6
+ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764011"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147299"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>以單一使用者模式啟動 SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,13 @@ ms.locfileid: "85764011"
   
 > [!IMPORTANT]  
 >  請勿將這個選項當做安全性功能使用。 用戶端應用程式會提供用戶端應用程式名稱，而且可能會在連接字串中提供假的名稱。  
-  
+
+下列範例會在單一使用者模式中啟動 SQL Server 執行個體，而且只允許透過 SQL Server Management Studio 查詢編輯器連線。
+
+```console
+net start "SQL Server (MSSQLSERVER)" -m"Microsoft SQL Server Management Studio - Query"
+```
+
 ## <a name="note-for-clustered-installations"></a>叢集安裝注意事項  
  如果是叢集環境中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝，當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在單一使用者模式下啟動時，叢集資源 dll 會用完可用的連接，藉此封鎖與伺服器的任何其他連接。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在此狀態下時，如果您嘗試將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 資源帶到線上，當 SQL 資源設定為可影響群組時，它可能會將此資源容錯移轉到另一個節點。  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3ceb97d4859126c2116383196db5e6c71affb77f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7be4aaa2a92de4f778ee69422b97ceb169411c10
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452240"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759822"
 ---
 # <a name="customization-file-sql-section"></a>自訂檔案 SQL 區段
 **Sql**區段可以包含取代用戶端命令字串的新 sql 字串。 如果區段中沒有 SQL 字串，則會忽略區段。  
@@ -52,12 +52,10 @@ SQL = " "
 |***sqlString***|取代用戶端字串的 SQL 字串。|  
   
 ## <a name="see-also"></a>另請參閱  
- [自訂檔案連接區段](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [自訂檔案記錄區段](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [自訂檔案 UserList 區段](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [DataFactory 自訂](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [必要的用戶端設定](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [瞭解自訂檔案](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [撰寫您自己的自訂處理常式](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
-
+ [自訂檔案連接區段](./customization-file-connect-section.md)   
+ [自訂檔案記錄區段](./customization-file-logs-section.md)   
+ [自訂檔案 UserList 區段](./customization-file-userlist-section.md)   
+ [DataFactory 自訂](./datafactory-customization.md)   
+ [必要的用戶端設定](./required-client-settings.md)   
+ [瞭解自訂檔案](./understanding-the-customization-file.md)   
+ [撰寫您自己的自訂處理常式](./writing-your-own-customized-handler.md)

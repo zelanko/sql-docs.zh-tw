@@ -18,24 +18,24 @@ helpviewer_keywords:
 ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70a3554ed1ef0c94965e340f303cc3208c1962fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 06020bb66a8fd986d3fbf38bda59b98e29e66386
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442760"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773337"
 ---
 # <a name="parameters-collection-ado"></a>Parameters 集合 (ADO)
-包含[Command](../../../ado/reference/ado-api/command-object-ado.md)物件的所有[參數](../../../ado/reference/ado-api/parameter-object.md)物件。  
+包含[Command](./command-object-ado.md)物件的所有[參數](./parameter-object.md)物件。  
   
 ## <a name="remarks"></a>備註  
  **命令**物件具有由**參數**物件組成的**參數**集合。  
   
- 在**命令**物件的**Parameters**集合上使用[Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)方法，會抓取**命令**物件中所指定預存程式或參數化查詢的提供者參數資訊。 有些提供者不支援預存程序呼叫或參數化查詢;使用這類提供者時，在**參數**集合上呼叫**Refresh**方法將會傳回錯誤。  
+ 在**命令**物件的**Parameters**集合上使用[Refresh](./refresh-method-ado.md)方法，會抓取**命令**物件中所指定預存程式或參數化查詢的提供者參數資訊。 有些提供者不支援預存程序呼叫或參數化查詢;使用這類提供者時，在**參數**集合上呼叫**Refresh**方法將會傳回錯誤。  
   
  如果您尚未定義您自己的**參數**物件，且在呼叫**Refresh**方法之前存取了**Parameters**集合，則 ADO 會自動呼叫方法並為您填入集合。  
   
- 如果您知道與您想要呼叫之預存程式或參數化查詢相關聯之參數的屬性，您可以儘量減少對提供者的呼叫，以改善效能。 您可以使用 [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) 方法，以適當的屬性設定來建立 **參數** 物件，並使用 [Append](../../../ado/reference/ado-api/append-method-ado.md) 方法將它們加入至 **Parameters** 集合。 這可讓您設定和傳回參數值，而不需要呼叫提供者取得參數資訊。 如果您要寫入未提供參數資訊的提供者，則必須使用此方法手動填入 **參數** 集合，才能使用參數。 如有必要，請使用[Delete](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)方法，從**Parameters**集合中移除**參數**物件。  
+ 如果您知道與您想要呼叫之預存程式或參數化查詢相關聯之參數的屬性，您可以儘量減少對提供者的呼叫，以改善效能。 您可以使用 [CreateParameter](./createparameter-method-ado.md) 方法，以適當的屬性設定來建立 **參數** 物件，並使用 [Append](./append-method-ado.md) 方法將它們加入至 **Parameters** 集合。 這可讓您設定和傳回參數值，而不需要呼叫提供者取得參數資訊。 如果您要寫入未提供參數資訊的提供者，則必須使用此方法手動填入 **參數** 集合，才能使用參數。 如有必要，請使用[Delete](./delete-method-ado-parameters-collection.md)方法，從**Parameters**集合中移除**參數**物件。  
   
  **記錄集**之**Parameters**集合中的物件會移出範圍 (因此，在關閉**記錄集**時變成無法使用的) 。  
   
@@ -83,9 +83,9 @@ ms.locfileid: "88442760"
   
  本節包含下列主題。  
   
--   [Parameters 集合屬性、方法和事件](../../../ado/reference/ado-api/parameters-collection-properties-methods-and-events.md)  
+-   [Parameters 集合屬性、方法和事件](./parameters-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADO) 的 Append 方法 ](../../../ado/reference/ado-api/append-method-ado.md)   
- [ (ADO) 的 CreateParameter 方法 ](../../../ado/reference/ado-api/createparameter-method-ado.md)   
- [Parameter 物件](../../../ado/reference/ado-api/parameter-object.md)
+ [ (ADO) 的 Append 方法 ](./append-method-ado.md)   
+ [ (ADO) 的 CreateParameter 方法 ](./createparameter-method-ado.md)   
+ [Parameter 物件](./parameter-object.md)

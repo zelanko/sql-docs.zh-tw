@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: ea74e2a3-c965-43aa-9076-26a084b48ad8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 44bfda3dc902af0398d26481c307b90926133654
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1d46e3acaa77045e0006a77bb0d20ab77d975d24
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451690"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760108"
 ---
 # <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-jscript"></a>ActiveConnection、CommandText、CommandTimeout、CommandType、Size 和 Direction 屬性範例 (JScript) 
-這個範例會使用 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)、 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)、 [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md)、 [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)、 [Size](../../../ado/reference/ado-api/size-property-ado-parameter.md)和 [Direction](../../../ado/reference/ado-api/direction-property.md) 屬性來執行預存程式。 將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器，然後將它儲存為**ActiveConnectionJS。**  
+這個範例會使用 [ActiveConnection](./activeconnection-property-ado.md)、 [CommandText](./commandtext-property-ado.md)、 [CommandTimeout](./commandtimeout-property-ado.md)、 [CommandType](./commandtype-property-ado.md)、 [Size](./size-property-ado-parameter.md)和 [Direction](./direction-property.md) 屬性來執行預存程式。 將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器，然後將它儲存為**ActiveConnectionJS。**  
   
 ```  
 <!-- BeginActiveConnectionJS -->  
@@ -174,14 +174,14 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADO) 的 ActiveCommand 屬性 ](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [ (ADO) 的命令物件 ](../../../ado/reference/ado-api/command-object-ado.md)   
- [ (ADO) 的 CommandText 屬性 ](../../../ado/reference/ado-api/commandtext-property-ado.md)   
- [ (ADO) 的 CommandTimeout 屬性 ](../../../ado/reference/ado-api/commandtimeout-property-ado.md)   
- [ (ADO) 的 CommandType 屬性 ](../../../ado/reference/ado-api/commandtype-property-ado.md)   
- [ (ADO) 的 Connection 物件 ](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Direction 屬性](../../../ado/reference/ado-api/direction-property.md)   
- [Parameter 物件](../../../ado/reference/ado-api/parameter-object.md)   
- [ (ADO) 的記錄物件 ](../../../ado/reference/ado-api/record-object-ado.md)   
- [ (ADO) 的記錄集物件 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Size 屬性 (ADO 參數)](../../../ado/reference/ado-api/size-property-ado-parameter.md)
+ [ (ADO) 的 ActiveCommand 屬性 ](./activecommand-property-ado.md)   
+ [ (ADO) 的命令物件 ](./command-object-ado.md)   
+ [ (ADO) 的 CommandText 屬性 ](./commandtext-property-ado.md)   
+ [ (ADO) 的 CommandTimeout 屬性 ](./commandtimeout-property-ado.md)   
+ [ (ADO) 的 CommandType 屬性 ](./commandtype-property-ado.md)   
+ [ (ADO) 的 Connection 物件 ](./connection-object-ado.md)   
+ [Direction 屬性](./direction-property.md)   
+ [Parameter 物件](./parameter-object.md)   
+ [ (ADO) 的記錄物件 ](./record-object-ado.md)   
+ [ (ADO) 的記錄集物件 ](./recordset-object-ado.md)   
+ [Size 屬性 (ADO 參數)](./size-property-ado-parameter.md)

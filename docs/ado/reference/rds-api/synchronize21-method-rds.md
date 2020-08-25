@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4627ac4b67e31861ff91cb516076a561a7a315e2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b09994dba988d94c2e0f0f7cd9f68eef5790dde0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438560"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767317"
 ---
 # <a name="synchronize21-method-rds"></a>Synchronize21 方法 (RDS)
 將指定的記錄集與連接字串所指定的資料庫同步處理，以搭配 ADO 2.1 使用。  
@@ -62,9 +62,7 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
  *HandlerString*參數可以是 null。 在此情況下，會發生什麼情況取決於 RDS 伺服器的設定方式。 "MSDFMAP" 處理常式字串表示應使用 Microsoft 提供的處理常式 ( # A0) 。 "MASDFMAP" 處理常式字串 "sample.ini" 表示應使用 Msdfmap.dll 處理常式，並將引數 "sample.ini" 傳遞給處理常式。 Msdfmap.dll 接著會將引數解讀為使用 sample.ini 來檢查連接和查詢字串的方向。  
   
 > [!NOTE]
->  **Synchronize21**方法只是[ (RDS) 的同步方法](../../../ado/reference/rds-api/synchronize-method-rds.md)版本。 如果您需要使用 **Synchronize** 方法與 ADO 2.1 通訊，可以改為呼叫 **Synchronize21** 方法。 ADO 2.5 和更新版本中的 **Synchronize** 方法功能是針對 ADO 2.1 中的相同方法所提供之功能的超集合。  
+>  **Synchronize21**方法只是[ (RDS) 的同步方法](./synchronize-method-rds.md)版本。 如果您需要使用 **Synchronize** 方法與 ADO 2.1 通訊，可以改為呼叫 **Synchronize21** 方法。 ADO 2.5 和更新版本中的 **Synchronize** 方法功能是針對 ADO 2.1 中的相同方法所提供之功能的超集合。  
   
 ## <a name="applies-to"></a>套用至  
- [DataFactory 物件 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [DataFactory 物件 (RDSServer)](./datafactory-object-rdsserver.md)

@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fbd7933ac206f81460a7d0d50d0a7ac332cf154a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a4777349384d372355a107cced1503d774ade4f7
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451460"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771737"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO 動態屬性索引
-資料提供者、服務提供者和服務元件可以將動態屬性加入至未開啟之[連接](../../../ado/reference/ado-api/connection-object-ado.md)和[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件的**屬性**集合。 當這些物件開啟時，指定的提供者也可以插入其他屬性。 其中一些屬性會列在 [ [ADO 動態屬性](../../../ado/reference/ado-api/ado-dynamic-properties.md) ] 區段中。 [ [附錄 A：提供者](../../../ado/guide/appendixes/appendix-a-providers.md) ] 一節中的特定提供者底下會列出更多。  
+資料提供者、服務提供者和服務元件可以將動態屬性加入至未開啟之[連接](./connection-object-ado.md)和[記錄集](./recordset-object-ado.md)物件的**屬性**集合。 當這些物件開啟時，指定的提供者也可以插入其他屬性。 其中一些屬性會列在 [ [ADO 動態屬性](./ado-dynamic-properties.md) ] 區段中。 [ [附錄 A：提供者](../../guide/appendixes/appendix-a-providers.md) ] 一節中的特定提供者底下會列出更多。  
   
  下表是每個標準 OLE DB 提供者動態屬性的 ADO 和 OLE DB 名稱的交叉索引。 您的提供者可能會新增超過此處所列的屬性。 如需提供者特定動態屬性的相關資訊，請參閱您的提供者檔。  
   
- OLE DB 程式設計人員參考是依「描述」一詞來參考 ADO 屬性名稱。 如需這些標準屬性的詳細資訊，請在 OLE DB 屬性的 [OLE DB 檔](https://msdn.microsoft.com/library/windows/desktop/ms722784.aspx)中搜尋或流覽索引（依名稱）。  
+ OLE DB 程式設計人員參考是依「描述」一詞來參考 ADO 屬性名稱。 如需這些標準屬性的詳細資訊，請在 OLE DB 屬性的 [OLE DB 檔](/previous-versions/windows/desktop/ms722784(v=vs.85))中搜尋或流覽索引（依名稱）。  
   
 ## <a name="connection-dynamic-properties"></a>連接動態屬性  
   

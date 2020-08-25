@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b8ac3739-05d3-4818-8201-a763795fb8b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9bdcecf462476b7f2fecfea48f174e0b4b2c499e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 686d3caeb7835d05a4e2eff0c588a4fb2ca18cf4
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452060"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759488"
 ---
 # <a name="rds-usage-and-security"></a>RDS 使用方式與安全性
 使用本節中的資訊來設定您的伺服器，並快速使用 RDS。 本節包含您在執行 RDS 時可能需要採取的特定設定步驟，說明 RDS 與其他技術之間的一些主要關聯性，並且有助於找出您在設定 RDS 解決方案時可能會遇到的問題的解決方案。  
@@ -29,17 +29,15 @@ ms.locfileid: "88452060"
   
  此章節包含下列主題。  
   
--   [設定 RDS](../../../ado/guide/remote-data-service/configuring-rds.md)  
+-   [設定 RDS](./configuring-rds.md)  
   
--   [搭配 RDS 使用相關技術](../../../ado/guide/remote-data-service/using-related-technologies-with-rds.md)  
+-   [搭配 RDS 使用相關技術](./using-related-technologies-with-rds.md)  
   
--   [DataFactory 自訂](../../../ado/guide/remote-data-service/datafactory-customization.md)  
+-   [DataFactory 自訂](./datafactory-customization.md)  
   
--   [為 RDS 疑難排解](../../../ado/guide/remote-data-service/troubleshooting-rds.md)  
+-   [對 RDS 進行疑難排解](./troubleshooting-rds.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [RDS 基本概念](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
- [RDS 案例](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [RDS 教學課程](../../../ado/guide/remote-data-service/rds-tutorial.md)
-
-
+ [RDS 基本概念](./rds-fundamentals.md)   
+ [RDS 案例](./rds-scenario.md)   
+ [RDS 教學課程](./rds-tutorial.md)

@@ -17,23 +17,23 @@ helpviewer_keywords:
 ms.assetid: 875a99ea-7f1a-4570-87b1-5ecbebbcf845
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 50a27857dc8ce5b2986d52a4285a81fff856243b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 79e6014e3bccc8ced6c8637f8966181069a42dd5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440680"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777827"
 ---
 # <a name="source-property-ado-md"></a>Source 屬性 (ADO MD)
-表示資料 [格集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)內資料的來源。  
+表示資料 [格集](./cellset-object-ado-md.md)內資料的來源。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定或傳回 **變數**，並為封閉的 [儲存格](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) 物件讀取/寫入，以及開啟的 **儲存格** 物件的唯讀。 **變數**應該包含有效的**字串**，例如 MDX 查詢。  
+ 設定或傳回 **變數**，並為封閉的 [儲存格](./cellset-object-ado-md.md) 物件讀取/寫入，以及開啟的 **儲存格** 物件的唯讀。 **變數**應該包含有效的**字串**，例如 MDX 查詢。  
   
 ## <a name="applies-to"></a>套用至  
- [Cellset 物件 (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
+ [Cellset 物件 (ADO MD)](./cellset-object-ado-md.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [ (VB) 的集格範例 ](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
- [ActiveConnection 屬性 (ADO MD) ](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)   
- [Open 方法 (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)
+ [ (VB) 的集格範例 ](./cellset-example-vb.md)   
+ [ActiveConnection 屬性 (ADO MD) ](./activeconnection-property-ado-md.md)   
+ [Open 方法 (ADO MD)](./open-method-ado-md.md)

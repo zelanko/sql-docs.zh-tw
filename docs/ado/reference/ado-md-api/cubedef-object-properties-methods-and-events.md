@@ -13,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: 5dac737a-b77e-47d3-9228-cd52b7a97b0a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8f819834240a5dcabb245d44b110109df520f413
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b5709318d51d9e29a017fcd3c36c2aa38a1296cd
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441100"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778247"
 ---
 # <a name="cubedef-object-properties-methods-and-events"></a>CubeDef 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  
- [Description 屬性](../../../ado/reference/ado-md-api/description-property-ado-md.md)  
+ [Description 屬性](./description-property-ado-md.md)  
   
- [維度集合](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)  
+ [維度集合](./dimensions-collection-ado-md.md)  
   
- [Name 屬性](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
+ [Name 屬性](./name-property-ado-md.md)  
   
- [屬性集合](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [屬性集合](../ado-api/properties-collection-ado.md)  
   
 ## <a name="methods"></a>方法  
- [GetSchemaObject 方法](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)  
+ [GetSchemaObject 方法](./getschemaobject-method-ado-md.md)  
   
 ## <a name="events"></a>事件  
  無。  
   
 ## <a name="see-also"></a>另請參閱  
- [CubeDef 物件 (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)
+ [CubeDef 物件 (ADO MD)](./cubedef-object-ado-md.md)
