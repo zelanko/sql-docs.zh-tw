@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: bbf27dcc-9815-4e2f-8ea8-b8c9fe6dedd6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b57772085e93d03c7ca40364e3074e3bc8228e02
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a76da795bcb373126b2e22ad57e5f7369c119829
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443620"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775157"
 ---
 # <a name="find-method-example-vb"></a>Find 方法範例 (VB)
-此範例會使用 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 物件的 [Find](../../../ado/reference/ado-api/find-method-ado.md) 方法，找出並計算 ***Pubs*** 資料庫中的商務標題數目。 此範例假設基礎提供者不支援類似的功能。  
+此範例會使用 [記錄集](./recordset-object-ado.md) 物件的 [Find](./find-method-ado.md) 方法，找出並計算 ***Pubs*** 資料庫中的商務標題數目。 此範例假設基礎提供者不支援類似的功能。  
   
 ```  
 'BeginFindVB  
@@ -101,5 +101,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADO) 的 Find 方法 ](../../../ado/reference/ado-api/find-method-ado.md)   
- [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [ (ADO) 的 Find 方法 ](./find-method-ado.md)   
+ [Recordset 物件 (ADO)](./recordset-object-ado.md)

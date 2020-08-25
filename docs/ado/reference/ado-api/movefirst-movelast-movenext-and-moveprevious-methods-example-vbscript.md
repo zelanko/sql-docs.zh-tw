@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 911aa1dd-2786-4f34-992c-bb2fbdabcbdf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ba0b69a87f11104888edcfb588d2633414b5a5ff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1e8f38ce47d2b5a48511a2dfe5a8650fc56c7be6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443170"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774257"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript"></a>MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法範例 (VBScript) 
-這個範例會使用 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)和 [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) 方法，根據提供的命令移動記錄 [集](../../../ado/reference/ado-api/recordset-object-ado.md) 的記錄指標。  
+這個範例會使用 [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveLast](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveNext](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)和 [MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) 方法，根據提供的命令移動記錄 [集](./recordset-object-ado.md) 的記錄指標。  
   
  將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器中，然後將它儲存為**MoveFirstVBS。** 您可以在任何瀏覽器中查看結果。  
   
@@ -185,5 +185,5 @@ ms.locfileid: "88443170"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法 (ADO) ](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
- [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法 (ADO) ](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
+ [Recordset 物件 (ADO)](./recordset-object-ado.md)

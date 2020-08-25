@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5375335fe0964107aed54de71d7e700b0588f209
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e4a79dc76537bbcbabc8b8689638ff9c670413e3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441990"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777357"
 ---
 # <a name="stat-method"></a>Stat 方法
-抓取 [資料流程](../../../ado/reference/ado-api/stream-object-ado.md) 物件的相關資訊。  
+抓取 [資料流程](./stream-object-ado.md) 物件的相關資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,7 +43,7 @@ Long stream.Stat(StatStg, StatFlag)
  *StatFlag*  
  指定此方法不會傳回 STATSTG 結構中的某些成員，因此會儲存記憶體配置作業。 值取自 STATFLAG 列舉。 STATFLAG 列舉有兩個值  
   
-|常數|值|  
+|持續性|值|  
 |--------------|-----------|  
 |STATFLAG_DEFAULT|0|  
 |STATFLAG_NONAME|1|  
@@ -71,4 +71,4 @@ Long stream.Stat(StatStg, StatFlag)
  如果未在 StatFlag 參數中指定 STATFLAG_NONAME，且目前的資料流程沒有可用的名稱，將會 E_NOTIMPL 此值。  
   
 ## <a name="applies-to"></a>套用至  
- [Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+ [Stream 物件 (ADO)](./stream-object-ado.md)

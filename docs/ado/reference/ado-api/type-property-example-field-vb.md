@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: accb72f5-a3bd-4a7e-92b6-6da0783b4b75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 94eeb6eb22e72b6db45d178c9d19ced33009be8e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 79f72b8795fc060a44b83c3587f9243971b7c951
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441720"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777087"
 ---
 # <a name="type-property-example-field-vb"></a>Type 屬性範例 (Field) (VB)
-這個範例會顯示[類型](../../../ado/reference/ado-api/type-property-ado.md)屬性，其方式是顯示常數的名稱，該常數對應到***Employees***資料表中所有[欄位](../../../ado/reference/ado-api/field-object.md)物件的[Type](../../../ado/reference/ado-api/type-property-ado.md)屬性值。 此程式必須有 FieldType 函數才能執行。  
+這個範例會顯示[類型](./type-property-ado.md)屬性，其方式是顯示常數的名稱，該常數對應到***Employees***資料表中所有[欄位](./field-object.md)物件的[Type](./type-property-ado.md)屬性值。 此程式必須有 FieldType 函數才能執行。  
   
 ```  
 'BeginTypeFieldVB  
@@ -107,5 +107,5 @@ Attribute VB_Name = "TypeField"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Field 物件](../../../ado/reference/ado-api/field-object.md)   
- [Type 屬性 (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
+ [Field 物件](./field-object.md)   
+ [Type 屬性 (ADO)](./type-property-ado.md)

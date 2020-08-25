@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d33467a5-5a56-450d-98c1-c3ce6f9f103c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 80f2727ae8254665bc39a42d635860f390224f25
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 93884ac8da110c3b6916d40d0216e4a1a2daf30e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443550"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775027"
 ---
 # <a name="getrows-method-example-jscript"></a>GetRows 方法範例 (JScript)
-這個範例會使用[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)方法，從[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)取出*Custiomers*資料表的所有資料列，並以產生的資料填入陣列。 在兩種情況下， **getrows** 方法會傳回小於所需的資料列數目：若已達到 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) ，或如果 **GetRows** 嘗試抓取其他使用者刪除的記錄，則為。 只有在第二個案例發生時，函式才會傳回 **False** 。 將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器，然後將它儲存為**GetRowsJS。**  
+這個範例會使用[GetRows](./getrows-method-ado.md)方法，從[記錄集](./recordset-object-ado.md)取出*Custiomers*資料表的所有資料列，並以產生的資料填入陣列。 在兩種情況下， **getrows** 方法會傳回小於所需的資料列數目：若已達到 [EOF](./bof-eof-properties-ado.md) ，或如果 **GetRows** 嘗試抓取其他使用者刪除的記錄，則為。 只有在第二個案例發生時，函式才會傳回 **False** 。 將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器，然後將它儲存為**GetRowsJS。**  
   
 ```  
 <!-- BeginGetRowsJS -->  
@@ -160,5 +160,5 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADO) 的 GetRows 方法 ](../../../ado/reference/ado-api/getrows-method-ado.md)   
- [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [ (ADO) 的 GetRows 方法 ](./getrows-method-ado.md)   
+ [Recordset 物件 (ADO)](./recordset-object-ado.md)

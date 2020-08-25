@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: d5d44659-e0d9-46d9-a297-99c43555082f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fa7ec524d950a45dd11e1bc62a983810ab2550ca
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5c88cd48a16907e67813f90c06dd9ce69d11ed30
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441510"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776887"
 ---
 # <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>WillChangeRecordset 和 RecordsetChangeComplete 事件 (ADO)
-在暫止的作業變更[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)之前，會呼叫**WillChangeRecordset**事件。 **RecordsetChangeComplete**事件會在**記錄集**變更之後呼叫。  
+在暫止的作業變更[記錄集](./recordset-object-ado.md)之前，會呼叫**WillChangeRecordset**事件。 **RecordsetChangeComplete**事件會在**記錄集**變更之後呼叫。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,10 +40,10 @@ RecordsetChangeComplete adReason, pError, adStatus, pRecordset
   
 #### <a name="parameters"></a>參數  
  *adReason*  
- [EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md)值，指定這個事件的原因。 其值可以是 **adRsnRequery**、 **adRsnResynch**、 **adRsnClose**、 **adRsnOpen**。  
+ [EventReasonEnum](./eventreasonenum.md)值，指定這個事件的原因。 其值可以是 **adRsnRequery**、 **adRsnResynch**、 **adRsnClose**、 **adRsnOpen**。  
   
  *adStatus*  
- [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)狀態值。  
+ [EventStatusEnum](./eventstatusenum.md)狀態值。  
   
  當呼叫 **WillChangeRecordset** 時，如果造成事件的作業成功，這個參數會設定為 **adStatusOK** 。 如果此事件無法要求取消暫止的作業，則會設定為 **adStatusCantDeny** 。  
   
@@ -54,18 +54,18 @@ RecordsetChangeComplete adReason, pError, adStatus, pRecordset
  在 **WillChangeRecordset** 或 **RecordsetChangeComplete** 傳回之前，請將此參數設定為 **adStatusUnwantedEvent** ，以防止後續的通知。  
   
  *pError*  
- [Error](../../../ado/reference/ado-api/error-object.md)物件。 描述 *adStatus* 的值為 **adStatusErrorsOccurred**時所發生的錯誤;否則未設定。  
+ [Error](./error-object.md)物件。 描述 *adStatus* 的值為 **adStatusErrorsOccurred**時所發生的錯誤;否則未設定。  
   
  *pRecordset*  
  **記錄集**物件。 發生此事件的 **記錄集** 。  
   
 ## <a name="remarks"></a>備註  
- **WillChangeRecordset**或**RecordsetChangeComplete**事件可能是因為**記錄集**的[Requery](../../../ado/reference/ado-api/requery-method.md)或[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法所造成。  
+ **WillChangeRecordset**或**RecordsetChangeComplete**事件可能是因為**記錄集**的[Requery](./requery-method.md)或[Open](./open-method-ado-recordset.md)方法所造成。  
   
  如果提供者不支援書簽，每次從提供者取出新資料列時，就會發生 **RecordsetChange** 事件通知。 此事件的頻率取決於 **RecordsetCacheSize** 屬性。  
   
  您必須針對每個可能的**adReason**值，將**adStatus**參數設定為**adStatusUnwantedEvent** ，以完全停止任何包含**adReason**參數之事件的事件通知。  
   
 ## <a name="see-also"></a>另請參閱  
- [ADO 事件模型範例 (VC + +) ](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [ADO 事件處理常式摘要](../../../ado/guide/data/ado-event-handler-summary.md)
+ [ADO 事件模型範例 (VC + +) ](./ado-events-model-example-vc.md)   
+ [ADO 事件處理常式摘要](../../guide/data/ado-event-handler-summary.md)

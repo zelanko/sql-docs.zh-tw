@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 12b0e160-5e5c-441f-bed7-ac0bd061e003
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8c3606f321ba8647e2d997b125c4c002bf7739b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 461d5410268b3ab02b739674aa86f762b1d4c597
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439070"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768447"
 ---
 # <a name="dataspace-object-and-createobject-method-example-vbscript"></a>DataSpace 物件和 CreateObject 方法範例 (VBScript)
 > [!IMPORTANT]
 >  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 下列範例顯示如何使用 RDS 的 [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) 方法 [。](../../../ado/reference/rds-api/dataspace-object-rds.md) 具有預設商務物件（ [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)）的空間。 若要測試此範例，請將此程式碼剪下並貼到 \<Body> 一般 HTML 檔案中的和標記之間，然後將 \</Body> 它命名為 **DataSpaceVBS .asp**。 ASP 腳本會識別您的伺服器。  
+ 下列範例顯示如何使用 RDS 的 [CreateObject](./createobject-method-rds.md) 方法 [。](./dataspace-object-rds.md) 具有預設商務物件（ [RDSServer. DataFactory](./datafactory-object-rdsserver.md)）的空間。 若要測試此範例，請將此程式碼剪下並貼到 \<Body> 一般 HTML 檔案中的和標記之間，然後將 \</Body> 它命名為 **DataSpaceVBS .asp**。 ASP 腳本會識別您的伺服器。  
   
 ```  
 <!-- BeginDataSpaceVBS -->  
@@ -148,7 +148,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [RDS)  (CreateObject 方法 ](../../../ado/reference/rds-api/createobject-method-rds.md)   
- [DataSpace 物件 (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)
-
-
+ [RDS)  (CreateObject 方法 ](./createobject-method-rds.md)   
+ [DataSpace 物件 (RDS)](./dataspace-object-rds.md)

@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ce1d75faaf4bbaeb941a0da87b68c09744c2a422
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 10bc68683f337f5a0bdf6fc5679c4276925a4234
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444430"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775847"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
-指定在[連接](../../../ado/reference/ado-api/connection-object-ado.md)中修改資料、開啟[記錄](../../../ado/reference/ado-api/record-object-ado.md)，或針對**記錄**和[資料流程](../../../ado/reference/ado-api/stream-object-ado.md)物件的[Mode](../../../ado/reference/ado-api/mode-property-ado.md)屬性指定值的可用許可權。  
+指定在[連接](./connection-object-ado.md)中修改資料、開啟[記錄](./record-object-ado.md)，或針對**記錄**和[資料流程](./stream-object-ado.md)物件的[Mode](./mode-property-ado.md)屬性指定值的可用許可權。  
   
-|常數|值|描述|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
 |**adModeRead**|1|表示唯讀許可權。|  
 |**adModeReadWrite**|3|表示讀取/寫入權限。|  
@@ -41,7 +41,7 @@ ms.locfileid: "88444430"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 相等  
  封裝： **.com. 資料**  
   
-|常數|  
+|持續性|  
 |--------------|  
 |AdoEnums. ConnectMode. 讀取|  
 |AdoEnums. ConnectMode|  
@@ -57,11 +57,11 @@ ms.locfileid: "88444430"
 
 :::row:::
     :::column:::
-        [Mode 屬性 (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)  
-        [Open 方法 (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)  
+        [Mode 屬性 (ADO)](./mode-property-ado.md)  
+        [Open 方法 (ADO Record)](./open-method-ado-record.md)  
     :::column-end:::
     :::column:::
-        [Open 方法 (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)  
-        [Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+        [Open 方法 (ADO Stream)](./open-method-ado-stream.md)  
+        [Stream 物件 (ADO)](./stream-object-ado.md)  
     :::column-end:::
 :::row-end:::

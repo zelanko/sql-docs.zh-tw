@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 55ee67c7-a583-42aa-849a-78264b4cb614
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ead66b4c3215ef0d7a42e8ec029e97502dac2f4f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8ddda86faaf032fbc981c159300ee4545643bb2e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439550"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769447"
 ---
 # <a name="rightsenum"></a>RightsEnum
 指定物件之群組或使用者的許可權或許可權。  
   
-|常數|值|描述|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
 |**adRightCreate**|16384 ( # B0 H4000) |使用者或群組有權建立此類型的新物件。|  
 |**adRightDelete**|65536 ( # B0 H10000) |使用者或群組具有從物件刪除資料的許可權。 對於 **資料表**之類的物件，使用者具有從記錄中刪除資料值的許可權。|  
@@ -37,7 +37,7 @@ ms.locfileid: "88439550"
 |**adRightInsert**|32768 ( # B0 H8000) |使用者或群組具有插入物件的許可權。 對於 **資料表**之類的物件，使用者具有將資料插入資料表中的許可權。|  
 |**adRightMaximumAllowed**|33554432 ( # B0 H2000000) |使用者或群組具有提供者允許的最大許可權數目。 特定許可權視提供者而定。|  
 |**adRightNone**|0|使用者或群組沒有物件的許可權。|  
-|**adRightRead**|-2147483648 (&H80000000)|使用者或群組有讀取物件的許可權。 對於 [資料表](../../../ado/reference/adox-api/table-object-adox.md)之類的物件，使用者有權讀取資料表中的資料。|  
+|**adRightRead**|-2147483648 (&H80000000)|使用者或群組有讀取物件的許可權。 對於 [資料表](./table-object-adox.md)之類的物件，使用者有權讀取資料表中的資料。|  
 |**adRightReadDesign**|1024 ( # B0 H400) |使用者或群組有權讀取物件的設計。|  
 |**adRightReadPermissions**|131072 ( # B0 H20000) |使用者或群組可以在目錄中查看物件的特定許可權，但不能變更。|  
 |**adRightReference**|8192 ( # B0 H2000) |使用者或群組具有參考物件的許可權。|  
@@ -51,9 +51,9 @@ ms.locfileid: "88439550"
 
 :::row:::
     :::column:::
-        [GetPermissions 方法 (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)  
+        [GetPermissions 方法 (ADOX)](./getpermissions-method-adox.md)  
     :::column-end:::
     :::column:::
-        [SetPermissions 方法 (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)  
+        [SetPermissions 方法 (ADOX)](./setpermissions-method-adox.md)  
     :::column-end:::
 :::row-end:::

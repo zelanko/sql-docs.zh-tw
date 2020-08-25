@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3dd1000dce8308ada4044eb9f043097f8767a9c0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c17ccfe0a31714d5e2b3945960a4ff3d2ad55d1e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451320"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776637"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction 介面
 **ADORecordsetConstruction**介面是用來從 C/c + + 應用程式中**的 OLE DB 資料列集物件**來建立 ADO**記錄集**物件。  
@@ -32,9 +32,9 @@ ms.locfileid: "88451320"
   
 |屬性|描述|  
 |-|-|  
-|[章節](../../../ado/reference/ado-api/chapter-property-ado.md)|讀取/寫入。<br />取得/設定這個 ADO**記錄集**物件的 OLE DB**章節**物件。|  
-|[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|讀取/寫入。<br />取得/設定這個 ADO**記錄集**物件上的 OLE DB **RowPosition**物件。|  
-|[資料列集](../../../ado/reference/ado-api/rowset-property-ado.md)|讀取/寫入。<br />取得/設定此 ADO**記錄集**物件上**的 OLE DB 資料列集物件**。|  
+|[章節](./chapter-property-ado.md)|讀取/寫入。<br />取得/設定這個 ADO**記錄集**物件的 OLE DB**章節**物件。|  
+|[RowPosition](./rowposition-property-ado.md)|讀取/寫入。<br />取得/設定這個 ADO**記錄集**物件上的 OLE DB **RowPosition**物件。|  
+|[資料列集](./rowset-property-ado.md)|讀取/寫入。<br />取得/設定此 ADO**記錄集**物件上**的 OLE DB 資料列集物件**。|  
   
 ## <a name="methods"></a>方法  
  無。  
@@ -80,5 +80,5 @@ ms.locfileid: "88451320"
  **UUID：** 00000283-0000-0010-8000-00AA006D2EA4  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADO) 的記錄集物件 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Rowset 屬性 (ADO)](../../../ado/reference/ado-api/rowset-property-ado.md)
+ [ (ADO) 的記錄集物件 ](./recordset-object-ado.md)   
+ [Rowset 屬性 (ADO)](./rowset-property-ado.md)

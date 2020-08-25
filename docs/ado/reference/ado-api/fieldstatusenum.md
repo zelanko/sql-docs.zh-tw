@@ -16,23 +16,23 @@ helpviewer_keywords:
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 06044b54be7066deb5cf7510f060716106816805
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21f3ebabab3096217348e2309070d81e90128b8e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443710"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775327"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
-指定[欄位物件](../../../ado/reference/ado-api/field-object.md)的[狀態](../../../ado/reference/ado-api/status-property-ado-field.md)。  
+指定[欄位物件](./field-object.md)的[狀態](./status-property-ado-field.md)。  
   
  **AdFieldPending \* **值表示導致狀態設定的作業，而且可能會與其他狀態值合併。  
   
-|常數|值|描述|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
 |**adFieldAlreadyExists**|26|指出指定的欄位已經存在。|  
-|**adFieldBadStatus**|12|表示從 ADO 傳送到 OLE DB 提供者的狀態值無效。 可能的原因包括 OLE DB 1.0 或1.1 提供者，或 [值](../../../ado/reference/ado-api/value-property-ado.md) 和 [狀態](../../../ado/reference/ado-api/status-property-ado-field.md)的不當組合。|  
-|**adFieldCannotComplete**|20|指出 [來源](../../../ado/reference/ado-api/source-property-ado-record.md) 所指定之 URL 的伺服器無法完成此作業。|  
+|**adFieldBadStatus**|12|表示從 ADO 傳送到 OLE DB 提供者的狀態值無效。 可能的原因包括 OLE DB 1.0 或1.1 提供者，或 [值](./value-property-ado.md) 和 [狀態](./status-property-ado-field.md)的不當組合。|  
+|**adFieldCannotComplete**|20|指出 [來源](./source-property-ado-record.md) 所指定之 URL 的伺服器無法完成此作業。|  
 |**adFieldCannotDeleteSource**|23|表示在移動作業期間，樹狀目錄或子樹已移至新位置，但無法刪除來源。|  
 |**adFieldCantConvertValue**|2|表示無法在不遺失資料的情況下抓取或儲存欄位。|  
 |**adFieldCantCreate**|7|表示無法加入欄位，因為提供者已超過限制 (例如允許的欄位數目) 。|  
@@ -45,7 +45,7 @@ ms.locfileid: "88443710"
 |**adFieldIsNull**|3|指出提供者傳回型別為 VT_Null 的 VARIANT 值，而且欄位不是空的。|  
 |**adFieldOK**|0|預設值。 表示已成功新增或刪除此欄位。|  
 |**adFieldOutOfSpace**|22|指出提供者無法取得足夠的儲存空間來完成移動或複製作業。|  
-|**adFieldPendingChange**|0x40000|表示欄位已刪除，然後重新加入（也許是使用不同的資料類型），或先前具有 **adFieldOK** 狀態的欄位值已變更。 欄位的最終格式將會在呼叫[Update](../../../ado/reference/ado-api/update-method.md)方法之後修改[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)集合。|  
+|**adFieldPendingChange**|0x40000|表示欄位已刪除，然後重新加入（也許是使用不同的資料類型），或先前具有 **adFieldOK** 狀態的欄位值已變更。 欄位的最終格式將會在呼叫[Update](./update-method.md)方法之後修改[Fields](./fields-collection-ado.md)集合。|  
 |**adFieldPendingDelete**|0x20000|指出 **刪除** 作業導致狀態設定。 呼叫**Update**方法之後，欄位已標記為要從**Fields**集合中刪除。|  
 |**adFieldPendingInsert**|0x10000|指出 **附加** 作業造成設定的狀態。 呼叫**Update**方法之後，**欄位**已標示為要加入**Fields**集合中。|  
 |**adFieldPendingUnknown**|0x80000|指出提供者無法判斷哪些作業造成欄位狀態的設定。|  
@@ -65,4 +65,4 @@ ms.locfileid: "88443710"
  這些常數沒有 ADO/WFC 對等專案。  
   
 ## <a name="applies-to"></a>套用至  
- [Status 屬性 (ADO Field)](../../../ado/reference/ado-api/status-property-ado-field.md)
+ [Status 屬性 (ADO Field)](./status-property-ado-field.md)

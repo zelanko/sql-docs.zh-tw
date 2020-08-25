@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e6dbeea5a053a1395e051939e313b9f672c73d2f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5ee1d8d211c0ceeed02408f559c63b5942aafe05
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442900"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773627"
 ---
 # <a name="optimize-property-example-vb"></a>Optimize 屬性範例 (VB)
-此範例示範 [Field](../../../ado/reference/ado-api/field-object.md) 物件的動態 **優化** 屬性。 不會編制***Pubs***資料庫中***作者***資料表的***zip***欄位索引。 將 [***壓縮***] 欄位上的 [[優化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)] 屬性設定為 [ **True** ] 會授權 ADO 建立索引，以改善[尋找](../../../ado/reference/ado-api/find-method-ado.md)方法的效能。  
+此範例示範 [Field](./field-object.md) 物件的動態 **優化** 屬性。 不會編制***Pubs***資料庫中***作者***資料表的***zip***欄位索引。 將 [***壓縮***] 欄位上的 [[優化](./optimize-property-dynamic-ado.md)] 屬性設定為 [ **True** ] 會授權 ADO 建立索引，以改善[尋找](./find-method-ado.md)方法的效能。  
   
 ```  
 'BeginOptimizeVB  
@@ -88,5 +88,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Field 物件](../../../ado/reference/ado-api/field-object.md)   
- [Optimize 動態屬性 (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)
+ [Field 物件](./field-object.md)   
+ [Optimize 動態屬性 (ADO)](./optimize-property-dynamic-ado.md)

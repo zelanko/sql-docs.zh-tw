@@ -9,12 +9,12 @@ ms.date: 04/18/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4285cbe15659bde63655fc61141d4df7abdbba09
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f6f8aa2351837c43454656d468e93818adfb7ccf
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401088"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767007"
 ---
 # <a name="microsoft-analytics-platform-system"></a>Microsoft Analytics Platform System
 
@@ -24,7 +24,7 @@ Microsoft Analytics Platform System (APS) 是專為資料倉儲和巨量資料�
 
 Analytics Platform System 裝載了 SQL Server 平行資料倉儲 (PDW)，這是一款用來執行大量平行處理 (MPP) 資料倉儲的軟體。
 
-PolyBase 技術結合了關聯式 PDW 資料與多個來源的 Hadoop 資料，包括 Windows Server 上的 Hortonworks、Linux 上的 Hortonworks、linux 上的 Cloudera，以及 HDInsight 的 Azure blob 儲存體。 這些進階的資料整合能力，加上深層整合的商業智慧工具，可讓 Analytics Platform System 傳回整合式的分析，藉此讓企業決策者制定出更縝密和更富有洞察力的商業決策。
+PolyBase 技術結合了關聯式 PDW 資料與來自多種來源的 Hadoop 資料，包括 Windows Server 上的 Hortonworks、Linux 上的 Hortonworks、linux 上的 Cloudera 和 HDInsight 的 Azure blob 儲存體。 這些進階的資料整合能力，加上深層整合的商業智慧工具，可讓 Analytics Platform System 傳回整合式的分析，藉此讓企業決策者制定出更縝密和更富有洞察力的商業決策。
 
 Analytics Platform System 會以設備形式運送至您的資料中心，其配備專為執行多個工作負載預先安裝與預先設定的硬體和軟體。 當您購買 Analytics Platform System 時，可根據業務需求購買適用於 PDW 的計算節點。
 
@@ -39,11 +39,11 @@ Analytics Platform System 不僅快速、可擴充，並設計有高備援與高
 
 除了實現突破性的查詢效能，PDW 還可輕鬆提供下列優勢：
 
-- 藉由將「縮放單位」新增至現有系統，將您的資料倉儲從幾 tb 增加到超過 6 pb 的資料。
+- 藉由將「縮放單位」新增至現有系統，將您的資料倉儲從幾 tb 的資料倉儲成長至超過 6 pb 以上的資料。
 
-- 您的資料會因為內建的高冗余和高可用性，而需要時，才會受到信任。
+- 因為內建的高冗余和高可用性，所以您可以在需要時信任您的資料。
 
-- 解決載入和合併資料的現代化資料挑戰。
+- 解決載入和合併資料的新式資料挑戰。
 
 - 使用 PDW 高度平行化的 PolyBase 技術，將 Hadoop 資料與關聯式資料整合，以快速分析。
 
@@ -51,4 +51,4 @@ Analytics Platform System 不僅快速、可擴充，並設計有高備援與高
 
 ## <a name="next-steps"></a>後續步驟
 
-如需 PDW 優勢的詳細資訊，請參閱 MSDN 上的 [A Breakthrough Platform for Next-Generation Data Warehousing and Big Data Solutions](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/dn520808%28v=msdn.10%29) (下一代資料倉儲和巨量資料解決方案的突破性平台) 白皮書。
+如需 PDW 優勢的詳細資訊，請參閱 MSDN 上的 [A Breakthrough Platform for Next-Generation Data Warehousing and Big Data Solutions](/previous-versions/sql/sql-server-2012/dn520808(v=msdn.10)) (下一代資料倉儲和巨量資料解決方案的突破性平台) 白皮書。

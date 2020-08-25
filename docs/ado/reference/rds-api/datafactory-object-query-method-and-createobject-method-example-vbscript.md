@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: b4e2844a-120a-4513-860b-f1b6e4b5dda4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d4ae79c8ee96d94d697ad78cf77f1d96b8c2e4a5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 53c9d3161126a1728335c132fc7886b49297f2cb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439120"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768487"
 ---
 # <a name="datafactory-object-query-method-and-createobject-method-example-vbscript"></a>DataFactory 物件、Query 方法和 CreateObject 方法範例 (VBScript)
 > [!IMPORTANT]
 >  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 這個範例會使用 RDS 的[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)方法來建立[RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)物件。 [空間](../../../ado/reference/rds-api/dataspace-object-rds.md)物件。 若要測試此範例，請將此程式碼剪下並貼到 \<Body> 一般 HTML 檔案中的和標記之間，然後將 \</Body> 它命名為 **DataFactoryVBS .asp**。 ASP 腳本會識別您的伺服器。  
+ 這個範例會使用 RDS 的[CreateObject](./createobject-method-rds.md)方法來建立[RDSServer. DataFactory](./datafactory-object-rdsserver.md)物件。 [空間](./dataspace-object-rds.md)物件。 若要測試此範例，請將此程式碼剪下並貼到 \<Body> 一般 HTML 檔案中的和標記之間，然後將 \</Body> 它命名為 **DataFactoryVBS .asp**。 ASP 腳本會識別您的伺服器。  
   
 ```  
 <!-- BeginDataFactoryVBS -->  
@@ -138,9 +138,7 @@ to bring back a Recordset. </H4>
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [RDS)  (CreateObject 方法 ](../../../ado/reference/rds-api/createobject-method-rds.md)   
- [DataFactory 物件 (RDSServer) ](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
- [ (RDS) 的空間物件 ](../../../ado/reference/rds-api/dataspace-object-rds.md)   
- [Query 方法 (RDS)](../../../ado/reference/rds-api/query-method-rds.md)
-
-
+ [RDS)  (CreateObject 方法 ](./createobject-method-rds.md)   
+ [DataFactory 物件 (RDSServer) ](./datafactory-object-rdsserver.md)   
+ [ (RDS) 的空間物件 ](./dataspace-object-rds.md)   
+ [Query 方法 (RDS)](./query-method-rds.md)

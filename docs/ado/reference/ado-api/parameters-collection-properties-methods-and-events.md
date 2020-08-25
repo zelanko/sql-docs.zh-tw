@@ -13,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: 63b3f9a3-1c36-4d06-a6b0-49b5eb5adf06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cb315cfe0a46e3d3c5ba6bbf4f34044ae0f8fa9a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 254829dcc26a0a73503b7ef79763c05c61c2f8ca
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442800"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773297"
 ---
 # <a name="parameters-collection-properties-methods-and-events"></a>Parameters 集合屬性、方法和事件
 ## <a name="properties"></a>屬性  
- [Count 屬性](../../../ado/reference/ado-api/count-property-ado.md)  
+ [Count 屬性](./count-property-ado.md)  
   
- [Item 屬性](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Item 屬性](./item-property-ado.md)  
   
 ## <a name="methods"></a>方法  
- [Append 方法](../../../ado/reference/ado-api/append-method-ado.md)  
+ [Append 方法](./append-method-ado.md)  
   
- [Delete 方法 (ADO Parameters 集合)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)  
+ [Delete 方法 (ADO Parameters 集合)](./delete-method-ado-parameters-collection.md)  
   
- [Refresh 方法](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Refresh 方法](./refresh-method-ado.md)  
   
 ## <a name="events"></a>事件  
  無。  
   
 ## <a name="see-also"></a>另請參閱  
- [Parameters 集合 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)
+ [Parameters 集合 (ADO)](./parameters-collection-ado.md)

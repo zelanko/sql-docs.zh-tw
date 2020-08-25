@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3675f641-b4b1-48ff-ba33-8d9ea064cd04
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6f161c3e8e8b693b4a5be474406213116feae8ae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7c4a8c80c4d3ad939d88d7852730320eb30ab1e5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451090"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776347"
 ---
 # <a name="cachesize-property-example-jscript"></a>CacheSize 屬性範例 (JScript)
-這個範例會使用 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) 屬性來顯示以和沒有30個記錄快取執行之作業的效能差異。 將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器，然後將它儲存為**CacheSizeJS。**  
+這個範例會使用 [CacheSize](./cachesize-property-ado.md) 屬性來顯示以和沒有30個記錄快取執行之作業的效能差異。 將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器，然後將它儲存為**CacheSizeJS。**  
   
 ```  
 <!-- BeginCacheSizeJS -->  
@@ -150,5 +150,5 @@ body {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADO) 的 CacheSize 屬性 ](../../../ado/reference/ado-api/cachesize-property-ado.md)   
- [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [ (ADO) 的 CacheSize 屬性 ](./cachesize-property-ado.md)   
+ [Recordset 物件 (ADO)](./recordset-object-ado.md)

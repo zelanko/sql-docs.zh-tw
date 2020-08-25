@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b57d144c-0a34-49c8-94cf-e5981edfcca6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 832981161e0fcc6ec297186975de33c027cc694f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 17e38f481478a43f59372d5be23fb29b701bc9c2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451270"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776517"
 ---
 # <a name="append-and-createparameter-methods-example-vc"></a>附加和 CreateParameter 方法範例 (VC + +) 
-這個範例會使用 [Append](../../../ado/reference/ado-api/append-method-ado.md) 和 [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) 方法，以輸入參數來執行預存程式。  
+這個範例會使用 [Append](./append-method-ado.md) 和 [CreateParameter](./createparameter-method-ado.md) 方法，以輸入參數來執行預存程式。  
   
 ## <a name="example"></a>範例  
   
@@ -204,5 +204,5 @@ Authors with 25 percent royalty
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADO) 的 Append 方法 ](../../../ado/reference/ado-api/append-method-ado.md)   
- [CreateParameter 方法 (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)
+ [ (ADO) 的 Append 方法 ](./append-method-ado.md)   
+ [CreateParameter 方法 (ADO)](./createparameter-method-ado.md)

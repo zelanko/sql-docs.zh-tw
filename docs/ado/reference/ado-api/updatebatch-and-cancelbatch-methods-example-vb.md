@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 41625f6f-e12d-4d8d-9f60-0729ce64c31e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25551017d68c1056a496cbd0a96032191756abdb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f3bd1d0d54c73a675f2fc84f47646c909d2eb2f9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441610"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776987"
 ---
 # <a name="updatebatch-and-cancelbatch-methods-example-vb"></a> (VB) 的 UpdateBatch 和 CancelBatch 方法範例
-這個範例會示範 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) 方法與 [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) 方法搭配使用。  
+這個範例會示範 [UpdateBatch](./updatebatch-method.md) 方法與 [CancelBatch](./cancelbatch-method-ado.md) 方法搭配使用。  
   
 ```  
 'BeginUpdateBatchVB  
@@ -125,5 +125,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADO) 的 CancelBatch 方法 ](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
- [UpdateBatch 方法](../../../ado/reference/ado-api/updatebatch-method.md)
+ [ (ADO) 的 CancelBatch 方法 ](./cancelbatch-method-ado.md)   
+ [UpdateBatch 方法](./updatebatch-method.md)

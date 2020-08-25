@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d9d8715-e4ad-4ff3-bf7f-f1dc0532d8c2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 264cf997d3dc7448be90d5e3115bb54053a107b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a7a8aca2bb5dd4acf6a2b7b2702eb7807d520f73
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438620"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767467"
 ---
 # <a name="sortdirection-property-rds"></a>SortDirection 屬性 (RDS)
 指出排序次序為遞增或遞減。  
@@ -36,20 +36,18 @@ DataControl.SortDirection = value
   
 #### <a name="parameters"></a>參數  
  *DataControl*  
- 代表 RDS 的物件變數 [。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 物件。  
+ 代表 RDS 的物件變數 [。DataControl](./datacontrol-object-rds.md) 物件。  
   
  *值*  
  **布林**值，當設為**True**時，表示排序方向為遞增。 **False** 表示遞減順序。  
   
 ## <a name="remarks"></a>備註  
- [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md)、 **SortDirection**、 [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md)、 [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md)和[FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)屬性提供用戶端快取上的排序和篩選功能。 排序功能會使用一個資料行的值來排序記錄。 篩選功能會根據尋找準則顯示記錄的子集，而完整的 [記錄集會](../../../ado/reference/ado-api/recordset-object-ado.md) 保留在快取中。 [Reset](../../../ado/reference/rds-api/reset-method-rds.md)方法會執行準則，並將目前的**記錄集**取代為可更新的**記錄集**。  
+ [SortColumn](./sortcolumn-property-rds.md)、 **SortDirection**、 [FilterValue](./filtervalue-property-rds.md)、 [FilterCriterion](./filtercriterion-property-rds.md)和[FilterColumn](./filtercolumn-property-rds.md)屬性提供用戶端快取上的排序和篩選功能。 排序功能會使用一個資料行的值來排序記錄。 篩選功能會根據尋找準則顯示記錄的子集，而完整的 [記錄集會](../ado-api/recordset-object-ado.md) 保留在快取中。 [Reset](./reset-method-rds.md)方法會執行準則，並將目前的**記錄集**取代為可更新的**記錄集**。  
   
 ## <a name="applies-to"></a>套用至  
- [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl 物件 (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [FilterColumn、FilterCriterion、FilterValue、SortColumn 和 SortDirection 屬性以及 Reset 方法範例 (VBScript) ](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
- [Sort 屬性](../../../ado/reference/ado-api/sort-property.md)   
- [SortColumn 屬性 (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)
-
-
+ [FilterColumn、FilterCriterion、FilterValue、SortColumn 和 SortDirection 屬性以及 Reset 方法範例 (VBScript) ](./filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
+ [Sort 屬性](../ado-api/sort-property.md)   
+ [SortColumn 屬性 (RDS)](./sortcolumn-property-rds.md)

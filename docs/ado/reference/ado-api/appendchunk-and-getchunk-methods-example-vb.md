@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c07862b5-e466-46bd-910b-59ac96709cb9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c37ac5209e7244a76f62a2d6979efb2df73a8e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aeab0b42b530c91e57ea25fbca9e7dc3b7bfdba2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451250"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776497"
 ---
 # <a name="appendchunk-and-getchunk-methods-example-vb"></a>AppendChunk 和 GetChunk 方法範例 (VB) 
-此範例會使用 [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) 和 [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) 方法，以另一筆記錄的資料來填滿影像欄位。  
+此範例會使用 [AppendChunk](./appendchunk-method-ado.md) 和 [GetChunk](./getchunk-method-ado.md) 方法，以另一筆記錄的資料來填滿影像欄位。  
   
 ```  
 'BeginAppendChunkVB  
@@ -149,7 +149,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADO) 的 AppendChunk 方法 ](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
- [Field 物件](../../../ado/reference/ado-api/field-object.md)   
- [ (ADO) 的 GetChunk 方法 ](../../../ado/reference/ado-api/getchunk-method-ado.md)   
- [Parameter 物件](../../../ado/reference/ado-api/parameter-object.md)
+ [ (ADO) 的 AppendChunk 方法 ](./appendchunk-method-ado.md)   
+ [Field 物件](./field-object.md)   
+ [ (ADO) 的 GetChunk 方法 ](./getchunk-method-ado.md)   
+ [Parameter 物件](./parameter-object.md)

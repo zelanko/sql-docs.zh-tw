@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 594c51cb-1157-4417-802b-d91b875ba020
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43037237ecba87b099c6e74b32f0a78c914a72f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 092164ac8df26ae79da94125d0071baccd89a3f5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443640"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775147"
 ---
 # <a name="find-method-example-vc"></a>Find 方法範例 (VC++)
-此範例會使用 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 物件的 [Find](../../../ado/reference/ado-api/find-method-ado.md) 方法，找出並計算 **Pubs** 資料庫中的商務標題數目。 此範例假設基礎提供者不支援類似的功能。  
+此範例會使用 [記錄集](./recordset-object-ado.md) 物件的 [Find](./find-method-ado.md) 方法，找出並計算 **Pubs** 資料庫中的商務標題數目。 此範例假設基礎提供者不支援類似的功能。  
   
 ```  
 // BeginFindCpp.cpp  
@@ -156,5 +156,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADO) 的 Find 方法 ](../../../ado/reference/ado-api/find-method-ado.md)   
- [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [ (ADO) 的 Find 方法 ](./find-method-ado.md)   
+ [Recordset 物件 (ADO)](./recordset-object-ado.md)

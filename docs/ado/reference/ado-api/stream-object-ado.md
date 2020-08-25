@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 0514531f-009d-4519-abc3-d727014a39f1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4dc81b24afa52e16103028cd0491af452824415
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: de91c32d62a0180ccab263ececd9e2f9e0442aed
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441860"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777227"
 ---
 # <a name="stream-object-ado"></a>Stream 物件 (ADO)
 代表二進位資料或文字的資料流程。  
   
- 在樹狀結構階層架構（例如檔案系統或電子郵件系統）中， [記錄](../../../ado/reference/ado-api/record-object-ado.md) 可能會有與其相關聯的預設二進位資料流程，其中包含檔案的內容或電子郵件。 **資料流程**物件可以用來操作包含這些資料資料流程的欄位或記錄。 您可以透過下列方式取得 **資料流程** 物件：  
+ 在樹狀結構階層架構（例如檔案系統或電子郵件系統）中， [記錄](./record-object-ado.md) 可能會有與其相關聯的預設二進位資料流程，其中包含檔案的內容或電子郵件。 **資料流程**物件可以用來操作包含這些資料資料流程的欄位或記錄。 您可以透過下列方式取得 **資料流程** 物件：  
   
 -   從指向物件的 URL (通常是包含二進位或文字資料的檔案) 。 這個物件可以是簡單的檔、代表結構化檔的 **記錄** 物件或資料夾。  
   
@@ -36,46 +36,46 @@ ms.locfileid: "88441860"
   
  使用 **資料流程** 物件的方法和屬性，您可以執行下列動作：  
   
--   使用[open](../../../ado/reference/ado-api/open-method-ado-stream.md)方法，從**記錄**或 URL 開啟**資料流程**物件。  
+-   使用[open](./open-method-ado-stream.md)方法，從**記錄**或 URL 開啟**資料流程**物件。  
   
--   使用[close](../../../ado/reference/ado-api/close-method-ado.md)方法關閉**資料流程**。  
+-   使用[close](./close-method-ado.md)方法關閉**資料流程**。  
   
--   使用[寫入](../../../ado/reference/ado-api/write-method.md)和[WriteText](../../../ado/reference/ado-api/writetext-method.md)方法輸入**資料流程**的位元組或文字。  
+-   使用[寫入](./write-method.md)和[WriteText](./writetext-method.md)方法輸入**資料流程**的位元組或文字。  
   
--   使用[read](../../../ado/reference/ado-api/read-method.md)和[ReadText](../../../ado/reference/ado-api/readtext-method.md)方法從**資料流程**讀取位元組。  
+-   使用[read](./read-method.md)和[ReadText](./readtext-method.md)方法從**資料流程**讀取位元組。  
   
--   使用[Flush](../../../ado/reference/ado-api/flush-method-ado.md)方法將仍在 ADO 緩衝區中的任何**資料流程**資料寫入基礎物件。  
+-   使用[Flush](./flush-method-ado.md)方法將仍在 ADO 緩衝區中的任何**資料流程**資料寫入基礎物件。  
   
--   使用[CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md)方法將**資料流程**的內容複寫到另一個**資料流程**。  
+-   使用[CopyTo](./copyto-method-ado.md)方法將**資料流程**的內容複寫到另一個**資料流程**。  
   
--   使用 [SkipLine](../../../ado/reference/ado-api/skipline-method.md)方法和 [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) 屬性，控制如何從原始程式檔讀取行。  
+-   使用 [SkipLine](./skipline-method.md)方法和 [LineSeparator](./lineseparator-property-ado.md) 屬性，控制如何從原始程式檔讀取行。  
   
--   使用 [EOS](../../../ado/reference/ado-api/eos-property.md)屬性和 [SetEOS](../../../ado/reference/ado-api/seteos-method.md) 方法判斷資料流程位置的結尾。  
+-   使用 [EOS](./eos-property.md)屬性和 [SetEOS](./seteos-method.md) 方法判斷資料流程位置的結尾。  
   
--   使用 [SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)和 [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md) 方法儲存和還原檔案中的資料。  
+-   使用 [SaveToFile](./savetofile-method.md)和 [LoadFromFile](./loadfromfile-method-ado.md) 方法儲存和還原檔案中的資料。  
   
--   指定用來儲存 **資料流程** 與 [字元集](../../../ado/reference/ado-api/charset-property-ado.md) 屬性的字元集。  
+-   指定用來儲存 **資料流程** 與 [字元集](./charset-property-ado.md) 屬性的字元集。  
   
--   使用[Cancel](../../../ado/reference/ado-api/cancel-method-ado.md)方法來中止非同步**資料流程**作業。  
+-   使用[Cancel](./cancel-method-ado.md)方法來中止非同步**資料流程**作業。  
   
--   使用[Size](../../../ado/reference/ado-api/size-property-ado-stream.md)屬性來判斷**資料流程**中的位元組數目。  
+-   使用[Size](./size-property-ado-stream.md)屬性來判斷**資料流程**中的位元組數目。  
   
--   使用[position](../../../ado/reference/ado-api/position-property-ado.md)屬性控制**資料流程**中的目前位置。  
+-   使用[position](./position-property-ado.md)屬性控制**資料流程**中的目前位置。  
   
--   使用[type](../../../ado/reference/ado-api/type-property-ado-stream.md)屬性判斷**資料流程**中的資料類型。  
+-   使用[type](./type-property-ado-stream.md)屬性判斷**資料流程**中的資料類型。  
   
--   使用[state](../../../ado/reference/ado-api/state-property-ado.md)屬性來判斷**資料流程**的目前狀態 (關閉、開啟或執行) 。  
+-   使用[state](./state-property-ado.md)屬性來判斷**資料流程**的目前狀態 (關閉、開啟或執行) 。  
   
--   使用[mode](../../../ado/reference/ado-api/mode-property-ado.md)屬性指定**資料流程**的存取模式。  
+-   使用[mode](./mode-property-ado.md)屬性指定**資料流程**的存取模式。  
   
 > [!NOTE]
->  使用 HTTP 配置的 Url 會自動叫用 [Microsoft OLE DB 提供者進行網際網路發佈](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 如需詳細資訊，請參閱 [絕對和相對 url](../../../ado/guide/data/absolute-and-relative-urls.md)。  
+>  使用 HTTP 配置的 Url 會自動叫用 [Microsoft OLE DB 提供者進行網際網路發佈](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 如需詳細資訊，請參閱 [絕對和相對 url](../../guide/data/absolute-and-relative-urls.md)。  
   
  **資料流程**物件可以安全地進行腳本處理。  
   
  此章節包含下列主題。  
   
--   [Stream 物件屬性、方法和事件](../../../ado/reference/ado-api/stream-object-properties-methods-and-events.md)  
+-   [Stream 物件屬性、方法和事件](./stream-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [記錄和資料流](../../../ado/guide/data/records-and-streams.md)
+ [記錄和資料流](../../guide/data/records-and-streams.md)

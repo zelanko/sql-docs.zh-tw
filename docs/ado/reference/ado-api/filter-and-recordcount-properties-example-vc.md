@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb95298fbc88749acdb5058cc45694688e0c2c6e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3974219f4070d38e877ff7fdd4b6c7e3a26adef2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443670"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775307"
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a> (VC + +) 的 Filter 和 RecordCount 屬性範例
-這個範例會使用[Filter](../../../ado/reference/ado-api/filter-property.md)屬性，根據套用至現有**記錄集**的指定條件來開啟新的[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它會使用 [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) 屬性來顯示這兩個 **記錄集中**的記錄數目。 此程式必須有 FilterField 函數才能執行。  
+這個範例會使用[Filter](./filter-property.md)屬性，根據套用至現有**記錄集**的指定條件來開啟新的[記錄集](./recordset-object-ado.md)。 它會使用 [RecordCount](./recordcount-property-ado.md) 屬性來顯示這兩個 **記錄集中**的記錄數目。 此程式必須有 FilterField 函數才能執行。  
   
 ## <a name="example"></a>範例  
   
@@ -304,6 +304,6 @@ Scootney Books, USA
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [篩選屬性](../../../ado/reference/ado-api/filter-property.md)   
- [ (ADO) 的 RecordCount 屬性 ](../../../ado/reference/ado-api/recordcount-property-ado.md)   
- [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [篩選屬性](./filter-property.md)   
+ [ (ADO) 的 RecordCount 屬性 ](./recordcount-property-ado.md)   
+ [Recordset 物件 (ADO)](./recordset-object-ado.md)

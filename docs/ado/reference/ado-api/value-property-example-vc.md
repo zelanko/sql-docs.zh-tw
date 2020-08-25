@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2a104245-56df-44f3-b9b7-b3d18643d57b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0bcea6cd4ad8f786cf2e2a70b35f6f67dcae3127
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6cbe1d7738bd827a8f984e8b4f5e024e88457035
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441570"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776947"
 ---
 # <a name="value-property-example-vc"></a>Value 屬性範例 (VC++)
-此範例會顯示 [ ***Employees*** ] 資料表的欄位和屬性值，以示範具有[欄位](../../../ado/reference/ado-api/field-object.md)和[屬性](../../../ado/reference/ado-api/property-object-ado.md)物件的[Value](../../../ado/reference/ado-api/value-property-ado.md)屬性。  
+此範例會顯示 [ ***Employees*** ] 資料表的欄位和屬性值，以示範具有[欄位](./field-object.md)和[屬性](./property-object-ado.md)物件的[Value](./value-property-ado.md)屬性。  
   
 ```  
 // BeginValueCpp.cpp  
@@ -171,6 +171,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Field 物件](../../../ado/reference/ado-api/field-object.md)   
- [ (ADO) 的屬性物件 ](../../../ado/reference/ado-api/property-object-ado.md)   
- [Value 屬性 (ADO)](../../../ado/reference/ado-api/value-property-ado.md)
+ [Field 物件](./field-object.md)   
+ [ (ADO) 的屬性物件 ](./property-object-ado.md)   
+ [Value 屬性 (ADO)](./value-property-ado.md)

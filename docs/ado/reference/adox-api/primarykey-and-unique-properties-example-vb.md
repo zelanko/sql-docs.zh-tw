@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f536acac-06ea-4b39-bfba-ee9902b01615
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1be519ab53b346eee06c45664c512677f5d8628c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aa548ea37ffe3c91e8d36febac9f90cf9498d258
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439680"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769747"
 ---
 # <a name="primarykey-and-unique-properties-example-vb"></a>PrimaryKey 和 Unique 屬性範例 (VB)
-此範例示範[索引](../../../ado/reference/adox-api/index-object-adox.md)的[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)和[唯一](../../../ado/reference/adox-api/unique-property-adox.md)屬性。 程式碼會建立具有兩個數據行的新資料表。 **PrimaryKey**和**Unique**屬性是用來讓一個資料行成為不允許重複值的主鍵。  
+此範例示範[索引](./index-object-adox.md)的[PrimaryKey](./primarykey-property-adox.md)和[唯一](./unique-property-adox.md)屬性。 程式碼會建立具有兩個數據行的新資料表。 **PrimaryKey**和**Unique**屬性是用來讓一個資料行成為不允許重複值的主鍵。  
   
 ```  
 ' BeginPrimaryKeyVB  
@@ -114,6 +114,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADOX) 的索引物件 ](../../../ado/reference/adox-api/index-object-adox.md)   
- [PrimaryKey 屬性 (ADOX) ](../../../ado/reference/adox-api/primarykey-property-adox.md)   
- [Unique 屬性 (ADOX)](../../../ado/reference/adox-api/unique-property-adox.md)
+ [ (ADOX) 的索引物件 ](./index-object-adox.md)   
+ [PrimaryKey 屬性 (ADOX) ](./primarykey-property-adox.md)   
+ [Unique 屬性 (ADOX)](./unique-property-adox.md)

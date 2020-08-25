@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: db4cb894-9bd9-422d-a58a-cef6941a5784
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9c2a05f829ff0e9751634e9e50893cd1004db5e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6740e999ddcfac16c874bae4e5933f27fa318f38
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441560"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776927"
 ---
 # <a name="version-property-ado"></a>Version 屬性 (ADO)
 表示 ADO 版本號碼。  
@@ -34,11 +34,11 @@ ms.locfileid: "88441560"
 ## <a name="remarks"></a>備註  
  使用 **version** 屬性可傳回 ADO 執行的版本號碼。  
   
- 提供者的版本將以 [屬性](../../../ado/reference/ado-api/properties-collection-ado.md) 集合中的動態屬性形式提供。  
+ 提供者的版本將以 [屬性](./properties-collection-ado.md) 集合中的動態屬性形式提供。  
   
 ## <a name="applies-to"></a>套用至  
- [Connection 物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [Connection 物件 (ADO)](./connection-object-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Version 屬性範例 (VB) ](../../../ado/reference/ado-api/version-property-example-vb.md)   
- [Version 屬性範例 (VC++)](../../../ado/reference/ado-api/version-property-example-vc.md)   
+ [Version 屬性範例 (VB) ](./version-property-example-vb.md)   
+ [Version 屬性範例 (VC++)](./version-property-example-vc.md)

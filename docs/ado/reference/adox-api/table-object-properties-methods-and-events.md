@@ -13,32 +13,32 @@ helpviewer_keywords:
 ms.assetid: 140d1517-6f0c-4fc9-9deb-9658982d88ed
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b614fc32325ef8a7b64b555f91c32966fdbb438c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c77279fa33781102234fc353aeaad88501e8ce7d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439460"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769287"
 ---
 # <a name="table-object-properties-methods-and-events"></a>Table 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  
- [Columns 集合 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)  
+ [Columns 集合 (ADOX)](./columns-collection-adox.md)  
   
- [DateCreated 屬性 (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)  
+ [DateCreated 屬性 (ADOX)](./datecreated-property-adox.md)  
   
- [DateModified 屬性 (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)  
+ [DateModified 屬性 (ADOX)](./datemodified-property-adox.md)  
   
- [Indexes 集合 (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
+ [Indexes 集合 (ADOX)](./indexes-collection-adox.md)  
   
- [Keys 集合 (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)  
+ [Keys 集合 (ADOX)](./keys-collection-adox.md)  
   
- [Name 屬性 (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)  
+ [Name 屬性 (ADOX)](./name-property-adox.md)  
   
- [ParentCatalog 屬性 (ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md)  
+ [ParentCatalog 屬性 (ADOX)](./parentcatalog-property-adox.md)  
   
- [Properties 集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Properties 集合 (ADO)](../ado-api/properties-collection-ado.md)  
   
- [Type 屬性 (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)  
+ [Type 屬性 (Table) (ADOX)](./type-property-table-adox.md)  
   
 ## <a name="methods"></a>方法  
  無。  
@@ -47,4 +47,4 @@ ms.locfileid: "88439460"
  無。  
   
 ## <a name="see-also"></a>另請參閱  
- [Table 物件 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
+ [Table 物件 (ADOX)](./table-object-adox.md)

@@ -13,69 +13,67 @@ helpviewer_keywords:
 ms.assetid: 9a8f9b0c-8452-4e95-a561-cfc4b7165c5e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b811240a5e3261636650d1a3c847dc7813ac7674
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 68304882e4ae39fa4e31665753a8f6554e79e55c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439130"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768537"
 ---
 # <a name="datacontrol-object-rds-properties-methods-and-events"></a>DataControl 物件 (RDS) 屬性、方法和事件
 > [!IMPORTANT]
 >  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="properties"></a>屬性  
- [Connect 屬性 (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)  
+ [Connect 屬性 (RDS)](./connect-property-rds.md)  
   
- [ExecuteOptions 屬性 (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)  
+ [ExecuteOptions 屬性 (RDS)](./executeoptions-property-rds.md)  
   
- [FetchOptions 屬性 (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)  
+ [FetchOptions 屬性 (RDS)](./fetchoptions-property-rds.md)  
   
- [FilterColumn 屬性 (RDS)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)  
+ [FilterColumn 屬性 (RDS)](./filtercolumn-property-rds.md)  
   
- [FilterCriterion 屬性 (RDS)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)  
+ [FilterCriterion 屬性 (RDS)](./filtercriterion-property-rds.md)  
   
- [FilterValue 屬性 (RDS)](../../../ado/reference/rds-api/filtervalue-property-rds.md)  
+ [FilterValue 屬性 (RDS)](./filtervalue-property-rds.md)  
   
- [Handler 屬性 (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)  
+ [Handler 屬性 (RDS)](./handler-property-rds.md)  
   
- [InternetTimeout 屬性 (RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)  
+ [InternetTimeout 屬性 (RDS)](./internettimeout-property-rds.md)  
   
- [ReadyState 屬性 (RDS)](../../../ado/reference/rds-api/readystate-property-rds.md)  
+ [ReadyState 屬性 (RDS)](./readystate-property-rds.md)  
   
- [Recordset、SourceRecordset 屬性 (RDS)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)  
+ [Recordset、SourceRecordset 屬性 (RDS)](./recordset-sourcerecordset-properties-rds.md)  
   
- [Server 屬性 (RDS)](../../../ado/reference/rds-api/server-property-rds.md)  
+ [Server 屬性 (RDS)](./server-property-rds.md)  
   
- [SortColumn 屬性 (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)  
+ [SortColumn 屬性 (RDS)](./sortcolumn-property-rds.md)  
   
- [SortDirection 屬性 (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)  
+ [SortDirection 屬性 (RDS)](./sortdirection-property-rds.md)  
   
- [SQL 屬性](../../../ado/reference/rds-api/sql-property.md)  
+ [SQL 屬性](./sql-property.md)  
   
- [URL 屬性 (RDS)](../../../ado/reference/rds-api/url-property-rds.md)  
+ [URL 屬性 (RDS)](./url-property-rds.md)  
   
 ## <a name="methods"></a>方法  
- [Cancel 方法 (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)  
+ [Cancel 方法 (RDS)](./cancel-method-rds.md)  
   
- [CancelUpdate 方法 (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)  
+ [CancelUpdate 方法 (RDS)](./cancelupdate-method-rds.md)  
   
- [CreateRecordset 方法 (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)  
+ [CreateRecordset 方法 (RDS)](./createrecordset-method-rds.md)  
   
- [MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法 (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)  
+ [MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法 (RDS)](./movefirst-movelast-movenext-and-moveprevious-methods-rds.md)  
   
- [Refresh 方法 (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)  
+ [Refresh 方法 (RDS)](./refresh-method-rds.md)  
   
- [Reset 方法 (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)  
+ [Reset 方法 (RDS)](./reset-method-rds.md)  
   
- [SubmitChanges 方法 (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)  
+ [SubmitChanges 方法 (RDS)](./submitchanges-method-rds.md)  
   
 ## <a name="events"></a>事件  
- [onError 事件 (RDS)](../../../ado/reference/rds-api/onerror-event-rds.md)  
+ [onError 事件 (RDS)](./onerror-event-rds.md)  
   
- [onReadyStateChange 事件 (RDS)](../../../ado/reference/rds-api/onreadystatechange-event-rds.md)  
+ [onReadyStateChange 事件 (RDS)](./onreadystatechange-event-rds.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
-
-
+ [DataControl 物件 (RDS)](./datacontrol-object-rds.md)

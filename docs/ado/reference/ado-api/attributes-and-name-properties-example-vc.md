@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 2db7c9ca-d7d0-4c8e-840b-b27d7933ec40
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1b482b59344f141b01979e850056fbb4da93bc3c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cb08bddc1e308859aa8460221136fb50fe5e6b86
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451210"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776467"
 ---
 # <a name="attributes-and-name-properties-example-vc"></a>屬性和名稱屬性範例 (VC + +) 
-此範例會顯示[連接](../../../ado/reference/ado-api/connection-object-ado.md)、[欄位](../../../ado/reference/ado-api/field-object.md)和[屬性](../../../ado/reference/ado-api/property-object-ado.md)物件的[Attributes](../../../ado/reference/ado-api/attributes-property-ado.md)屬性值。 它會使用 [name](../../../ado/reference/ado-api/name-property-ado.md) 屬性來顯示每個 **欄位** 和 **屬性** 物件的名稱。  
+此範例會顯示[連接](./connection-object-ado.md)、[欄位](./field-object.md)和[屬性](./property-object-ado.md)物件的[Attributes](./attributes-property-ado.md)屬性值。 它會使用 [name](./name-property-ado.md) 屬性來顯示每個 **欄位** 和 **屬性** 物件的名稱。  
   
 ```  
 // BeginAttributesCpp.cpp  
@@ -182,8 +182,8 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADO) 的 Attributes 屬性 ](../../../ado/reference/ado-api/attributes-property-ado.md)   
- [ (ADO) 的 Connection 物件 ](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Field 物件](../../../ado/reference/ado-api/field-object.md)   
- [ (ADO) 的 Name 屬性 ](../../../ado/reference/ado-api/name-property-ado.md)   
- [Property 物件 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)
+ [ (ADO) 的 Attributes 屬性 ](./attributes-property-ado.md)   
+ [ (ADO) 的 Connection 物件 ](./connection-object-ado.md)   
+ [Field 物件](./field-object.md)   
+ [ (ADO) 的 Name 屬性 ](./name-property-ado.md)   
+ [Property 物件 (ADO)](./property-object-ado.md)

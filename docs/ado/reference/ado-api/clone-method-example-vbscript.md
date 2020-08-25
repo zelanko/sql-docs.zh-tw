@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e56e93f851d2f5f0dac7df2339dec37c0b6a1ac2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c696fb6be361327944223bab19d1edb0cf35460
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450940"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776237"
 ---
 # <a name="clone-method-example-vbscript"></a>Clone 方法範例 (VBScript)
-這個範例會使用 [Clone](../../../ado/reference/ado-api/clone-method-ado.md) 方法來建立 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 的複本，然後讓使用者個別放置每個複本的記錄指標。  
+這個範例會使用 [Clone](./clone-method-ado.md) 方法來建立 [記錄集](./recordset-object-ado.md) 的複本，然後讓使用者個別放置每個複本的記錄指標。  
   
  使用 Active Server Page (ASP) 中的下列範例。 此範例會使用與 Microsoft Access 一起散發的 **Northwind** 資料庫。 將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器，然後將它儲存為 CloneVBS。 您可以在任何用戶端瀏覽器中查看結果。  
   
@@ -119,5 +119,5 @@ ms.locfileid: "88450940"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADO) 複製方法 ](../../../ado/reference/ado-api/clone-method-ado.md)   
- [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [ (ADO) 複製方法 ](./clone-method-ado.md)   
+ [Recordset 物件 (ADO)](./recordset-object-ado.md)

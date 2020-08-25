@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 270d93169c5c1d91c35a58a36be9a4577e25e7d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0aa5aebbd3a87ede7d73223ffa7684bff837a328
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443150"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774217"
 ---
 # <a name="moverecord-method-ado"></a>MoveRecord 方法 (ADO)
-將 [記錄](../../../ado/reference/ado-api/record-object-ado.md) 所代表的實體移至另一個位置。  
+將 [記錄](./record-object-ado.md) 所代表的實體移至另一個位置。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,14 +41,14 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  *目的地*  
  選擇性。 **字串**值，包含指定將移動*來源*之位置的 URL。  
   
- *使用者名稱*  
+ *UserName*  
  選擇性。 包含使用者識別碼的 **字串** 值（如有需要）會授權存取 *目的地*。  
   
  *密碼*  
  選擇性。 包含密碼的 **字串** （如有需要，會驗證使用者 *名稱*）。  
   
  *選項*  
- 選擇性。 [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md)值，其預設值為**adMoveUnspecified**。 指定此方法的行為。  
+ 選擇性。 [MoveRecordOptionsEnum](./moverecordoptionsenum.md)值，其預設值為**adMoveUnspecified**。 指定此方法的行為。  
   
  *非同步*  
  選擇性。 **布林**值，若**為 True，則**指定這是非同步作業。  
@@ -64,17 +64,17 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
 > [!NOTE]
 >  謹慎使用 **adMoveOverWrite** 選項。 例如，將檔案移至目錄時，指定這個選項會刪除目錄，並將它取代為檔案。  
   
- 在此作業完成之後，將不會更新 **記錄** 物件的某些屬性，例如 [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md) 屬性。 藉由關閉**記錄**來重新整理**記錄**物件的屬性，然後以移動檔案或目錄的位置 URL 重新開啟它。  
+ 在此作業完成之後，將不會更新 **記錄** 物件的某些屬性，例如 [ParentURL](./parenturl-property-ado.md) 屬性。 藉由關閉**記錄**來重新整理**記錄**物件的屬性，然後以移動檔案或目錄的位置 URL 重新開啟它。  
   
- 如果從[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)取得此**記錄**，移動的檔案或目錄的新位置將不會立即反映在**記錄集中**。 關閉並重新開啟記錄集，以重新整理 **記錄集** 。  
+ 如果從[記錄集](./recordset-object-ado.md)取得此**記錄**，移動的檔案或目錄的新位置將不會立即反映在**記錄集中**。 關閉並重新開啟記錄集，以重新整理 **記錄集** 。  
   
 > [!NOTE]
->  使用 HTTP 配置的 Url 會自動叫用 [Microsoft OLE DB 提供者進行網際網路發佈](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 如需詳細資訊，請參閱 [絕對和相對 url](../../../ado/guide/data/absolute-and-relative-urls.md)。  
+>  使用 HTTP 配置的 Url 會自動叫用 [Microsoft OLE DB 提供者進行網際網路發佈](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 如需詳細資訊，請參閱 [絕對和相對 url](../../guide/data/absolute-and-relative-urls.md)。  
   
 ## <a name="applies-to"></a>套用至  
- [Record 物件 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+ [Record 物件 (ADO)](./record-object-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADO) 的 Move 方法 ](../../../ado/reference/ado-api/move-method-ado.md)   
- [MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法 (ADO) ](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
- [MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法 (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)
+ [ (ADO) 的 Move 方法 ](./move-method-ado.md)   
+ [MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法 (ADO) ](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
+ [MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法 (RDS)](../rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)

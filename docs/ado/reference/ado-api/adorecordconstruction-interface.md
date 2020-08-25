@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a52b8006ed97809690ec874c27e20ee8f1b05d0f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f93370ae23cd50e1fb494d484756505f69514df1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451330"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776598"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction 介面
 **ADORecordConstruction**介面是用來從 C/c + + 應用程式中 OLE DB 的資料**列**物件來建立 ADO**記錄**物件。  
@@ -32,8 +32,8 @@ ms.locfileid: "88451330"
   
 |屬性|描述|  
 |-|-|  
-|[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|唯寫。<br />設定此 ADO**記錄**物件上 OLE DB 資料**列**物件的容器。|  
-|[資料列](../../../ado/reference/ado-api/row-property-ado.md)|讀取/寫入。<br />取得/設定這個 ADO**記錄**物件的 OLE DB 資料**列**物件。|  
+|[ParentRow](./parentrow-property-ado.md)|唯寫。<br />設定此 ADO**記錄**物件上 OLE DB 資料**列**物件的容器。|  
+|[行](./row-property-ado.md)|讀取/寫入。<br />取得/設定這個 ADO**記錄**物件的 OLE DB 資料**列**物件。|  
   
 ## <a name="methods"></a>方法  
  無。  

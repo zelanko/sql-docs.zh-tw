@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 617ceace87a7f265d3d4db901b0a586481c19e32
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f7adb671b42d17b4abe13733fd912234e79560e3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444450"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775897"
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString 屬性 (ADO)
 表示用來建立資料來源連接的資訊。  
@@ -42,9 +42,9 @@ ms.locfileid: "88444450"
 |*遠端伺服器 =*|指定開啟用戶端連接時要使用之伺服器的路徑名稱。  (僅限遠端資料服務。 ) |  
 |*URL =*|將連接字串指定為識別資源的絕對 URL，例如檔案或目錄。|  
   
- 設定 **ConnectionString** 屬性並開啟 [連接](../../../ado/reference/ado-api/connection-object-ado.md) 物件之後，提供者可以改變屬性的內容，例如，將 ADO 定義的引數名稱對應至特定提供者的對等專案。  
+ 設定 **ConnectionString** 屬性並開啟 [連接](./connection-object-ado.md) 物件之後，提供者可以改變屬性的內容，例如，將 ADO 定義的引數名稱對應至特定提供者的對等專案。  
   
- **Connectionstring**屬性會自動繼承[Open](../../../ado/reference/ado-api/open-method-ado-connection.md)方法的*ConnectionString*引數所使用的值，因此您可以在**open**方法呼叫期間覆寫目前的**ConnectionString**屬性。  
+ **Connectionstring**屬性會自動繼承[Open](./open-method-ado-connection.md)方法的*ConnectionString*引數所使用的值，因此您可以在**open**方法呼叫期間覆寫目前的**ConnectionString**屬性。  
   
  因為 *檔案名* 引數會導致 ADO 載入關聯的提供者，所以您無法同時傳遞 *提供者* 和 *檔案名* 引數。  
   
@@ -63,9 +63,9 @@ ms.locfileid: "88444450"
 |沒有預設值。<br /><br /> 當 ADO 應用程式在下列作業系統上執行且未明確指定提供者時，ADO 會傳回下列錯誤：「ADODB。連接：未指定提供者，而且沒有指定的預設提供者」|Windows 2000 (64 位) <br /><br /> Windows XP (64 位元)<br /><br /> Windows 2003 Server (64 位) <br /><br /> Windows Vista (64 位元)|  
   
 ## <a name="applies-to"></a>套用至  
- [Connection 物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [Connection 物件 (ADO)](./connection-object-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [ConnectionString、ConnectionTimeout 和 State 屬性範例 (VB) ](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
- [ConnectionString、ConnectionTimeout 和 State 屬性範例 (VC + +) ](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
- [附錄 A：提供者](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [ConnectionString、ConnectionTimeout 和 State 屬性範例 (VB) ](./connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
+ [ConnectionString、ConnectionTimeout 和 State 屬性範例 (VC + +) ](./connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
+ [附錄 A：提供者](../../guide/appendixes/appendix-a-providers.md)

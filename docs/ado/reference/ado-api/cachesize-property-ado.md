@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 49dc9a49-af7b-433b-be36-7a14ca984fb7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3cafee5dbcc5d6469df2d733f1898806069dd112
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d6654adc5cbf5b01435dbc95a2f630cf980cc6d5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451100"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776357"
 ---
 # <a name="cachesize-property-ado"></a>CacheSize 屬性 (ADO)
-指出記錄 [集](../../../ado/reference/ado-api/recordset-object-ado.md) 物件中從本機快取到記憶體中的記錄數目。  
+指出記錄 [集](./recordset-object-ado.md) 物件中從本機快取到記憶體中的記錄數目。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
  設定或傳回必須大於0的 **Long** 值。 預設值為 1。  
@@ -41,14 +41,14 @@ ms.locfileid: "88451100"
   
  不允許零的 **CacheSize** 設定，而且會傳回錯誤。  
   
- 從快取取出的記錄不會反映其他使用者對來源資料所做的並行變更。 若要強制更新所有快取的資料，請使用 [Resync](../../../ado/reference/ado-api/resync-method.md) 方法。  
+ 從快取取出的記錄不會反映其他使用者對來源資料所做的並行變更。 若要強制更新所有快取的資料，請使用 [Resync](./resync-method.md) 方法。  
   
- 如果 **CacheSize** 設定為大於1的值，則導覽方法 ([Move](../../../ado/reference/ado-api/move-method-ado.md)、 [MoveFirst、MoveLast、MoveNext 和 MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) 可能會導致導覽至已刪除的記錄，如果在抓取記錄之後發生刪除的情況。 初始提取之後，在您嘗試從已刪除的資料列存取資料值之前，後續的刪除將不會反映在您的資料快取中。 但是，將 **CacheSize** 設定為 one 會排除這個問題，因為無法提取刪除的資料列。  
+ 如果 **CacheSize** 設定為大於1的值，則導覽方法 ([Move](./move-method-ado.md)、 [MoveFirst、MoveLast、MoveNext 和 MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) 可能會導致導覽至已刪除的記錄，如果在抓取記錄之後發生刪除的情況。 初始提取之後，在您嘗試從已刪除的資料列存取資料值之前，後續的刪除將不會反映在您的資料快取中。 但是，將 **CacheSize** 設定為 one 會排除這個問題，因為無法提取刪除的資料列。  
   
 ## <a name="applies-to"></a>套用至  
- [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset 物件 (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [ (VB) 的 CacheSize 屬性範例 ](../../../ado/reference/ado-api/cachesize-property-example-vb.md)   
- [CacheSize 屬性範例 (VC + +) ](../../../ado/reference/ado-api/cachesize-property-example-vc.md)   
- [CacheSize 屬性範例 (JScript)](../../../ado/reference/ado-api/cachesize-property-example-jscript.md)
+ [ (VB) 的 CacheSize 屬性範例 ](./cachesize-property-example-vb.md)   
+ [CacheSize 屬性範例 (VC + +) ](./cachesize-property-example-vc.md)   
+ [CacheSize 屬性範例 (JScript)](./cachesize-property-example-jscript.md)

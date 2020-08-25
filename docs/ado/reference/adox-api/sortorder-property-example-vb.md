@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a66fcb11780731424563526d30a4d544c60ea693
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 089c4e7f402e374ab4af43c683270ad488c0f8bb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439500"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769357"
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder 屬性範例 (VB)
-這個範例會示範已附加至[索引](../../../ado/reference/adox-api/index-object-adox.md)之資料[行](../../../ado/reference/adox-api/columns-collection-adox.md)集合的資料[行](../../../ado/reference/adox-api/column-object-adox.md)的[SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md)屬性。 程式碼會將遞增索引附加至 **Employees** 資料表中的 Country 資料行，然後顯示記錄。 然後，程式碼會將遞減索引附加至 **Employees** 資料表中的 Country 資料行，並再次顯示記錄。 會顯示遞增和遞減索引之間的差異。  
+這個範例會示範已附加至[索引](./index-object-adox.md)之資料[行](./columns-collection-adox.md)集合的資料[行](./column-object-adox.md)的[SortOrder](./sortorder-property-adox.md)屬性。 程式碼會將遞增索引附加至 **Employees** 資料表中的 Country 資料行，然後顯示記錄。 然後，程式碼會將遞減索引附加至 **Employees** 資料表中的 Country 資料行，並再次顯示記錄。 會顯示遞增和遞減索引之間的差異。  
   
 ```  
 ' BeginSortOrderVB  
@@ -138,7 +138,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [資料行物件 (ADOX) ](../../../ado/reference/adox-api/column-object-adox.md)   
- [資料行集合 (ADOX) ](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [ (ADOX) 的索引物件 ](../../../ado/reference/adox-api/index-object-adox.md)   
- [SortOrder 屬性 (ADOX)](../../../ado/reference/adox-api/sortorder-property-adox.md)
+ [資料行物件 (ADOX) ](./column-object-adox.md)   
+ [資料行集合 (ADOX) ](./columns-collection-adox.md)   
+ [ (ADOX) 的索引物件 ](./index-object-adox.md)   
+ [SortOrder 屬性 (ADOX)](./sortorder-property-adox.md)

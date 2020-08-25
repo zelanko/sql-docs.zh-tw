@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 20c76571-8c9a-482c-a99e-726ab1d93f8b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 905897cfa08591aaefce3aceb46e1892d41d3d7a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4431d9a8af8623150717474cd5429a772f86be8c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443270"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774447"
 ---
 # <a name="maxrecords-property-ado"></a>MaxRecords 屬性 (ADO)
-指出從查詢傳回 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 的記錄數目上限。  
+指出從查詢傳回 [記錄集](./recordset-object-ado.md) 的記錄數目上限。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
  設定或傳回 **Long** 值，表示要傳回的記錄數目上限。 預設值為零 (**0**) ，表示沒有限制。  
@@ -35,8 +35,8 @@ ms.locfileid: "88443270"
  當**記錄集**已關閉時， **MaxRecords**屬性是讀取/寫入，而當記錄開啟時，則為唯讀屬性。  
   
 ## <a name="applies-to"></a>套用至  
- [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset 物件 (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [ (VB) 的 MaxRecords 屬性範例 ](../../../ado/reference/ado-api/maxrecords-property-example-vb.md)   
- [MaxRecords 屬性範例 (VC++)](../../../ado/reference/ado-api/maxrecords-property-example-vc.md)   
+ [ (VB) 的 MaxRecords 屬性範例 ](./maxrecords-property-example-vb.md)   
+ [MaxRecords 屬性範例 (VC++)](./maxrecords-property-example-vc.md)
